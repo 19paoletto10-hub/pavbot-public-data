@@ -1,0 +1,6 @@
+interface:
+  display_name: "Daily Podcast Agent"
+  short_description: "Shared Polish podcast editorial and TTS pipeline"
+  default_prompt: "Use $daily-podcast-agent to create a sourced Polish podcast package for a Pavbot research topic."
+policy:
+  allow_implicit_invocation: true

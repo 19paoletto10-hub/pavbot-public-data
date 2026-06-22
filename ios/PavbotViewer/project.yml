@@ -1,0 +1,37 @@
+name: PavbotViewer
+options:
+  bundleIdPrefix: local.pavbot
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+settings:
+  base:
+    DEVELOPMENT_TEAM: ""
+    SWIFT_VERSION: "5.9"
+targets:
+  PavbotViewer:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+      - path: ../../public/pavbot-manifest.json
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: local.pavbot.viewer
+        INFOPLIST_FILE: Sources/Info.plist
+    dependencies:
+      - sdk: AVFoundation.framework
+      - sdk: PDFKit.framework
+      - sdk: UserNotifications.framework
+  PavbotViewerTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: PavbotViewer
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: local.pavbot.viewer.tests
+        GENERATE_INFOPLIST_FILE: YES

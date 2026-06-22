@@ -1,0 +1,538 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		036DCA6D533771B778BAEF1F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 279DFFBC15E4A98DCF519B73 /* UserNotifications.framework */; };
+		17031FD9AEB5E34F1A4E15B6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EEB32A16C7FA3A3E684630 /* SettingsView.swift */; };
+		1919E425F63DDE1B5BCA83A8 /* pavbot-manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 9DFB8BD6470959155AB7F197 /* pavbot-manifest.json */; };
+		29CB56086EEE782839BE6637 /* ArtifactNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AEF493B65E3050003DA5E /* ArtifactNotificationService.swift */; };
+		2C7988164BFADB6C8499B1AD /* ManifestDiagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D4328C98AED2DCCC8DBE4 /* ManifestDiagnostics.swift */; };
+		2D457DBD5028AB01190A31FB /* ArtifactTimelineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2215142C9512B2627D398AD2 /* ArtifactTimelineView.swift */; };
+		37B9941F081725AD1B926EEB /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3769702F6D5E896F00B54419 /* AppRouter.swift */; };
+		3FDB992D0B671821332576C5 /* PavbotDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36E99E399CB1D97AF718704 /* PavbotDesign.swift */; };
+		4637FC97A6B377972B57C833 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B73CD8205618D4A87B1004E /* PDFKit.framework */; };
+		597607DDD3CE7120DD479003 /* PavbotManifestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC573E4A2BA15F1C009018C /* PavbotManifestTests.swift */; };
+		66504F7F205137ECCC1AFD58 /* ArtifactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397497A364A4766EB8EEA6A /* ArtifactDetailView.swift */; };
+		8F7234979E297655E336A50A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CD203D4E9EA86F2A8DA854 /* AVFoundation.framework */; };
+		993BB441D8B739BCC05A311D /* AutomationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC432622FB8C7B2D2F0C4D1 /* AutomationListView.swift */; };
+		A52263532A7484AC40F87842 /* ManifestURLValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B21209E7330AD40BCFE094 /* ManifestURLValidator.swift */; };
+		B85C4C5770F1AA57144317EB /* PavbotManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AAF18DACEBDAEC0782CD370 /* PavbotManifest.swift */; };
+		BF6147CDD4E1C41274A89BCD /* DiagnosticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EED249FEEE03D833589C1529 /* DiagnosticsView.swift */; };
+		C9A085C7BFFC9F374A1A9D46 /* PavbotViewerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D3D88752808C42E687EEB21 /* PavbotViewerApp.swift */; };
+		FC588F3E0BB5115EDDFE0FCF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA490975E9DDDFDE415D90A9 /* ContentView.swift */; };
+		FDF92B985CC6017D2D9A645A /* ManifestStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2833944A91FD712745E43B55 /* ManifestStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A5D88A5687E704AA982F6D30 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8590C27E435ACD46B1308D09 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1A1182BCAB775DFBFA8726CC;
+			remoteInfo = PavbotViewer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2215142C9512B2627D398AD2 /* ArtifactTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactTimelineView.swift; sourceTree = "<group>"; };
+		279DFFBC15E4A98DCF519B73 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		2833944A91FD712745E43B55 /* ManifestStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestStore.swift; sourceTree = "<group>"; };
+		2D4D4328C98AED2DCCC8DBE4 /* ManifestDiagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestDiagnostics.swift; sourceTree = "<group>"; };
+		3769702F6D5E896F00B54419 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		3F2AEF493B65E3050003DA5E /* ArtifactNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactNotificationService.swift; sourceTree = "<group>"; };
+		41EEB32A16C7FA3A3E684630 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4EC573E4A2BA15F1C009018C /* PavbotManifestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotManifestTests.swift; sourceTree = "<group>"; };
+		5AAF18DACEBDAEC0782CD370 /* PavbotManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotManifest.swift; sourceTree = "<group>"; };
+		5DC432622FB8C7B2D2F0C4D1 /* AutomationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationListView.swift; sourceTree = "<group>"; };
+		63D705D1F4AAA64D5A62C228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		77B21209E7330AD40BCFE094 /* ManifestURLValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestURLValidator.swift; sourceTree = "<group>"; };
+		7B73CD8205618D4A87B1004E /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
+		9D3D88752808C42E687EEB21 /* PavbotViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotViewerApp.swift; sourceTree = "<group>"; };
+		9DFB8BD6470959155AB7F197 /* pavbot-manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pavbot-manifest.json"; sourceTree = "<group>"; };
+		B101DC0CC0E2D100DB7164D0 /* PavbotViewer.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PavbotViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7CD203D4E9EA86F2A8DA854 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		E36E99E399CB1D97AF718704 /* PavbotDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotDesign.swift; sourceTree = "<group>"; };
+		E84229AB2A6D9AD1434791DB /* PavbotViewerTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PavbotViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EED249FEEE03D833589C1529 /* DiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsView.swift; sourceTree = "<group>"; };
+		F397497A364A4766EB8EEA6A /* ArtifactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactDetailView.swift; sourceTree = "<group>"; };
+		FA490975E9DDDFDE415D90A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CCBD74AEB3F92DA17FE7593C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F7234979E297655E336A50A /* AVFoundation.framework in Frameworks */,
+				4637FC97A6B377972B57C833 /* PDFKit.framework in Frameworks */,
+				036DCA6D533771B778BAEF1F /* UserNotifications.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A241A5947B03C6C85AED7D5 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				63D705D1F4AAA64D5A62C228 /* Info.plist */,
+				9D3D88752808C42E687EEB21 /* PavbotViewerApp.swift */,
+				C93482AF37E91AFF3E79BA5C /* Models */,
+				A51BDBB327E12A05D73B4059 /* Navigation */,
+				427C2F22CB46807FD7C61950 /* Services */,
+				D507C06AEC96D5E5063231BA /* Views */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		3FBD221B261C3B0F54BA9A0E /* public */ = {
+			isa = PBXGroup;
+			children = (
+				9DFB8BD6470959155AB7F197 /* pavbot-manifest.json */,
+			);
+			path = public;
+			sourceTree = "<group>";
+		};
+		427C2F22CB46807FD7C61950 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3F2AEF493B65E3050003DA5E /* ArtifactNotificationService.swift */,
+				2D4D4328C98AED2DCCC8DBE4 /* ManifestDiagnostics.swift */,
+				2833944A91FD712745E43B55 /* ManifestStore.swift */,
+				77B21209E7330AD40BCFE094 /* ManifestURLValidator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7B95E2675EDFB550E3D76BD2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B101DC0CC0E2D100DB7164D0 /* PavbotViewer.app */,
+				E84229AB2A6D9AD1434791DB /* PavbotViewerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CB409BB6464599300A89A51 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B7CD203D4E9EA86F2A8DA854 /* AVFoundation.framework */,
+				7B73CD8205618D4A87B1004E /* PDFKit.framework */,
+				279DFFBC15E4A98DCF519B73 /* UserNotifications.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		97730D03CD2378087F9B345E = {
+			isa = PBXGroup;
+			children = (
+				E786D6BCAAA8CF7E4830AE31 /* CODEX-Pavbot */,
+				3A241A5947B03C6C85AED7D5 /* Sources */,
+				E0567CB494C4B0F829D5ABD3 /* Tests */,
+				8CB409BB6464599300A89A51 /* Frameworks */,
+				7B95E2675EDFB550E3D76BD2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A51BDBB327E12A05D73B4059 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				3769702F6D5E896F00B54419 /* AppRouter.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
+		C93482AF37E91AFF3E79BA5C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5AAF18DACEBDAEC0782CD370 /* PavbotManifest.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D507C06AEC96D5E5063231BA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				F397497A364A4766EB8EEA6A /* ArtifactDetailView.swift */,
+				2215142C9512B2627D398AD2 /* ArtifactTimelineView.swift */,
+				5DC432622FB8C7B2D2F0C4D1 /* AutomationListView.swift */,
+				FA490975E9DDDFDE415D90A9 /* ContentView.swift */,
+				EED249FEEE03D833589C1529 /* DiagnosticsView.swift */,
+				E36E99E399CB1D97AF718704 /* PavbotDesign.swift */,
+				41EEB32A16C7FA3A3E684630 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		E0567CB494C4B0F829D5ABD3 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				4EC573E4A2BA15F1C009018C /* PavbotManifestTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		E786D6BCAAA8CF7E4830AE31 /* CODEX-Pavbot */ = {
+			isa = PBXGroup;
+			children = (
+				3FBD221B261C3B0F54BA9A0E /* public */,
+			);
+			name = "CODEX-Pavbot";
+			path = ../..;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1A1182BCAB775DFBFA8726CC /* PavbotViewer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 631AC0A5A77A3D6225B902FA /* Build configuration list for PBXNativeTarget "PavbotViewer" */;
+			buildPhases = (
+				8AED9A9C1BDE84E44D0817D2 /* Sources */,
+				DACFDCC0923B3351EA2A538A /* Resources */,
+				CCBD74AEB3F92DA17FE7593C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PavbotViewer;
+			packageProductDependencies = (
+			);
+			productName = PavbotViewer;
+			productReference = B101DC0CC0E2D100DB7164D0 /* PavbotViewer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		52EF15468EB4217C12C91A42 /* PavbotViewerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D1F5F2D2A5D5390824D8E33D /* Build configuration list for PBXNativeTarget "PavbotViewerTests" */;
+			buildPhases = (
+				43D760CB67E11A2182AA0C68 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3CE11375A4120C6CDA067DAC /* PBXTargetDependency */,
+			);
+			name = PavbotViewerTests;
+			packageProductDependencies = (
+			);
+			productName = PavbotViewerTests;
+			productReference = E84229AB2A6D9AD1434791DB /* PavbotViewerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8590C27E435ACD46B1308D09 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					1A1182BCAB775DFBFA8726CC = {
+						DevelopmentTeam = "";
+					};
+					52EF15468EB4217C12C91A42 = {
+						DevelopmentTeam = "";
+					};
+				};
+			};
+			buildConfigurationList = AA9F8859F7892C180A991981 /* Build configuration list for PBXProject "PavbotViewer" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 97730D03CD2378087F9B345E;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7B95E2675EDFB550E3D76BD2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1A1182BCAB775DFBFA8726CC /* PavbotViewer */,
+				52EF15468EB4217C12C91A42 /* PavbotViewerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DACFDCC0923B3351EA2A538A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1919E425F63DDE1B5BCA83A8 /* pavbot-manifest.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		43D760CB67E11A2182AA0C68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				597607DDD3CE7120DD479003 /* PavbotManifestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8AED9A9C1BDE84E44D0817D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37B9941F081725AD1B926EEB /* AppRouter.swift in Sources */,
+				66504F7F205137ECCC1AFD58 /* ArtifactDetailView.swift in Sources */,
+				29CB56086EEE782839BE6637 /* ArtifactNotificationService.swift in Sources */,
+				2D457DBD5028AB01190A31FB /* ArtifactTimelineView.swift in Sources */,
+				993BB441D8B739BCC05A311D /* AutomationListView.swift in Sources */,
+				FC588F3E0BB5115EDDFE0FCF /* ContentView.swift in Sources */,
+				BF6147CDD4E1C41274A89BCD /* DiagnosticsView.swift in Sources */,
+				2C7988164BFADB6C8499B1AD /* ManifestDiagnostics.swift in Sources */,
+				FDF92B985CC6017D2D9A645A /* ManifestStore.swift in Sources */,
+				A52263532A7484AC40F87842 /* ManifestURLValidator.swift in Sources */,
+				3FDB992D0B671821332576C5 /* PavbotDesign.swift in Sources */,
+				B85C4C5770F1AA57144317EB /* PavbotManifest.swift in Sources */,
+				C9A085C7BFFC9F374A1A9D46 /* PavbotViewerApp.swift in Sources */,
+				17031FD9AEB5E34F1A4E15B6 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3CE11375A4120C6CDA067DAC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1A1182BCAB775DFBFA8726CC /* PavbotViewer */;
+			targetProxy = A5D88A5687E704AA982F6D30 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1B847AF9D656FE1C5122C3E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = local.pavbot.viewer.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PavbotViewer.app/PavbotViewer";
+			};
+			name = Release;
+		};
+		2716721E3AF16FCD6D798DD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = local.pavbot.viewer.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PavbotViewer.app/PavbotViewer";
+			};
+			name = Debug;
+		};
+		2D3E6C6ABCE7A713D27B7A81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = local.pavbot.viewer;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A30B8FADE38875303F138E2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		D68139032E04F5E840A2D784 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		E38C2CC5CDD3BC27DB12EC8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = local.pavbot.viewer;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		631AC0A5A77A3D6225B902FA /* Build configuration list for PBXNativeTarget "PavbotViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D3E6C6ABCE7A713D27B7A81 /* Debug */,
+				E38C2CC5CDD3BC27DB12EC8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		AA9F8859F7892C180A991981 /* Build configuration list for PBXProject "PavbotViewer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A30B8FADE38875303F138E2D /* Debug */,
+				D68139032E04F5E840A2D784 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D1F5F2D2A5D5390824D8E33D /* Build configuration list for PBXNativeTarget "PavbotViewerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2716721E3AF16FCD6D798DD0 /* Debug */,
+				1B847AF9D656FE1C5122C3E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8590C27E435ACD46B1308D09 /* Project object */;
+}

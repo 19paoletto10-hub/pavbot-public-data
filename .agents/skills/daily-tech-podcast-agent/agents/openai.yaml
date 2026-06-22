@@ -1,0 +1,6 @@
+interface:
+  display_name: "Daily Tech Podcast Agent"
+  short_description: "Polish daily tech podcast MP3"
+  default_prompt: "Use $daily-tech-podcast-agent to create today's Polish technology-news podcast MP3."
+policy:
+  allow_implicit_invocation: true
