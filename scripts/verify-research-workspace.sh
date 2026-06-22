@@ -8,6 +8,7 @@ required_files=(
   "docs/sdlc.md"
   "docs/todo.md"
   "docs/how-to-use.md"
+  "docs/connect-ios-app-to-your-repo.md"
   "docs/automation-operations.md"
   "requirements.txt"
   "public/pavbot-manifest.json"
@@ -128,7 +129,13 @@ grep -q 'AppRouter' ios/PavbotViewer/Sources/Navigation/AppRouter.swift
 grep -q 'searchable' ios/PavbotViewer/Sources/Views/ArtifactTimelineView.swift
 grep -q 'DiagnosticsView' ios/PavbotViewer/Sources/Views/DiagnosticsView.swift
 grep -q 'AppTab.diagnostics' ios/PavbotViewer/Sources/Views/ContentView.swift
+grep -q 'public GitHub raw manifest URL' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'generate_pavbot_manifest.py' docs/how-to-use.md
+grep -q 'connect-ios-app-to-your-repo.md' README.md
+grep -q 'connect-ios-app-to-your-repo.md' docs/how-to-use.md
+grep -q 'PAVBOT_RAW_BASE_URL' docs/connect-ios-app-to-your-repo.md
+grep -q 'raw.githubusercontent.com' docs/connect-ios-app-to-your-repo.md
+grep -q 'Settings -> Manifest URL -> Save and reload' docs/connect-ios-app-to-your-repo.md
 grep -q 'pavbot-manifest.json' docs/architecture.md
 grep -q '\$daily-podcast-agent' .agents/skills/daily-tech-podcast-agent/SKILL.md
 grep -q '\$daily-podcast-agent' .agents/skills/daily-news-podcast-agent/SKILL.md

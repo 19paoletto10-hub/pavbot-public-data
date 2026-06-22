@@ -3,6 +3,7 @@ import SwiftUI
 struct MetricTile: View {
     let title: String
     let value: String
+    var subtitle: String?
     let systemImage: String
     var tint: Color = .accentColor
 
@@ -22,6 +23,14 @@ struct MetricTile: View {
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .lineLimit(1)
+
+            if let subtitle, !subtitle.isEmpty {
+                Text(subtitle)
+                    .font(.caption2.weight(.medium))
+                    .foregroundStyle(.tertiary)
+                    .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(14)

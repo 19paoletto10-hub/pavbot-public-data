@@ -130,6 +130,10 @@ python3 scripts/generate_pavbot_manifest.py
 Set `PAVBOT_RAW_BASE_URL` before generation when the manifest should contain
 absolute public GitHub raw URLs.
 
+To connect the iOS app to your own Codex-backed repository, follow
+`docs/connect-ios-app-to-your-repo.md`. Version 1 expects a public GitHub raw
+manifest URL.
+
 ## Reviewing The First Three Runs
 
 For each of the first three scheduled reports, add one note to the tech-news

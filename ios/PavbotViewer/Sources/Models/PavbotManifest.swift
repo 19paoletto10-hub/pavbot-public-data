@@ -87,6 +87,15 @@ struct PavbotManifest: Codable, Equatable {
         latestArtifact(in: artifacts.filter { $0.date != nil })
     }
 
+    var latestAutomationRun: AutomationRunSummary? {
+        guard let latestArtifact else { return nil }
+        let automation = matchingAutomation(for: latestArtifact)
+        return AutomationRunSummary(
+            time: latestArtifact.time,
+            automationName: automation?.name ?? topicTitle(for: latestArtifact.topic)
+        )
+    }
+
     func artifacts(on day: Date?) -> [PavbotArtifact] {
         guard let day else { return artifacts }
         let key = day.pavbotDayString
@@ -127,6 +136,26 @@ struct PavbotManifest: Codable, Equatable {
         artifacts.max { lhs, rhs in
             (lhs.date ?? "", lhs.time ?? "", lhs.path) < (rhs.date ?? "", rhs.time ?? "", rhs.path)
         }
+    }
+
+    private func matchingAutomation(for artifact: PavbotArtifact) -> PavbotAutomation? {
+        enabledAutomations.first {
+            $0.topic == artifact.topic && $0.kind.preferredArtifactTypes.contains(artifact.type)
+        } ?? enabledAutomations.first {
+            $0.topic == artifact.topic
+        }
+    }
+}
+
+struct AutomationRunSummary: Equatable {
+    let time: String?
+    let automationName: String
+
+    var dashboardSubtitle: String {
+        [time, automationName]
+            .compactMap { $0?.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+            .joined(separator: " · ")
     }
 }
 

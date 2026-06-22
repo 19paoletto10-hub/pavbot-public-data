@@ -35,6 +35,8 @@ GRID = colors.HexColor("#CBD5E1")
 
 def register_fonts() -> tuple[str, str]:
     regular_candidates = [
+        "/Users/promaczek/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/libreoffice-headless/libreoffice/LibreOfficeDev.app/Contents/Resources/fonts/truetype/NotoSans-Regular.ttf",
+        "/Users/promaczek/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/libreoffice-headless/libreoffice/LibreOfficeDev.app/Contents/Resources/fonts/truetype/DejaVuSans.ttf",
         "/System/Library/Fonts/Supplemental/Tahoma.ttf",
         "/System/Library/Fonts/Supplemental/Verdana.ttf",
         "/System/Library/Fonts/Supplemental/Arial Unicode.ttf",
@@ -42,6 +44,8 @@ def register_fonts() -> tuple[str, str]:
         "/Library/Fonts/Arial Unicode.ttf",
     ]
     bold_candidates = [
+        "/Users/promaczek/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/libreoffice-headless/libreoffice/LibreOfficeDev.app/Contents/Resources/fonts/truetype/NotoSans-Bold.ttf",
+        "/Users/promaczek/.cache/codex-runtimes/codex-primary-runtime/dependencies/native/libreoffice-headless/libreoffice/LibreOfficeDev.app/Contents/Resources/fonts/truetype/DejaVuSans-Bold.ttf",
         "/System/Library/Fonts/Supplemental/Tahoma Bold.ttf",
         "/System/Library/Fonts/Supplemental/Verdana Bold.ttf",
         "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
@@ -202,7 +206,7 @@ def parse_markdown(markdown_text: str) -> tuple[str, list]:
     styles = build_styles()
     story: list = []
     lines = markdown_text.splitlines()
-    title = "LLM/AI Jobs Wroclaw"
+    title = "LLM/AI Jobs Wrocław"
     i = 0
     title_seen = False
 

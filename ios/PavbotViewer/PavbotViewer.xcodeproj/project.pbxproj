@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		036DCA6D533771B778BAEF1F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 279DFFBC15E4A98DCF519B73 /* UserNotifications.framework */; };
+		A8C21F4E67B04CBAB49F314D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17C802DA9B24F81A4D62E7C /* Assets.xcassets */; };
 		17031FD9AEB5E34F1A4E15B6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EEB32A16C7FA3A3E684630 /* SettingsView.swift */; };
 		1919E425F63DDE1B5BCA83A8 /* pavbot-manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 9DFB8BD6470959155AB7F197 /* pavbot-manifest.json */; };
 		29CB56086EEE782839BE6637 /* ArtifactNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AEF493B65E3050003DA5E /* ArtifactNotificationService.swift */; };
@@ -54,11 +55,12 @@
 		7B73CD8205618D4A87B1004E /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
 		9D3D88752808C42E687EEB21 /* PavbotViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotViewerApp.swift; sourceTree = "<group>"; };
 		9DFB8BD6470959155AB7F197 /* pavbot-manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pavbot-manifest.json"; sourceTree = "<group>"; };
-		B101DC0CC0E2D100DB7164D0 /* PavbotViewer.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PavbotViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B101DC0CC0E2D100DB7164D0 /* PavbotViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PavbotViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CD203D4E9EA86F2A8DA854 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E36E99E399CB1D97AF718704 /* PavbotDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotDesign.swift; sourceTree = "<group>"; };
-		E84229AB2A6D9AD1434791DB /* PavbotViewerTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PavbotViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E84229AB2A6D9AD1434791DB /* PavbotViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PavbotViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED249FEEE03D833589C1529 /* DiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsView.swift; sourceTree = "<group>"; };
+		F17C802DA9B24F81A4D62E7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F397497A364A4766EB8EEA6A /* ArtifactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactDetailView.swift; sourceTree = "<group>"; };
 		FA490975E9DDDFDE415D90A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 		3A241A5947B03C6C85AED7D5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				F17C802DA9B24F81A4D62E7C /* Assets.xcassets */,
 				63D705D1F4AAA64D5A62C228 /* Info.plist */,
 				9D3D88752808C42E687EEB21 /* PavbotViewerApp.swift */,
 				C93482AF37E91AFF3E79BA5C /* Models */,
@@ -233,7 +236,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 1430;
+				LastUpgradeCheck = 2630;
 				TargetAttributes = {
 					1A1182BCAB775DFBFA8726CC = {
 						DevelopmentTeam = RLZ8X7S7V2;
@@ -270,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8C21F4E67B04CBAB49F314D /* Assets.xcassets in Resources */,
 				1919E425F63DDE1B5BCA83A8 /* pavbot-manifest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -406,6 +410,7 @@
 				DEVELOPMENT_TEAM = RLZ8X7S7V2;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -426,6 +431,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.9;
@@ -471,6 +477,7 @@
 				DEVELOPMENT_TEAM = RLZ8X7S7V2;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -484,6 +491,7 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.9;

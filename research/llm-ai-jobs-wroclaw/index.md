@@ -1,21 +1,20 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-06-22 01:41 CEST
+Last updated: 2026-06-22 23:07 CEST
 
 ## Current Understanding
 
-Runda z `2026-06-22 01:41 CEST` przyniosła kolejny materialny update. Do
-shortlisty weszła oficjalna `airSlate Senior Software Engineer - Agentic AI`
-z `Wrocławia` w modelu `remote`, oficjalna `DataArt Senior AI Solutions
-Architect with LLM and RAG` dostępna dla `Wrocławia` i `Remote.Poland`, oraz
-trzy oficjalne role `EPAM` dla `remote in Poland`: `Senior Python AI
-Engineer`, `Lead Python Developer` i `Senior Go Developer with Generative AI`.
-Najważniejsza zmiana na wcześniej znanej ofercie to kolejny flip widełek
-`People More AI Engineer / LLM Engineer`, które na tym samym URL wróciły do
-`30-41 CHF net/h B2B`. Dodatkowy spot-check `STATSCORE` pokazał, że oficjalna
-rola `Senior AI Platform Engineer` jest hybrydowa w `Katowicach`, więc mimo
-mylącego boardowego mirrora nie weszła do zakresu tematu `Wrocław / remote
-Poland`.
+Runda z `2026-06-22 23:07 CEST` przyniosła kolejny materialny update z trzema
+nowymi aktywnymi rolami. Do shortlisty weszła publiczna `KYOTU Technology AI
+Engineer (GenAI / RAG / Agentic AI)` z `130-190 PLN net/h B2B` i `100% remote`
+w Polsce, nowa publiczna rola `T-Mobile T Hub - AI Engineer (LLMs, Agents)` w
+modelu `remote/hybrid`, oraz aktywna `Sii AI Engineer – GenAI & Cloud (f/m/x)`
+dla `Whole Poland (remote work)`. Dodatkowy follow-up potwierdził też, że
+`deepsense.ai` nadal utrzymuje dwa równoległe URL dla `AI Software Engineer`,
+więc problem z kanonicznym linkiem nie jest jeszcze rozwiązany. Dwa dodatkowe
+sygnały `T-Mobile` (`AI Expert – RAG & LLM Systems` i `DevOps Engineer (AI
+Solutions)`) okazały się na ten moment nieaktywne i nie weszły do listy
+obserwowanych aktywnych ofert.
 
 ## Stable Facts
 
@@ -75,6 +74,9 @@ only when something meaningful changes.
 | epam-senior-python-ai-engineer-remote-poland | EPAM Systems | Senior Python AI Engineer | Remote Poland | 2026-06-22-0141 | 2026-06-22-0141 | Open | Initial capture: official EPAM role; remote in Poland; LangChain/LangGraph, RAG, AWS, guardrails, monitoring and GenAI agent delivery. | [EPAM](https://careers.epam.com/en/vacancy/senior-python-ai-engineer-blt3f4bpi6gltyczhnw_en) |
 | epam-lead-python-developer-remote-poland | EPAM Systems | Lead Python Developer | Remote Poland | 2026-06-22-0141 | 2026-06-22-0141 | Open | Initial capture: official EPAM role; remote in Poland; GenAI quality platform, FastAPI, Azure, MLFlow, multi-provider LLM orchestration and agent workflows in a regulated environment. | [EPAM](https://careers.epam.com/en/vacancy/lead-python-developer-blt7f9kga105989j4aj_en) |
 | epam-senior-go-developer-generative-ai-remote-poland | EPAM Systems | Senior Go Developer with Generative AI | Remote Poland | 2026-06-22-0141 | 2026-06-22-0141 | Open | Initial capture: official EPAM role; remote in Poland; backend platform for routed and governed LLM inference, provider integrations, Kubernetes and security-focused production engineering. | [EPAM](https://careers.epam.com/en/vacancy/senior-go-developer-with-generative-ai-blt7waut6zoah1t7dq4_en) |
+| kyotu-ai-engineer-genai-rag-agentic-ai-remote-poland | KYOTU Technology sp. z o.o. | AI Engineer (GenAI / RAG / Agentic AI) | Remote Poland | 2026-06-22-2307 | 2026-06-22-2307 | Open | Initial capture: public direct-employer Pracuj.pl role; 130-190 PLN net/h B2B; valid to 27 Jun; production GenAI, RAG, agentic workflows, FastAPI, guardrails, observability, Azure OpenAI, AWS Bedrock and OpenAI API. This is distinct from the earlier expired `AI / ML / LLM Engineer` talent-pool listing. | [Pracuj.pl](https://www.pracuj.pl/praca/ai-engineer-genai-rag-agentic-ai-warszawa-poniatowskiego-1%2Coferta%2C1004868105) |
+| tmobile-t-hub-ai-engineer-llms-agents-remote-poland | T-Mobile | T Hub - AI Engineer (LLMs, Agents) | Remote Poland / hybrid Warsaw | 2026-06-22-2307 | 2026-06-22-2307 | Open | Initial capture: public the:protocol role; valid 12 Jun-12 Jul 2026; mid-senior; remote/hybrid; Python, Transformers, GCP, CI/CD, LLMs, Prompt Engineering, Generative AI and Agentic AI with production integration, performance and scalability focus. | [the:protocol](https://theprotocol.it/praca/t-hub---ai-engineer-llms-agents-warszawa-marynarska-12%2Coferta%2C47a40000-59d6-3231-7fc5-08dec88980a1) |
+| sii-ai-engineer-genai-cloud-fmx-multiple-locations | Sii Sp. z o.o. | AI Engineer – GenAI & Cloud (f/m/x) | Poland multiple locations / remote-hybrid-office | 2026-06-22-2307 | 2026-06-22-2307 | Open | Initial capture: official Sii role with supporting public Pracuj mirror; Whole Poland remote work; valid to 03 Jul on public listing; Python, LangChain/LangGraph, cloud computing and GenAI. | [Sii official](https://sii.pl/en/job-ads/id/37069/ai-engineer-genai-cloud-f-m-x) / [Pracuj.pl](https://www.pracuj.pl/praca/ai-engineer-genai-cloud-f-m-x-krakow-wadowicka-12%2Coferta%2C1004880274) |
 
 ## Open Questions
 
@@ -95,6 +97,7 @@ only when something meaningful changes.
 - Official GFT careers plus public Rite NRG roles after this run.
 - Official ITDS careers plus the public xBerry role after this run.
 - Official airSlate, DataArt and EPAM career pages after this run.
+- Public T-Mobile T Hub pages and the direct-employer KYOTU listing after this run.
 - Job boards with reliable filters for Wroclaw, remote Poland and AI/LLM work.
 - Salary, seniority, tech-stack and remote-policy changes on previously seen
   listings.
@@ -111,3 +114,4 @@ only when something meaningful changes.
 - [2026-06-21-0141](runs/2026-06-21-0141.md)
 - [2026-06-21-2107](runs/2026-06-21-2107.md)
 - [2026-06-22-0141](runs/2026-06-22-0141.md)
+- [2026-06-22-2307](runs/2026-06-22-2307.md)

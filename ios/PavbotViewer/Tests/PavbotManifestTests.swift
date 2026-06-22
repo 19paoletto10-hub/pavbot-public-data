@@ -187,6 +187,34 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(diagnostics.automationStatuses.map { $0.latestArtifact?.id }, ["run-2026-06-22", "audio-2026-06-22"])
     }
 
+    func testLatestAutomationRunSummaryUsesArtifactTimeAndMatchingAutomationName() throws {
+        let loadedManifest = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
+        let latestAudio = PavbotArtifact(
+            id: "audio-2026-06-23",
+            type: .podcastAudio,
+            topic: "tech-news",
+            title: "Podcast audio",
+            path: "research/tech-news/podcasts/2026-06-23/podcast.mp3",
+            url: "research/tech-news/podcasts/2026-06-23/podcast.mp3",
+            sizeBytes: 300,
+            date: "2026-06-23",
+            time: "09:30"
+        )
+        let manifest = PavbotManifest(
+            schemaVersion: loadedManifest.schemaVersion,
+            title: loadedManifest.title,
+            generatedAt: loadedManifest.generatedAt,
+            rawBaseUrl: loadedManifest.rawBaseUrl,
+            automations: loadedManifest.automations,
+            topics: loadedManifest.topics,
+            artifacts: [latestAudio] + loadedManifest.artifacts
+        )
+
+        XCTAssertEqual(manifest.latestAutomationRun?.time, "09:30")
+        XCTAssertEqual(manifest.latestAutomationRun?.automationName, "Pavbot Tech Podcast 09:00")
+        XCTAssertEqual(manifest.latestAutomationRun?.dashboardSubtitle, "09:30 · Pavbot Tech Podcast 09:00")
+    }
+
     @MainActor
     func testStoreSchedulesNotificationsForNewArtifactsAfterRefresh() async throws {
         let previous = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)

@@ -61,7 +61,13 @@ private struct OverviewSection: View {
                     MetricTile(title: "Automations", value: "\(manifest.enabledAutomations.count)", systemImage: "bolt.fill", tint: .yellow)
                     MetricTile(title: "Artifacts", value: "\(manifest.artifacts.count)", systemImage: "tray.full.fill", tint: .blue)
                     MetricTile(title: "Topics", value: "\(manifest.topics.count)", systemImage: "folder.fill", tint: .green)
-                    MetricTile(title: "Latest", value: manifest.latestArtifact?.date ?? "—", systemImage: "clock.fill", tint: .purple)
+                    MetricTile(
+                        title: "Last run",
+                        value: manifest.latestArtifact?.date ?? "—",
+                        subtitle: manifest.latestAutomationRun?.dashboardSubtitle,
+                        systemImage: "clock.fill",
+                        tint: .purple
+                    )
                 }
             }
             .padding(.vertical, 6)

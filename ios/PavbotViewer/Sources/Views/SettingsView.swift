@@ -16,6 +16,10 @@ struct SettingsView: View {
                     .autocorrectionDisabled()
                     .font(.system(.body, design: .monospaced))
 
+                Text("Use a public GitHub raw manifest URL, for example https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json. Private repositories require a later OAuth or backend proxy integration.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+
                 if let manifestURLValidationMessage {
                     Label(manifestURLValidationMessage, systemImage: "exclamationmark.triangle")
                         .font(.caption)

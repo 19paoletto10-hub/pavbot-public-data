@@ -37,6 +37,8 @@ instructions.
 - `docs/todo.md` - staged TODO list for the MVP and V2 path.
 - `docs/how-to-use.md` - daily operating guide for manual runs, reviews, and
   new topics.
+- `docs/connect-ios-app-to-your-repo.md` - end-user setup guide for connecting
+  the iOS app to a public GitHub raw manifest from a Codex-backed repository.
 - `integrations/openclaw/` - optional OpenClaw observer documentation and safe
   sample workspace files.
 - `research/templates/` - canonical Markdown templates.
@@ -51,3 +53,6 @@ instructions.
 3. Review the first three scheduled reports.
 4. Promote repeated manual changes into the skill or templates.
 5. Add new topics only after the pilot produces stable, useful reports.
+
+To connect the iOS app to your own repository, follow
+`docs/connect-ios-app-to-your-repo.md`.
