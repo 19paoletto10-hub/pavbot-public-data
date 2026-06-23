@@ -9,6 +9,10 @@ wydarzeniach. Wynikiem ma być krótki, źródłowany raport Markdown, estetyczn
 pod ekrany mobilne oraz scenariusz podcastowy po polsku z dwoma wariantami TTS:
 żeńskim Piper i męskim XTTS.
 
+Testowy run z 2026-06-23 utworzył pełny zestaw artefaktów: raport Markdown,
+mobilny PDF, scenariusz podcastowy oraz dwa pliki MP3. Najmocniejszy zestaw
+źródeł na start to KPRM/Gov.pl, Consilium, AP News, NATO, IMGW i RCB.
+
 ## Stable Facts
 
 - Materiał ma korzystać z aktualnych, wiarygodnych źródeł i zachowywać linki do
@@ -35,4 +39,4 @@ pod ekrany mobilne oraz scenariusz podcastowy po polsku z dwoma wariantami TTS:
 
 ## Recent Reports
 
-- Brak uruchomień.
+- [2026-06-23](runs/2026-06-23.md) - testowy run z PDF i dwoma wariantami TTS.

@@ -11,6 +11,9 @@
 
 - 2026-06-23: Topic created for a daily mobile-first current events brief with
   two TTS variants.
+- 2026-06-23: Testowy run utworzył raport, PDF i dwa warianty MP3. Test obrazu
+  PDF potwierdził, że renderer utrzymuje zawijane punkty Markdown jako pojedyncze
+  karty mobilnego briefu.
 
 ## Done
 
