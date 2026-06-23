@@ -269,6 +269,42 @@ class GeneratePavbotManifestTest(unittest.TestCase):
 
         self.assertIn("manifest written:", result.stdout)
 
+    def test_manifest_uses_explicit_automation_kind_from_docs(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp)
+            docs_dir = repo_root / "docs"
+            topic_dir = repo_root / "research" / "aktualne-wydarzenia-mobile"
+            docs_dir.mkdir(parents=True)
+            topic_dir.mkdir(parents=True)
+            (topic_dir / "topic.md").write_text(
+                "# Topic Contract: aktualne-wydarzenia-mobile\n",
+                encoding="utf-8",
+            )
+            (docs_dir / "how-to-use.md").write_text(
+                """# How To Use Pavbot
+
+The current active automations are:
+
+- Name: `Pavbot Aktualne Wydarzenia Mobile 10:15`
+- ID: `pavbot-aktualne-wydarzenia-mobile-10-15`
+- Kind: `researchAudio`
+- Topic: `research/aktualne-wydarzenia-mobile`
+- Cadence: daily at 10:15 local time
+- Output: `research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-mobile-brief.pdf`
+
+## Later
+""",
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo_root)
+
+        automation = manifest["automations"][0]
+        self.assertEqual(automation["kind"], "researchAudio")
+        self.assertEqual(automation["topic"], "aktualne-wydarzenia-mobile")
+
     def test_manifest_collects_podcast_audio_variants_from_audio_subfolders(self) -> None:
         generator = load_generator()
 
@@ -287,6 +323,10 @@ class GeneratePavbotManifestTest(unittest.TestCase):
             )
             female_audio.write_bytes(b"female mp3")
             male_audio.write_bytes(b"male mp3")
+            (female_audio.parent / "podcast.raw.mp3").write_bytes(b"raw female mp3")
+            (male_audio.parent / "podcast.raw.mp3").write_bytes(b"raw male mp3")
+            (female_audio.parent / "render.log").write_text("ok\n", encoding="utf-8")
+            (male_audio.parent / "render.log").write_text("ok\n", encoding="utf-8")
             (podcast_dir / "tts_variants.json").write_text(
                 '{"language": "pl"}\n',
                 encoding="utf-8",
@@ -313,6 +353,98 @@ class GeneratePavbotManifestTest(unittest.TestCase):
             ]["type"],
             "podcastTtsVariants",
         )
+        self.assertNotIn(
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.raw.mp3",
+            by_path,
+        )
+        self.assertNotIn(
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/male-xtts/render.log",
+            by_path,
+        )
+
+    def test_manifest_collects_timestamped_mobile_report_pdf_and_podcast_artifacts(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp)
+            topic_dir = repo_root / "research" / "aktualne-wydarzenia-mobile"
+            run_path = topic_dir / "runs" / "2026-06-23-1015.md"
+            pdf_path = topic_dir / "pdfs" / "2026-06-23-1015-mobile-brief.pdf"
+            podcast_dir = topic_dir / "podcasts" / "2026-06-23-1015"
+            female_audio = podcast_dir / "audio" / "female-piper" / "podcast.mp3"
+            female_render = podcast_dir / "audio" / "female-piper" / "render.json"
+
+            female_audio.parent.mkdir(parents=True)
+            run_path.parent.mkdir(parents=True)
+            pdf_path.parent.mkdir(parents=True)
+            (topic_dir / "topic.md").write_text(
+                "# Topic Contract: aktualne-wydarzenia-mobile\n",
+                encoding="utf-8",
+            )
+            run_path.write_text("# Mobile report\n", encoding="utf-8")
+            pdf_path.write_bytes(b"%PDF timestamped mobile brief")
+            (podcast_dir / "script.md").write_text("# Script\n", encoding="utf-8")
+            (podcast_dir / "sources.md").write_text("# Sources\n", encoding="utf-8")
+            (podcast_dir / "tts_variants.json").write_text(
+                '{"language": "pl"}\n',
+                encoding="utf-8",
+            )
+            female_audio.write_bytes(b"female mp3")
+            female_render.write_text('{"status": "ok"}\n', encoding="utf-8")
+            (female_audio.parent / "podcast.raw.mp3").write_bytes(b"raw mp3")
+            (female_audio.parent / "render.log").write_text("raw log\n", encoding="utf-8")
+
+            manifest = generator.build_manifest(repo_root)
+
+        by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+        expected = {
+            "research/aktualne-wydarzenia-mobile/runs/2026-06-23-1015.md": "run",
+            "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-1015-mobile-brief.pdf": "pdf",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/script.md": "podcastScript",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/sources.md": "podcastSources",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/tts_variants.json": "podcastTtsVariants",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/render.json": "podcastRender",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/podcast.mp3": "podcastAudioVariant",
+        }
+        for path, artifact_type in expected.items():
+            with self.subTest(path=path):
+                self.assertEqual(by_path[path]["type"], artifact_type)
+                self.assertEqual(by_path[path]["date"], "2026-06-23")
+                self.assertEqual(by_path[path]["time"], "10:15")
+
+        self.assertNotIn(
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/podcast.raw.mp3",
+            by_path,
+        )
+        self.assertNotIn(
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/render.log",
+            by_path,
+        )
+
+    def test_mobile_automation_contract_documents_single_warsaw_run_stamp(self) -> None:
+        automation_prompt = (
+            self.repo_root
+            / "research"
+            / "aktualne-wydarzenia-mobile"
+            / "automation-prompt.md"
+        ).read_text(encoding="utf-8")
+        how_to_use = (self.repo_root / "docs" / "how-to-use.md").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn(
+            "RUN_STAMP=$(TZ=Europe/Warsaw date +%Y-%m-%d-%H%M)",
+            automation_prompt,
+        )
+        self.assertIn("RUN_DATE=${RUN_STAMP:0:10}", automation_prompt)
+        for expected_path in (
+            "runs/YYYY-MM-DD-HHMM.md",
+            "pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf",
+            "podcasts/YYYY-MM-DD-HHMM/",
+        ):
+            with self.subTest(expected_path=expected_path):
+                self.assertIn(expected_path, automation_prompt)
+                self.assertIn(expected_path, how_to_use)
 
 
 if __name__ == "__main__":

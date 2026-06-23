@@ -74,12 +74,17 @@ i webhooka notyfikacji push. Skrypt uruchamia
 repozytorium na ten sam publiczny raw URL, ktory jest w iOS
 `Settings -> Manifest URL`; aplikacja iOS nie przekazuje tej wartosci z powrotem
 do Codex. Nastepnie uruchom:
-`scripts/pavbot_commit_and_push_outputs.sh research/llm-ai-jobs-wroclaw`.
+`scripts/pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw`.
 
 Uzyj risk gate z `docs/architecture.md`. W ramach tej automatyzacji wolno
 zmieniac tylko pliki w `research/llm-ai-jobs-wroclaw/`. Finalny krok publikacji
-moze dodatkowo commitowac `public/pavbot-manifest.json`. Jesli rekomendowana
-akcja wymagalaby zmiany automatyzacji, instrukcji repo, skilli, hookow, MCP,
-zaleznosci lub plikow poza aktywnym tematem, utworz propozycje w
-`research/llm-ai-jobs-wroclaw/proposals/` zamiast stosowac zmiane.
+moze commitowac tylko `research/llm-ai-jobs-wroclaw/runs/`,
+`research/llm-ai-jobs-wroclaw/pdfs/`,
+`research/llm-ai-jobs-wroclaw/podcasts/`,
+`research/llm-ai-jobs-wroclaw/index.md`,
+`research/llm-ai-jobs-wroclaw/backlog.md` oraz
+`public/pavbot-manifest.json`. Jesli rekomendowana akcja wymagalaby zmiany
+automatyzacji, instrukcji repo, skilli, hookow, MCP, zaleznosci lub plikow poza
+aktywnym tematem, utworz propozycje w `research/llm-ai-jobs-wroclaw/proposals/`
+zamiast stosowac zmiane.
 ```

@@ -34,13 +34,15 @@ push na `origin/main`.
 na ten sam publiczny raw URL, który jest w iOS `Settings -> Manifest URL`;
 aplikacja iOS nie przekazuje tej wartości z powrotem do Codex. Następnie
 uruchom:
-`scripts/pavbot_commit_and_push_outputs.sh research/polska-swiat`.
+`scripts/pavbot_commit_and_push_outputs.sh --isolated research/polska-swiat`.
 
 Użyj risk gate z `docs/architecture.md`. Jeśli rekomendowana akcja zmieniałaby
 automatyzacje, instrukcje repo, skille, hooki, MCP, zależności albo pliki poza
 aktywnym tematem, utwórz propozycję w `research/polska-swiat/proposals/`
 zamiast stosować zmianę. Finalny krok publikacji może commitować tylko
-`research/polska-swiat/` oraz `public/pavbot-manifest.json`.
+`research/polska-swiat/runs/`, `research/polska-swiat/pdfs/`,
+`research/polska-swiat/podcasts/`, `research/polska-swiat/index.md`,
+`research/polska-swiat/backlog.md` oraz `public/pavbot-manifest.json`.
 
 Jeśli nie ma materialnych zmian, nadal utwórz krótki raport z `Status: No
 material change`, sprawdzonymi źródłami i jednym zdaniem podsumowania.

@@ -44,9 +44,10 @@ polskich znaków diakrytycznych i zapisz
   `research/llm-ai-jobs-wroclaw` with timestamped Markdown reports and PDFs.
   Repository manifest ID: `pavbot-llm-ai-jobs-wroclaw-research`.
 - `Pavbot Aktualne Wydarzenia Mobile 10:15` runs daily at 10:15 Europe/Warsaw
-  and updates `research/aktualne-wydarzenia-mobile` with a mobile PDF, Polish
-  TTS script, female Piper audio, male XTTS audio, and variant metadata. ID:
-  `pavbot-aktualne-wydarzenia-mobile-10-15`.
+  and updates `research/aktualne-wydarzenia-mobile` with one timestamped
+  package: `runs/YYYY-MM-DD-HHMM.md`, `pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`,
+  `podcasts/YYYY-MM-DD-HHMM/`, female Piper MP3, male XTTS MP3, script,
+  sources, and variant metadata. ID: `pavbot-aktualne-wydarzenia-mobile-10-15`.
 
 ## Publishing Contract
 
@@ -54,14 +55,21 @@ Every active automation must finish with the shared publication script:
 
 ```bash
 export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
-scripts/pavbot_commit_and_push_outputs.sh research/<topic>
+scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
-The script refreshes `public/pavbot-manifest.json`, stages only the active
-topic and manifest, commits them, and pushes to `origin/main`. It requires a
-working `origin`, local `HEAD` synced with `origin/main`, push credentials for
-`main`, and no unrelated uncommitted changes outside the active topic. The
-GitHub webhook for live iOS notifications fires only after this push succeeds.
+The isolated script creates a temporary clean worktree from `origin/main`,
+copies only generated outputs from the active topic, refreshes
+`public/pavbot-manifest.json`, commits those files, and pushes to
+`origin/main`. It requires a working `origin`, `PAVBOT_MANIFEST_URL`, and push
+credentials for `main`. Do not push generated automation files separately from
+the refreshed manifest. The GitHub webhook for live iOS notifications fires
+only after this push succeeds.
+
+Automation output commits may include only `runs/`, `pdfs/`, `podcasts/`,
+`index.md`, `backlog.md`, and `public/pavbot-manifest.json`. App code, docs,
+prompt edits, and topic `tools/` changes are development work and must be
+committed separately.
 
 ## First Three Runs Review
 

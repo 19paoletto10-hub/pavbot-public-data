@@ -31,7 +31,7 @@ Then follow the shared workflow in `$daily-podcast-agent`:
 - write `render.json` next to the MP3.
 - create `brief.pdf` with the shared PDF renderer after audio metadata exists.
 - publish the final topic output with
-  `scripts/pavbot_commit_and_push_outputs.sh research/polska-swiat`.
+  `scripts/pavbot_commit_and_push_outputs.sh --isolated research/polska-swiat`.
 
 Default output folder:
 

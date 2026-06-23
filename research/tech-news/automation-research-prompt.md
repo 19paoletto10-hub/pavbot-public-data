@@ -36,13 +36,15 @@ push na `origin/main`.
 na ten sam publiczny raw URL, który jest w iOS `Settings -> Manifest URL`;
 aplikacja iOS nie przekazuje tej wartości z powrotem do Codex. Następnie
 uruchom:
-`scripts/pavbot_commit_and_push_outputs.sh research/tech-news`.
+`scripts/pavbot_commit_and_push_outputs.sh --isolated research/tech-news`.
 
 Użyj risk gate z `docs/architecture.md`. Jeśli rekomendowana akcja zmieniałaby
 automatyzacje, instrukcje repo, skille, hooki, MCP, zależności albo pliki poza
 aktywnym tematem, utwórz propozycję w `research/tech-news/proposals/` zamiast
 stosować zmianę. Finalny krok publikacji może commitować tylko
-`research/tech-news/` oraz `public/pavbot-manifest.json`.
+`research/tech-news/runs/`, `research/tech-news/pdfs/`,
+`research/tech-news/podcasts/`, `research/tech-news/index.md`,
+`research/tech-news/backlog.md` oraz `public/pavbot-manifest.json`.
 
 Jeśli nie ma materialnych zmian, nadal utwórz krótki raport z `Status: No
 material change`, sprawdzonymi źródłami i jednym zdaniem podsumowania.

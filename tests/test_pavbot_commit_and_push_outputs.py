@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import os
 import shutil
 import subprocess
@@ -37,6 +38,11 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                     "research/tech-news/runs/2026-06-23.md",
                 ],
             )
+            manifest = json.loads((repo / "public" / "pavbot-manifest.json").read_text(encoding="utf-8"))
+            self.assertIn(
+                "research/tech-news/runs/2026-06-23.md",
+                {artifact["path"] for artifact in manifest["artifacts"]},
+            )
             local_head = self.git(repo, "rev-parse", "HEAD", stdout=True).strip()
             remote_head = self.git(repo, "ls-remote", "origin", "refs/heads/main", stdout=True).split()[0]
             self.assertEqual(local_head, remote_head)
@@ -71,17 +77,66 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 "1",
             )
 
+    def test_refuses_in_place_publish_when_topic_tool_changes_exist(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            tool_path = repo / "research" / "tech-news" / "tools" / "helper.sh"
+            tool_path.parent.mkdir(parents=True, exist_ok=True)
+            tool_path.write_text("#!/usr/bin/env bash\n", encoding="utf-8")
+
+            result = self.run_publish_script(repo, "research/tech-news")
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("outside allowed publish paths", result.stderr)
+            self.assertIn("research/tech-news/tools/helper.sh", result.stderr)
+
+    def test_isolated_publish_ignores_development_changes_and_pushes_outputs(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            (repo / "docs" / "unrelated.md").write_text("development change\n", encoding="utf-8")
+            tool_path = repo / "research" / "tech-news" / "tools" / "helper.sh"
+            tool_path.parent.mkdir(parents=True, exist_ok=True)
+            tool_path.write_text("#!/usr/bin/env bash\n", encoding="utf-8")
+
+            result = self.run_publish_script(repo, "research/tech-news", isolated=True)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertIn("pushed pavbot outputs", result.stdout)
+            changed_files = self.git(
+                repo,
+                "diff-tree",
+                "--no-commit-id",
+                "--name-only",
+                "-r",
+                "origin/main",
+                stdout=True,
+            ).splitlines()
+            self.assertEqual(
+                sorted(changed_files),
+                [
+                    "public/pavbot-manifest.json",
+                    "research/tech-news/runs/2026-06-23.md",
+                ],
+            )
+            self.assertFalse((repo / "public" / "pavbot-manifest.json").exists())
+            self.assertTrue((repo / "docs" / "unrelated.md").exists())
+            self.assertTrue(tool_path.exists())
+
     def temporary_repo(self):
         return TemporaryPavbotRepo(self.repo_root, self.script_path)
 
-    def run_publish_script(self, repo: Path, topic_path: str) -> subprocess.CompletedProcess[str]:
+    def run_publish_script(self, repo: Path, topic_path: str, isolated: bool = False) -> subprocess.CompletedProcess[str]:
         self.assertTrue(self.script_path.exists(), f"missing script: {self.script_path}")
         env = os.environ.copy()
         env["PAVBOT_MANIFEST_URL"] = (
             "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
         )
+        args = ["bash", str(self.script_path)]
+        if isolated:
+            args.append("--isolated")
+        args.append(topic_path)
         return subprocess.run(
-            ["bash", str(self.script_path), topic_path],
+            args,
             cwd=repo,
             capture_output=True,
             env=env,

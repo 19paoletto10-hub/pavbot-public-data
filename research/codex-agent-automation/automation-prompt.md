@@ -24,13 +24,17 @@ to `origin/main`. `PAVBOT_MANIFEST_URL` must be set in the Codex or repository
 environment to the same public raw manifest URL used in iOS
 `Settings -> Manifest URL`; the iOS app does not send this value back to Codex.
 Then run:
-`scripts/pavbot_commit_and_push_outputs.sh research/codex-agent-automation`.
+`scripts/pavbot_commit_and_push_outputs.sh --isolated research/codex-agent-automation`.
 
 Use the risk gate from `docs/architecture.md`. If a recommended action would
 change automations, repo-wide instructions, skills, hooks, MCP configuration,
 dependencies, or files outside the active topic, create a proposal in
 `research/codex-agent-automation/proposals/` instead of applying it. The final
-publish step may commit only `research/codex-agent-automation/` and
+publish step may commit only `research/codex-agent-automation/runs/`,
+`research/codex-agent-automation/pdfs/`,
+`research/codex-agent-automation/podcasts/`,
+`research/codex-agent-automation/index.md`,
+`research/codex-agent-automation/backlog.md`, and
 `public/pavbot-manifest.json`.
 
 If there are no material changes, still create a short dated report with

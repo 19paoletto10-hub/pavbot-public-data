@@ -24,7 +24,7 @@ for the VPS/Contabo path.
    - notifier `.env` as `PAVBOT_MANIFEST_URL`
    - Codex automation environment as `PAVBOT_MANIFEST_URL`
 2. Confirm each active automation finishes by running
-   `scripts/pavbot_commit_and_push_outputs.sh research/<topic>`. The GitHub
+   `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>`. The GitHub
    webhook only fires after the automation pushes its topic artifacts and
    refreshed `public/pavbot-manifest.json` to `origin/main`.
 3. Check local notifier health:

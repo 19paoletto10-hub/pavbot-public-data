@@ -12,7 +12,7 @@ from urllib.parse import urlparse
 
 
 DATE_RE = re.compile(r"(?P<date>\d{4}-\d{2}-\d{2})(?:-(?P<time>\d{4}))?")
-DOC_FIELD_RE = re.compile(r"^- (?P<key>Name|ID|Topic|Cadence|Output): `?(?P<value>.+?)`?$")
+DOC_FIELD_RE = re.compile(r"^- (?P<key>Name|ID|Kind|Topic|Cadence|Output): `?(?P<value>.+?)`?$")
 MANIFEST_URL_ERROR = (
     "PAVBOT_MANIFEST_URL must be a public GitHub raw manifest URL like "
     "https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
@@ -75,7 +75,7 @@ def collect_automations(repo_root: Path, raw_base_url: str) -> list[dict[str, An
             "id": item.get("id", slugify(name)),
             "name": name,
             "enabled": True,
-            "kind": infer_automation_kind(name, output),
+            "kind": item.get("kind") or infer_automation_kind(name, output),
             "topic": topic_slug,
             "topicPath": topic_path,
             "cadence": item.get("cadence", ""),
@@ -150,6 +150,8 @@ def collect_artifacts(
         if podcasts_dir.exists():
             for date_dir in sorted(path for path in podcasts_dir.iterdir() if path.is_dir()):
                 for path in sorted(item for item in date_dir.rglob("*") if item.is_file()):
+                    if not is_public_podcast_artifact(path):
+                        continue
                     add_artifact(
                         artifacts,
                         repo_root,
@@ -240,6 +242,10 @@ def infer_podcast_artifact_type(path: Path) -> str:
     if name == "tts_variants.json":
         return "podcastTtsVariants"
     return "podcastArtifact"
+
+
+def is_public_podcast_artifact(path: Path) -> bool:
+    return path.name not in {"podcast.raw.mp3", "render.log"}
 
 
 def artifact_title(path: Path, artifact_type: str) -> str:

@@ -16,7 +16,7 @@ ports or router port forwarding.
 3. GitHub sends `push` webhooks to
    `https://notify.example.com/webhooks/github`.
 4. Each Codex automation publishes its topic with
-   `scripts/pavbot_commit_and_push_outputs.sh research/<topic>`, which refreshes
+   `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>`, which refreshes
    `public/pavbot-manifest.json` and pushes it to `origin/main`.
 5. The notifier fetches `PAVBOT_MANIFEST_URL`, diffs it against the last stored
    manifest, and sends APNs alerts for new files or newly enabled automations.
@@ -170,7 +170,7 @@ If the iOS app does not show a new automation, check:
 
 - the Codex automation committed artifacts and refreshed
   `public/pavbot-manifest.json` by running
-  `scripts/pavbot_commit_and_push_outputs.sh research/<topic>`;
+  `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>`;
 - GitHub webhook delivery succeeded;
 - `/status` shows the expected `lastWebhook`;
 - `registeredDevices` is greater than `0`;

@@ -44,7 +44,7 @@ The recommended publication command is:
 
 ```bash
 export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
-scripts/pavbot_commit_and_push_outputs.sh research/<topic>
+scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
 The iOS app does not send this value back to Codex automations. Keep the same
@@ -60,28 +60,34 @@ Use this form, which is the same URL you paste into the iOS app:
 
 ```bash
 export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
-scripts/pavbot_commit_and_push_outputs.sh research/<topic>
+scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
 Example:
 
 ```bash
 export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/acme/pavbot-workspace/main/public/pavbot-manifest.json"
-scripts/pavbot_commit_and_push_outputs.sh research/tech-news
+scripts/pavbot_commit_and_push_outputs.sh --isolated research/tech-news
 ```
 
 Example for the current public Pavbot data repository:
 
 ```bash
 export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json"
-scripts/pavbot_commit_and_push_outputs.sh research/tech-news
+scripts/pavbot_commit_and_push_outputs.sh --isolated research/tech-news
 ```
 
-The publish script runs `python3 scripts/generate_pavbot_manifest.py`, stages
-only the selected `research/<topic>/` tree and `public/pavbot-manifest.json`,
-commits those paths, and pushes to `origin/main`. It refuses to run when
-unrelated uncommitted files are present, so automation output cannot silently
-publish app code, docs, credentials, or configuration changes.
+The isolated publish script creates a temporary clean worktree from
+`origin/main`, copies only generated outputs from the selected topic, runs
+`python3 scripts/generate_pavbot_manifest.py`, commits those outputs with
+`public/pavbot-manifest.json`, and pushes to `origin/main`. This lets
+automation results publish even when a separate app/backend development branch
+has local changes.
+
+Only `runs/`, `pdfs/`, `podcasts/`, `index.md`, `backlog.md`, and
+`public/pavbot-manifest.json` are allowed in these output commits. Code, docs,
+prompt edits, credentials, configuration changes, and topic `tools/` changes
+must be committed separately.
 
 Advanced compatibility mode is still available when you want to pass the repo
 root raw URL directly:
@@ -138,6 +144,6 @@ After reload:
   the same URL used in iOS `Settings -> Manifest URL`.
 - If no new files appear, confirm Codex automations are writing into
   `research/<topic>/` and then running
-  `scripts/pavbot_commit_and_push_outputs.sh research/<topic>`.
+  `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>`.
 - If your repository is private, use a public repository for v1 or add a future
   authenticated access layer.
