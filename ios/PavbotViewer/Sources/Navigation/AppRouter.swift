@@ -22,7 +22,15 @@ final class AppRouter {
     }
 
     func handleNotification(userInfo: [AnyHashable: Any]) {
-        pendingArtifactID = userInfo["artifactID"] as? String
+        if let artifactID = userInfo["artifactID"] as? String {
+            pendingArtifactID = artifactID
+            return
+        }
+        if userInfo["automationID"] is String {
+            selectedTab = .automations
+            artifactPath = []
+            pendingArtifactID = nil
+        }
     }
 
     func resolvePendingArtifact(in manifest: PavbotManifest?) {

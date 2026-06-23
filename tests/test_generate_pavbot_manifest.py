@@ -2,9 +2,13 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import os
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 
 def load_generator():
@@ -130,6 +134,140 @@ class GeneratePavbotManifestTest(unittest.TestCase):
 
         encoded = json.dumps(manifest, ensure_ascii=False)
         self.assertIn("Pavbot", encoded)
+
+    def test_manifest_url_env_resolves_repo_root_raw_base_url(self) -> None:
+        generator = load_generator()
+
+        with patch.dict(
+            "os.environ",
+            {
+                "PAVBOT_MANIFEST_URL": "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            },
+            clear=True,
+        ), patch.object(sys, "argv", ["generate_pavbot_manifest.py"]):
+            args = generator.parse_args()
+
+        self.assertEqual(
+            generator.resolve_raw_base_url(args.raw_base_url, args.manifest_url),
+            "https://raw.githubusercontent.com/example/pavbot/main/",
+        )
+
+    def test_raw_base_url_takes_precedence_over_manifest_url(self) -> None:
+        generator = load_generator()
+
+        with patch.object(
+            sys,
+            "argv",
+            [
+                "generate_pavbot_manifest.py",
+                "--raw-base-url",
+                "https://raw.githubusercontent.com/example/override/main/",
+                "--manifest-url",
+                "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            ],
+        ):
+            args = generator.parse_args()
+
+        self.assertEqual(
+            generator.resolve_raw_base_url(args.raw_base_url, args.manifest_url),
+            "https://raw.githubusercontent.com/example/override/main/",
+        )
+
+    def test_raw_base_url_env_takes_precedence_over_manifest_url_env(self) -> None:
+        generator = load_generator()
+
+        with patch.dict(
+            "os.environ",
+            {
+                "PAVBOT_RAW_BASE_URL": "https://raw.githubusercontent.com/example/env-override/main/",
+                "PAVBOT_MANIFEST_URL": "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            },
+            clear=True,
+        ), patch.object(sys, "argv", ["generate_pavbot_manifest.py"]):
+            args = generator.parse_args()
+
+        self.assertEqual(
+            generator.resolve_raw_base_url(args.raw_base_url, args.manifest_url),
+            "https://raw.githubusercontent.com/example/env-override/main/",
+        )
+
+    def test_invalid_manifest_url_raises_clear_error(self) -> None:
+        generator = load_generator()
+
+        with self.assertRaisesRegex(
+            ValueError,
+            "PAVBOT_MANIFEST_URL must be a public GitHub raw manifest URL",
+        ):
+            generator.resolve_raw_base_url(
+                "",
+                "https://github.com/example/pavbot/blob/main/public/pavbot-manifest.json",
+            )
+
+    def test_cli_rejects_invalid_manifest_url_with_clear_error(self) -> None:
+        script_path = (
+            Path(__file__).resolve().parents[1]
+            / "scripts"
+            / "generate_pavbot_manifest.py"
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            env = os.environ.copy()
+            env.pop("PAVBOT_RAW_BASE_URL", None)
+            env["PAVBOT_MANIFEST_URL"] = (
+                "https://github.com/example/pavbot/blob/main/public/pavbot-manifest.json"
+            )
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(script_path),
+                    "--repo-root",
+                    str(self.repo_root),
+                    "--output",
+                    str(Path(tmp) / "manifest.json"),
+                ],
+                capture_output=True,
+                env=env,
+                text=True,
+                check=False,
+            )
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn(
+            "PAVBOT_MANIFEST_URL must be a public GitHub raw manifest URL",
+            result.stderr,
+        )
+
+    def test_cli_accepts_absolute_output_path_outside_repo(self) -> None:
+        script_path = (
+            Path(__file__).resolve().parents[1]
+            / "scripts"
+            / "generate_pavbot_manifest.py"
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            output_path = Path(tmp) / "manifest.json"
+            env = os.environ.copy()
+            env.pop("PAVBOT_RAW_BASE_URL", None)
+            env["PAVBOT_MANIFEST_URL"] = (
+                "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+            )
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(script_path),
+                    "--repo-root",
+                    str(self.repo_root),
+                    "--output",
+                    str(output_path),
+                ],
+                capture_output=True,
+                env=env,
+                text=True,
+                check=False,
+            )
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertTrue(output_path.exists())
+
+        self.assertIn("manifest written:", result.stdout)
 
     def test_manifest_collects_podcast_audio_variants_from_audio_subfolders(self) -> None:
         generator = load_generator()

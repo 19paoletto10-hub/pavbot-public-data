@@ -59,12 +59,20 @@ Zapisz zbiorcze metadane w
 Jeśli jeden wariant TTS zawiedzie, nie twórz fałszywego MP3; zachowaj raport,
 PDF, skrypt, źródła i zapisz błąd w metadanych oraz backlogu.
 
-Po zapisaniu artefaktów odśwież publiczny manifest:
-`python3 scripts/generate_pavbot_manifest.py`.
+Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS i webhooka
+notyfikacji push. Skrypt uruchamia `python3 scripts/generate_pavbot_manifest.py`,
+odświeża `public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki i robi
+push na `origin/main`.
+`PAVBOT_MANIFEST_URL` musi być ustawione w środowisku Codex albo repozytorium
+na ten sam publiczny raw URL, który jest w iOS `Settings -> Manifest URL`;
+aplikacja iOS nie przekazuje tej wartości z powrotem do Codex. Następnie
+uruchom:
+`scripts/pavbot_commit_and_push_outputs.sh research/aktualne-wydarzenia-mobile`.
 
 Użyj risk gate z `docs/architecture.md`. W ramach tej automatyzacji wolno
 zmieniać tylko pliki w `research/aktualne-wydarzenia-mobile/` oraz manifest
-publiczny generowany ze źródeł. Jeśli rekomendowana akcja wymaga zmiany
+publiczny generowany ze źródeł. Finalny krok publikacji może commitować tylko
+`research/aktualne-wydarzenia-mobile/` oraz `public/pavbot-manifest.json`. Jeśli rekomendowana akcja wymaga zmiany
 automatyzacji, instrukcji repo, skilli, hooków, MCP, zależności albo plików poza
 aktywnym tematem, utwórz propozycję w
 `research/aktualne-wydarzenia-mobile/proposals/` zamiast stosować zmianę.

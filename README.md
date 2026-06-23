@@ -31,6 +31,8 @@ instructions.
   shared podcast workflow.
 - `.agents/skills/daily-podcast-agent/` - shared editorial and local TTS
   workflow for all Pavbot podcast topics.
+- `.agents/skills/pavbot-live-notifier/` - operational skill for the optional
+  MacBook, Cloudflare Tunnel, GitHub webhook, and APNs iOS notification add-on.
 - `.agents/scripts/podcast/` - shared local podcast rendering tools, including
   macOS `say`, Piper, optional XTTS-v2 backends, and PDF brief generation.
 - `docs/` - architecture, SDLC, and automation operating notes.
@@ -39,6 +41,13 @@ instructions.
   new topics.
 - `docs/connect-ios-app-to-your-repo.md` - end-user setup guide for connecting
   the iOS app to a public GitHub raw manifest from a Codex-backed repository.
+- `docs/live-ios-notifications-macbook-cloudflare.md` - optional MacBook,
+  Docker, and Cloudflare Tunnel APNs notifier for live iOS push alerts when
+  GitHub detects new generated files.
+- `docs/live-ios-notifications-contabo.md` - optional Contabo/VPS variant for
+  the same notifier if you want a server that stays online without a MacBook.
+- `backend/pavbot-notifier/` - Dockerized GitHub webhook and APNs provider
+  service used by the optional live notification add-on.
 - `integrations/openclaw/` - optional OpenClaw observer documentation and safe
   sample workspace files.
 - `research/templates/` - canonical Markdown templates.

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		036DCA6D533771B778BAEF1F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 279DFFBC15E4A98DCF519B73 /* UserNotifications.framework */; };
-		A8C21F4E67B04CBAB49F314D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F17C802DA9B24F81A4D62E7C /* Assets.xcassets */; };
+		138C25094EEC6A2230199FCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBAB3DC30A61CB521D5C3649 /* Assets.xcassets */; };
 		17031FD9AEB5E34F1A4E15B6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EEB32A16C7FA3A3E684630 /* SettingsView.swift */; };
 		1919E425F63DDE1B5BCA83A8 /* pavbot-manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 9DFB8BD6470959155AB7F197 /* pavbot-manifest.json */; };
 		29CB56086EEE782839BE6637 /* ArtifactNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AEF493B65E3050003DA5E /* ArtifactNotificationService.swift */; };
@@ -40,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		161029936A542B18D8B19F7C /* PavbotViewerPush.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PavbotViewerPush.entitlements; sourceTree = "<group>"; };
 		2215142C9512B2627D398AD2 /* ArtifactTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactTimelineView.swift; sourceTree = "<group>"; };
 		279DFFBC15E4A98DCF519B73 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		2833944A91FD712745E43B55 /* ManifestStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestStore.swift; sourceTree = "<group>"; };
@@ -55,12 +56,12 @@
 		7B73CD8205618D4A87B1004E /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
 		9D3D88752808C42E687EEB21 /* PavbotViewerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotViewerApp.swift; sourceTree = "<group>"; };
 		9DFB8BD6470959155AB7F197 /* pavbot-manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pavbot-manifest.json"; sourceTree = "<group>"; };
-		B101DC0CC0E2D100DB7164D0 /* PavbotViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PavbotViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B101DC0CC0E2D100DB7164D0 /* PavbotViewer.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PavbotViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7CD203D4E9EA86F2A8DA854 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		BBAB3DC30A61CB521D5C3649 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E36E99E399CB1D97AF718704 /* PavbotDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotDesign.swift; sourceTree = "<group>"; };
-		E84229AB2A6D9AD1434791DB /* PavbotViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PavbotViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E84229AB2A6D9AD1434791DB /* PavbotViewerTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PavbotViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED249FEEE03D833589C1529 /* DiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsView.swift; sourceTree = "<group>"; };
-		F17C802DA9B24F81A4D62E7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F397497A364A4766EB8EEA6A /* ArtifactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactDetailView.swift; sourceTree = "<group>"; };
 		FA490975E9DDDFDE415D90A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,9 +83,10 @@
 		3A241A5947B03C6C85AED7D5 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				F17C802DA9B24F81A4D62E7C /* Assets.xcassets */,
+				BBAB3DC30A61CB521D5C3649 /* Assets.xcassets */,
 				63D705D1F4AAA64D5A62C228 /* Info.plist */,
 				9D3D88752808C42E687EEB21 /* PavbotViewerApp.swift */,
+				161029936A542B18D8B19F7C /* PavbotViewerPush.entitlements */,
 				C93482AF37E91AFF3E79BA5C /* Models */,
 				A51BDBB327E12A05D73B4059 /* Navigation */,
 				427C2F22CB46807FD7C61950 /* Services */,
@@ -199,6 +201,7 @@
 				8AED9A9C1BDE84E44D0817D2 /* Sources */,
 				DACFDCC0923B3351EA2A538A /* Resources */,
 				CCBD74AEB3F92DA17FE7593C /* Frameworks */,
+				DA697C8E230CD8DF706F03F8 /* Set Dynamic Build Number */,
 			);
 			buildRules = (
 			);
@@ -236,14 +239,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 2630;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					1A1182BCAB775DFBFA8726CC = {
-						DevelopmentTeam = RLZ8X7S7V2;
+						DevelopmentTeam = SP774TZZU8;
 						ProvisioningStyle = Automatic;
 					};
 					52EF15468EB4217C12C91A42 = {
-						DevelopmentTeam = RLZ8X7S7V2;
+						DevelopmentTeam = SP774TZZU8;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -273,12 +276,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A8C21F4E67B04CBAB49F314D /* Assets.xcassets in Resources */,
+				138C25094EEC6A2230199FCD /* Assets.xcassets in Resources */,
 				1919E425F63DDE1B5BCA83A8 /* pavbot-manifest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DA697C8E230CD8DF706F03F8 /* Set Dynamic Build Number */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Set Dynamic Build Number";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -euo pipefail\nBUILD_NUMBER=\"$(date -u +%Y%m%d%H%M)\"\nINFO_PLIST=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nif [ -f \"$INFO_PLIST\" ]; then\n  /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"$INFO_PLIST\"\n  echo \"Set CFBundleVersion to $BUILD_NUMBER\"\nelse\n  echo \"warning: Info.plist not found at $INFO_PLIST\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43D760CB67E11A2182AA0C68 /* Sources */ = {
@@ -331,12 +356,71 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = local.pavbot.viewer.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paweltanski.pavbotviewer.tests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PavbotViewer.app/PavbotViewer";
 			};
 			name = Release;
+		};
+		269389EEDB8E65F560726A9F /* ReleasePush */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = SP774TZZU8;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = ReleasePush;
 		};
 		2716721E3AF16FCD6D798DD0 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -348,7 +432,7 @@
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = local.pavbot.viewer.tests;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paweltanski.pavbotviewer.tests;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PavbotViewer.app/PavbotViewer";
@@ -360,16 +444,75 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = local.pavbot.viewer;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paweltanski.pavbotviewer;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
+		};
+		5FCE8D783A8265251E4449F0 /* ReleasePush */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paweltanski.pavbotviewer.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PavbotViewer.app/PavbotViewer";
+			};
+			name = ReleasePush;
+		};
+		8A132DA0C9E63A30CCDC1ECD /* DebugPush */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APS_ENVIRONMENT = development;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewerPush.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paweltanski.pavbotviewer;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = DebugPush;
+		};
+		94A43E44421BD758DD890589 /* ReleasePush */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APS_ENVIRONMENT = production;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewerPush.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Sources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paweltanski.pavbotviewer;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = ReleasePush;
 		};
 		A30B8FADE38875303F138E2D /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -407,10 +550,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = RLZ8X7S7V2;
+				DEVELOPMENT_TEAM = SP774TZZU8;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -431,7 +574,6 @@
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.9;
@@ -474,10 +616,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = RLZ8X7S7V2;
+				DEVELOPMENT_TEAM = SP774TZZU8;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -491,28 +633,112 @@
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.9;
 			};
 			name = Release;
 		};
+		DAA85DB20B01E4A04BE9293A /* DebugPush */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paweltanski.pavbotviewer.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PavbotViewer.app/PavbotViewer";
+			};
+			name = DebugPush;
+		};
 		E38C2CC5CDD3BC27DB12EC8A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = local.pavbot.viewer;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paweltanski.pavbotviewer;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
+		};
+		E4E100F19BAB3DE1A9B1EE17 /* DebugPush */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = SP774TZZU8;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = DebugPush;
 		};
 /* End XCBuildConfiguration section */
 
@@ -521,7 +747,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2D3E6C6ABCE7A713D27B7A81 /* Debug */,
+				8A132DA0C9E63A30CCDC1ECD /* DebugPush */,
 				E38C2CC5CDD3BC27DB12EC8A /* Release */,
+				94A43E44421BD758DD890589 /* ReleasePush */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -530,7 +758,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A30B8FADE38875303F138E2D /* Debug */,
+				E4E100F19BAB3DE1A9B1EE17 /* DebugPush */,
 				D68139032E04F5E840A2D784 /* Release */,
+				269389EEDB8E65F560726A9F /* ReleasePush */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
@@ -539,7 +769,9 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				2716721E3AF16FCD6D798DD0 /* Debug */,
+				DAA85DB20B01E4A04BE9293A /* DebugPush */,
 				1B847AF9D656FE1C5122C3E5 /* Release */,
+				5FCE8D783A8265251E4449F0 /* ReleasePush */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;

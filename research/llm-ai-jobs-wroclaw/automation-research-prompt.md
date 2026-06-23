@@ -54,9 +54,6 @@ oraz `Material changes` tylko przy istotnych zmianach. Zaktualizuj
 `research/llm-ai-jobs-wroclaw/backlog.md`, gdy pojawia sie konkretny follow-up,
 notatka przegladowa lub zamkniety element.
 
-Po zapisaniu artefaktow odswiez publiczny manifest dla aplikacji iOS:
-`python3 scripts/generate_pavbot_manifest.py`.
-
 Wygeneruj profesjonalny PDF z tego samego raportu jako
 `research/llm-ai-jobs-wroclaw/pdfs/YYYY-MM-DD-HHMM-llm-ai-jobs-wroclaw.pdf`.
 Uzyj bundlowanego runtime Codex, jesli jest dostepny przez
@@ -69,8 +66,19 @@ Po wygenerowaniu PDF zweryfikuj go `pdfplumber` lub `pdftoppm`, jesli narzedzia
 sa dostepne. Sprawdz, czy tekst nie jest pusty, polskie znaki sa czytelne,
 linki zrodel sa widoczne, a pierwsza strona renderuje sie bez bledow.
 
+Po zapisaniu raportu, indeksu, backlogu i PDF opublikuj wyniki dla aplikacji iOS
+i webhooka notyfikacji push. Skrypt uruchamia
+`python3 scripts/generate_pavbot_manifest.py`, odswieza
+`public/pavbot-manifest.json`, commituje tylko dozwolone sciezki i robi push na
+`origin/main`. `PAVBOT_MANIFEST_URL` musi byc ustawione w srodowisku Codex albo
+repozytorium na ten sam publiczny raw URL, ktory jest w iOS
+`Settings -> Manifest URL`; aplikacja iOS nie przekazuje tej wartosci z powrotem
+do Codex. Nastepnie uruchom:
+`scripts/pavbot_commit_and_push_outputs.sh research/llm-ai-jobs-wroclaw`.
+
 Uzyj risk gate z `docs/architecture.md`. W ramach tej automatyzacji wolno
-zmieniac tylko pliki w `research/llm-ai-jobs-wroclaw/`. Jesli rekomendowana
+zmieniac tylko pliki w `research/llm-ai-jobs-wroclaw/`. Finalny krok publikacji
+moze dodatkowo commitowac `public/pavbot-manifest.json`. Jesli rekomendowana
 akcja wymagalaby zmiany automatyzacji, instrukcji repo, skilli, hookow, MCP,
 zaleznosci lub plikow poza aktywnym tematem, utworz propozycje w
 `research/llm-ai-jobs-wroclaw/proposals/` zamiast stosowac zmiane.

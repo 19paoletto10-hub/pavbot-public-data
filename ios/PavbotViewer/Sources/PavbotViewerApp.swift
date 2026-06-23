@@ -2,6 +2,7 @@ import SwiftUI
 
 @main
 struct PavbotViewerApp: App {
+    @UIApplicationDelegateAdaptor(PavbotRemoteNotificationAppDelegate.self) private var appDelegate
     @State private var store = ManifestStore()
     @State private var router = AppRouter()
     private let notificationDelegate = ArtifactNotificationDelegate()

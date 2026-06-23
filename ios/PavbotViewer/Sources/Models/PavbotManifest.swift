@@ -87,6 +87,10 @@ struct PavbotManifest: Codable, Equatable {
         latestArtifact(in: artifacts.filter { $0.date != nil })
     }
 
+    var generatedAtDate: Date? {
+        ISO8601DateFormatter.pavbotDate(from: generatedAt)
+    }
+
     var latestAutomationRun: AutomationRunSummary? {
         guard let latestArtifact else { return nil }
         let automation = matchingAutomation(for: latestArtifact)
@@ -120,6 +124,19 @@ struct PavbotManifest: Codable, Equatable {
             .sorted { lhs, rhs in
                 (lhs.date ?? "", lhs.time ?? "", lhs.path) > (rhs.date ?? "", rhs.time ?? "", rhs.path)
             }
+    }
+
+    func newAutomations(comparedTo previous: PavbotManifest?) -> [PavbotAutomation] {
+        guard let previous else { return [] }
+        let previousIDs = Set(previous.automations.map(\.id))
+        return enabledAutomations.filter { !previousIDs.contains($0.id) }
+    }
+
+    func isOlder(than other: PavbotManifest) -> Bool {
+        guard let generatedAtDate, let otherGeneratedAtDate = other.generatedAtDate else {
+            return false
+        }
+        return generatedAtDate < otherGeneratedAtDate
     }
 
     func topicTitle(for slug: String) -> String {
@@ -183,7 +200,7 @@ enum AutomationKind: String, Codable, Equatable {
         case .research:
             [.run]
         case .podcast:
-            [.podcastAudio]
+            [.podcastAudio, .podcastAudioVariant]
         case .automation:
             []
         }
@@ -223,9 +240,9 @@ struct PavbotArtifact: Codable, Identifiable, Equatable, Hashable {
             return .markdown
         case .pdf, .podcastBriefPdf:
             return .pdf
-        case .podcastAudio:
+        case .podcastAudio, .podcastAudioVariant:
             return .audio
-        case .podcastRender:
+        case .podcastRender, .podcastTtsVariants:
             return .json
         case .podcastArtifact, .unknown:
             return .file
@@ -284,11 +301,13 @@ enum ArtifactType: Equatable, Hashable {
     case run
     case pdf
     case podcastAudio
+    case podcastAudioVariant
     case podcastBriefPdf
     case podcastDraft
     case podcastRender
     case podcastScript
     case podcastSources
+    case podcastTtsVariants
     case podcastArtifact
     case proposal
     case backlog
@@ -305,11 +324,13 @@ extension ArtifactType: Codable {
         case "run": self = .run
         case "pdf": self = .pdf
         case "podcastAudio": self = .podcastAudio
+        case "podcastAudioVariant": self = .podcastAudioVariant
         case "podcastBriefPdf": self = .podcastBriefPdf
         case "podcastDraft": self = .podcastDraft
         case "podcastRender": self = .podcastRender
         case "podcastScript": self = .podcastScript
         case "podcastSources": self = .podcastSources
+        case "podcastTtsVariants": self = .podcastTtsVariants
         case "podcastArtifact": self = .podcastArtifact
         case "proposal": self = .proposal
         case "backlog": self = .backlog
@@ -330,11 +351,13 @@ extension ArtifactType: Codable {
         case .run: "run"
         case .pdf: "pdf"
         case .podcastAudio: "podcastAudio"
+        case .podcastAudioVariant: "podcastAudioVariant"
         case .podcastBriefPdf: "podcastBriefPdf"
         case .podcastDraft: "podcastDraft"
         case .podcastRender: "podcastRender"
         case .podcastScript: "podcastScript"
         case .podcastSources: "podcastSources"
+        case .podcastTtsVariants: "podcastTtsVariants"
         case .podcastArtifact: "podcastArtifact"
         case .proposal: "proposal"
         case .backlog: "backlog"
@@ -350,11 +373,13 @@ extension ArtifactType: Codable {
         case .run: "Run"
         case .pdf: "PDF"
         case .podcastAudio: "Audio"
+        case .podcastAudioVariant: "Audio variant"
         case .podcastBriefPdf: "Brief PDF"
         case .podcastDraft: "Draft"
         case .podcastRender: "Render"
         case .podcastScript: "Script"
         case .podcastSources: "Sources"
+        case .podcastTtsVariants: "TTS variants"
         case .podcastArtifact: "Podcast"
         case .proposal: "Proposal"
         case .backlog: "Backlog"
@@ -378,6 +403,27 @@ extension JSONDecoder {
     static var pavbot: JSONDecoder {
         JSONDecoder()
     }
+}
+
+extension ISO8601DateFormatter {
+    static func pavbotDate(from value: String) -> Date? {
+        if let date = fractionalPavbot.date(from: value) {
+            return date
+        }
+        return standardPavbot.date(from: value)
+    }
+
+    private static let fractionalPavbot: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        return formatter
+    }()
+
+    private static let standardPavbot: ISO8601DateFormatter = {
+        let formatter = ISO8601DateFormatter()
+        formatter.formatOptions = [.withInternetDateTime]
+        return formatter
+    }()
 }
 
 extension DateFormatter {

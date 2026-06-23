@@ -5,6 +5,11 @@ protocol ManifestFetching {
     func fetchManifest(from url: URL) async throws -> PavbotManifest
 }
 
+enum ManifestDefaults {
+    static let defaultManifestURL = "https://raw.githubusercontent.com/OWNER/REPO/main/public/pavbot-manifest.json"
+    static let urlDefaultsKey = "pavbot.manifestURL"
+}
+
 @MainActor
 @Observable
 final class ManifestStore {
@@ -15,14 +20,15 @@ final class ManifestStore {
         case failed(String)
     }
 
-    static let defaultManifestURL = "https://raw.githubusercontent.com/OWNER/REPO/main/public/pavbot-manifest.json"
+    static let defaultManifestURL = ManifestDefaults.defaultManifestURL
 
     var manifest: PavbotManifest?
     var lastNewArtifacts: [PavbotArtifact] = []
+    var lastNewAutomations: [PavbotAutomation] = []
     var state: LoadState = .idle
     var manifestURLString: String {
         didSet {
-            UserDefaults.standard.set(manifestURLString, forKey: Self.urlDefaultsKey)
+            UserDefaults.standard.set(manifestURLString, forKey: ManifestDefaults.urlDefaultsKey)
         }
     }
     var isUsingPlaceholderManifestURL: Bool {
@@ -43,7 +49,7 @@ final class ManifestStore {
         self.cache = cache
         self.notifier = notifier ?? ArtifactNotificationService()
         self.manifestURLString = manifestURLString
-            ?? UserDefaults.standard.string(forKey: Self.urlDefaultsKey)
+            ?? UserDefaults.standard.string(forKey: ManifestDefaults.urlDefaultsKey)
             ?? Self.defaultManifestURL
         self.manifest = cache.load()
         if self.manifest != nil {
@@ -52,6 +58,8 @@ final class ManifestStore {
     }
 
     func load() async {
+        guard state != .loading else { return }
+
         if isUsingPlaceholderManifestURL {
             state = manifest == nil
                 ? .failed("Set your public GitHub raw manifest URL in Settings.")
@@ -76,16 +84,25 @@ final class ManifestStore {
         do {
             let previousManifest = manifest
             let loadedManifest = try await client.fetchManifest(from: url)
+            if let previousManifest, loadedManifest.isOlder(than: previousManifest) {
+                lastNewArtifacts = []
+                lastNewAutomations = []
+                state = .failed("Showing cached data. Remote manifest is older than the cached manifest.")
+                return
+            }
             let newArtifacts = loadedManifest.newArtifacts(comparedTo: previousManifest)
+            let newAutomations = loadedManifest.newAutomations(comparedTo: previousManifest)
             lastNewArtifacts = newArtifacts
+            lastNewAutomations = newAutomations
             manifest = loadedManifest
             cache.save(loadedManifest)
-            if !newArtifacts.isEmpty {
-                await notifier.notify(artifacts: newArtifacts, manifestURL: url)
+            if !newArtifacts.isEmpty || !newAutomations.isEmpty {
+                await notifier.notify(artifacts: newArtifacts, automations: newAutomations, manifestURL: url)
             }
             state = .loaded
         } catch {
             lastNewArtifacts = []
+            lastNewAutomations = []
             if manifest != nil {
                 state = .failed("Showing cached data. Refresh failed: \(error.localizedDescription)")
             } else {
@@ -98,7 +115,14 @@ final class ManifestStore {
         await load()
     }
 
-    private static let urlDefaultsKey = "pavbot.manifestURL"
+    func startAutoRefreshLoop(intervalSeconds: UInt64 = 300) async {
+        guard intervalSeconds > 0 else { return }
+        while !Task.isCancelled {
+            try? await Task.sleep(nanoseconds: intervalSeconds * 1_000_000_000)
+            if Task.isCancelled { return }
+            await reload()
+        }
+    }
 }
 
 struct ManifestClient: ManifestFetching {
@@ -120,7 +144,7 @@ struct ManifestClient: ManifestFetching {
     var decoder: JSONDecoder = .pavbot
 
     func fetchManifest(from url: URL) async throws -> PavbotManifest {
-        let (data, response) = try await session.data(from: url)
+        let (data, response) = try await session.data(for: Self.request(for: url))
         guard let httpResponse = response as? HTTPURLResponse else {
             throw ClientError.invalidResponse
         }
@@ -128,6 +152,13 @@ struct ManifestClient: ManifestFetching {
             throw ClientError.httpStatus(httpResponse.statusCode)
         }
         return try decoder.decode(PavbotManifest.self, from: data)
+    }
+
+    static func request(for url: URL) -> URLRequest {
+        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData)
+        request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
+        request.setValue("no-cache", forHTTPHeaderField: "Pragma")
+        return request
     }
 }
 

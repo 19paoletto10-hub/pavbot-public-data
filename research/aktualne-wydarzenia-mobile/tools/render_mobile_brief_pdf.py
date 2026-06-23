@@ -91,6 +91,17 @@ def source_links(text: str) -> list[tuple[str, str]]:
     return [(label.strip(), url.strip()) for label, url in re.findall(r"\[([^\]]+)\]\((https?://[^)]+)\)", text)]
 
 
+def unique_links(links: list[tuple[str, str]]) -> list[tuple[str, str]]:
+    unique: list[tuple[str, str]] = []
+    seen: set[str] = set()
+    for label, url in links:
+        if url in seen:
+            continue
+        seen.add(url)
+        unique.append((label, url))
+    return unique
+
+
 def read_text(path: Path) -> str:
     if not path.is_file():
         fail(f"missing file: {path}", 66)
@@ -126,7 +137,13 @@ def split_sections(markdown_text: str) -> tuple[str, dict[str, list[str]], dict[
             if key.lower() in {"date", "status"}:
                 metadata[key.lower()] = value.strip()
                 continue
-        sections.setdefault(current, []).append(stripped)
+        section_lines = sections.setdefault(current, [])
+        if stripped.startswith("- "):
+            section_lines.append(stripped)
+        elif section_lines and section_lines[-1].startswith("- "):
+            section_lines[-1] = f"{section_lines[-1]} {stripped}"
+        else:
+            section_lines.append(stripped)
 
     return title, sections, metadata
 
@@ -229,12 +246,26 @@ def build_styles() -> dict[str, ParagraphStyle]:
 
 def make_card(text: str, styles: dict[str, ParagraphStyle], background=colors.white) -> Table:
     clean = text[2:].strip() if text.startswith("- ") else text
-    lead, _, rest = clean.partition(". ")
-    body = rest if rest else clean
-    data = [
-        [Paragraph(markdown_inline(short(lead, 130)), styles["card_title"])],
-        [Paragraph(markdown_inline(short(body, 360)), styles["body"])],
-    ]
+    main_text, source_sep, source_text = clean.partition(" Source: ")
+    lead, sentence_sep, rest = main_text.partition(". ")
+
+    if sentence_sep and len(lead) <= 145:
+        title = lead
+        body = rest
+    elif len(main_text) > 145:
+        title = main_text[:135].rsplit(" ", 1)[0].rstrip(" ,;:")
+        body = main_text[len(title) :].lstrip(" ,;:")
+    else:
+        title = main_text
+        body = rest
+
+    if source_sep:
+        source_line = f"Source: {source_text}"
+        body = f"{body} {source_line}".strip() if body else source_line
+
+    data = [[Paragraph(markdown_inline(short(title, 145)), styles["card_title"])]]
+    if body:
+        data.append([Paragraph(markdown_inline(short(body, 420)), styles["body"])])
     table = Table(data, colWidths=[342])
     table.setStyle(
         TableStyle(
@@ -312,7 +343,7 @@ def render_mobile_pdf(
     tts_data = read_json(podcast_dir / "tts_variants.json")
     title, sections, metadata = split_sections(report_text)
     styles = build_styles()
-    source_items = source_links(sources_text) or source_links(report_text)
+    source_items = unique_links(source_links(report_text) or source_links(sources_text))
     language = str(tts_data.get("language", "pl"))
     speed = str(tts_data.get("speed", "1.1"))
 

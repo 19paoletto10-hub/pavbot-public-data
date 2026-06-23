@@ -26,13 +26,21 @@ Zaktualizuj `research/polska-swiat/index.md`, gdy zmienia się obecny stan
 wiedzy. Zaktualizuj `research/polska-swiat/backlog.md`, gdy pojawiają się
 konkretne follow-upy, notatki przeglądowe, pytania albo rozwiązane elementy.
 
-Po zapisaniu artefaktów odśwież publiczny manifest dla aplikacji iOS:
-`python3 scripts/generate_pavbot_manifest.py`.
+Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS i webhooka
+notyfikacji push. Skrypt uruchamia `python3 scripts/generate_pavbot_manifest.py`,
+odświeża `public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki i robi
+push na `origin/main`.
+`PAVBOT_MANIFEST_URL` musi być ustawione w środowisku Codex albo repozytorium
+na ten sam publiczny raw URL, który jest w iOS `Settings -> Manifest URL`;
+aplikacja iOS nie przekazuje tej wartości z powrotem do Codex. Następnie
+uruchom:
+`scripts/pavbot_commit_and_push_outputs.sh research/polska-swiat`.
 
 Użyj risk gate z `docs/architecture.md`. Jeśli rekomendowana akcja zmieniałaby
 automatyzacje, instrukcje repo, skille, hooki, MCP, zależności albo pliki poza
 aktywnym tematem, utwórz propozycję w `research/polska-swiat/proposals/`
-zamiast stosować zmianę.
+zamiast stosować zmianę. Finalny krok publikacji może commitować tylko
+`research/polska-swiat/` oraz `public/pavbot-manifest.json`.
 
 Jeśli nie ma materialnych zmian, nadal utwórz krótki raport z `Status: No
 material change`, sprawdzonymi źródłami i jednym zdaniem podsumowania.

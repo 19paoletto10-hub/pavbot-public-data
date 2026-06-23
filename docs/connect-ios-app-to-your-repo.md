@@ -36,44 +36,65 @@ should:
 
 - run the relevant Pavbot skill, such as `$daily-research-agent`;
 - write outputs under `research/<topic>/`;
-- refresh the manifest after writing artifacts.
+- set `PAVBOT_MANIFEST_URL` to the same public raw manifest URL that the user
+  enters in the iOS app;
+- publish the topic outputs after writing artifacts.
 
-The manifest refresh command is:
+The recommended publication command is:
 
 ```bash
-python3 scripts/generate_pavbot_manifest.py
+export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
+scripts/pavbot_commit_and_push_outputs.sh research/<topic>
 ```
+
+The iOS app does not send this value back to Codex automations. Keep the same
+URL configured in the automation or repository environment.
 
 ## 3. Generate Public Raw URLs
 
-For the iOS app to preview Markdown, PDFs, JSON, and audio, generate the
-manifest with your public GitHub raw base URL.
+For the iOS app to preview Markdown, PDFs, JSON, and audio, the manifest must
+contain public GitHub raw URLs. The generator derives those artifact URLs from
+`PAVBOT_MANIFEST_URL`.
 
-Use this form:
+Use this form, which is the same URL you paste into the iOS app:
 
 ```bash
-python3 scripts/generate_pavbot_manifest.py --raw-base-url "https://raw.githubusercontent.com/<owner>/<repo>/<branch>/"
+export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
+scripts/pavbot_commit_and_push_outputs.sh research/<topic>
 ```
 
 Example:
 
 ```bash
-python3 scripts/generate_pavbot_manifest.py --raw-base-url "https://raw.githubusercontent.com/acme/pavbot-workspace/main/"
+export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/acme/pavbot-workspace/main/public/pavbot-manifest.json"
+scripts/pavbot_commit_and_push_outputs.sh research/tech-news
 ```
 
-You can also set the environment variable instead of passing the flag:
+Example for the current public Pavbot data repository:
 
 ```bash
-export PAVBOT_RAW_BASE_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/"
+export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json"
+scripts/pavbot_commit_and_push_outputs.sh research/tech-news
+```
+
+The publish script runs `python3 scripts/generate_pavbot_manifest.py`, stages
+only the selected `research/<topic>/` tree and `public/pavbot-manifest.json`,
+commits those paths, and pushes to `origin/main`. It refuses to run when
+unrelated uncommitted files are present, so automation output cannot silently
+publish app code, docs, credentials, or configuration changes.
+
+Advanced compatibility mode is still available when you want to pass the repo
+root raw URL directly:
+
+```bash
+python3 scripts/generate_pavbot_manifest.py --raw-base-url "https://raw.githubusercontent.com/<owner>/<repo>/<branch>/"
+```
+
+If you only need to regenerate the manifest without publishing topic artifacts,
+you can still run:
+
+```bash
 python3 scripts/generate_pavbot_manifest.py
-```
-
-Commit and push the updated manifest:
-
-```bash
-git add public/pavbot-manifest.json
-git commit -m "Refresh Pavbot manifest"
-git push
 ```
 
 ## 4. Copy The Manifest URL
@@ -113,9 +134,10 @@ After reload:
 
 - If the app says the URL is invalid, confirm it starts with `https://` and
   ends with `.json`.
-- If previews do not open, regenerate the manifest with `PAVBOT_RAW_BASE_URL`
-  or `--raw-base-url`.
+- If previews do not open, publish the topic with `PAVBOT_MANIFEST_URL` set to
+  the same URL used in iOS `Settings -> Manifest URL`.
 - If no new files appear, confirm Codex automations are writing into
-  `research/<topic>/` and then regenerate `public/pavbot-manifest.json`.
+  `research/<topic>/` and then running
+  `scripts/pavbot_commit_and_push_outputs.sh research/<topic>`.
 - If your repository is private, use a public repository for v1 or add a future
   authenticated access layer.

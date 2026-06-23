@@ -1,7 +1,10 @@
 import SwiftUI
+import UIKit
 
 struct DiagnosticsView: View {
     @Environment(ManifestStore.self) private var store
+    @State private var remoteDeviceToken = ""
+    @State private var remoteRegistrationError = ""
 
     var body: some View {
         List {
@@ -22,9 +25,18 @@ struct DiagnosticsView: View {
                     description: Text("Load or configure a Pavbot manifest to inspect Codex automation status.")
                 )
             }
+
+            DiagnosticsRemoteNotificationSection(
+                deviceToken: remoteDeviceToken,
+                registrationError: remoteRegistrationError
+            )
         }
         .navigationTitle("Diagnostics")
         .listStyle(.insetGrouped)
+        .onAppear {
+            remoteDeviceToken = RemoteNotificationDiagnostics.deviceToken()
+            remoteRegistrationError = RemoteNotificationDiagnostics.registrationError()
+        }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
@@ -34,6 +46,35 @@ struct DiagnosticsView: View {
                 }
                 .accessibilityLabel("Refresh diagnostics")
             }
+        }
+    }
+}
+
+private struct DiagnosticsRemoteNotificationSection: View {
+    let deviceToken: String
+    let registrationError: String
+
+    var body: some View {
+        Section {
+            LabeledContent("APNs token", value: RemoteNotificationDiagnostics.deviceTokenPreview(for: deviceToken))
+            LabeledContent("Apple Console", value: "Development for DebugPush")
+
+            if !registrationError.isEmpty {
+                Label(registrationError, systemImage: "exclamationmark.triangle.fill")
+                    .font(.caption)
+                    .foregroundStyle(.orange)
+            }
+
+            Button {
+                UIPasteboard.general.string = deviceToken
+            } label: {
+                Label("Copy APNs device token", systemImage: "doc.on.doc")
+            }
+            .disabled(deviceToken.isEmpty)
+        } header: {
+            Text("Live notifications")
+        } footer: {
+            Text("Use this token in Apple Push Notifications Console for com.paweltanski.pavbotviewer. The token is stored locally and is never committed.")
         }
     }
 }

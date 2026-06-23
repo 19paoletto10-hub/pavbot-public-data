@@ -40,8 +40,15 @@ Do audio użyj wspólnego lokalnego renderera: `bash .agents/scripts/podcast/ren
 Po utworzeniu `render.json` przygotuj estetyczny profesjonalny PDF:
 `~/.cache/pavbot/venvs/pdf/bin/python .agents/scripts/podcast/render-podcast-brief-pdf.py research/polska-swiat/podcasts/YYYY-MM-DD`
 
-Po zapisaniu artefaktów podcastu odśwież publiczny manifest dla aplikacji iOS:
-`python3 scripts/generate_pavbot_manifest.py`.
+Po zapisaniu artefaktów podcastu opublikuj wyniki dla aplikacji iOS i webhooka
+notyfikacji push. Skrypt uruchamia `python3 scripts/generate_pavbot_manifest.py`,
+odświeża `public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki i robi
+push na `origin/main`.
+`PAVBOT_MANIFEST_URL` musi być ustawione w środowisku Codex albo repozytorium
+na ten sam publiczny raw URL, który jest w iOS `Settings -> Manifest URL`;
+aplikacja iOS nie przekazuje tej wartości z powrotem do Codex. Następnie
+uruchom:
+`scripts/pavbot_commit_and_push_outputs.sh research/polska-swiat`.
 
 Nie zmyślaj faktów. Jeśli źródło jest niedostępne lub niejednoznaczne, zapisz to
 w `sources.md` i nie używaj niepotwierdzonego twierdzenia w podcaście.

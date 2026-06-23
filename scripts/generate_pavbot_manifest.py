@@ -8,10 +8,16 @@ import re
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
 
 
 DATE_RE = re.compile(r"(?P<date>\d{4}-\d{2}-\d{2})(?:-(?P<time>\d{4}))?")
 DOC_FIELD_RE = re.compile(r"^- (?P<key>Name|ID|Topic|Cadence|Output): `?(?P<value>.+?)`?$")
+MANIFEST_URL_ERROR = (
+    "PAVBOT_MANIFEST_URL must be a public GitHub raw manifest URL like "
+    "https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
+)
+MANIFEST_PATH_SUFFIX = "/public/pavbot-manifest.json"
 
 
 def build_manifest(repo_root: Path, raw_base_url: str = "") -> dict[str, Any]:
@@ -273,8 +279,43 @@ def normalize_base_url(value: str) -> str:
     return value if value.endswith("/") else f"{value}/"
 
 
+def resolve_raw_base_url(raw_base_url: str, manifest_url: str) -> str:
+    raw_base_url = normalize_base_url(raw_base_url)
+    if raw_base_url:
+        return raw_base_url
+    manifest_url = manifest_url.strip()
+    if not manifest_url:
+        return ""
+    return raw_base_url_from_manifest_url(manifest_url)
+
+
+def raw_base_url_from_manifest_url(manifest_url: str) -> str:
+    parsed = urlparse(manifest_url.strip())
+    if (
+        parsed.scheme != "https"
+        or parsed.netloc != "raw.githubusercontent.com"
+        or parsed.query
+        or parsed.fragment
+        or not parsed.path.endswith(MANIFEST_PATH_SUFFIX)
+    ):
+        raise ValueError(MANIFEST_URL_ERROR)
+
+    base_path = parsed.path[: -len(MANIFEST_PATH_SUFFIX)]
+    segments = [segment for segment in base_path.split("/") if segment]
+    if len(segments) < 3:
+        raise ValueError(MANIFEST_URL_ERROR)
+    return f"https://raw.githubusercontent.com/{'/'.join(segments)}/"
+
+
 def relative_path(path: Path, repo_root: Path) -> str:
     return path.resolve().relative_to(repo_root.resolve()).as_posix()
+
+
+def display_path(path: Path, repo_root: Path) -> str:
+    try:
+        return relative_path(path, repo_root)
+    except ValueError:
+        return path.resolve().as_posix()
 
 
 def slugify(value: str) -> str:
@@ -309,6 +350,14 @@ def parse_args() -> argparse.Namespace:
         default=os.environ.get("PAVBOT_RAW_BASE_URL", ""),
         help="Base public raw URL for repo files.",
     )
+    parser.add_argument(
+        "--manifest-url",
+        default=os.environ.get("PAVBOT_MANIFEST_URL", ""),
+        help=(
+            "Public GitHub raw URL for public/pavbot-manifest.json. "
+            "Used to derive --raw-base-url when --raw-base-url is not set."
+        ),
+    )
     return parser.parse_args()
 
 
@@ -318,9 +367,14 @@ def main() -> None:
     output_path = args.output
     if not output_path.is_absolute():
         output_path = repo_root / output_path
-    manifest = build_manifest(repo_root, raw_base_url=args.raw_base_url)
+    try:
+        raw_base_url = resolve_raw_base_url(args.raw_base_url, args.manifest_url)
+    except ValueError as exc:
+        raise SystemExit(f"error: {exc}") from exc
+
+    manifest = build_manifest(repo_root, raw_base_url=raw_base_url)
     write_manifest(manifest, output_path)
-    print(f"manifest written: {relative_path(output_path, repo_root)}")
+    print(f"manifest written: {display_path(output_path, repo_root)}")
 
 
 if __name__ == "__main__":

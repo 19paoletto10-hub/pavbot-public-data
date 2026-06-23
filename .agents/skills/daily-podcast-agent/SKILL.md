@@ -102,3 +102,20 @@ the first render is outside that range, revise `script.md` and render again.
 If all TTS backends fail, do not fake the MP3. Keep `script.md` and
 `sources.md`, record the failure in `render.json` or `sources.md`, and add a
 backlog note inside the active topic.
+
+## Public iOS Publication
+
+When the episode is part of a Pavbot automation, finish by publishing the topic
+outputs:
+
+```bash
+scripts/pavbot_commit_and_push_outputs.sh research/<topic>
+```
+
+`PAVBOT_MANIFEST_URL` must be set in the Codex or repository environment to the
+same public raw manifest URL used in iOS `Settings -> Manifest URL`. The iOS app
+does not send this value back to Codex. The publish script runs
+`python3 scripts/generate_pavbot_manifest.py`, stages only
+`research/<topic>/` plus `public/pavbot-manifest.json`, commits those paths, and
+pushes to `origin/main`. If unrelated changes exist, stop and report the
+blocking paths instead of broadening the commit.

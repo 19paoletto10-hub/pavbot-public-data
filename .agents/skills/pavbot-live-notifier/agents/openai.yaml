@@ -1,0 +1,6 @@
+interface:
+  display_name: "Pavbot Live Notifier"
+  short_description: "MacBook Cloudflare APNs notifier"
+  default_prompt: "Use $pavbot-live-notifier to debug Pavbot iOS live notifications."
+policy:
+  allow_implicit_invocation: true

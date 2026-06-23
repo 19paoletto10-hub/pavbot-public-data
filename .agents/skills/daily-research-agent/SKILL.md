@@ -36,6 +36,9 @@ Run one research cycle for a single Pavbot topic.
 8. Update `research/<topic>/backlog.md` when there are actionable follow-ups,
    review notes, open questions, or resolved items.
 9. Use the risk gate before making any change.
+10. For scheduled Pavbot automations, publish the finished output with
+    `scripts/pavbot_commit_and_push_outputs.sh research/<topic>` so the iOS app
+    and live-notification webhook see the latest manifest on GitHub.
 
 ## Risk Gate
 
@@ -46,6 +49,9 @@ Low-risk changes may be applied directly:
 - Update the active topic index or backlog.
 - Add source links and concise notes.
 - Mark an existing topic backlog item as done.
+- Run `scripts/pavbot_commit_and_push_outputs.sh research/<topic>` as the final
+  automation step. That script may refresh and commit
+  `public/pavbot-manifest.json` together with the active topic only.
 
 Create a proposal instead of applying medium-risk or high-risk changes:
 
@@ -88,6 +94,23 @@ before claiming success.
 If nothing material changed, still create a short report with
 `Status: No material change`, the sources checked, and one concise summary
 sentence. Do not pad it with filler.
+
+## Public iOS Publication
+
+When the run is part of a Pavbot automation, finish by publishing the topic
+outputs:
+
+```bash
+scripts/pavbot_commit_and_push_outputs.sh research/<topic>
+```
+
+`PAVBOT_MANIFEST_URL` must be set in the Codex or repository environment to the
+same public raw manifest URL used in iOS `Settings -> Manifest URL`. The iOS app
+does not send this value back to Codex. The publish script runs
+`python3 scripts/generate_pavbot_manifest.py`, stages only
+`research/<topic>/` plus `public/pavbot-manifest.json`, commits those paths, and
+pushes to `origin/main`. If unrelated changes exist, stop and report the
+blocking paths instead of broadening the commit.
 
 ## Quality Rules
 

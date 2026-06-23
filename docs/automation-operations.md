@@ -48,6 +48,21 @@ polskich znaków diakrytycznych i zapisz
   TTS script, female Piper audio, male XTTS audio, and variant metadata. ID:
   `pavbot-aktualne-wydarzenia-mobile-10-15`.
 
+## Publishing Contract
+
+Every active automation must finish with the shared publication script:
+
+```bash
+export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
+scripts/pavbot_commit_and_push_outputs.sh research/<topic>
+```
+
+The script refreshes `public/pavbot-manifest.json`, stages only the active
+topic and manifest, commits them, and pushes to `origin/main`. It requires a
+working `origin`, local `HEAD` synced with `origin/main`, push credentials for
+`main`, and no unrelated uncommitted changes outside the active topic. The
+GitHub webhook for live iOS notifications fires only after this push succeeds.
+
 ## First Three Runs Review
 
 For the first three scheduled runs, review:

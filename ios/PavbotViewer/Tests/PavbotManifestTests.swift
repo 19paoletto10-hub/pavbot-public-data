@@ -70,6 +70,47 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(ManifestURLValidator.validate(""), .invalid("Enter a manifest URL."))
     }
 
+    func testNotificationServerURLValidationAllowsEmptyUntilUserEnablesAlerts() {
+        XCTAssertNil(NotificationServerSettings.validationMessage(for: "", required: false))
+        XCTAssertEqual(
+            NotificationServerSettings.validationMessage(for: "", required: true),
+            "Enter a notification server URL before enabling live alerts."
+        )
+        XCTAssertEqual(
+            NotificationServerSettings.validationMessage(for: "http://notify.example.com", required: true),
+            "Use an HTTPS notification server URL."
+        )
+        XCTAssertNil(NotificationServerSettings.validationMessage(for: "https://notify.example.com", required: true))
+    }
+
+    func testRemoteNotificationDiagnosticsStoresTokenPreviewAndRegistrationError() {
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        let token = Data([0x00, 0xab, 0xcd, 0xef, 0x12, 0x34])
+
+        RemoteNotificationDiagnostics.saveDeviceToken(token, defaults: defaults)
+        RemoteNotificationDiagnostics.saveRegistrationError("Missing aps-environment", defaults: defaults)
+
+        XCTAssertEqual(RemoteNotificationDiagnostics.deviceToken(defaults: defaults), "00abcdef1234")
+        XCTAssertEqual(RemoteNotificationDiagnostics.deviceTokenPreview(defaults: defaults), "00ab...1234")
+        XCTAssertEqual(RemoteNotificationDiagnostics.registrationError(defaults: defaults), "Missing aps-environment")
+
+        RemoteNotificationDiagnostics.clearRegistrationError(defaults: defaults)
+
+        XCTAssertEqual(RemoteNotificationDiagnostics.registrationError(defaults: defaults), "")
+    }
+
+    func testLiveNotificationOnboardingPromptsOnceAndRoutesMissingServerURLToSettings() {
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+
+        XCTAssertTrue(LiveNotificationOnboarding.shouldPrompt(defaults: defaults))
+        XCTAssertTrue(LiveNotificationOnboarding.needsSettingsBeforeSystemPrompt(serverURLString: ""))
+        XCTAssertFalse(LiveNotificationOnboarding.needsSettingsBeforeSystemPrompt(serverURLString: "https://notify.example.com"))
+
+        LiveNotificationOnboarding.markPromptSeen(defaults: defaults)
+
+        XCTAssertFalse(LiveNotificationOnboarding.shouldPrompt(defaults: defaults))
+    }
+
     func testDecoderRejectsUnsupportedManifestSchemaVersion() throws {
         let data = """
         {
@@ -103,6 +144,44 @@ final class PavbotManifestTests: XCTestCase {
         )
 
         XCTAssertEqual(next.newArtifacts(comparedTo: previous).map(\.id), ["new-run-2026-06-23"])
+    }
+
+    func testDetectsNewAutomationsComparedToPreviousManifest() throws {
+        let previous = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
+        let next = PavbotManifest(
+            schemaVersion: previous.schemaVersion,
+            title: previous.title,
+            generatedAt: "2026-06-22T12:05:00+00:00",
+            rawBaseUrl: previous.rawBaseUrl,
+            automations: previous.automations + [Self.newAutomation],
+            topics: previous.topics,
+            artifacts: previous.artifacts
+        )
+
+        XCTAssertEqual(next.newAutomations(comparedTo: previous).map(\.id), ["mobile-current-events"])
+    }
+
+    func testArtifactTypesSupportMobilePodcastVariants() throws {
+        let audioVariant = try JSONDecoder.pavbot.decode(ArtifactType.self, from: #""podcastAudioVariant""#.data(using: .utf8)!)
+        let ttsVariants = try JSONDecoder.pavbot.decode(ArtifactType.self, from: #""podcastTtsVariants""#.data(using: .utf8)!)
+
+        XCTAssertEqual(audioVariant, .podcastAudioVariant)
+        XCTAssertEqual(ttsVariants, .podcastTtsVariants)
+        XCTAssertEqual(audioVariant.label, "Audio variant")
+        XCTAssertEqual(ttsVariants.label, "TTS variants")
+
+        let artifact = PavbotArtifact(
+            id: "variant",
+            type: .podcastAudioVariant,
+            topic: "aktualne-wydarzenia-mobile",
+            title: "Podcast audio - female piper",
+            path: "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.mp3",
+            url: "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.mp3",
+            sizeBytes: 100,
+            date: "2026-06-23",
+            time: nil
+        )
+        XCTAssertEqual(artifact.viewerKind, .audio)
     }
 
     func testDiagnosticsReportsFreshManifestAndCounts() throws {
@@ -239,7 +318,71 @@ final class PavbotManifestTests: XCTestCase {
         await store.load()
 
         XCTAssertEqual(notifier.notifiedArtifactIDs, ["new-run-2026-06-23"])
+        XCTAssertTrue(notifier.notifiedAutomationIDs.isEmpty)
         XCTAssertEqual(store.manifest?.artifacts.first?.id, "new-run-2026-06-23")
+    }
+
+    @MainActor
+    func testStoreSchedulesNotificationsForNewAutomationsAfterRefresh() async throws {
+        let previous = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
+        let next = PavbotManifest(
+            schemaVersion: previous.schemaVersion,
+            title: previous.title,
+            generatedAt: "2026-06-22T12:05:00+00:00",
+            rawBaseUrl: previous.rawBaseUrl,
+            automations: previous.automations + [Self.newAutomation],
+            topics: previous.topics,
+            artifacts: previous.artifacts
+        )
+        let notifier = SpyArtifactNotifier()
+        let store = ManifestStore(
+            client: StubManifestClient(manifest: next),
+            cache: ManifestCache(defaults: UserDefaults(suiteName: UUID().uuidString)!),
+            notifier: notifier,
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+        )
+        store.manifest = previous
+
+        await store.load()
+
+        XCTAssertTrue(notifier.notifiedArtifactIDs.isEmpty)
+        XCTAssertEqual(notifier.notifiedAutomationIDs, ["mobile-current-events"])
+        XCTAssertEqual(store.lastNewAutomations.map(\.id), ["mobile-current-events"])
+    }
+
+    @MainActor
+    func testStoreDoesNotReplaceNewerCachedManifestWithOlderRemoteManifest() async throws {
+        let cached = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
+        let olderRemote = PavbotManifest(
+            schemaVersion: cached.schemaVersion,
+            title: cached.title,
+            generatedAt: "2026-06-22T11:59:00+00:00",
+            rawBaseUrl: cached.rawBaseUrl,
+            automations: [],
+            topics: [],
+            artifacts: []
+        )
+        let store = ManifestStore(
+            client: StubManifestClient(manifest: olderRemote),
+            cache: ManifestCache(defaults: UserDefaults(suiteName: UUID().uuidString)!),
+            notifier: SpyArtifactNotifier(),
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+        )
+        store.manifest = cached
+
+        await store.load()
+
+        XCTAssertEqual(store.manifest?.automations.map(\.id), ["research", "podcast"])
+        XCTAssertEqual(store.state, .failed("Showing cached data. Remote manifest is older than the cached manifest."))
+    }
+
+    func testManifestClientBuildsNoCacheRequest() throws {
+        let url = try XCTUnwrap(URL(string: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"))
+        let request = ManifestClient.request(for: url)
+
+        XCTAssertEqual(request.cachePolicy, .reloadIgnoringLocalAndRemoteCacheData)
+        XCTAssertEqual(request.value(forHTTPHeaderField: "Cache-Control"), "no-cache")
+        XCTAssertEqual(request.value(forHTTPHeaderField: "Pragma"), "no-cache")
     }
 
     @MainActor
@@ -289,6 +432,17 @@ final class PavbotManifestTests: XCTestCase {
 
         XCTAssertEqual(router.selectedTab, .artifacts)
         XCTAssertEqual(router.artifactPath.map(\.id), ["audio-2026-06-22"])
+        XCTAssertNil(router.pendingArtifactID)
+    }
+
+    @MainActor
+    func testRouterOpensAutomationsTabFromAutomationNotificationUserInfo() {
+        let router = AppRouter()
+        router.selectedTab = .settings
+
+        router.handleNotification(userInfo: ["automationID": "mobile-current-events"])
+
+        XCTAssertEqual(router.selectedTab, .automations)
         XCTAssertNil(router.pendingArtifactID)
     }
 
@@ -380,6 +534,20 @@ final class PavbotManifestTests: XCTestCase {
         time: nil
     )
 
+    private static let newAutomation = PavbotAutomation(
+        id: "mobile-current-events",
+        name: "Pavbot Aktualne Wydarzenia Mobile 10:15",
+        enabled: true,
+        kind: .research,
+        topic: "aktualne-wydarzenia-mobile",
+        topicPath: "research/aktualne-wydarzenia-mobile",
+        cadence: "daily at 10:15 local time",
+        sourcePath: "docs/how-to-use.md",
+        sourceUrl: "https://raw.githubusercontent.com/example/pavbot/main/docs/how-to-use.md",
+        output: "research/aktualne-wydarzenia-mobile/runs/YYYY-MM-DD.md",
+        outputUrl: "https://raw.githubusercontent.com/example/pavbot/main/research/aktualne-wydarzenia-mobile/runs/YYYY-MM-DD.md"
+    )
+
     private static func date(_ value: String) -> Date {
         ISO8601DateFormatter().date(from: value)!
     }
@@ -405,8 +573,10 @@ private final class CountingFailingManifestClient: ManifestFetching {
 @MainActor
 private final class SpyArtifactNotifier: ArtifactNotifying {
     private(set) var notifiedArtifactIDs: [String] = []
+    private(set) var notifiedAutomationIDs: [String] = []
 
-    func notify(artifacts: [PavbotArtifact], manifestURL: URL) async {
+    func notify(artifacts: [PavbotArtifact], automations: [PavbotAutomation], manifestURL: URL) async {
         notifiedArtifactIDs = artifacts.map(\.id)
+        notifiedAutomationIDs = automations.map(\.id)
     }
 }

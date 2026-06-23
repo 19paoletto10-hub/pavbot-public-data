@@ -24,6 +24,22 @@ def load_renderer():
 
 
 class RenderMobileBriefPdfTest(unittest.TestCase):
+    def test_split_sections_keeps_wrapped_list_items_together(self) -> None:
+        renderer = load_renderer()
+        _, sections, _ = renderer.split_sections(
+            """# Mobile News Brief
+
+## Nowe fakty
+
+- Pierwszy punkt jest długi i zawija się w Markdown
+  na drugą linię bez tworzenia nowej karty.
+- Drugi punkt zostaje osobnym elementem.
+"""
+        )
+
+        self.assertEqual(len(sections["Nowe fakty"]), 2)
+        self.assertIn("na drugą linię", sections["Nowe fakty"][0])
+
     def test_render_mobile_pdf_contains_news_sources_and_tts_metadata(self) -> None:
         renderer = load_renderer()
 

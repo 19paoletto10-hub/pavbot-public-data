@@ -6,7 +6,7 @@
 | --- | --- | --- | --- | --- |
 | High | Build reliable source shortlist | Better recurring sources reduce noise and duplicates. | Keep validating Just Join IT, Pracuj.pl, No Fluff Jobs, Sii, Capgemini, Addepto, CDQ, Grid Dynamics, Holisticon, deepsense.ai, GFT, Trans.eu, Tooploox, Deviniti, Rite NRG, UNIVIO, airSlate, DataArt, EPAM and T-Mobile over the next runs. | In progress |
 | Medium | Monitor Holisticon cluster through deadlines | Two additional remote Holisticon AI/data cards are still publicly visible after the listed 18 Jun deadline, so status is ambiguous. | Re-check whether the two post-deadline Holisticon cards disappear or stay public in the next run. | Open |
-| Medium | Track deepsense canonical URL drift | The public AI Software Engineer role still appears under two URLs, which complicates dedup and canonical tracking. | Verify next run whether `/careers/ai-software-engineer/` and `/careers/ai-software-engineer-2/` both remain live or collapse back to one canonical page. | Open |
+| Medium | Track deepsense source divergence | `deepsense.ai` now has multiple public-source mismatches: `AI Software Engineer` still appears under two URLs, `Senior Applied AI Engineer` differs on `remote vs hybrid`, and `Applied AI Engineer` is visible on No Fluff Jobs but not on the official careers hub. | Verify next run whether `/careers/ai-software-engineer/` and `/careers/ai-software-engineer-2/` both remain live, whether `Senior Applied AI Engineer` gets a single consistent remote policy, and whether `Applied AI Engineer` appears on the official careers hub. | Open |
 | Medium | Monitor Capgemini and Addepto cluster | Capgemini added new official GenAI roles and Addepto expanded its official public AI lineup within the same morning. | Re-check whether these pages stay open and whether salaries, locations or titles change in the next run. | Open |
 | Medium | Watch Sii board/canonical mismatch | Official Sii page for `Senior AI Engineer (f/m/x)` is inactive, while public boards now still show active listings. | Re-check next run whether the Pracuj.pl and Just Join IT listings disappear, or whether the official Sii source reopens and resolves the mismatch. | Open |
 | Medium | Monitor Rite NRG cluster | Rite NRG surfaced two strong public LLM/agentic roles in one run, both still board-based rather than employer-canonical. | Re-check next run whether both roles remain open and whether a canonical employer vacancy page becomes public. | Open |
@@ -44,6 +44,10 @@
 - 2026-06-22: Evening run added active `KYOTU`, `T-Mobile` and `Sii` public
   signals; `deepsense.ai` URL drift still persists and two adjacent T-Mobile AI
   pages were confirmed inactive.
+- 2026-06-23: `deepsense.ai` added a new public `Applied AI Engineer` role on
+  No Fluff Jobs, while `Senior Applied AI Engineer` now has public salary and a
+  `fully remote` board label that conflicts with the official careers hub's
+  `hybrid` description.
 
 ## Done
 

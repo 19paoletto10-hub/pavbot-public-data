@@ -140,19 +140,39 @@ After the run, verify the workspace:
 scripts/verify-research-workspace.sh
 ```
 
-Each automation should refresh `public/pavbot-manifest.json` after writing
-artifacts:
+Each automation should publish its topic output after writing artifacts. Set
+`PAVBOT_MANIFEST_URL` in the Codex or repository environment to the same public
+raw manifest URL used in iOS `Settings -> Manifest URL`:
 
 ```bash
-python3 scripts/generate_pavbot_manifest.py
+export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
+scripts/pavbot_commit_and_push_outputs.sh research/<topic>
 ```
 
-Set `PAVBOT_RAW_BASE_URL` before generation when the manifest should contain
-absolute public GitHub raw URLs.
+The publish script runs `python3 scripts/generate_pavbot_manifest.py`, stages
+only `research/<topic>/` plus `public/pavbot-manifest.json`, commits those
+paths, and pushes to `origin/main`. This requires:
+
+- a working `origin` remote;
+- local `HEAD` synced with `origin/main` before the automation publishes;
+- GitHub credentials or a token with permission to push to `main`;
+- no unrelated uncommitted changes outside the active topic and manifest.
+
+The iOS app reads this URL but does not send it back to Codex automations. For
+advanced compatibility, `PAVBOT_RAW_BASE_URL` and `--raw-base-url` still work
+inside `scripts/generate_pavbot_manifest.py`.
 
 To connect the iOS app to your own Codex-backed repository, follow
 `docs/connect-ios-app-to-your-repo.md`. Version 1 expects a public GitHub raw
 manifest URL.
+
+For optional live iOS notifications without a VPS, run the notifier on your
+MacBook and expose it with Cloudflare Tunnel:
+`docs/live-ios-notifications-macbook-cloudflare.md`. The app remains a reader:
+it does not configure Codex automations by itself, and the MacBook must stay
+awake for live webhook-driven push alerts to work. Push alerts are triggered by
+GitHub `push` webhooks, so the automation must publish to GitHub before the
+notifier can detect new files.
 
 ## Reviewing The First Three Runs
 

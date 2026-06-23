@@ -1,20 +1,20 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-06-22 23:07 CEST
+Last updated: 2026-06-23 01:40 CEST
 
 ## Current Understanding
 
-Runda z `2026-06-22 23:07 CEST` przyniosła kolejny materialny update z trzema
-nowymi aktywnymi rolami. Do shortlisty weszła publiczna `KYOTU Technology AI
-Engineer (GenAI / RAG / Agentic AI)` z `130-190 PLN net/h B2B` i `100% remote`
-w Polsce, nowa publiczna rola `T-Mobile T Hub - AI Engineer (LLMs, Agents)` w
-modelu `remote/hybrid`, oraz aktywna `Sii AI Engineer – GenAI & Cloud (f/m/x)`
-dla `Whole Poland (remote work)`. Dodatkowy follow-up potwierdził też, że
-`deepsense.ai` nadal utrzymuje dwa równoległe URL dla `AI Software Engineer`,
-więc problem z kanonicznym linkiem nie jest jeszcze rozwiązany. Dwa dodatkowe
-sygnały `T-Mobile` (`AI Expert – RAG & LLM Systems` i `DevOps Engineer (AI
-Solutions)`) okazały się na ten moment nieaktywne i nie weszły do listy
-obserwowanych aktywnych ofert.
+Runda z `2026-06-23 01:40 CEST` przyniosła materialny update skoncentrowany na
+`deepsense.ai`. Do shortlisty weszła nowa publiczna rola `Applied AI Engineer`
+z widełkami `15 000-24 000 PLN + VAT / miesiąc B2B` i trybem `Fully remote`.
+Jednocześnie wcześniej obserwowana `Senior Applied AI Engineer` dostała
+publiczne widełki `22 000-30 000 PLN + VAT / miesiąc B2B`, ale pojawił się
+ważny rozjazd źródeł: oficjalny hub `deepsense.ai careers` nadal pokazuje tę
+rolę jako `Hybrid — offices and coworks in major Polish cities`, podczas gdy
+publiczny employer-posted `No Fluff Jobs` pokazuje `Fully remote`. Poza tym
+sprawdzone źródła nie przyniosły równie mocnej nowej oferty; `People More`
+pozostało bez materialnej zmiany, a oficjalny `Sii AI/ML Developer –
+Generative AI (f/m/x)` jest nadal nieaktywny.
 
 ## Stable Facts
 
@@ -48,7 +48,8 @@ only when something meaningful changes.
 | deepsense-machine-learning-engineer-remote-poland | deepsense.ai | Machine Learning Engineer | Remote Poland | 2026-06-19-0141 | 2026-06-19-0141 | Open | Initial capture: official role; GenAI, LLMs, vector databases, fine-tuning, model evaluation and production ML/LLM pipelines; salary not public. | [deepsense.ai](https://deepsense.ai/careers/machine-learning-engineer-2/) |
 | deepsense-ai-software-engineer-2-remote-poland | deepsense.ai | AI Software Engineer | Remote Poland | 2026-06-19-0141 | 2026-06-21-0141 | Open | Initial capture: official role; production AI applications, APIs, model serving and LLM integration; salary not public. 2026-06-20-0141: current official careers page points to `/careers/ai-software-engineer-2/` and public page explicitly lists Anthropic API, OpenAI API, FastAPI and Python. 2026-06-21-0141: official site still exposes the same title/location under both `/careers/ai-software-engineer-2/` and `/careers/ai-software-engineer/`, so canonical URL drift remains unresolved. | [deepsense.ai](https://deepsense.ai/careers/ai-software-engineer-2/) |
 | deepsense-mlops-engineer-remote-poland | deepsense.ai | MLOps Engineer | Remote Poland | 2026-06-19-0141 | 2026-06-19-0141 | Open | Initial capture: official role; cloud-native ML infrastructure, serving/training support including LLMs; salary not public. | [deepsense.ai](https://deepsense.ai/careers/mlops-engineer/) |
-| deepsense-senior-applied-ai-engineer-poland-hybrid | deepsense.ai | Senior Applied AI Engineer | Poland hybrid | 2026-06-20-0141 | 2026-06-20-0141 | Open | Initial capture: official role; B2B; hybrid in major Polish cities; production LLM systems, prompting/context engineering, agent architectures, tool use, RAG, evaluation and client workshops. | [deepsense.ai](https://deepsense.ai/careers/senior-applied-ai-engineer/) |
+| deepsense-senior-applied-ai-engineer-poland-hybrid | deepsense.ai | Senior Applied AI Engineer | Poland hybrid | 2026-06-20-0141 | 2026-06-23-0140 | Open | Initial capture: official role; B2B; hybrid in major Polish cities; production LLM systems, prompting/context engineering, agent architectures, tool use, RAG, evaluation and client workshops. 2026-06-23-0140: public employer-posted No Fluff Jobs listing now exposes `22 000-30 000 PLN + VAT / miesiąc B2B` and `Fully remote`, while the official `deepsense.ai careers` hub still presents the same title as `Hybrid — offices and coworks in major Polish cities`; source mismatch remains unresolved. | [deepsense.ai careers](https://deepsense.ai/careers/) / [No Fluff Jobs](https://nofluffjobs.com/job/senior-applied-ai-engineer-deepsense-ai-wroclaw) |
+| nofluffjobs-deepsense-applied-ai-engineer-remote-poland | deepsense.ai | Applied AI Engineer | Remote Poland | 2026-06-23-0140 | 2026-06-23-0140 | Open | Initial capture: public employer-posted No Fluff Jobs role; `15 000-24 000 PLN + VAT / miesiąc B2B`; `Fully remote`; production LLM applications, agents, integrations, RAG, evaluations and client-facing delivery. Official `deepsense.ai careers` hub does not currently expose a matching public role page. | [No Fluff Jobs](https://nofluffjobs.com/job/applied-ai-engineer-deepsense-ai-warsaw) / [deepsense.ai careers](https://deepsense.ai/careers/) |
 | addepto-data-scientist-ml-engineer-wroclaw-remote | Addepto | Data Scientist / ML Engineer | Wroclaw + remote Poland | 2026-06-20-0141 | 2026-06-20-0141 | Open | Initial capture: official role; 12 600-19 320 PLN B2B mid, 19 320-25 200 PLN B2B senior, 19 320-28 560 PLN B2B lead/principal; LLMs, AI agents, semantic search, prompt engineering, multimodal embeddings and RAG. | [Addepto](https://addepto.com/career/data-scientist-ml-engineer/) |
 | trans-eu-ai-engineer-poland-hybrid | Trans.eu Group | AI Engineer | Poland hybrid | 2026-06-20-0141 | 2026-06-20-0141 | Open | Initial capture: official role; Mid, UoP or B2B; proprietary LLMs, autonomous agents, RAG, fine-tuning/distillation, Python, PyTorch, Transformers, LangChain, MLflow, Snowflake and AWS/Azure/GCP. | [Trans.eu](https://joinus.trans.eu/en/job-openings/ai-engineer/) |
 | tooploox-senior-ai-engineer-wroclaw-warsaw-remote | Tooploox | Senior AI Engineer | Wroclaw / Warsaw / remote | 2026-06-20-0141 | 2026-06-20-0141 | Open | Initial capture: official careers page lists 15 000-26 000 PLN B2B or 13 000-23 000 PLN UoP; public page allows fully remote, hybrid or office in Wroclaw/Warsaw, but does not expose a detailed technical stack. | [Tooploox careers](https://tooploox.com/careers) |
@@ -86,12 +87,17 @@ only when something meaningful changes.
   employer pages, or remain mostly visible through public job boards?
 - Does `xBerry` expose a canonical employer vacancy page or keep this role only
   on public job boards with a noisy compensation field?
+- Czy `deepsense.ai` przeniesie `Applied AI Engineer` na oficjalny hub careers,
+  czy utrzyma tę rolę tylko na publicznym `No Fluff Jobs`?
 
 ## Watch Items
 
 - Public career pages of employers repeatedly posting Polish AI/LLM roles.
 - Official Holisticon and deepsense.ai career pages as recurring high-signal
   sources after this run.
+- Official `deepsense.ai careers` plus employer-posted `No Fluff Jobs` pages po
+  tej rundzie, bo pojawił się istotny rozjazd `remote/hybrid` i nowa rola
+  board-only.
 - Official Sii, Capgemini and Deviniti career pages as recurring multi-role sources.
 - Official Trans.eu, Tooploox and expanded Addepto career pages after this run.
 - Official GFT careers plus public Rite NRG roles after this run.
@@ -115,3 +121,4 @@ only when something meaningful changes.
 - [2026-06-21-2107](runs/2026-06-21-2107.md)
 - [2026-06-22-0141](runs/2026-06-22-0141.md)
 - [2026-06-22-2307](runs/2026-06-22-2307.md)
+- [2026-06-23-0140](runs/2026-06-23-0140.md)

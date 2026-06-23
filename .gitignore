@@ -13,3 +13,7 @@ xcuserdata/
 __pycache__/
 *.py[cod]
 .pytest_cache/
+
+# Pavbot notifier local secrets
+backend/pavbot-notifier/.env
+backend/pavbot-notifier/secrets/
