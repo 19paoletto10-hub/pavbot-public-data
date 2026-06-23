@@ -1,6 +1,6 @@
 # Topic Index: tech-news
 
-Last updated: 2026-06-22
+Last updated: 2026-06-23
 
 ## Current Understanding
 
@@ -8,11 +8,11 @@ Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
 
-Po raporcie z 2026-06-22 najmocniejsze osie tematyczne to: masowe wdrożenia AI
-w dużych organizacjach, identity verification i compliance dla narzędzi AI,
-physical agentic AI, interoperacyjność agentów przez ARD/A2A/MCP, migracje
-platform developer-agent oraz europejskie i państwowe wątki sovereign AI oraz
-AI cybersecurity.
+Po raporcie z 2026-06-23 najmocniejsze osie tematyczne to: AI cyber defense i
+patch automation, frontier AI jako board-level cyber risk, produkcyjne wzorce
+multi-agent przez ADK/A2A/MCP, ewaluacja proaktywnych agentów kodujących,
+energetyka centrów danych AI oraz niezawodność narzędzi projektowanych pod
+agentów.
 
 ## Stable Facts
 
@@ -87,9 +87,30 @@ AI cybersecurity.
   może łamać workflow indywidualnych użytkowników.
 - AI cybersecurity as state market: DREAM i podobne firmy pozycjonują AI cyber
   jako produkt dla rządów, wojska i infrastruktury krytycznej.
+- AI cyber remediation loop: OpenAI Daybreak, Codex Security, GPT-5.5-Cyber i
+  Patch the Planet pokazują przejście od wykrywania podatności do walidacji,
+  priorytetyzacji, patchowania i coordinated disclosure z ekspertem w pętli.
+- Frontier AI cyber preparedness: Five Eyes traktuje AI cyber risk jako pilne
+  ryzyko biznesowe i społeczne, z horyzontem miesięcy oraz naciskiem na
+  podstawowe kontrole, patching, legacy systems i odpowiedzialność liderów.
+- Production multi-agent architecture: Google ADK/A2A pokazuje praktyczny
+  wzorzec cross-language agent pipelines, gdzie LLM-owy agent i deterministyczny
+  serwis współpracują przez Agent Cards, JSON-RPC i fail-safe manual review.
+- Proactive coding agent evaluation: Google Jules sugeruje, że kolejna fala
+  agentów kodujących będzie oceniana przez insight policy i zdolność do
+  wykrywania celów z historii pracy, a nie tylko przez rozwiązanie pojedynczego
+  ticketa.
+- AI energy infrastructure: Chevron/Microsoft Project Kilby pokazuje, że
+  hyperscalerzy zaczynają zabezpieczać moc dla AI przez długie kontrakty
+  energetyczne i współlokowane elektrownie, z ryzykiem regulacyjnym i
+  środowiskowym.
+- Agent tooling reliability: Codex logging issue, Oak i Deno Desktop pokazują,
+  że lokalne narzędzia agentowe wymagają kontroli zasobów, izolacji sesji,
+  audytu, branch-per-session i nowych prymitywów pracy na desktopie.
 
 ## Recent Reports
 
+- [2026-06-23](runs/2026-06-23.md)
 - [2026-06-22](runs/2026-06-22.md)
 - [2026-06-21](runs/2026-06-21.md)
 - [2026-06-20](runs/2026-06-20.md)

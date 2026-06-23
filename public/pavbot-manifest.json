@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-06-23T01:59:23.453508+00:00",
+  "generatedAt": "2026-06-23T03:07:08.877354+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -117,6 +117,26 @@
     }
   ],
   "artifacts": [
+    {
+      "id": "research/tech-news/runs/2026-06-23.md",
+      "type": "run",
+      "topic": "tech-news",
+      "title": "Daily Research Report: tech-news",
+      "path": "research/tech-news/runs/2026-06-23.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-06-23.md",
+      "sizeBytes": 17092,
+      "date": "2026-06-23"
+    },
+    {
+      "id": "research/tech-news/pdfs/2026-06-23-tech-news.pdf",
+      "type": "pdf",
+      "topic": "tech-news",
+      "title": "2026-06-23-tech-news.pdf",
+      "path": "research/tech-news/pdfs/2026-06-23-tech-news.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-06-23-tech-news.pdf",
+      "sizeBytes": 91878,
+      "date": "2026-06-23"
+    },
     {
       "id": "research/llm-ai-jobs-wroclaw/runs/2026-06-23-0140.md",
       "type": "run",
@@ -1364,7 +1384,7 @@
       "title": "Topic Index: tech-news",
       "path": "research/tech-news/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/index.md",
-      "sizeBytes": 5144
+      "sizeBytes": 6584
     },
     {
       "id": "research/tech-news/backlog.md",
@@ -1373,7 +1393,7 @@
       "title": "Topic Backlog: tech-news",
       "path": "research/tech-news/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/backlog.md",
-      "sizeBytes": 9675
+      "sizeBytes": 12279
     },
     {
       "id": "research/tech-news/automation-research-prompt.md",

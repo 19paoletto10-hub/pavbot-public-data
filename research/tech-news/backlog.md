@@ -26,6 +26,13 @@
 | Medium | Track Gemini CLI to Antigravity migration | Individual Gemini CLI users lost request serving on June 18, while enterprise access remains | Watch migration friction, feature parity, open-source community reaction and Polish developer coverage | Open |
 | Medium | Track Apertus sovereign AI signal | Apertus resurfaced on HN as a strong European sovereign AI symbol even though the model itself is not new | Watch Apertus Mini, adoption, benchmark updates and EU public-sector usage | Open |
 | Medium | Track AI cybersecurity startups | DREAM's $260M round and $3B valuation show state-oriented AI cyber as a growing market | Watch independent validation, customers, regulatory concerns and Europe/Israel security positioning | Open |
+| High | Track OpenAI Daybreak and Patch the Planet | OpenAI is moving cyber AI from vulnerability discovery toward validated patching and coordinated disclosure for critical open source | Watch independent validation, maintainer feedback, published technical reports, partner adoption and abuse-prevention safeguards | Open |
+| High | Track Five Eyes frontier AI cyber preparedness | Five Eyes agencies now frame frontier AI cyber risk as a months-scale business and national-security issue | Watch follow-up advisories, CISA/NCSC guidance, board-level recommendations and European/Polish cyber agency response | Open |
+| High | Track production ADK/A2A patterns | Google's cross-language A2A example turns agent interoperability into a production architecture pattern | Watch non-Google adoption, MCP overlap, security model, auditability and examples in regulated workflows | Open |
+| Medium | Track proactive coding-agent evaluation | Google Jules research reframes agent quality around insight policy and goal discovery, not only ticket completion | Watch public GitHub benchmark release, methodology critique and comparable metrics from Codex/Claude/Cursor ecosystems | Open |
+| High | Track AI data center energy deals | Microsoft/Chevron Project Kilby links hyperscale AI demand to long-duration dedicated power generation | Watch FID by end-2026, grid impact, water/emissions commitments, similar hyperscaler deals and EU/Polish data-center energy debate | Open |
+| Medium | Track Deno Desktop | Deno Desktop is a strong HN signal for web-to-desktop app packaging with smaller binaries and built-in updates | Recheck Deno 2.9 release status, stability, framework support and adoption by local AI/developer tools | Open |
+| Medium | Track agent tooling reliability | Codex logging fixes and Oak's agent-oriented VCS show that agent tools need new reliability and review primitives | Watch Codex release notes, resource usage controls, Oak beta adoption and branch-per-session workflows | Open |
 
 ## Review Notes
 
@@ -87,6 +94,14 @@
 - 2026-06-22: Daily tech podcast generated `draft.md`, `script.md`,
   `sources.md`, `render.json`, `brief.pdf`, and `podcast.mp3`; final MP3 used
   Piper and measured about 7:51 by `ffprobe`.
+- 2026-06-23: Daily research run created a material update. Strongest podcast
+  candidates: OpenAI Daybreak/Patch the Planet, Five Eyes frontier AI cyber
+  preparedness, Google ADK/A2A production multi-agent architecture, proactive
+  coding-agent evaluation, Microsoft/Chevron AI energy infrastructure, Product
+  Hunt MCP/agent products, Deno Desktop and agent tooling reliability.
+- 2026-06-23: Product Hunt remained useful for current product signal. HN was
+  especially strong for developer tooling and agent-tool reliability, including
+  Deno Desktop, Codex logging, Oak, Sakana Fugu and Moebius.
 
 ## Done
 
