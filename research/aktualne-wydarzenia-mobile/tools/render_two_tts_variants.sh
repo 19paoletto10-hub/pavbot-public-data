@@ -106,7 +106,7 @@ existing.update(
         "original_duration_seconds": raw_duration,
         "duration_seconds": float(final_duration),
         "status": "ok",
-        "raw_output_file": raw_mp3,
+        "raw_output_file": None,
         "output_file": final_mp3,
     }
 )
@@ -162,6 +162,7 @@ render_variant() {
   local final_duration
   final_duration=$(ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 "$final_mp3" 2>>"$log_file")
   write_success_json "$variant_id" "$engine" "$voice" "$variant_dir" "$raw_mp3" "$final_mp3" "$model_label" "$final_duration"
+  rm -f "$raw_mp3" "$log_file"
   render_status+=("$variant_id:ok")
   variant_json_files+=("$variant_dir/render.json")
 }

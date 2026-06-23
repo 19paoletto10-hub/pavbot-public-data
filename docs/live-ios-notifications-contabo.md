@@ -13,7 +13,7 @@ MacBook being awake.
 
 - GitHub sends a `push` webhook to the Contabo Docker service.
 - Each Codex automation must first run
-  `scripts/pavbot_commit_and_push_outputs.sh research/<topic>` to push its
+  `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>` to push its
   artifacts and refreshed `public/pavbot-manifest.json` to GitHub.
 - The service fetches `PAVBOT_MANIFEST_URL` with no-cache headers.
 - It compares the new manifest with the last stored manifest.

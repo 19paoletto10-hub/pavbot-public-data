@@ -1,21 +1,21 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-06-23T01:58:55.818663+00:00",
+  "generatedAt": "2026-06-23T01:59:23.453508+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
       "id": "pavbot-aktualne-wydarzenia-mobile-10-15",
       "name": "Pavbot Aktualne Wydarzenia Mobile 10:15",
       "enabled": true,
-      "kind": "research",
+      "kind": "researchAudio",
       "topic": "aktualne-wydarzenia-mobile",
       "topicPath": "research/aktualne-wydarzenia-mobile",
       "cadence": "daily at 10:15 local time",
       "sourcePath": "docs/how-to-use.md",
       "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
-      "output": "research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-mobile-brief.pdf",
-      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-mobile-brief.pdf"
+      "output": "research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf",
+      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf"
     },
     {
       "id": "pavbot-llm-ai-jobs-wroclaw-research",
@@ -1382,7 +1382,7 @@
       "title": "Automation Prompt: Pavbot Tech Research 08:00",
       "path": "research/tech-news/automation-research-prompt.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/automation-research-prompt.md",
-      "sizeBytes": 2697
+      "sizeBytes": 2837
     },
     {
       "id": "research/tech-news/automation-podcast-prompt.md",
@@ -1391,7 +1391,7 @@
       "title": "Automation Prompt: Pavbot Tech Podcast 09:00",
       "path": "research/tech-news/automation-podcast-prompt.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/automation-podcast-prompt.md",
-      "sizeBytes": 2921
+      "sizeBytes": 2932
     },
     {
       "id": "research/polska-swiat/topic.md",
@@ -1427,7 +1427,7 @@
       "title": "Automation Prompt: Pavbot Polska Świat Research 08:30",
       "path": "research/polska-swiat/automation-research-prompt.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/automation-research-prompt.md",
-      "sizeBytes": 2584
+      "sizeBytes": 2736
     },
     {
       "id": "research/polska-swiat/automation-podcast-prompt.md",
@@ -1436,7 +1436,7 @@
       "title": "Automation Prompt: Pavbot Polska Świat Podcast 09:30",
       "path": "research/polska-swiat/automation-podcast-prompt.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/automation-podcast-prompt.md",
-      "sizeBytes": 3188
+      "sizeBytes": 3199
     },
     {
       "id": "research/llm-ai-jobs-wroclaw/topic.md",
@@ -1472,7 +1472,7 @@
       "title": "Automation Prompt: LLM/AI Jobs Wroclaw Research",
       "path": "research/llm-ai-jobs-wroclaw/automation-research-prompt.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/automation-research-prompt.md",
-      "sizeBytes": 4381
+      "sizeBytes": 4594
     },
     {
       "id": "research/codex-agent-automation/topic.md",
@@ -1508,7 +1508,7 @@
       "title": "Automation Prompt: codex-agent-automation",
       "path": "research/codex-agent-automation/automation-prompt.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/codex-agent-automation/automation-prompt.md",
-      "sizeBytes": 1864
+      "sizeBytes": 2057
     },
     {
       "id": "research/aktualne-wydarzenia-mobile/topic.md",
@@ -1544,7 +1544,7 @@
       "title": "Automation Prompt: Pavbot Aktualne Wydarzenia Mobile 10:15",
       "path": "research/aktualne-wydarzenia-mobile/automation-prompt.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/automation-prompt.md",
-      "sizeBytes": 4623
+      "sizeBytes": 5246
     }
   ]
 }

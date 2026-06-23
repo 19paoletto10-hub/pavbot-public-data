@@ -48,7 +48,7 @@ push na `origin/main`.
 na ten sam publiczny raw URL, który jest w iOS `Settings -> Manifest URL`;
 aplikacja iOS nie przekazuje tej wartości z powrotem do Codex. Następnie
 uruchom:
-`scripts/pavbot_commit_and_push_outputs.sh research/polska-swiat`.
+`scripts/pavbot_commit_and_push_outputs.sh --isolated research/polska-swiat`.
 
 Nie zmyślaj faktów. Jeśli źródło jest niedostępne lub niejednoznaczne, zapisz to
 w `sources.md` i nie używaj niepotwierdzonego twierdzenia w podcaście.

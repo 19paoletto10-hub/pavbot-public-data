@@ -57,9 +57,13 @@ The current active automations are:
 
 - Name: `Pavbot Aktualne Wydarzenia Mobile 10:15`
 - ID: `pavbot-aktualne-wydarzenia-mobile-10-15`
+- Kind: `researchAudio`
 - Topic: `research/aktualne-wydarzenia-mobile`
 - Cadence: daily at 10:15 local time
-- Output: `research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-mobile-brief.pdf`
+- Output: `research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`
+- Report: `research/aktualne-wydarzenia-mobile/runs/YYYY-MM-DD-HHMM.md`
+- Podcast package: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/`
+- Audio variants: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/audio/<variant>/podcast.mp3`
 
 ## Manual Run
 
@@ -120,9 +124,12 @@ Manual mobile current-events brief test:
 $daily-research-agent
 
 Run the complete mobile current-events workflow for
-`research/aktualne-wydarzenia-mobile`: create the dated Markdown report, mobile
-PDF, `draft.md`, `script.md`, `sources.md`, both TTS variants, and
-`tts_variants.json`.
+`research/aktualne-wydarzenia-mobile`: create one Europe/Warsaw timestamp with
+`RUN_STAMP=$(TZ=Europe/Warsaw date +%Y-%m-%d-%H%M)` and
+`RUN_DATE=${RUN_STAMP:0:10}`, then create the timestamped Markdown report in
+`runs/YYYY-MM-DD-HHMM.md`, mobile PDF in
+`pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`, podcast package in
+`podcasts/YYYY-MM-DD-HHMM/`, both MP3 TTS variants, and `tts_variants.json`.
 ```
 
 Shared local TTS models can be prepared with:
@@ -146,17 +153,24 @@ raw manifest URL used in iOS `Settings -> Manifest URL`:
 
 ```bash
 export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
-scripts/pavbot_commit_and_push_outputs.sh research/<topic>
+scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
-The publish script runs `python3 scripts/generate_pavbot_manifest.py`, stages
-only `research/<topic>/` plus `public/pavbot-manifest.json`, commits those
-paths, and pushes to `origin/main`. This requires:
+The isolated publish script creates a temporary clean worktree from
+`origin/main`, copies only generated outputs from the active topic, runs
+`python3 scripts/generate_pavbot_manifest.py`, commits the refreshed manifest
+with the outputs, and pushes directly to `origin/main`. Treat this as the
+single publish step after each automation run so iOS receives the refreshed
+manifest and the new files in the same commit. This requires:
 
 - a working `origin` remote;
-- local `HEAD` synced with `origin/main` before the automation publishes;
 - GitHub credentials or a token with permission to push to `main`;
-- no unrelated uncommitted changes outside the active topic and manifest.
+- `PAVBOT_MANIFEST_URL` set to the same URL that the iOS app reads.
+
+Only `runs/`, `pdfs/`, `podcasts/`, `index.md`, `backlog.md`, and
+`public/pavbot-manifest.json` are publishable as automation outputs. Code,
+docs, prompt edits, topic tools, iOS changes, and backend changes must go
+through a separate development branch/commit.
 
 The iOS app reads this URL but does not send it back to Codex automations. For
 advanced compatibility, `PAVBOT_RAW_BASE_URL` and `--raw-base-url` still work

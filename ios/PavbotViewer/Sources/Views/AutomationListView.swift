@@ -122,7 +122,7 @@ private struct AutomationRow: View {
                     .font(.headline)
                     .lineLimit(2)
                 Spacer()
-                StatusBadge(text: automation.kind.rawValue.capitalized, systemImage: "checkmark.circle.fill", tint: automation.kind.tint)
+                StatusBadge(text: automation.kind.label, systemImage: "checkmark.circle.fill", tint: automation.kind.tint)
             }
 
             Text(automation.cadence)
@@ -149,12 +149,27 @@ private struct AutomationRow: View {
 }
 
 extension AutomationKind {
+    var label: String {
+        switch self {
+        case .research:
+            "Research"
+        case .podcast:
+            "Podcast"
+        case .researchAudio:
+            "Research + Audio"
+        case .automation:
+            "Automation"
+        }
+    }
+
     var systemImage: String {
         switch self {
         case .research:
             "doc.text.magnifyingglass"
         case .podcast:
             "waveform.circle"
+        case .researchAudio:
+            "waveform.badge.magnifyingglass"
         case .automation:
             "gearshape.2"
         }
@@ -166,6 +181,8 @@ extension AutomationKind {
             .blue
         case .podcast:
             .purple
+        case .researchAudio:
+            .indigo
         case .automation:
             .orange
         }

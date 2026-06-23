@@ -165,8 +165,13 @@ struct PavbotManifest: Codable, Equatable {
 
     func latestArtifact(for automation: PavbotAutomation) -> PavbotArtifact? {
         let topicArtifacts = artifacts.filter { $0.topic == automation.topic }
-        let preferredArtifacts = topicArtifacts.filter { automation.kind.preferredArtifactTypes.contains($0.type) }
-        return latestArtifact(in: preferredArtifacts.isEmpty ? topicArtifacts : preferredArtifacts)
+        for artifactType in automation.kind.preferredArtifactTypes {
+            let preferredArtifacts = topicArtifacts.filter { $0.type == artifactType }
+            if let latest = latestArtifact(in: preferredArtifacts) {
+                return latest
+            }
+        }
+        return latestArtifact(in: topicArtifacts)
     }
 
     private func latestArtifact(in artifacts: [PavbotArtifact]) -> PavbotArtifact? {
@@ -213,6 +218,7 @@ struct PavbotAutomation: Codable, Identifiable, Equatable, Hashable {
 enum AutomationKind: String, Codable, Equatable {
     case research
     case podcast
+    case researchAudio
     case automation
 
     var preferredArtifactTypes: [ArtifactType] {
@@ -221,6 +227,8 @@ enum AutomationKind: String, Codable, Equatable {
             [.run]
         case .podcast:
             [.podcastAudio, .podcastAudioVariant]
+        case .researchAudio:
+            [.podcastAudioVariant, .podcastAudio, .pdf, .run]
         case .automation:
             []
         }

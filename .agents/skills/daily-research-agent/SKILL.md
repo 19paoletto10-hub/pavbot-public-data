@@ -37,7 +37,7 @@ Run one research cycle for a single Pavbot topic.
    review notes, open questions, or resolved items.
 9. Use the risk gate before making any change.
 10. For scheduled Pavbot automations, publish the finished output with
-    `scripts/pavbot_commit_and_push_outputs.sh research/<topic>` so the iOS app
+    `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>` so the iOS app
     and live-notification webhook see the latest manifest on GitHub.
 
 ## Risk Gate
@@ -49,7 +49,7 @@ Low-risk changes may be applied directly:
 - Update the active topic index or backlog.
 - Add source links and concise notes.
 - Mark an existing topic backlog item as done.
-- Run `scripts/pavbot_commit_and_push_outputs.sh research/<topic>` as the final
+- Run `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>` as the final
   automation step. That script may refresh and commit
   `public/pavbot-manifest.json` together with the active topic only.
 
@@ -101,16 +101,17 @@ When the run is part of a Pavbot automation, finish by publishing the topic
 outputs:
 
 ```bash
-scripts/pavbot_commit_and_push_outputs.sh research/<topic>
+scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
 `PAVBOT_MANIFEST_URL` must be set in the Codex or repository environment to the
 same public raw manifest URL used in iOS `Settings -> Manifest URL`. The iOS app
 does not send this value back to Codex. The publish script runs
-`python3 scripts/generate_pavbot_manifest.py`, stages only
-`research/<topic>/` plus `public/pavbot-manifest.json`, commits those paths, and
-pushes to `origin/main`. If unrelated changes exist, stop and report the
-blocking paths instead of broadening the commit.
+`python3 scripts/generate_pavbot_manifest.py` in a temporary clean worktree,
+commits only generated outputs (`runs/`, `pdfs/`, `podcasts/`, `index.md`,
+`backlog.md`) plus `public/pavbot-manifest.json`, and pushes to `origin/main`.
+Never publish topic `tools/`, prompt edits, app code, docs, backend code, or
+other development changes as automation outputs.
 
 ## Quality Rules
 

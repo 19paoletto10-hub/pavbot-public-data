@@ -13,6 +13,12 @@ Najpierw przeczytaj `AGENTS.md`, `docs/architecture.md`,
 `research/aktualne-wydarzenia-mobile/backlog.md` oraz najnowszy raport z
 `research/aktualne-wydarzenia-mobile/runs/`, jeśli istnieje.
 
+Na początku runu ustal jeden wspólny czas utworzenia w strefie Europe/Warsaw i
+używaj go we wszystkich nazwach plików tego przebiegu:
+`RUN_STAMP=$(TZ=Europe/Warsaw date +%Y-%m-%d-%H%M)` oraz
+`RUN_DATE=${RUN_STAMP:0:10}`. W przykładach poniżej `YYYY-MM-DD-HHMM` oznacza
+wartość `RUN_STAMP`, a `YYYY-MM-DD` oznacza `RUN_DATE`.
+
 Sprawdź aktualne publiczne źródła internetowe dotyczące najważniejszych
 wydarzeń z Polski i świata: polityki, bezpieczeństwa, dyplomacji, decyzji
 rządów, społeczeństwa, gospodarki publicznej, konfliktów i ważnych zdarzeń
@@ -24,14 +30,14 @@ BBC, Reuters/AP przez publicznie dostępne strony, The Guardian, Politico,
 Euronews, Komisja Europejska, Consilium, NATO i ONZ.
 
 Zapisz raport Markdown jako
-`research/aktualne-wydarzenia-mobile/runs/YYYY-MM-DD.md`. Raport ma zawierać:
-datę, status `Material update` albo `No material change`, zakres sprawdzonych
+`research/aktualne-wydarzenia-mobile/runs/YYYY-MM-DD-HHMM.md`. Raport ma zawierać:
+datę, godzinę utworzenia, status `Material update` albo `No material change`, zakres sprawdzonych
 źródeł, krótkie podsumowanie, sekcję `Nowe fakty`, sekcję `Interpretacja`,
 ryzyka/niepewności, rekomendowane akcje i źródła. Zachowaj linki przy każdym
 materialnym twierdzeniu. Oddziel fakty od interpretacji.
 
 Następnie przygotuj folder podcastu:
-`research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD/`. Utwórz `draft.md`,
+`research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/`. Utwórz `draft.md`,
 zweryfikuj twierdzenia wobec źródeł i zapisz finalny `script.md`. Scenariusz ma
 być po polsku, bez surowych URL-i, gotowy pod podcastowy TTS z automatycznie
 wykrywanym językiem. Dodaj lekki, inteligentny humor tylko tam, gdzie nie
@@ -42,20 +48,20 @@ dla lektora. Utwórz `sources.md` z sekcjami:
 `## Źródła niedostępne lub niejednoznaczne`.
 
 Uruchom lint redakcyjny:
-`bash .agents/scripts/podcast/editorial_lint.sh research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD/script.md research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD/sources.md`.
+`bash .agents/scripts/podcast/editorial_lint.sh research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/script.md research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/sources.md`.
 
 Wygeneruj PDF pod ekrany mobilne:
-`~/.cache/pavbot/venvs/pdf/bin/python research/aktualne-wydarzenia-mobile/tools/render_mobile_brief_pdf.py research/aktualne-wydarzenia-mobile/runs/YYYY-MM-DD.md research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-mobile-brief.pdf --topic aktualne-wydarzenia-mobile`.
+`~/.cache/pavbot/venvs/pdf/bin/python research/aktualne-wydarzenia-mobile/tools/render_mobile_brief_pdf.py research/aktualne-wydarzenia-mobile/runs/YYYY-MM-DD-HHMM.md research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf --topic aktualne-wydarzenia-mobile`.
 
 Wygeneruj dwa warianty TTS:
-`bash research/aktualne-wydarzenia-mobile/tools/render_two_tts_variants.sh research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD/script.md research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD`.
+`bash research/aktualne-wydarzenia-mobile/tools/render_two_tts_variants.sh research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/script.md research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM`.
 
 Warianty audio mają być zapisane jako:
-- `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD/audio/female-piper/podcast.mp3`
-- `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD/audio/male-xtts/podcast.mp3`
+- `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/audio/female-piper/podcast.mp3`
+- `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/audio/male-xtts/podcast.mp3`
 
 Zapisz zbiorcze metadane w
-`research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD/tts_variants.json`.
+`research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/tts_variants.json`.
 Jeśli jeden wariant TTS zawiedzie, nie twórz fałszywego MP3; zachowaj raport,
 PDF, skrypt, źródła i zapisz błąd w metadanych oraz backlogu.
 
@@ -67,12 +73,17 @@ push na `origin/main`.
 na ten sam publiczny raw URL, który jest w iOS `Settings -> Manifest URL`;
 aplikacja iOS nie przekazuje tej wartości z powrotem do Codex. Następnie
 uruchom:
-`scripts/pavbot_commit_and_push_outputs.sh research/aktualne-wydarzenia-mobile`.
+`scripts/pavbot_commit_and_push_outputs.sh --isolated research/aktualne-wydarzenia-mobile`.
 
 Użyj risk gate z `docs/architecture.md`. W ramach tej automatyzacji wolno
 zmieniać tylko pliki w `research/aktualne-wydarzenia-mobile/` oraz manifest
 publiczny generowany ze źródeł. Finalny krok publikacji może commitować tylko
-`research/aktualne-wydarzenia-mobile/` oraz `public/pavbot-manifest.json`. Jeśli rekomendowana akcja wymaga zmiany
+`research/aktualne-wydarzenia-mobile/runs/`,
+`research/aktualne-wydarzenia-mobile/pdfs/`,
+`research/aktualne-wydarzenia-mobile/podcasts/`,
+`research/aktualne-wydarzenia-mobile/index.md`,
+`research/aktualne-wydarzenia-mobile/backlog.md` oraz
+`public/pavbot-manifest.json`. Jeśli rekomendowana akcja wymaga zmiany
 automatyzacji, instrukcji repo, skilli, hooków, MCP, zależności albo plików poza
 aktywnym tematem, utwórz propozycję w
 `research/aktualne-wydarzenia-mobile/proposals/` zamiast stosować zmianę.

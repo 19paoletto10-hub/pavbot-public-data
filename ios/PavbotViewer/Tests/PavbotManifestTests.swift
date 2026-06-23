@@ -202,6 +202,88 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(artifact.viewerKind, .audio)
     }
 
+    func testTimestampedMobileArtifactDisplayDateIncludesCreationTime() {
+        let artifact = PavbotArtifact(
+            id: "mobile-report",
+            type: .run,
+            topic: "aktualne-wydarzenia-mobile",
+            title: "Mobile News Brief",
+            path: "research/aktualne-wydarzenia-mobile/runs/2026-06-23-1015.md",
+            url: "research/aktualne-wydarzenia-mobile/runs/2026-06-23-1015.md",
+            sizeBytes: 100,
+            date: "2026-06-23",
+            time: "10:15"
+        )
+
+        XCTAssertEqual(artifact.displayDate, "2026-06-23 10:15")
+    }
+
+    func testResearchAudioAutomationKindPrefersAudioWithoutHidingResearchArtifacts() throws {
+        let kind = try JSONDecoder.pavbot.decode(AutomationKind.self, from: #""researchAudio""#.data(using: .utf8)!)
+
+        XCTAssertEqual(kind, .researchAudio)
+        XCTAssertEqual(kind.preferredArtifactTypes, [.podcastAudioVariant, .podcastAudio, .pdf, .run])
+
+        let automation = PavbotAutomation(
+            id: "mobile-current-events",
+            name: "Pavbot Aktualne Wydarzenia Mobile 10:15",
+            enabled: true,
+            kind: .researchAudio,
+            topic: "aktualne-wydarzenia-mobile",
+            topicPath: "research/aktualne-wydarzenia-mobile",
+            cadence: "daily at 10:15 local time",
+            sourcePath: "docs/how-to-use.md",
+            sourceUrl: "docs/how-to-use.md",
+            output: "research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-mobile-brief.pdf",
+            outputUrl: nil
+        )
+        let run = PavbotArtifact(
+            id: "run",
+            type: .run,
+            topic: "aktualne-wydarzenia-mobile",
+            title: "Mobile News Brief",
+            path: "research/aktualne-wydarzenia-mobile/runs/2026-06-23.md",
+            url: "research/aktualne-wydarzenia-mobile/runs/2026-06-23.md",
+            sizeBytes: 100,
+            date: "2026-06-23",
+            time: nil
+        )
+        let pdf = PavbotArtifact(
+            id: "pdf",
+            type: .pdf,
+            topic: "aktualne-wydarzenia-mobile",
+            title: "Mobile PDF",
+            path: "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-mobile-brief.pdf",
+            url: "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-mobile-brief.pdf",
+            sizeBytes: 100,
+            date: "2026-06-23",
+            time: nil
+        )
+        let audio = PavbotArtifact(
+            id: "audio",
+            type: .podcastAudioVariant,
+            topic: "aktualne-wydarzenia-mobile",
+            title: "Podcast audio - female piper",
+            path: "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.mp3",
+            url: "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.mp3",
+            sizeBytes: 100,
+            date: "2026-06-23",
+            time: nil
+        )
+        let manifest = PavbotManifest(
+            schemaVersion: 1,
+            title: "Pavbot Automation Manifest",
+            generatedAt: "2026-06-23T10:00:00+00:00",
+            rawBaseUrl: "",
+            automations: [automation],
+            topics: [],
+            artifacts: [run, pdf, audio]
+        )
+
+        XCTAssertEqual(manifest.latestArtifact(for: automation)?.id, "audio")
+        XCTAssertEqual(manifest.artifacts.map(\.id), ["run", "pdf", "audio"])
+    }
+
     func testDiagnosticsReportsFreshManifestAndCounts() throws {
         let manifest = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
         let diagnostics = ManifestDiagnostics(

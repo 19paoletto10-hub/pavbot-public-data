@@ -206,39 +206,76 @@ private struct AudioPreview: View {
 
     @State private var player: AVPlayer?
     @State private var isPlaying = false
+    @State private var currentTime = 0.0
+    @State private var duration = 0.0
+    @State private var seekTime = 0.0
+    @State private var isSeeking = false
+    @State private var timeObserver: Any?
+    @State private var endObserver: NSObjectProtocol?
+    @State private var durationTask: Task<Void, Never>?
 
     var body: some View {
-        VStack(spacing: 20) {
-            Image(systemName: "waveform.circle.fill")
-                .font(.system(size: 72))
-                .foregroundStyle(.tint)
+        VStack(spacing: 24) {
+            VStack(spacing: 12) {
+                Image(systemName: "waveform.circle.fill")
+                    .font(.system(size: 72))
+                    .foregroundStyle(.tint)
 
-            Button {
-                togglePlayback()
-            } label: {
-                Label(isPlaying ? "Pause" : "Play", systemImage: isPlaying ? "pause.fill" : "play.fill")
-                    .font(.headline)
+                Text("Podcast audio")
+                    .font(.title3.weight(.semibold))
             }
-            .buttonStyle(.borderedProminent)
 
-            Link(destination: url) {
-                Label("Open raw audio", systemImage: "arrow.up.right.square")
+            VStack(spacing: 10) {
+                Slider(
+                    value: Binding(
+                        get: { isSeeking ? seekTime : currentTime },
+                        set: { value in
+                            isSeeking = true
+                            seekTime = value
+                        }
+                    ),
+                    in: 0...max(duration, 1),
+                    onEditingChanged: handleSeekEditing
+                )
+                .disabled(duration <= 0)
+                .accessibilityLabel("Audio timeline")
+
+                HStack {
+                    Text(formatPlaybackTime(isSeeking ? seekTime : currentTime))
+                    Spacer()
+                    Text(duration > 0 ? formatPlaybackTime(duration) : "--:--")
+                }
+                .font(.caption.monospacedDigit())
+                .foregroundStyle(.secondary)
+            }
+
+            HStack(spacing: 14) {
+                Button {
+                    togglePlayback()
+                } label: {
+                    Label(isPlaying ? "Pause" : "Play", systemImage: isPlaying ? "pause.fill" : "play.fill")
+                        .font(.headline)
+                }
+                .buttonStyle(.borderedProminent)
+
+                Link(destination: url) {
+                    Label("Open raw audio", systemImage: "arrow.up.right.square")
+                }
+                .buttonStyle(.bordered)
             }
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
         .onAppear {
-            if player == nil {
-                player = AVPlayer(url: url)
-            }
+            configurePlayerIfNeeded()
         }
         .onDisappear {
-            player?.pause()
-            isPlaying = false
+            stopAndCleanUp()
         }
     }
 
     private func togglePlayback() {
+        configurePlayerIfNeeded()
         if isPlaying {
             player?.pause()
         } else {
@@ -246,4 +283,98 @@ private struct AudioPreview: View {
         }
         isPlaying.toggle()
     }
+
+    private func configurePlayerIfNeeded() {
+        guard player == nil else { return }
+
+        let item = AVPlayerItem(url: url)
+        let newPlayer = AVPlayer(playerItem: item)
+        player = newPlayer
+        addPeriodicTimeObserver(to: newPlayer)
+        durationTask = Task {
+            await loadDuration(from: item)
+        }
+        endObserver = NotificationCenter.default.addObserver(
+            forName: .AVPlayerItemDidPlayToEndTime,
+            object: item,
+            queue: .main
+        ) { _ in
+            isPlaying = false
+            currentTime = 0
+            seekTime = 0
+            newPlayer.seek(to: .zero)
+        }
+    }
+
+    private func loadDuration(from item: AVPlayerItem) async {
+        do {
+            let loadedDuration = try await item.asset.load(.duration)
+            let seconds = loadedDuration.seconds
+            guard seconds.isFinite, seconds > 0 else { return }
+            await MainActor.run {
+                duration = seconds
+            }
+        } catch {
+            await MainActor.run {
+                duration = 0
+            }
+        }
+    }
+
+    private func addPeriodicTimeObserver(to player: AVPlayer) {
+        let interval = CMTime(seconds: 0.5, preferredTimescale: 600)
+        timeObserver = player.addPeriodicTimeObserver(forInterval: interval, queue: .main) { time in
+            let seconds = time.seconds
+            if seconds.isFinite, !isSeeking {
+                currentTime = seconds
+            }
+
+            if let itemDuration = player.currentItem?.duration.seconds, itemDuration.isFinite, itemDuration > 0 {
+                duration = itemDuration
+            }
+        }
+    }
+
+    private func handleSeekEditing(_ editing: Bool) {
+        if editing {
+            isSeeking = true
+            seekTime = currentTime
+        } else {
+            seek(to: seekTime)
+            isSeeking = false
+        }
+    }
+
+    private func seek(to seconds: Double) {
+        let clampedSeconds = min(max(seconds, 0), max(duration, 0))
+        let target = CMTime(seconds: clampedSeconds, preferredTimescale: 600)
+        player?.seek(to: target, toleranceBefore: .zero, toleranceAfter: .zero) { _ in
+            currentTime = clampedSeconds
+            seekTime = clampedSeconds
+        }
+    }
+
+    private func stopAndCleanUp() {
+        player?.pause()
+        isPlaying = false
+        durationTask?.cancel()
+        durationTask = nil
+        if let timeObserver {
+            player?.removeTimeObserver(timeObserver)
+            self.timeObserver = nil
+        }
+        if let endObserver {
+            NotificationCenter.default.removeObserver(endObserver)
+            self.endObserver = nil
+        }
+        player = nil
+    }
+}
+
+private func formatPlaybackTime(_ seconds: Double) -> String {
+    guard seconds.isFinite, seconds >= 0 else { return "--:--" }
+    let totalSeconds = Int(seconds.rounded())
+    let minutes = totalSeconds / 60
+    let seconds = totalSeconds % 60
+    return String(format: "%d:%02d", minutes, seconds)
 }

@@ -147,11 +147,14 @@ grep -q '"schemaVersion": 1' public/pavbot-manifest.json
 grep -q 'Pavbot Automation Manifest' public/pavbot-manifest.json
 grep -q 'pavbot-llm-ai-jobs-wroclaw-research' public/pavbot-manifest.json
 grep -q 'pavbot-aktualne-wydarzenia-mobile-10-15' public/pavbot-manifest.json
+grep -q 'researchAudio' public/pavbot-manifest.json
+grep -q 'YYYY-MM-DD-HHMM-mobile-brief.pdf' public/pavbot-manifest.json
 grep -q '^pdfplumber' requirements.txt
 grep -q '^pytest' requirements.txt
 grep -q '^reportlab' requirements.txt
 grep -q 'PavbotViewer' ios/PavbotViewer/project.yml
 grep -q 'struct PavbotViewerApp' ios/PavbotViewer/Sources/PavbotViewerApp.swift
+grep -q 'researchAudio' ios/PavbotViewer/Sources/Models/PavbotManifest.swift
 grep -q 'PavbotRemoteNotificationAppDelegate' ios/PavbotViewer/Sources/PavbotViewerApp.swift
 grep -q 'struct PavbotManifest' ios/PavbotViewer/Sources/Models/PavbotManifest.swift
 grep -q 'resolvedURL' ios/PavbotViewer/Sources/Models/PavbotManifest.swift
@@ -190,6 +193,10 @@ grep -q 'Sources/PavbotViewerPush.entitlements' ios/PavbotViewer/PavbotViewer.xc
 grep -q 'generate_pavbot_manifest.py' docs/how-to-use.md
 grep -q 'PAVBOT_MANIFEST_URL' docs/how-to-use.md
 grep -q 'pavbot_commit_and_push_outputs.sh' docs/how-to-use.md
+grep -q 'Kind: `researchAudio`' docs/how-to-use.md
+grep -F -q 'RUN_STAMP=$(TZ=Europe/Warsaw date +%Y-%m-%d-%H%M)' docs/how-to-use.md
+grep -q 'runs/YYYY-MM-DD-HHMM.md' docs/how-to-use.md
+grep -q 'podcasts/YYYY-MM-DD-HHMM/' docs/how-to-use.md
 grep -q 'origin/main' docs/how-to-use.md
 grep -q 'connect-ios-app-to-your-repo.md' README.md
 grep -q 'connect-ios-app-to-your-repo.md' docs/how-to-use.md
@@ -225,10 +232,18 @@ grep -q 'APNSSender' backend/pavbot-notifier/pavbot_notifier/apns.py
 grep -q 'pavbot-manifest.json' docs/architecture.md
 grep -q 'PAVBOT_MANIFEST_URL' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'generate_pavbot_manifest.py' scripts/pavbot_commit_and_push_outputs.sh
+grep -q -- '--isolated' scripts/pavbot_commit_and_push_outputs.sh
+grep -q 'git worktree add --detach' scripts/pavbot_commit_and_push_outputs.sh
+grep -q 'copy_publishable_outputs_to_worktree' scripts/pavbot_commit_and_push_outputs.sh
+grep -q 'topic_path/runs' scripts/pavbot_commit_and_push_outputs.sh
+grep -q 'topic_path/pdfs' scripts/pavbot_commit_and_push_outputs.sh
+grep -q 'topic_path/podcasts' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'git fetch origin' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'git push origin "HEAD:$target_branch"' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'outside allowed publish paths' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'pavbot_commit_and_push_outputs.sh' tests/test_pavbot_commit_and_push_outputs.py
+grep -q 'isolated=True' tests/test_pavbot_commit_and_push_outputs.py
+grep -q 'tools/helper.sh' tests/test_pavbot_commit_and_push_outputs.py
 grep -q '\$daily-podcast-agent' .agents/skills/daily-tech-podcast-agent/SKILL.md
 grep -q '\$daily-podcast-agent' .agents/skills/daily-news-podcast-agent/SKILL.md
 grep -q 'pavbot_commit_and_push_outputs.sh' .agents/skills/daily-research-agent/SKILL.md
@@ -246,18 +261,18 @@ grep -q 'Risk Gate' docs/architecture.md
 grep -q '\$daily-research-agent' research/codex-agent-automation/automation-prompt.md
 grep -q 'generate_pavbot_manifest.py' research/codex-agent-automation/automation-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/codex-agent-automation/automation-prompt.md
-grep -q 'pavbot_commit_and_push_outputs.sh research/codex-agent-automation' research/codex-agent-automation/automation-prompt.md
+grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/codex-agent-automation' research/codex-agent-automation/automation-prompt.md
 grep -q '\$daily-research-agent' research/tech-news/automation-research-prompt.md
 grep -q 'generate_pavbot_manifest.py' research/tech-news/automation-research-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/tech-news/automation-research-prompt.md
-grep -q 'pavbot_commit_and_push_outputs.sh research/tech-news' research/tech-news/automation-research-prompt.md
+grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/tech-news' research/tech-news/automation-research-prompt.md
 grep -q 'render_research_pdf.py' research/tech-news/automation-research-prompt.md
 grep -q 'render_research_pdf.py' .agents/skills/daily-research-agent/SKILL.md
 test -s research/tech-news/pdfs/2026-06-18-tech-news.pdf
 grep -q '\$daily-tech-podcast-agent' research/tech-news/automation-podcast-prompt.md
 grep -q 'generate_pavbot_manifest.py' research/tech-news/automation-podcast-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/tech-news/automation-podcast-prompt.md
-grep -q 'pavbot_commit_and_push_outputs.sh research/tech-news' research/tech-news/automation-podcast-prompt.md
+grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/tech-news' research/tech-news/automation-podcast-prompt.md
 grep -q 'render-podcast-audio.sh' research/tech-news/automation-podcast-prompt.md
 grep -q 'render.json' research/tech-news/automation-podcast-prompt.md
 grep -q 'brief.pdf' research/tech-news/automation-podcast-prompt.md
@@ -270,11 +285,11 @@ grep -q '.agents/scripts/podcast/render-podcast-audio.sh' .agents/skills/daily-t
 grep -q '\$daily-research-agent' research/polska-swiat/automation-research-prompt.md
 grep -q 'generate_pavbot_manifest.py' research/polska-swiat/automation-research-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/polska-swiat/automation-research-prompt.md
-grep -q 'pavbot_commit_and_push_outputs.sh research/polska-swiat' research/polska-swiat/automation-research-prompt.md
+grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/polska-swiat' research/polska-swiat/automation-research-prompt.md
 grep -q '\$daily-news-podcast-agent' research/polska-swiat/automation-podcast-prompt.md
 grep -q 'generate_pavbot_manifest.py' research/polska-swiat/automation-podcast-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/polska-swiat/automation-podcast-prompt.md
-grep -q 'pavbot_commit_and_push_outputs.sh research/polska-swiat' research/polska-swiat/automation-podcast-prompt.md
+grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/polska-swiat' research/polska-swiat/automation-podcast-prompt.md
 grep -q 'pełnych polskich znaków' research/polska-swiat/automation-podcast-prompt.md
 grep -q 'render.json' research/polska-swiat/automation-podcast-prompt.md
 grep -q 'brief.pdf' research/polska-swiat/automation-podcast-prompt.md
@@ -288,12 +303,17 @@ grep -q 'pavbot-llm-ai-jobs-wroclaw-research' docs/automation-operations.md
 grep -q '\$daily-research-agent' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
 grep -q 'generate_pavbot_manifest.py' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
-grep -q 'pavbot_commit_and_push_outputs.sh research/llm-ai-jobs-wroclaw' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
+grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
 grep -q 'pavbot-aktualne-wydarzenia-mobile-10-15' docs/how-to-use.md
 grep -q 'pavbot-aktualne-wydarzenia-mobile-10-15' docs/automation-operations.md
 grep -q '\$daily-research-agent' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/aktualne-wydarzenia-mobile/automation-prompt.md
-grep -q 'pavbot_commit_and_push_outputs.sh research/aktualne-wydarzenia-mobile' research/aktualne-wydarzenia-mobile/automation-prompt.md
+grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/aktualne-wydarzenia-mobile' research/aktualne-wydarzenia-mobile/automation-prompt.md
+grep -F -q 'RUN_STAMP=$(TZ=Europe/Warsaw date +%Y-%m-%d-%H%M)' research/aktualne-wydarzenia-mobile/automation-prompt.md
+grep -F -q 'RUN_DATE=${RUN_STAMP:0:10}' research/aktualne-wydarzenia-mobile/automation-prompt.md
+grep -q 'runs/YYYY-MM-DD-HHMM.md' research/aktualne-wydarzenia-mobile/automation-prompt.md
+grep -q 'pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf' research/aktualne-wydarzenia-mobile/automation-prompt.md
+grep -q 'podcasts/YYYY-MM-DD-HHMM/' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'render_mobile_brief_pdf.py' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'render_two_tts_variants.sh' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'female-piper' research/aktualne-wydarzenia-mobile/tools/render_two_tts_variants.sh
