@@ -102,6 +102,9 @@
 - 2026-06-23: Product Hunt remained useful for current product signal. HN was
   especially strong for developer tooling and agent-tool reliability, including
   Deno Desktop, Codex logging, Oak, Sakana Fugu and Moebius.
+- 2026-06-23: Daily tech podcast generated `draft.md`, `script.md`,
+  `sources.md`, `render.json`, `brief.pdf`, and `podcast.mp3`; final MP3 used
+  Piper and measured about 7:55 by `ffprobe`.
 
 ## Done
 
