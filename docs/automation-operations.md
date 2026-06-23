@@ -43,6 +43,10 @@ polskich znaków diakrytycznych i zapisz
 - `Pavbot LLM/AI Jobs Wrocław Research` runs twice daily and updates
   `research/llm-ai-jobs-wroclaw` with timestamped Markdown reports and PDFs.
   Repository manifest ID: `pavbot-llm-ai-jobs-wroclaw-research`.
+- `Pavbot Aktualne Wydarzenia Mobile 10:15` runs daily at 10:15 Europe/Warsaw
+  and updates `research/aktualne-wydarzenia-mobile` with a mobile PDF, Polish
+  TTS script, female Piper audio, male XTTS audio, and variant metadata. ID:
+  `pavbot-aktualne-wydarzenia-mobile-10-15`.
 
 ## First Three Runs Review
 
@@ -61,6 +65,8 @@ For the first three scheduled runs, review:
 Record tech review notes in `research/tech-news/backlog.md`.
 Record Poland/world review notes in `research/polska-swiat/backlog.md`.
 Record LLM/AI jobs review notes in `research/llm-ai-jobs-wroclaw/backlog.md`.
+Record mobile current-events review notes in
+`research/aktualne-wydarzenia-mobile/backlog.md`.
 
 ## OpenClaw Decision Gate
 

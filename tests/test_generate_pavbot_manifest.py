@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib.util
 import json
+import tempfile
 import unittest
 from pathlib import Path
 
@@ -129,6 +130,51 @@ class GeneratePavbotManifestTest(unittest.TestCase):
 
         encoded = json.dumps(manifest, ensure_ascii=False)
         self.assertIn("Pavbot", encoded)
+
+    def test_manifest_collects_podcast_audio_variants_from_audio_subfolders(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp)
+            topic_dir = repo_root / "research" / "aktualne-wydarzenia-mobile"
+            podcast_dir = topic_dir / "podcasts" / "2026-06-23"
+            female_audio = podcast_dir / "audio" / "female-piper" / "podcast.mp3"
+            male_audio = podcast_dir / "audio" / "male-xtts" / "podcast.mp3"
+            female_audio.parent.mkdir(parents=True)
+            male_audio.parent.mkdir(parents=True)
+            (topic_dir / "topic.md").parent.mkdir(parents=True, exist_ok=True)
+            (topic_dir / "topic.md").write_text(
+                "# Topic Contract: aktualne-wydarzenia-mobile\n",
+                encoding="utf-8",
+            )
+            female_audio.write_bytes(b"female mp3")
+            male_audio.write_bytes(b"male mp3")
+            (podcast_dir / "tts_variants.json").write_text(
+                '{"language": "pl"}\n',
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo_root)
+
+        by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+        self.assertEqual(
+            by_path[
+                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.mp3"
+            ]["type"],
+            "podcastAudioVariant",
+        )
+        self.assertEqual(
+            by_path[
+                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/male-xtts/podcast.mp3"
+            ]["title"],
+            "Podcast audio - male xtts",
+        )
+        self.assertEqual(
+            by_path[
+                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/tts_variants.json"
+            ]["type"],
+            "podcastTtsVariants",
+        )
 
 
 if __name__ == "__main__":

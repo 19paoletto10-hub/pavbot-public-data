@@ -33,6 +33,7 @@ required_files=(
   "scripts/render_research_pdf.py"
   "tests/test_generate_pavbot_manifest.py"
   "tests/test_render_research_pdf.py"
+  "tests/test_render_mobile_brief_pdf.py"
   "integrations/openclaw/README.md"
   "integrations/openclaw/openclaw.sample.json5"
   "integrations/openclaw/workspace/AGENTS.md"
@@ -89,6 +90,16 @@ required_files=(
   "research/llm-ai-jobs-wroclaw/proposals/.gitkeep"
   "research/llm-ai-jobs-wroclaw/pdfs/.gitkeep"
   "research/llm-ai-jobs-wroclaw/automation-research-prompt.md"
+  "research/aktualne-wydarzenia-mobile/topic.md"
+  "research/aktualne-wydarzenia-mobile/index.md"
+  "research/aktualne-wydarzenia-mobile/backlog.md"
+  "research/aktualne-wydarzenia-mobile/runs/.gitkeep"
+  "research/aktualne-wydarzenia-mobile/pdfs/.gitkeep"
+  "research/aktualne-wydarzenia-mobile/podcasts/.gitkeep"
+  "research/aktualne-wydarzenia-mobile/proposals/.gitkeep"
+  "research/aktualne-wydarzenia-mobile/automation-prompt.md"
+  "research/aktualne-wydarzenia-mobile/tools/render_mobile_brief_pdf.py"
+  "research/aktualne-wydarzenia-mobile/tools/render_two_tts_variants.sh"
 )
 
 missing=0
@@ -112,6 +123,7 @@ python3 -m json.tool public/pavbot-manifest.json >/dev/null
 grep -q '"schemaVersion": 1' public/pavbot-manifest.json
 grep -q 'Pavbot Automation Manifest' public/pavbot-manifest.json
 grep -q 'pavbot-llm-ai-jobs-wroclaw-research' public/pavbot-manifest.json
+grep -q 'pavbot-aktualne-wydarzenia-mobile-10-15' public/pavbot-manifest.json
 grep -q '^pdfplumber' requirements.txt
 grep -q '^pytest' requirements.txt
 grep -q '^reportlab' requirements.txt
@@ -143,6 +155,7 @@ grep -q '^# Topic Contract: codex-agent-automation$' research/codex-agent-automa
 grep -q '^# Topic Contract: tech-news$' research/tech-news/topic.md
 grep -q '^# Topic Contract: polska-swiat$' research/polska-swiat/topic.md
 grep -q '^# Topic Contract: llm-ai-jobs-wroclaw$' research/llm-ai-jobs-wroclaw/topic.md
+grep -q '^# Topic Contract: aktualne-wydarzenia-mobile$' research/aktualne-wydarzenia-mobile/topic.md
 grep -q '^Status: ' research/codex-agent-automation/runs/2026-06-17.md
 grep -q 'Risk Gate' docs/architecture.md
 grep -q '\$daily-research-agent' research/codex-agent-automation/automation-prompt.md
@@ -179,5 +192,13 @@ grep -q 'pavbot-llm-ai-jobs-wroclaw-research' docs/how-to-use.md
 grep -q 'pavbot-llm-ai-jobs-wroclaw-research' docs/automation-operations.md
 grep -q '\$daily-research-agent' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
 grep -q 'generate_pavbot_manifest.py' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
+grep -q 'pavbot-aktualne-wydarzenia-mobile-10-15' docs/how-to-use.md
+grep -q 'pavbot-aktualne-wydarzenia-mobile-10-15' docs/automation-operations.md
+grep -q '\$daily-research-agent' research/aktualne-wydarzenia-mobile/automation-prompt.md
+grep -q 'render_mobile_brief_pdf.py' research/aktualne-wydarzenia-mobile/automation-prompt.md
+grep -q 'render_two_tts_variants.sh' research/aktualne-wydarzenia-mobile/automation-prompt.md
+grep -q 'female-piper' research/aktualne-wydarzenia-mobile/tools/render_two_tts_variants.sh
+grep -q 'male-xtts' research/aktualne-wydarzenia-mobile/tools/render_two_tts_variants.sh
+grep -q 'podcastAudioVariant' scripts/generate_pavbot_manifest.py
 
 printf 'research workspace verified: %d required files present\n' "${#required_files[@]}"

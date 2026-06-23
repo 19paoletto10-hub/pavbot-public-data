@@ -18,7 +18,10 @@ reports, an index, a backlog, and proposals for risky actions.
 9. Read the newest LLM/AI jobs report in
    `research/llm-ai-jobs-wroclaw/runs/` and PDF in
    `research/llm-ai-jobs-wroclaw/pdfs/`.
-10. Keep the first three scheduled runs under manual review before adding more
+10. Read the newest mobile current-events brief in
+    `research/aktualne-wydarzenia-mobile/pdfs/` and compare both TTS variants
+    in `research/aktualne-wydarzenia-mobile/podcasts/`.
+11. Keep the first three scheduled runs under manual review before adding more
     topics.
 
 The current active automations are:
@@ -51,6 +54,12 @@ The current active automations are:
 - Cadence: twice daily; repository reports use `YYYY-MM-DD-HHMM` filenames
 - Output: `research/llm-ai-jobs-wroclaw/runs/YYYY-MM-DD-HHMM.md`
 - PDF: `research/llm-ai-jobs-wroclaw/pdfs/YYYY-MM-DD-HHMM-llm-ai-jobs-wroclaw.pdf`
+
+- Name: `Pavbot Aktualne Wydarzenia Mobile 10:15`
+- ID: `pavbot-aktualne-wydarzenia-mobile-10-15`
+- Topic: `research/aktualne-wydarzenia-mobile`
+- Cadence: daily at 10:15 local time
+- Output: `research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-mobile-brief.pdf`
 
 ## Manual Run
 
@@ -103,6 +112,17 @@ $daily-research-agent
 Run one research workflow cycle for `research/llm-ai-jobs-wroclaw`.
 Follow the topic contract, update the report/index/backlog, create the PDF, and
 use proposals for any medium-risk or high-risk action.
+```
+
+Manual mobile current-events brief test:
+
+```text
+$daily-research-agent
+
+Run the complete mobile current-events workflow for
+`research/aktualne-wydarzenia-mobile`: create the dated Markdown report, mobile
+PDF, `draft.md`, `script.md`, `sources.md`, both TTS variants, and
+`tts_variants.json`.
 ```
 
 Shared local TTS models can be prepared with:

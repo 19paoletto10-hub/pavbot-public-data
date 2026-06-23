@@ -1,9 +1,22 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-06-22T21:26:13.989253+00:00",
+  "generatedAt": "2026-06-22T22:38:24.029339+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
+    {
+      "id": "pavbot-aktualne-wydarzenia-mobile-10-15",
+      "name": "Pavbot Aktualne Wydarzenia Mobile 10:15",
+      "enabled": true,
+      "kind": "research",
+      "topic": "aktualne-wydarzenia-mobile",
+      "topicPath": "research/aktualne-wydarzenia-mobile",
+      "cadence": "daily at 10:15 local time",
+      "sourcePath": "docs/how-to-use.md",
+      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "output": "research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-mobile-brief.pdf",
+      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-mobile-brief.pdf"
+    },
     {
       "id": "pavbot-llm-ai-jobs-wroclaw-research",
       "name": "Pavbot LLM/AI Jobs Wrocław Research",
@@ -67,6 +80,13 @@
     }
   ],
   "topics": [
+    {
+      "slug": "aktualne-wydarzenia-mobile",
+      "title": "Topic Contract: aktualne-wydarzenia-mobile",
+      "path": "research/aktualne-wydarzenia-mobile",
+      "topicFilePath": "research/aktualne-wydarzenia-mobile/topic.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/topic.md"
+    },
     {
       "slug": "codex-agent-automation",
       "title": "Topic Contract: codex-agent-automation",
@@ -1367,6 +1387,42 @@
       "path": "research/codex-agent-automation/automation-prompt.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/codex-agent-automation/automation-prompt.md",
       "sizeBytes": 1324
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/topic.md",
+      "type": "topic",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "Topic Contract: aktualne-wydarzenia-mobile",
+      "path": "research/aktualne-wydarzenia-mobile/topic.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/topic.md",
+      "sizeBytes": 2280
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/index.md",
+      "type": "index",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "Topic Index: aktualne-wydarzenia-mobile",
+      "path": "research/aktualne-wydarzenia-mobile/index.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/index.md",
+      "sizeBytes": 1437
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/backlog.md",
+      "type": "backlog",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "Topic Backlog: aktualne-wydarzenia-mobile",
+      "path": "research/aktualne-wydarzenia-mobile/backlog.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/backlog.md",
+      "sizeBytes": 687
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/automation-prompt.md",
+      "type": "automationPrompt",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "Automation Prompt: Pavbot Aktualne Wydarzenia Mobile 10:15",
+      "path": "research/aktualne-wydarzenia-mobile/automation-prompt.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/automation-prompt.md",
+      "sizeBytes": 4020
     }
   ]
 }

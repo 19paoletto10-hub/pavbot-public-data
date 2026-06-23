@@ -20,6 +20,8 @@ reviewable proposals.
 - Research heartbeats invoke `daily-research-agent`. Podcast heartbeats invoke
   a thin topic-specific wrapper, which delegates editorial review and audio
   rendering to `daily-podcast-agent`.
+- The `aktualne-wydarzenia-mobile` cron combines a research report, a
+  mobile-first PDF brief, and two local TTS variants in one topic-scoped run.
 - The agent writes dated reports and updates the topic index/backlog.
 - Risk-gated actions are saved as proposals and left for human review.
 
@@ -36,6 +38,9 @@ reviewable proposals.
   for example `YYYY-MM-DD-HHMM.md` and `YYYY-MM-DD-HHMM-<topic>.pdf`.
 - `podcasts/YYYY-MM-DD/` stores podcast scripts, source notes, and MP3 files
   when a topic has an audio automation.
+- Mobile brief topics can store multiple TTS variants under
+  `podcasts/YYYY-MM-DD/audio/<variant>/podcast.mp3` plus
+  `tts_variants.json`.
 - Podcast packages also include `draft.md` and `render.json` when generated
   through the shared podcast pipeline.
 - Podcast packages include `brief.pdf`, a professional PDF summary of the

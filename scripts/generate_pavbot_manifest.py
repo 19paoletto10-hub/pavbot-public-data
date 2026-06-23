@@ -143,7 +143,7 @@ def collect_artifacts(
         podcasts_dir = topic_dir / "podcasts"
         if podcasts_dir.exists():
             for date_dir in sorted(path for path in podcasts_dir.iterdir() if path.is_dir()):
-                for path in sorted(item for item in date_dir.iterdir() if item.is_file()):
+                for path in sorted(item for item in date_dir.rglob("*") if item.is_file()):
                     add_artifact(
                         artifacts,
                         repo_root,
@@ -217,6 +217,8 @@ def infer_automation_kind(name: str, output: str | None) -> str:
 
 def infer_podcast_artifact_type(path: Path) -> str:
     name = path.name
+    if name == "podcast.mp3" and path.parent.parent.name == "audio":
+        return "podcastAudioVariant"
     if name == "podcast.mp3":
         return "podcastAudio"
     if name == "brief.pdf":
@@ -229,6 +231,8 @@ def infer_podcast_artifact_type(path: Path) -> str:
         return "podcastSources"
     if name == "render.json":
         return "podcastRender"
+    if name == "tts_variants.json":
+        return "podcastTtsVariants"
     return "podcastArtifact"
 
 
@@ -239,8 +243,12 @@ def artifact_title(path: Path, artifact_type: str) -> str:
             return title
     if artifact_type == "podcastAudio":
         return "Podcast audio"
+    if artifact_type == "podcastAudioVariant":
+        return "Podcast audio - " + path.parent.name.replace("-", " ")
     if artifact_type == "podcastBriefPdf":
         return "Podcast brief PDF"
+    if artifact_type == "podcastTtsVariants":
+        return "TTS variants metadata"
     return path.name
 
 
