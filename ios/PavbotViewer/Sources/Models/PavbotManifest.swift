@@ -116,6 +116,26 @@ struct PavbotManifest: Codable, Equatable {
         return scopedArtifacts.filter { $0.matchesSearch(trimmedQuery) }
     }
 
+    func filteredArtifacts(for route: ArtifactNotificationRoute?) -> [PavbotArtifact] {
+        guard let route else { return artifacts }
+        if !route.artifactIDs.isEmpty {
+            let order = Dictionary(uniqueKeysWithValues: route.artifactIDs.enumerated().map { ($0.element, $0.offset) })
+            return artifacts
+                .filter { order[$0.id] != nil }
+                .sorted { (order[$0.id] ?? Int.max) < (order[$1.id] ?? Int.max) }
+        }
+
+        return artifacts.filter { artifact in
+            if let topic = route.topic, artifact.topic != topic {
+                return false
+            }
+            if let date = route.date, artifact.date != date {
+                return false
+            }
+            return true
+        }
+    }
+
     func newArtifacts(comparedTo previous: PavbotManifest?) -> [PavbotArtifact] {
         guard let previous else { return [] }
         let previousIDs = Set(previous.artifacts.map(\.id))
@@ -439,5 +459,84 @@ extension DateFormatter {
 extension Date {
     var pavbotDayString: String {
         DateFormatter.pavbotDay.string(from: self)
+    }
+}
+
+struct ArtifactNotificationRoute: Equatable, Hashable, Sendable {
+    let topic: String?
+    let date: String?
+    let artifactIDs: [String]
+
+    init(topic: String?, date: String?, artifactIDs: [String]) {
+        self.topic = topic?.nilIfBlank
+        self.date = date?.nilIfBlank
+        self.artifactIDs = artifactIDs.filter { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty }
+    }
+
+    init?(userInfo: [AnyHashable: Any]) {
+        let topic = userInfo["artifactTopic"] as? String
+        let date = userInfo["artifactDate"] as? String
+        let artifactIDs = Self.stringArray(from: userInfo["artifactIDs"])
+        guard topic?.nilIfBlank != nil || date?.nilIfBlank != nil || !artifactIDs.isEmpty else {
+            return nil
+        }
+        self.init(topic: topic, date: date, artifactIDs: artifactIDs)
+    }
+
+    init(artifacts: [PavbotArtifact]) {
+        let topics = Set(artifacts.map(\.topic).filter { !$0.isEmpty })
+        let dates = Set(artifacts.compactMap(\.date).filter { !$0.isEmpty })
+        self.init(
+            topic: topics.count == 1 ? topics.first : nil,
+            date: dates.count == 1 ? dates.first : nil,
+            artifactIDs: artifacts.map(\.id)
+        )
+    }
+
+    var userInfo: [String: Any] {
+        var values: [String: Any] = [:]
+        if let topic {
+            values["artifactTopic"] = topic
+        }
+        if let date {
+            values["artifactDate"] = date
+        }
+        if !artifactIDs.isEmpty {
+            values["artifactIDs"] = artifactIDs
+        }
+        return values
+    }
+
+    var displayTitle: String {
+        if let topic, let date {
+            return "\(topic) · \(date)"
+        }
+        if let topic {
+            return topic
+        }
+        if let date {
+            return date
+        }
+        return "Notification files"
+    }
+
+    private static func stringArray(from value: Any?) -> [String] {
+        if let strings = value as? [String] {
+            return strings
+        }
+        if let values = value as? [Any] {
+            return values.compactMap { $0 as? String }
+        }
+        if let string = value as? String {
+            return [string]
+        }
+        return []
+    }
+}
+
+private extension String {
+    var nilIfBlank: String? {
+        let trimmed = trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? nil : trimmed
     }
 }

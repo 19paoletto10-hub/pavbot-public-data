@@ -84,6 +84,14 @@ async def send_apns_change_notifications(
         "errors": [],
     }
 
+    notification = build_change_notification(
+        artifacts=artifacts,
+        automations=automations,
+        manifest_url_value=manifest_url_value,
+    )
+    if notification is None:
+        return summary
+
     for device_token, registration in devices.items():
         if not isinstance(registration, dict):
             summary["skippedDevices"] += 1
@@ -92,38 +100,71 @@ async def send_apns_change_notifications(
             summary["skippedDevices"] += 1
             continue
 
-        for artifact in artifacts[:8]:
-            await send_apns_alert_safely(
-                sender=sender,
-                device_token=device_token,
-                title=f"New {artifact.get('type', 'artifact')}",
-                body=f"{artifact.get('topic', 'Pavbot')} · {artifact.get('title', artifact.get('path', 'New file'))}",
-                user_info={
-                    "artifactID": artifact.get("id", ""),
-                    "artifactPath": artifact.get("path", ""),
-                    "manifestURL": manifest_url_value,
-                },
-                summary=summary,
-                kind="artifact",
-                item_id=str(artifact.get("id", "")),
-            )
-
-        for automation in automations[:8]:
-            await send_apns_alert_safely(
-                sender=sender,
-                device_token=device_token,
-                title="New automation",
-                body=f"{automation.get('name', automation.get('id', 'Pavbot automation'))} · {automation.get('topicPath', '')}",
-                user_info={
-                    "automationID": automation.get("id", ""),
-                    "manifestURL": manifest_url_value,
-                },
-                summary=summary,
-                kind="automation",
-                item_id=str(automation.get("id", "")),
-            )
+        await send_apns_alert_safely(
+            sender=sender,
+            device_token=device_token,
+            title=notification["title"],
+            body=notification["body"],
+            user_info=notification["userInfo"],
+            summary=summary,
+            kind="summary",
+            item_id=notification["summaryID"],
+        )
 
     return summary
+
+
+def build_change_notification(
+    *,
+    artifacts: list[dict[str, Any]],
+    automations: list[dict[str, Any]],
+    manifest_url_value: str,
+) -> dict[str, Any] | None:
+    artifact_ids = [str(item.get("id", "")) for item in artifacts if item.get("id")]
+    automation_ids = [str(item.get("id", "")) for item in automations if item.get("id")]
+    if not artifact_ids and not automation_ids:
+        return None
+
+    artifact_topics = [str(item.get("topic", "")) for item in artifacts if item.get("topic")]
+    artifact_dates = [str(item.get("date", "")) for item in artifacts if item.get("date")]
+    topic = common_value(artifact_topics)
+    date = common_value(artifact_dates)
+
+    user_info: dict[str, Any] = {
+        "manifestURL": manifest_url_value,
+    }
+    if artifact_ids:
+        user_info["artifactIDs"] = artifact_ids
+    if topic:
+        user_info["artifactTopic"] = topic
+    if date:
+        user_info["artifactDate"] = date
+    if automation_ids:
+        user_info["automationIDs"] = automation_ids
+        user_info["automationID"] = automation_ids[0]
+
+    if artifact_ids:
+        file_label = "file" if len(artifact_ids) == 1 else "files"
+        topic_label = topic or "Pavbot"
+        date_label = f" · {date}" if date else ""
+        body = f"{topic_label}{date_label} · {len(artifact_ids)} new {file_label}"
+    else:
+        automation_label = "automation" if len(automation_ids) == 1 else "automations"
+        body = f"{len(automation_ids)} new {automation_label}"
+
+    return {
+        "title": "Pavbot",
+        "body": body,
+        "userInfo": user_info,
+        "summaryID": artifact_ids[0] if artifact_ids else automation_ids[0],
+    }
+
+
+def common_value(values: list[str]) -> str:
+    unique_values = {value for value in values if value}
+    if len(unique_values) == 1:
+        return next(iter(unique_values))
+    return ""
 
 
 async def send_apns_alert_safely(

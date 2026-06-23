@@ -164,9 +164,70 @@ def test_send_apns_change_notifications_continues_after_device_failure():
     assert summary["errors"] == [
         {
             "deviceTokenSuffix": "token",
-            "kind": "artifact",
+            "kind": "summary",
             "id": "research/tech-news/runs/2026-06-22.md",
             "error": "Unregistered",
         }
     ]
-    assert sender.calls[1]["userInfo"]["artifactID"] == "research/tech-news/runs/2026-06-22.md"
+    assert sender.calls[1]["userInfo"]["artifactIDs"] == ["research/tech-news/runs/2026-06-22.md"]
+    assert sender.calls[1]["userInfo"]["artifactTopic"] == "tech-news"
+
+
+def test_send_apns_change_notifications_sends_single_summary_per_device():
+    core = load_core()
+
+    class FakeSender:
+        def __init__(self):
+            self.calls = []
+
+        async def send_alert(self, device_token, title, body, user_info):
+            self.calls.append(
+                {
+                    "deviceToken": device_token,
+                    "title": title,
+                    "body": body,
+                    "userInfo": user_info,
+                }
+            )
+
+    sender = FakeSender()
+    manifest_url = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+    artifacts = [
+        {
+            "id": "research/mobile/runs/2026-06-23.md",
+            "type": "run",
+            "topic": "mobile",
+            "title": "Mobile brief",
+            "path": "research/mobile/runs/2026-06-23.md",
+            "date": "2026-06-23",
+        },
+        {
+            "id": "research/mobile/pdfs/2026-06-23.pdf",
+            "type": "pdf",
+            "topic": "mobile",
+            "title": "Mobile PDF",
+            "path": "research/mobile/pdfs/2026-06-23.pdf",
+            "date": "2026-06-23",
+        },
+    ]
+
+    summary = asyncio.run(
+        core.send_apns_change_notifications(
+            devices={"good-token": {"manifestURL": manifest_url}},
+            artifacts=artifacts,
+            automations=[],
+            manifest_url_value=manifest_url,
+            sender=sender,
+        )
+    )
+
+    assert summary["attempted"] == 1
+    assert summary["sent"] == 1
+    assert len(sender.calls) == 1
+    assert sender.calls[0]["title"] == "Pavbot"
+    assert sender.calls[0]["userInfo"]["artifactTopic"] == "mobile"
+    assert sender.calls[0]["userInfo"]["artifactDate"] == "2026-06-23"
+    assert sender.calls[0]["userInfo"]["artifactIDs"] == [
+        "research/mobile/runs/2026-06-23.md",
+        "research/mobile/pdfs/2026-06-23.pdf",
+    ]

@@ -19,42 +19,49 @@ struct ArtifactNotificationService: ArtifactNotifying {
             return
         }
 
-        for artifact in artifacts.prefix(8) {
+        if !artifacts.isEmpty {
+            let route = ArtifactNotificationRoute(artifacts: artifacts)
             let content = UNMutableNotificationContent()
-            content.title = "New \(artifact.type.label)"
-            content.body = "\(artifact.topic) · \(artifact.title)"
+            content.title = "Pavbot"
+            content.body = Self.summaryBody(for: artifacts, route: route)
             content.sound = .default
-            content.userInfo = [
-                "artifactID": artifact.id,
-                "artifactPath": artifact.path,
-                "manifestURL": manifestURL.absoluteString
-            ]
+            var userInfo = route.userInfo
+            userInfo["manifestURL"] = manifestURL.absoluteString
+            content.userInfo = userInfo
 
             let request = UNNotificationRequest(
-                identifier: "pavbot.\(artifact.id.notificationIdentifierComponent)",
+                identifier: "pavbot.summary.\((route.artifactIDs.first ?? UUID().uuidString).notificationIdentifierComponent)",
                 content: content,
                 trigger: nil
             )
             try? await center.add(request)
         }
 
-        for automation in automations.prefix(8) {
+        if artifacts.isEmpty, !automations.isEmpty {
             let content = UNMutableNotificationContent()
-            content.title = "New automation"
-            content.body = "\(automation.name) · \(automation.topicPath)"
+            content.title = "Pavbot"
+            content.body = automations.count == 1
+                ? "New automation · \(automations[0].name)"
+                : "\(automations.count) new automations"
             content.sound = .default
             content.userInfo = [
-                "automationID": automation.id,
+                "automationID": automations[0].id,
+                "automationIDs": automations.map(\.id),
                 "manifestURL": manifestURL.absoluteString
             ]
 
             let request = UNNotificationRequest(
-                identifier: "pavbot.automation.\(automation.id.notificationIdentifierComponent)",
+                identifier: "pavbot.automation.\(automations[0].id.notificationIdentifierComponent)",
                 content: content,
                 trigger: nil
             )
             try? await center.add(request)
         }
+    }
+
+    private static func summaryBody(for artifacts: [PavbotArtifact], route: ArtifactNotificationRoute) -> String {
+        let fileLabel = artifacts.count == 1 ? "file" : "files"
+        return "\(route.displayTitle) · \(artifacts.count) new \(fileLabel)"
     }
 }
 
@@ -214,17 +221,17 @@ final class ArtifactNotificationDelegate: NSObject, UNUserNotificationCenterDele
         didReceive response: UNNotificationResponse
     ) async {
         let userInfo = response.notification.request.content.userInfo
+        let route = ArtifactNotificationRoute(userInfo: userInfo)
         let artifactID = userInfo["artifactID"] as? String
         let automationID = userInfo["automationID"] as? String
         await MainActor.run {
-            var routedUserInfo: [AnyHashable: Any] = [:]
-            if let artifactID {
-                routedUserInfo["artifactID"] = artifactID
+            if let route {
+                router?.openArtifactRoute(route)
+            } else if let artifactID {
+                router?.handleNotification(userInfo: ["artifactID": artifactID])
+            } else if let automationID {
+                router?.handleNotification(userInfo: ["automationID": automationID])
             }
-            if let automationID {
-                routedUserInfo["automationID"] = automationID
-            }
-            router?.handleNotification(userInfo: routedUserInfo)
         }
     }
 }

@@ -15,6 +15,8 @@ required_files=(
   "backend/pavbot-notifier/Dockerfile"
   "backend/pavbot-notifier/docker-compose.yml"
   "backend/pavbot-notifier/.env.example"
+  "backend/pavbot-notifier/Start Pavbot Notifier.command"
+  "backend/pavbot-notifier/Status Pavbot Notifier.command"
   "backend/pavbot-notifier/cloudflare/config.example.yml"
   "backend/pavbot-notifier/launchd/com.pavbot.notifier.plist.example"
   "backend/pavbot-notifier/launchd/com.pavbot.cloudflared.plist.example"
@@ -205,8 +207,11 @@ grep -q 'pavbot_commit_and_push_outputs.sh' docs/live-ios-notifications-macbook-
 grep -q 'SP774TZZU8' docs/live-ios-notifications-macbook-cloudflare.md
 grep -q 'Apple Push Notifications Console' docs/live-ios-notifications-macbook-cloudflare.md
 grep -q 'launchd' docs/live-ios-notifications-macbook-cloudflare.md
+grep -q 'Start Pavbot Notifier.command' docs/live-ios-notifications-macbook-cloudflare.md
 grep -q 'PAVBOT_PUBLIC_NOTIFIER_URL' backend/pavbot-notifier/.env.example
 grep -q 'APNS_TEAM_ID=SP774TZZU8' backend/pavbot-notifier/.env.example
+grep -q 'docker compose up -d --build' "backend/pavbot-notifier/Start Pavbot Notifier.command"
+grep -q 'http://localhost:8080/status' "backend/pavbot-notifier/Status Pavbot Notifier.command"
 grep -q 'pavbot-notifier' backend/pavbot-notifier/cloudflare/config.example.yml
 grep -q 'uvicorn' backend/pavbot-notifier/Dockerfile
 grep -q 'FastAPI' backend/pavbot-notifier/pavbot_notifier/server.py

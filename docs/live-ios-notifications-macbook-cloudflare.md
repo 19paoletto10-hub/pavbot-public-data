@@ -51,6 +51,26 @@ curl http://localhost:8080/healthz
 curl http://localhost:8080/status
 ```
 
+## One-Click MacBook Start
+
+For day-to-day use, open these files in Finder:
+
+```text
+backend/pavbot-notifier/Start Pavbot Notifier.command
+backend/pavbot-notifier/Status Pavbot Notifier.command
+```
+
+`Start Pavbot Notifier.command` checks Docker, creates `.env` from
+`.env.example` on first run, opens the local `secrets/` folder for the APNs key,
+starts `docker compose up -d --build`, and starts `cloudflared` when
+`~/.cloudflared/pavbot-notifier.yml` exists. `Status Pavbot Notifier.command`
+opens the local or public `/status` endpoint.
+
+The first run cannot be fully automatic because APNs and Cloudflare credentials
+must stay local and must never be committed. After `.env`, the APNs `.p8` key,
+and Cloudflare tunnel config are ready, the start file is the normal one-click
+launcher.
+
 Set these values in `.env`:
 
 ```dotenv

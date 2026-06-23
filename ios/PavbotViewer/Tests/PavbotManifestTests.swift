@@ -28,6 +28,24 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(manifest.filteredArtifacts(on: nil, query: "2026-06-21").map(\.id), ["run-2026-06-21"])
     }
 
+    func testFiltersArtifactsByNotificationRoute() throws {
+        let manifest = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
+        let route = ArtifactNotificationRoute(
+            topic: "tech-news",
+            date: "2026-06-22",
+            artifactIDs: ["audio-2026-06-22", "missing-id"]
+        )
+
+        XCTAssertEqual(manifest.filteredArtifacts(for: route).map(\.id), ["audio-2026-06-22"])
+    }
+
+    func testFiltersArtifactsByNotificationTopicAndDateWhenIDsAreMissing() throws {
+        let manifest = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
+        let route = ArtifactNotificationRoute(topic: "tech-news", date: "2026-06-22", artifactIDs: [])
+
+        XCTAssertEqual(manifest.filteredArtifacts(for: route).map(\.id), ["run-2026-06-22", "audio-2026-06-22"])
+    }
+
     func testSortsAvailableArtifactDaysDescending() throws {
         let manifest = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
 
@@ -443,6 +461,27 @@ final class PavbotManifestTests: XCTestCase {
         router.handleNotification(userInfo: ["automationID": "mobile-current-events"])
 
         XCTAssertEqual(router.selectedTab, .automations)
+        XCTAssertNil(router.pendingArtifactID)
+    }
+
+    @MainActor
+    func testRouterOpensArtifactFilterFromSummaryNotificationUserInfo() {
+        let router = AppRouter()
+        router.selectedTab = .settings
+
+        router.handleNotification(
+            userInfo: [
+                "artifactTopic": "tech-news",
+                "artifactDate": "2026-06-22",
+                "artifactIDs": ["run-2026-06-22", "audio-2026-06-22"]
+            ]
+        )
+
+        XCTAssertEqual(router.selectedTab, .artifacts)
+        XCTAssertEqual(router.artifactRoute?.topic, "tech-news")
+        XCTAssertEqual(router.artifactRoute?.date, "2026-06-22")
+        XCTAssertEqual(router.artifactRoute?.artifactIDs, ["run-2026-06-22", "audio-2026-06-22"])
+        XCTAssertTrue(router.artifactPath.isEmpty)
         XCTAssertNil(router.pendingArtifactID)
     }
 

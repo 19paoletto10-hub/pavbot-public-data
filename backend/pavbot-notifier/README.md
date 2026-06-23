@@ -20,6 +20,17 @@ server URL is configured in Settings.
 The recommended low-cost setup is to run this service on your MacBook and
 publish it with Cloudflare Tunnel:
 
+One-click launcher:
+
+```text
+Start Pavbot Notifier.command
+Status Pavbot Notifier.command
+```
+
+Double-click `Start Pavbot Notifier.command` in Finder after `.env`, the APNs
+`.p8` key, and Cloudflare tunnel config are ready. On first run it creates
+`.env` from `.env.example` and opens the files you need to fill.
+
 ```bash
 cd backend/pavbot-notifier
 cp .env.example .env
