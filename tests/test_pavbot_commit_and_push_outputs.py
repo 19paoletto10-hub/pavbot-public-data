@@ -122,6 +122,18 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
             self.assertTrue((repo / "docs" / "unrelated.md").exists())
             self.assertTrue(tool_path.exists())
 
+    def test_isolated_publish_reports_noop_without_push_message(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            first = self.run_publish_script(repo, "research/tech-news", isolated=True)
+            self.assertEqual(first.returncode, 0, first.stderr)
+
+            second = self.run_publish_script(repo, "research/tech-news", isolated=True)
+
+            self.assertEqual(second.returncode, 0, second.stderr)
+            self.assertIn("no publishable changes", second.stdout)
+            self.assertNotIn("pushed pavbot outputs", second.stdout)
+
     def temporary_repo(self):
         return TemporaryPavbotRepo(self.repo_root, self.script_path)
 

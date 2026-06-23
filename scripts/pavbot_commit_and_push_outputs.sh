@@ -163,13 +163,14 @@ cleanup_isolated_worktree() {
 }
 
 publish_isolated() {
-  local remote_ref topic_slug
+  local pushed_marker remote_ref topic_slug
 
   git fetch origin "$target_branch" >/dev/null
   remote_ref="$(git rev-parse --verify "origin/$target_branch")" || die "missing origin/$target_branch"
 
   isolated_tmp="$(mktemp -d "${TMPDIR:-/tmp}/pavbot-publish.XXXXXX")"
   isolated_worktree="$isolated_tmp/worktree"
+  pushed_marker="$isolated_tmp/pushed"
   trap cleanup_isolated_worktree EXIT
 
   git worktree add --detach "$isolated_worktree" "$remote_ref" >/dev/null
@@ -196,10 +197,13 @@ publish_isolated() {
     topic_slug="${topic_path#research/}"
     git commit -m "chore(pavbot): publish ${topic_slug} automation outputs" >/dev/null
     git push origin "HEAD:$target_branch" >/dev/null
+    touch "$pushed_marker"
   )
 
   git fetch origin "$target_branch" >/dev/null
-  printf 'pushed pavbot outputs for %s to origin/%s\n' "$topic_path" "$target_branch"
+  if [[ -f "$pushed_marker" ]]; then
+    printf 'pushed pavbot outputs for %s to origin/%s\n' "$topic_path" "$target_branch"
+  fi
 }
 
 isolated_mode=0
