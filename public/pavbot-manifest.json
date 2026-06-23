@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-06-23T01:15:53.671384+00:00",
+  "generatedAt": "2026-06-23T01:16:07.458349+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -117,6 +117,28 @@
     }
   ],
   "artifacts": [
+    {
+      "id": "research/llm-ai-jobs-wroclaw/runs/2026-06-23-0140.md",
+      "type": "run",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "LLM/AI Jobs Wrocław",
+      "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-23-0140.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-23-0140.md",
+      "sizeBytes": 7803,
+      "date": "2026-06-23",
+      "time": "01:40"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-23-0140-llm-ai-jobs-wroclaw.pdf",
+      "type": "pdf",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "2026-06-23-0140-llm-ai-jobs-wroclaw.pdf",
+      "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-23-0140-llm-ai-jobs-wroclaw.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-23-0140-llm-ai-jobs-wroclaw.pdf",
+      "sizeBytes": 43810,
+      "date": "2026-06-23",
+      "time": "01:40"
+    },
     {
       "id": "research/aktualne-wydarzenia-mobile/runs/2026-06-23.md",
       "type": "run",
