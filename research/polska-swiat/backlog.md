@@ -39,6 +39,10 @@
   for USA-Iran, Ormuz, Lebanon deconfliction and UK politics; Prezydent
   RP and KPRM remained best for official Polish agenda. Onet/WP are still
   useful for the order-reaction thread, but need explicit attribution.
+- 2026-06-23: Tuesday research run created a material update and used the new
+  publish step. Strongest sources were KPRM for V4/RM agenda, Prezydent RP for
+  Turkey/NATO context, MON for Madrid defence talks, AP for USA-Iran and UK
+  succession, and Guardian/Euronews as supporting international context.
 
 ## Done
 

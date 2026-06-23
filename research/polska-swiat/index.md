@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-06-22
+Last updated: 2026-06-23
 
 ## Current Understanding
 
@@ -25,6 +25,10 @@ Po runie 22 czerwca utrzymują się te same dwa główne bloki, ale z nowymi
 akcentami: oficjalna agenda Prezydenta RP w Warszawie i Turcji, drugi dzień
 rozmów USA-Iran w Szwajcarii oraz ryzyko politycznej zmiany w Wielkiej
 Brytanii wokół Keira Starmera.
+Po runie 23 czerwca najważniejsze bloki to: szczyt V4 z udziałem Donalda Tuska,
+oficjalna wizyta Karola Nawrockiego w Turcji przed szczytem NATO, rozmowy
+USA-Iran po komunikacie Vance'a o dobrych podstawach do porozumienia oraz
+faktyczna rezygnacja Keira Starmera i proces sukcesji w Wielkiej Brytanii.
 
 ## Stable Facts
 
@@ -62,9 +66,12 @@ Brytanii wokół Keira Starmera.
   segment tylko wtedy, gdy RCB/IMGW wskazują szeroki zasięg lub ryzyko szkód.
 - Wątki polityczne z Wielkiej Brytanii śledzić pod kątem wpływu na wsparcie dla
   Ukrainy, NATO i europejską politykę bezpieczeństwa.
+- Przy publikacji automatyzacji researchowej używać izolowanego skryptu
+  publikacyjnego, który commit/push ogranicza do aktywnego tematu i manifestu.
 
 ## Recent Reports
 
+- [2026-06-23](runs/2026-06-23.md)
 - [2026-06-22](runs/2026-06-22.md)
 - [2026-06-21](runs/2026-06-21.md)
 - [2026-06-20](runs/2026-06-20.md)
