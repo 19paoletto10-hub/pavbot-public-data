@@ -43,6 +43,11 @@
   publish step. Strongest sources were KPRM for V4/RM agenda, Prezydent RP for
   Turkey/NATO context, MON for Madrid defence talks, AP for USA-Iran and UK
   succession, and Guardian/Euronews as supporting international context.
+- 2026-06-24: Wednesday research run created a material update. Strongest
+  sources were KPRM for V4, S6, Ukraine recovery and mObywatel/air/lasy
+  decisions; Prezydent RP for Turkey/İncirlik and the order dispute line; AP
+  for USA-Iran inspections and Ormuz; Guardian for Starmer-Burnham transition.
+  Onet's E5 report is important but should be confirmed by official sources.
 
 ## Done
 

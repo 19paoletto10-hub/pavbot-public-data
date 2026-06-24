@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-06-23
+Last updated: 2026-06-24
 
 ## Current Understanding
 
@@ -29,6 +29,11 @@ Po runie 23 czerwca najważniejsze bloki to: szczyt V4 z udziałem Donalda Tuska
 oficjalna wizyta Karola Nawrockiego w Turcji przed szczytem NATO, rozmowy
 USA-Iran po komunikacie Vance'a o dobrych podstawach do porozumienia oraz
 faktyczna rezygnacja Keira Starmera i proces sukcesji w Wielkiej Brytanii.
+Po runie 24 czerwca główne bloki przesunęły się na deeskalację napięć
+polsko-ukraińskich przed Konferencją Odbudowy Ukrainy w Gdańsku, drugi dzień
+wizyty Prezydenta RP w Turcji z punktem wojskowym w İncirlik, oficjalny
+komunikat KPRM po V4, spór USA-Iran o inspekcje nuklearne oraz rozmowy
+Starmer-Burnham o szybkim przekazaniu władzy.
 
 ## Stable Facts
 
@@ -68,9 +73,12 @@ faktyczna rezygnacja Keira Starmera i proces sukcesji w Wielkiej Brytanii.
   Ukrainy, NATO i europejską politykę bezpieczeństwa.
 - Przy publikacji automatyzacji researchowej używać izolowanego skryptu
   publikacyjnego, który commit/push ogranicza do aktywnego tematu i manifestu.
+- Relacje redakcyjne o E5 i rozmowach liderów w Berlinie traktować jako ważny
+  sygnał, ale czekać na oficjalny komunikat przed mocną tezą.
 
 ## Recent Reports
 
+- [2026-06-24](runs/2026-06-24.md)
 - [2026-06-23](runs/2026-06-23.md)
 - [2026-06-22](runs/2026-06-22.md)
 - [2026-06-21](runs/2026-06-21.md)
