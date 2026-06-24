@@ -59,6 +59,9 @@
   official `Remote in Poland` cluster, while `ACAISOFT` added new canonical
   role pages (`Python Engineer with C++`, `Python-Focused Fullstack`) but still
   presents compensation units inconsistently on official detail pages.
+- 2026-06-24: Later same-day run added `Yard Corporate`, `ALTIMI`, `IN4GE`
+  and `Rossmann`, so the current watchlist now mixes stronger local Wrocław
+  signals with several remote-Poland clusters that need careful deduplication.
 - 2026-06-24: Evening run added new `Yard Corporate`, `ALTIMI`, `IN4GE` and
   `Rossmann` signals; the strongest new review risks are `IN4GE` near-duplicate
   AI role clustering and a `Rossmann` official-vs-board mismatch on location/status.

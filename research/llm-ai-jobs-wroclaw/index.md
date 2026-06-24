@@ -1,6 +1,6 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-06-24 17:44 CEST
+Last updated: 2026-06-24 19:21 CEST
 
 ## Current Understanding
 
@@ -9,24 +9,24 @@ kierunków: nowy `Yard Corporate` dla `Wrocław + remote`, oficjalny `ALTIMI`
 dla `Wrocław`, dwa nowe aktywne role `IN4GE` dla `remote Poland` oraz oficjalny
 sygnał `Rossmann` wokół `LLMOps`, platformy agentowej i `MCP`.
 
-Najciekawszy nowy lokalny sygnał to `Applied Machine Learning Engineer |
-GenAI / LLM / ML Systems` od `Yard Corporate`, bo łączy production ML, `LLM`,
-`RAG`, ewaluację modeli i czytelne widełki płacowe. `ALTIMI` dołożył
-oficjalnie potwierdzoną rolę `AI Forward Deployment Engineer`, czyli
-hands-on delivery i wdrażanie realnych systemów AI z `Wrocław + remote`.
+Późniejszy check z `2026-06-24 19:21 CEST` dołożył kolejny materialny klaster:
+`EPAM` rozszerzył publiczny zestaw o role `Lead AI Engineer`,
+`Senior Cloud Native Developer (Python & AI)`, `Senior Platform Engineer` oraz
+`Senior AI Engineer`, wszystkie oznaczone jako `Remote in Poland`. Równolegle
+`ACAISOFT` wystawił nowe kanoniczne role `Python Engineer with C++ (AI project)`
+oraz `Python-Focused Fullstack (+React)`, przesuwając akcent z ogólnego
+`AI project` w stronę evaluation tooling, verification infrastructure i
+workflowów agentowych dla systemów `LLM`.
 
-Po stronie `remote Poland` pojawił się nowy klaster `IN4GE` z rolami
-`Backend Software Engineer (MCP & AI Agents)` i
-`Senior Software Engineer (Python, GenAI & Agentic AI)`, obie z publicznymi
-widełkami `140-170 PLN/h B2B`. `Rossmann` wystawił oficjalną rolę
-`AI / LLMOps Engineer` z bardzo konkretnym zakresem obejmującym platformę
-agentową na `GCP`, `Python ADK`, warstwę ewaluacji, `RAG`, `Vertex AI Vector Search`
-i `Tool Registry` z `MCP` serwerami.
+Najciekawsze lokalne sygnały tego dnia to nadal `Yard Corporate` i `ALTIMI`,
+ale po stronie `remote Poland` wyraźnie wzmocniły się dwa oficjalne źródła:
+`EPAM` jako stabilny multi-role source oraz `ACAISOFT` jako źródło ciekawych,
+choć niespójnie opisanych ról wokół ewaluacji modeli i agentów AI.
 
-Największe ryzyko tej rundy to dwa nowe źródła niespójności:
-`IN4GE` pokazuje kilka bardzo podobnych aktywnych kart, co zwiększa ryzyko
-pozornych nowości przy kolejnych rundach, a `Rossmann` ma rozjazd między
-oficjalnym widokiem lokalizacji i statusem a publicznymi mirrorami job-boardowymi.
+Największe ryzyko tej rundy to obecnie trzy źródła niespójności:
+`IN4GE` pokazuje kilka bardzo podobnych aktywnych kart, `Rossmann` ma rozjazd
+między oficjalnym widokiem lokalizacji i publicznymi mirrorami, a `ACAISOFT`
+nadal renderuje compensation units w sposób wyglądający na błędny.
 
 ## Stable Facts
 
@@ -90,14 +90,14 @@ only when something meaningful changes.
 | acaisoft-senior-python-engineer-ai-evaluations-platform-remote-poland | ACAISOFT POLAND Sp. z o.o. | Senior Python Engineer (AI evaluations platform) | Remote Poland | 2026-06-23-1741 | 2026-06-23-1741 | Open | Initial capture: official Acaisoft careers hub plus employer-posted Pracuj.pl; `26 880-33 600 PLN netto + VAT / miesiąc B2B`; `Whole Poland (remote work)`; `Python`, `FastAPI`, `Django`, `PostgreSQL`, `AWS`; public description ties the role to AI evaluation and LLM performance issues. | [Acaisoft careers](https://www.acaisoft.com/careers) / [Pracuj.pl](https://www.pracuj.pl/praca/senior-python-engineer-ai-evaluations-platform-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004897258) |
 | acaisoft-site-reliability-engineer-ai-llm-infra-remote-poland | ACAISOFT POLAND Sp. z o.o. | Site Reliability Engineer - AI/LLM & Infra | Remote Poland | 2026-06-23-1741 | 2026-06-23-1741 | Open | Initial capture: official Acaisoft careers hub plus employer-posted Pracuj.pl; `160-230 PLN netto + VAT / godz. B2B`; `Whole Poland (remote work)`; `Python`, `CI/CD`, `DevOps/SRE`, `AWS`, `Kubernetes`, `AI`, `LLM`. | [Acaisoft careers](https://www.acaisoft.com/careers) / [Pracuj.pl](https://www.pracuj.pl/praca/site-reliability-engineer-ai-llm-infra-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004897180) |
 | acaisoft-python-engineeer-with-devops-ai-project-remote-poland | ACAISOFT POLAND Sp. z o.o. | Python Engineeer with DevOps (AI project) | Remote Poland | 2026-06-23-1741 | 2026-06-23-1741 | Open | Initial capture: official Acaisoft careers hub plus employer-posted Pracuj.pl; `26 880-35 280 PLN netto + VAT / miesiąc B2B`; `Whole Poland (remote work)`; `Python`, `FastAPI`, `Django`, `PostgreSQL`, `AWS`, `K8s`, `Terraform`. | [Acaisoft careers](https://www.acaisoft.com/careers) / [Pracuj.pl](https://www.pracuj.pl/praca/python-engineeer-with-devops-ai-project-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004897256) |
-| acaisoft-senior-machine-learning-ai-engineer-rl-remote-poland | ACAISOFT POLAND Sp. z o.o. | Senior Machine Learning /AI Engineer (RL) | Remote Poland | 2026-06-23-1741 | 2026-06-24-0142 | Open | Initial capture: official Acaisoft role; `100% remote`; AI-agent evaluation, LLM performance analysis, RL environments, `LangChain`, `LangGraph`, `RAG` and inference services for voice agents; public pay field shows `170-230 PLN`, but the unit is rendered ambiguously on the page. 2026-06-24-0142: official detail page now renders `170-230 PLN` as `netto per month - B2B`, which still looks internally inconsistent and keeps the compensation unit unresolved. | [Acaisoft](https://www.acaisoft.com/job/machine-learning-engineer) |
+| acaisoft-senior-machine-learning-ai-engineer-rl-remote-poland | ACAISOFT POLAND Sp. z o.o. | Senior Machine Learning /AI Engineer (RL) | Remote Poland | 2026-06-23-1741 | 2026-06-24-1921 | Open | Initial capture: official Acaisoft role; `100% remote`; AI-agent evaluation, LLM performance analysis, RL environments, `LangChain`, `LangGraph`, `RAG` and inference services for voice agents; public pay field shows `170-230 PLN`, but the unit is rendered ambiguously on the page. 2026-06-24-1921: official detail page now renders `170-230 PLN` as `netto per month - B2B`, which still looks internally inconsistent and keeps the compensation unit unresolved. | [Acaisoft](https://www.acaisoft.com/job/machine-learning-engineer) |
 | epam-junior-agentic-automation-engineer-hybrid-poland | EPAM Systems | Junior Agentic Automation Engineer | Hybrid Poland | 2026-06-23-1741 | 2026-06-23-1741 | Open | Initial capture: official EPAM role; `Hybrid in Poland`; hands-on agentic workflows with `LLM`, `n8n`, `AgentKit` or `UiPath`, prompt tuning, model parameters, `RAG`, grounding and monitoring; salary not public. | [EPAM](https://careers.epam.com/en/vacancy/junior-agentic-automation-engineer-bltvjweudh300xzvzss_en) |
-| epam-lead-ai-engineer-remote-poland | EPAM Systems | Lead AI Engineer | Remote Poland | 2026-06-24-0142 | 2026-06-24-0142 | Open | Initial capture: official EPAM role; `Remote in Poland`; end-to-end AI apps, chatbots, Q&A platforms, agent workflows, prompt strategies, data pipelines and `OpenAI`/`Anthropic`/`Bedrock`/`Gemini` stacks. | [EPAM](https://careers.epam.com/en/vacancy/lead-ai-engineer-bltfuun168yb6pyy1lp_en) |
-| epam-senior-cloud-native-developer-python-ai-remote-poland | EPAM Systems | Senior Cloud Native Developer (Python & AI) | Remote Poland | 2026-06-24-0142 | 2026-06-24-0142 | Open | Initial capture: official EPAM role; `Remote in Poland`; cloud-native Python plus `LLM-based applications`, `RAG pipelines`, `AI agents`, observability and IaC. | [EPAM](https://careers.epam.com/en/vacancy/senior-cloud-native-developer-python-ai-bltce99bd427bf423c0_en) |
-| epam-senior-platform-engineer-remote-poland | EPAM Systems | Senior Platform Engineer | Remote Poland | 2026-06-24-0142 | 2026-06-24-0142 | Open | Initial capture: official EPAM role; `Remote in Poland`; self-service platform engineering with `GenAI`, `AI agents`, `AIOps`, Kubernetes and infrastructure-as-code tooling. | [EPAM](https://careers.epam.com/en/vacancy/senior-platform-engineer-blt0210e551862e3687_en) |
-| epam-senior-ai-engineer-remote-poland | EPAM Systems | Senior AI Engineer | Remote Poland | 2026-06-24-0142 | 2026-06-24-0142 | Open | Initial capture: official EPAM role; `Remote in Poland`; conversational AI agents, fine-tuning, `LoRA`, `FT vs RAG`, prompt libraries, evaluation protocols and cloud CI/CD. | [EPAM](https://careers.epam.com/en/vacancy/senior-ai-engineer-bltimzj3s4lsusq7gfo_en) |
-| acaisoft-python-engineer-with-cpp-ai-project-remote | ACAISOFT POLAND Sp. z o.o. | Python Engineer with C++ (AI project) | Remote | 2026-06-24-0142 | 2026-06-24-0142 | Open | Initial capture: official Acaisoft role; `Remote`; AI evaluation and optimization, RL training environment, sandboxed code execution, automated test generation, grading harnesses and model benchmarking. Compensation field shows `160-200 PLN`, but the page renders the unit as `netto per month - B2B`, which looks inconsistent. | [Acaisoft](https://www.acaisoft.com/job/python-engineer-with-c-ai-project) |
-| acaisoft-python-focused-fullstack-react-remote | ACAISOFT POLAND Sp. z o.o. | Python-Focused Fullstack (+React) | Remote | 2026-06-24-0142 | 2026-06-24-0142 | Open | Initial capture: official Acaisoft role; `Remote`; `LLM evaluation workflows`, data visualizations, `agentic systems`, REST API, `React`, `Python`, `PostgreSQL` and `AWS`. Compensation field shows `140-210 PLN`, but the page renders the unit as `netto per month - B2B`, which looks inconsistent. | [Acaisoft](https://www.acaisoft.com/job/fullstack-engineer-ai-project-2) |
+| epam-lead-ai-engineer-remote-poland | EPAM Systems | Lead AI Engineer | Remote Poland | 2026-06-24-1921 | 2026-06-24-1921 | Open | Initial capture: official EPAM role; `Remote in Poland`; end-to-end AI apps, chatbots, Q&A platforms, agent workflows, prompt strategies, data pipelines and `OpenAI`/`Anthropic`/`Bedrock`/`Gemini` stacks. | [EPAM](https://careers.epam.com/en/vacancy/lead-ai-engineer-bltfuun168yb6pyy1lp_en) |
+| epam-senior-cloud-native-developer-python-ai-remote-poland | EPAM Systems | Senior Cloud Native Developer (Python & AI) | Remote Poland | 2026-06-24-1921 | 2026-06-24-1921 | Open | Initial capture: official EPAM role; `Remote in Poland`; cloud-native Python plus `LLM-based applications`, `RAG pipelines`, `AI agents`, observability and IaC. | [EPAM](https://careers.epam.com/en/vacancy/senior-cloud-native-developer-python-ai-bltce99bd427bf423c0_en) |
+| epam-senior-platform-engineer-remote-poland | EPAM Systems | Senior Platform Engineer | Remote Poland | 2026-06-24-1921 | 2026-06-24-1921 | Open | Initial capture: official EPAM role; `Remote in Poland`; self-service platform engineering with `GenAI`, `AI agents`, `AIOps`, Kubernetes and infrastructure-as-code tooling. | [EPAM](https://careers.epam.com/en/vacancy/senior-platform-engineer-blt0210e551862e3687_en) |
+| epam-senior-ai-engineer-remote-poland | EPAM Systems | Senior AI Engineer | Remote Poland | 2026-06-24-1921 | 2026-06-24-1921 | Open | Initial capture: official EPAM role; `Remote in Poland`; conversational AI agents, fine-tuning, `LoRA`, `FT vs RAG`, prompt libraries, evaluation protocols and cloud CI/CD. | [EPAM](https://careers.epam.com/en/vacancy/senior-ai-engineer-bltimzj3s4lsusq7gfo_en) |
+| acaisoft-python-engineer-with-cpp-ai-project-remote | ACAISOFT POLAND Sp. z o.o. | Python Engineer with C++ (AI project) | Remote | 2026-06-24-1921 | 2026-06-24-1921 | Open | Initial capture: official Acaisoft role; `Remote`; AI evaluation and optimization, RL training environment, sandboxed code execution, automated test generation, grading harnesses and model benchmarking. Compensation field shows `160-200 PLN`, but the page renders the unit as `netto per month - B2B`, which looks inconsistent. | [Acaisoft](https://www.acaisoft.com/job/python-engineer-with-c-ai-project) |
+| acaisoft-python-focused-fullstack-react-remote | ACAISOFT POLAND Sp. z o.o. | Python-Focused Fullstack (+React) | Remote | 2026-06-24-1921 | 2026-06-24-1921 | Open | Initial capture: official Acaisoft role; `Remote`; `LLM evaluation workflows`, data visualizations, `agentic systems`, REST API, `React`, `Python`, `PostgreSQL` and `AWS`. Compensation field shows `140-210 PLN`, but the page renders the unit as `netto per month - B2B`, which looks inconsistent. | [Acaisoft](https://www.acaisoft.com/job/fullstack-engineer-ai-project-2) |
 | kyotu-ai-engineer-genai-rag-agentic-ai-remote-poland | KYOTU Technology sp. z o.o. | AI Engineer (GenAI / RAG / Agentic AI) | Remote Poland | 2026-06-22-2307 | 2026-06-22-2307 | Open | Initial capture: public direct-employer Pracuj.pl role; 130-190 PLN net/h B2B; valid to 27 Jun; production GenAI, RAG, agentic workflows, FastAPI, guardrails, observability, Azure OpenAI, AWS Bedrock and OpenAI API. This is distinct from the earlier expired `AI / ML / LLM Engineer` talent-pool listing. | [Pracuj.pl](https://www.pracuj.pl/praca/ai-engineer-genai-rag-agentic-ai-warszawa-poniatowskiego-1%2Coferta%2C1004868105) |
 | tmobile-t-hub-ai-engineer-llms-agents-remote-poland | T-Mobile | T Hub - AI Engineer (LLMs, Agents) | Remote Poland / hybrid Warsaw | 2026-06-22-2307 | 2026-06-22-2307 | Open | Initial capture: public the:protocol role; valid 12 Jun-12 Jul 2026; mid-senior; remote/hybrid; Python, Transformers, GCP, CI/CD, LLMs, Prompt Engineering, Generative AI and Agentic AI with production integration, performance and scalability focus. | [the:protocol](https://theprotocol.it/praca/t-hub---ai-engineer-llms-agents-warszawa-marynarska-12%2Coferta%2C47a40000-59d6-3231-7fc5-08dec88980a1) |
 | sii-ai-engineer-genai-cloud-fmx-multiple-locations | Sii Sp. z o.o. | AI Engineer – GenAI & Cloud (f/m/x) | Poland multiple locations / remote-hybrid-office | 2026-06-22-2307 | 2026-06-22-2307 | Open | Initial capture: official Sii role with supporting public Pracuj mirror; Whole Poland remote work; valid to 03 Jul on public listing; Python, LangChain/LangGraph, cloud computing and GenAI. | [Sii official](https://sii.pl/en/job-ads/id/37069/ai-engineer-genai-cloud-f-m-x) / [Pracuj.pl](https://www.pracuj.pl/praca/ai-engineer-genai-cloud-f-m-x-krakow-wadowicka-12%2Coferta%2C1004880274) |
@@ -158,5 +158,5 @@ only when something meaningful changes.
 - [2026-06-22-2307](runs/2026-06-22-2307.md)
 - [2026-06-23-0140](runs/2026-06-23-0140.md)
 - [2026-06-23-1741](runs/2026-06-23-1741.md)
-- [2026-06-24-0142](runs/2026-06-24-0142.md)
 - [2026-06-24-1744](runs/2026-06-24-1744.md)
+- [2026-06-24-1921](runs/2026-06-24-1921.md)
