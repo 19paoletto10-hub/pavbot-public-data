@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-06-24T17:27:44.447571+00:00",
+  "generatedAt": "2026-06-24T17:27:48.691564+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -1642,6 +1642,16 @@
       "date": "2026-06-18"
     },
     {
+      "id": "research/polska-swiat/podcasts/2026-06-18/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "polska-swiat",
+      "title": "Podcast brief PDF",
+      "path": "research/polska-swiat/podcasts/2026-06-18/brief.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-18/brief.pdf",
+      "sizeBytes": 67308,
+      "date": "2026-06-18"
+    },
+    {
       "id": "research/polska-swiat/podcasts/2026-06-18/podcast.mp3",
       "type": "podcastAudio",
       "topic": "polska-swiat",
@@ -1649,6 +1659,16 @@
       "path": "research/polska-swiat/podcasts/2026-06-18/podcast.mp3",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-18/podcast.mp3",
       "sizeBytes": 3940111,
+      "date": "2026-06-18"
+    },
+    {
+      "id": "research/polska-swiat/pdfs/2026-06-18-polska-swiat.pdf",
+      "type": "pdf",
+      "topic": "polska-swiat",
+      "title": "2026-06-18-polska-swiat.pdf",
+      "path": "research/polska-swiat/pdfs/2026-06-18-polska-swiat.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-06-18-polska-swiat.pdf",
+      "sizeBytes": 82469,
       "date": "2026-06-18"
     },
     {
@@ -1806,6 +1826,16 @@
       "date": "2026-06-17"
     },
     {
+      "id": "research/polska-swiat/podcasts/2026-06-17/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "polska-swiat",
+      "title": "Podcast brief PDF",
+      "path": "research/polska-swiat/podcasts/2026-06-17/brief.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-17/brief.pdf",
+      "sizeBytes": 70027,
+      "date": "2026-06-17"
+    },
+    {
       "id": "research/polska-swiat/podcasts/2026-06-17/podcast.mp3",
       "type": "podcastAudio",
       "topic": "polska-swiat",
@@ -1813,6 +1843,16 @@
       "path": "research/polska-swiat/podcasts/2026-06-17/podcast.mp3",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-17/podcast.mp3",
       "sizeBytes": 3864208,
+      "date": "2026-06-17"
+    },
+    {
+      "id": "research/polska-swiat/pdfs/2026-06-17-polska-swiat.pdf",
+      "type": "pdf",
+      "topic": "polska-swiat",
+      "title": "2026-06-17-polska-swiat.pdf",
+      "path": "research/polska-swiat/pdfs/2026-06-17-polska-swiat.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-06-17-polska-swiat.pdf",
+      "sizeBytes": 74275,
       "date": "2026-06-17"
     },
     {
