@@ -105,6 +105,10 @@
 - 2026-06-23: Daily tech podcast generated `draft.md`, `script.md`,
   `sources.md`, `render.json`, `brief.pdf`, and `podcast.mp3`; final MP3 used
   Piper and measured about 7:55 by `ffprobe`.
+- 2026-06-24: Daily tech podcast generated in fallback mode because
+  `runs/2026-06-24.md` was missing; created `draft.md`, `script.md`,
+  `sources.md`, `render.json`, `brief.pdf`, and `podcast.mp3`; final MP3 used
+  Piper and measured about 7:32 by `ffprobe`.
 
 ## Done
 
