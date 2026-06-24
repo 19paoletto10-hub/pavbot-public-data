@@ -2,14 +2,17 @@
 
 ## Segmenty robocze
 
-1. Polska dyplomacja regionalna: premier Donald Tusk na szczycie V4 w Gödöllő.
-2. Rada Ministrów: projekty środowiskowe i leśne w porządku obrad.
-3. Ukraina i bezpieczeństwo europejskie: konkluzje Rady Europejskiej.
-4. USA-Iran: rozmowy w Szwajcarii i Cieśnina Ormuz.
-5. NATO: wizyta sekretarza generalnego w USA, szczyt w Turcji i cel 5% PKB.
-6. Pogoda: wtorkowe burze i upał według IMGW; wcześniejszy alert RCB tylko jako kontekst.
+1. Polska agenda dnia: Donald Tusk na szczycie V4 i posiedzenie Rady Ministrów.
+2. Wizyta prezydenta Karola Nawrockiego w Turcji jako drugi tor polskiej
+   dyplomacji.
+3. RCB i IMGW: dziś mniej burzowego alarmu, więcej hydrologii, suszy i
+   stopni alarmowych.
+4. UE i NATO: dalsze wsparcie dla Ukrainy, przygotowania do szczytu w Ankarze
+   i wizyta Marka Ruttego w Waszyngtonie.
+5. USA-Iran: memorandum daje polityczne okno, ale dostęp IAEA nadal jest
+   niejasny.
 
 ## Ton
 
-Krótki, profesjonalny, po polsku, z lekkim humorem tylko jako oddech między
-tematami. Bez żartowania z wojny, katastrof, ofiar ani bezpieczeństwa.
+Krótki, rzeczowy, podcastowy. Humor ma działać jako oddech między segmentami,
+bez żartowania z wojny, bezpieczeństwa, katastrof ani ofiar.
