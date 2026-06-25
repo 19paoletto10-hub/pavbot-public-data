@@ -19,6 +19,7 @@
 | Medium | Monitor KYOTU return after expired pool | KYOTU reappeared with a new active GenAI/RAG/agentic role after the earlier `AI / ML / LLM Engineer` listing had expired. | Re-check next run whether the current role remains active through the stated `27 Jun` deadline and whether salary, remote policy or stack change materially. | Open |
 | Medium | Monitor IN4GE cluster dedup risk | `IN4GE` surfaced multiple active public roles around `GenAI`, `agentic AI` and `MCP` in the same source family, with overlapping compensation and remote policy. | Re-check next run whether `Backend Software Engineer (MCP & AI Agents)` and `Senior Software Engineer (Python, GenAI & Agentic AI)` remain distinct openings, keep their current URLs, and avoid expanding into noisy near-duplicates. | Open |
 | Medium | Verify Rossmann remote-policy wording | `Rossmann` official detail page now explicitly says `hybrydowym lub zdalnym`, but still keeps `Łódź` as the office location and does not fully define the remote scope. | Re-check next run whether the official detail page `/20287` stays active, whether the `hybrydowym lub zdalnym` wording persists, and whether the public mirrors keep claiming `Cała Polska (praca zdalna)`. | Open |
+| Medium | Verify new board-first cluster canonical URLs | `DEVAPO`, `SCALO`, `VeloBank`, `XTB` and `Link Group` all surfaced as strong public signals, but in this round they are confirmed mainly through job boards rather than clearly canonical employer cards. | Re-check next run whether each role stays open, whether an official employer detail page becomes public, and whether board-only salary/location wording drifts materially. | Open |
 
 ## Review Notes
 
@@ -72,6 +73,9 @@
   `Accenture` opened a new Wrocław-hybrid cluster around `LLM`, `RAG` and
   agentic AI. `Rossmann` also narrowed its earlier mismatch by explicitly
   adding `hybrydowym lub zdalnym` to the official detail page.
+- 2026-06-25: Afternoon run added a new board-first cluster around `DEVAPO`,
+  `SCALO`, `VeloBank`, `XTB` and `Link Group`; the strongest new risk is
+  canonical-source uncertainty rather than fit-to-scope quality.
 
 ## Done
 

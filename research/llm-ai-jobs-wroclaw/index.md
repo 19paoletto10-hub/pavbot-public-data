@@ -1,27 +1,28 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-06-25 01:41 CEST
+Last updated: 2026-06-25 17:23 CEST
 
 ## Current Understanding
 
-Runda z `2026-06-25 01:41 CEST` przyniosła trzy materialne sygnały. Najmocniejszy
-nowy remote-Poland signal to oficjalny `CKSource / Tiugo Technologies` z rolą
-`Principal Applied AI Engineer`, osadzoną w praktycznych systemach agentowych i
-AI-assisted engineering. Po stronie `Wrocław + hybrid` doszedł nowy oficjalny
-klaster `Accenture`: `ML/AI Engineer with Snowflake (AI&Data)`,
-`GenAI Engineer (Mid)` i `Senior GenAI Engineer`, wszystkie z mocnym wątkiem
-`LLM`, `RAG` albo agentic workflows.
+Popołudniowa runda z `2026-06-25 17:23 CEST` przyniosła pięć nowych,
+wcześniej nieśledzonych sygnałów: `DEVAPO`, `SCALO`, `VeloBank`, `XTB`
+i `Link Group`. Najmocniejszy technicznie nowy sygnał daje `XTB`, bo rola
+`Senior AI Engineer` wprost łączy `LLMOps`, agentic workflows, `MCP` servers,
+`RAG-eval` oraz observability w środowisku fintechowym.
 
-Trzecia istotna zmiana dotyczy `Rossmann`: oficjalny detail page
-`AI / LLMOps Engineer` jest teraz uchwytny pod kanonicznym URL-em `/20287` i
-wprost deklaruje `pracę w trybie hybrydowym lub zdalnym`, więc wcześniejszy
-rozjazd między listą `Łódź` a mirrorami `remote/hybrid` jest wyraźnie mniejszy.
+Drugim mocnym sygnałem jest `SCALO`, gdzie publiczna karta `Senior AI Engineer`
+opisuje stricte produkcyjny Pythonowy delivery `LLM`, `tool calling`,
+guardrails, trace'y i ewaluację jakości w modelu `100% remote`. `DEVAPO`
+poszerza warstwę remote-Poland o hands-on mid-level rolę przy `RAG`, agentach
+i pipeline'ach wektorowych, a `VeloBank` wnosi bankowy zespół AI z
+`Azure OpenAI`, embeddingami i aplikacjami konwersacyjnymi.
 
-`deepsense.ai` i `ACAISOFT` nie pokazały w tej rundzie nowej materialnej
-zmiany. Największe ryzyka przesunęły się teraz z `EPAM` i `ACAISOFT` w stronę
-dwóch nowych obszarów: `Accenture`, gdzie kanoniczne URL-e nie pokazują wprost
-pełnej listy miast, oraz `CKSource / Tiugo`, gdzie tytuł roli lekko dryfuje
-między hubem kariery i kartą aplikacyjną.
+Po stronie sygnałów bliższych `Wrocławiowi` nowy jest `Link Group` z rolą
+`AI Architect/Senior AI Engineer` pod wariantem `Wrocław +9 / remote`, ale to
+nadal oferta board-first bez znalezionej w tej rundzie publicznej karty
+kanonicznej pracodawcy. Wcześniej obserwowane źródła `CKSource/Tiugo`,
+`Accenture`, `Rossmann`, `deepsense.ai`, `Acaisoft` i `KYOTU` nie pokazały
+nowej materialnej zmiany względem porannego przebiegu.
 
 ## Stable Facts
 
@@ -105,6 +106,11 @@ only when something meaningful changes.
 | accenture-senior-genai-engineer-wroclaw-hybrid | Accenture | Senior GenAI Engineer | Wrocław / hybrid | 2026-06-25-0141 | 2026-06-25-0141 | Open | Initial capture: official Accenture role `R00318995`; public Just Join IT mirror shows a `Wrocław` hybrid variant; production-grade agentic AI systems, autonomous multi-agent architectures, vector databases, RAG, enterprise integrations and Responsible AI guardrails. | [Accenture official](https://www.accenture.com/ae-en/careers/jobdetails?id=R00318995_en) / [Just Join IT](https://justjoin.it/job-offer/accenture-senior-agentic-ai-data-engineer-wroclaw-ai) |
 | cksource-tiugo-principal-applied-ai-engineer-remote-warsaw-poznan | CKSource / Tiugo Technologies | Principal Applied AI Engineer | Remote / Warsaw / Poznań | 2026-06-25-0141 | 2026-06-25-0141 | Open | Initial capture: official CKSource careers hub lists `Principal Applied AI Engineer` with `Remote Warsaw Poznań` and `38 000-45 000 PLN`; canonical Tiugo application page titles the same role `Principal AI Engineer`, shows `Remote`, `Warsaw, Poland`, and frames it around agentic workflows plus AI-assisted development systems. | [CKSource careers](https://cksource.com/careers/) / [Tiugo Technologies](https://tiugotech.recruitee.com/o/principal-ai-engineer) |
 | rossmann-ai-llmops-engineer-poland-remote-lodz-hybrid | Rossmann SDP | AI / LLMOps Engineer (M/K) | Poland remote / Łódź hybrid | 2026-06-24-1744 | 2026-06-25-0141 | Open | Initial capture: official Rossmann role covers agent platform architecture on `GCP`, `Python ADK`, evaluation/observability, `RAG`, `Vertex AI Vector Search` and `Tool Registry` with `MCP` servers. Official careers pages show the role as active under Łódź, while the public Pracuj mirror describes `Cała Polska (praca zdalna)` and `praca zdalna, praca hybrydowa`, so remote policy remains source-divergent. 2026-06-25-0141: official detail page is now public under `/20287` and explicitly says `pracę w trybie hybrydowym lub zdalnym`, while still listing `Łódź` as the office location; this narrows, but does not fully eliminate, the earlier remote-policy mismatch. | [Rossmann detail](https://kariera.rossmann.pl/pracuj-w-it/20287%2Cai-llmops-engineer) / [Rossmann Pracuj w IT](https://kariera.rossmann.pl/pracuj-w-it) / [Pracuj.pl](https://www.pracuj.pl/praca/ai-llmops-engineer-m-k-lodz-traktorowa-141-143%2Coferta%2C1004699845) |
+| devapo-ai-llm-engineer-remote-poland | DEVAPO SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ | AI / LLM Engineer | Remote Poland | 2026-06-25-1723 | 2026-06-25-1723 | Open | Initial capture: active public Pracuj.pl role valid to `28 Jun`; `Whole Poland (remote work)`; hands-on `LLM-powered applications`, `RAG systems`, agents, `LangChain`, `LangGraph`, `LlamaIndex`, vector databases, `RAGAS`, `LangSmith`, `Arize`, `AWS Bedrock` and `Azure AI Foundry` as optional stack. | [Pracuj.pl](https://www.pracuj.pl/praca/ai-llm-engineer-warszawa-aleje-jerozolimskie-100%2Coferta%2C1004870453) |
+| scalo-senior-ai-engineer-krakow-remote | SCALO | Senior AI Engineer | Kraków / remote Poland | 2026-06-25-1723 | 2026-06-25-1723 | Open | Initial capture: public Just Join IT role; `7 416-7 548 USD net / month B2B`; `Remote`; production `LLM` delivery in Python with `tool calling`, `Azure OpenAI` / `OpenAI` / `Bedrock`, guardrails, fallback patterns, evals, traces and AI observability. | [Just Join IT](https://justjoin.it/job-offer/scalo-senior-ai-engineer-krakow-ai-b489131b) |
+| velobank-ai-engineerka-ai-engineer-warsaw-mostly-remote | VeloBank S.A. | AI Engineerka / AI Engineer | Warsaw / remote Poland | 2026-06-25-1723 | 2026-06-25-1723 | Open | Initial capture: public Just Join IT role; `Remote`; production AI/LLM engineering with `Azure OpenAI`, `LangChain / LangGraph`, `FastAPI`, vector databases, embeddings and conversational applications. The offer text additionally says remote work with office presence around `2 times per month` in Warsaw. | [Just Join IT](https://justjoin.it/job-offer/velobank-s-a--ai-engineerka-ai-engineer-warszawa-ai) |
+| xtb-senior-ai-engineer-remote-poland | XTB | Senior AI Engineer | Warsaw +4 / remote Poland | 2026-06-25-1723 | 2026-06-25-1723 | Open | Initial capture: public Just Join IT role; `5 489-6 969 USD gross / month`; `Remote`; technical ownership for `LLMOps` and agentic strategy, `MCP` servers, `RAG-eval`, enterprise observability, `FastAPI`, semantic layers over `Snowflake` and `Databricks`, and AI governance in fintech. | [Just Join IT](https://justjoin.it/job-offer/xtb-senior-ai-engineer-warszawa-ai) |
+| link-group-ai-architect-senior-ai-engineer-wroclaw-remote | Link Group | AI Architect/Senior AI Engineer | Wrocław +9 / remote | 2026-06-25-1723 | 2026-06-25-1723 | Open | Initial capture: public Just Join IT role; `40-46 USD net / h B2B`; `Wrocław +9`, `Remote`; end-to-end enterprise AI delivery from PoC to production across `LLM`, `RAG`, `Generative AI`, `AI automation`, `LangChain`, `OpenAI API`, `Hugging Face` and `MLOps`. | [Just Join IT](https://justjoin.it/job-offer/link-group-ai-architect-senior-ai-engineer-wroclaw-ai) |
 
 ## Open Questions
 
@@ -121,6 +127,9 @@ only when something meaningful changes.
   kolejne mirrory per-city?
 - Czy `CKSource / Tiugo` ustabilizuje tytuł między `Principal Applied AI
   Engineer` i `Principal AI Engineer`, czy oba opisy będą żyć równolegle?
+- Czy nowy board-first klaster `DEVAPO`, `SCALO`, `VeloBank`, `XTB` i
+  `Link Group` dostanie stabilniejsze kanoniczne strony pracodawców, czy
+  pozostanie głównie w publicznych boardach?
 
 ## Watch Items
 
@@ -145,6 +154,9 @@ only when something meaningful changes.
 - Official `ALTIMI careers` plus its public job-board card after the new `AI Forward Deployment Engineer` opening.
 - Public `IN4GE` AI role cluster after this run, with special care around MCP/agentic duplicate risk.
 - Official `Rossmann` careers pages plus the public `Pracuj.pl` mirror after the new `AI / LLMOps Engineer` opening.
+- Public `DEVAPO`, `SCALO`, `VeloBank`, `XTB` and `Link Group` pages after the
+  new `25 Jun` board-first cluster, with priority on finding more canonical
+  employer pages and fast expiry/status drift.
 - Job boards with reliable filters for Wroclaw, remote Poland and AI/LLM work.
 - Salary, seniority, tech-stack and remote-policy changes on previously seen
   listings.
@@ -167,3 +179,4 @@ only when something meaningful changes.
 - [2026-06-24-1744](runs/2026-06-24-1744.md)
 - [2026-06-24-1921](runs/2026-06-24-1921.md)
 - [2026-06-25-0141](runs/2026-06-25-0141.md)
+- [2026-06-25-1723](runs/2026-06-25-1723.md)
