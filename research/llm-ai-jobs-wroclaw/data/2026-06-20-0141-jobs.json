@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-20",
+  "runTime": "01:41",
+  "executiveSummary": "To była kolejna materialna runda. Najmocniejsze nowe sygnały pochodzą z oficjalnych stron deepsense.ai, Addepto, Trans.eu i Tooploox: pojawiły się nowe relewantne role hands-on dla Polski, w tym jedna bardzo mocna rola applied AI z deepsense.ai i nowy kanoniczny wakat AI Engineer w Trans.eu. Równolegle People More wróciło na tym samym URL do widełek 140-190 PLN netto/h B2B, a deepsense.ai przepięło publiczny AI Software Engineer na nowy kanoniczny URL /careers/ai-software-engineer-2/.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior Applied AI Engineer",
+      "company": "deepsense.ai",
+      "location": "Polska, Hybrid z biurami i coworkami w większych",
+      "workMode": "Hybrid",
+      "compensation": "brak publicznych widełek; B2B.",
+      "seniority": "Senior",
+      "fitSummary": "produkcyjne LLM systems, prompting, context engineering, agent",
+      "whyInteresting": "to bardzo mocna, oficjalna rola applied AI z naciskiem",
+      "uncertainty": "publiczny opis nie zawęża konkretnych miast ani nie podaje pensji.",
+      "sourceURLs": [
+        "https://deepsense.ai/careers/senior-applied-ai-engineer/"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "AI Engineer",
+      "company": "Trans.eu",
+      "location": "Polska, Hybrid.",
+      "workMode": "Hybrid",
+      "compensation": "brak publicznych widełek; UoP or B2B, poziom Mid.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "proprietary LLMs, chatbots, autonomous agents, RAG, fine-tuning,",
+      "whyInteresting": "rzadki oficjalny wakat z polskiej spółki technologicznej",
+      "uncertainty": "strona nie pokazuje stawek ani dokładnego podziału dni biuro/home.",
+      "sourceURLs": [
+        "https://joinus.trans.eu/en/job-openings/ai-engineer/"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Data Scientist / ML Engineer",
+      "company": "Addepto",
+      "location": "Warsaw · Cracow · Wroclaw · Bialystok · Remote.",
+      "workMode": "Remote",
+      "compensation": "12 600-19 320 PLN B2B mid, 19 320-25 200 PLN B2B senior,",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLMs, AI agents, semantic search, prompt engineering,",
+      "whyInteresting": "oficjalna rola z jawnymi widełkami i bardzo czytelnym",
+      "uncertainty": "tytuł jest szeroki; część projektów może być bardziej klasycznym",
+      "sourceURLs": [
+        "https://addepto.com/career/data-scientist-ml-engineer/"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "AI Software Engineer",
+      "company": "deepsense.ai",
+      "location": "Polska, Remote.",
+      "workMode": "Remote",
+      "compensation": "brak publicznych widełek; B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "OpenAI API, Anthropic API, FastAPI, Python, cloud, LLM/RAG",
+      "whyInteresting": "rola była już znana, ale obecnie ma nowy kanoniczny",
+      "uncertainty": "nie wiadomo jeszcze, czy stary URL zostanie całkiem wycofany, czy",
+      "sourceURLs": [
+        "https://deepsense.ai/careers/ai-software-engineer-2/"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Senior AI Engineer",
+      "company": "Tooploox",
+      "location": "fully remote, hybrid albo biuro Wrocław/Warsaw.",
+      "workMode": "Remote",
+      "compensation": "15 000-26 000 PLN B2B albo 13 000-23 000 PLN UoP.",
+      "seniority": "Senior",
+      "fitSummary": "tytuł roli jest jednoznacznie AI, ale publiczny listing nie",
+      "whyInteresting": "publiczna, oficjalna rola z Wrocławia/Warszawy lub",
+      "uncertainty": "wysoka, bo brak publicznego opisu technicznego na samej stronie",
+      "sourceURLs": [
+        "https://tooploox.com/careers"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 6,
+      "title": "AI Engineer / LLM Engineer (AI-First | TypeScript)",
+      "company": "People More",
+      "location": "Wrocław + inne lokalizacje, Remote.",
+      "workMode": "Remote",
+      "compensation": "obecnie znów 140-190 PLN netto/h B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM-based workflows beyond simple RAG, tool use, memory/context,",
+      "whyInteresting": "sama oferta pozostaje mocna dla agentic systems, ale",
+      "uncertainty": "to już kolejna zmiana waluty/formatu na tym samym linku, więc",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/people-more-p-s-a--ai-engineer-llm-engineer-ai-first-typescript--wroclaw-ai-215fee79"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano nowe oficjalne leady: Senior Applied AI Engineer w deepsense.ai,",
+    "Zaktualizowano istniejącą rolę AI Software Engineer w deepsense.ai o nowy",
+    "People More ponownie materialnie zmieniło publiczną prezentację wynagrodzenia",
+    "Holisticon nie dał czystego nowego leadu do shortlisty, ale nadal pokazuje",
+    "Capgemini i CDQ nie pokazały w tej rundzie wyraźnej materialnej zmiany."
+  ],
+  "risks": [
+    "Część oficjalnych stron nie pokazuje szczegółowego stacku lub widełek, co",
+    "Holisticon pokazuje publicznie role po wskazanym deadline, więc status",
+    "Publiczne URL-e i waluty widełek potrafią się zmieniać bez oczywistego"
+  ],
+  "recommendedActions": [
+    "Low-risk action applied: dodano nowe kanoniczne wpisy dla deepsense.ai,",
+    "Low-risk action applied: zaktualizowano istniejące wpisy People More i",
+    "Follow-up: w następnej rundzie sprawdzić, czy Holisticon usuwa z listy role z",
+    "Follow-up: obserwować, czy stary URL deepsense.ai",
+    "Follow-up: monitorować Trans.eu i Tooploox jako nowe oficjalne źródła dla"
+  ],
+  "checkedSources": [
+    {
+      "title": "deepsense.ai careers",
+      "url": "https://deepsense.ai/careers/",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai - Senior Applied AI Engineer",
+      "url": "https://deepsense.ai/careers/senior-applied-ai-engineer/",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai - AI Software Engineer",
+      "url": "https://deepsense.ai/careers/ai-software-engineer-2/",
+      "status": "checked"
+    },
+    {
+      "title": "Addepto - Data Scientist / ML Engineer",
+      "url": "https://addepto.com/career/data-scientist-ml-engineer/",
+      "status": "checked"
+    },
+    {
+      "title": "Trans.eu - job openings",
+      "url": "https://joinus.trans.eu/pl/oferty-pracy/",
+      "status": "checked"
+    },
+    {
+      "title": "Trans.eu - AI Engineer",
+      "url": "https://joinus.trans.eu/en/job-openings/ai-engineer/",
+      "status": "checked"
+    },
+    {
+      "title": "Tooploox careers",
+      "url": "https://tooploox.com/careers",
+      "status": "checked"
+    },
+    {
+      "title": "People More - AI Engineer / LLM Engineer (AI-First | TypeScript)",
+      "url": "https://justjoin.it/job-offer/people-more-p-s-a--ai-engineer-llm-engineer-ai-first-typescript--wroclaw-ai-215fee79",
+      "status": "checked"
+    },
+    {
+      "title": "Holisticon careers",
+      "url": "https://holisticon.pl/careers/",
+      "status": "checked"
+    },
+    {
+      "title": "Holisticon - Senior Data Engineer – Data Platforms for AI Initiatives",
+      "url": "https://holisticon.pl/career/openings/pl/84-senior-data-engineer-data-platforms-for-ai-initiatives/",
+      "status": "checked"
+    },
+    {
+      "title": "Capgemini - Senior Software Engineer (Agentic AI, Cloud-native, On-prem)",
+      "url": "https://careers.capgemini.com/job/Wroc%C5%82aw-Senior-Software-Engineer-%28Agentic-AI%2C-Cloud-native%2C-On-prem%29/1388839033/",
+      "status": "checked"
+    },
+    {
+      "title": "CDQ - Careers / Software Developer (AI)",
+      "url": "https://www.cdq.com/about/careers",
+      "status": "checked"
+    }
+  ]
+}

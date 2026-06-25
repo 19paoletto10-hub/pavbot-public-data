@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-18",
+  "runTime": "17:41",
+  "executiveSummary": "Ta runda przyniosła kilka istotnych zmian. Największa wartość to nowe, kanoniczne źródła pracodawców dla Sii, Capgemini i CDQ oraz nowa, bardzo praktyczna rola NUMLABS skoncentrowana na produkcyjnych agentach i RAG. Dodatkowo People More pokazuje dziś inną, lokalną stawkę niż w baseline, a bezpośrednia strona KYOTU ujawnia ważny niuans: to obecnie bardziej talent pool na nadchodzące projekty niż jednoznacznie natychmiastowy headcount projektowy.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "AI Engineer – LLM / Agentic Systems (f/m/x)",
+      "company": "Sii",
+      "location": "Polska, wiele lokalizacji; remote / hybrid / office.",
+      "workMode": "Remote",
+      "compensation": "brak widełek w publicznym źródle.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Python, OpenAI, LangChain / LangGraph / LlamaIndex, vector",
+      "whyInteresting": "to jedno z najmocniejszych publicznych ogłoszeń w tej",
+      "uncertainty": "publiczny listing nie pokazuje pensji; lokalizacja jest",
+      "sourceURLs": [
+        "https://sii.pl/en/job-ads/id/37154/ai-engineer-llm-agentic-systems-f-m-x"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior Machine Learning / LLM Systems Engineer (f/m/x)",
+      "company": "Sii",
+      "location": "Polska, wiele lokalizacji; remote / hybrid / office.",
+      "workMode": "Remote",
+      "compensation": "brak widełek w publicznym źródle.",
+      "seniority": "Senior",
+      "fitSummary": "distributed training and inference, Python, C++, CUDA, Triton,",
+      "whyInteresting": "rola jest bliżej AI platform/inference niż aplikacji",
+      "uncertainty": "źródło nie rozbija lokalizacji na sam Wrocław; trzeba traktować",
+      "sourceURLs": [
+        "https://sii.pl/en/job-ads/id/37017/senior-machine-learning-llm-systems-engineer-fmx/?location=PL_CRACOW"
+      ],
+      "tags": [
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior Software Engineer (Agentic AI, Cloud-native, On-prem)",
+      "company": "Capgemini",
+      "location": "Wrocław; model hybrydowy.",
+      "workMode": "Hybrid",
+      "compensation": "brak widełek w publicznym źródle.",
+      "seniority": "Senior",
+      "fitSummary": "LLM integrations, RAG, vector search, prompt orchestration,",
+      "whyInteresting": "rzadkie publiczne ogłoszenie z Wrocławia, które wprost",
+      "uncertainty": "część zakresu jest architektoniczno-konsultingowa, choć nadal",
+      "sourceURLs": [
+        "https://careers.capgemini.com/job/Wroc%C5%82aw-Senior-Software-Engineer-%28Agentic-AI%2C-Cloud-native%2C-On-prem%29/1388839033/"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "LLM / AI Engineer",
+      "company": "NUMLABS",
+      "location": "cała Polska, praca zdalna lub hybrydowa.",
+      "workMode": "Remote",
+      "compensation": "120-160 PLN netto + VAT / h B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "agent systems, multi-agent, tool-use, memory, Langfuse, RAGAS,",
+      "whyInteresting": "opis jest bardzo konkretny operacyjnie i produkcyjnie;",
+      "uncertainty": "źródło to publiczny job board, nie strona kariery firmy.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/llm-ai-engineer-krakow-emaus-5%2Coferta%2C1004874379"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Software Developer (AI)",
+      "company": "CDQ Poland",
+      "location": "Wrocław lub remote.",
+      "workMode": "Remote",
+      "compensation": "brak wynagrodzenia na stronie kanonicznej w tej rundzie.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "AI agents, multi-step workflows, RAG-based decision making,",
+      "whyInteresting": "oficjalne źródło pracodawcy potwierdza, że to nie jest",
+      "uncertainty": "oficjalna strona nie pokazuje stawek; wcześniejsze widełki z job",
+      "sourceURLs": [
+        "https://www.cdq.com/about/careers"
+      ],
+      "tags": [
+        "RAG"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "AI Engineer / LLM Engineer (AI-First | TypeScript)",
+      "company": "People More",
+      "location": "Wrocław + inne lokalizacje; remote.",
+      "workMode": "Remote",
+      "compensation": "140-190 PLN netto / h B2B na bieżącym listingu.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "agentic systems, multi-agent architectures, memory/context",
+      "whyInteresting": "nadal mocny lead dla agentic systems i pracy nad",
+      "uncertainty": "to wciąż job board; stawka zmieniła walutę względem baseline,",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/people-more-p-s-a--ai-engineer-llm-engineer-ai-first-typescript--wroclaw-ai-215fee79"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "AI / ML / LLM Engineer",
+      "company": "KYOTU Technology",
+      "location": "siedziba we Wrocławiu; praca zdalna lub hybrydowa w",
+      "workMode": "Remote",
+      "compensation": "130-180 PLN netto + VAT / h B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Python, PyTorch / TensorFlow / scikit-learn, LLM pipelines, RAG,",
+      "whyInteresting": "technicznie nadal trafia w scope, ale dziś ważniejsza",
+      "uncertainty": "bezpośredni opis mówi o budowie talent poolu dla przyszłych",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/ai-ml-llm-engineer-wroclaw-wybrzeze-stanislawa-wyspianskiego-39a%2Coferta%2C1004744984"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano do watchlisty oficjalne strony kariery Sii i Capgemini jako nowe,",
+    "People More ma materialnie inne widełki na tym samym kanonicznym URL.",
+    "CDQ został przepięty z job boardu na kanoniczną stronę pracodawcy.",
+    "KYOTU zostało doprecyzowane jako talent pool dla nadchodzących projektów.",
+    "Addepto nie pokazało dziś materialnej zmiany.",
+    "Grid Dynamics nadal ma relewantne otwarcia AI dla Polski, ale bez nowej",
+    "VirtusLab nadal nie wraca jako aktywny lead; publiczny listing pozostaje"
+  ],
+  "risks": [
+    "Część listingu na job boardach bywa renderowana dynamicznie i może zmieniać",
+    "Role multi-location trzeba czytać ostrożnie: nie każda strona pokazuje",
+    "KYOTU wygląda dziś bardziej jak pipeline rekrutacyjny na przyszłe projekty"
+  ],
+  "recommendedActions": [
+    "Low-risk action applied: dodano nowe kanoniczne wpisy Sii, Capgemini i",
+    "Low-risk action applied: zaktualizowano wpisy People More, CDQ i KYOTU o",
+    "Follow-up: obserwować oficjalne strony Sii, Capgemini i CDQ jako stały",
+    "Follow-up: sprawdzić w kolejnej rundzie, czy KYOTU przejdzie z talent poolu"
+  ],
+  "checkedSources": [
+    {
+      "title": "People More - AI Engineer / LLM Engineer (AI-First | TypeScript)",
+      "url": "https://justjoin.it/job-offer/people-more-p-s-a--ai-engineer-llm-engineer-ai-first-typescript--wroclaw-ai-215fee79",
+      "status": "checked"
+    },
+    {
+      "title": "Sii - AI Engineer – LLM / Agentic Systems (f/m/x)",
+      "url": "https://sii.pl/en/job-ads/id/37154/ai-engineer-llm-agentic-systems-f-m-x",
+      "status": "checked"
+    },
+    {
+      "title": "Sii - Senior Machine Learning / LLM Systems Engineer (f/m/x)",
+      "url": "https://sii.pl/en/job-ads/id/37017/senior-machine-learning-llm-systems-engineer-fmx/?location=PL_CRACOW",
+      "status": "checked"
+    },
+    {
+      "title": "Capgemini - Senior Software Engineer (Agentic AI, Cloud-native, On-prem)",
+      "url": "https://careers.capgemini.com/job/Wroc%C5%82aw-Senior-Software-Engineer-%28Agentic-AI%2C-Cloud-native%2C-On-prem%29/1388839033/",
+      "status": "checked"
+    },
+    {
+      "title": "NUMLABS - LLM / AI Engineer",
+      "url": "https://www.pracuj.pl/praca/llm-ai-engineer-krakow-emaus-5%2Coferta%2C1004874379",
+      "status": "checked"
+    },
+    {
+      "title": "CDQ - Careers / Software Developer (AI)",
+      "url": "https://www.cdq.com/about/careers",
+      "status": "checked"
+    },
+    {
+      "title": "KYOTU Technology - AI / ML / LLM Engineer",
+      "url": "https://www.pracuj.pl/praca/ai-ml-llm-engineer-wroclaw-wybrzeze-stanislawa-wyspianskiego-39a%2Coferta%2C1004744984",
+      "status": "checked"
+    },
+    {
+      "title": "Addepto - AI Engineer",
+      "url": "https://addepto.com/career/ai-engineer/",
+      "status": "checked"
+    },
+    {
+      "title": "Grid Dynamics - career openings",
+      "url": "https://www.griddynamics.com/careers/discover-openings",
+      "status": "checked"
+    },
+    {
+      "title": "VirtusLab - Python Software Engineer with LLM (Expert)",
+      "url": "https://nofluffjobs.com/job/python-software-engineer-with-llm-expert-virtuslab-wroclaw",
+      "status": "checked"
+    }
+  ]
+}

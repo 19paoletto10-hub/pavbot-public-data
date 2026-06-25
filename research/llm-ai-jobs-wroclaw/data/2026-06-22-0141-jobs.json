@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-22",
+  "runTime": "01:41",
+  "executiveSummary": "Nocna runda przyniosła wyraźny materialny update. Do shortlisty weszły nowe oficjalne role airSlate, DataArt i trzy oficjalne role EPAM dla pracy zdalnej z Polski, obejmujące trzy różne warstwy praktycznych systemów GenAI: produktowe agent workflows, platformę jakości z orkiestracją LLM oraz backendową bramę do inferencji wielu dostawców modeli. Dodatkowo wcześniej znana oferta People More znów zmieniła widełki na tym samym URL, wracając do 30-41 CHF net/h B2B. Osobny spot-check STATSCORE potwierdził, że oficjalna rola jest hybrydowa w Katowicach, więc mimo mylącego mirrora boardowego z Wrocławiem nie weszła do zakresu tego tematu.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior Software Engineer - Agentic AI",
+      "company": "airSlate",
+      "location": "Wrocław, Remote.",
+      "workMode": "Remote",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "produkcyjne RAG, agents, document understanding,",
+      "whyInteresting": "jedna z mocniejszych nowych oficjalnych ról stricte",
+      "uncertainty": "tytuł requisition to Senior Software Engineer - Agentic AI,",
+      "sourceURLs": [
+        "https://jobs.lever.co/airslate/7fb7e6ed-4d5d-437f-bb8f-35005f67f41b",
+        "https://jobs.lever.co/airslate/7fb7e6ed-4d5d-437f-bb8f-35005f67f41b/apply"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior AI Solutions Architect with LLM and RAG, Knowledge Graph Platform",
+      "company": "DataArt",
+      "location": "Wrocław lub Remote.Poland.",
+      "workMode": "Remote",
+      "compensation": "canonical employer page nie pokazuje widełek; publiczny",
+      "seniority": "Senior",
+      "fitSummary": "end-to-end RAG, knowledge graphs, semantic search, chunking,",
+      "whyInteresting": "bardzo wysoki sygnał dla kogoś budującego praktyczne",
+      "uncertainty": "widełki pochodzą z publicznego mirrora boardowego, nie z",
+      "sourceURLs": [
+        "https://www.dataart.team/vacancies/sla00066",
+        "https://justjoin.it/job-offer/dataart-senior-ai-solutions-architect-with-llm-and-rag-wroclaw-python"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior Python AI Engineer",
+      "company": "EPAM",
+      "location": "Remote in Poland.",
+      "workMode": "Remote",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "LangChain, LangGraph, RAG, guardrails, monitoring,",
+      "whyInteresting": "oficjalna rola zdalna z Polski, bardzo bezpośrednio",
+      "uncertainty": "niska; canonical employer page jest jednoznaczne.",
+      "sourceURLs": [
+        "https://careers.epam.com/en/vacancy/senior-python-ai-engineer-blt3f4bpi6gltyczhnw_en"
+      ],
+      "tags": [
+        "RAG",
+        "Python"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Lead Python Developer",
+      "company": "EPAM",
+      "location": "Remote in Poland.",
+      "workMode": "Remote",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Lead",
+      "fitSummary": "prompt engineering, multi-provider LLM orchestration, agent",
+      "whyInteresting": "rzadszy wariant hands-on lead dla GenAI platformy",
+      "uncertainty": "rola jest leadowa, ale nadal wyraźnie techniczna i hands-on.",
+      "sourceURLs": [
+        "https://careers.epam.com/en/vacancy/lead-python-developer-blt7f9kga105989j4aj_en"
+      ],
+      "tags": [
+        "LLM",
+        "GenAI",
+        "Python"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Senior Go Developer with Generative AI",
+      "company": "EPAM",
+      "location": "Remote in Poland.",
+      "workMode": "Remote",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "routing i governance inferencji LLM, integracje z OpenAI i",
+      "whyInteresting": "mocny sygnał dla ścieżki AI platform/inference",
+      "uncertainty": "rola jest bliżej AI platform backend niż klasycznego ML, ale",
+      "sourceURLs": [
+        "https://careers.epam.com/en/vacancy/senior-go-developer-with-generative-ai-blt7waut6zoah1t7dq4_en"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "AI Engineer / LLM Engineer (AI-First | TypeScript)",
+      "company": "People More P.S.A.",
+      "location": "Wrocław + remote.",
+      "workMode": "Remote",
+      "compensation": "30-41 CHF net/h B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "production-grade agentic systems, multimodal workflows, tool",
+      "whyInteresting": "nadal jedna z mocniejszych publicznych ról pod",
+      "uncertainty": "ten sam URL już wielokrotnie zmieniał walutę i zakres widełek,",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/people-more-p-s-a--ai-engineer-llm-engineer-ai-first-typescript--wroclaw-ai-215fee79"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano nową oficjalną rolę airSlate Senior Software Engineer - Agentic AI",
+    "Dodano nową oficjalną rolę DataArt Senior AI Solutions Architect with LLM",
+    "Dodano trzy nowe oficjalne role EPAM dla Remote in Poland:",
+    "Zaktualizowano wcześniej znaną ofertę People More, której widełki wróciły",
+    "Zweryfikowano i odfiltrowano STATSCORE Senior AI Platform Engineer, bo"
+  ],
+  "risks": [
+    "People More pozostaje niestabilne pod kątem waluty i formatu widełek na",
+    "DataArt nie pokazuje wynagrodzenia na canonical employer page; jeśli",
+    "airSlate ma spójny oficjalny requisition URL, ale nazwa roli i opis używają"
+  ],
+  "recommendedActions": [
+    "Low-risk action applied: dodano do Seen Opportunities nowe canonical wpisy",
+    "Low-risk action applied: zaktualizowano wpis People More o kolejny materialny",
+    "Follow-up: w następnej rundzie sprawdzić, czy nowy klaster EPAM utrzyma się",
+    "Follow-up: monitorować, czy airSlate i DataArt otworzą kolejne role",
+    "Follow-up: dalej śledzić zmienność wynagrodzenia People More, żeby odróżniać"
+  ],
+  "checkedSources": [
+    {
+      "title": "airSlate - Senior Software Engineer - Agentic AI",
+      "url": "https://jobs.lever.co/airslate/7fb7e6ed-4d5d-437f-bb8f-35005f67f41b",
+      "status": "checked"
+    },
+    {
+      "title": "airSlate - Senior Software Engineer - Agentic AI (apply page)",
+      "url": "https://jobs.lever.co/airslate/7fb7e6ed-4d5d-437f-bb8f-35005f67f41b/apply",
+      "status": "checked"
+    },
+    {
+      "title": "DataArt - Senior AI Solutions Architect with LLM and RAG, Knowledge Graph Platform",
+      "url": "https://www.dataart.team/vacancies/sla00066",
+      "status": "checked"
+    },
+    {
+      "title": "DataArt - public Just Join IT mirror",
+      "url": "https://justjoin.it/job-offer/dataart-senior-ai-solutions-architect-with-llm-and-rag-wroclaw-python",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM - Senior Python AI Engineer",
+      "url": "https://careers.epam.com/en/vacancy/senior-python-ai-engineer-blt3f4bpi6gltyczhnw_en",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM - Lead Python Developer",
+      "url": "https://careers.epam.com/en/vacancy/lead-python-developer-blt7f9kga105989j4aj_en",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM - Senior Go Developer with Generative AI",
+      "url": "https://careers.epam.com/en/vacancy/senior-go-developer-with-generative-ai-blt7waut6zoah1t7dq4_en",
+      "status": "checked"
+    },
+    {
+      "title": "People More - AI Engineer / LLM Engineer (AI-First | TypeScript)",
+      "url": "https://justjoin.it/job-offer/people-more-p-s-a--ai-engineer-llm-engineer-ai-first-typescript--wroclaw-ai-215fee79",
+      "status": "checked"
+    },
+    {
+      "title": "STATSCORE - Senior AI Platform Engineer",
+      "url": "https://www.statscore.com/careers/ai-platform-engineer/",
+      "status": "checked-inactive"
+    }
+  ]
+}

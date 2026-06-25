@@ -1,32 +1,27 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-06-24 19:21 CEST
+Last updated: 2026-06-25 01:41 CEST
 
 ## Current Understanding
 
-Runda z `2026-06-24 17:44 CEST` przyniosła materialny update z czterech
-kierunków: nowy `Yard Corporate` dla `Wrocław + remote`, oficjalny `ALTIMI`
-dla `Wrocław`, dwa nowe aktywne role `IN4GE` dla `remote Poland` oraz oficjalny
-sygnał `Rossmann` wokół `LLMOps`, platformy agentowej i `MCP`.
+Runda z `2026-06-25 01:41 CEST` przyniosła trzy materialne sygnały. Najmocniejszy
+nowy remote-Poland signal to oficjalny `CKSource / Tiugo Technologies` z rolą
+`Principal Applied AI Engineer`, osadzoną w praktycznych systemach agentowych i
+AI-assisted engineering. Po stronie `Wrocław + hybrid` doszedł nowy oficjalny
+klaster `Accenture`: `ML/AI Engineer with Snowflake (AI&Data)`,
+`GenAI Engineer (Mid)` i `Senior GenAI Engineer`, wszystkie z mocnym wątkiem
+`LLM`, `RAG` albo agentic workflows.
 
-Późniejszy check z `2026-06-24 19:21 CEST` dołożył kolejny materialny klaster:
-`EPAM` rozszerzył publiczny zestaw o role `Lead AI Engineer`,
-`Senior Cloud Native Developer (Python & AI)`, `Senior Platform Engineer` oraz
-`Senior AI Engineer`, wszystkie oznaczone jako `Remote in Poland`. Równolegle
-`ACAISOFT` wystawił nowe kanoniczne role `Python Engineer with C++ (AI project)`
-oraz `Python-Focused Fullstack (+React)`, przesuwając akcent z ogólnego
-`AI project` w stronę evaluation tooling, verification infrastructure i
-workflowów agentowych dla systemów `LLM`.
+Trzecia istotna zmiana dotyczy `Rossmann`: oficjalny detail page
+`AI / LLMOps Engineer` jest teraz uchwytny pod kanonicznym URL-em `/20287` i
+wprost deklaruje `pracę w trybie hybrydowym lub zdalnym`, więc wcześniejszy
+rozjazd między listą `Łódź` a mirrorami `remote/hybrid` jest wyraźnie mniejszy.
 
-Najciekawsze lokalne sygnały tego dnia to nadal `Yard Corporate` i `ALTIMI`,
-ale po stronie `remote Poland` wyraźnie wzmocniły się dwa oficjalne źródła:
-`EPAM` jako stabilny multi-role source oraz `ACAISOFT` jako źródło ciekawych,
-choć niespójnie opisanych ról wokół ewaluacji modeli i agentów AI.
-
-Największe ryzyko tej rundy to obecnie trzy źródła niespójności:
-`IN4GE` pokazuje kilka bardzo podobnych aktywnych kart, `Rossmann` ma rozjazd
-między oficjalnym widokiem lokalizacji i publicznymi mirrorami, a `ACAISOFT`
-nadal renderuje compensation units w sposób wyglądający na błędny.
+`deepsense.ai` i `ACAISOFT` nie pokazały w tej rundzie nowej materialnej
+zmiany. Największe ryzyka przesunęły się teraz z `EPAM` i `ACAISOFT` w stronę
+dwóch nowych obszarów: `Accenture`, gdzie kanoniczne URL-e nie pokazują wprost
+pełnej listy miast, oraz `CKSource / Tiugo`, gdzie tytuł roli lekko dryfuje
+między hubem kariery i kartą aplikacyjną.
 
 ## Stable Facts
 
@@ -105,7 +100,11 @@ only when something meaningful changes.
 | altimi-ai-forward-deployment-engineer-wroclaw-remote | ALTIMI | AI Forward Deployment Engineer | Wrocław / remote | 2026-06-24-1744 | 2026-06-24-1744 | Open | Initial capture: official Altimi careers hub confirms active `Wrocław`, `Remote`, `Regular/Senior` role; public Just Join IT card frames it as hands-on AI deployment at the intersection of business and technology. | [ALTIMI careers](https://altimi.com/career) / [Just Join IT](https://justjoin.it/job-offer/altimi-ai-forward-deployment-engineer-wroclaw-ai) |
 | in4ge-backend-software-engineer-mcp-ai-agents-remote-poland | IN4GE sp. z o.o. | Backend Software Engineer (MCP & AI Agents) | Remote Poland | 2026-06-24-1744 | 2026-06-24-1744 | Open | Initial capture: public Pracuj.pl role; `140-170 PLN netto (+ VAT) / godz. B2B`; `Cała Polska (praca zdalna)`; internal AI platform built on `Model Context Protocol`, agent workflows, `Python`, `FastMCP`, `Redis`, `Azure` and distributed AI systems. | [Pracuj.pl](https://www.pracuj.pl/praca/backend-software-engineer-mcp-ai-agents-warszawa%2Coferta%2C1004889617) |
 | in4ge-senior-software-engineer-python-genai-agentic-ai-remote-poland | IN4GE sp. z o.o. | Senior Software Engineer (Python, GenAI & Agentic AI) | Remote Poland | 2026-06-24-1744 | 2026-06-24-1744 | Open | Initial capture: public Pracuj.pl role; `140-170 PLN netto (+ VAT) / godz. B2B`; `Cała Polska (praca zdalna)`; senior AI engineering role explicitly labeled `Python`, `GenAI` and `Agentic AI`, valid to `09 Jul`. | [Pracuj.pl](https://www.pracuj.pl/praca/senior-software-engineer-python-genai-agentic-ai-warszawa%2Coferta%2C1004889607) |
-| rossmann-ai-llmops-engineer-poland-remote-lodz-hybrid | Rossmann SDP | AI / LLMOps Engineer (M/K) | Poland remote / Łódź hybrid | 2026-06-24-1744 | 2026-06-24-1744 | Open | Initial capture: official Rossmann role covers agent platform architecture on `GCP`, `Python ADK`, evaluation/observability, `RAG`, `Vertex AI Vector Search` and `Tool Registry` with `MCP` servers. Official careers pages show the role as active under Łódź, while the public Pracuj mirror describes `Cała Polska (praca zdalna)` and `praca zdalna, praca hybrydowa`, so remote policy remains source-divergent. | [Rossmann Kariera](https://kariera.rossmann.pl/pracuj-w-it/20288%2Cai-llmops-engineer) / [Rossmann Pracuj w IT](https://kariera.rossmann.pl/pracuj-w-it) / [Pracuj.pl](https://www.pracuj.pl/praca/ai-llmops-engineer-m-k-lodz-traktorowa-141-143%2Coferta%2C1004699845) |
+| accenture-ml-ai-engineer-snowflake-ai-data-wroclaw-hybrid | Accenture | ML/AI Engineer with Snowflake (AI&Data) | Wrocław +3 / hybrid | 2026-06-25-0141 | 2026-06-25-0141 | Open | Initial capture: official Accenture role `R00325695`; public Just Join IT mirror shows `Wrocław +3 Locations`, `Hybrid`, valid to `20.07.2026`; `LLMs`, `Snowflake Cortex`, `AWS Bedrock`, `RAG/GraphRAG`, prompt/context engineering and agentic orchestration. | [Accenture official](https://www.accenture.com/pl-pl/careers/jobdetails?id=R00325695_en) / [Just Join IT](https://justjoin.it/job-offer/accenture-ml-ai-engineer-with-snowflake-ai-data--wroclaw-ai) |
+| accenture-genai-engineer-mid-ai-data-wroclaw-hybrid | Accenture | GenAI Engineer (Mid) (AI&Data) | Wrocław +3 / hybrid | 2026-06-25-0141 | 2026-06-25-0141 | Open | Initial capture: official Accenture role `R00325345`; public Just Join IT mirror shows `Wrocław +3 Locations`, `Hybrid`; production `GenAI applications`, `multi-agent systems`, `RAG pipelines`, corporate integrations and deployments to `AWS`/`Azure`/`GCP`. | [Accenture official](https://www.accenture.com/cz-en/careers/jobdetails?id=R00325345_en) / [Just Join IT](https://justjoin.it/job-offer/accenture-genai-engineer-mid-ai-data--wroclaw-ai) |
+| accenture-senior-genai-engineer-wroclaw-hybrid | Accenture | Senior GenAI Engineer | Wrocław / hybrid | 2026-06-25-0141 | 2026-06-25-0141 | Open | Initial capture: official Accenture role `R00318995`; public Just Join IT mirror shows a `Wrocław` hybrid variant; production-grade agentic AI systems, autonomous multi-agent architectures, vector databases, RAG, enterprise integrations and Responsible AI guardrails. | [Accenture official](https://www.accenture.com/ae-en/careers/jobdetails?id=R00318995_en) / [Just Join IT](https://justjoin.it/job-offer/accenture-senior-agentic-ai-data-engineer-wroclaw-ai) |
+| cksource-tiugo-principal-applied-ai-engineer-remote-warsaw-poznan | CKSource / Tiugo Technologies | Principal Applied AI Engineer | Remote / Warsaw / Poznań | 2026-06-25-0141 | 2026-06-25-0141 | Open | Initial capture: official CKSource careers hub lists `Principal Applied AI Engineer` with `Remote Warsaw Poznań` and `38 000-45 000 PLN`; canonical Tiugo application page titles the same role `Principal AI Engineer`, shows `Remote`, `Warsaw, Poland`, and frames it around agentic workflows plus AI-assisted development systems. | [CKSource careers](https://cksource.com/careers/) / [Tiugo Technologies](https://tiugotech.recruitee.com/o/principal-ai-engineer) |
+| rossmann-ai-llmops-engineer-poland-remote-lodz-hybrid | Rossmann SDP | AI / LLMOps Engineer (M/K) | Poland remote / Łódź hybrid | 2026-06-24-1744 | 2026-06-25-0141 | Open | Initial capture: official Rossmann role covers agent platform architecture on `GCP`, `Python ADK`, evaluation/observability, `RAG`, `Vertex AI Vector Search` and `Tool Registry` with `MCP` servers. Official careers pages show the role as active under Łódź, while the public Pracuj mirror describes `Cała Polska (praca zdalna)` and `praca zdalna, praca hybrydowa`, so remote policy remains source-divergent. 2026-06-25-0141: official detail page is now public under `/20287` and explicitly says `pracę w trybie hybrydowym lub zdalnym`, while still listing `Łódź` as the office location; this narrows, but does not fully eliminate, the earlier remote-policy mismatch. | [Rossmann detail](https://kariera.rossmann.pl/pracuj-w-it/20287%2Cai-llmops-engineer) / [Rossmann Pracuj w IT](https://kariera.rossmann.pl/pracuj-w-it) / [Pracuj.pl](https://www.pracuj.pl/praca/ai-llmops-engineer-m-k-lodz-traktorowa-141-143%2Coferta%2C1004699845) |
 
 ## Open Questions
 
@@ -117,6 +116,11 @@ only when something meaningful changes.
   on public job boards with a noisy compensation field?
 - Czy `deepsense.ai` przeniesie `Applied AI Engineer` na oficjalny hub careers,
   czy utrzyma tę rolę tylko na publicznym `No Fluff Jobs`?
+- Czy `Accenture` utrzyma nowy klaster `Wrocław +3 / hybrid` jako stabilny
+  zestaw publicznych ról AI, czy szybko go przetasuje przez rename'y i
+  kolejne mirrory per-city?
+- Czy `CKSource / Tiugo` ustabilizuje tytuł między `Principal Applied AI
+  Engineer` i `Principal AI Engineer`, czy oba opisy będą żyć równolegle?
 
 ## Watch Items
 
@@ -135,6 +139,8 @@ only when something meaningful changes.
 - Official EPAM careers after the expanded `24 Jun` remote-Poland cluster.
 - Official Acaisoft detail pages after the `24 Jun` canonical-role expansion and compensation-unit drift.
 - Public T-Mobile T Hub pages and the direct-employer KYOTU listing after this run.
+- Official `Accenture` career pages plus their `Just Join IT` city mirrors after the new `25 Jun` Wrocław-hybrid cluster.
+- Official `CKSource careers` plus the canonical `Tiugo Technologies` application page after the new `Principal Applied AI Engineer` opening.
 - Public `Yard Corporate` listing until a canonical employer detail page appears or the role changes materially.
 - Official `ALTIMI careers` plus its public job-board card after the new `AI Forward Deployment Engineer` opening.
 - Public `IN4GE` AI role cluster after this run, with special care around MCP/agentic duplicate risk.
@@ -160,3 +166,4 @@ only when something meaningful changes.
 - [2026-06-23-1741](runs/2026-06-23-1741.md)
 - [2026-06-24-1744](runs/2026-06-24-1744.md)
 - [2026-06-24-1921](runs/2026-06-24-1921.md)
+- [2026-06-25-0141](runs/2026-06-25-0141.md)

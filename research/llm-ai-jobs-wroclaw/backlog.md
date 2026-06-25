@@ -13,10 +13,12 @@
 | Medium | Monitor Rite NRG cluster | Rite NRG surfaced two strong public LLM/agentic roles in one run, both still board-based rather than employer-canonical. | Re-check next run whether both roles remain open and whether a canonical employer vacancy page becomes public. | Open |
 | Medium | Monitor xBerry board-only role | The new xBerry role is high-signal, but currently confirmed only by a public board and the pay field looks inconsistent. | Re-check next run whether xBerry exposes a canonical employer page or clarifies the compensation unit on the public listing. | Open |
 | Medium | Monitor expanding EPAM cluster | `EPAM` added several more official `Remote in Poland` LLM/AI roles in one run, so it is becoming one of the strongest recurring official sources in this topic. | Re-check next run whether the new `Lead AI Engineer`, `Senior Cloud Native Developer (Python & AI)`, `Senior Platform Engineer` and `Senior AI Engineer` stay open, and whether adjacent EPAM roles require tighter deduplication rules. | Open |
+| Medium | Monitor new Accenture Wrocław cluster | `Accenture` surfaced a fresh official cluster of hands-on `LLM` / `GenAI` / `RAG` roles with Wrocław hybrid mirrors, so it can become a recurring high-signal source quickly. | Re-check next run whether `ML/AI Engineer with Snowflake (AI&Data)`, `GenAI Engineer (Mid)` and `Senior GenAI Engineer` stay public, keep the same canonical URLs, and whether the city mirrors remain aligned with the official `Multiple Locations` pages. | Open |
+| Medium | Track CKSource / Tiugo title drift | `CKSource` and `Tiugo Technologies` now expose one strong public AI role, but the hub and the application card use slightly different titles for what appears to be the same opening. | Re-check next run whether the role stabilizes as `Principal Applied AI Engineer` or `Principal AI Engineer`, and whether the remote/Warsaw/Poznań wording changes. | Open |
 | Medium | Monitor new T-Mobile cluster | T-Mobile surfaced one active public `LLMs, Agents` role plus two adjacent AI signals that are currently inactive, so the employer may be rotating this job family quickly. | Re-check next run whether `T Hub - AI Engineer (LLMs, Agents)` stays open, whether the inactive `AI Expert` / `DevOps Engineer (AI Solutions)` pages revive, and whether a more canonical public employer URL becomes available. | Open |
 | Medium | Monitor KYOTU return after expired pool | KYOTU reappeared with a new active GenAI/RAG/agentic role after the earlier `AI / ML / LLM Engineer` listing had expired. | Re-check next run whether the current role remains active through the stated `27 Jun` deadline and whether salary, remote policy or stack change materially. | Open |
 | Medium | Monitor IN4GE cluster dedup risk | `IN4GE` surfaced multiple active public roles around `GenAI`, `agentic AI` and `MCP` in the same source family, with overlapping compensation and remote policy. | Re-check next run whether `Backend Software Engineer (MCP & AI Agents)` and `Senior Software Engineer (Python, GenAI & Agentic AI)` remain distinct openings, keep their current URLs, and avoid expanding into noisy near-duplicates. | Open |
-| Medium | Verify Rossmann remote-policy mismatch | `Rossmann` now has an officially active `AI / LLMOps Engineer`, but the public mirrors disagree on `Łódź` vs `remote Poland / hybrid` and even showed expiry drift. | Re-check next run whether the official detail page stays active, whether `Pracuj.pl` still shows `Cała Polska (praca zdalna)`, and whether the source mismatch resolves. | Open |
+| Medium | Verify Rossmann remote-policy wording | `Rossmann` official detail page now explicitly says `hybrydowym lub zdalnym`, but still keeps `Łódź` as the office location and does not fully define the remote scope. | Re-check next run whether the official detail page `/20287` stays active, whether the `hybrydowym lub zdalnym` wording persists, and whether the public mirrors keep claiming `Cała Polska (praca zdalna)`. | Open |
 
 ## Review Notes
 
@@ -65,6 +67,11 @@
 - 2026-06-24: Evening run added new `Yard Corporate`, `ALTIMI`, `IN4GE` and
   `Rossmann` signals; the strongest new review risks are `IN4GE` near-duplicate
   AI role clustering and a `Rossmann` official-vs-board mismatch on location/status.
+- 2026-06-25: `CKSource / Tiugo` joined the recurring shortlist with a strong
+  public `Principal Applied AI Engineer` / `Principal AI Engineer` role, while
+  `Accenture` opened a new Wrocław-hybrid cluster around `LLM`, `RAG` and
+  agentic AI. `Rossmann` also narrowed its earlier mismatch by explicitly
+  adding `hybrydowym lub zdalnym` to the official detail page.
 
 ## Done
 
