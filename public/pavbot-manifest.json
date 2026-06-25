@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-06-25T08:26:50.048826+00:00",
+  "generatedAt": "2026-06-25T14:59:56.723315+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -124,7 +124,7 @@
       "title": "Daily Research Report: tech-news",
       "path": "research/tech-news/runs/2026-06-25.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-06-25.md",
-      "sizeBytes": 45823,
+      "sizeBytes": 99526,
       "date": "2026-06-25"
     },
     {
@@ -194,7 +194,7 @@
       "title": "2026-06-25-tech-news.pdf",
       "path": "research/tech-news/pdfs/2026-06-25-tech-news.pdf",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-06-25-tech-news.pdf",
-      "sizeBytes": 57143,
+      "sizeBytes": 196806,
       "date": "2026-06-25"
     },
     {
@@ -1931,7 +1931,7 @@
       "title": "Topic Index: tech-news",
       "path": "research/tech-news/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/index.md",
-      "sizeBytes": 11789
+      "sizeBytes": 20304
     },
     {
       "id": "research/tech-news/backlog.md",
@@ -1940,7 +1940,7 @@
       "title": "Topic Backlog: tech-news",
       "path": "research/tech-news/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/backlog.md",
-      "sizeBytes": 20959
+      "sizeBytes": 30784
     },
     {
       "id": "research/tech-news/automation-research-prompt.md",
@@ -2076,24 +2076,6 @@
       "path": "research/codex-agent-automation/automation-prompt.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/codex-agent-automation/automation-prompt.md",
       "sizeBytes": 2057
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/topic.md",
-      "type": "topic",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Topic Contract: aktualne-wydarzenia-mobile",
-      "path": "research/aktualne-wydarzenia-mobile/topic.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/topic.md",
-      "sizeBytes": 2280
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/automation-prompt.md",
-      "type": "automationPrompt",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Automation Prompt: Pavbot Aktualne Wydarzenia Mobile 10:15",
-      "path": "research/aktualne-wydarzenia-mobile/automation-prompt.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/automation-prompt.md",
-      "sizeBytes": 5246
     }
   ]
 }
