@@ -33,6 +33,13 @@
 | High | Track AI data center energy deals | Microsoft/Chevron Project Kilby links hyperscale AI demand to long-duration dedicated power generation | Watch FID by end-2026, grid impact, water/emissions commitments, similar hyperscaler deals and EU/Polish data-center energy debate | Open |
 | Medium | Track Deno Desktop | Deno Desktop is a strong HN signal for web-to-desktop app packaging with smaller binaries and built-in updates | Recheck Deno 2.9 release status, stability, framework support and adoption by local AI/developer tools | Open |
 | Medium | Track agent tooling reliability | Codex logging fixes and Oak's agent-oriented VCS show that agent tools need new reliability and review primitives | Watch Codex release notes, resource usage controls, Oak beta adoption and branch-per-session workflows | Open |
+| High | Track OpenAI/Broadcom Jalapeño | OpenAI is moving inference economics into custom silicon with Broadcom and a claimed end-2026 first deployment | Watch performance report, deployment partners, Microsoft/Celestica details, supply constraints and Nvidia/AMD response | Open |
+| High | Track Qualcomm full-stack AI platform | Modular acquisition plus Hugging Face and Meta partnerships position Qualcomm as an edge-to-data-center AI stack contender | Watch acquisition close, regulatory review, Dragonfly CPU roadmap, Hugging Face integration and developer adoption | Open |
+| High | Track Gemini computer use | Gemini 3.5 Flash now exposes computer use as a built-in model capability, making browser/mobile/desktop automation more mainstream | Watch enterprise adoption, prompt-injection safeguards, confirmation flows, sandboxing and customer proof | Open |
+| High | Track Microsoft AI cyber disruption | Microsoft DCU used AI-assisted analysis in the Amadey/StealC disruption and framed malware ecosystems as a cybercrime supply chain | Watch legal follow-up, Europol/partner updates, botnet rebuild attempts and DCU AI workflow details | Open |
+| Medium | Track Claude Tag | Anthropic is testing Claude as an asynchronous Slack team member with channel memory and scoped tool/data access | Watch beta feedback, permissions, logging, spend controls, privacy defaults and enterprise rollout | Open |
+| Medium | Track Krea 2 open weights | Krea 2 is a fresh independent open-weight text-to-image release and a useful counterpoint to closed media models | Watch benchmarks, license limits, ComfyUI/Hugging Face adoption, safety controls and creator feedback | Open |
+| Medium | Track SaaS OAuth supply chain | LastPass/Klue shows how third-party OAuth tokens can expose customer data without compromising the core product | Watch OAuth token governance, Salesforce/Gong integration risk, customer notification standards and vendor access reviews | Open |
 
 ## Review Notes
 
@@ -109,6 +116,15 @@
   `runs/2026-06-24.md` was missing; created `draft.md`, `script.md`,
   `sources.md`, `render.json`, `brief.pdf`, and `podcast.mp3`; final MP3 used
   Piper and measured about 7:32 by `ffprobe`.
+- 2026-06-25: Fresh daily research run created a material update without using
+  2026-06-24 as narrative history. Strongest podcast candidates:
+  OpenAI/Broadcom Jalapeño, Qualcomm/Modular plus Hugging Face/Meta, Gemini 3.5
+  Flash computer use, Microsoft DCU AI cyber disruption, Claude Tag, Krea 2,
+  Product Hunt agentic products and LastPass/Klue OAuth supply-chain risk.
+- 2026-06-25: Polish sources checked did not add fresh local coverage for the
+  main OpenAI/Broadcom or Qualcomm/Modular themes. Product Hunt and Hacker News
+  were the strongest public current-signal sources; direct public Reddit signal
+  remained weak without login.
 
 ## Done
 

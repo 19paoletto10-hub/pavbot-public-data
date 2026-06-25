@@ -1,6 +1,6 @@
 # Topic Index: tech-news
 
-Last updated: 2026-06-23
+Last updated: 2026-06-25
 
 ## Current Understanding
 
@@ -8,11 +8,11 @@ Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
 
-Po raporcie z 2026-06-23 najmocniejsze osie tematyczne to: AI cyber defense i
-patch automation, frontier AI jako board-level cyber risk, produkcyjne wzorce
-multi-agent przez ADK/A2A/MCP, ewaluacja proaktywnych agentów kodujących,
-energetyka centrów danych AI oraz niezawodność narzędzi projektowanych pod
-agentów.
+Po raporcie z 2026-06-25 najmocniejsze osie tematyczne to: pionowa integracja
+infrastruktury AI, własne chipy inference, software portability między
+akceleratorami, edge-to-cloud orchestration, agentowe używanie interfejsów
+użytkownika, zespołowe agenty w kanałach pracy, open-weight modele kreatywne
+oraz OAuth/SaaS supply-chain risk.
 
 ## Stable Facts
 
@@ -33,6 +33,22 @@ agentów.
 
 ## Watch Items
 
+- Custom inference silicon: OpenAI/Broadcom Jalapeño trzeba śledzić pod kątem
+  raportu wydajności, wdrożenia do końca 2026 roku, partnerów data-center i
+  reakcji Nvidii/AMD.
+- Full-stack AI infrastructure: Qualcomm łączy przejęcie Modular, relację z
+  Hugging Face i CPU Dragonfly dla Meta w jeden wątek alternatywnego stacku AI
+  od edge do data center.
+- Agentic computer use: Gemini 3.5 Flash ma wbudowane computer use, więc trzeba
+  monitorować adopcję, zabezpieczenia przeciw prompt injection, human approval i
+  enterprise sandboxing.
+- Team-channel agents: Claude Tag pokazuje przejście od czatu 1:1 do agenta
+  pracującego w Slacku z pamięcią kanałów, scoped permissions i ambient behavior.
+- Open-weight creative models: Krea 2 jest świeżym sygnałem, że niezależne laby
+  nadal próbują konkurować z zamkniętymi modelami obrazu przez open-weight
+  release.
+- SaaS OAuth supply chain: LastPass/Klue pokazuje ryzyko tokenów OAuth i
+  integracji SaaS, szczególnie przy agentach z dostępem do narzędzi.
 - Jakość źródeł i liczba linków w codziennych raportach.
 - Czy raport 08:00 daje wystarczający materiał dla podcastu 09:00.
 - Czy tematy podcastowe są aktualne, źródłowane i zrozumiałe dla polskiego
@@ -110,6 +126,7 @@ agentów.
 
 ## Recent Reports
 
+- [2026-06-25](runs/2026-06-25.md)
 - [2026-06-23](runs/2026-06-23.md)
 - [2026-06-22](runs/2026-06-22.md)
 - [2026-06-21](runs/2026-06-21.md)
