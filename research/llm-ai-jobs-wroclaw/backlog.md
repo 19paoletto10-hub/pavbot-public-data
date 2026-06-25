@@ -20,6 +20,7 @@
 | Medium | Monitor IN4GE cluster dedup risk | `IN4GE` surfaced multiple active public roles around `GenAI`, `agentic AI` and `MCP` in the same source family, with overlapping compensation and remote policy. | Re-check next run whether `Backend Software Engineer (MCP & AI Agents)` and `Senior Software Engineer (Python, GenAI & Agentic AI)` remain distinct openings, keep their current URLs, and avoid expanding into noisy near-duplicates. | Open |
 | Medium | Verify Rossmann remote-policy wording | `Rossmann` official detail page now explicitly says `hybrydowym lub zdalnym`, but still keeps `Łódź` as the office location and does not fully define the remote scope. | Re-check next run whether the official detail page `/20287` stays active, whether the `hybrydowym lub zdalnym` wording persists, and whether the public mirrors keep claiming `Cała Polska (praca zdalna)`. | Open |
 | Medium | Verify new board-first cluster canonical URLs | `DEVAPO`, `SCALO`, `VeloBank`, `XTB` and `Link Group` all surfaced as strong public signals, but in this round they are confirmed mainly through job boards rather than clearly canonical employer cards. | Re-check next run whether each role stays open, whether an official employer detail page becomes public, and whether board-only salary/location wording drifts materially. | Open |
+| Medium | Monitor SNI / Harvey / People More / Tooploox lead cluster | The evening run added one strong official role (`Tooploox`) and two strong board-first roles (`SNI`, `Harvey Nash`), while `People More` again changed public salary format on the same URL. | Re-check next run whether `Tooploox Lead AI Engineer` stays open on Teamtailor, whether `SNI` or `Harvey Nash` expose a more canonical public detail page, and whether `People More` flips currency or pay bands again. | Open |
 
 ## Review Notes
 
@@ -76,6 +77,9 @@
 - 2026-06-25: Afternoon run added a new board-first cluster around `DEVAPO`,
   `SCALO`, `VeloBank`, `XTB` and `Link Group`; the strongest new risk is
   canonical-source uncertainty rather than fit-to-scope quality.
+- 2026-06-25: Evening run added official `Tooploox Lead AI Engineer` plus new
+  public `SNI` and `Harvey Nash` signals, while `People More` flipped public
+  compensation back to `140-190 PLN/h` on the same tracked Wrocław URL.
 
 ## Done
 

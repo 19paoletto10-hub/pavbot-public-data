@@ -1,28 +1,29 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-06-25 17:23 CEST
+Last updated: 2026-06-25 17:41 CEST
 
 ## Current Understanding
 
-Popołudniowa runda z `2026-06-25 17:23 CEST` przyniosła pięć nowych,
-wcześniej nieśledzonych sygnałów: `DEVAPO`, `SCALO`, `VeloBank`, `XTB`
-i `Link Group`. Najmocniejszy technicznie nowy sygnał daje `XTB`, bo rola
-`Senior AI Engineer` wprost łączy `LLMOps`, agentic workflows, `MCP` servers,
-`RAG-eval` oraz observability w środowisku fintechowym.
+Wieczorna runda z `2026-06-25 17:41 CEST` dodała trzy nowe, istotne sygnały:
+oficjalny `Tooploox Lead AI Engineer`, publiczny `SNI LLM Engineer` oraz
+`Harvey Nash Technology AI Platform Engineer (Agentic Systems)` dla
+`Wrocław hybrid`. Dodatkowo wcześniej śledzona karta `People More AI Engineer /
+LLM Engineer` znowu pokazuje `140-190 PLN/h`, więc kolejny raz potwierdza się,
+że to jedno z najbardziej zmiennych źródeł wynagrodzeń w tym temacie.
 
-Drugim mocnym sygnałem jest `SCALO`, gdzie publiczna karta `Senior AI Engineer`
-opisuje stricte produkcyjny Pythonowy delivery `LLM`, `tool calling`,
-guardrails, trace'y i ewaluację jakości w modelu `100% remote`. `DEVAPO`
-poszerza warstwę remote-Poland o hands-on mid-level rolę przy `RAG`, agentach
-i pipeline'ach wektorowych, a `VeloBank` wnosi bankowy zespół AI z
-`Azure OpenAI`, embeddingami i aplikacjami konwersacyjnymi.
+Najmocniejszy nowy sygnał kanoniczny daje `Tooploox`, bo publiczna karta
+pracodawcy wprost łączy `AI Agentic systems`, `RAG`, `MCP`, `LLM APIs`,
+`LangChain`, `LlamaIndex` i pełną zdalność z Polski przy dostępnych biurach we
+`Wrocławiu` i `Warszawie`. `SNI` dokłada jedną z najprecyzyjniej opisanych
+publicznych ról stricte pod `LLM systems engineering`: `Python`, `LangGraph`,
+`MCP`, zaawansowane `RAG`, architektury pamięci, ewaluacje i guardraile.
 
-Po stronie sygnałów bliższych `Wrocławiowi` nowy jest `Link Group` z rolą
-`AI Architect/Senior AI Engineer` pod wariantem `Wrocław +9 / remote`, ale to
-nadal oferta board-first bez znalezionej w tej rundzie publicznej karty
-kanonicznej pracodawcy. Wcześniej obserwowane źródła `CKSource/Tiugo`,
-`Accenture`, `Rossmann`, `deepsense.ai`, `Acaisoft` i `KYOTU` nie pokazały
-nowej materialnej zmiany względem porannego przebiegu.
+Lokalnie najciekawszy jest teraz `Harvey Nash`, bo to nowy sygnał
+`Wrocław hybrid` po stronie platformowej: `AWS Lambda`, `SQS`, `Bedrock
+Agents`, `Action Groups`, `Knowledge Bases`, `OpenSearch`, `S3` i integracja z
+`GitLab CI/CD`. Wcześniej śledzony klaster `DEVAPO`, `SCALO`, `VeloBank`,
+`XTB` i `Link Group` pozostaje ważny, ale ta runda nie przyniosła dla niego
+silniejszej zmiany niż nowe odkrycia oraz flip widełek w `People More`.
 
 ## Stable Facts
 
@@ -39,7 +40,7 @@ only when something meaningful changes.
 
 | Canonical key | Company | Title | Location / remote | First seen | Last seen | Status | Material changes | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| justjoin-people-more-ai-engineer-llm-engineer-wroclaw-remote | People More P.S.A. | AI Engineer / LLM Engineer (AI-First \| TypeScript) | Wroclaw + remote | 2026-06-18-0142 | 2026-06-22-0141 | Open | Initial capture: 38-52 USD net/h B2B; agentic systems, RAG, multi-agent architectures. 2026-06-18-1741: current public listing shows 140-190 PLN net/h B2B. 2026-06-19-0141: current public listing shows 33-45 EUR net/h B2B. 2026-06-20-0141: current public listing again shows 140-190 PLN net/h B2B. 2026-06-20-0630: current public listing shows 30-41 CHF net/h B2B. 2026-06-20-2152: current public listing shows 33-45 EUR net/h B2B. 2026-06-22-0141: current public listing shows 30-41 CHF net/h B2B. | [Just Join IT](https://justjoin.it/job-offer/people-more-p-s-a--ai-engineer-llm-engineer-ai-first-typescript--wroclaw-ai-215fee79) |
+| justjoin-people-more-ai-engineer-llm-engineer-wroclaw-remote | People More P.S.A. | AI Engineer / LLM Engineer (AI-First \| TypeScript) | Wroclaw + remote | 2026-06-18-0142 | 2026-06-25-1741 | Open | Initial capture: 38-52 USD net/h B2B; agentic systems, RAG, multi-agent architectures. 2026-06-18-1741: current public listing shows 140-190 PLN net/h B2B. 2026-06-19-0141: current public listing shows 33-45 EUR net/h B2B. 2026-06-20-0141: current public listing again shows 140-190 PLN net/h B2B. 2026-06-20-0630: current public listing shows 30-41 CHF net/h B2B. 2026-06-20-2152: current public listing shows 33-45 EUR net/h B2B. 2026-06-22-0141: current public listing shows 30-41 CHF net/h B2B. 2026-06-25-1741: current public Wrocław card again shows `140-190 PLN net/h B2B`, `Remote`, `5 day left (until 30.06.2026)` and still highlights practical `MCP` experience. | [Just Join IT](https://justjoin.it/job-offer/people-more-p-s-a--ai-engineer-llm-engineer-ai-first-typescript--wroclaw-ai-215fee79) |
 | pracuj-kyotu-ai-ml-llm-engineer-wroclaw-remote | KYOTU Technology sp. z o.o. | AI / ML / LLM Engineer | Wroclaw / remote Poland | 2026-06-18-0142 | 2026-06-21-0141 | Expired | Initial capture: 130-180 PLN net/h + VAT; LLM, GenAI, RAG, LLM pipelines, agentic AI. 2026-06-18-1741: direct listing clarifies this is a talent pool for upcoming projects, not necessarily a single immediate requisition. 2026-06-21-0141: public Pracuj.pl page now shows `offer expired 2 months ago` and `Pracodawca zakończył zbieranie zgłoszeń na tę ofertę`. | [Pracuj.pl](https://www.pracuj.pl/praca/ai-ml-llm-engineer-wroclaw-wybrzeze-stanislawa-wyspianskiego-39a%2Coferta%2C1004744984) |
 | addepto-ai-engineer-wroclaw-remote | Addepto | AI Engineer | Wroclaw + remote | 2026-06-18-0142 | 2026-06-18-0142 | Open | Initial capture: official career page; 12 600-19 320 PLN B2B mid, 19 320-25 200 PLN B2B senior; LLM/GenAI/Python/FastAPI. | [Addepto](https://addepto.com/career/ai-engineer/) |
 | justjoin-grid-dynamics-senior-staff-ai-engineer-physical-ai-wroclaw-hybrid | Grid Dynamics Poland | Senior/Staff AI Engineer, Physical AI | Wroclaw hybrid | 2026-06-18-0142 | 2026-06-18-0142 | Open | Initial capture: multimodal generative models, robotics/physical AI, GPU clusters/Ray; salary not visible. | [Just Join IT](https://justjoin.it/job-offer/grid-dynamics-poland-senior-staff-ai-engineer-physical-ai-wroclaw-ai) |
@@ -111,6 +112,9 @@ only when something meaningful changes.
 | velobank-ai-engineerka-ai-engineer-warsaw-mostly-remote | VeloBank S.A. | AI Engineerka / AI Engineer | Warsaw / remote Poland | 2026-06-25-1723 | 2026-06-25-1723 | Open | Initial capture: public Just Join IT role; `Remote`; production AI/LLM engineering with `Azure OpenAI`, `LangChain / LangGraph`, `FastAPI`, vector databases, embeddings and conversational applications. The offer text additionally says remote work with office presence around `2 times per month` in Warsaw. | [Just Join IT](https://justjoin.it/job-offer/velobank-s-a--ai-engineerka-ai-engineer-warszawa-ai) |
 | xtb-senior-ai-engineer-remote-poland | XTB | Senior AI Engineer | Warsaw +4 / remote Poland | 2026-06-25-1723 | 2026-06-25-1723 | Open | Initial capture: public Just Join IT role; `5 489-6 969 USD gross / month`; `Remote`; technical ownership for `LLMOps` and agentic strategy, `MCP` servers, `RAG-eval`, enterprise observability, `FastAPI`, semantic layers over `Snowflake` and `Databricks`, and AI governance in fintech. | [Just Join IT](https://justjoin.it/job-offer/xtb-senior-ai-engineer-warszawa-ai) |
 | link-group-ai-architect-senior-ai-engineer-wroclaw-remote | Link Group | AI Architect/Senior AI Engineer | Wrocław +9 / remote | 2026-06-25-1723 | 2026-06-25-1723 | Open | Initial capture: public Just Join IT role; `40-46 USD net / h B2B`; `Wrocław +9`, `Remote`; end-to-end enterprise AI delivery from PoC to production across `LLM`, `RAG`, `Generative AI`, `AI automation`, `LangChain`, `OpenAI API`, `Hugging Face` and `MLOps`. | [Just Join IT](https://justjoin.it/job-offer/link-group-ai-architect-senior-ai-engineer-wroclaw-ai) |
+| tooploox-lead-ai-engineer-wroclaw-warsaw-remote-poland | Tooploox | Lead AI Engineer | Wrocław / Warsaw / remote Poland | 2026-06-25-1741 | 2026-06-25-1741 | Open | Initial capture: official Tooploox Teamtailor role; `24 000-32 000 PLN B2B` or `21 000-29 000 PLN UoP`; `Fully Remote` from Poland with `Wrocław Office` and `Warsaw Office`; `AI Agentic systems`, `RAG`, `Multi-Agent`, `MCP Servers`, `LLM APIs`, `LangChain`, `LlamaIndex`, `NodeJS` and `TypeScript`. | [Tooploox](https://tooploox.teamtailor.com/jobs/7213707-lead-ai-engineer) |
+| sni-llm-engineer-remote-poland | SNI | LLM Engineer | Warsaw +4 / remote Poland | 2026-06-25-1741 | 2026-06-25-1741 | Open | Initial capture: public Just Join IT role; `160-180 PLN net / h B2B`; `Remote`; end-to-end `Generative AI` in `Python`, `LangGraph`, `tool/function calling`, `MCP`, `multi-agent orchestration`, advanced `RAG`, memory architectures, hallucination evals, guardrails, `Azure OpenAI` and `Azure AI Foundry`. | [Just Join IT](https://justjoin.it/job-offer/sni-llm-engineer-warszawa-ai) |
+| harvey-nash-ai-platform-engineer-agentic-systems-wroclaw-hybrid | Harvey Nash Technology | AI Platform Engineer (Agentic Systems) | Wrocław hybrid | 2026-06-25-1741 | 2026-06-25-1741 | Open | Initial capture: public Just Join IT role from a recruitment intermediary; `Wrocław, hybrid (1 day per week in the office)`; `170-190 PLN net + VAT / h B2B`; agent orchestration layer on `AWS Lambda`, `SQS`, `Bedrock Agents`, `Action Groups`, `Knowledge Bases`, `OpenSearch`, `S3`, `RAG` and `GitLab CI/CD`. | [Just Join IT](https://justjoin.it/job-offer/harvey-nash-technology-ai-platform-engineer-agentic-systems--wroclaw-devops) |
 
 ## Open Questions
 
@@ -130,6 +134,8 @@ only when something meaningful changes.
 - Czy nowy board-first klaster `DEVAPO`, `SCALO`, `VeloBank`, `XTB` i
   `Link Group` dostanie stabilniejsze kanoniczne strony pracodawców, czy
   pozostanie głównie w publicznych boardach?
+- Czy `SNI` i `Harvey Nash` mają publiczne, bardziej kanoniczne karty niż
+  bieżące URL-e `Just Join IT`, czy pozostaną dłużej tylko w warstwie boardowej?
 
 ## Watch Items
 
@@ -157,6 +163,9 @@ only when something meaningful changes.
 - Public `DEVAPO`, `SCALO`, `VeloBank`, `XTB` and `Link Group` pages after the
   new `25 Jun` board-first cluster, with priority on finding more canonical
   employer pages and fast expiry/status drift.
+- Official `Tooploox Teamtailor`, public `SNI` and public `Harvey Nash`
+  pages after the `25 Jun 17:41` run, with special care around canonical URL
+  discovery and `People More` salary volatility.
 - Job boards with reliable filters for Wroclaw, remote Poland and AI/LLM work.
 - Salary, seniority, tech-stack and remote-policy changes on previously seen
   listings.
@@ -180,3 +189,4 @@ only when something meaningful changes.
 - [2026-06-24-1921](runs/2026-06-24-1921.md)
 - [2026-06-25-0141](runs/2026-06-25-0141.md)
 - [2026-06-25-1723](runs/2026-06-25-1723.md)
+- [2026-06-25-1741](runs/2026-06-25-1741.md)
