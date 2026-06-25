@@ -11,8 +11,24 @@ polskiego podcastu około godziny 09:00.
 Po raporcie z 2026-06-25 najmocniejsze osie tematyczne to: pionowa integracja
 infrastruktury AI, własne chipy inference, software portability między
 akceleratorami, edge-to-cloud orchestration, agentowe używanie interfejsów
-użytkownika, zespołowe agenty w kanałach pracy, open-weight modele kreatywne
-oraz OAuth/SaaS supply-chain risk.
+użytkownika, zespołowe agenty w kanałach pracy, open-weight modele kreatywne,
+OAuth/SaaS supply-chain risk, rosnąca presja ratepayer/data-center policy,
+chłodzenie i zużycie wody w AI factories oraz koszty tokenów i review pracy
+generowanej przez agentów. Poranny refresh dodał Interactions API jako sygnał,
+że duże platformy modelowe przesuwają agentów do stateful, długotrwałych API, a
+Google DeepMind/A24 jako świeży przykład wejścia laboratoriów AI w workflow
+filmowe i kulturę popularną. Kolejny refresh z tego samego dnia dodał zarzuty
+Anthropic wobec Alibaba/Qwen jako wątek model extraction/distillation, konkrety
+Qualcomm Investor Day o data-center revenue, Cloudflare self-managed OAuth jako
+agent-ready delegated access oraz europejski opór wobec MATCH Act i presji na
+ASML. Refresh 08:00 CEST dodał Micron/Anthropic i wyniki Microna jako sygnał,
+że pamięć, HBM i storage stają się równie strategicznym wąskim gardłem AI jak
+GPU, oraz indyjski wątek sovereign AI i messaging-fintech: Sarvam/HCLTech/
+IndiaAI oraz Meta/WhatsApp/CRED. Dodatkowe sprawdzenie 08:01 CEST dodało
+LineShine/TOP500 jako sygnał sovereign HPC i alternatywnej ścieżki compute bez
+GPU, Figma Config 2026 jako przesuwanie designu w stronę agentów, MCP i kodu na
+wspólnym canvasie oraz Deezer Remix Lab jako przykład rights-cleared remix
+product w kulturze twórczej.
 
 ## Stable Facts
 
@@ -39,9 +55,29 @@ oraz OAuth/SaaS supply-chain risk.
 - Full-stack AI infrastructure: Qualcomm łączy przejęcie Modular, relację z
   Hugging Face i CPU Dragonfly dla Meta w jeden wątek alternatywnego stacku AI
   od edge do data center.
+- AI memory and storage bottleneck: Micron Q3 FY2026, HBM4 i strategiczna
+  umowa z Anthropic pokazują, że długoterminowa podaż pamięci i storage może
+  być osobną osią kosztów oraz przewag AI obok GPU i energii.
+- Sovereign HPC and TOP500: chiński LineShine został liderem TOP500 jako
+  CPU-only exascale system, ale jego mixed-precision wynik pokazuje, że symbol
+  supercomputingu trzeba oddzielać od praktycznych możliwości AI workloadów.
+- India sovereign AI and messaging-fintech: Sarvam/HCLTech/IndiaAI oraz
+  Meta/WhatsApp/CRED pokazują, że Indie łączą publiczne wsparcie compute,
+  lokalne modele, fintech, płatności i masowy messaging w osobny front AI.
 - Agentic computer use: Gemini 3.5 Flash ma wbudowane computer use, więc trzeba
   monitorować adopcję, zabezpieczenia przeciw prompt injection, human approval i
   enterprise sandboxing.
+- Agent API surfaces: Google Interactions API jest już GA i staje się głównym
+  interfejsem Gemini dla modeli i agentów, więc trzeba śledzić migrację ze
+  starszego `generateContent`, Managed Agents, background execution, retention i
+  integracje w SDK/partnerach.
+- Design-agent platforms: Figma Config 2026 pokazuje, że narzędzia kreatywne
+  zaczynają łączyć design canvas, kod, agent skills, web search, MCP connectors,
+  generative plugins i polityki widoczności wątków.
+- Model extraction and AI IP security: Reuters opisał zarzuty Anthropic wobec
+  Alibaba/Qwen o masową kampanię distillation Claude; trzeba śledzić publiczne
+  dokumenty, odpowiedź Alibaba, reakcję Senatu USA, Commerce i podobne sprawy
+  przeciw innym labom.
 - Team-channel agents: Claude Tag pokazuje przejście od czatu 1:1 do agenta
   pracującego w Slacku z pamięcią kanałów, scoped permissions i ambient behavior.
 - Open-weight creative models: Krea 2 jest świeżym sygnałem, że niezależne laby
@@ -49,6 +85,23 @@ oraz OAuth/SaaS supply-chain risk.
   release.
 - SaaS OAuth supply chain: LastPass/Klue pokazuje ryzyko tokenów OAuth i
   integracji SaaS, szczególnie przy agentach z dostępem do narzędzi.
+- AI data-center ratepayer policy: Ratepayer Protection Act, wypowiedzi
+  Pallone'a o moratorium oraz publiczne sygnały z Reddita pokazują, że koszt
+  energii i modernizacji sieci dla AI data centers staje się tematem
+  regulacyjnym, a nie tylko infrastrukturalnym.
+- AI factory cooling and water: NVIDIA Rubin/DSX i 45C liquid cooling są
+  ważnym vendor claim o ograniczeniu zużycia wody i energii, wymagającym
+  niezależnej weryfikacji u operatorów data center.
+- AI output governance: GitHub pull request limits, Greptile/OpenClaw,
+  404 Media tokenpocalypse i Business Insider developer fatigue pokazują, że
+  koszt AI obejmuje review, maintainer bandwidth, token attribution i jakość
+  pracy, nie tylko cenę modeli.
+- Creative industry AI deals: Google DeepMind/A24 pokazuje, że spór o AI w
+  kreatywności przechodzi z pojedynczych narzędzi do inwestycji i partnerstw
+  między laboratoriami AI a studiami filmowymi.
+- Rights-cleared remix products: Deezer Remix Lab pokazuje jedną z prób
+  przeniesienia fanowskich remixów z szarej strefy social platforms do produktu
+  ze zgodami artystów i rightsholderów.
 - Jakość źródeł i liczba linków w codziennych raportach.
 - Czy raport 08:00 daje wystarczający materiał dla podcastu 09:00.
 - Czy tematy podcastowe są aktualne, źródłowane i zrozumiałe dla polskiego
@@ -74,8 +127,11 @@ oraz OAuth/SaaS supply-chain risk.
 - Public trust in AI: polskie dane o deepfake'ach i zaufaniu do informacji są
   ważnym lokalnym materiałem do podcastu.
 - Agent-ready deployment: Cloudflare Temporary Accounts, `wrangler deploy
-  --temporary`, `auth.md` i podobne wzorce zaczynają usuwać ludzkie tarcie z
-  wdrożeń wykonywanych przez agentów.
+  --temporary`, self-managed OAuth, `auth.md` i podobne wzorce zaczynają usuwać
+  ludzkie tarcie z wdrożeń oraz delegated access wykonywanych przez agentów.
+- Semiconductor export-control sovereignty: MATCH Act, holenderska reakcja i
+  potencjalne skutki dla ASML/DUV pokazują, że kontrola chip supply chain jest
+  też sporem USA-UE, nie tylko USA-Chiny.
 - AI control and agent security: Google DeepMind AI Control Roadmap pokazuje
   trwały kierunek w stronę sandboxingu, dynamicznych uprawnień, monitorowania
   agent trajectories i reakcji w czasie rzeczywistym.

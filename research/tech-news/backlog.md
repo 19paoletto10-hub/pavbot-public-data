@@ -14,7 +14,7 @@
 | Medium | Track AI in schools regulation | Norway introduced a strong age-based AI restriction signal that may spread in Europe | Recheck Nordic/EU education policy and Polish ministry commentary in later runs | Open |
 | Medium | Track European AI sovereignty stack | France is pairing public-sector AI funding with ChapsVision/Palantir replacement and AI Gigafactories | Watch France, Mistral, EU AI Gigafactories and Polish equivalents | Open |
 | Medium | Track AI chip alternatives | Google TPUs and Amazon Trainium are moving from internal cloud optimization toward external compute businesses | Watch customer adoption, financing risk and Nvidia response | Open |
-| High | Track agent-ready deployment infrastructure | Cloudflare Temporary Accounts remove signup/auth friction for AI agents deploying code | Watch Cloudflare, Vercel, Netlify, Fly.io, Replit and auth.md-style flows | Open |
+| High | Track agent-ready deployment infrastructure | Cloudflare Temporary Accounts and self-managed OAuth remove signup/auth/delegated-access friction for AI agents | Watch Cloudflare, Vercel, Netlify, Fly.io, Replit, OAuth consent/revocation and auth.md-style flows | Open |
 | High | Track AI control standards | Google DeepMind's AI Control Roadmap may become a reference point for agent permissions, monitoring and incident response | Recheck follow-up papers, policy reactions and competing frameworks | Open |
 | High | Track Anthropic export-control resolution | Fable/Mythos shows frontier models becoming export-control and national-security assets | Watch Anthropic statements, Commerce actions, Axios/Bloomberg follow-ups and international response | Open |
 | Medium | Track Teams workplace telemetry | Microsoft Teams workplace check-in via Wi-Fi is a clear privacy and work-policy podcast topic | Recheck rollout, user controls, EU/Polish privacy commentary and employer adoption | Open |
@@ -35,11 +35,24 @@
 | Medium | Track agent tooling reliability | Codex logging fixes and Oak's agent-oriented VCS show that agent tools need new reliability and review primitives | Watch Codex release notes, resource usage controls, Oak beta adoption and branch-per-session workflows | Open |
 | High | Track OpenAI/Broadcom Jalapeño | OpenAI is moving inference economics into custom silicon with Broadcom and a claimed end-2026 first deployment | Watch performance report, deployment partners, Microsoft/Celestica details, supply constraints and Nvidia/AMD response | Open |
 | High | Track Qualcomm full-stack AI platform | Modular acquisition plus Hugging Face and Meta partnerships position Qualcomm as an edge-to-data-center AI stack contender | Watch acquisition close, regulatory review, Dragonfly CPU roadmap, Hugging Face integration and developer adoption | Open |
+| High | Track AI memory and storage bottleneck | Micron's record Q3 FY2026 and Anthropic supply/design agreement make HBM, DRAM and SSD supply a separate AI infrastructure storyline | Watch Micron/Anthropic execution, HBM4 supply, pricing, customer agreements and impact on token economics | Open |
+| High | Track LineShine and sovereign HPC | China's TOP500 lead shows an alternative CPU-only exascale path under chip-control pressure, but mixed-precision AI performance is a separate question | Recheck TOP500/HPCG/HPL-MxP follow-ups, Huawei/LX2 details, energy use and AI workload benchmarks | Open |
+| Medium | Track India sovereign AI and WhatsApp fintech | Sarvam/HCLTech/IndiaAI and Meta/WhatsApp/CRED show India becoming a distinct AI, fintech and messaging platform front | Watch formal IndiaAI equity confirmation, Sarvam model adoption, WhatsApp payments/business AI rollout and privacy/data-sharing guardrails | Open |
 | High | Track Gemini computer use | Gemini 3.5 Flash now exposes computer use as a built-in model capability, making browser/mobile/desktop automation more mainstream | Watch enterprise adoption, prompt-injection safeguards, confirmation flows, sandboxing and customer proof | Open |
+| Medium | Track Figma design-agent platform | Config 2026 moves Figma toward a shared canvas for design, code, MCP connectors, agent skills and generative plugins | Watch code layers beta access, admin controls, AI credit policy, team-thread visibility and developer adoption | Open |
 | High | Track Microsoft AI cyber disruption | Microsoft DCU used AI-assisted analysis in the Amadey/StealC disruption and framed malware ecosystems as a cybercrime supply chain | Watch legal follow-up, Europol/partner updates, botnet rebuild attempts and DCU AI workflow details | Open |
 | Medium | Track Claude Tag | Anthropic is testing Claude as an asynchronous Slack team member with channel memory and scoped tool/data access | Watch beta feedback, permissions, logging, spend controls, privacy defaults and enterprise rollout | Open |
 | Medium | Track Krea 2 open weights | Krea 2 is a fresh independent open-weight text-to-image release and a useful counterpoint to closed media models | Watch benchmarks, license limits, ComfyUI/Hugging Face adoption, safety controls and creator feedback | Open |
 | Medium | Track SaaS OAuth supply chain | LastPass/Klue shows how third-party OAuth tokens can expose customer data without compromising the core product | Watch OAuth token governance, Salesforce/Gong integration risk, customer notification standards and vendor access reviews | Open |
+| High | Track AI data-center ratepayer policy | Ratepayer Protection Act and Pallone's moratorium call move AI infrastructure cost from business story to public utility policy | Watch bill text, subcommittee/full committee progress, Big Tech responses, local opposition and EU/Polish analogs | Open |
+| Medium | Track NVIDIA Rubin cooling claims | NVIDIA claims 45C full liquid cooling can reduce water use near zero in suitable locations, but this is a vendor-side infrastructure claim | Recheck independent operator adoption, Schneider/Motivair details, hyperscaler deployments and water/energy metrics | Open |
+| Medium | Track AI output cost governance | 404 Media, GitHub and Greptile point to token budgets, PR-spam and review bottlenecks as the next operational AI governance problem | Watch enterprise token attribution, GitHub PR/issue limits, maintainer tooling, developer burnout and measurable quality outcomes | Open |
+| High | Track Google Interactions API | Google made Interactions API GA and positioned it as the primary Gemini interface for stateful models and agents | Watch migration guidance, SDK adoption, Managed Agents, retention/privacy controls, partner integrations and developer backlash | Open |
+| Medium | Track Google DeepMind/A24 creative AI deal | A24 partnership shows AI labs moving into filmmaking workflows and cultural backlash, not just standalone creator tools | Watch concrete tools, artist terms, content-library/data boundaries, union or creator reaction and follow-up coverage | Open |
+| Medium | Track rights-cleared remix products | Deezer Remix Lab tests a consent-and-rightsholder model for fan remix culture while AI music and modified tracks pressure royalty pools | Watch rollout beyond France, artist adoption, payouts, moderation and competing Spotify/TikTok/YouTube responses | Open |
+| High | Track Anthropic/Alibaba distillation allegations | Reuters reported Anthropic allegations of a large Alibaba/Qwen extraction campaign against Claude | Watch public Anthropic documents, Alibaba response, Senate Banking follow-up, Commerce action and independent confirmation | Open |
+| Medium | Track MATCH Act and ASML pushback | Dutch opposition to expanded US chip-tool controls turns AI export control into a USA-EU sovereignty issue | Watch H.R. 8170 progress, ASML statements, Dutch/EU response and China retaliation risk | Open |
+| Medium | Track AI-native IT services economics | Hang Ten and SignalFire data create a useful tension between AI services disruption and resilient engineering hiring | Recheck enterprise customers, service-margin evidence, hiring data and comparisons with Infosys/TCS/Accenture | Open |
 
 ## Review Notes
 
@@ -125,6 +138,31 @@
   main OpenAI/Broadcom or Qualcomm/Modular themes. Product Hunt and Hacker News
   were the strongest public current-signal sources; direct public Reddit signal
   remained weak without login.
+- 2026-06-25: Additional same-day refresh added material updates on
+  Ratepayer Protection Act/data-center energy costs, NVIDIA Rubin liquid
+  cooling, GitHub PR limits, Greptile/OpenClaw PR spam and 404 Media
+  tokenpocalypse. Public old Reddit worked as a useful community-signal source
+  for this pass.
+- 2026-06-25: Poranny refresh dodał Google Interactions API jako produkcyjny
+  agent API surface oraz Google DeepMind/A24 jako świeży wątek creative AI.
+  Business Insider Polska i TVN24 Biznes dały lokalny framing dla
+  Anthropic/Mythos oraz nieformalnej polityki USA wobec AI.
+- 2026-06-25: Refresh około 06:00 CEST dodał zarzuty Anthropic wobec
+  Alibaba/Qwen, Qualcomm Investor Day z celem ponad 15 mld USD data-center
+  revenue w FY2029, Cloudflare self-managed OAuth, MATCH Act/ASML oraz
+  kontrapunkt SignalFire/TechCrunch do narracji o zastępowaniu programistów.
+- 2026-06-25: Refresh 08:00 CEST dodał Micron/Anthropic i rekordowe wyniki
+  Microna jako wątek memory/storage bottleneck oraz indyjski pakiet
+  Sarvam/HCLTech/IndiaAI i Meta/WhatsApp/CRED jako osobny front sovereign AI,
+  fintechu i messagingu.
+- 2026-06-25: Dodatkowe sprawdzenie 08:01 CEST dodało LineShine/TOP500 jako
+  sovereign HPC, Figma Config 2026 jako design-agent/code canvas oraz Deezer
+  Remix Lab jako rights-cleared remix product.
+- 2026-06-25: Daily tech podcast generated from the normal morning research
+  report; created `draft.md`, `script.md`, `sources.md`, `render.json`,
+  `brief.pdf`, and `podcast.mp3`; final MP3 used Piper and measured about 7:31
+  by `ffprobe`. PDF brief was rendered in the mobile 390 x 844 pt format and
+  visually checked from PNG renders.
 
 ## Done
 
