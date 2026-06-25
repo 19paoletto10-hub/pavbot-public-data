@@ -49,10 +49,7 @@ czatów do delegowanych agentów pracy, prawie 400 lokalnych gazet pozywających
 OpenAI/Microsoft jako rozszerzenie sporu o prawa wydawców, AISLE/curl jako
 AI-assisted vulnerability research w krytycznej infrastrukturze open source oraz
 TEEMA/Miękinia jako lokalny polski element AI server supply chain. Refresh
-16:58 CEST dodał RAISE US jako koalicyjną reakcję firm AI na rynek pracy,
-prawybory NY-12 jako sygnał kosztownych proxy wars wokół regulacji AI oraz
-Guardian/AP/UNU jako uzupełnienie wątku data centers o pozwy klimatyczne i
-transparentność środowiskową AI. Refresh 15:10 CEST dodał Amazon India
+15:10 CEST dodał Amazon India
 AI/cloud infrastructure jako kolejny duży sygnał, że Indie stają się osobnym
 hubem compute, danych i agentic-cloud obok USA, Chin i Europy; Google AI
 governance white paper jako propozycję regulacyjnej "środkowej drogi" Big Tech;
@@ -61,7 +58,11 @@ młodzieży; oraz Citizen Lab/Cellebrite jako przykład problemu kontroli
 surveillance/forensic tech po sprzedaży i formalnym wycofaniu z rynku. Refresh
 16:03 CEST dodał Apple price increases jako pierwszy mocny konsumencki spillover
 AI memory/storage crunch oraz Mirendil jako sygnał, że inwestorzy finansują
-automatyzację samego AI R&D, nie tylko aplikacje końcowe agentów.
+automatyzację samego AI R&D, nie tylko aplikacje końcowe agentów. Refresh
+16:58 CEST dodał RAISE US jako koalicyjną reakcję firm AI na rynek pracy,
+prawybory NY-12 jako sygnał kosztownych proxy wars wokół regulacji AI oraz
+Guardian/AP/UNU jako uzupełnienie wątku data centers o pozwy klimatyczne i
+transparentność środowiskową AI.
 
 ## Stable Facts
 

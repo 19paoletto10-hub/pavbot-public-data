@@ -204,10 +204,6 @@
   OpenAI/Microsoft jako publisher-rights litigation, AISLE/curl 8.21.0 jako
   AI-assisted open-source vulnerability research oraz TEEMA/Miękinia jako polski
   wątek AI server supply chain.
-- 2026-06-25: Refresh 16:58 CEST dodał RAISE US jako AI workforce transition
-  story, NY-12 jako polityczny proxy war wokół regulacji AI oraz Guardian/AP/UNU
-  jako uzupełnienie data-center policy o transparentność środowiskową i spory
-  klimatyczne.
 - 2026-06-25: Refresh 15:10 CEST dodał Amazon India AI/cloud infrastructure
   jako nowy sovereign compute story, Google AI governance white paper,
   Microsoft Behind The Chat jako AI companion safety story oraz
@@ -215,6 +211,10 @@
 - 2026-06-25: Refresh 16:03 CEST dodał Apple price increases jako konsumencki
   spillover AI memory/storage crunch oraz Mirendil jako autonomous AI R&D lab
   finansowany przez a16z, Kleiner Perkins i NVIDIĘ.
+- 2026-06-25: Refresh 16:58 CEST dodał RAISE US jako AI workforce transition
+  story, NY-12 jako polityczny proxy war wokół regulacji AI oraz Guardian/AP/UNU
+  jako uzupełnienie data-center policy o transparentność środowiskową i spory
+  klimatyczne.
 - 2026-06-25: Daily tech podcast generated from the normal morning research
   report; created `draft.md`, `script.md`, `sources.md`, `render.json`,
   `brief.pdf`, and `podcast.mp3`; final MP3 used Piper and measured about 7:31
