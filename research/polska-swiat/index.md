@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-06-24
+Last updated: 2026-06-25
 
 ## Current Understanding
 
@@ -34,6 +34,11 @@ polsko-ukraińskich przed Konferencją Odbudowy Ukrainy w Gdańsku, drugi dzień
 wizyty Prezydenta RP w Turcji z punktem wojskowym w İncirlik, oficjalny
 komunikat KPRM po V4, spór USA-Iran o inspekcje nuklearne oraz rozmowy
 Starmer-Burnham o szybkim przekazaniu władzy.
+Po runie 25 czerwca najważniejszy blok to start URC 2026 w Gdańsku bez
+Zełenskiego, z udziałem rządu, biznesu i instytucji oraz z protestami w tle.
+W agendzie bezpieczeństwa wyróżniają się: prezydencka wizyta w İncirlik,
+spotkanie ministrów obrony V4 w Budapeszcie, zamówienia GROT A3 oraz debata o
+roli Ukrainy w europejskiej obronie.
 
 ## Stable Facts
 
@@ -75,9 +80,12 @@ Starmer-Burnham o szybkim przekazaniu władzy.
   publikacyjnego, który commit/push ogranicza do aktywnego tematu i manifestu.
 - Relacje redakcyjne o E5 i rozmowach liderów w Berlinie traktować jako ważny
   sygnał, ale czekać na oficjalny komunikat przed mocną tezą.
+- PDF-y dziennych raportów powinny być sprawdzane pod kątem mobile-first formatu
+  390 x 844 pt i czytelności w iOS bez ręcznego zoomu.
 
 ## Recent Reports
 
+- [2026-06-25](runs/2026-06-25.md)
 - [2026-06-24](runs/2026-06-24.md)
 - [2026-06-23](runs/2026-06-23.md)
 - [2026-06-22](runs/2026-06-22.md)

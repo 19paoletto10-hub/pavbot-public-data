@@ -48,6 +48,11 @@
   decisions; Prezydent RP for Turkey/İncirlik and the order dispute line; AP
   for USA-Iran inspections and Ormuz; Guardian for Starmer-Burnham transition.
   Onet's E5 report is important but should be confirmed by official sources.
+- 2026-06-25: Thursday research run created a material update and verified the
+  new mobile-first PDF requirement. Strongest sources were KPRM/Ministerstwo
+  Energii for URC 2026, Prezydent RP for İncirlik/PKW Turcja, MON for V4 and
+  GROT A3, Guardian for the Ukraine-as-European-defense argument, and AP for
+  USA-Iran inspections.
 
 ## Done
 
