@@ -2,9 +2,6 @@
 
 ## Open
 
-- Raw manifest after the 2026-06-26 12:01 and 15:02 publishes still does not
-  expose `puls-dnia-news` or `pulseNewsData`; approve the one-time bootstrap
-  proposal for manifest generation.
 - After the manifest bootstrap, confirm the iOS app shows at least six pairs of
   cards from the newest `pulseNewsData`.
 - Consider adding a future `pulseNewsImage` field only if the native card UI
@@ -16,3 +13,5 @@
 
 - Production automation exists for `Pavbot Puls Dnia 3h` with the intended
   Europe/Warsaw cadence context.
+- Public manifest now exposes `puls-dnia-news` artifacts as `pulseNewsData`,
+  so the bootstrap blocker is resolved.

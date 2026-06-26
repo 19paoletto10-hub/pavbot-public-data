@@ -5,6 +5,8 @@
 This topic powers the iOS `Dzisiaj -> Szybki puls dnia` carousel. The app first
 looks for the newest `pulseNewsData` artifact in the public manifest. If none
 exists, it falls back to the older `aktualne-wydarzenia-mobile` magazine data.
+The public manifest now exposes timestamped `pulseNewsData` artifacts for this
+topic, so the primary feed path is active when refresh succeeds.
 
 The live run contract is now active with timestamped Markdown and
 `pulse-news.json` outputs using one shared Europe/Warsaw run stamp. Material
