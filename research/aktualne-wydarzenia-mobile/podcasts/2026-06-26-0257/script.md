@@ -1,0 +1,29 @@
+# Script: Pavbot Aktualne Wydarzenia Mobile
+
+Dzień dobry. To Pavbot Aktualne, wydanie na piątek, dwudziestego szóstego czerwca, przygotowane bardzo wcześnie rano, jeszcze zanim większość urzędowych podsumowań dnia zdążyła wstać z kawą.
+
+Dzisiaj mamy dwa symbole poranka: Gdańsk i termometr. Gdańsk, bo właśnie tam trwa Ukraine Recovery Conference, czyli konferencja o odbudowie Ukrainy. Termometr, bo Rządowe Centrum Bezpieczeństwa ostrzega przed falą upałów na niemal całym obszarze kraju. Innymi słowy: wielka dyplomacja spotyka się z bardzo codziennym pytaniem, czy w niedzielę da się wyjść z domu bez zamieniania się w lekko zdenerwowaną grzankę.
+
+Najpierw Gdańsk. Oficjalna strona konferencji wskazuje, że Ukraine Recovery Conference odbywa się dwudziestego piątego i dwudziestego szóstego czerwca, a współorganizują ją Polska i Ukraina. Tematy przewodnie są konkretne: energia, infrastruktura krytyczna, logistyka, inwestycje i odbudowa gospodarki. To ważne, bo odbudowa Ukrainy nie jest już opisywana wyłącznie jako pomoc po zniszczeniach. Coraz częściej jest przedstawiana jako projekt odporności całego regionu.
+
+Pomorski Urząd Wojewódzki podaje, że wśród uczestników są między innymi Ursula von der Leyen, Valdis Dombrovskis, Marta Kos, Friedrich Merz, Rob Jetten, Andrej Babiš, Kristen Michal oraz premier Ukrainy Julija Swyrydenko. Polskę reprezentuje premier Donald Tusk z ministrami. To szeroka lista, ale najważniejsze pytanie brzmi: czy po drugim dniu konferencji pojawią się konkretne liczby, podpisane umowy i wspólne oświadczenia. Bez tego zostają ładne kadry, a ładne kadry są dobre na okładkę, niekoniecznie na odbudowę infrastruktury krytycznej.
+
+KPRM eksponuje równolegle Szczyt Wschodniej Flanki i komunikat o Rosji jako największym zagrożeniu. To spina Gdańsk w jedną większą narrację: odbudowa Ukrainy, bezpieczeństwo wschodniej flanki i gotowość państw regionu nie są już osobnymi tematami. One zaczynają działać jak jeden system naczyń połączonych. Jeżeli Ukraina ma odbudowywać energię, logistykę i infrastrukturę, to musi mieć także zdolność przetrwania kolejnych ataków.
+
+Teraz Polska codzienna, czyli upał, susza i ostrzeżenia. RCB informuje, że w najbliższych dniach fala upałów obejmie niemal cały kraj, a najwyższe temperatury są prognozowane na niedzielę, dwudziestego ósmego czerwca. Raport dobowy RCB pokazuje ostrzeżenia drugiego stopnia przed upałem w wielu województwach oraz suszę hydrologiczną niemal w całym kraju, poza Małopolską. To nie jest tylko meteorologiczny przypis pod polityką. To praktyczna informacja o wodzie, zdrowiu, podróżach, pracy służb i początku wakacji.
+
+W tym miejscu warto powiedzieć jasno: jeżeli dziś planujesz dłuższą podróż, aktywność na zewnątrz albo opiekę nad kimś starszym, to aktualizacje RCB i IMGW są bardziej użyteczne niż kolejny komentarz o tym, kto komu podał rękę na szczycie. Dyplomacja jest ważna, ale odwodnienie nie czyta komunikatów prasowych.
+
+Na poziomie międzynarodowym mamy mocny sygnał z Rady Unii Europejskiej. Sankcje gospodarcze wobec Rosji zostały przedłużone o kolejny rok, do trzydziestego pierwszego lipca dwa tysiące dwudziestego siódmego roku. To wydłuża przewidywalność presji na Rosję. Jednocześnie podnosi poprzeczkę dla Europy: sama presja nie wystarczy, jeśli nie będzie połączona z finansowaniem Ukrainy, uszczelnianiem sankcji i zdolnościami obronnymi.
+
+NATO informuje z kolei, że sekretarz generalny Mark Rutte spotkał się w Waszyngtonie z prezydentem Donaldem Trumpem, przygotowując lipcowy szczyt NATO w Ankarze. To ważny kontekst dla Gdańska. W jednym tygodniu widzimy trzy poziomy tej samej układanki: pieniądze na odbudowę, sankcje wobec Rosji i rozmowę o zdolnościach obronnych przed szczytem sojuszu. Można to nazwać geopolitycznym multitaskingiem. Tylko bez luksusu wyciszenia powiadomień.
+
+W krajowej polityce mniej spektakularnie, ale nadal konkretnie: Senat ma dziś zaplanowany drugi dzień sześćdziesiątego pierwszego posiedzenia, w kalendarzu od dziesiątej do dwudziestej pięćdziesiąt pięć. W widocznych pracach jest między innymi ustawa dotycząca dróg publicznych oraz niektórych innych ustaw. To przypomina, że nawet gdy nagłówki zajmuje Ukraina, NATO i pogoda, instytucje robią swoją codzienną robotę legislacyjną.
+
+W tle jest też pamięć historyczna. Prezydent RP uczestniczył w Radomiu w obchodach pięćdziesiątej rocznicy Czerwca siedemdziesiątego szóstego roku. Uroczystości odbyły się przy pomniku Radomskiego Czerwca. Ten wątek nie zmienia układu sił dnia, ale pokazuje, że polityka symboliczna nadal jest ważnym językiem opisu państwa, pracy i społecznego oporu.
+
+Na koniec Iran. Według relacji Al Jazeery Rafael Grossi z Międzynarodowej Agencji Energii Atomowej mówił, że memorandum dotyczące Stanów Zjednoczonych i Iranu przewiduje nadzór agencji nad działaniami nuklearnymi. Tu jednak trzeba zachować ostrożność. W sprawach nuklearnych różnica między “zapowiedziane” i “zweryfikowane” jest ogromna. Dopóki nie ma świeżego, formalnego komunikatu samej agencji o realnym dostępie, zakresie i terminach inspekcji, traktujemy to jako ważny sygnał do obserwacji, a nie zamknięty fakt.
+
+Najważniejsze na dziś: po pierwsze, sprawdzić później, czy z Gdańska wyjdą konkretne decyzje i liczby. Po drugie, śledzić ostrzeżenia pogodowe przed weekendem, bo niedziela może być najgorętszym punktem tej fali. Po trzecie, patrzeć na Ankarę, bo lipcowy szczyt NATO będzie testem, czy Europa i Stany Zjednoczone przechodzą od deklaracji do dostarczania zdolności.
+
+To wszystko w porannym wydaniu Pavbot Aktualne. Jeżeli aplikacja działa jak trzeba, zobaczysz ten materiał jako natywny magazyn w zakładce Aktualne, z tematami dnia, źródłami i możliwością czytania na głos. A jeśli coś się nie pokaże, to znaczy, że gdzieś po drodze manifest albo JSON postanowił zostać minimalistą. Minimalizm jest dobry w designie, ale w danych już niekoniecznie.

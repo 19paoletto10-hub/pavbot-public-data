@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-21",
+  "runTime": "01:41",
+  "executiveSummary": "Od poprzedniej rundy z 2026-06-20 21:52 CEST doszło do wyraźnego ruchu po stronie świeżych publicznych ofert. Najmocniejszy nowy klaster to Rite NRG, które ma dwie bieżące role AI Engineer i Staff Engineer dla pracy zdalnej z Polski, obie mocno osadzone w RAG, agentic AI i wdrożeniach produkcyjnych. Doszły też AI Product Engineer (Tooling) w Tooploox, oficjalny Principal Software Engineer w deepsense.ai oraz oficjalne role AI & LLM Solutions w GFT z Wrocławiem na liście lokalizacji hybrydowych. Równolegle KYOTU AI / ML / LLM Engineer jest już publicznie oznaczone jako zamknięte, a deepsense nadal utrzymuje AI Software Engineer pod dwoma publicznymi URL-ami, więc canonical URL dla tej roli pozostaje niestabilny.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Staff Engineer",
+      "company": "Rite NRG",
+      "location": "Remote within Poland; firma pokazuje też adres",
+      "workMode": "Remote",
+      "compensation": "140-150 PLN netto/h B2B.",
+      "seniority": "Staff",
+      "fitSummary": "LLMs, RAG, Prompt Engineering, Agentic AI, model",
+      "whyInteresting": "jedna z najmocniejszych publicznych ról tej rundy dla",
+      "uncertainty": "szczegóły są publiczne, ale źródłem jest board Just Join IT,",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/rite-nrg-staff-engineer-wroclaw-ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "AI Engineer",
+      "company": "Rite NRG",
+      "location": "Remote within Poland; board wskazuje też Wrocław.",
+      "workMode": "Remote",
+      "compensation": "120-140 PLN netto/h B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Azure OpenAI, LLM APIs, RAG, Prompt Engineering, NLP,",
+      "whyInteresting": "wyraźnie produkcyjna rola mid-level pod budowę",
+      "uncertainty": "podobnie jak wyżej, brak osobnego canonical URL pracodawcy",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/rite-nrg-ai-engineer-wroclaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "AI Product Engineer (Tooling)",
+      "company": "Tooploox",
+      "location": "Wrocław, Warszawa, Remote.",
+      "workMode": "Remote",
+      "compensation": "20 000-35 000 PLN + VAT/mies. B2B albo",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM APIs, Coding Agents, React, Node.js, Python, plus",
+      "whyInteresting": "rola wyraźnie osadzona w narzędziach agentowych i",
+      "uncertainty": "szczegóły pochodzą z publicznego No Fluff Jobs; w tej rundzie",
+      "sourceURLs": [
+        "https://nofluffjobs.com/job/ai-product-engineer-tooling-tooploox-wroclaw-1"
+      ],
+      "tags": [
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Principal Software Engineer",
+      "company": "deepsense.ai",
+      "location": "Remote, Poland.",
+      "workMode": "Remote",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Principal",
+      "fitSummary": "oficjalny opis firmy wprost akcentuje LLM & RAG, MLOps,",
+      "whyInteresting": "oficjalna rola dla remote Poland blisko platformy i",
+      "uncertainty": "brak jawnej stawki; z samej strony nie wynika, czy to nowy wakat",
+      "sourceURLs": [
+        "https://deepsense.ai/careers/principal-software-engineer/"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "MLOps"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Data Engineer / Data Scientist (AI & LLM Solutions) Expert",
+      "company": "GFT",
+      "location": "hybryda; oficjalny opis wskazuje Wrocław jako jedną z",
+      "workMode": "Hybrid",
+      "compensation": "18 800-28 500 PLN brutto/mies..",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Agentic AI frameworks, AI agent development, LLMs,",
+      "whyInteresting": "tytuł jest mieszany, ale oficjalny opis jest bardzo",
+      "uncertainty": "sam tytuł może przyciągać też kandydatów data-heavy, ale zakres",
+      "sourceURLs": [
+        "https://jobs.gft.com/Poland/job/Warszawa-Data-Engineer-Data-Scientist-%28AI-%26-LLM-Solutions%29-Expert-00-839/1370179733/"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano nową publiczną rolę AI Engineer w Rite NRG dla pracy zdalnej z",
+    "Dodano nową publiczną rolę Staff Engineer w Rite NRG dla pracy zdalnej z",
+    "Dodano nową publiczną rolę AI Product Engineer (Tooling) w Tooploox.",
+    "Dodano nową oficjalną rolę Principal Software Engineer w deepsense.ai.",
+    "Dodano oficjalny klaster GFT AI & LLM Solutions z Wrocławiem na liście",
+    "Zmieniono status KYOTU AI / ML / LLM Engineer na zamknięty/expired.",
+    "Dopisano, że deepsense.ai AI Software Engineer nadal ma dwa równoległe"
+  ],
+  "risks": [
+    "Rite NRG i Tooploox są w tej rundzie oparte na publicznych boardach;",
+    "GFT ma silny komponent AI/LLM, ale nazwy ról pozostają mieszane",
+    "deepsense.ai nadal utrudnia deduplikację dla AI Software Engineer, bo"
+  ],
+  "recommendedActions": [
+    "Low-risk action applied: dodano do Seen Opportunities nowe wpisy dla",
+    "Low-risk action applied: zaktualizowano KYOTU jako ofertę zamkniętą i",
+    "Follow-up: w następnej rundzie sprawdzić, czy Rite NRG utrzyma oba wakaty",
+    "Follow-up: ponownie zweryfikować, czy deepsense.ai zostawi tylko jeden",
+    "Follow-up: monitorować, czy GFT utrzyma oba oficjalne warianty"
+  ],
+  "checkedSources": [
+    {
+      "title": "KYOTU Technology - AI / ML / LLM Engineer",
+      "url": "https://www.pracuj.pl/praca/ai-ml-llm-engineer-wroclaw-wybrzeze-stanislawa-wyspianskiego-39a%2Coferta%2C1004744984",
+      "status": "checked"
+    },
+    {
+      "title": "Rite NRG - AI Engineer",
+      "url": "https://justjoin.it/job-offer/rite-nrg-ai-engineer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Rite NRG - Staff Engineer",
+      "url": "https://justjoin.it/job-offer/rite-nrg-staff-engineer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Tooploox - AI Product Engineer (Tooling)",
+      "url": "https://nofluffjobs.com/job/ai-product-engineer-tooling-tooploox-wroclaw-1",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai - Principal Software Engineer",
+      "url": "https://deepsense.ai/careers/principal-software-engineer/",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai - Careers",
+      "url": "https://deepsense.ai/careers/",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai - AI Software Engineer",
+      "url": "https://deepsense.ai/careers/ai-software-engineer/",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai - AI Software Engineer 2",
+      "url": "https://deepsense.ai/careers/ai-software-engineer-2/",
+      "status": "checked"
+    },
+    {
+      "title": "GFT - Data Engineer / Data Scientist (AI & LLM Solutions) Expert",
+      "url": "https://jobs.gft.com/Poland/job/Warszawa-Data-Engineer-Data-Scientist-%28AI-%26-LLM-Solutions%29-Expert-00-839/1370179733/",
+      "status": "checked"
+    },
+    {
+      "title": "GFT - Senior Data Engineer / Data Scientist (AI & LLM Solutions)",
+      "url": "https://jobs.gft.com/Poland/job/Krak%C3%B3w-Senior-Data-Engineer-Data-Scientist-%28AI-%26-LLM-Solutions%29-30-302/1370188033/",
+      "status": "checked"
+    }
+  ]
+}

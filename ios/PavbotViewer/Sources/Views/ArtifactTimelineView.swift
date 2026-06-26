@@ -3,75 +3,53 @@ import SwiftUI
 struct ArtifactTimelineView: View {
     @Environment(ManifestStore.self) private var store
     @Environment(AppRouter.self) private var router
-    @State private var selectedDay: Date?
     @State private var searchText = ""
-    @State private var didApplyInitialDay = false
+    @State private var expandedDays: Set<String> = []
 
     var body: some View {
-        List {
+        Group {
             if let manifest = store.manifest {
-                ArtifactSummarySection(manifest: manifest)
-                if let route = router.artifactRoute {
-                    ArtifactRouteSection(
-                        route: route,
-                        matchingCount: manifest.filteredArtifacts(for: route).count,
-                        clearAction: clearFilters
+                if let group = selectedGroup(in: manifest) {
+                    AutomationArtifactsDetailView(
+                        group: group,
+                        route: router.artifactRoute,
+                        searchText: $searchText,
+                        expandedDays: $expandedDays,
+                        refreshAction: refreshArtifacts,
+                        clearFiltersAction: clearFilters,
+                        backAction: showAutomationTiles
                     )
                 } else {
-                    DateFilterSection(days: manifest.availableDays, selectedDay: $selectedDay)
-                }
-
-                let artifacts = visibleArtifacts(in: manifest)
-                if artifacts.isEmpty {
-                    VStack(spacing: 12) {
-                        ContentUnavailableView(
-                            hasActiveFilters ? "No matching artifacts" : "No artifacts",
-                            systemImage: "tray",
-                            description: Text(hasActiveFilters ? "Clear filters or refresh the manifest." : "Refresh the manifest after an automation publishes files.")
-                        )
-                        if hasActiveFilters {
-                            Button("Clear filters", action: clearFilters)
-                                .buttonStyle(.bordered)
-                        }
-                    }
-                } else {
-                    ForEach(groupedArtifacts(artifacts), id: \.key) { group in
-                        Section(group.key) {
-                            ForEach(group.values) { artifact in
-                                NavigationLink(value: artifact) {
-                                    ArtifactRow(artifact: artifact)
-                                }
-                            }
-                        }
-                    }
+                    AutomationArtifactGridView(
+                        manifest: manifest,
+                        searchText: $searchText,
+                        refreshAction: refreshArtifacts,
+                        selectAction: selectGroup
+                    )
                 }
             } else {
-                ContentUnavailableView("No manifest", systemImage: "doc.badge.questionmark")
+                ContentUnavailableView("Brak manifestu", systemImage: "doc.badge.questionmark")
             }
         }
-        .navigationTitle("Artifacts")
-        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search files, topics, paths")
-        .listStyle(.insetGrouped)
-        .refreshable {
-            await refreshArtifacts()
-        }
+        .navigationTitle("Wszystkie pliki")
+        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Szukaj automatyzacji, plików i tematów")
         .navigationDestination(for: PavbotArtifact.self) { artifact in
             ArtifactDetailView(artifact: artifact)
         }
         .onAppear {
-            applyInitialDayIfNeeded()
+            syncSelectionFromRoute()
         }
         .onChange(of: store.manifest) { _, _ in
-            applyInitialDayIfNeeded()
-        }
-        .onChange(of: store.lastNewArtifacts) { _, newArtifacts in
-            applyNewestNewArtifactDay(newArtifacts)
+            syncSelectionFromRoute()
         }
         .onChange(of: router.artifactRoute) { _, route in
             if route != nil {
-                selectedDay = nil
                 searchText = ""
             }
+            syncSelectionFromRoute()
+        }
+        .onChange(of: router.selectedArtifactAutomationID) { _, _ in
+            expandSelectedDayIfNeeded()
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -81,148 +59,686 @@ struct ArtifactTimelineView: View {
                     Image(systemName: "arrow.clockwise")
                 }
                 .disabled(store.state == .loading)
-                .accessibilityLabel("Refresh artifacts")
+                .accessibilityLabel("Odśwież artefakty")
             }
         }
     }
 
-    private func groupedArtifacts(_ artifacts: [PavbotArtifact]) -> [(key: String, values: [PavbotArtifact])] {
-        Dictionary(grouping: artifacts, by: \.displayDate)
-            .map { ($0.key, $0.value.sorted { $0.path < $1.path }) }
-            .sorted { lhs, rhs in
-                if lhs.key == "No date" { return false }
-                if rhs.key == "No date" { return true }
-                return lhs.key > rhs.key
+    private func selectedGroup(in manifest: PavbotManifest) -> AutomationArtifactGroup? {
+        manifest.automationArtifactGroup(for: router.selectedArtifactAutomationID)
+            ?? manifest.automationArtifactGroup(for: router.artifactRoute)
+    }
+
+    private func selectGroup(_ group: AutomationArtifactGroup) {
+        searchText = ""
+        expandedDays = []
+        let day = group.latestArtifact?.date ?? group.days.first?.pavbotDayString
+        if let day {
+            expandedDays.insert(day)
+        }
+        router.selectArtifactAutomation(id: group.id, day: day)
+    }
+
+    private func showAutomationTiles() {
+        searchText = ""
+        expandedDays = []
+        router.clearArtifactRoute()
+    }
+
+    private func clearFilters() {
+        let currentGroup = store.manifest.flatMap { selectedGroup(in: $0) }
+        let selectedDay = router.selectedArtifactDay ?? currentGroup?.latestArtifact?.date ?? currentGroup?.days.first?.pavbotDayString
+
+        searchText = ""
+        expandedDays = []
+        router.clearArtifactRoute()
+
+        if let currentGroup {
+            if let selectedDay {
+                expandedDays.insert(selectedDay)
             }
-    }
-
-    private var hasActiveFilters: Bool {
-        router.artifactRoute != nil || selectedDay != nil || !searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
-    }
-
-    private func visibleArtifacts(in manifest: PavbotManifest) -> [PavbotArtifact] {
-        let routeScopedArtifacts = router.artifactRoute.map { manifest.filteredArtifacts(for: $0) }
-        let dateScopedArtifacts = routeScopedArtifacts ?? manifest.artifacts(on: selectedDay)
-        let trimmedSearch = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !trimmedSearch.isEmpty else { return dateScopedArtifacts }
-        return dateScopedArtifacts.filter { $0.matchesSearch(trimmedSearch) }
+            router.selectArtifactAutomation(id: currentGroup.id, day: selectedDay)
+        }
     }
 
     private func refreshArtifacts() async {
         await store.reload()
-        guard router.artifactRoute == nil else { return }
-        if store.lastNewArtifacts.isEmpty {
-            selectedDay = store.manifest?.availableDays.first
-            didApplyInitialDay = selectedDay != nil
-        } else {
-            applyNewestNewArtifactDay(store.lastNewArtifacts)
+        syncSelectionFromRoute()
+
+        guard
+            router.artifactRoute == nil,
+            let manifest = store.manifest,
+            let group = selectedGroup(in: manifest)
+        else {
+            return
+        }
+
+        let groupIDs = Set(group.artifacts.map(\.id))
+        if let latestNewDay = store.lastNewArtifacts
+            .filter({ groupIDs.contains($0.id) })
+            .compactMap(\.date)
+            .max()
+        {
+            router.selectedArtifactDay = latestNewDay
+            expandedDays.insert(latestNewDay)
         }
     }
 
-    private func clearFilters() {
-        router.clearArtifactRoute()
-        selectedDay = nil
-        searchText = ""
-    }
+    private func syncSelectionFromRoute() {
+        guard let manifest = store.manifest else { return }
 
-    private func applyInitialDayIfNeeded() {
-        guard router.artifactRoute == nil, !didApplyInitialDay, let latestDay = store.manifest?.availableDays.first else { return }
-        selectedDay = latestDay
-        didApplyInitialDay = true
-    }
+        if router.artifactRoute != nil {
+            router.resolveArtifactRouteSelection(in: manifest)
+        }
 
-    private func applyNewestNewArtifactDay(_ artifacts: [PavbotArtifact]) {
-        guard router.artifactRoute == nil, let latestDay = artifacts.compactMap(\.day).max() else { return }
-        selectedDay = latestDay
-        didApplyInitialDay = true
-    }
-}
-
-private struct ArtifactSummarySection: View {
-    let manifest: PavbotManifest
-
-    var body: some View {
-        Section {
-            HStack(spacing: 12) {
-                MetricTile(title: "Files", value: "\(manifest.artifacts.count)", systemImage: "doc.on.doc.fill", tint: .blue)
-                MetricTile(title: "Days", value: "\(manifest.availableDays.count)", systemImage: "calendar", tint: .green)
+        guard let group = selectedGroup(in: manifest) else {
+            if router.selectedArtifactAutomationID != nil {
+                router.selectedArtifactAutomationID = nil
+                router.selectedArtifactDay = nil
             }
+            return
         }
-        .listRowBackground(Color.clear)
-        .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 0, trailing: 0))
+
+        if let routeDate = router.artifactRoute?.date {
+            router.selectedArtifactDay = routeDate
+            expandedDays.insert(routeDate)
+            return
+        }
+
+        expandSelectedDayIfNeeded(for: group)
+    }
+
+    private func expandSelectedDayIfNeeded() {
+        guard
+            let manifest = store.manifest,
+            let group = selectedGroup(in: manifest)
+        else {
+            return
+        }
+        expandSelectedDayIfNeeded(for: group)
+    }
+
+    private func expandSelectedDayIfNeeded(for group: AutomationArtifactGroup) {
+        if let selectedDay = router.selectedArtifactDay {
+            expandedDays.insert(selectedDay)
+            return
+        }
+
+        if let latestDay = group.latestArtifact?.date ?? group.days.first?.pavbotDayString {
+            router.selectedArtifactDay = latestDay
+            expandedDays.insert(latestDay)
+        }
     }
 }
 
-private struct DateFilterSection: View {
-    let days: [Date]
-    @Binding var selectedDay: Date?
+private struct AutomationArtifactGridView: View {
+    let manifest: PavbotManifest
+    @Binding var searchText: String
+    let refreshAction: () async -> Void
+    let selectAction: (AutomationArtifactGroup) -> Void
 
     var body: some View {
-        Section {
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 8) {
-                    DayChip(title: "All", isSelected: selectedDay == nil) {
-                        selectedDay = nil
+        ScrollView {
+            VStack(alignment: .leading, spacing: 18) {
+                ArtifactSummaryHeader(manifest: manifest)
+
+                if visibleGroups.isEmpty {
+                        ContentUnavailableView(
+                            hasSearch ? "Brak pasujących automatyzacji" : "Brak automatyzacji",
+                            systemImage: "square.grid.2x2",
+                            description: Text(hasSearch ? "Wyczyść wyszukiwanie, aby zobaczyć wszystkie kafelki." : "Włącz automatyzacje w manifeście, aby pokazać opublikowane pliki.")
+                        )
+                        if hasSearch {
+                            Button("Wyczyść wyszukiwanie") {
+                                searchText = ""
+                            }
+                        .buttonStyle(.bordered)
                     }
-                    ForEach(days, id: \.self) { day in
-                        DayChip(title: day.pavbotDayString, isSelected: selectedDay?.pavbotDayString == day.pavbotDayString) {
-                            selectedDay = day
+                } else {
+                    LazyVGrid(columns: columns, spacing: 12) {
+                        ForEach(visibleGroups) { group in
+                            AutomationArtifactTile(group: group) {
+                                selectAction(group)
+                            }
                         }
                     }
                 }
-                .padding(.vertical, 2)
+            }
+            .padding(.horizontal, 20)
+            .padding(.vertical, 14)
+        }
+        .refreshable {
+            await refreshAction()
+        }
+        .background(Color(.systemGroupedBackground))
+    }
+
+    private var columns: [GridItem] {
+        [GridItem(.adaptive(minimum: 156, maximum: 230), spacing: 12)]
+    }
+
+    private var visibleGroups: [AutomationArtifactGroup] {
+        let query = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+        let groups = manifest.automationArtifactGroups
+        guard !query.isEmpty else { return groups }
+        return groups.filter { groupMatchesSearch($0, query: query) }
+    }
+
+    private var hasSearch: Bool {
+        !searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+
+    private func groupMatchesSearch(_ group: AutomationArtifactGroup, query: String) -> Bool {
+        let automationValues = [
+            group.automation.id,
+            group.automation.name,
+            group.automation.kind.label,
+            group.automation.topic,
+            group.automation.topicPath,
+            group.automation.cadence
+        ]
+
+        if automationValues.contains(where: { $0.range(of: query, options: [.caseInsensitive, .diacriticInsensitive]) != nil }) {
+            return true
+        }
+
+        return group.artifacts.contains { $0.matchesSearch(query) }
+    }
+}
+
+private struct AutomationArtifactsDetailView: View {
+    let group: AutomationArtifactGroup
+    let route: ArtifactNotificationRoute?
+    @Binding var searchText: String
+    @Binding var expandedDays: Set<String>
+    let refreshAction: () async -> Void
+    let clearFiltersAction: () -> Void
+    let backAction: () -> Void
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 16) {
+                Button(action: backAction) {
+                    Label("Automatyzacje", systemImage: "chevron.left")
+                        .font(.subheadline.weight(.semibold))
+                }
+                .buttonStyle(.plain)
+                .foregroundStyle(.blue)
+
+                AutomationArtifactsHeader(group: group)
+
+                if let route {
+                    ArtifactRouteBanner(
+                        route: route,
+                        matchingCount: matchingCount,
+                        clearAction: clearFiltersAction
+                    )
+                }
+
+                if visibleDays.isEmpty && visibleOtherArtifacts.isEmpty {
+                    VStack(spacing: 12) {
+                        ContentUnavailableView(
+                            hasActiveFilters ? "Brak pasujących plików" : "Brak plików",
+                            systemImage: "tray",
+                            description: Text(hasActiveFilters ? "Wyczyść filtry albo odśwież manifest." : "Odśwież manifest po publikacji plików przez tę automatyzację.")
+                        )
+                        if hasActiveFilters {
+                            Button("Wyczyść filtry", action: clearFiltersAction)
+                                .buttonStyle(.bordered)
+                        }
+                    }
+                    .frame(maxWidth: .infinity)
+                } else {
+                    VStack(spacing: 10) {
+                        ForEach(visibleDays, id: \.self) { day in
+                            let artifacts = visibleArtifacts(on: day)
+                            ArtifactDayDisclosure(
+                                day: day,
+                                artifacts: artifacts,
+                                podcastPackage: group.automation.kind == .podcast ? group.podcastPackage(on: day, matching: route) : nil,
+                                isExpanded: expansionBinding(for: day.pavbotDayString)
+                            )
+                        }
+
+                        if !visibleOtherArtifacts.isEmpty {
+                            OtherArtifactsPanel(artifacts: visibleOtherArtifacts)
+                        }
+                    }
+                }
+            }
+            .padding(.horizontal, 20)
+            .padding(.vertical, 14)
+        }
+        .refreshable {
+            await refreshAction()
+        }
+        .background(Color(.systemGroupedBackground))
+    }
+
+    private var visibleDays: [Date] {
+        group.days.filter { !visibleArtifacts(on: $0).isEmpty }
+    }
+
+    private var visibleOtherArtifacts: [PavbotArtifact] {
+        guard route?.date == nil else { return [] }
+
+        var artifacts = group.otherArtifacts
+        if let route, !route.artifactIDs.isEmpty {
+            let ids = Set(route.artifactIDs)
+            artifacts = artifacts.filter { ids.contains($0.id) }
+        }
+
+        let query = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !query.isEmpty else {
+            return artifacts.sorted(by: PavbotArtifact.automationDisplaySort)
+        }
+        return artifacts
+            .filter { $0.matchesSearch(query) }
+            .sorted(by: PavbotArtifact.automationDisplaySort)
+    }
+
+    private var matchingCount: Int {
+        visibleDays.reduce(0) { $0 + visibleArtifacts(on: $1).count } + visibleOtherArtifacts.count
+    }
+
+    private var hasActiveFilters: Bool {
+        route != nil || !searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+
+    private func visibleArtifacts(on day: Date) -> [PavbotArtifact] {
+        if let routeDate = route?.date, routeDate != day.pavbotDayString {
+            return []
+        }
+
+        var artifacts = group.artifacts(on: day, matching: route)
+        let query = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+        if !query.isEmpty {
+            artifacts = artifacts.filter { $0.matchesSearch(query) }
+        }
+        return artifacts
+    }
+
+    private func expansionBinding(for day: String) -> Binding<Bool> {
+        Binding(
+            get: { expandedDays.contains(day) },
+            set: { isExpanded in
+                if isExpanded {
+                    expandedDays.insert(day)
+                } else {
+                    expandedDays.remove(day)
+                }
+            }
+        )
+    }
+}
+
+private struct ArtifactSummaryHeader: View {
+    let manifest: PavbotManifest
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("Biblioteka automatyzacji")
+                .font(.title2.weight(.bold))
+            Text("Wybierz automatyzację, aby zobaczyć dni publikacji i wygenerowane pliki.")
+                .font(.subheadline)
+                .foregroundStyle(.secondary)
+
+            HStack(spacing: 12) {
+                MetricTile(title: "Automatyzacje", value: "\(manifest.enabledAutomations.count)", systemImage: "bolt.fill", tint: .yellow)
+                MetricTile(title: "Pliki", value: "\(manifest.artifacts.count)", systemImage: "doc.on.doc.fill", tint: .blue)
+                MetricTile(title: "Dni", value: "\(manifest.availableDays.count)", systemImage: "calendar", tint: .green)
             }
         }
     }
 }
 
-private struct ArtifactRouteSection: View {
+private struct AutomationArtifactTile: View {
+    let group: AutomationArtifactGroup
+    let action: () -> Void
+
+    var body: some View {
+        Button(action: action) {
+            VStack(alignment: .leading, spacing: 12) {
+                HStack(alignment: .top) {
+                    Image(systemName: group.automation.kind.systemImage)
+                        .font(.title3.weight(.semibold))
+                        .foregroundStyle(group.automation.kind.tint)
+                        .frame(width: 42, height: 42)
+                        .background(group.automation.kind.tint.opacity(0.14), in: RoundedRectangle(cornerRadius: 8))
+
+                    Spacer()
+
+                    StatusBadge(text: group.automation.kind.label, systemImage: "checkmark.circle.fill", tint: group.automation.kind.tint)
+                }
+
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(group.automation.name)
+                        .font(.headline.weight(.semibold))
+                        .foregroundStyle(.primary)
+                        .lineLimit(2)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    Text(group.automation.topic)
+                        .font(.caption.weight(.medium))
+                        .foregroundStyle(.secondary)
+                        .lineLimit(1)
+                }
+
+                Spacer(minLength: 4)
+
+                VStack(alignment: .leading, spacing: 6) {
+                    TileMetric(label: "Pliki", value: "\(group.artifacts.count)")
+                    TileMetric(label: "Dni", value: "\(group.days.count)")
+                    TileMetric(label: "Ostatnio", value: group.latestArtifact?.displayDate ?? "Brak plików")
+                }
+            }
+            .frame(maxWidth: .infinity, minHeight: 188, alignment: .topLeading)
+            .padding(14)
+            .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 8))
+            .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(group.automation.kind.tint.opacity(0.16), lineWidth: 1)
+            )
+        }
+        .buttonStyle(.plain)
+    }
+}
+
+private struct TileMetric: View {
+    let label: String
+    let value: String
+
+    var body: some View {
+        HStack(spacing: 8) {
+            Text(label)
+                .font(.caption2.weight(.semibold))
+                .foregroundStyle(.secondary)
+                .frame(width: 62, alignment: .leading)
+            Text(value)
+                .font(.caption.weight(.medium))
+                .foregroundStyle(.primary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.75)
+        }
+    }
+}
+
+private struct AutomationArtifactsHeader: View {
+    let group: AutomationArtifactGroup
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(alignment: .top, spacing: 12) {
+                Image(systemName: group.automation.kind.systemImage)
+                    .font(.title2.weight(.semibold))
+                    .foregroundStyle(group.automation.kind.tint)
+                    .frame(width: 48, height: 48)
+                    .background(group.automation.kind.tint.opacity(0.14), in: RoundedRectangle(cornerRadius: 8))
+
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(group.automation.name)
+                        .font(.title2.weight(.bold))
+                        .lineLimit(3)
+                    Text(group.automation.topicPath)
+                        .font(.subheadline)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(2)
+                    StatusBadge(text: group.automation.kind.label, systemImage: "checkmark.circle.fill", tint: group.automation.kind.tint)
+                }
+            }
+
+            HStack(spacing: 12) {
+                MetricTile(title: "Pliki", value: "\(group.artifacts.count)", systemImage: "doc.on.doc.fill", tint: .blue)
+                MetricTile(title: "Dni", value: "\(group.days.count)", systemImage: "calendar", tint: .green)
+                MetricTile(title: "Ostatnio", value: group.latestArtifact?.date ?? "-", subtitle: group.latestArtifact?.time, systemImage: "clock.fill", tint: .purple)
+            }
+        }
+    }
+}
+
+private struct ArtifactRouteBanner: View {
     let route: ArtifactNotificationRoute
     let matchingCount: Int
     let clearAction: () -> Void
 
     var body: some View {
-        Section {
-            HStack(alignment: .top, spacing: 12) {
-                Image(systemName: "bell.badge.fill")
-                    .foregroundStyle(.blue)
-                    .frame(width: 30, height: 30)
-                    .background(Color.blue.opacity(0.12), in: RoundedRectangle(cornerRadius: 8))
+        HStack(alignment: .top, spacing: 12) {
+            Image(systemName: "bell.badge.fill")
+                .foregroundStyle(.blue)
+                .frame(width: 34, height: 34)
+                .background(Color.blue.opacity(0.12), in: RoundedRectangle(cornerRadius: 8))
 
-                VStack(alignment: .leading, spacing: 4) {
-                    Text(route.displayTitle)
-                        .font(.subheadline.weight(.semibold))
-                    Text("\(matchingCount) files from the selected automation publish")
+            VStack(alignment: .leading, spacing: 4) {
+                Text(route.displayTitle)
+                    .font(.subheadline.weight(.semibold))
+                Text("\(matchingCount) plików z tej publikacji automatyzacji")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            }
+
+            Spacer()
+
+            Button("Wyczyść", action: clearAction)
+                .font(.caption.weight(.semibold))
+        }
+        .padding(14)
+        .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 8))
+    }
+}
+
+private struct ArtifactDayDisclosure: View {
+    let day: Date
+    let artifacts: [PavbotArtifact]
+    let podcastPackage: PodcastArtifactPackage?
+    @Binding var isExpanded: Bool
+
+    var body: some View {
+        DisclosureGroup(isExpanded: $isExpanded) {
+            VStack(spacing: 0) {
+                if let podcastPackage {
+                    PodcastPackagePanel(package: podcastPackage)
+
+                    if !remainingArtifacts.isEmpty {
+                        Divider()
+                            .padding(.leading, 50)
+                    }
+                }
+
+                ForEach(remainingArtifacts) { artifact in
+                    NavigationLink(value: artifact) {
+                        ArtifactRow(artifact: artifact)
+                    }
+                    .buttonStyle(.plain)
+
+                    if artifact.id != remainingArtifacts.last?.id {
+                        Divider()
+                            .padding(.leading, 50)
+                    }
+                }
+            }
+            .padding(.top, 8)
+        } label: {
+            HStack(spacing: 10) {
+                Image(systemName: "calendar")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.green)
+                    .frame(width: 30, height: 30)
+                    .background(Color.green.opacity(0.12), in: RoundedRectangle(cornerRadius: 8))
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(day.pavbotDayString)
+                        .font(.headline.weight(.semibold))
+                    Text("\(artifacts.count) plików")
                         .font(.caption)
                         .foregroundStyle(.secondary)
                 }
 
                 Spacer()
-
-                Button("Clear", action: clearAction)
-                    .font(.caption.weight(.semibold))
             }
-        } header: {
-            Text("Notification")
         }
+        .padding(14)
+        .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 8))
+    }
+
+    private var remainingArtifacts: [PavbotArtifact] {
+        guard let podcastPackage else { return artifacts }
+        var packagedIDs = Set<String>()
+        if let primaryAudio = podcastPackage.primaryAudio {
+            packagedIDs.insert(primaryAudio.id)
+        }
+        if let briefPDF = podcastPackage.briefPDF {
+            packagedIDs.insert(briefPDF.id)
+        }
+        packagedIDs.formUnion(podcastPackage.audioVariants.map(\.id))
+        return artifacts.filter { !packagedIDs.contains($0.id) }
     }
 }
 
-private struct DayChip: View {
-    let title: String
-    let isSelected: Bool
-    let action: () -> Void
+private struct PodcastPackagePanel: View {
+    let package: PodcastArtifactPackage
 
     var body: some View {
-        Button(action: action) {
-            Text(title)
-                .font(.subheadline.weight(.medium))
-                .padding(.horizontal, 12)
-                .padding(.vertical, 8)
-                .foregroundStyle(isSelected ? Color.white : Color.primary)
-                .background(isSelected ? Color.accentColor : Color.secondary.opacity(0.14), in: Capsule())
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(spacing: 10) {
+                Image(systemName: "waveform.circle.fill")
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.blue)
+                    .frame(width: 30, height: 30)
+
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Paczka podcastu")
+                        .font(.subheadline.weight(.semibold))
+                    Text("Audio i brief przygotowane do przeglądu na telefonie")
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                }
+            }
+
+            VStack(spacing: 0) {
+                if let audio = package.primaryAudio ?? package.audioVariants.first {
+                    NavigationLink(value: audio) {
+                        PodcastPackageActionRow(
+                            title: "Odtwórz audio",
+                            subtitle: audio.title,
+                            systemImage: "play.circle.fill",
+                            tint: .blue
+                        )
+                    }
+                    .buttonStyle(.plain)
+                }
+
+                if let briefPDF = package.briefPDF {
+                    if package.hasAudio {
+                        Divider()
+                            .padding(.leading, 42)
+                    }
+
+                    NavigationLink(value: briefPDF) {
+                        PodcastPackageActionRow(
+                            title: "Otwórz brief PDF",
+                            subtitle: "Czytelne podsumowanie ze źródłami",
+                            systemImage: "doc.richtext.fill",
+                            tint: .orange
+                        )
+                    }
+                    .buttonStyle(.plain)
+                } else if package.isMissingBriefPDF {
+                    if package.hasAudio {
+                        Divider()
+                            .padding(.leading, 42)
+                    }
+
+                    HStack(alignment: .top, spacing: 12) {
+                        Image(systemName: "doc.badge.clock")
+                            .font(.title3)
+                            .foregroundStyle(.secondary)
+                            .frame(width: 30, height: 30)
+
+                        VStack(alignment: .leading, spacing: 3) {
+                            Text("Brakuje briefu PDF")
+                                .font(.subheadline.weight(.semibold))
+                            Text("Ta publikacja ma audio, ale nie ma jeszcze mobilnego briefu PDF.")
+                                .font(.caption)
+                                .foregroundStyle(.secondary)
+                        }
+                    }
+                    .padding(.vertical, 9)
+                }
+            }
+
+            if package.audioVariants.count > 1 {
+                Text("\(package.audioVariants.count) warianty audio w tej paczce")
+                    .font(.caption2.weight(.medium))
+                    .foregroundStyle(.secondary)
+            }
         }
-        .buttonStyle(.plain)
+        .padding(.vertical, 8)
+    }
+}
+
+private struct PodcastPackageActionRow: View {
+    let title: String
+    let subtitle: String
+    let systemImage: String
+    let tint: Color
+
+    var body: some View {
+        HStack(alignment: .center, spacing: 12) {
+            Image(systemName: systemImage)
+                .font(.title3)
+                .foregroundStyle(tint)
+                .frame(width: 30, height: 30)
+
+            VStack(alignment: .leading, spacing: 3) {
+                Text(title)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.primary)
+                Text(subtitle)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(2)
+            }
+
+            Spacer()
+
+            Image(systemName: "chevron.right")
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(.tertiary)
+        }
+        .padding(.vertical, 9)
+    }
+}
+
+private struct OtherArtifactsPanel: View {
+    let artifacts: [PavbotArtifact]
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            HStack {
+                Text("Pozostałe pliki")
+                    .font(.headline.weight(.semibold))
+                Spacer()
+                Text("\(artifacts.count)")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(.secondary)
+            }
+
+            VStack(spacing: 0) {
+                ForEach(artifacts) { artifact in
+                    NavigationLink(value: artifact) {
+                        ArtifactRow(artifact: artifact)
+                    }
+                    .buttonStyle(.plain)
+
+                    if artifact.id != artifacts.last?.id {
+                        Divider()
+                            .padding(.leading, 50)
+                    }
+                }
+            }
+        }
+        .padding(14)
+        .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 8))
     }
 }
 
@@ -252,23 +768,6 @@ private struct ArtifactRow: View {
                     .lineLimit(1)
             }
         }
-        .padding(.vertical, 4)
-    }
-}
-
-extension ArtifactViewerKind {
-    var systemImage: String {
-        switch self {
-        case .markdown:
-            "doc.text"
-        case .pdf:
-            "doc.richtext"
-        case .audio:
-            "waveform"
-        case .json:
-            "curlybraces"
-        case .file:
-            "doc"
-        }
+        .padding(.vertical, 8)
     }
 }

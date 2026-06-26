@@ -46,27 +46,35 @@ polskich znaków diakrytycznych i zapisz
 - `Pavbot Aktualne Wydarzenia Mobile 10:15` runs daily at 10:15 Europe/Warsaw
   and updates `research/aktualne-wydarzenia-mobile` with one timestamped
   package: `runs/YYYY-MM-DD-HHMM.md`, `pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`,
-  `podcasts/YYYY-MM-DD-HHMM/`, female Piper MP3, male XTTS MP3, script,
-  sources, and variant metadata. ID: `pavbot-aktualne-wydarzenia-mobile-10-15`.
+  `pdfs/YYYY-MM-DD-HHMM-newspaper.pdf`, `podcasts/YYYY-MM-DD-HHMM/`, female
+  Piper MP3, male XTTS MP3, script, sources, and variant metadata. ID:
+  `pavbot-aktualne-wydarzenia-mobile-10-15`.
+- `Pavbot Puls Dnia 3h` runs at 06:00, 09:00, 12:00, 15:00, 18:00 and 21:00
+  Europe/Warsaw and updates `research/puls-dnia-news` with a timestamped
+  Markdown report plus `data/YYYY-MM-DD-HHMM-pulse-news.json`. ID:
+  `pavbot-puls-dnia-news-3h`.
 
 ## Publishing Contract
 
 Every active automation must finish with the shared publication script:
 
 ```bash
-export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
+# Optional override when origin/rawBaseUrl cannot derive the right public URL:
+# export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
 The isolated script creates a temporary clean worktree from `origin/main`,
 copies only generated outputs from the active topic, refreshes
 `public/pavbot-manifest.json`, commits those files, and pushes to
-`origin/main`. It requires a working `origin`, `PAVBOT_MANIFEST_URL`, and push
-credentials for `main`. Do not push generated automation files separately from
-the refreshed manifest. The GitHub webhook for live iOS notifications fires
-only after this push succeeds.
+`origin/main`. It derives the public manifest URL from `PAVBOT_MANIFEST_URL`,
+`PAVBOT_RAW_BASE_URL`, the existing manifest `rawBaseUrl`, or the GitHub
+`origin` remote. It requires a working `origin` and push credentials for
+`main`. Do not push generated automation files separately from the refreshed
+manifest. The GitHub webhook for live iOS notifications fires only after this
+push succeeds.
 
-Automation output commits may include only `runs/`, `pdfs/`, `podcasts/`,
+Automation output commits may include only `runs/`, `data/`, `pdfs/`, `podcasts/`,
 `index.md`, `backlog.md`, and `public/pavbot-manifest.json`. App code, docs,
 prompt edits, and topic `tools/` changes are development work and must be
 committed separately.

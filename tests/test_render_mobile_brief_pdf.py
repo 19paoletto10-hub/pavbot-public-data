@@ -102,8 +102,11 @@ Status: Material update
             self.assertTrue(output.exists())
             self.assertGreater(output.stat().st_size, 10_000)
             with pdfplumber.open(output) as pdf:
+                first_page = pdf.pages[0]
                 text = "\n".join(page.extract_text() or "" for page in pdf.pages)
 
+        self.assertLessEqual(first_page.width, 430)
+        self.assertGreaterEqual(first_page.height, 780)
         self.assertIn("Mobile News Brief", text)
         self.assertIn("Nowe fakty", text)
         self.assertIn("Interpretacja", text)

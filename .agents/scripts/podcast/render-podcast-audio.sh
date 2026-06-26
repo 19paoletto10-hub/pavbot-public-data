@@ -13,6 +13,7 @@ rate=${4:-${PAVBOT_TTS_RATE:-170}}
 engine_requested=${PAVBOT_TTS_ENGINE:-auto}
 model_dir=${PAVBOT_TTS_MODEL_DIR:-"$HOME/.cache/pavbot/tts-models"}
 voice_sample=${PAVBOT_TTS_VOICE_SAMPLE:-}
+xtts_timeout_seconds=${PAVBOT_TTS_XTTS_TIMEOUT_SECONDS:-}
 
 script_dir=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
 
@@ -127,11 +128,47 @@ try_piper() {
   ffmpeg -hide_banner -loglevel error -y -i "$audio_wav" -codec:a libmp3lame -q:a 4 "$output_mp3" || return 69
 }
 
+run_with_timeout() {
+  local seconds=$1
+  shift
+
+  if command -v timeout >/dev/null 2>&1; then
+    timeout "$seconds" "$@"
+    return $?
+  fi
+
+  python3 - "$seconds" "$@" <<'PY'
+import subprocess
+import sys
+
+timeout_seconds = int(sys.argv[1])
+cmd = sys.argv[2:]
+
+try:
+    completed = subprocess.run(cmd, check=False, timeout=timeout_seconds)
+except subprocess.TimeoutExpired:
+    print(f"xtts render exceeded timeout of {timeout_seconds}s")
+    raise SystemExit(124)
+
+raise SystemExit(completed.returncode)
+PY
+}
+
 try_xtts() {
   command -v ffmpeg >/dev/null 2>&1 || return 69
   local xtts_python=${PAVBOT_XTTS_PYTHON:-"$HOME/.cache/pavbot/venvs/xtts/bin/python"}
   [[ -x "$xtts_python" ]] || return 69
-  "$xtts_python" "$script_dir/render_xtts.py" "$spoken_text" "$audio_wav" "$model_dir/xtts-v2" || return 69
+  local render_cmd=( "$xtts_python" "$script_dir/render_xtts.py" "$spoken_text" "$audio_wav" "$model_dir/xtts-v2" )
+  if [[ -n "$xtts_timeout_seconds" ]]; then
+    if ! [[ "$xtts_timeout_seconds" =~ ^[0-9]+$ ]]; then
+      return 67
+    fi
+    if ! run_with_timeout "$xtts_timeout_seconds" "${render_cmd[@]}"; then
+      return 69
+    fi
+  else
+    "${render_cmd[@]}" || return 69
+  fi
   ffmpeg -hide_banner -loglevel error -y -i "$audio_wav" -codec:a libmp3lame -q:a 4 "$output_mp3" || return 69
 }
 

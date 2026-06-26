@@ -39,6 +39,26 @@
   for USA-Iran, Ormuz, Lebanon deconfliction and UK politics; Prezydent
   RP and KPRM remained best for official Polish agenda. Onet/WP are still
   useful for the order-reaction thread, but need explicit attribution.
+- 2026-06-23: Tuesday research run created a material update and used the new
+  publish step. Strongest sources were KPRM for V4/RM agenda, Prezydent RP for
+  Turkey/NATO context, MON for Madrid defence talks, AP for USA-Iran and UK
+  succession, and Guardian/Euronews as supporting international context.
+- 2026-06-24: Wednesday research run created a material update. Strongest
+  sources were KPRM for V4, S6, Ukraine recovery and mObywatel/air/lasy
+  decisions; Prezydent RP for Turkey/İncirlik and the order dispute line; AP
+  for USA-Iran inspections and Ormuz; Guardian for Starmer-Burnham transition.
+  Onet's E5 report is important but should be confirmed by official sources.
+- 2026-06-25: Thursday research run created a material update and verified the
+  new mobile-first PDF requirement. Strongest sources were KPRM/Ministerstwo
+  Energii for URC 2026, Prezydent RP for İncirlik/PKW Turcja, MON for V4 and
+  GROT A3, Guardian for the Ukraine-as-European-defense argument, and AP for
+  USA-Iran inspections.
+- 2026-06-26: Friday research run created a material update. Strongest sources
+  were KPRM/URC 2026 for the Gdańsk conference and Deklaracja Gdańska, NATO/AP
+  for the Ankara summit and defence industry framing, Guardian for the cautious
+  Russia-provocation warning, Prezydent RP for the SENT veto, and RCB/IMGW for
+  heat/susza risk. Podcast handling should label the Guardian item as an
+  intelligence warning with limited public detail, not as a confirmed incident.
 
 ## Done
 

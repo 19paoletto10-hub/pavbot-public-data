@@ -35,9 +35,24 @@ cannot reach the local notifier until the tunnel reconnects.
   `com.paweltanski.pavbotviewer`.
 - APNs `.p8` auth key.
 
-True iPhone remote push alerts require a push-enabled iOS build. The default
-PavbotViewer scheme intentionally keeps Push Notifications disabled so normal
-automatic signing does not fail while Apple Developer setup is incomplete.
+True iPhone remote push alerts require a push-enabled iOS build. The checked-in
+Xcode project now uses one standard `PavbotViewer` scheme with Push
+Notifications enabled in Debug and Release. If signing fails, fix the Apple
+Developer account first: accept any pending PLA update and enable Push
+Notifications for Bundle ID `com.paweltanski.pavbotviewer`.
+
+## Closed-App Delivery
+
+When the iOS app is closed, it cannot poll GitHub or create local catch-up
+notifications. Closed-app alerts only work through this live path:
+
+```text
+Codex automation -> Git commit/push -> GitHub webhook -> pavbot-notifier -> APNs -> iPhone
+```
+
+If Docker, Cloudflare Tunnel, GitHub webhook delivery, APNs credentials, or the
+MacBook are offline, the iPhone will not receive a push while the app is
+closed. The app will still refresh files on demand after it is opened.
 
 ## Local Docker Setup
 
@@ -82,9 +97,15 @@ APNS_TEAM_ID=SP774TZZU8
 APNS_KEY_ID=<APPLE_APNS_KEY_ID>
 APNS_BUNDLE_ID=com.paweltanski.pavbotviewer
 APNS_PRIVATE_KEY_PATH=/run/secrets/AuthKey_<APPLE_APNS_KEY_ID>.p8
+PAVBOT_DAILY_WEATHER_ENABLED=true
+PAVBOT_DAILY_WEATHER_TIME=07:30
+PAVBOT_DAILY_WEATHER_TIMEZONE=Europe/Warsaw
+PAVBOT_DAILY_WEATHER_CITY=Wrocław
+PAVBOT_DAILY_WEATHER_LAT=51.1079
+PAVBOT_DAILY_WEATHER_LON=17.0385
 ```
 
-Use `APNS_ENV=sandbox` for Xcode-installed `PavbotViewerPush` builds. Use
+Use `APNS_ENV=sandbox` for Xcode-installed `PavbotViewer` builds. Use
 `APNS_ENV=production` for TestFlight/App Store builds.
 
 ## Cloudflare Tunnel Setup
@@ -129,6 +150,88 @@ Check the public endpoint:
 curl https://notify.example.com/healthz
 curl https://notify.example.com/status
 ```
+
+The `/status` response is the source of truth for push diagnostics. It reports
+`registeredDevices`, `apnsConfigured`, `apnsEnvironment`, `lastWebhook`,
+`lastApnsDelivery`, `dailyWeather`, and `lastDeviceRegistration`.
+
+The iOS Settings screen can restore the current connection defaults from the
+notifier:
+
+```bash
+curl https://notify.example.com/v1/app/defaults
+```
+
+That endpoint returns only public values: the GitHub raw manifest URL, the
+public notification server URL, and the `/status` URL. It is the source of
+truth for the app button `Przywróć ustawienia domyślne`; it does not expose
+APNs keys, webhook secrets, Cloudflare tokens, or other private configuration.
+
+## Daily Wrocław Weather Alerts
+
+The notifier can send one weather briefing every day at 07:30 Europe/Warsaw.
+The iOS app shows it in the `Dzisiaj` tab after the user taps the push.
+
+Requirements:
+
+- Docker notifier and Cloudflare Tunnel must be running at 07:30.
+- `.env` must have `PAVBOT_DAILY_WEATHER_ENABLED=true`.
+- The iOS device must be registered with live alerts and `Daily Wrocław weather
+  alerts` enabled in Settings.
+- TestFlight/App Store builds require `APNS_ENV=production`.
+
+Check status:
+
+```bash
+curl https://notify.example.com/status
+curl https://notify.example.com/v1/weather/daily/latest
+```
+
+The weather report uses Open-Meteo for forecast data and a local Polish
+nameday calendar bundled into the notifier.
+
+## Temporary Quick Tunnel Reset
+
+Use this only when there is no named Cloudflare tunnel/domain yet, or when a
+previous `*.trycloudflare.com` URL returns `530` or no longer resolves.
+Quick Tunnel URLs are temporary and change every time the tunnel is recreated.
+
+Run the tunnel from an interactive Terminal window so it stays alive:
+
+```bash
+cd /Users/promaczek/Documents/CODEX-Pavbot
+cloudflared tunnel --url http://localhost:8080 --protocol http2 --no-autoupdate
+```
+
+Copy the new `https://<random>.trycloudflare.com` URL, then set the same host in
+three places:
+
+```dotenv
+PAVBOT_PUBLIC_NOTIFIER_URL=https://<random>.trycloudflare.com
+```
+
+```text
+iOS Settings -> Notification server URL -> https://<random>.trycloudflare.com
+GitHub webhook -> https://<random>.trycloudflare.com/webhooks/github
+```
+
+Restart the notifier after changing `.env`:
+
+```bash
+docker compose -f backend/pavbot-notifier/docker-compose.yml up -d
+curl https://<random>.trycloudflare.com/status
+curl https://<random>.trycloudflare.com/v1/app/defaults
+```
+
+Keep the Terminal window open. Closing it stops the tunnel and closed-app iPhone
+push notifications will stop until a new tunnel URL is configured.
+
+After the notifier is restarted, open the app and tap
+`Ustawienia -> Przywróć ustawienia domyślne`. The app will refill the Manifest
+URL and Notification server URL from `/v1/app/defaults`. If the old URL in the
+text box is already broken, the app falls back to its bundled bootstrap notifier
+URL. For App Store releases, prefer a named Cloudflare tunnel/domain so the
+bundled bootstrap URL does not need to change after every Quick Tunnel reset.
 
 ## Start After MacBook Restart
 
@@ -205,7 +308,7 @@ https://icloud.developer.apple.com/dashboard/notifications/teams/SP774TZZU8/app/
 
 Use these values:
 
-- Environment: `Development` for Xcode-installed `PavbotViewerPush`; `Production`
+- Environment: `Development` for Xcode-installed `PavbotViewer`; `Production`
   only for TestFlight/App Store builds.
 - Recipient: copy the APNs device token from Pavbot iOS
   `Settings -> Copy APNs device token` or `Diagnostics -> Copy APNs device token`.
@@ -235,18 +338,12 @@ Smoke payload:
 Do not enable Broadcast or Channels for Pavbot v1. New-file notifications use
 normal device-token alert pushes.
 
-## Push-Enabled Build
+## Push Notifications Build
 
 Default scheme:
 
 - `PavbotViewer`
-- no `aps-environment` entitlement
-- builds without requiring Push Notifications in the Apple Developer portal
-
-Push-enabled scheme:
-
-- `PavbotViewerPush`
-- includes `Sources/PavbotViewerPush.entitlements`
-- use only after accepting any Apple PLA update and enabling Push Notifications
+- includes `Sources/PavbotViewer.entitlements`
+- use after accepting any Apple PLA update and enabling Push Notifications
   for Bundle ID `com.paweltanski.pavbotviewer`
 - Apple Team ID: `SP774TZZU8`

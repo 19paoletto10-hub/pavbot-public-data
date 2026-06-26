@@ -1,81 +1,47 @@
 #!/usr/bin/env python3
-"""Render a Pavbot Markdown research report to a polished PDF."""
+"""Render a Pavbot Markdown research report to a polished mobile PDF."""
 
 from __future__ import annotations
 
 import argparse
-import html
 import re
+import sys
 from pathlib import Path
 
-from reportlab.lib import colors
-from reportlab.lib.enums import TA_CENTER, TA_LEFT
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
-from reportlab.lib.units import mm
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import (
-    HRFlowable,
-    KeepTogether,
-    Paragraph,
-    SimpleDocTemplate,
-    Spacer,
-    Table,
-    TableStyle,
+from reportlab.platypus import HRFlowable, KeepTogether, Paragraph, SimpleDocTemplate, Spacer
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from pavbot_pdf_theme import (
+    ACCENT,
+    ACCENT_DARK,
+    ACCENT_LIGHT,
+    AMBER,
+    BORDER,
+    MOBILE_PAGE_SIZE,
+    PAGE_MARGIN_BOTTOM,
+    PAGE_MARGIN_TOP,
+    PAGE_MARGIN_X,
+    PAPER,
+    build_mobile_styles,
+    draw_mobile_page,
+    key_value_card,
+    markdown_inline,
+    text_card,
 )
 
 
-INK = colors.HexColor("#111827")
-MUTED = colors.HexColor("#64748B")
-ACCENT = colors.HexColor("#0F766E")
-ACCENT_DARK = colors.HexColor("#134E4A")
-ACCENT_LIGHT = colors.HexColor("#CCFBF1")
-SURFACE = colors.HexColor("#F8FAFC")
-BORDER = colors.HexColor("#CBD5E1")
-LINK = colors.HexColor("#1D4ED8")
-
-
-def register_fonts() -> tuple[str, str]:
-    regular_candidates = [
-        "/System/Library/Fonts/Supplemental/Arial Unicode.ttf",
-        "/System/Library/Fonts/Supplemental/Arial.ttf",
-        "/Library/Fonts/Arial Unicode.ttf",
-        "/System/Library/Fonts/Supplemental/DejaVu Sans.ttf",
-    ]
-    bold_candidates = [
-        "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
-        "/Library/Fonts/Arial Bold.ttf",
-        "/System/Library/Fonts/Supplemental/DejaVu Sans Bold.ttf",
-    ]
-
-    regular = next((Path(path) for path in regular_candidates if Path(path).exists()), None)
-    bold = next((Path(path) for path in bold_candidates if Path(path).exists()), None)
-
-    if regular:
-        pdfmetrics.registerFont(TTFont("PavbotSans", str(regular)))
-        if bold:
-            pdfmetrics.registerFont(TTFont("PavbotSans-Bold", str(bold)))
-            return "PavbotSans", "PavbotSans-Bold"
-        return "PavbotSans", "PavbotSans"
-
-    return "Helvetica", "Helvetica-Bold"
-
-
-FONT_REGULAR, FONT_BOLD = register_fonts()
-
-
-def markdown_inline(text: str) -> str:
-    escaped = html.escape(text)
-    escaped = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", escaped)
-    escaped = re.sub(r"`([^`]+)`", rf"<font name='{FONT_REGULAR}'>\1</font>", escaped)
-
-    def link_repl(match: re.Match[str]) -> str:
-        label = match.group(1)
-        url = match.group(2)
-        return f'<a href="{url}"><font color="#1D4ED8">{label}</font></a>'
-
-    return re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", link_repl, escaped)
+SECTION_LABELS = {
+    "scope checked": "Zakres sprawdzony",
+    "summary": "Podsumowanie",
+    "executive summary": "Executive summary",
+    "new facts": "Nowe fakty",
+    "changes since previous run": "Zmiany od poprzedniego przebiegu",
+    "risks or uncertainty": "Ryzyka i niepewność",
+    "recommended actions": "Rekomendowane działania",
+    "sources": "Źródła",
+}
+METADATA_KEYS = {"date", "status"}
 
 
 def is_table_separator(line: str) -> bool:
@@ -95,159 +61,100 @@ def collect_table(lines: list[str], start: int) -> tuple[list[list[str]], int]:
 
 def read_metadata(lines: list[str]) -> dict[str, str]:
     metadata: dict[str, str] = {}
-    for line in lines[:12]:
-        if ":" not in line:
+    for line in lines[:14]:
+        stripped = line.strip()
+        if ":" not in stripped or stripped.startswith("- "):
             continue
-        key, value = line.split(":", 1)
+        key, value = stripped.split(":", 1)
         key = key.strip().lower()
-        if key in {"date", "status"}:
+        if key in METADATA_KEYS:
             metadata[key] = value.strip()
     return metadata
 
 
-def build_styles() -> dict[str, ParagraphStyle]:
-    base = getSampleStyleSheet()
-    return {
-        "title": ParagraphStyle(
-            "PavbotTitle",
-            parent=base["Title"],
-            fontName=FONT_BOLD,
-            fontSize=23,
-            leading=28,
-            textColor=INK,
-            alignment=TA_CENTER,
-            spaceAfter=5,
-            splitLongWords=True,
-        ),
-        "subtitle": ParagraphStyle(
-            "PavbotSubtitle",
-            parent=base["Normal"],
-            fontName=FONT_REGULAR,
-            fontSize=9.5,
-            leading=13,
-            textColor=MUTED,
-            alignment=TA_CENTER,
-            spaceAfter=10,
-            splitLongWords=True,
-        ),
-        "kicker": ParagraphStyle(
-            "PavbotKicker",
-            parent=base["Normal"],
-            fontName=FONT_BOLD,
-            fontSize=8,
-            leading=10,
-            textColor=ACCENT_DARK,
-            alignment=TA_CENTER,
-            spaceAfter=8,
-        ),
-        "h2": ParagraphStyle(
-            "PavbotH2",
-            parent=base["Heading2"],
-            fontName=FONT_BOLD,
-            fontSize=14.2,
-            leading=18,
-            textColor=ACCENT_DARK,
-            spaceBefore=12,
-            spaceAfter=5,
-            splitLongWords=True,
-        ),
-        "h3": ParagraphStyle(
-            "PavbotH3",
-            parent=base["Heading3"],
-            fontName=FONT_BOLD,
-            fontSize=11.4,
-            leading=14,
-            textColor=INK,
-            spaceBefore=8,
-            spaceAfter=4,
-            splitLongWords=True,
-        ),
-        "body": ParagraphStyle(
-            "PavbotBody",
-            parent=base["BodyText"],
-            fontName=FONT_REGULAR,
-            fontSize=9.2,
-            leading=12.8,
-            textColor=INK,
-            alignment=TA_LEFT,
-            spaceAfter=4.5,
-            splitLongWords=True,
-        ),
-        "bullet": ParagraphStyle(
-            "PavbotBullet",
-            parent=base["BodyText"],
-            fontName=FONT_REGULAR,
-            fontSize=9,
-            leading=12.5,
-            textColor=INK,
-            leftIndent=6 * mm,
-            firstLineIndent=-3 * mm,
-            spaceAfter=4,
-            splitLongWords=True,
-        ),
-        "table": ParagraphStyle(
-            "PavbotTable",
-            parent=base["BodyText"],
-            fontName=FONT_REGULAR,
-            fontSize=7.15,
-            leading=9.0,
-            textColor=INK,
-            splitLongWords=True,
-        ),
-        "table_header": ParagraphStyle(
-            "PavbotTableHeader",
-            parent=base["BodyText"],
-            fontName=FONT_BOLD,
-            fontSize=7.25,
-            leading=9.2,
-            textColor=ACCENT_DARK,
-            splitLongWords=True,
-        ),
-    }
+def is_metadata_line(stripped: str) -> bool:
+    if ":" not in stripped or stripped.startswith("- "):
+        return False
+    key = stripped.split(":", 1)[0].strip().lower()
+    return key in METADATA_KEYS
 
 
-def column_widths(column_count: int) -> list[float]:
-    usable_width = A4[0] - 32 * mm
-    if column_count == 4:
-        return [19 * mm, 43 * mm, 75 * mm, usable_width - 137 * mm]
-    if column_count == 3:
-        return [usable_width * 0.22, usable_width * 0.43, usable_width * 0.35]
-    return [usable_width / column_count] * column_count
+def normalized_heading(value: str) -> str:
+    return value.strip().lower()
 
 
-def make_table(rows: list[list[str]], styles: dict[str, ParagraphStyle]) -> Table:
-    max_cols = max(len(row) for row in rows)
-    normalized = [row + [""] * (max_cols - len(row)) for row in rows]
-    data = []
-    for row_index, row in enumerate(normalized):
-        style = styles["table_header"] if row_index == 0 else styles["table"]
-        data.append([Paragraph(markdown_inline(cell), style) for cell in row])
+def display_heading(value: str) -> str:
+    return SECTION_LABELS.get(normalized_heading(value), value)
 
-    table = Table(data, colWidths=column_widths(max_cols), repeatRows=1, hAlign="LEFT")
-    table.setStyle(
-        TableStyle(
-            [
-                ("BACKGROUND", (0, 0), (-1, 0), ACCENT_LIGHT),
-                ("GRID", (0, 0), (-1, -1), 0.35, BORDER),
-                ("VALIGN", (0, 0), (-1, -1), "TOP"),
-                ("LEFTPADDING", (0, 0), (-1, -1), 4),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 4),
-                ("TOPPADDING", (0, 0), (-1, -1), 4),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 4),
-                ("ROWBACKGROUNDS", (0, 1), (-1, -1), [colors.white, SURFACE]),
-            ]
-        )
-    )
-    return table
+
+def starts_new_block(stripped: str) -> bool:
+    return not stripped or stripped.startswith("#") or stripped.startswith("|") or stripped.startswith("- ")
+
+
+def collect_paragraph(lines: list[str], start: int) -> tuple[str, int]:
+    parts: list[str] = []
+    i = start
+    while i < len(lines):
+        stripped = lines[i].strip()
+        if starts_new_block(stripped):
+            break
+        if is_metadata_line(stripped):
+            break
+        parts.append(stripped)
+        i += 1
+    return " ".join(parts), i
+
+
+def collect_list_item(lines: list[str], start: int) -> tuple[str, int]:
+    parts = [lines[start].strip()[2:].strip()]
+    i = start + 1
+    while i < len(lines):
+        stripped = lines[i].strip()
+        if starts_new_block(stripped) or is_metadata_line(stripped):
+            break
+        parts.append(stripped)
+        i += 1
+    return " ".join(parts), i
+
+
+def make_table_cards(rows: list[list[str]], styles: dict) -> list:
+    if not rows:
+        return []
+    headers = rows[0]
+    body_rows = rows[1:] or rows
+    cards = []
+    for row in body_rows:
+        card = key_value_card(headers, row, styles, background=PAPER, accent=ACCENT)
+        cards.append(KeepTogether([card, Spacer(1, 5)]))
+    return cards
+
+
+def append_title(story: list, title: str, topic_name: str | None, metadata: dict[str, str], styles: dict) -> None:
+    subtitle_bits = [
+        bit
+        for bit in [
+            f"Temat: {topic_name}" if topic_name else "",
+            f"Date: {metadata['date']}" if metadata.get("date") else "",
+            f"Status: {metadata['status']}" if metadata.get("status") else "",
+        ]
+        if bit
+    ]
+    story.append(Paragraph("PAVBOT RESEARCH BRIEF", styles["kicker"]))
+    story.append(Paragraph(markdown_inline(title), styles["title"]))
+    if subtitle_bits:
+        story.append(Paragraph(" | ".join(subtitle_bits), styles["subtitle"]))
+    story.append(HRFlowable(width="100%", thickness=0.8, color=ACCENT, spaceAfter=7))
 
 
 def parse_markdown(markdown_text: str, topic_name: str | None) -> tuple[str, list]:
-    styles = build_styles()
+    styles = build_mobile_styles(accent=ACCENT, accent_dark=ACCENT_DARK, body_size=10.65)
     story: list = []
     lines = markdown_text.splitlines()
     metadata = read_metadata(lines)
     title = topic_name or "Pavbot Research Report"
     title_seen = False
+    current_section = ""
+    summary_callout_used = False
     i = 0
 
     while i < len(lines):
@@ -255,72 +162,61 @@ def parse_markdown(markdown_text: str, topic_name: str | None) -> tuple[str, lis
         stripped = line.strip()
 
         if not stripped:
-            story.append(Spacer(1, 2.4 * mm))
+            story.append(Spacer(1, 3))
+            i += 1
+            continue
+
+        if is_metadata_line(stripped):
             i += 1
             continue
 
         if stripped.startswith("|"):
             rows, i = collect_table(lines, i)
-            if rows:
-                story.append(make_table(rows, styles))
-                story.append(Spacer(1, 4 * mm))
+            story.extend(make_table_cards(rows, styles))
             continue
 
         if stripped.startswith("# "):
             title = stripped[2:].strip()
-            date = metadata.get("date", "")
-            status = metadata.get("status", "")
-            subtitle_bits = [bit for bit in [f"Topic: {topic_name}" if topic_name else "", f"Date: {date}" if date else "", f"Status: {status}" if status else ""] if bit]
-            story.append(Paragraph("PAVBOT RESEARCH BRIEF", styles["kicker"]))
-            story.append(Paragraph(markdown_inline(title), styles["title"]))
-            story.append(Paragraph(" | ".join(subtitle_bits), styles["subtitle"]))
-            story.append(HRFlowable(width="100%", thickness=1.1, color=ACCENT, spaceAfter=7))
+            append_title(story, title, topic_name, metadata, styles)
             title_seen = True
-            i += 1
-            continue
-
-        if stripped.startswith("## "):
-            story.append(KeepTogether([Paragraph(markdown_inline(stripped[3:].strip()), styles["h2"])]))
-            i += 1
-            continue
-
-        if stripped.startswith("### "):
-            story.append(Paragraph(markdown_inline(stripped[4:].strip()), styles["h3"]))
-            i += 1
-            continue
-
-        if stripped.startswith("- "):
-            story.append(Paragraph("- " + markdown_inline(stripped[2:].strip()), styles["bullet"]))
-            i += 1
-            continue
-
-        if re.fullmatch(r"[A-Za-z ]+: .+", stripped):
-            story.append(Paragraph(markdown_inline(stripped), styles["body"]))
+            current_section = ""
             i += 1
             continue
 
         if not title_seen:
-            story.append(Paragraph("PAVBOT RESEARCH BRIEF", styles["kicker"]))
-            story.append(Paragraph(markdown_inline(title), styles["title"]))
-            story.append(HRFlowable(width="100%", thickness=1.1, color=ACCENT, spaceAfter=7))
+            append_title(story, title, topic_name, metadata, styles)
             title_seen = True
 
-        story.append(Paragraph(markdown_inline(stripped), styles["body"]))
-        i += 1
+        if stripped.startswith("## "):
+            heading = stripped[3:].strip()
+            current_section = normalized_heading(heading)
+            story.append(Paragraph(markdown_inline(display_heading(heading)), styles["h2"]))
+            i += 1
+            continue
+
+        if stripped.startswith("### "):
+            heading = stripped[4:].strip()
+            current_section = normalized_heading(heading)
+            story.append(Paragraph(markdown_inline(display_heading(heading)), styles["h3"]))
+            i += 1
+            continue
+
+        if stripped.startswith("- "):
+            item, i = collect_list_item(lines, i)
+            story.append(Paragraph("- " + markdown_inline(item), styles["bullet"]))
+            continue
+
+        paragraph, i = collect_paragraph(lines, i)
+        if not paragraph:
+            continue
+        if current_section in {"podsumowanie", "summary", "executive summary"} and not summary_callout_used:
+            story.append(text_card("NAJWAŻNIEJSZE", paragraph, styles, background=ACCENT_LIGHT, border=ACCENT, accent=AMBER))
+            story.append(Spacer(1, 6))
+            summary_callout_used = True
+            continue
+        story.append(Paragraph(markdown_inline(paragraph), styles["body"]))
 
     return title, story
-
-
-def draw_page(canvas, doc, title: str) -> None:
-    canvas.saveState()
-    width, height = A4
-    canvas.setFillColor(ACCENT)
-    canvas.rect(0, height - 8 * mm, width, 8 * mm, stroke=0, fill=1)
-    canvas.setFillColor(MUTED)
-    canvas.setFont(FONT_REGULAR, 7.5)
-    canvas.drawString(16 * mm, 10 * mm, title[:95])
-    canvas.drawRightString(width - 16 * mm, 10 * mm, f"Page {doc.page}")
-    canvas.restoreState()
 
 
 def render_pdf(markdown_report: Path, pdf_output: Path, topic_name: str | None = None) -> None:
@@ -329,19 +225,39 @@ def render_pdf(markdown_report: Path, pdf_output: Path, topic_name: str | None =
     pdf_output.parent.mkdir(parents=True, exist_ok=True)
     doc = SimpleDocTemplate(
         str(pdf_output),
-        pagesize=A4,
-        leftMargin=16 * mm,
-        rightMargin=16 * mm,
-        topMargin=18 * mm,
-        bottomMargin=16 * mm,
+        pagesize=MOBILE_PAGE_SIZE,
+        leftMargin=PAGE_MARGIN_X,
+        rightMargin=PAGE_MARGIN_X,
+        topMargin=PAGE_MARGIN_TOP,
+        bottomMargin=PAGE_MARGIN_BOTTOM,
         title=title,
         author="Pavbot",
         subject=f"Pavbot research report: {topic_name or markdown_report.stem}",
     )
     doc.build(
         story,
-        onFirstPage=lambda canvas, doc_obj: draw_page(canvas, doc_obj, title),
-        onLaterPages=lambda canvas, doc_obj: draw_page(canvas, doc_obj, title),
+        onFirstPage=lambda canvas, doc_obj: draw_mobile_page(
+            canvas,
+            doc_obj,
+            title=title,
+            footer_label=title,
+            page_label="Page",
+            accent=ACCENT_DARK,
+            accent_rule=AMBER,
+            paper=PAPER,
+            rule=BORDER,
+        ),
+        onLaterPages=lambda canvas, doc_obj: draw_mobile_page(
+            canvas,
+            doc_obj,
+            title=title,
+            footer_label=title,
+            page_label="Page",
+            accent=ACCENT_DARK,
+            accent_rule=AMBER,
+            paper=PAPER,
+            rule=BORDER,
+        ),
     )
 
 

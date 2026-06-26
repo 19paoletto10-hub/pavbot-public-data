@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-21",
+  "runTime": "21:07",
+  "executiveSummary": "Wieczorna runda przyniosła kolejny materialny update. Doszła nowa oficjalna rola ITDS we Wrocławiu dla osoby prowadzącej wdrożenia enterprise GenAI i developer tooling, a także nowy publiczny xBerry Senior AI / LLM Python Developer z wyraźnym zakresem RAG, fine-tuningu i prompt engineering. Najważniejsza zmiana statusowa dotyczy Sii Senior AI Engineer (f/m/x): oferta jest teraz aktywna na Pracuj.pl, mimo że wcześniej śledzony oficjalny URL Sii nadal pokazuje status nieaktywny. Dodatkowe spot-checki deepsense.ai, GFT i Rite NRG nie pokazały nowych materialnych zmian.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior AI Technical Lead – Developer Tools & Generative AI",
+      "company": "ITDS Polska",
+      "location": "Wrocław, Hybrid.",
+      "workMode": "Hybrid",
+      "compensation": "27 300-31 500 PLN B2B.",
+      "seniority": "Senior",
+      "fitSummary": "Generative AI, AI assistants, MCP servers, agentic",
+      "whyInteresting": "to jedna z mocniejszych oficjalnych ról stricte pod",
+      "uncertainty": "rola jest bardziej lead/platform/developer-tooling niż czyste",
+      "sourceURLs": [
+        "https://itds.pl/it-jobs/senior-ai-technical-lead-developer-tools-generative-ai/"
+      ],
+      "tags": [
+        "Agentic AI"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior AI / LLM Python Developer",
+      "company": "xBerry Sp. z o.o.",
+      "location": "Wrocław, Remote / hybrid.",
+      "workMode": "Remote",
+      "compensation": "publiczna strona pokazuje 150-190 PLN Net per month - B2B,",
+      "seniority": "Senior",
+      "fitSummary": "RAG, fine-tuning, prompt engineering, analiza dokumentów,",
+      "whyInteresting": "mocno hands-on rola wokół produktu AI dla środowisk",
+      "uncertainty": "źródłem jest Just Join IT; nie znalazłem osobnej canonical",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/xberry-sp-z-o-o--senior-ai-llm-python-developer-wroclaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior AI Engineer (f/m/x)",
+      "company": "Sii Sp. z o.o.",
+      "location": "Wrocław, hybrid, z okazjonalnymi wizytami w biurze",
+      "workMode": "Hybrid",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "Python, LLM, RAG, Agentic AI, Vector Databases,",
+      "whyInteresting": "duży, powtarzalny pracodawca w polskim rynku AI/IT,",
+      "uncertainty": "to materialna zmiana statusu, ale źródła są sprzeczne: Pracuj.pl",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/senior-ai-engineer-f-m-x-wroclaw-na-ostatnim-groszu-3%2Coferta%2C1004902326",
+        "https://sii.pl/en/job-ads/id/36925/senior-ai-engineer-f-m-x/"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano nową oficjalną rolę ITDS Senior AI Technical Lead – Developer Tools &",
+    "Dodano nową publiczną rolę xBerry Senior AI / LLM Python Developer dla",
+    "Zmieniono status Sii Senior AI Engineer (f/m/x): publiczny listing",
+    "Spot-check deepsense.ai Principal Software Engineer, GFT AI & LLM"
+  ],
+  "risks": [
+    "xBerry jest na razie potwierdzone tylko publicznym boardem Just Join IT;",
+    "Pole wynagrodzenia xBerry wygląda na niespójne (150-190 PLN Net per month",
+    "B2B) i nie powinno być traktowane jako w pełni wiarygodne bez kolejnego",
+    "Sii Senior AI Engineer ma obecnie konflikt źródeł między Pracuj.pl a",
+    "deepsense.ai nadal ma nierozwiązany drift URL dla AI Software Engineer,"
+  ],
+  "recommendedActions": [
+    "Low-risk action applied: dodano do Seen Opportunities nowe wpisy dla",
+    "Low-risk action applied: zaktualizowano wpis Sii Senior AI Engineer o nowy",
+    "Follow-up: w następnej rundzie sprawdzić, czy Sii ujednolici status roli",
+    "Follow-up: sprawdzić, czy xBerry opublikuje canonical employer page albo",
+    "Follow-up: potwierdzić, czy ITDS utrzyma ofertę i stack MCP / enterprise"
+  ],
+  "checkedSources": [
+    {
+      "title": "ITDS - Senior AI Technical Lead – Developer Tools & Generative AI",
+      "url": "https://itds.pl/it-jobs/senior-ai-technical-lead-developer-tools-generative-ai/",
+      "status": "checked"
+    },
+    {
+      "title": "xBerry - Senior AI / LLM Python Developer",
+      "url": "https://justjoin.it/job-offer/xberry-sp-z-o-o--senior-ai-llm-python-developer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Sii - Senior AI Engineer (official inactive URL)",
+      "url": "https://sii.pl/en/job-ads/id/36925/senior-ai-engineer-f-m-x/",
+      "status": "checked-inactive"
+    },
+    {
+      "title": "Sii - Senior AI Engineer (active Pracuj.pl listing)",
+      "url": "https://www.pracuj.pl/praca/senior-ai-engineer-f-m-x-wroclaw-na-ostatnim-groszu-3%2Coferta%2C1004902326",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai - Principal Software Engineer",
+      "url": "https://deepsense.ai/careers/principal-software-engineer/",
+      "status": "checked"
+    },
+    {
+      "title": "GFT - Data Engineer / Data Scientist (AI & LLM Solutions) Expert",
+      "url": "https://jobs.gft.com/Poland/job/Warszawa-Data-Engineer-Data-Scientist-%28AI-%26-LLM-Solutions%29-Expert-00-839/1370179733/",
+      "status": "checked"
+    },
+    {
+      "title": "Rite NRG - AI Engineer",
+      "url": "https://justjoin.it/job-offer/rite-nrg-ai-engineer-wroclaw-ai",
+      "status": "checked"
+    }
+  ]
+}

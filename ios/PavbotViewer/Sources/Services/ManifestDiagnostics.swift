@@ -54,7 +54,7 @@ struct ManifestDiagnostics: Equatable {
                 automation: automation,
                 latestArtifact: latestArtifact,
                 severity: latestArtifact == nil ? .warning : .ok,
-                message: latestArtifact.map { "Last output: \($0.displayDate)" } ?? "No generated files found for this automation topic."
+                message: latestArtifact.map { "Ostatni wynik: \($0.displayDate)" } ?? "Nie znaleziono wygenerowanych plików dla tematu tej automatyzacji."
             )
         }
 
@@ -64,8 +64,8 @@ struct ManifestDiagnostics: Equatable {
             return DiagnosticItem(
                 id: "automation-\(status.automation.id)",
                 severity: status.severity,
-                title: "Automation has no artifacts",
-                message: "\(status.automation.name) has no generated files for \(status.automation.topicPath)."
+                title: "Automatyzacja nie ma artefaktów",
+                message: "\(status.automation.name) nie ma wygenerowanych plików w \(status.automation.topicPath)."
             )
         })
         issues = collectedIssues
@@ -76,8 +76,8 @@ struct ManifestDiagnostics: Equatable {
             return DiagnosticItem(
                 id: "freshness-invalid",
                 severity: .error,
-                title: "Manifest timestamp invalid",
-                message: "The manifest generatedAt value cannot be parsed."
+                title: "Niepoprawny czas manifestu",
+                message: "Nie udało się odczytać wartości generatedAt w manifeście."
             )
         }
 
@@ -86,16 +86,16 @@ struct ManifestDiagnostics: Equatable {
             return DiagnosticItem(
                 id: "freshness-stale",
                 severity: .warning,
-                title: "Manifest is stale",
-                message: "The manifest is older than 24 hours."
+                title: "Manifest jest nieaktualny",
+                message: "Manifest ma więcej niż 24 godziny."
             )
         }
 
         return DiagnosticItem(
             id: "freshness-ok",
             severity: .ok,
-            title: "Manifest is fresh",
-            message: "The manifest was generated within the last 24 hours."
+            title: "Manifest jest aktualny",
+            message: "Manifest został wygenerowany w ostatnich 24 godzinach."
         )
     }
 
@@ -105,8 +105,8 @@ struct ManifestDiagnostics: Equatable {
             return DiagnosticItem(
                 id: "manifest-url-placeholder",
                 severity: .warning,
-                title: "Manifest URL is placeholder",
-                message: "Set the public GitHub raw manifest URL in Settings."
+                title: "Manifest URL jest placeholderem",
+                message: "Ustaw publiczny GitHub raw Manifest URL w ustawieniach."
             )
         }
 
@@ -115,14 +115,14 @@ struct ManifestDiagnostics: Equatable {
             return DiagnosticItem(
                 id: "manifest-url-ok",
                 severity: .ok,
-                title: "Manifest URL configured",
-                message: "The manifest URL points to an HTTPS JSON file."
+                title: "Manifest URL skonfigurowany",
+                message: "Manifest URL wskazuje plik JSON po HTTPS."
             )
         case .invalid(let message):
             return DiagnosticItem(
                 id: "manifest-url-invalid",
                 severity: .error,
-                title: "Manifest URL invalid",
+                title: "Manifest URL jest niepoprawny",
                 message: message
             )
         }
@@ -134,8 +134,8 @@ struct ManifestDiagnostics: Equatable {
             return DiagnosticItem(
                 id: "raw-base-missing",
                 severity: .warning,
-                title: "Public raw base URL missing",
-                message: "Preview links use bundled or relative paths until PAVBOT_RAW_BASE_URL is set before manifest generation."
+                title: "Brakuje publicznego raw base URL",
+                message: "Podglądy użyją ścieżek względnych, dopóki manifest nie zostanie wygenerowany z publicznym raw base URL."
             )
         }
 
@@ -143,16 +143,16 @@ struct ManifestDiagnostics: Equatable {
             return DiagnosticItem(
                 id: "raw-base-invalid",
                 severity: .warning,
-                title: "Public raw base URL is not HTTPS",
-                message: "Use an HTTPS GitHub raw base URL for reliable previews."
+                title: "Public raw base URL nie używa HTTPS",
+                message: "Użyj GitHub raw base URL po HTTPS, aby podglądy działały stabilnie."
             )
         }
 
         return DiagnosticItem(
             id: "raw-base-ok",
             severity: .ok,
-            title: "Public raw base URL configured",
-            message: "Artifact previews can resolve public raw links."
+            title: "Public raw base URL skonfigurowany",
+            message: "Podglądy artefaktów mogą rozwiązywać publiczne linki raw."
         )
     }
 

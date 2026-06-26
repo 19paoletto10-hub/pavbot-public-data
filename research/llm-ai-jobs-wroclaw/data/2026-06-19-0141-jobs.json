@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-19",
+  "runTime": "01:41",
+  "executiveSummary": "Ta runda przyniosła wyraźny materialny update. Najmocniejsza zmiana to nowe, kanoniczne źródło Holisticonu z pakietem kilku relewantnych ofert dla Wrocławia i pracy zdalnej z Polski, w tym ról AI scientist, GenAI/production ML oraz AI-first platform engineering. Dodatkowo deepsense.ai potwierdza się jako kolejne oficjalne źródło remote-Poland z praktycznymi rolami ML/LLM i MLOps, a istniejący listing People More znów zmienił publicznie prezentowane widełki walutowe na tym samym URL.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "AI Scientist / Principal AI Engineer – Drug Discovery & Life Sciences",
+      "company": "Holisticon",
+      "location": "Wrocław; dodatkowo opis dopuszcza fully remote lub biuro.",
+      "workMode": "Remote",
+      "compensation": "17 000-20 000 PLN brutto UoP lub 140-170 PLN netto/h + VAT",
+      "seniority": "Principal",
+      "fitSummary": "AI systems, agents, scientific workflows, Graph ML, knowledge",
+      "whyInteresting": "to rzadki, oficjalny wakat z Wrocławia, który łączy",
+      "uncertainty": "domena life sciences zawęża profil kandydata; część wymagań jest",
+      "sourceURLs": [
+        "https://holisticon.pl/career/openings/pl/785-ai-scientist-principal-ai-engineer-drug-discovery-life-sciences/"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 2,
+      "title": "Lead Platform Engineer (Cloud & MLOps)",
+      "company": "Holisticon",
+      "location": "Wrocław; oficjalna strona kariery Holisticon pokazuje ten",
+      "workMode": "Wrocław",
+      "compensation": "18 000-22 000 PLN brutto UoP lub 160-190 PLN netto/h + VAT",
+      "seniority": "Lead",
+      "fitSummary": "platform engineering, Cloud & MLOps, środowiska AI-first,",
+      "whyInteresting": "jedna z mocniejszych nowych ról platformowych dla",
+      "uncertainty": "publiczny skrót na stronie listingu jest bardziej szczegółowy niż",
+      "sourceURLs": [
+        "https://holisticon.pl/careers/"
+      ],
+      "tags": [
+        "MLOps"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior Machine Learning Engineer (GenAI & Production ML Systems)",
+      "company": "Holisticon",
+      "location": "REMOTE, Polska.",
+      "workMode": "Remote",
+      "compensation": "brak widełek w publicznym źródle.",
+      "seniority": "Senior",
+      "fitSummary": "GenAI, production ML systems, senior machine learning engineering.",
+      "whyInteresting": "to czysta rola production ML/GenAI z oficjalnego",
+      "uncertainty": "oficjalna strona nie pokazuje pensji w tej roli.",
+      "sourceURLs": [
+        "https://holisticon.pl/career/openings/pl/86-senior-machine-learning-engineer-genai-production-ml-systems/"
+      ],
+      "tags": [
+        "GenAI"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Platform Engineer (Kubernetes, AWS, AI-first environment)",
+      "company": "Holisticon",
+      "location": "Wrocław; oficjalny opis dopuszcza fully remote lub biuro.",
+      "workMode": "Remote",
+      "compensation": "150-175 PLN netto/h + VAT B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "AI-first platform, Kubernetes/EKS, Terraform, observability dla",
+      "whyInteresting": "rola jest infrastrukturalna, ale opis bardzo",
+      "uncertainty": "zakres jest bliżej platform/infrastructure niż budowy warstwy",
+      "sourceURLs": [
+        "https://holisticon.pl/career/openings/pl/787-platform-engineer-kubernetes-aws-ai-first-environment/"
+      ],
+      "tags": [
+        "AWS"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Machine Learning Engineer",
+      "company": "deepsense.ai",
+      "location": "Polska, remote.",
+      "workMode": "Remote",
+      "compensation": "brak widełek w publicznym źródle.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "GenAI, LLMs, vector databases, fine-tuning, ewaluacja modeli,",
+      "whyInteresting": "oficjalna rola remote Poland z bardzo bezpośrednim",
+      "uncertainty": "brak pensji; opis nie zawęża miasta do Wrocławia, więc to lead",
+      "sourceURLs": [
+        "https://deepsense.ai/careers/machine-learning-engineer-2/"
+      ],
+      "tags": [
+        "LLM",
+        "GenAI"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "AI Software Engineer",
+      "company": "deepsense.ai",
+      "location": "Polska, remote.",
+      "workMode": "Remote",
+      "compensation": "brak widełek w publicznym źródle.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "production AI applications, REST APIs, model serving, LLM",
+      "whyInteresting": "dobra rola pomostowa między software engineering a",
+      "uncertainty": "część zakresu jest szersza niż same systemy LLM.",
+      "sourceURLs": [
+        "https://deepsense.ai/careers/ai-software-engineer/"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "MLOps Engineer",
+      "company": "deepsense.ai",
+      "location": "Polska, remote.",
+      "workMode": "Remote",
+      "compensation": "brak widełek w publicznym źródle.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "MLOps, cloud-native ML infrastructure, model serving,",
+      "whyInteresting": "oficjalna rola remote Poland dla infrastruktury",
+      "uncertainty": "to rola bardziej infrastrukturalna niż aplikacyjna.",
+      "sourceURLs": [
+        "https://deepsense.ai/careers/mlops-engineer/"
+      ],
+      "tags": [
+        "MLOps"
+      ]
+    },
+    {
+      "rank": 8,
+      "title": "AI Engineer / LLM Engineer (AI-First | TypeScript)",
+      "company": "People More",
+      "location": "Wrocław + inne lokalizacje; remote.",
+      "workMode": "Remote",
+      "compensation": "33-45 EUR netto/h B2B w bieżącym publicznym widoku.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "agentic systems, multi-agent architectures, memory/context",
+      "whyInteresting": "nadal to mocny lead dla agentic systems, ale tym razem",
+      "uncertainty": "listing Just Join IT już wcześniej zmieniał sposób prezentacji",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/people-more-p-s-a--ai-engineer-llm-engineer-ai-first-typescript--wroclaw-ai-215fee79"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano Holisticon do shortlisty kanonicznych źródeł z czterema nowymi,",
+    "Dodano deepsense.ai do shortlisty kanonicznych źródeł z trzema nowymi rolami",
+    "People More ma ponownie materialnie inną publiczną prezentację wynagrodzenia",
+    "Capgemini, CDQ i Addepto nie pokazały w tej rundzie wyraźnej materialnej"
+  ],
+  "risks": [
+    "Część źródeł nie pokazuje wynagrodzenia, więc porównanie jakości ofert bywa",
+    "Job boardy potrafią dynamicznie zmieniać walutę lub format widełek bez zmiany",
+    "Kilka nowych ról Holisticonu jest bardzo mocnych technicznie, ale część z"
+  ],
+  "recommendedActions": [
+    "Low-risk action applied: dodano nowe kanoniczne wpisy Holisticonu i",
+    "Low-risk action applied: zaktualizowano wpis People More o kolejną materialną",
+    "Follow-up: obserwować Holisticon i deepsense.ai jako stałe źródła kolejnych",
+    "Follow-up: sprawdzić w następnej rundzie, czy People More utrzyma zapis w EUR"
+  ],
+  "checkedSources": [
+    {
+      "title": "Holisticon careers",
+      "url": "https://holisticon.pl/careers/",
+      "status": "checked"
+    },
+    {
+      "title": "Holisticon - AI Scientist / Principal AI Engineer – Drug Discovery & Life Sciences",
+      "url": "https://holisticon.pl/career/openings/pl/785-ai-scientist-principal-ai-engineer-drug-discovery-life-sciences/",
+      "status": "checked"
+    },
+    {
+      "title": "Holisticon - Lead Platform Engineer (Cloud & MLOps)",
+      "url": "https://holisticon.pl/career/openings/pl/786-lead-platform-engineer-cloud-mlops/",
+      "status": "checked"
+    },
+    {
+      "title": "Holisticon - Senior Machine Learning Engineer (GenAI & Production ML Systems)",
+      "url": "https://holisticon.pl/career/openings/pl/86-senior-machine-learning-engineer-genai-production-ml-systems/",
+      "status": "checked"
+    },
+    {
+      "title": "Holisticon - Platform Engineer (Kubernetes, AWS, AI-first environment)",
+      "url": "https://holisticon.pl/career/openings/pl/787-platform-engineer-kubernetes-aws-ai-first-environment/",
+      "status": "checked"
+    },
+    {
+      "title": "People More - AI Engineer / LLM Engineer (AI-First | TypeScript)",
+      "url": "https://justjoin.it/job-offer/people-more-p-s-a--ai-engineer-llm-engineer-ai-first-typescript--wroclaw-ai-215fee79",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai careers",
+      "url": "https://deepsense.ai/careers/",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai - Machine Learning Engineer",
+      "url": "https://deepsense.ai/careers/machine-learning-engineer-2/",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai - AI Software Engineer",
+      "url": "https://deepsense.ai/careers/ai-software-engineer/",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai - MLOps Engineer",
+      "url": "https://deepsense.ai/careers/mlops-engineer/",
+      "status": "checked"
+    },
+    {
+      "title": "Capgemini - Senior Software Engineer (Agentic AI, Cloud-native, On-prem)",
+      "url": "https://careers.capgemini.com/job/Wroc%C5%82aw-Senior-Software-Engineer-%28Agentic-AI%2C-Cloud-native%2C-On-prem%29/1388839033/",
+      "status": "checked"
+    },
+    {
+      "title": "CDQ - Careers / Software Developer (AI)",
+      "url": "https://www.cdq.com/about/careers",
+      "status": "checked"
+    },
+    {
+      "title": "Addepto - AI Engineer",
+      "url": "https://addepto.com/career/ai-engineer/",
+      "status": "checked"
+    }
+  ]
+}

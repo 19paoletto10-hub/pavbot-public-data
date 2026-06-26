@@ -42,15 +42,19 @@ Domyślnie działa `PAVBOT_TTS_ENGINE=auto`: XTTS-v2, potem Piper, potem macOS
 
 Po utworzeniu `render.json` przygotuj estetyczny profesjonalny PDF:
 `~/.cache/pavbot/venvs/pdf/bin/python .agents/scripts/podcast/render-podcast-brief-pdf.py research/tech-news/podcasts/YYYY-MM-DD`
+PDF ma być mobile-first premium: format telefonu 390 x 844 pt, czytelny bez
+zoomu w aplikacji Pavbot, z kartami metadanych audio, widocznymi linkami źródeł
+i bez surowych URL-i w głównej treści. Po renderze wyrenderuj strony do PNG i
+sprawdź wizualnie spacing, stopki, polskie znaki oraz brak ucięć tekstu.
 
 Po zapisaniu artefaktów podcastu opublikuj wyniki dla aplikacji iOS i webhooka
 notyfikacji push. Skrypt uruchamia `python3 scripts/generate_pavbot_manifest.py`,
 odświeża `public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki i robi
 push na `origin/main`.
-`PAVBOT_MANIFEST_URL` musi być ustawione w środowisku Codex albo repozytorium
-na ten sam publiczny raw URL, który jest w iOS `Settings -> Manifest URL`;
-aplikacja iOS nie przekazuje tej wartości z powrotem do Codex. Następnie
-uruchom:
+Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override środowiskowego,
+`PAVBOT_RAW_BASE_URL`, istniejącego `rawBaseUrl` w manifeście albo GitHub
+`origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Rozwiązany URL
+musi odpowiadać iOS `Settings -> Manifest URL`. Następnie uruchom:
 `scripts/pavbot_commit_and_push_outputs.sh --isolated research/tech-news`.
 
 Nie zmyślaj faktów. Jeśli źródło jest niedostępne lub niejednoznaczne, zapisz

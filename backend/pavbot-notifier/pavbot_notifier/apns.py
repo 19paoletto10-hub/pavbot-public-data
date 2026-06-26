@@ -5,9 +5,6 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-import httpx
-import jwt
-
 
 @dataclass(frozen=True)
 class APNSConfig:
@@ -28,6 +25,20 @@ class APNSConfig:
         return all([self.team_id, self.key_id, self.bundle_id, self.private_key])
 
 
+class APNSConfigurationError(RuntimeError):
+    pass
+
+
+class APNSDeliveryError(RuntimeError):
+    def __init__(self, status_code: int, response_body: str) -> None:
+        self.status_code = status_code
+        self.response_body = response_body
+        detail = f"APNs returned HTTP {status_code}"
+        if response_body:
+            detail = f"{detail}: {response_body}"
+        super().__init__(detail)
+
+
 class APNSSender:
     def __init__(self, config: APNSConfig) -> None:
         self.config = config
@@ -40,7 +51,9 @@ class APNSSender:
         user_info: dict[str, Any],
     ) -> None:
         if not self.config.is_configured:
-            return
+            raise APNSConfigurationError("APNs is not configured")
+
+        import httpx
 
         payload = {
             "aps": {
@@ -64,9 +77,12 @@ class APNSSender:
                 headers=headers,
                 json=payload,
             )
-            response.raise_for_status()
+            if response.status_code >= 400:
+                raise APNSDeliveryError(response.status_code, response.text)
 
     def _jwt(self) -> str:
+        import jwt
+
         return jwt.encode(
             {
                 "iss": self.config.team_id,

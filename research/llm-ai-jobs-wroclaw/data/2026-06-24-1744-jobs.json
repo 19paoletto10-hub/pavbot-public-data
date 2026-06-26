@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-24",
+  "runTime": "17:44",
+  "executiveSummary": "Runda z 2026-06-24 17:44 CEST przyniosła materialny update z czterech kierunków. Najmocniejszy nowy sygnał dla Wrocławia to Yard Corporate z publiczną rolą Applied Machine Learning Engineer | GenAI / LLM / ML Systems oraz oficjalnie potwierdzony ALTIMI AI Forward Deployment Engineer, oba z opcją Wrocław + remote. Po stronie remote Poland pojawił się nowy aktywny klaster IN4GE z dwoma hands-on rolami wokół MCP, agentowych workflowów i GenAI, a Rossmann wystawił oficjalną rolę AI / LLMOps Engineer z bardzo konkretnym zakresem obejmującym platformę agentową na GCP, RAG, MCP i warstwę ewaluacji. Największe ryzyko tej rundy to nadal deduplikacja i polityka lokalizacyjna: IN4GE ma kilka bardzo podobnych aktywnych kart, a Rossmann pokazuje rozjazd między oficjalnym widokiem lokalizacji a mirrorami job-boardowymi.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Applied Machine Learning Engineer | GenAI / LLM / ML Systems",
+      "company": "Yard Corporate",
+      "location": "Wrocław + 4 locations, Remote.",
+      "workMode": "Remote",
+      "compensation": "26 000-42 000 PLN net + VAT B2B lub",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM-based applications, RAG, embeddings, semantic search,",
+      "whyInteresting": "to najmocniejsza nowa rola stricte dla Wrocławia,",
+      "uncertainty": "oferta jest board-first; nie znalazłem w tej rundzie osobnej",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/yard-corporate-applied-machine-learning-engineer-genai-llm-ml-systems-wroclaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "AI Forward Deployment Engineer",
+      "company": "ALTIMI",
+      "location": "Wrocław, Remote.",
+      "workMode": "Remote",
+      "compensation": "oficjalny hub nie pokazuje widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "wdrażanie realnych rozwiązań AI, rola na styku delivery,",
+      "whyInteresting": "mocny lokalny sygnał z oficjalnej strony pracodawcy,",
+      "uncertainty": "oficjalna strona potwierdza otwarcie roli, ale pełniejszy opis",
+      "sourceURLs": [
+        "https://altimi.com/career",
+        "https://justjoin.it/job-offer/altimi-ai-forward-deployment-engineer-wroclaw-ai"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 3,
+      "title": "Backend Software Engineer (MCP & AI Agents)",
+      "company": "IN4GE",
+      "location": "Cała Polska (praca zdalna).",
+      "workMode": "Remote",
+      "compensation": "140-170 PLN netto (+ VAT) / godz. B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "wewnętrzna platforma AI oparta o Model Context Protocol,",
+      "whyInteresting": "jedna z najbardziej konkretnych nowych ról pod",
+      "uncertainty": "IN4GE ma jednocześnie kilka aktywnych, bardzo podobnych kart,",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/backend-software-engineer-mcp-ai-agents-warszawa%2Coferta%2C1004889617"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 4,
+      "title": "Senior Software Engineer (Python, GenAI & Agentic AI)",
+      "company": "IN4GE",
+      "location": "Cała Polska (praca zdalna).",
+      "workMode": "Remote",
+      "compensation": "140-170 PLN netto (+ VAT) / godz. B2B.",
+      "seniority": "Senior",
+      "fitSummary": "Python, GenAI, agentowe systemy, senior delivery w projekcie",
+      "whyInteresting": "rola jest jawnie skierowana pod senior hands-on",
+      "uncertainty": "opis dostępny publicznie jest płytszy niż w przypadku roli MCP,",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/senior-software-engineer-python-genai-agentic-ai-warszawa%2Coferta%2C1004889607"
+      ],
+      "tags": [
+        "Agentic AI",
+        "GenAI",
+        "Python"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "AI / LLMOps Engineer",
+      "company": "Rossmann",
+      "location": "oficjalna strona wskazuje Łódź, a publiczny mirror",
+      "workMode": "oficjalna strona wskazuje Łódź, a publiczny mirror",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "platforma agentowa na GCP, environment provisioning,",
+      "whyInteresting": "to mocny oficjalny sygnał z konkretnym zakresem",
+      "uncertainty": "istnieje rozjazd między oficjalnym widokiem lokalizacji a",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/ai-llmops-engineer-m-k-lodz-traktorowa-141-143%2Coferta%2C1004699845",
+        "https://kariera.rossmann.pl/pracuj-w-it/20288%2Cai-llmops-engineer",
+        "https://kariera.rossmann.pl/pracuj-w-it",
+        "https://www.pracuj.pl/praca/ai-llmops-engineer-m-k-lodz-traktorowa-141-143%2Coferta%2C1004699845"
+      ],
+      "tags": [
+        "LLM",
+        "LLMOps",
+        "GCP"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano nową publiczną rolę Yard Corporate dla Wrocław + remote z",
+    "Dodano oficjalnie potwierdzoną rolę ALTIMI AI Forward Deployment Engineer",
+    "Dodano dwa nowe aktywne role IN4GE dla remote Poland:",
+    "Dodano oficjalny sygnał Rossmann AI / LLMOps Engineer, który wchodzi w"
+  ],
+  "risks": [
+    "IN4GE ma szeroki klaster podobnych aktywnych kart AI/GenAI; rośnie ryzyko",
+    "Rossmann ma rozjazd między oficjalnym widokiem lokalizacji a board mirrorami,",
+    "Yard Corporate i techniczny opis ALTIMI są w tej rundzie mocno oparte o"
+  ],
+  "recommendedActions": [
+    "Low-risk action applied: dodano do Seen Opportunities nowe role",
+    "Low-risk action applied: backlog rozszerzono o follow-up dla klastra IN4GE",
+    "Follow-up: w następnej rundzie sprawdzić, czy IN4GE utrzyma oba aktywne",
+    "Follow-up: potwierdzić, czy Rossmann utrzyma oficjalnie aktywną rolę"
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT AI/ML jobs",
+      "url": "https://justjoin.it/job-offers/all-locations/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Yard Corporate - Applied Machine Learning Engineer | GenAI / LLM / ML Systems",
+      "url": "https://justjoin.it/job-offer/yard-corporate-applied-machine-learning-engineer-genai-llm-ml-systems-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "ALTIMI careers",
+      "url": "https://altimi.com/career",
+      "status": "checked"
+    },
+    {
+      "title": "ALTIMI - AI Forward Deployment Engineer",
+      "url": "https://justjoin.it/job-offer/altimi-ai-forward-deployment-engineer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl - Backend Software Engineer (MCP & AI Agents)",
+      "url": "https://www.pracuj.pl/praca/backend-software-engineer-mcp-ai-agents-warszawa%2Coferta%2C1004889617",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl - Senior Software Engineer (Python, GenAI & Agentic AI)",
+      "url": "https://www.pracuj.pl/praca/senior-software-engineer-python-genai-agentic-ai-warszawa%2Coferta%2C1004889607",
+      "status": "checked"
+    },
+    {
+      "title": "Rossmann Kariera - AI / LLMOps Engineer",
+      "url": "https://kariera.rossmann.pl/pracuj-w-it/20288%2Cai-llmops-engineer",
+      "status": "checked"
+    },
+    {
+      "title": "Rossmann Kariera - Pracuj w IT",
+      "url": "https://kariera.rossmann.pl/pracuj-w-it",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl - AI / LLMOps Engineer (M/K)",
+      "url": "https://www.pracuj.pl/praca/ai-llmops-engineer-m-k-lodz-traktorowa-141-143%2Coferta%2C1004699845",
+      "status": "checked"
+    }
+  ]
+}

@@ -18,6 +18,10 @@ MANIFEST_URL_ERROR = (
     "https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
 )
 MANIFEST_PATH_SUFFIX = "/public/pavbot-manifest.json"
+MOBILE_PUBLIC_ONLY_TOPIC = "aktualne-wydarzenia-mobile"
+LLM_JOBS_TOPIC = "llm-ai-jobs-wroclaw"
+PULSE_NEWS_TOPIC = "puls-dnia-news"
+RESEARCH_DATA_TOPICS = {"tech-news", "polska-swiat"}
 
 
 def build_manifest(repo_root: Path, raw_base_url: str = "") -> dict[str, Any]:
@@ -100,14 +104,15 @@ def collect_topics(repo_root: Path, raw_base_url: str) -> list[dict[str, Any]]:
         if topic_dir.name == "templates":
             continue
         topic_file = topic_dir / "topic.md"
-        if not topic_file.exists():
+        title = read_markdown_title(topic_file) if topic_file.exists() else None
+        if not topic_file.exists() and not has_topic_artifact_fallback(topic_dir):
             continue
 
         rel_path = relative_path(topic_file, repo_root)
         topics.append(
             {
                 "slug": topic_dir.name,
-                "title": read_markdown_title(topic_file) or topic_dir.name,
+                "title": title or fallback_topic_title(topic_dir.name),
                 "path": relative_path(topic_dir, repo_root),
                 "topicFilePath": rel_path,
                 "url": raw_url(raw_base_url, rel_path),
@@ -115,6 +120,18 @@ def collect_topics(repo_root: Path, raw_base_url: str) -> list[dict[str, Any]]:
         )
 
     return topics
+
+
+def has_topic_artifact_fallback(topic_dir: Path) -> bool:
+    if topic_dir.name == PULSE_NEWS_TOPIC:
+        return any((topic_dir / "data").glob("*-pulse-news.json"))
+    return False
+
+
+def fallback_topic_title(slug: str) -> str:
+    if slug == PULSE_NEWS_TOPIC:
+        return "Pavbot Puls Dnia News"
+    return slug
 
 
 def collect_artifacts(
@@ -126,6 +143,10 @@ def collect_artifacts(
     for topic in topics:
         topic_dir = repo_root / topic["path"]
         slug = topic["slug"]
+
+        if slug == MOBILE_PUBLIC_ONLY_TOPIC:
+            collect_mobile_public_artifacts(artifacts, repo_root, raw_base_url, topic_dir, slug)
+            continue
 
         for name, artifact_type in (
             ("topic.md", "topic"),
@@ -142,6 +163,16 @@ def collect_artifacts(
 
         for path in sorted((topic_dir / "pdfs").glob("*.pdf")):
             add_artifact(artifacts, repo_root, raw_base_url, path, slug, "pdf")
+
+        if slug == LLM_JOBS_TOPIC:
+            for path in sorted((topic_dir / "data").glob("*.json")):
+                add_artifact(artifacts, repo_root, raw_base_url, path, slug, "jobsData")
+        elif slug == PULSE_NEWS_TOPIC:
+            for path in sorted((topic_dir / "data").glob("*-pulse-news.json")):
+                add_artifact(artifacts, repo_root, raw_base_url, path, slug, "pulseNewsData")
+        elif slug in RESEARCH_DATA_TOPICS:
+            for path in sorted((topic_dir / "data").glob("*.json")):
+                add_artifact(artifacts, repo_root, raw_base_url, path, slug, "researchData")
 
         for path in sorted((topic_dir / "proposals").glob("*.md")):
             add_artifact(artifacts, repo_root, raw_base_url, path, slug, "proposal")
@@ -172,6 +203,46 @@ def collect_artifacts(
         ),
         reverse=True,
     )
+
+
+def collect_mobile_public_artifacts(
+    artifacts: list[dict[str, Any]],
+    repo_root: Path,
+    raw_base_url: str,
+    topic_dir: Path,
+    slug: str,
+) -> None:
+    for path in sorted((topic_dir / "data").glob("*-mobile-news.json")):
+        add_artifact(artifacts, repo_root, raw_base_url, path, slug, "mobileNewsData")
+
+    for path in sorted((topic_dir / "pdfs").glob("*-mobile-brief.pdf")):
+        add_artifact(artifacts, repo_root, raw_base_url, path, slug, "pdf")
+
+    podcasts_dir = topic_dir / "podcasts"
+    if not podcasts_dir.exists():
+        return
+
+    for date_dir in sorted(path for path in podcasts_dir.iterdir() if path.is_dir()):
+        add_artifact(
+            artifacts,
+            repo_root,
+            raw_base_url,
+            date_dir / "script.md",
+            slug,
+            "podcastScript",
+            forced_date=parse_date_parts(date_dir.name),
+        )
+
+        for path in sorted(date_dir.glob("audio/*/podcast.mp3")):
+            add_artifact(
+                artifacts,
+                repo_root,
+                raw_base_url,
+                path,
+                slug,
+                "podcastAudioVariant",
+                forced_date=parse_date_parts(date_dir.name),
+            )
 
 
 def add_artifact(
@@ -261,6 +332,14 @@ def artifact_title(path: Path, artifact_type: str) -> str:
         return "Podcast brief PDF"
     if artifact_type == "podcastTtsVariants":
         return "TTS variants metadata"
+    if artifact_type == "jobsData":
+        return "Jobs data"
+    if artifact_type == "researchData":
+        return "Research data"
+    if artifact_type == "mobileNewsData":
+        return "Mobile news data"
+    if artifact_type == "pulseNewsData":
+        return "Pulse news data"
     return path.name
 
 

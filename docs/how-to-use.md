@@ -61,9 +61,21 @@ The current active automations are:
 - Topic: `research/aktualne-wydarzenia-mobile`
 - Cadence: daily at 10:15 local time
 - Output: `research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`
+- Newspaper PDF: `research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-newspaper.pdf`
 - Report: `research/aktualne-wydarzenia-mobile/runs/YYYY-MM-DD-HHMM.md`
 - Podcast package: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/`
 - Audio variants: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/audio/<variant>/podcast.mp3`
+
+- Name: `Pavbot Puls Dnia 3h`
+- ID: `pavbot-puls-dnia-news-3h`
+- Kind: `automation`
+- Topic: `research/puls-dnia-news`
+- Cadence: 06:00, 09:00, 12:00, 15:00, 18:00 and 21:00 Europe/Warsaw
+- Output: `research/puls-dnia-news/data/YYYY-MM-DD-HHMM-pulse-news.json`
+- Report: `research/puls-dnia-news/runs/YYYY-MM-DD-HHMM.md`
+- iOS surface: `Puls Dnia` tab
+- iOS retention: fetched runs are cached locally for 48 hours; saved news stay
+  local until the user removes them.
 
 ## Manual Run
 
@@ -128,8 +140,10 @@ Run the complete mobile current-events workflow for
 `RUN_STAMP=$(TZ=Europe/Warsaw date +%Y-%m-%d-%H%M)` and
 `RUN_DATE=${RUN_STAMP:0:10}`, then create the timestamped Markdown report in
 `runs/YYYY-MM-DD-HHMM.md`, mobile PDF in
-`pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`, podcast package in
-`podcasts/YYYY-MM-DD-HHMM/`, both MP3 TTS variants, and `tts_variants.json`.
+`pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`, newspaper PDF in
+`pdfs/YYYY-MM-DD-HHMM-newspaper.pdf`, podcast package in
+`podcasts/YYYY-MM-DD-HHMM/`, public `script.md` for local iPhone TTS, both MP3
+TTS variants when available, and `tts_variants.json`.
 ```
 
 Shared local TTS models can be prepared with:
@@ -141,18 +155,54 @@ bash .agents/scripts/podcast/download-local-tts-models.sh
 Use `PAVBOT_TTS_ENGINE=say|piper|xtts|auto` to choose the renderer. `auto`
 falls back from XTTS-v2 to Piper to macOS `say -v Zosia`.
 
+In the iOS app, audio artifacts can keep playing after switching tabs,
+minimizing the app, or locking the iPhone. The active audio item also exposes
+Now Playing controls and, on supported devices, a Live Activity/Dynamic Island
+entry that deep-links back to the artifact.
+For `Research -> Aktualne`, the iOS app can also read the published podcast
+`script.md` locally with native iPhone TTS, so the text path still works when a
+server-rendered MP3 variant is missing.
+
+Manual pulse-news test:
+
+```text
+$daily-research-agent
+
+Run the `Pavbot Puls Dnia 3h` workflow for `research/puls-dnia-news`: create
+one Europe/Warsaw timestamp, write `runs/YYYY-MM-DD-HHMM.md`, write
+`data/YYYY-MM-DD-HHMM-pulse-news.json` with at least 12 sourced news items and
+an even item count, validate it with `scripts/validate_pulse_news_data.py`, and
+publish with `scripts/pavbot_commit_and_push_outputs.sh --isolated
+research/puls-dnia-news`.
+```
+
+In the iOS app, `Puls Dnia` shows the latest published `pulseNewsData` and keeps
+a local 48-hour history for smooth browsing. A news item saved by the user
+disappears from the active carousel, remains in `Zapisane`, and is not removed
+by the 48-hour cleanup.
+
+In `Ustawienia`, use `Przywróć ustawienia domyślne` when the Manifest URL or
+Notification server URL is stale. The app calls the notifier endpoint
+`/v1/app/defaults`, fills the current GitHub raw manifest URL and Cloudflare
+notifier URL, then reloads the manifest. If a Quick Tunnel URL changes, update
+`PAVBOT_PUBLIC_NOTIFIER_URL`, restart the notifier, and tap this button in the
+app.
+
 After the run, verify the workspace:
 
 ```bash
 scripts/verify-research-workspace.sh
 ```
 
-Each automation should publish its topic output after writing artifacts. Set
-`PAVBOT_MANIFEST_URL` in the Codex or repository environment to the same public
-raw manifest URL used in iOS `Settings -> Manifest URL`:
+Each automation should publish its topic output after writing artifacts. The
+publish script automatically derives the public manifest URL from
+`PAVBOT_MANIFEST_URL`, `PAVBOT_RAW_BASE_URL`, the existing manifest `rawBaseUrl`,
+or the GitHub `origin` remote. Set `PAVBOT_MANIFEST_URL` only when you need to
+override the default URL used by iOS `Settings -> Manifest URL`:
 
 ```bash
-export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
+# Optional override:
+# export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
@@ -165,16 +215,17 @@ manifest and the new files in the same commit. This requires:
 
 - a working `origin` remote;
 - GitHub credentials or a token with permission to push to `main`;
-- `PAVBOT_MANIFEST_URL` set to the same URL that the iOS app reads.
+- either an auto-resolvable GitHub `origin` or an explicit `PAVBOT_MANIFEST_URL`.
 
-Only `runs/`, `pdfs/`, `podcasts/`, `index.md`, `backlog.md`, and
+Only `runs/`, `data/`, `pdfs/`, `podcasts/`, `index.md`, `backlog.md`, and
 `public/pavbot-manifest.json` are publishable as automation outputs. Code,
 docs, prompt edits, topic tools, iOS changes, and backend changes must go
 through a separate development branch/commit.
 
 The iOS app reads this URL but does not send it back to Codex automations. For
-advanced compatibility, `PAVBOT_RAW_BASE_URL` and `--raw-base-url` still work
-inside `scripts/generate_pavbot_manifest.py`.
+advanced compatibility, `PAVBOT_RAW_BASE_URL` and `--raw-base-url` still work;
+the publish script also uses `PAVBOT_RAW_BASE_URL` to derive the manifest URL
+when `PAVBOT_MANIFEST_URL` is unset.
 
 To connect the iOS app to your own Codex-backed repository, follow
 `docs/connect-ios-app-to-your-repo.md`. Version 1 expects a public GitHub raw
@@ -187,6 +238,20 @@ it does not configure Codex automations by itself, and the MacBook must stay
 awake for live webhook-driven push alerts to work. Push alerts are triggered by
 GitHub `push` webhooks, so the automation must publish to GitHub before the
 notifier can detect new files.
+
+When the iOS app is closed, only real APNs pushes can deliver an alert. If
+Docker, Cloudflare Tunnel, GitHub webhook delivery, or APNs configuration is
+down, the app will not receive a live notification until it is opened and
+manually refreshed.
+
+## iOS Release
+
+The current iOS marketing version is `1.5`. The app and Live Activity extension
+read this from `ios/PavbotViewer/project.yml` through XcodeGen. Build numbers
+are still automatic through the `Set Dynamic Build Number` build phase.
+
+For TestFlight or App Store Connect release steps, use
+`docs/ios-appstore-release.md`.
 
 ## Reviewing The First Three Runs
 

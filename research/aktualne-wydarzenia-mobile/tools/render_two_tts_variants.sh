@@ -8,7 +8,7 @@ fi
 
 script_file=$1
 podcast_dir=$2
-speed=${PAVBOT_TTS_SPEED_MULTIPLIER:-1.1}
+speed=${PAVBOT_TTS_SPEED_MULTIPLIER:-1.03}
 python_bin=${PAVBOT_PYTHON:-python3}
 shared_renderer=".agents/scripts/podcast/render-podcast-audio.sh"
 
@@ -127,49 +127,92 @@ render_variant() {
   mkdir -p "$variant_dir"
   rm -f "$raw_mp3" "$final_mp3" "$log_file"
 
-  set +e
+  local render_rc=0
   if [[ "$engine" == "xtts" ]]; then
     PAVBOT_TTS_ENGINE=xtts \
       PAVBOT_XTTS_SPEAKER="$speaker" \
       PAVBOT_XTTS_LANGUAGE="$language" \
       bash "$shared_renderer" "$script_file" "$raw_mp3" "$voice" >"$log_file" 2>&1
+    render_rc=$?
   else
     PAVBOT_TTS_ENGINE="$engine" \
       bash "$shared_renderer" "$script_file" "$raw_mp3" "$voice" >"$log_file" 2>&1
+    render_rc=$?
   fi
-  local render_rc=$?
-  set -e
 
   if [[ $render_rc -ne 0 || ! -s "$raw_mp3" ]]; then
     write_failed_json "$variant_id" "$engine" "$voice" "$variant_dir" "$(cat "$log_file" 2>/dev/null)"
-    render_status+=("$variant_id:failed")
-    variant_json_files+=("$variant_dir/render.json")
-    return 0
+    return 1
   fi
 
-  set +e
-  ffmpeg -hide_banner -loglevel error -y -i "$raw_mp3" -filter:a "atempo=$speed" -codec:a libmp3lame -q:a 4 "$final_mp3" >>"$log_file" 2>&1
-  local speed_rc=$?
-  set -e
-
-  if [[ $speed_rc -ne 0 || ! -s "$final_mp3" ]]; then
+  if ! ffmpeg -hide_banner -loglevel error -y -i "$raw_mp3" -filter:a "atempo=$speed" -codec:a libmp3lame -q:a 4 "$final_mp3" >>"$log_file" 2>&1; then
     write_failed_json "$variant_id" "$engine" "$voice" "$variant_dir" "$(cat "$log_file" 2>/dev/null)"
-    render_status+=("$variant_id:failed")
-    variant_json_files+=("$variant_dir/render.json")
-    return 0
+    return 1
+  fi
+
+  if [[ ! -s "$final_mp3" ]]; then
+    write_failed_json "$variant_id" "$engine" "$voice" "$variant_dir" "$(cat "$log_file" 2>/dev/null)"
+    return 1
   fi
 
   local final_duration
   final_duration=$(ffprobe -v error -show_entries format=duration -of default=nw=1:nk=1 "$final_mp3" 2>>"$log_file")
   write_success_json "$variant_id" "$engine" "$voice" "$variant_dir" "$raw_mp3" "$final_mp3" "$model_label" "$final_duration"
   rm -f "$raw_mp3" "$log_file"
-  render_status+=("$variant_id:ok")
-  variant_json_files+=("$variant_dir/render.json")
+  return 0
+}
+
+render_variant_with_fallback() {
+  local variant_id=$1
+  local engine=$2
+  local model_label=$3
+  shift 3
+  local voices=( "$@" )
+  local voice
+  local success=1
+
+  for voice in "${voices[@]}"; do
+    if render_variant "$variant_id" "$engine" "$voice" "$voice" "$model_label"; then
+      success=0
+      break
+    fi
+  done
+
+  render_status+=("$variant_id:$([ "$success" -eq 0 ] && echo ok || echo failed)")
+  variant_json_files+=("$podcast_dir/audio/$variant_id/render.json")
+  return "$success"
+}
+
+record_variant_status() {
+  local variant_id=$1
+  local rc=$2
+  local status=failed
+  if [[ $rc -eq 0 ]]; then
+    status=ok
+  fi
+  render_status+=("$variant_id:$status")
+  variant_json_files+=("$podcast_dir/audio/$variant_id/render.json")
 }
 
 set -e
+set +e
 render_variant "female-piper" "piper" "pl_PL-gosia-medium" "" "rhasspy/piper-voices:pl_PL-gosia-medium"
-render_variant "male-xtts" "xtts" "Andrew Chipper" "Andrew Chipper" "coqui/XTTS-v2"
+female_rc=$?
+set -e
+record_variant_status "female-piper" "$female_rc"
+
+male_xtts_voices=(
+  "Andrew Chipper"
+  "Badr Odhiambo"
+  "Royston Min"
+  "Viktor Eka"
+)
+if [[ -n "${PAVBOT_TTS_MALE_VOICE_LIST:-}" ]]; then
+  IFS='|' read -r -a male_xtts_voices <<< "${PAVBOT_TTS_MALE_VOICE_LIST}"
+fi
+set +e
+render_variant_with_fallback "male-xtts" "xtts" "coqui/XTTS-v2" "${male_xtts_voices[@]}"
+set -e
 
 "$python_bin" - "$podcast_dir/tts_variants.json" "$language" "$speed" "${variant_json_files[@]}" <<'PY'
 import json

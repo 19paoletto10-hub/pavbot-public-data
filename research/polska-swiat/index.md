@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-06-22
+Last updated: 2026-06-26
 
 ## Current Understanding
 
@@ -25,6 +25,27 @@ Po runie 22 czerwca utrzymują się te same dwa główne bloki, ale z nowymi
 akcentami: oficjalna agenda Prezydenta RP w Warszawie i Turcji, drugi dzień
 rozmów USA-Iran w Szwajcarii oraz ryzyko politycznej zmiany w Wielkiej
 Brytanii wokół Keira Starmera.
+Po runie 23 czerwca najważniejsze bloki to: szczyt V4 z udziałem Donalda Tuska,
+oficjalna wizyta Karola Nawrockiego w Turcji przed szczytem NATO, rozmowy
+USA-Iran po komunikacie Vance'a o dobrych podstawach do porozumienia oraz
+faktyczna rezygnacja Keira Starmera i proces sukcesji w Wielkiej Brytanii.
+Po runie 24 czerwca główne bloki przesunęły się na deeskalację napięć
+polsko-ukraińskich przed Konferencją Odbudowy Ukrainy w Gdańsku, drugi dzień
+wizyty Prezydenta RP w Turcji z punktem wojskowym w İncirlik, oficjalny
+komunikat KPRM po V4, spór USA-Iran o inspekcje nuklearne oraz rozmowy
+Starmer-Burnham o szybkim przekazaniu władzy.
+Po runie 25 czerwca najważniejszy blok to start URC 2026 w Gdańsku bez
+Zełenskiego, z udziałem rządu, biznesu i instytucji oraz z protestami w tle.
+W agendzie bezpieczeństwa wyróżniają się: prezydencka wizyta w İncirlik,
+spotkanie ministrów obrony V4 w Budapeszcie, zamówienia GROT A3 oraz debata o
+roli Ukrainy w europejskiej obronie.
+Po runie 26 czerwca blok URC przeszedł w fazę dokumentów i konkretów:
+Deklaracja Gdańska liderów wschodniej flanki, zapowiedź około 200 umów i
+porozumień, komponent energetyczny z udziałem polskich spółek oraz sprzężenie
+odbudowy Ukrainy z bezpieczeństwem. Równolegle NATO przed szczytem w Ankarze
+akcentuje inwestycje, kontrakty obronne i wsparcie Ukrainy, a wątek możliwych
+rosyjskich prowokacji wobec Polski lub państw bałtyckich wymaga ostrożnego,
+źródłowanego traktowania.
 
 ## Stable Facts
 
@@ -62,9 +83,22 @@ Brytanii wokół Keira Starmera.
   segment tylko wtedy, gdy RCB/IMGW wskazują szeroki zasięg lub ryzyko szkód.
 - Wątki polityczne z Wielkiej Brytanii śledzić pod kątem wpływu na wsparcie dla
   Ukrainy, NATO i europejską politykę bezpieczeństwa.
+- Przy publikacji automatyzacji researchowej używać izolowanego skryptu
+  publikacyjnego, który commit/push ogranicza do aktywnego tematu i manifestu.
+- Relacje redakcyjne o E5 i rozmowach liderów w Berlinie traktować jako ważny
+  sygnał, ale czekać na oficjalny komunikat przed mocną tezą.
+- PDF-y dziennych raportów powinny być sprawdzane pod kątem mobile-first formatu
+  390 x 844 pt i czytelności w iOS bez ręcznego zoomu.
+- Wątek możliwych rosyjskich prowokacji wobec Polski lub Bałtów traktować jako
+  ostrzeżenie źródłowe, nie potwierdzony scenariusz; zestawiać go z oficjalnymi
+  komunikatami NATO/KPRM.
 
 ## Recent Reports
 
+- [2026-06-26](runs/2026-06-26.md)
+- [2026-06-25](runs/2026-06-25.md)
+- [2026-06-24](runs/2026-06-24.md)
+- [2026-06-23](runs/2026-06-23.md)
 - [2026-06-22](runs/2026-06-22.md)
 - [2026-06-21](runs/2026-06-21.md)
 - [2026-06-20](runs/2026-06-20.md)

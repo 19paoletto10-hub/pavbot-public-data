@@ -1,0 +1,169 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-23",
+  "runTime": "17:41",
+  "executiveSummary": "Runda z 2026-06-23 17:41 CEST przyniosła materialny update dzięki nowemu, wyraźnemu klastrowi ról ACAISOFT oraz jednej nowej oficjalnej roli EPAM. Najmocniejszy sygnał to cztery publiczne oferty remote Poland wokół ewaluacji modeli, infrastruktury AI/LLM, DevOps dla projektów AI oraz pracy na styku RL, RAG i agentów. Równolegle EPAM wystawił oficjalną rolę Junior Agentic Automation Engineer w modelu Hybrid in Poland, co jest rzadkim, publicznym wejściem juniorskim do praktycznych systemów agentowych. Wcześniej obserwowane źródła deepsense.ai, KYOTU i Sii zostały zweryfikowane, ale w tej rundzie nie pokazały nowej materialnej zmiany względem poprzedniego raportu.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior Machine Learning /AI Engineer (RL)",
+      "company": "ACAISOFT",
+      "location": "100% remote.",
+      "workMode": "Remote",
+      "compensation": "publiczna strona pokazuje 170-230 PLN, ale jednostka stawki",
+      "seniority": "Senior",
+      "fitSummary": "ewaluacja agentów AI, problemy wydajnościowe LLM, środowiska",
+      "whyInteresting": "to jedna z najmocniejszych publicznych ról w tej",
+      "uncertainty": "to oficjalna strona pracodawcy, ale pole wynagrodzenia wygląda na",
+      "sourceURLs": [
+        "https://www.acaisoft.com/careers",
+        "https://www.acaisoft.com/job/machine-learning-engineer"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Site Reliability Engineer - AI/LLM & Infra",
+      "company": "ACAISOFT",
+      "location": "Whole Poland (remote work).",
+      "workMode": "Remote",
+      "compensation": "160-230 PLN netto + VAT / godz. B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "AI/LLM & Infra, Python, CI/CD, DevOps/SRE, AWS,",
+      "whyInteresting": "bardzo praktyczna rola AI platform/infrastructure",
+      "uncertainty": "rola jest publiczna i precyzyjna, ale na razie najmocniej",
+      "sourceURLs": [
+        "https://www.acaisoft.com/careers",
+        "https://www.pracuj.pl/praca/site-reliability-engineer-ai-llm-infra-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004897180"
+      ],
+      "tags": [
+        "LLM",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior Python Engineer (AI evaluations platform)",
+      "company": "ACAISOFT",
+      "location": "Whole Poland (remote work).",
+      "workMode": "Remote",
+      "compensation": "26 880-33 600 PLN netto + VAT / miesiąc B2B.",
+      "seniority": "Senior",
+      "fitSummary": "AI evaluations platform, optymalizacja agentów AI,",
+      "whyInteresting": "to publiczna rola backendowa bezpośrednio wokół",
+      "uncertainty": "część publicznego opisu ofert ACAISOFT wygląda podobnie między",
+      "sourceURLs": [
+        "https://www.acaisoft.com/careers",
+        "https://www.pracuj.pl/praca/senior-python-engineer-ai-evaluations-platform-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004897258"
+      ],
+      "tags": [
+        "Python"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Python Engineeer with DevOps (AI project)",
+      "company": "ACAISOFT",
+      "location": "Whole Poland (remote work).",
+      "workMode": "Remote",
+      "compensation": "26 880-35 280 PLN netto + VAT / miesiąc B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "AI project, Python, FastAPI, Django, PostgreSQL,",
+      "whyInteresting": "to wyraźnie hands-on rola dla osób, które chcą łączyć",
+      "uncertainty": "podobnie jak wyżej, publiczny opis jest board-first, więc warto",
+      "sourceURLs": [
+        "https://www.acaisoft.com/careers",
+        "https://www.pracuj.pl/praca/python-engineeer-with-devops-ai-project-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004897256"
+      ],
+      "tags": [
+        "Python"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Junior Agentic Automation Engineer",
+      "company": "EPAM",
+      "location": "Hybrid in Poland.",
+      "workMode": "Hybrid",
+      "compensation": "brak publicznych widełek na oficjalnej stronie.",
+      "seniority": "Junior",
+      "fitSummary": "workflowy z LLM, n8n, AgentKit, UiPath, prompty,",
+      "whyInteresting": "to rzadki publiczny juniorowy punkt wejścia do",
+      "uncertainty": "rola jest wyraźnie juniorska i bardziej platformowo-wdrożeniowa",
+      "sourceURLs": [
+        "https://careers.epam.com/en/vacancy/junior-agentic-automation-engineer-bltvjweudh300xzvzss_en"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano nowy klaster ACAISOFT z czterema publicznymi rolami remote Poland",
+    "Dodano nową oficjalną rolę EPAM Junior Agentic Automation Engineer.",
+    "Nie dodano ponownie deepsense.ai, KYOTU ani Sii, bo sprawdzone źródła"
+  ],
+  "risks": [
+    "Publiczne strony ACAISOFT mają częściowo niespójny sposób prezentacji",
+    "Klaster ACAISOFT jest obecnie rozpięty między oficjalnym hubem careers a",
+    "Rola EPAM Junior Agentic Automation Engineer jest ciekawa, ale juniorska i"
+  ],
+  "recommendedActions": [
+    "Low-risk action applied: dodano do Seen Opportunities nowe role",
+    "Low-risk action applied: ACAISOFT dodano do aktywnego shortlistu źródeł i",
+    "Follow-up: w następnej rundzie sprawdzić, czy klaster ACAISOFT utrzyma się",
+    "Follow-up: potwierdzić jednostkę wynagrodzenia przy"
+  ],
+  "checkedSources": [
+    {
+      "title": "Acaisoft careers",
+      "url": "https://www.acaisoft.com/careers",
+      "status": "checked"
+    },
+    {
+      "title": "Acaisoft - Senior Machine Learning /AI Engineer (RL)",
+      "url": "https://www.acaisoft.com/job/machine-learning-engineer",
+      "status": "checked"
+    },
+    {
+      "title": "ACAISOFT - Senior Python Engineer (AI evaluations platform) on Pracuj.pl",
+      "url": "https://www.pracuj.pl/praca/senior-python-engineer-ai-evaluations-platform-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004897258",
+      "status": "checked"
+    },
+    {
+      "title": "ACAISOFT - Site Reliability Engineer - AI/LLM & Infra on Pracuj.pl",
+      "url": "https://www.pracuj.pl/praca/site-reliability-engineer-ai-llm-infra-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004897180",
+      "status": "checked"
+    },
+    {
+      "title": "ACAISOFT - Python Engineeer with DevOps (AI project) on Pracuj.pl",
+      "url": "https://www.pracuj.pl/praca/python-engineeer-with-devops-ai-project-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004897256",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM - Junior Agentic Automation Engineer",
+      "url": "https://careers.epam.com/en/vacancy/junior-agentic-automation-engineer-bltvjweudh300xzvzss_en",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai careers",
+      "url": "https://deepsense.ai/careers/",
+      "status": "checked-no-material-change"
+    },
+    {
+      "title": "KYOTU - AI Engineer (GenAI / RAG / Agentic AI)",
+      "url": "https://www.pracuj.pl/praca/ai-engineer-genai-rag-agentic-ai-warszawa-poniatowskiego-1%2Coferta%2C1004868105",
+      "status": "checked-no-material-change"
+    },
+    {
+      "title": "Sii - AI Engineer – GenAI & Cloud (f/m/x)",
+      "url": "https://sii.pl/en/job-ads/id/37069/ai-engineer-genai-cloud-f-m-x",
+      "status": "checked-no-material-change"
+    }
+  ]
+}

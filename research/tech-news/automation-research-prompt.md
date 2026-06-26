@@ -19,10 +19,26 @@ zawierać linki do wszystkich materialnych źródeł, rozdział "Nowe fakty" ora
 sekcję "Tematy do podcastu" z 5-8 kandydatami. Przy każdym kandydacie podaj:
 tytuł, dlaczego to ważne, główne źródła i priorytet.
 
-Dodatkowo wygeneruj estetyczny, profesjonalny PDF z tym samym researchem do
-`research/tech-news/pdfs/YYYY-MM-DD-tech-news.pdf`, używając
-`scripts/render_research_pdf.py`. Po wygenerowaniu wyrenderuj strony PDF do PNG
-i sprawdź wizualnie układ, polskie znaki, tabelę tematów oraz stopki.
+Dodatkowo utwórz strukturalny JSON dla natywnego czytnika iOS:
+`research/tech-news/data/YYYY-MM-DD-research.json`. Wygeneruj go komendą:
+`python3 scripts/render_research_data.py research/tech-news/runs/YYYY-MM-DD.md`
+i zwaliduj:
+`python3 scripts/validate_research_data.py research/tech-news/data/YYYY-MM-DD-research.json`.
+JSON jest obowiązkowym artefaktem tej automatyzacji. Musi zawierać po polsku:
+lead, punkty podsumowania, artykuły z polami `whatHappened`, `whyItMatters`,
+`deeperAnalysis`, `contextPoints`, źródła i tagi. Jeśli JSON nie powstanie albo
+walidator zwróci błąd, nie publikuj wyników i zgłoś błąd przebiegu.
+
+Dodatkowo wygeneruj estetyczny, profesjonalny PDF mobile-first z tym samym
+researchem do `research/tech-news/pdfs/YYYY-MM-DD-tech-news.pdf`, używając
+`scripts/render_research_pdf.py`. PDF ma być wygodny do czytania w aplikacji
+Pavbot na iPhonie: większy tekst, krótkie linie, wyraźne wyróżnienie
+"Najważniejsze", czytelne bloki "Dlaczego to ważne" i podkreślone linki
+źródeł. Po wygenerowaniu wyrenderuj strony PDF do PNG i sprawdź wizualnie brak
+ucięć tekstu, polskie znaki, mobilne karty tematów oraz stopki.
+PDF jest obowiązkowym artefaktem tej automatyzacji: jeśli render PDF nie
+powstanie albo weryfikacja wykryje pusty/nieczytelny plik, nie publikuj
+wyników i zgłoś błąd przebiegu.
 
 Zaktualizuj `research/tech-news/index.md`, gdy zmienia się obecny stan wiedzy.
 Zaktualizuj `research/tech-news/backlog.md`, gdy pojawiają się konkretne
@@ -32,10 +48,10 @@ Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS i webhooka
 notyfikacji push. Skrypt uruchamia `python3 scripts/generate_pavbot_manifest.py`,
 odświeża `public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki i robi
 push na `origin/main`.
-`PAVBOT_MANIFEST_URL` musi być ustawione w środowisku Codex albo repozytorium
-na ten sam publiczny raw URL, który jest w iOS `Settings -> Manifest URL`;
-aplikacja iOS nie przekazuje tej wartości z powrotem do Codex. Następnie
-uruchom:
+Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override środowiskowego,
+`PAVBOT_RAW_BASE_URL`, istniejącego `rawBaseUrl` w manifeście albo GitHub
+`origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Rozwiązany URL
+musi odpowiadać iOS `Settings -> Manifest URL`. Następnie uruchom:
 `scripts/pavbot_commit_and_push_outputs.sh --isolated research/tech-news`.
 
 Użyj risk gate z `docs/architecture.md`. Jeśli rekomendowana akcja zmieniałaby
@@ -43,6 +59,7 @@ automatyzacje, instrukcje repo, skille, hooki, MCP, zależności albo pliki poza
 aktywnym tematem, utwórz propozycję w `research/tech-news/proposals/` zamiast
 stosować zmianę. Finalny krok publikacji może commitować tylko
 `research/tech-news/runs/`, `research/tech-news/pdfs/`,
+`research/tech-news/data/`,
 `research/tech-news/podcasts/`, `research/tech-news/index.md`,
 `research/tech-news/backlog.md` oraz `public/pavbot-manifest.json`.
 

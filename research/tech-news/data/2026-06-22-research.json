@@ -1,0 +1,480 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-06-22",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy przebieg wzmacnia cztery osie: masowe wdrożenia AI w dużych organizacjach, coraz twardszą warstwę tożsamości i zgodności w narzędziach AI, agentowe standardy interoperacyjności oraz przejście agentów z kodu do świata fizycznego. Najmocniejsze tematy podcastowe to: OpenAI i Samsung jako przykład enterprise AI na skalę globalną, weryfikacja tożsamości w Claude, Anthropic Project Fetch jako sygnał fizycznych agentów AI, Google ARD/A2A jako brakująca warstwa agentic web oraz kolejna fala produktów agentowych na Product Hunt."
+  ],
+  "summaryBullets": [
+    "AI: OpenAI ogłosiło 21 czerwca jedno z największych swoich wdrożeń enterprise",
+    "AI: CIO: nowy sygnał AI",
+    "AI: Claude Help Center i Hacker News: nowy sygnał AI"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-06-22-0-openai-oglosilo-21-czerwca-jedno-z-najwiekszych-swoich-wdrozen-enterprise-93083d3264",
+      "section": "AI",
+      "title": "OpenAI ogłosiło 21 czerwca jedno z największych swoich wdrożeń enterprise",
+      "standfirst": "OpenAI ogłosiło 21 czerwca jedno z największych swoich wdrożeń enterprise: ChatGPT Enterprise i Codex mają trafić do wszystkich pracowników Samsung Electronics w Korei oraz do wszystkich pracowników globalnego działu Device eXperience. OpenAI podaje, że Samsung chce używać ChatGPT i Codex od R&D i produkcji po marketing, funkcje korporacyjne i automatyzację workflow, a Codex ma już ponad 5 mln tygodniowych użytkowników.",
+      "whatHappened": "OpenAI ogłosiło 21 czerwca jedno z największych swoich wdrożeń enterprise: ChatGPT Enterprise i Codex mają trafić do wszystkich pracowników Samsung Electronics w Korei oraz do wszystkich pracowników globalnego działu Device eXperience. OpenAI podaje, że Samsung chce używać ChatGPT i Codex od R&D i produkcji po marketing, funkcje korporacyjne i automatyzację workflow, a Codex ma już ponad 5 mln tygodniowych użytkowników.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI ogłosiło 21 czerwca jedno z największych swoich wdrożeń enterprise: ChatGPT Enterprise i Codex mają trafić do wszystkich pracowników Samsung Electronics w Korei oraz do wszystkich pracowników globalnego działu Device eXperience.",
+      "deeperAnalysis": [
+        "OpenAI ogłosiło 21 czerwca jedno z największych swoich wdrożeń enterprise: ChatGPT Enterprise i Codex mają trafić do wszystkich pracowników Samsung Electronics w Korei oraz do wszystkich pracowników globalnego działu Device eXperience. OpenAI podaje, że Samsung chce używać ChatGPT i Codex od R&D i produkcji po marketing, funkcje korporacyjne i automatyzację workflow, a Codex ma już ponad 5 mln tygodniowych użytkowników. Źródło: OpenAI.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI ogłosiło 21 czerwca jedno z największych swoich wdrożeń enterprise: ChatGPT Enterprise i Codex mają trafić do wszystkich pracowników Samsung Electronics w Korei oraz do wszystkich pracowników globalnego działu Device eXperience.",
+        "Analiza opiera się na źródłach: OpenAI.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI ogłosiło 21 czerwca jedno z największych swoich wdrożeń enterprise: ChatGPT Enterprise i Codex mają trafić do wszystkich pracowników Samsung Electronics w Korei oraz do wszystkich pracowników globalnego działu Device eXperience.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment/"
+        }
+      ],
+      "priority": "Low",
+      "tags": [
+        "AI",
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-22-1-cio-nowy-sygnal-ai-5e1e26c877",
+      "section": "AI",
+      "title": "CIO: nowy sygnał AI",
+      "standfirst": "Kontekst Samsunga jest istotny, bo CIO opisało wcześniej zwrot firmy po latach ostrożności wobec zewnętrznej generatywnej AI. Samsung DX ma wdrażać ChatGPT, Gemini i Claude po testach na ok.",
+      "whatHappened": "Kontekst Samsunga jest istotny, bo CIO opisało wcześniej zwrot firmy po latach ostrożności wobec zewnętrznej generatywnej AI. Samsung DX ma wdrażać ChatGPT, Gemini i Claude po testach na ok.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Kontekst Samsunga jest istotny, bo CIO opisało wcześniej zwrot firmy po latach ostrożności wobec zewnętrznej generatywnej AI.",
+      "deeperAnalysis": [
+        "Kontekst Samsunga jest istotny, bo CIO opisało wcześniej zwrot firmy po latach ostrożności wobec zewnętrznej generatywnej AI. Samsung DX ma wdrażać ChatGPT, Gemini i Claude po testach na ok. 2,500 pracownikach, przy równoległym budowaniu dedykowanych organizacji AI, szkoleń AX Boot Camp i frameworka bezpieczeństwa. Źródło: CIO.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Kontekst Samsunga jest istotny, bo CIO opisało wcześniej zwrot firmy po latach ostrożności wobec zewnętrznej generatywnej AI.",
+        "Analiza opiera się na źródłach: CIO.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Kontekst Samsunga jest istotny, bo CIO opisało wcześniej zwrot firmy po latach ostrożności wobec zewnętrznej generatywnej AI.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "CIO",
+          "url": "https://www.cio.com/article/4184660/samsung-which-previously-blocked-chatgpt-is-now-fully-adopting-three-generative-ai-models-and-accelerating-its-ax-initiative.html"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-22-2-claude-help-center-i-hacker-news-nowy-sygnal-ai-a477a72ed9",
+      "section": "AI",
+      "title": "Claude Help Center i Hacker News: nowy sygnał AI",
+      "standfirst": "Claude Help Center ma zaktualizowaną w tym tygodniu stronę o identity verification. Anthropic opisuje weryfikację tożsamości jako mechanizm dla wybranych use case'ów, kontroli integralności platformy, egzekwowania zasad i zgodności prawnej.",
+      "whatHappened": "Claude Help Center ma zaktualizowaną w tym tygodniu stronę o identity verification. Anthropic opisuje weryfikację tożsamości jako mechanizm dla wybranych use case'ów, kontroli integralności platformy, egzekwowania zasad i zgodności prawnej.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Claude Help Center ma zaktualizowaną w tym tygodniu stronę o identity verification.",
+      "deeperAnalysis": [
+        "Claude Help Center ma zaktualizowaną w tym tygodniu stronę o identity verification. Anthropic opisuje weryfikację tożsamości jako mechanizm dla wybranych use case'ów, kontroli integralności platformy, egzekwowania zasad i zgodności prawnej. Partnerem weryfikacji jest Persona, wymagany może być fizyczny dokument tożsamości i kamera do selfie, a Anthropic deklaruje, że dane weryfikacyjne nie są używane do trenowania modeli ani do marketingu. Wątek był silnym sygnałem na Hacker News. Źródła: Claude Help Center, Hacker News.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Claude Help Center ma zaktualizowaną w tym tygodniu stronę o identity verification.",
+        "Analiza opiera się na źródłach: Claude Help Center, Hacker News.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Claude Help Center ma zaktualizowaną w tym tygodniu stronę o identity verification.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Claude Help Center",
+          "url": "https://support.claude.com/en/articles/14328960-identity-verification-on-claude"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/front"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-22-3-anthropic-opublikowal-project-fetch-10fd8118b9",
+      "section": "AI",
+      "title": "Anthropic opublikował Project Fetch",
+      "standfirst": "Anthropic opublikował Project Fetch: Phase two. Claude Opus 4.",
+      "whatHappened": "Anthropic opublikował Project Fetch: Phase two. Claude Opus 4.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Anthropic opublikował Project Fetch: Phase two.",
+      "deeperAnalysis": [
+        "Anthropic opublikował Project Fetch: Phase two. Claude Opus 4.7, działając przez Claude Code i z ograniczonym udziałem badacza, ukończył zadania programistyczne wokół robopsa ponad 10 razy szybciej niż ludzkie zespoły z pierwszej fazy; dla pięciu zadań Team Claude potrzebował 264 minut, a Opus 4.7 średnio 12 minut i 7 sekund. Anthropic podkreśla jednak, że model nadal słabo radził sobie z precyzyjnym, zamkniętopętlowym sterowaniem piłką, więc nie jest to \"rozwiązana robotyka\", tylko sygnał wczesnej fizycznej agentowości. Źródło: Anthropic.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Anthropic opublikował Project Fetch: Phase two.",
+        "Analiza opiera się na źródłach: Anthropic.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic opublikował Project Fetch: Phase two.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic",
+          "url": "https://www.anthropic.com/research/project-fetch-phase-two"
+        }
+      ],
+      "priority": "Low",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-22-4-google-developers-blog-i-google-nowy-sygnal-ai-05d4d0a758",
+      "section": "AI",
+      "title": "Google Developers Blog i Google: nowy sygnał AI",
+      "standfirst": "Google Developers ogłosił Agentic Resource Discovery, otwartą specyfikację do publikowania, odkrywania i weryfikowania narzędzi, skillów, MCP serwerów i agentów w sieci. ARD opiera się na katalogach publikowanych pod domeną organizacji, rejestrach indeksujących te katalogi, ai-catalog.",
+      "whatHappened": "Google Developers ogłosił Agentic Resource Discovery, otwartą specyfikację do publikowania, odkrywania i weryfikowania narzędzi, skillów, MCP serwerów i agentów w sieci. ARD opiera się na katalogach publikowanych pod domeną organizacji, rejestrach indeksujących te katalogi, ai-catalog.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Google Developers ogłosił Agentic Resource Discovery, otwartą specyfikację do publikowania, odkrywania i weryfikowania narzędzi, skillów, MCP serwerów i agentów w sieci.",
+      "deeperAnalysis": [
+        "Google Developers ogłosił Agentic Resource Discovery, otwartą specyfikację do publikowania, odkrywania i weryfikowania narzędzi, skillów, MCP serwerów i agentów w sieci. ARD opiera się na katalogach publikowanych pod domeną organizacji, rejestrach indeksujących te katalogi, ai-catalog.json i warstwie kryptograficznej weryfikacji, zanim agent połączy się z zasobem. Źródło: Google Developers Blog.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Google Developers ogłosił Agentic Resource Discovery, otwartą specyfikację do publikowania, odkrywania i weryfikowania narzędzi, skillów, MCP serwerów i agentów w sieci.",
+        "Analiza opiera się na źródłach: Google Developers Blog.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Google Developers ogłosił Agentic Resource Discovery, otwartą specyfikację do publikowania, odkrywania i weryfikowania narzędzi, skillów, MCP serwerów i agentów w sieci.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Google Developers Blog",
+          "url": "https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/"
+        }
+      ],
+      "priority": "Low",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-22-5-google-developers-blog-i-google-regulacyjny-sygnal-technologiczny-7fbd762b1e",
+      "section": "Regulacje",
+      "title": "Google Developers Blog i Google: regulacyjny sygnał technologiczny",
+      "standfirst": "Google równolegle rozwija A2A jako protokół współpracy agentów. W rocznicowym wpisie opisuje A2A jako sposób na bezpieczne przekazywanie zadań między agentami bez ujawniania wewnętrznych danych i logiki, z przykładami od protein folding po enterprise data, DevOps, commerce i regulowane sieci.",
+      "whatHappened": "Google równolegle rozwija A2A jako protokół współpracy agentów. W rocznicowym wpisie opisuje A2A jako sposób na bezpieczne przekazywanie zadań między agentami bez ujawniania wewnętrznych danych i logiki, z przykładami od protein folding po enterprise data, DevOps, commerce i regulowane sieci.",
+      "whyItMatters": "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Google równolegle rozwija A2A jako protokół współpracy agentów.",
+      "deeperAnalysis": [
+        "Google równolegle rozwija A2A jako protokół współpracy agentów. W rocznicowym wpisie opisuje A2A jako sposób na bezpieczne przekazywanie zadań między agentami bez ujawniania wewnętrznych danych i logiki, z przykładami od protein folding po enterprise data, DevOps, commerce i regulowane sieci. Źródło: Google Developers Blog.",
+        "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Google równolegle rozwija A2A jako protokół współpracy agentów.",
+        "Analiza opiera się na źródłach: Google Developers Blog.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Google równolegle rozwija A2A jako protokół współpracy agentów.",
+        "Dlaczego ważne: regulacje ustawiają ramy ryzyka i compliance.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Google Developers Blog",
+          "url": "https://developers.googleblog.com/how-a2a-is-building-a-world-of-collaborative-agents/"
+        }
+      ],
+      "priority": "Low",
+      "tags": [
+        "Regulacje"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-22-6-google-developers-blog-i-google-nowy-sygnal-ai-1650d1d028",
+      "section": "AI",
+      "title": "Google Developers Blog i Google: nowy sygnał AI",
+      "standfirst": "Google formalnie przenosi indywidualnych użytkowników Gemini CLI do Antigravity CLI. Od 18 czerwca 2026 Gemini CLI i Gemini Code Assist IDE extensions przestają obsługiwać requesty dla Google AI Pro, Ultra i darmowych użytkowników indywidualnych; dostęp enterprise pozostaje bez zmian.",
+      "whatHappened": "Google formalnie przenosi indywidualnych użytkowników Gemini CLI do Antigravity CLI. Od 18 czerwca 2026 Gemini CLI i Gemini Code Assist IDE extensions przestają obsługiwać requesty dla Google AI Pro, Ultra i darmowych użytkowników indywidualnych; dostęp enterprise pozostaje bez zmian.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Google formalnie przenosi indywidualnych użytkowników Gemini CLI do Antigravity CLI.",
+      "deeperAnalysis": [
+        "Google formalnie przenosi indywidualnych użytkowników Gemini CLI do Antigravity CLI. Od 18 czerwca 2026 Gemini CLI i Gemini Code Assist IDE extensions przestają obsługiwać requesty dla Google AI Pro, Ultra i darmowych użytkowników indywidualnych; dostęp enterprise pozostaje bez zmian. Google argumentuje, że nowy model pracy wymaga wspólnego backendu dla wielu agentów, z zachowaniem m.in. Agent Skills, Hooks, Subagents i Extensions jako pluginów. Źródło: Google Developers Blog.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Google formalnie przenosi indywidualnych użytkowników Gemini CLI do Antigravity CLI.",
+        "Analiza opiera się na źródłach: Google Developers Blog.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Google formalnie przenosi indywidualnych użytkowników Gemini CLI do Antigravity CLI.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Google Developers Blog",
+          "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-22-7-product-hunt-rano-22-czerwca-ponownie-pokazuje-bardzo-mocny-segment-agentowy-c89726dbf3",
+      "section": "Regulacje",
+      "title": "Product Hunt rano 22 czerwca ponownie pokazuje bardzo mocny segment agentowy",
+      "standfirst": "Product Hunt rano 22 czerwca ponownie pokazuje bardzo mocny segment agentowy: Agent 37 Cloud, Atomic Mail Agentic, Backgrind, Laguna by Poolside, Cloudback MCP Server, a także wczorajsze WorkClaw, Slackbot's MCP Client, Mellum by JetBrains, SerpApi for AI Apps and Agents i pumaDB. Źródło: Product Hunt.",
+      "whatHappened": "Product Hunt rano 22 czerwca ponownie pokazuje bardzo mocny segment agentowy: Agent 37 Cloud, Atomic Mail Agentic, Backgrind, Laguna by Poolside, Cloudback MCP Server, a także wczorajsze WorkClaw, Slackbot's MCP Client, Mellum by JetBrains, SerpApi for AI Apps and Agents i pumaDB. Źródło: Product Hunt.",
+      "whyItMatters": "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Product Hunt rano 22 czerwca ponownie pokazuje bardzo mocny segment agentowy: Agent 37 Cloud, Atomic Mail Agentic, Backgrind, Laguna by Poolside, Cloudback MCP Server, a także wczorajsze WorkClaw, Slackbot's MCP Client, Mellum by JetBrains, SerpApi for AI Apps and Agents i pumaDB.",
+      "deeperAnalysis": [
+        "Product Hunt rano 22 czerwca ponownie pokazuje bardzo mocny segment agentowy: Agent 37 Cloud, Atomic Mail Agentic, Backgrind, Laguna by Poolside, Cloudback MCP Server, a także wczorajsze WorkClaw, Slackbot's MCP Client, Mellum by JetBrains, SerpApi for AI Apps and Agents i pumaDB. Źródło: Product Hunt.",
+        "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Product Hunt rano 22 czerwca ponownie pokazuje bardzo mocny segment agentowy: Agent 37 Cloud, Atomic Mail Agentic, Backgrind, Laguna by Poolside, Cloudback MCP Server, a także wczorajsze WorkClaw, Slackbot's MCP Client, Mellum by JetBrains, SerpApi for AI Apps and Agents i pumaDB.",
+        "Analiza opiera się na źródłach: Product Hunt.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Product Hunt rano 22 czerwca ponownie pokazuje bardzo mocny segment agentowy: Agent 37 Cloud, Atomic Mail Agentic, Backgrind, Laguna by Poolside, Cloudback MCP Server, a także wczorajsze WorkClaw, Slackbot's MCP Client, Mellum by JetBrains, SerpApi for AI Apps and Agents i pumaDB.",
+        "Dlaczego ważne: regulacje ustawiają ramy ryzyka i compliance.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Regulacje",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-22-8-apertus-i-swiss-ai-initiative-nowy-sygnal-ai-9c9d1b09f1",
+      "section": "AI",
+      "title": "Apertus i Swiss AI Initiative: nowy sygnał AI",
+      "standfirst": "Hacker News wyniósł na front temat Apertus jako wątku sovereign AI. Sam model nie jest nowy, ale bieżący sygnał społecznościowy łączy się z europejską suwerennością: Apertus jest rozwijany przez Swiss AI Initiative, EPFL, ETH Zurich i CSCS, deklaruje otwarte wagi, dane, kod, metody i zasady alignmentu, warianty 8B i 70B oraz wielojęzyczność od startu.",
+      "whatHappened": "Hacker News wyniósł na front temat Apertus jako wątku sovereign AI. Sam model nie jest nowy, ale bieżący sygnał społecznościowy łączy się z europejską suwerennością: Apertus jest rozwijany przez Swiss AI Initiative, EPFL, ETH Zurich i CSCS, deklaruje otwarte wagi, dane, kod, metody i zasady alignmentu, warianty 8B i 70B oraz wielojęzyczność od startu.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Hacker News wyniósł na front temat Apertus jako wątku sovereign AI.",
+      "deeperAnalysis": [
+        "Hacker News wyniósł na front temat Apertus jako wątku sovereign AI. Sam model nie jest nowy, ale bieżący sygnał społecznościowy łączy się z europejską suwerennością: Apertus jest rozwijany przez Swiss AI Initiative, EPFL, ETH Zurich i CSCS, deklaruje otwarte wagi, dane, kod, metody i zasady alignmentu, warianty 8B i 70B oraz wielojęzyczność od startu. Źródła: Apertus, Swiss AI Initiative, Hacker News.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Hacker News wyniósł na front temat Apertus jako wątku sovereign AI.",
+        "Analiza opiera się na źródłach: Apertus, Swiss AI Initiative.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Hacker News wyniósł na front temat Apertus jako wątku sovereign AI.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Apertus",
+          "url": "https://apertvs.ai/"
+        },
+        {
+          "title": "Swiss AI Initiative",
+          "url": "https://www.swiss-ai.org/apertus"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/front"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-22-9-business-insider-cyberbezpieczenstwo-i-ryzyko-technologiczne-d2d79b486a",
+      "section": "Cyber",
+      "title": "Business Insider: cyberbezpieczeństwo i ryzyko technologiczne",
+      "standfirst": "Business Insider opisał DREAM, startup AI cybersecurity współtworzony przez Sebastiana Kurza i Shaleva Hulio. Firma ogłosiła rundę 260 mln USD przy wycenie 3 mld USD, twierdzi, że ma ok.",
+      "whatHappened": "Business Insider opisał DREAM, startup AI cybersecurity współtworzony przez Sebastiana Kurza i Shaleva Hulio. Firma ogłosiła rundę 260 mln USD przy wycenie 3 mld USD, twierdzi, że ma ok.",
+      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: Business Insider opisał DREAM, startup AI cybersecurity współtworzony przez Sebastiana Kurza i Shaleva Hulio.",
+      "deeperAnalysis": [
+        "Business Insider opisał DREAM, startup AI cybersecurity współtworzony przez Sebastiana Kurza i Shaleva Hulio. Firma ogłosiła rundę 260 mln USD przy wycenie 3 mld USD, twierdzi, że ma ok. 350 pracowników, ok. 300 mln USD przychodów do tej pory i koncentruje się na AI dla obrony rządów oraz infrastruktury krytycznej. Ze względu na profil firmy i źródłowanie jest to dobry temat podcastowy, ale wymaga oddzielenia claimów założycieli od niezależnej walidacji. Źródło: Business Insider.",
+        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: Business Insider opisał DREAM, startup AI cybersecurity współtworzony przez Sebastiana Kurza i Shaleva Hulio.",
+        "Analiza opiera się na źródłach: Business Insider.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Business Insider opisał DREAM, startup AI cybersecurity współtworzony przez Sebastiana Kurza i Shaleva Hulio.",
+        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Business Insider",
+          "url": "https://www.businessinsider.com/how-sebastian-kurz-built-a-3-billion-cybersecurity-startup-2026-6"
+        }
+      ],
+      "priority": "Low",
+      "tags": [
+        "Cyber",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-22-10-openai-news-i-anthropic-newsroom-nowy-sygnal-ai-02e0790b5a",
+      "section": "AI",
+      "title": "OpenAI News i Anthropic Newsroom: nowy sygnał AI",
+      "standfirst": "OpenAI News pokazuje nową pozycję z 21 czerwca o Samsungu. Anthropic Newsroom nie pokazał nowszego newsroom itemu niż 17 czerwca, ale Anthropic Research ma Project Fetch z 18 czerwca.",
+      "whatHappened": "OpenAI News pokazuje nową pozycję z 21 czerwca o Samsungu. Anthropic Newsroom nie pokazał nowszego newsroom itemu niż 17 czerwca, ale Anthropic Research ma Project Fetch z 18 czerwca.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI News pokazuje nową pozycję z 21 czerwca o Samsungu.",
+      "deeperAnalysis": [
+        "OpenAI News pokazuje nową pozycję z 21 czerwca o Samsungu. Anthropic Newsroom nie pokazał nowszego newsroom itemu niż 17 czerwca, ale Anthropic Research ma Project Fetch z 18 czerwca. Google Research Blog nadal pokazuje jako najnowszy wpis z 16 czerwca, a Android Developers Blog nie wniósł nowego materiału do dzisiejszego raportu. Źródła: OpenAI News, Anthropic Newsroom, Google Research Blog, Android Developers Blog.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI News pokazuje nową pozycję z 21 czerwca o Samsungu.",
+        "Analiza opiera się na źródłach: OpenAI News, Anthropic Newsroom.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI News pokazuje nową pozycję z 21 czerwca o Samsungu.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI News",
+          "url": "https://openai.com/news/"
+        },
+        {
+          "title": "Anthropic Newsroom",
+          "url": "https://www.anthropic.com/news"
+        },
+        {
+          "title": "Google Research Blog",
+          "url": "https://research.google/blog/"
+        },
+        {
+          "title": "Android Developers Blog",
+          "url": "https://android-developers.googleblog.com/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "OpenAI"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "OpenAI i Samsung: Codex wychodzi poza developerów",
+      "rationale": "Samsung to globalny test skali: ChatGPT Enterprise i Codex trafiają do produkcji, R&D, marketingu i workflow, a Codex jest opisywany jako narzędzie także dla zespołów nietechnicznych.",
+      "sourcesLabel": "OpenAI; CIO"
+    },
+    {
+      "priority": "High",
+      "title": "Claude wymaga weryfikacji tożsamości dla wybranych funkcji",
+      "rationale": "To konkretny przykład, że dostęp do mocnych funkcji AI będzie coraz częściej powiązany z KYC, compliance, abuse prevention i sporem o prywatność danych.",
+      "sourcesLabel": "Claude Help Center; Hacker News"
+    },
+    {
+      "priority": "High",
+      "title": "Project Fetch: agent AI zaczyna używać fizycznych narzędzi",
+      "rationale": "Anthropic pokazuje szybki skok od pair-programmingu do samodzielnego pisania kodu dla robota, ale też wyraźnie pokazuje ograniczenia w sterowaniu fizycznym.",
+      "sourcesLabel": "Anthropic"
+    },
+    {
+      "priority": "High",
+      "title": "Google ARD/A2A: brakująca warstwa agentic web",
+      "rationale": "ARD i A2A próbują rozwiązać problem, który będzie blokował agentów w firmach: jak znaleźć, zweryfikować i bezpiecznie połączyć narzędzia oraz innych agentów.",
+      "sourcesLabel": "Google Developers Blog"
+    },
+    {
+      "priority": "Medium",
+      "title": "Gemini CLI znika dla indywidualnych użytkowników na rzecz Antigravity",
+      "rationale": "To ważny sygnał platformowy: agentowe CLI przestają być pojedynczym narzędziem terminalowym, a stają się częścią większego multi-agent backendu.",
+      "sourcesLabel": "Google Developers Blog"
+    },
+    {
+      "priority": "Medium",
+      "title": "Product Hunt: agentowe produkty nie zwalniają",
+      "rationale": "Kolejny dzień pokazuje agentowe chmury, autonomiczny email, MCP backupy, agentic coding i pamięć dla agentów. To dobry segment \"co realnie budują startupy\".",
+      "sourcesLabel": "Product Hunt"
+    },
+    {
+      "priority": "Medium",
+      "title": "Apertus wraca jako symbol europejskiego sovereign AI",
+      "rationale": "Wątek nie jest premierą modelu, ale aktualny sygnał z HN dobrze dopina europejską narrację: pełna otwartość, wielojęzyczność i zgodność jako kontrapunkt dla zamkniętych modeli USA.",
+      "sourcesLabel": "Apertus; Swiss AI Initiative; HN"
+    },
+    {
+      "priority": "Medium",
+      "title": "DREAM: AI cybersecurity jako rynek dla państw",
+      "rationale": "Startup Kurza i Hulio pokazuje, że AI cyber zaczyna być sprzedawane rządom i infrastrukturze krytycznej jako element suwerenności bezpieczeństwa, nie tylko klasyczny SaaS.",
+      "sourcesLabel": "Business Insider"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI",
+      "url": "https://openai.com/index/samsung-electronics-chatgpt-codex-deployment/"
+    },
+    {
+      "title": "CIO",
+      "url": "https://www.cio.com/article/4184660/samsung-which-previously-blocked-chatgpt-is-now-fully-adopting-three-generative-ai-models-and-accelerating-its-ax-initiative.html"
+    },
+    {
+      "title": "Claude Help Center",
+      "url": "https://support.claude.com/en/articles/14328960-identity-verification-on-claude"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/front"
+    },
+    {
+      "title": "Anthropic",
+      "url": "https://www.anthropic.com/research/project-fetch-phase-two"
+    },
+    {
+      "title": "Google Developers Blog",
+      "url": "https://developers.googleblog.com/announcing-the-agentic-resource-discovery-specification/"
+    },
+    {
+      "title": "Google Developers Blog",
+      "url": "https://developers.googleblog.com/how-a2a-is-building-a-world-of-collaborative-agents/"
+    },
+    {
+      "title": "Google Developers Blog",
+      "url": "https://developers.googleblog.com/an-important-update-transitioning-gemini-cli-to-antigravity-cli/"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Apertus",
+      "url": "https://apertvs.ai/"
+    },
+    {
+      "title": "Swiss AI Initiative",
+      "url": "https://www.swiss-ai.org/apertus"
+    },
+    {
+      "title": "Business Insider",
+      "url": "https://www.businessinsider.com/how-sebastian-kurz-built-a-3-billion-cybersecurity-startup-2026-6"
+    },
+    {
+      "title": "OpenAI News",
+      "url": "https://openai.com/news/"
+    },
+    {
+      "title": "Anthropic Newsroom",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "title": "Google Research Blog",
+      "url": "https://research.google/blog/"
+    },
+    {
+      "title": "Android Developers Blog",
+      "url": "https://android-developers.googleblog.com/"
+    }
+  ]
+}

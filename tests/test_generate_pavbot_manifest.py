@@ -113,6 +113,270 @@ class GeneratePavbotManifestTest(unittest.TestCase):
         self.assertEqual(timed_run["date"], "2026-06-20")
         self.assertEqual(timed_run["time"], "21:52")
 
+    def test_manifest_collects_llm_jobs_data_json_as_jobs_data(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            topic_dir = repo / "research" / "llm-ai-jobs-wroclaw"
+            data_dir = topic_dir / "data"
+            data_dir.mkdir(parents=True)
+            (topic_dir / "topic.md").write_text("# Topic Contract: llm-ai-jobs-wroclaw\n", encoding="utf-8")
+            (data_dir / "2026-06-25-0141-jobs.json").write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "status": "Material update",
+                        "runDate": "2026-06-25",
+                        "runTime": "01:41",
+                        "executiveSummary": "Nowe oferty AI.",
+                        "opportunities": [
+                            {
+                                "rank": 1,
+                                "title": "Principal AI Engineer",
+                                "company": "CKSource",
+                                "location": "Remote Poland",
+                                "workMode": "Remote",
+                                "compensation": "38 000-45 000 PLN",
+                                "seniority": "Principal",
+                                "fitSummary": "Agentic workflows",
+                                "whyInteresting": "Silny fit LLM",
+                                "uncertainty": "Tytuł ma drift",
+                                "sourceURLs": ["https://example.com/job"],
+                                "tags": ["LLM", "Agentic AI"],
+                            }
+                        ],
+                        "changes": ["Nowa rola"],
+                        "risks": [],
+                        "recommendedActions": ["Sprawdzić za tydzień"],
+                        "checkedSources": [{"title": "CKSource careers", "url": "https://example.com"}],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        artifact = next(
+            item
+            for item in manifest["artifacts"]
+            if item["path"] == "research/llm-ai-jobs-wroclaw/data/2026-06-25-0141-jobs.json"
+        )
+        self.assertEqual(artifact["type"], "jobsData")
+        self.assertEqual(artifact["topic"], "llm-ai-jobs-wroclaw")
+        self.assertEqual(artifact["date"], "2026-06-25")
+        self.assertEqual(artifact["time"], "01:41")
+        self.assertEqual(artifact["title"], "Jobs data")
+
+    def test_manifest_collects_research_data_json_for_research_topics(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            topic_dir = repo / "research" / "tech-news"
+            data_dir = topic_dir / "data"
+            data_dir.mkdir(parents=True)
+            (topic_dir / "topic.md").write_text("# Topic Contract: tech-news\n", encoding="utf-8")
+            (data_dir / "2026-06-25-research.json").write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "topic": "tech-news",
+                        "runDate": "2026-06-25",
+                        "runTime": None,
+                        "status": "Material update",
+                        "leadParagraphs": ["AI i infrastruktura są dziś kluczowe."],
+                        "summaryBullets": ["AI: OpenAI publikuje zmianę."],
+                        "articles": [
+                            {
+                                "id": "tech-1",
+                                "section": "AI",
+                                "title": "OpenAI publikuje zmianę",
+                                "standfirst": "OpenAI publikuje zmianę.",
+                                "whatHappened": "OpenAI publikuje zmianę.",
+                                "whyItMatters": "To ważne dla adopcji AI.",
+                                "deeperAnalysis": ["Analiza pierwsza.", "Analiza druga."],
+                                "contextPoints": ["Co się stało: test.", "Dlaczego ważne: test."],
+                                "sources": [{"title": "OpenAI", "url": "https://openai.com/news"}],
+                                "priority": "High",
+                                "tags": ["AI"],
+                            }
+                        ],
+                        "podcastTopics": [],
+                        "checkedSources": [{"title": "OpenAI", "url": "https://openai.com/news"}],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        artifact = next(
+            item
+            for item in manifest["artifacts"]
+            if item["path"] == "research/tech-news/data/2026-06-25-research.json"
+        )
+        self.assertEqual(artifact["type"], "researchData")
+        self.assertEqual(artifact["topic"], "tech-news")
+        self.assertEqual(artifact["date"], "2026-06-25")
+        self.assertEqual(artifact["title"], "Research data")
+
+    def test_manifest_collects_mobile_news_data_json_for_mobile_topic(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            topic_dir = repo / "research" / "aktualne-wydarzenia-mobile"
+            data_dir = topic_dir / "data"
+            pdf_dir = topic_dir / "pdfs"
+            audio_dir = topic_dir / "podcasts" / "2026-06-25-1015" / "audio" / "female-piper"
+            data_dir.mkdir(parents=True)
+            pdf_dir.mkdir(parents=True)
+            audio_dir.mkdir(parents=True)
+            (topic_dir / "topic.md").write_text(
+                "# Topic Contract: aktualne-wydarzenia-mobile\n",
+                encoding="utf-8",
+            )
+            (data_dir / "2026-06-25-1015-mobile-news.json").write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "topic": "aktualne-wydarzenia-mobile",
+                        "runDate": "2026-06-25",
+                        "runTime": "10:15",
+                        "status": "Material update",
+                        "headline": "Wydanie dnia",
+                        "leadParagraphs": ["Najważniejsze wydarzenia dnia."],
+                        "sections": [
+                            {
+                                "id": "polska",
+                                "title": "Polska",
+                                "summary": "Najważniejsze krajowe sygnały.",
+                                "articles": [
+                                    {
+                                        "id": "polska-1",
+                                        "section": "Polska",
+                                        "title": "Gdańsk gospodarzem rozmów",
+                                        "lead": "Polska wzmacnia rolę gospodarza rozmów.",
+                                        "facts": ["KPRM zapowiedziało spotkanie."],
+                                        "analysis": "To zwiększa wagę dyplomatyczną dnia.",
+                                        "whyItMatters": "Użytkownik widzi, co realnie zmienia się w otoczeniu.",
+                                        "sources": [{"title": "KPRM", "url": "https://www.gov.pl/web/premier"}],
+                                        "tags": ["Polska"],
+                                        "ttsText": "Polska wzmacnia rolę gospodarza rozmów. To zwiększa wagę dyplomatyczną dnia.",
+                                        "priority": "High",
+                                    }
+                                ],
+                            }
+                        ],
+                        "checkedSources": [{"title": "KPRM", "url": "https://www.gov.pl/web/premier"}],
+                        "audioArtifacts": [],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            (pdf_dir / "2026-06-25-1015-mobile-brief.pdf").write_bytes(b"%PDF mobile brief")
+            (audio_dir / "podcast.mp3").write_bytes(b"mp3")
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+        artifact = by_path["research/aktualne-wydarzenia-mobile/data/2026-06-25-1015-mobile-news.json"]
+        self.assertEqual(artifact["type"], "mobileNewsData")
+        self.assertEqual(artifact["topic"], "aktualne-wydarzenia-mobile")
+        self.assertEqual(artifact["date"], "2026-06-25")
+        self.assertEqual(artifact["time"], "10:15")
+        self.assertEqual(artifact["title"], "Mobile news data")
+
+    def test_manifest_collects_pulse_news_data_json_for_pulse_topic(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            topic_dir = repo / "research" / "puls-dnia-news"
+            data_dir = topic_dir / "data"
+            data_dir.mkdir(parents=True)
+            (topic_dir / "topic.md").write_text(
+                "# Topic Contract: puls-dnia-news\n",
+                encoding="utf-8",
+            )
+            (data_dir / "2026-06-26-1200-pulse-news.json").write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "topic": "puls-dnia-news",
+                        "runDate": "2026-06-26",
+                        "runTime": "12:00",
+                        "status": "Material update",
+                        "headline": "Puls dnia",
+                        "summary": "Najważniejsze tematy z ostatnich godzin.",
+                        "items": [],
+                        "checkedSources": [],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        artifact = next(
+            item
+            for item in manifest["artifacts"]
+            if item["path"] == "research/puls-dnia-news/data/2026-06-26-1200-pulse-news.json"
+        )
+        self.assertEqual(artifact["type"], "pulseNewsData")
+        self.assertEqual(artifact["topic"], "puls-dnia-news")
+        self.assertEqual(artifact["date"], "2026-06-26")
+        self.assertEqual(artifact["time"], "12:00")
+        self.assertEqual(artifact["title"], "Pulse news data")
+
+    def test_manifest_collects_pulse_news_data_without_topic_file(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            data_dir = repo / "research" / "puls-dnia-news" / "data"
+            data_dir.mkdir(parents=True)
+            (data_dir / "2026-06-26-1502-pulse-news.json").write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "topic": "puls-dnia-news",
+                        "runDate": "2026-06-26",
+                        "runTime": "15:02",
+                        "status": "Material update",
+                        "headline": "Puls dnia",
+                        "summary": "Najważniejsze tematy z ostatnich godzin.",
+                        "items": [],
+                        "checkedSources": [],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        topic = next(item for item in manifest["topics"] if item["slug"] == "puls-dnia-news")
+        self.assertEqual(topic["title"], "Pavbot Puls Dnia News")
+        artifact = next(
+            item
+            for item in manifest["artifacts"]
+            if item["path"] == "research/puls-dnia-news/data/2026-06-26-1502-pulse-news.json"
+        )
+        self.assertEqual(artifact["type"], "pulseNewsData")
+        self.assertEqual(artifact["topic"], "puls-dnia-news")
+        self.assertEqual(artifact["time"], "15:02")
+
     def test_manifest_uses_public_raw_urls_and_json_serializes(self) -> None:
         generator = load_generator()
 
@@ -305,7 +569,7 @@ The current active automations are:
         self.assertEqual(automation["kind"], "researchAudio")
         self.assertEqual(automation["topic"], "aktualne-wydarzenia-mobile")
 
-    def test_manifest_collects_podcast_audio_variants_from_audio_subfolders(self) -> None:
+    def test_manifest_collects_only_mobile_public_audio_variants_from_audio_subfolders(self) -> None:
         generator = load_generator()
 
         with tempfile.TemporaryDirectory() as tmp:
@@ -347,11 +611,9 @@ The current active automations are:
             ]["title"],
             "Podcast audio - male xtts",
         )
-        self.assertEqual(
-            by_path[
-                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/tts_variants.json"
-            ]["type"],
-            "podcastTtsVariants",
+        self.assertNotIn(
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/tts_variants.json",
+            by_path,
         )
         self.assertNotIn(
             "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.raw.mp3",
@@ -362,7 +624,7 @@ The current active automations are:
             by_path,
         )
 
-    def test_manifest_collects_timestamped_mobile_report_pdf_and_podcast_artifacts(self) -> None:
+    def test_manifest_collects_only_public_mobile_pdf_and_audio_artifacts(self) -> None:
         generator = load_generator()
 
         with tempfile.TemporaryDirectory() as tmp:
@@ -370,6 +632,8 @@ The current active automations are:
             topic_dir = repo_root / "research" / "aktualne-wydarzenia-mobile"
             run_path = topic_dir / "runs" / "2026-06-23-1015.md"
             pdf_path = topic_dir / "pdfs" / "2026-06-23-1015-mobile-brief.pdf"
+            newspaper_pdf_path = topic_dir / "pdfs" / "2026-06-23-1015-newspaper.pdf"
+            data_path = topic_dir / "data" / "2026-06-23-1015-mobile-news.json"
             podcast_dir = topic_dir / "podcasts" / "2026-06-23-1015"
             female_audio = podcast_dir / "audio" / "female-piper" / "podcast.mp3"
             female_render = podcast_dir / "audio" / "female-piper" / "render.json"
@@ -383,6 +647,48 @@ The current active automations are:
             )
             run_path.write_text("# Mobile report\n", encoding="utf-8")
             pdf_path.write_bytes(b"%PDF timestamped mobile brief")
+            newspaper_pdf_path.write_bytes(b"%PDF timestamped mobile newspaper")
+            data_path.parent.mkdir(parents=True)
+            data_path.write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "topic": "aktualne-wydarzenia-mobile",
+                        "runDate": "2026-06-23",
+                        "runTime": "10:15",
+                        "status": "Material update",
+                        "headline": "Wydanie",
+                        "leadParagraphs": ["Lead"],
+                        "sections": [
+                            {
+                                "id": "ogolne",
+                                "title": "Ogólne",
+                                "summary": "Sygnały dnia.",
+                                "articles": [
+                                    {
+                                        "id": "a1",
+                                        "section": "Ogólne",
+                                        "title": "Test",
+                                        "lead": "Lead",
+                                        "facts": ["Fakt"],
+                                        "analysis": "Analiza",
+                                        "whyItMatters": "Znaczenie",
+                                        "sources": [{"title": "Źródło", "url": "https://example.com"}],
+                                        "tags": ["Ogólne"],
+                                        "ttsText": "Lead. Analiza. Znaczenie.",
+                                        "priority": "High",
+                                    }
+                                ],
+                            }
+                        ],
+                        "checkedSources": [{"title": "Źródło", "url": "https://example.com"}],
+                        "audioArtifacts": [],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
             (podcast_dir / "script.md").write_text("# Script\n", encoding="utf-8")
             (podcast_dir / "sources.md").write_text("# Sources\n", encoding="utf-8")
             (podcast_dir / "tts_variants.json").write_text(
@@ -398,12 +704,9 @@ The current active automations are:
 
         by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
         expected = {
-            "research/aktualne-wydarzenia-mobile/runs/2026-06-23-1015.md": "run",
             "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-1015-mobile-brief.pdf": "pdf",
+            "research/aktualne-wydarzenia-mobile/data/2026-06-23-1015-mobile-news.json": "mobileNewsData",
             "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/script.md": "podcastScript",
-            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/sources.md": "podcastSources",
-            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/tts_variants.json": "podcastTtsVariants",
-            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/render.json": "podcastRender",
             "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/podcast.mp3": "podcastAudioVariant",
         }
         for path, artifact_type in expected.items():
@@ -411,6 +714,16 @@ The current active automations are:
                 self.assertEqual(by_path[path]["type"], artifact_type)
                 self.assertEqual(by_path[path]["date"], "2026-06-23")
                 self.assertEqual(by_path[path]["time"], "10:15")
+
+        for path in (
+            "research/aktualne-wydarzenia-mobile/runs/2026-06-23-1015.md",
+            "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-1015-newspaper.pdf",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/sources.md",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/tts_variants.json",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/render.json",
+        ):
+            with self.subTest(path=path):
+                self.assertNotIn(path, by_path)
 
         self.assertNotIn(
             "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/podcast.raw.mp3",
@@ -440,6 +753,7 @@ The current active automations are:
         for expected_path in (
             "runs/YYYY-MM-DD-HHMM.md",
             "pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf",
+            "pdfs/YYYY-MM-DD-HHMM-newspaper.pdf",
             "podcasts/YYYY-MM-DD-HHMM/",
         ):
             with self.subTest(expected_path=expected_path):

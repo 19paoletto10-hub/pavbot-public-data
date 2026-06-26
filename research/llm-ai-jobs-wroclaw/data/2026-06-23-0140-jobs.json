@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-23",
+  "runTime": "01:40",
+  "executiveSummary": "Runda z 2026-06-23 01:40 CEST przyniosła materialny update wokół deepsense.ai. Na publicznym źródle employer-posted pojawiła się nowa rola Applied AI Engineer z widełkami 15 000-24 000 PLN + VAT / miesiąc B2B i trybem Fully remote. Dodatkowo dotychczas obserwowana rola Senior Applied AI Engineer dostała publiczne widełki 22 000-30 000 PLN + VAT / miesiąc B2B, ale pojawił się ważny rozjazd źródeł: oficjalny hub deepsense.ai careers opisuje ją jako Hybrid — offices and coworks in major Polish cities, podczas gdy No Fluff Jobs pokazuje Fully remote. Poza tym nie pojawił się dziś równie mocny nowy sygnał z pozostałych sprawdzonych źródeł. People More nie pokazało materialnej zmiany w obserwowanej ofercie, a Sii AI/ML Developer – Generative AI (f/m/x) pozostaje nieaktywne na oficjalnym URL.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Applied AI Engineer",
+      "company": "deepsense.ai",
+      "location": "Fully remote; board pokazuje też Warsaw, Poznań,",
+      "workMode": "Remote",
+      "compensation": "15 000-24 000 PLN + VAT / miesiąc B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "aplikacje LLM, agenty, integracje, RAG, ewaluacje, szybkie PoC,",
+      "whyInteresting": "to nowa, publiczna, wyraźnie hands-on rola od",
+      "uncertainty": "nie znalazłem jeszcze odpowiadającego publicznego URL na",
+      "sourceURLs": [
+        "https://nofluffjobs.com/job/applied-ai-engineer-deepsense-ai-warsaw",
+        "https://deepsense.ai/careers/"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior Applied AI Engineer",
+      "company": "deepsense.ai",
+      "location": "No Fluff Jobs pokazuje Fully remote, a oficjalny hub",
+      "workMode": "Remote",
+      "compensation": "22 000-30 000 PLN + VAT / miesiąc B2B.",
+      "seniority": "Senior",
+      "fitSummary": "produkcyjne RAG, systemy agentowe, MCP integrations,",
+      "whyInteresting": "wcześniej była to już mocna rola applied AI, ale teraz",
+      "uncertainty": "trzeba potwierdzić, które źródło jest aktualnym source of truth",
+      "sourceURLs": [
+        "https://nofluffjobs.com/job/senior-applied-ai-engineer-deepsense-ai-wroclaw",
+        "https://deepsense.ai/careers/"
+      ],
+      "tags": [
+        "RAG"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano nową aktywną rolę deepsense.ai Applied AI Engineer.",
+    "Zaktualizowano obserwowaną rolę deepsense.ai Senior Applied AI Engineer o",
+    "Nie dodano nowych wpisów z Sii ani People More, bo sprawdzone źródła nie"
+  ],
+  "risks": [
+    "deepsense.ai ma w tej rundzie wyraźny rozjazd między oficjalnym hubem",
+    "Nowa rola Applied AI Engineer jest na razie widoczna publicznie tylko na",
+    "W temacie deepsense.ai nadal pozostaje otwarty wcześniejszy problem"
+  ],
+  "recommendedActions": [
+    "Low-risk action applied: dodano do Seen Opportunities nową rolę",
+    "Low-risk action applied: zaktualizowano wpis deepsense.ai Senior Applied AI",
+    "Low-risk action applied: backlog rozszerzono o follow-up dla rozjazdu źródeł",
+    "Follow-up: w następnej rundzie sprawdzić, czy Applied AI Engineer pojawi się",
+    "Follow-up: ponownie porównać Senior Applied AI Engineer oraz"
+  ],
+  "checkedSources": [
+    {
+      "title": "deepsense.ai careers",
+      "url": "https://deepsense.ai/careers/",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai - Applied AI Engineer on No Fluff Jobs",
+      "url": "https://nofluffjobs.com/job/applied-ai-engineer-deepsense-ai-warsaw",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai - Senior Applied AI Engineer on No Fluff Jobs",
+      "url": "https://nofluffjobs.com/job/senior-applied-ai-engineer-deepsense-ai-wroclaw",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai company offers on No Fluff Jobs",
+      "url": "https://nofluffjobs.com/company/deepsense-ai-xttccmic",
+      "status": "checked"
+    },
+    {
+      "title": "People More - AI Engineer / LLM Engineer (AI-First | TypeScript)",
+      "url": "https://justjoin.it/job-offer/people-more-p-s-a--ai-engineer-llm-engineer-ai-first-typescript--wroclaw-ai",
+      "status": "checked-no-material-change"
+    },
+    {
+      "title": "Sii - AI/ML Developer – Generative AI (f/m/x)",
+      "url": "https://sii.pl/en/job-ads/id/37044/ai-ml-developer-generative-ai-f-m-x",
+      "status": "checked-inactive"
+    }
+  ]
+}

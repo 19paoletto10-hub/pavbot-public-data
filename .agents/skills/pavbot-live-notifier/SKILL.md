@@ -43,14 +43,15 @@ for the VPS/Contabo path.
    be `https://<cloudflare-domain>/webhooks/github`, event `push`, content type
    `application/json`, and secret matching `GITHUB_WEBHOOK_SECRET`.
 6. If iOS has no push alerts, verify `/status` shows `registeredDevices > 0`,
-   a recent `lastWebhook`, `apnsConfigured: true`, and the expected
-   `manifestURL`.
+   a recent `lastWebhook`, `apnsConfigured: true`, the expected `manifestURL`,
+   and a useful `lastApnsDelivery` result.
 
 ## Safety Rules
 
 - Never commit `.env`, APNs `.p8` keys, tokens, or Cloudflare credentials.
-- Do not add Push Notifications entitlement to the default `PavbotViewer`
-  scheme. Use the push-enabled variant only when Apple Developer setup is done.
+- The repository uses one standard `PavbotViewer` scheme. Keep Push
+  Notifications entitlement on the normal Debug/Release build, and fix Apple
+  Developer signing/capability issues in Apple’s portal when they appear.
 - If Apple signing fails with PLA or missing Push Notifications capability,
   report the exact Apple-side action instead of trying to bypass signing.
 - The MacBook must be awake and online. Codex can create/run scripts, but the

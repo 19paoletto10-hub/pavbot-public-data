@@ -36,44 +36,48 @@ should:
 
 - run the relevant Pavbot skill, such as `$daily-research-agent`;
 - write outputs under `research/<topic>/`;
-- set `PAVBOT_MANIFEST_URL` to the same public raw manifest URL that the user
-  enters in the iOS app;
+- optionally set `PAVBOT_MANIFEST_URL` when the publish script cannot derive
+  the same public raw manifest URL that the user enters in the iOS app;
 - publish the topic outputs after writing artifacts.
 
 The recommended publication command is:
 
 ```bash
-export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
+# Optional override:
+# export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
-The iOS app does not send this value back to Codex automations. Keep the same
-URL configured in the automation or repository environment.
+The iOS app does not send this value back to Codex automations. By default, the
+publish script derives it from `PAVBOT_RAW_BASE_URL`, the existing manifest
+`rawBaseUrl`, or the GitHub `origin` remote.
 
 ## 3. Generate Public Raw URLs
 
 For the iOS app to preview Markdown, PDFs, JSON, and audio, the manifest must
 contain public GitHub raw URLs. The generator derives those artifact URLs from
-`PAVBOT_MANIFEST_URL`.
+the manifest URL resolved by the publish script.
 
 Use this form, which is the same URL you paste into the iOS app:
 
 ```bash
-export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
+# Optional override:
+# export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
 Example:
 
 ```bash
-export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/acme/pavbot-workspace/main/public/pavbot-manifest.json"
+# Optional override:
+# export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/acme/pavbot-workspace/main/public/pavbot-manifest.json"
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/tech-news
 ```
 
 Example for the current public Pavbot data repository:
 
 ```bash
-export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json"
+# This repository can derive the URL from origin automatically.
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/tech-news
 ```
 

@@ -1,0 +1,92 @@
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/utils/generic.py:311: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/xtts_manager.py:5: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  self.speakers = torch.load(speaker_file_path)
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/utils/io.py:54: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  return torch.load(f, map_location=map_location, **kwargs)
+ > Using model: xtts
+ > Text splitted to sentences.
+['Dzień dobry.', 'Jest piątek, dwudziesty szósty czerwca dwa tysiące', 'dwudziestego szóstego roku.', 'Dzisiejszy poranek wygląda tak, jakby Gdańsk', 'postanowił przestać być tylko tłem dla konferencyjnych zdjęć i zaczął mówić', 'językiem bardzo konkretnych kwot.', 'Zacznijmy właśnie tam.', 'Komisja Europejska ogłosiła wypłatę pierwszej transzy w', 'wysokości trzech przecinek dwóch miliarda euro dla Ukrainy w ramach', 'dziewięćdziesięciomiliardowego pakietu wsparcia na lata dwa tysiące', 'dwadzieścia sześć i dwa tysiące dwadzieścia siedem.', 'To nie wszystko.', 'Komisja', 'zapowiada też pierwszą transzę sześciomiliardowego pakietu obronnego na drony,', 'która ma zostać wypłacona w najbliższych dniach.', 'Równolegle podczas konferencji w Gdańsku podpisano ponad jeden przecinek jeden', 'miliarda euro nowych umów finansowych pod odbudowę i inwestycje, a do tego', 'uruchomiono europejski fundusz odbudowy Ukrainy z kapitałem początkowym', 'dwieście dwadzieścia milionów euro.', 'Według Komisji ten fundusz ma z czasem', 'uruchomić nawet siedem miliardów euro inwestycji.', 'Krótko mówiąc, dziś nie', 'chodzi już o samo zapewnianie, że Zachód stoi przy Ukrainie.', 'Chodzi o to, żeby', 'to wsparcie było policzalne, podpisane i możliwe do rozliczenia.', 'Polski akcent też jest wyraźny.', 'Kancelaria Premiera podkreśla, że w Gdańsku', 'oczekiwano podpisania ponad stu sześćdziesięciu umów o wartości dziesięciu', 'miliardów euro.', 'To ważne, bo pokazuje, że Polska próbuje być nie tylko miejscem', 'spotkania, ale także miejscem domykania interesów, finansowania i politycznego', 'przekazu.', 'Ten polityczny przekaz dostał zresztą osobny dokument.', 'Po Szczycie Wschodniej', 'Flanki ogłoszono Deklarację Gdańską.', 'Jej sens jest prosty: Rosja pozostaje', 'największym, bezpośrednim i długoterminowym zagrożeniem dla bezpieczeństwa', 'obszaru euroatlantyckiego, a państwa regionu chcą rozwijać wspólne projekty', 'obronne, modernizować infrastrukturę i dalej zwiększać wydatki na', 'bezpieczeństwo.', 'To już nie jest dyplomatyczne mrugnięcie, tylko porządne', 'ustawienie akcentów przed kolejnymi szczytami i decyzjami sojuszu.', 'NATO dorzuca do tego jeszcze jedną ważną warstwę.', 'W Gdańsku zastępczyni', 'sekretarza generalnego Radmila Szekerinska mówiła, że doświadczenie Ukrainy', 'zmienia myślenie sojuszników o innowacji wojskowej.', 'W centrum są drony, walka', 'elektroniczna, szybsza adaptacja i szybsze decyzje.', 'To bardzo ciekawe, bo', 'pokazuje, że konferencja o odbudowie jest jednocześnie konferencją o tym, jak', 'Zachód uczy się nowoczesnej wojny.', 'Czasem jedno wystąpienie o innowacji mówi o', 'bezpieczeństwie więcej niż cały folder pełen modnych prezentacji.', 'Jest jeszcze szerszy kontekst.', 'NATO podało też, że Mark Rutte spotkał się w', 'Waszyngtonie z Donaldem Trumpem, przygotowując lipcowy szczyt w Ankarze.', 'To', 'oznacza, że linia Gdańsk, Waszyngton i Ankara zaczyna układać się w jedną', 'opowieść: pieniądze dla Ukrainy, zdolności obronne, polityczna jedność i presja', 'na szybsze działanie.', 'No dobrze, ale dziś w Polsce równie ważna jak wielka polityka pozostaje bardzo', 'przyziemna fizyka powietrza.', 'Rządowe Centrum Bezpieczeństwa i Instytut', 'Meteorologii i Gospodarki Wodnej ostrzegają, że fala upałów się nasila.', 'RCB', 'podtrzymuje ostrzeżenia przed upałem w wielu województwach, suszą', 'hydrologiczną niemal w całym kraju i informuje, że poprzedniego dnia strażacy', 'prowadzili działania przy czterdziestu ośmiu pożarach lasów.', 'Do tego stopnie', 'alarmowe Charlie, Bravo C R P i Bravo zostały przedłużone do końca sierpnia.', 'IMGW idzie jeszcze dalej w prognozie na weekend.', 'W niedzielę temperatura może', 'lokalnie dojść na zachodzie do około trzydziestu dziewięciu stopni, a od', 'soboty na części kraju mogą pojawić się ostrzeżenia trzeciego stopnia.', 'Potem', 'mają wejść burze, miejscami z gradem i silnym wiatrem.', 'Czyli klasyczny polski', 'pakiet końca czerwca: najpierw człowiek szuka cienia, a chwilę później zaczyna', 'się zastanawiać, czy nie trzeba jednak śledzić radaru burzowego.', 'W krajowej polityce nie pojawił się dziś o poranku równie mocny nowy fakt jak', 'ten z Gdańska.', 'Senat pracuje w swoim rytmie, Sejm ma następne planowane', 'posiedzenie dopiero w połowie lipca, ale to nie te wątki ustawiają dziś', 'hierarchię dnia.', 'Dziś wszystko kręci się wokół dwóch pytań.', 'Po pierwsze: czy', 'pakiety ogłoszone w Gdańsku rzeczywiście zaczną szybko działać.', 'Po drugie: jak', 'bardzo gorący i problematyczny będzie weekend w Polsce.', 'Podsumowanie jest więc dość klarowne.', 'Gdańsk przeszedł z fazy deklaracji do', 'fazy liczb, funduszy i politycznych dokumentów.', 'NATO coraz mocniej wiąże', 'odbudowę Ukrainy z wojskową innowacją i odstraszaniem.', 'A w kraju fala upałów,', 'susza i ryzyko pożarowe przypominają, że bezpieczeństwo nie zawsze przychodzi', 'w garniturze i z mównicą.', 'Czasem przychodzi po prostu z temperaturą bliską', 'czterdziestu stopni.', 'To był dzisiejszy mobile news brief Pavbota.', 'Dziś Gdańsk rozdaje liczby, a', 'pogoda rozdaje ostrzeżenia.', 'Jedno i drugie warto traktować serio.']
+Traceback (most recent call last):
+  File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 105, in <module>
+    main()
+  File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 96, in main
+    tts.tts_to_file(**kwargs)
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/api.py", line 334, in tts_to_file
+    wav = self.tts(
+          ^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/api.py", line 276, in tts
+    wav = self.synthesizer.tts(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/utils/synthesizer.py", line 386, in tts
+    outputs = self.tts_model.synthesize(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/models/xtts.py", line 412, in synthesize
+    return self.inference(text, language, gpt_cond_latent, speaker_embedding, **settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/models/xtts.py", line 541, in inference
+    gpt_codes = self.gpt.generate(
+                ^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/gpt.py", line 590, in generate
+    gen = self.gpt_inference.generate(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/generation/utils.py", line 1648, in generate
+    return self.sample(
+           ^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/generation/utils.py", line 2730, in sample
+    outputs = self(
+              ^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/gpt_inference.py", line 97, in forward
+    transformer_outputs = self.transformer(
+                          ^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 900, in forward
+    outputs = block(
+              ^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 427, in forward
+    feed_forward_hidden_states = self.mlp(hidden_states)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 356, in forward
+    hidden_states = self.c_proj(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/pytorch_utils.py", line 106, in forward
+    x = torch.addmm(self.bias, x.view(-1, x.size(-1)), self.weight)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

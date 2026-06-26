@@ -55,19 +55,19 @@ Settings -> Notification server URL -> Enable file alerts
 - `APNS_ENV=sandbox|production`
 
 Use `APNS_TEAM_ID=SP774TZZU8` for `com.paweltanski.pavbotviewer`. Use
-`APNS_ENV=sandbox` for Xcode-installed `PavbotViewerPush` builds and
+`APNS_ENV=sandbox` for Xcode-installed `PavbotViewer` builds and
 `APNS_ENV=production` for TestFlight/App Store builds.
 
 ## Apple Developer Setup
 
-The checked-in Xcode project keeps Push Notifications disabled by default so it
-can build with a normal automatic signing profile. When you are ready to enable
-the optional live notification add-on:
+The checked-in Xcode project uses one `PavbotViewer` scheme with Push
+Notifications enabled in the standard Debug/Release configurations. Before
+running on a physical iPhone:
 
 - accept any pending Apple Developer Program License Agreement in the Apple
   Developer account;
 - enable Push Notifications for Bundle ID `com.paweltanski.pavbotviewer`;
-- use the push-enabled `PavbotViewerPush` scheme in Xcode;
+- use the standard `PavbotViewer` scheme in Xcode;
 - copy the APNs token from Pavbot iOS Settings or Diagnostics when testing in
   Apple Push Notifications Console;
 - keep `APNS_ENV=sandbox` for development builds and use `production` for

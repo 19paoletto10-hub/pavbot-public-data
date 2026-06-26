@@ -1,4 +1,3 @@
-import AVFoundation
 import PDFKit
 import SwiftUI
 
@@ -21,7 +20,7 @@ struct ArtifactDetailView: View {
                     Link(destination: url) {
                         Image(systemName: "arrow.up.right.square")
                     }
-                    .accessibilityLabel("Open raw file")
+                    .accessibilityLabel("Otwórz plik źródłowy")
                 }
             }
         }
@@ -63,9 +62,9 @@ private struct ArtifactPreviewView: View {
     var body: some View {
         if store.isUsingPlaceholderManifestURL && !artifact.url.hasPrefix("http") {
             ContentUnavailableView(
-                "Configure GitHub raw URL",
+                "Skonfiguruj GitHub raw URL",
                 systemImage: "link",
-                description: Text("This bundled manifest can list files immediately. Set the real public manifest URL in Settings to preview Markdown, PDFs, and audio.")
+                description: Text("Manifest w aplikacji pokazuje pliki, ale do podglądu Markdown, PDF i audio potrzebny jest prawdziwy publiczny Manifest URL w ustawieniach.")
             )
             .padding()
         } else if let url = artifact.resolvedURL(manifestURL: URL(string: store.manifestURLString)) {
@@ -77,18 +76,18 @@ private struct ArtifactPreviewView: View {
             case .pdf:
                 RemotePDFPreview(url: url)
             case .audio:
-                AudioPreview(url: url)
+                AudioPreview(artifact: artifact, url: url)
             case .file:
                 Link(destination: url) {
-                    Label("Open raw file", systemImage: "arrow.up.right.square")
+                    Label("Otwórz plik źródłowy", systemImage: "arrow.up.right.square")
                 }
                 .padding()
             }
         } else {
             ContentUnavailableView(
-                "No public URL",
+                "Brak publicznego URL",
                 systemImage: "link.badge.plus",
-                description: Text("Regenerate the manifest with PAVBOT_RAW_BASE_URL set to a public GitHub raw base URL.")
+                description: Text("Odśwież manifest z publicznym GitHub raw URL, aby aplikacja mogła otworzyć ten plik.")
             )
         }
     }
@@ -104,18 +103,32 @@ private struct RemoteTextPreview: View {
         Group {
             switch state {
             case .loading:
-                ProgressView("Loading")
+                ProgressView("Wczytuję podgląd")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             case .loaded(let text):
                 ScrollView {
-                    Text(text)
-                        .font(monospaced ? .system(.body, design: .monospaced) : .body)
-                        .textSelection(.enabled)
-                        .frame(maxWidth: .infinity, alignment: .leading)
-                        .padding()
+                    if monospaced {
+                        Text(text)
+                            .font(.system(.body, design: .monospaced))
+                            .textSelection(.enabled)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .padding()
+                    } else {
+                        MarkdownReportText(text: text)
+                            .padding()
+                    }
                 }
-            case .failed(let message):
-                ContentUnavailableView("Preview failed", systemImage: "exclamationmark.triangle", description: Text(message))
+            case .failed(let error):
+                VStack(spacing: 14) {
+                    PavbotStateView(error: error) {
+                        Task { await load() }
+                    }
+                    Link(destination: url) {
+                        Label("Otwórz plik źródłowy", systemImage: "arrow.up.right.square")
+                    }
+                    .buttonStyle(.bordered)
+                }
+                .padding()
             }
         }
         .task {
@@ -128,14 +141,34 @@ private struct RemoteTextPreview: View {
             let data = try await fetchRemoteData(from: url)
             state = .loaded(String(decoding: data, as: UTF8.self))
         } catch {
-            state = .failed(error.localizedDescription)
+            state = .failed(.network(error, context: .preview))
         }
     }
 
     private enum LoadState: Equatable {
         case loading
         case loaded(String)
-        case failed(String)
+        case failed(PavbotUserFacingError)
+    }
+}
+
+private struct MarkdownReportText: View {
+    let text: String
+
+    var body: some View {
+        if let markdown = try? AttributedString(markdown: text) {
+            Text(markdown)
+                .font(.body)
+                .lineSpacing(4)
+                .textSelection(.enabled)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        } else {
+            Text(text)
+                .font(.body)
+                .lineSpacing(4)
+                .textSelection(.enabled)
+                .frame(maxWidth: .infinity, alignment: .leading)
+        }
     }
 }
 
@@ -148,12 +181,21 @@ private struct RemotePDFPreview: View {
         Group {
             switch state {
             case .loading:
-                ProgressView("Loading PDF")
+                ProgressView("Wczytuję PDF")
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             case .loaded(let data):
                 PDFDocumentView(data: data)
-            case .failed(let message):
-                ContentUnavailableView("PDF failed", systemImage: "doc.richtext", description: Text(message))
+            case .failed(let error):
+                VStack(spacing: 14) {
+                    PavbotStateView(error: error) {
+                        Task { await load() }
+                    }
+                    Link(destination: url) {
+                        Label("Otwórz PDF źródłowy", systemImage: "arrow.up.right.square")
+                    }
+                    .buttonStyle(.bordered)
+                }
+                .padding()
             }
         }
         .task {
@@ -166,14 +208,14 @@ private struct RemotePDFPreview: View {
             let data = try await fetchRemoteData(from: url)
             state = .loaded(data)
         } catch {
-            state = .failed(error.localizedDescription)
+            state = .failed(.network(error, context: .preview))
         }
     }
 
     private enum LoadState: Equatable {
         case loading
         case loaded(Data)
-        case failed(String)
+        case failed(PavbotUserFacingError)
     }
 }
 
@@ -202,17 +244,8 @@ private struct PDFDocumentView: UIViewRepresentable {
 }
 
 private struct AudioPreview: View {
+    let artifact: PavbotArtifact
     let url: URL
-
-    @State private var player: AVPlayer?
-    @State private var isPlaying = false
-    @State private var currentTime = 0.0
-    @State private var duration = 0.0
-    @State private var seekTime = 0.0
-    @State private var isSeeking = false
-    @State private var timeObserver: Any?
-    @State private var endObserver: NSObjectProtocol?
-    @State private var durationTask: Task<Void, Never>?
 
     var body: some View {
         VStack(spacing: 24) {
@@ -221,160 +254,14 @@ private struct AudioPreview: View {
                     .font(.system(size: 72))
                     .foregroundStyle(.tint)
 
-                Text("Podcast audio")
+                Text("Audio podcastu")
                     .font(.title3.weight(.semibold))
             }
 
-            VStack(spacing: 10) {
-                Slider(
-                    value: Binding(
-                        get: { isSeeking ? seekTime : currentTime },
-                        set: { value in
-                            isSeeking = true
-                            seekTime = value
-                        }
-                    ),
-                    in: 0...max(duration, 1),
-                    onEditingChanged: handleSeekEditing
-                )
-                .disabled(duration <= 0)
-                .accessibilityLabel("Audio timeline")
-
-                HStack {
-                    Text(formatPlaybackTime(isSeeking ? seekTime : currentTime))
-                    Spacer()
-                    Text(duration > 0 ? formatPlaybackTime(duration) : "--:--")
-                }
-                .font(.caption.monospacedDigit())
-                .foregroundStyle(.secondary)
-            }
-
-            HStack(spacing: 14) {
-                Button {
-                    togglePlayback()
-                } label: {
-                    Label(isPlaying ? "Pause" : "Play", systemImage: isPlaying ? "pause.fill" : "play.fill")
-                        .font(.headline)
-                }
-                .buttonStyle(.borderedProminent)
-
-                Link(destination: url) {
-                    Label("Open raw audio", systemImage: "arrow.up.right.square")
-                }
-                .buttonStyle(.bordered)
-            }
+            AudioTimelineControls(artifact: artifact, url: url)
+                .frame(maxWidth: 520)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .padding()
-        .onAppear {
-            configurePlayerIfNeeded()
-        }
-        .onDisappear {
-            stopAndCleanUp()
-        }
     }
-
-    private func togglePlayback() {
-        configurePlayerIfNeeded()
-        if isPlaying {
-            player?.pause()
-        } else {
-            player?.play()
-        }
-        isPlaying.toggle()
-    }
-
-    private func configurePlayerIfNeeded() {
-        guard player == nil else { return }
-
-        let item = AVPlayerItem(url: url)
-        let newPlayer = AVPlayer(playerItem: item)
-        player = newPlayer
-        addPeriodicTimeObserver(to: newPlayer)
-        durationTask = Task {
-            await loadDuration(from: item)
-        }
-        endObserver = NotificationCenter.default.addObserver(
-            forName: .AVPlayerItemDidPlayToEndTime,
-            object: item,
-            queue: .main
-        ) { _ in
-            isPlaying = false
-            currentTime = 0
-            seekTime = 0
-            newPlayer.seek(to: .zero)
-        }
-    }
-
-    private func loadDuration(from item: AVPlayerItem) async {
-        do {
-            let loadedDuration = try await item.asset.load(.duration)
-            let seconds = loadedDuration.seconds
-            guard seconds.isFinite, seconds > 0 else { return }
-            await MainActor.run {
-                duration = seconds
-            }
-        } catch {
-            await MainActor.run {
-                duration = 0
-            }
-        }
-    }
-
-    private func addPeriodicTimeObserver(to player: AVPlayer) {
-        let interval = CMTime(seconds: 0.5, preferredTimescale: 600)
-        timeObserver = player.addPeriodicTimeObserver(forInterval: interval, queue: .main) { time in
-            let seconds = time.seconds
-            if seconds.isFinite, !isSeeking {
-                currentTime = seconds
-            }
-
-            if let itemDuration = player.currentItem?.duration.seconds, itemDuration.isFinite, itemDuration > 0 {
-                duration = itemDuration
-            }
-        }
-    }
-
-    private func handleSeekEditing(_ editing: Bool) {
-        if editing {
-            isSeeking = true
-            seekTime = currentTime
-        } else {
-            seek(to: seekTime)
-            isSeeking = false
-        }
-    }
-
-    private func seek(to seconds: Double) {
-        let clampedSeconds = min(max(seconds, 0), max(duration, 0))
-        let target = CMTime(seconds: clampedSeconds, preferredTimescale: 600)
-        player?.seek(to: target, toleranceBefore: .zero, toleranceAfter: .zero) { _ in
-            currentTime = clampedSeconds
-            seekTime = clampedSeconds
-        }
-    }
-
-    private func stopAndCleanUp() {
-        player?.pause()
-        isPlaying = false
-        durationTask?.cancel()
-        durationTask = nil
-        if let timeObserver {
-            player?.removeTimeObserver(timeObserver)
-            self.timeObserver = nil
-        }
-        if let endObserver {
-            NotificationCenter.default.removeObserver(endObserver)
-            self.endObserver = nil
-        }
-        player = nil
-    }
-}
-
-private func formatPlaybackTime(_ seconds: Double) -> String {
-    guard seconds.isFinite, seconds >= 0 else { return "--:--" }
-    let totalSeconds = Int(seconds.rounded())
-    let minutes = totalSeconds / 60
-    let seconds = totalSeconds % 60
-    return String(format: "%d:%02d", minutes, seconds)
 }

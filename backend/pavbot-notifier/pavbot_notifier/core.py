@@ -68,6 +68,25 @@ def normalized_public_notifier_url(value: str) -> str:
     return value.strip().rstrip("/")
 
 
+def app_connection_defaults(*, manifest_url: str, public_notifier_url: str) -> dict[str, Any]:
+    manifest_url = manifest_url.strip()
+    public_notifier_url = normalized_public_notifier_url(public_notifier_url)
+    if not manifest_url:
+        raise ValueError("PAVBOT_MANIFEST_URL is not configured")
+    if not public_notifier_url:
+        raise ValueError("PAVBOT_PUBLIC_NOTIFIER_URL is not configured")
+    if not manifest_url.startswith("https://") or not manifest_url.endswith(".json"):
+        raise ValueError("PAVBOT_MANIFEST_URL must be an HTTPS JSON URL")
+    if not public_notifier_url.startswith("https://"):
+        raise ValueError("PAVBOT_PUBLIC_NOTIFIER_URL must be an HTTPS URL")
+    return {
+        "schemaVersion": 1,
+        "manifestURL": manifest_url,
+        "notificationServerURL": public_notifier_url,
+        "statusURL": f"{public_notifier_url}/status",
+    }
+
+
 async def send_apns_change_notifications(
     *,
     devices: dict[str, Any],
@@ -82,6 +101,7 @@ async def send_apns_change_notifications(
         "failed": 0,
         "skippedDevices": 0,
         "errors": [],
+        "status": "skipped",
     }
 
     notification = build_change_notification(
@@ -90,6 +110,12 @@ async def send_apns_change_notifications(
         manifest_url_value=manifest_url_value,
     )
     if notification is None:
+        return summary
+
+    sender_configured = getattr(getattr(sender, "config", None), "is_configured", True)
+    summary["apnsConfigured"] = bool(sender_configured)
+    if not sender_configured:
+        summary["skippedReason"] = "APNs is not configured"
         return summary
 
     for device_token, registration in devices.items():
@@ -111,6 +137,7 @@ async def send_apns_change_notifications(
             item_id=notification["summaryID"],
         )
 
+    summary["status"] = delivery_status(summary)
     return summary
 
 
@@ -189,14 +216,30 @@ async def send_apns_alert_safely(
         summary["sent"] += 1
     except Exception as exc:  # APNs rejects individual tokens independently.
         summary["failed"] += 1
-        summary["errors"].append(
-            {
-                "deviceTokenSuffix": device_token[-5:],
-                "kind": kind,
-                "id": item_id,
-                "error": str(exc),
-            }
-        )
+        error: dict[str, Any] = {
+            "deviceTokenSuffix": device_token[-5:],
+            "kind": kind,
+            "id": item_id,
+            "error": str(exc),
+            "errorType": type(exc).__name__,
+        }
+        status_code = getattr(exc, "status_code", None)
+        if status_code is not None:
+            error["statusCode"] = status_code
+        response_body = getattr(exc, "response_body", None)
+        if response_body:
+            error["responseBody"] = response_body
+        summary["errors"].append(error)
+
+
+def delivery_status(summary: dict[str, Any]) -> str:
+    if summary.get("attempted", 0) == 0:
+        return "skipped"
+    if summary.get("failed", 0) == 0:
+        return "sent"
+    if summary.get("sent", 0) > 0:
+        return "partial"
+    return "failed"
 
 
 def notifier_status(
@@ -205,9 +248,14 @@ def notifier_status(
     manifest_url: str,
     public_notifier_url: str,
     apns_configured: bool,
+    apns_environment: str,
+    daily_weather: dict[str, Any] | None = None,
+    daily_humor: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     devices = load_json(storage_dir / "devices.json", {})
     last_webhook = load_json(storage_dir / "last-webhook.json", None)
+    last_apns_delivery = load_json(storage_dir / "last-apns-delivery.json", None)
+    last_device_registration = load_json(storage_dir / "last-device-registration.json", None)
 
     return {
         "status": "ok",
@@ -215,7 +263,12 @@ def notifier_status(
         "publicNotifierURL": normalized_public_notifier_url(public_notifier_url),
         "registeredDevices": len(devices) if isinstance(devices, dict) else 0,
         "apnsConfigured": apns_configured,
+        "apnsEnvironment": apns_environment,
         "lastWebhook": last_webhook,
+        "lastApnsDelivery": last_apns_delivery,
+        "lastDeviceRegistration": last_device_registration,
+        "dailyWeather": daily_weather,
+        "dailyHumor": daily_humor,
     }
 
 

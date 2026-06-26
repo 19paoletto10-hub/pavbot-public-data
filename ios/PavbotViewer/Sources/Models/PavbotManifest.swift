@@ -100,6 +100,33 @@ struct PavbotManifest: Codable, Equatable {
         )
     }
 
+    var automationArtifactGroups: [AutomationArtifactGroup] {
+        enabledAutomations.map {
+            AutomationArtifactGroup(automation: $0, artifacts: scopedArtifacts(for: $0))
+        }
+    }
+
+    func automationArtifactGroup(for id: String?) -> AutomationArtifactGroup? {
+        guard let id else { return nil }
+        return automationArtifactGroups.first { $0.id == id }
+    }
+
+    func automationArtifactGroup(for route: ArtifactNotificationRoute?) -> AutomationArtifactGroup? {
+        guard let route else { return nil }
+        var bestGroup: AutomationArtifactGroup?
+        var bestScore = 0
+
+        for group in automationArtifactGroups {
+            let score = group.routeMatchScore(route)
+            if score > bestScore {
+                bestGroup = group
+                bestScore = score
+            }
+        }
+
+        return bestGroup
+    }
+
     func artifacts(on day: Date?) -> [PavbotArtifact] {
         guard let day else { return artifacts }
         let key = day.pavbotDayString
@@ -174,6 +201,16 @@ struct PavbotManifest: Codable, Equatable {
         return latestArtifact(in: topicArtifacts)
     }
 
+    private func scopedArtifacts(for automation: PavbotAutomation) -> [PavbotArtifact] {
+        let topicArtifacts = artifacts.filter { $0.topic == automation.topic }
+        let preferredTypes = automation.kind.preferredArtifactTypes
+        let filteredArtifacts = preferredTypes.isEmpty
+            ? topicArtifacts
+            : topicArtifacts.filter { preferredTypes.contains($0.type) }
+
+        return filteredArtifacts.sorted(by: PavbotArtifact.automationDisplaySort)
+    }
+
     private func latestArtifact(in artifacts: [PavbotArtifact]) -> PavbotArtifact? {
         artifacts.max { lhs, rhs in
             (lhs.date ?? "", lhs.time ?? "", lhs.path) < (rhs.date ?? "", rhs.time ?? "", rhs.path)
@@ -186,6 +223,91 @@ struct PavbotManifest: Codable, Equatable {
         } ?? enabledAutomations.first {
             $0.topic == artifact.topic
         }
+    }
+}
+
+struct AutomationArtifactGroup: Identifiable, Equatable, Hashable {
+    let automation: PavbotAutomation
+    let artifacts: [PavbotArtifact]
+
+    var id: String { automation.id }
+
+    var latestArtifact: PavbotArtifact? {
+        artifacts.first
+    }
+
+    var datedArtifacts: [PavbotArtifact] {
+        artifacts.filter { $0.date != nil }
+    }
+
+    var otherArtifacts: [PavbotArtifact] {
+        artifacts.filter { $0.date == nil }
+    }
+
+    var days: [Date] {
+        Set(datedArtifacts.compactMap(\.day)).sorted(by: >)
+    }
+
+    func artifacts(on day: Date, matching route: ArtifactNotificationRoute? = nil) -> [PavbotArtifact] {
+        let dayString = day.pavbotDayString
+        var dayArtifacts = artifacts.filter { $0.date == dayString }
+
+        if let route, !route.artifactIDs.isEmpty {
+            let routeIDs = Set(route.artifactIDs)
+            dayArtifacts = dayArtifacts.filter { routeIDs.contains($0.id) }
+        }
+
+        return dayArtifacts.sorted(by: PavbotArtifact.automationDisplaySort)
+    }
+
+    func podcastPackage(on day: Date, matching route: ArtifactNotificationRoute? = nil) -> PodcastArtifactPackage? {
+        let dayArtifacts = artifacts(on: day, matching: route)
+        let package = PodcastArtifactPackage(artifacts: dayArtifacts)
+        return package.hasPodcastContent ? package : nil
+    }
+
+    func routeMatchScore(_ route: ArtifactNotificationRoute) -> Int {
+        if let topic = route.topic, topic != automation.topic {
+            return 0
+        }
+
+        if !route.artifactIDs.isEmpty {
+            let routeIDs = Set(route.artifactIDs)
+            let matchingIDs = artifacts.filter { routeIDs.contains($0.id) }.count
+            if matchingIDs > 0 {
+                return 100 + matchingIDs
+            }
+        }
+
+        if let date = route.date, artifacts.contains(where: { $0.date == date }) {
+            return 10
+        }
+
+        return route.topic == automation.topic ? 1 : 0
+    }
+}
+
+struct PodcastArtifactPackage: Equatable, Hashable {
+    let primaryAudio: PavbotArtifact?
+    let briefPDF: PavbotArtifact?
+    let audioVariants: [PavbotArtifact]
+
+    init(artifacts: [PavbotArtifact]) {
+        primaryAudio = artifacts.first { $0.type == .podcastAudio }
+        briefPDF = artifacts.first { $0.type == .podcastBriefPdf }
+        audioVariants = artifacts.filter { $0.type == .podcastAudioVariant }
+    }
+
+    var hasPodcastContent: Bool {
+        primaryAudio != nil || briefPDF != nil || !audioVariants.isEmpty
+    }
+
+    var hasAudio: Bool {
+        primaryAudio != nil || !audioVariants.isEmpty
+    }
+
+    var isMissingBriefPDF: Bool {
+        hasAudio && briefPDF == nil
     }
 }
 
@@ -224,13 +346,13 @@ enum AutomationKind: String, Codable, Equatable {
     var preferredArtifactTypes: [ArtifactType] {
         switch self {
         case .research:
-            [.run]
+            [.researchData, .run, .pdf]
         case .podcast:
-            [.podcastAudio, .podcastAudioVariant]
+            [.podcastAudio, .podcastAudioVariant, .podcastScript, .podcastBriefPdf]
         case .researchAudio:
-            [.podcastAudioVariant, .podcastAudio, .pdf, .run]
+            [.mobileNewsData, .podcastScript, .podcastAudioVariant, .podcastAudio, .pdf, .run]
         case .automation:
-            []
+            [.pulseNewsData, .run, .proposal, .backlog, .index]
         }
     }
 }
@@ -270,7 +392,7 @@ struct PavbotArtifact: Codable, Identifiable, Equatable, Hashable {
             return .pdf
         case .podcastAudio, .podcastAudioVariant:
             return .audio
-        case .podcastRender, .podcastTtsVariants:
+        case .podcastRender, .podcastTtsVariants, .jobsData, .researchData, .mobileNewsData, .pulseNewsData:
             return .json
         case .podcastArtifact, .unknown:
             return .file
@@ -323,6 +445,10 @@ struct PavbotArtifact: Codable, Identifiable, Equatable, Hashable {
             $0.range(of: normalizedQuery, options: [.caseInsensitive, .diacriticInsensitive]) != nil
         }
     }
+
+    static func automationDisplaySort(_ lhs: PavbotArtifact, _ rhs: PavbotArtifact) -> Bool {
+        (lhs.date ?? "", lhs.time ?? "", lhs.path) > (rhs.date ?? "", rhs.time ?? "", rhs.path)
+    }
 }
 
 enum ArtifactType: Equatable, Hashable {
@@ -337,6 +463,10 @@ enum ArtifactType: Equatable, Hashable {
     case podcastSources
     case podcastTtsVariants
     case podcastArtifact
+    case jobsData
+    case researchData
+    case mobileNewsData
+    case pulseNewsData
     case proposal
     case backlog
     case index
@@ -360,6 +490,10 @@ extension ArtifactType: Codable {
         case "podcastSources": self = .podcastSources
         case "podcastTtsVariants": self = .podcastTtsVariants
         case "podcastArtifact": self = .podcastArtifact
+        case "jobsData": self = .jobsData
+        case "researchData": self = .researchData
+        case "mobileNewsData": self = .mobileNewsData
+        case "pulseNewsData": self = .pulseNewsData
         case "proposal": self = .proposal
         case "backlog": self = .backlog
         case "index": self = .index
@@ -387,6 +521,10 @@ extension ArtifactType: Codable {
         case .podcastSources: "podcastSources"
         case .podcastTtsVariants: "podcastTtsVariants"
         case .podcastArtifact: "podcastArtifact"
+        case .jobsData: "jobsData"
+        case .researchData: "researchData"
+        case .mobileNewsData: "mobileNewsData"
+        case .pulseNewsData: "pulseNewsData"
         case .proposal: "proposal"
         case .backlog: "backlog"
         case .index: "index"
@@ -409,6 +547,10 @@ extension ArtifactType: Codable {
         case .podcastSources: "Sources"
         case .podcastTtsVariants: "TTS variants"
         case .podcastArtifact: "Podcast"
+        case .jobsData: "Jobs data"
+        case .researchData: "Research data"
+        case .mobileNewsData: "Mobile news data"
+        case .pulseNewsData: "Pulse news data"
         case .proposal: "Proposal"
         case .backlog: "Backlog"
         case .index: "Index"

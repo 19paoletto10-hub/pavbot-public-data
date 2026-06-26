@@ -30,17 +30,34 @@ from reportlab.platypus import (
     TableStyle,
 )
 
+REPO_ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
 
-PAGE_SIZE = (390, 844)
+from pavbot_pdf_theme import (  # noqa: E402
+    ACCENT,
+    ACCENT_DARK,
+    ACCENT_LIGHT,
+    AMBER,
+    BORDER,
+    CONTENT_WIDTH,
+    FONT_BOLD as THEME_FONT_BOLD,
+    FONT_REGULAR as THEME_FONT_REGULAR,
+    LINK,
+    MOBILE_PAGE_SIZE,
+    PAGE_MARGIN_BOTTOM,
+    PAGE_MARGIN_TOP,
+    PAGE_MARGIN_X,
+    PAPER,
+    SURFACE,
+    build_mobile_styles,
+    draw_mobile_page,
+)
+
+
+PAGE_SIZE = MOBILE_PAGE_SIZE
 INK = colors.HexColor("#111827")
 MUTED = colors.HexColor("#64748B")
-ACCENT = colors.HexColor("#0F766E")
-ACCENT_DARK = colors.HexColor("#115E59")
-ACCENT_LIGHT = colors.HexColor("#CCFBF1")
-SURFACE = colors.HexColor("#F8FAFC")
-BORDER = colors.HexColor("#CBD5E1")
 WARNING = colors.HexColor("#FEF3C7")
-LINK = colors.HexColor("#1D4ED8")
 
 
 def fail(message: str, code: int = 1) -> None:
@@ -72,7 +89,7 @@ def register_fonts() -> tuple[str, str]:
     return "Helvetica", "Helvetica-Bold"
 
 
-FONT_REGULAR, FONT_BOLD = register_fonts()
+FONT_REGULAR, FONT_BOLD = THEME_FONT_REGULAR, THEME_FONT_BOLD
 
 
 def markdown_inline(text: str) -> str:
@@ -157,91 +174,9 @@ def short(text: str, limit: int = 420) -> str:
 
 
 def build_styles() -> dict[str, ParagraphStyle]:
-    base = getSampleStyleSheet()
-    return {
-        "kicker": ParagraphStyle(
-            "MobileKicker",
-            parent=base["Normal"],
-            fontName=FONT_BOLD,
-            fontSize=7.8,
-            leading=9.5,
-            alignment=TA_CENTER,
-            textColor=ACCENT_DARK,
-            spaceAfter=5,
-        ),
-        "title": ParagraphStyle(
-            "MobileTitle",
-            parent=base["Title"],
-            fontName=FONT_BOLD,
-            fontSize=20,
-            leading=24,
-            alignment=TA_CENTER,
-            textColor=INK,
-            spaceAfter=5,
-            splitLongWords=True,
-        ),
-        "subtitle": ParagraphStyle(
-            "MobileSubtitle",
-            parent=base["Normal"],
-            fontName=FONT_REGULAR,
-            fontSize=8.2,
-            leading=11,
-            alignment=TA_CENTER,
-            textColor=MUTED,
-            spaceAfter=8,
-            splitLongWords=True,
-        ),
-        "section": ParagraphStyle(
-            "MobileSection",
-            parent=base["Heading2"],
-            fontName=FONT_BOLD,
-            fontSize=12.2,
-            leading=15,
-            textColor=ACCENT_DARK,
-            spaceBefore=8,
-            spaceAfter=5,
-            splitLongWords=True,
-        ),
-        "body": ParagraphStyle(
-            "MobileBody",
-            parent=base["BodyText"],
-            fontName=FONT_REGULAR,
-            fontSize=9.1,
-            leading=12.6,
-            textColor=INK,
-            alignment=TA_LEFT,
-            spaceAfter=4,
-            splitLongWords=True,
-        ),
-        "small": ParagraphStyle(
-            "MobileSmall",
-            parent=base["BodyText"],
-            fontName=FONT_REGULAR,
-            fontSize=7.5,
-            leading=9.5,
-            textColor=MUTED,
-            splitLongWords=True,
-        ),
-        "card_title": ParagraphStyle(
-            "MobileCardTitle",
-            parent=base["BodyText"],
-            fontName=FONT_BOLD,
-            fontSize=9.4,
-            leading=12,
-            textColor=INK,
-            spaceAfter=2,
-            splitLongWords=True,
-        ),
-        "link": ParagraphStyle(
-            "MobileLink",
-            parent=base["BodyText"],
-            fontName=FONT_REGULAR,
-            fontSize=7.2,
-            leading=9.2,
-            textColor=LINK,
-            splitLongWords=True,
-        ),
-    }
+    styles = build_mobile_styles(accent=ACCENT, accent_dark=ACCENT_DARK, body_size=10.05)
+    styles["section"] = styles["h2"]
+    return styles
 
 
 def make_card(text: str, styles: dict[str, ParagraphStyle], background=colors.white) -> Table:
@@ -266,16 +201,17 @@ def make_card(text: str, styles: dict[str, ParagraphStyle], background=colors.wh
     data = [[Paragraph(markdown_inline(short(title, 145)), styles["card_title"])]]
     if body:
         data.append([Paragraph(markdown_inline(short(body, 420)), styles["body"])])
-    table = Table(data, colWidths=[342])
+    table = Table(data, colWidths=[CONTENT_WIDTH])
     table.setStyle(
         TableStyle(
             [
                 ("BACKGROUND", (0, 0), (-1, -1), background),
                 ("BOX", (0, 0), (-1, -1), 0.55, BORDER),
-                ("LEFTPADDING", (0, 0), (-1, -1), 8),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 8),
-                ("TOPPADDING", (0, 0), (-1, -1), 7),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 7),
+                ("LINEBEFORE", (0, 0), (0, -1), 2.0, ACCENT),
+                ("LEFTPADDING", (0, 0), (-1, -1), 9),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 9),
+                ("TOPPADDING", (0, 0), (-1, -1), 8),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 8),
             ]
         )
     )
@@ -302,7 +238,7 @@ def make_tts_table(tts_data: dict, styles: dict[str, ParagraphStyle]) -> Table:
     for row_index, row in enumerate(rows):
         style = styles["card_title"] if row_index == 0 else styles["small"]
         data.append([Paragraph(escape(cell), style) for cell in row])
-    table = Table(data, colWidths=[82, 70, 118, 72], repeatRows=1)
+    table = Table(data, colWidths=[82, 70, 118, 80], repeatRows=1)
     table.setStyle(
         TableStyle(
             [
@@ -320,15 +256,17 @@ def make_tts_table(tts_data: dict, styles: dict[str, ParagraphStyle]) -> Table:
 
 
 def draw_page(canvas, doc, title: str) -> None:
-    canvas.saveState()
-    width, height = PAGE_SIZE
-    canvas.setFillColor(ACCENT)
-    canvas.rect(0, height - 7 * mm, width, 7 * mm, stroke=0, fill=1)
-    canvas.setFillColor(MUTED)
-    canvas.setFont(FONT_REGULAR, 7)
-    canvas.drawString(16, 12, title[:68])
-    canvas.drawRightString(width - 16, 12, f"{doc.page}")
-    canvas.restoreState()
+    draw_mobile_page(
+        canvas,
+        doc,
+        title=title,
+        footer_label=title,
+        page_label="Strona",
+        accent=ACCENT_DARK,
+        accent_rule=AMBER,
+        paper=PAPER,
+        rule=BORDER,
+    )
 
 
 def render_mobile_pdf(
@@ -411,10 +349,10 @@ def render_mobile_pdf(
     doc = SimpleDocTemplate(
         str(pdf_output),
         pagesize=PAGE_SIZE,
-        leftMargin=20,
-        rightMargin=20,
-        topMargin=22,
-        bottomMargin=24,
+        leftMargin=PAGE_MARGIN_X,
+        rightMargin=PAGE_MARGIN_X,
+        topMargin=PAGE_MARGIN_TOP,
+        bottomMargin=PAGE_MARGIN_BOTTOM,
         title=title,
         author="Pavbot",
         subject=f"Mobile news brief: {topic_name or markdown_report.stem}",

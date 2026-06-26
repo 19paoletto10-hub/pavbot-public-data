@@ -20,10 +20,10 @@ items.
 After writing run artifacts, publish the outputs for the iOS app and push
 notification webhook. The script runs `python3 scripts/generate_pavbot_manifest.py`,
 refreshes `public/pavbot-manifest.json`, commits only allowed paths, and pushes
-to `origin/main`. `PAVBOT_MANIFEST_URL` must be set in the Codex or repository
-environment to the same public raw manifest URL used in iOS
-`Settings -> Manifest URL`; the iOS app does not send this value back to Codex.
-Then run:
+to `origin/main`. The script derives `PAVBOT_MANIFEST_URL` from an environment
+override, `PAVBOT_RAW_BASE_URL`, the existing manifest `rawBaseUrl`, or GitHub
+`origin`; set it manually only for a non-standard URL. The resolved URL must
+match iOS `Settings -> Manifest URL`. Then run:
 `scripts/pavbot_commit_and_push_outputs.sh --isolated research/codex-agent-automation`.
 
 Use the risk gate from `docs/architecture.md`. If a recommended action would

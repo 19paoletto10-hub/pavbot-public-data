@@ -21,8 +21,21 @@ reviewable proposals.
   a thin topic-specific wrapper, which delegates editorial review and audio
   rendering to `daily-podcast-agent`.
 - The `aktualne-wydarzenia-mobile` cron combines a timestamped research
-  report, a mobile-first PDF brief, and two local TTS MP3 variants in one
-  topic-scoped run.
+  report, a mobile-first PDF brief, a detailed mobile newspaper PDF, and two
+  local TTS MP3 variants in one topic-scoped run.
+- The `puls-dnia-news` cron runs every three hours during the day and publishes
+  structured `pulseNewsData` for the iOS `Puls Dnia` tab.
+- The iOS viewer owns podcast playback through a global audio service, so audio
+  artifacts can continue across tab changes, backgrounding, Lock Screen
+  controls, and Live Activity/Dynamic Island state.
+- The iOS viewer locally caches fetched `pulseNewsData` runs for 48 hours.
+  Unsaved pulse news older than 48 hours are pruned on the device, while
+  manually saved news stay in local storage without that retention limit.
+- The iOS viewer also stores saved Research articles locally for the
+  `Polska` and `Świat` sections of `Polska i Świat`; this is an on-device
+  reading list and is not synchronized to GitHub or the notifier.
+- The iOS weather screen may request approximate current location at refresh
+  time. If permission is denied or unavailable, the app falls back to Wrocław.
 - The agent writes dated reports and updates the topic index/backlog.
 - Risk-gated actions are saved as proposals and left for human review.
 
@@ -33,15 +46,18 @@ reviewable proposals.
 - `index.md` stores the current state of knowledge.
 - `backlog.md` stores questions, follow-ups, and candidate actions.
 - `proposals/*.md` stores changes that require approval.
-- `pdfs/YYYY-MM-DD-<topic>.pdf` stores the professional PDF version of a daily
-  research report.
+- `pdfs/YYYY-MM-DD-<topic>.pdf` stores the mobile-first professional PDF
+  version of a daily research report, optimized for review in the Pavbot iOS
+  app.
 - Topics with more than one daily run can use timestamped report and PDF names,
   for example `YYYY-MM-DD-HHMM.md` and `YYYY-MM-DD-HHMM-<topic>.pdf`.
 - `podcasts/YYYY-MM-DD/` stores podcast scripts, source notes, and MP3 files
   when a topic has an audio automation.
 - Mobile brief topics use one Europe/Warsaw timestamp per run. Their report,
-  PDF, and podcast package use `YYYY-MM-DD-HHMM` names, including
-  `podcasts/YYYY-MM-DD-HHMM/audio/<variant>/podcast.mp3` plus
+  PDFs, and podcast package use `YYYY-MM-DD-HHMM` names, including
+  `pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`,
+  `pdfs/YYYY-MM-DD-HHMM-newspaper.pdf`,
+  `podcasts/YYYY-MM-DD-HHMM/audio/<variant>/podcast.mp3`, and
   `tts_variants.json`.
 - Podcast packages also include `draft.md` and `render.json` when generated
   through the shared podcast pipeline.
@@ -50,6 +66,26 @@ reviewable proposals.
 - `public/pavbot-manifest.json` stores the read-only public index consumed by
   the iOS viewer. It is generated from the docs and `research/<topic>/`
   artifacts by `scripts/generate_pavbot_manifest.py`.
+- `research/puls-dnia-news/data/YYYY-MM-DD-HHMM-pulse-news.json` stores the
+  structured pulse-news feed. The iOS app reads it as `pulseNewsData`, shows it
+  in the `Puls Dnia` tab, and keeps a local 48-hour history for smooth
+  offline/poor-network reading.
+
+## iOS Viewer
+
+- Bundle ID: `com.paweltanski.pavbotviewer`.
+- Current marketing version: `1.5`.
+- `CFBundleVersion` is set dynamically during build from `PAVBOT_BUILD_NUMBER`
+  or the latest git commit timestamp, so TestFlight uploads get increasing
+  build numbers.
+- Top-level tabs are `Dzisiaj`, `Puls Dnia`, `Jobs`, `Research`, and
+  `Ustawienia`.
+- `Puls Dnia` first shows the latest run from the public manifest, falls back
+  to the local 48-hour cache when refresh fails, and hides locally saved news
+  from the active carousel.
+- Appearance is user-selectable in `Ustawienia`: system, light, or dark.
+- A global mini-player appears when a podcast/audio artifact is active, so
+  playback can be controlled while browsing other tabs.
 
 ## Podcast Audio
 
@@ -66,7 +102,8 @@ reviewable proposals.
 Low-risk actions may be performed directly:
 
 - Create a daily report inside the active topic.
-- Create a professional PDF version of a daily report inside the active topic.
+- Create a mobile-first professional PDF version of a daily report inside the
+  active topic.
 - Create a podcast script, source note, or generated MP3 inside the active
   topic.
 - Update the active topic index.

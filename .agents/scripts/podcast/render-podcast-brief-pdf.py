@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create a polished PDF brief for a Pavbot podcast package."""
+"""Create a premium mobile PDF brief for a Pavbot podcast package."""
 
 from __future__ import annotations
 
@@ -11,60 +11,41 @@ from html import escape
 from pathlib import Path
 
 from reportlab.lib import colors
-from reportlab.lib.enums import TA_LEFT
-from reportlab.lib.pagesizes import A4
-from reportlab.lib.styles import ParagraphStyle, getSampleStyleSheet
-from reportlab.lib.units import cm
-from reportlab.pdfbase import pdfmetrics
-from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import (
-    Frame,
-    KeepTogether,
-    ListFlowable,
-    ListItem,
-    PageTemplate,
-    Paragraph,
-    SimpleDocTemplate,
-    Spacer,
-    Table,
-    TableStyle,
+from reportlab.platypus import HRFlowable, KeepTogether, PageBreak, Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle
+
+
+REPO_ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(REPO_ROOT / "scripts"))
+
+from pavbot_pdf_theme import (  # noqa: E402
+    ACCENT,
+    ACCENT_DARK,
+    ACCENT_LIGHT,
+    AMBER,
+    BORDER,
+    BORDER_SOFT,
+    CONTENT_WIDTH,
+    LINK,
+    MOBILE_PAGE_SIZE,
+    MUTED,
+    PAGE_MARGIN_BOTTOM,
+    PAGE_MARGIN_TOP,
+    PAGE_MARGIN_X,
+    PAPER,
+    SURFACE,
+    build_mobile_styles,
+    draw_mobile_page,
+    markdown_inline,
+    short_text,
+    source_links,
+    source_list_flowable,
+    text_card,
 )
-
-
-NAVY = colors.HexColor("#17233C")
-BLUE = colors.HexColor("#2563EB")
-LIGHT_BLUE = colors.HexColor("#EFF6FF")
-GRAY = colors.HexColor("#5B6577")
-LIGHT_GRAY = colors.HexColor("#F6F8FB")
-BORDER = colors.HexColor("#D9E1EF")
 
 
 def fail(message: str, code: int = 1) -> None:
     print(message, file=sys.stderr)
     raise SystemExit(code)
-
-
-def register_fonts() -> tuple[str, str]:
-    regular_candidates = [
-        "/System/Library/Fonts/Supplemental/Arial Unicode.ttf",
-        "/System/Library/Fonts/Supplemental/Arial.ttf",
-        "/Library/Fonts/Arial.ttf",
-    ]
-    bold_candidates = [
-        "/System/Library/Fonts/Supplemental/Arial Bold.ttf",
-        "/Library/Fonts/Arial Bold.ttf",
-    ]
-
-    regular = next((Path(p) for p in regular_candidates if Path(p).is_file()), None)
-    bold = next((Path(p) for p in bold_candidates if Path(p).is_file()), None)
-    if regular:
-        pdfmetrics.registerFont(TTFont("PavbotRegular", str(regular)))
-    else:
-        return "Helvetica", "Helvetica-Bold"
-    if bold:
-        pdfmetrics.registerFont(TTFont("PavbotBold", str(bold)))
-        return "PavbotRegular", "PavbotBold"
-    return "PavbotRegular", "Helvetica-Bold"
 
 
 def read_text(path: Path) -> str:
@@ -91,13 +72,6 @@ def paragraphs_from_markdown(text: str) -> list[str]:
     return paragraphs
 
 
-def source_links(text: str) -> list[tuple[str, str]]:
-    links: list[tuple[str, str]] = []
-    for label, url in re.findall(r"\[([^\]]+)\]\((https?://[^)]+)\)", text):
-        links.append((label.strip(), url.strip()))
-    return links
-
-
 def section_links(text: str, heading: str) -> list[tuple[str, str]]:
     lines = text.splitlines()
     selected: list[str] = []
@@ -113,23 +87,11 @@ def section_links(text: str, heading: str) -> list[tuple[str, str]]:
     return source_links("\n".join(selected))
 
 
-def short(text: str, limit: int = 360) -> str:
-    text = re.sub(r"\s+", " ", text).strip()
-    if len(text) <= limit:
-        return text
-    window = text[:limit].rstrip()
-    sentence_end = max(window.rfind("."), window.rfind("?"), window.rfind("!"))
-    if sentence_end >= min(80, int(limit * 0.3)):
-        return window[: sentence_end + 1]
-    cut = window.rsplit(" ", 1)[0].rstrip(" ,;:-")
-    return cut + "..."
-
-
 def split_lead_sentence(text: str) -> tuple[str, str]:
     text = re.sub(r"\s+", " ", text).strip()
     match = re.match(r"(.+?[.!?])\s+(.*)", text)
     if not match:
-        return text, text
+        return text, ""
     return match.group(1).strip(), match.group(2).strip()
 
 
@@ -141,109 +103,64 @@ def mmss(seconds: float | int | str) -> str:
     return f"{total // 60}:{total % 60:02d}"
 
 
-def build_styles(font: str, bold_font: str):
-    styles = getSampleStyleSheet()
-    styles.add(
-        ParagraphStyle(
-            name="TitlePavbot",
-            fontName=bold_font,
-            fontSize=24,
-            leading=29,
-            textColor=NAVY,
-            spaceAfter=10,
-        )
-    )
-    styles.add(
-        ParagraphStyle(
-            name="SubtitlePavbot",
-            fontName=font,
-            fontSize=10.5,
-            leading=15,
-            textColor=GRAY,
-            spaceAfter=14,
-        )
-    )
-    styles.add(
-        ParagraphStyle(
-            name="SectionPavbot",
-            fontName=bold_font,
-            fontSize=14,
-            leading=18,
-            textColor=NAVY,
-            spaceBefore=12,
-            spaceAfter=8,
-        )
-    )
-    styles.add(
-        ParagraphStyle(
-            name="BodyPavbot",
-            fontName=font,
-            fontSize=9.7,
-            leading=14,
-            textColor=colors.HexColor("#202938"),
-            alignment=TA_LEFT,
-            spaceAfter=7,
-        )
-    )
-    styles.add(
-        ParagraphStyle(
-            name="SmallPavbot",
-            fontName=font,
-            fontSize=8.5,
-            leading=12,
-            textColor=GRAY,
-        )
-    )
-    styles.add(
-        ParagraphStyle(
-            name="CardTitlePavbot",
-            fontName=bold_font,
-            fontSize=10.5,
-            leading=13,
-            textColor=NAVY,
-            spaceAfter=4,
-        )
-    )
-    styles.add(
-        ParagraphStyle(
-            name="LinkPavbot",
-            fontName=font,
-            fontSize=8.4,
-            leading=11.5,
-            textColor=BLUE,
-        )
-    )
-    return styles
-
-
-def make_card(title: str, body: str, styles):
-    return Table(
-        [[Paragraph(escape(title), styles["CardTitlePavbot"])], [Paragraph(escape(body), styles["BodyPavbot"])]],
-        colWidths=[16.2 * cm],
-        style=TableStyle(
+def stat_grid(rows: list[tuple[str, str]], styles: dict) -> Table:
+    cells = []
+    for label, value in rows:
+        cells.append(
             [
-                ("BACKGROUND", (0, 0), (-1, -1), LIGHT_GRAY),
-                ("BOX", (0, 0), (-1, -1), 0.7, BORDER),
-                ("LEFTPADDING", (0, 0), (-1, -1), 10),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 10),
-                ("TOPPADDING", (0, 0), (-1, -1), 8),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 8),
+                Paragraph(escape(label.upper()), styles["card_label"]),
+                Paragraph(markdown_inline(value), styles["card_title"]),
             ]
-        ),
-        hAlign="LEFT",
+        )
+
+    grid_rows = []
+    for index in range(0, len(cells), 2):
+        left = cells[index]
+        right = cells[index + 1] if index + 1 < len(cells) else ["", ""]
+        grid_rows.append([left[0], right[0]])
+        grid_rows.append([left[1], right[1]])
+
+    table = Table(grid_rows, colWidths=[CONTENT_WIDTH / 2, CONTENT_WIDTH / 2], hAlign="LEFT")
+    table.setStyle(
+        TableStyle(
+            [
+                ("BACKGROUND", (0, 0), (-1, -1), SURFACE),
+                ("BOX", (0, 0), (-1, -1), 0.55, BORDER),
+                ("INNERGRID", (0, 0), (-1, -1), 0.25, BORDER_SOFT),
+                ("LINEBEFORE", (0, 0), (0, -1), 2.0, ACCENT),
+                ("VALIGN", (0, 0), (-1, -1), "TOP"),
+                ("LEFTPADDING", (0, 0), (-1, -1), 8),
+                ("RIGHTPADDING", (0, 0), (-1, -1), 8),
+                ("TOPPADDING", (0, 0), (-1, -1), 5),
+                ("BOTTOMPADDING", (0, 0), (-1, -1), 5),
+            ]
+        )
     )
+    return table
 
 
-def footer(canvas, doc):
-    canvas.saveState()
-    canvas.setStrokeColor(BORDER)
-    canvas.setLineWidth(0.5)
-    canvas.line(doc.leftMargin, 1.55 * cm, A4[0] - doc.rightMargin, 1.55 * cm)
-    canvas.setFont("Helvetica", 8)
-    canvas.setFillColor(GRAY)
-    canvas.drawString(doc.leftMargin, 1.1 * cm, "Pavbot research brief")
-    canvas.drawRightString(A4[0] - doc.rightMargin, 1.1 * cm, f"Strona {doc.page}")
-    canvas.restoreState()
+def make_story_cards(paragraphs: list[str], styles: dict) -> list:
+    cards = []
+    for para in paragraphs[:5]:
+        title, body = split_lead_sentence(para)
+        if not body:
+            body = para
+        cards.append(
+            KeepTogether(
+                [
+                    text_card(
+                        short_text(title, 150),
+                        short_text(body, 330),
+                        styles,
+                        background=PAPER,
+                        border=BORDER,
+                        accent=ACCENT,
+                    ),
+                    Spacer(1, 5),
+                ]
+            )
+        )
+    return cards
 
 
 def main() -> None:
@@ -254,13 +171,10 @@ def main() -> None:
     output_pdf = Path(sys.argv[2]) if len(sys.argv) == 3 else podcast_dir / "brief.pdf"
     script = read_text(podcast_dir / "script.md")
     sources = read_text(podcast_dir / "sources.md")
-    render_data = {}
     render_json = podcast_dir / "render.json"
-    if render_json.is_file():
-        render_data = json.loads(render_json.read_text(encoding="utf-8"))
+    render_data = json.loads(render_json.read_text(encoding="utf-8")) if render_json.is_file() else {}
 
-    font, bold_font = register_fonts()
-    styles = build_styles(font, bold_font)
+    styles = build_mobile_styles(accent=ACCENT, accent_dark=ACCENT_DARK, body_size=10.25)
     paragraphs = paragraphs_from_markdown(script)
     source_used = section_links(sources, "## Źródła użyte w scenariuszu") or source_links(sources)
     checked_unused = section_links(sources, "## Źródła sprawdzone, ale niewykorzystane")
@@ -269,103 +183,97 @@ def main() -> None:
     date_label = podcast_dir.name
     topic_label = podcast_dir.parent.parent.name
     created_label = datetime.now().strftime("%Y-%m-%d %H:%M")
+    title = "Pavbot Podcast Brief"
 
     output_pdf.parent.mkdir(parents=True, exist_ok=True)
     doc = SimpleDocTemplate(
         str(output_pdf),
-        pagesize=A4,
-        leftMargin=2.0 * cm,
-        rightMargin=2.0 * cm,
-        topMargin=1.7 * cm,
-        bottomMargin=2.0 * cm,
-        title=f"Pavbot {topic_label} brief {date_label}",
+        pagesize=MOBILE_PAGE_SIZE,
+        leftMargin=PAGE_MARGIN_X,
+        rightMargin=PAGE_MARGIN_X,
+        topMargin=PAGE_MARGIN_TOP,
+        bottomMargin=PAGE_MARGIN_BOTTOM,
+        title=f"Pavbot {topic_label} podcast brief {date_label}",
         author="Pavbot",
+        subject=f"Podcast brief: {topic_label}",
     )
-    frame = Frame(doc.leftMargin, doc.bottomMargin, doc.width, doc.height, id="normal")
-    doc.addPageTemplates([PageTemplate(id="pavbot", frames=[frame], onPage=footer)])
 
-    story = []
-    story.append(Paragraph(f"Pavbot Research Brief - {escape(date_label)}", styles["TitlePavbot"]))
-    story.append(
+    story = [
+        Paragraph("PAVBOT EPISODE BRIEF", styles["kicker"]),
+        Paragraph(title, styles["title"]),
         Paragraph(
-            f"Temat: <b>{escape(topic_label)}</b> | Wygenerowano: {escape(created_label)} | "
-            f"Audio: {escape(str(render_data.get('engine_used', 'brak')))} / "
-            f"{escape(str(render_data.get('model', 'brak')))}",
-            styles["SubtitlePavbot"],
+            f"Temat: <b>{escape(topic_label)}</b> | Data: {escape(date_label)} | Wygenerowano: {escape(created_label)}",
+            styles["subtitle"],
+        ),
+        HRFlowable(width="100%", thickness=0.8, color=ACCENT, spaceAfter=7),
+        stat_grid(
+            [
+                ("Długość", mmss(render_data.get("duration_seconds", ""))),
+                ("Słowa", str(render_data.get("word_count", "brak danych"))),
+                ("TTS", str(render_data.get("engine_used", "brak danych"))),
+                ("Model", str(render_data.get("model", "brak danych"))),
+            ],
+            styles,
+        ),
+        Spacer(1, 8),
+        Paragraph("Najważniejsze informacje", styles["h2"]),
+    ]
+    story.extend(make_story_cards(paragraphs, styles))
+
+    story.append(Paragraph("Kontekst redakcyjny", styles["h2"]))
+    for para in paragraphs[:3]:
+        story.append(Paragraph(markdown_inline(short_text(para, 480)), styles["body"]))
+
+    story.append(PageBreak())
+    story.append(Paragraph("Źródła użyte", styles["h2"]))
+    if source_used:
+        story.append(source_list_flowable(source_used, styles, limit=18))
+    else:
+        story.append(Paragraph("Brak linków źródłowych w sources.md.", styles["body"]))
+
+    notes = []
+    for label, url in checked_unused[:5]:
+        notes.append(f"Sprawdzone, niewykorzystane: {label} ({url})")
+    for label, url in unavailable[:5]:
+        notes.append(f"Niedostępne lub niejednoznaczne: {label} ({url})")
+    if notes:
+        story.append(Paragraph("Uwagi źródłowe", styles["h2"]))
+        for note in notes[:8]:
+            story.append(Paragraph(markdown_inline(note, link_color="#1D4ED8", underline=False), styles["small"]))
+
+    story.append(Spacer(1, 8))
+    story.append(
+        text_card(
+            "Czytać razem ze źródłami",
+            "Dokument powstał lokalnie z pakietu podcastu. Fakty i interpretacje należy weryfikować z linkami źródłowymi.",
+            styles,
+            background=ACCENT_LIGHT,
+            border=ACCENT,
+            accent=AMBER,
         )
     )
 
-    meta_table = Table(
-        [
-            ["Długość audio", mmss(render_data.get("duration_seconds", ""))],
-            ["Liczba słów", str(render_data.get("word_count", "brak danych"))],
-            ["Backend TTS", str(render_data.get("engine_used", "brak danych"))],
-            ["Model", str(render_data.get("model", "brak danych"))],
-        ],
-        colWidths=[4.5 * cm, 11.5 * cm],
-        style=TableStyle(
-            [
-                ("BACKGROUND", (0, 0), (-1, -1), LIGHT_BLUE),
-                ("BOX", (0, 0), (-1, -1), 0.7, BORDER),
-                ("INNERGRID", (0, 0), (-1, -1), 0.35, BORDER),
-                ("FONTNAME", (0, 0), (0, -1), bold_font),
-                ("FONTNAME", (1, 0), (1, -1), font),
-                ("TEXTCOLOR", (0, 0), (-1, -1), NAVY),
-                ("FONTSIZE", (0, 0), (-1, -1), 9),
-                ("LEFTPADDING", (0, 0), (-1, -1), 8),
-                ("RIGHTPADDING", (0, 0), (-1, -1), 8),
-                ("TOPPADDING", (0, 0), (-1, -1), 7),
-                ("BOTTOMPADDING", (0, 0), (-1, -1), 7),
-            ]
+    doc.build(
+        story,
+        onFirstPage=lambda canvas, doc_obj: draw_mobile_page(
+            canvas,
+            doc_obj,
+            title=title,
+            footer_label=f"Podcast brief: {topic_label}",
+            page_label="Strona",
+            accent=ACCENT_DARK,
+            accent_rule=AMBER,
+        ),
+        onLaterPages=lambda canvas, doc_obj: draw_mobile_page(
+            canvas,
+            doc_obj,
+            title=title,
+            footer_label=f"Podcast brief: {topic_label}",
+            page_label="Strona",
+            accent=ACCENT_DARK,
+            accent_rule=AMBER,
         ),
     )
-    story.append(meta_table)
-    story.append(Spacer(1, 0.35 * cm))
-
-    story.append(Paragraph("Najważniejsze informacje", styles["SectionPavbot"]))
-    cards = []
-    for para in paragraphs[1:6]:
-        title, body = split_lead_sentence(para)
-        cards.append(make_card(title, short(body or para, 310), styles))
-    for card in cards[:5]:
-        story.append(KeepTogether([card, Spacer(1, 0.18 * cm)]))
-
-    story.append(Paragraph("Kontekst redakcyjny", styles["SectionPavbot"]))
-    for para in paragraphs[:3]:
-        story.append(Paragraph(escape(short(para, 520)), styles["BodyPavbot"]))
-
-    story.append(Paragraph("Źródła użyte", styles["SectionPavbot"]))
-    items = []
-    for label, url in source_used[:14]:
-        safe_label = escape(label)
-        safe_url = escape(url, quote=True)
-        items.append(ListItem(Paragraph(f'<a href="{safe_url}">{safe_label}</a>', styles["LinkPavbot"])))
-    if items:
-        story.append(ListFlowable(items, bulletType="bullet", leftIndent=14))
-    else:
-        story.append(Paragraph("Brak linków źródłowych w sources.md.", styles["BodyPavbot"]))
-
-    if checked_unused or unavailable:
-        story.append(Paragraph("Uwagi źródłowe", styles["SectionPavbot"]))
-        notes = []
-        for label, url in checked_unused[:5]:
-            notes.append(f"Sprawdzone, niewykorzystane: {label} ({url})")
-        for label, url in unavailable[:5]:
-            notes.append(f"Niedostępne lub niejednoznaczne: {label} ({url})")
-        if not notes and "Reddit" in sources:
-            notes.append("Reddit: publiczny fetch nie dostarczył potwierdzonego materiału do scenariusza.")
-        for note in notes[:8]:
-            story.append(Paragraph(escape(note), styles["SmallPavbot"]))
-
-    story.append(Spacer(1, 0.3 * cm))
-    story.append(
-        Paragraph(
-            "Dokument wygenerowany lokalnie z plików podcastu. Fakty należy czytać razem z linkami źródłowymi.",
-            styles["SmallPavbot"],
-        )
-    )
-
-    doc.build(story)
     print(output_pdf)
 
 

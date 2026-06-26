@@ -20,9 +20,9 @@ struct DiagnosticsView: View {
                 DiagnosticsAutomationSection(statuses: diagnostics.automationStatuses)
             } else {
                 ContentUnavailableView(
-                    "No manifest",
+                    "Brak manifestu",
                     systemImage: "doc.badge.questionmark",
-                    description: Text("Load or configure a Pavbot manifest to inspect Codex automation status.")
+                    description: Text("Załaduj albo skonfiguruj manifest Pavbot, aby sprawdzić status automatyzacji Codex.")
                 )
             }
 
@@ -31,7 +31,7 @@ struct DiagnosticsView: View {
                 registrationError: remoteRegistrationError
             )
         }
-        .navigationTitle("Diagnostics")
+        .navigationTitle("Diagnostyka")
         .listStyle(.insetGrouped)
         .onAppear {
             remoteDeviceToken = RemoteNotificationDiagnostics.deviceToken()
@@ -44,7 +44,7 @@ struct DiagnosticsView: View {
                 } label: {
                     Image(systemName: "arrow.clockwise")
                 }
-                .accessibilityLabel("Refresh diagnostics")
+                .accessibilityLabel("Odśwież diagnostykę")
             }
         }
     }
@@ -57,7 +57,7 @@ private struct DiagnosticsRemoteNotificationSection: View {
     var body: some View {
         Section {
             LabeledContent("APNs token", value: RemoteNotificationDiagnostics.deviceTokenPreview(for: deviceToken))
-            LabeledContent("Apple Console", value: "Development for DebugPush")
+            LabeledContent("Apple Console", value: "Development dla Xcode Debug")
 
             if !registrationError.isEmpty {
                 Label(registrationError, systemImage: "exclamationmark.triangle.fill")
@@ -68,13 +68,15 @@ private struct DiagnosticsRemoteNotificationSection: View {
             Button {
                 UIPasteboard.general.string = deviceToken
             } label: {
-                Label("Copy APNs device token", systemImage: "doc.on.doc")
+                Label("Kopiuj token APNs", systemImage: "doc.on.doc")
             }
+            .accessibilityLabel("Kopiuj token APNs")
+            .accessibilityHint("Kopiuje token urządzenia do Apple Push Notifications Console.")
             .disabled(deviceToken.isEmpty)
         } header: {
-            Text("Live notifications")
+            Text("Powiadomienia live")
         } footer: {
-            Text("Use this token in Apple Push Notifications Console for com.paweltanski.pavbotviewer. The token is stored locally and is never committed.")
+            Text("Użyj tego tokena w Apple Push Notifications Console dla com.paweltanski.pavbotviewer. Token jest przechowywany lokalnie i nie trafia do repo.")
         }
     }
 }
@@ -85,10 +87,10 @@ private struct DiagnosticsSummarySection: View {
     var body: some View {
         Section {
             LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-                MetricTile(title: "Automations", value: "\(diagnostics.enabledAutomationCount)", systemImage: "bolt.fill", tint: .yellow)
-                MetricTile(title: "Artifacts", value: "\(diagnostics.artifactCount)", systemImage: "tray.full.fill", tint: .blue)
-                MetricTile(title: "Topics", value: "\(diagnostics.topicCount)", systemImage: "folder.fill", tint: .green)
-                MetricTile(title: "Issues", value: "\(diagnostics.issues.count)", systemImage: diagnostics.issues.isEmpty ? "checkmark.seal.fill" : "exclamationmark.triangle.fill", tint: diagnostics.issues.isEmpty ? .green : .orange)
+                MetricTile(title: "Automatyzacje", value: "\(diagnostics.enabledAutomationCount)", systemImage: "bolt.fill", tint: .yellow)
+                MetricTile(title: "Artefakty", value: "\(diagnostics.artifactCount)", systemImage: "tray.full.fill", tint: .blue)
+                MetricTile(title: "Tematy", value: "\(diagnostics.topicCount)", systemImage: "folder.fill", tint: .green)
+                MetricTile(title: "Problemy", value: "\(diagnostics.issues.count)", systemImage: diagnostics.issues.isEmpty ? "checkmark.seal.fill" : "exclamationmark.triangle.fill", tint: diagnostics.issues.isEmpty ? .green : .orange)
             }
         }
         .listRowBackground(Color.clear)
@@ -105,9 +107,9 @@ private struct DiagnosticsStatusSection: View {
             DiagnosticRow(item: diagnostics.urlStatus)
             DiagnosticRow(item: diagnostics.rawBaseURLStatus)
         } header: {
-            Text("Codex manifest")
+            Text("Manifest Codex")
         } footer: {
-            Text("Status is inferred from the Pavbot manifest and generated artifacts.")
+            Text("Status jest wyliczany z manifestu Pavbot i wygenerowanych artefaktów.")
         }
     }
 }
@@ -116,9 +118,9 @@ private struct DiagnosticsIssuesSection: View {
     let issues: [DiagnosticItem]
 
     var body: some View {
-        Section("Issues") {
+        Section("Problemy") {
             if issues.isEmpty {
-                Label("No diagnostics warnings", systemImage: "checkmark.circle.fill")
+                Label("Brak ostrzeżeń diagnostycznych", systemImage: "checkmark.circle.fill")
                     .foregroundStyle(.green)
             } else {
                 ForEach(issues) { issue in
@@ -133,7 +135,7 @@ private struct DiagnosticsAutomationSection: View {
     let statuses: [AutomationDiagnostic]
 
     var body: some View {
-        Section("Active automations") {
+        Section("Aktywne automatyzacje") {
             ForEach(statuses) { status in
                 VStack(alignment: .leading, spacing: 8) {
                     HStack(alignment: .top, spacing: 10) {

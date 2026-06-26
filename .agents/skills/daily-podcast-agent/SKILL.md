@@ -82,8 +82,12 @@ information, source links, and audio metadata:
   research/<topic>/podcasts/YYYY-MM-DD
 ```
 
-The PDF should be visually polished, readable, and suitable for reviewing the
-episode without opening the Markdown files.
+The PDF should be premium mobile-first output: 390 x 844 pt pages, readable in
+the Pavbot iOS app without manual zoom, with clear typography, compact audio
+metadata cards, visible source links, and no raw URL clutter in the main body.
+Render the PDF pages to PNG and visually check spacing, page numbers, Polish
+characters, source links, and clipped or overlapping text before claiming
+success.
 
 ## Output Contract
 
@@ -112,11 +116,13 @@ outputs:
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
-`PAVBOT_MANIFEST_URL` must be set in the Codex or repository environment to the
-same public raw manifest URL used in iOS `Settings -> Manifest URL`. The iOS app
-does not send this value back to Codex. The publish script runs
-`python3 scripts/generate_pavbot_manifest.py` in a temporary clean worktree,
-commits only generated outputs (`runs/`, `pdfs/`, `podcasts/`, `index.md`,
-`backlog.md`) plus `public/pavbot-manifest.json`, and pushes to `origin/main`.
+The publish script derives `PAVBOT_MANIFEST_URL` from an explicit environment
+override, `PAVBOT_RAW_BASE_URL`, the existing manifest `rawBaseUrl`, or the
+GitHub `origin` remote. The resolved URL must match the public raw manifest URL
+used in iOS `Settings -> Manifest URL`; the iOS app does not send this value
+back to Codex. The publish script runs `python3 scripts/generate_pavbot_manifest.py`
+in a temporary clean worktree, commits only generated outputs (`runs/`, `pdfs`,
+`podcasts/`, `index.md`, `backlog.md`) plus `public/pavbot-manifest.json`, and
+pushes to `origin/main`.
 Never publish topic `tools/`, prompt edits, app code, docs, backend code, or
 other development changes as automation outputs.

@@ -13,12 +13,7 @@ enum ManifestDefaults {
 @MainActor
 @Observable
 final class ManifestStore {
-    enum LoadState: Equatable {
-        case idle
-        case loading
-        case loaded
-        case failed(String)
-    }
+    typealias LoadState = PavbotLoadState
 
     static let defaultManifestURL = ManifestDefaults.defaultManifestURL
 
@@ -34,20 +29,29 @@ final class ManifestStore {
     var isUsingPlaceholderManifestURL: Bool {
         manifestURLString == Self.defaultManifestURL
     }
+    var isAutoRefreshLoopRunning: Bool {
+        autoRefreshTask != nil
+    }
+    private(set) var autoRefreshLoopStartCount = 0
 
     private let client: any ManifestFetching
     private let cache: ManifestCache
     private let notifier: any ArtifactNotifying
+    private let liveNotificationsEnabled: () -> Bool
+    @ObservationIgnored private var autoRefreshTask: Task<Void, Never>?
+    @ObservationIgnored private let reloadGate = ReloadGate()
 
     init(
         client: any ManifestFetching = ManifestClient(),
         cache: ManifestCache = ManifestCache(),
         notifier: (any ArtifactNotifying)? = nil,
-        manifestURLString: String? = nil
+        manifestURLString: String? = nil,
+        liveNotificationsEnabled: @escaping () -> Bool = { LiveNotificationSettings.isEnabled() }
     ) {
         self.client = client
         self.cache = cache
         self.notifier = notifier ?? ArtifactNotificationService()
+        self.liveNotificationsEnabled = liveNotificationsEnabled
         self.manifestURLString = manifestURLString
             ?? UserDefaults.standard.string(forKey: ManifestDefaults.urlDefaultsKey)
             ?? Self.defaultManifestURL
@@ -57,12 +61,13 @@ final class ManifestStore {
         }
     }
 
-    func load() async {
-        guard state != .loading else { return }
+    func load(minimumInterval: TimeInterval = 0) async {
+        guard reloadGate.begin(key: "manifest", minimumInterval: minimumInterval) else { return }
+        defer { reloadGate.finish(key: "manifest") }
 
         if isUsingPlaceholderManifestURL {
             state = manifest == nil
-                ? .failed("Set your public GitHub raw manifest URL in Settings.")
+                ? .failed(.manifest("Set your public GitHub raw manifest URL in Settings."))
                 : .loaded
             return
         }
@@ -71,12 +76,12 @@ final class ManifestStore {
         case .valid:
             break
         case .invalid(let message):
-            state = .failed(message)
+            state = .failed(.manifest(message))
             return
         }
 
         guard let url = URL(string: manifestURLString) else {
-            state = .failed("Enter a valid manifest URL.")
+            state = .failed(.manifest("Enter a valid manifest URL."))
             return
         }
 
@@ -87,7 +92,14 @@ final class ManifestStore {
             if let previousManifest, loadedManifest.isOlder(than: previousManifest) {
                 lastNewArtifacts = []
                 lastNewAutomations = []
-                state = .failed("Showing cached data. Remote manifest is older than the cached manifest.")
+                state = .failed(
+                    .custom(
+                        title: "Pokazuję dane z cache",
+                        message: "Remote manifest is older than the cached manifest.",
+                        actionTitle: "Odśwież ponownie",
+                        systemImage: "externaldrive.fill.badge.checkmark"
+                    )
+                )
                 return
             }
             let newArtifacts = loadedManifest.newArtifacts(comparedTo: previousManifest)
@@ -96,7 +108,7 @@ final class ManifestStore {
             lastNewAutomations = newAutomations
             manifest = loadedManifest
             cache.save(loadedManifest)
-            if !newArtifacts.isEmpty || !newAutomations.isEmpty {
+            if (!newArtifacts.isEmpty || !newAutomations.isEmpty) && !liveNotificationsEnabled() {
                 await notifier.notify(artifacts: newArtifacts, automations: newAutomations, manifestURL: url)
             }
             state = .loaded
@@ -104,24 +116,43 @@ final class ManifestStore {
             lastNewArtifacts = []
             lastNewAutomations = []
             if manifest != nil {
-                state = .failed("Showing cached data. Refresh failed: \(error.localizedDescription)")
+                state = .failed(
+                    .custom(
+                        title: "Pokazuję dane z cache",
+                        message: "Odświeżenie manifestu nie powiodło się. \(PavbotUserFacingError.polishMessage(from: error.localizedDescription))",
+                        actionTitle: "Odśwież manifest",
+                        systemImage: "externaldrive.fill.badge.checkmark"
+                    )
+                )
             } else {
-                state = .failed(error.localizedDescription)
+                state = .failed(.network(error, context: .manifest))
             }
         }
     }
 
-    func reload() async {
-        await load()
+    func reload(minimumInterval: TimeInterval = 0) async {
+        await load(minimumInterval: minimumInterval)
     }
 
-    func startAutoRefreshLoop(intervalSeconds: UInt64 = 300) async {
-        guard intervalSeconds > 0 else { return }
-        while !Task.isCancelled {
-            try? await Task.sleep(nanoseconds: intervalSeconds * 1_000_000_000)
-            if Task.isCancelled { return }
-            await reload()
+    func startAutoRefreshLoop(intervalSeconds: UInt64 = 300) {
+        guard intervalSeconds > 0, autoRefreshTask == nil else { return }
+        autoRefreshLoopStartCount += 1
+        autoRefreshTask = Task { [weak self] in
+            while !Task.isCancelled {
+                try? await Task.sleep(nanoseconds: intervalSeconds * 1_000_000_000)
+                guard !Task.isCancelled else { return }
+                await self?.reload()
+            }
         }
+    }
+
+    func stopAutoRefreshLoop() {
+        autoRefreshTask?.cancel()
+        autoRefreshTask = nil
+    }
+
+    deinit {
+        autoRefreshTask?.cancel()
     }
 }
 
