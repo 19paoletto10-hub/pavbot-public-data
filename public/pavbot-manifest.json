@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-06-26T13:12:57.083071+00:00",
+  "generatedAt": "2026-06-26T15:31:40.020404+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -109,6 +109,13 @@
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/topic.md"
     },
     {
+      "slug": "puls-dnia-news",
+      "title": "Pavbot Puls Dnia News",
+      "path": "research/puls-dnia-news",
+      "topicFilePath": "research/puls-dnia-news/topic.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/topic.md"
+    },
+    {
       "slug": "tech-news",
       "title": "Topic Contract: tech-news",
       "path": "research/tech-news",
@@ -196,6 +203,50 @@
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-06-26-tech-news.pdf",
       "sizeBytes": 58157,
       "date": "2026-06-26"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-06-26-1502.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-06-26-1502.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-06-26-1502.md",
+      "sizeBytes": 13191,
+      "date": "2026-06-26",
+      "time": "15:02"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-06-26-1201.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-06-26-1201.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-06-26-1201.md",
+      "sizeBytes": 10704,
+      "date": "2026-06-26",
+      "time": "12:01"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-06-26-1502-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-06-26-1502-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-06-26-1502-pulse-news.json",
+      "sizeBytes": 27475,
+      "date": "2026-06-26",
+      "time": "15:02"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-06-26-1201-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-06-26-1201-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-06-26-1201-pulse-news.json",
+      "sizeBytes": 25577,
+      "date": "2026-06-26",
+      "time": "12:01"
     },
     {
       "id": "research/polska-swiat/runs/2026-06-26.md",
@@ -2527,6 +2578,24 @@
       "path": "research/tech-news/automation-podcast-prompt.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/automation-podcast-prompt.md",
       "sizeBytes": 2932
+    },
+    {
+      "id": "research/puls-dnia-news/index.md",
+      "type": "index",
+      "topic": "puls-dnia-news",
+      "title": "Puls Dnia News Index",
+      "path": "research/puls-dnia-news/index.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/index.md",
+      "sizeBytes": 1487
+    },
+    {
+      "id": "research/puls-dnia-news/backlog.md",
+      "type": "backlog",
+      "topic": "puls-dnia-news",
+      "title": "Puls Dnia News Backlog",
+      "path": "research/puls-dnia-news/backlog.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/backlog.md",
+      "sizeBytes": 766
     },
     {
       "id": "research/polska-swiat/topic.md",
