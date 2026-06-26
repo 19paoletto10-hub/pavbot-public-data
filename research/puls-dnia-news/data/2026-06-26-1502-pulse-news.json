@@ -1,0 +1,521 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-06-26",
+  "runTime": "15:02",
+  "status": "Material update",
+  "headline": "Wenezuela, upał i śledztwo w Jastrzębiu ustawiają popołudniowy puls dnia",
+  "summary": "Po 15:00 dominują nowe szczegóły śledztwa po ataku w szpitalu, oficjalne limity cen paliw i skok skali katastrofy w Wenezueli, przy utrzymującym się ryzyku upałów oraz napięciu w Ormuz.",
+  "items": [
+    {
+      "id": "pulse-2026-06-26-1502-01-jastrzebie-sledztwo",
+      "section": "Polska",
+      "title": "Prokuratura weszła do sprawy ataku w szpitalu w Jastrzębiu-Zdroju",
+      "lead": "19-latek po narkotykach ranił cztery osoby; ruszyło śledztwo.",
+      "whatHappened": "Po czwartkowym ataku nożownika w szpitalu w Jastrzębiu-Zdroju prokuratura wszczęła śledztwo. TVN24 podaje, że zatrzymany 19-latek był pod wpływem narkotyków, a cztery osoby zostały ranne na oddziale.",
+      "keyFacts": [
+        "Wśród rannych są dwie pacjentki, pielęgniarka i ordynator oddziału.",
+        "Według TVN24 sprawca nie był wcześniej karany.",
+        "Sprawa przeszła z etapu interwencji policyjnej do formalnego postępowania prokuratorskiego."
+      ],
+      "reactions": [
+        "Szpital i służby skupiają się na stabilizacji stanu poszkodowanych i odtworzeniu bezpiecznej pracy oddziału.",
+        "Śledczy ustalają motyw działania napastnika i przebieg ataku."
+      ],
+      "whyItMatters": "To nadal najmocniejszy krajowy temat bezpieczeństwa, bo dotyczy przemocy w placówce ochrony zdrowia i ma już wymiar śledczy.",
+      "context": "W południowym runie wiadomo było głównie o samym ataku. Popołudnie przynosi materiałowy krok naprzód: wątek narkotyków, stan sprawcy i formalne śledztwo.",
+      "watchNext": [
+        "Czy prokuratura przedstawi zarzuty jeszcze dziś.",
+        "Czy pojawią się nowe informacje o stanie rannych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Atak nożownika w szpitalu - stan poszkodowanych",
+          "url": "https://tvn24.pl/katowice/jastrzebie-zdroj-atak-nozownika-w-szpitalu-nowe-informacje-o-stanie-zdrowia-poszkodowanych-st9115064"
+        },
+        {
+          "title": "TVN24: Sprawca ataku był pod wpływem narkotyków",
+          "url": "https://tvn24.pl/katowice/jastrzebie-zdroj-zaatakowal-personel-i-pacjentow-szpitala-byl-pod-wplywem-narkotykow-st9115006"
+        },
+        {
+          "title": "TVN24: Prokuratura wszczęła śledztwo",
+          "url": "https://tvn24.pl/katowice/jastrzebie-zdroj-prokuratura-wszczela-sledztwo-po-ataku-nozownika-w-szpitalu-st9115291"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Szpital",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-26-1502-02-bialosliwie-bilans",
+      "section": "Polska",
+      "title": "Po zderzeniu pociągów w Białośliwiu znany jest bilans rannych",
+      "lead": "Oficjalnie: około 200 pasażerów, 11 osób z pomocą na miejscu, 3 w szpitalu.",
+      "whatHappened": "Po bocznym zderzeniu dwóch pociągów w Białośliwiu służby podały dokładniejszy bilans zdarzenia. PSP informuje o około 200 pasażerach, 11 osobach z udzieloną pomocą medyczną i trzech mężczyznach przewiezionych do szpitali.",
+      "keyFacts": [
+        "PSP wskazuje, że tymczasowy punkt dla pasażerów zorganizowano w remizie OSP.",
+        "Trzech mężczyzn trafiło do szpitali w Pile i Chodzieży.",
+        "TVN24 utrzymywało rano, że torowisko pozostawało zablokowane do czasu zakończenia czynności śledczych."
+      ],
+      "reactions": [
+        "Służby ratownicze i techniczne koordynują usuwanie skutków zdarzenia i przywrócenie przejezdności.",
+        "Temat pozostał wysoko w obiegu informacyjnym ze względu na bezpieczeństwo transportu."
+      ],
+      "whyItMatters": "To istotny krajowy temat infrastrukturalny, bo łączy bezpieczeństwo pasażerów z ryzykiem dłuższych zakłóceń w ruchu kolejowym.",
+      "context": "W poprzednim runie wiadomo było głównie, że tor jest zablokowany. Teraz doszedł oficjalny bilans i skala pomocy medycznej.",
+      "watchNext": [
+        "Kiedy ruch kolejowy zostanie w pełni przywrócony.",
+        "Czy pojawi się wstępna przyczyna zderzenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Białośliwie po zderzeniu dwóch pociągów",
+          "url": "https://tvn24.pl/poznan/bialosliwie-po-zderzeniu-dwoch-pociagow-ruch-wciaz-wstrzymany-nowe-informacje-od-pkp-plk-st9114892"
+        },
+        {
+          "title": "PSP Wielkopolska: Zderzenie pociągów w Białośliwiu",
+          "url": "https://www.gov.pl/web/kwpsp-poznan/zderzenie-pociagow-w-bialosliwiu"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Kolej",
+        "Transport"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-26-1502-03-nawrocki-zaufanie",
+      "section": "Polityka",
+      "title": "Nowy sondaż daje Nawrockiemu wyraźny wzrost zaufania",
+      "lead": "IBRiS dla Onetu pokazuje 54,8 proc. zaufania do prezydenta.",
+      "whatHappened": "TVN24 opisało nowy ranking zaufania IBRiS dla Onetu, w którym prezydent Karol Nawrocki ma 54,8 proc. zaufania. To wzrost o 8,4 punktu procentowego względem poprzedniego miesiąca.",
+      "keyFacts": [
+        "To nowy ogólnopolski sygnał polityczny z piątkowego cyklu informacyjnego.",
+        "Wzrost jest na tyle duży, że temat przebił się do głównych nagłówków dnia.",
+        "Badanie pokazuje nie tylko pozycję lidera, ale też zmianę dynamiki zaufania miesiąc do miesiąca."
+      ],
+      "reactions": [
+        "Dla obozu prezydenckiego to argument o wzmacnianiu mandatu politycznego.",
+        "Dla opozycji to punkt odniesienia przed kolejnymi sporami o relacje rząd-prezydent."
+      ],
+      "whyItMatters": "To najczytelniejszy popołudniowy sygnał polityczny w kraju, bo mówi o nastrojach wobec głowy państwa po intensywnym tygodniu sporów publicznych.",
+      "context": "W południe krajowa polityka opierała się bardziej na samorządowym konflikcie warszawskim. Teraz ciężar przesuwa się na ogólnopolskie nastroje wobec prezydenta.",
+      "watchNext": [
+        "Czy konkurenci polityczni skomentują ten sondaż jeszcze dziś.",
+        "Czy kolejne badania potwierdzą ten wzrost."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ranking zaufania do polityków",
+          "url": "https://tvn24.pl/polska/ranking-zaufania-do-politykow-czerwiec-2026-sondaz-ibris-dla-onetu-st9114890"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Sondaż",
+        "Nawrocki"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-26-1502-04-upal-kraj",
+      "section": "Alerty",
+      "title": "Polska wchodzi w weekendową kulminację fali upałów",
+      "lead": "RCB i IMGW utrzymują ostrzeżenia dla niemal całego kraju.",
+      "whatHappened": "Rządowe Centrum Bezpieczeństwa i IMGW nadal ostrzegają przed rozległą falą upałów. Według komunikatów najwyższe temperatury mają przypaść na weekend, a skwar dotknie niemal całą Polskę.",
+      "keyFacts": [
+        "RCB wskazuje, że kulminacja jest prognozowana na niedzielę 28 czerwca.",
+        "IMGW w raporcie nr 135 utrzymuje upał jako główne zagrożenie meteorologiczne.",
+        "To alert o zasięgu krajowym, ważny praktycznie dla ruchu wakacyjnego i zdrowia publicznego."
+      ],
+      "reactions": [
+        "Służby apelują o ograniczanie ekspozycji na słońce i pilnowanie nawodnienia.",
+        "Temat utrzymuje wysoki priorytet jeszcze przed pierwszym pełnym wakacyjnym weekendem."
+      ],
+      "whyItMatters": "To najważniejszy alert użytkowy w kraju, bo dotyczy zdrowia, transportu, pracy na zewnątrz i potencjalnych dalszych ostrzeżeń.",
+      "context": "W poprzednim runie był to już temat wiodący, ale pozostaje aktualny i nadal może eskalować wraz z nowymi mapami ostrzeżeń.",
+      "watchNext": [
+        "Czy IMGW rozszerzy ostrzeżenia najwyższych stopni.",
+        "Czy dojdą kolejne alerty RCB związane z upałem lub infrastrukturą."
+      ],
+      "sources": [
+        {
+          "title": "RCB: Fala upałów w niemal całym kraju",
+          "url": "https://www.gov.pl/web/rcb/w-najblizszych-dniach-na-terenie-niemal-calego-kraju-prognozowana-jest-fala-upalow"
+        },
+        {
+          "title": "IMGW: raport nr 135",
+          "url": "https://imgw.pl/en/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-135/"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Pogoda",
+        "Upał"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-26-1502-05-rcb-lasy",
+      "section": "Alerty",
+      "title": "Mazowsze dostało osobny alert o zagrożeniu pożarowym lasów",
+      "lead": "RCB wysłało SMS do trzech powiatów z apelem o nieużywanie ognia.",
+      "whatHappened": "RCB uruchomiło osobny alert o dużym zagrożeniu pożarowym lasów dla części Mazowsza. Komunikat nakazuje ostrożność i niewykorzystywanie ognia w lesie oraz jego sąsiedztwie.",
+      "keyFacts": [
+        "Alert objął powiaty makowski, ostrołęcki i przasnyski.",
+        "To osobna warstwa ryzyka wobec ogólnokrajowego alertu upałowego.",
+        "Skala zagrożenia jest bezpośrednio związana z wysoką temperaturą i brakiem opadów."
+      ],
+      "reactions": [
+        "RCB kieruje ostrzeżenie bezpośrednio do mieszkańców strefy ryzyka przez system SMS.",
+        "Temat wzmacnia przekaz, że fala upałów przekłada się już na konkretne zagrożenia terenowe."
+      ],
+      "whyItMatters": "To lokalnie pilny alert bezpieczeństwa, istotny dla osób planujących wyjazdy weekendowe i aktywność w lasach.",
+      "context": "W popołudniowym zestawie ten temat utrzymuje się jako praktyczny sygnał ostrzegawczy obok głównego alertu upałowego.",
+      "watchNext": [
+        "Czy obszar alertu zostanie rozszerzony na kolejne powiaty.",
+        "Czy pojawią się zakazy wstępu do lasów lub pierwsze większe pożary."
+      ],
+      "sources": [
+        {
+          "title": "RCB: zagrożenie pożarowe lasów",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb--zagrozenie-pozarowe-lasow-2606"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Pożary",
+        "Lasy"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-26-1502-06-paliwa-limity",
+      "section": "Gospodarka",
+      "title": "Państwo utrzymuje limity cen paliw na piątek",
+      "lead": "Pb95 kosztuje maksymalnie 5,95 zł, a diesel 6,12 zł za litr.",
+      "whatHappened": "Ministerstwo Energii opublikowało maksymalne ceny detaliczne paliw obowiązujące 26 czerwca. Na wszystkich stacjach w kraju obowiązuje limit dla najpopularniejszych paliw.",
+      "keyFacts": [
+        "Pb95 ma limit 5,95 zł za litr.",
+        "Pb98 ma limit 6,65 zł za litr, a olej napędowy 6,12 zł za litr.",
+        "Komunikat potwierdza, że stacje nie mogą sprzedawać paliw drożej niż wskazane maksima."
+      ],
+      "reactions": [
+        "To praktyczny temat dla kierowców przed weekendowym i wakacyjnym ruchem.",
+        "TVN24 równolegle eksponuje temat jako ważny element piątkowego cyklu gospodarczego."
+      ],
+      "whyItMatters": "To bezpośrednia informacja kosztowa dla użytkownika, istotna w dniu wyjazdów i przy utrzymującym się napięciu na rynku energii.",
+      "context": "W poprzednim runie mocniej obecne były globalne ceny ropy. Teraz krajowo ważniejszy jest oficjalny poziom cen detalicznych na stacjach.",
+      "watchNext": [
+        "Czy limity cen zmienią się na sobotę i niedzielę.",
+        "Czy ryzyko w Ormuz zacznie odbijać się na kolejnych krajowych komunikatach cenowych."
+      ],
+      "sources": [
+        {
+          "title": "Ministerstwo Energii: maksymalne ceny paliw 26 czerwca 2026 r.",
+          "url": "https://www.gov.pl/web/energia/maksymalna-cena-detaliczna-paliw-obowiazujaca-26-czerwca-2026-r"
+        },
+        {
+          "title": "TVN24: Ceny paliw w weekend",
+          "url": "https://tvn24.pl/biznes/moto/ceny-paliw-na-sobote-niedziele-oraz-poniedzialek-27-29-czerwca-2026-ile-bedzie-kosztowala-benzyna-pb95-pb98-oraz-olej-napedowy-st9115095"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Paliwa",
+        "Kierowcy"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-26-1502-07-wenezuela-ofiary",
+      "section": "Świat",
+      "title": "Bilans katastrofy w Wenezueli rośnie do setek ofiar",
+      "lead": "Ratownicy szukają ocalałych, a media raportują już ponad 500 potwierdzonych zgonów.",
+      "whatHappened": "Zagraniczne relacje popołudniowe pokazują gwałtowny wzrost skali katastrofy po podwójnym trzęsieniu ziemi w Wenezueli. Guardian w relacji live podaje 589 potwierdzonych zgonów, a akcja ratunkowa nadal trwa.",
+      "keyFacts": [
+        "USGS nadal potwierdza dwa bardzo silne wstrząsy o magnitudach 7,2 i 7,5.",
+        "CNN utrzymuje bieżący live blog poświęcony katastrofie i akcji ratowniczej.",
+        "W porównaniu z południem skala ofiar wzrosła na tyle, że temat wrócił na czoło światowego zestawu."
+      ],
+      "reactions": [
+        "Ratownicy i międzynarodowe ekipy koncentrują się na wydobywaniu ludzi spod gruzów.",
+        "Media światowe podnoszą temat do rangi jednej z głównych katastrof dnia."
+      ],
+      "whyItMatters": "To obecnie najcięższa humanitarnie historia w zagranicznym cyklu dnia, z szybko rosnącym bilansem ofiar i dużą niepewnością co do skali zniszczeń.",
+      "context": "W południe dominowało jeszcze szukanie zaginionych. Po 15:00 najważniejsza jest eskalacja oficjalnie podawanych lub szeroko raportowanych bilansów śmiertelnych.",
+      "watchNext": [
+        "Czy bilans zostanie oficjalnie ujednolicony przez władze Wenezueli.",
+        "Jak szybko napłynie ciężki sprzęt i pomoc międzynarodowa."
+      ],
+      "sources": [
+        {
+          "title": "The Guardian: Venezuela earthquakes live",
+          "url": "https://www.theguardian.com/world/live/2026/jun/26/venezuela-earthquakes-search-survivors-death-toll-rodriguez-rubio-latest-news-updates"
+        },
+        {
+          "title": "CNN: Venezuela earthquake live news",
+          "url": "https://www.cnn.com/2026/06/26/world/live-news/venezuela-earthquake-hnk"
+        },
+        {
+          "title": "USGS: M 7.2 - 23 km SE of Yumare, Venezuela",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7zc"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wenezuela",
+        "Katastrofa"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-26-1502-08-europa-upal-ograniczenia",
+      "section": "Świat",
+      "title": "Europa zaostrza ograniczenia w kolejnej fali skwaru",
+      "lead": "Paryż ogranicza sprzedaż alkoholu, a alarmy cieplne przesuwają się dalej na wschód.",
+      "whatHappened": "Fala gorąca w Europie przestała być tylko prognozą i przekłada się na kolejne decyzje lokalnych władz. BBC opisuje nowe ograniczenia w Paryżu, a Guardian cytuje analizę World Weather Attribution o wyjątkowej skali zjawiska.",
+      "keyFacts": [
+        "Paryż ogranicza sprzedaż i spożycie alkoholu w przestrzeni publicznej w odpowiedzi na przeciążenie służb i szpitali.",
+        "Analitycy World Weather Attribution oceniają, że obecna fala gorąca byłaby bez kryzysu klimatycznego skrajnie mało prawdopodobna.",
+        "To wciąż ten sam system pogodowy, który wzmacnia alarmy także w Polsce."
+      ],
+      "reactions": [
+        "Miasta i służby zdrowia wdrażają działania ograniczające skutki skrajnego upału.",
+        "Media publiczne i eksperci silniej łączą wydarzenie z długoterminowym kryzysem klimatycznym."
+      ],
+      "whyItMatters": "Europejski kontekst pokazuje, że polskie alerty nie są lokalnym wyjątkiem, tylko częścią większego, coraz kosztowniejszego zjawiska.",
+      "context": "W południowym runie dominowała skala geograficzna upału. Teraz mocniej widać odpowiedź władz i przeciążenie systemów miejskich.",
+      "watchNext": [
+        "Czy kolejne miasta wprowadzą ograniczenia lub odwołają duże wydarzenia.",
+        "Czy nowe dane podniosą liczbę ofiar i zakłóceń infrastrukturalnych."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Paris restricts alcohol consumption and sales as Europe's heatwave shifts east",
+          "url": "https://www.bbc.com/news/articles/cwy0pdq89zno"
+        },
+        {
+          "title": "The Guardian: Europe heatwave and climate crisis",
+          "url": "https://www.theguardian.com/environment/2026/jun/26/europe-heatwave-impossible-without-climate-crisis-scientists"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Europa",
+        "Upał"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-26-1502-09-ormuz-imo",
+      "section": "Bezpieczeństwo",
+      "title": "IMO wstrzymuje ewakuację marynarzy z Ormuz po ataku na statek",
+      "lead": "Krytyczny szlak handlowy znów pokazuje, że rozejm nie oznacza bezpieczeństwa.",
+      "whatHappened": "Międzynarodowa Organizacja Morska poinformowała o czasowym wstrzymaniu operacji ewakuacji marynarzy z rejonu cieśniny Ormuz po ataku na jednostkę w Zatoce Omańskiej. Równoległe relacje BBC i Reuters pokazują, że szlak pozostaje operacyjnie niestabilny.",
+      "keyFacts": [
+        "IMO prowadziło działania dotyczące ewakuacji tysięcy marynarzy uwięzionych w regionie.",
+        "Reuters podaje, że w i wokół cieśniny mogło utknąć ponad 800 statków.",
+        "Nowy incydent osłabia narrację, że napięcie po wojnie USA-Iran szybko wygasa."
+      ],
+      "reactions": [
+        "Operatorzy morscy i rynki znów muszą liczyć się z ryzykiem przerw lub opóźnień.",
+        "Media traktują temat jako test trwałości świeżych ustaleń bezpieczeństwa w regionie."
+      ],
+      "whyItMatters": "To temat o globalnym znaczeniu handlowym i energetycznym, bo Ormuz pozostaje jednym z najważniejszych wąskich gardeł dla żeglugi i surowców.",
+      "context": "W południe ważniejsza była reakcja cen ropy. Po południu istotniejszy staje się sam fizyczny i organizacyjny stan bezpieczeństwa żeglugi.",
+      "watchNext": [
+        "Czy IMO wznowi ewakuację lub wyda dodatkowe ostrzeżenia.",
+        "Czy nowy atak przełoży się na dalsze zakłócenia ruchu i cen energii."
+      ],
+      "sources": [
+        {
+          "title": "IMO: evacuation in Strait of Hormuz paused after attack",
+          "url": "https://www.imo.org/"
+        },
+        {
+          "title": "BBC News: UN pauses Strait of Hormuz evacuation plan after cargo ship attacked",
+          "url": "https://www.bbc.com/news/articles/cjwg9np904qo"
+        },
+        {
+          "title": "ABC Australia / Reuters: UN pauses Strait of Hormuz evacuation after ship reports attack",
+          "url": "https://www.abc.net.au/news/2026-06-26/hormuz-strait-ship-attack-prompts-un-to-pause-evacuation/106843940"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Ormuz",
+        "Żegluga"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-26-1502-10-urc-ukraina",
+      "section": "Bezpieczeństwo",
+      "title": "Gdańsk kończy URC 2026 z naciskiem na odbudowę i obronę Ukrainy",
+      "lead": "Komisja potwierdza nowe środki i łączy odbudowę z wymiarem bezpieczeństwa.",
+      "whatHappened": "Kończy się druga doba konferencji URC 2026 w Gdańsku, współorganizowanej przez Polskę i Ukrainę. Komisja Europejska utrzymuje, że wsparcie dla Ukrainy obejmuje zarówno odbudowę, jak i komponent obronny, w tym pierwszą transzę 3,2 mld euro z nowego pakietu.",
+      "keyFacts": [
+        "URC 2026 odbywa się 25 i 26 czerwca w Gdańsku.",
+        "Konferencja skupia się na energetyce, infrastrukturze krytycznej i logistyce.",
+        "Komisja Europejska komunikuje pakiet 90 mld euro na lata 2026-2027 i pierwszą transzę 3,2 mld euro."
+      ],
+      "reactions": [
+        "Unijne i międzynarodowe instytucje wiążą odbudowę z bieżącą zdolnością Ukrainy do utrzymania bezpieczeństwa.",
+        "Dla Polski to także ważny sygnał geopolityczny z krajowego tła dnia."
+      ],
+      "whyItMatters": "To jeden z głównych tematów bezpieczeństwa w regionie, bo łączy pieniądze, logistykę i wymiar obronny w bezpośrednim otoczeniu Polski.",
+      "context": "Temat był obecny już w południe, ale pozostaje materiałowy także po 15:00, bo konferencja jeszcze trwa i wyznacza regionalną agendę dnia.",
+      "watchNext": [
+        "Czy po zamknięciu konferencji pojawią się nowe konkretne pakiety lub deklaracje.",
+        "Czy Polska i partnerzy doprecyzują kolejne projekty infrastrukturalne lub obronne."
+      ],
+      "sources": [
+        {
+          "title": "URC 2026 — Gdańsk, Poland",
+          "url": "https://www.urc-international.com/"
+        },
+        {
+          "title": "Komisja Europejska: EU steps up support for Ukraine's defence, recovery and reconstruction",
+          "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1465"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Ukraina",
+        "URC2026"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-26-1502-11-usa-pkb",
+      "section": "Gospodarka",
+      "title": "Amerykański PKB za pierwszy kwartał podniesiony do 2,1 proc.",
+      "lead": "Trzeci szacunek BEA jest lepszy od wcześniejszego odczytu 1,6 proc.",
+      "whatHappened": "Biuro Analiz Ekonomicznych USA opublikowało trzeci szacunek PKB za pierwszy kwartał 2026 roku. Wzrost realnego PKB wyniósł 2,1 proc. w ujęciu annualizowanym, wyżej niż w drugim szacunku.",
+      "keyFacts": [
+        "Drugi szacunek wynosił 1,6 proc., a IV kwartał 2025 zakończył się wzrostem 0,5 proc.",
+        "BEA wskazuje inwestycje, eksport, wydatki rządowe i konsumpcję jako główne składowe wzrostu.",
+        "To ważny sygnał dla globalnych rynków w dniu napięć wokół energii i geopolityki."
+      ],
+      "reactions": [
+        "Lepszy odczyt może wspierać narrację o większej odporności gospodarki USA.",
+        "Rynki i komentatorzy będą zestawiać ten wynik z polityką Fed oraz kosztami energii."
+      ],
+      "whyItMatters": "To twardy makroekonomiczny sygnał z największej gospodarki świata, wpływający na nastroje inwestorów i wycenę ryzyka globalnego.",
+      "context": "W południowym runie temat już się pojawił, ale nadal pozostaje jednym z najważniejszych publicznych odczytów gospodarczych dnia.",
+      "watchNext": [
+        "Jak zareagują rynki obligacji, dolara i akcji na ten odczyt.",
+        "Czy kolejne komentarze Fed zmienią interpretację danych."
+      ],
+      "sources": [
+        {
+          "title": "BEA: GDP (Third Estimate), 1st Quarter 2026",
+          "url": "https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-1st"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "USA",
+        "PKB"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-26-1502-12-openai-ipo",
+      "section": "Technologia",
+      "title": "OpenAI może przesunąć debiut giełdowy na 2027 rok",
+      "lead": "Reuters przez TVN24 opisuje chłodniejsze podejście do szybkiego IPO.",
+      "whatHappened": "TVN24 Biznes podało za Reuters, że OpenAI rozważa odłożenie debiutu giełdowego do 2027 roku. To nowy zwrot po wcześniejszych sygnałach, że firma weszła już na formalną ścieżkę do IPO.",
+      "keyFacts": [
+        "Temat dotyczy producenta ChatGPT i jednej z najważniejszych spółek obecnego boomu AI.",
+        "The Verge przypomina, że OpenAI złożyło już poufny formularz S-1 jako formalny krok w procesie IPO.",
+        "Ewentualne opóźnienie sugeruje ostrożniejsze podejście do wyceny i gotowości spółki."
+      ],
+      "reactions": [
+        "Rynek technologiczny będzie czytał to jako sygnał, że nawet liderzy AI korygują tempo finansowych planów.",
+        "Temat utrzymuje znaczenie, bo OpenAI pozostaje symbolicznym centrum wyścigu AI."
+      ],
+      "whyItMatters": "To szeroko rozpoznawalny temat technologiczno-rynkowy, ważny dla publicznej percepcji tempa komercjalizacji AI i oczekiwań wobec najgłośniejszych spółek sektora.",
+      "context": "W poprzednim runie sekcję technologiczną zajmowało Waymo. Popołudniem silniejszy stał się rynkowy temat OpenAI i możliwego hamowania ścieżki IPO.",
+      "watchNext": [
+        "Czy pojawi się bezpośredni komentarz OpenAI lub kolejny przeciek o harmonogramie IPO.",
+        "Jak temat wpłynie na porównania z Anthropic i innymi spółkami AI idącymi na giełdę."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: OpenAI może opóźnić debiut na giełdzie",
+          "url": "https://tvn24.pl/biznes/tech/ipo-openai-producent-chatgpt-moze-opoznic-debiut-na-gieldzie-do-2027-roku-st9115128"
+        },
+        {
+          "title": "The Verge: OpenAI files for IPO",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/946335/openai-ipo-s-1-confidential"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "OpenAI",
+        "AI"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "BBC News",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "RCB: fala upałów",
+      "url": "https://www.gov.pl/web/rcb/w-najblizszych-dniach-na-terenie-niemal-calego-kraju-prognozowana-jest-fala-upalow"
+    },
+    {
+      "title": "RCB: zagrożenie pożarowe lasów",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb--zagrozenie-pozarowe-lasow-2606"
+    },
+    {
+      "title": "IMGW: raport nr 135",
+      "url": "https://imgw.pl/en/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-135/"
+    },
+    {
+      "title": "PSP Wielkopolska: Zderzenie pociągów w Białośliwiu",
+      "url": "https://www.gov.pl/web/kwpsp-poznan/zderzenie-pociagow-w-bialosliwiu"
+    },
+    {
+      "title": "Ministerstwo Energii: maksymalne ceny paliw 26 czerwca 2026 r.",
+      "url": "https://www.gov.pl/web/energia/maksymalna-cena-detaliczna-paliw-obowiazujaca-26-czerwca-2026-r"
+    },
+    {
+      "title": "USGS: Venezuela earthquake",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7zc"
+    },
+    {
+      "title": "IMO",
+      "url": "https://www.imo.org/"
+    },
+    {
+      "title": "Komisja Europejska: wsparcie dla Ukrainy na URC 2026",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1465"
+    },
+    {
+      "title": "URC 2026",
+      "url": "https://www.urc-international.com/"
+    },
+    {
+      "title": "BEA: GDP (Third Estimate), 1st Quarter 2026",
+      "url": "https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-1st"
+    }
+  ]
+}
