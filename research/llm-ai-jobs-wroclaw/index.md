@@ -1,29 +1,30 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-06-25 17:41 CEST
+Last updated: 2026-06-26 01:42 CEST
 
 ## Current Understanding
 
-Wieczorna runda z `2026-06-25 17:41 CEST` dodała trzy nowe, istotne sygnały:
-oficjalny `Tooploox Lead AI Engineer`, publiczny `SNI LLM Engineer` oraz
-`Harvey Nash Technology AI Platform Engineer (Agentic Systems)` dla
-`Wrocław hybrid`. Dodatkowo wcześniej śledzona karta `People More AI Engineer /
-LLM Engineer` znowu pokazuje `140-190 PLN/h`, więc kolejny raz potwierdza się,
-że to jedno z najbardziej zmiennych źródeł wynagrodzeń w tym temacie.
+Runda z `2026-06-26 01:42 CEST` dodała sześć nowych, istotnych sygnałów:
+oficjalny `Tooploox Senior AI NodeJS Engineer`, oficjalny
+`Addepto AI Solution Architect`, nowy aktywny `T-Mobile T Hub – DevOps
+Engineer (AI Solutions)`, publiczny `ACAISOFT Backend / AI Engineer`,
+board-first `DataArt Senior AI Developer with LLM Orchestration` oraz
+`BigTime Team Lead, Software Engineer` dla `Wrocław hybrid`.
 
-Najmocniejszy nowy sygnał kanoniczny daje `Tooploox`, bo publiczna karta
-pracodawcy wprost łączy `AI Agentic systems`, `RAG`, `MCP`, `LLM APIs`,
-`LangChain`, `LlamaIndex` i pełną zdalność z Polski przy dostępnych biurach we
-`Wrocławiu` i `Warszawie`. `SNI` dokłada jedną z najprecyzyjniej opisanych
-publicznych ról stricte pod `LLM systems engineering`: `Python`, `LangGraph`,
-`MCP`, zaawansowane `RAG`, architektury pamięci, ewaluacje i guardraile.
+Najmocniejsze nowe sygnały kanoniczne dają teraz `Tooploox` i `Addepto`.
+`Tooploox` do wczorajszego `Lead AI Engineer` dołożył drugi oficjalny sygnał
+z `Wrocław Office`, `Fully Remote`, `RAG`, `MCP`, `OpenAI`, `Anthropic`,
+`LangChain`, `LlamaIndex`, fine-tuningiem i ewaluacją modeli. `Addepto`
+rozszerza oficjalny klaster o `AI Solution Architect`, czyli rolę wyraźnie
+łączącą `LLM`, `Generative AI`, `MLOps` i architekturę produkcyjnych wdrożeń.
 
-Lokalnie najciekawszy jest teraz `Harvey Nash`, bo to nowy sygnał
-`Wrocław hybrid` po stronie platformowej: `AWS Lambda`, `SQS`, `Bedrock
-Agents`, `Action Groups`, `Knowledge Bases`, `OpenSearch`, `S3` i integracja z
-`GitLab CI/CD`. Wcześniej śledzony klaster `DEVAPO`, `SCALO`, `VeloBank`,
-`XTB` i `Link Group` pozostaje ważny, ale ta runda nie przyniosła dla niego
-silniejszej zmiany niż nowe odkrycia oraz flip widełek w `People More`.
+Najważniejsza zmiana statusowa dotyczy `T-Mobile`: wcześniej obserwowany
+`DevOps Engineer (AI Solutions)` był publicznie wygaszony, a teraz wrócił z
+nowym aktywnym URL-em `Pracuj.pl` i terminem do `15 Jul`. Lokalnie
+najciekawszy nowy sygnał daje `BigTime`, bo łączy hybrydę we `Wrocławiu` z
+`LLMs`, `MCP`, `A2A`, `Python`, `React` i nadal hands-on zakresem technicznym,
+podczas gdy `DataArt` dokłada nowy remote-first sygnał z publicznie wskazanym
+biurem `Wrocław Plac Grunwaldzki 23`.
 
 ## Stable Facts
 
@@ -115,6 +116,12 @@ only when something meaningful changes.
 | tooploox-lead-ai-engineer-wroclaw-warsaw-remote-poland | Tooploox | Lead AI Engineer | Wrocław / Warsaw / remote Poland | 2026-06-25-1741 | 2026-06-25-1741 | Open | Initial capture: official Tooploox Teamtailor role; `24 000-32 000 PLN B2B` or `21 000-29 000 PLN UoP`; `Fully Remote` from Poland with `Wrocław Office` and `Warsaw Office`; `AI Agentic systems`, `RAG`, `Multi-Agent`, `MCP Servers`, `LLM APIs`, `LangChain`, `LlamaIndex`, `NodeJS` and `TypeScript`. | [Tooploox](https://tooploox.teamtailor.com/jobs/7213707-lead-ai-engineer) |
 | sni-llm-engineer-remote-poland | SNI | LLM Engineer | Warsaw +4 / remote Poland | 2026-06-25-1741 | 2026-06-25-1741 | Open | Initial capture: public Just Join IT role; `160-180 PLN net / h B2B`; `Remote`; end-to-end `Generative AI` in `Python`, `LangGraph`, `tool/function calling`, `MCP`, `multi-agent orchestration`, advanced `RAG`, memory architectures, hallucination evals, guardrails, `Azure OpenAI` and `Azure AI Foundry`. | [Just Join IT](https://justjoin.it/job-offer/sni-llm-engineer-warszawa-ai) |
 | harvey-nash-ai-platform-engineer-agentic-systems-wroclaw-hybrid | Harvey Nash Technology | AI Platform Engineer (Agentic Systems) | Wrocław hybrid | 2026-06-25-1741 | 2026-06-25-1741 | Open | Initial capture: public Just Join IT role from a recruitment intermediary; `Wrocław, hybrid (1 day per week in the office)`; `170-190 PLN net + VAT / h B2B`; agent orchestration layer on `AWS Lambda`, `SQS`, `Bedrock Agents`, `Action Groups`, `Knowledge Bases`, `OpenSearch`, `S3`, `RAG` and `GitLab CI/CD`. | [Just Join IT](https://justjoin.it/job-offer/harvey-nash-technology-ai-platform-engineer-agentic-systems--wroclaw-devops) |
+| tooploox-senior-ai-nodejs-engineer-wroclaw-warsaw-remote-poland | Tooploox | Senior AI NodeJS Engineer | Wrocław / Warsaw / remote Poland | 2026-06-26-0142 | 2026-06-26-0142 | Open | Initial capture: official Tooploox Teamtailor role; `18 000-28 000 PLN B2B` or `16 000-25 500 PLN UoP`; `Fully Remote` from Poland with `Wrocław Office` and `Warsaw Office`; `AI Agents`, `RAG`, `Multi-Agents`, `MCP Servers`, `OpenAI`, `Anthropic`, `LangChain`, `LlamaIndex`, fine-tuning and evaluation. | [Tooploox](https://tooploox.teamtailor.com/jobs/6620461-senior-ai-nodejs-engineer) |
+| addepto-ai-solution-architect-wroclaw-remote | Addepto | AI Solution Architect | Wrocław + remote Poland | 2026-06-26-0142 | 2026-06-26-0142 | Open | Initial capture: official Addepto role; `28 560-34 440 PLN B2B`; `Wroclaw` plus other cities and `Remote`; `Machine Learning`, `LLM`, `Cloud`, `Agentic AI`, `Python`, `MLOps` and `Generative AI` with end-to-end enterprise architecture scope. | [Addepto](https://addepto.com/career/ai-solution-architect/) |
+| tmobile-t-hub-devops-engineer-ai-solutions-remote-poland-hybrid-warsaw | T-Mobile | T Hub – DevOps Engineer (AI Solutions) | Remote Poland / hybrid Warsaw | 2026-06-26-0142 | 2026-06-26-0142 | Open | Initial capture: direct-employer Pracuj.pl role with new active URL `1004901950`; valid to `15 Jul`; `Whole Poland (remote work)` plus `home office work, hybrid work`; the role family is explicitly labeled `AI Solutions` and earlier public mirrors of the same title described RAG-oriented AI operations. | [Pracuj.pl](https://www.pracuj.pl/praca/t-hub-devops-engineer-ai-solutions-warszawa-marynarska-12%2Coferta%2C1004901950) |
+| acaisoft-backend-ai-engineer-remote-poland | ACAISOFT POLAND Sp. z o.o. | Backend / AI Engineer | Remote Poland | 2026-06-26-0142 | 2026-06-26-0142 | Open | Initial capture: direct-employer Pracuj.pl role; `28 560-40 320 PLN netto (+ VAT) / mies. B2B`; `Whole Poland (remote work)`; public mirrors describe a multi-agent backend on `Python`, `FastAPI`, `ECS`, `Fargate`, `Lambda`, `DynamoDB`, `Bedrock` and `Nova`. | [Pracuj.pl](https://www.pracuj.pl/praca/backend-ai-engineer-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004871582) |
+| dataart-senior-ai-developer-llm-orchestration-intelligent-knowledge-platform-wroclaw-remote | DataArt | Senior AI Developer with LLM Orchestration, Intelligent Knowledge Platform | Wrocław / remote Poland | 2026-06-26-0142 | 2026-06-26-0142 | Open | Initial capture: public Just Join IT role; `26 000-31 000 PLN net / month B2B` or `20 000-25 000 PLN gross / month UoP`; `Remote`; public office list includes `Wrocław Plac Grunwaldzki 23`; enterprise knowledge platform built on `large language models`, `semantic search`, graph technologies and agent-driven workflows. | [Just Join IT](https://justjoin.it/job-offer/dataart-senior-ai-developer-with-llm-orchestration-intelligent-knowledge-platform-lodz-ai) |
+| bigtime-team-lead-software-engineer-wroclaw-hybrid | BigTime | Team Lead, Software Engineer | Wrocław hybrid | 2026-06-26-0142 | 2026-06-26-0142 | Open | Initial capture: public Just Join IT role; `28 000-32 000 PLN net / month B2B`; `Hybrid`; AI-powered systems, `LLMs`, `MCP`, `A2A`, `Python`, `React`, `MongoDB`, `Redis` and `AWS/Azure`; leadership role but still clearly hands-on technically. | [Just Join IT](https://justjoin.it/job-offer/bigtime-team-lead-software-engineer-wroclaw-ai) |
 
 ## Open Questions
 
@@ -136,6 +143,8 @@ only when something meaningful changes.
   pozostanie głównie w publicznych boardach?
 - Czy `SNI` i `Harvey Nash` mają publiczne, bardziej kanoniczne karty niż
   bieżące URL-e `Just Join IT`, czy pozostaną dłużej tylko w warstwie boardowej?
+- Czy `DataArt` i `BigTime` pokażą bardziej kanoniczne publiczne detail page
+  niż obecne karty `Just Join IT`, czy ten klaster pozostanie board-first?
 
 ## Watch Items
 
@@ -166,6 +175,10 @@ only when something meaningful changes.
 - Official `Tooploox Teamtailor`, public `SNI` and public `Harvey Nash`
   pages after the `25 Jun 17:41` run, with special care around canonical URL
   discovery and `People More` salary volatility.
+- Official `Tooploox Teamtailor`, `Addepto careers`, public `T-Mobile`,
+  public `ACAISOFT`, `DataArt` and `BigTime` pages after the `26 Jun 01:42`
+  run, with special care around reopen status, board-first canonical drift and
+  duplicate-prone employer clusters.
 - Job boards with reliable filters for Wroclaw, remote Poland and AI/LLM work.
 - Salary, seniority, tech-stack and remote-policy changes on previously seen
   listings.
@@ -190,3 +203,4 @@ only when something meaningful changes.
 - [2026-06-25-0141](runs/2026-06-25-0141.md)
 - [2026-06-25-1723](runs/2026-06-25-1723.md)
 - [2026-06-25-1741](runs/2026-06-25-1741.md)
+- [2026-06-26-0142](runs/2026-06-26-0142.md)
