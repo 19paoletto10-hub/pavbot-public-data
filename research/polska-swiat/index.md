@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-06-25
+Last updated: 2026-06-26
 
 ## Current Understanding
 
@@ -39,6 +39,13 @@ Zełenskiego, z udziałem rządu, biznesu i instytucji oraz z protestami w tle.
 W agendzie bezpieczeństwa wyróżniają się: prezydencka wizyta w İncirlik,
 spotkanie ministrów obrony V4 w Budapeszcie, zamówienia GROT A3 oraz debata o
 roli Ukrainy w europejskiej obronie.
+Po runie 26 czerwca blok URC przeszedł w fazę dokumentów i konkretów:
+Deklaracja Gdańska liderów wschodniej flanki, zapowiedź około 200 umów i
+porozumień, komponent energetyczny z udziałem polskich spółek oraz sprzężenie
+odbudowy Ukrainy z bezpieczeństwem. Równolegle NATO przed szczytem w Ankarze
+akcentuje inwestycje, kontrakty obronne i wsparcie Ukrainy, a wątek możliwych
+rosyjskich prowokacji wobec Polski lub państw bałtyckich wymaga ostrożnego,
+źródłowanego traktowania.
 
 ## Stable Facts
 
@@ -82,9 +89,13 @@ roli Ukrainy w europejskiej obronie.
   sygnał, ale czekać na oficjalny komunikat przed mocną tezą.
 - PDF-y dziennych raportów powinny być sprawdzane pod kątem mobile-first formatu
   390 x 844 pt i czytelności w iOS bez ręcznego zoomu.
+- Wątek możliwych rosyjskich prowokacji wobec Polski lub Bałtów traktować jako
+  ostrzeżenie źródłowe, nie potwierdzony scenariusz; zestawiać go z oficjalnymi
+  komunikatami NATO/KPRM.
 
 ## Recent Reports
 
+- [2026-06-26](runs/2026-06-26.md)
 - [2026-06-25](runs/2026-06-25.md)
 - [2026-06-24](runs/2026-06-24.md)
 - [2026-06-23](runs/2026-06-23.md)

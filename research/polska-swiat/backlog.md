@@ -53,6 +53,12 @@
   Energii for URC 2026, Prezydent RP for İncirlik/PKW Turcja, MON for V4 and
   GROT A3, Guardian for the Ukraine-as-European-defense argument, and AP for
   USA-Iran inspections.
+- 2026-06-26: Friday research run created a material update. Strongest sources
+  were KPRM/URC 2026 for the Gdańsk conference and Deklaracja Gdańska, NATO/AP
+  for the Ankara summit and defence industry framing, Guardian for the cautious
+  Russia-provocation warning, Prezydent RP for the SENT veto, and RCB/IMGW for
+  heat/susza risk. Podcast handling should label the Guardian item as an
+  intelligence warning with limited public detail, not as a confirmed incident.
 
 ## Done
 
