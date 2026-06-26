@@ -78,6 +78,11 @@
 | High | Track AI-assisted open-source vulnerability research | AISLE/curl 8.21.0 ties AI-native security systems to real CVEs and patches in mature infrastructure | Watch curl maintainer commentary, independent validation, other OSS projects, false-positive burden and defensive-use framing | Open |
 | Medium | Track Poland-Taiwan AI server supply chain | TEEMA selected Miękinia near Wrocław for a technology park that may include AI server production after Intel withdrew | Watch named investors, permits, schedule, public funding, jobs claims and links to Taiwanese semiconductor/server supply chain | Open |
 | Medium | Track AI water backlash in consumer branding | WP's Polaroid coverage shows data-center water concerns moving into mainstream brand messaging | Watch whether AI energy/water critiques shift from activist/regulatory discourse into consumer campaigns and platform responses | Open |
+| High | Track GPT-5.6 staged release gating | The Verge, TechCrunch and Axios describe government-approved customer access for OpenAI's next model preview | Watch OpenAI statement, White House/ONCD/OSTP clarification, customer criteria, release timing and Anthropic comparison | Open |
+| High | Track agent simulation and evaluation infrastructure | Patronus Digital World Models and General Intuition show funding moving toward simulated worlds, action models and long-horizon agent testing | Watch public benchmarks, customer proof, safety claims, shortcut/reward-hacking findings and non-lab adoption | Open |
+| High | Track Notion agent-email shift | Notion Mail shutdown is a concrete case of agents replacing a classic productivity UI | Watch user migration, enterprise/compliance issues, Gmail/Outlook connector reliability and whether other productivity apps follow | Open |
+| Medium | Track unconventional AI compute | Unconventional AI's Un-0 validates a simulated oscillator approach but not yet production hardware | Watch hardware prototype, independent benchmarks, energy measurements, model quality and open-source adoption | Open |
+| Medium | Track ML open-science breakthroughs | Vesuvius Challenge and TESS/TOI-791 are strong science-tech stories outside Big Tech | Watch peer review, reusable code/data, independent replication and Polish science coverage | Open |
 
 ## Review Notes
 
@@ -218,6 +223,16 @@
 - 2026-06-25: Daily tech podcast generated from the normal morning research
   report; created `draft.md`, `script.md`, `sources.md`, `render.json`,
   `brief.pdf`, and `podcast.mp3`; final MP3 used Piper and measured about 7:31
+  by `ffprobe`. PDF brief was rendered in the mobile 390 x 844 pt format and
+  visually checked from PNG renders.
+- 2026-06-26: Daily research run created a material update. Strongest podcast
+  candidates: GPT-5.6 staged release gating, agent simulation/evaluation
+  infrastructure, Notion Mail shutdown as agent-email signal, Unconventional AI
+  energy-efficient compute, Vesuvius Challenge open-science ML and Product Hunt
+  agent tooling.
+- 2026-06-26: Daily tech podcast generated from the normal morning research
+  report; created `draft.md`, `script.md`, `sources.md`, `render.json`,
+  `brief.pdf`, and `podcast.mp3`; final MP3 used Piper and measured about 7:41
   by `ffprobe`. PDF brief was rendered in the mobile 390 x 844 pt format and
   visually checked from PNG renders.
 

@@ -1,12 +1,26 @@
 # Topic Index: tech-news
 
-Last updated: 2026-06-25
+Last updated: 2026-06-26
 
 ## Current Understanding
 
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
+
+Po raporcie z 2026-06-26 najmocniejsza nowa oś to praktyczne bramkowanie
+frontier AI przez rząd USA: The Verge, TechCrunch i Axios opisały etapowe
+preview GPT-5.6 z zatwierdzaniem klientów przez administrację, co uzupełnia
+wcześniejszy White House framework przedpremierowej ewaluacji modeli. Drugą
+nową osią jest infrastruktura dla agentów poza samym modelem: Patronus Digital
+World Models, General Intuition/gameplay-action data i Unconventional AI Un-0
+pokazują, że rynek inwestuje w symulatory, środowiska ewaluacji, action models i
+alternatywne podłoża obliczeń. Trzecią osią jest agentowe zastępowanie
+klasycznych interfejsów pracy, najlepiej widoczne w decyzji Notion o zamknięciu
+Notion Mail inbox przy zachowaniu agentowych narzędzi mailowych. Czwarta, mniej
+korporacyjna oś to ML/open science: Vesuvius Challenge odczytał pełny zwój z
+Herkulanum bez fizycznego otwierania, a TESS/NASA/WP Tech dodały lżejszy temat
+kosmiczny o rekordowo niskogęstościowych planetach TOI-791.
 
 Po raporcie z 2026-06-25 najmocniejsze osie tematyczne to: pionowa integracja
 infrastruktury AI, własne chipy inference, software portability między
@@ -83,6 +97,25 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- Frontier model release gating: GPT-5.6 staged preview, White House
+  pre-release review framework i przypadek Anthropic/Fable/Mythos trzeba
+  śledzić jako przejście od ogólnej AI governance do praktycznego zatwierdzania
+  dostępu do frontier modeli.
+- Agent simulation and evaluation infrastructure: Patronus Digital World Models,
+  General Intuition action/gameplay models i podobne startupy pokazują, że
+  agent quality będzie zależeć od symulowanych środowisk, long-horizon RL,
+  kontroli shortcutów oraz ewaluacji zachowania, a nie tylko od statycznych
+  benchmarków.
+- Agentic inbox and workflow replacement: Notion Mail shutdown pokazuje, że
+  firmy mogą wycinać klasyczne UI, gdy użytkownicy przechodzą do agentowych
+  workflow. Trzeba śledzić Gmail/Outlook connectors, compliance timelines,
+  eksport danych i reakcję użytkowników.
+- Energy-efficient and unconventional AI compute: Unconventional AI Un-0 jest
+  programowym, nie sprzętowym dowodem, ale wzmacnia wątek szukania nowych
+  podłoży obliczeń pod presją kosztów energii, GPU i inference.
+- ML/open-science breakthroughs: Vesuvius Challenge oraz TESS/TOI-791 pokazują,
+  że dobre tematy podcastowe nie muszą pochodzić tylko z Big Tech; warto
+  pilnować open data, kodu i niezależnej walidacji naukowej.
 - Custom inference silicon: OpenAI/Broadcom Jalapeño trzeba śledzić pod kątem
   raportu wydajności, wdrożenia do końca 2026 roku, partnerów data-center i
   reakcji Nvidii/AMD.
