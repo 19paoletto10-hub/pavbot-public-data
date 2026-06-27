@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-06-27",
+  "runTime": "15:02",
+  "status": "Material update",
+  "headline": "Upał uderza w Polskę, Ormuz znów eskaluje, a katastrofa w Wenezueli nie słabnie",
+  "summary": "O 15:02 najważniejsze są realne skutki fali upałów w Polsce, zarzuty po groźbach wobec prezydenta, mocniejsza presja cenowa i pakiet umów dla Ukrainy, a globalnie kolejna eskalacja wokół Ormuz, 920 ofiar w Wenezueli oraz zakłócenia lotnicze i pogodowe w Wielkiej Brytanii.",
+  "items": [
+    {
+      "id": "pulse-2026-06-27-1502-01-upal-polska",
+      "section": "Alerty",
+      "title": "Upał wszedł w fazę realnych skutków i alarmów dla całej Polski",
+      "lead": "Po południu termometry przekraczają lokalnie 35 stopni, a służby utrzymują najwyższy poziom ostrzeżeń.",
+      "whatHappened": "Poranny alert pogodowy zamienił się w realny problem operacyjny. TVN24 pokazało po południu temperatury powyżej 35 stopni w części kraju, a RCB i MSWiA nadal podkreślają, że kulminacja fali upałów ma nadejść w niedzielę 28 czerwca.",
+      "keyFacts": [
+        "TVN24 raportuje lokalne temperatury powyżej 35 stopni już w sobotnie popołudnie.",
+        "RCB utrzymuje ostrzeżenie przed falą gorąca dla niemal całego kraju.",
+        "MSWiA informuje o gotowości służb i przekazaniu zaleceń do wojewodów."
+      ],
+      "reactions": [
+        "Temat przesuwa się z prognozy do zarządzania kryzysowego i usług publicznych.",
+        "Służby apelują o ograniczenie wysiłku i pilnowanie nawodnienia."
+      ],
+      "whyItMatters": "To najszerszy polski alert dnia, bo dotyczy zdrowia, transportu, wypoczynku i stabilności usług w czasie startu wakacji.",
+      "context": "Poranny run skupiał się głównie na zapowiedzi temperatur do 42 stopni. Popołudnie pokazuje już, że fala gorąca realnie weszła do codziennego funkcjonowania miast i obiektów publicznych.",
+      "watchNext": [
+        "Czy wieczorem pojawią się kolejne lokalne ewakuacje lub ograniczenia usług.",
+        "Czy RCB i MSWiA podniosą komunikaty przed niedzielnym pikiem temperatur."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Upały w Polsce. Coraz goręcej. Tu jest ponad 35 stopni",
+          "url": "https://tvn24.pl/tvnmeteo/polska/upaly-w-polsce-temperatura-maksymalna-w-sobote-27-06-mapy-st9116800"
+        },
+        {
+          "title": "RCB: fala upałów w niemal całym kraju",
+          "url": "https://www.gov.pl/web/rcb/w-najblizszych-dniach-na-terenie-niemal-calego-kraju-prognozowana-jest-fala-upalow"
+        },
+        {
+          "title": "MSWiA: służby w gotowości przed falą upałów",
+          "url": "https://www.gov.pl/web/mswia/sluzby-w-gotowosci-przed-fala-upalow-czuwamy-nad-sytuacja-pogodowa"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Pogoda",
+        "Upał"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-27-1502-02-aquapark-wroclaw",
+      "section": "Alerty",
+      "title": "Ewakuacja aquaparku we Wrocławiu po zadymieniu",
+      "lead": "Zwarcie elektryczne wymusiło ewakuację części obiektu, a część stref otwarto ponownie dopiero o 14.",
+      "whatHappened": "Aquapark Wrocław został ewakuowany po zwarciu elektrycznym, które spowodowało zadymienie części rekreacyjnej. Według TVN24 część parku wodnego została ponownie otwarta o godzinie 14, ale zdarzenie dobrze pokazuje podatność obiektów usługowych w gorący weekend.",
+      "keyFacts": [
+        "Przyczyną był incydent elektryczny i zadymienie części rekreacyjnej.",
+        "Ewakuowany obiekt wracał do pracy etapami.",
+        "Temat pojawił się w szczycie zainteresowania pogodą i bezpieczeństwem."
+      ],
+      "reactions": [
+        "To czytelny sygnał, że fala upałów może nakładać się na awarie i zakłócenia w miejscach wypoczynku.",
+        "Dla użytkownika to praktyczna informacja o dostępności dużego obiektu w regionie."
+      ],
+      "whyItMatters": "To jeden z pierwszych popołudniowych sygnałów, że ekstremalna pogoda i przeciążenia infrastruktury zaczynają wpływać na zwykłe usługi.",
+      "context": "Poranny zestaw jeszcze tego nie zawierał. Popołudnie dokłada konkretny przykład zakłócenia w dużym miejskim obiekcie.",
+      "watchNext": [
+        "Czy obiekt wróci całkowicie do pracy jeszcze dziś.",
+        "Czy w innych miastach pojawią się podobne zakłócenia usługowe."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ewakuacja aquaparku przy ulicy Borowskiej, dym w obiekcie",
+          "url": "https://tvn24.pl/wroclaw/wroclaw-ewakuacja-aquaparku-przy-ulicy-borowskiej-dym-w-obiekcie-st9116836"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Wrocław",
+        "Infrastruktura"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-1502-03-grozby-nawrocki",
+      "section": "Polska",
+      "title": "36-latek po groźbach wobec prezydenta usłyszał zarzuty",
+      "lead": "Sprawa przeszła z etapu zatrzymania do formalnych zarzutów po groźbach wobec Karola Nawrockiego.",
+      "whatHappened": "TVN24 podało, że 36-latek, który miał grozić prezydentowi Karolowi Nawrockiemu pozbawieniem życia podczas rozmowy w internecie, został zatrzymany i usłyszał zarzuty. To podnosi wagę sprawy z samego incydentu do etapu procesowego.",
+      "keyFacts": [
+        "Groźby miały paść na jednym z kanałów internetowych.",
+        "Policja zatrzymała podejrzanego i sprawa weszła w etap zarzutów.",
+        "Temat dotyczy bezpośrednio bezpieczeństwa głowy państwa."
+      ],
+      "reactions": [
+        "Najbliższe ruchy będą zależeć od decyzji prokuratury i sądu.",
+        "Sprawa utrzymuje wysoką rangę polityczno-bezpieczeństwową."
+      ],
+      "whyItMatters": "To już nie tylko medialna informacja o zatrzymaniu, ale formalny sygnał, że sprawa jest traktowana przez organy ścigania poważnie.",
+      "context": "Poranny run miał jeszcze wariant z samym zatrzymaniem. Popołudniu pojawił się istotny detal: podejrzany usłyszał zarzuty.",
+      "watchNext": [
+        "Czy jeszcze dziś zapadnie decyzja o środkach zapobiegawczych.",
+        "Czy śledczy ujawnią więcej o motywie i formie gróźb."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Groźby wobec prezydenta Nawrockiego. Zatrzymany 36-latek usłyszał zarzuty",
+          "url": "https://tvn24.pl/poznan/zielona-gora-grozil-prezydentowi-karolowi-nawrockiemu-zatrzymany-36-latek-st9116962"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Prezydent",
+        "Polska"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-27-1502-04-ceny-polska-ue",
+      "section": "Gospodarka",
+      "title": "PIE: ceny w Polsce doszły do 73,3 procent średniej UE",
+      "lead": "Raport pokazuje szybkie domykanie luki cenowej wobec Zachodu, napędzane energią, żywnością i usługami.",
+      "whatHappened": "Polski Instytut Ekonomiczny podał, że poziom cen w Polsce w 2025 roku sięgnął 73,3 procent średniej unijnej. Instytut wskazuje, że w latach 2020-2025 Polska była wśród najszybciej zmniejszających dystans cenowy krajów regionu.",
+      "keyFacts": [
+        "PIE podaje poziom 73,3 procent średniej UE dla 2025 roku.",
+        "Raport wskazuje na silny wpływ energii, żywności i usług.",
+        "Wysoki wzrost wynagrodzeń jest jednym z czynników podbijających ceny."
+      ],
+      "reactions": [
+        "Temat wzmacnia konsumencki wymiar dnia obok cen paliw i kosztów wakacyjnych wyjazdów.",
+        "To twardy wskaźnik, że presja cenowa nie jest już tylko lokalnym odczuciem."
+      ],
+      "whyItMatters": "To szeroka gospodarcza wiadomość dnia, bo dotyczy siły nabywczej, kosztów życia i poczucia, że Polska szybko cenowo dogania Zachód.",
+      "context": "Poranek koncentrował się na samych paliwach. Popołudnie dokłada szerszy obraz relatywnego poziomu cen w całej gospodarce.",
+      "watchNext": [
+        "Czy kolejne dane pokażą dalsze domykanie luki cenowej do UE.",
+        "Jak temat zostanie podjęty przez polityków i bank centralny."
+      ],
+      "sources": [
+        {
+          "title": "PIE: Tygodnik Gospodarczy 25/2026",
+          "url": "https://pie.net.pl/tygodnik-gospodarczy-25-2026-25-czerwca-2026-r/"
+        },
+        {
+          "title": "TVN24 Biznes: Ceny w Polsce a średnia UE. Doganiamy Europę",
+          "url": "https://tvn24.pl/biznes/z-kraju/ceny-w-polsce-a-srednia-ue-doganiamy-europe-raport-pie-st9117115"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Inflacja",
+        "UE"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-1502-05-kidsalert-hulajnoga",
+      "section": "Alerty",
+      "title": "KidsAlert ostrzega przed nowym trendem z hulajnogą i karuzelą",
+      "lead": "Do szpitali trafiło już czworo nastolatków z ciężkimi urazami po internetowej zabawie.",
+      "whatHappened": "TVN24 opisało ostrzeżenie KidsAlert przed trendem polegającym na rozpędzaniu karuzeli hulajnogą elektryczną. Ratownicy wskazują, że do szpitala trafiło już czworo nastolatków z urazami głowy, kręgosłupa i zaburzeniami przytomności.",
+      "keyFacts": [
+        "KidsAlert mówi o czterech nastolatkach hospitalizowanych po tej zabawie.",
+        "Wśród możliwych skutków wymieniane są urazy głowy i kręgosłupa.",
+        "W sieci krążą już nagrania dokumentujące takie wypadki."
+      ],
+      "reactions": [
+        "Temat ma mocny wymiar prewencyjny dla rodzin w pierwszy wakacyjny weekend.",
+        "To kolejny przykład, jak trendy z internetu szybko przenoszą się do realnych zdarzeń medycznych."
+      ],
+      "whyItMatters": "To ważny alert społeczny, bo uderza w bezpieczeństwo dzieci i nastolatków, a skala ryzyka jest natychmiastowa i praktyczna.",
+      "context": "Wcześniejszy run skupiał się na ratownictwie wodnym. Popołudnie dokłada nowy wakacyjny wzorzec zagrożenia w przestrzeni miejskiej.",
+      "watchNext": [
+        "Czy szkoły, samorządy lub policja wydadzą własne ostrzeżenia.",
+        "Czy pojawią się kolejne zgłoszenia podobnych urazów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nowy niebezpieczny trend z użyciem hulajnogi. KidsAlert ostrzega",
+          "url": "https://tvn24.pl/polska/dziecko-w-internecie-nowy-niebezpieczny-trend-z-uzyciem-hulajnogi-kidsalert-ostrzega-st9116976"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Dzieci",
+        "Bezpieczeństwo"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-1502-06-urc-gdansk",
+      "section": "Polityka",
+      "title": "URC w Gdańsku: ponad 160 umów dla Ukrainy za ponad 10 mld euro",
+      "lead": "Konferencja odbudowy w Gdańsku daje Polsce mocny geopolityczny i gospodarczy akcent dnia.",
+      "whatHappened": "TVN24 Biznes podało, że podczas Ukraine Recovery Conference w Gdańsku Ukraina zawarła ponad 160 umów o łącznej wartości przekraczającej 10 miliardów euro. To wzmacnia znaczenie Polski jako gospodarza rozmów o odbudowie i finansowaniu powojennych inwestycji.",
+      "keyFacts": [
+        "Łączna deklarowana wartość pakietu przekracza 10 miliardów euro.",
+        "Mowa o ponad 160 porozumieniach podpisanych podczas konferencji.",
+        "Temat łączy dyplomację, biznes i przyszłe projekty infrastrukturalne."
+      ],
+      "reactions": [
+        "To czytelny sukces wizerunkowy i organizacyjny dla polskiej strony.",
+        "Znaczenie tematowi nadaje zarówno skala pieniędzy, jak i moment wojenny."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych dziennych punktów polityczno-gospodarczych w Polsce, bo dotyczy odbudowy Ukrainy, międzynarodowych pieniędzy i pozycji Polski w regionie.",
+      "context": "Poranny run skupiał się głównie na sporze o relacje z Ukrainą. Popołudnie dokłada wątek bardziej konstruktywny i gospodarczy.",
+      "watchNext": [
+        "Czy organizatorzy doprecyzują branże i konkretne projekty objęte porozumieniami.",
+        "Jak szybko część deklaracji przejdzie w finansowanie i realizację."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Ukraine Recovery Conference w Gdańsku",
+          "url": "https://tvn24.pl/biznes/ze-swiata/gdansk-ukraine-recovery-conference-urc-ukraina-zawiera-ponad-160-umow-za-10-mld-euro-st9116924"
+        },
+        {
+          "title": "Ukraine Recovery Conference",
+          "url": "https://www.urc-international.com/"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Ukraina",
+        "Gdańsk"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-1502-07-paliwa-weekend",
+      "section": "Gospodarka",
+      "title": "Weekendowe limity cen paliw pozostają punktem odniesienia dla kierowców",
+      "lead": "Pb95 kosztuje maksymalnie 6,02 zł za litr, a diesel 6,17 zł przez cały okres 27-29 czerwca.",
+      "whatHappened": "Ministerstwo Energii utrzymuje oficjalne limity cen detalicznych paliw na okres 27-29 czerwca. Przy napięciach wokół Ormuz i wakacyjnym ruchu drogowym to nadal jedna z najbardziej praktycznych wiadomości gospodarczych dnia.",
+      "keyFacts": [
+        "Pb95 ma limit 6,02 zł za litr.",
+        "Pb98 ma limit 6,70 zł za litr.",
+        "Diesel ma limit 6,17 zł za litr do 29 czerwca."
+      ],
+      "reactions": [
+        "Dla użytkownika to bezpośrednia informacja kosztowa na weekendowe wyjazdy.",
+        "Temat zyskuje kontekst przez rosnące napięcie na globalnym szlaku ropy."
+      ],
+      "whyItMatters": "To praktyczna karta dla szerokiej grupy odbiorców i naturalne uzupełnienie rosnącego ryzyka na rynku ropy.",
+      "context": "Poranek wprowadzał nowe limity. Popołudnie utrzymuje je jako ważny punkt użytkowy w dniu kolejnej eskalacji wokół Ormuz.",
+      "watchNext": [
+        "Czy kolejne limity po weekendzie zareagują na sytuację geopolityczną.",
+        "Czy wzrośnie presja na hurtowe ceny paliw."
+      ],
+      "sources": [
+        {
+          "title": "Ministerstwo Energii: maksymalna cena detaliczna paliw 27-29 czerwca 2026",
+          "url": "https://www.gov.pl/web/energia/maksymalna-cena-detaliczna-paliw-obowiazujaca-w-okresie-27-29-czerwca-2026-r"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Paliwa",
+        "Kierowcy"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-1502-08-ignis-iss",
+      "section": "Technologia",
+      "title": "IGNIS pozostaje najmocniejszym polskim akcentem technologicznym dnia",
+      "lead": "POLSA utrzymuje oficjalny komunikat o rozpoczęciu misji Sławosza Uznańskiego-Wiśniewskiego na ISS.",
+      "whatHappened": "Polska Agencja Kosmiczna podtrzymuje oficjalny komunikat o rozpoczęciu misji IGNIS na Międzynarodowej Stacji Kosmicznej. Wśród ciężkich tematów dnia to nadal najbardziej pozytywny i szeroko czytelny polski wątek technologiczno-naukowy.",
+      "keyFacts": [
+        "To oficjalnie potwierdzony start polskiej misji na ISS.",
+        "POLSA podkreśla symboliczne wejście Polski do elitarnego grona państw aktywnych na stacji.",
+        "Temat łączy naukę, technologię i prestiż państwowy."
+      ],
+      "reactions": [
+        "Misja działa jako kontrapunkt wobec zdominowanego kryzysami dnia.",
+        "Pozostaje jednym z nielicznych pozytywnych tematów o zasięgu ogólnokrajowym."
+      ],
+      "whyItMatters": "To najczytelniejsza polska historia technologiczna dla szerokiego odbiorcy i nadal uzasadnia miejsce w szybkim pulsie dnia.",
+      "context": "Temat był obecny już rano, ale nie stracił znaczenia i wciąż ma świeże potwierdzenie oficjalne.",
+      "watchNext": [
+        "Jakie eksperymenty z misji IGNIS zostaną pokazane jako pierwsze.",
+        "Czy pojawią się nowe materiały z pokładu ISS jeszcze dziś."
+      ],
+      "sources": [
+        {
+          "title": "POLSA: Polski astronauta rozpoczął misję IGNIS na Międzynarodowej Stacji Kosmicznej",
+          "url": "https://polsa.gov.pl/wydarzenia/polski-astronauta-rozpoczal-misje-ignis-na-miedzynarodowej-stacji-kosmicznej/"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "Kosmos",
+        "Polska"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-1502-09-iran-ormuz",
+      "section": "Świat",
+      "title": "Iran deklaruje uderzenie w cele USA, a Ormuz znów się zaostrza",
+      "lead": "Po piątkowych atakach USA Teheran twierdzi, że odpowiedział, a brytyjski monitoring zgłosił kolejny incydent wobec tankowca.",
+      "whatHappened": "Najmocniejsza światowa zmiana popołudnia to nowa runda napięcia wokół Cieśniny Ormuz. CNN podało, że Iran twierdzi, iż uderzył w amerykańskie cele wojskowe w regionie w odpowiedzi na piątkowe ataki USA, a UKMTO zgłosiło trafienie tankowca niezidentyfikowanym pociskiem.",
+      "keyFacts": [
+        "CNN opisuje deklarowane irańskie uderzenia na cele USA w regionie.",
+        "JMIC podniosło poziom zagrożenia żeglugowego w cieśninie do substantial.",
+        "CENTCOM wcześniej potwierdziło amerykańskie ataki na irańskie magazyny dronów, rakiet i radary."
+      ],
+      "reactions": [
+        "Rynek ropy i żegluga muszą zakładać dalsze zakłócenia lub podwyższone koszty.",
+        "Każdy kolejny incydent podnosi ryzyko wyjścia poza ograniczoną wymianę ciosów."
+      ],
+      "whyItMatters": "To główny światowy temat dnia, bo dotyczy jednego z kluczowych chokepointów handlu energią i bezpośredniej wymiany uderzeń między Iranem a USA.",
+      "context": "Poranny run kończył się na potwierdzonym uderzeniu USA. Popołudnie dokłada deklarowaną odpowiedź Iranu i nowy incydent wobec żeglugi.",
+      "watchNext": [
+        "Czy USA oficjalnie potwierdzą skalę irańskich uderzeń albo odpowiedzą wojskowo.",
+        "Czy pojawią się kolejne ataki na statki handlowe lub nowe restrykcje dla ruchu w Ormuz."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Iran says it hit US targets as tensions over Strait of Hormuz strain agreement",
+          "url": "https://edition.cnn.com/2026/06/27/middleeast/iran-strait-of-hormuz-tensions-intl"
+        },
+        {
+          "title": "CENTCOM: U.S. Strikes Iran in Response to Attack on Commercial Vessel",
+          "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4528341/us-strikes-iran-in-response-to-attack-on-commercial-vessel/"
+        },
+        {
+          "title": "BBC: US strikes Iran after attack on cargo ship",
+          "url": "https://www.bbc.co.uk/news/articles/ckg590wqxwpo"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Iran",
+        "Ormuz"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-27-1502-10-wenezuela-trzesienie",
+      "section": "Świat",
+      "title": "Wenezuela wciąż liczy ofiary, a pod gruzami są kolejne osoby",
+      "lead": "Bilans trzęsień utrzymuje się na poziomie co najmniej 920 ofiar, a ratownicy mówią o długiej operacji.",
+      "whatHappened": "CNN i BBC utrzymują, że po bliźniaczych trzęsieniach ziemi w Wenezueli zginęło co najmniej 920 osób. CNN dodaje, że co najmniej 172 osoby pozostają pod gruzami, a organizacje pomocowe mówią już o odpowiedzi mierzonej w miesiącach, nie tygodniach.",
+      "keyFacts": [
+        "Bilans ofiar utrzymuje się na poziomie co najmniej 920.",
+        "CNN podaje, że co najmniej 172 osoby pozostają uwięzione pod gruzami.",
+        "Po katastrofie zgłaszane są problemy z infrastrukturą i zaopatrzeniem szpitali."
+      ],
+      "reactions": [
+        "Ratownicy pracują pod presją czasu i w warunkach wstrząsów wtórnych.",
+        "Skala zniszczeń przesuwa temat z krótkiej relacji kryzysowej w długą historię humanitarną."
+      ],
+      "whyItMatters": "To największa humanitarna katastrofa dnia i jedna z nielicznych historii, które już teraz mają zarówno wysoką liczbę ofiar, jak i perspektywę wielotygodniowej pomocy.",
+      "context": "Poranny run raportował 920 ofiar jako świeży bilans. Popołudnie dokłada liczbę osób uwięzionych i wyraźny sygnał, że akcja potrwa długo.",
+      "watchNext": [
+        "Czy bilans ofiar wzrośnie w kolejnych godzinach.",
+        "Czy pomoc międzynarodowa zacznie docierać na większą skalę mimo problemów infrastrukturalnych."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Rescuers in Venezuela race to save trapped people as earthquake death toll soars",
+          "url": "https://edition.cnn.com/2026/06/27/world/live-news/venezuela-earthquake-hnk"
+        },
+        {
+          "title": "BBC: Venezuela earthquakes kill 920 people as families desperate for news",
+          "url": "https://www.bbc.co.uk/news/articles/c39y79g7gzko"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wenezuela",
+        "Katastrofa"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-27-1502-11-heathrow-gatwick",
+      "section": "Świat",
+      "title": "Burze opóźniły setki lotów w Heathrow i Gatwick",
+      "lead": "BBC informuje o ponad 600 opóźnionych lotach na dwóch największych lotniskach regionu Londynu.",
+      "whatHappened": "Skrajna pogoda w południowej Anglii uderzyła w ruch lotniczy. BBC podało, że w Heathrow i Gatwick opóźnionych było ponad 600 lotów, głównie z powodu burz i pogorszenia warunków pogodowych.",
+      "keyFacts": [
+        "Mowa o ponad 600 opóźnionych lotach łącznie na obu lotniskach.",
+        "Źródłem problemu są burze i niestabilna pogoda na południu Wielkiej Brytanii.",
+        "Zakłócenia obejmują dwa kluczowe porty lotnicze dla połączeń europejskich i międzykontynentalnych."
+      ],
+      "reactions": [
+        "Temat pokazuje, że ekstremalna pogoda coraz szybciej przekłada się na infrastrukturę krytyczną.",
+        "Dla podróżnych to bezpośredni sygnał operacyjny jeszcze w sobotę."
+      ],
+      "whyItMatters": "To ważny światowy alert praktyczny, bo dotyczy mobilności setek tysięcy podróżnych i pokazuje materialne skutki anomalii pogodowych w Europie.",
+      "context": "Brytyjski wątek rano był głównie historią o rekordowych temperaturach. Popołudnie dokłada już zakłócenia transportowe na dużą skalę.",
+      "watchNext": [
+        "Czy opóźnienia przejdą w odwołania i większe zatory wieczorem.",
+        "Czy burze przesuną się na kolejne korytarze lotnicze w regionie."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Hundreds of Heathrow and Gatwick flights delayed due to thunderstorms",
+          "url": "https://www.bbc.co.uk/news/articles/cjwgynnwyw2o"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Lotnictwo",
+        "Pogoda"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-1502-12-uk-heatwave",
+      "section": "Świat",
+      "title": "Wielka Brytania kończy rekordową falę upałów pod ostrzeżeniami",
+      "lead": "Met Office i BBC zapowiadają ochłodzenie dopiero z niedzielą, po serii rekordów i utrzymanych alertach.",
+      "whatHappened": "Met Office i BBC Weather podkreślają, że rekordowa brytyjska fala upałów ma zacząć ustępować dopiero w niedzielę wraz z chłodniejszą i bardziej niestabilną pogodą. Jednocześnie ostrzeżenia wysokiego poziomu obejmują jeszcze sobotę po serii nowych rekordów czerwca.",
+      "keyFacts": [
+        "Met Office wcześniej potwierdziło trzeci z rzędu czerwcowy rekord temperatury.",
+        "Ochłodzenie ma nadejść dopiero z niedzielą.",
+        "Ostrzeżenia wysokiego poziomu pozostają aktywne na sobotę."
+      ],
+      "reactions": [
+        "To tło dla zakłóceń transportowych i rosnącej presji na służby.",
+        "Historia pozostaje ważna także dla Polski, bo wpisuje się w szerszy europejski wzorzec ekstremalnego ciepła."
+      ],
+      "whyItMatters": "Brytyjski epizod jest jednym z najmocniejszych europejskich sygnałów, że fala upałów ma wymiar ponadlokalny i dotyka infrastruktury, zdrowia i mobilności.",
+      "context": "Poranny run podkreślał sam rekord 37,3 stopnia. Popołudnie pokazuje, że historia przechodzi w fazę ostrzeżeń i skutków wtórnych.",
+      "watchNext": [
+        "Czy niedzielne ochłodzenie faktycznie wygasi alerty.",
+        "Czy kolejne dni przyniosą nową serię rekordów w innych częściach Europy."
+      ],
+      "sources": [
+        {
+          "title": "BBC Weather: Weekend to bring cooldown after record-breaking heatwave",
+          "url": "https://www.bbc.co.uk/weather/articles/crkvl343jj3o"
+        },
+        {
+          "title": "Met Office: Third consecutive day of a new June temperature record with end of heatwave in sight",
+          "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/third-consecutive-day-of-a-new-june-temperature-record-with-end-of-heatwave-in-sight"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Pogoda",
+        "Wielka Brytania"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "RCB: fala upałów w niemal całym kraju",
+      "url": "https://www.gov.pl/web/rcb/w-najblizszych-dniach-na-terenie-niemal-calego-kraju-prognozowana-jest-fala-upalow"
+    },
+    {
+      "title": "PIE: Tygodnik Gospodarczy 25/2026",
+      "url": "https://pie.net.pl/tygodnik-gospodarczy-25-2026-25-czerwca-2026-r/"
+    },
+    {
+      "title": "POLSA: Polski astronauta rozpoczął misję IGNIS",
+      "url": "https://polsa.gov.pl/wydarzenia/polski-astronauta-rozpoczal-misje-ignis-na-miedzynarodowej-stacji-kosmicznej/"
+    },
+    {
+      "title": "CENTCOM: U.S. Strikes Iran in Response to Attack on Commercial Vessel",
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4528341/us-strikes-iran-in-response-to-attack-on-commercial-vessel/"
+    },
+    {
+      "title": "Met Office: Third consecutive day of a new June temperature record with end of heatwave in sight",
+      "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/third-consecutive-day-of-a-new-june-temperature-record-with-end-of-heatwave-in-sight"
+    }
+  ]
+}
