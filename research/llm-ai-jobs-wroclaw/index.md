@@ -1,30 +1,27 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-06-26 01:42 CEST
+Last updated: 2026-06-27 01:41 CEST
 
 ## Current Understanding
 
-Runda z `2026-06-26 01:42 CEST` dodała sześć nowych, istotnych sygnałów:
-oficjalny `Tooploox Senior AI NodeJS Engineer`, oficjalny
-`Addepto AI Solution Architect`, nowy aktywny `T-Mobile T Hub – DevOps
-Engineer (AI Solutions)`, publiczny `ACAISOFT Backend / AI Engineer`,
-board-first `DataArt Senior AI Developer with LLM Orchestration` oraz
-`BigTime Team Lead, Software Engineer` dla `Wrocław hybrid`.
+Runda z `2026-06-27 01:41 CEST` dodała kilka nowych, wysokosygnałowych ról i
+jedną ważną zmianę statusu. `ITDS Senior AI Technical Lead – Developer Tools &
+Generative AI` jest już wygasły, ale w tym samym klastrze pojawiła się nowa
+aktywna rola `Kubernetes & Cloud Infrastructure Engineer – AI Platform` we
+Wrocławiu, co utrzymuje ITDS jako ważny lokalny sygnał AI platform / infra.
 
-Najmocniejsze nowe sygnały kanoniczne dają teraz `Tooploox` i `Addepto`.
-`Tooploox` do wczorajszego `Lead AI Engineer` dołożył drugi oficjalny sygnał
-z `Wrocław Office`, `Fully Remote`, `RAG`, `MCP`, `OpenAI`, `Anthropic`,
-`LangChain`, `LlamaIndex`, fine-tuningiem i ewaluacją modeli. `Addepto`
-rozszerza oficjalny klaster o `AI Solution Architect`, czyli rolę wyraźnie
-łączącą `LLM`, `Generative AI`, `MLOps` i architekturę produkcyjnych wdrożeń.
+Równolegle `IN4GE` wyrosło na nowy, bardzo aktywny klaster remote-Poland:
+`AI Engineering Lead (Python, GenAI & Agentic AI)`,
+`Senior AI Engineer (Conversational AI, GCP, Gemini)`,
+`Automation Developer (GCP / AI / Agentic Automation)` oraz
+`Open Source AI Engineer (LLM / Full Stack)`. To już nie pojedynczy strzał,
+lecz stabilny zestaw ról wokół agentic/GenAI delivery.
 
-Najważniejsza zmiana statusowa dotyczy `T-Mobile`: wcześniej obserwowany
-`DevOps Engineer (AI Solutions)` był publicznie wygaszony, a teraz wrócił z
-nowym aktywnym URL-em `Pracuj.pl` i terminem do `15 Jul`. Lokalnie
-najciekawszy nowy sygnał daje `BigTime`, bo łączy hybrydę we `Wrocławiu` z
-`LLMs`, `MCP`, `A2A`, `Python`, `React` i nadal hands-on zakresem technicznym,
-podczas gdy `DataArt` dokłada nowy remote-first sygnał z publicznie wskazanym
-biurem `Wrocław Plac Grunwaldzki 23`.
+`ACAISOFT` także rozszerzyło zakres: obok znanych już pozycji pojawiły się
+publicznie `Site Reliability Engineer – AI/LLM & Infra` oraz
+`Infra Software Engineer (AI project)`, co wzmacnia sygnał, że firma buduje
+cały podzbiór ról wokół AI platform / infra i ewaluacji modeli. Dodatkowo
+`Capgemini` pokazało nowy wrocławski hybrydowy `Cloud Data Architect with AI`.
 
 ## Stable Facts
 
@@ -72,13 +69,13 @@ only when something meaningful changes.
 | oversee-senior-software-engineer-applied-ai-remote-poland | Oversee | Senior Software Engineer, Applied AI | Remote Poland | 2026-06-20-2152 | 2026-06-20-2152 | Open | Initial capture: official Workable role for remote from Poland; production LLM systems, agentic workflows, RAG, tool-calling and orchestration frameworks. Public No Fluff Jobs mirror shows 33 600-41 160 PLN + VAT/month or 200-245 PLN + VAT/h B2B and Wroclaw/Krakow/Gdansk listed alongside remote. | [Oversee](https://apply.workable.com/oversee-1/j/33A5B179DC/) |
 | univio-machine-learning-engineer-llm-wroclaw-remote | UNIVIO | Machine Learning Engineer (LLM) | Wroclaw + remote | 2026-06-20-2152 | 2026-06-20-2152 | Open | Initial capture: public Just Join IT listing; 18 480-22 680 PLN net/month B2B or 13 600-16 500 PLN gross/month UoP; chatbot, RAG, semantic search, vector databases, LangChain/LangGraph and production deployments. | [Just Join IT](https://justjoin.it/job-offer/univio-machine-learning-engineer-llm--wroclaw-ai-aff3fe1f) |
 | sii-senior-ai-engineer-fmx-multiple-locations | Sii Sp. z o.o. | Senior AI Engineer (f/m/x) | Poland multiple locations / hybrid-office | 2026-06-20-2152 | 2026-06-21-2107 | Active on Pracuj / inactive on official Sii | Initial capture: official Sii URL now says `This offer is no longer active`, while a public Just Join IT mirror still shows the role as active with 23 days left; treat canonical employer page as source of truth. 2026-06-21-2107: public Pracuj.pl listing is active to `15 Jul` for Wroclaw hybrid with occasional Krakow visits and explicit `Python`, `LLM`, `RAG`, `Agentic AI`, `Vector Databases`, `Kubernetes`, `Azure` and `GCP`, while the official Sii URL still shows inactive. | [Sii official](https://sii.pl/en/job-ads/id/36925/senior-ai-engineer-f-m-x/) / [Pracuj.pl](https://www.pracuj.pl/praca/senior-ai-engineer-f-m-x-wroclaw-na-ostatnim-groszu-3%2Coferta%2C1004902326) |
-| justjoin-rite-nrg-ai-engineer-wroclaw-remote-poland | Rite NRG | AI Engineer | Remote within Poland / Wroclaw | 2026-06-21-0141 | 2026-06-21-0141 | Open | Initial capture: public Just Join IT listing; 120-140 PLN net/h B2B; Azure OpenAI, RAG, agentic AI frameworks, Azure AI Search, Azure AI Foundry, vector databases, MLflow and semantic search. | [Just Join IT](https://justjoin.it/job-offer/rite-nrg-ai-engineer-wroclaw-ai) |
+| justjoin-rite-nrg-ai-engineer-wroclaw-remote-poland | Rite NRG | AI Engineer | Remote within Poland / Wroclaw | 2026-06-21-0141 | 2026-06-26-1741 | Open | Initial capture: public Just Join IT listing; 120-140 PLN net/h B2B; Azure OpenAI, RAG, agentic AI frameworks, Azure AI Search, Azure AI Foundry, vector databases, MLflow and semantic search. 2026-06-26-1741: role now has a direct-employer `Pracuj.pl` detail page with `Ksawerego Liskego 7, Śródmieście, Wrocław`, `Whole Poland (remote work)`, `120-140 PLN net + VAT / h B2B` and validity to `17 Jul`, so source quality improved materially without changing the role family. | [Just Join IT](https://justjoin.it/job-offer/rite-nrg-ai-engineer-wroclaw-ai) / [Pracuj.pl](https://www.pracuj.pl/praca/ai-engineer-wroclaw-ksawerego-liskego-7%2Coferta%2C1004909095) |
 | justjoin-rite-nrg-staff-engineer-wroclaw-remote-poland | Rite NRG | Staff Engineer | Remote within Poland / Wroclaw | 2026-06-21-0141 | 2026-06-21-0141 | Open | Initial capture: public Just Join IT listing; 140-150 PLN net/h B2B; LLMs, RAG, prompt engineering, agentic AI, model evaluation, LLMOps, Node.js, Python, React and AWS in regulated FinTech. | [Just Join IT](https://justjoin.it/job-offer/rite-nrg-staff-engineer-wroclaw-ai) |
 | nofluffjobs-tooploox-ai-product-engineer-tooling-wroclaw-remote | Tooploox | AI Product Engineer (Tooling) | Wroclaw / Warsaw / remote | 2026-06-21-0141 | 2026-06-21-0141 | Open | Initial capture: public No Fluff Jobs listing; 20 000-35 000 PLN + VAT/month B2B or 18 000-31 500 PLN gross/month UoP; React, Node.js, Python, LLM APIs, coding agents and MCP as a nice-to-have. | [No Fluff Jobs](https://nofluffjobs.com/job/ai-product-engineer-tooling-tooploox-wroclaw-1) |
 | deepsense-principal-software-engineer-remote-poland | deepsense.ai | Principal Software Engineer | Remote Poland | 2026-06-21-0141 | 2026-06-21-0141 | Open | Initial capture: official role; B2B remote Poland; production AI systems, scalability and performance focus; official company page frames the role in the context of LLM & RAG, MLOps and applied AI delivery. | [deepsense.ai](https://deepsense.ai/careers/principal-software-engineer/) |
 | gft-data-engineer-data-scientist-ai-llm-solutions-expert-wroclaw-hybrid | GFT Poland | Data Engineer / Data Scientist (AI & LLM Solutions) Expert | Wroclaw hybrid | 2026-06-21-0141 | 2026-06-21-0141 | Open | Initial capture: official GFT role; 18 800-28 500 PLN gross/month; agentic AI frameworks, AI agent development, LLMs, Generative AI, GCP, VertexAI and Google ADK; official page states hybrid from Wroclaw with 2 office days per week. | [GFT](https://jobs.gft.com/Poland/job/Warszawa-Data-Engineer-Data-Scientist-%28AI-%26-LLM-Solutions%29-Expert-00-839/1370179733/) |
 | gft-senior-data-engineer-data-scientist-ai-llm-solutions-wroclaw-hybrid | GFT Poland | Senior Data Engineer / Data Scientist (AI & LLM Solutions) | Wroclaw hybrid | 2026-06-21-0141 | 2026-06-21-0141 | Open | Initial capture: official GFT role; 15 800-24 300 PLN gross/month; scalable data pipelines plus AI/ML and agent-based solutions leveraging LLM technologies; official page states hybrid from Wroclaw with 2 office days per week. | [GFT](https://jobs.gft.com/Poland/job/Krak%C3%B3w-Senior-Data-Engineer-Data-Scientist-%28AI-%26-LLM-Solutions%29-30-302/1370188033/) |
-| itds-senior-ai-technical-lead-developer-tools-generative-ai-wroclaw-hybrid | ITDS Polska Sp. z o.o. | Senior AI Technical Lead – Developer Tools & Generative AI | Wroclaw hybrid | 2026-06-21-2107 | 2026-06-21-2107 | Open | Initial capture: official ITDS role; 27 300-31 500 PLN B2B; Wroclaw hybrid; enterprise GenAI, AI assistants, MCP servers, agentic frameworks and developer-tooling scope. | [ITDS](https://itds.pl/it-jobs/senior-ai-technical-lead-developer-tools-generative-ai/) |
+| itds-senior-ai-technical-lead-developer-tools-generative-ai-wroclaw-hybrid | ITDS Polska Sp. z o.o. | Senior AI Technical Lead – Developer Tools & Generative AI | Wroclaw hybrid | 2026-06-21-2107 | 2026-06-27-0141 | Expired | Initial capture: official ITDS role; 27 300-31 500 PLN B2B; Wroclaw hybrid; enterprise GenAI, AI assistants, MCP servers, agentic frameworks and developer-tooling scope. 2026-06-27-0141: public page now says `Offer expired`, so this role should no longer be treated as live. | [ITDS](https://itds.pl/it-jobs/senior-ai-technical-lead-developer-tools-generative-ai/) |
 | justjoin-xberry-senior-ai-llm-python-developer-wroclaw-remote | xBerry Sp. z o.o. | Senior AI / LLM Python Developer | Wroclaw / remote-hybrid | 2026-06-21-2107 | 2026-06-21-2107 | Open | Initial capture: public Just Join IT listing; remote/hybrid with office in Wroclaw; RAG, fine-tuning, prompt engineering and compliance intelligence. Public compensation field currently shows `150-190 PLN Net per month - B2B`, which looks internally inconsistent, so the salary unit remains unverified. | [Just Join IT](https://justjoin.it/job-offer/xberry-sp-z-o-o--senior-ai-llm-python-developer-wroclaw-ai) |
 | airslate-senior-software-engineer-agentic-ai-wroclaw-remote | airSlate | Senior Software Engineer - Agentic AI | Wroclaw remote | 2026-06-22-0141 | 2026-06-22-0141 | Open | Initial capture: official airSlate Lever role; Wroclaw remote; product-grade agent workflows, RAG, evals, observability and AI-powered product experiences for SignNow. | [airSlate](https://jobs.lever.co/airslate/7fb7e6ed-4d5d-437f-bb8f-35005f67f41b) |
 | dataart-sla00066-senior-ai-solutions-architect-llm-rag-knowledge-graph-platform | DataArt | Senior AI Solutions Architect with LLM and RAG, Knowledge Graph Platform | Wroclaw / remote Poland | 2026-06-22-0141 | 2026-06-22-0141 | Open | Initial capture: official DataArt vacancy; Wroclaw and Remote.Poland; RAG, knowledge graphs, semantic search, agent workflows, retrieval evaluation, Vertex AI and Gemini. Public Just Join IT mirror shows 6 502-8 560 CHF net/month B2B or 6 068-7 043 CHF gross/month UoP, but compensation is not present on the canonical employer page. | [DataArt](https://www.dataart.team/vacancies/sla00066) |
@@ -122,6 +119,17 @@ only when something meaningful changes.
 | acaisoft-backend-ai-engineer-remote-poland | ACAISOFT POLAND Sp. z o.o. | Backend / AI Engineer | Remote Poland | 2026-06-26-0142 | 2026-06-26-0142 | Open | Initial capture: direct-employer Pracuj.pl role; `28 560-40 320 PLN netto (+ VAT) / mies. B2B`; `Whole Poland (remote work)`; public mirrors describe a multi-agent backend on `Python`, `FastAPI`, `ECS`, `Fargate`, `Lambda`, `DynamoDB`, `Bedrock` and `Nova`. | [Pracuj.pl](https://www.pracuj.pl/praca/backend-ai-engineer-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004871582) |
 | dataart-senior-ai-developer-llm-orchestration-intelligent-knowledge-platform-wroclaw-remote | DataArt | Senior AI Developer with LLM Orchestration, Intelligent Knowledge Platform | Wrocław / remote Poland | 2026-06-26-0142 | 2026-06-26-0142 | Open | Initial capture: public Just Join IT role; `26 000-31 000 PLN net / month B2B` or `20 000-25 000 PLN gross / month UoP`; `Remote`; public office list includes `Wrocław Plac Grunwaldzki 23`; enterprise knowledge platform built on `large language models`, `semantic search`, graph technologies and agent-driven workflows. | [Just Join IT](https://justjoin.it/job-offer/dataart-senior-ai-developer-with-llm-orchestration-intelligent-knowledge-platform-lodz-ai) |
 | bigtime-team-lead-software-engineer-wroclaw-hybrid | BigTime | Team Lead, Software Engineer | Wrocław hybrid | 2026-06-26-0142 | 2026-06-26-0142 | Open | Initial capture: public Just Join IT role; `28 000-32 000 PLN net / month B2B`; `Hybrid`; AI-powered systems, `LLMs`, `MCP`, `A2A`, `Python`, `React`, `MongoDB`, `Redis` and `AWS/Azure`; leadership role but still clearly hands-on technically. | [Just Join IT](https://justjoin.it/job-offer/bigtime-team-lead-software-engineer-wroclaw-ai) |
+| monterail-llm-engineer-freelancer-remote-poland | Monterail | LLM Engineer - Freelancer | Remote Poland / Wrocław / Kraków / Warsaw | 2026-06-26-1741 | 2026-06-26-1741 | Open | Initial capture: official `Monterail careers` role; `90-140 PLN/h net + VAT (B2B only)`; practical AI product engineering around LLM features. Public mirrors additionally indicate `Poland` remote coverage and city anchors including `Wrocław`, `Kraków` and `Warszawa`. | [Monterail careers](https://www.monterail.com/careers) / [Built In](https://builtin.com/job/llm-engineer-freelancer/9585243) / [Himalayas](https://himalayas.app/companies/monterail/jobs/llm-engineer-freelancer) |
+| holisticon-connect-ml-engineer-life-science-oncology-platform-wroclaw-remote | Holisticon Connect | ML Engineer (Life Science&Oncology Platform) | Wrocław / remote | 2026-06-26-1741 | 2026-06-26-1741 | Open | Initial capture: public Just Join IT role; `21 840-25 200 PLN net / month B2B` or `15 000-18 000 PLN gross / month UoP`; `Wrocław`, `Remote`; production ML stack on `AWS`, `PyTorch`, `TensorFlow`, `Weights & Biases`, `Kubeflow`, `MLflow`, `OpenCV`, `Python` and `MLOps`. | [Just Join IT](https://justjoin.it/job-offer/holisticon-connect-ml-engineer-life-science-oncology-platform--wroclaw-ai) / [Remotowo](https://www.remotowo.pl/job/holisticon-connect-ml-engineer-life-scienceoncology-platform) |
+| acaisoft-devops-engineer-with-ai-remote-poland | ACAISOFT POLAND Sp. z o.o. | DevOps Engineer with AI | Remote Poland | 2026-06-26-1741 | 2026-06-26-1741 | Open | Initial capture: direct-employer `Pracuj.pl` role; `26 880-38 640 PLN netto (+ VAT) / mies. B2B`; `Whole Poland (remote work)`; strong AI-platform fit, but likely near a duplicate-prone `ACAISOFT` DevOps/infra cluster that already includes `Site Reliability Engineer (AI/LLM & Infra)` and `Python Engineeer with DevOps (AI project)`. | [Pracuj.pl](https://www.pracuj.pl/praca/devops-engineer-with-ai-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004897257) / [Pracodawcy Pracuj](https://pracodawcy.pracuj.pl/company/20303751) / [Acaisoft careers](https://www.acaisoft.com/careers) |
+| itds-kubernetes-cloud-infrastructure-engineer-ai-platform-wroclaw | ITDS Polska Sp. z o.o. | Kubernetes & Cloud Infrastructure Engineer – AI Platform | Wrocław / on-site | 2026-06-27-0141 | 2026-06-27-0141 | Open | New official ITDS Wrocław role; `40 000–60 000 zł / mies. (zal. od umowy)`; full office work in Wrocław; AI platform infrastructure with Kubernetes / cloud / platform scope. | [ITDS](https://itds.pl/pl/praca/kubernetes-cloud-infrastructure-engineer-ai-platform/) / [Pracuj.pl](https://www.pracuj.pl/praca/kubernetes-cloud-infrastructure-engineer-ai-platform-wroclaw%2Coferta%2C1004877199) |
+| in4ge-ai-engineering-lead-python-genai-agentic-ai-remote-poland | IN4GE sp. z o.o. | AI Engineering Lead (Python, GenAI & Agentic AI) | Remote Poland | 2026-06-27-0141 | 2026-06-27-0141 | Open | New remote Poland lead role; `180–220 zł netto (+ VAT) / godz. B2B`; `Python`, `SQL`, `NoSQL`; active until `09 Jul`; strong GenAI / agentic leadership signal. | [Pracuj.pl](https://www.pracuj.pl/praca/ai-engineering-lead-python-genai-agentic-ai-warszawa%2Coferta%2C1004889610) / [theprotocol](https://theprotocol.it/szczegoly/praca/ai-engineering-lead-python-genai-agentic-ai-warszawa%2Coferta%2C47a40000-59d6-3231-bbc2-08dec6eb4d8f) |
+| in4ge-senior-ai-engineer-conversational-ai-gcp-gemini-remote-poland | IN4GE sp. z o.o. | Senior AI Engineer (Conversational AI, GCP, Gemini) | Remote Poland | 2026-06-27-0141 | 2026-06-27-0141 | Open | New remote Poland role; `150–180 zł netto (+ VAT) / godz. B2B`; `Miejsce pracy: Cała Polska (praca zdalna)`; conversational AI and Gemini/GCP focus; valid to `24 Jul`. | [Pracuj.pl](https://www.pracuj.pl/praca/senior-ai-engineer-conversational-ai-gcp-gemini-warszawa%2Coferta%2C1004923434) |
+| in4ge-automation-developer-gcp-ai-agentic-automation-remote-poland | IN4GE sp. z o.o. | Automation Developer (GCP / AI / Agentic Automation) | Remote Poland | 2026-06-27-0141 | 2026-06-27-0141 | Open | New remote Poland role; `160–190 zł netto (+ VAT) / godz. B2B`; `Vertex AI`, `Python`, `JavaScript`; active until `10 Jul`; useful signal for agentic automation work. | [Pracuj.pl](https://www.pracuj.pl/praca/automation-developer-gcp-ai-agentic-automation-warszawa%2Coferta%2C1004893094) / [theprotocol](https://theprotocol.it/szczegoly/praca/automation-developer-gcp---ai---agentic-automation-warszawa%2Coferta%2C47a40000-59d6-3231-bbc2-08dec6eb4d8f) |
+| in4ge-open-source-ai-engineer-llm-full-stack-remote-poland | IN4GE sp. z o.o. | Open Source AI Engineer (LLM / Full Stack) | Remote Poland | 2026-06-27-0141 | 2026-06-27-0141 | Open | New remote Poland LLM/full-stack role; `100–150 zł netto (+ VAT) / godz. B2B`; public page is near expiry (`do 27 cze`), so treat as time-sensitive. | [Pracuj.pl](https://www.pracuj.pl/praca/open-source-ai-engineer-llm-full-stack-warszawa%2Coferta%2C1004866784) |
+| acaisoft-site-reliability-engineer-ai-llm-infra-remote-poland | ACAISOFT POLAND Sp. z o.o. | Site Reliability Engineer – AI/LLM & Infra | Remote Poland | 2026-06-27-0141 | 2026-06-27-0141 | Open | New direct-employer / board-confirmed role; `160–230 zł netto (+ VAT) / godz.` or `26 880–38 640 PLN netto (+ VAT) / mies.` depending on mirror; `Python`, `CI/CD`, `AWS`, `Kubernetes`, `LLM`, `AI`; valid to `11 Jul`. | [Pracuj.pl](https://www.pracuj.pl/praca/site-reliability-engineer-ai-llm-infra-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004897180) / [Pracodawcy Pracuj](https://pracodawcy.pracuj.pl/company/20303751) / [Acaisoft careers](https://www.acaisoft.com/careers) |
+| acaisoft-infra-software-engineer-ai-project-remote-poland | ACAISOFT POLAND Sp. z o.o. | Infra Software Engineer (AI project) | Remote Poland | 2026-06-27-0141 | 2026-06-27-0141 | Open | New direct-employer / board-confirmed role; `26 880–35 280 PLN netto (+ VAT) / mies. B2B`; `Whole Poland (remote work)`; AI project infrastructure/backend scope; valid to `11 Jul`. | [Pracuj.pl](https://www.pracuj.pl/praca/infra-software-engineer-ai-project-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004897254) / [Acaisoft careers](https://www.acaisoft.com/careers) |
+| capgemini-cloud-data-architect-with-ai-wroclaw-hybrid | Capgemini Polska | Cloud Data Architect with AI | Wrocław hybrid | 2026-06-27-0141 | 2026-06-27-0141 | Open | New Wrocław hybrid role; official detail page confirms Wrocław among locations, `AI/ML, Big Data / Data Science` specialization, strong cloud/data platform stack, and explicit LLM / GenAI responsibilities. Salary not public on the official page. | [Capgemini Careers](https://careers.capgemini.com/job/Warszawa-Cloud-Data-Architect-with-AI/1399835233/) / [Pracuj.pl](https://www.pracuj.pl/praca/cloud-data-architect-with-ai-wroclaw-legnicka-48%2Coferta%2C1004901240) |
 
 ## Open Questions
 
@@ -145,6 +153,9 @@ only when something meaningful changes.
   bieżące URL-e `Just Join IT`, czy pozostaną dłużej tylko w warstwie boardowej?
 - Czy `DataArt` i `BigTime` pokażą bardziej kanoniczne publiczne detail page
   niż obecne karty `Just Join IT`, czy ten klaster pozostanie board-first?
+- Czy `Monterail` pokaże pełniejszy, publicznie klikalny detail dla
+  `LLM Engineer - Freelancer`, czy najbogatsze szczegóły pozostaną rozproszone
+  między `careers` i publicznymi mirrorami?
 
 ## Watch Items
 
@@ -179,6 +190,9 @@ only when something meaningful changes.
   public `ACAISOFT`, `DataArt` and `BigTime` pages after the `26 Jun 01:42`
   run, with special care around reopen status, board-first canonical drift and
   duplicate-prone employer clusters.
+- Official `Monterail careers`, `Holisticon Connect ML Engineer`, updated
+  `Rite NRG Pracuj.pl` detail and the expanding `ACAISOFT` DevOps/infra
+  cluster after the `26 Jun 17:41` run.
 - Job boards with reliable filters for Wroclaw, remote Poland and AI/LLM work.
 - Salary, seniority, tech-stack and remote-policy changes on previously seen
   listings.
@@ -186,6 +200,7 @@ only when something meaningful changes.
 
 ## Recent Reports
 
+- [2026-06-27-0141](runs/2026-06-27-0141.md)
 - [2026-06-18-0142](runs/2026-06-18-0142.md)
 - [2026-06-18-1741](runs/2026-06-18-1741.md)
 - [2026-06-19-0141](runs/2026-06-19-0141.md)
@@ -204,3 +219,24 @@ only when something meaningful changes.
 - [2026-06-25-1723](runs/2026-06-25-1723.md)
 - [2026-06-25-1741](runs/2026-06-25-1741.md)
 - [2026-06-26-0142](runs/2026-06-26-0142.md)
+- [2026-06-26-1741](runs/2026-06-26-1741.md)
+
+## Review Notes
+
+- 2026-06-27: `ITDS` dodał aktywny wrocławski sygnał `Kubernetes & Cloud Infrastructure Engineer – AI Platform`, a wcześniejszy `Senior AI Technical Lead` wygasł; `IN4GE` wygląda teraz na powtarzalne źródło remote-Poland dla ról agentic / GenAI, a `ACAISOFT` rozszerzył się o jawne role `Site Reliability Engineer` i `Infra Software Engineer`.
+- 2026-06-26: `Monterail` i `Holisticon Connect` dodały nowe sygnały, a `ACAISOFT` ponownie rozszerzył klaster infra.
+- 2026-06-25: `CKSource / Tiugo` dołączył do shortlisty z silnym publicznym AI role, a `Accenture` otworzył nowy wrocławski klaster `LLM` / `RAG`.
+- 2026-06-24: `EPAM` rozszerzył oficjalny remote-Poland cluster, a `ACAISOFT` dodał nowe kanoniczne role i nadal miesza jednostki wynagrodzenia.
+- 2026-06-23: `deepsense.ai` i `ACAISOFT` pokazały dalszy rozjazd między źródłami, szczególnie wokół remote/hybrid i compensation units.
+- 2026-06-22: `airSlate`, `DataArt` i `EPAM` weszły do stałej obserwacji jako recurring high-signal sources.
+- 2026-06-21: `Rite NRG`, `GFT`, `ITDS` i `xBerry` wzmocniły klaster lokalnych i remote ról AI, a `KYOTU` zostało potwierdzone jako wygasłe.
+- 2026-06-20: `Trans.eu`, `Tooploox`, `Deviniti`, `Oversee` i `UNIVIO` dołączyły do shortlisty.
+- 2026-06-19: `Holisticon` i `deepsense.ai` dołączyły do shortlisty, a `Sii` / `Capgemini` stały się stabilnymi źródłami do monitorowania.
+- 2026-06-18: Topic zainicjowany na podstawie prośby o twice-daily research o LLM/AI jobs in Wrocław i remote Poland.
+
+## Done
+
+| Date | Item | Outcome |
+| --- | --- | --- |
+| 2026-06-19 | Identify recurring Wroclaw employers | Added Holisticon and deepsense.ai to `index.md` watchlist after first relevant official openings. |
+| 2026-06-21 | Re-check KYOTU hiring signal | Public Pracuj.pl page now shows the listing as expired and confirms the employer ended collecting applications. |
