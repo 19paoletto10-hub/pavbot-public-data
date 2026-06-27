@@ -1,27 +1,21 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-06-27 20:16 CEST
+Last updated: 2026-06-28 01:41 CEST
 
 ## Current Understanding
 
-Runda z `2026-06-27 20:16 CEST` dołożyła kolejny pakiet świeżych sygnałów po
-porannym rozszerzeniu `ITDS`, `IN4GE` i `ACAISOFT`. `ITDS` ma już nie jeden,
-ale dwa równoległe aktywne wrocławskie sygnały AI/infra: wcześniejsze
-`Kubernetes & Cloud Infrastructure Engineer – AI Platform` oraz nową rolę
-`Production Support Engineer – AI & LLM`, która przesuwa firmę także w stronę
-LLM-aware operations.
+Runda z `2026-06-28 01:41 CEST` dołożyła nowy mikroklaster ról hands-on wokół
+`People Trust`, `Cyclad`, `IN4GE`, `SOFTWARELY`, `SQUARE ONE` i `CodiLime`.
+Najmocniejszy sygnał to `People Trust Senior AI/LLM Engineer`: rola jest
+wyraźnie produktowa, obejmuje `LLM`, `RAG`, `Agents` i `MLOps`, ma jawne
+widełki oraz dwa wakaty.
 
-Pojawił się też nowy lokalny mini-klaster wokół `Axabee` i `4soft`. `Axabee`
-potwierdza oficjalnie `Senior AI Engineer` z `100% remote` i opcjonalnym
-biurem `Wrocław / Opole`, a `4soft` pokazuje bardzo konkretny board-first
-sygnał `AI Product Engineer` z `LangChain`, `LangGraph`, `retrieval pipelines`
-i oceną jakości systemów LLM.
-
-`IN4GE` przestało wyglądać wyłącznie jak źródło ról aplikacyjno-agentowych,
-bo dodało jeszcze `Cloud Platform & Infrastructure Engineer (GenAI / CX AI)`.
-Do tego doszedł nowy direct-employer sygnał `ITEAMLY Applied AI Engineer` dla
-`remote Poland`, co wzmacnia pulę ról hands-on z naciskiem na produkcyjne
-LLM/RAG backendy.
+Lokalnie najciekawszy jest `Cyclad Software Developer (React + Python + AI)`
+z `Wrocławia` i pracą zdalną z Polski. Do tego doszedł nowy
+`IN4GE Senior GCP AI Developer` oraz dwa remote-first role genAI:
+`SOFTWARELY Python + GenAI Developer` i `SQUARE ONE Python Developer (LLM)`.
+`CodiLime` jest bardzo mocnym technicznie leadem, ale publiczne oznaczenia
+geograficzne są niespójne, więc traktuję go z lekką niepewnością.
 
 ## Stable Facts
 
@@ -135,6 +129,12 @@ only when something meaningful changes.
 | justjoin-4soft-ai-product-engineer-wroclaw-remote | 4soft | AI Product Engineer | Wrocław +2 / remote | 2026-06-27-2016 | 2026-06-27-2016 | Open | New board-first Wrocław role; `25 000–35 000 PLN net / month B2B`; `LangChain`, `LangGraph`, `retrieval pipelines`, LLM evals and observability; `up to 100% remote`. | [Just Join IT](https://justjoin.it/job-offer/4soft-ai-product-engineer-wroclaw-ai) |
 | pracuj-iteamly-applied-ai-engineer-remote-poland | ITEAMLY SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ | Applied AI Engineer | Remote Poland | 2026-06-27-2016 | 2026-06-27-2016 | Open | New direct-employer Pracuj.pl role; `30 000–39 000 zł netto (+ VAT) / mies. B2B`; `Whole Poland (remote work)`; `Python`, `LangChain`, `OpenAI API`, `RAG`, `TypeScript` and optional `Agentic AI`; valid to `08 Jul`. | [Pracuj.pl](https://www.pracuj.pl/praca/applied-ai-engineer-krakow%2Coferta%2C1004886158) |
 | in4ge-cloud-platform-infrastructure-engineer-genai-cx-ai-remote-poland | IN4GE sp. z o.o. | Cloud Platform & Infrastructure Engineer (GenAI / CX AI) | Remote Poland | 2026-06-27-2016 | 2026-06-27-2016 | Open | New remote Poland infra role in the expanding IN4GE cluster; `190–220 zł netto (+ VAT) / godz. B2B`; `Cała Polska (praca zdalna)`; valid to `15 Jul`; strong AI platform / infra signal. | [Pracuj.pl](https://www.pracuj.pl/praca/cloud-platform-infrastructure-engineer-genai-cx-ai-warszawa%2Coferta%2C1004901526) |
+| peopletrust-senior-ai-llm-engineer-remote-poland | PEOPLE TRUST SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ | Senior AI/LLM Engineer | Remote Poland | 2026-06-28-0141 | 2026-06-28-0141 | Open | Initial capture: direct Pracuj.pl role; `170-220 PLN netto (+ VAT) / godz. B2B`; `Whole Poland (remote work)`; `LLM`, `RAG`, `Agents`, `MLOps`, `Java`, `PL/SQL`, `Oracle`; 2 wakaty and a strongly productized AI-systems scope. | [Pracuj.pl](https://www.pracuj.pl/praca/senior-ai-llm-engineer-warszawa%2Coferta%2C1004930276) |
+| cyclad-software-developer-react-python-ai-wroclaw-remote-poland | Cyclad | Software Developer (React + Python + AI) | Wrocław + remote Poland | 2026-06-28-0141 | 2026-06-28-0141 | Open | Initial capture: public Pracuj.pl role plus board mirrors; `130-150 PLN netto (+ VAT) / godz.` on employer card and `130-160 PLN net/h B2B` on Just Join IT; `Wrocław`, remote from Poland; `React`, `Next.js`, `TypeScript`, `Python`, `FastAPI`, AI-enhanced full-stack apps. | [Pracuj.pl](https://www.pracuj.pl/praca/software-developer-react-%2B-python-%2B-ai-wroclaw%2Coferta%2C1004921596) / [Just Join IT](https://justjoin.it/job-offer/cyclad-software-developer-react-python-ai--wroclaw-python) / [the:protocol](https://theprotocol.it/praca/software-developer-react-python-ai-wroclaw%2Coferta%2C90930000-5d99-4a0e-9217-08ded1364658) |
+| in4ge-senior-gcp-ai-developer-remote-poland | IN4GE sp. z o.o. | Senior GCP AI Developer | Remote Poland | 2026-06-28-0141 | 2026-06-28-0141 | Open | Initial capture: direct Pracuj.pl role; `140-170 zł netto (+ VAT) / godz. B2B`; `Cała Polska (praca zdalna)`; `Python`, `GCP`, `GenAI`, `LLM`, `RAG`, fine-tuning and production AI delivery. | [Pracuj.pl](https://www.pracuj.pl/praca/senior-gcp-ai-developer-warszawa%2Coferta%2C1004912936) |
+| softwarely-python-genai-developer-remote-poland | SOFTWARELY SP. Z O.O. | Python + GenAI Developer | Warszawa / remote Poland | 2026-06-28-0141 | 2026-06-28-0141 | Open | Initial capture: direct Pracuj.pl role plus mirror; `160-180 PLN netto (+ VAT) / godz.`; `Praca zdalna`; `Python`, `LLM`, `OpenAI`, `GPT`, `RAG`, `LangChain`, `PostgreSQL`, `MySQL`; strong backend GenAI fit. | [Pracuj.pl](https://www.pracuj.pl/praca/python-%2B-genai-developer-warszawa-nowowiejska-15-19%2Coferta%2C1004907786) / [theprotocol](https://theprotocol.it/szczegoly/praca/python-genai-developer-warszawa-nowowiejska-15-19%2Coferta%2C27c20000-b0d8-b6df-ffea-08deaff8072f) |
+| square-one-python-developer-llm-remote-poland | SQUARE ONE RESOURCES sp. z o.o. | Python Developer (LLM) | Remote Poland | 2026-06-28-0141 | 2026-06-28-0141 | Open | Initial capture: direct Pracuj.pl role; `160-175 PLN netto (+ VAT) / godz. B2B`; `Whole Poland (remote work)`; `Python`, `LangChain`, `LlamaIndex`; more focused LLM backend profile than the broader GenAI titles. | [Pracuj.pl](https://www.pracuj.pl/praca/python-developer-llm-warszawa%2Coferta%2C1004878344) / [the:protocol](https://theprotocol.it/praca/python-developer-llm-warszawa%2Coferta%2C90930000-5db9-4a0e-9466-08deacc83228) |
+| codilime-mid-senior-ai-engineer-with-networking-experience-remote-poland | CodiLime | Mid/Senior AI engineer with networking experience | Poland / fully remote | 2026-06-28-0141 | 2026-06-28-0141 | Open | Initial capture: public CodiLime careers page and openings page; `16 000-25 000 PLN + VAT B2B`; `Fully Remote`; `LLM-driven workflows`, `LangChain`, `LangGraph`, `semantic search`, `vector databases`, `RAG`, `evaluation`, `MCP`, networking expertise. Public geography markers are inconsistent, so treat Poland as tentative but likely. | [CodiLime careers](https://jobs.codilime.com/jobs/7910871-mid-senior-ai-engineer-with-networking-experience) / [CodiLime openings](https://jobs.codilime.com/jobs) |
 
 ## Open Questions
 
@@ -213,6 +213,7 @@ only when something meaningful changes.
 
 ## Recent Reports
 
+- [2026-06-28-0141](runs/2026-06-28-0141.md)
 - [2026-06-27-2016](runs/2026-06-27-2016.md)
 - [2026-06-27-0141](runs/2026-06-27-0141.md)
 - [2026-06-18-0142](runs/2026-06-18-0142.md)
@@ -238,6 +239,7 @@ only when something meaningful changes.
 ## Review Notes
 
 - 2026-06-27: wieczorna runda dodała `ITDS Production Support Engineer – AI & LLM`, oficjalny `Axabee Senior AI Engineer`, board-first `4soft AI Product Engineer`, direct-employer `ITEAMLY Applied AI Engineer` oraz nowy infra sygnał `IN4GE Cloud Platform & Infrastructure Engineer (GenAI / CX AI)`.
+- 2026-06-28: poranna runda dodała `People Trust Senior AI/LLM Engineer`, `Cyclad Software Developer (React + Python + AI)`, `IN4GE Senior GCP AI Developer`, `SOFTWARELY Python + GenAI Developer`, `SQUARE ONE Python Developer (LLM)` i `CodiLime Mid/Senior AI engineer with networking experience`; główne nowe ryzyko to niejednoznaczna geografia `CodiLime` oraz drift salary w `Cyclad`.
 - 2026-06-27: `ITDS` dodał aktywny wrocławski sygnał `Kubernetes & Cloud Infrastructure Engineer – AI Platform`, a wcześniejszy `Senior AI Technical Lead` wygasł; `IN4GE` wygląda teraz na powtarzalne źródło remote-Poland dla ról agentic / GenAI, a `ACAISOFT` rozszerzył się o jawne role `Site Reliability Engineer` i `Infra Software Engineer`.
 - 2026-06-26: `Monterail` i `Holisticon Connect` dodały nowe sygnały, a `ACAISOFT` ponownie rozszerzył klaster infra.
 - 2026-06-25: `CKSource / Tiugo` dołączył do shortlisty z silnym publicznym AI role, a `Accenture` otworzył nowy wrocławski klaster `LLM` / `RAG`.
