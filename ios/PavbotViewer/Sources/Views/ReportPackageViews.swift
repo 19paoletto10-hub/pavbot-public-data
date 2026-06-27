@@ -398,6 +398,7 @@ private struct MobileNewsNativeContent: View {
 
 private struct MobileNewsSpeechMiniPlayer: View {
     @ObservedObject var speechController: MobileNewsSpeechController
+    @Environment(PavbotHaptics.self) private var haptics
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -432,6 +433,7 @@ private struct MobileNewsSpeechMiniPlayer: View {
                     } else {
                         speechController.pause()
                     }
+                    haptics.play(.lightImpact)
                 } label: {
                     Label(speechController.isPaused ? "Wznów" : "Pauza", systemImage: speechController.isPaused ? "play.fill" : "pause.fill")
                         .font(.subheadline.weight(.semibold))
@@ -445,6 +447,7 @@ private struct MobileNewsSpeechMiniPlayer: View {
 
                 Button {
                     speechController.stop()
+                    haptics.play(.warning)
                 } label: {
                     Label("Stop", systemImage: "stop.fill")
                         .font(.subheadline.weight(.semibold))
@@ -496,6 +499,7 @@ private struct MobileNewsSpeechMiniPlayer: View {
 
 private struct PodcastScriptSpeechMiniPlayer: View {
     @ObservedObject var speechController: PodcastScriptSpeechController
+    @Environment(PavbotHaptics.self) private var haptics
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -530,6 +534,7 @@ private struct PodcastScriptSpeechMiniPlayer: View {
                     } else {
                         speechController.pause()
                     }
+                    haptics.play(.lightImpact)
                 } label: {
                     Label(speechController.isPaused ? "Wznów" : "Pauza", systemImage: speechController.isPaused ? "play.fill" : "pause.fill")
                         .font(.subheadline.weight(.semibold))
@@ -543,6 +548,7 @@ private struct PodcastScriptSpeechMiniPlayer: View {
 
                 Button {
                     speechController.stop()
+                    haptics.play(.warning)
                 } label: {
                     Label("Stop", systemImage: "stop.fill")
                         .font(.subheadline.weight(.semibold))
@@ -679,6 +685,7 @@ private struct MobileNewsSectionBlock: View {
 }
 
 private struct MobileNewsArticleRow: View {
+    @Environment(PavbotHaptics.self) private var haptics
     let article: MobileNewsArticle
     @Binding var selectedArticle: MobileNewsArticle?
     @ObservedObject var speechController: MobileNewsSpeechController
@@ -690,6 +697,7 @@ private struct MobileNewsArticleRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             Button {
+                haptics.play(.lightImpact)
                 selectedArticle = article
             } label: {
                 MobileNewsArticleCard(article: article)
@@ -713,6 +721,7 @@ private struct MobileNewsArticleRow: View {
                 if isCurrent {
                     Button {
                         speechController.stop()
+                        haptics.play(.warning)
                     } label: {
                         Label("Stop", systemImage: "stop.fill")
                             .font(.caption.weight(.semibold))
@@ -784,6 +793,7 @@ private struct MobileNewsArticleRow: View {
         } else {
             speechController.speak(article)
         }
+        haptics.play(.lightImpact)
     }
 }
 
@@ -1159,6 +1169,7 @@ private struct MobileNewsArticleReader: View {
 }
 
 private struct MobileNewsSpeechControls: View {
+    @Environment(PavbotHaptics.self) private var haptics
     let article: MobileNewsArticle
     @ObservedObject var speechController: MobileNewsSpeechController
 
@@ -1177,6 +1188,7 @@ private struct MobileNewsSpeechControls: View {
                     } else {
                         speechController.speak(article)
                     }
+                    haptics.play(.lightImpact)
                 } label: {
                     Label(title, systemImage: icon)
                         .font(.subheadline.weight(.semibold))
@@ -1190,6 +1202,7 @@ private struct MobileNewsSpeechControls: View {
                 if isCurrent {
                     Button {
                         speechController.stop()
+                        haptics.play(.warning)
                     } label: {
                         Label("Stop", systemImage: "stop.fill")
                             .font(.subheadline.weight(.semibold))
@@ -1237,6 +1250,7 @@ private struct MobileNewsSpeechControls: View {
 
 private struct MobileNewsSpeechRatePicker: View {
     @ObservedObject var speechController: MobileNewsSpeechController
+    @Environment(PavbotHaptics.self) private var haptics
 
     var body: some View {
         Picker("Tempo czytania", selection: rateBinding) {
@@ -1248,6 +1262,9 @@ private struct MobileNewsSpeechRatePicker: View {
         .pickerStyle(.segmented)
         .frame(maxWidth: 220)
         .accessibilityLabel("Tempo czytania na głos")
+        .onChange(of: speechController.speechRate) { _, _ in
+            haptics.play(.selection)
+        }
     }
 
     private var rateBinding: Binding<MobileNewsSpeechRate> {
@@ -1260,6 +1277,7 @@ private struct MobileNewsSpeechRatePicker: View {
 
 private struct MobileNewsPodcastSpeechRatePicker: View {
     @ObservedObject var speechController: PodcastScriptSpeechController
+    @Environment(PavbotHaptics.self) private var haptics
 
     var body: some View {
         Picker("Tempo podcastu", selection: rateBinding) {
@@ -1271,6 +1289,9 @@ private struct MobileNewsPodcastSpeechRatePicker: View {
         .pickerStyle(.segmented)
         .frame(maxWidth: 220)
         .accessibilityLabel("Tempo czytania podcastu")
+        .onChange(of: speechController.speechRate) { _, _ in
+            haptics.play(.selection)
+        }
     }
 
     private var rateBinding: Binding<MobileNewsSpeechRate> {
@@ -1879,6 +1900,7 @@ private struct ResearchIssueAddOns: View {
 private struct ResearchArticleReader: View {
     @Environment(ManifestStore.self) private var store
     @Environment(\.dismiss) private var dismiss
+    @Environment(PavbotHaptics.self) private var haptics
 
     let article: ResearchNewsArticle
     let issue: ResearchNewsIssue
@@ -1952,6 +1974,7 @@ private struct ResearchArticleReader: View {
                     if canSave {
                         Button {
                             savedStore.toggle(article: article, issue: issue)
+                            haptics.play(.success)
                         } label: {
                             Label(isSaved ? "Usuń z zapisanych" : "Zapisz artykuł", systemImage: isSaved ? "bookmark.fill" : "bookmark")
                         }
@@ -2144,6 +2167,7 @@ private struct ResearchTopicPicker: View {
 }
 
 private struct ResearchTopicButton: View {
+    @Environment(PavbotHaptics.self) private var haptics
     let topic: ReportTopicKind
     @Binding var selection: ReportTopicKind
 
@@ -2153,7 +2177,9 @@ private struct ResearchTopicButton: View {
 
     var body: some View {
         Button {
+            guard selection != topic else { return }
             selection = topic
+            haptics.play(.selection)
         } label: {
             HStack(spacing: 10) {
                 Image(systemName: topic.systemImage)
@@ -2177,13 +2203,8 @@ private struct ResearchTopicButton: View {
             }
             .padding(12)
             .frame(maxWidth: .infinity, minHeight: 76, alignment: .leading)
-            .background(.background, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-            .overlay(
-                RoundedRectangle(cornerRadius: 12, style: .continuous)
-                    .stroke(isSelected ? topic.tint : Color.clear, lineWidth: 2)
-            )
         }
-        .buttonStyle(.plain)
+        .buttonStyle(PavbotInteractiveSurfaceButtonStyle(tint: topic.tint, isSelected: isSelected, cornerRadius: 12))
     }
 }
 

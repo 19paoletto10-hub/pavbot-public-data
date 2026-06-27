@@ -21,32 +21,65 @@ final class WeatherLocationService: NSObject, CLLocationManagerDelegate {
         manager.desiredAccuracy = kCLLocationAccuracyThreeKilometers
     }
 
-    func currentWeatherLocation() async throws -> WeatherBriefLocation {
+    func currentWeatherLocation(mode: WeatherLocationMode = .requestIfNeeded) async throws -> WeatherBriefLocation {
+        guard mode != .none else {
+            throw WeatherLocationError.unavailable
+        }
         guard CLLocationManager.locationServicesEnabled() else {
             throw WeatherLocationError.unavailable
         }
 
-        let shouldRequestLocation: Bool
         switch manager.authorizationStatus {
         case .notDetermined:
-            manager.requestWhenInUseAuthorization()
-            shouldRequestLocation = false
+            guard mode == .requestIfNeeded else {
+                throw WeatherLocationError.denied
+            }
+            return try await waitForWeatherLocation {
+                manager.requestWhenInUseAuthorization()
+            }
         case .restricted, .denied:
             throw WeatherLocationError.denied
         case .authorizedAlways, .authorizedWhenInUse:
-            shouldRequestLocation = true
+            return try await waitForWeatherLocation {
+                manager.requestLocation()
+            }
         @unknown default:
             throw WeatherLocationError.unavailable
         }
+    }
 
-        return try await withCheckedThrowingContinuation { continuation in
+    private func waitForWeatherLocation(start: () -> Void) async throws -> WeatherBriefLocation {
+        try await withCheckedThrowingContinuation { continuation in
             finish(.failure(WeatherLocationError.unavailable))
             self.continuation = continuation
             startTimeout()
-            if shouldRequestLocation {
-                manager.requestLocation()
-            }
+            start()
         }
+    }
+
+    func weatherLocation(for query: String) async throws -> WeatherBriefLocation {
+        let trimmedQuery = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmedQuery.isEmpty else {
+            throw WeatherLocationError.unavailable
+        }
+        let placemarks = try await geocodeAddress(trimmedQuery)
+        guard let placemark = placemarks.first, let location = placemark.location else {
+            throw WeatherLocationError.unavailable
+        }
+
+        let city = WeatherLocationDisplayName.name(
+            locality: placemark.locality ?? trimmedQuery,
+            subAdministrativeArea: placemark.subAdministrativeArea,
+            administrativeArea: placemark.administrativeArea,
+            country: placemark.country,
+            latitude: location.coordinate.latitude,
+            longitude: location.coordinate.longitude
+        )
+        return WeatherBriefLocation(
+            latitude: location.coordinate.latitude,
+            longitude: location.coordinate.longitude,
+            city: city
+        )
     }
 
     nonisolated func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
@@ -95,7 +128,7 @@ final class WeatherLocationService: NSObject, CLLocationManagerDelegate {
     private func startTimeout() {
         timeoutTask?.cancel()
         timeoutTask = Task { [weak self] in
-            try? await Task.sleep(nanoseconds: 8_000_000_000)
+            try? await Task.sleep(nanoseconds: 4_000_000_000)
             await MainActor.run {
                 self?.finish(.failure(WeatherLocationError.unavailable))
             }
@@ -141,6 +174,18 @@ final class WeatherLocationService: NSObject, CLLocationManagerDelegate {
     private func reverseGeocode(_ location: CLLocation) async throws -> [CLPlacemark] {
         try await withCheckedThrowingContinuation { continuation in
             geocoder.reverseGeocodeLocation(location) { placemarks, error in
+                if let error {
+                    continuation.resume(throwing: error)
+                } else {
+                    continuation.resume(returning: placemarks ?? [])
+                }
+            }
+        }
+    }
+
+    private func geocodeAddress(_ query: String) async throws -> [CLPlacemark] {
+        try await withCheckedThrowingContinuation { continuation in
+            geocoder.geocodeAddressString(query) { placemarks, error in
                 if let error {
                     continuation.resume(throwing: error)
                 } else {

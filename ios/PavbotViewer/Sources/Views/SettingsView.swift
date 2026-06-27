@@ -5,6 +5,7 @@ import UserNotifications
 struct SettingsView: View {
     @Environment(ManifestStore.self) private var store
     @Environment(AppAppearanceStore.self) private var appearanceStore
+    @Environment(PavbotHaptics.self) private var haptics
     @State private var draftURL = ""
     @State private var draftNotificationServerURL = ""
     @State private var notificationStatus = "Nie sprawdzono"
@@ -38,6 +39,15 @@ struct SettingsView: View {
             }
 
             Section("Dostępność i komfort") {
+                Toggle(isOn: hapticToggleBinding) {
+                    Label("Dotyk interakcji", systemImage: "hand.tap.fill")
+                }
+
+                Text("Subtelna haptyka działa przy zmianie zakładek, zapisie artykułów, swipe w Pulsie Dnia i akcjach audio. Na urządzeniach bez Taptic Engine pozostaje bezpiecznie wyciszona.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+
                 Text("Pavbot korzysta z natywnych ustawień iOS. Te funkcje możesz pokazać w App Store Connect jako realnie wspierane po testach na urządzeniu.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
@@ -224,15 +234,29 @@ struct SettingsView: View {
         }
     }
 
+    private var hapticToggleBinding: Binding<Bool> {
+        Binding(
+            get: { haptics.isEnabled },
+            set: { newValue in
+                haptics.setEnabled(newValue)
+                if newValue {
+                    haptics.play(.success)
+                }
+            }
+        )
+    }
+
     private func saveManifestURL() {
         let trimmed = draftURL.trimmingCharacters(in: .whitespacesAndNewlines)
         switch ManifestURLValidator.validate(trimmed) {
         case .valid:
             manifestURLValidationMessage = nil
             store.manifestURLString = trimmed
+            haptics.play(.success)
             Task { await store.reload() }
         case .invalid(let message):
             manifestURLValidationMessage = message
+            haptics.play(.warning)
         }
     }
 
@@ -246,6 +270,7 @@ struct SettingsView: View {
                 .fetchDefaults(preferredServerURLString: draftNotificationServerURL)
             guard defaults.validationError == nil else {
                 defaultConnectionSettingsStatus = defaults.validationError
+                haptics.play(.warning)
                 return
             }
 
@@ -256,12 +281,14 @@ struct SettingsView: View {
             store.manifestURLString = defaults.manifestURL
             NotificationServerSettings.serverURLString = defaults.notificationServerURL
             defaultConnectionSettingsStatus = "Przywrócono domyślne połączenia."
+            haptics.play(.success)
 
             await store.reload()
             await refreshNotificationServerReachability()
             refreshRemoteNotificationDiagnostics()
         } catch {
             defaultConnectionSettingsStatus = error.localizedDescription
+            haptics.play(.error)
         }
     }
 
@@ -274,6 +301,7 @@ struct SettingsView: View {
         let trimmedServerURL = draftNotificationServerURL.trimmingCharacters(in: .whitespacesAndNewlines)
         if let message = NotificationServerSettings.validationMessage(for: trimmedServerURL, required: true) {
             notificationServerValidationMessage = message
+            haptics.play(.warning)
             return
         }
 
@@ -281,6 +309,7 @@ struct SettingsView: View {
         LiveNotificationOnboarding.markPromptSeen()
         let granted = await RemoteNotificationPermission.requestAndRegister()
         LiveNotificationSettings.setEnabled(granted)
+        haptics.play(granted ? .success : .warning)
         await refreshNotificationStatus()
         await refreshNotificationServerReachability()
         refreshRemoteNotificationDiagnostics()

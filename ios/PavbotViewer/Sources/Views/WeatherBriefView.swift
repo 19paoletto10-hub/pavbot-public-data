@@ -9,6 +9,7 @@ struct WeatherBriefView: View {
     @Environment(\.scenePhase) private var scenePhase
     @State private var rangeTileMode: WeatherRangeTileMode = .value
     @State private var isRefreshingWeather = false
+    @State private var isLocationEditorPresented = false
 
     var body: some View {
         ScrollView {
@@ -69,6 +70,14 @@ struct WeatherBriefView: View {
         .refreshable {
             await refreshCurrentWeather()
         }
+        .sheet(isPresented: $isLocationEditorPresented) {
+            WeatherLocationEditorView(
+                currentLocationLabel: weatherStore.report?.city ?? WeatherBriefLocation.fallback.city,
+                refreshWeather: {
+                    await weatherStore.load(minimumInterval: 0)
+                }
+            )
+        }
     }
 
     private func refreshCurrentWeather() async {
@@ -76,13 +85,19 @@ struct WeatherBriefView: View {
         isRefreshingWeather = true
         defer { isRefreshingWeather = false }
 
-        await loadTodayContent()
+        await loadTodayContent(useCurrentLocationIfAuthorized: true)
     }
 
-    private func loadTodayContent(minimumInterval: TimeInterval = 0) async {
-        async let weatherLoad: Void = weatherStore.load(minimumInterval: minimumInterval)
-        async let humorLoad: Void = humorStore.load(minimumInterval: minimumInterval)
-        _ = await (weatherLoad, humorLoad)
+    private func loadTodayContent(
+        minimumInterval: TimeInterval = 0,
+        useCurrentLocationIfAuthorized: Bool = false
+    ) async {
+        if useCurrentLocationIfAuthorized {
+            await weatherStore.loadWithCurrentLocation(minimumInterval: minimumInterval)
+        } else {
+            await weatherStore.load(minimumInterval: minimumInterval)
+        }
+        await humorStore.load(minimumInterval: minimumInterval)
     }
 
     private func runTopHourRefreshLoop() async {
@@ -157,7 +172,9 @@ struct WeatherBriefView: View {
             }
 
             if let locationNotice = weatherStore.locationNotice {
-                PavbotCacheNoticeBanner(text: locationNotice)
+                WeatherLocationNoticeBanner(text: locationNotice) {
+                    isLocationEditorPresented = true
+                }
             }
 
             LazyVGrid(
@@ -228,7 +245,9 @@ struct WeatherBriefView: View {
             }
 
             if let locationNotice = weatherStore.locationNotice {
-                PavbotCacheNoticeBanner(text: locationNotice)
+                WeatherLocationNoticeBanner(text: locationNotice) {
+                    isLocationEditorPresented = true
+                }
             }
 
             HStack(alignment: .top, spacing: 18) {
@@ -496,6 +515,161 @@ private struct TemperatureTimelineChartTile: View {
 
     private func temperatureColor(for value: Double) -> Color {
         WeatherTimelineChartData.temperatureColor(for: value)
+    }
+}
+
+private struct WeatherLocationNoticeBanner: View {
+    let text: String
+    let changeAction: () -> Void
+
+    var body: some View {
+        HStack(alignment: .center, spacing: 12) {
+            Label(text, systemImage: "location.fill")
+                .font(.footnote.weight(.semibold))
+                .foregroundStyle(.blue)
+                .fixedSize(horizontal: false, vertical: true)
+
+            Spacer(minLength: 8)
+
+            Button(action: changeAction) {
+                Text("Zmień")
+                    .font(.caption.weight(.bold))
+                    .padding(.horizontal, 10)
+                    .padding(.vertical, 7)
+            }
+            .buttonStyle(.plain)
+            .foregroundStyle(.blue)
+            .background(Color.blue.opacity(0.12), in: Capsule())
+            .accessibilityLabel("Zmień lokalizację prognozy")
+        }
+        .padding(12)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color.blue.opacity(0.10), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .accessibilityElement(children: .contain)
+        .accessibilityHint("Otwiera formularz ręcznego wyboru miasta dla pogody.")
+    }
+}
+
+private struct WeatherLocationEditorView: View {
+    @Environment(\.dismiss) private var dismiss
+    @Environment(PavbotHaptics.self) private var haptics
+    let currentLocationLabel: String
+    let refreshWeather: () async -> Void
+    @State private var query = ""
+    @State private var errorMessage: String?
+    @State private var isResolving = false
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 18) {
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Lokalizacja prognozy")
+                            .font(.title2.weight(.bold))
+                        Text("Wpisz miasto, dla którego Pavbot ma pobierać pogodę. Wybór zapisuje się lokalnie i działa także po ponownym uruchomieniu aplikacji.")
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+
+                    VStack(alignment: .leading, spacing: 8) {
+                        Text("Aktualnie")
+                            .font(.caption.weight(.semibold))
+                            .foregroundStyle(.secondary)
+                        Label(currentLocationLabel, systemImage: "location.fill")
+                            .font(.headline)
+                            .foregroundStyle(.primary)
+                    }
+                    .padding(16)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+
+                    VStack(alignment: .leading, spacing: 10) {
+                        TextField("Np. Warszawa, Gdańsk, Kraków", text: $query)
+                            .textInputAutocapitalization(.words)
+                            .autocorrectionDisabled()
+                            .textFieldStyle(.roundedBorder)
+                            .submitLabel(.done)
+                            .onSubmit {
+                                Task { await saveManualLocation() }
+                            }
+
+                        if let errorMessage {
+                            Label(errorMessage, systemImage: "exclamationmark.triangle.fill")
+                                .font(.footnote.weight(.semibold))
+                                .foregroundStyle(.orange)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                    }
+
+                    Button {
+                        Task { await saveManualLocation() }
+                    } label: {
+                        if isResolving {
+                            ProgressView()
+                                .frame(maxWidth: .infinity)
+                        } else {
+                            Label("Zapisz lokalizację", systemImage: "checkmark.circle.fill")
+                                .frame(maxWidth: .infinity)
+                        }
+                    }
+                    .buttonStyle(.borderedProminent)
+                    .disabled(isResolving || query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+
+                    Button(role: .none) {
+                        Task { await restoreDefaultLocation() }
+                    } label: {
+                        Label("Wróć do domyślnego Wrocławia", systemImage: "arrow.uturn.backward.circle")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.bordered)
+                    .disabled(isResolving)
+                }
+                .padding(20)
+            }
+            .background(Color(.systemGroupedBackground))
+            .navigationTitle("Pogoda")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Gotowe") {
+                        dismiss()
+                    }
+                }
+            }
+        }
+    }
+
+    private func saveManualLocation() async {
+        guard !isResolving else { return }
+        let trimmedQuery = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmedQuery.isEmpty else { return }
+        isResolving = true
+        errorMessage = nil
+        defer { isResolving = false }
+
+        do {
+            let location = try await WeatherLocationService().weatherLocation(for: trimmedQuery)
+            ManualWeatherLocationSettings.save(location)
+            await refreshWeather()
+            haptics.play(.success)
+            dismiss()
+        } catch {
+            errorMessage = "Nie udało się znaleźć tej lokalizacji. Sprawdź nazwę miasta albo spróbuj wpisać większą miejscowość w pobliżu."
+            haptics.play(.error)
+        }
+    }
+
+    private func restoreDefaultLocation() async {
+        guard !isResolving else { return }
+        isResolving = true
+        errorMessage = nil
+        defer { isResolving = false }
+
+        ManualWeatherLocationSettings.clear()
+        await refreshWeather()
+        haptics.play(.success)
+        dismiss()
     }
 }
 

@@ -151,6 +151,51 @@ enum PavbotLoadState: Equatable {
     }
 }
 
+struct PavbotInteractiveSurfaceConfiguration: Equatable {
+    let isReduceMotionEnabled: Bool
+
+    var pressedScale: CGFloat {
+        isReduceMotionEnabled ? 1.0 : 0.975
+    }
+
+    var shadowRadius: CGFloat {
+        isReduceMotionEnabled ? 0 : 12
+    }
+
+    var shadowOpacity: Double {
+        isReduceMotionEnabled ? 0 : 0.08
+    }
+
+    var borderOpacity: Double {
+        0.16
+    }
+}
+
+struct PavbotInteractiveSurfaceButtonStyle: ButtonStyle {
+    var tint: Color = .accentColor
+    var isSelected = false
+    var cornerRadius: CGFloat = 17
+
+    @Environment(\.accessibilityReduceMotion) private var accessibilityReduceMotion
+
+    func makeBody(configuration: Configuration) -> some View {
+        let surface = PavbotInteractiveSurfaceConfiguration(isReduceMotionEnabled: accessibilityReduceMotion)
+
+        configuration.label
+            .scaleEffect(configuration.isPressed ? surface.pressedScale : 1.0)
+            .background(
+                Color(.secondarySystemBackground),
+                in: RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+            )
+            .overlay {
+                RoundedRectangle(cornerRadius: cornerRadius, style: .continuous)
+                    .stroke(isSelected ? tint.opacity(0.70) : tint.opacity(surface.borderOpacity), lineWidth: isSelected ? 2 : 1)
+            }
+            .shadow(color: Color.black.opacity(surface.shadowOpacity), radius: surface.shadowRadius, x: 0, y: 6)
+            .animation(accessibilityReduceMotion ? nil : .spring(response: 0.22, dampingFraction: 0.82), value: configuration.isPressed)
+    }
+}
+
 struct PavbotScreenHeader: View {
     let title: String
     let subtitle: String

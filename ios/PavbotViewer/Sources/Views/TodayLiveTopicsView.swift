@@ -82,6 +82,7 @@ struct TodayLiveTopicsPanel: View {
 
 struct TodayLiveTopicDetailView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(PavbotHaptics.self) private var haptics
     let topic: TodayLiveTopic
     let source: TodayLiveTopicsSource
     let displayDate: String
@@ -144,6 +145,7 @@ struct TodayLiveTopicDetailView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
                         savedStore?.toggle(topic, source: source, displayDate: displayDate)
+                        haptics.play(.success)
                     } label: {
                         Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
                     }
@@ -164,6 +166,7 @@ private struct TodayLiveTopicsCarousel: View {
     let snapshot: TodayLiveTopicsSnapshot
     @Binding var selectedTopic: TodayLiveTopicSelection?
     let savedStore: TodayLiveTopicSavedStore
+    @Environment(PavbotHaptics.self) private var haptics
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @Environment(\.accessibilityReduceMotion) private var accessibilityReduceMotion
     @State private var selectedPairIndex = 0
@@ -306,15 +309,18 @@ private struct TodayLiveTopicsCarousel: View {
         ) else { return }
         guard !accessibilityReduceMotion else {
             selectedPairIndex = next
+            haptics.play(.selection)
             return
         }
         withAnimation(.spring(response: 0.38, dampingFraction: 0.86)) {
             selectedPairIndex = next
         }
+        haptics.play(.selection)
     }
 }
 
 private struct TodayLiveTopicsPairPage: View {
+    @Environment(PavbotHaptics.self) private var haptics
     let pair: TodayLiveTopicPair
     let source: TodayLiveTopicsSource
     let displayDate: String
@@ -327,6 +333,7 @@ private struct TodayLiveTopicsPairPage: View {
         VStack(spacing: layout.cardSpacing) {
             ForEach(pair.topics) { topic in
                 Button {
+                    haptics.play(.lightImpact)
                     selectedTopic = TodayLiveTopicSelection(
                         topic: topic,
                         source: source,
@@ -335,7 +342,7 @@ private struct TodayLiveTopicsPairPage: View {
                 } label: {
                     TodayLiveTopicRow(topic: topic, isSaved: savedStore.isSaved(topic))
                 }
-                .buttonStyle(.plain)
+                .buttonStyle(PavbotInteractiveSurfaceButtonStyle(tint: .orange, cornerRadius: 17))
                 .simultaneousGesture(cardSwipeGesture, including: .all)
                 .frame(height: layout.cardHeight)
             }
@@ -405,16 +412,12 @@ private struct TodayLiveTopicRow: View {
         }
         .padding(14)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 17, style: .continuous))
-        .overlay {
-            RoundedRectangle(cornerRadius: 17, style: .continuous)
-                .stroke(Color.orange.opacity(0.10), lineWidth: 1)
-        }
         .contentShape(RoundedRectangle(cornerRadius: 17, style: .continuous))
     }
 }
 
 private struct TodayLiveTopicsCarouselControls: View {
+    @Environment(PavbotHaptics.self) private var haptics
     let pageCount: Int
     @Binding var selectedIndex: Int
     let isPaused: Bool
@@ -469,6 +472,7 @@ private struct TodayLiveTopicsCarouselControls: View {
         withAnimation(.spring(response: 0.38, dampingFraction: 0.86)) {
             selectedIndex = next
         }
+        haptics.play(.selection)
     }
 }
 
@@ -499,6 +503,7 @@ private struct TodayLiveTopicsEmptyState: View {
 
 private struct TodayLiveTopicsSavedView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(PavbotHaptics.self) private var haptics
     let savedStore: TodayLiveTopicSavedStore
     @State private var query = ""
     @State private var selectedFilter: TodayLiveTopicsSavedFilter = .all
@@ -531,6 +536,9 @@ private struct TodayLiveTopicsSavedView: View {
                         }
                     }
                     .pickerStyle(.segmented)
+                    .onChange(of: selectedFilter) { _, _ in
+                        haptics.play(.selection)
+                    }
 
                     if savedTopics.isEmpty {
                         VStack(alignment: .leading, spacing: 10) {
@@ -547,6 +555,7 @@ private struct TodayLiveTopicsSavedView: View {
                         LazyVStack(spacing: 12) {
                             ForEach(savedTopics) { saved in
                                 Button {
+                                    haptics.play(.lightImpact)
                                     selectedSavedTopic = saved
                                 } label: {
                                     TodayLiveTopicsSavedRow(saved: saved)

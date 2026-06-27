@@ -7,12 +7,14 @@ struct PavbotViewerApp: App {
     @State private var router = AppRouter()
     @State private var audioPlayback = AudioPlaybackService()
     @State private var weatherBrief = WeatherBriefStore(
-        locationProvider: {
-            try await WeatherLocationService().currentWeatherLocation()
+        locationProvider: { mode in
+            guard mode != .none else { return nil }
+            return try await WeatherLocationService().currentWeatherLocation(mode: mode)
         }
     )
     @State private var todayHumor = TodayHumorStore()
     @State private var appearance = AppAppearanceStore()
+    @State private var haptics = PavbotHaptics()
     private let notificationDelegate = ArtifactNotificationDelegate()
 
     var body: some Scene {
@@ -24,6 +26,7 @@ struct PavbotViewerApp: App {
                 .environment(weatherBrief)
                 .environment(todayHumor)
                 .environment(appearance)
+                .environment(haptics)
                 .preferredColorScheme(appearance.preference.preferredColorScheme)
                 .onAppear {
                     notificationDelegate.install(router: router)

@@ -1688,13 +1688,14 @@ final class PavbotManifestTests: XCTestCase {
           "statusURL": "https://notify.example.com/status"
         }
         """.data(using: .utf8)!
-        var requestedURL: URL?
+        let requestedURLs = URLRequestCapture()
         let client = AppDefaultsClient(fetchData: { url in
-            requestedURL = url
+            await requestedURLs.record(url)
             return payload
         })
 
         let defaults = try await client.fetchDefaults(preferredServerURLString: "")
+        let requestedURL = await requestedURLs.first()
 
         XCTAssertEqual(
             requestedURL?.absoluteString,
@@ -1741,6 +1742,43 @@ final class PavbotManifestTests: XCTestCase {
 
         AppAppearancePreference.light.save(to: defaults)
         XCTAssertEqual(AppAppearancePreference.load(from: defaults), .light)
+    }
+
+    func testHapticPreferenceDefaultsToEnabledAndPersists() throws {
+        let suiteName = "PavbotHapticPreferenceTests-\(UUID().uuidString)"
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suiteName))
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+
+        XCTAssertTrue(PavbotHapticPreference.isEnabled(in: defaults))
+
+        PavbotHapticPreference.save(false, in: defaults)
+        XCTAssertFalse(PavbotHapticPreference.isEnabled(in: defaults))
+
+        PavbotHapticPreference.save(true, in: defaults)
+        XCTAssertTrue(PavbotHapticPreference.isEnabled(in: defaults))
+    }
+
+    @MainActor
+    func testPavbotHapticsRespectsInteractionTouchPreference() throws {
+        let suiteName = "PavbotHapticsTests-\(UUID().uuidString)"
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suiteName))
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+        let generator = SpyHapticGenerator()
+        let haptics = PavbotHaptics(defaults: defaults, generator: generator)
+
+        PavbotHapticPreference.save(false, in: defaults)
+        haptics.play(.selection)
+        XCTAssertTrue(generator.events.isEmpty)
+
+        PavbotHapticPreference.save(true, in: defaults)
+        haptics.play(.success)
+        XCTAssertEqual(generator.events, [.success])
+    }
+
+    func testPavbotInteractiveSurfaceConfigurationDisablesPressScaleWhenReduceMotionIsOn() {
+        XCTAssertEqual(PavbotInteractiveSurfaceConfiguration(isReduceMotionEnabled: false).pressedScale, 0.975)
+        XCTAssertEqual(PavbotInteractiveSurfaceConfiguration(isReduceMotionEnabled: true).pressedScale, 1.0)
+        XCTAssertGreaterThan(PavbotInteractiveSurfaceConfiguration(isReduceMotionEnabled: false).shadowRadius, 0)
     }
 
     func testAccessibilityShowcaseFeaturesCoverAppStoreAccessibilityClaims() {
@@ -2022,33 +2060,88 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.report?.id, "wroclaw-2026-06-25")
         XCTAssertEqual(cache.load()?.hourlyTemperature.count, 3)
         XCTAssertEqual(client.latestLocations.map { $0?.city }, ["Warszawa"])
-        XCTAssertEqual(store.locationNotice, "Prognoza dla: Warszawa.")
+        XCTAssertEqual(store.locationNotice, "Bieżąca prognoza dla: Warszawa.")
     }
 
     @MainActor
-    func testWeatherStoreLoadUsesLocationProviderWhenAvailable() async throws {
+    func testWeatherStoreLoadDoesNotUseLocationProviderDuringStartup() async throws {
         let report = try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: Self.dailyWeatherFixtureData)
         let defaults = UserDefaults(suiteName: UUID().uuidString)!
         let client = SpyWeatherBriefClient(latestReport: report)
+        var providerCalls = 0
         let store = WeatherBriefStore(
             client: client,
             cache: WeatherBriefCache(defaults: defaults),
             cooldown: WeatherRefreshCooldown(defaults: defaults),
             serverURLProvider: { URL(string: "https://notify.example.com") },
-            locationProvider: {
-                WeatherBriefLocation(latitude: 50.0614, longitude: 19.9366, city: "Kraków, Małopolskie")
+            locationProvider: { _ in
+                providerCalls += 1
+                return WeatherBriefLocation(latitude: 50.0614, longitude: 19.9366, city: "Kraków, Małopolskie")
             }
         )
 
         await store.load()
 
-        XCTAssertEqual(client.latestLocations.map { $0?.city }, ["Kraków, Małopolskie"])
-        XCTAssertEqual(store.locationNotice, "Prognoza dla: Kraków, Małopolskie.")
+        XCTAssertEqual(providerCalls, 0)
+        XCTAssertEqual(client.latestLocations.map { $0?.city }, [nil])
+        XCTAssertEqual(store.locationNotice, "Bieżąca prognoza dla: Wrocław.")
         XCTAssertEqual(store.state, .loaded)
     }
 
     @MainActor
-    func testWeatherStoreLoadFallsBackToWroclawWhenLocationFails() async throws {
+    func testWeatherStoreLoadUsesManualLocationWithoutCoreLocationProvider() async throws {
+        let report = try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: Self.dailyWeatherFixtureData)
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        let client = SpyWeatherBriefClient(latestReport: report)
+        var providerCalls = 0
+        let manualLocation = WeatherBriefLocation(latitude: 52.4064, longitude: 16.9252, city: "Poznań, Wielkopolskie")
+        let store = WeatherBriefStore(
+            client: client,
+            cache: WeatherBriefCache(defaults: defaults),
+            cooldown: WeatherRefreshCooldown(defaults: defaults),
+            serverURLProvider: { URL(string: "https://notify.example.com") },
+            locationProvider: { _ in
+                providerCalls += 1
+                return WeatherBriefLocation(latitude: 50.0614, longitude: 19.9366, city: "Kraków, Małopolskie")
+            },
+            manualLocationProvider: { manualLocation }
+        )
+
+        await store.load()
+
+        XCTAssertEqual(providerCalls, 0)
+        XCTAssertEqual(client.latestLocations.map { $0?.city }, ["Poznań, Wielkopolskie"])
+        XCTAssertEqual(store.locationNotice, "Bieżąca prognoza dla: Poznań, Wielkopolskie.")
+        XCTAssertEqual(store.state, .loaded)
+    }
+
+    @MainActor
+    func testWeatherStoreLoadWithCurrentLocationUsesProviderWhenAvailable() async throws {
+        let report = try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: Self.dailyWeatherFixtureData)
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        let client = SpyWeatherBriefClient(latestReport: report)
+        var requestedModes: [WeatherLocationMode] = []
+        let store = WeatherBriefStore(
+            client: client,
+            cache: WeatherBriefCache(defaults: defaults),
+            cooldown: WeatherRefreshCooldown(defaults: defaults),
+            serverURLProvider: { URL(string: "https://notify.example.com") },
+            locationProvider: { mode in
+                requestedModes.append(mode)
+                return WeatherBriefLocation(latitude: 50.0614, longitude: 19.9366, city: "Kraków, Małopolskie")
+            }
+        )
+
+        await store.loadWithCurrentLocation()
+
+        XCTAssertEqual(requestedModes, [.useIfAuthorized])
+        XCTAssertEqual(client.latestLocations.map { $0?.city }, ["Kraków, Małopolskie"])
+        XCTAssertEqual(store.locationNotice, "Bieżąca prognoza dla: Kraków, Małopolskie.")
+        XCTAssertEqual(store.state, .loaded)
+    }
+
+    @MainActor
+    func testWeatherStoreLoadWithCurrentLocationFallsBackToWroclawWhenLocationFails() async throws {
         let report = try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: Self.dailyWeatherFixtureData)
         let defaults = UserDefaults(suiteName: UUID().uuidString)!
         let client = SpyWeatherBriefClient(latestReport: report)
@@ -2057,12 +2150,13 @@ final class PavbotManifestTests: XCTestCase {
             cache: WeatherBriefCache(defaults: defaults),
             cooldown: WeatherRefreshCooldown(defaults: defaults),
             serverURLProvider: { URL(string: "https://notify.example.com") },
-            locationProvider: {
+            locationProvider: { mode in
+                XCTAssertEqual(mode, .useIfAuthorized)
                 throw WeatherLocationError.denied
             }
         )
 
-        await store.load()
+        await store.loadWithCurrentLocation()
 
         XCTAssertEqual(client.latestLocations.count, 1)
         XCTAssertNil(client.latestLocations.first!)
@@ -2157,6 +2251,19 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(fallback.city, "Wrocław")
         XCTAssertEqual(fallback.latitude, 51.1079)
         XCTAssertEqual(fallback.longitude, 17.0385)
+    }
+
+    func testManualWeatherLocationSettingsPersistAndClearLocation() {
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        let location = WeatherBriefLocation(latitude: 54.352, longitude: 18.6466, city: "Gdańsk, Pomorskie")
+
+        ManualWeatherLocationSettings.save(location, defaults: defaults)
+
+        XCTAssertEqual(ManualWeatherLocationSettings.location(defaults: defaults), location)
+
+        ManualWeatherLocationSettings.clear(defaults: defaults)
+
+        XCTAssertNil(ManualWeatherLocationSettings.location(defaults: defaults))
     }
 
     func testWeatherRangeTileModeTogglesBetweenValueAndChart() {
@@ -4335,11 +4442,31 @@ private final class SpySpeechAudioSession: SpeechAudioSessionConfiguring {
     }
 }
 
+private final class SpyHapticGenerator: PavbotHapticGenerating {
+    private(set) var events: [PavbotHapticEvent] = []
+
+    func play(_ event: PavbotHapticEvent) {
+        events.append(event)
+    }
+}
+
 private struct FailingWeatherBriefClient: WeatherBriefFetching {
     let error: Error
 
     func fetchLatestReport(from serverURL: URL, location: WeatherBriefLocation?) async throws -> DailyWeatherReport {
         throw error
+    }
+}
+
+private actor URLRequestCapture {
+    private var urls: [URL] = []
+
+    func record(_ url: URL) {
+        urls.append(url)
+    }
+
+    func first() -> URL? {
+        urls.first
     }
 }
 

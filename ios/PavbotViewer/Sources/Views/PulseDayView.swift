@@ -3,6 +3,7 @@ import SwiftUI
 struct PulseDayView: View {
     @Environment(ManifestStore.self) private var manifestStore
     @Environment(AppRouter.self) private var router
+    @Environment(PavbotHaptics.self) private var haptics
     @State private var liveTopicsStore = TodayLiveTopicsStore()
     @State private var savedStore = TodayLiveTopicSavedStore()
     @State private var selectedMode: PulseDayMode = .latest
@@ -74,6 +75,9 @@ struct PulseDayView: View {
         }
         .onChange(of: savedStore.savedTopics) { _, _ in
             liveTopicsStore.pruneHistory()
+        }
+        .onChange(of: selectedMode) { _, _ in
+            haptics.play(.selection)
         }
         .refreshable {
             await reload(minimumInterval: 0)

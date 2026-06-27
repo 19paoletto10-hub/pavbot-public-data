@@ -2,6 +2,7 @@ import SwiftUI
 
 struct AudioTimelineControls: View {
     @Environment(AudioPlaybackService.self) private var audioPlayback
+    @Environment(PavbotHaptics.self) private var haptics
 
     let artifact: PavbotArtifact
     let url: URL
@@ -79,6 +80,7 @@ struct AudioTimelineControls: View {
         } else {
             audioPlayback.play(artifact: artifact, url: url)
         }
+        haptics.play(.lightImpact)
     }
 
     private func handleSeekEditing(_ editing: Bool) {
@@ -88,6 +90,7 @@ struct AudioTimelineControls: View {
         } else {
             audioPlayback.seek(to: seekTime)
             isSeeking = false
+            haptics.play(.selection)
         }
     }
 }

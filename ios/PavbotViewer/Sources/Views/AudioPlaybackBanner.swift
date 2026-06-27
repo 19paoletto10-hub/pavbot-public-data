@@ -41,6 +41,7 @@ struct AudioPlaybackBannerSnapshot: Equatable {
 
 struct AudioPlaybackBanner: View {
     @Environment(AudioPlaybackService.self) private var audioPlayback
+    @Environment(PavbotHaptics.self) private var haptics
 
     var body: some View {
         if let snapshot = AudioPlaybackBannerSnapshot(service: audioPlayback) {
@@ -76,6 +77,7 @@ struct AudioPlaybackBanner: View {
 
                 Button {
                     snapshot.isPlaying ? audioPlayback.pause() : audioPlayback.resume()
+                    haptics.play(.lightImpact)
                 } label: {
                     Image(systemName: snapshot.playPauseSystemImage)
                         .font(.headline.weight(.bold))
@@ -88,6 +90,7 @@ struct AudioPlaybackBanner: View {
 
                 Button {
                     audioPlayback.stop()
+                    haptics.play(.warning)
                 } label: {
                     Image(systemName: "xmark")
                         .font(.caption.weight(.bold))

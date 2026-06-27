@@ -2,6 +2,7 @@ import SwiftUI
 
 struct SavedResearchArticlesView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(PavbotHaptics.self) private var haptics
     let store: SavedResearchArticleStore
 
     @State private var query = ""
@@ -25,6 +26,7 @@ struct SavedResearchArticlesView: View {
                     } else {
                         ForEach(articles) { saved in
                             Button {
+                                haptics.play(.lightImpact)
                                 selectedArticle = saved
                             } label: {
                                 SavedResearchArticleRow(saved: saved)
@@ -33,6 +35,7 @@ struct SavedResearchArticlesView: View {
                             .contextMenu {
                                 Button(role: .destructive) {
                                     store.remove(saved)
+                                    haptics.play(.warning)
                                 } label: {
                                     Label("Usuń z zapisanych", systemImage: "trash")
                                 }
@@ -110,6 +113,7 @@ private struct SavedResearchArticleRow: View {
 
 private struct SavedResearchArticleDetailView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(PavbotHaptics.self) private var haptics
     let saved: SavedResearchArticle
     let store: SavedResearchArticleStore
 
@@ -161,6 +165,7 @@ private struct SavedResearchArticleDetailView: View {
                 ToolbarItem(placement: .topBarLeading) {
                     Button(role: .destructive) {
                         store.remove(saved)
+                        haptics.play(.warning)
                         dismiss()
                     } label: {
                         Label("Usuń", systemImage: "trash")

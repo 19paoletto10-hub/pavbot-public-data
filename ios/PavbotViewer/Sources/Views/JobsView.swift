@@ -197,6 +197,7 @@ struct JobsHistoryPresentationSnapshot: Equatable {
 }
 
 private struct JobsModePicker: View {
+    @Environment(PavbotHaptics.self) private var haptics
     @Binding var selection: JobsViewMode
 
     var body: some View {
@@ -207,6 +208,9 @@ private struct JobsModePicker: View {
         }
         .pickerStyle(.segmented)
         .accessibilityLabel("Wybierz widok Jobs")
+        .onChange(of: selection) { _, _ in
+            haptics.play(.selection)
+        }
     }
 }
 

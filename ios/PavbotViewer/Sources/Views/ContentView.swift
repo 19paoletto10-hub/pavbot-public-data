@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @Environment(ManifestStore.self) private var store
     @Environment(AppRouter.self) private var router
+    @Environment(PavbotHaptics.self) private var haptics
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @State private var showLiveNotificationPrompt = false
@@ -19,12 +20,17 @@ struct ContentView: View {
         .safeAreaInset(edge: .bottom, spacing: 0) {
             AudioPlaybackBanner()
         }
+        .sensoryFeedback(.selection, trigger: router.selectedTab) { oldValue, newValue in
+            oldValue != newValue && haptics.isEnabled
+        }
         .task {
             if store.manifest == nil {
                 await store.load()
             }
-            await RemoteNotificationPermission.refreshRegistrationIfNeeded()
             store.startAutoRefreshLoop()
+            Task {
+                await RemoteNotificationPermission.refreshRegistrationIfNeeded()
+            }
         }
         .onAppear {
             if LiveNotificationOnboarding.shouldPrompt() {
@@ -50,8 +56,10 @@ struct ContentView: View {
         .onChange(of: scenePhase) { _, newPhase in
             guard newPhase == .active else { return }
             Task {
-                await RemoteNotificationPermission.refreshRegistrationIfNeeded()
                 await store.reload(minimumInterval: 60)
+            }
+            Task {
+                await RemoteNotificationPermission.refreshRegistrationIfNeeded()
             }
         }
     }
