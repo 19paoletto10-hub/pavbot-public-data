@@ -52,4 +52,3 @@ energia dla centrów danych AI oraz niezawodność lokalnych narzędzi agentowyc
 - Cyber: bez porad operacyjnych i bez szczegółów exploitacyjnych.
 - Chevron/Microsoft: podkreślić, że to projekt przyszły, z decyzją inwestycyjną
   oczekiwaną do końca 2026 roku i pierwszą energią w 2028 roku.
-

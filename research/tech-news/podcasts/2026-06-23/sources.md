@@ -32,4 +32,3 @@
 - Wątki cyberbezpieczeństwa: opis informacyjny na podstawie publicznych źródeł, bez instrukcji ofensywnych i bez porad operacyjnych.
 - Benchmarki OpenAI Daybreak i wyniki Jules: traktowane jako deklaracje źródeł pierwotnych, wymagające dalszej zewnętrznej walidacji.
 - Chevron/Microsoft Project Kilby: opisano jako projekt przyszły; decyzja inwestycyjna jest oczekiwana do końca 2026 roku, a pierwsza energia w 2028 roku.
-
