@@ -70,12 +70,18 @@ struct ResearchArticlePresentation: Hashable, Identifiable {
         )
         title = Self.moderatedTitle(for: article, topic: topic)
         let bodyParagraphs = Self.editorialParagraphs(from: article.body)
-        let structuredDeeperAnalysis = Self.cleanList(article.deeperAnalysis)
         let structuredContextPoints = Self.cleanList(article.contextPoints)
-        deeperAnalysis = structuredDeeperAnalysis
         contextPoints = structuredContextPoints
-        paragraphs = structuredDeeperAnalysis.isEmpty ? bodyParagraphs : structuredDeeperAnalysis
         standfirst = Self.standfirst(from: bodyParagraphs, fallback: article.summary)
+        let duplicateReferences: [String?] = [
+            standfirst,
+            article.whatHappened,
+            structuredContextPoints.first
+        ]
+        let structuredDeeperAnalysis = Self.filteredAnalysis(Self.cleanList(article.deeperAnalysis), references: duplicateReferences)
+        let filteredBodyParagraphs = Self.filteredAnalysis(bodyParagraphs, references: duplicateReferences)
+        deeperAnalysis = structuredDeeperAnalysis
+        paragraphs = structuredDeeperAnalysis.isEmpty ? filteredBodyParagraphs : structuredDeeperAnalysis
         summary = Self.moderatedSummary(for: article, topic: topic, standfirst: standfirst)
         bullets = structuredContextPoints.isEmpty
             ? Self.keyPoints(for: article, topic: topic, standfirst: standfirst)
@@ -121,7 +127,8 @@ struct ResearchArticlePresentation: Hashable, Identifiable {
     }
 
     private static func standfirst(from paragraphs: [String], fallback: String) -> String {
-        let candidate = paragraphs.first ?? cleanSourceNoise(fallback)
+        let fallbackCandidate = cleanSourceNoise(fallback)
+        let candidate = fallbackCandidate.isEmpty ? (paragraphs.first ?? "") : fallbackCandidate
         let sentences = sentences(from: candidate)
         if sentences.count >= 2 {
             return sentences.prefix(2).joined(separator: " ")
@@ -178,12 +185,42 @@ struct ResearchArticlePresentation: Hashable, Identifiable {
         return values.compactMap(cleanOptional)
     }
 
+    private static func filteredAnalysis(_ values: [String], references: [String?]) -> [String] {
+        let duplicateKeys = Set(references.compactMap(duplicateKey))
+        let filtered = values.filter { value in
+            guard let key = duplicateKey(value) else { return false }
+            return !duplicateKeys.contains(key)
+        }
+        return filtered.isEmpty && values.count == 1 ? values : filtered
+    }
+
+    private static func duplicateKey(_ value: String?) -> String? {
+        guard let value = cleanOptional(stripContextLabel(value)) else { return nil }
+        let normalized = value
+            .folding(options: [.caseInsensitive, .diacriticInsensitive], locale: .current)
+            .lowercased()
+            .replacingOccurrences(of: #"\s+"#, with: " ", options: .regularExpression)
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        return normalized.isEmpty ? nil : normalized
+    }
+
+    private static func stripContextLabel(_ value: String?) -> String? {
+        value?.replacingOccurrences(
+            of: #"^\s*Co\s+si[eę]\s+sta[lł]o\s*:\s*"#,
+            with: "",
+            options: [.regularExpression, .caseInsensitive]
+        )
+    }
+
     private static func sentences(from value: String) -> [String] {
         var sentences: [String] = []
         var current = ""
-        for character in value {
+        for index in value.indices {
+            let character = value[index]
             current.append(character)
-            if ".!?".contains(character) {
+            let nextIndex = value.index(after: index)
+            let isBoundary = nextIndex == value.endIndex || value[nextIndex].isWhitespace
+            if ".!?".contains(character), isBoundary {
                 let sentence = current.trimmingCharacters(in: .whitespacesAndNewlines)
                 if !sentence.isEmpty {
                     sentences.append(sentence)

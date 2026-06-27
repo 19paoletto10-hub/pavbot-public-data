@@ -20,9 +20,11 @@ server URL is configured in Settings.
 5. If `PAVBOT_DAILY_WEATHER_ENABLED=true`, the same service fetches Wrocław
    weather every day at 07:30 Europe/Warsaw and sends one APNs weather briefing
    to devices registered with `dailyWeatherEnabled=true`.
-6. If `PAVBOT_DAILY_HUMOR_ENABLED=true`, it refreshes a Reddit humor/meme digest
-   every `PAVBOT_DAILY_HUMOR_INTERVAL_HOURS` hours. This uses Reddit OAuth,
-   does not send APNs, and the iOS app reads it from `GET /v1/humor/latest`.
+6. If `PAVBOT_DAILY_HUMOR_ENABLED=true`, it serves a humor/meme digest for the
+   iOS `Dzisiaj` tab from `GET /v1/humor/latest`. In production this can run in
+   `PAVBOT_DAILY_HUMOR_SOURCE_MODE=external`, where a local Codex automation
+   reads logged-in Safari and publishes the curated digest with
+   `POST /v1/humor/digest`.
 
 ## MacBook + Cloudflare Tunnel Deploy
 
@@ -49,17 +51,41 @@ docker compose up -d --build
 cloudflared tunnel --config ~/.cloudflared/pavbot-notifier.yml run pavbot-notifier
 ```
 
-For the `Dzisiaj` humor panel, create a Reddit app and set:
+For the `Dzisiaj` humor panel, the preferred local-first setup is Codex + Safari:
 
 ```dotenv
+PAVBOT_DAILY_HUMOR_SOURCE_MODE=external
+PAVBOT_DAILY_HUMOR_INTERVAL_HOURS=2
+PAVBOT_HUMOR_INGEST_TOKEN=<long-random-token>
+PAVBOT_HUMOR_NOTIFIER_URL=https://notify.example.com
+PAVBOT_SAFARI_REDDIT_SUBREDDITS=Polska_wpz,memes,ProgrammerHumor,Polska,technology
+```
+
+The local Codex automation runs:
+
+```bash
+python3 scripts/collect_safari_reddit_humor.py --post
+```
+
+It uses the logged-in Safari session to read Reddit pages, builds the digest,
+and posts it to `/v1/humor/digest` with `Authorization: Bearer
+$PAVBOT_HUMOR_INGEST_TOKEN`. It must not vote, comment, share, post, or submit
+forms on Reddit.
+
+The legacy Reddit OAuth mode remains available by setting:
+
+```dotenv
+PAVBOT_DAILY_HUMOR_SOURCE_MODE=reddit_oauth
 PAVBOT_REDDIT_CLIENT_ID=...
 PAVBOT_REDDIT_CLIENT_SECRET=...
 PAVBOT_REDDIT_USER_AGENT=PavbotNotifier/1.0 by pavbot
 PAVBOT_REDDIT_SUBREDDITS=Polska_wpz,memes,ProgrammerHumor
 ```
 
-Without these Reddit credentials, `/v1/humor/latest` returns the local fallback
-and `/status.dailyHumor.lastError` explains that Reddit OAuth is not configured.
+Without an external Codex digest or Reddit OAuth credentials, `/v1/humor/latest`
+returns the local fallback. `/status.dailyHumor.sourceMode`,
+`/status.dailyHumor.producer`, and `/status.dailyHumor.lastError` explain which
+path is active.
 
 Public endpoints:
 
@@ -75,6 +101,8 @@ Public endpoints:
   `Dzisiaj` tab
 - `GET /v1/humor/latest` - latest curated Reddit humor/meme digest for the iOS
   `Dzisiaj` tab
+- `POST /v1/humor/digest` - authenticated Codex Safari ingest endpoint for the
+  iOS `Dzisiaj` humor panel
 - `POST /webhooks/github` - GitHub push webhook
 
 Full guide: `docs/live-ios-notifications-macbook-cloudflare.md`.

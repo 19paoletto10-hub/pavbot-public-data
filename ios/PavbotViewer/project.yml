@@ -10,7 +10,7 @@ settings:
     CODE_SIGN_STYLE: Automatic
     DEVELOPMENT_TEAM: SP774TZZU8
     ENABLE_USER_SCRIPT_SANDBOXING: NO
-    MARKETING_VERSION: "2.0.1"
+    MARKETING_VERSION: "2.0.2"
     SWIFT_VERSION: "5.9"
 configs:
   Debug: debug
@@ -27,7 +27,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer
         INFOPLIST_FILE: Sources/Info.plist
-        CURRENT_PROJECT_VERSION: "2.0.1"
+        CURRENT_PROJECT_VERSION: "260627.202"
       configs:
         Debug:
           CODE_SIGN_ENTITLEMENTS: Sources/PavbotViewer.entitlements
@@ -46,13 +46,25 @@ targets:
           if [ -n "${PAVBOT_BUILD_NUMBER:-}" ]; then
             BUILD_NUMBER="$PAVBOT_BUILD_NUMBER"
           else
-            REPO_ROOT="${SRCROOT}/../.."
-            COMMIT_EPOCH="$(git -C "$REPO_ROOT" log -1 --format=%ct 2>/dev/null || true)"
-            if [ -n "$COMMIT_EPOCH" ]; then
-              BUILD_NUMBER="$(date -u -r "$COMMIT_EPOCH" +%Y%m%d%H%M)"
-            else
-              BUILD_NUMBER="$(date -u +%Y%m%d%H%M)"
+            BUILD_DATE="$(date +%y%m%d)"
+            VERSION_DIGITS="$(printf '%s' "${MARKETING_VERSION:-}" | tr -cd '0-9')"
+            if [ -z "$VERSION_DIGITS" ]; then
+              echo "error: MARKETING_VERSION is empty or contains no digits"
+              exit 1
             fi
+            BUILD_NUMBER="${BUILD_DATE}.${VERSION_DIGITS}"
+          fi
+          invalid_build_number() {
+            echo "error: CFBundleVersion '$BUILD_NUMBER' must contain one to three period-separated numeric components"
+            exit 1
+          }
+          case "$BUILD_NUMBER" in
+            ''|*[!0-9.]*|.*|*..*|*.) invalid_build_number ;;
+          esac
+          COMPONENT_COUNT="$(printf '%s' "$BUILD_NUMBER" | awk -F '[.]' '{print NF}')"
+          FIRST_COMPONENT="${BUILD_NUMBER%%.*}"
+          if [ "$FIRST_COMPONENT" = "0" ] || [ "$COMPONENT_COUNT" -gt 3 ]; then
+            invalid_build_number
           fi
           set_build_number() {
             local plist_path="$1"
@@ -88,7 +100,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer.audioactivity
         INFOPLIST_FILE: AudioActivityExtension/Info.plist
-        CURRENT_PROJECT_VERSION: "2.0.1"
+        CURRENT_PROJECT_VERSION: "260627.202"
         CODE_SIGN_STYLE: Automatic
         DEVELOPMENT_TEAM: SP774TZZU8
         SWIFT_VERSION: "5.9"

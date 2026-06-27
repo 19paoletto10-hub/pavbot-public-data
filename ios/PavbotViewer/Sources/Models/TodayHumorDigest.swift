@@ -35,6 +35,10 @@ struct TodayHumorItem: Codable, Equatable, Identifiable {
     let score: Int?
     let comments: Int?
     let tags: [String]
+    let categoryLabel: String?
+    let postText: String?
+    let whyFunny: String?
+    let commentHighlights: [TodayHumorCommentHighlight]?
 
     var sourceLink: URL? {
         URL(string: sourceURL)
@@ -52,4 +56,11 @@ struct TodayHumorItem: Codable, Equatable, Identifiable {
         }
         return "\(score)"
     }
+}
+
+struct TodayHumorCommentHighlight: Codable, Equatable, Identifiable {
+    let id: String
+    let summary: String
+    let explanation: String
+    let score: Int?
 }

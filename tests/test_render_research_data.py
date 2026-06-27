@@ -61,6 +61,52 @@ class RenderResearchDataTest(unittest.TestCase):
             self.assertTrue(payload["articles"][0]["whyItMatters"].startswith("Ten sygnał jest ważny"))
             self.assertFalse(validator.validate_payload(payload))
 
+    def test_renders_structured_app_articles_with_distinct_full_description(self) -> None:
+        renderer = load_module("render_research_data", "scripts/render_research_data.py")
+        validator = load_module("validate_research_data", "scripts/validate_research_data.py")
+
+        with tempfile.TemporaryDirectory() as tmp:
+            report = Path(tmp) / "research" / "tech-news" / "runs" / "2026-06-27.md"
+            output = report.parents[1] / "data" / "2026-06-27-research.json"
+            report.parent.mkdir(parents=True)
+            report.write_text(self.structured_app_article_report(), encoding="utf-8")
+
+            payload = renderer.render_research_data(report, output)
+            article = payload["articles"][0]
+
+            self.assertEqual(article["title"], "GPT-5.6: oficjalne preview z bramką dostępu")
+            self.assertEqual(article["section"], "AI")
+            self.assertEqual(
+                article["standfirst"],
+                "OpenAI uruchomiło ograniczone preview GPT-5.6 Sol, Terra i Luna. Dostęp zaczyna się od zaufanych partnerów.",
+            )
+            self.assertEqual(
+                article["whatHappened"],
+                "OpenAI opublikowało oficjalny launch note, ceny modeli i system card dla serii GPT-5.6.",
+            )
+            self.assertEqual(
+                article["whyItMatters"],
+                "Launch pokazuje, że frontier AI przechodzi z publicznych premier do kontrolowanych wdrożeń z udziałem administracji USA.",
+            )
+            self.assertEqual(
+                article["deeperAnalysis"],
+                [
+                    "Kontekst release governance jest osobny od samego launchu: AP i TechCrunch opisują rządowy przegląd cyber, a OpenAI deklaruje, że ograniczenia nie powinny stać się normą dla wszystkich premier.",
+                    "System card dodaje warstwę ryzyka: seria jest klasyfikowana jako High w cyberbezpieczeństwie, lecz poniżej progu Cyber Critical, co ustawia dyskusję wokół dostępu, audytu i monitoringu agentów.",
+                ],
+            )
+            self.assertEqual(
+                article["contextPoints"],
+                [
+                    "Co się stało: OpenAI pokazało GPT-5.6 w ograniczonym preview.",
+                    "Dlaczego ważne: dostęp do najmocniejszych modeli coraz częściej zależy od bramek bezpieczeństwa.",
+                    "Na co patrzeć dalej: czy ogólna dostępność faktycznie ruszy w najbliższych tygodniach.",
+                ],
+            )
+            self.assertEqual(article["sources"][0]["title"], "OpenAI")
+            self.assertIn("AI", article["tags"])
+            self.assertFalse(validator.validate_payload(payload))
+
     def test_validator_rejects_missing_required_analysis_fields(self) -> None:
         validator = load_module("validate_research_data", "scripts/validate_research_data.py")
 
@@ -72,6 +118,26 @@ class RenderResearchDataTest(unittest.TestCase):
 
         self.assertIn("articles[0] missing required field: whyItMatters", errors)
         self.assertIn("articles[0].deeperAnalysis must contain at least 2 item(s)", errors)
+
+    def test_validator_rejects_repeated_full_description_and_long_standfirst(self) -> None:
+        validator = load_module("validate_research_data", "scripts/validate_research_data.py")
+
+        payload = json.loads(json.dumps(self.valid_payload()))
+        payload["runDate"] = "2026-06-27"
+        payload["articles"][0]["standfirst"] = "Pierwszy fakt. Drugi fakt. Trzeci fakt."
+        payload["articles"][0]["whatHappened"] = "OpenAI aktualizuje narzędzia AI."
+        payload["articles"][0]["deeperAnalysis"] = [
+            "OpenAI aktualizuje narzędzia AI.",
+            "Osobny akapit opisuje skutki dla zespołów produktowych.",
+        ]
+
+        errors = validator.validate_payload(payload)
+
+        self.assertIn("articles[0].standfirst must contain at most 2 sentence(s)", errors)
+        self.assertIn(
+            "articles[0].deeperAnalysis[0] must not duplicate standfirst, whatHappened, or first context point",
+            errors,
+        )
 
     def valid_payload(self) -> dict:
         return {
@@ -142,6 +208,39 @@ Drugi akapit pokazuje wpływ na decyzje publiczne i gospodarkę.
 ## Sources
 - [NATO](https://example.com/nato)
 - [MON](https://example.com/mon)
+"""
+
+    def structured_app_article_report(self) -> str:
+        return """# Daily Research Report: tech-news
+Date: 2026-06-27
+Status: Material update
+
+## Podsumowanie
+Dzisiejszy research pokazuje kontrolowane premiery frontier AI.
+
+## Nowe fakty
+- OpenAI uruchomiło GPT-5.6. Źródło: [OpenAI](https://openai.com/index/previewing-gpt-5-6-sol/).
+
+## Artykuły do aplikacji
+
+### GPT-5.6: oficjalne preview z bramką dostępu
+Sekcja: AI
+Priorytet: High
+Tagi: AI, OpenAI, Regulacje
+Standfirst: OpenAI uruchomiło ograniczone preview GPT-5.6 Sol, Terra i Luna. Dostęp zaczyna się od zaufanych partnerów.
+Co się stało: OpenAI opublikowało oficjalny launch note, ceny modeli i system card dla serii GPT-5.6.
+Dlaczego ważne: Launch pokazuje, że frontier AI przechodzi z publicznych premier do kontrolowanych wdrożeń z udziałem administracji USA.
+Pełny opis:
+Kontekst release governance jest osobny od samego launchu: AP i TechCrunch opisują rządowy przegląd cyber, a OpenAI deklaruje, że ograniczenia nie powinny stać się normą dla wszystkich premier.
+
+System card dodaje warstwę ryzyka: seria jest klasyfikowana jako High w cyberbezpieczeństwie, lecz poniżej progu Cyber Critical, co ustawia dyskusję wokół dostępu, audytu i monitoringu agentów.
+Kontekst:
+- Co się stało: OpenAI pokazało GPT-5.6 w ograniczonym preview.
+- Dlaczego ważne: dostęp do najmocniejszych modeli coraz częściej zależy od bramek bezpieczeństwa.
+- Na co patrzeć dalej: czy ogólna dostępność faktycznie ruszy w najbliższych tygodniach.
+Źródła:
+- [OpenAI](https://openai.com/index/previewing-gpt-5-6-sol/)
+- [TechCrunch](https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/)
 """
 
 

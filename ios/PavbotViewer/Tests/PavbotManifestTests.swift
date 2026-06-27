@@ -543,6 +543,47 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(presentation.deeperAnalysis.count, 2)
     }
 
+    func testResearchArticlePresentationUsesSummaryStandfirstAndFiltersRepeatedFullDescription() throws {
+        let article = ResearchNewsArticle(
+            id: "tech-gpt56",
+            title: "GPT-5.6 preview",
+            section: .ai,
+            body: [
+                "OpenAI opublikowało oficjalny launch note, ceny modeli i system card dla serii GPT-5.6.",
+                "Launch pokazuje, że frontier AI przechodzi do kontrolowanych wdrożeń.",
+                "OpenAI opublikowało oficjalny launch note, ceny modeli i system card dla serii GPT-5.6.",
+                "Osobny akapit wyjaśnia kontekst rządowego przeglądu cyber i dostęp dla zaufanych partnerów."
+            ].joined(separator: "\n\n"),
+            summary: "OpenAI uruchomiło ograniczone preview GPT-5.6 Sol, Terra i Luna. Dostęp zaczyna się od zaufanych partnerów.",
+            whatHappened: "OpenAI opublikowało oficjalny launch note, ceny modeli i system card dla serii GPT-5.6.",
+            whyItMatters: "Launch pokazuje, że frontier AI przechodzi do kontrolowanych wdrożeń.",
+            deeperAnalysis: [
+                "OpenAI opublikowało oficjalny launch note, ceny modeli i system card dla serii GPT-5.6.",
+                "Co się stało: OpenAI opublikowało oficjalny launch note, ceny modeli i system card dla serii GPT-5.6.",
+                "Osobny akapit wyjaśnia kontekst rządowego przeglądu cyber i dostęp dla zaufanych partnerów."
+            ],
+            contextPoints: [
+                "Co się stało: OpenAI opublikowało oficjalny launch note, ceny modeli i system card dla serii GPT-5.6.",
+                "Dlaczego ważne: dostęp do najmocniejszych modeli zależy od bramek bezpieczeństwa."
+            ],
+            sources: [ResearchNewsSource(title: "OpenAI", url: "https://openai.com/index/previewing-gpt-5-6-sol/")],
+            priority: "High",
+            tags: ["AI", "OpenAI"]
+        )
+
+        let presentation = ResearchArticlePresentation(article: article, topic: .techNews)
+
+        XCTAssertEqual(
+            presentation.standfirst,
+            "OpenAI uruchomiło ograniczone preview GPT-5.6 Sol, Terra i Luna. Dostęp zaczyna się od zaufanych partnerów."
+        )
+        XCTAssertEqual(
+            presentation.paragraphs,
+            ["Osobny akapit wyjaśnia kontekst rządowego przeglądu cyber i dostęp dla zaufanych partnerów."]
+        )
+        XCTAssertEqual(presentation.deeperAnalysis, presentation.paragraphs)
+    }
+
     func testResearchIssuePresentationBuildsPremiumPolskaSwiatBrief() throws {
         let package = TopicReportPackage(topic: .polskaSwiat, key: "2026-06-25", artifacts: [
             Self.artifact(id: "polska-run", type: .run, topic: "polska-swiat", path: "research/polska-swiat/runs/2026-06-25.md", date: "2026-06-25")
@@ -782,6 +823,31 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(magazine.sections[0].articles[0].ttsText.contains("Polska jest gospodarzem ważnych rozmów"))
         XCTAssertFalse(magazine.sections[0].articles[0].ttsText.contains("https://"))
         XCTAssertEqual(magazine.articleCount, 5)
+    }
+
+    func testMobileNewsSectionHidesSummaryWhenItDuplicatesArticleLead() throws {
+        let section = MobileNewsSection(
+            id: "polska",
+            title: "Polska",
+            summary: "Polska jest gospodarzem ważnych rozmów.",
+            articles: [
+                MobileNewsArticle(
+                    id: "polska-1",
+                    section: "Polska",
+                    title: "Gdańsk jako centrum rozmów",
+                    lead: "Polska jest gospodarzem ważnych rozmów.",
+                    facts: ["KPRM zapowiedziało spotkanie."],
+                    analysis: "To łączy dyplomację, gospodarkę i bezpieczeństwo.",
+                    whyItMatters: "Użytkownik dostaje jasny sens wydarzenia.",
+                    sources: [ResearchNewsSource(title: "KPRM", url: "https://www.gov.pl/web/premier")],
+                    tags: ["Polska"],
+                    ttsText: "Polska jest gospodarzem ważnych rozmów.",
+                    priority: "High"
+                )
+            ]
+        )
+
+        XCTAssertNil(section.displaySummary)
     }
 
     func testMobileNewsDataArtifactIsGroupedInAktualneReportPackages() throws {
@@ -2358,7 +2424,22 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(cached.items.count, 2)
         XCTAssertEqual(cached.items[0].title, "Kiedy deploy przechodzi za pierwszym razem")
         XCTAssertEqual(cached.items[0].scoreLabel, "1.2k")
+        XCTAssertEqual(cached.items[0].categoryLabel, "dev")
+        XCTAssertEqual(cached.items[0].postText, "Autor żartuje, że deploy przeszedł tak gładko, że zespół szuka ukrytej awarii.")
+        XCTAssertEqual(cached.items[0].whyFunny, "Zabawne, bo odwraca typowy stres po deployu: sukces wygląda podejrzanie.")
+        XCTAssertEqual(cached.items[0].commentHighlights?.count, 1)
+        XCTAssertEqual(cached.items[0].commentHighlights?.first?.summary, "Najbardziej realistyczne jest czekanie na awarię po zielonym CI.")
         XCTAssertFalse(cached.nextRefreshLabel.isEmpty)
+    }
+
+    func testTodayHumorDigestDecodesLegacyItemsWithoutRedditRadarDetails() throws {
+        let digest = try JSONDecoder.pavbot.decode(TodayHumorDigest.self, from: Self.legacyTodayHumorFixtureData)
+
+        XCTAssertEqual(digest.items[0].title, "Mój backlog po weekendzie")
+        XCTAssertNil(digest.items[0].categoryLabel)
+        XCTAssertNil(digest.items[0].postText)
+        XCTAssertNil(digest.items[0].whyFunny)
+        XCTAssertNil(digest.items[0].commentHighlights)
     }
 
     func testTodayHumorClientBuildsLatestRequest() throws {
@@ -4664,8 +4745,8 @@ final class PavbotManifestTests: XCTestCase {
     private static let todayHumorFixtureData = """
     {
       "id": "humor-2026-06-25-21",
-      "title": "Wieczorny przegląd memów",
-      "summary": "Na wieczór wpada krótki, trendowy przegląd humoru z sieci.",
+      "title": "<RR> Reddit Radar",
+      "summary": "Kategorie: dev. Najmocniej wybija się: <u>Kiedy deploy przechodzi za pierwszym razem</u>.",
       "generatedAt": "2026-06-25T19:15:00+00:00",
       "displayTime": "21:15",
       "nextRefreshAt": "2026-06-26T00:00:00+02:00",
@@ -4681,10 +4762,47 @@ final class PavbotManifestTests: XCTestCase {
           "imageURL": "https://i.redd.it/example.png",
           "score": 1200,
           "comments": 42,
-          "tags": ["dev", "tech"]
+          "tags": ["dev", "tech"],
+          "categoryLabel": "dev",
+          "postText": "Autor żartuje, że deploy przeszedł tak gładko, że zespół szuka ukrytej awarii.",
+          "whyFunny": "Zabawne, bo odwraca typowy stres po deployu: sukces wygląda podejrzanie.",
+          "commentHighlights": [
+            {
+              "id": "comment-1",
+              "summary": "Najbardziej realistyczne jest czekanie na awarię po zielonym CI.",
+              "explanation": "Komentarz śmieszy, bo trafia w znany rytuał zespołów: po zbyt łatwym deployu wszyscy podejrzewają błąd.",
+              "score": 44
+            }
+          ]
         },
         {
           "id": "safe2",
+          "title": "Mój backlog po weekendzie",
+          "caption": "Wygląda mało groźnie, dopóki go nie otworzysz.",
+          "sourceName": "Pavbot fallback",
+          "sourceURL": "",
+          "imageURL": null,
+          "score": null,
+          "comments": null,
+          "tags": ["praca"]
+        }
+      ]
+    }
+    """.data(using: .utf8)!
+
+    private static let legacyTodayHumorFixtureData = """
+    {
+      "id": "humor-legacy",
+      "title": "Wieczorny przegląd memów",
+      "summary": "Na wieczór wpada krótki, trendowy przegląd humoru z sieci.",
+      "generatedAt": "2026-06-25T19:15:00+00:00",
+      "displayTime": "21:15",
+      "nextRefreshAt": null,
+      "refreshIntervalHours": 3,
+      "source": "Reddit trend feed",
+      "items": [
+        {
+          "id": "legacy-safe",
           "title": "Mój backlog po weekendzie",
           "caption": "Wygląda mało groźnie, dopóki go nie otworzysz.",
           "sourceName": "Pavbot fallback",

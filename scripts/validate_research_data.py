@@ -3,12 +3,14 @@ from __future__ import annotations
 
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 from typing import Any
 
 
 SUPPORTED_TOPICS = {"tech-news", "polska-swiat"}
+STRICT_QUALITY_START_DATE = "2026-06-27"
 REQUIRED_FIELDS = {
     "schemaVersion",
     "topic",
@@ -73,11 +75,12 @@ def validate_payload(payload: Any) -> list[str]:
     validate_string_list(payload.get("summaryBullets"), "summaryBullets", errors, min_items=1)
     validate_checked_sources(payload.get("checkedSources"), errors, field_name="checkedSources")
     validate_podcast_topics(payload.get("podcastTopics"), errors)
-    validate_articles(payload.get("articles"), errors)
+    run_date = payload.get("runDate") if non_empty_string(payload.get("runDate")) else ""
+    validate_articles(payload.get("articles"), errors, run_date=run_date)
     return errors
 
 
-def validate_articles(value: Any, errors: list[str]) -> None:
+def validate_articles(value: Any, errors: list[str], run_date: str) -> None:
     if not isinstance(value, list) or not value:
         errors.append("articles must contain at least one item")
         return
@@ -100,6 +103,40 @@ def validate_articles(value: Any, errors: list[str]) -> None:
         validate_string_list(article.get("contextPoints"), f"{prefix}.contextPoints", errors, min_items=2)
         validate_string_list(article.get("tags"), f"{prefix}.tags", errors, min_items=1)
         validate_checked_sources(article.get("sources"), errors, field_name=f"{prefix}.sources")
+        validate_article_quality(article, prefix, errors, enforce_duplicate_rules=run_date >= STRICT_QUALITY_START_DATE)
+
+
+def validate_article_quality(
+    article: dict[str, Any],
+    prefix: str,
+    errors: list[str],
+    enforce_duplicate_rules: bool,
+) -> None:
+    standfirst = article.get("standfirst")
+    if non_empty_string(standfirst) and sentence_count(standfirst) > 2:
+        errors.append(f"{prefix}.standfirst must contain at most 2 sentence(s)")
+
+    references = [
+        normalize_for_comparison(article.get("standfirst")),
+        normalize_for_comparison(article.get("whatHappened")),
+    ]
+    context_points = article.get("contextPoints")
+    if isinstance(context_points, list) and context_points:
+        references.append(normalize_for_comparison(strip_context_label(context_points[0])))
+    references = [value for value in references if value]
+
+    if not enforce_duplicate_rules:
+        return
+
+    deeper = article.get("deeperAnalysis")
+    if not isinstance(deeper, list):
+        return
+    for index, paragraph in enumerate(deeper):
+        normalized = normalize_for_comparison(paragraph)
+        if normalized and normalized in references:
+            errors.append(
+                f"{prefix}.deeperAnalysis[{index}] must not duplicate standfirst, whatHappened, or first context point"
+            )
 
 
 def validate_checked_sources(value: Any, errors: list[str], field_name: str) -> None:
@@ -149,6 +186,33 @@ def non_empty_string(value: Any) -> bool:
 
 def valid_url_string(value: Any) -> bool:
     return non_empty_string(value) and (value.startswith("https://") or value.startswith("http://"))
+
+
+def sentence_count(value: str) -> int:
+    count = 0
+    for index, character in enumerate(value):
+        if character not in ".!?":
+            continue
+        next_character = value[index + 1] if index + 1 < len(value) else ""
+        if not next_character or next_character.isspace():
+            count += 1
+    return count or (1 if value.strip() else 0)
+
+
+def strip_context_label(value: Any) -> Any:
+    if not isinstance(value, str):
+        return value
+    return re.sub(r"^\s*co\s+si[eę]\s+sta[lł]o\s*:\s*", "", value, flags=re.IGNORECASE)
+
+
+def normalize_for_comparison(value: Any) -> str:
+    if not isinstance(value, str):
+        return ""
+    replacements = str.maketrans("ąćęłńóśźżĄĆĘŁŃÓŚŹŻ", "acelnoszzACELNOSZZ")
+    normalized = value.translate(replacements).casefold()
+    normalized = re.sub(r"\s+", " ", normalized)
+    normalized = re.sub(r"^[•\\-]\s*", "", normalized)
+    return normalized.strip()
 
 
 def parse_args() -> argparse.Namespace:

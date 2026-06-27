@@ -46,8 +46,62 @@ class ValidateMobileNewsDataTest(unittest.TestCase):
             self.assertIn("article[0].ttsText is required", result.stderr)
             self.assertIn("article[0].analysis is required", result.stderr)
 
+    def test_rejects_section_with_single_article(self) -> None:
+        payload = valid_payload()
+        payload["sections"][0]["articles"] = payload["sections"][0]["articles"][:1]
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "invalid.json"
+            path.write_text(json.dumps(payload, ensure_ascii=False) + "\n", encoding="utf-8")
+
+            result = subprocess.run(
+                [sys.executable, str(self.script_path), str(path)],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("sections[0].articles must contain at least 2 item(s)", result.stderr)
+
+    def test_rejects_summary_that_duplicates_article_lead(self) -> None:
+        payload = valid_payload()
+        payload["sections"][0]["summary"] = payload["sections"][0]["articles"][0]["lead"]
+        with tempfile.TemporaryDirectory() as tmp:
+            path = Path(tmp) / "invalid.json"
+            path.write_text(json.dumps(payload, ensure_ascii=False) + "\n", encoding="utf-8")
+
+            result = subprocess.run(
+                [sys.executable, str(self.script_path), str(path)],
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("sections[0].summary must not duplicate article lead", result.stderr)
+
 
 def valid_payload() -> dict:
+    sections = []
+    for section in ["Ogólne", "Polska", "Polityka", "Sprawy zagraniczne", "Technologia"]:
+        slug = {
+            "Ogólne": "ogolne",
+            "Polska": "polska",
+            "Polityka": "polityka",
+            "Sprawy zagraniczne": "sprawy-zagraniczne",
+            "Technologia": "technologia",
+        }[section]
+        sections.append(
+            {
+                "id": slug,
+                "title": section,
+                "summary": f"{section}: syntetyczny opis stanu informacji bez kopiowania leadu artykułu.",
+                "articles": [
+                    article_payload(slug, section, 1),
+                    article_payload(slug, section, 2),
+                ],
+            }
+        )
     return {
         "schemaVersion": 1,
         "topic": "aktualne-wydarzenia-mobile",
@@ -56,30 +110,25 @@ def valid_payload() -> dict:
         "status": "Material update",
         "headline": "Wydanie dnia",
         "leadParagraphs": ["Najważniejszy opis dnia."],
-        "sections": [
-            {
-                "id": "polska",
-                "title": "Polska",
-                "summary": "Najważniejsze sygnały krajowe.",
-                "articles": [
-                    {
-                        "id": "polska-1",
-                        "section": "Polska",
-                        "title": "Gdańsk jako centrum rozmów",
-                        "lead": "Polska jest gospodarzem ważnych rozmów.",
-                        "facts": ["KPRM zapowiedziało spotkanie."],
-                        "analysis": "To łączy dyplomację, gospodarkę i bezpieczeństwo.",
-                        "whyItMatters": "Użytkownik dostaje jasny sens wydarzenia.",
-                        "sources": [{"title": "KPRM", "url": "https://www.gov.pl/web/premier"}],
-                        "tags": ["Polska"],
-                        "ttsText": "Polska jest gospodarzem ważnych rozmów. To łączy dyplomację, gospodarkę i bezpieczeństwo.",
-                        "priority": "High",
-                    }
-                ],
-            }
-        ],
+        "sections": sections,
         "checkedSources": [{"title": "KPRM", "url": "https://www.gov.pl/web/premier"}],
         "audioArtifacts": [],
+    }
+
+
+def article_payload(slug: str, section: str, index: int) -> dict:
+    return {
+        "id": f"{slug}-{index}",
+        "section": section,
+        "title": f"{section}: temat {index}",
+        "lead": f"{section} ma osobny lead artykułu numer {index}.",
+        "facts": [f"Potwierdzony fakt {index} dla sekcji {section}."],
+        "analysis": f"Analiza numer {index} porządkuje znaczenie tematu w sekcji {section}.",
+        "whyItMatters": "Użytkownik dostaje jasny sens wydarzenia.",
+        "sources": [{"title": "KPRM", "url": f"https://www.gov.pl/web/premier?test={slug}-{index}"}],
+        "tags": [section],
+        "ttsText": f"{section}: temat {index}. {section} ma osobny lead artykułu numer {index}.",
+        "priority": "High" if index == 1 else "Medium",
     }
 
 

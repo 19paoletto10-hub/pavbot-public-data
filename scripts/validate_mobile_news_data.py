@@ -9,6 +9,7 @@ from typing import Any
 
 
 TOPIC = "aktualne-wydarzenia-mobile"
+EXPECTED_SECTION_TITLES = ["Ogólne", "Polska", "Polityka", "Sprawy zagraniczne", "Technologia"]
 REQUIRED_FIELDS = {
     "schemaVersion",
     "topic",
@@ -79,6 +80,10 @@ def validate_sections(value: Any, errors: list[str]) -> None:
         errors.append("sections must contain at least one item")
         return
 
+    titles = [section.get("title") for section in value if isinstance(section, dict)]
+    if titles != EXPECTED_SECTION_TITLES:
+        errors.append(f"sections must be exactly: {', '.join(EXPECTED_SECTION_TITLES)}")
+
     for index, section in enumerate(value):
         prefix = f"sections[{index}]"
         if not isinstance(section, dict):
@@ -90,12 +95,18 @@ def validate_sections(value: Any, errors: list[str]) -> None:
         for field in ("id", "title", "summary"):
             if field in section and not non_empty_string(section[field]):
                 errors.append(f"{prefix}.{field} must be a non-empty string")
+        if non_empty_string(section.get("summary")) and isinstance(section.get("articles"), list):
+            summary = normalized_text(section["summary"])
+            for article in section["articles"]:
+                if isinstance(article, dict) and summary == normalized_text(article.get("lead")):
+                    errors.append(f"{prefix}.summary must not duplicate article lead")
+                    break
         validate_articles(section.get("articles"), errors, section_prefix=prefix)
 
 
 def validate_articles(value: Any, errors: list[str], section_prefix: str) -> None:
-    if not isinstance(value, list) or not value:
-        errors.append(f"{section_prefix}.articles must contain at least one item")
+    if not isinstance(value, list) or len(value) < 2:
+        errors.append(f"{section_prefix}.articles must contain at least 2 item(s)")
         return
 
     for index, article in enumerate(value):
@@ -166,6 +177,12 @@ def valid_url_string(value: Any) -> bool:
 
 def contains_url(value: str) -> bool:
     return "http://" in value or "https://" in value
+
+
+def normalized_text(value: Any) -> str:
+    if not isinstance(value, str):
+        return ""
+    return " ".join(value.casefold().split())
 
 
 def parse_args() -> argparse.Namespace:

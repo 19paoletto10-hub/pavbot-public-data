@@ -38,11 +38,15 @@ materialnym twierdzeniu. Oddziel fakty od interpretacji.
 
 Dodatkowo dodaj blok `## Gazeta` do tego samego raportu Markdown. Blok ma mieć
 sekcje `### Ogólne`, `### Polska`, `### Polityka`, `### Sprawy zagraniczne` i
-`### Technologia`. Każda sekcja ma zawierać co najmniej jeden artykuł w formacie
-`#### Tytuł`, `Lead: ...`, `Fakty:` z listą punktów i linkami źródeł oraz
-`Analiza: ...`. Jeśli dana sekcja nie ma nowego faktu o wysokiej wadze
-publicznej, wpisz artykuł `Brak materialnej zmiany` i podaj sprawdzone źródła
-zamiast wypełniaczy.
+`### Technologia`. Każda sekcja musi zaczynać się od pola
+`Wprowadzenie: ...`, które ogólnie opisuje aktualny stan informacji w tej
+sekcji i nie może powtarzać leadu żadnego pojedynczego artykułu. Po
+`Wprowadzenie` każda sekcja musi zawierać minimum dwa artykuły w formacie
+`#### Tytuł`, `Lead: ...`, `Fakty:` z listą punktów i linkami źródeł,
+`Analiza: ...` oraz `Dlaczego to ważne: ...`. Jeśli dana sekcja nie ma drugiego
+nowego faktu o wysokiej wadze publicznej, wpisz drugi artykuł
+`Brak materialnej zmiany` lub `Co sprawdzono bez przełomu`, ale nadal podaj
+sprawdzone źródła, analizę i wyjaśnienie znaczenia zamiast wypełniaczy.
 
 Następnie przygotuj folder podcastu:
 `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/`. Utwórz `draft.md`,
@@ -68,6 +72,14 @@ Oba PDF-y mają wyglądać premium i być wygodne do czytania na telefonie:
 widocznymi linkami źródeł i dopracowanymi stopkami. Po renderze wyrenderuj
 strony do PNG i sprawdź wizualnie spacing, polskie znaki oraz brak ucięć lub
 nakładania tekstu.
+
+Wygeneruj strukturalne dane dla natywnego widoku `Research -> Aktualne`:
+`python3 scripts/render_mobile_news_data.py research/aktualne-wydarzenia-mobile/runs/YYYY-MM-DD-HHMM.md research/aktualne-wydarzenia-mobile/data/YYYY-MM-DD-HHMM-mobile-news.json`.
+Następnie uruchom walidację:
+`python3 scripts/validate_mobile_news_data.py research/aktualne-wydarzenia-mobile/data/YYYY-MM-DD-HHMM-mobile-news.json`.
+Jeśli walidacja zgłosi brak pięciu sekcji, mniej niż dwa artykuły w sekcji albo
+powielony opis sekcji i lead artykułu, popraw raport Markdown i wygeneruj JSON
+ponownie przed renderem audio i publikacją.
 
 Wygeneruj dwa warianty TTS:
 `bash research/aktualne-wydarzenia-mobile/tools/render_two_tts_variants.sh research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/script.md research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM`.

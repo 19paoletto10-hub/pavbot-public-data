@@ -664,10 +664,16 @@ private struct MobileNewsSectionBlock: View {
                 VStack(alignment: .leading, spacing: 3) {
                     Text(section.title)
                         .font(.headline.weight(.bold))
-                    Text(section.summary)
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                        .fixedSize(horizontal: false, vertical: true)
+                    if let summary = section.displaySummary {
+                        Text("Stan sekcji")
+                            .font(.caption2.weight(.bold))
+                            .foregroundStyle(.orange)
+                            .textCase(.uppercase)
+                        Text(summary)
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
                 }
             }
 
@@ -1848,7 +1854,7 @@ private struct ResearchArticleReader: View {
                         ResearchArticleBulletList(points: presentation.bullets, tint: issue.topic.tint)
                         Divider()
                         ResearchArticleBody(
-                            title: presentation.deeperAnalysis.isEmpty ? "Pełny opis" : "Głębsza analiza",
+                            title: "Pełny opis",
                             paragraphs: presentation.paragraphs,
                             keywords: presentation.keywords,
                             tint: issue.topic.tint

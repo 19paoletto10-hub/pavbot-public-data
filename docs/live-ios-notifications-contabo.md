@@ -119,6 +119,10 @@ APNS_TEAM_ID=SP774TZZU8
 APNS_KEY_ID=...
 APNS_BUNDLE_ID=com.paweltanski.pavbotviewer
 APNS_PRIVATE_KEY_PATH=/run/secrets/AuthKey_<APNS_KEY_ID>.p8
+PAVBOT_DAILY_HUMOR_ENABLED=true
+PAVBOT_DAILY_HUMOR_SOURCE_MODE=external
+PAVBOT_DAILY_HUMOR_INTERVAL_HOURS=2
+PAVBOT_HUMOR_INGEST_TOKEN=<long-random-token>
 ```
 
 Use `APNS_ENV=production` for TestFlight/App Store. Use `sandbox` only for
@@ -136,6 +140,15 @@ Then lock permissions:
 chmod 600 /opt/pavbot-notifier/.env
 chown 10001:10001 /opt/pavbot-notifier/secrets/AuthKey_<APNS_KEY_ID>.p8
 chmod 600 /opt/pavbot-notifier/secrets/AuthKey_<APNS_KEY_ID>.p8
+```
+
+For `Dzisiaj -> Śmiechowy radar`, use the same
+`PAVBOT_HUMOR_INGEST_TOKEN` in the local MacBook
+`backend/pavbot-notifier/.env`. The Codex automation reads Reddit through the
+logged-in Safari profile and publishes to:
+
+```bash
+python3 scripts/collect_safari_reddit_humor.py --post
 ```
 
 The Docker image runs as `appuser` with UID `10001`. If the APNs key remains

@@ -448,6 +448,10 @@ grep -q 'render_mobile_brief_pdf.py' research/aktualne-wydarzenia-mobile/automat
 grep -q 'render_mobile_newspaper_pdf.py' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'Ogólne' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'Sprawy zagraniczne' research/aktualne-wydarzenia-mobile/automation-prompt.md
+grep -q 'Wprowadzenie' research/aktualne-wydarzenia-mobile/automation-prompt.md
+grep -q 'minimum dwa artykuły' research/aktualne-wydarzenia-mobile/automation-prompt.md
+grep -q 'render_mobile_news_data.py' research/aktualne-wydarzenia-mobile/automation-prompt.md
+grep -q 'validate_mobile_news_data.py' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'render_two_tts_variants.sh' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'female-piper' research/aktualne-wydarzenia-mobile/tools/render_two_tts_variants.sh
 grep -q 'male-xtts' research/aktualne-wydarzenia-mobile/tools/render_two_tts_variants.sh

@@ -73,6 +73,16 @@ struct MobileNewsSection: Codable, Equatable, Identifiable {
     let summary: String
     let articles: [MobileNewsArticle]
 
+    var displaySummary: String? {
+        let trimmedSummary = summary.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmedSummary.isEmpty else { return nil }
+        let normalizedSummary = Self.normalizedText(trimmedSummary)
+        let duplicatesArticleLead = articles.contains { article in
+            normalizedSummary == Self.normalizedText(article.lead)
+        }
+        return duplicatesArticleLead ? nil : trimmedSummary
+    }
+
     var systemImage: String {
         switch title.folding(options: [.diacriticInsensitive, .caseInsensitive], locale: .current).lowercased() {
         case let value where value.contains("polska"):
@@ -88,6 +98,13 @@ struct MobileNewsSection: Codable, Equatable, Identifiable {
         default:
             "newspaper.fill"
         }
+    }
+
+    private static func normalizedText(_ value: String) -> String {
+        value
+            .folding(options: [.diacriticInsensitive, .caseInsensitive], locale: .current)
+            .split(whereSeparator: \.isWhitespace)
+            .joined(separator: " ")
     }
 }
 

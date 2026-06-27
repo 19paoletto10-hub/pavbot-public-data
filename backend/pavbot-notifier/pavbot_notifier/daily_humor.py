@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import asyncio
+import html
 import os
 import re
 from dataclasses import dataclass, field
@@ -14,6 +15,7 @@ from .core import load_json, save_json
 
 DEFAULT_REDDIT_SUBREDDITS = ("Polska_wpz", "memes", "ProgrammerHumor")
 DEFAULT_REDDIT_USER_AGENT = "PavbotNotifier/1.0 by pavbot"
+DEFAULT_HUMOR_SOURCE_MODE = "reddit_oauth"
 
 
 class RedditConfigurationError(RuntimeError):
@@ -39,6 +41,7 @@ class DailyHumorConfig:
     interval_hours: int
     timezone_name: str
     max_items: int
+    source_mode: str = DEFAULT_HUMOR_SOURCE_MODE
     sources: list[tuple[str, str]] = field(
         default_factory=lambda: reddit_sources_for_subreddits(DEFAULT_REDDIT_SUBREDDITS)
     )
@@ -58,6 +61,10 @@ class DailyHumorConfig:
     def reddit_oauth_configured(self) -> bool:
         return bool(self.reddit_client_id.strip() and self.reddit_client_secret.strip())
 
+    @property
+    def external_source(self) -> bool:
+        return self.source_mode.strip().lower() == "external"
+
     @classmethod
     def from_env(cls) -> "DailyHumorConfig":
         subreddits = parse_subreddits(os.environ.get("PAVBOT_REDDIT_SUBREDDITS", ""))
@@ -66,6 +73,8 @@ class DailyHumorConfig:
             interval_hours=max(1, int(os.environ.get("PAVBOT_DAILY_HUMOR_INTERVAL_HOURS", "3"))),
             timezone_name=os.environ.get("PAVBOT_DAILY_HUMOR_TIMEZONE", "Europe/Warsaw"),
             max_items=max(1, int(os.environ.get("PAVBOT_DAILY_HUMOR_MAX_ITEMS", "6"))),
+            source_mode=os.environ.get("PAVBOT_DAILY_HUMOR_SOURCE_MODE", DEFAULT_HUMOR_SOURCE_MODE).strip()
+            or DEFAULT_HUMOR_SOURCE_MODE,
             sources=reddit_sources_for_subreddits(subreddits),
             reddit_client_id=os.environ.get("PAVBOT_REDDIT_CLIENT_ID", "").strip(),
             reddit_client_secret=os.environ.get("PAVBOT_REDDIT_CLIENT_SECRET", "").strip(),
@@ -119,11 +128,24 @@ async def humor_scheduler_loop(
             save_humor_error(storage_dir=storage_dir, config=config, error=exc, generated_at=datetime.now(timezone.utc))
 
 
-async def latest_humor_digest(*, config: DailyHumorConfig, storage_dir: Path) -> dict[str, Any]:
+async def latest_humor_digest(
+    *,
+    config: DailyHumorConfig,
+    storage_dir: Path,
+    now: datetime | None = None,
+) -> dict[str, Any]:
     state_path = storage_dir / "last-daily-humor.json"
     state = load_json(state_path, {})
     cached = state.get("lastDigest")
-    now = datetime.now(timezone.utc)
+    now = now or datetime.now(timezone.utc)
+    if config.external_source:
+        if isinstance(cached, dict):
+            return cached
+        return build_humor_digest(
+            items=fallback_humor_items(config.max_items),
+            config=config,
+            generated_at=now,
+        )
     if isinstance(cached, dict) and humor_digest_is_current_window(cached, now=now, config=config):
         return cached
     result = await run_humor_refresh_once(config=config, storage_dir=storage_dir, generated_at=now)
@@ -141,6 +163,22 @@ async def run_humor_refresh_once(
     state_path = storage_dir / "last-daily-humor.json"
     state = load_json(state_path, {})
     cached = state.get("lastDigest")
+    if config.external_source:
+        if isinstance(cached, dict):
+            return {
+                "status": "external-cached",
+                "skippedReason": "Humor digest is supplied by external Codex Safari automation",
+                "digest": cached,
+            }
+        return {
+            "status": "fallback",
+            "skippedReason": "No external Codex Safari humor digest has been published yet",
+            "digest": build_humor_digest(
+                items=fallback_humor_items(config.max_items),
+                config=config,
+                generated_at=generated_at,
+            ),
+        }
     if (
         not force
         and isinstance(cached, dict)
@@ -250,6 +288,8 @@ def parse_reddit_listing(payload: dict[str, Any], *, source_name: str) -> list[d
         permalink = str(data.get("permalink") or "")
         source_url = "https://www.reddit.com" + permalink if permalink.startswith("/") else permalink
         image_url = reddit_image_url(data)
+        tags = tags_for_title(title, source_name)
+        category_label = category_label_for(tags, source_name)
         items.append(
             {
                 "id": str(data.get("id") or stable_id(title)),
@@ -260,7 +300,11 @@ def parse_reddit_listing(payload: dict[str, Any], *, source_name: str) -> list[d
                 "imageURL": image_url,
                 "score": int(data.get("score") or 0),
                 "comments": int(data.get("num_comments") or 0),
-                "tags": tags_for_title(title, source_name),
+                "tags": tags,
+                "categoryLabel": category_label,
+                "postText": clean_text(str(data.get("selftext") or "")) or None,
+                "whyFunny": why_funny_for(title, category_label),
+                "commentHighlights": [],
             }
         )
     return items
@@ -303,8 +347,8 @@ def build_humor_digest(
     selected = items[: config.max_items] or fallback_humor_items(config.max_items)
     return {
         "id": f"humor-{local_generated_at.strftime('%Y-%m-%d-%H')}",
-        "title": humor_title(local_generated_at.hour),
-        "summary": humor_summary(local_generated_at.hour, selected),
+        "title": "<RR> Reddit Radar",
+        "summary": humor_summary(selected),
         "generatedAt": generated_at.isoformat(),
         "displayTime": local_generated_at.strftime("%H:%M"),
         "nextRefreshAt": next_refresh.isoformat(),
@@ -322,10 +366,12 @@ def daily_humor_status(*, storage_dir: Path, config: DailyHumorConfig, now: date
         "enabled": config.enabled,
         "intervalHours": config.interval_hours,
         "timezone": config.timezone_name,
+        "sourceMode": config.source_mode,
         "nextRefreshAt": state.get("nextRefreshAt") or next_humor_refresh(now, config).isoformat(),
         "lastRefreshAt": state.get("lastRefreshAt"),
         "lastError": state.get("lastError"),
         "lastDigest": compact_humor_digest(digest),
+        "producer": state.get("producer"),
         "redditOAuthConfigured": config.reddit_oauth_configured,
         "redditSubreddits": list(config.reddit_subreddits),
         "sources": [{"name": name, "url": url} for name, url in config.sources],
@@ -375,6 +421,32 @@ def save_humor_error(*, storage_dir: Path, config: DailyHumorConfig, error: Exce
     save_json(state_path, state)
 
 
+def save_external_humor_digest(
+    *,
+    digest: dict[str, Any],
+    storage_dir: Path,
+    received_at: datetime | None = None,
+) -> dict[str, Any]:
+    received_at = received_at or datetime.now(timezone.utc)
+    state_path = storage_dir / "last-daily-humor.json"
+    state = load_json(state_path, {})
+    state["lastDigest"] = digest
+    state["lastRefreshAt"] = received_at.isoformat()
+    state["nextRefreshAt"] = digest.get("nextRefreshAt")
+    state["lastError"] = None
+    state["producer"] = "codex-safari"
+    save_json(state_path, state)
+    return {"status": "stored", "digest": digest}
+
+
+def humor_ingest_token_is_valid(authorization: str | None, *, expected_token: str) -> bool:
+    expected_token = expected_token.strip()
+    if not expected_token or not authorization:
+        return False
+    scheme, _, token = authorization.partition(" ")
+    return scheme.lower() == "bearer" and token.strip() == expected_token
+
+
 def compact_humor_digest(digest: dict[str, Any] | None) -> dict[str, Any] | None:
     if not isinstance(digest, dict):
         return None
@@ -406,6 +478,10 @@ def fallback_humor_items(limit: int) -> list[dict[str, Any]]:
             "score": None,
             "comments": None,
             "tags": tags,
+            "categoryLabel": category_label_for(tags, "Pavbot fallback"),
+            "postText": None,
+            "whyFunny": why_funny_for(title, category_label_for(tags, "Pavbot fallback")),
+            "commentHighlights": [],
         }
         for title, caption, tags in base[:limit]
     ]
@@ -417,25 +493,21 @@ def humor_source_label(items: list[dict[str, Any]]) -> str:
     return "Reddit trend feed"
 
 
-def humor_title(hour: int) -> str:
-    if 5 <= hour < 11:
-        return "Poranny radar memów"
-    if 11 <= hour < 16:
-        return "Południowa dawka śmiechu"
-    if 16 <= hour < 22:
-        return "Wieczorny przegląd memów"
-    return "Nocny tryb śmiechu"
-
-
-def humor_summary(hour: int, items: list[dict[str, Any]]) -> str:
-    top = clean_text(str(items[0].get("title") or "")) if items else "kilka lekkich tematów"
-    if 5 <= hour < 11:
-        return f"Na rozruch dnia wybrane są lekkie trendy i memy, które nie wymagają kawy z kroplówki. Najmocniej wybija się: {top}."
-    if 11 <= hour < 16:
-        return f"W środku dnia Pavbot zebrał świeże memowe sygnały do krótkiej przerwy. Najbardziej klikalny trop: {top}."
-    if 16 <= hour < 22:
-        return f"Na wieczór wpada krótki, trendowy przegląd humoru z sieci. Najlepiej niesie się: {top}."
-    return f"Nocny zestaw jest krótki i lekki, bez ciężkiego scrollowania. Najciekawszy trop: {top}."
+def humor_summary(items: list[dict[str, Any]]) -> str:
+    if not items:
+        return "Kategorie: trend. Najmocniej wybija się: <u>kilka lekkich tematów</u>."
+    categories: list[str] = []
+    for item in items:
+        label = clean_text(str(item.get("categoryLabel") or ""))
+        if not label:
+            tags = item.get("tags") if isinstance(item.get("tags"), list) else []
+            label = category_label_for(tags, str(item.get("sourceName") or ""))
+        for raw_part in label.split(","):
+            part = clean_text(raw_part)
+            if part and part not in categories:
+                categories.append(part)
+    top = html.escape(clean_text(str(items[0].get("title") or "")) or "kilka lekkich tematów", quote=False)
+    return f"Kategorie: {', '.join(categories[:5]) or 'trend'}. Najmocniej wybija się: <u>{top}</u>."
 
 
 def playful_caption(title: str) -> str:
@@ -447,6 +519,33 @@ def playful_caption(title: str) -> str:
     if len(cleaned) < 80:
         return "Krótki memowy sygnał, dobry do szybkiego przewinięcia."
     return "Dłuższy żart z aktualnego feedu, warto otworzyć źródło po kontekst."
+
+
+def category_label_for(tags: list[str], source_name: str) -> str:
+    values: list[str] = []
+    for tag in tags:
+        normalized = clean_text(str(tag))
+        if not normalized or normalized.lower() == "trend":
+            continue
+        if normalized not in values:
+            values.append(normalized)
+    if len(values) > 1:
+        values = [value for value in values if value.lower() != "memy"] or values
+    if not values:
+        source = clean_text(source_name).removeprefix("r/")
+        values.append(source or "trend")
+    return ", ".join(values[:3])
+
+
+def why_funny_for(title: str, category_label: str) -> str:
+    lowered = f"{title} {category_label}".lower()
+    if "ai" in lowered or "chatgpt" in lowered or "llm" in lowered:
+        return "Zabawne, bo AI występuje tu jak zbyt pewny siebie uczestnik codziennego rytuału, a ludzie dopisują puentę."
+    if "dev" in lowered or "programmer" in lowered or "deploy" in lowered or "code" in lowered:
+        return "Zabawne, bo przerabia znany stres techniczny na małą scenkę z pracy."
+    if "pl" in lowered or "polska" in lowered:
+        return "Zabawne, bo lokalny internet bierze zwykły temat i robi z niego wspólny rytuał komentowania."
+    return "Zabawne, bo temat jest prosty, rozpoznawalny i zostawia miejsce na szybkie puenty w komentarzach."
 
 
 def tags_for_title(title: str, source_name: str) -> list[str]:

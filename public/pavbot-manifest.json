@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-06-27T19:39:27.217217+00:00",
+  "generatedAt": "2026-06-27T21:28:09.404691+00:00",
   "rawBaseUrl": "",
   "automations": [
     {
@@ -144,7 +144,17 @@
       "title": "Daily Research Report: tech-news",
       "path": "research/tech-news/runs/2026-06-27.md",
       "url": "research/tech-news/runs/2026-06-27.md",
-      "sizeBytes": 15160,
+      "sizeBytes": 24284,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/tech-news/data/2026-06-27-research.json",
+      "type": "researchData",
+      "topic": "tech-news",
+      "title": "Research data",
+      "path": "research/tech-news/data/2026-06-27-research.json",
+      "url": "research/tech-news/data/2026-06-27-research.json",
+      "sizeBytes": 19405,
       "date": "2026-06-27"
     },
     {
@@ -214,7 +224,7 @@
       "title": "2026-06-27-tech-news.pdf",
       "path": "research/tech-news/pdfs/2026-06-27-tech-news.pdf",
       "url": "research/tech-news/pdfs/2026-06-27-tech-news.pdf",
-      "sizeBytes": 57302,
+      "sizeBytes": 69481,
       "date": "2026-06-27"
     },
     {
@@ -485,7 +495,17 @@
       "title": "Daily Research Report: polska-swiat",
       "path": "research/polska-swiat/runs/2026-06-27.md",
       "url": "research/polska-swiat/runs/2026-06-27.md",
-      "sizeBytes": 12950,
+      "sizeBytes": 22720,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/polska-swiat/data/2026-06-27-research.json",
+      "type": "researchData",
+      "topic": "polska-swiat",
+      "title": "Research data",
+      "path": "research/polska-swiat/data/2026-06-27-research.json",
+      "url": "research/polska-swiat/data/2026-06-27-research.json",
+      "sizeBytes": 18156,
       "date": "2026-06-27"
     },
     {
@@ -555,7 +575,7 @@
       "title": "2026-06-27-polska-swiat.pdf",
       "path": "research/polska-swiat/pdfs/2026-06-27-polska-swiat.pdf",
       "url": "research/polska-swiat/pdfs/2026-06-27-polska-swiat.pdf",
-      "sizeBytes": 54075,
+      "sizeBytes": 67194,
       "date": "2026-06-27"
     },
     {
@@ -601,6 +621,17 @@
       "sizeBytes": 53554,
       "date": "2026-06-27",
       "time": "01:41"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/data/2026-06-27-2016-jobs.json",
+      "type": "jobsData",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "Jobs data",
+      "path": "research/llm-ai-jobs-wroclaw/data/2026-06-27-2016-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-27-2016-jobs.json",
+      "sizeBytes": 8390,
+      "date": "2026-06-27",
+      "time": "20:16"
     },
     {
       "id": "research/llm-ai-jobs-wroclaw/data/2026-06-27-0141-jobs.json",
@@ -3347,7 +3378,7 @@
       "title": "Automation Prompt: Pavbot Tech Research 08:00",
       "path": "research/tech-news/automation-research-prompt.md",
       "url": "research/tech-news/automation-research-prompt.md",
-      "sizeBytes": 3988
+      "sizeBytes": 4839
     },
     {
       "id": "research/tech-news/automation-podcast-prompt.md",
@@ -3428,7 +3459,7 @@
       "title": "Automation Prompt: Pavbot Polska Świat Research 08:30",
       "path": "research/polska-swiat/automation-research-prompt.md",
       "url": "research/polska-swiat/automation-research-prompt.md",
-      "sizeBytes": 4199
+      "sizeBytes": 5081
     },
     {
       "id": "research/polska-swiat/automation-podcast-prompt.md",
@@ -3473,7 +3504,7 @@
       "title": "Automation Prompt: LLM/AI Jobs Wroclaw Research",
       "path": "research/llm-ai-jobs-wroclaw/automation-research-prompt.md",
       "url": "research/llm-ai-jobs-wroclaw/automation-research-prompt.md",
-      "sizeBytes": 6241
+      "sizeBytes": 7278
     },
     {
       "id": "research/codex-agent-automation/topic.md",

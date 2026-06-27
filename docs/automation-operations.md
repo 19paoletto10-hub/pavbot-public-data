@@ -57,6 +57,11 @@ polskich znaków diakrytycznych i zapisz
   Europe/Warsaw and updates `research/puls-dnia-news` with a timestamped
   Markdown report plus `data/YYYY-MM-DD-HHMM-pulse-news.json`. ID:
   `pavbot-puls-dnia-news-3h`.
+- `Pavbot Reddit Safari Humor Radar` runs at 00:06, 02:06, 04:06, 06:06,
+  08:06, 10:06, 12:06, 14:06, 16:06, 18:06, 20:06 and 22:06 Europe/Warsaw.
+  It uses the logged-in local Safari session to publish `Śmiechowy radar`
+  data to `https://notify.paweltanski.com/v1/humor/digest`. ID:
+  `pavbot-reddit-safari-humor-radar`.
 
 ## Publishing Contract
 

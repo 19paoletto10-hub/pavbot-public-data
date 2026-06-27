@@ -20,6 +20,7 @@ SUMMARY_HEADINGS = ["Podsumowanie", "Summary", "Executive Summary"]
 FACT_HEADINGS = ["Nowe fakty", "New facts", "Key facts", "Najważniejsze fakty"]
 SOURCE_HEADINGS = ["Źródła", "Sources", "Source", "Zakres sprawdzony", "Scope Checked"]
 PODCAST_HEADINGS = ["Tematy do podcastu", "Podcast topics"]
+APP_ARTICLE_HEADINGS = ["Artykuły do aplikacji", "Artykuly do aplikacji", "App articles"]
 
 TECH_SECTIONS = {
     "Cyber": ["cve", "cyber", "security", "malware", "phishing", "vulnerability", "bezpieczeństwo cyfrowe"],
@@ -57,9 +58,12 @@ def parse_report(markdown: str, markdown_path: Path, topic: str) -> dict[str, An
     sections = markdown_sections(markdown)
     lead_paragraphs = clean_paragraphs(section(sections, SUMMARY_HEADINGS))
     facts = section(sections, FACT_HEADINGS)
+    app_articles = section(sections, APP_ARTICLE_HEADINGS)
     source_text = section(sections, SOURCE_HEADINGS)
     checked_sources = extract_sources(source_text) or extract_sources(markdown)
-    articles = parse_articles(facts, topic=topic, package_key=markdown_path.stem, fallback_sources=checked_sources)
+    articles = parse_app_articles(app_articles, topic=topic, package_key=markdown_path.stem, fallback_sources=checked_sources)
+    if not articles:
+        articles = parse_articles(facts, topic=topic, package_key=markdown_path.stem, fallback_sources=checked_sources)
     if not articles and lead_paragraphs:
         articles = fallback_articles(lead_paragraphs, topic=topic, package_key=markdown_path.stem, fallback_sources=checked_sources)
 
@@ -136,6 +140,143 @@ def parse_articles(facts: str, topic: str, package_key: str, fallback_sources: l
         }
         articles.append(article)
     return articles
+
+
+APP_FIELD_LABELS = {
+    "sekcja": "section",
+    "section": "section",
+    "priorytet": "priority",
+    "priority": "priority",
+    "tagi": "tags",
+    "tags": "tags",
+    "standfirst": "standfirst",
+    "lead": "standfirst",
+    "co sie stalo": "whatHappened",
+    "what happened": "whatHappened",
+    "dlaczego wazne": "whyItMatters",
+    "why it matters": "whyItMatters",
+    "pelny opis": "deeperAnalysis",
+    "pełny opis": "deeperAnalysis",
+    "glebsza analiza": "deeperAnalysis",
+    "głębsza analiza": "deeperAnalysis",
+    "deeper analysis": "deeperAnalysis",
+    "kontekst": "contextPoints",
+    "context": "contextPoints",
+    "zrodla": "sources",
+    "źródła": "sources",
+    "sources": "sources",
+}
+
+
+def parse_app_articles(
+    markdown: str,
+    topic: str,
+    package_key: str,
+    fallback_sources: list[dict[str, str]],
+) -> list[dict[str, Any]]:
+    articles: list[dict[str, Any]] = []
+    for index, (title, block) in enumerate(app_article_blocks(markdown)):
+        fields = app_article_fields(block)
+        body = clean_text(" ".join([title, block]))
+        if not body:
+            continue
+
+        standfirst = field_text(fields, "standfirst") or first_sentences(body, max_count=2)
+        what_happened = field_text(fields, "whatHappened") or build_what_happened(standfirst)
+        section_name = field_text(fields, "section") or classify_section(body, topic)
+        why_it_matters = field_text(fields, "whyItMatters") or build_why_it_matters(section_name, topic, body)
+        deeper = field_paragraphs(fields, "deeperAnalysis")
+        if not deeper:
+            deeper = build_deeper_analysis(body, section_name, topic, fallback_sources[:1])
+        context_points = field_list(fields, "contextPoints")
+        if len(context_points) < 2:
+            context_points = build_context_points(body, section_name, topic)
+        sources = extract_sources("\n".join(fields.get("sources", []))) or extract_sources(block) or fallback_sources[:1]
+        priority = field_text(fields, "priority") or priority_from_text(block, index)
+        explicit_tags = split_tags(field_text(fields, "tags"))
+        tags = explicit_tags or tags_for(topic, section_name, body)
+
+        articles.append(
+            {
+                "id": stable_id(topic, package_key, index, title),
+                "section": section_name,
+                "title": clean_text(title) or article_title(body, section_name, topic, sources),
+                "standfirst": standfirst,
+                "whatHappened": what_happened,
+                "whyItMatters": why_it_matters,
+                "deeperAnalysis": dedupe_strings(deeper)[:5],
+                "contextPoints": dedupe_strings(context_points)[:5],
+                "sources": sources,
+                "priority": priority,
+                "tags": tags[:6],
+            }
+        )
+    return articles
+
+
+def app_article_blocks(markdown: str) -> list[tuple[str, str]]:
+    blocks: list[tuple[str, str]] = []
+    current_title: str | None = None
+    current_lines: list[str] = []
+
+    def flush() -> None:
+        nonlocal current_title, current_lines
+        if current_title and clean_text("\n".join(current_lines)):
+            blocks.append((clean_text(current_title), "\n".join(current_lines).strip()))
+        current_title = None
+        current_lines = []
+
+    for raw_line in markdown.replace("\r\n", "\n").splitlines():
+        line = raw_line.strip()
+        if line.startswith("### "):
+            flush()
+            current_title = line[4:].strip()
+            continue
+        if current_title:
+            current_lines.append(raw_line)
+    flush()
+    return blocks
+
+
+def app_article_fields(block: str) -> dict[str, list[str]]:
+    fields: dict[str, list[str]] = {}
+    current: str | None = None
+    label_re = re.compile(r"^([^:]{2,40}):\s*(.*)$")
+
+    for raw_line in block.replace("\r\n", "\n").splitlines():
+        stripped = raw_line.strip()
+        match = label_re.match(stripped)
+        label = normalize_text(match.group(1)) if match else ""
+        if match and label in APP_FIELD_LABELS:
+            current = APP_FIELD_LABELS[label]
+            fields.setdefault(current, [])
+            if match.group(2).strip():
+                fields[current].append(match.group(2).strip())
+            continue
+        if current:
+            fields.setdefault(current, []).append(raw_line)
+
+    return fields
+
+
+def field_text(fields: dict[str, list[str]], name: str) -> str:
+    return clean_text(" ".join(line.strip() for line in fields.get(name, []) if line.strip()))
+
+
+def field_paragraphs(fields: dict[str, list[str]], name: str) -> list[str]:
+    return clean_paragraphs("\n".join(fields.get(name, [])))
+
+
+def field_list(fields: dict[str, list[str]], name: str) -> list[str]:
+    values: list[str] = []
+    for paragraph in clean_paragraphs("\n".join(fields.get(name, []))):
+        values.append(paragraph.removeprefix("• ").strip())
+    return values
+
+
+def split_tags(value: str) -> list[str]:
+    tags = [clean_text(item) for item in re.split(r"[,;]", value) if clean_text(item)]
+    return dedupe_strings(tags)
 
 
 def fallback_articles(
@@ -258,10 +399,16 @@ def build_why_it_matters(section_name: str, topic: str, body: str) -> str:
 def build_deeper_analysis(body: str, section_name: str, topic: str, sources: list[dict[str, str]]) -> list[str]:
     paragraphs = clean_paragraphs(body)
     analysis: list[str] = []
-    if paragraphs:
-        analysis.append(paragraphs[0])
-    if len(paragraphs) > 1:
-        analysis.append(paragraphs[1])
+    repeated = {
+        normalize_text(first_sentences(body, max_count=1)),
+        normalize_text(first_sentences(body, max_count=2)),
+        normalize_text(build_what_happened(body)),
+    }
+    for paragraph in paragraphs:
+        if normalize_text(paragraph) not in repeated:
+            analysis.append(paragraph)
+        if len(analysis) >= 2:
+            break
     analysis.append(build_why_it_matters(section_name, topic, body))
     if sources:
         source_label = ", ".join(source["title"] for source in sources[:2])

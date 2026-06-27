@@ -856,6 +856,7 @@ private struct TodayHumorPanel: View {
     let cacheNotice: String?
     let isRefreshing: Bool
     let reload: () -> Void
+    @State private var selectedHumorItem: TodayHumorItem?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -918,6 +919,9 @@ private struct TodayHumorPanel: View {
             RoundedRectangle(cornerRadius: 20, style: .continuous)
                 .stroke(Color.purple.opacity(0.14), lineWidth: 1)
         }
+        .sheet(item: $selectedHumorItem) { item in
+            TodayHumorDetailSheet(item: item)
+        }
     }
 
     private func digestContent(_ digest: TodayHumorDigest) -> some View {
@@ -931,11 +935,7 @@ private struct TodayHumorPanel: View {
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(.secondary)
                 }
-                Text(digest.summary)
-                    .font(.callout)
-                    .lineSpacing(3)
-                    .foregroundStyle(.secondary)
-                    .fixedSize(horizontal: false, vertical: true)
+                TodayHumorSummaryText(summary: digest.summary)
                 Text("Ostatnio: \(digest.displayTime) · następne: \(digest.nextRefreshLabel)")
                     .font(.caption.weight(.medium))
                     .foregroundStyle(.secondary)
@@ -944,7 +944,9 @@ private struct TodayHumorPanel: View {
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(alignment: .top, spacing: 12) {
                     ForEach(digest.items.prefix(6)) { item in
-                        TodayHumorCard(item: item)
+                        TodayHumorCard(item: item) {
+                            selectedHumorItem = item
+                        }
                             .frame(width: 250)
                     }
                 }
@@ -956,10 +958,68 @@ private struct TodayHumorPanel: View {
 
 private struct TodayHumorCard: View {
     let item: TodayHumorItem
+    let openDetail: () -> Void
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            if let imageLink = item.imageLink {
+        Button(action: openDetail) {
+            VStack(alignment: .leading, spacing: 12) {
+                TodayHumorArtwork(imageLink: item.imageLink, height: item.imageLink == nil ? 96 : 128)
+
+                VStack(alignment: .leading, spacing: 7) {
+                    Text(item.title)
+                        .font(.subheadline.weight(.semibold))
+                        .lineLimit(3)
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text(item.caption)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(3)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+
+                HStack(spacing: 6) {
+                    ForEach(item.tags.prefix(3), id: \.self) { tag in
+                        Text(tag)
+                            .font(.caption2.weight(.bold))
+                            .foregroundStyle(.purple)
+                            .padding(.horizontal, 8)
+                            .padding(.vertical, 4)
+                            .background(Color.purple.opacity(0.10), in: Capsule())
+                    }
+                }
+
+                HStack(spacing: 10) {
+                    Label(item.sourceName, systemImage: "link")
+                        .font(.caption.weight(.medium))
+                        .foregroundStyle(.secondary)
+                        .lineLimit(1)
+
+                    Spacer()
+
+                    if let scoreLabel = item.scoreLabel {
+                        Label(scoreLabel, systemImage: "arrow.up")
+                            .font(.caption2.weight(.semibold))
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+            .padding(14)
+            .frame(maxWidth: .infinity, minHeight: 286, alignment: .topLeading)
+            .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        }
+        .buttonStyle(.plain)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(item.title). \(item.caption). Źródło: \(item.sourceName)")
+    }
+}
+
+private struct TodayHumorArtwork: View {
+    let imageLink: URL?
+    let height: CGFloat
+
+    var body: some View {
+        ZStack {
+            if let imageLink {
                 AsyncImage(url: imageLink) { phase in
                     switch phase {
                     case .success(let image):
@@ -977,64 +1037,13 @@ private struct TodayHumorCard: View {
                         humorPlaceholder
                     }
                 }
-                .frame(height: 128)
-                .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
             } else {
                 humorPlaceholder
-                    .frame(height: 96)
-            }
-
-            VStack(alignment: .leading, spacing: 7) {
-                Text(item.title)
-                    .font(.subheadline.weight(.semibold))
-                    .lineLimit(3)
-                    .fixedSize(horizontal: false, vertical: true)
-                Text(item.caption)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .lineLimit(3)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
-
-            HStack(spacing: 6) {
-                ForEach(item.tags.prefix(3), id: \.self) { tag in
-                    Text(tag)
-                        .font(.caption2.weight(.bold))
-                        .foregroundStyle(.purple)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 4)
-                        .background(Color.purple.opacity(0.10), in: Capsule())
-                }
-            }
-
-            HStack(spacing: 10) {
-                Label(item.sourceName, systemImage: "link")
-                    .font(.caption.weight(.medium))
-                    .foregroundStyle(.secondary)
-                    .lineLimit(1)
-
-                Spacer()
-
-                if let scoreLabel = item.scoreLabel {
-                    Label(scoreLabel, systemImage: "arrow.up")
-                        .font(.caption2.weight(.semibold))
-                        .foregroundStyle(.secondary)
-                }
-            }
-
-            if let sourceLink = item.sourceLink {
-                Link(destination: sourceLink) {
-                    Label("Źródło", systemImage: "safari")
-                        .font(.caption.weight(.semibold))
-                        .foregroundStyle(.purple)
-                }
             }
         }
-        .padding(14)
-        .frame(maxWidth: .infinity, minHeight: 286, alignment: .topLeading)
-        .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-        .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(item.title). \(item.caption). Źródło: \(item.sourceName)")
+        .frame(maxWidth: .infinity)
+        .frame(height: height)
+        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
     }
 
     private var humorPlaceholder: some View {
@@ -1048,7 +1057,166 @@ private struct TodayHumorCard: View {
                 .font(.system(size: 34, weight: .semibold))
                 .foregroundStyle(.purple)
         }
-        .clipShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+    }
+}
+
+private struct TodayHumorSummaryText: View {
+    let summary: String
+
+    var body: some View {
+        parsedSummary
+            .font(.callout)
+            .lineSpacing(3)
+            .foregroundStyle(.secondary)
+            .fixedSize(horizontal: false, vertical: true)
+    }
+
+    private var parsedSummary: Text {
+        var remaining = summary
+        var result = Text("")
+        while let start = remaining.range(of: "<u>"),
+              let end = remaining.range(of: "</u>", range: start.upperBound..<remaining.endIndex) {
+            let prefix = String(remaining[..<start.lowerBound])
+            let highlighted = String(remaining[start.upperBound..<end.lowerBound])
+            result = result + Text(prefix) + Text(highlighted).underline()
+            remaining = String(remaining[end.upperBound...])
+        }
+        return result + Text(remaining.replacingOccurrences(of: "<u>", with: "").replacingOccurrences(of: "</u>", with: ""))
+    }
+}
+
+private struct TodayHumorDetailSheet: View {
+    @Environment(\.dismiss) private var dismiss
+    let item: TodayHumorItem
+
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 18) {
+                    TodayHumorArtwork(imageLink: item.imageLink, height: 220)
+
+                    VStack(alignment: .leading, spacing: 12) {
+                        HStack(spacing: 8) {
+                            StatusBadge(text: item.sourceName, systemImage: "link", tint: .purple)
+                            if let categoryLabel = item.categoryLabel, !categoryLabel.isEmpty {
+                                StatusBadge(text: categoryLabel, systemImage: "tag.fill", tint: .blue)
+                            }
+                        }
+
+                        Text(item.title)
+                            .font(.title2.weight(.bold))
+                            .fixedSize(horizontal: false, vertical: true)
+
+                        Text(item.caption)
+                            .font(.body)
+                            .foregroundStyle(.secondary)
+                            .lineSpacing(3)
+                            .fixedSize(horizontal: false, vertical: true)
+
+                        HStack(spacing: 14) {
+                            if let scoreLabel = item.scoreLabel {
+                                Label(scoreLabel, systemImage: "arrow.up")
+                            }
+                            if let comments = item.comments {
+                                Label("\(comments)", systemImage: "bubble.left.and.bubble.right.fill")
+                            }
+                        }
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                    }
+
+                    if let postText = item.postText, !postText.isEmpty {
+                        TodayHumorDetailSection(title: "Post", systemImage: "text.alignleft", text: postText)
+                    }
+
+                    if let whyFunny = item.whyFunny, !whyFunny.isEmpty {
+                        TodayHumorDetailSection(title: "Dlaczego działa", systemImage: "sparkles", text: whyFunny)
+                    }
+
+                    if let highlights = item.commentHighlights, !highlights.isEmpty {
+                        VStack(alignment: .leading, spacing: 10) {
+                            Label("Komentarze", systemImage: "quote.bubble.fill")
+                                .font(.headline.weight(.semibold))
+                                .foregroundStyle(.purple)
+
+                            ForEach(highlights) { highlight in
+                                TodayHumorCommentHighlightCard(highlight: highlight)
+                            }
+                        }
+                    }
+
+                    if let sourceLink = item.sourceLink {
+                        Link(destination: sourceLink) {
+                            Label("Otwórz na Reddicie", systemImage: "safari")
+                                .font(.headline.weight(.semibold))
+                                .frame(maxWidth: .infinity)
+                        }
+                        .buttonStyle(.borderedProminent)
+                        .tint(.purple)
+                    }
+                }
+                .padding(20)
+            }
+            .background(Color(.systemGroupedBackground))
+            .navigationTitle("<RR> Reddit Radar")
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button("Gotowe") {
+                        dismiss()
+                    }
+                }
+            }
+        }
+    }
+}
+
+private struct TodayHumorDetailSection: View {
+    let title: String
+    let systemImage: String
+    let text: String
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Label(title, systemImage: systemImage)
+                .font(.headline.weight(.semibold))
+                .foregroundStyle(.purple)
+            Text(text)
+                .font(.callout)
+                .foregroundStyle(.secondary)
+                .lineSpacing(3)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(15)
+        .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+    }
+}
+
+private struct TodayHumorCommentHighlightCard: View {
+    let highlight: TodayHumorCommentHighlight
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(alignment: .firstTextBaseline, spacing: 8) {
+                Text(highlight.summary)
+                    .font(.callout.weight(.semibold))
+                    .fixedSize(horizontal: false, vertical: true)
+                Spacer(minLength: 8)
+                if let score = highlight.score, score > 0 {
+                    Label("\(score)", systemImage: "arrow.up")
+                        .font(.caption2.weight(.bold))
+                        .foregroundStyle(.secondary)
+                }
+            }
+
+            Text(highlight.explanation)
+                .font(.caption)
+                .foregroundStyle(.secondary)
+                .lineSpacing(2)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(14)
+        .background(Color(.secondarySystemGroupedBackground), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
     }
 }
 

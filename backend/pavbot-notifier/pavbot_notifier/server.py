@@ -33,8 +33,10 @@ from .daily_weather import (
 from .daily_humor import (
     DailyHumorConfig,
     daily_humor_status,
+    humor_ingest_token_is_valid,
     humor_scheduler_loop,
     latest_humor_digest,
+    save_external_humor_digest,
 )
 
 
@@ -46,6 +48,41 @@ class DeviceRegistration(BaseModel):
     app_version: str = Field(default="", alias="appVersion")
     build_number: str = Field(default="", alias="buildNumber")
     daily_weather_enabled: bool = Field(default=False, alias="dailyWeatherEnabled")
+
+
+class HumorDigestCommentHighlightPayload(BaseModel):
+    id: str
+    summary: str
+    explanation: str
+    score: int | None = None
+
+
+class HumorDigestItemPayload(BaseModel):
+    id: str
+    title: str
+    caption: str
+    sourceName: str
+    sourceURL: str
+    imageURL: str | None = None
+    score: int | None = None
+    comments: int | None = None
+    tags: list[str] = Field(default_factory=list)
+    categoryLabel: str | None = None
+    postText: str | None = None
+    whyFunny: str | None = None
+    commentHighlights: list[HumorDigestCommentHighlightPayload] = Field(default_factory=list)
+
+
+class HumorDigestPayload(BaseModel):
+    id: str
+    title: str
+    summary: str
+    generatedAt: str
+    displayTime: str
+    nextRefreshAt: str | None = None
+    refreshIntervalHours: int
+    items: list[HumorDigestItemPayload]
+    source: str
 
 
 def data_dir() -> Path:
@@ -251,6 +288,21 @@ async def humor_latest() -> dict[str, Any]:
         return await latest_humor_digest(config=daily_humor_config(), storage_dir=data_dir())
     except httpx.HTTPError as exc:
         raise HTTPException(status_code=502, detail=f"Humor provider error: {exc}") from exc
+
+
+@app.post("/v1/humor/digest")
+async def humor_digest_ingest(
+    digest: HumorDigestPayload,
+    authorization: str | None = Header(default=None),
+) -> dict[str, Any]:
+    expected_token = os.environ.get("PAVBOT_HUMOR_INGEST_TOKEN", "")
+    if not humor_ingest_token_is_valid(authorization, expected_token=expected_token):
+        raise HTTPException(status_code=401, detail="Invalid humor ingest token")
+    return save_external_humor_digest(
+        digest=digest.model_dump(),
+        storage_dir=data_dir(),
+        received_at=datetime.now(timezone.utc),
+    )
 
 
 @app.post("/webhooks/github")

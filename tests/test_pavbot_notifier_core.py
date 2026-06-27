@@ -4,6 +4,7 @@ import hashlib
 import hmac
 import importlib.util
 import asyncio
+import ast
 import json
 import sys
 from pathlib import Path
@@ -715,6 +716,95 @@ def test_daily_humor_parses_reddit_listing_and_filters_unsafe_items():
     assert "dev" in items[0]["tags"]
 
 
+def test_daily_humor_builds_reddit_radar_summary_from_categories():
+    daily_humor = load_daily_humor()
+    config = daily_humor.DailyHumorConfig(
+        enabled=True,
+        interval_hours=3,
+        timezone_name="Europe/Warsaw",
+        max_items=3,
+        sources=[],
+    )
+
+    digest = daily_humor.build_humor_digest(
+        items=[
+            {
+                "id": "ai-dev",
+                "title": "Kiedy AI robi code review po piątku",
+                "caption": "AI robi swoje, ludzie robią screeny, internet robi resztę.",
+                "sourceName": "r/ProgrammerHumor",
+                "sourceURL": "https://www.reddit.com/r/ProgrammerHumor/comments/ai_dev/test/",
+                "imageURL": None,
+                "score": 1200,
+                "comments": 91,
+                "tags": ["AI", "dev"],
+                "categoryLabel": "AI, dev",
+                "postText": "Autor żartuje, że AI znalazło błąd, którego nikt nie napisał.",
+                "whyFunny": "Zabawne, bo AI zachowuje się jak bardzo pewny siebie reviewer.",
+                "commentHighlights": [
+                    {
+                        "id": "comment-1",
+                        "summary": "Wszyscy udają, że rozumieją komentarz bota.",
+                        "explanation": "Komentarz punktuje teatralną stronę code review.",
+                        "score": 44,
+                    }
+                ],
+            },
+            {
+                "id": "pl",
+                "title": "Polski internet odkrył nowy rytuał",
+                "caption": "Sygnał społecznościowy z Reddita.",
+                "sourceName": "r/Polska_wpz",
+                "sourceURL": "https://www.reddit.com/r/Polska_wpz/comments/pl/test/",
+                "imageURL": None,
+                "score": 300,
+                "comments": 21,
+                "tags": ["PL", "trend"],
+                "categoryLabel": "PL",
+                "commentHighlights": [],
+            },
+        ],
+        config=config,
+        generated_at=daily_humor.datetime.fromisoformat("2026-06-27T08:15:00+00:00"),
+    )
+
+    assert digest["title"] == "<RR> Reddit Radar"
+    assert digest["summary"] == (
+        "Kategorie: AI, dev, PL. Najmocniej wybija się: "
+        "<u>Kiedy AI robi code review po piątku</u>."
+    )
+    assert digest["items"][0]["whyFunny"].startswith("Zabawne")
+    assert digest["items"][0]["commentHighlights"][0]["score"] == 44
+
+
+def test_humor_digest_payload_declares_reddit_radar_detail_fields():
+    server_path = (
+        Path(__file__).resolve().parents[1]
+        / "backend"
+        / "pavbot-notifier"
+        / "pavbot_notifier"
+        / "server.py"
+    )
+    tree = ast.parse(server_path.read_text(encoding="utf-8"))
+    classes = {node.name: node for node in tree.body if isinstance(node, ast.ClassDef)}
+    item_class = classes["HumorDigestItemPayload"]
+    comment_class = classes["HumorDigestCommentHighlightPayload"]
+
+    item_fields = {
+        statement.target.id
+        for statement in item_class.body
+        if isinstance(statement, ast.AnnAssign) and isinstance(statement.target, ast.Name)
+    }
+    comment_fields = {
+        statement.target.id
+        for statement in comment_class.body
+        if isinstance(statement, ast.AnnAssign) and isinstance(statement.target, ast.Name)
+    }
+
+    assert {"categoryLabel", "postText", "whyFunny", "commentHighlights"} <= item_fields
+    assert {"id", "summary", "explanation", "score"} <= comment_fields
+
+
 def test_daily_humor_defaults_to_reddit_only_sources(monkeypatch):
     daily_humor = load_daily_humor()
     monkeypatch.delenv("PAVBOT_REDDIT_SUBREDDITS", raising=False)
@@ -864,6 +954,114 @@ def test_daily_humor_status_reports_digest(tmp_path):
     assert status["lastDigest"]["itemCount"] == 2
     assert status["redditOAuthConfigured"] is False
     assert status["redditSubreddits"] == ["Polska_wpz", "memes", "ProgrammerHumor"]
+
+
+def test_daily_humor_external_mode_serves_last_codex_digest_even_when_stale(tmp_path):
+    daily_humor = load_daily_humor()
+    config = daily_humor.DailyHumorConfig(
+        enabled=True,
+        interval_hours=2,
+        timezone_name="Europe/Warsaw",
+        max_items=2,
+        source_mode="external",
+    )
+    digest = {
+        "id": "humor-2026-06-26-22",
+        "title": "Codex radar Reddita",
+        "summary": "Codex zebrał lekkie sygnały z zalogowanego Reddita.",
+        "generatedAt": "2026-06-26T20:06:00+00:00",
+        "displayTime": "22:06",
+        "nextRefreshAt": "2026-06-27T00:06:00+02:00",
+        "refreshIntervalHours": 2,
+        "source": "Codex Safari Reddit radar",
+        "items": [
+            {
+                "id": "reddit-test",
+                "title": "Kiedy Reddit znajduje temat dnia",
+                "caption": "Krótki sygnał społecznościowy, nie źródło faktów.",
+                "sourceName": "r/Polska_wpz",
+                "sourceURL": "https://www.reddit.com/r/Polska_wpz/comments/test/example/",
+                "imageURL": None,
+                "score": 321,
+                "comments": 45,
+                "tags": ["PL", "trend"],
+            }
+        ],
+    }
+
+    daily_humor.save_external_humor_digest(
+        digest=digest,
+        storage_dir=tmp_path,
+        received_at=daily_humor.datetime.fromisoformat("2026-06-26T20:06:30+00:00"),
+    )
+
+    result = asyncio.run(
+        daily_humor.latest_humor_digest(
+            config=config,
+            storage_dir=tmp_path,
+            now=daily_humor.datetime.fromisoformat("2026-06-27T08:30:00+00:00"),
+        )
+    )
+    state = json.loads((tmp_path / "last-daily-humor.json").read_text(encoding="utf-8"))
+
+    assert result["id"] == "humor-2026-06-26-22"
+    assert result["source"] == "Codex Safari Reddit radar"
+    assert state["producer"] == "codex-safari"
+    assert state["lastError"] is None
+
+
+def test_humor_digest_ingest_requires_bearer_token(tmp_path):
+    daily_humor = load_daily_humor()
+    payload = {
+        "id": "humor-2026-06-27-08",
+        "title": "Codex radar Reddita",
+        "summary": "Codex wybrał świeże sygnały humoru.",
+        "generatedAt": "2026-06-27T06:06:00+00:00",
+        "displayTime": "08:06",
+        "nextRefreshAt": "2026-06-27T10:06:00+02:00",
+        "refreshIntervalHours": 2,
+        "source": "Codex Safari Reddit radar",
+        "items": [
+            {
+                "id": "reddit-test",
+                "title": "Kiedy automatyzacja działa",
+                "caption": "Lekki sygnał z Reddita.",
+                "sourceName": "r/memes",
+                "sourceURL": "https://www.reddit.com/r/memes/comments/test/example/",
+                "imageURL": None,
+                "score": 500,
+                "comments": 12,
+                "tags": ["memy"],
+            }
+        ],
+    }
+
+    assert daily_humor.humor_ingest_token_is_valid(None, expected_token="secret-token") is False
+    assert daily_humor.humor_ingest_token_is_valid("Bearer wrong-token", expected_token="secret-token") is False
+    assert daily_humor.humor_ingest_token_is_valid("Bearer secret-token", expected_token="secret-token") is True
+
+    result = daily_humor.save_external_humor_digest(
+        digest=payload,
+        storage_dir=tmp_path,
+        received_at=daily_humor.datetime.fromisoformat("2026-06-27T06:06:30+00:00"),
+    )
+    latest = asyncio.run(
+        daily_humor.latest_humor_digest(
+            config=daily_humor.DailyHumorConfig(
+                enabled=True,
+                interval_hours=2,
+                timezone_name="Europe/Warsaw",
+                max_items=6,
+                source_mode="external",
+            ),
+            storage_dir=tmp_path,
+            now=daily_humor.datetime.fromisoformat("2026-06-27T06:07:00+00:00"),
+        )
+    )
+
+    assert result["status"] == "stored"
+    assert latest["source"] == "Codex Safari Reddit radar"
+    assert latest["items"][0]["sourceURL"].startswith("https://www.reddit.com/")
 
 
 def test_daily_weather_manual_refresh_saves_report_without_sending_pushes(tmp_path, monkeypatch):

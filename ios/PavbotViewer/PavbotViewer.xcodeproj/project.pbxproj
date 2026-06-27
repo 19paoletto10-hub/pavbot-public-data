@@ -527,7 +527,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -euo pipefail\nif [ -n \"${PAVBOT_BUILD_NUMBER:-}\" ]; then\n  BUILD_NUMBER=\"$PAVBOT_BUILD_NUMBER\"\nelse\n  REPO_ROOT=\"${SRCROOT}/../..\"\n  COMMIT_EPOCH=\"$(git -C \"$REPO_ROOT\" log -1 --format=%ct 2>/dev/null || true)\"\n  if [ -n \"$COMMIT_EPOCH\" ]; then\n    BUILD_NUMBER=\"$(date -u -r \"$COMMIT_EPOCH\" +%Y%m%d%H%M)\"\n  else\n    BUILD_NUMBER=\"$(date -u +%Y%m%d%H%M)\"\n  fi\nfi\nset_build_number() {\n  local plist_path=\"$1\"\n  if [ -f \"$plist_path\" ]; then\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"$plist_path\"\n    echo \"Set CFBundleVersion to $BUILD_NUMBER in $plist_path\"\n  fi\n}\nAPP_INFO_PLIST=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nEXTENSION_INFO_PLIST=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}/PlugIns/PavbotAudioActivityExtension.appex/Info.plist\"\nset_build_number \"$APP_INFO_PLIST\"\nset_build_number \"$EXTENSION_INFO_PLIST\"\nif [ ! -f \"$APP_INFO_PLIST\" ]; then\n  echo \"warning: Info.plist not found at $APP_INFO_PLIST\"\nfi\n";
+			shellScript = "set -euo pipefail\nif [ -n \"${PAVBOT_BUILD_NUMBER:-}\" ]; then\n  BUILD_NUMBER=\"$PAVBOT_BUILD_NUMBER\"\nelse\n  BUILD_DATE=\"$(date +%y%m%d)\"\n  VERSION_DIGITS=\"$(printf '%s' \"${MARKETING_VERSION:-}\" | tr -cd '0-9')\"\n  if [ -z \"$VERSION_DIGITS\" ]; then\n    echo \"error: MARKETING_VERSION is empty or contains no digits\"\n    exit 1\n  fi\n  BUILD_NUMBER=\"${BUILD_DATE}.${VERSION_DIGITS}\"\nfi\ninvalid_build_number() {\n  echo \"error: CFBundleVersion '$BUILD_NUMBER' must contain one to three period-separated numeric components\"\n  exit 1\n}\ncase \"$BUILD_NUMBER\" in\n  ''|*[!0-9.]*|.*|*..*|*.) invalid_build_number ;;\nesac\nCOMPONENT_COUNT=\"$(printf '%s' \"$BUILD_NUMBER\" | awk -F '[.]' '{print NF}')\"\nFIRST_COMPONENT=\"${BUILD_NUMBER%%.*}\"\nif [ \"$FIRST_COMPONENT\" = \"0\" ] || [ \"$COMPONENT_COUNT\" -gt 3 ]; then\n  invalid_build_number\nfi\nset_build_number() {\n  local plist_path=\"$1\"\n  if [ -f \"$plist_path\" ]; then\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"$plist_path\"\n    echo \"Set CFBundleVersion to $BUILD_NUMBER in $plist_path\"\n  fi\n}\nAPP_INFO_PLIST=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nEXTENSION_INFO_PLIST=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}/PlugIns/PavbotAudioActivityExtension.appex/Info.plist\"\nset_build_number \"$APP_INFO_PLIST\"\nset_build_number \"$EXTENSION_INFO_PLIST\"\nif [ ! -f \"$APP_INFO_PLIST\" ]; then\n  echo \"warning: Info.plist not found at $APP_INFO_PLIST\"\nfi\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -671,7 +671,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2.0.1;
+				CURRENT_PROJECT_VERSION = 260627.202;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -688,7 +688,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0.1;
+				CURRENT_PROJECT_VERSION = 260627.202;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = AudioActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -759,7 +759,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 2.0.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -777,7 +777,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2.0.1;
+				CURRENT_PROJECT_VERSION = 260627.202;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = AudioActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -842,7 +842,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 2.0.1;
+				MARKETING_VERSION = 2.0.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -861,7 +861,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 2.0.1;
+				CURRENT_PROJECT_VERSION = 260627.202;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

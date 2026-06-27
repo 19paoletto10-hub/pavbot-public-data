@@ -62,7 +62,7 @@ def parse_gazeta(body: str) -> list[dict[str, Any]]:
             {
                 "id": slugify(title),
                 "title": title,
-                "summary": section_summary(title, articles),
+                "summary": section_summary(title, articles, section_body_text),
                 "articles": articles,
             }
         )
@@ -235,7 +235,7 @@ def split_headings(markdown: str, level: int) -> list[tuple[str, str]]:
 
 
 def field_text(text: str, field: str) -> str:
-    pattern = re.compile(rf"(?ims)^\s*{re.escape(field)}\s*:\s*(.+?)(?=^\s*(?:Lead|Fakty|Analiza|Dlaczego ważne|Dlaczego to ważne)\s*:|\Z)")
+    pattern = re.compile(rf"(?ims)^\s*{re.escape(field)}\s*:\s*(.+?)(?=^\s*(?:Lead|Fakty|Analiza|Dlaczego ważne|Dlaczego to ważne|Źródła|Zrodla)\s*:|\Z)")
     match = pattern.search(text)
     return clean_markdown(match.group(1)) if match else ""
 
@@ -344,10 +344,29 @@ def headline_from_lead(lead_paragraphs: list[str], sections: list[dict[str, Any]
     return compact_words(lead_paragraphs[0], 9) if lead_paragraphs else "Wydanie dnia"
 
 
-def section_summary(section_title: str, articles: list[dict[str, Any]]) -> str:
-    if len(articles) == 1:
-        return articles[0]["lead"]
-    return f"{section_title}: {len(articles)} uporządkowane wątki do szybkiego przeglądu."
+def section_summary(section_title: str, articles: list[dict[str, Any]], section_body_text: str = "") -> str:
+    intro = section_intro(section_body_text)
+    if intro:
+        return intro
+    if len(articles) >= 2:
+        first = compact_words(articles[0]["title"], 7)
+        second = compact_words(articles[1]["title"], 7)
+        return f"{section_title}: najważniejsze sygnały tej sekcji dotyczą tematów „{first}” oraz „{second}”."
+    return f"{section_title}: sprawdzony blok tematyczny z jednym potwierdzonym wątkiem i kontekstem do dalszej obserwacji."
+
+
+def section_intro(section_body_text: str) -> str:
+    preamble = re.split(r"(?m)^####\s+", section_body_text, maxsplit=1)[0]
+    if not preamble.strip():
+        return ""
+    label_pattern = re.compile(
+        r"(?ims)^\s*(?:Wprowadzenie|Opis sekcji|Stan sekcji|Stan informacji|W skrócie)\s*:\s*(.+?)(?=^\s*(?:####\s+|Wprowadzenie|Opis sekcji|Stan sekcji|Stan informacji|W skrócie)\s*:|\Z)"
+    )
+    match = label_pattern.search(preamble)
+    if match:
+        return clean_markdown(match.group(1))
+    paragraphs = clean_paragraphs(preamble)
+    return paragraphs[0] if paragraphs else ""
 
 
 def classify_section(text: str) -> str:

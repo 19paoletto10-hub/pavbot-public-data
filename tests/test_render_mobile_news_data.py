@@ -34,6 +34,7 @@ Poranny przegląd wskazuje, że Polska i bezpieczeństwo są głównymi osiami d
 ## Gazeta
 
 ### Polska
+Wprowadzenie: Krajowy blok dnia pokazuje, jak dyplomacja, decyzje publiczne i bezpieczeństwo zaczynają układać się w jeden obraz wydarzeń.
 
 #### Gdańsk jako centrum rozmów o Ukrainie
 Lead: Polska przejmuje dziś rolę gospodarza rozmów o odbudowie Ukrainy.
@@ -43,13 +44,30 @@ Fakty:
 Analiza: To sygnał, że dyplomacja, gospodarka i bezpieczeństwo są dziś połączone.
 Dlaczego ważne: Użytkownik dostaje jasny kontekst, czy temat jest tylko ceremonialny, czy operacyjny.
 
+#### Alerty pogodowe jako temat praktyczny
+Lead: Ostrzeżenia pogodowe zmieniają sposób planowania dnia w kraju.
+Fakty:
+- RCB publikuje ostrzeżenia dla mieszkańców. Źródło: [RCB](https://www.gov.pl/web/rcb)
+- IMGW aktualizuje prognozy ostrzegawcze. Źródło: [IMGW](https://imgw.pl)
+Analiza: To przesuwa uwagę z politycznych deklaracji na praktyczne decyzje obywateli.
+Dlaczego ważne: Użytkownik od razu widzi, które informacje wpływają na podróże, zdrowie i organizację dnia.
+
 ### Technologia
+Wprowadzenie: Technologiczna część wydania porządkuje sygnały o narzędziach, infrastrukturze i cyberbezpieczeństwie bez powielania szumu.
 
 #### Brak materialnej zmiany
 Lead: W sprawach technologicznych nie znaleziono dziś silnego nowego sygnału.
 Fakty:
-- Sprawdzono oficjalne źródła i redakcje technologiczne.
+- Sprawdzono oficjalne źródła i redakcje technologiczne. Źródło: [NASK](https://www.nask.pl)
 Analiza: Brak nowego faktu też jest informacją, bo ogranicza szum.
+Dlaczego ważne: Aplikacja może pokazać, że temat został sprawdzony, zamiast sztucznie pompować nieważny news.
+
+#### Cyberbezpieczeństwo pozostaje w tle
+Lead: Wątek cyberbezpieczeństwa wymaga obserwacji, choć dziś nie przynosi jednego dominującego komunikatu.
+Fakty:
+- Sprawdzono komunikaty instytucji odpowiedzialnych za bezpieczeństwo cyfrowe. Źródło: [CERT Polska](https://cert.pl)
+Analiza: Stabilny monitoring cyber sygnałów ogranicza ryzyko przeoczenia późniejszego alertu.
+Dlaczego ważne: Użytkownik dostaje jasne rozróżnienie między brakiem przełomu a brakiem sprawdzenia tematu.
 """
 
         payload = renderer.build_mobile_news_payload(
@@ -64,6 +82,12 @@ Analiza: Brak nowego faktu też jest informacją, bo ogranicza szum.
         self.assertEqual(payload["status"], "Material update")
         self.assertIn("Poranny przegląd", payload["leadParagraphs"][0])
         self.assertEqual([section["title"] for section in payload["sections"]], ["Polska", "Technologia"])
+        self.assertEqual(
+            payload["sections"][0]["summary"],
+            "Krajowy blok dnia pokazuje, jak dyplomacja, decyzje publiczne i bezpieczeństwo zaczynają układać się w jeden obraz wydarzeń.",
+        )
+        self.assertEqual(len(payload["sections"][0]["articles"]), 2)
+        self.assertNotEqual(payload["sections"][0]["summary"], payload["sections"][0]["articles"][0]["lead"])
         article = payload["sections"][0]["articles"][0]
         self.assertEqual(article["title"], "Gdańsk jako centrum rozmów o Ukrainie")
         self.assertGreaterEqual(len(article["facts"]), 2)
@@ -115,11 +139,19 @@ Lead dnia.
 
 ## Gazeta
 ### Ogólne
+Wprowadzenie: Ogólny blok dnia zbiera najważniejsze sygnały i oddziela fakty od szumu.
 #### Testowy artykuł
 Lead: To jest lead.
 Fakty:
 - Fakt ze źródłem. Źródło: [Źródło](https://example.com)
 Analiza: To jest analiza.
+Dlaczego ważne: To pokazuje sens informacji dla użytkownika.
+#### Drugi testowy artykuł
+Lead: To jest drugi lead.
+Fakty:
+- Drugi fakt ze źródłem. Źródło: [Drugie źródło](https://example.org)
+Analiza: To jest druga analiza.
+Dlaczego ważne: To uzupełnia obraz sekcji.
 """,
                 encoding="utf-8",
             )

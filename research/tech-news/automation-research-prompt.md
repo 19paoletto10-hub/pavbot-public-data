@@ -29,6 +29,31 @@ lead, punkty podsumowania, artykuły z polami `whatHappened`, `whyItMatters`,
 `deeperAnalysis`, `contextPoints`, źródła i tagi. Jeśli JSON nie powstanie albo
 walidator zwróci błąd, nie publikuj wyników i zgłoś błąd przebiegu.
 
+Przed wygenerowaniem JSON przygotuj w raporcie sekcję `## Artykuły do aplikacji`.
+Dla każdego artykułu wykonaj dodatkowe, krótkie przeszukanie internetu po
+kontekście tematu, najlepiej w źródłach pierwotnych lub renomowanych mediach
+technologicznych. Nie powtarzaj w `Pełny opis` tekstu ze `Standfirst` ani
+`Co się stało`. Użyj formatu:
+
+```text
+### Tytuł artykułu
+Sekcja: AI | Infrastruktura | Produkty | Regulacje | Cyber
+Priorytet: High | Medium | Low
+Tagi: tag1, tag2, tag3
+Standfirst: 1-2 zdania z key facts newsa.
+Co się stało: jedno krótkie zdanie operacyjne.
+Dlaczego ważne: jedno zdanie o wpływie lub konsekwencji.
+Pełny opis:
+2-4 unikalne akapity zaawansowanego kontekstu z dodatkowego researchu.
+
+Kontekst:
+- Co się stało: ...
+- Dlaczego ważne: ...
+- Na co patrzeć dalej: ...
+Źródła:
+- [Nazwa](https://...)
+```
+
 Dodatkowo wygeneruj estetyczny, profesjonalny PDF mobile-first z tym samym
 researchem do `research/tech-news/pdfs/YYYY-MM-DD-tech-news.pdf`, używając
 `scripts/render_research_pdf.py`. PDF ma być wygodny do czytania w aplikacji

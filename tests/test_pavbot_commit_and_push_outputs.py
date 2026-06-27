@@ -247,6 +247,42 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 "1",
             )
 
+    def test_mobile_topic_publish_validates_latest_mobile_news_data_only(self) -> None:
+        with self.temporary_repo() as repo:
+            legacy_payload = self.valid_mobile_news_data_payload()
+            legacy_payload["sections"] = legacy_payload["sections"][:1]
+            legacy_payload["sections"][0]["articles"] = legacy_payload["sections"][0]["articles"][:1]
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "data/2026-06-24-1015-mobile-news.json",
+                json.dumps(legacy_payload, ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "data/2026-06-25-1015-mobile-news.json",
+                json.dumps(self.valid_mobile_news_data_payload(), ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "pdfs/2026-06-25-1015-mobile-brief.pdf",
+                "%PDF mobile brief",
+            )
+
+            result = self.run_publish_script(repo, "research/aktualne-wydarzenia-mobile", isolated=True)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            manifest = json.loads(
+                self.git(repo, "show", "origin/main:public/pavbot-manifest.json", stdout=True)
+            )
+            paths = {artifact["path"] for artifact in manifest["artifacts"]}
+            self.assertIn(
+                "research/aktualne-wydarzenia-mobile/data/2026-06-25-1015-mobile-news.json",
+                paths,
+            )
+
     def test_pulse_news_publish_includes_valid_pulse_news_data(self) -> None:
         with self.temporary_repo() as repo:
             self.write_topic_artifact(
@@ -910,6 +946,26 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
         }
 
     def valid_mobile_news_data_payload(self) -> dict:
+        sections = []
+        for section in ["Ogólne", "Polska", "Polityka", "Sprawy zagraniczne", "Technologia"]:
+            slug = {
+                "Ogólne": "ogolne",
+                "Polska": "polska",
+                "Polityka": "polityka",
+                "Sprawy zagraniczne": "sprawy-zagraniczne",
+                "Technologia": "technologia",
+            }[section]
+            sections.append(
+                {
+                    "id": slug,
+                    "title": section,
+                    "summary": f"{section}: syntetyczny opis stanu informacji bez kopiowania leadu artykułu.",
+                    "articles": [
+                        self.mobile_news_article_payload(slug, section, 1),
+                        self.mobile_news_article_payload(slug, section, 2),
+                    ],
+                }
+            )
         return {
             "schemaVersion": 1,
             "topic": "aktualne-wydarzenia-mobile",
@@ -918,30 +974,24 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             "status": "Material update",
             "headline": "Wydanie dnia",
             "leadParagraphs": ["Najważniejszy opis dnia."],
-            "sections": [
-                {
-                    "id": "polska",
-                    "title": "Polska",
-                    "summary": "Najważniejsze sygnały krajowe.",
-                    "articles": [
-                        {
-                            "id": "polska-1",
-                            "section": "Polska",
-                            "title": "Gdańsk jako centrum rozmów",
-                            "lead": "Polska jest gospodarzem ważnych rozmów.",
-                            "facts": ["KPRM zapowiedziało spotkanie."],
-                            "analysis": "To łączy dyplomację, gospodarkę i bezpieczeństwo.",
-                            "whyItMatters": "Użytkownik dostaje jasny sens wydarzenia.",
-                            "sources": [{"title": "KPRM", "url": "https://www.gov.pl/web/premier"}],
-                            "tags": ["Polska"],
-                            "ttsText": "Polska jest gospodarzem ważnych rozmów. To łączy dyplomację, gospodarkę i bezpieczeństwo.",
-                            "priority": "High",
-                        }
-                    ],
-                }
-            ],
+            "sections": sections,
             "checkedSources": [{"title": "KPRM", "url": "https://www.gov.pl/web/premier"}],
             "audioArtifacts": [],
+        }
+
+    def mobile_news_article_payload(self, slug: str, section: str, index: int) -> dict:
+        return {
+            "id": f"{slug}-{index}",
+            "section": section,
+            "title": f"{section}: temat {index}",
+            "lead": f"{section} ma osobny lead artykułu numer {index}.",
+            "facts": [f"Potwierdzony fakt {index} dla sekcji {section}."],
+            "analysis": f"Analiza numer {index} porządkuje znaczenie tematu w sekcji {section}.",
+            "whyItMatters": "Użytkownik dostaje jasny sens wydarzenia.",
+            "sources": [{"title": "KPRM", "url": f"https://www.gov.pl/web/premier?test={slug}-{index}"}],
+            "tags": [section],
+            "ttsText": f"{section}: temat {index}. {section} ma osobny lead artykułu numer {index}.",
+            "priority": "High" if index == 1 else "Medium",
         }
 
     def valid_pulse_news_data_payload(self) -> dict:
