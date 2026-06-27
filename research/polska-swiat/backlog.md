@@ -59,6 +59,12 @@
   Russia-provocation warning, Prezydent RP for the SENT veto, and RCB/IMGW for
   heat/susza risk. Podcast handling should label the Guardian item as an
   intelligence warning with limited public detail, not as a confirmed incident.
+- 2026-06-27: Saturday research run created a material update. Strongest sources
+  were KPRM for the official Tusk-Swyrydenko URC balance, Onet/WP for the
+  domestic and foreign-media reception of the order dispute, Guardian for Crimea
+  and Russia-provocation risk, AP/USGS for Venezuela earthquake impact, and RCB
+  for weekend heat/susza/fire risk. Podcast should avoid letting the order
+  dispute erase the concrete URC output; both strands need to be kept separate.
 
 ## Done
 
