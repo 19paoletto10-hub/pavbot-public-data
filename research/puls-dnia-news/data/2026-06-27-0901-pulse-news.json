@@ -1,0 +1,497 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-06-27",
+  "runTime": "09:01",
+  "status": "Material update",
+  "headline": "Iran i Ormuz utrzymują globalne napięcie, a Polska wchodzi w najgorętszy weekend czerwca",
+  "summary": "O 09:01 puls dnia łączy skutki amerykańskiego uderzenia na Iran i niepewny ruch statków w Ormuz z krajowym pakietem alertów o upale, oficjalnych cen paliw oraz nowym komunikatem z Puźnik.",
+  "items": [
+    {
+      "id": "pulse-2026-06-27-0901-01-alert-upal-kraj",
+      "section": "Alerty",
+      "title": "RCB utrzymuje ogólnokrajowy alert, a kulminacja upału ma przyjść w niedzielę",
+      "lead": "Polska wchodzi w weekend z ostrzeżeniami dla niemal całego kraju i prognozą do 42 stopni.",
+      "whatHappened": "Najbardziej praktyczny temat poranka w Polsce pozostaje bez zmian, ale jego waga rośnie wraz z wejściem w weekend. RCB utrzymuje ostrzeżenie o fali upałów dla niemal całego kraju, a TVN24 i IMGW opisują scenariusz, w którym niedziela 28 czerwca może przynieść lokalnie nawet 42 stopnie Celsjusza.",
+      "keyFacts": [
+        "RCB ostrzega przed falą upałów obejmującą niemal cały kraj.",
+        "TVN24 i IMGW opisują niedzielę jako dzień kulminacji z temperaturami do 42 stopni.",
+        "Wysokie temperatury zbiegają się z początkiem wakacyjnego weekendu i ruchem podróżnych."
+      ],
+      "reactions": [
+        "Służby apelują o ograniczenie wysiłku fizycznego, unikanie słońca i pilnowanie nawodnienia.",
+        "To jeden z tych tematów, które mogą bardzo szybko przejść z komunikatu ostrzegawczego do realnych interwencji medycznych i transportowych."
+      ],
+      "whyItMatters": "To najważniejszy polski alert użytkowy, bo dotyczy praktycznie całego kraju i wpływa na zdrowie, podróże oraz bezpieczeństwo weekendu.",
+      "context": "W runie z 06:02 temat był już wysoki. O 09:01 nie ma nowej oficjalnej korekty, ale okno największego ryzyka jest bliżej, więc użyteczność tej karty rośnie.",
+      "watchNext": [
+        "Czy przed niedzielą pojawią się nowe alerty lokalne, ograniczenia albo komunikaty sanitarne.",
+        "Czy pierwsze skutki upału zaczną dominować krajowy serwis ratunkowy i drogowy."
+      ],
+      "sources": [
+        {
+          "title": "RCB: fala upałów w niemal całym kraju",
+          "url": "https://www.gov.pl/web/rcb/w-najblizszych-dniach-na-terenie-niemal-calego-kraju-prognozowana-jest-fala-upalow"
+        },
+        {
+          "title": "TVN24: Upały w Polsce. Czerwone alarmy IMGW. Nawet 42 stopnie",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/upaly-w-polsce-czerwone-alarmy-imgw-nawet-42-stopnie-st9115734"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Pogoda",
+        "Upał"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-27-0901-02-paliwa-weekend",
+      "section": "Gospodarka",
+      "title": "Weekendowe limity cen paliw już obowiązują",
+      "lead": "Pb95 ma limit 6,02 zł za litr, a diesel 6,17 zł do poniedziałku.",
+      "whatHappened": "Ministerstwo Energii utrzymuje nowe maksymalne ceny detaliczne paliw na okres 27-29 czerwca. To wiadomość praktyczna dla kierowców, bo stawki już obowiązują i wchodzą w najruchliwszy weekend pierwszych wyjazdów wakacyjnych.",
+      "keyFacts": [
+        "Benzyna 95 ma limit 6,02 zł za litr.",
+        "Benzyna 98 ma limit 6,70 zł za litr, a olej napędowy 6,17 zł za litr.",
+        "Nowe stawki obowiązują przez cały okres od 27 do 29 czerwca."
+      ],
+      "reactions": [
+        "Dla użytkownika to bezpośredni koszt podróży na cały weekend, nie prognoza.",
+        "W tle tej historii rośnie znaczenie sytuacji w Ormuz, bo kolejne napięcia mogą szybko przełożyć się na następne korekty cen."
+      ],
+      "whyItMatters": "To jedna z najbardziej praktycznych wiadomości gospodarczych dnia, bo działa natychmiast na budżet kierowców i wakacyjny ruch.",
+      "context": "Wcześniejszy run opisywał te same wartości jako nowy punkt odniesienia. O 09:01 stawki są już po prostu obowiązującą rzeczywistością weekendu.",
+      "watchNext": [
+        "Czy po weekendzie ministerstwo ponownie podniesie limity detaliczne.",
+        "Czy napięcia geopolityczne zaczną szybciej przenosić się na polskie ceny paliw."
+      ],
+      "sources": [
+        {
+          "title": "Ministerstwo Energii: maksymalna cena detaliczna paliw obowiązująca w okresie 27-29 czerwca 2026 r.",
+          "url": "https://www.gov.pl/web/energia/maksymalna-cena-detaliczna-paliw-obowiazujaca-w-okresie-27-29-czerwca-2026-r"
+        },
+        {
+          "title": "TVN24: Ceny paliw na sobotę, niedzielę oraz poniedziałek 27-29 czerwca 2026",
+          "url": "https://tvn24.pl/biznes/moto/ceny-paliw-na-sobote-niedziele-oraz-poniedzialek-27-29-czerwca-2026-ile-kosztuja-benzyna-pb95-pb98-oraz-olej-napedowy-st9116747"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Paliwa",
+        "Kierowcy"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-0901-03-puzniki-prace",
+      "section": "Polska",
+      "title": "Drugi etap prac w Puźnikach zakończył się bez drugiej zbiorowej mogiły",
+      "lead": "Rano pojawił się nowy komunikat po pracach poszukiwawczych w dawnej wsi Puźniki.",
+      "whatHappened": "TVN24 podało rano, że zakończył się drugi etap prac poszukiwawczych w Puźnikach w obwodzie tarnopolskim. Według przekazu ministry kultury Marty Cienkowskiej tym razem nie odnaleziono drugiej zbiorowej mogiły ofiar, ale wskazano termin kolejnego etapu działań.",
+      "keyFacts": [
+        "Drugi etap prac zakończono bez odnalezienia drugiej zbiorowej mogiły.",
+        "Informacja została przypisana ministry kultury Marcie Cienkowskiej.",
+        "Jednocześnie podano, że będzie kolejny etap działań poszukiwawczych."
+      ],
+      "reactions": [
+        "Temat ma w Polsce ciężar historyczny i polityczny, bo łączy pamięć o rzezi wołyńskiej z relacjami z Ukrainą.",
+        "To poranny akcent, który przesuwa krajową część feedu z bieżącej polityki również w stronę pamięci i polityki historycznej."
+      ],
+      "whyItMatters": "To nowy, materialny polski temat poranka, a nie tylko komentarz polityczny. Wpływa na debatę publiczną i relacje polsko-ukraińskie.",
+      "context": "Run z 06:02 nie miał jeszcze tej historii. O 09:01 jest to najwyraźniejsza nowa krajowa informacja w tle weekendu.",
+      "watchNext": [
+        "Kiedy dokładnie rozpocznie się kolejny etap prac i jaki będzie jego zakres.",
+        "Czy temat wywoła nowe reakcje polityczne po stronie polskiej i ukraińskiej."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ukraina, Puźniki. Koniec drugiego etapu poszukiwań ofiar rzezi wołyńskiej",
+          "url": "https://tvn24.pl/polska/ukraina-puzniki-koniec-drugiego-etapu-poszukiwan-ofiar-rzezi-wolynskiej-jest-data-kolejnego-st9116691"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Ukraina",
+        "Historia"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-0901-04-sikorski-ukraina",
+      "section": "Polityka",
+      "title": "Sikorski utrzymuje ostrą krytykę reakcji Nawrockiego wobec Zełenskiego",
+      "lead": "Szef MSZ uważa, że odpowiedź prezydenta była nieadekwatna i upokorzyła Zełenskiego.",
+      "whatHappened": "Radosław Sikorski w TVN24 ocenił, że reakcja prezydenta Karola Nawrockiego na decyzję Wołodymyra Zełenskiego była nieadekwatna. Według ministra spraw zagranicznych gest ten osobiście upokorzył prezydenta Ukrainy i utrudnił dalszy dialog.",
+      "keyFacts": [
+        "Sikorski powiedział, że doradzałby prezydentowi inne rozwiązanie.",
+        "W wypowiedzi padła teza o osobistym upokorzeniu Zełenskiego.",
+        "Spór łączy politykę historyczną, relacje z Ukrainą i konflikt między obozami w Polsce."
+      ],
+      "reactions": [
+        "To nadal najmocniejszy polityczny komentarz krajowy dostępny w porannym obiegu.",
+        "Temat może wrócić z odpowiedzią Kancelarii Prezydenta albo dalszą eskalacją sporu."
+      ],
+      "whyItMatters": "Relacje z Ukrainą są dla Polski strategiczne, więc otwarty spór wewnętrzny o sposób ich prowadzenia ma wagę większą niż zwykła wymiana politycznych ocen.",
+      "context": "Historia była już obecna o 06:02. O 09:01 utrzymuje się jako ważny wątek polityczny, bo nie pojawił się silniejszy krajowy temat stricte rządowy.",
+      "watchNext": [
+        "Czy Kancelaria Prezydenta odpowie na ocenę Sikorskiego.",
+        "Czy spór przełoży się na kolejne gesty albo komunikaty wobec Ukrainy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Sikorski - gdyby Nawrocki mnie zapytał, doradziłbym coś innego",
+          "url": "https://tvn24.pl/polska/kryzys-w-relacjach-polsko-ukrainskich-radoslaw-sikorski-gdyby-karol-nawrocki-mnie-zapytal-doradzilbym-cos-innego-st9116495"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Ukraina",
+        "Dyplomacja"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-0901-05-usa-iran-atak",
+      "section": "Świat",
+      "title": "USA potwierdzają atak na irańskie cele po uderzeniu na statek w Ormuz",
+      "lead": "CENTCOM mówi o ataku na magazyny rakiet, dronów i nadbrzeżne radary.",
+      "whatHappened": "Najmocniejszy temat świata pozostaje bezdyskusyjny: CENTCOM potwierdziło amerykańskie uderzenie na irańskie magazyny rakiet i dronów oraz radary po wcześniejszym ataku na statek handlowy w cieśninie Ormuz. BBC podkreśla, że to już otwarta odpowiedź wojskowa po incydencie morskim.",
+      "keyFacts": [
+        "CENTCOM wskazuje trzy typy celów: magazyny rakiet, magazyny dronów i nadbrzeżne radary.",
+        "Atak był odpowiedzią na wcześniejsze uderzenie w statek handlowy.",
+        "Historia przeniosła napięcie z poziomu zagrożenia dla żeglugi na poziom bezpośredniej odpowiedzi militarnej USA."
+      ],
+      "reactions": [
+        "Rynki, armatorzy i rządy będą teraz patrzeć na ryzyko odwetu i wpływ na korytarz handlowy.",
+        "To temat, który może przedefiniować cały dzienny puls przez kolejne godziny."
+      ],
+      "whyItMatters": "To najwyższy priorytet globalny, bo dotyczy jednego z kluczowych punktów żeglugowych świata i bezpośredniego użycia siły przez USA przeciw Iranowi.",
+      "context": "W poprzednim runie sam atak był już potwierdzony. O 09:01 nadal dominuje feed, bo jego skutki nie zostały zamknięte żadnym sygnałem deeskalacji.",
+      "watchNext": [
+        "Czy Iran odpowie militarnie albo ograniczy żeglugę w Ormuz.",
+        "Czy pojawią się kolejne wojskowe komunikaty o skali strat i planie dalszych działań."
+      ],
+      "sources": [
+        {
+          "title": "CENTCOM: U.S. Strikes Iran in Response to Attack on Commercial Vessel",
+          "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4528341/us-strikes-iran-in-response-to-attack-on-commercial-vessel/"
+        },
+        {
+          "title": "BBC: US strikes Iran after attack on cargo ship",
+          "url": "https://www.bbc.co.uk/news/articles/ckg590wqxwpo"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Iran",
+        "USA"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-27-0901-06-ormuz-ruch-statkow",
+      "section": "Bezpieczeństwo",
+      "title": "Ruch statków w Ormuz odbił, ale okno może się zamykać",
+      "lead": "CNN widzi większy ruch niż w ostatnich trzech miesiącach, lecz ostrzega przed nowym hamowaniem.",
+      "whatHappened": "Druga warstwa historii o Iranie dotyczy już nie tylko samego ataku USA, ale zachowania korytarza żeglugowego. CNN Business podaje, że w ostatnim tygodniu przez cieśninę Ormuz przepłynęło więcej statków niż przez trzy poprzednie miesiące, ale tempo to może osłabnąć po wstrzymaniu krytycznego planu ewakuacyjnego.",
+      "keyFacts": [
+        "CNN mówi o wyraźnym odbiciu ruchu statków w ostatnim tygodniu.",
+        "Jednocześnie medium zaznacza, że to odbicie może zwolnić.",
+        "Powodem niepewności ma być wstrzymanie kluczowego planu ewakuacyjnego."
+      ],
+      "reactions": [
+        "To sygnał, że skutki kryzysu są już logistyczne i handlowe, nie tylko militarne.",
+        "Armatorzy i importerzy będą traktować każdy kolejny komunikat z Ormuz jako sygnał kosztowy."
+      ],
+      "whyItMatters": "Nawet bez pełnej blokady Ormuz sama niepewność żeglugi wpływa na bezpieczeństwo dostaw, ceny energii i nastroje rynkowe.",
+      "context": "W runie z 06:02 dominował sam fakt uderzenia USA. O 09:01 pojawia się bardziej namacalny wątek konsekwencji dla szlaku handlowego.",
+      "watchNext": [
+        "Czy kolejne godziny pokażą spadek ruchu statków mimo krótkiego odbicia.",
+        "Czy pojawią się nowe decyzje ewakuacyjne albo ostrzeżenia dla armatorów."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Ships took advantage of an opening in the Strait of Hormuz. But it may be closing",
+          "url": "https://edition.cnn.com/2026/06/26/business/strait-hormuz-ship-traffic"
+        },
+        {
+          "title": "CENTCOM: U.S. Strikes Iran in Response to Attack on Commercial Vessel",
+          "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4528341/us-strikes-iran-in-response-to-attack-on-commercial-vessel/"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Ormuz",
+        "Żegluga"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-27-0901-07-izrael-liban",
+      "section": "Świat",
+      "title": "Izrael i Liban podpisały ramowe porozumienie, ale Hezbollah pozostaje poza układem",
+      "lead": "Po rozmowach z udziałem USA pojawił się sygnał deeskalacji, ale nie pełnego uspokojenia.",
+      "whatHappened": "BBC i CNN informują o podpisaniu ramowego porozumienia Izraela z Libanem po rozmowach prowadzonych przez USA. Jednocześnie media podkreślają, że Hezbollah nie jest stroną układu, więc porozumienie nie zamyka ryzyka kolejnych naruszeń lub presji militarnej.",
+      "keyFacts": [
+        "Porozumienie zostało przedstawione jako efekt rozmów z udziałem USA.",
+        "Hezbollah nie jest jego formalną stroną.",
+        "W obiegu pozostaje scenariusz wycofania się Izraela z części obszarów na południu Libanu."
+      ],
+      "reactions": [
+        "To rzadki poranny sygnał dyplomatycznego ruchu w regionie obciążonym wieloma kryzysami jednocześnie.",
+        "Jednocześnie komentarze wokół układu pokazują, że ryzyko jego szybkiego podważenia jest nadal realne."
+      ],
+      "whyItMatters": "Każdy ruch zmniejszający napięcie na granicy izraelsko-libańskiej ma znaczenie regionalne, ale trwałość układu jest niepewna, bo nie obejmuje wszystkich aktorów.",
+      "context": "Temat był już sygnalizowany o 06:02, lecz o 09:01 nadal utrzymuje wysoką rangę, bo pozostaje jednym z niewielu sygnałów potencjalnej deeskalacji na Bliskim Wschodzie.",
+      "watchNext": [
+        "Czy pojawią się pierwsze praktyczne kroki wdrażania porozumienia.",
+        "Czy Hezbollah odpowie politycznie albo militarnie na warunki układu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Israel and Lebanon sign framework agreement after US-brokered talks",
+          "url": "https://www.bbc.co.uk/news/articles/cg5315n1v5go"
+        },
+        {
+          "title": "CNN: Israel and Lebanon sign framework agreement after US-brokered talks",
+          "url": "https://edition.cnn.com/2026/06/26/middleeast/israel-and-lebanon-sign-framework-agreement-latam-intl"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Liban",
+        "Izrael"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-0901-08-wenezuela-trzesienia",
+      "section": "Świat",
+      "title": "Wenezuela utrzymuje bilans 920 ofiar i odczuła kolejny wstrząs",
+      "lead": "Bilans katastrofy pozostaje bardzo ciężki, a kraj nadal mierzy się z niestabilną sytuacją.",
+      "whatHappened": "BBC podaje, że po trzęsieniach ziemi w Wenezueli zginęło co najmniej 920 osób, a setki kolejnych mogą pozostawać pod gruzami. TVN24 dodaje, że kraj odczuł kolejny wstrząs, a pełniąca obowiązki prezydenta Delcy Rodriguez rozmawiała telefonicznie z Donaldem Trumpem i Marco Rubio.",
+      "keyFacts": [
+        "BBC utrzymuje bilans co najmniej 920 ofiar.",
+        "Setki osób mogą nadal być uwięzione pod gruzami.",
+        "TVN24 opisuje kolejny wstrząs i dyplomatyczne rozmowy Delcy Rodriguez."
+      ],
+      "reactions": [
+        "To jeden z najcięższych humanitarnie tematów poranka i nadal nie ma sygnału szybkiego domknięcia bilansu.",
+        "Historia zaczyna mieć też wymiar polityczny i międzynarodowy, nie tylko ratunkowy."
+      ],
+      "whyItMatters": "Skala ofiar i niepewność wokół dalszych zniszczeń utrzymują ten temat w czołówce globalnego feedu.",
+      "context": "W 06:02 wysoki był sam bilans 920 ofiar. O 09:01 dochodzi kolejny wstrząs i szerszy wątek polityczny wokół pomocy oraz kontaktów z USA.",
+      "watchNext": [
+        "Czy bilans ofiar wzrośnie po dalszych pracach ratunkowych.",
+        "Czy rozmowy władz Wenezueli z USA przełożą się na pomoc, logistykę albo napięcia polityczne."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Venezuela earthquakes kill 920 people as families desperate for news",
+          "url": "https://www.bbc.co.uk/news/articles/c39y79g7gzko"
+        },
+        {
+          "title": "TVN24: Wenezuela znów zadrżała. Rodriguez rozmawiała z Trumpem i Rubio",
+          "url": "https://tvn24.pl/swiat/wenezuela-kolejne-trzesienie-ziemi-delcy-rodriguez-rozmawiala-z-donaldem-trumpem-i-marco-rubio-st9116684"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wenezuela",
+        "Katastrofa"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-27-0901-09-trump-cyfrowe-cla",
+      "section": "Gospodarka",
+      "title": "Trump grozi 100-procentowymi cłami za europejskie podatki cyfrowe",
+      "lead": "Spór o opodatkowanie Big Tech wraca jako nowa groźba handlowa wobec Europy.",
+      "whatHappened": "BBC podaje, że Donald Trump zagroził 100-procentowymi cłami wobec europejskich państw rozwijających podatki cyfrowe wymierzone w amerykańskie firmy technologiczne. CNN Business zauważa przy tym, że rynki finansowe tym razem reagują na tę groźbę dużo spokojniej niż na podobne zapowiedzi w poprzednim roku.",
+      "keyFacts": [
+        "Groźba dotyczy państw europejskich rozwijających albo utrzymujących podatki cyfrowe.",
+        "W centrum sporu pozostają amerykańskie firmy technologiczne i opodatkowanie ich usług.",
+        "CNN ocenia, że rynki nie zareagowały tym razem równie nerwowo jak wcześniej."
+      ],
+      "reactions": [
+        "To temat ważny dla inwestorów, polityki handlowej i relacji USA-UE.",
+        "Spokojniejsza reakcja rynku nie oznacza, że konflikt jest błahy, tylko że groźba jest na razie odbierana ostrożniej."
+      ],
+      "whyItMatters": "Spór o cła i podatki cyfrowe może wrócić bardzo szybko do centrum rozmów gospodarczych między USA a Europą.",
+      "context": "Temat był obecny o 06:02, ale teraz ma dodatkowy kontekst rynkowy: sama groźba nie wywołała takiego szoku jak wcześniej.",
+      "watchNext": [
+        "Czy Trump wskaże konkretne kraje albo terminy wejścia ceł.",
+        "Czy Unia Europejska odpowie komunikacyjnie lub regulacyjnie jeszcze dziś."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Trump threatens 100% tariff on European nations over tech tax",
+          "url": "https://www.bbc.co.uk/news/articles/cn4rd71411ko"
+        },
+        {
+          "title": "CNN: Trump threatened 100% tariffs on Europe. Here's why nobody flinched",
+          "url": "https://edition.cnn.com/2026/06/26/business/trump-tariff-threat"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Cła",
+        "USA"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-0901-10-uk-heatwave-cooldown",
+      "section": "Alerty",
+      "title": "Po rekordowym 37,3 stopnia w Wielkiej Brytanii ma przyjść ochłodzenie",
+      "lead": "Met Office potwierdza rekord czerwca, a BBC zapowiada spokojniejszą pogodę do niedzieli.",
+      "whatHappened": "Met Office podało, że 26 czerwca w Suffolk odnotowano prowizorycznie 37,3 stopnia Celsjusza, czyli trzeci z rzędu nowy rekord czerwca w Wielkiej Brytanii. BBC Weather ocenia jednak, że rekordowa fala upałów ma zacząć ustępować wraz z chłodniejszą i bardziej niestabilną pogodą w weekend.",
+      "keyFacts": [
+        "Met Office mówi o prowizorycznym rekordzie 37,3 stopnia w Suffolk.",
+        "To trzeci kolejny dzień z nowym rekordem czerwca w Wielkiej Brytanii.",
+        "BBC prognozuje przejście ku chłodniejszej pogodzie do niedzieli."
+      ],
+      "reactions": [
+        "Historia pozostaje ważna także dla Polski, bo wzmacnia obraz europejskiej skali obecnej fali gorąca.",
+        "Poranny zwrot z rekordu na ochłodzenie pokazuje, że nawet skrajne epizody pogodowe mogą szybko przechodzić w nową fazę ryzyka."
+      ],
+      "whyItMatters": "To czytelny europejski kontekst dla polskiego weekendu z upałem i sygnał, jak szeroki jest zasięg obecnej fali gorąca.",
+      "context": "Run z 06:02 akcentował przede wszystkim sam rekord. O 09:01 dochodzi perspektywa ochłodzenia i końca najbardziej ekstremalnej fazy w Wielkiej Brytanii.",
+      "watchNext": [
+        "Czy Met Office potwierdzi rekord po pełnej weryfikacji danych.",
+        "Czy fala ochłodzenia przełoży się szerzej na resztę Europy, czy pozostanie lokalna."
+      ],
+      "sources": [
+        {
+          "title": "Met Office: Third consecutive day of a new June temperature record with end of heatwave in sight",
+          "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/third-consecutive-day-of-a-new-june-temperature-record-with-end-of-heatwave-in-sight"
+        },
+        {
+          "title": "BBC Weather: Weekend to bring cooldown after record-breaking heatwave",
+          "url": "https://www.bbc.co.uk/weather/articles/crkvl343jj3o"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Pogoda",
+        "Europa"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-0901-11-anthropic-mythos",
+      "section": "Technologia",
+      "title": "USA dopuściły limitowany powrót modelu Anthropic Mythos",
+      "lead": "Po wcześniejszej blokadzie eksportowej model wraca do wybranych firm i organizacji.",
+      "whatHappened": "CNN podaje, że administracja USA pozwoliła Anthropic na ograniczone udostępnienie modelu Mythos wybranym organizacjom. To korekta wcześniejszej blokady eksportowej związanej z obawami o bezpieczeństwo narodowe, ale produkt nadal nie trafia do szerokiego otwartego rynku.",
+      "keyFacts": [
+        "Mythos wraca w formule limitowanej, a nie powszechnej.",
+        "Decyzja jest związana z rewizją wcześniejszych ograniczeń eksportowych.",
+        "Sam Anthropic nadal opisuje model jako rozwiązanie o ograniczonej dostępności."
+      ],
+      "reactions": [
+        "To szeroko czytelny temat technologiczny, bo pokazuje realne wejście państwa w kontrolę dystrybucji zaawansowanych modeli AI.",
+        "Rynek będzie traktował tę decyzję jako sygnał dla kolejnych sporów o dostęp do najmocniejszych modeli."
+      ],
+      "whyItMatters": "Historia wykracza poza samą firmę Anthropic, bo dotyczy polityki bezpieczeństwa wobec generatywnej AI i kontroli jej dystrybucji.",
+      "context": "W 06:02 temat był już obecny, ale nadal utrzymuje się jako najbardziej czytelna poranna karta technologiczna o wysokiej wadze publicznej.",
+      "watchNext": [
+        "Czy administracja USA rozszerzy albo ponownie zawęzi warunki dostępu do Mythos.",
+        "Czy inni dostawcy AI zaczną podlegać podobnym ograniczeniom lub wyjątkom."
+      ],
+      "sources": [
+        {
+          "title": "CNN: US government allows Anthropic limited release of AI model that sparked cybersecurity concerns",
+          "url": "https://edition.cnn.com/2026/06/26/tech/anthropic-mythos-release"
+        },
+        {
+          "title": "Anthropic: Claude Mythos",
+          "url": "https://www.anthropic.com/claude/mythos"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "AI",
+        "Regulacje"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-0901-12-sosnowiec-psy",
+      "section": "Polska",
+      "title": "Ośmiolatka po pogryzieniu przez psy w Sosnowcu trafiła do szpitala w ciężkim stanie",
+      "lead": "Policja mówi, że ojciec z córkami dokarmiali psy, gdy doszło do ataku.",
+      "whatHappened": "TVN24 podało, że ośmiolatka pogryziona przez psy w Sosnowcu trafiła do szpitala w ciężkim stanie. Poszkodowany został także ojciec, który próbował zasłonić córkę, a policja przekazała, że rodzina dokarmiała zwierzęta.",
+      "keyFacts": [
+        "Do szpitala trafiła ciężko ranna ośmiolatka.",
+        "Poszkodowany został również ojciec dziecka.",
+        "Według policji ojciec z córkami dokarmiali psy przed atakiem."
+      ],
+      "reactions": [
+        "To lokalna, ale bardzo mocna karta bezpieczeństwa publicznego, która weszła rano do szerokiego obiegu TVN24.",
+        "Historia może szybko wrócić z informacją o stanie dziecka, odpowiedzialności właściciela zwierząt albo decyzjach śledczych."
+      ],
+      "whyItMatters": "Mimo lokalnego charakteru to temat o dużym ciężarze emocjonalnym i bezpieczeństwa, dlatego kwalifikuje się do krajowego porannego pulsu.",
+      "context": "Wcześniejszy run nie zawierał tej historii. O 09:01 jest to nowy krajowy sygnał bezpieczeństwa publicznego obok upałów i weekendowych ostrzeżeń.",
+      "watchNext": [
+        "Czy pojawi się nowy komunikat o stanie zdrowia dziecka.",
+        "Czy policja i prokuratura ujawnią więcej o okolicznościach ataku i statusie zwierząt."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ośmiolatka pogryziona. Policja: ojciec z córkami karmił psy",
+          "url": "https://tvn24.pl/katowice/sosnowiec-8-latka-pogryziona-przez-psy-ojciec-z-corkami-dokarmiali-zwierzeta-st9116568"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Bezpieczeństwo",
+        "Dzieci"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "CNN Politics",
+      "url": "https://edition.cnn.com/politics"
+    },
+    {
+      "title": "CNN Business",
+      "url": "https://edition.cnn.com/business"
+    },
+    {
+      "title": "CENTCOM: U.S. Strikes Iran in Response to Attack on Commercial Vessel",
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4528341/us-strikes-iran-in-response-to-attack-on-commercial-vessel/"
+    },
+    {
+      "title": "RCB: fala upałów w niemal całym kraju",
+      "url": "https://www.gov.pl/web/rcb/w-najblizszych-dniach-na-terenie-niemal-calego-kraju-prognozowana-jest-fala-upalow"
+    },
+    {
+      "title": "Ministerstwo Energii: maksymalna cena detaliczna paliw obowiązująca w okresie 27-29 czerwca 2026 r.",
+      "url": "https://www.gov.pl/web/energia/maksymalna-cena-detaliczna-paliw-obowiazujaca-w-okresie-27-29-czerwca-2026-r"
+    },
+    {
+      "title": "Met Office: Third consecutive day of a new June temperature record with end of heatwave in sight",
+      "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/third-consecutive-day-of-a-new-june-temperature-record-with-end-of-heatwave-in-sight"
+    },
+    {
+      "title": "Anthropic: Claude Mythos",
+      "url": "https://www.anthropic.com/claude/mythos"
+    }
+  ]
+}
