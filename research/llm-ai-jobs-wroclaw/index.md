@@ -1,27 +1,27 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-06-27 01:41 CEST
+Last updated: 2026-06-27 20:16 CEST
 
 ## Current Understanding
 
-Runda z `2026-06-27 01:41 CEST` dodała kilka nowych, wysokosygnałowych ról i
-jedną ważną zmianę statusu. `ITDS Senior AI Technical Lead – Developer Tools &
-Generative AI` jest już wygasły, ale w tym samym klastrze pojawiła się nowa
-aktywna rola `Kubernetes & Cloud Infrastructure Engineer – AI Platform` we
-Wrocławiu, co utrzymuje ITDS jako ważny lokalny sygnał AI platform / infra.
+Runda z `2026-06-27 20:16 CEST` dołożyła kolejny pakiet świeżych sygnałów po
+porannym rozszerzeniu `ITDS`, `IN4GE` i `ACAISOFT`. `ITDS` ma już nie jeden,
+ale dwa równoległe aktywne wrocławskie sygnały AI/infra: wcześniejsze
+`Kubernetes & Cloud Infrastructure Engineer – AI Platform` oraz nową rolę
+`Production Support Engineer – AI & LLM`, która przesuwa firmę także w stronę
+LLM-aware operations.
 
-Równolegle `IN4GE` wyrosło na nowy, bardzo aktywny klaster remote-Poland:
-`AI Engineering Lead (Python, GenAI & Agentic AI)`,
-`Senior AI Engineer (Conversational AI, GCP, Gemini)`,
-`Automation Developer (GCP / AI / Agentic Automation)` oraz
-`Open Source AI Engineer (LLM / Full Stack)`. To już nie pojedynczy strzał,
-lecz stabilny zestaw ról wokół agentic/GenAI delivery.
+Pojawił się też nowy lokalny mini-klaster wokół `Axabee` i `4soft`. `Axabee`
+potwierdza oficjalnie `Senior AI Engineer` z `100% remote` i opcjonalnym
+biurem `Wrocław / Opole`, a `4soft` pokazuje bardzo konkretny board-first
+sygnał `AI Product Engineer` z `LangChain`, `LangGraph`, `retrieval pipelines`
+i oceną jakości systemów LLM.
 
-`ACAISOFT` także rozszerzyło zakres: obok znanych już pozycji pojawiły się
-publicznie `Site Reliability Engineer – AI/LLM & Infra` oraz
-`Infra Software Engineer (AI project)`, co wzmacnia sygnał, że firma buduje
-cały podzbiór ról wokół AI platform / infra i ewaluacji modeli. Dodatkowo
-`Capgemini` pokazało nowy wrocławski hybrydowy `Cloud Data Architect with AI`.
+`IN4GE` przestało wyglądać wyłącznie jak źródło ról aplikacyjno-agentowych,
+bo dodało jeszcze `Cloud Platform & Infrastructure Engineer (GenAI / CX AI)`.
+Do tego doszedł nowy direct-employer sygnał `ITEAMLY Applied AI Engineer` dla
+`remote Poland`, co wzmacnia pulę ról hands-on z naciskiem na produkcyjne
+LLM/RAG backendy.
 
 ## Stable Facts
 
@@ -130,6 +130,11 @@ only when something meaningful changes.
 | acaisoft-site-reliability-engineer-ai-llm-infra-remote-poland | ACAISOFT POLAND Sp. z o.o. | Site Reliability Engineer – AI/LLM & Infra | Remote Poland | 2026-06-27-0141 | 2026-06-27-0141 | Open | New direct-employer / board-confirmed role; `160–230 zł netto (+ VAT) / godz.` or `26 880–38 640 PLN netto (+ VAT) / mies.` depending on mirror; `Python`, `CI/CD`, `AWS`, `Kubernetes`, `LLM`, `AI`; valid to `11 Jul`. | [Pracuj.pl](https://www.pracuj.pl/praca/site-reliability-engineer-ai-llm-infra-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004897180) / [Pracodawcy Pracuj](https://pracodawcy.pracuj.pl/company/20303751) / [Acaisoft careers](https://www.acaisoft.com/careers) |
 | acaisoft-infra-software-engineer-ai-project-remote-poland | ACAISOFT POLAND Sp. z o.o. | Infra Software Engineer (AI project) | Remote Poland | 2026-06-27-0141 | 2026-06-27-0141 | Open | New direct-employer / board-confirmed role; `26 880–35 280 PLN netto (+ VAT) / mies. B2B`; `Whole Poland (remote work)`; AI project infrastructure/backend scope; valid to `11 Jul`. | [Pracuj.pl](https://www.pracuj.pl/praca/infra-software-engineer-ai-project-warszawa-aleja-niepodleglosci-18%2Coferta%2C1004897254) / [Acaisoft careers](https://www.acaisoft.com/careers) |
 | capgemini-cloud-data-architect-with-ai-wroclaw-hybrid | Capgemini Polska | Cloud Data Architect with AI | Wrocław hybrid | 2026-06-27-0141 | 2026-06-27-0141 | Open | New Wrocław hybrid role; official detail page confirms Wrocław among locations, `AI/ML, Big Data / Data Science` specialization, strong cloud/data platform stack, and explicit LLM / GenAI responsibilities. Salary not public on the official page. | [Capgemini Careers](https://careers.capgemini.com/job/Warszawa-Cloud-Data-Architect-with-AI/1399835233/) / [Pracuj.pl](https://www.pracuj.pl/praca/cloud-data-architect-with-ai-wroclaw-legnicka-48%2Coferta%2C1004901240) |
+| itds-production-support-engineer-ai-llm-wroclaw-onsite | ITDS Polska Sp. z o.o. | Production Support Engineer – AI & LLM | Wrocław / on-site | 2026-06-27-2016 | 2026-06-27-2016 | Open | New official ITDS Wrocław role; `20 000–35 000 PLN gross (Employment Contract)`; on-site; production support for trading systems plus `LLM-based systems`, monitoring and tooling in `Python`, `Bash` and `PowerShell`. | [ITDS](https://itds.pl/it-jobs/production-support-engineer-ai-llm/) |
+| axabee-senior-ai-engineer-wroclaw-opole-remote | Axabee | Senior AI Engineer | 100% remote / Wrocław / Opole | 2026-06-27-2016 | 2026-06-27-2016 | Open | New official Axabee role on public careers hub; tags include `NLP`, `Python`, `OpenAI`, `Vector databases`; benefits section explicitly says `100% remote with optional offices in Wrocław or Opole`. | [Axabee careers](https://www.axabee.com/careers) |
+| justjoin-4soft-ai-product-engineer-wroclaw-remote | 4soft | AI Product Engineer | Wrocław +2 / remote | 2026-06-27-2016 | 2026-06-27-2016 | Open | New board-first Wrocław role; `25 000–35 000 PLN net / month B2B`; `LangChain`, `LangGraph`, `retrieval pipelines`, LLM evals and observability; `up to 100% remote`. | [Just Join IT](https://justjoin.it/job-offer/4soft-ai-product-engineer-wroclaw-ai) |
+| pracuj-iteamly-applied-ai-engineer-remote-poland | ITEAMLY SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ | Applied AI Engineer | Remote Poland | 2026-06-27-2016 | 2026-06-27-2016 | Open | New direct-employer Pracuj.pl role; `30 000–39 000 zł netto (+ VAT) / mies. B2B`; `Whole Poland (remote work)`; `Python`, `LangChain`, `OpenAI API`, `RAG`, `TypeScript` and optional `Agentic AI`; valid to `08 Jul`. | [Pracuj.pl](https://www.pracuj.pl/praca/applied-ai-engineer-krakow%2Coferta%2C1004886158) |
+| in4ge-cloud-platform-infrastructure-engineer-genai-cx-ai-remote-poland | IN4GE sp. z o.o. | Cloud Platform & Infrastructure Engineer (GenAI / CX AI) | Remote Poland | 2026-06-27-2016 | 2026-06-27-2016 | Open | New remote Poland infra role in the expanding IN4GE cluster; `190–220 zł netto (+ VAT) / godz. B2B`; `Cała Polska (praca zdalna)`; valid to `15 Jul`; strong AI platform / infra signal. | [Pracuj.pl](https://www.pracuj.pl/praca/cloud-platform-infrastructure-engineer-genai-cx-ai-warszawa%2Coferta%2C1004901526) |
 
 ## Open Questions
 
@@ -156,6 +161,12 @@ only when something meaningful changes.
 - Czy `Monterail` pokaże pełniejszy, publicznie klikalny detail dla
   `LLM Engineer - Freelancer`, czy najbogatsze szczegóły pozostaną rozproszone
   między `careers` i publicznymi mirrorami?
+- Czy `4soft` i `ITEAMLY` pokażą bardziej kanoniczne publiczne employer detail
+  pages niż bieżące boardy, czy pozostaną dłużej głównie w warstwie
+  `Just Join IT` / `Pracuj.pl`?
+- Czy `Axabee` rozwinie publiczny detail `Senior AI Engineer` albo pokaże
+  dodatkową, odrębną rolę `AI Platform Engineer (GCP)` jako kolejny istotny
+  sygnał Wrocław/remote?
 
 ## Watch Items
 
@@ -193,6 +204,8 @@ only when something meaningful changes.
 - Official `Monterail careers`, `Holisticon Connect ML Engineer`, updated
   `Rite NRG Pracuj.pl` detail and the expanding `ACAISOFT` DevOps/infra
   cluster after the `26 Jun 17:41` run.
+- Official `Axabee careers`, public `4soft`, direct-employer `ITEAMLY` and the
+  expanding `IN4GE` infra branch after the `27 Jun 20:16` run.
 - Job boards with reliable filters for Wroclaw, remote Poland and AI/LLM work.
 - Salary, seniority, tech-stack and remote-policy changes on previously seen
   listings.
@@ -200,6 +213,7 @@ only when something meaningful changes.
 
 ## Recent Reports
 
+- [2026-06-27-2016](runs/2026-06-27-2016.md)
 - [2026-06-27-0141](runs/2026-06-27-0141.md)
 - [2026-06-18-0142](runs/2026-06-18-0142.md)
 - [2026-06-18-1741](runs/2026-06-18-1741.md)
@@ -223,6 +237,7 @@ only when something meaningful changes.
 
 ## Review Notes
 
+- 2026-06-27: wieczorna runda dodała `ITDS Production Support Engineer – AI & LLM`, oficjalny `Axabee Senior AI Engineer`, board-first `4soft AI Product Engineer`, direct-employer `ITEAMLY Applied AI Engineer` oraz nowy infra sygnał `IN4GE Cloud Platform & Infrastructure Engineer (GenAI / CX AI)`.
 - 2026-06-27: `ITDS` dodał aktywny wrocławski sygnał `Kubernetes & Cloud Infrastructure Engineer – AI Platform`, a wcześniejszy `Senior AI Technical Lead` wygasł; `IN4GE` wygląda teraz na powtarzalne źródło remote-Poland dla ról agentic / GenAI, a `ACAISOFT` rozszerzył się o jawne role `Site Reliability Engineer` i `Infra Software Engineer`.
 - 2026-06-26: `Monterail` i `Holisticon Connect` dodały nowe sygnały, a `ACAISOFT` ponownie rozszerzył klaster infra.
 - 2026-06-25: `CKSource / Tiugo` dołączył do shortlisty z silnym publicznym AI role, a `Accenture` otworzył nowy wrocławski klaster `LLM` / `RAG`.
