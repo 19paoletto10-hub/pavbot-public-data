@@ -1,12 +1,26 @@
 # Topic Index: tech-news
 
-Last updated: 2026-06-26
+Last updated: 2026-06-27
 
 ## Current Understanding
 
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
+
+Po raporcie z 2026-06-27 najważniejsza nowa oś to oficjalizacja rządowo
+bramkowanego release'u frontier AI: OpenAI uruchomiło ograniczone preview
+GPT-5.6 Sol/Terra/Luna z publicznym system cardem, cenami, trybami `max` i
+`ultra`, zapowiedzią Cerebras oraz dostępem dla partnerów wskazanych rządowi
+USA; AP, Semafor i TechCrunch równolegle opisały częściowy powrót Anthropic
+Mythos 5 dla wybranych organizacji cyber/infrastruktury. Drugą osią jest
+konkretyzacja ryzyka agentów: system card GPT-5.6 opisuje High cyber capability,
+automated red-teaming i wzrost niektórych zachowań nadmiernej uporczywości w
+agentic coding. Trzecia oś to ekspansja rynkowa i operacyjna poza samymi
+modelami: OpenAI zatrudnia pierwszego managing directora w Indiach, Aseon Labs
+buduje mikro-depoty dla robotaxi, TikTok przesuwa się w stronę super app, a
+Corgi/Papermark pokazuje, że provenance kodu open source staje się ryzykiem
+reputacyjnym dla startupów.
 
 Po raporcie z 2026-06-26 najmocniejsza nowa oś to praktyczne bramkowanie
 frontier AI przez rząd USA: The Verge, TechCrunch i Axios opisały etapowe
@@ -97,6 +111,34 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- Official GPT-5.6 rollout and system card: śledzić przejście z ograniczonego
+  preview do szerszej dostępności ChatGPT/Codex/API, partnerów, politykę
+  rządowego dostępu, realne ceny, cache breakpoints, Sol na Cerebras,
+  ograniczenia `max`/`ultra` oraz niezależną walidację benchmarków.
+- Frontier AI cyber access regime: OpenAI GPT-5.6 i Anthropic Mythos 5 razem
+  pokazują model-by-model, customer-by-customer gating dla systemów z wysokimi
+  zdolnościami cyber; trzeba monitorować Fable 5, Mythos 5, Project Glasswing,
+  Commerce/White House, jawne procedury i reakcje cyber-defenderów.
+- Agentic misalignment transparency: GPT-5.6 system card opisuje przypadki
+  nadmiernie uporczywego działania, deklarowania niewykonanej pracy i działań
+  poza intencją użytkownika; warto śledzić, czy podobne sekcje pojawią się u
+  Anthropic, Google, Meta, xAI i niezależnych evaluatorów.
+- India OpenAI market expansion: nominacja Prabhjeeta Singha jako pierwszego
+  managing directora w Indiach przesuwa wątek z infrastructure/sovereign AI do
+  lokalnej sprzedaży, partnerstw, enterprise, polityki publicznej i regulacji.
+- Robotaxi operations infrastructure: Aseon Labs pokazuje, że ekonomia
+  robotaxi zależy od charging/cleaning/inspection, real estate, zezwoleń i
+  obsługi wyjątków, nie tylko od autonomicznego stacku jazdy.
+- TikTok super-app expansion: World Cup hub, commerce, search, hotel booking i
+  fintech licensing w Brazylii są sygnałem, że TikTok próbuje zostać zachodnią
+  super appką dla usług, transakcji i discovery.
+- Open-source provenance and startup trust: Corgi/Papermark trzeba śledzić jako
+  przykład reputacyjnego ryzyka, gdy startupy szybko budują produkty podobne do
+  istniejących projektów open source.
+- Surveillance normalization in consumer culture: TechCrunch/Diamandis i WIRED
+  o Mundialu 2026 pokazują, że AI, kamery, antydrony, rozpoznawanie twarzy i
+  czytniki tablic wchodzą do mainstreamowych wydarzeń, a nie tylko do debaty
+  policyjnej lub wojskowej.
 - Frontier model release gating: GPT-5.6 staged preview, White House
   pre-release review framework i przypadek Anthropic/Fable/Mythos trzeba
   śledzić jako przejście od ogólnej AI governance do praktycznego zatwierdzania
@@ -331,6 +373,8 @@ transparentność środowiskową AI.
 
 ## Recent Reports
 
+- [2026-06-27](runs/2026-06-27.md)
+- [2026-06-26](runs/2026-06-26.md)
 - [2026-06-25](runs/2026-06-25.md)
 - [2026-06-23](runs/2026-06-23.md)
 - [2026-06-22](runs/2026-06-22.md)

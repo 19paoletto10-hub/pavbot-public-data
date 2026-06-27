@@ -8,6 +8,9 @@
   needs real thumbnails. Do not add scraped images without licensing review.
 - Monitor whether BBC/CNN discovery regularly needs fallback confirmations from
   official sources because of access limits in the current runtime.
+- `CNN World RSS` appears stale in the current runtime; prefer
+  `edition.cnn.com/world` discovery plus primary confirmations until the feed
+  recovers.
 
 ## Done
 

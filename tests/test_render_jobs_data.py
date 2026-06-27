@@ -73,3 +73,34 @@ def test_render_jobs_data_from_english_report() -> None:
     assert payload["opportunities"][0]["workMode"] == "Remote"
     assert payload["opportunities"][0]["sourceURLs"]
     assert any("ACAISOFT" in item["company"] for item in payload["opportunities"])
+
+
+def test_render_jobs_data_accepts_spaced_location_remote_label() -> None:
+    renderer = load_renderer()
+
+    markdown = """# LLM/AI jobs Wrocław
+
+Date: 2026-06-27 01:41 Europe/Warsaw
+Status: Material update
+
+## Executive Summary
+Krótki testowy raport.
+
+## Top New Or Materially Changed Roles
+
+### 1. TestCo - Senior LLM Engineer
+- Lokalizacja / remote: `Cała Polska (praca zdalna)`
+- Fit LLM/AI: Budowa systemów RAG i agentów.
+- Dlaczego interesujące: Hands-on GenAI.
+- Niepewność: Brak widełek.
+- Wynagrodzenie: Brak publicznych widełek.
+- Źródła: [ogłoszenie](https://example.com/jobs/senior-llm-engineer)
+
+## Scope Checked
+- [Example jobs](https://example.com/jobs) - checked.
+"""
+
+    payload = renderer.parse_report(markdown)
+
+    assert payload["opportunities"][0]["location"] == "Cała Polska (praca zdalna)"
+    assert payload["opportunities"][0]["workMode"] == "Remote"

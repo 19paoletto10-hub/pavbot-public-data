@@ -6,8 +6,6 @@ struct SettingsView: View {
     @Environment(ManifestStore.self) private var store
     @Environment(AppAppearanceStore.self) private var appearanceStore
     @Environment(PavbotHaptics.self) private var haptics
-    @State private var draftURL = ""
-    @State private var draftNotificationServerURL = ""
     @State private var notificationStatus = "Nie sprawdzono"
     @State private var liveAlertsStatus = "Wyłączone"
     @State private var notificationServerReachability = "Nie sprawdzono"
@@ -16,10 +14,7 @@ struct SettingsView: View {
     @State private var remoteDeviceToken = ""
     @State private var remoteRegistrationError = ""
     @State private var dailyWeatherAlertsEnabled = true
-    @State private var manifestURLValidationMessage: String?
     @State private var notificationServerValidationMessage: String?
-    @State private var defaultConnectionSettingsStatus: String?
-    @State private var isRestoringDefaultConnectionSettings = false
 
     var body: some View {
         @Bindable var appearanceStore = appearanceStore
@@ -67,48 +62,22 @@ struct SettingsView: View {
             }
 
             Section("Domyślne połączenia") {
-                Button {
-                    Task { await restoreDefaultConnectionSettings() }
-                } label: {
-                    Label(
-                        isRestoringDefaultConnectionSettings ? "Pobieram ustawienia..." : "Przywróć ustawienia domyślne",
-                        systemImage: "arrow.counterclockwise.circle"
-                    )
-                }
-                .disabled(isRestoringDefaultConnectionSettings)
-
-                Text("Aplikacja pobierze aktualny Manifest URL i Notification server URL z Pavbot Notifier. Ręczna edycja pól nadal działa.")
+                Text("Pavbot używa produkcyjnych adresów połączeń. Pola są tylko do odczytu, żeby aplikacja zawsze pobierała właściwe dane.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
-
-                if let defaultConnectionSettingsStatus {
-                    Label(defaultConnectionSettingsStatus, systemImage: "info.circle")
-                        .font(.caption)
-                        .foregroundStyle(defaultConnectionSettingsStatus.hasPrefix("Przywrócono") ? .green : .orange)
-                }
             }
 
             Section("Manifest") {
-                TextField("Manifest URL", text: $draftURL, axis: .vertical)
+                TextField("Manifest URL", text: .constant(PavbotConnectionDefaults.manifestURLString), axis: .vertical)
                     .textInputAutocapitalization(.never)
                     .autocorrectionDisabled()
                     .font(.system(.body, design: .monospaced))
+                    .disabled(true)
+                    .accessibilityHint("Pole tylko do odczytu.")
 
-                Text("Użyj adresu typu public GitHub raw manifest URL, np. https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json. Prywatne repozytoria wymagają osobnego OAuth albo backend proxy.")
+                Text("To produkcyjny public GitHub raw manifest URL Pavbot.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
-
-                if let manifestURLValidationMessage {
-                    Label(manifestURLValidationMessage, systemImage: "exclamationmark.triangle")
-                        .font(.caption)
-                        .foregroundStyle(.orange)
-                }
-
-                Button {
-                    saveManifestURL()
-                } label: {
-                    Label("Zapisz i odśwież", systemImage: "arrow.clockwise")
-                }
             }
 
             if let manifest = store.manifest {
@@ -126,12 +95,14 @@ struct SettingsView: View {
                 LabeledContent("Serwer dostępny", value: notificationServerReachability)
                 LabeledContent("Token urządzenia", value: deviceTokenRegistrationStatus)
                 LabeledContent("Środowisko APNs", value: RemoteNotificationDiagnostics.apnsEnvironmentLabel())
-                TextField("Notification server URL", text: $draftNotificationServerURL, axis: .vertical)
+                TextField("Notification server URL", text: .constant(PavbotConnectionDefaults.notificationServerURLString), axis: .vertical)
                     .textInputAutocapitalization(.never)
                     .autocorrectionDisabled()
                     .font(.system(.body, design: .monospaced))
+                    .disabled(true)
+                    .accessibilityHint("Pole tylko do odczytu.")
 
-                Text("Wpisz URL notifiera z MacBooka albo serwera, np. https://notify.example.com. Przed włączeniem alertów sprawdź https://notify.example.com/status. Powiadomienia live pozostają wyłączone, dopóki URL nie zostanie zapisany i iOS nie udzieli zgody.")
+                Text("Powiadomienia live korzystają z produkcyjnego Pavbot Notifier. Alerty wymagają zgody iOS.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
 
@@ -209,20 +180,11 @@ struct SettingsView: View {
         }
         .navigationTitle("Centrum połączeń")
         .onAppear {
-            draftURL = store.manifestURLString
-            draftNotificationServerURL = NotificationServerSettings.serverURLString
-            manifestURLValidationMessage = ManifestURLValidator.validate(draftURL).message
-            notificationServerValidationMessage = NotificationServerSettings.validationMessage(for: draftNotificationServerURL, required: false)
+            notificationServerValidationMessage = NotificationServerSettings.validationMessage(for: NotificationServerSettings.serverURLString, required: true)
             dailyWeatherAlertsEnabled = DailyWeatherNotificationSettings.isEnabled()
             refreshRemoteNotificationDiagnostics()
             Task { await refreshNotificationStatus() }
             Task { await refreshNotificationServerReachability() }
-        }
-        .onChange(of: draftURL) { _, newValue in
-            manifestURLValidationMessage = ManifestURLValidator.validate(newValue).message
-        }
-        .onChange(of: draftNotificationServerURL) { _, newValue in
-            notificationServerValidationMessage = NotificationServerSettings.validationMessage(for: newValue, required: false)
         }
         .onChange(of: dailyWeatherAlertsEnabled) { _, newValue in
             DailyWeatherNotificationSettings.setEnabled(newValue)
@@ -246,66 +208,18 @@ struct SettingsView: View {
         )
     }
 
-    private func saveManifestURL() {
-        let trimmed = draftURL.trimmingCharacters(in: .whitespacesAndNewlines)
-        switch ManifestURLValidator.validate(trimmed) {
-        case .valid:
-            manifestURLValidationMessage = nil
-            store.manifestURLString = trimmed
-            haptics.play(.success)
-            Task { await store.reload() }
-        case .invalid(let message):
-            manifestURLValidationMessage = message
-            haptics.play(.warning)
-        }
-    }
-
-    private func restoreDefaultConnectionSettings() async {
-        isRestoringDefaultConnectionSettings = true
-        defaultConnectionSettingsStatus = "Pobieram domyślne ustawienia z Pavbot Notifier..."
-        defer { isRestoringDefaultConnectionSettings = false }
-
-        do {
-            let defaults = try await AppDefaultsClient()
-                .fetchDefaults(preferredServerURLString: draftNotificationServerURL)
-            guard defaults.validationError == nil else {
-                defaultConnectionSettingsStatus = defaults.validationError
-                haptics.play(.warning)
-                return
-            }
-
-            draftURL = defaults.manifestURL
-            draftNotificationServerURL = defaults.notificationServerURL
-            manifestURLValidationMessage = nil
-            notificationServerValidationMessage = nil
-            store.manifestURLString = defaults.manifestURL
-            NotificationServerSettings.serverURLString = defaults.notificationServerURL
-            defaultConnectionSettingsStatus = "Przywrócono domyślne połączenia."
-            haptics.play(.success)
-
-            await store.reload()
-            await refreshNotificationServerReachability()
-            refreshRemoteNotificationDiagnostics()
-        } catch {
-            defaultConnectionSettingsStatus = error.localizedDescription
-            haptics.play(.error)
-        }
-    }
-
     private func refreshNotificationStatus() async {
         let settings = await UNUserNotificationCenter.current().notificationSettings()
         notificationStatus = settings.authorizationStatus.label
     }
 
     private func requestNotifications() async {
-        let trimmedServerURL = draftNotificationServerURL.trimmingCharacters(in: .whitespacesAndNewlines)
-        if let message = NotificationServerSettings.validationMessage(for: trimmedServerURL, required: true) {
+        if let message = NotificationServerSettings.validationMessage(for: NotificationServerSettings.serverURLString, required: true) {
             notificationServerValidationMessage = message
             haptics.play(.warning)
             return
         }
 
-        NotificationServerSettings.serverURLString = trimmedServerURL
         LiveNotificationOnboarding.markPromptSeen()
         let granted = await RemoteNotificationPermission.requestAndRegister()
         LiveNotificationSettings.setEnabled(granted)
@@ -324,14 +238,13 @@ struct SettingsView: View {
     }
 
     private func refreshNotificationServerReachability() async {
-        guard notificationServerValidationMessage == nil, let serverURL = URL(string: draftNotificationServerURL.trimmingCharacters(in: .whitespacesAndNewlines)) else {
-            notificationServerReachability = draftNotificationServerURL.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? "Nie skonfigurowano" : "Niepoprawny URL"
+        guard notificationServerValidationMessage == nil else {
+            notificationServerReachability = "Niepoprawny URL"
             return
         }
 
         do {
-            let statusURL = serverURL.appendingPathComponent("status")
-            var request = URLRequest(url: statusURL)
+            var request = URLRequest(url: PavbotConnectionDefaults.statusURL)
             request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
             request.timeoutInterval = 8
             let (_, response) = try await URLSession.shared.data(for: request)

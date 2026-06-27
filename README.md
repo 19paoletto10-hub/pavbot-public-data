@@ -160,11 +160,16 @@ docker compose -f backend/pavbot-notifier/docker-compose.yml up -d --build
 curl http://localhost:8080/status
 ```
 
-Expose through Cloudflare Tunnel:
+Expose through Cloudflare Tunnel for local/dev use:
 
 ```bash
 cloudflared tunnel --url http://localhost:8080
 ```
+
+For the production VPS variant, deploy only `backend/pavbot-notifier` to
+Contabo and expose it through `https://notify.paweltanski.com` with the
+container bound to `127.0.0.1:18082`. See
+`docs/live-ios-notifications-contabo.md`.
 
 ## Automations
 

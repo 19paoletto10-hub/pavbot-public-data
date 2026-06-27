@@ -70,17 +70,15 @@ enum NotificationServerSettings {
 
     static var serverURLString: String {
         get {
-            UserDefaults.standard.string(forKey: urlDefaultsKey) ?? ""
+            PavbotConnectionDefaults.notificationServerURLString
         }
         set {
-            UserDefaults.standard.set(newValue.trimmingCharacters(in: .whitespacesAndNewlines), forKey: urlDefaultsKey)
+            PavbotConnectionDefaults.enforceLegacyUserDefaults()
         }
     }
 
     static var serverURL: URL? {
-        let trimmed = serverURLString.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !trimmed.isEmpty else { return nil }
-        return URL(string: trimmed)
+        PavbotConnectionDefaults.notificationServerURL
     }
 
     static func validationMessage(for value: String, required: Bool) -> String? {
@@ -284,7 +282,7 @@ struct RemoteNotificationRegistrar {
             deviceToken: deviceToken.hexString,
             platform: "ios",
             bundleId: bundle.bundleIdentifier ?? "com.paweltanski.pavbotviewer",
-            manifestURL: UserDefaults.standard.string(forKey: ManifestDefaults.urlDefaultsKey) ?? ManifestDefaults.defaultManifestURL,
+            manifestURL: PavbotConnectionDefaults.manifestURLString,
             appVersion: bundle.infoDictionary?["CFBundleShortVersionString"] as? String ?? "",
             buildNumber: bundle.infoDictionary?["CFBundleVersion"] as? String ?? "",
             dailyWeatherEnabled: DailyWeatherNotificationSettings.isEnabled()

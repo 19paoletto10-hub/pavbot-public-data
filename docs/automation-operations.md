@@ -41,8 +41,12 @@ polskich znaków diakrytycznych i zapisz
   creates the MP3 podcast package from the Poland/world morning research. ID:
   `pavbot-polska-wiat-podcast-09-30`.
 - `Pavbot LLM/AI Jobs Wrocław Research` runs twice daily and updates
-  `research/llm-ai-jobs-wroclaw` with timestamped Markdown reports and PDFs.
-  Repository manifest ID: `pavbot-llm-ai-jobs-wroclaw-research`.
+  `research/llm-ai-jobs-wroclaw` with the full flow `Markdown -> jobsData JSON
+  -> validate -> PDF -> publish`. The published package must expose matching
+  `runs/YYYY-MM-DD-HHMM.md`, `data/YYYY-MM-DD-HHMM-jobs.json`, and
+  `pdfs/YYYY-MM-DD-HHMM-llm-ai-jobs-wroclaw.pdf` entries for the same package
+  key on `origin/main`. Repository manifest ID:
+  `pavbot-llm-ai-jobs-wroclaw-research`.
 - `Pavbot Aktualne Wydarzenia Mobile 10:15` runs daily at 10:15 Europe/Warsaw
   and updates `research/aktualne-wydarzenia-mobile` with one timestamped
   package: `runs/YYYY-MM-DD-HHMM.md`, `pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`,
@@ -73,6 +77,12 @@ copies only generated outputs from the active topic, refreshes
 `main`. Do not push generated automation files separately from the refreshed
 manifest. The GitHub webhook for live iOS notifications fires only after this
 push succeeds.
+
+Treat `git push` as necessary but not sufficient. Run `git fetch origin` and
+verify `origin/main:public/pavbot-manifest.json` before declaring success. For
+Jobs, success means the current package key is visible on `origin/main` as a
+complete set of `run`, `jobsData`, and `pdf` artifacts, not just as a local
+commit.
 
 Automation output commits may include only `runs/`, `data/`, `pdfs/`, `podcasts/`,
 `index.md`, `backlog.md`, and `public/pavbot-manifest.json`. App code, docs,

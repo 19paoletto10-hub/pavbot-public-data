@@ -18,10 +18,12 @@
 		15894A5E5C961814A07FDBC7 /* ActivityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262BB2F3084CBB7335E021BF /* ActivityKit.framework */; };
 		17031FD9AEB5E34F1A4E15B6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EEB32A16C7FA3A3E684630 /* SettingsView.swift */; };
 		1919E425F63DDE1B5BCA83A8 /* pavbot-manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 9DFB8BD6470959155AB7F197 /* pavbot-manifest.json */; };
+		1B58DD28D3DB78F9F69EE613 /* TodayLiveTopicSpeechController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92C841A1F8FBA1CCC606BF7 /* TodayLiveTopicSpeechController.swift */; };
 		1B8F6637C22649F1954A8E1B /* TodayLiveTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D36BCDBEDC5A6295A40E /* TodayLiveTopics.swift */; };
 		26B137D17418BA3AD94AC44C /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5333367ECD190BE7F495C18C /* Charts.framework */; };
 		26DC35B41520EC2E20D7D2D8 /* AppAppearancePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D512854AD5B928D5701C914 /* AppAppearancePreference.swift */; };
 		282BB106B682BA4ED6DAC2C0 /* WeatherBriefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672A72A9905930AD5017C278 /* WeatherBriefView.swift */; };
+		2946726C948D4F66BA4F4D2E /* SpeechPlaybackControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791E7D48947FBC752F3AEBE /* SpeechPlaybackControls.swift */; };
 		29CB56086EEE782839BE6637 /* ArtifactNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AEF493B65E3050003DA5E /* ArtifactNotificationService.swift */; };
 		2AE881F7C1D1A630D398AEA6 /* ReloadGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E43DF9B137E85F11B5D79 /* ReloadGate.swift */; };
 		2C7988164BFADB6C8499B1AD /* ManifestDiagnostics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D4D4328C98AED2DCCC8DBE4 /* ManifestDiagnostics.swift */; };
@@ -42,6 +44,7 @@
 		62AFE83484AB7148EAB2645B /* TopicReportPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FF1047640A421DB6DCAC2C /* TopicReportPackage.swift */; };
 		66504F7F205137ECCC1AFD58 /* ArtifactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397497A364A4766EB8EEA6A /* ArtifactDetailView.swift */; };
 		6791D48AF0F76769404465A8 /* JobsReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE41E2B0AF8E61BF26451D /* JobsReport.swift */; };
+		6836313CFAC74E14470B8D99 /* PavbotConnectionDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 317DE1CF3DAAEE158AD02BBB /* PavbotConnectionDefaults.swift */; };
 		72F2521BD501526A6A8C1907 /* TodayLiveTopicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B881CFFC8F93124D872D5FFB /* TodayLiveTopicsView.swift */; };
 		77F0EDA0D65C07C73953FD28 /* AudioPlaybackBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652871B420DA47A50B800AEC /* AudioPlaybackBanner.swift */; };
 		7CE6BFB6DF61AD8DCD4F322D /* PavbotAudioActivityExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 46AC5FA30428A69116483128 /* PavbotAudioActivityExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -122,11 +125,13 @@
 		21FF1047640A421DB6DCAC2C /* TopicReportPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopicReportPackage.swift; sourceTree = "<group>"; };
 		2215142C9512B2627D398AD2 /* ArtifactTimelineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactTimelineView.swift; sourceTree = "<group>"; };
 		262BB2F3084CBB7335E021BF /* ActivityKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ActivityKit.framework; path = System/Library/Frameworks/ActivityKit.framework; sourceTree = SDKROOT; };
+		2791E7D48947FBC752F3AEBE /* SpeechPlaybackControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechPlaybackControls.swift; sourceTree = "<group>"; };
 		279DFFBC15E4A98DCF519B73 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
 		2833944A91FD712745E43B55 /* ManifestStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestStore.swift; sourceTree = "<group>"; };
 		2B55587551EFC7B8A1660D54 /* AudioTimelineControls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTimelineControls.swift; sourceTree = "<group>"; };
 		2CBDF24E13987CEA7DF911BB /* TodayLiveTopicsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLiveTopicsService.swift; sourceTree = "<group>"; };
 		2D4D4328C98AED2DCCC8DBE4 /* ManifestDiagnostics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestDiagnostics.swift; sourceTree = "<group>"; };
+		317DE1CF3DAAEE158AD02BBB /* PavbotConnectionDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotConnectionDefaults.swift; sourceTree = "<group>"; };
 		33E285B1693A0587B8744C9E /* MobileNewsMagazine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNewsMagazine.swift; sourceTree = "<group>"; };
 		3769702F6D5E896F00B54419 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		3B337475DD595B7A57A167AF /* PavbotViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PavbotViewer.entitlements; sourceTree = "<group>"; };
@@ -160,6 +165,7 @@
 		9DFB8BD6470959155AB7F197 /* pavbot-manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pavbot-manifest.json"; sourceTree = "<group>"; };
 		A73F520B216EFC770A384B40 /* ResearchIssuePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchIssuePresentation.swift; sourceTree = "<group>"; };
 		A84A06551D40336B957E563E /* AppDefaultsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefaultsClient.swift; sourceTree = "<group>"; };
+		A92C841A1F8FBA1CCC606BF7 /* TodayLiveTopicSpeechController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLiveTopicSpeechController.swift; sourceTree = "<group>"; };
 		ADB5F074E7D876C212469E3F /* PulseNewsDigest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseNewsDigest.swift; sourceTree = "<group>"; };
 		B05D0CE7DC57DAC9378884FD /* ResearchNewsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchNewsModels.swift; sourceTree = "<group>"; };
 		B101DC0CC0E2D100DB7164D0 /* PavbotViewer.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PavbotViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -250,6 +256,7 @@
 				77B21209E7330AD40BCFE094 /* ManifestURLValidator.swift */,
 				9D38C13594F4C1D80BB53AFC /* MobileNewsService.swift */,
 				11D61FC4BF12BB3ED862A233 /* PavbotAudioActivityAttributes.swift */,
+				317DE1CF3DAAEE158AD02BBB /* PavbotConnectionDefaults.swift */,
 				CC67888578A962C04458A316 /* PavbotHaptics.swift */,
 				909EEC2353A43AC69F680BFB /* PodcastScriptSpeechService.swift */,
 				1B6FBF7E339F300A2C60D782 /* PulseNewsService.swift */,
@@ -257,6 +264,7 @@
 				0923DD610163A9CEA7C08CCF /* ResearchNewsService.swift */,
 				68120EAD721C0D642432C6B7 /* SpeechPlaybackService.swift */,
 				8F396F2F4643AF33AA98E40B /* TodayHumorService.swift */,
+				A92C841A1F8FBA1CCC606BF7 /* TodayLiveTopicSpeechController.swift */,
 				2CBDF24E13987CEA7DF911BB /* TodayLiveTopicsService.swift */,
 				50CE914EED9058E2E6826511 /* WeatherBriefService.swift */,
 				F556EA3F0FBD049F0E90692F /* WeatherLocationService.swift */,
@@ -358,6 +366,7 @@
 				C32E7810020E687A482FF26F /* ReportPackageViews.swift */,
 				0B77334FB18DD6C5F16B3585 /* SavedResearchArticlesView.swift */,
 				41EEB32A16C7FA3A3E684630 /* SettingsView.swift */,
+				2791E7D48947FBC752F3AEBE /* SpeechPlaybackControls.swift */,
 				B881CFFC8F93124D872D5FFB /* TodayLiveTopicsView.swift */,
 				672A72A9905930AD5017C278 /* WeatherBriefView.swift */,
 			);
@@ -561,6 +570,7 @@
 				B717F16BA894B3A95F509F7E /* MobileNewsMagazine.swift in Sources */,
 				57E7AA24308615F3B6ADFC64 /* MobileNewsService.swift in Sources */,
 				5E84671285CAA3787BDE375D /* PavbotAudioActivityAttributes.swift in Sources */,
+				6836313CFAC74E14470B8D99 /* PavbotConnectionDefaults.swift in Sources */,
 				3FDB992D0B671821332576C5 /* PavbotDesign.swift in Sources */,
 				FA1E32575056E9292096AF3F /* PavbotHaptics.swift in Sources */,
 				B85C4C5770F1AA57144317EB /* PavbotManifest.swift in Sources */,
@@ -579,10 +589,12 @@
 				0C5508D3B4756EC179DEBB29 /* SavedResearchArticle.swift in Sources */,
 				F31139DEA011A12314F10995 /* SavedResearchArticlesView.swift in Sources */,
 				17031FD9AEB5E34F1A4E15B6 /* SettingsView.swift in Sources */,
+				2946726C948D4F66BA4F4D2E /* SpeechPlaybackControls.swift in Sources */,
 				C0F328A015370FDBDFDE33EE /* SpeechPlaybackService.swift in Sources */,
 				4DC2D8DBD82ADA1FDB45F449 /* TemperatureTimelineChartModel.swift in Sources */,
 				F219793ADCA3160CCB77E6E4 /* TodayHumorDigest.swift in Sources */,
 				AE27CC27F6D7C405AFE6DFCF /* TodayHumorService.swift in Sources */,
+				1B58DD28D3DB78F9F69EE613 /* TodayLiveTopicSpeechController.swift in Sources */,
 				1B8F6637C22649F1954A8E1B /* TodayLiveTopics.swift in Sources */,
 				AF319D45EAEBE6CF9666ACDB /* TodayLiveTopicsService.swift in Sources */,
 				72F2521BD501526A6A8C1907 /* TodayLiveTopicsView.swift in Sources */,
@@ -659,7 +671,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2.0.1;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -676,7 +688,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2.0.1;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = AudioActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -747,7 +759,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 2.0.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -764,7 +776,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2.0.1;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = AudioActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -829,7 +841,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 2.0.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -847,7 +859,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2.0.1;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

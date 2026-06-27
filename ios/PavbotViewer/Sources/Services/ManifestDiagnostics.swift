@@ -23,7 +23,7 @@ struct AutomationDiagnostic: Identifiable, Equatable {
 }
 
 struct ManifestDiagnostics: Equatable {
-    static let defaultPlaceholderManifestURL = "https://raw.githubusercontent.com/OWNER/REPO/main/public/pavbot-manifest.json"
+    static let defaultPlaceholderManifestURL = ManifestDefaults.legacyPlaceholderManifestURL
 
     let enabledAutomationCount: Int
     let topicCount: Int

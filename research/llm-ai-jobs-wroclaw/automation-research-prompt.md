@@ -106,6 +106,35 @@ Rozwiazany URL musi odpowiadac iOS `Settings -> Manifest URL`. Nastepnie
 uruchom:
 `scripts/pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw`.
 
+Po publishu wykonaj obowiazkowy etap `post-publish verification`. Uzyj tego
+samego `RUN_STAMP=YYYY-MM-DD-HHMM`, ktorego uzyles do nazw plikow, a nastepnie
+uruchom:
+
+`RUN_PATH="research/llm-ai-jobs-wroclaw/runs/${RUN_STAMP}.md"`
+
+`DATA_PATH="research/llm-ai-jobs-wroclaw/data/${RUN_STAMP}-jobs.json"`
+
+`PDF_PATH="research/llm-ai-jobs-wroclaw/pdfs/${RUN_STAMP}-llm-ai-jobs-wroclaw.pdf"`
+
+`git fetch origin`
+
+`git show origin/main:public/pavbot-manifest.json | grep -F "$RUN_PATH"`
+
+`git show origin/main:public/pavbot-manifest.json | grep -F "$DATA_PATH"`
+
+`git show origin/main:public/pavbot-manifest.json | grep -F "$PDF_PATH"`
+
+`git show "origin/main:$RUN_PATH" >/dev/null`
+
+`git show "origin/main:$DATA_PATH" >/dev/null`
+
+`git show "origin/main:$PDF_PATH" >/dev/null`
+
+To jest twardy warunek sukcesu. Jesli `origin/main:public/pavbot-manifest.json`
+nie zawiera biezacego package key albo ktorykolwiek z trzech artefaktow nie
+jest widoczny na `origin/main`, traktuj przebieg jako nieudany i nie raportuj
+go jako zakonczonego sukcesem.
+
 Uzyj risk gate z `docs/architecture.md`. W ramach tej automatyzacji wolno
 zmieniac tylko pliki w `research/llm-ai-jobs-wroclaw/`. Finalny krok publikacji
 moze commitowac tylko `research/llm-ai-jobs-wroclaw/runs/`,

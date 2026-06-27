@@ -316,7 +316,7 @@ class GeneratePavbotManifestTest(unittest.TestCase):
                         "status": "Material update",
                         "headline": "Puls dnia",
                         "summary": "Najważniejsze tematy z ostatnich godzin.",
-                        "items": [],
+                        "items": [{"id": "one"}, {"id": "two"}],
                         "checkedSources": [],
                     },
                     ensure_ascii=False,
@@ -337,6 +337,7 @@ class GeneratePavbotManifestTest(unittest.TestCase):
         self.assertEqual(artifact["date"], "2026-06-26")
         self.assertEqual(artifact["time"], "12:00")
         self.assertEqual(artifact["title"], "Pulse news data")
+        self.assertEqual(artifact["itemCount"], 2)
 
     def test_manifest_collects_pulse_news_data_without_topic_file(self) -> None:
         generator = load_generator()

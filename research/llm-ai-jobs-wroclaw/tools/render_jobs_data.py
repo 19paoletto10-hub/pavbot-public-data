@@ -156,14 +156,17 @@ def split_company_title(value: str) -> tuple[str, str]:
 
 
 def bullet_value(block: str, labels: list[str], fallback: str = "Brak danych w raporcie.") -> str:
+    normalized_labels = {normalize_label(label) for label in labels}
     for line in block.splitlines():
         stripped = line.strip()
         if not stripped.startswith("- "):
             continue
-        for label in labels:
-            prefix = f"- {label}:"
-            if stripped.casefold().startswith(prefix.casefold()):
-                return clean_inline(stripped[len(prefix) :]).strip() or fallback
+        body = stripped[2:]
+        if ":" not in body:
+            continue
+        label, value = body.split(":", 1)
+        if normalize_label(label) in normalized_labels:
+            return clean_inline(value).strip() or fallback
     return fallback
 
 
@@ -254,6 +257,11 @@ def clean_inline(value: str) -> str:
 
 def normalize_heading(value: str) -> str:
     return re.sub(r"\s+", " ", clean_inline(value)).casefold()
+
+
+def normalize_label(value: str) -> str:
+    value = re.sub(r"\s*/\s*", "/", clean_inline(value))
+    return re.sub(r"\s+", " ", value).strip().casefold()
 
 
 def default_output_path(markdown_path: Path) -> Path:

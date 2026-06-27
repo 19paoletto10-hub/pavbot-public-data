@@ -101,14 +101,19 @@ GitHub webhook:
 ## Contabo/VPS Deploy
 
 ```bash
-scp -r backend/pavbot-notifier user@contabo:/opt/pavbot-notifier
-ssh user@contabo
-cd /opt/pavbot-notifier
-cp .env.example .env
-mkdir -p secrets
-# copy your Apple AuthKey_XXXX.p8 into ./secrets/
-docker compose up -d --build
+PAVBOT_CONTABO_SSH_HOST=contabo \
+PAVBOT_CONTABO_BIND_PORT=18082 \
+backend/pavbot-notifier/scripts/deploy-contabo.sh
 ```
+
+The Contabo production variant is intended for `https://notify.paweltanski.com`
+behind the server's existing Nginx reverse proxy. It binds the container only on
+`127.0.0.1:18082`, caps Docker logs, and keeps `.env` plus APNs `.p8` secrets
+server-local. Fill `/opt/pavbot-notifier/.env` from `.env.contabo.example`,
+copy the APNs key into `/opt/pavbot-notifier/secrets/`, then rerun the deploy
+script with `--start`.
+
+Full guide: `docs/live-ios-notifications-contabo.md`.
 
 ## Required Apple Setup
 

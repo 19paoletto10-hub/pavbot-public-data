@@ -106,7 +106,7 @@ struct JobsView: View {
     private var loadKey: String {
         [
             store.manifest?.generatedAt,
-            router.selectedReportDay,
+            routedReportDay,
             router.selectedReportArtifactIDs.joined(separator: "|"),
             store.manifestURLString
         ]
@@ -116,34 +116,41 @@ struct JobsView: View {
 
     private func reloadJobs(refreshManifest: Bool) async {
         if refreshManifest {
-            await store.reload()
+            await store.reload(minimumInterval: 0)
         }
         guard let manifest = store.manifest else { return }
+        let packages = manifest.reportPackages(for: .jobs)
         await jobsStore.load(
-            packages: manifest.reportPackages(for: .jobs),
+            packages: packages,
             manifestURLString: store.manifestURLString,
-            selectedDay: router.selectedReportDay,
+            selectedDay: routedReportDay,
             selectedArtifactIDs: router.selectedReportArtifactIDs
         )
         if viewMode == .allOffers {
             await historyStore.load(
-                packages: manifest.reportPackages(for: .jobs),
+                packages: packages,
                 manifestURLString: store.manifestURLString,
-                selectedDay: router.selectedReportDay
+                selectedDay: routedReportDay
             )
+            selectedHistoryDate = historyStore.snapshot?.validatedSelectedDate(selectedHistoryDate)
         }
     }
 
     private func reloadHistory(refreshManifest: Bool) async {
         if refreshManifest {
-            await store.reload()
+            await store.reload(minimumInterval: 0)
         }
         guard let manifest = store.manifest else { return }
         await historyStore.load(
             packages: manifest.reportPackages(for: .jobs),
             manifestURLString: store.manifestURLString,
-            selectedDay: router.selectedReportDay
+            selectedDay: routedReportDay
         )
+        selectedHistoryDate = historyStore.snapshot?.validatedSelectedDate(selectedHistoryDate)
+    }
+
+    private var routedReportDay: String? {
+        router.selectedReportArtifactIDs.isEmpty ? nil : router.selectedReportDay
     }
 }
 

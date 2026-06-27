@@ -377,6 +377,171 @@ def test_send_apns_change_notifications_sends_single_summary_per_device():
     assert sender.calls[0]["userInfo"]["artifactTopic"] == "mobile"
 
 
+def test_pulse_news_notification_uses_high_priority_article_teaser():
+    core = load_core()
+
+    class FakeSender:
+        def __init__(self):
+            self.calls = []
+
+        async def send_alert(self, device_token, title, body, user_info):
+            self.calls.append(
+                {
+                    "deviceToken": device_token,
+                    "title": title,
+                    "body": body,
+                    "userInfo": user_info,
+                }
+            )
+
+    async def fetch_json(url):
+        assert url == "https://raw.example.com/research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json"
+        return {
+            "items": [
+                {
+                    "id": "regular-story",
+                    "title": "Krótka aktualizacja z rynku energii",
+                    "lead": "Ten temat jest ważny, ale nie jest najpilniejszy.",
+                    "priority": "normal",
+                },
+                {
+                    "id": "high-story",
+                    "title": "Rząd pokazuje nowy pakiet dla AI w administracji",
+                    "lead": "Nowe przepisy mogą przyspieszyć wdrożenia automatyzacji w sektorze publicznym.",
+                    "priority": "high",
+                },
+            ]
+        }
+
+    sender = FakeSender()
+    manifest_url = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+
+    summary = asyncio.run(
+        core.send_apns_change_notifications(
+            devices={"good-token": {"manifestURL": manifest_url}},
+            artifacts=[
+                {
+                    "id": "research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
+                    "type": "pulseNewsData",
+                    "topic": "puls-dnia-news",
+                    "path": "research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
+                    "url": "https://raw.example.com/research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
+                    "date": "2026-06-26",
+                    "time": "21:09",
+                    "itemCount": 12,
+                },
+                {
+                    "id": "research/puls-dnia-news/runs/2026-06-26-2109.md",
+                    "type": "run",
+                    "topic": "puls-dnia-news",
+                    "path": "research/puls-dnia-news/runs/2026-06-26-2109.md",
+                    "date": "2026-06-26",
+                    "time": "21:09",
+                },
+            ],
+            automations=[],
+            manifest_url_value=manifest_url,
+            sender=sender,
+            fetch_json=fetch_json,
+        )
+    )
+
+    assert summary["attempted"] == 1
+    assert summary["sent"] == 1
+    assert len(sender.calls) == 1
+    call = sender.calls[0]
+    assert call["title"] == "Nowe tematy - Puls dnia"
+    assert 'Rząd pokazuje nowy pakiet dla AI w administracji' in call["body"]
+    assert call["body"].startswith("Warto sprawdzić:")
+    assert call["body"].endswith("Otwórz Puls dnia i przewiń najnowsze tematy.")
+    assert len(call["body"]) <= 170
+    assert call["userInfo"]["notificationKind"] == "pulseNews"
+    assert call["userInfo"]["artifactTopic"] == "puls-dnia-news"
+    assert call["userInfo"]["artifactDate"] == "2026-06-26"
+    assert call["userInfo"]["artifactIDs"] == [
+        "research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
+        "research/puls-dnia-news/runs/2026-06-26-2109.md",
+    ]
+    assert call["userInfo"]["pulseArticleID"] == "high-story"
+    assert call["userInfo"]["pulseArticleTitle"] == "Rząd pokazuje nowy pakiet dla AI w administracji"
+
+
+def test_pulse_news_notification_falls_back_when_digest_fetch_fails():
+    core = load_core()
+
+    class FakeSender:
+        def __init__(self):
+            self.calls = []
+
+        async def send_alert(self, device_token, title, body, user_info):
+            self.calls.append(
+                {
+                    "deviceToken": device_token,
+                    "title": title,
+                    "body": body,
+                    "userInfo": user_info,
+                }
+            )
+
+    async def fetch_json(url):
+        raise RuntimeError("HTTP 500")
+
+    sender = FakeSender()
+    manifest_url = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+
+    summary = asyncio.run(
+        core.send_apns_change_notifications(
+            devices={"good-token": {"manifestURL": manifest_url}},
+            artifacts=[
+                {
+                    "id": "research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
+                    "type": "pulseNewsData",
+                    "topic": "puls-dnia-news",
+                    "path": "research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
+                    "url": "https://raw.example.com/research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
+                    "date": "2026-06-26",
+                    "time": "21:09",
+                    "itemCount": 12,
+                }
+            ],
+            automations=[],
+            manifest_url_value=manifest_url,
+            sender=sender,
+            fetch_json=fetch_json,
+        )
+    )
+
+    assert summary["attempted"] == 1
+    assert summary["sent"] == 1
+    assert sender.calls[0]["title"] == "Nowe tematy - Puls dnia"
+    assert sender.calls[0]["body"] == "Nowy zestaw tematów jest gotowy. Otwórz Puls dnia i sprawdź najnowsze karty."
+    assert sender.calls[0]["userInfo"]["notificationKind"] == "pulseNews"
+
+
+def test_pulse_news_notification_builder_without_digest_uses_fallback_copy():
+    core = load_core()
+
+    notification = core.build_change_notification(
+        artifacts=[
+            {
+                "id": "research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
+                "type": "pulseNewsData",
+                "topic": "puls-dnia-news",
+                "path": "research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
+                "date": "2026-06-26",
+                "time": "21:09",
+                "itemCount": 12,
+            }
+        ],
+        automations=[],
+        manifest_url_value="https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+    )
+
+    assert notification["title"] == "Nowe tematy - Puls dnia"
+    assert notification["body"] == "Nowy zestaw tematów jest gotowy. Otwórz Puls dnia i sprawdź najnowsze karty."
+    assert notification["userInfo"]["artifactTopic"] == "puls-dnia-news"
+
+
 def test_daily_weather_next_run_uses_warsaw_time():
     daily_weather = load_daily_weather()
     config = daily_weather.DailyWeatherConfig(
@@ -925,6 +1090,64 @@ def test_hourly_weather_refresh_skips_when_current_hour_is_cached(tmp_path, monk
     assert result["skippedReason"] == "Weather report already refreshed for this local hour"
 
 
+def test_hourly_weather_refresh_does_not_use_legacy_cache_for_different_location(tmp_path, monkeypatch):
+    daily_weather = load_daily_weather()
+    config = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.time(hour=7, minute=30),
+        timezone_name="Europe/Warsaw",
+        city="Warszawa",
+        latitude=52.2297,
+        longitude=21.0122,
+    )
+    (tmp_path / "last-daily-weather.json").write_text(
+        json.dumps(
+            {
+                "lastHourlyRefreshAt": "2026-06-25T11:05:00+00:00",
+                "lastReport": {
+                    "id": "wroclaw-2026-06-25",
+                    "city": "Wrocław",
+                    "date": "2026-06-25",
+                    "generatedAt": "2026-06-25T11:05:00+00:00",
+                    "temperatureTimeline": [
+                        {"time": "2026-06-25T13:00", "temperature": 25.0, "unit": "°C"}
+                    ],
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+    calls = {"fetch": 0}
+
+    async def fake_fetch_daily_weather_report(*, config, generated_at):
+        calls["fetch"] += 1
+        return {
+            "id": "warszawa-2026-06-25",
+            "city": config.city,
+            "date": "2026-06-25",
+            "generatedAt": generated_at.isoformat(),
+            "temperatureTimeline": [
+                {"time": "2026-06-25T13:00", "temperature": 28.0, "unit": "°C"}
+            ],
+        }
+
+    monkeypatch.setattr(daily_weather, "fetch_daily_weather_report", fake_fetch_daily_weather_report)
+
+    result = asyncio.run(
+        daily_weather.run_hourly_weather_refresh_once(
+            config=config,
+            storage_dir=tmp_path,
+            generated_at=daily_weather.datetime.fromisoformat("2026-06-25T11:40:00+00:00"),
+        )
+    )
+    state = json.loads((tmp_path / "last-daily-weather.json").read_text(encoding="utf-8"))
+
+    assert calls["fetch"] == 1
+    assert result["status"] == "refreshed"
+    assert result["report"]["city"] == "Warszawa"
+    assert any(item["city"] == "Warszawa" for item in state["locationReports"].values())
+
+
 def test_hourly_weather_refresh_refreshes_current_cache_without_temperature_timeline(tmp_path, monkeypatch):
     daily_weather = load_daily_weather()
     config = daily_weather.DailyWeatherConfig(
@@ -1239,6 +1462,77 @@ def test_daily_weather_notifications_send_only_to_opted_in_devices():
     assert summary["sent"] == 1
     assert summary["skippedDevices"] == 2
     assert sender.calls[0]["deviceToken"] == "weather-token"
-    assert sender.calls[0]["title"] == "Pogoda: Wrocław"
+    assert sender.calls[0]["title"] == "Dzień dobry z Pavbot"
+    assert sender.calls[0]["body"] == (
+        "Miłego dnia! Prognoza dla: Wrocław — Częściowe zachmurzenie, "
+        "21°C. Dotknij, aby zobaczyć Dzisiaj."
+    )
     assert sender.calls[0]["userInfo"]["notificationKind"] == "dailyWeather"
     assert sender.calls[0]["userInfo"]["weatherDate"] == "2026-06-25"
+
+
+def test_forced_daily_weather_send_does_not_consume_scheduled_run(tmp_path, monkeypatch):
+    daily_weather = load_daily_weather()
+
+    class FakeSender:
+        def __init__(self):
+            self.calls = []
+
+        async def send_alert(self, device_token, title, body, user_info):
+            self.calls.append(
+                {
+                    "deviceToken": device_token,
+                    "title": title,
+                    "body": body,
+                    "userInfo": user_info,
+                }
+            )
+
+    async def fake_fetch_daily_weather_report(*, config, generated_at):
+        return {
+            "id": "wroclaw-test",
+            "city": config.city,
+            "date": generated_at.astimezone(config.zoneinfo).date().isoformat(),
+            "weekday": "sobota",
+            "temperature": {"current": 19.3, "unit": "°C"},
+            "conditions": {"label": "pochmurno"},
+        }
+
+    monkeypatch.setattr(daily_weather, "fetch_daily_weather_report", fake_fetch_daily_weather_report)
+    (tmp_path / "devices.json").write_text(
+        json.dumps({"weather-token": {"dailyWeatherEnabled": True}}),
+        encoding="utf-8",
+    )
+    (tmp_path / "last-daily-weather.json").write_text(
+        json.dumps(
+            {
+                "lastRunAt": "2026-06-26T05:30:00+00:00",
+                "lastRunDate": "2026-06-26",
+            }
+        ),
+        encoding="utf-8",
+    )
+    config = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.parse_time("07:30"),
+        timezone_name="Europe/Warsaw",
+        city="Wrocław",
+        latitude=51.1079,
+        longitude=17.0385,
+    )
+
+    result = asyncio.run(
+        daily_weather.run_daily_weather_once(
+            config=config,
+            storage_dir=tmp_path,
+            sender=FakeSender(),
+            force=True,
+        )
+    )
+    state = json.loads((tmp_path / "last-daily-weather.json").read_text(encoding="utf-8"))
+
+    assert result["status"] == "processed"
+    assert state["lastRunDate"] == "2026-06-26"
+    assert state["lastRunAt"] == "2026-06-26T05:30:00+00:00"
+    assert state["lastForcedRunDate"] != state["lastRunDate"]
+    assert state["lastDelivery"]["sent"] == 1

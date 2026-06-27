@@ -10,7 +10,7 @@ settings:
     CODE_SIGN_STYLE: Automatic
     DEVELOPMENT_TEAM: SP774TZZU8
     ENABLE_USER_SCRIPT_SANDBOXING: NO
-    MARKETING_VERSION: "1.8"
+    MARKETING_VERSION: "2.0.1"
     SWIFT_VERSION: "5.9"
 configs:
   Debug: debug
@@ -27,7 +27,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer
         INFOPLIST_FILE: Sources/Info.plist
-        CURRENT_PROJECT_VERSION: "1"
+        CURRENT_PROJECT_VERSION: "2.0.1"
       configs:
         Debug:
           CODE_SIGN_ENTITLEMENTS: Sources/PavbotViewer.entitlements
@@ -88,7 +88,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer.audioactivity
         INFOPLIST_FILE: AudioActivityExtension/Info.plist
-        CURRENT_PROJECT_VERSION: "1"
+        CURRENT_PROJECT_VERSION: "2.0.1"
         CODE_SIGN_STYLE: Automatic
         DEVELOPMENT_TEAM: SP774TZZU8
         SWIFT_VERSION: "5.9"

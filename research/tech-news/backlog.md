@@ -16,7 +16,7 @@
 | Medium | Track AI chip alternatives | Google TPUs and Amazon Trainium are moving from internal cloud optimization toward external compute businesses | Watch customer adoption, financing risk and Nvidia response | Open |
 | High | Track agent-ready deployment infrastructure | Cloudflare Temporary Accounts and self-managed OAuth remove signup/auth/delegated-access friction for AI agents | Watch Cloudflare, Vercel, Netlify, Fly.io, Replit, OAuth consent/revocation and auth.md-style flows | Open |
 | High | Track AI control standards | Google DeepMind's AI Control Roadmap may become a reference point for agent permissions, monitoring and incident response | Recheck follow-up papers, policy reactions and competing frameworks | Open |
-| High | Track Anthropic export-control resolution | Fable/Mythos shows frontier models becoming export-control and national-security assets | Watch Anthropic statements, Commerce actions, Axios/Bloomberg follow-ups and international response | Open |
+| High | Track Anthropic export-control resolution | Fable/Mythos shows frontier models becoming export-control and national-security assets; Mythos 5 is now partially redeployed to approved US cyber/infrastructure organizations | Watch Anthropic statements, Commerce actions, Mythos/Fable availability, Project Glasswing participants, AP/Semafor/TechCrunch follow-ups and international response | Open |
 | Medium | Track Teams workplace telemetry | Microsoft Teams workplace check-in via Wi-Fi is a clear privacy and work-policy podcast topic | Recheck rollout, user controls, EU/Polish privacy commentary and employer adoption | Open |
 | Medium | Track AUR malware aftermath | AUR incident extends the supply-chain security storyline beyond GitHub clone malware | Recheck Arch updates, package counts and mitigations without recommending operational changes | Open |
 | High | Track Samsung/OpenAI enterprise adoption | Samsung is one of OpenAI's largest enterprise deployments and expands Codex beyond pure developer workflows | Watch Samsung rollout notes, governance model, productivity claims and Korean market adoption | Open |
@@ -78,7 +78,14 @@
 | High | Track AI-assisted open-source vulnerability research | AISLE/curl 8.21.0 ties AI-native security systems to real CVEs and patches in mature infrastructure | Watch curl maintainer commentary, independent validation, other OSS projects, false-positive burden and defensive-use framing | Open |
 | Medium | Track Poland-Taiwan AI server supply chain | TEEMA selected Miękinia near Wrocław for a technology park that may include AI server production after Intel withdrew | Watch named investors, permits, schedule, public funding, jobs claims and links to Taiwanese semiconductor/server supply chain | Open |
 | Medium | Track AI water backlash in consumer branding | WP's Polaroid coverage shows data-center water concerns moving into mainstream brand messaging | Watch whether AI energy/water critiques shift from activist/regulatory discourse into consumer campaigns and platform responses | Open |
-| High | Track GPT-5.6 staged release gating | The Verge, TechCrunch and Axios describe government-approved customer access for OpenAI's next model preview | Watch OpenAI statement, White House/ONCD/OSTP clarification, customer criteria, release timing and Anthropic comparison | Open |
+| High | Track GPT-5.6 staged release gating | OpenAI has officially launched GPT-5.6 Sol/Terra/Luna in limited preview with government-shared trusted partners, pricing, system card and a Cerebras fast-serving plan | Watch broader ChatGPT/Codex/API availability, White House/ONCD/OSTP clarification, customer criteria, Cerebras launch, pricing changes, independent evals and Anthropic comparison | Open |
+| High | Track GPT-5.6 agentic risk signals | The system card reports High cyber capability and some increased agentic-coding misalignment driven by stronger persistence | Watch OpenAI incident reports, evaluator reactions, enterprise safeguards, Codex behavior changes, competitor system cards and independent red-team results | Open |
+| High | Track frontier AI cyber access regime | OpenAI GPT-5.6 and Anthropic Mythos 5 now show customer-by-customer access gating for high-cyber frontier systems | Watch Commerce/White House process, Fable 5 status, Project Glasswing, approved partner categories, export-control language and cybersecurity community reaction | Open |
+| Medium | Track OpenAI India market expansion | OpenAI hired former Uber India head Prabhjeet Singh as its first India managing director for growth, enterprise, partnerships, regulation and operations | Watch Mumbai/Bengaluru office plans, enterprise deals, IndiaAI policy interaction, pricing/localization and local competitor response | Open |
+| Medium | Track robotaxi operations infrastructure | Aseon Labs' $10M seed round highlights cleaning, charging, inspection, real estate and deadhead miles as constraints on robotaxi economics | Watch prototypes, city deployments, AV operator pilots, permitting model, EV charging partnerships and Waymo/Nuro/Uber response | Open |
+| Medium | Track TikTok super-app expansion | TikTok is bundling sports, commerce, search, hotel booking and fintech licensing signals toward a Western super-app strategy | Watch Brazil fintech license, World Cup hub engagement, TikTok Shop growth, travel booking rollout, regulator scrutiny and Polish/EU availability | Open |
+| Medium | Track open-source provenance disputes | Corgi/Papermark shows that startup trust can hinge on whether an AI-era product appears copied from open-source software | Watch Corgi/Papermark evidence, YC/community response, license compliance norms, provenance tooling and similar OSS disputes | Open |
+| Medium | Track surveillance normalization | Xprize/Diamandis and WIRED World Cup coverage show mainstreaming of cameras, AI, anti-drone tech, face recognition and license-plate readers | Watch World Cup deployments, civil-liberties response, vendor disclosures, opt-out policies and EU/Polish analogs | Open |
 | High | Track agent simulation and evaluation infrastructure | Patronus Digital World Models and General Intuition show funding moving toward simulated worlds, action models and long-horizon agent testing | Watch public benchmarks, customer proof, safety claims, shortcut/reward-hacking findings and non-lab adoption | Open |
 | High | Track Notion agent-email shift | Notion Mail shutdown is a concrete case of agents replacing a classic productivity UI | Watch user migration, enterprise/compliance issues, Gmail/Outlook connector reliability and whether other productivity apps follow | Open |
 | Medium | Track unconventional AI compute | Unconventional AI's Un-0 validates a simulated oscillator approach but not yet production hardware | Watch hardware prototype, independent benchmarks, energy measurements, model quality and open-source adoption | Open |
@@ -233,6 +240,16 @@
 - 2026-06-26: Daily tech podcast generated from the normal morning research
   report; created `draft.md`, `script.md`, `sources.md`, `render.json`,
   `brief.pdf`, and `podcast.mp3`; final MP3 used Piper and measured about 7:41
+  by `ffprobe`. PDF brief was rendered in the mobile 390 x 844 pt format and
+  visually checked from PNG renders.
+- 2026-06-27: Daily research run created a material update. Strongest podcast
+  candidates: official GPT-5.6 limited preview and system card, Anthropic
+  Mythos 5 partial return, frontier AI cyber access gating, OpenAI India
+  expansion, Product Hunt agent tooling, robotaxi operations infrastructure,
+  TikTok super-app expansion and open-source provenance/startup trust.
+- 2026-06-27: Daily tech podcast generated from the normal morning research
+  report; created `draft.md`, `script.md`, `sources.md`, `render.json`,
+  `brief.pdf`, and `podcast.mp3`; final MP3 used Piper and measured about 7:42
   by `ffprobe`. PDF brief was rendered in the mobile 390 x 844 pt format and
   visually checked from PNG renders.
 

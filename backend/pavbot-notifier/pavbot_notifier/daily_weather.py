@@ -182,13 +182,18 @@ async def run_daily_weather_once(
         )
         next_run = next_daily_weather_run(now, config).isoformat()
         state = {
-            "lastRunAt": now.isoformat(),
-            "lastRunDate": local_today,
+            **state,
             "lastReport": report,
             "lastDelivery": delivery,
             "lastError": None,
             "nextRun": next_run,
         }
+        if force:
+            state["lastForcedRunAt"] = now.isoformat()
+            state["lastForcedRunDate"] = local_today
+        else:
+            state["lastRunAt"] = now.isoformat()
+            state["lastRunDate"] = local_today
         save_json(state_path, state)
         return {
             "status": "processed",
@@ -496,7 +501,7 @@ async def send_daily_weather_notifications(
         await send_apns_alert_safely(
             sender=sender,
             device_token=device_token,
-            title=f"Pogoda: {report.get('city', 'Wrocław')}",
+            title="Dzień dobry z Pavbot",
             body=daily_weather_push_body(report),
             user_info={
                 "notificationKind": "dailyWeather",
@@ -560,7 +565,9 @@ def cached_weather_report_for_config(
     if isinstance(report, dict):
         return report
     legacy_report = state.get("lastReport")
-    return legacy_report if isinstance(legacy_report, dict) else None
+    if isinstance(legacy_report, dict) and should_use_legacy_weather_cache(config=config):
+        return legacy_report
+    return None
 
 
 def cached_weather_refresh_at_for_config(
@@ -569,7 +576,17 @@ def cached_weather_refresh_at_for_config(
     config: DailyWeatherConfig,
 ) -> datetime | None:
     location_state = location_state_for_config(state=state, config=config)
-    return parse_datetime(location_state.get("lastHourlyRefreshAt")) or parse_datetime(state.get("lastHourlyRefreshAt"))
+    refresh_at = parse_datetime(location_state.get("lastHourlyRefreshAt"))
+    if refresh_at is not None:
+        return refresh_at
+    if should_use_legacy_weather_cache(config=config):
+        return parse_datetime(state.get("lastHourlyRefreshAt"))
+    return None
+
+
+def should_use_legacy_weather_cache(*, config: DailyWeatherConfig) -> bool:
+    default_config = DailyWeatherConfig.from_env()
+    return weather_location_key(config) == weather_location_key(default_config)
 
 
 def location_state_for_config(
@@ -757,12 +774,12 @@ def compact_report_status(report: Any) -> dict[str, Any] | None:
 def daily_weather_push_body(report: dict[str, Any]) -> str:
     temperature = report.get("temperature") or {}
     conditions = report.get("conditions") or {}
-    namedays = report.get("nameDays") or []
+    city = report.get("city") or "Wrocław"
     temperature_label = format_number(temperature.get("current") or temperature.get("max"))
-    namedays_label = ", ".join(namedays[:3]) if namedays else "brak danych"
+    condition_label = conditions.get("label") or "pogoda"
     return (
-        f"{report.get('weekday', '').capitalize()} · {temperature_label}°C, "
-        f"{conditions.get('label', 'pogoda')}. Imieniny: {namedays_label}."
+        f"Miłego dnia! Prognoza dla: {city} — {condition_label}, "
+        f"{temperature_label}°C. Dotknij, aby zobaczyć Dzisiaj."
     )
 
 

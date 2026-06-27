@@ -68,7 +68,7 @@ struct JobsCheckedSource: Codable, Equatable, Hashable, Identifiable {
     let status: String?
 }
 
-enum JobsReportSource: Equatable, Hashable {
+enum JobsReportSource: String, Codable, Equatable, Hashable {
     case jobsData
     case markdownFallback
 

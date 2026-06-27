@@ -24,9 +24,7 @@ struct ContentView: View {
             oldValue != newValue && haptics.isEnabled
         }
         .task {
-            if store.manifest == nil {
-                await store.load()
-            }
+            await store.reload(minimumInterval: 60)
             store.startAutoRefreshLoop()
             Task {
                 await RemoteNotificationPermission.refreshRegistrationIfNeeded()
@@ -203,7 +201,7 @@ private struct PavbotSplitRootView: View {
                 }
             }
         case .artifacts:
-            NavigationStack {
+            NavigationStack(path: $router.artifactPath) {
                 AdaptiveDetailContainer {
                     ArtifactTimelineView()
                 }

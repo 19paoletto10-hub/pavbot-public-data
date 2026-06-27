@@ -2,10 +2,20 @@ from __future__ import annotations
 
 import hashlib
 import hmac
+import asyncio
 import json
+import urllib.request
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
+
+
+PULSE_NEWS_TOPIC = "puls-dnia-news"
+PULSE_NEWS_TYPE = "pulseNewsData"
+PULSE_NEWS_NOTIFICATION_TITLE = "Nowe tematy - Puls dnia"
+PULSE_NEWS_FALLBACK_BODY = "Nowy zestaw tematów jest gotowy. Otwórz Puls dnia i sprawdź najnowsze karty."
+PULSE_NEWS_CTA = "Otwórz Puls dnia i przewiń najnowsze tematy."
+PULSE_NEWS_BODY_LIMIT = 160
 
 
 @dataclass(frozen=True)
@@ -94,6 +104,7 @@ async def send_apns_change_notifications(
     automations: list[dict[str, Any]],
     manifest_url_value: str,
     sender: Any,
+    fetch_json: Any | None = None,
 ) -> dict[str, Any]:
     summary: dict[str, Any] = {
         "attempted": 0,
@@ -104,18 +115,23 @@ async def send_apns_change_notifications(
         "status": "skipped",
     }
 
-    notification = build_change_notification(
-        artifacts=artifacts,
-        automations=automations,
-        manifest_url_value=manifest_url_value,
-    )
-    if notification is None:
-        return summary
-
     sender_configured = getattr(getattr(sender, "config", None), "is_configured", True)
     summary["apnsConfigured"] = bool(sender_configured)
     if not sender_configured:
         summary["skippedReason"] = "APNs is not configured"
+        return summary
+
+    pulse_digest = await resolve_pulse_news_digest(
+        artifacts,
+        fetch_json=fetch_json or fetch_remote_json,
+    )
+    notification = build_change_notification(
+        artifacts=artifacts,
+        automations=automations,
+        manifest_url_value=manifest_url_value,
+        pulse_news_digest=pulse_digest,
+    )
+    if notification is None:
         return summary
 
     for device_token, registration in devices.items():
@@ -146,6 +162,7 @@ def build_change_notification(
     artifacts: list[dict[str, Any]],
     automations: list[dict[str, Any]],
     manifest_url_value: str,
+    pulse_news_digest: dict[str, Any] | None = None,
 ) -> dict[str, Any] | None:
     artifact_ids = [str(item.get("id", "")) for item in artifacts if item.get("id")]
     automation_ids = [str(item.get("id", "")) for item in automations if item.get("id")]
@@ -170,6 +187,21 @@ def build_change_notification(
         user_info["automationIDs"] = automation_ids
         user_info["automationID"] = automation_ids[0]
 
+    pulse_artifacts = pulse_news_data_artifacts(artifacts)
+    if pulse_artifacts:
+        user_info["notificationKind"] = "pulseNews"
+        user_info["artifactTopic"] = PULSE_NEWS_TOPIC
+        selected_article = selected_pulse_news_article(pulse_news_digest)
+        if selected_article:
+            user_info["pulseArticleID"] = selected_article["id"]
+            user_info["pulseArticleTitle"] = selected_article["title"]
+        return {
+            "title": PULSE_NEWS_NOTIFICATION_TITLE,
+            "body": pulse_news_notification_body(selected_article),
+            "userInfo": user_info,
+            "summaryID": str(pulse_artifacts[0].get("id") or artifact_ids[0]),
+        }
+
     if artifact_ids:
         file_label = "file" if len(artifact_ids) == 1 else "files"
         topic_label = topic or "Pavbot"
@@ -185,6 +217,112 @@ def build_change_notification(
         "userInfo": user_info,
         "summaryID": artifact_ids[0] if artifact_ids else automation_ids[0],
     }
+
+
+async def fetch_remote_json(url: str) -> dict[str, Any]:
+    payload = await asyncio.to_thread(fetch_remote_json_sync, url)
+    return payload if isinstance(payload, dict) else {}
+
+
+def fetch_remote_json_sync(url: str) -> dict[str, Any]:
+    request = urllib.request.Request(
+        url,
+        headers={
+            "Cache-Control": "no-cache",
+            "Pragma": "no-cache",
+            "Accept": "application/json",
+        },
+    )
+    with urllib.request.urlopen(request, timeout=15) as response:
+        payload = json.load(response)
+    return payload if isinstance(payload, dict) else {}
+
+
+async def resolve_pulse_news_digest(
+    artifacts: list[dict[str, Any]],
+    *,
+    fetch_json: Any,
+) -> dict[str, Any] | None:
+    for artifact in pulse_news_data_artifacts(artifacts):
+        url = str(artifact.get("url") or "").strip()
+        if not url:
+            continue
+        try:
+            payload = await fetch_json(url)
+        except Exception:
+            return None
+        return payload if isinstance(payload, dict) else None
+    return None
+
+
+def pulse_news_data_artifacts(artifacts: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    return [
+        artifact
+        for artifact in artifacts
+        if artifact.get("topic") == PULSE_NEWS_TOPIC and artifact.get("type") == PULSE_NEWS_TYPE
+    ]
+
+
+def selected_pulse_news_article(payload: dict[str, Any] | None) -> dict[str, str] | None:
+    if not isinstance(payload, dict):
+        return None
+    items = payload.get("items")
+    if not isinstance(items, list):
+        return None
+
+    candidates = [normalized_pulse_news_article(item) for item in items]
+    candidates = [item for item in candidates if item is not None]
+    if not candidates:
+        return None
+
+    high_priority = [
+        item
+        for item in candidates
+        if item["priority"].strip().lower() == "high"
+    ]
+    return (high_priority or candidates)[0]
+
+
+def normalized_pulse_news_article(value: Any) -> dict[str, str] | None:
+    if not isinstance(value, dict):
+        return None
+    title = clean_notification_text(value.get("title"))
+    lead = clean_notification_text(value.get("lead"))
+    if not title or not lead:
+        return None
+    article_id = clean_notification_text(value.get("id")) or title
+    priority = clean_notification_text(value.get("priority"))
+    return {
+        "id": article_id,
+        "title": title,
+        "lead": lead,
+        "priority": priority,
+    }
+
+
+def clean_notification_text(value: Any) -> str:
+    if not isinstance(value, str):
+        return ""
+    return " ".join(value.split()).strip()
+
+
+def pulse_news_notification_body(article: dict[str, str] | None) -> str:
+    if not article:
+        return PULSE_NEWS_FALLBACK_BODY
+    title = fit_text(
+        article["title"],
+        PULSE_NEWS_BODY_LIMIT - len('Warto sprawdzić: "". ') - len(PULSE_NEWS_CTA),
+    )
+    return f'Warto sprawdzić: "{title}". {PULSE_NEWS_CTA}'
+
+
+def fit_text(value: str, limit: int) -> str:
+    value = clean_notification_text(value)
+    if limit <= 3:
+        return value[:limit]
+    if len(value) <= limit:
+        return value
+    return value[: limit - 3].rstrip(" ,.;:-") + "..."
 
 
 def common_value(values: list[str]) -> str:

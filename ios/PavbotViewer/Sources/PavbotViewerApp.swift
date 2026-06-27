@@ -17,6 +17,10 @@ struct PavbotViewerApp: App {
     @State private var haptics = PavbotHaptics()
     private let notificationDelegate = ArtifactNotificationDelegate()
 
+    init() {
+        PavbotConnectionDefaults.enforceLegacyUserDefaults()
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()

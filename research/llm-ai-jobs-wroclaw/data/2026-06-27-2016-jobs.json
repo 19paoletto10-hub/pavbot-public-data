@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-27",
+  "runTime": "20:16",
+  "executiveSummary": "Wieczorna runda dołożyła pięć materialnych sygnałów. Najmocniejsze lokalne wejścia to nowy oficjalny ITDS Production Support Engineer – AI & LLM we Wrocławiu oraz nowy oficjalny Axabee Senior AI Engineer z modelem 100% remote i opcjonalnym biurem we Wrocławiu lub Opolu. Równolegle IN4GE rozszerzyło świeży klaster agentic/GenAI o jeszcze jedną rolę infra: Cloud Platform & Infrastructure Engineer (GenAI / CX AI). Po stronie board-first pojawiły się dwa sensowne, ale nadal wymagające dalszej kanonizacji sygnały: 4soft AI Product Engineer oraz ITEAMLY Applied AI Engineer.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Production Support Engineer – AI & LLM",
+      "company": "ITDS",
+      "location": "Wrocław / on-site",
+      "workMode": "Wrocław",
+      "compensation": "20 000-35 000 PLN brutto UoP",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Wsparcie systemów tradingowych i systemów opartych o LLM z monitoringiem oraz narzędziami Python, Bash i PowerShell.",
+      "whyInteresting": "Najmocniejszy nowy lokalny sygnał z tej rundy, bo łączy Wrocław z praktycznymi systemami AI i wyraźnym komponentem LLM.",
+      "uncertainty": "Średnia; rola jest mocniej production-support / operations niż klasyczny build-from-scratch LLM engineer.",
+      "sourceURLs": [
+        "https://itds.pl/it-jobs/production-support-engineer-ai-llm/"
+      ],
+      "tags": [
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior AI Engineer",
+      "company": "Axabee",
+      "location": "100% remote z opcjonalnym biurem we Wrocławiu lub Opolu",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Senior",
+      "fitSummary": "Rola łączy NLP, Python, OpenAI i vector databases, więc dobrze pasuje do praktycznych systemów LLM i GenAI.",
+      "whyInteresting": "Silny oficjalny sygnał employer-first z modelem 100% remote i opcją lokalnego biura we Wrocławiu.",
+      "uncertainty": "Średnia; publiczny hub careers jest dobry, ale bez bogatszego detail page niż sam listing.",
+      "sourceURLs": [
+        "https://www.axabee.com/careers"
+      ],
+      "tags": [
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "AI Product Engineer",
+      "company": "4soft",
+      "location": "Remote; Łaciarska 4, Wrocław +2",
+      "workMode": "Remote",
+      "compensation": "25 000-35 000 PLN net / mies. B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Opis mówi wprost o agentic workflows, LangChain, LangGraph, retrieval pipelines, ewaluacji jakości i obserwowalności systemów LLM.",
+      "whyInteresting": "Bardzo bezpośredni board-first sygnał hands-on wokół agentów i retrieval pipelines z powiązaniem do Wrocławia.",
+      "uncertainty": "Średnia; brak lepszego publicznego employer detail page niż obecna karta Just Join IT.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/4soft-ai-product-engineer-wroclaw-ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Applied AI Engineer",
+      "company": "ITEAMLY",
+      "location": "Cała Polska (praca zdalna)",
+      "workMode": "Remote",
+      "compensation": "30 000-39 000 zł netto (+ VAT) / mies. B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Stack obejmuje Python, LangChain, OpenAI API, RAG, TypeScript z opcjonalnym Agentic AI.",
+      "whyInteresting": "Mocny remote-Poland sygnał z produkcyjnym backendem AI i bezpośrednim zakresem LLM/RAG.",
+      "uncertainty": "Średnia; mocny publiczny detail page na Pracuj.pl, ale warto jeszcze znaleźć stabilniejszy employer hub poza boardem.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/applied-ai-engineer-krakow%2Coferta%2C1004886158"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Cloud Platform & Infrastructure Engineer (GenAI / CX AI)",
+      "company": "IN4GE",
+      "location": "Cała Polska (praca zdalna)",
+      "workMode": "Remote",
+      "compensation": "190-220 zł netto (+ VAT) / godz. B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Materialne rozszerzenie klastra IN4GE w stronę AI platform / infrastructure dla GenAI i agentic delivery.",
+      "whyInteresting": "Dodaje do istniejącego klastra IN4GE wyraźny wymiar infra/platform zamiast samych ról aplikacyjno-agentowych.",
+      "uncertainty": "Średnia; IN4GE szybko rozbudowuje rodzinę podobnych ról, więc ryzyko near-duplicate i driftu nazw jest nadal wysokie.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/cloud-platform-infrastructure-engineer-genai-cx-ai-warszawa%2Coferta%2C1004901526"
+      ],
+      "tags": [
+        "GenAI"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano nową oficjalną ofertę ITDS Production Support Engineer – AI & LLM dla Wrocław / on-site.",
+    "Dodano nową oficjalną ofertę Axabee Senior AI Engineer z 100% remote i opcjonalnym biurem Wrocław / Opole.",
+    "Dodano nowy board-first sygnał 4soft AI Product Engineer z zakresem agentic workflows, LangChain, LangGraph i ewaluacji LLM.",
+    "Dodano nowy direct-employer sygnał ITEAMLY Applied AI Engineer dla remote Poland.",
+    "IN4GE rozszerzyło świeży klaster ról AI o nową ofertę Cloud Platform & Infrastructure Engineer (GenAI / CX AI)."
+  ],
+  "risks": [
+    "4soft jest na razie potwierdzone bardzo dobrze przez publiczną kartę Just Join IT, ale bez lepszego kanonicznego employer detail page.",
+    "ITEAMLY Applied AI Engineer ma mocny direct-employer Pracuj.pl, ale warto jeszcze sprawdzić równoległy własny hub lub stabilniejszą publiczną kartę poza boardem.",
+    "IN4GE szybko rozbudowuje rodzinę podobnych ról, więc ryzyko near-duplicate i driftu nazw nadal jest wysokie.",
+    "ITDS Production Support Engineer – AI & LLM jest bardzo relewantny dla praktycznych systemów AI, ale to rola bardziej production-support / operations niż klasyczny LLM engineer."
+  ],
+  "recommendedActions": [
+    "Wykonana akcja niskiego ryzyka: dodano nowe role do index.md i odświeżono Recent Reports.",
+    "Wykonana akcja niskiego ryzyka: zaktualizowano backlog.md o nowe follow-upy dla Axabee, 4soft, ITEAMLY i rozszerzonego klastra IN4GE.",
+    "Follow-up: w następnej rundzie sprawdzić, czy Axabee pokaże bogatszy publiczny detail dla Senior AI Engineer niż sam hub careers i czy otworzy też AI Platform Engineer (GCP) jako osobny, materialny sygnał.",
+    "Follow-up: zweryfikować, czy 4soft i ITEAMLY dostaną bardziej kanoniczne employer detail pages oraz czy IN4GE utrzyma odrębność nowej roli infra względem pozostałych ofert GenAI."
+  ],
+  "checkedSources": [
+    {
+      "title": "ITDS - Production Support Engineer – AI & LLM",
+      "url": "https://itds.pl/it-jobs/production-support-engineer-ai-llm/",
+      "status": "checked"
+    },
+    {
+      "title": "Axabee careers",
+      "url": "https://www.axabee.com/careers",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT - 4soft AI Product Engineer",
+      "url": "https://justjoin.it/job-offer/4soft-ai-product-engineer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl - ITEAMLY Applied AI Engineer",
+      "url": "https://www.pracuj.pl/praca/applied-ai-engineer-krakow%2Coferta%2C1004886158",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl - IN4GE Cloud Platform & Infrastructure Engineer (GenAI / CX AI)",
+      "url": "https://www.pracuj.pl/praca/cloud-platform-infrastructure-engineer-genai-cx-ai-warszawa%2Coferta%2C1004901526",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl - cloud engineer, Wrocław",
+      "url": "https://www.pracuj.pl/praca/cloud%20engineer%3Bkw/wroclaw%3Bwp",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT - Wrocław / Python",
+      "url": "https://justjoin.it/job-offers/wroclaw/python",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl - ai engineer",
+      "url": "https://www.pracuj.pl/praca/ai%20engineer%3Bkw",
+      "status": "checked"
+    }
+  ]
+}

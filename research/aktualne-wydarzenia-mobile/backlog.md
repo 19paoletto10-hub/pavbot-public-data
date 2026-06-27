@@ -5,9 +5,10 @@
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
 | High | Track concrete follow-through after Gdańsk package | Dzisiejszy run ma już liczby i deklaracje, ale nie wszystkie projekty mają publiczne listy beneficjentów i wdrożeń | In the next run, check for named projects, signed agreements, and partner readouts expanding the 3,2 mld euro, 1,1 mld euro and 10 mld euro figures | Open |
-| High | Stabilize `male-xtts` in current-events pipeline | Trzeci produkcyjny run z rzędu kończy się brakiem męskiego wariantu MP3 mimo poprawnego `female-piper` | Review [proposal 2026-06-26](proposals/2026-06-26-stabilize-male-xtts-workflow.md) and decide whether to implement timeout and fallback hardening outside the topic run | Open |
+| High | Stabilize `male-xtts` in current-events pipeline | Czwarty produkcyjny run z rzędu kończy się brakiem męskiego wariantu MP3 mimo poprawnego `female-piper` | Review [proposal 2026-06-26](proposals/2026-06-26-stabilize-male-xtts-workflow.md) and decide whether to implement timeout and fallback hardening outside the topic run | Open |
+| Medium | Monitor legal follow-through on EU temporary protection proposal | Komisja Europejska zaproponowała ochronę tymczasową dla osób uciekających z Ukrainy do 4 marca 2028 roku, ale decyzję musi jeszcze przyjąć Rada UE, a kryteria dla nowych przyjazdów są politycznie czułe | In the next run, check whether the Council has adopted the proposal and how the criteria for new arrivals are being publicly described | Open |
 | Medium | Tune trusted source mix | The brief should stay current without repeating low-value items | After three runs, note the sources that produced the strongest confirmed stories | Open |
-| Medium | Watch heat and hydrology as a first-rank public risk | Dzisiejszy run przesunął ryzyko krajowe z samego upału do scenariusza kulminacji około 39°C, suszy i możliwych ostrzeżeń 3. stopnia | In the next run, verify whether alerts escalate, ease, or move regionally and whether burze zaczynają realnie zmieniać sytuację hydrologiczną | Open |
+| Medium | Watch heat and hydrology as a first-rank public risk | Dzisiejszy run przesunął ryzyko krajowe z możliwych ostrzeżeń 3. stopnia do formalnych alertów RCB, temperatur do 42°C, suszy i wysokiego ryzyka pożarowego | In the next run, verify whether alerts escalate, ease, or move regionally and whether burze zaczynają realnie zmieniać sytuację hydrologiczną i pożarową | Open |
 
 ## Review Notes
 
@@ -37,6 +38,14 @@
   `male-xtts` trzeci raz z rzędu utknął podczas renderu i został przerwany
   kontrolowanie; szczegóły zapisano w `podcasts/2026-06-26-1021/tts_variants.json`
   oraz w proposal `proposals/2026-06-26-stabilize-male-xtts-workflow.md`.
+- 2026-06-27: Produkcyjny run `2026-06-27-1019` przesunął główną zmianę dnia z
+  samych liczb z Gdańska do dłuższego horyzontu: sankcji UE wobec Rosji do
+  31 lipca 2027 roku, propozycji ochrony tymczasowej do 4 marca 2028 roku oraz
+  formalnych alertów RCB przed upałem do 42°C.
+- 2026-06-27: `female-piper` ponownie utworzył poprawny MP3, natomiast
+  `male-xtts` czwarty raz z rzędu zawiesił się podczas renderu i został
+  przerwany kontrolowanie; stan zapisano w
+  `podcasts/2026-06-27-1019/tts_variants.json`.
 
 ## Done
 

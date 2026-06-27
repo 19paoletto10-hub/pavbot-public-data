@@ -272,7 +272,20 @@ def add_artifact(
         artifact["date"] = date
     if time:
         artifact["time"] = time
+    if artifact_type == "pulseNewsData":
+        item_count = pulse_news_item_count(path)
+        if item_count is not None:
+            artifact["itemCount"] = item_count
     artifacts.append(artifact)
+
+
+def pulse_news_item_count(path: Path) -> int | None:
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError, UnicodeDecodeError):
+        return None
+    items = payload.get("items") if isinstance(payload, dict) else None
+    return len(items) if isinstance(items, list) else None
 
 
 def parse_date_parts(value: str) -> tuple[str | None, str | None]:

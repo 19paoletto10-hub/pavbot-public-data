@@ -545,10 +545,12 @@ private struct ArtifactDayDisclosure: View {
                 }
 
                 ForEach(remainingArtifacts) { artifact in
-                    NavigationLink(value: artifact) {
+                    NavigationLink {
+                        ArtifactDetailView(artifact: artifact)
+                    } label: {
                         ArtifactRow(artifact: artifact)
                     }
-                    .buttonStyle(.plain)
+                    .buttonStyle(ArtifactNavigationRowStyle())
 
                     if artifact.id != remainingArtifacts.last?.id {
                         Divider()
@@ -616,7 +618,9 @@ private struct PodcastPackagePanel: View {
 
             VStack(spacing: 0) {
                 if let audio = package.primaryAudio ?? package.audioVariants.first {
-                    NavigationLink(value: audio) {
+                    NavigationLink {
+                        ArtifactDetailView(artifact: audio)
+                    } label: {
                         PodcastPackageActionRow(
                             title: "Odtwórz audio",
                             subtitle: audio.title,
@@ -624,7 +628,7 @@ private struct PodcastPackagePanel: View {
                             tint: .blue
                         )
                     }
-                    .buttonStyle(.plain)
+                    .buttonStyle(ArtifactNavigationRowStyle())
                 }
 
                 if let briefPDF = package.briefPDF {
@@ -633,7 +637,9 @@ private struct PodcastPackagePanel: View {
                             .padding(.leading, 42)
                     }
 
-                    NavigationLink(value: briefPDF) {
+                    NavigationLink {
+                        ArtifactDetailView(artifact: briefPDF)
+                    } label: {
                         PodcastPackageActionRow(
                             title: "Otwórz brief PDF",
                             subtitle: "Czytelne podsumowanie ze źródłami",
@@ -641,7 +647,7 @@ private struct PodcastPackagePanel: View {
                             tint: .orange
                         )
                     }
-                    .buttonStyle(.plain)
+                    .buttonStyle(ArtifactNavigationRowStyle())
                 } else if package.isMissingBriefPDF {
                     if package.hasAudio {
                         Divider()
@@ -725,10 +731,12 @@ private struct OtherArtifactsPanel: View {
 
             VStack(spacing: 0) {
                 ForEach(artifacts) { artifact in
-                    NavigationLink(value: artifact) {
+                    NavigationLink {
+                        ArtifactDetailView(artifact: artifact)
+                    } label: {
                         ArtifactRow(artifact: artifact)
                     }
-                    .buttonStyle(.plain)
+                    .buttonStyle(ArtifactNavigationRowStyle())
 
                     if artifact.id != artifacts.last?.id {
                         Divider()
@@ -767,7 +775,28 @@ private struct ArtifactRow: View {
                     .foregroundStyle(.secondary)
                     .lineLimit(1)
             }
+
+            Spacer(minLength: 8)
+
+            Image(systemName: "chevron.right")
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(.tertiary)
+                .padding(.top, 4)
         }
         .padding(.vertical, 8)
+        .contentShape(Rectangle())
+    }
+}
+
+private struct ArtifactNavigationRowStyle: ButtonStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+            .padding(.horizontal, 4)
+            .background(
+                RoundedRectangle(cornerRadius: 8)
+                    .fill(configuration.isPressed ? Color.secondary.opacity(0.10) : Color.clear)
+            )
+            .scaleEffect(configuration.isPressed ? 0.995 : 1)
+            .animation(.easeOut(duration: 0.12), value: configuration.isPressed)
     }
 }

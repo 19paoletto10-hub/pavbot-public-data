@@ -87,6 +87,7 @@ struct TodayLiveTopicDetailView: View {
     let source: TodayLiveTopicsSource
     let displayDate: String
     let savedStore: TodayLiveTopicSavedStore?
+    @StateObject private var speechController = TodayLiveTopicSpeechController()
 
     private var isSaved: Bool {
         savedStore?.isSaved(topic) ?? false
@@ -113,6 +114,8 @@ struct TodayLiveTopicDetailView: View {
                     .padding(18)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(Color(.systemBackground), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
+
+                    TodayLiveTopicSpeechPanel(topic: topic, speechController: speechController)
 
                     TodayLiveTopicTextSection(title: "Key facts", items: topic.keyFacts, tint: .orange)
                     TodayLiveTopicTextSection(title: "Reakcje na sytuację", items: topic.reactions, tint: .blue)
@@ -141,6 +144,9 @@ struct TodayLiveTopicDetailView: View {
             .background(Color(.systemGroupedBackground))
             .navigationTitle("Temat dnia")
             .navigationBarTitleDisplayMode(.inline)
+            .onDisappear {
+                speechController.stop()
+            }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button {
@@ -158,6 +164,145 @@ struct TodayLiveTopicDetailView: View {
                     }
                 }
             }
+        }
+    }
+}
+
+private struct TodayLiveTopicSpeechPanel: View {
+    @Environment(PavbotHaptics.self) private var haptics
+    let topic: TodayLiveTopic
+    @ObservedObject var speechController: TodayLiveTopicSpeechController
+
+    private var isCurrent: Bool {
+        speechController.currentTopicID == topic.id
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            HStack(alignment: .top, spacing: 12) {
+                Image(systemName: isCurrent ? "speaker.wave.2.circle.fill" : "speaker.wave.2.fill")
+                    .font(.title3.weight(.semibold))
+                    .foregroundStyle(.orange)
+                    .frame(width: 38, height: 38)
+                    .background(Color.orange.opacity(0.14), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Odczyt artykułu")
+                        .font(.caption.weight(.bold))
+                        .foregroundStyle(.secondary)
+                        .textCase(.uppercase)
+                    Text(isCurrent ? statusText : "Przeczytaj ten temat głosem iPhone’a.")
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+
+                Spacer(minLength: 8)
+            }
+
+            HStack(spacing: 10) {
+                Button {
+                    handlePrimaryAction()
+                    haptics.play(.lightImpact)
+                } label: {
+                    Label(primaryTitle, systemImage: primaryIcon)
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(.white)
+                        .padding(.horizontal, 14)
+                        .padding(.vertical, 10)
+                        .background(Color.orange, in: Capsule())
+                }
+                .buttonStyle(.plain)
+                .accessibilityLabel(primaryAccessibilityLabel)
+
+                if isCurrent {
+                    Button {
+                        speechController.stop()
+                        haptics.play(.warning)
+                    } label: {
+                        Label("Stop", systemImage: "stop.fill")
+                            .font(.subheadline.weight(.semibold))
+                            .foregroundStyle(.secondary)
+                            .padding(.horizontal, 14)
+                            .padding(.vertical, 10)
+                            .background(Color(.secondarySystemBackground), in: Capsule())
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel("Zatrzymaj odczyt artykułu")
+                }
+            }
+
+            if isCurrent {
+                PavbotSpeechRatePicker(title: "Tempo czytania artykułu", speechRate: rateBinding)
+
+                PavbotSpeechTimelineScrubber(
+                    timeline: speechController.timeline,
+                    currentSegmentIndex: speechController.currentSegmentIndex,
+                    estimatedElapsed: speechController.estimatedElapsed,
+                    estimatedDuration: speechController.estimatedDuration,
+                    currentSegmentText: speechController.currentSegmentText,
+                    seekToProgress: speechController.seek(toProgress:)
+                )
+            }
+
+            if let errorMessage = speechController.errorMessage {
+                Text(errorMessage)
+                    .font(.caption)
+                    .foregroundStyle(.red)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .padding(16)
+        .background(Color(.systemBackground), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .stroke(Color.orange.opacity(0.22), lineWidth: 1)
+        }
+        .accessibilityElement(children: .contain)
+    }
+
+    private var rateBinding: Binding<MobileNewsSpeechRate> {
+        Binding(
+            get: { speechController.speechRate },
+            set: { speechController.setSpeechRate($0) }
+        )
+    }
+
+    private var primaryTitle: String {
+        if isCurrent, speechController.isPaused { return "Wznów" }
+        if isCurrent, speechController.isSpeaking { return "Pauza" }
+        return "Przeczytaj artykuł"
+    }
+
+    private var primaryIcon: String {
+        if isCurrent, speechController.isPaused { return "play.fill" }
+        if isCurrent, speechController.isSpeaking { return "pause.fill" }
+        return "speaker.wave.2.fill"
+    }
+
+    private var primaryAccessibilityLabel: String {
+        if isCurrent, speechController.isPaused { return "Wznów odczyt artykułu" }
+        if isCurrent, speechController.isSpeaking { return "Wstrzymaj odczyt artykułu" }
+        return "Przeczytaj artykuł"
+    }
+
+    private var statusText: String {
+        if speechController.isPaused {
+            return "Wstrzymane. Możesz zmienić tempo, przesunąć fragment albo zatrzymać."
+        }
+        if speechController.isSpeaking {
+            return "Odczyt aktywny. Zmiana tempa kontynuuje od aktualnego miejsca."
+        }
+        return "Gotowe do odczytu."
+    }
+
+    private func handlePrimaryAction() {
+        if isCurrent, speechController.isPaused {
+            speechController.resume()
+        } else if isCurrent, speechController.isSpeaking {
+            speechController.pause()
+        } else {
+            speechController.speak(topic)
         }
     }
 }

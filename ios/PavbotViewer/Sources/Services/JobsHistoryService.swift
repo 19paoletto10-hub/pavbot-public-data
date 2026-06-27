@@ -25,6 +25,13 @@ struct JobsHistorySnapshot: Equatable {
         return "\(oldest) - \(newest)"
     }
 
+    func validatedSelectedDate(_ date: String?) -> String? {
+        guard let date, includedDates.contains(date) else {
+            return nil
+        }
+        return date
+    }
+
     func filteredOpportunities(
         filter: JobsFilter,
         date: String?,

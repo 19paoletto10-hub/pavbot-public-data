@@ -39,6 +39,9 @@ Run one research cycle for a single Pavbot topic.
 10. For scheduled Pavbot automations, publish the finished output with
     `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>` so the iOS app
     and live-notification webhook see the latest manifest on GitHub.
+11. After publishing, verify against `origin/main` that the refreshed manifest
+    and the current topic outputs are actually visible remotely; do not treat a
+    successful local push as sufficient evidence of publication.
 
 ## Risk Gate
 
@@ -114,6 +117,11 @@ back to Codex. The publish script runs `python3 scripts/generate_pavbot_manifest
 in a temporary clean worktree, commits only generated outputs (`runs/`, `pdfs`,
 `podcasts/`, `index.md`, `backlog.md`) plus `public/pavbot-manifest.json`, and
 pushes to `origin/main`.
+After the push, run `git fetch origin` and verify
+`origin/main:public/pavbot-manifest.json` plus the current topic output paths
+for the same package key or run stamp. Topic-specific prompts should define the
+exact artifact set that must be visible on `origin/main` before the run counts
+as complete.
 Never publish topic `tools/`, prompt edits, app code, docs, backend code, or
 other development changes as automation outputs.
 

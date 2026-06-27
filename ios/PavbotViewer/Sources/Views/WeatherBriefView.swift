@@ -72,9 +72,11 @@ struct WeatherBriefView: View {
         }
         .sheet(isPresented: $isLocationEditorPresented) {
             WeatherLocationEditorView(
-                currentLocationLabel: weatherStore.report?.city ?? WeatherBriefLocation.fallback.city,
-                refreshWeather: {
-                    await weatherStore.load(minimumInterval: 0)
+                currentLocationLabel: ManualWeatherLocationSettings.location()?.city
+                    ?? weatherStore.report?.city
+                    ?? WeatherBriefLocation.fallback.city,
+                refreshWeather: { location in
+                    await weatherStore.refreshNow(location: location)
                 }
             )
         }
@@ -85,7 +87,8 @@ struct WeatherBriefView: View {
         isRefreshingWeather = true
         defer { isRefreshingWeather = false }
 
-        await loadTodayContent(useCurrentLocationIfAuthorized: true)
+        await weatherStore.refreshSelectedLocation()
+        await humorStore.load()
     }
 
     private func loadTodayContent(
@@ -554,7 +557,7 @@ private struct WeatherLocationEditorView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(PavbotHaptics.self) private var haptics
     let currentLocationLabel: String
-    let refreshWeather: () async -> Void
+    let refreshWeather: (WeatherBriefLocation) async -> Void
     @State private var query = ""
     @State private var errorMessage: String?
     @State private var isResolving = false
@@ -616,6 +619,15 @@ private struct WeatherLocationEditorView: View {
                     .buttonStyle(.borderedProminent)
                     .disabled(isResolving || query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
 
+                    Button {
+                        Task { await useCurrentLocation() }
+                    } label: {
+                        Label("Użyj mojej lokalizacji", systemImage: "location.circle.fill")
+                            .frame(maxWidth: .infinity)
+                    }
+                    .buttonStyle(.bordered)
+                    .disabled(isResolving)
+
                     Button(role: .none) {
                         Task { await restoreDefaultLocation() }
                     } label: {
@@ -651,7 +663,7 @@ private struct WeatherLocationEditorView: View {
         do {
             let location = try await WeatherLocationService().weatherLocation(for: trimmedQuery)
             ManualWeatherLocationSettings.save(location)
-            await refreshWeather()
+            await refreshWeather(location)
             haptics.play(.success)
             dismiss()
         } catch {
@@ -667,9 +679,27 @@ private struct WeatherLocationEditorView: View {
         defer { isResolving = false }
 
         ManualWeatherLocationSettings.clear()
-        await refreshWeather()
+        await refreshWeather(.fallback)
         haptics.play(.success)
         dismiss()
+    }
+
+    private func useCurrentLocation() async {
+        guard !isResolving else { return }
+        isResolving = true
+        errorMessage = nil
+        defer { isResolving = false }
+
+        do {
+            let location = try await WeatherLocationService().currentWeatherLocation(mode: .requestIfNeeded)
+            ManualWeatherLocationSettings.save(location)
+            await refreshWeather(location)
+            haptics.play(.success)
+            dismiss()
+        } catch {
+            errorMessage = "Nie udało się pobrać bieżącej lokalizacji. Sprawdź zgodę na lokalizację albo wpisz miasto ręcznie."
+            haptics.play(.error)
+        }
     }
 }
 

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-06-26T19:20:41.084344+00:00",
-  "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
+  "generatedAt": "2026-06-27T19:39:27.217217+00:00",
+  "rawBaseUrl": "",
   "automations": [
     {
       "id": "pavbot-aktualne-wydarzenia-mobile-10-15",
@@ -13,9 +13,9 @@
       "topicPath": "research/aktualne-wydarzenia-mobile",
       "cadence": "daily at 10:15 local time",
       "sourcePath": "docs/how-to-use.md",
-      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "sourceUrl": "docs/how-to-use.md",
       "output": "research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf",
-      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf"
+      "outputUrl": "research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf"
     },
     {
       "id": "pavbot-llm-ai-jobs-wroclaw-research",
@@ -26,9 +26,9 @@
       "topicPath": "research/llm-ai-jobs-wroclaw",
       "cadence": "twice daily; repository reports use `YYYY-MM-DD-HHMM` filenames",
       "sourcePath": "docs/how-to-use.md",
-      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "sourceUrl": "docs/how-to-use.md",
       "output": "research/llm-ai-jobs-wroclaw/runs/YYYY-MM-DD-HHMM.md",
-      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/YYYY-MM-DD-HHMM.md"
+      "outputUrl": "research/llm-ai-jobs-wroclaw/runs/YYYY-MM-DD-HHMM.md"
     },
     {
       "id": "pavbot-polska-wiat-podcast-09-30",
@@ -39,9 +39,9 @@
       "topicPath": "research/polska-swiat",
       "cadence": "daily at 09:30 local time",
       "sourcePath": "docs/how-to-use.md",
-      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "sourceUrl": "docs/how-to-use.md",
       "output": "research/polska-swiat/podcasts/YYYY-MM-DD/podcast.mp3",
-      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/YYYY-MM-DD/podcast.mp3"
+      "outputUrl": "research/polska-swiat/podcasts/YYYY-MM-DD/podcast.mp3"
     },
     {
       "id": "pavbot-polska-wiat-research-08-30",
@@ -52,7 +52,7 @@
       "topicPath": "research/polska-swiat",
       "cadence": "daily at 08:30 local time",
       "sourcePath": "docs/how-to-use.md",
-      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md"
+      "sourceUrl": "docs/how-to-use.md"
     },
     {
       "id": "pavbot-puls-dnia-news-3h",
@@ -63,9 +63,9 @@
       "topicPath": "research/puls-dnia-news",
       "cadence": "06:00, 09:00, 12:00, 15:00, 18:00 and 21:00 Europe/Warsaw",
       "sourcePath": "docs/how-to-use.md",
-      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "sourceUrl": "docs/how-to-use.md",
       "output": "research/puls-dnia-news/data/YYYY-MM-DD-HHMM-pulse-news.json",
-      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/YYYY-MM-DD-HHMM-pulse-news.json"
+      "outputUrl": "research/puls-dnia-news/data/YYYY-MM-DD-HHMM-pulse-news.json"
     },
     {
       "id": "pavbot-tech-podcast-09-00",
@@ -76,9 +76,9 @@
       "topicPath": "research/tech-news",
       "cadence": "daily at 09:00 local time",
       "sourcePath": "docs/how-to-use.md",
-      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "sourceUrl": "docs/how-to-use.md",
       "output": "research/tech-news/podcasts/YYYY-MM-DD/podcast.mp3",
-      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/YYYY-MM-DD/podcast.mp3"
+      "outputUrl": "research/tech-news/podcasts/YYYY-MM-DD/podcast.mp3"
     },
     {
       "id": "codex-agent-automation-daily-research",
@@ -89,7 +89,7 @@
       "topicPath": "research/tech-news",
       "cadence": "daily at 08:00 local time",
       "sourcePath": "docs/how-to-use.md",
-      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md"
+      "sourceUrl": "docs/how-to-use.md"
     }
   ],
   "topics": [
@@ -98,52 +98,572 @@
       "title": "Topic Contract: aktualne-wydarzenia-mobile",
       "path": "research/aktualne-wydarzenia-mobile",
       "topicFilePath": "research/aktualne-wydarzenia-mobile/topic.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/topic.md"
+      "url": "research/aktualne-wydarzenia-mobile/topic.md"
     },
     {
       "slug": "codex-agent-automation",
       "title": "Topic Contract: codex-agent-automation",
       "path": "research/codex-agent-automation",
       "topicFilePath": "research/codex-agent-automation/topic.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/codex-agent-automation/topic.md"
+      "url": "research/codex-agent-automation/topic.md"
     },
     {
       "slug": "llm-ai-jobs-wroclaw",
       "title": "Topic Contract: llm-ai-jobs-wroclaw",
       "path": "research/llm-ai-jobs-wroclaw",
       "topicFilePath": "research/llm-ai-jobs-wroclaw/topic.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/topic.md"
+      "url": "research/llm-ai-jobs-wroclaw/topic.md"
     },
     {
       "slug": "polska-swiat",
       "title": "Topic Contract: polska-swiat",
       "path": "research/polska-swiat",
       "topicFilePath": "research/polska-swiat/topic.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/topic.md"
+      "url": "research/polska-swiat/topic.md"
     },
     {
       "slug": "puls-dnia-news",
       "title": "Pavbot Puls Dnia News",
       "path": "research/puls-dnia-news",
       "topicFilePath": "research/puls-dnia-news/topic.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/topic.md"
+      "url": "research/puls-dnia-news/topic.md"
     },
     {
       "slug": "tech-news",
       "title": "Topic Contract: tech-news",
       "path": "research/tech-news",
       "topicFilePath": "research/tech-news/topic.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/topic.md"
+      "url": "research/tech-news/topic.md"
     }
   ],
   "artifacts": [
+    {
+      "id": "research/tech-news/runs/2026-06-27.md",
+      "type": "run",
+      "topic": "tech-news",
+      "title": "Daily Research Report: tech-news",
+      "path": "research/tech-news/runs/2026-06-27.md",
+      "url": "research/tech-news/runs/2026-06-27.md",
+      "sizeBytes": 15160,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-06-27/sources.md",
+      "type": "podcastSources",
+      "topic": "tech-news",
+      "title": "Podcast Sources: 2026-06-27",
+      "path": "research/tech-news/podcasts/2026-06-27/sources.md",
+      "url": "research/tech-news/podcasts/2026-06-27/sources.md",
+      "sizeBytes": 4229,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-06-27/script.md",
+      "type": "podcastScript",
+      "topic": "tech-news",
+      "title": "Podcast Tech: 2026-06-27",
+      "path": "research/tech-news/podcasts/2026-06-27/script.md",
+      "url": "research/tech-news/podcasts/2026-06-27/script.md",
+      "sizeBytes": 7489,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-06-27/render.json",
+      "type": "podcastRender",
+      "topic": "tech-news",
+      "title": "render.json",
+      "path": "research/tech-news/podcasts/2026-06-27/render.json",
+      "url": "research/tech-news/podcasts/2026-06-27/render.json",
+      "sizeBytes": 310,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-06-27/draft.md",
+      "type": "podcastDraft",
+      "topic": "tech-news",
+      "title": "Podcast Tech Draft: 2026-06-27",
+      "path": "research/tech-news/podcasts/2026-06-27/draft.md",
+      "url": "research/tech-news/podcasts/2026-06-27/draft.md",
+      "sizeBytes": 2759,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-06-27/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "tech-news",
+      "title": "Podcast brief PDF",
+      "path": "research/tech-news/podcasts/2026-06-27/brief.pdf",
+      "url": "research/tech-news/podcasts/2026-06-27/brief.pdf",
+      "sizeBytes": 40866,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-06-27/podcast.mp3",
+      "type": "podcastAudio",
+      "topic": "tech-news",
+      "title": "Podcast audio",
+      "path": "research/tech-news/podcasts/2026-06-27/podcast.mp3",
+      "url": "research/tech-news/podcasts/2026-06-27/podcast.mp3",
+      "sizeBytes": 3640645,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/tech-news/pdfs/2026-06-27-tech-news.pdf",
+      "type": "pdf",
+      "topic": "tech-news",
+      "title": "2026-06-27-tech-news.pdf",
+      "path": "research/tech-news/pdfs/2026-06-27-tech-news.pdf",
+      "url": "research/tech-news/pdfs/2026-06-27-tech-news.pdf",
+      "sizeBytes": 57302,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-06-27-2101.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-06-27-2101.md",
+      "url": "research/puls-dnia-news/runs/2026-06-27-2101.md",
+      "sizeBytes": 9429,
+      "date": "2026-06-27",
+      "time": "21:01"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-06-27-2029.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-06-27-2029.md",
+      "url": "research/puls-dnia-news/runs/2026-06-27-2029.md",
+      "sizeBytes": 12663,
+      "date": "2026-06-27",
+      "time": "20:29"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-06-27-2020.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-06-27-2020.md",
+      "url": "research/puls-dnia-news/runs/2026-06-27-2020.md",
+      "sizeBytes": 14188,
+      "date": "2026-06-27",
+      "time": "20:20"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-06-27-2016.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-06-27-2016.md",
+      "url": "research/puls-dnia-news/runs/2026-06-27-2016.md",
+      "sizeBytes": 13274,
+      "date": "2026-06-27",
+      "time": "20:16"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-06-27-1502.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-06-27-1502.md",
+      "url": "research/puls-dnia-news/runs/2026-06-27-1502.md",
+      "sizeBytes": 13422,
+      "date": "2026-06-27",
+      "time": "15:02"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-06-27-1201.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-06-27-1201.md",
+      "url": "research/puls-dnia-news/runs/2026-06-27-1201.md",
+      "sizeBytes": 15121,
+      "date": "2026-06-27",
+      "time": "12:01"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-06-27-0901.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-06-27-0901.md",
+      "url": "research/puls-dnia-news/runs/2026-06-27-0901.md",
+      "sizeBytes": 14340,
+      "date": "2026-06-27",
+      "time": "09:01"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-06-27-0602.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-06-27-0602.md",
+      "url": "research/puls-dnia-news/runs/2026-06-27-0602.md",
+      "sizeBytes": 13723,
+      "date": "2026-06-27",
+      "time": "06:02"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-06-27-2101-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-06-27-2101-pulse-news.json",
+      "url": "research/puls-dnia-news/data/2026-06-27-2101-pulse-news.json",
+      "sizeBytes": 25819,
+      "date": "2026-06-27",
+      "time": "21:01",
+      "itemCount": 12
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-06-27-2029-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-06-27-2029-pulse-news.json",
+      "url": "research/puls-dnia-news/data/2026-06-27-2029-pulse-news.json",
+      "sizeBytes": 25588,
+      "date": "2026-06-27",
+      "time": "20:29",
+      "itemCount": 12
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-06-27-2020-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-06-27-2020-pulse-news.json",
+      "url": "research/puls-dnia-news/data/2026-06-27-2020-pulse-news.json",
+      "sizeBytes": 25925,
+      "date": "2026-06-27",
+      "time": "20:20",
+      "itemCount": 12
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-06-27-2016-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-06-27-2016-pulse-news.json",
+      "url": "research/puls-dnia-news/data/2026-06-27-2016-pulse-news.json",
+      "sizeBytes": 29466,
+      "date": "2026-06-27",
+      "time": "20:16",
+      "itemCount": 14
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-06-27-1502-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-06-27-1502-pulse-news.json",
+      "url": "research/puls-dnia-news/data/2026-06-27-1502-pulse-news.json",
+      "sizeBytes": 26801,
+      "date": "2026-06-27",
+      "time": "15:02",
+      "itemCount": 12
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-06-27-1201-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-06-27-1201-pulse-news.json",
+      "url": "research/puls-dnia-news/data/2026-06-27-1201-pulse-news.json",
+      "sizeBytes": 27805,
+      "date": "2026-06-27",
+      "time": "12:01",
+      "itemCount": 12
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-06-27-0901-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-06-27-0901-pulse-news.json",
+      "url": "research/puls-dnia-news/data/2026-06-27-0901-pulse-news.json",
+      "sizeBytes": 28504,
+      "date": "2026-06-27",
+      "time": "09:01",
+      "itemCount": 12
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-06-27-0602-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-06-27-0602-pulse-news.json",
+      "url": "research/puls-dnia-news/data/2026-06-27-0602-pulse-news.json",
+      "sizeBytes": 29417,
+      "date": "2026-06-27",
+      "time": "06:02",
+      "itemCount": 12
+    },
+    {
+      "id": "research/puls-dnia-news/pdfs/2026-06-27-2101-puls-dnia-news.pdf",
+      "type": "pdf",
+      "topic": "puls-dnia-news",
+      "title": "2026-06-27-2101-puls-dnia-news.pdf",
+      "path": "research/puls-dnia-news/pdfs/2026-06-27-2101-puls-dnia-news.pdf",
+      "url": "research/puls-dnia-news/pdfs/2026-06-27-2101-puls-dnia-news.pdf",
+      "sizeBytes": 53777,
+      "date": "2026-06-27",
+      "time": "21:01"
+    },
+    {
+      "id": "research/puls-dnia-news/pdfs/2026-06-27-2029-puls-dnia-news.pdf",
+      "type": "pdf",
+      "topic": "puls-dnia-news",
+      "title": "2026-06-27-2029-puls-dnia-news.pdf",
+      "path": "research/puls-dnia-news/pdfs/2026-06-27-2029-puls-dnia-news.pdf",
+      "url": "research/puls-dnia-news/pdfs/2026-06-27-2029-puls-dnia-news.pdf",
+      "sizeBytes": 59919,
+      "date": "2026-06-27",
+      "time": "20:29"
+    },
+    {
+      "id": "research/puls-dnia-news/pdfs/2026-06-27-2020-puls-dnia-news.pdf",
+      "type": "pdf",
+      "topic": "puls-dnia-news",
+      "title": "2026-06-27-2020-puls-dnia-news.pdf",
+      "path": "research/puls-dnia-news/pdfs/2026-06-27-2020-puls-dnia-news.pdf",
+      "url": "research/puls-dnia-news/pdfs/2026-06-27-2020-puls-dnia-news.pdf",
+      "sizeBytes": 63209,
+      "date": "2026-06-27",
+      "time": "20:20"
+    },
+    {
+      "id": "research/puls-dnia-news/pdfs/2026-06-27-1502-puls-dnia-news.pdf",
+      "type": "pdf",
+      "topic": "puls-dnia-news",
+      "title": "2026-06-27-1502-puls-dnia-news.pdf",
+      "path": "research/puls-dnia-news/pdfs/2026-06-27-1502-puls-dnia-news.pdf",
+      "url": "research/puls-dnia-news/pdfs/2026-06-27-1502-puls-dnia-news.pdf",
+      "sizeBytes": 59827,
+      "date": "2026-06-27",
+      "time": "15:02"
+    },
+    {
+      "id": "research/puls-dnia-news/pdfs/2026-06-27-1201-puls-dnia-news.pdf",
+      "type": "pdf",
+      "topic": "puls-dnia-news",
+      "title": "2026-06-27-1201-puls-dnia-news.pdf",
+      "path": "research/puls-dnia-news/pdfs/2026-06-27-1201-puls-dnia-news.pdf",
+      "url": "research/puls-dnia-news/pdfs/2026-06-27-1201-puls-dnia-news.pdf",
+      "sizeBytes": 63920,
+      "date": "2026-06-27",
+      "time": "12:01"
+    },
+    {
+      "id": "research/puls-dnia-news/pdfs/2026-06-27-0901-puls-dnia-news.pdf",
+      "type": "pdf",
+      "topic": "puls-dnia-news",
+      "title": "2026-06-27-0901-puls-dnia-news.pdf",
+      "path": "research/puls-dnia-news/pdfs/2026-06-27-0901-puls-dnia-news.pdf",
+      "url": "research/puls-dnia-news/pdfs/2026-06-27-0901-puls-dnia-news.pdf",
+      "sizeBytes": 64466,
+      "date": "2026-06-27",
+      "time": "09:01"
+    },
+    {
+      "id": "research/puls-dnia-news/pdfs/2026-06-27-0602-puls-dnia-news.pdf",
+      "type": "pdf",
+      "topic": "puls-dnia-news",
+      "title": "2026-06-27-0602-puls-dnia-news.pdf",
+      "path": "research/puls-dnia-news/pdfs/2026-06-27-0602-puls-dnia-news.pdf",
+      "url": "research/puls-dnia-news/pdfs/2026-06-27-0602-puls-dnia-news.pdf",
+      "sizeBytes": 60482,
+      "date": "2026-06-27",
+      "time": "06:02"
+    },
+    {
+      "id": "research/polska-swiat/runs/2026-06-27.md",
+      "type": "run",
+      "topic": "polska-swiat",
+      "title": "Daily Research Report: polska-swiat",
+      "path": "research/polska-swiat/runs/2026-06-27.md",
+      "url": "research/polska-swiat/runs/2026-06-27.md",
+      "sizeBytes": 12950,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-06-27/sources.md",
+      "type": "podcastSources",
+      "topic": "polska-swiat",
+      "title": "Źródła do odcinka Polska/Świat — 2026-06-27",
+      "path": "research/polska-swiat/podcasts/2026-06-27/sources.md",
+      "url": "research/polska-swiat/podcasts/2026-06-27/sources.md",
+      "sizeBytes": 4450,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-06-27/script.md",
+      "type": "podcastScript",
+      "topic": "polska-swiat",
+      "title": "script.md",
+      "path": "research/polska-swiat/podcasts/2026-06-27/script.md",
+      "url": "research/polska-swiat/podcasts/2026-06-27/script.md",
+      "sizeBytes": 7470,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-06-27/render.json",
+      "type": "podcastRender",
+      "topic": "polska-swiat",
+      "title": "render.json",
+      "path": "research/polska-swiat/podcasts/2026-06-27/render.json",
+      "url": "research/polska-swiat/podcasts/2026-06-27/render.json",
+      "sizeBytes": 281,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-06-27/draft.md",
+      "type": "podcastDraft",
+      "topic": "polska-swiat",
+      "title": "draft.md",
+      "path": "research/polska-swiat/podcasts/2026-06-27/draft.md",
+      "url": "research/polska-swiat/podcasts/2026-06-27/draft.md",
+      "sizeBytes": 7470,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-06-27/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "polska-swiat",
+      "title": "Podcast brief PDF",
+      "path": "research/polska-swiat/podcasts/2026-06-27/brief.pdf",
+      "url": "research/polska-swiat/podcasts/2026-06-27/brief.pdf",
+      "sizeBytes": 38712,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-06-27/podcast.mp3",
+      "type": "podcastAudio",
+      "topic": "polska-swiat",
+      "title": "Podcast audio",
+      "path": "research/polska-swiat/podcasts/2026-06-27/podcast.mp3",
+      "url": "research/polska-swiat/podcasts/2026-06-27/podcast.mp3",
+      "sizeBytes": 3540409,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/polska-swiat/pdfs/2026-06-27-polska-swiat.pdf",
+      "type": "pdf",
+      "topic": "polska-swiat",
+      "title": "2026-06-27-polska-swiat.pdf",
+      "path": "research/polska-swiat/pdfs/2026-06-27-polska-swiat.pdf",
+      "url": "research/polska-swiat/pdfs/2026-06-27-polska-swiat.pdf",
+      "sizeBytes": 54075,
+      "date": "2026-06-27"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/runs/2026-06-27-2016.md",
+      "type": "run",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "LLM/AI Jobs Wrocław",
+      "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-27-2016.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-27-2016.md",
+      "sizeBytes": 6466,
+      "date": "2026-06-27",
+      "time": "20:16"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/runs/2026-06-27-0141.md",
+      "type": "run",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "LLM/AI Jobs Wrocław",
+      "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-27-0141.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-27-0141.md",
+      "sizeBytes": 13525,
+      "date": "2026-06-27",
+      "time": "01:41"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-27-2016-llm-ai-jobs-wroclaw.pdf",
+      "type": "pdf",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "2026-06-27-2016-llm-ai-jobs-wroclaw.pdf",
+      "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-27-2016-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-27-2016-llm-ai-jobs-wroclaw.pdf",
+      "sizeBytes": 41986,
+      "date": "2026-06-27",
+      "time": "20:16"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-27-0141-llm-ai-jobs-wroclaw.pdf",
+      "type": "pdf",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "2026-06-27-0141-llm-ai-jobs-wroclaw.pdf",
+      "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-27-0141-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-27-0141-llm-ai-jobs-wroclaw.pdf",
+      "sizeBytes": 53554,
+      "date": "2026-06-27",
+      "time": "01:41"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/data/2026-06-27-0141-jobs.json",
+      "type": "jobsData",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "Jobs data",
+      "path": "research/llm-ai-jobs-wroclaw/data/2026-06-27-0141-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-27-0141-jobs.json",
+      "sizeBytes": 12774,
+      "date": "2026-06-27",
+      "time": "01:41"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-27-1019/script.md",
+      "type": "podcastScript",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "Scenariusz: Mobile News Brief 2026-06-27 10:19",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-27-1019/script.md",
+      "url": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-27-1019/script.md",
+      "sizeBytes": 5159,
+      "date": "2026-06-27",
+      "time": "10:19"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-27-1019/audio/female-piper/podcast.mp3",
+      "type": "podcastAudioVariant",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "Podcast audio - female piper",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-27-1019/audio/female-piper/podcast.mp3",
+      "url": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-27-1019/audio/female-piper/podcast.mp3",
+      "sizeBytes": 2412908,
+      "date": "2026-06-27",
+      "time": "10:19"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-27-1019-mobile-brief.pdf",
+      "type": "pdf",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "2026-06-27-1019-mobile-brief.pdf",
+      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-27-1019-mobile-brief.pdf",
+      "url": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-27-1019-mobile-brief.pdf",
+      "sizeBytes": 41439,
+      "date": "2026-06-27",
+      "time": "10:19"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/data/2026-06-27-1019-mobile-news.json",
+      "type": "mobileNewsData",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "Mobile news data",
+      "path": "research/aktualne-wydarzenia-mobile/data/2026-06-27-1019-mobile-news.json",
+      "url": "research/aktualne-wydarzenia-mobile/data/2026-06-27-1019-mobile-news.json",
+      "sizeBytes": 22057,
+      "date": "2026-06-27",
+      "time": "10:19"
+    },
     {
       "id": "research/tech-news/runs/2026-06-26.md",
       "type": "run",
       "topic": "tech-news",
       "title": "Daily Research Report: tech-news",
       "path": "research/tech-news/runs/2026-06-26.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-06-26.md",
+      "url": "research/tech-news/runs/2026-06-26.md",
       "sizeBytes": 15577,
       "date": "2026-06-26"
     },
@@ -153,7 +673,7 @@
       "topic": "tech-news",
       "title": "Podcast Sources: 2026-06-26",
       "path": "research/tech-news/podcasts/2026-06-26/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-26/sources.md",
+      "url": "research/tech-news/podcasts/2026-06-26/sources.md",
       "sizeBytes": 4684,
       "date": "2026-06-26"
     },
@@ -163,7 +683,7 @@
       "topic": "tech-news",
       "title": "Podcast Tech: 2026-06-26",
       "path": "research/tech-news/podcasts/2026-06-26/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-26/script.md",
+      "url": "research/tech-news/podcasts/2026-06-26/script.md",
       "sizeBytes": 7532,
       "date": "2026-06-26"
     },
@@ -173,7 +693,7 @@
       "topic": "tech-news",
       "title": "render.json",
       "path": "research/tech-news/podcasts/2026-06-26/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-26/render.json",
+      "url": "research/tech-news/podcasts/2026-06-26/render.json",
       "sizeBytes": 309,
       "date": "2026-06-26"
     },
@@ -183,7 +703,7 @@
       "topic": "tech-news",
       "title": "Podcast Tech Draft: 2026-06-26",
       "path": "research/tech-news/podcasts/2026-06-26/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-26/draft.md",
+      "url": "research/tech-news/podcasts/2026-06-26/draft.md",
       "sizeBytes": 2805,
       "date": "2026-06-26"
     },
@@ -193,7 +713,7 @@
       "topic": "tech-news",
       "title": "Podcast brief PDF",
       "path": "research/tech-news/podcasts/2026-06-26/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-26/brief.pdf",
+      "url": "research/tech-news/podcasts/2026-06-26/brief.pdf",
       "sizeBytes": 41980,
       "date": "2026-06-26"
     },
@@ -203,7 +723,7 @@
       "topic": "tech-news",
       "title": "Podcast audio",
       "path": "research/tech-news/podcasts/2026-06-26/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-26/podcast.mp3",
+      "url": "research/tech-news/podcasts/2026-06-26/podcast.mp3",
       "sizeBytes": 3634049,
       "date": "2026-06-26"
     },
@@ -213,7 +733,7 @@
       "topic": "tech-news",
       "title": "2026-06-26-tech-news.pdf",
       "path": "research/tech-news/pdfs/2026-06-26-tech-news.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-06-26-tech-news.pdf",
+      "url": "research/tech-news/pdfs/2026-06-26-tech-news.pdf",
       "sizeBytes": 58157,
       "date": "2026-06-26"
     },
@@ -223,7 +743,7 @@
       "topic": "puls-dnia-news",
       "title": "Daily Research Report: puls-dnia-news",
       "path": "research/puls-dnia-news/runs/2026-06-26-2109.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-06-26-2109.md",
+      "url": "research/puls-dnia-news/runs/2026-06-26-2109.md",
       "sizeBytes": 15328,
       "date": "2026-06-26",
       "time": "21:09"
@@ -234,7 +754,7 @@
       "topic": "puls-dnia-news",
       "title": "Daily Research Report: puls-dnia-news",
       "path": "research/puls-dnia-news/runs/2026-06-26-1801.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-06-26-1801.md",
+      "url": "research/puls-dnia-news/runs/2026-06-26-1801.md",
       "sizeBytes": 15604,
       "date": "2026-06-26",
       "time": "18:01"
@@ -245,7 +765,7 @@
       "topic": "puls-dnia-news",
       "title": "Daily Research Report: puls-dnia-news",
       "path": "research/puls-dnia-news/runs/2026-06-26-1502.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-06-26-1502.md",
+      "url": "research/puls-dnia-news/runs/2026-06-26-1502.md",
       "sizeBytes": 13191,
       "date": "2026-06-26",
       "time": "15:02"
@@ -256,7 +776,7 @@
       "topic": "puls-dnia-news",
       "title": "Daily Research Report: puls-dnia-news",
       "path": "research/puls-dnia-news/runs/2026-06-26-1201.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-06-26-1201.md",
+      "url": "research/puls-dnia-news/runs/2026-06-26-1201.md",
       "sizeBytes": 10704,
       "date": "2026-06-26",
       "time": "12:01"
@@ -267,10 +787,11 @@
       "topic": "puls-dnia-news",
       "title": "Pulse news data",
       "path": "research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
+      "url": "research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
       "sizeBytes": 28084,
       "date": "2026-06-26",
-      "time": "21:09"
+      "time": "21:09",
+      "itemCount": 12
     },
     {
       "id": "research/puls-dnia-news/data/2026-06-26-1801-pulse-news.json",
@@ -278,10 +799,11 @@
       "topic": "puls-dnia-news",
       "title": "Pulse news data",
       "path": "research/puls-dnia-news/data/2026-06-26-1801-pulse-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-06-26-1801-pulse-news.json",
+      "url": "research/puls-dnia-news/data/2026-06-26-1801-pulse-news.json",
       "sizeBytes": 29461,
       "date": "2026-06-26",
-      "time": "18:01"
+      "time": "18:01",
+      "itemCount": 12
     },
     {
       "id": "research/puls-dnia-news/data/2026-06-26-1502-pulse-news.json",
@@ -289,10 +811,11 @@
       "topic": "puls-dnia-news",
       "title": "Pulse news data",
       "path": "research/puls-dnia-news/data/2026-06-26-1502-pulse-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-06-26-1502-pulse-news.json",
+      "url": "research/puls-dnia-news/data/2026-06-26-1502-pulse-news.json",
       "sizeBytes": 27475,
       "date": "2026-06-26",
-      "time": "15:02"
+      "time": "15:02",
+      "itemCount": 12
     },
     {
       "id": "research/puls-dnia-news/data/2026-06-26-1201-pulse-news.json",
@@ -300,10 +823,11 @@
       "topic": "puls-dnia-news",
       "title": "Pulse news data",
       "path": "research/puls-dnia-news/data/2026-06-26-1201-pulse-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-06-26-1201-pulse-news.json",
+      "url": "research/puls-dnia-news/data/2026-06-26-1201-pulse-news.json",
       "sizeBytes": 25577,
       "date": "2026-06-26",
-      "time": "12:01"
+      "time": "12:01",
+      "itemCount": 12
     },
     {
       "id": "research/puls-dnia-news/proposals/2026-06-26-bootstrap-pulse-news-manifest.md",
@@ -311,7 +835,7 @@
       "topic": "puls-dnia-news",
       "title": "Proposal: bootstrap `puls-dnia-news` into public manifest generation",
       "path": "research/puls-dnia-news/proposals/2026-06-26-bootstrap-pulse-news-manifest.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/proposals/2026-06-26-bootstrap-pulse-news-manifest.md",
+      "url": "research/puls-dnia-news/proposals/2026-06-26-bootstrap-pulse-news-manifest.md",
       "sizeBytes": 2456,
       "date": "2026-06-26"
     },
@@ -321,7 +845,7 @@
       "topic": "puls-dnia-news",
       "title": "2026-06-26-2109-puls-dnia-news.pdf",
       "path": "research/puls-dnia-news/pdfs/2026-06-26-2109-puls-dnia-news.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/pdfs/2026-06-26-2109-puls-dnia-news.pdf",
+      "url": "research/puls-dnia-news/pdfs/2026-06-26-2109-puls-dnia-news.pdf",
       "sizeBytes": 64111,
       "date": "2026-06-26",
       "time": "21:09"
@@ -332,7 +856,7 @@
       "topic": "puls-dnia-news",
       "title": "2026-06-26-1801-puls-dnia-news.pdf",
       "path": "research/puls-dnia-news/pdfs/2026-06-26-1801-puls-dnia-news.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/pdfs/2026-06-26-1801-puls-dnia-news.pdf",
+      "url": "research/puls-dnia-news/pdfs/2026-06-26-1801-puls-dnia-news.pdf",
       "sizeBytes": 65096,
       "date": "2026-06-26",
       "time": "18:01"
@@ -343,7 +867,7 @@
       "topic": "polska-swiat",
       "title": "Daily Research Report: polska-swiat",
       "path": "research/polska-swiat/runs/2026-06-26.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-06-26.md",
+      "url": "research/polska-swiat/runs/2026-06-26.md",
       "sizeBytes": 13084,
       "date": "2026-06-26"
     },
@@ -353,7 +877,7 @@
       "topic": "polska-swiat",
       "title": "Źródła do odcinka Polska/Świat — 2026-06-26",
       "path": "research/polska-swiat/podcasts/2026-06-26/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-26/sources.md",
+      "url": "research/polska-swiat/podcasts/2026-06-26/sources.md",
       "sizeBytes": 4951,
       "date": "2026-06-26"
     },
@@ -363,7 +887,7 @@
       "topic": "polska-swiat",
       "title": "script.md",
       "path": "research/polska-swiat/podcasts/2026-06-26/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-26/script.md",
+      "url": "research/polska-swiat/podcasts/2026-06-26/script.md",
       "sizeBytes": 7472,
       "date": "2026-06-26"
     },
@@ -373,7 +897,7 @@
       "topic": "polska-swiat",
       "title": "render.json",
       "path": "research/polska-swiat/podcasts/2026-06-26/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-26/render.json",
+      "url": "research/polska-swiat/podcasts/2026-06-26/render.json",
       "sizeBytes": 281,
       "date": "2026-06-26"
     },
@@ -383,7 +907,7 @@
       "topic": "polska-swiat",
       "title": "draft.md",
       "path": "research/polska-swiat/podcasts/2026-06-26/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-26/draft.md",
+      "url": "research/polska-swiat/podcasts/2026-06-26/draft.md",
       "sizeBytes": 7450,
       "date": "2026-06-26"
     },
@@ -393,7 +917,7 @@
       "topic": "polska-swiat",
       "title": "Podcast brief PDF",
       "path": "research/polska-swiat/podcasts/2026-06-26/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-26/brief.pdf",
+      "url": "research/polska-swiat/podcasts/2026-06-26/brief.pdf",
       "sizeBytes": 40125,
       "date": "2026-06-26"
     },
@@ -403,7 +927,7 @@
       "topic": "polska-swiat",
       "title": "Podcast audio",
       "path": "research/polska-swiat/podcasts/2026-06-26/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-26/podcast.mp3",
+      "url": "research/polska-swiat/podcasts/2026-06-26/podcast.mp3",
       "sizeBytes": 3576667,
       "date": "2026-06-26"
     },
@@ -413,7 +937,7 @@
       "topic": "polska-swiat",
       "title": "2026-06-26-polska-swiat.pdf",
       "path": "research/polska-swiat/pdfs/2026-06-26-polska-swiat.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-06-26-polska-swiat.pdf",
+      "url": "research/polska-swiat/pdfs/2026-06-26-polska-swiat.pdf",
       "sizeBytes": 55541,
       "date": "2026-06-26"
     },
@@ -423,7 +947,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-26-1741.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-26-1741.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-26-1741.md",
       "sizeBytes": 11721,
       "date": "2026-06-26",
       "time": "17:41"
@@ -434,7 +958,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-26-0142.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-26-0142.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-26-0142.md",
       "sizeBytes": 14352,
       "date": "2026-06-26",
       "time": "01:42"
@@ -445,7 +969,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-26-1741-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-26-1741-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-26-1741-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-26-1741-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 48756,
       "date": "2026-06-26",
       "time": "17:41"
@@ -456,7 +980,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-26-0142-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-26-0142-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-26-0142-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-26-0142-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 52642,
       "date": "2026-06-26",
       "time": "01:42"
@@ -467,7 +991,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "Scenariusz: Mobile News Brief 2026-06-26 10:21",
       "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-1021/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-1021/script.md",
+      "url": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-1021/script.md",
       "sizeBytes": 5131,
       "date": "2026-06-26",
       "time": "10:21"
@@ -478,7 +1002,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "Script: Pavbot Aktualne Wydarzenia Mobile",
       "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-0257/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-0257/script.md",
+      "url": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-0257/script.md",
       "sizeBytes": 6157,
       "date": "2026-06-26",
       "time": "02:57"
@@ -489,7 +1013,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "Podcast audio - female piper",
       "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-1021/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-1021/audio/female-piper/podcast.mp3",
+      "url": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-1021/audio/female-piper/podcast.mp3",
       "sizeBytes": 2416996,
       "date": "2026-06-26",
       "time": "10:21"
@@ -500,7 +1024,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "Podcast audio - female piper",
       "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-0257/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-0257/audio/female-piper/podcast.mp3",
+      "url": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-0257/audio/female-piper/podcast.mp3",
       "sizeBytes": 2835227,
       "date": "2026-06-26",
       "time": "02:57"
@@ -511,7 +1035,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "2026-06-26-1021-mobile-brief.pdf",
       "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-1021-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-1021-mobile-brief.pdf",
+      "url": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-1021-mobile-brief.pdf",
       "sizeBytes": 46448,
       "date": "2026-06-26",
       "time": "10:21"
@@ -522,7 +1046,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "2026-06-26-0257-mobile-brief.pdf",
       "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-0257-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-0257-mobile-brief.pdf",
+      "url": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-0257-mobile-brief.pdf",
       "sizeBytes": 44983,
       "date": "2026-06-26",
       "time": "02:57"
@@ -533,7 +1057,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "Mobile news data",
       "path": "research/aktualne-wydarzenia-mobile/data/2026-06-26-1021-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-06-26-1021-mobile-news.json",
+      "url": "research/aktualne-wydarzenia-mobile/data/2026-06-26-1021-mobile-news.json",
       "sizeBytes": 24274,
       "date": "2026-06-26",
       "time": "10:21"
@@ -544,7 +1068,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "Mobile news data",
       "path": "research/aktualne-wydarzenia-mobile/data/2026-06-26-0257-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-06-26-0257-mobile-news.json",
+      "url": "research/aktualne-wydarzenia-mobile/data/2026-06-26-0257-mobile-news.json",
       "sizeBytes": 22574,
       "date": "2026-06-26",
       "time": "02:57"
@@ -555,7 +1079,7 @@
       "topic": "tech-news",
       "title": "Daily Research Report: tech-news",
       "path": "research/tech-news/runs/2026-06-25.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-06-25.md",
+      "url": "research/tech-news/runs/2026-06-25.md",
       "sizeBytes": 98896,
       "date": "2026-06-25"
     },
@@ -565,7 +1089,7 @@
       "topic": "tech-news",
       "title": "Research data",
       "path": "research/tech-news/data/2026-06-25-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-06-25-research.json",
+      "url": "research/tech-news/data/2026-06-25-research.json",
       "sizeBytes": 261026,
       "date": "2026-06-25"
     },
@@ -575,7 +1099,7 @@
       "topic": "tech-news",
       "title": "Podcast Sources: 2026-06-25",
       "path": "research/tech-news/podcasts/2026-06-25/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-25/sources.md",
+      "url": "research/tech-news/podcasts/2026-06-25/sources.md",
       "sizeBytes": 6480,
       "date": "2026-06-25"
     },
@@ -585,7 +1109,7 @@
       "topic": "tech-news",
       "title": "Podcast Tech: 2026-06-25",
       "path": "research/tech-news/podcasts/2026-06-25/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-25/script.md",
+      "url": "research/tech-news/podcasts/2026-06-25/script.md",
       "sizeBytes": 7302,
       "date": "2026-06-25"
     },
@@ -595,7 +1119,7 @@
       "topic": "tech-news",
       "title": "render.json",
       "path": "research/tech-news/podcasts/2026-06-25/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-25/render.json",
+      "url": "research/tech-news/podcasts/2026-06-25/render.json",
       "sizeBytes": 309,
       "date": "2026-06-25"
     },
@@ -605,7 +1129,7 @@
       "topic": "tech-news",
       "title": "Podcast Tech Draft: 2026-06-25",
       "path": "research/tech-news/podcasts/2026-06-25/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-25/draft.md",
+      "url": "research/tech-news/podcasts/2026-06-25/draft.md",
       "sizeBytes": 2952,
       "date": "2026-06-25"
     },
@@ -615,7 +1139,7 @@
       "topic": "tech-news",
       "title": "Podcast brief PDF",
       "path": "research/tech-news/podcasts/2026-06-25/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-25/brief.pdf",
+      "url": "research/tech-news/podcasts/2026-06-25/brief.pdf",
       "sizeBytes": 43269,
       "date": "2026-06-25"
     },
@@ -625,7 +1149,7 @@
       "topic": "tech-news",
       "title": "Podcast audio",
       "path": "research/tech-news/podcasts/2026-06-25/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-25/podcast.mp3",
+      "url": "research/tech-news/podcasts/2026-06-25/podcast.mp3",
       "sizeBytes": 3559196,
       "date": "2026-06-25"
     },
@@ -635,7 +1159,7 @@
       "topic": "tech-news",
       "title": "2026-06-25-tech-news.pdf",
       "path": "research/tech-news/pdfs/2026-06-25-tech-news.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-06-25-tech-news.pdf",
+      "url": "research/tech-news/pdfs/2026-06-25-tech-news.pdf",
       "sizeBytes": 195255,
       "date": "2026-06-25"
     },
@@ -645,7 +1169,7 @@
       "topic": "polska-swiat",
       "title": "Daily Research Report: polska-swiat",
       "path": "research/polska-swiat/runs/2026-06-25.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-06-25.md",
+      "url": "research/polska-swiat/runs/2026-06-25.md",
       "sizeBytes": 11281,
       "date": "2026-06-25"
     },
@@ -655,7 +1179,7 @@
       "topic": "polska-swiat",
       "title": "Research data",
       "path": "research/polska-swiat/data/2026-06-25-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-06-25-research.json",
+      "url": "research/polska-swiat/data/2026-06-25-research.json",
       "sizeBytes": 37157,
       "date": "2026-06-25"
     },
@@ -665,8 +1189,8 @@
       "topic": "polska-swiat",
       "title": "Źródła podcastu Polska/Świat",
       "path": "research/polska-swiat/podcasts/2026-06-25/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-25/sources.md",
-      "sizeBytes": 5148,
+      "url": "research/polska-swiat/podcasts/2026-06-25/sources.md",
+      "sizeBytes": 5110,
       "date": "2026-06-25"
     },
     {
@@ -675,7 +1199,7 @@
       "topic": "polska-swiat",
       "title": "script.md",
       "path": "research/polska-swiat/podcasts/2026-06-25/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-25/script.md",
+      "url": "research/polska-swiat/podcasts/2026-06-25/script.md",
       "sizeBytes": 7734,
       "date": "2026-06-25"
     },
@@ -685,7 +1209,7 @@
       "topic": "polska-swiat",
       "title": "render.json",
       "path": "research/polska-swiat/podcasts/2026-06-25/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-25/render.json",
+      "url": "research/polska-swiat/podcasts/2026-06-25/render.json",
       "sizeBytes": 281,
       "date": "2026-06-25"
     },
@@ -695,7 +1219,7 @@
       "topic": "polska-swiat",
       "title": "Podcast Polska/Świat - draft",
       "path": "research/polska-swiat/podcasts/2026-06-25/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-25/draft.md",
+      "url": "research/polska-swiat/podcasts/2026-06-25/draft.md",
       "sizeBytes": 6448,
       "date": "2026-06-25"
     },
@@ -705,7 +1229,7 @@
       "topic": "polska-swiat",
       "title": "Podcast brief PDF",
       "path": "research/polska-swiat/podcasts/2026-06-25/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-25/brief.pdf",
+      "url": "research/polska-swiat/podcasts/2026-06-25/brief.pdf",
       "sizeBytes": 39425,
       "date": "2026-06-25"
     },
@@ -715,7 +1239,7 @@
       "topic": "polska-swiat",
       "title": "Podcast audio",
       "path": "research/polska-swiat/podcasts/2026-06-25/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-25/podcast.mp3",
+      "url": "research/polska-swiat/podcasts/2026-06-25/podcast.mp3",
       "sizeBytes": 3732913,
       "date": "2026-06-25"
     },
@@ -725,7 +1249,7 @@
       "topic": "polska-swiat",
       "title": "2026-06-25-polska-swiat.pdf",
       "path": "research/polska-swiat/pdfs/2026-06-25-polska-swiat.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-06-25-polska-swiat.pdf",
+      "url": "research/polska-swiat/pdfs/2026-06-25-polska-swiat.pdf",
       "sizeBytes": 50552,
       "date": "2026-06-25"
     },
@@ -735,7 +1259,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-25-1741.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-25-1741.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-25-1741.md",
       "sizeBytes": 10315,
       "date": "2026-06-25",
       "time": "17:41"
@@ -746,7 +1270,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-25-1723.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-25-1723.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-25-1723.md",
       "sizeBytes": 11793,
       "date": "2026-06-25",
       "time": "17:23"
@@ -757,7 +1281,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-25-0141.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-25-0141.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-25-0141.md",
       "sizeBytes": 12801,
       "date": "2026-06-25",
       "time": "01:41"
@@ -768,7 +1292,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-25-1741-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-25-1741-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-25-1741-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-25-1741-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 47221,
       "date": "2026-06-25",
       "time": "17:41"
@@ -779,7 +1303,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-25-1723-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-25-1723-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-25-1723-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-25-1723-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 50743,
       "date": "2026-06-25",
       "time": "17:23"
@@ -790,7 +1314,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-25-0141-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-25-0141-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-25-0141-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-25-0141-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 54019,
       "date": "2026-06-25",
       "time": "01:41"
@@ -801,7 +1325,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-25-1723-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-25-1723-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-25-1723-jobs.json",
       "sizeBytes": 7604,
       "date": "2026-06-25",
       "time": "17:23"
@@ -812,7 +1336,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-25-0141-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-25-0141-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-25-0141-jobs.json",
       "sizeBytes": 8451,
       "date": "2026-06-25",
       "time": "01:41"
@@ -823,7 +1347,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "Scenariusz: Mobile News Brief 2026-06-25",
       "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-25/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-25/script.md",
+      "url": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-25/script.md",
       "sizeBytes": 5505,
       "date": "2026-06-25"
     },
@@ -833,7 +1357,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "Podcast audio - female piper",
       "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-25/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-25/audio/female-piper/podcast.mp3",
+      "url": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-25/audio/female-piper/podcast.mp3",
       "sizeBytes": 2614155,
       "date": "2026-06-25"
     },
@@ -843,7 +1367,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "2026-06-25-mobile-brief.pdf",
       "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-25-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-25-mobile-brief.pdf",
+      "url": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-25-mobile-brief.pdf",
       "sizeBytes": 47373,
       "date": "2026-06-25"
     },
@@ -853,7 +1377,7 @@
       "topic": "tech-news",
       "title": "Podcast Sources: 2026-06-24",
       "path": "research/tech-news/podcasts/2026-06-24/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-24/sources.md",
+      "url": "research/tech-news/podcasts/2026-06-24/sources.md",
       "sizeBytes": 3949,
       "date": "2026-06-24"
     },
@@ -863,7 +1387,7 @@
       "topic": "tech-news",
       "title": "Podcast Tech: 2026-06-24",
       "path": "research/tech-news/podcasts/2026-06-24/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-24/script.md",
+      "url": "research/tech-news/podcasts/2026-06-24/script.md",
       "sizeBytes": 7326,
       "date": "2026-06-24"
     },
@@ -873,7 +1397,7 @@
       "topic": "tech-news",
       "title": "render.json",
       "path": "research/tech-news/podcasts/2026-06-24/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-24/render.json",
+      "url": "research/tech-news/podcasts/2026-06-24/render.json",
       "sizeBytes": 309,
       "date": "2026-06-24"
     },
@@ -883,7 +1407,7 @@
       "topic": "tech-news",
       "title": "Podcast Tech Draft: 2026-06-24",
       "path": "research/tech-news/podcasts/2026-06-24/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-24/draft.md",
+      "url": "research/tech-news/podcasts/2026-06-24/draft.md",
       "sizeBytes": 2710,
       "date": "2026-06-24"
     },
@@ -893,7 +1417,7 @@
       "topic": "tech-news",
       "title": "Podcast brief PDF",
       "path": "research/tech-news/podcasts/2026-06-24/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-24/brief.pdf",
+      "url": "research/tech-news/podcasts/2026-06-24/brief.pdf",
       "sizeBytes": 40662,
       "date": "2026-06-24"
     },
@@ -903,7 +1427,7 @@
       "topic": "tech-news",
       "title": "Podcast audio",
       "path": "research/tech-news/podcasts/2026-06-24/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-24/podcast.mp3",
+      "url": "research/tech-news/podcasts/2026-06-24/podcast.mp3",
       "sizeBytes": 3566740,
       "date": "2026-06-24"
     },
@@ -913,7 +1437,7 @@
       "topic": "polska-swiat",
       "title": "Daily Research Report: polska-swiat",
       "path": "research/polska-swiat/runs/2026-06-24.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-06-24.md",
+      "url": "research/polska-swiat/runs/2026-06-24.md",
       "sizeBytes": 12571,
       "date": "2026-06-24"
     },
@@ -923,7 +1447,7 @@
       "topic": "polska-swiat",
       "title": "Research data",
       "path": "research/polska-swiat/data/2026-06-24-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-06-24-research.json",
+      "url": "research/polska-swiat/data/2026-06-24-research.json",
       "sizeBytes": 37304,
       "date": "2026-06-24"
     },
@@ -933,8 +1457,8 @@
       "topic": "polska-swiat",
       "title": "Źródła podcastu Polska/Świat",
       "path": "research/polska-swiat/podcasts/2026-06-24/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-24/sources.md",
-      "sizeBytes": 4835,
+      "url": "research/polska-swiat/podcasts/2026-06-24/sources.md",
+      "sizeBytes": 4807,
       "date": "2026-06-24"
     },
     {
@@ -943,7 +1467,7 @@
       "topic": "polska-swiat",
       "title": "script.md",
       "path": "research/polska-swiat/podcasts/2026-06-24/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-24/script.md",
+      "url": "research/polska-swiat/podcasts/2026-06-24/script.md",
       "sizeBytes": 7846,
       "date": "2026-06-24"
     },
@@ -953,7 +1477,7 @@
       "topic": "polska-swiat",
       "title": "render.json",
       "path": "research/polska-swiat/podcasts/2026-06-24/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-24/render.json",
+      "url": "research/polska-swiat/podcasts/2026-06-24/render.json",
       "sizeBytes": 282,
       "date": "2026-06-24"
     },
@@ -963,7 +1487,7 @@
       "topic": "polska-swiat",
       "title": "Podcast Polska/Świat - draft",
       "path": "research/polska-swiat/podcasts/2026-06-24/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-24/draft.md",
+      "url": "research/polska-swiat/podcasts/2026-06-24/draft.md",
       "sizeBytes": 5966,
       "date": "2026-06-24"
     },
@@ -973,7 +1497,7 @@
       "topic": "polska-swiat",
       "title": "Podcast brief PDF",
       "path": "research/polska-swiat/podcasts/2026-06-24/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-24/brief.pdf",
+      "url": "research/polska-swiat/podcasts/2026-06-24/brief.pdf",
       "sizeBytes": 68082,
       "date": "2026-06-24"
     },
@@ -983,7 +1507,7 @@
       "topic": "polska-swiat",
       "title": "Podcast audio",
       "path": "research/polska-swiat/podcasts/2026-06-24/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-24/podcast.mp3",
+      "url": "research/polska-swiat/podcasts/2026-06-24/podcast.mp3",
       "sizeBytes": 3761846,
       "date": "2026-06-24"
     },
@@ -993,7 +1517,7 @@
       "topic": "polska-swiat",
       "title": "2026-06-24-polska-swiat.pdf",
       "path": "research/polska-swiat/pdfs/2026-06-24-polska-swiat.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-06-24-polska-swiat.pdf",
+      "url": "research/polska-swiat/pdfs/2026-06-24-polska-swiat.pdf",
       "sizeBytes": 53469,
       "date": "2026-06-24"
     },
@@ -1003,7 +1527,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-24-1921.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-24-1921.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-24-1921.md",
       "sizeBytes": 13840,
       "date": "2026-06-24",
       "time": "19:21"
@@ -1014,7 +1538,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-24-1744.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-24-1744.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-24-1744.md",
       "sizeBytes": 11651,
       "date": "2026-06-24",
       "time": "17:44"
@@ -1025,7 +1549,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-24-1921-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-24-1921-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-24-1921-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-24-1921-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 56136,
       "date": "2026-06-24",
       "time": "19:21"
@@ -1036,7 +1560,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-24-1744-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-24-1744-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-24-1744-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-24-1744-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 51482,
       "date": "2026-06-24",
       "time": "17:44"
@@ -1047,7 +1571,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-24-1921-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-24-1921-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-24-1921-jobs.json",
       "sizeBytes": 8265,
       "date": "2026-06-24",
       "time": "19:21"
@@ -1058,7 +1582,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-24-1744-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-24-1744-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-24-1744-jobs.json",
       "sizeBytes": 7646,
       "date": "2026-06-24",
       "time": "17:44"
@@ -1069,7 +1593,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "Scenariusz: Mobile News Brief 2026-06-24",
       "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-24/script.md",
+      "url": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24/script.md",
       "sizeBytes": 5379,
       "date": "2026-06-24"
     },
@@ -1079,7 +1603,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "Podcast audio - female piper",
       "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-24/audio/female-piper/podcast.mp3",
+      "url": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24/audio/female-piper/podcast.mp3",
       "sizeBytes": 2425129,
       "date": "2026-06-24"
     },
@@ -1089,7 +1613,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "2026-06-24-mobile-brief.pdf",
       "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-mobile-brief.pdf",
+      "url": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-mobile-brief.pdf",
       "sizeBytes": 43170,
       "date": "2026-06-24"
     },
@@ -1099,7 +1623,7 @@
       "topic": "tech-news",
       "title": "Daily Research Report: tech-news",
       "path": "research/tech-news/runs/2026-06-23.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-06-23.md",
+      "url": "research/tech-news/runs/2026-06-23.md",
       "sizeBytes": 17092,
       "date": "2026-06-23"
     },
@@ -1109,7 +1633,7 @@
       "topic": "tech-news",
       "title": "Research data",
       "path": "research/tech-news/data/2026-06-23-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-06-23-research.json",
+      "url": "research/tech-news/data/2026-06-23-research.json",
       "sizeBytes": 55076,
       "date": "2026-06-23"
     },
@@ -1119,8 +1643,8 @@
       "topic": "tech-news",
       "title": "Podcast Sources: 2026-06-23",
       "path": "research/tech-news/podcasts/2026-06-23/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-23/sources.md",
-      "sizeBytes": 3101,
+      "url": "research/tech-news/podcasts/2026-06-23/sources.md",
+      "sizeBytes": 3100,
       "date": "2026-06-23"
     },
     {
@@ -1129,7 +1653,7 @@
       "topic": "tech-news",
       "title": "Podcast Tech: 2026-06-23",
       "path": "research/tech-news/podcasts/2026-06-23/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-23/script.md",
+      "url": "research/tech-news/podcasts/2026-06-23/script.md",
       "sizeBytes": 7661,
       "date": "2026-06-23"
     },
@@ -1139,7 +1663,7 @@
       "topic": "tech-news",
       "title": "render.json",
       "path": "research/tech-news/podcasts/2026-06-23/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-23/render.json",
+      "url": "research/tech-news/podcasts/2026-06-23/render.json",
       "sizeBytes": 310,
       "date": "2026-06-23"
     },
@@ -1149,8 +1673,8 @@
       "topic": "tech-news",
       "title": "Draft: Podcast Tech 2026-06-23",
       "path": "research/tech-news/podcasts/2026-06-23/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-23/draft.md",
-      "sizeBytes": 2579,
+      "url": "research/tech-news/podcasts/2026-06-23/draft.md",
+      "sizeBytes": 2578,
       "date": "2026-06-23"
     },
     {
@@ -1159,7 +1683,7 @@
       "topic": "tech-news",
       "title": "Podcast brief PDF",
       "path": "research/tech-news/podcasts/2026-06-23/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-23/brief.pdf",
+      "url": "research/tech-news/podcasts/2026-06-23/brief.pdf",
       "sizeBytes": 71434,
       "date": "2026-06-23"
     },
@@ -1169,7 +1693,7 @@
       "topic": "tech-news",
       "title": "Podcast audio",
       "path": "research/tech-news/podcasts/2026-06-23/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-23/podcast.mp3",
+      "url": "research/tech-news/podcasts/2026-06-23/podcast.mp3",
       "sizeBytes": 3763651,
       "date": "2026-06-23"
     },
@@ -1179,7 +1703,7 @@
       "topic": "tech-news",
       "title": "2026-06-23-tech-news.pdf",
       "path": "research/tech-news/pdfs/2026-06-23-tech-news.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-06-23-tech-news.pdf",
+      "url": "research/tech-news/pdfs/2026-06-23-tech-news.pdf",
       "sizeBytes": 60556,
       "date": "2026-06-23"
     },
@@ -1189,7 +1713,7 @@
       "topic": "polska-swiat",
       "title": "Daily Research Report: polska-swiat",
       "path": "research/polska-swiat/runs/2026-06-23.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-06-23.md",
+      "url": "research/polska-swiat/runs/2026-06-23.md",
       "sizeBytes": 13599,
       "date": "2026-06-23"
     },
@@ -1199,7 +1723,7 @@
       "topic": "polska-swiat",
       "title": "Research data",
       "path": "research/polska-swiat/data/2026-06-23-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-06-23-research.json",
+      "url": "research/polska-swiat/data/2026-06-23-research.json",
       "sizeBytes": 40629,
       "date": "2026-06-23"
     },
@@ -1209,8 +1733,8 @@
       "topic": "polska-swiat",
       "title": "Źródła podcastu Polska/Świat",
       "path": "research/polska-swiat/podcasts/2026-06-23/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-23/sources.md",
-      "sizeBytes": 5626,
+      "url": "research/polska-swiat/podcasts/2026-06-23/sources.md",
+      "sizeBytes": 5590,
       "date": "2026-06-23"
     },
     {
@@ -1219,7 +1743,7 @@
       "topic": "polska-swiat",
       "title": "script.md",
       "path": "research/polska-swiat/podcasts/2026-06-23/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-23/script.md",
+      "url": "research/polska-swiat/podcasts/2026-06-23/script.md",
       "sizeBytes": 8077,
       "date": "2026-06-23"
     },
@@ -1229,7 +1753,7 @@
       "topic": "polska-swiat",
       "title": "render.json",
       "path": "research/polska-swiat/podcasts/2026-06-23/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-23/render.json",
+      "url": "research/polska-swiat/podcasts/2026-06-23/render.json",
       "sizeBytes": 282,
       "date": "2026-06-23"
     },
@@ -1239,7 +1763,7 @@
       "topic": "polska-swiat",
       "title": "Podcast Polska/Świat - draft",
       "path": "research/polska-swiat/podcasts/2026-06-23/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-23/draft.md",
+      "url": "research/polska-swiat/podcasts/2026-06-23/draft.md",
       "sizeBytes": 6576,
       "date": "2026-06-23"
     },
@@ -1249,7 +1773,7 @@
       "topic": "polska-swiat",
       "title": "Podcast brief PDF",
       "path": "research/polska-swiat/podcasts/2026-06-23/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-23/brief.pdf",
+      "url": "research/polska-swiat/podcasts/2026-06-23/brief.pdf",
       "sizeBytes": 67911,
       "date": "2026-06-23"
     },
@@ -1259,7 +1783,7 @@
       "topic": "polska-swiat",
       "title": "Podcast audio",
       "path": "research/polska-swiat/podcasts/2026-06-23/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-23/podcast.mp3",
+      "url": "research/polska-swiat/podcasts/2026-06-23/podcast.mp3",
       "sizeBytes": 3843213,
       "date": "2026-06-23"
     },
@@ -1269,7 +1793,7 @@
       "topic": "polska-swiat",
       "title": "2026-06-23-polska-swiat.pdf",
       "path": "research/polska-swiat/pdfs/2026-06-23-polska-swiat.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-06-23-polska-swiat.pdf",
+      "url": "research/polska-swiat/pdfs/2026-06-23-polska-swiat.pdf",
       "sizeBytes": 87340,
       "date": "2026-06-23"
     },
@@ -1279,7 +1803,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-23-1741.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-23-1741.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-23-1741.md",
       "sizeBytes": 13071,
       "date": "2026-06-23",
       "time": "17:41"
@@ -1290,7 +1814,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-23-0140.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-23-0140.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-23-0140.md",
       "sizeBytes": 7803,
       "date": "2026-06-23",
       "time": "01:40"
@@ -1301,7 +1825,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-23-1741-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-23-1741-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-23-1741-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-23-1741-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 53487,
       "date": "2026-06-23",
       "time": "17:41"
@@ -1312,7 +1836,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-23-0140-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-23-0140-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-23-0140-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-23-0140-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 43810,
       "date": "2026-06-23",
       "time": "01:40"
@@ -1323,7 +1847,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-23-1741-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-23-1741-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-23-1741-jobs.json",
       "sizeBytes": 7477,
       "date": "2026-06-23",
       "time": "17:41"
@@ -1334,7 +1858,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-23-0140-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-23-0140-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-23-0140-jobs.json",
       "sizeBytes": 4612,
       "date": "2026-06-23",
       "time": "01:40"
@@ -1345,7 +1869,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "Scenariusz: Mobile News Brief 2026-06-23",
       "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/script.md",
+      "url": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/script.md",
       "sizeBytes": 4595,
       "date": "2026-06-23"
     },
@@ -1355,7 +1879,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "Podcast audio - male xtts",
       "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/male-xtts/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/male-xtts/podcast.mp3",
+      "url": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/male-xtts/podcast.mp3",
       "sizeBytes": 2672330,
       "date": "2026-06-23"
     },
@@ -1365,7 +1889,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "Podcast audio - female piper",
       "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.mp3",
+      "url": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.mp3",
       "sizeBytes": 2076310,
       "date": "2026-06-23"
     },
@@ -1375,7 +1899,7 @@
       "topic": "aktualne-wydarzenia-mobile",
       "title": "2026-06-23-mobile-brief.pdf",
       "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-mobile-brief.pdf",
+      "url": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-mobile-brief.pdf",
       "sizeBytes": 77165,
       "date": "2026-06-23"
     },
@@ -1385,7 +1909,7 @@
       "topic": "tech-news",
       "title": "Daily Research Report: tech-news",
       "path": "research/tech-news/runs/2026-06-22.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-06-22.md",
+      "url": "research/tech-news/runs/2026-06-22.md",
       "sizeBytes": 13598,
       "date": "2026-06-22"
     },
@@ -1395,7 +1919,7 @@
       "topic": "tech-news",
       "title": "Research data",
       "path": "research/tech-news/data/2026-06-22-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-06-22-research.json",
+      "url": "research/tech-news/data/2026-06-22-research.json",
       "sizeBytes": 36279,
       "date": "2026-06-22"
     },
@@ -1405,7 +1929,7 @@
       "topic": "tech-news",
       "title": "Podcast Sources: 2026-06-22",
       "path": "research/tech-news/podcasts/2026-06-22/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-22/sources.md",
+      "url": "research/tech-news/podcasts/2026-06-22/sources.md",
       "sizeBytes": 2910,
       "date": "2026-06-22"
     },
@@ -1415,7 +1939,7 @@
       "topic": "tech-news",
       "title": "Podcast Tech: 2026-06-22",
       "path": "research/tech-news/podcasts/2026-06-22/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-22/script.md",
+      "url": "research/tech-news/podcasts/2026-06-22/script.md",
       "sizeBytes": 7523,
       "date": "2026-06-22"
     },
@@ -1425,7 +1949,7 @@
       "topic": "tech-news",
       "title": "render.json",
       "path": "research/tech-news/podcasts/2026-06-22/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-22/render.json",
+      "url": "research/tech-news/podcasts/2026-06-22/render.json",
       "sizeBytes": 309,
       "date": "2026-06-22"
     },
@@ -1435,7 +1959,7 @@
       "topic": "tech-news",
       "title": "Draft: Podcast Tech 2026-06-22",
       "path": "research/tech-news/podcasts/2026-06-22/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-22/draft.md",
+      "url": "research/tech-news/podcasts/2026-06-22/draft.md",
       "sizeBytes": 2484,
       "date": "2026-06-22"
     },
@@ -1445,7 +1969,7 @@
       "topic": "tech-news",
       "title": "Podcast brief PDF",
       "path": "research/tech-news/podcasts/2026-06-22/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-22/brief.pdf",
+      "url": "research/tech-news/podcasts/2026-06-22/brief.pdf",
       "sizeBytes": 71309,
       "date": "2026-06-22"
     },
@@ -1455,7 +1979,7 @@
       "topic": "tech-news",
       "title": "Podcast audio",
       "path": "research/tech-news/podcasts/2026-06-22/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-22/podcast.mp3",
+      "url": "research/tech-news/podcasts/2026-06-22/podcast.mp3",
       "sizeBytes": 3716296,
       "date": "2026-06-22"
     },
@@ -1465,7 +1989,7 @@
       "topic": "tech-news",
       "title": "2026-06-22-tech-news.pdf",
       "path": "research/tech-news/pdfs/2026-06-22-tech-news.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-06-22-tech-news.pdf",
+      "url": "research/tech-news/pdfs/2026-06-22-tech-news.pdf",
       "sizeBytes": 86582,
       "date": "2026-06-22"
     },
@@ -1475,7 +1999,7 @@
       "topic": "polska-swiat",
       "title": "Daily Research Report: polska-swiat",
       "path": "research/polska-swiat/runs/2026-06-22.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-06-22.md",
+      "url": "research/polska-swiat/runs/2026-06-22.md",
       "sizeBytes": 13535,
       "date": "2026-06-22"
     },
@@ -1485,7 +2009,7 @@
       "topic": "polska-swiat",
       "title": "Research data",
       "path": "research/polska-swiat/data/2026-06-22-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-06-22-research.json",
+      "url": "research/polska-swiat/data/2026-06-22-research.json",
       "sizeBytes": 39679,
       "date": "2026-06-22"
     },
@@ -1495,7 +2019,7 @@
       "topic": "polska-swiat",
       "title": "Źródła podcastu Polska/Świat",
       "path": "research/polska-swiat/podcasts/2026-06-22/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-22/sources.md",
+      "url": "research/polska-swiat/podcasts/2026-06-22/sources.md",
       "sizeBytes": 5835,
       "date": "2026-06-22"
     },
@@ -1505,7 +2029,7 @@
       "topic": "polska-swiat",
       "title": "script.md",
       "path": "research/polska-swiat/podcasts/2026-06-22/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-22/script.md",
+      "url": "research/polska-swiat/podcasts/2026-06-22/script.md",
       "sizeBytes": 7454,
       "date": "2026-06-22"
     },
@@ -1515,7 +2039,7 @@
       "topic": "polska-swiat",
       "title": "render.json",
       "path": "research/polska-swiat/podcasts/2026-06-22/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-22/render.json",
+      "url": "research/polska-swiat/podcasts/2026-06-22/render.json",
       "sizeBytes": 281,
       "date": "2026-06-22"
     },
@@ -1525,7 +2049,7 @@
       "topic": "polska-swiat",
       "title": "Podcast Polska/Świat - draft",
       "path": "research/polska-swiat/podcasts/2026-06-22/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-22/draft.md",
+      "url": "research/polska-swiat/podcasts/2026-06-22/draft.md",
       "sizeBytes": 5674,
       "date": "2026-06-22"
     },
@@ -1535,7 +2059,7 @@
       "topic": "polska-swiat",
       "title": "Podcast brief PDF",
       "path": "research/polska-swiat/podcasts/2026-06-22/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-22/brief.pdf",
+      "url": "research/polska-swiat/podcasts/2026-06-22/brief.pdf",
       "sizeBytes": 67479,
       "date": "2026-06-22"
     },
@@ -1545,7 +2069,7 @@
       "topic": "polska-swiat",
       "title": "Podcast audio",
       "path": "research/polska-swiat/podcasts/2026-06-22/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-22/podcast.mp3",
+      "url": "research/polska-swiat/podcasts/2026-06-22/podcast.mp3",
       "sizeBytes": 3523959,
       "date": "2026-06-22"
     },
@@ -1555,7 +2079,7 @@
       "topic": "polska-swiat",
       "title": "2026-06-22-polska-swiat.pdf",
       "path": "research/polska-swiat/pdfs/2026-06-22-polska-swiat.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-06-22-polska-swiat.pdf",
+      "url": "research/polska-swiat/pdfs/2026-06-22-polska-swiat.pdf",
       "sizeBytes": 87477,
       "date": "2026-06-22"
     },
@@ -1565,7 +2089,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-22-2307.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-22-2307.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-22-2307.md",
       "sizeBytes": 10235,
       "date": "2026-06-22",
       "time": "23:07"
@@ -1576,7 +2100,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-22-0141.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-22-0141.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-22-0141.md",
       "sizeBytes": 12548,
       "date": "2026-06-22",
       "time": "01:41"
@@ -1587,7 +2111,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-22-2307-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-22-2307-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-22-2307-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-22-2307-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 48525,
       "date": "2026-06-22",
       "time": "23:07"
@@ -1598,7 +2122,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-22-0141-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-22-0141-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-22-0141-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-22-0141-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 52628,
       "date": "2026-06-22",
       "time": "01:41"
@@ -1609,7 +2133,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-22-2307-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-22-2307-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-22-2307-jobs.json",
       "sizeBytes": 6654,
       "date": "2026-06-22",
       "time": "23:07"
@@ -1620,7 +2144,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-22-0141-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-22-0141-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-22-0141-jobs.json",
       "sizeBytes": 8174,
       "date": "2026-06-22",
       "time": "01:41"
@@ -1631,7 +2155,7 @@
       "topic": "tech-news",
       "title": "Daily Research Report: tech-news",
       "path": "research/tech-news/runs/2026-06-21.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-06-21.md",
+      "url": "research/tech-news/runs/2026-06-21.md",
       "sizeBytes": 12026,
       "date": "2026-06-21"
     },
@@ -1641,7 +2165,7 @@
       "topic": "tech-news",
       "title": "Research data",
       "path": "research/tech-news/data/2026-06-21-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-06-21-research.json",
+      "url": "research/tech-news/data/2026-06-21-research.json",
       "sizeBytes": 29117,
       "date": "2026-06-21"
     },
@@ -1651,7 +2175,7 @@
       "topic": "tech-news",
       "title": "Podcast Sources: 2026-06-21",
       "path": "research/tech-news/podcasts/2026-06-21/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-21/sources.md",
+      "url": "research/tech-news/podcasts/2026-06-21/sources.md",
       "sizeBytes": 3168,
       "date": "2026-06-21"
     },
@@ -1661,7 +2185,7 @@
       "topic": "tech-news",
       "title": "Podcast Tech: 2026-06-21",
       "path": "research/tech-news/podcasts/2026-06-21/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-21/script.md",
+      "url": "research/tech-news/podcasts/2026-06-21/script.md",
       "sizeBytes": 7738,
       "date": "2026-06-21"
     },
@@ -1671,7 +2195,7 @@
       "topic": "tech-news",
       "title": "render.json",
       "path": "research/tech-news/podcasts/2026-06-21/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-21/render.json",
+      "url": "research/tech-news/podcasts/2026-06-21/render.json",
       "sizeBytes": 310,
       "date": "2026-06-21"
     },
@@ -1681,7 +2205,7 @@
       "topic": "tech-news",
       "title": "Draft: Podcast Tech 2026-06-21",
       "path": "research/tech-news/podcasts/2026-06-21/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-21/draft.md",
+      "url": "research/tech-news/podcasts/2026-06-21/draft.md",
       "sizeBytes": 2615,
       "date": "2026-06-21"
     },
@@ -1691,7 +2215,7 @@
       "topic": "tech-news",
       "title": "Podcast brief PDF",
       "path": "research/tech-news/podcasts/2026-06-21/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-21/brief.pdf",
+      "url": "research/tech-news/podcasts/2026-06-21/brief.pdf",
       "sizeBytes": 71884,
       "date": "2026-06-21"
     },
@@ -1701,7 +2225,7 @@
       "topic": "tech-news",
       "title": "Podcast audio",
       "path": "research/tech-news/podcasts/2026-06-21/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-21/podcast.mp3",
+      "url": "research/tech-news/podcasts/2026-06-21/podcast.mp3",
       "sizeBytes": 3719175,
       "date": "2026-06-21"
     },
@@ -1711,7 +2235,7 @@
       "topic": "tech-news",
       "title": "2026-06-21-tech-news.pdf",
       "path": "research/tech-news/pdfs/2026-06-21-tech-news.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-06-21-tech-news.pdf",
+      "url": "research/tech-news/pdfs/2026-06-21-tech-news.pdf",
       "sizeBytes": 84734,
       "date": "2026-06-21"
     },
@@ -1721,7 +2245,7 @@
       "topic": "polska-swiat",
       "title": "Daily Research Report: polska-swiat",
       "path": "research/polska-swiat/runs/2026-06-21.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-06-21.md",
+      "url": "research/polska-swiat/runs/2026-06-21.md",
       "sizeBytes": 12362,
       "date": "2026-06-21"
     },
@@ -1731,7 +2255,7 @@
       "topic": "polska-swiat",
       "title": "Research data",
       "path": "research/polska-swiat/data/2026-06-21-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-06-21-research.json",
+      "url": "research/polska-swiat/data/2026-06-21-research.json",
       "sizeBytes": 39255,
       "date": "2026-06-21"
     },
@@ -1741,7 +2265,7 @@
       "topic": "polska-swiat",
       "title": "Źródła podcastu Polska/Świat",
       "path": "research/polska-swiat/podcasts/2026-06-21/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-21/sources.md",
+      "url": "research/polska-swiat/podcasts/2026-06-21/sources.md",
       "sizeBytes": 5095,
       "date": "2026-06-21"
     },
@@ -1751,7 +2275,7 @@
       "topic": "polska-swiat",
       "title": "script.md",
       "path": "research/polska-swiat/podcasts/2026-06-21/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-21/script.md",
+      "url": "research/polska-swiat/podcasts/2026-06-21/script.md",
       "sizeBytes": 8024,
       "date": "2026-06-21"
     },
@@ -1761,7 +2285,7 @@
       "topic": "polska-swiat",
       "title": "render.json",
       "path": "research/polska-swiat/podcasts/2026-06-21/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-21/render.json",
+      "url": "research/polska-swiat/podcasts/2026-06-21/render.json",
       "sizeBytes": 282,
       "date": "2026-06-21"
     },
@@ -1771,7 +2295,7 @@
       "topic": "polska-swiat",
       "title": "Podcast Polska/Świat - draft",
       "path": "research/polska-swiat/podcasts/2026-06-21/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-21/draft.md",
+      "url": "research/polska-swiat/podcasts/2026-06-21/draft.md",
       "sizeBytes": 6255,
       "date": "2026-06-21"
     },
@@ -1781,7 +2305,7 @@
       "topic": "polska-swiat",
       "title": "Podcast brief PDF",
       "path": "research/polska-swiat/podcasts/2026-06-21/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-21/brief.pdf",
+      "url": "research/polska-swiat/podcasts/2026-06-21/brief.pdf",
       "sizeBytes": 67755,
       "date": "2026-06-21"
     },
@@ -1791,7 +2315,7 @@
       "topic": "polska-swiat",
       "title": "Podcast audio",
       "path": "research/polska-swiat/podcasts/2026-06-21/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-21/podcast.mp3",
+      "url": "research/polska-swiat/podcasts/2026-06-21/podcast.mp3",
       "sizeBytes": 3811104,
       "date": "2026-06-21"
     },
@@ -1801,7 +2325,7 @@
       "topic": "polska-swiat",
       "title": "2026-06-21-polska-swiat.pdf",
       "path": "research/polska-swiat/pdfs/2026-06-21-polska-swiat.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-06-21-polska-swiat.pdf",
+      "url": "research/polska-swiat/pdfs/2026-06-21-polska-swiat.pdf",
       "sizeBytes": 83742,
       "date": "2026-06-21"
     },
@@ -1811,7 +2335,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-21-2107.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-21-2107.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-21-2107.md",
       "sizeBytes": 9098,
       "date": "2026-06-21",
       "time": "21:07"
@@ -1822,7 +2346,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-21-0141.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-21-0141.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-21-0141.md",
       "sizeBytes": 11650,
       "date": "2026-06-21",
       "time": "01:41"
@@ -1833,7 +2357,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-21-2107-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-21-2107-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-21-2107-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-21-2107-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 63621,
       "date": "2026-06-21",
       "time": "21:07"
@@ -1844,7 +2368,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-21-0141-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-21-0141-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-21-0141-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-21-0141-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 67817,
       "date": "2026-06-21",
       "time": "01:41"
@@ -1855,7 +2379,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-21-2107-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-21-2107-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-21-2107-jobs.json",
       "sizeBytes": 5693,
       "date": "2026-06-21",
       "time": "21:07"
@@ -1866,7 +2390,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-21-0141-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-21-0141-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-21-0141-jobs.json",
       "sizeBytes": 7606,
       "date": "2026-06-21",
       "time": "01:41"
@@ -1877,7 +2401,7 @@
       "topic": "tech-news",
       "title": "Daily Research Report: tech-news",
       "path": "research/tech-news/runs/2026-06-20.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-06-20.md",
+      "url": "research/tech-news/runs/2026-06-20.md",
       "sizeBytes": 14082,
       "date": "2026-06-20"
     },
@@ -1887,7 +2411,7 @@
       "topic": "tech-news",
       "title": "Research data",
       "path": "research/tech-news/data/2026-06-20-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-06-20-research.json",
+      "url": "research/tech-news/data/2026-06-20-research.json",
       "sizeBytes": 41765,
       "date": "2026-06-20"
     },
@@ -1897,7 +2421,7 @@
       "topic": "tech-news",
       "title": "Podcast Sources: 2026-06-20",
       "path": "research/tech-news/podcasts/2026-06-20/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-20/sources.md",
+      "url": "research/tech-news/podcasts/2026-06-20/sources.md",
       "sizeBytes": 3617,
       "date": "2026-06-20"
     },
@@ -1907,7 +2431,7 @@
       "topic": "tech-news",
       "title": "Podcast Tech: 2026-06-20",
       "path": "research/tech-news/podcasts/2026-06-20/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-20/script.md",
+      "url": "research/tech-news/podcasts/2026-06-20/script.md",
       "sizeBytes": 8230,
       "date": "2026-06-20"
     },
@@ -1917,7 +2441,7 @@
       "topic": "tech-news",
       "title": "render.json",
       "path": "research/tech-news/podcasts/2026-06-20/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-20/render.json",
+      "url": "research/tech-news/podcasts/2026-06-20/render.json",
       "sizeBytes": 310,
       "date": "2026-06-20"
     },
@@ -1927,7 +2451,7 @@
       "topic": "tech-news",
       "title": "Draft: Podcast Tech 2026-06-20",
       "path": "research/tech-news/podcasts/2026-06-20/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-20/draft.md",
+      "url": "research/tech-news/podcasts/2026-06-20/draft.md",
       "sizeBytes": 2740,
       "date": "2026-06-20"
     },
@@ -1937,7 +2461,7 @@
       "topic": "tech-news",
       "title": "Podcast brief PDF",
       "path": "research/tech-news/podcasts/2026-06-20/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-20/brief.pdf",
+      "url": "research/tech-news/podcasts/2026-06-20/brief.pdf",
       "sizeBytes": 73256,
       "date": "2026-06-20"
     },
@@ -1947,7 +2471,7 @@
       "topic": "tech-news",
       "title": "Podcast audio",
       "path": "research/tech-news/podcasts/2026-06-20/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-20/podcast.mp3",
+      "url": "research/tech-news/podcasts/2026-06-20/podcast.mp3",
       "sizeBytes": 3904969,
       "date": "2026-06-20"
     },
@@ -1957,7 +2481,7 @@
       "topic": "tech-news",
       "title": "2026-06-20-tech-news.pdf",
       "path": "research/tech-news/pdfs/2026-06-20-tech-news.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-06-20-tech-news.pdf",
+      "url": "research/tech-news/pdfs/2026-06-20-tech-news.pdf",
       "sizeBytes": 88096,
       "date": "2026-06-20"
     },
@@ -1967,7 +2491,7 @@
       "topic": "polska-swiat",
       "title": "Daily Research Report: polska-swiat",
       "path": "research/polska-swiat/runs/2026-06-20.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-06-20.md",
+      "url": "research/polska-swiat/runs/2026-06-20.md",
       "sizeBytes": 14630,
       "date": "2026-06-20"
     },
@@ -1977,7 +2501,7 @@
       "topic": "polska-swiat",
       "title": "Research data",
       "path": "research/polska-swiat/data/2026-06-20-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-06-20-research.json",
+      "url": "research/polska-swiat/data/2026-06-20-research.json",
       "sizeBytes": 40786,
       "date": "2026-06-20"
     },
@@ -1987,7 +2511,7 @@
       "topic": "polska-swiat",
       "title": "Źródła podcastu Polska/Świat",
       "path": "research/polska-swiat/podcasts/2026-06-20/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-20/sources.md",
+      "url": "research/polska-swiat/podcasts/2026-06-20/sources.md",
       "sizeBytes": 6063,
       "date": "2026-06-20"
     },
@@ -1997,7 +2521,7 @@
       "topic": "polska-swiat",
       "title": "script.md",
       "path": "research/polska-swiat/podcasts/2026-06-20/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-20/script.md",
+      "url": "research/polska-swiat/podcasts/2026-06-20/script.md",
       "sizeBytes": 7610,
       "date": "2026-06-20"
     },
@@ -2007,7 +2531,7 @@
       "topic": "polska-swiat",
       "title": "render.json",
       "path": "research/polska-swiat/podcasts/2026-06-20/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-20/render.json",
+      "url": "research/polska-swiat/podcasts/2026-06-20/render.json",
       "sizeBytes": 281,
       "date": "2026-06-20"
     },
@@ -2017,7 +2541,7 @@
       "topic": "polska-swiat",
       "title": "Podcast Polska/Świat - draft",
       "path": "research/polska-swiat/podcasts/2026-06-20/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-20/draft.md",
+      "url": "research/polska-swiat/podcasts/2026-06-20/draft.md",
       "sizeBytes": 6623,
       "date": "2026-06-20"
     },
@@ -2027,7 +2551,7 @@
       "topic": "polska-swiat",
       "title": "Podcast brief PDF",
       "path": "research/polska-swiat/podcasts/2026-06-20/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-20/brief.pdf",
+      "url": "research/polska-swiat/podcasts/2026-06-20/brief.pdf",
       "sizeBytes": 67940,
       "date": "2026-06-20"
     },
@@ -2037,7 +2561,7 @@
       "topic": "polska-swiat",
       "title": "Podcast audio",
       "path": "research/polska-swiat/podcasts/2026-06-20/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-20/podcast.mp3",
+      "url": "research/polska-swiat/podcasts/2026-06-20/podcast.mp3",
       "sizeBytes": 3626980,
       "date": "2026-06-20"
     },
@@ -2047,7 +2571,7 @@
       "topic": "polska-swiat",
       "title": "2026-06-20-polska-swiat.pdf",
       "path": "research/polska-swiat/pdfs/2026-06-20-polska-swiat.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-06-20-polska-swiat.pdf",
+      "url": "research/polska-swiat/pdfs/2026-06-20-polska-swiat.pdf",
       "sizeBytes": 86631,
       "date": "2026-06-20"
     },
@@ -2057,7 +2581,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-20-2152.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-20-2152.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-20-2152.md",
       "sizeBytes": 10869,
       "date": "2026-06-20",
       "time": "21:52"
@@ -2068,7 +2592,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-20-0630.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-20-0630.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-20-0630.md",
       "sizeBytes": 9833,
       "date": "2026-06-20",
       "time": "06:30"
@@ -2079,7 +2603,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-20-0141.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-20-0141.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-20-0141.md",
       "sizeBytes": 12047,
       "date": "2026-06-20",
       "time": "01:41"
@@ -2090,7 +2614,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-20-2152-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-20-2152-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-20-2152-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-20-2152-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 83199,
       "date": "2026-06-20",
       "time": "21:52"
@@ -2101,7 +2625,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-20-0630-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-20-0630-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-20-0630-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-20-0630-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 82320,
       "date": "2026-06-20",
       "time": "06:30"
@@ -2112,7 +2636,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-20-0141-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-20-0141-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-20-0141-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-20-0141-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 86267,
       "date": "2026-06-20",
       "time": "01:41"
@@ -2123,7 +2647,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-20-2152-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-20-2152-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-20-2152-jobs.json",
       "sizeBytes": 7229,
       "date": "2026-06-20",
       "time": "21:52"
@@ -2134,7 +2658,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-20-0630-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-20-0630-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-20-0630-jobs.json",
       "sizeBytes": 6866,
       "date": "2026-06-20",
       "time": "06:30"
@@ -2145,7 +2669,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-20-0141-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-20-0141-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-20-0141-jobs.json",
       "sizeBytes": 8074,
       "date": "2026-06-20",
       "time": "01:41"
@@ -2156,7 +2680,7 @@
       "topic": "tech-news",
       "title": "Daily Research Report: tech-news",
       "path": "research/tech-news/runs/2026-06-19.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-06-19.md",
+      "url": "research/tech-news/runs/2026-06-19.md",
       "sizeBytes": 11936,
       "date": "2026-06-19"
     },
@@ -2166,7 +2690,7 @@
       "topic": "tech-news",
       "title": "Research data",
       "path": "research/tech-news/data/2026-06-19-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-06-19-research.json",
+      "url": "research/tech-news/data/2026-06-19-research.json",
       "sizeBytes": 36718,
       "date": "2026-06-19"
     },
@@ -2176,7 +2700,7 @@
       "topic": "tech-news",
       "title": "Podcast Sources: 2026-06-19",
       "path": "research/tech-news/podcasts/2026-06-19/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-19/sources.md",
+      "url": "research/tech-news/podcasts/2026-06-19/sources.md",
       "sizeBytes": 2571,
       "date": "2026-06-19"
     },
@@ -2186,7 +2710,7 @@
       "topic": "tech-news",
       "title": "Podcast Tech: 2026-06-19",
       "path": "research/tech-news/podcasts/2026-06-19/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-19/script.md",
+      "url": "research/tech-news/podcasts/2026-06-19/script.md",
       "sizeBytes": 7648,
       "date": "2026-06-19"
     },
@@ -2196,7 +2720,7 @@
       "topic": "tech-news",
       "title": "render.json",
       "path": "research/tech-news/podcasts/2026-06-19/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-19/render.json",
+      "url": "research/tech-news/podcasts/2026-06-19/render.json",
       "sizeBytes": 309,
       "date": "2026-06-19"
     },
@@ -2206,7 +2730,7 @@
       "topic": "tech-news",
       "title": "Draft: Podcast Tech 2026-06-19",
       "path": "research/tech-news/podcasts/2026-06-19/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-19/draft.md",
+      "url": "research/tech-news/podcasts/2026-06-19/draft.md",
       "sizeBytes": 2403,
       "date": "2026-06-19"
     },
@@ -2216,7 +2740,7 @@
       "topic": "tech-news",
       "title": "Podcast brief PDF",
       "path": "research/tech-news/podcasts/2026-06-19/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-19/brief.pdf",
+      "url": "research/tech-news/podcasts/2026-06-19/brief.pdf",
       "sizeBytes": 70551,
       "date": "2026-06-19"
     },
@@ -2226,7 +2750,7 @@
       "topic": "tech-news",
       "title": "Podcast audio",
       "path": "research/tech-news/podcasts/2026-06-19/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-19/podcast.mp3",
+      "url": "research/tech-news/podcasts/2026-06-19/podcast.mp3",
       "sizeBytes": 3651858,
       "date": "2026-06-19"
     },
@@ -2236,7 +2760,7 @@
       "topic": "tech-news",
       "title": "2026-06-19-tech-news.pdf",
       "path": "research/tech-news/pdfs/2026-06-19-tech-news.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-06-19-tech-news.pdf",
+      "url": "research/tech-news/pdfs/2026-06-19-tech-news.pdf",
       "sizeBytes": 84090,
       "date": "2026-06-19"
     },
@@ -2246,7 +2770,7 @@
       "topic": "polska-swiat",
       "title": "Daily Research Report: polska-swiat",
       "path": "research/polska-swiat/runs/2026-06-19.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-06-19.md",
+      "url": "research/polska-swiat/runs/2026-06-19.md",
       "sizeBytes": 13379,
       "date": "2026-06-19"
     },
@@ -2256,7 +2780,7 @@
       "topic": "polska-swiat",
       "title": "Research data",
       "path": "research/polska-swiat/data/2026-06-19-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-06-19-research.json",
+      "url": "research/polska-swiat/data/2026-06-19-research.json",
       "sizeBytes": 39928,
       "date": "2026-06-19"
     },
@@ -2266,7 +2790,7 @@
       "topic": "polska-swiat",
       "title": "Źródła podcastu Polska/Świat",
       "path": "research/polska-swiat/podcasts/2026-06-19/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-19/sources.md",
+      "url": "research/polska-swiat/podcasts/2026-06-19/sources.md",
       "sizeBytes": 5746,
       "date": "2026-06-19"
     },
@@ -2276,7 +2800,7 @@
       "topic": "polska-swiat",
       "title": "script.md",
       "path": "research/polska-swiat/podcasts/2026-06-19/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-19/script.md",
+      "url": "research/polska-swiat/podcasts/2026-06-19/script.md",
       "sizeBytes": 7601,
       "date": "2026-06-19"
     },
@@ -2286,7 +2810,7 @@
       "topic": "polska-swiat",
       "title": "render.json",
       "path": "research/polska-swiat/podcasts/2026-06-19/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-19/render.json",
+      "url": "research/polska-swiat/podcasts/2026-06-19/render.json",
       "sizeBytes": 281,
       "date": "2026-06-19"
     },
@@ -2296,7 +2820,7 @@
       "topic": "polska-swiat",
       "title": "Podcast Polska/Świat - draft",
       "path": "research/polska-swiat/podcasts/2026-06-19/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-19/draft.md",
+      "url": "research/polska-swiat/podcasts/2026-06-19/draft.md",
       "sizeBytes": 6532,
       "date": "2026-06-19"
     },
@@ -2306,7 +2830,7 @@
       "topic": "polska-swiat",
       "title": "Podcast brief PDF",
       "path": "research/polska-swiat/podcasts/2026-06-19/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-19/brief.pdf",
+      "url": "research/polska-swiat/podcasts/2026-06-19/brief.pdf",
       "sizeBytes": 67564,
       "date": "2026-06-19"
     },
@@ -2316,7 +2840,7 @@
       "topic": "polska-swiat",
       "title": "Podcast audio",
       "path": "research/polska-swiat/podcasts/2026-06-19/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-19/podcast.mp3",
+      "url": "research/polska-swiat/podcasts/2026-06-19/podcast.mp3",
       "sizeBytes": 3608573,
       "date": "2026-06-19"
     },
@@ -2326,7 +2850,7 @@
       "topic": "polska-swiat",
       "title": "2026-06-19-polska-swiat.pdf",
       "path": "research/polska-swiat/pdfs/2026-06-19-polska-swiat.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-06-19-polska-swiat.pdf",
+      "url": "research/polska-swiat/pdfs/2026-06-19-polska-swiat.pdf",
       "sizeBytes": 85618,
       "date": "2026-06-19"
     },
@@ -2336,7 +2860,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-19-0141.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-19-0141.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-19-0141.md",
       "sizeBytes": 13679,
       "date": "2026-06-19",
       "time": "01:41"
@@ -2347,7 +2871,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-19-0141-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-19-0141-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-19-0141-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-19-0141-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 89258,
       "date": "2026-06-19",
       "time": "01:41"
@@ -2358,7 +2882,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-19-0141-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-19-0141-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-19-0141-jobs.json",
       "sizeBytes": 9929,
       "date": "2026-06-19",
       "time": "01:41"
@@ -2369,7 +2893,7 @@
       "topic": "tech-news",
       "title": "Daily Research Report: tech-news",
       "path": "research/tech-news/runs/2026-06-18.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-06-18.md",
+      "url": "research/tech-news/runs/2026-06-18.md",
       "sizeBytes": 10816,
       "date": "2026-06-18"
     },
@@ -2379,7 +2903,7 @@
       "topic": "tech-news",
       "title": "Research data",
       "path": "research/tech-news/data/2026-06-18-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-06-18-research.json",
+      "url": "research/tech-news/data/2026-06-18-research.json",
       "sizeBytes": 35363,
       "date": "2026-06-18"
     },
@@ -2389,7 +2913,7 @@
       "topic": "tech-news",
       "title": "Podcast Sources: 2026-06-18",
       "path": "research/tech-news/podcasts/2026-06-18/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-18/sources.md",
+      "url": "research/tech-news/podcasts/2026-06-18/sources.md",
       "sizeBytes": 2787,
       "date": "2026-06-18"
     },
@@ -2399,7 +2923,7 @@
       "topic": "tech-news",
       "title": "Podcast Tech: 2026-06-18",
       "path": "research/tech-news/podcasts/2026-06-18/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-18/script.md",
+      "url": "research/tech-news/podcasts/2026-06-18/script.md",
       "sizeBytes": 7668,
       "date": "2026-06-18"
     },
@@ -2409,7 +2933,7 @@
       "topic": "tech-news",
       "title": "render.json",
       "path": "research/tech-news/podcasts/2026-06-18/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-18/render.json",
+      "url": "research/tech-news/podcasts/2026-06-18/render.json",
       "sizeBytes": 308,
       "date": "2026-06-18"
     },
@@ -2419,7 +2943,7 @@
       "topic": "tech-news",
       "title": "Draft Podcast Tech: 2026-06-18",
       "path": "research/tech-news/podcasts/2026-06-18/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-18/draft.md",
+      "url": "research/tech-news/podcasts/2026-06-18/draft.md",
       "sizeBytes": 1194,
       "date": "2026-06-18"
     },
@@ -2429,7 +2953,7 @@
       "topic": "tech-news",
       "title": "Podcast brief PDF",
       "path": "research/tech-news/podcasts/2026-06-18/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-18/brief.pdf",
+      "url": "research/tech-news/podcasts/2026-06-18/brief.pdf",
       "sizeBytes": 71670,
       "date": "2026-06-18"
     },
@@ -2439,7 +2963,7 @@
       "topic": "tech-news",
       "title": "Podcast audio",
       "path": "research/tech-news/podcasts/2026-06-18/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-18/podcast.mp3",
+      "url": "research/tech-news/podcasts/2026-06-18/podcast.mp3",
       "sizeBytes": 3630728,
       "date": "2026-06-18"
     },
@@ -2449,7 +2973,7 @@
       "topic": "tech-news",
       "title": "2026-06-18-tech-news.pdf",
       "path": "research/tech-news/pdfs/2026-06-18-tech-news.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-06-18-tech-news.pdf",
+      "url": "research/tech-news/pdfs/2026-06-18-tech-news.pdf",
       "sizeBytes": 82200,
       "date": "2026-06-18"
     },
@@ -2459,7 +2983,7 @@
       "topic": "polska-swiat",
       "title": "Daily Research Report: polska-swiat",
       "path": "research/polska-swiat/runs/2026-06-18.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-06-18.md",
+      "url": "research/polska-swiat/runs/2026-06-18.md",
       "sizeBytes": 11234,
       "date": "2026-06-18"
     },
@@ -2469,7 +2993,7 @@
       "topic": "polska-swiat",
       "title": "Research data",
       "path": "research/polska-swiat/data/2026-06-18-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-06-18-research.json",
+      "url": "research/polska-swiat/data/2026-06-18-research.json",
       "sizeBytes": 34915,
       "date": "2026-06-18"
     },
@@ -2479,7 +3003,7 @@
       "topic": "polska-swiat",
       "title": "Źródła podcastu Polska/Świat",
       "path": "research/polska-swiat/podcasts/2026-06-18/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-18/sources.md",
+      "url": "research/polska-swiat/podcasts/2026-06-18/sources.md",
       "sizeBytes": 5600,
       "date": "2026-06-18"
     },
@@ -2489,7 +3013,7 @@
       "topic": "polska-swiat",
       "title": "script.md",
       "path": "research/polska-swiat/podcasts/2026-06-18/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-18/script.md",
+      "url": "research/polska-swiat/podcasts/2026-06-18/script.md",
       "sizeBytes": 8298,
       "date": "2026-06-18"
     },
@@ -2499,7 +3023,7 @@
       "topic": "polska-swiat",
       "title": "render.json",
       "path": "research/polska-swiat/podcasts/2026-06-18/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-18/render.json",
+      "url": "research/polska-swiat/podcasts/2026-06-18/render.json",
       "sizeBytes": 282,
       "date": "2026-06-18"
     },
@@ -2509,7 +3033,7 @@
       "topic": "polska-swiat",
       "title": "Podcast Polska/Świat - draft",
       "path": "research/polska-swiat/podcasts/2026-06-18/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-18/draft.md",
+      "url": "research/polska-swiat/podcasts/2026-06-18/draft.md",
       "sizeBytes": 6723,
       "date": "2026-06-18"
     },
@@ -2519,7 +3043,7 @@
       "topic": "polska-swiat",
       "title": "Podcast brief PDF",
       "path": "research/polska-swiat/podcasts/2026-06-18/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-18/brief.pdf",
+      "url": "research/polska-swiat/podcasts/2026-06-18/brief.pdf",
       "sizeBytes": 67308,
       "date": "2026-06-18"
     },
@@ -2529,7 +3053,7 @@
       "topic": "polska-swiat",
       "title": "Podcast audio",
       "path": "research/polska-swiat/podcasts/2026-06-18/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-18/podcast.mp3",
+      "url": "research/polska-swiat/podcasts/2026-06-18/podcast.mp3",
       "sizeBytes": 3940111,
       "date": "2026-06-18"
     },
@@ -2539,7 +3063,7 @@
       "topic": "polska-swiat",
       "title": "2026-06-18-polska-swiat.pdf",
       "path": "research/polska-swiat/pdfs/2026-06-18-polska-swiat.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-06-18-polska-swiat.pdf",
+      "url": "research/polska-swiat/pdfs/2026-06-18-polska-swiat.pdf",
       "sizeBytes": 82469,
       "date": "2026-06-18"
     },
@@ -2549,7 +3073,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-18-1741.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-18-1741.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-18-1741.md",
       "sizeBytes": 12419,
       "date": "2026-06-18",
       "time": "17:41"
@@ -2560,7 +3084,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "LLM/AI Jobs Wrocław - raport testowy",
       "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-18-0142.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-06-18-0142.md",
+      "url": "research/llm-ai-jobs-wroclaw/runs/2026-06-18-0142.md",
       "sizeBytes": 8242,
       "date": "2026-06-18",
       "time": "01:42"
@@ -2571,7 +3095,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-18-1741-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-18-1741-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-18-1741-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-18-1741-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 86920,
       "date": "2026-06-18",
       "time": "17:41"
@@ -2582,7 +3106,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "2026-06-18-0142-llm-ai-jobs-wroclaw.pdf",
       "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-18-0142-llm-ai-jobs-wroclaw.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-06-18-0142-llm-ai-jobs-wroclaw.pdf",
+      "url": "research/llm-ai-jobs-wroclaw/pdfs/2026-06-18-0142-llm-ai-jobs-wroclaw.pdf",
       "sizeBytes": 78813,
       "date": "2026-06-18",
       "time": "01:42"
@@ -2593,7 +3117,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-18-1741-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-18-1741-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-18-1741-jobs.json",
       "sizeBytes": 9153,
       "date": "2026-06-18",
       "time": "17:41"
@@ -2604,7 +3128,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Jobs data",
       "path": "research/llm-ai-jobs-wroclaw/data/2026-06-18-0142-jobs.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-06-18-0142-jobs.json",
+      "url": "research/llm-ai-jobs-wroclaw/data/2026-06-18-0142-jobs.json",
       "sizeBytes": 6927,
       "date": "2026-06-18",
       "time": "01:42"
@@ -2615,7 +3139,7 @@
       "topic": "tech-news",
       "title": "Daily Research Report: tech-news",
       "path": "research/tech-news/runs/2026-06-17.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-06-17.md",
+      "url": "research/tech-news/runs/2026-06-17.md",
       "sizeBytes": 6082,
       "date": "2026-06-17"
     },
@@ -2625,7 +3149,7 @@
       "topic": "tech-news",
       "title": "Research data",
       "path": "research/tech-news/data/2026-06-17-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-06-17-research.json",
+      "url": "research/tech-news/data/2026-06-17-research.json",
       "sizeBytes": 21039,
       "date": "2026-06-17"
     },
@@ -2635,7 +3159,7 @@
       "topic": "tech-news",
       "title": "Podcast Sources: 2026-06-17",
       "path": "research/tech-news/podcasts/2026-06-17/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-17/sources.md",
+      "url": "research/tech-news/podcasts/2026-06-17/sources.md",
       "sizeBytes": 1377,
       "date": "2026-06-17"
     },
@@ -2645,7 +3169,7 @@
       "topic": "tech-news",
       "title": "Podcast Tech News: 2026-06-17",
       "path": "research/tech-news/podcasts/2026-06-17/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-17/script.md",
+      "url": "research/tech-news/podcasts/2026-06-17/script.md",
       "sizeBytes": 7120,
       "date": "2026-06-17"
     },
@@ -2655,7 +3179,7 @@
       "topic": "tech-news",
       "title": "Podcast brief PDF",
       "path": "research/tech-news/podcasts/2026-06-17/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-17/brief.pdf",
+      "url": "research/tech-news/podcasts/2026-06-17/brief.pdf",
       "sizeBytes": 69095,
       "date": "2026-06-17"
     },
@@ -2665,7 +3189,7 @@
       "topic": "tech-news",
       "title": "Podcast audio",
       "path": "research/tech-news/podcasts/2026-06-17/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-17/podcast.mp3",
+      "url": "research/tech-news/podcasts/2026-06-17/podcast.mp3",
       "sizeBytes": 3586578,
       "date": "2026-06-17"
     },
@@ -2675,7 +3199,7 @@
       "topic": "tech-news",
       "title": "2026-06-17-tech-news.pdf",
       "path": "research/tech-news/pdfs/2026-06-17-tech-news.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-06-17-tech-news.pdf",
+      "url": "research/tech-news/pdfs/2026-06-17-tech-news.pdf",
       "sizeBytes": 72539,
       "date": "2026-06-17"
     },
@@ -2685,7 +3209,7 @@
       "topic": "polska-swiat",
       "title": "Daily Research Report: polska-swiat",
       "path": "research/polska-swiat/runs/2026-06-17.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-06-17.md",
+      "url": "research/polska-swiat/runs/2026-06-17.md",
       "sizeBytes": 6209,
       "date": "2026-06-17"
     },
@@ -2695,7 +3219,7 @@
       "topic": "polska-swiat",
       "title": "Research data",
       "path": "research/polska-swiat/data/2026-06-17-research.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-06-17-research.json",
+      "url": "research/polska-swiat/data/2026-06-17-research.json",
       "sizeBytes": 20214,
       "date": "2026-06-17"
     },
@@ -2705,7 +3229,7 @@
       "topic": "polska-swiat",
       "title": "Podcast Sources: 2026-06-17",
       "path": "research/polska-swiat/podcasts/2026-06-17/sources.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-17/sources.md",
+      "url": "research/polska-swiat/podcasts/2026-06-17/sources.md",
       "sizeBytes": 1482,
       "date": "2026-06-17"
     },
@@ -2715,7 +3239,7 @@
       "topic": "polska-swiat",
       "title": "Podcast Polska/Świat: 2026-06-17",
       "path": "research/polska-swiat/podcasts/2026-06-17/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-17/script.md",
+      "url": "research/polska-swiat/podcasts/2026-06-17/script.md",
       "sizeBytes": 7880,
       "date": "2026-06-17"
     },
@@ -2725,7 +3249,7 @@
       "topic": "polska-swiat",
       "title": "render.json",
       "path": "research/polska-swiat/podcasts/2026-06-17/render.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-17/render.json",
+      "url": "research/polska-swiat/podcasts/2026-06-17/render.json",
       "sizeBytes": 310,
       "date": "2026-06-17"
     },
@@ -2735,7 +3259,7 @@
       "topic": "polska-swiat",
       "title": "Podcast Polska/Świat: 2026-06-17",
       "path": "research/polska-swiat/podcasts/2026-06-17/draft.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-17/draft.md",
+      "url": "research/polska-swiat/podcasts/2026-06-17/draft.md",
       "sizeBytes": 7880,
       "date": "2026-06-17"
     },
@@ -2745,7 +3269,7 @@
       "topic": "polska-swiat",
       "title": "Podcast brief PDF",
       "path": "research/polska-swiat/podcasts/2026-06-17/brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-17/brief.pdf",
+      "url": "research/polska-swiat/podcasts/2026-06-17/brief.pdf",
       "sizeBytes": 70027,
       "date": "2026-06-17"
     },
@@ -2755,7 +3279,7 @@
       "topic": "polska-swiat",
       "title": "Podcast audio",
       "path": "research/polska-swiat/podcasts/2026-06-17/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-06-17/podcast.mp3",
+      "url": "research/polska-swiat/podcasts/2026-06-17/podcast.mp3",
       "sizeBytes": 3864208,
       "date": "2026-06-17"
     },
@@ -2765,7 +3289,7 @@
       "topic": "polska-swiat",
       "title": "2026-06-17-polska-swiat.pdf",
       "path": "research/polska-swiat/pdfs/2026-06-17-polska-swiat.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-06-17-polska-swiat.pdf",
+      "url": "research/polska-swiat/pdfs/2026-06-17-polska-swiat.pdf",
       "sizeBytes": 74275,
       "date": "2026-06-17"
     },
@@ -2775,7 +3299,7 @@
       "topic": "codex-agent-automation",
       "title": "Daily Research Report: codex-agent-automation",
       "path": "research/codex-agent-automation/runs/2026-06-17.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/codex-agent-automation/runs/2026-06-17.md",
+      "url": "research/codex-agent-automation/runs/2026-06-17.md",
       "sizeBytes": 6194,
       "date": "2026-06-17"
     },
@@ -2785,7 +3309,7 @@
       "topic": "codex-agent-automation",
       "title": "Proposal: Official Docs Network Access For Daily Research",
       "path": "research/codex-agent-automation/proposals/2026-06-17-docs-network-access.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/codex-agent-automation/proposals/2026-06-17-docs-network-access.md",
+      "url": "research/codex-agent-automation/proposals/2026-06-17-docs-network-access.md",
       "sizeBytes": 1484,
       "date": "2026-06-17"
     },
@@ -2795,7 +3319,7 @@
       "topic": "tech-news",
       "title": "Topic Contract: tech-news",
       "path": "research/tech-news/topic.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/topic.md",
+      "url": "research/tech-news/topic.md",
       "sizeBytes": 2101
     },
     {
@@ -2804,8 +3328,8 @@
       "topic": "tech-news",
       "title": "Topic Index: tech-news",
       "path": "research/tech-news/index.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/index.md",
-      "sizeBytes": 22628
+      "url": "research/tech-news/index.md",
+      "sizeBytes": 25706
     },
     {
       "id": "research/tech-news/backlog.md",
@@ -2813,8 +3337,8 @@
       "topic": "tech-news",
       "title": "Topic Backlog: tech-news",
       "path": "research/tech-news/backlog.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/backlog.md",
-      "sizeBytes": 32838
+      "url": "research/tech-news/backlog.md",
+      "sizeBytes": 36122
     },
     {
       "id": "research/tech-news/automation-research-prompt.md",
@@ -2822,7 +3346,7 @@
       "topic": "tech-news",
       "title": "Automation Prompt: Pavbot Tech Research 08:00",
       "path": "research/tech-news/automation-research-prompt.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/automation-research-prompt.md",
+      "url": "research/tech-news/automation-research-prompt.md",
       "sizeBytes": 3988
     },
     {
@@ -2831,7 +3355,7 @@
       "topic": "tech-news",
       "title": "Automation Prompt: Pavbot Tech Podcast 09:00",
       "path": "research/tech-news/automation-podcast-prompt.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/automation-podcast-prompt.md",
+      "url": "research/tech-news/automation-podcast-prompt.md",
       "sizeBytes": 3308
     },
     {
@@ -2840,8 +3364,8 @@
       "topic": "puls-dnia-news",
       "title": "Pavbot Puls Dnia News",
       "path": "research/puls-dnia-news/topic.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/topic.md",
-      "sizeBytes": 1368
+      "url": "research/puls-dnia-news/topic.md",
+      "sizeBytes": 1367
     },
     {
       "id": "research/puls-dnia-news/index.md",
@@ -2849,7 +3373,7 @@
       "topic": "puls-dnia-news",
       "title": "Puls Dnia News Index",
       "path": "research/puls-dnia-news/index.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/index.md",
+      "url": "research/puls-dnia-news/index.md",
       "sizeBytes": 1631
     },
     {
@@ -2858,8 +3382,8 @@
       "topic": "puls-dnia-news",
       "title": "Puls Dnia News Backlog",
       "path": "research/puls-dnia-news/backlog.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/backlog.md",
-      "sizeBytes": 693
+      "url": "research/puls-dnia-news/backlog.md",
+      "sizeBytes": 846
     },
     {
       "id": "research/puls-dnia-news/automation-prompt.md",
@@ -2867,7 +3391,7 @@
       "topic": "puls-dnia-news",
       "title": "Automation Prompt: Pavbot Puls Dnia 3h",
       "path": "research/puls-dnia-news/automation-prompt.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/automation-prompt.md",
+      "url": "research/puls-dnia-news/automation-prompt.md",
       "sizeBytes": 3046
     },
     {
@@ -2876,7 +3400,7 @@
       "topic": "polska-swiat",
       "title": "Topic Contract: polska-swiat",
       "path": "research/polska-swiat/topic.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/topic.md",
+      "url": "research/polska-swiat/topic.md",
       "sizeBytes": 2127
     },
     {
@@ -2885,8 +3409,8 @@
       "topic": "polska-swiat",
       "title": "Topic Index: polska-swiat",
       "path": "research/polska-swiat/index.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/index.md",
-      "sizeBytes": 5992
+      "url": "research/polska-swiat/index.md",
+      "sizeBytes": 6694
     },
     {
       "id": "research/polska-swiat/backlog.md",
@@ -2894,8 +3418,8 @@
       "topic": "polska-swiat",
       "title": "Topic Backlog: polska-swiat",
       "path": "research/polska-swiat/backlog.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/backlog.md",
-      "sizeBytes": 4437
+      "url": "research/polska-swiat/backlog.md",
+      "sizeBytes": 4908
     },
     {
       "id": "research/polska-swiat/automation-research-prompt.md",
@@ -2903,7 +3427,7 @@
       "topic": "polska-swiat",
       "title": "Automation Prompt: Pavbot Polska Świat Research 08:30",
       "path": "research/polska-swiat/automation-research-prompt.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/automation-research-prompt.md",
+      "url": "research/polska-swiat/automation-research-prompt.md",
       "sizeBytes": 4199
     },
     {
@@ -2912,7 +3436,7 @@
       "topic": "polska-swiat",
       "title": "Automation Prompt: Pavbot Polska Świat Podcast 09:30",
       "path": "research/polska-swiat/automation-podcast-prompt.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/automation-podcast-prompt.md",
+      "url": "research/polska-swiat/automation-podcast-prompt.md",
       "sizeBytes": 3575
     },
     {
@@ -2921,7 +3445,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Topic Contract: llm-ai-jobs-wroclaw",
       "path": "research/llm-ai-jobs-wroclaw/topic.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/topic.md",
+      "url": "research/llm-ai-jobs-wroclaw/topic.md",
       "sizeBytes": 2171
     },
     {
@@ -2930,8 +3454,8 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Topic Index: llm-ai-jobs-wroclaw",
       "path": "research/llm-ai-jobs-wroclaw/index.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/index.md",
-      "sizeBytes": 53265
+      "url": "research/llm-ai-jobs-wroclaw/index.md",
+      "sizeBytes": 63031
     },
     {
       "id": "research/llm-ai-jobs-wroclaw/backlog.md",
@@ -2939,8 +3463,8 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Topic Backlog: llm-ai-jobs-wroclaw",
       "path": "research/llm-ai-jobs-wroclaw/backlog.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/backlog.md",
-      "sizeBytes": 13438
+      "url": "research/llm-ai-jobs-wroclaw/backlog.md",
+      "sizeBytes": 15044
     },
     {
       "id": "research/llm-ai-jobs-wroclaw/automation-research-prompt.md",
@@ -2948,7 +3472,7 @@
       "topic": "llm-ai-jobs-wroclaw",
       "title": "Automation Prompt: LLM/AI Jobs Wroclaw Research",
       "path": "research/llm-ai-jobs-wroclaw/automation-research-prompt.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/automation-research-prompt.md",
+      "url": "research/llm-ai-jobs-wroclaw/automation-research-prompt.md",
       "sizeBytes": 6241
     },
     {
@@ -2957,7 +3481,7 @@
       "topic": "codex-agent-automation",
       "title": "Topic Contract: codex-agent-automation",
       "path": "research/codex-agent-automation/topic.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/codex-agent-automation/topic.md",
+      "url": "research/codex-agent-automation/topic.md",
       "sizeBytes": 1604
     },
     {
@@ -2966,7 +3490,7 @@
       "topic": "codex-agent-automation",
       "title": "Topic Index: codex-agent-automation",
       "path": "research/codex-agent-automation/index.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/codex-agent-automation/index.md",
+      "url": "research/codex-agent-automation/index.md",
       "sizeBytes": 3486
     },
     {
@@ -2975,7 +3499,7 @@
       "topic": "codex-agent-automation",
       "title": "Topic Backlog: codex-agent-automation",
       "path": "research/codex-agent-automation/backlog.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/codex-agent-automation/backlog.md",
+      "url": "research/codex-agent-automation/backlog.md",
       "sizeBytes": 1705
     },
     {
@@ -2984,7 +3508,7 @@
       "topic": "codex-agent-automation",
       "title": "Automation Prompt: codex-agent-automation",
       "path": "research/codex-agent-automation/automation-prompt.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/codex-agent-automation/automation-prompt.md",
+      "url": "research/codex-agent-automation/automation-prompt.md",
       "sizeBytes": 2111
     }
   ]

@@ -125,9 +125,18 @@ Manual LLM/AI jobs research test:
 ```text
 $daily-research-agent
 
-Run one research workflow cycle for `research/llm-ai-jobs-wroclaw`.
-Follow the topic contract, update the report/index/backlog, create the PDF, and
-use proposals for any medium-risk or high-risk action.
+Run one research workflow cycle for `research/llm-ai-jobs-wroclaw`: create the
+timestamped Markdown report in `runs/YYYY-MM-DD-HHMM.md`, create the mandatory
+structured Jobs artifact in `data/YYYY-MM-DD-HHMM-jobs.json` with
+`render_jobs_data.py`, validate it with `scripts/validate_jobs_data.py`,
+generate the PDF in
+`pdfs/YYYY-MM-DD-HHMM-llm-ai-jobs-wroclaw.pdf`, then publish with
+`scripts/pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw`.
+After publish, run `git fetch origin` and verify
+`origin/main:public/pavbot-manifest.json` plus the matching `runs/`, `data/`,
+and `pdfs/` package for the same `YYYY-MM-DD-HHMM`.
+Follow the topic contract and use proposals for any medium-risk or high-risk
+action.
 ```
 
 Manual mobile current-events brief test:
@@ -211,7 +220,10 @@ The isolated publish script creates a temporary clean worktree from
 `python3 scripts/generate_pavbot_manifest.py`, commits the refreshed manifest
 with the outputs, and pushes directly to `origin/main`. Treat this as the
 single publish step after each automation run so iOS receives the refreshed
-manifest and the new files in the same commit. This requires:
+manifest and the new files in the same commit. After the push, run
+`git fetch origin` and verify `origin/main:public/pavbot-manifest.json`; for
+Jobs, also verify the same package key is present remotely as `run`, `jobsData`,
+and `pdf`. This requires:
 
 - a working `origin` remote;
 - GitHub credentials or a token with permission to push to `main`;

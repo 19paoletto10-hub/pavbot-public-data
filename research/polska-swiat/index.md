@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-06-26
+Last updated: 2026-06-27
 
 ## Current Understanding
 
@@ -46,6 +46,12 @@ odbudowy Ukrainy z bezpieczeństwem. Równolegle NATO przed szczytem w Ankarze
 akcentuje inwestycje, kontrakty obronne i wsparcie Ukrainy, a wątek możliwych
 rosyjskich prowokacji wobec Polski lub państw bałtyckich wymaga ostrożnego,
 źródłowanego traktowania.
+Po runie 27 czerwca URC ma oficjalny bilans KPRM/Tusk-Swyrydenko: 68 delegacji
+rządowych, ponad 30 organizacji międzynarodowych oraz około 200 porozumień i
+umów, w tym kilkanaście z udziałem polskich podmiotów. Jednocześnie
+polsko-ukraiński spór orderowy stał się tematem zagranicznych omówień i
+sondażu Onetu, a główny blok bezpieczeństwa przesunął się ku wschodniej flance,
+Krymowi, możliwym prowokacjom Rosji i przygotowaniom do szczytu NATO w Ankarze.
 
 ## Stable Facts
 
@@ -92,9 +98,13 @@ rosyjskich prowokacji wobec Polski lub państw bałtyckich wymaga ostrożnego,
 - Wątek możliwych rosyjskich prowokacji wobec Polski lub Bałtów traktować jako
   ostrzeżenie źródłowe, nie potwierdzony scenariusz; zestawiać go z oficjalnymi
   komunikatami NATO/KPRM.
+- Wątek URC po 26 czerwca omawiać dwutorowo: oficjalny bilans gospodarczo-
+  instytucjonalny jest mocny, ale przekaz medialny obciążają nieobecność
+  prezydentów i spór orderowy.
 
 ## Recent Reports
 
+- [2026-06-27](runs/2026-06-27.md)
 - [2026-06-26](runs/2026-06-26.md)
 - [2026-06-25](runs/2026-06-25.md)
 - [2026-06-24](runs/2026-06-24.md)

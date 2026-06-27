@@ -6,7 +6,8 @@ protocol ManifestFetching {
 }
 
 enum ManifestDefaults {
-    static let defaultManifestURL = "https://raw.githubusercontent.com/OWNER/REPO/main/public/pavbot-manifest.json"
+    static let legacyPlaceholderManifestURL = "https://raw.githubusercontent.com/OWNER/REPO/main/public/pavbot-manifest.json"
+    static let defaultManifestURL = PavbotConnectionDefaults.manifestURLString
     static let urlDefaultsKey = "pavbot.manifestURL"
 }
 
@@ -23,11 +24,11 @@ final class ManifestStore {
     var state: LoadState = .idle
     var manifestURLString: String {
         didSet {
-            UserDefaults.standard.set(manifestURLString, forKey: ManifestDefaults.urlDefaultsKey)
+            PavbotConnectionDefaults.enforceLegacyUserDefaults()
         }
     }
     var isUsingPlaceholderManifestURL: Bool {
-        manifestURLString == Self.defaultManifestURL
+        manifestURLString == ManifestDefaults.legacyPlaceholderManifestURL
     }
     var isAutoRefreshLoopRunning: Bool {
         autoRefreshTask != nil
@@ -48,13 +49,12 @@ final class ManifestStore {
         manifestURLString: String? = nil,
         liveNotificationsEnabled: @escaping () -> Bool = { LiveNotificationSettings.isEnabled() }
     ) {
+        PavbotConnectionDefaults.enforceLegacyUserDefaults()
         self.client = client
         self.cache = cache
         self.notifier = notifier ?? ArtifactNotificationService()
         self.liveNotificationsEnabled = liveNotificationsEnabled
-        self.manifestURLString = manifestURLString
-            ?? UserDefaults.standard.string(forKey: ManifestDefaults.urlDefaultsKey)
-            ?? Self.defaultManifestURL
+        self.manifestURLString = manifestURLString ?? Self.defaultManifestURL
         self.manifest = cache.load()
         if self.manifest != nil {
             self.state = .loaded

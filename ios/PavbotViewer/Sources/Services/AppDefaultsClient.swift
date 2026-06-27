@@ -38,7 +38,7 @@ enum AppDefaultsClientError: LocalizedError, Equatable {
 }
 
 struct AppDefaultsClient {
-    static let bootstrapNotifierURLString = "https://married-smart-employer-sends.trycloudflare.com"
+    static let bootstrapNotifierURLString = PavbotConnectionDefaults.notificationServerURLString
 
     var fetchData: @Sendable (URL) async throws -> Data
 
@@ -59,25 +59,56 @@ struct AppDefaultsClient {
     }
 
     func fetchDefaults(preferredServerURLString: String) async throws -> AppConnectionDefaults {
-        guard let endpoint = Self.defaultsEndpointURL(preferredServerURLString: preferredServerURLString) else {
+        let endpoints = Self.defaultsEndpointURLs(preferredServerURLString: preferredServerURLString)
+        guard !endpoints.isEmpty else {
             throw AppDefaultsClientError.missingBootstrapURL
         }
-        let data = try await fetchData(endpoint)
-        let defaults = try JSONDecoder.pavbot.decode(AppConnectionDefaults.self, from: data)
-        if let validationError = defaults.validationError {
-            throw AppDefaultsClientError.invalidDefaults(validationError)
+
+        var lastError: Error?
+        for endpoint in endpoints {
+            do {
+                let data = try await fetchData(endpoint)
+                let defaults = try JSONDecoder.pavbot.decode(AppConnectionDefaults.self, from: data)
+                if let validationError = defaults.validationError {
+                    throw AppDefaultsClientError.invalidDefaults(validationError)
+                }
+                return defaults
+            } catch let error as AppDefaultsClientError {
+                if case .invalidDefaults = error {
+                    throw error
+                }
+                lastError = error
+            } catch {
+                lastError = error
+            }
         }
-        return defaults
+
+        throw lastError ?? AppDefaultsClientError.missingBootstrapURL
     }
 
     static func defaultsEndpointURL(preferredServerURLString: String) -> URL? {
-        let preferred = preferredServerURLString.trimmingCharacters(in: .whitespacesAndNewlines)
-        let baseURLString: String
-        if NotificationServerSettings.validationMessage(for: preferred, required: true) == nil {
-            baseURLString = preferred
-        } else {
-            baseURLString = bootstrapNotifierURLString
+        defaultsEndpointURLs(preferredServerURLString: preferredServerURLString).first
+    }
+
+    static func defaultsEndpointURLs(preferredServerURLString: String) -> [URL] {
+        var endpoints: [URL] = []
+        if let bootstrapEndpoint = defaultsEndpointURL(baseURLString: bootstrapNotifierURLString) {
+            endpoints.append(bootstrapEndpoint)
         }
+
+        let preferred = preferredServerURLString.trimmingCharacters(in: .whitespacesAndNewlines)
+        if
+            NotificationServerSettings.validationMessage(for: preferred, required: true) == nil,
+            let preferredEndpoint = defaultsEndpointURL(baseURLString: preferred),
+            !endpoints.contains(preferredEndpoint)
+        {
+            endpoints.append(preferredEndpoint)
+        }
+
+        return endpoints
+    }
+
+    private static func defaultsEndpointURL(baseURLString: String) -> URL? {
         guard let baseURL = URL(string: baseURLString.trimmingCharacters(in: .whitespacesAndNewlines)) else {
             return nil
         }

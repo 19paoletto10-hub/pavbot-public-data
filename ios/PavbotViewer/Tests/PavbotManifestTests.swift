@@ -155,6 +155,40 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(packages[0].hasPDF)
     }
 
+    func testJobsReportPackagesPairRunAndJobsDataForSameTimestamp() throws {
+        let manifest = try manifestWithAdditionalArtifacts([
+            PavbotArtifact(
+                id: "jobs-run-2026-06-25-0141",
+                type: .run,
+                topic: "llm-ai-jobs-wroclaw",
+                title: "LLM AI Jobs Wrocław",
+                path: "research/llm-ai-jobs-wroclaw/runs/2026-06-25-0141.md",
+                url: "research/llm-ai-jobs-wroclaw/runs/2026-06-25-0141.md",
+                sizeBytes: 300,
+                date: "2026-06-25",
+                time: "01:41"
+            ),
+            PavbotArtifact(
+                id: "jobs-data-2026-06-25-0141",
+                type: .jobsData,
+                topic: "llm-ai-jobs-wroclaw",
+                title: "Jobs data",
+                path: "research/llm-ai-jobs-wroclaw/data/2026-06-25-0141-jobs.json",
+                url: "research/llm-ai-jobs-wroclaw/data/2026-06-25-0141-jobs.json",
+                sizeBytes: 400,
+                date: "2026-06-25",
+                time: "01:41"
+            )
+        ])
+
+        let packages = manifest.reportPackages(for: .jobs)
+
+        XCTAssertEqual(packages.count, 1)
+        XCTAssertEqual(packages[0].key, "2026-06-25-01:41")
+        XCTAssertEqual(packages[0].researchReport?.id, "jobs-run-2026-06-25-0141")
+        XCTAssertEqual(packages[0].dataArtifact?.id, "jobs-data-2026-06-25-0141")
+    }
+
     func testResearchReportPackagesExposeTechAndPolskaTopics() throws {
         let manifest = try manifestWithAdditionalArtifacts([
             PavbotArtifact(
@@ -1348,6 +1382,119 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     @MainActor
+    func testJobsStoreLoadsNewestPackageWhenSelectedDayIsStaleWithoutRouteArtifacts() async throws {
+        let packages = [
+            Self.jobsPackage(date: "2026-06-27", time: "01:41"),
+            Self.jobsPackage(date: "2026-06-26", time: "17:41")
+        ]
+        let client = JobsDataClient(fetchData: { url in
+            if url.absoluteString.contains("2026-06-27-0141") {
+                return try Self.jobsHistoryData(
+                    date: "2026-06-27",
+                    time: "01:41",
+                    company: "ITDS",
+                    title: "Kubernetes & Cloud Infrastructure Engineer - AI Platform",
+                    workMode: "Wrocław onsite",
+                    sourceURL: "https://example.com/itds"
+                )
+            }
+            return try Self.jobsHistoryData(
+                date: "2026-06-26",
+                time: "17:41",
+                company: "Monterail",
+                title: "LLM Engineer - Freelancer",
+                workMode: "Remote",
+                sourceURL: "https://example.com/monterail"
+            )
+        }, fetchText: { _ in
+            XCTFail("Jobs data should be used for latest package")
+            return Self.jobsMarkdownFixture
+        })
+        let store = JobsStore(client: client, cache: JobsReportCache(defaults: UserDefaults(suiteName: UUID().uuidString)!))
+
+        await store.load(
+            packages: packages,
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            selectedDay: "2026-06-26",
+            selectedArtifactIDs: []
+        )
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.selectedPackage?.key, "2026-06-27-0141")
+        XCTAssertEqual(store.report?.runDate, "2026-06-27")
+        XCTAssertEqual(store.report?.opportunities.first?.company, "ITDS")
+    }
+
+    @MainActor
+    func testJobsStoreKeepsRouteArtifactSelectionEvenWhenNewerPackageExists() async throws {
+        let newer = Self.jobsPackage(date: "2026-06-27", time: "01:41")
+        let older = Self.jobsPackage(date: "2026-06-26", time: "17:41")
+        let selectedArtifactID = try XCTUnwrap(older.dataArtifact?.id)
+        let client = JobsDataClient(fetchData: { url in
+            if url.absoluteString.contains("2026-06-26-1741") {
+                return try Self.jobsHistoryData(
+                    date: "2026-06-26",
+                    time: "17:41",
+                    company: "Monterail",
+                    title: "LLM Engineer - Freelancer",
+                    workMode: "Remote",
+                    sourceURL: "https://example.com/monterail"
+                )
+            }
+            return try Self.jobsHistoryData(
+                date: "2026-06-27",
+                time: "01:41",
+                company: "ITDS",
+                title: "Kubernetes & Cloud Infrastructure Engineer - AI Platform",
+                workMode: "Wrocław onsite",
+                sourceURL: "https://example.com/itds"
+            )
+        }, fetchText: { _ in
+            XCTFail("Jobs data should be used for selected package")
+            return Self.jobsMarkdownFixture
+        })
+        let store = JobsStore(client: client, cache: JobsReportCache(defaults: UserDefaults(suiteName: UUID().uuidString)!))
+
+        await store.load(
+            packages: [newer, older],
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            selectedDay: "2026-06-27",
+            selectedArtifactIDs: [selectedArtifactID]
+        )
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.selectedPackage?.key, "2026-06-26-1741")
+        XCTAssertEqual(store.report?.opportunities.first?.company, "Monterail")
+    }
+
+    func testJobsReportCacheSavesEnvelopeMetadataAndReadsLegacyReport() throws {
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        let cache = JobsReportCache(defaults: defaults)
+        let report = try JSONDecoder.pavbot.decode(JobsReport.self, from: Self.jobsDataFixtureData)
+
+        cache.save(report, packageKey: "2026-06-25-0141", source: .jobsData)
+
+        let cached = try XCTUnwrap(cache.load())
+        XCTAssertEqual(cached.report.runDate, "2026-06-25")
+        XCTAssertEqual(cached.report.runTime, "01:41")
+        XCTAssertEqual(cached.packageKey, "2026-06-25-0141")
+        XCTAssertEqual(cached.source, .jobsData)
+        XCTAssertEqual(cached.reportDate, "2026-06-25")
+        XCTAssertEqual(cached.reportTime, "01:41")
+        XCTAssertNotNil(cached.cachedAt)
+
+        let legacyDefaults = UserDefaults(suiteName: UUID().uuidString)!
+        legacyDefaults.set(Self.jobsDataFixtureData, forKey: "pavbot.cachedJobsReport")
+        let legacyCache = JobsReportCache(defaults: legacyDefaults)
+        let legacy = try XCTUnwrap(legacyCache.load())
+
+        XCTAssertEqual(legacy.report.runDate, "2026-06-25")
+        XCTAssertNil(legacy.packageKey)
+        XCTAssertNil(legacy.source)
+        XCTAssertNil(legacy.cachedAt)
+    }
+
+    @MainActor
     func testJobsHistoryStoreLoadsAnchorDateAndTwoPreviousCalendarDays() async throws {
         let packages = [
             Self.jobsPackage(date: "2026-06-25", time: "17:41"),
@@ -1387,6 +1534,21 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.snapshot?.reportCount, 4)
         XCTAssertEqual(store.snapshot?.opportunities.count, 4)
         XCTAssertFalse(store.snapshot?.opportunities.contains { $0.opportunity.company == "OldCo" } ?? true)
+    }
+
+    func testJobsHistorySnapshotDropsSelectedDateOutsideLoadedWindow() {
+        let snapshot = JobsHistorySnapshot(
+            anchorDate: "2026-06-27",
+            includedDates: ["2026-06-27", "2026-06-26", "2026-06-25"],
+            reportCount: 3,
+            failedPackageCount: 0,
+            sourceBreakdown: [.jobsData: 3],
+            opportunities: []
+        )
+
+        XCTAssertEqual(snapshot.validatedSelectedDate("2026-06-26"), "2026-06-26")
+        XCTAssertNil(snapshot.validatedSelectedDate("2026-06-24"))
+        XCTAssertNil(snapshot.validatedSelectedDate(nil))
     }
 
     @MainActor
@@ -1531,6 +1693,48 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     @MainActor
+    func testRouterOpensGenericArtifactInArtifactPath() {
+        let router = AppRouter()
+        let artifact = Self.artifact(
+            id: "automation-log-2026-06-22",
+            type: .run,
+            topic: "codex-agent-automation",
+            path: "research/codex-agent-automation/runs/2026-06-22.md",
+            date: "2026-06-22"
+        )
+
+        router.openArtifact(artifact)
+
+        XCTAssertEqual(router.selectedTab, .artifacts)
+        XCTAssertEqual(router.artifactPath.map(\.id), ["automation-log-2026-06-22"])
+        XCTAssertNil(router.pendingArtifactID)
+        XCTAssertNil(router.artifactRoute)
+        XCTAssertTrue(router.jobsPath.isEmpty)
+        XCTAssertTrue(router.researchPath.isEmpty)
+    }
+
+    @MainActor
+    func testRouterResolvesPendingGenericArtifactIntoArtifactPath() throws {
+        let router = AppRouter()
+        let artifact = Self.artifact(
+            id: "automation-log-2026-06-23",
+            type: .run,
+            topic: "codex-agent-automation",
+            path: "research/codex-agent-automation/runs/2026-06-23.md",
+            date: "2026-06-23"
+        )
+        let manifest = try manifestWithAdditionalArtifacts([artifact])
+
+        router.handleOpenURL(try XCTUnwrap(URL(string: "pavbot://artifact?id=automation-log-2026-06-23")))
+        router.resolvePendingArtifact(in: manifest)
+
+        XCTAssertEqual(router.selectedTab, .artifacts)
+        XCTAssertEqual(router.artifactPath.map(\.id), ["automation-log-2026-06-23"])
+        XCTAssertNil(router.pendingArtifactID)
+        XCTAssertNil(router.artifactRoute)
+    }
+
+    @MainActor
     func testAudioPlaybackServiceTracksAndClearsCurrentArtifact() throws {
         let manifest = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
         let audio = try XCTUnwrap(manifest.artifacts.first { $0.type == .podcastAudio })
@@ -1660,12 +1864,67 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertNil(NotificationServerSettings.validationMessage(for: "https://notify.example.com", required: true))
     }
 
-    func testAppDefaultsClientUsesPreferredNotifierURLWhenItIsValid() throws {
+    @MainActor
+    func testManifestStoreIgnoresLegacySavedManifestURL() {
+        let defaults = UserDefaults.standard
+        let previous = defaults.string(forKey: ManifestDefaults.urlDefaultsKey)
+        defer {
+            if let previous {
+                defaults.set(previous, forKey: ManifestDefaults.urlDefaultsKey)
+            } else {
+                defaults.removeObject(forKey: ManifestDefaults.urlDefaultsKey)
+            }
+        }
+        defaults.set("https://raw.githubusercontent.com/legacy/pavbot/main/public/pavbot-manifest.json", forKey: ManifestDefaults.urlDefaultsKey)
+
+        let store = ManifestStore(
+            client: CountingFailingManifestClient(),
+            cache: ManifestCache(defaults: UserDefaults(suiteName: UUID().uuidString)!),
+            notifier: SpyArtifactNotifier()
+        )
+
+        XCTAssertEqual(
+            store.manifestURLString,
+            "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json"
+        )
+        XCTAssertFalse(store.isUsingPlaceholderManifestURL)
+    }
+
+    func testNotificationServerSettingsIgnoresLegacySavedServerURL() {
+        let defaults = UserDefaults.standard
+        let previous = defaults.string(forKey: NotificationServerSettings.urlDefaultsKey)
+        defer {
+            if let previous {
+                defaults.set(previous, forKey: NotificationServerSettings.urlDefaultsKey)
+            } else {
+                defaults.removeObject(forKey: NotificationServerSettings.urlDefaultsKey)
+            }
+        }
+        defaults.set("https://notify.legacy.example.com", forKey: NotificationServerSettings.urlDefaultsKey)
+
+        XCTAssertEqual(NotificationServerSettings.serverURLString, "https://notify.paweltanski.com")
+        XCTAssertEqual(NotificationServerSettings.serverURL?.absoluteString, "https://notify.paweltanski.com")
+    }
+
+    func testAppDefaultsClientUsesCanonicalBootstrapBeforePreferredNotifierURL() throws {
         let endpoint = try XCTUnwrap(
             AppDefaultsClient.defaultsEndpointURL(preferredServerURLString: "https://notify.example.com/")
         )
 
-        XCTAssertEqual(endpoint.absoluteString, "https://notify.example.com/v1/app/defaults")
+        XCTAssertEqual(endpoint.absoluteString, "\(AppDefaultsClient.bootstrapNotifierURLString)/v1/app/defaults")
+        XCTAssertEqual(AppDefaultsClient.bootstrapNotifierURLString, "https://notify.paweltanski.com")
+    }
+
+    func testAppDefaultsClientIncludesPreferredNotifierURLAsFallbackWhenItIsValid() throws {
+        let endpoints = AppDefaultsClient.defaultsEndpointURLs(preferredServerURLString: "https://notify.example.com/")
+
+        XCTAssertEqual(
+            endpoints.map(\.absoluteString),
+            [
+                "\(AppDefaultsClient.bootstrapNotifierURLString)/v1/app/defaults",
+                "https://notify.example.com/v1/app/defaults"
+            ]
+        )
     }
 
     func testAppDefaultsClientUsesBootstrapNotifierURLWhenPreferredURLIsInvalid() throws {
@@ -1704,6 +1963,37 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(defaults.schemaVersion, 1)
         XCTAssertEqual(defaults.notificationServerURL, "https://notify.example.com")
         XCTAssertNil(defaults.validationError)
+    }
+
+    func testAppDefaultsClientFallsBackToPreferredNotifierWhenCanonicalFails() async throws {
+        let payload = """
+        {
+          "schemaVersion": 1,
+          "manifestURL": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json",
+          "notificationServerURL": "https://notify.backup.example.com",
+          "statusURL": "https://notify.backup.example.com/status"
+        }
+        """.data(using: .utf8)!
+        let requestedURLs = URLRequestCapture()
+        let client = AppDefaultsClient(fetchData: { url in
+            await requestedURLs.record(url)
+            if url.absoluteString == "\(AppDefaultsClient.bootstrapNotifierURLString)/v1/app/defaults" {
+                throw AppDefaultsClientError.httpStatus(503)
+            }
+            return payload
+        })
+
+        let defaults = try await client.fetchDefaults(preferredServerURLString: "https://notify.backup.example.com")
+        let urls = await requestedURLs.all()
+
+        XCTAssertEqual(
+            urls.map(\.absoluteString),
+            [
+                "\(AppDefaultsClient.bootstrapNotifierURLString)/v1/app/defaults",
+                "https://notify.backup.example.com/v1/app/defaults"
+            ]
+        )
+        XCTAssertEqual(defaults.notificationServerURL, "https://notify.backup.example.com")
     }
 
     func testAppDefaultsClientRejectsInvalidBackendDefaults() async {
@@ -1906,6 +2196,67 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(json["dailyWeatherEnabled"] as? Bool, true)
     }
 
+    func testRemoteNotificationRegistrarUsesProductionDefaultsWhenLegacyURLsExist() async throws {
+        let defaults = UserDefaults.standard
+        let previousManifestURL = defaults.string(forKey: ManifestDefaults.urlDefaultsKey)
+        let previousNotificationServerURL = defaults.string(forKey: NotificationServerSettings.urlDefaultsKey)
+        defer {
+            if let previousManifestURL {
+                defaults.set(previousManifestURL, forKey: ManifestDefaults.urlDefaultsKey)
+            } else {
+                defaults.removeObject(forKey: ManifestDefaults.urlDefaultsKey)
+            }
+            if let previousNotificationServerURL {
+                defaults.set(previousNotificationServerURL, forKey: NotificationServerSettings.urlDefaultsKey)
+            } else {
+                defaults.removeObject(forKey: NotificationServerSettings.urlDefaultsKey)
+            }
+            CapturingURLProtocol.requestHandler = nil
+        }
+        defaults.set("https://raw.githubusercontent.com/legacy/pavbot/main/public/pavbot-manifest.json", forKey: ManifestDefaults.urlDefaultsKey)
+        defaults.set("https://notify.legacy.example.com", forKey: NotificationServerSettings.urlDefaultsKey)
+
+        let requestStore = CapturedRequestStore()
+        CapturingURLProtocol.requestHandler = { request in
+            requestStore.record(request, body: request.pavbotCapturedBody)
+            let response = HTTPURLResponse(
+                url: try XCTUnwrap(request.url),
+                statusCode: 200,
+                httpVersion: nil,
+                headerFields: nil
+            )!
+            return (response, Data())
+        }
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.protocolClasses = [CapturingURLProtocol.self]
+        let registrar = RemoteNotificationRegistrar(session: URLSession(configuration: configuration))
+
+        await registrar.register(deviceToken: Data([0xde, 0xad, 0xbe, 0xef]))
+
+        let request = try XCTUnwrap(requestStore.request)
+        XCTAssertEqual(request.url?.absoluteString, "https://notify.paweltanski.com/v1/devices")
+        let body = try XCTUnwrap(requestStore.body)
+        let json = try XCTUnwrap(JSONSerialization.jsonObject(with: body) as? [String: Any])
+        XCTAssertEqual(
+            json["manifestURL"] as? String,
+            "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json"
+        )
+    }
+
+    func testSettingsConnectionCopyDoesNotOfferManualURLEditing() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let settingsURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/SettingsView.swift")
+        let source = try String(contentsOf: settingsURL)
+
+        XCTAssertFalse(source.contains("Ręczna edycja"))
+        XCTAssertFalse(source.contains("ręczna edycja"))
+        XCTAssertFalse(source.contains("Przywróć ustawienia domyślne"))
+        XCTAssertFalse(source.contains("Zapisz i odśwież"))
+    }
+
     func testDecodesAndCachesDailyWeatherReport() throws {
         let report = try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: Self.dailyWeatherFixtureData)
         let defaults = UserDefaults(suiteName: UUID().uuidString)!
@@ -2042,7 +2393,7 @@ final class PavbotManifestTests: XCTestCase {
 
     @MainActor
     func testWeatherStoreRefreshNowSavesFreshReportWithLocation() async throws {
-        let report = try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: Self.dailyWeatherFixtureData)
+        let report = try Self.dailyWeatherReport(city: "Warszawa", id: "warszawa-2026-06-25")
         let defaults = UserDefaults(suiteName: UUID().uuidString)!
         let cache = WeatherBriefCache(defaults: defaults)
         let client = SpyWeatherBriefClient(latestReport: report)
@@ -2057,10 +2408,37 @@ final class PavbotManifestTests: XCTestCase {
         await store.refreshNow(location: location)
 
         XCTAssertEqual(store.state, .loaded)
-        XCTAssertEqual(store.report?.id, "wroclaw-2026-06-25")
+        XCTAssertEqual(store.report?.id, "warszawa-2026-06-25")
+        XCTAssertEqual(store.report?.city, "Warszawa")
         XCTAssertEqual(cache.load()?.hourlyTemperature.count, 3)
         XCTAssertEqual(client.latestLocations.map { $0?.city }, ["Warszawa"])
         XCTAssertEqual(store.locationNotice, "Bieżąca prognoza dla: Warszawa.")
+    }
+
+    @MainActor
+    func testWeatherStoreRejectsReportForDifferentLocation() async throws {
+        let staleReport = try Self.dailyWeatherReport(city: "Wrocław", id: "wroclaw-2026-06-25")
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        let client = SpyWeatherBriefClient(latestReport: staleReport)
+        let store = WeatherBriefStore(
+            client: client,
+            cache: WeatherBriefCache(defaults: defaults),
+            cooldown: WeatherRefreshCooldown(defaults: defaults),
+            serverURLProvider: { URL(string: "https://notify.example.com") }
+        )
+        let selectedLocation = WeatherBriefLocation(latitude: 52.2297, longitude: 21.0122, city: "Warszawa")
+
+        await store.refreshNow(location: selectedLocation)
+
+        XCTAssertNil(store.report)
+        XCTAssertEqual(client.latestLocations.map { $0?.city }, ["Warszawa"])
+        if case .failed(let error) = store.state {
+            XCTAssertEqual(error.title, "Nie udało się pobrać prognozy dla tej lokalizacji")
+            XCTAssertTrue(error.message.contains("Warszawa"))
+            XCTAssertTrue(error.message.contains("Wrocław"))
+        } else {
+            XCTFail("Expected failed state for mismatched weather location")
+        }
     }
 
     @MainActor
@@ -2090,7 +2468,7 @@ final class PavbotManifestTests: XCTestCase {
 
     @MainActor
     func testWeatherStoreLoadUsesManualLocationWithoutCoreLocationProvider() async throws {
-        let report = try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: Self.dailyWeatherFixtureData)
+        let report = try Self.dailyWeatherReport(city: "Poznań, Wielkopolskie", id: "poznan-2026-06-25")
         let defaults = UserDefaults(suiteName: UUID().uuidString)!
         let client = SpyWeatherBriefClient(latestReport: report)
         var providerCalls = 0
@@ -2117,7 +2495,7 @@ final class PavbotManifestTests: XCTestCase {
 
     @MainActor
     func testWeatherStoreLoadWithCurrentLocationUsesProviderWhenAvailable() async throws {
-        let report = try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: Self.dailyWeatherFixtureData)
+        let report = try Self.dailyWeatherReport(city: "Kraków, Małopolskie", id: "krakow-2026-06-25")
         let defaults = UserDefaults(suiteName: UUID().uuidString)!
         let client = SpyWeatherBriefClient(latestReport: report)
         var requestedModes: [WeatherLocationMode] = []
@@ -2396,6 +2774,140 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.snapshot?.sourceLabel, "Dane fallbackowe z magazynu 10:15")
         XCTAssertEqual(store.snapshot?.pairs.count, 2)
         XCTAssertEqual(store.snapshot?.pairs.first?.topics.map(\.title), ["Gdańsk jako centrum rozmów", "Nowe decyzje w Sejmie"])
+    }
+
+    @MainActor
+    func testTodayLiveTopicSpeechControllerBuildsCleanArticleText() throws {
+        let topic = TodayLiveTopic(
+            id: "pulse-speech",
+            scope: .pulse,
+            section: "Polska",
+            title: "Puls dnia: ważny temat",
+            lead: "Krótki lead bez linków.",
+            keyFacts: ["Pierwszy fakt z linkiem https://example.com/fakt.", "Drugi fakt."],
+            reactions: ["Reakcja instytucji."],
+            whyItMatters: "Wyjaśnienie, dlaczego to ważne.",
+            context: "Szerszy kontekst sprawy.",
+            watchNext: ["Co obserwować dalej."],
+            sources: [ResearchNewsSource(title: "Źródło", url: "https://example.com/source")],
+            tags: ["Polska"],
+            priority: "High"
+        )
+
+        let text = TodayLiveTopicSpeechController.speechText(for: topic)
+
+        XCTAssertTrue(text.contains("Puls dnia: ważny temat"))
+        XCTAssertTrue(text.contains("Najważniejsze fakty."))
+        XCTAssertTrue(text.contains("Reakcje na sytuację."))
+        XCTAssertTrue(text.contains("Dlaczego to ważne. Wyjaśnienie"))
+        XCTAssertTrue(text.contains("Co obserwować dalej."))
+        XCTAssertFalse(text.contains("https://"))
+        XCTAssertFalse(text.contains("Przeczytaj artykuł"))
+    }
+
+    @MainActor
+    func testTodayLiveTopicSpeechControllerTracksPlaybackStateAndRate() throws {
+        let topic = Self.pulseNewsFixtureTopic(id: "speech-topic", title: "Temat do czytania")
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        let controller = TodayLiveTopicSpeechController(enableSpeech: false, rateDefaults: defaults)
+
+        controller.speak(topic)
+
+        XCTAssertEqual(controller.currentTopicID, topic.id)
+        XCTAssertTrue(controller.isSpeaking)
+        XCTAssertFalse(controller.isPaused)
+
+        controller.pause()
+
+        XCTAssertTrue(controller.isPaused)
+        XCTAssertEqual(controller.currentTopicID, topic.id)
+
+        controller.setSpeechRate(.fast)
+
+        XCTAssertEqual(controller.speechRate, .fast)
+        XCTAssertEqual(MobileNewsSpeechRate.saved(in: defaults), .fast)
+        XCTAssertEqual(controller.currentTopicID, topic.id)
+        XCTAssertTrue(controller.isPaused)
+
+        controller.resume()
+        XCTAssertTrue(controller.isSpeaking)
+
+        controller.stop()
+        XCTAssertNil(controller.currentTopicID)
+        XCTAssertFalse(controller.isSpeaking)
+    }
+
+    @MainActor
+    func testTodayLiveTopicSpeechRateChangePreservesProgress() throws {
+        let topic = TodayLiveTopic(
+            id: "progress-topic",
+            scope: .pulse,
+            section: "Świat",
+            title: "Dłuższy temat do odczytania",
+            lead: "Pierwszy akapit zawiera wystarczająco dużo słów, żeby timer TTS przesunął odczyt przed zmianą tempa.",
+            keyFacts: ["Drugi fragment również ma kilka słów do testu zachowania postępu."],
+            reactions: ["Reakcja rynku oraz instytucji publicznych."],
+            whyItMatters: "Ten fragment sprawdza, czy odczyt nie wraca do początku po zmianie prędkości.",
+            context: "Kontekst testowy dla osi czasu.",
+            watchNext: ["Obserwuj kolejne aktualizacje."],
+            sources: [],
+            tags: ["Świat"],
+            priority: "High"
+        )
+        let controller = TodayLiveTopicSpeechController(enableSpeech: false, rateDefaults: UserDefaults(suiteName: UUID().uuidString)!)
+
+        controller.speak(topic)
+        RunLoop.main.run(until: Date().addingTimeInterval(0.7))
+        let elapsedBeforeRateChange = controller.estimatedElapsed
+        XCTAssertGreaterThan(elapsedBeforeRateChange, 0)
+
+        controller.setSpeechRate(.slow)
+
+        XCTAssertEqual(controller.currentTopicID, topic.id)
+        XCTAssertEqual(controller.speechRate, .slow)
+        XCTAssertTrue(controller.isSpeaking)
+        XCTAssertGreaterThanOrEqual(controller.estimatedElapsed, elapsedBeforeRateChange * 0.9)
+    }
+
+    func testPulseDayTTSButtonOnlyExistsInTopicDetail() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/TodayLiveTopicsView.swift")
+        let source = try String(contentsOf: sourceURL)
+        let rowSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct TodayLiveTopicRow").dropFirst().first?
+                .components(separatedBy: "private struct TodayLiveTopicsCarouselControls").first
+        )
+
+        XCTAssertTrue(source.contains("TodayLiveTopicSpeechPanel"))
+        XCTAssertTrue(source.contains("Przeczytaj artykuł"))
+        XCTAssertFalse(rowSource.contains("Przeczytaj artykuł"))
+    }
+
+    func testJobsRefreshForcesManifestReload() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/JobsView.swift")
+        let source = try String(contentsOf: sourceURL)
+
+        XCTAssertTrue(source.contains("await store.reload(minimumInterval: 0)"))
+    }
+
+    func testPulseDayRefreshAndNotificationRouteForceManifestReload() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/PulseDayView.swift")
+        let source = try String(contentsOf: sourceURL)
+
+        XCTAssertTrue(source.contains("await reload(refreshManifest: true, minimumInterval: 0)"))
+        XCTAssertTrue(source.contains("pulseRouteReloadKey"))
+        XCTAssertTrue(source.contains("await manifestStore.reload(minimumInterval: 0)"))
     }
 
     func testTodayLiveTopicsSavedStorePersistsAndRemovesTopics() throws {
@@ -3182,6 +3694,37 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     @MainActor
+    func testStoreLoadedFromCacheRefreshesToNewerRemoteManifest() async throws {
+        let cached = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
+        let newerRemote = PavbotManifest(
+            schemaVersion: cached.schemaVersion,
+            title: cached.title,
+            generatedAt: "2026-06-27T01:07:23+00:00",
+            rawBaseUrl: cached.rawBaseUrl,
+            automations: cached.automations,
+            topics: cached.topics,
+            artifacts: [Self.newArtifact] + cached.artifacts
+        )
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        ManifestCache(defaults: defaults).save(cached)
+        let store = ManifestStore(
+            client: StubManifestClient(manifest: newerRemote),
+            cache: ManifestCache(defaults: defaults),
+            notifier: SpyArtifactNotifier(),
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+        )
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.manifest?.generatedAt, cached.generatedAt)
+
+        await store.load()
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.manifest?.generatedAt, "2026-06-27T01:07:23+00:00")
+        XCTAssertEqual(store.lastNewArtifacts.map(\.id), ["new-run-2026-06-23"])
+    }
+
+    @MainActor
     func testReloadGateDeduplicatesAndThrottlesRequests() {
         var currentDate = Date(timeIntervalSince1970: 1_000)
         let gate = ReloadGate(now: { currentDate })
@@ -3255,7 +3798,7 @@ final class PavbotManifestTests: XCTestCase {
             client: client,
             cache: ManifestCache(defaults: UserDefaults(suiteName: UUID().uuidString)!),
             notifier: SpyArtifactNotifier(),
-            manifestURLString: ManifestStore.defaultManifestURL
+            manifestURLString: ManifestDefaults.legacyPlaceholderManifestURL
         )
         store.manifest = manifest
         store.state = .loaded
@@ -3271,7 +3814,7 @@ final class PavbotManifestTests: XCTestCase {
         let report = try JSONDecoder.pavbot.decode(JobsReport.self, from: Self.jobsDataFixtureData)
         let defaults = UserDefaults(suiteName: UUID().uuidString)!
         let cache = JobsReportCache(defaults: defaults)
-        cache.save(report)
+        cache.save(report, packageKey: "2026-06-25-0141", source: .jobsData)
         let dataArtifact = PavbotArtifact(
             id: "jobs-data",
             type: .jobsData,
@@ -3301,7 +3844,7 @@ final class PavbotManifestTests: XCTestCase {
 
         XCTAssertEqual(store.state, .loaded)
         XCTAssertEqual(store.report?.opportunities.first?.company, "CKSource")
-        XCTAssertEqual(store.cacheNotice, "Pokazuję ostatnie zapisane dane Jobs. Odświeżenie nie powiodło się.")
+        XCTAssertEqual(store.cacheNotice, "Pokazuję ostatnie zapisane dane Jobs (2026-06-25 01:41, Dane strukturalne). Odświeżenie nie powiodło się.")
     }
 
     @MainActor
@@ -4042,6 +4585,15 @@ final class PavbotManifestTests: XCTestCase {
     }
     """.data(using: .utf8)!
 
+    private static func dailyWeatherReport(city: String, id: String) throws -> DailyWeatherReport {
+        var json = try XCTUnwrap(JSONSerialization.jsonObject(with: dailyWeatherFixtureData) as? [String: Any])
+        json["city"] = city
+        json["id"] = id
+        json["headline"] = "\(city): częściowe zachmurzenie i 21°C"
+        let data = try JSONSerialization.data(withJSONObject: json)
+        return try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: data)
+    }
+
     private static let dailyWeatherFixtureData = """
     {
       "id": "wroclaw-2026-06-25",
@@ -4468,6 +5020,90 @@ private actor URLRequestCapture {
     func first() -> URL? {
         urls.first
     }
+
+    func all() -> [URL] {
+        urls
+    }
+}
+
+private final class CapturedRequestStore {
+    private let lock = NSLock()
+    private var storedRequest: URLRequest?
+    private var storedBody: Data?
+
+    var request: URLRequest? {
+        lock.lock()
+        defer { lock.unlock() }
+        return storedRequest
+    }
+
+    var body: Data? {
+        lock.lock()
+        defer { lock.unlock() }
+        return storedBody
+    }
+
+    func record(_ request: URLRequest, body: Data?) {
+        lock.lock()
+        storedRequest = request
+        storedBody = body
+        lock.unlock()
+    }
+}
+
+private extension URLRequest {
+    var pavbotCapturedBody: Data? {
+        if let httpBody {
+            return httpBody
+        }
+        guard let stream = httpBodyStream else {
+            return nil
+        }
+        stream.open()
+        defer { stream.close() }
+        var data = Data()
+        let bufferSize = 1024
+        let buffer = UnsafeMutablePointer<UInt8>.allocate(capacity: bufferSize)
+        defer { buffer.deallocate() }
+        while stream.hasBytesAvailable {
+            let count = stream.read(buffer, maxLength: bufferSize)
+            if count <= 0 {
+                break
+            }
+            data.append(buffer, count: count)
+        }
+        return data
+    }
+}
+
+private final class CapturingURLProtocol: URLProtocol {
+    static var requestHandler: ((URLRequest) throws -> (HTTPURLResponse, Data))?
+
+    override class func canInit(with request: URLRequest) -> Bool {
+        true
+    }
+
+    override class func canonicalRequest(for request: URLRequest) -> URLRequest {
+        request
+    }
+
+    override func startLoading() {
+        guard let requestHandler = Self.requestHandler else {
+            client?.urlProtocol(self, didFailWithError: URLError(.badServerResponse))
+            return
+        }
+
+        do {
+            let (response, data) = try requestHandler(request)
+            client?.urlProtocol(self, didReceive: response, cacheStoragePolicy: .notAllowed)
+            client?.urlProtocol(self, didLoad: data)
+            client?.urlProtocolDidFinishLoading(self)
+        } catch {
+            client?.urlProtocol(self, didFailWithError: error)
+        }
+    }
+
+    override func stopLoading() {}
 }
 
 @MainActor

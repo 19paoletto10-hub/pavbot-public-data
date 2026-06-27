@@ -55,7 +55,7 @@ struct PulseDayView: View {
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
-                    Task { await reload(minimumInterval: 0) }
+                    Task { await reload(refreshManifest: true, minimumInterval: 0) }
                 } label: {
                     if liveTopicsStore.isRefreshing {
                         ProgressView()
@@ -68,10 +68,14 @@ struct PulseDayView: View {
             }
         }
         .task {
-            await reload(minimumInterval: 10)
+            await reload(refreshManifest: false, minimumInterval: 10)
+        }
+        .task(id: pulseRouteReloadKey) {
+            guard router.selectedTab == .pulseDay, pulseRouteReloadKey != "no-pulse-route" else { return }
+            await reload(refreshManifest: true, minimumInterval: 0)
         }
         .onChange(of: manifestStore.manifest) { _, _ in
-            Task { await reload(minimumInterval: 10) }
+            Task { await reload(refreshManifest: false, minimumInterval: 10) }
         }
         .onChange(of: savedStore.savedTopics) { _, _ in
             liveTopicsStore.pruneHistory()
@@ -80,7 +84,7 @@ struct PulseDayView: View {
             haptics.play(.selection)
         }
         .refreshable {
-            await reload(minimumInterval: 0)
+            await reload(refreshManifest: true, minimumInterval: 0)
         }
         .sheet(item: $selectedTopic) { selection in
             TodayLiveTopicDetailView(
@@ -98,7 +102,20 @@ struct PulseDayView: View {
         }
     }
 
-    private func reload(minimumInterval: TimeInterval) async {
+    private var pulseRouteReloadKey: String {
+        guard router.selectedTab == .pulseDay else { return "no-pulse-route" }
+        let day = router.selectedReportDay ?? "no-day"
+        let artifacts = router.selectedReportArtifactIDs.joined(separator: "|")
+        guard router.selectedReportDay != nil || !router.selectedReportArtifactIDs.isEmpty else {
+            return "no-pulse-route"
+        }
+        return [day, artifacts].joined(separator: "::")
+    }
+
+    private func reload(refreshManifest: Bool, minimumInterval: TimeInterval) async {
+        if refreshManifest {
+            await manifestStore.reload(minimumInterval: 0)
+        }
         await liveTopicsStore.load(
             manifest: manifestStore.manifest,
             manifestURLString: manifestStore.manifestURLString,

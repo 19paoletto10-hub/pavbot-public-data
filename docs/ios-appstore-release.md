@@ -1,6 +1,6 @@
 # Pavbot iOS App Store Release
 
-Date: 2026-06-26
+Date: 2026-06-27
 
 ## Release Target
 
@@ -9,12 +9,16 @@ Date: 2026-06-26
 - Bundle ID: `com.paweltanski.pavbotviewer`
 - Live Activity extension: `com.paweltanski.pavbotviewer.audioactivity`
 - Apple Team ID: `SP774TZZU8`
-- Marketing version: `1.5`
+- Marketing version: `2.0`
 - Build number: dynamic, set by the Xcode build phase from `PAVBOT_BUILD_NUMBER`
   or the latest git commit timestamp.
 
-## What Version 1.5 Contains
+## What Version 2.0 Contains
 
+- Production connection URLs are fixed in the app and shown as read-only
+  values in `Ustawienia`.
+- Legacy custom Manifest URL and Notification server URL values are replaced
+  by the production Pavbot defaults.
 - `Puls Dnia` is a top-level tab with paired news cards from
   `pulseNewsData`.
 - `Puls Dnia` keeps a local 48-hour cache of fetched runs for smoother browsing.
@@ -80,18 +84,31 @@ Date: 2026-06-26
 1. Open `ios/PavbotViewer/PavbotViewer.xcodeproj`.
 2. Select scheme `PavbotViewer`.
 3. Select `Any iOS Device (arm64)` or a physical iPhone.
-4. Confirm version `1.5` in target settings.
+4. Confirm version `2.0` in target settings.
 5. Use `Product -> Archive`.
 6. In Organizer, choose `Distribute App`.
 7. Choose `App Store Connect -> Upload`.
 8. After processing, add the build to TestFlight in App Store Connect.
 
-If App Store Connect rejects the archive because the build number already
-exists, set a newer explicit value before archiving:
+Use a unique UTC timestamp build number when archiving for App Store Connect:
 
 ```bash
-export PAVBOT_BUILD_NUMBER=202606261930
+BUILD_NUMBER="$(date -u +%Y%m%d%H%M)"
+ARCHIVE_DATE="$(date +%Y-%m-%d)"
+ARCHIVE_PATH="$HOME/Library/Developer/Xcode/Archives/$ARCHIVE_DATE/PavbotViewer-2.0-$BUILD_NUMBER.xcarchive"
+
+PAVBOT_BUILD_NUMBER="$BUILD_NUMBER" xcodebuild archive \
+  -project ios/PavbotViewer/PavbotViewer.xcodeproj \
+  -scheme PavbotViewer \
+  -configuration Release \
+  -destination 'generic/platform=iOS' \
+  -archivePath "$ARCHIVE_PATH"
 ```
 
-Then archive again from the same shell-launched Xcode session or increment the
-build number manually in Xcode for that archive.
+Open the completed archive in Xcode Organizer and upload through App Store Connect:
+
+```bash
+open -a /Users/promaczek/Downloads/Xcode.app "$ARCHIVE_PATH"
+```
+
+Submit to App Store review from App Store Connect after upload processing is complete.

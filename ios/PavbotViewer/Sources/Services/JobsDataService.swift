@@ -120,7 +120,8 @@ final class JobsStore {
         self.loader = JobsReportLoader(client: client, parser: parser)
         self.cache = cache
         if let cached = cache.load() {
-            report = cached
+            report = cached.report
+            source = cached.source
             state = .loaded
         }
     }
@@ -158,7 +159,7 @@ final class JobsStore {
                 selectedPackage = loaded.package
                 report = loaded.report
                 source = loaded.source
-                cache.save(loaded.report)
+                cache.save(loaded.report, packageKey: loaded.package.key, source: loaded.source)
                 cacheNotice = nil
                 state = .loaded
                 return
@@ -169,7 +170,7 @@ final class JobsStore {
         }
 
         if report != nil {
-            cacheNotice = "Pokazuję ostatnie zapisane dane Jobs. Odświeżenie nie powiodło się."
+            cacheNotice = cacheNoticeText(for: cache.load())
             state = .loaded
         } else {
             cacheNotice = nil
@@ -188,23 +189,60 @@ final class JobsStore {
 
     private func selectPackages(
         from packages: [TopicReportPackage],
-        selectedDay: String?,
+        selectedDay _: String?,
         selectedArtifactIDs: [String]
     ) -> [TopicReportPackage] {
+        let sortedPackages = packages.sorted { $0.key > $1.key }
         let artifactIDs = Set(selectedArtifactIDs)
         if !artifactIDs.isEmpty,
-           let package = packages.first(where: { package in
+           let package = sortedPackages.first(where: { package in
                package.artifacts.contains { artifactIDs.contains($0.id) }
            }) {
             return [package]
         }
 
-        if let selectedDay,
-           let package = packages.first(where: { $0.date == selectedDay || $0.key.hasPrefix(selectedDay) }) {
-            return [package]
+        return sortedPackages
+    }
+
+    private func cacheNoticeText(for cached: CachedJobsReport?) -> String {
+        let base = "Pokazuję ostatnie zapisane dane Jobs"
+        guard let cached else {
+            return "\(base). Odświeżenie nie powiodło się."
         }
 
-        return packages
+        let dateTime = [cached.reportDate, cached.reportTime]
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+            .joined(separator: " ")
+        let details = [dateTime, cached.source?.label ?? ""]
+            .filter { !$0.isEmpty }
+
+        guard !details.isEmpty else {
+            return "\(base). Odświeżenie nie powiodło się."
+        }
+        return "\(base) (\(details.joined(separator: ", "))). Odświeżenie nie powiodło się."
+    }
+}
+
+struct CachedJobsReport: Codable, Equatable {
+    let report: JobsReport
+    let packageKey: String?
+    let source: JobsReportSource?
+    let cachedAt: Date?
+
+    var reportDate: String { report.runDate }
+    var reportTime: String { report.runTime }
+
+    init(
+        report: JobsReport,
+        packageKey: String? = nil,
+        source: JobsReportSource? = nil,
+        cachedAt: Date? = nil
+    ) {
+        self.report = report
+        self.packageKey = packageKey
+        self.source = source
+        self.cachedAt = cachedAt
     }
 }
 
@@ -216,13 +254,29 @@ struct JobsReportCache {
         self.defaults = defaults
     }
 
-    func load() -> JobsReport? {
+    func load() -> CachedJobsReport? {
         guard let data = defaults.data(forKey: key) else { return nil }
-        return try? JSONDecoder.pavbot.decode(JobsReport.self, from: data)
+        if let cached = try? JSONDecoder.pavbot.decode(CachedJobsReport.self, from: data) {
+            return cached
+        }
+        if let legacyReport = try? JSONDecoder.pavbot.decode(JobsReport.self, from: data) {
+            return CachedJobsReport(report: legacyReport)
+        }
+        return nil
     }
 
-    func save(_ report: JobsReport) {
-        guard let data = try? JSONEncoder().encode(report) else { return }
+    func save(_ report: JobsReport, packageKey: String? = nil, source: JobsReportSource? = nil) {
+        let cached = CachedJobsReport(
+            report: report,
+            packageKey: packageKey,
+            source: source,
+            cachedAt: Date()
+        )
+        save(cached)
+    }
+
+    private func save(_ cached: CachedJobsReport) {
+        guard let data = try? JSONEncoder().encode(cached) else { return }
         defaults.set(data, forKey: key)
     }
 }

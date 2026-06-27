@@ -47,6 +47,7 @@ required_files=(
   "ios/PavbotViewer/Sources/Services/ManifestDiagnostics.swift"
   "ios/PavbotViewer/Sources/Services/ManifestURLValidator.swift"
   "ios/PavbotViewer/Sources/Services/ManifestStore.swift"
+  "ios/PavbotViewer/Sources/Services/PavbotConnectionDefaults.swift"
   "ios/PavbotViewer/Sources/Services/PavbotAudioActivityAttributes.swift"
   "ios/PavbotViewer/Sources/Services/PulseNewsService.swift"
   "ios/PavbotViewer/Sources/Services/TodayLiveTopicsService.swift"
@@ -217,6 +218,10 @@ grep -q 'RemoteNotificationRegistrar' ios/PavbotViewer/Sources/Services/Artifact
 grep -q 'NotificationServerSettings' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
 grep -q 'LiveNotificationOnboarding' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
 grep -q 'RemoteNotificationPermission' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
+grep -q 'PavbotConnectionDefaults' ios/PavbotViewer/Sources/Services/PavbotConnectionDefaults.swift
+grep -q 'manifestURLString = "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json"' ios/PavbotViewer/Sources/Services/PavbotConnectionDefaults.swift
+grep -q 'notificationServerURLString = "https://notify.paweltanski.com"' ios/PavbotViewer/Sources/Services/PavbotConnectionDefaults.swift
+grep -q 'statusURLString = "https://notify.paweltanski.com/status"' ios/PavbotViewer/Sources/Services/PavbotConnectionDefaults.swift
 grep -q 'ManifestDiagnostics' ios/PavbotViewer/Sources/Services/ManifestDiagnostics.swift
 grep -q 'DiagnosticSeverity' ios/PavbotViewer/Sources/Services/ManifestDiagnostics.swift
 grep -q 'ManifestURLValidator' ios/PavbotViewer/Sources/Services/ManifestURLValidator.swift
@@ -250,7 +255,7 @@ grep -q 'struct JobsView' ios/PavbotViewer/Sources/Views/JobsView.swift
 grep -q 'struct ResearchView' ios/PavbotViewer/Sources/Views/ReportPackageViews.swift
 grep -q 'public GitHub raw manifest URL' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'Notification server URL' ios/PavbotViewer/Sources/Views/SettingsView.swift
-grep -q 'notify.example.com/status' ios/PavbotViewer/Sources/Views/SettingsView.swift
+grep -q 'PavbotConnectionDefaults.statusURL' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'Kopiuj token APNs' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'RemoteNotificationDiagnostics' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
 grep -q 'RemoteNotificationDiagnostics' ios/PavbotViewer/Tests/PavbotManifestTests.swift
@@ -405,6 +410,12 @@ grep -q 'workspaceAccess: "ro"' integrations/openclaw/openclaw.sample.json5
 grep -q 'pavbot-observer' integrations/openclaw/openclaw.sample.json5
 grep -q 'pavbot-llm-ai-jobs-wroclaw-research' docs/how-to-use.md
 grep -q 'pavbot-llm-ai-jobs-wroclaw-research' docs/automation-operations.md
+grep -q 'render_jobs_data.py' docs/how-to-use.md
+grep -q 'validate_jobs_data.py' docs/how-to-use.md
+grep -q 'data/YYYY-MM-DD-HHMM-jobs.json' docs/how-to-use.md
+grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw' docs/how-to-use.md
+grep -q 'git fetch origin' docs/how-to-use.md
+grep -q 'origin/main:public/pavbot-manifest.json' docs/how-to-use.md
 grep -q '\$daily-research-agent' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
 grep -q 'generate_pavbot_manifest.py' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
@@ -412,6 +423,16 @@ grep -q 'validate_jobs_data.py' research/llm-ai-jobs-wroclaw/automation-research
 grep -q 'render_jobs_data.py' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
 grep -q 'data/YYYY-MM-DD-HHMM-jobs.json' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
 grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
+grep -q 'post-publish verification' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
+grep -q 'git fetch origin' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
+grep -q 'origin/main:public/pavbot-manifest.json' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
+grep -q 'RUN_PATH=' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
+grep -q 'DATA_PATH=' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
+grep -q 'PDF_PATH=' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
+grep -q 'git show "origin/main:$DATA_PATH" >/dev/null' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
+grep -q 'Markdown -> jobsData JSON' docs/automation-operations.md
+grep -q 'git fetch origin' docs/automation-operations.md
+grep -q 'origin/main:public/pavbot-manifest.json' docs/automation-operations.md
 grep -q 'pavbot-aktualne-wydarzenia-mobile-10-15' docs/how-to-use.md
 grep -q 'pavbot-aktualne-wydarzenia-mobile-10-15' docs/automation-operations.md
 grep -q '\$daily-research-agent' research/aktualne-wydarzenia-mobile/automation-prompt.md

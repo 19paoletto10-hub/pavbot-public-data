@@ -461,7 +461,7 @@ private struct MobileNewsSpeechMiniPlayer: View {
 
             MobileNewsSpeechRatePicker(speechController: speechController)
 
-            SpeechTimelineScrubber(
+            PavbotSpeechTimelineScrubber(
                 timeline: speechController.timeline,
                 currentSegmentIndex: speechController.currentSegmentIndex,
                 estimatedElapsed: speechController.estimatedElapsed,
@@ -562,7 +562,7 @@ private struct PodcastScriptSpeechMiniPlayer: View {
 
             MobileNewsPodcastSpeechRatePicker(speechController: speechController)
 
-            SpeechTimelineScrubber(
+            PavbotSpeechTimelineScrubber(
                 timeline: speechController.timeline,
                 currentSegmentIndex: speechController.currentSegmentIndex,
                 estimatedElapsed: speechController.estimatedElapsed,
@@ -744,7 +744,7 @@ private struct MobileNewsArticleRow: View {
             if isCurrent {
                 MobileNewsSpeechRatePicker(speechController: speechController)
                     .padding(.horizontal, 4)
-                SpeechTimelineScrubber(
+                PavbotSpeechTimelineScrubber(
                     timeline: speechController.timeline,
                     currentSegmentIndex: speechController.currentSegmentIndex,
                     estimatedElapsed: speechController.estimatedElapsed,
@@ -1011,7 +1011,7 @@ private struct PodcastScriptSpeechPanel: View {
             }
 
             if isCurrent {
-                SpeechTimelineScrubber(
+                PavbotSpeechTimelineScrubber(
                     timeline: speechController.timeline,
                     currentSegmentIndex: speechController.currentSegmentIndex,
                     estimatedElapsed: speechController.estimatedElapsed,
@@ -1217,7 +1217,7 @@ private struct MobileNewsSpeechControls: View {
 
             MobileNewsSpeechRatePicker(speechController: speechController)
             if isCurrent {
-                SpeechTimelineScrubber(
+                PavbotSpeechTimelineScrubber(
                     timeline: speechController.timeline,
                     currentSegmentIndex: speechController.currentSegmentIndex,
                     estimatedElapsed: speechController.estimatedElapsed,
@@ -1250,21 +1250,9 @@ private struct MobileNewsSpeechControls: View {
 
 private struct MobileNewsSpeechRatePicker: View {
     @ObservedObject var speechController: MobileNewsSpeechController
-    @Environment(PavbotHaptics.self) private var haptics
 
     var body: some View {
-        Picker("Tempo czytania", selection: rateBinding) {
-            ForEach(MobileNewsSpeechRate.allCases) { rate in
-                Text(rate.label)
-                    .tag(rate)
-            }
-        }
-        .pickerStyle(.segmented)
-        .frame(maxWidth: 220)
-        .accessibilityLabel("Tempo czytania na głos")
-        .onChange(of: speechController.speechRate) { _, _ in
-            haptics.play(.selection)
-        }
+        PavbotSpeechRatePicker(title: "Tempo czytania na głos", speechRate: rateBinding)
     }
 
     private var rateBinding: Binding<MobileNewsSpeechRate> {
@@ -1277,21 +1265,9 @@ private struct MobileNewsSpeechRatePicker: View {
 
 private struct MobileNewsPodcastSpeechRatePicker: View {
     @ObservedObject var speechController: PodcastScriptSpeechController
-    @Environment(PavbotHaptics.self) private var haptics
 
     var body: some View {
-        Picker("Tempo podcastu", selection: rateBinding) {
-            ForEach(MobileNewsSpeechRate.allCases) { rate in
-                Text(rate.label)
-                    .tag(rate)
-            }
-        }
-        .pickerStyle(.segmented)
-        .frame(maxWidth: 220)
-        .accessibilityLabel("Tempo czytania podcastu")
-        .onChange(of: speechController.speechRate) { _, _ in
-            haptics.play(.selection)
-        }
+        PavbotSpeechRatePicker(title: "Tempo czytania podcastu", speechRate: rateBinding)
     }
 
     private var rateBinding: Binding<MobileNewsSpeechRate> {
@@ -1299,70 +1275,6 @@ private struct MobileNewsPodcastSpeechRatePicker: View {
             get: { speechController.speechRate },
             set: { speechController.setSpeechRate($0) }
         )
-    }
-}
-
-private struct SpeechTimelineScrubber: View {
-    let timeline: SpeechTimeline?
-    let currentSegmentIndex: Int
-    let estimatedElapsed: Double
-    let estimatedDuration: Double
-    let currentSegmentText: String?
-    let seekToProgress: (Double) -> Void
-
-    @State private var draftProgress: Double?
-
-    private var displayedProgress: Double {
-        if let draftProgress {
-            return draftProgress
-        }
-        guard estimatedDuration > 0 else { return 0 }
-        return min(max(estimatedElapsed / estimatedDuration, 0), 1)
-    }
-
-    @ViewBuilder
-    var body: some View {
-        if let timeline, !timeline.segments.isEmpty {
-            VStack(alignment: .leading, spacing: 8) {
-                Slider(
-                    value: Binding(
-                        get: { displayedProgress },
-                        set: { draftProgress = $0 }
-                    ),
-                    in: 0...1,
-                    onEditingChanged: handleEditingChanged
-                )
-                .accessibilityLabel("Oś czasu czytania")
-
-                HStack {
-                    Text(pavbotPlaybackTime(draftProgress.map { $0 * estimatedDuration } ?? estimatedElapsed))
-                    Spacer()
-                    Text(pavbotPlaybackTime(estimatedDuration))
-                }
-                .font(.caption.monospacedDigit())
-                .foregroundStyle(.secondary)
-
-                if let currentSegmentText {
-                    Text("Fragment \(currentSegmentIndex + 1) z \(timeline.segments.count)")
-                        .font(.caption.weight(.semibold))
-                        .foregroundStyle(.secondary)
-                    Text(currentSegmentText)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                        .lineLimit(3)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-            }
-            .padding(12)
-            .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
-        }
-    }
-
-    private func handleEditingChanged(_ editing: Bool) {
-        guard !editing else { return }
-        let progress = draftProgress ?? displayedProgress
-        seekToProgress(progress)
-        draftProgress = nil
     }
 }
 

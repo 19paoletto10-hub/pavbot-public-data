@@ -35,6 +35,17 @@ enum ManualWeatherLocationSettings {
     }
 }
 
+private enum WeatherBriefStoreError: LocalizedError, Equatable {
+    case mismatchedLocation(expected: String, actual: String)
+
+    var errorDescription: String? {
+        switch self {
+        case .mismatchedLocation(let expected, let actual):
+            "Serwer zwrócił raport dla lokalizacji \(actual), a wybrana lokalizacja to \(expected). Odśwież notifier i spróbuj ponownie."
+        }
+    }
+}
+
 @MainActor
 @Observable
 final class WeatherBriefStore {
@@ -77,10 +88,18 @@ final class WeatherBriefStore {
     }
 
     func load(minimumInterval: TimeInterval = 0) async {
+        await loadSelectedLocation(minimumInterval: minimumInterval)
+    }
+
+    func loadSelectedLocation(minimumInterval: TimeInterval = 0) async {
         await loadLatest(minimumInterval: minimumInterval, locationMode: .none)
     }
 
     func loadWithCurrentLocation(minimumInterval: TimeInterval = 0) async {
+        await loadLatest(minimumInterval: minimumInterval, locationMode: .useIfAuthorized)
+    }
+
+    func refreshSelectedLocation(minimumInterval: TimeInterval = 0) async {
         await loadLatest(minimumInterval: minimumInterval, locationMode: .useIfAuthorized)
     }
 
@@ -106,21 +125,28 @@ final class WeatherBriefStore {
         if report == nil {
             state = .loading
         }
+        let previousNotice = locationNotice
+        var requestedLocation: WeatherBriefLocation?
         do {
             let location = await resolvedWeatherLocation(mode: locationMode)
+            requestedLocation = location
+            if let location {
+                locationNotice = Self.loadingNotice(for: location)
+            }
             let loadedReport = try await client.fetchLatestReport(from: serverURL, location: location)
+            try Self.validate(loadedReport, matches: location)
             report = loadedReport
             cache.save(loadedReport)
+            locationNotice = Self.successNotice(for: location, report: loadedReport, currentNotice: locationNotice)
             cacheNotice = nil
             state = .loaded
         } catch {
-            if report != nil {
-                cacheNotice = "Pokazuję ostatni zapisany raport. Odświeżenie nie powiodło się."
-                state = .loaded
-            } else {
-                cacheNotice = nil
-                state = .failed(.network(error, context: .weather))
-            }
+            handleWeatherLoadFailure(
+                error,
+                previousNotice: previousNotice,
+                requestedLocation: requestedLocation,
+                cachedMessage: "Pokazuję ostatni zapisany raport. Odświeżenie nie powiodło się."
+            )
         }
     }
 
@@ -146,30 +172,34 @@ final class WeatherBriefStore {
         if report == nil {
             state = .loading
         }
+        let previousNotice = locationNotice
+        var requestedLocation: WeatherBriefLocation?
         do {
-            if let location {
-                locationNotice = Self.notice(for: location)
-            }
             let resolvedLocation: WeatherBriefLocation?
             if let location {
                 resolvedLocation = location
             } else {
                 resolvedLocation = await resolvedWeatherLocation(mode: .useIfAuthorized)
             }
+            requestedLocation = resolvedLocation
+            if let resolvedLocation {
+                locationNotice = Self.loadingNotice(for: resolvedLocation)
+            }
             let loadedReport = try await client.fetchLatestReport(from: serverURL, location: resolvedLocation)
+            try Self.validate(loadedReport, matches: resolvedLocation)
             report = loadedReport
             cache.save(loadedReport)
+            locationNotice = Self.successNotice(for: resolvedLocation, report: loadedReport, currentNotice: locationNotice)
             manualRefreshRetryAt = nil
             cacheNotice = nil
             state = .loaded
         } catch {
-            if report != nil {
-                cacheNotice = "Pokazuję ostatni zapisany raport. Odświeżenie aktualnej pogody nie powiodło się."
-                state = .loaded
-            } else {
-                cacheNotice = nil
-                state = .failed(.network(error, context: .weather))
-            }
+            handleWeatherLoadFailure(
+                error,
+                previousNotice: previousNotice,
+                requestedLocation: requestedLocation,
+                cachedMessage: "Pokazuję ostatni zapisany raport. Odświeżenie aktualnej pogody nie powiodło się."
+            )
         }
     }
 
@@ -211,6 +241,108 @@ final class WeatherBriefStore {
             return "Bieżąca prognoza dla: Wrocław."
         }
         return "Bieżąca prognoza dla: \(location.city)."
+    }
+
+    private static func notice(for location: WeatherBriefLocation?, report: DailyWeatherReport) -> String {
+        if let location {
+            return notice(for: location)
+        }
+        return "Bieżąca prognoza dla: \(report.city)."
+    }
+
+    private static func successNotice(
+        for location: WeatherBriefLocation?,
+        report: DailyWeatherReport,
+        currentNotice: String?
+    ) -> String {
+        if location == nil, let currentNotice, currentNotice.hasPrefix("Używam pogody") {
+            return currentNotice
+        }
+        return notice(for: location, report: report)
+    }
+
+    private static func loadingNotice(for location: WeatherBriefLocation) -> String {
+        "Pobieram prognozę dla: \(location.city)..."
+    }
+
+    private static func validate(_ report: DailyWeatherReport, matches location: WeatherBriefLocation?) throws {
+        guard let location else { return }
+        guard city(report.city, matches: location.city) else {
+            throw WeatherBriefStoreError.mismatchedLocation(expected: location.city, actual: report.city)
+        }
+    }
+
+    private static func city(_ actual: String, matches expected: String) -> Bool {
+        let actualFull = normalizedCity(actual)
+        let expectedFull = normalizedCity(expected)
+        guard !actualFull.isEmpty, !expectedFull.isEmpty else { return true }
+        if actualFull == expectedFull { return true }
+
+        let actualPrimary = normalizedCity(actual.components(separatedBy: ",").first ?? actual)
+        let expectedPrimary = normalizedCity(expected.components(separatedBy: ",").first ?? expected)
+        return !actualPrimary.isEmpty
+            && !expectedPrimary.isEmpty
+            && (actualPrimary == expectedPrimary
+                || actualFull.contains(expectedPrimary)
+                || expectedFull.contains(actualPrimary))
+    }
+
+    private static func normalizedCity(_ value: String) -> String {
+        value
+            .folding(options: [.diacriticInsensitive, .caseInsensitive], locale: Locale(identifier: "pl_PL"))
+            .replacingOccurrences(of: #"[^a-z0-9]+"#, with: " ", options: .regularExpression)
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+
+    private func handleWeatherLoadFailure(
+        _ error: Error,
+        previousNotice: String?,
+        requestedLocation: WeatherBriefLocation?,
+        cachedMessage: String
+    ) {
+        locationNotice = previousNotice
+        let userError = Self.userFacingError(for: error, requestedLocation: requestedLocation)
+        if report != nil {
+            if error is WeatherBriefStoreError {
+                cacheNotice = userError.message
+            } else {
+                cacheNotice = cachedMessage
+            }
+            state = .loaded
+        } else {
+            cacheNotice = nil
+            state = .failed(userError)
+        }
+    }
+
+    private static func userFacingError(
+        for error: Error,
+        requestedLocation: WeatherBriefLocation?
+    ) -> PavbotUserFacingError {
+        if let mismatch = error as? WeatherBriefStoreError {
+            switch mismatch {
+            case .mismatchedLocation:
+                return .custom(
+                    title: "Nie udało się pobrać prognozy dla tej lokalizacji",
+                    message: mismatch.localizedDescription,
+                    actionTitle: "Odśwież ponownie",
+                    systemImage: "location.slash.fill",
+                    tint: .orange
+                )
+            }
+        }
+
+        if let requestedLocation {
+            return .custom(
+                title: "Nie udało się pobrać prognozy dla \(requestedLocation.city)",
+                message: "Sprawdź połączenie z notifierem i spróbuj ponownie. Szczegóły: \(error.localizedDescription)",
+                actionTitle: "Spróbuj ponownie",
+                systemImage: "cloud.sun.fill",
+                tint: .blue
+            )
+        }
+
+        return .network(error, context: .weather)
     }
 
     private func beginRequest(key: String, minimumInterval: TimeInterval = 0) -> Bool {
