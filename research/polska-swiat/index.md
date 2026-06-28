@@ -60,7 +60,15 @@ ukraińskich dronów na Rosję i Krym, wraca napięcie USA-Iran w Ormuz, a
 Wenezuela staje się dużym tematem humanitarnym po wzroście bilansu trzęsień
 ziemi do 1430 ofiar. Odświeżenie o 08:30 dodało nowszy blok AP: uderzenie
 Ukrainy w zakład Titan-Barrikady w Wołgogradzie i infrastrukturę paliwową oraz
-irańskie ataki na Bahrajn i Kuwejt po uderzeniach USA.
+irańskie ataki na Bahrajn i Kuwejt po uderzeniach USA. Wieczorny run
+2026-06-28-1935 potwierdził materialną aktualizację: MON po konferencji podało
+priorytety Ankary, w tym rurociągi paliwowe, przemysł obronny, odstraszanie,
+AI i daleki zasięg; PAP dopisała kolejny etap rozmów o stałej bazie USA w
+Polsce z Poznaniem i Wrocławiem jako lokalizacjami wysoko ocenianymi przez
+stronę amerykańską; RCB/RMF24/AP/Guardian przesunęły wątek pogody w stronę
+wstępnego rekordu 40,5°C w Słubicach i europejskiego bilansu nadmiarowych
+zgonów; AP rozszerzyła wątek Ukrainy na rafinerie i paliwa Rosji, a AP dodała
+ważny temat polityczny Serbii po zapowiedzi rezygnacji Aleksandara Vučicia.
 
 ## Stable Facts
 
@@ -115,6 +123,7 @@ irańskie ataki na Bahrajn i Kuwejt po uderzeniach USA.
 
 ## Recent Reports
 
+- [2026-06-28-1935](runs/2026-06-28-1935.md)
 - [2026-06-28](runs/2026-06-28.md)
 - [2026-06-27](runs/2026-06-27.md)
 - [2026-06-26](runs/2026-06-26.md)
