@@ -256,17 +256,19 @@
   `brief.pdf`, and `podcast.mp3`; final MP3 used Piper and measured about 7:42
   by `ffprobe`. PDF brief was rendered in the mobile 390 x 844 pt format and
   visually checked from PNG renders.
-- 2026-06-28: Daily tech podcast generated in fallback mode because
-  `runs/2026-06-28.md` was missing at heartbeat time; created `draft.md`,
-  `script.md`, `sources.md`, `render.json`, `brief.pdf`, and `podcast.mp3`.
-  Final MP3 used Piper and measured about 8:09 by `ffprobe`; PDF brief was
-  rendered in the mobile 390 x 844 pt format and visually checked from PNG
-  renders.
+- 2026-06-28: Initial daily tech podcast was generated in fallback mode because
+  `runs/2026-06-28.md` was missing at the early heartbeat time; this package was
+  later replaced after the normal morning research report became available.
 - 2026-06-28: Daily research run backfilled the missing normal morning report
   after the fallback podcast. Strongest podcast candidates: GPT-5.6/Mythos
   access regime, Asian Mythos/Fable alternatives, OpenAI AI hardware hiring,
   GLM-5.2 plus public disclosure, AI data-center cost politics, AI in UPI/
   Instagram/Product Hunt and orbital data-center hype-check.
+- 2026-06-28: Daily tech podcast regenerated from the normal morning research
+  report; replaced the fallback `draft.md`, `script.md`, `sources.md`,
+  `render.json`, `brief.pdf`, and `podcast.mp3`. Final MP3 used Piper and
+  measured about 7:52 by `ffprobe`; PDF brief was rendered in the mobile
+  390 x 844 pt format and visually checked from PNG renders.
 
 ## Done
 

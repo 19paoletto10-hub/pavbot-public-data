@@ -1,55 +1,48 @@
 # Pavbot Tech Podcast Draft: 2026-06-28
 
-Tryb: fallback. Dzisiejszy raport `research/tech-news/runs/2026-06-28.md`
-nie istniał w momencie uruchomienia heartbeat, więc materiał powstał z krótkiego
-fresh checku publicznych źródeł.
+Tryb: normalny. Dzisiejszy raport `research/tech-news/runs/2026-06-28.md`
+istnieje i jest główną bazą odcinka. Wcześniejszy fallback z nocy został
+zastąpiony pełniejszą wersją opartą o poranny research i fresh check źródeł.
 
-## Wybrane historie
+## Selekcja redakcyjna
 
-1. Frontier AI jest bramkowane jak infrastruktura krytyczna.
-   - OpenAI GPT-5.6 Sol/Terra/Luna pozostaje w ograniczonym preview.
-   - OpenAI publikuje system card z mocnym wątkiem cyber.
-   - Anthropic Mythos 5 wraca tylko dla wybranych organizacji, Fable 5 nadal
-     bez pełnego powrotu.
-   - Dlaczego ważne: model release staje się procesem polityczno-operacyjnym,
-     nie tylko produktowym.
+1. GPT-5.6 i Anthropic Mythos jako nowy reżim dostępu do frontier AI.
+   - OpenAI uruchomiło GPT-5.6 Sol/Terra/Luna w ograniczonym preview.
+   - Semafor i TechCrunch opisują częściowy powrót Mythos 5 do ponad 100
+     zatwierdzonych amerykańskich organizacji.
+   - Oś narracyjna: najlepsze modele stają się produktem, polityką i kontrolą
+     dostępu jednocześnie.
 
-2. Azjatyckie odpowiedzi na Mythos i Fable.
-   - TechCrunch opisuje chińskie Tulongfeng od 360 oraz japońskie Sakana Fugu.
-   - Sakana przedstawia Fugu jako modelową warstwę orkiestracji agentów,
-     nie pojedynczy klasyczny model.
-   - Dlaczego ważne: jeśli dostęp do modeli w USA jest bramkowany, rynek szuka
-     obejść, substytutów i alternatyw regionalnych.
+2. Azjatyckie i open-weight alternatywy.
+   - Sakana Fugu jako model-orkiestrator.
+   - Chińskie 360 Tulongfeng i Yitianzhen jako vendorowe modele cyber.
+   - Semgrep pokazuje GLM-5.2 jako konkurencyjny w jednym benchmarku IDOR.
+   - Oś narracyjna: ograniczenia USA mogą przyspieszać regionalizację i
+     self-hosting, zamiast zatrzymywać wyścig.
 
-3. OpenAI buduje urządzenie AI i ściąga hardware talent.
-   - TechCrunch za Bloombergiem: Paul Meade, odpowiedzialny za Vision Pro i
-     smart glasses w Apple, ma przejść do zespołu sprzętowego OpenAI.
-   - Dlaczego ważne: walka o AI przesuwa się z czatu do urządzeń, interfejsów
-     i stałej obecności asystenta.
+3. OpenAI i hardware AI.
+   - Raportowany transfer Paula Meade'a z Apple Vision Pro/smart glasses do
+     OpenAI.
+   - Oś narracyjna: walka o AI przenosi się do urządzeń kontekstowych,
+     sensorów i dystrybucji poza ekranem telefonu.
 
-4. Algorytmy społecznościowe i regulacja dziecięcego dostępu.
-   - Instagram testuje bardziej centralne ustawienia "Your Algorithm".
-   - Business Insider Polska opisuje australijski plan podwojenia kar dla
-     platform, które nie blokują nieletnich użytkowników.
-   - Dlaczego ważne: regulatorzy i platformy jednocześnie próbują przekazać
-     użytkownikowi trochę kontroli i zaostrzyć odpowiedzialność operatorów.
+4. Rachunek za data centers.
+   - White House pledge, Pallone, ONZ/UNU, Axios i Business Insider tworzą
+     spójny obraz: energia, woda, emisje i lokalny sprzeciw są już częścią
+     kosztu AI.
+   - Orbitalne data centers traktować jako hype-check, nie główną tezę.
 
-5. Compute i infrastruktura AI.
-   - TechCrunch opisuje sceptycyzm Masayoshiego Sona wobec orbitalnych data
-     center Elona Muska.
-   - Ten sam kontekst obejmuje chipy OpenAI, Groq i wynajem mocy obliczeniowej.
-   - Dlaczego ważne: koszt compute staje się strategicznym pytaniem o energię,
-     opóźnienia, kapitał i realność obietnic.
+5. AI w codziennych interfejsach.
+   - UPI w Indiach: fraud detection, onboarding głosowy/wielojęzyczny i kredyt.
+   - Instagram testuje bardziej widoczne sterowanie algorytmem.
+   - Product Hunt i HN utrzymują sygnał agentowych narzędzi i developer tooling.
 
-6. Publiczny sygnał produktowy.
-   - Product Hunt: Cloud World Model, Agent Arena, Gemini Spark, note.md,
-     Atlas, Viktor, Upstream, Framer 3.0.
-   - Hacker News: DSpark, publiczny temat o 0-dayach, narzędzia dla agentów.
-   - Dlaczego ważne: agentic AI nie jest już tylko konferencyjnym hasłem;
-     pojawia się w narzędziach dla developerów, firm i użytkowników końcowych.
+## Kontrola redakcyjna
 
-## Ton
-
-Profesjonalny, dynamiczny, bez porad medycznych, prawnych lub inwestycyjnych.
-Nie wchodzić w instrukcje cyberoperacyjne. Zostawić surowe linki w `sources.md`,
-a w mowie mówić nazwami redakcji i firm.
+- Nie opisywać technik cyber ani szczegółów publicznego disclosure z GitHuba.
+- Semgrep/GLM-5.2 przedstawiać jako wąski benchmark i sygnał ekonomii/harnessu,
+  nie jako ogólną przewagę modelu.
+- Paul Meade/OpenAI hardware przedstawiać jako wiarygodne reporting za
+  Bloombergiem, nie jako oficjalny komunikat Apple lub OpenAI.
+- Product Hunt i Hacker News traktować jako sygnał społecznościowy, nie dowód
+  adopcji.
