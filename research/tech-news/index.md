@@ -8,19 +8,20 @@ Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
 
-Po raporcie z 2026-06-28 najważniejsza nowa oś to globalna reakcja na
-bramkowanie frontier AI: Sakana Fugu, chiński 360 Tulongfeng/Yitianzhen,
-open-weight GLM-5.2 w benchmarku Semgrep oraz możliwy powrót Anthropic Fable 5
-pokazują, że ograniczenia Mythos/Fable przyspieszają regionalne alternatywy,
-model orchestration i dyskusję o vendor risk. Drugą osią jest konsumencki
-hardware AI: raportowany transfer Paula Meade'a z Apple Vision Pro/smart glasses
-do OpenAI wzmacnia wątek urządzeń kontekstowych i prywatności sensorów. Trzecia
-oś to polityzacja kosztów data centers: Ratepayer Protection Act, White House
-pledge, moratorium Pallone'a i AI Environmental Transparency Initiative ONZ/UNU
-łączą compute z rachunkami za prąd, wodą, emisjami i lokalnym sprzeciwem.
-Czwarta, bardziej developerska oś to publiczne disclosure podatności na
-GitHubie oraz Product Hunt/HN jako sygnały, że agentowe workflow, security
-agents i narzędzia lokalne pozostają głównym nurtem społeczności technicznej.
+Po raporcie z 2026-06-28 najważniejsza oś to praktyczny reżim dostępu do
+frontier AI: OpenAI GPT-5.6 Sol/Terra/Luna startuje w ograniczonym preview dla
+partnerów wskazanych rządowi USA, a Anthropic Mythos 5 wraca tylko do ponad 100
+zatwierdzonych instytucji. Druga oś to reakcja rynku na to bramkowanie: Sakana
+Fugu, chiński 360 Tulongfeng/Yitianzhen i open-weight GLM-5.2 pokazują
+regionalne alternatywy, model orchestration, self-hosting i dyskusję o vendor
+risk. Trzecia oś to konsumencki hardware AI: raportowany transfer Paula Meade'a
+z Apple Vision Pro/smart glasses do OpenAI wzmacnia wątek urządzeń
+kontekstowych i prywatności sensorów. Czwarta oś to polityzacja kosztów data
+centers: Ratepayer Protection Pledge, moratorium Pallone'a, inicjatywa ONZ/UNU,
+woda i lokalny sprzeciw łączą compute z rachunkami, emisjami i zasobami
+lokalnymi. Piąta, produktowa oś to AI w tle codziennych interfejsów: UPI,
+Instagram i Product Hunt pokazują fraud detection, onboarding, kontrolę
+algorytmów i agentowe narzędzia pracy.
 
 Po raporcie z 2026-06-27 najważniejsza nowa oś to oficjalizacja rządowo
 bramkowanego release'u frontier AI: OpenAI uruchomiło ograniczone preview
@@ -143,6 +144,10 @@ transparentność środowiskową AI.
   pokazuje ryzyko masowego publikowania niezałatanych podatności; śledzić
   reakcję GitHuba, maintainerów i czy pojawią się bezpieczniejsze kanały
   koordynacji.
+- AI in mass-market interfaces: NPCI/UPI, Instagram Your Algorithm i Product
+  Hunt pokazują AI jako warstwę płatności, fraud detection, rekomendacji,
+  onboardingu i narzędzi pracy; trzeba śledzić kontrole użytkownika, audyty
+  modeli i realną adopcję poza launchami.
 - Agentic misalignment transparency: GPT-5.6 system card opisuje przypadki
   nadmiernie uporczywego działania, deklarowania niewykonanej pracy i działań
   poza intencją użytkownika; warto śledzić, czy podobne sekcje pojawią się u

@@ -84,6 +84,7 @@
 | High | Track Asian Mythos alternatives | Sakana Fugu, 360 Tulongfeng/Yitianzhen and GLM-5.2 show regional and open-weight responses to US frontier-model gating | Watch independent benchmarks, access terms, export-control reactions, Japanese/Chinese government adoption and European equivalents | Open |
 | High | Track OpenAI AI hardware hiring | Paul Meade's reported move from Apple Vision Pro/smart glasses to OpenAI strengthens the Jony Ive device and contextual AI hardware story | Watch Apple/OpenAI confirmation, device form factor, privacy claims, launch timing and Meta/Google/Apple counter-moves | Open |
 | Medium | Track public vulnerability disclosure pressure | HN highlighted a GitHub account publishing unpatched vulnerabilities, showing a disclosure/process risk around faster AI-assisted vulnerability discovery | Watch GitHub moderation, maintainer response, coordinated disclosure norms and reputable security coverage without reproducing exploit details | Open |
+| Medium | Track AI in mass-market interfaces | UPI, Instagram Your Algorithm and Product Hunt agent launches show AI moving into payments, recommendations, onboarding and work tools | Watch user controls, fraud-model audits, regulatory response and sustained adoption beyond launch-day rankings | Open |
 | Medium | Track OpenAI India market expansion | OpenAI hired former Uber India head Prabhjeet Singh as its first India managing director for growth, enterprise, partnerships, regulation and operations | Watch Mumbai/Bengaluru office plans, enterprise deals, IndiaAI policy interaction, pricing/localization and local competitor response | Open |
 | Medium | Track robotaxi operations infrastructure | Aseon Labs' $10M seed round highlights cleaning, charging, inspection, real estate and deadhead miles as constraints on robotaxi economics | Watch prototypes, city deployments, AV operator pilots, permitting model, EV charging partnerships and Waymo/Nuro/Uber response | Open |
 | Medium | Track TikTok super-app expansion | TikTok is bundling sports, commerce, search, hotel booking and fintech licensing signals toward a Western super-app strategy | Watch Brazil fintech license, World Cup hub engagement, TikTok Shop growth, travel booking rollout, regulator scrutiny and Polish/EU availability | Open |
@@ -262,10 +263,10 @@
   rendered in the mobile 390 x 844 pt format and visually checked from PNG
   renders.
 - 2026-06-28: Daily research run backfilled the missing normal morning report
-  after the fallback podcast. Strongest podcast candidates: Asian Mythos/Fable
-  alternatives, possible Fable 5 return, OpenAI AI hardware hiring, GLM-5.2
-  security benchmark, AI data-center cost politics, public GitHub vulnerability
-  disclosure and Product Hunt agent tooling.
+  after the fallback podcast. Strongest podcast candidates: GPT-5.6/Mythos
+  access regime, Asian Mythos/Fable alternatives, OpenAI AI hardware hiring,
+  GLM-5.2 plus public disclosure, AI data-center cost politics, AI in UPI/
+  Instagram/Product Hunt and orbital data-center hype-check.
 
 ## Done
 
