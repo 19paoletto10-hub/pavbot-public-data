@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-06-28T00:15:20.883724+00:00",
+  "generatedAt": "2026-06-28T01:44:28.321677+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -12,6 +12,19 @@
       "topic": "aktualne-wydarzenia-mobile",
       "topicPath": "research/aktualne-wydarzenia-mobile",
       "cadence": "daily at 10:15 local time",
+      "sourcePath": "docs/how-to-use.md",
+      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "output": "research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf",
+      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf"
+    },
+    {
+      "id": "pavbot-aktualne-wydarzenia-mobile-19-33",
+      "name": "Pavbot Aktualne Wydarzenia Mobile 19:33",
+      "enabled": true,
+      "kind": "researchAudio",
+      "topic": "aktualne-wydarzenia-mobile",
+      "topicPath": "research/aktualne-wydarzenia-mobile",
+      "cadence": "daily at 19:33 Europe/Warsaw",
       "sourcePath": "docs/how-to-use.md",
       "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
       "output": "research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf",
@@ -55,6 +68,45 @@
       "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md"
     },
     {
+      "id": "pavbot-polska-wiat-research-19-33",
+      "name": "Pavbot Polska Świat Research 19:33",
+      "enabled": true,
+      "kind": "research",
+      "topic": "polska-swiat",
+      "topicPath": "research/polska-swiat",
+      "cadence": "daily at 19:33 Europe/Warsaw",
+      "sourcePath": "docs/how-to-use.md",
+      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "output": "research/polska-swiat/runs/YYYY-MM-DD-HHMM.md",
+      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/YYYY-MM-DD-HHMM.md"
+    },
+    {
+      "id": "pavbot-puls-dnia-news-3h",
+      "name": "Pavbot Puls Dnia 3h",
+      "enabled": true,
+      "kind": "automation",
+      "topic": "puls-dnia-news",
+      "topicPath": "research/puls-dnia-news",
+      "cadence": "06:00, 09:00, 12:00, 15:00, 18:00 and 21:00 Europe/Warsaw",
+      "sourcePath": "docs/how-to-use.md",
+      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "output": "research/puls-dnia-news/data/YYYY-MM-DD-HHMM-pulse-news.json",
+      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/YYYY-MM-DD-HHMM-pulse-news.json"
+    },
+    {
+      "id": "pavbot-reddit-safari-humor-radar",
+      "name": "Pavbot Reddit Safari Humor Radar",
+      "enabled": true,
+      "kind": "automation",
+      "topic": "reddit-radar",
+      "topicPath": "research/reddit-radar",
+      "cadence": "every 2 hours at :06 Europe/Warsaw",
+      "sourcePath": "docs/how-to-use.md",
+      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "output": "research/reddit-radar/runs/YYYY-MM-DD-HHMM-reddit-radar.md",
+      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/YYYY-MM-DD-HHMM-reddit-radar.md"
+    },
+    {
       "id": "pavbot-tech-podcast-09-00",
       "name": "Pavbot Tech Podcast 09:00",
       "enabled": true,
@@ -77,6 +129,19 @@
       "cadence": "daily at 08:00 local time",
       "sourcePath": "docs/how-to-use.md",
       "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md"
+    },
+    {
+      "id": "pavbot-tech-research-19-33",
+      "name": "Pavbot Tech Research 19:33",
+      "enabled": true,
+      "kind": "research",
+      "topic": "tech-news",
+      "topicPath": "research/tech-news",
+      "cadence": "daily at 19:33 Europe/Warsaw",
+      "sourcePath": "docs/how-to-use.md",
+      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "output": "research/tech-news/runs/YYYY-MM-DD-HHMM.md",
+      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/YYYY-MM-DD-HHMM.md"
     }
   ],
   "topics": [
@@ -114,6 +179,13 @@
       "path": "research/puls-dnia-news",
       "topicFilePath": "research/puls-dnia-news/topic.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/topic.md"
+    },
+    {
+      "slug": "reddit-radar",
+      "title": "Topic Contract: reddit-radar",
+      "path": "research/reddit-radar",
+      "topicFilePath": "research/reddit-radar/topic.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/topic.md"
     },
     {
       "slug": "tech-news",
@@ -183,6 +255,72 @@
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-06-28/podcast.mp3",
       "sizeBytes": 3864489,
       "date": "2026-06-28"
+    },
+    {
+      "id": "research/reddit-radar/runs/2026-06-28-0206-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar 2026-06-28-0206",
+      "path": "research/reddit-radar/runs/2026-06-28-0206-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-06-28-0206-reddit-radar.md",
+      "sizeBytes": 14482,
+      "date": "2026-06-28",
+      "time": "02:06"
+    },
+    {
+      "id": "research/reddit-radar/runs/2026-06-28-0028-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar 2026-06-28-0028",
+      "path": "research/reddit-radar/runs/2026-06-28-0028-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-06-28-0028-reddit-radar.md",
+      "sizeBytes": 12513,
+      "date": "2026-06-28",
+      "time": "00:28"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-06-28-0206-reddit-radar-raw.json",
+      "type": "redditRadarRawData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar raw data",
+      "path": "research/reddit-radar/data/2026-06-28-0206-reddit-radar-raw.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-06-28-0206-reddit-radar-raw.json",
+      "sizeBytes": 73055,
+      "date": "2026-06-28",
+      "time": "02:06"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-06-28-0028-reddit-radar-raw.json",
+      "type": "redditRadarRawData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar raw data",
+      "path": "research/reddit-radar/data/2026-06-28-0028-reddit-radar-raw.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-06-28-0028-reddit-radar-raw.json",
+      "sizeBytes": 69644,
+      "date": "2026-06-28",
+      "time": "00:28"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-06-28-0206-reddit-radar.json",
+      "type": "redditRadarData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar data",
+      "path": "research/reddit-radar/data/2026-06-28-0206-reddit-radar.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-06-28-0206-reddit-radar.json",
+      "sizeBytes": 21187,
+      "date": "2026-06-28",
+      "time": "02:06"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-06-28-0028-reddit-radar.json",
+      "type": "redditRadarData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar data",
+      "path": "research/reddit-radar/data/2026-06-28-0028-reddit-radar.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-06-28-0028-reddit-radar.json",
+      "sizeBytes": 20093,
+      "date": "2026-06-28",
+      "time": "00:28"
     },
     {
       "id": "research/llm-ai-jobs-wroclaw/runs/2026-06-28-0141.md",
@@ -3260,6 +3398,15 @@
       "path": "research/tech-news/automation-podcast-prompt.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/automation-podcast-prompt.md",
       "sizeBytes": 2932
+    },
+    {
+      "id": "research/reddit-radar/topic.md",
+      "type": "topic",
+      "topic": "reddit-radar",
+      "title": "Topic Contract: reddit-radar",
+      "path": "research/reddit-radar/topic.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/topic.md",
+      "sizeBytes": 1208
     },
     {
       "id": "research/puls-dnia-news/index.md",
