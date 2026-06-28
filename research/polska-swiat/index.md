@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-06-27
+Last updated: 2026-06-28
 
 ## Current Understanding
 
@@ -52,6 +52,13 @@ umów, w tym kilkanaście z udziałem polskich podmiotów. Jednocześnie
 polsko-ukraiński spór orderowy stał się tematem zagranicznych omówień i
 sondażu Onetu, a główny blok bezpieczeństwa przesunął się ku wschodniej flance,
 Krymowi, możliwym prowokacjom Rosji i przygotowaniom do szczytu NATO w Ankarze.
+Po runie 28 czerwca główny ciężar przesuwa się na przygotowania do szczytu NATO
+w Ankarze: nieformalny szczyt prezydentów regionu w Juracie, dzisiejsze
+obchody Czerwca 1956 w Poznaniu z udziałem prezydentów regionu, konferencję MON
+i zapowiedzianą umowę Orka A26 ze Szwecją. W świecie równolegle rośnie presja
+ukraińskich dronów na Rosję i Krym, wraca napięcie USA-Iran w Ormuz, a
+Wenezuela staje się dużym tematem humanitarnym po wzroście bilansu trzęsień
+ziemi do 1430 ofiar.
 
 ## Stable Facts
 
@@ -101,9 +108,12 @@ Krymowi, możliwym prowokacjom Rosji i przygotowaniom do szczytu NATO w Ankarze.
 - Wątek URC po 26 czerwca omawiać dwutorowo: oficjalny bilans gospodarczo-
   instytucjonalny jest mocny, ale przekaz medialny obciążają nieobecność
   prezydentów i spór orderowy.
+- Po wejściu strukturalnego `researchData` pilnować, aby każdy poranny raport
+  miał sekcję `Artykuły do aplikacji`; brak tej sekcji blokuje JSON i publikację.
 
 ## Recent Reports
 
+- [2026-06-28](runs/2026-06-28.md)
 - [2026-06-27](runs/2026-06-27.md)
 - [2026-06-26](runs/2026-06-26.md)
 - [2026-06-25](runs/2026-06-25.md)

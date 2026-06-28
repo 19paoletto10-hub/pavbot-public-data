@@ -65,6 +65,12 @@
   and Russia-provocation risk, AP/USGS for Venezuela earthquake impact, and RCB
   for weekend heat/susza/fire risk. Podcast should avoid letting the order
   dispute erase the concrete URC output; both strands need to be kept separate.
+- 2026-06-28: Sunday research run created a material update and used the
+  expanded app-reader contract. Strongest sources were Prezydent RP/WP for
+  Jurata and Poznań, MON for Ankara and Orka A26, AP for Ukraine drones, Iran
+  and Venezuela, Guardian for Crimea/provocation risk, and RCB/AP for heat and
+  public-safety risks. Follow-up: confirm on 29 June whether the A26/Orka
+  contract was signed and record terms if public.
 
 ## Done
 
