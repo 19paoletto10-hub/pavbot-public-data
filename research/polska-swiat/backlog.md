@@ -70,7 +70,9 @@
   Jurata and Poznań, MON for Ankara and Orka A26, AP for Ukraine drones, Iran
   and Venezuela, Guardian for Crimea/provocation risk, and RCB/AP for heat and
   public-safety risks. Follow-up: confirm on 29 June whether the A26/Orka
-  contract was signed and record terms if public.
+  contract was signed and record terms if public. The 08:30 refresh added newer
+  AP updates on Ukraine striking Titan-Barrikady/energy logistics and Iran
+  attacking Bahrain/Kuwait after U.S. strikes.
 
 ## Done
 

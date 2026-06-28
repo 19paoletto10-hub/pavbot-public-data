@@ -58,7 +58,9 @@ obchody Czerwca 1956 w Poznaniu z udziałem prezydentów regionu, konferencję M
 i zapowiedzianą umowę Orka A26 ze Szwecją. W świecie równolegle rośnie presja
 ukraińskich dronów na Rosję i Krym, wraca napięcie USA-Iran w Ormuz, a
 Wenezuela staje się dużym tematem humanitarnym po wzroście bilansu trzęsień
-ziemi do 1430 ofiar.
+ziemi do 1430 ofiar. Odświeżenie o 08:30 dodało nowszy blok AP: uderzenie
+Ukrainy w zakład Titan-Barrikady w Wołgogradzie i infrastrukturę paliwową oraz
+irańskie ataki na Bahrajn i Kuwejt po uderzeniach USA.
 
 ## Stable Facts
 
