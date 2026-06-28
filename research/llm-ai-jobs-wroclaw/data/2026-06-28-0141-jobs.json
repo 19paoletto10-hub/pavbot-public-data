@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-28",
+  "runTime": "01:41",
+  "executiveSummary": "Ta runda dołożyła nowy mikroklaster ról hands-on wokół People Trust, Cyclad, IN4GE, SOFTWARELY, SQUARE ONE i CodiLime. Najmocniejszy sygnał to People Trust Senior AI/LLM Engineer: rola jest wyraźnie produktowa, obejmuje LLM, RAG, Agents i MLOps, ma jawne widełki oraz dwa wakaty. Lokalnie najciekawszy jest Cyclad Software Developer (React + Python + AI) z Wrocławia i pracą zdalną z Polski. Do tego doszedł nowy IN4GE Senior GCP AI Developer oraz dwa remote-first role genAI: SOFTWARELY Python + GenAI Developer i SQUARE ONE Python Developer (LLM). CodiLime jest bardzo mocnym technicznie leadem, ale publiczne oznaczenia geograficzne są niespójne, więc traktuję go z lekką niepewnością.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior AI/LLM Engineer",
+      "company": "People Trust",
+      "location": "Remote Poland / Whole Poland (remote work).",
+      "workMode": "Remote",
+      "compensation": "170-220 PLN netto (+ VAT) / godz. B2B.",
+      "seniority": "Senior",
+      "fitSummary": "opis obejmuje LLM, RAG, Agents i MLOps, więc rola dotyczy praktycznych systemów AI, a nie ogólnego software developmentu.",
+      "whyInteresting": "to najbardziej bezpośredni produktowy sygnał AI/LLM w tej rundzie, z jawnymi widełkami i dwoma wakatami.",
+      "uncertainty": "niska; to bezpośredni publiczny listing Pracuj.pl z jasnym opisem i zakresem.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/senior-ai-llm-engineer-warszawa%2Coferta%2C1004930276"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "MLOps"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Software Developer (React + Python + AI)",
+      "company": "Cyclad",
+      "location": "Wrocław plus remote from Poland.",
+      "workMode": "Remote",
+      "compensation": "130-150 PLN netto (+ VAT) / godz. na karcie pracodawcy; 130-160 PLN net/h B2B na Just Join IT.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "opis i mirrory pokazują React, Next.js, TypeScript, Python, FastAPI i pracę nad aplikacjami AI.",
+      "whyInteresting": "łączy Wrocław z realnym AI-enhanced full-stack scope, więc jest wartościowym lokalnym sygnałem hands-on.",
+      "uncertainty": "średnia; widełki różnią się między publicznymi mirrorami.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/software-developer-react-%2B-python-%2B-ai-wroclaw%2Coferta%2C1004921596",
+        "https://justjoin.it/job-offer/cyclad-software-developer-react-python-ai--wroclaw-python",
+        "https://theprotocol.it/praca/software-developer-react-python-ai-wroclaw%2Coferta%2C90930000-5d99-4a0e-9217-08ded1364658"
+      ],
+      "tags": [
+        "Python"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior GCP AI Developer",
+      "company": "IN4GE",
+      "location": "Cała Polska (praca zdalna).",
+      "workMode": "Remote",
+      "compensation": "140-170 zł netto (+ VAT) / godz. B2B.",
+      "seniority": "Senior",
+      "fitSummary": "tytuł i opis obejmują Python, GCP, GenAI, LLM, RAG oraz fine-tuning.",
+      "whyInteresting": "to nowy remote-Poland sygnał z wyraźnym GCP/GenAI scope i dobrymi widełkami.",
+      "uncertainty": "niska do średniej; publiczna oferta jest konkretna, ale IN4GE szybko obraca podobne role.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/senior-gcp-ai-developer-warszawa%2Coferta%2C1004912936"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI",
+        "Python",
+        "GCP"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Python + GenAI Developer",
+      "company": "SOFTWARELY",
+      "location": "Praca zdalna, baza Warszawa.",
+      "workMode": "Remote",
+      "compensation": "160-180 PLN netto (+ VAT) / godz..",
+      "seniority": "Nieokreślony",
+      "fitSummary": "rola obejmuje Python, LLM, OpenAI, GPT, RAG, LangChain, PostgreSQL i MySQL.",
+      "whyInteresting": "to bardzo bezpośredni backendowy sygnał GenAI z publicznymi widełkami i prostym stackiem.",
+      "uncertainty": "niska; listing jest publiczny i spójny z publicznym mirrorem.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/python-%2B-genai-developer-warszawa-nowowiejska-15-19%2Coferta%2C1004907786",
+        "https://theprotocol.it/szczegoly/praca/python-genai-developer-warszawa-nowowiejska-15-19%2Coferta%2C27c20000-b0d8-b6df-ffea-08deaff8072f"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI",
+        "Python"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Python Developer (LLM)",
+      "company": "SQUARE ONE",
+      "location": "Whole Poland (remote work).",
+      "workMode": "Remote",
+      "compensation": "160-175 PLN netto (+ VAT) / godz. B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "opis wskazuje na Python, LangChain i LlamaIndex, czyli klasyczny produkcyjny stack LLM.",
+      "whyInteresting": "to bardziej wyspecjalizowany LLM backend niż szeroka rola GenAI, więc dobrze wzmacnia temat.",
+      "uncertainty": "niska do średniej; listing jest publiczny, ale to nadal board-first źródło.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/python-developer-llm-warszawa%2Coferta%2C1004878344",
+        "https://theprotocol.it/praca/python-developer-llm-warszawa%2Coferta%2C90930000-5db9-4a0e-9466-08deacc83228"
+      ],
+      "tags": [
+        "LLM",
+        "GenAI",
+        "Python"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Mid/Senior AI engineer with networking experience",
+      "company": "CodiLime",
+      "location": "Fully Remote; publiczne markery geograficzne są jednak niespójne, więc Polska jest prawdopodobna, ale nie w pełni potwierdzona.",
+      "workMode": "Remote",
+      "compensation": "16 000-25 000 PLN + VAT B2B.",
+      "seniority": "Senior",
+      "fitSummary": "opis obejmuje LLM-driven workflows, LangChain, LangGraph, semantic search, vector databases, RAG, evaluation i MCP.",
+      "whyInteresting": "technicznie mocny sygnał na przecięciu AI, wyszukiwania semantycznego i networkingowego domenowego know-how.",
+      "uncertainty": "średnia; najlepszy lead jest na publicznej stronie CodiLime, ale geo wymaga ponownej weryfikacji.",
+      "sourceURLs": [
+        "https://jobs.codilime.com/jobs/7910871-mid-senior-ai-engineer-with-networking-experience",
+        "https://jobs.codilime.com/jobs"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano pięć nowych, w pełni in-scope ról: People Trust Senior AI/LLM Engineer, Cyclad Software Developer (React + Python + AI), IN4GE Senior GCP AI Developer, SOFTWARELY Python + GenAI Developer oraz SQUARE ONE Python Developer (LLM).",
+    "CodiLime dołączył jako nowy technicznie mocny lead z lekką niepewnością geograficzną.",
+    "Nie wykryto materialnej zmiany w już śledzonych ofertach z ITDS, Axabee, 4soft, ITEAMLY, ACAISOFT ani w istniejących wpisach IN4GE i DataArt."
+  ],
+  "risks": [
+    "CodiLime ma niespójne markery lokalizacji na publicznych stronach, więc warto go potwierdzić jeszcze raz przed traktowaniem jako czystą ofertę dla Polski.",
+    "Cyclad pokazuje różne widełki w publicznych mirrorach, więc salary trzeba traktować jako przybliżone do czasu potwierdzenia na stabilniejszym źródle.",
+    "Boardowe i publiczne mirrorowe oferty z tej rundy mogą szybko zmienić status lub nazwę, więc next-run powinien najpierw sprawdzić kanoniczne URL-e."
+  ],
+  "recommendedActions": [
+    "Utrzymywać na watchliście People Trust, Cyclad, IN4GE Senior GCP AI Developer, SOFTWARELY, SQUARE ONE i CodiLime.",
+    "Ponownie potwierdzić geografię CodiLime i zakres dostępności dla Polski.",
+    "Obserwować drift wynagrodzeń w Cyclad oraz ewentualne zmiany statusu w SOFTWARELY i SQUARE ONE."
+  ],
+  "checkedSources": [
+    {
+      "title": "People Trust - Senior AI/LLM Engineer",
+      "url": "https://www.pracuj.pl/praca/senior-ai-llm-engineer-warszawa%2Coferta%2C1004930276",
+      "status": "checked"
+    },
+    {
+      "title": "Cyclad - Software Developer (React + Python + AI)",
+      "url": "https://www.pracuj.pl/praca/software-developer-react-%2B-python-%2B-ai-wroclaw%2Coferta%2C1004921596",
+      "status": "checked"
+    },
+    {
+      "title": "Cyclad - public mirror on Just Join IT",
+      "url": "https://justjoin.it/job-offer/cyclad-software-developer-react-python-ai--wroclaw-python",
+      "status": "checked"
+    },
+    {
+      "title": "Cyclad - public mirror on the:protocol",
+      "url": "https://theprotocol.it/praca/software-developer-react-python-ai-wroclaw%2Coferta%2C90930000-5d99-4a0e-9217-08ded1364658",
+      "status": "checked"
+    },
+    {
+      "title": "IN4GE - Senior GCP AI Developer",
+      "url": "https://www.pracuj.pl/praca/senior-gcp-ai-developer-warszawa%2Coferta%2C1004912936",
+      "status": "checked"
+    },
+    {
+      "title": "SOFTWARELY - Python + GenAI Developer",
+      "url": "https://www.pracuj.pl/praca/python-%2B-genai-developer-warszawa-nowowiejska-15-19%2Coferta%2C1004907786",
+      "status": "checked"
+    },
+    {
+      "title": "SOFTWARELY - public mirror on the:protocol",
+      "url": "https://theprotocol.it/szczegoly/praca/python-genai-developer-warszawa-nowowiejska-15-19%2Coferta%2C27c20000-b0d8-b6df-ffea-08deaff8072f",
+      "status": "checked"
+    },
+    {
+      "title": "SQUARE ONE - Python Developer (LLM)",
+      "url": "https://www.pracuj.pl/praca/python-developer-llm-warszawa%2Coferta%2C1004878344",
+      "status": "checked"
+    },
+    {
+      "title": "SQUARE ONE - public mirror on the:protocol",
+      "url": "https://theprotocol.it/praca/python-developer-llm-warszawa%2Coferta%2C90930000-5db9-4a0e-9466-08deacc83228",
+      "status": "checked"
+    },
+    {
+      "title": "CodiLime careers",
+      "url": "https://jobs.codilime.com/jobs/7910871-mid-senior-ai-engineer-with-networking-experience",
+      "status": "checked"
+    },
+    {
+      "title": "CodiLime openings",
+      "url": "https://jobs.codilime.com/jobs",
+      "status": "checked"
+    }
+  ]
+}
