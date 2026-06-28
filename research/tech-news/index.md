@@ -8,6 +8,20 @@ Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
 
+Po wieczornym raporcie z 2026-06-28-1935 najważniejsza nowa warstwa to
+operacyjny reżim dostępu do AI compute: Reuters/FT podały, że Google
+ograniczyło Meta użycie Gemini, bo popyt Meta przekroczył dostępną pojemność.
+To przesuwa wątek z samego bramkowania modeli GPT-5.6/Mythos na pytanie, kto
+ma gwarantowany capacity, token budget i fallback, gdy nawet duży dostawca
+zaczyna racjonować usługę. Druga warstwa to pamięć jako realny koszt AI:
+TechCrunch/Micron i Tom's Hardware/DDR5 pokazują jednocześnie boom giełdowy HBM
+oraz konsumencki RAMageddon. Trzecia warstwa to regionalizacja AI factories:
+Firmus/NVIDIA wzmacnia APAC jako osobny front AI cloud dla firm AI-native.
+Czwarta warstwa to społeczny backlash wobec technologii działającej w tle:
+Flock AI-surveillance i globalne zakazy social mediów dla nastolatków pokazują,
+że regulacje będą dotyczyć nie tylko modeli, ale też kamer, feedów, wieku i
+zaufania do platform.
+
 Po raporcie z 2026-06-28 najważniejsza oś to praktyczny reżim dostępu do
 frontier AI: OpenAI GPT-5.6 Sol/Terra/Luna startuje w ograniczonym preview dla
 partnerów wskazanych rządowi USA, a Anthropic Mythos 5 wraca tylko do ponad 100
@@ -126,6 +140,23 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- Inter-Big-Tech AI capacity rationing: Reuters/FT o ograniczeniu Gemini dla
+  Meta trzeba śledzić jako sygnał, że compute, token budget, capacity
+  guarantees i model fallback stają się strategicznym ryzykiem nawet między
+  największymi firmami AI.
+- AI memory consumer spillover: Micron/TechCrunch i Tom's Hardware/DDR5
+  wzmacniają wątek, że HBM/DRAM/NAND są kosztowym wąskim gardłem AI, a
+  podwyżki pamięci mogą przechodzić na PC, laptopy, konsole i urządzenia
+  konsumenckie.
+- Regional AI clouds and APAC AI factories: Firmus/NVIDIA trzeba śledzić jako
+  przykład budowy regionalnej pojemności AI dla firm AI-native, sovereign AI i
+  klientów poza klasycznym hyperscaler stackiem.
+- AI-enhanced surveillance infrastructure: Flock Safety pokazuje, że kamery z
+  natural-language search mogą zamienić monitoring w wyszukiwarkę świata
+  fizycznego; śledzić audyty, warrant requirements, podatności i lokalne zakazy.
+- Social media age-ban regulation: UK, Australia i kolejne kraje przesuwają się
+  w stronę twardych limitów wiekowych; śledzić egzekwowanie wieku, obchodzenie
+  zakazów, DSA, reakcje platform i polskie odpowiedniki.
 - Official GPT-5.6 rollout and system card: śledzić przejście z ograniczonego
   preview do szerszej dostępności ChatGPT/Codex/API, partnerów, politykę
   rządowego dostępu, realne ceny, cache breakpoints, Sol na Cerebras,

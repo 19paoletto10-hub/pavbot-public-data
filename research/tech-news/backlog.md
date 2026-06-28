@@ -4,6 +4,10 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Gemini capacity rationing for Meta | Reuters/FT reporting suggests even Meta can hit external model capacity limits when using Gemini internally | Watch Google/Meta comments, customer limits, token-efficiency policies, fallback to Meta models and similar capacity disputes | Open |
+| High | Track APAC regional AI clouds | Firmus/Nvidia adds a large Asia-Pacific AI factory signal for AI-native customers outside classic hyperscaler access | Recheck GPU delivery schedule, Batam/Project Southgate permits, customer commitments, financing and European analogs | Open |
+| High | Track Flock AI surveillance | Flock cameras show natural-language search over physical-world video plus governance, misuse and security concerns | Watch audits, local bans, warrant requirements, ACLU/404 follow-ups and vendor security responses | Open |
+| Medium | Track social media age-ban regulation | The Guardian frames UK/Australia-style under-16 limits as a global regulatory tipping point for platform trust | Watch UK implementation, EU/DSA spillover, age assurance, platform lobbying and Polish policy debate | Open |
 | High | Review first three generated podcasts | Confirms pacing, topic selection, MP3 generation, and Polish narration quality | Listen to each MP3 and record notes | Open |
 | Medium | Improve Reddit fallback | Direct public Reddit fetch failed in this run, limiting community-signal coverage | Decide whether HN plus secondary reporting is enough or add another public Reddit access path | Open |
 | Medium | Tune source allowlist | Repeated good sources should become explicit topic guidance | Review source quality after three runs | Open |
@@ -269,6 +273,11 @@
   `render.json`, `brief.pdf`, and `podcast.mp3`. Final MP3 used Piper and
   measured about 7:52 by `ffprobe`; PDF brief was rendered in the mobile
   390 x 844 pt format and visually checked from PNG renders.
+- 2026-06-28: Evening tech research run created a timestamped material update.
+  Strongest podcast candidates: Google limiting Meta's Gemini capacity, Micron
+  and DDR5/RAMageddon, Firmus/Nvidia regional AI factories, Flock
+  AI-surveillance, global social media age bans and practical agent tooling via
+  Product Hunt/HN.
 
 ## Done
 
