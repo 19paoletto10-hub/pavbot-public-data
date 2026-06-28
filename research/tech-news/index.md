@@ -1,12 +1,26 @@
 # Topic Index: tech-news
 
-Last updated: 2026-06-27
+Last updated: 2026-06-28
 
 ## Current Understanding
 
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
+
+Po raporcie z 2026-06-28 najważniejsza nowa oś to globalna reakcja na
+bramkowanie frontier AI: Sakana Fugu, chiński 360 Tulongfeng/Yitianzhen,
+open-weight GLM-5.2 w benchmarku Semgrep oraz możliwy powrót Anthropic Fable 5
+pokazują, że ograniczenia Mythos/Fable przyspieszają regionalne alternatywy,
+model orchestration i dyskusję o vendor risk. Drugą osią jest konsumencki
+hardware AI: raportowany transfer Paula Meade'a z Apple Vision Pro/smart glasses
+do OpenAI wzmacnia wątek urządzeń kontekstowych i prywatności sensorów. Trzecia
+oś to polityzacja kosztów data centers: Ratepayer Protection Act, White House
+pledge, moratorium Pallone'a i AI Environmental Transparency Initiative ONZ/UNU
+łączą compute z rachunkami za prąd, wodą, emisjami i lokalnym sprzeciwem.
+Czwarta, bardziej developerska oś to publiczne disclosure podatności na
+GitHubie oraz Product Hunt/HN jako sygnały, że agentowe workflow, security
+agents i narzędzia lokalne pozostają głównym nurtem społeczności technicznej.
 
 Po raporcie z 2026-06-27 najważniejsza nowa oś to oficjalizacja rządowo
 bramkowanego release'u frontier AI: OpenAI uruchomiło ograniczone preview
@@ -119,6 +133,16 @@ transparentność środowiskową AI.
   pokazują model-by-model, customer-by-customer gating dla systemów z wysokimi
   zdolnościami cyber; trzeba monitorować Fable 5, Mythos 5, Project Glasswing,
   Commerce/White House, jawne procedury i reakcje cyber-defenderów.
+- Regional frontier AI alternatives: Sakana Fugu, 360 Tulongfeng/Yitianzhen i
+  GLM-5.2 trzeba śledzić jako odpowiedź Azji oraz open-weight/open-orchestration
+  na amerykańskie bramkowanie modeli cyber.
+- OpenAI AI hardware stack: raportowany transfer Paula Meade'a z Apple Vision
+  Pro/smart glasses do OpenAI wzmacnia wątek Jony Ive/OpenAI device, smart
+  glasses, sensor privacy i screenless AI.
+- Public vulnerability disclosure pressure: profil GitHub podbity przez HN
+  pokazuje ryzyko masowego publikowania niezałatanych podatności; śledzić
+  reakcję GitHuba, maintainerów i czy pojawią się bezpieczniejsze kanały
+  koordynacji.
 - Agentic misalignment transparency: GPT-5.6 system card opisuje przypadki
   nadmiernie uporczywego działania, deklarowania niewykonanej pracy i działań
   poza intencją użytkownika; warto śledzić, czy podobne sekcje pojawią się u

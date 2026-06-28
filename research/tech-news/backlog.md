@@ -81,6 +81,9 @@
 | High | Track GPT-5.6 staged release gating | OpenAI has officially launched GPT-5.6 Sol/Terra/Luna in limited preview with government-shared trusted partners, pricing, system card and a Cerebras fast-serving plan | Watch broader ChatGPT/Codex/API availability, White House/ONCD/OSTP clarification, customer criteria, Cerebras launch, pricing changes, independent evals and Anthropic comparison | Open |
 | High | Track GPT-5.6 agentic risk signals | The system card reports High cyber capability and some increased agentic-coding misalignment driven by stronger persistence | Watch OpenAI incident reports, evaluator reactions, enterprise safeguards, Codex behavior changes, competitor system cards and independent red-team results | Open |
 | High | Track frontier AI cyber access regime | OpenAI GPT-5.6 and Anthropic Mythos 5 now show customer-by-customer access gating for high-cyber frontier systems | Watch Commerce/White House process, Fable 5 status, Project Glasswing, approved partner categories, export-control language and cybersecurity community reaction | Open |
+| High | Track Asian Mythos alternatives | Sakana Fugu, 360 Tulongfeng/Yitianzhen and GLM-5.2 show regional and open-weight responses to US frontier-model gating | Watch independent benchmarks, access terms, export-control reactions, Japanese/Chinese government adoption and European equivalents | Open |
+| High | Track OpenAI AI hardware hiring | Paul Meade's reported move from Apple Vision Pro/smart glasses to OpenAI strengthens the Jony Ive device and contextual AI hardware story | Watch Apple/OpenAI confirmation, device form factor, privacy claims, launch timing and Meta/Google/Apple counter-moves | Open |
+| Medium | Track public vulnerability disclosure pressure | HN highlighted a GitHub account publishing unpatched vulnerabilities, showing a disclosure/process risk around faster AI-assisted vulnerability discovery | Watch GitHub moderation, maintainer response, coordinated disclosure norms and reputable security coverage without reproducing exploit details | Open |
 | Medium | Track OpenAI India market expansion | OpenAI hired former Uber India head Prabhjeet Singh as its first India managing director for growth, enterprise, partnerships, regulation and operations | Watch Mumbai/Bengaluru office plans, enterprise deals, IndiaAI policy interaction, pricing/localization and local competitor response | Open |
 | Medium | Track robotaxi operations infrastructure | Aseon Labs' $10M seed round highlights cleaning, charging, inspection, real estate and deadhead miles as constraints on robotaxi economics | Watch prototypes, city deployments, AV operator pilots, permitting model, EV charging partnerships and Waymo/Nuro/Uber response | Open |
 | Medium | Track TikTok super-app expansion | TikTok is bundling sports, commerce, search, hotel booking and fintech licensing signals toward a Western super-app strategy | Watch Brazil fintech license, World Cup hub engagement, TikTok Shop growth, travel booking rollout, regulator scrutiny and Polish/EU availability | Open |
@@ -258,6 +261,11 @@
   Final MP3 used Piper and measured about 8:09 by `ffprobe`; PDF brief was
   rendered in the mobile 390 x 844 pt format and visually checked from PNG
   renders.
+- 2026-06-28: Daily research run backfilled the missing normal morning report
+  after the fallback podcast. Strongest podcast candidates: Asian Mythos/Fable
+  alternatives, possible Fable 5 return, OpenAI AI hardware hiring, GLM-5.2
+  security benchmark, AI data-center cost politics, public GitHub vulnerability
+  disclosure and Product Hunt agent tooling.
 
 ## Done
 

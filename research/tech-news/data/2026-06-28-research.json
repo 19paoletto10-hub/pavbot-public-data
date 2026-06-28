@@ -1,0 +1,408 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-06-28",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run jest materialną aktualizacją. Najważniejsza zmiana po raporcie z 2026-06-27 to globalna reakcja na amerykańskie bramkowanie frontier AI: TechCrunch opisał Sakana Fugu i chiński 360 Tulongfeng/Yitianzhen jako regionalne odpowiedzi na ograniczenia Anthropic Mythos/Fable, a Semgrep pokazał, że open-weight GLM-5.2 może być realnie konkurencyjny w wybranym zadaniu security reasoning. Równolegle Axios podał, że Fable 5 może wrócić w najbliższych dniach, więc temat przesuwa się z \"ban albo brak bana\" do bardziej trwałego pytania: kto kontroluje dostęp do modeli o wysokich zdolnościach cyber i jak szybko rynek buduje obejścia vendor-lock-in.",
+    "Druga oś to konsumencki sprzęt AI. TechCrunch i Engadget za Bloombergiem raportują, że Paul Meade, wiceprezes Apple odpowiedzialny za Vision Pro i prace nad smart glasses, ma przejść do zespołu hardware OpenAI. W połączeniu z projektem Jony'ego Ive'a i artykułem The Times o wyścigu po \"iPhone killer\" tworzy to mocny temat podcastowy o przejściu AI z aplikacji i okien czatu do urządzeń stale obserwujących otoczenie.",
+    "Trzecia oś to rosnąca cena infrastruktury: Kongres USA, Pallone, White House pledge i ONZ/UNU przesuwają dyskusję o data centers z \"czy mamy wystarczająco compute\" na \"kto płaci za prąd, sieć, wodę, emisje i lokalne ryzyka\". To nie jest nowe jako problem, ale dzisiaj ma więcej dowodów politycznych i społecznościowych, w tym mocne sygnały z Reddita."
+  ],
+  "summaryBullets": [
+    "AI: Azja odpowiada na bramkowanie Mythos",
+    "Regulacje: Fable 5 może wrócić, ale precedens zostaje",
+    "Produkty: OpenAI zbiera zespół pod urządzenia AI"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-06-28-0-azja-odpowiada-na-bramkowanie-mythos-a18835db10",
+      "section": "AI",
+      "title": "Azja odpowiada na bramkowanie Mythos",
+      "standfirst": "Sakana AI i chiński 360 pokazują, że ograniczenia dostępu do Anthropic Mythos/Fable nie zatrzymują wyścigu. Przesuwają go w stronę regionalnych modeli, orkiestracji wielu LLM-ów i lokalnych narzędzi cyber.",
+      "whatHappened": "TechCrunch opisał Sakana Fugu oraz 360 Tulongfeng/Yitianzhen jako odpowiedź rynku azjatyckiego na amerykańskie bramkowanie modeli frontier.",
+      "whyItMatters": "Jeśli dostęp do modeli cyber może zniknąć z dnia na dzień, firmy i państwa będą budować lokalne alternatywy zamiast czekać na decyzje USA.",
+      "deeperAnalysis": [
+        "Sakana Fugu jest szczególnie ciekawy, bo nie próbuje wygrać wyłącznie skalą jednego modelu. Firma opisuje go jako model-orkiestrator, który wybiera modele-workerów, deleguje podzadania i scala wynik przez pojedyncze API. To inny rodzaj niezależności: mniej \"mamy największy model\", bardziej \"nie jesteśmy zależni od jednego dostawcy\".",
+        "Chiński 360 idzie bardziej bezpośrednio w narrację cyber-suwerenności. Tulongfeng ma wykrywać podatności, a Yitianzhen automatyzować obronę i incident response. SC Media podaje claim o 3 432 znalezionych podatnościach i 105 potwierdzonych przez chińskie władze, ale to nadal claim vendorowy i wymaga ostrożnego opowiadania.",
+        "Wspólny sens jest jednak mocny: amerykańskie bramki bezpieczeństwa tworzą bodziec do fragmentacji rynku. Zamiast jednego globalnego launchu frontier AI mamy model, w którym Japonia, Chiny, USA i Europa będą coraz częściej pytać o lokalną dostępność, lokalną kontrolę i ryzyko odcięcia."
+      ],
+      "contextPoints": [
+        "Co się stało: Sakana AI i 360 promują alternatywy wobec modeli Mythos/Fable w czasie amerykańskich ograniczeń.",
+        "Dlaczego ważne: bramkowanie dostępu może przyspieszać regionalizację frontier AI.",
+        "Na co patrzeć dalej: benchmarki niezależne, dostęp w Azji i reakcje USA na lokalne modele cyber."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: Asian AI startups launch Mythos-like models",
+          "url": "https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/"
+        },
+        {
+          "title": "Sakana AI: Fugu release",
+          "url": "https://sakana.ai/fugu-release/"
+        },
+        {
+          "title": "Sakana Fugu Technical Report",
+          "url": "https://arxiv.org/html/2606.21228v1"
+        },
+        {
+          "title": "SC Media: 360 AI models for vulnerability discovery",
+          "url": "https://www.scworld.com/brief/chinas-360-security-technology-unveils-ai-models-for-vulnerability-discovery"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Cyber",
+        "Anthropic",
+        "Japonia",
+        "Chiny"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-28-1-fable-5-moze-wrocic-ale-precedens-zostaje-e0251617e0",
+      "section": "Regulacje",
+      "title": "Fable 5 może wrócić, ale precedens zostaje",
+      "standfirst": "Axios podaje, że Fable 5 może zostać przywrócony w najbliższych dniach po piętnastu dniach blokady. Nawet jeśli model wróci, rynek dostał pokaz tego, jak łatwo release frontier AI może stać się decyzją państwową.",
+      "whatHappened": "Po częściowym odblokowaniu Mythos 5 dla zaufanych organizacji trwają rozmowy o przywróceniu Fable 5.",
+      "whyItMatters": "Spór wyznacza praktyczny precedens dla rządowego review modeli, zwłaszcza gdy model łączy coding, cyber i długie autonomiczne zadania.",
+      "deeperAnalysis": [
+        "Anthropic już wcześniej pisał, że rządowy nakaz objął Fable 5 i Mythos 5 oraz wymagał usunięcia dostępu dla cudzoziemców, także wewnątrz firmy. Axios dodaje teraz, że przywrócenie Fable 5 może być bliskie, ale ostatecznie zależy od procesu z udziałem administracji i agencji bezpieczeństwa.",
+        "Najważniejsze dla podcastu jest to, że \"powrót modelu\" nie kasuje ryzyka systemowego. Klienci zobaczyli, że dostęp kontraktowy do frontier modelu może zostać zatrzymany w kilka dni, a konkurenci zobaczyli, że lokalna alternatywa może być produktem strategicznym. To zmienia rozmowę o vendor risk w AI.",
+        "Pozew opisany przez TechRadar pokazuje trzeci wymiar: firmy dotknięte decyzją będą kwestionować bramki dostępu, jeżeli zaburzają ich produkt albo kontrakty. Release governance przestaje być tylko tabelą benchmarków i safety cardem."
+      ],
+      "contextPoints": [
+        "Co się stało: Fable 5 jest według Axios blisko możliwego powrotu, po częściowym odblokowaniu Mythos 5.",
+        "Dlaczego ważne: dostęp do modeli frontier staje się kontrolowany jak infrastruktura strategiczna.",
+        "Na co patrzeć dalej: formalny proces review modeli oraz warunki dla klientów spoza USA."
+      ],
+      "sources": [
+        {
+          "title": "Axios: Fable 5 on track to return soon",
+          "url": "https://www.axios.com/2026/06/27/anthropic-fable-5-return-soon"
+        },
+        {
+          "title": "Anthropic: Statement on government directive",
+          "url": "https://www.anthropic.com/news/fable-mythos-access"
+        },
+        {
+          "title": "Anthropic: Claude Fable 5 and Mythos 5",
+          "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+        },
+        {
+          "title": "TechRadar: lawsuit over Project Glasswing restrictions",
+          "url": "https://www.techradar.com/pro/way-out-of-line-the-us-government-is-being-sued-for-executive-order-restricting-foreign-access-to-project-glasswing"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Anthropic",
+        "Regulacje",
+        "Cyber"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-28-2-openai-zbiera-zespol-pod-urzadzenia-ai-6fb39baa0d",
+      "section": "Produkty",
+      "title": "OpenAI zbiera zespół pod urządzenia AI",
+      "standfirst": "Paul Meade, jeden z liderów Apple Vision Pro i smart glasses, ma przejść do OpenAI. To kolejny sygnał, że następna wojna o AI będzie toczyć się nie tylko w modelach, ale też w urządzeniach stale obecnych przy użytkowniku.",
+      "whatHappened": "TechCrunch i Engadget raportują za Bloombergiem transfer hardware executive z Apple do OpenAI.",
+      "whyItMatters": "OpenAI może próbować zbudować własną warstwę dystrybucji AI poza telefonem, przeglądarką i klasyczną aplikacją.",
+      "deeperAnalysis": [
+        "Ten transfer ma znaczenie większe niż zwykła rotacja kadrowa. OpenAI ma już w orbicie Jony'ego Ive'a i ambicję stworzenia spokojniejszego, mniej ekranowego urządzenia AI. Jeżeli do tego dochodzi osoba prowadząca Vision Pro i prace nad smart glasses w Apple, to widać, że firma buduje kompetencje wokół form factoru, nie tylko modelu.",
+        "The Times dobrze ustawia napięcie: wszystkie duże firmy chcą urządzeń kontekstowych, ale urządzenie, które widzi i słyszy świat użytkownika, jest jednocześnie asystentem i potencjalnym narzędziem nadzoru. To daje świetny polski temat, bo nie wymaga znajomości benchmarków - dotyczy pytania, czy AI ma mieszkać w kieszeni, na twarzy, w uchu czy w pokoju.",
+        "Apple jest tu pod presją z dwóch stron. Vision Pro nie stał się masowym produktem, a smart glasses mają być tańszą odpowiedzią na Meta i Google. OpenAI może próbować ominąć etap smartfona, ale historia Humane i innych prób pokazuje, że hardware AI jest znacznie trudniejszy niż demo modelu."
+      ],
+      "contextPoints": [
+        "Co się stało: lider Apple Vision Pro i smart glasses ma dołączyć do OpenAI hardware.",
+        "Dlaczego ważne: dystrybucja AI może przejść z aplikacji do dedykowanych urządzeń.",
+        "Na co patrzeć dalej: opis form factoru, prywatność sensorów i data premiery pierwszego urządzenia OpenAI."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: Apple Vision Pro exec leaving for OpenAI",
+          "url": "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/"
+        },
+        {
+          "title": "Engadget: Apple executive leaving for OpenAI",
+          "url": "https://www.engadget.com/2203115/apple-executive-vision-pro-leaving-for-openai/"
+        },
+        {
+          "title": "The Times: Can Jony Ive and OpenAI create an iPhone killer?",
+          "url": "https://www.thetimes.com/business/technology/article/openai-jony-ive-iphone-killer-xl5pbkll6"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "Apple",
+        "Hardware",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-28-3-open-weight-security-ai-wchodzi-w-praktyczne-benchmarki-f3b4282285",
+      "section": "Cyber",
+      "title": "Open-weight security AI wchodzi w praktyczne benchmarki",
+      "standfirst": "Semgrep pokazał, że GLM-5.2, open-weight model Zhipu AI, pokonał wybrane konfiguracje Claude Code w konkretnym benchmarku IDOR przy minimalnym harness. To nie dowodzi ogólnej przewagi, ale pokazuje, że open-weight security AI przestał być pobocznym eksperymentem.",
+      "whatHappened": "Semgrep opublikował wyniki benchmarku detekcji IDOR, w którym GLM-5.2 uzyskał 39% F1 bez wyspecjalizowanego pipeline'u.",
+      "whyItMatters": "Zespoły bezpieczeństwa będą porównywać nie tylko model, ale też koszt, self-hosting, harness i możliwość pracy na wrażliwym kodzie.",
+      "deeperAnalysis": [
+        "Najzdrowsza interpretacja wyników Semgrep brzmi: harness nadal ma ogromne znaczenie. Najlepsze wyniki w tabeli uzyskał Semgrep Multimodal z własną strukturą pracy, która enumeruje endpointy i prowadzi model przez właściwy kontekst. Sam model bez tej struktury jest tylko częścią systemu.",
+        "Jednocześnie GLM-5.2 jest ważnym sygnałem kosztowym i organizacyjnym. Open-weight model może działać we własnym środowisku, co dla bezpieczeństwa kodu, zgodności i klientów enterprise bywa ważniejsze niż kilka punktów benchmarku. Jeśli do tego cena za wykrytą podatność robi się konkurencyjna, presja na zamknięte modele rośnie.",
+        "Ryzyko jest podwójne. Po stronie obrony to szansa na tańsze skanowanie i niezależność od jednego vendora. Po stronie nadużyć to kolejny dowód, że zdolności vulnerability discovery nie pozostaną wyłączną domeną kilku kontrolowanych laboratoriów."
+      ],
+      "contextPoints": [
+        "Co się stało: GLM-5.2 dobrze wypadł w jednym benchmarku Semgrep dotyczącym IDOR.",
+        "Dlaczego ważne: security AI będzie oceniane jako system model plus harness plus koszt.",
+        "Na co patrzeć dalej: replikacje na innych klasach podatności, false positives i użycie lokalne w enterprise."
+      ],
+      "sources": [
+        {
+          "title": "Semgrep: GLM 5.2 beats Claude in our Cyber Benchmarks",
+          "url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/"
+        },
+        {
+          "title": "Z.ai: GLM-5.2",
+          "url": "https://z.ai/blog/glm-5.2"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/news"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Cyber",
+        "Open Source",
+        "GLM-5.2",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-28-4-data-centers-rachunek-za-ai-trafia-do-polityki-ab6ce7298d",
+      "section": "Infrastruktura",
+      "title": "Data centers: rachunek za AI trafia do polityki",
+      "standfirst": "Amerykańska debata o data centers przestała być tylko rozmową o podaży compute. Ratepayer Protection Act, moratorium Pallone'a i inicjatywa ONZ pokazują, że prąd, woda, emisje i rachunki gospodarstw domowych stają się politycznym kosztem AI.",
+      "whatHappened": "Źródła polityczne i regulacyjne opisują presję, aby firmy technologiczne pokrywały nowe koszty sieci i ujawniały pełny ślad środowiskowy AI.",
+      "whyItMatters": "Jeżeli AI data centers podnoszą rachunki albo zużywają lokalne zasoby, infrastruktura modeli stanie się tematem wyborczym i samorządowym, nie tylko technicznym.",
+      "deeperAnalysis": [
+        "The Next Web opisuje Ratepayer Protection Act jako wczesny, ale konkretny krok Kongresu: wielkie firmy technologiczne miałyby płacić za koszty energii i infrastruktury, których wymagają ich centra danych. White House pledge z marca daje podobną zasadę w formie dobrowolnej: koszty nowych modernizacji sieci nie powinny spadać na zwykłe gospodarstwa.",
+        "Pallone idzie ostrzej i mówi o krajowym moratorium do czasu ochrony powietrza, wody i rachunków. ONZ/UNU dokłada warstwę globalną, żądając ujawniania śladu węglowego, wodnego i gruntowego systemów AI. Razem daje to zmianę języka: z \"AI potrzebuje compute\" na \"AI musi ujawnić i zapłacić koszty compute\".",
+        "To świetny temat dla polskiego podcastu, bo jest lokalnie zrozumiały. Jeżeli data center ma obciążać sieć, zużywać wodę albo wymagać nowych linii przesyłowych, to pytanie \"kto płaci\" pojawi się w każdej gminie i każdym kraju, także poza USA."
+      ],
+      "contextPoints": [
+        "Co się stało: USA i ONZ wzmacniają nacisk na koszty energii, wody i emisji data centers.",
+        "Dlaczego ważne: infrastruktura AI staje się sporem o rachunki i zasoby lokalne.",
+        "Na co patrzeć dalej: los Ratepayer Protection Act, lokalne moratoria i standardy raportowania śladu AI."
+      ],
+      "sources": [
+        {
+          "title": "The Next Web: Congress wants Big Tech to pay AI's power bills",
+          "url": "https://thenextweb.com/news/house-bill-ai-data-centre-energy-costs-big-tech"
+        },
+        {
+          "title": "White House: Ratepayer Protection Pledge",
+          "url": "https://www.whitehouse.gov/releases/2026/03/ratepayer-protection-pledge/"
+        },
+        {
+          "title": "Frank Pallone: AI data center moratorium",
+          "url": "https://pallone.house.gov/media/press-releases/pallone-supports-national-ai-data-center-moratorium"
+        },
+        {
+          "title": "UN University: AI Environmental Transparency Initiative",
+          "url": "https://unu.edu/inweh/news/un-secretary-general-launches-ai-environmental-transparency-initiative-calling-ai"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Data Center",
+        "Energia",
+        "Regulacje"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-28-5-publiczne-zrzuty-podatnosci-komplikuja-disclosure-d9eb73143c",
+      "section": "Cyber",
+      "title": "Publiczne zrzuty podatności komplikują disclosure",
+      "standfirst": "Hacker News wyniósł na front page anonimowe konto GitHub publikujące niezałatane podatności i PoC. To delikatny temat, ale dobrze pokazuje, że AI-era security nie kończy się na modelach - problemem jest też sposób ujawniania luk.",
+      "whatHappened": "Społeczność HN zwróciła uwagę na profil GitHub deklarujący publikowanie niezałatanych podatności po odpowiedzialnym ujawnieniu \"czasami\".",
+      "whyItMatters": "Masowe publiczne disclosure może pomagać maintainerom i jednocześnie zwiększać ryzyko nadużyć, szczególnie gdy AI ułatwia triage, exploit writing i reprodukcję.",
+      "deeperAnalysis": [
+        "W raporcie nie ma sensu powtarzać technik ani wskazywać konkretnych PoC. Ważny jest sam mechanizm: publiczna platforma kodowa staje się miejscem presji na vendorów i maintainerów, a społeczność natychmiast dyskutuje, czy to whistleblowing, reckless disclosure, czy mieszanka obu.",
+        "Ten sygnał dobrze łączy się z Mythos, GLM-5.2 i Project Glasswing. Modele mogą przyspieszać znalezienie podatności, ale ekosystem nadal potrzebuje koordynacji, statusu łatek, zasad embargo i kanałów dla maintainerów. Inaczej wzrost zdolności obronnych będzie mieszał się ze wzrostem chaosu operacyjnego.",
+        "Dla podcastu to temat poboczny, ale bardzo praktyczny: \"co się dzieje, kiedy podatności są odkrywane szybciej niż ludzie potrafią je naprawić?\". To jest bardziej zrozumiałe niż abstrakcyjne benchmarki cyber modeli."
+      ],
+      "contextPoints": [
+        "Co się stało: HN podbił profil GitHub publikujący niezałatane podatności.",
+        "Dlaczego ważne: szybsze odkrywanie luk wymaga równie szybkiego, odpowiedzialnego procesu disclosure.",
+        "Na co patrzeć dalej: reakcja GitHuba, maintainerów i ewentualne usunięcia repozytoriów."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/news"
+        },
+        {
+          "title": "GitHub: bikini",
+          "url": "https://github.com/bikini"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Cyber",
+        "GitHub",
+        "Open Source",
+        "Disclosure"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Azja buduje odpowiedź na bramki Mythos/Fable",
+      "rationale": "Sakana Fugu, 360 Tulongfeng i GLM-5.2 pokazują, że ograniczenia modeli w USA mogą przyspieszyć regionalne alternatywy i open-weight security AI.",
+      "sourcesLabel": "TechCrunch; Sakana AI; SC Media; Semgrep"
+    },
+    {
+      "priority": "High",
+      "title": "Fable 5 może wrócić, ale zaufanie już się zmieniło",
+      "rationale": "Nawet jeśli Anthropic odzyska możliwość udostępnienia modelu, firmy zobaczyły, że dostęp do frontier AI może być decyzją państwową. To nowy typ vendor risk.",
+      "sourcesLabel": "Axios; Anthropic; TechRadar"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI chce własnego urządzenia AI",
+      "rationale": "Transfer szefa Vision Pro/smart glasses do OpenAI łączy Jony'ego Ive'a, wearable AI, prywatność sensorów i pytanie, czy następcą telefonu będzie asystent z kamerą i mikrofonem.",
+      "sourcesLabel": "TechCrunch; Engadget; The Times"
+    },
+    {
+      "priority": "High",
+      "title": "Rachunek za data centers staje się polityczny",
+      "rationale": "Ratepayer Protection Act, moratorium Pallone'a i inicjatywa ONZ pokazują, że AI compute będzie oceniane przez prąd, wodę, emisje i lokalne rachunki, a nie tylko benchmarki.",
+      "sourcesLabel": "The Next Web; White House; Pallone; UN University"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN alarmuje o publicznym zrzucaniu 0-day",
+      "rationale": "Publiczne repozytoria z niezałatanymi podatnościami pokazują napięcie między disclosure, presją na vendorów i ryzykiem nadużyć w czasach agentów security.",
+      "sourcesLabel": "Hacker News; GitHub"
+    },
+    {
+      "priority": "Medium",
+      "title": "Product Hunt nadal jest agentowy",
+      "rationale": "Dzisiejsze i tygodniowe rankingi to agent arena, pamięć dla LLM, inbox dla ludzi i agentów, Framer AI Agents i dyktowanie do pracy. Makerzy budują warstwę workflow wokół agentów.",
+      "sourcesLabel": "Product Hunt"
+    },
+    {
+      "priority": "Medium",
+      "title": "Open-weight modele zmieniają ekonomię cyber",
+      "rationale": "Wynik GLM-5.2 w benchmarku Semgrep nie jest uniwersalną prawdą, ale pokazuje, że koszt i self-hosting mogą być równie ważne jak marka modelu.",
+      "sourcesLabel": "Semgrep; HN"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/27/asian-ai-startups-launch-mythos-like-models-as-anthropics-export-ban-drags-on/"
+    },
+    {
+      "title": "Sakana AI",
+      "url": "https://sakana.ai/fugu-release/"
+    },
+    {
+      "title": "SC Media",
+      "url": "https://www.scworld.com/brief/chinas-360-security-technology-unveils-ai-models-for-vulnerability-discovery"
+    },
+    {
+      "title": "Sakana Fugu Technical Report",
+      "url": "https://arxiv.org/html/2606.21228v1"
+    },
+    {
+      "title": "Semgrep",
+      "url": "https://semgrep.dev/blog/2026/we-have-mythos-at-home-glm-52-beats-claude-in-our-cyber-benchmarks/"
+    },
+    {
+      "title": "Axios",
+      "url": "https://www.axios.com/2026/06/27/anthropic-fable-5-return-soon"
+    },
+    {
+      "title": "Anthropic",
+      "url": "https://www.anthropic.com/news/fable-mythos-access"
+    },
+    {
+      "title": "Anthropic: Fable 5 and Mythos 5",
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+    },
+    {
+      "title": "TechRadar",
+      "url": "https://www.techradar.com/pro/way-out-of-line-the-us-government-is-being-sued-for-executive-order-restricting-foreign-access-to-project-glasswing"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/27/apple-vision-pro-exec-is-reportedly-leaving-for-openai/"
+    },
+    {
+      "title": "Engadget",
+      "url": "https://www.engadget.com/2203115/apple-executive-vision-pro-leaving-for-openai/"
+    },
+    {
+      "title": "The Times",
+      "url": "https://www.thetimes.com/business/technology/article/openai-jony-ive-iphone-killer-xl5pbkll6"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/news"
+    },
+    {
+      "title": "GitHub: bikini",
+      "url": "https://github.com/bikini"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "The Next Web",
+      "url": "https://thenextweb.com/news/house-bill-ai-data-centre-energy-costs-big-tech"
+    },
+    {
+      "title": "White House",
+      "url": "https://www.whitehouse.gov/releases/2026/03/ratepayer-protection-pledge/"
+    },
+    {
+      "title": "Frank Pallone",
+      "url": "https://pallone.house.gov/media/press-releases/pallone-supports-national-ai-data-center-moratorium"
+    },
+    {
+      "title": "UN University",
+      "url": "https://unu.edu/inweh/news/un-secretary-general-launches-ai-environmental-transparency-initiative-calling-ai"
+    },
+    {
+      "title": "Z.ai: GLM-5.2",
+      "url": "https://z.ai/blog/glm-5.2"
+    },
+    {
+      "title": "old Reddit / r/technology",
+      "url": "https://old.reddit.com/r/technology/"
+    },
+    {
+      "title": "TVN24 Biznes / Tech",
+      "url": "https://tvn24.pl/biznes/tech"
+    },
+    {
+      "title": "WP Tech: Sztuczna inteligencja",
+      "url": "https://tech.wp.pl/sztuczna-inteligencja%2Ctemat%2C6016396972122753"
+    },
+    {
+      "title": "Business Insider Polska: Technologie",
+      "url": "https://businessinsider.com.pl/technologie"
+    },
+    {
+      "title": "Komputer Świat: Sztuczna inteligencja",
+      "url": "https://www.komputerswiat.pl/nauka-i-technika/sztuczna-inteligencja"
+    }
+  ]
+}
