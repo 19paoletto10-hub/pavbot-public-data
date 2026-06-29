@@ -1,0 +1,477 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-06-29",
+  "runTime": "12:02",
+  "status": "Material update",
+  "headline": "12:02: kraj przechodzi z alertów do twardych skutków upału, a świat dokłada Francję i nowy sygnał nadziei z Wenezueli",
+  "summary": "Run z 12:02 CEST pozostaje materialny względem opublikowanego baseline 2026-06-28-2100 i dokłada świeże południowe zmiany ponad lokalny slot 09:01: zamknięto odcinek S17 do odwołania, PSE uspokaja w sprawie dostaw prądu mimo rekordowego poboru, a blok światowy wzmacniają katastrofa samolotu ze skoczkami we Francji i nowa relacja ratunkowa z Wenezueli. Rdzeń feedu pozostaje operacyjny i bezpieczeństwowy: burze, kolej, energia, Iran, Pakistan-Afganistan i trzęsienie ziemi w Wenezueli nadal mają najwyższy priorytet.",
+  "items": [
+    {
+      "id": "pulse-2026-06-29-1202-01-burze",
+      "section": "Alerty",
+      "title": "Alert RCB zostaje w grze, a burze nadal grożą przerwami w dostawie prądu",
+      "lead": "Południe nie wygasza ryzyka pogodowego, bo komunikaty nadal ostrzegają przed silnym wiatrem, deszczem i burzami.",
+      "whatHappened": "TVN24 utrzymuje ostrzeżenie o groźnych burzach w części kraju, a oficjalny alert RCB nadal mówi o intensywnym deszczu, silnym wietrze, burzach i możliwych przerwach w dostawie prądu. Temat pozostaje praktyczny, bo ryzyko pogodowe nadal może przełożyć się na infrastrukturę i transport.",
+      "keyFacts": [
+        "RCB utrzymuje alert z ostrzeżeniem przed burzami i możliwymi przerwami w dostawie prądu.",
+        "TVN24 wskazuje, że niebezpiecznie może być w wielu regionach kraju.",
+        "To nadal najwyżej użyteczna karta krajowa na początek południowego feedu."
+      ],
+      "reactions": [
+        "Temat nie jest już tylko prognozą, ale tłem dla realnych zakłóceń drogowych i kolejowych.",
+        "Karta dobrze otwiera feed, bo spina pogodę z resztą krajowych skutków upału."
+      ],
+      "whyItMatters": "Użytkownik dostaje sygnał, że zagrożenie pogodowe wciąż może wywoływać awarie i utrudnienia jeszcze przed popołudniowym slotem.",
+      "context": "O 09:01 dominowała skala ostrzeżeń IMGW i aktywny alert RCB. O 12:02 temat pozostaje aktualny, bo pojawiają się już kolejne skutki infrastrukturalne.",
+      "watchNext": [
+        "Czy dojdzie do nowych potwierdzonych awarii prądu lub podtopień.",
+        "Czy alert RCB zostanie rozszerzony lub utrzymany na kolejne godziny."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Burze w Polsce. Alert RCB w poniedziałek 29.06. Możliwe przerwy w dostawach prądu",
+          "url": "https://tvn24.pl/polska/burze-w-polsce-alert-rcb-w-poniedzialek-29-06-mozliwe-przerwy-w-dostawach-pradu-st9118985"
+        },
+        {
+          "title": "RCB: Alert RCB - burze (29.06)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-2907"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "RCB",
+        "Burze",
+        "Prąd"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1202-02-s17",
+      "section": "Polska",
+      "title": "S17 w kierunku Warszawy zamknięta do odwołania przez stan nawierzchni",
+      "lead": "Południowy slot dostaje nowy, twardy sygnał drogowy: ważny odcinek ekspresówki został wyłączony z ruchu.",
+      "whatHappened": "TVN24 podało, że z uwagi na stan nawierzchni zamknięto do odwołania jezdnię S17 między węzłami Żyrzyn i Skrudki w kierunku Warszawy. Materiał wskazuje na komunikat policji po zakończeniu czynności na miejscu, ale przejazd w tym kierunku nadal pozostaje zablokowany.",
+      "keyFacts": [
+        "Zamknięcie dotyczy odcinka S17 między węzłami Żyrzyn i Skrudki.",
+        "Wyłączona jest jezdnia w kierunku Warszawy.",
+        "To nowy południowy temat krajowy względem slotu 09:01."
+      ],
+      "reactions": [
+        "Karta pokazuje, że skutki upału i pogody schodzą już na poziom dużych ciągów drogowych.",
+        "To jeden z najmocniejszych nowych sygnałów użytecznych dla użytkownika w południe."
+      ],
+      "whyItMatters": "Zamknięcie ekspresówki wpływa na realny ruch międzyregionalny i wzmacnia obraz dnia jako problemu infrastrukturalnego, nie tylko meteorologicznego.",
+      "context": "O 09:01 krajowy blok skupiał się na kolei i ostrzeżeniach pogodowych. O 12:02 dochodzi pełnoprawny temat drogowy o wysokiej użyteczności.",
+      "watchNext": [
+        "Czy służby wskażą objazdy lub przybliżony termin otwarcia odcinka.",
+        "Czy podobne ograniczenia pojawią się na innych drogach przy utrzymującym się skwarze."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Odcinek S17 w kierunku Warszawy zamknięty do odwołania",
+          "url": "https://tvn24.pl/lublin/lubelskie-z-uwagi-na-stan-nawierzchni-odcinek-s17-w-kierunku-warszawy-zamkniety-do-odwolania-st9119113"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "S17",
+        "Drogi",
+        "Infrastruktura"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1202-03-pkp",
+      "section": "Polska",
+      "title": "PKP Intercity nadal utrzymuje 21 odwołanych pociągów",
+      "lead": "Kolej pozostaje jednym z głównych kosztów operacyjnych fali upału i nie schodzi jeszcze z wysokiego priorytetu.",
+      "whatHappened": "TVN24 nadal wskazuje, że PKP Intercity odwołało 21 pociągów z powodu wysokich temperatur. Oficjalny komunikat przewoźnika podtrzymuje komunikację zastępczą dla wybranych połączeń, bezkosztowy zwrot niewykorzystanych biletów do 30 czerwca oraz dystrybucję wody pasażerom opóźnionych składów.",
+      "keyFacts": [
+        "Bilans nadal mówi o 21 odwołanych pociągach.",
+        "PKP Intercity utrzymuje komunikację zastępczą dla części relacji.",
+        "Przewoźnik dopuszcza bezkosztowy zwrot niewykorzystanych biletów do 30 czerwca."
+      ],
+      "reactions": [
+        "To dalej jedna z najbardziej praktycznych kart dnia dla użytkownika mobilnego.",
+        "Temat utrzymuje ciężar operacyjny feedu po stronie kolei nawet po wejściu nowych kart drogowych."
+      ],
+      "whyItMatters": "Zakłócenia w ruchu dalekobieżnym wpływają od razu na dojazdy, podróże i przesiadki w skali kraju.",
+      "context": "O 09:01 był to już ważny poranny temat. O 12:02 nie znika, bo nadal pozostaje realnym problemem infrastrukturalnym bez jasnego domknięcia.",
+      "watchNext": [
+        "Czy liczba odwołań wzrośnie w kolejnych godzinach dnia.",
+        "Czy utrudnienia przejdą z odwołań do szerszych opóźnień na głównych liniach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Odwołano 21 pociągów. Wszystko przez \"wysokie temperatury\"",
+          "url": "https://tvn24.pl/polska/pkp-intercity-odwolalo-21-pociagow-winne-wysokie-temperatury-st9118930"
+        },
+        {
+          "title": "PKP Intercity: Utrudnienia w ruchu pociągów PKP Intercity",
+          "url": "https://intercity.pl/site/o-nas/dzial-prasowy/komunikaty/utrudnienia-w-ruchu-pociagow-pkp-intercity.html"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "PKP Intercity",
+        "Kolej",
+        "Upał"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1202-04-pse",
+      "section": "Gospodarka",
+      "title": "PSE uspokaja: pobór prądu rośnie, ale nie ma przerw od strony sieci przesyłowej",
+      "lead": "Upał zwiększa zapotrzebowanie na energię, lecz operator przekazuje, że system przesyłowy utrzymuje dostawy.",
+      "whatHappened": "TVN24 Biznes podało za rzecznikiem Polskich Sieci Elektroenergetycznych, że wysokie temperatury wyraźnie podnoszą zapotrzebowanie na prąd. Jednocześnie operator zapewnia, że nie ma przerw w dostawach energii do odbiorców wynikających z niedostępności infrastruktury przesyłowej.",
+      "keyFacts": [
+        "Rekordowe temperatury zwiększają zapotrzebowanie na prąd.",
+        "PSE deklaruje brak przerw wynikających z niedostępności infrastruktury przesyłowej.",
+        "To nowy południowy sygnał stabilizujący wobec rosnących obaw infrastrukturalnych."
+      ],
+      "reactions": [
+        "Karta daje równowagę dla alarmowego tonu części krajowych newsów.",
+        "To ważny praktyczny komunikat, bo użytkownik widzi różnicę między ryzykiem burzowym a realnym stanem systemu elektroenergetycznego."
+      ],
+      "whyItMatters": "Przy rekordowych temperaturach stan sieci energetycznej jest kluczowy dla odbiorców, biznesu i oceny odporności infrastruktury.",
+      "context": "Wcześniejsze sloty skupiały się na możliwych przerwach po burzach i skutkach upału dla transportu. O 12:02 dochodzi osobny komunikat o stabilności krajowego systemu przesyłowego.",
+      "watchNext": [
+        "Czy wzrost poboru energii utrzyma się bez zakłóceń w kolejnych godzinach dnia.",
+        "Czy burze przełożą się na lokalne awarie dystrybucyjne mimo stabilności systemu przesyłowego."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Dostawy prądu w czasie upałów. Operator uspokaja",
+          "url": "https://tvn24.pl/biznes/z-kraju/dostawy-pradu-w-czasie-upalow-polskie-sieci-elektroenergetyczne-uspokajaja-st9119148"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Energia",
+        "PSE",
+        "Upał"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1202-05-ai-selloff",
+      "section": "Technologia",
+      "title": "Sektor AI dostaje giełdową korektę, bo inwestorzy chcą szybszych zysków",
+      "lead": "Południowy feed dokłada nowy rynkowy temat technologiczny: cierpliwość wobec spółek AI wyraźnie się kończy.",
+      "whatHappened": "TVN24 Biznes podało, że trwa szeroka wyprzedaż akcji spółek związanych ze sztuczną inteligencją. Materiał opisuje rozczarowanie inwestorów tym, że zapowiadane zyski z boomu AI nie materializują się tak szybko, jak oczekiwano.",
+      "keyFacts": [
+        "Na rynku trwa szeroka wyprzedaż akcji sektora AI.",
+        "Materiał wskazuje na rosnącą frustrację inwestorów wobec opóźnionych zysków.",
+        "To nowa karta technologiczna względem porannego runu 09:01."
+      ],
+      "reactions": [
+        "Temat wyciąga technologię z poziomu regulacji do poziomu twardej wyceny rynkowej.",
+        "To lepsza karta południowa niż lżejsze newsy produktowe, bo ma znaczenie gospodarcze."
+      ],
+      "whyItMatters": "Zmiana nastroju wokół AI wpływa na wyceny, inwestycje i oczekiwania wobec całego segmentu technologicznego.",
+      "context": "O 09:01 technologia w feedzie była regulacyjna i dotyczyła Australii. O 12:02 pojawia się osobny, bardziej rynkowy temat AI.",
+      "watchNext": [
+        "Czy wyprzedaż obejmie kolejne spółki technologiczne poza segmentem AI.",
+        "Czy rynek potraktuje to jako krótką korektę, czy początek szerszej zmiany sentymentu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: AI. Wielka wyprzedaż akcji sektora sztucznej inteligencji",
+          "url": "https://tvn24.pl/biznes/tech/ai-wielka-wyprzedaz-akcji-sektora-sztucznej-inteligencji-inwestorzy-na-rynku-akcji-technologicznych-bywaja-niecierpliwi-st9119030"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "AI",
+        "Giełda",
+        "Rynki"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-29-1202-06-ropa",
+      "section": "Gospodarka",
+      "title": "Ropa nadal reaguje wzrostem na nowe ataki na Bliskim Wschodzie",
+      "lead": "Konflikt bezpieczeństwa nadal ma bezpośredni wymiar rynkowy, co podtrzymuje temat ropy w południowym feedzie.",
+      "whatHappened": "TVN24 Biznes podało, że ropa drożeje po nowych atakach na Bliskim Wschodzie. To rynkowy sygnał, że inwestorzy wciąż traktują napięcie militarne jako ryzyko dla dostaw i cen energii.",
+      "keyFacts": [
+        "Ceny ropy rosną po nowych atakach na Bliskim Wschodzie.",
+        "Temat pozostaje bezpośrednio związany z kryzysem bezpieczeństwa wokół Iranu.",
+        "Karta utrzymuje gospodarczy wymiar geopolityki w bieżącym feedzie."
+      ],
+      "reactions": [
+        "Temat dobrze łączy sekcję gospodarki z blokiem bezpieczeństwa.",
+        "To nadal jedna z lepszych kart ekonomicznych dnia, bo ma szybkie przełożenie na nastroje rynkowe."
+      ],
+      "whyItMatters": "Ruch cen ropy może wpływać na oczekiwania inflacyjne, transport i koszt energii w kolejnych dniach.",
+      "context": "O 09:01 był to nowy poranny temat rynkowy. O 12:02 pozostaje aktualny, bo napięcie militarne nie zostało jeszcze wiarygodnie domknięte.",
+      "watchNext": [
+        "Czy wzrost cen utrzyma się do kolejnych godzin handlu.",
+        "Czy nowe komunikaty z regionu zwiększą obawy o dostawy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Ropa drożeje po nowych atakach na Bliskim Wschodzie",
+          "url": "https://tvn24.pl/biznes/ze-swiata/cena-ropy-naftowej-w-poniedzialek-29-czerwca-wzrost-po-nowych-atakach-na-bliskim-wschodzie-st9118965"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Ropa",
+        "Bliski Wschód",
+        "Rynki"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1202-07-iran",
+      "section": "Bezpieczeństwo",
+      "title": "USA i Iran mają na razie \"stand down\", ale rozejm pozostaje kruchy",
+      "lead": "Po wymianie uderzeń pojawia się chwilowe wyhamowanie, lecz rozmowy nadal toczą się pod presją ostatnich ataków.",
+      "whatHappened": "BBC i CNN podają, że USA i Iran mają na razie przejść do stanu \"stand down\", a rozmowy pozostają \"on track\". Jednocześnie obie relacje podkreślają, że weekend przyniósł wymianę uderzeń i wzajemne oskarżenia o łamanie kruchego porozumienia.",
+      "keyFacts": [
+        "Źródła mówią o czasowym \"stand down\" po ostatnich atakach.",
+        "W tle pozostają dalsze rozmowy i niepewność co do trwałości ustaleń.",
+        "To nadal najszybciej zmieniający się temat geopolityczny dnia."
+      ],
+      "reactions": [
+        "Karta pozostaje wysoko, bo nawet sygnał wyhamowania może szybko się odwrócić.",
+        "Temat nadal wpływa jednocześnie na bezpieczeństwo w regionie i rynek energii."
+      ],
+      "whyItMatters": "Każde załamanie kruchego porozumienia może natychmiast eskalować sytuację wojskową i rynkową wokół Zatoki.",
+      "context": "O 09:01 feed notował już formułę \"stand down\". O 12:02 wątek pozostaje obowiązkowy, bo nie ma jeszcze stabilnego potwierdzenia trwałej deeskalacji.",
+      "watchNext": [
+        "Czy Iran publicznie potwierdzi tę samą interpretację co strona amerykańska.",
+        "Czy dojdzie do nowych komunikatów o rozmowach w najbliższych godzinach."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US says it has agreed to 'stand down' after exchange of strikes with Iran",
+          "url": "https://www.bbc.co.uk/news/articles/c872rjw17qpo"
+        },
+        {
+          "title": "CNN: Live updates - US and Iran will \"stand down for now\" and talks \"on track\"",
+          "url": "https://edition.cnn.com/2026/06/29/world/live-news/iran-war-strikes-trump"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Iran",
+        "USA",
+        "Zatoka"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1202-08-pakistan-afganistan",
+      "section": "Bezpieczeństwo",
+      "title": "Pakistańskie uderzenia przy granicy z Afganistanem nadal destabilizują region",
+      "lead": "BBC utrzymuje wysoki ciężar tego tematu: są ofiary, spór o cele ataku i ryzyko dalszej eskalacji.",
+      "whatHappened": "BBC podało, że pakistańskie uderzenia przy granicy z Afganistanem zabiły dziesiątki osób. Talibowie mówią o ofiarach cywilnych, podczas gdy Pakistan utrzymuje, że celem byli bojownicy odpowiedzialni za wcześniejsze ataki.",
+      "keyFacts": [
+        "BBC informuje o dziesiątkach zabitych po pakistańskich uderzeniach.",
+        "Talibowie mówią o ofiarach cywilnych.",
+        "Pakistan podtrzymuje, że celował w bojowników."
+      ],
+      "reactions": [
+        "Temat pozostaje mocny, bo łączy bezpieczeństwo militarne z ryzykiem napięcia dyplomatycznego.",
+        "To nadal jeden z najważniejszych wątków światowych poza Bliskim Wschodem."
+      ],
+      "whyItMatters": "Eskalacja Pakistan-Afganistan może tworzyć kolejny równoległy punkt niestabilności obok Iranu i wenezuelskiego kryzysu humanitarnego.",
+      "context": "O 09:01 był to już nowy poranny temat bezpieczeństwa. O 12:02 nie traci znaczenia, bo nadal nie ma sygnału wygaszenia napięcia.",
+      "watchNext": [
+        "Czy pojawią się nowe komunikaty Kabulu lub Islamabadu.",
+        "Czy bilans ofiar wzrośnie wraz z doprecyzowaniem sytuacji."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Pakistani strikes kill dozens in Afghanistan",
+          "url": "https://www.bbc.co.uk/news/articles/cy8wygyed0wo"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Pakistan",
+        "Afganistan",
+        "Granica"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1202-09-wenezuela-bilans",
+      "section": "Świat",
+      "title": "Bilans trzęsienia ziemi w Wenezueli przekracza 1450 ofiar, tysiące są zaginione",
+      "lead": "Katastrofa pozostaje jednym z głównych światowych tematów dnia, bo ratownicy nadal szukają żywych pod gruzami.",
+      "whatHappened": "CNN podaje, że po trzęsieniu ziemi w Wenezueli zginęło co najmniej 1450 osób, a tysiące ludzi pozostają zaginione. Ekipy ratunkowe w La Guaira i Caracas nadal przeszukują gruzy w poszukiwaniu oznak życia.",
+      "keyFacts": [
+        "CNN podaje bilans co najmniej 1450 ofiar śmiertelnych.",
+        "Tysiące osób pozostają zaginione.",
+        "Akcja ratunkowa nadal trwa w głównych obszarach zniszczeń."
+      ],
+      "reactions": [
+        "To wciąż jedna z najbardziej obciążonych emocjonalnie i operacyjnie kart całego feedu.",
+        "Historia nie schodzi z priorytetu, bo bilans i zasięg katastrofy nadal się rozwijają."
+      ],
+      "whyItMatters": "Skala katastrofy humanitarnej wpływa na region, pomoc międzynarodową i tempo dalszych informacji o ofiarach oraz zniszczeniach.",
+      "context": "O 09:01 temat był już obecny z wysokim bilansem ofiar. O 12:02 nadal pozostaje obowiązkowy, bo akcja ratunkowa trwa i liczby są nadal alarmowe.",
+      "watchNext": [
+        "Czy liczba potwierdzonych ofiar i zaginionych dalej wzrośnie.",
+        "Czy pojawią się nowe informacje o stanie głównych stref zniszczeń."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Live updates - Venezuela earthquake rescues continue, mounting death toll, thousands missing",
+          "url": "https://edition.cnn.com/2026/06/29/world/live-news/venezuela-earthquake-hnk"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wenezuela",
+        "Trzęsienie ziemi",
+        "Ratownictwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1202-10-wenezuela-ratunek",
+      "section": "Świat",
+      "title": "Ratunek matki i 18-dniowego dziecka daje rzadki sygnał nadziei w Wenezueli",
+      "lead": "BBC dokłada do katastrofy nowy, ludzki punkt ciężkości: spektakularne ocalenie spod gruzów.",
+      "whatHappened": "BBC opisało historię matki uratowanej spod gruzów razem z jej 18-dniowym synem Juanem Davidem. Redakcja przedstawia tę akcję jako rzadki symbol nadziei w samym środku katastrofy, która nadal pochłania kolejne ofiary.",
+      "keyFacts": [
+        "BBC opisuje uratowanie matki i jej 18-dniowego syna spod gruzów.",
+        "Relacja pokazuje, że mimo ciężkiego bilansu akcje ratunkowe nadal przynoszą pojedyncze sukcesy.",
+        "To nowy południowy wątek światowy względem slotu 09:01."
+      ],
+      "reactions": [
+        "Karta wnosi ludzki wymiar do katastrofy bez rozbijania powagi całego pakietu.",
+        "To mocny kontrapunkt dla rosnących liczb ofiar i zaginionych."
+      ],
+      "whyItMatters": "W dużych katastrofach pojedyncze uratowane osoby są ważnym sygnałem dla rodzin, służb i oceny, czy dalsze przeszukiwanie gruzów ma jeszcze szansę powodzenia.",
+      "context": "O 09:01 feed podkreślał głównie bilans i skalę wenezuelskiej katastrofy. O 12:02 pojawia się osobna karta o wyjątkowej akcji ratunkowej.",
+      "watchNext": [
+        "Czy pojawią się kolejne potwierdzone udane akcje ratunkowe.",
+        "Czy historie ocalonych zmienią ton relacji międzynarodowych wokół katastrofy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Mum rescued from rubble with newborn baby tells BBC how he helped her survive",
+          "url": "https://www.bbc.co.uk/news/articles/clyw3rkj2p7o"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wenezuela",
+        "Ratunek",
+        "Katastrofa"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-29-1202-11-heatwave",
+      "section": "Świat",
+      "title": "WHO wiąże europejską falę gorąca z około 1300 zgonów",
+      "lead": "Upał przestaje być tylko tematem temperatur, bo dane WHO pokazują już wyraźny koszt zdrowotny.",
+      "whatHappened": "BBC podało, że WHO łączy europejską falę upałów z około 1300 zgonów, a kolejne kraje biją rekordy temperatur. Redakcja podkreśla ostrzeżenie, że Europa nie jest przygotowana na tak wysokie temperatury.",
+      "keyFacts": [
+        "WHO wiąże falę upałów z około 1300 zgonów.",
+        "Padają kolejne rekordy temperatur w Europie.",
+        "To nadal jedna z najmocniejszych kart szerokiego tła dla krajowych skutków skwaru."
+      ],
+      "reactions": [
+        "Temat utrzymuje globalny kontekst dla krajowych kart pogodowych i infrastrukturalnych.",
+        "To nadal ważniejsza karta niż pojedyncze lokalne rekordy temperatur."
+      ],
+      "whyItMatters": "Skutki zdrowotne i infrastrukturalne upału wykraczają poza jeden kraj i pokazują, że Europa mierzy się z systemowym ryzykiem pogodowym.",
+      "context": "O 09:01 karta była już wysoko w rankingu światowym. O 12:02 pozostaje ważna, bo domyka obraz wspólnego kryzysu pogodowego dla Polski i regionu.",
+      "watchNext": [
+        "Czy WHO lub kraje europejskie opublikują nowe dane o ofiarach i rekordach.",
+        "Czy fala gorąca przełoży się na kolejne ograniczenia transportowe lub energetyczne."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Europe's heatwave 'linked to 1,300 deaths' as more records broken",
+          "url": "https://www.bbc.co.uk/news/articles/cn4d2vv935lo"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Europa",
+        "Upał",
+        "WHO"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1202-12-france-crash",
+      "section": "Świat",
+      "title": "We wschodniej Francji rozbił się samolot ze skoczkami, zginęło 11 osób",
+      "lead": "BBC dokłada nowy, jednoznacznie materialny temat światowy: katastrofę z dużą liczbą ofiar.",
+      "whatHappened": "BBC podało, że we wschodniej Francji rozbił się samolot przewożący skoczków spadochronowych. Według lokalnych władz zginęli pilot i 10 pasażerów, w tym pięć osób, które wykonywały pierwszy skok w życiu.",
+      "keyFacts": [
+        "W katastrofie zginęło 11 osób.",
+        "Wśród ofiar jest pilot i 10 pasażerów.",
+        "BBC podaje, że pięć ofiar stanowili skoczkowie odbywający pierwszy skok."
+      ],
+      "reactions": [
+        "To wyraźnie nowy temat światowy, którego nie było w porannym pakiecie 09:01.",
+        "Karta ma wysoki ciężar informacyjny i nie wymaga dodatkowego kontekstu politycznego, by wejść do feedu."
+      ],
+      "whyItMatters": "Katastrofa lotnicza z dużą liczbą ofiar szybko staje się jednym z głównych tematów dnia w europejskim bloku wiadomości.",
+      "context": "Południowy slot potrzebuje co najmniej jednego świeżego, jednoznacznego tematu światowego poza trwającymi kryzysami. Ta historia spełnia ten warunek.",
+      "watchNext": [
+        "Czy francuskie służby podadzą wstępne ustalenia o przyczynie katastrofy.",
+        "Czy pojawi się szerszy komunikat lokalnych władz o miejscu i przebiegu zdarzenia."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Eleven killed after plane carrying skydivers crashes in eastern France",
+          "url": "https://www.bbc.co.uk/news/articles/c5yz9yj9x74o"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Francja",
+        "Katastrofa lotnicza",
+        "Skoczkowie"
+      ],
+      "priority": "High"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "RCB: Alert RCB - burze (29.06)",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-2907"
+    },
+    {
+      "title": "PKP Intercity: Utrudnienia w ruchu pociągów PKP Intercity",
+      "url": "https://intercity.pl/site/o-nas/dzial-prasowy/komunikaty/utrudnienia-w-ruchu-pociagow-pkp-intercity.html"
+    },
+    {
+      "title": "TVN24 Biznes: Dostawy prądu w czasie upałów. Operator uspokaja",
+      "url": "https://tvn24.pl/biznes/z-kraju/dostawy-pradu-w-czasie-upalow-polskie-sieci-elektroenergetyczne-uspokajaja-st9119148"
+    },
+    {
+      "title": "CNN: Live updates - US and Iran will \"stand down for now\" and talks \"on track\"",
+      "url": "https://edition.cnn.com/2026/06/29/world/live-news/iran-war-strikes-trump"
+    },
+    {
+      "title": "CNN: Live updates - Venezuela earthquake rescues continue, mounting death toll, thousands missing",
+      "url": "https://edition.cnn.com/2026/06/29/world/live-news/venezuela-earthquake-hnk"
+    }
+  ]
+}
