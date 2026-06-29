@@ -4,6 +4,12 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Rocket Lab/Iridium vertical space stack | Rocket Lab's planned $8B Iridium acquisition would combine launch, spacecraft manufacturing, L-band spectrum, LEO network, D2D/PNT and recurring satellite services | Watch shareholder/regulatory approvals, bridge financing, Neutron schedule, Iridium NTN Direct, defense/customer commitments and SpaceX/Amazon Leo responses | Open |
+| High | Track TIDAL AI music monetization controls | TIDAL will tag fully AI-generated music, block fraudulent AI content and stop monetizing music it identifies as wholly AI-generated | Recheck July 15 enforcement, distributor tagging, artist/rightsholder response, false positives and Spotify/Apple/Deezer counter-moves | Open |
+| High | Track age assurance enforcement stack | Australia is doubling social media age-law penalties while Discord tests Google Wallet, Incode, credit-card checks and on-device age estimation | Watch eSafety investigations, Discord rollout regions, privacy controls, app-store provider role and EU/Polish analogs | Open |
+| High | Track geofence warrant privacy | Chatrie v. United States treats police acquisition of Google Location History as a Fourth Amendment search, raising the bar for geofence warrants | Watch Fourth Circuit remand, Google policy response, civil-liberties commentary and international parallels without giving legal advice | Open |
+| Medium | Track data-center coolant observability | Omen AI's $31M Series A shows liquid-cooling fluid health, bacteria and downtime becoming a real AI compute bottleneck | Watch operator deployments, Pyxis competition, measured uptime gains, water/chemical tradeoffs and TensorWave/customer proof | Open |
+| Medium | Track dexterous robotic hands | Proception's $11M seed and first robotic-hand shipments show physical AI moving into hand hardware plus sensor-data collection | Watch customer feedback, safety data, sensor glove performance, Tesla/Figure/Agility comparisons and whether hands become a supplier market | Open |
 | High | Track AI quality human-in-the-loop | Ford rehire of 350 veteran engineers shows automated AI quality systems can miss domain-specific failure points in physical products | Watch Ford follow-ups, JD Power quality data, warranty/recall costs and whether other manufacturers reverse over-automation | Open |
 | High | Track KIDS Act age and chatbot regulation | The KIDS Act package combines KOSA, SAFE Bots, COPPA 2.0, messaging and data broker provisions with possible age-verification pressure | Recheck bill text, vote schedule, encryption carve-outs, AI chatbot obligations, EFF/industry responses and EU/Polish analogs | Open |
 | Medium | Track AI chat logs as evidence | Palisades Fire trial used ChatGPT logs as disputed evidence and ended in mistrial, making AI chat history a privacy/evidence topic | Watch retrial decisions, judicial standards, provider retention policies, subpoenas and civil-liberties commentary without giving legal advice | Open |
@@ -294,6 +300,11 @@
   `brief.pdf`, and `podcast.mp3`. Final MP3 used Piper and measured about 8:03
   by `ffprobe`; PDF brief was rendered in the mobile 390 x 844 pt format and
   visually checked from PNG renders.
+- 2026-06-29: Evening tech research run created a timestamped material update.
+  Strongest podcast candidates: Rocket Lab acquiring Iridium, TIDAL
+  demonetizing fully AI-generated music, Australia/Discord age assurance
+  enforcement, Chatrie/geofence warrant privacy, Omen AI data-center coolant
+  monitoring and Proception dexterous robotic hands.
 
 ## Done
 

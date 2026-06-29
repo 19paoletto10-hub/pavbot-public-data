@@ -8,6 +8,20 @@ Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
 
+Po wieczornym raporcie z 2026-06-29-1934 najważniejsza nowa warstwa to
+infrastruktura spoza klasycznego model-stacku: Rocket Lab chce przejąć Iridium
+za około 8 mld USD enterprise value, łącząc launch, produkcję satelitów,
+widmo, sieć LEO, D2D/PNT i klientów krytycznej łączności. Druga warstwa to
+platformowe porządkowanie AI-generated culture: TIDAL będzie tagować i
+niemonetyzować w pełni AI-generowaną muzykę, co uzupełnia poranny wątek Suno
+Spark. Trzecia warstwa to praktyczna egzekucja wieku i prywatności:
+Australia podwaja kary za niespełnianie social media minimum age law, Discord
+testuje Google Wallet/Incode/credit-card age assurance, a Sąd Najwyższy USA w
+Chatrie uznał pozyskanie Google Location History przez geofence warrant za
+Fourth Amendment search. Czwarta warstwa to fizyczne ograniczenia AI:
+Omen AI pokazuje chłodzenie data centers jako koszt uptime, a Proception
+robotyczne dłonie i sensoryczne dane dotyku jako brakujący element physical AI.
+
 Po raporcie z 2026-06-29 najważniejsza nowa warstwa to praktyczne granice AI w
 realnych procesach: Ford przywrócił 350 doświadczonych inżynierów po
 rozczarowaniu automatycznymi systemami jakości, a publiczny test
@@ -154,6 +168,24 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- Rocket Lab/Iridium vertical space stack: przejęcie Iridium trzeba śledzić
+  jako próbę budowy alternatywy dla SpaceX/Amazon Leo przez połączenie launch,
+  produkcji satelitów, L-band spectrum, D2D/PNT i recurring satellite services.
+- TIDAL AI music monetization controls: polityka TIDAL trzeba śledzić jako test
+  czy tagowanie, blokowanie oszustw i brak tantiem dla w pełni AI-generowanej
+  muzyki ograniczy AI music slop bez blokowania legalnego AI-assisted workflow.
+- Age assurance enforcement stack: Australia/Discord pokazują, że regulacja
+  wieku wymaga Google Wallet, Incode, credit-card checks, informacji od app
+  stores i audytowalnych dowodów platform; śledzić prywatność, UX i egzekucję.
+- Geofence warrants and Google Location History: Chatrie v. United States
+  trzeba śledzić jako ważny sygnał prywatności lokalizacji telefonu, masowych
+  zapytań o osoby w danym miejscu i ograniczeń third-party doctrine.
+- Data-center coolant observability: Omen AI pokazuje, że liquid cooling,
+  mikrobiologia płynów, zanieczyszczenia i downtime racków stają się częścią
+  realnego kosztu AI compute.
+- Dexterous robotic hands and physical AI data: Proception pokazuje, że
+  komercjalizacja humanoidów wymaga dłoni, sensorów, danych interakcji i
+  skalowalnego treningu manipulacji, nie tylko modeli świata i napędów.
 - AI quality needs domain experts: Ford rehire of 350 veteran engineers trzeba
   śledzić jako przykład, że systemy AI w produkcji fizycznej wymagają
   doświadczonych human-in-the-loop reviewerów, a nie tylko automatycznego
