@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-29",
+  "runTime": "01:41",
+  "executiveSummary": "Poranna runda przyniosła wyraźny nowy batch Wrocław/remote. Najmocniejsze sygnały to Primotly Senior AI Engineer (Python, GenAI, GCP) i Remodevs Senior AI Engineer, a Addepto rozdzielił swój LLM-stack na trzy osobne publiczne karty. Dodatkowo doszły świeże, hands-on role z deepsense.ai, CDQ i Callstack, więc obecny update jest realny źródłowo, a nie tylko odświeżeniem tych samych ofert.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior AI Engineer (Python, GenAI, GCP)",
+      "company": "Primotly",
+      "location": "Wrocław +4, remote",
+      "workMode": "Remote",
+      "compensation": "29 000-36 500 PLN net/mies. B2B",
+      "seniority": "Senior",
+      "fitSummary": "mocny sygnał GCP, Vertex, Cloud Run i GenAI",
+      "whyInteresting": "mocny sygnał GCP, Vertex, Cloud Run i GenAI",
+      "uncertainty": "niepewność niska",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/primotly-senior-ai-engineer-python-genai-gcp--wroclaw-ai"
+      ],
+      "tags": [
+        "GenAI",
+        "Python",
+        "GCP"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior AI Engineer",
+      "company": "Remodevs",
+      "location": "Wrocław +4, remote",
+      "workMode": "Remote",
+      "compensation": "33 970-42 462 PLN net/mies. B2B",
+      "seniority": "Senior",
+      "fitSummary": "agent workflows, multi-agent systems, evals, tracing i observability na styku LLM i enterprise supply chain",
+      "whyInteresting": "agent workflows, multi-agent systems, evals, tracing i observability na styku LLM i enterprise supply chain",
+      "uncertainty": "niepewność niska do średniej",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/remodevs-senior-ai-engineer-warszawa-ai"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior AI Engineer (LLMs, Python)",
+      "company": "Addepto",
+      "location": "Wrocław +4, remote",
+      "workMode": "Remote",
+      "compensation": "19 320-25 200 PLN net/mies. B2B",
+      "seniority": "Senior",
+      "fitSummary": "praktyczne LLMs, backend FastAPI, deployment w GCP/AWS/Azure, produkcyjne AI i mocne źródło pierwszej strony",
+      "whyInteresting": "praktyczne LLMs, backend FastAPI, deployment w GCP/AWS/Azure, produkcyjne AI i mocne źródło pierwszej strony",
+      "uncertainty": "niepewność niska",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/addepto-senior-ai-engineer-llms-python--wroclaw-ai-7bd99c9e"
+      ],
+      "tags": [
+        "LLM",
+        "Python",
+        "AWS",
+        "Azure",
+        "GCP"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "AI Engineer (LLMs, Python)",
+      "company": "Addepto",
+      "location": "Wrocław +4, remote",
+      "workMode": "Remote",
+      "compensation": "12 600-19 320 PLN net/mies. B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "ten sam mocny pipeline LLM + backend, ale na niższym progu seniority",
+      "whyInteresting": "ten sam mocny pipeline LLM + backend, ale na niższym progu seniority",
+      "uncertainty": "niepewność niska",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/addepto-ai-engineer-llms-python--wroclaw-ai-0b7a2760"
+      ],
+      "tags": [
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Solution Engineer (AI & Big Data)",
+      "company": "Addepto",
+      "location": "Wrocław +4, remote",
+      "workMode": "Remote",
+      "compensation": "21 000-33 000 PLN/mies.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "mniej LLM-owych słów w tytule, ale nadal jawne LLM, Databricks, Python, Data Engineering i GenAI",
+      "whyInteresting": "mniej LLM-owych słów w tytule, ale nadal jawne LLM, Databricks, Python, Data Engineering i GenAI",
+      "uncertainty": "niepewność średnia",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/addepto-solution-engineer-ai-big-data--wroclaw-ai-919c80c6"
+      ],
+      "tags": [
+        "LLM",
+        "GenAI",
+        "Python"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Python AI Engineer",
+      "company": "deepsense.ai",
+      "location": "Wrocław +4, remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "mocny stack AWS, RAG, LLMs, CI/CD, Docker, vector databases, LangChain, LangGraph, Python, Prompt Engineering",
+      "whyInteresting": "mocny stack AWS, RAG, LLMs, CI/CD, Docker, vector databases, LangChain, LangGraph, Python, Prompt Engineering",
+      "uncertainty": "niepewność średnia",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "Machine Learning Engineer",
+      "company": "CDQ",
+      "location": "Wrocław +1, remote",
+      "workMode": "Remote",
+      "compensation": "16 000-22 000 PLN/mies.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "jawne GenAI, LLMs, Clouds i RAGs, czyli dobry hands-on ML/LLM sygnał poza czystym consultingiem",
+      "whyInteresting": "jawne GenAI, LLMs, Clouds i RAGs, czyli dobry hands-on ML/LLM sygnał poza czystym consultingiem",
+      "uncertainty": "niepewność średnia",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI"
+      ]
+    },
+    {
+      "rank": 8,
+      "title": "Senior AI System Engineer",
+      "company": "Callstack",
+      "location": "Wrocław +5, remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "publiczny opis pokazuje end-to-end LLM i multi-agent architectures, RAG pipelines, document-processing workflows, cloud-native AI infra i governance",
+      "whyInteresting": "brak jawnych widełek w publicznym fragmencie, ale technicznie to jeden z najmocniejszych leadów tej rundy",
+      "uncertainty": "Brak danych w raporcie.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/callstack-senior-ai-system-engineer-wroclaw-ai-d121a189"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano osiem nowych publicznych leadów: Primotly, Remodevs, trzy karty Addepto, deepsense.ai, CDQ i Callstack.",
+    "Addepto przestał być jednym ogólnym sygnałem i pokazał kilka osobnych, jawnych kart z różnymi progami seniority oraz zakresem LLM/backend/solution engineering.",
+    "Pracuj.pl i No Fluff Jobs w tej rundzie nie dały lepszego sygnału niż nowy batch z Just Join IT; część oglądanych kart z EPAM i Sii była już wygaszona, więc nie weszła do shortlisty.",
+    "Wcześniej śledzone role, w tym YOUR ITEAMS, CodiLime, Tooploox i DEVAPO, nie wymagały ponownego wypisania, bo nie wykazały nowej materialnej zmiany."
+  ],
+  "risks": [],
+  "recommendedActions": [
+    "Następny przebieg powinien najpierw potwierdzić trwałość Primotly, Remodevs i trzech kart Addepto, bo to obecnie najmocniejszy nowy batch.",
+    "Warto obserwować, czy deepsense.ai, CDQ i Callstack wystawią bardziej kanoniczne employer pages albo przynajmniej stabilne publiczne card URL-e.",
+    "Addepto warto traktować jako jeden z kluczowych recurring sources na tej ścieżce, bo publicznie rozwinęło się w kilka różnych, ale spójnych ról."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Wrocław AI/ML",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: all locations AI/ML",
+      "url": "https://justjoin.it/all-locations/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl: Senior Applied AI Engineer (LLMs, Azure), EPAM",
+      "url": "https://www.pracuj.pl/praca/senior-applied-ai-engineer-llms-azure-wroclaw-generala-romualda-traugutta-43%2Coferta%2C1004791338",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl: AI/ML Developer – Generative AI, Sii",
+      "url": "https://www.pracuj.pl/praca/ai-ml-developer-generative-ai-f-m-x-wroclaw-na-ostatnim-groszu-3%2Coferta%2C1004803808",
+      "status": "checked"
+    },
+    {
+      "title": "No Fluff Jobs: Wrocław AI/ML",
+      "url": "https://nofluffjobs.com/pl/wroclaw/artificial-intelligence",
+      "status": "checked"
+    },
+    {
+      "title": "Primotly: Senior AI Engineer (Python, GenAI, GCP)",
+      "url": "https://justjoin.it/job-offer/primotly-senior-ai-engineer-python-genai-gcp--wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Remodevs: Senior AI Engineer",
+      "url": "https://justjoin.it/job-offer/remodevs-senior-ai-engineer-warszawa-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Addepto: Senior AI Engineer (LLMs, Python)",
+      "url": "https://justjoin.it/job-offer/addepto-senior-ai-engineer-llms-python--wroclaw-ai-7bd99c9e",
+      "status": "checked"
+    },
+    {
+      "title": "Addepto: AI Engineer (LLMs, Python)",
+      "url": "https://justjoin.it/job-offer/addepto-ai-engineer-llms-python--wroclaw-ai-0b7a2760",
+      "status": "checked"
+    },
+    {
+      "title": "Addepto: Solution Engineer (AI & Big Data)",
+      "url": "https://justjoin.it/job-offer/addepto-solution-engineer-ai-big-data--wroclaw-ai-919c80c6",
+      "status": "checked"
+    },
+    {
+      "title": "Callstack: Senior AI System Engineer",
+      "url": "https://justjoin.it/job-offer/callstack-senior-ai-system-engineer-wroclaw-ai-d121a189",
+      "status": "checked"
+    }
+  ]
+}
