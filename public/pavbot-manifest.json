@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-06-29T07:14:26.398556+00:00",
+  "generatedAt": "2026-06-29T07:41:32.262586+00:00",
   "rawBaseUrl": "",
   "automations": [
     {
@@ -371,6 +371,66 @@
       "path": "research/polska-swiat/data/2026-06-29-research.json",
       "url": "research/polska-swiat/data/2026-06-29-research.json",
       "sizeBytes": 22804,
+      "date": "2026-06-29"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-06-29/sources.md",
+      "type": "podcastSources",
+      "topic": "polska-swiat",
+      "title": "Źródła do odcinka Polska/Świat — 2026-06-29",
+      "path": "research/polska-swiat/podcasts/2026-06-29/sources.md",
+      "url": "research/polska-swiat/podcasts/2026-06-29/sources.md",
+      "sizeBytes": 4722,
+      "date": "2026-06-29"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-06-29/script.md",
+      "type": "podcastScript",
+      "topic": "polska-swiat",
+      "title": "script.md",
+      "path": "research/polska-swiat/podcasts/2026-06-29/script.md",
+      "url": "research/polska-swiat/podcasts/2026-06-29/script.md",
+      "sizeBytes": 7326,
+      "date": "2026-06-29"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-06-29/render.json",
+      "type": "podcastRender",
+      "topic": "polska-swiat",
+      "title": "render.json",
+      "path": "research/polska-swiat/podcasts/2026-06-29/render.json",
+      "url": "research/polska-swiat/podcasts/2026-06-29/render.json",
+      "sizeBytes": 281,
+      "date": "2026-06-29"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-06-29/draft.md",
+      "type": "podcastDraft",
+      "topic": "polska-swiat",
+      "title": "draft.md",
+      "path": "research/polska-swiat/podcasts/2026-06-29/draft.md",
+      "url": "research/polska-swiat/podcasts/2026-06-29/draft.md",
+      "sizeBytes": 7326,
+      "date": "2026-06-29"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-06-29/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "polska-swiat",
+      "title": "Podcast brief PDF",
+      "path": "research/polska-swiat/podcasts/2026-06-29/brief.pdf",
+      "url": "research/polska-swiat/podcasts/2026-06-29/brief.pdf",
+      "sizeBytes": 46725,
+      "date": "2026-06-29"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-06-29/podcast.mp3",
+      "type": "podcastAudio",
+      "topic": "polska-swiat",
+      "title": "Podcast audio",
+      "path": "research/polska-swiat/podcasts/2026-06-29/podcast.mp3",
+      "url": "research/polska-swiat/podcasts/2026-06-29/podcast.mp3",
+      "sizeBytes": 3503410,
       "date": "2026-06-29"
     },
     {
@@ -1171,7 +1231,7 @@
       "title": "2026-06-28-polska-swiat.pdf",
       "path": "research/polska-swiat/pdfs/2026-06-28-polska-swiat.pdf",
       "url": "research/polska-swiat/pdfs/2026-06-28-polska-swiat.pdf",
-      "sizeBytes": 71204,
+      "sizeBytes": 85008,
       "date": "2026-06-28"
     },
     {
@@ -1181,7 +1241,7 @@
       "title": "2026-06-28-1935-polska-swiat.pdf",
       "path": "research/polska-swiat/pdfs/2026-06-28-1935-polska-swiat.pdf",
       "url": "research/polska-swiat/pdfs/2026-06-28-1935-polska-swiat.pdf",
-      "sizeBytes": 78005,
+      "sizeBytes": 96287,
       "date": "2026-06-28",
       "time": "19:35"
     },
@@ -4375,7 +4435,7 @@
       "title": "Automation Prompt: Pavbot Polska Świat Research 08:30",
       "path": "research/polska-swiat/automation-research-prompt.md",
       "url": "research/polska-swiat/automation-research-prompt.md",
-      "sizeBytes": 2736
+      "sizeBytes": 5585
     },
     {
       "id": "research/polska-swiat/automation-podcast-prompt.md",
@@ -4384,7 +4444,7 @@
       "title": "Automation Prompt: Pavbot Polska Świat Podcast 09:30",
       "path": "research/polska-swiat/automation-podcast-prompt.md",
       "url": "research/polska-swiat/automation-podcast-prompt.md",
-      "sizeBytes": 3199
+      "sizeBytes": 3575
     },
     {
       "id": "research/llm-ai-jobs-wroclaw/topic.md",
