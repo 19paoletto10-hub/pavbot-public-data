@@ -4,6 +4,12 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track AI quality human-in-the-loop | Ford rehire of 350 veteran engineers shows automated AI quality systems can miss domain-specific failure points in physical products | Watch Ford follow-ups, JD Power quality data, warranty/recall costs and whether other manufacturers reverse over-automation | Open |
+| High | Track KIDS Act age and chatbot regulation | The KIDS Act package combines KOSA, SAFE Bots, COPPA 2.0, messaging and data broker provisions with possible age-verification pressure | Recheck bill text, vote schedule, encryption carve-outs, AI chatbot obligations, EFF/industry responses and EU/Polish analogs | Open |
+| Medium | Track AI chat logs as evidence | Palisades Fire trial used ChatGPT logs as disputed evidence and ended in mistrial, making AI chat history a privacy/evidence topic | Watch retrial decisions, judicial standards, provider retention policies, subpoenas and civil-liberties commentary without giving legal advice | Open |
+| High | Track AI music artist-rights programs | Suno Spark mixes grants and marketing with broad use rights and criticism/waiver clauses during ongoing AI music disputes | Watch artist response, lawsuit updates, licensing terms, Warner/label deals and competing rights-cleared creator programs | Open |
+| Medium | Track AI hiring screener variance | `interviewstreet/hiring-agent` and HN testing show LLM resume scoring can look objective while varying for the same candidate | Recheck repo issues, audits, benchmarks, HR regulation and whether vendors separate extraction from scoring decisions | Open |
+| Medium | Track agent operations provenance | Aleph Alpha Savanna, Herdr and Lore point to operational infrastructure for training lineage, sessions and decision memory around agents | Watch adoption, integrations with Codex/Claude/Cursor, audit logs, sensitive-file policies and team workflow evidence | Open |
 | High | Track Gemini capacity rationing for Meta | Reuters/FT reporting suggests even Meta can hit external model capacity limits when using Gemini internally | Watch Google/Meta comments, customer limits, token-efficiency policies, fallback to Meta models and similar capacity disputes | Open |
 | High | Track APAC regional AI clouds | Firmus/Nvidia adds a large Asia-Pacific AI factory signal for AI-native customers outside classic hyperscaler access | Recheck GPU delivery schedule, Batam/Project Southgate permits, customer commitments, financing and European analogs | Open |
 | High | Track Flock AI surveillance | Flock cameras show natural-language search over physical-world video plus governance, misuse and security concerns | Watch audits, local bans, warrant requirements, ACLU/404 follow-ups and vendor security responses | Open |
@@ -278,6 +284,16 @@
   and DDR5/RAMageddon, Firmus/Nvidia regional AI factories, Flock
   AI-surveillance, global social media age bans and practical agent tooling via
   Product Hunt/HN.
+- 2026-06-29: Daily research run created a material update. Strongest podcast
+  candidates: Ford returning veteran engineers after AI quality shortfall, KIDS
+  Act age/chatbot regulation, ChatGPT logs as disputed evidence, Suno Spark
+  artist-rights terms, AI resume-screening variance and agent operations
+  provenance.
+- 2026-06-29: Daily tech podcast generated from the normal morning research
+  report; created `draft.md`, `script.md`, `sources.md`, `render.json`,
+  `brief.pdf`, and `podcast.mp3`. Final MP3 used Piper and measured about 8:03
+  by `ffprobe`; PDF brief was rendered in the mobile 390 x 844 pt format and
+  visually checked from PNG renders.
 
 ## Done
 

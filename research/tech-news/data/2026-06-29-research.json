@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-06-29",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Poranny research jest materialną aktualizacją, ale nie dlatego, że pojawił się kolejny wielki model. Najważniejsza zmiana po raporcie 2026-06-28-1935 to praktyczny rachunek za AI w realnych procesach: Ford przywraca 350 doświadczonych inżynierów, bo same systemy AI/automatyzacji jakości nie dały oczekiwanej jakości, a społeczność HN mocno podbiła przykład niestabilnego AI-screeningu CV.",
+    "Druga oś to regulacje platform: amerykański pakiet KIDS Act łączy KOSA, SAFE Bots, COPPA 2.0, data brokers i messaging, a EFF ostrzega, że nawet bez prostego zapisu \"wszyscy muszą pokazać dokument\" ryzyko odpowiedzialności może prowadzić do powszechnych kontroli wieku. To uzupełnia wczorajszy wątek globalnych zakazów social mediów dla nastolatków.",
+    "Trzecia oś to prawa, dowody i kultura wokół AI: The Verge opisuje użycie logów ChatGPT jako części materiału dowodowego w procesie Palisades Fire, Suno Spark łączy granty dla niezależnych artystów z bardzo szerokimi zgodami, a HN/Product Hunt pokazują, że praktyczne narzędzia agentowe przesuwają się w stronę kontroli, pamięci decyzji, sesji terminalowych i provenance treningu modeli."
+  ],
+  "summaryBullets": [
+    "AI: Ford przywraca ekspertów, bo AI w kontroli jakości nie wystarczyło",
+    "Regulacje: KIDS Act przenosi spór o dzieci online na age checks i chatboty",
+    "Regulacje: Logi ChatGPT trafiają do sali sądowej jako sporny dowód"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-06-29-0-ford-przywraca-ekspertow-bo-ai-w-kontroli-jakosci-nie-wystarczylo-131f0a2970",
+      "section": "AI",
+      "title": "Ford przywraca ekspertów, bo AI w kontroli jakości nie wystarczyło",
+      "standfirst": "Ford zatrudnił lub przywrócił 350 doświadczonych inżynierów po rozczarowaniu automatycznymi systemami jakości. To mocny kontrapunkt do narracji, że AI może szybko zastąpić wiedzę domenową w produkcji.",
+      "whatHappened": "Ford używa weteranów inżynierii do znajdowania awarii przed produkcją, szkolenia młodszych zespołów i poprawiania narzędzi AI.",
+      "whyItMatters": "Przemysłowy AI potrzebuje ludzi z głęboką wiedzą o produkcie, bo błędy jakościowe są droższe niż opóźniony eksperyment software'owy.",
+      "deeperAnalysis": [
+        "Ten przypadek dobrze odcina marketing AI od wdrożeń w ciężkiej inżynierii. Ford nie mówi, że porzuca AI, tylko że samo \"wrzucenie wymagań projektowych\" do systemu nie wystarczyło do uzyskania jakości. To inne ryzyko niż halucynacja czatbota: tutaj błąd może oznaczać recall, koszty gwarancyjne i realną utratę zaufania do produktu.",
+        "Najciekawszy jest model korekty. Weterani mają nie tylko ręcznie łatać proces, ale pomagać młodszym ludziom i reprogramować systemy AI. To pokazuje, że w dojrzałych firmach najlepsza rola AI może być cyklem człowiek-model-proces, a nie prostą redukcją etatów.",
+        "Dla podcastu to dobry temat po tygodniu pełnym historii o zastępowaniu pracy przez agentów. Przekaz jest bardziej trzeźwy: gdy domena ma długi ogon przypadków brzegowych, AI może przyspieszać pracę, ale nie zastępuje pamięci organizacyjnej i odpowiedzialności za wynik."
+      ],
+      "contextPoints": [
+        "Co się stało: Ford przywrócił 350 ekspertów po słabych wynikach automatycznych systemów jakości.",
+        "Dlaczego ważne: realne wdrożenia AI muszą mierzyć koszt błędów, nie tylko koszt pracy.",
+        "Na co patrzeć dalej: czy inne firmy produkcyjne pokażą podobny powrót do human-in-the-loop jakości."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: Ford rehires engineers after AI falls short",
+          "url": "https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/"
+        },
+        {
+          "title": "TNW: Ford rehired 350 engineers after AI quality miss",
+          "url": "https://thenextweb.com/news/ford-rehired-350-engineers-ai-quality-jd-power"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Praca",
+        "Motoryzacja",
+        "Automatyzacja"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-29-1-kids-act-przenosi-spor-o-dzieci-online-na-age-checks-i-chatboty-9e0d839952",
+      "section": "Regulacje",
+      "title": "KIDS Act przenosi spór o dzieci online na age checks i chatboty",
+      "standfirst": "Amerykański pakiet KIDS Act łączy kilka projektów dotyczących dzieci online, w tym KOSA, SAFE Bots, COPPA 2.0 i data brokers. EFF ostrzega, że konstrukcja odpowiedzialności może wypchnąć platformy w stronę powszechnego ustalania wieku.",
+      "whatHappened": "Liderzy House Energy & Commerce ogłosili bipartisan agreement, a organizacje praw cyfrowych krytykują skutki dla prywatności i mowy online.",
+      "whyItMatters": "Ochrona dzieci w sieci zaczyna obejmować nie tylko feedy social mediów, ale też AI chatboty, prywatne wiadomości, data brokerów i kontrolę wieku.",
+      "deeperAnalysis": [
+        "To jest ważne uzupełnienie wczorajszego tematu globalnych zakazów social mediów dla nastolatków. Zamiast prostego \"platforma od 16 lat\" mamy pakietową legislację, która składa kilka osobnych obszarów: design platform, komunikatory, boty AI, prywatność dzieci i rynek danych. Dla Big Tech oznacza to compliance across product surface, nie tylko jedną kontrolkę w aplikacji.",
+        "Największe napięcie dotyczy wieku. Zwolennicy KOSA często podkreślają, że projekt nie wymaga wprost age verification, ale EFF zwraca uwagę na standard \"knows or should have known\". Jeśli platforma może odpowiadać za niepoznanie wieku użytkownika, prawnicy i product teams mogą dojść do wniosku, że bezpieczniej jest sprawdzać wszystkich.",
+        "W podcaście trzeba oddzielić fakt polityczny od interpretacji EFF. Faktem jest bipartisan package i lista zawartych projektów. Interpretacją jest to, że pakiet stanie się mechanizmem age surveillance; tę ocenę warto przypisać EFF i zestawić z deklaracjami komisji o bezpieczeństwie dzieci."
+      ],
+      "contextPoints": [
+        "Co się stało: House Energy & Commerce ogłosił porozumienie wokół pakietu KIDS Act.",
+        "Dlaczego ważne: regulacja platform wchodzi w warstwę wieku, AI botów, wiadomości i danych.",
+        "Na co patrzeć dalej: tekst finalny, głosowanie, definicje wieku i wyjątki dla szyfrowania."
+      ],
+      "sources": [
+        {
+          "title": "House Energy & Commerce: KIDS Act agreement",
+          "url": "https://energycommerce.house.gov/posts/chairman-guthrie-and-ranking-member-pallone-announce-agreement-on-bipartisan-kids-safety-package"
+        },
+        {
+          "title": "EFF: The KIDS Act Would Require Age Checks To Get Online",
+          "url": "https://www.eff.org/deeplinks/2026/06/kids-act-would-require-age-checks-get-online"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/news"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Regulacje",
+        "Social Media",
+        "Prywatność",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-29-2-logi-chatgpt-trafiaja-do-sali-sadowej-jako-sporny-dowod-d61ac62f1c",
+      "section": "Regulacje",
+      "title": "Logi ChatGPT trafiają do sali sądowej jako sporny dowód",
+      "standfirst": "The Verge opisał użycie logów ChatGPT w procesie dotyczącym Palisades Fire. Ława nie została przekonana, a sprawa zakończyła się mistrial, co pokazuje jak nieustalone są normy interpretowania rozmów z AI.",
+      "whatHappened": "Prokuratorzy użyli logów AI obok lokalizacji i innych danych cyfrowych, ale jurorzy nie uznali ich za mocny dowód intencji.",
+      "whyItMatters": "Rozmowy z chatbotami mogą stać się materiałem dowodowym, choć nie wiadomo, jak odróżniać fantazję, emocje, research i zamiar.",
+      "deeperAnalysis": [
+        "Ten temat nie jest poradą prawną, tylko sygnałem o zmianie statusu danych AI. Użytkownicy traktują chatboty jak notatnik, wyszukiwarkę, terapeutyczny szkicownik albo symulator rozmowy. Gdy takie logi trafiają do sprawy karnej, sąd i ława muszą ocenić, czy pytanie do modelu cokolwiek mówi o realnym zamiarze.",
+        "The Verge opisuje sprawę, w której logi były tylko częścią materiału obok klasycznych danych: lokalizacji telefonu, nagrań i zeznań. Ważne jest jednak to, że AI chat history w ogóle pojawia się jako evidence narrative. To może wpływać na polityki retencji danych, enterprise privacy, edukację użytkowników i oczekiwania wobec producentów narzędzi AI.",
+        "Dla polskiego odbiorcy najprostszy kąt brzmi: \"czy rozmowa z AI jest prywatnym szkicem, czy dokumentem, który kiedyś ktoś odczyta w sądzie?\". Odpowiedź będzie zależeć od jurysdykcji i kontekstu, więc w materiale trzeba mówić ostrożnie i bez instrukcji prawnych."
+      ],
+      "contextPoints": [
+        "Co się stało: logi ChatGPT zostały użyte jako element narracji dowodowej w procesie Palisades Fire.",
+        "Dlaczego ważne: dane z AI mogą mieć skutki poza aplikacją, nawet jeśli użytkownik traktował je jak eksperyment myślowy.",
+        "Na co patrzeć dalej: polityki retencji, subpoenas, reakcje OpenAI i standardy dopuszczania AI chat logs."
+      ],
+      "sources": [
+        {
+          "title": "The Verge: ChatGPT logs in Palisades fire trial",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/958751/prosecutors-chatgpt-palisades-wildfire-arson-mistrial"
+        },
+        {
+          "title": "LA Times: mistrial in Palisades fire arson case",
+          "url": "https://www.latimes.com/california/story/2026-06-26/jonathan-rinderknecht-verdict-palisades-fire"
+        },
+        {
+          "title": "ABC7: ATF testimony on AI use",
+          "url": "https://abc7.com/post/atf-agent-testifies-linking-arson-suspect-dark-web-ai-use-lachman-fire-trial/19278224/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "Prywatność",
+        "Dowody cyfrowe",
+        "Prawo"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-29-3-suno-spark-pokazuje-cene-partnerstwa-z-ai-dla-artystow-de02c4ea5a",
+      "section": "Produkty",
+      "title": "Suno Spark pokazuje cenę \"partnerstwa\" z AI dla artystów",
+      "standfirst": "Suno oferuje granty, mentoring i marketing niezależnym artystom, ale warunki programu Spark dają firmie szerokie prawa do korzystania z muzyki i ograniczają krytykę. To kolejna odsłona sporu o zgodę twórców w generatywnej muzyce.",
+      "whatHappened": "Program Spark trafił do mediów przez połączenie wsparcia dla artystów z restrykcyjnymi warunkami umownymi.",
+      "whyItMatters": "AI music companies próbują budować katalogi i relacje z twórcami w czasie, gdy ta sama branża toczy spory o trening, licencje i prawa do głosu artystów.",
+      "deeperAnalysis": [
+        "Po partnerstwach i pozwach muzycznych Suno potrzebuje nie tylko technologii, ale też legitymacji kulturowej. Program dla niezależnych artystów wygląda jak próba pozyskania realnych twórców do ekosystemu, który dotąd często był opisywany jako konkurencja dla ludzi. Problem w tym, że warunki udziału mogą zmieniać \"grant\" w bardzo kosztowną zgodę na użycie twórczości.",
+        "Najbardziej podcastowy element to konflikt między pieniędzmi a głosem artysty. Jeśli udział wymaga pozytywnej promocji i ogranicza krytykę, trudno mówić o neutralnym programie wspierającym scenę niezależną. Jednocześnie nie wszyscy artyści mają luksus odrzucania grantów, mentoringu i dystrybucji.",
+        "Warto zestawić ten temat z Deezer Remix Lab i wcześniejszą debatą o A24/Google DeepMind. Rynek kreatywny nie odrzuca każdej AI automatycznie; pyta raczej o zgodę, pieniądze, przejrzystość i to, czy twórcy mają realną pozycję negocjacyjną."
+      ],
+      "contextPoints": [
+        "Co się stało: Suno uruchomiło Spark dla niezależnych artystów z kontrowersyjnymi warunkami.",
+        "Dlaczego ważne: twórcy mogą finansować własną widoczność kosztem szerokich praw dla platform AI.",
+        "Na co patrzeć dalej: reakcje artystów, pozwy, warunki licencyjne i odpowiedź konkurentów muzycznych."
+      ],
+      "sources": [
+        {
+          "title": "The Verge: Suno Spark incubator",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/958801/suno-launches-spark-incubator-program-to-feed-independent-artists-to-its-ai-machine"
+        },
+        {
+          "title": "Music Business Worldwide: Suno grants and criticism clause",
+          "url": "https://www.musicbusinessworldwide.com/suno-is-paying-grants-to-independent-artists-so-long-as-they-agree-never-to-criticize-suno/"
+        },
+        {
+          "title": "Billboard: Suno launches artist incubator",
+          "url": "https://www.billboard.com/pro/suno-launches-artist-incubator/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Muzyka",
+        "Twórcy",
+        "Prawa autorskie"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-29-4-ai-screening-cv-jako-loteria-jakosciowa-0f82266617",
+      "section": "AI",
+      "title": "AI-screening CV jako loteria jakościowa",
+      "standfirst": "Open-source'owy hiring-agent od interviewstreet/HackerRank analizuje CV, GitHub i scoring przez LLM, a niezależny test pokazał duży rozrzut wyniku dla tego samego życiorysu. To praktyczne ostrzeżenie przed automatyzacją decyzji rekrutacyjnych.",
+      "whatHappened": "Społeczność HN podbiła test, w którym ten sam resume dostawał różne oceny mimo podobnych ustawień modelu.",
+      "whyItMatters": "Jeżeli AI filtruje kandydatów niestabilnie, firmy mogą skalować przypadkowość i bias zamiast obiektywnej selekcji.",
+      "deeperAnalysis": [
+        "Oficjalne repo nie jest tajnym systemem HR, tylko otwartym pipeline'em do eksperymentów: parsuje PDF, wyciąga dane, analizuje GitHuba i tworzy scoring. Właśnie dlatego jest cenne jako publiczny przykład. Widać prompt, kryteria i założenia, które często w komercyjnych narzędziach pozostają czarną skrzynką.",
+        "Test Dana Kinsky'ego nie jest akademicką ewaluacją i nie powinien być traktowany jako ostateczny werdykt o każdym AI ATS. Pokazuje jednak realny problem: LLM może być użyteczny do ekstrakcji struktury z CV, ale gorzej nadaje się do arbitralnego oceniania \"wartości\" doświadczenia bez solidnych rubryk, powtarzalności i audytu.",
+        "Dla podcastu to dobry ludzki temat. Kandydat nie zobaczy benchmarku modelu, tylko decyzję \"przechodzisz albo odpadasz\". Jeśli ta decyzja zależy od losowego rozrzutu oceny, firma nie tylko ryzykuje prawnie i reputacyjnie, ale też traci dobrych ludzi."
+      ],
+      "contextPoints": [
+        "Co się stało: publiczny hiring-agent i test społecznościowy pokazały napięcie między AI parsingiem a AI scoringiem.",
+        "Dlaczego ważne: HR automation może ukrywać przypadkowość za pozorem obiektywnej punktacji.",
+        "Na co patrzeć dalej: audyty rekrutacyjnych AI, standardy powtarzalności i obowiązek wyjaśnienia decyzji."
+      ],
+      "sources": [
+        {
+          "title": "GitHub: interviewstreet/hiring-agent",
+          "url": "https://github.com/interviewstreet/hiring-agent"
+        },
+        {
+          "title": "Dan Unparsed: HackerRank open-source ATS test",
+          "url": "https://danunparsed.com/p/hackerrank-open-source-ats"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/news"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "Rekrutacja",
+        "HR",
+        "LLM"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-29-5-agentowe-narzedzia-dojrzewaja-wokol-pamieci-sesji-i-provenance-b797121f61",
+      "section": "Infrastruktura",
+      "title": "Agentowe narzędzia dojrzewają wokół pamięci, sesji i provenance",
+      "standfirst": "Aleph Alpha opisuje trening modeli jako kod z hermetycznym lineage, a HN podbija narzędzia takie jak Herdr i Lore dla sesji oraz pamięci decyzji agentów. To przesuwa uwagę z samego modelu na operacyjny system pracy z modelami.",
+      "whatHappened": "Publiczne źródła pokazują narzędzia do wersjonowania treningu, utrzymywania sesji agentów i przekazywania im decyzji zespołu.",
+      "whyItMatters": "Agent w firmie jest tak dobry, jak jego pamięć, uprawnienia, sesje, audyt i możliwość odtworzenia decyzji.",
+      "deeperAnalysis": [
+        "Aleph Alpha używa języka znanego software engineerom: CI, main branch, hermetyczne runy, artefact lineage i małoskalowe testy. To ważne, bo training loop coraz bardziej przypomina rozwój systemu produkcyjnego, w którym błąd konfiguracji może przepalić tysiące GPU-godzin albo ukryć źródło regresji.",
+        "Herdr i Lore pokazują analogiczny problem po stronie codziennego używania agentów. Gdy jeden developer uruchamia wiele agentów, potrzebuje widzieć, który pracuje, który jest zablokowany i co wie o wcześniejszych decyzjach. Bez tej warstwy operacyjnej \"agent\" staje się kolejnym oknem terminala, które łatwo zgubić lub błędnie poinstruować.",
+        "To dobry spokojny temat na końcówkę podcastu: po hype wokół modeli rynek zaczyna budować nudną infrastrukturę kontroli. Właśnie ta nudna infrastruktura zadecyduje, czy agenci będą używani w realnych zespołach, a nie tylko w demo."
+      ],
+      "contextPoints": [
+        "Co się stało: pojawiają się publiczne wzorce dla training-as-code i terminalowej orkiestracji agentów.",
+        "Dlaczego ważne: provenance i stan pracy stają się częścią bezpieczeństwa oraz produktywności AI.",
+        "Na co patrzeć dalej: adopcja w zespołach, integracje z Codex/Claude/Cursor i audyt decyzji agentów."
+      ],
+      "sources": [
+        {
+          "title": "Aleph Alpha: Model Training as Code",
+          "url": "https://aleph-alpha.com/en/blog/model-training-as-code/"
+        },
+        {
+          "title": "GitHub: herdr",
+          "url": "https://github.com/ogulcancelik/herdr"
+        },
+        {
+          "title": "GitHub: Lore/rac-core",
+          "url": "https://github.com/itsthelore/rac-core"
+        },
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "Agenci",
+        "Developer Tools",
+        "MLOps"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Ford przywraca ekspertów po rozczarowaniu AI",
+      "rationale": "To mocny real-world przykład, że automatyzacja bez wiedzy domenowej nie dowozi jakości w produkcji fizycznej.",
+      "sourcesLabel": "TechCrunch; TNW"
+    },
+    {
+      "priority": "High",
+      "title": "KIDS Act: bezpieczeństwo dzieci czy powszechne age checks",
+      "rationale": "USA łączy regulacje social mediów, chatbotów, wiadomości i data brokers, a EFF ostrzega przed age surveillance.",
+      "sourcesLabel": "House E&C; EFF; HN"
+    },
+    {
+      "priority": "Medium",
+      "title": "Logi ChatGPT jako dowód sądowy",
+      "rationale": "Rozmowy z AI zaczynają wychodzić poza aplikację i trafiać do sporów o intencję, prywatność i dowody cyfrowe.",
+      "sourcesLabel": "The Verge; LA Times; ABC7"
+    },
+    {
+      "priority": "High",
+      "title": "Suno Spark i cena zgody twórców",
+      "rationale": "AI music próbuje kupić relacje z artystami, ale warunki programu pokazują asymetrię między platformą a niezależnymi twórcami.",
+      "sourcesLabel": "The Verge; MBW; Billboard"
+    },
+    {
+      "priority": "Medium",
+      "title": "AI-screening CV może skalować przypadkowość",
+      "rationale": "Open-source'owy pipeline HR i test HN pokazują, że scoring LLM może wyglądać obiektywnie, ale działać niestabilnie.",
+      "sourcesLabel": "GitHub; Dan Unparsed; HN"
+    },
+    {
+      "priority": "Medium",
+      "title": "Agenci potrzebują pamięci, sesji i provenance",
+      "rationale": "Aleph Alpha, Herdr i Lore pokazują, że zwycięży nie sam model, tylko operacyjna warstwa kontroli agentów i treningu.",
+      "sourcesLabel": "Aleph Alpha; GitHub; Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/28/ford-rehires-gray-beard-engineers-after-ai-falls-short/"
+    },
+    {
+      "title": "TNW",
+      "url": "https://thenextweb.com/news/ford-rehired-350-engineers-ai-quality-jd-power"
+    },
+    {
+      "title": "House Energy & Commerce",
+      "url": "https://energycommerce.house.gov/posts/chairman-guthrie-and-ranking-member-pallone-announce-agreement-on-bipartisan-kids-safety-package"
+    },
+    {
+      "title": "EFF",
+      "url": "https://www.eff.org/deeplinks/2026/06/kids-act-would-require-age-checks-get-online"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/news"
+    },
+    {
+      "title": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/958751/prosecutors-chatgpt-palisades-wildfire-arson-mistrial"
+    },
+    {
+      "title": "LA Times",
+      "url": "https://www.latimes.com/california/story/2026-06-26/jonathan-rinderknecht-verdict-palisades-fire"
+    },
+    {
+      "title": "ABC7",
+      "url": "https://abc7.com/post/atf-agent-testifies-linking-arson-suspect-dark-web-ai-use-lachman-fire-trial/19278224/"
+    },
+    {
+      "title": "The Verge",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/958801/suno-launches-spark-incubator-program-to-feed-independent-artists-to-its-ai-machine"
+    },
+    {
+      "title": "Music Business Worldwide",
+      "url": "https://www.musicbusinessworldwide.com/suno-is-paying-grants-to-independent-artists-so-long-as-they-agree-never-to-criticize-suno/"
+    },
+    {
+      "title": "Billboard",
+      "url": "https://www.billboard.com/pro/suno-launches-artist-incubator/"
+    },
+    {
+      "title": "GitHub: interviewstreet/hiring-agent",
+      "url": "https://github.com/interviewstreet/hiring-agent"
+    },
+    {
+      "title": "Dan Unparsed",
+      "url": "https://danunparsed.com/p/hackerrank-open-source-ats"
+    },
+    {
+      "title": "Aleph Alpha",
+      "url": "https://aleph-alpha.com/en/blog/model-training-as-code/"
+    },
+    {
+      "title": "GitHub: herdr",
+      "url": "https://github.com/ogulcancelik/herdr"
+    },
+    {
+      "title": "GitHub: Lore/rac-core",
+      "url": "https://github.com/itsthelore/rac-core"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "old Reddit / r/technology",
+      "url": "https://old.reddit.com/r/technology/"
+    },
+    {
+      "title": "TVN24 Biznes / Tech",
+      "url": "https://tvn24.pl/biznes/tech"
+    },
+    {
+      "title": "WP Tech: Sztuczna inteligencja",
+      "url": "https://tech.wp.pl/sztuczna-inteligencja%2Ctemat%2C6016396972122753"
+    },
+    {
+      "title": "Business Insider Polska: Technologie",
+      "url": "https://businessinsider.com.pl/technologie"
+    }
+  ]
+}

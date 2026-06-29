@@ -1,12 +1,26 @@
 # Topic Index: tech-news
 
-Last updated: 2026-06-28
+Last updated: 2026-06-29
 
 ## Current Understanding
 
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
+
+Po raporcie z 2026-06-29 najważniejsza nowa warstwa to praktyczne granice AI w
+realnych procesach: Ford przywrócił 350 doświadczonych inżynierów po
+rozczarowaniu automatycznymi systemami jakości, a publiczny test
+HackerRank/interviewstreet `hiring-agent` pokazuje ryzyko niestabilnego
+scoringu CV przez LLM. Druga warstwa to rozszerzenie regulacji platform z
+globalnych age-banów na konkretny amerykański KIDS Act obejmujący KOSA, SAFE
+Bots, COPPA 2.0, messaging i data brokers. Trzecia warstwa to AI jako ślad
+prawny i kulturowy: logi ChatGPT zostały użyte jako sporny dowód w procesie
+Palisades Fire, a Suno Spark pokazuje napięcie między grantami dla twórców a
+szerokimi zgodami na użycie muzyki. Czwarta warstwa to dojrzewanie operacyjnej
+infrastruktury agentów i treningu modeli: Aleph Alpha Savanna, Herdr i Lore
+przesuwają rozmowę z "który model" na provenance, sesje, pamięć decyzji i
+kontrolę wielu agentów.
 
 Po wieczornym raporcie z 2026-06-28-1935 najważniejsza nowa warstwa to
 operacyjny reżim dostępu do AI compute: Reuters/FT podały, że Google
@@ -140,6 +154,27 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- AI quality needs domain experts: Ford rehire of 350 veteran engineers trzeba
+  śledzić jako przykład, że systemy AI w produkcji fizycznej wymagają
+  doświadczonych human-in-the-loop reviewerów, a nie tylko automatycznego
+  ingestion wymagań projektowych.
+- KIDS Act and age-verification pressure: amerykański pakiet KIDS Act łączy
+  KOSA, SAFE Bots, COPPA 2.0, messaging i data brokers; trzeba śledzić tekst
+  finalny, głosowanie, wpływ na AI chatboty, encrypted messaging i presję na
+  powszechne ustalanie wieku.
+- AI chat logs as evidence: sprawa Palisades Fire pokazuje, że rozmowy z AI
+  mogą trafiać do materiału dowodowego; śledzić polityki retencji, subpoenas,
+  reakcje dostawców modeli i standardy rozdzielania researchu, emocji oraz
+  intencji.
+- AI music artist-rights programs: Suno Spark trzeba śledzić jako przykład
+  przejścia od sporów o trening modeli do umów z niezależnymi artystami,
+  szerokich licencji, waiverów i ograniczeń krytyki platformy.
+- AI hiring screeners and scoring variance: `interviewstreet/hiring-agent` i
+  test HN pokazują ryzyko niestabilnego LLM scoringu CV; śledzić audyty,
+  powtarzalność, bias, wyjaśnialność i ewentualne regulacje HR automation.
+- Agent operations provenance: Aleph Alpha Savanna, Herdr i Lore pokazują, że
+  praktyczne użycie agentów wymaga wersjonowanego treningu, lineage artefaktów,
+  widocznych sesji, pamięci decyzji i audytu pracy wielu agentów.
 - Inter-Big-Tech AI capacity rationing: Reuters/FT o ograniczeniu Gemini dla
   Meta trzeba śledzić jako sygnał, że compute, token budget, capacity
   guarantees i model fallback stają się strategicznym ryzykiem nawet między
@@ -433,6 +468,7 @@ transparentność środowiskową AI.
 
 ## Recent Reports
 
+- [2026-06-29](runs/2026-06-29.md)
 - [2026-06-27](runs/2026-06-27.md)
 - [2026-06-26](runs/2026-06-26.md)
 - [2026-06-25](runs/2026-06-25.md)
