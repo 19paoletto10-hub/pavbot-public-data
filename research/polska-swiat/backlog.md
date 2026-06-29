@@ -6,7 +6,7 @@
 | --- | --- | --- | --- | --- |
 | High | Review first three generated news podcasts | Confirms pacing, neutrality, MP3 generation, and Polish narration quality | Listen to each MP3 and record notes | Open |
 | Medium | Tune public source list | Repeated good sources should become explicit topic guidance | Prefer official institutions plus Onet/PAP, Guardian, Euronews and public AP/Reuters mirrors; consider topic.md refinement after weekend sample | Open |
-| Medium | Confirm Orka A26 and US base follow-up | Evening run found concrete defence decisions pending after MON/PAP updates | On 29 June verify signing, terms, locations and official US/Polish statements | Open |
+| Medium | Confirm Orka A26 and US base follow-up | Morning run found Orka signing scheduled for 29 June and US base talks still in analysis stage | After 12:45 verify signing, value, delivery timeline, industry participation and any official US/Polish statements | Open |
 
 ## Review Notes
 
@@ -81,6 +81,12 @@
   Ukrainian strikes on Russian refineries and Iran's Bahrain/Kuwait escalation,
   and AP for Serbia's potential early-election turn. Podcast should caveat the
   40.5°C Słubice figure as preliminary until IMGW confirms it.
+- 2026-06-29: Monday morning research run created a material update. Strongest
+  sources were KPRM/MON for Polska-Szwecja/Orka A26, PAP/TVN24 for the US base
+  talks, Prezydent RP/TVN24/WP for the new presidential memory-day initiative,
+  RCB/Onet-PAP for heat and public health, AP/Guardian for Russian fuel
+  shortages after Ukrainian refinery strikes, and AP/Axios/Onet-PAP for the
+  unstable USA-Iran-Ormuz pause/talks thread.
 
 ## Done
 

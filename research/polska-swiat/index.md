@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-06-28
+Last updated: 2026-06-29
 
 ## Current Understanding
 
@@ -69,6 +69,13 @@ stronę amerykańską; RCB/RMF24/AP/Guardian przesunęły wątek pogody w stron�
 wstępnego rekordu 40,5°C w Słubicach i europejskiego bilansu nadmiarowych
 zgonów; AP rozszerzyła wątek Ukrainy na rafinerie i paliwa Rosji, a AP dodała
 ważny temat polityczny Serbii po zapowiedzi rezygnacji Aleksandara Vučicia.
+Po runie 29 czerwca dzienny punkt ciężkości to podpisywany w Gdyni pakiet
+Polska-Szwecja/Orka A26 oraz ciąg dalszy rozmów o stałej bazie USA w Polsce.
+Drugim krajowym blokiem jest prezydencka inicjatywa ustanowienia 28 czerwca
+dniem działaczy opozycji antykomunistycznej. W świecie utrzymują się: rosyjskie
+braki paliwa po ukraińskich uderzeniach w rafinerie, ostrożny sygnał pauzy
+USA-Iran i rozmów w Katarze o Ormuz, polityczny zwrot w Serbii oraz kryzys
+humanitarny w Wenezueli.
 
 ## Stable Facts
 
@@ -123,6 +130,7 @@ ważny temat polityczny Serbii po zapowiedzi rezygnacji Aleksandara Vučicia.
 
 ## Recent Reports
 
+- [2026-06-29](runs/2026-06-29.md)
 - [2026-06-28-1935](runs/2026-06-28-1935.md)
 - [2026-06-28](runs/2026-06-28.md)
 - [2026-06-27](runs/2026-06-27.md)
