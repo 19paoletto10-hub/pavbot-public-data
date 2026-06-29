@@ -1,21 +1,23 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-06-29 01:41 CEST
+Last updated: 2026-06-29 17:41 CEST
 
 ## Current Understanding
 
-Runda z `2026-06-29 01:41 CEST` dołożyła nowy, szeroki batch Wrocław/remote:
-`Primotly Senior AI Engineer (Python, GenAI, GCP)`, `Remodevs Senior AI Engineer`,
-trzy osobne karty `Addepto`, `deepsense.ai Python AI Engineer`, `CDQ Machine Learning
-Engineer` i `Callstack Senior AI System Engineer`. Najmocniejsze źródłowo są
-`Primotly` i `Remodevs`, bo mają jawne widełki oraz bardzo praktyczny scope wokół
-`LLM`, agentów, backendu i produkcyjnych pipeline'ów AI.
+Runda z `2026-06-29 17:41 CEST` dołożyła kolejny, jeszcze mocniejszy batch
+Wrocław/remote. Najmocniejsze sygnały to `Harvey Nash AI Platform Engineer
+(Agentic Systems)`, `Centra Senior Machine Learning (ML) Engineer (Product)`,
+`airSlate Senior Software Engineer - Agentic AI`, `XTB Senior AI Engineer`,
+`Holisticon Connect Machine Learning Infrastructure Engineer`, `Holisticon
+Connect AI Scientist / Principal AI Engineer`, `Holisticon Insight Senior Data
+Engineer – Data Platforms for AI Initiatives`, `SmartRecruiters Senior AI
+Engineer` i `Vazco AI Technical Lead`.
 
-`Addepto` wyraźnie rozszczepił swój publiczny AI/LLM-family na kilka różnych kart:
-`Senior AI Engineer (LLMs, Python)`, `AI Engineer (LLMs, Python)` i
-`Solution Engineer (AI & Big Data)`. `deepsense.ai`, `CDQ` i `Callstack`
-dorzuciły kolejne mocne leady, więc obecny klaster jest dobry zarówno dla
-hands-on engineerów, jak i dla osób szukających AI platform / infra / multi-agent.
+`BigTime` dołożył nową kartę `Senior AI Developer with LLM Orchestration,
+Intelligent Knowledge Platform`, a `Holisticon Insight` dorzucił też osobny
+`AI/ML Platform Engineer`. W praktyce widać dalsze przesunięcie od ogólnego AI
+consultingu do produkcyjnych systemów agentic AI, platform ML, evaluation i
+infrastruktury danych dla AI.
 
 ## Stable Facts
 
@@ -147,6 +149,17 @@ only when something meaningful changes.
 | deepsense-python-ai-engineer-wroclaw-remote | deepsense.ai | Python AI Engineer | Wrocław + remote | 2026-06-29-0141 | 2026-06-29-0141 | Open | Public board card; salary not visible in the public fragment; `Wrocław +4 Locations`; `Remote`; `AWS`, `RAG`, `LLMs`, `CI/CD`, `Docker`, `vector databases`, `LangChain`, `LangGraph`, `Python`, `Prompt Engineering`. | [Just Join IT board card](https://justjoin.it/job-offers/wroclaw/ai) |
 | cdq-machine-learning-engineer-wroclaw-remote | CDQ | Machine Learning Engineer | Wrocław + remote | 2026-06-29-0141 | 2026-06-29-0141 | Open | Public board card; `16 000-22 000 PLN/month`; `Wrocław +1 Location`; `Remote`; `GenAI`, `LLMs`, `Clouds`, `RAGs` and a clean ML/LLM profile. | [Just Join IT board card](https://justjoin.it/job-offers/wroclaw/ai) |
 | callstack-senior-ai-system-engineer-wroclaw-remote | Callstack | Senior AI System Engineer | Wrocław + remote | 2026-06-29-0141 | 2026-06-29-0141 | Open | Public employer page; salary not visible in the public fragment; `Prosta 36, Wrocław +5 Locations`; `Remote`; end-to-end `LLM` and `multi-agent` architectures, `RAG` pipelines, document-processing workflows, cloud-native AI infra and governance. | [Just Join IT](https://justjoin.it/job-offer/callstack-senior-ai-system-engineer-wroclaw-ai-d121a189) |
+| nofluff-harvey-nash-ai-platform-engineer-agentic-systems-wroclaw | Harvey Nash Technology | AI Platform Engineer (Agentic Systems) | Wrocław hybrid + remote | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: `6 552-7 392 EUR + DPH` B2B/month; `AWS`, `Bedrock`, `RAG`, `agentic systems`, `4 days remote`; high-signal AI platform role. | [No Fluff Jobs](https://nofluffjobs.com/sk/job/ai-platform-engineer-agentic-systems-harvey-nash-technology-wroclaw) |
+| justjoin-centra-senior-machine-learning-ml-engineer-product-wroclaw | Centra | Senior Machine Learning (ML) Engineer (Product) | Wrocław hybrid | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: `3d left`; salary not public; `LLM`, `AI`, `Python`, `Data Engineering`, `MLOps`; strong product ML fit. | [Centra on Just Join IT](https://justjoin.it/job-offer/centra-senior-machine-learning-ml-engineer-product--wroclaw-data) |
+| justjoin-airslate-senior-software-engineer-agentic-ai-wroclaw | airSlate | Senior Software Engineer - Agentic AI | Wrocław + remote | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: `20 400-25 900 PLN/month`; production-grade `agentic workflows`, `AI-powered product experiences`, `Python`, `Java`, `Kubernetes`, `GitLab`, `ArgoCD`. | [airSlate on Just Join IT](https://justjoin.it/job-offer/airslate-senior-software-engineer---agentic-ai-wroclaw-ai) |
+| justjoin-xtb-senior-ai-engineer-wroclaw-remote | XTB | Senior AI Engineer | Wrocław + remote | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: salary not public; `LLMOps`, `Agentic strategy`, evaluation-driven development, full-stack observability and enterprise-grade AI delivery. | [XTB on Just Join IT](https://justjoin.it/job-offer/xtb-senior-ai-engineer-wroclaw-ai) |
+| justjoin-holisticon-connect-machine-learning-infrastructure-engineer-wroclaw-remote | Holisticon Connect | Machine Learning Infrastructure Engineer | Wrocław + remote | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: `28 560-31 920 PLN net/h B2B` or `23 000-25 000 PLN gross`; `Ray`, `Anyscale`, `Argo Workflows`, `Prefect`, `LLM-based agentic systems`; strong AI infra signal. | [Holisticon Connect on Just Join IT](https://justjoin.it/job-offer/holisticon-connect-machine-learning-infrastructure-engineer-wroclaw-ai) |
+| justjoin-holisticon-connect-ai-scientist-principal-ai-engineer-drug-discovery-life-sciences-wroclaw | Holisticon Connect | AI Scientist / Principal AI Engineer – Drug Discovery & Life Sciences | Wrocław + remote | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: `23 520-28 560 PLN net/mies. B2B` or `17 000-20 000 PLN gross`; `graph ML`, `knowledge graphs`, `scientific workflows`, `drug discovery`; highly specialized hands-on AI. | [Holisticon Connect on Just Join IT](https://justjoin.it/job-offer/holisticon-connect-ai-scientist-principal-ai-engineer---drug-discovery-life-sciences-wroclaw-ai) |
+| justjoin-holisticon-insight-senior-data-engineer-data-platforms-ai-initiatives-wroclaw | Holisticon Insight | Senior Data Engineer – Data Platforms for AI Initiatives | Wrocław + remote | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: salary not public; `RAG systems`, vector databases, `Airflow`, `Kafka`, `BigQuery`, `Snowflake`, `ML/GenAI workloads`; strong AI data-platform role. | [Holisticon Insight on Just Join IT](https://justjoin.it/job-offer/holisticon-insight-senior-data-engineer---data-platforms-for-ai-initiatives-wroclaw-ai) |
+| justjoin-smartrecruiters-senior-ai-engineer-wroclaw-remote | SmartRecruiters Inc. | Senior AI Engineer | Wrocław + remote | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: `21 000-36 000 PLN/month`; `agentic workflows`, `NLP`, `LLM fine-tuning`, `model evaluation`, production ML; strong product AI lead signal. | [SmartRecruiters on Just Join IT](https://justjoin.it/job-offer/smartrecruiters-inc--senior-ai-engineer-wroclaw-ai-b4e4c091) |
+| justjoin-vazco-ai-technical-lead-wroclaw | Vazco | AI Technical Lead | Wrocław + remote | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: `23 000-28 800 PLN net/mies. B2B`; `multi-agent architectures`, `RAG`, `MCP`, evaluation and observability; more lead-shaped, but very hands-on AI. | [Vazco on Just Join IT](https://justjoin.it/job-offer/vazco-ai-technical-lead-wroclaw-ai-91eb2411) |
+| justjoin-bigtime-senior-ai-developer-llm-orchestration-intelligent-knowledge-platform-wroclaw-hybrid | BigTime | Senior AI Developer with LLM Orchestration, Intelligent Knowledge Platform | Wrocław hybrid | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: `26 000-31 000 PLN/month`; `graph data modeling`, `LLMs`, `AI Systems`, `RAG`, `Python`; board-first but very relevant LLM product role. | [Just Join IT Wrocław AI/ML board](https://justjoin.it/job-offers/wroclaw/ai) |
+| justjoin-holisticon-insight-ai-ml-platform-engineer-wroclaw-remote | Holisticon Insight | AI/ML Platform Engineer | Wrocław + remote | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: `15 000-25 000 PLN/month`; `ASR/TTS/LLM`, `Agentic Coding`; current board-first signal around AI/ML platform work. | [Just Join IT all-locations AI/ML board](https://justjoin.it/job-offers/all-locations/ai) |
 
 ## Open Questions
 
@@ -234,6 +247,7 @@ only when something meaningful changes.
 
 ## Recent Reports
 
+- [2026-06-29-1741](runs/2026-06-29-1741.md)
 - [2026-06-29-0141](runs/2026-06-29-0141.md)
 - [2026-06-28-1742](runs/2026-06-28-1742.md)
 - [2026-06-28-0141](runs/2026-06-28-0141.md)
@@ -261,6 +275,7 @@ only when something meaningful changes.
 
 ## Review Notes
 
+- 2026-06-29: afternoon run added `Harvey Nash`, `Centra`, `airSlate`, `XTB`, `Holisticon Connect`, `Holisticon Insight`, `SmartRecruiters` and `Vazco`; `BigTime` plus the new Holisticon Insight platform signals suggest the cluster is widening into stronger AI platform / infra work.
 - 2026-06-29: poranna runda dodała `Primotly Senior AI Engineer (Python, GenAI, GCP)`, `Remodevs Senior AI Engineer`, trzy publiczne karty `Addepto`, `deepsense.ai Python AI Engineer`, `CDQ Machine Learning Engineer` i `Callstack Senior AI System Engineer`; najmocniejsze źródłowo są `Primotly` i `Remodevs`, a `Addepto` rozszczepił publiczny AI/LLM family na kilka jasnych kart.
 - 2026-06-28: wieczorna runda dodała `YOUR ITEAMS Senior AI Engineer with .NET`, `cerebre Senior AI Engineer`, `Netguru AI Engineer` i `DEVAPO Python AI Engineer (GenAI)`; największe materialne zmiany w już śledzonych rolach to employer-posted upgrade `Tooploox Senior AI Engineer` oraz mocniejsze publiczne potwierdzenie `CodiLime = Poland · Fully Remote`.
 - 2026-06-27: wieczorna runda dodała `ITDS Production Support Engineer – AI & LLM`, oficjalny `Axabee Senior AI Engineer`, board-first `4soft AI Product Engineer`, direct-employer `ITEAMLY Applied AI Engineer` oraz nowy infra sygnał `IN4GE Cloud Platform & Infrastructure Engineer (GenAI / CX AI)`.
