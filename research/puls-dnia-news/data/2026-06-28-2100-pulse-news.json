@@ -1,0 +1,530 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-06-28",
+  "runTime": "21:00",
+  "status": "Material update",
+  "headline": "Wieczorny puls przechodzi z rekordów temperatury do awarii kolei i lotniska, a globalnie dokłada pożary w USA i twardszy bilans fali gorąca",
+  "summary": "Run z 21:00 CEST wnosi nowe materialne tematy względem opublikowanego baseline 18:01: odwołane pociągi po awariach trakcji, pęknięcia pasa na Lotnisku Chopina, aktywne burze z gradem i śmierć trzech strażaków przy pożarach na pograniczu Kolorado i Utah. Blok światowy utrzymuje też wysoką wagę Iranu, Wenezueli, Francji, Saudi Aramco oraz ostrzeżeń WHO o skutkach europejskiej fali gorąca.",
+  "items": [
+    {
+      "id": "pulse-2026-06-28-2100-01-burze",
+      "section": "Alerty",
+      "title": "Wieczorne burze wchodzą do feedu obok alertu RCB",
+      "lead": "To już nie tylko skwar, bo w radarach widać aktywne burze z gradem i ryzyko awarii prądu.",
+      "whatHappened": "Wieczorem TVN24 pokazywało aktywne wyładowania i opady gradu, a oficjalny alert RCB nadal ostrzegał przed intensywnymi opadami, silnym wiatrem, burzami i możliwymi przerwami w dostawie prądu.",
+      "keyFacts": [
+        "RCB utrzymuje alert na 28 i 29 czerwca.",
+        "TVN24 raportuje aktywne burze z silnymi wyładowaniami i gradem.",
+        "Komunikaty wprost wskazują ryzyko przerw w dostawie prądu."
+      ],
+      "reactions": [
+        "Wieczorna karta alertowa staje się bardziej operacyjna niż w runie 18:01.",
+        "Temat wzmacnia potrzebę śledzenia awarii i lokalnych szkód jeszcze tej nocy."
+      ],
+      "whyItMatters": "Użytkownik dostaje sygnał, że po rekordowym upale wchodzą kolejne bezpośrednie zagrożenia pogodowe i infrastrukturalne.",
+      "context": "Poprzedni run opierał się głównie na samym komunikacie RCB. Teraz do alertu dochodzi aktywny obraz burz w krajowym źródle live.",
+      "watchNext": [
+        "Czy pojawią się potwierdzone awarie prądu lub podtopienia.",
+        "Czy zasięg burz obejmie większą część kraju przed porankiem."
+      ],
+      "sources": [
+        {
+          "title": "RCB: ALERT RCB - burze (28/29.06)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---burze282906"
+        },
+        {
+          "title": "TVN24: Gdzie jest burza? Silne wyładowania z gradem",
+          "url": "https://tvn24.pl/tvnmeteo/polska/gdzie-jest-burza-burze-w-niedziele-28-06-radar-burz-i-mapa-opadow-na-zywo-opady-gradu-st9118723?source=rss"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Burze",
+        "RCB",
+        "Prąd"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-28-2100-02-kolej",
+      "section": "Polska",
+      "title": "Upał wyłącza część połączeń kolejowych",
+      "lead": "PKP Intercity odwołuje wybrane pociągi po awariach sieci trakcyjnej wywołanych temperaturą.",
+      "whatHappened": "TVN24 podało, że po licznych awariach sieci trakcyjnej spowodowanych wysokimi temperaturami PKP Intercity odwołuje część pociągów i uruchamia zastępczą komunikację autobusową dla wybranych relacji.",
+      "keyFacts": [
+        "Przewoźnik mówi o licznych awariach trakcji związanych z upałem.",
+        "Część pociągów została odwołana.",
+        "Dla części połączeń organizowana jest komunikacja zastępcza."
+      ],
+      "reactions": [
+        "To pierwszy tak czytelny wieczorny sygnał, że rekordowy upał uderza już bezpośrednio w transport dalekobieżny.",
+        "Temat ma wysoką użyteczność dla porannego feedu, jeśli utrudnienia przejdą przez noc."
+      ],
+      "whyItMatters": "Problemy kolejowe szybko przekładają się na realny ruch pasażerski, opóźnienia i zmianę planów podróży w skali kraju.",
+      "context": "W runie 18:01 krajowy blok skupiał się na rekordach temperatury, S3 i sinicach. Teraz środek ciężkości przechodzi na infrastrukturę transportową.",
+      "watchNext": [
+        "Czy PKP rozszerzy listę odwołań lub autobusów zastępczych.",
+        "Czy awarie trakcji utrzymają się do porannego szczytu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Problemy na kolei. Przez upał",
+          "url": "https://tvn24.pl/polska/problemy-na-kolei-odwolane-pociagi-przez-upal-st9118769?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Kolej",
+        "PKP Intercity",
+        "Upał"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-28-2100-03-lotnisko",
+      "section": "Polska",
+      "title": "Pęknięcia pasa na Lotnisku Chopina grożą opóźnieniami",
+      "lead": "Jedno z warszawskich dróg startowych zostało wyłączone po uszkodzeniach nawierzchni.",
+      "whatHappened": "TVN24 podało, że na jednym z pasów startowych Lotniska Chopina pojawiły się drobne pęknięcia. Ze względów bezpieczeństwa pas został wyłączony z ruchu, co może prowadzić do opóźnień części lotów, a naprawa ma ruszyć nocą po spadku temperatur.",
+      "keyFacts": [
+        "Uszkodzenia dotyczą jednego z pasów startowych.",
+        "Pas został czasowo zamknięty.",
+        "Prace naprawcze mają ruszyć dopiero po ochłodzeniu nawierzchni."
+      ],
+      "reactions": [
+        "To mocna ilustracja tego, że fala gorąca przechodzi z map temperatur do krytycznej infrastruktury.",
+        "Historia jest bardziej praktyczna dla użytkownika niż ogólna karta o samym rekordzie ciepła."
+      ],
+      "whyItMatters": "Warszawskie lotnisko jest kluczowym węzłem, więc nawet ograniczenie jednego pasa może przełożyć się na punktualność połączeń.",
+      "context": "Wcześniej feed pokazywał drogowe skutki skwaru na S3. Teraz dochodzi lotnisko, czyli kolejny duży kanał transportowy.",
+      "watchNext": [
+        "Czy lotnisko potwierdzi pełne przywrócenie operacji przed porankiem.",
+        "Czy opóźnienia rozleją się na kolejne rotacje lotów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pęknięcia pasa na lotnisku w Warszawie. Loty opóźnione",
+          "url": "https://tvn24.pl/polska/pekniecia-pasa-na-lotnisku-chopina-w-warszawie-moga-byc-opoznienia-lotow-st9118722?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Lotnisko Chopina",
+        "Loty",
+        "Upał"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-28-2100-04-nawrocki",
+      "section": "Polityka",
+      "title": "Nawrocki zgłasza ustawę o nowym dniu pamięci opozycji",
+      "lead": "Prezydent ogłosił inicjatywę ustanawiającą 28 czerwca dniem działaczy opozycji antykomunistycznej.",
+      "whatHappened": "Podczas obchodów rocznicy Czerwca '56 w Poznaniu Karol Nawrocki poinformował, że podpisał inicjatywę ustawodawczą, która ma ustanowić 28 czerwca Dniem Działaczy Opozycji Antykomunistycznej i Osób Represjonowanych z Powodów Politycznych.",
+      "keyFacts": [
+        "Ogłoszenie padło podczas obchodów rocznicy Czerwca '56.",
+        "Chodzi o projekt ustawy z nowym państwowym dniem pamięci.",
+        "Komunikat dotyczy działaczy opozycji antykomunistycznej i osób represjonowanych."
+      ],
+      "reactions": [
+        "To czytelna polityczna karta symboliczna w wieczornym krajowym miksie.",
+        "Temat ma mniejszą wagę operacyjną niż kolej i lotnisko, ale domyka sekcję polityczną."
+      ],
+      "whyItMatters": "Projekt może wejść do bieżącej agendy politycznej i pamięci historycznej, a sam komunikat buduje krajowy blok polityczny poza samą pogodą.",
+      "context": "Wieczorny feed potrzebuje choć jednej świeżej karty politycznej, ale tylko takiej, która jest jednoznacznie nowa i publiczna.",
+      "watchNext": [
+        "Czy projekt zostanie szybko skierowany do dalszego procedowania.",
+        "Czy pojawi się szerszy spór polityczny wokół zakresu nowego dnia pamięci."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: \"Czuję się dzisiaj zobowiązany\". Nowa inicjatywa prezydenta",
+          "url": "https://tvn24.pl/polska/karol-nawrocki-chce-ustanowic-28-czerwca-dniem-opozycji-antykomunistycznej-st9118726?source=rss"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Karol Nawrocki",
+        "Ustawa",
+        "Czerwiec 56"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-28-2100-05-iran",
+      "section": "Bezpieczeństwo",
+      "title": "Iran nadal testuje rozejm uderzeniami na cele USA w Zatoce",
+      "lead": "CNN i BBC pokazują, że Bahrajn i Kuwejt pozostają w centrum napięcia po irańskiej odpowiedzi.",
+      "whatHappened": "CNN i BBC dalej relacjonują irańskie uderzenia na amerykańskie cele wojskowe w Bahrajnie i Kuwejcie jako element odpowiedzi po wcześniejszych atakach USA. Obie redakcje opisują sytuację jako próbę sił wokół kruchego rozejmu.",
+      "keyFacts": [
+        "Bahrajn i Kuwejt pozostają kluczowymi punktami bieżącej eskalacji.",
+        "Źródła opisują sytuację w logice kruchego i naruszanego rozejmu.",
+        "Temat wciąż jest prowadzony w trybie live."
+      ],
+      "reactions": [
+        "To nadal najbardziej zmienny geopolityczny blok całego feedu.",
+        "Każda nowa aktualizacja może szybko zmienić wagę także wątku energetycznego."
+      ],
+      "whyItMatters": "Ryzyko dalszej eskalacji wpływa jednocześnie na bezpieczeństwo regionu, szlaki morskie i oczekiwania wobec rynku energii.",
+      "context": "W runie 18:01 temat już był topowy i nic nie wskazuje, by przed nocą miał stracić znaczenie.",
+      "watchNext": [
+        "Czy pojawi się potwierdzenie kolejnych uderzeń lub odpowiedzi USA.",
+        "Czy narracja o rozejmie zostanie podtrzymana przez nowe komunikaty."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US and Iran exchange strikes and accuse each other of violating ceasefire",
+          "url": "https://www.bbc.co.uk/news/articles/cdxdwkgqgq0o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Iran targets US military sites in Bahrain and Kuwait as strikes strain fragile truce",
+          "url": "https://edition.cnn.com/2026/06/28/world/live-news/iran-war-strikes-trump"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Iran",
+        "USA",
+        "Bahrajn",
+        "Kuwejt"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-28-2100-06-wenezuela",
+      "section": "Świat",
+      "title": "Wenezuela przechodzi z nadziei na ratunek do ciężkiego bilansu",
+      "lead": "Po 72 godzinach akcja ratunkowa weszła w trudniejszą fazę, a pomoc międzynarodowa rośnie.",
+      "whatHappened": "CNN opisuje, że po przekroczeniu 72-godzinnego okna uznawanego za kluczowe dla odnajdywania ocalałych akcja po trzęsieniu ziemi w Wenezueli wchodzi w bardziej ponurą fazę. Równolegle trwa mobilizacja pomocy i dalsze szacowanie skali ofiar.",
+      "keyFacts": [
+        "Minęło kluczowe 72-godzinne okno ratunkowe.",
+        "Akcja przechodzi z poszukiwania ocalałych do trudniejszego bilansu strat.",
+        "Pomoc międzynarodowa nadal jest organizowana."
+      ],
+      "reactions": [
+        "Historia pozostaje silna emocjonalnie i wizualnie, ale z mniejszą liczbą pozytywnych aktualizacji niż wcześniej.",
+        "To wciąż jedna z najważniejszych kart światowych dnia."
+      ],
+      "whyItMatters": "Zmiana fazy akcji ratunkowej zwykle oznacza szybkie przejście od pojedynczych sukcesów do twardszych pytań o skalę katastrofy i pomoc.",
+      "context": "W poprzednim runie akcent padał jeszcze na uratowanie dwóch chłopców. Teraz dominują ograniczenia czasu i logistyki.",
+      "watchNext": [
+        "Czy pojawią się nowe potwierdzone dane o ofiarach i zniszczeniach.",
+        "Czy pomoc regionalna zostanie zwiększona w nocy i nad ranem."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Countries mobilize to assist Venezuela earthquake survivors as death toll mounts",
+          "url": "https://edition.cnn.com/2026/06/28/world/live-news/venezuela-earthquake-hnk"
+        },
+        {
+          "title": "BBC: Two boys rescued from Venezuela earthquake rubble after days of being trapped",
+          "url": "https://www.bbc.co.uk/news/articles/cr47dvywvy5o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wenezuela",
+        "Trzęsienie ziemi",
+        "Ratownictwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-28-2100-07-francja",
+      "section": "Świat",
+      "title": "Katastrofa samolotu ze skoczkami we Francji zabija 11 osób",
+      "lead": "Pilot i wszyscy pasażerowie zginęli po katastrofie w Tomblaine.",
+      "whatHappened": "BBC i CNN podały, że w niedzielę we francuskim Tomblaine rozbił się samolot przewożący skoczków spadochronowych. Według lokalnych władz zginęło 11 osób, w tym pilot i pasażerowie.",
+      "keyFacts": [
+        "Katastrofa wydarzyła się w Tomblaine we wschodniej Francji.",
+        "Bilans to 11 ofiar śmiertelnych.",
+        "Źródła wskazują, że na pokładzie byli skoczkowie spadochronowi."
+      ],
+      "reactions": [
+        "To stabilna, ciężka karta świata utrzymująca się także w wieczornym runie.",
+        "Temat pozostaje ważny mimo braku świeżej informacji o przyczynie."
+      ],
+      "whyItMatters": "Skala ofiar i charakter zdarzenia sprawiają, że to jedna z głównych krótkich kart katastroficznych dnia.",
+      "context": "Temat był już obecny w runie 18:01 i pozostaje bezpiecznym, potwierdzonym blokiem w zestawie światowym.",
+      "watchNext": [
+        "Czy pojawi się wstępny trop co do przyczyny katastrofy.",
+        "Czy lokalne służby doprecyzują skład załogi i pasażerów."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Eleven killed after plane carrying skydivers crashes in eastern France",
+          "url": "https://www.bbc.co.uk/news/articles/c5yz9yj9x74o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Skydiving plane crashes in France, killing 11 people",
+          "url": "https://edition.cnn.com/2026/06/28/europe/plane-crash-france-skydiving-intl"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Francja",
+        "Katastrofa",
+        "Lotnictwo"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-28-2100-08-saudi-aramco",
+      "section": "Gospodarka",
+      "title": "Katastrofa śmigłowca Saudi Aramco kończy się 14 ofiarami",
+      "lead": "Wypadek dotknął koncern będący filarem rynku naftowego regionu.",
+      "whatHappened": "BBC podało, że w Arabii Saudyjskiej rozbił się śmigłowiec Saudi Aramco, a w katastrofie zginęło 14 osób. Przyczyna zdarzenia pozostaje badana.",
+      "keyFacts": [
+        "Zginęło 14 osób.",
+        "Maszyna należała do Saudi Aramco.",
+        "Przyczyna katastrofy nie została jeszcze podana."
+      ],
+      "reactions": [
+        "Karta ma znaczenie nie tylko katastroficzne, ale też gospodarcze przez wagę Saudi Aramco.",
+        "Temat dobrze równoważy blok Zatoki obok napięcia Iran-USA."
+      ],
+      "whyItMatters": "Saudi Aramco pozostaje kluczowym graczem dla regionu i rynku energii, więc każda katastrofa wokół spółki jest szerzej obserwowana.",
+      "context": "Historia pojawiła się już w runie 18:01 i nadal pozostaje jedną z najtwardszych kart gospodarczych dnia.",
+      "watchNext": [
+        "Czy pojawi się wstępny komunikat o przyczynach katastrofy.",
+        "Czy spółka lub władze doprecyzują skład pasażerów i misję lotu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Fourteen killed in Saudi Arabia helicopter crash",
+          "url": "https://www.bbc.co.uk/news/articles/c3eyd9j5g7xo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "TVN24: Rozbił się śmigłowiec Saudi Aramco. Nie żyje 14 osób",
+          "url": "https://tvn24.pl/swiat/arabia-saudyjska-rozbil-sie-smiglowiec-saudi-aramco-nie-zyje-14-osob-st9118505?source=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Saudi Aramco",
+        "Arabia Saudyjska",
+        "Energia"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-28-2100-09-europa-upal",
+      "section": "Świat",
+      "title": "Europa dostaje cięższy bilans fali gorąca i rekord 41,7 stopnia",
+      "lead": "WHO łączy falę upałów z około 1,3 tysiąca zgonów, a Niemcy ustanawiają nowy rekord.",
+      "whatHappened": "BBC podało, że europejska fala gorąca jest łączona z około 1,3 tysiąca zgonów, a w Niemczech temperatura wzrosła do rekordowych 41,7 stopnia. W materiale wybrzmiewa też ostrzeżenie WHO, że Europa nie jest przygotowana na tak wysokie temperatury.",
+      "keyFacts": [
+        "W materiale pada liczba około 1,3 tysiąca zgonów wiązanych z falą gorąca.",
+        "BBC wskazuje nowy niemiecki rekord 41,7 stopnia.",
+        "WHO ostrzega, że Europa nie jest gotowa na takie temperatury."
+      ],
+      "reactions": [
+        "Karta nabiera ciężaru zdrowotnego, a nie tylko meteorologicznego.",
+        "To jeden z najmocniejszych bloków tła dla polskich awarii transportowych."
+      ],
+      "whyItMatters": "Europejska skala zgonów i rekordów pokazuje, że to nie jest lokalny epizod pogodowy, tylko szerszy kryzys zdrowotno-infrastrukturalny.",
+      "context": "W poprzednim runie temat też był obecny, ale wieczorem ma wyraźniej zaktualizowany bilans i mocniejszy sygnał od WHO.",
+      "watchNext": [
+        "Czy w nocy pojawią się kolejne rekordy i nowe ostrzeżenia dla Europy Środkowej.",
+        "Czy polskie skutki infrastrukturalne będą się dalej rozszerzać."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Europe's heatwave linked to 1,300 deaths, WHO says, as Germany hits record 41.7C",
+          "url": "https://www.bbc.co.uk/news/articles/cn4d2vv935lo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "TVN24: Trzej sąsiedzi, trzy rekordy. Tam \"nigdy nie zmierzono wyższej temperatury\"",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/upal-w-europie-trzej-sasiedzi-trzy-rekordy-st9118584?source=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Upał",
+        "WHO",
+        "Europa"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-28-2100-10-colorado",
+      "section": "Alerty",
+      "title": "Trzech strażaków ginie przy pożarach na pograniczu Kolorado i Utah",
+      "lead": "Pożary w zachodnich USA wchodzą do feedu po śmierci ratowników i stanach wyjątkowych w obu stanach.",
+      "whatHappened": "BBC podało, że trzech strażaków zginęło podczas walki z wielkimi pożarami na pograniczu Kolorado i Utah. Materiał wskazuje, że w obu stanach ogłoszono stany wyjątkowe z powodu skali i tempa rozwoju pożarów.",
+      "keyFacts": [
+        "Zginęło trzech strażaków.",
+        "Pożary obejmują obszary Kolorado i Utah.",
+        "Obaj gubernatorzy ogłosili stany wyjątkowe."
+      ],
+      "reactions": [
+        "To nowa materialna karta świata względem runu 18:01.",
+        "Temat wzmacnia klimatyczno-bezpieczeństwowy ton końcówki dnia."
+      ],
+      "whyItMatters": "Śmierć ratowników szybko podnosi rangę pożarów z lokalnego kryzysu do historii o znaczeniu krajowym i międzynarodowym.",
+      "context": "Obok europejskich upałów to druga mocna karta klimatycznych skutków dnia, ale tym razem z bezpośrednim bilansem śmierci służb.",
+      "watchNext": [
+        "Czy pożary rozszerzą strefy ewakuacji.",
+        "Czy pojawią się nowe dane o skali zniszczeń i rannych."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Three firefighters die battling huge wildfires in Colorado",
+          "url": "https://www.bbc.co.uk/news/articles/cp8l7mpmdggo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "USA",
+        "Pożary",
+        "Strażacy"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-28-2100-11-australia-platformy",
+      "section": "Polityka",
+      "title": "Australia chce dwa razy mocniej karać platformy za łamanie zakazu dla nieletnich",
+      "lead": "Rząd zaostrza presję na big tech w sprawie social mediów dla osób poniżej 16 lat.",
+      "whatHappened": "BBC podało, że Australia chce podwoić maksymalną karę dla platform, które naruszają obowiązujący zakaz mediów społecznościowych dla osób poniżej 16 roku życia.",
+      "keyFacts": [
+        "Chodzi o podwojenie maksymalnej kary.",
+        "Regulacja dotyczy platform naruszających zakaz dla osób poniżej 16 lat.",
+        "Temat dotyczy już obowiązującego reżimu, a nie tylko zapowiedzi."
+      ],
+      "reactions": [
+        "To jedna z nielicznych kart regulacyjnych, która ma wyraźnie publiczny wymiar i szerokie znaczenie.",
+        "Wątek domyka sekcję polityczną bez schodzenia w niszowy tech."
+      ],
+      "whyItMatters": "Australia pozostaje jednym z globalnych laboratoriów twardej regulacji platform, więc ruch może rezonować także poza krajem.",
+      "context": "Karta była już obecna w poprzednim runie, ale nadal mieści się w selektywnym bloku publiczno-technologicznym.",
+      "watchNext": [
+        "Czy pojawi się dokładny harmonogram zmian w sankcjach.",
+        "Czy platformy publicznie odpowiedzą na zaostrzenie kar."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Australia to double maximum penalty for platforms in breach of social media ban",
+          "url": "https://www.bbc.co.uk/news/articles/c78yv5g74e9o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Australia",
+        "Platformy",
+        "Regulacja"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-28-2100-12-baterie-lotnictwo",
+      "section": "Technologia",
+      "title": "E-papierosy i powerbanki rosną do rangi głównego ryzyka pożarowego w lotnictwie",
+      "lead": "Linie lotnicze i regulatorzy ostrzegają przed urządzeniami litowymi w bagażu.",
+      "whatHappened": "TVN24 Biznes podało za brytyjskimi źródłami lotniczymi i regulacyjnymi, że e-papierosy oraz powerbanki są obecnie największym źródłem ryzyka pożarowego na pokładach samolotów, zwłaszcza gdy są przewożone niezgodnie z zasadami.",
+      "keyFacts": [
+        "Najmocniej wskazywane są e-papierosy i powerbanki.",
+        "Problem dotyczy urządzeń z bateriami litowymi przewożonych niezgodnie z procedurami.",
+        "Temat łączy technologię konsumencką z bezpieczeństwem transportu."
+      ],
+      "reactions": [
+        "To nadal jedna z niewielu technologicznych kart, które są wyraźnie użyteczne dla szerokiego odbiorcy.",
+        "W połączeniu z pęknięciami pasa wzmacnia lotniczy podtemat wieczornego feedu."
+      ],
+      "whyItMatters": "To praktyczna informacja bezpieczeństwowa dla podróżnych, a nie tylko branżowa ciekawostka technologiczna.",
+      "context": "Wieczorny run utrzymuje kartę technologiczną tylko dlatego, że ma bezpośredni wymiar bezpieczeństwa podróży.",
+      "watchNext": [
+        "Czy linie lub regulatorzy zaostrzą zasady przewozu urządzeń litowych.",
+        "Czy temat przełoży się na widoczne zmiany w komunikatach dla pasażerów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Przybywa groźnych incydentów w samolotach. To teraz największe zagrożenia pożarowe",
+          "url": "https://tvn24.pl/biznes/turystyka/podroze-najwieksze-zagrozenie-pozarowe-w-samolotach-to-e-papierosy-i-powerbanki-st9118516?source=rss"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "Lotnictwo",
+        "Powerbanki",
+        "Bezpieczeństwo"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "RCB: ALERT RCB - burze (28/29.06)",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---burze282906"
+    },
+    {
+      "title": "TVN24: Gdzie jest burza? Silne wyładowania z gradem",
+      "url": "https://tvn24.pl/tvnmeteo/polska/gdzie-jest-burza-burze-w-niedziele-28-06-radar-burz-i-mapa-opadow-na-zywo-opady-gradu-st9118723?source=rss"
+    },
+    {
+      "title": "TVN24: Problemy na kolei. Przez upał",
+      "url": "https://tvn24.pl/polska/problemy-na-kolei-odwolane-pociagi-przez-upal-st9118769?source=rss"
+    },
+    {
+      "title": "TVN24: Pęknięcia pasa na lotnisku w Warszawie. Loty opóźnione",
+      "url": "https://tvn24.pl/polska/pekniecia-pasa-na-lotnisku-chopina-w-warszawie-moga-byc-opoznienia-lotow-st9118722?source=rss"
+    },
+    {
+      "title": "TVN24: \"Czuję się dzisiaj zobowiązany\". Nowa inicjatywa prezydenta",
+      "url": "https://tvn24.pl/polska/karol-nawrocki-chce-ustanowic-28-czerwca-dniem-opozycji-antykomunistycznej-st9118726?source=rss"
+    },
+    {
+      "title": "BBC: Europe's heatwave linked to 1,300 deaths, WHO says, as Germany hits record 41.7C",
+      "url": "https://www.bbc.co.uk/news/articles/cn4d2vv935lo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC: Three firefighters die battling huge wildfires in Colorado",
+      "url": "https://www.bbc.co.uk/news/articles/cp8l7mpmdggo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC: US and Iran exchange strikes and accuse each other of violating ceasefire",
+      "url": "https://www.bbc.co.uk/news/articles/cdxdwkgqgq0o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "CNN: Iran targets US military sites in Bahrain and Kuwait as strikes strain fragile truce",
+      "url": "https://edition.cnn.com/2026/06/28/world/live-news/iran-war-strikes-trump"
+    },
+    {
+      "title": "CNN: Countries mobilize to assist Venezuela earthquake survivors as death toll mounts",
+      "url": "https://edition.cnn.com/2026/06/28/world/live-news/venezuela-earthquake-hnk"
+    },
+    {
+      "title": "BBC: Eleven killed after plane carrying skydivers crashes in eastern France",
+      "url": "https://www.bbc.co.uk/news/articles/c5yz9yj9x74o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "CNN: Skydiving plane crashes in France, killing 11 people",
+      "url": "https://edition.cnn.com/2026/06/28/europe/plane-crash-france-skydiving-intl"
+    },
+    {
+      "title": "BBC: Fourteen killed in Saudi Arabia helicopter crash",
+      "url": "https://www.bbc.co.uk/news/articles/c3eyd9j5g7xo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC: Australia to double maximum penalty for platforms in breach of social media ban",
+      "url": "https://www.bbc.co.uk/news/articles/c78yv5g74e9o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "TVN24 Biznes: Przybywa groźnych incydentów w samolotach. To teraz największe zagrożenia pożarowe",
+      "url": "https://tvn24.pl/biznes/turystyka/podroze-najwieksze-zagrozenie-pozarowe-w-samolotach-to-e-papierosy-i-powerbanki-st9118516?source=rss"
+    }
+  ]
+}
