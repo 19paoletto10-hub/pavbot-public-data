@@ -76,6 +76,15 @@ dniem działaczy opozycji antykomunistycznej. W świecie utrzymują się: rosyjs
 braki paliwa po ukraińskich uderzeniach w rafinerie, ostrożny sygnał pauzy
 USA-Iran i rozmów w Katarze o Ormuz, polityczny zwrot w Serbii oraz kryzys
 humanitarny w Wenezueli.
+Wieczorny run 2026-06-29-1935 potwierdził materialną aktualizację: Orka/A26
+została podpisana, a obok kontraktu Polska i Szwecja ogłosiły Pakt dla Morza
+Bałtyckiego z filarami politycznym, wojskowym i przemysłowym. Nowym blokiem
+bezpieczeństwa wewnętrznego jest komunikat ABW o zatrzymaniu i wydalaniu 11
+cudzoziemców w sprawie działań inspirowanych i finansowanych przez Rosję wśród
+ukraińskich uchodźców. RCB przesunęło akcent z samego upału na alert burzowy
+29/30 czerwca, utonięcia, suszę hydrologiczną i pożary lasów. W świecie Ormuz
+pozostaje kruchą pauzą, nie porozumieniem: AP wskazuje wstrzymanie uderzeń
+USA-Iran, ale także spór o to, czy rozmowy w Dosze są uzgodnione.
 
 ## Stable Facts
 
@@ -130,6 +139,7 @@ humanitarny w Wenezueli.
 
 ## Recent Reports
 
+- [2026-06-29-1935](runs/2026-06-29-1935.md)
 - [2026-06-29](runs/2026-06-29.md)
 - [2026-06-28-1935](runs/2026-06-28-1935.md)
 - [2026-06-28](runs/2026-06-28.md)
