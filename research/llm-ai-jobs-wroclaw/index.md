@@ -1,27 +1,21 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-06-28 17:42 CEST
+Last updated: 2026-06-29 01:41 CEST
 
 ## Current Understanding
 
-Runda z `2026-06-28 17:42 CEST` dołożyła cztery mocne sygnały in-scope:
-`YOUR ITEAMS Senior AI Engineer with .NET`, `cerebre Senior AI Engineer`,
-`Netguru AI Engineer` i `DEVAPO Python AI Engineer (GenAI)`. Najmocniejszy
-lead to `YOUR ITEAMS`, bo direct-employer `Pracuj.pl` pokazuje jawne widełki,
-`Whole Poland (remote work)` i bardzo konkretny scope wokół `RAG`, ewaluacji
-LLM-ów oraz monitoringu jakości produkcyjnej.
+Runda z `2026-06-29 01:41 CEST` dołożyła nowy, szeroki batch Wrocław/remote:
+`Primotly Senior AI Engineer (Python, GenAI, GCP)`, `Remodevs Senior AI Engineer`,
+trzy osobne karty `Addepto`, `deepsense.ai Python AI Engineer`, `CDQ Machine Learning
+Engineer` i `Callstack Senior AI System Engineer`. Najmocniejsze źródłowo są
+`Primotly` i `Remodevs`, bo mają jawne widełki oraz bardzo praktyczny scope wokół
+`LLM`, agentów, backendu i produkcyjnych pipeline'ów AI.
 
-Board-first klaster z tej rundy jest technicznie mocny. `cerebre` wygląda
-jak jeden z najlepszych sygnałów na przecięciu `LLM`, knowledge graphów,
-`RAG`, agentów i `MCP`, a `Netguru` oraz nowy `DEVAPO` wzmacniają pulę
-remote-Poland wokół praktycznych wdrożeń `Azure OpenAI`, fine-tuningu,
-ewaluacji i produkcyjnych pipeline'ów LLM.
-
-Dwie wcześniej śledzone role dostały materialny upgrade jakości źródeł.
-`Tooploox Senior AI Engineer` ma już employer-posted publiczny detail z
-widełkami i precyzyjnym agentic/`RAG` stackiem, a `CodiLime` pokazuje teraz
-wyraźnie wariant `Poland · Fully Remote`, choć ich publiczne URL-e nadal nie
-są w pełni spójne.
+`Addepto` wyraźnie rozszczepił swój publiczny AI/LLM-family na kilka różnych kart:
+`Senior AI Engineer (LLMs, Python)`, `AI Engineer (LLMs, Python)` i
+`Solution Engineer (AI & Big Data)`. `deepsense.ai`, `CDQ` i `Callstack`
+dorzuciły kolejne mocne leady, więc obecny klaster jest dobry zarówno dla
+hands-on engineerów, jak i dla osób szukających AI platform / infra / multi-agent.
 
 ## Stable Facts
 
@@ -145,6 +139,14 @@ only when something meaningful changes.
 | justjoin-cerebre-senior-ai-engineer-remote-poland | cerebre | Senior AI Engineer | Wrocław + remote Poland | 2026-06-28-1742 | 2026-06-28-1742 | Open | Initial capture: public `Just Join IT` role; `100% remote`; office locations include `Wrocław`, `Poznań`, `Kraków`, `Warszawę` and `Trójmiasto`; strong product signal around knowledge graphs, `LLMs`, `RAG`, `AI agents`, `MCP`, embeddings, vector DBs and production AI over industrial workflows. | [Just Join IT](https://justjoin.it/job-offer/cerebre-senior-ai-engineer-poznan-python) |
 | justjoin-netguru-ai-engineer-remote-poland | Netguru | AI Engineer | Wrocław + remote Poland | 2026-06-28-1742 | 2026-06-28-1742 | Open | Initial capture: public `Just Join IT` role; `12 000-19 200 PLN netto / mies. B2B` or `10 000-16 000 PLN brutto / mies. UoP`; `Remote`; office list includes `Wrocław`; practical delivery around `Azure OpenAI`, `RAG`, fine-tuning open-source models, agentic workflows, embeddings and vector databases. | [Just Join IT](https://justjoin.it/job-offer/netguru-ai-engineer-warszawa-python) |
 | justjoin-devapo-python-ai-engineer-genai-remote-poland | DEVAPO SPÓŁKA Z OGRANICZONĄ ODPOWIEDZIALNOŚCIĄ | Python AI Engineer (GenAI) | Wrocław + remote Poland | 2026-06-28-1742 | 2026-06-28-1742 | Open | Initial capture: public `Just Join IT` role; `120-180 PLN netto / godz. B2B`; `Remote`; locations include `Wrocław`; hands-on `LLM`, `RAG`, vector databases, embeddings, prompt engineering, multi-agent systems, `LangChain`, `LlamaIndex`, `LangGraph`, `CrewAI`, AI evaluation and optional fine-tuning. | [Just Join IT](https://justjoin.it/job-offer/devapo-python-ai-engineer-genai--krakow-python) |
+| primotly-senior-ai-engineer-python-genai-gcp-wroclaw-remote | Primotly | Senior AI Engineer (Python, GenAI, GCP) | Wrocław + remote | 2026-06-29-0141 | 2026-06-29-0141 | Open | Initial capture: `29 000-36 500 PLN/month` B2B; `Wrocław +4 Locations`; `Remote`; `GCP`, `Google Vertex`, `Cloud Run`, `Terraform`, SaaS and a very strong GenAI stack. | [Just Join IT](https://justjoin.it/job-offer/primotly-senior-ai-engineer-python-genai-gcp--wroclaw-ai) |
+| remodevs-senior-ai-engineer-wroclaw-remote | Remodevs | Senior AI Engineer | Wrocław + remote | 2026-06-29-0141 | 2026-06-29-0141 | Open | Initial capture: `33 970-42 462 PLN net/month` B2B; `Fryderyka Chopina 2`, `Wrocław +4 Locations`; `Remote`; agent workflows, multi-agent systems, `GCP`, `PostgreSQL`, `evals`, `tracing` and `observability` in supply-chain AI. | [Just Join IT](https://justjoin.it/job-offer/remodevs-senior-ai-engineer-warszawa-ai) |
+| addepto-senior-ai-engineer-llms-python-wroclaw-remote | Addepto | Senior AI Engineer (LLMs, Python) | Wrocław + remote | 2026-06-29-0141 | 2026-06-29-0141 | Open | Initial capture: `19 320-25 200 PLN net/month` B2B; `Świdnicka 40`, `Wrocław +4 Locations`; `Remote`; hands-on `LLMs`, backend `FastAPI`, deployment in `GCP/AWS/Azure`, production AI and backend delivery. | [Just Join IT](https://justjoin.it/job-offer/addepto-senior-ai-engineer-llms-python--wroclaw-ai-7bd99c9e) |
+| addepto-ai-engineer-llms-python-wroclaw-remote | Addepto | AI Engineer (LLMs, Python) | Wrocław + remote | 2026-06-29-0141 | 2026-06-29-0141 | Open | Initial capture: `12 600-19 320 PLN net/month` B2B; `Świdnicka 40`, `Wrocław +4 Locations`; `Remote`; same strong backend `LLMs` + `FastAPI` + cloud profile, but lower seniority. | [Just Join IT](https://justjoin.it/job-offer/addepto-ai-engineer-llms-python--wroclaw-ai-0b7a2760) |
+| addepto-solution-engineer-ai-big-data-wroclaw-remote | Addepto | Solution Engineer (AI & Big Data) | Wrocław + remote | 2026-06-29-0141 | 2026-06-29-0141 | Open | Initial capture: `21 000-33 000 PLN/month`; `Wrocław +4 Locations`; `Remote`; explicit `LLM`, `Databricks`, `Python`, `Data Engineering` and `GenAI`, but a broader solution role than the two pure engineer cards. | [Just Join IT](https://justjoin.it/job-offer/addepto-solution-engineer-ai-big-data--wroclaw-ai-919c80c6) |
+| deepsense-python-ai-engineer-wroclaw-remote | deepsense.ai | Python AI Engineer | Wrocław + remote | 2026-06-29-0141 | 2026-06-29-0141 | Open | Public board card; salary not visible in the public fragment; `Wrocław +4 Locations`; `Remote`; `AWS`, `RAG`, `LLMs`, `CI/CD`, `Docker`, `vector databases`, `LangChain`, `LangGraph`, `Python`, `Prompt Engineering`. | [Just Join IT board card](https://justjoin.it/job-offers/wroclaw/ai) |
+| cdq-machine-learning-engineer-wroclaw-remote | CDQ | Machine Learning Engineer | Wrocław + remote | 2026-06-29-0141 | 2026-06-29-0141 | Open | Public board card; `16 000-22 000 PLN/month`; `Wrocław +1 Location`; `Remote`; `GenAI`, `LLMs`, `Clouds`, `RAGs` and a clean ML/LLM profile. | [Just Join IT board card](https://justjoin.it/job-offers/wroclaw/ai) |
+| callstack-senior-ai-system-engineer-wroclaw-remote | Callstack | Senior AI System Engineer | Wrocław + remote | 2026-06-29-0141 | 2026-06-29-0141 | Open | Public employer page; salary not visible in the public fragment; `Prosta 36, Wrocław +5 Locations`; `Remote`; end-to-end `LLM` and `multi-agent` architectures, `RAG` pipelines, document-processing workflows, cloud-native AI infra and governance. | [Just Join IT](https://justjoin.it/job-offer/callstack-senior-ai-system-engineer-wroclaw-ai-d121a189) |
 
 ## Open Questions
 
@@ -184,6 +186,9 @@ only when something meaningful changes.
 ## Watch Items
 
 - Public career pages of employers repeatedly posting Polish AI/LLM roles.
+- Public `Primotly`, `Remodevs`, `Addepto`, `CDQ`, `Callstack` and `deepsense.ai`
+  cards after this run, with special care around split board titles, remote
+  wording and canonical employer pages.
 - Official Holisticon and deepsense.ai career pages as recurring high-signal
   sources after this run.
 - Official `deepsense.ai careers` plus employer-posted `No Fluff Jobs` pages po
@@ -229,6 +234,7 @@ only when something meaningful changes.
 
 ## Recent Reports
 
+- [2026-06-29-0141](runs/2026-06-29-0141.md)
 - [2026-06-28-1742](runs/2026-06-28-1742.md)
 - [2026-06-28-0141](runs/2026-06-28-0141.md)
 - [2026-06-27-2016](runs/2026-06-27-2016.md)
@@ -255,6 +261,7 @@ only when something meaningful changes.
 
 ## Review Notes
 
+- 2026-06-29: poranna runda dodała `Primotly Senior AI Engineer (Python, GenAI, GCP)`, `Remodevs Senior AI Engineer`, trzy publiczne karty `Addepto`, `deepsense.ai Python AI Engineer`, `CDQ Machine Learning Engineer` i `Callstack Senior AI System Engineer`; najmocniejsze źródłowo są `Primotly` i `Remodevs`, a `Addepto` rozszczepił publiczny AI/LLM family na kilka jasnych kart.
 - 2026-06-28: wieczorna runda dodała `YOUR ITEAMS Senior AI Engineer with .NET`, `cerebre Senior AI Engineer`, `Netguru AI Engineer` i `DEVAPO Python AI Engineer (GenAI)`; największe materialne zmiany w już śledzonych rolach to employer-posted upgrade `Tooploox Senior AI Engineer` oraz mocniejsze publiczne potwierdzenie `CodiLime = Poland · Fully Remote`.
 - 2026-06-27: wieczorna runda dodała `ITDS Production Support Engineer – AI & LLM`, oficjalny `Axabee Senior AI Engineer`, board-first `4soft AI Product Engineer`, direct-employer `ITEAMLY Applied AI Engineer` oraz nowy infra sygnał `IN4GE Cloud Platform & Infrastructure Engineer (GenAI / CX AI)`.
 - 2026-06-28: poranna runda dodała `People Trust Senior AI/LLM Engineer`, `Cyclad Software Developer (React + Python + AI)`, `IN4GE Senior GCP AI Developer`, `SOFTWARELY Python + GenAI Developer`, `SQUARE ONE Python Developer (LLM)` i `CodiLime Mid/Senior AI engineer with networking experience`; główne nowe ryzyko to niejednoznaczna geografia `CodiLime` oraz drift salary w `Cyclad`.
