@@ -1,7 +1,7 @@
 {
   "id": "humor-2026-06-29-0420",
   "title": "<RR> Reddit Radar",
-  "summary": "Kategorie: memy, dev, OutOfTheLoop, PL, AI. Najmocniej wybija się: <u>Take care of things</u>.",
+  "summary": "Kategorie: memy, dev, OutOfTheLoop, PL, AI. Najmocniej wybija się: <u>What's the deal with the air conditioning debate?</u>.",
   "generatedAt": "2026-06-29T02:20:39.544173+00:00",
   "displayTime": "04:20",
   "nextRefreshAt": "2026-06-29T06:06:00+02:00",
@@ -21,12 +21,12 @@
       ],
       "categoryLabel": "memy",
       "postText": null,
-      "whyFunny": "Zabawne, bo temat jest prosty, rozpoznawalny i zostawia miejsce na szybkie puenty w komentarzach.",
+      "whyFunny": "Suchy tytuł brzmi jak zwykłe ogarnianie spraw, ale w memie czyta się go jak czarny żart o 'załatwianiu problemu' bez wchodzenia w szczegóły.",
       "rawCommentSnippets": [],
       "commentHighlights": [],
-      "commentAnalysisStatus": "blocked",
-      "commentAnalysisSource": "",
-      "commentAnalysisNote": "Wymaga ręcznego przeglądu posta i komentarzy w Safari/Computer Use przed publikacją.",
+      "commentAnalysisStatus": "no_safe_comments",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Safari nie zwróciło czytelnych komentarzy do bezpiecznego użycia.",
       "radarKey": "https://www.reddit.com/r/memes/comments/1uic6x0/take_care_of_things",
       "radarFirstSeenAt": "2026-06-29T02:20:39.544173+00:00",
       "radarLastSeenAt": "2026-06-29T02:20:39.544173+00:00"
@@ -46,7 +46,7 @@
       ],
       "categoryLabel": "dev",
       "postText": null,
-      "whyFunny": "Zabawne, bo przerabia znany stres techniczny na małą scenkę z pracy.",
+      "whyFunny": "To klasyczny programistyczny kalambur: jedno słowo 'use' w TypeScripcie wystarcza, żeby odpalić całą lawinę językowych poprawek i autokomentarzy.",
       "rawCommentSnippets": [
         {
           "body": "useUsing<Usable>('use')",
@@ -84,29 +84,29 @@
       "commentHighlights": [
         {
           "id": "comment-1",
-          "summary": "It's not useful at all",
+          "summary": "Komentarz punktuje, że cały żart kręci się wokół nadużycia słowa 'use'.",
           "originalBody": "It's not useful at all",
-          "explanation": "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
+          "explanation": "Działa, bo jednym zdaniem zbija kalambur i wyjaśnia, dlaczego mem jest śmieszny nawet bez głębszego kontekstu.",
           "score": 275
         },
         {
           "id": "comment-2",
-          "summary": "useUsing<Usable>('use')",
+          "summary": "Kalambur na nadmiarze słowa 'use' w zapisie TypeScriptowym.",
           "originalBody": "useUsing<Usable>('use')",
-          "explanation": "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
+          "explanation": "To śmieszne, bo komentuje mema tym samym materiałem językowym, który robi dowcip.",
           "score": 114
         },
         {
           "id": "comment-3",
-          "summary": "Why? This is full of “use” word. Maximum of usefulness!",
+          "summary": "Meta-żart o tym, że mem jest wręcz przeładowany słowem 'use'.",
           "originalBody": "Why? This is full of “use” word. Maximum of usefulness!",
-          "explanation": "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
+          "explanation": "Komentarz dopowiada powód żartu i robi to z przesadną 'użytecznością', co samo w sobie jest puentą.",
           "score": 65
         }
       ],
-      "commentAnalysisStatus": "blocked",
-      "commentAnalysisSource": "",
-      "commentAnalysisNote": "Wymaga ręcznego przeglądu posta i komentarzy w Safari/Computer Use przed publikacją.",
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Ręcznie sprawdzone w Safari; wybrane komentarze są bezpieczne i pasują do tonu posta.",
       "radarKey": "https://www.reddit.com/r/programmerhumor/comments/1uhvd1x/reactbelike",
       "radarFirstSeenAt": "2026-06-29T02:20:39.544173+00:00",
       "radarLastSeenAt": "2026-06-29T02:20:39.544173+00:00"
@@ -125,12 +125,12 @@
       ],
       "categoryLabel": "memy",
       "postText": null,
-      "whyFunny": "Zabawne, bo temat jest prosty, rozpoznawalny i zostawia miejsce na szybkie puenty w komentarzach.",
+      "whyFunny": "Krótki anty-botoksowy podpis działa dzięki przesadzie: '4ever' robi z odmowy zabiegu mały manifest wiecznej młodości.",
       "rawCommentSnippets": [],
       "commentHighlights": [],
-      "commentAnalysisStatus": "blocked",
-      "commentAnalysisSource": "",
-      "commentAnalysisNote": "Wymaga ręcznego przeglądu posta i komentarzy w Safari/Computer Use przed publikacją.",
+      "commentAnalysisStatus": "no_safe_comments",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Safari nie zwróciło czytelnych komentarzy do bezpiecznego użycia.",
       "radarKey": "https://www.reddit.com/r/memes/comments/1uidhnn/anti_botox_4ever",
       "radarFirstSeenAt": "2026-06-29T02:20:39.544173+00:00",
       "radarLastSeenAt": "2026-06-29T02:20:39.544173+00:00"
@@ -149,7 +149,7 @@
       ],
       "categoryLabel": "OutOfTheLoop",
       "postText": "Have not followed Australia politics closely but are they actually becoming a far right country? I thought their last election they kicked out the centre right party by a landslide. https://www.theguardian.com/commentisfree/2026/jun/22/pauline-hanson-and-donald-trump-both-exploit-voters-fury-but-her-popularity-is-rising-while-his-is-at-a-low",
-      "whyFunny": "Zabawne, bo temat jest prosty, rozpoznawalny i zostawia miejsce na szybkie puenty w komentarzach.",
+      "whyFunny": "Nagłówek brzmi jak alarm, ale komentarze szybko sprowadzają go do bardziej przyziemnej prawdy: to raczej walka o urban/rural elektorat i stare koalicje niż nagły zwrot całego kraju.",
       "rawCommentSnippets": [
         {
           "body": "AutoModerator • 1d ago SML.load([[\"5Bqz2s4NSA\",645],[\"B_JyImQIsv\",4210],[\"BXR-U9kYZ8\",4824],[\"C4uWIaAA8X\",406252],[\"CA14NmthQo\",3304],[\"CC3zNWgNqG\",2090],[\"CGeLPtpeTC\",81857],[\"CNuUUcy9W0\",3977],[\"DdfymQDoGP\",27454],[\"DGqW3IOp51\",2204],[\"DNJheieyoT\",633],[\"Dq2Tmcuo_h\",20573],[\"DtL9if6Zyc\",6321],[\"SgpHHj2--G\",584]], 'en-US/', 'auto'); Friendly reminder that all top level comments must: start with \"Answer: \", including the space after the colon (or \"Question: \" if you have an on-topic follow up question to ask), attempt to answer the question, and be unbiased Please review Rule 4 and this post before making a top level comment: http://redd.it/b1hct4/ Join the OOTL Discord for further discussion: https://discord.gg/ejDF4mdjnh I am a bot, and this action was performed automatically. Please contact the moderators of this subreddit if you have any questions or concerns. SML.load([[\"6_p38lLMrn\",606],[\"7YFjm8RAIv\",1575],[\"B_JyImQIsv\",4210],[\"B1C_EvzJVl\",5595],[\"BAjGAsQ7Vt\",44372],[\"BBRE8BC-u_\",1872],[\"BFZMS_fLFk\",3824],[\"BnqGUOPn1G\",1676],[\"BoEPcrHB77\",3293],[\"BOtiz1MFop\",3510],[\"BpqIWiBUtH\",5232],[\"BSTvhXMJLz\",11430],[\"BVqjtvbLjD\",510],[\"Bwf_XRt-a9\",673],[\"BwofChMwUZ\",3767],[\"C-F45q9pM3\",530],[\"C4uWIaAA8X\",406252],[\"CC3zNWgNqG\",2090],[\"Cctz-9ARVE\",3788],[\"CGeLPtpeTC\",81857],[\"CGfP3R-NqO\",16770],[\"CGWKjMv9JV\",3318],[\"CNUg4t3zMs\",2334],[\"CNuUUcy9W0\",3977],[\"Cnyenw8EQB\",1296],[\"CNYtDr0_uB\",20869],[\"CRPjoyMY32\",3949],[\"Cu54R7cop4\",2501],[\"CVsxfK15iQ\",624],[\"CY3Dg-cAzc\",3179],[\"D1Fmjs3sM9\",4478],[\"D25oKnqblM\",672],[\"Da97x-qACG\",2118],[\"DAgYt7sywe\",26545],[\"DBbpsl5ADM\",436],[\"DdfymQDoGP\",27454],[\"DeAoi06b_2\",1095],[\"DEianmup_N\",1666],[\"DFFyzTJn12\",670],[\"DfGWGyVD-i\",471],[\"Dfru48WWXT\",1892],[\"DFxm6dC-ff\",11813],[\"DGqW3IOp51\",2204],[\"DJQL9yuk3q\",2509],[\"DKnzCLUyS3\",3056],[\"DP9ER1qb2M\",2407],[\"Dpy36FK7QY\",4472],[\"Dq2Tmcuo_h\",20573],[\"DUdLK--PZh\",19405],[\"DUj5W2UCq9\",36002],[\"DZxFahbn90\",29243],[\"eDW-sNUv9a\",872],[\"FlEOHTm-v0\",1015],[\"HSsgLHGdWX\",2914],[\"N_v41OmSdc\",32112],[\"UoxB4qRaAs\",1365],[\"v8fJR7EOIw\",8422],[\"ZOvrB3waL-\",7075]], 'en-US/', 'auto');",
@@ -187,29 +187,29 @@
       "commentHighlights": [
         {
           "id": "comment-1",
-          "summary": "Answer: This is more the collapse of the pre-existing center right and strong right coalition than a general national shift. Australia is currently governed by a center left-centr…",
+          "summary": "Długi fact-check o tym, że to nie nagły skręt kraju, tylko rozpad starej centroprawicy.",
           "originalBody": "Answer: This is more the collapse of the pre-existing center right and strong right coalition than a general national shift. Australia is currently governed by a center left-centrist government which sometimes gets help from a strong left party in the Senate. They recently passed tax reform laws aimed at the top 10% of the population wealth wise because housing prices were out of control. Australia also has been experiencing population growth at extremely high rates for the past decade or so, which was one of the two causes of the high prices, the other main one being the previously very friendly tax breaks for real estate investors. Australia builds housing at unusually high rates, but it's simply not enough. The previous center right coalition of two urban conservative and rural conservative parties has ruled Australia for the majority of the time since WW2. They however have been gradually losing popularity. The most recent election was a disaster for them. They had been attempting a move further to the right because the right wing media has been taking it's cues from the US where the far right and \"I get my information from Facebook hoaxes\" is a common way to get elected. The problem is because of our very good voting system, it is impossible to throw your vote away in Australia and thus moves towards extremism tends to make parties lose. They got absolutely demolished in the 2025 election. There are two parties on the right trying to steal their voters. One is an \"Unofficial party party\" called the Teals, who are center right economically but are not socially conservative and believe in climate change. They are eating away at safe conservative seats in urban areas. At the same time, the \"I saw a meme on Facebook so I should be scared, Make Australia Great Again. This countries problem is we let in Indian people.\" Party which has been around for 30 years with some mild rural success has been moving to take over the more conservative voters. Unlike the old parties, they are 100% fine to use unverified nonsense online as their main talking points. In a recent state election, the left wing party won an absolute landslide, to the point where urban areas are very heavily dominated by them. This meant that the shift away from the existing center right coalition became even more critical, since it's only the furthest right areas which stayed right wing. The rural MAGA like party gained a number of seats and almost became the official opposition. Edit: Someone pointed out that Australias richest person has also thrown themselves behind the new Rural MAGA like party. The wealthy have seen that Trump style politics lets them gut workers protections and cut their own taxes and let them redo whatever they want while people are distracted thinking there are litter trays in schools. So a big chunk has been that. That said, agricultural wealth is big here and they have seen enough droughts to be afraid of climate change, so the smart ones are also backing the \"Not whack jobs\" urban right wing group. Edit:fixed a typo.",
-          "explanation": "Komentarz jest ciekawy, bo rozwija żart o AI i pokazuje, jak ludzie dopisują puentę do technologicznego absurdu.",
+          "explanation": "Komentarz jest ciekawy, bo rozbraja alarmistyczny nagłówek i tłumaczy australijski układ partyjny bez internetowego skrótu myślowego.",
           "score": 1431
         },
         {
           "id": "comment-2",
-          "summary": "The interesting thing is that the rural party has nowhere to grow. They don't have any interest in running candidates in urban seats, so they can't really gain more seats than the…",
+          "summary": "Docinek o tym, że partia wiejska ma już mało przestrzeni do wzrostu.",
           "originalBody": "The interesting thing is that the rural party has nowhere to grow. They don't have any interest in running candidates in urban seats, so they can't really gain more seats than they already have. A few more, maybe, if they take, like \"Ballarat the reasonably sized regional town\" off Labor, but not many",
-          "explanation": "Komentarz jest ciekawy, bo rozwija żart o AI i pokazuje, jak ludzie dopisują puentę do technologicznego absurdu.",
+          "explanation": "To dobre, bo jednym zdaniem zamienia polityczne pytanie w prostą analizę limitów ekspansji.",
           "score": 302
         },
         {
           "id": "comment-3",
-          "summary": "Worth noting that Australias population is almost 90% urban. https://www.statista.com/statistics/260498/degree-of-urbanization-in-australia/",
+          "summary": "Szyderczy żart, że Amerykanie mają własny wyborczy problem do odhaczenia.",
           "originalBody": "Worth noting that Australias population is almost 90% urban. https://www.statista.com/statistics/260498/degree-of-urbanization-in-australia/",
-          "explanation": "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
+          "explanation": "To dobry domykacz, bo jednym zdaniem łączy australijski wątek z amerykańskim systemem i robi to bez ciężkiej publicystyki.",
           "score": 121
         }
       ],
-      "commentAnalysisStatus": "blocked",
-      "commentAnalysisSource": "",
-      "commentAnalysisNote": "Wymaga ręcznego przeglądu posta i komentarzy w Safari/Computer Use przed publikacją.",
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Ręcznie sprawdzone w Safari; wybrane komentarze są bezpieczne i pasują do tonu posta.",
       "radarKey": "https://www.reddit.com/r/outoftheloop/comments/1uhhik3/whats_up_with_australia_moving_to_the_far_right",
       "radarFirstSeenAt": "2026-06-29T02:20:39.544173+00:00",
       "radarLastSeenAt": "2026-06-29T02:20:39.544173+00:00"
@@ -228,7 +228,7 @@
       ],
       "categoryLabel": "PL",
       "postText": null,
-      "whyFunny": "Zabawne, bo lokalny internet bierze zwykły temat i robi z niego wspólny rytuał komentowania.",
+      "whyFunny": "To lokalny mem o zieleni i parkingach, gdzie zwykły spór o drzewa natychmiast zamienia się w sarkazm, deweloperkę i miejskie marudzenie.",
       "rawCommentSnippets": [
         {
           "body": "Zieleń w miastach to lewacka ideologia, żeby było trudniej się poruszać samochodami. /s",
@@ -266,29 +266,29 @@
       "commentHighlights": [
         {
           "id": "comment-1",
-          "summary": "Zieleń w miastach to lewacka ideologia, żeby było trudniej się poruszać samochodami. /s",
+          "summary": "Sarkastyczny argument przeciw zieleni, udający walkę o parkingi.",
           "originalBody": "Zieleń w miastach to lewacka ideologia, żeby było trudniej się poruszać samochodami. /s",
-          "explanation": "Komentarz jest ciekawy, bo pokazuje lokalny kontekst i zamienia zwykły temat w wspólną, rozpoznawalną puentę.",
+          "explanation": "To działa, bo bierze często słyszany urbanistyczny żal i doprowadza go do absurdu.",
           "score": 381
         },
         {
           "id": "comment-2",
-          "summary": "Ważne żeby była fontanna* pośrodku betonowego placu *latem w remoncie",
+          "summary": "Żart o fontannie na betonowym placu i o tym, że i tak zaraz będzie remont.",
           "originalBody": "Ważne żeby była fontanna* pośrodku betonowego placu *latem w remoncie",
-          "explanation": "Komentarz jest ciekawy, bo rozwija techniczny żart i trafia w znany rytuał sprawdzania, czy sukces nie ukrywa awarii.",
+          "explanation": "Komentarz punktuje polski kompromis: trochę ładniej, ale nadal bez realnej zieleni.",
           "score": 255
         },
         {
           "id": "comment-3",
-          "summary": "Wypraszam sobie, dlaczego nie wspomniałeś w swoim \"komentarzu\" o deweloperach? W ramach pokuty proszę odmówić litanię do urzędu skarbowego",
+          "summary": "Docinka łącząca deweloperów, pokutę i urzędy.",
           "originalBody": "Wypraszam sobie, dlaczego nie wspomniałeś w swoim \"komentarzu\" o deweloperach? W ramach pokuty proszę odmówić litanię do urzędu skarbowego",
-          "explanation": "Komentarz jest ciekawy, bo pokazuje lokalny kontekst i zamienia zwykły temat w wspólną, rozpoznawalną puentę.",
+          "explanation": "To ciekawy komentarz, bo robi z miejskiej zieleni cały pakiet polskich frustracji.",
           "score": 51
         }
       ],
-      "commentAnalysisStatus": "blocked",
-      "commentAnalysisSource": "",
-      "commentAnalysisNote": "Wymaga ręcznego przeglądu posta i komentarzy w Safari/Computer Use przed publikacją.",
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Ręcznie sprawdzone w Safari; wybrane komentarze są bezpieczne i pasują do tonu posta.",
       "radarKey": "https://www.reddit.com/r/polska/comments/1ui3ooo/ziele%c5%84_w_miastach_a_po_co_to_komu_s",
       "radarFirstSeenAt": "2026-06-29T02:20:39.544173+00:00",
       "radarLastSeenAt": "2026-06-29T02:20:39.544173+00:00"
@@ -307,7 +307,7 @@
       ],
       "categoryLabel": "AI",
       "postText": null,
-      "whyFunny": "Zabawne, bo AI występuje tu jak zbyt pewny siebie uczestnik codziennego rytuału, a ludzie dopisują puentę.",
+      "whyFunny": "To działa, bo zwykłe 'gdzie jest AC?' natychmiast zamienia się w debatę o klimacie, budynkach i politycznej wojence USA kontra Europa.",
       "rawCommentSnippets": [
         {
           "body": "Słońce w nowiu.",
@@ -345,29 +345,29 @@
       "commentHighlights": [
         {
           "id": "comment-1",
-          "summary": "Jezu jeden z moich ulubionych memów",
+          "summary": "Wyjaśnienie, że spór nie dotyczy samego AC, tylko klimatu, budynków i politycznej wojny USA kontra Europa.",
           "originalBody": "Jezu jeden z moich ulubionych memów",
-          "explanation": "Komentarz jest ciekawy, bo rozwija żart o AI i pokazuje, jak ludzie dopisują puentę do technologicznego absurdu.",
+          "explanation": "Komentarz jest ciekawy, bo rozbija mem na warstwę infrastruktury i kulturę internetowego obrzucania się argumentami.",
           "score": 181
         },
         {
           "id": "comment-2",
-          "summary": "Na pospólstwo",
+          "summary": "Texańska perspektywa na upał i to, jak źle działa brak klimatyzacji w budynkach nieprzystosowanych do żaru.",
           "originalBody": "Na pospólstwo",
-          "explanation": "Komentarz jest ciekawy, bo rozwija żart o AI i pokazuje, jak ludzie dopisują puentę do technologicznego absurdu.",
+          "explanation": "Komentarz dodaje praktyczny kontekst: nie chodzi o wygodę, tylko o to, że triple-digit heat bez AC naprawdę zmienia zasady gry.",
           "score": 154
         },
         {
           "id": "comment-3",
-          "summary": "Wygodne, nie trzeba samemu pluć",
+          "summary": "Metafora o budynkach jak szafa pełna grubych swetrów.",
           "originalBody": "Wygodne, nie trzeba samemu pluć",
-          "explanation": "Komentarz jest ciekawy, bo rozwija żart o AI i pokazuje, jak ludzie dopisują puentę do technologicznego absurdu.",
+          "explanation": "To fajne, bo w jednej analogii pokazuje, czemu Europa Północna ma inny problem niż południe.",
           "score": 143
         }
       ],
-      "commentAnalysisStatus": "blocked",
-      "commentAnalysisSource": "",
-      "commentAnalysisNote": "Wymaga ręcznego przeglądu posta i komentarzy w Safari/Computer Use przed publikacją.",
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Ręcznie sprawdzone w Safari; wybrane komentarze są bezpieczne i pasują do tonu posta.",
       "radarKey": "https://www.reddit.com/r/outoftheloop/comments/1uh9as2/whats_the_deal_with_the_air_conditioning_debate",
       "radarFirstSeenAt": "2026-06-29T02:20:39.544173+00:00",
       "radarLastSeenAt": "2026-06-29T02:20:39.544173+00:00"
@@ -386,7 +386,7 @@
       ],
       "categoryLabel": "mildlyinfuriating",
       "postText": null,
-      "whyFunny": "Zabawne, bo temat jest prosty, rozpoznawalny i zostawia miejsce na szybkie puenty w komentarzach.",
+      "whyFunny": "Śmieszność nie bierze się z samego lotu, tylko z kontrastu między kosztowną podróżą a pustą salą i późniejszymi negocjacjami płatności.",
       "rawCommentSnippets": [
         {
           "body": "I had this happen to me once lol, Paid me to fly out and give a talk...no one showed up. Soooo...I gave the talk to an empty room and they tried to renege on paying me for the talk. Ended up getting paid in full twice when they tried to reschedule me a few weeks later to fly out again and give the talk. I said I wouldn't accept until the old invoice was paid...and that I didn't trust them to pay me for the new invoice because of the 'issues'. As we got closer to the event i received payment for both invoices, so I got on the plane, and gave the talk again...this time to a nearly full audience of 40 people who looked like they were forced to be there at gunpoint lol. Edit: Since so many people asked lol It was a very dry and mundane talk about Site Reliability Engineering / Plant Management / Capacity Management and various ways of handling it proactively instead of reactively. A lot of firms will have a severe capacity related outage at least once in their time. I teach how to monitor 'deeper metrics' to try and predict outages before hand and avoid those situations to try and delay that outage as far as possible.",
@@ -424,29 +424,29 @@
       "commentHighlights": [
         {
           "id": "comment-1",
-          "summary": "cigarettejesus • 35m ago SML.load([[\"5Bqz2s4NSA\",645],[\"B_JyImQIsv\",4210],[\"BXR-U9kYZ8\",4824],[\"C4uWIaAA8X\",406252],[\"CA14NmthQo\",3304],[\"CC3zNWgNqG\",2090],[\"CGeLPtpeTC\",81857],[\"…",
-          "originalBody": "cigarettejesus • 35m ago SML.load([[\"5Bqz2s4NSA\",645],[\"B_JyImQIsv\",4210],[\"BXR-U9kYZ8\",4824],[\"C4uWIaAA8X\",406252],[\"CA14NmthQo\",3304],[\"CC3zNWgNqG\",2090],[\"CGeLPtpeTC\",81857],[\"CNuUUcy9W0\",3977],[\"DdfymQDoGP\",27454],[\"DGqW3IOp51\",2204],[\"DNJheieyoT\",633],[\"Dq2Tmcuo_h\",20573],[\"DtL9if6Zyc\",6321],[\"SgpHHj2--G\",584]], 'en-US/', 'auto'); SML.load([[\"6_p38lLMrn\",606],[\"7YFjm8RAIv\",1575],[\"B_JyImQIsv\",4210],[\"B1C_EvzJVl\",5595],[\"BAjGAsQ7Vt\",44372],[\"BBRE8BC-u_\",1872],[\"BFZMS_fLFk\",3824],[\"BnqGUOPn1G\",1676],[\"BoEPcrHB77\",3293],[\"BOtiz1MFop\",3510],[\"BpqIWiBUtH\",5232],[\"BSTvhXMJLz\",11430],[\"BVqjtvbLjD\",510],[\"Bwf_XRt-a9\",673],[\"BwofChMwUZ\",3767],[\"C-F45q9pM3\",530],[\"C4uWIaAA8X\",406252],[\"CC3zNWgNqG\",2090],[\"Cctz-9ARVE\",3788],[\"CGeLPtpeTC\",81857],[\"CGfP3R-NqO\",16770],[\"CGWKjMv9JV\",3318],[\"CNUg4t3zMs\",2334],[\"CNuUUcy9W0\",3977],[\"Cnyenw8EQB\",1296],[\"CNYtDr0_uB\",20869],[\"CRPjoyMY32\",3949],[\"Cu54R7cop4\",2501],[\"CVsxfK15iQ\",624],[\"CY3Dg-cAzc\",3179],[\"D1Fmjs3sM9\",4478],[\"D25oKnqblM\",672],[\"Da97x-qACG\",2118],[\"DAgYt7sywe\",26545],[\"DBbpsl5ADM\",436],[\"DdfymQDoGP\",27454],[\"DeAoi06b_2\",1095],[\"DEianmup_N\",1666],[\"DFFyzTJn12\",670],[\"DfGWGyVD-i\",471],[\"Dfru48WWXT\",1892],[\"DFxm6dC-ff\",11813],[\"DGqW3IOp51\",2204],[\"DJQL9yuk3q\",2509],[\"DKnzCLUyS3\",3056],[\"DP9ER1qb2M\",2407],[\"Dpy36FK7QY\",4472],[\"Dq2Tmcuo_h\",20573],[\"DUdLK--PZh\",19405],[\"DUj5W2UCq9\",36002],[\"DZxFahbn90\",29243],[\"eDW-sNUv9a\",872],[\"FlEOHTm-v0\",1015],[\"HSsgLHGdWX\",2914],[\"N_v41OmSdc\",32112],[\"UoxB4qRaAs\",1365],[\"v8fJR7EOIw\",8422],[\"ZOvrB3waL-\",7075]], 'en-US/', 'auto');",
-          "explanation": "Komentarz jest ciekawy, bo rozwija żart o AI i pokazuje, jak ludzie dopisują puentę do technologicznego absurdu.",
-          "score": 1
+          "summary": "Historia o locie na drugi koniec świata, pustej sali i wywalczonym podwójnym honorarium.",
+          "originalBody": "I had this happen to me once lol, Paid me to fly out and give a talk...no one showed up. Soooo...I gave the talk to an empty room and they tried to renege on paying me for the talk. Ended up getting paid in full twice when they tried to reschedule me a few weeks later to fly out again and give the talk. I said I wouldn't accept until the old invoice was paid...and that I didn't trust them to pay me for the new invoice because of the 'issues'. As we got closer to the event i received payment for both invoices, so I got on the plane, and gave the talk again...this time to a nearly full audience of 40 people who looked like they were forced to be there at gunpoint lol. Edit: Since so many people asked lol It was a very dry and mundane talk about Site Reliability Engineering / Plant Management / Capacity Management and various ways of handling it proactively instead of reactively. A lot of firms will have a severe capacity related outage at least once in their time. I teach how to monitor 'deeper metrics' to try and predict outages before hand and avoid those situations to try and delay that outage as far as possible.",
+          "explanation": "Najlepiej działa, bo rozwija samą katastrofę w konkretną anegdotę i pokazuje, że największy żart dotyczy płacenia za talki.",
+          "score": 6648
         },
         {
           "id": "comment-2",
-          "summary": "Yeah honestly it was r/mildlyinfuriating to fly to the other side of the world just to see it was this guy giving the talk",
-          "originalBody": "Yeah honestly it was r/mildlyinfuriating to fly to the other side of the world just to see it was this guy giving the talk",
-          "explanation": "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
-          "score": 1
+          "summary": "Puenta o tym, że cała prelekcja powinna nazywać się \"jak dostać zapłatę za wystąpienie\".",
+          "originalBody": "\"Welcome on my talk about how to make sure you get paid for talks\"",
+          "explanation": "Krótka forma dodaje do mema stand-upowy tytuł i robi z porażki mały poradnik.",
+          "score": 2418
         },
         {
           "id": "comment-3",
-          "summary": "dont take it personally, no attendance means the organizer did a horrible job at advertising the talk",
-          "originalBody": "dont take it personally, no attendance means the organizer did a horrible job at advertising the talk",
-          "explanation": "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
-          "score": 1
+          "summary": "Autoironiczna deklaracja, że po takim doświadczeniu każdy by na ten talk przyszedł.",
+          "originalBody": "As someone who has given many talks and never once been offered an honorarium, I would in fact attend this talk.",
+          "explanation": "To dobre, bo podbija absurd pustej sali i jednocześnie robi z niej marketingowy haczyk.",
+          "score": 431
         }
       ],
-      "commentAnalysisStatus": "blocked",
-      "commentAnalysisSource": "",
-      "commentAnalysisNote": "Wymaga ręcznego przeglądu posta i komentarzy w Safari/Computer Use przed publikacją.",
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Ręcznie sprawdzone w Safari; wybrane komentarze są bezpieczne i pasują do tonu posta.",
       "radarKey": "https://www.reddit.com/r/mildlyinfuriating/comments/1uiburb/flew_to_the_other_side_of_the_world_to_give_a",
       "radarFirstSeenAt": "2026-06-29T00:08:50.248363+00:00",
       "radarLastSeenAt": "2026-06-29T02:20:39.544173+00:00"
@@ -465,7 +465,7 @@
       ],
       "categoryLabel": "mildlyinfuriating",
       "postText": null,
-      "whyFunny": "Zabawne, bo temat jest prosty, rozpoznawalny i zostawia miejsce na szybkie puenty w komentarzach.",
+      "whyFunny": "To działa, bo tytuł brzmi jak prośba o instrukcję przetrwania, a komentarze natychmiast zamieniają ją w czarny, bardzo internetowy doradcznik: zapłać komuś i zrób z tego show.",
       "rawCommentSnippets": [
         {
           "body": "Ya fuck that, pay someone and record it from the inside 😂",
@@ -503,29 +503,29 @@
       "commentHighlights": [
         {
           "id": "comment-1",
-          "summary": "Ya fuck that, pay someone and record it from the inside 😂",
+          "summary": "Rada, żeby w ogóle nie próbować samemu i po prostu zapłacić komuś z kamerą.",
           "originalBody": "Ya fuck that, pay someone and record it from the inside 😂",
-          "explanation": "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
-          "score": 5305
+          "explanation": "Komentarz jest zabawny, bo przesuwa całą sytuację z paniki w stronę absurdalnego DIY-horroru.",
+          "score": 8389
         },
         {
           "id": "comment-2",
-          "summary": "But don’t hire a professional, just offer some rando 50 bucks to get rid of it.",
+          "summary": "Pomysł, żeby nie brać profesjonalisty, tylko znaleźć przypadkową osobę za parę dolarów.",
           "originalBody": "But don’t hire a professional, just offer some rando 50 bucks to get rid of it.",
-          "explanation": "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
-          "score": 2462
+          "explanation": "To jest śmieszne, bo udaje pragmatyczną radę, a w praktyce jeszcze bardziej pogarsza sytuację.",
+          "score": 4325
         },
         {
           "id": "comment-3",
-          "summary": "OP should hire this guy",
+          "summary": "Krótka zachęta, żeby po prostu zatrudnić tego gościa.",
           "originalBody": "OP should hire this guy",
-          "explanation": "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
-          "score": 1159
+          "explanation": "Działa, bo sprowadza całą dyskusję do jednej, bezczelnej puenty.",
+          "score": 2116
         }
       ],
-      "commentAnalysisStatus": "blocked",
-      "commentAnalysisSource": "",
-      "commentAnalysisNote": "Wymaga ręcznego przeglądu posta i komentarzy w Safari/Computer Use przed publikacją.",
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Ręcznie sprawdzone w Safari; wybrane komentarze są bezpieczne i pasują do tonu posta.",
       "radarKey": "https://www.reddit.com/r/mildlyinfuriating/comments/1ui9t6s/how_do_i_get_rid_of_this_myself_without_dying",
       "radarFirstSeenAt": "2026-06-29T00:08:50.248363+00:00",
       "radarLastSeenAt": "2026-06-29T02:20:39.544173+00:00"
@@ -544,7 +544,7 @@
       ],
       "categoryLabel": "AI",
       "postText": null,
-      "whyFunny": "Zabawne, bo AI występuje tu jak zbyt pewny siebie uczestnik codziennego rytuału, a ludzie dopisują puentę.",
+      "whyFunny": "Artykuł sam mówi, że AI nie dowiozło, a komentarze od razu przerabiają to na mem o tym, że narzędzie to nie pracownik i nie zastąpi ludzi w konkretnych rolach.",
       "rawCommentSnippets": [
         {
           "body": "Remember kids. Ai is a tool, not a solution.",
@@ -582,29 +582,29 @@
       "commentHighlights": [
         {
           "id": "comment-1",
-          "summary": "Remember kids. Ai is a tool, not a solution.",
+          "summary": "Najprostsza puenta: AI to narzędzie, nie rozwiązanie.",
           "originalBody": "Remember kids. Ai is a tool, not a solution.",
-          "explanation": "Komentarz jest ciekawy, bo rozwija żart o AI i pokazuje, jak ludzie dopisują puentę do technologicznego absurdu.",
-          "score": 1249
+          "explanation": "Komentarz trafia w sedno, bo jednym zdaniem podsumowuje cały news bez zbędnych ozdobników.",
+          "score": 2037
         },
         {
           "id": "comment-2",
-          "summary": "AI is tool, not *an employee",
+          "summary": "Żart o tym, że AI nie powinno być traktowane jak pracownik.",
           "originalBody": "AI is tool, not *an employee",
-          "explanation": "Komentarz jest ciekawy, bo rozwija żart o AI i pokazuje, jak ludzie dopisują puentę do technologicznego absurdu.",
-          "score": 161
+          "explanation": "To zabawne, bo przesuwa temat z technologii na bardzo ludzkie oczekiwanie wobec narzędzia.",
+          "score": 446
         },
         {
           "id": "comment-3",
-          "summary": "But… that’s not what a scrum master’s job is… they’re supposed to help get things unblocked.",
+          "summary": "Docinek, który łączy AI z wiecznym problemem Agile i scrum masterów.",
           "originalBody": "But… that’s not what a scrum master’s job is… they’re supposed to help get things unblocked.",
-          "explanation": "Komentarz jest ciekawy, bo rozwija żart o AI i pokazuje, jak ludzie dopisują puentę do technologicznego absurdu.",
-          "score": 50
+          "explanation": "Komentarz jest ciekawy, bo przerabia techniczny news na szerszą szyderę z firmowych rytuałów.",
+          "score": 141
         }
       ],
-      "commentAnalysisStatus": "blocked",
-      "commentAnalysisSource": "",
-      "commentAnalysisNote": "Wymaga ręcznego przeglądu posta i komentarzy w Safari/Computer Use przed publikacją.",
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Ręcznie sprawdzone w Safari; wybrane komentarze są bezpieczne i pasują do tonu posta.",
       "radarKey": "https://www.reddit.com/r/technology/comments/1ui7kif/ford_rehires_gray_beard_engineers_after_ai_falls",
       "radarFirstSeenAt": "2026-06-29T00:08:50.248363+00:00",
       "radarLastSeenAt": "2026-06-29T02:20:39.544173+00:00"
@@ -623,7 +623,7 @@
       ],
       "categoryLabel": "memy",
       "postText": null,
-      "whyFunny": "Zabawne, bo temat jest prosty, rozpoznawalny i zostawia miejsce na szybkie puenty w komentarzach.",
+      "whyFunny": "Żart działa jako cyniczna kontra do idealistycznego obrazka: w praktyce system i pieniądze robią za dużo większego przeciwnika niż sam lekarz.",
       "rawCommentSnippets": [
         {
           "body": "Cancer is pay to win sadly",
@@ -661,29 +661,29 @@
       "commentHighlights": [
         {
           "id": "comment-1",
-          "summary": "Cancer is pay to win sadly",
+          "summary": "Cyniczny skrót o tym, że leczenie bywa zależne od zasobów.",
           "originalBody": "Cancer is pay to win sadly",
-          "explanation": "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
-          "score": 834
+          "explanation": "Komentarz jest ostry, ale działa jako memiczny skrót frustracji wobec systemu, nie jako dosłowna ocena lekarzy.",
+          "score": 935
         },
         {
           "id": "comment-2",
-          "summary": "Hippocratic oath my ass.",
+          "summary": "Docinka podważająca idealistyczny obraz lekarzy.",
           "originalBody": "Hippocratic oath my ass.",
-          "explanation": "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
-          "score": 156
+          "explanation": "Działa, bo podbija konflikt między etyką a praktyką systemu i robi to jednym krótkim wybuchem frustracji.",
+          "score": 184
         },
         {
           "id": "comment-3",
-          "summary": "Doctors aren't the ones denying care to patients...",
+          "summary": "Przypomnienie, że problem leży w systemie, nie tylko w lekarzach.",
           "originalBody": "Doctors aren't the ones denying care to patients...",
-          "explanation": "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
-          "score": 67
+          "explanation": "To ciekawy kontrgłos, bo przenosi winę z pojedynczych osób na mechanizm decyzji i przez to wyostrza cały mem.",
+          "score": 86
         }
       ],
-      "commentAnalysisStatus": "blocked",
-      "commentAnalysisSource": "",
-      "commentAnalysisNote": "Wymaga ręcznego przeglądu posta i komentarzy w Safari/Computer Use przed publikacją.",
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Ręcznie sprawdzone w Safari; wybrane komentarze są bezpieczne i pasują do tonu posta.",
       "radarKey": "https://www.reddit.com/r/memes/comments/1ui00py/double_standards",
       "radarFirstSeenAt": "2026-06-29T00:08:50.248363+00:00",
       "radarLastSeenAt": "2026-06-29T02:20:39.544173+00:00"
@@ -703,7 +703,7 @@
       ],
       "categoryLabel": "dev",
       "postText": null,
-      "whyFunny": "Zabawne, bo przerabia znany stres techniczny na małą scenkę z pracy.",
+      "whyFunny": "To mem o nazwie, która brzmi jak zbyt optymistyczna metodologia, a komentarze zamieniają ją w szyderę z książkowych okładek, nadziei i programistycznego samooszukiwania się.",
       "rawCommentSnippets": [
         {
           "body": "A guide to postponed disappointment",
@@ -741,29 +741,29 @@
       "commentHighlights": [
         {
           "id": "comment-1",
-          "summary": "Cancer is pay to win sadly",
-          "originalBody": "Cancer is pay to win sadly",
-          "explanation": "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
-          "score": 834
+          "summary": "Dopisek o absurdalnych zwierzakach na okładkach książek.",
+          "originalBody": "Never understood the random ass animals on the covers",
+          "explanation": "Komentarz jest trafny, bo podkreśla, że mem działa także jako karykatura branżowych okładek z przesadnie symbolicznym zwierzęciem.",
+          "score": 190
         },
         {
           "id": "comment-2",
-          "summary": "Hippocratic oath my ass.",
-          "originalBody": "Hippocratic oath my ass.",
-          "explanation": "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
-          "score": 156
+          "summary": "Definicja stylu pracy opartego na odkładaniu rozczarowania.",
+          "originalBody": "A guide to postponed disappointment",
+          "explanation": "To najlepszy krótki punchline do samego tytułu: brzmi jak metodologia, która od początku obiecuje tylko odwlekanie porażki.",
+          "score": 170
         },
         {
           "id": "comment-3",
-          "summary": "Doctors aren't the ones denying care to patients...",
-          "originalBody": "Doctors aren't the ones denying care to patients...",
-          "explanation": "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
-          "score": 67
+          "summary": "Małpa na okładce faktycznie domyka żart.",
+          "originalBody": "Same here but the ape fits this one perfectly",
+          "explanation": "Komentarz jest zabawny, bo zgadza się z obrazem i sugeruje, że to właśnie małpa robi tu całą memiczną robotę.",
+          "score": 138
         }
       ],
-      "commentAnalysisStatus": "blocked",
-      "commentAnalysisSource": "",
-      "commentAnalysisNote": "Wymaga ręcznego przeglądu posta i komentarzy w Safari/Computer Use przed publikacją.",
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Ręcznie sprawdzone w Safari; wybrane komentarze są bezpieczne i pasują do tonu posta.",
       "radarKey": "https://www.reddit.com/r/programmerhumor/comments/1ui67qr/hopedrivendevelopment",
       "radarFirstSeenAt": "2026-06-29T00:08:50.248363+00:00",
       "radarLastSeenAt": "2026-06-29T02:20:39.544173+00:00"
@@ -782,7 +782,7 @@
       ],
       "categoryLabel": "PL",
       "postText": null,
-      "whyFunny": "Zabawne, bo lokalny internet bierze zwykły temat i robi z niego wspólny rytuał komentowania.",
+      "whyFunny": "To mem o polskim upale, w którym sam tytuł brzmi jak zbiorowy jęk, a komentarze odpowiadają sarkazmem, parkingami i klimatyzacyjnym marudzeniem.",
       "rawCommentSnippets": [
         {
           "body": "Jezu jeden z moich ulubionych memów",
@@ -820,29 +820,29 @@
       "commentHighlights": [
         {
           "id": "comment-1",
-          "summary": "Jezu jeden z moich ulubionych memów",
+          "summary": "Komentarz mówi wprost, że mem już działa jak klasyk.",
           "originalBody": "Jezu jeden z moich ulubionych memów",
-          "explanation": "Komentarz jest ciekawy, bo pokazuje lokalny kontekst i zamienia zwykły temat w wspólną, rozpoznawalną puentę.",
-          "score": 235
+          "explanation": "To działa, bo pokazuje natychmiastową rozpoznawalność żartu bez potrzeby tłumaczenia.",
+          "score": 239
         },
         {
           "id": "comment-2",
-          "summary": "Na pospólstwo",
+          "summary": "Sarkastyczna riposta, która robi z letniego upału coś niemal klasowego.",
           "originalBody": "Na pospólstwo",
-          "explanation": "Komentarz jest ciekawy, bo pokazuje lokalny kontekst i zamienia zwykły temat w wspólną, rozpoznawalną puentę.",
-          "score": 205
+          "explanation": "Krótka i zgryźliwa puenta podkręca absurd zwykłego lata do poziomu memicznego szyderstwa.",
+          "score": 207
         },
         {
           "id": "comment-3",
-          "summary": "Wygodne, nie trzeba samemu pluć",
+          "summary": "Docinka o wygodzie, która i tak kończy się bardzo przyziemnym problemem.",
           "originalBody": "Wygodne, nie trzeba samemu pluć",
-          "explanation": "Komentarz jest ciekawy, bo pokazuje lokalny kontekst i zamienia zwykły temat w wspólną, rozpoznawalną puentę.",
-          "score": 192
+          "explanation": "Komentarz jest śmieszny, bo bierze komfort i natychmiast go psuje obrzydliwie codziennym detalem.",
+          "score": 194
         }
       ],
-      "commentAnalysisStatus": "blocked",
-      "commentAnalysisSource": "",
-      "commentAnalysisNote": "Wymaga ręcznego przeglądu posta i komentarzy w Safari/Computer Use przed publikacją.",
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Ręcznie sprawdzone w Safari; wybrane komentarze są bezpieczne i pasują do tonu posta.",
       "radarKey": "https://www.reddit.com/r/polska/comments/1uhueyu/polskie_lato_xxi_wieku",
       "radarFirstSeenAt": "2026-06-29T00:08:50.248363+00:00",
       "radarLastSeenAt": "2026-06-29T02:20:39.544173+00:00"
