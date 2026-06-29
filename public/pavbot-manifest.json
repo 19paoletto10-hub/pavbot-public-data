@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-06-29T00:36:28.870548+00:00",
+  "generatedAt": "2026-06-29T02:21:03.961181+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -197,6 +197,17 @@
   ],
   "artifacts": [
     {
+      "id": "research/reddit-radar/runs/2026-06-29-0420-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar 2026-06-29-0420",
+      "path": "research/reddit-radar/runs/2026-06-29-0420-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-06-29-0420-reddit-radar.md",
+      "sizeBytes": 12339,
+      "date": "2026-06-29",
+      "time": "04:20"
+    },
+    {
       "id": "research/reddit-radar/runs/2026-06-29-0208-reddit-radar.md",
       "type": "run",
       "topic": "reddit-radar",
@@ -219,6 +230,17 @@
       "time": "00:08"
     },
     {
+      "id": "research/reddit-radar/data/2026-06-29-0420-reddit-radar-raw.json",
+      "type": "redditRadarRawData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar raw data",
+      "path": "research/reddit-radar/data/2026-06-29-0420-reddit-radar-raw.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-06-29-0420-reddit-radar-raw.json",
+      "sizeBytes": 54439,
+      "date": "2026-06-29",
+      "time": "04:20"
+    },
+    {
       "id": "research/reddit-radar/data/2026-06-29-0208-reddit-radar-raw.json",
       "type": "redditRadarRawData",
       "topic": "reddit-radar",
@@ -239,6 +261,17 @@
       "sizeBytes": 60491,
       "date": "2026-06-29",
       "time": "00:08"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-06-29-0420-reddit-radar.json",
+      "type": "redditRadarData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar data",
+      "path": "research/reddit-radar/data/2026-06-29-0420-reddit-radar.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-06-29-0420-reddit-radar.json",
+      "sizeBytes": 26101,
+      "date": "2026-06-29",
+      "time": "04:20"
     },
     {
       "id": "research/reddit-radar/data/2026-06-29-0208-reddit-radar.json",
@@ -1138,6 +1171,17 @@
       "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1935/audio/female-piper/podcast.mp3",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1935/audio/female-piper/podcast.mp3",
       "sizeBytes": 2064626,
+      "date": "2026-06-28",
+      "time": "19:35"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-28-1935-newspaper.pdf",
+      "type": "pdf",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "2026-06-28-1935-newspaper.pdf",
+      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-28-1935-newspaper.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-28-1935-newspaper.pdf",
+      "sizeBytes": 61121,
       "date": "2026-06-28",
       "time": "19:35"
     },
