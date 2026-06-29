@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-06-29T08:31:55.184932+00:00",
+  "generatedAt": "2026-06-29T10:09:44.373872+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -417,6 +417,52 @@
       "sizeBytes": 26873,
       "date": "2026-06-29",
       "time": "00:08"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-06-29-0901.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-06-29-0901.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-06-29-0901.md",
+      "sizeBytes": 13911,
+      "date": "2026-06-29",
+      "time": "09:01"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-06-29-0601.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-06-29-0601.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-06-29-0601.md",
+      "sizeBytes": 14804,
+      "date": "2026-06-29",
+      "time": "06:01"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-06-29-0901-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-06-29-0901-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-06-29-0901-pulse-news.json",
+      "sizeBytes": 25586,
+      "date": "2026-06-29",
+      "time": "09:01",
+      "itemCount": 12
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-06-29-0601-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-06-29-0601-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-06-29-0601-pulse-news.json",
+      "sizeBytes": 29348,
+      "date": "2026-06-29",
+      "time": "06:01",
+      "itemCount": 12
     },
     {
       "id": "research/polska-swiat/runs/2026-06-29.md",
