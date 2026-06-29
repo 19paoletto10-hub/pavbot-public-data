@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-06-29",
+  "runTime": "16:30",
+  "status": "Material update",
+  "headline": "16:30: kraj przechodzi w decyzje zarządcze, a świat dokłada Stade, Ebola i nowy sygnał z Brukseli",
+  "summary": "Run z 16:30 CEST naprawia stale nieopublikowany stan po południu i pozostaje wyraźnie materialny względem publicznego baseline 2026-06-29-0601. Krajowy blok wzmacniają decyzja resortu o priorytecie dla pociągów pasażerskich, kontrakt na rozbudowę A2 i akt oskarżenia wobec członków Ruchu Obrony Granic, a sekcja światowa dokłada świeże karty o strzelaninie w Stade, ograniczeniach zgromadzeń w Kinszasie z powodu Ebola i dalszej reakcji UE na działania Łukaszenki. Rdzeń feedu nadal pozostaje bezpieczeństwowy: burze, Iran, Afganistan, Wenezuela i śmiertelna fala gorąca w Europie mają najwyższy priorytet.",
+  "items": [
+    {
+      "id": "pulse-2026-06-29-1630-01-burze",
+      "section": "Alerty",
+      "title": "Burze nadal tną kraj na strefy opadów, a alert RCB nie schodzi z mapy",
+      "lead": "Po południu pogoda nadal niesie realne ryzyko dla prądu, dróg i kolei.",
+      "whatHappened": "TVN Meteo pokazało trzy aktywne strefy opadów i lokalne burze w Polsce, a RCB utrzymuje alert ostrzegający przed intensywnym deszczem, silnym wiatrem, burzami i możliwymi przerwami w dostawie prądu. To nadal najwyżej użyteczna karta otwierająca krajowy blok.",
+      "keyFacts": [
+        "W Polsce po południu aktywne są trzy strefy opadów i lokalnych burz.",
+        "RCB nadal ostrzega przed możliwymi przerwami w dostawie prądu.",
+        "Temat pozostaje tłem dla innych zakłóceń infrastrukturalnych dnia."
+      ],
+      "reactions": [
+        "Feed utrzymuje tę kartę wysoko, bo użytkownik widzi praktyczne ryzyko na najbliższe godziny.",
+        "Burze spinają pogodę z problemami na kolei i drogach w jednym obrazie dnia."
+      ],
+      "whyItMatters": "To najbardziej operacyjny sygnał krajowy przed kolejnym slotem, bo może szybko przekładać się na awarie i utrudnienia.",
+      "context": "O 12:02 dominowały skutki upału i burz. O 16:30 zagrożenie nadal nie wygasło, więc karta pozostaje obowiązkowa.",
+      "watchNext": [
+        "Czy pojawią się potwierdzone awarie prądu albo nowe ograniczenia w ruchu.",
+        "Czy alert RCB zostanie utrzymany także na kolejne godziny wieczorne."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo: Gdzie jest burza? Trzy strefy opadów",
+          "url": "https://tvn24.pl/tvnmeteo/polska/gdzie-jest-burza-burze-w-poniedzialek-29-06-radar-burz-i-mapa-opadow-na-zywo-st9118958?source=rss"
+        },
+        {
+          "title": "RCB: Alert RCB - burze (29.06)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-2907"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Burze",
+        "RCB",
+        "Pogoda"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1630-02-pociagi",
+      "section": "Polska",
+      "title": "Resort wstrzymuje część ruchu towarowego, by przepuścić pociągi pasażerskie",
+      "lead": "Państwo przechodzi z gaszenia skutków upału do zarządzania przepustowością sieci.",
+      "whatHappened": "TVN24 Biznes podało, że od 13:00 do 19:00 wstrzymano pociągi towarowe, a pasażerskie otrzymały pierwszeństwo decyzją Ministerstwa Infrastruktury. To świeższy i bardziej systemowy sygnał niż same poranne odwołania połączeń.",
+      "keyFacts": [
+        "Decyzja obowiązuje w poniedziałek od 13:00 do 19:00.",
+        "Wstrzymane mają być pociągi towarowe, a pasażerskie dostają pierwszeństwo.",
+        "Źródłem informacji jest komunikat przytoczony przez TVN24 Biznes za Ministerstwem Infrastruktury."
+      ],
+      "reactions": [
+        "To najmocniejsza nowa karta krajowa względem południowego runu 12:02.",
+        "Temat pokazuje, że problem kolei nie jest już tylko incydentalny, ale wymaga centralnej decyzji operacyjnej."
+      ],
+      "whyItMatters": "Decyzja wpływa na pasażerów, logistykę i obraz odporności infrastruktury podczas ekstremalnych warunków pogodowych.",
+      "context": "Wcześniej feed akcentował odwołane pociągi i komunikację zastępczą. O 16:30 dochodzi bezpośrednia interwencja zarządcza.",
+      "watchNext": [
+        "Czy decyzja zostanie przedłużona po 19:00.",
+        "Czy pojawią się dodatkowe ograniczenia na głównych liniach kolejowych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Wstrzymany ruch części pociągów. Jest decyzja resortu",
+          "url": "https://tvn24.pl/biznes/z-kraju/wstrzymany-ruch-czesci-pociagow-jest-decyzja-resortu-st9119988?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Kolej",
+        "Ministerstwo Infrastruktury",
+        "Transport"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1630-03-a2",
+      "section": "Polska",
+      "title": "A2 dostaje pierwszy kontrakt na rozbudowę, bo trasa doszła do granicy przepustowości",
+      "lead": "Popołudniowy slot dokłada twardy sygnał inwestycyjny na głównej osi Warszawa-Łódź.",
+      "whatHappened": "TVN Warszawa podało, że podpisano pierwszą z czterech umów na rozbudowę autostrady A2 z Warszawy do Łodzi do trzech pasów w obu kierunkach. Drogowcy deklarują, że kolejne kontrakty mają zostać podpisane do końca wakacji.",
+      "keyFacts": [
+        "Rozbudowa dotyczy pierwszego z czterech odcinków A2 między Warszawą a Łodzią.",
+        "Docelowo trasa ma mieć po trzy pasy w obu kierunkach.",
+        "Temat wynika z przeciążenia jednej z kluczowych osi transportowych kraju."
+      ],
+      "reactions": [
+        "Karta daje użytkownikowi szerszy gospodarczy kontekst dnia poza samymi awariami i zakłóceniami.",
+        "To świeży sygnał infrastrukturalny, który dobrze równoważy alertowy ton reszty krajowego feedu."
+      ],
+      "whyItMatters": "Rozbudowa A2 uderza w realny problem przepustowości i pokazuje, że presja na krajową infrastrukturę ma także wymiar inwestycyjny.",
+      "context": "W południe dominowały doraźne utrudnienia. O 16:30 dochodzi długofalowa odpowiedź na przeciążenie ważnej trasy.",
+      "watchNext": [
+        "Czy podane zostaną terminy rozpoczęcia prac na kolejnych odcinkach.",
+        "Czy pojawią się podobne decyzje dla innych przeciążonych korytarzy drogowych."
+      ],
+      "sources": [
+        {
+          "title": "TVN Warszawa: A2 na granicy przepustowości. Podpisali pierwszą umowę na rozbudowę",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/rozbudowa-autostrady-a2-warszawa-lodz-st9119582?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "A2",
+        "Drogi",
+        "Infrastruktura"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-29-1630-04-rog",
+      "section": "Polityka",
+      "title": "Akt oskarżenia dla członków Ruchu Obrony Granic po zatrzymywaniu cudzoziemców",
+      "lead": "Temat graniczny przechodzi z ulicznego incydentu do etapu sądowego.",
+      "whatHappened": "TVN24 podało, że do sądu w Słubicach trafił akt oskarżenia przeciwko dwóm członkom Ruchu Obrony Granic. Według śledczych podszywali się pod funkcjonariuszy Straży Granicznej i zatrzymywali cudzoziemców.",
+      "keyFacts": [
+        "Akt oskarżenia dotyczy dwóch osób: Dariusza B. i Rafała M.",
+        "Śledczy zarzucają im podszywanie się pod funkcjonariuszy Straży Granicznej.",
+        "Sprawa ma bezpośredni wymiar porządku publicznego i bezpieczeństwa granicznego."
+      ],
+      "reactions": [
+        "Karta podnosi wagę krajowego bloku bezpieczeństwa poza pogodę i transport.",
+        "To istotny temat polityczno-porządkowy o wysokiej użyteczności informacyjnej."
+      ],
+      "whyItMatters": "Sprawa dotyczy uzurpacji uprawnień służb i napięć wokół kontroli granicznych, więc ma znaczenie państwowe i społeczne.",
+      "context": "Wcześniejsze sloty były zdominowane przez pogodę i infrastrukturę. O 16:30 dochodzi osobny temat bezpieczeństwa wewnętrznego.",
+      "watchNext": [
+        "Czy prokuratura ujawni kolejne szczegóły zarzutów i ewentualnych środków zapobiegawczych.",
+        "Czy sprawa wywoła dalszą reakcję polityczną wokół samozwańczych kontroli granicznych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zatrzymali do kontroli cudzoziemców. Członkowie Ruchu Obrony Granic oskarżeni",
+          "url": "https://tvn24.pl/lubuskie/slubice-czlonkowie-ruchu-obrony-granic-oskarzeni-o-podszywanie-sie-pod-straznikow-granicznych-st9120043?source=rss"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Granica",
+        "Słubice",
+        "Sąd"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1630-05-ai",
+      "section": "Technologia",
+      "title": "Akcje AI dostają mocną korektę, bo inwestorzy nie widzą obiecanego zwrotu",
+      "lead": "Technologia wraca do feedu nie przez gadżety, ale przez twardy sygnał z rynków.",
+      "whatHappened": "TVN24 Biznes podało, że trwa szeroka wyprzedaż akcji spółek związanych ze sztuczną inteligencją. Materiał opisuje rosnącą frustrację inwestorów, którzy nie widzą szybkiej materializacji zysków z boomu AI.",
+      "keyFacts": [
+        "Spadki obejmują indeksy technologiczne od Korei po Stany Zjednoczone.",
+        "W tle jest obawa, że nowa technologia nie dowiezie obiecanych zysków wystarczająco szybko.",
+        "To w tej chwili najmocniejsza karta technologiczna o szerokiej publicznej relewancji."
+      ],
+      "reactions": [
+        "Temat przenosi AI z poziomu narracji o rozwoju do poziomu realnych kosztów inwestycyjnych.",
+        "Karta dobrze domyka równowagę między polityką, gospodarką i technologią w zestawie 12 newsów."
+      ],
+      "whyItMatters": "Zmiana sentymentu wobec AI wpływa na wyceny, inwestycje i oczekiwania wobec całego sektora technologicznego.",
+      "context": "O 12:02 AI weszła do feedu jako świeża korekta giełdowa. O 16:30 temat pozostaje wystarczająco silny, by utrzymać sekcję technologiczną.",
+      "watchNext": [
+        "Czy wyprzedaż rozszerzy się poza wąskie spółki AI na cały Nasdaq i pokrewne indeksy.",
+        "Czy kolejne firmy zaczną rewidować oczekiwania co do monetyzacji produktów AI."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Wielka wyprzedaż akcji AI. Miliardy znikają z giełdy",
+          "url": "https://tvn24.pl/biznes/tech/ai-wielka-wyprzedaz-akcji-sektora-sztucznej-inteligencji-inwestorzy-na-rynku-akcji-technologicznych-bywaja-niecierpliwi-st9119030?source=rss"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "AI",
+        "Giełda",
+        "Rynki"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-29-1630-06-bialorus",
+      "section": "Świat",
+      "title": "Bruksela zapowiada dalsze sankcje wobec Mińska po działaniach Łukaszenki",
+      "lead": "Ukraina alarmuje, a UE podnosi presję na Białoruś.",
+      "whatHappened": "TVN24 Biznes podało, że rzeczniczka Komisji Europejskiej zapowiedziała możliwość dalszych sankcji wobec reżimu Alaksandra Łukaszenki. W tle pozostaje ocena, że Rosja coraz mocniej wciąga Białoruś w wojnę przeciw Ukrainie.",
+      "keyFacts": [
+        "Bruksela sygnalizuje dalsze sankcje wobec białoruskiego reżimu.",
+        "Materiał łączy temat z alarmem Wołodymyra Zełenskiego.",
+        "To nowa popołudniowa karta geopolityczna względem runu 12:02."
+      ],
+      "reactions": [
+        "Feed dokłada bardziej polityczny wymiar wojny niż same karty militarne o Iranie czy Afganistanie.",
+        "Temat wzmacnia europejski kontekst bezpieczeństwa przed wieczornym slotem."
+      ],
+      "whyItMatters": "Każde zaostrzenie linii UE wobec Mińska może wpływać na bezpieczeństwo regionu, relacje z Rosją i presję na wschodniej flance.",
+      "context": "W południowym runie dominował Bliski Wschód i Wenezuela. O 16:30 dochodzi świeższy akcent europejski związany z Białorusią.",
+      "watchNext": [
+        "Czy Komisja Europejska wskaże konkretne instrumenty sankcyjne.",
+        "Czy temat przejdzie z komunikatów politycznych do ruchów wojskowych lub granicznych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Zełenski alarmuje, Bruksela reaguje na działania Łukaszenki",
+          "url": "https://tvn24.pl/biznes/ze-swiata/zelenski-alarmuje-bruksela-reaguje-na-dzialania-lukaszenki-st9120052?source=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Białoruś",
+        "UE",
+        "Ukraina"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1630-07-iran",
+      "section": "Bezpieczeństwo",
+      "title": "USA i Iran mają chwilowe stand down, ale rozejm pozostaje kruchy",
+      "lead": "Największy temat bezpieczeństwa dnia nie wygasa mimo sygnału wyhamowania.",
+      "whatHappened": "BBC i CNN podają, że po weekendowej wymianie uderzeń Waszyngton i Teheran mają na razie przejść w tryb stand down. W tle pozostają zarzuty o naruszenie rozejmu, planowane rozmowy w Katarze oraz irańskie stanowisko w sprawie cieśniny Ormuz.",
+      "keyFacts": [
+        "Obie strony sygnalizują chwilowe wyhamowanie po wymianie ciosów.",
+        "CNN podaje, że na wtorek planowane jest spotkanie w Katarze.",
+        "Spór o cieśninę Ormuz utrzymuje ryzyko dla bezpieczeństwa i energii."
+      ],
+      "reactions": [
+        "Karta pozostaje obowiązkowa, bo pojedynczy komunikat może wywrócić cały światowy blok.",
+        "To nadal centralny temat łączący sekcje bezpieczeństwa i gospodarki."
+      ],
+      "whyItMatters": "Od stabilności tego rozejmu zależy rynek energii, bezpieczeństwo żeglugi i ryzyko dalszej eskalacji USA-Iran.",
+      "context": "Temat był kluczowy już o 06:01 i 12:02. O 16:30 wciąż ma najwyższy priorytet, bo porozumienie nie jest trwałe.",
+      "watchNext": [
+        "Czy rozmowy w Katarze rzeczywiście dojdą do skutku.",
+        "Czy pojawi się nowy ruch wokół cieśniny Ormuz lub kolejne uderzenia."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US says it has agreed to 'stand down' after exchange of strikes with Iran",
+          "url": "https://www.bbc.co.uk/news/articles/c872rjw17qpo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Live updates - US and Iran will \"stand down for now\" and talks \"on track\"",
+          "url": "https://edition.cnn.com/2026/06/29/world/live-news/iran-war-strikes-trump"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Iran",
+        "USA",
+        "Ormuz"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1630-08-pakistan-afganistan",
+      "section": "Bezpieczeństwo",
+      "title": "Pakistańskie uderzenia przy granicy z Afganistanem nadal destabilizują region",
+      "lead": "Dziesiątki ofiar i spór o cele ataku utrzymują wysoki priorytet tej karty.",
+      "whatHappened": "BBC podało, że pakistańskie uderzenia przy granicy z Afganistanem zabiły dziesiątki osób. Talibowie mówią o ofiarach cywilnych, podczas gdy Pakistan utrzymuje, że celował w bojowników.",
+      "keyFacts": [
+        "Bilans mówi o dziesiątkach zabitych.",
+        "Strony sporu inaczej opisują ofiary i cel operacji.",
+        "Temat pozostaje jednym z najważniejszych sygnałów eskalacyjnych poza Bliskim Wschodem."
+      ],
+      "reactions": [
+        "Karta utrzymuje ciężar sekcji bezpieczeństwa także poza wątkiem USA-Iran.",
+        "To nadal wyraźnie bardziej użyteczny temat niż miękkie zagraniczne feature stories z feedów."
+      ],
+      "whyItMatters": "Ryzyko dalszych starć Pakistan-Afganistan może szybko przerodzić się w szerszy kryzys graniczny i humanitarny.",
+      "context": "Temat był już mocny rano i w południe. O 16:30 pozostaje w zestawie, bo nie ma sygnału wygaszenia napięcia.",
+      "watchNext": [
+        "Czy pojawi się zaktualizowany bilans ofiar lub oficjalne stanowiska obu stron.",
+        "Czy kryzys przełoży się na nowe ruchy przy granicy lub odpowiedź międzynarodową."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Pakistani strikes kill dozens in Afghanistan",
+          "url": "https://www.bbc.co.uk/news/articles/cy8wygyed0wo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Pakistan",
+        "Afganistan",
+        "Granica"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1630-09-wenezuela",
+      "section": "Świat",
+      "title": "Bilans trzęsienia w Wenezueli przekracza 1450 ofiar, tysiące pozostają zaginione",
+      "lead": "Katastrofa nadal należy do najcięższych tematów światowych dnia.",
+      "whatHappened": "CNN podaje, że po niszczących trzęsieniach ziemi w Wenezueli zginęło co najmniej 1450 osób, a tysiące uznaje się za zaginione. Ratownicy nadal pracują w La Guairze i Caracas.",
+      "keyFacts": [
+        "Bilans ofiar śmiertelnych przekracza 1450 osób.",
+        "Tysiące osób są nadal zaginione.",
+        "Akcja ratunkowa koncentruje się między innymi w La Guairze i Caracas."
+      ],
+      "reactions": [
+        "Temat pozostaje centralny, bo skala katastrofy nadal rośnie i nie ma zamkniętego bilansu.",
+        "Karta wzmacnia humanitarny ciężar światowego bloku obok tematów bezpieczeństwa."
+      ],
+      "whyItMatters": "To jedna z największych bieżących katastrof humanitarnych w globalnym feedzie, z wysokim ryzykiem dalszych korekt bilansu.",
+      "context": "Wcześniejsze sloty utrzymywały Wenezuelę wysoko. O 16:30 temat nadal jest zbyt ciężki, by wypaść z zestawu.",
+      "watchNext": [
+        "Czy bilans ofiar i zaginionych zostanie ponownie skorygowany.",
+        "Czy pojawią się informacje o skali pomocy międzynarodowej i stanie infrastruktury."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Live updates - Venezuela earthquake rescues continue, mounting death toll, thousands missing",
+          "url": "https://edition.cnn.com/2026/06/29/world/live-news/venezuela-earthquake-hnk"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wenezuela",
+        "Trzęsienie ziemi",
+        "Ratownictwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1630-10-stade",
+      "section": "Świat",
+      "title": "Pięć osób zginęło w strzelaninie w ośrodku młodzieżowym w niemieckim Stade",
+      "lead": "Popołudniowy feed dostaje nowy, twardy temat kryminalno-bezpieczeństwowy z Niemiec.",
+      "whatHappened": "BBC podało, że w strzelaninie w ośrodku opieki nad młodzieżą w Stade w północnych Niemczech zginęło pięć osób. Policja zatrzymała dwie osoby, z czego jedna jest podejrzana.",
+      "keyFacts": [
+        "Strzelanina miała miejsce w Stade w północnych Niemczech.",
+        "Bilans to pięć ofiar śmiertelnych.",
+        "Po zdarzeniu zatrzymano dwie osoby, w tym podejrzanego."
+      ],
+      "reactions": [
+        "To najmocniejsza nowa europejska karta kryminalna względem południowego runu.",
+        "Temat zastępuje słabsze południowe karty zagraniczne niższego priorytetu."
+      ],
+      "whyItMatters": "Duża liczba ofiar i lokalizacja w Niemczech czynią z tego materiał o wysokiej wartości informacyjnej dla europejskiego feedu.",
+      "context": "W runie 12:02 dominowały Francja i Wenezuela. O 16:30 dochodzi nowy temat bezpieczeństwa wewnętrznego w Europie.",
+      "watchNext": [
+        "Czy policja ujawni motyw i tożsamość sprawcy.",
+        "Czy liczba zatrzymanych lub ofiar ulegnie zmianie."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Five dead in shooting at youth welfare centre in northern Germany",
+          "url": "https://www.bbc.co.uk/news/articles/c17yzzw1vkjo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Niemcy",
+        "Strzelanina",
+        "Stade"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1630-11-ebola",
+      "section": "Alerty",
+      "title": "Kinszasa zakazuje masowych zgromadzeń, by powstrzymać rozprzestrzenianie się Ebola",
+      "lead": "Do światowego bloku alertów wchodzi nowy temat zdrowia publicznego o politycznych skutkach.",
+      "whatHappened": "BBC podało, że Demokratyczna Republika Konga zakazała masowych zgromadzeń w stolicy, aby ograniczyć rozprzestrzenianie się Ebola. Opozycja oskarża rząd o wykorzystywanie epidemii do zatrzymania planowanego protestu.",
+      "keyFacts": [
+        "Zakaz dotyczy masowych zgromadzeń w stolicy kraju.",
+        "Władze uzasadniają decyzję próbą ograniczenia rozprzestrzeniania się Ebola.",
+        "Opozycja twierdzi, że rząd używa epidemii do blokowania protestów."
+      ],
+      "reactions": [
+        "Karta wnosi do feedu nowy globalny alert publiczno-zdrowotny, a nie tylko pogodowy.",
+        "Temat ma podwójny ciężar: sanitarny i polityczny."
+      ],
+      "whyItMatters": "Ryzyko epidemiczne w dużej afrykańskiej stolicy może szybko stać się szerszym tematem regionalnym i humanitarnym.",
+      "context": "Wcześniejsze sloty nie miały karty zdrowia publicznego o podobnej wadze. To wyraźnie nowy popołudniowy temat.",
+      "watchNext": [
+        "Czy władze podadzą skalę ogniska i kolejne restrykcje.",
+        "Czy protesty mimo zakazu doprowadzą do napięć politycznych w stolicy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: DR Congo bans mass gatherings in the capital to prevent spread of Ebola",
+          "url": "https://www.bbc.co.uk/news/articles/c992k7zk981o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Ebola",
+        "DR Konga",
+        "Zdrowie publiczne"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1630-12-heatwave",
+      "section": "Świat",
+      "title": "WHO wiąże europejską falę gorąca z około 1300 zgonów",
+      "lead": "Upał w Europie ma już mierzalny koszt zdrowotny, a nie tylko pogodowy.",
+      "whatHappened": "BBC podało, że WHO łączy obecną europejską falę gorąca z około 1300 zgonów. Według materiału Niemcy ustanowiły rekord temperatury 41,7°C, a szef WHO ostrzega, że Europa nie jest przygotowana na tak wysokie temperatury.",
+      "keyFacts": [
+        "WHO wiąże falę gorąca z około 1300 zgonów w Europie.",
+        "Niemcy zanotowały rekord 41,7°C.",
+        "Temat pozostaje silnie powiązany z polskim blokiem pogodowym i infrastrukturą."
+      ],
+      "reactions": [
+        "Karta utrzymuje europejski wymiar ryzyka pogodowego także poza Polską.",
+        "To nadal bardziej użyteczny temat niż miękkie newsy społeczne lub sportowe z bieżących feedów."
+      ],
+      "whyItMatters": "Fala gorąca pokazuje koszt zdrowotny i infrastrukturalny ekstremów pogodowych, które już uderzają również w Polskę.",
+      "context": "Temat był w zestawie od rana i pozostaje ważny, bo wpisuje się w ten sam systemowy obraz dnia co krajowe alerty i kolej.",
+      "watchNext": [
+        "Czy WHO lub kraje europejskie podniosą bilans ofiar albo uruchomią dodatkowe środki ochronne.",
+        "Czy rekordy temperatur przełożą się na nowe zakłócenia transportowe i energetyczne w regionie."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Europe's heatwave linked to 1,300 deaths, WHO says, as Germany hits record 41.7C",
+          "url": "https://www.bbc.co.uk/news/articles/cn4d2vv935lo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Europa",
+        "Upał",
+        "WHO"
+      ],
+      "priority": "High"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "RCB: Alert RCB - burze (29.06)",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-2907"
+    },
+    {
+      "title": "TVN24 Biznes: Wstrzymany ruch części pociągów. Jest decyzja resortu",
+      "url": "https://tvn24.pl/biznes/z-kraju/wstrzymany-ruch-czesci-pociagow-jest-decyzja-resortu-st9119988?source=rss"
+    },
+    {
+      "title": "TVN24 Biznes: Zełenski alarmuje, Bruksela reaguje na działania Łukaszenki",
+      "url": "https://tvn24.pl/biznes/ze-swiata/zelenski-alarmuje-bruksela-reaguje-na-dzialania-lukaszenki-st9120052?source=rss"
+    },
+    {
+      "title": "BBC: Five dead in shooting at youth welfare centre in northern Germany",
+      "url": "https://www.bbc.co.uk/news/articles/c17yzzw1vkjo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC: DR Congo bans mass gatherings in the capital to prevent spread of Ebola",
+      "url": "https://www.bbc.co.uk/news/articles/c992k7zk981o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "CNN: Live updates - Venezuela earthquake rescues continue, mounting death toll, thousands missing",
+      "url": "https://edition.cnn.com/2026/06/29/world/live-news/venezuela-earthquake-hnk"
+    },
+    {
+      "title": "BBC: Europe's heatwave linked to 1,300 deaths, WHO says, as Germany hits record 41.7C",
+      "url": "https://www.bbc.co.uk/news/articles/cn4d2vv935lo?at_medium=RSS&at_campaign=rss"
+    }
+  ]
+}
