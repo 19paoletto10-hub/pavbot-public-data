@@ -9,6 +9,8 @@
 | Medium | Track Orka implementation details | Evening run confirmed signing and Baltic Pact, but full contract value, delivery guarantees and industrial execution still need official detail | Monitor MON/KPRM/Saab/PAP for value, delivery schedule, gap filler and Polish production-line specifics | Open |
 | Medium | Monitor ABW influence-operation fallout | ABW described Russian-financed paid demonstrations among Ukrainian refugees and immediate expulsion of 11 foreigners | Watch for follow-up from ABW, Straż Graniczna, prokuratura and MSWiA; avoid broad claims beyond official communications | Open |
 | Medium | Define public-sector AI image handling note | MON admitted AI enhancement changed a photo, creating a recurring trust issue for official communications | Track whether MON/KPRM publish rules for generative AI in official media; if pattern repeats, propose topic guidance | Open |
+| Medium | Track SAFE resilience plenipotentiary execution | KPRM shifted SAFE from setup to oversight under a new state-resilience plenipotentiary | Monitor real reporting cadence, authority over ministries, Polish industry metrics, NATO/EU coordination and anti-disinformation standards | Open |
+| Medium | Monitor follow-up to prosecutor closures | The evening run added formal/reported closures in the "two towers" and "coup d'etat" threads | Watch for complaints, court review, published justifications and political misuse beyond procedural facts | Open |
 
 ## Review Notes
 
@@ -103,6 +105,15 @@
   block, AP/Guardian for USA-Iran-Ormuz, Guardian for Ukraine/Russian fuel
   shortages, and Guardian/AP for Venezuela. Podcast should make the MON AI-photo
   item about trust and rules, not personal scandal.
+- 2026-06-30-1935: Evening research run created a material update. Strongest
+  sources were KPRM/Rada Ministrów for the SAFE resilience plenipotentiary,
+  Prokuratura Okręgowa w Warszawie plus Polsat/TVN24 for prosecutor closures,
+  RCB for the continued heat-storm-drought public-safety block, Polsat for
+  border/LOT/Baltic operational incidents and Czech-order spillover, Vatican
+  News for the Polish-Ukrainian reconciliation appeal, Censor.NET/President of
+  Ukraine for the northern-offensive and air-defense thread, AP/Guardian for
+  Qatar-Ormuz, and AP for Venezuela's post-quake health crisis. Podcast should
+  avoid merging unrelated security incidents into one causal story.
 
 ## Done
 

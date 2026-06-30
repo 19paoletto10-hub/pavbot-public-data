@@ -97,6 +97,19 @@ burze po upale, utonięcia, susza i pożary lasów mają dziś większe znaczeni
 praktyczne niż sama temperatura. W świecie utrzymują się krucha pauza USA-Iran,
 ukraińska narracja o rosyjskich brakach paliwa, kryzys humanitarny w Wenezueli
 oraz polityczny zwrot w Peru po zwycięstwie Keiko Fujimori.
+Wieczorny run 2026-06-30-1935 przesunął punkt ciężkości z parametrów Orki na
+wykonanie odporności państwa: KPRM/Rada Ministrów powołały pełnomocnika do spraw
+Wzmocnienia Odporności Państwa, obejmując tym portfelem inwestycje SAFE,
+przemysł obronny, współpracę z UE/NATO, antydezinformację i edukację obronną.
+Równolegle prokuratura zamknęła sprawę "dwóch wież", a media opisały umorzenie
+dwóch wątków sprawy "zamachu stanu". Nowe bloki bezpieczeństwa publicznego to
+śmierć żołnierza na wschodniej granicy przy ostrożnych ustaleniach Żandarmerii,
+fałszywy alarm transpondera w locie LOT do Tel Awiwu oraz MEDEVAC na Bałtyku.
+W relacjach polsko-ukraińskich temat symboli wyszedł poza Polskę przez czeską
+inicjatywę wokół Orderu Białego Lwa i apel kardynałów Polski i Ukrainy o
+pojednanie. W świecie wieczorne akcenty to Syrski o możliwym kierunku
+briańsko-czernihowskim, pośrednie rozmowy USA-Iran w Katarze o aktywach i Ormuz
+oraz kryzys zdrowotny po trzęsieniach w Wenezueli.
 
 ## Stable Facts
 
@@ -151,6 +164,7 @@ oraz polityczny zwrot w Peru po zwycięstwie Keiko Fujimori.
 
 ## Recent Reports
 
+- [2026-06-30-1935](runs/2026-06-30-1935.md)
 - [2026-06-30](runs/2026-06-30.md)
 - [2026-06-29-1935](runs/2026-06-29-1935.md)
 - [2026-06-29](runs/2026-06-29.md)
