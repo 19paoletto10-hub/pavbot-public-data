@@ -1,0 +1,473 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-06-30",
+  "runTime": "12:01",
+  "status": "Material update",
+  "headline": "12:01: kraj przechodzi na inflację, paliwa i polityczny spór o AI, a świat żyje Wenezuelą, Monako i napięciem wokół Iranu",
+  "summary": "Poranny slot względem baselinu z 21:02 przynosi wyraźnie nowy zestaw kart: w Polsce dominują burze, spadek inflacji, nowe limity cen paliw, śledztwa polityczne i wizerunkowy problem MON po użyciu AI, a za granicą na pierwszy plan wychodzą Wenezuela po trzęsieniu, antyimigracyjne napięcie w RPA, obława w Monako, wyrok dla założyciela Gojek oraz kruchy stand down USA-Iran.",
+  "items": [
+    {
+      "id": "pulse-2026-06-30-1201-01-burze",
+      "section": "Alerty",
+      "title": "Burze i wtorkowe ostrzeżenia dalej otwierają krajowy blok dnia",
+      "lead": "RCB i TVN Meteo wciąż każą liczyć się z burzami, gradem i lokalnymi zakłóceniami.",
+      "whatHappened": "Wtorkowy slot nadal zaczyna się od pogody, bo TVN Meteo pokazuje aktywne burze z opadami deszczu i gradu, a RCB utrzymuje ostrzeżenie przed intensywnymi opadami, silnym wiatrem i możliwymi przerwami w dostawie prądu. To nie jest już tylko echo nocnych zjawisk, lecz bieżące ryzyko operacyjne na 30 czerwca.",
+      "keyFacts": [
+        "TVN Meteo podaje, że we wtorek 30 czerwca w części Polski występują burze z deszczem i gradem.",
+        "RCB ostrzega przed intensywnymi opadami, silnym wiatrem i burzami.",
+        "Rządowy komunikat nadal wskazuje też na ryzyko przerw w dostawie prądu."
+      ],
+      "reactions": [
+        "To nadal najbardziej praktyczna karta dla użytkownika w Polsce na najbliższe godziny.",
+        "Wątek pogody pozostaje ważniejszy użytkowo niż większość porannych tematów politycznych."
+      ],
+      "whyItMatters": "Burze mogą bezpośrednio przełożyć się na dojazdy, pracę służb, lokalne podtopienia i awarie energii jeszcze w ciągu dnia.",
+      "context": "Wieczorny run z 21:02 też otwierał się pogodą, ale teraz karta opiera się na aktualnym wtorkowym obrazie zjawisk, a nie na nocnym przejściu frontu.",
+      "watchNext": [
+        "Czy pojawią się potwierdzone podtopienia, awarie albo nowe alerty RCB lub IMGW.",
+        "Czy popołudniowy slot będzie musiał podnieść priorytet tej karty."
+      ],
+      "sources": [
+        {
+          "title": "RCB: Alert RCB - burze (29.06)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-2907"
+        },
+        {
+          "title": "TVN Meteo: Gdzie jest burza? Tu trzeba uważać",
+          "url": "https://tvn24.pl/tvnmeteo/polska/gdzie-jest-burza-burze-we-wtorek-30-06-w-tych-regionach-jest-niebezpiecznie-st9120587?source=rss"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Burze",
+        "RCB",
+        "Pogoda"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-1201-02-inflacja",
+      "section": "Gospodarka",
+      "title": "Inflacja w czerwcu schodzi do 2,5 proc. i zaskakuje niżej od oczekiwań",
+      "lead": "Szybki szacunek GUS pokazuje słabszą presję cenową niż zakładał rynek.",
+      "whatHappened": "TVN24 Biznes podało, że szybki szacunek GUS pokazuje inflację w czerwcu 2026 na poziomie 2,5 proc. rok do roku i minus 0,5 proc. miesiąc do miesiąca. To wynik niższy od oczekiwań ekonomistów ankietowanych przez PAP Biznes, którzy liczyli na 2,7 proc. rok do roku i minus 0,2 proc. miesiąc do miesiąca.",
+      "keyFacts": [
+        "Szybki szacunek GUS wskazuje 2,5 proc. inflacji rok do roku w czerwcu 2026.",
+        "W relacji miesiąc do miesiąca ceny według tego szacunku spadły o 0,5 proc.",
+        "Ekonomiści ankietowani przez PAP Biznes oczekiwali 2,7 proc. rok do roku i minus 0,2 proc. miesiąc do miesiąca."
+      ],
+      "reactions": [
+        "To daje porankowi wyraźnie bardziej gospodarczy ton niż poprzedni wieczorny slot.",
+        "Niższy odczyt może przesunąć uwagę z samego poziomu cen na pytanie o trwałość dezinflacji."
+      ],
+      "whyItMatters": "Inflacja wpływa bezpośrednio na koszty życia i jest jedną z najważniejszych danych dla oceny sytuacji gospodarstw domowych.",
+      "context": "W runie 21:02 gospodarka była opisana przez rynek pracy; o 12:01 ciężar przesuwa się na świeże dane cenowe z kraju.",
+      "watchNext": [
+        "Czy pojawi się szybka reakcja rynku, rządu albo NBP na niższy odczyt.",
+        "Czy w kolejnych danych potwierdzi się trwałe schładzanie presji cenowej."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Ile wynosi inflacja w Polsce? Najnowsze dane GUS",
+          "url": "https://tvn24.pl/biznes/z-kraju/inflacja-w-czerwcu-2026-roku-ceny-towarow-i-uslug-w-polsce-nowe-dane-gus-st9120612"
+        }
+      ],
+      "tags": [
+        "Inflacja",
+        "GUS",
+        "Gospodarka",
+        "Ceny"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-1201-03-paliwa",
+      "section": "Gospodarka",
+      "title": "Nowe maksymalne ceny paliw ustawiają wtorkowy koszt tankowania",
+      "lead": "Pb95 ma limit 6,00 zł, a olej napędowy kosztuje więcej niż dzień wcześniej.",
+      "whatHappened": "Zgodnie z obwieszczeniem ministra energii od 30 czerwca obowiązują nowe maksymalne ceny paliw. TVN24 Biznes podaje, że we wtorek benzyna jest tańsza niż w poniedziałek, ale za olej napędowy trzeba zapłacić więcej, co szybko przekłada się na codzienną percepcję kosztów transportu.",
+      "keyFacts": [
+        "Maksymalna cena Pb95 została ustalona na 6,00 zł za litr.",
+        "Maksymalna cena Pb98 wynosi 6,68 zł za litr.",
+        "Maksymalna cena ON wynosi 6,19 zł za litr."
+      ],
+      "reactions": [
+        "To bardzo użyteczna karta konsumencka, bo dotyczy wydatku śledzonego niemal codziennie.",
+        "W połączeniu z niższą inflacją tworzy spójny poranny blok gospodarczy."
+      ],
+      "whyItMatters": "Ceny paliw szybko wpływają na koszty dojazdów, transportu i odbiór bieżącej polityki gospodarczej.",
+      "context": "Wieczorny slot 21:02 nie miał tej karty; poranny run wzmacnia gospodarczy wymiar feedu dzięki twardym stawkom obowiązującym tego dnia.",
+      "watchNext": [
+        "Czy kolejne obwieszczenia potwierdzą spadkowy trend dla benzyny.",
+        "Czy wzrost ceny diesla przełoży się na szerszą debatę o kosztach transportu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Ceny paliw we wtorek. Ile zapłacimy za tankowanie?",
+          "url": "https://tvn24.pl/biznes/moto/ceny-paliw-we-wtorek-30-czerwca-2026-r-ile-kosztuje-benzyna-pb95-pb98-oraz-on-st9120606"
+        }
+      ],
+      "tags": [
+        "Paliwa",
+        "Ceny",
+        "Gospodarka",
+        "Transport"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-30-1201-04-zamach-stanu",
+      "section": "Polityka",
+      "title": "Prokuratura umarza dwa wątki sprawy politycznie opisywanej jako \"zamach stanu\"",
+      "lead": "Śledczy zamknęli część najbardziej obciążonych politycznie elementów tego sporu.",
+      "whatHappened": "TVN24 podało, że Prokuratura Okręgowa w Warszawie umorzyła dwa wątki śledztwa w sprawie tzw. zamachu stanu. Chodzi o kwestię wygaszenia mandatów Mariusza Kamińskiego i Macieja Wąsika oraz o podżeganie ówczesnego marszałka Sejmu Szymona Hołowni do niezaprzysiężenia Karola Nawrockiego na prezydenta.",
+      "keyFacts": [
+        "Umorzenie dotyczy dwóch konkretnych wątków śledztwa.",
+        "Jeden wątek dotyczył wygaszenia mandatów Mariusza Kamińskiego i Macieja Wąsika.",
+        "Drugi dotyczył podżegania Szymona Hołowni do niezaprzysiężenia Karola Nawrockiego."
+      ],
+      "reactions": [
+        "Karta ma wysoki ciężar polityczny, choć nie rozstrzyga całego sporu o interpretację wydarzeń.",
+        "To materiał, który może wywołać szybką kontrreakcję partii i komentariatu."
+      ],
+      "whyItMatters": "To temat dotykający legalności działań najważniejszych instytucji państwa i bieżącego konfliktu politycznego.",
+      "context": "W poprzednim slocie dominowały tematy bezpieczeństwa i rynku pracy; teraz do feedu wchodzi świeży poranny spór o śledztwa polityczne.",
+      "watchNext": [
+        "Czy pojawią się odwołania lub ostre reakcje stron politycznego sporu.",
+        "Czy kolejne wątki tej sprawy będą dalej procedowane."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Prokuratura umorzyła śledztwa w dwóch wątkach \"zamachu stanu\"",
+          "url": "https://tvn24.pl/polska/prokuratura-umorzyla-sledztwa-w-dwoch-watkach-zamachu-stanu-st9120834?source=rss"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Prokuratura",
+        "Sejm",
+        "Spór"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-1201-05-dezinformacja",
+      "section": "Polska",
+      "title": "Nowy raport pokazuje rosnącą podatność Polaków na dezinformację",
+      "lead": "Konkret24 opisuje dwie grupy wiekowe jako szczególnie narażone na fałszywe narracje.",
+      "whatHappened": "Według reportu opisanego przez Konkret24 rośnie skłonność Polaków do wiary w fałszywe opowieści o Smoleńsku, wojnie w Ukrainie i rzekomo planowanych pandemiach. Materiał mówi o dwóch grupach wiekowych szczególnie podatnych i rysuje obraz społeczeństwa coraz łatwiejszego do sterowania za pomocą fake newsów i propagandy.",
+      "keyFacts": [
+        "Raport nosi tytuł \"Dezinformacja oczami Polaków. 2026\".",
+        "W materiale wymieniono rosnącą wiarę w fałszywe narracje o Smoleńsku, Ukrainie i pandemii.",
+        "Konkret24 podkreśla, że dwie grupy wiekowe są szczególnie podatne."
+      ],
+      "reactions": [
+        "To jedna z najmocniejszych kart miękkiego bezpieczeństwa informacyjnego w krajowym bloku.",
+        "Temat łączy politykę, media społecznościowe i jakość debaty publicznej."
+      ],
+      "whyItMatters": "Podatność na dezinformację wpływa na wybory polityczne, zaufanie do instytucji i zdolność społeczeństwa do reagowania na kryzysy.",
+      "context": "To nowy poranny temat, którego nie było w wieczornym feedzie; dobrze uzupełnia kartę o AI i komunikacji instytucji państwa.",
+      "watchNext": [
+        "Czy raport wywoła debatę o edukacji medialnej i roli platform społecznościowych.",
+        "Czy kolejne publikacje doprecyzują skalę zjawiska i najbardziej narażone grupy."
+      ],
+      "sources": [
+        {
+          "title": "Konkret24: Polacy kontra dezinformacja. Dwie grupy wiekowe szczególnie podatne",
+          "url": "https://konkret24.tvn24.pl/polska/polacy-kontra-dezinformacja-dwie-grupy-szczegolnie-podatne-st9119102?source=rss"
+        }
+      ],
+      "tags": [
+        "Dezinformacja",
+        "Technologia",
+        "Media",
+        "Polska"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-30-1201-06-mon-ai",
+      "section": "Technologia",
+      "title": "MON tłumaczy i przeprasza po publikacji zdjęcia poprawionego przez AI",
+      "lead": "Wizerunkowy problem resortu obrony trafia do porannego obiegu informacyjnego.",
+      "whatHappened": "TVN24 podało, że fotografia opublikowana przez wiceministrę Magdalenę Sobkowiak-Czarnecką została zmodyfikowana przez sztuczną inteligencję. Resort obrony tłumaczy sprawę i przeprasza, co zamienia techniczny detal w temat o wiarygodności komunikacji instytucji publicznych.",
+      "keyFacts": [
+        "Zdjęcie opublikowała wiceministra Magdalena Sobkowiak-Czarnecka.",
+        "MON przyznał, że fotografia została zmodyfikowana przez AI.",
+        "Resort opublikował wyjaśnienia i przeprosiny."
+      ],
+      "reactions": [
+        "Temat wykracza poza sam obrazek i dotyka standardów komunikacji państwa.",
+        "To dobra karta pomostowa między polityką a technologią w krajowym bloku."
+      ],
+      "whyItMatters": "W użyciu AI przez instytucje publiczne kluczowe stają się zaufanie, autentyczność i przejrzystość materiałów.",
+      "context": "Wieczorny feed nie miał wątku AI po stronie państwa; poranny slot dokłada go jako wyraźny sygnał o napięciach wokół wiarygodności przekazu.",
+      "watchNext": [
+        "Czy MON pokaże oryginalny materiał lub wyjaśni procedury publikacji grafiki.",
+        "Czy temat uruchomi szerszą dyskusję o oznaczaniu treści tworzonych lub zmienianych przez AI."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: MON tłumaczy i przeprasza po publikacji zdjęcia zmienionego przez AI",
+          "url": "https://tvn24.pl/polska/magdalena-sobkowiak-czarnecka-opublikowala-zdjecie-poprawione-przez-ai-mon-tlumaczy-i-przeprasza-st9120984?source=rss"
+        }
+      ],
+      "tags": [
+        "AI",
+        "MON",
+        "Technologia",
+        "Wizerunek"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-30-1201-07-wenezuela",
+      "section": "Świat",
+      "title": "Wenezuela po trzęsieniu: rośnie gniew na reakcję władz, a bilans pozostaje bardzo ciężki",
+      "lead": "Poszkodowani mówią o zbyt małej pomocy, a CNN nadal pokazuje ponad 1700 ofiar.",
+      "whatHappened": "BBC opisuje mieszkańców obszarów zniszczonych przez podwójne trzęsienie ziemi, którzy oskarżają władze o zaniedbania i domagają się większego wsparcia. CNN utrzymuje w relacji na żywo, że liczba ofiar przekroczyła 1700, a ratownicy nadal próbują docierać do ocalałych.",
+      "keyFacts": [
+        "BBC podaje, że ludzie z dotkniętych rejonów domagają się większej pomocy od państwa.",
+        "CNN utrzymuje bilans ofiar trzęsienia na poziomie powyżej 1700.",
+        "Ratownicy nadal szukają ocalałych po podwójnym wstrząsie."
+      ],
+      "reactions": [
+        "To nadal jedna z najcięższych kart humanitarnych w zagranicznym feedzie.",
+        "Przesunięcie z samego bilansu ofiar na ocenę reakcji państwa zwiększa polityczny ciężar tej historii."
+      ],
+      "whyItMatters": "Katastrofa humanitarna w Wenezueli pozostaje duża, a pytanie o skuteczność reakcji państwa może zdominować dalsze relacje.",
+      "context": "Run 21:02 skupiał się głównie na liczbie ofiar; poranny slot rozszerza temat o społeczne oskarżenia wobec państwa i stan akcji ratunkowej.",
+      "watchNext": [
+        "Czy bilans ofiar i liczba zaginionych będą nadal rosły.",
+        "Czy pojawią się szersze międzynarodowe działania pomocowe i polityczne naciski na władze."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Angry Venezuelans accuse government of negligence over earthquake response",
+          "url": "https://www.bbc.co.uk/news/articles/c5yzd18dxzxo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN live: Venezuela earthquake death toll passes 1,700, miraculous rescues offer hope",
+          "url": "https://edition.cnn.com/2026/06/29/world/live-news/venezuela-earthquake-hnk"
+        }
+      ],
+      "tags": [
+        "Wenezuela",
+        "Trzęsienie ziemi",
+        "Katastrofa",
+        "Pomoc"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-1201-08-rpa",
+      "section": "Świat",
+      "title": "RPA wzmacnia ochronę przed protestami antyimigracyjnymi",
+      "lead": "Przed wyznaczonym terminem ultimatum tysiące osób opuściły kraj.",
+      "whatHappened": "BBC podało, że w Republice Południowej Afryki rozmieszczono ciężkie siły bezpieczeństwa przed wtorkowymi protestami antyimigracyjnymi. Materiał wskazuje także, że tysiące ludzi wyjechały z kraju jeszcze przed upływem terminu wyznaczonego przez grupy antyimigracyjne.",
+      "keyFacts": [
+        "BBC opisuje ciężkie środki bezpieczeństwa rozmieszczone przed protestami.",
+        "Tysiące osób miały opuścić kraj przed wtorkowym terminem ultimatum.",
+        "Wątek dotyczy napięcia wokół migracji i bezpieczeństwa wewnętrznego."
+      ],
+      "reactions": [
+        "To jedna z wyraźniej narastających historii o napięciu społecznym poza Europą i Bliskim Wschodem.",
+        "Karta dobrze poszerza zagraniczny blok o temat bezpieczeństwa wewnętrznego, a nie tylko geopolityki."
+      ],
+      "whyItMatters": "Antyimigracyjne napięcia mogą szybko przejść w przemoc i kryzys bezpieczeństwa z regionalnym echem.",
+      "context": "To nowa karta względem 21:02, która zastępuje część wieczornych tematów bezpieczeństwa nowszym kryzysem społecznym.",
+      "watchNext": [
+        "Czy dojdzie do przemocy ulicznej albo dalszej fali wyjazdów.",
+        "Jak zareagują władze i organizacje praw człowieka."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Heavy security deployed in South Africa ahead of anti-migrant protests",
+          "url": "https://www.bbc.co.uk/news/articles/cy4eq1l184po?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "RPA",
+        "Migracja",
+        "Protesty",
+        "Bezpieczeństwo"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-30-1201-09-monako",
+      "section": "Bezpieczeństwo",
+      "title": "Monako prowadzi obławę po eksplozji raniącej ukraińskiego oligarchę i jego rodzinę",
+      "lead": "Władze mówią o ładunku z metalowymi elementami, a sprawca pozostaje na wolności.",
+      "whatHappened": "BBC i TVN24 opisują trwającą obławę po eksplozji w centrum Monako. Według brytyjskiej relacji ładunek wybuchowy zawierał śruby i śrut, a TVN24 dodaje, że monakijskie i francuskie służby opublikowały zdjęcie z monitoringu i kontynuują poszukiwania.",
+      "keyFacts": [
+        "BBC podaje, że eksplozję spowodował ładunek zawierający śruby i śrut.",
+        "W wyniku wybuchu ranny został ukraiński oligarcha i członkowie jego rodziny.",
+        "Służby Monako i Francji nadal szukają sprawcy i opublikowały zdjęcie z monitoringu."
+      ],
+      "reactions": [
+        "To jedna z najbardziej niepokojących porannych kart bezpieczeństwa w Europie.",
+        "Historia ma wysoki potencjał do szybkich aktualizacji wraz z postępem obławy."
+      ],
+      "whyItMatters": "Zamachowy charakter wybuchu i udział zamożnych celów nadają sprawie wymiar międzynarodowy i kryminalno-bezpieczniacki.",
+      "context": "Wieczorny slot nie miał tego tematu; poranna karta jest wyraźnie nowsza i mocniej osadzona w bieżącej relacji policyjnej.",
+      "watchNext": [
+        "Czy służby zatrzymają podejrzanego lub potwierdzą motyw ataku.",
+        "Czy sprawa dostanie szerszy wymiar geopolityczny albo biznesowy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Manhunt under way after bomb injures Ukrainian oligarch and family in Monaco",
+          "url": "https://www.bbc.co.uk/news/articles/cpv37wx03v7o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "TVN24: Po eksplozji w Monako policja poszukuje mężczyzny. Opublikowano zdjęcie",
+          "url": "https://tvn24.pl/swiat/eksplozja-w-monako-policja-poszukuje-sprawcy-pokazano-zdjecie-z-monitoringu-co-wiadomo-st9120724?source=rss"
+        }
+      ],
+      "tags": [
+        "Monako",
+        "Eksplozja",
+        "Policja",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-1201-10-gojek",
+      "section": "Gospodarka",
+      "title": "Założyciel Gojek skazany za korupcję w sprawie laptopowego kontraktu",
+      "lead": "Wyrok dotyczy decyzji z czasu, gdy Nadiem Makarim był ministrem edukacji Indonezji.",
+      "whatHappened": "BBC podało, że założyciel azjatyckiej superaplikacji Gojek Nadiem Makarim został skazany na karę więzienia za korupcję. Sprawa dotyczy kontraktu na laptopy zawartego w czasie, gdy pełnił funkcję ministra edukacji w Indonezji.",
+      "keyFacts": [
+        "Skazanym jest założyciel Gojek Nadiem Makarim.",
+        "Sprawa korupcyjna dotyczy umowy na laptopy.",
+        "Kontrakt miał związek z okresem, gdy Makarim był ministrem edukacji Indonezji."
+      ],
+      "reactions": [
+        "To mocna karta na styku biznesu technologicznego i odpowiedzialności publicznej.",
+        "Temat poszerza zagraniczny blok o wymiar antykorupcyjny i instytucjonalny."
+      ],
+      "whyItMatters": "Upadek wiarygodności znanego założyciela technologicznego pokazuje ryzyko zderzenia władzy publicznej z biznesem platformowym.",
+      "context": "W miejsce wieczornych kart o Fedzie i rosyjskim paliwie poranny slot dokłada nowy temat korupcyjny z Azji, bardziej świeży wobec bieżącego feedu.",
+      "watchNext": [
+        "Czy wyrok wywoła skutki dla pozycji Gojek i szerszego rynku technologicznego w regionie.",
+        "Czy pojawią się dalsze szczegóły o skali zarzutów i konsekwencjach politycznych."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Founder of Asian super-app Gojek sentenced to years in jail for corruption",
+          "url": "https://www.bbc.co.uk/news/articles/c79yvw23yr9o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Gojek",
+        "Korupcja",
+        "Technologia",
+        "Gospodarka"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-30-1201-11-iran",
+      "section": "Bezpieczeństwo",
+      "title": "Stand down USA-Iran pozostaje kruchy mimo kanału rozmów i spokojniejszego ruchu w Ormuzie",
+      "lead": "Sygnały deeskalacji nie zamykają ryzyka dla żeglugi i całego regionu.",
+      "whatHappened": "BBC utrzymuje, że USA i Iran uzgodniły `stand down` po serii weekendowych uderzeń, choć obie strony oskarżały się o naruszenia porozumienia. CNN w relacji na żywo informuje z kolei o podróży Steve'a Witkoffa do Dohy i o tym, że ruch w cieśninie Ormuz pozostaje spójny, co sugeruje ostrożne wyhamowanie napięcia bez jego faktycznego zakończenia.",
+      "keyFacts": [
+        "BBC opisuje uzgodniony `stand down` po wymianie uderzeń.",
+        "Obie strony oskarżały się wcześniej o naruszenie porozumienia.",
+        "CNN podaje, że Steve Witkoff leci do Dohy, a ruch w cieśninie Ormuz pozostaje spójny."
+      ],
+      "reactions": [
+        "To nadal jedna z najważniejszych kart geopolitycznych dla energii, żeglugi i rynków.",
+        "Sama obecność kanału rozmów nie usuwa ryzyka szybkiej ponownej eskalacji."
+      ],
+      "whyItMatters": "Każda zmiana wokół Iranu i Ormuzu może natychmiast przełożyć się na ceny energii, bezpieczeństwo morskie i zachowanie rynków.",
+      "context": "Wieczorny slot mówił o kruchym `stand down`; poranna karta aktualizuje temat o nowy kanał rozmów w Dosze i bieżący status ruchu w Ormuzie.",
+      "watchNext": [
+        "Czy rozmowy w Dosze przyniosą twardsze potwierdzenie deeskalacji.",
+        "Czy nie pojawi się nowy incydent morski, który znów podbije napięcie."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US says it has agreed to 'stand down' after exchange of strikes with Iran",
+          "url": "https://www.bbc.co.uk/news/articles/c872rjw17qpo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN live: US envoy Witkoff en route to Doha, Strait of Hormuz traffic consistent",
+          "url": "https://edition.cnn.com/2026/06/29/world/live-news/iran-war-strikes-trump"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "Ormuz",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-1201-12-afganistan",
+      "section": "Bezpieczeństwo",
+      "title": "ONZ: pakistańskie uderzenia zabiły co najmniej 28 cywilów w Afganistanie",
+      "lead": "Talibowie nazywają atak okrucieństwem, a bilans pozostaje ciężki.",
+      "whatHappened": "BBC podało, że według ONZ pakistańskie uderzenia zabiły co najmniej 28 cywilów w Afganistanie. Pakistan twierdzi, że celował w bojowników przy granicy, ale talibski rząd określa działania jako atrocity i podkreśla koszt po stronie cywilnej.",
+      "keyFacts": [
+        "ONZ mówi o co najmniej 28 cywilnych ofiarach pakistańskich uderzeń.",
+        "Pakistan utrzymuje, że celem byli bojownicy przy granicy.",
+        "Talibowie określają atak jako okrucieństwo."
+      ],
+      "reactions": [
+        "To wciąż jedna z najmocniejszych kart humanitarno-bezpieczniackich w feedzie.",
+        "Temat utrzymuje presję na region, mimo że światowy obieg przesuwa uwagę na inne kryzysy."
+      ],
+      "whyItMatters": "Rosnący koszt cywilny podnosi ryzyko dalszej destabilizacji na linii Pakistan-Afganistan.",
+      "context": "Karta była obecna już wieczorem, ale pozostaje w feedzie, bo nadal należy do najwyższego priorytetu i nie straciła znaczenia wobec porannego obiegu.",
+      "watchNext": [
+        "Czy pojawi się nowy bilans ONZ lub reakcja międzynarodowa.",
+        "Czy Islamabad i Kabul wejdą w kolejną fazę eskalacji słownej lub militarnej."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Pakistani strikes kill at least 28 civilians in Afghanistan, UN says",
+          "url": "https://www.bbc.co.uk/news/articles/cy8wygyed0wo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Afganistan",
+        "Pakistan",
+        "ONZ",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "RCB: Alert RCB - burze (29.06)",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-2907"
+    },
+    {
+      "title": "CNN live: Venezuela earthquake death toll passes 1,700, miraculous rescues offer hope",
+      "url": "https://edition.cnn.com/2026/06/29/world/live-news/venezuela-earthquake-hnk"
+    },
+    {
+      "title": "CNN live: US envoy Witkoff en route to Doha, Strait of Hormuz traffic consistent",
+      "url": "https://edition.cnn.com/2026/06/29/world/live-news/iran-war-strikes-trump"
+    }
+  ]
+}
