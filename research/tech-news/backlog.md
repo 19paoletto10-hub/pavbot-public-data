@@ -4,6 +4,14 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track AWS forward-deployed AI engineers | AWS's $1B FDE organization turns agentic AI adoption into embedded engineering, customer knowledge graphs, runbooks and outcome-oriented deployments | Watch pricing model, named customer case studies, partner roles, security controls and responses from OpenAI, Anthropic and Microsoft | Open |
+| High | Track agent payments and reputation infrastructure | OKX AI is a concrete attempt to let autonomous agents discover work, pay in stablecoins, build identities and resolve disputes | Watch fraud controls, compliance, spending limits, dispute resolution, non-crypto adoption and whether agent-to-agent payments move beyond launch claims | Open |
+| Medium | Track hosted MCP servers for major platforms | X's hosted MCP server adds another large platform to the official connector layer for AI tools and agent workflows | Watch API pricing, rate limits, spam/source-poisoning mitigation, moderation, enterprise controls and adoption in Claude/Cursor/Grok-style tools | Open |
+| High | Track Claude Science and vertical AI research environments | Claude Science packages local compute, HPC, scientific tools, provenance and reproducible artifacts for labs and life-science workflows | Watch lab case studies, data retention language, Team/Enterprise rollout, validation evidence and avoid medical or clinical recommendations | Open |
+| High | Track post-quantum migration and Q-Day readiness | Business Insider Polska and US PQC deadlines make quantum-resistant cryptography a current cyber migration issue, not a distant theory | Watch Polish guidance, cryptographic bill of materials, bank/administration readiness, NIST/CISA updates and contractor procurement rules | Open |
+| High | Track data-center energy cost politics | Henrico County, H.R. 6529, Reddit and TVN24 show AI compute costs moving into local utility bills, schools and public policy | Watch H.R. 6529, state data-center bills, Virginia/Dominion, moratoria, water/noise permits, hyperscaler commitments and Polish/EU analogs | Open |
+| Medium | Track ADS-only vehicle regulation | NHTSA's FMVSS No. 135 rulemaking would remove manual brake-pedal requirements for ADS-only vehicles while keeping stopping-distance requirements | Watch comments before July 27, Tesla/Zoox/Waymo filings, safety-advocate responses, final rule timeline and real-world AV performance standards | Open |
+| Medium | Track developer-agent trust and hidden telemetry | HN surfaced a reverse-engineering claim about hidden request markers in Claude Code, raising transparency concerns for tools with shell and repo access | Watch Anthropic response, independent verification, release notes, enterprise gateway guidance and avoid turning the claim into an exploit guide | Open |
 | High | Track Rocket Lab/Iridium vertical space stack | Rocket Lab's planned $8B Iridium acquisition would combine launch, spacecraft manufacturing, L-band spectrum, LEO network, D2D/PNT and recurring satellite services | Watch shareholder/regulatory approvals, bridge financing, Neutron schedule, Iridium NTN Direct, defense/customer commitments and SpaceX/Amazon Leo responses | Open |
 | High | Track TIDAL AI music monetization controls | TIDAL will tag fully AI-generated music, block fraudulent AI content and stop monetizing music it identifies as wholly AI-generated | Recheck July 15 enforcement, distributor tagging, artist/rightsholder response, false positives and Spotify/Apple/Deezer counter-moves | Open |
 | High | Track age assurance enforcement stack | Australia is doubling social media age-law penalties while Discord tests Google Wallet, Incode, credit-card checks and on-device age estimation | Watch eSafety investigations, Discord rollout regions, privacy controls, app-store provider role and EU/Polish analogs | Open |
@@ -313,6 +321,11 @@
   a missing `libx265.215.dylib`; repository scripts were not modified. PDF brief
   was rendered in the mobile 390 x 844 pt format and visually checked from PNG
   renders.
+- 2026-06-30: Evening tech research run created a timestamped material update.
+  Strongest podcast candidates: AWS forward-deployed AI engineers, OKX
+  agent-to-agent payments, X hosted MCP server, Claude Science, Q-Day/PQC
+  readiness, AI data-center energy cost politics, NHTSA ADS-only vehicle
+  rulemaking and developer-agent trust after the Claude Code marker claim.
 
 ## Done
 

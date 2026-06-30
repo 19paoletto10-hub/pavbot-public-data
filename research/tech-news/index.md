@@ -1,12 +1,25 @@
 # Topic Index: tech-news
 
-Last updated: 2026-06-29
+Last updated: 2026-06-30
 
 ## Current Understanding
 
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
+
+Po wieczornym raporcie z 2026-06-30-1935 najważniejsza nowa warstwa to
+komercjalizacja agentów poza samym modelem: AWS uruchamia FDE za 1 mld USD,
+OKX buduje marketplace płatności, reputacji i usług między agentami, a X
+wystawia hosted MCP server jako oficjalny connector do real-time platform data.
+Druga warstwa to pionowe AI dla konkretnych domen: Claude Science pokazuje
+lokalne compute, HPC, provenance i reprodukowalne artefakty dla laboratoriów,
+a Google DeepMind Nano Banana 2 Lite wzmacnia wyścig o tanie, szybkie modele
+obrazowe. Trzecia warstwa to rachunek infrastrukturalny: Q-Day/PQC wraca jako
+polski i globalny temat cyberbezpieczeństwa, data centers coraz mocniej
+wchodzą w rachunki lokalnych społeczności i politykę public utilities, a
+NHTSA/Federal Register pokazują regulacyjne przejście od pojazdu z kierowcą do
+ADS-only vehicles bez ręcznych kontrolek.
 
 Po wieczornym raporcie z 2026-06-29-1934 najważniejsza nowa warstwa to
 infrastruktura spoza klasycznego model-stacku: Rocket Lab chce przejąć Iridium
@@ -168,6 +181,38 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- AWS forward-deployed AI engineers: śledzić, czy 1 mld USD FDE zmieni
+  enterprise AI z model/API licensing w outcome-based deployment usługowe;
+  patrzeć na pricing, partnerstwa, case studies i reakcje OpenAI, Anthropic
+  oraz Microsoft.
+- Agent payments and reputation infrastructure: OKX AI trzeba śledzić jako
+  próbę zbudowania płatności, reputacji, identity, escrow/dispute resolution i
+  usług między agentami; uważać na fraud, compliance, limity wydatków i realne
+  użycie poza crypto narrative.
+- Hosted MCP servers for major platforms: X MCP wzmacnia trend, w którym duże
+  platformy wystawiają oficjalne agent-ready connectors; śledzić rate limits,
+  pricing API, spam/source poisoning, moderation oraz adopcję w Claude, Cursor,
+  Grok i podobnych narzędziach.
+- Claude Science and vertical AI research environments: Claude Science warto
+  śledzić jako pionowe AI dla laboratoriów z local compute, HPC, provenance i
+  reprodukowalnością; rozdzielać produktowe workflow od medycznych lub
+  klinicznych claimów.
+- Post-quantum migration and Q-Day readiness: Business Insider Polska, White
+  House i NIST pokazują, że PQC staje się operacyjną migracją kryptografii;
+  śledzić polskie wytyczne, cryptographic bill of materials, banki,
+  administrację i harmonogramy CISA/NIST.
+- Data-center energy cost politics: Henrico County, H.R. 6529, Reddit i TVN24
+  pokazują, że AI compute przechodzi do rachunków samorządów, szkół,
+  gospodarstw domowych i public utility regulation; śledzić stany, moratoria,
+  Dominion/Virginia, water/noise permits i hyperscaler commitments.
+- ADS-only vehicle regulation: NHTSA/Federal Register rulemaking dla FMVSS No.
+  135 trzeba śledzić jako test certyfikacji robotaxi bez ręcznych kontrolek;
+  patrzeć na komentarze do 27 lipca 2026 r., stanowiska Tesli, Zoox, Waymo i
+  safety advocates oraz osobne real-world AV performance standards.
+- Developer-agent trust and hidden telemetry: HN/theRallo sygnał o Claude Code
+  steganography wymaga potwierdzenia lub odpowiedzi Anthropic, ale wzmacnia
+  temat przejrzystości narzędzi agentowych z dostępem do filesystemu, shell,
+  git i prywatnych repozytoriów.
 - Rocket Lab/Iridium vertical space stack: przejęcie Iridium trzeba śledzić
   jako próbę budowy alternatywy dla SpaceX/Amazon Leo przez połączenie launch,
   produkcji satelitów, L-band spectrum, D2D/PNT i recurring satellite services.
@@ -500,6 +545,7 @@ transparentność środowiskową AI.
 
 ## Recent Reports
 
+- [2026-06-30-1935](runs/2026-06-30-1935.md)
 - [2026-06-29](runs/2026-06-29.md)
 - [2026-06-27](runs/2026-06-27.md)
 - [2026-06-26](runs/2026-06-26.md)

@@ -1,0 +1,423 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-06-30",
+  "runTime": "19:35",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny research jest materialną aktualizacją po raporcie z 2026-06-29-1934. Najmocniejsza nowa oś to przejście agentów z demo do płatnej infrastruktury wdrożeniowej: AWS tworzy organizację Forward Deployed Engineering za 1 mld USD, OKX buduje marketplace, w którym agenty mogą szukać pracy i płacić stablecoinami, a X wystawia swoją platformę przez hosted MCP server.",
+    "Druga oś to specjalizacja AI poza ogólnym chatbotem. Anthropic pokazuje Claude Science jako środowisko dla laboratoriów z lokalnym compute, provenance i naukowymi artefaktami, a Google DeepMind promuje Nano Banana 2 Lite jako szybki i tańszy model obrazu. To przesuwa rynek w stronę pionowych narzędzi, które mają własne workflow, dane, compliance i ścieżki audytu.",
+    "Trzecia oś to infrastrukturalny rachunek za technologię. Polski Business Insider odświeża temat Q-Day i migracji do kryptografii postkwantowej w dniu, w którym źródła USA pokazują konkretne daty PQC dla systemów federalnych. 404 Media, Reddit i TVN24 wzmacniają wątek kosztów energii data centers, a NHTSA/Federal Register pokazują, że regulacja autonomicznych pojazdów zaczyna usuwać fizyczne kontrolki dla ADS-only vehicles, zostawiając pytanie o bezpieczeństwo realnej jazdy."
+  ],
+  "summaryBullets": [
+    "AI: AWS wkłada 1 mld USD w forward-deployed AI engineers",
+    "Infrastruktura: OKX buduje rynek, na którym agenty płacą agentom",
+    "Produkty: X wystawia hosted MCP server dla agentów"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-06-30-1935-0-aws-wklada-1-mld-usd-w-forward-deployed-ai-engineers-800489bd37",
+      "section": "AI",
+      "title": "AWS wkłada 1 mld USD w forward-deployed AI engineers",
+      "standfirst": "AWS tworzy organizację Forward Deployed Engineering wspartą inwestycją 1 mld USD. Jej zespoły mają wchodzić bezpośrednio do firm i budować produkcyjne systemy agentic AI w dniach, nie miesiącach.",
+      "whatHappened": "AWS ogłosił FDE jako agentic-first usługę wdrożeniową dla klientów enterprise.",
+      "whyItMatters": "Rynek AI przesuwa się z licencji modelu na ostatni kilometr wdrożenia, integracji danych, governance i utrzymania procesów.",
+      "deeperAnalysis": [
+        "To jest mocny sygnał, że hyperscalerzy uznają samo API za niewystarczające. Klienci mają modele, narzędzia i budżety, ale nadal nie umieją szybko przełożyć agentów na procesy z realnymi danymi, bezpieczeństwem i odpowiedzialnością biznesową. AWS odpowiada nie kolejnym modelem, tylko armią ludzi i agentów osadzanych u klienta.",
+        "Najciekawszy element to obietnica samowystarczalności. AWS deklaruje, że zespoły mają zostawiać knowledge graph, runbooki, architekturę i wewnętrznych championów, a nie tylko gotowy projekt konsultingowy. To konkuruje z modelem OpenAI i Anthropic, które też coraz mocniej używają forward-deployed engineers jako warstwy sprzedaży i adoption.",
+        "Dla podcastu warto zestawić ten temat z Fordem z poprzedniego raportu. W obu przypadkach AI nie działa jako czarna skrzynka wrzucona do firmy. Potrzebuje ludzi, którzy rozumieją domenę, umieją opisać proces i zostawić organizację z kompetencją, a nie z demo."
+      ],
+      "contextPoints": [
+        "Co się stało: AWS ogłosił 1 mld USD inwestycji w Forward Deployed Engineering.",
+        "Dlaczego ważne: enterprise AI coraz częściej wymaga usługowego modelu wdrożenia, nie tylko dostępu do modeli.",
+        "Na co patrzeć dalej: pricing outcome-based, partnerstwa AWS, realne case studies i reakcje OpenAI/Anthropic/Microsoft."
+      ],
+      "sources": [
+        {
+          "title": "AWS: Forward Deployed AI Engineers",
+          "url": "https://www.aboutamazon.com/news/aws/aws-1-billion-forward-deployed-ai-engineers"
+        },
+        {
+          "title": "TechCrunch: Amazon launches new $1 billion FDE org",
+          "url": "https://techcrunch.com/2026/06/30/amazon-launches-new-1-billion-fde-org-following-openai-and-anthropic/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Agenci",
+        "Enterprise",
+        "AWS",
+        "Wdrożenia"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-30-1935-1-okx-buduje-rynek-na-ktorym-agenty-placa-agentom-b954e1e9d7",
+      "section": "Infrastruktura",
+      "title": "OKX buduje rynek, na którym agenty płacą agentom",
+      "standfirst": "OKX uruchomił marketplace OKX AI, w którym agenty mają znajdować usługi, płacić stablecoinami i budować reputację. To jedna z bardziej konkretnych prób połączenia agentów z płatnościami i tożsamością.",
+      "whatHappened": "OKX AI otworzył się dla developerów po zamkniętej becie z około 50 dostawcami usług.",
+      "whyItMatters": "Autonomiczne agenty potrzebują mechanizmów rozliczeń, ryzyka, reputacji i sporów, zanim staną się realną warstwą gospodarki cyfrowej.",
+      "deeperAnalysis": [
+        "Wiele firm mówi o agentach jako cyfrowych pracownikach, ale mało kto pokazuje infrastrukturę transakcji między nimi. OKX próbuje wejść właśnie w tę lukę: identity, reputation, stablecoin settlement, usługi pay-per-query i dispute resolution. To brzmi jak crypto narrative, ale dotyka realnego problemu: agent nie może ciągle prosić człowieka o mikropłatność, jeśli ma działać w długim workflow.",
+        "Jednocześnie to obszar o dużym ryzyku. Jeżeli agenty mają kupować dane, oceniać portfele, zlecać zadania i rozstrzygać spory, potrzebne są limity, audyt, antyfraud, compliance i jasny model odpowiedzialności. OKX twierdzi, że wykorzystuje infrastrukturę i detekcję nadużyć z giełdy, ale skuteczność takich mechanizmów w autonomicznych workflow dopiero będzie testowana.",
+        "Dla polskiego odbiorcy najprostszy kąt to pytanie: czy \"agent economy\" będzie API-owym odpowiednikiem marketplace'ów pracy, czy raczej kolejną rundą spekulacji web3. Różnicę pokażą nie hasła o bilionowym rynku, tylko to, czy firmy faktycznie użyją tych agentów do bezpiecznych, powtarzalnych procesów."
+      ],
+      "contextPoints": [
+        "Co się stało: OKX uruchomił marketplace dla agentów AI z płatnościami stablecoinami.",
+        "Dlaczego ważne: płatności i reputacja są brakującą warstwą praktycznych agentów.",
+        "Na co patrzeć dalej: fraud, dispute resolution, limity wydatków, compliance i realne użycie poza crypto tradingiem."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: OKX wants AI agents to hire and pay each other",
+          "url": "https://techcrunch.com/2026/06/30/crypto-exchange-okx-wants-ai-agents-to-hire-and-pay-each-other/"
+        },
+        {
+          "title": "The Block: OKX AI marketplace",
+          "url": "https://www.theblock.co/amp/post/406704/okx-ai-unveils-marketplace-for-agents-to-find-work-and-get-paid-in-stablecoins"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Agenci",
+        "Stablecoiny",
+        "Web3",
+        "Płatności"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-30-1935-2-x-wystawia-hosted-mcp-server-dla-agentow-16f68d8f3a",
+      "section": "Produkty",
+      "title": "X wystawia hosted MCP server dla agentów",
+      "standfirst": "X uruchomiło hosted MCP server, który ma ułatwić narzędziom AI dostęp do API platformy. To kolejny znak, że Model Context Protocol staje się standardowym opakowaniem dla dużych usług internetowych.",
+      "whatHappened": "X udostępniło MCP server dla aplikacji zgodnych z protokołem, takich jak Claude, Cursor i Grok Build.",
+      "whyItMatters": "Platformy chcą, aby agenty pobierały, analizowały i wykorzystywały ich dane przez oficjalne ścieżki zamiast scrapingowych obejść.",
+      "deeperAnalysis": [
+        "MCP nie dodaje magicznie nowych możliwości do API X. Dodaje wspólną warstwę, przez którą narzędzia agentowe mogą odkrywać funkcje i używać ich w przewidywalny sposób. Dla developerów to mniej klejenia własnych connectorów; dla platformy to większa szansa na kontrolowany, rozliczalny dostęp do danych.",
+        "To wpisuje się w szerszą falę: Box, Slack, Stripe, GitHub, Framer i kolejne narzędzia próbują stać się \"agent-ready\". Wygrywać będą nie tylko modele, ale też usługi, które potrafią wystawić swoje akcje, uprawnienia, wyszukiwanie i limity w formie czytelnej dla agentów.",
+        "Największe napięcie dotyczy jakości i bezpieczeństwa źródeł. X chce być real-time information network dla agentów, ale właśnie takie źródła są podatne na spam, manipulację trendami i AI-search poisoning. MCP daje bardziej oficjalną rurę, ale nie rozwiązuje samodzielnie problemu zaufania do treści."
+      ],
+      "contextPoints": [
+        "Co się stało: X wystawiło hosted MCP server dla swojego API.",
+        "Dlaczego ważne: MCP normalizuje dostęp agentów do dużych platform.",
+        "Na co patrzeć dalej: pricing API, rate limits, moderacja, źródła real-time i integracje w Claude/Cursor/Grok."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: X now offers an MCP server",
+          "url": "https://techcrunch.com/2026/06/30/x-now-offers-an-mcp-server-to-make-its-platform-easier-for-ai-tools-to-use/"
+        },
+        {
+          "title": "The Next Web: X hosted MCP server",
+          "url": "https://thenextweb.com/news/x-hosted-mcp-server-ai-tools-api"
+        },
+        {
+          "title": "X Developers announcement",
+          "url": "https://x.com/XDevelopers/status/2071752389183647758"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "MCP",
+        "Agenci",
+        "API",
+        "Social Media",
+        "Developer Tools"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-30-1935-3-claude-science-przenosi-ai-do-laboratoriow-i-hpc-329f4d138c",
+      "section": "AI",
+      "title": "Claude Science przenosi AI do laboratoriów i HPC",
+      "standfirst": "Anthropic pokazał Claude Science jako środowisko badawcze z lokalnym compute, integracjami naukowymi, provenance i reprodukowalnymi artefaktami. To pionowy produkt dla laboratoriów, a nie kolejny ogólny chatbot.",
+      "whatHappened": "Claude Science jest w becie na macOS i Linuksie dla wybranych planów Claude.",
+      "whyItMatters": "AI for science wymaga śledzenia kodu, danych, środowiska i rozmowy, bo błędy w analizie naukowej są trudniejsze do wykrycia niż zwykłe odpowiedzi tekstowe.",
+      "deeperAnalysis": [
+        "Oficjalna strona produktu opisuje Claude Science jako warstwę łączącą bazy naukowe, ELN, narzędzia badawcze, modele protein i struktur oraz HPC. Kluczowe jest to, że surowe dane i compute mogą zostać lokalnie, a artefakty mają być odtwarzalne wraz z kodem, środowiskiem i kontekstem rozmowy.",
+        "To jest inny rynek niż consumer AI. Laboratoria i pharma nie potrzebują tylko lepszej odpowiedzi tekstowej; potrzebują workflow, który da się przejrzeć po miesiącach, obronić przed zespołem i połączyć z istniejącymi narzędziami. Dlatego provenance, local kernels, Slurm/SSH i reviewer flagujący niepoparte twierdzenia są równie ważne jak sam model.",
+        "Raport nie ocenia skuteczności odkrywania leków ani nie daje rekomendacji medycznych. Materialny fakt jest produktowy: Anthropic buduje pionowe środowisko dla nauki i life sciences, czyli idzie w podobnym kierunku co forward-deployed enterprise AI, tylko w domenie o dużo wyższych wymogach walidacji."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic pokazał Claude Science jako beta produkt dla naukowców.",
+        "Dlaczego ważne: scientific AI potrzebuje lokalności danych, reprodukowalności i audytu twierdzeń.",
+        "Na co patrzeć dalej: case studies laboratoriów, kontrola danych, ceny enterprise i niezależna walidacja wyników."
+      ],
+      "sources": [
+        {
+          "title": "Claude Science",
+          "url": "https://claude.com/product/claude-science"
+        },
+        {
+          "title": "Anthropic: The Briefing AI for Science",
+          "url": "https://www.anthropic.com/events/the-briefing-ai-for-science-virtual-event"
+        },
+        {
+          "title": "Financial Times: Anthropic launches Claude Science",
+          "url": "https://www.ft.com/content/50c10721-bda6-439e-a6c3-755311e4b505"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Nauka",
+        "Life Sciences",
+        "Anthropic",
+        "Provenance"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-30-1935-4-q-day-wraca-jako-polski-i-globalny-temat-cyberbezpieczenstwa-909d0f6ab7",
+      "section": "Cyber",
+      "title": "Q-Day wraca jako polski i globalny temat cyberbezpieczeństwa",
+      "standfirst": "Business Insider Polska odświeżył temat Q-Day i przygotowania Polski do kryptografii postkwantowej. Równolegle USA mają już konkretne federalne terminy migracji PQC dla systemów wysokiej wartości i wysokiego wpływu.",
+      "whatHappened": "Polski tekst zestawia ryzyko Q-Day z gotowością państwa, a executive order USA wyznacza daty 2030 i 2031 dla federalnej migracji.",
+      "whyItMatters": "Dane kradzione dziś mogą zostać odszyfrowane w przyszłości, więc migracja postkwantowa jest obecnym zadaniem inwentaryzacji i wymiany kryptografii.",
+      "deeperAnalysis": [
+        "Najważniejszy przekaz Q-Day nie brzmi \"jutro pęknie cały internet\". Brzmi: organizacje muszą wiedzieć, gdzie używają podatnej kryptografii, jakie dane mają długi okres wrażliwości i które systemy wymagają migracji przed pojawieniem się cryptographically relevant quantum computer.",
+        "USA w executive order nadają temu bardzo operacyjny kształt: wskazują NIST-approved FIPS for PQC, role OMB/National Cyber Director/NIST/CISA i terminy dla high-value oraz high-impact systems. NIST z kolei od dawna mówi, że organizacje powinny zacząć migrację po opublikowaniu pierwszych standardów PQC.",
+        "Polski kontekst jest ważny, bo debata publiczna prawie cała siedzi dziś w AI, podczas gdy post-quantum migration będzie nudnym, kosztownym i wieloletnim programem. Dla podcastu to dobry kontrapunkt: nie każda rewolucja technologiczna ma UI, demo i viralowe screeny."
+      ],
+      "contextPoints": [
+        "Co się stało: Business Insider Polska opisał Q-Day, a USA formalizują migrację federalnych systemów do PQC.",
+        "Dlaczego ważne: post-quantum security wymaga inwentaryzacji kryptografii zanim pojawi się przełom kwantowy.",
+        "Na co patrzeć dalej: polskie wytyczne, cryptographic bill of materials, harmonogramy CISA/NIST i adopcję w bankach oraz administracji."
+      ],
+      "sources": [
+        {
+          "title": "Business Insider Polska: Q-Day i szyfrowanie kwantowe",
+          "url": "https://businessinsider.com.pl/technologie/nowe-technologie/szyfrowanie-kwantowe-i-druga-obok-ai-rewolucja-czy-polska-jest-gotowa-raport/5eenmcp"
+        },
+        {
+          "title": "White House: Securing the Nation Against Advanced Cryptographic Attacks",
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/06/securing-the-nation-against-advanced-cryptographic-attacks/"
+        },
+        {
+          "title": "NIST CSRC: Post-Quantum Cryptography",
+          "url": "https://csrc.nist.gov/projects/post-quantum-cryptography"
+        },
+        {
+          "title": "NIST: Post-quantum cryptography",
+          "url": "https://www.nist.gov/pqc"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Cyber",
+        "Kryptografia",
+        "Q-Day",
+        "Polska",
+        "Regulacje"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-30-1935-5-data-centers-przerzucaja-koszt-ai-na-lokalna-polityke-energii-19911bc377",
+      "section": "Infrastruktura",
+      "title": "Data centers przerzucają koszt AI na lokalną politykę energii",
+      "standfirst": "404 Media opisało hrabstwo w Wirginii, które przy 37 data centers spodziewa się prawie 25 procent podwyżki kosztów energii i prosi szkoły oraz administrację o oszczędzanie prądu. Reddit i Kongres USA wzmacniają temat: kto ma płacić za strain AI na sieć.",
+      "whatHappened": "Henrico County potwierdziło podwyżkę kosztów energii, a publiczne źródła pokazują rosnącą presję na ustawowe rozdzielenie kosztów AI data centers.",
+      "whyItMatters": "AI infrastructure staje się lokalnym konfliktem o rachunki, wodę, generatory, permitting i odpowiedzialność dużych firm technologicznych.",
+      "deeperAnalysis": [
+        "Wczorajszy raport mówił o chłodzeniu i cieczy w data centers. Dziś widać drugi, bardziej polityczny wymiar: rachunek za energię nie zostaje w sali serwerowej. Gdy samorząd z wieloma data centers prosi nauczycieli i urzędników o gaszenie świateł oraz komputerów, temat AI compute staje się codziennym kosztem publicznym.",
+        "To łączy się z federalnym wątkiem H.R. 6529 i dyskusją o tym, czy firmy technologiczne powinny płacić za obciążenie sieci powodowane przez AI data centers. Zwolennicy szybkiej rozbudowy będą mówić o konkurencyjności i wyścigu z Chinami, przeciwnicy o rachunkach gospodarstw domowych, wodzie, hałasie i tymczasowych generatorach.",
+        "Dla podcastu warto nie upraszczać tego do \"data centers złe\". Problem jest bardziej konkretny: kto finansuje modernizację sieci, kto bierze ryzyko opóźnień infrastruktury energetycznej i czy lokalne społeczności mają widzieć realne korzyści, a nie tylko wyższe koszty."
+      ],
+      "contextPoints": [
+        "Co się stało: 404 Media opisało podwyżkę kosztów energii w Henrico County i lokalny apel o oszczędzanie.",
+        "Dlaczego ważne: koszt AI compute coraz częściej trafia do debaty public utility i samorządowej.",
+        "Na co patrzeć dalej: H.R. 6529, stany z ustawami data-center, Virginia/Dominion, lokalne moratoria i reakcje hyperscalerów."
+      ],
+      "sources": [
+        {
+          "title": "404 Media: County with 37 Data Centers",
+          "url": "https://www.404media.co/henrico-virginia-datacenter-energy-cost-email/"
+        },
+        {
+          "title": "House Energy & Commerce: markup of electricity bills",
+          "url": "https://energycommerce.house.gov/posts/chairmen-guthrie-and-latta-announce-energy-subcommittee-markup-of-eight-bills-on-electricity-and-pipeline-safety"
+        },
+        {
+          "title": "old Reddit / r/technology",
+          "url": "https://old.reddit.com/r/technology/"
+        },
+        {
+          "title": "TVN24: Rośnie opór wobec AI",
+          "url": "https://tvn24.pl/biznes/tech/ai-rosnie-opor-wobec-sztucznej-inteligencji-w-usa-protesty-blokuja-inwestycje-w-centra-danych-st9118935"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Data Center",
+        "Energia",
+        "Regulacje",
+        "Samorządy"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-30-1935-6-usa-chca-dopuscic-pojazdy-autonomiczne-bez-pedalu-hamulca-62b426d547",
+      "section": "Regulacje",
+      "title": "USA chcą dopuścić pojazdy autonomiczne bez pedału hamulca",
+      "standfirst": "NHTSA proponuje zmianę FMVSS 135, która usunęłaby wymóg ręcznego pedału hamulca w pojazdach projektowanych wyłącznie dla automated driving systems. Stopping distance zostaje, ale znika część regulacji projektowanych dla człowieka za kierownicą.",
+      "whatHappened": "Federal Register opublikował proposed rule z terminem komentarzy do 27 lipca 2026 r.",
+      "whyItMatters": "Robotaxi bez kierownicy i pedałów przechodzą z prototypów do konkretnego procesu certyfikacji i publicznego komentowania.",
+      "deeperAnalysis": [
+        "To nie jest pełna legalizacja każdego autonomicznego pojazdu bez kontroli człowieka. Propozycja dotyczy technicznego standardu hamowania i rozróżnienia pojazdów z ręcznymi kontrolkami oraz bez nich. NHTSA podkreśla, że wymogi stopping distance nadal mają obowiązywać, tylko testy i definicje muszą pasować do pojazdu, którego człowiek nigdy nie prowadzi.",
+        "Najważniejsza interpretacja dotyczy kierunku regulacji. Branża robotaxi od lat narzekała, że standardy zakładają kierowcę, pedały, lusterka i elementy kokpitu, które w ADS-only vehicle są sztuczne. Regulator zaczyna usuwać te bariery, ale równolegle deklaruje prace nad real-world AV performance requirements.",
+        "W podcaście trzeba oddzielić dwa pytania. Jedno brzmi: czy pojazd bez pedału spełnia normy hamowania. Drugie: czy jego software jest wystarczająco bezpieczny w realnym ruchu. Pierwsze można testować procedurą, drugie wymaga danych eksploatacyjnych, transparentności i egzekwowania odpowiedzialności po incydentach."
+      ],
+      "contextPoints": [
+        "Co się stało: NHTSA rozpoczęła rulemaking dla FMVSS No. 135 w pojazdach ADS-only.",
+        "Dlaczego ważne: purpose-built robotaxi mogą łatwiej przechodzić certyfikację bez indywidualnych zwolnień.",
+        "Na co patrzeć dalej: komentarze do 27 lipca, stanowiska Tesli/Zoox/Waymo, nowe standardy performance i reakcje safety advocates."
+      ],
+      "sources": [
+        {
+          "title": "NHTSA: brake pedal requirements for AVs",
+          "url": "https://www.nhtsa.gov/press-releases/fmvss-updates-brake-pedal-requirements"
+        },
+        {
+          "title": "Federal Register: FMVSS No. 135 ADS-equipped vehicles",
+          "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12981/federal-motor-vehicle-safety-standards-modernization-of-fmvss-no-135-to-accommodate-ads-equipped"
+        },
+        {
+          "title": "Business Insider: DOT proposes new rules for driverless vehicles",
+          "url": "https://www.businessinsider.com/no-brakes-trumps-dot-pedal-free-tesla-zoox-2026-6"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Autonomia",
+        "Robotaxi",
+        "Regulacje",
+        "Tesla",
+        "NHTSA"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "AWS FDE: agenci potrzebują ludzi w terenie",
+      "rationale": "Enterprise AI coraz bardziej przypomina wdrożenia konsultingowo-inżynierskie z danymi, governance i odpowiedzialnością, a nie sam zakup modelu.",
+      "sourcesLabel": "AWS; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "OKX i gospodarka płacących agentów",
+      "rationale": "Marketplace dla agentów z stablecoinami, reputacją i dispute resolution pokazuje brakującą warstwę płatności dla autonomicznych workflow.",
+      "sourcesLabel": "TechCrunch; The Block"
+    },
+    {
+      "priority": "Medium",
+      "title": "MCP jako nowy pas transmisyjny internetu dla agentów",
+      "rationale": "X dołącza do fali usług wystawiających oficjalne connector surfaces dla AI tools.",
+      "sourcesLabel": "TechCrunch; TNW; X Developers"
+    },
+    {
+      "priority": "High",
+      "title": "Claude Science i pionowe AI dla laboratoriów",
+      "rationale": "AI for science wymaga provenance, lokalnego compute i reprodukowalności, więc jest dobrym przykładem odejścia od ogólnego chatbota.",
+      "sourcesLabel": "Claude; Anthropic; FT"
+    },
+    {
+      "priority": "High",
+      "title": "Q-Day: rewolucja bez demo i bez virala",
+      "rationale": "Polska debata wraca do kryptografii postkwantowej, a USA mają już konkretne terminy migracji federalnych systemów.",
+      "sourcesLabel": "Business Insider Polska; White House; NIST"
+    },
+    {
+      "priority": "High",
+      "title": "AI data centers jako rachunek samorządu",
+      "rationale": "Hrabstwo z 37 data centers prosi szkoły o oszczędzanie prądu, więc koszt AI compute staje się lokalną polityką public utility.",
+      "sourcesLabel": "404 Media; House E&C; Reddit; TVN24"
+    },
+    {
+      "priority": "Medium",
+      "title": "Robotaxi bez pedału hamulca",
+      "rationale": "NHTSA pokazuje, jak prawo zaczyna dopasowywać się do pojazdów ADS-only, ale bezpieczeństwo software'u zostaje osobnym pytaniem.",
+      "sourcesLabel": "NHTSA; Federal Register; BI"
+    },
+    {
+      "priority": "Medium",
+      "title": "Zaufanie do narzędzi developerskich AI",
+      "rationale": "HN podbił post o ukrytych markerach w Claude Code; nawet jeśli wymaga potwierdzenia, dobrze pokazuje nerw wokół prywatności agentów z dostępem do repo.",
+      "sourcesLabel": "thereallo.dev; HN"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "AWS / About Amazon",
+      "url": "https://www.aboutamazon.com/news/aws/aws-1-billion-forward-deployed-ai-engineers"
+    },
+    {
+      "title": "Claude Science",
+      "url": "https://claude.com/product/claude-science"
+    },
+    {
+      "title": "Anthropic AI for Science event",
+      "url": "https://www.anthropic.com/events/the-briefing-ai-for-science-virtual-event"
+    },
+    {
+      "title": "Google DeepMind Nano Banana 2 Lite",
+      "url": "https://deepmind.google/models/gemini-image/flash-lite/"
+    },
+    {
+      "title": "NHTSA",
+      "url": "https://www.nhtsa.gov/press-releases/fmvss-updates-brake-pedal-requirements"
+    },
+    {
+      "title": "Federal Register",
+      "url": "https://www.federalregister.gov/documents/2026/06/26/2026-12981/federal-motor-vehicle-safety-standards-modernization-of-fmvss-no-135-to-accommodate-ads-equipped"
+    },
+    {
+      "title": "White House PQC executive order",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/06/securing-the-nation-against-advanced-cryptographic-attacks/"
+    },
+    {
+      "title": "NIST Post-Quantum Cryptography",
+      "url": "https://csrc.nist.gov/projects/post-quantum-cryptography"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/"
+    },
+    {
+      "title": "404 Media",
+      "url": "https://www.404media.co/henrico-virginia-datacenter-energy-cost-email/"
+    },
+    {
+      "title": "The Block",
+      "url": "https://www.theblock.co/amp/post/406704/okx-ai-unveils-marketplace-for-agents-to-find-work-and-get-paid-in-stablecoins"
+    },
+    {
+      "title": "The Next Web",
+      "url": "https://thenextweb.com/news/x-hosted-mcp-server-ai-tools-api"
+    },
+    {
+      "title": "Business Insider Polska",
+      "url": "https://businessinsider.com.pl/technologie/nowe-technologie/szyfrowanie-kwantowe-i-druga-obok-ai-rewolucja-czy-polska-jest-gotowa-raport/5eenmcp"
+    },
+    {
+      "title": "TVN24 Biznes / Tech",
+      "url": "https://tvn24.pl/biznes/tech"
+    },
+    {
+      "title": "WP Tech",
+      "url": "https://tech.wp.pl/"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/news"
+    },
+    {
+      "title": "old Reddit / r/technology",
+      "url": "https://old.reddit.com/r/technology/"
+    },
+    {
+      "title": "Product Hunt daily 2026-06-30",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/6/30"
+    }
+  ]
+}
