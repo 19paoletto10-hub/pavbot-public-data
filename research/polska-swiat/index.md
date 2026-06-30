@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-06-29
+Last updated: 2026-06-30
 
 ## Current Understanding
 
@@ -85,6 +85,18 @@ ukraińskich uchodźców. RCB przesunęło akcent z samego upału na alert burzo
 29/30 czerwca, utonięcia, suszę hydrologiczną i pożary lasów. W świecie Ormuz
 pozostaje kruchą pauzą, nie porozumieniem: AP wskazuje wstrzymanie uderzeń
 USA-Iran, ale także spór o to, czy rozmowy w Dosze są uzgodnione.
+Po runie 30 czerwca Orka przeszła w fazę doprecyzowania wykonawczego: KPRM
+cytuje 50 mld koron szwedzkich jako skalę połączonego pakietu, Portal
+Morski/PAP wskazuje AIP, pierwszy okręt w 2030 r. i szacunek około 20 mld zł,
+a Pakt dla Bałtyku pozostaje ramą polityczno-przemysłową. Nowym krajowym
+tematem jest komunikat MON o użyciu AI do poprawy zdjęcia i niezamierzonej
+zmianie treści fotografii. Prezydencka aktywność ustawowa objęła podpisanie
+dwóch ustaw oraz skierowanie do Sejmu projektu dnia pamięci działaczy opozycji
+antykomunistycznej. Pogoda pozostaje tematem bezpieczeństwa publicznego:
+burze po upale, utonięcia, susza i pożary lasów mają dziś większe znaczenie
+praktyczne niż sama temperatura. W świecie utrzymują się krucha pauza USA-Iran,
+ukraińska narracja o rosyjskich brakach paliwa, kryzys humanitarny w Wenezueli
+oraz polityczny zwrot w Peru po zwycięstwie Keiko Fujimori.
 
 ## Stable Facts
 
@@ -139,6 +151,7 @@ USA-Iran, ale także spór o to, czy rozmowy w Dosze są uzgodnione.
 
 ## Recent Reports
 
+- [2026-06-30](runs/2026-06-30.md)
 - [2026-06-29-1935](runs/2026-06-29-1935.md)
 - [2026-06-29](runs/2026-06-29.md)
 - [2026-06-28-1935](runs/2026-06-28-1935.md)

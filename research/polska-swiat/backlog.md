@@ -8,6 +8,7 @@
 | Medium | Tune public source list | Repeated good sources should become explicit topic guidance | Prefer official institutions plus Onet/PAP, Guardian, Euronews and public AP/Reuters mirrors; consider topic.md refinement after weekend sample | Open |
 | Medium | Track Orka implementation details | Evening run confirmed signing and Baltic Pact, but full contract value, delivery guarantees and industrial execution still need official detail | Monitor MON/KPRM/Saab/PAP for value, delivery schedule, gap filler and Polish production-line specifics | Open |
 | Medium | Monitor ABW influence-operation fallout | ABW described Russian-financed paid demonstrations among Ukrainian refugees and immediate expulsion of 11 foreigners | Watch for follow-up from ABW, Straż Graniczna, prokuratura and MSWiA; avoid broad claims beyond official communications | Open |
+| Medium | Define public-sector AI image handling note | MON admitted AI enhancement changed a photo, creating a recurring trust issue for official communications | Track whether MON/KPRM publish rules for generative AI in official media; if pattern repeats, propose topic guidance | Open |
 
 ## Review Notes
 
@@ -95,6 +96,13 @@
   the fragile USA-Iran-Ormuz pause, and Guardian/AP for Russian fuel shortages.
   Podcast should treat ABW claims as official service findings and avoid
   generalizing them to Ukrainian or Belarusian communities in Poland.
+- 2026-06-30: Morning research run created a material update. Strongest sources
+  were KPRM/MON/Portal Morski-PAP for Orka execution details and the Baltic Sea
+  Pact, MON for the AI-photo correction, Prezydent RP for signatures and the
+  memory-day project, RCB/TVN Meteo for the post-heat storm and public-safety
+  block, AP/Guardian for USA-Iran-Ormuz, Guardian for Ukraine/Russian fuel
+  shortages, and Guardian/AP for Venezuela. Podcast should make the MON AI-photo
+  item about trust and rules, not personal scandal.
 
 ## Done
 
