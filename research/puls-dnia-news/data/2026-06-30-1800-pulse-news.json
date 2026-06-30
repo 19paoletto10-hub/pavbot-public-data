@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-06-30",
+  "runTime": "18:00",
+  "status": "Material update",
+  "headline": "18:00: Upał i alerty ściskają kraj, a świat przechodzi na Dohę, Senegal i nowe spory prawne w USA",
+  "summary": "Slot 18:00 względem opublikowanego pakietu z 15:02 przestawia krajowy blok na alerty pogodowe, przeciążenie ratownictwa i incydent lotniczy z rejsu z Warszawy, a w świecie dokłada nowsze karty o rozmowach wokół Iranu, napięciu konstytucyjnym w Senegalu, sporach prawnych w USA i chińskim rynku robotów humanoidalnych.",
+  "items": [
+    {
+      "id": "pulse-2026-06-30-1800-01-imgw",
+      "section": "Alerty",
+      "title": "IMGW utrzymuje miks upału, burz i ulewnych opadów na przełomie czerwca i lipca",
+      "lead": "Fronty mają przeciąć kraj po kulminacji upału, a południe i centrum zostają w strefie podwyższonego ryzyka.",
+      "whatHappened": "TVN Meteo podało, że od 1 do 5 lipca przez Polskę przejdą kolejne chłodne fronty z burzami, obfitym deszczem i porywistym wiatrem. IMGW w raporcie nr 135 wskazało już dla 30 czerwca utrzymanie zagrożenia burzowego głównie dla południowej połowy kraju i rekomenduje śledzenie kolejnych aktualizacji ostrzeżeń.",
+      "keyFacts": [
+        "TVN Meteo opisuje serię frontów z burzami, intensywnym deszczem i silniejszym wiatrem na początku lipca.",
+        "IMGW raport nr 135 wskazuje na ryzyko burz 30 czerwca przede wszystkim w południowej połowie Polski.",
+        "To karta alarmowa, bo pogodowy blok może szybko przełożyć się na transport, energetykę i obciążenie służb."
+      ],
+      "reactions": [
+        "Wieczorny feed powinien akcentować przejście z samego upału na bardziej złożone ryzyko pogodowe.",
+        "To najsilniejszy krajowy trigger do podmiany kart już przy pierwszej eskalacji ostrzeżeń lub szkód."
+      ],
+      "whyItMatters": "Jedna zmiana synoptyczna może jednocześnie uderzyć w bezpieczeństwo ludzi, logistykę i pracę służb ratunkowych.",
+      "context": "W slocie 15:02 kraj był skupiony na zdrowiu, energii i kolei. O 18:00 ciężar przesuwa się na alertowość pogodową i skutki fali upałów.",
+      "watchNext": [
+        "Czy IMGW podniesie stopnie ostrzeżeń albo rozszerzy zasięg burz na kolejne województwa.",
+        "Czy pojawią się pierwsze większe utrudnienia w transporcie lub lokalne podtopienia."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo: Parada chłodnych frontów przejdzie przez Polskę. Prognoza pogody początek lipca",
+          "url": "https://tvn24.pl/tvnmeteo/polska/parada-chlodnych-frontow-przejdzie-przez-polske-prognoza-pogody-na-1-5-07-st9121911?source=rss"
+        },
+        {
+          "title": "IMGW: Aktualna i prognozowana sytuacja meteorologiczna i hydrologiczna – raport nr 135",
+          "url": "https://imgw.pl/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-135/"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "Pogoda",
+        "Burze",
+        "Upał"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-1800-02-lot",
+      "section": "Polska",
+      "title": "Rejs z Warszawy do Tel Awiwu kończy się alarmem o porwaniu i przechwyceniem przez Izrael",
+      "lead": "Omyłkowy sygnał pilota uruchomił pełną procedurę bezpieczeństwa i przekierowanie samolotu do Bułgarii.",
+      "whatHappened": "TVN24 podało, że samolot lecący z Warszawy do Tel Awiwu został przekierowany na lotnisko w Bułgarii po tym, jak pilot przez pomyłkę aktywował alarm o porwaniu. Izrael poderwał myśliwce, a tamtejsze władze zapowiedziały dochodzenie w sprawie całego incydentu.",
+      "keyFacts": [
+        "Chodzi o rejs z Warszawy do Tel Awiwu, który nie doleciał planowo do celu.",
+        "Media, na które powołuje się TVN24, wskazują na omyłkowe uruchomienie alarmu o porwaniu.",
+        "Izrael potraktował sygnał poważnie i uruchomił procedurę z udziałem lotnictwa wojskowego."
+      ],
+      "reactions": [
+        "To jeden z najmocniejszych nowych krajowych tematów, bo łączy bezpieczeństwo lotnicze, Polskę i napięty region Bliskiego Wschodu.",
+        "Incydent może jeszcze wygenerować osobny komunikat przewoźnika lub regulatorów, co szybko podbiłoby jego wagę."
+      ],
+      "whyItMatters": "Nawet omyłkowy alarm porwania pokazuje, jak szybko standardowa operacja lotnicza może przerodzić się w międzynarodowy incydent bezpieczeństwa.",
+      "context": "W poprzednim slocie krajowy blok był zdominowany przez zdrowie i energetykę. Teraz główną nową kartą staje się bezpieczeństwo lotnicze.",
+      "watchNext": [
+        "Czy PLL LOT lub izraelskie służby opublikują własny szczegółowy komunikat o przebiegu zdarzenia.",
+        "Czy incydent wywoła pytania o procedury alarmowe na trasach do regionów wysokiego ryzyka."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Lecieli z Warszawy, pilot wszczął alarm \"przez pomyłkę\". Izrael poderwał myśliwce",
+          "url": "https://tvn24.pl/polska/lecieli-z-warszawy-pilot-wszczal-alarm-przez-pomylke-izrael-poderwal-mysliwce-st9121895?source=rss"
+        }
+      ],
+      "tags": [
+        "LOT",
+        "Izrael",
+        "Lotnictwo",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-1800-03-prm",
+      "section": "Alerty",
+      "title": "Upał winduje obciążenie pogotowia, a dyspozytorzy odbierają blisko 20 tysięcy zgłoszeń",
+      "lead": "Fala gorąca przestaje być tylko tłem pogodowym i zaczyna przeciążać państwowy system ratownictwa.",
+      "whatHappened": "TVN24 Warszawa podało, że tylko w poniedziałek dyspozytorzy medyczni w Polsce odebrali blisko 20 tysięcy zgłoszeń. Krajowe Centrum Monitorowania Ratownictwa Medycznego oceniło, że system Państwowego Ratownictwa Medycznego pracuje pod rekordowym obciążeniem, a jedną z głównych przyczyn jest ekstremalny upał.",
+      "keyFacts": [
+        "Skala obciążenia została opisana jako rekordowa przez Krajowe Centrum Monitorowania Ratownictwa Medycznego.",
+        "Mowa o blisko 20 tysiącach zgłoszeń w jeden dzień.",
+        "Upał przestaje być tylko prognozą pogodową i przekłada się na realne obciążenie służb."
+      ],
+      "reactions": [
+        "To karta, która wzmacnia alertowy charakter slotu i dobrze łączy się z tematem frontów oraz burz.",
+        "Jeśli liczba interwencji dalej wzrośnie, temat może szybko przeskoczyć do pierwszej pozycji w kolejnym runie."
+      ],
+      "whyItMatters": "Wysokie temperatury stają się problemem operacyjnym dla ratownictwa i bezpośrednio wpływają na bezpieczeństwo zdrowotne mieszkańców.",
+      "context": "Slot 15:02 pokazywał zdrowie głównie przez pryzmat NFZ. O 18:00 zdrowie wraca w dużo bardziej natychmiastowej, ratunkowej odsłonie.",
+      "watchNext": [
+        "Czy służby podadzą nowe dane o liczbie zgłoszeń i interwencji wieczorem lub następnego dnia rano.",
+        "Czy pojawią się dodatkowe ostrzeżenia dla seniorów, dzieci i osób pracujących na zewnątrz."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Warszawa: Wysoka temperatura i \"rekordowe obciążenie\" pogotowia ratunkowego",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/upaly-i-rekordowe-obciazenie-pogotowia-ratunkowego-st9121706?source=rss"
+        }
+      ],
+      "tags": [
+        "Upał",
+        "Pogotowie",
+        "Ratownictwo",
+        "Zdrowie"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-1800-04-ilawa",
+      "section": "Polska",
+      "title": "Po paczce, która zraniła policjanta w Iławie, sąd aresztuje 69-letniego podejrzanego",
+      "lead": "Sprawa przechodzi z fazy chaosu i ewakuacji komendy do formalnego zatrzymania i aresztu.",
+      "whatHappened": "Policja Warmińsko-Mazurska podała, że ustalono i zatrzymano 69-latka podejrzanego o przygotowanie przesyłki, która trafiła do mieszkanki Iławy, a później do komendy policji, gdzie po rozszczelnieniu zraniła policjanta i wymusiła ewakuację jednostki. TVN24 podało, że sąd zastosował wobec mężczyzny trzymiesięczny areszt.",
+      "keyFacts": [
+        "Po otwarciu przesyłki w komendzie doszło do gwałtownej reakcji substancji i interwencji służb.",
+        "Policja informuje o zabezpieczeniu dowodów wskazujących na udział zatrzymanego 69-latka.",
+        "Sąd zastosował wobec podejrzanego tymczasowy areszt."
+      ],
+      "reactions": [
+        "To temat o wysokiej wartości operacyjnej, bo łączy bezpieczeństwo publiczne z postępem śledczym i oficjalnym źródłem.",
+        "Formalne aresztowanie podnosi wagę sprawy względem wcześniejszego etapu samej ewakuacji i urazu policjanta."
+      ],
+      "whyItMatters": "Historia pokazuje, że lokalny incydent z przesyłką nie zatrzymał się na alarmie w komendzie, tylko wszedł w etap poważnych zarzutów i aresztu.",
+      "context": "W poprzednim slocie tej karty nie było. To nowy, materialny krajowy temat w bloku bezpieczeństwa.",
+      "watchNext": [
+        "Jakie dokładnie zarzuty utrzyma prokuratura po dalszych czynnościach.",
+        "Czy śledczy ujawnią więcej o motywie i składzie niebezpiecznej zawartości."
+      ],
+      "sources": [
+        {
+          "title": "Policja Warmińsko-Mazurska: Wysłał paczkę z niebezpieczną zawartością. 69-latek został zatrzymany",
+          "url": "https://warminsko-mazurska.policja.gov.pl/ol/aktualnosci/153451%2CWyslal-paczke-z-niebezpieczna-zawartoscia-69-latek-zostal-zatrzymany.html"
+        },
+        {
+          "title": "TVN24: Policjant ranny po otwarciu paczki. Zatrzymano 69-latka",
+          "url": "https://tvn24.pl/olsztyn/ilawa-przesylka-zamiast-do-adresatki-trafila-do-komendy-69-latek-aresztowany-st9121827?source=rss"
+        }
+      ],
+      "tags": [
+        "Iława",
+        "Policja",
+        "Przesyłka",
+        "Śledztwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-1800-05-doha",
+      "section": "Świat",
+      "title": "Doha przyjmuje wysłanników USA, ale Katar wyklucza bezpośrednie rozmowy z Iranem",
+      "lead": "Dyplomacja wokół Iranu trwa, lecz gospodarze studzą oczekiwania co do przełomu twarzą w twarz.",
+      "whatHappened": "BBC i CNN podały, że w Dosze są wysłannicy USA Steve Witkoff i Jared Kushner, którzy rozmawiają z katarskimi mediatorami. Jednocześnie rzecznik katarskiego MSZ zaznaczył, że nie zaplanowano tam żadnych bezpośrednich rozmów ani wysokiego szczebla spotkania między USA a Iranem.",
+      "keyFacts": [
+        "W Dosze trwają rozmowy przez mediatorów, a nie bezpośredni format amerykańsko-irański.",
+        "Katar oficjalnie schłodził wcześniejsze oczekiwania dotyczące szybkiego przełomu.",
+        "Temat dotyczy jednego z najbardziej niestabilnych kierunków geopolitycznych dnia."
+      ],
+      "reactions": [
+        "To wciąż wysoka karta bezpieczeństwa, ale nowy przekaz z Kataru przesuwa ją z narracji o możliwym spotkaniu na narrację o ograniczeniach i dystansie.",
+        "W praktyce jeden komunikat z Doszy może jeszcze dziś całkowicie przestawić rangę tej historii."
+      ],
+      "whyItMatters": "Rozbieżność między sygnałami politycznymi a oficjalnym stanowiskiem gospodarza pokazuje, jak kruchy i wielowarstwowy pozostaje kanał rozmów wokół Iranu.",
+      "context": "W slocie 15:02 karta o Dosze opierała się głównie na sygnale z CNN. O 18:00 dostaje mocniejsze potwierdzenie i bardziej precyzyjny limit oczekiwań z BBC.",
+      "watchNext": [
+        "Czy Katar lub USA ogłoszą konkretny wynik rozmów z mediatorami.",
+        "Czy pojawi się jakikolwiek ślad bezpośredniego kontaktu z przedstawicielami Iranu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US envoys in Doha to meet mediators but not Iranians, Qatar says",
+          "url": "https://www.bbc.co.uk/news/articles/cpd38x1dy4no?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN live: US envoys arrive in Qatar for talks with mediators about Iran",
+          "url": "https://edition.cnn.com/2026/06/30/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "Katar",
+        "Dyplomacja"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-1800-06-venezuela",
+      "section": "Świat",
+      "title": "W Wenezueli rośnie gniew po trzęsieniach, bo mieszkańcy mówią o zaniedbanej pomocy",
+      "lead": "Po fazie ratunku historia przechodzi w oskarżenia o zbyt słabą odpowiedź państwa.",
+      "whatHappened": "BBC podało, że mieszkańcy najbardziej zniszczonych terenów Wenezueli oskarżają władze o zaniedbania po serii trzęsień ziemi i domagają się większej pomocy. CNN nadal opisuje przeciążone szpitale i dramatyczne warunki ratunkowe, co wzmacnia obraz kryzysu wykraczającego poza sam moment katastrofy.",
+      "keyFacts": [
+        "BBC wskazuje na narastający społeczny gniew wobec reakcji państwa.",
+        "CNN opisuje placówki medyczne pracujące ponad możliwości.",
+        "Temat przesuwa się z ratownictwa doraźnego na ocenę zdolności państwa do reagowania."
+      ],
+      "reactions": [
+        "Ta karta pozostaje ważna, ale jej oś zmienia się z samego zniszczenia na polityczno-społeczną odpowiedzialność za pomoc.",
+        "Jeżeli pojawią się nowe bilanse lub protesty, temat może wrócić jeszcze wyżej w feedzie."
+      ],
+      "whyItMatters": "Skutki katastrofy naturalnej przechodzą w kryzys zaufania do państwa i sprawności instytucji publicznych.",
+      "context": "W slocie 15:02 dominował obraz ludzi samodzielnie odgruzowujących miasta i przeciążonych szpitali. O 18:00 dochodzi mocniejszy komponent gniewu wobec władz.",
+      "watchNext": [
+        "Czy rząd ogłosi dodatkową pomoc albo odpowie na zarzuty o zaniedbania.",
+        "Czy szpitale dostaną wsparcie, które obniży presję na personel i zaopatrzenie."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Angry Venezuelans accuse government of negligence over earthquake response",
+          "url": "https://www.bbc.co.uk/news/articles/c5yzd18dxzxo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: The smell of death lingers in Venezuela’s ruined streets as overwhelmed hospitals race to save lives",
+          "url": "https://edition.cnn.com/2026/06/30/americas/venezuela-earthquakes-hospital-latam-intl"
+        }
+      ],
+      "tags": [
+        "Wenezuela",
+        "Trzęsienie ziemi",
+        "Pomoc",
+        "Szpitale"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-1800-07-rpa",
+      "section": "Świat",
+      "title": "Marsze antyimigracyjne w RPA wchodzą na ulice pod ciężką osłoną policji",
+      "lead": "Protest przestał być tylko groźbą w sieci i wszedł w fazę dużej mobilizacji ulicznej.",
+      "whatHappened": "BBC podało, że tysiące osób wyszły w RPA na antyimigracyjne marsze pod silną obecnością policji. Część cudzoziemców opuściła kraj jeszcze przed upływem ultimatum stawianego przez wrogie migrantom grupy.",
+      "keyFacts": [
+        "Protesty mają już skalę uliczną i wymagają cięższego zabezpieczenia policyjnego.",
+        "BBC podaje, że część obcokrajowców wyjechała jeszcze przed terminem ultimatum.",
+        "Temat łączy bezpieczeństwo publiczne, migrację i ryzyko przemocy zbiorowej."
+      ],
+      "reactions": [
+        "To jedna z bardziej zapalnych kart zagranicznych, bo wydarzenia mogą szybko przeskoczyć z demonstracji do ataków.",
+        "Przy braku szybkiej deeskalacji temat może utrzymać się także w nocnym i porannym slocie."
+      ],
+      "whyItMatters": "Ulica, migracja i presja tłumu tworzą mieszankę, która może błyskawicznie przejść w realne zagrożenie dla ludzi i mienia.",
+      "context": "W slocie 15:02 karta mówiła głównie o wejściu protestów w dzień mobilizacji. O 18:00 ważniejsze jest już to, że masowe wyjście na ulice realnie trwa.",
+      "watchNext": [
+        "Czy policja zgłosi przemoc, zatrzymania lub ofiary.",
+        "Czy rząd RPA zabierze głos w sprawie ultimatum i ochrony cudzoziemców."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Thousands of anti-migrant protesters march in South Africa amid heavy police presence",
+          "url": "https://www.bbc.co.uk/news/articles/cy4eq1l184po?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "RPA",
+        "Migracja",
+        "Protesty",
+        "Policja"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-1800-08-senegal",
+      "section": "Świat",
+      "title": "Parlament Senegalu chce przyciąć władzę prezydenta, a przed izbą wybuchają protesty",
+      "lead": "Spór konstytucyjny wychodzi z sali obrad na ulicę i dokłada nowy polityczny front w Afryce Zachodniej.",
+      "whatHappened": "BBC podało, że większość parlamentarzystów Senegalu uzgodniła zmiany ograniczające część uprawnień prezydenta. Propozycje wywołały protesty przed parlamentem, co sygnalizuje szybkie przeniesienie napięcia politycznego z procesu legislacyjnego do sfery ulicznej.",
+      "keyFacts": [
+        "Zmiany uzyskały poparcie większości deputowanych.",
+        "Spór natychmiast wywołał protesty przed parlamentem.",
+        "To nowa zagraniczna karta polityczna, której nie było w slocie 15:02."
+      ],
+      "reactions": [
+        "Historia jest nowa w feedzie i daje sygnał, że obok czystych kryzysów bezpieczeństwa warto utrzymać także wątki ustrojowe.",
+        "Jeśli protesty się rozszerzą albo prezydent odpowie ostrzej, temat może szybko wejść wyżej."
+      ],
+      "whyItMatters": "Zmiany w balansie władzy i szybka reakcja ulicy potrafią przełożyć się na destabilizację polityczną w regionie.",
+      "context": "W poprzednim slocie tej karty nie było. To świeży materiał dodający nowy kierunek geograficzny i polityczny.",
+      "watchNext": [
+        "Czy prezydent lub jego obóz odrzucą projekt albo uruchomią kontrmobilizację.",
+        "Czy protesty pozostaną pokojowe, czy przejdą w starcia z policją."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Senegalese MPs move to clip presidential powers as tensions mount",
+          "url": "https://www.bbc.co.uk/news/articles/cgl352xjgngo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Senegal",
+        "Parlament",
+        "Prezydent",
+        "Protesty"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-30-1800-09-ghana",
+      "section": "Świat",
+      "title": "Akra liczy ofiary powodzi, a służby ostrzegają przed kolejną burzą",
+      "lead": "Katastrofa pogodowa w stolicy Ghany nie kończy się na pierwszym bilansie i może jeszcze uderzyć mocniej.",
+      "whatHappened": "BBC podało, że powodzie w Akrze zabiły co najmniej 13 osób. Służby wezwały mieszkańców do pozostania w domach albo przeniesienia się na wyżej położone tereny, bo prognozowana jest kolejna burza.",
+      "keyFacts": [
+        "Bilans ofiar wynosi co najmniej 13 osób.",
+        "Władze i służby ostrzegają przed następną falą deszczu.",
+        "Historia łączy katastrofę pogodową z natychmiastowym komponentem ostrzegawczym."
+      ],
+      "reactions": [
+        "Ta karta pozostaje ważna, bo przy kolejnych opadach sama liczba ofiar może szybko wzrosnąć.",
+        "To jeden z wyraźniejszych sygnałów, że ekstremalna pogoda staje się dziś globalnym motywem, nie tylko polskim."
+      ],
+      "whyItMatters": "Połączenie potwierdzonych ofiar i ryzyka kolejnej ulewy czyni z tego tematu nadal aktywny, a nie zamknięty epizod.",
+      "context": "W slocie 15:02 temat pojawił się już w feedzie. O 18:00 zostaje, bo ryzyko kolejnego uderzenia pogodowego nadal go utrzymuje.",
+      "watchNext": [
+        "Czy nowa burza podbije liczbę ofiar i skalę zniszczeń.",
+        "Czy władze wprowadzą dodatkowe ewakuacje lub zamknięcia kluczowych dróg."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Flooding hits Ghana's capital killing 13 people - with another storm forecast",
+          "url": "https://www.bbc.co.uk/news/articles/cn4r8zlv8edo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Ghana",
+        "Akra",
+        "Powódź",
+        "Pogoda"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-1800-10-us-sports",
+      "section": "Świat",
+      "title": "Sąd Najwyższy USA pozwala stanom wykluczać transpłciowe zawodniczki z kobiecego sportu szkolnego",
+      "lead": "Nowy wyrok dokłada kolejny rozdział do amerykańskiej wojny prawnej i kulturowej.",
+      "whatHappened": "BBC podało, że Sąd Najwyższy USA utrzymał możliwość wprowadzania przez stany zakazów startu transpłciowych zawodniczek w kobiecym sporcie szkolnym i akademickim. To kolejna decyzja sądu najwyższej instancji, która bezpośrednio wpływa na krajowe spory prawne i polityczne w Stanach Zjednoczonych.",
+      "keyFacts": [
+        "Wyrok dotyczy sportu szkolnego i college'owego.",
+        "Sąd uznał, że stanowe zakazy mogą pozostać w mocy.",
+        "Temat ma wymiar prawny, społeczny i polityczny jednocześnie."
+      ],
+      "reactions": [
+        "To nowa karta USA w tym slocie, wyraźnie odmienna od wcześniejszej ogólnej analizy dnia dla Trumpa.",
+        "Decyzja może bardzo szybko wywołać reakcje stanów, organizacji sportowych i grup praw obywatelskich."
+      ],
+      "whyItMatters": "To decyzja, która wpływa nie tylko na sport, ale też na kształt amerykańskich sporów o prawa, edukację i kompetencje stanów.",
+      "context": "W slocie 15:02 amerykański blok dotyczył głównie bilansu zwycięstw i porażek Trumpa przed Sądem Najwyższym. O 18:00 pojawia się nowa, bardziej konkretna decyzja społeczno-prawna.",
+      "watchNext": [
+        "Czy poszczególne stany i uczelnie ogłoszą szybkie skutki wykonawcze wyroku.",
+        "Czy organizacje praw obywatelskich zapowiedzą nowe ścieżki prawne lub protesty."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US Supreme Court upholds bans on transgender women in female school and college sports",
+          "url": "https://www.bbc.co.uk/news/articles/cj40x888d9go?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Sąd Najwyższy",
+        "Sport",
+        "Prawo"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-30-1800-11-china-robots",
+      "section": "Technologia",
+      "title": "W Chinach wyrasta rynek wynajmu robotów humanoidalnych zamiast realnego użytku domowego",
+      "lead": "Nowa fala AI wygląda bardziej jak handel uwagą i sprzętem niż spokojna automatyzacja codzienności.",
+      "whatHappened": "CNN opisało przypadki chińskich właścicieli humanoidalnych robotów, którzy kupują je nie po to, by wykonywały domowe zadania, lecz by od razu wynajmować je innym. Historia pokazuje, że bieżący popyt na humanoidy ma dziś także wymiar spekulacyjny i medialny, a nie wyłącznie użytkowy.",
+      "keyFacts": [
+        "CNN opisuje model biznesowy oparty na wynajmie robotów po zakupie.",
+        "Popyt nie wynika wyłącznie z dojrzałej użyteczności sprzętu w domu.",
+        "To nowa technologiczna karta w feedzie, bardziej konkretna niż ogólne dyskusje o AI."
+      ],
+      "reactions": [
+        "Temat jest dobrym, lżejszym kontrapunktem dla ciężkich kart geopolitycznych i bezpieczeństwa, ale nadal pokazuje realny trend rynkowy.",
+        "Jeśli podobne przykłady się rozmnożą, może to stać się ważniejszym sygnałem o bańce oczekiwań wokół humanoidów."
+      ],
+      "whyItMatters": "Różnica między obietnicą użyteczności a faktycznym sposobem monetyzacji mówi dużo o obecnej fazie rozwoju rynku AI i robotyki konsumenckiej.",
+      "context": "W slocie 15:02 technologia była związana z wojną i łącznością satelitarną. O 18:00 blok technologiczny przechodzi na rynek AI i humanoidów.",
+      "watchNext": [
+        "Czy pojawią się dane o skali wynajmu i opłacalności tego modelu.",
+        "Czy producenci robotów zaczną mocniej promować zastosowania pokazowe zamiast domowych."
+      ],
+      "sources": [
+        {
+          "title": "CNN: China humanoid robot rental story",
+          "url": "https://edition.cnn.com/2026/06/30/tech/china-humanoid-robot-ai-rental-intl-hnk-dst"
+        }
+      ],
+      "tags": [
+        "Chiny",
+        "AI",
+        "Roboty humanoidalne",
+        "Rynek"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-30-1800-12-monaco",
+      "section": "Bezpieczeństwo",
+      "title": "Monako i Francja prowadzą szeroką obławę po bombie wymierzonej w ukraińskiego biznesmena",
+      "lead": "Śledczy coraz wyraźniej opisują atak jako próbę zabójstwa, a nie jednorazowy incydent bez szerszego tła.",
+      "whatHappened": "BBC i CNN podały, że po wybuchu paczki w Monako trwa szeroka obława obejmująca księstwo i Francję. Śledczy traktują sprawę jako próbę zabójstwa ukraińskiego biznesmena, a nie akt terroru, a według BBC w urządzeniu były elementy rażące w rodzaju śrub i kulek.",
+      "keyFacts": [
+        "W wyniku wybuchu ucierpiały trzy osoby.",
+        "Obława obejmuje nie tylko Monako, ale też terytorium Francji.",
+        "Wersja o próbie zabójstwa wzmacnia polityczno-kryminalny ciężar tej historii."
+      ],
+      "reactions": [
+        "Mimo że temat był obecny już o 15:02, pozostaje w feedzie, bo śledztwo dalej się rozwija i ma ponadlokalny zasięg.",
+        "Każda informacja o sprawcach lub motywie może jeszcze dziś całkowicie zmienić rangę tej karty."
+      ],
+      "whyItMatters": "To nie wygląda na zamknięty incydent, tylko na rozwojową sprawę z międzynarodowym wymiarem bezpieczeństwa i śledztwa.",
+      "context": "W slocie 15:02 temat Monako już był, ale wieczorem zostaje utrzymany ze względu na szeroką obławę i coraz precyzyjniejszą kwalifikację ataku.",
+      "watchNext": [
+        "Czy śledczy wskażą sprawców lub źródło użytego ładunku.",
+        "Czy pojawią się oficjalne informacje o motywie i stanie rannych."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Manhunt after bomb injures Ukrainian oligarch in Monaco",
+          "url": "https://www.bbc.co.uk/news/articles/cpv37wx03v7o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Manhunt after Monaco bomb attack wounds Ukrainian tycoon in attempted assassination",
+          "url": "https://edition.cnn.com/2026/06/30/world/monaco-manhunt-explosion-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Monako",
+        "Francja",
+        "Bomba",
+        "Śledztwo"
+      ],
+      "priority": "High"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "IMGW: Aktualna i prognozowana sytuacja meteorologiczna i hydrologiczna – raport nr 135",
+      "url": "https://imgw.pl/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-135/"
+    },
+    {
+      "title": "Policja Warmińsko-Mazurska: Wysłał paczkę z niebezpieczną zawartością. 69-latek został zatrzymany",
+      "url": "https://warminsko-mazurska.policja.gov.pl/ol/aktualnosci/153451%2CWyslal-paczke-z-niebezpieczna-zawartoscia-69-latek-zostal-zatrzymany.html"
+    },
+    {
+      "title": "BBC: US envoys in Doha to meet mediators but not Iranians, Qatar says",
+      "url": "https://www.bbc.co.uk/news/articles/cpd38x1dy4no?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "CNN: China humanoid robot rental story",
+      "url": "https://edition.cnn.com/2026/06/30/tech/china-humanoid-robot-ai-rental-intl-hnk-dst"
+    },
+    {
+      "title": "BBC: Thousands of anti-migrant protesters march in South Africa amid heavy police presence",
+      "url": "https://www.bbc.co.uk/news/articles/cy4eq1l184po?at_medium=RSS&at_campaign=rss"
+    }
+  ]
+}
