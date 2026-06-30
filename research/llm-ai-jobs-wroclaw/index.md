@@ -1,26 +1,29 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-06-30 01:41 CEST
+Last updated: 2026-07-01 01:41 CEST
 
 ## Current Understanding
 
-Runda z `2026-06-30 01:41 CEST` dołożyła nowy batch ról wokół production AI i
-AI infra: `Sigmoidal (AI) Software Engineer 3.0`, `DataArt AI Developer`,
-`Pretius AI Engineer`, `Upvanta Data/MLOps Engineer – CT&C`, `EPAM
-Generative AI Operations Engineer (GenAI Ops)` oraz `Vazco Senior Full Stack
-& AI Developer`.
+Runda z `2026-07-01 01:41 CEST` domknęła zaległy, ale materialny sweep
+publicznych ról z `27-30 Jun`, które nie były jeszcze zapisane w
+`Seen Opportunities`: `Capgemini Senior Agentic AI Developer`,
+`EPAM Senior .NET AI Engineer`, `RITS Senior AI Engineer`,
+`Montrose Applied AI Engineer`, `Espeo AI Solutions Engineer` oraz dwa osobne
+wektory `Awareson` (`Senior Data & AI Engineer` i `MLOps / LLMOps Engineer`).
+Najmocniejszy sygnał tej rundy to przesunięcie shortlisty w stronę
+produkcyjnego agentic delivery, retrieval/evaluation i AI platform engineering,
+a nie tylko pojedynczych integracji LLM.
 
-Najważniejsza materialna zmiana na już śledzonej liście dotyczy `XTB Senior AI
-Engineer`, który wrócił na mocniejszy publiczny wariant `Warsaw +4 / Remote`
-z jawnym wynagrodzeniem i bardziej jednoznacznym opisem platform engineeringu
-dla `LLM integration` i `agentic workflows`. Równolegle wcześniejsza
-board-first karta `BigTime Senior AI Developer with LLM Orchestration...`
-wygląda dziś na misatrybucję do już śledzonej rodziny `DataArt`, a nie na
-stabilną, odrębną ofertę `BigTime`.
+Najważniejsza obserwacja deduplikacyjna jest taka, że część nowych kart była
+już publiczna przed tą rundą, ale nie była jeszcze utrwalona w indeksie.
+Status pozostaje więc `Material update`, ale trzeba odróżniać role nowo
+wykryte przez repo od ról dopiero co opublikowanych na rynku.
 
-Największa nowa niepewność dotyczy `Holisticon Connect ML Software Engineer`:
-oficjalna strona jest publiczna i w-scope, ale pokazuje deadline `22 May
-2026`, podczas gdy publiczny mirror `Just Join IT` nadal jest live.
+Na sprawdzonych dziś źródłach `Sii GenAI & Cloud` oraz `CKSource / Tiugo`
+nie zaszła nowa materialna zmiana względem poprzedniego stanu. Nadal warto też
+pilnować `Holisticon Connect ML Software Engineer`, bo konflikt między
+oficjalnym deadline'em `22 May 2026` i żyjącym board mirror nadal nie został
+wyjaśniony.
 
 ## Stable Facts
 
@@ -87,7 +90,7 @@ only when something meaningful changes.
 | acaisoft-senior-machine-learning-ai-engineer-rl-remote-poland | ACAISOFT POLAND Sp. z o.o. | Senior Machine Learning /AI Engineer (RL) | Remote Poland | 2026-06-23-1741 | 2026-06-24-1921 | Open | Initial capture: official Acaisoft role; `100% remote`; AI-agent evaluation, LLM performance analysis, RL environments, `LangChain`, `LangGraph`, `RAG` and inference services for voice agents; public pay field shows `170-230 PLN`, but the unit is rendered ambiguously on the page. 2026-06-24-1921: official detail page now renders `170-230 PLN` as `netto per month - B2B`, which still looks internally inconsistent and keeps the compensation unit unresolved. | [Acaisoft](https://www.acaisoft.com/job/machine-learning-engineer) |
 | epam-junior-agentic-automation-engineer-hybrid-poland | EPAM Systems | Junior Agentic Automation Engineer | Hybrid Poland | 2026-06-23-1741 | 2026-06-23-1741 | Open | Initial capture: official EPAM role; `Hybrid in Poland`; hands-on agentic workflows with `LLM`, `n8n`, `AgentKit` or `UiPath`, prompt tuning, model parameters, `RAG`, grounding and monitoring; salary not public. | [EPAM](https://careers.epam.com/en/vacancy/junior-agentic-automation-engineer-bltvjweudh300xzvzss_en) |
 | epam-lead-ai-engineer-remote-poland | EPAM Systems | Lead AI Engineer | Remote Poland | 2026-06-24-1921 | 2026-06-24-1921 | Open | Initial capture: official EPAM role; `Remote in Poland`; end-to-end AI apps, chatbots, Q&A platforms, agent workflows, prompt strategies, data pipelines and `OpenAI`/`Anthropic`/`Bedrock`/`Gemini` stacks. | [EPAM](https://careers.epam.com/en/vacancy/lead-ai-engineer-bltfuun168yb6pyy1lp_en) |
-| epam-senior-cloud-native-developer-python-ai-remote-poland | EPAM Systems | Senior Cloud Native Developer (Python & AI) | Remote Poland | 2026-06-24-1921 | 2026-06-24-1921 | Open | Initial capture: official EPAM role; `Remote in Poland`; cloud-native Python plus `LLM-based applications`, `RAG pipelines`, `AI agents`, observability and IaC. | [EPAM](https://careers.epam.com/en/vacancy/senior-cloud-native-developer-python-ai-bltce99bd427bf423c0_en) |
+| epam-senior-cloud-native-developer-python-ai-remote-poland | EPAM Systems | Senior Cloud Native Developer (Python & AI) | Remote Poland | 2026-06-24-1921 | 2026-06-30-1805 | Open | Initial capture: official EPAM role; `Remote in Poland`; cloud-native Python plus `LLM-based applications`, `RAG pipelines`, `AI agents`, observability and IaC. 2026-06-30-1805: a new Wrocław mirror surfaced on Just Join IT with the same core scope and a Wrocław office location, so the family is now visible as both remote Poland and a Wrocław hybrid/remote alias. | [EPAM](https://careers.epam.com/en/vacancy/senior-cloud-native-developer-python-ai-bltce99bd427bf423c0_en) / [Just Join IT Wrocław mirror](https://justjoin.it/job-offer/epam-systems-senior-cloud-native-developer-python-ai--wroclaw-python) |
 | epam-senior-platform-engineer-remote-poland | EPAM Systems | Senior Platform Engineer | Remote Poland | 2026-06-24-1921 | 2026-06-24-1921 | Open | Initial capture: official EPAM role; `Remote in Poland`; self-service platform engineering with `GenAI`, `AI agents`, `AIOps`, Kubernetes and infrastructure-as-code tooling. | [EPAM](https://careers.epam.com/en/vacancy/senior-platform-engineer-blt0210e551862e3687_en) |
 | epam-senior-ai-engineer-remote-poland | EPAM Systems | Senior AI Engineer | Remote Poland | 2026-06-24-1921 | 2026-06-24-1921 | Open | Initial capture: official EPAM role; `Remote in Poland`; conversational AI agents, fine-tuning, `LoRA`, `FT vs RAG`, prompt libraries, evaluation protocols and cloud CI/CD. | [EPAM](https://careers.epam.com/en/vacancy/senior-ai-engineer-bltimzj3s4lsusq7gfo_en) |
 | acaisoft-python-engineer-with-cpp-ai-project-remote | ACAISOFT POLAND Sp. z o.o. | Python Engineer with C++ (AI project) | Remote | 2026-06-24-1921 | 2026-06-24-1921 | Open | Initial capture: official Acaisoft role; `Remote`; AI evaluation and optimization, RL training environment, sandboxed code execution, automated test generation, grading harnesses and model benchmarking. Compensation field shows `160-200 PLN`, but the page renders the unit as `netto per month - B2B`, which looks inconsistent. | [Acaisoft](https://www.acaisoft.com/job/python-engineer-with-c-ai-project) |
@@ -163,6 +166,14 @@ only when something meaningful changes.
 | justjoin-vazco-ai-technical-lead-wroclaw | Vazco | AI Technical Lead | Wrocław + remote | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: `23 000-28 800 PLN net/mies. B2B`; `multi-agent architectures`, `RAG`, `MCP`, evaluation and observability; more lead-shaped, but very hands-on AI. | [Vazco on Just Join IT](https://justjoin.it/job-offer/vazco-ai-technical-lead-wroclaw-ai-91eb2411) |
 | justjoin-bigtime-senior-ai-developer-llm-orchestration-intelligent-knowledge-platform-wroclaw-hybrid | BigTime | Senior AI Developer with LLM Orchestration, Intelligent Knowledge Platform | Wrocław hybrid | 2026-06-29-1741 | 2026-06-30-0141 | Merged with dataart-senior-ai-developer-llm-orchestration-intelligent-knowledge-platform-wroclaw-remote | Initial capture: `26 000-31 000 PLN/month`; `graph data modeling`, `LLMs`, `AI Systems`, `RAG`, `Python`; board-first but very relevant LLM product role. 2026-06-30-0141: current public detail pages and the canonical DataArt vacancy `ml00159` point to `DataArt`, not `BigTime`; treat this 2026-06-29 board capture as a misattributed duplicate of the existing DataArt role family. | [Just Join IT Wrocław AI/ML board](https://justjoin.it/job-offers/wroclaw/ai) / [DataArt](https://www.dataart.team/vacancies/ml00159) |
 | justjoin-holisticon-insight-ai-ml-platform-engineer-wroclaw-remote | Holisticon Insight | AI/ML Platform Engineer | Wrocław + remote | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: `15 000-25 000 PLN/month`; `ASR/TTS/LLM`, `Agentic Coding`; current board-first signal around AI/ML platform work. | [Just Join IT all-locations AI/ML board](https://justjoin.it/job-offers/all-locations/ai) |
+| epam-senior-ai-qa-engineer-automation-manual-ai-based-applications-testing-wroclaw-testing | EPAM Systems | Senior AI QA Engineer (Automation & Manual, AI-based Applications Testing) | Wrocław / remote | 2026-06-30-1805 | 2026-06-30-1805 | Open | Initial capture: Wrocław office location with remote; GenAI feature evaluation, `grounding`, answer accuracy, determinism/reproducibility, precision/recall, `pytest`, AI agents and LLM test harnesses. | [Just Join IT](https://justjoin.it/job-offer/epam-systems-senior-ai-qa-engineer-automation-manual-ai-based-applications-testing--wroclaw-testing) |
+| team-up-senior-devops-engineer-ai-automation-wroclaw | Team Up | Senior DevOps Engineer - AI/Automation (m/k) | Wrocław / hybrid | 2026-06-30-1805 | 2026-06-30-1805 | Open | Initial capture: `plac Nowy Targ, Wrocław`; infrastructure for AI process automation, `Terraform`, `CI/CD`, monitoring/logging/alerting, AI agents, self-service, DR/BCP and security/compliance. | [Just Join IT](https://justjoin.it/job-offer/team-up-senior-devops-engineer---ai-automation-m-k--wroclaw-ai) |
+| capgemini-copilot-studio-developer-power-platform-wroclaw | Capgemini | Copilot Studio Developer (Power Platform) | Wrocław + PL locations / hybrid | 2026-06-30-1805 | 2026-06-30-1805 | Open | Initial capture: official Capgemini page posted on `30 Jun 2026`; design, develop and maintain enterprise AI assistants using Microsoft Copilot Studio, Azure AI and Power Platform; Wrocław plus Kraków/Poznań/Gdańsk/Warszawa/Katowice. A matching Just Join IT mirror also surfaced under `Senior AI Assistant Engineer (Copilot Studio, Power Platform)`. | [Capgemini Careers](https://careers.capgemini.com/job/Wroc%C5%82aw-Senior-AI-Assistant-Engineer-%28Copilot-Studio%2C-Power-Platform%29/1290645001/) |
+| pko-bp-finat-inzynier-machine-learning-mlops-senior-warszawa | PKO BP Finat | Inżynier Machine learning/MLOPS Senior | Warszawa / hybrid | 2026-06-30-1805 | 2026-06-30-1805 | Open | Initial capture: `Chmielna 89, Warszawa`, hybrid `1 dzień w tygodniu` w biurze; end-to-end MLOps, ML/LLM, `Python`, `Kubernetes`, `GCP`, CI/CD, monitoring, governance i stabilne środowisko produkcyjne. | [Just Join IT](https://justjoin.it/job-offer/pko-bp-finat-inzynier-machine-learning-mlops-senior-warszawa-ai) |
+| xtb-senior-software-ai-developer-business-intelligence-warszawa | XTB | Senior Software AI Developer (Business Intelligence) | Warszawa / remote | 2026-06-30-1805 | 2026-06-30-1805 | Open | Initial capture: `5 489-7 265 USD gross/month`; `Prosta 67, Warszawa`; remote; internal BI tooling with `RAG`, natural-language data querying, `Python`, `Django/FastAPI`, `React/TypeScript`, Docker and CI/CD. | [Just Join IT](https://justjoin.it/job-offer/xtb-senior-software-ai-developer-business-intelligence--warszawa-ai) |
+| tenarai-ai-platform-engineer-gcp-krakow-remote | Tenarai | AI Platform Engineer (GCP) | Kraków +4 / remote | 2026-06-30-1805 | 2026-06-30-1805 | Open | Initial capture: `37 - 43 USD net/h B2B`; `Lead AI Forward Deployment Engineer (GCP)` / `Special Ops Engineer`; `Vertex AI`, `Model Armor`, `Cloud Armor`, `GKE`, Python microservices/APIs and client deployments into enterprise environments. | [Just Join IT](https://justjoin.it/job-offer/tenarai-ai-platform-engineer-gcp--krakow-ai) |
+| lekta-ai-ai-ml-platform-engineer-krakow-remote | Lekta AI | AI/ML Platform Engineer | Kraków / remote | 2026-06-30-1805 | 2026-06-30-1805 | Open | Initial capture: `4 023-6 706 USD net/month`; owning the full AI/ML stack behind conversational agents, including language models, ASR/TTS, retrieval and grounding, and evaluation discipline. | [Just Join IT](https://justjoin.it/job-offer/lekta-ai-ai-ml-platform-engineer-krakow-ai) |
+| emagine-senior-ai-engineer-python-genai-gcp-wroclaw-remote | emagine Polska | Senior AI Engineer (Python, GenAI, GCP) | Wrocław +4 / remote | 2026-06-30-1805 | 2026-06-30-1805 | Open | Initial capture: `7 713-9 708 USD/month`; Wrocław +4 Locations; remote; GCP, Google Kubernetes Engine, Terraform, Google Vertex, Cloud Run and a strong AI platform / GenAI cloud stack. | [Just Join IT](https://justjoin.it/job-offer/emagine-polska-senior-ai-engineer-python-genai-gcp--wroclaw-ai) |
 | sigmoidal-ai-software-engineer-3-0-wroclaw-remote | Sigmoidal | (AI) Software Engineer 3.0 | Wrocław / remote Poland | 2026-06-30-0141 | 2026-06-30-0141 | Open | Initial capture: public Just Join IT role; `30 000-36 000 PLN netto / miesiąc B2B`; `Wrocław +4`, `Remote`; `Claude`, `MCP`, `Python`, `FastAPI`, `AWS`, `EKS`, `Docker`, `SQL`, `NoSQL` and `React` in a clearly AI-native software-engineering scope. | [Just Join IT](https://justjoin.it/job-offer/sigmoidal--ai-software-engineer-3-0-wroclaw-ai) |
 | dataart-ai-developer-wroclaw-remote | DataArt | AI Developer | Wrocław / remote Poland | 2026-06-30-0141 | 2026-06-30-0141 | Open | Initial capture: public Just Join IT role; `23 000-26 000 PLN netto / miesiąc B2B` or `19 000-21 000 PLN brutto / miesiąc UoP`; `Wrocław +4`, `Remote`; governed enterprise AI platform, `LLMs`, `AI agents`, `RAG`, enterprise APIs and data-platform integrations. | [Just Join IT](https://justjoin.it/job-offer/dataart-ai-developer-wroclaw-ai) |
 | pretius-ai-engineer-remote-poland | Pretius | AI Engineer | Warsaw +2 / remote Poland | 2026-06-30-0141 | 2026-06-30-0141 | Open | Initial capture: public Just Join IT role; `120-140 PLN netto / godz. B2B`; `Remote`; production-grade `RAG` and agentic `LLM` applications, human-in-the-loop orchestration, vector and hybrid search, `LangChain`, `LangGraph`, `GraphQL` and `Python`. | [Just Join IT](https://justjoin.it/job-offer/pretius-ai-engineer-warszawa-ai-6c56d267) |
@@ -170,6 +181,14 @@ only when something meaningful changes.
 | epam-generative-ai-operations-engineer-genai-ops-remote-poland | EPAM Systems | Generative AI Operations Engineer (GenAI Ops) | Warsaw / remote Poland | 2026-06-30-0141 | 2026-06-30-0141 | Open | Initial capture: public Just Join IT role; salary not public; `Remote`; operational infrastructure for `LLMs`, `AI agents`, `multi-agent systems`, `CI/CD`, `Terraform`, `Docker`, `Kubernetes` and cloud-scale GenAI delivery. | [Just Join IT](https://justjoin.it/job-offer/epam-systems-generative-ai-operations-engineer-genai-ops--warsaw-ai) |
 | vazco-senior-full-stack-ai-developer-wroclaw-remote | Vazco | Senior Full Stack & AI Developer | Wrocław / remote Poland | 2026-06-30-0141 | 2026-06-30-0141 | Open | Initial capture: public Just Join IT role; `15 000-20 000 PLN netto / miesiąc B2B`; `Remote`; product-facing AI delivery with `TypeScript`, `Node.js`, `Next.js`, `React`, `React Native`, `Python` and `GraphQL`, distinct from the already tracked `AI Technical Lead`. | [Just Join IT](https://justjoin.it/job-offer/vazco-senior-full-stack-ai-developer-wroclaw-ai-dfc3cd93) |
 | holisticon-connect-ml-software-engineer-wroclaw-remote | Holisticon Connect | ML Software Engineer | Wrocław / remote | 2026-06-30-0141 | 2026-06-30-0141 | Status unclear | Initial capture: official Holisticon role plus public Just Join IT mirror; official page lists `UoP: 15 000-18 000 PLN gross/month` or `B2B: 130-150 PLN net/h + VAT`, `Wrocław`, publication date `4 May 2026` and application deadline `22 May 2026`, but the public Just Join IT card is still live with remote wording, so the current openness is unresolved. | [Holisticon](https://holisticon.pl/career/openings/pl/781-ml-software-engineer/) / [Just Join IT](https://justjoin.it/job-offer/holisticon-connect-ml-software-engineer-wroclaw-ai) |
+| capgemini-senior-agentic-ai-developer-multiple-locations-wroclaw | Capgemini | Senior Agentic AI Developer | Wrocław + multiple PL locations / hybrid | 2026-07-01-0141 | 2026-07-01-0141 | Open | Initial capture: official Capgemini role `509355`, posted `26 Jun 2026`; hybrid across `Wrocław`, `Kraków`, `Opole`, `Warszawa`, `Gdańsk`, `Poznań`, `Lublin` and `Katowice`; AI agents for document classification, data extraction and workflow automation; `Azure AI services`, `Copilot Studio`, `Azure OpenAI`, `Python` and LLM-based agent orchestration; salary not public. | [Capgemini Careers](https://careers.capgemini.com/job-invite/509355/) |
+| epam-senior-net-ai-engineer-remote-poland | EPAM Systems | Senior .NET AI Engineer | Remote Poland / Warsaw office | 2026-07-01-0141 | 2026-07-01-0141 | Open | Initial capture: public Just Join IT card posted `30 Jun 2026 18:05 UTC`; `Remote` with applicant location `Poland`; enterprise `.NET 8`, `ASP.NET Core`, `Azure OpenAI`, `AKS`, `RAG`, vector databases and hands-on integration, evaluation and scaling of AI/ML models; salary not public. | [Just Join IT](https://justjoin.it/job-offer/epam-systems-senior-net-ai-engineer-warsaw-ai) |
+| rits-senior-ai-engineer-remote-poland | RITS | Senior AI Engineer | Remote Poland | 2026-07-01-0141 | 2026-07-01-0141 | Open | Initial capture: public Just Join IT role posted `30 Jun 2026 14:47 UTC`; `Remote`; `1 100-1 300 PLN netto + VAT / dzień B2B`; `Python`, `LangGraph`, `GraphRAG`, knowledge graphs, embeddings and retrieval/reasoning pipelines over distributed data. | [Just Join IT](https://justjoin.it/job-offer/rits-senior-ai-engineer-warszawa-ai) |
+| montrose-applied-ai-engineer-krakow-remote-poland | Montrose Software (Polska) Sp.z.o.o | Applied AI Engineer | Kraków / hybrid / remote Poland | 2026-07-01-0141 | 2026-07-01-0141 | Open | Initial capture: public Just Join IT role posted `30 Jun 2026 14:00 UTC`; `Remote`; `21 400-28 500 PLN netto / miesiąc B2B` or `16 000-24 000 PLN brutto / miesiąc UoP`; AI/Data lifecycle ownership from MVP and PoC to production, with `MLOps`, `LLMOps`, cloud-native data delivery and `Databricks`-style lakehouse work. | [Just Join IT](https://justjoin.it/job-offer/montrose-software-polska-sp-z-o-o-applied-ai-engineer-krakow-ai) |
+| espeo-ai-solutions-engineer-remote-poland | Espeo Software | AI Solutions Engineer | Remote Poland / occasional Poznań visits | 2026-07-01-0141 | 2026-07-01-0141 | Open | Initial capture: public Just Join IT role posted `30 Jun 2026 14:17 UTC`; `Remote, Poland`; `12-20 hours/week B2B` with possible expansion to `40 hours/week`; forward-deployed production AI delivery using `OpenAI API`, `LangChain`, `LangGraph`, `RAG`, retrieval systems, evaluation and monitoring. | [Just Join IT](https://justjoin.it/job-offer/espeo-software-ai-solutions-engineer-poznan-ai) |
+| awareson-senior-data-ai-engineer-agentic-ai-azure-remote-poland | Awareson Sp. z o.o. | Senior Data & AI Engineer (Agentic AI / Azure) | Remote Poland | 2026-07-01-0141 | 2026-07-01-0141 | Open | Initial capture: public Just Join IT role posted `27 Jun 2026 09:00 UTC`; `100% Remote`; `200-240 PLN/h B2B`; advanced data engineering with `LLM integration`, `Agentic AI`, Azure pipelines, RAG-based business systems and production AI workflows. | [Just Join IT](https://justjoin.it/job-offer/awareson-sp-z-o-o--senior-data-ai-engineer-agentic-ai-azure--warszawa-ai) |
+| awareson-mlops-llmops-engineer-ai-platform-engineer-warszawa-hybrid | Awareson Sp. z o.o. | MLOps / LLMOps Engineer (AI Platform Engineer) | Warszawa / hybrid | 2026-07-01-0141 | 2026-07-01-0141 | Open | Initial capture: public Just Join IT role posted `30 Jun 2026 10:00 UTC`; Warszawa hybrid with minimum `1 day per week` onsite; `160-180 PLN/h B2B`; production AI platform, `MLOps`, `LLMOps`, workflow automation, monitoring and compliance including `AI Act` requirements. | [Just Join IT](https://justjoin.it/job-offer/awareson-sp-z-o-o--mlops-llmops-engineer-ai-platform-engineer--warszawa-ai) |
+| procter-gamble-senior-ai-engineer-agentic-ai-warszawa-hybrid | Procter & Gamble | Senior AI Engineer (Agentic AI) | Warszawa / hybrid | 2026-07-01-0141 | 2026-07-01-0141 | Open | Initial capture: public Just Join IT role posted `30 Jun 2026 16:00 UTC`; hybrid in Warszawa with work-from-home option two days per week; autonomous AI systems, multi-agent architectures, reasoning engines, data-to-deployment ownership and enterprise-grade AI solution delivery; salary not public. | [Just Join IT](https://justjoin.it/job-offer/procter-gamble-senior-ai-engineer-agentic-ai--warszawa-ai-0eba4da0) |
 
 ## Open Questions
 
@@ -261,6 +280,8 @@ only when something meaningful changes.
 
 ## Recent Reports
 
+- [2026-07-01-0141](runs/2026-07-01-0141.md)
+- [2026-06-30-1805](runs/2026-06-30-1805.md)
 - [2026-06-30-0141](runs/2026-06-30-0141.md)
 - [2026-06-29-1741](runs/2026-06-29-1741.md)
 - [2026-06-29-0141](runs/2026-06-29-0141.md)
@@ -290,6 +311,22 @@ only when something meaningful changes.
 
 ## Review Notes
 
+- 2026-07-01: nocna runda domknęła wcześniej niezaindeksowany batch ról
+  `Capgemini Senior Agentic AI Developer`, `EPAM Senior .NET AI Engineer`,
+  `RITS Senior AI Engineer`, `Montrose Applied AI Engineer`,
+  `Espeo AI Solutions Engineer` oraz dwa tory `Awareson`
+  (`Senior Data & AI Engineer` i `MLOps / LLMOps Engineer`); ważne
+  rozróżnienie: część tych kart była już live `27-30 Jun`, ale dopiero teraz
+  trafiła do `Seen Opportunities`.
+- 2026-06-30: popołudniowa runda dodała `EPAM Senior AI QA Engineer`,
+  `Team Up Senior DevOps Engineer - AI/Automation`, `Capgemini Copilot Studio
+  Developer (Power Platform)`, `PKO BP Finat Inżynier Machine learning/MLOPS
+  Senior`, `XTB Senior Software AI Developer`, `Tenarai AI Platform Engineer
+  (GCP)`, `Lekta AI/ML Platform Engineer` i `emagine Senior AI Engineer
+  (Python, GenAI, GCP)`; najważniejsza korekta to nowy wrocławski mirror
+  `EPAM Senior Cloud Native Developer (Python & AI)` oraz dalsze rozbudowanie
+  klastrów wokół enterprise Copilot / Power Platform i produkcyjnych AI
+  platform.
 - 2026-06-30: nocna runda dodała `Sigmoidal`, `DataArt AI Developer`,
   `Pretius`, `Upvanta`, `EPAM GenAI Ops` i `Vazco Senior Full Stack & AI
   Developer`; `XTB` odzyskał mocniejszy salary-bearing remote card, a wcześniejszy
