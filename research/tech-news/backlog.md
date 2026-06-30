@@ -305,6 +305,14 @@
   demonetizing fully AI-generated music, Australia/Discord age assurance
   enforcement, Chatrie/geofence warrant privacy, Omen AI data-center coolant
   monitoring and Proception dexterous robotic hands.
+- 2026-06-30: Daily tech podcast generated in fallback mode because
+  `runs/2026-06-30.md` was missing; created `draft.md`, `script.md`,
+  `sources.md`, `render.json`, `brief.pdf`, and `podcast.mp3`. Final MP3 used
+  Piper and measured about 7:54. The shared renderer needed a temporary
+  `ffmpeg`/`ffprobe` shim because the local Homebrew `ffmpeg` binary referenced
+  a missing `libx265.215.dylib`; repository scripts were not modified. PDF brief
+  was rendered in the mobile 390 x 844 pt format and visually checked from PNG
+  renders.
 
 ## Done
 
