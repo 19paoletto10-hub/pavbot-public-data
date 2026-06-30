@@ -1,35 +1,58 @@
 import SwiftUI
 
+enum AutomationArtifactNavigationMode {
+    case global
+    case embeddedInSettings
+
+    var switchesToArtifactsTab: Bool {
+        self == .global
+    }
+}
+
 struct ArtifactTimelineView: View {
     @Environment(ManifestStore.self) private var store
     @Environment(AppRouter.self) private var router
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    let navigationMode: AutomationArtifactNavigationMode
     @State private var searchText = ""
     @State private var expandedDays: Set<String> = []
 
+    init(navigationMode: AutomationArtifactNavigationMode = .global) {
+        self.navigationMode = navigationMode
+    }
+
     var body: some View {
-        Group {
-            if let manifest = store.manifest {
-                if let group = selectedGroup(in: manifest) {
-                    AutomationArtifactsDetailView(
-                        group: group,
-                        route: router.artifactRoute,
-                        searchText: $searchText,
-                        expandedDays: $expandedDays,
-                        refreshAction: refreshArtifacts,
-                        clearFiltersAction: clearFilters,
-                        backAction: showAutomationTiles
-                    )
+        GeometryReader { proxy in
+            let layout = PavbotAdaptiveLayout.resolve(
+                width: proxy.size.width,
+                horizontalSizeClass: horizontalSizeClass
+            )
+
+            Group {
+                if let manifest = store.manifest {
+                    if let group = selectedGroup(in: manifest) {
+                        AutomationArtifactsDetailView(
+                            group: group,
+                            route: router.artifactRoute,
+                            searchText: $searchText,
+                            expandedDays: $expandedDays,
+                            refreshAction: refreshArtifacts,
+                            clearFiltersAction: clearFilters,
+                            backAction: showAutomationTiles
+                        )
+                    } else {
+                        AutomationArtifactGridView(
+                            manifest: manifest,
+                            searchText: $searchText,
+                            refreshAction: refreshArtifacts,
+                            selectAction: selectGroup
+                        )
+                    }
                 } else {
-                    AutomationArtifactGridView(
-                        manifest: manifest,
-                        searchText: $searchText,
-                        refreshAction: refreshArtifacts,
-                        selectAction: selectGroup
-                    )
+                    ContentUnavailableView("Brak manifestu", systemImage: "doc.badge.questionmark")
                 }
-            } else {
-                ContentUnavailableView("Brak manifestu", systemImage: "doc.badge.questionmark")
             }
+            .environment(\.pavbotAdaptiveLayout, layout)
         }
         .navigationTitle("Wszystkie pliki")
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Szukaj automatyzacji, plików i tematów")
@@ -53,13 +76,13 @@ struct ArtifactTimelineView: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button {
+                PavbotRefreshToolbarButton(
+                    isRefreshing: store.state == .loading,
+                    accessibilityLabel: "Odśwież artefakty",
+                    accessibilityHint: "Odświeża manifest z listą artefaktów."
+                ) {
                     Task { await refreshArtifacts() }
-                } label: {
-                    Image(systemName: "arrow.clockwise")
                 }
-                .disabled(store.state == .loading)
-                .accessibilityLabel("Odśwież artefakty")
             }
         }
     }
@@ -76,13 +99,14 @@ struct ArtifactTimelineView: View {
         if let day {
             expandedDays.insert(day)
         }
-        router.selectArtifactAutomation(id: group.id, day: day)
+        selectArtifactAutomation(id: group.id, day: day)
     }
 
     private func showAutomationTiles() {
         searchText = ""
         expandedDays = []
         router.clearArtifactRoute()
+        preserveEmbeddedSettingsTabIfNeeded()
     }
 
     private func clearFilters() {
@@ -97,7 +121,22 @@ struct ArtifactTimelineView: View {
             if let selectedDay {
                 expandedDays.insert(selectedDay)
             }
-            router.selectArtifactAutomation(id: currentGroup.id, day: selectedDay)
+            selectArtifactAutomation(id: currentGroup.id, day: selectedDay)
+        }
+    }
+
+    private func selectArtifactAutomation(id: String?, day: String?) {
+        router.selectArtifactAutomation(
+            id: id,
+            day: day,
+            switchToArtifactsTab: navigationMode.switchesToArtifactsTab
+        )
+        preserveEmbeddedSettingsTabIfNeeded()
+    }
+
+    private func preserveEmbeddedSettingsTabIfNeeded() {
+        if navigationMode == .embeddedInSettings {
+            router.selectedTab = .settings
         }
     }
 
@@ -172,14 +211,14 @@ struct ArtifactTimelineView: View {
 }
 
 private struct AutomationArtifactGridView: View {
+    @Environment(\.pavbotAdaptiveLayout) private var layout
     let manifest: PavbotManifest
     @Binding var searchText: String
     let refreshAction: () async -> Void
     let selectAction: (AutomationArtifactGroup) -> Void
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 18) {
+        PavbotPremiumScreenScaffold(layout: layout, spacing: 18) {
                 ArtifactSummaryHeader(manifest: manifest)
 
                 if visibleGroups.isEmpty {
@@ -203,18 +242,14 @@ private struct AutomationArtifactGridView: View {
                         }
                     }
                 }
-            }
-            .padding(.horizontal, 20)
-            .padding(.vertical, 14)
         }
         .refreshable {
             await refreshAction()
         }
-        .background(Color(.systemGroupedBackground))
     }
 
     private var columns: [GridItem] {
-        [GridItem(.adaptive(minimum: 156, maximum: 230), spacing: 12)]
+        layout.adaptiveColumns(minimum: layout.artifactTileMinWidth, maximum: layout.artifactTileMaxWidth)
     }
 
     private var visibleGroups: [AutomationArtifactGroup] {
@@ -247,6 +282,7 @@ private struct AutomationArtifactGridView: View {
 }
 
 private struct AutomationArtifactsDetailView: View {
+    @Environment(\.pavbotAdaptiveLayout) private var layout
     let group: AutomationArtifactGroup
     let route: ArtifactNotificationRoute?
     @Binding var searchText: String
@@ -256,8 +292,7 @@ private struct AutomationArtifactsDetailView: View {
     let backAction: () -> Void
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+        PavbotPremiumScreenScaffold(layout: layout, spacing: 16) {
                 Button(action: backAction) {
                     Label("Automatyzacje", systemImage: "chevron.left")
                         .font(.subheadline.weight(.semibold))
@@ -305,14 +340,10 @@ private struct AutomationArtifactsDetailView: View {
                         }
                     }
                 }
-            }
-            .padding(.horizontal, 20)
-            .padding(.vertical, 14)
         }
         .refreshable {
             await refreshAction()
         }
-        .background(Color(.systemGroupedBackground))
     }
 
     private var visibleDays: [Date] {
@@ -373,26 +404,30 @@ private struct AutomationArtifactsDetailView: View {
 }
 
 private struct ArtifactSummaryHeader: View {
+    @Environment(\.pavbotAdaptiveLayout) private var layout
     let manifest: PavbotManifest
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text("Biblioteka automatyzacji")
-                .font(.title2.weight(.bold))
-            Text("Wybierz automatyzację, aby zobaczyć dni publikacji i wygenerowane pliki.")
-                .font(.subheadline)
-                .foregroundStyle(.secondary)
-
-            HStack(spacing: 12) {
-                MetricTile(title: "Automatyzacje", value: "\(manifest.enabledAutomations.count)", systemImage: "bolt.fill", tint: .yellow)
-                MetricTile(title: "Pliki", value: "\(manifest.artifacts.count)", systemImage: "doc.on.doc.fill", tint: .blue)
-                MetricTile(title: "Dni", value: "\(manifest.availableDays.count)", systemImage: "calendar", tint: .green)
-            }
-        }
+        PavbotCommandHero(
+            eyebrow: "Wszystkie pliki",
+            title: "Biblioteka automatyzacji",
+            subtitle: layout.usesDashboardLayout
+                ? "Master-detail dla automatyzacji, dni i plików z większymi kafelkami w szerokim oknie."
+                : "Wybierz automatyzację i przeglądaj wygenerowane pliki bez opuszczania bieżącego miejsca.",
+            systemImage: "folder.fill.badge.gearshape",
+            tint: .blue,
+            insights: [
+                PavbotInsight(title: "Automatyzacje", value: "\(manifest.enabledAutomations.count)", systemImage: "bolt.fill", tint: .yellow),
+                PavbotInsight(title: "Pliki", value: "\(manifest.artifacts.count)", systemImage: "doc.on.doc.fill", tint: .blue),
+                PavbotInsight(title: "Dni", value: "\(manifest.availableDays.count)", systemImage: "calendar", tint: .green),
+                PavbotInsight(title: "Najnowsze", value: manifest.latestArtifact?.date ?? "-", systemImage: "clock.fill", tint: .purple)
+            ]
+        )
     }
 }
 
 private struct AutomationArtifactTile: View {
+    @Environment(\.pavbotAdaptiveLayout) private var layout
     let group: AutomationArtifactGroup
     let action: () -> Void
 
@@ -432,11 +467,11 @@ private struct AutomationArtifactTile: View {
                     TileMetric(label: "Ostatnio", value: group.latestArtifact?.displayDate ?? "Brak plików")
                 }
             }
-            .frame(maxWidth: .infinity, minHeight: 188, alignment: .topLeading)
-            .padding(14)
-            .background(.thinMaterial, in: RoundedRectangle(cornerRadius: 8))
+            .frame(maxWidth: .infinity, minHeight: layout.usesDashboardLayout ? 220 : 188, alignment: .topLeading)
+            .padding(layout.usesDashboardLayout ? 18 : 14)
+            .background(.thinMaterial, in: RoundedRectangle(cornerRadius: layout.usesDashboardLayout ? 18 : 8))
             .overlay(
-                RoundedRectangle(cornerRadius: 8)
+                RoundedRectangle(cornerRadius: layout.usesDashboardLayout ? 18 : 8)
                     .stroke(group.automation.kind.tint.opacity(0.16), lineWidth: 1)
             )
         }
@@ -464,35 +499,25 @@ private struct TileMetric: View {
 }
 
 private struct AutomationArtifactsHeader: View {
+    @Environment(\.pavbotAdaptiveLayout) private var layout
     let group: AutomationArtifactGroup
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            HStack(alignment: .top, spacing: 12) {
-                Image(systemName: group.automation.kind.systemImage)
-                    .font(.title2.weight(.semibold))
-                    .foregroundStyle(group.automation.kind.tint)
-                    .frame(width: 48, height: 48)
-                    .background(group.automation.kind.tint.opacity(0.14), in: RoundedRectangle(cornerRadius: 8))
-
-                VStack(alignment: .leading, spacing: 6) {
-                    Text(group.automation.name)
-                        .font(.title2.weight(.bold))
-                        .lineLimit(3)
-                    Text(group.automation.topicPath)
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                        .lineLimit(2)
-                    StatusBadge(text: group.automation.kind.label, systemImage: "checkmark.circle.fill", tint: group.automation.kind.tint)
-                }
-            }
-
-            HStack(spacing: 12) {
-                MetricTile(title: "Pliki", value: "\(group.artifacts.count)", systemImage: "doc.on.doc.fill", tint: .blue)
-                MetricTile(title: "Dni", value: "\(group.days.count)", systemImage: "calendar", tint: .green)
-                MetricTile(title: "Ostatnio", value: group.latestArtifact?.date ?? "-", subtitle: group.latestArtifact?.time, systemImage: "clock.fill", tint: .purple)
-            }
-        }
+        PavbotCommandHero(
+            eyebrow: group.automation.kind.label,
+            title: group.automation.name,
+            subtitle: layout.usesDashboardLayout
+                ? group.automation.topicPath
+                : "Dni publikacji i wygenerowane pliki tej automatyzacji.",
+            systemImage: group.automation.kind.systemImage,
+            tint: group.automation.kind.tint,
+            insights: [
+                PavbotInsight(title: "Pliki", value: "\(group.artifacts.count)", systemImage: "doc.on.doc.fill", tint: .blue),
+                PavbotInsight(title: "Dni", value: "\(group.days.count)", systemImage: "calendar", tint: .green),
+                PavbotInsight(title: "Ostatnio", value: group.latestArtifact?.date ?? "-", systemImage: "clock.fill", tint: .purple),
+                PavbotInsight(title: "Temat", value: group.automation.topic, systemImage: "folder.fill", tint: group.automation.kind.tint)
+            ]
+        )
     }
 }
 

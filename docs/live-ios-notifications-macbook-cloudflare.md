@@ -17,9 +17,11 @@ ports or router port forwarding.
    `https://notify.example.com/webhooks/github`.
 4. Each Codex automation publishes its topic with
    `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>`, which refreshes
-   `public/pavbot-manifest.json` and pushes it to `origin/main`.
+   `public/pavbot-manifest.json` and commits plus pushes it to `origin/main`.
 5. The notifier fetches `PAVBOT_MANIFEST_URL`, diffs it against the last stored
-   manifest, and sends APNs alerts for new files or newly enabled automations.
+   manifest, retries the public raw manifest and artifact URLs until the changed
+   files are readable by the same HTTP path used by iOS, and then sends APNs
+   alerts for new files or newly enabled automations.
 6. The iOS app registers the APNs device token with
    `POST https://notify.example.com/v1/devices`.
 7. Tapping a notification opens the generated artifact or the Automations tab.
@@ -103,6 +105,8 @@ PAVBOT_DAILY_WEATHER_TIMEZONE=Europe/Warsaw
 PAVBOT_DAILY_WEATHER_CITY=Wrocław
 PAVBOT_DAILY_WEATHER_LAT=51.1079
 PAVBOT_DAILY_WEATHER_LON=17.0385
+PAVBOT_PUBLIC_READINESS_ATTEMPTS=4
+PAVBOT_PUBLIC_READINESS_DELAY_SECONDS=2
 ```
 
 Use `APNS_ENV=sandbox` for Xcode-installed `PavbotViewer` builds. Use
@@ -278,6 +282,8 @@ If the iOS app does not show a new automation, check:
   `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>`;
 - GitHub webhook delivery succeeded;
 - `/status` shows the expected `lastWebhook`;
+- `/status.lastPublicReadiness` is `sent` or `ready` for the latest artifact,
+  not `not_ready` or `timeout`;
 - `registeredDevices` is greater than `0`;
 - `PAVBOT_MANIFEST_URL` matches the Manifest URL in iOS Settings.
 

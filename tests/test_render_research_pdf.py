@@ -58,6 +58,7 @@ Najważniejszy temat dnia: regulacja AI i cyberbezpieczeństwo.
         self.assertIn("Najważniejszy temat dnia", text)
         self.assertIn("G7 i frontier AI", text)
         self.assertIn("Źródła", text)
+        self.assertIn("https://apnews.com/example", text)
 
     def test_render_research_pdf_uses_mobile_page_and_highlight_cards(self) -> None:
         renderer = load_renderer()
@@ -144,6 +145,37 @@ The briefing should keep metadata in the header only.
         )
         self.assertEqual(text.count("Date: 2026-06-25"), 1)
         self.assertEqual(text.count("Status: Material update"), 1)
+
+    def test_render_research_pdf_shows_visible_raw_urls_in_sources_section(self) -> None:
+        renderer = load_renderer()
+        with tempfile.TemporaryDirectory() as tmp:
+            tmp_path = Path(tmp)
+            markdown = tmp_path / "2026-06-26.md"
+            output = tmp_path / "2026-06-26-tech-news.pdf"
+            markdown.write_text(
+                """# Daily Research Report: tech-news
+
+Date: 2026-06-26
+Status: Material update
+
+## Podsumowanie
+
+Krótki raport testowy.
+
+## Źródła:
+
+- [Cloudflare](https://blog.cloudflare.com/example)
+""",
+                encoding="utf-8",
+            )
+
+            renderer.render_pdf(markdown, output, topic_name="tech-news")
+
+            with pdfplumber.open(output) as pdf:
+                text = "\n".join(page.extract_text() or "" for page in pdf.pages)
+
+        self.assertIn("Cloudflare", text)
+        self.assertIn("https://blog.cloudflare.com/example", text)
 
 
 if __name__ == "__main__":

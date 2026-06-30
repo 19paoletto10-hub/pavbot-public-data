@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-06-28T17:46:28Z",
+  "language": "pl",
+  "language_detection": "local-polish-heuristic",
+  "speed": 1.03,
+  "variants": [
+    {
+      "id": "female-piper",
+      "engine": "piper",
+      "voice": "pl_PL-gosia-medium",
+      "model": "rhasspy/piper-voices:pl_PL-gosia-medium",
+      "status": "ok",
+      "duration_seconds": 263.1878,
+      "output_file": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1935/audio/female-piper/podcast.mp3",
+      "render_json": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1935/audio/female-piper/render.json",
+      "error": null
+    },
+    {
+      "id": "male-xtts",
+      "engine": "xtts",
+      "voice": "Andrew Chipper",
+      "model": null,
+      "status": "failed",
+      "duration_seconds": null,
+      "output_file": null,
+      "render_json": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1935/audio/male-xtts/render.json",
+      "error": "Interrupted after repeated hang during the 2026-06-28 19:35 Europe/Warsaw automation run; see audio/male-xtts/render.log for the XTTS stack trace and warnings."
+    }
+  ]
+}

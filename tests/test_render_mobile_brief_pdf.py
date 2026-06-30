@@ -111,6 +111,7 @@ Status: Material update
         self.assertIn("Nowe fakty", text)
         self.assertIn("Interpretacja", text)
         self.assertIn("KPRM", text)
+        self.assertIn("https://www.gov.pl/example", text)
         self.assertIn("Język TTS: pl", text)
         self.assertIn("female-piper", text)
         self.assertIn("male-xtts", text)

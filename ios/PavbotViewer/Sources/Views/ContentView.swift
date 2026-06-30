@@ -4,21 +4,27 @@ struct ContentView: View {
     @Environment(ManifestStore.self) private var store
     @Environment(AppRouter.self) private var router
     @Environment(PavbotHaptics.self) private var haptics
+    @Environment(PavbotImagePreviewStore.self) private var imagePreviewStore
     @Environment(\.scenePhase) private var scenePhase
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @State private var showLiveNotificationPrompt = false
 
     var body: some View {
-        Group {
-            switch PavbotRootLayoutStyle.resolve(horizontalSizeClass: horizontalSizeClass) {
-            case .tab:
-                PavbotTabRootView()
-            case .split:
-                PavbotSplitRootView()
+        GeometryReader { proxy in
+            Group {
+                switch PavbotRootLayoutStyle.resolve(horizontalSizeClass: horizontalSizeClass, width: proxy.size.width) {
+                case .tab:
+                    PavbotTabRootView()
+                case .split:
+                    PavbotSplitRootView()
+                }
             }
         }
         .safeAreaInset(edge: .bottom, spacing: 0) {
             AudioPlaybackBanner()
+        }
+        .overlay {
+            PavbotImagePreviewHost(imagePreviewStore: imagePreviewStore)
         }
         .sensoryFeedback(.selection, trigger: router.selectedTab) { oldValue, newValue in
             oldValue != newValue && haptics.isEnabled
@@ -77,11 +83,12 @@ struct ContentView: View {
 
 private struct PavbotTabRootView: View {
     @Environment(AppRouter.self) private var router
+    @State private var selectedVisibleTab: AppTab = .today
 
     var body: some View {
         @Bindable var router = router
 
-        TabView(selection: $router.selectedTab) {
+        TabView(selection: selectedVisibleTabBinding) {
             NavigationStack {
                 WeatherBriefView()
             }
@@ -114,13 +121,61 @@ private struct PavbotTabRootView: View {
             }
             .tag(AppTab.research)
 
-            NavigationStack {
-                SettingsView()
+            NavigationStack(path: $router.artifactPath) {
+                phoneSettingsTabContent
             }
             .tabItem {
                 Label("Ustawienia", systemImage: "gearshape")
             }
             .tag(AppTab.settings)
+        }
+        .onAppear {
+            syncVisibleTabFromRouter()
+        }
+        .onChange(of: router.selectedTab) { _, _ in
+            syncVisibleTabFromRouter()
+        }
+    }
+
+    private var selectedVisibleTabBinding: Binding<AppTab> {
+        Binding(
+            get: { selectedVisibleTab },
+            set: { newValue in
+                selectedVisibleTab = newValue
+                router.selectedTab = newValue
+            }
+        )
+    }
+
+    private func syncVisibleTabFromRouter() {
+        let visibleTab = router.selectedTab.phoneVisibleTab
+        if selectedVisibleTab != visibleTab {
+            selectedVisibleTab = visibleTab
+        }
+    }
+
+    @ViewBuilder
+    private var phoneSettingsTabContent: some View {
+        switch router.selectedTab {
+        case .artifacts:
+            ArtifactTimelineView()
+        case .automations:
+            AutomationListView(navigationMode: .embeddedInSettings)
+        case .diagnostics:
+            DiagnosticsView()
+        default:
+            SettingsView()
+        }
+    }
+}
+
+private extension AppTab {
+    var phoneVisibleTab: AppTab {
+        switch self {
+        case .artifacts, .automations, .diagnostics:
+            .settings
+        default:
+            self
         }
     }
 }
@@ -217,12 +272,20 @@ private struct PavbotSplitRootView: View {
 }
 
 private struct AdaptiveDetailContainer<Content: View>: View {
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @ViewBuilder var content: Content
 
     var body: some View {
-        content
-            .frame(maxWidth: 1180, maxHeight: .infinity)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(Color(.systemGroupedBackground))
+        GeometryReader { proxy in
+            let layout = PavbotAdaptiveLayout.resolve(
+                width: proxy.size.width,
+                horizontalSizeClass: horizontalSizeClass
+            )
+
+            content
+                .frame(maxWidth: layout.contentMaxWidth, maxHeight: .infinity)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(Color(.systemGroupedBackground))
+        }
     }
 }

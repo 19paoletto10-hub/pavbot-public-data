@@ -21,6 +21,7 @@ MANIFEST_PATH_SUFFIX = "/public/pavbot-manifest.json"
 MOBILE_PUBLIC_ONLY_TOPIC = "aktualne-wydarzenia-mobile"
 LLM_JOBS_TOPIC = "llm-ai-jobs-wroclaw"
 PULSE_NEWS_TOPIC = "puls-dnia-news"
+REDDIT_RADAR_TOPIC = "reddit-radar"
 RESEARCH_DATA_TOPICS = {"tech-news", "polska-swiat"}
 
 
@@ -37,6 +38,12 @@ def build_manifest(repo_root: Path, raw_base_url: str = "") -> dict[str, Any]:
         "topics": topics,
         "artifacts": collect_artifacts(repo_root, raw_base_url, topics),
     }
+
+
+def manifest_semantic_payload(manifest: dict[str, Any]) -> dict[str, Any]:
+    payload = dict(manifest)
+    payload.pop("generatedAt", None)
+    return payload
 
 
 def collect_automations(repo_root: Path, raw_base_url: str) -> list[dict[str, Any]]:
@@ -170,6 +177,11 @@ def collect_artifacts(
         elif slug == PULSE_NEWS_TOPIC:
             for path in sorted((topic_dir / "data").glob("*-pulse-news.json")):
                 add_artifact(artifacts, repo_root, raw_base_url, path, slug, "pulseNewsData")
+        elif slug == REDDIT_RADAR_TOPIC:
+            for path in sorted((topic_dir / "data").glob("*-reddit-radar.json")):
+                add_artifact(artifacts, repo_root, raw_base_url, path, slug, "redditRadarData")
+            for path in sorted((topic_dir / "data").glob("*-reddit-radar-raw.json")):
+                add_artifact(artifacts, repo_root, raw_base_url, path, slug, "redditRadarRawData")
         elif slug in RESEARCH_DATA_TOPICS:
             for path in sorted((topic_dir / "data").glob("*.json")):
                 add_artifact(artifacts, repo_root, raw_base_url, path, slug, "researchData")
@@ -218,6 +230,9 @@ def collect_mobile_public_artifacts(
     for path in sorted((topic_dir / "pdfs").glob("*-mobile-brief.pdf")):
         add_artifact(artifacts, repo_root, raw_base_url, path, slug, "pdf")
 
+    for path in sorted((topic_dir / "pdfs").glob("*-newspaper.pdf")):
+        add_artifact(artifacts, repo_root, raw_base_url, path, slug, "pdf")
+
     podcasts_dir = topic_dir / "podcasts"
     if not podcasts_dir.exists():
         return
@@ -256,6 +271,8 @@ def add_artifact(
 ) -> None:
     if not path.exists() or not path.is_file():
         return
+    if is_finder_style_duplicate(path):
+        return
 
     rel_path = relative_path(path, repo_root)
     date, time = forced_date if forced_date is not None else parse_date_parts(path.stem)
@@ -277,6 +294,10 @@ def add_artifact(
         if item_count is not None:
             artifact["itemCount"] = item_count
     artifacts.append(artifact)
+
+
+def is_finder_style_duplicate(path: Path) -> bool:
+    return re.search(r" \d+$", path.stem) is not None
 
 
 def pulse_news_item_count(path: Path) -> int | None:
@@ -353,6 +374,10 @@ def artifact_title(path: Path, artifact_type: str) -> str:
         return "Mobile news data"
     if artifact_type == "pulseNewsData":
         return "Pulse news data"
+    if artifact_type == "redditRadarData":
+        return "Reddit Radar data"
+    if artifact_type == "redditRadarRawData":
+        return "Reddit Radar raw data"
     return path.name
 
 
@@ -423,10 +448,26 @@ def slugify(value: str) -> str:
 
 def write_manifest(manifest: dict[str, Any], output_path: Path) -> None:
     output_path.parent.mkdir(parents=True, exist_ok=True)
-    output_path.write_text(
-        json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",
-        encoding="utf-8",
-    )
+    existing_text: str | None = None
+    existing_manifest: dict[str, Any] | None = None
+    if output_path.exists():
+        existing_text = output_path.read_text(encoding="utf-8")
+        try:
+            payload = json.loads(existing_text)
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            payload = None
+        if isinstance(payload, dict):
+            existing_manifest = payload
+
+    if existing_manifest and manifest_semantic_payload(existing_manifest) == manifest_semantic_payload(manifest):
+        existing_generated_at = existing_manifest.get("generatedAt")
+        if isinstance(existing_generated_at, str) and existing_generated_at.strip():
+            manifest["generatedAt"] = existing_generated_at
+
+    rendered_manifest = json.dumps(manifest, ensure_ascii=False, indent=2) + "\n"
+    if existing_text == rendered_manifest:
+        return
+    output_path.write_text(rendered_manifest, encoding="utf-8")
 
 
 def parse_args() -> argparse.Namespace:

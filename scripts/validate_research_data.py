@@ -131,6 +131,13 @@ def validate_article_quality(
     deeper = article.get("deeperAnalysis")
     if not isinstance(deeper, list):
         return
+    normalized_paragraphs = [
+        normalize_for_comparison(paragraph)
+        for paragraph in deeper
+        if normalize_for_comparison(paragraph)
+    ]
+    if len(set(normalized_paragraphs)) < len(normalized_paragraphs):
+        errors.append(f"{prefix}.deeperAnalysis must contain distinct paragraphs")
     for index, paragraph in enumerate(deeper):
         normalized = normalize_for_comparison(paragraph)
         if normalized and normalized in references:

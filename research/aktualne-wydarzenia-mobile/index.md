@@ -1,26 +1,39 @@
 # Topic Index: aktualne-wydarzenia-mobile
 
-Last updated: 2026-06-27
+Last updated: 2026-06-29
 
 ## Current Understanding
 
 Temat służy do codziennego tworzenia mobilnego briefu o najważniejszych
-wydarzeniach publicznych z Polski i świata. Produkcyjny run z
-`2026-06-27-1019` przesunął akcent z samych gdańskich kwot na ich szerszy,
-dłuższy kontekst: Rada UE przedłużyła sankcje gospodarcze wobec Rosji do
-31 lipca 2027 roku, a Komisja Europejska zaproponowała wydłużenie ochrony
-tymczasowej dla osób uciekających z Ukrainy do 4 marca 2028 roku, z nowym,
-politycznie czułym zastrzeżeniem dotyczącym nowo przybyłych osób objętych
-ukraińskimi obowiązkami wojskowymi. Krajowy wątek praktyczny zaostrzył się
-jeszcze mocniej niż dzień wcześniej: RCB weszło w formalny tryb bardzo szerokich
-ostrzeżeń trzeciego stopnia do 42°C, ogólnopolskiego Alertu RCB, suszy
-hydrologicznej i wysokiego ryzyka pożarowego. Operacyjnie potwierdził się
-czwarty z rzędu problem z `male-xtts`; wariant `female-piper` znowu wyrenderował
-się poprawnie, a stan awarii zapisano topic-scoped w `tts_variants.json`.
-Główne pytania na kolejne runy dotyczą teraz nie tylko list projektów po
-Gdańsku, ale także tego, czy unijna propozycja ochrony tymczasowej szybko
-stanie się decyzją Rady oraz czy weekendowy pakiet upał plus burze przełoży się
-na istotne skutki w kraju.
+wydarzeniach publicznych z Polski i świata. Wieczorny run z `2026-06-29-1934`
+domknął najważniejsze pytanie dnia: program Orka przeszedł z porannego
+harmonogramu do podpisanego kontraktu. MON i KPRM potwierdziły zakup trzech
+okrętów podwodnych A26 dla Marynarki Wojennej RP, a Saab dołożył twarde
+szczegóły, które zmieniają wagę tego wątku z samej politycznej zapowiedzi na
+program przemysłowo-operacyjny: około 47 mld koron szwedzkich, pakiet
+uzbrojenia, pakiet szkoleniowo-wsparciowy, budowę zdolności MRO w Polsce oraz
+przejściowe operowanie HMS Södermanland jako rozwiązaniem pomostowym. Krajowa
+oś pogodowa pozostaje bardzo mocna, ale wieczorem jest już lepiej osadzona w
+czasie: RCB nadal pokazuje szeroki upał, burze, suszę hydrologiczną, 17
+utonięć jednego dnia i 105 pożarów lasów, a IMGW przesuwa briefing z pytania o
+sam pik temperatury na kilkudniowy pakiet ryzyk z wyraźnym ochłodzeniem od
+środy. Instytucjonalnie dzień dopełniły dwa podpisane akty prawne u
+Prezydenta RP oraz parlamentarny wymiar szczytu NATO przez udział marszałek
+Senatu w Turcji. Oś UE-Ukraina pozostaje ważna dzięki sankcjom do 31 lipca
+2027 roku, propozycji ochrony tymczasowej do 4 marca 2028 roku i oczekiwaniu
+pierwszej wypłaty z instrumentu pożyczkowego UE dla Ukrainy przed końcem
+czerwca, ale nadal działa bardziej jako strategiczne tło niż pojedynczy
+wieczorny przełom. Poza Europą nie pojawiło się humanitarne odwrócenie trendu
+w Gazie: OCHA nadal opisuje większość z około 2,1 miliona mieszkańców jako
+osoby przesiedlone, a 64,9 procent Strefy Gazy pozostaje pod ściślejszą i
+bardziej bezpośrednią kontrolą izraelską. Operacyjnie potwierdził się ósmy z
+rzędu problem z `male-xtts`; `female-piper` ponownie wyrenderował się
+poprawnie, a wieczorny run trzeba było zakończyć kontrolowanym przerwaniem
+XTTS po kolejnym zawieszeniu. Najważniejsze pytania na kolejne przebiegi
+dotyczą już nie tego, czy Orka zostanie podpisana, ale jak szybko pojawi się
+publiczny harmonogram dostaw, lista polskich partnerów przemysłowych, bilans
+szkód po burzach i czy pogodowy koszt dnia będzie dalej rósł przez awarie,
+pożary i kolejne ofiary.
 
 ## Stable Facts
 
@@ -38,22 +51,31 @@ na istotne skutki w kraju.
   zapowiedzi?
 - Czy w codziennym formacie lepiej utrzymywać pięć-sześć segmentów, czy zejść do
   czterech najmocniejszych tematów?
-- Czy po gdańskich zapowiedziach pojawią się szybko publiczne listy projektów i
-  beneficjentów, czy brief będzie przez kilka dni opierał się głównie na
-  pakietach ramowych?
+- Jak szybko po podpisaniu Orki pojawi się publiczny harmonogram dostaw,
+  lista polskich partnerów przemysłowych oraz dokładniejsze wyjaśnienie skali
+  pakietów uzbrojenia, szkolenia i serwisu?
 - Czy propozycja Komisji Europejskiej dotycząca ochrony tymczasowej do
   4 marca 2028 roku zostanie szybko przyjęta przez Radę UE i jak dokładnie
   będą komunikowane kryteria dla nowych przyjazdów?
+- Czy po kulminacji upału i wejściu burz głównym tematem kolejnych runów będą
+  już skutki wtórne: awarie, pożary, szkody infrastrukturalne, utonięcia i
+  inne koszty zdrowotne?
 
 ## Watch Items
 
 - Czy po wizycie prezydenta w Turcji, szczycie V4 i lipcowym szczycie NATO
   pojawią się wspólne komunikaty o trwałej wartości informacyjnej.
+- Czy po podpisaniu w Gdyni pojawi się twardy harmonogram programu Orka,
+  publiczne szczegóły polskiego komponentu przemysłowego i dalsze komunikaty o
+  bezpieczeństwie Bałtyku.
 - Czy po wydarzeniach w Gdańsku pojawią się szczegółowe listy podpisanych umów,
   projektów i beneficjentów dla ogłoszonych pakietów finansowych.
 - Czy propozycja Komisji Europejskiej o ochronie tymczasowej do 4 marca 2028
   roku zostanie szybko przyjęta przez Radę UE i jak będzie odbierana
   politycznie w państwach członkowskich.
+- Czy weekendowa kombinacja upału, suszy i burz przełoży się na istotne szkody,
+  awarie, pożary, utonięcia lub zmianę hierarchii krajowych tematów w
+  poniedziałek rano i po południu.
 - Czy publiczna zapowiedź Rafaela Grossiego przełoży się na faktyczne wejście
   inspektorów IAEA do irańskich obiektów i nowy komunikat źródłowy.
 - Jakość linków źródłowych przy materialnych twierdzeniach.
@@ -64,6 +86,8 @@ na istotne skutki w kraju.
   konfliktów, tragedii lub spraw publicznych.
 - Czy epizod upału i suszy wymusi mocniejsze eksponowanie w briefie ryzyk
   infrastrukturalnych i pogodowych także wtedy, gdy polityka dominuje nagłówki.
+- Czy brak przełomu humanitarnego w Gazie powinien pozostać stałą drugą osią
+  świata w briefie, czy wracać tylko przy nowym oficjalnym materiale źródłowym.
 
 ## Recent Reports
 
@@ -80,3 +104,14 @@ na istotne skutki w kraju.
 - [2026-06-27-1019](runs/2026-06-27-1019.md) - sankcje UE do 31 lipca 2027,
   propozycja ochrony tymczasowej do 4 marca 2028 i eskalacja alertów upałowych
   do 42°C.
+- [2026-06-28-1017](runs/2026-06-28-1017.md) - do upału dochodzą burze,
+  WMO osadza Polskę w europejskiej rekordowej fali upałów, a `male-xtts`
+  zawiesza się piąty raz z rzędu.
+- [2026-06-28-1935](runs/2026-06-28-1935.md) - wieczór dokłada ryzyko awarii,
+  program Orka w Gdyni oraz szóstą z rzędu awarię `male-xtts`.
+- [2026-06-29-1017](runs/2026-06-29-1017.md) - poranek doprecyzowuje alert
+  pogodowy, dorzuca 17 utonięć, przełącza Gdynię na harmonogram live i kończy
+  się siódmą z rzędu awarią `male-xtts`.
+- [2026-06-29-1934](runs/2026-06-29-1934.md) - wieczór domyka Orkę podpisanym
+  kontraktem, dokłada przemysłowe szczegóły od Saab i kończy się ósmą z rzędu
+  awarią `male-xtts`.

@@ -3,6 +3,7 @@ import SwiftUI
 struct JobsView: View {
     @Environment(ManifestStore.self) private var store
     @Environment(AppRouter.self) private var router
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @State private var jobsStore = JobsStore()
     @State private var historyStore = JobsHistoryStore()
     @State private var viewMode: JobsViewMode = .brief
@@ -13,62 +14,68 @@ struct JobsView: View {
     @State private var selectedHistoricalOpportunity: HistoricalJobOpportunity?
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 18) {
-                if let manifest = store.manifest {
-                    let packages = manifest.reportPackages(for: .jobs)
-                    JobsHeader(
-                        packageCount: packages.count,
-                        report: jobsStore.report,
-                        source: jobsStore.source
-                    )
+        GeometryReader { proxy in
+            let layout = PavbotAdaptiveLayout.resolve(
+                width: proxy.size.width,
+                horizontalSizeClass: horizontalSizeClass
+            )
 
-                    if packages.isEmpty {
-                        ContentUnavailableView(
-                            "Brak raportów Jobs",
-                            systemImage: "briefcase",
-                            description: Text("Odśwież manifest po publikacji automatyzacji LLM/AI Jobs Wrocław.")
+            PavbotPremiumScreenScaffold(layout: layout) {
+                    if let manifest = store.manifest {
+                        let packages = manifest.reportPackages(for: .jobs)
+                        JobsHeader(
+                            packageCount: packages.count,
+                            report: jobsStore.report,
+                            source: jobsStore.source,
+                            layout: layout
                         )
-                        .frame(maxWidth: .infinity, minHeight: 300)
-                    } else {
-                        JobsModePicker(selection: $viewMode)
 
-                        switch viewMode {
-                        case .brief:
-                            JobsContent(
-                                state: jobsStore.state,
-                                report: jobsStore.report,
-                                package: jobsStore.selectedPackage,
-                                source: jobsStore.source,
-                                cacheNotice: jobsStore.cacheNotice,
-                                filter: $selectedFilter,
-                                searchText: searchText,
-                                selectedOpportunity: $selectedOpportunity
+                        if packages.isEmpty {
+                            ContentUnavailableView(
+                                "Brak raportów Jobs",
+                                systemImage: "briefcase",
+                                description: Text("Odśwież manifest po publikacji automatyzacji LLM/AI Jobs Wrocław.")
                             )
-                        case .allOffers:
-                            JobsHistoryContent(
-                                state: historyStore.state,
-                                snapshot: historyStore.snapshot,
-                                filter: $selectedFilter,
-                                selectedDate: $selectedHistoryDate,
-                                searchText: searchText,
-                                selectedOpportunity: $selectedHistoricalOpportunity
-                            )
+                            .frame(maxWidth: .infinity, minHeight: 300)
+                        } else {
+                            JobsModePicker(selection: $viewMode)
+
+                            switch viewMode {
+                            case .brief:
+                                JobsContent(
+                                    state: jobsStore.state,
+                                    report: jobsStore.report,
+                                    package: jobsStore.selectedPackage,
+                                    source: jobsStore.source,
+                                    cacheNotice: jobsStore.cacheNotice,
+                                    filter: $selectedFilter,
+                                    searchText: searchText,
+                                    layout: layout,
+                                    selectedOpportunity: $selectedOpportunity
+                                )
+                            case .allOffers:
+                                JobsHistoryContent(
+                                    state: historyStore.state,
+                                    snapshot: historyStore.snapshot,
+                                    filter: $selectedFilter,
+                                    selectedDate: $selectedHistoryDate,
+                                    searchText: searchText,
+                                    layout: layout,
+                                    selectedOpportunity: $selectedHistoricalOpportunity
+                                )
+                            }
                         }
+                    } else {
+                        ContentUnavailableView(
+                            "Brak manifestu",
+                            systemImage: "doc.badge.questionmark",
+                            description: Text("Ustaw Manifest URL w Settings i odśwież dane.")
+                        )
+                        .frame(maxWidth: .infinity, minHeight: 320)
                     }
-                } else {
-                    ContentUnavailableView(
-                        "Brak manifestu",
-                        systemImage: "doc.badge.questionmark",
-                        description: Text("Ustaw Manifest URL w Settings i odśwież dane.")
-                    )
-                    .frame(maxWidth: .infinity, minHeight: 320)
-                }
             }
-            .padding(.horizontal, 20)
-            .padding(.vertical, 18)
+            .environment(\.pavbotAdaptiveLayout, layout)
         }
-        .background(Color(.systemGroupedBackground))
         .navigationTitle("Jobs")
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Szukaj firm, ról i tagów")
         .navigationDestination(for: PavbotArtifact.self) { artifact in
@@ -76,13 +83,13 @@ struct JobsView: View {
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button {
+                PavbotRefreshToolbarButton(
+                    isRefreshing: isRefreshingJobs,
+                    accessibilityLabel: "Odśwież Jobs",
+                    accessibilityHint: "Odświeża manifest oraz dane Jobs."
+                ) {
                     Task { await reloadJobs(refreshManifest: true) }
-                } label: {
-                    Image(systemName: "arrow.clockwise")
                 }
-                .disabled(store.state == .loading || jobsStore.state == .loading)
-                .accessibilityLabel("Odśwież Jobs")
             }
         }
         .refreshable {
@@ -91,16 +98,23 @@ struct JobsView: View {
         .task(id: loadKey) {
             await reloadJobs(refreshManifest: false)
         }
+        .task(id: jobsRouteReloadKey) {
+            guard router.selectedTab == .jobs, jobsRouteReloadKey != "no-jobs-route" else { return }
+            await reloadJobs(refreshManifest: true)
+        }
         .onChange(of: viewMode) { _, newValue in
             guard newValue == .allOffers else { return }
             Task { await reloadHistory(refreshManifest: false) }
         }
         .sheet(item: $selectedOpportunity) { opportunity in
             JobOpportunityDetailView(opportunity: opportunity)
+                .pavbotLargeObjectPresentation()
         }
         .sheet(item: $selectedHistoricalOpportunity) { opportunity in
             HistoricalJobOpportunityDetailView(item: opportunity)
+                .pavbotLargeObjectPresentation()
         }
+        .pavbotTabInfo(PavbotTabInfoContent.jobs(subtabTitle: viewMode.title))
     }
 
     private var loadKey: String {
@@ -112,6 +126,16 @@ struct JobsView: View {
         ]
         .compactMap { $0 }
         .joined(separator: "::")
+    }
+
+    private var jobsRouteReloadKey: String {
+        guard router.selectedTab == .jobs else { return "no-jobs-route" }
+        let day = router.selectedReportDay ?? "no-day"
+        let artifacts = router.selectedReportArtifactIDs.joined(separator: "|")
+        guard router.selectedReportDay != nil || !router.selectedReportArtifactIDs.isEmpty else {
+            return "no-jobs-route"
+        }
+        return [day, artifacts].joined(separator: "::")
     }
 
     private func reloadJobs(refreshManifest: Bool) async {
@@ -151,6 +175,12 @@ struct JobsView: View {
 
     private var routedReportDay: String? {
         router.selectedReportArtifactIDs.isEmpty ? nil : router.selectedReportDay
+    }
+
+    private var isRefreshingJobs: Bool {
+        store.state == .loading
+            || jobsStore.state == .loading
+            || historyStore.state == .loading
     }
 }
 
@@ -229,6 +259,7 @@ private struct JobsContent: View {
     let cacheNotice: String?
     @Binding var filter: JobsFilter
     let searchText: String
+    let layout: PavbotAdaptiveLayout
     @Binding var selectedOpportunity: JobOpportunity?
 
     private var presentationSnapshot: JobsOpportunityPresentationSnapshot {
@@ -272,14 +303,34 @@ private struct JobsContent: View {
 
     @ViewBuilder
     private func loadedContent(report: JobsReport) -> some View {
-        JobsBriefCard(report: report, package: package, source: source)
+        if layout.usesDashboardLayout {
+            HStack(alignment: .top, spacing: layout.cardSpacing) {
+                VStack(alignment: .leading, spacing: layout.cardSpacing) {
+                    JobsBriefCard(report: report, package: package, source: source)
+                    if let cacheNotice {
+                        PavbotCacheNoticeBanner(text: cacheNotice)
+                    }
+                    JobsFilterBar(selection: $filter)
+                }
+                .frame(maxWidth: 520)
 
-        if let cacheNotice {
-            PavbotCacheNoticeBanner(text: cacheNotice)
+                opportunitiesView
+                    .frame(maxWidth: .infinity)
+            }
+        } else {
+            JobsBriefCard(report: report, package: package, source: source)
+
+            if let cacheNotice {
+                PavbotCacheNoticeBanner(text: cacheNotice)
+            }
+
+            JobsFilterBar(selection: $filter)
+            opportunitiesView
         }
+    }
 
-        JobsFilterBar(selection: $filter)
-
+    @ViewBuilder
+    private var opportunitiesView: some View {
         if presentationSnapshot.opportunities.isEmpty {
             ContentUnavailableView(
                 "Brak ofert dla filtra",
@@ -288,12 +339,14 @@ private struct JobsContent: View {
             )
             .frame(maxWidth: .infinity, minHeight: 220)
         } else {
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: layout.cardSpacing) {
                 Text("Najciekawsze oferty")
                     .font(.headline.weight(.semibold))
-                ForEach(presentationSnapshot.opportunities) { opportunity in
-                    JobOpportunityCard(opportunity: opportunity) {
-                        selectedOpportunity = opportunity
+                LazyVGrid(columns: layout.usesDashboardLayout ? layout.adaptiveColumns(minimum: layout.jobsCardMinWidth) : [GridItem(.flexible())], spacing: layout.cardSpacing) {
+                    ForEach(presentationSnapshot.opportunities) { opportunity in
+                        JobOpportunityCard(opportunity: opportunity) {
+                            selectedOpportunity = opportunity
+                        }
                     }
                 }
             }
@@ -307,6 +360,7 @@ private struct JobsHistoryContent: View {
     @Binding var filter: JobsFilter
     @Binding var selectedDate: String?
     let searchText: String
+    let layout: PavbotAdaptiveLayout
     @Binding var selectedOpportunity: HistoricalJobOpportunity?
 
     private var presentationSnapshot: JobsHistoryPresentationSnapshot {
@@ -355,10 +409,27 @@ private struct JobsHistoryContent: View {
 
     @ViewBuilder
     private func loadedContent(snapshot: JobsHistorySnapshot) -> some View {
-        JobsHistorySummaryCard(snapshot: snapshot)
-        JobsFilterBar(selection: $filter)
-        JobsHistoryDateBar(snapshot: snapshot, selectedDate: $selectedDate)
+        if layout.usesDashboardLayout {
+            HStack(alignment: .top, spacing: layout.cardSpacing) {
+                VStack(alignment: .leading, spacing: layout.cardSpacing) {
+                    JobsHistorySummaryCard(snapshot: snapshot)
+                    JobsFilterBar(selection: $filter)
+                    JobsHistoryDateBar(snapshot: snapshot, selectedDate: $selectedDate)
+                }
+                .frame(maxWidth: 500)
 
+                historyOpportunitiesView
+            }
+        } else {
+            JobsHistorySummaryCard(snapshot: snapshot)
+            JobsFilterBar(selection: $filter)
+            JobsHistoryDateBar(snapshot: snapshot, selectedDate: $selectedDate)
+            historyOpportunitiesView
+        }
+    }
+
+    @ViewBuilder
+    private var historyOpportunitiesView: some View {
         if presentationSnapshot.opportunities.isEmpty {
             ContentUnavailableView(
                 "Brak ofert dla wybranego widoku",
@@ -367,7 +438,7 @@ private struct JobsHistoryContent: View {
             )
             .frame(maxWidth: .infinity, minHeight: 220)
         } else {
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: layout.cardSpacing) {
                 HStack(alignment: .firstTextBaseline) {
                     Text("Znalezione oferty")
                         .font(.headline.weight(.semibold))
@@ -380,9 +451,11 @@ private struct JobsHistoryContent: View {
                         .background(Color.indigo.opacity(0.12), in: Capsule())
                 }
 
-                ForEach(presentationSnapshot.opportunities) { item in
-                    HistoricalJobOpportunityCard(item: item) {
-                        selectedOpportunity = item
+                LazyVGrid(columns: layout.usesDashboardLayout ? layout.adaptiveColumns(minimum: layout.jobsCardMinWidth) : [GridItem(.flexible())], spacing: layout.cardSpacing) {
+                    ForEach(presentationSnapshot.opportunities) { item in
+                        HistoricalJobOpportunityCard(item: item) {
+                            selectedOpportunity = item
+                        }
                     }
                 }
             }
@@ -570,31 +643,25 @@ private struct JobsHeader: View {
     let packageCount: Int
     let report: JobsReport?
     let source: JobsReportSource?
+    let layout: PavbotAdaptiveLayout
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 14) {
-            HStack(alignment: .top, spacing: 12) {
-                Image(systemName: "briefcase.fill")
-                    .font(.title2.weight(.semibold))
-                    .foregroundStyle(.indigo)
-                    .frame(width: 48, height: 48)
-                    .background(Color.indigo.opacity(0.14), in: RoundedRectangle(cornerRadius: 8))
-
-                VStack(alignment: .leading, spacing: 5) {
-                    Text("LLM / AI Jobs Wrocław")
-                        .font(.title2.weight(.bold))
-                    Text("Natywny przegląd ról, firm, źródeł i sygnałów rynku.")
-                        .font(.subheadline)
-                        .foregroundStyle(.secondary)
-                }
-            }
-
-            HStack(spacing: 12) {
-                MetricTile(title: "Oferty", value: "\(report?.opportunities.count ?? 0)", systemImage: "person.crop.rectangle.stack.fill", tint: .indigo)
-                MetricTile(title: "Zmiany", value: "\(report?.changes.count ?? 0)", systemImage: "sparkles", tint: .purple)
-                MetricTile(title: "Źródła", value: "\(report?.checkedSources.count ?? 0)", subtitle: source?.label ?? "\(packageCount) publikacji", systemImage: "link.circle.fill", tint: .blue)
-            }
-        }
+        PavbotCommandHero(
+            eyebrow: "Job Radar",
+            title: "LLM / AI Jobs Wrocław",
+            subtitle: layout.usesDashboardLayout
+                ? "Dashboard ról, firm, źródeł i sygnałów rynku z panelem podsumowania oraz gridem ofert."
+                : "Szybki przegląd ról AI, źródeł i zmian gotowy do decyzji na telefonie.",
+            systemImage: "briefcase.fill",
+            tint: .indigo,
+            insights: [
+                PavbotInsight(title: "Oferty", value: "\(report?.opportunities.count ?? 0)", systemImage: "person.crop.rectangle.stack.fill", tint: .indigo),
+                PavbotInsight(title: "Zmiany", value: "\(report?.changes.count ?? 0)", systemImage: "sparkles", tint: .purple),
+                PavbotInsight(title: "Źródła", value: "\(report?.checkedSources.count ?? 0)", systemImage: "link.circle.fill", tint: .blue),
+                PavbotInsight(title: "Publikacje", value: source?.label ?? "\(packageCount)", systemImage: "calendar.badge.clock", tint: .orange)
+            ],
+            startsCollapsed: true
+        )
     }
 }
 

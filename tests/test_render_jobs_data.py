@@ -104,3 +104,46 @@ Krótki testowy raport.
 
     assert payload["opportunities"][0]["location"] == "Cała Polska (praca zdalna)"
     assert payload["opportunities"][0]["workMode"] == "Remote"
+
+
+def test_render_jobs_data_supports_top_roles_with_flat_link_bullets() -> None:
+    renderer = load_renderer()
+    validator = load_validator()
+
+    markdown = """# LLM/AI Jobs Wrocław
+
+Date: 2026-06-29 01:41 Europe/Warsaw
+Status: Material update
+
+## Zakres sprawdzony
+
+- [Just Join IT](https://justjoin.it/jobs) - checked
+
+## Podsumowanie zarządcze
+
+Nowy pakiet ról AI dla Polski z naciskiem na GenAI i agentów.
+
+## Top Roles
+
+- [Primotly - Senior AI Engineer (Python, GenAI, GCP)](https://example.com/primotly): `Wrocław +4, remote`; budowa agentów i workflow GenAI na GCP; `29 000-36 500 PLN net/mies. B2B`; niepewność niska.
+- [Remodevs - Senior AI Engineer](https://example.com/remodevs): `Cała Polska, praca zdalna`; agent workflows, evals i tracing dla systemów LLM; `33 970-42 462 PLN net/mies. B2B`; niepewność średnia.
+
+## Zmiany od poprzedniej rundy
+
+- Doszły dwa nowe publiczne ogłoszenia.
+
+## Rekomendowane akcje
+
+- Sprawdzić kolejne aktualizacje widełek.
+"""
+
+    payload = renderer.parse_report(markdown)
+
+    assert validator.validate_payload(payload) == []
+    assert payload["opportunities"][0]["company"] == "Primotly"
+    assert payload["opportunities"][0]["title"] == "Senior AI Engineer (Python, GenAI, GCP)"
+    assert payload["opportunities"][0]["location"] == "Wrocław +4, remote"
+    assert payload["opportunities"][0]["workMode"] == "Remote"
+    assert payload["opportunities"][0]["compensation"] == "29 000-36 500 PLN net/mies. B2B"
+    assert payload["opportunities"][0]["sourceURLs"] == ["https://example.com/primotly"]
+    assert payload["opportunities"][1]["company"] == "Remodevs"

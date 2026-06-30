@@ -76,8 +76,10 @@ final class AppRouter {
         researchPath = []
     }
 
-    func selectArtifactAutomation(id: String?, day: String?) {
-        selectedTab = .artifacts
+    func selectArtifactAutomation(id: String?, day: String?, switchToArtifactsTab: Bool = true) {
+        if switchToArtifactsTab {
+            selectedTab = .artifacts
+        }
         artifactPath = []
         pendingArtifactID = nil
         artifactRoute = nil
@@ -90,8 +92,8 @@ final class AppRouter {
         researchPath = []
     }
 
-    func openArtifactsForAutomation(id: String, latestDay: String?) {
-        selectArtifactAutomation(id: id, day: latestDay)
+    func openArtifactsForAutomation(id: String, latestDay: String?, switchToArtifactsTab: Bool = true) {
+        selectArtifactAutomation(id: id, day: latestDay, switchToArtifactsTab: switchToArtifactsTab)
     }
 
     func openReportsForTopic(_ topic: String, latestDay: String?) -> Bool {

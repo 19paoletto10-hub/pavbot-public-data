@@ -11,6 +11,7 @@ from pathlib import Path
 from types import SimpleNamespace
 
 import pytest
+from fastapi.testclient import TestClient
 
 
 def load_core():
@@ -57,6 +58,13 @@ def load_daily_humor():
     if str(package_root) not in sys.path:
         sys.path.insert(0, str(package_root))
     return importlib.import_module("pavbot_notifier.daily_humor")
+
+
+def load_server():
+    package_root = Path(__file__).resolve().parents[1] / "backend" / "pavbot-notifier"
+    if str(package_root) not in sys.path:
+        sys.path.insert(0, str(package_root))
+    return importlib.import_module("pavbot_notifier.server")
 
 
 def test_compute_manifest_changes_detects_new_artifacts_and_automations():
@@ -125,6 +133,10 @@ def test_notifier_status_reports_devices_public_url_and_last_webhook(tmp_path):
         json.dumps({"status": "registered", "deviceTokenSuffix": "ken-a"}),
         encoding="utf-8",
     )
+    (tmp_path / "last-public-readiness.json").write_text(
+        json.dumps({"status": "sent", "attempts": 2, "artifactURL": "https://raw.example.com/latest.json"}),
+        encoding="utf-8",
+    )
 
     status = core.notifier_status(
         storage_dir=tmp_path,
@@ -143,6 +155,8 @@ def test_notifier_status_reports_devices_public_url_and_last_webhook(tmp_path):
     assert status["lastWebhook"]["newArtifacts"] == 1
     assert status["lastApnsDelivery"]["status"] == "partial"
     assert status["lastDeviceRegistration"]["status"] == "registered"
+    assert status["lastPublicReadiness"]["status"] == "sent"
+    assert status["lastPublicReadiness"]["attempts"] == 2
 
 
 def test_normalized_public_notifier_url_trims_whitespace_and_slashes():
@@ -399,6 +413,8 @@ def test_pulse_news_notification_uses_high_priority_article_teaser():
     async def fetch_json(url):
         assert url == "https://raw.example.com/research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json"
         return {
+            "runDate": "2026-06-26",
+            "runTime": "21:09",
             "items": [
                 {
                     "id": "regular-story",
@@ -468,7 +484,7 @@ def test_pulse_news_notification_uses_high_priority_article_teaser():
     assert call["userInfo"]["pulseArticleTitle"] == "Rząd pokazuje nowy pakiet dla AI w administracji"
 
 
-def test_pulse_news_notification_falls_back_when_digest_fetch_fails():
+def test_pulse_news_notification_waits_when_digest_fetch_fails():
     core = load_core()
 
     class FakeSender:
@@ -513,11 +529,104 @@ def test_pulse_news_notification_falls_back_when_digest_fetch_fails():
         )
     )
 
-    assert summary["attempted"] == 1
-    assert summary["sent"] == 1
-    assert sender.calls[0]["title"] == "Nowe tematy - Puls dnia"
-    assert sender.calls[0]["body"] == "Nowy zestaw tematów jest gotowy. Otwórz Puls dnia i sprawdź najnowsze karty."
-    assert sender.calls[0]["userInfo"]["notificationKind"] == "pulseNews"
+    assert summary["attempted"] == 0
+    assert summary["sent"] == 0
+    assert summary["status"] == "not_ready"
+    assert summary["skippedReason"] == "pulseNewsData is not publicly readable"
+    assert sender.calls == []
+
+
+def test_public_artifact_readiness_retries_until_pulse_json_is_readable():
+    core = load_core()
+    manifest_url = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+    artifact = {
+        "id": "research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
+        "type": "pulseNewsData",
+        "topic": "puls-dnia-news",
+        "path": "research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
+        "url": "https://raw.example.com/research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
+        "date": "2026-06-26",
+        "time": "21:09",
+    }
+    manifest = {"artifacts": [artifact]}
+    fetch_attempts = {"count": 0}
+
+    async def fetch_manifest(url):
+        assert url == manifest_url
+        return manifest
+
+    async def fetch_json(url):
+        fetch_attempts["count"] += 1
+        if fetch_attempts["count"] < 3:
+            raise RuntimeError("raw file not propagated")
+        return {
+            "schemaVersion": 1,
+            "topic": "puls-dnia-news",
+            "runDate": "2026-06-26",
+            "runTime": "21:09",
+            "items": [
+                {
+                    "id": "high-story",
+                    "title": "Rząd pokazuje nowy pakiet dla AI w administracji",
+                    "lead": "Nowe przepisy mogą przyspieszyć wdrożenia automatyzacji w sektorze publicznym.",
+                    "priority": "high",
+                }
+            ],
+        }
+
+    readiness = asyncio.run(
+        core.wait_for_public_artifacts_ready(
+            artifacts=[artifact],
+            manifest_url_value=manifest_url,
+            fetch_manifest_json=fetch_manifest,
+            fetch_json=fetch_json,
+            fetch_url=lambda url: None,
+            max_attempts=4,
+            delay_seconds=0,
+        )
+    )
+
+    assert readiness.status == "ready"
+    assert readiness.attempts == 3
+    assert readiness.artifact_url == artifact["url"]
+    assert readiness.pulse_news_digest["items"][0]["id"] == "high-story"
+
+
+def test_public_artifact_readiness_checks_non_pulse_artifact_url():
+    core = load_core()
+    manifest_url = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+    artifact = {
+        "id": "research/tech-news/runs/2026-06-26.md",
+        "type": "run",
+        "topic": "tech-news",
+        "path": "research/tech-news/runs/2026-06-26.md",
+        "url": "https://raw.example.com/research/tech-news/runs/2026-06-26.md",
+        "date": "2026-06-26",
+    }
+    checked_urls: list[str] = []
+
+    async def fetch_manifest(url):
+        return {"artifacts": [artifact]}
+
+    async def fetch_url(url):
+        checked_urls.append(url)
+        return b"# report"
+
+    readiness = asyncio.run(
+        core.wait_for_public_artifacts_ready(
+            artifacts=[artifact],
+            manifest_url_value=manifest_url,
+            fetch_manifest_json=fetch_manifest,
+            fetch_json=lambda url: {},
+            fetch_url=fetch_url,
+            max_attempts=2,
+            delay_seconds=0,
+        )
+    )
+
+    assert readiness.status == "ready"
+    assert readiness.attempts == 1
+    assert checked_urls == [artifact["url"]]
 
 
 def test_pulse_news_notification_builder_without_digest_uses_fallback_copy():
@@ -1128,7 +1237,7 @@ def test_humor_digest_payload_declares_reddit_radar_detail_fields():
     }
 
     assert {"categoryLabel", "postText", "whyFunny", "commentHighlights"} <= item_fields
-    assert {"id", "summary", "explanation", "score"} <= comment_fields
+    assert {"id", "summary", "originalBody", "explanation", "score"} <= comment_fields
 
 
 def test_daily_humor_defaults_to_reddit_only_sources(monkeypatch):
@@ -1140,6 +1249,189 @@ def test_daily_humor_defaults_to_reddit_only_sources(monkeypatch):
     assert config.reddit_subreddits == ("Polska_wpz", "memes", "ProgrammerHumor")
     assert all("reddit.com" in url for _, url in config.sources)
     assert all("lemmy" not in url for _, url in config.sources)
+
+
+def test_daily_humor_fetches_oauth_comment_highlights(monkeypatch):
+    daily_humor = load_daily_humor()
+
+    listing_payload = {
+        "data": {
+            "children": [
+                {
+                    "data": {
+                        "id": "safe1",
+                        "title": "Kiedy deploy przechodzi za pierwszym razem",
+                        "permalink": "/r/ProgrammerHumor/comments/safe1/test/",
+                        "url": "https://i.redd.it/example.png",
+                        "score": 1200,
+                        "num_comments": 42,
+                        "over_18": False,
+                        "stickied": False,
+                    }
+                }
+            ]
+        }
+    }
+    comments_payload = [
+        {"data": {"children": []}},
+        {
+            "data": {
+                "children": [
+                    {
+                        "kind": "t1",
+                        "data": {
+                            "id": "c-low",
+                            "body": "Komentarz o tym, że po zielonym CI wszyscy i tak patrzą w logi.",
+                            "score": 21,
+                        },
+                    },
+                    {
+                        "kind": "t1",
+                        "data": {"id": "c-toxic", "body": "kill yourself", "score": 999},
+                    },
+                    {
+                        "kind": "t1",
+                        "data": {
+                            "id": "c-top",
+                            "body": "Najcelniejsza puenta: deploy bez awarii wygląda bardziej podejrzanie niż błąd.",
+                            "score": 88,
+                        },
+                    },
+                    {
+                        "kind": "t1",
+                        "data": {
+                            "id": "c-mid",
+                            "body": "Druga obserwacja o czekaniu, aż monitoring przypomni o sobie.",
+                            "score": 44,
+                        },
+                    },
+                    {
+                        "kind": "t1",
+                        "data": {
+                            "id": "c-third",
+                            "body": "Trzecia dobra obserwacja o nerwowym odświeżaniu dashboardów.",
+                            "score": 30,
+                        },
+                    },
+                ]
+            }
+        },
+    ]
+    calls: list[str] = []
+
+    class FakeResponse:
+        def __init__(self, payload, status_code=200):
+            self._payload = payload
+            self.status_code = status_code
+
+        def json(self):
+            return self._payload
+
+    class FakeAsyncClient:
+        def __init__(self, *args, **kwargs):
+            pass
+
+        async def __aenter__(self):
+            return self
+
+        async def __aexit__(self, exc_type, exc, traceback):
+            return False
+
+        async def post(self, url, data, auth, headers):
+            return FakeResponse({"access_token": "token-123"})
+
+        async def get(self, url, headers=None):
+            calls.append(url)
+            if "/hot?" in url:
+                return FakeResponse(listing_payload)
+            if "/comments/safe1/" in url:
+                return FakeResponse(comments_payload)
+            return FakeResponse({}, status_code=404)
+
+    monkeypatch.setitem(sys.modules, "httpx", SimpleNamespace(AsyncClient=FakeAsyncClient))
+    config = daily_humor.DailyHumorConfig(
+        enabled=True,
+        interval_hours=3,
+        timezone_name="Europe/Warsaw",
+        max_items=1,
+        reddit_client_id="client-id",
+        reddit_client_secret="client-secret",
+        reddit_subreddits=("ProgrammerHumor",),
+    )
+
+    items = asyncio.run(daily_humor.fetch_humor_items(config=config))
+
+    assert any("/comments/safe1/" in call for call in calls)
+    assert len(items) == 1
+    assert [highlight["score"] for highlight in items[0]["commentHighlights"]] == [88, 44, 30]
+    assert items[0]["commentHighlights"][0]["summary"].startswith("Najcelniejsza puenta")
+    assert items[0]["commentHighlights"][0]["originalBody"] == (
+        "Najcelniejsza puenta: deploy bez awarii wygląda bardziej podejrzanie niż błąd."
+    )
+    assert "deploy" in items[0]["commentHighlights"][0]["explanation"].lower()
+
+
+def test_daily_humor_keeps_oauth_item_when_comment_fetch_fails(monkeypatch):
+    daily_humor = load_daily_humor()
+    listing_payload = {
+        "data": {
+            "children": [
+                {
+                    "data": {
+                        "id": "safe1",
+                        "title": "Kiedy deploy przechodzi za pierwszym razem",
+                        "permalink": "/r/ProgrammerHumor/comments/safe1/test/",
+                        "score": 1200,
+                        "num_comments": 42,
+                        "over_18": False,
+                        "stickied": False,
+                    }
+                }
+            ]
+        }
+    }
+
+    class FakeResponse:
+        def __init__(self, payload, status_code=200):
+            self._payload = payload
+            self.status_code = status_code
+
+        def json(self):
+            return self._payload
+
+    class FakeAsyncClient:
+        def __init__(self, *args, **kwargs):
+            pass
+
+        async def __aenter__(self):
+            return self
+
+        async def __aexit__(self, exc_type, exc, traceback):
+            return False
+
+        async def post(self, url, data, auth, headers):
+            return FakeResponse({"access_token": "token-123"})
+
+        async def get(self, url, headers=None):
+            if "/hot?" in url:
+                return FakeResponse(listing_payload)
+            return FakeResponse({}, status_code=503)
+
+    monkeypatch.setitem(sys.modules, "httpx", SimpleNamespace(AsyncClient=FakeAsyncClient))
+    config = daily_humor.DailyHumorConfig(
+        enabled=True,
+        interval_hours=3,
+        timezone_name="Europe/Warsaw",
+        max_items=1,
+        reddit_client_id="client-id",
+        reddit_client_secret="client-secret",
+        reddit_subreddits=("ProgrammerHumor",),
+    )
+
+    items = asyncio.run(daily_humor.fetch_humor_items(config=config))
+
+    assert items[0]["title"] == "Kiedy deploy przechodzi za pierwszym razem"
+    assert items[0]["commentHighlights"] == []
 
 
 def test_daily_humor_fetch_requires_reddit_oauth_credentials():
@@ -1268,6 +1560,21 @@ def test_daily_humor_status_reports_digest(tmp_path):
         config=config,
         generated_at=daily_humor.datetime.fromisoformat("2026-06-25T08:15:00+00:00"),
     )
+    digest["items"][0]["commentHighlights"] = [
+        {
+            "id": "comment-1",
+            "summary": "Komentarz z pełnym oryginałem.",
+            "originalBody": "Original comment text.",
+            "explanation": "Komentarz zachowuje oryginalne ciało.",
+            "score": 44,
+        },
+        {
+            "id": "comment-2",
+            "summary": "Komentarz bez oryginału.",
+            "explanation": "Ten wpis symuluje stary niepełny digest.",
+            "score": 12,
+        },
+    ]
     (tmp_path / "last-daily-humor.json").write_text(
         json.dumps({"lastDigest": digest, "lastRefreshAt": digest["generatedAt"]}),
         encoding="utf-8",
@@ -1278,6 +1585,9 @@ def test_daily_humor_status_reports_digest(tmp_path):
     assert status["enabled"] is True
     assert status["intervalHours"] == 3
     assert status["lastDigest"]["itemCount"] == 2
+    assert status["lastDigest"]["commentHighlightCount"] == 2
+    assert status["lastDigest"]["missingOriginalBodyHighlights"] == 1
+    assert status["lastDigest"]["hasOriginalBodies"] is False
     assert status["redditOAuthConfigured"] is False
     assert status["redditSubreddits"] == ["Polska_wpz", "memes", "ProgrammerHumor"]
 
@@ -1388,6 +1698,134 @@ def test_humor_digest_ingest_requires_bearer_token(tmp_path):
     assert result["status"] == "stored"
     assert latest["source"] == "Codex Safari Reddit radar"
     assert latest["items"][0]["sourceURL"].startswith("https://www.reddit.com/")
+
+
+def test_humor_digest_endpoint_preserves_reddit_radar_detail_fields(tmp_path, monkeypatch):
+    server = load_server()
+    monkeypatch.setenv("PAVBOT_NOTIFIER_DATA_DIR", str(tmp_path))
+    monkeypatch.setenv("PAVBOT_HUMOR_INGEST_TOKEN", "secret-token")
+    monkeypatch.setenv("PAVBOT_DAILY_HUMOR_SOURCE_MODE", "external")
+    monkeypatch.setenv("PAVBOT_DAILY_HUMOR_ENABLED", "false")
+    monkeypatch.setenv("PAVBOT_DAILY_WEATHER_ENABLED", "false")
+    payload = {
+        "id": "humor-2026-06-28-0408",
+        "title": "<RR> Reddit Radar",
+        "summary": "Kategorie: mildlyinfuriating. Najmocniej wybija się: <u>test</u>.",
+        "generatedAt": "2026-06-28T02:08:22+00:00",
+        "displayTime": "04:08",
+        "nextRefreshAt": "2026-06-28T06:06:00+02:00",
+        "refreshIntervalHours": 2,
+        "source": "Codex Safari Reddit radar",
+        "items": [
+            {
+                "id": "reddit-test",
+                "title": "My friend keeps reminding me my dog is gonna die in 4 years",
+                "caption": "Krótki sygnał społecznościowy.",
+                "sourceName": "r/mildlyinfuriating",
+                "sourceURL": "https://www.reddit.com/r/mildlyinfuriating/comments/test/example/",
+                "imageURL": None,
+                "score": 13925,
+                "comments": 4361,
+                "tags": ["trend"],
+                "categoryLabel": "mildlyinfuriating",
+                "postText": "Autor opisuje znajomą wysyłającą fałszywe zaproszenia pogrzebowe dla psa.",
+                "whyFunny": "Humor działa, bo troska o psa zderza się z brutalnie nieczułym czarnym żartem.",
+                "commentHighlights": [
+                    {
+                        "id": "comment-1",
+                        "summary": "Komentarz twierdzi, że problemem jest znajomy, nie pies.",
+                        "originalBody": "The dog looks concerned about your choice of friends.",
+                        "explanation": "Działa, bo jednym ruchem odwraca winę i wzmacnia absurd sytuacji.",
+                        "score": 3325,
+                    }
+                ],
+            }
+        ],
+    }
+
+    client = TestClient(server.app)
+    response = client.post(
+        "/v1/humor/digest",
+        headers={"Authorization": "Bearer secret-token"},
+        json=payload,
+    )
+    latest_response = client.get("/v1/humor/latest")
+
+    assert response.status_code == 200
+    assert latest_response.status_code == 200
+    item = latest_response.json()["items"][0]
+    assert item["categoryLabel"] == "mildlyinfuriating"
+    assert item["postText"].startswith("Autor opisuje")
+    assert item["whyFunny"].startswith("Humor działa")
+    assert item["commentHighlights"] == payload["items"][0]["commentHighlights"]
+
+
+def test_humor_digest_endpoint_rejects_comment_highlights_without_original_body(tmp_path, monkeypatch):
+    server = load_server()
+    monkeypatch.setenv("PAVBOT_NOTIFIER_DATA_DIR", str(tmp_path))
+    monkeypatch.setenv("PAVBOT_HUMOR_INGEST_TOKEN", "secret-token")
+    monkeypatch.setenv("PAVBOT_DAILY_HUMOR_SOURCE_MODE", "external")
+    monkeypatch.setenv("PAVBOT_DAILY_HUMOR_ENABLED", "false")
+    monkeypatch.setenv("PAVBOT_DAILY_WEATHER_ENABLED", "false")
+    payload = {
+        "id": "humor-2026-06-28-good",
+        "title": "<RR> Reddit Radar",
+        "summary": "Kategorie: memes. Najmocniej wybija się: <u>test</u>.",
+        "generatedAt": "2026-06-28T04:08:22+00:00",
+        "displayTime": "06:08",
+        "nextRefreshAt": "2026-06-28T08:06:00+02:00",
+        "refreshIntervalHours": 2,
+        "source": "Codex Safari Reddit radar",
+        "items": [
+            {
+                "id": "reddit-test",
+                "title": "A complete comment highlight",
+                "caption": "Krótki sygnał społecznościowy.",
+                "sourceName": "r/memes",
+                "sourceURL": "https://www.reddit.com/r/memes/comments/test/example/",
+                "imageURL": None,
+                "score": 1200,
+                "comments": 120,
+                "tags": ["memy"],
+                "categoryLabel": "memy",
+                "postText": None,
+                "whyFunny": "Działa, bo puenta jest krótka i czytelna.",
+                "commentHighlights": [
+                    {
+                        "id": "comment-1",
+                        "summary": "Komentarz ma pełny oryginał.",
+                        "originalBody": "This is the original comment.",
+                        "explanation": "Oryginał zostaje zachowany dla iOS.",
+                        "score": 99,
+                    }
+                ],
+            }
+        ],
+    }
+    invalid_payload = json.loads(json.dumps(payload))
+    invalid_payload["id"] = "humor-2026-06-28-bad"
+    invalid_payload["items"][0]["commentHighlights"][0].pop("originalBody")
+
+    client = TestClient(server.app)
+    good_response = client.post(
+        "/v1/humor/digest",
+        headers={"Authorization": "Bearer secret-token"},
+        json=payload,
+    )
+    bad_response = client.post(
+        "/v1/humor/digest",
+        headers={"Authorization": "Bearer secret-token"},
+        json=invalid_payload,
+    )
+    latest_response = client.get("/v1/humor/latest")
+
+    assert good_response.status_code == 200
+    assert bad_response.status_code == 422
+    assert "items[0].commentHighlights[0].originalBody is required" in str(bad_response.json()["detail"])
+    assert latest_response.status_code == 200
+    latest = latest_response.json()
+    assert latest["id"] == payload["id"]
+    assert latest["items"][0]["commentHighlights"][0]["originalBody"] == "This is the original comment."
 
 
 def test_daily_weather_manual_refresh_saves_report_without_sending_pushes(tmp_path, monkeypatch):

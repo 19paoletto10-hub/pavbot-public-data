@@ -105,6 +105,7 @@ Analiza: Technologia jest tu narzędziem administracji i bezpieczeństwa.
             "Technologia",
             "Poranny obraz dnia",
             "KPRM",
+            "https://www.gov.pl/example",
             "Komisja Europejska",
         ):
             with self.subTest(expected=expected):

@@ -26,6 +26,7 @@ OPPORTUNITY_HEADINGS = [
     "Najciekawsze nowe lub zmienione role",
     "Top New Or Materially Changed Roles",
     "Top New Roles",
+    "Top Roles",
 ]
 SCOPE_HEADINGS = ["Zakres sprawdzony", "Scope Checked"]
 CHANGES_HEADINGS = ["Zmiany od poprzedniej rundy", "Changes Since Previous Run"]
@@ -115,6 +116,18 @@ def parse_opportunities(markdown: str, fallback_urls: list[str]) -> list[dict[st
             current_block.append(line)
     flush()
 
+    if opportunities:
+        return opportunities
+
+    for rank, block in enumerate(flat_bullet_blocks(markdown), start=1):
+        opportunities.append(
+            parse_flat_opportunity(
+                block,
+                rank_fallback=rank,
+                fallback_urls=fallback_urls,
+            )
+        )
+
     return opportunities
 
 
@@ -148,11 +161,71 @@ def parse_opportunity(heading: str, block: str, rank_fallback: int, fallback_url
     }
 
 
+def parse_flat_opportunity(block: str, rank_fallback: int, fallback_urls: list[str]) -> dict[str, Any]:
+    raw = block.strip()
+    if raw.startswith("- "):
+        raw = raw[2:].strip()
+
+    links = markdown_links(raw)
+    label = clean_inline(links[0][0]) if links else ""
+    heading_without_rank = label.strip() or "Nieznana firma - Nieznany tytuł"
+    company, title = split_company_title(heading_without_rank)
+    source_urls = [url for _, url in links] or fallback_urls[:1]
+    without_lead = raw
+    if links:
+        first_link = f"[{links[0][0]}]({links[0][1]})"
+        without_lead = raw.replace(first_link, "", 1).lstrip(" :")
+    normalized = clean_inline(without_lead)
+    clauses = [clean_inline(part).strip(" .") for part in re.split(r";\s*", normalized) if clean_inline(part).strip(" .")]
+    backticked = re.findall(r"`([^`]+)`", block)
+
+    location = infer_flat_location(backticked, clauses)
+    compensation = infer_flat_compensation(backticked, clauses)
+    uncertainty = infer_flat_uncertainty(clauses)
+    fit_summary = infer_flat_fit_summary(clauses)
+    why_interesting = infer_flat_why_interesting(clauses, fit_summary)
+
+    search_text = " ".join([title, company, location, fit_summary, why_interesting, normalized])
+    return {
+        "rank": rank_fallback,
+        "title": title,
+        "company": company,
+        "location": location,
+        "workMode": infer_work_mode(location),
+        "compensation": compensation,
+        "seniority": infer_seniority(title),
+        "fitSummary": fit_summary,
+        "whyInteresting": why_interesting,
+        "uncertainty": uncertainty,
+        "sourceURLs": source_urls,
+        "tags": infer_tags(search_text),
+    }
+
+
 def split_company_title(value: str) -> tuple[str, str]:
     if " - " not in value:
         return "Nieznana firma", value.strip()
     company, title = value.split(" - ", 1)
     return company.strip(), title.strip()
+
+
+def flat_bullet_blocks(markdown: str) -> list[str]:
+    blocks: list[str] = []
+    current: list[str] = []
+    for line in markdown.splitlines():
+        stripped = line.strip()
+        if stripped.startswith("- "):
+            if current:
+                blocks.append(" ".join(current))
+            current = [stripped]
+        elif current and stripped and not stripped.startswith("#"):
+            current.append(stripped)
+        elif current:
+            blocks.append(" ".join(current))
+            current = []
+    if current:
+        blocks.append(" ".join(current))
+    return [block for block in blocks if markdown_links(block)]
 
 
 def bullet_value(block: str, labels: list[str], fallback: str = "Brak danych w raporcie.") -> str:
@@ -168,6 +241,66 @@ def bullet_value(block: str, labels: list[str], fallback: str = "Brak danych w r
         if normalize_label(label) in normalized_labels:
             return clean_inline(value).strip() or fallback
     return fallback
+
+
+def infer_flat_location(backticked: list[str], clauses: list[str]) -> str:
+    location_parts: list[str] = []
+    for value in backticked:
+        lowered = value.casefold()
+        if any(token in lowered for token in ("wroc", "remote", "zdal", "hybrid", "hybryd", "location")):
+            location_parts.append(value)
+    if location_parts:
+        return ", ".join(dict.fromkeys(location_parts))
+    if clauses:
+        return clauses[0] if len(clauses[0]) < 120 else "Brak danych w raporcie."
+    return "Brak danych w raporcie."
+
+
+def infer_flat_compensation(backticked: list[str], clauses: list[str]) -> str:
+    money_re = re.compile(r"\b(?:PLN|USD|EUR|CHF|zł|zl|net|gross|brutto|netto)\b", re.IGNORECASE)
+    for value in backticked:
+        if money_re.search(value):
+            return value
+    for clause in clauses:
+        if money_re.search(clause):
+            return clause
+    return "Brak publicznych widełek."
+
+
+def infer_flat_uncertainty(clauses: list[str]) -> str:
+    for clause in clauses:
+        lowered = clause.casefold()
+        if "niepewność" in lowered or "uncertainty" in lowered:
+            return clause
+    return "Brak danych w raporcie."
+
+
+def infer_flat_fit_summary(clauses: list[str]) -> str:
+    descriptive = [
+        clause
+        for clause in clauses
+        if "niepewność" not in clause.casefold() and "uncertainty" not in clause.casefold()
+    ]
+    if len(descriptive) >= 2:
+        return descriptive[1]
+    if descriptive:
+        return descriptive[0]
+    return "Brak danych w raporcie."
+
+
+def infer_flat_why_interesting(clauses: list[str], fit_summary: str) -> str:
+    descriptive = [
+        clause
+        for clause in clauses
+        if "niepewność" not in clause.casefold() and "uncertainty" not in clause.casefold()
+    ]
+    if len(descriptive) >= 3:
+        return descriptive[2]
+    if len(descriptive) >= 2:
+        return descriptive[1]
+    if descriptive:
+        return descriptive[0]
+    return fit_summary or "Brak danych w raporcie."
 
 
 def parse_checked_sources(markdown: str) -> list[dict[str, str]]:

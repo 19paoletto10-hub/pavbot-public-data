@@ -58,7 +58,7 @@ For the iOS app to preview Markdown, PDFs, JSON, and audio, the manifest must
 contain public GitHub raw URLs. The generator derives those artifact URLs from
 the manifest URL resolved by the publish script.
 
-Use this form, which is the same URL you paste into the iOS app:
+Use this form when you need to override the derived public manifest URL:
 
 ```bash
 # Optional override:
@@ -86,7 +86,7 @@ The isolated publish script creates a temporary clean worktree from
 `python3 scripts/generate_pavbot_manifest.py`, commits those outputs with
 `public/pavbot-manifest.json`, and pushes to `origin/main`. This lets
 automation results publish even when a separate app/backend development branch
-has local changes.
+has local changes. Treat the commit and push as mandatory for every output run.
 
 Only `runs/`, `pdfs/`, `podcasts/`, `index.md`, `backlog.md`, and
 `public/pavbot-manifest.json` are allowed in these output commits. Code, docs,
@@ -107,9 +107,11 @@ you can still run:
 python3 scripts/generate_pavbot_manifest.py
 ```
 
-## 4. Copy The Manifest URL
+## 4. Confirm The Manifest URL
 
-The URL to paste into the iOS app is:
+The production app uses the public Pavbot data repository by default. For forks
+or custom public repositories, the manifest URL controlled by the publish
+pipeline should have this form:
 
 ```text
 https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json
@@ -121,31 +123,35 @@ Example:
 https://raw.githubusercontent.com/acme/pavbot-workspace/main/public/pavbot-manifest.json
 ```
 
-The URL must use `https` and must point to a `.json` file.
+The URL must use `https` and must point to a `.json` file. The app no longer
+shows raw URL edit fields in Settings; custom repository builds should set the
+default URL in configuration or publish with `PAVBOT_MANIFEST_URL`.
 
 ## 5. Configure The iOS App
 
 Open the Pavbot iOS app and go to:
 
 ```text
-Settings -> Manifest URL -> Save and reload
+Settings -> Domyślne połączenia
 ```
 
-Paste the public manifest URL, then tap `Save and reload`.
+Confirm that the connection status is production and that the manifest is
+loaded. The raw manifest and notifier URLs remain in configuration and publish
+scripts, not in user-facing text fields.
 
 After reload:
 
 - `Automations` should show your enabled Codex automations.
 - `Artifacts` should show generated files grouped by day.
-- `Diagnostics` should show manifest freshness, URL status, and any missing
-  public raw URL warnings.
+- `Diagnostics` should show data freshness, automation status, and any missing
+  public raw URL warnings without exposing a manifest preview as user content.
 
 ## Troubleshooting
 
 - If the app says the URL is invalid, confirm it starts with `https://` and
   ends with `.json`.
 - If previews do not open, publish the topic with `PAVBOT_MANIFEST_URL` set to
-  the same URL used in iOS `Settings -> Manifest URL`.
+  the same URL bundled or configured for the iOS app.
 - If no new files appear, confirm Codex automations are writing into
   `research/<topic>/` and then running
   `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>`.

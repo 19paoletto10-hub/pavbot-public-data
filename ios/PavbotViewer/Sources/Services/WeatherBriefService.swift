@@ -145,7 +145,7 @@ final class WeatherBriefStore {
                 error,
                 previousNotice: previousNotice,
                 requestedLocation: requestedLocation,
-                cachedMessage: "Pokazuję ostatni zapisany raport. Odświeżenie nie powiodło się."
+                cachedMessage: PavbotCacheNoticeCopy.refreshFailed(context: "ostatni raport pogodowy")
             )
         }
     }
@@ -198,7 +198,7 @@ final class WeatherBriefStore {
                 error,
                 previousNotice: previousNotice,
                 requestedLocation: requestedLocation,
-                cachedMessage: "Pokazuję ostatni zapisany raport. Odświeżenie aktualnej pogody nie powiodło się."
+                cachedMessage: PavbotCacheNoticeCopy.refreshFailed(context: "ostatni raport pogodowy")
             )
         }
     }

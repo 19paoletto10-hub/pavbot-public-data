@@ -1,0 +1,12 @@
+{
+  "created_at": "2026-06-28T08:29:03Z",
+  "variant_id": "male-xtts",
+  "engine_requested": "xtts",
+  "engine_used": null,
+  "voice": "Andrew Chipper",
+  "language": "pl",
+  "speed": 1.03,
+  "status": "failed",
+  "error": "Interrupted after repeated hang during the 2026-06-28 10:17 Europe/Warsaw automation run; see audio/male-xtts/render.log for the XTTS stack trace and warnings.",
+  "output_file": null
+}

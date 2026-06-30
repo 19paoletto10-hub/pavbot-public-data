@@ -7,6 +7,7 @@ enum ResearchNewsSection: String, CaseIterable, Codable, Hashable, Identifiable 
     case produkty = "Produkty"
     case regulacje = "Regulacje"
     case cyber = "Cyber"
+    case technologia = "Technologia"
     case polska = "Polska"
     case polityka = "Polityka"
     case swiat = "Świat"
@@ -29,6 +30,8 @@ enum ResearchNewsSection: String, CaseIterable, Codable, Hashable, Identifiable 
             "building.columns.fill"
         case .cyber:
             "lock.shield.fill"
+        case .technologia:
+            "cpu.fill"
         case .polska:
             "flag.fill"
         case .polityka:

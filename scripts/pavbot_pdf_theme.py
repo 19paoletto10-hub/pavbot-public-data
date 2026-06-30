@@ -112,6 +112,30 @@ def markdown_inline(text: str, link_color: str = "#1D4ED8", underline: bool = Tr
     return re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", link_repl, escaped)
 
 
+def markdown_source_inline(text: str, link_color: str = "#1D4ED8") -> str:
+    escaped = html.escape(clean_text(text))
+    escaped = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", escaped)
+    escaped = re.sub(r"`([^`]+)`", rf"<font name='{FONT_REGULAR}'>\1</font>", escaped)
+
+    def link_repl(match: re.Match[str]) -> str:
+        label = clean_text(match.group(1)) or clean_text(match.group(2))
+        safe_label = html.escape(label)
+        safe_url = html.escape(match.group(2).strip(), quote=True)
+        visible_url = html.escape(match.group(2).strip())
+        label_markup = (
+            f'<a href="{safe_url}"><u><font color="{link_color}">{safe_label}</font></u></a>'
+        )
+        url_markup = (
+            f'<a href="{safe_url}"><u><font color="{link_color}">{visible_url}</font></u></a>'
+        )
+        return (
+            f"{label_markup}"
+            f'<font color="#64748B"> (</font>{url_markup}<font color="#64748B">)</font>'
+        )
+
+    return re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", link_repl, escaped)
+
+
 def source_links(text: str) -> list[tuple[str, str]]:
     return [(label.strip(), url.strip()) for label, url in re.findall(r"\[([^\]]+)\]\((https?://[^)]+)\)", text)]
 
@@ -334,8 +358,7 @@ def source_list_flowable(
 ) -> ListFlowable:
     items = []
     for label, url in unique_links(links)[:limit]:
-        safe_url = html.escape(url, quote=True)
-        items.append(ListItem(Paragraph(f'<a href="{safe_url}">{html.escape(label)}</a>', styles["link"])))
+        items.append(ListItem(Paragraph(markdown_source_inline(f"[{label}]({url})"), styles["link"])))
     return ListFlowable(items, bulletType="bullet", leftIndent=12)
 
 

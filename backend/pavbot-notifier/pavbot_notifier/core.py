@@ -3,6 +3,7 @@ from __future__ import annotations
 import hashlib
 import hmac
 import asyncio
+import inspect
 import json
 import urllib.request
 from dataclasses import dataclass
@@ -26,6 +27,38 @@ class ManifestChanges:
     @property
     def has_changes(self) -> bool:
         return bool(self.artifacts or self.automations)
+
+
+@dataclass(frozen=True)
+class PublicArtifactReadiness:
+    status: str
+    attempts: int
+    manifest_url: str
+    artifact_url: str = ""
+    artifact_path: str = ""
+    error: str = ""
+    pulse_news_digest: dict[str, Any] | None = None
+
+    def as_status(self) -> dict[str, Any]:
+        status = {
+            "status": self.status,
+            "attempts": self.attempts,
+            "manifestURL": self.manifest_url,
+        }
+        if self.artifact_url:
+            status["artifactURL"] = self.artifact_url
+        if self.artifact_path:
+            status["artifactPath"] = self.artifact_path
+        if self.error:
+            status["error"] = self.error
+        return status
+
+
+class PublicArtifactNotReady(RuntimeError):
+    def __init__(self, message: str, *, artifact_url: str = "", artifact_path: str = "") -> None:
+        super().__init__(message)
+        self.artifact_url = artifact_url
+        self.artifact_path = artifact_path
 
 
 def compute_manifest_changes(
@@ -105,6 +138,7 @@ async def send_apns_change_notifications(
     manifest_url_value: str,
     sender: Any,
     fetch_json: Any | None = None,
+    pulse_news_digest: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     summary: dict[str, Any] = {
         "attempted": 0,
@@ -121,10 +155,23 @@ async def send_apns_change_notifications(
         summary["skippedReason"] = "APNs is not configured"
         return summary
 
-    pulse_digest = await resolve_pulse_news_digest(
-        artifacts,
-        fetch_json=fetch_json or fetch_remote_json,
-    )
+    pulse_digest = pulse_news_digest
+    if pulse_news_data_artifacts(artifacts) and pulse_digest is None:
+        try:
+            pulse_digest = await resolve_pulse_news_digest(
+                artifacts,
+                fetch_json=fetch_json or fetch_remote_json,
+            )
+        except PublicArtifactNotReady as exc:
+            summary["status"] = "not_ready"
+            summary["skippedReason"] = "pulseNewsData is not publicly readable"
+            summary["publicReadiness"] = {
+                "status": "not_ready",
+                "artifactURL": exc.artifact_url,
+                "artifactPath": exc.artifact_path,
+                "error": str(exc),
+            }
+            return summary
     notification = build_change_notification(
         artifacts=artifacts,
         automations=automations,
@@ -224,6 +271,10 @@ async def fetch_remote_json(url: str) -> dict[str, Any]:
     return payload if isinstance(payload, dict) else {}
 
 
+async def fetch_remote_bytes(url: str) -> bytes:
+    return await asyncio.to_thread(fetch_remote_bytes_sync, url)
+
+
 def fetch_remote_json_sync(url: str) -> dict[str, Any]:
     request = urllib.request.Request(
         url,
@@ -238,6 +289,190 @@ def fetch_remote_json_sync(url: str) -> dict[str, Any]:
     return payload if isinstance(payload, dict) else {}
 
 
+def fetch_remote_bytes_sync(url: str) -> bytes:
+    request = urllib.request.Request(
+        url,
+        headers={
+            "Cache-Control": "no-cache",
+            "Pragma": "no-cache",
+        },
+    )
+    with urllib.request.urlopen(request, timeout=15) as response:
+        return response.read(1)
+
+
+async def wait_for_public_artifacts_ready(
+    *,
+    artifacts: list[dict[str, Any]],
+    manifest_url_value: str,
+    fetch_manifest_json: Any = fetch_remote_json,
+    fetch_json: Any = fetch_remote_json,
+    fetch_url: Any = fetch_remote_bytes,
+    max_attempts: int = 4,
+    delay_seconds: float = 2.0,
+) -> PublicArtifactReadiness:
+    attempts = max(1, max_attempts)
+    last_result = PublicArtifactReadiness(
+        status="not_ready",
+        attempts=0,
+        manifest_url=manifest_url_value,
+        error="public artifacts were not checked",
+    )
+
+    for attempt in range(1, attempts + 1):
+        result = await check_public_artifacts_ready(
+            artifacts=artifacts,
+            manifest_url_value=manifest_url_value,
+            fetch_manifest_json=fetch_manifest_json,
+            fetch_json=fetch_json,
+            fetch_url=fetch_url,
+            attempt=attempt,
+        )
+        if result.status == "ready":
+            return result
+        last_result = result
+        if attempt < attempts and delay_seconds > 0:
+            await asyncio.sleep(delay_seconds)
+
+    return PublicArtifactReadiness(
+        status="timeout",
+        attempts=last_result.attempts,
+        manifest_url=last_result.manifest_url,
+        artifact_url=last_result.artifact_url,
+        artifact_path=last_result.artifact_path,
+        error=last_result.error,
+    )
+
+
+async def check_public_artifacts_ready(
+    *,
+    artifacts: list[dict[str, Any]],
+    manifest_url_value: str,
+    fetch_manifest_json: Any,
+    fetch_json: Any,
+    fetch_url: Any,
+    attempt: int,
+) -> PublicArtifactReadiness:
+    try:
+        manifest = await maybe_await(fetch_manifest_json(manifest_url_value))
+    except Exception as exc:
+        return PublicArtifactReadiness(
+            status="not_ready",
+            attempts=attempt,
+            manifest_url=manifest_url_value,
+            error=f"manifest is not publicly readable: {exc}",
+        )
+
+    if not isinstance(manifest, dict):
+        return PublicArtifactReadiness(
+            status="not_ready",
+            attempts=attempt,
+            manifest_url=manifest_url_value,
+            error="manifest is not a JSON object",
+        )
+
+    public_artifacts = [
+        artifact
+        for artifact in manifest.get("artifacts", [])
+        if isinstance(artifact, dict)
+    ]
+    pulse_news_digest: dict[str, Any] | None = None
+    last_artifact_url = ""
+    last_artifact_path = ""
+
+    for artifact in artifacts:
+        public_artifact = matching_public_artifact(artifact, public_artifacts)
+        if public_artifact is None:
+            return PublicArtifactReadiness(
+                status="not_ready",
+                attempts=attempt,
+                manifest_url=manifest_url_value,
+                artifact_path=str(artifact.get("path") or artifact.get("id") or ""),
+                error="artifact is missing from public manifest",
+            )
+
+        artifact_url = str(public_artifact.get("url") or artifact.get("url") or "").strip()
+        artifact_path = str(public_artifact.get("path") or artifact.get("path") or "").strip()
+        last_artifact_url = artifact_url
+        last_artifact_path = artifact_path
+        if not artifact_url:
+            return PublicArtifactReadiness(
+                status="not_ready",
+                attempts=attempt,
+                manifest_url=manifest_url_value,
+                artifact_path=artifact_path,
+                error="artifact has no public URL",
+            )
+
+        if is_pulse_news_data_artifact(public_artifact):
+            try:
+                payload = await maybe_await(fetch_json(artifact_url))
+                validate_pulse_news_payload_ready(payload, public_artifact)
+            except Exception as exc:
+                return PublicArtifactReadiness(
+                    status="not_ready",
+                    attempts=attempt,
+                    manifest_url=manifest_url_value,
+                    artifact_url=artifact_url,
+                    artifact_path=artifact_path,
+                    error=f"pulseNewsData is not publicly readable: {exc}",
+                )
+            pulse_news_digest = payload
+        else:
+            try:
+                await maybe_await(fetch_url(artifact_url))
+            except Exception as exc:
+                return PublicArtifactReadiness(
+                    status="not_ready",
+                    attempts=attempt,
+                    manifest_url=manifest_url_value,
+                    artifact_url=artifact_url,
+                    artifact_path=artifact_path,
+                    error=f"artifact is not publicly readable: {exc}",
+                )
+
+    return PublicArtifactReadiness(
+        status="ready",
+        attempts=attempt,
+        manifest_url=manifest_url_value,
+        artifact_url=last_artifact_url,
+        artifact_path=last_artifact_path,
+        pulse_news_digest=pulse_news_digest,
+    )
+
+
+async def maybe_await(value: Any) -> Any:
+    if inspect.isawaitable(value):
+        return await value
+    return value
+
+
+def matching_public_artifact(
+    artifact: dict[str, Any],
+    public_artifacts: list[dict[str, Any]],
+) -> dict[str, Any] | None:
+    artifact_id = artifact.get("id")
+    artifact_path = artifact.get("path")
+    for public_artifact in public_artifacts:
+        if artifact_id and public_artifact.get("id") == artifact_id:
+            return public_artifact
+        if artifact_path and public_artifact.get("path") == artifact_path:
+            return public_artifact
+    return None
+
+
+def validate_pulse_news_payload_ready(payload: Any, artifact: dict[str, Any]) -> None:
+    if not isinstance(payload, dict):
+        raise PublicArtifactNotReady("pulseNewsData JSON is not an object")
+    if artifact.get("date") and payload.get("runDate") != artifact.get("date"):
+        raise PublicArtifactNotReady("pulseNewsData runDate does not match manifest artifact date")
+    if artifact.get("time") and payload.get("runTime") != artifact.get("time"):
+        raise PublicArtifactNotReady("pulseNewsData runTime does not match manifest artifact time")
+    items = payload.get("items")
+    if not isinstance(items, list) or not items:
+        raise PublicArtifactNotReady("pulseNewsData items are missing")
+
+
 async def resolve_pulse_news_digest(
     artifacts: list[dict[str, Any]],
     *,
@@ -246,12 +481,20 @@ async def resolve_pulse_news_digest(
     for artifact in pulse_news_data_artifacts(artifacts):
         url = str(artifact.get("url") or "").strip()
         if not url:
-            continue
+            raise PublicArtifactNotReady(
+                "pulseNewsData artifact has no public URL",
+                artifact_path=str(artifact.get("path") or artifact.get("id") or ""),
+            )
         try:
-            payload = await fetch_json(url)
-        except Exception:
-            return None
-        return payload if isinstance(payload, dict) else None
+            payload = await maybe_await(fetch_json(url))
+            validate_pulse_news_payload_ready(payload, artifact)
+        except Exception as exc:
+            raise PublicArtifactNotReady(
+                "pulseNewsData is not publicly readable",
+                artifact_url=url,
+                artifact_path=str(artifact.get("path") or artifact.get("id") or ""),
+            ) from exc
+        return payload
     return None
 
 
@@ -261,6 +504,10 @@ def pulse_news_data_artifacts(artifacts: list[dict[str, Any]]) -> list[dict[str,
         for artifact in artifacts
         if artifact.get("topic") == PULSE_NEWS_TOPIC and artifact.get("type") == PULSE_NEWS_TYPE
     ]
+
+
+def is_pulse_news_data_artifact(artifact: dict[str, Any]) -> bool:
+    return artifact.get("topic") == PULSE_NEWS_TOPIC and artifact.get("type") == PULSE_NEWS_TYPE
 
 
 def selected_pulse_news_article(payload: dict[str, Any] | None) -> dict[str, str] | None:
@@ -394,6 +641,7 @@ def notifier_status(
     last_webhook = load_json(storage_dir / "last-webhook.json", None)
     last_apns_delivery = load_json(storage_dir / "last-apns-delivery.json", None)
     last_device_registration = load_json(storage_dir / "last-device-registration.json", None)
+    last_public_readiness = load_json(storage_dir / "last-public-readiness.json", None)
 
     return {
         "status": "ok",
@@ -405,6 +653,7 @@ def notifier_status(
         "lastWebhook": last_webhook,
         "lastApnsDelivery": last_apns_delivery,
         "lastDeviceRegistration": last_device_registration,
+        "lastPublicReadiness": last_public_readiness,
         "dailyWeather": daily_weather,
         "dailyHumor": daily_humor,
     }

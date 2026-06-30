@@ -110,7 +110,9 @@ backlog note inside the active topic.
 ## Public iOS Publication
 
 When the episode is part of a Pavbot automation, finish by publishing the topic
-outputs:
+outputs. The episode is not complete until the refreshed
+`public/pavbot-manifest.json` and the episode artifacts are pushed to
+`origin/main`:
 
 ```bash
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
@@ -124,5 +126,9 @@ back to Codex. The publish script runs `python3 scripts/generate_pavbot_manifest
 in a temporary clean worktree, commits only generated outputs (`runs/`, `pdfs`,
 `podcasts/`, `index.md`, `backlog.md`) plus `public/pavbot-manifest.json`, and
 pushes to `origin/main`.
+After publishing, run `git fetch origin` and verify that
+`origin/main:public/pavbot-manifest.json` contains the current episode paths and
+that those files exist on `origin/main`. If this verification fails, report the
+episode as failed or partially published instead of successful.
 Never publish topic `tools/`, prompt edits, app code, docs, backend code, or
 other development changes as automation outputs.

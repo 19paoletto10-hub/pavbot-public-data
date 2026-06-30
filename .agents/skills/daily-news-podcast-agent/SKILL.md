@@ -32,6 +32,9 @@ Then follow the shared workflow in `$daily-podcast-agent`:
 - create `brief.pdf` with the shared PDF renderer after audio metadata exists.
 - publish the final topic output with
   `scripts/pavbot_commit_and_push_outputs.sh --isolated research/polska-swiat`.
+- after publishing, verify `origin/main:public/pavbot-manifest.json` contains
+  the current podcast paths and that those files exist on `origin/main`; without
+  this remote check, the episode is not complete.
 
 Default output folder:
 

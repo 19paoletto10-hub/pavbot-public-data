@@ -48,6 +48,35 @@ Jesli nie ma materialnych zmian, nadal utworz krotki raport ze statusem
 `No material change`, lista sprawdzonych zrodel i jednym rzeczowym
 podsumowaniem. Nie powtarzaj niezmienionych ofert.
 
+Raport markdown musi byc parsowalny przez iOS i generator jobs-data. Zachowaj
+szkic:
+
+`# LLM/AI Jobs Wrocław`
+
+`Date: YYYY-MM-DD HH:MM CEST`
+
+`Status: Material update` albo `Status: No material change`
+
+`## Zakres sprawdzony`
+
+`## Podsumowanie zarządcze`
+
+`## Najciekawsze nowe lub materialnie zmienione role`
+
+`### N. Firma - Tytuł`
+
+W każdym bloku oferty użyj dokładnie tych etykiet bulletów:
+
+- `Dlaczego interesujące:`
+- `Fit LLM/AI:`
+- `Lokalizacja/remote:`
+- `Wynagrodzenie:`
+- `Niepewność:`
+- `Źródła:` z co najmniej jednym publicznym linkiem.
+
+Potem dodaj `## Zmiany od poprzedniej rundy`, `## Ryzyka i niepewności`,
+`## Rekomendowane akcje` oraz `## Źródła`.
+
 Utworz tez strukturalny artefakt danych dla natywnego widoku Jobs w iOS:
 `research/llm-ai-jobs-wroclaw/data/YYYY-MM-DD-HHMM-jobs.json`. JSON jest
 obowiazkowy dla kazdego przebiegu i musi miec schema v1:
@@ -97,18 +126,29 @@ wynikow i zglos blad przebiegu.
 
 Po zapisaniu raportu, indeksu, backlogu, JSON i PDF opublikuj wyniki dla
 aplikacji iOS i webhooka notyfikacji push. Skrypt uruchamia
-`python3 scripts/generate_pavbot_manifest.py`, odswieza
-`public/pavbot-manifest.json`, commituje tylko dozwolone sciezki i robi push na
-`origin/main`. Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override
-srodowiskowego, `PAVBOT_RAW_BASE_URL`, istniejacego `rawBaseUrl` w manifescie
-albo GitHub `origin`; ustaw zmienna recznie tylko dla niestandardowego URL.
-Rozwiazany URL musi odpowiadac iOS `Settings -> Manifest URL`. Nastepnie
-uruchom:
+`python3 scripts/pavbot_publication_contract.py prepare research/llm-ai-jobs-wroclaw`,
+potem
+`python3 scripts/pavbot_publication_contract.py verify-local research/llm-ai-jobs-wroclaw`,
+a nastepnie uruchamia etap `manifest`, czyli
+`python3 scripts/generate_pavbot_manifest.py --repo-root "$PWD"`, odswieza
+`public/pavbot-manifest.json`, commituje tylko dozwolone sciezki i robi push
+na `origin/main`. To jest wspolny pipeline:
+
+`prepare -> validate -> manifest -> push -> verify-remote`
+
+Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override srodowiskowego,
+`PAVBOT_RAW_BASE_URL`, istniejacego `rawBaseUrl` w manifescie albo GitHub
+`origin`; ustaw zmienna recznie tylko dla niestandardowego URL. Rozwiazany URL
+musi odpowiadac iOS `Settings -> Manifest URL`. Nastepnie uruchom:
 `scripts/pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw`.
 
 Po publishu wykonaj obowiazkowy etap `post-publish verification`. Uzyj tego
 samego `RUN_STAMP=YYYY-MM-DD-HHMM`, ktorego uzyles do nazw plikow, a nastepnie
 uruchom:
+
+`python3 scripts/pavbot_publication_contract.py verify-remote research/llm-ai-jobs-wroclaw --ref origin/main`
+
+Dla recznej kontroli zdalnej ustaw sciezki artefaktow dla tego samego stampu:
 
 `RUN_PATH="research/llm-ai-jobs-wroclaw/runs/${RUN_STAMP}.md"`
 

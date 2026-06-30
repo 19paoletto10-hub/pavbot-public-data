@@ -9,7 +9,7 @@ struct SavedResearchArticlesView: View {
     @State private var selectedArticle: SavedResearchArticle?
 
     private var articles: [SavedResearchArticle] {
-        store.filteredArticles(query: query, topic: .polskaSwiat)
+        store.filteredArticles(query: query)
     }
 
     var body: some View {
@@ -20,7 +20,7 @@ struct SavedResearchArticlesView: View {
                         ContentUnavailableView(
                             query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? "Brak zapisanych artykułów" : "Brak wyników",
                             systemImage: "bookmark",
-                            description: Text("Zapisane artykuły z sekcji Polska i Świat będą dostępne lokalnie na tym urządzeniu.")
+                            description: Text("Zapisane artykuły z Research będą dostępne lokalnie na tym urządzeniu.")
                         )
                         .frame(maxWidth: .infinity, minHeight: 320)
                     } else {
@@ -51,6 +51,7 @@ struct SavedResearchArticlesView: View {
             .searchable(text: $query, prompt: "Szukaj w zapisanych")
             .sheet(item: $selectedArticle) { saved in
                 SavedResearchArticleDetailView(saved: saved, store: store)
+                    .pavbotLargeObjectPresentation()
             }
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
@@ -71,14 +72,19 @@ private struct SavedResearchArticleRow: View {
             HStack(alignment: .top, spacing: 12) {
                 Image(systemName: saved.article.section.systemImage)
                     .font(.headline.weight(.semibold))
-                    .foregroundStyle(.blue)
+                    .foregroundStyle(saved.topic.tint)
                     .frame(width: 38, height: 38)
-                    .background(Color.blue.opacity(0.12), in: RoundedRectangle(cornerRadius: 11, style: .continuous))
+                    .background(saved.topic.tint.opacity(0.12), in: RoundedRectangle(cornerRadius: 11, style: .continuous))
 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(saved.article.section.rawValue.uppercased())
-                        .font(.caption2.weight(.bold))
-                        .foregroundStyle(.blue)
+                    HStack(spacing: 6) {
+                        Text(saved.topic.title.uppercased())
+                            .font(.caption2.weight(.bold))
+                            .foregroundStyle(saved.topic.tint)
+                        Text(saved.article.section.rawValue.uppercased())
+                            .font(.caption2.weight(.bold))
+                            .foregroundStyle(.secondary)
+                    }
                     Text(saved.article.title)
                         .font(.headline.weight(.semibold))
                         .foregroundStyle(.primary)
@@ -122,7 +128,11 @@ private struct SavedResearchArticleDetailView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 18) {
                     VStack(alignment: .leading, spacing: 12) {
-                        StatusBadge(text: saved.article.section.rawValue, systemImage: saved.article.section.systemImage, tint: .blue)
+                        StatusBadge(
+                            text: "\(saved.topic.title) - \(saved.article.section.rawValue)",
+                            systemImage: saved.topic.systemImage,
+                            tint: saved.topic.tint
+                        )
                         Text(saved.article.title)
                             .font(.title2.weight(.bold))
                             .fixedSize(horizontal: false, vertical: true)
@@ -147,7 +157,7 @@ private struct SavedResearchArticleDetailView: View {
                             ForEach(saved.article.sources) { source in
                                 if let url = URL(string: source.url) {
                                     Link(destination: url) {
-                                        PavbotActionRow(title: source.title, subtitle: source.url, systemImage: "link.circle.fill", tint: .blue)
+                                        PavbotActionRow(title: source.title, subtitle: source.url, systemImage: "link.circle.fill", tint: saved.topic.tint)
                                     }
                                 }
                             }

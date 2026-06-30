@@ -36,12 +36,23 @@ Run one research cycle for a single Pavbot topic.
 8. Update `research/<topic>/backlog.md` when there are actionable follow-ups,
    review notes, open questions, or resolved items.
 9. Use the risk gate before making any change.
-10. For scheduled Pavbot automations, publish the finished output with
-    `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>` so the iOS app
-    and live-notification webhook see the latest manifest on GitHub.
-11. After publishing, verify against `origin/main` that the refreshed manifest
-    and the current topic outputs are actually visible remotely; do not treat a
-    successful local push as sufficient evidence of publication.
+10. For every Pavbot automation run that writes app-visible artifacts, publish
+    the finished output with
+    `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>` so
+    the iOS app and live-notification webhook see the latest manifest on
+    GitHub.
+11. Treat publication as a five-step pipeline:
+    `prepare -> validate -> manifest -> push -> verify-remote`.
+    The publish script runs the shared helper
+    `scripts/pavbot_publication_contract.py` to prepare missing deterministic
+    artifacts for the latest package, validate local completeness, and verify
+    the remote bundle after push.
+12. After publishing, verify against `origin/main` that the refreshed manifest
+    and the current topic outputs for the same package key are actually visible
+    remotely; do not treat a successful local push as sufficient evidence of
+    publication.
+13. If the publish step or remote manifest verification fails, report the run as
+    failed or partially published. Do not call the automation successful.
 
 ## Risk Gate
 
@@ -103,7 +114,9 @@ sentence. Do not pad it with filler.
 ## Public iOS Publication
 
 When the run is part of a Pavbot automation, finish by publishing the topic
-outputs:
+outputs. A run that creates app-visible files is not complete until this step
+has pushed those files together with a refreshed `public/pavbot-manifest.json`
+to `origin/main`:
 
 ```bash
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
@@ -113,15 +126,19 @@ The publish script derives `PAVBOT_MANIFEST_URL` from an explicit environment
 override, `PAVBOT_RAW_BASE_URL`, the existing manifest `rawBaseUrl`, or the
 GitHub `origin` remote. The resolved URL must match the public raw manifest URL
 used in iOS `Settings -> Manifest URL`; the iOS app does not send this value
-back to Codex. The publish script runs `python3 scripts/generate_pavbot_manifest.py`
-in a temporary clean worktree, commits only generated outputs (`runs/`, `pdfs`,
-`podcasts/`, `index.md`, `backlog.md`) plus `public/pavbot-manifest.json`, and
-pushes to `origin/main`.
-After the push, run `git fetch origin` and verify
-`origin/main:public/pavbot-manifest.json` plus the current topic output paths
-for the same package key or run stamp. Topic-specific prompts should define the
-exact artifact set that must be visible on `origin/main` before the run counts
-as complete.
+back to Codex. The publish script first runs
+`python3 scripts/pavbot_publication_contract.py prepare research/<topic>` and
+`python3 scripts/pavbot_publication_contract.py verify-local research/<topic>`,
+then generates `public/pavbot-manifest.json` in a temporary clean worktree,
+commits only generated outputs plus the refreshed manifest, pushes to
+`origin/main`, and finishes with
+`python3 scripts/pavbot_publication_contract.py verify-remote research/<topic> --ref origin/main`.
+Topic-specific prompts should define the exact artifact set that must be
+visible on `origin/main` before the run counts as complete.
+For notifier-backed outputs such as Reddit Radar, publish the audit artifacts
+and refreshed manifest before or alongside posting the digest to the notifier.
+If the notifier updates but the manifest does not, report a partial publication
+failure instead of success.
 Never publish topic `tools/`, prompt edits, app code, docs, backend code, or
 other development changes as automation outputs.
 

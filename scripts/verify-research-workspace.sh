@@ -67,6 +67,9 @@ required_files=(
   "ios/PavbotViewer/Tests/PavbotManifestTests.swift"
   "scripts/generate_pavbot_manifest.py"
   "scripts/pavbot_commit_and_push_outputs.sh"
+  "scripts/pavbot_publication_contract.py"
+  "scripts/pavbot_pdf_theme.py"
+  "scripts/render_mobile_news_data.py"
   "scripts/render_research_pdf.py"
   "scripts/render_research_data.py"
   "scripts/validate_research_data.py"
@@ -184,6 +187,9 @@ grep -q '"schemaVersion": 1' public/pavbot-manifest.json
 grep -q 'Pavbot Automation Manifest' public/pavbot-manifest.json
 grep -q 'pavbot-llm-ai-jobs-wroclaw-research' public/pavbot-manifest.json
 grep -q 'pavbot-aktualne-wydarzenia-mobile-10-15' public/pavbot-manifest.json
+grep -q 'pavbot-aktualne-wydarzenia-mobile-19-33' public/pavbot-manifest.json
+grep -q 'pavbot-tech-research-19-33' public/pavbot-manifest.json
+grep -q 'pavbot-polska-wiat-research-19-33' public/pavbot-manifest.json
 grep -q 'pavbot-puls-dnia-news-3h' public/pavbot-manifest.json
 grep -q 'researchAudio' public/pavbot-manifest.json
 grep -q 'YYYY-MM-DD-HHMM-mobile-brief.pdf' public/pavbot-manifest.json
@@ -253,12 +259,17 @@ grep -q 'ArtifactTimelineView' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'DiagnosticsView' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'struct JobsView' ios/PavbotViewer/Sources/Views/JobsView.swift
 grep -q 'struct ResearchView' ios/PavbotViewer/Sources/Views/ReportPackageViews.swift
-grep -q 'public GitHub raw manifest URL' ios/PavbotViewer/Sources/Views/SettingsView.swift
-grep -q 'Notification server URL' ios/PavbotViewer/Sources/Views/SettingsView.swift
+grep -q 'Połączenia Pavbot' ios/PavbotViewer/Sources/Views/SettingsView.swift
+grep -q 'Serwer powiadomień' ios/PavbotViewer/Sources/Views/SettingsView.swift
+grep -q 'Pavbot używa produkcyjnych adresów połączeń' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'PavbotConnectionDefaults.statusURL' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'Kopiuj token APNs' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'RemoteNotificationDiagnostics' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
 grep -q 'RemoteNotificationDiagnostics' ios/PavbotViewer/Tests/PavbotManifestTests.swift
+grep -q 'wait_for_public_artifacts_ready' backend/pavbot-notifier/pavbot_notifier/server.py
+grep -q 'lastPublicReadiness' backend/pavbot-notifier/pavbot_notifier/core.py
+grep -q 'public raw' docs/live-ios-notifications-macbook-cloudflare.md
+grep -q 'publiczny raw' research/puls-dnia-news/automation-prompt.md
 grep -q 'Kopiuj token APNs' ios/PavbotViewer/Sources/Views/DiagnosticsView.swift
 grep -q 'Powiadomienia live' ios/PavbotViewer/Sources/Views/ContentView.swift
 grep -q 'startAutoRefreshLoop' ios/PavbotViewer/Sources/Views/ContentView.swift
@@ -294,9 +305,11 @@ grep -q 'Live Activity/Dynamic Island' docs/how-to-use.md
 grep -q 'researchData' scripts/generate_pavbot_manifest.py
 grep -q 'validate_research_data.py' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'render_research_data.py' research/tech-news/automation-research-prompt.md
+grep -q -- '--require-app-articles' research/tech-news/automation-research-prompt.md
 grep -q 'validate_research_data.py' research/tech-news/automation-research-prompt.md
 grep -q 'research/tech-news/data/' research/tech-news/automation-research-prompt.md
 grep -q 'render_research_data.py' research/polska-swiat/automation-research-prompt.md
+grep -q -- '--require-app-articles' research/polska-swiat/automation-research-prompt.md
 grep -q 'validate_research_data.py' research/polska-swiat/automation-research-prompt.md
 grep -q 'research/polska-swiat/data/' research/polska-swiat/automation-research-prompt.md
 grep -q 'connect-ios-app-to-your-repo.md' README.md
@@ -304,7 +317,7 @@ grep -q 'connect-ios-app-to-your-repo.md' docs/how-to-use.md
 grep -q 'PAVBOT_MANIFEST_URL' docs/connect-ios-app-to-your-repo.md
 grep -q 'raw.githubusercontent.com' docs/connect-ios-app-to-your-repo.md
 grep -q 'pavbot_commit_and_push_outputs.sh' docs/connect-ios-app-to-your-repo.md
-grep -q 'Settings -> Manifest URL -> Save and reload' docs/connect-ios-app-to-your-repo.md
+grep -q 'Settings -> Domyślne połączenia' docs/connect-ios-app-to-your-repo.md
 grep -q 'pavbot_commit_and_push_outputs.sh' docs/automation-operations.md
 grep -q 'origin/main' docs/automation-operations.md
 grep -q 'GitHub webhook' docs/live-ios-notifications-contabo.md
@@ -339,6 +352,7 @@ grep -q 'pavbot-manifest.json' docs/architecture.md
 grep -q 'PAVBOT_MANIFEST_URL' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'generate_pavbot_manifest.py' scripts/pavbot_commit_and_push_outputs.sh
 grep -q -- '--isolated' scripts/pavbot_commit_and_push_outputs.sh
+grep -q -- '--force-manifest' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'git worktree add --detach' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'copy_publishable_outputs_to_worktree' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'topic_path/runs' scripts/pavbot_commit_and_push_outputs.sh
@@ -352,6 +366,7 @@ grep -q 'git push origin "HEAD:$target_branch"' scripts/pavbot_commit_and_push_o
 grep -q 'outside allowed publish paths' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'pavbot_commit_and_push_outputs.sh' tests/test_pavbot_commit_and_push_outputs.py
 grep -q 'isolated=True' tests/test_pavbot_commit_and_push_outputs.py
+grep -q 'force_manifest=True' tests/test_pavbot_commit_and_push_outputs.py
 grep -q 'tools/helper.sh' tests/test_pavbot_commit_and_push_outputs.py
 grep -q '\$daily-podcast-agent' .agents/skills/daily-tech-podcast-agent/SKILL.md
 grep -q '\$daily-podcast-agent' .agents/skills/daily-news-podcast-agent/SKILL.md
@@ -375,7 +390,7 @@ grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/codex-agent-autom
 grep -q '\$daily-research-agent' research/tech-news/automation-research-prompt.md
 grep -q 'generate_pavbot_manifest.py' research/tech-news/automation-research-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/tech-news/automation-research-prompt.md
-grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/tech-news' research/tech-news/automation-research-prompt.md
+grep -q 'pavbot_commit_and_push_outputs.sh --isolated --force-manifest research/tech-news' research/tech-news/automation-research-prompt.md
 grep -q 'render_research_pdf.py' research/tech-news/automation-research-prompt.md
 grep -q 'render_research_pdf.py' .agents/skills/daily-research-agent/SKILL.md
 test -s research/tech-news/pdfs/2026-06-18-tech-news.pdf
@@ -395,7 +410,7 @@ grep -q '.agents/scripts/podcast/render-podcast-audio.sh' .agents/skills/daily-t
 grep -q '\$daily-research-agent' research/polska-swiat/automation-research-prompt.md
 grep -q 'generate_pavbot_manifest.py' research/polska-swiat/automation-research-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/polska-swiat/automation-research-prompt.md
-grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/polska-swiat' research/polska-swiat/automation-research-prompt.md
+grep -q 'pavbot_commit_and_push_outputs.sh --isolated --force-manifest research/polska-swiat' research/polska-swiat/automation-research-prompt.md
 grep -q '\$daily-news-podcast-agent' research/polska-swiat/automation-podcast-prompt.md
 grep -q 'generate_pavbot_manifest.py' research/polska-swiat/automation-podcast-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/polska-swiat/automation-podcast-prompt.md
@@ -433,8 +448,18 @@ grep -q 'git show "origin/main:$DATA_PATH" >/dev/null' research/llm-ai-jobs-wroc
 grep -q 'Markdown -> jobsData JSON' docs/automation-operations.md
 grep -q 'git fetch origin' docs/automation-operations.md
 grep -q 'origin/main:public/pavbot-manifest.json' docs/automation-operations.md
+grep -q 'pavbot-tech-research-19-33' docs/how-to-use.md
+grep -q 'pavbot-tech-research-19-33' docs/automation-operations.md
+grep -q 'research/tech-news/data/YYYY-MM-DD-HHMM-research.json' docs/how-to-use.md
+grep -q 'research/tech-news/pdfs/YYYY-MM-DD-HHMM-tech-news.pdf' docs/how-to-use.md
+grep -q 'pavbot-polska-wiat-research-19-33' docs/how-to-use.md
+grep -q 'pavbot-polska-wiat-research-19-33' docs/automation-operations.md
+grep -q 'research/polska-swiat/data/YYYY-MM-DD-HHMM-research.json' docs/how-to-use.md
+grep -q 'research/polska-swiat/pdfs/YYYY-MM-DD-HHMM-polska-swiat.pdf' docs/how-to-use.md
 grep -q 'pavbot-aktualne-wydarzenia-mobile-10-15' docs/how-to-use.md
 grep -q 'pavbot-aktualne-wydarzenia-mobile-10-15' docs/automation-operations.md
+grep -q 'pavbot-aktualne-wydarzenia-mobile-19-33' docs/how-to-use.md
+grep -q 'pavbot-aktualne-wydarzenia-mobile-19-33' docs/automation-operations.md
 grep -q '\$daily-research-agent' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/aktualne-wydarzenia-mobile' research/aktualne-wydarzenia-mobile/automation-prompt.md

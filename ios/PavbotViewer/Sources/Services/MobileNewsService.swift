@@ -112,7 +112,7 @@ final class MobileNewsStore {
 
         loadCachedMagazine()
         if magazine != nil {
-            cacheNotice = "Pokazuję ostatni zapisany magazyn Aktualne. Odświeżenie nie powiodło się."
+            cacheNotice = PavbotCacheNoticeCopy.refreshFailed(context: "magazyn Aktualne")
             state = .loaded
         } else {
             cacheNotice = nil

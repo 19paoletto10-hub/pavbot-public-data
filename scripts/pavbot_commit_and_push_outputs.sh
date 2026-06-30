@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-target_branch="${PAVBOT_PUBLISH_BRANCH:-main}"
+target_branch="main"
 mobile_public_only_topic="research/aktualne-wydarzenia-mobile"
 pulse_news_topic="research/puls-dnia-news"
+reddit_radar_topic="research/reddit-radar"
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 manifest_generator="$script_dir/generate_pavbot_manifest.py"
+publication_contract="$script_dir/pavbot_publication_contract.py"
 jobs_data_validator="$script_dir/validate_jobs_data.py"
 research_data_validator="$script_dir/validate_research_data.py"
 mobile_news_data_validator="$script_dir/validate_mobile_news_data.py"
@@ -13,7 +15,7 @@ pulse_news_data_validator="$script_dir/validate_pulse_news_data.py"
 
 usage() {
   cat >&2 <<'EOF'
-usage: scripts/pavbot_commit_and_push_outputs.sh [--isolated] research/<topic>
+usage: scripts/pavbot_commit_and_push_outputs.sh [--isolated] [--force-manifest] research/<topic>
 
 Publishes one Pavbot automation output set by committing only:
   - generated outputs from the selected research/<topic>/
@@ -24,12 +26,16 @@ Output allowlist:
   - research/<topic>/pdfs/
   - research/<topic>/data/
   - research/<topic>/podcasts/
+  - research/<topic>/topic.md
   - research/<topic>/index.md
   - research/<topic>/backlog.md
 
 Options:
   --isolated  publish from a temporary clean worktree based on origin/main,
               copying only allowlisted outputs from the current workspace
+  --force-manifest
+              refresh and stage public/pavbot-manifest.json even when topic
+              outputs are otherwise unchanged
 
 Optional environment:
   PAVBOT_MANIFEST_URL=https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json
@@ -108,9 +114,14 @@ is_allowed_publish_path() {
     "public/pavbot-manifest.json")
       return 0
       ;;
+    "$topic_path/topic.md")
+      return 0
+      ;;
     *)
       if [[ "$topic_path" == "$mobile_public_only_topic" ]]; then
         is_mobile_public_publish_path "$path"
+      elif [[ "$topic_path" == "$reddit_radar_topic" ]]; then
+        is_reddit_radar_publish_path "$path"
       else
         case "$path" in
           "$topic_path/index.md"|"$topic_path/backlog.md")
@@ -124,6 +135,27 @@ is_allowed_publish_path() {
             ;;
         esac
       fi
+      ;;
+  esac
+}
+
+is_reddit_radar_publish_path() {
+  local path="$1"
+  case "$path" in
+    "$topic_path/topic.md"|"$topic_path/index.md"|"$topic_path/backlog.md")
+      return 0
+      ;;
+    "$topic_path/runs"|"$topic_path/runs/"*-reddit-radar.md)
+      return 0
+      ;;
+    "$topic_path/data"|"$topic_path/data/"*-reddit-radar.json|"$topic_path/data/"*-reddit-radar-raw.json)
+      return 0
+      ;;
+    "$topic_path/pdfs"|"$topic_path/pdfs/"*|"$topic_path/podcasts"|"$topic_path/podcasts/"*)
+      return 0
+      ;;
+    *)
+      return 1
       ;;
   esac
 }
@@ -323,13 +355,68 @@ stage_path_if_present_or_tracked() {
   fi
 }
 
+append_expected_path_if_exists() {
+  local rel_path="$1"
+  if [[ -f "$repo_root/$rel_path" ]]; then
+    expected_remote_paths+=("$rel_path")
+    expected_manifest_paths+=("$rel_path")
+  fi
+}
+
+append_expected_paths_from_dir() {
+  local rel_dir="$1"
+  local abs_dir="$repo_root/$rel_dir"
+  local path
+
+  [[ -d "$abs_dir" ]] || return 0
+  while IFS= read -r path; do
+    [[ -n "$path" ]] || continue
+    [[ "$(basename "$path")" == ".gitkeep" ]] && continue
+    expected_remote_paths+=("$path")
+    expected_manifest_paths+=("$path")
+  done < <(
+    cd "$repo_root"
+    find "$rel_dir" -type f | LC_ALL=C sort
+  )
+}
+
 stage_publishable_paths() {
+  if [[ "$topic_path" == "$reddit_radar_topic" ]]; then
+    stage_reddit_radar_publishable_paths
+    return 0
+  fi
+
+  stage_path_if_present_or_tracked "$topic_path/topic.md"
   stage_path_if_present_or_tracked "$topic_path/index.md"
   stage_path_if_present_or_tracked "$topic_path/backlog.md"
   stage_path_if_present_or_tracked "$topic_path/runs"
   stage_path_if_present_or_tracked "$topic_path/pdfs"
   stage_path_if_present_or_tracked "$topic_path/data"
   stage_path_if_present_or_tracked "$topic_path/podcasts"
+  stage_path_if_present_or_tracked "public/pavbot-manifest.json"
+}
+
+run_publication_contract() {
+  local command="$1"
+  local root="$2"
+  shift 2
+  python3 "$publication_contract" "$command" "$topic_path" --repo-root "$root" "$@"
+}
+
+stage_reddit_radar_publishable_paths() {
+  local file
+
+  stage_path_if_present_or_tracked "$topic_path/topic.md"
+  stage_path_if_present_or_tracked "$topic_path/index.md"
+  stage_path_if_present_or_tracked "$topic_path/backlog.md"
+  stage_path_if_present_or_tracked "$topic_path/runs"
+  stage_path_if_present_or_tracked "$topic_path/pdfs"
+  stage_path_if_present_or_tracked "$topic_path/podcasts"
+  shopt -s nullglob
+  for file in "$topic_path"/data/*-reddit-radar.json "$topic_path"/data/*-reddit-radar-raw.json; do
+    git add -A -- "$file"
+  done
+  shopt -u nullglob
   stage_path_if_present_or_tracked "public/pavbot-manifest.json"
 }
 
@@ -484,6 +571,163 @@ needs_manifest_refresh_for_pulse_news() {
   return 0
 }
 
+build_mobile_public_expected_paths() {
+  local src_root="$repo_root/$topic_path"
+  local src rel_path stamp latest_stamp
+
+  latest_stamp="$(latest_mobile_public_output_stamp "$src_root" 2>/dev/null || true)"
+  [[ -n "$latest_stamp" ]] || return 0
+
+  shopt -s nullglob
+  for src in "$src_root"/data/*-mobile-news.json; do
+    rel_path="${src#"$repo_root"/}"
+    stamp="$(mobile_public_output_stamp "${src#"$src_root"/}")" || continue
+    [[ "$stamp" == "$latest_stamp" ]] || continue
+    expected_remote_paths+=("$rel_path")
+    expected_manifest_paths+=("$rel_path")
+  done
+
+  for src in "$src_root"/pdfs/*-mobile-brief.pdf; do
+    rel_path="${src#"$repo_root"/}"
+    stamp="$(mobile_public_output_stamp "${src#"$src_root"/}")" || continue
+    [[ "$stamp" == "$latest_stamp" ]] || continue
+    expected_remote_paths+=("$rel_path")
+    expected_manifest_paths+=("$rel_path")
+  done
+
+  for src in "$src_root"/pdfs/*-newspaper.pdf; do
+    rel_path="${src#"$repo_root"/}"
+    stamp="$(mobile_public_output_stamp "${src#"$src_root"/}")" || continue
+    [[ "$stamp" == "$latest_stamp" ]] || continue
+    expected_remote_paths+=("$rel_path")
+    expected_manifest_paths+=("$rel_path")
+  done
+
+  for src in "$src_root"/podcasts/*/audio/*/podcast.mp3; do
+    rel_path="${src#"$repo_root"/}"
+    stamp="$(mobile_public_output_stamp "${src#"$src_root"/}")" || continue
+    [[ "$stamp" == "$latest_stamp" ]] || continue
+    expected_remote_paths+=("$rel_path")
+    expected_manifest_paths+=("$rel_path")
+  done
+
+  for src in "$src_root"/podcasts/*/script.md; do
+    rel_path="${src#"$repo_root"/}"
+    stamp="$(mobile_public_output_stamp "${src#"$src_root"/}")" || continue
+    [[ "$stamp" == "$latest_stamp" ]] || continue
+    expected_remote_paths+=("$rel_path")
+    expected_manifest_paths+=("$rel_path")
+  done
+  shopt -u nullglob
+}
+
+build_reddit_radar_expected_paths() {
+  local src
+
+  append_expected_path_if_exists "$topic_path/topic.md"
+  append_expected_path_if_exists "$topic_path/index.md"
+  append_expected_path_if_exists "$topic_path/backlog.md"
+  append_expected_paths_from_dir "$topic_path/runs"
+  append_expected_paths_from_dir "$topic_path/pdfs"
+  append_expected_paths_from_dir "$topic_path/podcasts"
+
+  shopt -s nullglob
+  for src in "$repo_root"/"$topic_path"/data/*-reddit-radar.json "$repo_root"/"$topic_path"/data/*-reddit-radar-raw.json; do
+    [[ -f "$src" ]] || continue
+    expected_remote_paths+=("${src#"$repo_root"/}")
+    expected_manifest_paths+=("${src#"$repo_root"/}")
+  done
+  shopt -u nullglob
+}
+
+build_expected_publication_paths() {
+  expected_remote_paths=("public/pavbot-manifest.json")
+  expected_manifest_paths=()
+
+  if [[ "$topic_path" == "$mobile_public_only_topic" ]]; then
+    build_mobile_public_expected_paths
+    return 0
+  fi
+
+  if [[ "$topic_path" == "$reddit_radar_topic" ]]; then
+    build_reddit_radar_expected_paths
+    return 0
+  fi
+
+  append_expected_path_if_exists "$topic_path/topic.md"
+  append_expected_path_if_exists "$topic_path/index.md"
+  append_expected_path_if_exists "$topic_path/backlog.md"
+  append_expected_paths_from_dir "$topic_path/runs"
+  append_expected_paths_from_dir "$topic_path/pdfs"
+  append_expected_paths_from_dir "$topic_path/data"
+  append_expected_paths_from_dir "$topic_path/podcasts"
+}
+
+sync_local_manifest_from_remote() {
+  mkdir -p "$repo_root/public"
+  git show "origin/$target_branch:public/pavbot-manifest.json" > "$repo_root/public/pavbot-manifest.json"
+}
+
+verify_remote_publication() {
+  local manifest_path path
+  local missing_remote_paths=()
+  local missing_manifest_paths=()
+
+  build_expected_publication_paths
+  git fetch origin "$target_branch" >/dev/null
+  manifest_path="$(mktemp "${TMPDIR:-/tmp}/pavbot-manifest.XXXXXX.json")"
+  git show "origin/$target_branch:public/pavbot-manifest.json" > "$manifest_path" || die "cannot read origin/$target_branch:public/pavbot-manifest.json"
+
+  for path in "${expected_remote_paths[@]}"; do
+    if ! git cat-file -e "origin/$target_branch:$path" 2>/dev/null; then
+      missing_remote_paths+=("$path")
+    fi
+  done
+
+  if ((${#expected_manifest_paths[@]} > 0)); then
+    local manifest_check_output=""
+    if ! manifest_check_output="$(
+      python3 - "$manifest_path" "${expected_manifest_paths[@]}" <<'PY'
+import json
+import sys
+
+with open(sys.argv[1], encoding="utf-8") as handle:
+    manifest = json.load(handle)
+expected = sys.argv[2:]
+manifest_paths = {
+    artifact.get("path")
+    for artifact in manifest.get("artifacts", [])
+    if isinstance(artifact, dict)
+}
+missing = [path for path in expected if path not in manifest_paths]
+for path in missing:
+    print(path)
+raise SystemExit(1 if missing else 0)
+PY
+    )"; then
+      while IFS= read -r path; do
+        [[ -n "$path" ]] || continue
+        missing_manifest_paths+=("$path")
+      done <<< "$manifest_check_output"
+    fi
+  fi
+
+  rm -f "$manifest_path"
+
+  if ((${#missing_manifest_paths[@]} > 0 || ${#missing_remote_paths[@]} > 0)); then
+    local messages=()
+    if ((${#missing_manifest_paths[@]} > 0)); then
+      messages+=("missing from remote manifest: ${missing_manifest_paths[*]}")
+    fi
+    if ((${#missing_remote_paths[@]} > 0)); then
+      messages+=("missing from origin/$target_branch: ${missing_remote_paths[*]}")
+    fi
+    die "publication verification failed; ${messages[*]}"
+  fi
+
+  sync_local_manifest_from_remote
+}
+
 copy_or_remove_publish_path() {
   local rel_path="$1"
   local dest_root="$2"
@@ -505,12 +749,84 @@ copy_publishable_outputs_to_worktree() {
     return 0
   fi
 
+  if [[ "$topic_path" == "$reddit_radar_topic" ]]; then
+    copy_reddit_radar_outputs_to_worktree "$dest_root"
+    return 0
+  fi
+
   copy_or_remove_publish_path "$topic_path/index.md" "$dest_root"
   copy_or_remove_publish_path "$topic_path/backlog.md" "$dest_root"
+  copy_or_remove_publish_path "$topic_path/topic.md" "$dest_root"
   copy_or_remove_publish_path "$topic_path/runs" "$dest_root"
   copy_or_remove_publish_path "$topic_path/pdfs" "$dest_root"
   copy_or_remove_publish_path "$topic_path/data" "$dest_root"
   copy_or_remove_publish_path "$topic_path/podcasts" "$dest_root"
+}
+
+copy_manifest_context_to_worktree() {
+  local dest_root="$1"
+  local docs_path="docs/how-to-use.md"
+
+  if [[ -f "$repo_root/$docs_path" ]]; then
+    mkdir -p "$dest_root/docs"
+    cp "$repo_root/$docs_path" "$dest_root/$docs_path"
+  fi
+}
+
+copy_publication_helpers_to_worktree() {
+  local dest_root="$1"
+  local helper
+  local helpers=(
+    "generate_pavbot_manifest.py"
+    "pavbot_publication_contract.py"
+    "pavbot_pdf_theme.py"
+    "render_mobile_news_data.py"
+    "render_research_data.py"
+    "render_research_pdf.py"
+    "validate_jobs_data.py"
+    "validate_mobile_news_data.py"
+    "validate_pulse_news_data.py"
+    "validate_research_data.py"
+  )
+
+  mkdir -p "$dest_root/scripts"
+  for helper in "${helpers[@]}"; do
+    if [[ -f "$script_dir/$helper" ]]; then
+      cp "$script_dir/$helper" "$dest_root/scripts/$helper"
+    fi
+  done
+}
+
+copy_reddit_radar_outputs_to_worktree() {
+  local dest_root="$1"
+  local src_root="$repo_root/$topic_path"
+  local dest_topic_root="$dest_root/$topic_path"
+  local src dest_path
+
+  rm -rf \
+    "$dest_topic_root/index.md" \
+    "$dest_topic_root/backlog.md" \
+    "$dest_topic_root/topic.md" \
+    "$dest_topic_root/runs" \
+    "$dest_topic_root/data" \
+    "$dest_topic_root/pdfs" \
+    "$dest_topic_root/podcasts"
+
+  copy_or_remove_publish_path "$topic_path/topic.md" "$dest_root"
+  copy_or_remove_publish_path "$topic_path/index.md" "$dest_root"
+  copy_or_remove_publish_path "$topic_path/backlog.md" "$dest_root"
+  copy_or_remove_publish_path "$topic_path/runs" "$dest_root"
+  copy_or_remove_publish_path "$topic_path/pdfs" "$dest_root"
+  copy_or_remove_publish_path "$topic_path/podcasts" "$dest_root"
+
+  mkdir -p "$dest_topic_root/data"
+  shopt -s nullglob
+  for src in "$src_root"/data/*-reddit-radar.json "$src_root"/data/*-reddit-radar-raw.json; do
+    dest_path="$dest_topic_root/data/$(basename "$src")"
+    mkdir -p "$(dirname "$dest_path")"
+    cp "$src" "$dest_path"
+  done
+  shopt -u nullglob
 }
 
 copy_mobile_public_outputs_to_worktree() {
@@ -596,26 +912,30 @@ publish_isolated() {
   git fetch origin "$target_branch" >/dev/null
   remote_ref="$(git rev-parse --verify "origin/$target_branch")" || die "missing origin/$target_branch"
 
+  run_publication_contract prepare "$repo_root"
+  run_publication_contract verify-local "$repo_root"
+
   isolated_tmp="$(mktemp -d "${TMPDIR:-/tmp}/pavbot-publish.XXXXXX")"
   isolated_worktree="$isolated_tmp/worktree"
   pushed_marker="$isolated_tmp/pushed"
   trap cleanup_isolated_worktree EXIT
 
   git worktree add --detach "$isolated_worktree" "$remote_ref" >/dev/null
+  copy_manifest_context_to_worktree "$isolated_worktree"
+  copy_publication_helpers_to_worktree "$isolated_worktree"
   copy_publishable_outputs_to_worktree "$isolated_worktree"
 
   (
     cd "$isolated_worktree"
 
-    if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news; then
+    if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ((force_manifest == 0)); then
       printf 'no publishable changes for %s\n' "$topic_path"
       exit 0
     fi
 
-    validate_jobs_data_outputs
-    validate_research_data_outputs
-    validate_mobile_news_data_outputs
-    validate_pulse_news_data_outputs
+    if [[ "$topic_path" != "$mobile_public_only_topic" ]]; then
+      run_publication_contract verify-local "$PWD"
+    fi
     python3 "$manifest_generator" --repo-root "$PWD"
     require_latest_pulse_news_data_in_manifest
     stage_publishable_paths
@@ -635,17 +955,24 @@ publish_isolated() {
 
   git fetch origin "$target_branch" >/dev/null
   if [[ -f "$pushed_marker" ]]; then
+    run_publication_contract verify-remote "$repo_root" --ref "origin/$target_branch"
+    sync_local_manifest_from_remote
     printf 'pushed pavbot outputs for %s to origin/%s\n' "$topic_path" "$target_branch"
   fi
 }
 
 isolated_mode=0
+force_manifest=0
 topic_arg=""
 
 while (($# > 0)); do
   case "$1" in
     --isolated)
       isolated_mode=1
+      shift
+      ;;
+    --force-manifest)
+      force_manifest=1
       shift
       ;;
     -h|--help)
@@ -684,6 +1011,7 @@ cd "$repo_root"
 
 [[ -d "$topic_path" ]] || die "topic path does not exist: $topic_path"
 [[ -f "$manifest_generator" ]] || die "missing scripts/generate_pavbot_manifest.py"
+[[ -f "$publication_contract" ]] || die "missing scripts/pavbot_publication_contract.py"
 [[ -f "$jobs_data_validator" ]] || die "missing scripts/validate_jobs_data.py"
 [[ -f "$research_data_validator" ]] || die "missing scripts/validate_research_data.py"
 [[ -f "$mobile_news_data_validator" ]] || die "missing scripts/validate_mobile_news_data.py"
@@ -709,19 +1037,17 @@ fi
 
 require_clean_publish_scope
 
-if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news; then
-  printf 'no publishable changes for %s\n' "$topic_path"
-  exit 0
-fi
-
-validate_jobs_data_outputs
-validate_research_data_outputs
-validate_mobile_news_data_outputs
-validate_pulse_news_data_outputs
+run_publication_contract prepare "$repo_root"
+run_publication_contract verify-local "$repo_root"
 python3 "$manifest_generator" --repo-root "$PWD"
 require_latest_pulse_news_data_in_manifest
 
 require_clean_publish_scope
+
+if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ((force_manifest == 0)); then
+  printf 'no publishable changes for %s\n' "$topic_path"
+  exit 0
+fi
 
 stage_publishable_paths
 
@@ -735,5 +1061,7 @@ require_staged_scope
 topic_slug="${topic_path#research/}"
 git commit -m "chore(pavbot): publish ${topic_slug} automation outputs" >/dev/null
 git push origin "HEAD:$target_branch" >/dev/null
+run_publication_contract verify-remote "$repo_root" --ref "origin/$target_branch"
+sync_local_manifest_from_remote
 
 printf 'pushed pavbot outputs for %s to origin/%s\n' "$topic_path" "$target_branch"

@@ -43,7 +43,7 @@ final class TodayLiveTopicsStore {
         }
 
         historyStore.prune()
-        showCachedPulseIfNeeded(message: "Pokazuję lokalnie zapamiętany Puls Dnia z ostatnich 48h. Odświeżam dane w tle.")
+        showCachedPulseIfNeeded(message: PavbotCacheNoticeCopy.refreshing(context: "Puls Dnia z ostatnich 48h"))
 
         guard let manifest else {
             if snapshot == nil {
@@ -84,7 +84,7 @@ final class TodayLiveTopicsStore {
         } catch {
             if snapshot != nil {
                 state = .loaded
-                emptyMessage = "Pokazuję ostatnio wczytane tematy. Odświeżenie nie powiodło się."
+                emptyMessage = PavbotCacheNoticeCopy.refreshFailed(context: "ostatnio wczytane tematy")
             } else {
                 emptyMessage = nil
                 state = .failed(.network(error, context: .preview))
@@ -117,10 +117,10 @@ final class TodayLiveTopicsStore {
         } catch {
             if snapshot != nil {
                 state = .loaded
-                emptyMessage = "Pokazuję lokalnie zapamiętany Puls Dnia z ostatnich 48h. Odświeżenie nie powiodło się."
+                emptyMessage = PavbotCacheNoticeCopy.refreshFailed(context: "Puls Dnia z ostatnich 48h")
                 return true
             }
-            if showCachedPulseIfNeeded(message: "Pokazuję lokalnie zapamiętany Puls Dnia z ostatnich 48h. Odświeżenie nie powiodło się.") {
+            if showCachedPulseIfNeeded(message: PavbotCacheNoticeCopy.refreshFailed(context: "Puls Dnia z ostatnich 48h")) {
                 state = .loaded
                 return true
             }

@@ -173,12 +173,22 @@ container bound to `127.0.0.1:18082`. See
 
 ## Automations
 
-Each active automation should finish by publishing its own outputs:
+Each active automation must finish by publishing its own outputs together with
+an updated public manifest:
 
 ```bash
 PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json" \
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
+
+Treat publication as a hard success gate. After every run that writes
+app-visible artifacts, the publish script must regenerate
+`public/pavbot-manifest.json`, commit the topic outputs plus the manifest, push
+to `origin/main`, then verify the pushed manifest contains the current run
+paths. If that remote verification fails, the run is partially published or
+failed, not complete. Notifier-backed feeds such as Reddit Radar must publish
+their audit artifacts/manifest before or alongside posting the digest to the
+notifier so the iOS app and webhook do not depend on local-only files.
 
 Current first-class topics include:
 

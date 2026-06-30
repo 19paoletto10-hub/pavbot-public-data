@@ -1,25 +1,30 @@
+import subprocess
 from pathlib import Path
 
 
-REQUIRED_PDF_TOPICS = (
-    "llm-ai-jobs-wroclaw",
-    "tech-news",
-    "polska-swiat",
+SUPPORTED_TOPIC_CONTRACTS = (
+    "research/llm-ai-jobs-wroclaw",
+    "research/tech-news",
+    "research/polska-swiat",
+    "research/aktualne-wydarzenia-mobile",
+    "research/puls-dnia-news",
+    "research/reddit-radar",
 )
 
 
-def test_research_runs_have_matching_pdf_outputs() -> None:
+def test_latest_publication_bundle_contracts_verify_locally() -> None:
     repo_root = Path(__file__).resolve().parents[1]
-    missing: list[str] = []
+    helper = repo_root / "scripts" / "pavbot_publication_contract.py"
 
-    for topic in REQUIRED_PDF_TOPICS:
-        topic_root = repo_root / "research" / topic
-        for run_path in sorted((topic_root / "runs").glob("*.md")):
-            expected_pdf = topic_root / "pdfs" / f"{run_path.stem}-{topic}.pdf"
-            if not expected_pdf.is_file():
-                missing.append(f"{run_path.relative_to(repo_root)} -> {expected_pdf.relative_to(repo_root)}")
-
-    assert not missing, "Missing research PDFs:\n" + "\n".join(missing)
+    for topic_path in SUPPORTED_TOPIC_CONTRACTS:
+        result = subprocess.run(
+            ["python3", str(helper), "verify-local", topic_path],
+            cwd=repo_root,
+            capture_output=True,
+            text=True,
+            check=False,
+        )
+        assert result.returncode == 0, f"{topic_path}: {result.stderr or result.stdout}"
 
 
 def test_podcast_generations_have_brief_pdf_outputs() -> None:

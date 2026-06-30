@@ -230,23 +230,25 @@ async def fetch_humor_items(*, config: DailyHumorConfig) -> list[dict[str, Any]]
         tasks = [client.get(url, headers=request_headers) for _, url in sources]
         responses = await asyncio.gather(*tasks, return_exceptions=True)
 
-    items: list[dict[str, Any]] = []
-    errors: list[str] = []
-    for (source_name, _), response in zip(sources, responses):
-        if isinstance(response, Exception):
-            errors.append(f"{source_name}: {response}")
-            continue
-        if response.status_code >= 400:
-            errors.append(f"{source_name}: HTTP {response.status_code}")
-            continue
-        payload = response.json()
-        items.extend(parse_reddit_listing(payload, source_name=source_name))
+        items: list[dict[str, Any]] = []
+        errors: list[str] = []
+        for (source_name, _), response in zip(sources, responses):
+            if isinstance(response, Exception):
+                errors.append(f"{source_name}: {response}")
+                continue
+            if response.status_code >= 400:
+                errors.append(f"{source_name}: HTTP {response.status_code}")
+                continue
+            payload = response.json()
+            items.extend(parse_reddit_listing(payload, source_name=source_name))
 
-    curated = curate_humor_items(items)
-    if not curated:
-        detail = "; ".join(errors) if errors else "Reddit returned no usable items"
-        raise RuntimeError(f"Reddit humor feed unavailable: {detail}")
-    return curated[: config.max_items]
+        curated = curate_humor_items(items)
+        if not curated:
+            detail = "; ".join(errors) if errors else "Reddit returned no usable items"
+            raise RuntimeError(f"Reddit humor feed unavailable: {detail}")
+        selected = curated[: config.max_items]
+        await enrich_reddit_comment_highlights(client=client, items=selected, request_headers=request_headers)
+        return selected
 
 
 async def fetch_reddit_access_token(*, client: Any, config: DailyHumorConfig) -> str:
@@ -271,6 +273,123 @@ async def fetch_reddit_access_token(*, client: Any, config: DailyHumorConfig) ->
     if not isinstance(access_token, str) or not access_token.strip():
         raise RuntimeError("Reddit OAuth token response did not include access_token")
     return access_token
+
+
+async def enrich_reddit_comment_highlights(
+    *,
+    client: Any,
+    items: list[dict[str, Any]],
+    request_headers: dict[str, str],
+) -> None:
+    requests: list[tuple[dict[str, Any], Any]] = []
+    for item in items:
+        comments_url = reddit_comments_url(item.get("sourceURL"))
+        if comments_url:
+            requests.append((item, client.get(comments_url, headers=request_headers)))
+    if not requests:
+        return
+    responses = await asyncio.gather(*(request for _, request in requests), return_exceptions=True)
+    for (item, _), response in zip(requests, responses):
+        if isinstance(response, Exception) or response.status_code >= 400:
+            item["commentHighlights"] = item.get("commentHighlights") or []
+            continue
+        try:
+            payload = response.json()
+        except Exception:
+            item["commentHighlights"] = item.get("commentHighlights") or []
+            continue
+        item["commentHighlights"] = reddit_comment_highlights_from_payload(
+            payload,
+            title=clean_text(str(item.get("title") or "")),
+            category_label=clean_text(str(item.get("categoryLabel") or "")),
+        )
+
+
+def reddit_comments_url(source_url: Any) -> str | None:
+    text = clean_text(str(source_url or ""))
+    match = re.search(r"https?://(?:www\.)?reddit\.com(?P<path>/r/[^?#]+/comments/[^?#]+)", text)
+    if not match:
+        return None
+    path = match.group("path").rstrip("/") + "/"
+    return f"https://oauth.reddit.com{path}?limit=12&sort=top&raw_json=1"
+
+
+def reddit_comment_highlights_from_payload(
+    payload: Any,
+    *,
+    title: str,
+    category_label: str,
+) -> list[dict[str, Any]]:
+    candidates: list[dict[str, Any]] = []
+
+    def collect_children(children: Any) -> None:
+        if not isinstance(children, list):
+            return
+        for child in children:
+            if not isinstance(child, dict):
+                continue
+            data = child.get("data")
+            if not isinstance(data, dict):
+                continue
+            body = clean_text(str(data.get("body") or ""))
+            if body and not looks_deleted_or_empty(body) and not looks_toxic(body):
+                candidates.append(
+                    {
+                        "id": clean_text(str(data.get("id") or f"comment-{len(candidates) + 1}")),
+                        "body": body,
+                        "score": parse_comment_score(data.get("score")),
+                    }
+                )
+            replies = data.get("replies")
+            if isinstance(replies, dict):
+                collect_children(((replies.get("data") or {}).get("children") or []))
+
+    if isinstance(payload, list):
+        for listing in payload[1:]:
+            if isinstance(listing, dict):
+                collect_children(((listing.get("data") or {}).get("children") or []))
+    elif isinstance(payload, dict):
+        collect_children(((payload.get("data") or {}).get("children") or []))
+
+    return comment_highlights_from_candidates(candidates, title=title, category_label=category_label)
+
+
+def comment_highlights_from_candidates(
+    candidates: list[dict[str, Any]],
+    *,
+    title: str,
+    category_label: str,
+) -> list[dict[str, Any]]:
+    seen: set[str] = set()
+    unique: list[dict[str, Any]] = []
+    for candidate in candidates:
+        body = clean_text(str(candidate.get("body") or ""))
+        key = body.lower()
+        if not body or key in seen:
+            continue
+        seen.add(key)
+        unique.append({"body": body, "score": parse_comment_score(candidate.get("score"))})
+    unique.sort(key=lambda item: (item["score"], len(item["body"])), reverse=True)
+    highlights: list[dict[str, Any]] = []
+    for candidate in unique[:3]:
+        body = candidate["body"]
+        highlights.append(
+            {
+                "id": f"comment-{len(highlights) + 1}",
+                "summary": shorten_text(body, 180),
+                "originalBody": body,
+                "explanation": comment_explanation_for(body, title, category_label),
+                "score": candidate["score"],
+            }
+        )
+    return highlights
+
+
+def parse_comment_score(value: Any) -> int:
+    try:
+        return int(value or 0)
+    except (TypeError, ValueError):
+        return 0
 
 
 def parse_reddit_listing(payload: dict[str, Any], *, source_name: str) -> list[dict[str, Any]]:
@@ -450,11 +569,28 @@ def humor_ingest_token_is_valid(authorization: str | None, *, expected_token: st
 def compact_humor_digest(digest: dict[str, Any] | None) -> dict[str, Any] | None:
     if not isinstance(digest, dict):
         return None
+    comment_highlight_count = 0
+    missing_original_body_highlights = 0
+    for item in digest.get("items") or []:
+        if not isinstance(item, dict):
+            continue
+        highlights = item.get("commentHighlights")
+        if not isinstance(highlights, list):
+            continue
+        for highlight in highlights:
+            if not isinstance(highlight, dict):
+                continue
+            comment_highlight_count += 1
+            if not clean_text(str(highlight.get("originalBody") or "")):
+                missing_original_body_highlights += 1
     return {
         "id": digest.get("id"),
         "title": digest.get("title"),
         "generatedAt": digest.get("generatedAt"),
         "itemCount": len(digest.get("items") or []),
+        "commentHighlightCount": comment_highlight_count,
+        "missingOriginalBodyHighlights": missing_original_body_highlights,
+        "hasOriginalBodies": comment_highlight_count > 0 and missing_original_body_highlights == 0,
     }
 
 
@@ -548,6 +684,17 @@ def why_funny_for(title: str, category_label: str) -> str:
     return "Zabawne, bo temat jest prosty, rozpoznawalny i zostawia miejsce na szybkie puenty w komentarzach."
 
 
+def comment_explanation_for(comment: str, title: str, category_label: str) -> str:
+    lowered = f"{comment} {title} {category_label}".lower()
+    if "ai" in lowered or "chatgpt" in lowered or "llm" in lowered:
+        return "Komentarz jest ciekawy, bo rozwija żart o AI i pokazuje, jak ludzie dopisują puentę do technologicznego absurdu."
+    if "deploy" in lowered or "ci" in lowered or "bug" in lowered or "code" in lowered or "programmer" in lowered:
+        return "Komentarz jest ciekawy, bo rozwija żart o deployu i trafia w znany rytuał sprawdzania, czy sukces nie ukrywa awarii."
+    if "polska" in lowered or "wpz" in lowered or "pl" in lowered:
+        return "Komentarz jest ciekawy, bo pokazuje lokalny kontekst i zamienia zwykły temat w wspólną, rozpoznawalną puentę."
+    return "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę."
+
+
 def tags_for_title(title: str, source_name: str) -> list[str]:
     corpus = f"{title} {source_name}".lower()
     tags: list[str] = []
@@ -566,10 +713,22 @@ def clean_text(value: str) -> str:
     return re.sub(r"\s+", " ", value).strip()
 
 
+def shorten_text(value: str, limit: int) -> str:
+    text = clean_text(value)
+    if len(text) <= limit:
+        return text
+    return text[: max(0, limit - 1)].rstrip() + "…"
+
+
 def looks_toxic(value: str) -> bool:
     lowered = value.lower()
     blocked = ["nsfw", "porn", "gore", "kill yourself"]
     return any(token in lowered for token in blocked)
+
+
+def looks_deleted_or_empty(value: str) -> bool:
+    lowered = clean_text(value).lower()
+    return lowered in {"[deleted]", "[removed]", "deleted", "removed"} or not lowered
 
 
 def stable_id(value: str) -> str:

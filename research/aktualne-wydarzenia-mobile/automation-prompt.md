@@ -108,9 +108,18 @@ Publikuj tylko te warianty audio, dla których istnieje poprawnie wyrenderowany
 `sources.md`, raportów `runs/` ani dodatkowych PDF-ów.
 
 Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS i webhooka
-notyfikacji push. Skrypt uruchamia `python3 scripts/generate_pavbot_manifest.py`,
-odświeża `public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki i robi
-push na `origin/main`.
+notyfikacji push. Najpierw uruchom wspólny kontrakt publikacji:
+
+`python3 scripts/pavbot_publication_contract.py prepare research/aktualne-wydarzenia-mobile`
+
+`python3 scripts/pavbot_publication_contract.py verify-local research/aktualne-wydarzenia-mobile`
+
+To jest pipeline `prepare -> validate -> manifest -> push -> verify-remote`.
+W tym temacie `prepare` może automatycznie odtworzyć tylko deterministyczne
+artefakty pochodne: `mobileNewsData`, `mobile-brief.pdf` i `newspaper.pdf`.
+Nie generuje audio ani brakującego `script.md`.
+Skrypt odświeża `public/pavbot-manifest.json`, commituje tylko dozwolone
+ścieżki i robi push na `origin/main`.
 Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override środowiskowego,
 `PAVBOT_RAW_BASE_URL`, istniejącego `rawBaseUrl` w manifeście albo GitHub
 `origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Rozwiązany URL

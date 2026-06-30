@@ -6,6 +6,8 @@
 | --- | --- | --- | --- | --- |
 | High | Review first three generated news podcasts | Confirms pacing, neutrality, MP3 generation, and Polish narration quality | Listen to each MP3 and record notes | Open |
 | Medium | Tune public source list | Repeated good sources should become explicit topic guidance | Prefer official institutions plus Onet/PAP, Guardian, Euronews and public AP/Reuters mirrors; consider topic.md refinement after weekend sample | Open |
+| Medium | Track Orka implementation details | Evening run confirmed signing and Baltic Pact, but full contract value, delivery guarantees and industrial execution still need official detail | Monitor MON/KPRM/Saab/PAP for value, delivery schedule, gap filler and Polish production-line specifics | Open |
+| Medium | Monitor ABW influence-operation fallout | ABW described Russian-financed paid demonstrations among Ukrainian refugees and immediate expulsion of 11 foreigners | Watch for follow-up from ABW, Straż Graniczna, prokuratura and MSWiA; avoid broad claims beyond official communications | Open |
 
 ## Review Notes
 
@@ -65,9 +67,38 @@
   and Russia-provocation risk, AP/USGS for Venezuela earthquake impact, and RCB
   for weekend heat/susza/fire risk. Podcast should avoid letting the order
   dispute erase the concrete URC output; both strands need to be kept separate.
+- 2026-06-28: Sunday research run created a material update and used the
+  expanded app-reader contract. Strongest sources were Prezydent RP/WP for
+  Jurata and Poznań, MON for Ankara and Orka A26, AP for Ukraine drones, Iran
+  and Venezuela, Guardian for Crimea/provocation risk, and RCB/AP for heat and
+  public-safety risks. Follow-up: confirm on 29 June whether the A26/Orka
+  contract was signed and record terms if public. The 08:30 refresh added newer
+  AP updates on Ukraine striking Titan-Barrikady/energy logistics and Iran
+  attacking Bahrain/Kuwait after U.S. strikes.
+- 2026-06-28-1935: Evening research run created a material update. Strongest
+  sources were MON for Ankara priorities, PAP for the next stage of permanent
+  U.S. base talks, Prezydent RP for the completed Poznań/Czerwiec 1956 block,
+  RCB/RMF24/AP/Guardian for the heat record and public-safety risks, AP for
+  Ukrainian strikes on Russian refineries and Iran's Bahrain/Kuwait escalation,
+  and AP for Serbia's potential early-election turn. Podcast should caveat the
+  40.5°C Słubice figure as preliminary until IMGW confirms it.
+- 2026-06-29: Monday morning research run created a material update. Strongest
+  sources were KPRM/MON for Polska-Szwecja/Orka A26, PAP/TVN24 for the US base
+  talks, Prezydent RP/TVN24/WP for the new presidential memory-day initiative,
+  RCB/Onet-PAP for heat and public health, AP/Guardian for Russian fuel
+  shortages after Ukrainian refinery strikes, and AP/Axios/Onet-PAP for the
+  unstable USA-Iran-Ormuz pause/talks thread.
+- 2026-06-29-1935: Evening research run created a material update. Strongest
+  sources were MON/KPRM/TVN24 for the signed Orka A26 package and Pakt dla Morza
+  Bałtyckiego, Służby specjalne/TVN24 for the ABW influence-operation case,
+  RCB for the upał-burze-utonęcia-susza safety block, AP/Guardian/Axios for
+  the fragile USA-Iran-Ormuz pause, and Guardian/AP for Russian fuel shortages.
+  Podcast should treat ABW claims as official service findings and avoid
+  generalizing them to Ukrainian or Belarusian communities in Poland.
 
 ## Done
 
 | Date | Item | Outcome |
 | --- | --- | --- |
 | 2026-06-20 | Review first three Polska/świat reports | Three scheduled reports were produced on 2026-06-18, 2026-06-19 and 2026-06-20. Source quality is acceptable when official institutions remain primary and dynamic news pages are treated as secondary signals. |
+| 2026-06-29 | Confirm Orka A26 signing | Signing was confirmed by MON and KPRM in the evening run; remaining work is implementation tracking rather than confirmation. |

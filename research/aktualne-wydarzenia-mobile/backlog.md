@@ -4,11 +4,13 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Orka delivery, MRO and Baltic follow-through | Wieczorny run potwierdził podpisanie umowy na trzy A26, ale publiczne szczegóły wykonawcze nadal są niepełne | In the next run, verify delivery timing, named Polish industrial partners, scope of the MRO buildout, the HMS Södermanland bridge arrangement, and any additional Poland-Sweden/NATO-Baltic commitments | Open |
 | High | Track concrete follow-through after Gdańsk package | Dzisiejszy run ma już liczby i deklaracje, ale nie wszystkie projekty mają publiczne listy beneficjentów i wdrożeń | In the next run, check for named projects, signed agreements, and partner readouts expanding the 3,2 mld euro, 1,1 mld euro and 10 mld euro figures | Open |
-| High | Stabilize `male-xtts` in current-events pipeline | Czwarty produkcyjny run z rzędu kończy się brakiem męskiego wariantu MP3 mimo poprawnego `female-piper` | Review [proposal 2026-06-26](proposals/2026-06-26-stabilize-male-xtts-workflow.md) and decide whether to implement timeout and fallback hardening outside the topic run | Open |
+| High | Stabilize `male-xtts` in current-events pipeline | Ósmy produkcyjny run z rzędu kończy się brakiem męskiego wariantu MP3 mimo poprawnego `female-piper` | Review [proposal 2026-06-26](proposals/2026-06-26-stabilize-male-xtts-workflow.md) and decide whether to implement timeout and fallback hardening outside the topic run | Open |
+| Medium | Align public mobile scope with manifest output | Run `2026-06-29-1934` potwierdził, że `origin/main` nadal publikuje i indeksuje `newspaper.pdf`, choć topic prompt ogranicza publiczny zakres do `mobile-brief`, `script`, `mobile-news` i realnych MP3 | Review [proposal 2026-06-29](proposals/2026-06-29-align-mobile-public-scope-with-manifest.md) and decide whether `newspaper.pdf` should remain local-only or become explicitly public everywhere | Open |
 | Medium | Monitor legal follow-through on EU temporary protection proposal | Komisja Europejska zaproponowała ochronę tymczasową dla osób uciekających z Ukrainy do 4 marca 2028 roku, ale decyzję musi jeszcze przyjąć Rada UE, a kryteria dla nowych przyjazdów są politycznie czułe | In the next run, check whether the Council has adopted the proposal and how the criteria for new arrivals are being publicly described | Open |
 | Medium | Tune trusted source mix | The brief should stay current without repeating low-value items | After three runs, note the sources that produced the strongest confirmed stories | Open |
-| Medium | Watch heat and hydrology as a first-rank public risk | Dzisiejszy run przesunął ryzyko krajowe z możliwych ostrzeżeń 3. stopnia do formalnych alertów RCB, temperatur do 42°C, suszy i wysokiego ryzyka pożarowego | In the next run, verify whether alerts escalate, ease, or move regionally and whether burze zaczynają realnie zmieniać sytuację hydrologiczną i pożarową | Open |
+| Medium | Watch heat, storms and hydrology as a first-rank public risk | Poranny run utrzymał szeroki upał, lokalne alerty burzowe, suszę hydrologiczną oraz dołożył bardzo wysoki dobowy bilans utonięć | In the next run, verify whether burze przyniosły szkody, awarie, pożary, problemy energetyczne, kolejne utonięcia lub lokalną poprawę sytuacji hydrologicznej oraz czy alerty się przesunęły regionalnie | Open |
 
 ## Review Notes
 
@@ -46,6 +48,36 @@
   `male-xtts` czwarty raz z rzędu zawiesił się podczas renderu i został
   przerwany kontrolowanie; stan zapisano w
   `podcasts/2026-06-27-1019/tts_variants.json`.
+- 2026-06-28: Produkcyjny run `2026-06-28-1017` dołożył do skrajnego upału
+  oficjalne ostrzeżenia burzowe RCB i mocniejszy europejski kontekst z WMO,
+  który osadza Polskę w rekordowej późnoczerwcowej fali upałów.
+- 2026-06-28: `female-piper` ponownie utworzył poprawny MP3, natomiast
+  `male-xtts` piąty raz z rzędu zawiesił się podczas renderu i został
+  przerwany kontrolowanie; stan zapisano w
+  `podcasts/2026-06-28-1017/tts_variants.json`.
+- 2026-06-28: Wieczorny run `2026-06-28-1935` przesunął polityczny środek
+  ciężkości na jutrzejsze konsultacje polsko-szwedzkie w Gdyni i publiczną
+  zapowiedź podpisania umowy na trzy A26 dla programu Orka.
+- 2026-06-28: `female-piper` ponownie utworzył poprawny MP3, natomiast
+  `male-xtts` szósty raz z rzędu zawiesił się podczas renderu i został
+  przerwany kontrolowanie; stan zapisano w
+  `podcasts/2026-06-28-1935/tts_variants.json`.
+- 2026-06-29: Poranny run `2026-06-29-1017` doprecyzował obraz dnia do układu
+  upał plus burze plus susza plus 17 utonięć oraz przesunął Gdynię z etapu
+  zapowiedzi do szczegółowego harmonogramu dnia z planowanym podpisaniem A26 o
+  12:45.
+- 2026-06-29: `female-piper` ponownie utworzył poprawny MP3, natomiast
+  `male-xtts` siódmy raz z rzędu zawiesił się podczas renderu i został
+  przerwany kontrolowanie; stan zapisano w
+  `podcasts/2026-06-29-1017/tts_variants.json`.
+- 2026-06-29: Wieczorny run `2026-06-29-1934` domknął Gdynię podpisaną umową
+  na trzy A26, dołożył szczegóły przemysłowe od Saab: około 47 mld SEK,
+  pakiet uzbrojenia, szkoleniowo-wsparciowy, MRO w Polsce i pomostowy HMS
+  Södermanland.
+- 2026-06-29: `female-piper` ponownie utworzył poprawny MP3, natomiast
+  `male-xtts` ósmy raz z rzędu zawiesił się podczas renderu i został
+  przerwany kontrolowanie; stan zapisano w
+  `podcasts/2026-06-29-1934/tts_variants.json`.
 
 ## Done
 

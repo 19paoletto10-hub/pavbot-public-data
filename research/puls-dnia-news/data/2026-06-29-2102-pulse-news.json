@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-06-29",
+  "runTime": "21:02",
+  "status": "Material update",
+  "headline": "21:02: kraj dokłada NATO, phishing i rekord trudności na rynku pracy, a świat podbija stawkę w Stade, Fedzie i Rosji",
+  "summary": "Slot z 21:02 CEST jest materialny zarówno względem zdalnie opublikowanego baselinu 2026-06-26-1201, jak i względem lokalnego runu 16:30. Krajowy blok zostawia część popołudniowych kart infrastrukturalnych i podmienia je na świeższe wieczorne sygnały o nominacji gen. Macieja Klisza do sztabu NATO, rekordowo długim szukaniu pracy, nowej fali phishingu oraz rekordowej temperaturze na Śnieżce, przy utrzymanym priorytecie dla alertów burzowych. W części międzynarodowej rośnie ciężar kart o Niemczech, Fedzie i rosyjskich niedoborach paliwa, podczas gdy Iran, Afganistan, Ebola i Wenezuela pozostają rdzeniem wysokiego priorytetu.",
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "RCB: Alert RCB - burze (29.06)",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-2907"
+    }
+  ],
+  "items": [
+    {
+      "id": "pulse-2026-06-29-2102-01-burze",
+      "section": "Alerty",
+      "title": "Burze i nocne ostrzeżenia nadal otwierają krajowy blok dnia",
+      "lead": "Wieczorem wciąż liczy się ryzyko podtopień, wiatru i przerw w dostawie prądu.",
+      "whatHappened": "RCB utrzymuje ostrzeżenie na noc z 29 na 30 czerwca przed intensywnymi opadami, silnym wiatrem i burzami, a TVN Meteo nadal pokazuje aktywne strefy gwałtownych zjawisk w Polsce. Wieczorny slot nie może zamknąć dnia bez tej karty, bo zagrożenie pozostaje praktyczne i natychmiastowe.",
+      "keyFacts": [
+        "Alert RCB obejmuje nocne ryzyko intensywnych opadów, wiatru i burz.",
+        "Komunikat ostrzega także przed możliwymi przerwami w dostawie prądu.",
+        "TVN Meteo utrzymuje obraz aktywnych stref burzowych nad krajem."
+      ],
+      "reactions": [
+        "To nadal najbardziej użyteczny operacyjnie sygnał dla użytkownika w Polsce.",
+        "Karta spina pogodę z ryzykiem dla transportu, energetyki i lokalnych służb."
+      ],
+      "whyItMatters": "To temat o najwyższej wartości praktycznej na najbliższe godziny, bo może przekładać się na realne zakłócenia jeszcze tej nocy.",
+      "context": "W poprzednich slotach pogoda dominowała przez upał i burze. O 21:02 wątek nie schodzi, tylko przechodzi w fazę nocnych skutków.",
+      "watchNext": [
+        "Czy pojawią się potwierdzone lokalne podtopienia, awarie lub kolejne alerty.",
+        "Czy rano 30 czerwca ostrzeżenia zostaną utrzymane lub podniesione."
+      ],
+      "sources": [
+        {
+          "title": "RCB: Alert RCB - burze (29.06)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-2907"
+        },
+        {
+          "title": "TVN Meteo: Gdzie jest burza? Tu zjawiska są gwałtowne",
+          "url": "https://tvn24.pl/tvnmeteo/polska/gdzie-jest-burza-burze-w-poniedzialek-29-06-radar-burz-i-mapa-opadow-na-zywo-st9118958?source=rss"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Burze",
+        "RCB",
+        "Pogoda"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-2102-02-klisz",
+      "section": "Polska",
+      "title": "Generał Maciej Klisz przechodzi do sztabu w dowództwie NATO",
+      "lead": "Wieczorny feed dostaje twardy sygnał kadrowy w obszarze bezpieczeństwa i sojuszu.",
+      "whatHappened": "TVN24 podało, że generał broni Maciej Klisz objął stanowisko szefa sztabu w Sojuszniczym Dowództwie Sił Połączonych NATO. To świeża, wysoko pozycjonowana karta krajowa, bo łączy polską armię z bieżącą architekturą sojuszniczą.",
+      "keyFacts": [
+        "Informacja dotyczy objęcia funkcji szefa sztabu w dowództwie NATO.",
+        "Temat pojawił się w wieczornym paśmie TVN24 po 20:20 CEST.",
+        "Karta ma ciężar bezpieczeństwowy, a nie wyłącznie personalny."
+      ],
+      "reactions": [
+        "Feed podnosi temat, bo to jeden z najmocniejszych świeżych sygnałów z Polski po 18:00.",
+        "Nominacja dobrze równoważy blok alertowy i czysto pogodowe karty."
+      ],
+      "whyItMatters": "Zmiany na wysokich stanowiskach w strukturach NATO są istotne dla krajowej percepcji bezpieczeństwa i roli Polski w Sojuszu.",
+      "context": "Run 16:30 opierał się mocniej na kolei, A2 i sprawach granicznych. O 21:02 pojawia się świeższy akcent wojskowo-sojuszniczy.",
+      "watchNext": [
+        "Czy pojawi się oficjalny komunikat MON lub NATO rozwijający zakres nowej funkcji.",
+        "Czy nominacja będzie szerzej komentowana w kontekście bieżącej sytuacji bezpieczeństwa w regionie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Generał broni Maciej Klisz szefem sztabu w dowództwie NATO",
+          "url": "https://tvn24.pl/polska/general-broni-maciej-klisz-szefem-sztabu-w-dowodztwie-nato-wladyslaw-kosiniak-kamysz-powodzenia-st9120369?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "NATO",
+        "Wojsko",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-2102-03-praca",
+      "section": "Polska",
+      "title": "Średni czas szukania pracy w Polsce rośnie do historycznego maksimum",
+      "lead": "Rynek pracy wysyła wieczorem twardy sygnał ochłodzenia po stronie pracownika.",
+      "whatHappened": "TVN24 Biznes podało, że średni czas poszukiwania nowej pracy w Polsce wzrósł do najwyższego poziomu w historii badania Monitor Rynku Pracy. Najtrudniejszą sytuację mają osoby w wieku od 50 do 64 lat.",
+      "keyFacts": [
+        "Raport mówi o rekordowo długim czasie potrzebnym na znalezienie pracy.",
+        "Najgorzej wypada grupa wiekowa 50-64 lata.",
+        "Temat jest ważniejszy niż miękkie konsumenckie historie, bo mówi o kierunku rynku pracy."
+      ],
+      "reactions": [
+        "Karta wzmacnia gospodarczy wymiar wieczornego zestawu.",
+        "Feed traktuje to jako sygnał trendu, nie jednorazową ciekawostkę."
+      ],
+      "whyItMatters": "Dłuższe szukanie pracy to prosty wskaźnik pogarszającej się dostępności ofert i rosnącej presji na gospodarstwa domowe.",
+      "context": "W runie 16:30 część ciężaru gospodarczego niosła korekta na spółkach AI. O 21:02 pojawia się bardziej bezpośredni dla odbiorcy sygnał z rynku pracy.",
+      "watchNext": [
+        "Czy pojawią się dokładniejsze dane o branżach i regionach najsłabszego popytu.",
+        "Czy kolejne odczyty potwierdzą, że to trwały trend, a nie pojedynczy skok."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Coraz trudniej na rynku pracy. \"Silny trend\"",
+          "url": "https://tvn24.pl/biznes/dla-pracownika/tyle-trwa-znalezienie-pracy-najwyzszy-wynik-w-historii-st9120259?source=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Rynek pracy",
+        "Praca",
+        "Polska"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-29-2102-04-phishing",
+      "section": "Alerty",
+      "title": "Fałszywe wiadomości o nadpłacie otwierają nową falę phishingu",
+      "lead": "Wieczorem do krajowego bloku wchodzi praktyczny alert konsumencko-cybernetyczny.",
+      "whatHappened": "TVN24 Biznes podało, że oszuści rozsyłają wiadomości o rzekomej nadpłacie, podszywając się pod fiskusa. To użyteczna karta ostrzegawcza, bo dotyczy prostego scenariusza, który może szybko dotknąć szeroką grupę odbiorców.",
+      "keyFacts": [
+        "Schemat opiera się na wiadomościach o rzekomej nadpłacie.",
+        "Atakujący podszywają się pod instytucję publiczną związaną z podatkami.",
+        "Temat ma charakter natychmiastowego alertu konsumenckiego."
+      ],
+      "reactions": [
+        "Feed promuje tę kartę, bo jest bardziej operacyjna niż klasyczne newsy polityczne o niskiej użyteczności.",
+        "To dobra przeciwwaga dla pogodowych alertów w krajowym bloku."
+      ],
+      "whyItMatters": "Użytkownik może od razu przełożyć tę informację na ostrożność wobec linków i SMS-ów, więc wartość praktyczna jest wysoka.",
+      "context": "W poprzednim runie blok krajowy był bardziej infrastrukturalny. O 21:02 dochodzi ostrzeżenie cyfrowe, gotowe do natywnego interfejsu iOS.",
+      "watchNext": [
+        "Czy służby lub CERT opublikują dodatkowe ostrzeżenie z przykładami wiadomości.",
+        "Czy pojawi się fala zgłoszeń lub rozszerzenie kampanii na inne kanały."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Wiadomości o \"nadpłacie\". Nowa fala phishingu",
+          "url": "https://tvn24.pl/biznes/z-kraju/wiadomosci-o-nadplacie-nowa-fala-phishingu-st9120221?source=rss"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Phishing",
+        "Cyberbezpieczeństwo",
+        "Podatki"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-29-2102-05-sniezka",
+      "section": "Alerty",
+      "title": "Na Śnieżce padł rekord temperatury, a fala upału nie odpuszcza",
+      "lead": "Po burzach druga pogodowa karta dnia pokazuje skalę ciepła także w górach.",
+      "whatHappened": "TVN Meteo podało, że na Śnieżce odnotowano najwyższą temperaturę w historii pomiarów na szczycie, bijąc rekord z 1982 roku. To mocny wieczorny sygnał, że ekstremum pogodowe nie ogranicza się do nizin ani miejskich wysp ciepła.",
+      "keyFacts": [
+        "Padł rekord temperatury na Śnieżce.",
+        "Według materiału pobito wynik notowany wcześniej od 1982 roku.",
+        "Temat rozszerza obraz krajowego ryzyka pogodowego poza burze."
+      ],
+      "reactions": [
+        "Karta wzmacnia pogodowy obraz dnia na poziomie symbolicznym i praktycznym.",
+        "Feed utrzymuje pogodę wysoko, bo odbiorca widzi zarówno skutki burz, jak i skrajnego upału."
+      ],
+      "whyItMatters": "Skrajne temperatury zwiększają ryzyko zdrowotne, pożarowe i infrastrukturalne, a rekord z wysokogórskiej lokalizacji dobrze obrazuje skalę zjawiska.",
+      "context": "Wcześniejsze sloty pokazywały upał głównie przez alerty i zakłócenia. O 21:02 dochodzi rekordowy punkt odniesienia z Karkonoszy.",
+      "watchNext": [
+        "Czy IMGW lub służby parkowe potwierdzą dalsze ekstremalne odczyty.",
+        "Czy noc przyniesie więcej informacji o skutkach fali upału i burz w regionach górskich."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo: Upały w Karkonoszach. Na Śnieżce padł rekord temperatury",
+          "url": "https://tvn24.pl/tvnmeteo/polska/upaly-w-karkonoszach-na-sniezce-padl-rekord-temperatury-st9120239?source=rss"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Upał",
+        "Śnieżka",
+        "Pogoda"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-29-2102-06-stade",
+      "section": "Świat",
+      "title": "W Stade zginęło już sześć osób, a sprawa ma tło rodzinnego sporu",
+      "lead": "Europejski blok bezpieczeństwa dostaje wieczorem cięższą wersję niemieckiej karty.",
+      "whatHappened": "BBC podało, że w ośrodku dla matek i dzieci w niemieckim Stade zginęło sześć osób, a zatrzymany mężczyzna miał być uwikłany w spór o opiekę nad córeczką. To wyraźna eskalacja względem popołudniowego bilansu.",
+      "keyFacts": [
+        "BBC mówi już o sześciu ofiarach śmiertelnych.",
+        "Miejsce zdarzenia to ośrodek dla matek i dzieci w Stade.",
+        "Policja wiąże sprawę z konfliktem o opiekę nad dzieckiem."
+      ],
+      "reactions": [
+        "Karta rośnie w priorytecie, bo bilans i kontekst są cięższe niż w runie 16:30.",
+        "To najmocniejszy nowy europejski temat kryminalno-bezpieczeństwowy wieczoru."
+      ],
+      "whyItMatters": "Rosnący bilans ofiar i rodzinne tło zdarzenia zwiększają wagę sprawy w europejskim feedzie oraz ryzyko dalszych aktualizacji.",
+      "context": "O 16:30 mowa była o pięciu ofiarach. Wieczorem BBC podnosi bilans do sześciu i doprecyzowuje tło sprawy.",
+      "watchNext": [
+        "Czy policja potwierdzi pełny przebieg zdarzeń i motyw.",
+        "Czy liczba zatrzymanych albo ofiar ulegnie dalszej korekcie."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Six people shot dead at centre for mothers and children in Germany",
+          "url": "https://www.bbc.co.uk/news/articles/c17yzzw1vkjo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "TVN24: Strzały na północy Niemiec. Wzrósł bilans ofiar śmiertelnych",
+          "url": "https://tvn24.pl/swiat/niemcy-strzelanina-w-stade-szesc-ofiar-smiertelnych-st9119885?source=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Niemcy",
+        "Stade",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-2102-07-iran",
+      "section": "Bezpieczeństwo",
+      "title": "USA i Iran wchodzą w chwilowy stand down, ale kryzys nadal jest kruchy",
+      "lead": "Najważniejsza karta bezpieczeństwa dnia wciąż nie schodzi z najwyższego poziomu.",
+      "whatHappened": "BBC i CNN podają, że po weekendowej wymianie uderzeń Stany Zjednoczone i Iran sygnalizują chwilowe wyhamowanie. W tle pozostają zarzuty o naruszenia rozejmu, planowane rozmowy i ryzyko dla żeglugi oraz rynku energii.",
+      "keyFacts": [
+        "Obie strony sygnalizują chwilowe wstrzymanie dalszej eskalacji.",
+        "Temat nadal łączy bezpieczeństwo militarne z ryzykiem dla energii i transportu.",
+        "Żaden z głównych czynników ryzyka nie został definitywnie zamknięty."
+      ],
+      "reactions": [
+        "Feed utrzymuje tę kartę wysoko, bo pojedynczy komunikat może przestawić cały światowy zestaw.",
+        "To nadal centralne spoiwo między sekcjami bezpieczeństwa i gospodarki."
+      ],
+      "whyItMatters": "Od trwałości tego wyhamowania zależą ceny energii, bezpieczeństwo morskie i ryzyko szybkiej eskalacji regionalnej.",
+      "context": "Karta dominuje od rana i mimo braku pełnego przełomu nadal pozostaje najwyższym priorytetem.",
+      "watchNext": [
+        "Czy zapowiadane rozmowy faktycznie dojdą do skutku.",
+        "Czy pojawi się nowy ruch wojskowy lub komunikat dotyczący cieśniny Ormuz."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US says it has agreed to stand down after exchange of strikes with Iran",
+          "url": "https://www.bbc.co.uk/news/articles/c872rjw17qpo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Live updates - US and Iran will stand down for now and talks on track",
+          "url": "https://edition.cnn.com/2026/06/29/world/live-news/iran-war-strikes-trump"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Iran",
+        "USA",
+        "Energia"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-2102-08-afganistan",
+      "section": "Bezpieczeństwo",
+      "title": "Pakistańskie uderzenia zabiły co najmniej 28 cywilów w Afganistanie",
+      "lead": "Wieczorny slot dostaje ostrzejszy i bardziej precyzyjny bilans niż wcześniejsze karty graniczne.",
+      "whatHappened": "BBC podało, że według ONZ pakistańskie ataki zabiły co najmniej 28 cywilów w Afganistanie. Pakistan utrzymuje, że celował w bojowników, a talibskie władze mówią o zbrodni wobec ludności cywilnej.",
+      "keyFacts": [
+        "BBC cytuje bilans co najmniej 28 cywilnych ofiar.",
+        "Pakistan utrzymuje, że celem byli bojownicy przy granicy.",
+        "Talibowie nazywają działania pakistańskie atrocity."
+      ],
+      "reactions": [
+        "Karta zyskuje na ciężarze, bo wieczorem pojawia się mocniejsze doprecyzowanie źródła bilansu.",
+        "To nadal jeden z najpoważniejszych sygnałów eskalacyjnych poza wątkiem USA-Iran."
+      ],
+      "whyItMatters": "Ryzyko dalszych starć Pakistan-Afganistan może szybko przełożyć się na szerszy kryzys graniczny i humanitarny.",
+      "context": "W runie 16:30 mowa była ogólnie o dziesiątkach ofiar. O 21:02 BBC precyzuje, że chodzi o co najmniej 28 cywilów według ONZ.",
+      "watchNext": [
+        "Czy pojawi się odpowiedź dyplomatyczna albo wojskowa po obu stronach granicy.",
+        "Czy bilans zostanie skorygowany przez ONZ lub władze lokalne."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Pakistani strikes kill at least 28 civilians in Afghanistan, UN says",
+          "url": "https://www.bbc.co.uk/news/articles/cy8wygyed0wo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Pakistan",
+        "Afganistan",
+        "ONZ"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-2102-09-ebola",
+      "section": "Alerty",
+      "title": "Kinszasa zakazuje zgromadzeń, by zatrzymać rozprzestrzenianie się Eboli",
+      "lead": "Globalny blok alertów utrzymuje mocną kartę zdrowia publicznego z politycznym cieniem.",
+      "whatHappened": "BBC podało, że Demokratyczna Republika Konga zakazała masowych zgromadzeń w stolicy, aby ograniczyć rozprzestrzenianie się Eboli. Opozycja oskarża rząd o wykorzystywanie epidemii do blokowania protestów.",
+      "keyFacts": [
+        "Zakaz obejmuje masowe zgromadzenia w Kinszasie.",
+        "Władze uzasadniają go próbą ograniczenia ogniska Eboli.",
+        "Opozycja widzi w tym także próbę zablokowania protestów."
+      ],
+      "reactions": [
+        "Karta pozostaje wysoko, bo łączy ryzyko sanitarne z napięciem politycznym.",
+        "To nadal jeden z najsilniejszych globalnych alertów poza pogodą i wojną."
+      ],
+      "whyItMatters": "Duża afrykańska stolica z restrykcjami epidemicznymi może szybko stać się szerszym tematem regionalnym i humanitarnym.",
+      "context": "To jedna z najmocniejszych nowych kart popołudnia i wieczoru; nie ma jeszcze sygnału wygaszenia problemu.",
+      "watchNext": [
+        "Czy władze podadzą nowe dane o skali ogniska i restrykcjach.",
+        "Czy dojdzie do napięć politycznych mimo zakazu zgromadzeń."
+      ],
+      "sources": [
+        {
+          "title": "BBC: DR Congo bans mass gatherings in the capital to prevent spread of Ebola",
+          "url": "https://www.bbc.co.uk/news/articles/c992k7zk981o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Ebola",
+        "DR Konga",
+        "Zdrowie publiczne"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-2102-10-putin",
+      "section": "Gospodarka",
+      "title": "Putin przyznaje, że ukraińskie uderzenia wywołały niedobory paliwa w Rosji",
+      "lead": "Wieczorny feed dostaje rzadki sygnał kosztów wojny widocznych już w rosyjskiej gospodarce.",
+      "whatHappened": "BBC podało, że Władimir Putin w rzadkim tonie przyznał, iż ukraińskie ataki tworzą problemy z paliwem w Rosji, choć twierdzi, że nie są one jeszcze krytyczne. To mocniejsza karta gospodarczo-wojenna niż wcześniejsze ogólne spekulacje o skutkach uderzeń.",
+      "keyFacts": [
+        "Rosyjski prezydent przyznał, że ukraińskie uderzenia tworzą problemy z paliwem.",
+        "Jednocześnie Kreml zaprzecza, by niedobory były już krytyczne.",
+        "Temat łączy presję wojenną z logistyką i cenami energii."
+      ],
+      "reactions": [
+        "Feed promuje tę kartę, bo to rzadki przypadek publicznego przyznania kosztu przez samą Rosję.",
+        "To użyteczny most między sekcjami gospodarki i bezpieczeństwa."
+      ],
+      "whyItMatters": "Niedobory paliwa w Rosji mogą wpływać na logistykę wojenną, rynek paliw i ocenę skuteczności ukraińskich uderzeń.",
+      "context": "W poprzednim runie wątek rosyjski był pośrednio obecny przez Białoruś i sankcje. O 21:02 pojawia się bardziej bezpośredni sygnał kosztu wewnątrz Rosji.",
+      "watchNext": [
+        "Czy Rosja ogłosi środki stabilizujące rynek paliw.",
+        "Czy Ukraina lub zachodnie źródła podadzą skalę uszkodzeń infrastruktury energetycznej."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Putin makes rare admission of fuel shortages caused by Ukrainian strikes",
+          "url": "https://www.bbc.co.uk/news/articles/clyw31zvpgmo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Rosja",
+        "Paliwa",
+        "Ukraina"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-29-2102-11-fed",
+      "section": "Świat",
+      "title": "Sąd Najwyższy blokuje próbę usunięcia Lisy Cook z Fedu",
+      "lead": "Wieczorem dochodzi ważny sygnał o granicach politycznej presji na bank centralny USA.",
+      "whatHappened": "BBC podało, że Sąd Najwyższy zablokował próbę Donalda Trumpa usunięcia gubernatorki Rezerwy Federalnej Lisy Cook. Decyzja jest odczytywana jako wzmocnienie niezależności amerykańskiego banku centralnego i cofnięcie sporu do niższych instancji.",
+      "keyFacts": [
+        "Sąd Najwyższy zablokował próbę usunięcia Lisy Cook z Fedu.",
+        "BBC wskazuje, że decyzja jest postrzegana jako wygrana niezależności banku centralnego.",
+        "Spór wraca do niższych sądów, więc nie jest jeszcze definitywnie zakończony."
+      ],
+      "reactions": [
+        "Karta wnosi do feedu ważny wątek instytucjonalny z USA, wykraczający poza samą kampanię polityczną.",
+        "To jeden z najbardziej użytecznych światowych tematów gospodarczych wieczoru."
+      ],
+      "whyItMatters": "Niezależność Fedu ma bezpośrednie znaczenie dla rynków, stóp procentowych i globalnego zaufania do amerykańskich instytucji finansowych.",
+      "context": "W runie 16:30 blok gospodarczy opierał się mocniej na AI i sankcjach. O 21:02 środek ciężkości przechodzi na Fed i instytucjonalną stabilność USA.",
+      "watchNext": [
+        "Czy niższe sądy szybko wyznaczą dalszy bieg sprawy.",
+        "Czy decyzja przełoży się na nowe komentarze polityczne i rynkowe w USA."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Supreme Court blocks Trump's attempt to fire Federal Reserve governor Lisa Cook",
+          "url": "https://www.bbc.co.uk/news/articles/cy4wwy0nkeno?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "USA",
+        "Fed",
+        "Rynki"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-2102-12-wenezuela",
+      "section": "Świat",
+      "title": "Po trzęsieniu ziemi w Wenezueli zginęło już ponad 1700 osób",
+      "lead": "Humanitarny ciężar dnia nadal rośnie mimo końcówki europejskiego wieczoru.",
+      "whatHappened": "CNN podaje, że po niszczących trzęsieniach ziemi w Wenezueli zginęło już ponad 1700 osób, a tysiące pozostają zaginione. Ratownicy nadal przeszukują gruzy w La Guairze i Caracas.",
+      "keyFacts": [
+        "CNN podnosi bilans ofiar śmiertelnych do ponad 1700 osób.",
+        "Tysiące ludzi pozostają zaginione.",
+        "Akcja ratunkowa trwa między innymi w La Guairze i Caracas."
+      ],
+      "reactions": [
+        "Karta pozostaje obowiązkowa, bo skala katastrofy wciąż rośnie.",
+        "To nadal najmocniejszy humanitarny temat światowego zestawu."
+      ],
+      "whyItMatters": "Rosnący bilans ofiar i niezamknięta akcja ratunkowa oznaczają wysokie prawdopodobieństwo dalszych korekt oraz potrzebę międzynarodowej pomocy.",
+      "context": "O 16:30 CNN mówiło o ponad 1450 ofiarach. O 21:02 bilans przekracza już 1700, więc karta pozostaje materialna także względem poprzedniego lokalnego runu.",
+      "watchNext": [
+        "Czy bilans ofiar i zaginionych zostanie ponownie skorygowany w nocy.",
+        "Czy pojawią się nowe informacje o skali pomocy i stanie infrastruktury."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Live updates - Venezuela earthquake rescues continue, mounting death toll, thousands missing",
+          "url": "https://edition.cnn.com/2026/06/29/world/live-news/venezuela-earthquake-hnk"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wenezuela",
+        "Trzęsienie ziemi",
+        "Ratownictwo"
+      ],
+      "priority": "High"
+    }
+  ]
+}

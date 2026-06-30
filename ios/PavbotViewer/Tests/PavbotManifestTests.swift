@@ -1,6 +1,7 @@
 import XCTest
 import UserNotifications
 import SwiftUI
+import UIKit
 import AVFoundation
 @testable import PavbotViewer
 
@@ -509,6 +510,88 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.savedArticles.map(\.article.id), ["swiat-1"])
     }
 
+    func testSavedResearchArticleStoreSavesTechNewsArticles() throws {
+        let suiteName = "SavedResearchArticleTechTests-\(UUID().uuidString)"
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suiteName))
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+        let article = ResearchNewsArticle(
+            id: "tech-ai-1",
+            title: "OpenAI aktualizuje narzędzia agentowe",
+            section: .ai,
+            body: "Pełny opis technologicznego tematu.",
+            summary: "Krótki opis technologicznego tematu.",
+            sources: [ResearchNewsSource(title: "OpenAI", url: "https://openai.com/news")],
+            priority: "High",
+            tags: ["AI", "OpenAI"]
+        )
+        let issue = ResearchNewsIssue(
+            topic: .techNews,
+            packageKey: "2026-06-26",
+            date: "2026-06-26",
+            time: nil,
+            status: "Material update",
+            lead: "Tech News",
+            articles: [article],
+            checkedSources: [],
+            podcastTopics: [],
+            reportArtifact: nil,
+            pdfArtifact: nil,
+            podcastBriefArtifact: nil,
+            audioArtifact: nil
+        )
+        let store = SavedResearchArticleStore(defaults: defaults)
+
+        store.save(article: article, issue: issue, savedAt: Self.date("2026-06-26T10:00:00Z"))
+
+        XCTAssertTrue(store.isSaved(article: article, issue: issue))
+        XCTAssertEqual(store.savedArticles.first?.topic, .techNews)
+        XCTAssertEqual(store.filteredArticles(topic: .techNews).map(\.article.id), ["tech-ai-1"])
+
+        store.toggle(article: article, issue: issue)
+
+        XCTAssertFalse(store.isSaved(article: article, issue: issue))
+        XCTAssertTrue(store.savedArticles.isEmpty)
+    }
+
+    func testSavedResearchArticleStoreSavesAktualneArticlesWithStableIDsAndMappedSections() throws {
+        let suiteName = "SavedResearchArticleAktualneTests-\(UUID().uuidString)"
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suiteName))
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+        let magazine = try JSONDecoder.pavbot.decode(MobileNewsMagazine.self, from: Self.mobileNewsDataFixtureData)
+        let worldArticle = try XCTUnwrap(magazine.sections.first { $0.id == "sprawy-zagraniczne" }?.articles.first)
+        let techArticle = MobileNewsArticle(
+            id: "technologia-ai",
+            section: "Technologia",
+            title: "Nowe narzędzia AI w aplikacjach",
+            lead: "Firmy pokazują praktyczne wdrożenia AI w aplikacjach mobilnych.",
+            facts: ["Dostępne są nowe funkcje asystentów."],
+            analysis: "To sygnał, że technologia przechodzi do codziennego użycia.",
+            whyItMatters: "Użytkownik szybciej oceni wpływ tej zmiany.",
+            sources: [ResearchNewsSource(title: "OpenAI", url: "https://openai.com/news")],
+            tags: ["Technologia", "AI"],
+            ttsText: "Firmy pokazują praktyczne wdrożenia AI.",
+            priority: "Medium"
+        )
+        let store = SavedResearchArticleStore(defaults: defaults)
+
+        store.save(article: worldArticle, magazine: magazine, savedAt: Self.date("2026-06-26T10:00:00Z"))
+        store.save(article: techArticle, magazine: magazine, savedAt: Self.date("2026-06-26T11:00:00Z"))
+
+        XCTAssertTrue(store.isSaved(article: worldArticle, magazine: magazine))
+        XCTAssertEqual(store.savedArticles.map(\.topic), [.aktualne, .aktualne])
+        XCTAssertEqual(store.savedArticles.map(\.id), [
+            "aktualne|2026-06-25-10:15|technologia-ai",
+            "aktualne|2026-06-25-10:15|swiat-nato"
+        ])
+        XCTAssertEqual(store.filteredArticles(topic: .aktualne, section: .swiat).map(\.article.id), ["swiat-nato"])
+        XCTAssertEqual(store.filteredArticles(topic: .aktualne, section: .technologia).map(\.article.id), ["technologia-ai"])
+
+        store.toggle(article: worldArticle, magazine: magazine)
+
+        XCTAssertFalse(store.isSaved(article: worldArticle, magazine: magazine))
+        XCTAssertEqual(store.savedArticles.map(\.article.id), ["technologia-ai"])
+    }
+
     func testDecodesResearchDataReportAndBuildsNativeIssue() throws {
         let report = try JSONDecoder.pavbot.decode(ResearchDataReport.self, from: Self.researchDataFixtureData)
         let package = TopicReportPackage(topic: .techNews, key: "2026-06-25", artifacts: [
@@ -582,6 +665,50 @@ final class PavbotManifestTests: XCTestCase {
             ["Osobny akapit wyjaśnia kontekst rządowego przeglądu cyber i dostęp dla zaufanych partnerów."]
         )
         XCTAssertEqual(presentation.deeperAnalysis, presentation.paragraphs)
+    }
+
+    func testResearchArticlePresentationUsesStructuredFullDescriptionForPolskaSwiat() throws {
+        let article = ResearchNewsArticle(
+            id: "polska-flanka",
+            title: "Wschodnia flanka: bezpieczeństwo między deklaracją a ostrzeżeniami",
+            section: .bezpieczenstwo,
+            body: [
+                "KPRM przypomina Deklarację Gdańską i wskazuje Rosję jako długoterminowe zagrożenie.",
+                "Wątek wschodniej flanki został połączony z ostrzeżeniami o ryzyku prowokacji.",
+                "Deklaracja Gdańska daje oficjalną ramę polityczną dla modernizacji infrastruktury i projektów obronnych.",
+                "Ostrzeżenia medialne wymagają ostrożnego języka, ale są materialne jako kontekst ryzyka."
+            ].joined(separator: "\n\n"),
+            summary: "KPRM przypomina Deklarację Gdańską i wskazuje Rosję jako długoterminowe zagrożenie. The Guardian opisuje ostrzeżenia o możliwych prowokacjach.",
+            whatHappened: "Wątek wschodniej flanki został połączony z ostrzeżeniami o ryzyku prowokacji.",
+            whyItMatters: "To ważne dla oceny bezpieczeństwa Polski i państw bałtyckich.",
+            deeperAnalysis: [
+                "Wątek wschodniej flanki został połączony z ostrzeżeniami o ryzyku prowokacji.",
+                "Deklaracja Gdańska daje oficjalną ramę polityczną dla modernizacji infrastruktury i projektów obronnych.",
+                "Ostrzeżenia medialne wymagają ostrożnego języka, ale są materialne jako kontekst ryzyka."
+            ],
+            contextPoints: [
+                "Co się stało: wątek wschodniej flanki wrócił jako główny temat strategiczny.",
+                "Dlaczego ważne: temat dotyczy bezpieczeństwa Polski i NATO.",
+                "Na co patrzeć dalej: na reakcje MON, NATO i państw bałtyckich."
+            ],
+            sources: [ResearchNewsSource(title: "KPRM", url: "https://www.gov.pl/web/premier")],
+            priority: "High",
+            tags: ["Bezpieczeństwo", "NATO"]
+        )
+
+        let presentation = ResearchArticlePresentation(article: article, topic: .polskaSwiat)
+
+        XCTAssertEqual(
+            presentation.paragraphs,
+            [
+                "Deklaracja Gdańska daje oficjalną ramę polityczną dla modernizacji infrastruktury i projektów obronnych.",
+                "Ostrzeżenia medialne wymagają ostrożnego języka, ale są materialne jako kontekst ryzyka."
+            ]
+        )
+        XCTAssertEqual(presentation.deeperAnalysis, presentation.paragraphs)
+        XCTAssertFalse(presentation.paragraphs.contains(presentation.standfirst))
+        XCTAssertFalse(presentation.paragraphs.contains(article.whatHappened ?? ""))
+        XCTAssertFalse(presentation.paragraphs.contains(article.contextPoints?.first ?? ""))
     }
 
     func testResearchIssuePresentationBuildsPremiumPolskaSwiatBrief() throws {
@@ -731,7 +858,10 @@ final class PavbotManifestTests: XCTestCase {
 
         XCTAssertEqual(failingStore.state, .loaded)
         XCTAssertEqual(failingStore.issue?.date, "2026-06-25")
-        XCTAssertEqual(failingStore.cacheNotice, "Pokazuję ostatnie zapisane wydanie Research. Odświeżenie nie powiodło się.")
+        XCTAssertEqual(
+            failingStore.cacheNotice,
+            "Nie pobrano świeżych danych. Pokazuję zapisane dane: wydanie Research."
+        )
     }
 
     @MainActor
@@ -770,6 +900,66 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.state, .loaded)
         XCTAssertEqual(store.issue?.articles.first?.whatHappened, "OpenAI i Cloudflare pokazują nowe narzędzia agentowe.")
         XCTAssertEqual(store.selectedPackage?.researchDataArtifact?.id, "tech-data")
+    }
+
+    @MainActor
+    func testResearchNewsStoreChoosesCanonicalResearchDataWhenDuplicateArtifactExists() async throws {
+        let duplicateArtifact = Self.artifact(
+            id: "tech-data-duplicate",
+            type: .researchData,
+            topic: "tech-news",
+            path: "research/tech-news/data/2026-06-25-research 2.json",
+            date: "2026-06-25"
+        )
+        let canonicalArtifact = Self.artifact(
+            id: "tech-data-canonical",
+            type: .researchData,
+            topic: "tech-news",
+            path: "research/tech-news/data/2026-06-25-research.json",
+            date: "2026-06-25"
+        )
+        let markdownArtifact = Self.artifact(
+            id: "tech-run",
+            type: .run,
+            topic: "tech-news",
+            path: "research/tech-news/runs/2026-06-25.md",
+            date: "2026-06-25"
+        )
+        let package = TopicReportPackage(topic: .techNews, key: "2026-06-25", artifacts: [
+            duplicateArtifact,
+            canonicalArtifact,
+            markdownArtifact
+        ])
+        let duplicatePayload = String(decoding: Self.researchDataFixtureData, as: UTF8.self)
+            .replacingOccurrences(
+                of: "OpenAI i Cloudflare pokazują nowe narzędzia agentowe.",
+                with: "Duplicate researchData został wybrany."
+            )
+            .data(using: .utf8)!
+        let store = ResearchNewsStore(
+            client: ResearchNewsClient(
+                fetchData: { url in
+                    if url.absoluteString.contains("research%202.json") || url.absoluteString.contains("research 2.json") {
+                        return duplicatePayload
+                    }
+                    return Self.researchDataFixtureData
+                },
+                fetchText: { _ in XCTFail("Markdown fallback should not be fetched when canonical researchData exists"); return Self.techResearchMarkdownFixture }
+            ),
+            cache: ResearchNewsCache(defaults: UserDefaults(suiteName: UUID().uuidString)!)
+        )
+
+        await store.load(
+            packages: [package],
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            topic: .techNews,
+            selectedDay: nil,
+            selectedArtifactIDs: []
+        )
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.selectedPackage?.researchDataArtifact?.id, "tech-data-canonical")
+        XCTAssertEqual(store.issue?.articles.first?.whatHappened, "OpenAI i Cloudflare pokazują nowe narzędzia agentowe.")
     }
 
     @MainActor
@@ -932,6 +1122,41 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.magazine?.headline, "Wydanie dnia")
         XCTAssertEqual(store.selectedPackage?.mobileNewsDataArtifact?.id, "mobile-data")
         XCTAssertEqual(store.magazine?.pdfArtifact?.id, "mobile-pdf")
+    }
+
+    @MainActor
+    func testMobileNewsStoreKeepsCachedMagazineAndShowsStandardNoticeWhenRefreshFails() async throws {
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        let cache = MobileNewsCache(defaults: defaults)
+        let cachedMagazine = try JSONDecoder.pavbot.decode(MobileNewsMagazine.self, from: Self.mobileNewsDataFixtureData)
+        cache.save(cachedMagazine)
+        let dataArtifact = Self.artifact(
+            id: "mobile-data",
+            type: .mobileNewsData,
+            topic: "aktualne-wydarzenia-mobile",
+            path: "research/aktualne-wydarzenia-mobile/data/2026-06-25-1015-mobile-news.json",
+            date: "2026-06-25",
+            time: "10:15"
+        )
+        let package = TopicReportPackage(topic: .aktualne, key: "2026-06-25-1015", artifacts: [dataArtifact])
+        let store = MobileNewsStore(
+            client: MobileNewsClient(fetchData: { _ in throw URLError(.notConnectedToInternet) }),
+            cache: cache
+        )
+
+        await store.load(
+            packages: [package],
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            selectedDay: nil,
+            selectedArtifactIDs: []
+        )
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.magazine?.headline, "Wydanie dnia")
+        XCTAssertEqual(
+            store.cacheNotice,
+            "Nie pobrano świeżych danych. Pokazuję zapisane dane: magazyn Aktualne."
+        )
     }
 
     @MainActor
@@ -1324,6 +1549,22 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(report.recommendedActions.count, 1)
     }
 
+    func testJobsMarkdownParserBuildsNativeReportFromTopRolesFlatBullets() throws {
+        let report = try JobsMarkdownParser().parse(Self.jobsFlatBulletMarkdownFixture)
+
+        XCTAssertEqual(report.status, "Material update")
+        XCTAssertEqual(report.runDate, "2026-06-29")
+        XCTAssertEqual(report.runTime, "01:41")
+        XCTAssertEqual(report.opportunities.count, 2)
+        XCTAssertEqual(report.opportunities[0].company, "Primotly")
+        XCTAssertEqual(report.opportunities[0].title, "Senior AI Engineer (Python, GenAI, GCP)")
+        XCTAssertEqual(report.opportunities[0].location, "Wrocław +4, remote")
+        XCTAssertEqual(report.opportunities[0].workMode, "Remote")
+        XCTAssertEqual(report.opportunities[0].compensation, "29 000-36 500 PLN net/mies. B2B")
+        XCTAssertEqual(report.opportunities[0].sourceURLs, ["https://example.com/primotly"])
+        XCTAssertEqual(report.opportunities[1].company, "Remodevs")
+    }
+
     @MainActor
     func testJobsStorePrefersJobsDataArtifactOverMarkdownFallback() async throws {
         let dataArtifact = PavbotArtifact(
@@ -1706,6 +1947,8 @@ final class PavbotManifestTests: XCTestCase {
     func testResearchAndPodcastKindsExposePdfOutputs() throws {
         XCTAssertEqual(AutomationKind.research.preferredArtifactTypes, [.researchData, .run, .pdf])
         XCTAssertEqual(AutomationKind.podcast.preferredArtifactTypes, [.podcastAudio, .podcastAudioVariant, .podcastScript, .podcastBriefPdf])
+        XCTAssertTrue(AutomationKind.automation.preferredArtifactTypes.contains(.redditRadarData))
+        XCTAssertTrue(AutomationKind.automation.preferredArtifactTypes.contains(.redditRadarRawData))
     }
 
     func testAutomationClientBriefProvidesMarketingCopyForEveryAutomationKind() {
@@ -1738,6 +1981,37 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(router.artifactPath.isEmpty)
         XCTAssertNil(router.pendingArtifactID)
         XCTAssertNil(router.artifactRoute)
+    }
+
+    @MainActor
+    func testRouterSelectsArtifactAutomationWithoutSwitchingTabsForEmbeddedViews() {
+        let router = AppRouter()
+        router.selectedTab = .settings
+
+        router.selectArtifactAutomation(
+            id: "pavbot-llm-ai-jobs-wroclaw-research",
+            day: "2026-06-29",
+            switchToArtifactsTab: false
+        )
+
+        XCTAssertEqual(router.selectedTab, .settings)
+        XCTAssertEqual(router.selectedArtifactAutomationID, "pavbot-llm-ai-jobs-wroclaw-research")
+        XCTAssertEqual(router.selectedArtifactDay, "2026-06-29")
+        XCTAssertTrue(router.artifactPath.isEmpty)
+        XCTAssertNil(router.pendingArtifactID)
+        XCTAssertNil(router.artifactRoute)
+    }
+
+    @MainActor
+    func testRouterSelectsArtifactAutomationSwitchesToArtifactsTabByDefault() {
+        let router = AppRouter()
+        router.selectedTab = .settings
+
+        router.selectArtifactAutomation(id: "pavbot-tech-research-19-33", day: "2026-06-28")
+
+        XCTAssertEqual(router.selectedTab, .artifacts)
+        XCTAssertEqual(router.selectedArtifactAutomationID, "pavbot-tech-research-19-33")
+        XCTAssertEqual(router.selectedArtifactDay, "2026-06-28")
     }
 
     @MainActor
@@ -1898,15 +2172,36 @@ final class PavbotManifestTests: XCTestCase {
     func testUserFacingErrorsExposePolishCopyAndActions() {
         let manifestError = PavbotUserFacingError.manifest("Set your public GitHub raw manifest URL in Settings.")
         let networkError = PavbotUserFacingError.network(URLError(.notConnectedToInternet), context: .weather)
+        let notifierError = PavbotUserFacingError.network(URLError(.notConnectedToInternet), context: .notifier)
         let audioError = PavbotUserFacingError.audio("The operation could not be completed.")
 
         XCTAssertEqual(manifestError.title, "Manifest wymaga konfiguracji")
         XCTAssertEqual(manifestError.actionTitle, "Otwórz ustawienia")
+        XCTAssertEqual(manifestError.actionSystemImage, "gearshape")
         XCTAssertTrue(manifestError.message.contains("GitHub raw manifest"))
         XCTAssertEqual(networkError.title, "Nie udało się pobrać pogody")
         XCTAssertEqual(networkError.actionTitle, "Spróbuj ponownie")
+        XCTAssertEqual(networkError.actionSystemImage, "arrow.clockwise")
+        XCTAssertEqual(notifierError.actionTitle, "Sprawdź status")
+        XCTAssertEqual(notifierError.actionSystemImage, "antenna.radiowaves.left.and.right")
         XCTAssertEqual(audioError.title, "Nie udało się odtworzyć audio")
         XCTAssertEqual(audioError.actionTitle, "Otwórz plik źródłowy")
+        XCTAssertEqual(audioError.actionSystemImage, "arrow.up.right.square")
+    }
+
+    func testCacheNoticeCopyUsesStandardRefreshFailureText() {
+        XCTAssertEqual(
+            PavbotCacheNoticeCopy.refreshFailed(context: "ostatni raport pogodowy"),
+            "Nie pobrano świeżych danych. Pokazuję zapisane dane: ostatni raport pogodowy."
+        )
+        XCTAssertEqual(
+            PavbotCacheNoticeCopy.refreshFailed(context: "dane Jobs (2026-06-25 01:41, Dane strukturalne)"),
+            "Nie pobrano świeżych danych. Pokazuję zapisane dane: dane Jobs (2026-06-25 01:41, Dane strukturalne)."
+        )
+        XCTAssertEqual(
+            PavbotCacheNoticeCopy.refreshing(context: "wydanie Research"),
+            "Odświeżam dane: wydanie Research..."
+        )
     }
 
     func testReportPackageCopyUsesPolishUserFacingLabels() {
@@ -2321,6 +2616,64 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(source.contains("ręczna edycja"))
         XCTAssertFalse(source.contains("Przywróć ustawienia domyślne"))
         XCTAssertFalse(source.contains("Zapisz i odśwież"))
+        XCTAssertFalse(source.contains("TextField(\"Manifest URL\""))
+        XCTAssertFalse(source.contains("TextField(\"Notification server URL\""))
+        XCTAssertFalse(source.contains("Załadowane dane"))
+        XCTAssertFalse(source.contains("https://raw.githubusercontent.com"))
+        XCTAssertFalse(source.contains("https://notify.paweltanski.com"))
+    }
+
+    func testDiagnosticsDoesNotExposeManifestPreviewAsUserContent() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let diagnosticsURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/DiagnosticsView.swift")
+        let source = try String(contentsOf: diagnosticsURL)
+
+        XCTAssertFalse(source.contains("DiagnosticRow(item: diagnostics.urlStatus)"))
+        XCTAssertFalse(source.contains("DiagnosticRow(item: diagnostics.rawBaseURLStatus)"))
+        XCTAssertFalse(source.contains("Podgląd manifestu"))
+        XCTAssertFalse(source.contains("URL manifestu"))
+        XCTAssertTrue(source.contains("title: \"Status danych\""))
+    }
+
+    func testSettingsAllFilesKeepsArtifactTimelineEmbedded() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let settingsURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/SettingsView.swift")
+        let source = try String(contentsOf: settingsURL)
+
+        XCTAssertTrue(source.contains("ArtifactTimelineView(navigationMode: .embeddedInSettings)"))
+    }
+
+    func testSettingsAutomationEntrypointsKeepFilesEmbedded() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let settingsSource = try String(contentsOf: sourcesRoot.appendingPathComponent("SettingsView.swift"))
+        let automationSource = try String(contentsOf: sourcesRoot.appendingPathComponent("AutomationListView.swift"))
+        let artifactTimelineSource = try String(contentsOf: sourcesRoot.appendingPathComponent("ArtifactTimelineView.swift"))
+
+        XCTAssertTrue(settingsSource.contains("AutomationListView(navigationMode: .embeddedInSettings)"))
+        XCTAssertTrue(automationSource.contains("let navigationMode: AutomationArtifactNavigationMode"))
+        XCTAssertTrue(automationSource.contains("ArtifactTimelineView(navigationMode: .embeddedInSettings)"))
+        XCTAssertTrue(automationSource.contains("switchToArtifactsTab: navigationMode.switchesToArtifactsTab"))
+
+        let embeddedArtifactsSource = try XCTUnwrap(
+            automationSource.components(separatedBy: "private func openEmbeddedArtifacts").dropFirst().first?
+                .components(separatedBy: "private func openGlobalArtifacts").first
+        )
+        XCTAssertTrue(embeddedArtifactsSource.contains("router.selectedTab = .settings"))
+        XCTAssertTrue(embeddedArtifactsSource.contains("isEmbeddedArtifactTimelinePresented = true"))
+        XCTAssertFalse(embeddedArtifactsSource.contains("openReportsForTopic"))
+
+        XCTAssertTrue(artifactTimelineSource.contains("preserveEmbeddedSettingsTabIfNeeded()"))
+        XCTAssertTrue(artifactTimelineSource.contains("router.selectedTab = .settings"))
     }
 
     func testDecodesAndCachesDailyWeatherReport() throws {
@@ -2337,6 +2690,93 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(cached.nameDaysLabel, "Łucja, Wilhelm")
         XCTAssertEqual(cached.temperature.currentLabel, "21°C")
         XCTAssertEqual(cached.precipitation.probabilityLabel, "20%")
+    }
+
+    func testDailyWisdomCatalogContainsCalendarQualityEntries() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let catalogURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Resources/daily-wisdom.json")
+        let data = try Data(contentsOf: catalogURL)
+        let entries = try JSONDecoder.pavbot.decode([DailyWisdomEntry].self, from: data)
+
+        XCTAssertGreaterThanOrEqual(entries.count, 600)
+        XCTAssertTrue(entries.contains { $0.attribution == "Przysłowie polskie" })
+
+        for entry in entries {
+            XCTAssertFalse(entry.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+            XCTAssertFalse(entry.attribution.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+            XCTAssertFalse(entry.context.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+            XCTAssertFalse(entry.category.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+            XCTAssertFalse(entry.attribution.localizedCaseInsensitiveContains("TBD"))
+            XCTAssertFalse(entry.attribution.localizedCaseInsensitiveContains("nieznany autor"))
+        }
+    }
+
+    func testDailyWisdomProviderChoosesStableEntryForCalendarDay() throws {
+        let entries = [
+            DailyWisdomEntry(text: "Pierwsza myśl dnia.", attribution: "Sentencja kalendarzowa", context: "Na spokojny start.", category: "spokój"),
+            DailyWisdomEntry(text: "Druga myśl dnia.", attribution: "Sentencja kalendarzowa", context: "Na uważny start.", category: "uważność"),
+            DailyWisdomEntry(text: "Trzecia myśl dnia.", attribution: "Sentencja kalendarzowa", context: "Na mocny start.", category: "działanie")
+        ]
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(secondsFromGMT: 0)!
+        let day = try XCTUnwrap(DateComponents(calendar: calendar, year: 2026, month: 6, day: 30).date)
+        let nextDay = try XCTUnwrap(DateComponents(calendar: calendar, year: 2026, month: 7, day: 1).date)
+
+        let first = DailyWisdomProvider.entry(for: day, entries: entries, calendar: calendar)
+        let second = DailyWisdomProvider.entry(for: day, entries: entries, calendar: calendar)
+        let third = DailyWisdomProvider.entry(for: nextDay, entries: entries, calendar: calendar)
+
+        XCTAssertEqual(first, second)
+        XCTAssertNotEqual(first, third)
+    }
+
+    func testTodayPremiumTopUsesWisdomBannerAndSingleLocationCTA() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources")
+        let weatherSource = try String(contentsOf: sourcesRoot.appendingPathComponent("Views/WeatherBriefView.swift"))
+        let projectSource = try String(contentsOf: testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("PavbotViewer.xcodeproj/project.pbxproj"))
+
+        XCTAssertTrue(weatherSource.contains("DailyWisdomBanner"))
+        XCTAssertTrue(weatherSource.contains("DailyWisdomBanner(entry: dailyWisdomEntry, report: report)"))
+        XCTAssertTrue(weatherSource.contains("DailyWisdomBanner(entry: DailyWisdomProvider.entry(for: reportDate(report)), report: report)"))
+        XCTAssertTrue(weatherSource.contains("DailyWisdomProvider.entry(for:"))
+        XCTAssertTrue(weatherSource.contains("private func reportDate(_ report: DailyWeatherReport) -> Date"))
+        XCTAssertTrue(weatherSource.contains("private var dynamicDayTitle"))
+        XCTAssertTrue(weatherSource.contains("private var calendarDayNumber"))
+        XCTAssertTrue(weatherSource.contains("private var calendarMonthLabel"))
+        XCTAssertTrue(weatherSource.contains("Kartka z kalendarza"))
+        XCTAssertTrue(weatherSource.contains("Dostosuj lokalizację"))
+        XCTAssertFalse(weatherSource.contains("Dzień pod kontrolą"))
+        XCTAssertFalse(weatherSource.contains("WeatherLocationNoticeBanner(text: locationNotice"))
+        XCTAssertTrue(projectSource.contains("daily-wisdom.json in Resources"))
+
+        let cockpitSource = try XCTUnwrap(
+            weatherSource.components(separatedBy: "private struct PavbotPhoneDailyCockpit").dropFirst().first?
+                .components(separatedBy: "private struct DailyWisdomBanner").first
+        )
+        XCTAssertLessThan(
+            try XCTUnwrap(cockpitSource.range(of: "weatherDetailsGrid")?.lowerBound),
+            try XCTUnwrap(cockpitSource.range(of: "TodayHumorFeaturedPreview")?.lowerBound)
+        )
+        XCTAssertLessThan(
+            try XCTUnwrap(cockpitSource.range(of: "TodayHumorFeaturedPreview")?.lowerBound),
+            try XCTUnwrap(cockpitSource.range(of: "dailyActionSection")?.lowerBound)
+        )
+
+        let wideSource = try XCTUnwrap(
+            weatherSource.components(separatedBy: "private func wideReportView").dropFirst().first?
+                .components(separatedBy: "private struct PavbotPhoneCockpitHeader").first
+        )
+        XCTAssertTrue(wideSource.contains("DailyWisdomBanner(entry: DailyWisdomProvider.entry(for: reportDate(report)), report: report)"))
     }
 
     func testDecodesHourlyWeatherTimelineForToday() throws {
@@ -2366,6 +2806,195 @@ final class PavbotManifestTests: XCTestCase {
 
         XCTAssertTrue(report.temperatureTimeline.isEmpty)
         XCTAssertEqual(report.timelineTemperaturePoints(startingAt: now).map(\.time), ["2026-06-25T06:00", "2026-06-25T07:00"])
+    }
+
+    func testDecodesHourlyPrecipitationTimelineForToday() throws {
+        let report = try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: Self.dailyWeatherFixtureData)
+        let now = try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-06-25T04:45:00Z"))
+
+        XCTAssertEqual(report.hourlyPrecipitation.count, 3)
+        XCTAssertEqual(report.hourlyPrecipitation[0].time, "2026-06-25T05:00")
+        XCTAssertEqual(report.hourlyPrecipitation[0].probability, 5)
+        XCTAssertEqual(report.hourlyPrecipitation[0].kind, .possible)
+        XCTAssertEqual(report.hourlyPrecipitation[1].hourLabel, "06:00")
+        XCTAssertEqual(report.hourlyPrecipitation[1].amountLabel, "0.2 mm")
+        XCTAssertEqual(report.hourlyPrecipitation[2].kind, .rain)
+        XCTAssertEqual(report.precipitationTimeline.map(\.time), ["2026-06-25T06:00", "2026-06-25T07:00"])
+        XCTAssertEqual(report.timelinePrecipitationPoints(startingAt: now).map(\.time), ["2026-06-25T06:00", "2026-06-25T07:00"])
+    }
+
+    func testPrecipitationTimelineFallsBackToHourlyPrecipitationFromCurrentHour() throws {
+        var json = try XCTUnwrap(JSONSerialization.jsonObject(with: Self.dailyWeatherFixtureData) as? [String: Any])
+        json.removeValue(forKey: "precipitationTimeline")
+        let data = try JSONSerialization.data(withJSONObject: json)
+        let report = try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: data)
+        let now = try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-06-25T04:45:00Z"))
+
+        XCTAssertTrue(report.precipitationTimeline.isEmpty)
+        XCTAssertEqual(report.timelinePrecipitationPoints(startingAt: now).map(\.time), ["2026-06-25T06:00", "2026-06-25T07:00"])
+    }
+
+    func testDailyWeatherReportDecodesOlderPayloadWithoutHourlyPrecipitation() throws {
+        var json = try XCTUnwrap(JSONSerialization.jsonObject(with: Self.dailyWeatherFixtureData) as? [String: Any])
+        json.removeValue(forKey: "hourlyPrecipitation")
+        json.removeValue(forKey: "precipitationTimeline")
+        let data = try JSONSerialization.data(withJSONObject: json)
+        let report = try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: data)
+        let presentation = WeatherPrecipitationTilePresentation(report: report)
+
+        XCTAssertTrue(report.hourlyPrecipitation.isEmpty)
+        XCTAssertTrue(report.precipitationTimeline.isEmpty)
+        XCTAssertEqual(
+            presentation.advice,
+            "Dzisiaj ryzyko opadów wynosi 20%, ale brak godzinowego rozkładu dla tej lokalizacji."
+        )
+        XCTAssertTrue(presentation.chartPoints.isEmpty)
+    }
+
+    func testWeatherPrecipitationTilePresentationBuildsPracticalRangeAdvice() throws {
+        let report = try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: Self.dailyWeatherFixtureData)
+        let presentation = WeatherPrecipitationTilePresentation(report: report)
+
+        XCTAssertEqual(presentation.chartPoints.map(\.hourLabel), ["06:00", "07:00"])
+        XCTAssertEqual(
+            presentation.advice,
+            "Opadów deszczu spodziewaj się około 06:00-07:00, więc weź parasol lub lekką kurtkę przeciwdeszczową."
+        )
+    }
+
+    func testWeatherPrecipitationTilePresentationPrioritizesMeasurableRainWindows() throws {
+        let report = try Self.weatherReportWithPrecipitationTimeline([
+            [
+                "time": "2026-06-25T00:00",
+                "probability": 30,
+                "amount": 0,
+                "rain": 0,
+                "showers": 0,
+                "snowfall": 0,
+                "kind": "possible",
+                "unit": "mm"
+            ],
+            [
+                "time": "2026-06-25T01:00",
+                "probability": 63,
+                "amount": 0.1,
+                "rain": 0,
+                "showers": 0.1,
+                "snowfall": 0,
+                "kind": "rain",
+                "unit": "mm"
+            ],
+            [
+                "time": "2026-06-25T02:00",
+                "probability": 93,
+                "amount": 0,
+                "rain": 0,
+                "showers": 0,
+                "snowfall": 0,
+                "kind": "possible",
+                "unit": "mm"
+            ],
+            [
+                "time": "2026-06-25T04:00",
+                "probability": 98,
+                "amount": 0.1,
+                "rain": 0,
+                "showers": 0.1,
+                "snowfall": 0,
+                "kind": "rain",
+                "unit": "mm"
+            ],
+            [
+                "time": "2026-06-25T22:00",
+                "probability": 18,
+                "amount": 0.1,
+                "rain": 0,
+                "showers": 0.1,
+                "snowfall": 0,
+                "kind": "rain",
+                "unit": "mm"
+            ],
+            [
+                "time": "2026-06-25T23:00",
+                "probability": 33,
+                "amount": 0.9,
+                "rain": 0.6,
+                "showers": 0.4,
+                "snowfall": 0,
+                "kind": "rain",
+                "unit": "mm"
+            ]
+        ])
+        let presentation = WeatherPrecipitationTilePresentation(report: report)
+
+        XCTAssertEqual(presentation.chartPoints.map(\.hourLabel), ["00:00", "01:00", "02:00", "04:00", "22:00", "23:00"])
+        XCTAssertEqual(
+            presentation.advice,
+            "Opadów deszczu spodziewaj się około 01:00, 04:00 i 22:00-23:00, więc weź parasol lub lekką kurtkę przeciwdeszczową."
+        )
+    }
+
+    func testWeatherPrecipitationTilePresentationHandlesNoRainSingleHourAndKinds() throws {
+        let noRainReport = try Self.weatherReportWithPrecipitationTimeline([
+            [
+                "time": "2026-06-25T06:00",
+                "probability": 5,
+                "amount": 0,
+                "rain": 0,
+                "showers": 0,
+                "snowfall": 0,
+                "kind": "possible",
+                "unit": "mm"
+            ]
+        ])
+        let singleHourReport = try Self.weatherReportWithPrecipitationTimeline([
+            [
+                "time": "2026-06-25T16:00",
+                "probability": 45,
+                "amount": 0,
+                "rain": 0,
+                "showers": 0,
+                "snowfall": 0,
+                "kind": "possible",
+                "unit": "mm"
+            ]
+        ])
+        let snowReport = try Self.weatherReportWithPrecipitationTimeline([
+            [
+                "time": "2026-06-25T18:00",
+                "probability": 70,
+                "amount": 0.8,
+                "rain": 0,
+                "showers": 0,
+                "snowfall": 0.8,
+                "kind": "snow",
+                "unit": "mm"
+            ]
+        ])
+        let mixedReport = try Self.weatherReportWithPrecipitationTimeline([
+            [
+                "time": "2026-06-25T19:00",
+                "probability": 75,
+                "amount": 1.2,
+                "rain": 0.6,
+                "showers": 0,
+                "snowfall": 0.6,
+                "kind": "mixed",
+                "unit": "mm"
+            ]
+        ])
+
+        XCTAssertEqual(
+            WeatherPrecipitationTilePresentation(report: noRainReport).advice,
+            "Do końca dnia nie widać istotnych opadów dla Wrocław; parasol raczej nie będzie potrzebny."
+        )
+        XCTAssertTrue(WeatherPrecipitationTilePresentation(report: noRainReport).chartPoints.isEmpty)
+        XCTAssertEqual(
+            WeatherPrecipitationTilePresentation(report: singleHourReport).advice,
+            "Ryzyko opadów widać około 16:00, więc miej pod ręką parasol, jeśli wychodzisz na dłużej."
+        )
+        XCTAssertTrue(WeatherPrecipitationTilePresentation(report: snowReport).advice.contains("śniegu"))
+        XCTAssertTrue(WeatherPrecipitationTilePresentation(report: mixedReport).advice.contains("deszczu ze śniegiem"))
     }
 
     func testWeatherNarrativeRecommendationFallsBackToContinuousRainWindow() throws {
@@ -2503,9 +3132,224 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(cached.items[0].categoryLabel, "dev")
         XCTAssertEqual(cached.items[0].postText, "Autor żartuje, że deploy przeszedł tak gładko, że zespół szuka ukrytej awarii.")
         XCTAssertEqual(cached.items[0].whyFunny, "Zabawne, bo odwraca typowy stres po deployu: sukces wygląda podejrzanie.")
-        XCTAssertEqual(cached.items[0].commentHighlights?.count, 1)
+        XCTAssertEqual(cached.items[0].commentHighlights?.count, 3)
         XCTAssertEqual(cached.items[0].commentHighlights?.first?.summary, "Najbardziej realistyczne jest czekanie na awarię po zielonym CI.")
+        XCTAssertEqual(cached.items[0].commentHighlights?.first?.originalBody, "Wait until the quiet deploy starts making noise.")
+        XCTAssertEqual(cached.items[0].commentHighlights?[1].summary, "Drugi komentarz dotyczy nerwowego odświeżania dashboardów.")
+        XCTAssertEqual(cached.items[0].commentHighlights?[2].explanation, "Komentarz jest ciekawy, bo pokazuje zespołowy rytuał szukania problemu po zbyt łatwym sukcesie.")
+        XCTAssertEqual(cached.commentHighlightCount, 3)
+        XCTAssertEqual(cached.originalCommentBodyCount, 1)
+        XCTAssertTrue(cached.hasCommentHighlightsWithoutOriginalBodies)
         XCTAssertFalse(cached.nextRefreshLabel.isEmpty)
+    }
+
+    func testTodayHumorDigestDecodesCurrentRedditRadarAnalysisPayload() throws {
+        let digest = try JSONDecoder.pavbot.decode(TodayHumorDigest.self, from: Self.currentRedditRadarHumorFixtureData)
+        let item = try XCTUnwrap(digest.items.first)
+        let highlights = try XCTUnwrap(item.commentHighlights)
+
+        XCTAssertEqual(digest.source, "Codex Safari Reddit radar")
+        XCTAssertEqual(digest.refreshIntervalHours, 2)
+        XCTAssertEqual(item.categoryLabel, "mildlyinfuriating")
+        XCTAssertTrue(item.postText?.hasPrefix("Look at this beautiful boy.") == true)
+        XCTAssertTrue(item.whyFunny?.hasPrefix("Humor działa") == true)
+        XCTAssertEqual(highlights.count, 3)
+        XCTAssertEqual(highlights[0].id, "comment-1")
+        XCTAssertEqual(highlights[0].summary, "Komentarz twierdzi, że problemem jest znajomy, nie pies.")
+        XCTAssertEqual(highlights[0].originalBody, "The dog looks concerned about your choice of friends.")
+        XCTAssertEqual(highlights[1].explanation, "To dobra puenta, bo robi z prywatnego konfliktu mały społeczny osąd.")
+        XCTAssertEqual(highlights[2].score, 13)
+        XCTAssertEqual(digest.commentHighlightCount, 3)
+        XCTAssertEqual(digest.originalCommentBodyCount, 3)
+        XCTAssertFalse(digest.hasCommentHighlightsWithoutOriginalBodies)
+    }
+
+    @MainActor
+    func testTodayHumorStoreKeepsCachedDigestAndShowsStandardNoticeWhenRefreshFails() async throws {
+        let digest = try JSONDecoder.pavbot.decode(TodayHumorDigest.self, from: Self.todayHumorFixtureData)
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        let cache = TodayHumorCache(defaults: defaults)
+        cache.save(digest)
+        let store = TodayHumorStore(
+            client: FailingTodayHumorClient(error: URLError(.notConnectedToInternet)),
+            cache: cache,
+            serverURLProvider: { URL(string: "https://notify.example.com") }
+        )
+
+        await store.load()
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.digest?.id, "humor-2026-06-25-21")
+        XCTAssertEqual(
+            store.cacheNotice,
+            "Nie pobrano świeżych danych. Pokazuję zapisane dane: radar memów."
+        )
+    }
+
+    func testTodayHumorArtworkUsesFitModeInsteadOfCroppingImages() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/WeatherBriefView.swift")
+        let source = try String(contentsOf: sourceURL)
+        let artworkSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct TodayHumorArtwork").dropFirst().first?
+                .components(separatedBy: "private struct TodayHumorSummaryText").first
+        )
+
+        XCTAssertTrue(artworkSource.contains(".scaledToFit()"))
+        XCTAssertFalse(artworkSource.contains(".scaledToFill()"))
+    }
+
+    func testTodayHumorPanelShowsAllRadarItemsWithHorizontalImageBrowsing() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/WeatherBriefView.swift")
+        let source = try String(contentsOf: sourceURL)
+        let panelSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct TodayHumorPanel").dropFirst().first?
+                .components(separatedBy: "private struct TodayHumorCard").first
+        )
+        let featuredSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct TodayHumorFeaturedPreview").dropFirst().first?
+                .components(separatedBy: "private struct WeatherRangeTimelineTile").first
+        )
+
+        XCTAssertTrue(panelSource.contains("ForEach(digest.items)"))
+        XCTAssertFalse(panelSource.contains("digest.items.prefix("))
+        XCTAssertTrue(featuredSource.contains("private struct TodayHumorSideScrollList"))
+        XCTAssertTrue(featuredSource.contains("ScrollView(.horizontal, showsIndicators: false)"))
+        XCTAssertTrue(featuredSource.contains("TodayHumorArtwork(imageLink: item.imageLink"))
+        XCTAssertTrue(featuredSource.contains("Text(item.caption)"))
+        XCTAssertFalse(featuredSource.contains("digest.items.dropFirst().prefix("))
+    }
+
+    func testTodayHumorDetailImageUsesRootPreviewInsteadOfNestedModal() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/WeatherBriefView.swift")
+        let source = try String(contentsOf: sourceURL)
+        let contentSource = try String(contentsOf: sourceURL.deletingLastPathComponent().appendingPathComponent("ContentView.swift"))
+        let appSource = try String(contentsOf: sourceURL.deletingLastPathComponent().deletingLastPathComponent().appendingPathComponent("PavbotViewerApp.swift"))
+        let detailSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct TodayHumorDetailSheet").dropFirst().first?
+                .components(separatedBy: "private struct TodayHumorSavedView").first
+        )
+
+        XCTAssertTrue(appSource.contains("@State private var imagePreview = PavbotImagePreviewStore()"))
+        XCTAssertTrue(contentSource.contains("@Environment(PavbotImagePreviewStore.self) private var imagePreviewStore"))
+        XCTAssertTrue(contentSource.contains("PavbotImagePreviewHost(imagePreviewStore: imagePreviewStore)"))
+        XCTAssertTrue(source.contains("struct PavbotImagePreviewRequest: Identifiable, Equatable"))
+        XCTAssertTrue(source.contains("@Observable"))
+        XCTAssertTrue(source.contains("final class PavbotImagePreviewStore"))
+        XCTAssertTrue(source.contains("struct PavbotImagePreviewHost: View"))
+        XCTAssertTrue(detailSource.contains("@Environment(PavbotImagePreviewStore.self) private var imagePreviewStore"))
+        XCTAssertTrue(detailSource.contains("imagePreviewStore.present("))
+        XCTAssertFalse(detailSource.contains("@State private var isImagePreviewPresented"))
+        XCTAssertFalse(detailSource.contains(".fullScreenCover("))
+        XCTAssertTrue(source.contains(".scaledToFit()"))
+        XCTAssertTrue(detailSource.contains("accessibilityLabel(item.imageLink == nil ? \"Brak obrazu posta Reddit\" : \"Powiększ obraz posta Reddit\")"))
+    }
+
+    func testTodayHumorSavedHistoryUsesNavigationInsteadOfNestedSheet() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/WeatherBriefView.swift")
+        let source = try String(contentsOf: sourceURL)
+        let savedSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct TodayHumorSavedView").dropFirst().first?
+                .components(separatedBy: "private struct TodayHumorSavedRow").first
+        )
+
+        XCTAssertTrue(savedSource.contains("NavigationLink {"))
+        XCTAssertFalse(savedSource.contains("@State private var selectedSavedItem"))
+        XCTAssertFalse(savedSource.contains(".sheet(item: $selectedSavedItem)"))
+    }
+
+    func testPavbotImageDownsamplerLimitsLargeImages() throws {
+        let renderer = UIGraphicsImageRenderer(size: CGSize(width: 1024, height: 512))
+        let image = renderer.image { context in
+            UIColor.systemPurple.setFill()
+            context.fill(CGRect(x: 0, y: 0, width: 1024, height: 512))
+        }
+        let data = try XCTUnwrap(image.pngData())
+
+        let downsampled = try XCTUnwrap(PavbotImageDownsampler.downsample(data: data, maxPixelSize: 128))
+        let largestPixelDimension = max(downsampled.size.width * downsampled.scale, downsampled.size.height * downsampled.scale)
+
+        XCTAssertLessThanOrEqual(largestPixelDimension, 130)
+    }
+
+    func testTodayHumorCommentHighlightCardTogglesBetweenAnalysisAndOriginalQuote() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/WeatherBriefView.swift")
+        let source = try String(contentsOf: sourceURL)
+        let cardSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct TodayHumorCommentHighlightCard").dropFirst().first?
+                .components(separatedBy: "private struct WeatherInlineFact").first
+        )
+
+        XCTAssertTrue(cardSource.contains("@State private var isShowingOriginal = false"))
+        XCTAssertTrue(cardSource.contains("isShowingOriginal.toggle()"))
+        XCTAssertTrue(cardSource.contains("originalBody"))
+        XCTAssertTrue(cardSource.contains("Oryginalny komentarz"))
+        XCTAssertTrue(cardSource.contains(".frame(maxWidth: .infinity, alignment: .leading)"))
+        XCTAssertTrue(cardSource.contains(".contentShape(RoundedRectangle(cornerRadius: 14, style: .continuous))"))
+        XCTAssertTrue(cardSource.contains("Stuknij, aby zobaczyć oryginalny komentarz"))
+        XCTAssertTrue(cardSource.contains("Stuknij, aby wrócić do analizy"))
+    }
+
+    func testTodayHumorPanelShowsDigestDiagnosticsAndOriginalBodyRefreshHint() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/WeatherBriefView.swift")
+        let source = try String(contentsOf: sourceURL)
+        let panelSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct TodayHumorPanel").dropFirst().first?
+                .components(separatedBy: "private struct TodayHumorCard").first
+        )
+
+        XCTAssertTrue(panelSource.contains("TodayHumorDigestDiagnostics(digest: digest)"))
+        XCTAssertTrue(panelSource.contains("hasCommentHighlightsWithoutOriginalBodies"))
+        XCTAssertTrue(panelSource.contains("Odśwież radar, aby pobrać oryginalne komentarze."))
+        XCTAssertTrue(source.contains("Serwer: \\(serverLabel) · Digest: \\(digest.id) · Komentarze: \\(digest.originalCommentBodyCount)/\\(digest.commentHighlightCount)"))
+    }
+
+    func testTodayHumorPanelShowsSavedHistoryAndDetailBookmarkAction() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/WeatherBriefView.swift")
+        let source = try String(contentsOf: sourceURL)
+        let panelSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct TodayHumorPanel").dropFirst().first?
+                .components(separatedBy: "private struct TodayHumorCard").first
+        )
+        let detailSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct TodayHumorDetailSheet").dropFirst().first?
+                .components(separatedBy: "private struct TodayHumorSavedView").first
+        )
+
+        XCTAssertTrue(panelSource.contains("Label(\"Zapisane\", systemImage: \"bookmark.fill\")"))
+        XCTAssertTrue(panelSource.contains("@State private var isSavedPresented = false"))
+        XCTAssertTrue(panelSource.contains("TodayHumorSavedView(savedStore: savedStore)"))
+        XCTAssertTrue(source.contains("private struct TodayHumorSavedView"))
+        XCTAssertTrue(source.contains(".searchable(text: $query, prompt: \"Szukaj w zapisanych Redditach\")"))
+        XCTAssertTrue(detailSource.contains("savedStore.toggle("))
+        XCTAssertTrue(detailSource.contains("systemImage: isSaved ? \"bookmark.fill\" : \"bookmark\""))
     }
 
     func testTodayHumorDigestDecodesLegacyItemsWithoutRedditRadarDetails() throws {
@@ -2528,6 +3372,77 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(request.value(forHTTPHeaderField: "Cache-Control"), "no-cache")
     }
 
+    func testTodayHumorSavedStorePersistsRemovesAndDeduplicatesItems() throws {
+        let suiteName = "TodayHumorSavedTests-\(UUID().uuidString)"
+        let defaults = UserDefaults(suiteName: suiteName)!
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+        let digest = try JSONDecoder.pavbot.decode(TodayHumorDigest.self, from: Self.todayHumorFixtureData)
+        let item = try XCTUnwrap(digest.items.first)
+        let store = TodayHumorSavedStore(defaults: defaults)
+
+        XCTAssertFalse(store.isSaved(item))
+        XCTAssertTrue(store.savedItems.isEmpty)
+
+        store.save(
+            item,
+            digestID: digest.id,
+            digestTitle: digest.title,
+            displayTime: digest.displayTime,
+            savedAt: Self.date("2026-06-25T19:20:00Z")
+        )
+        store.save(
+            item,
+            digestID: digest.id,
+            digestTitle: digest.title,
+            displayTime: digest.displayTime,
+            savedAt: Self.date("2026-06-25T19:30:00Z")
+        )
+
+        XCTAssertTrue(store.isSaved(item))
+        XCTAssertEqual(store.savedItems.count, 1)
+        XCTAssertEqual(store.savedItems.first?.item.title, "Kiedy deploy przechodzi za pierwszym razem")
+        XCTAssertEqual(store.savedItems.first?.savedAt, Self.date("2026-06-25T19:30:00Z"))
+
+        let reloaded = TodayHumorSavedStore(defaults: defaults)
+        XCTAssertTrue(reloaded.isSaved(item))
+        XCTAssertEqual(reloaded.savedItems.map(\.id), [item.id])
+
+        store.remove(item)
+
+        XCTAssertFalse(store.isSaved(item))
+        XCTAssertTrue(store.savedItems.isEmpty)
+    }
+
+    func testTodayHumorSavedStoreSortsNewestFirstAndSearchesContent() throws {
+        let suiteName = "TodayHumorSavedSearchTests-\(UUID().uuidString)"
+        let defaults = UserDefaults(suiteName: suiteName)!
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+        let digest = try JSONDecoder.pavbot.decode(TodayHumorDigest.self, from: Self.todayHumorFixtureData)
+        let first = try XCTUnwrap(digest.items.first)
+        let second = try XCTUnwrap(digest.items.dropFirst().first)
+        let store = TodayHumorSavedStore(defaults: defaults)
+
+        store.save(
+            second,
+            digestID: digest.id,
+            digestTitle: digest.title,
+            displayTime: digest.displayTime,
+            savedAt: Self.date("2026-06-25T19:05:00Z")
+        )
+        store.save(
+            first,
+            digestID: digest.id,
+            digestTitle: digest.title,
+            displayTime: digest.displayTime,
+            savedAt: Self.date("2026-06-25T19:20:00Z")
+        )
+
+        XCTAssertEqual(store.savedItems.map(\.item.id), ["safe1", "safe2"])
+        XCTAssertEqual(store.filteredItems(query: "ProgrammerHumor").map(\.item.id), ["safe1"])
+        XCTAssertEqual(store.filteredItems(query: "praca").map(\.item.id), ["safe2"])
+        XCTAssertEqual(store.filteredItems(query: "ukrytej awarii").map(\.item.id), ["safe1"])
+    }
+
     @MainActor
     func testWeatherStoreKeepsCachedReportAndShowsNoticeWhenRefreshFails() async throws {
         let report = try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: Self.dailyWeatherFixtureData)
@@ -2545,7 +3460,10 @@ final class PavbotManifestTests: XCTestCase {
 
         XCTAssertEqual(store.state, .loaded)
         XCTAssertEqual(store.report?.id, "wroclaw-2026-06-25")
-        XCTAssertEqual(store.cacheNotice, "Pokazuję ostatni zapisany raport. Odświeżenie nie powiodło się.")
+        XCTAssertEqual(
+            store.cacheNotice,
+            "Nie pobrano świeżych danych. Pokazuję zapisane dane: ostatni raport pogodowy."
+        )
     }
 
     @MainActor
@@ -2751,6 +3669,10 @@ final class PavbotManifestTests: XCTestCase {
             PavbotRootLayoutStyle.resolve(horizontalSizeClass: .compact, isRunningOnMac: false),
             .tab
         )
+        XCTAssertEqual(
+            PavbotRootLayoutStyle.resolve(horizontalSizeClass: .regular, width: 640, isRunningOnMac: false),
+            .tab
+        )
     }
 
     func testPavbotRootLayoutStyleUsesSplitForRegularWidthAndMac() {
@@ -2762,6 +3684,301 @@ final class PavbotManifestTests: XCTestCase {
             PavbotRootLayoutStyle.resolve(horizontalSizeClass: .compact, isRunningOnMac: true),
             .split
         )
+        XCTAssertEqual(
+            PavbotRootLayoutStyle.resolve(horizontalSizeClass: .regular, width: 900, isRunningOnMac: false),
+            .split
+        )
+    }
+
+    func testPavbotAdaptiveLayoutResolvesPhoneTabletAndWide() {
+        XCTAssertEqual(
+            PavbotViewportClass.resolve(width: 390, horizontalSizeClass: .compact, isRunningOnMac: false),
+            .phone
+        )
+        XCTAssertEqual(
+            PavbotViewportClass.resolve(width: 820, horizontalSizeClass: .regular, isRunningOnMac: false),
+            .tablet
+        )
+        XCTAssertEqual(
+            PavbotViewportClass.resolve(width: 1180, horizontalSizeClass: .regular, isRunningOnMac: false),
+            .wide
+        )
+        XCTAssertEqual(
+            PavbotViewportClass.resolve(width: 640, horizontalSizeClass: .compact, isRunningOnMac: true),
+            .wide
+        )
+    }
+
+    func testLargeScreenSheetMetricsShowMoreDetailContentWithoutScrolling() {
+        let phone = PavbotAdaptiveLayout(viewport: .phone)
+        let tablet = PavbotAdaptiveLayout(viewport: .tablet)
+        let wide = PavbotAdaptiveLayout(viewport: .wide)
+
+        XCTAssertNil(phone.sheetMinWidth)
+        XCTAssertNil(phone.sheetIdealHeight)
+        XCTAssertEqual(tablet.sheetMinWidth, 920)
+        XCTAssertEqual(tablet.sheetIdealWidth, 1040)
+        XCTAssertEqual(tablet.sheetMaxWidth, 1180)
+        XCTAssertEqual(tablet.sheetMinHeight, 760)
+        XCTAssertEqual(tablet.sheetIdealHeight, 920)
+        XCTAssertEqual(wide.sheetMinWidth, 1120)
+        XCTAssertEqual(wide.sheetIdealWidth, 1320)
+        XCTAssertEqual(wide.sheetMaxWidth, 1540)
+        XCTAssertEqual(wide.sheetMinHeight, 840)
+        XCTAssertEqual(wide.sheetIdealHeight, 1040)
+    }
+
+    func testLargeScreenObjectPresentationsUseReadableWideWindows() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let designSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PavbotDesign.swift"))
+        let contentSource = try String(contentsOf: sourcesRoot.appendingPathComponent("ContentView.swift"))
+        let artifactSource = try String(contentsOf: sourcesRoot.appendingPathComponent("ArtifactDetailView.swift"))
+        let expectedSheetCounts = [
+            "WeatherBriefView.swift": 5,
+            "ReportPackageViews.swift": 3,
+            "JobsView.swift": 2,
+            "SavedResearchArticlesView.swift": 1,
+            "PulseDayView.swift": 3,
+            "TodayLiveTopicsView.swift": 2
+        ]
+
+        XCTAssertTrue(designSource.contains("func pavbotLargeObjectPresentation() -> some View"))
+        XCTAssertTrue(designSource.contains("private struct PavbotLargeObjectPresentationModifier: ViewModifier"))
+        XCTAssertTrue(designSource.contains("enum PavbotViewportClass"))
+        XCTAssertTrue(designSource.contains("struct PavbotAdaptiveLayout"))
+        XCTAssertTrue(designSource.contains("_isExpanded = State(initialValue: !startsCollapsed)"))
+        XCTAssertTrue(designSource.contains("minWidth: layout.sheetMinWidth"))
+        XCTAssertTrue(designSource.contains("idealWidth: layout.sheetIdealWidth"))
+        XCTAssertTrue(designSource.contains(".presentationDetents([.large])"))
+        XCTAssertTrue(contentSource.contains("PavbotRootLayoutStyle.resolve(horizontalSizeClass: horizontalSizeClass, width: proxy.size.width)"))
+        XCTAssertTrue(contentSource.contains(".frame(maxWidth: layout.contentMaxWidth, maxHeight: .infinity)"))
+        XCTAssertTrue(artifactSource.contains("private var usesLargeCanvas: Bool"))
+        XCTAssertTrue(artifactSource.contains("minWidth: usesLargeCanvas ? 720 : nil"))
+
+        for (fileName, expectedCount) in expectedSheetCounts {
+            let source = try String(contentsOf: sourcesRoot.appendingPathComponent(fileName))
+            XCTAssertEqual(
+                source.components(separatedBy: ".pavbotLargeObjectPresentation()").count - 1,
+                expectedCount,
+                "\(fileName) should apply the large presentation modifier to every object sheet"
+            )
+        }
+    }
+
+    func testMainHeroMetricsStartCollapsedAndCanExpand() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let designSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PavbotDesign.swift"))
+        let researchSource = try String(contentsOf: sourcesRoot.appendingPathComponent("ReportPackageViews.swift"))
+        let pulseSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PulseDayView.swift"))
+        let jobsSource = try String(contentsOf: sourcesRoot.appendingPathComponent("JobsView.swift"))
+
+        XCTAssertTrue(designSource.contains("var startsCollapsed = false"))
+        XCTAssertTrue(designSource.contains("Pokaż szczegóły"))
+        XCTAssertTrue(designSource.contains("Ukryj szczegóły"))
+        XCTAssertTrue(designSource.contains("if isExpanded {\n                        PavbotStatusRail(insights: insights)"))
+        XCTAssertTrue(researchSource.contains("startsCollapsed: true"))
+        XCTAssertTrue(pulseSource.contains("startsCollapsed: true"))
+        XCTAssertTrue(jobsSource.contains("startsCollapsed: true"))
+    }
+
+    func testMainScreensUseAdaptiveLayoutForLargeDisplays() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+
+        let expectedAdaptiveFiles = [
+            "ContentView.swift",
+            "WeatherBriefView.swift",
+            "PulseDayView.swift",
+            "TodayLiveTopicsView.swift",
+            "JobsView.swift",
+            "ArtifactTimelineView.swift",
+            "AutomationListView.swift",
+            "SettingsView.swift"
+        ]
+
+        for fileName in expectedAdaptiveFiles {
+            let source = try String(contentsOf: sourcesRoot.appendingPathComponent(fileName))
+            XCTAssertTrue(
+                source.contains("PavbotAdaptiveLayout"),
+                "\(fileName) should participate in the adaptive layout contract"
+            )
+        }
+
+        let weatherSource = try String(contentsOf: sourcesRoot.appendingPathComponent("WeatherBriefView.swift"))
+        XCTAssertTrue(weatherSource.contains("layout.usesDashboardLayout"))
+        XCTAssertTrue(weatherSource.contains("LazyVGrid(columns: layout.adaptiveColumns(minimum: layout.humorCardMinWidth)"))
+        XCTAssertFalse(weatherSource.contains(".frame(maxWidth: 430)"))
+        XCTAssertFalse(weatherSource.contains(".frame(width: 250)"))
+
+        let settingsSource = try String(contentsOf: sourcesRoot.appendingPathComponent("SettingsView.swift"))
+        XCTAssertTrue(settingsSource.contains("settingsPhoneDashboard(layout: layout)"))
+        XCTAssertTrue(settingsSource.contains("settingsDashboard(layout: layout)"))
+        XCTAssertTrue(settingsSource.contains("SettingsDashboardCard"))
+        XCTAssertFalse(settingsSource.contains("private var settingsForm"))
+        XCTAssertFalse(settingsSource.contains("return Form {"))
+
+        let topicsSource = try String(contentsOf: sourcesRoot.appendingPathComponent("TodayLiveTopicsView.swift"))
+        XCTAssertTrue(topicsSource.contains("private struct TodayLiveTopicsGrid"))
+        XCTAssertTrue(topicsSource.contains("if layout.usesDashboardLayout"))
+    }
+
+    func testPhoneTabRootGuardsHiddenRoutesFromFallingBackToToday() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let contentURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/ContentView.swift")
+        let source = try String(contentsOf: contentURL)
+
+        XCTAssertTrue(source.contains("TabView(selection: selectedVisibleTabBinding)"))
+        XCTAssertTrue(source.contains("private var selectedVisibleTabBinding: Binding<AppTab>"))
+        XCTAssertTrue(source.contains("var phoneVisibleTab: AppTab"))
+        XCTAssertTrue(source.contains("case .artifacts, .automations, .diagnostics:"))
+        XCTAssertTrue(source.contains("phoneSettingsTabContent"))
+        XCTAssertTrue(source.contains("ArtifactTimelineView()"))
+        XCTAssertTrue(source.contains("AutomationListView(navigationMode: .embeddedInSettings)"))
+        XCTAssertFalse(source.contains("TabView(selection: $router.selectedTab)"))
+    }
+
+    func testPremiumIPhoneCockpitUsesReadableComponentPath() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let weatherSource = try String(contentsOf: sourcesRoot.appendingPathComponent("WeatherBriefView.swift"))
+        let designSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PavbotDesign.swift"))
+
+        XCTAssertTrue(designSource.contains("struct PavbotPremiumCard<Content: View>"))
+        XCTAssertTrue(designSource.contains("struct PavbotInsightStrip"))
+        XCTAssertTrue(designSource.contains("struct PavbotFreshnessBadge"))
+        XCTAssertTrue(designSource.contains("struct PavbotCompactStoryRow"))
+        XCTAssertTrue(designSource.contains("struct PavbotPrimaryActionCapsule"))
+
+        XCTAssertTrue(weatherSource.contains("PavbotPhoneDailyCockpit"))
+        XCTAssertTrue(weatherSource.contains("PavbotPhoneCockpitHeader"))
+        XCTAssertTrue(weatherSource.contains("phoneCockpitView(report, layout: layout)"))
+        XCTAssertTrue(weatherSource.contains("TodayHumorFeaturedPreview"))
+        XCTAssertTrue(weatherSource.contains("TodayHumorSideScrollList"))
+        XCTAssertTrue(weatherSource.contains("PavbotInsightStrip"))
+        XCTAssertTrue(weatherSource.contains("PavbotFreshnessBadge"))
+        XCTAssertTrue(weatherSource.contains("PavbotCompactStoryRow"))
+        XCTAssertTrue(weatherSource.contains(".accessibilityLabel(\"Daily cockpit Pavbot\")"))
+
+        let cockpitSource = try XCTUnwrap(
+            weatherSource.components(separatedBy: "private struct PavbotPhoneDailyCockpit").dropFirst().first?
+                .components(separatedBy: "private struct WeatherRangeTimelineTile").first
+        )
+        XCTAssertFalse(cockpitSource.contains(".font(.caption2"), "Primary iPhone cockpit content should not use caption2 typography")
+        XCTAssertTrue(cockpitSource.contains("TodayHumorSideScrollList"), "Reddit Radar should use the side-scroll browser requested for post images and descriptions")
+        XCTAssertTrue(cockpitSource.contains("ScrollView(.horizontal, showsIndicators: false)"), "Only Reddit Radar uses horizontal browsing in the phone cockpit")
+        XCTAssertFalse(cockpitSource.contains("digest.items.prefix("), "The app should not limit Reddit Radar items in the UI")
+    }
+
+    func testPremiumFullAppRefreshUsesSharedScaffoldAndComponents() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let designSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PavbotDesign.swift"))
+
+        [
+            "struct PavbotPremiumScreenScaffold<Content: View>",
+            "struct PavbotCommandHero",
+            "struct PavbotSignalCard",
+            "struct PavbotStatusRail",
+            "struct PavbotActionTray",
+            "struct PavbotReadingCard<Content: View>"
+        ].forEach { component in
+            XCTAssertTrue(designSource.contains(component), "PavbotDesign.swift should define \(component)")
+        }
+
+        let expectedScaffoldFiles = [
+            "PulseDayView.swift",
+            "JobsView.swift",
+            "ReportPackageViews.swift",
+            "ArtifactTimelineView.swift",
+            "AutomationListView.swift",
+            "SettingsView.swift",
+            "DiagnosticsView.swift"
+        ]
+
+        for fileName in expectedScaffoldFiles {
+            let source = try String(contentsOf: sourcesRoot.appendingPathComponent(fileName))
+            XCTAssertTrue(source.contains("PavbotPremiumScreenScaffold"), "\(fileName) should use the premium screen scaffold")
+            XCTAssertTrue(source.contains("PavbotCommandHero"), "\(fileName) should expose a command hero")
+        }
+
+        let splitExpectedFiles = [
+            "PulseDayView.swift",
+            "JobsView.swift",
+            "ReportPackageViews.swift",
+            "ArtifactTimelineView.swift",
+            "SettingsView.swift",
+            "DiagnosticsView.swift"
+        ]
+
+        for fileName in splitExpectedFiles {
+            let source = try String(contentsOf: sourcesRoot.appendingPathComponent(fileName))
+            XCTAssertTrue(source.contains("layout.usesDashboardLayout"), "\(fileName) should keep an explicit phone/wide layout branch")
+        }
+    }
+
+    func testMainTabsExposeSharedInfoHelpSheets() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let designSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PavbotDesign.swift"))
+
+        XCTAssertTrue(designSource.contains("struct PavbotTabInfoContent: Identifiable"))
+        XCTAssertTrue(designSource.contains("struct PavbotTabInfoSection: Identifiable"))
+        XCTAssertTrue(designSource.contains("struct PavbotTabInfoSheet: View"))
+        XCTAssertTrue(designSource.contains("func pavbotTabInfo(_ content: PavbotTabInfoContent) -> some View"))
+        XCTAssertTrue(designSource.contains("static func pulseDay(subtabTitle: String) -> PavbotTabInfoContent"))
+        XCTAssertTrue(designSource.contains("static func jobs(subtabTitle: String) -> PavbotTabInfoContent"))
+        XCTAssertTrue(designSource.contains("static func research(topicTitle: String, topicSystemImage: String, topicTint: Color) -> PavbotTabInfoContent"))
+        XCTAssertTrue(designSource.contains("ToolbarItem(placement: .topBarLeading)"))
+        XCTAssertTrue(designSource.contains("Image(systemName: \"info.circle.fill\")"))
+        XCTAssertTrue(designSource.contains(".sheet(item: $presentedInfo)"))
+        XCTAssertTrue(designSource.contains(".pavbotLargeObjectPresentation()"))
+        XCTAssertTrue(designSource.contains(".accessibilityLabel(\"Otwórz instrukcję karty \\(infoContent.title)\")"))
+        XCTAssertTrue(designSource.contains("Jak korzystać"))
+        XCTAssertTrue(designSource.contains("Co możesz sprawdzić"))
+        XCTAssertTrue(designSource.contains("Praktyczne wskazówki"))
+        XCTAssertTrue(designSource.contains("kartkę z datą i polskim powiedzeniem"))
+        XCTAssertTrue(designSource.contains("Następne kroki znajdziesz pod Reddit Radar"))
+        XCTAssertTrue(designSource.contains("Widok zapisanych pokazuje wszystkie lokalnie zapisane newsy razem."))
+        XCTAssertTrue(designSource.contains("Dymki w hero są zwinięte"))
+        XCTAssertFalse(designSource.contains("Manifest URL"))
+
+        let expectedTabs = [
+            ("WeatherBriefView.swift", ".pavbotTabInfo(.today)"),
+            ("PulseDayView.swift", ".pavbotTabInfo(PavbotTabInfoContent.pulseDay(subtabTitle: selectedMode.title))"),
+            ("JobsView.swift", ".pavbotTabInfo(PavbotTabInfoContent.jobs(subtabTitle: viewMode.title))"),
+            ("ReportPackageViews.swift", ".pavbotTabInfo(PavbotTabInfoContent.research(topicTitle: router.selectedResearchTopic.title, topicSystemImage: router.selectedResearchTopic.systemImage, topicTint: router.selectedResearchTopic.tint))")
+        ]
+
+        for (fileName, expectedModifier) in expectedTabs {
+            let source = try String(contentsOf: sourcesRoot.appendingPathComponent(fileName))
+            XCTAssertTrue(source.contains(expectedModifier), "\(fileName) should expose the shared info help button")
+        }
+
+        let settingsSource = try String(contentsOf: sourcesRoot.appendingPathComponent("SettingsView.swift"))
+        XCTAssertFalse(settingsSource.contains(".pavbotTabInfo("), "Settings is intentionally outside the four-tab info scope")
     }
 
     func testWeatherRefreshCooldownBlocksUntilNextHour() throws {
@@ -2821,6 +4038,26 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(model.bars.allSatisfy { $0.yStart == model.baseline && $0.yEnd > model.baseline })
         XCTAssertLessThanOrEqual(model.visibleLabelIDs.count, 4)
         XCTAssertTrue(model.bars.contains { model.visibleLabelIDs.contains($0.id) && !$0.temperatureLabel.isEmpty })
+    }
+
+    func testWeatherRangeValueIsPlainAndChartLabelsUseTemperatureBubbles() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/WeatherBriefView.swift")
+        let source = try String(contentsOf: sourceURL)
+
+        XCTAssertFalse(source.contains("private struct WeatherTemperatureValueLabel"))
+        XCTAssertFalse(source.contains(".shadow(color: Color.orange"))
+        XCTAssertTrue(source.contains("Text(report.temperature.rangeLabel)\n                    .font(.title3.bold())"))
+        XCTAssertTrue(source.contains("private struct WeatherTemperatureChartBubbleLabel"))
+        XCTAssertTrue(source.contains("let bubbleColor = WeatherTimelineChartData.temperatureColor(for: temperature)"))
+        XCTAssertTrue(source.contains(".background(bubbleColor, in: Capsule())"))
+        XCTAssertEqual(source.components(separatedBy: "WeatherTemperatureChartBubbleLabel(\n                                bar.temperatureLabel").count - 1, 2)
+        XCTAssertFalse(source.contains("WeatherTemperatureValueLabel(\n                                bar.temperatureLabel"))
+        XCTAssertFalse(source.contains("Text(bar.temperatureLabel)\n                                .font(.system(size: 9, weight: .bold))"))
+        XCTAssertFalse(source.contains("Text(bar.temperatureLabel)\n                                .font(.caption2.weight(.bold))"))
     }
 
     func testTodayLiveTopicsSnapshotBuildsPolandAndWorldTopicsFromMobileNewsData() throws {
@@ -3054,6 +4291,104 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(source.contains("await store.reload(minimumInterval: 0)"))
     }
 
+    func testPrimaryRefreshToolbarsUseSharedButton() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let expectedFiles = [
+            "WeatherBriefView.swift",
+            "PulseDayView.swift",
+            "JobsView.swift",
+            "ReportPackageViews.swift",
+            "ArtifactTimelineView.swift",
+            "AutomationListView.swift",
+            "DiagnosticsView.swift"
+        ]
+
+        for fileName in expectedFiles {
+            let source = try String(contentsOf: sourcesRoot.appendingPathComponent(fileName))
+            XCTAssertTrue(source.contains("PavbotRefreshToolbarButton"), "\(fileName) should use the shared refresh toolbar button")
+        }
+    }
+
+    func testArticleCardsUseTwoLineKeywordRows() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let designSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PavbotDesign.swift"))
+        let reportSource = try String(contentsOf: sourcesRoot.appendingPathComponent("ReportPackageViews.swift"))
+        let todaySource = try String(contentsOf: sourcesRoot.appendingPathComponent("TodayLiveTopicsView.swift"))
+        let pulseSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PulseDayView.swift"))
+
+        XCTAssertTrue(designSource.contains("struct PavbotArticleKeywordRows<Content: View>"))
+        XCTAssertTrue(designSource.contains("struct PavbotArticleTagChip: View"))
+        XCTAssertTrue(designSource.contains("Label(title, systemImage: systemImage)"))
+        XCTAssertTrue(designSource.contains(".background(tint.opacity(0.10), in: Capsule())"))
+        XCTAssertTrue(designSource.contains("var accessibilityPrefix = \"Tag\""))
+        XCTAssertTrue(designSource.contains("struct PavbotSourceCountBadge: View"))
+        XCTAssertTrue(designSource.contains("Label(\"\\(count) źr.\", systemImage: \"link\")"))
+        XCTAssertTrue(designSource.contains("count == 1 ? \"1 użyte źródło\" : \"\\(count) użytych źródeł\""))
+        XCTAssertTrue(designSource.contains("private struct PavbotTwoLineFlowLayout: Layout"))
+        XCTAssertTrue(designSource.contains("var maxRows = 2"))
+        XCTAssertEqual(reportSource.components(separatedBy: "PavbotArticleKeywordRows").count - 1, 2)
+        XCTAssertEqual(todaySource.components(separatedBy: "PavbotArticleKeywordRows").count - 1, 2)
+        XCTAssertEqual(pulseSource.components(separatedBy: "PavbotArticleKeywordRows").count - 1, 1)
+        XCTAssertEqual(reportSource.components(separatedBy: "PavbotArticleTagChip").count - 1, 3)
+        XCTAssertEqual(todaySource.components(separatedBy: "PavbotArticleTagChip").count - 1, 2)
+        XCTAssertEqual(pulseSource.components(separatedBy: "PavbotArticleTagChip").count - 1, 1)
+        XCTAssertEqual(reportSource.components(separatedBy: "PavbotSourceCountBadge").count - 1, 2)
+        XCTAssertEqual(todaySource.components(separatedBy: "PavbotSourceCountBadge").count - 1, 2)
+        XCTAssertEqual(pulseSource.components(separatedBy: "PavbotSourceCountBadge").count - 1, 1)
+        XCTAssertTrue(reportSource.contains("ForEach(article.tags.prefix(4), id: \\.self)"))
+        XCTAssertTrue(reportSource.contains("ForEach(presentation.keywords.prefix(3))"))
+        XCTAssertTrue(reportSource.contains("PavbotSourceCountBadge(count: article.sources.count, tint: .orange)"))
+        XCTAssertTrue(reportSource.contains("PavbotSourceCountBadge(count: presentation.sourceCount, tint: topic.tint)"))
+        XCTAssertFalse(reportSource.contains("presentation.primarySourceTitle"))
+        XCTAssertFalse(reportSource.contains("Label(\"\\(presentation.sourceCount)\", systemImage: \"link\")"))
+        XCTAssertTrue(reportSource.contains("systemImage: \"tag.fill\""))
+        XCTAssertTrue(reportSource.contains("tint: topic.tint"))
+        XCTAssertTrue(reportSource.contains("accessibilityPrefix: \"Słowo kluczowe\""))
+        XCTAssertTrue(todaySource.contains("ForEach(topic.tags.prefix(3), id: \\.self)"))
+        XCTAssertTrue(todaySource.contains("ForEach(saved.topic.tags.prefix(3), id: \\.self)"))
+        XCTAssertTrue(todaySource.contains("PavbotSourceCountBadge(count: topic.sources.count, tint: .orange)"))
+        XCTAssertTrue(todaySource.contains("PavbotSourceCountBadge(count: saved.topic.sources.count, tint: .blue)"))
+        XCTAssertFalse(todaySource.contains("topic.sourceCountLabel"))
+        XCTAssertFalse(todaySource.contains("saved.topic.sourceCountLabel"))
+        XCTAssertTrue(todaySource.contains("tint: .orange"))
+        XCTAssertTrue(todaySource.contains("tint: .blue"))
+        XCTAssertTrue(pulseSource.contains("ForEach(topic.tags.prefix(4), id: \\.self)"))
+        XCTAssertTrue(pulseSource.contains("PavbotSourceCountBadge(count: topic.sources.count, tint: .orange)"))
+        XCTAssertFalse(pulseSource.contains("topic.sourceCountLabel"))
+        XCTAssertTrue(pulseSource.contains("PavbotArticleTagChip("))
+    }
+
+    func testWeatherBriefViewUsesStoreRefreshingStateOnly() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/WeatherBriefView.swift")
+        let source = try String(contentsOf: sourceURL)
+
+        XCTAssertFalse(source.contains("isRefreshingWeather"))
+    }
+
+    func testResearchViewsUseSharedCacheNoticeBanner() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/ReportPackageViews.swift")
+        let source = try String(contentsOf: sourceURL)
+
+        XCTAssertFalse(source.contains("ResearchCacheBanner"))
+        XCTAssertTrue(source.contains("PavbotCacheNoticeBanner"))
+    }
+
     func testPulseDayRefreshAndNotificationRouteForceManifestReload() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let sourceURL = testsURL
@@ -3112,6 +4447,24 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.savedTopics.map(\.topic.id), ["newer", "older"])
         XCTAssertEqual(store.filteredTopics(query: "energia").map(\.topic.id), ["older"])
         XCTAssertEqual(store.filteredTopics(scope: .poland).map(\.topic.id), ["newer"])
+    }
+
+    func testTodayLiveTopicsSavedViewShowsAllSavedWithoutSegmentedSubtabs() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/TodayLiveTopicsView.swift")
+        let source = try String(contentsOf: sourceURL)
+        let savedViewSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct TodayLiveTopicsSavedView").dropFirst().first?
+                .components(separatedBy: "private struct TodayLiveTopicsSavedRow").first
+        )
+
+        XCTAssertTrue(savedViewSource.contains("savedStore.filteredTopics(query: query)"))
+        XCTAssertFalse(savedViewSource.contains("Picker(\"Filtr zapisanych\""))
+        XCTAssertFalse(savedViewSource.contains("selectedFilter"))
+        XCTAssertFalse(source.contains("private enum TodayLiveTopicsSavedFilter"))
     }
 
     func testTodayLiveTopicsSavedStoreMigratesLegacyArchiveKey() throws {
@@ -3285,7 +4638,10 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.snapshot?.source, .pulseNews)
         XCTAssertEqual(store.snapshot?.headline, "Lokalny Puls")
         XCTAssertEqual(store.historySnapshots.map(\.headline), ["Lokalny Puls"])
-        XCTAssertEqual(store.emptyMessage, "Pokazuję lokalnie zapamiętany Puls Dnia z ostatnich 48h. Odświeżenie nie powiodło się.")
+        XCTAssertEqual(
+            store.emptyMessage,
+            "Nie pobrano świeżych danych. Pokazuję zapisane dane: Puls Dnia z ostatnich 48h."
+        )
     }
 
     @MainActor
@@ -3505,15 +4861,21 @@ final class PavbotManifestTests: XCTestCase {
         let ttsVariants = try JSONDecoder.pavbot.decode(ArtifactType.self, from: #""podcastTtsVariants""#.data(using: .utf8)!)
         let jobsData = try JSONDecoder.pavbot.decode(ArtifactType.self, from: #""jobsData""#.data(using: .utf8)!)
         let mobileNewsData = try JSONDecoder.pavbot.decode(ArtifactType.self, from: #""mobileNewsData""#.data(using: .utf8)!)
+        let redditRadarData = try JSONDecoder.pavbot.decode(ArtifactType.self, from: #""redditRadarData""#.data(using: .utf8)!)
+        let redditRadarRawData = try JSONDecoder.pavbot.decode(ArtifactType.self, from: #""redditRadarRawData""#.data(using: .utf8)!)
 
         XCTAssertEqual(audioVariant, .podcastAudioVariant)
         XCTAssertEqual(ttsVariants, .podcastTtsVariants)
         XCTAssertEqual(jobsData, .jobsData)
         XCTAssertEqual(mobileNewsData, .mobileNewsData)
+        XCTAssertEqual(redditRadarData, .redditRadarData)
+        XCTAssertEqual(redditRadarRawData, .redditRadarRawData)
         XCTAssertEqual(audioVariant.label, "Audio variant")
         XCTAssertEqual(ttsVariants.label, "TTS variants")
         XCTAssertEqual(jobsData.label, "Jobs data")
         XCTAssertEqual(mobileNewsData.label, "Mobile news data")
+        XCTAssertEqual(redditRadarData.label, "Reddit Radar data")
+        XCTAssertEqual(redditRadarRawData.label, "Reddit Radar raw data")
 
         let artifact = PavbotArtifact(
             id: "variant",
@@ -4001,7 +5363,10 @@ final class PavbotManifestTests: XCTestCase {
 
         XCTAssertEqual(store.state, .loaded)
         XCTAssertEqual(store.report?.opportunities.first?.company, "CKSource")
-        XCTAssertEqual(store.cacheNotice, "Pokazuję ostatnie zapisane dane Jobs (2026-06-25 01:41, Dane strukturalne). Odświeżenie nie powiodło się.")
+        XCTAssertEqual(
+            store.cacheNotice,
+            "Nie pobrano świeżych danych. Pokazuję zapisane dane: dane Jobs (2026-06-25 01:41, Dane strukturalne)."
+        )
     }
 
     @MainActor
@@ -4849,6 +6214,60 @@ final class PavbotManifestTests: XCTestCase {
           "unit": "°C"
         }
       ],
+      "hourlyPrecipitation": [
+        {
+          "time": "2026-06-25T05:00",
+          "probability": 5,
+          "amount": 0,
+          "rain": 0,
+          "showers": 0,
+          "snowfall": 0,
+          "kind": "possible",
+          "unit": "mm"
+        },
+        {
+          "time": "2026-06-25T06:00",
+          "probability": 35,
+          "amount": 0.2,
+          "rain": 0.2,
+          "showers": 0,
+          "snowfall": 0,
+          "kind": "rain",
+          "unit": "mm"
+        },
+        {
+          "time": "2026-06-25T07:00",
+          "probability": 80,
+          "amount": 1.4,
+          "rain": 1.0,
+          "showers": 0.4,
+          "snowfall": 0,
+          "kind": "rain",
+          "unit": "mm"
+        }
+      ],
+      "precipitationTimeline": [
+        {
+          "time": "2026-06-25T06:00",
+          "probability": 35,
+          "amount": 0.2,
+          "rain": 0.2,
+          "showers": 0,
+          "snowfall": 0,
+          "kind": "rain",
+          "unit": "mm"
+        },
+        {
+          "time": "2026-06-25T07:00",
+          "probability": 80,
+          "amount": 1.4,
+          "rain": 1.0,
+          "showers": 0.4,
+          "snowfall": 0,
+          "kind": "rain",
+          "unit": "mm"
+        }
+      ],
       "source": "Open-Meteo Forecast API"
     }
     """.data(using: .utf8)!
@@ -4881,8 +6300,21 @@ final class PavbotManifestTests: XCTestCase {
             {
               "id": "comment-1",
               "summary": "Najbardziej realistyczne jest czekanie na awarię po zielonym CI.",
+              "originalBody": "Wait until the quiet deploy starts making noise.",
               "explanation": "Komentarz śmieszy, bo trafia w znany rytuał zespołów: po zbyt łatwym deployu wszyscy podejrzewają błąd.",
               "score": 44
+            },
+            {
+              "id": "comment-2",
+              "summary": "Drugi komentarz dotyczy nerwowego odświeżania dashboardów.",
+              "explanation": "Komentarz jest ciekawy, bo rozwija żart o monitoringu, który zwykle kończy chwilę spokoju po deployu.",
+              "score": 31
+            },
+            {
+              "id": "comment-3",
+              "summary": "Trzeci komentarz opisuje szukanie ukrytej awarii.",
+              "explanation": "Komentarz jest ciekawy, bo pokazuje zespołowy rytuał szukania problemu po zbyt łatwym sukcesie.",
+              "score": 18
             }
           ]
         },
@@ -4896,6 +6328,58 @@ final class PavbotManifestTests: XCTestCase {
           "score": null,
           "comments": null,
           "tags": ["praca"]
+        }
+      ]
+    }
+    """.data(using: .utf8)!
+
+    private static let currentRedditRadarHumorFixtureData = """
+    {
+      "id": "humor-2026-06-28-0408",
+      "title": "<RR> Reddit Radar",
+      "summary": "Kategorie: mildlyinfuriating. Najmocniej wybija się: <u>My friend keeps reminding me my dog is gonna die in 4 years</u>.",
+      "generatedAt": "2026-06-28T02:08:22.671211+00:00",
+      "displayTime": "04:08",
+      "nextRefreshAt": "2026-06-28T06:06:00+02:00",
+      "refreshIntervalHours": 2,
+      "source": "Codex Safari Reddit radar",
+      "items": [
+        {
+          "id": "https-www-reddit-com-r-mildlyinfuriating-comment-b4612a9efe",
+          "title": "My friend keeps reminding me my dog is gonna die in 4 years",
+          "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+          "sourceName": "r/mildlyinfuriating",
+          "sourceURL": "https://www.reddit.com/r/mildlyinfuriating/comments/1uhdx6x/my_friend_keeps_reminding_me_my_dog_is_gonna_die/",
+          "imageURL": "https://www.reddit.com/gallery/1uhdx6x",
+          "score": 13925,
+          "comments": 4361,
+          "tags": ["trend"],
+          "categoryLabel": "mildlyinfuriating",
+          "postText": "Look at this beautiful boy. He's a mix of many different breeds but since the average dog lifespan is around 10 and Kona is 6, my friend thinks it's been funny to tell me how he's gonna die in 4 years.",
+          "whyFunny": "Humor działa, bo troska o psa zderza się z brutalnie nieczułym, domowym czarnym żartem, a komentarze natychmiast zamieniają winowajcę w znajomą, nie zwierzaka.",
+          "commentHighlights": [
+            {
+              "id": "comment-1",
+              "summary": "Komentarz twierdzi, że problemem jest znajomy, nie pies.",
+              "originalBody": "The dog looks concerned about your choice of friends.",
+              "explanation": "Działa, bo jednym ruchem odwraca winę i wzmacnia absurd całej sytuacji.",
+              "score": 3325
+            },
+            {
+              "id": "comment-2",
+              "summary": "Riposta sugeruje, że takich znajomych trzeba liczyć w liczbie mnogiej.",
+              "originalBody": "Yeah friends PLURAL. The mutual friend gotta go too.",
+              "explanation": "To dobra puenta, bo robi z prywatnego konfliktu mały społeczny osąd.",
+              "score": 111
+            },
+            {
+              "id": "comment-3",
+              "summary": "Długi komentarz z perspektywy psa robi z mema mini monolog.",
+              "originalBody": "You are wrong! That expression says: \\"I really want to remind you that I only have maybe 30-ish years left, but I can see your weak human brain is overwhelmed by this so I will just put up with whatever shit comes next\\".",
+              "explanation": "Śmieszny, bo przerabia prosty obrazek na teatralną, przesadnie świadomą przemowę.",
+              "score": 13
+            }
+          ]
         }
       ]
     }
@@ -5149,6 +6633,34 @@ final class PavbotManifestTests: XCTestCase {
     - Check EPAM again in the next round.
     """
 
+    private static let jobsFlatBulletMarkdownFixture = """
+    # LLM/AI Jobs Wrocław
+
+    Date: 2026-06-29 01:41 Europe/Warsaw
+    Status: Material update
+
+    ## Zakres sprawdzony
+
+    - [Just Join IT](https://justjoin.it/jobs) - checked
+
+    ## Podsumowanie zarządcze
+
+    Nowy pakiet ról AI dla Polski z naciskiem na GenAI i agentów.
+
+    ## Top Roles
+
+    - [Primotly - Senior AI Engineer (Python, GenAI, GCP)](https://example.com/primotly): `Wrocław +4, remote`; budowa agentów i workflow GenAI na GCP; `29 000-36 500 PLN net/mies. B2B`; niepewność niska.
+    - [Remodevs - Senior AI Engineer](https://example.com/remodevs): `Cała Polska, praca zdalna`; agent workflows, evals i tracing dla systemów LLM; `33 970-42 462 PLN net/mies. B2B`; niepewność średnia.
+
+    ## Zmiany od poprzedniej rundy
+
+    - Doszły dwa nowe publiczne ogłoszenia.
+
+    ## Rekomendowane akcje
+
+    - Sprawdzić kolejne aktualizacje widełek.
+    """
+
     private func manifestWithAdditionalArtifacts(_ artifacts: [PavbotArtifact]) throws -> PavbotManifest {
         let manifest = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
         return PavbotManifest(
@@ -5235,6 +6747,14 @@ private struct FailingWeatherBriefClient: WeatherBriefFetching {
     let error: Error
 
     func fetchLatestReport(from serverURL: URL, location: WeatherBriefLocation?) async throws -> DailyWeatherReport {
+        throw error
+    }
+}
+
+private struct FailingTodayHumorClient: TodayHumorFetching {
+    let error: Error
+
+    func fetchLatestDigest(from serverURL: URL) async throws -> TodayHumorDigest {
         throw error
     }
 }

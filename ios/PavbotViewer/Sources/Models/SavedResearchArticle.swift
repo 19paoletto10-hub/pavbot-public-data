@@ -22,6 +22,7 @@ struct SavedResearchArticle: Identifiable, Codable, Equatable {
 
     var searchableText: String {
         [
+            topic.title,
             article.title,
             article.summary,
             article.body,
@@ -42,6 +43,77 @@ struct SavedResearchArticle: Identifiable, Codable, Equatable {
         self.issueDate = issue.date
         self.issueTime = issue.time
         self.savedAt = savedAt
+    }
+
+    init(article: MobileNewsArticle, magazine: MobileNewsMagazine, savedAt: Date = Date()) {
+        self.article = Self.researchArticle(from: article)
+        self.topic = .aktualne
+        self.issuePackageKey = Self.mobileIssuePackageKey(for: magazine)
+        self.issueDate = magazine.runDate
+        self.issueTime = magazine.runTime
+        self.savedAt = savedAt
+    }
+
+    private static func mobileIssuePackageKey(for magazine: MobileNewsMagazine) -> String {
+        [magazine.runDate, magazine.runTime]
+            .compactMap { $0?.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+            .joined(separator: "-")
+    }
+
+    private static func researchArticle(from article: MobileNewsArticle) -> ResearchNewsArticle {
+        let analysis = article.analysis.trimmingCharacters(in: .whitespacesAndNewlines)
+        let whyItMatters = article.whyItMatters.trimmingCharacters(in: .whitespacesAndNewlines)
+        let body = ([article.lead] + article.facts + [analysis, whyItMatters])
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+            .filter { !$0.isEmpty }
+            .joined(separator: "\n\n")
+
+        return ResearchNewsArticle(
+            id: article.id,
+            title: article.title,
+            section: mobileSection(from: article.section),
+            body: body,
+            summary: article.lead,
+            whatHappened: article.lead,
+            whyItMatters: whyItMatters.isEmpty ? nil : whyItMatters,
+            deeperAnalysis: analysis.isEmpty ? nil : [analysis],
+            contextPoints: article.facts.filter { !$0.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty },
+            sources: article.sources,
+            priority: article.priority,
+            tags: article.tags
+        )
+    }
+
+    private static func mobileSection(from section: String) -> ResearchNewsSection {
+        let normalized = section
+            .folding(options: [.diacriticInsensitive, .caseInsensitive], locale: .current)
+            .lowercased()
+
+        if normalized.contains("polska") {
+            return .polska
+        }
+        if normalized.contains("polityka") {
+            return .polityka
+        }
+        if normalized.contains("swiat")
+            || normalized.contains("zagranicz")
+            || normalized.contains("miedzynarod") {
+            return .swiat
+        }
+        if normalized.contains("bezpieczen") {
+            return .bezpieczenstwo
+        }
+        if normalized.contains("gospodar") {
+            return .gospodarka
+        }
+        if normalized.contains("pogod") {
+            return .pogoda
+        }
+        if normalized.contains("technolog") || normalized.contains("tech") {
+            return .technologia
+        }
+        return .inne
     }
 }
 
@@ -65,8 +137,22 @@ final class SavedResearchArticleStore {
         sortAndPersist()
     }
 
+    func save(article: MobileNewsArticle, magazine: MobileNewsMagazine, savedAt: Date = Date()) {
+        guard Self.canSave(article: article, magazine: magazine) else { return }
+        let saved = SavedResearchArticle(article: article, magazine: magazine, savedAt: savedAt)
+        savedArticles.removeAll { $0.id == saved.id }
+        savedArticles.insert(saved, at: 0)
+        sortAndPersist()
+    }
+
     func remove(article: ResearchNewsArticle, issue: ResearchNewsIssue) {
         let id = SavedResearchArticle(article: article, issue: issue).id
+        savedArticles.removeAll { $0.id == id }
+        persist()
+    }
+
+    func remove(article: MobileNewsArticle, magazine: MobileNewsMagazine) {
+        let id = SavedResearchArticle(article: article, magazine: magazine).id
         savedArticles.removeAll { $0.id == id }
         persist()
     }
@@ -84,8 +170,21 @@ final class SavedResearchArticleStore {
         }
     }
 
+    func toggle(article: MobileNewsArticle, magazine: MobileNewsMagazine) {
+        if isSaved(article: article, magazine: magazine) {
+            remove(article: article, magazine: magazine)
+        } else {
+            save(article: article, magazine: magazine)
+        }
+    }
+
     func isSaved(article: ResearchNewsArticle, issue: ResearchNewsIssue) -> Bool {
         let id = SavedResearchArticle(article: article, issue: issue).id
+        return savedArticles.contains { $0.id == id }
+    }
+
+    func isSaved(article: MobileNewsArticle, magazine: MobileNewsMagazine) -> Bool {
+        let id = SavedResearchArticle(article: article, magazine: magazine).id
         return savedArticles.contains { $0.id == id }
     }
 
@@ -104,7 +203,11 @@ final class SavedResearchArticleStore {
     }
 
     static func canSave(article: ResearchNewsArticle, issue: ResearchNewsIssue) -> Bool {
-        issue.topic == .polskaSwiat && (article.section == .polska || article.section == .swiat)
+        issue.topic == .techNews || issue.topic == .polskaSwiat
+    }
+
+    static func canSave(article: MobileNewsArticle, magazine: MobileNewsMagazine) -> Bool {
+        magazine.topic == ReportTopicKind.aktualne.topic
     }
 
     private func sortAndPersist() {

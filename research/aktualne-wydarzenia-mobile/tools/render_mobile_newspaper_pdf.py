@@ -43,6 +43,7 @@ from pavbot_pdf_theme import (  # noqa: E402
     PAGE_MARGIN_X,
     PAPER_WARM,
     draw_mobile_page,
+    source_list_flowable,
 )
 
 
@@ -418,18 +419,7 @@ def render_newspaper_pdf(markdown_report: Path, pdf_output: Path, topic_name: st
     story.append(section_band("Źródła", styles))
     story.append(Spacer(1, 6))
     if source_items:
-        unique: list[tuple[str, str]] = []
-        seen: set[str] = set()
-        for label, url in source_items:
-            if url in seen:
-                continue
-            seen.add(url)
-            unique.append((label, url))
-        items = []
-        for label, url in unique[:30]:
-            safe_url = escape(url, quote=True)
-            items.append(ListItem(Paragraph(f'<a href="{safe_url}">{escape(label)}</a>', styles["link"])))
-        story.append(ListFlowable(items, bulletType="bullet", leftIndent=12))
+        story.append(source_list_flowable(source_items, styles, limit=30))
     else:
         story.append(Paragraph("Brak linków źródłowych w raporcie.", styles["body"]))
     story.append(Spacer(1, 8))

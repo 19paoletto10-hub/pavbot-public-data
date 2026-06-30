@@ -10,15 +10,36 @@ import re
 import subprocess
 import sys
 import urllib.request
+from copy import deepcopy
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 from zoneinfo import ZoneInfo
 
 
-DEFAULT_SUBREDDITS = ("Polska_wpz", "memes", "ProgrammerHumor", "Polska", "technology")
+DEFAULT_SUBREDDITS = (
+    "Polska_wpz",
+    "memes",
+    "ProgrammerHumor",
+    "Polska",
+    "technology",
+    "AskReddit",
+    "mildlyinfuriating",
+    "OutOfTheLoop",
+    "facepalm",
+)
 DEFAULT_NOTIFIER_URL = "https://notify.paweltanski.com"
 DEFAULT_SOURCE = "Codex Safari Reddit radar"
+DEFAULT_ARTIFACT_ROOT = Path("research/reddit-radar")
+DEFAULT_HISTORY_LOOKBACK_DAYS = 5
+RAW_DETAIL_KEYS = {"rawCommentSnippets", "commentSnippets", "commentsList"}
+COMMENT_ANALYSIS_SOURCE = "codex-computer-use-safari"
+COMMENT_ANALYSIS_STATUSES = {"reviewed", "no_safe_comments", "blocked"}
+COMMENT_ANALYSIS_KEYS = {"commentAnalysisStatus", "commentAnalysisSource", "commentAnalysisNote"}
+COMMENT_ANALYSIS_REQUIRED_NOTE = (
+    "Wymaga ręcznego przeglądu posta i komentarzy w Safari/Computer Use przed publikacją."
+)
+INTERNAL_DETAIL_KEYS = RAW_DETAIL_KEYS | COMMENT_ANALYSIS_KEYS | {"radarFirstSeenAt", "radarLastSeenAt", "radarKey"}
 
 
 SAFARI_EXTRACT_JS = r"""
@@ -193,6 +214,11 @@ def looks_toxic(title: str) -> bool:
     return any(token in lowered for token in blocked)
 
 
+def looks_deleted_or_empty(value: str) -> bool:
+    lowered = clean_text(value).lower()
+    return lowered in {"[deleted]", "[removed]", "deleted", "removed"} or not lowered
+
+
 def caption_for_title(title: str) -> str:
     lowered = title.lower()
     if any(token in lowered for token in ("ai", "chatgpt", "llm")):
@@ -231,6 +257,25 @@ def why_funny_for(title: str, category_label: str) -> str:
     return "Zabawne, bo temat jest prosty, rozpoznawalny i zostawia miejsce na szybkie puenty w komentarzach."
 
 
+def comment_explanation_for(comment: str, title: str, category_label: str) -> str:
+    lowered = f"{comment} {title} {category_label}".lower()
+    if "ai" in lowered or "chatgpt" in lowered or "llm" in lowered:
+        return "Komentarz jest ciekawy, bo rozwija żart o AI i pokazuje, jak ludzie dopisują puentę do technologicznego absurdu."
+    if "deploy" in lowered or "ci" in lowered or "bug" in lowered or "code" in lowered or "programmer" in lowered:
+        return "Komentarz jest ciekawy, bo rozwija techniczny żart i trafia w znany rytuał sprawdzania, czy sukces nie ukrywa awarii."
+    if "polska" in lowered or "wpz" in lowered or "pl" in lowered:
+        return "Komentarz jest ciekawy, bo pokazuje lokalny kontekst i zamienia zwykły temat w wspólną, rozpoznawalną puentę."
+    return "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę."
+
+
+GENERIC_COMMENT_EXPLANATIONS = {
+    "Komentarz jest ciekawy, bo rozwija żart o AI i pokazuje, jak ludzie dopisują puentę do technologicznego absurdu.",
+    "Komentarz jest ciekawy, bo rozwija techniczny żart i trafia w znany rytuał sprawdzania, czy sukces nie ukrywa awarii.",
+    "Komentarz jest ciekawy, bo pokazuje lokalny kontekst i zamienia zwykły temat w wspólną, rozpoznawalną puentę.",
+    "Komentarz jest ciekawy, bo dopowiada codzienny absurd z wątku i zamienia go w krótką puentę.",
+}
+
+
 def tags_for(title: str, source_name: str) -> list[str]:
     corpus = f"{title} {source_name}".lower()
     tags: list[str] = []
@@ -245,10 +290,11 @@ def tags_for(title: str, source_name: str) -> list[str]:
     return tags[:3] or ["trend"]
 
 
-def comment_highlights_from(value: Any) -> list[dict[str, Any]]:
+def comment_highlights_from(value: Any, *, title: str = "", category_label: str = "") -> list[dict[str, Any]]:
     if not isinstance(value, list):
         return []
-    highlights: list[dict[str, Any]] = []
+    candidates: list[dict[str, Any]] = []
+    seen: set[str] = set()
     for raw in value:
         if isinstance(raw, dict):
             body = clean_text(raw.get("body") or raw.get("summary") or raw.get("text"))
@@ -256,18 +302,24 @@ def comment_highlights_from(value: Any) -> list[dict[str, Any]]:
         else:
             body = clean_text(raw)
             score = 0
-        if not body or looks_toxic(body):
+        key = body.lower()
+        if not body or key in seen or looks_deleted_or_empty(body) or looks_toxic(body):
             continue
+        seen.add(key)
+        candidates.append({"body": body, "score": score})
+    candidates.sort(key=lambda item: (parse_int(item.get("score")), len(clean_text(item.get("body")))), reverse=True)
+    highlights: list[dict[str, Any]] = []
+    for candidate in candidates[:3]:
+        body = clean_text(candidate.get("body"))
         highlights.append(
             {
                 "id": f"comment-{len(highlights) + 1}",
                 "summary": shorten_text(body, 180),
-                "explanation": "Komentarz jest zabawny, bo dopowiada codzienny absurd z wątku i zamienia go w puentę.",
-                "score": score,
+                "originalBody": body,
+                "explanation": comment_explanation_for(body, title, category_label),
+                "score": parse_int(candidate.get("score")),
             }
         )
-        if len(highlights) >= 3:
-            break
     return highlights
 
 
@@ -286,6 +338,7 @@ def curate_posts(posts: list[dict[str, Any]], *, max_items: int) -> list[dict[st
         source_name = clean_text(post.get("sourceName")) or source_name_from_url(source_url)
         tags = tags_for(title, source_name)
         category_label = category_label_for(tags, source_name)
+        raw_comments = post.get("rawCommentSnippets") or post.get("commentSnippets") or post.get("commentsList") or []
         curated.append(
             {
                 "id": stable_id(source_url or title),
@@ -300,9 +353,11 @@ def curate_posts(posts: list[dict[str, Any]], *, max_items: int) -> list[dict[st
                 "categoryLabel": category_label,
                 "postText": shorten_text(post.get("postText") or post.get("selfText"), 600) or None,
                 "whyFunny": why_funny_for(title, category_label),
-                "commentHighlights": comment_highlights_from(
-                    post.get("commentHighlights") or post.get("commentSnippets") or post.get("commentsList")
-                ),
+                "rawCommentSnippets": raw_comments if isinstance(raw_comments, list) else [],
+                "commentHighlights": comment_highlights_from(raw_comments, title=title, category_label=category_label),
+                "commentAnalysisStatus": "blocked",
+                "commentAnalysisSource": "",
+                "commentAnalysisNote": COMMENT_ANALYSIS_REQUIRED_NOTE,
             }
         )
         if len(curated) >= max_items:
@@ -364,6 +419,382 @@ def build_digest(
     }
 
 
+def public_digest_payload(digest: dict[str, Any]) -> dict[str, Any]:
+    public_digest = deepcopy(digest)
+    public_items: list[dict[str, Any]] = []
+    for item in public_digest.get("items") or []:
+        if not isinstance(item, dict):
+            continue
+        public_item = {key: value for key, value in item.items() if key not in INTERNAL_DETAIL_KEYS}
+        public_items.append(public_item)
+    public_digest["items"] = public_items
+    return public_digest
+
+
+def digest_with_comment_analysis_defaults(digest: dict[str, Any]) -> dict[str, Any]:
+    raw_digest = deepcopy(digest)
+    items = raw_digest.get("items") if isinstance(raw_digest.get("items"), list) else []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        status = clean_text(item.get("commentAnalysisStatus"))
+        if status not in COMMENT_ANALYSIS_STATUSES:
+            item["commentAnalysisStatus"] = "blocked"
+        if clean_text(item.get("commentAnalysisStatus")) == "blocked":
+            item.setdefault("commentAnalysisSource", "")
+            item["commentAnalysisNote"] = clean_text(item.get("commentAnalysisNote")) or COMMENT_ANALYSIS_REQUIRED_NOTE
+    return raw_digest
+
+
+def reddit_radar_raw_path_for(final_path: Path) -> Path:
+    name = final_path.name
+    if name.endswith("-reddit-radar.json"):
+        return final_path.with_name(name.replace("-reddit-radar.json", "-reddit-radar-raw.json"))
+    return final_path.with_name(final_path.stem + "-raw.json")
+
+
+def reddit_radar_markdown_path_for(final_path: Path) -> Path:
+    name = final_path.name
+    if name.endswith("-reddit-radar.json"):
+        return final_path.parent.parent / "runs" / name.replace("-reddit-radar.json", "-reddit-radar.md")
+    return final_path.with_suffix(".md")
+
+
+def load_matching_reddit_radar_raw_digest(final_path: Path) -> dict[str, Any]:
+    raw_path = reddit_radar_raw_path_for(final_path)
+    if not raw_path.exists():
+        return {}
+    payload = json.loads(raw_path.read_text(encoding="utf-8"))
+    return payload if isinstance(payload, dict) else {}
+
+
+def raw_items_by_key(raw_digest: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    items = raw_digest.get("items") if isinstance(raw_digest.get("items"), list) else []
+    by_key: dict[str, dict[str, Any]] = {}
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        key = reddit_radar_item_key(item)
+        if key:
+            by_key[key] = item
+    return by_key
+
+
+def why_funny_is_generic(item: dict[str, Any]) -> bool:
+    title = clean_text(item.get("title"))
+    category_label = clean_text(item.get("categoryLabel"))
+    return clean_text(item.get("whyFunny")) == why_funny_for(title, category_label)
+
+
+def comment_explanation_is_generic(highlight: dict[str, Any], item: dict[str, Any]) -> bool:
+    explanation = clean_text(highlight.get("explanation"))
+    if explanation in GENERIC_COMMENT_EXPLANATIONS:
+        return True
+    summary = clean_text(highlight.get("summary"))
+    title = clean_text(item.get("title"))
+    category_label = clean_text(item.get("categoryLabel"))
+    return explanation == comment_explanation_for(summary, title, category_label)
+
+
+def validate_digest_comment_analysis_for_publish(
+    digest: dict[str, Any],
+    *,
+    raw_digest: dict[str, Any],
+    final_path: Path | None = None,
+) -> None:
+    items = digest.get("items") if isinstance(digest.get("items"), list) else []
+    if not items:
+        return
+
+    errors: list[str] = []
+    raw_lookup = raw_items_by_key(raw_digest)
+    for index, item in enumerate(items, start=1):
+        if not isinstance(item, dict):
+            errors.append(f"item {index}: invalid item payload")
+            continue
+        key = reddit_radar_item_key(item)
+        raw_item = raw_lookup.get(key)
+        label = clean_text(item.get("title")) or key or f"item {index}"
+        if raw_item is None:
+            errors.append(f"{label}: missing raw comment analysis metadata")
+            continue
+
+        status = clean_text(raw_item.get("commentAnalysisStatus"))
+        source = clean_text(raw_item.get("commentAnalysisSource"))
+        note = clean_text(raw_item.get("commentAnalysisNote"))
+        highlights = item.get("commentHighlights") if isinstance(item.get("commentHighlights"), list) else []
+        if status not in {"reviewed", "no_safe_comments"}:
+            errors.append(f"{label}: commentAnalysisStatus must be reviewed or no_safe_comments")
+        if source != COMMENT_ANALYSIS_SOURCE:
+            errors.append(f"{label}: commentAnalysisSource must be {COMMENT_ANALYSIS_SOURCE}")
+        if not clean_text(item.get("whyFunny")):
+            errors.append(f"{label}: whyFunny is required")
+        elif why_funny_is_generic(item):
+            errors.append(f"{label}: whyFunny still looks like generic collector text")
+        if len(highlights) > 3:
+            errors.append(f"{label}: commentHighlights must contain at most 3 items")
+
+        if status == "no_safe_comments":
+            if highlights:
+                errors.append(f"{label}: no_safe_comments requires empty commentHighlights")
+            if not note:
+                errors.append(f"{label}: no_safe_comments requires commentAnalysisNote")
+            continue
+
+        if status == "reviewed":
+            if not highlights:
+                errors.append(f"{label}: reviewed posts require at least one analyzed comment")
+            for highlight_index, highlight in enumerate(highlights, start=1):
+                if not isinstance(highlight, dict):
+                    errors.append(f"{label}: comment {highlight_index} is invalid")
+                    continue
+                if not clean_text(highlight.get("id")):
+                    errors.append(f"{label}: comment {highlight_index} id is required")
+                if not clean_text(highlight.get("summary")):
+                    errors.append(f"{label}: comment {highlight_index} summary is required")
+                if not clean_text(highlight.get("originalBody")):
+                    errors.append(f"{label}: comment {highlight_index} originalBody is required")
+                explanation = clean_text(highlight.get("explanation"))
+                if not explanation:
+                    errors.append(f"{label}: comment {highlight_index} explanation is required")
+                elif comment_explanation_is_generic(highlight, item):
+                    errors.append(f"{label}: comment {highlight_index} explanation still looks generic")
+
+    if errors:
+        prefix = "Reddit Radar comment analysis quality gate failed"
+        if final_path is not None:
+            prefix += f" for {final_path}"
+        raise RuntimeError(prefix + ": " + "; ".join(errors))
+
+
+def reddit_radar_item_key(item: dict[str, Any]) -> str:
+    source_url = normalize_reddit_url(item.get("sourceURL") or item.get("url"))
+    if source_url:
+        return source_url.lower().rstrip("/")
+    return clean_text(item.get("title")).lower()
+
+
+def merge_reddit_radar_items(
+    previous_items: list[dict[str, Any]],
+    fresh_items: list[dict[str, Any]],
+    *,
+    max_items: int,
+    replace_count: int,
+    generated_at: datetime,
+) -> list[dict[str, Any]]:
+    now = generated_at.astimezone(timezone.utc).isoformat()
+    max_items = max(1, min(max_items, 12))
+    replace_count = max(1, min(replace_count, max_items))
+
+    previous_by_key: dict[str, dict[str, Any]] = {}
+    for item in previous_items:
+        if not isinstance(item, dict):
+            continue
+        key = reddit_radar_item_key(item)
+        if not key or key in previous_by_key:
+            continue
+        next_item = dict(item)
+        next_item["radarKey"] = key
+        next_item.setdefault("radarFirstSeenAt", now)
+        next_item["radarLastSeenAt"] = now
+        previous_by_key[key] = next_item
+
+    additions: list[dict[str, Any]] = []
+    seen_fresh: set[str] = set()
+    for item in fresh_items:
+        if not isinstance(item, dict):
+            continue
+        key = reddit_radar_item_key(item)
+        if not key or key in previous_by_key or key in seen_fresh:
+            continue
+        seen_fresh.add(key)
+        next_item = dict(item)
+        next_item["radarKey"] = key
+        next_item["radarFirstSeenAt"] = now
+        next_item["radarLastSeenAt"] = now
+        additions.append(next_item)
+
+    previous = list(previous_by_key.values())
+    if len(previous) < max_items:
+        merged = previous + additions[: max_items - len(previous)]
+    else:
+        replacement_count = min(replace_count, len(additions))
+        retained_count = max_items - replacement_count
+        retained = sorted(
+            previous,
+            key=lambda item: clean_text(item.get("radarFirstSeenAt")),
+            reverse=True,
+        )[:retained_count]
+        merged = retained + additions[:replacement_count]
+
+    merged.sort(
+        key=lambda item: (
+            clean_text(item.get("radarFirstSeenAt")),
+            parse_int(item.get("score")),
+            parse_int(item.get("comments")),
+        ),
+        reverse=True,
+    )
+    return merged[:max_items]
+
+
+def load_recent_reddit_radar_history_keys(
+    output_root: Path,
+    *,
+    generated_at: datetime,
+    lookback_days: int,
+) -> set[str]:
+    data_dir = output_root / "data"
+    if lookback_days <= 0 or not data_dir.exists():
+        return set()
+
+    cutoff = generated_at.astimezone(timezone.utc) - timedelta(days=lookback_days)
+    seen: set[str] = set()
+    for path in sorted(data_dir.glob("*-reddit-radar.json")):
+        stamp = path.name.removesuffix("-reddit-radar.json")
+        try:
+            stamp_dt = datetime.strptime(stamp, "%Y-%m-%d-%H%M").replace(tzinfo=ZoneInfo("Europe/Warsaw"))
+        except ValueError:
+            continue
+        if stamp_dt.astimezone(timezone.utc) < cutoff:
+            continue
+        try:
+            payload = json.loads(path.read_text(encoding="utf-8"))
+        except (OSError, json.JSONDecodeError):
+            continue
+        items = payload.get("items") if isinstance(payload, dict) else None
+        if not isinstance(items, list):
+            continue
+        for item in items:
+            if not isinstance(item, dict):
+                continue
+            key = reddit_radar_item_key(item)
+            if key:
+                seen.add(key)
+    return seen
+
+
+def load_reddit_radar_state(output_root: Path) -> list[dict[str, Any]]:
+    state_path = output_root / "data" / "reddit-radar-state.json"
+    if not state_path.exists():
+        return []
+    try:
+        payload = json.loads(state_path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return []
+    items = payload.get("items") if isinstance(payload, dict) else None
+    return [item for item in items if isinstance(item, dict)] if isinstance(items, list) else []
+
+
+def save_reddit_radar_state(output_root: Path, *, items: list[dict[str, Any]], generated_at: datetime) -> Path:
+    state_path = output_root / "data" / "reddit-radar-state.json"
+    state_path.parent.mkdir(parents=True, exist_ok=True)
+    state = {
+        "updatedAt": generated_at.astimezone(timezone.utc).isoformat(),
+        "maxItems": 12,
+        "replaceOldestCount": 6,
+        "items": items,
+    }
+    state_path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    return state_path
+
+
+def digest_stamp(digest: dict[str, Any], timezone_name: str = "Europe/Warsaw") -> str:
+    generated_at = digest.get("generatedAt")
+    try:
+        parsed = datetime.fromisoformat(str(generated_at))
+    except ValueError:
+        parsed = datetime.now(timezone.utc)
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(ZoneInfo(timezone_name)).strftime("%Y-%m-%d-%H%M")
+
+
+def write_reddit_radar_artifacts(
+    digest: dict[str, Any],
+    *,
+    output_root: Path = DEFAULT_ARTIFACT_ROOT,
+    timezone_name: str = "Europe/Warsaw",
+) -> dict[str, Path]:
+    stamp = digest_stamp(digest, timezone_name=timezone_name)
+    data_dir = output_root / "data"
+    runs_dir = output_root / "runs"
+    data_dir.mkdir(parents=True, exist_ok=True)
+    runs_dir.mkdir(parents=True, exist_ok=True)
+
+    raw_path = data_dir / f"{stamp}-reddit-radar-raw.json"
+    final_path = data_dir / f"{stamp}-reddit-radar.json"
+    markdown_path = runs_dir / f"{stamp}-reddit-radar.md"
+
+    raw_digest = digest_with_comment_analysis_defaults(digest)
+    raw_path.write_text(json.dumps(raw_digest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    final_digest = public_digest_payload(digest)
+    final_path.write_text(json.dumps(final_digest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    markdown_path.write_text(reddit_radar_markdown(raw_digest, stamp=stamp), encoding="utf-8")
+    return {"raw": raw_path, "final": final_path, "markdown": markdown_path}
+
+
+def reddit_radar_markdown(digest: dict[str, Any], *, stamp: str) -> str:
+    lines = [
+        f"# Reddit Radar {stamp}",
+        "",
+        "Status: Material update",
+        "",
+        f"Summary: {clean_text(digest.get('summary'))}",
+        "",
+        "## Analiza komentarzy",
+        "",
+    ]
+    items = digest.get("items") if isinstance(digest.get("items"), list) else []
+    if not items:
+        lines.extend(["Brak bezpiecznych tematów do analizy.", ""])
+        return "\n".join(lines)
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        lines.extend(
+            [
+                f"### {clean_text(item.get('title'))}",
+                "",
+                f"- Subreddit: {clean_text(item.get('sourceName'))}",
+                f"- Kategorie: {clean_text(item.get('categoryLabel')) or ', '.join(item.get('tags') or []) or 'trend'}",
+                f"- Score/comments: {item.get('score') or 0}/{item.get('comments') or 0}",
+                f"- Status analizy komentarzy: {clean_text(item.get('commentAnalysisStatus')) or 'brak'}",
+            ]
+        )
+        analysis_source = clean_text(item.get("commentAnalysisSource"))
+        if analysis_source:
+            lines.append(f"- Źródło analizy komentarzy: {analysis_source}")
+        analysis_note = clean_text(item.get("commentAnalysisNote"))
+        if analysis_note:
+            lines.append(f"- Notatka analizy: {analysis_note}")
+        post_text = clean_text(item.get("postText"))
+        if post_text:
+            lines.append(f"- Post: {post_text}")
+        why_funny = clean_text(item.get("whyFunny"))
+        if why_funny:
+            lines.append(f"- Dlaczego temat działa: {why_funny}")
+        highlights = item.get("commentHighlights") if isinstance(item.get("commentHighlights"), list) else []
+        if not highlights:
+            lines.extend(["", "Brak bezpiecznych komentarzy do pokazania w tym temacie.", ""])
+            continue
+        lines.append("")
+        for index, highlight in enumerate(highlights, start=1):
+            if not isinstance(highlight, dict):
+                continue
+            lines.extend(
+                [
+                    f"{index}. Czego dotyczy: {clean_text(highlight.get('summary'))}",
+                    f"   Dlaczego ciekawe/smieszne: {clean_text(highlight.get('explanation'))}",
+                ]
+            )
+            score = highlight.get("score")
+            if isinstance(score, int) and score > 0:
+                lines.append(f"   Score: {score}")
+        lines.append("")
+    return "\n".join(lines).rstrip() + "\n"
+
+
 def collect_posts_from_safari(subreddits: list[str]) -> list[dict[str, Any]]:
     posts: list[dict[str, Any]] = []
     for subreddit in subreddits:
@@ -381,7 +812,8 @@ def enrich_items_from_safari(items: list[dict[str, Any]]) -> list[dict[str, Any]
     for item in items:
         next_item = dict(item)
         source_url = clean_text(item.get("sourceURL"))
-        if source_url:
+        needs_detail = not next_item.get("postText") or not next_item.get("commentHighlights")
+        if source_url and needs_detail:
             try:
                 detail = safari_extract_post_detail(source_url)
             except Exception:
@@ -390,6 +822,13 @@ def enrich_items_from_safari(items: list[dict[str, Any]]) -> list[dict[str, Any]
             if post_text and not next_item.get("postText"):
                 next_item["postText"] = post_text
             highlights = comment_highlights_from(detail.get("commentSnippets"))
+            if isinstance(detail.get("commentSnippets"), list):
+                next_item["rawCommentSnippets"] = detail["commentSnippets"]
+                highlights = comment_highlights_from(
+                    detail.get("commentSnippets"),
+                    title=clean_text(next_item.get("title")),
+                    category_label=clean_text(next_item.get("categoryLabel")),
+                )
             if highlights and not next_item.get("commentHighlights"):
                 next_item["commentHighlights"] = highlights
         enriched.append(next_item)
@@ -458,6 +897,68 @@ def post_digest(digest: dict[str, Any], *, notifier_url: str, token: str) -> dic
         return json.loads(response.read().decode("utf-8"))
 
 
+def publish_reddit_radar_artifacts(
+    *,
+    artifact_root: Path,
+    expected_paths: dict[str, Path],
+) -> None:
+    repo_root = Path(__file__).resolve().parents[1]
+    topic_path = Path("research/reddit-radar")
+    publish_script = repo_root / "scripts" / "pavbot_commit_and_push_outputs.sh"
+    target_branch = os.environ.get("PAVBOT_PUBLISH_BRANCH", "main")
+
+    if artifact_root.resolve() != (repo_root / topic_path).resolve():
+        raise RuntimeError(
+            "Reddit Radar artifact publication requires the standard "
+            f"{topic_path} artifact root"
+        )
+
+    subprocess.run(
+        ["bash", str(publish_script), "--isolated", str(topic_path)],
+        cwd=repo_root,
+        check=True,
+    )
+    subprocess.run(["git", "fetch", "origin", target_branch], cwd=repo_root, check=True)
+
+    manifest_json = subprocess.run(
+        ["git", "show", f"origin/{target_branch}:public/pavbot-manifest.json"],
+        cwd=repo_root,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout
+    manifest = json.loads(manifest_json)
+    manifest_paths = {
+        artifact.get("path")
+        for artifact in manifest.get("artifacts", [])
+        if isinstance(artifact, dict)
+    }
+
+    missing_manifest_paths: list[str] = []
+    missing_remote_paths: list[str] = []
+    for path in expected_paths.values():
+        rel_path = str(path.resolve().relative_to(repo_root) if path.is_absolute() else path)
+        if rel_path not in manifest_paths:
+            missing_manifest_paths.append(rel_path)
+        remote_check = subprocess.run(
+            ["git", "cat-file", "-e", f"origin/{target_branch}:{rel_path}"],
+            cwd=repo_root,
+            check=False,
+            capture_output=True,
+            text=True,
+        )
+        if remote_check.returncode != 0:
+            missing_remote_paths.append(rel_path)
+
+    if missing_manifest_paths or missing_remote_paths:
+        messages = []
+        if missing_manifest_paths:
+            messages.append("missing from remote manifest: " + ", ".join(sorted(missing_manifest_paths)))
+        if missing_remote_paths:
+            messages.append(f"missing from origin/{target_branch}: " + ", ".join(sorted(missing_remote_paths)))
+        raise RuntimeError("Reddit Radar publication verification failed; " + "; ".join(messages))
+
+
 def parse_subreddits(value: str) -> list[str]:
     raw = value or ",".join(DEFAULT_SUBREDDITS)
     subreddits = []
@@ -472,33 +973,119 @@ def main() -> int:
     load_env_file(Path("backend/pavbot-notifier/.env"))
     parser = argparse.ArgumentParser(description="Collect Reddit humor digest from logged-in Safari.")
     parser.add_argument("--subreddits", default=os.environ.get("PAVBOT_SAFARI_REDDIT_SUBREDDITS", ""))
-    parser.add_argument("--max-items", type=int, default=int(os.environ.get("PAVBOT_DAILY_HUMOR_MAX_ITEMS", "6")))
+    parser.add_argument("--max-items", type=int, default=int(os.environ.get("PAVBOT_DAILY_HUMOR_MAX_ITEMS", "12")))
     parser.add_argument("--interval-hours", type=int, default=int(os.environ.get("PAVBOT_DAILY_HUMOR_INTERVAL_HOURS", "2")))
     parser.add_argument("--timezone", default=os.environ.get("PAVBOT_DAILY_HUMOR_TIMEZONE", "Europe/Warsaw"))
     parser.add_argument("--notifier-url", default=os.environ.get("PAVBOT_HUMOR_NOTIFIER_URL", DEFAULT_NOTIFIER_URL))
+    parser.add_argument("--artifact-root", default=os.environ.get("PAVBOT_REDDIT_RADAR_ARTIFACT_ROOT", str(DEFAULT_ARTIFACT_ROOT)))
+    parser.add_argument("--replace-count", type=int, default=6)
+    parser.add_argument(
+        "--history-lookback-days",
+        type=int,
+        default=int(os.environ.get("PAVBOT_REDDIT_RADAR_HISTORY_LOOKBACK_DAYS", str(DEFAULT_HISTORY_LOOKBACK_DAYS))),
+    )
+    parser.add_argument("--no-artifacts", action="store_true", help="Do not write research/reddit-radar audit artifacts.")
+    parser.add_argument(
+        "--post-file",
+        type=Path,
+        help="Publish an already prepared Reddit Radar digest JSON file after pushing the matching audit artifacts to origin/main.",
+    )
     parser.add_argument("--post", action="store_true", help="Publish digest to notifier /v1/humor/digest.")
     args = parser.parse_args()
 
-    posts = collect_posts_from_safari(parse_subreddits(args.subreddits))
-    items = curate_posts(posts, max_items=max(1, args.max_items))
-    if not items:
-        raise RuntimeError("Safari Reddit collector did not find usable non-NSFW Reddit posts")
-    items = enrich_items_from_safari(items)
-    digest = build_digest(
-        items=items,
-        generated_at=datetime.now(timezone.utc),
-        interval_hours=max(1, args.interval_hours),
-        timezone_name=args.timezone,
-    )
-    if args.post:
+    if args.post_file:
+        post_file = args.post_file
+        digest = json.loads(post_file.read_text(encoding="utf-8"))
+        public_digest = public_digest_payload(digest if isinstance(digest, dict) else {})
+        validate_digest_comment_analysis_for_publish(
+            public_digest,
+            raw_digest=load_matching_reddit_radar_raw_digest(post_file),
+            final_path=post_file,
+        )
+        if post_file.name.endswith("-reddit-radar.json") and post_file.parts[-4:-1] == ("research", "reddit-radar", "data"):
+            publish_reddit_radar_artifacts(
+                artifact_root=DEFAULT_ARTIFACT_ROOT,
+                expected_paths={
+                    "raw": reddit_radar_raw_path_for(post_file),
+                    "final": post_file,
+                    "markdown": reddit_radar_markdown_path_for(post_file),
+                },
+            )
         result = post_digest(
-            digest,
+            public_digest,
             notifier_url=args.notifier_url,
             token=os.environ.get("PAVBOT_HUMOR_INGEST_TOKEN", ""),
         )
-        print(json.dumps({"postResult": result, "digest": digest}, ensure_ascii=False, indent=2))
+        print(json.dumps({"postResult": result, "digest": public_digest}, ensure_ascii=False, indent=2))
+        return 0
+
+    posts = collect_posts_from_safari(parse_subreddits(args.subreddits))
+    generated_at = datetime.now(timezone.utc)
+    max_items = max(1, min(args.max_items, 12))
+    replace_count = max(1, min(args.replace_count, max_items))
+    fresh_items = curate_posts(posts, max_items=max(max_items + replace_count, max_items))
+    if not fresh_items:
+        raise RuntimeError("Safari Reddit collector did not find usable non-NSFW Reddit posts")
+    artifact_root = Path(args.artifact_root)
+    recent_history_keys = load_recent_reddit_radar_history_keys(
+        artifact_root,
+        generated_at=generated_at,
+        lookback_days=max(0, args.history_lookback_days),
+    )
+    if recent_history_keys:
+        fresh_items = [
+            item for item in fresh_items if reddit_radar_item_key(item) not in recent_history_keys
+        ]
+    if not fresh_items:
+        raise RuntimeError(
+            "Safari Reddit collector did not find usable non-duplicate Reddit posts "
+            f"outside the last {max(0, args.history_lookback_days)} days of radar history"
+        )
+    previous_items = load_reddit_radar_state(artifact_root)
+    items = merge_reddit_radar_items(
+        previous_items,
+        fresh_items,
+        max_items=max_items,
+        replace_count=replace_count,
+        generated_at=generated_at,
+    )
+    items = enrich_items_from_safari(items)
+    digest = build_digest(
+        items=items,
+        generated_at=generated_at,
+        interval_hours=max(1, args.interval_hours),
+        timezone_name=args.timezone,
+    )
+    artifact_paths: dict[str, Path] = {}
+    if not args.no_artifacts:
+        state_path = save_reddit_radar_state(artifact_root, items=items, generated_at=generated_at)
+        artifact_paths = write_reddit_radar_artifacts(
+            digest,
+            output_root=artifact_root,
+            timezone_name=args.timezone,
+        )
+        artifact_paths["state"] = state_path
+        publish_reddit_radar_artifacts(
+            artifact_root=artifact_root,
+            expected_paths={key: path for key, path in artifact_paths.items() if key != "state"},
+        )
+    public_digest = public_digest_payload(digest)
+    if args.post:
+        validate_digest_comment_analysis_for_publish(
+            public_digest,
+            raw_digest=digest_with_comment_analysis_defaults(digest),
+        )
+        result = post_digest(
+            public_digest,
+            notifier_url=args.notifier_url,
+            token=os.environ.get("PAVBOT_HUMOR_INGEST_TOKEN", ""),
+        )
+        payload: dict[str, Any] = {"postResult": result, "digest": public_digest}
+        if artifact_paths:
+            payload["artifacts"] = {key: str(path) for key, path in artifact_paths.items()}
+        print(json.dumps(payload, ensure_ascii=False, indent=2))
     else:
-        print(json.dumps(digest, ensure_ascii=False, indent=2))
+        print(json.dumps(public_digest, ensure_ascii=False, indent=2))
     return 0
 
 

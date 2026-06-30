@@ -20,8 +20,6 @@ from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import (
     HRFlowable,
     KeepTogether,
-    ListFlowable,
-    ListItem,
     PageBreak,
     Paragraph,
     SimpleDocTemplate,
@@ -51,6 +49,7 @@ from pavbot_pdf_theme import (  # noqa: E402
     SURFACE,
     build_mobile_styles,
     draw_mobile_page,
+    source_list_flowable,
 )
 
 
@@ -329,11 +328,7 @@ def render_mobile_pdf(
     story.append(PageBreak())
     story.append(Paragraph("Źródła", styles["section"]))
     if source_items:
-        items = []
-        for label, url in source_items[:24]:
-            safe_url = escape(url, quote=True)
-            items.append(ListItem(Paragraph(f'<a href="{safe_url}">{escape(label)}</a>', styles["link"])))
-        story.append(ListFlowable(items, bulletType="bullet", leftIndent=12))
+        story.append(source_list_flowable(source_items[:24], styles, limit=24))
     else:
         story.append(Paragraph("Brak linków źródłowych w raporcie lub sources.md.", styles["body"]))
 

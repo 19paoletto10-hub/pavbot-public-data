@@ -205,9 +205,9 @@ final class JobsStore {
     }
 
     private func cacheNoticeText(for cached: CachedJobsReport?) -> String {
-        let base = "Pokazuję ostatnie zapisane dane Jobs"
+        let base = "dane Jobs"
         guard let cached else {
-            return "\(base). Odświeżenie nie powiodło się."
+            return PavbotCacheNoticeCopy.refreshFailed(context: base)
         }
 
         let dateTime = [cached.reportDate, cached.reportTime]
@@ -218,9 +218,9 @@ final class JobsStore {
             .filter { !$0.isEmpty }
 
         guard !details.isEmpty else {
-            return "\(base). Odświeżenie nie powiodło się."
+            return PavbotCacheNoticeCopy.refreshFailed(context: base)
         }
-        return "\(base) (\(details.joined(separator: ", "))). Odświeżenie nie powiodło się."
+        return PavbotCacheNoticeCopy.refreshFailed(context: "\(base) (\(details.joined(separator: ", ")))")
     }
 }
 

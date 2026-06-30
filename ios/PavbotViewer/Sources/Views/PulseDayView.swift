@@ -4,6 +4,7 @@ struct PulseDayView: View {
     @Environment(ManifestStore.self) private var manifestStore
     @Environment(AppRouter.self) private var router
     @Environment(PavbotHaptics.self) private var haptics
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @State private var liveTopicsStore = TodayLiveTopicsStore()
     @State private var savedStore = TodayLiveTopicSavedStore()
     @State private var selectedMode: PulseDayMode = .latest
@@ -11,60 +12,62 @@ struct PulseDayView: View {
     @State private var selectedHistoryRun: TodayLiveTopicsSnapshot?
 
     var body: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 18) {
-                PulseDayHeroHeader(
-                    snapshot: liveTopicsStore.snapshot,
-                    isRefreshing: liveTopicsStore.isRefreshing
-                )
+        GeometryReader { proxy in
+            let layout = PavbotAdaptiveLayout.resolve(
+                width: proxy.size.width,
+                horizontalSizeClass: horizontalSizeClass
+            )
 
-                Picker("Widok Pulsu Dnia", selection: $selectedMode) {
-                    ForEach(PulseDayMode.allCases) { mode in
-                        Text(mode.title).tag(mode)
-                    }
-                }
-                .pickerStyle(.segmented)
-
-                switch selectedMode {
-                case .latest:
-                    TodayLiveTopicsPanel(
+            PavbotPremiumScreenScaffold(layout: layout) {
+                    PulseDayHeroHeader(
                         snapshot: liveTopicsStore.snapshot,
-                        state: liveTopicsStore.state,
-                        emptyMessage: liveTopicsStore.emptyMessage,
                         isRefreshing: liveTopicsStore.isRefreshing,
-                        selectedTopic: $selectedTopic,
-                        savedStore: savedStore,
-                        openAktualne: openAktualneMagazine
+                        layout: layout
                     )
-                case .history:
-                    PulseDayHistoryView(
-                        snapshots: liveTopicsStore.historySnapshots,
-                        selectedTopic: $selectedTopic,
-                        savedStore: savedStore,
-                        openRun: { snapshot in
-                            selectedHistoryRun = snapshot
+
+                    Picker("Widok Pulsu Dnia", selection: $selectedMode) {
+                        ForEach(PulseDayMode.allCases) { mode in
+                            Text(mode.title).tag(mode)
                         }
-                    )
-                }
+                    }
+                    .pickerStyle(.segmented)
+
+                    switch selectedMode {
+                    case .latest:
+                        TodayLiveTopicsPanel(
+                            snapshot: liveTopicsStore.snapshot,
+                            state: liveTopicsStore.state,
+                            emptyMessage: liveTopicsStore.emptyMessage,
+                            isRefreshing: liveTopicsStore.isRefreshing,
+                            selectedTopic: $selectedTopic,
+                            savedStore: savedStore,
+                            layout: layout,
+                            openAktualne: openAktualneMagazine
+                        )
+                    case .history:
+                        PulseDayHistoryView(
+                            snapshots: liveTopicsStore.historySnapshots,
+                            selectedTopic: $selectedTopic,
+                            savedStore: savedStore,
+                            layout: layout,
+                            openRun: { snapshot in
+                                selectedHistoryRun = snapshot
+                            }
+                        )
+                    }
             }
-            .padding(.horizontal, 20)
-            .padding(.vertical, 24)
+            .environment(\.pavbotAdaptiveLayout, layout)
         }
-        .background(Color(.systemGroupedBackground))
         .navigationTitle("Puls Dnia")
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button {
+                PavbotRefreshToolbarButton(
+                    isRefreshing: isRefreshingPulseDay,
+                    accessibilityLabel: "Odśwież Puls Dnia",
+                    accessibilityHint: "Odświeża manifest oraz dane Pulsu Dnia."
+                ) {
                     Task { await reload(refreshManifest: true, minimumInterval: 0) }
-                } label: {
-                    if liveTopicsStore.isRefreshing {
-                        ProgressView()
-                    } else {
-                        Image(systemName: "arrow.clockwise")
-                    }
                 }
-                .disabled(liveTopicsStore.isRefreshing)
-                .accessibilityLabel("Odśwież Puls Dnia")
             }
         }
         .task {
@@ -93,13 +96,16 @@ struct PulseDayView: View {
                 displayDate: selection.displayDate,
                 savedStore: savedStore
             )
+            .pavbotLargeObjectPresentation()
         }
         .sheet(item: $selectedHistoryRun) { snapshot in
             PulseDayHistoryRunDetailView(
                 snapshot: snapshot,
                 savedStore: savedStore
             )
+            .pavbotLargeObjectPresentation()
         }
+        .pavbotTabInfo(PavbotTabInfoContent.pulseDay(subtabTitle: selectedMode.title))
     }
 
     private var pulseRouteReloadKey: String {
@@ -110,6 +116,10 @@ struct PulseDayView: View {
             return "no-pulse-route"
         }
         return [day, artifacts].joined(separator: "::")
+    }
+
+    private var isRefreshingPulseDay: Bool {
+        manifestStore.state == .loading || liveTopicsStore.isRefreshing
     }
 
     private func reload(refreshManifest: Bool, minimumInterval: TimeInterval) async {
@@ -148,57 +158,24 @@ private enum PulseDayMode: String, CaseIterable, Identifiable {
 private struct PulseDayHeroHeader: View {
     let snapshot: TodayLiveTopicsSnapshot?
     let isRefreshing: Bool
+    let layout: PavbotAdaptiveLayout
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            HStack(alignment: .top, spacing: 14) {
-                Image(systemName: "globe.europe.africa.fill")
-                    .font(.title.weight(.bold))
-                    .foregroundStyle(.orange)
-                    .frame(width: 58, height: 58)
-                    .background(Color.orange.opacity(0.14), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-                    .accessibilityHidden(true)
-
-                VStack(alignment: .leading, spacing: 6) {
-                    StatusBadge(text: "Pavbot info", systemImage: "sparkles", tint: .orange)
-                    Text("Puls Dnia")
-                        .font(.largeTitle.weight(.bold))
-                        .fixedSize(horizontal: false, vertical: true)
-                    Text("Najważniejsze tematy z automatyzacji co 3 godziny, gotowe do szybkiego przeglądu i zapisania lokalnie.")
-                        .font(.callout)
-                        .foregroundStyle(.secondary)
-                        .lineSpacing(3)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-
-                Spacer(minLength: 0)
-            }
-
-            HStack(spacing: 10) {
-                if let snapshot {
-                    StatusBadge(text: snapshot.sourceLabel, systemImage: snapshot.isFallback ? "exclamationmark.triangle.fill" : "checkmark.seal.fill", tint: snapshot.isFallback ? .orange : .green)
-                    StatusBadge(text: snapshot.displayDate, systemImage: "clock.fill", tint: .blue)
-                }
-
-                if isRefreshing {
-                    ProgressView()
-                        .controlSize(.small)
-                }
-            }
-        }
-        .padding(20)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(
-            LinearGradient(
-                colors: [
-                    Color(.systemBackground),
-                    Color.orange.opacity(0.10),
-                    Color.blue.opacity(0.08)
-                ],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            ),
-            in: RoundedRectangle(cornerRadius: 24, style: .continuous)
+        PavbotCommandHero(
+            eyebrow: "Pavbot info",
+            title: "Puls Dnia",
+            subtitle: layout.usesDashboardLayout
+                ? "Newsroom grid z top tematami, historią i lokalnym zapisem najważniejszych artykułów."
+                : "Szybki briefing co 3 godziny z tematami gotowymi do zapisania lokalnie.",
+            systemImage: "globe.europe.africa.fill",
+            tint: .orange,
+            insights: [
+                PavbotInsight(title: "Tematy", value: "\(snapshot?.allTopics.count ?? 0)", systemImage: "doc.text.fill", tint: .orange),
+                PavbotInsight(title: "Źródło", value: snapshot?.sourceLabel ?? "Ładowanie", systemImage: snapshot?.isFallback == true ? "exclamationmark.triangle.fill" : "checkmark.seal.fill", tint: snapshot?.isFallback == true ? .orange : .green),
+                PavbotInsight(title: "Aktualizacja", value: snapshot?.displayDate ?? "-", systemImage: "clock.fill", tint: .blue),
+                PavbotInsight(title: "Status", value: isRefreshing ? "Odświeżam" : "Gotowe", systemImage: isRefreshing ? "arrow.clockwise" : "sparkles", tint: isRefreshing ? .blue : .green)
+            ],
+            startsCollapsed: true
         )
     }
 }
@@ -207,6 +184,7 @@ private struct PulseDayHistoryView: View {
     let snapshots: [TodayLiveTopicsSnapshot]
     @Binding var selectedTopic: TodayLiveTopicSelection?
     let savedStore: TodayLiveTopicSavedStore
+    let layout: PavbotAdaptiveLayout
     let openRun: (TodayLiveTopicsSnapshot) -> Void
 
     var body: some View {
@@ -240,7 +218,7 @@ private struct PulseDayHistoryView: View {
                 .frame(maxWidth: .infinity, minHeight: 150, alignment: .leading)
                 .background(Color(.systemBackground), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
             } else {
-                LazyVStack(spacing: 12) {
+                LazyVGrid(columns: layout.adaptiveColumns(minimum: layout.usesDashboardLayout ? 340 : 280), spacing: layout.cardSpacing) {
                     ForEach(snapshots) { snapshot in
                         PulseDayHistoryRunCard(
                             snapshot: snapshot,
@@ -441,6 +419,7 @@ private struct PulseDayHistoryRunDetailView: View {
                     displayDate: selection.displayDate,
                     savedStore: savedStore
                 )
+                .pavbotLargeObjectPresentation()
             }
         }
     }
@@ -537,9 +516,13 @@ private struct PulseDayHistoryTopicRow: View {
                         .foregroundStyle(.blue)
                 }
                 Spacer(minLength: 0)
-                Text(topic.sourceCountLabel)
-                    .font(.caption.weight(.semibold))
-                    .foregroundStyle(.secondary)
+                HStack(spacing: 8) {
+                    PavbotSourceCountBadge(count: topic.sources.count, tint: .orange)
+
+                    Image(systemName: "chevron.right")
+                        .font(.caption.weight(.bold))
+                        .foregroundStyle(.tertiary)
+                }
             }
 
             Text(topic.title)
@@ -553,19 +536,17 @@ private struct PulseDayHistoryTopicRow: View {
                 .lineSpacing(3)
                 .fixedSize(horizontal: false, vertical: true)
 
-            HStack(spacing: 7) {
-                ForEach(topic.tags.prefix(4), id: \.self) { tag in
-                    Text(tag)
-                        .font(.caption2.weight(.semibold))
-                        .foregroundStyle(.orange)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 5)
-                        .background(Color.orange.opacity(0.10), in: Capsule())
+            if !topic.tags.isEmpty {
+                PavbotArticleKeywordRows(horizontalSpacing: 7, verticalSpacing: 6) {
+                    ForEach(topic.tags.prefix(4), id: \.self) { tag in
+                        PavbotArticleTagChip(
+                            title: tag,
+                            systemImage: "tag.fill",
+                            tint: .orange,
+                            accessibilityPrefix: "Tag tematu"
+                        )
+                    }
                 }
-                Spacer(minLength: 0)
-                Image(systemName: "chevron.right")
-                    .font(.caption.weight(.bold))
-                    .foregroundStyle(.tertiary)
             }
         }
         .padding(15)

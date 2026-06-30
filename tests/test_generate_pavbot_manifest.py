@@ -39,10 +39,14 @@ class GeneratePavbotManifestTest(unittest.TestCase):
 
         automation_ids = {item["id"] for item in manifest["automations"]}
         self.assertIn("codex-agent-automation-daily-research", automation_ids)
+        self.assertIn("pavbot-tech-research-19-33", automation_ids)
         self.assertIn("pavbot-tech-podcast-09-00", automation_ids)
         self.assertIn("pavbot-polska-wiat-research-08-30", automation_ids)
+        self.assertIn("pavbot-polska-wiat-research-19-33", automation_ids)
         self.assertIn("pavbot-polska-wiat-podcast-09-30", automation_ids)
         self.assertIn("pavbot-llm-ai-jobs-wroclaw-research", automation_ids)
+        self.assertIn("pavbot-aktualne-wydarzenia-mobile-19-33", automation_ids)
+        self.assertIn("pavbot-reddit-safari-humor-radar", automation_ids)
         self.assertTrue(all(item["enabled"] for item in manifest["automations"]))
 
         tech_research = next(
@@ -62,6 +66,51 @@ class GeneratePavbotManifestTest(unittest.TestCase):
         self.assertEqual(jobs_research["topic"], "llm-ai-jobs-wroclaw")
         self.assertEqual(jobs_research["topicPath"], "research/llm-ai-jobs-wroclaw")
         self.assertEqual(jobs_research["kind"], "research")
+
+        tech_evening = next(
+            item
+            for item in manifest["automations"]
+            if item["id"] == "pavbot-tech-research-19-33"
+        )
+        self.assertEqual(tech_evening["topic"], "tech-news")
+        self.assertEqual(tech_evening["cadence"], "daily at 19:33 Europe/Warsaw")
+        self.assertEqual(
+            tech_evening["output"],
+            "research/tech-news/runs/YYYY-MM-DD-HHMM.md",
+        )
+
+        polska_evening = next(
+            item
+            for item in manifest["automations"]
+            if item["id"] == "pavbot-polska-wiat-research-19-33"
+        )
+        self.assertEqual(polska_evening["topic"], "polska-swiat")
+        self.assertEqual(polska_evening["cadence"], "daily at 19:33 Europe/Warsaw")
+        self.assertEqual(
+            polska_evening["output"],
+            "research/polska-swiat/runs/YYYY-MM-DD-HHMM.md",
+        )
+
+        aktualne_evening = next(
+            item
+            for item in manifest["automations"]
+            if item["id"] == "pavbot-aktualne-wydarzenia-mobile-19-33"
+        )
+        self.assertEqual(aktualne_evening["topic"], "aktualne-wydarzenia-mobile")
+        self.assertEqual(aktualne_evening["kind"], "researchAudio")
+        self.assertEqual(aktualne_evening["cadence"], "daily at 19:33 Europe/Warsaw")
+
+        reddit_radar = next(
+            item
+            for item in manifest["automations"]
+            if item["id"] == "pavbot-reddit-safari-humor-radar"
+        )
+        self.assertEqual(reddit_radar["topic"], "reddit-radar")
+        self.assertEqual(reddit_radar["kind"], "automation")
+        self.assertEqual(
+            reddit_radar["output"],
+            "research/reddit-radar/runs/YYYY-MM-DD-HHMM-reddit-radar.md",
+        )
 
     def test_manifest_collects_topics_and_all_artifact_types(self) -> None:
         generator = load_generator()
@@ -212,6 +261,39 @@ class GeneratePavbotManifestTest(unittest.TestCase):
                 + "\n",
                 encoding="utf-8",
             )
+            (data_dir / "2026-06-25-1933-research.json").write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "topic": "tech-news",
+                        "runDate": "2026-06-25",
+                        "runTime": "19:33",
+                        "status": "Material update",
+                        "leadParagraphs": ["Wieczorne wydanie AI i infrastruktury."],
+                        "summaryBullets": ["AI: wieczorny update."],
+                        "articles": [
+                            {
+                                "id": "tech-evening-1",
+                                "section": "AI",
+                                "title": "Wieczorny update AI",
+                                "standfirst": "Wieczorny update AI.",
+                                "whatHappened": "Pojawił się wieczorny update AI.",
+                                "whyItMatters": "To ważne dla wieczornego monitoringu.",
+                                "deeperAnalysis": ["Analiza pierwsza.", "Analiza druga."],
+                                "contextPoints": ["Co się stało: test.", "Dlaczego ważne: test."],
+                                "sources": [{"title": "OpenAI", "url": "https://openai.com/news"}],
+                                "priority": "High",
+                                "tags": ["AI"],
+                            }
+                        ],
+                        "podcastTopics": [],
+                        "checkedSources": [{"title": "OpenAI", "url": "https://openai.com/news"}],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
 
             manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
 
@@ -224,6 +306,48 @@ class GeneratePavbotManifestTest(unittest.TestCase):
         self.assertEqual(artifact["topic"], "tech-news")
         self.assertEqual(artifact["date"], "2026-06-25")
         self.assertEqual(artifact["title"], "Research data")
+
+        evening_artifact = next(
+            item
+            for item in manifest["artifacts"]
+            if item["path"] == "research/tech-news/data/2026-06-25-1933-research.json"
+        )
+        self.assertEqual(evening_artifact["type"], "researchData")
+        self.assertEqual(evening_artifact["date"], "2026-06-25")
+        self.assertEqual(evening_artifact["time"], "19:33")
+
+    def test_manifest_ignores_finder_style_duplicate_artifacts(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            topic_dir = repo / "research" / "polska-swiat"
+            (topic_dir / "topic.md").parent.mkdir(parents=True)
+            (topic_dir / "topic.md").write_text("# Topic Contract: polska-swiat\n", encoding="utf-8")
+            (topic_dir / "data").mkdir()
+            (topic_dir / "pdfs").mkdir()
+            (topic_dir / "podcasts" / "2026-06-27").mkdir(parents=True)
+
+            (topic_dir / "data" / "2026-06-27-research.json").write_text("{}\n", encoding="utf-8")
+            (topic_dir / "data" / "2026-06-27-research 2.json").write_text("{}\n", encoding="utf-8")
+            (topic_dir / "pdfs" / "2026-06-27-polska-swiat.pdf").write_bytes(b"%PDF canonical")
+            (topic_dir / "pdfs" / "2026-06-27-polska-swiat 2.pdf").write_bytes(b"%PDF duplicate")
+            (topic_dir / "podcasts" / "2026-06-27" / "script.md").write_text("# Script\n", encoding="utf-8")
+            (topic_dir / "podcasts" / "2026-06-27" / "script 2.md").write_text("# Script duplicate\n", encoding="utf-8")
+            (topic_dir / "podcasts" / "2026-06-27" / "brief.pdf").write_bytes(b"%PDF brief")
+            (topic_dir / "podcasts" / "2026-06-27" / "brief 2.pdf").write_bytes(b"%PDF brief duplicate")
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        paths = {artifact["path"] for artifact in manifest["artifacts"]}
+        self.assertIn("research/polska-swiat/data/2026-06-27-research.json", paths)
+        self.assertIn("research/polska-swiat/pdfs/2026-06-27-polska-swiat.pdf", paths)
+        self.assertIn("research/polska-swiat/podcasts/2026-06-27/script.md", paths)
+        self.assertIn("research/polska-swiat/podcasts/2026-06-27/brief.pdf", paths)
+        self.assertNotIn("research/polska-swiat/data/2026-06-27-research 2.json", paths)
+        self.assertNotIn("research/polska-swiat/pdfs/2026-06-27-polska-swiat 2.pdf", paths)
+        self.assertNotIn("research/polska-swiat/podcasts/2026-06-27/script 2.md", paths)
+        self.assertNotIn("research/polska-swiat/podcasts/2026-06-27/brief 2.pdf", paths)
 
     def test_manifest_collects_mobile_news_data_json_for_mobile_topic(self) -> None:
         generator = load_generator()
@@ -377,6 +501,55 @@ class GeneratePavbotManifestTest(unittest.TestCase):
         self.assertEqual(artifact["type"], "pulseNewsData")
         self.assertEqual(artifact["topic"], "puls-dnia-news")
         self.assertEqual(artifact["time"], "15:02")
+
+    def test_manifest_collects_reddit_radar_run_and_public_data_json(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            topic_dir = repo / "research" / "reddit-radar"
+            runs_dir = topic_dir / "runs"
+            data_dir = topic_dir / "data"
+            runs_dir.mkdir(parents=True)
+            data_dir.mkdir(parents=True)
+            (topic_dir / "topic.md").write_text("# Topic Contract: reddit-radar\n", encoding="utf-8")
+            (runs_dir / "2026-06-28-0206-reddit-radar.md").write_text(
+                "# Reddit Radar 2026-06-28-0206\n",
+                encoding="utf-8",
+            )
+            (data_dir / "2026-06-28-0206-reddit-radar.json").write_text(
+                json.dumps({"schemaVersion": 1, "id": "humor-2026-06-28-0206"}, ensure_ascii=False) + "\n",
+                encoding="utf-8",
+            )
+            (data_dir / "2026-06-28-0206-reddit-radar-raw.json").write_text(
+                json.dumps({"schemaVersion": 1, "raw": True}, ensure_ascii=False) + "\n",
+                encoding="utf-8",
+            )
+            (data_dir / "reddit-radar-state.json").write_text(
+                json.dumps({"items": []}, ensure_ascii=False) + "\n",
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+        self.assertEqual(
+            by_path["research/reddit-radar/runs/2026-06-28-0206-reddit-radar.md"]["type"],
+            "run",
+        )
+        self.assertEqual(
+            by_path["research/reddit-radar/data/2026-06-28-0206-reddit-radar.json"]["type"],
+            "redditRadarData",
+        )
+        self.assertEqual(
+            by_path["research/reddit-radar/data/2026-06-28-0206-reddit-radar-raw.json"]["type"],
+            "redditRadarRawData",
+        )
+        self.assertEqual(
+            by_path["research/reddit-radar/data/2026-06-28-0206-reddit-radar.json"]["time"],
+            "02:06",
+        )
+        self.assertNotIn("research/reddit-radar/data/reddit-radar-state.json", by_path)
 
     def test_manifest_uses_public_raw_urls_and_json_serializes(self) -> None:
         generator = load_generator()
@@ -533,6 +706,32 @@ class GeneratePavbotManifestTest(unittest.TestCase):
             self.assertTrue(output_path.exists())
 
         self.assertIn("manifest written:", result.stdout)
+
+    def test_write_manifest_preserves_generated_at_when_payload_is_unchanged(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp)
+            docs_dir = repo_root / "docs"
+            topic_dir = repo_root / "research" / "tech-news"
+            docs_dir.mkdir(parents=True)
+            topic_dir.mkdir(parents=True)
+            (docs_dir / "how-to-use.md").write_text("# How To Use Pavbot\n", encoding="utf-8")
+            (topic_dir / "topic.md").write_text("# Topic Contract: tech-news\n", encoding="utf-8")
+
+            output_path = repo_root / "public" / "pavbot-manifest.json"
+            first_manifest = generator.build_manifest(repo_root, raw_base_url=self.raw_base_url)
+            first_manifest["generatedAt"] = "2026-06-22T00:00:00+00:00"
+            generator.write_manifest(first_manifest, output_path)
+            first_text = output_path.read_text(encoding="utf-8")
+
+            second_manifest = generator.build_manifest(repo_root, raw_base_url=self.raw_base_url)
+            generator.write_manifest(second_manifest, output_path)
+            second_text = output_path.read_text(encoding="utf-8")
+            payload = json.loads(second_text)
+
+            self.assertEqual(payload["generatedAt"], "2026-06-22T00:00:00+00:00")
+            self.assertEqual(second_text, first_text)
 
     def test_manifest_uses_explicit_automation_kind_from_docs(self) -> None:
         generator = load_generator()
@@ -706,6 +905,7 @@ The current active automations are:
         by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
         expected = {
             "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-1015-mobile-brief.pdf": "pdf",
+            "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-1015-newspaper.pdf": "pdf",
             "research/aktualne-wydarzenia-mobile/data/2026-06-23-1015-mobile-news.json": "mobileNewsData",
             "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/script.md": "podcastScript",
             "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/podcast.mp3": "podcastAudioVariant",
@@ -718,7 +918,6 @@ The current active automations are:
 
         for path in (
             "research/aktualne-wydarzenia-mobile/runs/2026-06-23-1015.md",
-            "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-1015-newspaper.pdf",
             "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/sources.md",
             "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/tts_variants.json",
             "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/render.json",

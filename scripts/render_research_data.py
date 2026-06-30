@@ -21,6 +21,17 @@ FACT_HEADINGS = ["Nowe fakty", "New facts", "Key facts", "Najważniejsze fakty"]
 SOURCE_HEADINGS = ["Źródła", "Sources", "Source", "Zakres sprawdzony", "Scope Checked"]
 PODCAST_HEADINGS = ["Tematy do podcastu", "Podcast topics"]
 APP_ARTICLE_HEADINGS = ["Artykuły do aplikacji", "Artykuly do aplikacji", "App articles"]
+REQUIRED_APP_ARTICLE_FIELDS = {
+    "section": "Sekcja",
+    "priority": "Priorytet",
+    "tags": "Tagi",
+    "standfirst": "Standfirst",
+    "whatHappened": "Co się stało",
+    "whyItMatters": "Dlaczego ważne",
+    "deeperAnalysis": "Pełny opis",
+    "contextPoints": "Kontekst",
+    "sources": "Źródła",
+}
 
 TECH_SECTIONS = {
     "Cyber": ["cve", "cyber", "security", "malware", "phishing", "vulnerability", "bezpieczeństwo cyfrowe"],
@@ -43,22 +54,34 @@ TECH_TAGS = ["AI", "LLM", "RAG", "OpenAI", "Cloudflare", "NVIDIA", "Cyber", "Reg
 POLSKA_TAGS = ["Polska", "UE", "NATO", "Ukraina", "Bezpieczeństwo", "Gospodarka", "Polityka", "Pogoda"]
 
 
-def render_research_data(markdown_path: Path, output_path: Path, topic: str | None = None) -> dict[str, Any]:
+def render_research_data(
+    markdown_path: Path,
+    output_path: Path,
+    topic: str | None = None,
+    require_app_articles: bool = False,
+) -> dict[str, Any]:
     topic = topic or infer_topic(markdown_path)
     if topic not in SUPPORTED_TOPICS:
         raise ValueError(f"unsupported researchData topic: {topic}")
 
-    payload = parse_report(markdown_path.read_text(encoding="utf-8"), markdown_path=markdown_path, topic=topic)
+    payload = parse_report(
+        markdown_path.read_text(encoding="utf-8"),
+        markdown_path=markdown_path,
+        topic=topic,
+        require_app_articles=require_app_articles,
+    )
     output_path.parent.mkdir(parents=True, exist_ok=True)
     output_path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     return payload
 
 
-def parse_report(markdown: str, markdown_path: Path, topic: str) -> dict[str, Any]:
+def parse_report(markdown: str, markdown_path: Path, topic: str, require_app_articles: bool = False) -> dict[str, Any]:
     sections = markdown_sections(markdown)
     lead_paragraphs = clean_paragraphs(section(sections, SUMMARY_HEADINGS))
     facts = section(sections, FACT_HEADINGS)
     app_articles = section(sections, APP_ARTICLE_HEADINGS)
+    if require_app_articles:
+        validate_required_app_articles(app_articles)
     source_text = section(sections, SOURCE_HEADINGS)
     checked_sources = extract_sources(source_text) or extract_sources(markdown)
     articles = parse_app_articles(app_articles, topic=topic, package_key=markdown_path.stem, fallback_sources=checked_sources)
@@ -105,6 +128,51 @@ def section(sections: dict[str, str], headings: list[str]) -> str:
         if any(needle in title for needle in wanted):
             return body
     return ""
+
+
+def validate_required_app_articles(markdown: str) -> None:
+    if not markdown.strip():
+        raise ValueError("missing required section: Artykuły do aplikacji")
+
+    blocks = app_article_blocks(markdown)
+    if not blocks:
+        raise ValueError("Artykuły do aplikacji must contain at least one ### article")
+
+    errors: list[str] = []
+    for title, block in blocks:
+        fields = app_article_fields(block)
+        missing = [
+            display
+            for field, display in REQUIRED_APP_ARTICLE_FIELDS.items()
+            if not app_field_has_content(fields, field)
+        ]
+        quality_errors: list[str] = []
+        if len(field_paragraphs(fields, "deeperAnalysis")) < 2:
+            quality_errors.append("Pełny opis must contain at least 2 paragraphs")
+        if len(field_list(fields, "contextPoints")) < 2:
+            quality_errors.append("Kontekst must contain at least 2 points")
+
+        if missing or quality_errors:
+            details = []
+            if missing:
+                details.append("missing " + ", ".join(missing))
+            details.extend(quality_errors)
+            errors.append(f"incomplete app article '{clean_text(title)}': {'; '.join(details)}")
+
+    if errors:
+        raise ValueError("; ".join(errors))
+
+
+def app_field_has_content(fields: dict[str, list[str]], field: str) -> bool:
+    if field == "tags":
+        return bool(split_tags(field_text(fields, field)))
+    if field == "deeperAnalysis":
+        return bool(field_paragraphs(fields, field))
+    if field == "contextPoints":
+        return bool(field_list(fields, field))
+    if field == "sources":
+        return bool(extract_sources("\n".join(fields.get(field, []))))
+    return bool(field_text(fields, field))
 
 
 def parse_articles(facts: str, topic: str, package_key: str, fallback_sources: list[dict[str, str]]) -> list[dict[str, Any]]:
@@ -659,13 +727,23 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("markdown_report", type=Path)
     parser.add_argument("json_output", nargs="?", type=Path)
     parser.add_argument("--topic", choices=sorted(SUPPORTED_TOPICS), help="Override topic slug")
+    parser.add_argument(
+        "--require-app-articles",
+        action="store_true",
+        help="Fail unless ## Artykuły do aplikacji contains complete app-ready article subsections",
+    )
     return parser.parse_args()
 
 
 def main() -> None:
     args = parse_args()
     output = args.json_output or default_output_path(args.markdown_report)
-    render_research_data(args.markdown_report, output, topic=args.topic)
+    render_research_data(
+        args.markdown_report,
+        output,
+        topic=args.topic,
+        require_app_articles=args.require_app_articles,
+    )
     print(f"research data written: {output}")
 
 

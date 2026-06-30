@@ -66,7 +66,7 @@ final class TodayHumorStore {
             state = .loaded
         } catch {
             if digest != nil {
-                cacheNotice = "Pokazuję ostatni zapisany radar memów. Odświeżenie nie powiodło się."
+                cacheNotice = PavbotCacheNoticeCopy.refreshFailed(context: "radar memów")
                 state = .loaded
             } else {
                 cacheNotice = nil

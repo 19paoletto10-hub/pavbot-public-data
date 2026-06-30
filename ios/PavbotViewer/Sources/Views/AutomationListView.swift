@@ -55,63 +55,74 @@ struct AutomationClientBrief: Equatable {
 struct AutomationListView: View {
     @Environment(ManifestStore.self) private var store
     @Environment(AppRouter.self) private var router
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
+    let navigationMode: AutomationArtifactNavigationMode
     @State private var selectedAutomationID: String?
+    @State private var isEmbeddedArtifactTimelinePresented = false
+
+    init(navigationMode: AutomationArtifactNavigationMode = .global) {
+        self.navigationMode = navigationMode
+    }
 
     var body: some View {
-        ScrollView {
-            LazyVStack(alignment: .leading, spacing: 18) {
-                if let manifest = store.manifest {
-                    OverviewSection(manifest: manifest)
-                    StatusPanel()
+        GeometryReader { proxy in
+            let layout = PavbotAdaptiveLayout.resolve(width: proxy.size.width, horizontalSizeClass: horizontalSizeClass)
 
-                    let groups = manifest.automationArtifactGroups
-                    if groups.isEmpty {
-                        ContentUnavailableView(
-                            "Brak aktywnych automatyzacji",
-                            systemImage: "bolt.slash",
-                            description: Text("Załaduj manifest z włączonymi automatyzacjami Pavbot, aby zobaczyć kafelki i wyniki.")
-                        )
-                        .frame(maxWidth: .infinity)
-                    } else {
-                        ForEach(manifest.topics) { topic in
-                            let topicGroups = groups.filter { $0.automation.topic == topic.slug }
-                            if !topicGroups.isEmpty {
-                                AutomationTopicSection(
-                                    topic: topic,
-                                    groups: topicGroups,
-                                    selectedAutomationID: $selectedAutomationID,
-                                    selectAction: toggleSelection,
-                                    viewFilesAction: openArtifacts
-                                )
+            PavbotPremiumScreenScaffold(layout: layout) {
+                    if let manifest = store.manifest {
+                        OverviewSection(manifest: manifest)
+                        StatusPanel()
+
+                        let groups = manifest.automationArtifactGroups
+                        if groups.isEmpty {
+                            ContentUnavailableView(
+                                "Brak aktywnych automatyzacji",
+                                systemImage: "bolt.slash",
+                                description: Text("Załaduj manifest z włączonymi automatyzacjami Pavbot, aby zobaczyć kafelki i wyniki.")
+                            )
+                            .frame(maxWidth: .infinity)
+                        } else {
+                            ForEach(manifest.topics) { topic in
+                                let topicGroups = groups.filter { $0.automation.topic == topic.slug }
+                                if !topicGroups.isEmpty {
+                                    AutomationTopicSection(
+                                        topic: topic,
+                                        groups: topicGroups,
+                                        selectedAutomationID: $selectedAutomationID,
+                                        selectAction: toggleSelection,
+                                        viewFilesAction: openArtifacts
+                                    )
+                                }
                             }
                         }
+                    } else {
+                        StatusPanel()
+                        ContentUnavailableView(
+                            "Brak manifestu",
+                            systemImage: "doc.badge.questionmark",
+                            description: Text("Zapisz Manifest URL w ustawieniach albo odśwież, gdy manifest GitHuba będzie dostępny.")
+                        )
+                        .frame(maxWidth: .infinity)
                     }
-                } else {
-                    StatusPanel()
-                    ContentUnavailableView(
-                        "Brak manifestu",
-                        systemImage: "doc.badge.questionmark",
-                        description: Text("Zapisz Manifest URL w ustawieniach albo odśwież, gdy manifest GitHuba będzie dostępny.")
-                    )
-                    .frame(maxWidth: .infinity)
-                }
             }
-            .padding(.horizontal, 20)
-            .padding(.vertical, 14)
+            .environment(\.pavbotAdaptiveLayout, layout)
         }
-        .background(Color(.systemGroupedBackground))
         .navigationTitle("Automatyzacje")
+        .navigationDestination(isPresented: $isEmbeddedArtifactTimelinePresented) {
+            ArtifactTimelineView(navigationMode: .embeddedInSettings)
+        }
         .refreshable {
             await store.reload()
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button {
+                PavbotRefreshToolbarButton(
+                    isRefreshing: store.state == .loading,
+                    accessibilityLabel: "Odśwież manifest",
+                    accessibilityHint: "Odświeża manifest automatyzacji."
+                ) {
                     Task { await store.reload() }
-                } label: {
-                    Image(systemName: "arrow.clockwise")
                 }
-                .accessibilityLabel("Odśwież manifest")
             }
         }
         .onChange(of: store.manifest) { _, manifest in
@@ -130,6 +141,25 @@ struct AutomationListView: View {
 
     private func openArtifacts(_ group: AutomationArtifactGroup) {
         let latestDay = group.latestArtifact?.date ?? group.days.first?.pavbotDayString
+        if navigationMode == .embeddedInSettings {
+            openEmbeddedArtifacts(group, latestDay: latestDay)
+            return
+        }
+
+        openGlobalArtifacts(group, latestDay: latestDay)
+    }
+
+    private func openEmbeddedArtifacts(_ group: AutomationArtifactGroup, latestDay: String?) {
+        router.selectArtifactAutomation(
+            id: group.id,
+            day: latestDay,
+            switchToArtifactsTab: navigationMode.switchesToArtifactsTab
+        )
+        router.selectedTab = .settings
+        isEmbeddedArtifactTimelinePresented = true
+    }
+
+    private func openGlobalArtifacts(_ group: AutomationArtifactGroup, latestDay: String?) {
         if router.openReportsForTopic(group.automation.topic, latestDay: latestDay) {
             return
         }
@@ -141,31 +171,26 @@ struct AutomationListView: View {
 }
 
 private struct OverviewSection: View {
+    @Environment(\.pavbotAdaptiveLayout) private var layout
     let manifest: PavbotManifest
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            VStack(alignment: .leading, spacing: 6) {
-                Text("Pavbot")
-                    .font(.largeTitle.bold())
-                Text("Monitor automatyzacji Codex")
-                    .font(.subheadline)
-                    .foregroundStyle(.secondary)
-            }
-
-            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
-                MetricTile(title: "Automatyzacje", value: "\(manifest.enabledAutomations.count)", systemImage: "bolt.fill", tint: .yellow)
-                MetricTile(title: "Artefakty", value: "\(manifest.artifacts.count)", systemImage: "tray.full.fill", tint: .blue)
-                MetricTile(title: "Tematy", value: "\(manifest.topics.count)", systemImage: "folder.fill", tint: .green)
-                MetricTile(
-                    title: "Ostatni przebieg",
-                    value: manifest.latestArtifact?.date ?? "-",
-                    subtitle: manifest.latestAutomationRun?.dashboardSubtitle,
-                    systemImage: "clock.fill",
-                    tint: .purple
-                )
-            }
-        }
+        PavbotCommandHero(
+            eyebrow: "Operational Console",
+            title: "Pavbot",
+            subtitle: layout.usesDashboardLayout
+                ? "Monitor automatyzacji Codex z siatką workflow, statusami i szybkim wejściem do opublikowanych plików."
+                : "Aktywne workflow, ostatnie uruchomienia i pliki generowane przez Codex.",
+            systemImage: "bolt.circle.fill",
+            tint: .yellow,
+            insights: [
+                PavbotInsight(title: "Automatyzacje", value: "\(manifest.enabledAutomations.count)", systemImage: "bolt.fill", tint: .yellow),
+                PavbotInsight(title: "Artefakty", value: "\(manifest.artifacts.count)", systemImage: "tray.full.fill", tint: .blue),
+                PavbotInsight(title: "Tematy", value: "\(manifest.topics.count)", systemImage: "folder.fill", tint: .green),
+                PavbotInsight(title: "Ostatni przebieg", value: manifest.latestArtifact?.date ?? "-", systemImage: "clock.fill", tint: .purple)
+            ],
+            footnote: manifest.latestAutomationRun?.dashboardSubtitle
+        )
     }
 }
 
@@ -203,6 +228,7 @@ private struct StatusPanel: View {
 }
 
 private struct AutomationTopicSection: View {
+    @Environment(\.pavbotAdaptiveLayout) private var layout
     let topic: PavbotTopic
     let groups: [AutomationArtifactGroup]
     @Binding var selectedAutomationID: String?
@@ -240,7 +266,10 @@ private struct AutomationTopicSection: View {
     }
 
     private var columns: [GridItem] {
-        [GridItem(.adaptive(minimum: 166, maximum: 240), spacing: 12)]
+        layout.adaptiveColumns(
+            minimum: layout.usesDashboardLayout ? 220 : 166,
+            maximum: layout.usesDashboardLayout ? 320 : 240
+        )
     }
 }
 

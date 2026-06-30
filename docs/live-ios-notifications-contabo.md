@@ -151,6 +151,18 @@ logged-in Safari profile and publishes to:
 python3 scripts/collect_safari_reddit_humor.py --post
 ```
 
+After every successful Reddit Radar run, also publish the audit artifacts with
+the refreshed manifest:
+
+```bash
+scripts/pavbot_commit_and_push_outputs.sh --isolated research/reddit-radar
+git fetch origin
+git show origin/main:public/pavbot-manifest.json | grep -F "research/reddit-radar/runs/"
+```
+
+Do not report the run as successful if the notifier updates but the matching
+Reddit Radar artifact is missing from the remote manifest.
+
 The Docker image runs as `appuser` with UID `10001`. If the APNs key remains
 `root:root` with mode `600`, APNs sends will fail with `Permission denied`
 inside the container.

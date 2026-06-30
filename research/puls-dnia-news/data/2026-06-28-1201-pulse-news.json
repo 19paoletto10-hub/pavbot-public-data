@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-06-28",
+  "runTime": "12:01",
+  "status": "Material update",
+  "headline": "Południe przynosi już skutki skwaru w Polsce, a Ormuz i Wenezuela dalej utrzymują globalny stan podwyższonego ryzyka",
+  "summary": "Run z 12:01 CEST przesuwa krajowy feed z samych alertów na realne skutki dnia: ponad 30 stopni rano, groźne burze, sinice, ograniczenia wody i akcję po zawaleniu budynku po wybuchu, przy niezmiennie mocnym bloku Ormuz-Wenezuela oraz kartach o dronach Hezbollahu, Australii i cenach sprzętu.",
+  "items": [
+    {
+      "id": "pulse-2026-06-28-1201-01-rano-30c",
+      "section": "Alerty",
+      "title": "Upał przekroczył 30 stopni już rano",
+      "lead": "Presja termiczna weszła w dzień jeszcze przed południem, więc to nie jest już tylko prognoza.",
+      "whatHappened": "TVN24 podało, że już o godzinie 8 temperatura w Polsce przekroczyła 30 stopni. To ważna zmiana względem poranka, bo użytkownik dostaje dowód, że fala gorąca nie jest odległym zagrożeniem na późniejsze godziny, tylko trwa od rana.",
+      "keyFacts": [
+        "Granica 30 stopni została przekroczona już rano.",
+        "Materiał TVN24 pokazuje najgorętsze miejsca przed południem.",
+        "RCB wcześniej wskazywało niedzielę 28 czerwca jako dzień największego ryzyka."
+      ],
+      "reactions": [
+        "To najmocniejsza karta użytkowa dla południowego runu, bo pokazuje realny stan dnia.",
+        "Skwar od rana zwiększa ryzyko przeciążeń zdrowotnych i infrastrukturalnych."
+      ],
+      "whyItMatters": "Dla odbiorcy mobilnego ważniejsze od abstrakcyjnych rekordów jest to, że niebezpieczne temperatury działają już od rana i będą kumulować się w ciągu dnia.",
+      "context": "W runie z 09:10 dominowały czerwone alerty i prognoza kulminacji. O 12:01 widać już, że gorąco zdążyło wejść w codzienny rytm dnia.",
+      "watchNext": [
+        "Czy pojawią się komunikaty o jeszcze wyższych temperaturach po południu.",
+        "Czy skwar przełoży się na kolejne awarie lub interwencje służb."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Upał już od samego rana. Gdzie jest dziś najgoręcej",
+          "url": "https://tvn24.pl/tvnmeteo/polska/fala-upalow-w-polsce-ponad-30-stopni-w-niedziele-rano-gdzie-jest-dzis-najgorecej-st9118042"
+        },
+        {
+          "title": "RCB: fala upałów w niemal całym kraju",
+          "url": "https://www.gov.pl/web/rcb/w-najblizszych-dniach-na-terenie-niemal-calego-kraju-prognozowana-jest-fala-upalow"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Upał",
+        "Temperatura",
+        "Pogoda"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-28-1201-02-fronty-burze",
+      "section": "Alerty",
+      "title": "Fronty mają złamać skwar, ale najpierw mogą odpalić gwałtowne burze",
+      "lead": "Sygnał o możliwym ochłodzeniu nie oznacza spokojniejszego dnia, bo po drodze rośnie ryzyko silnych zjawisk.",
+      "whatHappened": "TVN24 opisuje, że od zachodu napływa wilgotniejsze powietrze, które po połączeniu z gorącym i suchym powietrzem nad Polską może stać się paliwem dla gwałtownych burz. Osobny materiał długoterminowy pokazuje, że po weekendzie może być jeszcze około 40 stopni, a dopiero potem przyjść radykalna zmiana pogody.",
+      "keyFacts": [
+        "Niedziela pozostaje dniem apogeum skwaru.",
+        "Wilgotniejsze powietrze ma zwiększyć ryzyko silnych burz.",
+        "Prognoza 16-dniowa widzi późniejsze, wyraźne ochłodzenie po krótkiej dalszej kulminacji."
+      ],
+      "reactions": [
+        "Karta jest silna, bo łączy bieżące zagrożenie z pierwszym horyzontem wyjścia z fali gorąca.",
+        "Użytkownik nie powinien czytać zapowiedzi ochłodzenia jako szybkiego końca ryzyka."
+      ],
+      "whyItMatters": "Najbliższe godziny mogą być jednocześnie bardzo gorące i gwałtowne, więc praktyczny komunikat dla odbiorcy jest bardziej złożony niż zwykły alert upałowy.",
+      "context": "W poprzednim runie główny ciężar spoczywał na czerwonych alertach IMGW. Teraz równie ważne staje się to, co zrobią burze i kiedy naprawdę odpuści upał.",
+      "watchNext": [
+        "Czy pojawią się nowe szkody burzowe albo rozszerzenie ostrzeżeń.",
+        "Czy późniejsze prognozy podtrzymają scenariusz wyraźnego ochłodzenia po weekendzie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Czeka nas niestabilna pogoda. Fronty będą falować nad Polską. Czy wygonią upał?",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/czeka-nas-niestabilna-pogoda-chmury-burzowe-dostana-paliwo-czy-przyjdzie-ochlodzenie-st9117847"
+        },
+        {
+          "title": "TVN24: Pogoda na 16 dni: widać koniec tego piekła",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/pogoda-na-16-dni-widac-koniec-tego-piekla-autorska-prognoza-dlugoterminowa-tomasza-wasilewskiego-st9118041"
+        },
+        {
+          "title": "RCB: fala upałów w niemal całym kraju",
+          "url": "https://www.gov.pl/web/rcb/w-najblizszych-dniach-na-terenie-niemal-calego-kraju-prognozowana-jest-fala-upalow"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Burze",
+        "Front",
+        "Ochłodzenie"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-28-1201-03-sinice-baltyk",
+      "section": "Alerty",
+      "title": "Sinice zamykają kolejne kąpieliska nad Bałtykiem",
+      "lead": "Wakacyjny blok bezpieczeństwa wchodzi do feedu razem z pogodą i skokiem ruchu nad morzem.",
+      "whatHappened": "TVN24 podało, że 28 czerwca zamknięto kąpieliska w Trójmieście i Karwi z powodu sinic. Dane Serwisu Kąpieliskowego GIS potwierdzają bieżące statusy jakości wody, więc to nie jest miękki temat sezonowy, tylko praktyczny alert dla wypoczywających.",
+      "keyFacts": [
+        "Zamknięcia dotyczą co najmniej dwóch kąpielisk nad Bałtykiem.",
+        "TVN24 odwołuje się do danych Głównego Inspektoratu Sanitarnego z 28 czerwca.",
+        "To nowy publiczny alert wakacyjny pojawiający się obok upału i burz."
+      ],
+      "reactions": [
+        "To dobra karta usługowa dla iOS, bo mówi użytkownikowi wprost, gdzie plan wypoczynku może się posypać.",
+        "Łączy pogodę z bezpieczeństwem zdrowotnym i jakością wody."
+      ],
+      "whyItMatters": "W dniu silnego ruchu wakacyjnego zakazy kąpieli są dla użytkownika równie praktyczne jak ostrzeżenia pogodowe.",
+      "context": "W runie z 09:10 blok alertów dotyczył głównie temperatur i burz. O 12:01 wchodzi do niego także jakość wody na wybrzeżu.",
+      "watchNext": [
+        "Czy GIS pokaże kolejne zamknięcia wraz z nowymi pomiarami.",
+        "Czy temat rozszerzy się na większą część wybrzeża w kolejnych godzinach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Sinice w Bałtyku. Na tych plażach nie można się kąpać",
+          "url": "https://tvn24.pl/trojmiasto/sinice-w-baltyku-2026-ktore-plaze-sa-zamkniete-28-czerwca-mapa-st9114371"
+        },
+        {
+          "title": "Serwis Kąpieliskowy GIS",
+          "url": "https://sk.gis.gov.pl/kapieliska"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Bałtyk",
+        "Sinice",
+        "GIS"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-28-1201-04-kopydlowo",
+      "section": "Polska",
+      "title": "Po wybuchu zawalił się budynek, pod gruzami została osoba",
+      "lead": "To najmocniejszy nowy temat ratowniczy po stronie krajowej w południowym runie.",
+      "whatHappened": "W Kopydłowie Nowym w Wielkopolsce po eksplozji zawalił się budynek, a strażacy próbują wydobyć uwięzioną osobę spod gruzów. Temat pojawił się po 09:10 i szybko staje się jedną z najważniejszych krajowych kart bezpieczeństwa.",
+      "keyFacts": [
+        "Zdarzenie dotyczy zawalenia budynku po wybuchu.",
+        "Służby prowadzą akcję ratunkową pod gruzami.",
+        "Na czas południowego runu nie ma jeszcze pełnego finału historii."
+      ],
+      "reactions": [
+        "Świeżość i potencjalna waga zdarzenia windują tę kartę wysoko w krajowym układzie.",
+        "To temat, który może zmienić priorytet kolejnego runu po nowych danych o ofiarach."
+      ],
+      "whyItMatters": "Użytkownik dostaje informację o toczącej się akcji ratunkowej, a nie o zdarzeniu już domkniętym, więc karta pozostaje operacyjna.",
+      "context": "W 09:10 feed krajowy był mocno zdominowany przez pogodę i pożar Mszczonowa. O 12:01 dochodzi osobny, silny temat ratowniczy.",
+      "watchNext": [
+        "Czy spod gruzów uda się wydobyć poszkodowaną osobę.",
+        "Czy pojawi się oficjalna przyczyna wybuchu albo informacja o większej liczbie ofiar."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Budynek zawalił się po wybuchu. Pod gruzami jest człowiek",
+          "url": "https://tvn24.pl/poznan/kopydlowo-nowe-budynek-zawalil-sie-po-wybuchu-pod-gruzami-znajduje-sie-czlowiek-st9118012"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Wybuch",
+        "Ratownictwo",
+        "Wielkopolska"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-28-1201-05-golczewo-woda",
+      "section": "Polska",
+      "title": "W Golczewie woda nie dociera na wyższe piętra",
+      "lead": "Upał zaczyna uderzać w podstawowe usługi komunalne, a nie tylko komfort dnia.",
+      "whatHappened": "W gminie Golczewo wprowadzono częściowy zakaz poboru wody, bo przy dużym zużyciu nie dociera ona na wyższe piętra budynków. Według relacji TVN24 sytuację pogarsza korzystanie z wody z hydrantów do podlewania ogródków.",
+      "keyFacts": [
+        "Wprowadzono częściowe ograniczenia poboru wody.",
+        "Problem dotyczy dostaw na wyższe kondygnacje budynków.",
+        "Historia ma związek z wysokim poborem i presją dnia gorącego."
+      ],
+      "reactions": [
+        "To mocna karta infrastrukturalna, bo pokazuje skutki skwaru w codziennym życiu mieszkańców.",
+        "Dla użytkownika to bardziej praktyczny sygnał niż sam komunikat o temperaturze."
+      ],
+      "whyItMatters": "Kiedy upał zaczyna wpływać na wodę, historia pogodowa staje się problemem usług komunalnych i zdrowia publicznego.",
+      "context": "W runie z 09:10 skutki dnia pokazywał głównie transport. O 12:01 ciężar przesuwa się też na wodę i lokalną infrastrukturę.",
+      "watchNext": [
+        "Czy zakaz poboru zostanie wydłużony lub zaostrzony.",
+        "Czy podobne ograniczenia pojawią się w innych miejscach kraju."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Woda nie dociera na wyższe piętra. Ograniczenia przez całą dobę",
+          "url": "https://tvn24.pl/szczecin/golczewo-woda-nie-dociera-na-wyzsze-pietra-ograniczenia-przez-cala-dobe-st9118100"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Woda",
+        "Infrastruktura",
+        "Upał"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-28-1201-06-baza-usa",
+      "section": "Polityka",
+      "title": "MON mówi o kolejnym etapie rozmów o stałej bazie USA w Polsce",
+      "lead": "To nowa krajowa karta bezpieczeństwa, która wychodzi poza sam rytm pogodowo-awaryjny dnia.",
+      "whatHappened": "Władysław Kosiniak-Kamysz powiedział, że rozmowy o utworzeniu stałej bazy wojsk USA w Polsce weszły w kolejny etap. Temat ma znaczenie polityczne i bezpieczeństwowe, choć pozostaje na poziomie deklaracji i procesu rozmów.",
+      "keyFacts": [
+        "Według ministra obrony rozmowy weszły w następny etap.",
+        "Historia wynika z wcześniejszej pozytywnej odpowiedzi strony amerykańskiej na polską propozycję.",
+        "Na ten moment nie ma mowy o finalnej decyzji wykonawczej."
+      ],
+      "reactions": [
+        "Ta karta poszerza polski blok o wymiar strategiczny, nie tylko awaryjny.",
+        "Jej waga zależy od tego, czy pojawią się dalsze konkrety ze strony USA lub MON."
+      ],
+      "whyItMatters": "Stała obecność wojsk USA w Polsce ma znaczenie dla bezpieczeństwa regionu, więc nawet etap rozmów jest politycznie istotny.",
+      "context": "W poprzednim runie dominowały skutki pogody i bezpieczeństwo cywilne. O 12:01 dochodzi wyraźniejszy wątek geostrategiczny po stronie krajowej.",
+      "watchNext": [
+        "Czy pojawi się oficjalny komunikat z kolejnymi szczegółami procesu.",
+        "Czy temat zostanie podjęty przez stronę amerykańską lub Pałac Prezydencki."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Baza USA w Polsce. Władysław Kosiniak-Kamysz o \"kolejnym etapie\"",
+          "url": "https://tvn24.pl/polska/baza-usa-w-polsce-szef-mon-wladyslaw-kosiniak-kamysz-o-kolejnym-etapie-st9118008"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Bezpieczeństwo",
+        "USA",
+        "MON"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-28-1201-07-iran-ormuz",
+      "section": "Świat",
+      "title": "USA i Iran znów wymieniają ciosy, a Ormuz zostaje strefą najwyższego ryzyka",
+      "lead": "Brak deeskalacji utrzymuje presję na region Zatoki, żeglugę i rynek energii.",
+      "whatHappened": "BBC opisuje wzajemne oskarżenia o łamanie zawieszenia działań, a CNN prowadzi świeży live blog z 28 czerwca o kolejnych atakach. CENTCOM podaje, że amerykańskie siły uderzyły w 10 irańskich celów wojskowych w i przy Cieśninie Ormuz.",
+      "keyFacts": [
+        "Konflikt ma nowe aktualizacje z 28 czerwca.",
+        "CENTCOM mówi o 10 celach wojskowych przy Ormuz.",
+        "CNN podkreśla reakcje Bahrajnu i Kuwejtu na irańskie ataki."
+      ],
+      "reactions": [
+        "To nadal najważniejsza międzynarodowa karta bezpieczeństwa dla feedu.",
+        "Każda nowa salwa podnosi ryzyko dla żeglugi handlowej i cen energii."
+      ],
+      "whyItMatters": "Ormuz pozostaje jednym z kluczowych gardzieli przesyłu ropy i gazu, więc lokalna eskalacja ma skutki globalne.",
+      "context": "Temat był mocny już o 09:10, ale w południowym runie ma świeższe potwierdzenia i zero sygnałów realnej deeskalacji.",
+      "watchNext": [
+        "Czy pojawią się nowe komunikaty wojskowe USA, Iranu lub państw Zatoki.",
+        "Czy rynek ropy i armatorzy pokażą wyraźniejszą reakcję na sytuację."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US and Iran exchange strikes and accuse each other of violating ceasefire",
+          "url": "https://www.bbc.co.uk/news/articles/cdxdwkgqgq0o"
+        },
+        {
+          "title": "CNN: Live updates: US and Iran exchange fresh strikes as Tehran threatens to halt talks",
+          "url": "https://edition.cnn.com/2026/06/28/world/live-news/iran-war-strikes-trump"
+        },
+        {
+          "title": "CENTCOM: U.S. Forces Conduct Additional Strikes After Iran's Latest Commercial Ship Attack",
+          "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4528488/us-forces-conduct-additional-strikes-after-irans-latest-commercial-ship-attack/"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Iran",
+        "USA",
+        "Ormuz"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-28-1201-08-wenezuela",
+      "section": "Świat",
+      "title": "Ratownicy w Wenezueli działają już po kluczowym 72-godzinnym oknie",
+      "lead": "To sygnał, że akcja weszła w trudniejszą i bardziej ponurą fazę.",
+      "whatHappened": "CNN podkreśla, że minęło 72-godzinne okno uznawane za najważniejsze dla odnajdywania ocalałych po trzęsieniu ziemi w Wenezueli. BBC relacjonuje rodziny wypatrujące bliskich pod gruzami, podczas gdy wstrząsy wtórne dalej utrudniają pracę ratowników.",
+      "keyFacts": [
+        "Live blog CNN z 28 czerwca pokazuje przejście w trudniejszą fazę akcji.",
+        "Wstrząsy wtórne utrzymują zagrożenie dla ratowników i ocalałych.",
+        "Temat nadal ma silny wymiar humanitarny i liczbowy."
+      ],
+      "reactions": [
+        "To wciąż jedna z najmocniejszych kart katastroficznych w światowym układzie dnia.",
+        "Humanitarny ciężar historii nie spadł mimo upływu kolejnych godzin."
+      ],
+      "whyItMatters": "Przekroczenie 72 godzin zwykle obniża szanse odnalezienia żywych i zmienia charakter akcji ratunkowej.",
+      "context": "W runie z 09:10 dominował bilans ofiar i brak ciężkiego sprzętu. O 12:01 dochodzi wyraźna zmiana fazy całej operacji.",
+      "watchNext": [
+        "Czy pojawią się nowe dane o liczbie ofiar i odnalezionych osób.",
+        "Czy władze ogłoszą większe wsparcie międzynarodowe dla strefy katastrofy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Families calling out to loved ones trapped in rubble by Venezuela quakes",
+          "url": "https://www.bbc.co.uk/news/articles/cp8l451420zo"
+        },
+        {
+          "title": "CNN: Live updates: Rescuers battle aftershocks in search for Venezuela quake survivors",
+          "url": "https://edition.cnn.com/2026/06/28/world/live-news/venezuela-earthquake-hnk"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wenezuela",
+        "Trzęsienie ziemi",
+        "Ratownictwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-28-1201-09-europa-upal",
+      "section": "Świat",
+      "title": "Europejska fala gorąca przekracza próg 150 milionów ludzi powyżej 35 stopni",
+      "lead": "To już nie tło dla Polski, tylko osobna ponadnarodowa historia ryzyka.",
+      "whatHappened": "BBC podaje, że około 150 milionów osób w Europie doświadcza temperatur powyżej 35 stopni, a rekordy biją Niemcy, Dania i Czechy. Europejski skwar staje się coraz mocniejszą samodzielną kartą globalną, a nie tylko kontekstem dla polskich alertów.",
+      "keyFacts": [
+        "Skala zjawiska obejmuje około 150 milionów osób.",
+        "Rekordy padają w kilku krajach Europy.",
+        "Historia ma wymiar jednocześnie liczbowy i społeczny."
+      ],
+      "reactions": [
+        "Ta karta wzmacnia światowy blok klimatyczny obok Polski i Wenezueli.",
+        "Pokazuje, że ekstremalna pogoda ma szeroki kontynentalny zasięg, a nie lokalny charakter."
+      ],
+      "whyItMatters": "Duży zasięg europejskiego skwaru zwiększa ryzyko zdrowotne, transportowe i energetyczne w wielu krajach jednocześnie.",
+      "context": "W poprzednim runie Europa była silnym dodatkiem do polskiej historii pogodowej. O 12:01 zaczyna pracować jako osobna karta globalnej skali.",
+      "watchNext": [
+        "Czy pojawią się kolejne rekordy temperatur i nowe ofiary lub zakłócenia.",
+        "Czy europejskie służby zaczną szerzej ograniczać wydarzenia lub transport."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Heatwave breaks records in Germany, Denmark and Czech Republic",
+          "url": "https://www.bbc.co.uk/news/articles/cx2vdydz31no"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Europa",
+        "Upał",
+        "Rekordy"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-28-1201-10-hezbollah-drony",
+      "section": "Bezpieczeństwo",
+      "title": "Światłowodowe drony Hezbollahu zmuszają Izrael do nowego wyścigu technologicznego",
+      "lead": "Tania broń pola walki przestaje być ciekawostką i staje się realnym problemem wojennym.",
+      "whatHappened": "CNN opisuje, że Hezbollah coraz skuteczniej używa małych dronów światłowodowych, które zadały już straty izraelskim siłom. Izraelska armia i firmy technologiczne pilnie szukają sposobów neutralizacji tego typu zagrożenia.",
+      "keyFacts": [
+        "Drony światłowodowe są coraz ważniejszym narzędziem Hezbollahu.",
+        "CNN opisuje je jako tanie, ale śmiercionośne narzędzie bojowe.",
+        "Po stronie Izraela trwa pośpieszne szukanie kontrśrodków."
+      ],
+      "reactions": [
+        "To techniczna karta, która zostaje w feedzie tylko dlatego, że ma bezpośredni wymiar wojenny.",
+        "Pokazuje szybkie przenikanie innowacji niskokosztowych do realnego konfliktu."
+      ],
+      "whyItMatters": "Nowe typy dronów zmieniają taktykę walki i koszt obrony, więc mogą wpływać na tempo i charakter konfliktu.",
+      "context": "Ten temat był już obecny o 09:10, ale nadal utrzymuje szerokie znaczenie publiczne przez połączenie technologii i wojny.",
+      "watchNext": [
+        "Czy pojawią się nowe przypadki użycia tych dronów z większym skutkiem operacyjnym.",
+        "Czy Izrael pokaże konkretne nowe systemy przeciwdziałania."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Israel’s military and tech industry race to counter Hezbollah’s latest threat",
+          "url": "https://edition.cnn.com/2026/06/28/middleeast/israel-tech-hezbollah-drone-threat-intl"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Hezbollah",
+        "Drony",
+        "Izrael"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-28-1201-11-australia-social-media",
+      "section": "Polityka",
+      "title": "Australia chce podwoić kary dla platform łamiących zakaz dla nieletnich",
+      "lead": "Regulacja sieci społecznościowych wchodzi na twardszy poziom egzekucji finansowej.",
+      "whatHappened": "BBC informuje, że Australia chce podwoić maksymalne kary dla platform łamiących zakaz korzystania z mediów społecznościowych przez osoby poniżej 16 lat. To pokazuje, że temat ochrony nieletnich w sieci przesuwa się z debaty do ostrzejszego egzekwowania prawa.",
+      "keyFacts": [
+        "Zakaz dla osób poniżej 16 lat obowiązuje od grudnia 2025 roku.",
+        "Rząd chce podwoić maksymalne kary dla platform.",
+        "To jedna z najmocniejszych globalnych prób wymuszenia zgodności na dużych serwisach."
+      ],
+      "reactions": [
+        "Karta utrzymuje się w feedzie, bo ma szerokie znaczenie regulacyjne także poza Australią.",
+        "Może wzmacniać presję na podobne debaty w innych krajach."
+      ],
+      "whyItMatters": "Zaostrzenie kar zmienia wagę regulacji z deklaratywnej na realnie kosztowną dla platform cyfrowych.",
+      "context": "Temat był obecny już w poprzednim runie i zostaje, bo nadal ma wyraźny ciężar publiczny i polityczny.",
+      "watchNext": [
+        "Czy platformy odpowiedzą publicznie na plan zaostrzenia sankcji.",
+        "Czy inne państwa zaczną odwoływać się do modelu australijskiego."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Australia to double penalties for platforms in breach of social media ban",
+          "url": "https://www.bbc.co.uk/news/articles/c78yv5g74e9o"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Australia",
+        "Media społecznościowe",
+        "Regulacje"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-28-1201-12-ceny-sprzetu-ai",
+      "section": "Technologia",
+      "title": "Producenci podnoszą ceny konsol i PC, wskazując na koszty chipów dla AI",
+      "lead": "Boom AI zaczyna być odczuwalny dla zwykłego użytkownika przy kasie za sprzęt.",
+      "whatHappened": "BBC pisze, że wzrost cen dotyczy między innymi konsol Xbox, Switch 2 i Steam Decka, a firmy coraz częściej tłumaczą go kosztami układów i pamięci napędzanych popytem związanym z AI. To jedna z nielicznych kart technologicznych, które mają bezpośredni konsumencki wymiar.",
+      "keyFacts": [
+        "Drożeją konsole i komputery osobiste.",
+        "Wśród przykładów BBC wymienia Xbox, Switch 2 i Steam Deck.",
+        "Narracja producentów coraz częściej odwołuje się do kosztów AI po stronie chipów."
+      ],
+      "reactions": [
+        "Karta zostaje w feedzie, bo dotyka szerokiego rynku konsumenckiego, a nie niszowej branży.",
+        "Pokazuje, że koszt boomu AI zaczyna być widoczny poza centrami danych."
+      ],
+      "whyItMatters": "Jeżeli AI podbija ceny masowych urządzeń, temat przestaje być tylko biznesową ciekawostką i staje się odczuwalny dla konsumentów.",
+      "context": "Podobnie jak w 09:10, to karta utrzymywana warunkowo: zostaje dopóki ma szerokie znaczenie publiczne i nie zostaje wyparta przez pilniejsze alerty.",
+      "watchNext": [
+        "Czy inni producenci dołączą do podwyżek i podobnej argumentacji.",
+        "Czy temat przejdzie z analizy cen do szerszej debaty o skutkach boomu AI dla elektroniki."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Why tech firms are raising PC and console prices - and blaming AI for chip costs",
+          "url": "https://www.bbc.co.uk/news/articles/cd95k584pzqo"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "AI",
+        "Ceny",
+        "Elektronika"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "RCB: fala upałów w niemal całym kraju",
+      "url": "https://www.gov.pl/web/rcb/w-najblizszych-dniach-na-terenie-niemal-calego-kraju-prognozowana-jest-fala-upalow"
+    },
+    {
+      "title": "Serwis Kąpieliskowy GIS",
+      "url": "https://sk.gis.gov.pl/kapieliska"
+    },
+    {
+      "title": "CENTCOM: U.S. Forces Conduct Additional Strikes After Iran's Latest Commercial Ship Attack",
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4528488/us-forces-conduct-additional-strikes-after-irans-latest-commercial-ship-attack/"
+    }
+  ]
+}

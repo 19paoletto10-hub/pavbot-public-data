@@ -6,11 +6,17 @@ enum PavbotRootLayoutStyle: Equatable {
 
     static func resolve(
         horizontalSizeClass: UserInterfaceSizeClass?,
+        width: CGFloat? = nil,
         isRunningOnMac: Bool = ProcessInfo.processInfo.isiOSAppOnMac
     ) -> PavbotRootLayoutStyle {
-        if isRunningOnMac {
+        let viewport = PavbotViewportClass.resolve(
+            width: width,
+            horizontalSizeClass: horizontalSizeClass,
+            isRunningOnMac: isRunningOnMac
+        )
+        if viewport != .phone {
             return .split
         }
-        return horizontalSizeClass == .regular ? .split : .tab
+        return .tab
     }
 }

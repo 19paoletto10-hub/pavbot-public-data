@@ -117,7 +117,10 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
     }
 
     var researchDataArtifact: PavbotArtifact? {
-        artifacts.first { $0.type == .researchData }
+        let candidates = artifacts
+            .filter { $0.type == .researchData }
+            .filter { !Self.isFinderStyleDuplicate($0.path) }
+        return candidates.first { Self.isCanonicalResearchDataPath($0.path) } ?? candidates.first
     }
 
     var mobileNewsDataArtifact: PavbotArtifact? {
@@ -209,6 +212,19 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
         }
 
         return date
+    }
+
+    private static func isCanonicalResearchDataPath(_ path: String) -> Bool {
+        let filename = URL(fileURLWithPath: path).lastPathComponent
+        return filename.range(
+            of: #"^\d{4}-\d{2}-\d{2}(?:-\d{4})?-research\.json$"#,
+            options: .regularExpression
+        ) != nil
+    }
+
+    private static func isFinderStyleDuplicate(_ path: String) -> Bool {
+        let stem = URL(fileURLWithPath: path).deletingPathExtension().lastPathComponent
+        return stem.range(of: #" \d+$"#, options: .regularExpression) != nil
     }
 }
 

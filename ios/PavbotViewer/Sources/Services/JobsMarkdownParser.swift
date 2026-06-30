@@ -37,16 +37,19 @@ struct JobsMarkdownParser {
             throw ParserError.missingSummary
         }
 
+        let checkedSources = parseCheckedSources(section(namedAny: ["Zakres sprawdzony", "Scope Checked"], in: markdown))
         let opportunities = parseOpportunities(
             section(
                 namedAny: [
                     "Najciekawsze nowe lub materialnie zmienione role",
                     "Najciekawsze nowe lub zmienione role",
                     "Top New Or Materially Changed Roles",
-                    "Top New Roles"
+                    "Top New Roles",
+                    "Top Roles"
                 ],
                 in: markdown
-            )
+            ),
+            fallbackURLs: checkedSources.map(\.url)
         )
         guard !opportunities.isEmpty else {
             throw ParserError.missingOpportunities
@@ -62,7 +65,7 @@ struct JobsMarkdownParser {
             changes: bulletItems(in: section(namedAny: ["Zmiany od poprzedniej rundy", "Changes Since Previous Run"], in: markdown)),
             risks: bulletItems(in: section(namedAny: ["Ryzyka i niepewności", "Ryzyka i niepewność", "Risks"], in: markdown)),
             recommendedActions: bulletItems(in: section(namedAny: ["Rekomendowane akcje", "Rekomendowane działania", "Recommended Actions"], in: markdown)),
-            checkedSources: parseCheckedSources(section(namedAny: ["Zakres sprawdzony", "Scope Checked"], in: markdown))
+            checkedSources: checkedSources
         )
     }
 
@@ -98,7 +101,7 @@ struct JobsMarkdownParser {
         return sectionLines.joined(separator: "\n")
     }
 
-    private func parseOpportunities(_ markdown: String) -> [JobOpportunity] {
+    private func parseOpportunities(_ markdown: String, fallbackURLs: [String]) -> [JobOpportunity] {
         let lines = markdown.components(separatedBy: .newlines)
         var result: [JobOpportunity] = []
         var currentHeading: String?
@@ -107,7 +110,14 @@ struct JobsMarkdownParser {
         func flush() {
             guard let currentHeading else { return }
             let block = currentBlock.joined(separator: "\n")
-            result.append(opportunity(from: currentHeading, block: block, rankFallback: result.count + 1))
+            result.append(
+                opportunity(
+                    from: currentHeading,
+                    block: block,
+                    rankFallback: result.count + 1,
+                    fallbackURLs: fallbackURLs
+                )
+            )
         }
 
         for line in lines {
@@ -122,10 +132,18 @@ struct JobsMarkdownParser {
         }
         flush()
 
+        if !result.isEmpty {
+            return result
+        }
+
+        for (index, block) in flatBulletBlocks(in: markdown).enumerated() {
+            result.append(flatOpportunity(from: block, rankFallback: index + 1, fallbackURLs: fallbackURLs))
+        }
+
         return result
     }
 
-    private func opportunity(from heading: String, block: String, rankFallback: Int) -> JobOpportunity {
+    private func opportunity(from heading: String, block: String, rankFallback: Int, fallbackURLs: [String]) -> JobOpportunity {
         let headingWithoutMarkdown = cleanInline(heading)
         let rank = parseRank(headingWithoutMarkdown) ?? rankFallback
         let titleWithoutRank = stripRank(from: headingWithoutMarkdown)
@@ -135,6 +153,7 @@ struct JobsMarkdownParser {
         let whyInteresting = bulletValue(in: block, labels: ["Dlaczego interesujące", "Why interesting", "Why it matters"])
         let uncertainty = bulletValue(in: block, labels: ["Niepewność", "Uncertainty"])
         let compensation = bulletValue(in: block, labels: ["Wynagrodzenie", "Compensation"])
+        let sourceURLs = markdownLinks(in: block).map(\.url)
 
         return JobOpportunity(
             rank: rank,
@@ -147,8 +166,53 @@ struct JobsMarkdownParser {
             fitSummary: fitSummary,
             whyInteresting: whyInteresting,
             uncertainty: uncertainty,
-            sourceURLs: markdownLinks(in: block).map(\.url),
+            sourceURLs: sourceURLs.isEmpty ? Array(fallbackURLs.prefix(1)) : sourceURLs,
             tags: inferTags(from: [split.title, fitSummary, whyInteresting, location].joined(separator: " "))
+        )
+    }
+
+    private func flatOpportunity(from block: String, rankFallback: Int, fallbackURLs: [String]) -> JobOpportunity {
+        var raw = block.trimmed
+        if raw.hasPrefix("- ") {
+            raw = String(raw.dropFirst(2)).trimmed
+        }
+
+        let links = markdownLinks(in: raw)
+        let label = cleanInline(links.first?.title ?? "")
+        let split = splitCompanyAndTitle(label.isEmpty ? "Nieznana firma - Nieznany tytuł" : label)
+        var body = raw
+        if let first = links.first {
+            body = body.replacingOccurrences(of: "[\(first.title)](\(first.url))", with: "", options: [], range: nil)
+            body = body.trimmingCharacters(in: CharacterSet(charactersIn: " :"))
+        }
+
+        let normalizedBody = cleanInline(body)
+        let clauses = normalizedBody
+            .split(separator: ";")
+            .map { String($0).trimmingCharacters(in: CharacterSet(charactersIn: " .")) }
+            .filter { !$0.isEmpty }
+        let backticked = captures(in: block, pattern: #"`([^`]+)`"#)
+
+        let location = inferFlatLocation(backticked: backticked, clauses: clauses)
+        let compensation = inferFlatCompensation(backticked: backticked, clauses: clauses)
+        let uncertainty = inferFlatUncertainty(clauses: clauses)
+        let fitSummary = inferFlatFitSummary(clauses: clauses)
+        let whyInteresting = inferFlatWhyInteresting(clauses: clauses, fitSummary: fitSummary)
+        let sourceURLs = links.map(\.url)
+
+        return JobOpportunity(
+            rank: rankFallback,
+            title: split.title,
+            company: split.company,
+            location: location,
+            workMode: inferWorkMode(from: location),
+            compensation: compensation,
+            seniority: inferSeniority(from: split.title),
+            fitSummary: fitSummary,
+            whyInteresting: whyInteresting,
+            uncertainty: uncertainty,
+            sourceURLs: sourceURLs.isEmpty ? Array(fallbackURLs.prefix(1)) : sourceURLs,
+            tags: inferTags(from: [split.title, fitSummary, whyInteresting, location, normalizedBody].joined(separator: " "))
         )
     }
 
@@ -164,6 +228,109 @@ struct JobsMarkdownParser {
             }
         }
         return "Brak danych w raporcie."
+    }
+
+    private func flatBulletBlocks(in markdown: String) -> [String] {
+        let lines = markdown.components(separatedBy: .newlines)
+        var blocks: [String] = []
+        var current: [String] = []
+
+        for line in lines {
+            let trimmed = line.trimmingCharacters(in: .whitespaces)
+            if trimmed.hasPrefix("- ") {
+                if !current.isEmpty {
+                    blocks.append(current.joined(separator: " "))
+                }
+                current = [trimmed]
+                continue
+            }
+
+            if !current.isEmpty, !trimmed.isEmpty, !trimmed.hasPrefix("#") {
+                current.append(trimmed)
+                continue
+            }
+
+            if !current.isEmpty {
+                blocks.append(current.joined(separator: " "))
+                current = []
+            }
+        }
+
+        if !current.isEmpty {
+            blocks.append(current.joined(separator: " "))
+        }
+
+        return blocks.filter { !markdownLinks(in: $0).isEmpty }
+    }
+
+    private func inferFlatLocation(backticked: [String], clauses: [String]) -> String {
+        let candidates = backticked.filter { value in
+            let normalized = value.folding(options: .diacriticInsensitive, locale: .current).lowercased()
+            return normalized.contains("wroc")
+                || normalized.contains("remote")
+                || normalized.contains("zdal")
+                || normalized.contains("hybrid")
+                || normalized.contains("hybryd")
+                || normalized.contains("location")
+        }
+        if !candidates.isEmpty {
+            return Array(NSOrderedSet(array: candidates)).compactMap { $0 as? String }.joined(separator: ", ")
+        }
+        if let first = clauses.first, first.count < 120 {
+            return first
+        }
+        return "Brak danych w raporcie."
+    }
+
+    private func inferFlatCompensation(backticked: [String], clauses: [String]) -> String {
+        let pattern = #"\b(?:PLN|USD|EUR|CHF|zł|zl|net|gross|brutto|netto)\b"#
+        for candidate in backticked + clauses {
+            if candidate.range(of: pattern, options: [.regularExpression, .caseInsensitive]) != nil {
+                return candidate
+            }
+        }
+        return "Brak publicznych widełek."
+    }
+
+    private func inferFlatUncertainty(clauses: [String]) -> String {
+        for clause in clauses {
+            let normalized = clause.folding(options: .diacriticInsensitive, locale: .current).lowercased()
+            if normalized.contains("niepewnosc") || normalized.contains("uncertainty") {
+                return clause
+            }
+        }
+        return "Brak danych w raporcie."
+    }
+
+    private func inferFlatFitSummary(clauses: [String]) -> String {
+        let descriptive = clauses.filter { clause in
+            let normalized = clause.folding(options: .diacriticInsensitive, locale: .current).lowercased()
+            return !normalized.contains("niepewnosc") && !normalized.contains("uncertainty")
+        }
+        if descriptive.count >= 2 {
+            return descriptive[1]
+        }
+        if let first = descriptive.first {
+            return first
+        }
+        return "Brak danych w raporcie."
+    }
+
+    private func inferFlatWhyInteresting(clauses: [String], fitSummary: String) -> String {
+        let descriptive = clauses.filter { clause in
+            let normalized = clause.folding(options: .diacriticInsensitive, locale: .current).lowercased()
+            return !normalized.contains("niepewnosc") && !normalized.contains("uncertainty")
+        }
+        if descriptive.count >= 3 {
+            return descriptive[2]
+        }
+        if descriptive.count >= 2 {
+            return descriptive[1]
+        }
+        if let first = descriptive.first {
+            return first
+        }
+        return fitSummary.isEmpty ? "Brak danych w raporcie." : fitSummary
     }
 
     private func parseCheckedSources(_ markdown: String) -> [JobsCheckedSource] {
@@ -195,6 +362,17 @@ struct JobsMarkdownParser {
                 return nil
             }
             return (String(markdown[titleRange]), String(markdown[urlRange]))
+        }
+    }
+
+    private func captures(in value: String, pattern: String) -> [String] {
+        guard let regex = try? NSRegularExpression(pattern: pattern) else { return [] }
+        let range = NSRange(value.startIndex..<value.endIndex, in: value)
+        return regex.matches(in: value, range: range).compactMap { match in
+            guard match.numberOfRanges > 1, let groupRange = Range(match.range(at: 1), in: value) else {
+                return nil
+            }
+            return String(value[groupRange])
         }
     }
 

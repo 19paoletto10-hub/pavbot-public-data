@@ -3,48 +3,86 @@ import UIKit
 
 struct DiagnosticsView: View {
     @Environment(ManifestStore.self) private var store
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @State private var remoteDeviceToken = ""
     @State private var remoteRegistrationError = ""
 
     var body: some View {
-        List {
-            if let manifest = store.manifest {
-                let diagnostics = ManifestDiagnostics(
-                    manifest: manifest,
-                    manifestURLString: store.manifestURLString
-                )
+        GeometryReader { proxy in
+            let layout = PavbotAdaptiveLayout.resolve(
+                width: proxy.size.width,
+                horizontalSizeClass: horizontalSizeClass
+            )
 
-                DiagnosticsSummarySection(diagnostics: diagnostics)
-                DiagnosticsStatusSection(diagnostics: diagnostics)
-                DiagnosticsIssuesSection(issues: diagnostics.issues)
-                DiagnosticsAutomationSection(statuses: diagnostics.automationStatuses)
-            } else {
-                ContentUnavailableView(
-                    "Brak manifestu",
-                    systemImage: "doc.badge.questionmark",
-                    description: Text("Załaduj albo skonfiguruj manifest Pavbot, aby sprawdzić status automatyzacji Codex.")
+            PavbotPremiumScreenScaffold(layout: layout) {
+                if let manifest = store.manifest {
+                    let diagnostics = ManifestDiagnostics(
+                        manifest: manifest,
+                        manifestURLString: store.manifestURLString
+                    )
+
+                    PavbotCommandHero(
+                        eyebrow: "Health Check",
+                        title: "Diagnostyka",
+                        subtitle: layout.usesDashboardLayout
+                            ? "Stan manifestu, automatyzacji i powiadomień jako karty zdrowia połączeń."
+                            : "Szybki status danych, problemów i powiadomień bez technicznego podglądu manifestu.",
+                        systemImage: "waveform.path.ecg",
+                        tint: diagnostics.issues.isEmpty ? .green : .orange,
+                        insights: [
+                            PavbotInsight(title: "Automatyzacje", value: "\(diagnostics.enabledAutomationCount)", systemImage: "bolt.fill", tint: .yellow),
+                            PavbotInsight(title: "Artefakty", value: "\(diagnostics.artifactCount)", systemImage: "tray.full.fill", tint: .blue),
+                            PavbotInsight(title: "Tematy", value: "\(diagnostics.topicCount)", systemImage: "folder.fill", tint: .green),
+                            PavbotInsight(title: "Problemy", value: "\(diagnostics.issues.count)", systemImage: diagnostics.issues.isEmpty ? "checkmark.seal.fill" : "exclamationmark.triangle.fill", tint: diagnostics.issues.isEmpty ? .green : .orange)
+                        ]
+                    )
+
+                    DiagnosticsSummarySection(diagnostics: diagnostics)
+                    DiagnosticsStatusSection(diagnostics: diagnostics)
+                    DiagnosticsIssuesSection(issues: diagnostics.issues)
+                    DiagnosticsAutomationSection(statuses: diagnostics.automationStatuses)
+                } else {
+                    PavbotCommandHero(
+                        eyebrow: "Health Check",
+                        title: "Diagnostyka",
+                        subtitle: "Załaduj manifest Pavbot, aby sprawdzić status automatyzacji Codex.",
+                        systemImage: "doc.badge.questionmark",
+                        tint: .orange,
+                        insights: [
+                            PavbotInsight(title: "Manifest", value: "Brak", systemImage: "doc.badge.questionmark", tint: .orange),
+                            PavbotInsight(title: "Tryb", value: layout.usesDashboardLayout ? "Wide" : "Phone", systemImage: "rectangle.3.group", tint: .blue)
+                        ]
+                    )
+
+                    ContentUnavailableView(
+                        "Brak manifestu",
+                        systemImage: "doc.badge.questionmark",
+                        description: Text("Załaduj albo skonfiguruj manifest Pavbot, aby sprawdzić status automatyzacji Codex.")
+                    )
+                    .frame(maxWidth: .infinity, minHeight: 260)
+                }
+
+                DiagnosticsRemoteNotificationSection(
+                    deviceToken: remoteDeviceToken,
+                    registrationError: remoteRegistrationError
                 )
             }
-
-            DiagnosticsRemoteNotificationSection(
-                deviceToken: remoteDeviceToken,
-                registrationError: remoteRegistrationError
-            )
+            .environment(\.pavbotAdaptiveLayout, layout)
         }
         .navigationTitle("Diagnostyka")
-        .listStyle(.insetGrouped)
         .onAppear {
             remoteDeviceToken = RemoteNotificationDiagnostics.deviceToken()
             remoteRegistrationError = RemoteNotificationDiagnostics.registrationError()
         }
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
-                Button {
+                PavbotRefreshToolbarButton(
+                    isRefreshing: store.state == .loading,
+                    accessibilityLabel: "Odśwież diagnostykę",
+                    accessibilityHint: "Odświeża manifest używany przez diagnostykę."
+                ) {
                     Task { await store.reload() }
-                } label: {
-                    Image(systemName: "arrow.clockwise")
                 }
-                .accessibilityLabel("Odśwież diagnostykę")
             }
         }
     }
@@ -55,7 +93,12 @@ private struct DiagnosticsRemoteNotificationSection: View {
     let registrationError: String
 
     var body: some View {
-        Section {
+        PavbotReadingCard(
+            title: "Powiadomienia live",
+            subtitle: "Token jest przechowywany lokalnie i nie trafia do repo.",
+            systemImage: "bell.badge.fill",
+            tint: .blue
+        ) {
             LabeledContent("APNs token", value: RemoteNotificationDiagnostics.deviceTokenPreview(for: deviceToken))
             LabeledContent("Apple Console", value: "Development dla Xcode Debug")
 
@@ -73,28 +116,28 @@ private struct DiagnosticsRemoteNotificationSection: View {
             .accessibilityLabel("Kopiuj token APNs")
             .accessibilityHint("Kopiuje token urządzenia do Apple Push Notifications Console.")
             .disabled(deviceToken.isEmpty)
-        } header: {
-            Text("Powiadomienia live")
-        } footer: {
-            Text("Użyj tego tokena w Apple Push Notifications Console dla com.paweltanski.pavbotviewer. Token jest przechowywany lokalnie i nie trafia do repo.")
         }
     }
 }
 
 private struct DiagnosticsSummarySection: View {
+    @Environment(\.pavbotAdaptiveLayout) private var layout
     let diagnostics: ManifestDiagnostics
 
     var body: some View {
-        Section {
-            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
+        PavbotReadingCard(
+            title: "Podsumowanie danych",
+            subtitle: "Najważniejsze liczniki manifestu widoczne bez technicznego preview.",
+            systemImage: "chart.bar.doc.horizontal.fill",
+            tint: .green
+        ) {
+            LazyVGrid(columns: layout.usesDashboardLayout ? layout.adaptiveColumns(minimum: 180) : [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
                 MetricTile(title: "Automatyzacje", value: "\(diagnostics.enabledAutomationCount)", systemImage: "bolt.fill", tint: .yellow)
                 MetricTile(title: "Artefakty", value: "\(diagnostics.artifactCount)", systemImage: "tray.full.fill", tint: .blue)
                 MetricTile(title: "Tematy", value: "\(diagnostics.topicCount)", systemImage: "folder.fill", tint: .green)
                 MetricTile(title: "Problemy", value: "\(diagnostics.issues.count)", systemImage: diagnostics.issues.isEmpty ? "checkmark.seal.fill" : "exclamationmark.triangle.fill", tint: diagnostics.issues.isEmpty ? .green : .orange)
             }
         }
-        .listRowBackground(Color.clear)
-        .listRowInsets(EdgeInsets(top: 8, leading: 0, bottom: 8, trailing: 0))
     }
 }
 
@@ -102,14 +145,13 @@ private struct DiagnosticsStatusSection: View {
     let diagnostics: ManifestDiagnostics
 
     var body: some View {
-        Section {
+        PavbotReadingCard(
+            title: "Status danych",
+            subtitle: "Czy aplikacja ma aktualne dane i czy publikacje wyglądają zdrowo.",
+            systemImage: "checkmark.seal.fill",
+            tint: diagnostics.freshness.severity.tint
+        ) {
             DiagnosticRow(item: diagnostics.freshness)
-            DiagnosticRow(item: diagnostics.urlStatus)
-            DiagnosticRow(item: diagnostics.rawBaseURLStatus)
-        } header: {
-            Text("Manifest Codex")
-        } footer: {
-            Text("Status jest wyliczany z manifestu Pavbot i wygenerowanych artefaktów.")
         }
     }
 }
@@ -118,7 +160,12 @@ private struct DiagnosticsIssuesSection: View {
     let issues: [DiagnosticItem]
 
     var body: some View {
-        Section("Problemy") {
+        PavbotReadingCard(
+            title: "Problemy",
+            subtitle: issues.isEmpty ? "Brak ostrzeżeń diagnostycznych." : "Elementy wymagające sprawdzenia.",
+            systemImage: issues.isEmpty ? "checkmark.circle.fill" : "exclamationmark.triangle.fill",
+            tint: issues.isEmpty ? .green : .orange
+        ) {
             if issues.isEmpty {
                 Label("Brak ostrzeżeń diagnostycznych", systemImage: "checkmark.circle.fill")
                     .foregroundStyle(.green)
@@ -135,7 +182,12 @@ private struct DiagnosticsAutomationSection: View {
     let statuses: [AutomationDiagnostic]
 
     var body: some View {
-        Section("Aktywne automatyzacje") {
+        PavbotReadingCard(
+            title: "Aktywne automatyzacje",
+            subtitle: "Statusy workflow i ostatni opublikowany artefakt.",
+            systemImage: "bolt.circle.fill",
+            tint: .yellow
+        ) {
             ForEach(statuses) { status in
                 VStack(alignment: .leading, spacing: 8) {
                     HStack(alignment: .top, spacing: 10) {

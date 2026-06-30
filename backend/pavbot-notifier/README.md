@@ -16,7 +16,8 @@ server URL is configured in Settings.
 2. iOS app sends the token to `POST /v1/devices` on this service.
 3. GitHub calls `POST /webhooks/github` after repo pushes.
 4. The service fetches `PAVBOT_MANIFEST_URL`, compares it with the last stored
-   manifest, and sends APNs alerts for new artifacts and automations.
+   manifest, waits until changed artifacts are readable from their public raw
+   URLs, and then sends APNs alerts for new artifacts and automations.
 5. If `PAVBOT_DAILY_WEATHER_ENABLED=true`, the same service fetches Wrocław
    weather every day at 07:30 Europe/Warsaw and sends one APNs weather briefing
    to devices registered with `dailyWeatherEnabled=true`.
@@ -64,13 +65,45 @@ PAVBOT_SAFARI_REDDIT_SUBREDDITS=Polska_wpz,memes,ProgrammerHumor,Polska,technolo
 The local Codex automation runs:
 
 ```bash
-python3 scripts/collect_safari_reddit_humor.py --post
+python3 scripts/collect_safari_reddit_humor.py --max-items 12
 ```
 
 It uses the logged-in Safari session to read Reddit pages, builds the digest,
-and posts it to `/v1/humor/digest` with `Authorization: Bearer
-$PAVBOT_HUMOR_INGEST_TOKEN`. It must not vote, comment, share, post, or submit
-forms on Reddit.
+writes a local audit package in `research/reddit-radar/`, and then uses
+read-only Safari/Computer Use review to prepare the final comment analysis.
+The audit package includes raw comment context, local comment-analysis status,
+the final digest JSON, and a Polish Markdown summary explaining the selected
+comments. The local radar state keeps at most 12 unique posts, adds fresh
+non-duplicate finds on every run, and replaces up to 6 oldest posts once the
+set is full. It should also check the last 5 days of Reddit Radar outputs and
+avoid re-publishing the same Reddit URL or title from recent runs, even after a
+post rotates out of the current 12-item state. It must not vote, comment,
+share, post, or submit forms on Reddit.
+
+After the generated final JSON and matching raw JSON have per-item
+`commentAnalysisStatus` values of `reviewed` or `no_safe_comments`, commit and
+push the matching audit package to `origin/main` first and then publish the
+digest without re-reading Safari:
+
+```bash
+python3 scripts/collect_safari_reddit_humor.py --post-file research/reddit-radar/data/YYYY-MM-DD-HHMM-reddit-radar.json
+```
+
+The `--post-file` path now performs the publication guard itself: it commits
+and pushes the matching `runs/`, `data/`, and raw JSON package to `origin/main`,
+verifies the refreshed manifest, and only then sends the digest to the notifier.
+If the current run is missing from `origin/main:public/pavbot-manifest.json`,
+treat the publication as incomplete and fix the manifest before reporting
+success.
+
+```bash
+git fetch origin
+git show origin/main:public/pavbot-manifest.json | grep -F "research/reddit-radar/runs/YYYY-MM-DD-HHMM-reddit-radar.md"
+```
+
+If you are running the collector directly, the same rule applies: the audit
+package must land on `origin/main` before `/v1/humor/latest` is considered a
+valid new publication.
 
 The legacy Reddit OAuth mode remains available by setting:
 
@@ -91,8 +124,9 @@ Public endpoints:
 
 - `GET /healthz` - lightweight container healthcheck
 - `GET /status` - manifest URL, public notifier URL, registered devices, APNs
-  configuration status/environment, last valid webhook, last APNs delivery
-  result, daily weather status, and last device registration
+  configuration status/environment, last valid webhook, last public raw
+  readiness gate result, last APNs delivery result, daily weather status, and
+  last device registration
 - `GET /v1/app/defaults` - public connection defaults for the iOS Settings
   screen: manifest URL, notification server URL, and status URL. This endpoint
   never returns APNs keys, webhook secrets, or Cloudflare credentials.

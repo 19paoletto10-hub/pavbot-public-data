@@ -27,6 +27,7 @@ from pavbot_pdf_theme import (
     draw_mobile_page,
     key_value_card,
     markdown_inline,
+    markdown_source_inline,
     text_card,
 )
 
@@ -80,11 +81,15 @@ def is_metadata_line(stripped: str) -> bool:
 
 
 def normalized_heading(value: str) -> str:
-    return value.strip().lower()
+    return value.strip().rstrip(":").lower()
 
 
 def display_heading(value: str) -> str:
     return SECTION_LABELS.get(normalized_heading(value), value)
+
+
+def is_sources_section(value: str) -> bool:
+    return normalized_heading(value) in {"źródła", "sources"}
 
 
 def starts_new_block(stripped: str) -> bool:
@@ -203,7 +208,8 @@ def parse_markdown(markdown_text: str, topic_name: str | None) -> tuple[str, lis
 
         if stripped.startswith("- "):
             item, i = collect_list_item(lines, i)
-            story.append(Paragraph("- " + markdown_inline(item), styles["bullet"]))
+            markup = markdown_source_inline(item) if is_sources_section(current_section) else markdown_inline(item)
+            story.append(Paragraph("- " + markup, styles["bullet"]))
             continue
 
         paragraph, i = collect_paragraph(lines, i)
@@ -214,7 +220,8 @@ def parse_markdown(markdown_text: str, topic_name: str | None) -> tuple[str, lis
             story.append(Spacer(1, 6))
             summary_callout_used = True
             continue
-        story.append(Paragraph(markdown_inline(paragraph), styles["body"]))
+        markup = markdown_source_inline(paragraph) if is_sources_section(current_section) else markdown_inline(paragraph)
+        story.append(Paragraph(markup, styles["body"]))
 
     return title, story
 

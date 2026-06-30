@@ -117,7 +117,7 @@ final class ResearchNewsStore {
 
         loadCachedIssue(for: topic)
         if issue != nil {
-            cacheNotice = "Pokazuję ostatnie zapisane wydanie Research. Odświeżenie nie powiodło się."
+            cacheNotice = PavbotCacheNoticeCopy.refreshFailed(context: "wydanie Research")
             state = .loaded
         } else {
             cacheNotice = nil

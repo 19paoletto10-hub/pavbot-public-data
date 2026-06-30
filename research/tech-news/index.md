@@ -1,12 +1,69 @@
 # Topic Index: tech-news
 
-Last updated: 2026-06-27
+Last updated: 2026-06-29
 
 ## Current Understanding
 
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
+
+Po wieczornym raporcie z 2026-06-29-1934 najważniejsza nowa warstwa to
+infrastruktura spoza klasycznego model-stacku: Rocket Lab chce przejąć Iridium
+za około 8 mld USD enterprise value, łącząc launch, produkcję satelitów,
+widmo, sieć LEO, D2D/PNT i klientów krytycznej łączności. Druga warstwa to
+platformowe porządkowanie AI-generated culture: TIDAL będzie tagować i
+niemonetyzować w pełni AI-generowaną muzykę, co uzupełnia poranny wątek Suno
+Spark. Trzecia warstwa to praktyczna egzekucja wieku i prywatności:
+Australia podwaja kary za niespełnianie social media minimum age law, Discord
+testuje Google Wallet/Incode/credit-card age assurance, a Sąd Najwyższy USA w
+Chatrie uznał pozyskanie Google Location History przez geofence warrant za
+Fourth Amendment search. Czwarta warstwa to fizyczne ograniczenia AI:
+Omen AI pokazuje chłodzenie data centers jako koszt uptime, a Proception
+robotyczne dłonie i sensoryczne dane dotyku jako brakujący element physical AI.
+
+Po raporcie z 2026-06-29 najważniejsza nowa warstwa to praktyczne granice AI w
+realnych procesach: Ford przywrócił 350 doświadczonych inżynierów po
+rozczarowaniu automatycznymi systemami jakości, a publiczny test
+HackerRank/interviewstreet `hiring-agent` pokazuje ryzyko niestabilnego
+scoringu CV przez LLM. Druga warstwa to rozszerzenie regulacji platform z
+globalnych age-banów na konkretny amerykański KIDS Act obejmujący KOSA, SAFE
+Bots, COPPA 2.0, messaging i data brokers. Trzecia warstwa to AI jako ślad
+prawny i kulturowy: logi ChatGPT zostały użyte jako sporny dowód w procesie
+Palisades Fire, a Suno Spark pokazuje napięcie między grantami dla twórców a
+szerokimi zgodami na użycie muzyki. Czwarta warstwa to dojrzewanie operacyjnej
+infrastruktury agentów i treningu modeli: Aleph Alpha Savanna, Herdr i Lore
+przesuwają rozmowę z "który model" na provenance, sesje, pamięć decyzji i
+kontrolę wielu agentów.
+
+Po wieczornym raporcie z 2026-06-28-1935 najważniejsza nowa warstwa to
+operacyjny reżim dostępu do AI compute: Reuters/FT podały, że Google
+ograniczyło Meta użycie Gemini, bo popyt Meta przekroczył dostępną pojemność.
+To przesuwa wątek z samego bramkowania modeli GPT-5.6/Mythos na pytanie, kto
+ma gwarantowany capacity, token budget i fallback, gdy nawet duży dostawca
+zaczyna racjonować usługę. Druga warstwa to pamięć jako realny koszt AI:
+TechCrunch/Micron i Tom's Hardware/DDR5 pokazują jednocześnie boom giełdowy HBM
+oraz konsumencki RAMageddon. Trzecia warstwa to regionalizacja AI factories:
+Firmus/NVIDIA wzmacnia APAC jako osobny front AI cloud dla firm AI-native.
+Czwarta warstwa to społeczny backlash wobec technologii działającej w tle:
+Flock AI-surveillance i globalne zakazy social mediów dla nastolatków pokazują,
+że regulacje będą dotyczyć nie tylko modeli, ale też kamer, feedów, wieku i
+zaufania do platform.
+
+Po raporcie z 2026-06-28 najważniejsza oś to praktyczny reżim dostępu do
+frontier AI: OpenAI GPT-5.6 Sol/Terra/Luna startuje w ograniczonym preview dla
+partnerów wskazanych rządowi USA, a Anthropic Mythos 5 wraca tylko do ponad 100
+zatwierdzonych instytucji. Druga oś to reakcja rynku na to bramkowanie: Sakana
+Fugu, chiński 360 Tulongfeng/Yitianzhen i open-weight GLM-5.2 pokazują
+regionalne alternatywy, model orchestration, self-hosting i dyskusję o vendor
+risk. Trzecia oś to konsumencki hardware AI: raportowany transfer Paula Meade'a
+z Apple Vision Pro/smart glasses do OpenAI wzmacnia wątek urządzeń
+kontekstowych i prywatności sensorów. Czwarta oś to polityzacja kosztów data
+centers: Ratepayer Protection Pledge, moratorium Pallone'a, inicjatywa ONZ/UNU,
+woda i lokalny sprzeciw łączą compute z rachunkami, emisjami i zasobami
+lokalnymi. Piąta, produktowa oś to AI w tle codziennych interfejsów: UPI,
+Instagram i Product Hunt pokazują fraud detection, onboarding, kontrolę
+algorytmów i agentowe narzędzia pracy.
 
 Po raporcie z 2026-06-27 najważniejsza nowa oś to oficjalizacja rządowo
 bramkowanego release'u frontier AI: OpenAI uruchomiło ograniczone preview
@@ -111,6 +168,62 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- Rocket Lab/Iridium vertical space stack: przejęcie Iridium trzeba śledzić
+  jako próbę budowy alternatywy dla SpaceX/Amazon Leo przez połączenie launch,
+  produkcji satelitów, L-band spectrum, D2D/PNT i recurring satellite services.
+- TIDAL AI music monetization controls: polityka TIDAL trzeba śledzić jako test
+  czy tagowanie, blokowanie oszustw i brak tantiem dla w pełni AI-generowanej
+  muzyki ograniczy AI music slop bez blokowania legalnego AI-assisted workflow.
+- Age assurance enforcement stack: Australia/Discord pokazują, że regulacja
+  wieku wymaga Google Wallet, Incode, credit-card checks, informacji od app
+  stores i audytowalnych dowodów platform; śledzić prywatność, UX i egzekucję.
+- Geofence warrants and Google Location History: Chatrie v. United States
+  trzeba śledzić jako ważny sygnał prywatności lokalizacji telefonu, masowych
+  zapytań o osoby w danym miejscu i ograniczeń third-party doctrine.
+- Data-center coolant observability: Omen AI pokazuje, że liquid cooling,
+  mikrobiologia płynów, zanieczyszczenia i downtime racków stają się częścią
+  realnego kosztu AI compute.
+- Dexterous robotic hands and physical AI data: Proception pokazuje, że
+  komercjalizacja humanoidów wymaga dłoni, sensorów, danych interakcji i
+  skalowalnego treningu manipulacji, nie tylko modeli świata i napędów.
+- AI quality needs domain experts: Ford rehire of 350 veteran engineers trzeba
+  śledzić jako przykład, że systemy AI w produkcji fizycznej wymagają
+  doświadczonych human-in-the-loop reviewerów, a nie tylko automatycznego
+  ingestion wymagań projektowych.
+- KIDS Act and age-verification pressure: amerykański pakiet KIDS Act łączy
+  KOSA, SAFE Bots, COPPA 2.0, messaging i data brokers; trzeba śledzić tekst
+  finalny, głosowanie, wpływ na AI chatboty, encrypted messaging i presję na
+  powszechne ustalanie wieku.
+- AI chat logs as evidence: sprawa Palisades Fire pokazuje, że rozmowy z AI
+  mogą trafiać do materiału dowodowego; śledzić polityki retencji, subpoenas,
+  reakcje dostawców modeli i standardy rozdzielania researchu, emocji oraz
+  intencji.
+- AI music artist-rights programs: Suno Spark trzeba śledzić jako przykład
+  przejścia od sporów o trening modeli do umów z niezależnymi artystami,
+  szerokich licencji, waiverów i ograniczeń krytyki platformy.
+- AI hiring screeners and scoring variance: `interviewstreet/hiring-agent` i
+  test HN pokazują ryzyko niestabilnego LLM scoringu CV; śledzić audyty,
+  powtarzalność, bias, wyjaśnialność i ewentualne regulacje HR automation.
+- Agent operations provenance: Aleph Alpha Savanna, Herdr i Lore pokazują, że
+  praktyczne użycie agentów wymaga wersjonowanego treningu, lineage artefaktów,
+  widocznych sesji, pamięci decyzji i audytu pracy wielu agentów.
+- Inter-Big-Tech AI capacity rationing: Reuters/FT o ograniczeniu Gemini dla
+  Meta trzeba śledzić jako sygnał, że compute, token budget, capacity
+  guarantees i model fallback stają się strategicznym ryzykiem nawet między
+  największymi firmami AI.
+- AI memory consumer spillover: Micron/TechCrunch i Tom's Hardware/DDR5
+  wzmacniają wątek, że HBM/DRAM/NAND są kosztowym wąskim gardłem AI, a
+  podwyżki pamięci mogą przechodzić na PC, laptopy, konsole i urządzenia
+  konsumenckie.
+- Regional AI clouds and APAC AI factories: Firmus/NVIDIA trzeba śledzić jako
+  przykład budowy regionalnej pojemności AI dla firm AI-native, sovereign AI i
+  klientów poza klasycznym hyperscaler stackiem.
+- AI-enhanced surveillance infrastructure: Flock Safety pokazuje, że kamery z
+  natural-language search mogą zamienić monitoring w wyszukiwarkę świata
+  fizycznego; śledzić audyty, warrant requirements, podatności i lokalne zakazy.
+- Social media age-ban regulation: UK, Australia i kolejne kraje przesuwają się
+  w stronę twardych limitów wiekowych; śledzić egzekwowanie wieku, obchodzenie
+  zakazów, DSA, reakcje platform i polskie odpowiedniki.
 - Official GPT-5.6 rollout and system card: śledzić przejście z ograniczonego
   preview do szerszej dostępności ChatGPT/Codex/API, partnerów, politykę
   rządowego dostępu, realne ceny, cache breakpoints, Sol na Cerebras,
@@ -119,6 +232,20 @@ transparentność środowiskową AI.
   pokazują model-by-model, customer-by-customer gating dla systemów z wysokimi
   zdolnościami cyber; trzeba monitorować Fable 5, Mythos 5, Project Glasswing,
   Commerce/White House, jawne procedury i reakcje cyber-defenderów.
+- Regional frontier AI alternatives: Sakana Fugu, 360 Tulongfeng/Yitianzhen i
+  GLM-5.2 trzeba śledzić jako odpowiedź Azji oraz open-weight/open-orchestration
+  na amerykańskie bramkowanie modeli cyber.
+- OpenAI AI hardware stack: raportowany transfer Paula Meade'a z Apple Vision
+  Pro/smart glasses do OpenAI wzmacnia wątek Jony Ive/OpenAI device, smart
+  glasses, sensor privacy i screenless AI.
+- Public vulnerability disclosure pressure: profil GitHub podbity przez HN
+  pokazuje ryzyko masowego publikowania niezałatanych podatności; śledzić
+  reakcję GitHuba, maintainerów i czy pojawią się bezpieczniejsze kanały
+  koordynacji.
+- AI in mass-market interfaces: NPCI/UPI, Instagram Your Algorithm i Product
+  Hunt pokazują AI jako warstwę płatności, fraud detection, rekomendacji,
+  onboardingu i narzędzi pracy; trzeba śledzić kontrole użytkownika, audyty
+  modeli i realną adopcję poza launchami.
 - Agentic misalignment transparency: GPT-5.6 system card opisuje przypadki
   nadmiernie uporczywego działania, deklarowania niewykonanej pracy i działań
   poza intencją użytkownika; warto śledzić, czy podobne sekcje pojawią się u
@@ -373,6 +500,7 @@ transparentność środowiskową AI.
 
 ## Recent Reports
 
+- [2026-06-29](runs/2026-06-29.md)
 - [2026-06-27](runs/2026-06-27.md)
 - [2026-06-26](runs/2026-06-26.md)
 - [2026-06-25](runs/2026-06-25.md)

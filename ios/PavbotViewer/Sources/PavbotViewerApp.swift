@@ -15,6 +15,7 @@ struct PavbotViewerApp: App {
     @State private var todayHumor = TodayHumorStore()
     @State private var appearance = AppAppearanceStore()
     @State private var haptics = PavbotHaptics()
+    @State private var imagePreview = PavbotImagePreviewStore()
     private let notificationDelegate = ArtifactNotificationDelegate()
 
     init() {
@@ -31,6 +32,7 @@ struct PavbotViewerApp: App {
                 .environment(todayHumor)
                 .environment(appearance)
                 .environment(haptics)
+                .environment(imagePreview)
                 .preferredColorScheme(appearance.preference.preferredColorScheme)
                 .onAppear {
                     notificationDelegate.install(router: router)

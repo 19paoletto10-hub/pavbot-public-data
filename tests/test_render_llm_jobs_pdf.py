@@ -65,6 +65,7 @@ New roles include agentic AI and RAG platform work.
         self.assertIn("Why interesting", text)
         self.assertIn("RAG agents", text)
         self.assertIn("Example AI role", text)
+        self.assertIn("https://example.com/jobs/senior-llm-engineer", text)
 
 
 if __name__ == "__main__":

@@ -23,6 +23,7 @@
 		26B137D17418BA3AD94AC44C /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5333367ECD190BE7F495C18C /* Charts.framework */; };
 		26DC35B41520EC2E20D7D2D8 /* AppAppearancePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D512854AD5B928D5701C914 /* AppAppearancePreference.swift */; };
 		282BB106B682BA4ED6DAC2C0 /* WeatherBriefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672A72A9905930AD5017C278 /* WeatherBriefView.swift */; };
+		28D2B0DD1B4D2D938B979E41 /* DailyWisdom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B276D1B34A137CFB40F06E5 /* DailyWisdom.swift */; };
 		2946726C948D4F66BA4F4D2E /* SpeechPlaybackControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791E7D48947FBC752F3AEBE /* SpeechPlaybackControls.swift */; };
 		29CB56086EEE782839BE6637 /* ArtifactNotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F2AEF493B65E3050003DA5E /* ArtifactNotificationService.swift */; };
 		2AE881F7C1D1A630D398AEA6 /* ReloadGate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D63E43DF9B137E85F11B5D79 /* ReloadGate.swift */; };
@@ -41,6 +42,7 @@
 		597607DDD3CE7120DD479003 /* PavbotManifestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC573E4A2BA15F1C009018C /* PavbotManifestTests.swift */; };
 		5DDB42A0B03C04EFF52CDFEA /* PavbotRootLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11093FC02461B89D108DDFF7 /* PavbotRootLayout.swift */; };
 		5E84671285CAA3787BDE375D /* PavbotAudioActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D61FC4BF12BB3ED862A233 /* PavbotAudioActivityAttributes.swift */; };
+		602CD8C7A9A2B4E0F4E8B916 /* daily-wisdom.json in Resources */ = {isa = PBXBuildFile; fileRef = D9F6A019E8544DE29BA34019 /* daily-wisdom.json */; };
 		62AFE83484AB7148EAB2645B /* TopicReportPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FF1047640A421DB6DCAC2C /* TopicReportPackage.swift */; };
 		66504F7F205137ECCC1AFD58 /* ArtifactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397497A364A4766EB8EEA6A /* ArtifactDetailView.swift */; };
 		6791D48AF0F76769404465A8 /* JobsReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE41E2B0AF8E61BF26451D /* JobsReport.swift */; };
@@ -138,12 +140,13 @@
 		3F2AEF493B65E3050003DA5E /* ArtifactNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactNotificationService.swift; sourceTree = "<group>"; };
 		40135DE56B852E3461575FEF /* SavedResearchArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedResearchArticle.swift; sourceTree = "<group>"; };
 		41EEB32A16C7FA3A3E684630 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		46AC5FA30428A69116483128 /* PavbotAudioActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PavbotAudioActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		46AC5FA30428A69116483128 /* PavbotAudioActivityExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = PavbotAudioActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A8E6CA4203600F59D8F903F /* PavbotAudioActivityWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotAudioActivityWidget.swift; sourceTree = "<group>"; };
 		4EC573E4A2BA15F1C009018C /* PavbotManifestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotManifestTests.swift; sourceTree = "<group>"; };
 		50CE914EED9058E2E6826511 /* WeatherBriefService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherBriefService.swift; sourceTree = "<group>"; };
 		5312D36BCDBEDC5A6295A40E /* TodayLiveTopics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLiveTopics.swift; sourceTree = "<group>"; };
 		5333367ECD190BE7F495C18C /* Charts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Charts.framework; path = System/Library/Frameworks/Charts.framework; sourceTree = SDKROOT; };
+		5B276D1B34A137CFB40F06E5 /* DailyWisdom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWisdom.swift; sourceTree = "<group>"; };
 		5AAF18DACEBDAEC0782CD370 /* PavbotManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotManifest.swift; sourceTree = "<group>"; };
 		5DC432622FB8C7B2D2F0C4D1 /* AutomationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutomationListView.swift; sourceTree = "<group>"; };
 		63D705D1F4AAA64D5A62C228 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -168,7 +171,7 @@
 		A92C841A1F8FBA1CCC606BF7 /* TodayLiveTopicSpeechController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLiveTopicSpeechController.swift; sourceTree = "<group>"; };
 		ADB5F074E7D876C212469E3F /* PulseNewsDigest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseNewsDigest.swift; sourceTree = "<group>"; };
 		B05D0CE7DC57DAC9378884FD /* ResearchNewsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchNewsModels.swift; sourceTree = "<group>"; };
-		B101DC0CC0E2D100DB7164D0 /* PavbotViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PavbotViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B101DC0CC0E2D100DB7164D0 /* PavbotViewer.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PavbotViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6489B361457D2D72C30D95D /* JobsMarkdownParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsMarkdownParser.swift; sourceTree = "<group>"; };
 		B7CD203D4E9EA86F2A8DA854 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B881CFFC8F93124D872D5FFB /* TodayLiveTopicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLiveTopicsView.swift; sourceTree = "<group>"; };
@@ -178,12 +181,13 @@
 		C32E7810020E687A482FF26F /* ReportPackageViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReportPackageViews.swift; sourceTree = "<group>"; };
 		CC67888578A962C04458A316 /* PavbotHaptics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotHaptics.swift; sourceTree = "<group>"; };
 		D63E43DF9B137E85F11B5D79 /* ReloadGate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadGate.swift; sourceTree = "<group>"; };
+		D9F6A019E8544DE29BA34019 /* daily-wisdom.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "daily-wisdom.json"; sourceTree = "<group>"; };
 		D86A694DE2D0257318C284EB /* AccessibilityShowcaseFeature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessibilityShowcaseFeature.swift; sourceTree = "<group>"; };
 		D932715A009BB3305821F0FF /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		E1CA2061F8730E38CAE8AB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E36E99E399CB1D97AF718704 /* PavbotDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotDesign.swift; sourceTree = "<group>"; };
 		E3EB066F256FE9BE698F99D3 /* JobsDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsDataService.swift; sourceTree = "<group>"; };
-		E84229AB2A6D9AD1434791DB /* PavbotViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PavbotViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E84229AB2A6D9AD1434791DB /* PavbotViewerTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PavbotViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EED249FEEE03D833589C1529 /* DiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsView.swift; sourceTree = "<group>"; };
 		F139EEFBD6DE7999AD6C89D3 /* JobsBriefPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsBriefPresentation.swift; sourceTree = "<group>"; };
 		F397497A364A4766EB8EEA6A /* ArtifactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactDetailView.swift; sourceTree = "<group>"; };
@@ -228,6 +232,7 @@
 				9D3D88752808C42E687EEB21 /* PavbotViewerApp.swift */,
 				C93482AF37E91AFF3E79BA5C /* Models */,
 				A51BDBB327E12A05D73B4059 /* Navigation */,
+				7E62721DBEA9221322C7F869 /* Resources */,
 				427C2F22CB46807FD7C61950 /* Services */,
 				D507C06AEC96D5E5063231BA /* Views */,
 			);
@@ -291,6 +296,14 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		7E62721DBEA9221322C7F869 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D9F6A019E8544DE29BA34019 /* daily-wisdom.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		8CB409BB6464599300A89A51 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +346,7 @@
 				D86A694DE2D0257318C284EB /* AccessibilityShowcaseFeature.swift */,
 				9D512854AD5B928D5701C914 /* AppAppearancePreference.swift */,
 				7D898746D5C1A3322B93542A /* DailyWeatherReport.swift */,
+				5B276D1B34A137CFB40F06E5 /* DailyWisdom.swift */,
 				F139EEFBD6DE7999AD6C89D3 /* JobsBriefPresentation.swift */,
 				8AEE41E2B0AF8E61BF26451D /* JobsReport.swift */,
 				33E285B1693A0587B8744C9E /* MobileNewsMagazine.swift */,
@@ -458,7 +472,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 2630;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
 					1A1182BCAB775DFBFA8726CC = {
 						DevelopmentTeam = SP774TZZU8;
@@ -501,6 +515,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				138C25094EEC6A2230199FCD /* Assets.xcassets in Resources */,
+				602CD8C7A9A2B4E0F4E8B916 /* daily-wisdom.json in Resources */,
 				1919E425F63DDE1B5BCA83A8 /* pavbot-manifest.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,6 +572,7 @@
 				993BB441D8B739BCC05A311D /* AutomationListView.swift in Sources */,
 				FC588F3E0BB5115EDDFE0FCF /* ContentView.swift in Sources */,
 				43ED2F7B04F61F69390FB323 /* DailyWeatherReport.swift in Sources */,
+				28D2B0DD1B4D2D938B979E41 /* DailyWisdom.swift in Sources */,
 				BF6147CDD4E1C41274A89BCD /* DiagnosticsView.swift in Sources */,
 				FA44D983217DB9EDE0295F84 /* JobsBriefPresentation.swift in Sources */,
 				0862424D4A2D15B6819EEF9D /* JobsDataService.swift in Sources */,
@@ -671,7 +687,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 260627.202;
+				CURRENT_PROJECT_VERSION = 260629.22;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -688,7 +704,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 260627.202;
+				CURRENT_PROJECT_VERSION = 260629.22;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = AudioActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -759,13 +775,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.9;
@@ -777,7 +792,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 260627.202;
+				CURRENT_PROJECT_VERSION = 260629.22;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = AudioActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -842,12 +857,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 2.0.2;
+				MARKETING_VERSION = 2.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.9;
@@ -861,7 +875,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 260627.202;
+				CURRENT_PROJECT_VERSION = 260629.22;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -20,6 +20,7 @@ from .core import (
     save_json,
     send_apns_change_notifications,
     verify_github_signature,
+    wait_for_public_artifacts_ready,
 )
 from .daily_weather import (
     DailyWeatherConfig,
@@ -53,6 +54,7 @@ class DeviceRegistration(BaseModel):
 class HumorDigestCommentHighlightPayload(BaseModel):
     id: str
     summary: str
+    originalBody: str | None = None
     explanation: str
     score: int | None = None
 
@@ -85,6 +87,15 @@ class HumorDigestPayload(BaseModel):
     source: str
 
 
+def humor_digest_original_body_errors(digest: HumorDigestPayload) -> list[str]:
+    errors: list[str] = []
+    for item_index, item in enumerate(digest.items):
+        for highlight_index, highlight in enumerate(item.commentHighlights):
+            if not (highlight.originalBody or "").strip():
+                errors.append(f"items[{item_index}].commentHighlights[{highlight_index}].originalBody is required")
+    return errors
+
+
 def data_dir() -> Path:
     return Path(os.environ.get("PAVBOT_NOTIFIER_DATA_DIR", "/data"))
 
@@ -98,6 +109,20 @@ def manifest_url() -> str:
 
 def public_notifier_url() -> str:
     return normalized_public_notifier_url(os.environ.get("PAVBOT_PUBLIC_NOTIFIER_URL", ""))
+
+
+def public_readiness_attempts() -> int:
+    try:
+        return max(1, int(os.environ.get("PAVBOT_PUBLIC_READINESS_ATTEMPTS", "4")))
+    except ValueError:
+        return 4
+
+
+def public_readiness_delay_seconds() -> float:
+    try:
+        return max(0.0, float(os.environ.get("PAVBOT_PUBLIC_READINESS_DELAY_SECONDS", "2")))
+    except ValueError:
+        return 2.0
 
 
 def apns_sender() -> APNSSender:
@@ -298,6 +323,15 @@ async def humor_digest_ingest(
     expected_token = os.environ.get("PAVBOT_HUMOR_INGEST_TOKEN", "")
     if not humor_ingest_token_is_valid(authorization, expected_token=expected_token):
         raise HTTPException(status_code=401, detail="Invalid humor ingest token")
+    original_body_errors = humor_digest_original_body_errors(digest)
+    if original_body_errors:
+        raise HTTPException(
+            status_code=422,
+            detail={
+                "message": "Humor digest commentHighlights require originalBody",
+                "errors": original_body_errors,
+            },
+        )
     return save_external_humor_digest(
         digest=digest.model_dump(),
         storage_dir=data_dir(),
@@ -335,8 +369,43 @@ async def github_webhook(
         "errors": [],
     }
 
+    public_readiness_status: dict[str, Any] | None = None
     if changes.has_changes:
-        apns_summary = await send_change_notifications(changes.artifacts, changes.automations, current_manifest)
+        readiness = await wait_for_public_artifacts_ready(
+            artifacts=changes.artifacts,
+            manifest_url_value=manifest_url(),
+            fetch_manifest_json=fetch_manifest,
+            max_attempts=public_readiness_attempts(),
+            delay_seconds=public_readiness_delay_seconds(),
+        )
+        public_readiness_status = readiness.as_status()
+        if readiness.status != "ready":
+            apns_summary["status"] = readiness.status
+            apns_summary["skippedReason"] = "public artifacts are not ready for iOS"
+            save_public_readiness_status(public_readiness_status)
+            record_webhook_status(
+                event=x_github_event or "push",
+                status=readiness.status,
+                new_artifacts=len(changes.artifacts),
+                new_automations=len(changes.automations),
+                apns_summary=apns_summary,
+            )
+            return {
+                "status": readiness.status,
+                "newArtifacts": len(changes.artifacts),
+                "newAutomations": len(changes.automations),
+                "publicReadiness": public_readiness_status,
+                "apns": apns_summary,
+            }
+
+        apns_summary = await send_change_notifications(
+            changes.artifacts,
+            changes.automations,
+            current_manifest,
+            pulse_news_digest=readiness.pulse_news_digest,
+        )
+        public_readiness_status["status"] = "sent" if apns_summary.get("sent", 0) > 0 else "ready"
+        save_public_readiness_status(public_readiness_status)
 
     save_json(state_path, current_manifest)
     record_webhook_status(
@@ -350,6 +419,7 @@ async def github_webhook(
         "status": "processed",
         "newArtifacts": len(changes.artifacts),
         "newAutomations": len(changes.automations),
+        "publicReadiness": public_readiness_status,
         "apns": apns_summary,
     }
 
@@ -369,6 +439,7 @@ async def send_change_notifications(
     artifacts: list[dict[str, Any]],
     automations: list[dict[str, Any]],
     manifest: dict[str, Any],
+    pulse_news_digest: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     devices = load_json(data_dir() / "devices.json", {})
     sender = apns_sender()
@@ -379,6 +450,7 @@ async def send_change_notifications(
         automations=automations,
         manifest_url_value=manifest_url_value,
         sender=sender,
+        pulse_news_digest=pulse_news_digest,
     )
     save_json(
         data_dir() / "last-apns-delivery.json",
@@ -388,6 +460,16 @@ async def send_change_notifications(
         },
     )
     return summary
+
+
+def save_public_readiness_status(status: dict[str, Any]) -> None:
+    save_json(
+        data_dir() / "last-public-readiness.json",
+        {
+            "recordedAt": datetime.now(timezone.utc).isoformat(),
+            **status,
+        },
+    )
 
 
 def record_webhook_status(

@@ -1,0 +1,13 @@
+{
+  "created_at": "2026-06-29T08:30:14.519925+00:00",
+  "variant_id": "male-xtts",
+  "engine_requested": "xtts",
+  "engine_used": null,
+  "model": "coqui/XTTS-v2",
+  "voice": "Andrew Chipper",
+  "language": "pl",
+  "speed": 1.03,
+  "status": "failed",
+  "error": "Interrupted after repeated hang during the 2026-06-29 10:17 Europe/Warsaw automation run; see audio/male-xtts/render.log for the XTTS warnings emitted before termination.",
+  "output_file": null
+}

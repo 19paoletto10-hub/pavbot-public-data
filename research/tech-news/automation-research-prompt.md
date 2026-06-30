@@ -21,13 +21,15 @@ tytuł, dlaczego to ważne, główne źródła i priorytet.
 
 Dodatkowo utwórz strukturalny JSON dla natywnego czytnika iOS:
 `research/tech-news/data/YYYY-MM-DD-research.json`. Wygeneruj go komendą:
-`python3 scripts/render_research_data.py research/tech-news/runs/YYYY-MM-DD.md`
+`python3 scripts/render_research_data.py research/tech-news/runs/YYYY-MM-DD.md --require-app-articles`
 i zwaliduj:
 `python3 scripts/validate_research_data.py research/tech-news/data/YYYY-MM-DD-research.json`.
 JSON jest obowiązkowym artefaktem tej automatyzacji. Musi zawierać po polsku:
 lead, punkty podsumowania, artykuły z polami `whatHappened`, `whyItMatters`,
 `deeperAnalysis`, `contextPoints`, źródła i tagi. Jeśli JSON nie powstanie albo
-walidator zwróci błąd, nie publikuj wyników i zgłoś błąd przebiegu.
+walidator zwróci błąd, nie publikuj wyników i zgłoś błąd przebiegu. Błąd
+`--require-app-articles` oznacza twardy stop: popraw raport i kompletność
+sekcji aplikacyjnej przed ponownym renderem.
 
 Przed wygenerowaniem JSON przygotuj w raporcie sekcję `## Artykuły do aplikacji`.
 Dla każdego artykułu wykonaj dodatkowe, krótkie przeszukanie internetu po
@@ -70,14 +72,22 @@ Zaktualizuj `research/tech-news/backlog.md`, gdy pojawiają się konkretne
 follow-upy, notatki przeglądowe, pytania albo rozwiązane elementy.
 
 Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS i webhooka
-notyfikacji push. Skrypt uruchamia `python3 scripts/generate_pavbot_manifest.py`,
-odświeża `public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki i robi
-push na `origin/main`.
+notyfikacji push. Najpierw uruchom wspólny kontrakt publikacji:
+
+`python3 scripts/pavbot_publication_contract.py prepare research/tech-news`
+
+`python3 scripts/pavbot_publication_contract.py verify-local research/tech-news`
+
+To jest pipeline `prepare -> validate -> manifest -> push -> verify-remote`.
+Etap `manifest` oznacza uruchomienie
+`python3 scripts/generate_pavbot_manifest.py --repo-root "$PWD"`. Skrypt
+odświeża `public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki i
+robi push na `origin/main`.
 Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override środowiskowego,
 `PAVBOT_RAW_BASE_URL`, istniejącego `rawBaseUrl` w manifeście albo GitHub
 `origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Rozwiązany URL
 musi odpowiadać iOS `Settings -> Manifest URL`. Następnie uruchom:
-`scripts/pavbot_commit_and_push_outputs.sh --isolated research/tech-news`.
+`scripts/pavbot_commit_and_push_outputs.sh --isolated --force-manifest research/tech-news`.
 
 Użyj risk gate z `docs/architecture.md`. Jeśli rekomendowana akcja zmieniałaby
 automatyzacje, instrukcje repo, skille, hooki, MCP, zależności albo pliki poza

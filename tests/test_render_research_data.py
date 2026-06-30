@@ -61,6 +61,26 @@ class RenderResearchDataTest(unittest.TestCase):
             self.assertTrue(payload["articles"][0]["whyItMatters"].startswith("Ten sygnał jest ważny"))
             self.assertFalse(validator.validate_payload(payload))
 
+    def test_timestamped_research_report_keeps_evening_run_time(self) -> None:
+        renderer = load_module("render_research_data", "scripts/render_research_data.py")
+        validator = load_module("validate_research_data", "scripts/validate_research_data.py")
+
+        with tempfile.TemporaryDirectory() as tmp:
+            report = Path(tmp) / "research" / "tech-news" / "runs" / "2026-06-28-1933.md"
+            output = renderer.default_output_path(report)
+            report.parent.mkdir(parents=True)
+            report.write_text(
+                self.structured_app_article_report(date="2026-06-28-1933"),
+                encoding="utf-8",
+            )
+
+            payload = renderer.render_research_data(report, output, require_app_articles=True)
+
+            self.assertEqual(output.name, "2026-06-28-1933-research.json")
+            self.assertEqual(payload["runDate"], "2026-06-28")
+            self.assertEqual(payload["runTime"], "19:33")
+            self.assertFalse(validator.validate_payload(payload))
+
     def test_renders_structured_app_articles_with_distinct_full_description(self) -> None:
         renderer = load_module("render_research_data", "scripts/render_research_data.py")
         validator = load_module("validate_research_data", "scripts/validate_research_data.py")
@@ -71,7 +91,7 @@ class RenderResearchDataTest(unittest.TestCase):
             report.parent.mkdir(parents=True)
             report.write_text(self.structured_app_article_report(), encoding="utf-8")
 
-            payload = renderer.render_research_data(report, output)
+            payload = renderer.render_research_data(report, output, require_app_articles=True)
             article = payload["articles"][0]
 
             self.assertEqual(article["title"], "GPT-5.6: oficjalne preview z bramką dostępu")
@@ -107,6 +127,30 @@ class RenderResearchDataTest(unittest.TestCase):
             self.assertIn("AI", article["tags"])
             self.assertFalse(validator.validate_payload(payload))
 
+    def test_require_app_articles_rejects_missing_app_section(self) -> None:
+        renderer = load_module("render_research_data", "scripts/render_research_data.py")
+
+        with tempfile.TemporaryDirectory() as tmp:
+            report = Path(tmp) / "research" / "tech-news" / "runs" / "2026-06-27.md"
+            output = report.parents[1] / "data" / "2026-06-27-research.json"
+            report.parent.mkdir(parents=True)
+            report.write_text(self.tech_report(), encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "missing required section: Artykuły do aplikacji"):
+                renderer.render_research_data(report, output, require_app_articles=True)
+
+    def test_require_app_articles_rejects_incomplete_subsection(self) -> None:
+        renderer = load_module("render_research_data", "scripts/render_research_data.py")
+
+        with tempfile.TemporaryDirectory() as tmp:
+            report = Path(tmp) / "research" / "tech-news" / "runs" / "2026-06-27.md"
+            output = report.parents[1] / "data" / "2026-06-27-research.json"
+            report.parent.mkdir(parents=True)
+            report.write_text(self.incomplete_app_article_report(), encoding="utf-8")
+
+            with self.assertRaisesRegex(ValueError, "incomplete app article 'Niepełny artykuł'"):
+                renderer.render_research_data(report, output, require_app_articles=True)
+
     def test_validator_rejects_missing_required_analysis_fields(self) -> None:
         validator = load_module("validate_research_data", "scripts/validate_research_data.py")
 
@@ -138,6 +182,39 @@ class RenderResearchDataTest(unittest.TestCase):
             "articles[0].deeperAnalysis[0] must not duplicate standfirst, whatHappened, or first context point",
             errors,
         )
+
+    def test_validator_rejects_duplicate_full_description_paragraphs(self) -> None:
+        validator = load_module("validate_research_data", "scripts/validate_research_data.py")
+
+        payload = json.loads(json.dumps(self.valid_payload()))
+        payload["runDate"] = "2026-06-27"
+        payload["articles"][0]["deeperAnalysis"] = [
+            "Osobny akapit opisuje tło i konsekwencje decyzji.",
+            "Osobny akapit opisuje tło i konsekwencje decyzji.",
+        ]
+
+        errors = validator.validate_payload(payload)
+
+        self.assertIn("articles[0].deeperAnalysis must contain distinct paragraphs", errors)
+
+    def test_validator_rejects_missing_article_sources(self) -> None:
+        validator = load_module("validate_research_data", "scripts/validate_research_data.py")
+
+        payload = json.loads(json.dumps(self.valid_payload()))
+        payload["runDate"] = "2026-06-27"
+        payload["articles"][0]["sources"] = []
+
+        errors = validator.validate_payload(payload)
+
+        self.assertIn("articles[0].sources must contain at least one item", errors)
+
+    def test_validator_accepts_valid_ready_file_json(self) -> None:
+        validator = load_module("validate_research_data", "scripts/validate_research_data.py")
+
+        payload = json.loads(json.dumps(self.valid_payload()))
+        payload["runDate"] = "2026-06-27"
+
+        self.assertFalse(validator.validate_payload(payload))
 
     def valid_payload(self) -> dict:
         return {
@@ -210,9 +287,9 @@ Drugi akapit pokazuje wpływ na decyzje publiczne i gospodarkę.
 - [MON](https://example.com/mon)
 """
 
-    def structured_app_article_report(self) -> str:
-        return """# Daily Research Report: tech-news
-Date: 2026-06-27
+    def structured_app_article_report(self, date: str = "2026-06-27") -> str:
+        return f"""# Daily Research Report: tech-news
+Date: {date}
 Status: Material update
 
 ## Podsumowanie
@@ -241,6 +318,25 @@ Kontekst:
 Źródła:
 - [OpenAI](https://openai.com/index/previewing-gpt-5-6-sol/)
 - [TechCrunch](https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/)
+"""
+
+    def incomplete_app_article_report(self) -> str:
+        return """# Daily Research Report: tech-news
+Date: 2026-06-27
+Status: Material update
+
+## Podsumowanie
+Krótki lead raportu.
+
+## Artykuły do aplikacji
+
+### Niepełny artykuł
+Sekcja: AI
+Priorytet: High
+Tagi: AI
+Standfirst: Jedno zdanie z key facts newsa.
+Co się stało: Jedno zdanie operacyjne.
+Dlaczego ważne: Jedno zdanie o wpływie.
 """
 
 

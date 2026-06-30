@@ -7,6 +7,7 @@ struct TodayLiveTopicsPanel: View {
     let isRefreshing: Bool
     @Binding var selectedTopic: TodayLiveTopicSelection?
     let savedStore: TodayLiveTopicSavedStore
+    var layout: PavbotAdaptiveLayout = .phone
     let openAktualne: () -> Void
     @State private var isSavedPresented = false
 
@@ -54,11 +55,20 @@ struct TodayLiveTopicsPanel: View {
                 )
             default:
                 if let snapshot {
-                    TodayLiveTopicsCarousel(
-                        snapshot: snapshot,
-                        selectedTopic: $selectedTopic,
-                        savedStore: savedStore
-                    )
+                    if layout.usesDashboardLayout {
+                        TodayLiveTopicsGrid(
+                            snapshot: snapshot,
+                            selectedTopic: $selectedTopic,
+                            savedStore: savedStore,
+                            layout: layout
+                        )
+                    } else {
+                        TodayLiveTopicsCarousel(
+                            snapshot: snapshot,
+                            selectedTopic: $selectedTopic,
+                            savedStore: savedStore
+                        )
+                    }
                 } else {
                     TodayLiveTopicsEmptyState(
                         title: "Brak tematów Pulsu Dnia",
@@ -76,7 +86,78 @@ struct TodayLiveTopicsPanel: View {
         }
         .sheet(isPresented: $isSavedPresented) {
             TodayLiveTopicsSavedView(savedStore: savedStore)
+                .pavbotLargeObjectPresentation()
         }
+    }
+}
+
+private struct TodayLiveTopicsGrid: View {
+    @Environment(PavbotHaptics.self) private var haptics
+    let snapshot: TodayLiveTopicsSnapshot
+    @Binding var selectedTopic: TodayLiveTopicSelection?
+    let savedStore: TodayLiveTopicSavedStore
+    let layout: PavbotAdaptiveLayout
+
+    private var visibleSnapshot: TodayLiveTopicsSnapshot {
+        snapshot.removingSavedTopics(in: savedStore)
+    }
+
+    private var topics: [TodayLiveTopic] {
+        visibleSnapshot.pairs.flatMap(\.topics)
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: layout.cardSpacing) {
+            VStack(alignment: .leading, spacing: 6) {
+                StatusBadge(
+                    text: snapshot.sourceLabel,
+                    systemImage: snapshot.isFallback ? "exclamationmark.triangle.fill" : "checkmark.seal.fill",
+                    tint: snapshot.isFallback ? .orange : .green
+                )
+                Text(snapshot.headline)
+                    .font(.title2.weight(.bold))
+                    .fixedSize(horizontal: false, vertical: true)
+                Text(snapshot.summary)
+                    .font(.body)
+                    .foregroundStyle(.secondary)
+                    .lineSpacing(4)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            if topics.isEmpty {
+                VStack(alignment: .leading, spacing: 10) {
+                    Label("Wszystkie tematy z tego wydania są zapisane", systemImage: "bookmark.fill")
+                        .font(.headline.weight(.semibold))
+                        .foregroundStyle(.blue)
+                    Text("Zajrzyj do zapisanych albo odśwież manifest, gdy automatyzacja opublikuje nowy Puls Dnia.")
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                .padding(18)
+                .frame(maxWidth: .infinity, minHeight: 160, alignment: .leading)
+                .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: layout.cardCornerRadius, style: .continuous))
+            } else {
+                LazyVGrid(columns: layout.adaptiveColumns(minimum: 320), spacing: layout.cardSpacing) {
+                    ForEach(topics) { topic in
+                        Button {
+                            haptics.play(.lightImpact)
+                            selectedTopic = TodayLiveTopicSelection(
+                                topic: topic,
+                                source: snapshot.source,
+                                displayDate: snapshot.displayDate
+                            )
+                        } label: {
+                            TodayLiveTopicRow(topic: topic, isSaved: savedStore.isSaved(topic))
+                        }
+                        .buttonStyle(PavbotInteractiveSurfaceButtonStyle(tint: .orange, cornerRadius: layout.cardCornerRadius))
+                        .frame(minHeight: 230, alignment: .top)
+                    }
+                }
+            }
+        }
+        .accessibilityElement(children: .contain)
+        .accessibilityLabel("Puls Dnia w układzie siatki")
     }
 }
 
@@ -535,24 +616,26 @@ private struct TodayLiveTopicRow: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 Spacer(minLength: 8)
-                Image(systemName: "chevron.right")
-                    .font(.caption.weight(.bold))
-                    .foregroundStyle(.tertiary)
+                VStack(alignment: .trailing, spacing: 8) {
+                    PavbotSourceCountBadge(count: topic.sources.count, tint: .orange)
+
+                    Image(systemName: "chevron.right")
+                        .font(.caption.weight(.bold))
+                        .foregroundStyle(.tertiary)
+                }
             }
 
-            HStack(spacing: 7) {
-                ForEach(topic.tags.prefix(3), id: \.self) { tag in
-                    Text(tag)
-                        .font(.caption2.weight(.semibold))
-                        .foregroundStyle(.orange)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 5)
-                        .background(Color.orange.opacity(0.10), in: Capsule())
+            if !topic.tags.isEmpty {
+                PavbotArticleKeywordRows(horizontalSpacing: 7, verticalSpacing: 6) {
+                    ForEach(topic.tags.prefix(3), id: \.self) { tag in
+                        PavbotArticleTagChip(
+                            title: tag,
+                            systemImage: "tag.fill",
+                            tint: .orange,
+                            accessibilityPrefix: "Tag tematu"
+                        )
+                    }
                 }
-                Spacer()
-                Text(topic.sourceCountLabel)
-                    .font(.caption.weight(.semibold))
-                    .foregroundStyle(.secondary)
             }
         }
         .padding(14)
@@ -651,11 +734,10 @@ private struct TodayLiveTopicsSavedView: View {
     @Environment(PavbotHaptics.self) private var haptics
     let savedStore: TodayLiveTopicSavedStore
     @State private var query = ""
-    @State private var selectedFilter: TodayLiveTopicsSavedFilter = .all
     @State private var selectedSavedTopic: SavedTodayLiveTopic?
 
     private var savedTopics: [SavedTodayLiveTopic] {
-        savedStore.filteredTopics(query: query, scope: selectedFilter.scope)
+        savedStore.filteredTopics(query: query)
     }
 
     var body: some View {
@@ -674,16 +756,6 @@ private struct TodayLiveTopicsSavedView: View {
                     .padding(18)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(Color(.systemBackground), in: RoundedRectangle(cornerRadius: 20, style: .continuous))
-
-                    Picker("Filtr zapisanych", selection: $selectedFilter) {
-                        ForEach(TodayLiveTopicsSavedFilter.allCases) { filter in
-                            Text(filter.title).tag(filter)
-                        }
-                    }
-                    .pickerStyle(.segmented)
-                    .onChange(of: selectedFilter) { _, _ in
-                        haptics.play(.selection)
-                    }
 
                     if savedTopics.isEmpty {
                         VStack(alignment: .leading, spacing: 10) {
@@ -730,42 +802,8 @@ private struct TodayLiveTopicsSavedView: View {
                     displayDate: saved.displayDate,
                     savedStore: savedStore
                 )
+                .pavbotLargeObjectPresentation()
             }
-        }
-    }
-}
-
-private enum TodayLiveTopicsSavedFilter: String, CaseIterable, Identifiable {
-    case all
-    case pulse
-    case poland
-    case world
-
-    var id: String { rawValue }
-
-    var title: String {
-        switch self {
-        case .all:
-            "Wszystkie"
-        case .pulse:
-            "Puls"
-        case .poland:
-            "Polska"
-        case .world:
-            "Świat"
-        }
-    }
-
-    var scope: TodayLiveTopicScope? {
-        switch self {
-        case .all:
-            nil
-        case .pulse:
-            .pulse
-        case .poland:
-            .poland
-        case .world:
-            .world
         }
     }
 }
@@ -775,12 +813,16 @@ private struct TodayLiveTopicsSavedRow: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            HStack(alignment: .firstTextBaseline) {
+            HStack(alignment: .top) {
                 StatusBadge(text: saved.sourceLabel, systemImage: "bookmark.fill", tint: .blue)
                 Spacer()
-                Text(saved.savedAt.formatted(date: .abbreviated, time: .shortened))
-                    .font(.caption.weight(.semibold))
-                    .foregroundStyle(.secondary)
+                VStack(alignment: .trailing, spacing: 6) {
+                    Text(saved.savedAt.formatted(date: .abbreviated, time: .shortened))
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(.secondary)
+
+                    PavbotSourceCountBadge(count: saved.topic.sources.count, tint: .blue)
+                }
             }
 
             Text(saved.topic.title)
@@ -795,19 +837,17 @@ private struct TodayLiveTopicsSavedRow: View {
                 .lineLimit(3)
                 .fixedSize(horizontal: false, vertical: true)
 
-            HStack(spacing: 7) {
-                ForEach(saved.topic.tags.prefix(3), id: \.self) { tag in
-                    Text(tag)
-                        .font(.caption2.weight(.semibold))
-                        .foregroundStyle(.blue)
-                        .padding(.horizontal, 8)
-                        .padding(.vertical, 5)
-                        .background(Color.blue.opacity(0.10), in: Capsule())
+            if !saved.topic.tags.isEmpty {
+                PavbotArticleKeywordRows(horizontalSpacing: 7, verticalSpacing: 6) {
+                    ForEach(saved.topic.tags.prefix(3), id: \.self) { tag in
+                        PavbotArticleTagChip(
+                            title: tag,
+                            systemImage: "tag.fill",
+                            tint: .blue,
+                            accessibilityPrefix: "Tag zapisanego tematu"
+                        )
+                    }
                 }
-                Spacer()
-                Text(saved.topic.sourceCountLabel)
-                    .font(.caption.weight(.semibold))
-                    .foregroundStyle(.secondary)
             }
         }
         .padding(16)

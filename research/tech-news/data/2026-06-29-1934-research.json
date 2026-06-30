@@ -1,0 +1,349 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-06-29",
+  "runTime": "19:34",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny research jest materialną aktualizacją po porannym raporcie z 2026-06-29, bo do wątku ograniczeń AI i regulacji platform doszły trzy konkretne decyzje rynkowo-instytucjonalne. Największy news infrastrukturalny to umowa Rocket Lab na przejęcie Iridium za około 8 mld USD wartości enterprise. To przesuwa rozmowę o kosmosie z pojedynczych startów rakiet w stronę pionowo zintegrowanych firm, które mają jednocześnie launch, produkcję satelitów, widmo, sieć i klientów usług łączności.",
+    "Druga oś to platformowe porządkowanie AI w kulturze i komunikacji. TIDAL opublikował politykę, według której w pełni AI-generowana muzyka będzie tagowana, usuwana przy oszustwach i niemonetyzowana; równolegle Discord testuje kolejne metody age assurance, Australia podwaja kary za nieegzekwowanie zakazu social mediów dla osób poniżej 16 lat, a WhatsApp zapowiada usernames ograniczające potrzebę udostępniania numeru telefonu.",
+    "Trzecia oś to fizyczne i prawne ograniczenia infrastruktury cyfrowej. Sąd Najwyższy USA uznał pozyskanie przez policję danych Google Location History w geofence warrant za search w rozumieniu Czwartej Poprawki, Omen AI zebrał 31 mln USD na monitoring cieczy chłodzących data center, a Proception po ugodzie z Teslą zebrał 11 mln USD i zaczyna dostarczać robotyczną dłoń. Wspólny motyw: technologia schodzi z ekranu do widma, wody, chłodzenia, robotycznych dłoni, wieku użytkowników i lokalizacji telefonu."
+  ],
+  "summaryBullets": [
+    "Infrastruktura: Rocket Lab kupuje Iridium i buduje zintegrowany stos kosmiczny",
+    "Produkty: TIDAL odcina monetyzację w pełni AI-generowanej muzyki",
+    "Regulacje: Age assurance staje się praktycznym stackiem regulacji platform"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-06-29-1934-0-rocket-lab-kupuje-iridium-i-buduje-zintegrowany-stos-kosmiczny-b80d652c74",
+      "section": "Infrastruktura",
+      "title": "Rocket Lab kupuje Iridium i buduje zintegrowany stos kosmiczny",
+      "standfirst": "Rocket Lab podpisał umowę przejęcia Iridium w transakcji wartej około 8 mld USD enterprise value. To ruch z launch company w stronę pełnego stosu: rakiety, satelity, widmo, sieć i usługi krytycznej łączności.",
+      "whatHappened": "Rocket Lab ma przejąć wszystkie akcje Iridium za 54 USD za akcję w gotówce i akcjach, a zamknięcie planowane jest na połowę 2027 r.",
+      "whyItMatters": "Konkurencja ze SpaceX i Amazon Leo coraz bardziej zależy od tego, kto kontroluje cały łańcuch od orbity po klienta końcowego.",
+      "deeperAnalysis": [
+        "To nie jest zwykła akwizycja dostawcy usług satelitarnych przez firmę od rakiet. Iridium wnosi globalną sieć LEO, L-band spectrum, klientów w lotnictwie, maritime, administracji, obronie, krytycznej infrastrukturze i ponad 2,55 mln aktywnych subskrybentów. Rocket Lab wnosi launch, produkcję statków kosmicznych i komponenty, czyli możliwość zamiany Iridium z dojrzałej sieci w platformę dla nowych usług.",
+        "Najważniejsza interpretacja dotyczy pionowej integracji. SpaceX pokazał, że przewaga może wynikać z połączenia startów, produkcji satelitów, sieci i usług Starlink. Rocket Lab próbuje zbudować alternatywny model, ale przez zakup istniejącej sieci z regulowanym widmem i bazą klientów, a nie tylko przez organiczne wystrzeliwanie kolejnych satelitów.",
+        "Dla podcastu to dobry temat o kosmosie jako infrastrukturze cyfrowej, nie science fiction. D2D, PNT i safety-of-life oznaczają telefony, IoT, nawigację awaryjną, obronność i komunikację w miejscach, gdzie sieci naziemne zawodzą. Ryzykiem jest oczywiście regulacyjne domknięcie transakcji, finansowanie i integracja tak dużego przejęcia przez firmę, która sama wciąż skaluje Neutrona."
+      ],
+      "contextPoints": [
+        "Co się stało: Rocket Lab i Iridium podpisały definitywną umowę przejęcia o wartości około 8 mld USD enterprise value.",
+        "Dlaczego ważne: space economy przechodzi z rynku startów w rynek pionowo zintegrowanych sieci komunikacyjnych.",
+        "Na co patrzeć dalej: zgody regulatorów, głosowanie akcjonariuszy Iridium, finansowanie długu i plan następnej generacji konstelacji."
+      ],
+      "sources": [
+        {
+          "title": "Rocket Lab: acquisition release",
+          "url": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully"
+        },
+        {
+          "title": "Reuters / Yahoo Finance: Rocket Lab to buy Iridium",
+          "url": "https://finance.yahoo.com/technology/articles/rocket-lab-buy-satellite-communications-111416348.html"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/news"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Kosmos",
+        "Infrastruktura",
+        "Telekomunikacja",
+        "Space",
+        "PNT"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-29-1934-1-tidal-odcina-monetyzacje-w-pelni-ai-generowanej-muzyki-29547e7db9",
+      "section": "Produkty",
+      "title": "TIDAL odcina monetyzację w pełni AI-generowanej muzyki",
+      "standfirst": "TIDAL opublikował politykę dla muzyki generowanej w całości przez AI: platforma ma oznaczać takie utwory, blokować oszustwa i nie przypisywać im tantiem. To mocniejszy sygnał niż samo etykietowanie syntetycznych treści.",
+      "whatHappened": "TIDAL ustawił zasady tagowania, integralności i niemonetyzowania muzyki rozpoznanej jako w pełni AI-generowana.",
+      "whyItMatters": "Streaming muzyki zaczyna testować, czy pieniądze można kierować do ludzkiej twórczości bez całkowitego zakazu narzędzi AI.",
+      "deeperAnalysis": [
+        "Po porannym wątku Suno Spark dostajemy drugi, dużo bardziej platformowy ruch. Suno próbowało budować relacje z niezależnymi artystami przez granty i warunki programu; TIDAL odpowiada od strony dystrybucji, widoczności i tantiem. Platforma nie zakazuje każdego użycia AI, ale oddziela w pełni AI-generowane treści od muzyki, którą chce monetyzować jako oryginalną pracę ludzi.",
+        "Ważna jest konstrukcja policy. TIDAL chce oznaczać treści w 100 proc. AI od połowy lipca, egzekwować oznaczanie przez dystrybutorów i usuwać lub blokować AI-generated music związaną z oszustwem, podszywaniem się pod artystów, masowymi uploadami lub nietypową aktywnością streamingową. To pokazuje, że spór o AI music przechodzi z praw autorskich i pozwów do codziennego zarządzania katalogiem.",
+        "Najciekawszy test będzie ekonomiczny. Jeśli w pełni AI-generowane utwory mogą dalej być obecne, ale nie zarabiają tantiem i nie trafiają łatwo do rekomendacji, motywacja do masowego \"spray and pray\" spada. Jednocześnie zostaje pole dla legalnych, licencjonowanych i wspomaganych AI workflow, więc platforma nie ustawia się jako antytechnologiczna."
+      ],
+      "contextPoints": [
+        "Co się stało: TIDAL opublikował AI Policy i zapowiedział tagowanie oraz niemonetyzowanie w pełni AI-generowanej muzyki.",
+        "Dlaczego ważne: platformy streamingowe szukają granicy między kreatywnym użyciem AI a katalogowym spamem.",
+        "Na co patrzeć dalej: egzekucja od 15 lipca 2026 r., reakcje dystrybutorów, porównanie ze Spotify, Apple Music i Deezerem."
+      ],
+      "sources": [
+        {
+          "title": "TIDAL: AI Policy",
+          "url": "https://tidal.com/ai-policy"
+        },
+        {
+          "title": "TechCrunch: TIDAL cracks down on AI music",
+          "url": "https://techcrunch.com/2026/06/29/tidal-cracks-down-on-ai-music-by-cutting-off-monetization/"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/news"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Muzyka",
+        "Streaming",
+        "Twórcy",
+        "Monetyzacja"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-29-1934-2-age-assurance-staje-sie-praktycznym-stackiem-regulacji-platform-11782bd69d",
+      "section": "Regulacje",
+      "title": "Age assurance staje się praktycznym stackiem regulacji platform",
+      "standfirst": "Australia podwaja maksymalną karę za naruszenia zakazu social mediów dla osób poniżej 16 lat, a Discord testuje Google Wallet, karty płatnicze, ID scan i selfie. Regulacja wieku przechodzi z debaty politycznej do technicznej egzekucji.",
+      "whatHappened": "Australijski rząd wzmacnia eSafety Commissioner, a Discord rozszerza testy age assurance przed globalną ekspansją w drugiej połowie 2026 r.",
+      "whyItMatters": "Platformy będą musiały wybrać konkretne mechanizmy weryfikacji wieku, a każdy z nich ma koszt prywatności, UX i compliance.",
+      "deeperAnalysis": [
+        "Poranny raport opisał KIDS Act jako amerykański pakiet polityczny. Wieczorem widać drugi etap tej samej osi: jak przepisy zaczynają wymuszać techniczne mechanizmy. Australia mówi nie tylko o zakazie, ale o dokumentach, informacjach od platform, dostawcach age assurance i app-store providers. To pokazuje, że regulatorzy będą sprawdzać nie deklaracje, lecz konkretne dowody egzekwowania wieku.",
+        "Discord jest dobrym kontrapunktem produktowym, bo opisuje narzędzia w dokumentacji użytkownika. Wśród testów są Google Wallet ID pass, credit card check, Incode oraz on-device facial age estimation. Firma podkreśla ograniczenia przechowywania dokumentów i selfie, ale dla użytkowników to nadal jest przejście od \"kliknij, że masz 18 lat\" do realnego potwierdzania grupy wiekowej.",
+        "Dla podcastu warto pokazać trade-off bez moralizowania. Ochrona dzieci online ma szerokie poparcie, ale infrastruktura wieku może stać się powszechną warstwą identyfikacji w sieci. Ryzyko nie polega tylko na tym, że ktoś pokaże dokument platformie; ryzyko polega na tym, że wiek stanie się nowym wymogiem wejścia do coraz większej części internetu."
+      ],
+      "contextPoints": [
+        "Co się stało: Australia podwaja kary i wzmacnia żądania informacyjne, a Discord testuje nowe metody age assurance.",
+        "Dlaczego ważne: regulacje dzieci online przestają być tekstem ustaw i stają się systemami weryfikacji w produktach.",
+        "Na co patrzeć dalej: audyty platform w Australii, reakcja Meta/TikTok/YouTube oraz standardy minimalizacji danych u dostawców age assurance."
+      ],
+      "sources": [
+        {
+          "title": "Prime Minister of Australia: stronger powers and double penalties",
+          "url": "https://www.pm.gov.au/media/stronger-powers-and-double-penalties-world-leading-social-media-law"
+        },
+        {
+          "title": "Discord: How to Complete Age Assurance",
+          "url": "https://support.discord.com/hc/en-us/articles/30326565624343-How-to-Complete-Age-Assurance-on-Discord"
+        },
+        {
+          "title": "The Verge Tech",
+          "url": "https://www.theverge.com/tech"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Regulacje",
+        "Social Media",
+        "Prywatność",
+        "Age Assurance",
+        "Platformy"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-29-1934-3-sad-najwyzszy-usa-ogranicza-geofence-warrants-na-danych-lokalizacji-bc6e0911b9",
+      "section": "Regulacje",
+      "title": "Sąd Najwyższy USA ogranicza geofence warrants na danych lokalizacji",
+      "standfirst": "W sprawie Chatrie przeciwko United States Sąd Najwyższy USA uznał, że pozyskanie danych Google Location History przez policję jest search w rozumieniu Czwartej Poprawki. To ważny sygnał dla geofence warrants i masowych zapytań o lokalizację telefonów.",
+      "whatHappened": "Sąd uznał prywatnościowy interes w danych Location History i odesłał sprawę do dalszej oceny szczegółowości warrantu.",
+      "whyItMatters": "Dane lokalizacyjne z platform mogą ujawniać ruchy osób postronnych, a nie tylko konkretnego podejrzanego.",
+      "deeperAnalysis": [
+        "To jest temat regulacyjny, nie porada prawna. Najważniejszy fakt: sąd nie uznał, że każda czynność w tej sprawie była ostatecznie nielegalna, ale przesunął próg analizy. Pozyskanie danych Location History od Google jest search, więc nie można traktować geofence warrantu jako neutralnego żądania biznesowych rekordów bez znaczenia dla prywatności.",
+        "Opinia porównuje Location History do wcześniejszego standardu z Carpenter, ale wskazuje, że dane Google mogą być jeszcze bardziej precyzyjne i osobiste: częstsze punkty, większa dokładność i potencjalnie kontekst miejsc odwiedzanych przez użytkownika. To uderza w prosty argument, że użytkownik \"dobrowolnie\" oddał dane firmie, więc traci ochronę wobec państwa.",
+        "Technologicznie to ważne także poza USA. Coraz więcej produktów zbiera lokalizację, telemetrię, historię aktywności, check-iny i dane behawioralne. Jeśli organy ścigania mogą pytać szeroko o wszystkich w danym miejscu i czasie, zwykła funkcja convenience staje się narzędziem masowego typowania osób."
+      ],
+      "contextPoints": [
+        "Co się stało: Sąd Najwyższy USA uznał pozyskanie Google Location History w tej sprawie za search i przekazał dalsze pytania sądowi niższej instancji.",
+        "Dlaczego ważne: geofence warrants dotyczą nie tylko podejrzanych, ale też osób przypadkowo obecnych w danym miejscu.",
+        "Na co patrzeć dalej: decyzję sądu apelacyjnego po remand, reakcje Google, policji i organizacji praw cyfrowych."
+      ],
+      "sources": [
+        {
+          "title": "Supreme Court: Chatrie v. United States PDF",
+          "url": "https://www.supremecourt.gov/opinions/25pdf/25-112_0am4.pdf"
+        },
+        {
+          "title": "The Verge Tech: geofence ruling summary",
+          "url": "https://www.theverge.com/tech"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Prywatność",
+        "Lokalizacja",
+        "Prawo",
+        "Google",
+        "Surveillance"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-29-1934-4-omen-ai-pokazuje-ze-waskim-gardlem-ai-data-center-moze-byc-plyn-chlodzacy-8fbf9e0e01",
+      "section": "Infrastruktura",
+      "title": "Omen AI pokazuje, że wąskim gardłem AI data center może być płyn chłodzący",
+      "standfirst": "Omen AI zebrał 31 mln USD na sensory monitorujące stan cieczy w data center. Temat brzmi niszowo, ale pokazuje fizyczny koszt gęstszych racków GPU i przechodzenia na liquid cooling.",
+      "whatHappened": "Startup buduje real-time monitoring cieczy chłodzących, m.in. pod kątem bakterii, zanieczyszczeń i zużycia komponentów.",
+      "whyItMatters": "AI compute skaluje się nie tylko przez GPU i energię, lecz także przez utrzymanie chłodzenia, downtime i serwis fizycznej infrastruktury.",
+      "deeperAnalysis": [
+        "W ostatnich raportach wracały energia, woda, pamięć HBM i ceny DDR5. Omen AI dodaje do tego mniej widowiskowy, ale praktyczny element: chemiczny stan płynów w budynkach. Im bardziej operatorzy chcą wycisnąć moc z racków GPU, tym częściej przechodzą do liquid cooling i tym większy staje się koszt awarii albo zanieczyszczenia układu.",
+        "TechCrunch opisuje ryzyko, w którym większy udział wody poprawia odbiór ciepła, ale zwiększa podatność na rozwój bakterii i zatkanie przepływu. Flush systemu może oznaczać kilkugodzinne wyłączenie racka. To jest dokładnie ten rodzaj infrastrukturalnego szczegółu, który nie pojawia się w keynote'ach o modelach, ale decyduje o kosztach usług AI.",
+        "Najważniejsza interpretacja: rynek AI zaczyna finansować narzędzia do obserwowalności świata fizycznego. Monitoring cieczy, mikrobiologia, signal processing i predykcyjne utrzymanie ruchu stają się częścią AI stacku tak samo jak Kubernetes, HBM i routing tokenów."
+      ],
+      "contextPoints": [
+        "Co się stało: Omen AI ogłosił Series A 31 mln USD i pracę z klientami data center nad monitoringiem cieczy.",
+        "Dlaczego ważne: wyższa gęstość AI compute zwiększa zależność od jakości chłodzenia i ograniczania downtime.",
+        "Na co patrzeć dalej: wdrożenia u operatorów AI cloud, porównanie z konkurencją Pyxis i dowody obniżenia awaryjności."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: Omen AI's plan to optimize data centers is all wet",
+          "url": "https://techcrunch.com/2026/06/29/omen-ais-plan-to-optimize-data-centers-is-all-wet/"
+        },
+        {
+          "title": "old Reddit / r/technology",
+          "url": "https://old.reddit.com/r/technology/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "Data Center",
+        "Chłodzenie",
+        "Startupy",
+        "Infrastruktura"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-29-1934-5-proception-idzie-po-ostatni-centymetr-humanoidalnej-robotyki-e0e4137cbc",
+      "section": "AI",
+      "title": "Proception idzie po ostatni centymetr humanoidalnej robotyki",
+      "standfirst": "Proception po ugodzie z Teslą zebrał 11 mln USD i zaczyna wysyłać high-dexterity robotic hand do badaczy oraz firm robotycznych. Startup stawia na połączenie sprzętu dłoni z danymi zbieranymi przez rękawice sensoryczne.",
+      "whatHappened": "Firma Jay'a Li, byłego technicznego lidera programu Optimus, ma dostarczać robotyczne dłonie i dane do dexterous manipulation.",
+      "whyItMatters": "Humanoidalne roboty nie wygrają tylko modelem i napędem; potrzebują dłoni, czucia, danych z interakcji i skalowalnego treningu manipulacji.",
+      "deeperAnalysis": [
+        "W ostatnich dniach physical AI pojawiało się przez Agility Robotics, NVIDIA Halos i robotaxi operations. Proception zawęża temat do jednego z najtrudniejszych elementów: dłoni. W magazynie, kuchni, laboratorium albo fabryce większość wartości robota zależy od tego, czy potrafi niezawodnie chwytać, przesuwać, naciskać i reagować na obiekty o różnych kształtach.",
+        "Model Proception jest ciekawy, bo łączy hardware i dane. Firma chce używać rękawic z sensorami, żeby zbierać ludzkie interakcje bez konieczności posiadania robota w pętli dla każdego przykładu. Ta sama warstwa czujników trafia też na robotyczną dłoń jako \"skóra\", co może spinać dane demonstracyjne z realnym sprzętem.",
+        "Ryzyko narracyjne jest oczywiste: po sporze z Teslą łatwo zrobić z tego historię personalną. Dla researchu ważniejszy jest sygnał rynkowy: inwestorzy finansują komponenty i zbiory danych, które mają odblokować practical humanoids, a nie tylko kolejne demo chodzącego robota."
+      ],
+      "contextPoints": [
+        "Co się stało: Proception ogłosił seed round 11 mln USD, ugodę z Teslą i pierwsze dostawy robotycznej dłoni.",
+        "Dlaczego ważne: dexterous manipulation jest jednym z głównych ograniczeń komercyjnej robotyki humanoidalnej.",
+        "Na co patrzeć dalej: feedback pierwszych klientów, parametry dłoni, bezpieczeństwo, porównanie z Teslą, Figure i Agility."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: Proception robot hand",
+          "url": "https://techcrunch.com/2026/06/29/robot-hand-company-settles-tesla-trade-secret-suit-and-announces-11m-raise/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Robotyka",
+        "Physical AI",
+        "Startupy",
+        "Tesla",
+        "Dane"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Rocket Lab kupuje Iridium",
+      "rationale": "Kosmos staje się pionowo zintegrowaną infrastrukturą łączności, PNT, D2D i obronności, nie tylko rynkiem startów rakiet.",
+      "sourcesLabel": "Rocket Lab; Reuters; HN"
+    },
+    {
+      "priority": "High",
+      "title": "TIDAL odcina tantiemy dla muzyki w pełni AI",
+      "rationale": "Streaming testuje twardy ekonomiczny hamulec na AI music slop bez całkowitego zakazu narzędzi AI.",
+      "sourcesLabel": "TIDAL; TechCrunch; HN"
+    },
+    {
+      "priority": "High",
+      "title": "Age assurance jako nowy próg wejścia do internetu",
+      "rationale": "Australia i Discord pokazują, że ochrona dzieci online zamienia się w realne systemy weryfikacji wieku.",
+      "sourcesLabel": "PM Australia; Discord; The Verge"
+    },
+    {
+      "priority": "High",
+      "title": "Geofence warrants po decyzji Sądu Najwyższego USA",
+      "rationale": "Lokalizacja z telefonu jest jednym z najważniejszych pól starcia między prywatnością, platformami i organami ścigania.",
+      "sourcesLabel": "Supreme Court; The Verge"
+    },
+    {
+      "priority": "Medium",
+      "title": "Chłodzenie data centers jako koszt AI",
+      "rationale": "Omen AI pokazuje, że bottleneck AI może być w chemii cieczy, awaryjności i utrzymaniu racków, a nie tylko w GPU.",
+      "sourcesLabel": "TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Robotyczne dłonie i physical AI",
+      "rationale": "Proception pokazuje, że humanoidalne roboty potrzebują danych dotyku i manipulacji, a nie tylko większych modeli.",
+      "sourcesLabel": "TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "WhatsApp usernames i prywatność numeru telefonu",
+      "rationale": "Meta przesuwa komunikator w stronę handle-based identity, ale robi to ostrożnie przez brak publicznego browsingu nazw.",
+      "sourcesLabel": "The Verge"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Rocket Lab investor release",
+      "url": "https://investors.rocketlabcorp.com/news-releases/news-release-details/rocket-lab-acquire-iridium-historic-deal-creating-fully"
+    },
+    {
+      "title": "TIDAL AI Policy",
+      "url": "https://tidal.com/ai-policy"
+    },
+    {
+      "title": "Discord Age Assurance",
+      "url": "https://support.discord.com/hc/en-us/articles/30326565624343-How-to-Complete-Age-Assurance-on-Discord"
+    },
+    {
+      "title": "Prime Minister of Australia",
+      "url": "https://www.pm.gov.au/media/stronger-powers-and-double-penalties-world-leading-social-media-law"
+    },
+    {
+      "title": "Supreme Court: Chatrie v. United States",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/25-112_0am4.pdf"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/"
+    },
+    {
+      "title": "The Verge Tech",
+      "url": "https://www.theverge.com/tech"
+    },
+    {
+      "title": "Reuters przez Yahoo Finance",
+      "url": "https://finance.yahoo.com/technology/articles/rocket-lab-buy-satellite-communications-111416348.html"
+    },
+    {
+      "title": "Tom's Hardware",
+      "url": "https://www.tomshardware.com/pc-components/ddr5/32gb-of-ddr5-now-costs-usd375-minimum-ai-shortage-continues-to-squeeze-pc-building"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/news"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "old Reddit / r/technology",
+      "url": "https://old.reddit.com/r/technology/"
+    },
+    {
+      "title": "TVN24 Biznes / Tech",
+      "url": "https://tvn24.pl/biznes/tech"
+    },
+    {
+      "title": "WP Tech / AI",
+      "url": "https://tech.wp.pl/sztuczna-inteligencja%2Ctemat%2C6016396972122753"
+    },
+    {
+      "title": "Business Insider Polska / Technologie",
+      "url": "https://businessinsider.com.pl/technologie"
+    }
+  ]
+}

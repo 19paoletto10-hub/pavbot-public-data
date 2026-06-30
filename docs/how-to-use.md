@@ -31,6 +31,14 @@ The current active automations are:
 - Topic: `research/tech-news`
 - Cadence: daily at 08:00 local time
 
+- Name: `Pavbot Tech Research 19:33`
+- ID: `pavbot-tech-research-19-33`
+- Topic: `research/tech-news`
+- Cadence: daily at 19:33 Europe/Warsaw
+- Output: `research/tech-news/runs/YYYY-MM-DD-HHMM.md`
+- Data: `research/tech-news/data/YYYY-MM-DD-HHMM-research.json`
+- PDF: `research/tech-news/pdfs/YYYY-MM-DD-HHMM-tech-news.pdf`
+
 - Name: `Pavbot Tech Podcast 09:00`
 - ID: `pavbot-tech-podcast-09-00`
 - Topic: `research/tech-news`
@@ -41,6 +49,14 @@ The current active automations are:
 - ID: `pavbot-polska-wiat-research-08-30`
 - Topic: `research/polska-swiat`
 - Cadence: daily at 08:30 local time
+
+- Name: `Pavbot Polska Świat Research 19:33`
+- ID: `pavbot-polska-wiat-research-19-33`
+- Topic: `research/polska-swiat`
+- Cadence: daily at 19:33 Europe/Warsaw
+- Output: `research/polska-swiat/runs/YYYY-MM-DD-HHMM.md`
+- Data: `research/polska-swiat/data/YYYY-MM-DD-HHMM-research.json`
+- PDF: `research/polska-swiat/pdfs/YYYY-MM-DD-HHMM-polska-swiat.pdf`
 
 - Name: `Pavbot Polska Świat Podcast 09:30`
 - ID: `pavbot-polska-wiat-podcast-09-30`
@@ -66,16 +82,43 @@ The current active automations are:
 - Podcast package: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/`
 - Audio variants: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/audio/<variant>/podcast.mp3`
 
+- Name: `Pavbot Aktualne Wydarzenia Mobile 19:33`
+- ID: `pavbot-aktualne-wydarzenia-mobile-19-33`
+- Kind: `researchAudio`
+- Topic: `research/aktualne-wydarzenia-mobile`
+- Cadence: daily at 19:33 Europe/Warsaw
+- Output: `research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`
+- Newspaper PDF: `research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-newspaper.pdf`
+- Report: `research/aktualne-wydarzenia-mobile/runs/YYYY-MM-DD-HHMM.md`
+- Podcast package: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/`
+- Audio variants: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/audio/<variant>/podcast.mp3`
+
 - Name: `Pavbot Puls Dnia 3h`
 - ID: `pavbot-puls-dnia-news-3h`
 - Kind: `automation`
 - Topic: `research/puls-dnia-news`
 - Cadence: 06:00, 09:00, 12:00, 15:00, 18:00 and 21:00 Europe/Warsaw
+- Slot behavior: every scheduled run must check TVN24, BBC and CNN for new
+  material articles relative to the latest published `pulseNewsData`; if new
+  material is found, the same run must publish a refreshed
+  `public/pavbot-manifest.json` to `origin/main`
 - Output: `research/puls-dnia-news/data/YYYY-MM-DD-HHMM-pulse-news.json`
 - Report: `research/puls-dnia-news/runs/YYYY-MM-DD-HHMM.md`
 - iOS surface: `Puls Dnia` tab
 - iOS retention: fetched runs are cached locally for 48 hours; saved news stay
   local until the user removes them.
+
+- Name: `Pavbot Reddit Safari Humor Radar`
+- ID: `pavbot-reddit-safari-humor-radar`
+- Kind: `automation`
+- Topic: `research/reddit-radar`
+- Cadence: every 2 hours at :06 Europe/Warsaw
+- Output: `research/reddit-radar/runs/YYYY-MM-DD-HHMM-reddit-radar.md`
+- Data: `research/reddit-radar/data/YYYY-MM-DD-HHMM-reddit-radar.json`
+- Raw data: `research/reddit-radar/data/YYYY-MM-DD-HHMM-reddit-radar-raw.json`
+- iOS surface: `Dzisiaj` humor panel and artifact timeline
+- Final digest posting happens only after the matching audit package is
+  published to `origin/main` so the manifest and notifier stay in sync.
 
 ## Manual Run
 
@@ -190,11 +233,12 @@ a local 48-hour history for smooth browsing. A news item saved by the user
 disappears from the active carousel, remains in `Zapisane`, and is not removed
 by the 48-hour cleanup.
 
-In `Ustawienia`, use `Przywróć ustawienia domyślne` when the Manifest URL or
-Notification server URL is stale. The app calls the notifier endpoint
-`/v1/app/defaults`, fills the current GitHub raw manifest URL and Cloudflare
-notifier URL, then reloads the manifest. If a Quick Tunnel URL changes, update
-`PAVBOT_PUBLIC_NOTIFIER_URL`, restart the notifier, and tap this button in the
+In `Ustawienia`, the app shows production connection statuses instead of raw
+Manifest URL or Notification server URL fields. The app still calls the
+notifier endpoint `/v1/app/defaults` internally and uses the configured GitHub
+raw manifest URL plus Cloudflare notifier URL. If a Quick Tunnel URL changes,
+update `PAVBOT_PUBLIC_NOTIFIER_URL`, restart the notifier, and rebuild or
+refresh the configured defaults rather than asking users to paste URLs in the
 app.
 
 After the run, verify the workspace:
@@ -207,7 +251,7 @@ Each automation should publish its topic output after writing artifacts. The
 publish script automatically derives the public manifest URL from
 `PAVBOT_MANIFEST_URL`, `PAVBOT_RAW_BASE_URL`, the existing manifest `rawBaseUrl`,
 or the GitHub `origin` remote. Set `PAVBOT_MANIFEST_URL` only when you need to
-override the default URL used by iOS `Settings -> Manifest URL`:
+override the default URL bundled or configured for the iOS app:
 
 ```bash
 # Optional override:
@@ -219,18 +263,28 @@ The isolated publish script creates a temporary clean worktree from
 `origin/main`, copies only generated outputs from the active topic, runs
 `python3 scripts/generate_pavbot_manifest.py`, commits the refreshed manifest
 with the outputs, and pushes directly to `origin/main`. Treat this as the
-single publish step after each automation run so iOS receives the refreshed
-manifest and the new files in the same commit. After the push, run
-`git fetch origin` and verify `origin/main:public/pavbot-manifest.json`; for
-Jobs, also verify the same package key is present remotely as `run`, `jobsData`,
-and `pdf`. This requires:
+required final publish step after each automation run so iOS receives the
+refreshed manifest and the new files in the same commit. Automation output publication is
+always production-bound to `origin/main`; `PAVBOT_PUBLISH_BRANCH` does not
+change the target branch for this script. After the push the script performs
+remote verification against `origin/main`: it checks the refreshed
+`public/pavbot-manifest.json`, verifies that the expected topic artifacts are
+present in the remote manifest, verifies that the same files exist on
+`origin/main`, and then synchronizes the local `public/pavbot-manifest.json`
+to the published remote state. This requires:
 
 - a working `origin` remote;
 - GitHub credentials or a token with permission to push to `main`;
 - either an auto-resolvable GitHub `origin` or an explicit `PAVBOT_MANIFEST_URL`.
 
-Only `runs/`, `data/`, `pdfs/`, `podcasts/`, `index.md`, `backlog.md`, and
-`public/pavbot-manifest.json` are publishable as automation outputs. Code,
+Do not mark a run successful until the script finishes without remote
+verification errors and the refreshed remote manifest plus current output files
+are visible on `origin/main`. For notifier-backed outputs such as Reddit Radar,
+posting to the notifier without first committing and pushing the audit
+artifacts and manifest is only a partial publication.
+
+Only `runs/`, `data/`, `pdfs/`, `podcasts/`, `topic.md`, `index.md`,
+`backlog.md`, and `public/pavbot-manifest.json` are publishable as automation outputs. Code,
 docs, prompt edits, topic tools, iOS changes, and backend changes must go
 through a separate development branch/commit.
 

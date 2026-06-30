@@ -3,6 +3,7 @@ import SwiftUI
 
 struct ArtifactDetailView: View {
     @Environment(ManifestStore.self) private var store
+    @Environment(\.horizontalSizeClass) private var horizontalSizeClass
 
     let artifact: PavbotArtifact
 
@@ -12,6 +13,14 @@ struct ArtifactDetailView: View {
             Divider()
             ArtifactPreviewView(artifact: artifact)
         }
+        .frame(
+            minWidth: usesLargeCanvas ? 720 : nil,
+            idealWidth: usesLargeCanvas ? 980 : nil,
+            maxWidth: .infinity,
+            minHeight: usesLargeCanvas ? 620 : nil,
+            maxHeight: .infinity
+        )
+        .background(Color(.systemGroupedBackground))
         .navigationTitle(artifact.type.label)
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
@@ -24,6 +33,10 @@ struct ArtifactDetailView: View {
                 }
             }
         }
+    }
+
+    private var usesLargeCanvas: Bool {
+        horizontalSizeClass == .regular || ProcessInfo.processInfo.isiOSAppOnMac
     }
 }
 

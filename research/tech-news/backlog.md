@@ -4,6 +4,22 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Rocket Lab/Iridium vertical space stack | Rocket Lab's planned $8B Iridium acquisition would combine launch, spacecraft manufacturing, L-band spectrum, LEO network, D2D/PNT and recurring satellite services | Watch shareholder/regulatory approvals, bridge financing, Neutron schedule, Iridium NTN Direct, defense/customer commitments and SpaceX/Amazon Leo responses | Open |
+| High | Track TIDAL AI music monetization controls | TIDAL will tag fully AI-generated music, block fraudulent AI content and stop monetizing music it identifies as wholly AI-generated | Recheck July 15 enforcement, distributor tagging, artist/rightsholder response, false positives and Spotify/Apple/Deezer counter-moves | Open |
+| High | Track age assurance enforcement stack | Australia is doubling social media age-law penalties while Discord tests Google Wallet, Incode, credit-card checks and on-device age estimation | Watch eSafety investigations, Discord rollout regions, privacy controls, app-store provider role and EU/Polish analogs | Open |
+| High | Track geofence warrant privacy | Chatrie v. United States treats police acquisition of Google Location History as a Fourth Amendment search, raising the bar for geofence warrants | Watch Fourth Circuit remand, Google policy response, civil-liberties commentary and international parallels without giving legal advice | Open |
+| Medium | Track data-center coolant observability | Omen AI's $31M Series A shows liquid-cooling fluid health, bacteria and downtime becoming a real AI compute bottleneck | Watch operator deployments, Pyxis competition, measured uptime gains, water/chemical tradeoffs and TensorWave/customer proof | Open |
+| Medium | Track dexterous robotic hands | Proception's $11M seed and first robotic-hand shipments show physical AI moving into hand hardware plus sensor-data collection | Watch customer feedback, safety data, sensor glove performance, Tesla/Figure/Agility comparisons and whether hands become a supplier market | Open |
+| High | Track AI quality human-in-the-loop | Ford rehire of 350 veteran engineers shows automated AI quality systems can miss domain-specific failure points in physical products | Watch Ford follow-ups, JD Power quality data, warranty/recall costs and whether other manufacturers reverse over-automation | Open |
+| High | Track KIDS Act age and chatbot regulation | The KIDS Act package combines KOSA, SAFE Bots, COPPA 2.0, messaging and data broker provisions with possible age-verification pressure | Recheck bill text, vote schedule, encryption carve-outs, AI chatbot obligations, EFF/industry responses and EU/Polish analogs | Open |
+| Medium | Track AI chat logs as evidence | Palisades Fire trial used ChatGPT logs as disputed evidence and ended in mistrial, making AI chat history a privacy/evidence topic | Watch retrial decisions, judicial standards, provider retention policies, subpoenas and civil-liberties commentary without giving legal advice | Open |
+| High | Track AI music artist-rights programs | Suno Spark mixes grants and marketing with broad use rights and criticism/waiver clauses during ongoing AI music disputes | Watch artist response, lawsuit updates, licensing terms, Warner/label deals and competing rights-cleared creator programs | Open |
+| Medium | Track AI hiring screener variance | `interviewstreet/hiring-agent` and HN testing show LLM resume scoring can look objective while varying for the same candidate | Recheck repo issues, audits, benchmarks, HR regulation and whether vendors separate extraction from scoring decisions | Open |
+| Medium | Track agent operations provenance | Aleph Alpha Savanna, Herdr and Lore point to operational infrastructure for training lineage, sessions and decision memory around agents | Watch adoption, integrations with Codex/Claude/Cursor, audit logs, sensitive-file policies and team workflow evidence | Open |
+| High | Track Gemini capacity rationing for Meta | Reuters/FT reporting suggests even Meta can hit external model capacity limits when using Gemini internally | Watch Google/Meta comments, customer limits, token-efficiency policies, fallback to Meta models and similar capacity disputes | Open |
+| High | Track APAC regional AI clouds | Firmus/Nvidia adds a large Asia-Pacific AI factory signal for AI-native customers outside classic hyperscaler access | Recheck GPU delivery schedule, Batam/Project Southgate permits, customer commitments, financing and European analogs | Open |
+| High | Track Flock AI surveillance | Flock cameras show natural-language search over physical-world video plus governance, misuse and security concerns | Watch audits, local bans, warrant requirements, ACLU/404 follow-ups and vendor security responses | Open |
+| Medium | Track social media age-ban regulation | The Guardian frames UK/Australia-style under-16 limits as a global regulatory tipping point for platform trust | Watch UK implementation, EU/DSA spillover, age assurance, platform lobbying and Polish policy debate | Open |
 | High | Review first three generated podcasts | Confirms pacing, topic selection, MP3 generation, and Polish narration quality | Listen to each MP3 and record notes | Open |
 | Medium | Improve Reddit fallback | Direct public Reddit fetch failed in this run, limiting community-signal coverage | Decide whether HN plus secondary reporting is enough or add another public Reddit access path | Open |
 | Medium | Tune source allowlist | Repeated good sources should become explicit topic guidance | Review source quality after three runs | Open |
@@ -81,6 +97,10 @@
 | High | Track GPT-5.6 staged release gating | OpenAI has officially launched GPT-5.6 Sol/Terra/Luna in limited preview with government-shared trusted partners, pricing, system card and a Cerebras fast-serving plan | Watch broader ChatGPT/Codex/API availability, White House/ONCD/OSTP clarification, customer criteria, Cerebras launch, pricing changes, independent evals and Anthropic comparison | Open |
 | High | Track GPT-5.6 agentic risk signals | The system card reports High cyber capability and some increased agentic-coding misalignment driven by stronger persistence | Watch OpenAI incident reports, evaluator reactions, enterprise safeguards, Codex behavior changes, competitor system cards and independent red-team results | Open |
 | High | Track frontier AI cyber access regime | OpenAI GPT-5.6 and Anthropic Mythos 5 now show customer-by-customer access gating for high-cyber frontier systems | Watch Commerce/White House process, Fable 5 status, Project Glasswing, approved partner categories, export-control language and cybersecurity community reaction | Open |
+| High | Track Asian Mythos alternatives | Sakana Fugu, 360 Tulongfeng/Yitianzhen and GLM-5.2 show regional and open-weight responses to US frontier-model gating | Watch independent benchmarks, access terms, export-control reactions, Japanese/Chinese government adoption and European equivalents | Open |
+| High | Track OpenAI AI hardware hiring | Paul Meade's reported move from Apple Vision Pro/smart glasses to OpenAI strengthens the Jony Ive device and contextual AI hardware story | Watch Apple/OpenAI confirmation, device form factor, privacy claims, launch timing and Meta/Google/Apple counter-moves | Open |
+| Medium | Track public vulnerability disclosure pressure | HN highlighted a GitHub account publishing unpatched vulnerabilities, showing a disclosure/process risk around faster AI-assisted vulnerability discovery | Watch GitHub moderation, maintainer response, coordinated disclosure norms and reputable security coverage without reproducing exploit details | Open |
+| Medium | Track AI in mass-market interfaces | UPI, Instagram Your Algorithm and Product Hunt agent launches show AI moving into payments, recommendations, onboarding and work tools | Watch user controls, fraud-model audits, regulatory response and sustained adoption beyond launch-day rankings | Open |
 | Medium | Track OpenAI India market expansion | OpenAI hired former Uber India head Prabhjeet Singh as its first India managing director for growth, enterprise, partnerships, regulation and operations | Watch Mumbai/Bengaluru office plans, enterprise deals, IndiaAI policy interaction, pricing/localization and local competitor response | Open |
 | Medium | Track robotaxi operations infrastructure | Aseon Labs' $10M seed round highlights cleaning, charging, inspection, real estate and deadhead miles as constraints on robotaxi economics | Watch prototypes, city deployments, AV operator pilots, permitting model, EV charging partnerships and Waymo/Nuro/Uber response | Open |
 | Medium | Track TikTok super-app expansion | TikTok is bundling sports, commerce, search, hotel booking and fintech licensing signals toward a Western super-app strategy | Watch Brazil fintech license, World Cup hub engagement, TikTok Shop growth, travel booking rollout, regulator scrutiny and Polish/EU availability | Open |
@@ -252,6 +272,39 @@
   `brief.pdf`, and `podcast.mp3`; final MP3 used Piper and measured about 7:42
   by `ffprobe`. PDF brief was rendered in the mobile 390 x 844 pt format and
   visually checked from PNG renders.
+- 2026-06-28: Initial daily tech podcast was generated in fallback mode because
+  `runs/2026-06-28.md` was missing at the early heartbeat time; this package was
+  later replaced after the normal morning research report became available.
+- 2026-06-28: Daily research run backfilled the missing normal morning report
+  after the fallback podcast. Strongest podcast candidates: GPT-5.6/Mythos
+  access regime, Asian Mythos/Fable alternatives, OpenAI AI hardware hiring,
+  GLM-5.2 plus public disclosure, AI data-center cost politics, AI in UPI/
+  Instagram/Product Hunt and orbital data-center hype-check.
+- 2026-06-28: Daily tech podcast regenerated from the normal morning research
+  report; replaced the fallback `draft.md`, `script.md`, `sources.md`,
+  `render.json`, `brief.pdf`, and `podcast.mp3`. Final MP3 used Piper and
+  measured about 7:52 by `ffprobe`; PDF brief was rendered in the mobile
+  390 x 844 pt format and visually checked from PNG renders.
+- 2026-06-28: Evening tech research run created a timestamped material update.
+  Strongest podcast candidates: Google limiting Meta's Gemini capacity, Micron
+  and DDR5/RAMageddon, Firmus/Nvidia regional AI factories, Flock
+  AI-surveillance, global social media age bans and practical agent tooling via
+  Product Hunt/HN.
+- 2026-06-29: Daily research run created a material update. Strongest podcast
+  candidates: Ford returning veteran engineers after AI quality shortfall, KIDS
+  Act age/chatbot regulation, ChatGPT logs as disputed evidence, Suno Spark
+  artist-rights terms, AI resume-screening variance and agent operations
+  provenance.
+- 2026-06-29: Daily tech podcast generated from the normal morning research
+  report; created `draft.md`, `script.md`, `sources.md`, `render.json`,
+  `brief.pdf`, and `podcast.mp3`. Final MP3 used Piper and measured about 8:03
+  by `ffprobe`; PDF brief was rendered in the mobile 390 x 844 pt format and
+  visually checked from PNG renders.
+- 2026-06-29: Evening tech research run created a timestamped material update.
+  Strongest podcast candidates: Rocket Lab acquiring Iridium, TIDAL
+  demonetizing fully AI-generated music, Australia/Discord age assurance
+  enforcement, Chatrie/geofence warrant privacy, Omen AI data-center coolant
+  monitoring and Proception dexterous robotic hands.
 
 ## Done
 

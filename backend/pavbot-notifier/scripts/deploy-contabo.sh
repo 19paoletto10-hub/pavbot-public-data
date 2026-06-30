@@ -36,7 +36,7 @@ esac
 
 echo "Deploying Pavbot notifier code to ${SSH_HOST}:${REMOTE_DIR}"
 
-ssh "$SSH_HOST" "BIND_PORT='$BIND_PORT' MIN_FREE_MB='$MIN_FREE_MB' bash -s" <<'REMOTE_PREFLIGHT'
+ssh "$SSH_HOST" "BIND_PORT='$BIND_PORT' MIN_FREE_MB='$MIN_FREE_MB' REMOTE_DIR='$REMOTE_DIR' COMPOSE_PROJECT='$COMPOSE_PROJECT' bash -s" <<'REMOTE_PREFLIGHT'
 set -euo pipefail
 free_mb="$(df -Pm / | awk 'NR == 2 {print $4}')"
 echo "remoteAvailableMB=$free_mb"
@@ -47,8 +47,18 @@ if (( free_mb < MIN_FREE_MB )); then
 fi
 if command -v ss >/dev/null 2>&1; then
   if ss -ltn | awk '{print $4}' | grep -Eq "(:|\.)${BIND_PORT}$"; then
-    echo "ERROR: 127.0.0.1:${BIND_PORT} is already in use." >&2
-    exit 21
+    if (
+      cd "$REMOTE_DIR" 2>/dev/null &&
+        PAVBOT_CONTABO_BIND_PORT="$BIND_PORT" \
+          docker compose -p "$COMPOSE_PROJECT" -f docker-compose.yml -f docker-compose.contabo.yml \
+          ps --services --filter status=running 2>/dev/null |
+          grep -qx 'pavbot-notifier'
+    ); then
+      echo "remotePortInUse=existing pavbot-notifier service; redeploy allowed"
+    else
+      echo "ERROR: 127.0.0.1:${BIND_PORT} is already in use by another service." >&2
+      exit 21
+    fi
   fi
 fi
 command -v docker >/dev/null
@@ -65,7 +75,7 @@ rsync -az --delete \
   --exclude '*.pyc' \
   "$SERVICE_DIR/" "$SSH_HOST:$REMOTE_DIR/"
 
-ssh "$SSH_HOST" "cd '$REMOTE_DIR' && chmod +x scripts/contabo-preflight.sh scripts/deploy-contabo.sh && PAVBOT_CONTABO_BIND_PORT='$BIND_PORT' scripts/contabo-preflight.sh"
+ssh "$SSH_HOST" "cd '$REMOTE_DIR' && chmod +x scripts/contabo-preflight.sh scripts/deploy-contabo.sh && PAVBOT_CONTABO_BIND_PORT='$BIND_PORT' PAVBOT_CONTABO_COMPOSE_PROJECT='$COMPOSE_PROJECT' scripts/contabo-preflight.sh"
 
 ssh "$SSH_HOST" "cd '$REMOTE_DIR' && if [ ! -f .env ]; then cp .env.contabo.example .env; chmod 600 .env; echo 'Created .env from .env.contabo.example; fill secrets before starting.'; fi"
 

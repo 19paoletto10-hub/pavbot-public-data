@@ -119,7 +119,7 @@ final class ManifestStore {
                 state = .failed(
                     .custom(
                         title: "Pokazuję dane z cache",
-                        message: "Odświeżenie manifestu nie powiodło się. \(PavbotUserFacingError.polishMessage(from: error.localizedDescription))",
+                        message: "\(PavbotCacheNoticeCopy.refreshFailed(context: "manifest")) Szczegóły: \(PavbotUserFacingError.polishMessage(from: error.localizedDescription))",
                         actionTitle: "Odśwież manifest",
                         systemImage: "externaldrive.fill.badge.checkmark"
                     )

@@ -4,6 +4,7 @@ set -euo pipefail
 BIND_PORT="${PAVBOT_CONTABO_BIND_PORT:-18082}"
 MIN_FREE_MB="${PAVBOT_CONTABO_MIN_FREE_MB:-4096}"
 TARGET_DIR="${PAVBOT_CONTABO_REMOTE_DIR:-/opt/pavbot-notifier}"
+COMPOSE_PROJECT="${PAVBOT_CONTABO_COMPOSE_PROJECT:-pavbot-notifier}"
 
 available_mb() {
   df -Pm / | awk 'NR == 2 {print $4}'
@@ -18,6 +19,17 @@ port_is_free() {
   else
     return 0
   fi
+}
+
+port_is_existing_pavbot_service() {
+  local port="$1"
+  (
+    cd "$TARGET_DIR" 2>/dev/null &&
+      PAVBOT_CONTABO_BIND_PORT="$port" \
+        docker compose -p "$COMPOSE_PROJECT" -f docker-compose.yml -f docker-compose.contabo.yml \
+        ps --services --filter status=running 2>/dev/null |
+        grep -qx 'pavbot-notifier'
+  )
 }
 
 echo "Pavbot notifier Contabo preflight"
@@ -45,10 +57,15 @@ docker system df || true
 echo
 echo "--- port ---"
 if ! port_is_free "$BIND_PORT"; then
-  echo "ERROR: 127.0.0.1:${BIND_PORT} is already in use. Set PAVBOT_CONTABO_BIND_PORT to a free local port." >&2
-  exit 21
+  if port_is_existing_pavbot_service "$BIND_PORT"; then
+    echo "port ${BIND_PORT} is already used by the existing pavbot-notifier service; redeploy allowed"
+  else
+    echo "ERROR: 127.0.0.1:${BIND_PORT} is already in use by another service. Set PAVBOT_CONTABO_BIND_PORT to a free local port." >&2
+    exit 21
+  fi
+else
+  echo "port ${BIND_PORT} is free"
 fi
-echo "port ${BIND_PORT} is free"
 
 echo
 echo "--- nginx ---"

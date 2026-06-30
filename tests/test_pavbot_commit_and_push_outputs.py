@@ -16,7 +16,12 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
 
     def test_commits_and_pushes_only_topic_outputs_and_manifest(self) -> None:
         with self.temporary_repo() as repo:
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
 
             result = self.run_publish_script(repo, "research/tech-news")
 
@@ -35,6 +40,8 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 sorted(changed_files),
                 [
                     "public/pavbot-manifest.json",
+                    "research/tech-news/data/2026-06-23-research.json",
+                    "research/tech-news/pdfs/2026-06-23-tech-news.pdf",
                     "research/tech-news/runs/2026-06-23.md",
                 ],
             )
@@ -111,13 +118,70 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 "1",
             )
 
+    def test_llm_jobs_publish_autogenerates_missing_jobs_data_and_pdf(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "llm-ai-jobs-wroclaw",
+                "runs/2026-06-25-0141.md",
+                self.valid_jobs_markdown_report(),
+            )
+
+            result = self.run_publish_script(repo, "research/llm-ai-jobs-wroclaw", isolated=True)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            changed_files = self.git(
+                repo,
+                "diff-tree",
+                "--no-commit-id",
+                "--name-only",
+                "-r",
+                "origin/main",
+                stdout=True,
+            ).splitlines()
+            self.assertIn("research/llm-ai-jobs-wroclaw/data/2026-06-25-0141-jobs.json", changed_files)
+            self.assertIn(
+                "research/llm-ai-jobs-wroclaw/pdfs/2026-06-25-0141-llm-ai-jobs-wroclaw.pdf",
+                changed_files,
+            )
+            manifest = json.loads(
+                self.git(repo, "show", "origin/main:public/pavbot-manifest.json", stdout=True)
+            )
+            by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+            self.assertEqual(
+                by_path["research/llm-ai-jobs-wroclaw/data/2026-06-25-0141-jobs.json"]["type"],
+                "jobsData",
+            )
+            self.assertEqual(
+                by_path["research/llm-ai-jobs-wroclaw/pdfs/2026-06-25-0141-llm-ai-jobs-wroclaw.pdf"]["type"],
+                "pdf",
+            )
+
+    def test_llm_jobs_publish_rejects_latest_run_when_jobs_data_cannot_be_rendered(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "llm-ai-jobs-wroclaw",
+                "runs/2026-06-25-0141.md",
+                self.invalid_jobs_markdown_report(),
+            )
+
+            result = self.run_publish_script(repo, "research/llm-ai-jobs-wroclaw", isolated=True)
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("missing job opportunities section", result.stderr)
+            self.assertEqual(
+                self.git(repo, "rev-list", "--count", "origin/main", stdout=True).strip(),
+                "1",
+            )
+
     def test_research_publish_includes_valid_research_data_json_outputs(self) -> None:
         with self.temporary_repo() as repo:
             self.write_topic_artifact(
                 repo,
                 "tech-news",
                 "runs/2026-06-25.md",
-                "# Tech News\n\nDate: 2026-06-25\nStatus: Material update\n",
+                self.valid_research_markdown_report("tech-news"),
             )
             self.write_topic_artifact(
                 repo,
@@ -148,13 +212,69 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 "researchData",
             )
 
+    def test_force_manifest_allows_manifest_only_research_commit_when_outputs_are_unchanged(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-25.md",
+                self.valid_research_markdown_report("tech-news"),
+            )
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "data/2026-06-25-research.json",
+                json.dumps(self.valid_research_data_payload(), ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "pdfs/2026-06-25-tech-news.pdf",
+                "%PDF seeded research pdf",
+            )
+            self.write_existing_manifest(repo, "https://raw.githubusercontent.com/example/pavbot/main/")
+            self.git(repo, "add", ".")
+            self.git(repo, "commit", "-m", "seed research output with stale manifest")
+            self.git(repo, "push", "origin", "main")
+            head_before = self.git(repo, "rev-parse", "origin/main", stdout=True).strip()
+
+            result = self.run_publish_script(
+                repo,
+                "research/tech-news",
+                isolated=True,
+                force_manifest=True,
+            )
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertIn("pushed pavbot outputs", result.stdout)
+            head_after = self.git(repo, "rev-parse", "origin/main", stdout=True).strip()
+            self.assertNotEqual(head_before, head_after)
+            changed_files = self.git(
+                repo,
+                "diff-tree",
+                "--no-commit-id",
+                "--name-only",
+                "-r",
+                "origin/main",
+                stdout=True,
+            ).splitlines()
+            self.assertEqual(changed_files, ["public/pavbot-manifest.json"])
+            manifest = json.loads(
+                self.git(repo, "show", "origin/main:public/pavbot-manifest.json", stdout=True)
+            )
+            by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+            self.assertEqual(
+                by_path["research/tech-news/data/2026-06-25-research.json"]["type"],
+                "researchData",
+            )
+
     def test_research_publish_refuses_invalid_research_data_json(self) -> None:
         with self.temporary_repo() as repo:
             self.write_topic_artifact(
                 repo,
                 "tech-news",
                 "runs/2026-06-25.md",
-                "# Tech News\n\nDate: 2026-06-25\nStatus: Material update\n",
+                self.valid_research_markdown_report("tech-news"),
             )
             self.write_topic_artifact(
                 repo,
@@ -173,31 +293,112 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 "1",
             )
 
-    def test_mobile_topic_isolated_publish_includes_valid_mobile_news_data(self) -> None:
+    def test_research_publish_autogenerates_missing_research_data_and_pdf(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-25.md",
+                self.valid_research_markdown_report("tech-news"),
+            )
+
+            result = self.run_publish_script(repo, "research/tech-news", isolated=True)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            changed_files = self.git(
+                repo,
+                "diff-tree",
+                "--no-commit-id",
+                "--name-only",
+                "-r",
+                "origin/main",
+                stdout=True,
+            ).splitlines()
+            self.assertIn("research/tech-news/data/2026-06-25-research.json", changed_files)
+            self.assertIn("research/tech-news/pdfs/2026-06-25-tech-news.pdf", changed_files)
+
+    def test_polska_publish_rejects_latest_run_without_renderable_research_bundle(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "polska-swiat",
+                "runs/2026-06-25.md",
+                self.invalid_research_markdown_report("polska-swiat"),
+            )
+
+            result = self.run_publish_script(repo, "research/polska-swiat", isolated=True)
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("invalid research data", result.stderr)
+            self.assertIn("checkedSources must contain at least one item", result.stderr)
+
+    def test_force_manifest_still_rejects_invalid_research_data_json(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-27.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-27"),
+            )
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "data/2026-06-27-research.json",
+                json.dumps({"schemaVersion": 1, "topic": "tech-news"}, ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "pdfs/2026-06-27-tech-news.pdf",
+                "%PDF seeded research pdf",
+            )
+
+            result = self.run_publish_script(
+                repo,
+                "research/tech-news",
+                isolated=True,
+                force_manifest=True,
+            )
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("invalid research data", result.stderr)
+            self.assertIn("missing required field: articles", result.stderr)
+            self.assertEqual(
+                self.git(repo, "rev-list", "--count", "origin/main", stdout=True).strip(),
+                "1",
+            )
+
+    def test_mobile_topic_isolated_publish_autogenerates_mobile_bundle_from_latest_run(self) -> None:
         with self.temporary_repo() as repo:
             self.write_topic_artifact(
                 repo,
                 "aktualne-wydarzenia-mobile",
-                "data/2026-06-25-1015-mobile-news.json",
-                json.dumps(self.valid_mobile_news_data_payload(), ensure_ascii=False) + "\n",
-            )
-            self.write_topic_artifact(
-                repo,
-                "aktualne-wydarzenia-mobile",
-                "pdfs/2026-06-25-1015-mobile-brief.pdf",
-                "%PDF mobile brief",
-            )
-            self.write_topic_artifact(
-                repo,
-                "aktualne-wydarzenia-mobile",
-                "podcasts/2026-06-25-1015/audio/female-piper/podcast.mp3",
-                "female mp3",
+                "runs/2026-06-25-1015.md",
+                self.valid_mobile_markdown_report(),
             )
             self.write_topic_artifact(
                 repo,
                 "aktualne-wydarzenia-mobile",
                 "podcasts/2026-06-25-1015/script.md",
                 "# Podcast script\n\nTekst do lokalnego TTS.\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-25-1015/sources.md",
+                "## Źródła użyte w scenariuszu\n\n- [KPRM](https://example.com/ogolne-1)\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-25-1015/tts_variants.json",
+                json.dumps({"language": "pl", "variants": [{"id": "female-piper"}]}, ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-25-1015/audio/female-piper/podcast.mp3",
+                "female mp3",
             )
 
             result = self.run_publish_script(repo, "research/aktualne-wydarzenia-mobile", isolated=True)
@@ -215,6 +416,18 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
             )
             self.assertEqual(
                 by_path[
+                    "research/aktualne-wydarzenia-mobile/pdfs/2026-06-25-1015-mobile-brief.pdf"
+                ]["type"],
+                "pdf",
+            )
+            self.assertEqual(
+                by_path[
+                    "research/aktualne-wydarzenia-mobile/pdfs/2026-06-25-1015-newspaper.pdf"
+                ]["type"],
+                "pdf",
+            )
+            self.assertEqual(
+                by_path[
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-25-1015/script.md"
                 ]["type"],
                 "podcastScript",
@@ -227,14 +440,38 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
             self.write_topic_artifact(
                 repo,
                 "aktualne-wydarzenia-mobile",
+                "runs/2026-06-25-1015.md",
+                self.valid_mobile_markdown_report(),
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
                 "data/2026-06-25-1015-mobile-news.json",
                 json.dumps(payload, ensure_ascii=False) + "\n",
             )
             self.write_topic_artifact(
                 repo,
                 "aktualne-wydarzenia-mobile",
-                "pdfs/2026-06-25-1015-mobile-brief.pdf",
-                "%PDF mobile brief",
+                "podcasts/2026-06-25-1015/script.md",
+                "# Podcast script\n\nTekst do lokalnego TTS.\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-25-1015/sources.md",
+                "## Źródła użyte w scenariuszu\n\n- [KPRM](https://example.com/ogolne-1)\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-25-1015/tts_variants.json",
+                json.dumps({"language": "pl", "variants": [{"id": "female-piper"}]}, ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-25-1015/audio/female-piper/podcast.mp3",
+                "female mp3",
             )
 
             result = self.run_publish_script(repo, "research/aktualne-wydarzenia-mobile", isolated=True)
@@ -261,14 +498,32 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
             self.write_topic_artifact(
                 repo,
                 "aktualne-wydarzenia-mobile",
-                "data/2026-06-25-1015-mobile-news.json",
-                json.dumps(self.valid_mobile_news_data_payload(), ensure_ascii=False) + "\n",
+                "runs/2026-06-25-1015.md",
+                self.valid_mobile_markdown_report(),
             )
             self.write_topic_artifact(
                 repo,
                 "aktualne-wydarzenia-mobile",
-                "pdfs/2026-06-25-1015-mobile-brief.pdf",
-                "%PDF mobile brief",
+                "podcasts/2026-06-25-1015/script.md",
+                "# Podcast script\n\nTekst do lokalnego TTS.\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-25-1015/sources.md",
+                "## Źródła użyte w scenariuszu\n\n- [KPRM](https://example.com/ogolne-1)\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-25-1015/tts_variants.json",
+                json.dumps({"language": "pl", "variants": [{"id": "female-piper"}]}, ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-25-1015/audio/female-piper/podcast.mp3",
+                "female mp3",
             )
 
             result = self.run_publish_script(repo, "research/aktualne-wydarzenia-mobile", isolated=True)
@@ -320,8 +575,92 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 "pulseNewsData",
             )
 
+    def test_pulse_news_isolated_publish_uses_local_helpers_when_origin_lacks_them(self) -> None:
+        with self.temporary_repo() as repo:
+            self.git(
+                repo,
+                "rm",
+                "scripts/pavbot_publication_contract.py",
+                "scripts/validate_pulse_news_data.py",
+            )
+            self.git(repo, "commit", "-m", "simulate stale remote publication helpers")
+            self.git(repo, "push", "origin", "main")
+            shutil.copy2(self.repo_root / "scripts" / "pavbot_publication_contract.py", repo / "scripts")
+            shutil.copy2(self.repo_root / "scripts" / "validate_pulse_news_data.py", repo / "scripts")
+            self.write_topic_artifact(
+                repo,
+                "puls-dnia-news",
+                "runs/2026-06-26-1200.md",
+                "# Puls dnia\n\nDate: 2026-06-26 12:00 CEST\nStatus: Material update\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "puls-dnia-news",
+                "data/2026-06-26-1200-pulse-news.json",
+                json.dumps(self.valid_pulse_news_data_payload(), ensure_ascii=False) + "\n",
+            )
+
+            result = self.run_publish_script(repo, "research/puls-dnia-news", isolated=True)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            changed_files = self.git(
+                repo,
+                "diff-tree",
+                "--no-commit-id",
+                "--name-only",
+                "-r",
+                "origin/main",
+                stdout=True,
+            ).splitlines()
+            self.assertIn("research/puls-dnia-news/runs/2026-06-26-1200.md", changed_files)
+            self.assertIn("research/puls-dnia-news/data/2026-06-26-1200-pulse-news.json", changed_files)
+            self.assertNotIn("scripts/pavbot_publication_contract.py", changed_files)
+            self.assertNotIn("scripts/validate_pulse_news_data.py", changed_files)
+
+    def test_publish_ignores_publish_branch_override_and_still_pushes_to_origin_main(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
+
+            result = self.run_publish_script(
+                repo,
+                "research/tech-news",
+                isolated=True,
+                publish_branch="preview",
+            )
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            changed_files = self.git(
+                repo,
+                "diff-tree",
+                "--no-commit-id",
+                "--name-only",
+                "-r",
+                "origin/main",
+                stdout=True,
+            ).splitlines()
+            self.assertEqual(
+                sorted(changed_files),
+                [
+                    "public/pavbot-manifest.json",
+                    "research/tech-news/data/2026-06-23-research.json",
+                    "research/tech-news/pdfs/2026-06-23-tech-news.pdf",
+                    "research/tech-news/runs/2026-06-23.md",
+                ],
+            )
+
     def test_pulse_news_isolated_publish_refreshes_stale_manifest_when_outputs_are_unchanged(self) -> None:
         with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "puls-dnia-news",
+                "runs/2026-06-26-1200.md",
+                "# Puls dnia\n\nDate: 2026-06-26 12:00 CEST\nStatus: Material update\n",
+            )
             self.write_topic_artifact(
                 repo,
                 "puls-dnia-news",
@@ -359,10 +698,75 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 "pulseNewsData",
             )
 
+    def test_pulse_news_publish_ignores_gitkeep_when_verifying_remote_manifest(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "puls-dnia-news",
+                "runs/.gitkeep",
+                "",
+            )
+            self.write_topic_artifact(
+                repo,
+                "puls-dnia-news",
+                "data/.gitkeep",
+                "",
+            )
+            self.write_topic_artifact(
+                repo,
+                "puls-dnia-news",
+                "runs/2026-06-26-1200.md",
+                "# Puls dnia\n\nDate: 2026-06-26 12:00 CEST\nStatus: Material update\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "puls-dnia-news",
+                "data/2026-06-26-1200-pulse-news.json",
+                json.dumps(self.valid_pulse_news_data_payload(), ensure_ascii=False) + "\n",
+            )
+
+            result = self.run_publish_script(repo, "research/puls-dnia-news", isolated=True)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            manifest = json.loads(
+                self.git(repo, "show", "origin/main:public/pavbot-manifest.json", stdout=True)
+            )
+            paths = {artifact["path"] for artifact in manifest["artifacts"]}
+            self.assertIn("research/puls-dnia-news/data/2026-06-26-1200-pulse-news.json", paths)
+            self.assertNotIn("research/puls-dnia-news/runs/.gitkeep", paths)
+            self.assertNotIn("research/puls-dnia-news/data/.gitkeep", paths)
+
+    def test_isolated_publish_synchronizes_local_manifest_with_origin_main(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
+
+            result = self.run_publish_script(repo, "research/tech-news", isolated=True)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            local_manifest = (repo / "public" / "pavbot-manifest.json").read_text(encoding="utf-8")
+            remote_manifest = self.git(
+                repo,
+                "show",
+                "origin/main:public/pavbot-manifest.json",
+                stdout=True,
+            )
+            self.assertEqual(local_manifest, remote_manifest)
+
     def test_pulse_news_publish_refuses_invalid_pulse_news_data(self) -> None:
         with self.temporary_repo() as repo:
             payload = self.valid_pulse_news_data_payload()
             payload["items"] = payload["items"][:11]
+            self.write_topic_artifact(
+                repo,
+                "puls-dnia-news",
+                "runs/2026-06-26-1200.md",
+                "# Puls dnia\n\nDate: 2026-06-26 12:00 CEST\nStatus: Material update\n",
+            )
             self.write_topic_artifact(
                 repo,
                 "puls-dnia-news",
@@ -380,8 +784,150 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 "1",
             )
 
-    def test_mobile_topic_isolated_publish_anchors_latest_package_on_mobile_news_data(self) -> None:
+    def test_remote_verification_fails_when_manifest_is_missing_latest_bundle_member(self) -> None:
         with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
+
+            publish_result = self.run_publish_script(repo, "research/tech-news", isolated=True)
+
+            self.assertEqual(publish_result.returncode, 0, publish_result.stderr)
+            self.git(repo, "fetch", "origin", "main")
+            self.git(repo, "reset", "--hard", "origin/main")
+
+            manifest_path = repo / "public" / "pavbot-manifest.json"
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["artifacts"] = [
+                artifact
+                for artifact in manifest["artifacts"]
+                if artifact["path"] != "research/tech-news/data/2026-06-23-research.json"
+            ]
+            manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+            self.git(repo, "add", "public/pavbot-manifest.json")
+            self.git(repo, "commit", "-m", "corrupt remote manifest")
+            self.git(repo, "push", "origin", "main")
+
+            result = subprocess.run(
+                [
+                    "python3",
+                    str(self.repo_root / "scripts" / "pavbot_publication_contract.py"),
+                    "verify-remote",
+                    "research/tech-news",
+                    "--repo-root",
+                    str(repo),
+                    "--ref",
+                    "origin/main",
+                ],
+                cwd=repo,
+                capture_output=True,
+                text=True,
+                check=False,
+            )
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("publication verification failed", result.stderr)
+            self.assertIn(
+                "research/tech-news/data/2026-06-23-research.json",
+                result.stderr,
+            )
+
+    def test_reddit_radar_isolated_publish_bootstraps_topic_and_manifest_data(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "reddit-radar",
+                "runs/2026-06-28-0206-reddit-radar.md",
+                "# Reddit Radar 2026-06-28-0206\n\nStatus: Material update\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "reddit-radar",
+                "data/2026-06-28-0206-reddit-radar.json",
+                json.dumps({"schemaVersion": 1, "id": "humor-2026-06-28-0206"}, ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "reddit-radar",
+                "data/2026-06-28-0206-reddit-radar-raw.json",
+                json.dumps({"schemaVersion": 1, "raw": True}, ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "reddit-radar",
+                "data/reddit-radar-state.json",
+                json.dumps({"items": []}, ensure_ascii=False) + "\n",
+            )
+            (repo / "docs" / "how-to-use.md").write_text(
+                "\n".join(
+                    [
+                        "# How To Use Pavbot",
+                        "",
+                        "The current active automations are:",
+                        "",
+                        "- Name: `Pavbot Reddit Safari Humor Radar`",
+                        "- ID: `pavbot-reddit-safari-humor-radar`",
+                        "- Kind: `automation`",
+                        "- Topic: `research/reddit-radar`",
+                        "- Cadence: every 2 hours at :06 Europe/Warsaw",
+                        "- Output: `research/reddit-radar/runs/YYYY-MM-DD-HHMM-reddit-radar.md`",
+                        "",
+                    ]
+                ),
+                encoding="utf-8",
+            )
+
+            result = self.run_publish_script(repo, "research/reddit-radar", isolated=True)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            changed_files = self.git(
+                repo,
+                "diff-tree",
+                "--no-commit-id",
+                "--name-only",
+                "-r",
+                "origin/main",
+                stdout=True,
+            ).splitlines()
+            self.assertIn("research/reddit-radar/runs/2026-06-28-0206-reddit-radar.md", changed_files)
+            self.assertIn("research/reddit-radar/data/2026-06-28-0206-reddit-radar.json", changed_files)
+            self.assertIn("research/reddit-radar/data/2026-06-28-0206-reddit-radar-raw.json", changed_files)
+            self.assertNotIn("research/reddit-radar/data/reddit-radar-state.json", changed_files)
+            self.assertNotIn("docs/how-to-use.md", changed_files)
+
+            manifest = json.loads(
+                self.git(repo, "show", "origin/main:public/pavbot-manifest.json", stdout=True)
+            )
+            automation_ids = {automation["id"] for automation in manifest["automations"]}
+            self.assertIn("pavbot-reddit-safari-humor-radar", automation_ids)
+            topic_slugs = {topic["slug"] for topic in manifest["topics"]}
+            self.assertIn("reddit-radar", topic_slugs)
+            by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+            self.assertEqual(
+                by_path["research/reddit-radar/runs/2026-06-28-0206-reddit-radar.md"]["type"],
+                "run",
+            )
+            self.assertEqual(
+                by_path["research/reddit-radar/data/2026-06-28-0206-reddit-radar.json"]["type"],
+                "redditRadarData",
+            )
+            self.assertEqual(
+                by_path["research/reddit-radar/data/2026-06-28-0206-reddit-radar-raw.json"]["type"],
+                "redditRadarRawData",
+            )
+            self.assertNotIn("research/reddit-radar/data/reddit-radar-state.json", by_path)
+
+    def test_mobile_topic_isolated_publish_anchors_latest_package_on_latest_run(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "runs/2026-06-24-1015.md",
+                self.valid_mobile_markdown_report(run_date="2026-06-24"),
+            )
             self.write_topic_artifact(
                 repo,
                 "aktualne-wydarzenia-mobile",
@@ -392,13 +938,43 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 repo,
                 "aktualne-wydarzenia-mobile",
                 "podcasts/2026-06-25-1015/script.md",
-                "# Complete script\n",
+                "# Older complete script\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-25-1015/audio/female-piper/podcast.mp3",
+                "older female mp3",
             )
             self.write_topic_artifact(
                 repo,
                 "aktualne-wydarzenia-mobile",
                 "podcasts/2026-06-26-1015/script.md",
-                "# Orphan script without mobileNewsData\n",
+                "# Newer script\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-26-1015/sources.md",
+                "## Źródła użyte w scenariuszu\n\n- [KPRM](https://example.com/ogolne-1)\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-26-1015/tts_variants.json",
+                json.dumps({"language": "pl", "variants": [{"id": "female-piper"}]}, ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-26-1015/audio/female-piper/podcast.mp3",
+                "newer female mp3",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "runs/2026-06-26-1015.md",
+                self.valid_mobile_markdown_report(run_date="2026-06-26"),
             )
 
             result = self.run_publish_script(repo, "research/aktualne-wydarzenia-mobile", isolated=True)
@@ -410,15 +986,15 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
             paths = {artifact["path"] for artifact in manifest["artifacts"]}
 
             self.assertIn(
-                "research/aktualne-wydarzenia-mobile/data/2026-06-25-1015-mobile-news.json",
+                "research/aktualne-wydarzenia-mobile/data/2026-06-26-1015-mobile-news.json",
                 paths,
             )
             self.assertIn(
-                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-25-1015/script.md",
+                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-1015/script.md",
                 paths,
             )
             self.assertNotIn(
-                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-1015/script.md",
+                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-25-1015/script.md",
                 paths,
             )
 
@@ -472,7 +1048,12 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
 
     def test_exits_without_commit_when_outputs_are_unchanged(self) -> None:
         with self.temporary_repo() as repo:
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
             first = self.run_publish_script(repo, "research/tech-news")
             self.assertEqual(first.returncode, 0, first.stderr)
             head_after_first_publish = self.git(repo, "rev-parse", "HEAD", stdout=True).strip()
@@ -489,7 +1070,12 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
     def test_uses_existing_manifest_raw_base_url_when_manifest_env_is_missing(self) -> None:
         with self.temporary_repo() as repo:
             self.write_existing_manifest(repo, "https://raw.githubusercontent.com/example/from-manifest/main/")
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
 
             result = self.run_publish_script(repo, "research/tech-news", manifest_url=None)
 
@@ -507,7 +1093,12 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
     def test_derives_manifest_url_from_https_github_origin_when_env_is_missing(self) -> None:
         with self.temporary_repo() as repo:
             self.configure_github_origin_rewrite(repo, "https://github.com/example/pavbot.git")
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
 
             result = self.run_publish_script(repo, "research/tech-news", manifest_url=None)
 
@@ -525,7 +1116,12 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
     def test_derives_manifest_url_from_ssh_github_origin_when_env_is_missing(self) -> None:
         with self.temporary_repo() as repo:
             self.configure_github_origin_rewrite(repo, "git@github.com:example/pavbot.git")
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
 
             result = self.run_publish_script(repo, "research/tech-news", manifest_url=None)
 
@@ -548,7 +1144,12 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
         for remote_url in remote_urls:
             with self.subTest(remote_url=remote_url), self.temporary_repo() as repo:
                 self.configure_github_origin_rewrite(repo, remote_url)
-                self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+                self.write_topic_artifact(
+                    repo,
+                    "tech-news",
+                    "runs/2026-06-23.md",
+                    self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+                )
 
                 result = self.run_publish_script(repo, "research/tech-news", manifest_url=None)
 
@@ -566,7 +1167,12 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
     def test_explicit_manifest_url_still_takes_precedence(self) -> None:
         with self.temporary_repo() as repo:
             self.write_existing_manifest(repo, "https://raw.githubusercontent.com/example/from-manifest/main/")
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
 
             result = self.run_publish_script(
                 repo,
@@ -587,7 +1193,12 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
 
     def test_refuses_to_publish_when_changes_exist_outside_allowlist(self) -> None:
         with self.temporary_repo() as repo:
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
             (repo / "docs" / "unrelated.md").write_text("do not publish\n", encoding="utf-8")
 
             result = self.run_publish_script(repo, "research/tech-news")
@@ -601,7 +1212,12 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
 
     def test_refuses_in_place_publish_when_topic_tool_changes_exist(self) -> None:
         with self.temporary_repo() as repo:
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
             tool_path = repo / "research" / "tech-news" / "tools" / "helper.sh"
             tool_path.parent.mkdir(parents=True, exist_ok=True)
             tool_path.write_text("#!/usr/bin/env bash\n", encoding="utf-8")
@@ -614,7 +1230,12 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
 
     def test_isolated_publish_ignores_development_changes_and_pushes_outputs(self) -> None:
         with self.temporary_repo() as repo:
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
             (repo / "docs" / "unrelated.md").write_text("development change\n", encoding="utf-8")
             tool_path = repo / "research" / "tech-news" / "tools" / "helper.sh"
             tool_path.parent.mkdir(parents=True, exist_ok=True)
@@ -637,16 +1258,26 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                 sorted(changed_files),
                 [
                     "public/pavbot-manifest.json",
+                    "research/tech-news/data/2026-06-23-research.json",
+                    "research/tech-news/pdfs/2026-06-23-tech-news.pdf",
                     "research/tech-news/runs/2026-06-23.md",
                 ],
             )
-            self.assertFalse((repo / "public" / "pavbot-manifest.json").exists())
+            self.assertEqual(
+                (repo / "public" / "pavbot-manifest.json").read_text(encoding="utf-8"),
+                self.git(repo, "show", "origin/main:public/pavbot-manifest.json", stdout=True),
+            )
             self.assertTrue((repo / "docs" / "unrelated.md").exists())
             self.assertTrue(tool_path.exists())
 
     def test_isolated_publish_reports_noop_without_push_message(self) -> None:
         with self.temporary_repo() as repo:
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
             first = self.run_publish_script(repo, "research/tech-news", isolated=True)
             self.assertEqual(first.returncode, 0, first.stderr)
 
@@ -698,7 +1329,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                 repo,
                 "aktualne-wydarzenia-mobile",
                 "runs/2026-06-23-1015.md",
-                "# Report\n",
+                self.valid_mobile_markdown_report(run_date="2026-06-23"),
             )
             self.write_topic_artifact(
                 repo,
@@ -711,6 +1342,18 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                 "aktualne-wydarzenia-mobile",
                 "backlog.md",
                 "# Backlog\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "data/2026-06-23-1015-mobile-news.json",
+                json.dumps(self.valid_mobile_news_data_payload(), ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "pdfs/2026-06-23-1015-mobile-brief.pdf",
+                "%PDF old brief",
             )
             self.write_topic_artifact(
                 repo,
@@ -739,8 +1382,8 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             self.write_topic_artifact(
                 repo,
                 "aktualne-wydarzenia-mobile",
-                "podcasts/2026-06-23-1015/audio/female-piper/render.json",
-                "{\"status\": \"ok\"}\n",
+                "podcasts/2026-06-23-1015/audio/female-piper/podcast.mp3",
+                "old female mp3",
             )
             self.git(repo, "add", ".")
             self.git(repo, "commit", "-m", "seed mobile topic")
@@ -749,14 +1392,23 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             self.write_topic_artifact(
                 repo,
                 "aktualne-wydarzenia-mobile",
-                "data/2026-06-24-1015-mobile-news.json",
-                json.dumps(self.valid_mobile_news_data_payload(), ensure_ascii=False) + "\n",
+                "runs/2026-06-24-1015.md",
+                self.valid_mobile_markdown_report(run_date="2026-06-24"),
             )
             self.write_topic_artifact(
                 repo,
                 "aktualne-wydarzenia-mobile",
-                "pdfs/2026-06-24-1015-mobile-brief.pdf",
-                "%PDF mobile brief",
+                "podcasts/2026-06-24-1015/sources.md",
+                "## Źródła użyte w scenariuszu\n\n- [KPRM](https://example.com/ogolne-1)\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-24-1015/tts_variants.json",
+                json.dumps(
+                    {"language": "pl", "variants": [{"id": "female-piper"}, {"id": "male-xtts"}]},
+                    ensure_ascii=False,
+                ) + "\n",
             )
             self.write_topic_artifact(
                 repo,
@@ -789,24 +1441,30 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                 "origin/main",
                 stdout=True,
             ).splitlines()
-            self.assertEqual(
-                sorted(changed_files),
-                [
-                    "public/pavbot-manifest.json",
-                    "research/aktualne-wydarzenia-mobile/backlog.md",
-                    "research/aktualne-wydarzenia-mobile/data/2026-06-24-1015-mobile-news.json",
-                    "research/aktualne-wydarzenia-mobile/index.md",
-                    "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-1015-newspaper.pdf",
-                    "research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-1015-mobile-brief.pdf",
-                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/render.json",
-                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/script.md",
-                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/sources.md",
-                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/tts_variants.json",
-                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/female-piper/podcast.mp3",
-                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/male-xtts/podcast.mp3",
-                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/script.md",
-                    "research/aktualne-wydarzenia-mobile/runs/2026-06-23-1015.md",
-                ],
+            self.assertIn("public/pavbot-manifest.json", changed_files)
+            self.assertIn(
+                "research/aktualne-wydarzenia-mobile/data/2026-06-24-1015-mobile-news.json",
+                changed_files,
+            )
+            self.assertIn(
+                "research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-1015-mobile-brief.pdf",
+                changed_files,
+            )
+            self.assertIn(
+                "research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-1015-newspaper.pdf",
+                changed_files,
+            )
+            self.assertIn(
+                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/female-piper/podcast.mp3",
+                changed_files,
+            )
+            self.assertIn(
+                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/male-xtts/podcast.mp3",
+                changed_files,
+            )
+            self.assertIn(
+                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/script.md",
+                changed_files,
             )
 
             manifest = json.loads(
@@ -822,11 +1480,27 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                 [
                     "research/aktualne-wydarzenia-mobile/data/2026-06-24-1015-mobile-news.json",
                     "research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-1015-mobile-brief.pdf",
+                    "research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-1015-newspaper.pdf",
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/female-piper/podcast.mp3",
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/male-xtts/podcast.mp3",
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/script.md",
                 ],
             )
+            for removed_path in (
+                "research/aktualne-wydarzenia-mobile/data/2026-06-23-1015-mobile-news.json",
+                "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-1015-mobile-brief.pdf",
+                "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-1015-newspaper.pdf",
+                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/script.md",
+                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/podcast.mp3",
+            ):
+                removal_check = subprocess.run(
+                    ["git", "cat-file", "-e", f"origin/main:{removed_path}"],
+                    cwd=repo,
+                    capture_output=True,
+                    text=True,
+                    check=False,
+                )
+                self.assertNotEqual(removal_check.returncode, 0, removed_path)
 
     def temporary_repo(self):
         return TemporaryPavbotRepo(self.repo_root, self.script_path)
@@ -836,18 +1510,26 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
         repo: Path,
         topic_path: str,
         isolated: bool = False,
+        force_manifest: bool = False,
         manifest_url: str | None = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+        publish_branch: str | None = None,
     ) -> subprocess.CompletedProcess[str]:
         self.assertTrue(self.script_path.exists(), f"missing script: {self.script_path}")
         env = os.environ.copy()
         env.pop("PAVBOT_RAW_BASE_URL", None)
+        env.pop("PAVBOT_PUBLISH_BRANCH", None)
+        env["PYTHONDONTWRITEBYTECODE"] = "1"
         if manifest_url is None:
             env.pop("PAVBOT_MANIFEST_URL", None)
         else:
             env["PAVBOT_MANIFEST_URL"] = manifest_url
+        if publish_branch is not None:
+            env["PAVBOT_PUBLISH_BRANCH"] = publish_branch
         args = ["bash", str(self.script_path)]
         if isolated:
             args.append("--isolated")
+        if force_manifest:
+            args.append("--force-manifest")
         args.append(topic_path)
         return subprocess.run(
             args,
@@ -887,6 +1569,138 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             + "\n",
             encoding="utf-8",
         )
+
+    def valid_jobs_markdown_report(self) -> str:
+        return """# LLM/AI Jobs Wrocław
+
+Date: 2026-06-25 01:41 CEST
+Status: Material update
+
+## Zakres sprawdzony
+
+- [CKSource careers](https://example.com/cksource-careers) - checked
+- [Tiugo role](https://example.com/tiugo-role) - checked
+
+## Podsumowanie zarządcze
+
+Runda przyniosła nowe role LLM/AI dla Polski.
+
+## Najciekawsze nowe lub materialnie zmienione role
+
+### 1. CKSource - Principal AI Engineer
+- Dlaczego interesujące: Hands-on rola dla systemów agentowych.
+- Fit LLM/AI: Agentic workflows, LLM, RAG.
+- Lokalizacja/remote: `Remote Poland`
+- Wynagrodzenie: `38 000-45 000 PLN`
+- Niepewność: Tytuł może różnić się między kartami.
+- Źródła: [CKSource](https://example.com/cksource-role)
+
+## Zmiany od poprzedniej rundy
+
+- Dodano CKSource.
+
+## Ryzyka i niepewności
+
+- Warto monitorować drift tytułu.
+
+## Rekomendowane akcje
+
+- Sprawdzić status w kolejnej rundzie.
+
+## Źródła
+
+- [CKSource careers](https://example.com/cksource-careers)
+"""
+
+    def invalid_jobs_markdown_report(self) -> str:
+        return """# LLM/AI Jobs Wrocław
+
+Date: 2026-06-25 01:41 CEST
+Status: Material update
+
+## Podsumowanie zarządcze
+
+Raport bez sekcji ofert.
+"""
+
+    def valid_research_markdown_report(self, topic_title: str, run_date: str = "2026-06-25") -> str:
+        return f"""# Daily Research Report: {topic_title}
+
+Date: {run_date}
+Status: Material update
+
+## Podsumowanie
+
+Najważniejszy temat dnia dotyczy AI i infrastruktury.
+
+## Nowe fakty
+
+- OpenAI publikuje zmianę w API. Źródło: [OpenAI](https://openai.com/news/api-update)
+- Cloudflare rozwija warstwę agentów. Źródło: [Cloudflare](https://blog.cloudflare.com/agents)
+
+## Tematy do podcastu
+
+- Tytuł: API i agenci
+  Dlaczego to ważne: Rosną praktyczne wdrożenia AI.
+  Główne źródła: OpenAI, Cloudflare
+  Priorytet: High
+
+## Źródła
+
+- [OpenAI](https://openai.com/news/api-update)
+- [Cloudflare](https://blog.cloudflare.com/agents)
+"""
+
+    def invalid_research_markdown_report(self, topic_title: str) -> str:
+        return f"""# Daily Research Report: {topic_title}
+
+Date: 2026-06-25
+Status: Material update
+"""
+
+    def valid_mobile_markdown_report(self, run_date: str = "2026-06-25", run_time: str = "10:15") -> str:
+        sections = [
+            ("ogolne", "Ogólne", "Krajowe i międzynarodowe sygnały układają się dziś w jeden obraz ryzyk."),
+            ("polska", "Polska", "Krajowe decyzje instytucji są dziś główną osią wydania."),
+            ("polityka", "Polityka", "Spór polityczny ma znaczenie tylko tam, gdzie zmienia działania państwa."),
+            ("sprawy-zagraniczne", "Sprawy zagraniczne", "Dyplomacja i bezpieczeństwo mają dziś bezpośredni wpływ na Polskę."),
+            ("technologia", "Technologia", "Technologia pozostaje istotna dla państwa i bezpieczeństwa publicznego."),
+        ]
+        body = [
+            "# Mobile News Brief: aktualne-wydarzenia-mobile",
+            "",
+            f"Date: {run_date} {run_time} CEST",
+            "Status: Material update",
+            "",
+            "## Summary",
+            "Najważniejszy sygnał dnia dotyczy bezpieczeństwa i decyzji publicznych.",
+            "",
+            "## Gazeta",
+            "",
+        ]
+        for slug, section, intro in sections:
+            body.extend(
+                [
+                    f"### {section}",
+                    f"Wprowadzenie: {intro}",
+                    "",
+                    f"#### {section} temat 1",
+                    f"Lead: {section} temat pierwszy porządkuje najważniejszy sygnał dnia.",
+                    "Fakty:",
+                    f"- Potwierdzony fakt 1 dla sekcji {section}. Źródło: [KPRM](https://example.com/{slug}-1)",
+                    "Analiza: To pokazuje praktyczny wpływ informacji na odbiorcę.",
+                    "Dlaczego ważne: Użytkownik dostaje jasny sens wydarzenia.",
+                    "",
+                    f"#### {section} temat 2",
+                    f"Lead: {section} temat drugi uzupełnia obraz sekcji bez powielania leadu pierwszego artykułu.",
+                    "Fakty:",
+                    f"- Potwierdzony fakt 2 dla sekcji {section}. Źródło: [BBC](https://example.com/{slug}-2)",
+                    "Analiza: Drugi artykuł utrzymuje pełny obraz sekcji bez sztucznego pompowania newsa.",
+                    "Dlaczego ważne: Sekcja zachowuje kompletność wymaganą przez aplikację.",
+                    "",
+                ]
+            )
+        return "\n".join(body) + "\n"
 
     def valid_jobs_data_payload(self) -> dict:
         return {
@@ -1095,7 +1909,12 @@ class TemporaryPavbotRepo:
 
     def create_minimal_workspace(self, repo: Path) -> None:
         (repo / "scripts").mkdir(parents=True)
+        shutil.copy2(self.source_repo / "scripts" / "pavbot_publication_contract.py", repo / "scripts")
         shutil.copy2(self.source_repo / "scripts" / "generate_pavbot_manifest.py", repo / "scripts")
+        shutil.copy2(self.source_repo / "scripts" / "pavbot_pdf_theme.py", repo / "scripts")
+        shutil.copy2(self.source_repo / "scripts" / "render_research_data.py", repo / "scripts")
+        shutil.copy2(self.source_repo / "scripts" / "render_research_pdf.py", repo / "scripts")
+        shutil.copy2(self.source_repo / "scripts" / "render_mobile_news_data.py", repo / "scripts")
         shutil.copy2(self.source_repo / "scripts" / "validate_jobs_data.py", repo / "scripts")
         shutil.copy2(self.source_repo / "scripts" / "validate_research_data.py", repo / "scripts")
         shutil.copy2(self.source_repo / "scripts" / "validate_mobile_news_data.py", repo / "scripts")
@@ -1117,12 +1936,29 @@ class TemporaryPavbotRepo:
             ),
             encoding="utf-8",
         )
-        for slug in ("tech-news", "llm-ai-jobs-wroclaw", "aktualne-wydarzenia-mobile", "puls-dnia-news"):
+        for slug in (
+            "tech-news",
+            "polska-swiat",
+            "llm-ai-jobs-wroclaw",
+            "aktualne-wydarzenia-mobile",
+            "puls-dnia-news",
+            "reddit-radar",
+        ):
             topic = repo / "research" / slug
             topic.mkdir(parents=True)
             (topic / "topic.md").write_text(f"# Topic Contract: {slug}\n", encoding="utf-8")
             (topic / "index.md").write_text("# Index\n", encoding="utf-8")
             (topic / "backlog.md").write_text("# Backlog\n", encoding="utf-8")
+
+        jobs_tools = repo / "research" / "llm-ai-jobs-wroclaw" / "tools"
+        jobs_tools.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(self.source_repo / "research" / "llm-ai-jobs-wroclaw" / "tools" / "render_jobs_data.py", jobs_tools)
+        shutil.copy2(self.source_repo / "research" / "llm-ai-jobs-wroclaw" / "tools" / "render_report_pdf.py", jobs_tools)
+
+        mobile_tools = repo / "research" / "aktualne-wydarzenia-mobile" / "tools"
+        mobile_tools.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(self.source_repo / "research" / "aktualne-wydarzenia-mobile" / "tools" / "render_mobile_brief_pdf.py", mobile_tools)
+        shutil.copy2(self.source_repo / "research" / "aktualne-wydarzenia-mobile" / "tools" / "render_mobile_newspaper_pdf.py", mobile_tools)
 
     def git(self, *args: str) -> None:
         assert self.repo is not None

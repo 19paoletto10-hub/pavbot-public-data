@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-06-27
+Last updated: 2026-06-29
 
 ## Current Understanding
 
@@ -52,6 +52,39 @@ umów, w tym kilkanaście z udziałem polskich podmiotów. Jednocześnie
 polsko-ukraiński spór orderowy stał się tematem zagranicznych omówień i
 sondażu Onetu, a główny blok bezpieczeństwa przesunął się ku wschodniej flance,
 Krymowi, możliwym prowokacjom Rosji i przygotowaniom do szczytu NATO w Ankarze.
+Po runie 28 czerwca główny ciężar przesuwa się na przygotowania do szczytu NATO
+w Ankarze: nieformalny szczyt prezydentów regionu w Juracie, dzisiejsze
+obchody Czerwca 1956 w Poznaniu z udziałem prezydentów regionu, konferencję MON
+i zapowiedzianą umowę Orka A26 ze Szwecją. W świecie równolegle rośnie presja
+ukraińskich dronów na Rosję i Krym, wraca napięcie USA-Iran w Ormuz, a
+Wenezuela staje się dużym tematem humanitarnym po wzroście bilansu trzęsień
+ziemi do 1430 ofiar. Odświeżenie o 08:30 dodało nowszy blok AP: uderzenie
+Ukrainy w zakład Titan-Barrikady w Wołgogradzie i infrastrukturę paliwową oraz
+irańskie ataki na Bahrajn i Kuwejt po uderzeniach USA. Wieczorny run
+2026-06-28-1935 potwierdził materialną aktualizację: MON po konferencji podało
+priorytety Ankary, w tym rurociągi paliwowe, przemysł obronny, odstraszanie,
+AI i daleki zasięg; PAP dopisała kolejny etap rozmów o stałej bazie USA w
+Polsce z Poznaniem i Wrocławiem jako lokalizacjami wysoko ocenianymi przez
+stronę amerykańską; RCB/RMF24/AP/Guardian przesunęły wątek pogody w stronę
+wstępnego rekordu 40,5°C w Słubicach i europejskiego bilansu nadmiarowych
+zgonów; AP rozszerzyła wątek Ukrainy na rafinerie i paliwa Rosji, a AP dodała
+ważny temat polityczny Serbii po zapowiedzi rezygnacji Aleksandara Vučicia.
+Po runie 29 czerwca dzienny punkt ciężkości to podpisywany w Gdyni pakiet
+Polska-Szwecja/Orka A26 oraz ciąg dalszy rozmów o stałej bazie USA w Polsce.
+Drugim krajowym blokiem jest prezydencka inicjatywa ustanowienia 28 czerwca
+dniem działaczy opozycji antykomunistycznej. W świecie utrzymują się: rosyjskie
+braki paliwa po ukraińskich uderzeniach w rafinerie, ostrożny sygnał pauzy
+USA-Iran i rozmów w Katarze o Ormuz, polityczny zwrot w Serbii oraz kryzys
+humanitarny w Wenezueli.
+Wieczorny run 2026-06-29-1935 potwierdził materialną aktualizację: Orka/A26
+została podpisana, a obok kontraktu Polska i Szwecja ogłosiły Pakt dla Morza
+Bałtyckiego z filarami politycznym, wojskowym i przemysłowym. Nowym blokiem
+bezpieczeństwa wewnętrznego jest komunikat ABW o zatrzymaniu i wydalaniu 11
+cudzoziemców w sprawie działań inspirowanych i finansowanych przez Rosję wśród
+ukraińskich uchodźców. RCB przesunęło akcent z samego upału na alert burzowy
+29/30 czerwca, utonięcia, suszę hydrologiczną i pożary lasów. W świecie Ormuz
+pozostaje kruchą pauzą, nie porozumieniem: AP wskazuje wstrzymanie uderzeń
+USA-Iran, ale także spór o to, czy rozmowy w Dosze są uzgodnione.
 
 ## Stable Facts
 
@@ -101,9 +134,15 @@ Krymowi, możliwym prowokacjom Rosji i przygotowaniom do szczytu NATO w Ankarze.
 - Wątek URC po 26 czerwca omawiać dwutorowo: oficjalny bilans gospodarczo-
   instytucjonalny jest mocny, ale przekaz medialny obciążają nieobecność
   prezydentów i spór orderowy.
+- Po wejściu strukturalnego `researchData` pilnować, aby każdy poranny raport
+  miał sekcję `Artykuły do aplikacji`; brak tej sekcji blokuje JSON i publikację.
 
 ## Recent Reports
 
+- [2026-06-29-1935](runs/2026-06-29-1935.md)
+- [2026-06-29](runs/2026-06-29.md)
+- [2026-06-28-1935](runs/2026-06-28-1935.md)
+- [2026-06-28](runs/2026-06-28.md)
 - [2026-06-27](runs/2026-06-27.md)
 - [2026-06-26](runs/2026-06-26.md)
 - [2026-06-25](runs/2026-06-25.md)
