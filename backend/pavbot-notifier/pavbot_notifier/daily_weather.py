@@ -13,6 +13,7 @@ from .core import delivery_status, load_json, save_json, send_apns_alert_safely
 
 WARSAW_LATITUDE = 51.1079
 WARSAW_LONGITUDE = 17.0385
+WEATHER_REPORT_SCHEMA_VERSION = 2
 
 
 class DailyWeatherRefreshLocked(Exception):
@@ -372,6 +373,11 @@ async def fetch_daily_weather_report(
         ],
         "hourly": [
             "temperature_2m",
+            "precipitation_probability",
+            "precipitation",
+            "rain",
+            "showers",
+            "snowfall",
         ],
     }
     async with httpx.AsyncClient(timeout=15) as client:
@@ -405,8 +411,15 @@ def build_weather_report(
     wind_speed = round_float(current.get("wind_speed_10m"))
     humidity = int(current.get("relative_humidity_2m") or 0)
     hourly_temperature = hourly_temperature_points(payload.get("hourly") or {}, report_date)
+    hourly_precipitation = hourly_precipitation_points(payload.get("hourly") or {}, report_date)
     temperature_timeline = temperature_timeline_points(
         hourly_temperature=hourly_temperature,
+        report_date=report_date,
+        generated_at=generated_at,
+        config=config,
+    )
+    precipitation_timeline = precipitation_timeline_points(
+        hourly_precipitation=hourly_precipitation,
         report_date=report_date,
         generated_at=generated_at,
         config=config,
@@ -423,6 +436,7 @@ def build_weather_report(
     )
     recommendation = weather_recommendation(
         precipitation_probability=precipitation_probability,
+        precipitation_timeline=precipitation_timeline,
         wind_speed=wind_speed,
         apparent_temperature=apparent_temperature or current_temperature,
         generated_at=generated_at,
@@ -430,6 +444,7 @@ def build_weather_report(
     )
 
     return {
+        "schemaVersion": WEATHER_REPORT_SCHEMA_VERSION,
         "id": f"{slugify(config.city)}-{report_date}",
         "city": config.city,
         "date": report_date,
@@ -468,6 +483,8 @@ def build_weather_report(
         "sunset": daily_first(daily, "sunset"),
         "hourlyTemperature": hourly_temperature,
         "temperatureTimeline": temperature_timeline,
+        "hourlyPrecipitation": hourly_precipitation,
+        "precipitationTimeline": precipitation_timeline,
         "source": "Open-Meteo Forecast API",
     }
 
@@ -608,7 +625,7 @@ def weather_report_is_current_hour(
     config: DailyWeatherConfig,
     fallback_refresh_at: datetime | None = None,
 ) -> bool:
-    if "temperatureTimeline" not in report:
+    if not weather_report_has_current_schema(report):
         return False
     if "start dnia" in str(report.get("headline") or "").lower():
         return False
@@ -616,6 +633,16 @@ def weather_report_is_current_hour(
     if generated_at is None:
         return False
     return hourly_bucket(generated_at, config) == hourly_bucket(now, config)
+
+
+def weather_report_has_current_schema(report: dict[str, Any]) -> bool:
+    schema_version = int_or_none(report.get("schemaVersion"))
+    if schema_version is not None and schema_version >= WEATHER_REPORT_SCHEMA_VERSION:
+        return True
+    return all(
+        key in report
+        for key in ("temperatureTimeline", "hourlyPrecipitation", "precipitationTimeline")
+    )
 
 
 def hourly_bucket(value: datetime, config: DailyWeatherConfig) -> datetime:
@@ -738,6 +765,73 @@ def hourly_temperature_points(hourly: dict[str, Any], report_date: str) -> list[
     return points
 
 
+def hourly_precipitation_points(hourly: dict[str, Any], report_date: str) -> list[dict[str, Any]]:
+    times = hourly.get("time")
+    probabilities = hourly.get("precipitation_probability")
+    amounts = hourly.get("precipitation")
+    rain_values = hourly.get("rain")
+    shower_values = hourly.get("showers")
+    snowfall_values = hourly.get("snowfall")
+    if not isinstance(times, list):
+        return []
+
+    points: list[dict[str, Any]] = []
+    for index, time_value in enumerate(times):
+        if not isinstance(time_value, str) or not time_value.startswith(report_date):
+            continue
+
+        probability = int_or_none(list_value(probabilities, index))
+        amount = round_float(list_value(amounts, index)) or 0
+        rain = round_float(list_value(rain_values, index)) or 0
+        showers = round_float(list_value(shower_values, index)) or 0
+        snowfall = round_float(list_value(snowfall_values, index)) or 0
+        if probability is None and amount == 0 and rain == 0 and showers == 0 and snowfall == 0:
+            continue
+
+        points.append(
+            {
+                "time": time_value,
+                "probability": probability or 0,
+                "amount": amount,
+                "rain": rain,
+                "showers": showers,
+                "snowfall": snowfall,
+                "kind": precipitation_kind(
+                    amount=amount,
+                    rain=rain,
+                    showers=showers,
+                    snowfall=snowfall,
+                ),
+                "unit": "mm",
+            }
+        )
+    return points
+
+
+def list_value(values: Any, index: int) -> Any:
+    if not isinstance(values, list) or index >= len(values):
+        return None
+    return values[index]
+
+
+def int_or_none(value: Any) -> int | None:
+    try:
+        return int(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def precipitation_kind(*, amount: float, rain: float, showers: float, snowfall: float) -> str:
+    liquid = rain + showers
+    if snowfall > 0 and liquid > 0:
+        return "mixed"
+    if snowfall > 0:
+        return "snow"
+    if liquid > 0 or amount > 0:
+        return "rain"
+    return "possible"
+
+
 def temperature_timeline_points(
     *,
     hourly_temperature: list[dict[str, Any]],
@@ -760,6 +854,28 @@ def temperature_timeline_points(
     return timeline or hourly_temperature[-1:]
 
 
+def precipitation_timeline_points(
+    *,
+    hourly_precipitation: list[dict[str, Any]],
+    report_date: str,
+    generated_at: datetime,
+    config: DailyWeatherConfig,
+) -> list[dict[str, Any]]:
+    if not hourly_precipitation:
+        return []
+    local_generated_at = generated_at.astimezone(config.zoneinfo)
+    if local_generated_at.date().isoformat() != report_date:
+        return hourly_precipitation
+
+    start_key = local_generated_at.replace(minute=0, second=0, microsecond=0).strftime("%Y-%m-%dT%H:%M")
+    timeline = [
+        point
+        for point in hourly_precipitation
+        if isinstance(point.get("time"), str) and point["time"] >= start_key
+    ]
+    return timeline or hourly_precipitation[-1:]
+
+
 def compact_report_status(report: Any) -> dict[str, Any] | None:
     if not isinstance(report, dict):
         return None
@@ -768,7 +884,14 @@ def compact_report_status(report: Any) -> dict[str, Any] | None:
         "date": report.get("date"),
         "headline": report.get("headline"),
         "generatedAt": report.get("generatedAt"),
+        "weatherSchemaVersion": int_or_none(report.get("schemaVersion")),
+        "hourlyPrecipitationCount": list_count(report.get("hourlyPrecipitation")),
+        "precipitationTimelineCount": list_count(report.get("precipitationTimeline")),
     }
+
+
+def list_count(value: Any) -> int:
+    return len(value) if isinstance(value, list) else 0
 
 
 def daily_weather_push_body(report: dict[str, Any]) -> str:
@@ -801,13 +924,17 @@ def weather_headline(
 def weather_recommendation(
     *,
     precipitation_probability: int,
+    precipitation_timeline: list[dict[str, Any]] | None = None,
     wind_speed: float | None,
     apparent_temperature: float | None,
     generated_at: datetime,
     config: DailyWeatherConfig,
 ) -> str:
     notes: list[str] = []
-    if precipitation_probability >= 60:
+    precipitation_note = hourly_precipitation_recommendation(precipitation_timeline)
+    if precipitation_note:
+        notes.append(precipitation_note)
+    elif precipitation_probability >= 60:
         notes.append("weź parasol lub lekką kurtkę przeciwdeszczową")
     elif precipitation_probability >= 30:
         notes.append("miej pod ręką coś na przelotny deszcz")
@@ -822,6 +949,146 @@ def weather_recommendation(
         notes.append("pamiętaj o wodzie i lżejszym ubraniu")
 
     return f"{weather_recommendation_prefix(generated_at, config)}: " + "; ".join(notes) + "."
+
+
+def hourly_precipitation_recommendation(points: list[dict[str, Any]] | None) -> str | None:
+    if not points:
+        return None
+
+    measurable_points = [point for point in points if precipitation_point_has_measurable_amount(point)]
+    if measurable_points:
+        time_text = precipitation_time_windows_text(measurable_points)
+        if time_text:
+            kind = dominant_precipitation_kind(measurable_points)
+            return f"opadów {precipitation_kind_genitive(kind)} spodziewaj się {time_text}"
+
+    significant_points = [point for point in points if precipitation_point_probability(point) >= 20]
+    if significant_points:
+        time_text = precipitation_time_windows_text(significant_points)
+        if time_text:
+            return f"ryzyko opadów widać {time_text}"
+
+    return "do końca dnia nie widać istotnych opadów"
+
+
+def precipitation_point_has_measurable_amount(point: dict[str, Any]) -> bool:
+    return any(
+        (round_float(point.get(key)) or 0) > 0
+        for key in ("amount", "rain", "showers", "snowfall")
+    )
+
+
+def precipitation_point_probability(point: dict[str, Any]) -> int:
+    return int_or_none(point.get("probability")) or 0
+
+
+def dominant_precipitation_kind(points: list[dict[str, Any]]) -> str:
+    kinds = [str(point.get("kind") or "") for point in points]
+    if "mixed" in kinds:
+        return "mixed"
+    if "snow" in kinds:
+        return "snow"
+    if "rain" in kinds:
+        return "rain"
+    return "possible"
+
+
+def precipitation_kind_genitive(kind: str) -> str:
+    if kind == "snow":
+        return "śniegu"
+    if kind == "mixed":
+        return "deszczu ze śniegiem"
+    if kind == "rain":
+        return "deszczu"
+    return "opadów"
+
+
+def precipitation_time_windows_text(points: list[dict[str, Any]]) -> str:
+    windows = grouped_precipitation_windows(points)
+    labels = [
+        precipitation_window_label(start, end)
+        for start, end in windows
+        if precipitation_hour_label(start)
+    ]
+    if not labels:
+        return ""
+    return f"około {join_polish(labels)}"
+
+
+def grouped_precipitation_windows(
+    points: list[dict[str, Any]],
+) -> list[tuple[dict[str, Any], dict[str, Any]]]:
+    sorted_points = sorted(points, key=precipitation_point_sort_key)
+    if not sorted_points:
+        return []
+
+    current_start = sorted_points[0]
+    current_end = sorted_points[0]
+    windows: list[tuple[dict[str, Any], dict[str, Any]]] = []
+    for point in sorted_points[1:]:
+        if precipitation_points_are_adjacent(current_end, point):
+            current_end = point
+        else:
+            windows.append((current_start, current_end))
+            current_start = point
+            current_end = point
+    windows.append((current_start, current_end))
+    return windows
+
+
+def precipitation_point_sort_key(point: dict[str, Any]) -> tuple[datetime, str]:
+    time_value = point.get("time")
+    if isinstance(time_value, str):
+        parsed = parse_weather_hour(time_value)
+        if parsed is not None:
+            return (parsed, time_value)
+        return (datetime.max, time_value)
+    return (datetime.max, "")
+
+
+def precipitation_points_are_adjacent(first: dict[str, Any], second: dict[str, Any]) -> bool:
+    first_date = parse_weather_hour(first.get("time"))
+    second_date = parse_weather_hour(second.get("time"))
+    if first_date is None or second_date is None:
+        return False
+    return 0 < (second_date - first_date).total_seconds() <= 3_900
+
+
+def parse_weather_hour(value: Any) -> datetime | None:
+    if not isinstance(value, str) or not value.strip():
+        return None
+    try:
+        parsed = datetime.fromisoformat(value)
+    except ValueError:
+        return None
+    if parsed.tzinfo is not None:
+        return parsed.astimezone(timezone.utc).replace(tzinfo=None)
+    return parsed
+
+
+def precipitation_window_label(start: dict[str, Any], end: dict[str, Any]) -> str:
+    start_label = precipitation_hour_label(start)
+    end_label = precipitation_hour_label(end)
+    if not start_label or start.get("time") == end.get("time") or start_label == end_label:
+        return start_label
+    return f"{start_label}-{end_label}"
+
+
+def precipitation_hour_label(point: dict[str, Any]) -> str:
+    time_value = point.get("time")
+    if not isinstance(time_value, str) or not time_value:
+        return ""
+    return time_value.split("T")[-1][:5]
+
+
+def join_polish(items: list[str]) -> str:
+    if not items:
+        return ""
+    if len(items) == 1:
+        return items[0]
+    if len(items) == 2:
+        return f"{items[0]} i {items[1]}"
+    return f"{', '.join(items[:-1])} i {items[-1]}"
 
 
 def weather_moment_label(hour: int) -> str:

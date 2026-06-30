@@ -188,7 +188,9 @@ curl https://notify.example.com/v1/weather/daily/latest
 ```
 
 The weather report uses Open-Meteo for forecast data and a local Polish
-nameday calendar bundled into the notifier.
+nameday calendar bundled into the notifier. When Open-Meteo returns hourly
+precipitation data, the app-compatible `recommendation` text must name the
+expected rain or precipitation hours, for example `około 07:00-09:00`.
 
 ## Temporary Quick Tunnel Reset
 

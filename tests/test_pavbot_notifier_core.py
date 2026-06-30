@@ -8,6 +8,7 @@ import ast
 import json
 import sys
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -598,6 +599,11 @@ def test_daily_weather_report_parses_open_meteo_payload():
                 "2026-06-26T00:00",
             ],
             "temperature_2m": [19.8, 21.4, 22.1, 17.0],
+            "precipitation_probability": [5, 35, 80, 20],
+            "precipitation": [0, 0.2, 1.4, 0.1],
+            "rain": [0, 0.2, 1.0, 0],
+            "showers": [0, 0, 0.4, 0],
+            "snowfall": [0, 0, 0, 0.1],
         },
     }
 
@@ -607,6 +613,7 @@ def test_daily_weather_report_parses_open_meteo_payload():
         generated_at=daily_weather.datetime.fromisoformat("2026-06-25T05:31:00+00:00"),
     )
 
+    assert report["schemaVersion"] == 2
     assert report["id"] == "wroclaw-2026-06-25"
     assert report["city"] == "Wrocław"
     assert report["weekday"] == "czwartek"
@@ -625,6 +632,325 @@ def test_daily_weather_report_parses_open_meteo_payload():
     assert report["temperatureTimeline"] == [
         {"time": "2026-06-25T07:00", "temperature": 22.1, "unit": "°C"},
     ]
+    assert report["hourlyPrecipitation"] == [
+        {
+            "time": "2026-06-25T05:00",
+            "probability": 5,
+            "amount": 0,
+            "rain": 0,
+            "showers": 0,
+            "snowfall": 0,
+            "kind": "possible",
+            "unit": "mm",
+        },
+        {
+            "time": "2026-06-25T06:00",
+            "probability": 35,
+            "amount": 0.2,
+            "rain": 0.2,
+            "showers": 0,
+            "snowfall": 0,
+            "kind": "rain",
+            "unit": "mm",
+        },
+        {
+            "time": "2026-06-25T07:00",
+            "probability": 80,
+            "amount": 1.4,
+            "rain": 1.0,
+            "showers": 0.4,
+            "snowfall": 0,
+            "kind": "rain",
+            "unit": "mm",
+        },
+    ]
+    assert report["precipitationTimeline"] == [
+        {
+            "time": "2026-06-25T07:00",
+            "probability": 80,
+            "amount": 1.4,
+            "rain": 1.0,
+            "showers": 0.4,
+            "snowfall": 0,
+            "kind": "rain",
+            "unit": "mm",
+        },
+    ]
+
+
+def test_daily_weather_open_meteo_request_includes_hourly_precipitation(monkeypatch):
+    daily_weather = load_daily_weather()
+    config = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.time(hour=7, minute=30),
+        timezone_name="Europe/Warsaw",
+        city="Wrocław",
+        latitude=51.1079,
+        longitude=17.0385,
+    )
+    captured: dict[str, object] = {}
+
+    class FakeResponse:
+        def raise_for_status(self):
+            pass
+
+        def json(self):
+            return {
+                "current": {
+                    "temperature_2m": 21.4,
+                    "apparent_temperature": 22.1,
+                    "relative_humidity_2m": 61,
+                    "weather_code": 2,
+                    "wind_speed_10m": 11.2,
+                },
+                "daily": {
+                    "time": ["2026-06-25"],
+                    "weather_code": [2],
+                    "temperature_2m_max": [26.1],
+                    "temperature_2m_min": [15.8],
+                    "precipitation_probability_max": [20],
+                    "precipitation_sum": [0.4],
+                },
+                "hourly": {
+                    "time": ["2026-06-25T07:00"],
+                    "temperature_2m": [22.1],
+                    "precipitation_probability": [80],
+                    "precipitation": [1.4],
+                    "rain": [1.0],
+                    "showers": [0.4],
+                    "snowfall": [0],
+                },
+            }
+
+    class FakeAsyncClient:
+        def __init__(self, *args, **kwargs):
+            pass
+
+        async def __aenter__(self):
+            return self
+
+        async def __aexit__(self, exc_type, exc, traceback):
+            return False
+
+        async def get(self, url, params):
+            captured["url"] = url
+            captured["params"] = params
+            return FakeResponse()
+
+    monkeypatch.setitem(sys.modules, "httpx", SimpleNamespace(AsyncClient=FakeAsyncClient))
+
+    report = asyncio.run(
+        daily_weather.fetch_daily_weather_report(
+            config=config,
+            generated_at=daily_weather.datetime.fromisoformat("2026-06-25T05:31:00+00:00"),
+        )
+    )
+
+    assert captured["url"] == "https://api.open-meteo.com/v1/forecast"
+    assert captured["params"]["hourly"] == [
+        "temperature_2m",
+        "precipitation_probability",
+        "precipitation",
+        "rain",
+        "showers",
+        "snowfall",
+    ]
+    assert report["precipitationTimeline"][0]["kind"] == "rain"
+
+
+def test_daily_weather_recommendation_names_continuous_rain_hours():
+    daily_weather = load_daily_weather()
+    config = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.time(hour=7, minute=30),
+        timezone_name="Europe/Warsaw",
+        city="Wrocław",
+        latitude=51.1079,
+        longitude=17.0385,
+    )
+    payload = {
+        "current": {
+            "temperature_2m": 18.0,
+            "apparent_temperature": 17.5,
+            "relative_humidity_2m": 78,
+            "weather_code": 61,
+            "wind_speed_10m": 12.0,
+        },
+        "daily": {
+            "time": ["2026-06-25"],
+            "weather_code": [61],
+            "temperature_2m_max": [21.0],
+            "temperature_2m_min": [14.0],
+            "precipitation_probability_max": [90],
+            "precipitation_sum": [3.6],
+        },
+        "hourly": {
+            "time": [
+                "2026-06-25T07:00",
+                "2026-06-25T08:00",
+                "2026-06-25T09:00",
+            ],
+            "temperature_2m": [18.0, 18.4, 19.0],
+            "precipitation_probability": [75, 90, 70],
+            "precipitation": [0.5, 1.2, 0.8],
+            "rain": [0.5, 1.2, 0.8],
+            "showers": [0, 0, 0],
+            "snowfall": [0, 0, 0],
+        },
+    }
+
+    report = daily_weather.build_weather_report(
+        config=config,
+        payload=payload,
+        generated_at=daily_weather.datetime.fromisoformat("2026-06-25T05:15:00+00:00"),
+    )
+
+    assert "opadów deszczu spodziewaj się około 07:00-09:00" in report["recommendation"]
+
+
+def test_daily_weather_recommendation_names_separate_rain_windows():
+    daily_weather = load_daily_weather()
+    config = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.time(hour=7, minute=30),
+        timezone_name="Europe/Warsaw",
+        city="Wrocław",
+        latitude=51.1079,
+        longitude=17.0385,
+    )
+    payload = {
+        "current": {
+            "temperature_2m": 19.0,
+            "apparent_temperature": 19.0,
+            "relative_humidity_2m": 80,
+            "weather_code": 80,
+            "wind_speed_10m": 10.0,
+        },
+        "daily": {
+            "time": ["2026-06-25"],
+            "weather_code": [80],
+            "temperature_2m_max": [23.0],
+            "temperature_2m_min": [13.0],
+            "precipitation_probability_max": [80],
+            "precipitation_sum": [2.2],
+        },
+        "hourly": {
+            "time": [
+                "2026-06-25T07:00",
+                "2026-06-25T08:00",
+                "2026-06-25T16:00",
+            ],
+            "temperature_2m": [19.0, 19.5, 21.0],
+            "precipitation_probability": [70, 80, 65],
+            "precipitation": [0.3, 0.7, 1.2],
+            "rain": [0.3, 0.7, 1.2],
+            "showers": [0, 0, 0],
+            "snowfall": [0, 0, 0],
+        },
+    }
+
+    report = daily_weather.build_weather_report(
+        config=config,
+        payload=payload,
+        generated_at=daily_weather.datetime.fromisoformat("2026-06-25T05:00:00+00:00"),
+    )
+
+    assert "około 07:00-08:00 i 16:00" in report["recommendation"]
+
+
+def test_daily_weather_recommendation_names_possible_precipitation_hours():
+    daily_weather = load_daily_weather()
+    config = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.time(hour=7, minute=30),
+        timezone_name="Europe/Warsaw",
+        city="Wrocław",
+        latitude=51.1079,
+        longitude=17.0385,
+    )
+    payload = {
+        "current": {
+            "temperature_2m": 20.0,
+            "apparent_temperature": 20.0,
+            "relative_humidity_2m": 65,
+            "weather_code": 3,
+            "wind_speed_10m": 8.0,
+        },
+        "daily": {
+            "time": ["2026-06-25"],
+            "weather_code": [3],
+            "temperature_2m_max": [24.0],
+            "temperature_2m_min": [15.0],
+            "precipitation_probability_max": [45],
+            "precipitation_sum": [0],
+        },
+        "hourly": {
+            "time": ["2026-06-25T15:00"],
+            "temperature_2m": [23.0],
+            "precipitation_probability": [45],
+            "precipitation": [0],
+            "rain": [0],
+            "showers": [0],
+            "snowfall": [0],
+        },
+    }
+
+    report = daily_weather.build_weather_report(
+        config=config,
+        payload=payload,
+        generated_at=daily_weather.datetime.fromisoformat("2026-06-25T05:00:00+00:00"),
+    )
+
+    assert "ryzyko opadów widać około 15:00" in report["recommendation"]
+    assert "opadów deszczu" not in report["recommendation"]
+
+
+def test_daily_weather_recommendation_omits_false_hours_without_significant_precipitation():
+    daily_weather = load_daily_weather()
+    config = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.time(hour=7, minute=30),
+        timezone_name="Europe/Warsaw",
+        city="Wrocław",
+        latitude=51.1079,
+        longitude=17.0385,
+    )
+    payload = {
+        "current": {
+            "temperature_2m": 22.0,
+            "apparent_temperature": 22.0,
+            "relative_humidity_2m": 55,
+            "weather_code": 1,
+            "wind_speed_10m": 7.0,
+        },
+        "daily": {
+            "time": ["2026-06-25"],
+            "weather_code": [1],
+            "temperature_2m_max": [26.0],
+            "temperature_2m_min": [16.0],
+            "precipitation_probability_max": [15],
+            "precipitation_sum": [0],
+        },
+        "hourly": {
+            "time": ["2026-06-25T12:00", "2026-06-25T18:00"],
+            "temperature_2m": [24.0, 23.0],
+            "precipitation_probability": [10, 15],
+            "precipitation": [0, 0],
+            "rain": [0, 0],
+            "showers": [0, 0],
+            "snowfall": [0, 0],
+        },
+    }
+
+    report = daily_weather.build_weather_report(
+        config=config,
+        payload=payload,
+        generated_at=daily_weather.datetime.fromisoformat("2026-06-25T05:00:00+00:00"),
+    )
+
+    assert "do końca dnia nie widać istotnych opadów" in report["recommendation"]
+    assert "12:00" not in report["recommendation"]
+    assert "18:00" not in report["recommendation"]
 
 
 def test_daily_weather_headline_is_contextual_for_evening():
@@ -1255,12 +1581,37 @@ def test_hourly_weather_refresh_skips_when_current_hour_is_cached(tmp_path, monk
             {
                 "lastHourlyRefreshAt": "2026-06-25T11:05:00+00:00",
                 "lastReport": {
+                    "schemaVersion": 2,
                     "id": "wroclaw-2026-06-25",
                     "city": "Wrocław",
                     "date": "2026-06-25",
                     "generatedAt": "2026-06-25T11:05:00+00:00",
                     "temperatureTimeline": [
                         {"time": "2026-06-25T13:00", "temperature": 25.0, "unit": "°C"}
+                    ],
+                    "hourlyPrecipitation": [
+                        {
+                            "time": "2026-06-25T13:00",
+                            "probability": 10,
+                            "amount": 0,
+                            "rain": 0,
+                            "showers": 0,
+                            "snowfall": 0,
+                            "kind": "possible",
+                            "unit": "mm",
+                        }
+                    ],
+                    "precipitationTimeline": [
+                        {
+                            "time": "2026-06-25T13:00",
+                            "probability": 10,
+                            "amount": 0,
+                            "rain": 0,
+                            "showers": 0,
+                            "snowfall": 0,
+                            "kind": "possible",
+                            "unit": "mm",
+                        }
                     ],
                 },
             }
@@ -1286,6 +1637,87 @@ def test_hourly_weather_refresh_skips_when_current_hour_is_cached(tmp_path, monk
     assert calls["fetch"] == 0
     assert result["status"] == "skipped"
     assert result["skippedReason"] == "Weather report already refreshed for this local hour"
+
+
+def test_hourly_weather_refresh_rebuilds_current_cache_without_precipitation_schema(tmp_path, monkeypatch):
+    daily_weather = load_daily_weather()
+    config = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.time(hour=7, minute=30),
+        timezone_name="Europe/Warsaw",
+        city="Wrocław",
+        latitude=51.1079,
+        longitude=17.0385,
+    )
+    (tmp_path / "last-daily-weather.json").write_text(
+        json.dumps(
+            {
+                "lastHourlyRefreshAt": "2026-06-25T11:05:00+00:00",
+                "lastReport": {
+                    "id": "wroclaw-2026-06-25",
+                    "city": "Wrocław",
+                    "date": "2026-06-25",
+                    "generatedAt": "2026-06-25T11:05:00+00:00",
+                    "temperatureTimeline": [
+                        {"time": "2026-06-25T13:00", "temperature": 25.0, "unit": "°C"}
+                    ],
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+    calls = {"fetch": 0}
+
+    async def fake_fetch_daily_weather_report(*, config, generated_at):
+        calls["fetch"] += 1
+        return {
+            "schemaVersion": 2,
+            "id": "wroclaw-2026-06-25",
+            "city": config.city,
+            "date": "2026-06-25",
+            "generatedAt": generated_at.isoformat(),
+            "temperatureTimeline": [
+                {"time": "2026-06-25T13:00", "temperature": 25.0, "unit": "°C"}
+            ],
+            "hourlyPrecipitation": [
+                {
+                    "time": "2026-06-25T13:00",
+                    "probability": 70,
+                    "amount": 0.4,
+                    "rain": 0.4,
+                    "showers": 0,
+                    "snowfall": 0,
+                    "kind": "rain",
+                    "unit": "mm",
+                }
+            ],
+            "precipitationTimeline": [
+                {
+                    "time": "2026-06-25T13:00",
+                    "probability": 70,
+                    "amount": 0.4,
+                    "rain": 0.4,
+                    "showers": 0,
+                    "snowfall": 0,
+                    "kind": "rain",
+                    "unit": "mm",
+                }
+            ],
+        }
+
+    monkeypatch.setattr(daily_weather, "fetch_daily_weather_report", fake_fetch_daily_weather_report)
+
+    result = asyncio.run(
+        daily_weather.run_hourly_weather_refresh_once(
+            config=config,
+            storage_dir=tmp_path,
+            generated_at=daily_weather.datetime.fromisoformat("2026-06-25T11:40:00+00:00"),
+        )
+    )
+
+    assert calls["fetch"] == 1
+    assert result["status"] == "refreshed"
+    assert result["report"]["precipitationTimeline"][0]["amount"] == 0.4
 
 
 def test_hourly_weather_refresh_does_not_use_legacy_cache_for_different_location(tmp_path, monkeypatch):
@@ -1614,6 +2046,50 @@ def test_daily_weather_status_reports_hourly_refresh_fields(tmp_path):
     assert status["lastHourlyRefreshAt"] == "2026-06-25T11:05:00+00:00"
     assert status["nextHourlyRefreshAt"] == "2026-06-25T14:00:00+02:00"
     assert status["lastHourlyError"] == {"error": "temporary"}
+
+
+def test_daily_weather_status_reports_precipitation_schema_counts(tmp_path):
+    daily_weather = load_daily_weather()
+    config = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.time(hour=7, minute=30),
+        timezone_name="Europe/Warsaw",
+        city="Wrocław",
+        latitude=51.1079,
+        longitude=17.0385,
+    )
+    precipitation_point = {
+        "time": "2026-06-25T13:00",
+        "probability": 70,
+        "amount": 0.4,
+        "rain": 0.4,
+        "showers": 0,
+        "snowfall": 0,
+        "kind": "rain",
+        "unit": "mm",
+    }
+    (tmp_path / "last-daily-weather.json").write_text(
+        json.dumps(
+            {
+                "lastReport": {
+                    "schemaVersion": 2,
+                    "id": "wroclaw-2026-06-25",
+                    "date": "2026-06-25",
+                    "headline": "Wrocław: pogoda godzinowa",
+                    "generatedAt": "2026-06-25T11:05:00+00:00",
+                    "hourlyPrecipitation": [precipitation_point, {**precipitation_point, "time": "2026-06-25T14:00"}],
+                    "precipitationTimeline": [precipitation_point],
+                }
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    status = daily_weather.daily_weather_status(storage_dir=tmp_path, config=config)
+
+    assert status["lastReport"]["weatherSchemaVersion"] == 2
+    assert status["lastReport"]["hourlyPrecipitationCount"] == 2
+    assert status["lastReport"]["precipitationTimelineCount"] == 1
 
 
 def test_daily_weather_notifications_send_only_to_opted_in_devices():
