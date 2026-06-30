@@ -5,6 +5,7 @@
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
 | High | Build reliable source shortlist | Better recurring sources reduce noise and duplicates. | Keep validating Just Join IT, Pracuj.pl, No Fluff Jobs, Sii, Capgemini, Addepto, CDQ, Grid Dynamics, Holisticon, deepsense.ai, GFT, Trans.eu, Tooploox, Deviniti, Rite NRG, UNIVIO, airSlate, DataArt, EPAM, ACAISOFT, T-Mobile, Monterail, ITDS, IN4GE, Axabee, 4soft, ITEAMLY, People Trust, Cyclad, SOFTWARELY, SQUARE ONE, CodiLime, YOUR ITEAMS, cerebre, Netguru, Primotly, Remodevs, Callstack, Harvey Nash, Centra, BigTime, SmartRecruiters, Vazco, XTB, Holisticon Connect and Holisticon Insight over the next runs. | In progress |
+| Medium | Monitor 30 Jun Wrocław/remote board drift | The current run added several strong but still mostly board-first roles and also exposed one important dedup correction around `BigTime` vs `DataArt`. | Re-check next run whether `Sigmoidal`, `DataArt AI Developer`, `Pretius`, `Upvanta`, `EPAM GenAI Ops` and `Vazco Senior Full Stack & AI Developer` stay public, whether `XTB` keeps the stronger `Warsaw +4 / Remote` mirror, and whether `BigTime` remains only with the separate `Team Lead, Software Engineer` role. | Open |
 | Medium | Monitor 29 Jun Wrocław/remote board burst | Today's Just Join IT and No Fluff Jobs burst added several new hands-on AI / LLM / platform roles that may rotate quickly. | Re-check whether `Harvey Nash`, `Centra`, `airSlate`, `XTB`, `Holisticon Connect`, `Holisticon Insight`, `SmartRecruiters`, `Vazco` and `BigTime` stay public and whether canonical employer pages appear. | Open |
 | Medium | Monitor ACAISOFT taxonomy drift | `ACAISOFT` is now a recurring high-signal source, but the employer is changing role taxonomy across the careers hub and board mirrors, while official pages still render compensation units inconsistently and the cluster expanded again with `DevOps Engineer with AI`, `Site Reliability Engineer (AI/LLM & Infra)` and `Infra Software Engineer (AI project)`. | Re-check next run whether `Backend / AI Engineer`, `DevOps Engineer with AI`, `Site Reliability Engineer (AI/LLM & Infra)`, `Infra Software Engineer (AI project)`, `Python Engineer with C++ (AI project)` and `Python-Focused Fullstack (+React)` remain distinct, whether older board-first cards disappear or get renamed, and whether the official pages fix the broken salary units. | Open |
 | Medium | Monitor expanding IN4GE AI cluster | `IN4GE` now has a dense remote-Poland family spanning `AI Engineering Lead`, `Senior AI Engineer`, `Senior GCP AI Developer`, `Automation Developer`, `Open Source AI Engineer` and `Cloud Platform & Infrastructure Engineer (GenAI / CX AI)`, so the employer is becoming a recurring source quickly across both agentic delivery and infra. | Re-check next run whether those six roles remain distinct and public, whether deadlines/salary units drift, and whether an official employer hub appears. | Open |
@@ -33,6 +34,10 @@
 
 ## Review Notes
 
+- 2026-06-30: nocna runda dołożyła `Sigmoidal`, `DataArt AI Developer`,
+  `Pretius`, `Upvanta`, `EPAM GenAI Ops` i `Vazco Senior Full Stack & AI
+  Developer`; najważniejsza korekta to reatrybucja wcześniejszej karty
+  `BigTime Senior AI Developer with LLM Orchestration...` do rodziny `DataArt`.
 - 2026-06-18: Topic initialized from user request for twice-daily professional PDF research on LLM/AI jobs in Wroclaw and remote Poland.
 - 2026-06-18: First manual test run found useful initial sources: Just Join IT,
   No Fluff Jobs, Pracuj.pl, The Protocol, Addepto careers and Grid Dynamics
