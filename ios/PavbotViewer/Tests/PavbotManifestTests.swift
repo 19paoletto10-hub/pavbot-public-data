@@ -2368,6 +2368,82 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(report.timelineTemperaturePoints(startingAt: now).map(\.time), ["2026-06-25T06:00", "2026-06-25T07:00"])
     }
 
+    func testWeatherNarrativeRecommendationFallsBackToContinuousRainWindow() throws {
+        let report = try Self.weatherReportWithPrecipitationTimeline([
+            Self.precipitationPoint(hour: "07:00", probability: 70, amount: 0.4, rain: 0.4, kind: "rain"),
+            Self.precipitationPoint(hour: "08:00", probability: 90, amount: 1.1, rain: 1.1, kind: "rain"),
+            Self.precipitationPoint(hour: "09:00", probability: 75, amount: 0.6, rain: 0.6, kind: "rain")
+        ], recommendation: "Na dziś: miej parasol pod ręką.")
+
+        XCTAssertEqual(
+            report.weatherNarrativeRecommendation,
+            "Opadów deszczu spodziewaj się około 07:00-09:00, więc weź parasol lub lekką kurtkę przeciwdeszczową."
+        )
+    }
+
+    func testWeatherNarrativeRecommendationFallsBackToSplitRainWindows() throws {
+        let report = try Self.weatherReportWithPrecipitationTimeline([
+            Self.precipitationPoint(hour: "07:00", probability: 70, amount: 0.3, rain: 0.3, kind: "rain"),
+            Self.precipitationPoint(hour: "08:00", probability: 80, amount: 0.5, rain: 0.5, kind: "rain"),
+            Self.precipitationPoint(hour: "16:00", probability: 65, amount: 0.2, rain: 0.2, kind: "rain")
+        ], recommendation: "Na dziś: możliwy deszcz, sprawdź radar przed wyjściem.")
+
+        XCTAssertEqual(
+            report.weatherNarrativeRecommendation,
+            "Opadów deszczu spodziewaj się około 07:00-08:00 i 16:00, więc weź parasol lub lekką kurtkę przeciwdeszczową."
+        )
+    }
+
+    func testWeatherNarrativeRecommendationFallsBackToProbabilityOnlyRisk() throws {
+        let report = try Self.weatherReportWithPrecipitationTimeline([
+            Self.precipitationPoint(hour: "14:00", probability: 55, amount: 0, rain: 0, kind: "possible"),
+            Self.precipitationPoint(hour: "15:00", probability: 60, amount: 0, rain: 0, kind: "possible")
+        ], recommendation: "Na dziś: pogoda zmienna.")
+
+        XCTAssertEqual(
+            report.weatherNarrativeRecommendation,
+            "Ryzyko opadów widać około 14:00-15:00, więc miej pod ręką parasol, jeśli wychodzisz na dłużej."
+        )
+    }
+
+    func testWeatherNarrativeRecommendationAvoidsFalseRainWindowWhenNoSignificantPrecipitation() throws {
+        let report = try Self.weatherReportWithPrecipitationTimeline([
+            Self.precipitationPoint(hour: "07:00", probability: 5, amount: 0, rain: 0, kind: "possible"),
+            Self.precipitationPoint(hour: "16:00", probability: 10, amount: 0, rain: 0, kind: "possible")
+        ], recommendation: "Na dziś: bez większych utrudnień pogodowych.")
+
+        XCTAssertEqual(
+            report.weatherNarrativeRecommendation,
+            "Do końca dnia nie widać istotnych opadów dla Wrocław; parasol raczej nie będzie potrzebny."
+        )
+        XCTAssertFalse(report.weatherNarrativeRecommendation.contains("07:00"))
+        XCTAssertFalse(report.weatherNarrativeRecommendation.contains("16:00"))
+        XCTAssertFalse(report.weatherNarrativeRecommendation.contains("około"))
+    }
+
+    func testWeatherNarrativeRecommendationKeepsBackendRainHourAnalysis() throws {
+        let recommendation = "Opadów deszczu spodziewaj się około 07:00-09:00, więc weź parasol."
+        let report = try Self.weatherReportWithPrecipitationTimeline([
+            Self.precipitationPoint(hour: "07:00", probability: 70, amount: 0.4, rain: 0.4, kind: "rain"),
+            Self.precipitationPoint(hour: "08:00", probability: 90, amount: 1.1, rain: 1.1, kind: "rain"),
+            Self.precipitationPoint(hour: "09:00", probability: 75, amount: 0.6, rain: 0.6, kind: "rain")
+        ], recommendation: recommendation)
+
+        XCTAssertEqual(report.weatherNarrativeRecommendation, recommendation)
+    }
+
+    func testWeatherNarrativePanelUsesAppSideRainHourFallback() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/WeatherBriefView.swift")
+        let source = try String(contentsOf: sourceURL)
+
+        XCTAssertTrue(source.contains("Text(report.weatherNarrativeRecommendation)"))
+        XCTAssertFalse(source.contains("Text(report.recommendation)"))
+    }
+
     func testWeatherBriefClientBuildsLatestRequestWithLocation() throws {
         let client = WeatherBriefClient()
         let serverURL = try XCTUnwrap(URL(string: "https://notify.example.com"))
@@ -4673,6 +4749,41 @@ final class PavbotManifestTests: XCTestCase {
         json["headline"] = "\(city): częściowe zachmurzenie i 21°C"
         let data = try JSONSerialization.data(withJSONObject: json)
         return try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: data)
+    }
+
+    private static func weatherReportWithPrecipitationTimeline(
+        _ timeline: [[String: Any]],
+        recommendation: String? = nil
+    ) throws -> DailyWeatherReport {
+        var json = try XCTUnwrap(JSONSerialization.jsonObject(with: dailyWeatherFixtureData) as? [String: Any])
+        json["hourlyPrecipitation"] = timeline
+        json["precipitationTimeline"] = timeline
+        if let recommendation {
+            json["recommendation"] = recommendation
+        }
+        let data = try JSONSerialization.data(withJSONObject: json)
+        return try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: data)
+    }
+
+    private static func precipitationPoint(
+        hour: String,
+        probability: Int,
+        amount: Double,
+        rain: Double,
+        showers: Double = 0,
+        snowfall: Double = 0,
+        kind: String
+    ) -> [String: Any] {
+        [
+            "time": "2026-06-25T\(hour)",
+            "probability": probability,
+            "amount": amount,
+            "rain": rain,
+            "showers": showers,
+            "snowfall": snowfall,
+            "kind": kind,
+            "unit": "mm"
+        ]
     }
 
     private static let dailyWeatherFixtureData = """

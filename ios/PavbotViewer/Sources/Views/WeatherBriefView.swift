@@ -831,7 +831,7 @@ private struct WeatherNarrativePanel: View {
                 }
             }
 
-            Text(report.recommendation)
+            Text(report.weatherNarrativeRecommendation)
                 .font(.callout.weight(.semibold))
                 .lineSpacing(3)
                 .padding(14)
