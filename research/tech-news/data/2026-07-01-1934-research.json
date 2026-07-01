@@ -1,0 +1,472 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-01",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny research przynosi materialną aktualizację po porannym raporcie z 2026-07-01. Poranny zestaw koncentrował się na Anthropic, Open USD, Etched, Getty/Shutterstock, Lime i mDyplomach. Wieczorem najmocniejszy nowy wątek to przejście od samego \"modelu agentowego\" do ekonomii agentowego internetu: Cloudflare ogłosił Monetization Gateway, rozwija Pay Per Use dla AI search i chce rozliczać strony, API, dane oraz narzędzia MCP przez x402 i stablecoiny.",
+    "Drugą osią jest AI compute jako produkt sam w sobie. Meta według Bloomberga, Reutersa i TechCrunch rozwija usługę sprzedaży nadmiarowej mocy AI i hostowanych modeli, a Techmeme równolegle pokazał MGX z funduszem AI za 49 mld USD oraz OXMIQ z licencjonowaną architekturą GPU. To przesuwa wcześniejsze wątki o deficycie compute w stronę pytania, kto zamieni własne data centers, IP chipowe i kapitał sovereign wealth w platformę dla innych firm.",
+    "Trzecia oś to zderzenie agentów z realnymi zasadami platform. Google przenosi Gemini Spark na macOS i dodaje integracje, custom MCP oraz monitoring zdarzeń w czasie rzeczywistym. Product Hunt po południu wypełnił się agentowymi produktami, a Godot Foundation jednocześnie zaostrza zasady wobec AI-authored code. Po stronie konsumenckiej Sony zapowiedziało koniec nowych płyt PlayStation od stycznia 2028, co łączy się z pytaniem o cyfrową własność i trwałość bibliotek.",
+    "Polski kontekst nie dodał wieczorem nowego globalnego newsa AI, ale dodał dwie użyteczne warstwy lokalnego framingu: Business Insider Polska opisał koszty i limity Fable/Mythos dla użytkowników, a osobny raport o dezinformacji wskazał AI boty, deepfake i social media jako część problemu bezpieczeństwa informacyjnego."
+  ],
+  "summaryBullets": [
+    "Infrastruktura: Cloudflare buduje płatny internet dla agentów przez x402",
+    "Infrastruktura: Meta chce zamienić nadmiar AI compute w chmurę",
+    "Produkty: Gemini Spark na Macu przenosi agentów do lokalnych plików"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-01-1934-0-cloudflare-buduje-platny-internet-dla-agentow-przez-x402-7aff546084",
+      "section": "Infrastruktura",
+      "title": "Cloudflare buduje płatny internet dla agentów przez x402",
+      "standfirst": "Cloudflare ogłosił Monetization Gateway, który pozwala pobierać stablecoinowe płatności za strony, dane, API i wywołania MCP za zasobami Cloudflare.",
+      "whatHappened": "Cloudflare otworzył waitlistę dla bramki, która ma rozliczać agentowe żądania przez protokół x402.",
+      "whyItMatters": "To praktyczna próba zbudowania ekonomii agentowego internetu, w której o wartości decyduje wywołanie zasobu, a nie reklama albo miesięczny abonament.",
+      "deeperAnalysis": [
+        "Najciekawsze w komunikacie Cloudflare nie jest samo użycie stablecoinów, tylko miejsce w stosie infrastruktury. Jeśli płatność, weryfikacja i dostęp odbywają się na brzegu sieci, właściciel API, strony albo narzędzia MCP nie musi budować własnego systemu billingowego dla tysięcy małych transakcji. To pasuje do świata, w którym agent nie ogląda reklam i nie zakłada subskrypcji, tylko wykonuje wiele krótkich, celowych żądań.",
+        "Cloudflare łączy Monetization Gateway z drugim programem dotyczącym AI search. Firma chce ograniczać zbędne crawlery, przekazywać sygnały świeżości answer engines i eksperymentować z płatnością za użycie treści w wynikach. To jest ważny krok po wątkach Open USD i OKX AI: stablecoin staje się jedną z warstw, ale większa historia dotyczy kontroli dostępu, atrybucji, raportowania i pricingu per request.",
+        "Dla podcastu warto postawić pytanie, czy to początek internetu, w którym agenty będą miały portfele, limity i polityki zakupowe. Największym ryzykiem nie jest tu sam protokół, tylko governance: kto identyfikuje agenta, kto ustala ceny, jak uniknąć nadużyć i czy wydawcy naprawdę dostaną uczciwy udział w wartości odpowiedzi."
+      ],
+      "contextPoints": [
+        "Co się stało: Cloudflare zapowiedział bramkę płatności dla zasobów webowych i agentowych.",
+        "Dlaczego ważne: agenty potrzebują mikropłatności, rozliczania i tożsamości bez ręcznego checkoutu.",
+        "Na co patrzeć dalej: early access, partnerów x402, pierwsze wdrożenia dla MCP tools, ceny per request i reakcję wydawców."
+      ],
+      "sources": [
+        {
+          "title": "Cloudflare: Monetization Gateway",
+          "url": "https://blog.cloudflare.com/monetization-gateway/"
+        },
+        {
+          "title": "Cloudflare: Making AI search smarter",
+          "url": "https://blog.cloudflare.com/making-ai-search-smarter/"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/news"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Cloudflare",
+        "Agenci",
+        "Płatności",
+        "x402",
+        "MCP"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-01-1934-1-meta-chce-zamienic-nadmiar-ai-compute-w-chmure-fbcc745cac",
+      "section": "Infrastruktura",
+      "title": "Meta chce zamienić nadmiar AI compute w chmurę",
+      "standfirst": "Meta według Bloomberga i Reutersa rozwija chmurę do sprzedaży nadmiarowej mocy AI i hostowanych modeli, co może postawić ją obok AWS, Azure i Google Cloud.",
+      "whatHappened": "Źródła newsowe opisały plan usługi, która sprzedawałaby zewnętrznym klientom dostęp do Meta AI compute.",
+      "whyItMatters": "AI infrastructure przestaje być tylko kosztem wewnętrznym Big Tech i staje się potencjalnym produktem, który może zmienić rynek neocloudów.",
+      "deeperAnalysis": [
+        "Meta przez lata budowała infrastrukturę przede wszystkim pod własne modele, rekomendacje i produkty społecznościowe. Jeżeli część tej pojemności trafi na rynek jako usługa, zmienia się układ sił: firma, która była kupującym i inwestorem w data centers, może stać się konkurentem dla dostawców compute oraz partnerem dla mniejszych laboratoriów AI.",
+        "TechCrunch porównuje ten ruch do strategii SpaceX i xAI, gdzie data centers stają się zasobem wynajmowanym na zewnątrz. Reuters dodaje, że plan jest jeszcze w rozwoju i może się zmienić, ale już sama reakcja rynku pokazuje, jak wrażliwa stała się wycena AI infrastructure. Jeśli popyt na inferencję i trening utrzyma się wysoko, największą przewagę mogą mieć firmy posiadające realną pojemność, nie tylko najlepszy model.",
+        "Ten temat dobrze uzupełnia wcześniejsze raporty o ograniczaniu Gemini dla Meta, Etched LVI, Micron HBM i kosztach energii data centers. Wąskie gardło AI nie jest jednym elementem. To pakiet: dostęp do chipów, pamięć, energia, chłodzenie, routing klientów, pricing i gwarancje capacity."
+      ],
+      "contextPoints": [
+        "Co się stało: Meta ma rozważać sprzedaż nadmiarowej mocy AI i hostowanych modeli jako usługę chmurową.",
+        "Dlaczego ważne: rynek AI compute może zostać zdominowany przez firmy, które same zbudowały ogromne data centers.",
+        "Na co patrzeć dalej: oficjalne potwierdzenie Meta, pricing, dostępność modeli, wpływ na CoreWeave i Nebius oraz umowy z dużymi klientami."
+      ],
+      "sources": [
+        {
+          "title": "Techmeme",
+          "url": "https://www.techmeme.com/"
+        },
+        {
+          "title": "Reuters przez Investing.com",
+          "url": "https://www.investing.com/news/stock-market-news/meta-to-sell-excess-ai-computing-capacity-via-cloud-business-bloomberg-news-reports-4770550"
+        },
+        {
+          "title": "TechCrunch: Meta compute",
+          "url": "https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Meta",
+        "AI",
+        "Chmura",
+        "Data centers",
+        "Compute"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-01-1934-2-gemini-spark-na-macu-przenosi-agentow-do-lokalnych-plikow-05e63ca0e7",
+      "section": "Produkty",
+      "title": "Gemini Spark na Macu przenosi agentów do lokalnych plików",
+      "standfirst": "Google rozszerzył Gemini Spark na aplikację macOS, dodając obsługę lokalnych plików, większą liczbę aplikacji, monitoring w czasie rzeczywistym i własne połączenia MCP.",
+      "whatHappened": "Spark wchodzi do desktopowego workflow, na razie jako beta dla Google AI Ultra w USA.",
+      "whyItMatters": "Asystenci agentowi rywalizują już nie tylko w przeglądarce, ale też o dostęp do plików, kalendarzy, notatek, zakupów i zewnętrznych narzędzi użytkownika.",
+      "deeperAnalysis": [
+        "Gemini Spark jest ważny, bo pokazuje, że agent osobisty ma działać bliżej systemu operacyjnego. Dostęp do ekranu, lokalnych folderów i aplikacji użytkownika tworzy więcej wartości niż klasyczny chatbot, ale też wymaga jasnych granic uprawnień. Google dodaje integracje z Tasks, Keep, Canva, Dropbox, Instacart, OpenTable i Zillow Rentals, czyli miesza pracę, zakupy, projektowanie i logistykę w jednym agentowym interfejsie.",
+        "Wsparcie dla custom MCP jest szczególnie istotne dla developerów. W ostatnich raportach MCP pojawiał się jako hosted connector X, enterprise integration w SnapLogic i narzędzie dla agentów w Product Hunt. Spark może stać się kolejnym miejscem, w którym aplikacje będą musiały udostępnić kontrolowane narzędzia zamiast tylko web UI.",
+        "Wątek do podcastu: desktop agent to wygoda i ryzyko w tej samej chwili. Jeśli agent ma organizować pliki, zamawiać usługi i monitorować zdarzenia w czasie rzeczywistym, użytkownik potrzebuje prostych zgód, historii działań, limitów wydatków i łatwego cofania operacji."
+      ],
+      "contextPoints": [
+        "Co się stało: Google wprowadza Gemini Spark do aplikacji macOS i dodaje nowe integracje.",
+        "Dlaczego ważne: agenty przesuwają się z chatu do pracy na lokalnym komputerze i w aplikacjach użytkownika.",
+        "Na co patrzeć dalej: rollout poza USA, kontrolę uprawnień, niezawodność lokalnych akcji i adopcję custom MCP."
+      ],
+      "sources": [
+        {
+          "title": "Google Blog: Gemini Spark updates",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/"
+        },
+        {
+          "title": "Gemini for macOS",
+          "url": "https://gemini.google/mac/"
+        },
+        {
+          "title": "TechCrunch: Gemini Spark on Mac",
+          "url": "https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/"
+        },
+        {
+          "title": "MacRumors: Gemini Spark comes to Mac",
+          "url": "https://www.macrumors.com/2026/07/01/google-gemini-spark-comes-to-mac/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Gemini",
+        "Agenci",
+        "macOS",
+        "MCP"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-01-1934-3-venice-ai-pokazuje-popyt-na-prywatne-i-mniej-ograniczone-modele-00f8074392",
+      "section": "AI",
+      "title": "Venice AI pokazuje popyt na prywatne i mniej ograniczone modele",
+      "standfirst": "Venice AI pozyskało 65 mln USD przy wycenie 1 mld USD i sprzedaje prywatny dostęp do ponad 200 modeli jako alternatywę dla mocno moderowanych asystentów.",
+      "whatHappened": "Startup zebrał pierwszą zewnętrzną rundę finansowania prowadzoną przez Dragonfly i pokazał szybki wzrost użycia.",
+      "whyItMatters": "Rynek AI dzieli się na bezpieczne, mocno kontrolowane platformy oraz usługi, które sprzedają prywatność, większą swobodę i mniejszą retencję danych.",
+      "deeperAnalysis": [
+        "Venice AI wpisuje się w kontrtrend wobec coraz bardziej reglamentowanych modeli. Anthropic i OpenAI mówią o cyber risk, export controls i standardach bezpieczeństwa, a Venice sprzedaje użytkownikom obietnicę prywatności i mniejszej kontroli treści. Według TechCrunch firma deklaruje ponad 3 mln aktywnych użytkowników i 1,7 mln wywołań API dziennie, co sugeruje realny popyt na alternatywny model produktu.",
+        "Runda prowadzona przez fundusz crypto jest tu czymś więcej niż przypisem. Prywatność, szyfrowanie, proxy, brak przechowywania treści i neutralny dostęp do modeli dobrze pasują do kultury crypto, ale zderzają się z pytaniami o bezpieczeństwo użytkowników, nadużycia i odpowiedzialność platformy. To podobny konflikt jak w stablecoinach i agent payments: technologia pozwala na większą autonomię, ale governance musi nadążyć.",
+        "Podcastowo temat warto ująć bez moralizowania: rynek nie przyjmuje jednego standardu AI safety. Część użytkowników chce maksymalnej ochrony, część chce kontroli nad własnymi danymi i mniej ograniczeń. Startupy będą testować oba kierunki, a regulatorzy i sklepy z aplikacjami będą musieli zdecydować, gdzie przebiega granica."
+      ],
+      "contextPoints": [
+        "Co się stało: Venice AI osiągnęło status unicorna po rundzie Series A za 65 mln USD.",
+        "Dlaczego ważne: prywatność i swoboda użycia stają się pełnoprawnym segmentem rynku AI.",
+        "Na co patrzeć dalej: polityki bezpieczeństwa, retencję danych, modele enterprise, reakcje sklepów aplikacji i presję regulatorów."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: Venice AI Series A",
+          "url": "https://techcrunch.com/2026/07/01/venice-ai-becomes-a-unicorn-with-65m-series-a-as-its-privacy-first-ai-platform-takes-off/"
+        },
+        {
+          "title": "Unite.AI: Venice AI valuation",
+          "url": "https://www.unite.ai/venice-ai-raises-65m-at-1b-valuation-as-private-ai-moves-into-the-mainstream/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Venice AI",
+        "Prywatność",
+        "Modele",
+        "Startupy",
+        "Crypto"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-01-1934-4-godot-wyznacza-granice-dla-kodu-pisanego-przez-ai-7512654283",
+      "section": "Cyber",
+      "title": "Godot wyznacza granicę dla kodu pisanego przez AI",
+      "standfirst": "Godot Foundation zaostrza zasady kontrybucji i wymaga, aby kod był autorstwa człowieka, a użycie AI ograniczało się do drobnej pomocy jawnie opisanej w pull requeście.",
+      "whatHappened": "Projekt zapowiedział zakaz autonomicznych agentów, vibe codingu i dużych fragmentów kodu wygenerowanych przez AI.",
+      "whyItMatters": "Maintainerzy open source traktują AI-generated pull requests jako problem jakości, odpowiedzialności i bezpieczeństwa łańcucha dostaw.",
+      "deeperAnalysis": [
+        "Godot nie mówi, że każda pomoc AI jest zakazana. Dopuszcza drobne użycia podobne do autocomplete, regex albo find and replace, ale ciężar autorstwa i odpowiedzialności ma pozostać po stronie człowieka. To ważne rozróżnienie, bo projekty open source nie mają zasobów, aby debugować nieprzemyślane pull requesty generowane przez osoby, które nie rozumieją zmiany.",
+        "Ten ruch warto czytać obok wcześniejszych wątków o GitHub PR limits, AUR malware, AI-assisted vulnerability research i sporach o ukryte zachowania narzędzi developerskich. Generatywny kod zwiększa tempo tworzenia zmian, ale równocześnie przesuwa koszt na reviewerów. W otwartym projekcie koszt review jest realnym zasobem bezpieczeństwa.",
+        "Dla polskiego podcastu to dobry kontrapunkt do narracji o agentach kodujących. Najbardziej wartościowe pytanie brzmi nie \"czy AI może pisać kod\", tylko \"kto rozumie zmianę, kto ją testuje i kto odpowiada za błąd po merge\". Godot odpowiada konserwatywnie: człowiek ma być autorem, a nie tylko operatorem generatora."
+      ],
+      "contextPoints": [
+        "Co się stało: Godot wprowadza ostrzejsze reguły wobec kodu i komunikacji tworzonej przez AI.",
+        "Dlaczego ważne: open source musi chronić czas maintainerów, jakość kodu i zaufanie do pochodzenia zmian.",
+        "Na co patrzeć dalej: egzekwowanie polityki, reakcje GitHub community, podobne decyzje w innych projektach i formalne metki dla AI assistance."
+      ],
+      "sources": [
+        {
+          "title": "Godot Engine: contribution policy",
+          "url": "https://godotengine.org/article/contribution-policy-2026/"
+        },
+        {
+          "title": "PC Gamer: Godot AI-authored code",
+          "url": "https://www.pcgamer.com/gaming-industry/open-source-game-engine-godot-will-no-longer-accept-ai-authored-code-contributions-we-cant-trust-heavy-users-of-ai-to-understand-their-code-enough-to-fix-it/"
+        },
+        {
+          "title": "Godot contribution guidelines",
+          "url": "https://contributing.godotengine.org/en/latest/pull_requests/pull_request_guidelines.html"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Open source",
+        "Godot",
+        "AI code",
+        "Supply chain",
+        "Developer tools"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-01-1934-5-sony-konczy-nowe-plyty-playstation-i-wzmacnia-problem-cyfrowej-wlasnosci-66c972e84a",
+      "section": "Produkty",
+      "title": "Sony kończy nowe płyty PlayStation i wzmacnia problem cyfrowej własności",
+      "standfirst": "Sony zapowiedziało koniec produkcji płyt dla nowych gier PlayStation od stycznia 2028, przesuwając konsolowy rynek jeszcze mocniej w stronę licencji cyfrowych.",
+      "whatHappened": "Nowe gry po dacie granicznej mają być dostępne cyfrowo w PlayStation Store i u detalistów.",
+      "whyItMatters": "To duża platformowa zmiana dla graczy, rynku używanych gier, kolekcjonerów, archiwizacji i relacji między zakupem a licencją dostępu.",
+      "deeperAnalysis": [
+        "Oficjalny komunikat Sony przedstawia zmianę jako odpowiedź na preferencje konsumentów i szerszy trend odejścia od fizycznych nośników. Firma podkreśla, że wcześniejsze wydania płytowe nie są objęte zmianą, ale symboliczny ciężar jest duży: jedna z największych platform konsolowych stawia datę końca dla nowych płyt.",
+        "W ostatnich dniach media technologiczne przypominały też przypadki utraty dostępu do zakupionych treści cyfrowych przez wygaśnięcie licencji. Nawet jeżeli gry i filmy to osobne segmenty, użytkownik widzi jeden problem: \"kupiłem\" coraz częściej znaczy \"mam dostęp tak długo, jak pozwala sklep i licencje\". To przenosi debatę o prawach cyfrowych z niszy kolekcjonerów do mainstreamu.",
+        "Podcastowo to dobry lżejszy temat produktowy z mocną konsekwencją. Obok AI, chmury i stablecoinów widać klasyczny wzór platform: wygoda rośnie, ale kontrola użytkownika nad kopią, odsprzedażą, pożyczaniem i archiwizacją maleje."
+      ],
+      "contextPoints": [
+        "Co się stało: Sony zakończy produkcję płyt dla nowych gier PlayStation od stycznia 2028.",
+        "Dlaczego ważne: cyfrowa dystrybucja wzmacnia platformy i osłabia część tradycyjnych praw użytkownika.",
+        "Na co patrzeć dalej: reakcje graczy, politykę zwrotów, dostępność starszych gier, stanowisko regulatorów i ruchy Microsoftu oraz Nintendo."
+      ],
+      "sources": [
+        {
+          "title": "PlayStation Blog",
+          "url": "https://blog.playstation.com/2026/07/01/physical-disc-production-ending-in-january-2028-for-new-games-releasing-on-playstation-consoles/"
+        },
+        {
+          "title": "TechCrunch: Sony discs",
+          "url": "https://techcrunch.com/2026/07/01/sony-to-end-physical-playstation-game-discs-in-2028/"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/news"
+        },
+        {
+          "title": "old Reddit / r/technology",
+          "url": "https://old.reddit.com/r/technology/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Sony",
+        "PlayStation",
+        "Gry",
+        "Cyfrowa własność",
+        "Media"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-01-1934-6-polska-debata-o-dezinformacji-ai-nabiera-lokalnych-liczb-eea93c4762",
+      "section": "Regulacje",
+      "title": "Polska debata o dezinformacji AI nabiera lokalnych liczb",
+      "standfirst": "Business Insider Polska opisał nowy raport o dezinformacji, a WP Tech pokazało wiralowy deepfake z Haalandem jako lekki, ale czytelny przykład problemu syntetycznych treści.",
+      "whatHappened": "Polskie źródła dodały świeży kontekst o skali kontaktu z fake newsami, deepfake i oczekiwaniach wobec platform.",
+      "whyItMatters": "AI-disinformation przestaje być abstrakcyjnym ryzykiem i wchodzi do codziennych treści sportowych, politycznych, zdrowotnych oraz energetycznych.",
+      "deeperAnalysis": [
+        "Business Insider Polska wskazuje, że 91 procent respondentów miało kontakt z co najmniej jedną fałszywą informacją z badanej puli, a 43 procent wskazuje boty i trolle AI jako źródło dezinformacji. Ważny jest też konflikt oczekiwań: większość chce aktywniejszej walki platform z fake newsami, ale istotna część obawia się nadmiernej cenzury.",
+        "WP Tech pokazuje ten problem przez lekki viralowy przykład z piłkarzem, który miał przestraszyć się własnego odbicia. Po weryfikacji materiał okazał się przeróbką AI opartą na starszym filmie. Takie historie są mniej poważne niż operacje wpływu, ale świetnie tłumaczą mechanizm: syntetyczna treść nie musi być polityczna, aby masowo trenować użytkowników do reagowania przed sprawdzeniem.",
+        "Dla podcastu lokalny kąt jest prosty: Polska potrzebuje nie tylko fact-checkingu po fakcie, ale też kompetencji rozpoznawania syntetycznych materiałów w codziennym feedzie. To dotyczy sportu, wojny, zdrowia, finansów, klimatu i wyborów, a więc prawie każdego tematu, który przechodzi przez social media."
+      ],
+      "contextPoints": [
+        "Co się stało: polskie media opisały nowy raport o dezinformacji oraz świeży przykład viralowego deepfake'u.",
+        "Dlaczego ważne: deepfake i AI boty są już elementem masowego odbioru informacji, nie tylko problemem ekspertów.",
+        "Na co patrzeć dalej: działania platform, edukację medialną, polskie wdrożenia DSA, fact-checking i reakcje szkół."
+      ],
+      "sources": [
+        {
+          "title": "Business Insider Polska: fake newsy jako zagrożenie",
+          "url": "https://businessinsider.com.pl/technologie/nowe-technologie/fake-newsy-jako-zagrozenie-dla-panstwa-alarmujace-wnioski-w-nowym-raporcie/qtxcb7m"
+        },
+        {
+          "title": "WP Tech: deepfake z Haalandem",
+          "url": "https://tech.wp.pl/nagranie-haalanda-stalo-sie-hitem-jedna-rzecz-sie-nie-zgadza%2C7302780302227712a"
+        },
+        {
+          "title": "TVN24: firmy wracają do ludzi po AI",
+          "url": "https://tvn24.pl/biznes/tech/sztuczna-inteligencja-nie-dala-rady-firmy-ponownie-zatrudniaja-ludzi-st9122826"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Polska",
+        "Dezinformacja",
+        "Deepfake",
+        "Social media",
+        "AI"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Cloudflare i płatny internet dla agentów",
+      "rationale": "Monetization Gateway, x402 i Pay Per Use łączą crawler controls, stablecoiny, MCP oraz nową ekonomię treści.",
+      "sourcesLabel": "Cloudflare; HN; Techmeme"
+    },
+    {
+      "priority": "High",
+      "title": "Meta jako nowy sprzedawca AI compute",
+      "rationale": "Jeśli Meta sprzeda nadmiarową moc i modele, rynek AI cloud może dostać nowego konkurenta z własnymi data centers.",
+      "sourcesLabel": "Reuters; TechCrunch; Techmeme"
+    },
+    {
+      "priority": "High",
+      "title": "Gemini Spark na Macu",
+      "rationale": "Desktopowy agent Google zaczyna działać bliżej plików, notatek, usług i custom MCP, więc rośnie znaczenie uprawnień.",
+      "sourcesLabel": "Google Blog; TechCrunch; MacRumors"
+    },
+    {
+      "priority": "Medium",
+      "title": "Godot kontra AI-authored code",
+      "rationale": "Open source zaczyna formalizować granice między pomocą AI a kontrybucją, której autor nie rozumie.",
+      "sourcesLabel": "Godot; PC Gamer"
+    },
+    {
+      "priority": "Medium",
+      "title": "Venice AI i rynek prywatnych asystentów",
+      "rationale": "Unicorn z modelem \"privacy-first\" pokazuje popyt na mniej ograniczone platformy AI oraz napięcie między swobodą i safety.",
+      "sourcesLabel": "TechCrunch; Unite.AI"
+    },
+    {
+      "priority": "Medium",
+      "title": "Sony kończy nowe płyty PlayStation",
+      "rationale": "Lżejszy temat konsumencki, ale mocny symbol przejścia od własności fizycznej do cyfrowych licencji.",
+      "sourcesLabel": "PlayStation Blog; TechCrunch; HN"
+    },
+    {
+      "priority": "Medium",
+      "title": "Polska dezinformacja AI w liczbach",
+      "rationale": "Raport i przykład deepfake'u z Haalandem dają lokalny kontekst dla edukacji medialnej, platform i regulacji.",
+      "sourcesLabel": "Business Insider Polska; WP Tech; TVN24"
+    },
+    {
+      "priority": "Low",
+      "title": "Product Hunt jako radar agentowej gospodarki",
+      "rationale": "Dzisiejsze launchy pokazują agentowe klawiatury, social intelligence, browser automation i pieniądze dla agentów.",
+      "sourcesLabel": "Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Cloudflare: Monetization Gateway",
+      "url": "https://blog.cloudflare.com/monetization-gateway/"
+    },
+    {
+      "title": "Cloudflare: Making AI search smarter",
+      "url": "https://blog.cloudflare.com/making-ai-search-smarter/"
+    },
+    {
+      "title": "Google: Gemini Spark updates",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/"
+    },
+    {
+      "title": "Google Gemini for macOS",
+      "url": "https://gemini.google/mac/"
+    },
+    {
+      "title": "PlayStation Blog: koniec produkcji płyt",
+      "url": "https://blog.playstation.com/2026/07/01/physical-disc-production-ending-in-january-2028-for-new-games-releasing-on-playstation-consoles/"
+    },
+    {
+      "title": "Godot Engine: contribution policy",
+      "url": "https://godotengine.org/article/contribution-policy-2026/"
+    },
+    {
+      "title": "SnapLogic MCP",
+      "url": "https://www.snaplogic.com/products/mcp"
+    },
+    {
+      "title": "Techmeme",
+      "url": "https://www.techmeme.com/"
+    },
+    {
+      "title": "Techmeme River",
+      "url": "https://www.techmeme.com/river"
+    },
+    {
+      "title": "TechCrunch o Meta compute",
+      "url": "https://techcrunch.com/2026/07/01/meta-like-spacex-looks-to-turn-excess-ai-compute-into-cash/"
+    },
+    {
+      "title": "Reuters przez Investing.com o Meta compute",
+      "url": "https://www.investing.com/news/stock-market-news/meta-to-sell-excess-ai-computing-capacity-via-cloud-business-bloomberg-news-reports-4770550"
+    },
+    {
+      "title": "TechCrunch o Venice AI",
+      "url": "https://techcrunch.com/2026/07/01/venice-ai-becomes-a-unicorn-with-65m-series-a-as-its-privacy-first-ai-platform-takes-off/"
+    },
+    {
+      "title": "TechCrunch o Gemini Spark",
+      "url": "https://techcrunch.com/2026/07/01/gemini-spark-googles-agentic-assistant-is-now-available-on-mac/"
+    },
+    {
+      "title": "MacRumors o Gemini Spark",
+      "url": "https://www.macrumors.com/2026/07/01/google-gemini-spark-comes-to-mac/"
+    },
+    {
+      "title": "PYMNTS o MGX",
+      "url": "https://www.pymnts.com/news/investment-tracker/2026/mgx-pursues-ai-infrastructure-investments-with-49-billion-fund/"
+    },
+    {
+      "title": "Economic Times o OXMIQ",
+      "url": "https://m.economictimes.com/tech/artificial-intelligence/oxmiq-raises-35-million-to-license-ai-chip-designs-as-sovereign-ai-demand-grows/articleshow/132117037.cms"
+    },
+    {
+      "title": "TechCrunch o PlayStation",
+      "url": "https://techcrunch.com/2026/07/01/sony-to-end-physical-playstation-game-discs-in-2028/"
+    },
+    {
+      "title": "PC Gamer o Godot",
+      "url": "https://www.pcgamer.com/gaming-industry/open-source-game-engine-godot-will-no-longer-accept-ai-authored-code-contributions-we-cant-trust-heavy-users-of-ai-to-understand-their-code-enough-to-fix-it/"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/news"
+    },
+    {
+      "title": "old Reddit / r/technology",
+      "url": "https://old.reddit.com/r/technology/"
+    },
+    {
+      "title": "old Reddit / r/artificial",
+      "url": "https://old.reddit.com/r/artificial/"
+    },
+    {
+      "title": "old Reddit / r/singularity",
+      "url": "https://old.reddit.com/r/singularity/"
+    },
+    {
+      "title": "Product Hunt 2026-07-01",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/7/1"
+    },
+    {
+      "title": "Product Hunt homepage",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Business Insider Polska o Fable i Mythos",
+      "url": "https://businessinsider.com.pl/technologie/nowe-technologie/anthropic-przywraca-dostep-do-modelu-mythosfable-obowiazuja-nowe-zasady/skv75nn"
+    },
+    {
+      "title": "Business Insider Polska o dezinformacji",
+      "url": "https://businessinsider.com.pl/technologie/nowe-technologie/fake-newsy-jako-zagrozenie-dla-panstwa-alarmujace-wnioski-w-nowym-raporcie/qtxcb7m"
+    },
+    {
+      "title": "WP Tech o deepfake'u z Haalandem",
+      "url": "https://tech.wp.pl/nagranie-haalanda-stalo-sie-hitem-jedna-rzecz-sie-nie-zgadza%2C7302780302227712a"
+    },
+    {
+      "title": "TVN24 o firmach wracających do ludzi po AI",
+      "url": "https://tvn24.pl/biznes/tech/sztuczna-inteligencja-nie-dala-rady-firmy-ponownie-zatrudniaja-ludzi-st9122826"
+    },
+    {
+      "title": "Komputer Świat o Meta i pamięci RAM",
+      "url": "https://www.komputerswiat.pl/nauka-i-technika/sztuczna-inteligencja/meta-szuka-oszczednosci-na-pamieci-ram-wykorzysta-stare-moduly/0s36psz"
+    }
+  ]
+}

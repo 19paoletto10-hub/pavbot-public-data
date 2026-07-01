@@ -4,6 +4,13 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Cloudflare agent monetization | Monetization Gateway, x402 and Pay Per Use move agent payments from stablecoin narrative into edge-enforced web infrastructure | Watch early access, pricing rules, MCP/API/content use cases, Ceramic/You.com results, publisher reaction and agent identity requirements | Open |
+| High | Track Meta AI cloud compute | Meta may sell excess AI compute and hosted models, turning internal AI infrastructure into a rival to hyperscalers and neoclouds | Watch official Meta launch, customer list, pricing, impact on CoreWeave/Nebius, capacity guarantees and regulatory scrutiny | Open |
+| High | Track Gemini Spark desktop agents | Gemini Spark on macOS adds local files, connected apps, real-time monitoring and custom MCP to consumer desktop agent workflows | Watch rollout outside US Ultra, permissions UX, action history, failure recovery, MCP ecosystem and Apple/Microsoft/OpenAI responses | Open |
+| Medium | Track Venice AI privacy-first assistants | Venice AI's $65M Series A and $1B valuation show demand for privacy-oriented and less-restricted AI access | Watch retention claims, safety policy, app store treatment, enterprise offering, abuse controls and competition from mainstream assistants | Open |
+| Medium | Track AI-authored code policy in open source | Godot's stricter rules show maintainers pushing back against AI-generated PRs and review burden | Watch enforcement, similar policies in large OSS projects, disclosure conventions, GitHub tooling and effects on contributor onboarding | Open |
+| Medium | Track digital ownership after Sony disc shift | Sony ending physical discs for new PlayStation games in 2028 makes digital licensing and preservation a mainstream consumer tech topic | Watch gamer backlash, used-game market effects, PS Store commitments, PS3/Vita shutdowns, refund policy and Microsoft/Nintendo responses | Open |
+| Medium | Track Polish AI disinformation metrics | New Polish reporting adds local numbers for fake news, AI bots, deepfake exposure and expectations toward platforms | Watch source report updates, DSA enforcement, education programs, platform moderation evidence and follow-up polling | Open |
 | High | Track Claude Sonnet/Fable access and pricing | Sonnet 5 lowers the cost of everyday agents while Fable 5 returns through usage credits and Mythos 5 remains approval-gated | Watch pricing after August 31, Fable credits after July 7, Mythos/Glasswing expansion, jailbreak severity standard and competitor pricing | Open |
 | High | Track Open USD stablecoin consortium | Open USD adds a broad partner-governed payments rail after OKX AI, with Visa, Stripe, Mastercard, Google, BlackRock and Coinbase in the partner story | Watch production launch, on/off ramps, reserve economics, compliance, Stripe default behavior and use in agent marketplaces | Open |
 | High | Track low-voltage inference | Etched LVI frames AI chip competition around sustained FLOPs, voltage and thermal throttling rather than only peak performance | Watch independent benchmarks, customer validation, Sohu availability, software stack and comparisons with Nvidia, AMD, Groq and Cerebras | Open |
@@ -343,6 +350,12 @@
   local Homebrew `ffmpeg` binary referenced a missing `libx265.215.dylib`;
   repository scripts were not modified. PDF brief was rendered in the mobile
   390 x 844 pt format and visually checked from PNG renders.
+- 2026-07-01: Evening tech research run created a timestamped material update.
+  Strongest podcast candidates: Cloudflare Monetization Gateway and Pay Per Use
+  for AI search, Meta selling excess AI compute, Gemini Spark on macOS, Godot
+  AI-authored code policy, Venice AI privacy-first assistant growth, Sony ending
+  new PlayStation discs, Polish AI disinformation metrics and Product Hunt's
+  agentic launch day.
 
 ## Done
 

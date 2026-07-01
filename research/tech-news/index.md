@@ -21,6 +21,20 @@ publiczny apetyt na software plus flotę sprzętu, a Getty/Shutterstock pokazuje
 presji generatywnej AI. Polski kontekst dodał mDyplomy w mObywatelu i RDE/POL-on
 jako praktyczny przykład cyfrowej administracji.
 
+Po wieczornym raporcie z 2026-07-01-1934 najważniejsza nowa warstwa to
+agentowy internet jako rynek rozliczany per request: Cloudflare Monetization
+Gateway, x402, Pay Per Use dla AI search i płatności za MCP tools uzupełniają
+poranny Open USD o realny punkt egzekwowania płatności na edge. Druga warstwa
+to AI compute jako produkt infrastrukturalny: Meta według źródeł medialnych
+chce sprzedawać nadmiarową moc i modele, MGX zamyka 49 mld USD funduszu AI, a
+OXMIQ wzmacnia wątek licencjonowanego IP chipowego dla sovereign AI. Trzecia
+warstwa to zasady platform w praktyce: Google przenosi Gemini Spark na macOS i
+custom MCP, Product Hunt pokazuje agentowe klawiatury, social intelligence,
+browser automation i pieniądze dla agentów, a Godot stawia granicę wobec
+AI-authored code w open source. Czwarta warstwa, konsumencka i lokalna, to Sony
+kończące nowe płyty PlayStation od stycznia 2028 oraz polskie dane o
+dezinformacji, deepfake i oczekiwaniach wobec platform.
+
 Po wieczornym raporcie z 2026-06-30-1935 najważniejsza nowa warstwa to
 komercjalizacja agentów poza samym modelem: AWS uruchamia FDE za 1 mld USD,
 OKX buduje marketplace płatności, reputacji i usług między agentami, a X
@@ -194,6 +208,32 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- Cloudflare agent monetization and Pay Per Use: śledzić waitlistę
+  Monetization Gateway, adopcję x402, partnerów Ceramic/You.com, modele cenowe
+  za MCP tools/API/content, identity dla agentów oraz reakcję wydawców i AI
+  search engines.
+- Meta AI cloud and excess compute monetization: śledzić oficjalne
+  potwierdzenie Meta, pricing, dostępne modele, wpływ na CoreWeave/Nebius,
+  umowy z klientami, regulatory scrutiny oraz czy podobny ruch zrobią SpaceX,
+  Google lub inni posiadacze nadmiarowej pojemności.
+- Gemini Spark desktop-agent rollout: śledzić rollout poza Google AI Ultra USA,
+  kontrolę uprawnień na macOS, historię działań, custom MCP integrations,
+  niezawodność lokalnych operacji i reakcje Apple/Microsoft/OpenAI/Anthropic.
+- Privacy-first and less-restricted AI assistants: Venice AI trzeba obserwować
+  jako sygnał popytu na prywatność, mniej moderowane modele i proxy/encryption
+  w consumer AI; patrzeć na safety policy, app store rules, retencję danych,
+  enterprise adoption i nadużycia.
+- AI-authored code policies in open source: Godot pokazuje konserwatywną
+  odpowiedź maintainerów na AI-generated PRs; śledzić egzekwowanie zasad,
+  podobne polityki Linux/Gentoo/NetBSD, disclosure tags, wpływ na onboarding i
+  koszt code review.
+- Digital ownership and game preservation: Sony ending new PlayStation discs
+  od stycznia 2028 trzeba śledzić pod kątem reakcji graczy, rynku używanych
+  gier, archiwizacji, sklepów PS3/Vita, refund policy i odpowiedzi Microsoftu
+  oraz Nintendo.
+- Polish AI disinformation and deepfake literacy: raporty Business Insider
+  Polska/WP Tech warto śledzić jako lokalny miernik kontaktu z deepfake,
+  botami AI, oczekiwaniami wobec platform, edukacją medialną i wdrożeniem DSA.
 - Claude Sonnet/Fable access and pricing: śledzić, czy Sonnet 5 faktycznie
   obniży koszt agentowych workflow po 31 sierpnia, jak zadziałają usage credits
   dla Fable 5 po 7 lipca oraz czy Mythos 5 wyjdzie poza zatwierdzone
