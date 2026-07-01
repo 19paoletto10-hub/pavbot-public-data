@@ -336,6 +336,13 @@
   candidates: Claude Sonnet 5 plus Fable 5 access controls, Open USD stablecoin
   consortium, Etched low-voltage inference, Getty/Shutterstock/CMA content
   regulation, Lime IPO, Polish mDyplomy and Product Hunt's agent-tooling trend.
+- 2026-07-01: Daily tech podcast generated from the normal morning research
+  report; created `draft.md`, `script.md`, `sources.md`, `render.json`,
+  `brief.pdf`, and `podcast.mp3`. Final MP3 used Piper and measured about 7:55.
+  The shared renderer needed a temporary `ffmpeg`/`ffprobe` shim because the
+  local Homebrew `ffmpeg` binary referenced a missing `libx265.215.dylib`;
+  repository scripts were not modified. PDF brief was rendered in the mobile
+  390 x 844 pt format and visually checked from PNG renders.
 
 ## Done
 
