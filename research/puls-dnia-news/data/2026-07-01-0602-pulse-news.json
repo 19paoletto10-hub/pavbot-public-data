@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-01",
+  "runTime": "06:02",
+  "status": "Material update",
+  "headline": "06:02: Polska w alertach IMGW, a świat przechodzi na USA, Wenezuelę i nową presję bezpieczeństwa",
+  "summary": "Slot 06:02 jest materialny względem opublikowanego baseline'u 18:00 i lokalnego slotu 21:02: kraj przechodzi w poranny reżim alarmów pogodowych i politycznej dogrywki po sprawie dwóch wież, a blok zagraniczny wymienia wiele kart na wyrok Sądu Najwyższego USA, miliardowe wpływy Trumpa z krypto, napięcie Afganistan-Pakistan, odblokowanie modeli Anthropic oraz dwa nowe kąty kryzysu w Wenezueli.",
+  "items": [
+    {
+      "id": "pulse-2026-07-01-0602-01-imgw",
+      "section": "Polska",
+      "title": "IMGW i RCB ustawiają poranek pod znakiem burz, ulew i upału, a część kraju ma alerty najwyższego stopnia",
+      "lead": "Dzień zaczyna się od szerokiego pakietu ostrzeżeń pogodowych i ryzyka szybkiej zmiany sytuacji.",
+      "whatHappened": "TVN24 podało, że obowiązują ostrzeżenia IMGW pierwszego, drugiego i trzeciego stopnia przed burzami oraz upałem, a alert RCB został rozesłany dla części zachodniej i północno-zachodniej Polski. Raport IMGW nr 135 podtrzymuje scenariusz dalszego miksu upałów, intensywnych opadów i burz.",
+      "keyFacts": [
+        "Poranek otwierają ostrzeżenia IMGW wszystkich trzech stopni.",
+        "RCB rozesłało alerty dla części województw na zachodzie i północnym zachodzie kraju.",
+        "Ryzyko obejmuje jednocześnie burze, silny wiatr, ulewy i wysoką temperaturę."
+      ],
+      "reactions": [
+        "To najmocniejsza krajowa karta slotu, bo może zmieniać się szybciej niż pozostałe tematy jeszcze przed 09:00.",
+        "Feed poranny powinien mocno akcentować nie tylko prognozę, ale gotowość służb i mieszkańców."
+      ],
+      "whyItMatters": "Jeżeli ostrzeżenia będą rozszerzane lub szkody zaczną szybko narastać, pierwsze karty dnia będą wymagały natychmiastowej podmiany.",
+      "context": "Wieczorem dominowały już pierwsze szkody po burzach. O 06:02 ciężar przesuwa się na poranny reżim ostrzegawczy i gotowość na kolejną falę zjawisk.",
+      "watchNext": [
+        "Czy IMGW i RCB rozszerzą zakres ostrzeżeń albo podniosą je dla kolejnych powiatów.",
+        "Czy służby zaczną raportować nowe szkody, awarie energetyczne lub utrudnienia transportowe."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo: Niebezpieczne burze i skwar. W mocy alarmy nawet najwyższego stopnia",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/zbliza-sie-fala-niebezpiecznych-zjawisk-gdzie-trzeba-uwazac-aktualne-ostrzezenia-imgw-burze-i-upaly-st9115734?source=rss"
+        },
+        {
+          "title": "IMGW: Aktualna i prognozowana sytuacja meteorologiczna i hydrologiczna – raport nr 135",
+          "url": "https://imgw.pl/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-135/"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "RCB",
+        "Burze",
+        "Upał"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0602-02-dwie-wieze",
+      "section": "Polityka",
+      "title": "Umorzenie sprawy dwóch wież znów rozpala spór o polityczny wymiar prokuratury",
+      "lead": "Po decyzji śledczych temat wraca do porannej agendy jako konflikt o wiarygodność państwa i rozliczenia.",
+      "whatHappened": "TVN24 przypomniało, że śledztwo wszczęte w lutym 2025 roku wokół planów budowy dwóch wieżowców na działce spółki Srebrna zostało umorzone. W porannym obiegu temat natychmiast wrócił do politycznej debaty, w której padają zarzuty o upolitycznienie prokuratury oraz pytania o uzasadnienie decyzji.",
+      "keyFacts": [
+        "Śledztwo dotyczące planów dwóch wież na działce spółki Srebrna zostało umorzone.",
+        "Sprawa była formalnie prowadzona od lutego 2025 roku.",
+        "Komentarze polityków przesuwają temat z samego postępowania na ocenę działania prokuratury."
+      ],
+      "reactions": [
+        "To jedna z nielicznych nowych krajowych osi politycznych poranka.",
+        "Historia jest ważna mniej przez samą chronologię sprawy, a bardziej przez potencjał do uruchomienia kolejnej fali sporu o rozliczenia i bezstronność instytucji."
+      ],
+      "whyItMatters": "Temat uderza jednocześnie w zaufanie do prokuratury, narrację rozliczeń po zmianie władzy i bieżący konflikt partyjny.",
+      "context": "Wieczorny slot był zdominowany przez pogodę i bezpieczeństwo. O 06:02 polityka wraca do feedu dzięki decyzji śledczych i natychmiastowej reakcji komentatorów.",
+      "watchNext": [
+        "Czy prokuratura przedstawi pełniejsze uzasadnienie umorzenia albo dokumenty sprawy.",
+        "Czy koalicja i opozycja zbudują z tego temat dnia w porannych mediach i Sejmie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pięć rzeczy, które warto wiedzieć 1 lipca 2026 roku",
+          "url": "https://tvn24.pl/polska/piec-rzeczy-ktore-warto-wiedziec-1-lipca-2026-roku-najwazniejsze-informacje-st9122162?source=rss"
+        },
+        {
+          "title": "TVN24: Spór wokół sprawy \"dwóch wież\". Aleksandra Leo: jeśli coś jest nie po ich myśli, prokuratura jest upolityczniona",
+          "url": "https://tvn24.pl/polska/spor-wokol-sprawy-dwoch-wiez-aleksandra-leo-i-kazimierz-smolinski-komentuja-st9122065?source=rss"
+        }
+      ],
+      "tags": [
+        "Prokuratura",
+        "DwieWieże",
+        "Polityka",
+        "Srebrna"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0602-03-trump-krypto",
+      "section": "Gospodarka",
+      "title": "Raport majątkowy Trumpa pokazuje ponad miliard dolarów wpływów z krypto w pierwszym roku po powrocie do władzy",
+      "lead": "Kryptowaluty biją w jego sprawozdaniu tradycyjny biznes nieruchomościowy i znów podnoszą pytania o konflikt interesów.",
+      "whatHappened": "BBC podało, że obowiązkowy raport finansowy Donalda Trumpa za 2025 rok pokazuje ponad miliard dolarów przychodów z działalności związanej z kryptowalutami. Według relacji opartych na ujawnieniu, sam memecoin przyniósł 635 milionów dolarów tantiem, a skala wpływów wyraźnie przewyższyła dochody z nieruchomości i towarów sygnowanych nazwiskiem prezydenta.",
+      "keyFacts": [
+        "BBC opisuje ponad miliard dolarów wpływów z krypto na podstawie obowiązkowego ujawnienia majątkowego za 2025 rok.",
+        "W artykule wskazano 635 milionów dolarów tantiem związanych z memecoinem Trumpa.",
+        "To dochód większy niż wpływy z klasycznych aktywów kojarzonych z marką Trump."
+      ],
+      "reactions": [
+        "To mocna karta gospodarczo-polityczna, bo dotyczy prezydenta aktywnie kształtującego politykę wobec cyfrowych aktywów.",
+        "Historia może napędzić debatę o konfliktach interesów i o wpływie polityki Białego Domu na prywatne biznesy."
+      ],
+      "whyItMatters": "Skala przychodów z krypto zmienia ciężar sporu z ogólnej sympatii do branży na pytanie, ile prezydent realnie na niej zarabia podczas sprawowania urzędu.",
+      "context": "To nowa oś porannego feedu, której nie było w lokalnym slocie 21:02 ani w opublikowanym baseline'ie 18:00.",
+      "watchNext": [
+        "Czy Biały Dom albo sztab Trumpa odniosą się do zarzutów o konflikt interesów.",
+        "Czy rynek i przeciwnicy polityczni zaczną łączyć ujawnienie z ostatnimi ruchami regulacyjnymi wobec krypto."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Trump made more than $1bn from crypto in first year back in office",
+          "url": "https://www.bbc.co.uk/news/articles/cvgmv98ez3zo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "OGE: President Trump’s certified annual financial disclosure report",
+          "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4EC9A8E6DD078F2985258CA9002C9377/%24FILE/Trump%2C%20Donald%20J.%202025%20Annual%20278.pdf"
+        }
+      ],
+      "tags": [
+        "Trump",
+        "Krypto",
+        "OGE",
+        "Finanse"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0602-04-birthright",
+      "section": "Świat",
+      "title": "Sąd Najwyższy USA odrzuca próbę ograniczenia obywatelstwa z urodzenia i zadaje cios agendzie Trumpa",
+      "lead": "Najważniejszy poranny ruch instytucjonalny w USA idzie w poprzek jednej z najbardziej kontrowersyjnych obietnic migracyjnych.",
+      "whatHappened": "BBC oraz opublikowana opinia Sądu Najwyższego USA pokazują, że w sprawie Trump v. Barbara większość 6 do 3 uznała dzieci urodzone w Stanach Zjednoczonych przez rodziców przebywających tam nielegalnie lub tymczasowo za obywateli od chwili urodzenia. Wyrok blokuje próbę odwrócenia 150-letniej praktyki przez administrację Trumpa.",
+      "keyFacts": [
+        "Wyrok zapadł stosunkiem głosów 6 do 3.",
+        "Sąd potwierdził, że dzieci urodzone w USA takim rodzicom są obywatelami od chwili narodzin.",
+        "To istotna porażka dla jednej z centralnych obietnic migracyjnych Trumpa."
+      ],
+      "reactions": [
+        "Temat ma rangę porannej karty numer jeden w polityce amerykańskiej.",
+        "Wyrok będzie interpretowany jednocześnie prawnie, konstytucyjnie i wyborczo."
+      ],
+      "whyItMatters": "Spór o obywatelstwo z urodzenia dotyka podstawowej definicji członkostwa w państwie i może przełożyć się na całą debatę migracyjną w kampanii i administracji.",
+      "context": "W poprzednich slotach feed oglądał USA głównie przez Iran, Meta i decyzje sportowe. O 06:02 centrum ciężkości przechodzi na sam Sąd Najwyższy.",
+      "watchNext": [
+        "Czy Biały Dom zapowie dalszy ruch legislacyjny lub nową strategię prawną.",
+        "Jak szybko wyrok stanie się punktem odniesienia dla kolejnych sporów imigracyjnych w USA."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US Supreme Court upholds birthright citizenship in blow to Trump",
+          "url": "https://www.bbc.co.uk/news/articles/cgmepnx1wzzo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Supreme Court: Trump v. Barbara (06/30/2026)",
+          "url": "https://www.supremecourt.gov/opinions/25pdf/25-365_4hdj.pdf"
+        }
+      ],
+      "tags": [
+        "USA",
+        "SądNajwyższy",
+        "Migracja",
+        "Trump"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0602-05-beijing",
+      "section": "Bezpieczeństwo",
+      "title": "Pekin nadal milczy o przyczynach katastrofy po zderzeniu małego samolotu z najwyższym wieżowcem miasta",
+      "lead": "Nietypowa katastrofa w chińskiej stolicy staje się też historią o kontroli informacji i ograniczonym przekazie władz.",
+      "whatHappened": "BBC podało, że cztery dni po uderzeniu małego samolotu w najwyższy wieżowiec Pekinu nadal nie wiadomo, dlaczego doszło do katastrofy. Zginął pilot, 13 osób zostało rannych, a jedynym oficjalnym komunikatem pozostaje bardzo krótka notka opublikowana przez państwowe media.",
+      "keyFacts": [
+        "W katastrofie zginął pilot, a 13 osób zostało rannych.",
+        "Do zdarzenia doszło przy najwyższym wieżowcu Pekinu.",
+        "Oficjalny przekaz władz pozostaje skrajnie ograniczony."
+      ],
+      "reactions": [
+        "To karta bezpieczeństwa, ale także karta o zarządzaniu informacją przez państwo.",
+        "Im dłużej Pekin nie wyjaśnia przyczyn, tym mocniej temat żyje nie tylko samym wypadkiem, lecz także luką informacyjną."
+      ],
+      "whyItMatters": "W tak wrażliwym miejscu każda niejasność natychmiast uruchamia pytania o standardy bezpieczeństwa lotniczego, ochronę infrastruktury i przejrzystość państwa.",
+      "context": "Tematu nie było w wieczornym feedzie. To nowa i wyraźnie nietypowa karta porannego bloku azjatyckiego.",
+      "watchNext": [
+        "Czy władze Chin podadzą przyczynę zderzenia albo nowy bilans poszkodowanych.",
+        "Czy pojawią się zdjęcia, zapisy lotu lub relacje świadków, które wypełnią obecne luki."
+      ],
+      "sources": [
+        {
+          "title": "BBC: A plane crashed into a tower in Beijing, but China's not saying what happened",
+          "url": "https://www.bbc.co.uk/news/articles/crlwe28dz44o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Chiny",
+        "Pekin",
+        "Lotnictwo",
+        "Wieżowiec"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0602-06-taliban",
+      "section": "Bezpieczeństwo",
+      "title": "Talibowie mówią o uderzeniach przy granicy z Pakistanem, a Islamabad informuje o strąceniu czterech dronów",
+      "lead": "Nowy poranny punkt zapalny w Azji Południowej pozostaje częściowo niezweryfikowany, ale wyraźnie podnosi napięcie.",
+      "whatHappened": "BBC podało, że afgański reżim talibów ogłosił przeprowadzenie uderzeń na cele przy granicy z Pakistanem, w których kilka osób miało zostać rannych w pakistańskim Beludżystanie. Pakistańska armia twierdzi jednocześnie, że strąciła cztery prymitywne drony i ostrzegła, że każda dalsza prowokacja spotka się z odpowiedzią; skala ataku nie ma jeszcze pełnego niezależnego potwierdzenia.",
+      "keyFacts": [
+        "Talibowie mówią o atakach przy granicy z Pakistanem.",
+        "Pakistan twierdzi, że strącił cztery drony.",
+        "BBC zaznacza, że pełnej skali uderzeń nie udało się niezależnie potwierdzić."
+      ],
+      "reactions": [
+        "To jedna z najbardziej zapalnych nowych kart bezpieczeństwa tego poranka.",
+        "Feed powinien zachować ostrożny język, bo informacje pochodzą z komunikatów stron sporu."
+      ],
+      "whyItMatters": "Jeżeli incydenty będą się powtarzać, napięcie może szybko przejść z granicznych starć do większego kryzysu regionalnego z udziałem dwóch niestabilnych sąsiadów.",
+      "context": "W poprzednich slotach dominowały Iran, Monako i Grecja. O 06:02 bezpieczeństwo przesuwa się mocniej w kierunku Azji Południowej.",
+      "watchNext": [
+        "Czy Pakistan pokaże materiał dowodowy dotyczący zestrzelonych dronów albo ofiar.",
+        "Czy talibowie podtrzymają, rozszerzą lub wycofają swoje komunikaty o atakach."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Afghan Taliban launch strikes on border with Pakistan as tensions escalate",
+          "url": "https://www.bbc.co.uk/news/articles/c621g086ek4o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Afganistan",
+        "Pakistan",
+        "Talibowie",
+        "Granica"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0602-07-anthropic",
+      "section": "Technologia",
+      "title": "Biały Dom cofa blokadę eksportową na modele Anthropic, a Fable 5 ma wrócić globalnie 1 lipca",
+      "lead": "Po czerwcowym zamrożeniu najbardziej zaawansowanych modeli USA zmieniają kurs i odblokowują ich powrót.",
+      "whatHappened": "CNN podał, że amerykański rząd zdjął kontrolę eksportową z modeli Anthropic Fable 5 i Mythos 5, które wcześniej zostały zamrożone ze względów bezpieczeństwa. Anthropic przekazał, że zacznie przywracać dostęp od 1 lipca, a w swoim newsroomie pokazuje już komunikat o ponownym wdrożeniu Fable 5.",
+      "keyFacts": [
+        "Chodzi o najbardziej zaawansowane modele Anthropic, wcześniej objęte rządową blokadą.",
+        "CNN opisuje decyzję jako cofnięcie kontroli eksportowej przez Biały Dom.",
+        "Anthropic zapowiada globalny powrót Fable 5 od 1 lipca."
+      ],
+      "reactions": [
+        "To ważna karta technologiczna, bo dotyka styku bezpieczeństwa narodowego, AI i dostępu do modeli granicznych.",
+        "Decyzja może być odczytywana jako sygnał, że rząd nie chce długotrwale hamować komercyjnych wdrożeń po czerwcowym ostrym ruchu."
+      ],
+      "whyItMatters": "Wahania wokół Fable 5 pokazują, że polityka bezpieczeństwa AI może w bardzo krótkim czasie zamrażać i przywracać dostęp do najważniejszych modeli, co bezpośrednio wpływa na rynek i zaufanie użytkowników.",
+      "context": "Wieczorem technologia była w feedzie przez pozew przeciw Mecie. O 06:02 centrum technologicznej karty przechodzi na regulacyjny zwrot wobec Anthropic.",
+      "watchNext": [
+        "Czy administracja USA wyjaśni publicznie, co zmieniło się między zawieszeniem a odblokowaniem modeli.",
+        "Czy Anthropic pokaże nowe zasady zabezpieczeń lub harmonogram pełnego przywrócenia dostępu."
+      ],
+      "sources": [
+        {
+          "title": "CNN: White House lifts export control on Anthropic that froze its most advanced models",
+          "url": "https://edition.cnn.com/2026/06/30/tech/anthropic-export-control-ban-lifted-white-house"
+        },
+        {
+          "title": "Anthropic Newsroom",
+          "url": "https://www.anthropic.com/news"
+        }
+      ],
+      "tags": [
+        "Anthropic",
+        "AI",
+        "USA",
+        "Regulacje"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0602-08-moscow",
+      "section": "Bezpieczeństwo",
+      "title": "Ukraina deklaruje uderzenie w centrum łączności satelitarnej pod Moskwą, a Rosja mówi o śmierci niemowlęcia",
+      "lead": "Dalekozasięgowa wojna dronowa znów wchodzi w obszar bezpośrednio kojarzony z rosyjskim zapleczem strategicznym.",
+      "whatHappened": "CNN podał, że Ukraina twierdzi, iż po raz drugi w ciągu nieco ponad tygodnia trafiła centrum łączności satelitarnej Dubna na północ od Moskwy. Kijów przedstawia obiekt jako element rosyjskiego systemu wywiadu i koordynacji wojsk, podczas gdy Rosja potwierdza nocny atak dronów i informuje o śmierci niemowlęcia, ale nie potwierdza ukraińskiego opisu celu.",
+      "keyFacts": [
+        "Według Kijowa celem był ośrodek Dubna używany do łączności i koordynacji rosyjskich sił.",
+        "CNN opisuje to jako drugi taki atak na ten obiekt w niewiele ponad tydzień.",
+        "Rosja podaje, że w nocnym ataku zginęło niemowlę, ale nie potwierdza ukraińskiej wersji dotyczącej skutków na obiekcie."
+      ],
+      "reactions": [
+        "To jedna z najmocniejszych kart bezpieczeństwa międzynarodowego tego slotu.",
+        "Historia będzie równocześnie odczytywana jako presja operacyjna Kijowa i jako materiał propagandowy obu stron."
+      ],
+      "whyItMatters": "Ataki na strategiczną infrastrukturę łączności wokół Moskwy pokazują, że wojna dronowa coraz głębiej wchodzi w rosyjskie zaplecze i może wywoływać gwałtowne odpowiedzi.",
+      "context": "W poprzednich slotach feed patrzył na bezpieczeństwo głównie przez Iran i Monako. O 06:02 na pierwszy plan wchodzi bezpośredni wymiar wojny Rosja-Ukraina.",
+      "watchNext": [
+        "Czy pojawi się niezależne potwierdzenie uszkodzeń w ośrodku Dubna.",
+        "Czy Rosja odpowie nową falą uderzeń albo komunikatem o dodatkowych ofiarach i zniszczeniach."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Ukraine launches major drone attack on Moscow, hitting a satellite center and killing a baby",
+          "url": "https://edition.cnn.com/2026/06/30/europe/moscow-dubna-attack-ukraine-intl"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "Drony",
+        "Dubna"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0602-09-venezuela-anger",
+      "section": "Świat",
+      "title": "Wenezuela odgruzowuje ręcznie po trzęsieniu ziemi, bo ciężki sprzęt stoi bez paliwa",
+      "lead": "Najmocniejsza nowa karta humanitarna poranka pokazuje nie tylko skalę zniszczeń, ale też zapaść państwowych możliwości reakcji.",
+      "whatHappened": "CNN podał z La Guaira, że niemal tydzień po dwóch silnych trzęsieniach ziemi mieszkańcy nadal ręcznie przekopują gruzy w poszukiwaniu bliskich. Przy jednym z zawalonych budynków koparka stała bezczynnie, bo operator nie miał paliwa, co dla reportażu CNN stało się symbolem ograniczeń państwa mimo ogromnych potrzeb ratunkowych.",
+      "keyFacts": [
+        "CNN opisuje ręczne odgruzowywanie budynków prawie tydzień po katastrofie.",
+        "Na miejscu widać ciężki sprzęt, który nie pracuje z powodu braków paliwa.",
+        "Rosną obawy, że rzeczywisty bilans ofiar może być znacznie wyższy."
+      ],
+      "reactions": [
+        "To karta, która łączy katastrofę naturalną z kryzysem instytucjonalnym państwa.",
+        "Feed powinien podkreślać, że temat nie dotyczy już tylko samego trzęsienia, ale zdolności kraju do ratowania własnych obywateli."
+      ],
+      "whyItMatters": "Jeśli brak paliwa i sprzętu hamuje akcję ratunkową, każdy kolejny dzień może podnosić liczbę ofiar i wzmacniać gniew wobec władz.",
+      "context": "W opublikowanym slocie 18:00 Wenezuela była już obecna, ale o 06:02 temat wraca z nowym, mocniejszym kątem o bezradności systemu ratunkowego.",
+      "watchNext": [
+        "Czy władze pokażą nowe zasoby, paliwo lub wsparcie zewnętrzne dla ratowników.",
+        "Czy pojawi się bardziej wiarygodny i aktualny bilans ofiar oraz zaginionych."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Venezuela earthquake: Anger grows as people rescue their own and fear true death toll is much higher",
+          "url": "https://edition.cnn.com/2026/07/01/americas/venezuela-earthquake-search-rescue-anger-latam-intl"
+        }
+      ],
+      "tags": [
+        "Wenezuela",
+        "TrzęsienieZiemi",
+        "Ratownictwo",
+        "Paliwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0602-10-venezuela-child",
+      "section": "Świat",
+      "title": "Po sześciu dniach spod gruzów w Wenezueli wyciągnięto żywego trzylatka",
+      "lead": "Na tle rosnącej złości i chaosu pojawia się jeden z nielicznych mocnych sygnałów nadziei po katastrofie.",
+      "whatHappened": "BBC podało, że jordański zespół ratunkowy wydobył żywego trzyletniego chłopca sześć dni po trzęsieniu ziemi w stanie La Guaira. Dziecko, wskazane przez wenezuelskiego prezydenta tymczasowego jako Klieber Morán, zostało przewiezione do szpitala.",
+      "keyFacts": [
+        "Trzylatek został odnaleziony żywy po sześciu dniach pod gruzami.",
+        "Akcję przeprowadził jordański zespół ratunkowy.",
+        "Chłopiec został przewieziony do szpitala po wydobyciu."
+      ],
+      "reactions": [
+        "To kontrapunkt dla ciężkiej karty o zapaści akcji ratunkowej, ale nadal pozostaje częścią tego samego kryzysu.",
+        "Historia ma duży potencjał emocjonalny i może długo utrzymywać Wenezuelę wysoko w feedzie."
+      ],
+      "whyItMatters": "Pojedyncze udane akcje ratunkowe pokazują, że okno na odnalezienie żywych nie zamknęło się całkowicie, co może wpływać na decyzje służb i rodzin poszukujących zaginionych.",
+      "context": "To nowa, świeża karta wobec wcześniejszych ujęć Wenezueli skupionych głównie na ofiarach, chaosie i zaniedbanej pomocy.",
+      "watchNext": [
+        "Czy ratownicy odnajdą kolejnych ocalałych w najciężej zniszczonych strefach.",
+        "Czy stan chłopca pozwoli na szybkie informacje medyczne i potwierdzenie skali obrażeń."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Venezuela: Three-year-old rescued and taken to hospital six days after quake",
+          "url": "https://www.bbc.co.uk/news/articles/c1jykwk8n18o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Wenezuela",
+        "Ratownicy",
+        "Dziecko",
+        "TrzęsienieZiemi"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0602-11-pakistan-school",
+      "section": "Świat",
+      "title": "W Lahore zawalenie dachu ośrodka korepetycyjnego zabiło 14 dzieci, a śledczy zatrzymali dwie osoby",
+      "lead": "Katastrofa z dużą liczbą ofiar wśród dzieci pozostaje jedną z najcięższych kart zagranicznych poranka.",
+      "whatHappened": "BBC podało, że w dzielnicy Kahna w Lahore zawalił się dach ośrodka korepetycyjnego. Zginęło 14 dzieci, osiem osób zostało rannych, a w ramach wstępnego dochodzenia zatrzymano dwie osoby.",
+      "keyFacts": [
+        "Bilans podawany przez BBC to 14 zabitych dzieci i ośmioro rannych.",
+        "Do katastrofy doszło w ośrodku korepetycyjnym na przedmieściach Lahore.",
+        "W związku z incydentem zatrzymano dwie osoby."
+      ],
+      "reactions": [
+        "Historia pozostaje w feedzie mimo pojawienia się wielu nowych tematów, bo skala tragedii jest zbyt duża, by zniknęła po jednym slocie.",
+        "To również potencjalny początek większej debaty o standardach budowlanych i odpowiedzialności lokalnych władz."
+      ],
+      "whyItMatters": "Katastrofy z udziałem dzieci niemal zawsze szybko przechodzą z poziomu lokalnego w krajowy i polityczny, zwłaszcza jeśli dochodzi do pytań o zaniedbania.",
+      "context": "Karta weszła do lokalnego slotu 21:02 i utrzymuje wysoką rangę rano, bo nie została przykryta bardziej kompletnym wyjaśnieniem przyczyn.",
+      "watchNext": [
+        "Czy śledczy wskażą odpowiedzialnych za stan budynku i przebieg zajęć.",
+        "Czy bilans ofiar albo liczba zatrzymań wzrośnie po dalszej akcji i dochodzeniu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Pakistan: Roof collapse kills 14 children at Lahore tuition centre",
+          "url": "https://www.bbc.co.uk/news/articles/cr7x38lle1jo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Pakistan",
+        "Lahore",
+        "Katastrofa",
+        "Dzieci"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0602-12-greece-fire",
+      "section": "Świat",
+      "title": "Pożar pod Salonikami ma już co najmniej dwie ofiary, a ponad stu strażaków walczy z ogniem",
+      "lead": "Europa nadal mierzy się z ciężkim połączeniem upału i pożarów, które znów kończy się ofiarami śmiertelnymi.",
+      "whatHappened": "BBC podało, że niekontrolowany pożar w północnej Grecji, w pobliżu Salonik, pochłonął co najmniej dwie ofiary i zmusił mieszkańców jednej z pobliskich wsi do ewakuacji. Na miejscu działa ponad stu strażaków, którzy próbują powstrzymać ogień rozprzestrzeniający się w trudnych warunkach.",
+      "keyFacts": [
+        "BBC mówi o co najmniej dwóch ofiarach śmiertelnych.",
+        "Pożar objął rejon niedaleko Salonik i wymusił ewakuację.",
+        "W akcji uczestniczy ponad stu strażaków."
+      ],
+      "reactions": [
+        "To utrzymująca się karta europejskiego ryzyka pogodowego i klimatycznego.",
+        "W zestawieniu z polskimi alertami pogoda staje się jednym z najbardziej spójnych motywów całego porannego feedu."
+      ],
+      "whyItMatters": "Pożary przy rekordowych temperaturach pokazują, że ekstremalna pogoda nie jest lokalnym wyjątkiem, ale szerokim europejskim problemem bezpieczeństwa.",
+      "context": "Temat był już obecny wieczorem, ale rano utrzymuje się z wyższym bilansem ofiar i nadal zasługuje na miejsce w czołówce zagranicznego bloku.",
+      "watchNext": [
+        "Czy ogień obejmie kolejne miejscowości albo pojawią się nowe ofiary.",
+        "Czy greckie służby zdołają przejąć kontrolę nad pożarem przed pełnym rozgrzaniem dnia."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Greece wildfire leaves two dead as firefighters struggle to contain blaze",
+          "url": "https://www.bbc.co.uk/news/articles/c0qy3nkex0qo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Grecja",
+        "Pożar",
+        "Saloniki",
+        "Upał"
+      ],
+      "priority": "High"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "IMGW: Aktualna i prognozowana sytuacja meteorologiczna i hydrologiczna – raport nr 135",
+      "url": "https://imgw.pl/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-135/"
+    },
+    {
+      "title": "OGE: President Trump’s certified annual financial disclosure report",
+      "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4EC9A8E6DD078F2985258CA9002C9377/%24FILE/Trump%2C%20Donald%20J.%202025%20Annual%20278.pdf"
+    },
+    {
+      "title": "Supreme Court: Trump v. Barbara (06/30/2026)",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/25-365_4hdj.pdf"
+    },
+    {
+      "title": "Anthropic Newsroom",
+      "url": "https://www.anthropic.com/news"
+    }
+  ]
+}
