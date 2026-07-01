@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-01T12:09:32.317301+00:00",
+  "generatedAt": "2026-07-01T12:11:09.994468+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -551,6 +551,17 @@
       "time": "00:10"
     },
     {
+      "id": "research/puls-dnia-news/runs/2026-07-01-1201.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-07-01-1201.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-01-1201.md",
+      "sizeBytes": 15735,
+      "date": "2026-07-01",
+      "time": "12:01"
+    },
+    {
       "id": "research/puls-dnia-news/runs/2026-07-01-0902.md",
       "type": "run",
       "topic": "puls-dnia-news",
@@ -571,6 +582,18 @@
       "sizeBytes": 14910,
       "date": "2026-07-01",
       "time": "06:02"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-01-1201-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-01-1201-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-01-1201-pulse-news.json",
+      "sizeBytes": 28267,
+      "date": "2026-07-01",
+      "time": "12:01",
+      "itemCount": 12
     },
     {
       "id": "research/puls-dnia-news/data/2026-07-01-0902-pulse-news.json",
@@ -595,6 +618,17 @@
       "date": "2026-07-01",
       "time": "06:02",
       "itemCount": 12
+    },
+    {
+      "id": "research/puls-dnia-news/pdfs/2026-07-01-1201-puls-dnia-news.pdf",
+      "type": "pdf",
+      "topic": "puls-dnia-news",
+      "title": "2026-07-01-1201-puls-dnia-news.pdf",
+      "path": "research/puls-dnia-news/pdfs/2026-07-01-1201-puls-dnia-news.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/pdfs/2026-07-01-1201-puls-dnia-news.pdf",
+      "sizeBytes": 86165,
+      "date": "2026-07-01",
+      "time": "12:01"
     },
     {
       "id": "research/polska-swiat/runs/2026-07-01.md",
