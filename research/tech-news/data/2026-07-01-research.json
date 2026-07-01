@@ -1,0 +1,449 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-01",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Poranny research jest materialną aktualizacją po wieczornym raporcie z 2026-06-30-1935. Najmocniejsza oś to normalizacja agentów przez koszt i dostęp: Anthropic udostępnia Claude Sonnet 5 jako tańszy model agentowy dla wszystkich planów, a jednocześnie przywraca Fable 5 po zdjęciu amerykańskich export controls i zapowiada wspólny standard oceny jailbreaków. Wczorajszy wątek bramkowania modeli nie zniknął; stał się praktycznym pytaniem o ceny, usage credits, limity i relację laboratoriów z rządem.",
+    "Druga oś to pieniądz i infrastruktura pod agentów. Open Standard zebrał ponad 140 partnerów wokół Open USD, z udziałem największych firm płatniczych, finansowych i technologicznych. Po wczorajszym OKX AI to kolejny sygnał, że agent economy nie będzie tylko interfejsem rozmowy, ale też warstwą rozliczeń, reputacji, on/off rampów i governance.",
+    "Trzecia oś to twardy koszt skali: Etched pokazuje Low-Voltage Inference jako próbę zwiększenia wykorzystania FLOPs bez throttlingu, Lime wraca na giełdę jako test kapitałochłonnego hardware-plus-software modelu miejskiego, a Getty rezygnuje z połączenia z Shutterstock po warunku CMA dotyczącym sprzedaży biznesu editorial. Polski akcent jest praktyczny: od dziś gotowe uczelnie mogą wydawać cyfrowe dyplomy dostępne przez mObywatela i portal dyplomy.nauka.gov.pl."
+  ],
+  "summaryBullets": [
+    "AI: Claude Sonnet 5 robi z agentów produkt codzienny, a Fable 5 wraca po sporze z rządem USA",
+    "Infrastruktura: Open USD zbiera wielkie firmy wokół stablecoina dla internetu",
+    "Infrastruktura: Etched stawia na Low-Voltage Inference jako odpowiedź na throttling AI chips"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-01-0-claude-sonnet-5-robi-z-agentow-produkt-codzienny-a-fable-5-wraca-po-sporze-z-rzadem-usa-9931e2b487",
+      "section": "AI",
+      "title": "Claude Sonnet 5 robi z agentów produkt codzienny, a Fable 5 wraca po sporze z rządem USA",
+      "standfirst": "Anthropic udostępnił Claude Sonnet 5 wszystkim planom i przywraca Fable 5 po zdjęciu amerykańskich export controls. To jednocześnie premiera tańszego modelu agentowego i test politycznego bramkowania frontier AI.",
+      "whatHappened": "Claude Sonnet 5 stał się modelem domyślnym dla Free i Pro, a Fable 5 wraca globalnie od 1 lipca z późniejszym rozliczaniem przez usage credits.",
+      "whyItMatters": "Laboratoria AI próbują zejść z kosztu agentów, ale najbardziej zaawansowane modele nadal podlegają kontroli dostępu, limitom i presji rządowej.",
+      "deeperAnalysis": [
+        "Sonnet 5 jest pozycjonowany jako model do agentowej codzienności, a nie jako pokazowy rekord benchmarków. Najważniejsze nie jest samo \"mocniejszy model\", tylko połączenie dostępności we wszystkich planach, integracji z Claude Code i API oraz niższej ceny wejścia dla pracy wieloetapowej. To obniża próg dla zespołów, które chcą delegować przegląd kodu, research, automatyzację operacji i zadania knowledge work bez płacenia za najwyższą klasę Opus/Mythos.",
+        "Równolegle Fable 5 pokazuje drugą stronę rynku. Ten sam dzień przynosi komunikat o zdjęciu export controls po wcześniejszym zawieszeniu modeli Fable i Mythos. Anthropic wraca z dostępem globalnym do Fable 5, ale Mythos 5 pozostaje ograniczony do zatwierdzonych organizacji w USA i programu Glasswing. To przypomina, że w 2026 r. release modeli jest coraz bardziej podobny do kontrolowanej infrastruktury strategicznej niż do zwykłej aktualizacji SaaS.",
+        "Dla polskiego podcastu dobry kąt brzmi: \"tańsze agenty dla wszystkich, najostrzejsze modele dla wybranych\". Wczorajszy wątek OpenAI GPT-5.6 i Anthropic Mythos nie jest jednorazową historią o USA, tylko nowym wzorem: modele średniej klasy idą szeroko, modele z dużym cyber potencjałem idą przez usage credits, approval, limity i warstwę compliance."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic uruchomił Sonnet 5 i przywraca Fable 5 po zdjęciu export controls.",
+        "Dlaczego ważne: koszt agentów spada, ale governance najbardziej zaawansowanych modeli twardnieje.",
+        "Na co patrzeć dalej: ceny po 31 sierpnia, usage credits po 7 lipca, dostęp Mythos 5 poza USA, reakcje OpenAI/Google i standard jailbreak severity."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic: Claude Sonnet 5",
+          "url": "https://www.anthropic.com/news/claude-sonnet-5"
+        },
+        {
+          "title": "Anthropic: Redeploying Fable 5",
+          "url": "https://www.anthropic.com/news/redeploying-fable-5"
+        },
+        {
+          "title": "TechCrunch: Claude Sonnet 5 as cheaper agents",
+          "url": "https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/"
+        },
+        {
+          "title": "Axios: Anthropic debuts Sonnet 5",
+          "url": "https://www.axios.com/2026/06/30/anthropic-sonnet-5-agents-mythos-fable"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/news"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Anthropic",
+        "Claude",
+        "Agenci",
+        "Regulacje"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-01-1-open-usd-zbiera-wielkie-firmy-wokol-stablecoina-dla-internetu-d4f6e1a661",
+      "section": "Infrastruktura",
+      "title": "Open USD zbiera wielkie firmy wokół stablecoina dla internetu",
+      "standfirst": "Open Standard zapowiedział Open USD z ponad 140 partnerami, w tym firmami płatniczymi, bankami, fintechami i dużymi platformami technologicznymi. Model ma przenosić część ekonomii rezerw do firm korzystających ze stablecoina.",
+      "whatHappened": "Open USD ma oferować mint i redeem bez opłat, governance przez partnerów oraz udział partnerów w przychodach z rezerw.",
+      "whyItMatters": "Po OKX AI to kolejny dowód, że warstwa płatności i rozliczeń staje się elementem infrastruktury agentów, marketplace'ów i globalnego software'u.",
+      "deeperAnalysis": [
+        "Open USD nie jest zwykłym \"kolejnym tokenem\", jeśli potwierdzi się skala partnerów i integracji. Oficjalny komunikat mówi o stablecoinie budowanym pod firmy przemieszczające pieniądze, bez sztucznych limitów wolumenu i z governance przez niezależny podmiot kontrolowany przez partnerów. WSJ dopowiada listę nazw, która wychodzi poza crypto-native świat: BlackRock, Google, Coinbase, Visa, Stripe i Mastercard.",
+        "Najważniejszy aspekt to ekonomia dystrybucji. Dotychczas duża część przychodów ze stablecoinów zostawała u emitentów i podmiotów trzymających rezerwy. Open Standard deklaruje model, w którym partnerzy dostają przychody z rezerw pomniejszone o opłatę operacyjną. To może zachęcać płatniczych gigantów do używania stablecoinów jako rails dla cross-border payments, merchant settlement i automatycznych płatności software-to-software.",
+        "Ten temat warto połączyć z wczorajszym OKX AI, ale bez narracji inwestycyjnej. Jeśli agenty mają kupować dane, zlecać usługę, rozliczać API albo płacić za wykonanie zadania, potrzebują płatności, limitów, audytu, dispute resolution i zgodności regulacyjnej. Open USD celuje szerzej niż crypto trading, ale realność pokażą integracje, wolumeny i to, czy partnerzy użyją go produkcyjnie."
+      ],
+      "contextPoints": [
+        "Co się stało: Open Standard ogłosił Open USD z szeroką listą partnerów.",
+        "Dlaczego ważne: stablecoiny stają się infrastrukturą payments dla firm, nie tylko aktywem crypto.",
+        "Na co patrzeć dalej: faktyczny start sieci, udział Stripe/Google/Visa, reserve economics, compliance, on/off ramps i wykorzystanie przez agentowe marketplace'y."
+      ],
+      "sources": [
+        {
+          "title": "Open Standard: Introducing Open USD",
+          "url": "https://joinopenstandard.com/blog/introducing-open-usd"
+        },
+        {
+          "title": "Open USD",
+          "url": "https://joinopenstandard.com/"
+        },
+        {
+          "title": "WSJ: BlackRock, Google back Open USD",
+          "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-06-30-2026/card/blackrock-google-join-banks-and-crypto-firms-in-backing-new-stablecoin-czjc2S3yJVxmofXLQpzP"
+        },
+        {
+          "title": "Fireblocks: OUSD infrastructure partner",
+          "url": "https://www.fireblocks.com/blog/open-usd-stablecoin-infrastructure-partner"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Stablecoiny",
+        "Płatności",
+        "Fintech",
+        "AI",
+        "Infrastruktura"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-01-2-etched-stawia-na-low-voltage-inference-jako-odpowiedz-na-throttling-ai-chips-6fca0f80a6",
+      "section": "Infrastruktura",
+      "title": "Etched stawia na Low-Voltage Inference jako odpowiedź na throttling AI chips",
+      "standfirst": "Etched promuje architekturę Low-Voltage Inference, która ma zwiększyć realne wykorzystanie FLOPs bez termicznego throttlingu. Firma twierdzi, że może utrzymać ponad 80 procent peak FLOPs dla sparse MoE.",
+      "whatHappened": "Etched opublikował techniczny przekaz o uruchamianiu bloków matematycznych przy niższym napięciu niż typowe AI chips.",
+      "whyItMatters": "Rynek AI przesuwa się z treningu na tanią, gęstą i stabilną inferencję, a ograniczeniem coraz częściej jest energia, ciepło i wykorzystanie chipów w racku.",
+      "deeperAnalysis": [
+        "W poprzednich raportach compute był głównie historią o dostępie do GPU, pamięci HBM, chłodzeniu i data centers. Etched pokazuje inną warstwę tego samego problemu: nawet jeśli chip ma imponujące peak FLOPs, utrzymanie wysokiego wykorzystania pod realnym obciążeniem może rozbić się o pobór mocy i temperaturę. LVI ma być odpowiedzią projektową, a nie tylko kolejnym claimem wydajnościowym.",
+        "Wątek jest ważny, bo inference staje się produkcyjnym kosztem agentów. Modele agentowe zużywają więcej tokenów, więcej tool calls i więcej prób niż prosty chatbot. Jeśli Sonnet 5, GPT-5.6 Luna/Terra i podobne modele mają być używane masowo, koszt na długie workflow może wymusić specjalizowane architektury, sparsity, batchowanie, niskie napięcie i bliską współpracę chip-firmware-software.",
+        "Nie ma jeszcze niezależnej weryfikacji wszystkich claimów Etched, więc raport traktuje to jako sygnał technologiczny i rynkowy, nie jako potwierdzony benchmark. Podcastowo dobry kontrast to: \"AI chips nie wygrywają już tylko tym, ile mają FLOPs na slajdzie, ale ile z tych FLOPs da się utrzymać bez gotowania racka\"."
+      ],
+      "contextPoints": [
+        "Co się stało: Etched opisał Low-Voltage Inference jako sposób na mniejszy throttling i większą gęstość FLOPs.",
+        "Dlaczego ważne: koszt agentów zależy od realnej, stabilnej inferencji, a nie wyłącznie od szczytowej mocy chipu.",
+        "Na co patrzeć dalej: niezależne benchmarki, pierwsze klastry klientów, porównania z Nvidia/AMD/Groq/Cerebras i dostępność oprogramowania."
+      ],
+      "sources": [
+        {
+          "title": "Etched",
+          "url": "https://www.etched.com/"
+        },
+        {
+          "title": "Techmeme",
+          "url": "https://www.techmeme.com/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Chipy",
+        "Inference",
+        "Etched",
+        "Infrastruktura"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-01-3-cma-rozbija-logike-polaczenia-getty-i-shutterstock-w-epoce-ai-content-783d538f38",
+      "section": "Regulacje",
+      "title": "CMA rozbija logikę połączenia Getty i Shutterstock w epoce AI content",
+      "standfirst": "Getty planuje zakończyć połączenie z Shutterstock po tym, jak brytyjska CMA wymagała sprzedaży editorial business Shutterstock. To ważny przykład, jak regulatorzy traktują rynek profesjonalnych zdjęć i treści w czasie presji generatywnej AI.",
+      "whatHappened": "Getty nie chce realizować warunku sprzedaży editorial business, więc zamierza zakończyć umowę merger of equals.",
+      "whyItMatters": "Konsolidacja bibliotek zdjęć, wideo i materiałów editorial ma znaczenie dla mediów, licencjonowania treningu AI i cen dostępu do zweryfikowanych treści.",
+      "deeperAnalysis": [
+        "Getty i Shutterstock chciały połączyć siły w świecie, w którym tradycyjny stock i editorial content są ściskane przez generatywne obrazy, spadek cen nano-stocku i rosnące znaczenie licencji danych dla modeli AI. CMA nie zakwestionowała wszystkiego, ale uznała, że segment editorial wymaga osobnej ochrony konkurencji, bo dla brytyjskich odbiorców medialnych Shutterstock pozostaje jednym z kilku realnych alternatywnych źródeł.",
+        "To jest ciekawy kontrapunkt do narracji \"AI wymusza konsolidację\". Regulatorzy mogą akceptować argument, że rynek się zmienia, a jednocześnie wymagać remedium tam, gdzie konsolidacja ograniczy wybór redakcji i podniesie ceny. W epoce AI zaufane, licencjonowane i aktualne treści editorial mogą być jeszcze cenniejsze, bo odróżniają się od syntetycznej podaży.",
+        "Dla podcastu temat jest dobry, bo łączy AI bez mówienia o modelu. Nie chodzi tylko o to, kto wygeneruje obraz, ale kto kontroluje archiwa, prawa, dystrybucję i ceny materiałów, z których korzystają media, firmy i potencjalnie systemy AI."
+      ],
+      "contextPoints": [
+        "Co się stało: Getty planuje wycofać się z transakcji po warunku CMA dotyczącym editorial business Shutterstock.",
+        "Dlaczego ważne: prawa i konkurencja na rynku treści stają się elementem infrastruktury AI i mediów.",
+        "Na co patrzeć dalej: formalne zakończenie umowy 6 lipca, reakcję Shutterstock, alternatywne finansowanie Getty i kolejne decyzje regulatorów o content licensing."
+      ],
+      "sources": [
+        {
+          "title": "WSJ: Getty Images plans to end Shutterstock deal",
+          "url": "https://www.wsj.com/business/getty-images-plans-to-end-shutterstock-deal-after-u-k-imposes-conditions-6e831dc4"
+        },
+        {
+          "title": "CMA: Getty Images / Shutterstock merger inquiry",
+          "url": "https://www.gov.uk/cma-cases/getty-images-slash-shutterstock-merger-inquiry"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Regulacje",
+        "AI",
+        "Media",
+        "Copyright",
+        "Treści"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-01-4-lime-wraca-na-gielde-jako-test-techu-z-fizycznym-kosztem-d6002eeb81",
+      "section": "Produkty",
+      "title": "Lime wraca na giełdę jako test techu z fizycznym kosztem",
+      "standfirst": "Lime zebrał w IPO około 167 mln USD i ma zadebiutować na Nasdaq jako LIME. To test, czy inwestorzy znów kupują technologię, która łączy software, flotę sprzętu, regulacje miejskie i wysokie koszty operacyjne.",
+      "whatHappened": "Neutron Holdings, operator Lime, sprzedał 6,68 mln akcji po 25 USD i przygotowuje debiut na Nasdaq.",
+      "whyItMatters": "Po latach korekty startupów mobilnościowych Lime pokazuje, że rynek może nagradzać firmy z realną infrastrukturą, ale nadal wymaga dyscypliny kosztów i lokalnego regulatory fit.",
+      "deeperAnalysis": [
+        "Lime jest inny niż klasyczny SaaS albo AI lab. Działa w ponad 230 miastach, musi kupować i utrzymywać rowery oraz hulajnogi, negocjować z miastami, zarządzać flotą i współpracować z Uberem. Reuters podaje wzrost przychodów do 886,7 mln USD w 2025 r., ale też stratę netto 59,3 mln USD. To pokazuje, że skala nie usuwa całkowicie ekonomiki sprzętu i operacji terenowych.",
+        "IPO Lime można czytać jako szerszy sygnał rynku publicznego. Po AI i software inwestorzy patrzą też na spółki, które mają fizyczny produkt, infrastrukturę i miejską użyteczność. Jednocześnie historia Bird i innych mikromobilnościowych firm przypomina, że ten segment potrafi szybko spalić kapitał, jeśli urządzenia są krótkowieczne, vandalism wysoki, a miasta zmieniają zasady.",
+        "W polskim kontekście to nie musi być główny temat podcastu, ale jest dobrym krótkim segmentem o \"technologii z ciężarem\". AI compute, robotaxi, data centers i mikromobilność mają wspólny problem: świetne aplikacje na ekranie muszą być wsparte drogim sprzętem, energią, regulacjami i utrzymaniem."
+      ],
+      "contextPoints": [
+        "Co się stało: Lime wycenił IPO na 25 USD za akcję i szykuje debiut na Nasdaq pod tickerem LIME.",
+        "Dlaczego ważne: fizyczne platformy technologiczne wracają na rynek publiczny mimo kosztów sprzętu i regulacji.",
+        "Na co patrzeć dalej: pierwszy dzień notowań, wykorzystanie środków na spłatę długu, relację z Uberem, rentowność floty i reakcje miast."
+      ],
+      "sources": [
+        {
+          "title": "Reuters przez Investing.com: Lime IPO",
+          "url": "https://www.investing.com/news/stock-market-news/uberbacked-lime-prices-ipo-at-25-per-share-bloomberg-news-reports-4769326"
+        },
+        {
+          "title": "SEC: Neutron Holdings S-1",
+          "url": "https://www.sec.gov/Archives/edgar/data/1699963/000162828026032523/neutronholdingsinc-sx1.htm"
+        },
+        {
+          "title": "Financial Times: Lime IPO",
+          "url": "https://www.ft.com/content/5d9eee57-f08c-4b28-a9d5-57578fbc1f8f"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Startupy",
+        "IPO",
+        "Mobilność",
+        "Hardware",
+        "Rynek"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-01-5-mdyplomy-w-mobywatelu-robia-z-polskiego-dyplomu-dokument-cyfrowy-d4045722b9",
+      "section": "Produkty",
+      "title": "mDyplomy w mObywatelu robią z polskiego dyplomu dokument cyfrowy",
+      "standfirst": "Od 1 lipca gotowe uczelnie mogą wydawać cyfrowe dyplomy, które absolwenci pobiorą przez portal dyplomy.nauka.gov.pl i aplikację mObywatel. Od 2027 roku ma to być domyślna forma wydawania dyplomów.",
+      "whatHappened": "Uruchomiono praktyczny etap cyfrowych dyplomów opartych o Repozytorium Dyplomów Elektronicznych w systemie POL-on.",
+      "whyItMatters": "To lokalny przykład technologii publicznej, która przenosi weryfikację kwalifikacji z papieru do API, aplikacji i repozytorium państwowego.",
+      "deeperAnalysis": [
+        "mDyplomy nie są widowiskowym newsem AI, ale są ważnym kawałkiem infrastruktury cyfrowego państwa. Dyplom ma być dostępny online niezależnie od miejsca pobytu, możliwy do pobrania i udostępnienia do weryfikacji. To zmienia praktykę absolwentów, uczelni i pracodawców, bo dokument przestaje być wyłącznie papierowym artefaktem przechowywanym w teczce.",
+        "Technicznie najważniejsze jest Repozytorium Dyplomów Elektronicznych jako część POL-on. Uczelnie mogą integrować swoje systemy przez API albo obsługiwać proces ręcznie, a od 1 stycznia 2027 r. cyfrowe dyplomy mają stać się standardem. To dobry przykład, że cyfryzacja publiczna często jest mniej efektowna niż AI, ale realnie skraca obieg dokumentów i ułatwia weryfikację.",
+        "Dla podcastu warto zestawić mDyplomy z e-ID, walletami i age assurance z poprzednich raportów. Coraz więcej codziennych uprawnień, kwalifikacji i tożsamości przechodzi do aplikacji. To daje wygodę, ale wymaga stabilności systemu, kontroli dostępu, czytelnych procedur awaryjnych i zaufania do rejestrów."
+      ],
+      "contextPoints": [
+        "Co się stało: Polska uruchamia cyfrowe dyplomy dostępne przez portal i mObywatela.",
+        "Dlaczego ważne: kwalifikacje edukacyjne stają się weryfikowalnym dokumentem cyfrowym, nie tylko papierowym zaświadczeniem.",
+        "Na co patrzeć dalej: tempo wdrożeń uczelni, działanie API POL-on, doświadczenie pracodawców i obowiązkowy start od 1 stycznia 2027 r."
+      ],
+      "sources": [
+        {
+          "title": "Ministerstwo Nauki: Polska wprowadza dyplomy elektroniczne",
+          "url": "https://www.gov.pl/web/nauka/transformacja-cyfrowa-w-szkolnictwie-wyzszym-polska-wprowadza-dyplomy-elektroniczne"
+        },
+        {
+          "title": "Ministerstwo Cyfryzacji: wiadomości",
+          "url": "https://www.gov.pl/web/cyfryzacja/wiadomosci"
+        },
+        {
+          "title": "OPI PIB: cyfrowe dyplomy w mObywatelu",
+          "url": "https://opi.org.pl/cyfrowe-dyplomy-dostepne-w-mobywatelu-nowe-rozwiazanie-dla-uczelni-i-absolwentow/"
+        },
+        {
+          "title": "WP Tech: mDyplomy w mObywatelu",
+          "url": "https://tech.wp.pl/mdyplomy-w-mobywatelu-repozytorium-e-dyplomow-w-telefonie%2C7302430133971200a"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Polska",
+        "mObywatel",
+        "Cyfryzacja",
+        "Edukacja",
+        "Administracja"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-01-6-product-hunt-rano-nie-ma-nowych-postow-ale-agentowe-narzedzia-wciaz-dominuja-tygodniowy-sygnal-7db0c1f6ef",
+      "section": "Produkty",
+      "title": "Product Hunt rano nie ma nowych postów, ale agentowe narzędzia wciąż dominują tygodniowy sygnał",
+      "standfirst": "Product Hunt dla 1 lipca rano pokazuje brak dziennych postów, ale tygodniowy leaderboard nadal jest pełen narzędzi agentowych. Tencent EdgeOne Makers, Bluerails Discovery, BrowserAct i AgentX utrzymują wzór agent-ready software.",
+      "whatHappened": "Dzienne archiwum 2026-07-01 nie miało rano postów, a tygodniowy ranking pokazuje agentowe produkty jako najwyższy sygnał społeczności startupowej.",
+      "whyItMatters": "Brak świeżego dziennego Product Hunt nie zatrzymuje trendu: startupowy rynek buduje narzędzia dla wdrażania, odkrywania, automatyzacji i oceny agentów.",
+      "deeperAnalysis": [
+        "Ten element nie jest tak silny jak oficjalne premiery Anthropic albo Open USD, ale jest ważny jako tło rynku. Product Hunt w poprzednich runach często dawał dobry sygnał, jakie produkty próbuje dziś społeczność makerów. 1 lipca rano dzienne archiwum było puste, więc raport nie przypisuje mu nowego launchu.",
+        "Tygodniowy ranking nadal pokazuje jednak powtarzalny wzór: \"ship AI agents like web apps\", discovery rails dla agentów, web browser automation i ewaluacja agentów. To spójne z wczorajszym X MCP, OKX AI, Framer 3.0 i dzisiejszym Sonnet 5. Produkty start-upowe nie sprzedają już tylko czatu, ale warstwę wykonania, rozliczania, obserwowania i naprawiania agentów.",
+        "Dla podcastu to może być krótka obserwacja, nie samodzielny segment. Gdy oficjalne platformy wystawiają modele i payments rails, Product Hunt pokazuje, jak szybko mniejsi dostawcy próbują opakować te możliwości w narzędzia dla developerów, marketingu i pracy zespołowej."
+      ],
+      "contextPoints": [
+        "Co się stało: Product Hunt daily dla 2026-07-01 był rano pusty, ale ranking tygodniowy utrzymuje agentowy wzór.",
+        "Dlaczego ważne: społeczność startupowa potwierdza, że agent infrastructure jest dziś komercyjnym kierunkiem.",
+        "Na co patrzeć dalej: czy dzienny ranking uzupełni się po południu i czy produkty agentowe utrzymają pozycje przez tydzień."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt daily 2026-07-01",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/7/1"
+        },
+        {
+          "title": "Product Hunt weekly 2026-06-22",
+          "url": "https://www.producthunt.com/leaderboard/weekly/2026/26"
+        }
+      ],
+      "priority": "Low",
+      "tags": [
+        "Product Hunt",
+        "Agenci",
+        "Developer Tools",
+        "AI",
+        "Startupy"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Anthropic: tańszy Sonnet 5 i kontrolowany powrót Fable 5",
+      "rationale": "Jednego dnia widać demokratyzację agentów przez niższy koszt oraz bramkowanie najmocniejszych modeli przez usage credits, approval i relację z rządem USA.",
+      "sourcesLabel": "Anthropic; TechCrunch; Axios; HN"
+    },
+    {
+      "priority": "High",
+      "title": "Open USD jako payments layer dla firm i agentów",
+      "rationale": "Ponad 140 partnerów wokół stablecoina pokazuje, że infrastruktura płatności może stać się równie ważna jak modele i connectory.",
+      "sourcesLabel": "Open Standard; WSJ; Fireblocks"
+    },
+    {
+      "priority": "High",
+      "title": "Etched i realny koszt inferencji",
+      "rationale": "Low-Voltage Inference dobrze tłumaczy, dlaczego agentowa AI potrzebuje chipów utrzymujących wysokie wykorzystanie bez throttlingu.",
+      "sourcesLabel": "Etched; Techmeme"
+    },
+    {
+      "priority": "Medium",
+      "title": "Getty/Shutterstock: treści editorial pod kontrolą regulatora",
+      "rationale": "AI zmienia rynek obrazów, ale regulatorzy nadal pilnują konkurencji w dostępie do zaufanych źródeł medialnych.",
+      "sourcesLabel": "WSJ; CMA"
+    },
+    {
+      "priority": "Medium",
+      "title": "Lime IPO: technologia z fizyczną flotą wraca na Nasdaq",
+      "rationale": "Mikromobilność pokazuje drugą stronę techu: sprzęt, miasta, regulacje i koszty operacyjne zamiast samego software'u.",
+      "sourcesLabel": "Reuters; SEC; FT"
+    },
+    {
+      "priority": "Medium",
+      "title": "mDyplomy w mObywatelu",
+      "rationale": "Polski wątek praktycznej cyfryzacji: dyplom jako dokument w aplikacji i repozytorium, a nie tylko papier.",
+      "sourcesLabel": "Ministerstwo Nauki; MC; OPI; WP Tech"
+    },
+    {
+      "priority": "Low",
+      "title": "Product Hunt bez nowych postów, ale z agentowym trendem tygodniowym",
+      "rationale": "To dobry krótki sygnał, że rynek makerów nadal opakowuje agentów w produkty dla developerów i zespołów.",
+      "sourcesLabel": "Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Anthropic: Claude Sonnet 5",
+      "url": "https://www.anthropic.com/news/claude-sonnet-5"
+    },
+    {
+      "title": "Anthropic: Redeploying Fable 5",
+      "url": "https://www.anthropic.com/news/redeploying-fable-5"
+    },
+    {
+      "title": "Anthropic: Claude Sonnet 5 system card",
+      "url": "https://www.anthropic.com/claude-sonnet-5-system-card"
+    },
+    {
+      "title": "Open Standard: Introducing Open USD",
+      "url": "https://joinopenstandard.com/blog/introducing-open-usd"
+    },
+    {
+      "title": "Open USD",
+      "url": "https://joinopenstandard.com/"
+    },
+    {
+      "title": "Etched",
+      "url": "https://www.etched.com/"
+    },
+    {
+      "title": "CMA Getty/Shutterstock merger inquiry",
+      "url": "https://www.gov.uk/cma-cases/getty-images-slash-shutterstock-merger-inquiry"
+    },
+    {
+      "title": "SEC: Neutron Holdings S-1",
+      "url": "https://www.sec.gov/Archives/edgar/data/1699963/000162828026032523/neutronholdingsinc-sx1.htm"
+    },
+    {
+      "title": "Ministerstwo Nauki: dyplomy elektroniczne",
+      "url": "https://www.gov.pl/web/nauka/transformacja-cyfrowa-w-szkolnictwie-wyzszym-polska-wprowadza-dyplomy-elektroniczne"
+    },
+    {
+      "title": "Ministerstwo Cyfryzacji",
+      "url": "https://www.gov.pl/web/cyfryzacja/wiadomosci"
+    },
+    {
+      "title": "OPI PIB: cyfrowe dyplomy",
+      "url": "https://opi.org.pl/cyfrowe-dyplomy-dostepne-w-mobywatelu-nowe-rozwiazanie-dla-uczelni-i-absolwentow/"
+    },
+    {
+      "title": "TechCrunch o Claude Sonnet 5",
+      "url": "https://techcrunch.com/2026/06/30/anthropic-launches-claude-sonnet-5-as-a-cheaper-way-to-run-agents/"
+    },
+    {
+      "title": "Axios o Sonnet 5",
+      "url": "https://www.axios.com/2026/06/30/anthropic-sonnet-5-agents-mythos-fable"
+    },
+    {
+      "title": "WSJ o Open USD",
+      "url": "https://www.wsj.com/livecoverage/stock-market-today-dow-sp-500-nasdaq-06-30-2026/card/blackrock-google-join-banks-and-crypto-firms-in-backing-new-stablecoin-czjc2S3yJVxmofXLQpzP"
+    },
+    {
+      "title": "Fireblocks o OUSD",
+      "url": "https://www.fireblocks.com/blog/open-usd-stablecoin-infrastructure-partner"
+    },
+    {
+      "title": "WSJ o Getty/Shutterstock",
+      "url": "https://www.wsj.com/business/getty-images-plans-to-end-shutterstock-deal-after-u-k-imposes-conditions-6e831dc4"
+    },
+    {
+      "title": "Reuters przez Investing.com o Lime IPO",
+      "url": "https://www.investing.com/news/stock-market-news/uberbacked-lime-prices-ipo-at-25-per-share-bloomberg-news-reports-4769326"
+    },
+    {
+      "title": "Financial Times o Lime IPO",
+      "url": "https://www.ft.com/content/5d9eee57-f08c-4b28-a9d5-57578fbc1f8f"
+    },
+    {
+      "title": "WP Tech o mDyplomach",
+      "url": "https://tech.wp.pl/mdyplomy-w-mobywatelu-repozytorium-e-dyplomow-w-telefonie%2C7302430133971200a"
+    },
+    {
+      "title": "Komputer Świat o MiCA",
+      "url": "https://www.komputerswiat.pl/nauka-i-technika/biznes-i-finanse/wchodza-nowe-regulacje-dotyczace-kryptowalut-niektorzy-moga-stracic-dostep-do-srodkow/y885b23"
+    },
+    {
+      "title": "Techmeme",
+      "url": "https://www.techmeme.com/"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/news"
+    },
+    {
+      "title": "old Reddit / r/technology",
+      "url": "https://old.reddit.com/r/technology/"
+    },
+    {
+      "title": "Product Hunt daily 2026-07-01",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/7/1"
+    },
+    {
+      "title": "Product Hunt week 2026-06-22",
+      "url": "https://www.producthunt.com/leaderboard/weekly/2026/26"
+    }
+  ]
+}

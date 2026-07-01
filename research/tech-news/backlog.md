@@ -4,6 +4,12 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Claude Sonnet/Fable access and pricing | Sonnet 5 lowers the cost of everyday agents while Fable 5 returns through usage credits and Mythos 5 remains approval-gated | Watch pricing after August 31, Fable credits after July 7, Mythos/Glasswing expansion, jailbreak severity standard and competitor pricing | Open |
+| High | Track Open USD stablecoin consortium | Open USD adds a broad partner-governed payments rail after OKX AI, with Visa, Stripe, Mastercard, Google, BlackRock and Coinbase in the partner story | Watch production launch, on/off ramps, reserve economics, compliance, Stripe default behavior and use in agent marketplaces | Open |
+| High | Track low-voltage inference | Etched LVI frames AI chip competition around sustained FLOPs, voltage and thermal throttling rather than only peak performance | Watch independent benchmarks, customer validation, Sohu availability, software stack and comparisons with Nvidia, AMD, Groq and Cerebras | Open |
+| Medium | Track Getty/Shutterstock editorial content regulation | Getty plans to end the Shutterstock merger after CMA required selling Shutterstock's editorial business, showing content competition pressure in the AI era | Watch formal termination, Shutterstock response, Getty financing alternatives and implications for licensed content and AI training deals | Open |
+| Medium | Track Lime IPO and physical tech economics | Lime's Nasdaq IPO tests public-market appetite for software plus physical fleets, city rules and high operating costs | Watch first-day trading, use of proceeds, debt reduction, Uber relationship, fleet lifetime and municipal regulation | Open |
+| Medium | Track Polish digital credential infrastructure | mDyplomy in mObywatel and RDE/POL-on move higher-education credentials into public digital identity infrastructure | Watch university adoption, API integration, employer verification, outages and the mandatory digital diploma start on 2027-01-01 | Open |
 | High | Track AWS forward-deployed AI engineers | AWS's $1B FDE organization turns agentic AI adoption into embedded engineering, customer knowledge graphs, runbooks and outcome-oriented deployments | Watch pricing model, named customer case studies, partner roles, security controls and responses from OpenAI, Anthropic and Microsoft | Open |
 | High | Track agent payments and reputation infrastructure | OKX AI is a concrete attempt to let autonomous agents discover work, pay in stablecoins, build identities and resolve disputes | Watch fraud controls, compliance, spending limits, dispute resolution, non-crypto adoption and whether agent-to-agent payments move beyond launch claims | Open |
 | Medium | Track hosted MCP servers for major platforms | X's hosted MCP server adds another large platform to the official connector layer for AI tools and agent workflows | Watch API pricing, rate limits, spam/source-poisoning mitigation, moderation, enterprise controls and adoption in Claude/Cursor/Grok-style tools | Open |
@@ -326,6 +332,10 @@
   agent-to-agent payments, X hosted MCP server, Claude Science, Q-Day/PQC
   readiness, AI data-center energy cost politics, NHTSA ADS-only vehicle
   rulemaking and developer-agent trust after the Claude Code marker claim.
+- 2026-07-01: Daily research run created a material update. Strongest podcast
+  candidates: Claude Sonnet 5 plus Fable 5 access controls, Open USD stablecoin
+  consortium, Etched low-voltage inference, Getty/Shutterstock/CMA content
+  regulation, Lime IPO, Polish mDyplomy and Product Hunt's agent-tooling trend.
 
 ## Done
 

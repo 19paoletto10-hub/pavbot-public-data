@@ -1,12 +1,25 @@
 # Topic Index: tech-news
 
-Last updated: 2026-06-30
+Last updated: 2026-07-01
 
 ## Current Understanding
 
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
+
+Po raporcie z 2026-07-01 najważniejsza nowa warstwa to agentic AI jako
+produkt masowy, ale nadal reglamentowany na szczycie: Claude Sonnet 5 obniża
+koszt codziennych agentów, Fable 5 wraca po zdjęciu export controls przez
+usage credits, a Mythos 5 pozostaje ograniczony do zatwierdzonych organizacji.
+Druga warstwa to płatności i governance dla agentowej gospodarki: Open USD
+zbiera ponad 140 partnerów wokół stablecoina z partner-governed economics, co
+uzupełnia wczorajszy OKX AI. Trzecia warstwa to koszt fizycznej skali:
+Etched/LVI pokazuje walkę z throttlingiem inferencji, Lime IPO testuje
+publiczny apetyt na software plus flotę sprzętu, a Getty/Shutterstock pokazuje,
+że rynek zaufanych treści editorial nadal podlega twardym warunkom CMA mimo
+presji generatywnej AI. Polski kontekst dodał mDyplomy w mObywatelu i RDE/POL-on
+jako praktyczny przykład cyfrowej administracji.
 
 Po wieczornym raporcie z 2026-06-30-1935 najważniejsza nowa warstwa to
 komercjalizacja agentów poza samym modelem: AWS uruchamia FDE za 1 mld USD,
@@ -181,6 +194,28 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- Claude Sonnet/Fable access and pricing: śledzić, czy Sonnet 5 faktycznie
+  obniży koszt agentowych workflow po 31 sierpnia, jak zadziałają usage credits
+  dla Fable 5 po 7 lipca oraz czy Mythos 5 wyjdzie poza zatwierdzone
+  organizacje USA; porównywać z GPT-5.6, Gemini i OpenAI partner/FDE modelami.
+- Open USD stablecoin consortium: śledzić produkcyjny start Open USD, realną
+  rolę Stripe, Visa, Mastercard, Google, BlackRock i Coinbase, reserve
+  economics dla partnerów, compliance oraz użycie w agentowych marketplace'ach
+  i cross-border business payments.
+- Low-voltage inference and AI chip utilization: Etched/LVI trzeba śledzić jako
+  sygnał, że realne FLOPs pod throttlingiem, napięcie, sparsity i software stack
+  stają się równie ważne jak peak benchmark; szukać niezależnych testów i
+  customer validation.
+- Editorial content market consolidation: Getty/Shutterstock i warunek CMA
+  warto śledzić jako przykład, że zaufane treści editorial, licencje i
+  konkurencja źródeł pozostają strategiczne w epoce generatywnej AI.
+- Lime IPO and physical tech economics: Lime trzeba śledzić jako test rynku
+  publicznego dla technologii z fizyczną flotą, miejskimi regulacjami i
+  zależnością od partnerów takich jak Uber.
+- Polish mDyplomy and digital credential infrastructure: mDyplomy w
+  mObywatelu/RDE/POL-on warto obserwować pod kątem adopcji uczelni, API,
+  weryfikacji przez pracodawców i obowiązkowego startu cyfrowych dyplomów od
+  1 stycznia 2027 r.
 - AWS forward-deployed AI engineers: śledzić, czy 1 mld USD FDE zmieni
   enterprise AI z model/API licensing w outcome-based deployment usługowe;
   patrzeć na pricing, partnerstwa, case studies i reakcje OpenAI, Anthropic
