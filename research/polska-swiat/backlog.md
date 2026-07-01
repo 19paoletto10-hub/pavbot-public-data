@@ -11,6 +11,8 @@
 | Medium | Define public-sector AI image handling note | MON admitted AI enhancement changed a photo, creating a recurring trust issue for official communications | Track whether MON/KPRM publish rules for generative AI in official media; if pattern repeats, propose topic guidance | Open |
 | Medium | Track SAFE resilience plenipotentiary execution | KPRM shifted SAFE from setup to oversight under a new state-resilience plenipotentiary | Monitor real reporting cadence, authority over ministries, Polish industry metrics, NATO/EU coordination and anti-disinformation standards | Open |
 | Medium | Monitor follow-up to prosecutor closures | The evening run added formal/reported closures in the "two towers" and "coup d'etat" threads | Watch for complaints, court review, published justifications and political misuse beyond procedural facts | Open |
+| Medium | Track post-CPN fuel impact | CPN VAT preference ended on 1 July, making real station prices and inflation pass-through a live public-economy topic | Monitor official fuel/energy communications and reputable market data; avoid consumer or investment advice | Open |
+| Medium | Track WAM build-out | MON appointments moved the Wojskowa Akademia Medyczna from law/start date into staffing and execution | Watch recruitment, funding, curriculum, military medical capacity and civil-health integration | Open |
 
 ## Review Notes
 
@@ -114,6 +116,13 @@
   Ukraine for the northern-offensive and air-defense thread, AP/Guardian for
   Qatar-Ormuz, and AP for Venezuela's post-quake health crisis. Podcast should
   avoid merging unrelated security incidents into one causal story.
+- 2026-07-01: Morning research run created a material update. Strongest sources
+  were TVN24/Business Insider/KPRM for the post-CPN fuel-price change, MON for
+  WAM appointments and military-health resilience, RCB for continuing heat and
+  drought alerts, AP/Guardian for Qatar-Ormuz, AP for Russia's fuel crisis after
+  Ukrainian refinery strikes, AP/Guardian for the US birthright-citizenship
+  ruling, and Guardian/AP for Venezuela. Podcast should connect CPN and Ormuz
+  cautiously as energy-risk context, not as a direct price forecast.
 
 ## Done
 

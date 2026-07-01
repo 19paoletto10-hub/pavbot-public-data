@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-06-30
+Last updated: 2026-07-01
 
 ## Current Understanding
 
@@ -110,6 +110,18 @@ inicjatywę wokół Orderu Białego Lwa i apel kardynałów Polski i Ukrainy o
 pojednanie. W świecie wieczorne akcenty to Syrski o możliwym kierunku
 briańsko-czernihowskim, pośrednie rozmowy USA-Iran w Katarze o aktywach i Ormuz
 oraz kryzys zdrowotny po trzęsieniach w Wenezueli.
+Po runie 1 lipca główną krajową zmianą gospodarczą jest wygaśnięcie pakietu
+Ceny Paliwa Niżej: po zakończeniu obniżonego VAT temat paliw wraca na stacje,
+do inflacji i do politycznej oceny tarcz osłonowych. W krajowej agendzie
+odporności doszedł praktyczny element medyczny: MON wskazało kierownictwo
+Wojskowej Akademii Medycznej w Łodzi, łącząc start akademii z medycyną pola
+walki, katastrof i wojskową służbą zdrowia. Pogoda nadal jest tematem
+bezpieczeństwa publicznego, bo RCB utrzymuje ostrzeżenia upałowe do 1 lipca i
+suszę hydrologiczną niemal w całym kraju. W świecie Ormuz pozostaje mediacją
+techniczno-polityczną przez Katar, AP pokazała skalę rosyjskiego kryzysu
+paliwowego po ukraińskich uderzeniach, Sąd Najwyższy USA utrzymał obywatelstwo
+z urodzenia, a Wenezuela weszła w fazę kryzysu zdrowia, schronienia i pomocy
+humanitarnej.
 
 ## Stable Facts
 
@@ -164,6 +176,7 @@ oraz kryzys zdrowotny po trzęsieniach w Wenezueli.
 
 ## Recent Reports
 
+- [2026-07-01](runs/2026-07-01.md)
 - [2026-06-30-1935](runs/2026-06-30-1935.md)
 - [2026-06-30](runs/2026-06-30.md)
 - [2026-06-29-1935](runs/2026-06-29-1935.md)
