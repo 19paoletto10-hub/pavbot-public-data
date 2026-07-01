@@ -13,6 +13,12 @@
 | Medium | Monitor follow-up to prosecutor closures | The evening run added formal/reported closures in the "two towers" and "coup d'etat" threads | Watch for complaints, court review, published justifications and political misuse beyond procedural facts | Open |
 | Medium | Track post-CPN fuel impact | CPN VAT preference ended on 1 July, making real station prices and inflation pass-through a live public-economy topic | Monitor official fuel/energy communications and reputable market data; avoid consumer or investment advice | Open |
 | Medium | Track WAM build-out | MON appointments moved the Wojskowa Akademia Medyczna from law/start date into staffing and execution | Watch recruitment, funding, curriculum, military medical capacity and civil-health integration | Open |
+| High | Track US base and Ankara summit execution | Evening run added formal presidential framing of U.S. base talks and NATO Ankara preparations | Monitor MON/KPRM/Prezydent/NATO for post-meeting readout, location, financing, infrastructure and summit conclusions | Open |
+| Medium | Track SKRM 2 July package | KPRM agenda includes 800+, restrictive measures, criminal/nature-protection changes, refundation and civil-society programs | Check 2 July SKRM outcome and updated RCL/project pages before treating any item as government-approved | Open |
+| Medium | Monitor ZUS leadership and data-exchange execution | ZUS has a new president as 800+ automation and PIP/KAS/ZUS data exchange become practical issues | Watch ZUS/MRPiPS for first decisions, operational risks and effects on benefit handling | Open |
+| Medium | Monitor Szpital Południowy investigations | Prosecution plans further documentation and witness work while media add prosektorium allegations | Use only official prokuratura, NIK, city and hospital statements for firm claims; keep media allegations attributed | Open |
+| Medium | Track Pilchowice/Bóbr environmental findings | Media report mass fish deaths after reservoir drawdown during dam renovation | Monitor WIOŚ, Wody Polskie, Tauron, wojewoda and local authorities for test results and responsibility findings | Open |
+| Medium | Track Minab civilian-harm accountability | AP reconstructed the Iran school strike and lack of final Pentagon accounting | Watch AP, Airwars, CENTCOM/Pentagon and U.S. Congress for official report or oversight actions | Open |
 
 ## Review Notes
 
@@ -123,6 +129,14 @@
   Ukrainian refinery strikes, AP/Guardian for the US birthright-citizenship
   ruling, and Guardian/AP for Venezuela. Podcast should connect CPN and Ormuz
   cautiously as energy-risk context, not as a direct price forecast.
+- 2026-07-01-1934: Evening research run created a material update. Strongest
+  sources were Prezydent RP/NATO/AP for U.S. base and Ankara summit framing,
+  KPRM/ZUS for 800+ and public-administration execution, RCB for the 1/2 July
+  storm alert, TVN Warszawa/PAP plus Interia/Onet for Szpital Południowy,
+  TVN24/WP for Pilchowice/Bóbr, and AP/Euronews for Ufa, Hormuz and Minab.
+  Podcast should not merge Szpital Południowy, Pilchowice and RCB into one
+  generic "crisis" story; each has different evidence and responsible
+  institutions.
 
 ## Done
 

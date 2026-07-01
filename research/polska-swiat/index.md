@@ -122,6 +122,19 @@ techniczno-polityczną przez Katar, AP pokazała skalę rosyjskiego kryzysu
 paliwowego po ukraińskich uderzeniach, Sąd Najwyższy USA utrzymał obywatelstwo
 z urodzenia, a Wenezuela weszła w fazę kryzysu zdrowia, schronienia i pomocy
 humanitarnej.
+Wieczorny run 2026-07-01-1934 przesunął uwagę na wykonanie polityki
+bezpieczeństwa i administracji państwa. Pałac Prezydencki akcentuje rozmowy o
+stałej bazie USA w Polsce oraz przygotowania do szczytu NATO w Ankarze, a KPRM
+pokazała agendę SKRM 2 lipca z 800+, środkami ograniczającymi, zmianami
+karnymi/przyrodniczymi i refundacją. Nowym elementem zaplecza świadczeń jest
+powołanie Liwiusza Laski na prezesa ZUS. W bezpieczeństwie publicznym RCB
+przeniosło akcent na burze i wiatr w nocy 1/2 lipca, a Szpital Południowy i
+Bóbr/Pilchowice stały się osobnymi testami zaufania do instytucji: prokuratura
+i media rozwijają wątek szpitalny, a śnięte ryby przy remoncie zapory wymagają
+oficjalnych ustaleń środowiskowych. W świecie Ukraina według AP ponownie
+uderzyła w rafinerię Ufa, Ormuz pozostaje sporem o trasy, opłaty i kontrolę
+cieśniny, a AP dodała ciężki temat odpowiedzialności za cywilne ofiary
+uderzenia w szkołę w Minabie.
 
 ## Stable Facts
 
@@ -173,9 +186,17 @@ humanitarnej.
   prezydentów i spór orderowy.
 - Po wejściu strukturalnego `researchData` pilnować, aby każdy poranny raport
   miał sekcję `Artykuły do aplikacji`; brak tej sekcji blokuje JSON i publikację.
+- Przy wątku stałej bazy USA w Polsce oddzielać polityczne stanowiska Pałacu,
+  MON i KPRM od formalnych decyzji strony amerykańskiej i od lokalizacji.
+- Sprawę Szpitala Południowego opisywać procesowo: co podała prokuratura,
+  co ustaliły media, a czego jeszcze nie zweryfikowano.
+- Pilchowice/Bóbr śledzić pod kątem oficjalnych wyników badań, komunikatów
+  WIOŚ/Wód Polskich/Tauronu i decyzji wojewody; nie przesądzać przyczyn przed
+  dokumentami.
 
 ## Recent Reports
 
+- [2026-07-01-1934](runs/2026-07-01-1934.md)
 - [2026-07-01](runs/2026-07-01.md)
 - [2026-06-30-1935](runs/2026-06-30-1935.md)
 - [2026-06-30](runs/2026-06-30.md)
