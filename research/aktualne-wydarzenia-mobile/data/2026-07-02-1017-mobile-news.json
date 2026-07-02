@@ -1,0 +1,363 @@
+{
+  "schemaVersion": 1,
+  "topic": "aktualne-wydarzenia-mobile",
+  "runDate": "2026-07-02",
+  "runTime": "10:17",
+  "status": "Material update",
+  "headline": "Wydanie dnia: Ogólne i najważniejsze sygnały",
+  "leadParagraphs": [
+    "Poranny run z 2026-07-02-1017 wnosi trzy materialne przesunięcia względem wieczoru 2026-07-01-1933.",
+    "Po pierwsze, krajowa oś pogodowa wyraźnie schodzi z trybu szerokiego alarmu meteorologicznego, ale nie schodzi z trybu ryzyka. RCB w raporcie z 2 lipca 2026 pokazuje rano BRAK ostrzeżeń meteorologicznych, jednocześnie utrzymując suszę hydrologiczną na terenie całego kraju poza województwem małopolskim, punktową prognozę silnego wiatru i burz oraz twarde skutki uboczne ostatnich dni: 2 kolejne utonięcia i 39 pożarów lasów. To nie jest powrót do normalności, tylko przejście z ryzyka gwałtownego do ryzyka rozproszonego i bardziej chronicznego.",
+    "Po drugie, oś ankarska przechodzi z tonu przygotowań do tonu formalnego kalendarza. Kancelaria Prezydenta potwierdziła już roboczą wizytę Karola Nawrockiego w Turcji 7-8 lipca, a NATO ustawia summit jako wydarzenie o przeglądzie wykonania po Hadze i wyznaczeniu dalszej roadmapy, z osobnym forum przemysłu obronnego 7 lipca. To oznacza, że następne runy trzeba będzie rozliczać już nie z ogólnych deklaracji, tylko z konkretnych efektów Ankary.",
+    "Po trzecie, Europa dopina dziś szersze ramy odporności w dwóch rejestrach: wojennym i klimatyczno-bezpieczeństwowym. Prezydent Ukrainy koordynuje z Antonio Costą i Micheálem Martinem wsparcie dla Ukrainy, sankcje i przyspieszanie ścieżki unijnej pod irlandzką prezydencję, a Rada UE po rekordowym sezonie 2025 przyjmuje rekomendację o zintegrowanym zarządzaniu ryzykiem pożarowym. Na tym tle technologia też przechodzi z abstrakcji do terminów: AI Act wchodzi w miesięczny finał przed pełną stosowalnością 2 sierpnia 2026, a NATO DIANA zamyka nabór już 3 lipca."
+  ],
+  "sections": [
+    {
+      "id": "ogolne",
+      "title": "Ogólne",
+      "summary": "Poranek nie wygląda już jak dalszy ciąg wczorajszej szerokiej burzowej mobilizacji. Oficjalny obraz państwa przesuwa się z alarmów meteorologicznych na bardziej rozproszone ryzyka: suszę, punktowe burze, pożary i przygotowanie instytucji do kolejnych dni.",
+      "articles": [
+        {
+          "id": "ogolne-1-rcb-zdejmuje-ogolnokrajowe-ostrzezenia-meteorolo",
+          "section": "Ogólne",
+          "title": "RCB zdejmuje ogólnokrajowe ostrzeżenia meteorologiczne",
+          "lead": "Raport dobowy z 2 lipca pokazuje rano brak ostrzeżeń meteorologicznych, ale jednocześnie nie ogłasza końca problemów pogodowych i środowiskowych.",
+          "facts": [
+            "RCB podaje BRAK ostrzeżeń meteorologicznych w porannym raporcie dobowym. Źródło: RCB - Raport dobowy z 2 lipca 2026.",
+            "Ten sam raport utrzymuje suszę hydrologiczną na terenie całego kraju poza województwem małopolskim. Źródło: RCB - Raport dobowy z 2 lipca 2026.",
+            "W części prognoz zagrożeń IMGW w raporcie pozostają silny wiatr dla województwa zachodniopomorskiego i burze dla województwa podkarpackiego. Źródło: RCB - Raport dobowy z 2 lipca 2026."
+          ],
+          "analysis": "To jest zmiana jakościowa względem wczorajszego wieczoru. Państwo nie krzyczy już o szerokim zagrożeniu, ale nadal pokazuje, że ryzyko nie zniknęło, tylko rozpadło się na kilka mniejszych, bardziej lokalnych osi.",
+          "whyItMatters": "Dla odbiorcy mobilnego briefu oznacza to przejście z jednego dużego alertu do bardziej praktycznego pytania: gdzie problem jeszcze jest i jaki ma teraz charakter.",
+          "sources": [
+            {
+              "title": "RCB - Raport dobowy z 2 lipca 2026",
+              "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+            }
+          ],
+          "tags": [
+            "Ogólne",
+            "RCB"
+          ],
+          "ttsText": "RCB zdejmuje ogólnokrajowe ostrzeżenia meteorologiczne. Raport dobowy z 2 lipca pokazuje rano brak ostrzeżeń meteorologicznych, ale jednocześnie nie ogłasza końca problemów pogodowych i środowiskowych.. RCB podaje BRAK ostrzeżeń meteorologicznych w porannym raporcie dobowym. Źródło: RCB - Raport dobowy z 2 lipca 2026.. Ten sam raport utrzymuje suszę hydrologiczną na terenie całego kraju poza województwem małopolskim. Źródło: RCB - Raport dobowy z 2 lipca 2026.. W części prognoz zagrożeń IMGW w raporcie pozostają silny wiatr dla województwa zachodniopomorskiego i burze dla województwa podkarpackiego. Źródło: RCB - Raport dobowy z 2 lipca 2026.. To jest zmiana jakościowa względem wczorajszego wieczoru. Państwo nie krzyczy już o szerokim zagrożeniu, ale nadal pokazuje, że ryzyko nie zniknęło, tylko rozpadło się na kilka mniejszych, bardziej lokalnych osi.. Dla odbiorcy mobilnego briefu oznacza to przejście z jednego dużego alertu do bardziej praktycznego pytania: gdzie problem jeszcze jest i jaki ma teraz charakter.",
+          "priority": "High"
+        },
+        {
+          "id": "ogolne-2-ue-traktuje-pozary-jako-europejski-problem-bezpi",
+          "section": "Ogólne",
+          "title": "UE traktuje pożary jako europejski problem bezpieczeństwa publicznego",
+          "lead": "Rada UE dokłada do krajowego poranka szerszy wniosek: po rekordowym sezonie pożarowym ogień ma być zarządzany jak problem systemowy, a nie tylko lokalna anomalia lata.",
+          "facts": [
+            "Rada UE przyjęła rekomendację o zintegrowanym zarządzaniu ryzykiem pożarowym. Źródło: Consilium - Wildfires: Council adopts recommendation to strengthen preparedness and enhance prevention.",
+            "W uzasadnieniu Rada wskazuje, że sezon 2025 przyniósł ponad 1 milion hektarów spalonych terenów i rekordową liczbę uruchomień unijnego mechanizmu ochrony ludności. Źródło: Consilium - Wildfires: Council adopts recommendation to strengthen preparedness and enhance prevention.",
+            "Rekomendacja stawia na prewencję, wczesne ostrzeganie, interoperacyjność odpowiedzi i współpracę transgraniczną. Źródło: Consilium - Wildfires: Council adopts recommendation to strengthen preparedness and enhance prevention."
+          ],
+          "analysis": "Ten dokument nie zmienia od ręki mapy zagrożeń w Polsce, ale mówi coś ważnego o kierunku instytucji: pożary są już traktowane jak trwała część europejskiej polityki bezpieczeństwa cywilnego.",
+          "whyItMatters": "To ustawia polskie epizody suszy i pożarów w szerszym kontekście. Nie chodzi już o jednorazowy zły tydzień, tylko o dłuższy model zarządzania ryzykiem.",
+          "sources": [
+            {
+              "title": "Consilium - Wildfires: Council adopts recommendation to strengthen preparedness and enhance prevention",
+              "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/wildfires-council-adopts-recommendation-to-strengthen-preparedness-and-enhance-prevention/"
+            }
+          ],
+          "tags": [
+            "Ogólne",
+            "UE"
+          ],
+          "ttsText": "UE traktuje pożary jako europejski problem bezpieczeństwa publicznego. Rada UE dokłada do krajowego poranka szerszy wniosek: po rekordowym sezonie pożarowym ogień ma być zarządzany jak problem systemowy, a nie tylko lokalna anomalia lata.. Rada UE przyjęła rekomendację o zintegrowanym zarządzaniu ryzykiem pożarowym. Źródło: Consilium - Wildfires: Council adopts recommendation to strengthen preparedness and enhance prevention.. W uzasadnieniu Rada wskazuje, że sezon 2025 przyniósł ponad 1 milion hektarów spalonych terenów i rekordową liczbę uruchomień unijnego mechanizmu ochrony ludności. Źródło: Consilium - Wildfires: Council adopts recommendation to strengthen preparedness and enhance prevention.. Rekomendacja stawia na prewencję, wczesne ostrzeganie, interoperacyjność odpowiedzi i współpracę transgraniczną. Źródło: Consilium - Wildfires: Council adopts recommendation to strengthen preparedness and enhance prevention.. Ten dokument nie zmienia od ręki mapy zagrożeń w Polsce, ale mówi coś ważnego o kierunku instytucji: pożary są już traktowane jak trwała część europejskiej polityki bezpieczeństwa cywilnego.. To ustawia polskie epizody suszy i pożarów w szerszym kontekście. Nie chodzi już o jednorazowy zły tydzień, tylko o dłuższy model zarządzania ryzykiem.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polska",
+      "title": "Polska",
+      "summary": "Krajowy poranek jest spokojniejszy w nagłówkach, ale twardszy w kosztach ubocznych. Znika szerokie ostrzeżenie meteorologiczne, za to zostają liczby o wodzie, ogniu i stale aktywnych stopniach alarmowych.",
+      "articles": [
+        {
+          "id": "polska-1-znikaja-ostrzezenia-meteo-zostaja-susza-pozary-i",
+          "section": "Polska",
+          "title": "Znikają ostrzeżenia meteo, zostają susza, pożary i utonięcia",
+          "lead": "RCB rano nie pokazuje nowych ostrzeżeń meteorologicznych, ale publiczny rachunek ryzyka nadal zawiera dwa utonięcia, trzydzieści dziewięć pożarów lasów i suszę hydrologiczną prawie w całym kraju.",
+          "facts": [
+            "Wczoraj utonęły 2 osoby w województwie małopolskim, a od 1 kwietnia utonęło 110 osób. Źródło: RCB - Raport dobowy z 2 lipca 2026.",
+            "Jednostki straży pożarnej prowadziły działania przy 39 pożarach lasów. Źródło: RCB - Raport dobowy z 2 lipca 2026.",
+            "Jakość powietrza o 08:50 była opisana jako dobra i bardzo dobra, ale aktywne pozostają stopnie alarmowe CHARLIE, BRAVO-CRP i BRAVO do 31 sierpnia 2026. Źródło: RCB - Raport dobowy z 2 lipca 2026."
+          ],
+          "analysis": "To jest poranek mniej spektakularny niż wczorajsze alerty, ale bardziej konkretny. Widać, że nawet po zejściu z ostrzeżeń pogoda i lato nadal produkują koszty dla państwa i obywateli.",
+          "whyItMatters": "Użytkownik briefu nie powinien mylić braku nowego alertu z brakiem realnych zagrożeń. Dziś ciężar przesuwa się z prognozy na skutki.",
+          "sources": [
+            {
+              "title": "RCB - Raport dobowy z 2 lipca 2026",
+              "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+            }
+          ],
+          "tags": [
+            "Polska",
+            "Pogoda",
+            "RCB"
+          ],
+          "ttsText": "Znikają ostrzeżenia meteo, zostają susza, pożary i utonięcia. RCB rano nie pokazuje nowych ostrzeżeń meteorologicznych, ale publiczny rachunek ryzyka nadal zawiera dwa utonięcia, trzydzieści dziewięć pożarów lasów i suszę hydrologiczną prawie w całym kraju.. Wczoraj utonęły 2 osoby w województwie małopolskim, a od 1 kwietnia utonęło 110 osób. Źródło: RCB - Raport dobowy z 2 lipca 2026.. Jednostki straży pożarnej prowadziły działania przy 39 pożarach lasów. Źródło: RCB - Raport dobowy z 2 lipca 2026.. Jakość powietrza o 08:50 była opisana jako dobra i bardzo dobra, ale aktywne pozostają stopnie alarmowe CHARLIE, BRAVO-CRP i BRAVO do 31 sierpnia 2026. Źródło: RCB - Raport dobowy z 2 lipca 2026.. To jest poranek mniej spektakularny niż wczorajsze alerty, ale bardziej konkretny. Widać, że nawet po zejściu z ostrzeżeń pogoda i lato nadal produkują koszty dla państwa i obywateli.. Użytkownik briefu nie powinien mylić braku nowego alertu z brakiem realnych zagrożeń. Dziś ciężar przesuwa się z prognozy na skutki.",
+          "priority": "High"
+        },
+        {
+          "id": "polska-2-co-sprawdzono-bez-przelomu-pelnomocnik-odpornosc",
+          "section": "Polska",
+          "title": "Co sprawdzono bez przełomu: pełnomocnik odporności nadal bez nowego harmonogramu",
+          "lead": "Na stronach KPRM rano nadal widać przede wszystkim decyzje z 30 czerwca o pełnomocniku odporności, bez nowego publicznego doprecyzowania KPI, kalendarza albo rytmu raportowania.",
+          "facts": [
+            "W sekcji Komunikaty CIR na stronie Premiera jako najnowszy materiał w tym wątku nadal widnieje 30.06.2026 i komunikat Nowy etap realizacji SAFE - rząd wzmacnia odporność państwa. Źródło: KPRM - Premier.",
+            "W sekcji Decyzje rządu nadal jako najświeższe widnieje rozporządzenie z 30.06.2026 o ustanowieniu Pełnomocnika Rządu do spraw Wzmocnienia Odporności Państwa. Źródło: KPRM - Premier.",
+            "Do poranka 2 lipca nie widać jeszcze osobnego nowego publicznego komunikatu o harmonogramie pracy, miernikach albo pierwszych działaniach wykonawczych tej funkcji. Źródło: KPRM - Premier."
+          ],
+          "analysis": "Polityczna decyzja już zapadła, ale operacyjna przezroczystość nadal jest cienka. To klasyczny moment, gdy struktura została ogłoszona szybciej niż jej publiczna instrukcja działania.",
+          "whyItMatters": "Dla kolejnych runów to nadal jeden z głównych krajowych wskaźników do obserwacji, bo właśnie tu może pojawić się bardziej mierzalny wątek odporności państwa.",
+          "sources": [
+            {
+              "title": "KPRM - Premier",
+              "url": "https://www.gov.pl/web/premier"
+            }
+          ],
+          "tags": [
+            "Polska",
+            "KPRM"
+          ],
+          "ttsText": "Co sprawdzono bez przełomu: pełnomocnik odporności nadal bez nowego harmonogramu. Na stronach KPRM rano nadal widać przede wszystkim decyzje z 30 czerwca o pełnomocniku odporności, bez nowego publicznego doprecyzowania KPI, kalendarza albo rytmu raportowania.. W sekcji Komunikaty CIR na stronie Premiera jako najnowszy materiał w tym wątku nadal widnieje 30.06.2026 i komunikat Nowy etap realizacji SAFE - rząd wzmacnia odporność państwa. Źródło: KPRM - Premier.. W sekcji Decyzje rządu nadal jako najświeższe widnieje rozporządzenie z 30.06.2026 o ustanowieniu Pełnomocnika Rządu do spraw Wzmocnienia Odporności Państwa. Źródło: KPRM - Premier.. Do poranka 2 lipca nie widać jeszcze osobnego nowego publicznego komunikatu o harmonogramie pracy, miernikach albo pierwszych działaniach wykonawczych tej funkcji. Źródło: KPRM - Premier.. Polityczna decyzja już zapadła, ale operacyjna przezroczystość nadal jest cienka. To klasyczny moment, gdy struktura została ogłoszona szybciej niż jej publiczna instrukcja działania.. Dla kolejnych runów to nadal jeden z głównych krajowych wskaźników do obserwacji, bo właśnie tu może pojawić się bardziej mierzalny wątek odporności państwa.",
+          "priority": "Medium"
+        }
+      ]
+    },
+    {
+      "id": "polityka",
+      "title": "Polityka",
+      "summary": "W polityce bezpieczeństwa środek ciężkości przesuwa się z samego pytania, czy Polska czegoś chce, do pytania, z jakim pakietem i kalendarzem pojedzie do Ankary.",
+      "articles": [
+        {
+          "id": "polityka-1-palac-potwierdza-robocza-wizyte-prezydenta-na-sz",
+          "section": "Polityka",
+          "title": "Pałac potwierdza roboczą wizytę prezydenta na szczycie NATO",
+          "lead": "Kancelaria Prezydenta oficjalnie ogłosiła, że 7-8 lipca Karol Nawrocki poleci do Turcji na szczyt NATO w Ankarze.",
+          "facts": [
+            "Zapowiedź prasowa Prezydenta mówi o wizycie roboczej Prezydenta RP i Małżonki w Republice Turcji 7-8 lipca 2026 w związku ze szczytem NATO. Źródło: Prezydent - Zapowiedzi prasowe.",
+            "NATO wskazuje, że summit w Ankarze odbędzie się dokładnie 7-8 July 2026. Źródło: NATO - Overview: 2026 NATO Summit in Ankara.",
+            "Oficjalny overview NATO opisuje cel szczytu jako przegląd postępu od Hagi i wyznaczenie roadmapy dalszego dowożenia głównych celów Sojuszu, a 7 lipca zaplanowano też forum przemysłu obronnego. Źródło: NATO - Overview: 2026 NATO Summit in Ankara."
+          ],
+          "analysis": "To już nie jest ogólna narracja o przygotowaniach. Mamy formalny termin, oficjalny wyjazd i czytelną mapę tematów, z których Ankara będzie rozliczana.",
+          "whyItMatters": "Kolejne dni przed szczytem mogą przynieść bardziej precyzyjne polskie oczekiwania i sygnały o tym, co Warszawa uzna za sukces.",
+          "sources": [
+            {
+              "title": "Prezydent - Zapowiedzi prasowe",
+              "url": "https://www.prezydent.pl/dla-mediow/zapowiedzi-prasowe"
+            },
+            {
+              "title": "NATO - Overview: 2026 NATO Summit in Ankara",
+              "url": "https://www.nato.int/en/news-and-events/events/2026/07/overview---2026-nato-summit-in-ankara-"
+            }
+          ],
+          "tags": [
+            "Polityka",
+            "NATO"
+          ],
+          "ttsText": "Pałac potwierdza roboczą wizytę prezydenta na szczycie NATO. Kancelaria Prezydenta oficjalnie ogłosiła, że 7-8 lipca Karol Nawrocki poleci do Turcji na szczyt NATO w Ankarze.. Zapowiedź prasowa Prezydenta mówi o wizycie roboczej Prezydenta RP i Małżonki w Republice Turcji 7-8 lipca 2026 w związku ze szczytem NATO. Źródło: Prezydent - Zapowiedzi prasowe.. NATO wskazuje, że summit w Ankarze odbędzie się dokładnie 7-8 July 2026. Źródło: NATO - Overview: 2026 NATO Summit in Ankara.. Oficjalny overview NATO opisuje cel szczytu jako przegląd postępu od Hagi i wyznaczenie roadmapy dalszego dowożenia głównych celów Sojuszu, a 7 lipca zaplanowano też forum przemysłu obronnego. Źródło: NATO - Overview: 2026 NATO Summit in Ankara.. To już nie jest ogólna narracja o przygotowaniach. Mamy formalny termin, oficjalny wyjazd i czytelną mapę tematów, z których Ankara będzie rozliczana.. Kolejne dni przed szczytem mogą przynieść bardziej precyzyjne polskie oczekiwania i sygnały o tym, co Warszawa uzna za sukces.",
+          "priority": "High"
+        },
+        {
+          "id": "polityka-2-co-sprawdzono-bez-przelomu-baza-usa-wciaz-bez-ad",
+          "section": "Polityka",
+          "title": "Co sprawdzono bez przełomu: baza USA wciąż bez adresu i kosztorysu",
+          "lead": "Wątek stałej bazy USA nadal jest politycznie ciężki, ale publicznie nie doszedł dziś nowy detal poza wczorajszym sygnałem o formalnej ścieżce rozmów.",
+          "facts": [
+            "Wczorajszy materiał Kancelarii Prezydenta wskazuje, że oficjalne pismo sekretarza obrony USA Pete'a Hegsetha otwiera formalną ścieżkę negocjacji w sprawie stałej bazy amerykańskiej w Polsce. Źródło: Prezydent - Minister Rafał Leśkiewicz o szczegółach rozmów dotyczących baz wojskowych USA i o szczycie NATO.",
+            "Ten sam komunikat zapowiadał spotkanie Prezydenta z wicepremierem i ministrem obrony narodowej w sprawie realizacji ustaleń z Waszyngtonu. Źródło: Prezydent - Minister Rafał Leśkiewicz o szczegółach rozmów dotyczących baz wojskowych USA i o szczycie NATO.",
+            "W materiale nadal nie ma publicznie wskazanej lokalizacji, kosztów, harmonogramu ani podziału odpowiedzialności dla ewentualnej stałej bazy. Źródło: Prezydent - Minister Rafał Leśkiewicz o szczegółach rozmów dotyczących baz wojskowych USA i o szczycie NATO."
+          ],
+          "analysis": "To pozostaje ważnym sygnałem politycznym, ale nadal nie jest materiałem wykonawczym. W praktyce temat jest ciężki symbolicznie, a lekki w publicznych parametrach.",
+          "whyItMatters": "Bez takich parametrów trudno oddzielić realny projekt od silnego przekazu przedszczytowego.",
+          "sources": [
+            {
+              "title": "Prezydent - Minister Rafał Leśkiewicz o szczegółach rozmów dotyczących baz wojskowych USA i o szczycie NATO",
+              "url": "https://www.prezydent.pl/kancelaria/aktywnosc-ministrow/minister-rafal-leskiewicz-o-szczegolach-rozmow-dotyczacych-baz-wojskowych-usa-i-o-szczycie-nato%2C122763"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Co sprawdzono bez przełomu: baza USA wciąż bez adresu i kosztorysu. Wątek stałej bazy USA nadal jest politycznie ciężki, ale publicznie nie doszedł dziś nowy detal poza wczorajszym sygnałem o formalnej ścieżce rozmów.. Wczorajszy materiał Kancelarii Prezydenta wskazuje, że oficjalne pismo sekretarza obrony USA Pete'a Hegsetha otwiera formalną ścieżkę negocjacji w sprawie stałej bazy amerykańskiej w Polsce. Źródło: Prezydent - Minister Rafał Leśkiewicz o szczegółach rozmów dotyczących baz wojskowych USA i o szczycie NATO.. Ten sam komunikat zapowiadał spotkanie Prezydenta z wicepremierem i ministrem obrony narodowej w sprawie realizacji ustaleń z Waszyngtonu. Źródło: Prezydent - Minister Rafał Leśkiewicz o szczegółach rozmów dotyczących baz wojskowych USA i o szczycie NATO.. W materiale nadal nie ma publicznie wskazanej lokalizacji, kosztów, harmonogramu ani podziału odpowiedzialności dla ewentualnej stałej bazy. Źródło: Prezydent - Minister Rafał Leśkiewicz o szczegółach rozmów dotyczących baz wojskowych USA i o szczycie NATO.. To pozostaje ważnym sygnałem politycznym, ale nadal nie jest materiałem wykonawczym. W praktyce temat jest ciężki symbolicznie, a lekki w publicznych parametrach.. Bez takich parametrów trudno oddzielić realny projekt od silnego przekazu przedszczytowego.",
+          "priority": "Medium"
+        }
+      ]
+    },
+    {
+      "id": "sprawy-zagraniczne",
+      "title": "Sprawy zagraniczne",
+      "summary": "Na zewnątrz Europy i wokół niej widać dwa równoległe rytmy. Jeden to instytucjonalne spinanie wsparcia dla Ukrainy przed kolejnymi rozmowami NATO i UE, drugi to brak humanitarnego przełomu w Gazie.",
+      "articles": [
+        {
+          "id": "sprawy-zagraniczne-1-ukraina-ustawia-irlandzka-prezydencje-pod-wsparc",
+          "section": "Sprawy zagraniczne",
+          "title": "Ukraina ustawia irlandzką prezydencję pod wsparcie i sankcje",
+          "lead": "Zełenski, António Costa i Micheál Martin uzgodnili priorytety ukraińskiej agendy na czas irlandzkiej prezydencji w Radzie UE.",
+          "facts": [
+            "Strona Prezydenta Ukrainy podaje, że rozmowy dotyczyły możliwie najszybszego postępu Ukrainy ku pełnemu członkostwu w Unii Europejskiej. Źródło: Prezydent Ukrainy - The President of Ukraine, the President of the European Council, and the Taoiseach of Ireland Coordinated the Priorities of the Ukrainian Agenda during Ireland’s EU Council Presidency.",
+            "Wśród kluczowych punktów wskazano dalsze wsparcie dla Ukrainy i wzmacnianie presji sankcyjnej na Rosję. Źródło: Prezydent Ukrainy - The President of Ukraine, the President of the European Council, and the Taoiseach of Ireland Coordinated the Priorities of the Ukrainian Agenda during Ireland’s EU Council Presidency.",
+            "Strony uzgodniły też harmonogram kolejnych osobistych spotkań. Źródło: Prezydent Ukrainy - The President of Ukraine, the President of the European Council, and the Taoiseach of Ireland Coordinated the Priorities of the Ukrainian Agenda during Ireland’s EU Council Presidency."
+          ],
+          "analysis": "To nie jest jeszcze nowa sankcja ani nowy pakiet wsparcia, ale jest to czytelne ustawienie politycznego toru na najbliższe tygodnie irlandzkiej prezydencji.",
+          "whyItMatters": "W kolejnych runach właśnie z tego toru mogą wypaść bardziej policzalne decyzje dotyczące Ukrainy.",
+          "sources": [
+            {
+              "title": "Prezydent Ukrainy - The President of Ukraine, the President of the European Council, and the Taoiseach of Ireland Coordinated the Priorities of the Ukrainian Agenda during Ireland’s EU Council Presidency",
+              "url": "https://www.president.gov.ua/en/news/prezident-ukrayini-prezident-yevroradi-ta-premyer-ministr-ir-105169"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne",
+            "Ukraina",
+            "UE"
+          ],
+          "ttsText": "Ukraina ustawia irlandzką prezydencję pod wsparcie i sankcje. Zełenski, António Costa i Micheál Martin uzgodnili priorytety ukraińskiej agendy na czas irlandzkiej prezydencji w Radzie UE.. Strona Prezydenta Ukrainy podaje, że rozmowy dotyczyły możliwie najszybszego postępu Ukrainy ku pełnemu członkostwu w Unii Europejskiej. Źródło: Prezydent Ukrainy - The President of Ukraine, the President of the European Council, and the Taoiseach of Ireland Coordinated the Priorities of the Ukrainian Agenda during Ireland’s EU Council Presidency.. Wśród kluczowych punktów wskazano dalsze wsparcie dla Ukrainy i wzmacnianie presji sankcyjnej na Rosję. Źródło: Prezydent Ukrainy - The President of Ukraine, the President of the European Council, and the Taoiseach of Ireland Coordinated the Priorities of the Ukrainian Agenda during Ireland’s EU Council Presidency.. Strony uzgodniły też harmonogram kolejnych osobistych spotkań. Źródło: Prezydent Ukrainy - The President of Ukraine, the President of the European Council, and the Taoiseach of Ireland Coordinated the Priorities of the Ukrainian Agenda during Ireland’s EU Council Presidency.. To nie jest jeszcze nowa sankcja ani nowy pakiet wsparcia, ale jest to czytelne ustawienie politycznego toru na najbliższe tygodnie irlandzkiej prezydencji.. W kolejnych runach właśnie z tego toru mogą wypaść bardziej policzalne decyzje dotyczące Ukrainy.",
+          "priority": "Medium"
+        },
+        {
+          "id": "sprawy-zagraniczne-2-co-sprawdzono-bez-przelomu-gaza-nadal-bez-nowsze",
+          "section": "Sprawy zagraniczne",
+          "title": "Co sprawdzono bez przełomu: Gaza nadal bez nowszego pełnego raportu sytuacyjnego",
+          "lead": "OCHA nadal pokazuje jako najświeższy mocny sygnał wczorajsze ostrzeżenie o rozszerzaniu obszarów pod izraelską kontrolą, ale rano 2 lipca nie ma jeszcze nowszego pełnego Humanitarian Situation Report.",
+          "facts": [
+            "OCHA publikuje 1 July 2026 stanowisko, według którego rozszerzanie obszarów pod izraelską kontrolą w Gazie zwiększa ryzyko dla cywilów i dalej ogranicza działania pomocowe. Źródło: OCHA - Expansion of areas under Israeli control in Gaza endangers civilians and relief efforts.",
+            "W tym samym materiale ONZ wskazuje, że między 10 października 2025 a początkiem kwietnia 2026 zweryfikowano śmierć 196 Palestyńczyków, w tym 18 kobiet i 43 dzieci, w pobliżu obszarów rozmieszczenia sił izraelskich. Źródło: OCHA - Expansion of areas under Israeli control in Gaza endangers civilians and relief efforts.",
+            "Strona główna OCHA oPt nadal pokazuje jako najnowszy pełny Humanitarian Situation Report materiał oznaczony 26 June 2026, więc rano nie widać jeszcze świeższego pełnego raportu sytuacyjnego. Źródło: OCHA oPt."
+          ],
+          "analysis": "Wątek humanitarny nadal jest ciężki, ale rano nie dostał nowej, pełniejszej warstwy liczbowej. To raczej utrzymanie alarmu niż nowa eskalacja fact pattern.",
+          "whyItMatters": "Brief zachowuje dyscyplinę źródłową i nie dokłada nowych, niesprawdzonych bilansów tylko dlatego, że temat pozostaje dramatyczny.",
+          "sources": [
+            {
+              "title": "OCHA - Expansion of areas under Israeli control in Gaza endangers civilians and relief efforts",
+              "url": "https://www.ochaopt.org/content/expansion-areas-under-israeli-control-gaza-endangers-civilians-and-relief-efforts"
+            },
+            {
+              "title": "OCHA oPt",
+              "url": "https://www.ochaopt.org/"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Co sprawdzono bez przełomu: Gaza nadal bez nowszego pełnego raportu sytuacyjnego. OCHA nadal pokazuje jako najświeższy mocny sygnał wczorajsze ostrzeżenie o rozszerzaniu obszarów pod izraelską kontrolą, ale rano 2 lipca nie ma jeszcze nowszego pełnego Humanitarian Situation Report.. OCHA publikuje 1 July 2026 stanowisko, według którego rozszerzanie obszarów pod izraelską kontrolą w Gazie zwiększa ryzyko dla cywilów i dalej ogranicza działania pomocowe. Źródło: OCHA - Expansion of areas under Israeli control in Gaza endangers civilians and relief efforts.. W tym samym materiale ONZ wskazuje, że między 10 października 2025 a początkiem kwietnia 2026 zweryfikowano śmierć 196 Palestyńczyków, w tym 18 kobiet i 43 dzieci, w pobliżu obszarów rozmieszczenia sił izraelskich. Źródło: OCHA - Expansion of areas under Israeli control in Gaza endangers civilians and relief efforts.. Strona główna OCHA oPt nadal pokazuje jako najnowszy pełny Humanitarian Situation Report materiał oznaczony 26 June 2026, więc rano nie widać jeszcze świeższego pełnego raportu sytuacyjnego. Źródło: OCHA oPt.. Wątek humanitarny nadal jest ciężki, ale rano nie dostał nowej, pełniejszej warstwy liczbowej. To raczej utrzymanie alarmu niż nowa eskalacja fact pattern.. Brief zachowuje dyscyplinę źródłową i nie dokłada nowych, niesprawdzonych bilansów tylko dlatego, że temat pozostaje dramatyczny.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "technologia",
+      "title": "Technologia",
+      "summary": "Technologicznie to nie jest poranek od premier gadżetów, tylko od coraz twardszych zasad i terminów. Najważniejsze sygnały dnia dotyczą zgodności, etykietowania treści i obronnych programów innowacyjnych.",
+      "articles": [
+        {
+          "id": "technologia-1-ai-act-wchodzi-w-miesieczny-final-przed-pelna-st",
+          "section": "Technologia",
+          "title": "AI Act wchodzi w miesięczny finał przed pełną stosowalnością",
+          "lead": "Komisja Europejska przypomina, że AI Act ma być w pełni stosowany od 2 sierpnia 2026, a kodeks transparentności dla treści generowanych przez AI już opisuje, jak znakować deepfake'i i inne syntetyczne materiały.",
+          "facts": [
+            "Komisja podaje, że AI Act będzie w pełni stosowany od 2 sierpnia 2026, z wyjątkami dla części systemów wysokiego ryzyka wbudowanych w produkty, gdzie okres przejściowy wydłużono do 2 sierpnia 2028. Źródło: Komisja Europejska - AI Act timeline.",
+            "Komisja wskazuje też, że uproszczenia z AI omnibus mają zmniejszać obciążenia administracyjne i ułatwiać wdrażanie przepisów. Źródło: Komisja Europejska - AI Act timeline.",
+            "Kodeks transparentności dla treści AI opisuje obowiązki oznaczania i wykrywania treści generowanych przez AI oraz etykietowania deepfake'ów, które będą stosowane od 2 sierpnia 2026. Źródło: Komisja Europejska - Code of Practice on Transparency of AI-Generated Content."
+          ],
+          "analysis": "To już nie jest odległa regulacja. Rynek wchodzi w ostatni miesiąc przed wejściem w pełną, codzienną praktykę zgodności.",
+          "whyItMatters": "Dla mediów, platform, narzędzi generatywnych i instytucji publicznych to sygnał, że czas przechodzi z etapu „kiedyś trzeba będzie” do etapu „zaraz trzeba to mieć”.",
+          "sources": [
+            {
+              "title": "Komisja Europejska - AI Act timeline",
+              "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+            },
+            {
+              "title": "Komisja Europejska - Code of Practice on Transparency of AI-Generated Content",
+              "url": "https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "AI Act wchodzi w miesięczny finał przed pełną stosowalnością. Komisja Europejska przypomina, że AI Act ma być w pełni stosowany od 2 sierpnia 2026, a kodeks transparentności dla treści generowanych przez AI już opisuje, jak znakować deepfake'i i inne syntetyczne materiały.. Komisja podaje, że AI Act będzie w pełni stosowany od 2 sierpnia 2026, z wyjątkami dla części systemów wysokiego ryzyka wbudowanych w produkty, gdzie okres przejściowy wydłużono do 2 sierpnia 2028. Źródło: Komisja Europejska - AI Act timeline.. Komisja wskazuje też, że uproszczenia z AI omnibus mają zmniejszać obciążenia administracyjne i ułatwiać wdrażanie przepisów. Źródło: Komisja Europejska - AI Act timeline.. Kodeks transparentności dla treści AI opisuje obowiązki oznaczania i wykrywania treści generowanych przez AI oraz etykietowania deepfake'ów, które będą stosowane od 2 sierpnia 2026. Źródło: Komisja Europejska - Code of Practice on Transparency of AI-Generated Content.. To już nie jest odległa regulacja. Rynek wchodzi w ostatni miesiąc przed wejściem w pełną, codzienną praktykę zgodności.. Dla mediów, platform, narzędzi generatywnych i instytucji publicznych to sygnał, że czas przechodzi z etapu „kiedyś trzeba będzie” do etapu „zaraz trzeba to mieć”.",
+          "priority": "Medium"
+        },
+        {
+          "id": "technologia-2-nato-diana-domyka-nabor-na-2027",
+          "section": "Technologia",
+          "title": "NATO DIANA domyka nabór na 2027",
+          "lead": "MON przypomina, że nabór do programu NATO DIANA 2027 zamyka się już 3 lipca, a pierwsza selekcja rusza od razu następnego dnia.",
+          "facts": [
+            "Nabór do NATO DIANA 2027 został otwarty 1 czerwca 2026, a zamyka się 3 lipca 2026. Źródło: MON - Trwa nabór do programu akceleracyjnego NATO DIANA 2027.",
+            "Pierwszy etap oceny ma trwać 3-14 lipca, drugi 3-14 sierpnia, a rozmowy panelowe 7-25 września. Źródło: MON - Trwa nabór do programu akceleracyjnego NATO DIANA 2027.",
+            "MON akcentuje wyzwania technologiczne programu, proces aplikacyjny i doświadczenia polskich startupów uczestniczących w DIANA. Źródło: MON - Trwa nabór do programu akceleracyjnego NATO DIANA 2027."
+          ],
+          "analysis": "Wątek obronny i technologiczny coraz mocniej się skleja. Innowacja nie jest tu dodatkiem do polityki bezpieczeństwa, tylko jednym z jej narzędzi.",
+          "whyItMatters": "To dobry wskaźnik, czy polski i sojuszniczy ekosystem przechodzi od deklaracji o innowacji do realnej pracy na terminach i naborach.",
+          "sources": [
+            {
+              "title": "MON - Trwa nabór do programu akceleracyjnego NATO DIANA 2027",
+              "url": "https://www.gov.pl/web/obrona-narodowa/rusza-nabor-do-programu-akceleracyjnego-nato-diana-2027"
+            }
+          ],
+          "tags": [
+            "Technologia",
+            "NATO"
+          ],
+          "ttsText": "NATO DIANA domyka nabór na 2027. MON przypomina, że nabór do programu NATO DIANA 2027 zamyka się już 3 lipca, a pierwsza selekcja rusza od razu następnego dnia.. Nabór do NATO DIANA 2027 został otwarty 1 czerwca 2026, a zamyka się 3 lipca 2026. Źródło: MON - Trwa nabór do programu akceleracyjnego NATO DIANA 2027.. Pierwszy etap oceny ma trwać 3-14 lipca, drugi 3-14 sierpnia, a rozmowy panelowe 7-25 września. Źródło: MON - Trwa nabór do programu akceleracyjnego NATO DIANA 2027.. MON akcentuje wyzwania technologiczne programu, proces aplikacyjny i doświadczenia polskich startupów uczestniczących w DIANA. Źródło: MON - Trwa nabór do programu akceleracyjnego NATO DIANA 2027.. Wątek obronny i technologiczny coraz mocniej się skleja. Innowacja nie jest tu dodatkiem do polityki bezpieczeństwa, tylko jednym z jej narzędzi.. To dobry wskaźnik, czy polski i sojuszniczy ekosystem przechodzi od deklaracji o innowacji do realnej pracy na terminach i naborach.",
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "RCB - Raport dobowy z 2 lipca 2026",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "Prezydent - Zapowiedzi prasowe: wizyta robocza Prezydenta RP i Małżonki w Republice Turcji w związku z udziałem w Szczycie NATO w Ankarze",
+      "url": "https://www.prezydent.pl/dla-mediow/zapowiedzi-prasowe"
+    },
+    {
+      "title": "Prezydent - Minister Rafał Leśkiewicz o szczegółach rozmów dotyczących baz wojskowych USA i o szczycie NATO",
+      "url": "https://www.prezydent.pl/kancelaria/aktywnosc-ministrow/minister-rafal-leskiewicz-o-szczegolach-rozmow-dotyczacych-baz-wojskowych-usa-i-o-szczycie-nato%2C122763"
+    },
+    {
+      "title": "NATO - Overview: 2026 NATO Summit in Ankara",
+      "url": "https://www.nato.int/en/news-and-events/events/2026/07/overview---2026-nato-summit-in-ankara-"
+    },
+    {
+      "title": "Prezydent Ukrainy - The President of Ukraine, the President of the European Council, and the Taoiseach of Ireland Coordinated the Priorities of the Ukrainian Agenda during Ireland’s EU Council Presidency",
+      "url": "https://www.president.gov.ua/en/news/prezident-ukrayini-prezident-yevroradi-ta-premyer-ministr-ir-105169"
+    },
+    {
+      "title": "Consilium - Wildfires: Council adopts recommendation to strengthen preparedness and enhance prevention",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/06/29/wildfires-council-adopts-recommendation-to-strengthen-preparedness-and-enhance-prevention/"
+    },
+    {
+      "title": "KPRM - Premier",
+      "url": "https://www.gov.pl/web/premier"
+    },
+    {
+      "title": "OCHA oPt",
+      "url": "https://www.ochaopt.org/"
+    },
+    {
+      "title": "OCHA - Expansion of areas under Israeli control in Gaza endangers civilians and relief efforts",
+      "url": "https://www.ochaopt.org/content/expansion-areas-under-israeli-control-gaza-endangers-civilians-and-relief-efforts"
+    },
+    {
+      "title": "Komisja Europejska - AI Act timeline",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai"
+    },
+    {
+      "title": "Komisja Europejska - Code of Practice on Transparency of AI-Generated Content",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content"
+    },
+    {
+      "title": "MON - Trwa nabór do programu akceleracyjnego NATO DIANA 2027",
+      "url": "https://www.gov.pl/web/obrona-narodowa/rusza-nabor-do-programu-akceleracyjnego-nato-diana-2027"
+    }
+  ],
+  "audioArtifacts": []
+}
