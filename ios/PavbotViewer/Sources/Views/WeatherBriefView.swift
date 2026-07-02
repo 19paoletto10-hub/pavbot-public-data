@@ -150,39 +150,25 @@ struct WeatherBriefView: View {
     }
 
     private var loadingView: some View {
-        VStack(spacing: 14) {
-            ProgressView()
-            Text("Pobieram poranny raport pogodowy...")
-                .font(.callout)
-                .foregroundStyle(.secondary)
-        }
-        .frame(maxWidth: .infinity, minHeight: 280)
+        PavbotLoadingStateCard(
+            title: "Pobieram Dzisiaj",
+            message: "Łączę pogodę, radar i szybki briefing w jeden poranny widok.",
+            systemImage: "sun.max.fill",
+            tint: .blue
+        )
     }
 
     private func missingConfigurationView(error: PavbotUserFacingError) -> some View {
-        VStack(alignment: .leading, spacing: 18) {
-            Image(systemName: "cloud.sun")
-                .font(.system(size: 44, weight: .semibold))
-                .foregroundStyle(.blue)
-
-            VStack(alignment: .leading, spacing: 8) {
-                Text(error.title)
-                    .font(.title2.bold())
-                Text(error.message)
-                    .font(.body)
-                    .foregroundStyle(.secondary)
-            }
-
-            Button {
+        PavbotStateCard(
+            title: error.title,
+            message: error.message,
+            systemImage: error.systemImage,
+            tint: error.tint,
+            actionTitle: "Otwórz ustawienia",
+            actionSystemImage: "gearshape"
+        ) {
                 router.selectedTab = .settings
-            } label: {
-                Label("Otwórz ustawienia", systemImage: "gearshape")
-                    .frame(maxWidth: .infinity)
-            }
-            .buttonStyle(.borderedProminent)
         }
-        .padding(20)
-        .background(.background, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
     }
 
     @ViewBuilder
@@ -227,8 +213,8 @@ struct WeatherBriefView: View {
             openJobs: {
                 router.selectedTab = .jobs
             },
-            openSettings: {
-                router.selectedTab = .settings
+            openResearch: {
+                router.selectedTab = .research
             },
             reloadHumor: {
                 Task { await humorStore.load() }
@@ -245,7 +231,7 @@ struct WeatherBriefView: View {
 
     private func compactReportView(_ report: DailyWeatherReport, layout: PavbotAdaptiveLayout) -> some View {
         VStack(alignment: .leading, spacing: layout.sectionSpacing) {
-            DailyWisdomBanner(entry: DailyWisdomProvider.entry(for: reportDate(report)), report: report)
+            DailyWisdomTimelineBanner(report: report)
 
             WeatherHeroCard(report: report)
 
@@ -316,7 +302,7 @@ struct WeatherBriefView: View {
 
     private func wideReportView(_ report: DailyWeatherReport, layout: PavbotAdaptiveLayout) -> some View {
         VStack(alignment: .leading, spacing: layout.sectionSpacing) {
-            DailyWisdomBanner(entry: DailyWisdomProvider.entry(for: reportDate(report)), report: report)
+            DailyWisdomTimelineBanner(report: report)
 
             HStack(alignment: .top, spacing: layout.cardSpacing) {
                 WeatherHeroCard(report: report)
@@ -693,7 +679,7 @@ private struct PavbotPhoneDailyCockpit: View {
     let togglePrecipitationTile: () -> Void
     let openPulseDay: () -> Void
     let openJobs: () -> Void
-    let openSettings: () -> Void
+    let openResearch: () -> Void
     let reloadHumor: () -> Void
     let openHumorDetail: (TodayHumorItem) -> Void
     let openSavedHumor: () -> Void
@@ -716,13 +702,9 @@ private struct PavbotPhoneDailyCockpit: View {
                 WeatherLocationNoticeBanner(text: importantLocationNotice, changeAction: editLocation)
             }
 
-            DailyWisdomBanner(entry: dailyWisdomEntry, report: report)
-
             weatherDecisionCard
 
             PavbotInsightStrip(insights: insightItems)
-
-            weatherDetailsGrid
 
             TodayHumorFeaturedPreview(
                 digest: humorDigest,
@@ -733,6 +715,10 @@ private struct PavbotPhoneDailyCockpit: View {
                 openSaved: openSavedHumor,
                 openDetail: openHumorDetail
             )
+
+            weatherDetailsGrid
+
+            DailyWisdomTimelineBanner(entry: dailyWisdomEntry, report: report)
 
             dailyActionSection
 
@@ -748,55 +734,24 @@ private struct PavbotPhoneDailyCockpit: View {
     }
 
     private var weatherDecisionCard: some View {
-        PavbotPremiumCard(tint: .blue, cornerRadius: 26, horizontalPadding: 18, verticalPadding: 18) {
-            VStack(alignment: .leading, spacing: 15) {
-                HStack(alignment: .top, spacing: 14) {
-                    Image(systemName: heroSymbol)
-                        .font(.system(size: 34, weight: .semibold))
-                        .symbolRenderingMode(.hierarchical)
-                        .foregroundStyle(.yellow)
-                        .frame(width: 48, height: 48)
-                        .background(Color.yellow.opacity(0.14), in: RoundedRectangle(cornerRadius: 15, style: .continuous))
-                        .accessibilityHidden(true)
-
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text(report.headline)
-                            .font(.title3.weight(.bold))
-                            .lineLimit(3)
-                            .fixedSize(horizontal: false, vertical: true)
-
-                        Text(report.summary)
-                            .font(.callout)
-                            .foregroundStyle(.secondary)
-                            .lineSpacing(3)
-                            .lineLimit(4)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                }
-
-                Text(precipitationAdvice)
-                    .font(.callout.weight(.semibold))
-                    .lineSpacing(3)
-                    .fixedSize(horizontal: false, vertical: true)
-                    .padding(14)
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .background(Color.blue.opacity(0.10), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
-
-                PavbotPrimaryActionCapsule(
-                    title: "Dostosuj lokalizację",
-                    systemImage: "location.circle.fill",
-                    tint: .blue,
-                    action: editLocation
-                )
-            }
-        }
+        PavbotBriefingHeroCard(
+            eyebrow: "Briefing dnia",
+            title: report.headline,
+            subtitle: report.summary,
+            systemImage: heroSymbol,
+            tint: .blue,
+            supportingText: precipitationAdvice,
+            primaryActionTitle: "Dostosuj lokalizację",
+            primaryActionSystemImage: "location.circle.fill",
+            primaryAction: editLocation
+        )
         .accessibilityElement(children: .combine)
         .accessibilityLabel("Najważniejsza decyzja dnia. \(report.headline). \(precipitationAdvice)")
     }
 
     private var dailyActionSection: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text("Następne kroki")
+            Text("Co dalej")
                 .font(.headline.weight(.semibold))
 
             Button(action: openPulseDay) {
@@ -811,9 +766,21 @@ private struct PavbotPhoneDailyCockpit: View {
             .buttonStyle(.plain)
             .accessibilityLabel("Otwórz Puls Dnia")
 
+            Button(action: openResearch) {
+                PavbotCompactStoryRow(
+                    title: "Przegląd",
+                    subtitle: "Newsowy skrót z wielu zakątków sieci.",
+                    systemImage: "newspaper.fill",
+                    tint: .teal,
+                    trailingText: "Czytaj"
+                )
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Otwórz Przegląd")
+
             Button(action: openJobs) {
                 PavbotCompactStoryRow(
-                    title: "Jobs AI",
+                    title: "Praca AI",
                     subtitle: "Sprawdź role LLM, ML i platform AI.",
                     systemImage: "briefcase.fill",
                     tint: .indigo,
@@ -821,19 +788,7 @@ private struct PavbotPhoneDailyCockpit: View {
                 )
             }
             .buttonStyle(.plain)
-            .accessibilityLabel("Otwórz Jobs AI")
-
-            Button(action: openSettings) {
-                PavbotCompactStoryRow(
-                    title: "Centrum aplikacji",
-                    subtitle: "Pliki, automatyzacje i diagnostyka w ustawieniach.",
-                    systemImage: "slider.horizontal.3",
-                    tint: .teal,
-                    trailingText: "Ustaw"
-                )
-            }
-            .buttonStyle(.plain)
-            .accessibilityLabel("Otwórz ustawienia Pavbot")
+            .accessibilityLabel("Otwórz Praca AI")
         }
     }
 
@@ -922,88 +877,246 @@ private struct PavbotPhoneDailyCockpit: View {
 
 }
 
+private struct DailyWisdomTimelineBanner: View {
+    let entry: DailyWisdomEntry?
+    let report: DailyWeatherReport
+    private let entries: [DailyWisdomEntry]
+
+    init(
+        entry: DailyWisdomEntry? = nil,
+        report: DailyWeatherReport,
+        entries: [DailyWisdomEntry] = DailyWisdomProvider.bundledEntries()
+    ) {
+        self.entry = entry
+        self.report = report
+        self.entries = entries
+    }
+
+    var body: some View {
+        TimelineView(.periodic(from: .now, by: 90)) { timeline in
+            DailyWisdomBanner(entry: currentEntry(for: timeline.date), report: report)
+        }
+    }
+
+    private func currentEntry(for date: Date) -> DailyWisdomEntry {
+        guard !entries.isEmpty else {
+            return entry ?? DailyWisdomProvider.fallbackEntry
+        }
+        return DailyWisdomProvider.randomizedEntry(for: date, entries: entries, calendar: .current, intervalSeconds: 90)
+    }
+}
+
 private struct DailyWisdomBanner: View {
+    @Environment(\.accessibilityReduceMotion) private var accessibilityReduceMotion
+    @State private var isShowingReflection = false
+
     let entry: DailyWisdomEntry
     let report: DailyWeatherReport
 
     var body: some View {
         PavbotPremiumCard(tint: .orange, cornerRadius: 24, horizontalPadding: 18, verticalPadding: 18) {
-            HStack(alignment: .top, spacing: 16) {
-                VStack(spacing: 5) {
-                    Text(calendarMonthLabel)
-                        .font(.caption.weight(.heavy))
-                        .foregroundStyle(.white)
-                        .textCase(.uppercase)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.78)
-                        .frame(maxWidth: .infinity)
-                        .padding(.vertical, 7)
-                        .background(Color.orange.gradient, in: UnevenRoundedRectangle(
-                            topLeadingRadius: 16,
-                            bottomLeadingRadius: 4,
-                            bottomTrailingRadius: 4,
-                            topTrailingRadius: 16,
-                            style: .continuous
-                        ))
+            flippingContent
+        }
+        .contentShape(RoundedRectangle(cornerRadius: 24, style: .continuous))
+        .onTapGesture(perform: toggleSide)
+        .accessibilityElement(children: .ignore)
+        .accessibilityLabel(accessibilityLabel)
+        .accessibilityValue(isShowingReflection ? "Wyjaśnienie" : "Sentencja")
+        .accessibilityHint("Dwukrotne stuknięcie przełącza stronę karty.")
+        .accessibilityAddTraits(.isButton)
+        .accessibilityAction(named: Text(isShowingReflection ? "Pokaż sentencję" : "Pokaż wyjaśnienie")) {
+            toggleSide()
+        }
+    }
 
-                    Text(calendarDayNumber)
-                        .font(.system(size: 38, weight: .black, design: .rounded))
-                        .foregroundStyle(.primary)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.78)
-
-                    Text(report.weekday.capitalized)
-                        .font(.caption.weight(.bold))
-                        .foregroundStyle(.secondary)
-                        .lineLimit(1)
-                        .minimumScaleFactor(0.78)
-                }
-                .padding(8)
-                .frame(width: 86)
-                .background(Color(.systemBackground), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
-                .overlay {
-                    RoundedRectangle(cornerRadius: 18, style: .continuous)
-                        .stroke(Color.orange.opacity(0.18), lineWidth: 1)
-                }
-                .shadow(color: Color.black.opacity(0.05), radius: 12, x: 0, y: 8)
-                .accessibilityElement(children: .combine)
-                .accessibilityLabel("Data kartki kalendarzowej: \(calendarDayNumber) \(calendarMonthLabel), \(report.weekday)")
-
-                VStack(alignment: .leading, spacing: 10) {
-                    Label("Kartka z kalendarza", systemImage: "sunrise.fill")
-                        .font(.caption.weight(.bold))
-                        .foregroundStyle(.orange)
-                        .textCase(.uppercase)
-
-                    Text("„\(entry.text)”")
-                        .font(.title3.weight(.bold))
-                        .lineSpacing(3)
-                        .fixedSize(horizontal: false, vertical: true)
-
-                    VStack(alignment: .leading, spacing: 5) {
-                        Text(entry.attribution)
-                            .font(.subheadline.weight(.semibold))
-                            .foregroundStyle(.primary)
-                        Text(entry.context)
-                            .font(.callout)
-                            .foregroundStyle(.secondary)
-                            .lineSpacing(2)
-                            .fixedSize(horizontal: false, vertical: true)
-                    }
-                    .padding(.top, 1)
-
-                    Text(entry.category.capitalized)
-                        .font(.caption.weight(.semibold))
-                        .foregroundStyle(.orange)
-                        .padding(.horizontal, 9)
-                        .padding(.vertical, 5)
-                        .background(Color.orange.opacity(0.10), in: Capsule())
-                }
-                .frame(maxWidth: .infinity, alignment: .leading)
+    @ViewBuilder
+    private var flippingContent: some View {
+        Group {
+            if isShowingReflection {
+                backContent
+                    .rotation3DEffect(
+                        .degrees(accessibilityReduceMotion ? 0 : 180),
+                        axis: (x: 0, y: 1, z: 0),
+                        perspective: 0.65
+                    )
+            } else {
+                frontContent
             }
         }
+        .rotation3DEffect(
+            .degrees(accessibilityReduceMotion ? 0 : (isShowingReflection ? 180 : 0)),
+            axis: (x: 0, y: 1, z: 0),
+            perspective: 0.65
+        )
+    }
+
+    private var frontContent: some View {
+        HStack(alignment: .top, spacing: 16) {
+            dateBadge
+
+            VStack(alignment: .leading, spacing: 10) {
+                Label("Kartka z kalendarza", systemImage: "sunrise.fill")
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(.orange)
+                    .textCase(.uppercase)
+
+                Text("„\(entry.text)”")
+                    .font(.title3.weight(.bold))
+                    .lineSpacing(3)
+                    .fixedSize(horizontal: false, vertical: true)
+
+                VStack(alignment: .leading, spacing: 5) {
+                    Text(entry.attribution)
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(.primary)
+                    Text(entry.context)
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                        .lineSpacing(2)
+                        .lineLimit(3)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                .padding(.top, 1)
+
+                categoryCapsule
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+        }
+    }
+
+    private var backContent: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(alignment: .top, spacing: 12) {
+                Label("Sens sentencji", systemImage: "sparkles")
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(.orange)
+                    .textCase(.uppercase)
+
+                Spacer(minLength: 10)
+
+                categoryCapsule
+            }
+
+            Text("„\(entry.text)”")
+                .font(.title3.weight(.heavy))
+                .lineSpacing(3)
+                .fixedSize(horizontal: false, vertical: true)
+
+            wisdomDetailSection(
+                title: "Praktyka na teraz",
+                systemImage: "checklist.checked",
+                text: entry.context
+            )
+
+            wisdomDetailSection(
+                title: "Mądrość na dziś",
+                systemImage: "lightbulb.fill",
+                text: entry.reflectionText
+            )
+
+            HStack(spacing: 8) {
+                Image(systemName: "arrow.triangle.2.circlepath")
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(.orange)
+                Text("Stuknij, żeby wrócić do kartki.")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(.secondary)
+            }
+            .padding(.top, 2)
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private func wisdomDetailSection(title: String, systemImage: String, text: String) -> some View {
+        VStack(alignment: .leading, spacing: 7) {
+            Label(title, systemImage: systemImage)
+                .font(.caption.weight(.bold))
+                .foregroundStyle(.orange)
+                .textCase(.uppercase)
+
+            Text(text)
+                .font(.callout)
+                .foregroundStyle(.primary)
+                .lineSpacing(3)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(12)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color.orange.opacity(0.08), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .stroke(Color.orange.opacity(0.12), lineWidth: 1)
+        }
+    }
+
+    private var dateBadge: some View {
+        VStack(spacing: 5) {
+            Text(calendarMonthLabel)
+                .font(.caption.weight(.heavy))
+                .foregroundStyle(.white)
+                .textCase(.uppercase)
+                .lineLimit(1)
+                .minimumScaleFactor(0.78)
+                .frame(maxWidth: .infinity)
+                .padding(.vertical, 7)
+                .background(Color.orange.gradient, in: UnevenRoundedRectangle(
+                    topLeadingRadius: 16,
+                    bottomLeadingRadius: 4,
+                    bottomTrailingRadius: 4,
+                    topTrailingRadius: 16,
+                    style: .continuous
+                ))
+
+            Text(calendarDayNumber)
+                .font(.system(size: 38, weight: .black, design: .rounded))
+                .foregroundStyle(.primary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.78)
+
+            Text(report.weekday.capitalized)
+                .font(.caption.weight(.bold))
+                .foregroundStyle(.secondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.78)
+        }
+        .padding(8)
+        .frame(width: 86)
+        .background(Color(.systemBackground), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .stroke(Color.orange.opacity(0.18), lineWidth: 1)
+        }
+        .shadow(color: Color.black.opacity(0.05), radius: 12, x: 0, y: 8)
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("Kartka z kalendarza, \(calendarDayNumber) \(calendarMonthLabel). \(entry.text) \(entry.attribution). \(entry.context)")
+        .accessibilityLabel("Data kartki kalendarzowej: \(calendarDayNumber) \(calendarMonthLabel), \(report.weekday)")
+    }
+
+    private var categoryCapsule: some View {
+        Text(entry.category.capitalized)
+            .font(.caption.weight(.semibold))
+            .foregroundStyle(.orange)
+            .padding(.horizontal, 9)
+            .padding(.vertical, 5)
+            .background(Color.orange.opacity(0.10), in: Capsule())
+    }
+
+    private var accessibilityLabel: String {
+        if isShowingReflection {
+            return "Kartka z kalendarza, wyjaśnienie. \(entry.context). \(entry.reflectionText)"
+        }
+        return "Kartka z kalendarza, \(calendarDayNumber) \(calendarMonthLabel). \(entry.text) \(entry.attribution). \(entry.context)"
+    }
+
+    private func toggleSide() {
+        if accessibilityReduceMotion {
+            withAnimation(.easeInOut(duration: 0.18)) {
+                isShowingReflection.toggle()
+            }
+        } else {
+            withAnimation(.spring(response: 0.42, dampingFraction: 0.86)) {
+                isShowingReflection.toggle()
+            }
+        }
     }
 
     private var calendarDayNumber: String {
@@ -1101,25 +1214,21 @@ private struct TodayHumorFeaturedPreview: View {
     }
 
     private var loadingContent: some View {
-        HStack(spacing: 10) {
-            ProgressView()
-            Text("Szukam świeżych memów i lekkich trendów...")
-                .font(.callout)
-                .foregroundStyle(.secondary)
-        }
-        .frame(maxWidth: .infinity, minHeight: 110, alignment: .leading)
+        PavbotLoadingStateCard(
+            title: "Szukam lekkiego radaru",
+            message: "Sprawdzam świeże memy i miękkie trendy, które pasują do dnia.",
+            systemImage: "sparkles",
+            tint: .purple
+        )
     }
 
     private func errorContent(_ error: PavbotUserFacingError) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
-            Text(error.title)
-                .font(.headline.weight(.semibold))
-            Text(error.message)
-                .font(.callout)
-                .foregroundStyle(.secondary)
-                .fixedSize(horizontal: false, vertical: true)
-        }
-        .frame(maxWidth: .infinity, minHeight: 110, alignment: .leading)
+        PavbotStateCard(
+            title: error.title,
+            message: error.message,
+            systemImage: error.systemImage,
+            tint: error.tint
+        )
     }
 
     private func digestContent(_ digest: TodayHumorDigest) -> some View {

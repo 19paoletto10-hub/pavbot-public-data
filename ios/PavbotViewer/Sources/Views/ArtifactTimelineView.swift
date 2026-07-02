@@ -49,7 +49,18 @@ struct ArtifactTimelineView: View {
                         )
                     }
                 } else {
-                    ContentUnavailableView("Brak manifestu", systemImage: "doc.badge.questionmark")
+                    PavbotPremiumScreenScaffold(layout: layout, spacing: 18) {
+                        PavbotStateCard(
+                            title: "Brak manifestu",
+                            message: "Ustaw Manifest URL w Ustawieniach i odśwież dane, żeby zobaczyć opublikowane pliki.",
+                            systemImage: "doc.badge.questionmark",
+                            tint: .orange,
+                            actionTitle: "Otwórz ustawienia",
+                            actionSystemImage: "gearshape"
+                        ) {
+                            router.selectedTab = .settings
+                        }
+                    }
                 }
             }
             .environment(\.pavbotAdaptiveLayout, layout)
@@ -219,29 +230,30 @@ private struct AutomationArtifactGridView: View {
 
     var body: some View {
         PavbotPremiumScreenScaffold(layout: layout, spacing: 18) {
-                ArtifactSummaryHeader(manifest: manifest)
+            ArtifactSummaryHeader(manifest: manifest)
 
-                if visibleGroups.isEmpty {
-                        ContentUnavailableView(
-                            hasSearch ? "Brak pasujących automatyzacji" : "Brak automatyzacji",
-                            systemImage: "square.grid.2x2",
-                            description: Text(hasSearch ? "Wyczyść wyszukiwanie, aby zobaczyć wszystkie kafelki." : "Włącz automatyzacje w manifeście, aby pokazać opublikowane pliki.")
-                        )
-                        if hasSearch {
-                            Button("Wyczyść wyszukiwanie") {
-                                searchText = ""
-                            }
-                        .buttonStyle(.bordered)
+            if visibleGroups.isEmpty {
+                PavbotStateCard(
+                    title: hasSearch ? "Brak pasujących automatyzacji" : "Brak automatyzacji",
+                    message: hasSearch ? "Wyczyść wyszukiwanie, aby zobaczyć wszystkie kafelki." : "Włącz automatyzacje w manifeście, aby pokazać opublikowane pliki.",
+                    systemImage: "square.grid.2x2",
+                    tint: .blue,
+                    actionTitle: hasSearch ? "Wyczyść wyszukiwanie" : nil,
+                    actionSystemImage: "xmark.circle"
+                ) {
+                    if hasSearch {
+                        searchText = ""
                     }
-                } else {
-                    LazyVGrid(columns: columns, spacing: 12) {
-                        ForEach(visibleGroups) { group in
-                            AutomationArtifactTile(group: group) {
-                                selectAction(group)
-                            }
+                }
+            } else {
+                LazyVGrid(columns: columns, spacing: 12) {
+                    ForEach(visibleGroups) { group in
+                        AutomationArtifactTile(group: group) {
+                            selectAction(group)
                         }
                     }
                 }
+            }
         }
         .refreshable {
             await refreshAction()
@@ -311,18 +323,18 @@ private struct AutomationArtifactsDetailView: View {
                 }
 
                 if visibleDays.isEmpty && visibleOtherArtifacts.isEmpty {
-                    VStack(spacing: 12) {
-                        ContentUnavailableView(
-                            hasActiveFilters ? "Brak pasujących plików" : "Brak plików",
-                            systemImage: "tray",
-                            description: Text(hasActiveFilters ? "Wyczyść filtry albo odśwież manifest." : "Odśwież manifest po publikacji plików przez tę automatyzację.")
-                        )
+                    PavbotStateCard(
+                        title: hasActiveFilters ? "Brak pasujących plików" : "Brak plików",
+                        message: hasActiveFilters ? "Wyczyść filtry albo odśwież manifest." : "Odśwież manifest po publikacji plików przez tę automatyzację.",
+                        systemImage: "tray",
+                        tint: .blue,
+                        actionTitle: hasActiveFilters ? "Wyczyść filtry" : nil,
+                        actionSystemImage: "xmark.circle"
+                    ) {
                         if hasActiveFilters {
-                            Button("Wyczyść filtry", action: clearFiltersAction)
-                                .buttonStyle(.bordered)
+                            clearFiltersAction()
                         }
                     }
-                    .frame(maxWidth: .infinity)
                 } else {
                     VStack(spacing: 10) {
                         ForEach(visibleDays, id: \.self) { day in

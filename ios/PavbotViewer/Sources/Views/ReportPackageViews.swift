@@ -1,7 +1,7 @@
 import SwiftUI
 
 enum ReportPackageCopy {
-    static let emptyResearchTitle = "Brak raportów Research"
+    static let emptyResearchTitle = "Brak raportów Przegląd"
     static let emptyResearchDescription = "Odśwież manifest po publikacji Tech News albo Polska i Świat."
     static let noManifestTitle = "Brak manifestu"
     static let noManifestDescription = "Wklej Manifest URL w ustawieniach i odśwież dane."
@@ -18,28 +18,94 @@ enum ReportPackageCopy {
     static let filesLabel = "plików"
 }
 
+struct ResearchLoadRequest: Hashable {
+    let manifestGeneratedAt: String
+    let manifestURLString: String
+    let topic: ReportTopicKind
+    let selectedDay: String?
+    let selectedArtifactIDs: [String]
+}
+
+struct ResearchLoadTrigger: Hashable {
+    let request: ResearchLoadRequest
+    let routeRevision: Int
+}
+
+struct ResearchArticleCardSnapshot: Identifiable, Equatable {
+    let article: ResearchNewsArticle
+    let presentation: PavbotNewsStoryPresentation
+
+    var id: String { article.id }
+}
+
 struct ResearchArticleListSnapshot: Equatable {
-    let articles: [ResearchNewsArticle]
+    let issuePresentation: ResearchIssuePresentation
+    let articles: [ResearchArticleCardSnapshot]
+    let topArticle: ResearchArticleCardSnapshot?
+    let remainingArticles: [ResearchArticleCardSnapshot]
 
     init(issue: ResearchNewsIssue, selectedSection: ResearchNewsSection?, searchText: String) {
-        articles = issue.filteredArticles(section: selectedSection, query: searchText)
+        issuePresentation = ResearchIssuePresentation(issue: issue)
+        let cardSnapshots = issue
+            .filteredArticles(section: selectedSection, query: searchText)
+            .map { article in
+                let articlePresentation = ResearchArticlePresentation(article: article, topic: issue.topic)
+                return ResearchArticleCardSnapshot(
+                    article: article,
+                    presentation: PavbotNewsStoryPresentation(
+                        id: article.id,
+                        section: article.section.rawValue,
+                        sectionSystemImage: article.section.systemImage,
+                        title: articlePresentation.title,
+                        lead: articlePresentation.standfirst,
+                        priority: article.priority,
+                        facts: articlePresentation.bullets,
+                        sources: article.sources,
+                        tags: articlePresentation.keywords.map(\.title),
+                        canReadAloud: false
+                    )
+                )
+            }
+        let selectedTopArticle = cardSnapshots.first { PavbotNewsPriorityStyle($0.article.priority) == .high } ?? cardSnapshots.first
+
+        articles = cardSnapshots
+        topArticle = selectedTopArticle
+        remainingArticles = selectedTopArticle.map { top in
+            cardSnapshots.filter { $0.id != top.id }
+        } ?? cardSnapshots
+    }
+}
+
+struct ResearchArticleSnapshotKey: Hashable {
+    let issueID: String
+    let selectedSectionID: String?
+    let searchText: String
+    let articleIDs: [String]
+
+    init(issue: ResearchNewsIssue, selectedSection: ResearchNewsSection?, searchText: String) {
+        issueID = issue.id
+        selectedSectionID = selectedSection?.id
+        self.searchText = searchText
+        articleIDs = issue.articles.map(\.id)
     }
 }
 
 struct ResearchView: View {
     @Environment(ManifestStore.self) private var store
     @Environment(AppRouter.self) private var router
+    @Environment(PavbotAudioSessionCoordinator.self) private var audioCoordinator
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
 
     @State private var newsStore = ResearchNewsStore()
     @State private var mobileNewsStore = MobileNewsStore()
-    @StateObject private var mobileSpeechController = MobileNewsSpeechController()
+    @State private var mobileSpeechController = MobileNewsSpeechController()
     @StateObject private var podcastSpeechController = PodcastScriptSpeechController()
     @State private var savedResearchStore = SavedResearchArticleStore()
     @State private var selectedSection: ResearchNewsSection?
     @State private var selectedArticle: ResearchNewsArticle?
     @State private var selectedMobileArticle: MobileNewsArticle?
     @State private var isSavedResearchPresented = false
+    @State private var handledReportRouteRevision = 0
 
     var body: some View {
         @Bindable var router = router
@@ -51,21 +117,12 @@ struct ResearchView: View {
             )
 
             PavbotPremiumScreenScaffold(layout: layout) {
-                PavbotCommandHero(
-                    eyebrow: "Research Library",
-                    title: "Research",
-                    subtitle: layout.usesDashboardLayout
-                        ? "Biblioteka pakietów z topic sidebar, magazynami i czytnikiem artykułów w układzie gotowym pod duże okno."
-                        : "Najważniejsze raporty i magazyny w czytelnej bibliotece na telefonie.",
-                    systemImage: "doc.text.magnifyingglass",
-                    tint: router.selectedResearchTopic.tint,
-                    insights: [
-                        PavbotInsight(title: "Temat", value: router.selectedResearchTopic.title, systemImage: router.selectedResearchTopic.systemImage, tint: router.selectedResearchTopic.tint),
-                        PavbotInsight(title: "Pakiety", value: "\(store.manifest?.reportPackages(for: router.selectedResearchTopic).count ?? 0)", systemImage: "shippingbox.fill", tint: .blue),
-                        PavbotInsight(title: "Zapisane", value: "\(savedResearchStore.savedArticles.count)", systemImage: "bookmark.fill", tint: .purple),
-                        PavbotInsight(title: "Status", value: isRefreshingSelectedResearchContent ? "Odświeżam" : "Gotowe", systemImage: isRefreshingSelectedResearchContent ? "arrow.clockwise" : "checkmark.seal.fill", tint: isRefreshingSelectedResearchContent ? .blue : .green)
-                    ],
-                    startsCollapsed: true
+                ResearchLibraryHeader(
+                    topic: router.selectedResearchTopic,
+                    packageCount: store.manifest?.reportPackages(for: router.selectedResearchTopic).count ?? 0,
+                    savedCount: savedResearchStore.savedArticles.count,
+                    isRefreshing: isRefreshingSelectedResearchContent,
+                    layout: layout
                 )
 
                 ResearchTopicPicker(selection: $router.selectedResearchTopic)
@@ -95,6 +152,7 @@ struct ResearchView: View {
                             cacheNotice: newsStore.cacheNotice,
                             selectedSection: $selectedSection,
                             selectedArticle: $selectedArticle,
+                            speechController: mobileSpeechController,
                             savedStore: savedResearchStore,
                             reload: {
                                 Task { await loadNewsIssue() }
@@ -102,23 +160,32 @@ struct ResearchView: View {
                         )
                     }
                 } else {
-                    ContentUnavailableView(
-                        ReportPackageCopy.noManifestTitle,
+                    PavbotStateCard(
+                        title: ReportPackageCopy.noManifestTitle,
+                        message: ReportPackageCopy.noManifestDescription,
                         systemImage: "doc.badge.questionmark",
-                        description: Text(ReportPackageCopy.noManifestDescription)
-                    )
-                    .frame(maxWidth: .infinity, minHeight: 300)
+                        tint: .orange,
+                        actionTitle: "Otwórz ustawienia",
+                        actionSystemImage: "gearshape"
+                    ) {
+                        router.selectedTab = .settings
+                    }
                 }
             }
             .environment(\.pavbotAdaptiveLayout, layout)
         }
-        .navigationTitle("Research")
+        .navigationTitle("Przegląd")
         .navigationDestination(for: PavbotArtifact.self) { artifact in
             ArtifactDetailView(artifact: artifact)
         }
         .sheet(item: $selectedArticle) { article in
             if let issue = newsStore.issue {
-                ResearchArticleReader(article: article, issue: issue, savedStore: savedResearchStore)
+                ResearchArticleReader(
+                    article: article,
+                    issue: issue,
+                    speechController: mobileSpeechController,
+                    savedStore: savedResearchStore
+                )
                     .pavbotLargeObjectPresentation()
             }
         }
@@ -144,12 +211,12 @@ struct ResearchView: View {
                 } label: {
                     Image(systemName: "bookmark")
                 }
-                .accessibilityLabel("Otwórz zapisane artykuły Research")
+                .accessibilityLabel("Otwórz zapisane artykuły Przegląd")
 
                 PavbotRefreshToolbarButton(
                     isRefreshing: isRefreshingSelectedResearchContent,
                     accessibilityLabel: ReportPackageCopy.refreshReportsAccessibilityLabel,
-                    accessibilityHint: "Odświeża manifest i wybraną kartę Research."
+                    accessibilityHint: "Odświeża manifest i wybraną kartę Przegląd."
                 ) {
                     Task {
                         await store.reload()
@@ -162,15 +229,13 @@ struct ResearchView: View {
             await store.reload()
             await loadSelectedResearchContent()
         }
-        .task(id: loadKey) {
-            await loadSelectedResearchContent()
-        }
-        .task(id: reportRouteReloadKey) {
-            guard router.selectedTab == .research, reportRouteReloadKey != "no-report-route" else { return }
-            await store.reload(minimumInterval: 0)
-            await loadSelectedResearchContent()
+        .task(id: researchLoadTrigger) {
+            let trigger = researchLoadTrigger
+            await handleResearchLoadTrigger(trigger)
         }
         .onAppear {
+            mobileSpeechController.configureAudioCoordinator(audioCoordinator)
+            podcastSpeechController.configureAudioCoordinator(audioCoordinator)
             if router.selectedReportDay == nil {
                 router.selectedReportDay = store.manifest?.reportPackages(for: router.selectedResearchTopic).first?.date
             }
@@ -181,7 +246,6 @@ struct ResearchView: View {
             selectedSection = nil
             selectedArticle = nil
             selectedMobileArticle = nil
-            mobileSpeechController.stop()
         }
         .onChange(of: store.manifest) { _, manifest in
             guard let manifest else { return }
@@ -192,24 +256,31 @@ struct ResearchView: View {
         .pavbotTabInfo(PavbotTabInfoContent.research(topicTitle: router.selectedResearchTopic.title, topicSystemImage: router.selectedResearchTopic.systemImage, topicTint: router.selectedResearchTopic.tint))
     }
 
-    private var loadKey: String {
-        [
-            store.manifest?.generatedAt ?? "no-manifest",
-            store.manifestURLString,
-            router.selectedResearchTopic.rawValue,
-            router.selectedReportDay ?? "no-day",
-            router.selectedReportArtifactIDs.joined(separator: ",")
-        ].joined(separator: "|")
+    private var researchLoadRequest: ResearchLoadRequest {
+        ResearchLoadRequest(
+            manifestGeneratedAt: store.manifest?.generatedAt ?? "no-manifest",
+            manifestURLString: store.manifestURLString,
+            topic: router.selectedResearchTopic,
+            selectedDay: router.selectedReportDay,
+            selectedArtifactIDs: router.selectedReportArtifactIDs
+        )
     }
 
-    private var reportRouteReloadKey: String {
-        guard router.selectedTab == .research else { return "no-report-route" }
-        let day = router.selectedReportDay ?? "no-day"
-        let artifacts = router.selectedReportArtifactIDs.joined(separator: "|")
-        guard router.selectedReportDay != nil || !router.selectedReportArtifactIDs.isEmpty else {
-            return "no-report-route"
+    private var researchLoadTrigger: ResearchLoadTrigger {
+        ResearchLoadTrigger(
+            request: researchLoadRequest,
+            routeRevision: router.reportRouteRevision
+        )
+    }
+
+    private func handleResearchLoadTrigger(_ trigger: ResearchLoadTrigger) async {
+        guard router.selectedTab == .research else { return }
+        if trigger.routeRevision != handledReportRouteRevision {
+            handledReportRouteRevision = trigger.routeRevision
+            await store.reload(minimumInterval: 0)
+            guard !Task.isCancelled else { return }
         }
-        return [router.selectedResearchTopic.rawValue, day, artifacts].joined(separator: "::")
+        await loadSelectedResearchContent()
     }
 
     private func loadNewsIssue() async {
@@ -249,6 +320,49 @@ struct ResearchView: View {
     }
 }
 
+private struct ResearchLibraryHeader: View {
+    let topic: ReportTopicKind
+    let packageCount: Int
+    let savedCount: Int
+    let isRefreshing: Bool
+    let layout: PavbotAdaptiveLayout
+
+    var body: some View {
+        PavbotPremiumCard(tint: topic.tint, cornerRadius: 22, horizontalPadding: 16, verticalPadding: 16) {
+            HStack(alignment: .top, spacing: 13) {
+                Image(systemName: "doc.text.magnifyingglass")
+                    .font(.title3.weight(.bold))
+                    .foregroundStyle(.white)
+                    .frame(width: 44, height: 44)
+                    .background(topic.tint.gradient, in: RoundedRectangle(cornerRadius: 15, style: .continuous))
+                    .shadow(color: topic.tint.opacity(0.22), radius: 10, x: 0, y: 6)
+                    .accessibilityHidden(true)
+
+                VStack(alignment: .leading, spacing: 7) {
+                    Text("Przegląd")
+                        .font(.title2.weight(.bold))
+                    Text(layout.usesDashboardLayout
+                        ? "Raporty, magazyny i zapisane artykuły w newsroomowym układzie."
+                        : "Najpierw konkretne newsy, potem pełny kontekst wydania.")
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(2)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    HStack(spacing: 8) {
+                        StatusBadge(text: topic.title, systemImage: topic.systemImage, tint: topic.tint)
+                        StatusBadge(text: "\(packageCount) pak.", systemImage: "shippingbox.fill", tint: .blue)
+                        StatusBadge(text: "\(savedCount) zapis.", systemImage: "bookmark.fill", tint: .purple)
+                        if isRefreshing {
+                            StatusBadge(text: "Odświeżam", systemImage: "arrow.clockwise", tint: .blue)
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 private struct ResearchNativeContent: View {
     let topic: ReportTopicKind
     let packages: [TopicReportPackage]
@@ -257,6 +371,7 @@ private struct ResearchNativeContent: View {
     let cacheNotice: String?
     @Binding var selectedSection: ResearchNewsSection?
     @Binding var selectedArticle: ResearchNewsArticle?
+    let speechController: MobileNewsSpeechController
     let savedStore: SavedResearchArticleStore
     let reload: () -> Void
 
@@ -274,34 +389,35 @@ private struct ResearchNativeContent: View {
                 if let issue {
                     issueContent(issue)
                 } else {
-                    ProgressView("Ładuję wydanie Research...")
-                        .frame(maxWidth: .infinity, minHeight: 220)
+                    researchLoadingCard
                 }
             case .loading:
                 if let issue {
-                    PavbotCacheNoticeBanner(text: PavbotCacheNoticeCopy.refreshing(context: "wydanie Research"))
+                    PavbotCacheNoticeBanner(text: PavbotCacheNoticeCopy.refreshing(context: "wydanie Przegląd"))
                     issueContent(issue)
                 } else {
-                    ProgressView("Ładuję wydanie Research...")
-                        .frame(maxWidth: .infinity, minHeight: 220)
+                    researchLoadingCard
                 }
             case .failed(let error):
                 if let issue {
                     PavbotCacheNoticeBanner(text: error.message)
                     issueContent(issue)
                 } else {
-                    PavbotStateView(error: error, action: reload)
+                    PavbotStateCard(error: error, action: reload)
                 }
             case .loaded:
                 if let issue {
                     issueContent(issue)
                 } else {
-                    ContentUnavailableView(
-                        ReportPackageCopy.emptyResearchTitle,
+                    PavbotStateCard(
+                        title: ReportPackageCopy.emptyResearchTitle,
+                        message: ReportPackageCopy.emptyResearchDescription,
                         systemImage: topic.systemImage,
-                        description: Text(ReportPackageCopy.emptyResearchDescription)
+                        tint: topic.tint,
+                        actionTitle: "Odśwież Przegląd",
+                        actionSystemImage: "arrow.clockwise",
+                        action: reload
                     )
-                    .frame(maxWidth: .infinity, minHeight: 260)
                 }
             }
         }
@@ -313,27 +429,108 @@ private struct ResearchNativeContent: View {
             PavbotCacheNoticeBanner(text: cacheNotice)
         }
 
-        ResearchIssueHero(issue: issue, packageCount: packages.count)
+        ResearchArticleSnapshotHost(
+            issue: issue,
+            topic: topic,
+            packageCount: packages.count,
+            selectedSection: $selectedSection,
+            selectedArticle: $selectedArticle,
+            speechController: speechController,
+            savedStore: savedStore
+        )
+    }
+
+    private var researchLoadingCard: some View {
+        PavbotLoadingStateCard(
+            title: "Ładuję Przegląd",
+            message: "Pobieram najnowsze wydanie i przygotowuję karty artykułów.",
+            systemImage: topic.systemImage,
+            tint: topic.tint
+        )
+    }
+}
+
+private struct ResearchArticleSnapshotHost: View {
+    let issue: ResearchNewsIssue
+    let topic: ReportTopicKind
+    let packageCount: Int
+    @Binding var selectedSection: ResearchNewsSection?
+    @Binding var selectedArticle: ResearchNewsArticle?
+    let speechController: MobileNewsSpeechController
+    let savedStore: SavedResearchArticleStore
+    @State private var snapshot: ResearchArticleListSnapshot?
+    @State private var snapshotKey: ResearchArticleSnapshotKey?
+
+    private var currentKey: ResearchArticleSnapshotKey {
+        ResearchArticleSnapshotKey(issue: issue, selectedSection: selectedSection, searchText: "")
+    }
+
+    var body: some View {
+        Group {
+            if let snapshot, snapshotKey == currentKey {
+                snapshotContent(snapshot)
+            } else {
+                PavbotLoadingStateCard(
+                    title: "Układam artykuły",
+                    message: "Przygotowuję skrót, top story i listę dla wybranej sekcji.",
+                    systemImage: topic.systemImage,
+                    tint: topic.tint
+                )
+            }
+        }
+        .task(id: currentKey) {
+            let nextSnapshot = ResearchArticleListSnapshot(issue: issue, selectedSection: selectedSection, searchText: "")
+            guard !Task.isCancelled else { return }
+            snapshot = nextSnapshot
+            snapshotKey = currentKey
+        }
+    }
+
+    @ViewBuilder
+    private func snapshotContent(_ articleSnapshot: ResearchArticleListSnapshot) -> some View {
+        ResearchIssueHero(
+            issue: issue,
+            presentation: articleSnapshot.issuePresentation,
+            packageCount: packageCount
+        )
+
+        MobileNewsSpeechMiniPlayerHost(speechController: speechController)
+
         ResearchSectionFilterBar(topic: topic, selection: $selectedSection)
 
-        let articleSnapshot = ResearchArticleListSnapshot(issue: issue, selectedSection: selectedSection, searchText: "")
         if articleSnapshot.articles.isEmpty {
-            ContentUnavailableView(
-                "Brak newsów dla filtra",
+            PavbotStateCard(
+                title: "Brak newsów dla filtra",
+                message: "Zmień sekcję, żeby zobaczyć inne artykuły z wydania.",
                 systemImage: "line.3.horizontal.decrease.circle",
-                description: Text("Zmień sekcję, żeby zobaczyć inne artykuły z wydania.")
+                tint: topic.tint
             )
-            .frame(maxWidth: .infinity, minHeight: 220)
         } else {
             VStack(spacing: 12) {
-                ForEach(articleSnapshot.articles) { article in
+                if let topArticle = articleSnapshot.topArticle {
                     Button {
-                        selectedArticle = article
+                        selectedArticle = topArticle.article
                     } label: {
                         ResearchArticleCard(
-                            article: article,
+                            article: topArticle.article,
+                            presentation: topArticle.presentation,
                             topic: topic,
-                            isSaved: savedStore.isSaved(article: article, issue: issue)
+                            isSaved: savedStore.isSaved(article: topArticle.article, issue: issue),
+                            isFeatured: true
+                        )
+                    }
+                    .buttonStyle(.plain)
+                }
+
+                ForEach(articleSnapshot.remainingArticles) { articleSnapshot in
+                    Button {
+                        selectedArticle = articleSnapshot.article
+                    } label: {
+                        ResearchArticleCard(
+                            article: articleSnapshot.article,
+                            presentation: articleSnapshot.presentation,
+                            topic: topic,
+                            isSaved: savedStore.isSaved(article: articleSnapshot.article, issue: issue)
                         )
                     }
                     .buttonStyle(.plain)
@@ -351,8 +548,8 @@ private struct MobileNewsNativeContent: View {
     let state: MobileNewsStore.LoadState
     let cacheNotice: String?
     @Binding var selectedArticle: MobileNewsArticle?
-    @ObservedObject var speechController: MobileNewsSpeechController
-    @ObservedObject var podcastSpeechController: PodcastScriptSpeechController
+    let speechController: MobileNewsSpeechController
+    let podcastSpeechController: PodcastScriptSpeechController
     let savedStore: SavedResearchArticleStore
     let reload: () -> Void
 
@@ -370,34 +567,35 @@ private struct MobileNewsNativeContent: View {
                 if let magazine {
                     magazineContent(magazine)
                 } else {
-                    ProgressView("Ładuję magazyn Aktualne...")
-                        .frame(maxWidth: .infinity, minHeight: 220)
+                    mobileNewsLoadingCard
                 }
             case .loading:
                 if let magazine {
                     PavbotCacheNoticeBanner(text: PavbotCacheNoticeCopy.refreshing(context: "magazyn Aktualne"))
                     magazineContent(magazine)
                 } else {
-                    ProgressView("Ładuję magazyn Aktualne...")
-                        .frame(maxWidth: .infinity, minHeight: 220)
+                    mobileNewsLoadingCard
                 }
             case .failed(let error):
                 if let magazine {
                     PavbotCacheNoticeBanner(text: error.message)
                     magazineContent(magazine)
                 } else {
-                    PavbotStateView(error: error, action: reload)
+                    PavbotStateCard(error: error, action: reload)
                 }
             case .loaded:
                 if let magazine {
                     magazineContent(magazine)
                 } else {
-                    ContentUnavailableView(
-                        "Brak magazynu Aktualne",
+                    PavbotStateCard(
+                        title: "Brak magazynu Aktualne",
+                        message: "Odśwież manifest po publikacji automatyzacji 10:15.",
                         systemImage: ReportTopicKind.aktualne.systemImage,
-                        description: Text("Odśwież manifest po publikacji automatyzacji 10:15.")
+                        tint: ReportTopicKind.aktualne.tint,
+                        actionTitle: "Odśwież Aktualne",
+                        actionSystemImage: "arrow.clockwise",
+                        action: reload
                     )
-                    .frame(maxWidth: .infinity, minHeight: 260)
                 }
             }
         }
@@ -411,22 +609,18 @@ private struct MobileNewsNativeContent: View {
 
         MobileNewsHero(magazine: magazine, packageCount: packages.count)
 
-        if speechController.hasActivePlayback {
-            MobileNewsSpeechMiniPlayer(speechController: speechController)
-        }
+        MobileNewsSpeechMiniPlayerHost(speechController: speechController)
 
-        if podcastSpeechController.hasActivePlayback {
-            PodcastScriptSpeechMiniPlayer(speechController: podcastSpeechController)
-        }
+        PodcastScriptSpeechMiniPlayerHost(speechController: podcastSpeechController)
 
         let sections = magazine.sections
         if sections.isEmpty {
-            ContentUnavailableView(
-                "Brak artykułów",
+            PavbotStateCard(
+                title: "Brak artykułów",
+                message: "Magazyn Aktualne nie zawiera jeszcze artykułów do pokazania.",
                 systemImage: "newspaper",
-                description: Text("Magazyn Aktualne nie zawiera jeszcze artykułów do pokazania.")
+                tint: .orange
             )
-            .frame(maxWidth: .infinity, minHeight: 220)
         } else {
             VStack(alignment: .leading, spacing: 16) {
                 ForEach(sections) { section in
@@ -443,10 +637,39 @@ private struct MobileNewsNativeContent: View {
 
         MobileNewsAddOns(magazine: magazine, podcastSpeechController: podcastSpeechController)
     }
+
+    private var mobileNewsLoadingCard: some View {
+        PavbotLoadingStateCard(
+            title: "Ładuję Aktualne",
+            message: "Pobieram magazyn dnia i przygotowuję teksty do czytania na głos.",
+            systemImage: ReportTopicKind.aktualne.systemImage,
+            tint: ReportTopicKind.aktualne.tint
+        )
+    }
+}
+
+private struct MobileNewsSpeechMiniPlayerHost: View {
+    @ObservedObject var speechController: MobileNewsSpeechController
+
+    var body: some View {
+        if speechController.hasActivePlayback {
+            MobileNewsSpeechMiniPlayer(speechController: speechController)
+        }
+    }
+}
+
+private struct PodcastScriptSpeechMiniPlayerHost: View {
+    @ObservedObject var speechController: PodcastScriptSpeechController
+
+    var body: some View {
+        if speechController.hasActivePlayback {
+            PodcastScriptSpeechMiniPlayer(speechController: speechController)
+        }
+    }
 }
 
 private struct MobileNewsSpeechMiniPlayer: View {
-    @ObservedObject var speechController: MobileNewsSpeechController
+    let speechController: MobileNewsSpeechController
     @Environment(PavbotHaptics.self) private var haptics
 
     var body: some View {
@@ -520,10 +743,7 @@ private struct MobileNewsSpeechMiniPlayer: View {
             )
 
             if let errorMessage = speechController.errorMessage {
-                Text(errorMessage)
-                    .font(.caption)
-                    .foregroundStyle(.red)
-                    .fixedSize(horizontal: false, vertical: true)
+                PavbotInlineErrorNotice(message: errorMessage, tint: .orange)
             }
         }
         .padding(16)
@@ -621,10 +841,7 @@ private struct PodcastScriptSpeechMiniPlayer: View {
             )
 
             if let errorMessage = speechController.errorMessage {
-                Text(errorMessage)
-                    .font(.caption)
-                    .foregroundStyle(.red)
-                    .fixedSize(horizontal: false, vertical: true)
+                PavbotInlineErrorNotice(message: errorMessage, tint: .purple)
             }
         }
         .padding(16)
@@ -640,6 +857,7 @@ private struct PodcastScriptSpeechMiniPlayer: View {
 private struct MobileNewsHero: View {
     let magazine: MobileNewsMagazine
     let packageCount: Int
+    @State private var isContextExpanded = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -662,16 +880,6 @@ private struct MobileNewsHero: View {
                     .foregroundStyle(.orange)
             }
 
-            VStack(alignment: .leading, spacing: 10) {
-                ForEach(Array(magazine.leadParagraphs.enumerated()), id: \.offset) { index, paragraph in
-                    Text(paragraph)
-                        .font(index == 0 ? .body.weight(.semibold) : .callout)
-                        .foregroundStyle(index == 0 ? .primary : .secondary)
-                        .lineSpacing(4)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-            }
-
             HStack(spacing: 10) {
                 MetricTile(title: "Artykuły", value: "\(magazine.articleCount)", systemImage: "doc.text.fill", tint: .orange)
                 MetricTile(title: "Źródła", value: "\(magazine.sourceCount)", systemImage: "link.circle.fill", tint: .blue)
@@ -687,6 +895,25 @@ private struct MobileNewsHero: View {
                     StatusBadge(text: "\(packageCount) wydań", systemImage: "calendar", tint: .gray)
                 }
             }
+
+            DisclosureGroup(isExpanded: $isContextExpanded) {
+                VStack(alignment: .leading, spacing: 10) {
+                    ForEach(Array(magazine.leadParagraphs.enumerated()), id: \.offset) { index, paragraph in
+                        Text(paragraph)
+                            .font(index == 0 ? .body.weight(.semibold) : .callout)
+                            .foregroundStyle(index == 0 ? .primary : .secondary)
+                            .lineSpacing(4)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+                .padding(.top, 8)
+            } label: {
+                Label("Kontekst wydania", systemImage: "text.quote")
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(.orange)
+                    .textCase(.uppercase)
+            }
+            .tint(.orange)
         }
         .padding(18)
         .background(Color(.systemBackground), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
@@ -701,8 +928,17 @@ private struct MobileNewsSectionBlock: View {
     let section: MobileNewsSection
     let magazine: MobileNewsMagazine
     @Binding var selectedArticle: MobileNewsArticle?
-    @ObservedObject var speechController: MobileNewsSpeechController
+    let speechController: MobileNewsSpeechController
     let savedStore: SavedResearchArticleStore
+
+    private var topArticle: MobileNewsArticle? {
+        section.articles.first { PavbotNewsPriorityStyle($0.priority) == .high } ?? section.articles.first
+    }
+
+    private var remainingArticles: [MobileNewsArticle] {
+        guard let topArticle else { return section.articles }
+        return section.articles.filter { $0.id != topArticle.id }
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -729,7 +965,18 @@ private struct MobileNewsSectionBlock: View {
             }
 
             VStack(spacing: 10) {
-                ForEach(section.articles) { article in
+                if let topArticle {
+                    MobileNewsArticleRow(
+                        article: topArticle,
+                        magazine: magazine,
+                        selectedArticle: $selectedArticle,
+                        speechController: speechController,
+                        savedStore: savedStore,
+                        isFeatured: true
+                    )
+                }
+
+                ForEach(remainingArticles) { article in
                     MobileNewsArticleRow(
                         article: article,
                         magazine: magazine,
@@ -744,19 +991,46 @@ private struct MobileNewsSectionBlock: View {
 }
 
 private struct MobileNewsArticleRow: View {
+    let article: MobileNewsArticle
+    let magazine: MobileNewsMagazine
+    @Binding var selectedArticle: MobileNewsArticle?
+    let speechController: MobileNewsSpeechController
+    let savedStore: SavedResearchArticleStore
+    var isFeatured = false
+
+    private var isSaved: Bool {
+        savedStore.isSaved(article: article, magazine: magazine)
+    }
+
+    private var canReadAloud: Bool {
+        !article.ttsText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+
+    var body: some View {
+        MobileNewsArticleSpeechActionHost(
+            article: article,
+            magazine: magazine,
+            selectedArticle: $selectedArticle,
+            speechController: speechController,
+            isFeatured: isFeatured,
+            isSaved: isSaved,
+            canReadAloud: canReadAloud
+        )
+    }
+}
+
+private struct MobileNewsArticleSpeechActionHost: View {
     @Environment(PavbotHaptics.self) private var haptics
     let article: MobileNewsArticle
     let magazine: MobileNewsMagazine
     @Binding var selectedArticle: MobileNewsArticle?
     @ObservedObject var speechController: MobileNewsSpeechController
-    let savedStore: SavedResearchArticleStore
+    let isFeatured: Bool
+    let isSaved: Bool
+    let canReadAloud: Bool
 
     private var isCurrent: Bool {
         speechController.currentArticleID == article.id
-    }
-
-    private var isSaved: Bool {
-        savedStore.isSaved(article: article, magazine: magazine)
     }
 
     var body: some View {
@@ -765,46 +1039,53 @@ private struct MobileNewsArticleRow: View {
                 haptics.play(.lightImpact)
                 selectedArticle = article
             } label: {
-                MobileNewsArticleCard(article: article, isSaved: isSaved)
+                MobileNewsArticleCard(
+                    article: article,
+                    isSaved: isSaved,
+                    isActiveRead: isCurrent,
+                    isFeatured: isFeatured
+                )
             }
             .buttonStyle(.plain)
 
-            HStack(spacing: 10) {
-                Button {
-                    handleSpeechAction()
-                } label: {
-                    Label(speechTitle, systemImage: speechIcon)
-                        .font(.caption.weight(.semibold))
-                        .foregroundStyle(.orange)
-                        .padding(.horizontal, 12)
-                        .padding(.vertical, 8)
-                        .background(Color.orange.opacity(0.1), in: Capsule())
-                }
-                .buttonStyle(.plain)
-                .accessibilityLabel("\(speechTitle): \(article.title)")
-
-                if isCurrent {
+            if canReadAloud {
+                HStack(spacing: 10) {
                     Button {
-                        speechController.stop()
-                        haptics.play(.warning)
+                        handleSpeechAction()
                     } label: {
-                        Label("Stop", systemImage: "stop.fill")
+                        Label(speechTitle, systemImage: speechIcon)
                             .font(.caption.weight(.semibold))
-                            .foregroundStyle(.secondary)
+                            .foregroundStyle(.orange)
                             .padding(.horizontal, 12)
                             .padding(.vertical, 8)
-                            .background(Color(.secondarySystemBackground), in: Capsule())
+                            .background(Color.orange.opacity(0.1), in: Capsule())
                     }
                     .buttonStyle(.plain)
+                    .accessibilityLabel("\(speechTitle): \(article.title)")
+
+                    if isCurrent {
+                        Button {
+                            speechController.stop()
+                            haptics.play(.warning)
+                        } label: {
+                            Label("Stop", systemImage: "stop.fill")
+                                .font(.caption.weight(.semibold))
+                                .foregroundStyle(.secondary)
+                                .padding(.horizontal, 12)
+                                .padding(.vertical, 8)
+                                .background(Color(.secondarySystemBackground), in: Capsule())
+                        }
+                        .buttonStyle(.plain)
+                    }
+
+                    Spacer()
+
+                    Text("\(article.sources.count) źr.")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(.secondary)
                 }
-
-                Spacer()
-
-                Text("\(article.sources.count) źr.")
-                    .font(.caption.weight(.semibold))
-                    .foregroundStyle(.secondary)
+                .padding(.horizontal, 4)
             }
-            .padding(.horizontal, 4)
 
             if isCurrent {
                 MobileNewsSpeechRatePicker(speechController: speechController)
@@ -821,11 +1102,8 @@ private struct MobileNewsArticleRow: View {
             }
 
             if let errorMessage = speechController.errorMessage, isCurrent {
-                Text(errorMessage)
-                    .font(.caption)
-                    .foregroundStyle(.red)
+                PavbotInlineErrorNotice(message: errorMessage, tint: .orange)
                     .padding(.horizontal, 4)
-                    .fixedSize(horizontal: false, vertical: true)
             }
         }
     }
@@ -865,57 +1143,45 @@ private struct MobileNewsArticleRow: View {
 private struct MobileNewsArticleCard: View {
     let article: MobileNewsArticle
     var isSaved = false
+    var isActiveRead = false
+    var isFeatured = false
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 11) {
-            HStack(alignment: .top, spacing: 12) {
-                VStack(alignment: .leading, spacing: 5) {
-                    Text(article.section.uppercased())
-                        .font(.caption2.weight(.bold))
-                        .foregroundStyle(.orange)
-                    Text(article.title)
-                        .font(.headline.weight(.semibold))
-                        .foregroundStyle(.primary)
-                        .fixedSize(horizontal: false, vertical: true)
-                    Text(article.lead)
-                        .font(.callout)
-                        .foregroundStyle(.secondary)
-                        .lineSpacing(3)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                Spacer(minLength: 8)
-                HStack(spacing: 8) {
-                    PavbotSourceCountBadge(count: article.sources.count, tint: .orange)
+        PavbotNewsStoryCard(
+            presentation: PavbotNewsStoryPresentation(
+                id: article.id,
+                section: article.section,
+                sectionSystemImage: mobileNewsSectionSystemImage(for: article.section),
+                title: article.title,
+                lead: article.lead,
+                priority: article.priority,
+                facts: article.facts,
+                sources: article.sources,
+                tags: article.tags,
+                canReadAloud: !article.ttsText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            ),
+            tint: .orange,
+            isSaved: isSaved,
+            isActiveRead: isActiveRead,
+            isFeatured: isFeatured
+        )
+    }
 
-                    if isSaved {
-                        Image(systemName: "bookmark.fill")
-                            .font(.subheadline.weight(.semibold))
-                            .foregroundStyle(.blue)
-                            .accessibilityLabel("Artykuł zapisany")
-                    }
-
-                    Image(systemName: "chevron.right")
-                        .font(.caption.weight(.bold))
-                        .foregroundStyle(.tertiary)
-                }
-            }
-
-            if !article.tags.isEmpty {
-                PavbotArticleKeywordRows(horizontalSpacing: 6, verticalSpacing: 6) {
-                    ForEach(article.tags.prefix(4), id: \.self) { tag in
-                        PavbotArticleTagChip(
-                            title: tag,
-                            systemImage: "tag.fill",
-                            tint: .orange,
-                            accessibilityPrefix: "Tag artykułu"
-                        )
-                    }
-                }
-            }
+    private func mobileNewsSectionSystemImage(for section: String) -> String {
+        switch section.folding(options: [.caseInsensitive, .diacriticInsensitive], locale: .current).lowercased() {
+        case let value where value.contains("polska"):
+            "flag.fill"
+        case let value where value.contains("polityka"):
+            "building.columns.fill"
+        case let value where value.contains("swiat") || value.contains("zagraniczne"):
+            "globe.europe.africa.fill"
+        case let value where value.contains("technologia"):
+            "cpu.fill"
+        case let value where value.contains("pogoda"):
+            "cloud.sun.fill"
+        default:
+            "newspaper.fill"
         }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color(.systemBackground), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 }
 
@@ -923,7 +1189,7 @@ private struct MobileNewsAddOns: View {
     @Environment(ManifestStore.self) private var store
 
     let magazine: MobileNewsMagazine
-    @ObservedObject var podcastSpeechController: PodcastScriptSpeechController
+    let podcastSpeechController: PodcastScriptSpeechController
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -976,7 +1242,7 @@ private struct MobileNewsAddOns: View {
                         }
                         .padding(.vertical, 12)
                     } else {
-                        PavbotActionRow(title: "MP3 niedostępne", subtitle: "Odśwież manifest z publicznym GitHub raw URL.", systemImage: "play.slash.fill", tint: .secondary)
+                        PavbotActionRow(title: "MP3 niedostępne", subtitle: "Odśwież manifest z publicznym adresem GitHub.", systemImage: "play.slash.fill", tint: .secondary)
                     }
                 }
 
@@ -1098,10 +1364,7 @@ private struct PodcastScriptSpeechPanel: View {
             }
 
             if let errorMessage = speechController.errorMessage {
-                Text(errorMessage)
-                    .font(.caption)
-                    .foregroundStyle(.red)
-                    .fixedSize(horizontal: false, vertical: true)
+                PavbotInlineErrorNotice(message: errorMessage, tint: .purple)
             }
         }
         .padding(.vertical, 12)
@@ -1123,7 +1386,7 @@ private struct PodcastScriptSpeechPanel: View {
 
     private func playOrToggle() async {
         guard let url = artifact.resolvedURL(manifestURL: URL(string: manifestURLString)) else {
-            speechController.errorMessage = "Brak publicznego URL tekstu podcastu. Odśwież manifest z GitHub raw URL."
+            speechController.errorMessage = "Brak publicznego adresu tekstu podcastu. Odśwież manifest z publicznym adresem GitHub."
             return
         }
         await speechController.playOrToggle(artifact: artifact, url: url)
@@ -1136,7 +1399,7 @@ private struct PodcastScriptSpeechPanel: View {
         }
         showTranscript = true
         guard let url = artifact.resolvedURL(manifestURL: URL(string: manifestURLString)) else {
-            speechController.errorMessage = "Brak publicznego URL transkrypcji. Odśwież manifest z GitHub raw URL."
+            speechController.errorMessage = "Brak publicznego adresu transkrypcji. Odśwież manifest z publicznym adresem GitHub."
             return
         }
         await speechController.loadTranscript(artifact: artifact, url: url)
@@ -1190,6 +1453,10 @@ private struct MobileNewsArticleReader: View {
         savedStore.isSaved(article: article, magazine: magazine)
     }
 
+    private var canReadAloud: Bool {
+        !article.ttsText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+    }
+
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -1205,7 +1472,9 @@ private struct MobileNewsArticleReader: View {
                             .lineSpacing(4)
                             .fixedSize(horizontal: false, vertical: true)
 
-                        MobileNewsSpeechControls(article: article, speechController: speechController)
+                        if canReadAloud {
+                            MobileNewsSpeechControls(article: article, speechController: speechController)
+                        }
 
                         Divider()
                         MobileNewsTextSection(title: "Fakty", items: article.facts)
@@ -1263,7 +1532,7 @@ private struct MobileNewsArticleReader: View {
 private struct MobileNewsSpeechControls: View {
     @Environment(PavbotHaptics.self) private var haptics
     let article: MobileNewsArticle
-    @ObservedObject var speechController: MobileNewsSpeechController
+    let speechController: MobileNewsSpeechController
 
     private var isCurrent: Bool {
         speechController.currentArticleID == article.id
@@ -1319,10 +1588,7 @@ private struct MobileNewsSpeechControls: View {
                 )
             }
             if let errorMessage = speechController.errorMessage, isCurrent {
-                Text(errorMessage)
-                    .font(.caption)
-                    .foregroundStyle(.red)
-                    .fixedSize(horizontal: false, vertical: true)
+                PavbotInlineErrorNotice(message: errorMessage, tint: .orange)
             }
         }
     }
@@ -1337,6 +1603,15 @@ private struct MobileNewsSpeechControls: View {
         if isCurrent, speechController.isPaused { return "play.fill" }
         if isCurrent, speechController.isSpeaking { return "pause.fill" }
         return "speaker.wave.2.fill"
+    }
+}
+
+private struct ResearchArticleSpeechControlsHost: View {
+    let article: MobileNewsArticle
+    @ObservedObject var speechController: MobileNewsSpeechController
+
+    var body: some View {
+        MobileNewsSpeechControls(article: article, speechController: speechController)
     }
 }
 
@@ -1443,11 +1718,11 @@ private struct MobileNewsReaderAddOns: View {
 
 private struct ResearchIssueHero: View {
     let issue: ResearchNewsIssue
+    let presentation: ResearchIssuePresentation
     let packageCount: Int
+    @State private var isContextExpanded = false
 
     var body: some View {
-        let presentation = ResearchIssuePresentation(issue: issue)
-
         VStack(alignment: .leading, spacing: 18) {
             HStack(alignment: .top, spacing: 12) {
                 VStack(alignment: .leading, spacing: 8) {
@@ -1467,21 +1742,6 @@ private struct ResearchIssueHero: View {
                     .font(.title.weight(.semibold))
                     .foregroundStyle(issue.topic.tint)
                     .accessibilityHidden(true)
-            }
-
-            VStack(alignment: .leading, spacing: 14) {
-                Label("Wydanie dnia", systemImage: "text.quote")
-                    .font(.caption.weight(.bold))
-                    .foregroundStyle(issue.topic.tint)
-                    .textCase(.uppercase)
-
-                ResearchLeadParagraphs(
-                    paragraphs: presentation.leadParagraphs,
-                    keywords: presentation.keywords,
-                    tint: issue.topic.tint
-                )
-
-                ResearchQuickPoints(points: presentation.quickPoints, tint: issue.topic.tint)
             }
 
             ResearchSignalSummary(presentation: presentation, tint: issue.topic.tint)
@@ -1506,6 +1766,25 @@ private struct ResearchIssueHero: View {
                     StatusBadge(text: "\(packageCount) wydań", systemImage: "calendar", tint: .gray)
                 }
             }
+
+            DisclosureGroup(isExpanded: $isContextExpanded) {
+                VStack(alignment: .leading, spacing: 14) {
+                    ResearchLeadParagraphs(
+                        paragraphs: presentation.leadParagraphs,
+                        keywords: presentation.keywords,
+                        tint: issue.topic.tint
+                    )
+
+                    ResearchQuickPoints(points: presentation.quickPoints, tint: issue.topic.tint)
+                }
+                .padding(.top, 8)
+            } label: {
+                Label("Kontekst wydania", systemImage: "text.quote")
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(issue.topic.tint)
+                    .textCase(.uppercase)
+            }
+            .tint(issue.topic.tint)
         }
         .padding(18)
         .background {
@@ -1765,70 +2044,26 @@ private struct ResearchSectionChip: View {
 
 private struct ResearchArticleCard: View {
     let article: ResearchNewsArticle
+    let presentation: PavbotNewsStoryPresentation
     let topic: ReportTopicKind
     var isSaved = false
-
-    private var presentation: ResearchArticlePresentation {
-        ResearchArticlePresentation(article: article, topic: topic)
-    }
+    var isFeatured = false
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(alignment: .top, spacing: 12) {
-                Image(systemName: article.section.systemImage)
-                    .font(.headline.weight(.semibold))
-                    .foregroundStyle(topic.tint)
-                    .frame(width: 42, height: 42)
-                    .background(topic.tint.opacity(0.12), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-                    .accessibilityHidden(true)
-
-                VStack(alignment: .leading, spacing: 5) {
-                    Text(article.section.rawValue.uppercased())
-                        .font(.caption2.weight(.bold))
-                        .foregroundStyle(topic.tint)
-                    Text(presentation.title)
-                        .font(.headline.weight(.semibold))
-                        .foregroundStyle(.primary)
-                        .fixedSize(horizontal: false, vertical: true)
-                    HighlightedResearchText(
-                        text: presentation.standfirst,
-                        keywords: presentation.keywords,
-                        tint: topic.tint,
-                        font: .callout
-                    )
-                    ResearchArticleBulletList(points: Array(presentation.bullets.prefix(2)), tint: topic.tint, font: .footnote)
-                }
-
-                Spacer(minLength: 8)
-
-                HStack(spacing: 8) {
-                    PavbotSourceCountBadge(count: presentation.sourceCount, tint: topic.tint)
-
-                    if isSaved {
-                        Image(systemName: "bookmark.fill")
-                            .font(.subheadline.weight(.semibold))
-                            .foregroundStyle(.blue)
-                            .accessibilityLabel("Artykuł zapisany")
-                    }
-                }
-            }
-
-            if !presentation.keywords.isEmpty {
-                PavbotArticleKeywordRows(horizontalSpacing: 8, verticalSpacing: 6) {
-                    ForEach(presentation.keywords.prefix(3)) { keyword in
-                        PavbotArticleTagChip(
-                            title: keyword.title,
-                            systemImage: keyword.systemImage,
-                            tint: topic.tint,
-                            accessibilityPrefix: "Tag artykułu"
-                        )
-                    }
-                }
-            }
+        if isFeatured {
+            PavbotTopStoryCard(
+                presentation: presentation,
+                tint: topic.tint,
+                isSaved: isSaved
+            )
+        } else {
+            PavbotNewsStoryCard(
+                presentation: presentation,
+                tint: topic.tint,
+                isSaved: isSaved,
+                isFeatured: false
+            )
         }
-        .padding(16)
-        .frame(maxWidth: .infinity, alignment: .leading)
-        .background(Color(.systemBackground), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 }
 
@@ -1887,10 +2122,24 @@ private struct ResearchArticleReader: View {
 
     let article: ResearchNewsArticle
     let issue: ResearchNewsIssue
+    let speechController: MobileNewsSpeechController
     let savedStore: SavedResearchArticleStore
 
-    private var presentation: ResearchArticlePresentation {
-        ResearchArticlePresentation(article: article, topic: issue.topic)
+    private let presentation: ResearchArticlePresentation
+    private let speechArticle: MobileNewsArticle
+
+    init(
+        article: ResearchNewsArticle,
+        issue: ResearchNewsIssue,
+        speechController: MobileNewsSpeechController,
+        savedStore: SavedResearchArticleStore
+    ) {
+        self.article = article
+        self.issue = issue
+        self.speechController = speechController
+        self.savedStore = savedStore
+        self.presentation = ResearchArticlePresentation(article: article, topic: issue.topic)
+        self.speechArticle = MobileNewsArticle(researchArticle: article, topic: issue.topic)
     }
 
     private var canSave: Bool {
@@ -1916,6 +2165,7 @@ private struct ResearchArticleReader: View {
                             tint: issue.topic.tint,
                             font: .headline
                         )
+                        ResearchArticleSpeechControlsHost(article: speechArticle, speechController: speechController)
                         ResearchArticleBulletList(points: presentation.bullets, tint: issue.topic.tint)
                         Divider()
                         ResearchArticleBody(
@@ -2054,8 +2304,12 @@ private struct ReportTopicPackagesView<Header: View>: View {
                     ReportTopicHeader(topic: topic, packages: packages)
 
                     if packages.isEmpty {
-                        ContentUnavailableView(emptyTitle, systemImage: topic.systemImage, description: Text(emptyDescription))
-                            .frame(maxWidth: .infinity, minHeight: 260)
+                        PavbotStateCard(
+                            title: emptyTitle,
+                            message: emptyDescription,
+                            systemImage: topic.systemImage,
+                            tint: topic.tint
+                        )
                     } else {
                         VStack(spacing: 14) {
                             if let latest = packages.first {
@@ -2068,12 +2322,16 @@ private struct ReportTopicPackagesView<Header: View>: View {
                         }
                     }
                 } else {
-                    ContentUnavailableView(
-                        ReportPackageCopy.noManifestTitle,
+                    PavbotStateCard(
+                        title: ReportPackageCopy.noManifestTitle,
+                        message: ReportPackageCopy.noManifestDescription,
                         systemImage: "doc.badge.questionmark",
-                        description: Text(ReportPackageCopy.noManifestDescription)
-                    )
-                        .frame(maxWidth: .infinity, minHeight: 260)
+                        tint: .orange,
+                        actionTitle: "Otwórz ustawienia",
+                        actionSystemImage: "gearshape"
+                    ) {
+                        router.selectedTab = .settings
+                    }
                 }
             }
             .padding(.horizontal, 20)
@@ -2141,53 +2399,110 @@ private struct ResearchTopicPicker: View {
     @Binding var selection: ReportTopicKind
 
     var body: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 150), spacing: 10)], spacing: 10) {
-            ResearchTopicButton(topic: .techNews, selection: $selection)
-            ResearchTopicButton(topic: .polskaSwiat, selection: $selection)
-            ResearchTopicButton(topic: .aktualne, selection: $selection)
+        ResearchTopicCompactSwitcher(selection: $selection)
+    }
+}
+
+private struct ResearchTopicCompactSwitcher: View {
+    @Binding var selection: ReportTopicKind
+
+    private let columns = Array(repeating: GridItem(.flexible(minimum: 96), spacing: 8), count: 3)
+
+    private var items: [ResearchTopicCompactItem] {
+        [
+            ResearchTopicCompactItem(
+                id: .aktualne,
+                title: "Aktualne",
+                badge: "TTS",
+                systemImage: ReportTopicKind.aktualne.systemImage,
+                tint: ReportTopicKind.aktualne.tint
+            ),
+            ResearchTopicCompactItem(
+                id: .techNews,
+                title: "Tech",
+                badge: "AI",
+                systemImage: ReportTopicKind.techNews.systemImage,
+                tint: ReportTopicKind.techNews.tint
+            ),
+            ResearchTopicCompactItem(
+                id: .polskaSwiat,
+                title: "Polska i Świat",
+                badge: "News",
+                systemImage: ReportTopicKind.polskaSwiat.systemImage,
+                tint: ReportTopicKind.polskaSwiat.tint
+            )
+        ]
+    }
+
+    var body: some View {
+        LazyVGrid(columns: columns, spacing: 8) {
+            ForEach(items) { item in
+                Button {
+                    selection = item.id
+                } label: {
+                    ResearchTopicCompactCell(
+                        item: item,
+                        isSelected: selection == item.id
+                    )
+                }
+                .buttonStyle(.plain)
+                .accessibilityAddTraits(selection == item.id ? .isSelected : [])
+                .accessibilityLabel("\(item.title), \(selection == item.id ? "wybrane" : "otwórz")")
+            }
         }
     }
 }
 
-private struct ResearchTopicButton: View {
-    @Environment(PavbotHaptics.self) private var haptics
-    let topic: ReportTopicKind
-    @Binding var selection: ReportTopicKind
+private struct ResearchTopicCompactItem: Identifiable {
+    let id: ReportTopicKind
+    let title: String
+    let badge: String
+    let systemImage: String
+    let tint: Color
+}
 
-    private var isSelected: Bool {
-        selection == topic
-    }
+private struct ResearchTopicCompactCell: View {
+    let item: ResearchTopicCompactItem
+    let isSelected: Bool
 
     var body: some View {
-        Button {
-            guard selection != topic else { return }
-            selection = topic
-            haptics.play(.selection)
-        } label: {
-            HStack(spacing: 10) {
-                Image(systemName: topic.systemImage)
-                    .font(.headline.weight(.semibold))
-                    .foregroundStyle(topic.tint)
-                    .frame(width: 34, height: 34)
-                    .background(topic.tint.opacity(0.12), in: RoundedRectangle(cornerRadius: 8))
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 7) {
+                Image(systemName: item.systemImage)
+                    .font(.subheadline.weight(.bold))
+                    .foregroundStyle(isSelected ? .white : item.tint)
+                    .frame(width: 30, height: 30)
+                    .background(isSelected ? item.tint.gradient : item.tint.opacity(0.12).gradient, in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+                    .accessibilityHidden(true)
 
-                VStack(alignment: .leading, spacing: 2) {
-                    Text(topic.title)
-                        .font(.subheadline.weight(.semibold))
-                        .foregroundStyle(.primary)
-                        .lineLimit(1)
-                    Text(topic.subtitle)
-                        .font(.caption2)
-                        .foregroundStyle(.secondary)
-                        .lineLimit(2)
-                }
-
-                Spacer(minLength: 0)
+                Text(item.badge)
+                    .font(.caption2.weight(.bold))
+                    .foregroundStyle(isSelected ? item.tint : .secondary)
+                    .padding(.horizontal, 6)
+                    .padding(.vertical, 3)
+                    .background(isSelected ? Color(.systemBackground).opacity(0.94) : item.tint.opacity(0.10), in: Capsule())
+                    .lineLimit(1)
+                    .minimumScaleFactor(0.8)
             }
-            .padding(12)
-            .frame(maxWidth: .infinity, minHeight: 76, alignment: .leading)
+
+            Text(item.title)
+                .font(.caption.weight(.bold))
+                .foregroundStyle(.primary)
+                .lineLimit(2)
+                .minimumScaleFactor(0.78)
+                .fixedSize(horizontal: false, vertical: true)
+                .frame(minHeight: 30, alignment: .topLeading)
         }
-        .buttonStyle(PavbotInteractiveSurfaceButtonStyle(tint: topic.tint, isSelected: isSelected, cornerRadius: 12))
+        .padding(.horizontal, 10)
+        .padding(.vertical, 10)
+        .frame(maxWidth: .infinity, minHeight: 86, alignment: .leading)
+        .background(Color(.systemBackground).opacity(isSelected ? 1.0 : 0.84), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .stroke(isSelected ? item.tint.opacity(0.72) : item.tint.opacity(0.16), lineWidth: isSelected ? 1.7 : 1)
+        }
+        .shadow(color: Color.black.opacity(isSelected ? 0.08 : 0.025), radius: isSelected ? 11 : 5, x: 0, y: isSelected ? 6 : 3)
+        .contentShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
     }
 }
 

@@ -28,7 +28,11 @@ Rotation rules:
 - When the radar is already full, replace up to 6 oldest posts with newly
   found posts and keep the remaining newest posts.
 - Do not re-publish a post already used in a previous Reddit Radar output from
-  the last 5 days, even if it already rotated out of the current 12-item state.
-- When looking for replacements, prefer posts discovered within the last 5 days
-  and treat older material as out of scope unless the workflow is explicitly
-  changed.
+  the last 72 hours, even if it already rotated out of the current 12-item
+  state.
+- "Do not re-publish" means no repeated Reddit URL, and if the URL is missing,
+  no repeated title, from runs stored in `research/reddit-radar/data/` within
+  the last 72 hours.
+- Only posts published on Reddit within the last 72 hours of the current run
+  are eligible. If Safari/DOM does not expose a trustworthy publication time,
+  skip the post as unverifiable.

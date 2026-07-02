@@ -9,13 +9,284 @@ protocol SpeechAudioSessionConfiguring {
 
 struct SystemSpeechAudioSession: SpeechAudioSessionConfiguring {
     func activateForSpeech() throws {
-        let session = AVAudioSession.sharedInstance()
-        try session.setCategory(.playback, mode: .spokenAudio)
-        try session.setActive(true)
+        // System AVAudioSession ownership lives in PavbotAudioSessionCoordinator.
     }
 
     func deactivateAfterSpeech() {
-        try? AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
+        // System AVAudioSession ownership lives in PavbotAudioSessionCoordinator.
+    }
+}
+
+protocol SpeechSynthesizing: AnyObject {
+    var delegate: AVSpeechSynthesizerDelegate? { get set }
+    var isSpeaking: Bool { get }
+    var isPaused: Bool { get }
+
+    func speak(_ utterance: AVSpeechUtterance)
+    func pauseSpeaking(at boundary: AVSpeechBoundary) -> Bool
+    func continueSpeaking() -> Bool
+    func stopSpeaking(at boundary: AVSpeechBoundary) -> Bool
+}
+
+extension AVSpeechSynthesizer: SpeechSynthesizing {}
+
+enum SpeechVoiceMode: String, CaseIterable, Identifiable {
+    case polishDefault
+    case selectedVoice
+    case personalVoice
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .polishDefault:
+            "Polski domyślny"
+        case .selectedVoice:
+            "Wybrany głos"
+        case .personalVoice:
+            "Personal Voice"
+        }
+    }
+}
+
+struct SpeechVoicePreference: Equatable {
+    let mode: SpeechVoiceMode
+    let voiceIdentifier: String?
+
+    static let polishDefault = SpeechVoicePreference(mode: .polishDefault, voiceIdentifier: nil)
+}
+
+enum SpeechVoiceSettings {
+    static let modeDefaultsKey = "pavbot.speechVoiceMode"
+    static let voiceIdentifierDefaultsKey = "pavbot.speechVoiceIdentifier"
+
+    static func load(from defaults: UserDefaults = .standard) -> SpeechVoicePreference {
+        let mode = defaults
+            .string(forKey: modeDefaultsKey)
+            .flatMap(SpeechVoiceMode.init(rawValue:)) ?? .polishDefault
+        let identifier = defaults.string(forKey: voiceIdentifierDefaultsKey)
+        return SpeechVoicePreference(mode: mode, voiceIdentifier: identifier?.isEmpty == false ? identifier : nil)
+    }
+
+    static func save(_ preference: SpeechVoicePreference, in defaults: UserDefaults = .standard) {
+        defaults.set(preference.mode.rawValue, forKey: modeDefaultsKey)
+        if let voiceIdentifier = preference.voiceIdentifier, !voiceIdentifier.isEmpty {
+            defaults.set(voiceIdentifier, forKey: voiceIdentifierDefaultsKey)
+        } else {
+            defaults.removeObject(forKey: voiceIdentifierDefaultsKey)
+        }
+    }
+
+    static func resolvedVoice(in defaults: UserDefaults = .standard) -> AVSpeechSynthesisVoice? {
+        resolvedVoice(for: load(from: defaults))
+    }
+
+    static func resolvedVoice(
+        for preference: SpeechVoicePreference,
+        voiceWithIdentifier: (String) -> AVSpeechSynthesisVoice? = { AVSpeechSynthesisVoice(identifier: $0) },
+        polishVoice: () -> AVSpeechSynthesisVoice? = { AVSpeechSynthesisVoice(language: "pl-PL") }
+    ) -> AVSpeechSynthesisVoice? {
+        switch preference.mode {
+        case .polishDefault:
+            return polishVoice()
+        case .selectedVoice:
+            guard let identifier = preference.voiceIdentifier, let voice = voiceWithIdentifier(identifier) else {
+                return polishVoice()
+            }
+            return voice
+        case .personalVoice:
+            if let identifier = preference.voiceIdentifier, let voice = voiceWithIdentifier(identifier) {
+                return voice
+            }
+            let personalVoiceIdentifier = SpeechVoiceCatalog.current().personalVoices.first?.id
+            if let personalVoiceIdentifier, let voice = voiceWithIdentifier(personalVoiceIdentifier) {
+                return voice
+            }
+            return polishVoice()
+        }
+    }
+}
+
+struct SpeechVoiceOption: Identifiable, Equatable {
+    let id: String
+    let name: String
+    let language: String
+    let qualityLabel: String
+    let isPersonalVoice: Bool
+
+    var displayTitle: String {
+        isPersonalVoice ? "\(name) · Personal Voice" : name
+    }
+
+    var displaySubtitle: String {
+        "\(language) · \(qualityLabel)"
+    }
+
+    init(
+        id: String,
+        name: String,
+        language: String,
+        qualityLabel: String,
+        isPersonalVoice: Bool
+    ) {
+        self.id = id
+        self.name = name
+        self.language = language
+        self.qualityLabel = qualityLabel
+        self.isPersonalVoice = isPersonalVoice
+    }
+
+    init(voice: AVSpeechSynthesisVoice) {
+        id = voice.identifier
+        name = voice.name
+        language = voice.language
+        qualityLabel = Self.qualityLabel(for: voice.quality)
+        if #available(iOS 17.0, *) {
+            isPersonalVoice = voice.voiceTraits.contains(.isPersonalVoice)
+        } else {
+            isPersonalVoice = false
+        }
+    }
+
+    private static func qualityLabel(for quality: AVSpeechSynthesisVoiceQuality) -> String {
+        switch quality {
+        case .default:
+            "Domyślny"
+        case .enhanced:
+            "Enhanced"
+        case .premium:
+            "Premium"
+        @unknown default:
+            "Systemowy"
+        }
+    }
+}
+
+enum SpeechPersonalVoiceAuthorization: String, Equatable {
+    case notDetermined
+    case denied
+    case unsupported
+    case authorized
+
+    init(_ status: AVSpeechSynthesizer.PersonalVoiceAuthorizationStatus) {
+        switch status {
+        case .notDetermined:
+            self = .notDetermined
+        case .denied:
+            self = .denied
+        case .unsupported:
+            self = .unsupported
+        case .authorized:
+            self = .authorized
+        @unknown default:
+            self = .unsupported
+        }
+    }
+
+    var label: String {
+        switch self {
+        case .notDetermined:
+            "Nie pytano"
+        case .denied:
+            "Brak zgody"
+        case .unsupported:
+            "Niedostępny"
+        case .authorized:
+            "Zgoda"
+        }
+    }
+}
+
+struct SpeechVoiceCatalog: Equatable {
+    let voices: [SpeechVoiceOption]
+    let personalVoiceAuthorization: SpeechPersonalVoiceAuthorization
+
+    var systemVoices: [SpeechVoiceOption] {
+        sortedVoices(voices.filter { !$0.isPersonalVoice })
+    }
+
+    var personalVoices: [SpeechVoiceOption] {
+        guard personalVoiceAuthorization == .authorized else { return [] }
+        return sortedVoices(voices.filter(\.isPersonalVoice))
+    }
+
+    var personalVoiceStatusLabel: String {
+        if personalVoiceAuthorization == .authorized, personalVoices.isEmpty {
+            return "Zgoda, ale brak głosu"
+        }
+        return personalVoiceAuthorization.label
+    }
+
+    static func current() -> SpeechVoiceCatalog {
+        SpeechVoiceCatalog(
+            voices: AVSpeechSynthesisVoice.speechVoices().map(SpeechVoiceOption.init(voice:)),
+            personalVoiceAuthorization: SpeechPersonalVoiceAuthorization(AVSpeechSynthesizer.personalVoiceAuthorizationStatus)
+        )
+    }
+
+    static func requestPersonalVoiceAuthorization() async -> SpeechPersonalVoiceAuthorization {
+        await withCheckedContinuation { continuation in
+            AVSpeechSynthesizer.requestPersonalVoiceAuthorization { status in
+                continuation.resume(returning: SpeechPersonalVoiceAuthorization(status))
+            }
+        }
+    }
+
+    func selectedOption(for preference: SpeechVoicePreference) -> SpeechVoiceOption? {
+        switch preference.mode {
+        case .polishDefault:
+            return defaultSystemVoice
+        case .selectedVoice:
+            if let identifier = preference.voiceIdentifier,
+               let selected = systemVoices.first(where: { $0.id == identifier }) {
+                return selected
+            }
+            return defaultSystemVoice
+        case .personalVoice:
+            if let identifier = preference.voiceIdentifier,
+               let selected = personalVoices.first(where: { $0.id == identifier }) {
+                return selected
+            }
+            return personalVoices.first ?? defaultSystemVoice
+        }
+    }
+
+    func fallbackMessage(for preference: SpeechVoicePreference) -> String? {
+        guard preference.mode != .polishDefault else { return nil }
+        guard let identifier = preference.voiceIdentifier else {
+            if preference.mode == .personalVoice, personalVoiceAuthorization == .authorized, personalVoices.isEmpty {
+                return "Nie znaleziono Personal Voice. Utwórz głos w Ustawieniach iOS, a potem odśwież tę kartę."
+            }
+            return "Nie wybrano głosu. Pavbot użyje polskiego głosu domyślnego."
+        }
+        guard selectedOption(for: preference)?.id == identifier else {
+            return "Wybrany głos nie jest dostępny na tym urządzeniu. Pavbot użyje polskiego głosu domyślnego."
+        }
+        return nil
+    }
+
+    var defaultSystemVoice: SpeechVoiceOption? {
+        systemVoices.first(where: { $0.language == "pl-PL" })
+            ?? systemVoices.first(where: { $0.language.hasPrefix("pl") })
+            ?? systemVoices.first
+    }
+
+    private func sortedVoices(_ options: [SpeechVoiceOption]) -> [SpeechVoiceOption] {
+        options.sorted { lhs, rhs in
+            let lhsPriority = languagePriority(lhs.language)
+            let rhsPriority = languagePriority(rhs.language)
+            if lhsPriority != rhsPriority {
+                return lhsPriority < rhsPriority
+            }
+            return lhs.name.localizedCaseInsensitiveCompare(rhs.name) == .orderedAscending
+        }
+    }
+
+    private func languagePriority(_ language: String) -> Int {
+        if language == "pl-PL" { return 0 }
+        if language.hasPrefix("pl") { return 1 }
+        if language.hasPrefix("en") { return 2 }
+        return 3
     }
 }
 
@@ -153,10 +424,14 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
         timeline?.segment(at: currentSegmentIndex)?.text
     }
 
-    private let synthesizer: AVSpeechSynthesizer
+    private let synthesizer: SpeechSynthesizing
     private let audioSession: SpeechAudioSessionConfiguring
     private let enableSpeech: Bool
     private let rateDefaults: UserDefaults
+    private let voiceProvider: () -> AVSpeechSynthesisVoice?
+    private weak var audioCoordinator: PavbotAudioSessionCoordinator?
+    private var audioSource: PavbotAudioActivitySource?
+    private var audioTopic: String
     private var currentTitle: String?
     private var currentText: String?
     private var segmentStartDate: Date?
@@ -169,17 +444,35 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
 
     init(
         enableSpeech: Bool = true,
-        synthesizer: AVSpeechSynthesizer = AVSpeechSynthesizer(),
+        synthesizer: SpeechSynthesizing = AVSpeechSynthesizer(),
         audioSession: SpeechAudioSessionConfiguring = SystemSpeechAudioSession(),
-        rateDefaults: UserDefaults = .standard
+        rateDefaults: UserDefaults = .standard,
+        audioCoordinator: PavbotAudioSessionCoordinator? = nil,
+        audioSource: PavbotAudioActivitySource? = nil,
+        audioTopic: String = "Pavbot",
+        voiceProvider: @escaping () -> AVSpeechSynthesisVoice? = { SpeechVoiceSettings.resolvedVoice() }
     ) {
         self.enableSpeech = enableSpeech
         self.synthesizer = synthesizer
         self.audioSession = audioSession
         self.rateDefaults = rateDefaults
+        self.audioCoordinator = audioCoordinator
+        self.audioSource = audioSource
+        self.audioTopic = audioTopic
+        self.voiceProvider = voiceProvider
         self.speechRate = MobileNewsSpeechRate.saved(in: rateDefaults)
         super.init()
         synthesizer.delegate = self
+    }
+
+    func configureAudioCoordinator(
+        _ coordinator: PavbotAudioSessionCoordinator,
+        source: PavbotAudioActivitySource,
+        topic: String
+    ) {
+        audioCoordinator = coordinator
+        audioSource = source
+        audioTopic = topic
     }
 
     func play(itemID: String, title: String, text: String) {
@@ -220,7 +513,12 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
             return
         }
 
+        let previousAudioSessionID = currentAudioSessionID
+        let nextAudioSessionID = audioSessionID(itemID: itemID)
         stopSynthesizerForRestart()
+        if let previousAudioSessionID, previousAudioSessionID != nextAudioSessionID {
+            audioCoordinator?.deactivate(sessionID: previousAudioSessionID)
+        }
 
         let newTimeline = SpeechTimeline(text: cleanText)
         guard !newTimeline.segments.isEmpty else {
@@ -240,6 +538,7 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
         estimatedElapsed = min(max(preservedElapsed ?? segmentStart, 0), newTimeline.estimatedDuration)
         playbackState = startPaused ? .paused : .playing
         errorMessage = nil
+        activateAudioCoordinator(isPlaying: !startPaused)
         if startPaused {
             timer?.invalidate()
             timer = nil
@@ -279,9 +578,31 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
         start(itemID: currentItemID, title: currentTitle, text: currentText, segmentIndex: safeIndex)
     }
 
+    func seek(to seconds: Double) {
+        guard let currentItemID, let currentTitle, let currentText, let timeline else { return }
+        let safeSeconds = min(max(seconds, 0), max(timeline.estimatedDuration, 0))
+        let safeProgress = timeline.estimatedDuration > 0 ? safeSeconds / timeline.estimatedDuration : 0
+        let segmentIndex = timeline.segmentIndex(forProgress: safeProgress)
+        guard let segment = timeline.segment(at: segmentIndex) else { return }
+        start(
+            itemID: currentItemID,
+            title: currentTitle,
+            text: currentText,
+            segmentIndex: segmentIndex,
+            preservedElapsed: safeSeconds,
+            wordOffset: wordOffset(in: segment, at: safeSeconds),
+            startPaused: playbackState == .paused
+        )
+    }
+
+    func skip(by seconds: Double) {
+        updateEstimatedElapsed()
+        seek(to: estimatedElapsed + seconds)
+    }
+
     func seek(toProgress progress: Double) {
         guard let timeline else { return }
-        seek(toSegmentIndex: timeline.segmentIndex(forProgress: progress))
+        seek(to: timeline.estimatedDuration * min(max(progress, 0), 1))
     }
 
     func pause() {
@@ -296,12 +617,14 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
         playbackState = .paused
         timer?.invalidate()
         timer = nil
+        updateAudioCoordinator()
     }
 
     func resume() {
         guard playbackState == .paused else { return }
         if currentUtterance == nil {
             playbackState = .playing
+            activateAudioCoordinator(isPlaying: true)
             speakCurrentSegment()
             return
         }
@@ -314,17 +637,30 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
 
         playbackState = .playing
         startProgressTimer()
+        activateAudioCoordinator(isPlaying: true)
     }
 
     func stop() {
+        stop(notifyCoordinator: true)
+    }
+
+    private func stop(notifyCoordinator: Bool) {
+        let sessionID = currentAudioSessionID
         playbackSessionID = UUID()
         playbackState = .stopping
         currentUtterance = nil
         if enableSpeech, synthesizer.isSpeaking || synthesizer.isPaused {
-            synthesizer.stopSpeaking(at: .immediate)
+            _ = synthesizer.stopSpeaking(at: .immediate)
         }
         resetPlaybackState(finalElapsed: 0, keepError: false)
+        if notifyCoordinator, let sessionID {
+            audioCoordinator?.deactivate(sessionID: sessionID)
+        }
         audioSession.deactivateAfterSpeech()
+    }
+
+    private func stopFromCoordinator() {
+        stop(notifyCoordinator: false)
     }
 
     private func resetPlaybackState(finalElapsed: Double, keepError: Bool) {
@@ -361,9 +697,9 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
         guard enableSpeech else { return }
 
         let utterance = AVSpeechUtterance(string: speechText(from: segment, droppingWords: currentSegmentWordOffset))
-        utterance.voice = AVSpeechSynthesisVoice(language: "pl-PL")
+        utterance.voice = voiceProvider() ?? AVSpeechSynthesisVoice(language: "pl-PL")
         if utterance.voice == nil {
-            errorMessage = "Brak polskiego głosu TTS na urządzeniu. Sprawdź ustawienia języka i dostępności iOS."
+            errorMessage = "Brak wybranego głosu TTS na urządzeniu. Sprawdź ustawienia języka, dostępności i Personal Voice w iOS."
         }
         utterance.rate = utteranceRate(for: speechRate)
         currentUtterance = utterance
@@ -386,19 +722,67 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
         }
         let rawElapsed = segmentStartElapsed + Date().timeIntervalSince(segmentStartDate)
         estimatedElapsed = min(rawElapsed, segment.estimatedStart + segment.estimatedDuration)
+        updateAudioCoordinator()
     }
 
     private func stopSynthesizerForRestart() {
         guard enableSpeech, synthesizer.isSpeaking || synthesizer.isPaused else { return }
         currentUtterance = nil
         currentUtteranceSessionID = nil
-        synthesizer.stopSpeaking(at: .immediate)
+        _ = synthesizer.stopSpeaking(at: .immediate)
     }
 
     private func finishPlayback() {
+        let sessionID = currentAudioSessionID
         let finalDuration = timeline?.estimatedDuration ?? estimatedElapsed
         resetPlaybackState(finalElapsed: finalDuration, keepError: true)
+        if let sessionID {
+            audioCoordinator?.deactivate(sessionID: sessionID)
+        }
         audioSession.deactivateAfterSpeech()
+    }
+
+    private var currentAudioSessionID: String? {
+        guard let currentItemID else { return nil }
+        return audioSessionID(itemID: currentItemID)
+    }
+
+    private func audioSessionID(itemID: String) -> String {
+        "\(audioSource?.rawValue ?? "speech"):\(itemID)"
+    }
+
+    private func activateAudioCoordinator(isPlaying: Bool) {
+        guard let audioCoordinator, let audioSource, let currentItemID, let currentTitle else { return }
+        let session = PavbotAudioPlaybackSession(
+            id: audioSessionID(itemID: currentItemID),
+            source: audioSource,
+            title: currentTitle,
+            topic: audioTopic,
+            routeID: currentItemID
+        )
+        audioCoordinator.activate(
+            session,
+            controls: PavbotAudioPlaybackControls(
+                pause: { [weak self] in self?.pause() },
+                resume: { [weak self] in self?.resume() },
+                stop: { [weak self] in self?.stopFromCoordinator() },
+                seek: { [weak self] seconds in self?.seek(to: seconds) },
+                skip: { [weak self] seconds in self?.skip(by: seconds) }
+            ),
+            elapsed: estimatedElapsed,
+            duration: estimatedDuration,
+            isPlaying: isPlaying
+        )
+    }
+
+    private func updateAudioCoordinator() {
+        guard let currentAudioSessionID else { return }
+        audioCoordinator?.update(
+            sessionID: currentAudioSessionID,
+            elapsed: estimatedElapsed,
+            duration: estimatedDuration,
+            isPlaying: playbackState == .playing
+        )
     }
 
     private func isCurrentUtterance(_ utterance: AVSpeechUtterance) -> Bool {

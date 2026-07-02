@@ -75,10 +75,12 @@ The audit package includes raw comment context, local comment-analysis status,
 the final digest JSON, and a Polish Markdown summary explaining the selected
 comments. The local radar state keeps at most 12 unique posts, adds fresh
 non-duplicate finds on every run, and replaces up to 6 oldest posts once the
-set is full. It should also check the last 5 days of Reddit Radar outputs and
-avoid re-publishing the same Reddit URL or title from recent runs, even after a
-post rotates out of the current 12-item state. It must not vote, comment,
-share, post, or submit forms on Reddit.
+set is full. It should only accept posts published on Reddit within the last
+72 hours of the run and should also check the last 72 hours of Reddit Radar
+outputs to avoid re-publishing the same Reddit URL or, when the URL is
+missing, the same title from recent runs, even after a post rotates out of the
+current 12-item state. It must not vote, comment, share, post, or submit forms
+on Reddit.
 
 After the generated final JSON and matching raw JSON have per-item
 `commentAnalysisStatus` values of `reviewed` or `no_safe_comments`, commit and

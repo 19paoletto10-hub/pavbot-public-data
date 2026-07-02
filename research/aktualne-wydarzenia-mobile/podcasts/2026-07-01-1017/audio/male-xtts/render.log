@@ -1,0 +1,92 @@
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/utils/generic.py:311: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/xtts_manager.py:5: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  self.speakers = torch.load(speaker_file_path)
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/utils/io.py:54: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  return torch.load(f, map_location=map_location, **kwargs)
+ > Using model: xtts
+ > Text splitted to sentences.
+['Dzień dobry.', 'Jest środa, pierwszy lipca dwa tysiące dwudziestego szóstego', 'roku.', 'Ten poranek nie zaczyna się od oddechu po trudnym wieczorze.', 'Zaczyna się', 'od wejścia w kolejny, bardziej roboczy etap tego samego pakietu ryzyk.', 'Najbardziej praktyczna wiadomość dnia jest prosta.', 'Rządowe Centrum', 'Bezpieczeństwa wysłało nowy alert na dziś i jutro, czyli na pierwszy i drugi', 'lipca.', 'W treści pojawiają się intensywne opady deszczu, silny wiatr, burze i', 'możliwe przerwy w dostawie prądu.', 'Alert trafił do odbiorców na terenie', 'jedenastu województw.', 'To oznacza, że po nocnym napięciu nie dostaliśmy', 'uspokojenia.', 'Dostaliśmy kolejną dobę podwyższonej uwagi.', 'Poranny raport RCB pokazuje, że ten obraz jest jeszcze cięższy.', 'Nadal są', 'ostrzeżenia trzeciego stopnia przed upałem dla podkarpackiego i lubelskiego.', 'Nadal są ostrzeżenia drugiego stopnia przed burzami dla szerokiego pasa kraju.', 'Do tego susza hydrologiczna obejmuje cały kraj.', 'Wczoraj utonęły trzy osoby.', 'Od pierwszego kwietnia liczba ofiar utonięć wzrosła do stu pięciu.', 'Straż', 'pożarna działała przy pięćdziesięciu jednym pożarze lasów.', 'Czyli Polska nadal', 'żyje jednocześnie problemem za dużej ilości wody, zbyt małej ilości wody i', 'całkiem realnego ognia.', 'Pogoda najwyraźniej postanowiła rozegrać cały sezon w', 'jeden tydzień.', 'Drugi ważny temat poranka dotyczy bezpieczeństwa państwa i Sojuszu.', 'Od dziś', 'wchodzą w życie dwa postanowienia o użyciu polskich kontyngentów wojskowych', 'poza granicami kraju.', 'Pierwszy dotyczy Rumunii i Bułgarii.', 'Chodzi o komponent do trzystu żołnierzy i', 'pracowników w składzie Wielonarodowej Brygady Południe-Wschód.', 'Zakres zadań', 'obejmuje szkolenie w czasie pokoju, odstraszanie w kryzysie i obronę', 'kolektywną w ramach artykułu piątego NATO.', 'To nie jest może nagłówek, który', 'rozgrzewa media do czerwoności, ale z punktu widzenia państwa jest bardzo', 'konkretny.', 'Ludzie, termin, zadania i kierunek działania są już opisane.', 'Drugi kontyngent jest mniejszy liczebnie, bo do dziewięćdziesięciu pięciu', 'żołnierzy, ale ważny geograficznie.', 'Obejmuje Turcję, wschodni akwen Morza', 'Śródziemnego i Morze Czarne.', 'Zadania mają obejmować patrolowanie i współpracę', 'ze Stałymi Zespołami Sił Morskich NATO.', 'A do tego Kancelaria Prezydenta', 'zapowiada już wizytę Karola Nawrockiego w Turcji siódmego i ósmego lipca na', 'szczyt NATO w Ankarze.', 'Innymi słowy: lipiec zaczyna się nie tylko od rozmowy o', 'odporności państwa, lecz także od faktycznych ram użycia sił na flankach', 'sojuszu.', 'W świecie najcięższy fakt nadal pochodzi z Brukseli.', 'Komisja Europejska', 'uruchomiła trzy przecinek dziewięć miliarda euro na drony dla Ukrainy.', 'To', 'nadal najlepszy dowód, że Europa coraz mniej chce mówić o bezpieczeństwie w', 'trybie samych deklaracji.', 'Tu chodzi o konkret: sprzęt, pieniądze i zdolności.', 'Ale dziś dochodzi do tego drugi, mniej widowiskowy ruch.', 'Od pierwszego lipca', 'Unia zaczyna stosować tymczasowe trzy euro cła od sztuki dla', 'niskowartościowych przesyłek do stu pięćdziesięciu euro spoza Unii.', 'Komisja', 'tłumaczy ten ruch nie tylko uczciwą konkurencją, ale też bezpieczeństwem', 'produktów i zgodnością z normami.', 'W 2025 roku prawie pięć przecinek dziewięć', 'miliarda takich produktów trafiło bezpośrednio do konsumentów w Unii.', 'W', 'wybranych kontrolach ponad sześćdziesiąt procent badanych produktów nie', 'spełniało standardów.', 'Od dziś identyfikatory produktów można już podawać', 'dobrowolnie, a od pierwszego listopada staną się obowiązkowe.', 'Czyli Bruksela', 'nie chce już tylko policzyć paczki.', 'Chce także wiedzieć, co dokładnie do tej', 'paczki włożono.', 'Poza tą osią nie ma dziś porannego przełomu podobnej wagi.', 'Gaza pozostaje', 'ciężkim kryzysem, ale rano nadal prowadzi do najnowszego pełnego raportu OCHA', 'z dwudziestego szóstego czerwca.', 'Wiadomo z niego, że większość z około dwóch', 'milionów stu tysięcy mieszkańców pozostaje przesiedlona i bez wystarczającego', 'dostępu do podstawowych usług.', 'To jedna z tych historii, które nie muszą', 'krzyczeć nowym nagłówkiem, żeby dalej ciążyć najmocniej.', 'Podobnie wygląda dziś Orka.', 'Temat pozostaje strategicznie wielki, ale poranek', 'nie dokłada nowego publicznego harmonogramu dostaw ani listy polskich partnerów', 'przemysłowych.', 'To znaczy, że wątek dalej jest ważny, tylko coraz mniej chodzi', 'w nim o sam podpis, a coraz bardziej o twarde wykonanie.', 'Czyli klasyczny moment,', 'w którym wszyscy lubią słowo „historyczny”, a dużo mniej lubią tabelkę z', 'terminami.', 'Najkrótsze podsumowanie tego poranka jest więc takie.', 'Państwo ostrzega szerzej,', 'wojsko działa w nowych ramach od rana, a Unia jednocześnie finansuje Ukrainę i', 'uszczelnia import.', 'Pierwszy dzień lipca nie zaczyna się widowiskowo.', 'Zaczyna', 'się bardzo roboczo.', 'A właśnie taki poranek najczęściej mówi najwięcej o tym,', 'jak naprawdę działa państwo i jego otoczenie.', 'To był poranny mobile news brief Pavbota.', 'Dziś warto mieć pod ręką nie tylko', 'parasolkę, lecz także trochę cierpliwości do komunikatów urzędowych, bo właśnie', 'w nich kryje się większa część realnego ruchu.', 'Do usłyszenia.']
+Traceback (most recent call last):
+  File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 105, in <module>
+    main()
+  File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 96, in main
+    tts.tts_to_file(**kwargs)
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/api.py", line 334, in tts_to_file
+    wav = self.tts(
+          ^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/api.py", line 276, in tts
+    wav = self.synthesizer.tts(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/utils/synthesizer.py", line 386, in tts
+    outputs = self.tts_model.synthesize(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/models/xtts.py", line 412, in synthesize
+    return self.inference(text, language, gpt_cond_latent, speaker_embedding, **settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/models/xtts.py", line 541, in inference
+    gpt_codes = self.gpt.generate(
+                ^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/gpt.py", line 590, in generate
+    gen = self.gpt_inference.generate(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/generation/utils.py", line 1648, in generate
+    return self.sample(
+           ^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/generation/utils.py", line 2730, in sample
+    outputs = self(
+              ^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/gpt_inference.py", line 97, in forward
+    transformer_outputs = self.transformer(
+                          ^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 900, in forward
+    outputs = block(
+              ^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 427, in forward
+    feed_forward_hidden_states = self.mlp(hidden_states)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 355, in forward
+    hidden_states = self.act(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/activations.py", line 56, in forward
+    return 0.5 * input * (1.0 + torch.tanh(math.sqrt(2.0 / math.pi) * (input + 0.044715 * torch.pow(input, 3.0))))
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

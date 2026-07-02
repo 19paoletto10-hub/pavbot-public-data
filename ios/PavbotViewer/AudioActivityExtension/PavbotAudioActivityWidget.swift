@@ -14,9 +14,7 @@ struct PavbotAudioActivityWidget: Widget {
         ActivityConfiguration(for: PavbotAudioActivityAttributes.self) { context in
             VStack(alignment: .leading, spacing: 10) {
                 HStack(spacing: 10) {
-                    Image(systemName: context.state.isPlaying ? "waveform.circle.fill" : "pause.circle.fill")
-                        .font(.title2)
-                        .foregroundStyle(.blue)
+                    PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 30)
                     VStack(alignment: .leading, spacing: 3) {
                         Text("Pavbot")
                             .font(.caption.weight(.semibold))
@@ -28,7 +26,7 @@ struct PavbotAudioActivityWidget: Widget {
                 }
 
                 ProgressView(value: progressValue(context.state))
-                    .tint(.blue)
+                    .tint(activityTint(context.attributes.source))
 
                 HStack {
                     Text(formatPlaybackTime(context.state.elapsed))
@@ -42,13 +40,12 @@ struct PavbotAudioActivityWidget: Widget {
             }
             .padding()
             .activityBackgroundTint(Color(.systemBackground))
-            .activitySystemActionForegroundColor(.blue)
+            .activitySystemActionForegroundColor(activityTint(context.attributes.source))
             .widgetURL(deepLinkURL(context.attributes))
         } dynamicIsland: { context in
             DynamicIsland {
                 DynamicIslandExpandedRegion(.leading) {
-                    Image(systemName: context.state.isPlaying ? "waveform.circle.fill" : "pause.circle.fill")
-                        .foregroundStyle(.blue)
+                    PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 24)
                 }
                 DynamicIslandExpandedRegion(.center) {
                     VStack(alignment: .leading, spacing: 3) {
@@ -62,22 +59,23 @@ struct PavbotAudioActivityWidget: Widget {
                     }
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    Text(formatPlaybackTime(context.state.elapsed))
-                        .font(.caption.monospacedDigit())
+                    PavbotNewsDynamicIslandBadge(source: context.attributes.source)
                 }
                 DynamicIslandExpandedRegion(.bottom) {
-                    ProgressView(value: progressValue(context.state))
-                        .tint(.blue)
+                    HStack(spacing: 10) {
+                        ProgressView(value: progressValue(context.state))
+                            .tint(activityTint(context.attributes.source))
+                        Text(formatPlaybackTime(context.state.elapsed))
+                            .font(.caption2.monospacedDigit())
+                            .foregroundStyle(.secondary)
+                    }
                 }
             } compactLeading: {
-                Image(systemName: context.state.isPlaying ? "waveform" : "pause.fill")
-                    .foregroundStyle(.blue)
+                PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 18)
             } compactTrailing: {
-                Text(compactProgress(context.state))
-                    .font(.caption2.monospacedDigit())
+                PavbotNewsDynamicIslandBadge(source: context.attributes.source)
             } minimal: {
-                Image(systemName: "waveform")
-                    .foregroundStyle(.blue)
+                PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 16)
             }
             .widgetURL(deepLinkURL(context.attributes))
         }
@@ -85,17 +83,87 @@ struct PavbotAudioActivityWidget: Widget {
 }
 
 private func deepLinkURL(_ attributes: PavbotAudioActivityAttributes) -> URL? {
-    URL(string: "pavbot://artifact?id=\(attributes.artifactID.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? attributes.artifactID)")
+    guard attributes.source == .mp3Podcast else { return nil }
+    return URL(string: "pavbot://artifact?id=\(attributes.artifactID.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? attributes.artifactID)")
+}
+
+private struct PavbotAudioActivityIcon: View {
+    let source: PavbotAudioActivitySource
+    let isPlaying: Bool
+    let size: CGFloat
+
+    var body: some View {
+        ZStack(alignment: .bottomTrailing) {
+            Image(systemName: source.compactSystemImage)
+                .font(.system(size: size, weight: .semibold))
+
+            if source == .researchTTS {
+                Image(systemName: "magnifyingglass.circle.fill")
+                    .font(.system(size: max(size * 0.48, 8), weight: .bold))
+                    .foregroundStyle(Color(.systemBackground), activityTint(source))
+                    .offset(x: size * 0.12, y: size * 0.12)
+            } else if !isPlaying {
+                Image(systemName: "pause.circle.fill")
+                    .font(.system(size: max(size * 0.48, 8), weight: .bold))
+                    .foregroundStyle(Color(.systemBackground), activityTint(source))
+                    .offset(x: size * 0.12, y: size * 0.12)
+            }
+        }
+        .foregroundStyle(activityTint(source))
+        .frame(width: size + 6, height: size + 6)
+        .accessibilityHidden(true)
+    }
+}
+
+private struct PavbotNewsDynamicIslandBadge: View {
+    let source: PavbotAudioActivitySource
+
+    var body: some View {
+        VStack(spacing: 0) {
+            Text("PAV")
+                .font(.system(size: 7, weight: .black, design: .rounded))
+                .foregroundStyle(.white)
+                .minimumScaleFactor(0.72)
+                .lineLimit(1)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(activityTint(source))
+
+            Divider()
+                .overlay(.white.opacity(0.65))
+
+            Text("NEWS")
+                .font(.system(size: 6, weight: .black, design: .rounded))
+                .foregroundStyle(activityTint(source))
+                .minimumScaleFactor(0.72)
+                .lineLimit(1)
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .background(.white)
+        }
+        .frame(width: 30, height: 24)
+        .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 6, style: .continuous)
+                .stroke(.white.opacity(0.72), lineWidth: 0.7)
+        }
+        .shadow(color: activityTint(source).opacity(0.24), radius: 2, x: 0, y: 1)
+        .accessibilityLabel("Pavbot News, aktywne audio w tle")
+    }
+}
+
+private func activityTint(_ source: PavbotAudioActivitySource) -> Color {
+    switch source {
+    case .mp3Podcast:
+        .blue
+    case .pulseDayTTS:
+        .orange
+    case .researchTTS:
+        .teal
+    }
 }
 
 private func progressValue(_ state: PavbotAudioActivityAttributes.ContentState) -> Double {
     guard state.duration > 0 else { return 0 }
     return min(max(state.elapsed / state.duration, 0), 1)
-}
-
-private func compactProgress(_ state: PavbotAudioActivityAttributes.ContentState) -> String {
-    guard state.duration > 0 else { return "ON" }
-    return "\(Int(progressValue(state) * 100))%"
 }
 
 private func formatPlaybackTime(_ seconds: Double) -> String {

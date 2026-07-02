@@ -41,8 +41,8 @@ struct ArtifactNotificationService: ArtifactNotifying {
             let content = UNMutableNotificationContent()
             content.title = "Pavbot"
             content.body = automations.count == 1
-                ? "New automation · \(automations[0].name)"
-                : "\(automations.count) new automations"
+                ? "Nowa automatyzacja · \(automations[0].name)"
+                : "\(automations.count) nowe automatyzacje"
             content.sound = .default
             content.userInfo = [
                 "automationID": automations[0].id,
@@ -60,8 +60,8 @@ struct ArtifactNotificationService: ArtifactNotifying {
     }
 
     private static func summaryBody(for artifacts: [PavbotArtifact], route: ArtifactNotificationRoute) -> String {
-        let fileLabel = artifacts.count == 1 ? "file" : "files"
-        return "\(route.displayTitle) · \(artifacts.count) new \(fileLabel)"
+        let fileLabel = artifacts.count == 1 ? "nowy plik" : "nowe pliki"
+        return "\(route.displayTitle) · \(artifacts.count) \(fileLabel)"
     }
 }
 
@@ -84,14 +84,14 @@ enum NotificationServerSettings {
     static func validationMessage(for value: String, required: Bool) -> String? {
         let trimmed = value.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else {
-            return required ? "Enter a notification server URL before enabling live alerts." : nil
+            return required ? "Wpisz adres URL serwera powiadomień przed włączeniem alertów live." : nil
         }
         guard
             let url = URL(string: trimmed),
             url.scheme == "https",
             url.host?.isEmpty == false
         else {
-            return "Use an HTTPS notification server URL."
+            return "Użyj adresu URL serwera powiadomień z HTTPS."
         }
         return nil
     }
@@ -151,7 +151,7 @@ enum RemoteNotificationPermission {
     static func requestAndRegister() async -> Bool {
         guard NotificationServerSettings.validationMessage(for: NotificationServerSettings.serverURLString, required: true) == nil else {
             LiveNotificationSettings.setEnabled(false)
-            RemoteNotificationDiagnostics.saveRegistrationError("Notification server URL is missing or invalid.")
+            RemoteNotificationDiagnostics.saveRegistrationError("Brakuje adresu URL serwera powiadomień albo jest niepoprawny.")
             return false
         }
 
@@ -162,7 +162,7 @@ enum RemoteNotificationPermission {
             UIApplication.shared.registerForRemoteNotifications()
         } else {
             LiveNotificationSettings.setEnabled(false)
-            RemoteNotificationDiagnostics.saveRegistrationError("Notification permission was not granted.")
+            RemoteNotificationDiagnostics.saveRegistrationError("Zgoda na powiadomienia nie została udzielona.")
         }
         return granted
     }
@@ -273,7 +273,7 @@ struct RemoteNotificationRegistrar {
 
     func register(deviceToken: Data) async {
         guard let endpoint = NotificationServerSettings.serverURL?.appendingPathComponent("v1/devices") else {
-            RemoteNotificationDiagnostics.saveRegistrationError("Notification server URL is missing.")
+            RemoteNotificationDiagnostics.saveRegistrationError("Brakuje adresu URL serwera powiadomień.")
             return
         }
 

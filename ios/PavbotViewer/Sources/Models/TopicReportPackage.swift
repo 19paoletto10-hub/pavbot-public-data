@@ -32,7 +32,7 @@ enum ReportTopicKind: String, CaseIterable, Codable, Identifiable, Equatable, Ha
     var title: String {
         switch self {
         case .jobs:
-            "LLM / AI Jobs Wrocław"
+            "Praca AI / LLM Wrocław"
         case .techNews:
             "Tech News"
         case .polskaSwiat:

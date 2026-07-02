@@ -22,7 +22,7 @@ struct DiagnosticsView: View {
                     )
 
                     PavbotCommandHero(
-                        eyebrow: "Health Check",
+                        eyebrow: "Kontrola stanu",
                         title: "Diagnostyka",
                         subtitle: layout.usesDashboardLayout
                             ? "Stan manifestu, automatyzacji i powiadomień jako karty zdrowia połączeń."
@@ -43,23 +43,27 @@ struct DiagnosticsView: View {
                     DiagnosticsAutomationSection(statuses: diagnostics.automationStatuses)
                 } else {
                     PavbotCommandHero(
-                        eyebrow: "Health Check",
+                        eyebrow: "Kontrola stanu",
                         title: "Diagnostyka",
                         subtitle: "Załaduj manifest Pavbot, aby sprawdzić status automatyzacji Codex.",
                         systemImage: "doc.badge.questionmark",
                         tint: .orange,
                         insights: [
                             PavbotInsight(title: "Manifest", value: "Brak", systemImage: "doc.badge.questionmark", tint: .orange),
-                            PavbotInsight(title: "Tryb", value: layout.usesDashboardLayout ? "Wide" : "Phone", systemImage: "rectangle.3.group", tint: .blue)
+                            PavbotInsight(title: "Tryb", value: layout.usesDashboardLayout ? "Szeroki" : "Telefon", systemImage: "rectangle.3.group", tint: .blue)
                         ]
                     )
 
-                    ContentUnavailableView(
-                        "Brak manifestu",
+                    PavbotStateCard(
+                        title: "Brak manifestu",
+                        message: "Załaduj albo skonfiguruj manifest Pavbot, aby sprawdzić status automatyzacji.",
                         systemImage: "doc.badge.questionmark",
-                        description: Text("Załaduj albo skonfiguruj manifest Pavbot, aby sprawdzić status automatyzacji Codex.")
-                    )
-                    .frame(maxWidth: .infinity, minHeight: 260)
+                        tint: .orange,
+                        actionTitle: "Odśwież diagnostykę",
+                        actionSystemImage: "arrow.clockwise"
+                    ) {
+                        Task { await store.reload() }
+                    }
                 }
 
                 DiagnosticsRemoteNotificationSection(
@@ -184,7 +188,7 @@ private struct DiagnosticsAutomationSection: View {
     var body: some View {
         PavbotReadingCard(
             title: "Aktywne automatyzacje",
-            subtitle: "Statusy workflow i ostatni opublikowany artefakt.",
+            subtitle: "Statusy przepływów i ostatni opublikowany artefakt.",
             systemImage: "bolt.circle.fill",
             tint: .yellow
         ) {

@@ -1,26 +1,64 @@
 import SwiftUI
 
 enum AudioPlaybackBannerLayout {
-    static let bottomClearance: CGFloat = 20
+    static let nativeTabBarHeight: CGFloat = 49
+    static let phoneTabBarVisualGap: CGFloat = 9
+    static let phoneLoweringAdjustment: CGFloat = 20
+    static let splitBottomClearance: CGFloat = 20
+    static let estimatedBannerHeight: CGFloat = 68
+    static let buttonHitSize: CGFloat = 44
+
+    static func bottomClearance(for layoutStyle: PavbotRootLayoutStyle, bottomSafeArea: CGFloat = 0) -> CGFloat {
+        switch layoutStyle {
+        case .tab:
+            max(
+                nativeTabBarHeight,
+                bottomSafeArea + nativeTabBarHeight + phoneTabBarVisualGap - phoneLoweringAdjustment
+            )
+        case .split:
+            max(splitBottomClearance, bottomSafeArea + 12)
+        }
+    }
+
+    static func contentReserveHeight(for layoutStyle: PavbotRootLayoutStyle, bottomSafeArea: CGFloat = 0) -> CGFloat {
+        estimatedBannerHeight + bottomClearance(for: layoutStyle, bottomSafeArea: bottomSafeArea)
+    }
 }
 
 struct AudioPlaybackBannerSnapshot: Equatable {
+    let source: PavbotAudioActivitySource
     let title: String
     let topic: String
     let progress: Double
     let isPlaying: Bool
     let playPauseSystemImage: String
+    let sourceSystemImage: String
     let timeLabel: String
 
     @MainActor
     init?(service: AudioPlaybackService) {
         guard let artifact = service.currentArtifact else { return nil }
+        source = .mp3Podcast
         title = artifact.title
         topic = artifact.topic
         isPlaying = service.isPlaying
         playPauseSystemImage = service.isPlaying ? "pause.fill" : "play.fill"
+        sourceSystemImage = source.compactSystemImage
         progress = Self.progress(currentTime: service.currentTime, duration: service.duration)
         timeLabel = Self.timeLabel(currentTime: service.currentTime, duration: service.duration)
+    }
+
+    @MainActor
+    init?(coordinator: PavbotAudioSessionCoordinator) {
+        guard let snapshot = coordinator.currentSnapshot else { return nil }
+        source = snapshot.source
+        title = snapshot.title
+        topic = snapshot.topic
+        progress = snapshot.progress
+        isPlaying = snapshot.isPlaying
+        playPauseSystemImage = snapshot.playPauseSystemImage
+        sourceSystemImage = snapshot.sourceSystemImage
+        timeLabel = snapshot.timeLabel
     }
 
     private static func progress(currentTime: Double, duration: Double) -> Double {
@@ -40,17 +78,13 @@ struct AudioPlaybackBannerSnapshot: Equatable {
 }
 
 struct AudioPlaybackBanner: View {
-    @Environment(AudioPlaybackService.self) private var audioPlayback
+    @Environment(PavbotAudioSessionCoordinator.self) private var audioCoordinator
     @Environment(PavbotHaptics.self) private var haptics
 
     var body: some View {
-        if let snapshot = AudioPlaybackBannerSnapshot(service: audioPlayback) {
+        if let snapshot = AudioPlaybackBannerSnapshot(coordinator: audioCoordinator) {
             HStack(spacing: 12) {
-                Image(systemName: "waveform.circle.fill")
-                    .font(.title2.weight(.semibold))
-                    .foregroundStyle(.purple)
-                    .frame(width: 38, height: 38)
-                    .background(Color.purple.opacity(0.12), in: Circle())
+                AudioPlaybackSourceIcon(source: snapshot.source, isPlaying: snapshot.isPlaying)
 
                 VStack(alignment: .leading, spacing: 5) {
                     HStack(spacing: 8) {
@@ -71,47 +105,99 @@ struct AudioPlaybackBanner: View {
                             .lineLimit(1)
                         ProgressView(value: snapshot.progress)
                             .progressViewStyle(.linear)
-                            .tint(.purple)
+                            .tint(tint(for: snapshot.source))
                     }
                 }
 
                 Button {
-                    snapshot.isPlaying ? audioPlayback.pause() : audioPlayback.resume()
+                    snapshot.isPlaying ? audioCoordinator.pauseActive() : audioCoordinator.resumeActive()
                     haptics.play(.lightImpact)
                 } label: {
                     Image(systemName: snapshot.playPauseSystemImage)
                         .font(.headline.weight(.bold))
                         .foregroundStyle(.white)
-                        .frame(width: 36, height: 36)
-                        .background(Color.purple, in: Circle())
+                        .frame(width: AudioPlaybackBannerLayout.buttonHitSize, height: AudioPlaybackBannerLayout.buttonHitSize)
+                        .background(tint(for: snapshot.source), in: Circle())
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel(snapshot.isPlaying ? "Pauza audio" : "Odtwórz audio")
+                .accessibilityIdentifier("audio.banner.playPause")
 
                 Button {
-                    audioPlayback.stop()
+                    audioCoordinator.stopActive()
                     haptics.play(.warning)
                 } label: {
                     Image(systemName: "xmark")
                         .font(.caption.weight(.bold))
                         .foregroundStyle(.secondary)
-                        .frame(width: 32, height: 32)
+                        .frame(width: AudioPlaybackBannerLayout.buttonHitSize, height: AudioPlaybackBannerLayout.buttonHitSize)
                         .background(Color(.secondarySystemBackground), in: Circle())
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("Zamknij odtwarzanie audio")
+                .accessibilityIdentifier("audio.banner.close")
             }
-            .padding(12)
-            .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 22, style: .continuous))
+            .padding(.horizontal, 12)
+            .padding(.vertical, 10)
+            .frame(maxWidth: 620)
+            .background(.regularMaterial, in: RoundedRectangle(cornerRadius: 21, style: .continuous))
             .overlay {
-                RoundedRectangle(cornerRadius: 22, style: .continuous)
-                    .stroke(Color.purple.opacity(0.18), lineWidth: 1)
+                RoundedRectangle(cornerRadius: 21, style: .continuous)
+                    .stroke(tint(for: snapshot.source).opacity(0.18), lineWidth: 1)
             }
-            .shadow(color: Color.black.opacity(0.12), radius: 18, x: 0, y: 8)
+            .shadow(color: Color.black.opacity(0.10), radius: 14, x: 0, y: 7)
             .padding(.horizontal, 16)
-            .padding(.top, 8)
-            .padding(.bottom, AudioPlaybackBannerLayout.bottomClearance)
-            .accessibilityElement(children: .combine)
+            .accessibilityIdentifier("audio.banner")
+        }
+    }
+
+    private func tint(for source: PavbotAudioActivitySource) -> Color {
+        switch source {
+        case .mp3Podcast:
+            .purple
+        case .pulseDayTTS:
+            .orange
+        case .researchTTS:
+            .teal
+        }
+    }
+}
+
+private struct AudioPlaybackSourceIcon: View {
+    let source: PavbotAudioActivitySource
+    let isPlaying: Bool
+
+    var body: some View {
+        ZStack(alignment: .bottomTrailing) {
+            Image(systemName: source.compactSystemImage)
+                .font(.title2.weight(.semibold))
+
+            if source == .researchTTS {
+                Image(systemName: "magnifyingglass.circle.fill")
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(Color(.systemBackground), tint)
+                    .offset(x: 4, y: 4)
+            } else if !isPlaying {
+                Image(systemName: "pause.circle.fill")
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(Color(.systemBackground), tint)
+                    .offset(x: 4, y: 4)
+            }
+        }
+        .foregroundStyle(tint)
+        .frame(width: 38, height: 38)
+        .background(tint.opacity(0.12), in: Circle())
+        .accessibilityHidden(true)
+    }
+
+    private var tint: Color {
+        switch source {
+        case .mp3Podcast:
+            .purple
+        case .pulseDayTTS:
+            .orange
+        case .researchTTS:
+            .teal
         }
     }
 }

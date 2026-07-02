@@ -47,7 +47,7 @@ final class TodayLiveTopicsStore {
 
         guard let manifest else {
             if snapshot == nil {
-                emptyMessage = "Brak opublikowanego Pulsu dnia. Odśwież manifest albo otwórz Research -> Aktualne."
+                emptyMessage = "Brak opublikowanego Pulsu dnia. Odśwież manifest albo otwórz Przegląd -> Aktualne."
             }
             state = .loaded
             return
@@ -67,7 +67,7 @@ final class TodayLiveTopicsStore {
             let url = artifact.resolvedURL(manifestURL: URL(string: manifestURLString))
         else {
             snapshot = nil
-            emptyMessage = "Automatyzacja Puls dnia 3h nie opublikowała jeszcze danych, a fallback z magazynu 10:15 nie jest dostępny. Odśwież manifest albo otwórz Research -> Aktualne."
+            emptyMessage = "Automatyzacja Puls dnia 3h nie opublikowała jeszcze danych, a fallback z magazynu 10:15 nie jest dostępny. Odśwież manifest albo otwórz Przegląd -> Aktualne."
             state = .loaded
             return
         }

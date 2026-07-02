@@ -4,6 +4,40 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track enterprise AI deployment companies | Microsoft Frontier Company, AWS FDE, OpenAI Deployment Company and Anthropic/PE ventures make AI implementation a new category between consulting, cloud and model vendors | Watch first case studies, ROI evidence, IP-protection language, partner conflicts, pricing model and impact on enterprise engineering roles | Open |
+| High | Track AI public wealth fund proposals | OpenAI's reported 5% government-stake concept could turn frontier AI into a public-ownership and industrial-policy debate before IPOs | Watch OpenAI response, Congress, White House process, Anthropic/Google/Meta reaction, tax/fund alternatives and competition concerns | Open |
+| High | Track SoftBank SB Neo neocloud | SB Neo proposes US AI compute services using SoftBank's 10GW-scale energy and infrastructure plan | Watch FY2027 launch, named customers, power procurement, Arm/NVIDIA/OpenAI links, Japanese buildout and competition with Together AI/CoreWeave/Nebius | Open |
+| Medium | Track Amazon Leo service launch | Amazon now reports 396 Leo satellites and a transition from Atlas V to Vulcan, making first commercial service a near-term infrastructure story | Watch launch cadence, service availability, terminal pricing, real-world speeds, New Glenn/Vulcan delays and Starlink response | Open |
+| High | Track Android Developer Verification | Google frames ADV as anti-malware while F-Droid/HN frame it as central gatekeeping over alternative Android app distribution | Watch F-Droid path, advanced flow friction, appeal process, identity-retention details, EU/DMA response and 2027 global rollout | Open |
+| Medium | Track orbital AI data centers | Orbital Compute's 100k-satellite proposal is speculative but reflects AI's energy, cooling, permitting and grid bottlenecks | Watch FCC filings, first demo mission, financing, radiative-cooling evidence, orbital-debris concerns and astronomy community response | Open |
+| High | Track Cloudflare agent monetization | Monetization Gateway, x402 and Pay Per Use move agent payments from stablecoin narrative into edge-enforced web infrastructure | Watch early access, pricing rules, MCP/API/content use cases, Ceramic/You.com results, publisher reaction and agent identity requirements | Open |
+| High | Track Meta AI cloud compute | Meta may sell excess AI compute and hosted models, turning internal AI infrastructure into a rival to hyperscalers and neoclouds | Watch official Meta launch, customer list, pricing, impact on CoreWeave/Nebius, capacity guarantees and regulatory scrutiny | Open |
+| High | Track Gemini Spark desktop agents | Gemini Spark on macOS adds local files, connected apps, real-time monitoring and custom MCP to consumer desktop agent workflows | Watch rollout outside US Ultra, permissions UX, action history, failure recovery, MCP ecosystem and Apple/Microsoft/OpenAI responses | Open |
+| Medium | Track Venice AI privacy-first assistants | Venice AI's $65M Series A and $1B valuation show demand for privacy-oriented and less-restricted AI access | Watch retention claims, safety policy, app store treatment, enterprise offering, abuse controls and competition from mainstream assistants | Open |
+| Medium | Track AI-authored code policy in open source | Godot's stricter rules show maintainers pushing back against AI-generated PRs and review burden | Watch enforcement, similar policies in large OSS projects, disclosure conventions, GitHub tooling and effects on contributor onboarding | Open |
+| Medium | Track digital ownership after Sony disc shift | Sony ending physical discs for new PlayStation games in 2028 makes digital licensing and preservation a mainstream consumer tech topic | Watch gamer backlash, used-game market effects, PS Store commitments, PS3/Vita shutdowns, refund policy and Microsoft/Nintendo responses | Open |
+| Medium | Track Polish AI disinformation metrics | New Polish reporting adds local numbers for fake news, AI bots, deepfake exposure and expectations toward platforms | Watch source report updates, DSA enforcement, education programs, platform moderation evidence and follow-up polling | Open |
+| High | Track Claude Sonnet/Fable access and pricing | Sonnet 5 lowers the cost of everyday agents while Fable 5 returns through usage credits and Mythos 5 remains approval-gated | Watch pricing after August 31, Fable credits after July 7, Mythos/Glasswing expansion, jailbreak severity standard and competitor pricing | Open |
+| High | Track Open USD stablecoin consortium | Open USD adds a broad partner-governed payments rail after OKX AI, with Visa, Stripe, Mastercard, Google, BlackRock and Coinbase in the partner story | Watch production launch, on/off ramps, reserve economics, compliance, Stripe default behavior and use in agent marketplaces | Open |
+| High | Track low-voltage inference | Etched LVI frames AI chip competition around sustained FLOPs, voltage and thermal throttling rather than only peak performance | Watch independent benchmarks, customer validation, Sohu availability, software stack and comparisons with Nvidia, AMD, Groq and Cerebras | Open |
+| Medium | Track Getty/Shutterstock editorial content regulation | Getty plans to end the Shutterstock merger after CMA required selling Shutterstock's editorial business, showing content competition pressure in the AI era | Watch formal termination, Shutterstock response, Getty financing alternatives and implications for licensed content and AI training deals | Open |
+| Medium | Track Lime IPO and physical tech economics | Lime's Nasdaq IPO tests public-market appetite for software plus physical fleets, city rules and high operating costs | Watch first-day trading, use of proceeds, debt reduction, Uber relationship, fleet lifetime and municipal regulation | Open |
+| Medium | Track Polish digital credential infrastructure | mDyplomy in mObywatel and RDE/POL-on move higher-education credentials into public digital identity infrastructure | Watch university adoption, API integration, employer verification, outages and the mandatory digital diploma start on 2027-01-01 | Open |
+| High | Track open-model neocloud economics | Together AI's $800M round positions open-model cloud as a cost and capacity alternative to closed frontier APIs | Watch customer proof, independent inference benchmarks, capacity buildout, NVIDIA relationship, margins and competition from Meta cloud | Open |
+| High | Track UN AI scientific panel | The UN preliminary report creates a shared evidence baseline for AI governance ahead of the 2026 Geneva Global Dialogue | Watch July 6-7 Geneva outcomes, regulator citations, AI safety institute funding, frontier evaluation language and Polish/EU references | Open |
+| High | Track Big Tech AI emissions reporting | Amazon and Google reports show AI data-center growth pressuring emissions, water and clean-energy narratives | Watch Microsoft/Meta disclosures, carbon accounting standards, data-center cost bills, water permits and local ratepayer response | Open |
+| Medium | Track Meta AI glasses subscriptions | Meta One Premium limits Conversation Focus on AI glasses, turning a device feature into a monthly usage bucket | Watch rollout regions, accessibility backlash, pricing, device-support claims and whether more on-device features move behind subscriptions | Open |
+| Medium | Track privacy-preserving age assurance | Google ZKP libraries, EUDI Wallet work and HN interest show age checks can be implemented with less identity disclosure | Watch Longfellow ZK adoption, Yivi/Brave critiques, W3C standards, issuer trust and production wallet support | Open |
+| Medium | Track software roll-up IPOs | Bending Spoons' Nasdaq debut tests a European model of acquiring legacy digital brands and rebuilding them with centralized software and AI | Watch debt, user retention, next acquisitions, post-cut reputation and whether public markets keep rewarding the roll-up model | Open |
+| High | Track agent evaluation and operational tooling | Senior SWE-Bench, ZCode GLM-5.2 and Product Hunt launches show agent tooling moving toward evaluation, billing, context and mobile workflows | Watch benchmark adoption, independent agent results, GLM tooling, Stigg usage runtime, Cursor mobile use and operational observability | Open |
+| High | Track AWS forward-deployed AI engineers | AWS's $1B FDE organization turns agentic AI adoption into embedded engineering, customer knowledge graphs, runbooks and outcome-oriented deployments | Watch pricing model, named customer case studies, partner roles, security controls and responses from OpenAI, Anthropic and Microsoft | Open |
+| High | Track agent payments and reputation infrastructure | OKX AI is a concrete attempt to let autonomous agents discover work, pay in stablecoins, build identities and resolve disputes | Watch fraud controls, compliance, spending limits, dispute resolution, non-crypto adoption and whether agent-to-agent payments move beyond launch claims | Open |
+| Medium | Track hosted MCP servers for major platforms | X's hosted MCP server adds another large platform to the official connector layer for AI tools and agent workflows | Watch API pricing, rate limits, spam/source-poisoning mitigation, moderation, enterprise controls and adoption in Claude/Cursor/Grok-style tools | Open |
+| High | Track Claude Science and vertical AI research environments | Claude Science packages local compute, HPC, scientific tools, provenance and reproducible artifacts for labs and life-science workflows | Watch lab case studies, data retention language, Team/Enterprise rollout, validation evidence and avoid medical or clinical recommendations | Open |
+| High | Track post-quantum migration and Q-Day readiness | Business Insider Polska and US PQC deadlines make quantum-resistant cryptography a current cyber migration issue, not a distant theory | Watch Polish guidance, cryptographic bill of materials, bank/administration readiness, NIST/CISA updates and contractor procurement rules | Open |
+| High | Track data-center energy cost politics | Henrico County, H.R. 6529, Reddit and TVN24 show AI compute costs moving into local utility bills, schools and public policy | Watch H.R. 6529, state data-center bills, Virginia/Dominion, moratoria, water/noise permits, hyperscaler commitments and Polish/EU analogs | Open |
+| Medium | Track ADS-only vehicle regulation | NHTSA's FMVSS No. 135 rulemaking would remove manual brake-pedal requirements for ADS-only vehicles while keeping stopping-distance requirements | Watch comments before July 27, Tesla/Zoox/Waymo filings, safety-advocate responses, final rule timeline and real-world AV performance standards | Open |
+| Medium | Track developer-agent trust and hidden telemetry | HN surfaced a reverse-engineering claim about hidden request markers in Claude Code, raising transparency concerns for tools with shell and repo access | Watch Anthropic response, independent verification, release notes, enterprise gateway guidance and avoid turning the claim into an exploit guide | Open |
 | High | Track Rocket Lab/Iridium vertical space stack | Rocket Lab's planned $8B Iridium acquisition would combine launch, spacecraft manufacturing, L-band spectrum, LEO network, D2D/PNT and recurring satellite services | Watch shareholder/regulatory approvals, bridge financing, Neutron schedule, Iridium NTN Direct, defense/customer commitments and SpaceX/Amazon Leo responses | Open |
 | High | Track TIDAL AI music monetization controls | TIDAL will tag fully AI-generated music, block fraudulent AI content and stop monetizing music it identifies as wholly AI-generated | Recheck July 15 enforcement, distributor tagging, artist/rightsholder response, false positives and Spotify/Apple/Deezer counter-moves | Open |
 | High | Track age assurance enforcement stack | Australia is doubling social media age-law penalties while Discord tests Google Wallet, Incode, credit-card checks and on-device age estimation | Watch eSafety investigations, Discord rollout regions, privacy controls, app-store provider role and EU/Polish analogs | Open |
@@ -305,6 +339,55 @@
   demonetizing fully AI-generated music, Australia/Discord age assurance
   enforcement, Chatrie/geofence warrant privacy, Omen AI data-center coolant
   monitoring and Proception dexterous robotic hands.
+- 2026-06-30: Daily tech podcast generated in fallback mode because
+  `runs/2026-06-30.md` was missing; created `draft.md`, `script.md`,
+  `sources.md`, `render.json`, `brief.pdf`, and `podcast.mp3`. Final MP3 used
+  Piper and measured about 7:54. The shared renderer needed a temporary
+  `ffmpeg`/`ffprobe` shim because the local Homebrew `ffmpeg` binary referenced
+  a missing `libx265.215.dylib`; repository scripts were not modified. PDF brief
+  was rendered in the mobile 390 x 844 pt format and visually checked from PNG
+  renders.
+- 2026-06-30: Evening tech research run created a timestamped material update.
+  Strongest podcast candidates: AWS forward-deployed AI engineers, OKX
+  agent-to-agent payments, X hosted MCP server, Claude Science, Q-Day/PQC
+  readiness, AI data-center energy cost politics, NHTSA ADS-only vehicle
+  rulemaking and developer-agent trust after the Claude Code marker claim.
+- 2026-07-01: Daily research run created a material update. Strongest podcast
+  candidates: Claude Sonnet 5 plus Fable 5 access controls, Open USD stablecoin
+  consortium, Etched low-voltage inference, Getty/Shutterstock/CMA content
+  regulation, Lime IPO, Polish mDyplomy and Product Hunt's agent-tooling trend.
+- 2026-07-01: Daily tech podcast generated from the normal morning research
+  report; created `draft.md`, `script.md`, `sources.md`, `render.json`,
+  `brief.pdf`, and `podcast.mp3`. Final MP3 used Piper and measured about 7:55.
+  The shared renderer needed a temporary `ffmpeg`/`ffprobe` shim because the
+  local Homebrew `ffmpeg` binary referenced a missing `libx265.215.dylib`;
+  repository scripts were not modified. PDF brief was rendered in the mobile
+  390 x 844 pt format and visually checked from PNG renders.
+- 2026-07-01: Evening tech research run created a timestamped material update.
+  Strongest podcast candidates: Cloudflare Monetization Gateway and Pay Per Use
+  for AI search, Meta selling excess AI compute, Gemini Spark on macOS, Godot
+  AI-authored code policy, Venice AI privacy-first assistant growth, Sony ending
+  new PlayStation discs, Polish AI disinformation metrics and Product Hunt's
+  agentic launch day.
+- 2026-07-02: Daily research run created a material update. Strongest podcast
+  candidates: Together AI open-model neocloud, UN AI scientific panel,
+  Amazon/Google emissions and data-center costs, Meta One Premium for AI
+  glasses, Google ZKP age assurance, Bending Spoons IPO and agent evaluation/
+  operational tooling via HN/Product Hunt.
+- 2026-07-02: Daily tech podcast generated from the normal morning research
+  report; created `draft.md`, `script.md`, `sources.md`, `render.json`,
+  `brief.pdf`, and `podcast.mp3`. Final MP3 used Piper and measured about 7:59.
+  The shared renderer needed a temporary `ffmpeg`/`ffprobe` shim because the
+  local Homebrew `ffmpeg` binary referenced a missing `libx265.215.dylib`;
+  repository scripts were not modified. PDF brief was rendered in the mobile
+  390 x 844 pt format, had 42 link annotations, and was visually checked from
+  PNG renders.
+- 2026-07-02: Evening tech research run created a timestamped material update.
+  Strongest podcast candidates: Microsoft Frontier Company and enterprise AI
+  deployment companies, OpenAI public-wealth-fund/government-stake proposal,
+  SoftBank SB Neo 10GW neocloud, Amazon Leo service threshold, Android
+  Developer Verification versus F-Droid/open app distribution, Orbital Compute
+  satellite data centers and MCP/Product Hunt agent tooling.
 
 ## Done
 

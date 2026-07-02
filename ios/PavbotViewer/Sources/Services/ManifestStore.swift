@@ -67,7 +67,7 @@ final class ManifestStore {
 
         if isUsingPlaceholderManifestURL {
             state = manifest == nil
-                ? .failed(.manifest("Set your public GitHub raw manifest URL in Settings."))
+                ? .failed(.manifest("Wklej publiczny adres GitHub raw manifestu w ustawieniach."))
                 : .loaded
             return
         }
@@ -81,7 +81,7 @@ final class ManifestStore {
         }
 
         guard let url = URL(string: manifestURLString) else {
-            state = .failed(.manifest("Enter a valid manifest URL."))
+            state = .failed(.manifest("Wpisz poprawny adres URL manifestu."))
             return
         }
 

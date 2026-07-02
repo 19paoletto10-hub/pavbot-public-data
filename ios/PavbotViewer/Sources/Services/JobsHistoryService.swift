@@ -122,9 +122,9 @@ final class JobsHistoryStore {
         guard let window = Self.historyWindow(from: packages, selectedDay: selectedDay) else {
             state = .failed(
                 .custom(
-                    title: "Brak historii Jobs",
-                    message: "Brak raportów Jobs z ostatnich dni.",
-                    actionTitle: "Odśwież Jobs",
+                    title: "Brak historii Praca",
+                    message: "Brak raportów Praca z ostatnich dni.",
+                    actionTitle: "Odśwież Praca",
                     systemImage: "clock.badge.questionmark",
                     tint: .indigo
                 )
@@ -151,8 +151,8 @@ final class JobsHistoryStore {
             snapshot = nil
             state = .failed(
                 .custom(
-                    title: "Nie udało się wczytać historii Jobs",
-                    message: "Nie udało się wczytać żadnej historycznej paczki Jobs.",
+                    title: "Nie udało się wczytać historii Praca",
+                    message: "Nie udało się wczytać żadnej historycznej paczki Praca.",
                     actionTitle: "Odśwież historię",
                     systemImage: "clock.arrow.circlepath",
                     tint: .indigo

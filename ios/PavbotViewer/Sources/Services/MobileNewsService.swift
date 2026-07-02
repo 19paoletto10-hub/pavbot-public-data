@@ -263,11 +263,17 @@ final class MobileNewsSpeechController: ObservableObject {
             enableSpeech: enableSpeech,
             synthesizer: synthesizer,
             audioSession: audioSession,
-            rateDefaults: rateDefaults
+            rateDefaults: rateDefaults,
+            audioSource: .researchTTS,
+            audioTopic: "Przegląd"
         )
         cancellable = playback.objectWillChange.sink { [weak self] _ in
             self?.objectWillChange.send()
         }
+    }
+
+    func configureAudioCoordinator(_ coordinator: PavbotAudioSessionCoordinator) {
+        playback.configureAudioCoordinator(coordinator, source: .researchTTS, topic: "Przegląd")
     }
 
     func speak(_ article: MobileNewsArticle) {

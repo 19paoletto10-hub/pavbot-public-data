@@ -11,17 +11,24 @@ struct ContentView: View {
 
     var body: some View {
         GeometryReader { proxy in
-            Group {
-                switch PavbotRootLayoutStyle.resolve(horizontalSizeClass: horizontalSizeClass, width: proxy.size.width) {
-                case .tab:
-                    PavbotTabRootView()
-                case .split:
-                    PavbotSplitRootView()
+            let layoutStyle = PavbotRootLayoutStyle.resolve(
+                horizontalSizeClass: horizontalSizeClass,
+                width: proxy.size.width
+            )
+
+            rootContent(for: layoutStyle)
+                .safeAreaInset(edge: .bottom, spacing: 0) {
+                    AudioPlaybackBottomReserve(
+                        layoutStyle: layoutStyle,
+                        bottomSafeArea: proxy.safeAreaInsets.bottom
+                    )
                 }
-            }
-        }
-        .safeAreaInset(edge: .bottom, spacing: 0) {
-            AudioPlaybackBanner()
+                .overlay(alignment: .bottom) {
+                    AudioPlaybackOverlayHost(
+                        layoutStyle: layoutStyle,
+                        bottomSafeArea: proxy.safeAreaInsets.bottom
+                    )
+                }
         }
         .overlay {
             PavbotImagePreviewHost(imagePreviewStore: imagePreviewStore)
@@ -68,6 +75,16 @@ struct ContentView: View {
         }
     }
 
+    @ViewBuilder
+    private func rootContent(for layoutStyle: PavbotRootLayoutStyle) -> some View {
+        switch layoutStyle {
+        case .tab:
+            PavbotTabRootView()
+        case .split:
+            PavbotSplitRootView()
+        }
+    }
+
     private func enableLiveNotificationsFromPrompt() {
         LiveNotificationOnboarding.markPromptSeen()
         if LiveNotificationOnboarding.needsSettingsBeforeSystemPrompt(serverURLString: NotificationServerSettings.serverURLString) {
@@ -77,6 +94,35 @@ struct ContentView: View {
 
         Task {
             _ = await RemoteNotificationPermission.requestAndRegister()
+        }
+    }
+}
+
+private struct AudioPlaybackBottomReserve: View {
+    @Environment(PavbotAudioSessionCoordinator.self) private var audioCoordinator
+    let layoutStyle: PavbotRootLayoutStyle
+    let bottomSafeArea: CGFloat
+
+    var body: some View {
+        if audioCoordinator.currentSnapshot != nil {
+            Color.clear
+                .frame(height: AudioPlaybackBannerLayout.contentReserveHeight(for: layoutStyle, bottomSafeArea: bottomSafeArea))
+                .allowsHitTesting(false)
+        }
+    }
+}
+
+private struct AudioPlaybackOverlayHost: View {
+    @Environment(PavbotAudioSessionCoordinator.self) private var audioCoordinator
+    let layoutStyle: PavbotRootLayoutStyle
+    let bottomSafeArea: CGFloat
+
+    var body: some View {
+        if audioCoordinator.currentSnapshot != nil {
+            AudioPlaybackBanner()
+                .padding(.bottom, AudioPlaybackBannerLayout.bottomClearance(for: layoutStyle, bottomSafeArea: bottomSafeArea))
+                .transition(.move(edge: .bottom).combined(with: .opacity))
+                .zIndex(10)
         }
     }
 }
@@ -109,7 +155,7 @@ private struct PavbotTabRootView: View {
                 JobsView()
             }
             .tabItem {
-                Label("Jobs", systemImage: "briefcase")
+                Label("Praca", systemImage: "briefcase")
             }
             .tag(AppTab.jobs)
 
@@ -117,7 +163,7 @@ private struct PavbotTabRootView: View {
                 ResearchView()
             }
             .tabItem {
-                Label("Research", systemImage: "newspaper")
+                Label("Przegląd", systemImage: "newspaper")
             }
             .tag(AppTab.research)
 
@@ -190,9 +236,9 @@ private struct PavbotSplitRootView: View {
                     .tag(AppTab.today)
                 Label("Puls Dnia", systemImage: "globe.europe.africa.fill")
                     .tag(AppTab.pulseDay)
-                Label("Jobs", systemImage: "briefcase")
+                Label("Praca", systemImage: "briefcase")
                     .tag(AppTab.jobs)
-                Label("Research", systemImage: "newspaper")
+                Label("Przegląd", systemImage: "newspaper")
                     .tag(AppTab.research)
                 Label("Ustawienia", systemImage: "gearshape")
                     .tag(AppTab.settings)

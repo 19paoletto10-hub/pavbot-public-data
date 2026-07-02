@@ -75,7 +75,7 @@ private struct ArtifactPreviewView: View {
     var body: some View {
         if store.isUsingPlaceholderManifestURL && !artifact.url.hasPrefix("http") {
             ContentUnavailableView(
-                "Skonfiguruj GitHub raw URL",
+                "Skonfiguruj publiczny adres GitHub",
                 systemImage: "link",
                 description: Text("Manifest w aplikacji pokazuje pliki, ale do podglądu Markdown, PDF i audio potrzebny jest prawdziwy publiczny Manifest URL w ustawieniach.")
             )
@@ -100,7 +100,7 @@ private struct ArtifactPreviewView: View {
             ContentUnavailableView(
                 "Brak publicznego URL",
                 systemImage: "link.badge.plus",
-                description: Text("Odśwież manifest z publicznym GitHub raw URL, aby aplikacja mogła otworzyć ten plik.")
+                description: Text("Odśwież manifest z publicznym adresem GitHub, aby aplikacja mogła otworzyć ten plik.")
             )
         }
     }

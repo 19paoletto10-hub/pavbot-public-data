@@ -8,6 +8,22 @@
 | Medium | Tune public source list | Repeated good sources should become explicit topic guidance | Prefer official institutions plus Onet/PAP, Guardian, Euronews and public AP/Reuters mirrors; consider topic.md refinement after weekend sample | Open |
 | Medium | Track Orka implementation details | Evening run confirmed signing and Baltic Pact, but full contract value, delivery guarantees and industrial execution still need official detail | Monitor MON/KPRM/Saab/PAP for value, delivery schedule, gap filler and Polish production-line specifics | Open |
 | Medium | Monitor ABW influence-operation fallout | ABW described Russian-financed paid demonstrations among Ukrainian refugees and immediate expulsion of 11 foreigners | Watch for follow-up from ABW, Straż Graniczna, prokuratura and MSWiA; avoid broad claims beyond official communications | Open |
+| Medium | Define public-sector AI image handling note | MON admitted AI enhancement changed a photo, creating a recurring trust issue for official communications | Track whether MON/KPRM publish rules for generative AI in official media; if pattern repeats, propose topic guidance | Open |
+| Medium | Track SAFE resilience plenipotentiary execution | KPRM shifted SAFE from setup to oversight under a new state-resilience plenipotentiary | Monitor real reporting cadence, authority over ministries, Polish industry metrics, NATO/EU coordination and anti-disinformation standards | Open |
+| Medium | Monitor follow-up to prosecutor closures | The evening run added formal/reported closures in the "two towers" and "coup d'etat" threads | Watch for complaints, court review, published justifications and political misuse beyond procedural facts | Open |
+| Medium | Track post-CPN fuel impact | CPN VAT preference ended on 1 July, making real station prices and inflation pass-through a live public-economy topic | Monitor official fuel/energy communications and reputable market data; avoid consumer or investment advice | Open |
+| Medium | Track WAM build-out | MON appointments moved the Wojskowa Akademia Medyczna from law/start date into staffing and execution | Watch recruitment, funding, curriculum, military medical capacity and civil-health integration | Open |
+| High | Track US base and Ankara summit execution | Evening run added formal presidential framing of U.S. base talks and NATO Ankara preparations | Monitor MON/KPRM/Prezydent/NATO for post-meeting readout, location, financing, infrastructure and summit conclusions | Open |
+| Medium | Track SKRM 2 July package | Evening run checked the public KPRM agenda but found no separate outcome communication in checked sources | Re-check KPRM/RCL for a post-SKRM protocol, updated project pages and any move to the Council of Ministers agenda | Open |
+| Medium | Monitor ZUS leadership and data-exchange execution | ZUS has a new president as 800+ automation and PIP/KAS/ZUS data exchange become practical issues | Watch ZUS/MRPiPS for first decisions, operational risks and effects on benefit handling | Open |
+| Medium | Monitor Szpital Południowy investigations | Prosecution plans further documentation and witness work while media add prosektorium allegations | Use only official prokuratura, NIK, city and hospital statements for firm claims; keep media allegations attributed | Open |
+| Medium | Track Pilchowice/Bóbr environmental findings | WIOŚ now records the contractor's working explanation of przyducha after final water discharge during dam works, with GIOŚ samples from 30 June and 1 July | Monitor WIOŚ/GIOŚ lab results, Wody Polskie, Tauron, wojewoda and local authorities before assigning responsibility | Open |
+| Medium | Track Minab civilian-harm accountability | AP reconstructed the Iran school strike and lack of final Pentagon accounting | Watch AP, Airwars, CENTCOM/Pentagon and U.S. Congress for official report or oversight actions | Open |
+| High | Track 2 July Kyiv strike and Polish air-defence response | Evening update raised the AP casualty count to at least 21 killed and added EU sanctions targeting Russia's drone-industrial chain | Monitor DORSZ/MON/NATO, Ukrainian authorities, EU sanctions list and air-defence support requests | Open |
+| High | Track presidential veto/TK package from 2 July | KPRP announced five signed laws, two vetoes and an akcyza bill sent to TK; this changes the legislative path for education, maritime/FuelEU and tax issues | Watch Sejm response to vetoes, TK docket, government counter-proposals and publication of signed laws | Open |
+| Medium | Track Sikorski-Sybiha de-escalation channel | Friday meeting may test whether the Marko Bezruczko/Panteon Narodowy idea can reduce the Poland-Ukraine historical dispute | Check official MSZ/Kyiv readouts and avoid calling the WP-reported proposal a breakthrough until confirmed | Open |
+| Medium | Verify Hungary refugee-status revocations | Sikorski says Hungary revoked refugee status and travel documents for Ziobro, Romanowski and Kotecka-Ziobro, but formal Hungarian documents were not found in this run | Monitor Hungarian authorities, Polish prosecution/MSZ and appeal/procedure details before treating the effect as settled | Open |
+| Medium | Track EU drone-sanctions package after Kyiv | Euronews reports Kallas will propose sanctions against Russian drone makers after the Kyiv attack | Verify the adopted list, legal basis and whether components/supply-chain entities are included | Open |
 
 ## Review Notes
 
@@ -95,6 +111,53 @@
   the fragile USA-Iran-Ormuz pause, and Guardian/AP for Russian fuel shortages.
   Podcast should treat ABW claims as official service findings and avoid
   generalizing them to Ukrainian or Belarusian communities in Poland.
+- 2026-06-30: Morning research run created a material update. Strongest sources
+  were KPRM/MON/Portal Morski-PAP for Orka execution details and the Baltic Sea
+  Pact, MON for the AI-photo correction, Prezydent RP for signatures and the
+  memory-day project, RCB/TVN Meteo for the post-heat storm and public-safety
+  block, AP/Guardian for USA-Iran-Ormuz, Guardian for Ukraine/Russian fuel
+  shortages, and Guardian/AP for Venezuela. Podcast should make the MON AI-photo
+  item about trust and rules, not personal scandal.
+- 2026-06-30-1935: Evening research run created a material update. Strongest
+  sources were KPRM/Rada Ministrów for the SAFE resilience plenipotentiary,
+  Prokuratura Okręgowa w Warszawie plus Polsat/TVN24 for prosecutor closures,
+  RCB for the continued heat-storm-drought public-safety block, Polsat for
+  border/LOT/Baltic operational incidents and Czech-order spillover, Vatican
+  News for the Polish-Ukrainian reconciliation appeal, Censor.NET/President of
+  Ukraine for the northern-offensive and air-defense thread, AP/Guardian for
+  Qatar-Ormuz, and AP for Venezuela's post-quake health crisis. Podcast should
+  avoid merging unrelated security incidents into one causal story.
+- 2026-07-01: Morning research run created a material update. Strongest sources
+  were TVN24/Business Insider/KPRM for the post-CPN fuel-price change, MON for
+  WAM appointments and military-health resilience, RCB for continuing heat and
+  drought alerts, AP/Guardian for Qatar-Ormuz, AP for Russia's fuel crisis after
+  Ukrainian refinery strikes, AP/Guardian for the US birthright-citizenship
+  ruling, and Guardian/AP for Venezuela. Podcast should connect CPN and Ormuz
+  cautiously as energy-risk context, not as a direct price forecast.
+- 2026-07-01-1934: Evening research run created a material update. Strongest
+  sources were Prezydent RP/NATO/AP for U.S. base and Ankara summit framing,
+  KPRM/ZUS for 800+ and public-administration execution, RCB for the 1/2 July
+  storm alert, TVN Warszawa/PAP plus Interia/Onet for Szpital Południowy,
+  TVN24/WP for Pilchowice/Bóbr, and AP/Euronews for Ufa, Hormuz and Minab.
+  Podcast should not merge Szpital Południowy, Pilchowice and RCB into one
+  generic "crisis" story; each has different evidence and responsible
+  institutions.
+- 2026-07-02: Morning research run created a material update. Strongest sources
+  were AP/TVN24/Guardian for the Kyiv strike and Polish air-defence response,
+  Prezydent RP plus Interia/Politico for the U.S. troop-presence track, TVN24
+  and e-petrol for post-CPN fuel prices, Radio ZET/Polskie Radio/Wprost for
+  Pilchowice-Bóbr public-health and Tauron context, KPRM for the SKRM agenda,
+  AP for Qatar-Ormuz and AP/Guardian for Venezuela. Podcast should lead with
+  Kyiv/DORSZ, then separate U.S. troops, fuels and Pilchowice instead of
+  bundling them into one generic state-stress narrative.
+- 2026-07-02-1933: Evening research run created a material update. Strongest
+  sources were AP/Euronews/Guardian/TVN24 for the Kyiv casualty update and EU
+  drone-sanctions angle, KPRP for the signed/vetoed/TK legislative package,
+  WIOŚ/TVN24 for Pilchowice-Bóbr, TVN24/WP/Interia for the Sikorski-Sybiha and
+  Marko Bezruczko de-escalation thread, RCB for public-safety context, AP for
+  Hormuz and AP/Euronews for Venezuela. Podcast should keep the legal,
+  environmental and diplomatic threads separate; avoid treating unconfirmed
+  Hungarian documents or the WP-reported Panteon proposal as final outcomes.
 
 ## Done
 

@@ -20,7 +20,7 @@ struct SavedResearchArticlesView: View {
                         ContentUnavailableView(
                             query.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty ? "Brak zapisanych artykułów" : "Brak wyników",
                             systemImage: "bookmark",
-                            description: Text("Zapisane artykuły z Research będą dostępne lokalnie na tym urządzeniu.")
+                            description: Text("Zapisane artykuły z Przeglądu będą dostępne lokalnie na tym urządzeniu.")
                         )
                         .frame(maxWidth: .infinity, minHeight: 320)
                     } else {
@@ -46,7 +46,7 @@ struct SavedResearchArticlesView: View {
                 .padding(20)
             }
             .background(Color(.systemGroupedBackground))
-            .navigationTitle("Zapisane Research")
+            .navigationTitle("Zapisane w Przeglądzie")
             .navigationBarTitleDisplayMode(.inline)
             .searchable(text: $query, prompt: "Szukaj w zapisanych")
             .sheet(item: $selectedArticle) { saved in

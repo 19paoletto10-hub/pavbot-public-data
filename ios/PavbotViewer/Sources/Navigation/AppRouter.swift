@@ -27,6 +27,7 @@ final class AppRouter {
     var selectedReportArtifactIDs: [String] = []
     var jobsPath: [PavbotArtifact] = []
     var researchPath: [PavbotArtifact] = []
+    private(set) var reportRouteRevision = 0
 
     func openArtifact(_ artifact: PavbotArtifact) {
         if let reportTopic = ReportTopicKind(topic: artifact.topic) {
@@ -99,6 +100,7 @@ final class AppRouter {
     func openReportsForTopic(_ topic: String, latestDay: String?) -> Bool {
         if topic == "puls-dnia-news" {
             openPulseDay(date: latestDay, artifactIDs: [])
+            advanceReportRouteRevision()
             return true
         }
 
@@ -119,6 +121,7 @@ final class AppRouter {
         selectedWeatherDate = nil
         jobsPath = []
         researchPath = []
+        advanceReportRouteRevision()
         return true
     }
 
@@ -153,6 +156,7 @@ final class AppRouter {
     func openReportRoute(_ route: ArtifactNotificationRoute) -> Bool {
         if route.topic == "puls-dnia-news" {
             openPulseDay(date: route.date, artifactIDs: route.artifactIDs)
+            advanceReportRouteRevision()
             return true
         }
 
@@ -174,6 +178,7 @@ final class AppRouter {
         selectedWeatherDate = nil
         jobsPath = []
         researchPath = []
+        advanceReportRouteRevision()
         return true
     }
 
@@ -256,5 +261,9 @@ final class AppRouter {
         }
 
         selectedArtifactAutomationID = manifest.automationArtifactGroup(for: route)?.id
+    }
+
+    private func advanceReportRouteRevision() {
+        reportRouteRevision += 1
     }
 }

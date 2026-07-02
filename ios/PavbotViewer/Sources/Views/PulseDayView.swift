@@ -161,22 +161,37 @@ private struct PulseDayHeroHeader: View {
     let layout: PavbotAdaptiveLayout
 
     var body: some View {
-        PavbotCommandHero(
-            eyebrow: "Pavbot info",
-            title: "Puls Dnia",
-            subtitle: layout.usesDashboardLayout
-                ? "Newsroom grid z top tematami, historią i lokalnym zapisem najważniejszych artykułów."
-                : "Szybki briefing co 3 godziny z tematami gotowymi do zapisania lokalnie.",
-            systemImage: "globe.europe.africa.fill",
-            tint: .orange,
-            insights: [
-                PavbotInsight(title: "Tematy", value: "\(snapshot?.allTopics.count ?? 0)", systemImage: "doc.text.fill", tint: .orange),
-                PavbotInsight(title: "Źródło", value: snapshot?.sourceLabel ?? "Ładowanie", systemImage: snapshot?.isFallback == true ? "exclamationmark.triangle.fill" : "checkmark.seal.fill", tint: snapshot?.isFallback == true ? .orange : .green),
-                PavbotInsight(title: "Aktualizacja", value: snapshot?.displayDate ?? "-", systemImage: "clock.fill", tint: .blue),
-                PavbotInsight(title: "Status", value: isRefreshing ? "Odświeżam" : "Gotowe", systemImage: isRefreshing ? "arrow.clockwise" : "sparkles", tint: isRefreshing ? .blue : .green)
-            ],
-            startsCollapsed: true
-        )
+        PavbotPremiumCard(tint: .orange, cornerRadius: 22, horizontalPadding: 16, verticalPadding: 16) {
+            HStack(alignment: .top, spacing: 13) {
+                Image(systemName: "globe.europe.africa.fill")
+                    .font(.title3.weight(.bold))
+                    .foregroundStyle(.white)
+                    .frame(width: 44, height: 44)
+                    .background(Color.orange.gradient, in: RoundedRectangle(cornerRadius: 15, style: .continuous))
+                    .shadow(color: Color.orange.opacity(0.22), radius: 10, x: 0, y: 6)
+                    .accessibilityHidden(true)
+
+                VStack(alignment: .leading, spacing: 7) {
+                    Text("Puls Dnia")
+                        .font(.title2.weight(.bold))
+                    Text(layout.usesDashboardLayout
+                        ? "Top tematy, historia i lokalny zapis w newsroomowym układzie."
+                        : "Najważniejsze tematy są od razu pod ręką, z faktami i odczytem.")
+                        .font(.callout)
+                        .foregroundStyle(.secondary)
+                        .lineLimit(2)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    HStack(spacing: 8) {
+                        StatusBadge(text: "\(snapshot?.allTopics.count ?? 0) tematów", systemImage: "doc.text.fill", tint: .orange)
+                        StatusBadge(text: snapshot?.displayDate ?? "Ładowanie", systemImage: "clock.fill", tint: .blue)
+                        if isRefreshing {
+                            StatusBadge(text: "Odświeżam", systemImage: "arrow.clockwise", tint: .blue)
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 

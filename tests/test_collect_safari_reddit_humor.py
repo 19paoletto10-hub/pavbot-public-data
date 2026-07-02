@@ -102,6 +102,69 @@ def test_curate_posts_adds_reddit_radar_detail_metadata():
     }
 
 
+def test_curate_posts_filters_posts_older_than_72_hours_and_keeps_reddit_created_at():
+    collector = load_collector()
+    generated_at = datetime.fromisoformat("2026-07-01T00:10:00+00:00")
+    posts = [
+        {
+            "title": "Świeży temat z ostatnich 72 godzin",
+            "url": "https://www.reddit.com/r/technology/comments/fresh/topic/",
+            "sourceName": "r/technology",
+            "score": 900,
+            "comments": 50,
+            "redditCreatedAt": "2026-06-28T00:11:00+00:00",
+        },
+        {
+            "title": "Za stary temat",
+            "url": "https://www.reddit.com/r/technology/comments/stale/topic/",
+            "sourceName": "r/technology",
+            "score": 950,
+            "comments": 60,
+            "redditCreatedAt": "2026-06-27T23:09:00+00:00",
+        },
+        {
+            "title": "Bez wiarygodnego czasu",
+            "url": "https://www.reddit.com/r/technology/comments/unknown/topic/",
+            "sourceName": "r/technology",
+            "score": 990,
+            "comments": 70,
+        },
+    ]
+
+    items = collector.curate_posts(posts, max_items=6, generated_at=generated_at, max_post_age_hours=72)
+
+    assert [item["title"] for item in items] == ["Świeży temat z ostatnich 72 godzin"]
+    assert items[0]["redditCreatedAt"] == "2026-06-28T00:11:00+00:00"
+
+
+def test_curate_posts_parses_relative_reddit_age_text_when_absolute_timestamp_missing():
+    collector = load_collector()
+    generated_at = datetime.fromisoformat("2026-07-01T00:10:00+00:00")
+    posts = [
+        {
+            "title": "Temat z feedowym 4 hr. ago",
+            "url": "https://www.reddit.com/r/memes/comments/recent/topic/",
+            "sourceName": "r/memes",
+            "score": 400,
+            "comments": 25,
+            "redditCreatedText": "4 hr. ago",
+        },
+        {
+            "title": "Temat z feedowym 5 days ago",
+            "url": "https://www.reddit.com/r/memes/comments/old/topic/",
+            "sourceName": "r/memes",
+            "score": 500,
+            "comments": 30,
+            "redditCreatedText": "5 days ago",
+        },
+    ]
+
+    items = collector.curate_posts(posts, max_items=6, generated_at=generated_at, max_post_age_hours=72)
+
+    assert [item["title"] for item in items] == ["Temat z feedowym 4 hr. ago"]
+    assert items[0]["redditCreatedAt"] == "2026-06-30T20:10:00+00:00"
+
+
 def test_comment_highlights_filter_deleted_toxic_and_limit_to_three():
     collector = load_collector()
 
@@ -207,7 +270,7 @@ def test_merge_reddit_radar_items_adds_unique_and_replaces_six_oldest_when_full(
     assert all(item.get("radarFirstSeenAt") for item in merged)
 
 
-def test_load_recent_reddit_radar_history_keys_uses_last_five_days(tmp_path):
+def test_load_recent_reddit_radar_history_keys_uses_last_72_hours_and_title_fallback(tmp_path):
     collector = load_collector()
     data_dir = tmp_path / "research" / "reddit-radar" / "data"
     data_dir.mkdir(parents=True)
@@ -227,23 +290,29 @@ def test_load_recent_reddit_radar_history_keys_uses_last_five_days(tmp_path):
             }
         ]
     }
+    title_only_payload = {"items": [{"title": "Powtorka bez URL"}]}
     (data_dir / "2026-06-29-1010-reddit-radar.json").write_text(
         json.dumps(recent_payload, ensure_ascii=False),
         encoding="utf-8",
     )
-    (data_dir / "2026-06-20-1010-reddit-radar.json").write_text(
+    (data_dir / "2026-06-26-2009-reddit-radar.json").write_text(
         json.dumps(old_payload, ensure_ascii=False),
+        encoding="utf-8",
+    )
+    (data_dir / "2026-06-29-2210-reddit-radar.json").write_text(
+        json.dumps(title_only_payload, ensure_ascii=False),
         encoding="utf-8",
     )
 
     seen = collector.load_recent_reddit_radar_history_keys(
         tmp_path / "research" / "reddit-radar",
         generated_at=datetime.fromisoformat("2026-06-30T02:08:00+00:00"),
-        lookback_days=5,
+        lookback_hours=72,
     )
 
     assert "https://www.reddit.com/r/test/comments/recent/topic" in seen
     assert "https://www.reddit.com/r/test/comments/old/topic" not in seen
+    assert "powtorka bez url" in seen
 
 
 def test_default_subreddits_include_intriguing_sources():
@@ -281,6 +350,7 @@ def test_write_reddit_radar_artifacts_writes_raw_final_and_markdown(tmp_path):
                 "tags": ["dev"],
                 "categoryLabel": "dev",
                 "postText": "Autor żartuje, że deploy przeszedł za łatwo.",
+                "redditCreatedAt": "2026-06-27T05:06:00+00:00",
                 "whyFunny": "Zabawne, bo sukces wygląda podejrzanie.",
                 "rawCommentSnippets": [
                     {"body": "Surowy komentarz zostaje tylko w raw JSON.", "score": 55}
@@ -310,7 +380,9 @@ def test_write_reddit_radar_artifacts_writes_raw_final_and_markdown(tmp_path):
     final_payload = collector.json.loads(paths["final"].read_text(encoding="utf-8"))
     markdown = paths["markdown"].read_text(encoding="utf-8")
     assert raw_payload["items"][0]["rawCommentSnippets"][0]["body"] == "Surowy komentarz zostaje tylko w raw JSON."
+    assert raw_payload["items"][0]["redditCreatedAt"] == "2026-06-27T05:06:00+00:00"
     assert "rawCommentSnippets" not in final_payload["items"][0]
+    assert "redditCreatedAt" not in final_payload["items"][0]
     assert final_payload["items"][0]["commentHighlights"][0]["originalBody"] == "Surowy komentarz zostaje tylko w raw JSON."
     assert raw_payload["items"][0]["commentAnalysisStatus"] == "reviewed"
     assert "commentAnalysisStatus" not in final_payload["items"][0]
@@ -334,6 +406,7 @@ def test_main_publishes_audit_artifacts_after_collecting_safari_digest(monkeypat
                 "sourceName": "r/ProgrammerHumor",
                 "score": 1200,
                 "comments": 42,
+                "redditCreatedAt": "2026-07-01T00:00:00+00:00",
                 "commentSnippets": [{"body": "A teraz czekamy na alarm.", "score": 55}],
             }
         ],

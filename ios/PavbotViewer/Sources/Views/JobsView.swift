@@ -31,12 +31,16 @@ struct JobsView: View {
                         )
 
                         if packages.isEmpty {
-                            ContentUnavailableView(
-                                "Brak raportów Jobs",
+                            PavbotStateCard(
+                                title: "Brak raportów Praca",
+                                message: "Odśwież manifest po publikacji automatyzacji Praca AI/LLM Wrocław.",
                                 systemImage: "briefcase",
-                                description: Text("Odśwież manifest po publikacji automatyzacji LLM/AI Jobs Wrocław.")
-                            )
-                            .frame(maxWidth: .infinity, minHeight: 300)
+                                tint: .indigo,
+                                actionTitle: "Odśwież Praca",
+                                actionSystemImage: "arrow.clockwise"
+                            ) {
+                                Task { await reloadJobs(refreshManifest: true) }
+                            }
                         } else {
                             JobsModePicker(selection: $viewMode)
 
@@ -66,17 +70,21 @@ struct JobsView: View {
                             }
                         }
                     } else {
-                        ContentUnavailableView(
-                            "Brak manifestu",
+                        PavbotStateCard(
+                            title: "Brak manifestu",
+                            message: "Ustaw Manifest URL w Ustawieniach i odśwież dane.",
                             systemImage: "doc.badge.questionmark",
-                            description: Text("Ustaw Manifest URL w Settings i odśwież dane.")
-                        )
-                        .frame(maxWidth: .infinity, minHeight: 320)
+                            tint: .orange,
+                            actionTitle: "Otwórz ustawienia",
+                            actionSystemImage: "gearshape"
+                        ) {
+                            router.selectedTab = .settings
+                        }
                     }
             }
             .environment(\.pavbotAdaptiveLayout, layout)
         }
-        .navigationTitle("Jobs")
+        .navigationTitle("Praca")
         .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Szukaj firm, ról i tagów")
         .navigationDestination(for: PavbotArtifact.self) { artifact in
             ArtifactDetailView(artifact: artifact)
@@ -85,8 +93,8 @@ struct JobsView: View {
             ToolbarItem(placement: .topBarTrailing) {
                 PavbotRefreshToolbarButton(
                     isRefreshing: isRefreshingJobs,
-                    accessibilityLabel: "Odśwież Jobs",
-                    accessibilityHint: "Odświeża manifest oraz dane Jobs."
+                    accessibilityLabel: "Odśwież Praca",
+                    accessibilityHint: "Odświeża manifest oraz dane Praca."
                 ) {
                     Task { await reloadJobs(refreshManifest: true) }
                 }
@@ -238,13 +246,13 @@ private struct JobsModePicker: View {
     @Binding var selection: JobsViewMode
 
     var body: some View {
-        Picker("Widok Jobs", selection: $selection) {
+        Picker("Widok Praca", selection: $selection) {
             ForEach(JobsViewMode.allCases) { mode in
                 Text(mode.title).tag(mode)
             }
         }
         .pickerStyle(.segmented)
-        .accessibilityLabel("Wybierz widok Jobs")
+        .accessibilityLabel("Wybierz widok Praca")
         .onChange(of: selection) { _, _ in
             haptics.play(.selection)
         }
@@ -282,8 +290,12 @@ private struct JobsContent: View {
             if let report {
                 loadedContent(report: report)
             } else {
-                ContentUnavailableView("Brak danych Jobs", systemImage: "briefcase")
-                    .frame(maxWidth: .infinity, minHeight: 260)
+                PavbotStateCard(
+                    title: "Brak danych Praca",
+                    message: "Raport jest na liście, ale nie zawiera jeszcze strukturalnych danych ofert.",
+                    systemImage: "briefcase",
+                    tint: .indigo
+                )
             }
         case .failed(let error):
             if let report {
@@ -295,8 +307,7 @@ private struct JobsContent: View {
                     loadedContent(report: report)
                 }
             } else {
-                PavbotStateView(error: error)
-                    .frame(maxWidth: .infinity, minHeight: 300)
+                PavbotStateCard(error: error)
             }
         }
     }
@@ -332,12 +343,12 @@ private struct JobsContent: View {
     @ViewBuilder
     private var opportunitiesView: some View {
         if presentationSnapshot.opportunities.isEmpty {
-            ContentUnavailableView(
-                "Brak ofert dla filtra",
+            PavbotStateCard(
+                title: "Brak ofert dla filtra",
+                message: "Zmień filtr albo wyczyść wyszukiwanie, aby zobaczyć wszystkie znalezione role.",
                 systemImage: "line.3.horizontal.decrease.circle",
-                description: Text("Zmień filtr albo wyczyść wyszukiwanie, aby zobaczyć wszystkie znalezione role.")
+                tint: .indigo
             )
-            .frame(maxWidth: .infinity, minHeight: 220)
         } else {
             VStack(alignment: .leading, spacing: layout.cardSpacing) {
                 Text("Najciekawsze oferty")
@@ -388,8 +399,12 @@ private struct JobsHistoryContent: View {
             if let snapshot {
                 loadedContent(snapshot: snapshot)
             } else {
-                ContentUnavailableView("Brak historii ofert", systemImage: "clock.badge.questionmark")
-                    .frame(maxWidth: .infinity, minHeight: 260)
+                PavbotStateCard(
+                    title: "Brak historii ofert",
+                    message: "Historia nie ma jeszcze połączonych raportów. Odśwież po kolejnej publikacji.",
+                    systemImage: "clock.badge.questionmark",
+                    tint: .indigo
+                )
             }
         case .failed(let error):
             if let snapshot {
@@ -401,8 +416,7 @@ private struct JobsHistoryContent: View {
                     loadedContent(snapshot: snapshot)
                 }
             } else {
-                PavbotStateView(error: error)
-                    .frame(maxWidth: .infinity, minHeight: 300)
+                PavbotStateCard(error: error)
             }
         }
     }
@@ -431,12 +445,12 @@ private struct JobsHistoryContent: View {
     @ViewBuilder
     private var historyOpportunitiesView: some View {
         if presentationSnapshot.opportunities.isEmpty {
-            ContentUnavailableView(
-                "Brak ofert dla wybranego widoku",
+            PavbotStateCard(
+                title: "Brak ofert dla wybranego widoku",
+                message: "Zmień filtr, datę albo wyszukiwanie, żeby zobaczyć oferty z ostatnich raportów.",
                 systemImage: "line.3.horizontal.decrease.circle",
-                description: Text("Zmień filtr, datę albo wyszukiwanie, żeby zobaczyć oferty z ostatnich raportów.")
+                tint: .indigo
             )
-            .frame(maxWidth: .infinity, minHeight: 220)
         } else {
             VStack(alignment: .leading, spacing: layout.cardSpacing) {
                 HStack(alignment: .firstTextBaseline) {
@@ -565,7 +579,7 @@ private struct JobsHistoryDateBar: View {
             }
             .padding(.vertical, 2)
         }
-        .accessibilityLabel("Filtr dat ofert Jobs")
+        .accessibilityLabel("Filtr dat ofert Praca")
     }
 }
 
@@ -647,10 +661,10 @@ private struct JobsHeader: View {
 
     var body: some View {
         PavbotCommandHero(
-            eyebrow: "Job Radar",
-            title: "LLM / AI Jobs Wrocław",
+            eyebrow: "Radar pracy",
+            title: "Praca AI / LLM Wrocław",
             subtitle: layout.usesDashboardLayout
-                ? "Dashboard ról, firm, źródeł i sygnałów rynku z panelem podsumowania oraz gridem ofert."
+                ? "Panel ról, firm, źródeł i sygnałów rynku z panelem podsumowania oraz siatką ofert."
                 : "Szybki przegląd ról AI, źródeł i zmian gotowy do decyzji na telefonie.",
             systemImage: "briefcase.fill",
             tint: .indigo,

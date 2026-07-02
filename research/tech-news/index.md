@@ -1,12 +1,81 @@
 # Topic Index: tech-news
 
-Last updated: 2026-06-29
+Last updated: 2026-07-02
 
 ## Current Understanding
 
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
+
+Po wieczornym raporcie z 2026-07-02-1934 najważniejsza nowa warstwa to
+wdrożeniowa industrializacja AI: Microsoft Frontier Company odpowiada na AWS
+FDE, OpenAI/Anthropic deployment ventures i presję enterprise ROI skalą 2,5 mld
+USD oraz 6 tys. ekspertów osadzanych u klientów. Druga warstwa to państwo jako
+udziałowiec frontier AI: relacja FT/Guardian o konceptualnym 5-proc. udziale
+rządu USA w OpenAI łączy public wealth fund, AI IPO i access gating w jeden
+wątek polityki przemysłowej. Trzecia warstwa to compute jako geopolityczna
+infrastruktura: SoftBank SB Neo zapowiada amerykański neocloud z docelową
+skalą 10 GW, Amazon Leo osiąga 396 satelitów i próg pierwszej usługi, a Orbital
+Compute pokazuje skrajny orbital-data-center thesis jako reakcję na ziemskie
+ograniczenia energii i chłodzenia. Czwarta warstwa to platform trust:
+Android Developer Verification/F-Droid/HN pokazują, że bezpieczeństwo aplikacji
+mobilnych może stać się sporem o centralny gatekeeping dystrybucji.
+
+Po raporcie z 2026-07-02 najważniejsza nowa warstwa to open-model compute i
+publiczny rachunek infrastruktury AI: Together AI zebrało 800 mln USD przy
+wycenie 8,3 mld USD jako neocloud dla otwartych modeli, a raporty Amazon i
+Google pokazują napięcie między rozbudową data centers, emisjami, wodą i
+celami klimatycznymi. Druga warstwa to globalne governance: wstępny raport
+panelu ONZ ustawia bazę dowodową przed Global Dialogue w Genewie i przesuwa
+rozmowę z pojedynczych export controls na zdolność państw do oceniania
+frontier models. Trzecia warstwa to produktowa monetyzacja AI: Meta One
+Premium limituje Conversation Focus w okularach AI, Google ZKP daje
+prywatnościowy wariant age assurance, a HN/Product Hunt pokazują narzędzia
+agentowe, benchmarki senior-engineer tasks i usage billing jako codzienną
+warstwę komercjalizacji agentów. Czwarta, rynkowa warstwa to Bending Spoons
+IPO jako test europejskiego software roll-upu przebudowującego legacy marki
+przez centralny software stack, AI i subskrypcje.
+
+Po raporcie z 2026-07-01 najważniejsza nowa warstwa to agentic AI jako
+produkt masowy, ale nadal reglamentowany na szczycie: Claude Sonnet 5 obniża
+koszt codziennych agentów, Fable 5 wraca po zdjęciu export controls przez
+usage credits, a Mythos 5 pozostaje ograniczony do zatwierdzonych organizacji.
+Druga warstwa to płatności i governance dla agentowej gospodarki: Open USD
+zbiera ponad 140 partnerów wokół stablecoina z partner-governed economics, co
+uzupełnia wczorajszy OKX AI. Trzecia warstwa to koszt fizycznej skali:
+Etched/LVI pokazuje walkę z throttlingiem inferencji, Lime IPO testuje
+publiczny apetyt na software plus flotę sprzętu, a Getty/Shutterstock pokazuje,
+że rynek zaufanych treści editorial nadal podlega twardym warunkom CMA mimo
+presji generatywnej AI. Polski kontekst dodał mDyplomy w mObywatelu i RDE/POL-on
+jako praktyczny przykład cyfrowej administracji.
+
+Po wieczornym raporcie z 2026-07-01-1934 najważniejsza nowa warstwa to
+agentowy internet jako rynek rozliczany per request: Cloudflare Monetization
+Gateway, x402, Pay Per Use dla AI search i płatności za MCP tools uzupełniają
+poranny Open USD o realny punkt egzekwowania płatności na edge. Druga warstwa
+to AI compute jako produkt infrastrukturalny: Meta według źródeł medialnych
+chce sprzedawać nadmiarową moc i modele, MGX zamyka 49 mld USD funduszu AI, a
+OXMIQ wzmacnia wątek licencjonowanego IP chipowego dla sovereign AI. Trzecia
+warstwa to zasady platform w praktyce: Google przenosi Gemini Spark na macOS i
+custom MCP, Product Hunt pokazuje agentowe klawiatury, social intelligence,
+browser automation i pieniądze dla agentów, a Godot stawia granicę wobec
+AI-authored code w open source. Czwarta warstwa, konsumencka i lokalna, to Sony
+kończące nowe płyty PlayStation od stycznia 2028 oraz polskie dane o
+dezinformacji, deepfake i oczekiwaniach wobec platform.
+
+Po wieczornym raporcie z 2026-06-30-1935 najważniejsza nowa warstwa to
+komercjalizacja agentów poza samym modelem: AWS uruchamia FDE za 1 mld USD,
+OKX buduje marketplace płatności, reputacji i usług między agentami, a X
+wystawia hosted MCP server jako oficjalny connector do real-time platform data.
+Druga warstwa to pionowe AI dla konkretnych domen: Claude Science pokazuje
+lokalne compute, HPC, provenance i reprodukowalne artefakty dla laboratoriów,
+a Google DeepMind Nano Banana 2 Lite wzmacnia wyścig o tanie, szybkie modele
+obrazowe. Trzecia warstwa to rachunek infrastrukturalny: Q-Day/PQC wraca jako
+polski i globalny temat cyberbezpieczeństwa, data centers coraz mocniej
+wchodzą w rachunki lokalnych społeczności i politykę public utilities, a
+NHTSA/Federal Register pokazują regulacyjne przejście od pojazdu z kierowcą do
+ADS-only vehicles bez ręcznych kontrolek.
 
 Po wieczornym raporcie z 2026-06-29-1934 najważniejsza nowa warstwa to
 infrastruktura spoza klasycznego model-stacku: Rocket Lab chce przejąć Iridium
@@ -168,6 +237,136 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- Cloudflare agent monetization and Pay Per Use: śledzić waitlistę
+  Monetization Gateway, adopcję x402, partnerów Ceramic/You.com, modele cenowe
+  za MCP tools/API/content, identity dla agentów oraz reakcję wydawców i AI
+  search engines.
+- Open-model neocloud economics: Together AI trzeba śledzić jako test, czy
+  otwarte modele i niezależna infrastruktura mogą realnie obniżać koszt
+  agentów wobec zamkniętych frontier APIs; patrzeć na customer proof,
+  niezależne benchmarki, capacity, marże, relacje z NVIDIĄ i konkurencję z
+  Meta cloud.
+- UN AI scientific panel and Global Dialogue: śledzić Genewę 6-7 lipca 2026,
+  cytowania raportu przez regulatorów, finansowanie AI safety institutes,
+  język o frontier-model evaluation oraz polskie/UE odniesienia bez
+  wyciągania porad prawnych.
+- Big Tech AI emissions reporting: Amazon/Google trzeba obserwować jako
+  wskaźnik, czy AI data centers rosną szybciej niż efektywność, czysta energia
+  i water replenishment; patrzeć na Microsoft/Meta reports, rachunki lokalne,
+  standardy carbon accounting i public utility bills.
+- Meta AI glasses subscriptions: śledzić Meta One Premium, limity
+  Conversation Focus, reakcje accessibility community, rollout krajowy,
+  pricing i to, czy kolejne lokalne funkcje okularów AI trafią do planu
+  subskrypcyjnego.
+- Privacy-preserving age assurance: Google Longfellow ZK, EUDI Wallet, Yivi i
+  krytykę Brave warto śledzić jako techniczny kontrapunkt do age checks;
+  oceniać issuerów, interoperacyjność, ryzyko wykluczenia i realne wdrożenia.
+- Software roll-up public-market test: Bending Spoons IPO trzeba obserwować
+  jako europejski model kupowania legacy digital brands i przebudowy przez AI,
+  subskrypcje i centralny software stack; patrzeć na dług, retencję,
+  reputację po cięciach i kolejne przejęcia.
+- Agent evaluation and operational tooling: Senior SWE-Bench, ZCode GLM-5.2,
+  Cursor for iOS, Stigg 2.0 i N71 pokazują, że agenty potrzebują benchmarków,
+  wspólnego kontekstu, usage billing i obserwowalności; śledzić adopcję poza
+  launch-day HN/Product Hunt.
+- Enterprise AI deployment companies: Microsoft Frontier Company, AWS FDE,
+  OpenAI Deployment Company i Anthropic/PE ventures trzeba śledzić jako nową
+  kategorię między konsultingiem, cloudem i modelem; patrzeć na ROI evidence,
+  ochronę IP klientów, relacje z Accenture/EY/partnerami i wpływ na rynek pracy
+  enterprise engineering.
+- AI public wealth funds and government stakes: propozycja 5-proc. udziału
+  OpenAI dla rządu USA jest wczesna, ale trzeba śledzić, czy wróci jako
+  public-ownership deal, tax/fund model, IPO condition albo regulacyjny
+  bargaining chip wobec Anthropic, Google i Meta.
+- SoftBank SB Neo and 10GW neocloud buildout: śledzić datę startu FY2027,
+  źródła energii, klientów, relację z OpenAI/Arm/NVIDIA, konkurencję z Together
+  AI/CoreWeave/Nebius i realny koszt capacity.
+- Amazon Leo service launch: 396 satelitów i przejście z Atlas V na Vulcan
+  trzeba śledzić pod kątem pierwszej komercyjnej usługi, cen, terminali,
+  jakości pokrycia, opóźnień New Glenn/Vulcan i reakcji Starlink/AST.
+- Android Developer Verification and open app distribution: śledzić ścieżkę
+  dla F-Droid, advanced flow, appeal process, retencję identity registry,
+  reakcję UE/DMA oraz globalny rollout 2027 bez formułowania porad prawnych.
+- Orbital AI data centers: traktować Orbital Compute jako hype-check wokół
+  energii AI; śledzić dokumenty FCC, pierwsze demonstracje, finansowanie,
+  ryzyko śmieci orbitalnych, krytykę astronomów i niezależną analizę radiative
+  cooling/latency.
+- Meta AI cloud and excess compute monetization: śledzić oficjalne
+  potwierdzenie Meta, pricing, dostępne modele, wpływ na CoreWeave/Nebius,
+  umowy z klientami, regulatory scrutiny oraz czy podobny ruch zrobią SpaceX,
+  Google lub inni posiadacze nadmiarowej pojemności.
+- Gemini Spark desktop-agent rollout: śledzić rollout poza Google AI Ultra USA,
+  kontrolę uprawnień na macOS, historię działań, custom MCP integrations,
+  niezawodność lokalnych operacji i reakcje Apple/Microsoft/OpenAI/Anthropic.
+- Privacy-first and less-restricted AI assistants: Venice AI trzeba obserwować
+  jako sygnał popytu na prywatność, mniej moderowane modele i proxy/encryption
+  w consumer AI; patrzeć na safety policy, app store rules, retencję danych,
+  enterprise adoption i nadużycia.
+- AI-authored code policies in open source: Godot pokazuje konserwatywną
+  odpowiedź maintainerów na AI-generated PRs; śledzić egzekwowanie zasad,
+  podobne polityki Linux/Gentoo/NetBSD, disclosure tags, wpływ na onboarding i
+  koszt code review.
+- Digital ownership and game preservation: Sony ending new PlayStation discs
+  od stycznia 2028 trzeba śledzić pod kątem reakcji graczy, rynku używanych
+  gier, archiwizacji, sklepów PS3/Vita, refund policy i odpowiedzi Microsoftu
+  oraz Nintendo.
+- Polish AI disinformation and deepfake literacy: raporty Business Insider
+  Polska/WP Tech warto śledzić jako lokalny miernik kontaktu z deepfake,
+  botami AI, oczekiwaniami wobec platform, edukacją medialną i wdrożeniem DSA.
+- Claude Sonnet/Fable access and pricing: śledzić, czy Sonnet 5 faktycznie
+  obniży koszt agentowych workflow po 31 sierpnia, jak zadziałają usage credits
+  dla Fable 5 po 7 lipca oraz czy Mythos 5 wyjdzie poza zatwierdzone
+  organizacje USA; porównywać z GPT-5.6, Gemini i OpenAI partner/FDE modelami.
+- Open USD stablecoin consortium: śledzić produkcyjny start Open USD, realną
+  rolę Stripe, Visa, Mastercard, Google, BlackRock i Coinbase, reserve
+  economics dla partnerów, compliance oraz użycie w agentowych marketplace'ach
+  i cross-border business payments.
+- Low-voltage inference and AI chip utilization: Etched/LVI trzeba śledzić jako
+  sygnał, że realne FLOPs pod throttlingiem, napięcie, sparsity i software stack
+  stają się równie ważne jak peak benchmark; szukać niezależnych testów i
+  customer validation.
+- Editorial content market consolidation: Getty/Shutterstock i warunek CMA
+  warto śledzić jako przykład, że zaufane treści editorial, licencje i
+  konkurencja źródeł pozostają strategiczne w epoce generatywnej AI.
+- Lime IPO and physical tech economics: Lime trzeba śledzić jako test rynku
+  publicznego dla technologii z fizyczną flotą, miejskimi regulacjami i
+  zależnością od partnerów takich jak Uber.
+- Polish mDyplomy and digital credential infrastructure: mDyplomy w
+  mObywatelu/RDE/POL-on warto obserwować pod kątem adopcji uczelni, API,
+  weryfikacji przez pracodawców i obowiązkowego startu cyfrowych dyplomów od
+  1 stycznia 2027 r.
+- AWS forward-deployed AI engineers: śledzić, czy 1 mld USD FDE zmieni
+  enterprise AI z model/API licensing w outcome-based deployment usługowe;
+  patrzeć na pricing, partnerstwa, case studies i reakcje OpenAI, Anthropic
+  oraz Microsoft.
+- Agent payments and reputation infrastructure: OKX AI trzeba śledzić jako
+  próbę zbudowania płatności, reputacji, identity, escrow/dispute resolution i
+  usług między agentami; uważać na fraud, compliance, limity wydatków i realne
+  użycie poza crypto narrative.
+- Hosted MCP servers for major platforms: X MCP wzmacnia trend, w którym duże
+  platformy wystawiają oficjalne agent-ready connectors; śledzić rate limits,
+  pricing API, spam/source poisoning, moderation oraz adopcję w Claude, Cursor,
+  Grok i podobnych narzędziach.
+- Claude Science and vertical AI research environments: Claude Science warto
+  śledzić jako pionowe AI dla laboratoriów z local compute, HPC, provenance i
+  reprodukowalnością; rozdzielać produktowe workflow od medycznych lub
+  klinicznych claimów.
+- Post-quantum migration and Q-Day readiness: Business Insider Polska, White
+  House i NIST pokazują, że PQC staje się operacyjną migracją kryptografii;
+  śledzić polskie wytyczne, cryptographic bill of materials, banki,
+  administrację i harmonogramy CISA/NIST.
+- Data-center energy cost politics: Henrico County, H.R. 6529, Reddit i TVN24
+  pokazują, że AI compute przechodzi do rachunków samorządów, szkół,
+  gospodarstw domowych i public utility regulation; śledzić stany, moratoria,
+  Dominion/Virginia, water/noise permits i hyperscaler commitments.
+- ADS-only vehicle regulation: NHTSA/Federal Register rulemaking dla FMVSS No.
+  135 trzeba śledzić jako test certyfikacji robotaxi bez ręcznych kontrolek;
+  patrzeć na komentarze do 27 lipca 2026 r., stanowiska Tesli, Zoox, Waymo i
+  safety advocates oraz osobne real-world AV performance standards.
+- Developer-agent trust and hidden telemetry: HN/theRallo sygnał o Claude Code
+  steganography wymaga potwierdzenia lub odpowiedzi Anthropic, ale wzmacnia
+  temat przejrzystości narzędzi agentowych z dostępem do filesystemu, shell,
+  git i prywatnych repozytoriów.
 - Rocket Lab/Iridium vertical space stack: przejęcie Iridium trzeba śledzić
   jako próbę budowy alternatywy dla SpaceX/Amazon Leo przez połączenie launch,
   produkcji satelitów, L-band spectrum, D2D/PNT i recurring satellite services.
@@ -500,6 +699,7 @@ transparentność środowiskową AI.
 
 ## Recent Reports
 
+- [2026-06-30-1935](runs/2026-06-30-1935.md)
 - [2026-06-29](runs/2026-06-29.md)
 - [2026-06-27](runs/2026-06-27.md)
 - [2026-06-26](runs/2026-06-26.md)

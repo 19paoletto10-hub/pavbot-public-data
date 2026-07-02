@@ -1,6 +1,23 @@
 import ActivityKit
 import Foundation
 
+enum PavbotAudioActivitySource: String, Codable, Hashable {
+    case mp3Podcast
+    case pulseDayTTS
+    case researchTTS
+
+    var compactSystemImage: String {
+        switch self {
+        case .mp3Podcast:
+            "waveform"
+        case .pulseDayTTS:
+            "globe.europe.africa.fill"
+        case .researchTTS:
+            "globe"
+        }
+    }
+}
+
 struct PavbotAudioActivityAttributes: ActivityAttributes {
     struct ContentState: Codable, Hashable {
         var title: String
@@ -13,4 +30,5 @@ struct PavbotAudioActivityAttributes: ActivityAttributes {
     var artifactID: String
     var artifactPath: String
     var topic: String
+    var source: PavbotAudioActivitySource
 }

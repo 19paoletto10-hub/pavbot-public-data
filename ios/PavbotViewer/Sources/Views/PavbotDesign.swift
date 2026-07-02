@@ -287,9 +287,13 @@ struct PavbotUserFacingError: Equatable {
     enum Context: Equatable {
         case manifest
         case jobs
+        case research
+        case mobileNews
         case weather
+        case location
         case notifier
         case audio
+        case speech
         case preview
     }
 
@@ -351,12 +355,30 @@ struct PavbotUserFacingError: Equatable {
             )
         case .jobs:
             return PavbotUserFacingError(
-                title: "Nie udało się pobrać danych Jobs",
+                title: "Nie udało się pobrać danych Praca",
                 message: "Aplikacja pokaże ostatnie zapisane dane, jeśli są dostępne. Szczegóły: \(rawMessage)",
                 actionTitle: "Odśwież dane",
                 actionSystemImage: "arrow.clockwise",
                 systemImage: "briefcase.fill",
                 tint: .indigo
+            )
+        case .research:
+            return PavbotUserFacingError(
+                title: "Nie udało się pobrać Przeglądu",
+                message: "Pokażę ostatnie zapisane wydanie, jeśli jest dostępne. Szczegóły: \(rawMessage)",
+                actionTitle: "Odśwież Przegląd",
+                actionSystemImage: "arrow.clockwise",
+                systemImage: "doc.text.magnifyingglass",
+                tint: .teal
+            )
+        case .mobileNews:
+            return PavbotUserFacingError(
+                title: "Nie udało się pobrać Aktualnych",
+                message: "Sprawdź połączenie i odśwież magazyn. Jeśli masz cache, aplikacja zostawi go na ekranie. Szczegóły: \(rawMessage)",
+                actionTitle: "Odśwież Aktualne",
+                actionSystemImage: "arrow.clockwise",
+                systemImage: "newspaper.fill",
+                tint: .orange
             )
         case .notifier:
             return PavbotUserFacingError(
@@ -375,6 +397,24 @@ struct PavbotUserFacingError: Equatable {
                 actionSystemImage: "arrow.clockwise",
                 systemImage: "doc.text.magnifyingglass",
                 tint: .red
+            )
+        case .location:
+            return PavbotUserFacingError(
+                title: "Nie udało się ustalić lokalizacji",
+                message: "Wpisz miasto ręcznie albo sprawdź uprawnienia lokalizacji w Ustawieniach iOS. Szczegóły: \(rawMessage)",
+                actionTitle: "Wpisz miasto",
+                actionSystemImage: "location.magnifyingglass",
+                systemImage: "location.slash.fill",
+                tint: .blue
+            )
+        case .speech:
+            return PavbotUserFacingError(
+                title: "Czytanie na głos jest niedostępne",
+                message: "Spróbuj ponownie lub wybierz inny artykuł. Szczegóły: \(rawMessage)",
+                actionTitle: "Spróbuj ponownie",
+                actionSystemImage: "arrow.clockwise",
+                systemImage: "speaker.wave.2.fill",
+                tint: .teal
             )
         case .audio:
             return audio(rawMessage)
@@ -407,9 +447,11 @@ struct PavbotUserFacingError: Equatable {
 
     static func polishMessage(from message: String) -> String {
         switch message {
-        case let value where value.contains("Set your public GitHub raw manifest URL"):
+        case let value where value.contains("Wklej publiczny adres GitHub raw manifestu")
+            || value.contains("Set your public GitHub raw manifest URL"):
             "Wklej adres GitHub raw manifest URL, którego używa repozytorium automatyzacji."
-        case let value where value.contains("Enter a valid manifest URL"):
+        case let value where value.contains("Wpisz poprawny adres URL manifestu")
+            || value.contains("Enter a valid manifest URL"):
             "Wpisz poprawny adres manifestu."
         case let value where value.contains("Showing cached data"):
             "Pokazuję dane z pamięci, bo odświeżenie nie powiodło się."
@@ -622,7 +664,7 @@ struct PavbotTabInfoContent: Identifiable {
         tips: [
             "Kartka z kalendarza zmienia się codziennie i działa offline.",
             "Przesuwaj Reddit Radar w bok, żeby porównać posty po opisie i obrazie.",
-            "Następne kroki znajdziesz pod Reddit Radar, żeby najpierw zobaczyć najświeższy kontekst."
+            "Co dalej znajdziesz pod Reddit Radar, żeby najpierw zobaczyć najświeższy kontekst."
         ]
     )
 
@@ -669,7 +711,7 @@ struct PavbotTabInfoContent: Identifiable {
         let isAllOffers = subtabTitle == "Wszystkie oferty"
         return PavbotTabInfoContent(
             id: "jobs-\(subtabTitle)",
-            title: "Jobs · \(subtabTitle)",
+            title: "Praca · \(subtabTitle)",
             eyebrow: isAllOffers ? "Pełny radar ofert" : "Brief dnia",
             summary: isAllOffers
                 ? "Ta podzakładka służy do przeglądania szerszej historii ról AI/LLM, filtrowania i porównywania ofert między raportami."
@@ -707,9 +749,9 @@ struct PavbotTabInfoContent: Identifiable {
     static func research(topicTitle: String, topicSystemImage: String, topicTint: Color) -> PavbotTabInfoContent {
         PavbotTabInfoContent(
             id: "research-\(topicTitle)",
-            title: "Research · \(topicTitle)",
+            title: "Przegląd · \(topicTitle)",
             eyebrow: "Wybrany temat",
-            summary: "Ta podzakładka pokazuje aktualnie wybrany temat Research: raporty, artykuły, PDF-y, audio i zapisane materiały w jednym miejscu.",
+            summary: "Ta podzakładka pokazuje aktualnie wybrany temat Przeglądu: raporty, artykuły, PDF-y, audio i zapisane materiały w jednym miejscu.",
             systemImage: topicSystemImage,
             tint: topicTint,
             sections: [
@@ -1218,6 +1260,218 @@ struct PavbotPremiumCard<Content: View>: View {
     }
 }
 
+struct PavbotBriefingHeroCard: View {
+    let eyebrow: String
+    let title: String
+    let subtitle: String
+    let systemImage: String
+    var tint: Color = .accentColor
+    var supportingText: String?
+    var primaryActionTitle: String?
+    var primaryActionSystemImage: String?
+    var primaryAction: (() -> Void)?
+
+    var body: some View {
+        PavbotPremiumCard(tint: tint, cornerRadius: 26, horizontalPadding: 18, verticalPadding: 18) {
+            VStack(alignment: .leading, spacing: 16) {
+                HStack(alignment: .top, spacing: 14) {
+                    Image(systemName: systemImage)
+                        .font(.system(size: 32, weight: .semibold))
+                        .symbolRenderingMode(.hierarchical)
+                        .foregroundStyle(tint)
+                        .frame(width: 52, height: 52)
+                        .background(tint.opacity(0.13), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                        .accessibilityHidden(true)
+
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text(eyebrow)
+                            .font(.caption.weight(.bold))
+                            .foregroundStyle(tint)
+                            .textCase(.uppercase)
+
+                        Text(title)
+                            .font(.title3.weight(.bold))
+                            .lineLimit(3)
+                            .fixedSize(horizontal: false, vertical: true)
+
+                        Text(subtitle)
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
+                            .lineSpacing(3)
+                            .lineLimit(4)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+
+                if let supportingText, !supportingText.isEmpty {
+                    Text(supportingText)
+                        .font(.callout.weight(.semibold))
+                        .lineSpacing(3)
+                        .fixedSize(horizontal: false, vertical: true)
+                        .padding(14)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .background(tint.opacity(0.10), in: RoundedRectangle(cornerRadius: 16, style: .continuous))
+                }
+
+                if let primaryActionTitle, let primaryActionSystemImage, let primaryAction {
+                    PavbotPrimaryActionCapsule(
+                        title: primaryActionTitle,
+                        systemImage: primaryActionSystemImage,
+                        tint: tint,
+                        action: primaryAction
+                    )
+                }
+            }
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel([eyebrow, title, subtitle, supportingText].compactMap { $0 }.joined(separator: ". "))
+    }
+}
+
+struct PavbotStateCard: View {
+    let title: String
+    let message: String
+    let systemImage: String
+    var tint: Color = .accentColor
+    var actionTitle: String?
+    var actionSystemImage: String = "arrow.clockwise"
+    var action: (() -> Void)?
+
+    init(
+        title: String,
+        message: String,
+        systemImage: String,
+        tint: Color = .accentColor,
+        actionTitle: String? = nil,
+        actionSystemImage: String = "arrow.clockwise",
+        action: (() -> Void)? = nil
+    ) {
+        self.title = title
+        self.message = message
+        self.systemImage = systemImage
+        self.tint = tint
+        self.actionTitle = actionTitle
+        self.actionSystemImage = actionSystemImage
+        self.action = action
+    }
+
+    init(error: PavbotUserFacingError, action: (() -> Void)? = nil) {
+        self.title = error.title
+        self.message = error.message
+        self.systemImage = error.systemImage
+        self.tint = error.tint
+        self.actionTitle = action == nil ? nil : error.actionTitle
+        self.actionSystemImage = error.actionSystemImage
+        self.action = action
+    }
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Image(systemName: systemImage)
+                .font(.title2.weight(.semibold))
+                .foregroundStyle(tint)
+                .frame(width: 46, height: 46)
+                .background(tint.opacity(0.12), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+                .accessibilityHidden(true)
+
+            VStack(alignment: .leading, spacing: 6) {
+                Text(title)
+                    .font(.headline.weight(.semibold))
+                Text(message)
+                    .font(.callout)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            if let actionTitle, let action {
+                Button(action: action) {
+                    Label(actionTitle, systemImage: actionSystemImage)
+                        .font(.callout.weight(.semibold))
+                        .frame(maxWidth: .infinity, minHeight: 44)
+                }
+                .buttonStyle(.borderedProminent)
+                .tint(tint)
+            }
+        }
+        .padding(18)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color(.systemBackground), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .stroke(tint.opacity(0.12), lineWidth: 1)
+        }
+        .accessibilityElement(children: .contain)
+    }
+}
+
+struct PavbotLoadingStateCard: View {
+    let title: String
+    let message: String
+    let systemImage: String
+    var tint: Color = .accentColor
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 14) {
+            ZStack {
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .fill(tint.opacity(0.12))
+                ProgressView()
+                    .tint(tint)
+            }
+            .frame(width: 46, height: 46)
+            .accessibilityHidden(true)
+
+            VStack(alignment: .leading, spacing: 6) {
+                Label(title, systemImage: systemImage)
+                    .font(.headline.weight(.semibold))
+                    .foregroundStyle(.primary)
+                Text(message)
+                    .font(.callout)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .padding(18)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color(.systemBackground), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .stroke(tint.opacity(0.12), lineWidth: 1)
+        }
+        .accessibilityElement(children: .combine)
+    }
+}
+
+struct PavbotInlineErrorNotice: View {
+    let message: String
+    var tint: Color = .red
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 9) {
+            Image(systemName: "exclamationmark.triangle.fill")
+                .font(.caption.weight(.bold))
+                .foregroundStyle(tint)
+                .frame(width: 22, height: 22)
+                .accessibilityHidden(true)
+
+            Text(message)
+                .font(.caption)
+                .foregroundStyle(.primary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .padding(.horizontal, 11)
+        .padding(.vertical, 9)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(tint.opacity(0.10), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                .stroke(tint.opacity(0.16), lineWidth: 1)
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Błąd. \(message)")
+    }
+}
+
 struct PavbotInsight: Identifiable {
     let id: String
     let title: String
@@ -1284,6 +1538,99 @@ struct PavbotInsightStrip: View {
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
+    }
+}
+
+struct PavbotNewsTopicSwitcherItem<ID: Hashable>: Identifiable {
+    let id: ID
+    let title: String
+    let subtitle: String
+    let systemImage: String
+    let tint: Color
+    let badge: String
+}
+
+struct PavbotNewsTopicSwitcher<ID: Hashable>: View {
+    let items: [PavbotNewsTopicSwitcherItem<ID>]
+    @Binding var selection: ID
+
+    var body: some View {
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 10) {
+                ForEach(items) { item in
+                    Button {
+                        selection = item.id
+                    } label: {
+                        PavbotNewsTopicSwitcherCell(
+                            title: item.title,
+                            subtitle: item.subtitle,
+                            systemImage: item.systemImage,
+                            tint: item.tint,
+                            badge: item.badge,
+                            isSelected: selection == item.id
+                        )
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityAddTraits(selection == item.id ? .isSelected : [])
+                }
+            }
+            .padding(.vertical, 2)
+        }
+    }
+}
+
+private struct PavbotNewsTopicSwitcherCell: View {
+    let title: String
+    let subtitle: String
+    let systemImage: String
+    let tint: Color
+    let badge: String
+    let isSelected: Bool
+
+    var body: some View {
+        HStack(spacing: 10) {
+            Image(systemName: systemImage)
+                .font(.headline.weight(.semibold))
+                .foregroundStyle(isSelected ? .white : tint)
+                .frame(width: 36, height: 36)
+                .background(isSelected ? tint.gradient : tint.opacity(0.12).gradient, in: RoundedRectangle(cornerRadius: 11, style: .continuous))
+                .accessibilityHidden(true)
+
+            VStack(alignment: .leading, spacing: 3) {
+                HStack(spacing: 6) {
+                    Text(title)
+                        .font(.subheadline.weight(.bold))
+                        .foregroundStyle(.primary)
+                        .lineLimit(1)
+
+                    Text(badge)
+                        .font(.caption2.weight(.bold))
+                        .foregroundStyle(isSelected ? tint : .secondary)
+                        .padding(.horizontal, 6)
+                        .padding(.vertical, 3)
+                        .background(isSelected ? Color(.systemBackground).opacity(0.9) : tint.opacity(0.10), in: Capsule())
+                }
+
+                Text(subtitle)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .lineLimit(2)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .padding(.horizontal, 12)
+        .padding(.vertical, 11)
+        .frame(width: 180, alignment: .leading)
+        .frame(minHeight: 72, alignment: .leading)
+        .background(Color(.systemBackground).opacity(isSelected ? 1.0 : 0.82), in: RoundedRectangle(cornerRadius: 17, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 17, style: .continuous)
+                .stroke(isSelected ? tint.opacity(0.68) : tint.opacity(0.13), lineWidth: isSelected ? 1.6 : 1)
+        }
+        .shadow(color: Color.black.opacity(isSelected ? 0.07 : 0.03), radius: isSelected ? 10 : 6, x: 0, y: isSelected ? 6 : 3)
+        .contentShape(RoundedRectangle(cornerRadius: 17, style: .continuous))
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(title). \(subtitle). \(badge)")
     }
 }
 
@@ -1448,6 +1795,391 @@ struct PavbotRefreshToolbarButton: View {
     }
 }
 
+enum PavbotNewsPriorityStyle: String, Equatable {
+    case high
+    case medium
+    case low
+
+    init(_ rawPriority: String?) {
+        let normalized = (rawPriority ?? "")
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+            .folding(options: [.diacriticInsensitive, .caseInsensitive], locale: .current)
+            .lowercased()
+
+        switch normalized {
+        case "high", "critical", "pilne", "wysoki", "wysoka":
+            self = .high
+        case "low", "niski", "niska":
+            self = .low
+        default:
+            self = .medium
+        }
+    }
+
+    var title: String {
+        switch self {
+        case .high:
+            "Wysoki priorytet"
+        case .medium:
+            "Średni priorytet"
+        case .low:
+            "Niski priorytet"
+        }
+    }
+
+    var shortTitle: String {
+        switch self {
+        case .high:
+            "Top"
+        case .medium:
+            "Ważne"
+        case .low:
+            "Kontekst"
+        }
+    }
+
+    var systemImage: String {
+        switch self {
+        case .high:
+            "bolt.fill"
+        case .medium:
+            "newspaper.fill"
+        case .low:
+            "text.alignleft"
+        }
+    }
+
+    var tint: Color {
+        switch self {
+        case .high:
+            .orange
+        case .medium:
+            .blue
+        case .low:
+            .secondary
+        }
+    }
+}
+
+struct PavbotNewsStoryPresentation: Identifiable, Equatable {
+    let id: String
+    let section: String
+    let sectionSystemImage: String
+    let title: String
+    let lead: String
+    let priorityStyle: PavbotNewsPriorityStyle
+    let previewFacts: [String]
+    let sourceCount: Int
+    let previewTags: [String]
+    let canReadAloud: Bool
+
+    init(
+        id: String,
+        section: String,
+        sectionSystemImage: String,
+        title: String,
+        lead: String,
+        priority: String?,
+        facts: [String],
+        sources: [ResearchNewsSource],
+        tags: [String],
+        canReadAloud: Bool
+    ) {
+        let cleanLead = Self.clean(lead)
+        let cleanedFacts = facts.map(Self.clean).filter { !$0.isEmpty }
+        let cleanedTags = tags.map(Self.clean).filter { !$0.isEmpty }
+
+        self.id = id
+        self.section = Self.clean(section)
+        self.sectionSystemImage = sectionSystemImage
+        self.title = Self.clean(title)
+        self.lead = cleanLead
+        self.priorityStyle = PavbotNewsPriorityStyle(priority)
+        self.previewFacts = Array((cleanedFacts.isEmpty ? [cleanLead] : cleanedFacts).filter { !$0.isEmpty }.prefix(2))
+        self.sourceCount = sources.count
+        self.previewTags = Array(cleanedTags.removingDuplicates().prefix(3))
+        self.canReadAloud = canReadAloud
+    }
+
+    private static func clean(_ value: String) -> String {
+        value
+            .replacingOccurrences(of: #"\s+"#, with: " ", options: .regularExpression)
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}
+
+private extension Array where Element == String {
+    func removingDuplicates() -> [String] {
+        var seen: Set<String> = []
+        var values: [String] = []
+        for value in self {
+            let key = value.folding(options: [.caseInsensitive, .diacriticInsensitive], locale: .current)
+            guard seen.insert(key).inserted else { continue }
+            values.append(value)
+        }
+        return values
+    }
+}
+
+struct PavbotNewsStoryCard: View {
+    let presentation: PavbotNewsStoryPresentation
+    var tint: Color = .accentColor
+    var isSaved = false
+    var isActiveRead = false
+    var isFeatured = false
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: isFeatured ? 14 : 11) {
+            HStack(alignment: .top, spacing: 10) {
+                Image(systemName: presentation.sectionSystemImage)
+                    .font(.headline.weight(.semibold))
+                    .foregroundStyle(.white)
+                    .frame(width: isFeatured ? 44 : 38, height: isFeatured ? 44 : 38)
+                    .background(sectionTint.gradient, in: RoundedRectangle(cornerRadius: isFeatured ? 14 : 12, style: .continuous))
+                    .shadow(color: sectionTint.opacity(0.18), radius: 8, x: 0, y: 5)
+                    .accessibilityHidden(true)
+
+                PavbotArticleKeywordRows(horizontalSpacing: 6, verticalSpacing: 6) {
+                    PavbotNewsSectionBadge(title: presentation.section, tint: tint)
+                    PavbotNewsPriorityBadge(style: presentation.priorityStyle)
+                    PavbotSourceCountBadge(count: presentation.sourceCount, tint: tint)
+                    if isSaved {
+                        PavbotNewsSavedBadge()
+                    }
+                }
+                .padding(.top, isFeatured ? 3 : 2)
+                .layoutPriority(1)
+            }
+
+            Text(presentation.title)
+                .font(isFeatured ? .title3.weight(.bold) : .headline.weight(.semibold))
+                .foregroundStyle(.primary)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .fixedSize(horizontal: false, vertical: true)
+
+            Text(presentation.lead)
+                .font(isFeatured ? .callout.weight(.medium) : .callout)
+                .foregroundStyle(.secondary)
+                .lineSpacing(3)
+                .lineLimit(isFeatured ? 4 : 3)
+                .fixedSize(horizontal: false, vertical: true)
+
+            if !presentation.previewFacts.isEmpty {
+                VStack(alignment: .leading, spacing: 7) {
+                    ForEach(presentation.previewFacts, id: \.self) { fact in
+                        HStack(alignment: .top, spacing: 8) {
+                            Image(systemName: "checkmark.circle.fill")
+                                .font(.caption.weight(.semibold))
+                                .foregroundStyle(tint)
+                                .padding(.top, 2)
+                                .accessibilityHidden(true)
+
+                            Text(fact)
+                                .font(.footnote)
+                                .foregroundStyle(.secondary)
+                                .lineSpacing(2)
+                                .lineLimit(isFeatured ? 3 : 2)
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                    }
+                }
+                .padding(.top, 1)
+            }
+
+            if !presentation.previewTags.isEmpty {
+                PavbotArticleKeywordRows(horizontalSpacing: 6, verticalSpacing: 6) {
+                    ForEach(presentation.previewTags, id: \.self) { tag in
+                        PavbotArticleTagChip(
+                            title: tag,
+                            systemImage: "tag.fill",
+                            tint: tint,
+                            accessibilityPrefix: "Tag newsa"
+                        )
+                    }
+                }
+            }
+
+            HStack(spacing: 9) {
+                PavbotStoryActionPill(
+                    title: "Otwórz",
+                    systemImage: "rectangle.portrait.and.arrow.right",
+                    tint: tint
+                )
+
+                if presentation.canReadAloud {
+                    PavbotStoryActionPill(
+                        title: isActiveRead ? "Czytam" : "Czytaj",
+                        systemImage: isActiveRead ? "waveform.circle.fill" : "speaker.wave.2.fill",
+                        tint: isActiveRead ? .purple : tint
+                    )
+                }
+
+                if isActiveRead {
+                    PavbotMiniWaveform(tint: .purple)
+                }
+
+                Spacer(minLength: 0)
+            }
+            .padding(.top, 1)
+        }
+        .padding(isFeatured ? 17 : 15)
+        .frame(maxWidth: .infinity, alignment: .topLeading)
+        .background(backgroundShape)
+        .overlay {
+            RoundedRectangle(cornerRadius: isFeatured ? 22 : 18, style: .continuous)
+                .stroke(borderTint.opacity(isFeatured ? 0.24 : 0.14), lineWidth: isFeatured ? 1.2 : 1)
+        }
+        .contentShape(RoundedRectangle(cornerRadius: isFeatured ? 22 : 18, style: .continuous))
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(accessibilityLabel)
+    }
+
+    private var sectionTint: Color {
+        isFeatured ? presentation.priorityStyle.tint : tint
+    }
+
+    private var borderTint: Color {
+        isActiveRead ? .purple : (isFeatured ? presentation.priorityStyle.tint : tint)
+    }
+
+    private var backgroundShape: some View {
+        RoundedRectangle(cornerRadius: isFeatured ? 22 : 18, style: .continuous)
+            .fill(
+                LinearGradient(
+                    colors: isFeatured
+                        ? [Color(.systemBackground), presentation.priorityStyle.tint.opacity(0.09), Color(.secondarySystemBackground).opacity(0.76)]
+                        : [Color(.systemBackground), tint.opacity(0.045)],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+            )
+            .shadow(color: Color.black.opacity(isFeatured ? 0.07 : 0.035), radius: isFeatured ? 14 : 8, x: 0, y: isFeatured ? 8 : 5)
+    }
+
+    private var accessibilityLabel: String {
+        var values = [
+            presentation.priorityStyle.title,
+            presentation.section,
+            presentation.title,
+            presentation.lead
+        ]
+        if presentation.sourceCount > 0 {
+            values.append(presentation.sourceCount == 1 ? "1 źródło" : "\(presentation.sourceCount) źródeł")
+        }
+        if presentation.canReadAloud {
+            values.append(isActiveRead ? "Odczyt aktywny" : "Można czytać na głos")
+        }
+        return values.joined(separator: ". ")
+    }
+}
+
+struct PavbotTopStoryCard: View {
+    let presentation: PavbotNewsStoryPresentation
+    var tint: Color = .accentColor
+    var isSaved = false
+    var isActiveRead = false
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Label("Najważniejszy materiał", systemImage: "sparkles")
+                .font(.caption.weight(.bold))
+                .foregroundStyle(tint)
+                .textCase(.uppercase)
+
+            PavbotNewsStoryCard(
+                presentation: presentation,
+                tint: tint,
+                isSaved: isSaved,
+                isActiveRead: isActiveRead,
+                isFeatured: true
+            )
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+}
+
+struct PavbotNewsSectionBadge: View {
+    let title: String
+    let tint: Color
+
+    var body: some View {
+        Text(title.uppercased())
+            .font(.caption2.weight(.black))
+            .foregroundStyle(tint)
+            .lineLimit(1)
+            .minimumScaleFactor(0.84)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 5)
+            .background(tint.opacity(0.10), in: Capsule())
+            .accessibilityLabel("Sekcja: \(title)")
+    }
+}
+
+struct PavbotNewsPriorityBadge: View {
+    let style: PavbotNewsPriorityStyle
+
+    var body: some View {
+        Label(style.shortTitle, systemImage: style.systemImage)
+            .font(.caption2.weight(.bold))
+            .foregroundStyle(style.tint)
+            .lineLimit(1)
+            .fixedSize(horizontal: true, vertical: false)
+            .padding(.horizontal, 7)
+            .padding(.vertical, 4)
+            .background(style.tint.opacity(0.11), in: Capsule())
+            .accessibilityLabel(style.title)
+    }
+}
+
+struct PavbotNewsSavedBadge: View {
+    var body: some View {
+        Label("Zapisany", systemImage: "bookmark.fill")
+            .font(.caption2.weight(.bold))
+            .foregroundStyle(.blue)
+            .lineLimit(1)
+            .fixedSize(horizontal: true, vertical: false)
+            .padding(.horizontal, 8)
+            .padding(.vertical, 5)
+            .background(Color.blue.opacity(0.10), in: Capsule())
+            .accessibilityLabel("Zapisany")
+    }
+}
+
+private struct PavbotStoryActionPill: View {
+    let title: String
+    let systemImage: String
+    let tint: Color
+
+    var body: some View {
+        Label(title, systemImage: systemImage)
+            .font(.caption.weight(.bold))
+            .foregroundStyle(tint)
+            .lineLimit(1)
+            .fixedSize(horizontal: true, vertical: false)
+            .padding(.horizontal, 10)
+            .padding(.vertical, 7)
+            .background(tint.opacity(0.10), in: Capsule())
+    }
+}
+
+private struct PavbotMiniWaveform: View {
+    let tint: Color
+
+    var body: some View {
+        HStack(alignment: .center, spacing: 3) {
+            ForEach([8.0, 14.0, 10.0, 17.0], id: \.self) { height in
+                Capsule()
+                    .fill(tint.opacity(0.65))
+                    .frame(width: 3, height: height)
+            }
+        }
+        .frame(height: 22)
+        .padding(.horizontal, 7)
+        .background(tint.opacity(0.08), in: Capsule())
+        .accessibilityHidden(true)
+    }
+}
+
 struct PavbotArticleKeywordRows<Content: View>: View {
     var horizontalSpacing: CGFloat = 7
     var verticalSpacing: CGFloat = 6
@@ -1502,6 +2234,7 @@ struct PavbotSourceCountBadge: View {
                 .font(.caption.weight(.semibold))
                 .foregroundStyle(tint)
                 .lineLimit(1)
+                .fixedSize(horizontal: true, vertical: false)
                 .padding(.horizontal, 9)
                 .padding(.vertical, 6)
                 .background(tint.opacity(0.10), in: Capsule())

@@ -370,15 +370,9 @@ struct TodayLiveTopicsSnapshot: Identifiable, Equatable {
 }
 
 struct TodayLiveTopicsCarouselLayout: Equatable {
-    let cardCount: Int
     let compactWidth: Bool
 
     var cardSpacing: CGFloat { compactWidth ? 12 : 14 }
-    var cardHeight: CGFloat { compactWidth ? 198 : 182 }
-    var pageHeight: CGFloat {
-        guard cardCount > 0 else { return 0 }
-        return CGFloat(cardCount) * cardHeight + CGFloat(max(cardCount - 1, 0)) * cardSpacing
-    }
 }
 
 struct PulseDayHistoryRunPresentation: Equatable {

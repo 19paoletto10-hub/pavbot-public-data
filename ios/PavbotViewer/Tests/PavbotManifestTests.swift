@@ -3,6 +3,7 @@ import UserNotifications
 import SwiftUI
 import UIKit
 import AVFoundation
+import MediaPlayer
 @testable import PavbotViewer
 
 final class PavbotManifestTests: XCTestCase {
@@ -860,7 +861,7 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(failingStore.issue?.date, "2026-06-25")
         XCTAssertEqual(
             failingStore.cacheNotice,
-            "Nie pobrano świeżych danych. Pokazuję zapisane dane: wydanie Research."
+            "Nie pobrano świeżych danych. Pokazuję zapisane dane: wydanie Przegląd."
         )
     }
 
@@ -1184,6 +1185,138 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     @MainActor
+    func testResearchArticleAdapterBuildsCleanMobileNewsSpeechArticle() throws {
+        let article = ResearchNewsArticle(
+            id: "research-tts-clean",
+            title: "OpenAI publikuje nowe modele",
+            section: .ai,
+            body: """
+            Pierwszy akapit opisuje decyzję bez potrzeby czytania linku https://example.com/raw.
+
+            Drugi akapit rozwija kontekst i nie powinien zawierać markdownowego szumu.
+            """,
+            summary: "Krótki lead dla czytnika.",
+            whatHappened: "Firma pokazała nowy pakiet narzędzi.",
+            whyItMatters: "To zmienia tempo wdrożeń AI.",
+            deeperAnalysis: ["Pełniejsza analiza trafia do natywnego TTS."],
+            contextPoints: ["Rynek porównuje ruch z konkurencją."],
+            sources: [
+                ResearchNewsSource(title: "OpenAI Blog", url: "https://example.com/openai"),
+                ResearchNewsSource(title: "The Verge", url: "https://example.com/verge")
+            ],
+            priority: "Top",
+            tags: ["AI", "Modele"]
+        )
+
+        let adapted = MobileNewsArticle(researchArticle: article, topic: .techNews)
+        let text = adapted.ttsText
+
+        XCTAssertEqual(adapted.id, article.id)
+        XCTAssertEqual(adapted.section, article.section.rawValue)
+        XCTAssertEqual(adapted.sources, article.sources)
+        XCTAssertEqual(adapted.tags, article.tags)
+        XCTAssertEqual(adapted.priority, "Top")
+        XCTAssertTrue(text.contains("OpenAI publikuje nowe modele"))
+        XCTAssertTrue(text.contains("Co się stało. Firma pokazała nowy pakiet narzędzi."))
+        XCTAssertTrue(text.contains("Dlaczego to ważne. To zmienia tempo wdrożeń AI."))
+        XCTAssertTrue(text.contains("Pełniejsza analiza trafia do natywnego TTS."))
+        XCTAssertTrue(text.contains("Źródła. OpenAI Blog. The Verge."))
+        XCTAssertFalse(text.contains("https://"))
+        XCTAssertFalse(text.contains("##"))
+        XCTAssertFalse(text.contains("- "))
+    }
+
+    @MainActor
+    func testResearchArticleAdapterUsesMobileNewsSpeechControllerSnapshot() throws {
+        let package = TopicReportPackage(topic: .polskaSwiat, key: "2026-06-25", artifacts: [
+            Self.artifact(id: "polska-run", type: .run, topic: "polska-swiat", path: "research/polska-swiat/runs/2026-06-25.md", date: "2026-06-25")
+        ])
+        let issue = try ResearchNewsParser().parse(Self.polskaSwiatResearchMarkdownFixture, package: package)
+        let article = try XCTUnwrap(issue.articles.first)
+        let adapted = MobileNewsArticle(researchArticle: article, topic: .polskaSwiat)
+        let coordinator = PavbotAudioSessionCoordinator(enableLiveActivities: false)
+        let controller = MobileNewsSpeechController(
+            enableSpeech: false,
+            rateDefaults: UserDefaults(suiteName: UUID().uuidString)!
+        )
+
+        controller.configureAudioCoordinator(coordinator)
+        controller.speak(adapted)
+
+        XCTAssertEqual(controller.currentArticleID, article.id)
+        XCTAssertTrue(controller.isSpeaking)
+        XCTAssertEqual(coordinator.currentSnapshot?.source, .researchTTS)
+        XCTAssertEqual(coordinator.currentSnapshot?.topic, "Przegląd")
+        XCTAssertEqual(coordinator.currentSnapshot?.title, ResearchArticlePresentation(article: article, topic: .polskaSwiat).title)
+        XCTAssertNotNil(AudioPlaybackBannerSnapshot(coordinator: coordinator))
+    }
+
+    func testSpeechVoicePreferenceDefaultsToPolishAndPersistsSelection() {
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+
+        XCTAssertEqual(SpeechVoiceSettings.load(from: defaults), .polishDefault)
+
+        let selected = SpeechVoicePreference(mode: .selectedVoice, voiceIdentifier: "com.apple.ttsbundle.Zosia-compact")
+        SpeechVoiceSettings.save(selected, in: defaults)
+
+        XCTAssertEqual(SpeechVoiceSettings.load(from: defaults), selected)
+        XCTAssertEqual(defaults.string(forKey: SpeechVoiceSettings.modeDefaultsKey), "selectedVoice")
+        XCTAssertEqual(defaults.string(forKey: SpeechVoiceSettings.voiceIdentifierDefaultsKey), selected.voiceIdentifier)
+    }
+
+    func testSpeechVoiceCatalogFiltersPersonalVoicesAndFallsBackWhenSelectionDisappears() {
+        let systemVoice = SpeechVoiceOption(
+            id: "system-pl",
+            name: "Zosia",
+            language: "pl-PL",
+            qualityLabel: "Domyślny",
+            isPersonalVoice: false
+        )
+        let personalVoice = SpeechVoiceOption(
+            id: "personal-pl",
+            name: "Mój głos",
+            language: "pl-PL",
+            qualityLabel: "Personal Voice",
+            isPersonalVoice: true
+        )
+        let deniedCatalog = SpeechVoiceCatalog(
+            voices: [systemVoice, personalVoice],
+            personalVoiceAuthorization: .denied
+        )
+        let authorizedCatalog = SpeechVoiceCatalog(
+            voices: [systemVoice, personalVoice],
+            personalVoiceAuthorization: .authorized
+        )
+
+        XCTAssertEqual(deniedCatalog.personalVoices, [])
+        XCTAssertEqual(authorizedCatalog.personalVoices.map(\.id), ["personal-pl"])
+        XCTAssertEqual(
+            authorizedCatalog.selectedOption(for: SpeechVoicePreference(mode: .selectedVoice, voiceIdentifier: "missing"))?.id,
+            "system-pl"
+        )
+        XCTAssertNotNil(authorizedCatalog.fallbackMessage(for: SpeechVoicePreference(mode: .selectedVoice, voiceIdentifier: "missing")))
+    }
+
+    @MainActor
+    func testSpeechPlaybackServiceUsesConfiguredVoiceProviderForUtterance() throws {
+        let spySynthesizer = SpySpeechSynthesizer()
+        let spySession = SpySpeechAudioSession()
+        let expectedVoice = try XCTUnwrap(AVSpeechSynthesisVoice(language: "en-US"))
+        let service = SpeechPlaybackService(
+            enableSpeech: true,
+            synthesizer: spySynthesizer,
+            audioSession: spySession,
+            rateDefaults: UserDefaults(suiteName: UUID().uuidString)!,
+            voiceProvider: { expectedVoice }
+        )
+
+        service.start(itemID: "article-a", title: "Voice test", text: "Hello from Pavbot.")
+
+        XCTAssertEqual(spySession.activateCount, 1)
+        XCTAssertEqual(spySynthesizer.spokenUtterances.first?.voice?.identifier, expectedVoice.identifier)
+    }
+
+    @MainActor
     func testSpeechPlaybackIgnoresDelayedCancelFromPreviousSession() async throws {
         let service = SpeechPlaybackService(enableSpeech: false, rateDefaults: UserDefaults(suiteName: UUID().uuidString)!)
 
@@ -1443,6 +1576,26 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(router.selectedResearchTopic, .aktualne)
         XCTAssertEqual(router.selectedReportDay, "2026-06-25")
         XCTAssertEqual(router.selectedReportArtifactIDs, ["mobile-data"])
+    }
+
+    @MainActor
+    func testRouterReportRouteRevisionOnlyChangesForExternalReportRoutes() {
+        let router = AppRouter()
+
+        XCTAssertEqual(Self.reportRouteRevision(in: router), 0)
+
+        router.selectedResearchTopic = .polskaSwiat
+        XCTAssertEqual(Self.reportRouteRevision(in: router), 0)
+
+        XCTAssertTrue(router.openReportsForTopic("tech-news", latestDay: "2026-06-25"))
+        XCTAssertEqual(Self.reportRouteRevision(in: router), 1)
+
+        XCTAssertTrue(router.openReportRoute(ArtifactNotificationRoute(
+            topic: "aktualne-wydarzenia-mobile",
+            date: "2026-06-26",
+            artifactIDs: ["mobile-data"]
+        )))
+        XCTAssertEqual(Self.reportRouteRevision(in: router), 2)
     }
 
     func testDecodesJobsReportDataForNativeJobsUI() throws {
@@ -2116,15 +2269,547 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertNil(AudioPlaybackBannerSnapshot(service: service))
     }
 
+    @MainActor
+    func testAudioSessionCoordinatorStopsPreviousOwnerWhenSpeechStarts() async throws {
+        let coordinator = PavbotAudioSessionCoordinator(enableLiveActivities: false)
+        var mp3StopCount = 0
+        var pulseStopCount = 0
+
+        coordinator.activate(
+            PavbotAudioPlaybackSession(
+                id: "mp3-a",
+                source: .mp3Podcast,
+                title: "Podcast MP3",
+                topic: "Przegląd",
+                routeID: "mp3-a"
+            ),
+            controls: PavbotAudioPlaybackControls(
+                pause: {},
+                resume: {},
+                stop: { mp3StopCount += 1 }
+            )
+        )
+        coordinator.activate(
+            PavbotAudioPlaybackSession(
+                id: "pulse-a",
+                source: .pulseDayTTS,
+                title: "Puls dnia",
+                topic: "Puls Dnia",
+                routeID: "pulse-a"
+            ),
+            controls: PavbotAudioPlaybackControls(
+                pause: {},
+                resume: {},
+                stop: { pulseStopCount += 1 }
+            )
+        )
+
+        XCTAssertEqual(pulseStopCount, 0)
+        XCTAssertEqual(coordinator.currentSnapshot?.source, .pulseDayTTS)
+        XCTAssertEqual(coordinator.currentSnapshot?.sourceSystemImage, "globe.europe.africa.fill")
+        try await Task.sleep(nanoseconds: 10_000_000)
+        XCTAssertEqual(mp3StopCount, 1)
+    }
+
+    @MainActor
+    func testAudioSessionCoordinatorPublishesNowPlayingMetadataForMP3() throws {
+        let systemAudio = SpyPavbotSystemAudioIntegration()
+        let coordinator = PavbotAudioSessionCoordinator(
+            enableLiveActivities: false,
+            enableSystemIntegrations: true,
+            systemAudio: systemAudio
+        )
+
+        coordinator.activate(
+            PavbotAudioPlaybackSession(
+                id: "mp3-a",
+                source: .mp3Podcast,
+                title: "Podcast MP3",
+                topic: "Przegląd",
+                routeID: "mp3-a"
+            ),
+            controls: PavbotAudioPlaybackControls(
+                pause: {},
+                resume: {},
+                stop: {}
+            ),
+            elapsed: 42,
+            duration: 300,
+            isPlaying: true
+        )
+
+        let info = try XCTUnwrap(systemAudio.lastNowPlayingInfo)
+        XCTAssertEqual(systemAudio.activatePlaybackSessionCount, 1)
+        XCTAssertEqual(info[MPMediaItemPropertyTitle] as? String, "Podcast MP3")
+        XCTAssertEqual(info[MPMediaItemPropertyArtist] as? String, "Pavbot")
+        XCTAssertEqual(info[MPMediaItemPropertyAlbumTitle] as? String, "Przegląd")
+        XCTAssertEqual(info[MPNowPlayingInfoPropertyElapsedPlaybackTime] as? Double, 42)
+        XCTAssertEqual(info[MPMediaItemPropertyPlaybackDuration] as? Double, 300)
+        XCTAssertEqual(info[MPNowPlayingInfoPropertyPlaybackRate] as? Double, 1)
+    }
+
+    @MainActor
+    func testAudioSessionCoordinatorPublishesNowPlayingMetadataForPulseDayTTS() throws {
+        let systemAudio = SpyPavbotSystemAudioIntegration()
+        let coordinator = PavbotAudioSessionCoordinator(
+            enableLiveActivities: false,
+            enableSystemIntegrations: true,
+            systemAudio: systemAudio
+        )
+
+        coordinator.activate(
+            PavbotAudioPlaybackSession(
+                id: "pulse-a",
+                source: .pulseDayTTS,
+                title: "Najważniejszy temat dnia",
+                topic: "Puls Dnia",
+                routeID: "pulse-a"
+            ),
+            controls: PavbotAudioPlaybackControls(
+                pause: {},
+                resume: {},
+                stop: {}
+            ),
+            elapsed: 12,
+            duration: 90,
+            isPlaying: false
+        )
+
+        let info = try XCTUnwrap(systemAudio.lastNowPlayingInfo)
+        XCTAssertEqual(info[MPMediaItemPropertyTitle] as? String, "Najważniejszy temat dnia")
+        XCTAssertEqual(info[MPMediaItemPropertyAlbumTitle] as? String, "Puls Dnia")
+        XCTAssertEqual(info[MPNowPlayingInfoPropertyPlaybackRate] as? Double, 0)
+        XCTAssertEqual(coordinator.currentSnapshot?.source, .pulseDayTTS)
+    }
+
+    @MainActor
+    func testAudioSessionCoordinatorRoutesRemoteCommandsToActiveOwner() throws {
+        let systemAudio = SpyPavbotSystemAudioIntegration()
+        let coordinator = PavbotAudioSessionCoordinator(
+            enableLiveActivities: false,
+            enableSystemIntegrations: true,
+            systemAudio: systemAudio
+        )
+        var pauseCount = 0
+        var resumeCount = 0
+        var seekTargets: [Double] = []
+        var skipDeltas: [Double] = []
+
+        coordinator.activate(
+            PavbotAudioPlaybackSession(
+                id: "research-a",
+                source: .researchTTS,
+                title: "Przegląd AI",
+                topic: "Przegląd",
+                routeID: "research-a"
+            ),
+            controls: PavbotAudioPlaybackControls(
+                pause: { pauseCount += 1 },
+                resume: { resumeCount += 1 },
+                stop: {},
+                seek: { seekTargets.append($0) },
+                skip: { skipDeltas.append($0) }
+            ),
+            elapsed: 10,
+            duration: 120,
+            isPlaying: true
+        )
+
+        XCTAssertEqual(coordinator.performRemoteCommand(.pause), .success)
+        XCTAssertEqual(coordinator.performRemoteCommand(.play), .success)
+        XCTAssertEqual(coordinator.performRemoteCommand(.togglePlayPause), .success)
+        XCTAssertEqual(coordinator.performRemoteCommand(.seek(to: 44)), .success)
+        XCTAssertEqual(coordinator.performRemoteCommand(.skip(by: 15)), .success)
+        XCTAssertEqual(coordinator.performRemoteCommand(.skip(by: -15)), .success)
+
+        XCTAssertEqual(pauseCount, 2)
+        XCTAssertEqual(resumeCount, 1)
+        XCTAssertEqual(seekTargets, [44])
+        XCTAssertEqual(skipDeltas, [15, -15])
+        XCTAssertEqual(systemAudio.configureRemoteCommandsCount, 1)
+    }
+
+    @MainActor
+    func testAudioSessionCoordinatorStopActiveClearsSnapshotAndSystemAudio() async throws {
+        let systemAudio = SpyPavbotSystemAudioIntegration()
+        let coordinator = PavbotAudioSessionCoordinator(
+            enableLiveActivities: false,
+            enableSystemIntegrations: true,
+            systemAudio: systemAudio
+        )
+        var stopCount = 0
+
+        coordinator.activate(
+            PavbotAudioPlaybackSession(
+                id: "research-a",
+                source: .researchTTS,
+                title: "Przegląd AI",
+                topic: "Przegląd",
+                routeID: "research-a"
+            ),
+            controls: PavbotAudioPlaybackControls(
+                pause: {},
+                resume: {},
+                stop: { stopCount += 1 }
+            ),
+            elapsed: 12,
+            duration: 120,
+            isPlaying: true
+        )
+
+        XCTAssertNotNil(AudioPlaybackBannerSnapshot(coordinator: coordinator))
+
+        coordinator.stopActive()
+
+        XCTAssertNil(coordinator.currentSnapshot)
+        XCTAssertNil(AudioPlaybackBannerSnapshot(coordinator: coordinator))
+        XCTAssertNil(systemAudio.lastNowPlayingInfo)
+        XCTAssertEqual(systemAudio.deactivatePlaybackSessionCount, 1)
+        try await Task.sleep(nanoseconds: 10_000_000)
+        XCTAssertEqual(stopCount, 1)
+    }
+
+    @MainActor
+    func testAudioSessionCoordinatorPauseAndResumeUseOwnerUpdates() throws {
+        let coordinator = PavbotAudioSessionCoordinator(enableLiveActivities: false)
+        let session = PavbotAudioPlaybackSession(
+            id: "pulse-a",
+            source: .pulseDayTTS,
+            title: "Puls dnia",
+            topic: "Puls Dnia",
+            routeID: "pulse-a"
+        )
+        var pauseCount = 0
+        var resumeCount = 0
+
+        coordinator.activate(
+            session,
+            controls: PavbotAudioPlaybackControls(
+                pause: {
+                    pauseCount += 1
+                    coordinator.update(sessionID: session.id, elapsed: 12, duration: 60, isPlaying: false)
+                },
+                resume: {
+                    resumeCount += 1
+                    coordinator.update(sessionID: session.id, elapsed: 12, duration: 60, isPlaying: true)
+                },
+                stop: {}
+            ),
+            elapsed: 12,
+            duration: 60,
+            isPlaying: true
+        )
+
+        coordinator.pauseActive()
+
+        XCTAssertEqual(pauseCount, 1)
+        XCTAssertFalse(coordinator.currentSnapshot?.isPlaying ?? true)
+        XCTAssertEqual(coordinator.currentSnapshot?.playPauseSystemImage, "play.fill")
+
+        coordinator.resumeActive()
+
+        XCTAssertEqual(resumeCount, 1)
+        XCTAssertTrue(coordinator.currentSnapshot?.isPlaying ?? false)
+        XCTAssertEqual(coordinator.currentSnapshot?.playPauseSystemImage, "pause.fill")
+    }
+
+    @MainActor
+    func testAudioSessionCoordinatorPausesAndResumesAroundSystemInterruption() throws {
+        let coordinator = PavbotAudioSessionCoordinator(
+            enableLiveActivities: false,
+            enableSystemIntegrations: true,
+            systemAudio: SpyPavbotSystemAudioIntegration()
+        )
+        var pauseCount = 0
+        var resumeCount = 0
+
+        coordinator.activate(
+            PavbotAudioPlaybackSession(
+                id: "mp3-a",
+                source: .mp3Podcast,
+                title: "Podcast MP3",
+                topic: "Przegląd",
+                routeID: "mp3-a"
+            ),
+            controls: PavbotAudioPlaybackControls(
+                pause: { pauseCount += 1 },
+                resume: { resumeCount += 1 },
+                stop: {}
+            ),
+            elapsed: 22,
+            duration: 180,
+            isPlaying: true
+        )
+
+        coordinator.handleAudioSessionInterruptionBegan()
+
+        XCTAssertEqual(pauseCount, 1)
+        XCTAssertFalse(coordinator.currentSnapshot?.isPlaying ?? true)
+
+        coordinator.handleAudioSessionInterruptionEnded(shouldResume: true)
+
+        XCTAssertEqual(resumeCount, 1)
+    }
+
+    @MainActor
+    func testAudioSessionCoordinatorPausesWhenOldAudioRouteDisappears() throws {
+        let coordinator = PavbotAudioSessionCoordinator(
+            enableLiveActivities: false,
+            enableSystemIntegrations: true,
+            systemAudio: SpyPavbotSystemAudioIntegration()
+        )
+        var pauseCount = 0
+
+        coordinator.activate(
+            PavbotAudioPlaybackSession(
+                id: "mp3-a",
+                source: .mp3Podcast,
+                title: "Podcast MP3",
+                topic: "Przegląd",
+                routeID: "mp3-a"
+            ),
+            controls: PavbotAudioPlaybackControls(
+                pause: { pauseCount += 1 },
+                resume: {},
+                stop: {}
+            ),
+            elapsed: 22,
+            duration: 180,
+            isPlaying: true
+        )
+
+        coordinator.handleOldAudioRouteUnavailable()
+
+        XCTAssertEqual(pauseCount, 1)
+        XCTAssertFalse(coordinator.currentSnapshot?.isPlaying ?? true)
+    }
+
+    @MainActor
+    func testAudioSessionCoordinatorStopsSpeechWhenMP3Starts() async throws {
+        let coordinator = PavbotAudioSessionCoordinator(enableLiveActivities: false)
+        var speechStopCount = 0
+        var mp3StopCount = 0
+
+        coordinator.activate(
+            PavbotAudioPlaybackSession(
+                id: "research-a",
+                source: .researchTTS,
+                title: "Research TTS",
+                topic: "Przegląd",
+                routeID: "research-a"
+            ),
+            controls: PavbotAudioPlaybackControls(
+                pause: {},
+                resume: {},
+                stop: { speechStopCount += 1 }
+            )
+        )
+        coordinator.activate(
+            PavbotAudioPlaybackSession(
+                id: "mp3-a",
+                source: .mp3Podcast,
+                title: "Podcast MP3",
+                topic: "Przegląd",
+                routeID: "mp3-a"
+            ),
+            controls: PavbotAudioPlaybackControls(
+                pause: {},
+                resume: {},
+                stop: { mp3StopCount += 1 }
+            )
+        )
+
+        XCTAssertEqual(mp3StopCount, 0)
+        XCTAssertEqual(coordinator.currentSnapshot?.source, .mp3Podcast)
+        try await Task.sleep(nanoseconds: 10_000_000)
+        XCTAssertEqual(speechStopCount, 1)
+    }
+
+    @MainActor
+    func testAudioSessionCoordinatorDoesNotStopSameOwnerOnStateUpdate() throws {
+        let coordinator = PavbotAudioSessionCoordinator(enableLiveActivities: false)
+        var stopCount = 0
+        let session = PavbotAudioPlaybackSession(
+            id: "pulse-a",
+            source: .pulseDayTTS,
+            title: "Puls dnia",
+            topic: "Puls Dnia",
+            routeID: "pulse-a"
+        )
+
+        coordinator.activate(
+            session,
+            controls: PavbotAudioPlaybackControls(
+                pause: {},
+                resume: {},
+                stop: { stopCount += 1 }
+            )
+        )
+        coordinator.activate(
+            session,
+            controls: PavbotAudioPlaybackControls(
+                pause: {},
+                resume: {},
+                stop: { stopCount += 1 }
+            )
+        )
+        coordinator.update(sessionID: session.id, elapsed: 12, duration: 120, isPlaying: false)
+
+        XCTAssertEqual(stopCount, 0)
+        XCTAssertEqual(coordinator.currentSnapshot?.playPauseSystemImage, "play.fill")
+        XCTAssertEqual(coordinator.currentSnapshot?.timeLabel, "00:12 / 02:00")
+    }
+
+    @MainActor
+    func testSpeechPlaybackServiceNotifiesCoordinatorForPulseDayTTS() throws {
+        let coordinator = PavbotAudioSessionCoordinator(enableLiveActivities: false)
+        let service = SpeechPlaybackService(
+            enableSpeech: false,
+            rateDefaults: UserDefaults(suiteName: UUID().uuidString)!,
+            audioCoordinator: coordinator,
+            audioSource: .pulseDayTTS,
+            audioTopic: "Puls Dnia"
+        )
+
+        service.start(itemID: "pulse-a", title: "Puls dnia", text: "Tekst do odczytania.")
+
+        XCTAssertEqual(coordinator.currentSnapshot?.source, .pulseDayTTS)
+        XCTAssertEqual(coordinator.currentSnapshot?.title, "Puls dnia")
+
+        service.stop()
+
+        XCTAssertNil(coordinator.currentSnapshot)
+    }
+
+    @MainActor
+    func testAudioPlaybackServiceStopsActiveTTSBeforePlayingMP3() async throws {
+        let manifest = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
+        let audio = try XCTUnwrap(manifest.artifacts.first { $0.type == .podcastAudio })
+        let url = try XCTUnwrap(URL(string: audio.url))
+        let coordinator = PavbotAudioSessionCoordinator(enableLiveActivities: false)
+        var speechStopCount = 0
+
+        coordinator.activate(
+            PavbotAudioPlaybackSession(
+                id: "research-a",
+                source: .researchTTS,
+                title: "Research TTS",
+                topic: "Przegląd",
+                routeID: "research-a"
+            ),
+            controls: PavbotAudioPlaybackControls(
+                pause: {},
+                resume: {},
+                stop: { speechStopCount += 1 }
+            )
+        )
+
+        let service = AudioPlaybackService(enableSystemIntegrations: false, audioCoordinator: coordinator)
+        service.load(artifact: audio, url: url)
+
+        XCTAssertEqual(coordinator.currentSnapshot?.source, .mp3Podcast)
+        try await Task.sleep(nanoseconds: 10_000_000)
+        XCTAssertEqual(speechStopCount, 1)
+    }
+
+    @MainActor
+    func testAudioPlaybackBannerSnapshotUsesCoordinatorForTTS() throws {
+        let coordinator = PavbotAudioSessionCoordinator(enableLiveActivities: false)
+        coordinator.activate(
+            PavbotAudioPlaybackSession(
+                id: "research-a",
+                source: .researchTTS,
+                title: "Przegląd AI",
+                topic: "Przegląd",
+                routeID: "research-a"
+            ),
+            controls: PavbotAudioPlaybackControls(
+                pause: {},
+                resume: {},
+                stop: {}
+            )
+        )
+        coordinator.update(sessionID: "research-a", elapsed: 15, duration: 90, isPlaying: true)
+
+        let snapshot = try XCTUnwrap(AudioPlaybackBannerSnapshot(coordinator: coordinator))
+
+        XCTAssertEqual(snapshot.title, "Przegląd AI")
+        XCTAssertEqual(snapshot.topic, "Przegląd")
+        XCTAssertEqual(snapshot.source, .researchTTS)
+        XCTAssertEqual(snapshot.sourceSystemImage, "globe")
+        XCTAssertEqual(snapshot.progress, 1.0 / 6.0, accuracy: 0.0001)
+    }
+
+    @MainActor
+    func testSpeechPlaybackServiceRoutesCoordinatorSeekAndSkipIntoTimeline() throws {
+        let coordinator = PavbotAudioSessionCoordinator(
+            enableLiveActivities: false,
+            enableSystemIntegrations: true,
+            systemAudio: SpyPavbotSystemAudioIntegration()
+        )
+        let service = SpeechPlaybackService(
+            enableSpeech: false,
+            rateDefaults: UserDefaults(suiteName: UUID().uuidString)!,
+            audioCoordinator: coordinator,
+            audioSource: .researchTTS,
+            audioTopic: "Przegląd"
+        )
+        let text = """
+        Pierwszy akapit zawiera wystarczająco dużo słów, aby testowany odczyt miał sensowną długość i można było skoczyć w osi czasu.
+
+        Drugi akapit sprawdza, czy komenda seek z centrum sterowania przechodzi przez koordynator do natywnego TTS.
+
+        Trzeci akapit pozwala zweryfikować cofnięcie o kilka sekund bez opuszczania aktywnej sesji audio.
+        """
+
+        service.start(itemID: "research-a", title: "Przegląd AI", text: text)
+        let target = service.estimatedDuration * 0.7
+
+        XCTAssertEqual(coordinator.performRemoteCommand(.seek(to: target)), .success)
+
+        XCTAssertGreaterThanOrEqual(service.estimatedElapsed, target * 0.9)
+        XCTAssertGreaterThanOrEqual(service.currentSegmentIndex, 1)
+
+        let beforeSkipBack = service.estimatedElapsed
+        XCTAssertEqual(coordinator.performRemoteCommand(.skip(by: -15)), .success)
+
+        XCTAssertLessThanOrEqual(service.estimatedElapsed, beforeSkipBack)
+    }
+
     func testAudioPlaybackBannerLayoutKeepsPlayerAboveTabBar() {
-        XCTAssertEqual(AudioPlaybackBannerLayout.bottomClearance, 20)
+        XCTAssertEqual(AudioPlaybackBannerLayout.nativeTabBarHeight, 49)
+        XCTAssertEqual(AudioPlaybackBannerLayout.phoneTabBarVisualGap, 9)
+        XCTAssertEqual(AudioPlaybackBannerLayout.phoneLoweringAdjustment, 20)
+        XCTAssertEqual(AudioPlaybackBannerLayout.splitBottomClearance, 20)
+        XCTAssertEqual(AudioPlaybackBannerLayout.estimatedBannerHeight, 68)
+        XCTAssertEqual(AudioPlaybackBannerLayout.buttonHitSize, 44)
+        XCTAssertEqual(AudioPlaybackBannerLayout.bottomClearance(for: .tab), 49)
+        XCTAssertEqual(AudioPlaybackBannerLayout.bottomClearance(for: .tab, bottomSafeArea: 34), 72)
+        XCTAssertEqual(AudioPlaybackBannerLayout.bottomClearance(for: .split), 20)
+        XCTAssertEqual(AudioPlaybackBannerLayout.contentReserveHeight(for: .tab), 117)
+        XCTAssertEqual(AudioPlaybackBannerLayout.contentReserveHeight(for: .tab, bottomSafeArea: 34), 140)
+        XCTAssertEqual(AudioPlaybackBannerLayout.contentReserveHeight(for: .split), 88)
+    }
+
+    func testAudioPlaybackBannerKeepsControlsAsSeparateAccessibilityTargets() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let source = try String(contentsOf: sourcesRoot.appendingPathComponent("AudioPlaybackBanner.swift"))
+
+        XCTAssertTrue(source.contains(".accessibilityIdentifier(\"audio.banner.playPause\")"))
+        XCTAssertTrue(source.contains(".accessibilityIdentifier(\"audio.banner.close\")"))
+        XCTAssertFalse(source.contains(".accessibilityElement(children: .combine)"))
     }
 
     func testAudioActivityAttributesCarryArtifactPlaybackMetadata() {
         let attributes = PavbotAudioActivityAttributes(
             artifactID: "audio-2026-06-22",
             artifactPath: "research/tech-news/podcasts/2026-06-22/podcast.mp3",
-            topic: "tech-news"
+            topic: "tech-news",
+            source: .mp3Podcast
         )
         let state = PavbotAudioActivityAttributes.ContentState(
             title: "Podcast audio",
@@ -2136,10 +2821,33 @@ final class PavbotManifestTests: XCTestCase {
 
         XCTAssertEqual(attributes.artifactID, "audio-2026-06-22")
         XCTAssertEqual(attributes.topic, "tech-news")
+        XCTAssertEqual(attributes.source, .mp3Podcast)
+        XCTAssertEqual(PavbotAudioActivitySource.pulseDayTTS.compactSystemImage, "globe.europe.africa.fill")
+        XCTAssertEqual(PavbotAudioActivitySource.researchTTS.compactSystemImage, "globe")
+        XCTAssertEqual(PavbotAudioActivitySource.mp3Podcast.compactSystemImage, "waveform")
         XCTAssertEqual(state.title, "Podcast audio")
         XCTAssertEqual(state.elapsed, 42)
         XCTAssertEqual(state.duration, 300)
         XCTAssertTrue(state.isPlaying)
+    }
+
+    func testDynamicIslandUsesPavbotNewsBadgeOnTrailingSide() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let widgetSourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("AudioActivityExtension/PavbotAudioActivityWidget.swift")
+        let source = try String(contentsOf: widgetSourceURL)
+
+        XCTAssertTrue(source.contains("compactLeading:"))
+        XCTAssertTrue(source.contains("PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 18)"))
+        XCTAssertTrue(source.contains("compactTrailing:"))
+        XCTAssertTrue(source.contains("PavbotNewsDynamicIslandBadge(source: context.attributes.source)"))
+        XCTAssertFalse(source.contains("Text(compactProgress(context.state))"))
+        XCTAssertTrue(source.contains("private struct PavbotNewsDynamicIslandBadge: View"))
+        XCTAssertTrue(source.contains("Text(\"PAV\")"))
+        XCTAssertTrue(source.contains("Text(\"NEWS\")"))
+        XCTAssertTrue(source.contains(".accessibilityLabel(\"Pavbot News, aktywne audio w tle\")"))
     }
 
     func testResolvesRelativeArtifactURLAgainstRawManifestRoot() throws {
@@ -2164,13 +2872,13 @@ final class PavbotManifestTests: XCTestCase {
 
     func testManifestURLValidationRequiresHTTPSManifestJSON() {
         XCTAssertEqual(ManifestURLValidator.validate("https://example.com/public/pavbot-manifest.json"), .valid)
-        XCTAssertEqual(ManifestURLValidator.validate("http://example.com/public/pavbot-manifest.json"), .invalid("Use an HTTPS manifest URL."))
-        XCTAssertEqual(ManifestURLValidator.validate("https://example.com/public/manifest.txt"), .invalid("Manifest URL must point to a JSON file."))
-        XCTAssertEqual(ManifestURLValidator.validate(""), .invalid("Enter a manifest URL."))
+        XCTAssertEqual(ManifestURLValidator.validate("http://example.com/public/pavbot-manifest.json"), .invalid("Użyj adresu URL manifestu z HTTPS."))
+        XCTAssertEqual(ManifestURLValidator.validate("https://example.com/public/manifest.txt"), .invalid("Adres URL manifestu musi wskazywać plik JSON."))
+        XCTAssertEqual(ManifestURLValidator.validate(""), .invalid("Wpisz adres URL manifestu."))
     }
 
     func testUserFacingErrorsExposePolishCopyAndActions() {
-        let manifestError = PavbotUserFacingError.manifest("Set your public GitHub raw manifest URL in Settings.")
+        let manifestError = PavbotUserFacingError.manifest("Wklej publiczny adres GitHub raw manifestu w ustawieniach.")
         let networkError = PavbotUserFacingError.network(URLError(.notConnectedToInternet), context: .weather)
         let notifierError = PavbotUserFacingError.network(URLError(.notConnectedToInternet), context: .notifier)
         let audioError = PavbotUserFacingError.audio("The operation could not be completed.")
@@ -2195,17 +2903,17 @@ final class PavbotManifestTests: XCTestCase {
             "Nie pobrano świeżych danych. Pokazuję zapisane dane: ostatni raport pogodowy."
         )
         XCTAssertEqual(
-            PavbotCacheNoticeCopy.refreshFailed(context: "dane Jobs (2026-06-25 01:41, Dane strukturalne)"),
-            "Nie pobrano świeżych danych. Pokazuję zapisane dane: dane Jobs (2026-06-25 01:41, Dane strukturalne)."
+            PavbotCacheNoticeCopy.refreshFailed(context: "dane Praca (2026-06-25 01:41, Dane strukturalne)"),
+            "Nie pobrano świeżych danych. Pokazuję zapisane dane: dane Praca (2026-06-25 01:41, Dane strukturalne)."
         )
         XCTAssertEqual(
-            PavbotCacheNoticeCopy.refreshing(context: "wydanie Research"),
-            "Odświeżam dane: wydanie Research..."
+            PavbotCacheNoticeCopy.refreshing(context: "wydanie Przegląd"),
+            "Odświeżam dane: wydanie Przegląd..."
         )
     }
 
     func testReportPackageCopyUsesPolishUserFacingLabels() {
-        XCTAssertEqual(ReportPackageCopy.emptyResearchTitle, "Brak raportów Research")
+        XCTAssertEqual(ReportPackageCopy.emptyResearchTitle, "Brak raportów Przegląd")
         XCTAssertEqual(ReportPackageCopy.openResearchTitle, "Otwórz raport")
         XCTAssertEqual(ReportPackageCopy.openPDFTitle, "Otwórz PDF")
         XCTAssertEqual(ReportPackageCopy.missingPDFTitle, "Brakuje PDF")
@@ -2216,11 +2924,11 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertNil(NotificationServerSettings.validationMessage(for: "", required: false))
         XCTAssertEqual(
             NotificationServerSettings.validationMessage(for: "", required: true),
-            "Enter a notification server URL before enabling live alerts."
+            "Wpisz adres URL serwera powiadomień przed włączeniem alertów live."
         )
         XCTAssertEqual(
             NotificationServerSettings.validationMessage(for: "http://notify.example.com", required: true),
-            "Use an HTTPS notification server URL."
+            "Użyj adresu URL serwera powiadomień z HTTPS."
         )
         XCTAssertNil(NotificationServerSettings.validationMessage(for: "https://notify.example.com", required: true))
     }
@@ -2437,14 +3145,14 @@ final class PavbotManifestTests: XCTestCase {
 
         XCTAssertEqual(features.count, 8)
         XCTAssertEqual(Set(features.map(\.appStoreName)), [
-            "Dark Interface",
-            "Larger Text",
+            "Tryb jasny i ciemny",
+            "Duży tekst",
             "VoiceOver",
-            "Voice Control",
-            "Sufficient Contrast",
-            "Differentiate Without Color Alone",
-            "Reduced Motion",
-            "Captions"
+            "Sterowanie głosem",
+            "Wysoki kontrast",
+            "Nie tylko kolor",
+            "Redukcja ruchu",
+            "Napisy i transkrypcje"
         ])
         XCTAssertFalse(features.contains { $0.appStoreName == "Audio Descriptions" })
         XCTAssertTrue(features.allSatisfy { !$0.title.isEmpty && !$0.summary.isEmpty && !$0.accessibilityLabel.isEmpty })
@@ -2623,6 +3331,24 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(source.contains("https://notify.paweltanski.com"))
     }
 
+    func testSettingsExposeNativeTTSVoiceConfiguration() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let settingsURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/SettingsView.swift")
+        let source = try String(contentsOf: settingsURL)
+
+        XCTAssertTrue(source.contains("PavbotReadingCard(title: \"Głos czytania\""))
+        XCTAssertTrue(source.contains("SettingsDashboardCard(title: \"Głos czytania\""))
+        XCTAssertTrue(source.contains("Picker(\"Tryb głosu\""))
+        XCTAssertTrue(source.contains("Picker(\"Głos systemowy\""))
+        XCTAssertTrue(source.contains("Picker(\"Personal Voice\""))
+        XCTAssertTrue(source.contains("Zezwól na Personal Voice"))
+        XCTAssertTrue(source.contains("Testuj głos"))
+        XCTAssertTrue(source.contains("Pavbot nie nagrywa próbki głosu"))
+    }
+
     func testDiagnosticsDoesNotExposeManifestPreviewAsUserContent() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let diagnosticsURL = testsURL
@@ -2701,16 +3427,42 @@ final class PavbotManifestTests: XCTestCase {
         let data = try Data(contentsOf: catalogURL)
         let entries = try JSONDecoder.pavbot.decode([DailyWisdomEntry].self, from: data)
 
-        XCTAssertGreaterThanOrEqual(entries.count, 600)
+        XCTAssertEqual(entries.count, 700)
         XCTAssertTrue(entries.contains { $0.attribution == "Przysłowie polskie" })
+        XCTAssertEqual(Set(entries.map(\.id)).count, entries.count)
+        XCTAssertTrue(Set(entries.map(\.category)).isSuperset(of: [
+            "koncentracja",
+            "motywacja",
+            "organizacja",
+            "planowanie",
+            "finanse",
+            "zdrowie",
+            "relacje",
+            "komunikacja",
+            "granice",
+            "odwaga",
+            "nauka",
+            "praca",
+            "dom",
+            "czas",
+            "kreatywność",
+            "wdzięczność",
+            "spokój",
+            "decyzyjność",
+            "regeneracja",
+            "sprawczość"
+        ]))
 
         for entry in entries {
             XCTAssertFalse(entry.text.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
             XCTAssertFalse(entry.attribution.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
             XCTAssertFalse(entry.context.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+            XCTAssertFalse(entry.reflectionText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
             XCTAssertFalse(entry.category.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
             XCTAssertFalse(entry.attribution.localizedCaseInsensitiveContains("TBD"))
             XCTAssertFalse(entry.attribution.localizedCaseInsensitiveContains("nieznany autor"))
+            XCTAssertFalse(entry.reflectionText.localizedCaseInsensitiveContains("TBD"))
+            XCTAssertFalse(entry.reflectionText.localizedCaseInsensitiveContains("TODO"))
         }
     }
 
@@ -2733,6 +3485,44 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertNotEqual(first, third)
     }
 
+    func testDailyWisdomProviderSamplesAllEntriesInRandomizedNinetySecondSlots() throws {
+        let entries = (0..<700).map { index in
+            DailyWisdomEntry(
+                text: "Sentencja \(index)",
+                attribution: "Sentencja Pavbot",
+                context: "Tip \(index)",
+                reflection: "Wyjaśnienie \(index)",
+                category: "dyscyplina"
+            )
+        }
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(secondsFromGMT: 0)!
+        let firstSlot = try XCTUnwrap(DateComponents(calendar: calendar, year: 2026, month: 7, day: 1, hour: 7, minute: 30, second: 1).date)
+        let sameSlot = try XCTUnwrap(DateComponents(calendar: calendar, year: 2026, month: 7, day: 1, hour: 7, minute: 31, second: 29).date)
+        let nextSlot = try XCTUnwrap(DateComponents(calendar: calendar, year: 2026, month: 7, day: 1, hour: 7, minute: 31, second: 31).date)
+        let previousDaySameClock = try XCTUnwrap(DateComponents(calendar: calendar, year: 2026, month: 6, day: 30, hour: 7, minute: 30, second: 1).date)
+
+        let first = DailyWisdomProvider.randomizedEntry(for: firstSlot, entries: entries, calendar: calendar, intervalSeconds: 90)
+        let repeated = DailyWisdomProvider.randomizedEntry(for: sameSlot, entries: entries, calendar: calendar, intervalSeconds: 90)
+        let advanced = DailyWisdomProvider.randomizedEntry(for: nextSlot, entries: entries, calendar: calendar, intervalSeconds: 90)
+        let previousDay = DailyWisdomProvider.randomizedEntry(for: previousDaySameClock, entries: entries, calendar: calendar, intervalSeconds: 90)
+        let sampledIDs = (0..<700).map { slotOffset -> String in
+            let sampleDate = calendar.date(
+                byAdding: .second,
+                value: slotOffset * 90,
+                to: firstSlot
+            )!
+            return DailyWisdomProvider
+                .randomizedEntry(for: sampleDate, entries: entries, calendar: calendar, intervalSeconds: 90)
+                .id
+        }
+
+        XCTAssertEqual(first, repeated)
+        XCTAssertNotEqual(first, advanced)
+        XCTAssertNotEqual(first, previousDay)
+        XCTAssertEqual(Set(sampledIDs).count, 700)
+    }
+
     func testTodayPremiumTopUsesWisdomBannerAndSingleLocationCTA() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let sourcesRoot = testsURL
@@ -2745,10 +3535,21 @@ final class PavbotManifestTests: XCTestCase {
             .deletingLastPathComponent()
             .appendingPathComponent("PavbotViewer.xcodeproj/project.pbxproj"))
 
-        XCTAssertTrue(weatherSource.contains("DailyWisdomBanner"))
-        XCTAssertTrue(weatherSource.contains("DailyWisdomBanner(entry: dailyWisdomEntry, report: report)"))
-        XCTAssertTrue(weatherSource.contains("DailyWisdomBanner(entry: DailyWisdomProvider.entry(for: reportDate(report)), report: report)"))
-        XCTAssertTrue(weatherSource.contains("DailyWisdomProvider.entry(for:"))
+        XCTAssertTrue(weatherSource.contains("DailyWisdomTimelineBanner"))
+        XCTAssertTrue(weatherSource.contains("DailyWisdomTimelineBanner(report: report)"))
+        XCTAssertTrue(weatherSource.contains("DailyWisdomTimelineBanner(entry: dailyWisdomEntry, report: report)"))
+        XCTAssertTrue(weatherSource.contains("TimelineView(.periodic(from: .now, by: 90))"))
+        XCTAssertTrue(weatherSource.contains("DailyWisdomProvider.randomizedEntry(for:"))
+        XCTAssertTrue(weatherSource.contains("if isShowingReflection {"))
+        XCTAssertTrue(weatherSource.contains("backContent"))
+        XCTAssertTrue(weatherSource.contains("frontContent"))
+        XCTAssertFalse(weatherSource.contains("ZStack {\n                flipLayer"))
+        XCTAssertTrue(weatherSource.contains("Mądrość na dziś"))
+        XCTAssertTrue(weatherSource.contains("@Environment(\\.accessibilityReduceMotion) private var accessibilityReduceMotion"))
+        XCTAssertTrue(weatherSource.contains("@State private var isShowingReflection = false"))
+        XCTAssertTrue(weatherSource.contains("rotation3DEffect"))
+        XCTAssertTrue(weatherSource.contains("Pokaż wyjaśnienie"))
+        XCTAssertTrue(weatherSource.contains("Pokaż sentencję"))
         XCTAssertTrue(weatherSource.contains("private func reportDate(_ report: DailyWeatherReport) -> Date"))
         XCTAssertTrue(weatherSource.contains("private var dynamicDayTitle"))
         XCTAssertTrue(weatherSource.contains("private var calendarDayNumber"))
@@ -2761,14 +3562,18 @@ final class PavbotManifestTests: XCTestCase {
 
         let cockpitSource = try XCTUnwrap(
             weatherSource.components(separatedBy: "private struct PavbotPhoneDailyCockpit").dropFirst().first?
-                .components(separatedBy: "private struct DailyWisdomBanner").first
+                .components(separatedBy: "private struct DailyWisdomTimelineBanner").first
         )
         XCTAssertLessThan(
-            try XCTUnwrap(cockpitSource.range(of: "weatherDetailsGrid")?.lowerBound),
+            try XCTUnwrap(cockpitSource.range(of: "PavbotInsightStrip(insights: insightItems)")?.lowerBound),
             try XCTUnwrap(cockpitSource.range(of: "TodayHumorFeaturedPreview")?.lowerBound)
         )
         XCTAssertLessThan(
             try XCTUnwrap(cockpitSource.range(of: "TodayHumorFeaturedPreview")?.lowerBound),
+            try XCTUnwrap(cockpitSource.range(of: "weatherDetailsGrid")?.lowerBound)
+        )
+        XCTAssertLessThan(
+            try XCTUnwrap(cockpitSource.range(of: "weatherDetailsGrid")?.lowerBound),
             try XCTUnwrap(cockpitSource.range(of: "dailyActionSection")?.lowerBound)
         )
 
@@ -2776,7 +3581,7 @@ final class PavbotManifestTests: XCTestCase {
             weatherSource.components(separatedBy: "private func wideReportView").dropFirst().first?
                 .components(separatedBy: "private struct PavbotPhoneCockpitHeader").first
         )
-        XCTAssertTrue(wideSource.contains("DailyWisdomBanner(entry: DailyWisdomProvider.entry(for: reportDate(report)), report: report)"))
+        XCTAssertTrue(wideSource.contains("DailyWisdomTimelineBanner(report: report)"))
     }
 
     func testDecodesHourlyWeatherTimelineForToday() throws {
@@ -3754,7 +4559,9 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(designSource.contains("minWidth: layout.sheetMinWidth"))
         XCTAssertTrue(designSource.contains("idealWidth: layout.sheetIdealWidth"))
         XCTAssertTrue(designSource.contains(".presentationDetents([.large])"))
-        XCTAssertTrue(contentSource.contains("PavbotRootLayoutStyle.resolve(horizontalSizeClass: horizontalSizeClass, width: proxy.size.width)"))
+        XCTAssertTrue(contentSource.contains("PavbotRootLayoutStyle.resolve("))
+        XCTAssertTrue(contentSource.contains("horizontalSizeClass: horizontalSizeClass"))
+        XCTAssertTrue(contentSource.contains("width: proxy.size.width"))
         XCTAssertTrue(contentSource.contains(".frame(maxWidth: layout.contentMaxWidth, maxHeight: .infinity)"))
         XCTAssertTrue(artifactSource.contains("private var usesLargeCanvas: Bool"))
         XCTAssertTrue(artifactSource.contains("minWidth: usesLargeCanvas ? 720 : nil"))
@@ -3769,7 +4576,7 @@ final class PavbotManifestTests: XCTestCase {
         }
     }
 
-    func testMainHeroMetricsStartCollapsedAndCanExpand() throws {
+    func testMainHeadersKeepLongContextCollapsed() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let sourcesRoot = testsURL
             .deletingLastPathComponent()
@@ -3778,15 +4585,196 @@ final class PavbotManifestTests: XCTestCase {
         let designSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PavbotDesign.swift"))
         let researchSource = try String(contentsOf: sourcesRoot.appendingPathComponent("ReportPackageViews.swift"))
         let pulseSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PulseDayView.swift"))
+        let todaySource = try String(contentsOf: sourcesRoot.appendingPathComponent("TodayLiveTopicsView.swift"))
         let jobsSource = try String(contentsOf: sourcesRoot.appendingPathComponent("JobsView.swift"))
 
         XCTAssertTrue(designSource.contains("var startsCollapsed = false"))
         XCTAssertTrue(designSource.contains("Pokaż szczegóły"))
         XCTAssertTrue(designSource.contains("Ukryj szczegóły"))
         XCTAssertTrue(designSource.contains("if isExpanded {\n                        PavbotStatusRail(insights: insights)"))
-        XCTAssertTrue(researchSource.contains("startsCollapsed: true"))
-        XCTAssertTrue(pulseSource.contains("startsCollapsed: true"))
+        XCTAssertTrue(researchSource.contains("private struct ResearchLibraryHeader"))
+        XCTAssertTrue(researchSource.contains("@State private var isContextExpanded = false"))
+        XCTAssertTrue(researchSource.contains("DisclosureGroup(isExpanded: $isContextExpanded)"))
+        XCTAssertTrue(researchSource.contains("Label(\"Kontekst wydania\", systemImage: \"text.quote\")"))
+        XCTAssertTrue(pulseSource.contains("private struct PulseDayHeroHeader"))
+        XCTAssertTrue(pulseSource.contains("PavbotPremiumCard"))
+        XCTAssertTrue(todaySource.contains("private struct PulseIssueMasthead"))
+        XCTAssertTrue(todaySource.contains("DisclosureGroup(isExpanded: $isContextExpanded)"))
+        XCTAssertTrue(todaySource.contains("Label(\"Kontekst wydania\", systemImage: \"text.quote\")"))
         XCTAssertTrue(jobsSource.contains("startsCollapsed: true"))
+    }
+
+    func testPulseIssueMastheadShowsHeadlineFullWidthAboveContext() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/TodayLiveTopicsView.swift")
+        let source = try String(contentsOf: sourceURL)
+
+        let mastheadSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct PulseIssueMasthead").dropFirst().first?
+                .components(separatedBy: "struct TodayLiveTopicDetailView").first
+        )
+        let metadataSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct PulseIssueMastheadMetadataRow").dropFirst().first?
+                .components(separatedBy: "private struct PulseIssueMastheadTitle").first
+        )
+        let titleSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct PulseIssueMastheadTitle").dropFirst().first?
+                .components(separatedBy: "struct TodayLiveTopicDetailView").first
+        )
+
+        XCTAssertTrue(mastheadSource.contains("PulseIssueMastheadMetadataRow(snapshot: snapshot)"))
+        XCTAssertTrue(mastheadSource.contains("PulseIssueMastheadTitle(headline: snapshot.headline)"))
+        XCTAssertTrue(mastheadSource.contains("DisclosureGroup(isExpanded: $isContextExpanded)"))
+        XCTAssertLessThan(
+            try XCTUnwrap(mastheadSource.range(of: "PulseIssueMastheadTitle(headline: snapshot.headline)")?.lowerBound),
+            try XCTUnwrap(mastheadSource.range(of: "DisclosureGroup(isExpanded: $isContextExpanded)")?.lowerBound)
+        )
+
+        XCTAssertTrue(metadataSource.contains("Text(snapshot.displayDate)"))
+        XCTAssertFalse(metadataSource.contains("Text(snapshot.headline)"))
+        XCTAssertTrue(titleSource.contains("Text(headline)"))
+        XCTAssertTrue(titleSource.contains(".frame(maxWidth: .infinity, alignment: .leading)"))
+    }
+
+    func testResearchViewUsesSingleLoadTriggerAndAvoidsManifestReloadOnLocalTopicChange() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/ReportPackageViews.swift")
+        let source = try String(contentsOf: sourceURL)
+        let researchViewSource = try XCTUnwrap(
+            source.components(separatedBy: "struct ResearchView: View").dropFirst().first?
+                .components(separatedBy: "private struct ResearchLibraryHeader").first
+        )
+        let localTopicChangeSource = try XCTUnwrap(
+            researchViewSource.components(separatedBy: ".onChange(of: router.selectedResearchTopic)").dropFirst().first?
+                .components(separatedBy: ".onChange(of: store.manifest)").first
+        )
+
+        XCTAssertTrue(source.contains("struct ResearchLoadRequest: Hashable"))
+        XCTAssertTrue(source.contains("struct ResearchLoadTrigger: Hashable"))
+        XCTAssertTrue(researchViewSource.contains(".task(id: researchLoadTrigger)"))
+        XCTAssertFalse(researchViewSource.contains(".task(id: reportRouteReloadKey)"))
+        XCTAssertFalse(researchViewSource.contains("private var reportRouteReloadKey"))
+        XCTAssertTrue(researchViewSource.contains("router.reportRouteRevision"))
+        XCTAssertTrue(localTopicChangeSource.contains("selectedSection = nil"))
+        XCTAssertTrue(localTopicChangeSource.contains("selectedArticle = nil"))
+        XCTAssertTrue(localTopicChangeSource.contains("selectedMobileArticle = nil"))
+        XCTAssertFalse(localTopicChangeSource.contains("store.reload"))
+    }
+
+    func testResearchRenderingUsesPrecomputedIssueAndArticlePresentations() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/ReportPackageViews.swift")
+        let source = try String(contentsOf: sourceURL)
+        let heroSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct ResearchIssueHero").dropFirst().first?
+                .components(separatedBy: "private struct ResearchLeadParagraphs").first
+        )
+        let articleCardSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct ResearchArticleCard").dropFirst().first?
+                .components(separatedBy: "private struct ResearchIssueAddOns").first
+        )
+        let nativeContentSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct ResearchNativeContent").dropFirst().first?
+                .components(separatedBy: "private struct ResearchArticleSnapshotHost").first
+        )
+
+        XCTAssertTrue(heroSource.contains("let presentation: ResearchIssuePresentation"))
+        XCTAssertFalse(heroSource.contains("let presentation = ResearchIssuePresentation(issue: issue)"))
+        XCTAssertTrue(source.contains("ResearchIssuePresentation(issue: issue)"))
+        XCTAssertTrue(source.contains("private struct ResearchArticleSnapshotHost: View"))
+        XCTAssertTrue(source.contains("struct ResearchArticleSnapshotKey: Hashable"))
+        XCTAssertFalse(nativeContentSource.contains("ResearchArticleListSnapshot(issue: issue"))
+        XCTAssertTrue(articleCardSource.contains("let presentation: PavbotNewsStoryPresentation"))
+        XCTAssertFalse(articleCardSource.contains("private var presentation: ResearchArticlePresentation"))
+        XCTAssertFalse(articleCardSource.contains("ResearchArticlePresentation(article: article"))
+    }
+
+    func testTodayScreenUsesAppStoreReadyBriefingHierarchy() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let weatherSource = try String(contentsOf: sourcesRoot.appendingPathComponent("WeatherBriefView.swift"))
+        let designSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PavbotDesign.swift"))
+        let cockpitSource = try XCTUnwrap(
+            weatherSource.components(separatedBy: "private struct PavbotPhoneDailyCockpit").dropFirst().first?
+                .components(separatedBy: "private struct WeatherRangeTimelineTile").first
+        )
+
+        XCTAssertTrue(designSource.contains("struct PavbotBriefingHeroCard"))
+        XCTAssertTrue(designSource.contains("struct PavbotStateCard"))
+        XCTAssertTrue(cockpitSource.contains("PavbotBriefingHeroCard("))
+        XCTAssertTrue(cockpitSource.contains("PavbotInsightStrip(insights: insightItems)"))
+        XCTAssertTrue(cockpitSource.contains("TodayHumorFeaturedPreview("))
+        XCTAssertTrue(cockpitSource.contains("weatherDetailsGrid"))
+        XCTAssertTrue(cockpitSource.contains("Text(\"Co dalej\")"))
+        XCTAssertTrue(cockpitSource.contains("openResearch"))
+        XCTAssertFalse(cockpitSource.contains("Text(\"Następne kroki\")"))
+        XCTAssertFalse(cockpitSource.contains("Centrum aplikacji"))
+
+        XCTAssertLessThan(
+            try XCTUnwrap(cockpitSource.range(of: "weatherDecisionCard")?.lowerBound),
+            try XCTUnwrap(cockpitSource.range(of: "PavbotInsightStrip(insights: insightItems)")?.lowerBound)
+        )
+        XCTAssertLessThan(
+            try XCTUnwrap(cockpitSource.range(of: "PavbotInsightStrip(insights: insightItems)")?.lowerBound),
+            try XCTUnwrap(cockpitSource.range(of: "TodayHumorFeaturedPreview(")?.lowerBound)
+        )
+        XCTAssertLessThan(
+            try XCTUnwrap(cockpitSource.range(of: "TodayHumorFeaturedPreview(")?.lowerBound),
+            try XCTUnwrap(cockpitSource.range(of: "weatherDetailsGrid")?.lowerBound)
+        )
+        XCTAssertLessThan(
+            try XCTUnwrap(cockpitSource.range(of: "weatherDetailsGrid")?.lowerBound),
+            try XCTUnwrap(cockpitSource.range(of: "dailyActionSection")?.lowerBound)
+        )
+    }
+
+    func testResearchViewUsesNewsTopicSwitcherAndConsistentNewsCards() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let reportSource = try String(contentsOf: sourcesRoot.appendingPathComponent("ReportPackageViews.swift"))
+        let designSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PavbotDesign.swift"))
+        let topicPickerSource = try XCTUnwrap(
+            reportSource.components(separatedBy: "private struct ResearchTopicPicker").dropFirst().first?
+                .components(separatedBy: "private struct ReportTopicHeader").first
+        )
+        let articleCardSource = try XCTUnwrap(
+            reportSource.components(separatedBy: "private struct ResearchArticleCard").dropFirst().first?
+                .components(separatedBy: "private struct ResearchIssueAddOns").first
+        )
+
+        XCTAssertTrue(designSource.contains("struct PavbotNewsTopicSwitcherItem"))
+        XCTAssertTrue(designSource.contains("struct PavbotNewsTopicSwitcher"))
+        XCTAssertTrue(designSource.contains("struct PavbotTopStoryCard"))
+        XCTAssertTrue(topicPickerSource.contains("ResearchTopicCompactSwitcher(selection: $selection)"))
+        XCTAssertTrue(reportSource.contains("private struct ResearchTopicCompactSwitcher: View"))
+        XCTAssertTrue(reportSource.contains("private struct ResearchTopicCompactCell: View"))
+        XCTAssertFalse(topicPickerSource.contains("PavbotNewsTopicSwitcher("))
+        XCTAssertFalse(topicPickerSource.contains("ScrollView(.horizontal"))
+        XCTAssertLessThan(
+            try XCTUnwrap(topicPickerSource.range(of: "title: \"Aktualne\"")?.lowerBound),
+            try XCTUnwrap(topicPickerSource.range(of: "title: \"Tech\"")?.lowerBound)
+        )
+        XCTAssertLessThan(
+            try XCTUnwrap(topicPickerSource.range(of: "title: \"Tech\"")?.lowerBound),
+            try XCTUnwrap(topicPickerSource.range(of: "title: \"Polska i Świat\"")?.lowerBound)
+        )
+        XCTAssertTrue(articleCardSource.contains("PavbotTopStoryCard("))
+        XCTAssertFalse(reportSource.contains("mobileSpeechController.stop()"))
     }
 
     func testMainScreensUseAdaptiveLayoutForLargeDisplays() throws {
@@ -3900,7 +4888,10 @@ final class PavbotManifestTests: XCTestCase {
             "struct PavbotSignalCard",
             "struct PavbotStatusRail",
             "struct PavbotActionTray",
-            "struct PavbotReadingCard<Content: View>"
+            "struct PavbotReadingCard<Content: View>",
+            "struct PavbotNewsStoryCard: View",
+            "struct PavbotNewsStoryPresentation",
+            "enum PavbotNewsPriorityStyle"
         ].forEach { component in
             XCTAssertTrue(designSource.contains(component), "PavbotDesign.swift should define \(component)")
         }
@@ -3918,7 +4909,10 @@ final class PavbotManifestTests: XCTestCase {
         for fileName in expectedScaffoldFiles {
             let source = try String(contentsOf: sourcesRoot.appendingPathComponent(fileName))
             XCTAssertTrue(source.contains("PavbotPremiumScreenScaffold"), "\(fileName) should use the premium screen scaffold")
-            XCTAssertTrue(source.contains("PavbotCommandHero"), "\(fileName) should expose a command hero")
+            let exposesPremiumHeader = source.contains("PavbotCommandHero")
+                || source.contains("PulseDayHeroHeader")
+                || source.contains("ResearchLibraryHeader")
+            XCTAssertTrue(exposesPremiumHeader, "\(fileName) should expose a premium header")
         }
 
         let splitExpectedFiles = [
@@ -3960,7 +4954,7 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(designSource.contains("Co możesz sprawdzić"))
         XCTAssertTrue(designSource.contains("Praktyczne wskazówki"))
         XCTAssertTrue(designSource.contains("kartkę z datą i polskim powiedzeniem"))
-        XCTAssertTrue(designSource.contains("Następne kroki znajdziesz pod Reddit Radar"))
+        XCTAssertTrue(designSource.contains("Co dalej znajdziesz pod Reddit Radar"))
         XCTAssertTrue(designSource.contains("Widok zapisanych pokazuje wszystkie lokalnie zapisane newsy razem."))
         XCTAssertTrue(designSource.contains("Dymki w hero są zwinięte"))
         XCTAssertFalse(designSource.contains("Manifest URL"))
@@ -4280,6 +5274,150 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(rowSource.contains("Przeczytaj artykuł"))
     }
 
+    func testResearchViewUsesSharedMobileNewsTTSForAllResearchTabs() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let viewsRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let reportSource = try String(contentsOf: viewsRoot.appendingPathComponent("ReportPackageViews.swift"))
+        let pulseSource = try String(contentsOf: viewsRoot.appendingPathComponent("PulseDayView.swift"))
+
+        XCTAssertTrue(reportSource.contains("@State private var mobileSpeechController = MobileNewsSpeechController()"))
+        XCTAssertTrue(reportSource.contains("MobileNewsSpeechMiniPlayerHost(speechController: speechController)"))
+        XCTAssertTrue(reportSource.contains("ResearchArticleSpeechControlsHost(article: speechArticle, speechController: speechController)"))
+        XCTAssertTrue(reportSource.contains("MobileNewsArticle(researchArticle: article, topic: issue.topic)"))
+        XCTAssertFalse(reportSource.contains("ResearchArticleSpeechController"))
+        XCTAssertFalse(reportSource.contains("researchSpeechController.stop()"))
+        XCTAssertFalse(reportSource.contains("mobileSpeechController.stop()"))
+        XCTAssertFalse(pulseSource.contains("ResearchArticleSpeechController"))
+    }
+
+    func testResearchTTSObservationIsScopedToLeafViews() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/ReportPackageViews.swift")
+        let source = try String(contentsOf: sourceURL)
+        let researchViewSource = try XCTUnwrap(
+            source.components(separatedBy: "struct ResearchView: View").dropFirst().first?
+                .components(separatedBy: "private struct ResearchLibraryHeader").first
+        )
+        let nativeContentSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct ResearchNativeContent").dropFirst().first?
+                .components(separatedBy: "private struct ResearchArticleSnapshotHost").first
+        )
+        let mobileContentSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct MobileNewsNativeContent").dropFirst().first?
+                .components(separatedBy: "private struct MobileNewsSpeechMiniPlayerHost").first
+        )
+        let sectionBlockSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct MobileNewsSectionBlock").dropFirst().first?
+                .components(separatedBy: "private struct MobileNewsArticleRow").first
+        )
+        let articleRowSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct MobileNewsArticleRow").dropFirst().first?
+                .components(separatedBy: "private struct MobileNewsArticleSpeechActionHost").first
+        )
+
+        XCTAssertFalse(researchViewSource.contains("@StateObject private var mobileSpeechController"))
+        XCTAssertFalse(nativeContentSource.contains("@ObservedObject var speechController"))
+        XCTAssertFalse(nativeContentSource.contains("speechController.hasActivePlayback"))
+        XCTAssertFalse(mobileContentSource.contains("@ObservedObject var speechController"))
+        XCTAssertFalse(mobileContentSource.contains("@ObservedObject var podcastSpeechController"))
+        XCTAssertFalse(mobileContentSource.contains("speechController.hasActivePlayback"))
+        XCTAssertFalse(mobileContentSource.contains("podcastSpeechController.hasActivePlayback"))
+        XCTAssertFalse(sectionBlockSource.contains("@ObservedObject var speechController"))
+        XCTAssertFalse(articleRowSource.contains("@ObservedObject var speechController"))
+        XCTAssertTrue(source.contains("private struct MobileNewsSpeechMiniPlayerHost: View"))
+        XCTAssertTrue(source.contains("private struct PodcastScriptSpeechMiniPlayerHost: View"))
+        XCTAssertTrue(source.contains("private struct MobileNewsArticleSpeechActionHost: View"))
+        XCTAssertTrue(source.contains("private struct ResearchArticleSpeechControlsHost: View"))
+    }
+
+    func testResearchArticleReaderPrecomputesSpeechPresentationOutsideBody() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/ReportPackageViews.swift")
+        let source = try String(contentsOf: sourceURL)
+        let readerSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct ResearchArticleReader").dropFirst().first?
+                .components(separatedBy: "private struct ResearchArticleSecondaryLinks").first
+        )
+
+        XCTAssertFalse(readerSource.contains("@ObservedObject var speechController"))
+        XCTAssertTrue(readerSource.contains("private let presentation: ResearchArticlePresentation"))
+        XCTAssertTrue(readerSource.contains("private let speechArticle: MobileNewsArticle"))
+        XCTAssertFalse(readerSource.contains("private var speechArticle"))
+        XCTAssertTrue(readerSource.contains("self.speechArticle = MobileNewsArticle(researchArticle: article, topic: issue.topic)"))
+        XCTAssertTrue(readerSource.contains("ResearchArticleSpeechControlsHost(article: speechArticle, speechController: speechController)"))
+    }
+
+    func testResearchTopicPickerUsesVisibleIPhonePillsInsteadOfHiddenHorizontalScroll() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/ReportPackageViews.swift")
+        let source = try String(contentsOf: sourceURL)
+        let pickerSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct ResearchTopicPicker").dropFirst().first?
+                .components(separatedBy: "private struct ReportTopicHeader").first
+        )
+
+        XCTAssertTrue(source.contains("private struct ResearchTopicCompactSwitcher: View"))
+        XCTAssertTrue(pickerSource.contains("ResearchTopicCompactSwitcher(selection: $selection)"))
+        XCTAssertFalse(pickerSource.contains("PavbotNewsTopicSwitcher("))
+        XCTAssertTrue(source.contains("GridItem(.flexible(minimum: 96), spacing: 8)"))
+    }
+
+    func testTTSErrorsUseInlineNoticeInsteadOfRawRedText() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let reportSource = try String(contentsOf: sourcesRoot.appendingPathComponent("ReportPackageViews.swift"))
+        let designSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PavbotDesign.swift"))
+
+        XCTAssertTrue(designSource.contains("struct PavbotInlineErrorNotice"))
+        XCTAssertTrue(reportSource.contains("PavbotInlineErrorNotice(message: errorMessage"))
+        XCTAssertFalse(reportSource.contains("Text(errorMessage)\n                    .font(.caption)\n                    .foregroundStyle(.red)"))
+    }
+
+    func testProjectVersionIs24WithTimestampBuildNumber() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let projectYML = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("project.yml")
+        let source = try String(contentsOf: projectYML)
+
+        XCTAssertTrue(source.contains("MARKETING_VERSION: \"2.4\""))
+        XCTAssertTrue(source.contains("BUILD_TIMESTAMP=\"$(date +%H%M%S)\""))
+        XCTAssertTrue(source.contains("BUILD_NUMBER=\"${BUILD_DATE}.${BUILD_TIMESTAMP}\""))
+        let buildNumbers = source
+            .components(separatedBy: .newlines)
+            .filter { $0.contains("CURRENT_PROJECT_VERSION:") }
+            .compactMap { line -> String? in
+                let parts = line.components(separatedBy: "\"")
+                return parts.count >= 3 ? parts[1] : nil
+            }
+
+        XCTAssertEqual(buildNumbers.count, 2)
+        XCTAssertEqual(Set(buildNumbers).count, 1)
+
+        let buildNumber = try XCTUnwrap(buildNumbers.first)
+        XCTAssertTrue(buildNumber.allSatisfy { $0.isNumber || $0 == "." })
+        XCTAssertFalse(buildNumber.hasPrefix("."))
+        XCTAssertFalse(buildNumber.hasSuffix("."))
+        XCTAssertFalse(buildNumber.contains(".."))
+        XCTAssertLessThanOrEqual(buildNumber.split(separator: ".").count, 3)
+    }
+
     func testJobsRefreshForcesManifestReload() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let sourceURL = testsURL
@@ -4313,7 +5451,7 @@ final class PavbotManifestTests: XCTestCase {
         }
     }
 
-    func testArticleCardsUseTwoLineKeywordRows() throws {
+    func testNewsStoryCardsUseSharedEditorialFormatting() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let sourcesRoot = testsURL
             .deletingLastPathComponent()
@@ -4334,32 +5472,58 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(designSource.contains("count == 1 ? \"1 użyte źródło\" : \"\\(count) użytych źródeł\""))
         XCTAssertTrue(designSource.contains("private struct PavbotTwoLineFlowLayout: Layout"))
         XCTAssertTrue(designSource.contains("var maxRows = 2"))
-        XCTAssertEqual(reportSource.components(separatedBy: "PavbotArticleKeywordRows").count - 1, 2)
-        XCTAssertEqual(todaySource.components(separatedBy: "PavbotArticleKeywordRows").count - 1, 2)
-        XCTAssertEqual(pulseSource.components(separatedBy: "PavbotArticleKeywordRows").count - 1, 1)
-        XCTAssertEqual(reportSource.components(separatedBy: "PavbotArticleTagChip").count - 1, 3)
-        XCTAssertEqual(todaySource.components(separatedBy: "PavbotArticleTagChip").count - 1, 2)
-        XCTAssertEqual(pulseSource.components(separatedBy: "PavbotArticleTagChip").count - 1, 1)
-        XCTAssertEqual(reportSource.components(separatedBy: "PavbotSourceCountBadge").count - 1, 2)
-        XCTAssertEqual(todaySource.components(separatedBy: "PavbotSourceCountBadge").count - 1, 2)
-        XCTAssertEqual(pulseSource.components(separatedBy: "PavbotSourceCountBadge").count - 1, 1)
-        XCTAssertTrue(reportSource.contains("ForEach(article.tags.prefix(4), id: \\.self)"))
-        XCTAssertTrue(reportSource.contains("ForEach(presentation.keywords.prefix(3))"))
-        XCTAssertTrue(reportSource.contains("PavbotSourceCountBadge(count: article.sources.count, tint: .orange)"))
-        XCTAssertTrue(reportSource.contains("PavbotSourceCountBadge(count: presentation.sourceCount, tint: topic.tint)"))
+        XCTAssertTrue(designSource.contains("struct PavbotNewsStoryCard: View"))
+        XCTAssertTrue(designSource.contains("struct PavbotNewsStoryPresentation"))
+        XCTAssertTrue(designSource.contains("enum PavbotNewsPriorityStyle"))
+        XCTAssertTrue(designSource.contains("PavbotNewsPriorityBadge(style: presentation.priorityStyle)"))
+        XCTAssertTrue(designSource.contains("PavbotSourceCountBadge(count: presentation.sourceCount, tint: tint)"))
+        XCTAssertTrue(designSource.contains("ForEach(presentation.previewTags, id: \\.self)"))
+        XCTAssertTrue(designSource.contains("PavbotArticleKeywordRows(horizontalSpacing: 6, verticalSpacing: 6)"))
+        XCTAssertTrue(designSource.contains("PavbotStoryActionPill("))
+        XCTAssertTrue(designSource.contains("title: isActiveRead ? \"Czytam\" : \"Czytaj\""))
+        XCTAssertTrue(designSource.contains("PavbotMiniWaveform(tint: .purple)"))
         XCTAssertFalse(reportSource.contains("presentation.primarySourceTitle"))
         XCTAssertFalse(reportSource.contains("Label(\"\\(presentation.sourceCount)\", systemImage: \"link\")"))
-        XCTAssertTrue(reportSource.contains("systemImage: \"tag.fill\""))
-        XCTAssertTrue(reportSource.contains("tint: topic.tint"))
-        XCTAssertTrue(reportSource.contains("accessibilityPrefix: \"Słowo kluczowe\""))
-        XCTAssertTrue(todaySource.contains("ForEach(topic.tags.prefix(3), id: \\.self)"))
-        XCTAssertTrue(todaySource.contains("ForEach(saved.topic.tags.prefix(3), id: \\.self)"))
-        XCTAssertTrue(todaySource.contains("PavbotSourceCountBadge(count: topic.sources.count, tint: .orange)"))
-        XCTAssertTrue(todaySource.contains("PavbotSourceCountBadge(count: saved.topic.sources.count, tint: .blue)"))
+
+        let mobileCardSource = try XCTUnwrap(
+            reportSource.components(separatedBy: "private struct MobileNewsArticleCard").dropFirst().first?
+                .components(separatedBy: "private struct MobileNewsAddOns").first
+        )
+        let researchCardSource = try XCTUnwrap(
+            reportSource.components(separatedBy: "private struct ResearchArticleCard").dropFirst().first?
+                .components(separatedBy: "private struct ResearchIssueAddOns").first
+        )
+        let researchSnapshotSource = try XCTUnwrap(
+            reportSource.components(separatedBy: "struct ResearchArticleListSnapshot").dropFirst().first?
+                .components(separatedBy: "struct ResearchView: View").first
+        )
+        let liveTopicRowSource = try XCTUnwrap(
+            todaySource.components(separatedBy: "private struct TodayLiveTopicRow").dropFirst().first?
+                .components(separatedBy: "private struct TodayLiveTopicsCarouselControls").first
+        )
+
+        XCTAssertTrue(mobileCardSource.contains("PavbotNewsStoryCard("))
+        XCTAssertTrue(mobileCardSource.contains("facts: article.facts"))
+        XCTAssertTrue(mobileCardSource.contains("tags: article.tags"))
+        XCTAssertTrue(mobileCardSource.contains("canReadAloud: !article.ttsText.trimmingCharacters"))
+        XCTAssertFalse(mobileCardSource.contains("PavbotArticleKeywordRows"))
+
+        XCTAssertTrue(researchCardSource.contains("PavbotNewsStoryCard("))
+        XCTAssertTrue(researchCardSource.contains("let presentation: PavbotNewsStoryPresentation"))
+        XCTAssertTrue(researchCardSource.contains("presentation: presentation"))
+        XCTAssertTrue(researchCardSource.contains("tint: topic.tint"))
+        XCTAssertFalse(researchCardSource.contains("PavbotArticleKeywordRows"))
+        XCTAssertTrue(researchSnapshotSource.contains("facts: articlePresentation.bullets"))
+        XCTAssertTrue(researchSnapshotSource.contains("tags: articlePresentation.keywords.map(\\.title)"))
+        XCTAssertTrue(researchSnapshotSource.contains("canReadAloud: false"))
+
+        XCTAssertTrue(liveTopicRowSource.contains("PavbotNewsStoryCard("))
+        XCTAssertTrue(liveTopicRowSource.contains("facts: topic.keyFacts"))
+        XCTAssertTrue(liveTopicRowSource.contains("tags: topic.tags"))
+        XCTAssertTrue(liveTopicRowSource.contains("canReadAloud: true"))
+        XCTAssertFalse(liveTopicRowSource.contains("PavbotArticleKeywordRows"))
         XCTAssertFalse(todaySource.contains("topic.sourceCountLabel"))
         XCTAssertFalse(todaySource.contains("saved.topic.sourceCountLabel"))
-        XCTAssertTrue(todaySource.contains("tint: .orange"))
-        XCTAssertTrue(todaySource.contains("tint: .blue"))
         XCTAssertTrue(pulseSource.contains("ForEach(topic.tags.prefix(4), id: \\.self)"))
         XCTAssertTrue(pulseSource.contains("PavbotSourceCountBadge(count: topic.sources.count, tint: .orange)"))
         XCTAssertFalse(pulseSource.contains("topic.sourceCountLabel"))
@@ -4678,12 +5842,51 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.historySnapshots.first?.pairs.count, 6)
     }
 
-    func testTodayLiveTopicsLayoutKeepsTwoCardsFullyVisible() {
-        let layout = TodayLiveTopicsCarouselLayout(cardCount: 2, compactWidth: true)
+    func testTodayLiveTopicsCarouselLetsStoryCardsSizeVertically() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/TodayLiveTopicsView.swift")
+        let source = try String(contentsOf: sourceURL)
+        let layout = TodayLiveTopicsCarouselLayout(compactWidth: true)
 
-        XCTAssertEqual(layout.cardCount, 2)
-        XCTAssertGreaterThanOrEqual(layout.cardHeight, 190)
-        XCTAssertEqual(layout.pageHeight, layout.cardHeight * 2 + layout.cardSpacing)
+        XCTAssertEqual(layout.cardSpacing, 12)
+        XCTAssertFalse(source.contains(".frame(height: layout.cardHeight)"))
+        XCTAssertFalse(source.contains(".frame(height: layout.pageHeight"))
+        XCTAssertTrue(source.contains(".frame(maxWidth: .infinity, alignment: .top)"))
+    }
+
+    func testTodayLiveTopicsPairPageUsesCompactPreviewCards() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/TodayLiveTopicsView.swift")
+        let source = try String(contentsOf: sourceURL)
+        let pairPageSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct TodayLiveTopicsPairPage").dropFirst().first?
+                .components(separatedBy: "private struct TodayLiveTopicPreviewCard").first
+        )
+        let previewCardSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct TodayLiveTopicPreviewCard").dropFirst().first?
+                .components(separatedBy: "private struct TodayLiveTopicRow").first
+        )
+
+        XCTAssertTrue(pairPageSource.contains("TodayLiveTopicPreviewCard(topic: topic, isSaved: savedStore.isSaved(topic))"))
+        XCTAssertFalse(pairPageSource.contains("TodayLiveTopicRow(topic: topic"))
+        XCTAssertFalse(pairPageSource.contains("PavbotNewsStoryCard("))
+
+        XCTAssertTrue(previewCardSource.contains("PavbotNewsPriorityBadge(style: PavbotNewsPriorityStyle(topic.priority))"))
+        XCTAssertTrue(previewCardSource.contains("PavbotSourceCountBadge(count: topic.sources.count, tint: .orange)"))
+        XCTAssertTrue(previewCardSource.contains("Text(topic.title)"))
+        XCTAssertTrue(previewCardSource.contains("Text(topic.lead)"))
+        XCTAssertTrue(previewCardSource.contains(".lineLimit(3)"))
+        XCTAssertTrue(previewCardSource.contains("Image(systemName: \"chevron.right\")"))
+        XCTAssertFalse(previewCardSource.contains("topic.keyFacts"))
+        XCTAssertFalse(previewCardSource.contains("previewFacts"))
+        XCTAssertFalse(previewCardSource.contains("PavbotArticleTagChip"))
+        XCTAssertFalse(previewCardSource.contains("PavbotStoryActionPill"))
     }
 
     func testTodayLiveTopicsCarouselStatePausesWhileDetailIsOpen() {
@@ -4803,7 +6006,7 @@ final class PavbotManifestTests: XCTestCase {
 
         XCTAssertEqual(store.state, .loaded)
         XCTAssertNil(store.snapshot)
-        XCTAssertEqual(store.emptyMessage, "Brak opublikowanego Pulsu dnia. Odśwież manifest albo otwórz Research -> Aktualne.")
+        XCTAssertEqual(store.emptyMessage, "Brak opublikowanego Pulsu dnia. Odśwież manifest albo otwórz Przegląd -> Aktualne.")
     }
 
     func testDecoderRejectsUnsupportedManifestSchemaVersion() throws {
@@ -4820,7 +6023,7 @@ final class PavbotManifestTests: XCTestCase {
         """.data(using: .utf8)!
 
         XCTAssertThrowsError(try JSONDecoder.pavbot.decode(PavbotManifest.self, from: data)) { error in
-            XCTAssertEqual(error.localizedDescription, "Unsupported manifest schema version 99.")
+            XCTAssertEqual(error.localizedDescription, "Nieobsługiwana wersja schematu manifestu 99.")
         }
     }
 
@@ -4872,7 +6075,7 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(redditRadarRawData, .redditRadarRawData)
         XCTAssertEqual(audioVariant.label, "Audio variant")
         XCTAssertEqual(ttsVariants.label, "TTS variants")
-        XCTAssertEqual(jobsData.label, "Jobs data")
+        XCTAssertEqual(jobsData.label, "Dane Praca")
         XCTAssertEqual(mobileNewsData.label, "Mobile news data")
         XCTAssertEqual(redditRadarData.label, "Reddit Radar data")
         XCTAssertEqual(redditRadarRawData.label, "Reddit Radar raw data")
@@ -5365,7 +6568,7 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.report?.opportunities.first?.company, "CKSource")
         XCTAssertEqual(
             store.cacheNotice,
-            "Nie pobrano świeżych danych. Pokazuję zapisane dane: dane Jobs (2026-06-25 01:41, Dane strukturalne)."
+            "Nie pobrano świeżych danych. Pokazuję zapisane dane: dane Praca (2026-06-25 01:41, Dane strukturalne)."
         )
     }
 
@@ -5509,6 +6712,11 @@ final class PavbotManifestTests: XCTestCase {
             date: date,
             time: time
         )
+    }
+
+    @MainActor
+    private static func reportRouteRevision(in router: AppRouter) -> Int {
+        router.reportRouteRevision
     }
 
     private static let techResearchMarkdownFixture = """
@@ -5670,6 +6878,51 @@ final class PavbotManifestTests: XCTestCase {
             tags: ["Puls dnia"],
             priority: "High"
         )
+    }
+
+    func testNewsStoryPresentationNormalizesPriorityFactsSourcesAndTags() {
+        let presentation = PavbotNewsStoryPresentation(
+            id: "story-1",
+            section: "Alerty",
+            sectionSystemImage: "exclamationmark.triangle.fill",
+            title: "RCB przełącza Polskę na nocny alert burzowy",
+            lead: "Najbardziej praktyczną wiadomością jest konkretny SMS RCB.",
+            priority: "High",
+            facts: ["Alert obejmuje wybrane regiony.", "Ryzykiem są przerwy w dostawie prądu."],
+            sources: [
+                ResearchNewsSource(title: "RCB", url: "https://example.com/rcb"),
+                ResearchNewsSource(title: "IMGW", url: "https://example.com/imgw")
+            ],
+            tags: ["RCB", "Burze", "Prąd", "Nadmiar"],
+            canReadAloud: true
+        )
+
+        XCTAssertEqual(presentation.priorityStyle, .high)
+        XCTAssertEqual(presentation.previewFacts, ["Alert obejmuje wybrane regiony.", "Ryzykiem są przerwy w dostawie prądu."])
+        XCTAssertEqual(presentation.sourceCount, 2)
+        XCTAssertEqual(presentation.previewTags, ["RCB", "Burze", "Prąd"])
+        XCTAssertTrue(presentation.canReadAloud)
+    }
+
+    func testNewsStoryPresentationFallsBackToMediumPriorityAndLeadFact() {
+        let presentation = PavbotNewsStoryPresentation(
+            id: "story-2",
+            section: "Technologia",
+            sectionSystemImage: "cpu.fill",
+            title: "Platforma otwiera oficjalny endpoint dla agentów",
+            lead: "Lead zostaje użyty jako szybki fakt, gdy JSON nie zawiera listy faktów.",
+            priority: "",
+            facts: [],
+            sources: [],
+            tags: [],
+            canReadAloud: false
+        )
+
+        XCTAssertEqual(presentation.priorityStyle, .medium)
+        XCTAssertEqual(presentation.previewFacts, ["Lead zostaje użyty jako szybki fakt, gdy JSON nie zawiera listy faktów."])
+        XCTAssertEqual(presentation.sourceCount, 0)
+        XCTAssertEqual(presentation.previewTags, [])
+        XCTAssertFalse(presentation.canReadAloud)
     }
 
     private static let pulseNewsDataFixtureData = """
@@ -6732,6 +7985,77 @@ private final class SpySpeechAudioSession: SpeechAudioSessionConfiguring {
 
     func deactivateAfterSpeech() {
         deactivateCount += 1
+    }
+}
+
+@MainActor
+private final class SpyPavbotSystemAudioIntegration: PavbotSystemAudioIntegrating {
+    private(set) var activatePlaybackSessionCount = 0
+    private(set) var deactivatePlaybackSessionCount = 0
+    private(set) var configureRemoteCommandsCount = 0
+    private(set) var resetRemoteCommandsCount = 0
+    private(set) var lastNowPlayingInfo: [String: Any]?
+    private(set) var publishedNowPlayingInfo: [[String: Any]?] = []
+    private var remoteCommandHandler: ((PavbotAudioRemoteCommand) -> MPRemoteCommandHandlerStatus)?
+
+    func activatePlaybackSession() throws {
+        activatePlaybackSessionCount += 1
+    }
+
+    func deactivatePlaybackSession() {
+        deactivatePlaybackSessionCount += 1
+    }
+
+    func publishNowPlaying(_ info: [String: Any]?) {
+        lastNowPlayingInfo = info
+        publishedNowPlayingInfo.append(info)
+    }
+
+    func configureRemoteCommands(handler: @escaping @MainActor (PavbotAudioRemoteCommand) -> MPRemoteCommandHandlerStatus) {
+        configureRemoteCommandsCount += 1
+        remoteCommandHandler = handler
+    }
+
+    func resetRemoteCommands() {
+        resetRemoteCommandsCount += 1
+        remoteCommandHandler = nil
+    }
+
+    func performRemoteCommand(_ command: PavbotAudioRemoteCommand) -> MPRemoteCommandHandlerStatus {
+        remoteCommandHandler?(command) ?? .noSuchContent
+    }
+}
+
+private final class SpySpeechSynthesizer: SpeechSynthesizing {
+    weak var delegate: AVSpeechSynthesizerDelegate?
+    private(set) var spokenUtterances: [AVSpeechUtterance] = []
+    private(set) var stopCount = 0
+    var isSpeaking = false
+    var isPaused = false
+
+    func speak(_ utterance: AVSpeechUtterance) {
+        spokenUtterances.append(utterance)
+        isSpeaking = true
+        isPaused = false
+    }
+
+    func pauseSpeaking(at boundary: AVSpeechBoundary) -> Bool {
+        guard isSpeaking else { return false }
+        isPaused = true
+        return true
+    }
+
+    func continueSpeaking() -> Bool {
+        guard isSpeaking, isPaused else { return false }
+        isPaused = false
+        return true
+    }
+
+    func stopSpeaking(at boundary: AVSpeechBoundary) -> Bool {
+        stopCount += 1
+        isSpeaking = false
+        isPaused = false
+        return true
     }
 }
 

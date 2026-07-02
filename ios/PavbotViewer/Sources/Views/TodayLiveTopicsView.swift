@@ -72,7 +72,7 @@ struct TodayLiveTopicsPanel: View {
                 } else {
                     TodayLiveTopicsEmptyState(
                         title: "Brak tematów Pulsu Dnia",
-                        message: emptyMessage ?? "Odśwież manifest albo otwórz Research -> Aktualne jako fallback.",
+                        message: emptyMessage ?? "Odśwież manifest albo otwórz Przegląd -> Aktualne jako fallback.",
                         openAktualne: openAktualne
                     )
                 }
@@ -106,23 +106,18 @@ private struct TodayLiveTopicsGrid: View {
         visibleSnapshot.pairs.flatMap(\.topics)
     }
 
+    private var topStory: TodayLiveTopic? {
+        topics.first { PavbotNewsPriorityStyle($0.priority) == .high } ?? topics.first
+    }
+
+    private var secondaryTopics: [TodayLiveTopic] {
+        guard let topStory else { return topics }
+        return topics.filter { $0.id != topStory.id }
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: layout.cardSpacing) {
-            VStack(alignment: .leading, spacing: 6) {
-                StatusBadge(
-                    text: snapshot.sourceLabel,
-                    systemImage: snapshot.isFallback ? "exclamationmark.triangle.fill" : "checkmark.seal.fill",
-                    tint: snapshot.isFallback ? .orange : .green
-                )
-                Text(snapshot.headline)
-                    .font(.title2.weight(.bold))
-                    .fixedSize(horizontal: false, vertical: true)
-                Text(snapshot.summary)
-                    .font(.body)
-                    .foregroundStyle(.secondary)
-                    .lineSpacing(4)
-                    .fixedSize(horizontal: false, vertical: true)
-            }
+            PulseIssueMasthead(snapshot: snapshot)
 
             if topics.isEmpty {
                 VStack(alignment: .leading, spacing: 10) {
@@ -138,8 +133,22 @@ private struct TodayLiveTopicsGrid: View {
                 .frame(maxWidth: .infinity, minHeight: 160, alignment: .leading)
                 .background(Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: layout.cardCornerRadius, style: .continuous))
             } else {
+                if let topStory {
+                    Button {
+                        haptics.play(.lightImpact)
+                        selectedTopic = TodayLiveTopicSelection(
+                            topic: topStory,
+                            source: snapshot.source,
+                            displayDate: snapshot.displayDate
+                        )
+                    } label: {
+                        TodayLiveTopicRow(topic: topStory, isSaved: savedStore.isSaved(topStory), isFeatured: true)
+                    }
+                    .buttonStyle(.plain)
+                }
+
                 LazyVGrid(columns: layout.adaptiveColumns(minimum: 320), spacing: layout.cardSpacing) {
-                    ForEach(topics) { topic in
+                    ForEach(secondaryTopics) { topic in
                         Button {
                             haptics.play(.lightImpact)
                             selectedTopic = TodayLiveTopicSelection(
@@ -150,8 +159,7 @@ private struct TodayLiveTopicsGrid: View {
                         } label: {
                             TodayLiveTopicRow(topic: topic, isSaved: savedStore.isSaved(topic))
                         }
-                        .buttonStyle(PavbotInteractiveSurfaceButtonStyle(tint: .orange, cornerRadius: layout.cardCornerRadius))
-                        .frame(minHeight: 230, alignment: .top)
+                        .buttonStyle(.plain)
                     }
                 }
             }
@@ -161,8 +169,69 @@ private struct TodayLiveTopicsGrid: View {
     }
 }
 
+private struct PulseIssueMasthead: View {
+    let snapshot: TodayLiveTopicsSnapshot
+    @State private var isContextExpanded = false
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 10) {
+            PulseIssueMastheadMetadataRow(snapshot: snapshot)
+            PulseIssueMastheadTitle(headline: snapshot.headline)
+
+            DisclosureGroup(isExpanded: $isContextExpanded) {
+                Text(snapshot.summary)
+                    .font(.callout)
+                    .foregroundStyle(.secondary)
+                    .lineSpacing(3)
+                    .padding(.top, 6)
+                    .fixedSize(horizontal: false, vertical: true)
+            } label: {
+                Label("Kontekst wydania", systemImage: "text.quote")
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(.orange)
+                    .textCase(.uppercase)
+            }
+            .tint(.orange)
+        }
+    }
+}
+
+private struct PulseIssueMastheadMetadataRow: View {
+    let snapshot: TodayLiveTopicsSnapshot
+
+    var body: some View {
+        HStack(alignment: .center, spacing: 10) {
+            StatusBadge(
+                text: snapshot.sourceLabel,
+                systemImage: snapshot.isFallback ? "exclamationmark.triangle.fill" : "checkmark.seal.fill",
+                tint: snapshot.isFallback ? .orange : .green
+            )
+
+            Spacer(minLength: 8)
+
+            Text(snapshot.displayDate)
+                .font(.caption.weight(.semibold))
+                .foregroundStyle(.secondary)
+                .multilineTextAlignment(.trailing)
+        }
+    }
+}
+
+private struct PulseIssueMastheadTitle: View {
+    let headline: String
+
+    var body: some View {
+        Text(headline)
+            .font(.title3.weight(.bold))
+            .lineSpacing(2)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .fixedSize(horizontal: false, vertical: true)
+    }
+}
+
 struct TodayLiveTopicDetailView: View {
     @Environment(\.dismiss) private var dismiss
+    @Environment(PavbotAudioSessionCoordinator.self) private var audioCoordinator
     @Environment(PavbotHaptics.self) private var haptics
     let topic: TodayLiveTopic
     let source: TodayLiveTopicsSource
@@ -225,6 +294,9 @@ struct TodayLiveTopicDetailView: View {
             .background(Color(.systemGroupedBackground))
             .navigationTitle("Temat dnia")
             .navigationBarTitleDisplayMode(.inline)
+            .onAppear {
+                speechController.configureAudioCoordinator(audioCoordinator)
+            }
             .onDisappear {
                 speechController.stop()
             }
@@ -403,27 +475,47 @@ private struct TodayLiveTopicsCarousel: View {
 
     private var layout: TodayLiveTopicsCarouselLayout {
         TodayLiveTopicsCarouselLayout(
-            cardCount: currentPair?.topics.count ?? 2,
             compactWidth: horizontalSizeClass != .regular
         )
     }
 
+    private var topics: [TodayLiveTopic] {
+        visibleSnapshot.pairs.flatMap(\.topics)
+    }
+
+    private var topStory: TodayLiveTopic? {
+        topics.first { PavbotNewsPriorityStyle($0.priority) == .high } ?? topics.first
+    }
+
+    private var carouselPairs: [TodayLiveTopicPair] {
+        let secondaryTopics: [TodayLiveTopic]
+        if let topStory {
+            secondaryTopics = topics.filter { $0.id != topStory.id }
+        } else {
+            secondaryTopics = topics
+        }
+
+        return stride(from: 0, to: secondaryTopics.count, by: 2).map { index in
+            TodayLiveTopicPair(topics: Array(secondaryTopics[index..<min(index + 2, secondaryTopics.count)]))
+        }
+    }
+
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
-            VStack(alignment: .leading, spacing: 5) {
-                StatusBadge(
-                    text: snapshot.sourceLabel,
-                    systemImage: snapshot.isFallback ? "exclamationmark.triangle.fill" : "checkmark.seal.fill",
-                    tint: snapshot.isFallback ? .orange : .green
-                )
-                Text(snapshot.headline)
-                    .font(.title3.weight(.bold))
-                    .fixedSize(horizontal: false, vertical: true)
-                Text(snapshot.summary)
-                    .font(.callout)
-                    .foregroundStyle(.secondary)
-                    .lineSpacing(3)
-                    .fixedSize(horizontal: false, vertical: true)
+            PulseIssueMasthead(snapshot: snapshot)
+
+            if let topStory {
+                Button {
+                    haptics.play(.lightImpact)
+                    selectedTopic = TodayLiveTopicSelection(
+                        topic: topStory,
+                        source: snapshot.source,
+                        displayDate: snapshot.displayDate
+                    )
+                } label: {
+                    TodayLiveTopicRow(topic: topStory, isSaved: savedStore.isSaved(topStory), isFeatured: true)
+                }
+                .buttonStyle(.plain)
             }
 
             if let pair = currentPair {
@@ -436,14 +528,13 @@ private struct TodayLiveTopicsCarousel: View {
                     savedStore: savedStore,
                     onSwipeEnded: handleSwipe
                 )
-                .frame(height: layout.pageHeight, alignment: .top)
                 .contentShape(Rectangle())
                 .simultaneousGesture(swipeGesture, including: .all)
                     .transition(.asymmetric(
                         insertion: .move(edge: .trailing).combined(with: .opacity),
                         removal: .move(edge: .leading).combined(with: .opacity)
                     ))
-            } else {
+            } else if topStory == nil {
                 VStack(alignment: .leading, spacing: 10) {
                     Label("Wszystkie tematy z tego wydania są zapisane", systemImage: "bookmark.fill")
                         .font(.headline.weight(.semibold))
@@ -459,7 +550,7 @@ private struct TodayLiveTopicsCarousel: View {
             }
 
             TodayLiveTopicsCarouselControls(
-                pageCount: visibleSnapshot.pairs.count,
+                pageCount: carouselPairs.count,
                 selectedIndex: $selectedPairIndex,
                 isPaused: selectedTopic != nil || accessibilityReduceMotion
             )
@@ -480,7 +571,7 @@ private struct TodayLiveTopicsCarousel: View {
             normalizeSelection()
         }
         .task(id: "\(visibleSnapshot.id)-\(selectedTopic?.id ?? "none")-\(accessibilityReduceMotion)") {
-            guard visibleSnapshot.pairs.count > 1, !accessibilityReduceMotion else { return }
+            guard carouselPairs.count > 1, !accessibilityReduceMotion else { return }
             while !Task.isCancelled {
                 try? await Task.sleep(nanoseconds: 7_000_000_000)
                 guard !Task.isCancelled else { return }
@@ -491,12 +582,12 @@ private struct TodayLiveTopicsCarousel: View {
     }
 
     private var currentPair: TodayLiveTopicPair? {
-        guard !visibleSnapshot.pairs.isEmpty else { return nil }
-        return visibleSnapshot.pairs[min(selectedPairIndex, visibleSnapshot.pairs.count - 1)]
+        guard !carouselPairs.isEmpty else { return nil }
+        return carouselPairs[min(selectedPairIndex, carouselPairs.count - 1)]
     }
 
     private var accessibilityPageValue: String {
-        let pageCount = visibleSnapshot.pairs.count
+        let pageCount = carouselPairs.count
         guard pageCount > 1 else { return "Jedna para tematów" }
         return "Para \(min(selectedPairIndex + 1, pageCount)) z \(pageCount)"
     }
@@ -510,18 +601,18 @@ private struct TodayLiveTopicsCarousel: View {
         guard let action = TodayLiveTopicsSwipeDecision.action(
             translation: value.translation,
             predictedEndTranslation: value.predictedEndTranslation,
-            pageCount: visibleSnapshot.pairs.count,
+            pageCount: carouselPairs.count,
             detailIsOpen: selectedTopic != nil
         ) else { return }
         advance(by: action.pageOffset)
     }
 
     private func normalizeSelection() {
-        guard !visibleSnapshot.pairs.isEmpty else {
+        guard !carouselPairs.isEmpty else {
             selectedPairIndex = 0
             return
         }
-        if selectedPairIndex >= visibleSnapshot.pairs.count {
+        if selectedPairIndex >= carouselPairs.count {
             selectedPairIndex = 0
         }
     }
@@ -529,7 +620,7 @@ private struct TodayLiveTopicsCarousel: View {
     private func advance(by offset: Int) {
         guard let next = TodayLiveTopicsPageAdvance.nextIndex(
             currentIndex: selectedPairIndex,
-            pageCount: visibleSnapshot.pairs.count,
+            pageCount: carouselPairs.count,
             offset: offset,
             detailIsOpen: selectedTopic != nil
         ) else { return }
@@ -566,11 +657,11 @@ private struct TodayLiveTopicsPairPage: View {
                         displayDate: displayDate
                     )
                 } label: {
-                    TodayLiveTopicRow(topic: topic, isSaved: savedStore.isSaved(topic))
+                    TodayLiveTopicPreviewCard(topic: topic, isSaved: savedStore.isSaved(topic))
                 }
-                .buttonStyle(PavbotInteractiveSurfaceButtonStyle(tint: .orange, cornerRadius: 17))
+                .buttonStyle(.plain)
                 .simultaneousGesture(cardSwipeGesture, including: .all)
-                .frame(height: layout.cardHeight)
+                .frame(maxWidth: .infinity, alignment: .top)
             }
         }
         .contentShape(Rectangle())
@@ -584,63 +675,120 @@ private struct TodayLiveTopicsPairPage: View {
     }
 }
 
-private struct TodayLiveTopicRow: View {
+private struct TodayLiveTopicPreviewCard: View {
     let topic: TodayLiveTopic
     let isSaved: Bool
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 9) {
+        VStack(alignment: .leading, spacing: 11) {
             HStack(alignment: .top, spacing: 10) {
-                VStack(alignment: .leading, spacing: 5) {
-                    HStack(spacing: 6) {
-                        Text(topic.section.uppercased())
-                            .font(.caption2.weight(.bold))
-                            .foregroundStyle(.orange)
-                        if isSaved {
-                            Image(systemName: "bookmark.fill")
-                                .font(.caption2.weight(.bold))
-                                .foregroundStyle(.blue)
-                                .accessibilityLabel("Zapisany")
-                        }
-                    }
-                    Text(topic.title)
-                        .font(.headline.weight(.semibold))
-                        .foregroundStyle(.primary)
-                        .lineLimit(2)
-                        .fixedSize(horizontal: false, vertical: true)
-                    Text(topic.lead)
-                        .font(.callout)
-                        .foregroundStyle(.secondary)
-                        .lineSpacing(3)
-                        .lineLimit(3)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
-                Spacer(minLength: 8)
-                VStack(alignment: .trailing, spacing: 8) {
+                Image(systemName: topic.scope.systemImage)
+                    .font(.subheadline.weight(.bold))
+                    .foregroundStyle(.white)
+                    .frame(width: 36, height: 36)
+                    .background(Color.orange.gradient, in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                    .shadow(color: Color.orange.opacity(0.16), radius: 7, x: 0, y: 4)
+                    .accessibilityHidden(true)
+
+                PavbotArticleKeywordRows(horizontalSpacing: 5, verticalSpacing: 5) {
+                    PavbotNewsSectionBadge(title: topic.section, tint: .orange)
+                    PavbotNewsPriorityBadge(style: PavbotNewsPriorityStyle(topic.priority))
                     PavbotSourceCountBadge(count: topic.sources.count, tint: .orange)
-
-                    Image(systemName: "chevron.right")
-                        .font(.caption.weight(.bold))
-                        .foregroundStyle(.tertiary)
-                }
-            }
-
-            if !topic.tags.isEmpty {
-                PavbotArticleKeywordRows(horizontalSpacing: 7, verticalSpacing: 6) {
-                    ForEach(topic.tags.prefix(3), id: \.self) { tag in
-                        PavbotArticleTagChip(
-                            title: tag,
-                            systemImage: "tag.fill",
-                            tint: .orange,
-                            accessibilityPrefix: "Tag tematu"
-                        )
+                    if isSaved {
+                        PavbotNewsSavedBadge()
                     }
                 }
+                .padding(.top, 1)
+                .layoutPriority(1)
+
+                Image(systemName: "chevron.right")
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(.tertiary)
+                    .frame(width: 24, height: 24)
+                    .background(Color(.tertiarySystemBackground), in: Circle())
+                    .accessibilityHidden(true)
             }
+
+            Text(topic.title)
+                .font(.headline.weight(.bold))
+                .foregroundStyle(.primary)
+                .lineSpacing(2)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .fixedSize(horizontal: false, vertical: true)
+
+            Text(topic.lead)
+                .font(.callout)
+                .foregroundStyle(.secondary)
+                .lineSpacing(3)
+                .lineLimit(3)
+                .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(14)
-        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
-        .contentShape(RoundedRectangle(cornerRadius: 17, style: .continuous))
+        .padding(15)
+        .frame(maxWidth: .infinity, alignment: .topLeading)
+        .background(backgroundShape)
+        .overlay {
+            RoundedRectangle(cornerRadius: 18, style: .continuous)
+                .stroke(Color.orange.opacity(0.14), lineWidth: 1)
+        }
+        .contentShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(accessibilityLabel)
+        .accessibilityHint("Otwiera pełne szczegóły tematu")
+    }
+
+    private var backgroundShape: some View {
+        RoundedRectangle(cornerRadius: 18, style: .continuous)
+            .fill(
+                LinearGradient(
+                    colors: [
+                        Color(.systemBackground),
+                        Color.orange.opacity(0.045),
+                        Color(.secondarySystemBackground).opacity(0.72)
+                    ],
+                    startPoint: .topLeading,
+                    endPoint: .bottomTrailing
+                )
+            )
+            .shadow(color: Color.black.opacity(0.04), radius: 8, x: 0, y: 5)
+    }
+
+    private var accessibilityLabel: String {
+        var values = [
+            topic.section,
+            PavbotNewsPriorityStyle(topic.priority).title,
+            topic.title,
+            topic.lead
+        ]
+        if topic.sources.count > 0 {
+            values.append(topic.sources.count == 1 ? "1 źródło" : "\(topic.sources.count) źródeł")
+        }
+        return values.joined(separator: ". ")
+    }
+}
+
+private struct TodayLiveTopicRow: View {
+    let topic: TodayLiveTopic
+    let isSaved: Bool
+    var isFeatured = false
+
+    var body: some View {
+        PavbotNewsStoryCard(
+            presentation: PavbotNewsStoryPresentation(
+                id: topic.id,
+                section: topic.section,
+                sectionSystemImage: topic.scope.systemImage,
+                title: topic.title,
+                lead: topic.lead,
+                priority: topic.priority,
+                facts: topic.keyFacts,
+                sources: topic.sources,
+                tags: topic.tags,
+                canReadAloud: true
+            ),
+            tint: .orange,
+            isSaved: isSaved,
+            isFeatured: isFeatured
+        )
     }
 }
 

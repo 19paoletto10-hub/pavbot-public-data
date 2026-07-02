@@ -1,6 +1,7 @@
 name: PavbotViewer
 options:
   bundleIdPrefix: com.paweltanski
+  developmentLanguage: pl
   deploymentTarget:
     iOS: "17.0"
   createIntermediateGroups: true
@@ -10,7 +11,7 @@ settings:
     CODE_SIGN_STYLE: Automatic
     DEVELOPMENT_TEAM: SP774TZZU8
     ENABLE_USER_SCRIPT_SANDBOXING: NO
-    MARKETING_VERSION: "2.2"
+    MARKETING_VERSION: "2.4"
     SWIFT_VERSION: "5.9"
 configs:
   Debug: debug
@@ -29,7 +30,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer
         INFOPLIST_FILE: Sources/Info.plist
-        CURRENT_PROJECT_VERSION: "260629.22"
+        CURRENT_PROJECT_VERSION: "260702.234238"
       configs:
         Debug:
           CODE_SIGN_ENTITLEMENTS: Sources/PavbotViewer.entitlements
@@ -49,12 +50,8 @@ targets:
             BUILD_NUMBER="$PAVBOT_BUILD_NUMBER"
           else
             BUILD_DATE="$(date +%y%m%d)"
-            VERSION_DIGITS="$(printf '%s' "${MARKETING_VERSION:-}" | tr -cd '0-9')"
-            if [ -z "$VERSION_DIGITS" ]; then
-              echo "error: MARKETING_VERSION is empty or contains no digits"
-              exit 1
-            fi
-            BUILD_NUMBER="${BUILD_DATE}.${VERSION_DIGITS}"
+            BUILD_TIMESTAMP="$(date +%H%M%S)"
+            BUILD_NUMBER="${BUILD_DATE}.${BUILD_TIMESTAMP}"
           fi
           invalid_build_number() {
             echo "error: CFBundleVersion '$BUILD_NUMBER' must contain one to three period-separated numeric components"
@@ -102,7 +99,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer.audioactivity
         INFOPLIST_FILE: AudioActivityExtension/Info.plist
-        CURRENT_PROJECT_VERSION: "260629.22"
+        CURRENT_PROJECT_VERSION: "260702.234238"
         CODE_SIGN_STYLE: Automatic
         DEVELOPMENT_TEAM: SP774TZZU8
         SWIFT_VERSION: "5.9"

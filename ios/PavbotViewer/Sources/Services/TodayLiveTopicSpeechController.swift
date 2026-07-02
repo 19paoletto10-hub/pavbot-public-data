@@ -31,11 +31,17 @@ final class TodayLiveTopicSpeechController: ObservableObject {
             enableSpeech: enableSpeech,
             synthesizer: synthesizer,
             audioSession: audioSession,
-            rateDefaults: rateDefaults
+            rateDefaults: rateDefaults,
+            audioSource: .pulseDayTTS,
+            audioTopic: "Puls Dnia"
         )
         cancellable = playback.objectWillChange.sink { [weak self] _ in
             self?.objectWillChange.send()
         }
+    }
+
+    func configureAudioCoordinator(_ coordinator: PavbotAudioSessionCoordinator) {
+        playback.configureAudioCoordinator(coordinator, source: .pulseDayTTS, topic: "Puls Dnia")
     }
 
     func speak(_ topic: TodayLiveTopic) {

@@ -31,7 +31,8 @@ DEFAULT_SUBREDDITS = (
 DEFAULT_NOTIFIER_URL = "https://notify.paweltanski.com"
 DEFAULT_SOURCE = "Codex Safari Reddit radar"
 DEFAULT_ARTIFACT_ROOT = Path("research/reddit-radar")
-DEFAULT_HISTORY_LOOKBACK_DAYS = 5
+DEFAULT_HISTORY_LOOKBACK_HOURS = 72
+DEFAULT_MAX_POST_AGE_HOURS = 72
 RAW_DETAIL_KEYS = {"rawCommentSnippets", "commentSnippets", "commentsList"}
 COMMENT_ANALYSIS_SOURCE = "codex-computer-use-safari"
 COMMENT_ANALYSIS_STATUSES = {"reviewed", "no_safe_comments", "blocked"}
@@ -39,7 +40,12 @@ COMMENT_ANALYSIS_KEYS = {"commentAnalysisStatus", "commentAnalysisSource", "comm
 COMMENT_ANALYSIS_REQUIRED_NOTE = (
     "Wymaga ręcznego przeglądu posta i komentarzy w Safari/Computer Use przed publikacją."
 )
-INTERNAL_DETAIL_KEYS = RAW_DETAIL_KEYS | COMMENT_ANALYSIS_KEYS | {"radarFirstSeenAt", "radarLastSeenAt", "radarKey"}
+INTERNAL_DETAIL_KEYS = RAW_DETAIL_KEYS | COMMENT_ANALYSIS_KEYS | {
+    "radarFirstSeenAt",
+    "radarLastSeenAt",
+    "radarKey",
+    "redditCreatedAt",
+}
 
 
 SAFARI_EXTRACT_JS = r"""
@@ -65,6 +71,30 @@ SAFARI_EXTRACT_JS = r"""
     }
   };
 
+  const clean = (value) => String(value || '').replace(/\s+/g, ' ').trim();
+
+  const extractTimeMetadata = (root) => {
+    const timeNode =
+      root?.querySelector?.('faceplate-timeago') ||
+      root?.querySelector?.('time[datetime]') ||
+      root?.querySelector?.('time') ||
+      null;
+    const absolute =
+      timeNode?.getAttribute?.('ts') ||
+      timeNode?.getAttribute?.('datetime') ||
+      root?.getAttribute?.('created-timestamp') ||
+      '';
+    const relative = clean(
+      timeNode?.textContent ||
+      root?.querySelector?.('[data-testid="post_timestamp"]')?.textContent ||
+      ''
+    );
+    return {
+      redditCreatedAt: absolute || null,
+      redditCreatedText: relative || null
+    };
+  };
+
   const fromShredditPost = [...document.querySelectorAll('shreddit-post')].map((post) => {
     const permalink = post.getAttribute('permalink') || post.querySelector('a[href*="/comments/"]')?.getAttribute('href') || '';
     const title =
@@ -76,13 +106,16 @@ SAFARI_EXTRACT_JS = r"""
       post.getAttribute('content-href') ||
       post.querySelector('img[src]')?.getAttribute('src') ||
       null;
+    const timeMeta = extractTimeMetadata(post);
     return {
       title,
       url: absolutize(permalink),
       imageURL: image && /^https?:/.test(image) ? image : null,
       score: parseCount(post.getAttribute('score') || post.querySelector('[id*="vote-arrows"]')?.textContent),
       comments: parseCount(post.getAttribute('comment-count') || post.querySelector('a[href*="/comments/"]')?.textContent),
-      over18: post.hasAttribute('nsfw') || post.getAttribute('over-18') === 'true'
+      over18: post.hasAttribute('nsfw') || post.getAttribute('over-18') === 'true',
+      redditCreatedAt: timeMeta.redditCreatedAt,
+      redditCreatedText: timeMeta.redditCreatedText
     };
   });
 
@@ -90,13 +123,16 @@ SAFARI_EXTRACT_JS = r"""
     const title = anchor.textContent || anchor.getAttribute('aria-label') || '';
     const card = anchor.closest('article, faceplate-tracker, div');
     const image = card?.querySelector?.('img[src]')?.getAttribute('src') || null;
+    const timeMeta = extractTimeMetadata(card || anchor.parentElement);
     return {
       title,
       url: absolutize(anchor.getAttribute('href')),
       imageURL: image && /^https?:/.test(image) ? image : null,
       score: parseCount(card?.textContent),
       comments: 0,
-      over18: /nsfw|18\+|adult/i.test(card?.textContent || '')
+      over18: /nsfw|18\+|adult/i.test(card?.textContent || ''),
+      redditCreatedAt: timeMeta.redditCreatedAt,
+      redditCreatedText: timeMeta.redditCreatedText
     };
   });
 
@@ -160,6 +196,16 @@ def load_env_file(path: Path) -> None:
             os.environ[key] = value
 
 
+def default_history_lookback_hours() -> int:
+    explicit_hours = os.environ.get("PAVBOT_REDDIT_RADAR_HISTORY_LOOKBACK_HOURS")
+    if explicit_hours:
+        return int(explicit_hours)
+    legacy_days = os.environ.get("PAVBOT_REDDIT_RADAR_HISTORY_LOOKBACK_DAYS")
+    if legacy_days:
+        return int(legacy_days) * 24
+    return DEFAULT_HISTORY_LOOKBACK_HOURS
+
+
 def stable_id(value: str) -> str:
     digest = hashlib.sha1(value.encode("utf-8")).hexdigest()[:10]
     cleaned = re.sub(r"[^a-zA-Z0-9]+", "-", value.lower()).strip("-")[:48]
@@ -206,6 +252,60 @@ def normalize_reddit_url(value: Any) -> str:
     if text.startswith("https://www.reddit.com/"):
         return text
     return ""
+
+
+def parse_reddit_created_at(value: Any) -> datetime | None:
+    text = clean_text(value)
+    if not text:
+        return None
+    normalized = text.replace("Z", "+00:00")
+    if re.fullmatch(r".*[+-]\d{4}", normalized):
+        normalized = normalized[:-2] + ":" + normalized[-2:]
+    try:
+        parsed = datetime.fromisoformat(normalized)
+    except ValueError:
+        parsed = None
+        for fmt in ("%Y-%m-%dT%H:%M:%S.%f%z", "%Y-%m-%dT%H:%M:%S%z"):
+            try:
+                parsed = datetime.strptime(text, fmt)
+                break
+            except ValueError:
+                continue
+        if parsed is None:
+            return None
+    if parsed.tzinfo is None:
+        parsed = parsed.replace(tzinfo=timezone.utc)
+    return parsed.astimezone(timezone.utc)
+
+
+def parse_reddit_relative_age(value: Any, *, generated_at: datetime) -> datetime | None:
+    text = clean_text(value).lower()
+    if not text:
+        return None
+    match = re.search(
+        r"(?P<count>\d+)\s*(?P<unit>min(?:ute)?s?|hr(?:s)?|hour(?:s)?|day(?:s)?)\.?\s+ago",
+        text,
+    )
+    if not match:
+        return None
+    count = int(match.group("count"))
+    unit = match.group("unit")
+    if unit.startswith("min"):
+        delta = timedelta(minutes=count)
+    elif unit.startswith(("hr", "hour")):
+        delta = timedelta(hours=count)
+    elif unit.startswith("day"):
+        delta = timedelta(days=count)
+    else:
+        return None
+    return generated_at.astimezone(timezone.utc) - delta
+
+
+def resolve_reddit_created_at(post: dict[str, Any], *, generated_at: datetime) -> datetime | None:
+    parsed = parse_reddit_created_at(post.get("redditCreatedAt"))
+    if parsed is not None:
+        return parsed
+    return parse_reddit_relative_age(post.get("redditCreatedText"), generated_at=generated_at)
 
 
 def looks_toxic(title: str) -> bool:
@@ -323,14 +423,32 @@ def comment_highlights_from(value: Any, *, title: str = "", category_label: str 
     return highlights
 
 
-def curate_posts(posts: list[dict[str, Any]], *, max_items: int) -> list[dict[str, Any]]:
+def curate_posts(
+    posts: list[dict[str, Any]],
+    *,
+    max_items: int,
+    generated_at: datetime | None = None,
+    max_post_age_hours: int | None = None,
+) -> list[dict[str, Any]]:
     curated: list[dict[str, Any]] = []
     seen: set[str] = set()
+    generated_at_utc: datetime | None = None
+    if generated_at is not None:
+        generated_at_utc = generated_at if generated_at.tzinfo else generated_at.replace(tzinfo=timezone.utc)
+        generated_at_utc = generated_at_utc.astimezone(timezone.utc)
+    age_cutoff = None
+    if generated_at_utc is not None and max_post_age_hours is not None and max_post_age_hours >= 0:
+        age_cutoff = generated_at_utc - timedelta(hours=max_post_age_hours)
     for post in sorted(posts, key=lambda item: (parse_int(item.get("score")), parse_int(item.get("comments"))), reverse=True):
         title = clean_text(post.get("title"))
         source_url = normalize_reddit_url(post.get("sourceURL") or post.get("url"))
         if not title or not source_url or post.get("over18") or looks_toxic(title):
             continue
+        reddit_created_at = None
+        if age_cutoff is not None and generated_at_utc is not None:
+            reddit_created_at = resolve_reddit_created_at(post, generated_at=generated_at_utc)
+            if reddit_created_at is None or reddit_created_at < age_cutoff:
+                continue
         key = title.lower()
         if key in seen:
             continue
@@ -352,6 +470,7 @@ def curate_posts(posts: list[dict[str, Any]], *, max_items: int) -> list[dict[st
                 "tags": tags,
                 "categoryLabel": category_label,
                 "postText": shorten_text(post.get("postText") or post.get("selfText"), 600) or None,
+                "redditCreatedAt": reddit_created_at.isoformat() if reddit_created_at is not None else None,
                 "whyFunny": why_funny_for(title, category_label),
                 "rawCommentSnippets": raw_comments if isinstance(raw_comments, list) else [],
                 "commentHighlights": comment_highlights_from(raw_comments, title=title, category_label=category_label),
@@ -642,13 +761,13 @@ def load_recent_reddit_radar_history_keys(
     output_root: Path,
     *,
     generated_at: datetime,
-    lookback_days: int,
+    lookback_hours: int,
 ) -> set[str]:
     data_dir = output_root / "data"
-    if lookback_days <= 0 or not data_dir.exists():
+    if lookback_hours <= 0 or not data_dir.exists():
         return set()
 
-    cutoff = generated_at.astimezone(timezone.utc) - timedelta(days=lookback_days)
+    cutoff = generated_at.astimezone(timezone.utc) - timedelta(hours=lookback_hours)
     seen: set[str] = set()
     for path in sorted(data_dir.glob("*-reddit-radar.json")):
         stamp = path.name.removesuffix("-reddit-radar.json")
@@ -980,9 +1099,16 @@ def main() -> int:
     parser.add_argument("--artifact-root", default=os.environ.get("PAVBOT_REDDIT_RADAR_ARTIFACT_ROOT", str(DEFAULT_ARTIFACT_ROOT)))
     parser.add_argument("--replace-count", type=int, default=6)
     parser.add_argument(
-        "--history-lookback-days",
+        "--history-lookback-hours",
         type=int,
-        default=int(os.environ.get("PAVBOT_REDDIT_RADAR_HISTORY_LOOKBACK_DAYS", str(DEFAULT_HISTORY_LOOKBACK_DAYS))),
+        default=default_history_lookback_hours(),
+        help="Do not re-publish a Reddit URL or title already present in Reddit Radar outputs from the last N hours.",
+    )
+    parser.add_argument(
+        "--max-post-age-hours",
+        type=int,
+        default=int(os.environ.get("PAVBOT_REDDIT_RADAR_MAX_POST_AGE_HOURS", str(DEFAULT_MAX_POST_AGE_HOURS))),
+        help="Accept only Reddit posts published within the last N hours relative to the run time.",
     )
     parser.add_argument("--no-artifacts", action="store_true", help="Do not write research/reddit-radar audit artifacts.")
     parser.add_argument(
@@ -1023,14 +1149,22 @@ def main() -> int:
     generated_at = datetime.now(timezone.utc)
     max_items = max(1, min(args.max_items, 12))
     replace_count = max(1, min(args.replace_count, max_items))
-    fresh_items = curate_posts(posts, max_items=max(max_items + replace_count, max_items))
+    fresh_items = curate_posts(
+        posts,
+        max_items=max(max_items + replace_count, max_items),
+        generated_at=generated_at,
+        max_post_age_hours=max(0, args.max_post_age_hours),
+    )
     if not fresh_items:
-        raise RuntimeError("Safari Reddit collector did not find usable non-NSFW Reddit posts")
+        raise RuntimeError(
+            "Safari Reddit collector did not find usable non-NSFW Reddit posts "
+            f"published within the last {max(0, args.max_post_age_hours)} hours"
+        )
     artifact_root = Path(args.artifact_root)
     recent_history_keys = load_recent_reddit_radar_history_keys(
         artifact_root,
         generated_at=generated_at,
-        lookback_days=max(0, args.history_lookback_days),
+        lookback_hours=max(0, args.history_lookback_hours),
     )
     if recent_history_keys:
         fresh_items = [
@@ -1039,7 +1173,7 @@ def main() -> int:
     if not fresh_items:
         raise RuntimeError(
             "Safari Reddit collector did not find usable non-duplicate Reddit posts "
-            f"outside the last {max(0, args.history_lookback_days)} days of radar history"
+            f"outside the last {max(0, args.history_lookback_hours)} hours of radar history"
         )
     previous_items = load_reddit_radar_state(artifact_root)
     items = merge_reddit_radar_items(

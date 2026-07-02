@@ -15,9 +15,9 @@ struct JobsDataClient {
         var errorDescription: String? {
             switch self {
             case .invalidResponse:
-                "Serwer danych Jobs zwrócił nieprawidłową odpowiedź."
+                "Serwer danych Praca zwrócił nieprawidłową odpowiedź."
             case .httpStatus(let status):
-                "Serwer danych Jobs zwrócił HTTP \(status)."
+                "Serwer danych Praca zwrócił HTTP \(status)."
             }
         }
     }
@@ -138,8 +138,8 @@ final class JobsStore {
             state = report == nil
                 ? .failed(
                     .custom(
-                        title: "Brak raportów Jobs",
-                        message: "Brak opublikowanych raportów Jobs w manifeście.",
+                        title: "Brak raportów Praca",
+                        message: "Brak opublikowanych raportów Praca w manifeście.",
                         actionTitle: "Odśwież manifest",
                         systemImage: "briefcase.fill",
                         tint: .indigo
@@ -177,8 +177,8 @@ final class JobsStore {
             state = .failed(
                 lastError.map { .network($0, context: .jobs) }
                     ?? .custom(
-                        title: "Nie udało się wczytać Jobs",
-                        message: "Nie udało się wczytać żadnej paczki Jobs.",
+                        title: "Nie udało się wczytać Praca",
+                        message: "Nie udało się wczytać żadnej paczki Praca.",
                         actionTitle: "Odśwież dane",
                         systemImage: "briefcase.fill",
                         tint: .indigo
@@ -205,7 +205,7 @@ final class JobsStore {
     }
 
     private func cacheNoticeText(for cached: CachedJobsReport?) -> String {
-        let base = "dane Jobs"
+        let base = "dane Praca"
         guard let cached else {
             return PavbotCacheNoticeCopy.refreshFailed(context: base)
         }

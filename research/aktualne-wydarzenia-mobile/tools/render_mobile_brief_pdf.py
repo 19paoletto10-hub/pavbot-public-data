@@ -233,15 +233,24 @@ def variant_rows(tts_data: dict) -> list[list[str]]:
 
 def make_tts_table(tts_data: dict, styles: dict[str, ParagraphStyle]) -> Table:
     rows = variant_rows(tts_data)
+    body_style = ParagraphStyle(
+        "TtsTableBody",
+        parent=styles["body"],
+        fontName=FONT_REGULAR,
+        fontSize=8.6,
+        leading=10.2,
+        textColor=INK,
+    )
     data = []
     for row_index, row in enumerate(rows):
-        style = styles["card_title"] if row_index == 0 else styles["small"]
+        style = styles["card_title"] if row_index == 0 else body_style
         data.append([Paragraph(escape(cell), style) for cell in row])
     table = Table(data, colWidths=[82, 70, 118, 80], repeatRows=1)
     table.setStyle(
         TableStyle(
             [
                 ("BACKGROUND", (0, 0), (-1, 0), ACCENT_LIGHT),
+                ("BACKGROUND", (0, 1), (-1, -1), colors.white),
                 ("GRID", (0, 0), (-1, -1), 0.35, BORDER),
                 ("VALIGN", (0, 0), (-1, -1), "TOP"),
                 ("LEFTPADDING", (0, 0), (-1, -1), 4),

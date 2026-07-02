@@ -1,3 +1,4 @@
+import AVFoundation
 import SwiftUI
 import UIKit
 import UserNotifications
@@ -15,6 +16,10 @@ struct SettingsView: View {
     @State private var remoteRegistrationError = ""
     @State private var dailyWeatherAlertsEnabled = true
     @State private var notificationServerValidationMessage: String?
+    @State private var speechVoicePreference = SpeechVoiceSettings.load()
+    @State private var speechVoiceCatalog = SpeechVoiceCatalog.current()
+    @State private var speechVoiceStatusMessage: String?
+    @StateObject private var speechVoicePreview = SpeechPlaybackService()
 
     var body: some View {
         GeometryReader { proxy in
@@ -33,9 +38,13 @@ struct SettingsView: View {
         .onAppear {
             notificationServerValidationMessage = NotificationServerSettings.validationMessage(for: NotificationServerSettings.serverURLString, required: true)
             dailyWeatherAlertsEnabled = DailyWeatherNotificationSettings.isEnabled()
+            refreshSpeechVoiceSettings()
             refreshRemoteNotificationDiagnostics()
             Task { await refreshNotificationStatus() }
             Task { await refreshNotificationServerReachability() }
+        }
+        .onReceive(NotificationCenter.default.publisher(for: AVSpeechSynthesizer.availableVoicesDidChangeNotification)) { _ in
+            refreshSpeechVoiceSettings()
         }
         .onChange(of: dailyWeatherAlertsEnabled) { _, newValue in
             DailyWeatherNotificationSettings.setEnabled(newValue)
@@ -52,7 +61,7 @@ struct SettingsView: View {
 
         return PavbotPremiumScreenScaffold(layout: layout) {
             PavbotCommandHero(
-                eyebrow: "Control Center",
+                eyebrow: "Centrum sterowania",
                 title: "Centrum połączeń",
                 subtitle: "Najważniejsze ustawienia, status połączeń i wejścia do biblioteki bez technicznych linków w interfejsie.",
                 systemImage: "gearshape.2.fill",
@@ -101,13 +110,13 @@ struct SettingsView: View {
                 }
                 .padding(.vertical, 4)
 
-                Label("Nie deklaruj Audio Descriptions w v1, bo aplikacja nie ma osobnych opisów audio dla treści wizualnych.", systemImage: "info.circle")
+                Label("Nie deklaruj opisów audio w v1, bo aplikacja nie ma osobnych opisów dla treści wizualnych.", systemImage: "info.circle")
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
 
-            PavbotReadingCard(title: "Połączenia Pavbot", subtitle: "Czytelny status bez raw URL-i", systemImage: "network", tint: .purple) {
+            PavbotReadingCard(title: "Połączenia Pavbot", subtitle: "Czytelny status bez surowych adresów URL", systemImage: "network", tint: .purple) {
                 LabeledContent("Połączenia Pavbot", value: "Produkcyjne")
                 LabeledContent("Manifest danych", value: store.manifest == nil ? "Niezaładowany" : "Załadowany")
                 LabeledContent("Serwer powiadomień", value: "Produkcyjny")
@@ -165,13 +174,17 @@ struct SettingsView: View {
                 } label: {
                     Label("Kopiuj token APNs", systemImage: "doc.on.doc")
                 }
-                .accessibilityLabel("Kopiuj token APNs")
-                .accessibilityHint("Kopiuje token urządzenia do Apple Push Notifications Console.")
-                .disabled(remoteDeviceToken.isEmpty)
+                    .accessibilityLabel("Kopiuj token APNs")
+                    .accessibilityHint("Kopiuje token urządzenia do Apple Push Notifications Console.")
+                    .disabled(remoteDeviceToken.isEmpty)
 
                 Text("Użyj tego tokena w Apple Push Notifications Console. Wybierz Development dla buildów z Xcode i Production dla TestFlight.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
+            }
+
+            PavbotReadingCard(title: "Głos czytania", subtitle: "Natywny TTS i Personal Voice", systemImage: "speaker.wave.2.fill", tint: .purple) {
+                speechVoiceSettingsContent
             }
 
             PavbotReadingCard(title: "Automatyzacje i pliki", subtitle: "Wejścia operacyjne bez opuszczania Ustawień", systemImage: "bolt.circle.fill", tint: .yellow) {
@@ -180,7 +193,7 @@ struct SettingsView: View {
                 } label: {
                     PavbotCompactStoryRow(
                         title: "Otwórz automatyzacje",
-                        subtitle: "Aktywne workflow, statusy i ostatnie uruchomienia.",
+                        subtitle: "Aktywne przepływy, statusy i ostatnie uruchomienia.",
                         systemImage: "bolt.circle",
                         tint: .yellow
                     )
@@ -219,11 +232,11 @@ struct SettingsView: View {
 
         return PavbotPremiumScreenScaffold(layout: layout) {
                 PavbotCommandHero(
-                    eyebrow: "Control Center",
+                    eyebrow: "Centrum sterowania",
                     title: "Centrum połączeń",
                     subtitle: layout.usesDashboardLayout
                         ? "Status połączeń, powiadomień i automatyzacji w układzie czytelnym dla dużego okna."
-                        : "Najważniejsze ustawienia i statusy w kompaktowym control center.",
+                        : "Najważniejsze ustawienia i statusy w kompaktowym centrum sterowania.",
                     systemImage: "gearshape.2.fill",
                     tint: .blue,
                     insights: [
@@ -260,7 +273,7 @@ struct SettingsView: View {
                             }
                         }
 
-                        Label("Nie deklaruj Audio Descriptions w v1, bo aplikacja nie ma osobnych opisów audio dla treści wizualnych.", systemImage: "info.circle")
+                        Label("Nie deklaruj opisów audio w v1, bo aplikacja nie ma osobnych opisów dla treści wizualnych.", systemImage: "info.circle")
                             .font(.callout)
                             .foregroundStyle(.secondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -318,15 +331,19 @@ struct SettingsView: View {
                             Label("Kopiuj token APNs", systemImage: "doc.on.doc")
                                 .frame(maxWidth: .infinity)
                         }
-                        .buttonStyle(.bordered)
-                        .disabled(remoteDeviceToken.isEmpty)
+                            .buttonStyle(.bordered)
+                            .disabled(remoteDeviceToken.isEmpty)
                     }
 
-                    SettingsDashboardCard(title: "Automatyzacje", subtitle: "Workflow i pliki Codex", systemImage: "bolt.circle.fill", tint: .yellow) {
+                    SettingsDashboardCard(title: "Głos czytania", subtitle: "Natywny TTS i Personal Voice", systemImage: "speaker.wave.2.fill", tint: .purple) {
+                        speechVoiceSettingsContent
+                    }
+
+                    SettingsDashboardCard(title: "Automatyzacje", subtitle: "Przepływy i pliki Codex", systemImage: "bolt.circle.fill", tint: .yellow) {
                         NavigationLink {
                             AutomationListView(navigationMode: .embeddedInSettings)
                         } label: {
-                            PavbotActionRow(title: "Otwórz automatyzacje", subtitle: "Aktywne workflow, ostatnie uruchomienia i statusy.", systemImage: "bolt.circle", tint: .yellow)
+                            PavbotActionRow(title: "Otwórz automatyzacje", subtitle: "Aktywne przepływy, ostatnie uruchomienia i statusy.", systemImage: "bolt.circle", tint: .yellow)
                         }
 
                         NavigationLink {
@@ -345,6 +362,181 @@ struct SettingsView: View {
                     }
                 }
         }
+    }
+
+    @ViewBuilder
+    private var speechVoiceSettingsContent: some View {
+        Text("Pavbot nie nagrywa próbki głosu. Personal Voice pochodzi z ustawień iOS i jest używany tylko po Twojej zgodzie.")
+            .font(.caption)
+            .foregroundStyle(.secondary)
+            .fixedSize(horizontal: false, vertical: true)
+
+        Picker("Tryb głosu", selection: speechVoiceModeBinding) {
+            ForEach(SpeechVoiceMode.allCases) { mode in
+                Text(mode.title).tag(mode)
+            }
+        }
+        .pickerStyle(.segmented)
+
+        switch speechVoicePreference.mode {
+        case .polishDefault:
+            LabeledContent("Aktywny głos", value: speechVoiceCatalog.defaultSystemVoice?.displayTitle ?? "pl-PL")
+        case .selectedVoice:
+            if speechVoiceCatalog.systemVoices.isEmpty {
+                Label("Brak dostępnych głosów systemowych. Pavbot spróbuje użyć pl-PL.", systemImage: "exclamationmark.triangle")
+                    .font(.caption)
+                    .foregroundStyle(.orange)
+            } else {
+                Picker("Głos systemowy", selection: systemVoiceIdentifierBinding) {
+                    ForEach(speechVoiceCatalog.systemVoices) { voice in
+                        Text("\(voice.displayTitle) · \(voice.displaySubtitle)").tag(voice.id)
+                    }
+                }
+                .pickerStyle(.menu)
+            }
+        case .personalVoice:
+            LabeledContent("Status Personal Voice", value: speechVoiceCatalog.personalVoiceStatusLabel)
+
+            if speechVoiceCatalog.personalVoiceAuthorization != .authorized {
+                Button {
+                    requestPersonalVoiceAuthorization()
+                } label: {
+                    Label("Zezwól na Personal Voice", systemImage: "person.wave.2.fill")
+                }
+                .buttonStyle(.borderedProminent)
+            }
+
+            if speechVoiceCatalog.personalVoices.isEmpty {
+                Text("Jeśli nie widzisz własnego głosu, utwórz go w Ustawieniach iOS > Dostępność > Personal Voice, a potem odśwież listę.")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            } else {
+                Picker("Personal Voice", selection: personalVoiceIdentifierBinding) {
+                    ForEach(speechVoiceCatalog.personalVoices) { voice in
+                        Text("\(voice.displayTitle) · \(voice.displaySubtitle)").tag(voice.id)
+                    }
+                }
+                .pickerStyle(.menu)
+            }
+        }
+
+        if let speechVoiceStatusMessage {
+            Label(speechVoiceStatusMessage, systemImage: "info.circle")
+                .font(.caption)
+                .foregroundStyle(.orange)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+
+        if let errorMessage = speechVoicePreview.errorMessage {
+            Label(errorMessage, systemImage: "exclamationmark.triangle")
+                .font(.caption)
+                .foregroundStyle(.orange)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+
+        HStack(spacing: 10) {
+            Button {
+                refreshSpeechVoiceSettings()
+            } label: {
+                Label("Odśwież głosy", systemImage: "arrow.clockwise")
+            }
+            .buttonStyle(.bordered)
+
+            Button {
+                testSpeechVoice()
+            } label: {
+                Label("Testuj głos", systemImage: "speaker.wave.2.fill")
+                    .frame(maxWidth: .infinity)
+            }
+            .buttonStyle(.borderedProminent)
+        }
+    }
+
+    private var speechVoiceModeBinding: Binding<SpeechVoiceMode> {
+        Binding(
+            get: { speechVoicePreference.mode },
+            set: { mode in
+                switch mode {
+                case .polishDefault:
+                    setSpeechVoicePreference(.polishDefault)
+                case .selectedVoice:
+                    setSpeechVoicePreference(
+                        SpeechVoicePreference(
+                            mode: .selectedVoice,
+                            voiceIdentifier: speechVoiceCatalog.defaultSystemVoice?.id
+                        )
+                    )
+                case .personalVoice:
+                    setSpeechVoicePreference(
+                        SpeechVoicePreference(
+                            mode: .personalVoice,
+                            voiceIdentifier: speechVoiceCatalog.personalVoices.first?.id
+                        )
+                    )
+                }
+            }
+        )
+    }
+
+    private var systemVoiceIdentifierBinding: Binding<String> {
+        Binding(
+            get: {
+                if let identifier = speechVoicePreference.voiceIdentifier,
+                   speechVoiceCatalog.systemVoices.contains(where: { $0.id == identifier }) {
+                    return identifier
+                }
+                return speechVoiceCatalog.defaultSystemVoice?.id ?? ""
+            },
+            set: { identifier in
+                setSpeechVoicePreference(SpeechVoicePreference(mode: .selectedVoice, voiceIdentifier: identifier))
+            }
+        )
+    }
+
+    private var personalVoiceIdentifierBinding: Binding<String> {
+        Binding(
+            get: {
+                if let identifier = speechVoicePreference.voiceIdentifier,
+                   speechVoiceCatalog.personalVoices.contains(where: { $0.id == identifier }) {
+                    return identifier
+                }
+                return speechVoiceCatalog.personalVoices.first?.id ?? ""
+            },
+            set: { identifier in
+                setSpeechVoicePreference(SpeechVoicePreference(mode: .personalVoice, voiceIdentifier: identifier))
+            }
+        )
+    }
+
+    private func refreshSpeechVoiceSettings() {
+        speechVoiceCatalog = SpeechVoiceCatalog.current()
+        speechVoicePreference = SpeechVoiceSettings.load()
+        speechVoiceStatusMessage = speechVoiceCatalog.fallbackMessage(for: speechVoicePreference)
+    }
+
+    private func setSpeechVoicePreference(_ preference: SpeechVoicePreference) {
+        speechVoicePreference = preference
+        SpeechVoiceSettings.save(preference)
+        speechVoiceStatusMessage = speechVoiceCatalog.fallbackMessage(for: preference)
+        haptics.play(.selection)
+    }
+
+    private func requestPersonalVoiceAuthorization() {
+        Task {
+            _ = await SpeechVoiceCatalog.requestPersonalVoiceAuthorization()
+            refreshSpeechVoiceSettings()
+            haptics.play(speechVoiceCatalog.personalVoiceAuthorization == .authorized ? .success : .warning)
+        }
+    }
+
+    private func testSpeechVoice() {
+        haptics.play(.selection)
+        speechVoicePreview.start(
+            itemID: "settings-tts-preview",
+            title: "Test głosu",
+            text: "Pavbot będzie czytać newsy tym głosem. Domyślnie używam stabilnego polskiego TTS."
+        )
     }
 
     private var hapticToggleBinding: Binding<Bool> {

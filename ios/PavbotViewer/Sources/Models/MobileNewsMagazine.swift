@@ -140,6 +140,75 @@ struct MobileNewsArticle: Codable, Equatable, Identifiable, Hashable {
     }
 }
 
+extension MobileNewsArticle {
+    init(researchArticle article: ResearchNewsArticle, topic: ReportTopicKind) {
+        let presentation = ResearchArticlePresentation(article: article, topic: topic)
+        let facts = presentation.bullets.isEmpty ? presentation.contextPoints : presentation.bullets
+        let analysis = presentation.paragraphs.joined(separator: "\n\n")
+        let whyItMatters = mobileNewsNonBlank(article.whyItMatters)
+            ?? mobileNewsNonBlank(presentation.summary)
+            ?? presentation.standfirst
+
+        self.init(
+            id: article.id,
+            section: article.section.rawValue,
+            title: presentation.title,
+            lead: presentation.standfirst,
+            facts: facts,
+            analysis: analysis,
+            whyItMatters: whyItMatters,
+            sources: article.sources,
+            tags: article.tags,
+            ttsText: Self.researchSpeechText(article: article, presentation: presentation),
+            priority: article.priority ?? "standard"
+        )
+    }
+
+    private static func researchSpeechText(
+        article: ResearchNewsArticle,
+        presentation: ResearchArticlePresentation
+    ) -> String {
+        var sections: [String] = []
+        append(article.title, to: &sections)
+        appendWithTitle("Sekcja", text: article.section.rawValue, to: &sections)
+        append(presentation.standfirst, to: &sections)
+        appendWithTitle("Co się stało", text: article.whatHappened, to: &sections)
+        appendList(title: "Najważniejsze punkty", items: presentation.bullets, to: &sections)
+        appendWithTitle("Dlaczego to ważne", text: article.whyItMatters, to: &sections)
+        appendList(title: "Kontekst", items: article.contextPoints ?? [], to: &sections)
+        appendList(title: "Pełny opis", items: presentation.paragraphs, to: &sections)
+        appendList(title: "Źródła", items: article.sources.map { "\($0.title)." }, to: &sections)
+        return sections.joined(separator: "\n\n")
+    }
+
+    private static func append(_ value: String, to sections: inout [String]) {
+        guard let clean = cleanResearchSpeechLine(value) else { return }
+        sections.append(clean)
+    }
+
+    private static func appendWithTitle(_ title: String, text: String?, to sections: inout [String]) {
+        guard let text, let clean = cleanResearchSpeechLine(text) else { return }
+        sections.append("\(title). \(clean)")
+    }
+
+    private static func appendList(title: String, items: [String], to sections: inout [String]) {
+        let cleanItems = items.compactMap(cleanResearchSpeechLine)
+        guard !cleanItems.isEmpty else { return }
+        sections.append(([title + "."] + cleanItems).joined(separator: " "))
+    }
+
+    private static func cleanResearchSpeechLine(_ value: String) -> String? {
+        var result = value
+        result = result.replacingOccurrences(of: #"\[([^\]]+)\]\(([^)]+)\)"#, with: "$1", options: .regularExpression)
+        result = result.replacingOccurrences(of: #"https?://\S+"#, with: "", options: .regularExpression)
+        result = result.replacingOccurrences(of: #"(?m)^\s*[-*]\s+"#, with: "", options: .regularExpression)
+        result = result.replacingOccurrences(of: #"[*_`#>]"#, with: "", options: .regularExpression)
+        result = result.replacingOccurrences(of: #"\s+"#, with: " ", options: .regularExpression)
+        let normalized = result.trimmingCharacters(in: .whitespacesAndNewlines)
+        return normalized.isEmpty ? nil : normalized
+    }
+}
+
 struct MobileNewsAudioArtifact: Codable, Equatable, Hashable, Identifiable {
     let variant: String?
     let path: String?

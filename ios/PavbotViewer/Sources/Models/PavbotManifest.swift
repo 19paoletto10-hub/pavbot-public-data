@@ -15,7 +15,7 @@ struct PavbotManifest: Codable, Equatable {
         var errorDescription: String? {
             switch self {
             case .unsupportedSchemaVersion(let version):
-                "Unsupported manifest schema version \(version)."
+                "Nieobsługiwana wersja schematu manifestu \(version)."
             }
         }
     }
@@ -404,7 +404,7 @@ struct PavbotArtifact: Codable, Identifiable, Equatable, Hashable {
         if let date, let time {
             return "\(date) \(time)"
         }
-        return date ?? "No date"
+        return date ?? "Brak daty"
     }
 
     var fileExtension: String {
@@ -554,8 +554,8 @@ extension ArtifactType: Codable {
         case .podcastSources: "Sources"
         case .podcastTtsVariants: "TTS variants"
         case .podcastArtifact: "Podcast"
-        case .jobsData: "Jobs data"
-        case .researchData: "Research data"
+        case .jobsData: "Dane Praca"
+        case .researchData: "Dane Przegląd"
         case .mobileNewsData: "Mobile news data"
         case .pulseNewsData: "Pulse news data"
         case .redditRadarData: "Reddit Radar data"
@@ -676,7 +676,7 @@ struct ArtifactNotificationRoute: Equatable, Hashable, Sendable {
         if let date {
             return date
         }
-        return "Notification files"
+        return "Pliki powiadomień"
     }
 
     private static func stringArray(from value: Any?) -> [String] {

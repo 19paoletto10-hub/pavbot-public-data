@@ -9,9 +9,9 @@ struct ResearchNewsClient {
         var errorDescription: String? {
             switch self {
             case .invalidResponse:
-                "Serwer Research zwrócił nieprawidłową odpowiedź."
+                "Serwer Przeglądu zwrócił nieprawidłową odpowiedź."
             case .httpStatus(let status):
-                "Serwer Research zwrócił HTTP \(status)."
+                "Serwer Przeglądu zwrócił HTTP \(status)."
             }
         }
     }
@@ -83,8 +83,8 @@ final class ResearchNewsStore {
             if issue == nil {
                 state = .failed(
                     .custom(
-                        title: "Brak raportów Research",
-                        message: "Brak opublikowanych raportów Research w manifeście.",
+                        title: "Brak raportów Przegląd",
+                        message: "Brak opublikowanych raportów Przegląd w manifeście.",
                         actionTitle: "Odśwież manifest",
                         systemImage: topic.systemImage,
                         tint: topic.tint
@@ -117,15 +117,15 @@ final class ResearchNewsStore {
 
         loadCachedIssue(for: topic)
         if issue != nil {
-            cacheNotice = PavbotCacheNoticeCopy.refreshFailed(context: "wydanie Research")
+            cacheNotice = PavbotCacheNoticeCopy.refreshFailed(context: "wydanie Przegląd")
             state = .loaded
         } else {
             cacheNotice = nil
             state = .failed(
                 lastError.map { .network($0, context: .preview) }
                     ?? .custom(
-                        title: "Nie udało się wczytać Research",
-                        message: "Nie udało się wczytać wydania Research.",
+                        title: "Nie udało się wczytać Przegląd",
+                        message: "Nie udało się wczytać wydania Przegląd.",
                         actionTitle: "Odśwież wydanie",
                         systemImage: topic.systemImage,
                         tint: topic.tint
@@ -192,7 +192,7 @@ final class ResearchNewsStore {
         case missingReport
 
         var errorDescription: String? {
-            "Paczka Research nie zawiera raportu Markdown."
+            "Paczka Przegląd nie zawiera raportu Markdown."
         }
     }
 }
@@ -225,7 +225,7 @@ struct ResearchNewsParser {
         case missingContent
 
         var errorDescription: String? {
-            "Raport Research nie zawiera treści do pokazania."
+            "Raport Przegląd nie zawiera treści do pokazania."
         }
     }
 
@@ -250,8 +250,8 @@ struct ResearchNewsParser {
             packageKey: package.key,
             date: metadataValue(named: "Date", in: markdown) ?? package.date,
             time: package.time,
-            status: metadataValue(named: "Status", in: markdown) ?? "Research update",
-            lead: lead.isEmpty ? "Wydanie zawiera nowe materiały Research gotowe do czytania w aplikacji." : lead,
+            status: metadataValue(named: "Status", in: markdown) ?? "Aktualizacja Przeglądu",
+            lead: lead.isEmpty ? "Wydanie zawiera nowe materiały Przegląd gotowe do czytania w aplikacji." : lead,
             articles: fallbackArticles,
             checkedSources: extractSources(from: sourcesSection),
             podcastTopics: parsePodcastTopics(from: section(namedAnyOf: ["Tematy do podcastu", "Podcast topics"], in: sections)),

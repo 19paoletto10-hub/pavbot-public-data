@@ -21,7 +21,7 @@ enum AccessibilityShowcaseFeature: String, CaseIterable, Identifiable {
         case .voiceOver:
             "VoiceOver"
         case .voiceControl:
-            "Voice Control"
+            "Sterowanie głosem"
         case .sufficientContrast:
             "Wysoki kontrast"
         case .differentiateWithoutColor:
@@ -36,21 +36,21 @@ enum AccessibilityShowcaseFeature: String, CaseIterable, Identifiable {
     var appStoreName: String {
         switch self {
         case .darkInterface:
-            "Dark Interface"
+            "Tryb jasny i ciemny"
         case .largerText:
-            "Larger Text"
+            "Duży tekst"
         case .voiceOver:
             "VoiceOver"
         case .voiceControl:
-            "Voice Control"
+            "Sterowanie głosem"
         case .sufficientContrast:
-            "Sufficient Contrast"
+            "Wysoki kontrast"
         case .differentiateWithoutColor:
-            "Differentiate Without Color Alone"
+            "Nie tylko kolor"
         case .reducedMotion:
-            "Reduced Motion"
+            "Redukcja ruchu"
         case .captions:
-            "Captions"
+            "Napisy i transkrypcje"
         }
     }
 

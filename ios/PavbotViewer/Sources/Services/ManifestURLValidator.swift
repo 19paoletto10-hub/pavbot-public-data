@@ -16,16 +16,16 @@ enum ManifestURLValidator {
     static func validate(_ value: String) -> ManifestURLValidationResult {
         let trimmed = value.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else {
-            return .invalid("Enter a manifest URL.")
+            return .invalid("Wpisz adres URL manifestu.")
         }
         guard let url = URL(string: trimmed), let scheme = url.scheme else {
-            return .invalid("Enter a valid manifest URL.")
+            return .invalid("Wpisz poprawny adres URL manifestu.")
         }
         guard scheme == "https" else {
-            return .invalid("Use an HTTPS manifest URL.")
+            return .invalid("Użyj adresu URL manifestu z HTTPS.")
         }
         guard url.pathExtension.lowercased() == "json" else {
-            return .invalid("Manifest URL must point to a JSON file.")
+            return .invalid("Adres URL manifestu musi wskazywać plik JSON.")
         }
         return .valid
     }

@@ -29,7 +29,7 @@ struct ResearchDataReport: Codable, Equatable {
             packageKey: package.key,
             date: runDate.nilIfBlank ?? package.date,
             time: runTime?.nilIfBlank ?? package.time,
-            status: status.nilIfBlank ?? "Research update",
+            status: status.nilIfBlank ?? "Aktualizacja Przeglądu",
             lead: leadParagraphs
                 .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
                 .filter { !$0.isEmpty }

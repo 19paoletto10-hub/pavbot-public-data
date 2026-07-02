@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-06-29
+Last updated: 2026-07-02
 
 ## Current Understanding
 
@@ -85,6 +85,80 @@ ukraińskich uchodźców. RCB przesunęło akcent z samego upału na alert burzo
 29/30 czerwca, utonięcia, suszę hydrologiczną i pożary lasów. W świecie Ormuz
 pozostaje kruchą pauzą, nie porozumieniem: AP wskazuje wstrzymanie uderzeń
 USA-Iran, ale także spór o to, czy rozmowy w Dosze są uzgodnione.
+Po runie 30 czerwca Orka przeszła w fazę doprecyzowania wykonawczego: KPRM
+cytuje 50 mld koron szwedzkich jako skalę połączonego pakietu, Portal
+Morski/PAP wskazuje AIP, pierwszy okręt w 2030 r. i szacunek około 20 mld zł,
+a Pakt dla Bałtyku pozostaje ramą polityczno-przemysłową. Nowym krajowym
+tematem jest komunikat MON o użyciu AI do poprawy zdjęcia i niezamierzonej
+zmianie treści fotografii. Prezydencka aktywność ustawowa objęła podpisanie
+dwóch ustaw oraz skierowanie do Sejmu projektu dnia pamięci działaczy opozycji
+antykomunistycznej. Pogoda pozostaje tematem bezpieczeństwa publicznego:
+burze po upale, utonięcia, susza i pożary lasów mają dziś większe znaczenie
+praktyczne niż sama temperatura. W świecie utrzymują się krucha pauza USA-Iran,
+ukraińska narracja o rosyjskich brakach paliwa, kryzys humanitarny w Wenezueli
+oraz polityczny zwrot w Peru po zwycięstwie Keiko Fujimori.
+Wieczorny run 2026-06-30-1935 przesunął punkt ciężkości z parametrów Orki na
+wykonanie odporności państwa: KPRM/Rada Ministrów powołały pełnomocnika do spraw
+Wzmocnienia Odporności Państwa, obejmując tym portfelem inwestycje SAFE,
+przemysł obronny, współpracę z UE/NATO, antydezinformację i edukację obronną.
+Równolegle prokuratura zamknęła sprawę "dwóch wież", a media opisały umorzenie
+dwóch wątków sprawy "zamachu stanu". Nowe bloki bezpieczeństwa publicznego to
+śmierć żołnierza na wschodniej granicy przy ostrożnych ustaleniach Żandarmerii,
+fałszywy alarm transpondera w locie LOT do Tel Awiwu oraz MEDEVAC na Bałtyku.
+W relacjach polsko-ukraińskich temat symboli wyszedł poza Polskę przez czeską
+inicjatywę wokół Orderu Białego Lwa i apel kardynałów Polski i Ukrainy o
+pojednanie. W świecie wieczorne akcenty to Syrski o możliwym kierunku
+briańsko-czernihowskim, pośrednie rozmowy USA-Iran w Katarze o aktywach i Ormuz
+oraz kryzys zdrowotny po trzęsieniach w Wenezueli.
+Po runie 1 lipca główną krajową zmianą gospodarczą jest wygaśnięcie pakietu
+Ceny Paliwa Niżej: po zakończeniu obniżonego VAT temat paliw wraca na stacje,
+do inflacji i do politycznej oceny tarcz osłonowych. W krajowej agendzie
+odporności doszedł praktyczny element medyczny: MON wskazało kierownictwo
+Wojskowej Akademii Medycznej w Łodzi, łącząc start akademii z medycyną pola
+walki, katastrof i wojskową służbą zdrowia. Pogoda nadal jest tematem
+bezpieczeństwa publicznego, bo RCB utrzymuje ostrzeżenia upałowe do 1 lipca i
+suszę hydrologiczną niemal w całym kraju. W świecie Ormuz pozostaje mediacją
+techniczno-polityczną przez Katar, AP pokazała skalę rosyjskiego kryzysu
+paliwowego po ukraińskich uderzeniach, Sąd Najwyższy USA utrzymał obywatelstwo
+z urodzenia, a Wenezuela weszła w fazę kryzysu zdrowia, schronienia i pomocy
+humanitarnej.
+Wieczorny run 2026-07-01-1934 przesunął uwagę na wykonanie polityki
+bezpieczeństwa i administracji państwa. Pałac Prezydencki akcentuje rozmowy o
+stałej bazie USA w Polsce oraz przygotowania do szczytu NATO w Ankarze, a KPRM
+pokazała agendę SKRM 2 lipca z 800+, środkami ograniczającymi, zmianami
+karnymi/przyrodniczymi i refundacją. Nowym elementem zaplecza świadczeń jest
+powołanie Liwiusza Laski na prezesa ZUS. W bezpieczeństwie publicznym RCB
+przeniosło akcent na burze i wiatr w nocy 1/2 lipca, a Szpital Południowy i
+Bóbr/Pilchowice stały się osobnymi testami zaufania do instytucji: prokuratura
+i media rozwijają wątek szpitalny, a śnięte ryby przy remoncie zapory wymagają
+oficjalnych ustaleń środowiskowych. W świecie Ukraina według AP ponownie
+uderzyła w rafinerię Ufa, Ormuz pozostaje sporem o trasy, opłaty i kontrolę
+cieśniny, a AP dodała ciężki temat odpowiedzialności za cywilne ofiary
+uderzenia w szkołę w Minabie.
+Po porannym runie 2 lipca najważniejszym tematem bezpieczeństwa jest nocny
+rosyjski atak na Kijów i polska reakcja proceduralna: DORSZ, cytowany przez
+TVN24, informował o prewencyjnym operowaniu lotnictwa i braku naruszenia
+przestrzeni powietrznej RP. Wątek stałej obecności USA w Polsce ma teraz dwa
+równoległe tory: KPRP opisuje rozmowę Przydacz-Rubio i przejście od rotacji do
+stałej formuły, a media za Politico wskazują presję kongresmenów na Pentagon w
+sprawie brygady pancernej. Post-CPN jest już mierzalny w cenach detalicznych
+paliw, a Bóbr/Pilchowice przeszły w fazę zaleceń Sanepidu i badań wody po
+ponad 11 tonach śniętych ryb. SKRM 2 lipca pozostaje południowym follow-upem
+legislacyjnym. W świecie Ormuz ma pozytywny, ale kruchy sygnał z Kataru, a
+Wenezuela wchodzi w fazę kryzysu zdrowotnego po trzęsieniach.
+Wieczorny run 2026-07-02-1933 przesunął punkt ciężkości na wykonanie decyzji i
+odpowiedzialność instytucji. Bilans ataku na Kijów wzrósł według AP do co
+najmniej 21 zabitych i ponad 90 rannych, a Euronews dodał unijny wątek sankcji
+wobec rosyjskiego zaplecza dronowego. KPRP opublikowała pakiet decyzji
+ustawowych: pięć podpisów, dwa weta i ustawę akcyzową skierowaną do TK. WIOŚ
+Wrocław w komunikacie o Bobrze wskazał roboczy trop przyduchy po końcowym
+zrzucie wody podczas remontu zapory, przy trwających badaniach próbek. Relacje
+polsko-ukraińskie mają piątkowy test ministerialny Sikorski-Sybiha oraz
+nieoficjalną propozycję upamiętnienia Marko Bezruczki w ukraińskim Panteonie
+Narodowym. Dodatkowe follow-upy to formalne dokumenty węgierskie po komunikacie
+Sikorskiego o cofnięciu statusów uchodźczych Ziobrze, Romanowskiemu i
+Koteckiej-Ziobro, lista sankcji UE po Kijowie, kolejne komunikaty o Ormuz oraz
+kryzys zdrowia publicznego w Wenezueli.
 
 ## Stable Facts
 
@@ -136,9 +210,22 @@ USA-Iran, ale także spór o to, czy rozmowy w Dosze są uzgodnione.
   prezydentów i spór orderowy.
 - Po wejściu strukturalnego `researchData` pilnować, aby każdy poranny raport
   miał sekcję `Artykuły do aplikacji`; brak tej sekcji blokuje JSON i publikację.
+- Przy wątku stałej bazy USA w Polsce oddzielać polityczne stanowiska Pałacu,
+  MON i KPRM od formalnych decyzji strony amerykańskiej i od lokalizacji.
+- Sprawę Szpitala Południowego opisywać procesowo: co podała prokuratura,
+  co ustaliły media, a czego jeszcze nie zweryfikowano.
+- Pilchowice/Bóbr śledzić pod kątem oficjalnych wyników badań, komunikatów
+  WIOŚ/Wód Polskich/Tauronu i decyzji wojewody; nie przesądzać przyczyn przed
+  dokumentami.
 
 ## Recent Reports
 
+- [2026-07-02-1933](runs/2026-07-02-1933.md)
+- [2026-07-02](runs/2026-07-02.md)
+- [2026-07-01-1934](runs/2026-07-01-1934.md)
+- [2026-07-01](runs/2026-07-01.md)
+- [2026-06-30-1935](runs/2026-06-30-1935.md)
+- [2026-06-30](runs/2026-06-30.md)
 - [2026-06-29-1935](runs/2026-06-29-1935.md)
 - [2026-06-29](runs/2026-06-29.md)
 - [2026-06-28-1935](runs/2026-06-28-1935.md)

@@ -40,7 +40,7 @@ struct AutomationClientBrief: Equatable {
             ]
         case .automation:
             headline = "Monitoring procesu operacyjnego"
-            summary = "Pilnuje działania workflow i pokazuje, czy automatyzacja wykonuje zadania w przewidywalny sposób."
+            summary = "Pilnuje działania przepływów i pokazuje, czy automatyzacja wykonuje zadania w przewidywalny sposób."
             outputLabel = "Status automatyzacji"
             highlights = [
                 "Sprawdza stan i zachowanie skonfigurowanego procesu.",
@@ -179,8 +179,8 @@ private struct OverviewSection: View {
             eyebrow: "Operational Console",
             title: "Pavbot",
             subtitle: layout.usesDashboardLayout
-                ? "Monitor automatyzacji Codex z siatką workflow, statusami i szybkim wejściem do opublikowanych plików."
-                : "Aktywne workflow, ostatnie uruchomienia i pliki generowane przez Codex.",
+                ? "Monitor automatyzacji Codex z siatką przepływów, statusami i szybkim wejściem do opublikowanych plików."
+                : "Aktywne przepływy, ostatnie uruchomienia i pliki generowane przez Codex.",
             systemImage: "bolt.circle.fill",
             tint: .yellow,
             insights: [
@@ -468,11 +468,11 @@ extension AutomationKind {
     var label: String {
         switch self {
         case .research:
-            "Research"
+            "Przegląd"
         case .podcast:
             "Podcast"
         case .researchAudio:
-            "Research + Audio"
+            "Przegląd + Audio"
         case .automation:
             "Automation"
         }

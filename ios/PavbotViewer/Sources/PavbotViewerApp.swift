@@ -5,7 +5,8 @@ struct PavbotViewerApp: App {
     @UIApplicationDelegateAdaptor(PavbotRemoteNotificationAppDelegate.self) private var appDelegate
     @State private var store = ManifestStore()
     @State private var router = AppRouter()
-    @State private var audioPlayback = AudioPlaybackService()
+    @State private var audioCoordinator: PavbotAudioSessionCoordinator
+    @State private var audioPlayback: AudioPlaybackService
     @State private var weatherBrief = WeatherBriefStore(
         locationProvider: { mode in
             guard mode != .none else { return nil }
@@ -19,6 +20,9 @@ struct PavbotViewerApp: App {
     private let notificationDelegate = ArtifactNotificationDelegate()
 
     init() {
+        let coordinator = PavbotAudioSessionCoordinator()
+        _audioCoordinator = State(initialValue: coordinator)
+        _audioPlayback = State(initialValue: AudioPlaybackService(audioCoordinator: coordinator))
         PavbotConnectionDefaults.enforceLegacyUserDefaults()
     }
 
@@ -27,6 +31,7 @@ struct PavbotViewerApp: App {
             ContentView()
                 .environment(store)
                 .environment(router)
+                .environment(audioCoordinator)
                 .environment(audioPlayback)
                 .environment(weatherBrief)
                 .environment(todayHumor)
