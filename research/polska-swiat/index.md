@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-01
+Last updated: 2026-07-02
 
 ## Current Understanding
 
@@ -135,6 +135,17 @@ oficjalnych ustaleń środowiskowych. W świecie Ukraina według AP ponownie
 uderzyła w rafinerię Ufa, Ormuz pozostaje sporem o trasy, opłaty i kontrolę
 cieśniny, a AP dodała ciężki temat odpowiedzialności za cywilne ofiary
 uderzenia w szkołę w Minabie.
+Po porannym runie 2 lipca najważniejszym tematem bezpieczeństwa jest nocny
+rosyjski atak na Kijów i polska reakcja proceduralna: DORSZ, cytowany przez
+TVN24, informował o prewencyjnym operowaniu lotnictwa i braku naruszenia
+przestrzeni powietrznej RP. Wątek stałej obecności USA w Polsce ma teraz dwa
+równoległe tory: KPRP opisuje rozmowę Przydacz-Rubio i przejście od rotacji do
+stałej formuły, a media za Politico wskazują presję kongresmenów na Pentagon w
+sprawie brygady pancernej. Post-CPN jest już mierzalny w cenach detalicznych
+paliw, a Bóbr/Pilchowice przeszły w fazę zaleceń Sanepidu i badań wody po
+ponad 11 tonach śniętych ryb. SKRM 2 lipca pozostaje południowym follow-upem
+legislacyjnym. W świecie Ormuz ma pozytywny, ale kruchy sygnał z Kataru, a
+Wenezuela wchodzi w fazę kryzysu zdrowotnego po trzęsieniach.
 
 ## Stable Facts
 
@@ -196,6 +207,7 @@ uderzenia w szkołę w Minabie.
 
 ## Recent Reports
 
+- [2026-07-02](runs/2026-07-02.md)
 - [2026-07-01-1934](runs/2026-07-01-1934.md)
 - [2026-07-01](runs/2026-07-01.md)
 - [2026-06-30-1935](runs/2026-06-30-1935.md)

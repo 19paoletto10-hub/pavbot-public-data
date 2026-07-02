@@ -19,6 +19,7 @@
 | Medium | Monitor Szpital Południowy investigations | Prosecution plans further documentation and witness work while media add prosektorium allegations | Use only official prokuratura, NIK, city and hospital statements for firm claims; keep media allegations attributed | Open |
 | Medium | Track Pilchowice/Bóbr environmental findings | Media report mass fish deaths after reservoir drawdown during dam renovation | Monitor WIOŚ, Wody Polskie, Tauron, wojewoda and local authorities for test results and responsibility findings | Open |
 | Medium | Track Minab civilian-harm accountability | AP reconstructed the Iran school strike and lack of final Pentagon accounting | Watch AP, Airwars, CENTCOM/Pentagon and U.S. Congress for official report or oversight actions | Open |
+| High | Track 2 July Kyiv strike and Polish air-defence response | Massive Russian strike on Kyiv triggered preventive Polish aviation procedures and no recorded RP airspace violation | Monitor DORSZ/MON/NATO and Ukrainian authorities for updated casualty count, follow-up alerts and air-defence support requests | Open |
 
 ## Review Notes
 
@@ -137,6 +138,14 @@
   Podcast should not merge Szpital Południowy, Pilchowice and RCB into one
   generic "crisis" story; each has different evidence and responsible
   institutions.
+- 2026-07-02: Morning research run created a material update. Strongest sources
+  were AP/TVN24/Guardian for the Kyiv strike and Polish air-defence response,
+  Prezydent RP plus Interia/Politico for the U.S. troop-presence track, TVN24
+  and e-petrol for post-CPN fuel prices, Radio ZET/Polskie Radio/Wprost for
+  Pilchowice-Bóbr public-health and Tauron context, KPRM for the SKRM agenda,
+  AP for Qatar-Ormuz and AP/Guardian for Venezuela. Podcast should lead with
+  Kyiv/DORSZ, then separate U.S. troops, fuels and Pilchowice instead of
+  bundling them into one generic state-stress narrative.
 
 ## Done
 
