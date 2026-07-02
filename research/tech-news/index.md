@@ -1,12 +1,27 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-01
+Last updated: 2026-07-02
 
 ## Current Understanding
 
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
+
+Po raporcie z 2026-07-02 najważniejsza nowa warstwa to open-model compute i
+publiczny rachunek infrastruktury AI: Together AI zebrało 800 mln USD przy
+wycenie 8,3 mld USD jako neocloud dla otwartych modeli, a raporty Amazon i
+Google pokazują napięcie między rozbudową data centers, emisjami, wodą i
+celami klimatycznymi. Druga warstwa to globalne governance: wstępny raport
+panelu ONZ ustawia bazę dowodową przed Global Dialogue w Genewie i przesuwa
+rozmowę z pojedynczych export controls na zdolność państw do oceniania
+frontier models. Trzecia warstwa to produktowa monetyzacja AI: Meta One
+Premium limituje Conversation Focus w okularach AI, Google ZKP daje
+prywatnościowy wariant age assurance, a HN/Product Hunt pokazują narzędzia
+agentowe, benchmarki senior-engineer tasks i usage billing jako codzienną
+warstwę komercjalizacji agentów. Czwarta, rynkowa warstwa to Bending Spoons
+IPO jako test europejskiego software roll-upu przebudowującego legacy marki
+przez centralny software stack, AI i subskrypcje.
 
 Po raporcie z 2026-07-01 najważniejsza nowa warstwa to agentic AI jako
 produkt masowy, ale nadal reglamentowany na szczycie: Claude Sonnet 5 obniża
@@ -212,6 +227,34 @@ transparentność środowiskową AI.
   Monetization Gateway, adopcję x402, partnerów Ceramic/You.com, modele cenowe
   za MCP tools/API/content, identity dla agentów oraz reakcję wydawców i AI
   search engines.
+- Open-model neocloud economics: Together AI trzeba śledzić jako test, czy
+  otwarte modele i niezależna infrastruktura mogą realnie obniżać koszt
+  agentów wobec zamkniętych frontier APIs; patrzeć na customer proof,
+  niezależne benchmarki, capacity, marże, relacje z NVIDIĄ i konkurencję z
+  Meta cloud.
+- UN AI scientific panel and Global Dialogue: śledzić Genewę 6-7 lipca 2026,
+  cytowania raportu przez regulatorów, finansowanie AI safety institutes,
+  język o frontier-model evaluation oraz polskie/UE odniesienia bez
+  wyciągania porad prawnych.
+- Big Tech AI emissions reporting: Amazon/Google trzeba obserwować jako
+  wskaźnik, czy AI data centers rosną szybciej niż efektywność, czysta energia
+  i water replenishment; patrzeć na Microsoft/Meta reports, rachunki lokalne,
+  standardy carbon accounting i public utility bills.
+- Meta AI glasses subscriptions: śledzić Meta One Premium, limity
+  Conversation Focus, reakcje accessibility community, rollout krajowy,
+  pricing i to, czy kolejne lokalne funkcje okularów AI trafią do planu
+  subskrypcyjnego.
+- Privacy-preserving age assurance: Google Longfellow ZK, EUDI Wallet, Yivi i
+  krytykę Brave warto śledzić jako techniczny kontrapunkt do age checks;
+  oceniać issuerów, interoperacyjność, ryzyko wykluczenia i realne wdrożenia.
+- Software roll-up public-market test: Bending Spoons IPO trzeba obserwować
+  jako europejski model kupowania legacy digital brands i przebudowy przez AI,
+  subskrypcje i centralny software stack; patrzeć na dług, retencję,
+  reputację po cięciach i kolejne przejęcia.
+- Agent evaluation and operational tooling: Senior SWE-Bench, ZCode GLM-5.2,
+  Cursor for iOS, Stigg 2.0 i N71 pokazują, że agenty potrzebują benchmarków,
+  wspólnego kontekstu, usage billing i obserwowalności; śledzić adopcję poza
+  launch-day HN/Product Hunt.
 - Meta AI cloud and excess compute monetization: śledzić oficjalne
   potwierdzenie Meta, pricing, dostępne modele, wpływ na CoreWeave/Nebius,
   umowy z klientami, regulatory scrutiny oraz czy podobny ruch zrobią SpaceX,

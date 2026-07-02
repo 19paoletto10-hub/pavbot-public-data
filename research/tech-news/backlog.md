@@ -17,6 +17,13 @@
 | Medium | Track Getty/Shutterstock editorial content regulation | Getty plans to end the Shutterstock merger after CMA required selling Shutterstock's editorial business, showing content competition pressure in the AI era | Watch formal termination, Shutterstock response, Getty financing alternatives and implications for licensed content and AI training deals | Open |
 | Medium | Track Lime IPO and physical tech economics | Lime's Nasdaq IPO tests public-market appetite for software plus physical fleets, city rules and high operating costs | Watch first-day trading, use of proceeds, debt reduction, Uber relationship, fleet lifetime and municipal regulation | Open |
 | Medium | Track Polish digital credential infrastructure | mDyplomy in mObywatel and RDE/POL-on move higher-education credentials into public digital identity infrastructure | Watch university adoption, API integration, employer verification, outages and the mandatory digital diploma start on 2027-01-01 | Open |
+| High | Track open-model neocloud economics | Together AI's $800M round positions open-model cloud as a cost and capacity alternative to closed frontier APIs | Watch customer proof, independent inference benchmarks, capacity buildout, NVIDIA relationship, margins and competition from Meta cloud | Open |
+| High | Track UN AI scientific panel | The UN preliminary report creates a shared evidence baseline for AI governance ahead of the 2026 Geneva Global Dialogue | Watch July 6-7 Geneva outcomes, regulator citations, AI safety institute funding, frontier evaluation language and Polish/EU references | Open |
+| High | Track Big Tech AI emissions reporting | Amazon and Google reports show AI data-center growth pressuring emissions, water and clean-energy narratives | Watch Microsoft/Meta disclosures, carbon accounting standards, data-center cost bills, water permits and local ratepayer response | Open |
+| Medium | Track Meta AI glasses subscriptions | Meta One Premium limits Conversation Focus on AI glasses, turning a device feature into a monthly usage bucket | Watch rollout regions, accessibility backlash, pricing, device-support claims and whether more on-device features move behind subscriptions | Open |
+| Medium | Track privacy-preserving age assurance | Google ZKP libraries, EUDI Wallet work and HN interest show age checks can be implemented with less identity disclosure | Watch Longfellow ZK adoption, Yivi/Brave critiques, W3C standards, issuer trust and production wallet support | Open |
+| Medium | Track software roll-up IPOs | Bending Spoons' Nasdaq debut tests a European model of acquiring legacy digital brands and rebuilding them with centralized software and AI | Watch debt, user retention, next acquisitions, post-cut reputation and whether public markets keep rewarding the roll-up model | Open |
+| High | Track agent evaluation and operational tooling | Senior SWE-Bench, ZCode GLM-5.2 and Product Hunt launches show agent tooling moving toward evaluation, billing, context and mobile workflows | Watch benchmark adoption, independent agent results, GLM tooling, Stigg usage runtime, Cursor mobile use and operational observability | Open |
 | High | Track AWS forward-deployed AI engineers | AWS's $1B FDE organization turns agentic AI adoption into embedded engineering, customer knowledge graphs, runbooks and outcome-oriented deployments | Watch pricing model, named customer case studies, partner roles, security controls and responses from OpenAI, Anthropic and Microsoft | Open |
 | High | Track agent payments and reputation infrastructure | OKX AI is a concrete attempt to let autonomous agents discover work, pay in stablecoins, build identities and resolve disputes | Watch fraud controls, compliance, spending limits, dispute resolution, non-crypto adoption and whether agent-to-agent payments move beyond launch claims | Open |
 | Medium | Track hosted MCP servers for major platforms | X's hosted MCP server adds another large platform to the official connector layer for AI tools and agent workflows | Watch API pricing, rate limits, spam/source-poisoning mitigation, moderation, enterprise controls and adoption in Claude/Cursor/Grok-style tools | Open |
@@ -356,6 +363,11 @@
   AI-authored code policy, Venice AI privacy-first assistant growth, Sony ending
   new PlayStation discs, Polish AI disinformation metrics and Product Hunt's
   agentic launch day.
+- 2026-07-02: Daily research run created a material update. Strongest podcast
+  candidates: Together AI open-model neocloud, UN AI scientific panel,
+  Amazon/Google emissions and data-center costs, Meta One Premium for AI
+  glasses, Google ZKP age assurance, Bending Spoons IPO and agent evaluation/
+  operational tooling via HN/Product Hunt.
 
 ## Done
 

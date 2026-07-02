@@ -1,0 +1,487 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-02",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Poranny research jest materialną aktualizacją po wieczornym raporcie z 2026-07-01-1934. Najmocniejsza nowa warstwa to open-model compute jako realna alternatywa wobec zamkniętych laboratoriów: Together AI zebrało 800 mln USD przy wycenie 8,3 mld USD, a oficjalny komunikat wprost mówi o presji marż przez ceny frontier tokens i o 50-krotnym planowanym wzroście footprintu infrastruktury.",
+    "Druga warstwa to governance i koszt publiczny AI. Panel ONZ opublikował wstępny raport przed Global Dialogue w Genewie, ostrzegając, że możliwości AI wyprzedzają naukowe rozumienie i zdolność państw do działania. Równolegle raporty Amazon i Google pokazują, że data centers, energia i emisje przestają być tłem dla AI i stają się częścią głównej historii technologicznej.",
+    "Trzecia warstwa to monetyzacja agentów i AI hardware w produkcie konsumenckim. Meta zaczęła testować Meta One Premium dla okularów AI i ograniczyła Conversation Focus do 3 godzin miesięcznie bez subskrypcji, mimo że funkcja ma silny wymiar dostępnościowy. HN i Product Hunt utrzymały silny sygnał agentowy: ZCode dla GLM-5.2, Senior SWE-Bench, Cursor for iOS, Framer AI Agents, Stigg 2.0 i Google ZKP dla age assurance pokazują, że rynek jednocześnie buduje narzędzia agentowe, testy jakości i warstwę zaufania."
+  ],
+  "summaryBullets": [
+    "Infrastruktura: Together AI zbiera 800 mln USD i przyspiesza open-model cloud",
+    "Regulacje: Panel ONZ ustawia globalny baseline dla ryzyka AI",
+    "Infrastruktura: Emisje Amazon i Google pokazują cenę data center boomu"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-02-0-together-ai-zbiera-800-mln-usd-i-przyspiesza-open-model-cloud-61d9d9fa24",
+      "section": "Infrastruktura",
+      "title": "Together AI zbiera 800 mln USD i przyspiesza open-model cloud",
+      "standfirst": "Together AI ogłosiło 800 mln USD rundy Series C przy wycenie 8,3 mld USD. Spółka sprzedaje tańszą infrastrukturę dla otwartych modeli jako kontrę wobec drogich zamkniętych frontier APIs.",
+      "whatHappened": "Together AI pozyskało duże finansowanie od Aramco Ventures i inwestorów strategicznych, deklarując 1,15 mld USD annual bookings.",
+      "whyItMatters": "To wzmacnia tezę, że wojna AI nie rozstrzyga się wyłącznie na modelach, ale też na koszcie inferencji, capacity i możliwości samodzielnego wyboru modelu.",
+      "deeperAnalysis": [
+        "Wczorajszy raport opisywał Meta jako potencjalnego sprzedawcę nadmiarowego AI compute. Together AI pokazuje ten sam problem od strony niezależnego dostawcy: firmy chcą używać modeli, ale ceny zamkniętych systemów mogą zjadać marże produktu. Oficjalny komunikat mówi wprost o pracy na open models takich jak DeepSeek, Nemotron, MiniMax i Kimi oraz o 6- do 60-krotnych oszczędnościach u klientów w porównaniu z zamkniętymi modelami.",
+        "Najważniejsza jest skala finansowania i kapitału infrastrukturalnego. Aramco Ventures jako lead, NVIDIA jako uczestnik i plan 50-krotnego wzrostu footprintu w pięć lat pokazują, że open-model cloud nie jest już tylko ruchem ideologicznym. To normalny segment infrastruktury, konkurujący z hyperscalerami, neocloudami i własnymi klastrami Big Tech.",
+        "Dla podcastu dobry kąt brzmi: open source AI staje się sposobem kontroli kosztów, a nie tylko hasłem o wolności. Jeśli agenty mają działać w tysiącach długich zadań, firmy będą liczyć nie tylko jakość odpowiedzi, ale też koszt tokenów, batchowanie, routing modeli, gwarancje capacity i możliwość przeniesienia workloadu."
+      ],
+      "contextPoints": [
+        "Co się stało: Together AI zebrało 800 mln USD przy wycenie 8,3 mld USD.",
+        "Dlaczego ważne: open-model infrastructure może być praktyczną odpowiedzią na ceny frontier APIs i obawy o vendor lock-in.",
+        "Na co patrzeć dalej: customer proof, realny koszt inferencji, relacje z NVIDIĄ, konkurencję z Meta cloud i niezależne benchmarki."
+      ],
+      "sources": [
+        {
+          "title": "Together AI / BusinessWire",
+          "url": "https://www.businesswire.com/news/home/20260701243402/en/Together-AI-Raises-%24800-Million-at-%248.3-Billion-Valuation-to-Make-Frontier-AI-Accessible-to-All"
+        },
+        {
+          "title": "Techmeme",
+          "url": "https://www.techmeme.com/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Neocloud",
+        "Open source",
+        "Infrastruktura",
+        "Modele"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-02-1-panel-onz-ustawia-globalny-baseline-dla-ryzyka-ai-2d04e1668e",
+      "section": "Regulacje",
+      "title": "Panel ONZ ustawia globalny baseline dla ryzyka AI",
+      "standfirst": "UN Independent International Scientific Panel on AI opublikował wstępny raport przed Global Dialogue w Genewie. Panel ostrzega, że możliwości AI rosną szybciej niż naukowe rozumienie i zdolność państw do oceny ryzyka.",
+      "whatHappened": "Wstępny raport ONZ tworzy wspólną bazę dowodową dla rządów przed rozmowami 6-7 lipca 2026 r.",
+      "whyItMatters": "To może stać się punktem odniesienia dla państw spoza USA i Chin, które nie mają własnych zespołów do oceny frontier models.",
+      "deeperAnalysis": [
+        "Raport ONZ jest ważny nie dlatego, że od razu ustanawia reguły, ale dlatego, że próbuje zdefiniować wspólny język. Panel opisuje AI w siedmiu domenach: od nauki i zastosowań społecznych po gospodarkę, środowisko, bezpieczeństwo, prawa człowieka, demokrację, child safety i reliability. To szersze niż typowa rozmowa o jednym modelu albo jednym incydencie.",
+        "Wątek koncentracji jest szczególnie istotny po ostatnich raportach o bramkowaniu GPT-5.6, Mythos/Fable, compute deals i regionalnych AI clouds. Jeżeli modele, dane, chmura i kompetencje ewaluacyjne są skoncentrowane w kilku krajach i firmach, sama dostępność aplikacji AI nie daje suwerenności technologicznej. Państwa mogą korzystać z narzędzi, ale nie mieć realnej kontroli nad standardami, zabezpieczeniami i lokalnym dopasowaniem.",
+        "Dla polskiego odbiorcy to dobry temat o tym, że regulacja AI nie jest już tylko unijnym AI Act ani amerykańskim sporem o export controls. ONZ próbuje stworzyć forum, w którym kraje bez własnych frontier labs też mają materiał do negocjacji. Praktyczne pytanie brzmi: kto będzie potrafił mierzyć modele, a nie tylko je kupować."
+      ],
+      "contextPoints": [
+        "Co się stało: panel ONZ opublikował wstępny raport o szansach, ryzykach i wpływie AI.",
+        "Dlaczego ważne: rządy potrzebują wspólnych dowodów zanim ryzyka staną się oczywiste zbyt późno.",
+        "Na co patrzeć dalej: Global Dialogue 6-7 lipca, finansowanie AI safety institutes, podejście UE i polskie odniesienia do raportu."
+      ],
+      "sources": [
+        {
+          "title": "UN: Preliminary Report",
+          "url": "https://www.un.org/independent-international-scientific-panel-ai/en/preliminary-report"
+        },
+        {
+          "title": "UN report PDF",
+          "url": "https://www.un.org/independent-international-scientific-panel-ai/sites/default/files/2026-07/en_Preliminary%20Report_.pdf"
+        },
+        {
+          "title": "The Guardian",
+          "url": "https://www.theguardian.com/technology/2026/jul/01/un-report-ai-inequality"
+        },
+        {
+          "title": "Xinhua",
+          "url": "https://english.news.cn/20260702/683a22b221594c309ca0afc22d95f740/c.html"
+        },
+        {
+          "title": "Global Dialogue on AI Governance",
+          "url": "https://www.un.org/global-dialogue-ai-governance/en"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "ONZ",
+        "Regulacje",
+        "Governance",
+        "Bezpieczeństwo"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-02-2-emisje-amazon-i-google-pokazuja-cene-data-center-boomu-6926d2aa3e",
+      "section": "Infrastruktura",
+      "title": "Emisje Amazon i Google pokazują cenę data center boomu",
+      "standfirst": "Amazon i Google opublikowały nowe raporty środowiskowe, które pokazują napięcie między boomem AI a celami klimatycznymi. GeekWire podaje 16-procentowy wzrost emisji Amazon, a Axios 18-procentowy wzrost ambition-based emissions Google.",
+      "whatHappened": "Raporty sustainability zamieniły się z materiałów wizerunkowych w twardy miernik kosztów AI infrastructure.",
+      "whyItMatters": "AI compute coraz częściej będzie oceniane przez energię, wodę, rachunki lokalnych społeczności i wiarygodność zobowiązań klimatycznych.",
+      "deeperAnalysis": [
+        "W poprzednich raportach data centers pojawiały się jako temat lokalnych rachunków, moratoriów i protestów. Dzisiejsze sprawdzenie dodaje poziom korporacyjny: same firmy raportują wzrosty lub napięcia w emisjach, jednocześnie pokazując inwestycje w czystą energię, efektywność chłodzenia i water replenishment. To nie jest prosta historia \"AI jest złe\", tylko historia o skali, która wyprzedza łatwe mechanizmy kompensacji.",
+        "Amazon deklaruje dalsze zobowiązanie do net-zero do 2040 r., ale GeekWire wskazuje prawie 80,9 mln ton CO2e w 2025 r. i pierwszy od lat wzrost carbon intensity. Google pokazuje rekordowe kontrakty na czystą energię i 58 mln tCO2e unikniętych emisji, lecz Axios odczytuje raport jako dowód, że AI power demand zmienia charakter korporacyjnego reporting.",
+        "Dla podcastu dobry kąt to \"compute ma rachunek\". Koszt modelu to nie tylko cena tokena w API, ale też energia, woda, nowe linie przesyłowe, lokalne podatki, hałas, regulatory risk i reputacja. Ten temat warto łączyć z Cloudflare Pay Per Use, Together AI, Meta compute cloud i polityką data-center cost allocation."
+      ],
+      "contextPoints": [
+        "Co się stało: Amazon i Google pokazały nowe dane środowiskowe w czasie rozbudowy AI data centers.",
+        "Dlaczego ważne: infrastruktura AI staje się tematem klimatycznym, komunalnym i politycznym, nie tylko technicznym.",
+        "Na co patrzeć dalej: Microsoft i Meta reports, rachunki za energię, amerykańskie bill o kosztach data centers oraz polskie lokalizacje pod AI/server parks."
+      ],
+      "sources": [
+        {
+          "title": "Amazon 2025 Sustainability Report",
+          "url": "https://sustainability.aboutamazon.com/2025-report"
+        },
+        {
+          "title": "GeekWire: Amazon emissions",
+          "url": "https://www.geekwire.com/2026/the-cost-of-the-ai-boom-amazon-emissions-jump-16-as-company-stands-by-net-zero-pledge/"
+        },
+        {
+          "title": "Google 2026 Environmental Report",
+          "url": "https://sustainability.google/google-2026-environmental-report/"
+        },
+        {
+          "title": "Axios: Google AI boom emissions",
+          "url": "https://www.axios.com/2026/06/30/google-ai-boom-emissions-power-use"
+        },
+        {
+          "title": "old Reddit / r/technology",
+          "url": "https://old.reddit.com/r/technology/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Data centers",
+        "AI",
+        "Energia",
+        "Klimat",
+        "Big Tech"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-02-3-meta-robi-z-funkcji-okularow-ai-usluge-z-limitem-27afb4f34b",
+      "section": "Produkty",
+      "title": "Meta robi z funkcji okularów AI usługę z limitem",
+      "standfirst": "Meta testuje Meta One Premium dla okularów AI i ogranicza Conversation Focus do 3 godzin miesięcznie bez subskrypcji. Plan płatny daje 15 godzin, ale nie usuwa limitu całkowicie.",
+      "whatHappened": "Funkcja pomagająca słyszeć rozmówcę w hałasie trafia za miękki paywall i miesięczny limit użycia.",
+      "whyItMatters": "Konsumencki AI hardware może przesunąć się z \"kupujesz urządzenie\" do \"kupujesz urządzenie plus czas funkcji\".",
+      "deeperAnalysis": [
+        "Meta opisuje subskrypcję jako opcjonalną i podkreśla, że podstawowe funkcje okularów AI pozostają dostępne bez niej. Problem polega na charakterze Conversation Focus. To nie jest generowanie obrazów w chmurze ani kosztowny agent wykonujący długie zadanie. The Verge wskazuje, że funkcja działa lokalnie i ma wyraźny aspekt dostępnościowy, bo wzmacnia głos rozmówcy w hałaśliwym otoczeniu.",
+        "Ten ruch jest małym, ale ważnym sygnałem modelu biznesowego AI devices. Meta intensywnie inwestuje w okulary, asystentów i hardware, więc będzie szukać przychodów poza samą sprzedażą urządzenia. Jeżeli kolejne funkcje lokalne, sensoryczne albo accessibility trafią do planów subskrypcyjnych, użytkownicy mogą zacząć pytać, co właściwie kupują razem z urządzeniem.",
+        "Podcastowo to lżejszy temat konsumencki, ale z dobrą konsekwencją. Po Sony i końcu nowych płyt PlayStation widać podobny wzór platformowy: fizyczny produkt albo zakup treści coraz częściej jest tylko wejściem do regulowanego, limitowanego i zmiennego dostępu."
+      ],
+      "contextPoints": [
+        "Co się stało: Meta One Premium zwiększa limit Conversation Focus z 3 do 15 godzin miesięcznie.",
+        "Dlaczego ważne: AI hardware wchodzi w model subskrypcji i rate limits znany z usług chmurowych.",
+        "Na co patrzeć dalej: reakcje użytkowników, politykę accessibility, rollout poza testami i to, czy Meta przeniesie do subskrypcji kolejne funkcje."
+      ],
+      "sources": [
+        {
+          "title": "Meta: Meta One subscription for AI glasses",
+          "url": "https://www.meta.com/help/ai-glasses/1384571770097740/"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/gadgets/959899/meta-ai-glasses-paywall-rate-limit"
+        },
+        {
+          "title": "9to5Google",
+          "url": "https://9to5google.com/2026/07/01/meta-glasses-get-premium-usage-limits/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Meta",
+        "Okulary AI",
+        "Subskrypcje",
+        "Dostępność",
+        "Hardware"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-02-4-google-zkp-wraca-jako-odpowiedz-na-age-assurance-bez-pelnej-inwigilacji-940a96af32",
+      "section": "Regulacje",
+      "title": "Google ZKP wraca jako odpowiedź na age assurance bez pełnej inwigilacji",
+      "standfirst": "Google udostępnił biblioteki Zero-Knowledge Proof dla age assurance, a temat wrócił na pierwszą stronę Hacker News. To techniczna odpowiedź na presję weryfikacji wieku bez ujawniania pełnej tożsamości.",
+      "whatHappened": "Publiczne biblioteki ZKP mają pozwolić potwierdzić np. pełnoletniość bez przekazywania daty urodzenia ani dokumentu.",
+      "whyItMatters": "Regulacje wieku mogą łatwo zamienić się w powszechne sprawdzanie tożsamości, więc prywatnościowa architektura ma znaczenie od początku.",
+      "deeperAnalysis": [
+        "Age assurance wraca w wielu kontekstach: Australia i Discord testują stos egzekucji wieku, USA dyskutują KIDS Act, a UE pracuje nad portfelami tożsamości. Google proponuje ZKP jako mechanizm minimalizacji danych, w którym serwis dostaje odpowiedź na pytanie \"czy użytkownik spełnia warunek\", a nie cały zestaw danych osobowych.",
+        "Technicznie to nie rozwiązuje całego problemu. Nadal potrzebny jest zaufany issuer, interoperacyjny wallet, standardy weryfikacji, zabezpieczenie przed wykluczeniem i jasne granice użycia. Ale w porównaniu z uploadem dokumentu albo biometrycznym skanem twarzy ZKP jest ważnym kierunkiem, bo ogranicza ilość danych w obiegu.",
+        "Dla polskiego podcastu to dobry most między prywatnością, ochroną dzieci i cyfrową tożsamością. Można go zestawić z mDyplomami w mObywatelu: coraz więcej cech użytkownika będzie poświadczanych cyfrowo, więc spór przenosi się z \"czy weryfikować\" na \"ile danych ujawniać i komu ufać\"."
+      ],
+      "contextPoints": [
+        "Co się stało: Google otworzył biblioteki ZKP dla age assurance i społeczność HN mocno zareagowała.",
+        "Dlaczego ważne: techniczny wybór modelu weryfikacji wieku wpływa na prywatność całego internetu.",
+        "Na co patrzeć dalej: EUDI Wallet, implementacje produkcyjne, standardy W3C, krytykę Brave/Yivi oraz reakcję platform społecznościowych."
+      ],
+      "sources": [
+        {
+          "title": "Google: ZKP for age assurance",
+          "url": "https://blog.google/innovation-and-ai/technology/safety-security/opening-up-zero-knowledge-proof-technology-to-promote-privacy-in-age-assurance/"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/news"
+        },
+        {
+          "title": "Yivi security analysis",
+          "url": "https://docs.yivi.app/blog/eu-age-verification-security-analysis/"
+        },
+        {
+          "title": "Brave: limits of ZKP age verification",
+          "url": "https://brave.com/blog/zkp-age-verification-limits/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Google",
+        "ZKP",
+        "Age assurance",
+        "Prywatność",
+        "Tożsamość"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-02-5-bending-spoons-ipo-testuje-rynek-na-software-roll-upy-po-ai-szoku-29e2c793c5",
+      "section": "Produkty",
+      "title": "Bending Spoons IPO testuje rynek na software roll-upy po AI szoku",
+      "standfirst": "Bending Spoons zadebiutował na Nasdaq po sprzedaży 58 mln akcji po 29 dolarów. Właściciel AOL, Vimeo i Eventbrite zamknął pierwszy dzień około 40 procent powyżej ceny IPO.",
+      "whatHappened": "Europejski nabywca legacy software zebrał około 1,7 mld USD w IPO i uzyskał wycenę rzędu 25 mld USD po debiucie.",
+      "whyItMatters": "Publiczny rynek sprawdza, czy da się kupować stare produkty cyfrowe, ciąć koszty, przebudowywać je AI i nadal budować wzrost.",
+      "deeperAnalysis": [
+        "Bending Spoons nie jest typowym AI startupem, ale jest bardzo 2026. Firma kupuje rozpoznawalne, często dojrzałe produkty cyfrowe i próbuje wycisnąć z nich więcej przez centralny software stack, subskrypcje, automatyzację i twardą kontrolę kosztów. AP wymienia ponad 50 przejętych biznesów, 500 mln miesięcznych aktywnych użytkowników i 9 mln płacących klientów.",
+        "Debiut jest ciekawy na tle obaw, że AI zniszczy część klasycznego software'u. Bending Spoons stawia przeciwną tezę: stare marki internetowe nadal mają użytkowników, dystrybucję i przepływy pieniężne, jeśli ktoś przebuduje produkt i organizację wystarczająco agresywnie. Ryzyko jest równie jasne: dług, integracja wielu marek, reputacja po cięciach i pytanie, czy taki model przeżyje gorszy cykl rynkowy.",
+        "Dla podcastu to dobry segment o Europie w technologii: nie każdy europejski sukces musi być frontier labem albo chipem. Czasem jest nim bardzo sprawny, mało sentymentalny operator oprogramowania, który kupuje globalne marki i wprowadza je na Nasdaq."
+      ],
+      "contextPoints": [
+        "Co się stało: Bending Spoons wszedł na Nasdaq i wzrósł mocno w pierwszym dniu notowań.",
+        "Dlaczego ważne: to test publicznego apetytu na software roll-upy, legacy internet brands i AI-assisted restructuring.",
+        "Na co patrzeć dalej: kolejne przejęcia, zadłużenie, retencję użytkowników AOL/Vimeo/Eventbrite i reakcję rynku na wyniki po debiucie."
+      ],
+      "sources": [
+        {
+          "title": "AP: Bending Spoons IPO",
+          "url": "https://apnews.com/article/93a8426bab66c9d821a9beb0d2750d64"
+        },
+        {
+          "title": "Reuters przez Global Banking and Finance",
+          "url": "https://www.globalbankingandfinance.com/italys-bending-spoons-owner-aol-vimeo-valued-20-billion-us/"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/01/after-18b-ipo-bending-spoons-founder-says-success-comes-from-minimizing-luck/"
+        },
+        {
+          "title": "Techmeme",
+          "url": "https://www.techmeme.com/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "IPO",
+        "Software",
+        "Bending Spoons",
+        "Europa",
+        "SaaS"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-02-6-agentowe-narzedzia-potrzebuja-nowych-benchmarkow-i-dystrybucji-6f553a0b62",
+      "section": "AI",
+      "title": "Agentowe narzędzia potrzebują nowych benchmarków i dystrybucji",
+      "standfirst": "HN wyniósł ZCode dla GLM-5.2 i Senior SWE-Bench, a Product Hunt utrzymał falę narzędzi agentowych. Rynek nie pyta już tylko, czy agent działa, ale jak go oceniać, dystrybuować i kontrolować.",
+      "whatHappened": "Społeczności developerów promują jednocześnie agent harness, benchmark senior-engineer tasks i produkty do automatyzacji workflow.",
+      "whyItMatters": "Jeśli agenty mają robić dłuższe zadania, potrzebują testów jakości, obserwowalności, context sharing, kosztów usage i dobrych interfejsów dystrybucji.",
+      "deeperAnalysis": [
+        "Senior SWE-Bench trafia w problem, który widać w codziennym użyciu coding agents: proste benchmarki bug-fix nie mierzą pracy, którą powierzamy seniorom. Projekt stawia na realistyczne instrukcje, runtime investigation, taste scoring i walidację przez agenta piszącego testy. To sygnał, że ocena agentów przesuwa się z \"czy przeszło unit testy\" do \"czy agent zrozumiał ukryte praktyki codebase'u\".",
+        "ZCode dla GLM-5.2 pokazuje drugi wymiar: regionalne modele potrzebują własnych narzędzi developerskich, a nie tylko API. Jeżeli chińskie, europejskie albo open-weight modele mają konkurować z Codex, Claude Code i Gemini, muszą wejść w workflow planowania, kodowania, review, release notes i multi-agent collaboration.",
+        "Product Hunt dokłada warstwę dystrybucji produktu: Cursor for iOS, Skills Marketplace by Databox, Framer AI Agents, Stigg 2.0, N71 i Sequence Agentic pokazują, że rynek opakowuje agentów w mobilność, skills marketplace, usage billing, wspólny kontekst i płatności. To jest ten sam trend co Cloudflare x402, ale z perspektywy makerów."
+      ],
+      "contextPoints": [
+        "Co się stało: HN i Product Hunt utrzymały silny sygnał wokół agentów, benchmarków i narzędzi produkcyjnych.",
+        "Dlaczego ważne: agenty przechodzą od demo do infrastruktury kontroli jakości, billing, deployment i pracy zespołowej.",
+        "Na co patrzeć dalej: adopcję Senior SWE-Bench, integracje GLM-5.2, Cursor mobile workflows, Stigg usage runtime i narzędzia do obserwacji agentów."
+      ],
+      "sources": [
+        {
+          "title": "Senior SWE-Bench",
+          "url": "https://senior-swe-bench.snorkel.ai/"
+        },
+        {
+          "title": "ZCode for GLM-5.2",
+          "url": "https://zcode.z.ai/"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/news"
+        },
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Agenci",
+        "Developer tools",
+        "Benchmarki",
+        "Product Hunt",
+        "HN"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Together AI i open-model compute",
+      "rationale": "800 mln USD finansowania pokazuje, że tańsze open-model infrastructure staje się realną odpowiedzią na drogie frontier APIs.",
+      "sourcesLabel": "BusinessWire; Techmeme"
+    },
+    {
+      "priority": "High",
+      "title": "ONZ ustawia globalny baseline dla AI governance",
+      "rationale": "Raport panelu naukowego może stać się punktem odniesienia dla państw, które nie mają własnych frontier-evaluation teams.",
+      "sourcesLabel": "UN; Guardian; Xinhua"
+    },
+    {
+      "priority": "High",
+      "title": "Emisje Amazon i Google jako rachunek AI boomu",
+      "rationale": "Data centers, energia i woda są już centralnym kosztem AI, a nie przypisem do model releases.",
+      "sourcesLabel": "Amazon; Google; GeekWire; Axios"
+    },
+    {
+      "priority": "Medium",
+      "title": "Meta One i limity w okularach AI",
+      "rationale": "Konsumencki AI hardware zaczyna używać rate limits i subskrypcji nawet dla funkcji z aspektem dostępnościowym.",
+      "sourcesLabel": "Meta; The Verge"
+    },
+    {
+      "priority": "Medium",
+      "title": "Google ZKP i prywatnościowe age assurance",
+      "rationale": "Weryfikacja wieku może iść w stronę pełnej identyfikacji albo minimalnych dowodów kryptograficznych.",
+      "sourcesLabel": "Google; HN; Yivi; Brave"
+    },
+    {
+      "priority": "Medium",
+      "title": "Bending Spoons IPO",
+      "rationale": "Europejski software roll-up pokazuje inny model publicznego techu: kupowanie legacy marek i przebudowę przez operacje oraz AI.",
+      "sourcesLabel": "AP; Reuters; TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Agent tools po hype: benchmarki, harnessy i billing",
+      "rationale": "HN i Product Hunt pokazują, że agenty potrzebują benchmarków senior work, lokalnych narzędzi i warstwy usage billing.",
+      "sourcesLabel": "HN; Product Hunt; Senior SWE-Bench; ZCode"
+    },
+    {
+      "priority": "Low",
+      "title": "Weave Robotics i practical home robots",
+      "rationale": "Isaac 1 to lżejszy temat o robotyce domowej, ale dobrze kontrastuje z humanoid hype i pokazuje konkretne use case'y.",
+      "sourcesLabel": "Weave Robotics; HN"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Together AI: Series C",
+      "url": "https://www.businesswire.com/news/home/20260701243402/en/Together-AI-Raises-%24800-Million-at-%248.3-Billion-Valuation-to-Make-Frontier-AI-Accessible-to-All"
+    },
+    {
+      "title": "UN: Preliminary Report",
+      "url": "https://www.un.org/independent-international-scientific-panel-ai/en/preliminary-report"
+    },
+    {
+      "title": "UN report PDF",
+      "url": "https://www.un.org/independent-international-scientific-panel-ai/sites/default/files/2026-07/en_Preliminary%20Report_.pdf"
+    },
+    {
+      "title": "Global Dialogue on AI Governance",
+      "url": "https://www.un.org/global-dialogue-ai-governance/en"
+    },
+    {
+      "title": "Amazon 2025 Sustainability Report",
+      "url": "https://sustainability.aboutamazon.com/2025-report"
+    },
+    {
+      "title": "Google 2026 Environmental Report",
+      "url": "https://sustainability.google/google-2026-environmental-report/"
+    },
+    {
+      "title": "Meta One subscription for AI glasses",
+      "url": "https://www.meta.com/help/ai-glasses/1384571770097740/"
+    },
+    {
+      "title": "Google ZKP for age assurance",
+      "url": "https://blog.google/innovation-and-ai/technology/safety-security/opening-up-zero-knowledge-proof-technology-to-promote-privacy-in-age-assurance/"
+    },
+    {
+      "title": "Senior SWE-Bench",
+      "url": "https://senior-swe-bench.snorkel.ai/"
+    },
+    {
+      "title": "ZCode for GLM-5.2",
+      "url": "https://zcode.z.ai/"
+    },
+    {
+      "title": "Weave Robotics",
+      "url": "https://www.weaverobotics.com/"
+    },
+    {
+      "title": "Techmeme",
+      "url": "https://www.techmeme.com/"
+    },
+    {
+      "title": "Techmeme River",
+      "url": "https://www.techmeme.com/river"
+    },
+    {
+      "title": "The Guardian o raporcie ONZ",
+      "url": "https://www.theguardian.com/technology/2026/jul/01/un-report-ai-inequality"
+    },
+    {
+      "title": "Xinhua o panelu ONZ",
+      "url": "https://english.news.cn/20260702/683a22b221594c309ca0afc22d95f740/c.html"
+    },
+    {
+      "title": "GeekWire o emisjach Amazon",
+      "url": "https://www.geekwire.com/2026/the-cost-of-the-ai-boom-amazon-emissions-jump-16-as-company-stands-by-net-zero-pledge/"
+    },
+    {
+      "title": "Axios o emisjach Google",
+      "url": "https://www.axios.com/2026/06/30/google-ai-boom-emissions-power-use"
+    },
+    {
+      "title": "The Verge o Meta One",
+      "url": "https://www.theverge.com/gadgets/959899/meta-ai-glasses-paywall-rate-limit"
+    },
+    {
+      "title": "Reuters/AP przez Global Banking and Finance o Bending Spoons",
+      "url": "https://www.globalbankingandfinance.com/italys-bending-spoons-owner-aol-vimeo-valued-20-billion-us/"
+    },
+    {
+      "title": "AP o Bending Spoons",
+      "url": "https://apnews.com/article/93a8426bab66c9d821a9beb0d2750d64"
+    },
+    {
+      "title": "TechCrunch o Bending Spoons",
+      "url": "https://techcrunch.com/2026/07/01/after-18b-ipo-bending-spoons-founder-says-success-comes-from-minimizing-luck/"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/news"
+    },
+    {
+      "title": "old Reddit / r/technology",
+      "url": "https://old.reddit.com/r/technology/"
+    },
+    {
+      "title": "old Reddit / r/artificial",
+      "url": "https://old.reddit.com/r/artificial/"
+    },
+    {
+      "title": "Product Hunt homepage",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Business Insider Polska o Fable i Mythos",
+      "url": "https://businessinsider.com.pl/technologie/nowe-technologie/anthropic-przywraca-dostep-do-modelu-mythosfable-obowiazuja-nowe-zasady/skv75nn"
+    },
+    {
+      "title": "TVN24 o oporze wobec AI i data centers",
+      "url": "https://tvn24.pl/biznes/tech/ai-rosnie-opor-wobec-sztucznej-inteligencji-w-usa-protesty-blokuja-inwestycje-w-centra-danych-st9118935"
+    },
+    {
+      "title": "Business Insider Polska o dezinformacji",
+      "url": "https://businessinsider.com.pl/technologie/nowe-technologie/fake-newsy-jako-zagrozenie-dla-panstwa-alarmujace-wnioski-w-nowym-raporcie/qtxcb7m"
+    }
+  ]
+}
