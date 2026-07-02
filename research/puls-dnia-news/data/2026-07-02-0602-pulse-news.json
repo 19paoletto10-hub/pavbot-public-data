@@ -1,0 +1,517 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-02",
+  "runTime": "06:02",
+  "status": "Material update",
+  "headline": "06:02: Kijów pod ostrzałem, Putin zbiera naradę o Królewcu, a Warszawa dostaje nowy sygnał o wojskach USA",
+  "summary": "Poranny slot 06:02 jest materialny względem opublikowanego 21:01: feed przechodzi z wieczornych sporów politycznych na twardszy miks bezpieczeństwa i użyteczności, z nocnym atakiem na Kijów, naradą Putina o obwodzie królewieckim, deklaracją Przydacza po rozmowie z Rubio, startem Dobrego Startu i formalnym ruchem USA wobec USMCA.",
+  "items": [
+    {
+      "id": "pulse-2026-07-02-0602-01-burze-awarie",
+      "section": "Alerty",
+      "title": "Nocne burze zostawiają podtopienia, uszkodzone dachy i tysiące odbiorców bez prądu",
+      "lead": "To już nie tylko prognoza, ale realne szkody i awarie po nocnym przejściu frontu.",
+      "whatHappened": "TVN24 podało, że nocne burze przyniosły połamane drzewa, uszkodzone dachy, podtopienia i przerwy w dostawach energii. Równolegle RCB utrzymuje alert dla 11 województw, a IMGW nadal opisuje układ burzowy jako główne zagrożenie dla początku dnia.",
+      "keyFacts": [
+        "TVN24 opisuje podtopienia, szkody dachów i kolejne interwencje strażaków.",
+        "RCB utrzymuje ostrzeżenie przed intensywnym deszczem, wiatrem i możliwymi przerwami w dostawie prądu.",
+        "IMGW podtrzymuje ostrzegawczy reżim pogodowy po nocnym przejściu frontu."
+      ],
+      "reactions": [
+        "To najmocniejsza karta krajowych alertów, bo szkody są już mierzalne i mogą dalej rosnąć rano.",
+        "Jeżeli dojdą większe awarie sieci albo problemy kolejowe, temat może utrzymać się także w następnym slocie."
+      ],
+      "whyItMatters": "Skala skutków zdecyduje, czy pogoda pozostanie wysokim alertem, czy przejdzie w pełny lokalny kryzys dla energii, transportu i służb.",
+      "context": "W runie 21:01 karta była już mocna, ale poranek przynosi bardziej dojrzały obraz szkód po nocnym przejściu burz.",
+      "watchNext": [
+        "Czy rano pojawią się nowe dane o awariach energetycznych, ewakuacjach lub przerwach kolejowych.",
+        "Czy RCB i IMGW rozszerzą alerty albo utrzymają je na kolejne godziny."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Burze w Polsce w środę 01.07. Połamane drzewa, uszkodzone dachy. Działania strażaków",
+          "url": "https://tvn24.pl/tvnmeteo/polska/burze-w-polsce-w-srode-01-07-polamane-drzewa-uszkodzone-dachy-dzialania-strazakow-st9123489?source=rss"
+        },
+        {
+          "title": "RCB: Alert RCB - intensywne opady deszczu, silny wiatr, burze (01/02.07)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---intensywne-opady-deszczu-silny-wiatr-burze-010207"
+        },
+        {
+          "title": "IMGW: Aktualna i prognozowana sytuacja meteorologiczna i hydrologiczna – raport nr 135",
+          "url": "https://imgw.pl/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-135/"
+        }
+      ],
+      "tags": [
+        "Burze",
+        "RCB",
+        "IMGW",
+        "Awarie"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-0602-02-przydacz-rubio",
+      "section": "Polityka",
+      "title": "Przydacz po rozmowie z Rubio: Biały Dom ma wspierać stałą obecność wojsk USA w Polsce",
+      "lead": "To nowy poranny sygnał bezpieczeństwa z osi Warszawa-Waszyngton.",
+      "whatHappened": "TVN24 podało, że Marcin Przydacz po spotkaniu z sekretarzem stanu Marco Rubio mówi o zielonym świetle z Białego Domu dla przejścia z obecności rotacyjnej do stałej obecności żołnierzy USA w Polsce.",
+      "keyFacts": [
+        "Wypowiedź dotyczy zmiany charakteru obecności wojsk USA z rotacyjnej na stałą.",
+        "Przekaz pada po bezpośrednim spotkaniu Przydacza z Marco Rubio.",
+        "Temat podbija poranną oś bezpieczeństwa krajowego i relacji z USA."
+      ],
+      "reactions": [
+        "To mocniejsza karta niż ogólne deklaracje sojusznicze, bo dotyczy konkretnej formy obecności wojsk.",
+        "Bez publicznego doprecyzowania strony amerykańskiej temat może szybko wejść w obieg politycznych interpretacji."
+      ],
+      "whyItMatters": "Stała obecność wojsk USA w Polsce byłaby jedną z najważniejszych zmian w regionalnej architekturze odstraszania i debacie o bezpieczeństwie wschodniej flanki.",
+      "context": "W runie 21:01 oś Polska-Ukraina była budowana przez wypowiedź Zełenskiego. O 06:02 ciężar przechodzi na bezpośredni kanał Polska-USA.",
+      "watchNext": [
+        "Czy Biały Dom, Departament Stanu lub Pentagon doprecyzują zakres tej deklaracji.",
+        "Czy temat przejdzie do publicznej debaty o bazach, finansowaniu i harmonogramie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Marcin Przydacz rozmawiał z Marco Rubio. O żołnierzach USA w Polsce",
+          "url": "https://tvn24.pl/polska/marcin-przydacz-rozmawial-z-marco-rubio-o-zolnierzach-usa-w-polsce-st9124016?source=rss"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Polska",
+        "Marco Rubio",
+        "Wojska"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-0602-03-dobry-start",
+      "section": "Polska",
+      "title": "Ruszył nabór do Dobrego Startu, a ZUS otwiera nowy sezon wypłat 300 zł na ucznia",
+      "lead": "To poranna karta użyteczności dla rodzin, a nie spór polityczny.",
+      "whatHappened": "TVN24 i ZUS potwierdzają, że od 1 lipca ruszył nabór do programu Dobry Start. Rodzice i opiekunowie mogą składać wnioski wyłącznie elektronicznie, a wsparcie wynosi 300 zł na wyprawkę szkolną.",
+      "keyFacts": [
+        "Nabór do programu Dobry Start rozpoczął się 1 lipca.",
+        "Wnioski można składać tylko elektronicznie, m.in. przez eZUS i bankowość elektroniczną.",
+        "Świadczenie wynosi 300 zł na ucznia i nie zależy od dochodu rodziny."
+      ],
+      "reactions": [
+        "To jedna z najbardziej praktycznych kart porannego feedu, bo dotyczy bezpośrednio budżetów domowych.",
+        "Temat nie ma ciężaru alarmowego, ale ma szeroki zasięg odbiorców i wyraźny termin działania."
+      ],
+      "whyItMatters": "To sezonowy program o masowym zasięgu, który wpływa na decyzje rodzin jeszcze przed końcem wakacji i może szybko wejść do codziennego obiegu informacyjnego.",
+      "context": "Wieczorny run 21:01 nie miał tej karty. Poranek przesuwa część feedu w stronę użytecznych decyzji dla gospodarstw domowych.",
+      "watchNext": [
+        "Czy ZUS poda w kolejnych dniach pierwsze liczby złożonych wniosków.",
+        "Czy pojawią się problemy techniczne lub komunikaty o terminach wypłat."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Dobry Start 2026 - ruszył nabór. Komu przysługuje wsparcie i jak złożyć wniosek?",
+          "url": "https://tvn24.pl/biznes/z-kraju/dobry-start-2026-ruszyl-nabor-komu-przysluguje-wsparcie-i-jak-zlozyc-wniosek-st9123453?source=rss"
+        },
+        {
+          "title": "ZUS: Program Dobry Start",
+          "url": "https://www.zus.pl/swiadczenia/swiadczenia-dla-rodzin/program-dobry-start"
+        }
+      ],
+      "tags": [
+        "Dobry Start",
+        "ZUS",
+        "300+",
+        "Rodziny"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-02-0602-04-kaliningrad-putin",
+      "section": "Bezpieczeństwo",
+      "title": "Putin zwołuje na Kremlu naradę o obwodzie królewieckim i podbija regionalny sygnał bezpieczeństwa",
+      "lead": "Poranny feed dostaje bezpośredni sygnał z rosyjskiego centrum decyzyjnego.",
+      "whatHappened": "TVN24 podało, że Władimir Putin zwołał stacjonarną naradę Komitetu Bezpieczeństwa poświęconą obwodowi królewieckiemu. Oficjalny wpis Kremla potwierdza spotkanie z członkami Rady Bezpieczeństwa z 1 lipca.",
+      "keyFacts": [
+        "Narada dotyczy obwodu królewieckiego, czyli regionu bezpośrednio istotnego dla Polski i Bałtyku.",
+        "Spotkanie odbyło się stacjonarnie, a nie zdalnie, co samo w sobie podnosi rangę przekazu.",
+        "Kreml opublikował oficjalną notę o posiedzeniu z członkami Rady Bezpieczeństwa."
+      ],
+      "reactions": [
+        "To nowa, wyraźna karta bezpieczeństwa regionalnego względem 21:01.",
+        "Temat może być szybko interpretowany w Polsce i krajach bałtyckich jako sygnał demonstracyjny lub przygotowawczy."
+      ],
+      "whyItMatters": "Każde przesunięcie komunikacyjne wokół obwodu królewieckiego ma bezpośredni ciężar dla debaty o bezpieczeństwie Polski, Bałtyku i wschodniej flanki NATO.",
+      "context": "Poprzedni run nie miał tej karty. O 06:02 Rosja wraca do feedu nie przez Ukrainę, lecz przez bezpośredni sygnał wokół Królewca.",
+      "watchNext": [
+        "Czy pojawią się bardziej szczegółowe komunikaty Kremla lub rosyjskiego MON o regionie.",
+        "Czy polskie lub natowskie kanały bezpieczeństwa zareagują publicznie na ten przekaz."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Władimir Putin zwołał naradę. Chodzi o obwód królewiecki",
+          "url": "https://tvn24.pl/swiat/wladimir-putin-zwolal-narade-chodzi-o-obwod-krolewiecki-st9124032?source=rss"
+        },
+        {
+          "title": "Kremlin: Meeting with Security Council members",
+          "url": "https://en.kremlin.ru/events/president/news/80200"
+        }
+      ],
+      "tags": [
+        "Rosja",
+        "Królewiec",
+        "Putin",
+        "Bałtyk"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-0602-05-kyiv-attack",
+      "section": "Świat",
+      "title": "Rosja uderza nocą w Kijów rakietami i dronami, a Polska podrywa myśliwce",
+      "lead": "To najmocniejsza nowa karta bezpieczeństwa w porannym slocie.",
+      "whatHappened": "TVN24 i BBC podały, że Rosja przeprowadziła w nocy zmasowany atak rakietowo-dronowy na Kijów. Są ofiary śmiertelne i ranni, a Polska poderwała własne myśliwce w reakcji na zagrożenie przy granicy.",
+      "keyFacts": [
+        "Głównym celem nocnych uderzeń był Kijów.",
+        "BBC opisuje to jako największe uderzenie na miasto od kilku tygodni.",
+        "Polskie siły poderwały myśliwce w związku z aktywnością rosyjskiego lotnictwa i rakiet."
+      ],
+      "reactions": [
+        "Karta natychmiast przestawia cały blok świat-bezpieczeństwo na twardszy poranny ton.",
+        "Temat może jeszcze rosnąć wraz z bilansem ofiar i oceną skutków infrastrukturalnych."
+      ],
+      "whyItMatters": "Atak na Kijów ma znaczenie nie tylko dla Ukrainy, ale i dla bezpośredniego poczucia bezpieczeństwa w Polsce oraz dla gotowości systemów NATO w regionie.",
+      "context": "W 21:01 relacja Polska-Ukraina była osadzona w politycznej wypowiedzi Zełenskiego. O 06:02 wraca do formy ostrego, militarnego kryzysu.",
+      "watchNext": [
+        "Czy wzrośnie liczba ofiar i zniszczeń po pełnym dziennym bilansie.",
+        "Czy pojawią się nowe komunikaty z Kijowa, Warszawy lub NATO o skali zagrożenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wojna w Ukrainie. Zmasowany atak Rosji na Kijów. Polskie myśliwce poderwane",
+          "url": "https://tvn24.pl/swiat/wojna-w-ukrainie-zmasowany-atak-rosji-na-kijow-polskie-mysliwce-poderwane-st9124050?source=rss"
+        },
+        {
+          "title": "BBC: Kyiv comes under major Russian missile and drone fire",
+          "url": "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Kijów",
+        "Rosja",
+        "Polska"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-0602-06-usmca-review",
+      "section": "Gospodarka",
+      "title": "USA odmawiają odnowienia USMCA w obecnej formie i uruchamiają coroczny tryb przeglądów",
+      "lead": "To poranny ruch formalny, a nie tylko kolejny komentarz o cłach.",
+      "whatHappened": "BBC podało, że Stany Zjednoczone zablokowały długoterminowe odnowienie północnoamerykańskiej umowy handlowej. USTR oficjalnie potwierdził, że USA nie zgodziły się na przedłużenie USMCA w obecnej formie, co oznacza wejście w coroczne przeglądy.",
+      "keyFacts": [
+        "Decyzja dotyczy USMCA, czyli głównej umowy handlowej USA, Meksyku i Kanady.",
+        "Oficjalne stanowisko USTR mówi wprost, że USA nie odnowiły porozumienia w obecnej formie.",
+        "Skutkiem ma być wejście w coroczny mechanizm przeglądowy zamiast długiego automatycznego przedłużenia."
+      ],
+      "reactions": [
+        "To jedna z najważniejszych nowych kart gospodarczych poranka, bo ma formalne potwierdzenie administracyjne.",
+        "Rynek może zacząć czytać tę decyzję jako zapowiedź trudniejszych negocjacji z Kanadą i Meksykiem."
+      ],
+      "whyItMatters": "USMCA jest filarem handlu północnoamerykańskiego, więc każda zmiana trybu jej funkcjonowania może wpływać na łańcuchy dostaw, kursy walut i oczekiwania przedsiębiorstw.",
+      "context": "Poprzedni run nie miał tej karty. O 06:02 gospodarka dostaje nową, twardą decyzję z poziomu federalnego, a nie tylko komentarz polityczny.",
+      "watchNext": [
+        "Czy Kanada i Meksyk pokażą szybkie odpowiedzi polityczne lub negocjacyjne.",
+        "Czy rynki zaczną podbijać ryzyko wokół handlu i produkcji w Ameryce Północnej."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US blocks long-term renewal of North American trade deal",
+          "url": "https://www.bbc.co.uk/news/articles/ce8j2lmrvrdo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "USTR: Ambassador Greer Issues Statement on the USMCA Joint Review",
+          "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/ambassador-greer-issues-statement-usmca-joint-review"
+        }
+      ],
+      "tags": [
+        "USMCA",
+        "USA",
+        "Handel",
+        "Kanada"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-0602-07-iran-talks",
+      "section": "Świat",
+      "title": "Pośrednie rozmowy USA-Iran w Katarze mają przynosić pozytywny postęp, ale region nadal jest pod napięciem",
+      "lead": "To sygnał deeskalacyjny, który jeszcze nie zamyka ryzyka na Bliskim Wschodzie.",
+      "whatHappened": "CNN na żywo podał, że pośrednie rozmowy USA-Iran w Katarze robią pozytywny postęp. Jednocześnie temat pozostaje osadzony w napiętym tle bezpieczeństwa po wcześniejszych ustaleniach o rozmowach z mediatorami w Dosze.",
+      "keyFacts": [
+        "Nowy poranny przekaz mówi o pozytywnym postępie rozmów pośrednich.",
+        "Kanał kontaktu nadal opiera się na mediatorach w Katarze, a nie bezpośrednim spotkaniu stron.",
+        "Temat pozostaje sprzężony z ryzykiem dla żeglugi i stabilności regionu."
+      ],
+      "reactions": [
+        "To na razie bardziej sygnał tonu niż twardy przełom dokumentowy.",
+        "Każdy incydent wojskowy może szybko odwrócić deeskalacyjny przekaz z live feedu."
+      ],
+      "whyItMatters": "Nawet częściowa deeskalacja na osi USA-Iran wpływa na rynki energii, transport morski i ogólne ryzyko geopolityczne na Bliskim Wschodzie.",
+      "context": "W 21:01 temat był reprezentowany przez informację, że amerykańscy wysłannicy spotkają mediatorów, ale nie Irańczyków. O 06:02 pojawia się sygnał, że rozmowy jednak robią postęp.",
+      "watchNext": [
+        "Czy pojawi się bardziej konkretna lista ustaleń lub kolejny termin rozmów.",
+        "Czy ton rozmów przełoży się na ruchy cen ropy i komunikaty o bezpieczeństwie w cieśninie Ormuz."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Live updates: Indirect US-Iran talks make ‘positive progress’",
+          "url": "https://edition.cnn.com/2026/07/02/world/live-news/iran-war-us-talks"
+        },
+        {
+          "title": "BBC: US envoys in Doha to meet mediators but not Iranians, Qatar says",
+          "url": "https://www.bbc.co.uk/news/articles/cpd38x1dy4no?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Iran",
+        "Katar",
+        "Ropa"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-02-0602-08-venezuela-quake",
+      "section": "Świat",
+      "title": "Bilans po trzęsieniu ziemi w Wenezueli przekracza dwa tysiące ofiar, a mieszkańcy oskarżają państwo o zbyt wolną pomoc",
+      "lead": "Katastrofa humanitarna robi się cięższa niż w wieczornym slocie.",
+      "whatHappened": "TVN24 podało, że liczba ofiar po trzęsieniu ziemi w Wenezueli przekroczyła dwa tysiące. CNN opisuje rosnącą frustrację mieszkańców, którzy sami odgruzowują ruiny i boją się, że rzeczywisty bilans może być jeszcze wyższy.",
+      "keyFacts": [
+        "Bilans ofiar wzrósł do ponad dwóch tysięcy.",
+        "CNN opisuje samodzielne akcje ratunkowe i niedobory paliwa utrudniające pomoc.",
+        "Temat przesuwa się z historii o pojedynczych uratowanych dzieciach do obrazu systemowej katastrofy."
+      ],
+      "reactions": [
+        "To jedna z najcięższych kart światowych poranka pod względem skali cierpienia i zarzutów wobec państwa.",
+        "Jeżeli bilans dalej wzrośnie, temat pozostanie wysoko w kolejnych slotach."
+      ],
+      "whyItMatters": "Rosnący bilans ofiar i słabość reakcji państwa zamieniają klęskę naturalną w długotrwały kryzys humanitarny i polityczny.",
+      "context": "W 21:01 karta skupiała się jeszcze na ratowaniu dziecka spod gruzów. O 06:02 dominują skala ofiar i gniew wobec jakości pomocy.",
+      "watchNext": [
+        "Czy pojawią się nowe dane o ofiarach i zaginionych po pełnym porannym bilansie.",
+        "Czy władze Wenezueli i partnerzy zagraniczni zwiększą realną pomoc ratunkową."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Rośnie bilans ofiar trzęsienia ziemi w Wenezueli. Już ponad dwa tysiące ofiar",
+          "url": "https://tvn24.pl/swiat/wenezuela-rosnie-bilans-ofiar-trzesienia-ziemi-ponad-dwa-tysiace-ofiar-st9123957?source=rss"
+        },
+        {
+          "title": "CNN: ‘Tears won’t move a single stone’: Anger grows as Venezuelans rescue their own and fear true death toll is much higher",
+          "url": "https://edition.cnn.com/2026/07/01/americas/venezuela-earthquake-search-rescue-anger-latam-intl"
+        }
+      ],
+      "tags": [
+        "Wenezuela",
+        "Trzęsienie ziemi",
+        "Ratownictwo",
+        "Kryzys humanitarny"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-0602-09-greece-firebombs",
+      "section": "Świat",
+      "title": "Ataki bombowe w Salonikach mają już ofiarę śmiertelną w rodzinie polityka rządzącej partii",
+      "lead": "Wieczorny wątek grecki wchodzi w twardszą fazę politycznej przemocy.",
+      "whatHappened": "BBC podało, że matka greckiego polityka zmarła od ran po jednym z ataków w Salonikach. CNN opisuje trzy skoordynowane ataki na domy osób związanych z rządzącą Nową Demokracją.",
+      "keyFacts": [
+        "Śmiertelny finał dotyczy rodziny polityka partii rządzącej.",
+        "CNN opisuje serię trzech przedświtowych ataków z użyciem bomb zapalających.",
+        "Temat przesuwa się z samego incydentu do bardziej jawnego pytania o polityczną przemoc w Grecji."
+      ],
+      "reactions": [
+        "To cięższa i bardziej alarmowa wersja karty, która była już obecna o 21:01.",
+        "Jeżeli śledztwo wskaże wyraźny motyw polityczny, temat może szybko wejść na poziom europejskiej debaty o bezpieczeństwie."
+      ],
+      "whyItMatters": "Przemoc dotykająca osoby związane z obozem rządowym destabilizuje debatę publiczną i podnosi ryzyko dalszej radykalizacji w państwie UE.",
+      "context": "W 21:01 była to już mocna karta europejska. O 06:02 jest jeszcze cięższa, bo ma potwierdzoną ofiarę śmiertelną.",
+      "watchNext": [
+        "Czy greckie władze wskażą sprawców lub motyw polityczny ataków.",
+        "Czy temat wywoła ostrzejsze reakcje rządu i opozycji jeszcze rano."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Greek politician's mother dies of wounds after arson attack",
+          "url": "https://www.bbc.co.uk/news/articles/c3eywl0eq29o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: 1 person dead, several hurt after firebombs hurled at homes of Greece’s governing party members",
+          "url": "https://edition.cnn.com/2026/07/01/europe/greece-governing-party-deadly-firebombs-intl"
+        }
+      ],
+      "tags": [
+        "Grecja",
+        "Saloniki",
+        "Przemoc polityczna",
+        "Nowa Demokracja"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-0602-10-trump-finanse",
+      "section": "Gospodarka",
+      "title": "Trump komentuje własny majątek, gdy nie wygasa presja wokół miliardowych wpływów z krypto",
+      "lead": "To dalszy ciąg jednej z najcięższych kart polityczno-finansowych w USA.",
+      "whatHappened": "TVN24 podało, że Donald Trump publicznie odniósł się do danych o swoim majątku i dochodach za 2025 rok. Równolegle BBC i ujawnienie majątkowe OGE nadal kotwiczą wątek ponad miliarda dolarów przychodów związanych z aktywami kryptowalutowymi.",
+      "keyFacts": [
+        "Trump sam zabrał głos w sprawie swoich finansów po nowych publikacjach.",
+        "BBC utrzymuje, że przychody z krypto przekroczyły miliard dolarów.",
+        "Publiczny dokument OGE pozostaje najmocniejszym źródłem pierwotnym dla zakresu ujawnionych aktywów."
+      ],
+      "reactions": [
+        "To już nie tylko opowieść o liczbach, lecz także o politycznej obronie własnych finansów przez urzędującego prezydenta.",
+        "Każde nowe pytanie o konflikt interesów może szybko wypchnąć temat z działu biznes do głównej polityki."
+      ],
+      "whyItMatters": "Spór o skalę i źródła majątku Trumpa łączy politykę, rynek krypto i pytanie o konflikt interesów na najwyższym szczeblu władzy USA.",
+      "context": "W 21:01 karta opierała się głównie na wyliczeniu majątku. O 06:02 dochodzi nowy element: osobista reakcja Trumpa na publikowane dane.",
+      "watchNext": [
+        "Czy pojawią się kolejne dokumenty lub pytania kongresowe o strukturę dochodów.",
+        "Czy Biały Dom lub otoczenie Trumpa rozwiną linię obrony wobec zarzutów o konflikt interesów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Donald Trump skomentował dane dotyczące swojego majątku",
+          "url": "https://tvn24.pl/biznes/ze-swiata/donald-trump-skomentowal-dane-dotyczace-swojego-majatku-st9123994?source=rss"
+        },
+        {
+          "title": "BBC: Trump made more than $1bn from crypto in first year back in office",
+          "url": "https://www.bbc.co.uk/news/articles/cvgmv98ez3zo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "OGE: President Trump’s certified annual financial disclosure report",
+          "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4EC9A8E6DD078F2985258CA9002C9377/%24FILE/Trump%2C%20Donald%20J.%202025%20Annual%20278.pdf"
+        }
+      ],
+      "tags": [
+        "Donald Trump",
+        "Krypto",
+        "OGE",
+        "Majątek"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-0602-11-syria-parliament",
+      "section": "Świat",
+      "title": "Prezydent Syrii domyka skład nowego parlamentu po Assadzie i próbuje nadać nowy kształt powojennej polityce",
+      "lead": "To nowa karta instytucjonalna z regionu, który zwykle wraca głównie przez wojnę.",
+      "whatHappened": "BBC podało, że prezydent Syrii mianował ostatnich 70 deputowanych do nowego parlamentu po Assadzim. Wśród nominowanych jest 15 kobiet, a decyzja domyka skład izby po wcześniejszym etapie wyborów regionalnych.",
+      "keyFacts": [
+        "Do parlamentu dołączono ostatnich 70 ustawodawców z nominacji prezydenckiej.",
+        "BBC podaje, że 15 z nowych nazwisk to kobiety.",
+        "Ruch ma zamknąć proces formowania powojennej izby po wcześniejszych wyborach kolegiów regionalnych."
+      ],
+      "reactions": [
+        "To mniej alarmowa, ale strategiczna karta pokazująca próbę nowej normalizacji politycznej w Syrii.",
+        "Bez realnej legitymizacji i pluralizmu temat może być czytany bardziej jako reżimowe domknięcie niż prawdziwe otwarcie."
+      ],
+      "whyItMatters": "Nowe instytucje w Syrii mogą wpływać na tempo stabilizacji kraju, relacje z sąsiadami i ocenę, czy po Assadzim powstaje choć częściowo nowy porządek polityczny.",
+      "context": "Poprzedni run koncentrował się na ostrzejszych kartach bezpieczeństwa. O 06:02 dochodzi instytucjonalny sygnał przebudowy politycznej w regionie.",
+      "watchNext": [
+        "Czy pojawią się reakcje opozycji, państw regionu lub partnerów zachodnich.",
+        "Czy nowy parlament dostanie realne znaczenie wykonawcze, czy pozostanie głównie narzędziem legitymizacji."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Syria's president names final 70 lawmakers to new post-Assad parliament",
+          "url": "https://www.bbc.co.uk/news/articles/c1jyk4985xwo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Syria",
+        "Parlament",
+        "Bliski Wschód",
+        "Polityka"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-02-0602-12-paliwa",
+      "section": "Gospodarka",
+      "title": "Kończy się pakiet Ceny Paliwa Niżej, a minister tłumaczy wzrost cen na stacjach",
+      "lead": "To poranna karta kosztów życia z szybkim przełożeniem na codzienny portfel.",
+      "whatHappened": "TVN24 podało, że zakończyło się działanie rządowego pakietu Ceny Paliwa Niżej. Minister energii Miłosz Motyka tłumaczy wzrost cen na stacjach i broni wpływu programu na inflację mimo rosnących kosztów dla kierowców.",
+      "keyFacts": [
+        "Pakiet osłonowy dla cen paliw przestał obowiązywać z końcem środowego dnia.",
+        "Minister wiąże program z niższą inflacją niż wcześniejsze projekcje.",
+        "Temat dotyczy bezpośrednio cen widocznych dla kierowców już od początku dnia."
+      ],
+      "reactions": [
+        "To użyteczna karta gospodarcza, bo dotyka szerokiej grupy odbiorców bardziej bezpośrednio niż wiele debat makroekonomicznych.",
+        "W krótkim terminie temat może zostać podbity przez kolejne odczyty z dystrybutorów i reakcje opozycji."
+      ],
+      "whyItMatters": "Paliwo jest jednym z najbardziej widocznych cenowo wskaźników dla obywateli, więc jego wzrost szybko wpływa na nastroje konsumenckie i ocenę polityki rządu.",
+      "context": "W 21:01 gospodarka była zdominowana przez Trumpa i krypto. O 06:02 dochodzi krajowa karta kosztów życia z bezpośrednim skutkiem dla kierowców.",
+      "watchNext": [
+        "Czy ceny na stacjach dalej wzrosną po pełnym wejściu zmian w życie.",
+        "Czy rząd pokaże nowy mechanizm osłonowy lub bardziej precyzyjne dane o wpływie na inflację."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pakiet „Ceny Paliwa Niżej”. Minister tłumaczy wzrost cen na stacjach",
+          "url": "https://tvn24.pl/biznes/z-kraju/pakiet-ceny-paliwa-nizej-milosz-motyka-o-wzroscie-cen-na-stacjach-st9123868?source=rss"
+        }
+      ],
+      "tags": [
+        "Paliwa",
+        "Inflacja",
+        "Koszty życia",
+        "Rząd"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "CNN Iran live",
+      "url": "https://edition.cnn.com/2026/07/02/world/live-news/iran-war-us-talks"
+    },
+    {
+      "title": "RCB: Alert RCB - intensywne opady deszczu, silny wiatr, burze (01/02.07)",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---intensywne-opady-deszczu-silny-wiatr-burze-010207"
+    },
+    {
+      "title": "IMGW: Aktualna i prognozowana sytuacja meteorologiczna i hydrologiczna – raport nr 135",
+      "url": "https://imgw.pl/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-135/"
+    },
+    {
+      "title": "ZUS: Program Dobry Start",
+      "url": "https://www.zus.pl/swiadczenia/swiadczenia-dla-rodzin/program-dobry-start"
+    },
+    {
+      "title": "Kremlin: Meeting with Security Council members",
+      "url": "https://en.kremlin.ru/events/president/news/80200"
+    },
+    {
+      "title": "USTR: Ambassador Greer Issues Statement on the USMCA Joint Review",
+      "url": "https://ustr.gov/about/policy-offices/press-office/press-releases/2026/july/ambassador-greer-issues-statement-usmca-joint-review"
+    },
+    {
+      "title": "OGE: President Trump’s certified annual financial disclosure report",
+      "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4EC9A8E6DD078F2985258CA9002C9377/%24FILE/Trump%2C%20Donald%20J.%202025%20Annual%20278.pdf"
+    }
+  ]
+}
