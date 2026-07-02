@@ -368,6 +368,14 @@
   Amazon/Google emissions and data-center costs, Meta One Premium for AI
   glasses, Google ZKP age assurance, Bending Spoons IPO and agent evaluation/
   operational tooling via HN/Product Hunt.
+- 2026-07-02: Daily tech podcast generated from the normal morning research
+  report; created `draft.md`, `script.md`, `sources.md`, `render.json`,
+  `brief.pdf`, and `podcast.mp3`. Final MP3 used Piper and measured about 7:59.
+  The shared renderer needed a temporary `ffmpeg`/`ffprobe` shim because the
+  local Homebrew `ffmpeg` binary referenced a missing `libx265.215.dylib`;
+  repository scripts were not modified. PDF brief was rendered in the mobile
+  390 x 844 pt format, had 42 link annotations, and was visually checked from
+  PNG renders.
 
 ## Done
 
