@@ -29,6 +29,7 @@ struct ResearchLoadRequest: Hashable {
 struct ResearchLoadTrigger: Hashable {
     let request: ResearchLoadRequest
     let routeRevision: Int
+    let isResearchActive: Bool
 }
 
 struct ResearchArticleCardSnapshot: Identifiable, Equatable {
@@ -246,6 +247,24 @@ struct ResearchView: View {
             selectedSection = nil
             selectedArticle = nil
             selectedMobileArticle = nil
+            if router.selectedTab == .research {
+                Task {
+                    await loadSelectedResearchContent()
+                    await resolvePendingAudioArticleRouteIfNeeded()
+                }
+            }
+        }
+        .onChange(of: router.selectedTab) { _, tab in
+            guard tab == .research else { return }
+            Task {
+                await handleResearchActivation()
+            }
+        }
+        .onChange(of: router.pendingAudioArticleRoute) { _, route in
+            guard route != nil else { return }
+            Task {
+                await resolvePendingAudioArticleRouteIfNeeded()
+            }
         }
         .onChange(of: store.manifest) { _, manifest in
             guard let manifest else { return }
@@ -269,18 +288,28 @@ struct ResearchView: View {
     private var researchLoadTrigger: ResearchLoadTrigger {
         ResearchLoadTrigger(
             request: researchLoadRequest,
-            routeRevision: router.reportRouteRevision
+            routeRevision: router.reportRouteRevision,
+            isResearchActive: router.selectedTab == .research
         )
     }
 
     private func handleResearchLoadTrigger(_ trigger: ResearchLoadTrigger) async {
-        guard router.selectedTab == .research else { return }
+        guard trigger.isResearchActive else { return }
         if trigger.routeRevision != handledReportRouteRevision {
             handledReportRouteRevision = trigger.routeRevision
             await store.reload(minimumInterval: 0)
             guard !Task.isCancelled else { return }
         }
         await loadSelectedResearchContent()
+        await resolvePendingAudioArticleRouteIfNeeded()
+    }
+
+    private func handleResearchActivation() async {
+        if router.selectedReportDay == nil {
+            router.selectedReportDay = store.manifest?.reportPackages(for: router.selectedResearchTopic).first?.date
+        }
+        await loadSelectedResearchContent()
+        await resolvePendingAudioArticleRouteIfNeeded()
     }
 
     private func loadNewsIssue() async {
@@ -310,6 +339,40 @@ struct ResearchView: View {
             await loadMobileMagazine()
         } else {
             await loadNewsIssue()
+        }
+    }
+
+    private func resolvePendingAudioArticleRouteIfNeeded() async {
+        guard let route = router.pendingAudioArticleRoute else { return }
+
+        switch route {
+        case .mobileNewsArticle(let topic, let articleID):
+            guard topic == .aktualne else { return }
+            if router.selectedResearchTopic != .aktualne {
+                router.selectedResearchTopic = .aktualne
+                return
+            }
+            if mobileNewsStore.magazine == nil {
+                await loadMobileMagazine()
+            }
+            guard let article = mobileNewsStore.magazine?.sections
+                .flatMap(\.articles)
+                .first(where: { $0.id == articleID })
+            else { return }
+            selectedMobileArticle = article
+            router.clearPendingAudioArticleRoute(route)
+
+        case .researchArticle(let topic, let articleID):
+            if router.selectedResearchTopic != topic {
+                router.selectedResearchTopic = topic
+                return
+            }
+            if newsStore.issue?.topic != topic {
+                await loadNewsIssue()
+            }
+            guard let article = newsStore.issue?.articles.first(where: { $0.id == articleID }) else { return }
+            selectedArticle = article
+            router.clearPendingAudioArticleRoute(route)
         }
     }
 
@@ -458,32 +521,10 @@ private struct ResearchArticleSnapshotHost: View {
     @Binding var selectedArticle: ResearchNewsArticle?
     let speechController: MobileNewsSpeechController
     let savedStore: SavedResearchArticleStore
-    @State private var snapshot: ResearchArticleListSnapshot?
-    @State private var snapshotKey: ResearchArticleSnapshotKey?
-
-    private var currentKey: ResearchArticleSnapshotKey {
-        ResearchArticleSnapshotKey(issue: issue, selectedSection: selectedSection, searchText: "")
-    }
 
     var body: some View {
-        Group {
-            if let snapshot, snapshotKey == currentKey {
-                snapshotContent(snapshot)
-            } else {
-                PavbotLoadingStateCard(
-                    title: "Układam artykuły",
-                    message: "Przygotowuję skrót, top story i listę dla wybranej sekcji.",
-                    systemImage: topic.systemImage,
-                    tint: topic.tint
-                )
-            }
-        }
-        .task(id: currentKey) {
-            let nextSnapshot = ResearchArticleListSnapshot(issue: issue, selectedSection: selectedSection, searchText: "")
-            guard !Task.isCancelled else { return }
-            snapshot = nextSnapshot
-            snapshotKey = currentKey
-        }
+        let snapshot = ResearchArticleListSnapshot(issue: issue, selectedSection: selectedSection, searchText: "")
+        snapshotContent(snapshot)
     }
 
     @ViewBuilder
@@ -1134,7 +1175,10 @@ private struct MobileNewsArticleSpeechActionHost: View {
         } else if isCurrent, speechController.isSpeaking {
             speechController.pause()
         } else {
-            speechController.speak(article)
+            speechController.speak(
+                article,
+                destination: .mobileNewsArticle(topic: .aktualne, articleID: article.id)
+            )
         }
         haptics.play(.lightImpact)
     }
@@ -1533,6 +1577,7 @@ private struct MobileNewsSpeechControls: View {
     @Environment(PavbotHaptics.self) private var haptics
     let article: MobileNewsArticle
     let speechController: MobileNewsSpeechController
+    var destination: PavbotAudioDestination?
 
     private var isCurrent: Bool {
         speechController.currentArticleID == article.id
@@ -1547,7 +1592,7 @@ private struct MobileNewsSpeechControls: View {
                     } else if isCurrent, speechController.isSpeaking {
                         speechController.pause()
                     } else {
-                        speechController.speak(article)
+                        speechController.speak(article, destination: destination)
                     }
                     haptics.play(.lightImpact)
                 } label: {
@@ -1609,9 +1654,10 @@ private struct MobileNewsSpeechControls: View {
 private struct ResearchArticleSpeechControlsHost: View {
     let article: MobileNewsArticle
     @ObservedObject var speechController: MobileNewsSpeechController
+    let destination: PavbotAudioDestination
 
     var body: some View {
-        MobileNewsSpeechControls(article: article, speechController: speechController)
+        MobileNewsSpeechControls(article: article, speechController: speechController, destination: destination)
     }
 }
 
@@ -2165,7 +2211,11 @@ private struct ResearchArticleReader: View {
                             tint: issue.topic.tint,
                             font: .headline
                         )
-                        ResearchArticleSpeechControlsHost(article: speechArticle, speechController: speechController)
+                        ResearchArticleSpeechControlsHost(
+                            article: speechArticle,
+                            speechController: speechController,
+                            destination: .researchArticle(topic: issue.topic, articleID: article.id)
+                        )
                         ResearchArticleBulletList(points: presentation.bullets, tint: issue.topic.tint)
                         Divider()
                         ResearchArticleBody(

@@ -27,7 +27,27 @@ final class AppRouter {
     var selectedReportArtifactIDs: [String] = []
     var jobsPath: [PavbotArtifact] = []
     var researchPath: [PavbotArtifact] = []
+    var pendingAudioArticleRoute: PavbotAudioDestination?
     private(set) var reportRouteRevision = 0
+
+    func openAudioDestination(_ destination: PavbotAudioDestination) {
+        switch destination {
+        case .mobileNewsArticle:
+            selectedResearchTopic = .aktualne
+        case .researchArticle(let topic, _):
+            selectedResearchTopic = topic
+        }
+        selectedTab = .research
+        pendingAudioArticleRoute = destination
+        artifactPath = []
+        jobsPath = []
+        researchPath = []
+    }
+
+    func clearPendingAudioArticleRoute(_ destination: PavbotAudioDestination) {
+        guard pendingAudioArticleRoute == destination else { return }
+        pendingAudioArticleRoute = nil
+    }
 
     func openArtifact(_ artifact: PavbotArtifact) {
         if let reportTopic = ReportTopicKind(topic: artifact.topic) {

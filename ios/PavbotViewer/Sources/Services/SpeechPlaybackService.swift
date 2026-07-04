@@ -434,6 +434,9 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
     private var audioTopic: String
     private var currentTitle: String?
     private var currentText: String?
+    private var currentDestination: PavbotAudioDestination?
+    private var currentKeyNotes: [String] = []
+    private var currentTabLabel: String?
     private var segmentStartDate: Date?
     private var segmentStartElapsed = 0.0
     private var timer: Timer?
@@ -475,7 +478,14 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
         audioTopic = topic
     }
 
-    func play(itemID: String, title: String, text: String) {
+    func play(
+        itemID: String,
+        title: String,
+        text: String,
+        destination: PavbotAudioDestination? = nil,
+        keyNotes: [String] = [],
+        tabLabel: String? = nil
+    ) {
         if currentItemID == itemID, playbackState == .paused {
             resume()
             return
@@ -486,7 +496,15 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
             return
         }
 
-        start(itemID: itemID, title: title, text: text, segmentIndex: 0)
+        start(
+            itemID: itemID,
+            title: title,
+            text: text,
+            segmentIndex: 0,
+            destination: destination,
+            keyNotes: keyNotes,
+            tabLabel: tabLabel
+        )
     }
 
     func start(
@@ -496,7 +514,10 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
         segmentIndex: Int = 0,
         preservedElapsed: Double? = nil,
         wordOffset: Int = 0,
-        startPaused: Bool = false
+        startPaused: Bool = false,
+        destination: PavbotAudioDestination? = nil,
+        keyNotes: [String] = [],
+        tabLabel: String? = nil
     ) {
         let cleanText = text.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !cleanText.isEmpty else {
@@ -531,6 +552,9 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
         currentItemID = itemID
         currentTitle = title
         currentText = cleanText
+        currentDestination = destination
+        currentKeyNotes = keyNotes
+        currentTabLabel = tabLabel
         timeline = newTimeline
         currentSegmentIndex = min(max(segmentIndex, 0), newTimeline.segments.count - 1)
         currentSegmentWordOffset = safeWordOffset(wordOffset, in: newTimeline.segment(at: currentSegmentIndex))
@@ -564,7 +588,10 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
             segmentIndex: resumeContext?.segmentIndex ?? currentSegmentIndex,
             preservedElapsed: resumeContext?.estimatedElapsed ?? estimatedElapsed,
             wordOffset: resumeContext?.wordOffset ?? currentSegmentWordOffset,
-            startPaused: wasPaused
+            startPaused: wasPaused,
+            destination: currentDestination,
+            keyNotes: currentKeyNotes,
+            tabLabel: currentTabLabel
         )
     }
 
@@ -575,7 +602,15 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
     func seek(toSegmentIndex index: Int) {
         guard let currentItemID, let currentTitle, let currentText, let timeline else { return }
         let safeIndex = min(max(index, 0), max(timeline.segments.count - 1, 0))
-        start(itemID: currentItemID, title: currentTitle, text: currentText, segmentIndex: safeIndex)
+        start(
+            itemID: currentItemID,
+            title: currentTitle,
+            text: currentText,
+            segmentIndex: safeIndex,
+            destination: currentDestination,
+            keyNotes: currentKeyNotes,
+            tabLabel: currentTabLabel
+        )
     }
 
     func seek(to seconds: Double) {
@@ -591,7 +626,10 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
             segmentIndex: segmentIndex,
             preservedElapsed: safeSeconds,
             wordOffset: wordOffset(in: segment, at: safeSeconds),
-            startPaused: playbackState == .paused
+            startPaused: playbackState == .paused,
+            destination: currentDestination,
+            keyNotes: currentKeyNotes,
+            tabLabel: currentTabLabel
         )
     }
 
@@ -669,6 +707,9 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
         currentItemID = nil
         currentTitle = nil
         currentText = nil
+        currentDestination = nil
+        currentKeyNotes = []
+        currentTabLabel = nil
         timeline = nil
         currentUtterance = nil
         currentUtteranceSessionID = nil
@@ -737,7 +778,7 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
         let finalDuration = timeline?.estimatedDuration ?? estimatedElapsed
         resetPlaybackState(finalElapsed: finalDuration, keepError: true)
         if let sessionID {
-            audioCoordinator?.deactivate(sessionID: sessionID)
+            audioCoordinator?.deactivate(sessionID: sessionID, isFinished: true)
         }
         audioSession.deactivateAfterSpeech()
     }
@@ -758,7 +799,10 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
             source: audioSource,
             title: currentTitle,
             topic: audioTopic,
-            routeID: currentItemID
+            routeID: currentItemID,
+            destination: currentDestination,
+            tabLabel: currentTabLabel,
+            keyNotes: currentKeyNotes
         )
         audioCoordinator.activate(
             session,

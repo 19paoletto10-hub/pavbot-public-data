@@ -276,11 +276,14 @@ final class MobileNewsSpeechController: ObservableObject {
         playback.configureAudioCoordinator(coordinator, source: .researchTTS, topic: "Przegląd")
     }
 
-    func speak(_ article: MobileNewsArticle) {
+    func speak(_ article: MobileNewsArticle, destination: PavbotAudioDestination? = nil) {
         playback.play(
             itemID: article.id,
             title: article.title,
-            text: nonBlankSpeechText(article.ttsText) ?? article.lead
+            text: nonBlankSpeechText(article.ttsText) ?? article.lead,
+            destination: destination,
+            keyNotes: Array(article.facts.prefix(3)),
+            tabLabel: article.section
         )
     }
 

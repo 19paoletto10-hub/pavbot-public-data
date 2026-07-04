@@ -4,13 +4,21 @@ import Foundation
 import MediaPlayer
 import Observation
 
+enum PavbotAudioDestination: Equatable, Hashable {
+    case mobileNewsArticle(topic: ReportTopicKind, articleID: String)
+    case researchArticle(topic: ReportTopicKind, articleID: String)
+}
+
 struct PavbotAudioPlaybackSession: Equatable {
     let id: String
     let source: PavbotAudioActivitySource
     let title: String
     let topic: String
     let routeID: String
+    var destination: PavbotAudioDestination? = nil
     var routePath = ""
+    var tabLabel: String? = nil
+    var keyNotes: [String] = []
 }
 
 enum PavbotAudioRemoteCommand: Equatable {
@@ -137,11 +145,17 @@ struct PavbotAudioSessionSnapshot: Equatable {
     let timeLabel: String
     let elapsed: Double
     let duration: Double
+    let destination: PavbotAudioDestination?
+    let tabLabel: String?
+    let keyNotes: [String]
 
     init(session: PavbotAudioPlaybackSession, elapsed: Double, duration: Double, isPlaying: Bool) {
         source = session.source
         title = session.title
         topic = session.topic
+        destination = session.destination
+        tabLabel = session.tabLabel
+        keyNotes = session.keyNotes
         self.elapsed = elapsed
         self.duration = duration
         self.isPlaying = isPlaying
@@ -170,6 +184,9 @@ struct PavbotAudioSessionSnapshot: Equatable {
 @MainActor
 @Observable
 final class PavbotAudioSessionCoordinator {
+    private static let liveActivityRelevanceScore = 100.0
+    private static let finishedActivityDismissalDelay: TimeInterval = 120
+
     private(set) var currentSnapshot: PavbotAudioSessionSnapshot?
 
     @ObservationIgnored private let enableLiveActivities: Bool
@@ -222,12 +239,9 @@ final class PavbotAudioSessionCoordinator {
             self.activeSession = nil
             self.controls = nil
             currentSnapshot = nil
-            endLiveActivity(snapshot: previousSnapshot)
+            endLiveActivity(snapshot: previousSnapshot, isFinished: false)
             clearSystemAudioState()
-            Task { @MainActor in
-                await Task.yield()
-                previousControls?.stop()
-            }
+            previousControls?.stop()
         }
 
         activeSession = session
@@ -260,13 +274,13 @@ final class PavbotAudioSessionCoordinator {
         updateLiveActivity(force: false)
     }
 
-    func deactivate(sessionID: String) {
+    func deactivate(sessionID: String, isFinished: Bool = false) {
         guard activeSession?.id == sessionID else { return }
         let snapshot = currentSnapshot
         activeSession = nil
         controls = nil
         currentSnapshot = nil
-        endLiveActivity(snapshot: snapshot)
+        endLiveActivity(snapshot: snapshot, isFinished: isFinished)
         clearSystemAudioState()
     }
 
@@ -285,7 +299,7 @@ final class PavbotAudioSessionCoordinator {
         activeSession = nil
         controls = nil
         currentSnapshot = nil
-        endLiveActivity(snapshot: snapshot)
+        endLiveActivity(snapshot: snapshot, isFinished: false)
         clearSystemAudioState()
         Task { @MainActor in
             await Task.yield()
@@ -475,12 +489,20 @@ final class PavbotAudioSessionCoordinator {
             elapsed: currentSnapshot.elapsed,
             duration: currentSnapshot.duration,
             isPlaying: currentSnapshot.isPlaying,
-            updatedAt: now
+            updatedAt: now,
+            tabLabel: currentSnapshot.tabLabel,
+            keyNotes: currentSnapshot.keyNotes
+        )
+        let staleDate = now.addingTimeInterval(60)
+        let content = ActivityContent(
+            state: state,
+            staleDate: staleDate,
+            relevanceScore: Self.liveActivityRelevanceScore
         )
 
         if let activity {
             Task {
-                await activity.update(ActivityContent(state: state, staleDate: Date().addingTimeInterval(60)))
+                await activity.update(content)
             }
             return
         }
@@ -495,7 +517,7 @@ final class PavbotAudioSessionCoordinator {
         do {
             activity = try Activity.request(
                 attributes: attributes,
-                content: ActivityContent(state: state, staleDate: Date().addingTimeInterval(60)),
+                content: content,
                 pushType: nil
             )
         } catch {
@@ -503,7 +525,7 @@ final class PavbotAudioSessionCoordinator {
         }
     }
 
-    private func endLiveActivity(snapshot: PavbotAudioSessionSnapshot?) {
+    private func endLiveActivity(snapshot: PavbotAudioSessionSnapshot?, isFinished: Bool) {
         guard let activity else { return }
         self.activity = nil
         let state = PavbotAudioActivityAttributes.ContentState(
@@ -511,10 +533,22 @@ final class PavbotAudioSessionCoordinator {
             elapsed: snapshot?.elapsed ?? 0,
             duration: snapshot?.duration ?? 0,
             isPlaying: false,
-            updatedAt: Date()
+            updatedAt: Date(),
+            tabLabel: snapshot?.tabLabel,
+            keyNotes: snapshot?.keyNotes ?? [],
+            isFinished: isFinished
+        )
+        let content = ActivityContent(
+            state: state,
+            staleDate: nil,
+            relevanceScore: Self.liveActivityRelevanceScore
         )
         Task {
-            await activity.end(ActivityContent(state: state, staleDate: nil), dismissalPolicy: .immediate)
+            if isFinished {
+                await activity.end(content, dismissalPolicy: .after(Date().addingTimeInterval(Self.finishedActivityDismissalDelay)))
+            } else {
+                await activity.end(content, dismissalPolicy: .after(Date()))
+            }
         }
     }
 }
@@ -671,7 +705,7 @@ final class AudioPlaybackService {
         currentTime = 0
         player?.seek(to: .zero)
         if let currentAudioSessionID {
-            audioCoordinator?.deactivate(sessionID: currentAudioSessionID)
+            audioCoordinator?.deactivate(sessionID: currentAudioSessionID, isFinished: true)
         }
     }
 

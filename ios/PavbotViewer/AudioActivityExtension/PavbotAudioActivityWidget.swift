@@ -12,32 +12,7 @@ struct PavbotAudioActivityBundle: WidgetBundle {
 struct PavbotAudioActivityWidget: Widget {
     var body: some WidgetConfiguration {
         ActivityConfiguration(for: PavbotAudioActivityAttributes.self) { context in
-            VStack(alignment: .leading, spacing: 10) {
-                HStack(spacing: 10) {
-                    PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 30)
-                    VStack(alignment: .leading, spacing: 3) {
-                        Text("Pavbot")
-                            .font(.caption.weight(.semibold))
-                            .foregroundStyle(.secondary)
-                        Text(context.state.title)
-                            .font(.headline)
-                            .lineLimit(2)
-                    }
-                }
-
-                ProgressView(value: progressValue(context.state))
-                    .tint(activityTint(context.attributes.source))
-
-                HStack {
-                    Text(formatPlaybackTime(context.state.elapsed))
-                    Spacer()
-                    Text(context.attributes.topic)
-                    Spacer()
-                    Text(context.state.duration > 0 ? formatPlaybackTime(context.state.duration) : "--:--")
-                }
-                .font(.caption.monospacedDigit())
-                .foregroundStyle(.secondary)
-            }
+            PavbotNotificationAudioBanner(source: context.attributes.source, topic: context.attributes.topic, state: context.state)
             .padding()
             .activityBackgroundTint(Color(.systemBackground))
             .activitySystemActionForegroundColor(activityTint(context.attributes.source))
@@ -59,15 +34,13 @@ struct PavbotAudioActivityWidget: Widget {
                     }
                 }
                 DynamicIslandExpandedRegion(.trailing) {
-                    PavbotNewsDynamicIslandBadge(source: context.attributes.source)
+                    PavbotDynamicIslandTrailingStatus(source: context.attributes.source, state: context.state)
                 }
                 DynamicIslandExpandedRegion(.bottom) {
                     HStack(spacing: 10) {
                         ProgressView(value: progressValue(context.state))
                             .tint(activityTint(context.attributes.source))
-                        Text(formatPlaybackTime(context.state.elapsed))
-                            .font(.caption2.monospacedDigit())
-                            .foregroundStyle(.secondary)
+                        PavbotRemainingPlaybackLabel(state: context.state)
                     }
                 }
             } compactLeading: {
@@ -78,6 +51,104 @@ struct PavbotAudioActivityWidget: Widget {
                 PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 16)
             }
             .widgetURL(deepLinkURL(context.attributes))
+        }
+    }
+}
+
+private struct PavbotNotificationAudioBanner: View {
+    let source: PavbotAudioActivitySource
+    let topic: String
+    let state: PavbotAudioActivityAttributes.ContentState
+
+    var body: some View {
+        let tabLabel = state.tabLabel ?? topic
+
+        VStack(alignment: .leading, spacing: 10) {
+            HStack(alignment: .top, spacing: 10) {
+                statusIcon
+
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(state.isFinished ? "Odsłuchane" : "Pavbot")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(.secondary)
+
+                    Text(state.title)
+                        .font(.headline.weight(.semibold))
+                        .lineLimit(2)
+
+                    Text(tabLabel)
+                        .font(.caption2.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                        .lineLimit(1)
+                }
+
+                Spacer(minLength: 8)
+
+                if !state.isFinished {
+                    PavbotRemainingPlaybackLabel(state: state)
+                }
+            }
+
+            if state.isFinished {
+                completionNotes
+            } else {
+                playbackProgress(topic: tabLabel)
+            }
+        }
+    }
+
+    @ViewBuilder
+    private var statusIcon: some View {
+        if state.isFinished {
+            Image(systemName: "checkmark.circle.fill")
+                .font(.system(size: 30, weight: .semibold))
+                .foregroundStyle(.green)
+                .frame(width: 36, height: 36)
+                .accessibilityLabel("Audio zakonczone")
+        } else {
+            PavbotAudioActivityIcon(source: source, isPlaying: state.isPlaying, size: 30)
+        }
+    }
+
+    @ViewBuilder
+    private var completionNotes: some View {
+        if state.keyNotes.isEmpty {
+            EmptyView()
+        } else {
+            VStack(alignment: .leading, spacing: 5) {
+                ForEach(state.keyNotes.prefix(3), id: \.self) { note in
+                    HStack(alignment: .firstTextBaseline, spacing: 6) {
+                        Circle()
+                            .fill(.secondary.opacity(0.45))
+                            .frame(width: 4, height: 4)
+
+                        Text(note)
+                            .font(.caption)
+                            .foregroundStyle(.primary)
+                            .lineLimit(2)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+                }
+            }
+            .padding(.leading, 46)
+        }
+    }
+
+    private func playbackProgress(topic: String) -> some View {
+        VStack(spacing: 7) {
+            ProgressView(value: progressValue(state))
+                .tint(activityTint(source))
+
+            HStack {
+                Text(formatPlaybackTime(state.elapsed))
+                Spacer()
+                Text(topic)
+                    .lineLimit(1)
+                Spacer()
+                Text(state.duration > 0 ? formatPlaybackTime(state.duration) : "--:--")
+            }
+            .font(.caption.monospacedDigit())
+            .foregroundStyle(.secondary)
         }
     }
 }
@@ -112,6 +183,32 @@ private struct PavbotAudioActivityIcon: View {
         .foregroundStyle(activityTint(source))
         .frame(width: size + 6, height: size + 6)
         .accessibilityHidden(true)
+    }
+}
+
+private struct PavbotDynamicIslandTrailingStatus: View {
+    let source: PavbotAudioActivitySource
+    let state: PavbotAudioActivityAttributes.ContentState
+
+    var body: some View {
+        HStack(spacing: 10) {
+            PavbotRemainingPlaybackLabel(state: state)
+            PavbotNewsDynamicIslandBadge(source: source)
+        }
+        .frame(maxWidth: .infinity, alignment: .trailing)
+    }
+}
+
+private struct PavbotRemainingPlaybackLabel: View {
+    let state: PavbotAudioActivityAttributes.ContentState
+
+    var body: some View {
+        Text(state.remainingPlaybackLabel)
+            .font(.caption2.monospacedDigit())
+            .foregroundStyle(.secondary)
+            .lineLimit(1)
+            .minimumScaleFactor(0.72)
+            .accessibilityLabel("Do końca audio \(state.remainingPlaybackLabel)")
     }
 }
 

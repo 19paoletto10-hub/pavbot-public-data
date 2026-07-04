@@ -3,7 +3,7 @@ import SwiftUI
 enum AudioPlaybackBannerLayout {
     static let nativeTabBarHeight: CGFloat = 49
     static let phoneTabBarVisualGap: CGFloat = 9
-    static let phoneLoweringAdjustment: CGFloat = 20
+    static let phoneLoweringAdjustment: CGFloat = 25
     static let splitBottomClearance: CGFloat = 20
     static let estimatedBannerHeight: CGFloat = 68
     static let buttonHitSize: CGFloat = 44
@@ -34,6 +34,7 @@ struct AudioPlaybackBannerSnapshot: Equatable {
     let playPauseSystemImage: String
     let sourceSystemImage: String
     let timeLabel: String
+    let destination: PavbotAudioDestination?
 
     @MainActor
     init?(service: AudioPlaybackService) {
@@ -46,6 +47,7 @@ struct AudioPlaybackBannerSnapshot: Equatable {
         sourceSystemImage = source.compactSystemImage
         progress = Self.progress(currentTime: service.currentTime, duration: service.duration)
         timeLabel = Self.timeLabel(currentTime: service.currentTime, duration: service.duration)
+        destination = nil
     }
 
     @MainActor
@@ -59,6 +61,7 @@ struct AudioPlaybackBannerSnapshot: Equatable {
         playPauseSystemImage = snapshot.playPauseSystemImage
         sourceSystemImage = snapshot.sourceSystemImage
         timeLabel = snapshot.timeLabel
+        destination = snapshot.destination
     }
 
     private static func progress(currentTime: Double, duration: Double) -> Double {
@@ -79,35 +82,13 @@ struct AudioPlaybackBannerSnapshot: Equatable {
 
 struct AudioPlaybackBanner: View {
     @Environment(PavbotAudioSessionCoordinator.self) private var audioCoordinator
+    @Environment(AppRouter.self) private var router
     @Environment(PavbotHaptics.self) private var haptics
 
     var body: some View {
         if let snapshot = AudioPlaybackBannerSnapshot(coordinator: audioCoordinator) {
             HStack(spacing: 12) {
-                AudioPlaybackSourceIcon(source: snapshot.source, isPlaying: snapshot.isPlaying)
-
-                VStack(alignment: .leading, spacing: 5) {
-                    HStack(spacing: 8) {
-                        Text(snapshot.title)
-                            .font(.subheadline.weight(.semibold))
-                            .foregroundStyle(.primary)
-                            .lineLimit(1)
-                        Spacer(minLength: 0)
-                        Text(snapshot.timeLabel)
-                            .font(.caption2.monospacedDigit())
-                            .foregroundStyle(.secondary)
-                    }
-
-                    HStack(spacing: 8) {
-                        Text(snapshot.topic)
-                            .font(.caption.weight(.semibold))
-                            .foregroundStyle(.secondary)
-                            .lineLimit(1)
-                        ProgressView(value: snapshot.progress)
-                            .progressViewStyle(.linear)
-                            .tint(tint(for: snapshot.source))
-                    }
-                }
+                infoArea(for: snapshot)
 
                 Button {
                     snapshot.isPlaying ? audioCoordinator.pauseActive() : audioCoordinator.resumeActive()
@@ -160,6 +141,54 @@ struct AudioPlaybackBanner: View {
         case .researchTTS:
             .teal
         }
+    }
+
+    @ViewBuilder
+    private func infoArea(for snapshot: AudioPlaybackBannerSnapshot) -> some View {
+        if let destination = snapshot.destination {
+            Button {
+                router.openAudioDestination(destination)
+                haptics.play(.selection)
+            } label: {
+                infoContent(for: snapshot)
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Otwórz aktualnie czytany artykuł")
+            .accessibilityIdentifier("audio.banner.openDetail")
+        } else {
+            infoContent(for: snapshot)
+        }
+    }
+
+    private func infoContent(for snapshot: AudioPlaybackBannerSnapshot) -> some View {
+        HStack(spacing: 12) {
+            AudioPlaybackSourceIcon(source: snapshot.source, isPlaying: snapshot.isPlaying)
+
+            VStack(alignment: .leading, spacing: 5) {
+                HStack(spacing: 8) {
+                    Text(snapshot.title)
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(.primary)
+                        .lineLimit(1)
+                    Spacer(minLength: 0)
+                    Text(snapshot.timeLabel)
+                        .font(.caption2.monospacedDigit())
+                        .foregroundStyle(.secondary)
+                }
+
+                HStack(spacing: 8) {
+                    Text(snapshot.topic)
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                        .lineLimit(1)
+                    ProgressView(value: snapshot.progress)
+                        .progressViewStyle(.linear)
+                        .tint(tint(for: snapshot.source))
+                }
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .contentShape(RoundedRectangle(cornerRadius: 16, style: .continuous))
     }
 }
 

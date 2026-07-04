@@ -1247,6 +1247,8 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(controller.isSpeaking)
         XCTAssertEqual(coordinator.currentSnapshot?.source, .researchTTS)
         XCTAssertEqual(coordinator.currentSnapshot?.topic, "Przegląd")
+        XCTAssertEqual(coordinator.currentSnapshot?.tabLabel, adapted.section)
+        XCTAssertEqual(coordinator.currentSnapshot?.keyNotes, Array(adapted.facts.prefix(3)))
         XCTAssertEqual(coordinator.currentSnapshot?.title, ResearchArticlePresentation(article: article, topic: .polskaSwiat).title)
         XCTAssertNotNil(AudioPlaybackBannerSnapshot(coordinator: coordinator))
     }
@@ -2779,15 +2781,15 @@ final class PavbotManifestTests: XCTestCase {
     func testAudioPlaybackBannerLayoutKeepsPlayerAboveTabBar() {
         XCTAssertEqual(AudioPlaybackBannerLayout.nativeTabBarHeight, 49)
         XCTAssertEqual(AudioPlaybackBannerLayout.phoneTabBarVisualGap, 9)
-        XCTAssertEqual(AudioPlaybackBannerLayout.phoneLoweringAdjustment, 20)
+        XCTAssertEqual(AudioPlaybackBannerLayout.phoneLoweringAdjustment, 25)
         XCTAssertEqual(AudioPlaybackBannerLayout.splitBottomClearance, 20)
         XCTAssertEqual(AudioPlaybackBannerLayout.estimatedBannerHeight, 68)
         XCTAssertEqual(AudioPlaybackBannerLayout.buttonHitSize, 44)
         XCTAssertEqual(AudioPlaybackBannerLayout.bottomClearance(for: .tab), 49)
-        XCTAssertEqual(AudioPlaybackBannerLayout.bottomClearance(for: .tab, bottomSafeArea: 34), 72)
+        XCTAssertEqual(AudioPlaybackBannerLayout.bottomClearance(for: .tab, bottomSafeArea: 34), 67)
         XCTAssertEqual(AudioPlaybackBannerLayout.bottomClearance(for: .split), 20)
         XCTAssertEqual(AudioPlaybackBannerLayout.contentReserveHeight(for: .tab), 117)
-        XCTAssertEqual(AudioPlaybackBannerLayout.contentReserveHeight(for: .tab, bottomSafeArea: 34), 140)
+        XCTAssertEqual(AudioPlaybackBannerLayout.contentReserveHeight(for: .tab, bottomSafeArea: 34), 135)
         XCTAssertEqual(AudioPlaybackBannerLayout.contentReserveHeight(for: .split), 88)
     }
 
@@ -2804,7 +2806,70 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(source.contains(".accessibilityElement(children: .combine)"))
     }
 
-    func testAudioActivityAttributesCarryArtifactPlaybackMetadata() {
+    func testAudioPlaybackSessionCarriesArticleDestinationForMiniPlayerRouting() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources")
+        let audioSource = try String(contentsOf: sourcesRoot.appendingPathComponent("Services/AudioPlaybackService.swift"))
+        let speechSource = try String(contentsOf: sourcesRoot.appendingPathComponent("Services/SpeechPlaybackService.swift"))
+        let mobileNewsSource = try String(contentsOf: sourcesRoot.appendingPathComponent("Services/MobileNewsService.swift"))
+        let reportSource = try String(contentsOf: sourcesRoot.appendingPathComponent("Views/ReportPackageViews.swift"))
+
+        XCTAssertTrue(audioSource.contains("enum PavbotAudioDestination: Equatable, Hashable"))
+        XCTAssertTrue(audioSource.contains("case mobileNewsArticle(topic: ReportTopicKind, articleID: String)"))
+        XCTAssertTrue(audioSource.contains("case researchArticle(topic: ReportTopicKind, articleID: String)"))
+        XCTAssertTrue(audioSource.contains("let destination: PavbotAudioDestination?"))
+        XCTAssertTrue(audioSource.contains("destination = session.destination"))
+        XCTAssertTrue(speechSource.contains("destination: PavbotAudioDestination? = nil"))
+        XCTAssertTrue(mobileNewsSource.contains("func speak(_ article: MobileNewsArticle, destination: PavbotAudioDestination? = nil)"))
+        XCTAssertTrue(reportSource.contains(".mobileNewsArticle(topic: .aktualne, articleID: article.id)"))
+        XCTAssertTrue(reportSource.contains(".researchArticle(topic: issue.topic, articleID: article.id)"))
+    }
+
+    func testAudioPlaybackBannerInfoTapRoutesWithoutStealingPlaybackControls() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources")
+        let bannerSource = try String(contentsOf: sourcesRoot.appendingPathComponent("Views/AudioPlaybackBanner.swift"))
+        let routerSource = try String(contentsOf: sourcesRoot.appendingPathComponent("Navigation/AppRouter.swift"))
+
+        XCTAssertTrue(bannerSource.contains("@Environment(AppRouter.self) private var router"))
+        XCTAssertTrue(bannerSource.contains("router.openAudioDestination(destination)"))
+        XCTAssertTrue(bannerSource.contains("private func infoArea(for snapshot: AudioPlaybackBannerSnapshot)"))
+        XCTAssertTrue(bannerSource.contains("private func infoContent(for snapshot: AudioPlaybackBannerSnapshot)"))
+        XCTAssertTrue(bannerSource.contains(".accessibilityIdentifier(\"audio.banner.openDetail\")"))
+        XCTAssertTrue(bannerSource.contains(".accessibilityIdentifier(\"audio.banner.playPause\")"))
+        XCTAssertTrue(bannerSource.contains(".accessibilityIdentifier(\"audio.banner.close\")"))
+        XCTAssertTrue(routerSource.contains("var pendingAudioArticleRoute: PavbotAudioDestination?"))
+        XCTAssertTrue(routerSource.contains("func openAudioDestination(_ destination: PavbotAudioDestination)"))
+    }
+
+    func testAudioLiveActivityContentUsesHighRelevanceScoreWithoutDroppingNowPlaying() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Services/AudioPlaybackService.swift")
+        let source = try String(contentsOf: sourceURL)
+
+        XCTAssertTrue(source.contains("private static let liveActivityRelevanceScore = 100.0"))
+        XCTAssertTrue(source.contains("let content = ActivityContent("))
+        XCTAssertTrue(source.contains("relevanceScore: Self.liveActivityRelevanceScore"))
+        XCTAssertTrue(source.contains("await activity.update(content)"))
+        XCTAssertTrue(source.contains("content: content,"))
+        XCTAssertTrue(source.contains("private static let finishedActivityDismissalDelay: TimeInterval = 120"))
+        XCTAssertTrue(source.contains("isFinished: true"))
+        XCTAssertTrue(source.contains("keyNotes: snapshot?.keyNotes ?? []"))
+        XCTAssertTrue(source.contains("dismissalPolicy: .after(Date().addingTimeInterval(Self.finishedActivityDismissalDelay))"))
+        XCTAssertFalse(source.contains("dismissalPolicy: .immediate"))
+        XCTAssertTrue(source.contains("systemAudio.publishNowPlaying(info)"))
+    }
+
+    func testAudioActivityAttributesCarryArtifactPlaybackMetadata() throws {
         let attributes = PavbotAudioActivityAttributes(
             artifactID: "audio-2026-06-22",
             artifactPath: "research/tech-news/podcasts/2026-06-22/podcast.mp3",
@@ -2816,7 +2881,9 @@ final class PavbotManifestTests: XCTestCase {
             elapsed: 42,
             duration: 300,
             isPlaying: true,
-            updatedAt: Date(timeIntervalSince1970: 1_780_000_000)
+            updatedAt: Date(timeIntervalSince1970: 1_780_000_000),
+            tabLabel: "Technologia",
+            keyNotes: ["Pierwszy konkret", "Drugi konkret"]
         )
 
         XCTAssertEqual(attributes.artifactID, "audio-2026-06-22")
@@ -2829,9 +2896,33 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(state.elapsed, 42)
         XCTAssertEqual(state.duration, 300)
         XCTAssertTrue(state.isPlaying)
+        XCTAssertEqual(state.tabLabel, "Technologia")
+        XCTAssertEqual(state.keyNotes, ["Pierwszy konkret", "Drugi konkret"])
+        XCTAssertFalse(state.isFinished)
+        XCTAssertEqual(try XCTUnwrap(state.remainingPlaybackTime), 258, accuracy: 0.0001)
+        XCTAssertEqual(state.remainingPlaybackLabel, "-4:18")
+
+        let interval = try XCTUnwrap(state.remainingPlaybackCountdownInterval)
+        XCTAssertEqual(interval.lowerBound.timeIntervalSince1970, state.updatedAt.timeIntervalSince1970, accuracy: 0.001)
+        XCTAssertEqual(interval.upperBound.timeIntervalSince1970, state.updatedAt.addingTimeInterval(258).timeIntervalSince1970, accuracy: 0.001)
+
+        var pausedState = state
+        pausedState.isPlaying = false
+        XCTAssertNil(pausedState.remainingPlaybackCountdownInterval)
+
+        let unknownDurationState = PavbotAudioActivityAttributes.ContentState(
+            title: "Podcast audio",
+            elapsed: 42,
+            duration: 0,
+            isPlaying: true,
+            updatedAt: state.updatedAt
+        )
+        XCTAssertNil(unknownDurationState.remainingPlaybackTime)
+        XCTAssertEqual(unknownDurationState.remainingPlaybackLabel, "--:--")
+        XCTAssertNil(unknownDurationState.remainingPlaybackCountdownInterval)
     }
 
-    func testDynamicIslandUsesPavbotNewsBadgeOnTrailingSide() throws {
+    func testAudioActivityWidgetUsesSystemPlayerCompanionBannerAndStaticRemainingLabel() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let widgetSourceURL = testsURL
             .deletingLastPathComponent()
@@ -2839,15 +2930,50 @@ final class PavbotManifestTests: XCTestCase {
             .appendingPathComponent("AudioActivityExtension/PavbotAudioActivityWidget.swift")
         let source = try String(contentsOf: widgetSourceURL)
 
+        XCTAssertTrue(source.contains("PavbotNotificationAudioBanner(source: context.attributes.source, topic: context.attributes.topic, state: context.state)"))
+        XCTAssertTrue(source.contains("private struct PavbotNotificationAudioBanner: View"))
+        XCTAssertTrue(source.contains("let tabLabel = state.tabLabel ?? topic"))
+        XCTAssertTrue(source.contains(".font(.caption2.weight(.semibold))"))
+        XCTAssertTrue(source.contains("Image(systemName: \"checkmark.circle.fill\")"))
+        XCTAssertTrue(source.contains(".foregroundStyle(.green)"))
+        XCTAssertTrue(source.contains("ForEach(state.keyNotes.prefix(3), id: \\.self)"))
+        XCTAssertTrue(source.contains("Text(note)"))
         XCTAssertTrue(source.contains("compactLeading:"))
         XCTAssertTrue(source.contains("PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 18)"))
         XCTAssertTrue(source.contains("compactTrailing:"))
-        XCTAssertTrue(source.contains("PavbotNewsDynamicIslandBadge(source: context.attributes.source)"))
+        XCTAssertTrue(source.contains("DynamicIslandExpandedRegion(.trailing)"))
+        XCTAssertTrue(source.contains("PavbotDynamicIslandTrailingStatus(source: context.attributes.source, state: context.state)"))
+        XCTAssertTrue(source.contains("} compactTrailing: {\n                PavbotNewsDynamicIslandBadge(source: context.attributes.source)"))
+        XCTAssertFalse(source.contains("} compactTrailing: {\n                PavbotDynamicIslandTrailingStatus(source: context.attributes.source, state: context.state)"))
+        XCTAssertFalse(source.contains("PavbotDynamicIslandSwapHint"))
+        XCTAssertFalse(source.contains("Image(systemName: \"arrow.left.arrow.right\")"))
+        XCTAssertFalse(source.contains("Text(\"<->\")"))
         XCTAssertFalse(source.contains("Text(compactProgress(context.state))"))
+        XCTAssertFalse(source.contains("Text(timerInterval:"))
+        XCTAssertTrue(source.contains("private struct PavbotDynamicIslandTrailingStatus: View"))
+        XCTAssertTrue(source.contains("HStack(spacing: 10)"))
+        XCTAssertTrue(source.contains("PavbotRemainingPlaybackLabel(state: state)"))
         XCTAssertTrue(source.contains("private struct PavbotNewsDynamicIslandBadge: View"))
         XCTAssertTrue(source.contains("Text(\"PAV\")"))
         XCTAssertTrue(source.contains("Text(\"NEWS\")"))
         XCTAssertTrue(source.contains(".accessibilityLabel(\"Pavbot News, aktywne audio w tle\")"))
+    }
+
+    func testMobileNewsSpeechPassesSectionAndFactsToAudioActivity() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let servicesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Services")
+        let mobileNewsSource = try String(contentsOf: servicesRoot.appendingPathComponent("MobileNewsService.swift"))
+        let speechSource = try String(contentsOf: servicesRoot.appendingPathComponent("SpeechPlaybackService.swift"))
+
+        XCTAssertTrue(mobileNewsSource.contains("keyNotes: Array(article.facts.prefix(3))"))
+        XCTAssertTrue(mobileNewsSource.contains("tabLabel: article.section"))
+        XCTAssertTrue(speechSource.contains("private var currentKeyNotes: [String] = []"))
+        XCTAssertTrue(speechSource.contains("private var currentTabLabel: String?"))
+        XCTAssertTrue(speechSource.contains("keyNotes: currentKeyNotes"))
+        XCTAssertTrue(speechSource.contains("tabLabel: currentTabLabel"))
     }
 
     func testResolvesRelativeArtifactURLAgainstRawManifestRoot() throws {
@@ -4698,6 +4824,48 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(articleCardSource.contains("ResearchArticlePresentation(article: article"))
     }
 
+    func testResearchViewReloadsWhenTabBecomesActive() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/ReportPackageViews.swift")
+        let source = try String(contentsOf: sourceURL)
+        let researchViewSource = try XCTUnwrap(
+            source.components(separatedBy: "struct ResearchView: View").dropFirst().first?
+                .components(separatedBy: "private struct ResearchLibraryHeader").first
+        )
+        let topicChangeSource = try XCTUnwrap(
+            researchViewSource.components(separatedBy: ".onChange(of: router.selectedResearchTopic)").dropFirst().first?
+                .components(separatedBy: ".onChange(of: store.manifest)").first
+        )
+
+        XCTAssertTrue(researchViewSource.contains(".onChange(of: router.selectedTab)"))
+        XCTAssertTrue(researchViewSource.contains("await handleResearchActivation()"))
+        XCTAssertTrue(researchViewSource.contains("private func handleResearchActivation() async"))
+        XCTAssertTrue(topicChangeSource.contains("if router.selectedTab == .research"))
+        XCTAssertTrue(topicChangeSource.contains("await loadSelectedResearchContent()"))
+    }
+
+    func testResearchArticleSnapshotHostBuildsSynchronouslyWithoutLoadingOnlyTask() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/ReportPackageViews.swift")
+        let source = try String(contentsOf: sourceURL)
+        let snapshotHostSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct ResearchArticleSnapshotHost").dropFirst().first?
+                .components(separatedBy: "private struct MobileNewsNativeContent").first
+        )
+
+        XCTAssertTrue(snapshotHostSource.contains("let snapshot = ResearchArticleListSnapshot(issue: issue, selectedSection: selectedSection, searchText: \"\")"))
+        XCTAssertFalse(snapshotHostSource.contains("@State private var snapshot"))
+        XCTAssertFalse(snapshotHostSource.contains("@State private var snapshotKey"))
+        XCTAssertFalse(snapshotHostSource.contains(".task(id: currentKey)"))
+        XCTAssertFalse(snapshotHostSource.contains("Układam artykuły"))
+    }
+
     func testTodayScreenUsesAppStoreReadyBriefingHierarchy() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let sourcesRoot = testsURL
@@ -5285,7 +5453,8 @@ final class PavbotManifestTests: XCTestCase {
 
         XCTAssertTrue(reportSource.contains("@State private var mobileSpeechController = MobileNewsSpeechController()"))
         XCTAssertTrue(reportSource.contains("MobileNewsSpeechMiniPlayerHost(speechController: speechController)"))
-        XCTAssertTrue(reportSource.contains("ResearchArticleSpeechControlsHost(article: speechArticle, speechController: speechController)"))
+        XCTAssertTrue(reportSource.contains("ResearchArticleSpeechControlsHost("))
+        XCTAssertTrue(reportSource.contains("destination: .researchArticle(topic: issue.topic, articleID: article.id)"))
         XCTAssertTrue(reportSource.contains("MobileNewsArticle(researchArticle: article, topic: issue.topic)"))
         XCTAssertFalse(reportSource.contains("ResearchArticleSpeechController"))
         XCTAssertFalse(reportSource.contains("researchSpeechController.stop()"))
@@ -5353,7 +5522,8 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(readerSource.contains("private let speechArticle: MobileNewsArticle"))
         XCTAssertFalse(readerSource.contains("private var speechArticle"))
         XCTAssertTrue(readerSource.contains("self.speechArticle = MobileNewsArticle(researchArticle: article, topic: issue.topic)"))
-        XCTAssertTrue(readerSource.contains("ResearchArticleSpeechControlsHost(article: speechArticle, speechController: speechController)"))
+        XCTAssertTrue(readerSource.contains("ResearchArticleSpeechControlsHost("))
+        XCTAssertTrue(readerSource.contains("destination: .researchArticle(topic: issue.topic, articleID: article.id)"))
     }
 
     func testResearchTopicPickerUsesVisibleIPhonePillsInsteadOfHiddenHorizontalScroll() throws {
@@ -5388,7 +5558,7 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(reportSource.contains("Text(errorMessage)\n                    .font(.caption)\n                    .foregroundStyle(.red)"))
     }
 
-    func testProjectVersionIs24WithTimestampBuildNumber() throws {
+    func testProjectVersionIs242WithTimestampBuildNumber() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let projectYML = testsURL
             .deletingLastPathComponent()
@@ -5396,7 +5566,7 @@ final class PavbotManifestTests: XCTestCase {
             .appendingPathComponent("project.yml")
         let source = try String(contentsOf: projectYML)
 
-        XCTAssertTrue(source.contains("MARKETING_VERSION: \"2.4\""))
+        XCTAssertTrue(source.contains("MARKETING_VERSION: \"2.4.2\""))
         XCTAssertTrue(source.contains("BUILD_TIMESTAMP=\"$(date +%H%M%S)\""))
         XCTAssertTrue(source.contains("BUILD_NUMBER=\"${BUILD_DATE}.${BUILD_TIMESTAMP}\""))
         let buildNumbers = source
