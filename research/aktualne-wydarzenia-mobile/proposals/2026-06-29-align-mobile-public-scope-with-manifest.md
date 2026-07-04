@@ -49,6 +49,13 @@ niespójność między:
 Bez decyzji poza aktywnym tematem nie da się wiarygodnie nazwać tego zakresu w
 pełni zgodnym z kontraktem.
 
+Problem nie był jednorazowy. Ręczna kontrola po wieczornym runie
+`2026-07-03-1934` ponownie potwierdziła, że
+`origin/main:public/pavbot-manifest.json` nadal indeksuje
+`research/aktualne-wydarzenia-mobile/pdfs/2026-07-03-1934-newspaper.pdf`,
+mimo że bieżący topic prompt i kontrakt publikacji nadal opisują
+`newspaper.pdf` jako artefakt lokalny, a nie publiczny.
+
 ## Files Or Settings Affected
 
 - `scripts/generate_pavbot_manifest.py`

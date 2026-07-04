@@ -121,15 +121,16 @@ primary editorial or audio files. If a required primary artifact is missing, or
 the regenerated bundle still fails validation, the publish step must stop.
 
 The isolated script creates a temporary clean worktree from `origin/main`,
-copies only generated outputs from the active topic, refreshes
-`public/pavbot-manifest.json`, commits those files, and pushes to
-`origin/main`. Publication is always pinned to `origin/main`; this script does
-not honor `PAVBOT_PUBLISH_BRANCH` for automation outputs. It derives the public
-manifest URL from `PAVBOT_MANIFEST_URL`, `PAVBOT_RAW_BASE_URL`, the existing
-manifest `rawBaseUrl`, or the GitHub `origin` remote. It requires a working
-`origin` and push credentials for `main`. Do not push generated automation
-files separately from the refreshed manifest. The GitHub webhook for live iOS
-notifications fires only after this push succeeds.
+copies only app-visible generated outputs from the active topic, refreshes the
+sanitized `public/pavbot-manifest.json`, commits those public feed files, and
+pushes to `origin/main`. Publication is always pinned to `origin/main`; this
+script does not honor `PAVBOT_PUBLISH_BRANCH` for automation outputs. It
+derives the public manifest URL from `PAVBOT_MANIFEST_URL`,
+`PAVBOT_RAW_BASE_URL`, the existing manifest `rawBaseUrl`, or the GitHub
+`origin` remote. It requires a working `origin` and push credentials for `main`.
+Do not push generated automation files separately from the refreshed manifest.
+The GitHub webhook for live iOS notifications fires only after this push
+succeeds.
 
 Treat `git push` as necessary but not sufficient. After the push run
 `git fetch origin`; the script must then run
@@ -146,10 +147,11 @@ notifier-backed outputs such as Reddit Radar, posting to the notifier without
 first committing and pushing the audit artifacts and manifest is only a
 partial publication.
 
-Automation output commits may include only `runs/`, `data/`, `pdfs/`, `podcasts/`,
-`index.md`, `backlog.md`, and `public/pavbot-manifest.json`. App code, docs,
-prompt edits, and topic `tools/` changes are development work and must be
-committed separately.
+Public automation output commits may include only app-visible files from
+`runs/`, `data/`, `pdfs/`, public podcast audio/script/brief files, and
+`public/pavbot-manifest.json`. Source code, docs, prompts, topic contracts,
+indexes, backlogs, proposals, render metadata, source notes, and topic `tools/`
+stay private in `pavbot-intelligence`.
 
 ## First Three Runs Review
 

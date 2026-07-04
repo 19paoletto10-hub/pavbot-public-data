@@ -1,59 +1,59 @@
 # Topic Index: aktualne-wydarzenia-mobile
 
-Last updated: 2026-07-02
+Last updated: 2026-07-03
 
 ## Current Understanding
 
 Temat służy do codziennego tworzenia mobilnego briefu o najważniejszych
-wydarzeniach publicznych z Polski i świata. Wieczorny run z `2026-07-02-1934`
-przesunął akcent z porannego obrazu „bez szerokiego alertu, ale z rozproszonym
-ryzykiem” na twardszy układ polityka plus wojna plus regulacje cyfrowe.
+wydarzeniach publicznych z Polski i świata. Wieczorny run z `2026-07-03-1934`
+przesunął obraz dnia z porannego katalogu ryzyk na bardziej wykonawczą warstwę
+państwa i sojuszu: oficjalne gaszenie napięć Polska–Ukraina, wejście od
+`4 lipca 2026` nowych obowiązków z ustawy o zarządzaniu kryzysowym, mocniejszy
+przekaz KPRP o stałej bazie USA, nacisk na systemowe bezpieczeństwo gazowe oraz
+szczegółowy harmonogram Ankary.
 
-W Polsce główny ciężar dnia przejął pakiet decyzji Prezydenta RP z `2 lipca
-2026`: `5` podpisanych ustaw, `2` weta i skierowanie ustawy akcyzowej do
-Trybunału Konstytucyjnego w trybie kontroli prewencyjnej. To nie jest tylko
-formalny rytuał końca procesu legislacyjnego, ale realny sygnał, że Pałac
-Prezydencki chce działać jako filtr wobec jakości i tempa prawa. Dodatkowo
-podpis ustawy o związku metropolitalnym w województwie pomorskim wnosi do briefu
-konkretny skutek ustrojowy, a nie samą zapowiedź.
+W Polsce wieczór nie przyniósł nowego wielkiego bilansu katastroficznego ponad
+poranny raport RCB o północnym wietrze, suszy hydrologicznej, `4` utonięciach,
+`19` pożarach lasów i alarmie wodnym dla `Olszyny`. Zamiast tego państwo
+dołożyło warstwę instytucjonalną: RCB komunikuje wejście nowych obowiązków dla
+administracji, operatorów infrastruktury krytycznej i podmiotów krytycznych, a
+Kancelaria Prezydenta wykorzystuje podpisanie ustawy o magazynowaniu gazu do
+ustawienia bezpieczeństwa energetycznego jako sprawy trwałych reform, a nie
+kolejnych tymczasowych przedłużeń.
 
-Warstwa bezpieczeństwa i polityki przed Ankarą dostała wieczorem brutalny
-nowy ciężar przez rosyjski atak na Kijów. W oficjalnym wystąpieniu Zełenski
-podał bilans `21` zabitych, prawie `100` osób po pomoc medyczną i ponad `100`
-uszkodzonych budynków mieszkalnych, po czym wprost podniósł temat niedoboru
-Patriotów oraz zdolności antybalistycznych jako jednego z głównych oczekiwań
-wobec najbliższych dni i szczytu NATO `7-8 lipca 2026`. To zmienia Ankarę z
-samego „countdownu” w test dowożenia konkretu.
+W osi polityczno-wojskowej poranny sygnał BBN o dokańczanej rotacji USA dostał
+wieczorem bardziej bezpośrednie polityczne wzmocnienie. KPRP mówi już wprost o
+pracy nad umiejscowieniem stałej bazy US Army w Polsce, ale nadal bez
+publicznego terminu, jednostki i oferty infrastrukturalnej. Równolegle MSZ po
+spotkaniu Sikorski–Sybiha przywraca oficjalny język konstruktywnego dialogu,
+deeskalacji emocji i kontynuacji współpracy wojskowej oraz gospodarczej, co
+ustawia obserwację przed Ankarą nie tylko na twarde zdolności, ale też na
+stabilność relacji polsko-ukraińskich.
 
-W świecie nie znikają wcześniejsze osie instytucjonalne, ale układają się pod
-większą presją. Ukraina nadal ustawia irlandzką prezydencję w Radzie UE pod
-wsparcie, sankcje i kolejne klastry negocjacyjne, jednak świeży atak na Kijów
-spina te oczekiwania z pilniejszym problemem obrony powietrznej. Gaza pozostaje
-ważna humanitarnie, lecz wieczorem `2 lipca` brak nowszego pełnego raportu OCHA
-o wadze porównywalnej z ostatnimi materiałami, więc brief nie powinien pompować
-tej osi bez nowego dokumentu źródłowego.
+W świecie Ankara przestaje być już tylko datą. NATO opublikowało zaktualizowany
+program z forum przemysłu obronnego, wystąpieniem Ruttego z Prezydentem Ukrainy
+i kolacją Rady NATO-Ukraina na poziomie ministrów spraw zagranicznych. Kijów
+wieczorem sam buduje tabelę wyników przed szczytem: około `6,3 mld dol.`
+zobowiązań w PURL, otwarcie pierwszego klastra negocjacyjnego z UE i unijne
+`3,9 mld euro` na drony. Gaza wraca przez nowe ostrzeżenie OCHA z `1 lipca`,
+ale nadal bez świeższego pełnego `Humanitarian Situation Report` niż ten z
+`26 czerwca 2026`.
 
-Warstwa technologiczna też przeszła z samego kalendarza do nowego ruchu
-instytucjonalnego. Rada UE `2 lipca 2026` przyjęła stanowisko przywracające
-pomostowe zasady walki z materiałami przedstawiającymi seksualne
-wykorzystywanie dzieci online po luce prawnej od `3 kwietnia 2026`. Równolegle
-został miesiąc do pełnej stosowalności AI Act `2 sierpnia 2026`, a DIANA 2027
-zamyka nabór `3 lipca`, więc technologia w briefie coraz wyraźniej oznacza
-bezpieczeństwo, zgodność i produkcję, a nie sam sektorowy dodatek.
+Warstwa technologiczna jeszcze mocniej skleiła się z bezpieczeństwem.
+Zamyka się nabór do NATO DIANA `2027`, Rada UE zszywa lukę po wygaśnięciu
+pomostowych zasad wykrywania CSAM online, a Komisja domyka odliczanie do
+`2 sierpnia 2026`, kiedy zaczną działać obowiązki transparentności AI. W tym
+układzie technologia to już nie ozdobnik briefu, tylko narzędzie obrony,
+regulacji i wiarygodności instytucji.
 
-Operacyjnie wieczorny run potwierdził, że problem audio nadal jest podwójny i
-nienaprawiony centralnie. `female-piper` ponownie wyłożył się na lokalnym
-błędzie `ffmpeg`/`x265`, ale został odzyskany ręcznie przez bezpośredni pipeline
-`piper -> ffmpeg` z ustawionymi `DYLD_LIBRARY_PATH` i
-`DYLD_FALLBACK_LIBRARY_PATH` wskazującymi `libx265.215` z Homebrew
-`x265/4.1`. `male-xtts` czternasty produkcyjny raz z rzędu nie dostarczył MP3 i
-zakończył się ręcznym przerwaniem po kolejnej zwiesze. Najważniejsze pytania na
-kolejne przebiegi dotyczą teraz siedmiu warstw: politycznych skutków pakietu
-prezydenckiego, oficjalnego bilansu szkód po zejściu z alertów meteo, polskich
-oczekiwań wobec Ankary, konkretnych decyzji o obronie powietrznej po Kijowie,
-pierwszych mierzalnych sygnałów pracy pełnomocnika odporności, wejścia rynku w
-miesięczny finał AI Act oraz odzyskania stabilnego renderu audio bez ręcznych
-obejść środowiskowych.
+Operacyjnie problem audio pozostał podwójny i nienaprawiony centralnie także
+wieczorem. `female-piper` szesnasty raz rozbił się o lokalny błąd
+`ffmpeg`/`x265`, ale został odzyskany ręcznie przez pipeline `piper -> lame`;
+`male-xtts` szesnasty produkcyjny raz z rzędu nie dostarczył MP3 i znów
+zakończył się ręcznym przerwaniem zwieszonego procesu. Na kolejne przebiegi
+najważniejsze pytania dotyczą teraz wdrożenia nowych obowiązków kryzysowych,
+trwałości deeskalacji Polska–Ukraina, konkretnych parametrów bazy USA i Ankary
+oraz odzyskania stabilnego renderu audio bez ręcznych obejść.
 
 ## Stable Facts
 
@@ -83,11 +83,17 @@ obejść środowiskowych.
 - Czy po kulminacji upału i wejściu burz głównym tematem kolejnych runów będą
   już skutki wtórne: awarie, pożary, szkody infrastrukturalne, utonięcia i
   inne koszty zdrowotne?
+- Kiedy pojawi się publiczny termin, skład jednostki i szerszy harmonogram dla
+  dokańczanej rotacji wojsk USA oraz czy polska oferta stałej bazy zostanie
+  opisana konkretniej niż przez ogólny pakiet ustawa plus finansowanie?
 - Jak szybko pojawi się publiczny dokument lub komunikat doprecyzowujący tryb
   pracy, KPI i pierwsze priorytety nowego Pełnomocnika Rządu do spraw
   Wzmocnienia Odporności Państwa?
 - Czy awaria `ffmpeg`/`x265` dotyczy całego lokalnego pipeline'u MP3, czy tylko
   bieżącego środowiska uruchomieniowego tej automatyzacji?
+- Czy wejście w życie nowelizacji ustawy o zarządzaniu kryzysowym od
+  `4 lipca 2026` szybko przełoży się na publiczne checklisty, dokumenty albo
+  pierwsze sygnały wdrożeniowe po stronie operatorów i administracji?
 - Czy obowiązujące od `1 lipca 2026` tymczasowe `3 euro` cło na małe przesyłki
   szybko przełoży się na praktyczne komunikaty platform, sprzedawców i służb
   celnych o kosztach oraz egzekucji?
@@ -120,6 +126,9 @@ obejść środowiskowych.
 - Czy po rosyjskim ataku na Kijów pojawią się przed Ankarą nowe publiczne
   deklaracje o Patriotach, zdolnościach antybalistycznych albo przemysłowym
   dowożeniu obrony powietrznej dla Ukrainy.
+- Czy po spotkaniu Sikorski–Sybiha pojawią się kolejne wspólne komunikaty,
+  publiczne sygnały dalszej deeskalacji albo twardsze ustalenia wojskowe i
+  gospodarcze przed szczytem NATO.
 - Jakość linków źródłowych przy materialnych twierdzeniach.
 - Czy oba warianty TTS powstają i zapisują status w `tts_variants.json`.
 - Czy proposal stabilizacji `male-xtts` przełoży się na brak ręcznego
@@ -192,3 +201,12 @@ obejść środowiskowych.
   ciężkości na pakiet decyzji Prezydenta RP, rosyjski atak na Kijów i nowy
   ruch regulacyjny UE online, a operacyjnie kończy się czternastą zwiechą
   `male-xtts` oraz ręcznym odzyskaniem `female-piper`.
+- [2026-07-03-1017](runs/2026-07-03-1017.md) - poranek wraca do osi
+  odpornościowej: wiatr i burze na północy, susza, utonięcia, pożary i skażona
+  woda, dokłada komunikat BBN o rotacji wojsk USA i stałej bazie, a
+  operacyjnie kończy się piętnastą zwiechą `male-xtts` oraz ręcznym
+  odzyskaniem `female-piper` przez `piper -> lame`.
+- [2026-07-03-1934](runs/2026-07-03-1934.md) - wieczór przechodzi z mapy ryzyk
+  do mapy odpowiedzi: deeskalacja Polska–Ukraina, nowe obowiązki kryzysowe od
+  4 lipca, presja na systemowe bezpieczeństwo gazowe i szesnasta zwiecha
+  `male-xtts` obok ręcznego odzyskania `female-piper`.

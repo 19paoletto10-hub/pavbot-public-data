@@ -4,6 +4,18 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Meta India ad-safety crisis | BBC/Techmeme and Indian media report Instagram ads promoted CSAM and MeitY plans to summon Meta | Watch Meta response, MeitY action, ad-review audit, Telegram/off-platform enforcement and whether India imposes new compliance requirements | Open |
+| High | Track US-light-touch vs UN AI governance | FT/Krishnan says no centralized AI regulator in the US while ITU/UN prepare Geneva AI governance meetings | Watch July 6-10 Geneva outcomes, White House statements, frontier lab proposals and EU/Polish reactions | Open |
+| High | Track Claude China access controls | Anthropic is reportedly closing Chinese access loopholes while Alibaba bans Claude Code from office environments | Watch Anthropic and Alibaba responses, Azure/provider involvement, developer backlash, detection methods and similar bans for other coding agents | Open |
+| Medium | Track domain privacy anti-fraud precedent | GoDaddy's India challenge frames fake-site enforcement as a threat to registrant privacy and global registrar operations | Watch Delhi High Court updates, ICANN/WHOIS implications, other registrar reactions and brand-owner arguments | Open |
+| High | Track Apple/Tata supply-chain cyber leak | Tata Electronics leak reportedly exposed supplier maps and unreleased iPhone 18 Pro materials, showing partner-side hardware security risk | Watch CERT-In/MeitY updates, Tata forensic audit, Apple supplier controls and whether more leaked files surface | Open |
+| Medium | Track onboard satellite AI | YAM-9/NAVI-Orbital shows Gemma 3-style vision-language inference on orbit and semantic compression of Earth observation data | Watch peer review, follow-up in-orbit captures, false-positive rates, disaster-response use cases and privacy concerns | Open |
+| High | Track agent reliability reality check | Meta says AI agent development is slower than expected even while internal model claims remain aggressive | Watch Meta Watermelon rollout, public benchmarks, agent reliability metrics, enterprise case studies and whether Meta ships agent products or pulls back scope | Open |
+| High | Track Anthropic/Samsung custom silicon | Anthropic custom-chip talks would extend frontier-lab control from models into inference cost, memory and supply chain | Watch Anthropic/Samsung confirmation, foundry/HBM roles, AWS/Google cloud implications, software stack and prototype timeline | Open |
+| High | Track data-center project cancellations | QTS/Blackstone ending the Digital Gateway project shows local opposition can stop AI/data-center capacity, not just delay it | Watch Virginia follow-ups, state utility rules, similar cancellations, hyperscaler location shifts and Polish/EU permitting analogs | Open |
+| High | Track EU Android antitrust aftermath | TSUE upheld most of Google's Android fine while Android Developer Verification is raising a new platform-control dispute | Watch Google response, DMA enforcement, sideloading and default-service changes, F-Droid path and EU treatment of Android Developer Verification | Open |
+| Medium | Track enterprise AI spend controls | Tesla's reported $200/week cap on external AI tools and Grok exception turn token budgets into ordinary IT governance | Watch official Tesla confirmation, employee reactions, similar corporate policies, data-retention controls and vendor-lock-in concerns | Open |
+| Medium | Track consumer dark patterns in agent purchases | Hopper's $35M FTC settlement shows price transparency remains a core technology trust issue before AI agents start booking and buying for users | Watch final FTC order, other travel app changes, junk-fee enforcement and how AI shopping agents disclose final prices | Open |
 | High | Track enterprise AI deployment companies | Microsoft Frontier Company, AWS FDE, OpenAI Deployment Company and Anthropic/PE ventures make AI implementation a new category between consulting, cloud and model vendors | Watch first case studies, ROI evidence, IP-protection language, partner conflicts, pricing model and impact on enterprise engineering roles | Open |
 | High | Track AI public wealth fund proposals | OpenAI's reported 5% government-stake concept could turn frontier AI into a public-ownership and industrial-policy debate before IPOs | Watch OpenAI response, Congress, White House process, Anthropic/Google/Meta reaction, tax/fund alternatives and competition concerns | Open |
 | High | Track SoftBank SB Neo neocloud | SB Neo proposes US AI compute services using SoftBank's 10GW-scale energy and infrastructure plan | Watch FY2027 launch, named customers, power procurement, Arm/NVIDIA/OpenAI links, Japanese buildout and competition with Together AI/CoreWeave/Nebius | Open |
@@ -388,6 +400,26 @@
   SoftBank SB Neo 10GW neocloud, Amazon Leo service threshold, Android
   Developer Verification versus F-Droid/open app distribution, Orbital Compute
   satellite data centers and MCP/Product Hunt agent tooling.
+- 2026-07-03: Daily research run created a material update. Strongest podcast
+  candidates: Meta agent slowdown and Watermelon claims, Anthropic/Samsung
+  custom AI chip talks, QTS/Blackstone data-center cancellation in Virginia,
+  TSUE/Google Android antitrust aftermath, Tesla AI spend caps, Hopper/FTC dark
+  patterns settlement, ElevenLabs valuation signal and Product Hunt/HN agent
+  tooling.
+- 2026-07-03: Daily tech podcast generated from the normal morning research
+  report; created `draft.md`, `script.md`, `sources.md`, `render.json`,
+  `brief.pdf`, and `podcast.mp3`. Final MP3 used Piper and measured about 7:34.
+  The shared renderer needed a temporary `ffmpeg`/`ffprobe` shim because the
+  local Homebrew `ffmpeg` binary referenced a missing `libx265.215.dylib`;
+  repository scripts were not modified. PDF brief was rendered in the mobile
+  390 x 844 pt format, had 43 link annotations, and was visually checked from
+  PNG renders.
+- 2026-07-03: Evening tech research run created a timestamped material update.
+  Strongest podcast candidates: Meta/Instagram ad-safety crisis in India,
+  US-light-touch AI governance versus UN/ITU Geneva coordination,
+  Anthropic/Alibaba Claude access controls, GoDaddy/domain privacy in India,
+  Apple/Tata supply-chain leak, DOJ/Scattered Spider and YAM-9 onboard
+  satellite AI.
 
 ## Done
 

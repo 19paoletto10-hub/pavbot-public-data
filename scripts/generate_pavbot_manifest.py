@@ -23,20 +23,21 @@ LLM_JOBS_TOPIC = "llm-ai-jobs-wroclaw"
 PULSE_NEWS_TOPIC = "puls-dnia-news"
 REDDIT_RADAR_TOPIC = "reddit-radar"
 RESEARCH_DATA_TOPICS = {"tech-news", "polska-swiat"}
+APP_VISIBLE_PODCAST_FILES = {"podcast.mp3", "brief.pdf", "script.md"}
 
 
-def build_manifest(repo_root: Path, raw_base_url: str = "") -> dict[str, Any]:
+def build_manifest(repo_root: Path, raw_base_url: str = "", public_feed: bool = True) -> dict[str, Any]:
     repo_root = repo_root.resolve()
     raw_base_url = normalize_base_url(raw_base_url)
-    topics = collect_topics(repo_root, raw_base_url)
+    topics = collect_topics(repo_root, raw_base_url, public_feed=public_feed)
     return {
         "schemaVersion": 1,
         "title": "Pavbot Automation Manifest",
         "generatedAt": datetime.now(timezone.utc).isoformat(),
         "rawBaseUrl": raw_base_url,
-        "automations": collect_automations(repo_root, raw_base_url),
+        "automations": collect_automations(repo_root, raw_base_url, public_feed=public_feed),
         "topics": topics,
-        "artifacts": collect_artifacts(repo_root, raw_base_url, topics),
+        "artifacts": collect_artifacts(repo_root, raw_base_url, topics, public_feed=public_feed),
     }
 
 
@@ -46,7 +47,7 @@ def manifest_semantic_payload(manifest: dict[str, Any]) -> dict[str, Any]:
     return payload
 
 
-def collect_automations(repo_root: Path, raw_base_url: str) -> list[dict[str, Any]]:
+def collect_automations(repo_root: Path, raw_base_url: str, public_feed: bool) -> list[dict[str, Any]]:
     docs_path = repo_root / "docs" / "how-to-use.md"
     if not docs_path.exists():
         return []
@@ -90,18 +91,19 @@ def collect_automations(repo_root: Path, raw_base_url: str) -> list[dict[str, An
             "topic": topic_slug,
             "topicPath": topic_path,
             "cadence": item.get("cadence", ""),
-            "sourcePath": "docs/how-to-use.md",
-            "sourceUrl": raw_url(raw_base_url, "docs/how-to-use.md"),
+            "sourcePath": "" if public_feed else "docs/how-to-use.md",
+            "sourceUrl": "" if public_feed else raw_url(raw_base_url, "docs/how-to-use.md"),
         }
         if output:
             entry["output"] = output
-            entry["outputUrl"] = raw_url(raw_base_url, output)
+            if not public_feed:
+                entry["outputUrl"] = raw_url(raw_base_url, output)
         result.append(entry)
 
     return sorted(result, key=lambda item: (item["topic"], item["kind"], item["name"]))
 
 
-def collect_topics(repo_root: Path, raw_base_url: str) -> list[dict[str, Any]]:
+def collect_topics(repo_root: Path, raw_base_url: str, public_feed: bool) -> list[dict[str, Any]]:
     research_root = repo_root / "research"
     if not research_root.exists():
         return []
@@ -121,8 +123,8 @@ def collect_topics(repo_root: Path, raw_base_url: str) -> list[dict[str, Any]]:
                 "slug": topic_dir.name,
                 "title": title or fallback_topic_title(topic_dir.name),
                 "path": relative_path(topic_dir, repo_root),
-                "topicFilePath": rel_path,
-                "url": raw_url(raw_base_url, rel_path),
+                "topicFilePath": "" if public_feed else rel_path,
+                "url": "" if public_feed else raw_url(raw_base_url, rel_path),
             }
         )
 
@@ -132,12 +134,32 @@ def collect_topics(repo_root: Path, raw_base_url: str) -> list[dict[str, Any]]:
 def has_topic_artifact_fallback(topic_dir: Path) -> bool:
     if topic_dir.name == PULSE_NEWS_TOPIC:
         return any((topic_dir / "data").glob("*-pulse-news.json"))
+    if topic_dir.name == MOBILE_PUBLIC_ONLY_TOPIC:
+        return any((topic_dir / "data").glob("*-mobile-news.json"))
+    if topic_dir.name == LLM_JOBS_TOPIC:
+        return any((topic_dir / "data").glob("*-jobs.json")) or any((topic_dir / "runs").glob("*.md"))
+    if topic_dir.name == REDDIT_RADAR_TOPIC:
+        return any((topic_dir / "data").glob("*-reddit-radar.json")) or any(
+            (topic_dir / "runs").glob("*-reddit-radar.md")
+        )
+    if topic_dir.name in RESEARCH_DATA_TOPICS:
+        return any((topic_dir / "data").glob("*-research.json")) or any((topic_dir / "runs").glob("*.md"))
     return False
 
 
 def fallback_topic_title(slug: str) -> str:
     if slug == PULSE_NEWS_TOPIC:
         return "Pavbot Puls Dnia News"
+    if slug == MOBILE_PUBLIC_ONLY_TOPIC:
+        return "Pavbot Aktualne Wydarzenia Mobile"
+    if slug == LLM_JOBS_TOPIC:
+        return "Pavbot LLM/AI Jobs Wrocław"
+    if slug == REDDIT_RADAR_TOPIC:
+        return "Pavbot Reddit Radar"
+    if slug == "tech-news":
+        return "Pavbot Tech News"
+    if slug == "polska-swiat":
+        return "Pavbot Polska Świat"
     return slug
 
 
@@ -145,6 +167,7 @@ def collect_artifacts(
     repo_root: Path,
     raw_base_url: str,
     topics: list[dict[str, Any]],
+    public_feed: bool,
 ) -> list[dict[str, Any]]:
     artifacts: list[dict[str, Any]] = []
     for topic in topics:
@@ -155,15 +178,16 @@ def collect_artifacts(
             collect_mobile_public_artifacts(artifacts, repo_root, raw_base_url, topic_dir, slug)
             continue
 
-        for name, artifact_type in (
-            ("topic.md", "topic"),
-            ("index.md", "index"),
-            ("backlog.md", "backlog"),
-            ("automation-prompt.md", "automationPrompt"),
-            ("automation-research-prompt.md", "automationPrompt"),
-            ("automation-podcast-prompt.md", "automationPrompt"),
-        ):
-            add_artifact(artifacts, repo_root, raw_base_url, topic_dir / name, slug, artifact_type)
+        if not public_feed:
+            for name, artifact_type in (
+                ("topic.md", "topic"),
+                ("index.md", "index"),
+                ("backlog.md", "backlog"),
+                ("automation-prompt.md", "automationPrompt"),
+                ("automation-research-prompt.md", "automationPrompt"),
+                ("automation-podcast-prompt.md", "automationPrompt"),
+            ):
+                add_artifact(artifacts, repo_root, raw_base_url, topic_dir / name, slug, artifact_type)
 
         for path in sorted((topic_dir / "runs").glob("*.md")):
             add_artifact(artifacts, repo_root, raw_base_url, path, slug, "run")
@@ -186,14 +210,15 @@ def collect_artifacts(
             for path in sorted((topic_dir / "data").glob("*.json")):
                 add_artifact(artifacts, repo_root, raw_base_url, path, slug, "researchData")
 
-        for path in sorted((topic_dir / "proposals").glob("*.md")):
-            add_artifact(artifacts, repo_root, raw_base_url, path, slug, "proposal")
+        if not public_feed:
+            for path in sorted((topic_dir / "proposals").glob("*.md")):
+                add_artifact(artifacts, repo_root, raw_base_url, path, slug, "proposal")
 
         podcasts_dir = topic_dir / "podcasts"
         if podcasts_dir.exists():
             for date_dir in sorted(path for path in podcasts_dir.iterdir() if path.is_dir()):
                 for path in sorted(item for item in date_dir.rglob("*") if item.is_file()):
-                    if not is_public_podcast_artifact(path):
+                    if not is_manifest_podcast_artifact(path, public_feed=public_feed):
                         continue
                     add_artifact(
                         artifacts,
@@ -349,7 +374,9 @@ def infer_podcast_artifact_type(path: Path) -> str:
     return "podcastArtifact"
 
 
-def is_public_podcast_artifact(path: Path) -> bool:
+def is_manifest_podcast_artifact(path: Path, public_feed: bool) -> bool:
+    if public_feed:
+        return path.name in APP_VISIBLE_PODCAST_FILES
     return path.name not in {"podcast.raw.mp3", "render.log"}
 
 
@@ -497,6 +524,11 @@ def parse_args() -> argparse.Namespace:
             "Used to derive --raw-base-url when --raw-base-url is not set."
         ),
     )
+    parser.add_argument(
+        "--include-developer-artifacts",
+        action="store_true",
+        help="Include prompts, topic files, backlogs, proposals, and podcast process metadata.",
+    )
     return parser.parse_args()
 
 
@@ -511,7 +543,11 @@ def main() -> None:
     except ValueError as exc:
         raise SystemExit(f"error: {exc}") from exc
 
-    manifest = build_manifest(repo_root, raw_base_url=raw_base_url)
+    manifest = build_manifest(
+        repo_root,
+        raw_base_url=raw_base_url,
+        public_feed=not args.include_developer_artifacts,
+    )
     write_manifest(manifest, output_path)
     print(f"manifest written: {display_path(output_path, repo_root)}")
 

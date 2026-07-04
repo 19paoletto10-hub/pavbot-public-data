@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-02
+Last updated: 2026-07-03
 
 ## Current Understanding
 
@@ -159,6 +159,30 @@ Narodowym. Dodatkowe follow-upy to formalne dokumenty węgierskie po komunikacie
 Sikorskiego o cofnięciu statusów uchodźczych Ziobrze, Romanowskiemu i
 Koteckiej-Ziobro, lista sankcji UE po Kijowie, kolejne komunikaty o Ormuz oraz
 kryzys zdrowia publicznego w Wenezueli.
+Po porannym runie 3 lipca najważniejsze bloki to piątkowe spotkanie
+Sikorski-Sybiha jako test kanału polsko-ukraińskiej deeskalacji, pisemne
+potwierdzenie według Sikorskiego cofnięcia węgierskich statusów uchodźczych
+Ziobrze, Romanowskiemu i Koteckiej-Ziobro oraz zapowiedź pytania Polski do USA
+o skutki dokumentowe. W polityce krajowej doszedł spór Tusk-fundacja Ziobry po
+zrzeczeniu się immunitetu przez premiera. Bóbr/Pilchowice są teraz przede
+wszystkim w fazie działań technicznych, badań i ograniczania skutków, a RCB
+utrzymuje praktyczny blok ryzyka: wiatr, burze na północy i suszę
+hydrologiczną. W świecie Ukraina ma wyższy bilans ofiar po ataku na Kijów i
+presję na obronę powietrzną, Niemcy postawiły zarzuty w sprawie Nord Stream, a
+AP/IISS dodały nowy wątek możliwego użycia rosyjskiej floty cieni do operacji
+dronowych nad państwami NATO.
+Wieczorny run 2026-07-03-1933 przesunął punkt ciężkości na instytucjonalne
+wykonanie i odporność państwa. Po spotkaniu Sikorski-Sybiha mamy ukraińską
+propozycję pakietu antykryzysowego: konsultacje MSZ, spotkanie historyków,
+włączenie przywódców religijnych i kontynuację pozwoleń ekshumacyjnych, ale
+bez wspólnego harmonogramu. Rząd publicznie reaguje na ostrzeżenia o możliwej
+rosyjskiej prowokacji przeciw Polsce lub państwom bałtyckim, a RCB dzień przed
+wejściem w życie zmian w zarządzaniu kryzysowym podkreśla nowe obowiązki
+administracji i operatorów krytycznych. Krajowe follow-upy na kolejne dni to
+wtorkowe rekomendacje MZ/NFZ po sprawie Szpitala Południowego, czynności
+prokuratury po incydencie z sejmową kartą do głosowania oraz wyniki badań
+GIOŚ/WIOŚ w sprawie Bobru. W świecie nadal dominują Kijów/obrona powietrzna,
+Ormuz oraz kryzys humanitarny w Wenezueli.
 
 ## Stable Facts
 
@@ -220,6 +244,8 @@ kryzys zdrowia publicznego w Wenezueli.
 
 ## Recent Reports
 
+- [2026-07-03-1933](runs/2026-07-03-1933.md)
+- [2026-07-03](runs/2026-07-03.md)
 - [2026-07-02-1933](runs/2026-07-02-1933.md)
 - [2026-07-02](runs/2026-07-02.md)
 - [2026-07-01-1934](runs/2026-07-01-1934.md)

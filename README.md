@@ -67,6 +67,16 @@ manifest and renders native screens from structured artifacts such as
   checklist, iOS quality audit, and user connection instructions.
 - `public/pavbot-manifest.json` - generated manifest consumed by the app.
 
+## Repository Visibility Split
+
+Development happens in the private repository `pavbot-intelligence`. The public
+repository `pavbot-public-data` is only the app feed: `public/pavbot-manifest.json`
+plus app-visible artifacts under `research/`.
+
+Never publish source, prompts, topic contracts, backlogs, proposals, tools, docs,
+tests, iOS code, or backend code to the public feed. Use
+`scripts/export_public_feed.py` to seed or audit a clean public repository tree.
+
 ## iOS Development
 
 Requirements:
@@ -128,9 +138,9 @@ Publish a topic safely from a mixed development workspace:
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
-The isolated publisher copies only approved output paths for the active topic,
-regenerates `public/pavbot-manifest.json`, commits the topic outputs and
-manifest, then pushes to `origin/main`.
+The isolated publisher copies only app-visible output paths for the active
+topic, regenerates the sanitized `public/pavbot-manifest.json`, commits the
+public feed changes, then pushes to `origin/main`.
 
 For a user-facing walkthrough of connecting an installed iOS app to a
 Codex-backed repository, see `docs/connect-ios-app-to-your-repo.md`.

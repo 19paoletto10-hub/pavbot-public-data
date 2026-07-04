@@ -7,6 +7,7 @@ pulse_news_topic="research/puls-dnia-news"
 reddit_radar_topic="research/reddit-radar"
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 manifest_generator="$script_dir/generate_pavbot_manifest.py"
+public_feed_exporter="$script_dir/export_public_feed.py"
 publication_contract="$script_dir/pavbot_publication_contract.py"
 jobs_data_validator="$script_dir/validate_jobs_data.py"
 research_data_validator="$script_dir/validate_research_data.py"
@@ -17,18 +18,18 @@ usage() {
   cat >&2 <<'EOF'
 usage: scripts/pavbot_commit_and_push_outputs.sh [--isolated] [--force-manifest] research/<topic>
 
-Publishes one Pavbot automation output set by committing only:
-  - generated outputs from the selected research/<topic>/
+Publishes one Pavbot automation output set by committing only app-visible files:
+  - generated public outputs from the selected research/<topic>/
   - public/pavbot-manifest.json
 
 Output allowlist:
   - research/<topic>/runs/
   - research/<topic>/pdfs/
   - research/<topic>/data/
-  - research/<topic>/podcasts/
-  - research/<topic>/topic.md
-  - research/<topic>/index.md
-  - research/<topic>/backlog.md
+  - research/<topic>/podcasts/*/podcast.mp3
+  - research/<topic>/podcasts/*/brief.pdf
+  - research/<topic>/podcasts/*/script.md
+  - research/<topic>/podcasts/*/audio/*/podcast.mp3
 
 Options:
   --isolated  publish from a temporary clean worktree based on origin/main,
@@ -123,17 +124,7 @@ is_allowed_publish_path() {
       elif [[ "$topic_path" == "$reddit_radar_topic" ]]; then
         is_reddit_radar_publish_path "$path"
       else
-        case "$path" in
-          "$topic_path/index.md"|"$topic_path/backlog.md")
-            return 0
-            ;;
-          "$topic_path/runs"|"$topic_path/runs/"*|"$topic_path/pdfs"|"$topic_path/pdfs/"*|"$topic_path/data"|"$topic_path/data/"*|"$topic_path/podcasts"|"$topic_path/podcasts/"*)
-            return 0
-            ;;
-          *)
-            return 1
-            ;;
-        esac
+        is_standard_public_publish_path "$path"
       fi
       ;;
   esac
@@ -142,16 +133,52 @@ is_allowed_publish_path() {
 is_reddit_radar_publish_path() {
   local path="$1"
   case "$path" in
-    "$topic_path/topic.md"|"$topic_path/index.md"|"$topic_path/backlog.md")
-      return 0
-      ;;
     "$topic_path/runs"|"$topic_path/runs/"*-reddit-radar.md)
       return 0
       ;;
     "$topic_path/data"|"$topic_path/data/"*-reddit-radar.json|"$topic_path/data/"*-reddit-radar-raw.json)
       return 0
       ;;
-    "$topic_path/pdfs"|"$topic_path/pdfs/"*|"$topic_path/podcasts"|"$topic_path/podcasts/"*)
+    *)
+      return 1
+      ;;
+  esac
+}
+
+is_standard_public_publish_path() {
+  local path="$1"
+  case "$path" in
+    "$topic_path/runs"|"$topic_path/runs/"*.md)
+      return 0
+      ;;
+    "$topic_path/pdfs"|"$topic_path/pdfs/"*.pdf)
+      return 0
+      ;;
+    "$topic_path/data"|"$topic_path/data/"*.json)
+      return 0
+      ;;
+    "$topic_path/podcasts")
+      return 0
+      ;;
+    *)
+      is_public_podcast_publish_path "$path"
+      ;;
+  esac
+}
+
+is_public_podcast_publish_path() {
+  local path="$1"
+  case "$path" in
+    "$topic_path/podcasts/"*/podcast.mp3)
+      return 0
+      ;;
+    "$topic_path/podcasts/"*/brief.pdf)
+      return 0
+      ;;
+    "$topic_path/podcasts/"*/script.md)
+      return 0
+      ;;
+    "$topic_path/podcasts/"*/audio/*/podcast.mp3)
       return 0
       ;;
     *)
@@ -166,15 +193,36 @@ is_allowed_staged_path() {
     return 0
   fi
 
-  if [[ "$topic_path" == "$mobile_public_only_topic" ]]; then
-    case "$path" in
-      "$topic_path/index.md"|"$topic_path/backlog.md"|"$topic_path/runs"|"$topic_path/runs/"*|"$topic_path/pdfs"|"$topic_path/pdfs/"*|"$topic_path/data"|"$topic_path/data/"*|"$topic_path/podcasts"|"$topic_path/podcasts/"*)
-        return 0
-        ;;
-    esac
+  if is_staged_delete "$path" && is_private_public_feed_path "$path"; then
+    return 0
   fi
 
   return 1
+}
+
+is_staged_delete() {
+  local path="$1"
+  local status
+  status="$(git diff --cached --name-status -- "$path" | awk 'NR == 1 {print $1}')"
+  [[ "$status" == D* ]]
+}
+
+is_private_public_feed_path() {
+  local path="$1"
+  case "$path" in
+    .agents/*|backend/*|docs/*|integrations/*|ios/*|scripts/*|tests/*)
+      return 0
+      ;;
+    */proposals/*|*/tools/*)
+      return 0
+      ;;
+    */automation-prompt.md|*/automation-research-prompt.md|*/automation-podcast-prompt.md|*/backlog.md|*/draft.md|*/index.md|*/render.json|*/sources.md|*/topic.md|*/tts_variants.json)
+      return 0
+      ;;
+    *)
+      return 1
+      ;;
+  esac
 }
 
 is_mobile_public_publish_path() {
@@ -380,19 +428,28 @@ append_expected_paths_from_dir() {
   )
 }
 
-stage_publishable_paths() {
-  if [[ "$topic_path" == "$reddit_radar_topic" ]]; then
-    stage_reddit_radar_publishable_paths
-    return 0
-  fi
+append_expected_public_paths_from_dir() {
+  local rel_dir="$1"
+  local abs_dir="$repo_root/$rel_dir"
+  local path
 
-  stage_path_if_present_or_tracked "$topic_path/topic.md"
-  stage_path_if_present_or_tracked "$topic_path/index.md"
-  stage_path_if_present_or_tracked "$topic_path/backlog.md"
-  stage_path_if_present_or_tracked "$topic_path/runs"
-  stage_path_if_present_or_tracked "$topic_path/pdfs"
-  stage_path_if_present_or_tracked "$topic_path/data"
-  stage_path_if_present_or_tracked "$topic_path/podcasts"
+  [[ -d "$abs_dir" ]] || return 0
+  while IFS= read -r path; do
+    [[ -n "$path" ]] || continue
+    [[ "$(basename "$path")" == ".gitkeep" ]] && continue
+    if is_allowed_publish_path "$path"; then
+      expected_remote_paths+=("$path")
+      expected_manifest_paths+=("$path")
+    fi
+  done < <(
+    cd "$repo_root"
+    find "$rel_dir" -type f | LC_ALL=C sort
+  )
+}
+
+stage_publishable_paths() {
+  stage_matching_publishable_paths "$topic_path"
+  stage_private_topic_deletions "$topic_path"
   stage_path_if_present_or_tracked "public/pavbot-manifest.json"
 }
 
@@ -403,21 +460,32 @@ run_publication_contract() {
   python3 "$publication_contract" "$command" "$topic_path" --repo-root "$root" "$@"
 }
 
-stage_reddit_radar_publishable_paths() {
-  local file
+stage_matching_publishable_paths() {
+  local rel_root="$1"
+  local path
 
-  stage_path_if_present_or_tracked "$topic_path/topic.md"
-  stage_path_if_present_or_tracked "$topic_path/index.md"
-  stage_path_if_present_or_tracked "$topic_path/backlog.md"
-  stage_path_if_present_or_tracked "$topic_path/runs"
-  stage_path_if_present_or_tracked "$topic_path/pdfs"
-  stage_path_if_present_or_tracked "$topic_path/podcasts"
-  shopt -s nullglob
-  for file in "$topic_path"/data/*-reddit-radar.json "$topic_path"/data/*-reddit-radar-raw.json; do
-    git add -A -- "$file"
-  done
-  shopt -u nullglob
-  stage_path_if_present_or_tracked "public/pavbot-manifest.json"
+  [[ -e "$rel_root" ]] || return 0
+  while IFS= read -r path; do
+    [[ -n "$path" ]] || continue
+    if is_allowed_publish_path "$path"; then
+      git add -A -- "$path"
+    fi
+  done < <(
+    find "$rel_root" -type f | LC_ALL=C sort
+  )
+}
+
+stage_private_topic_deletions() {
+  local rel_root="$1"
+  local entry status path
+
+  while IFS= read -r -d '' entry; do
+    status="${entry:0:2}"
+    path="${entry:3}"
+    if [[ "$status" == *D* ]] && (is_allowed_publish_path "$path" || is_private_public_feed_path "$path"); then
+      git add -A -- "$path"
+    fi
+  done < <(git status --porcelain=v1 -z -- "$rel_root")
 }
 
 validate_jobs_data_outputs() {
@@ -624,12 +692,7 @@ build_mobile_public_expected_paths() {
 build_reddit_radar_expected_paths() {
   local src
 
-  append_expected_path_if_exists "$topic_path/topic.md"
-  append_expected_path_if_exists "$topic_path/index.md"
-  append_expected_path_if_exists "$topic_path/backlog.md"
-  append_expected_paths_from_dir "$topic_path/runs"
-  append_expected_paths_from_dir "$topic_path/pdfs"
-  append_expected_paths_from_dir "$topic_path/podcasts"
+  append_expected_public_paths_from_dir "$topic_path/runs"
 
   shopt -s nullglob
   for src in "$repo_root"/"$topic_path"/data/*-reddit-radar.json "$repo_root"/"$topic_path"/data/*-reddit-radar-raw.json; do
@@ -654,13 +717,10 @@ build_expected_publication_paths() {
     return 0
   fi
 
-  append_expected_path_if_exists "$topic_path/topic.md"
-  append_expected_path_if_exists "$topic_path/index.md"
-  append_expected_path_if_exists "$topic_path/backlog.md"
-  append_expected_paths_from_dir "$topic_path/runs"
-  append_expected_paths_from_dir "$topic_path/pdfs"
-  append_expected_paths_from_dir "$topic_path/data"
-  append_expected_paths_from_dir "$topic_path/podcasts"
+  append_expected_public_paths_from_dir "$topic_path/runs"
+  append_expected_public_paths_from_dir "$topic_path/pdfs"
+  append_expected_public_paths_from_dir "$topic_path/data"
+  append_expected_public_paths_from_dir "$topic_path/podcasts"
 }
 
 sync_local_manifest_from_remote() {
@@ -754,13 +814,30 @@ copy_publishable_outputs_to_worktree() {
     return 0
   fi
 
-  copy_or_remove_publish_path "$topic_path/index.md" "$dest_root"
-  copy_or_remove_publish_path "$topic_path/backlog.md" "$dest_root"
-  copy_or_remove_publish_path "$topic_path/topic.md" "$dest_root"
-  copy_or_remove_publish_path "$topic_path/runs" "$dest_root"
-  copy_or_remove_publish_path "$topic_path/pdfs" "$dest_root"
-  copy_or_remove_publish_path "$topic_path/data" "$dest_root"
-  copy_or_remove_publish_path "$topic_path/podcasts" "$dest_root"
+  copy_allowed_topic_outputs_to_worktree "$dest_root"
+}
+
+copy_allowed_topic_outputs_to_worktree() {
+  local dest_root="$1"
+  local src_root="$repo_root/$topic_path"
+  local dest_topic_root="$dest_root/$topic_path"
+  local src rel_path dest_path
+
+  rm -rf "$dest_topic_root"
+  [[ -d "$src_root" ]] || return 0
+
+  while IFS= read -r src; do
+    [[ -n "$src" ]] || continue
+    rel_path="${src#"$repo_root"/}"
+    if ! is_allowed_publish_path "$rel_path"; then
+      continue
+    fi
+    dest_path="$dest_root/$rel_path"
+    mkdir -p "$(dirname "$dest_path")"
+    cp "$src" "$dest_path"
+  done < <(
+    find "$src_root" -type f | LC_ALL=C sort
+  )
 }
 
 copy_manifest_context_to_worktree() {
@@ -778,6 +855,7 @@ copy_publication_helpers_to_worktree() {
   local helper
   local helpers=(
     "generate_pavbot_manifest.py"
+    "export_public_feed.py"
     "pavbot_publication_contract.py"
     "pavbot_pdf_theme.py"
     "render_mobile_news_data.py"
@@ -797,30 +875,100 @@ copy_publication_helpers_to_worktree() {
   done
 }
 
+verify_public_manifest_scope() {
+  local manifest_path="public/pavbot-manifest.json"
+  [[ -f "$manifest_path" ]] || die "missing generated manifest: $manifest_path"
+
+  python3 - "$manifest_path" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+manifest_path = Path(sys.argv[1])
+manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+
+forbidden_prefixes = (
+    ".agents/",
+    "backend/",
+    "docs/",
+    "integrations/",
+    "ios/",
+    "scripts/",
+    "tests/",
+)
+forbidden_basenames = {
+    "automation-podcast-prompt.md",
+    "automation-prompt.md",
+    "automation-research-prompt.md",
+    "backlog.md",
+    "draft.md",
+    "index.md",
+    "render.json",
+    "sources.md",
+    "topic.md",
+    "tts_variants.json",
+}
+forbidden_segments = {"/proposals/", "/tools/"}
+
+
+def forbidden(value):
+    if not isinstance(value, str) or not value:
+        return False
+    if value.startswith("https://raw.githubusercontent.com/"):
+        try:
+            value = value.split("/main/", 1)[1]
+        except IndexError:
+            pass
+    return (
+        value.startswith(forbidden_prefixes)
+        or any(segment in f"/{value}/" for segment in forbidden_segments)
+        or Path(value).name in forbidden_basenames
+    )
+
+
+bad = []
+for automation in manifest.get("automations", []):
+    if isinstance(automation, dict):
+        for key in ("sourcePath", "sourceUrl", "outputUrl"):
+            value = automation.get(key)
+            if forbidden(value):
+                bad.append(value)
+
+for topic in manifest.get("topics", []):
+    if isinstance(topic, dict):
+        for key in ("topicFilePath", "url"):
+            value = topic.get(key)
+            if forbidden(value):
+                bad.append(value)
+
+for artifact in manifest.get("artifacts", []):
+    if isinstance(artifact, dict) and forbidden(artifact.get("path")):
+        bad.append(artifact.get("path"))
+
+if bad:
+    print("manifest contains private/developer paths:", file=sys.stderr)
+    for path in sorted({str(item) for item in bad}):
+        print(f"  {path}", file=sys.stderr)
+    raise SystemExit(1)
+PY
+}
+
 copy_reddit_radar_outputs_to_worktree() {
   local dest_root="$1"
   local src_root="$repo_root/$topic_path"
   local dest_topic_root="$dest_root/$topic_path"
   local src dest_path
 
-  rm -rf \
-    "$dest_topic_root/index.md" \
-    "$dest_topic_root/backlog.md" \
-    "$dest_topic_root/topic.md" \
-    "$dest_topic_root/runs" \
-    "$dest_topic_root/data" \
-    "$dest_topic_root/pdfs" \
-    "$dest_topic_root/podcasts"
+  rm -rf "$dest_topic_root"
+  mkdir -p "$dest_topic_root/runs" "$dest_topic_root/data"
 
-  copy_or_remove_publish_path "$topic_path/topic.md" "$dest_root"
-  copy_or_remove_publish_path "$topic_path/index.md" "$dest_root"
-  copy_or_remove_publish_path "$topic_path/backlog.md" "$dest_root"
-  copy_or_remove_publish_path "$topic_path/runs" "$dest_root"
-  copy_or_remove_publish_path "$topic_path/pdfs" "$dest_root"
-  copy_or_remove_publish_path "$topic_path/podcasts" "$dest_root"
-
-  mkdir -p "$dest_topic_root/data"
   shopt -s nullglob
+  for src in "$src_root"/runs/*-reddit-radar.md; do
+    dest_path="$dest_topic_root/runs/$(basename "$src")"
+    mkdir -p "$(dirname "$dest_path")"
+    cp "$src" "$dest_path"
+  done
+
   for src in "$src_root"/data/*-reddit-radar.json "$src_root"/data/*-reddit-radar-raw.json; do
     dest_path="$dest_topic_root/data/$(basename "$src")"
     mkdir -p "$(dirname "$dest_path")"
@@ -835,14 +983,7 @@ copy_mobile_public_outputs_to_worktree() {
   local dest_topic_root="$dest_root/$topic_path"
   local src dest_path latest_stamp rel_path stamp
 
-  rm -rf \
-    "$dest_topic_root/index.md" \
-    "$dest_topic_root/backlog.md" \
-    "$dest_topic_root/runs" \
-    "$dest_topic_root/data" \
-    "$dest_topic_root/pdfs" \
-    "$dest_topic_root/podcasts"
-
+  rm -rf "$dest_topic_root"
   mkdir -p "$dest_topic_root"
   latest_stamp="$(latest_mobile_public_output_stamp "$src_root" 2>/dev/null || true)"
   [[ -n "$latest_stamp" ]] || return 0
@@ -937,6 +1078,7 @@ publish_isolated() {
       run_publication_contract verify-local "$PWD"
     fi
     python3 "$manifest_generator" --repo-root "$PWD"
+    verify_public_manifest_scope
     require_latest_pulse_news_data_in_manifest
     stage_publishable_paths
 
@@ -1011,6 +1153,7 @@ cd "$repo_root"
 
 [[ -d "$topic_path" ]] || die "topic path does not exist: $topic_path"
 [[ -f "$manifest_generator" ]] || die "missing scripts/generate_pavbot_manifest.py"
+[[ -f "$public_feed_exporter" ]] || die "missing scripts/export_public_feed.py"
 [[ -f "$publication_contract" ]] || die "missing scripts/pavbot_publication_contract.py"
 [[ -f "$jobs_data_validator" ]] || die "missing scripts/validate_jobs_data.py"
 [[ -f "$research_data_validator" ]] || die "missing scripts/validate_research_data.py"
@@ -1040,6 +1183,7 @@ require_clean_publish_scope
 run_publication_contract prepare "$repo_root"
 run_publication_contract verify-local "$repo_root"
 python3 "$manifest_generator" --repo-root "$PWD"
+verify_public_manifest_scope
 require_latest_pulse_news_data_in_manifest
 
 require_clean_publish_scope

@@ -258,7 +258,14 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 "origin/main",
                 stdout=True,
             ).splitlines()
-            self.assertEqual(changed_files, ["public/pavbot-manifest.json"])
+            self.assertEqual(
+                sorted(changed_files),
+                [
+                    "public/pavbot-manifest.json",
+                    "research/tech-news/backlog.md",
+                    "research/tech-news/index.md",
+                ],
+            )
             manifest = json.loads(
                 self.git(repo, "show", "origin/main:public/pavbot-manifest.json", stdout=True)
             )
@@ -647,7 +654,9 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 sorted(changed_files),
                 [
                     "public/pavbot-manifest.json",
+                    "research/tech-news/backlog.md",
                     "research/tech-news/data/2026-06-23-research.json",
+                    "research/tech-news/index.md",
                     "research/tech-news/pdfs/2026-06-23-tech-news.pdf",
                     "research/tech-news/runs/2026-06-23.md",
                 ],
@@ -688,7 +697,14 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 "origin/main",
                 stdout=True,
             ).splitlines()
-            self.assertEqual(changed_files, ["public/pavbot-manifest.json"])
+            self.assertEqual(
+                sorted(changed_files),
+                [
+                    "public/pavbot-manifest.json",
+                    "research/puls-dnia-news/backlog.md",
+                    "research/puls-dnia-news/index.md",
+                ],
+            )
             manifest = json.loads(
                 self.git(repo, "show", "origin/main:public/pavbot-manifest.json", stdout=True)
             )
@@ -1258,7 +1274,9 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                 sorted(changed_files),
                 [
                     "public/pavbot-manifest.json",
+                    "research/tech-news/backlog.md",
                     "research/tech-news/data/2026-06-23-research.json",
+                    "research/tech-news/index.md",
                     "research/tech-news/pdfs/2026-06-23-tech-news.pdf",
                     "research/tech-news/runs/2026-06-23.md",
                 ],
@@ -1911,6 +1929,7 @@ class TemporaryPavbotRepo:
         (repo / "scripts").mkdir(parents=True)
         shutil.copy2(self.source_repo / "scripts" / "pavbot_publication_contract.py", repo / "scripts")
         shutil.copy2(self.source_repo / "scripts" / "generate_pavbot_manifest.py", repo / "scripts")
+        shutil.copy2(self.source_repo / "scripts" / "export_public_feed.py", repo / "scripts")
         shutil.copy2(self.source_repo / "scripts" / "pavbot_pdf_theme.py", repo / "scripts")
         shutil.copy2(self.source_repo / "scripts" / "render_research_data.py", repo / "scripts")
         shutil.copy2(self.source_repo / "scripts" / "render_research_pdf.py", repo / "scripts")

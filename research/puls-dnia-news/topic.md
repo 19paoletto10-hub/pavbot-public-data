@@ -39,6 +39,10 @@ Each run must write:
 - `research/puls-dnia-news/runs/YYYY-MM-DD-HHMM.md`
 - `research/puls-dnia-news/data/YYYY-MM-DD-HHMM-pulse-news.json`
 
+Do not create PDF outputs for this topic. The iOS app contract for `Puls Dnia`
+uses only the timestamped Markdown run plus the timestamped `pulseNewsData`
+JSON.
+
 The JSON must validate with `scripts/validate_pulse_news_data.py` before
 publishing. A valid run contains at least 12 news items and an even number of
 items so the iOS app can render exactly two cards per carousel page.

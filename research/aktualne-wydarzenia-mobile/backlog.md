@@ -4,11 +4,13 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
-| High | Recover MP3 rendering after `ffmpeg`/`x265` breakage | Wieczorny run `2026-07-02-1934` ponownie wysypał standardowy render `female-piper` na błędzie `ffmpeg`/`x265`; realny MP3 odzyskano dopiero ręcznym pipeline'em `piper -> ffmpeg` z `DYLD_LIBRARY_PATH` i `DYLD_FALLBACK_LIBRARY_PATH` wskazującymi `libx265.215` z Homebrew `x265/4.1`, więc wspólne środowisko audio nadal jest realnie zepsute i nienaprawione | Review [proposal 2026-06-30](proposals/2026-06-30-recover-audio-pipeline-after-ffmpeg-breakage.md) and repair the shared audio environment or renderer outside the topic run | Open |
+| High | Recover MP3 rendering after `ffmpeg`/`x265` breakage | Wieczorny run `2026-07-03-1934` ponownie wysypał standardowy render `female-piper` na błędzie `ffmpeg`/`x265`; realny MP3 odzyskano dopiero ręcznym pipeline'em `piper -> lame`, więc wspólne środowisko audio nadal jest realnie zepsute i nienaprawione | Review [proposal 2026-06-30](proposals/2026-06-30-recover-audio-pipeline-after-ffmpeg-breakage.md) and repair the shared audio environment or renderer outside the topic run | Open |
 | High | Track Orka delivery, MRO and Baltic follow-through | Wieczorny run potwierdził podpisanie umowy na trzy A26, ale publiczne szczegóły wykonawcze nadal są niepełne | In the next run, verify delivery timing, named Polish industrial partners, scope of the MRO buildout, the HMS Södermanland bridge arrangement, and any additional Poland-Sweden/NATO-Baltic commitments | Open |
 | High | Track concrete follow-through after Gdańsk package | Dzisiejszy run ma już liczby i deklaracje, ale nie wszystkie projekty mają publiczne listy beneficjentów i wdrożeń | In the next run, check for named projects, signed agreements, and partner readouts expanding the 3,2 mld euro, 1,1 mld euro and 10 mld euro figures | Open |
-| High | Stabilize `male-xtts` in current-events pipeline | Czternasty produkcyjny run z rzędu kończy się brakiem męskiego wariantu MP3; wieczór `2026-07-02-1934` znowu wymagał ręcznego przerwania po powtarzalnej zwiesze XTTS zakończonej `KeyboardInterrupt` w generacji waveformu | Review [proposal 2026-06-26](proposals/2026-06-26-stabilize-male-xtts-workflow.md) and align it with the broader audio-pipeline fix from 2026-06-30 | Open |
-| Medium | Align public mobile scope with manifest output | Ręczna weryfikacja po runie `2026-07-02-1017` znowu potwierdziła, że `origin/main` publikuje i indeksuje `newspaper.pdf`, choć topic prompt ogranicza publiczny zakres do `mobile-brief`, `script`, `mobile-news` i realnych MP3 | Review [proposal 2026-06-29](proposals/2026-06-29-align-mobile-public-scope-with-manifest.md) and decide whether `newspaper.pdf` should remain local-only or become explicitly public everywhere | Open |
+| High | Stabilize `male-xtts` in current-events pipeline | Szesnasty produkcyjny run z rzędu kończy się brakiem męskiego wariantu MP3; wieczór `2026-07-03-1934` znowu wymagał ręcznego przerwania po powtarzalnej zwiesze XTTS, zanim powstał jakikolwiek plik audio | Review [proposal 2026-06-26](proposals/2026-06-26-stabilize-male-xtts-workflow.md) and align it with the broader audio-pipeline fix from 2026-06-30 | Open |
+| Medium | Track concrete follow-through on BBN signal about US rotation and permanent base | Poranny sygnał BBN dostał wieczorem `2026-07-03-1934` mocniejsze polityczne rozwinięcie z KPRP o pracy nad stałą bazą US Army, ale nadal bez terminu, jednostki i polskiej oferty rozpisanej na publiczny harmonogram | In the next run, check for a named unit, dates, a public outline of the Polish offer, reactions after Ankara, and any cost or legal details around a permanent base | Open |
+| Medium | Watch whether Sikorski–Sybiha de-escalation yields real follow-through | Wieczorny run `2026-07-03-1934` dołożył oficjalny komunikat MSZ o konstruktywnym dialogu, deeskalacji emocji i kontynuacji współpracy wojskowej oraz gospodarczej, ale bez kolejnych wspólnych konkretów wykonawczych | In the next run, check for new Polish or Ukrainian readouts on military cooperation, historical dialogue, reconstruction and further de-escalation before or just after Ankara | Open |
+| Medium | Align public mobile scope with manifest output | Ręczna weryfikacja po wieczornym runie `2026-07-03-1934` ponownie potwierdziła, że `origin/main` publikuje i indeksuje `newspaper.pdf`, choć topic prompt ogranicza publiczny zakres do `mobile-brief`, `script`, `mobile-news` i realnych MP3 | Review [proposal 2026-06-29](proposals/2026-06-29-align-mobile-public-scope-with-manifest.md) and decide whether `newspaper.pdf` should remain local-only or become explicitly public everywhere | Open |
 | Medium | Track fallout from the 2 July presidential package | Wieczorny run `2026-07-02-1934` przestawił krajową oś dnia na `5` podpisów, `2` weta i ustawę akcyzową skierowaną do TK, ale bez szybkiej publicznej odpowiedzi rządu lub większości sejmowej | In the next run, check whether the government, coalition or Sejm leadership publicly answer the vetoes and TK referral with revised bills, rebuttals or procedural moves | Open |
 | Medium | Monitor legal follow-through on EU temporary protection proposal | Komisja Europejska zaproponowała ochronę tymczasową dla osób uciekających z Ukrainy do 4 marca 2028 roku, ale decyzję musi jeszcze przyjąć Rada UE, a kryteria dla nowych przyjazdów są politycznie czułe | In the next run, check whether the Council has adopted the proposal and how the criteria for new arrivals are being publicly described | Open |
 | Medium | Tune trusted source mix | The brief should stay current without repeating low-value items | After three runs, note the sources that produced the strongest confirmed stories | Open |
@@ -156,6 +158,32 @@
   zweryfikowała wymagane artefakty, ale ręczna kontrola po `git fetch origin`
   potwierdziła ponownie, że `origin/main:public/pavbot-manifest.json` nadal
   indeksuje `pdfs/2026-07-02-1934-newspaper.pdf`, mimo że prompt tematu
+  ogranicza publiczny zakres do `mobile-brief`, `script`, `mobile-news` i
+  realnych MP3.
+- 2026-07-03: Poranny run `2026-07-03-1017` przestawił główny obraz dnia z
+  samej polityki na szerszy pakiet odpornościowy: północne ostrzeżenia
+  wiatrowe i burzowe, utrzymaną suszę hydrologiczną, `4` nowe utonięcia,
+  `19` pożarów lasów, skażenie wody w Olszynie oraz komunikat BBN o
+  dokańczanej rotacji wojsk USA i agendzie stałej bazy.
+- 2026-07-03: W runie `2026-07-03-1017` standardowy `female-piper` ponownie
+  rozbił się o `ffmpeg`/`x265`, ale został odzyskany ręcznym pipeline'em
+  `piper -> lame`; `male-xtts` piętnasty raz z rzędu zawiesił się i wymagał
+  ręcznego przerwania, a stan zapisano w
+  `podcasts/2026-07-03-1017/tts_variants.json`.
+- 2026-07-03: Wieczorny run `2026-07-03-1934` przesunął środek ciężkości z
+  porannej mapy ryzyk na mapę odpowiedzi: oficjalną deeskalację Polska–Ukraina,
+  wejście nowych obowiązków kryzysowych od 4 lipca, mocniejszy przekaz KPRP o
+  stałej bazie USA, presję na systemowe bezpieczeństwo gazowe oraz rozpisaną
+  Ankarę z forum przemysłu obronnego i formatem NATO–Ukraina.
+- 2026-07-03: W runie `2026-07-03-1934` standardowy `female-piper` znowu
+  rozbił się o `ffmpeg`/`x265`, ale został odzyskany ręcznym pipeline'em
+  `piper -> lame`; `male-xtts` szesnasty raz z rzędu zawiesił się i wymagał
+  ręcznego przerwania, a stan zapisano w
+  `podcasts/2026-07-03-1934/tts_variants.json`.
+- 2026-07-03: Publikacja runu `2026-07-03-1934` przeszła technicznie i zdalnie
+  zweryfikowała wymagane artefakty, ale ręczna kontrola po `git fetch origin`
+  potwierdziła ponownie, że `origin/main:public/pavbot-manifest.json` nadal
+  indeksuje `pdfs/2026-07-03-1934-newspaper.pdf`, mimo że prompt tematu
   ogranicza publiczny zakres do `mobile-brief`, `script`, `mobile-news` i
   realnych MP3.
 

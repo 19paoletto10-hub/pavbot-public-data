@@ -63,9 +63,13 @@ reviewable proposals.
   through the shared podcast pipeline.
 - Podcast packages include `brief.pdf`, a professional PDF summary of the
   discovered information, sources, and audio metadata.
-- `public/pavbot-manifest.json` stores the read-only public index consumed by
-  the iOS viewer. It is generated from the docs and `research/<topic>/`
-  artifacts by `scripts/generate_pavbot_manifest.py`.
+- `public/pavbot-manifest.json` stores the sanitized read-only public index
+  consumed by the iOS viewer. It is generated from private docs and
+  `research/<topic>/` artifacts by `scripts/generate_pavbot_manifest.py`, but
+  public output excludes source code, prompts, topic contracts, indexes,
+  backlogs, proposals, tools, source notes, drafts, and render metadata.
+- `scripts/export_public_feed.py` exports the clean public repository tree:
+  manifest plus only app-visible `research/` artifacts.
 - `research/puls-dnia-news/data/YYYY-MM-DD-HHMM-pulse-news.json` stores the
   structured pulse-news feed. The iOS app reads it as `pulseNewsData`, shows it
   in the `Puls Dnia` tab, and keeps a local 48-hour history for smooth

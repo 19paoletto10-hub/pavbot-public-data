@@ -1,0 +1,4 @@
+dyld[244]: Library not loaded: /opt/homebrew/opt/x265/lib/libx265.215.dylib
+  Referenced from: <F9E6AD28-EB2F-3CDF-A8D3-B46824F14207> /opt/homebrew/Cellar/ffmpeg/8.0.1_4/bin/ffmpeg
+  Reason: tried: '/opt/homebrew/opt/x265/lib/libx265.215.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/opt/x265/lib/libx265.215.dylib' (no such file), '/opt/homebrew/opt/x265/lib/libx265.215.dylib' (no such file), '/opt/homebrew/Cellar/x265/4.2/lib/libx265.215.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/opt/homebrew/Cellar/x265/4.2/lib/libx265.215.dylib' (no such file), '/opt/homebrew/Cellar/x265/4.2/lib/libx265.215.dylib' (no such file)
+.agents/scripts/podcast/render-podcast-audio.sh: line 121:   244 Abort trap: 6           ffmpeg -hide_banner -loglevel error -y -i "$audio_wav" -codec:a libmp3lame -q:a 4 "$output_mp3"

@@ -1,12 +1,40 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-02
+Last updated: 2026-07-03
 
 ## Current Understanding
 
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
+
+Po wieczornym raporcie z 2026-07-03-1933 najważniejsza nowa warstwa to
+platform safety jako odpowiedzialność systemu reklamowego: BBC/Techmeme i
+indyjskie media podały, że Instagram w Indiach przepuszczał płatne reklamy
+prowadzące do materiałów CSAM, a MeitY ma wezwać Meta do wyjaśnień. Druga
+warstwa to rozjazd governance: FT opisuje amerykańskie "no FDA for AI", podczas
+gdy ITU/ONZ ustawiają AI for Good Global Commission i spotkania w Genewie.
+Trzecia warstwa to geopolityczny access control dla agentów: Anthropic zamyka
+obejścia użycia Claude przez chińskie firmy, a Alibaba według SCMP blokuje
+Claude Code od 10 lipca. Czwarta warstwa to cyber/supply-chain trust:
+GoDaddy kontra prywatność domen w Indiach, wyciek Tata Electronics dotyczący
+Apple, DOJ/Scattered Spider oraz YAM-9/NAVI-Orbital jako pozytywny przykład
+edge AI bliżej sensora.
+
+Po raporcie z 2026-07-03 najważniejsza nowa warstwa to korekta agentowego
+hype'u przez praktykę wdrożeń: Meta według Reutersa przyznaje, że rozwój
+agentów AI idzie wolniej, niż oczekiwano, mimo równoległych ambicji modelu
+Watermelon porównywanego z GPT-5.5. Druga warstwa to custom silicon i koszt
+inferencji: Anthropic/Samsung dołączają do wątku OpenAI/Broadcom, Google TPU,
+Amazon Trainium, HBM i memory bottleneck jako dowód, że frontier labs chcą
+kontrolować "fabrykę kosztu", nie tylko model. Trzecia warstwa to lokalne
+ograniczenia AI infrastructure: QTS/Blackstone wycofuje duży projekt data
+center w Virginii po oporze społeczności, co wzmacnia wcześniejsze wątki
+emisji, wody, ratepayer policy i pozwoleń. Czwarta warstwa to platform
+accountability: TSUE utrzymuje zasadniczą część kary Google za Androida,
+Tesla ogranicza zewnętrzne wydatki AI przy wyjątku dla Groka, a Hopper/FTC
+pokazuje, że dark patterns i przejrzystość cen będą ważne także w epoce
+agentowych zakupów.
 
 Po wieczornym raporcie z 2026-07-02-1934 najważniejsza nowa warstwa to
 wdrożeniowa industrializacja AI: Microsoft Frontier Company odpowiada na AWS
@@ -237,6 +265,45 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- Platform ad-safety accountability: Meta/Instagram India trzeba obserwować
+  jako test, czy paid ads, review automation, local-language moderation i
+  off-platform Telegram funnels zostaną objęte twardszym audytem oraz lokalnym
+  egzekwowaniem.
+- AI governance split: FT/Krishnan i ITU/ONZ trzeba śledzić razem jako
+  rozjazd między lekkim reżimem USA, selektywnymi interwencjami national
+  security, europejskim AI Act i wielostronnymi forami Genewy 6-10 lipca 2026.
+- Claude access control and Chinese enterprise response: Anthropic/FT oraz
+  Alibaba/SCMP pokazują, że coding agents stają się narzędziem geopolitycznym;
+  śledzić Microsoft Azure, Terms of Service enforcement, detekcję lokalizacji,
+  kolejne bany w Chinach i reakcje developerów.
+- Domain privacy versus anti-fraud orders: GoDaddy/Delhi High Court trzeba
+  obserwować jako konflikt trademark enforcement, fake websites, WHOIS/GDPR,
+  prywatności rejestrantów i ryzyka precedensu dla globalnych rejestratorów.
+- Apple/Tata supply-chain leakage: wyciek Tata Electronics trzeba śledzić jako
+  ryzyko hardware supply chain, nie tylko przeciek zdjęć telefonu; patrzeć na
+  CERT-In, audyty dostawców, Apple containment i kolejne próbki danych.
+- Onboard satellite AI and semantic compression: YAM-9/NAVI-Orbital warto
+  obserwować jako bardziej realistyczny wariant orbital AI niż data centers w
+  kosmosie; śledzić peer review, kolejne in-orbit captures, false positives i
+  zastosowania disaster response.
+- Agent reliability reality check: Meta/Zuckerberg trzeba śledzić jako sygnał,
+  że nawet przy mocnych modelach agentowe workflow nadal rozbijają się o
+  niezawodność, recovery, uprawnienia, observability i koszt review.
+- Frontier-lab custom silicon: Anthropic/Samsung trzeba obserwować razem z
+  OpenAI/Broadcom, Google TPU, Amazon Trainium, HBM i pamięcią jako wątek
+  pionowej kontroli kosztu inferencji przez laboratoria AI.
+- Data-center project cancellations: QTS/Blackstone w Virginii pokazuje, że
+  lokalny opór może zatrzymać AI infrastructure; śledzić kolejne projekty,
+  stanowe przepisy, utility costs, wodę, hałas i polskie/europejskie analogi.
+- EU Android antitrust and mobile platform control: wyrok TSUE wobec Google
+  trzeba śledzić razem z Android Developer Verification, DMA, sideloadingiem,
+  domyślnymi usługami i reakcjami open-source.
+- Enterprise AI spend controls: Tesla/Grok pokazuje praktyczny problem
+  limitowania zewnętrznych modeli, preferowanych vendorów, ryzyka danych i
+  mierzenia ROI z tokenów.
+- Consumer app dark patterns in the agent era: Hopper/FTC trzeba obserwować
+  jako przypomnienie, że agentowe zakupy i rezerwacje będą wymagały jeszcze
+  większej przejrzystości opłat, rabatów i decyzji automatycznych.
 - Cloudflare agent monetization and Pay Per Use: śledzić waitlistę
   Monetization Gateway, adopcję x402, partnerów Ceramic/You.com, modele cenowe
   za MCP tools/API/content, identity dla agentów oraz reakcję wydawców i AI
@@ -699,6 +766,8 @@ transparentność środowiskową AI.
 
 ## Recent Reports
 
+- [2026-07-03-1933](runs/2026-07-03-1933.md)
+- [2026-07-03](runs/2026-07-03.md)
 - [2026-06-30-1935](runs/2026-06-30-1935.md)
 - [2026-06-29](runs/2026-06-29.md)
 - [2026-06-27](runs/2026-06-27.md)

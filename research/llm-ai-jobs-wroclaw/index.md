@@ -1,23 +1,23 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-07-02 17:49 CEST
+Last updated: 2026-07-03 15:41 CEST
 
 ## Current Understanding
 
-Runda z `2026-07-02 17:49 CEST` dołożyła nowy klaster Wrocław/remote wokół
-`Capgemini GCP AI Developer`, `Holisticon Connect Senior AI Engineer`,
-`SQUAD Applied Scientist (LLM)`, `Holisticon Insight Senior Data Scientist
-(GenAI & RAG)` i `Link Group Applied Machine Learning Engineer`, a także
-remote-Poland leady z `SCALO`, `Upvanta` i `DCV`. Najmocniejszy sygnał tej
-rundy to dalsze przesuwanie shortlisty w stronę produkcyjnego AI platform
-engineering, agentic systems i applied LLM/RAG work, a nie ogólnych ról
-data/BI.
+Runda z `2026-07-03 15:41 CEST` przesunęła środek ciężkości z wczorajszego
+board burst na nową falę `first-party` i mocniejsze remote-Poland leady:
+`Sii AI Architect – GenAI & Cloud`, `Sii Generative AI & Data Engineer`,
+`Capgemini Solution Architect / Agentic AI`, `Accenture GenAI Architect
+(AI&Data)`, a po stronie boardów `SNI GenAI Platform Engineer`,
+`SNI GenAI Engineer (GCP)`, `B3 Consulting Poland AI Engineer` i
+`MailerLite Machine Learning Engineer`.
 
-Status pozostaje więc `Material update`, ale część kart nadal jest board-first
-i może szybko zmienić tytuł, salary albo canonical URL. `UNIVIO` pozostaje
-aktywne na oficjalnej stronie, lecz boardowy wariant z `Snowflake` jest dziś
-zbyt niejednoznaczny, żeby traktować go jako osobny lead bez mocniejszego
-potwierdzenia.
+Najmocniejszy jakościowo sygnał tej rundy to powrót `Sii` jako aktywnego,
+kanonicznego źródła dla hands-on GenAI/data engineering i technicznych ról
+bliskich wdrożeniom. Najważniejsza negatywna obserwacja: nowo wykryta karta
+`Holisticon Connect Senior ML Platform Reliability & Infrastructure Engineer`
+jest już publicznie oznaczona jako `Offer expired`, co wzmacnia wcześniejszy
+wniosek, że część klastrów Holisticon dalej ma bardzo szybki deadline churn.
 
 ## Stable Facts
 
@@ -190,6 +190,15 @@ only when something meaningful changes.
 | upvanta-senior-genai-engineer-remote-poland | Upvanta sp. z o.o. | Senior GenAI Engineer | Warszawa / remote Poland | 2026-07-02-1749 | 2026-07-02-1749 | Open | Initial capture: public Just Join IT role; `170-200 PLN/h` B2B, `LLM`, `Agentic AI`, `SQL`, `Python`, `Data Engineering`, `Generative AI`; clear hands-on GenAI delivery profile. | [Just Join IT](https://justjoin.it/job-offer/upvanta-sp-z-o-o--senior-genai-engineer-warszawa-ai) |
 | dcv-ai-application-developer-remote-poland | DCV Technologies | AI Application Developer | Remote Poland | 2026-07-02-1749 | 2026-07-02-1749 | Open | Initial capture: public Just Join IT role; enterprise-grade AI solutions with `GenAI`, `LLMs`, `RAG` and `Python`; salary not public. | [Just Join IT](https://justjoin.it/job-offer/dcv-technologies-ai-application-developer-warszawa-ai) |
 | link-group-applied-machine-learning-engineer-genai-llm-ml-systems-wroclaw-remote | Link Group | Applied Machine Learning Engineer \| GenAI / LLM / ML Systems | Wroclaw + remote | 2026-07-02-1749 | 2026-07-02-1749 | Open | Initial capture: public Just Join IT board card; `26 000-42 000 PLN/month`, `PyTorch`, `Docker`, `LangChain OR LangGraph OR LlamaIndex`, `Python`, production ML/LLM systems. | [Just Join IT Wroclaw AI board](https://justjoin.it/job-offers/wroclaw/ai) |
+| sii-ai-architect-genai-cloud-multiple-locations | Sii Sp. z o.o. | AI Architect – GenAI & Cloud (f/m/x) | Whole Poland remote / hybrid-office | 2026-07-03-1541 | 2026-07-03-1541 | Open | Initial capture: official Sii role; production-oriented architecture around `knowledge-grounded AI systems`, `agent frameworks`, `model serving`, `data infrastructure`, `Azure/AWS/GCP` and `Python`; salary not public. | [Sii](https://sii.pl/en/job-ads/id/37068/ai-architect-genai-cloud-f-m-x) |
+| sii-generative-ai-data-engineer-multiple-locations | Sii Sp. z o.o. | Generative AI & Data Engineer (f/m/x) | Whole Poland remote / hybrid-office | 2026-07-03-1541 | 2026-07-03-1541 | Open | Initial capture: official Sii role; hands-on `LLM`, `RAG`, `embeddings`, `vector search`, `Azure AI Search` and `Python/PySpark` delivery; salary not public. | [Sii](https://sii.pl/en/job-ads/id/37346/generative-ai-data-engineer-f-m-x) |
+| capgemini-solution-architect-agentic-ai-multiple-locations-wroclaw | Capgemini | Solution Architect / Agentic AI | Wrocław + multiple PL locations / hybrid | 2026-07-03-1541 | 2026-07-03-1541 | Open | Initial capture: official Capgemini role `509366`, posted `26 Jun 2026`; `Agentic AI`, `Azure AI services`, `Copilot Studio`, `Power Apps`, document processing pipelines and integrated solution architecture; salary not public. | [Capgemini Careers](https://careers.capgemini.com/job-invite/509366/) |
+| accenture-genai-architect-ai-data-wroclaw-remote | Accenture | GenAI Architect (AI&Data) | Wrocław + remote Poland / hybrid | 2026-07-03-1541 | 2026-07-03-1541 | Open | Initial capture: official Accenture role `R00318996` plus current Wrocław mirror on Just Join IT; `autonomous agentic AI ecosystems`, `enterprise AI strategy`, `LLMOps`, evaluation pipelines and prompt management; salary not public. | [Accenture official](https://www.accenture.com/pl-pl/careers/jobdetails?id=R00318996_en&title=Principal+Agentic+Architecture+%26+Enterprise+AI+Expert+%28AI%26Data%29) / [Just Join IT](https://justjoin.it/job-offer/accenture-principal-agentic-architecture-enterprise-ai-expert-ai-data--wroclaw-architecture) |
+| sni-genai-platform-engineer-remote-poland | SNI | GenAI Platform Engineer | Warszawa / remote Poland | 2026-07-03-1541 | 2026-07-03-1541 | Open | Initial capture: public Just Join IT role; `160-180 PLN net/h B2B`; `LLMOps`, `AWS SageMaker`, `Bedrock`, deployment, serving and monitoring of `LLM` systems. | [Just Join IT](https://justjoin.it/job-offer/sni-genai-platform-engineer-warszawa-ai) |
+| sni-genai-engineer-gcp-remote-poland | SNI | GenAI Engineer (GCP) | Warszawa / remote Poland | 2026-07-03-1541 | 2026-07-03-1541 | Open | Initial capture: public Just Join IT role; `160-180 PLN net/h B2B`; `Vertex AI`, `LLM`, multimodal models, fine-tuning, `RAG` and agentic workflows on GCP. | [Just Join IT](https://justjoin.it/job-offer/sni-genai-engineer-gcp--warszawa-ai) |
+| b3-consulting-poland-ai-engineer-remote-poland | B3 Consulting Poland | AI Engineer | Warszawa / remote Poland | 2026-07-03-1541 | 2026-07-03-1541 | Open | Initial capture: public Just Join IT role; remote-Poland AI engineer card focused on `LLM integration`, `embeddings`, `reranking`, `prompt engineering`, `RAG` and agentic systems; salary not public. | [Just Join IT](https://justjoin.it/job-offer/b3-consulting-poland-ai-engineer-warszawa-ai) |
+| mailerlite-machine-learning-engineer-remote-poland | MailerLite | Machine Learning Engineer | Poland remote | 2026-07-03-1541 | 2026-07-03-1541 | Open | Initial capture: public Just Join IT role; `55 000-80 000 EUR gross/year`; `LLM` work including fine-tuning on proprietary data, product assistant scope and remote Poland availability. | [Just Join IT](https://justjoin.it/job-offer/mailerlite-machine-learning-engineer-poland-remote--ai) |
+| holisticon-connect-senior-ml-platform-reliability-infrastructure-engineer-wroclaw-remote | Holisticon Connect | Senior ML Platform Reliability & Infrastructure Engineer | Wrocław / remote | 2026-07-03-1541 | 2026-07-03-1541 | Expired | Initial capture: public Just Join IT card discovered this run, but the current public page is already marked `Offer expired`; still relevant as a material Holisticon status signal around AI infra / ML platform work. | [Just Join IT](https://justjoin.it/job-offer/holisticon-connect-senior-ml-platform-reliability-infrastructure-engineer-wroclaw-ai) |
 
 ## Open Questions
 
@@ -281,6 +290,7 @@ only when something meaningful changes.
 
 ## Recent Reports
 
+- [2026-07-03-1541](runs/2026-07-03-1541.md)
 - [2026-07-02-1749](runs/2026-07-02-1749.md)
 - [2026-07-01-0141](runs/2026-07-01-0141.md)
 - [2026-06-30-1805](runs/2026-06-30-1805.md)
@@ -313,6 +323,13 @@ only when something meaningful changes.
 
 ## Review Notes
 
+- 2026-07-03: popołudniowa runda dołożyła nową official/public falę wokół
+  `Sii AI Architect – GenAI & Cloud`, `Sii Generative AI & Data Engineer`,
+  `Capgemini Solution Architect / Agentic AI`, `Accenture GenAI Architect
+  (AI&Data)`, `SNI GenAI Platform Engineer`, `SNI GenAI Engineer (GCP)`,
+  `B3 Consulting Poland AI Engineer` i `MailerLite Machine Learning Engineer`;
+  dodatkowo świeżo wykryta karta `Holisticon Connect Senior ML Platform
+  Reliability & Infrastructure Engineer` okazała się już publicznie wygaszona.
 - 2026-07-02: popołudniowy sweep dodał nowy klaster Wrocław/remote wokół
   `Capgemini GCP AI Developer`, `Holisticon Connect Senior AI Engineer`,
   `SQUAD Applied Scientist (LLM)`, `Holisticon Insight Senior Data Scientist

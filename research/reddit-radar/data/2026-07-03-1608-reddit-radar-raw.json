@@ -1,0 +1,364 @@
+{
+  "id": "humor-2026-07-03-1608",
+  "title": "<RR> Reddit Radar",
+  "summary": "Sześć ręcznie sprawdzonych tematów: semantyczna wojna o „darmowe” usługi, dwa memy programistyczne, hotfiks w kamizelce, konkurs na celne riposty i absurd zgody na AI w dokumentacji medycznej.",
+  "generatedAt": "2026-07-03T14:08:50.271163+00:00",
+  "displayTime": "16:08",
+  "nextRefreshAt": "2026-07-03T18:06:00+02:00",
+  "refreshIntervalHours": 2,
+  "items": [
+    {
+      "id": "https-www-reddit-com-r-mildlyinfuriating-comment-c69f801ef2",
+      "title": "\"It's not free, you're paying taxes\"",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://www.reddit.com/r/mildlyinfuriating/comments/1umcahh/its_not_free_youre_paying_taxes/",
+      "imageURL": "https://www.reddit.com/r/mildlyinfuriating/comments/1umcahh/its_not_free_youre_paying_taxes/",
+      "score": 1430,
+      "comments": 610,
+      "tags": [
+        "trend"
+      ],
+      "categoryLabel": "mildlyinfuriating",
+      "postText": "If I had a dollar for every time someone mentioned \"free healthcare\" or \"my degree didn't cost me anything\" and someone else (usually from the land of the free) jumps in with \"BuT yOuR pAYinG tAXeS fOr ThaT!!1!\", I'd be able to pay for my tuition /s Yes, genius, nothing is free. Swimming in a lake isn't free because there's a forestry commission maintaining that. Walking in a park isn't free because your taxes paid for the park. But for f***'s sake, you know what we mean and this argument is getting tiresome. When people say free, we mean free at the point of use, not \"it absolutely didn't co…",
+      "redditCreatedAt": "2026-07-03T11:48:23.784000+00:00",
+      "whyFunny": "Wątek jest zabawny przez zderzenie oczywistego truizmu z internetową pewnością siebie: wszyscy wiedzą, że nic nie jest dosłownie darmowe, ale komentarze pokazują, jak absurdalnie często ten sam argument wraca jak odkrycie roku.",
+      "rawCommentSnippets": [
+        {
+          "body": "You don’t drive on that road for free, either.",
+          "score": 81
+        },
+        {
+          "body": "Heh, they can't even imagine how much less healthcare costs without insurance companies jaking up the prices.",
+          "score": 648
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Puenta porównuje podatki do utrzymania dróg: też z nich korzystasz, choć nie płacisz przy każdym skręcie.",
+          "originalBody": "You don’t drive on that road for free, either.",
+          "explanation": "To trafia, bo jednym zdaniem rozbraja cały spór. Komentujący przenosi dyskusję z ideologii na banalny przykład codziennej infrastruktury i pokazuje, że „free at point of use” naprawdę nie jest trudnym pojęciem.",
+          "score": 81
+        },
+        {
+          "id": "comment-2",
+          "summary": "Komentarz wbija szpilę w amerykańskie koszty leczenia i rolę ubezpieczycieli w pompowaniu cen.",
+          "originalBody": "Heh, they can't even imagine how much less healthcare costs without insurance companies jaking up the prices.",
+          "explanation": "Druga puenta dokłada szerszy kontekst: rozmowa nie dotyczy tylko słówka „free”, ale też tego, że system może być jednocześnie droższy i mniej sensowny. Dzięki temu zwykłe marudzenie zamienia się w celny żart o ekonomicznym absurdzie.",
+          "score": 648
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Zweryfikowano w Safari widok posta i sensowne komentarze; odrzucono zaszumione wpisy z artefaktami SML.load.",
+      "radarKey": "https://www.reddit.com/r/mildlyinfuriating/comments/1umcahh/its_not_free_youre_paying_taxes",
+      "radarFirstSeenAt": "2026-07-03T14:08:50.271163+00:00",
+      "radarLastSeenAt": "2026-07-03T14:08:50.271163+00:00"
+    },
+    {
+      "id": "https-www-reddit-com-r-programmerhumor-comments--e36852981a",
+      "title": "helloWorldGoodbyeUsers",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://www.reddit.com/r/ProgrammerHumor/comments/1umcut3/helloworldgoodbyeusers/",
+      "imageURL": "https://i.redd.it/ovk1p5oxa0bh1.jpeg",
+      "score": 1354,
+      "comments": 65,
+      "tags": [
+        "memy",
+        "dev"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "redditCreatedAt": "2026-07-03T12:14:58.812000+00:00",
+      "whyFunny": "Mem streszcza pół technologicznego internetu w jednym obrazku: zrobienie prototypu staje się coraz łatwiejsze, ale zdobycie prawdziwych użytkowników nadal brzmi jak boss fight, którego sam kod nie rozwiązuje.",
+      "rawCommentSnippets": [
+        {
+          "body": "There was always a ton of idea and usage. It’s still the execute that’s the bottleneck.",
+          "score": 322
+        },
+        {
+          "body": "Basically my LinkedIn feed right now. Everyone and their roommate is a 'Founder & CEO' of an AI wrapper project, but the only actual user is their professor grading it",
+          "score": 314
+        },
+        {
+          "body": "when there are too many vibe-coded products, there is much more noise",
+          "score": 97
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Najcelniejszy komentarz sprowadza problem do prostego wniosku: pomysłów i chętnych jest pełno, wąskim gardłem pozostaje wykonanie.",
+          "originalBody": "There was always a ton of idea and usage. It’s still the execute that’s the bottleneck.",
+          "explanation": "To dobra puenta do mema, bo odbiera całemu hype’owi aurę przełomu. AI może przyspieszyć start, ale nie zastępuje dowiezienia produktu, supportu i sensownej dystrybucji.",
+          "score": 322
+        },
+        {
+          "id": "comment-2",
+          "summary": "Komentujący porównuje mem do LinkedIna pełnego „Founder & CEO” od kolejnego AI wrappera, którego jedynym użytkownikiem bywa prowadzący z uczelni.",
+          "originalBody": "Basically my LinkedIn feed right now. Everyone and their roommate is a 'Founder & CEO' of an AI wrapper project, but the only actual user is their professor grading it",
+          "explanation": "Ten komentarz działa, bo zamienia abstrakcyjny mem w bardzo rozpoznawalny obrazek z 2026 roku: mnóstwo startupowego teatru, mało realnej trakcji. To już nie tylko żart o kodzie, ale też o performowaniu przedsiębiorczości.",
+          "score": 314
+        },
+        {
+          "id": "comment-3",
+          "summary": "Krótka obserwacja o „vibe-coded products” dokłada problem nadmiaru podobnych projektów i informacyjnego szumu.",
+          "originalBody": "when there are too many vibe-coded products, there is much more noise",
+          "explanation": "Puenta jest trafna, bo przesuwa ciężar z samego programowania na problem widoczności. Nawet jeśli prototypów przybywa, użytkownik widzi głównie hałas i coraz trudniej odróżnić coś sensownego od kolejnej kalki.",
+          "score": 97
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Zweryfikowano w Safari mem i topowe komentarze; wybrano trzy bezpieczne puenty o AI wrapperach, hałasie i problemie z dowożeniem produktu.",
+      "radarKey": "https://www.reddit.com/r/programmerhumor/comments/1umcut3/helloworldgoodbyeusers",
+      "radarFirstSeenAt": "2026-07-03T14:08:50.271163+00:00",
+      "radarLastSeenAt": "2026-07-03T14:08:50.271163+00:00"
+    },
+    {
+      "id": "https-www-reddit-com-r-programmerhumor-comments--3f98c6ff0a",
+      "title": "fiveMinuteHotfix",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://www.reddit.com/r/ProgrammerHumor/comments/1um9r7o/fiveminutehotfix/",
+      "imageURL": "https://i.redd.it/a78wr4j2izah1.jpeg",
+      "score": 1008,
+      "comments": 8,
+      "tags": [
+        "memy",
+        "dev"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "redditCreatedAt": "2026-07-03T09:32:59.157000+00:00",
+      "whyFunny": "Żart działa, bo robi z prostego hotfiksu akcję BHP klasy przemysłowej. Obrazek jest śmieszny sam w sobie, a komentarze od razu skręcają w dobrze znany programistom dramat: prowizorka przechodzi w stałą architekturę.",
+      "rawCommentSnippets": [
+        {
+          "body": "The vest is standard safety protocol for hotfixing. If you don't wear it, the compiler knows you are afraid",
+          "score": 73
+        },
+        {
+          "body": "Dev: I've applied a hotfix but we really need to go back and fix it properly next sprint PM: So it's fixed and we never need to think about it again? Great work team!",
+          "score": 27
+        },
+        {
+          "body": "Where are the five project managers asking for a status update?",
+          "score": 7
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Komentarz dopowiada, że kamizelka odblaskowa to obowiązkowe BHP hotfiksu, bo inaczej kompilator wyczuje strach.",
+          "originalBody": "The vest is standard safety protocol for hotfixing. If you don't wear it, the compiler knows you are afraid",
+          "explanation": "To rozwija obrazek w idealnym kierunku: poprawka nie wygląda już jak zwykły deploy, tylko jak wejście do strefy zagrożenia. Personifikacja kompilatora robi z codziennego stresu mały horror biurowy.",
+          "score": 73
+        },
+        {
+          "id": "comment-2",
+          "summary": "Najlepsza korpo-puenta brzmi jak rozmowa z PM-em, który słyszy „naprawimy porządnie później” jako „temat zamknięty na zawsze”.",
+          "originalBody": "Dev: I've applied a hotfix but we really need to go back and fix it properly next sprint PM: So it's fixed and we never need to think about it again? Great work team!",
+          "explanation": "To bawi, bo każdy zna ten mechanizm: wszyscy wiedzą, że to prowizorka, ale organizacja natychmiast udaje, że problem został elegancko rozwiązany. Z tego bierze się cała siła żartu.",
+          "score": 27
+        },
+        {
+          "id": "comment-3",
+          "summary": "Dodatkowy komentarz pyta, gdzie jest pięciu project managerów domagających się statusu w trakcie awarii.",
+          "originalBody": "Where are the five project managers asking for a status update?",
+          "explanation": "Ta puenta dobrze domyka scenę, bo dorzuca do obrazka brakujący tłum obserwatorów. Sam hotfiks byłby jeszcze znośny, ale prawdziwy chaos zaczyna się wtedy, gdy każdy chce natychmiastowego raportu z pola walki.",
+          "score": 7
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Zweryfikowano w Safari obrazek i komentarze; odrzucono śmieciowe dopiski i zostawiono trzy mocne korpo-programistyczne puenty.",
+      "radarKey": "https://www.reddit.com/r/programmerhumor/comments/1um9r7o/fiveminutehotfix",
+      "radarFirstSeenAt": "2026-07-03T14:08:50.271163+00:00",
+      "radarLastSeenAt": "2026-07-03T14:08:50.271163+00:00"
+    },
+    {
+      "id": "https-www-reddit-com-r-askreddit-comments-1ulewy-09d4d03133",
+      "title": "What’s an insult you heard that’s so brutal you’ll never forget it?",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/AskReddit",
+      "sourceURL": "https://www.reddit.com/r/AskReddit/comments/1ulewyu/whats_an_insult_you_heard_thats_so_brutal_youll/",
+      "imageURL": "https://www.reddit.com/r/AskReddit/comments/1ulewyu/whats_an_insult_you_heard_thats_so_brutal_youll/",
+      "score": 3399,
+      "comments": 1679,
+      "tags": [
+        "trend"
+      ],
+      "categoryLabel": "AskReddit",
+      "postText": null,
+      "redditCreatedAt": "2026-07-02T10:54:02.443000+00:00",
+      "whyFunny": "Wątek jest zabawny jak konkurs na najbardziej literacką złośliwość: zamiast prostych obelg ludzie wrzucają riposty, które brzmią jak gotowe cytaty do stand-upu albo bezlitosnych recenzji filmowych.",
+      "rawCommentSnippets": [
+        {
+          "body": "I was once told I was an overactive underachiever.",
+          "score": 4880
+        },
+        {
+          "body": "\"The only thing you and I have in common is that neither of us knows what the fuck you're talking about.\"",
+          "score": 7875
+        },
+        {
+          "body": "I saw a book review a bunch of years ago: This is not a book to be lightly tossed aside. It is to be thrown with great force.",
+          "score": 739
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "„Overactive underachiever” wygrywa precyzją: cztery słowa i od razu wiadomo, dlaczego bolą.",
+          "originalBody": "I was once told I was an overactive underachiever.",
+          "explanation": "To śmieszy, bo brzmi jak diagnoza napisana przez wyjątkowo złośliwego HR-owca. Jest krótkie, rytmiczne i wystarczająco konkretne, żeby każdy od razu zobaczył ofiarę takiej riposty.",
+          "score": 4880
+        },
+        {
+          "id": "comment-2",
+          "summary": "Riposta o tym, że obie strony łączy tylko brak pojęcia, o czym ktoś właśnie mówił, brzmi jak gotowy tekst sceniczny.",
+          "originalBody": "\"The only thing you and I have in common is that neither of us knows what the fuck you're talking about.\"",
+          "explanation": "Najmocniejszy komentarz działa przez perfekcyjny rytm zdania. Jest brutalny, ale bardziej błyskotliwy niż prymitywny, więc zamiast zwykłej obelgi dostajemy niemal komediowy monolog.",
+          "score": 7875
+        },
+        {
+          "id": "comment-3",
+          "summary": "Recenzja książki zalecająca nie odkładać jej lekko, tylko rzucić z impetem, zamienia zwykłą złośliwość w małe dzieło sztuki.",
+          "originalBody": "I saw a book review a bunch of years ago: This is not a book to be lightly tossed aside. It is to be thrown with great force.",
+          "explanation": "To trafia, bo zamiast prostego przytyku dostajemy elegancko napisany pocisk. Właśnie takie momenty sprawiają, że wątek jest śmieszny bardziej przez formę niż przez samą złośliwość.",
+          "score": 739
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Zweryfikowano w Safari pytanie i topowe odpowiedzi; wybrane komentarze są ostre, ale bezpieczne i oparte na dowcipie językowym.",
+      "radarKey": "https://www.reddit.com/r/askreddit/comments/1ulewyu/whats_an_insult_you_heard_thats_so_brutal_youll",
+      "radarFirstSeenAt": "2026-07-03T14:08:50.271163+00:00",
+      "radarLastSeenAt": "2026-07-03T14:08:50.271163+00:00"
+    },
+    {
+      "id": "https-www-reddit-com-r-programmerhumor-comments--9800e958ce",
+      "title": "positiveFeedbackLoop",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://www.reddit.com/r/ProgrammerHumor/comments/1um5021/positivefeedbackloop/",
+      "imageURL": "https://i.imgur.com/AZD3vJR.png",
+      "score": 2823,
+      "comments": 43,
+      "tags": [
+        "memy",
+        "dev"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "redditCreatedAt": "2026-07-03T05:02:24.234000+00:00",
+      "whyFunny": "Dowcip siedzi w tym, że zwykły feedback loop z code review wygląda tu jak mechanizm samonapędzającej się biurokracji, w której jedna osoba potrafi wygenerować sobie ticket, poprawkę i pochwałę bez udziału reszty świata.",
+      "rawCommentSnippets": [
+        {
+          "body": "“Thanks for the quick turnaround on this”",
+          "score": 518
+        },
+        {
+          "body": "self-review PR \"lgtm\"",
+          "score": 172
+        },
+        {
+          "body": "It makes a paper trail to prove to higher ups that you really are working",
+          "score": 120
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Podziękowanie za szybki turnaround brzmi jak paliwo dla całej tej pętli samozachwytu.",
+          "originalBody": "“Thanks for the quick turnaround on this”",
+          "explanation": "To najlepsza puenta do mema, bo pokazuje moment, w którym absurd zamyka się idealnie: programista sam tworzy pracę, a chwilę później sam generuje za nią uznanie.",
+          "score": 518
+        },
+        {
+          "id": "comment-2",
+          "summary": "„self-review PR lgtm” zamienia cały proces review w jednoosobowy teatr proceduralny.",
+          "originalBody": "self-review PR \"lgtm\"",
+          "explanation": "Ten skrót działa świetnie, bo kondensuje cały żart do jednego wersu. Każdy, kto siedział w pull requestach, od razu widzi tu karykaturę procesu, który formalnie istnieje, ale realnie nie ma już żadnych zabezpieczeń.",
+          "score": 172
+        },
+        {
+          "id": "comment-3",
+          "summary": "Komentarz o „paper trail” sprowadza mem do korporacyjnego realizmu: chodzi nie o kod, tylko o ślad dla przełożonych.",
+          "originalBody": "It makes a paper trail to prove to higher ups that you really are working",
+          "explanation": "Puenta jest celna, bo pokazuje, że nawet absurdalny obieg ticketów może wyglądać jak rozsądny proces, jeśli zostawia po sobie odpowiednią dokumentację. W tym właśnie siedzi cały korpo-humor tego posta.",
+          "score": 120
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Zweryfikowano w Safari mem i komentarze; zostawiono trzy najcelniejsze żarty o jednoosobowym procesie ticket -> review -> pochwała.",
+      "radarKey": "https://www.reddit.com/r/programmerhumor/comments/1um5021/positivefeedbackloop",
+      "radarFirstSeenAt": "2026-07-03T14:08:50.271163+00:00",
+      "radarLastSeenAt": "2026-07-03T14:08:50.271163+00:00"
+    },
+    {
+      "id": "https-www-reddit-com-r-mildlyinfuriating-comment-1d0e1dfd52",
+      "title": "No, I did not consent to this",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://www.reddit.com/r/mildlyinfuriating/comments/1um3anj/no_i_did_not_consent_to_this/",
+      "imageURL": "https://i.redd.it/l3euuyigqxah1.jpeg",
+      "score": 3304,
+      "comments": 467,
+      "tags": [
+        "trend"
+      ],
+      "categoryLabel": "mildlyinfuriating",
+      "postText": "I was reading my medical notes when I stumbled across this. I was not informed of the usage of artificial intelligence in my report, nor did I verbally consent to it.",
+      "redditCreatedAt": "2026-07-03T03:36:26.226000+00:00",
+      "whyFunny": "To działa bardziej jako absurd dnia niż klasyczny żart: zwykła notatka medyczna nagle brzmi jak autoparodia wdrożenia AI, a komentarze pokazują, że śmiech miesza się tu z bardzo realnym niepokojem o zgodę, prywatność i jakość dokumentacji.",
+      "rawCommentSnippets": [
+        {
+          "body": "My doctor asked me directly if i was okay with it. I said no and its reflected in my chart. You should be able to opt out of that",
+          "score": 1345
+        },
+        {
+          "body": "This is literally one of the few good use cases for AI. It's not replacing a human it's just a tool being an aid so the Doctor can actively listen rather than focus on recording what is being said. For some people that can make a big difference.",
+          "score": 109
+        },
+        {
+          "body": "And then your private medical data is on a random server farm that can be hacked.",
+          "score": 69
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Najmocniejszy komentarz mówi wprost, że lekarz zapytał o zgodę i odnotował odmowę, więc sensowna procedura już istnieje.",
+          "originalBody": "My doctor asked me directly if i was okay with it. I said no and its reflected in my chart. You should be able to opt out of that",
+          "explanation": "To ciekawa kontra do posta, bo zamiast samego oburzenia pokazuje prosty standard: można używać narzędzia, ale trzeba jasno zapytać i zostawić pacjentowi realny wybór.",
+          "score": 1345
+        },
+        {
+          "id": "comment-2",
+          "summary": "Druga strona sporu broni AI-scribe jako jednego z niewielu sensownych zastosowań, które pozwala lekarzowi bardziej słuchać niż stukać w klawiaturę.",
+          "originalBody": "This is literally one of the few good use cases for AI. It's not replacing a human it's just a tool being an aid so the Doctor can actively listen rather than focus on recording what is being said. For some people that can make a big difference.",
+          "explanation": "Ten głos jest potrzebny, bo nie psuje kontrowersji, tylko ją wyostrza. Problemem nie musi być samo narzędzie, tylko brak zgody i niejasna odpowiedzialność za to, co ląduje w dokumentacji.",
+          "score": 109
+        },
+        {
+          "id": "comment-3",
+          "summary": "Krótka puenta o prywatnych danych na przypadkowej serwerowni zamienia irytację w dużo większy lęk o bezpieczeństwo.",
+          "originalBody": "And then your private medical data is on a random server farm that can be hacked.",
+          "explanation": "To trafia, bo jednym zdaniem przesuwa rozmowę z „mildly infuriating” w stronę realnego ryzyka. Dzięki temu cały wątek jest jednocześnie śmiesznie absurdalny i wyraźnie niepokojący.",
+          "score": 69
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Zweryfikowano w Safari post i komentarze; zostawiono bezpieczne głosy pokazujące spór o zgodę, użyteczność i prywatność.",
+      "radarKey": "https://www.reddit.com/r/mildlyinfuriating/comments/1um3anj/no_i_did_not_consent_to_this",
+      "radarFirstSeenAt": "2026-07-03T14:08:50.271163+00:00",
+      "radarLastSeenAt": "2026-07-03T14:08:50.271163+00:00"
+    }
+  ],
+  "source": "Codex Safari Reddit radar"
+}

@@ -24,6 +24,24 @@ def load_generator():
     return module
 
 
+def load_exporter():
+    module_path = (
+        Path(__file__).resolve().parents[1]
+        / "scripts"
+        / "export_public_feed.py"
+    )
+    spec = importlib.util.spec_from_file_location("export_public_feed", module_path)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    scripts_dir = str(module_path.parent)
+    sys.path.insert(0, scripts_dir)
+    try:
+        spec.loader.exec_module(module)
+    finally:
+        sys.path.remove(scripts_dir)
+    return module
+
+
 class GeneratePavbotManifestTest(unittest.TestCase):
     def setUp(self) -> None:
         self.repo_root = Path(__file__).resolve().parents[1]
@@ -57,6 +75,8 @@ class GeneratePavbotManifestTest(unittest.TestCase):
         self.assertEqual(tech_research["topic"], "tech-news")
         self.assertEqual(tech_research["topicPath"], "research/tech-news")
         self.assertEqual(tech_research["kind"], "research")
+        self.assertEqual(tech_research["sourcePath"], "")
+        self.assertEqual(tech_research["sourceUrl"], "")
 
         jobs_research = next(
             item
@@ -78,6 +98,7 @@ class GeneratePavbotManifestTest(unittest.TestCase):
             tech_evening["output"],
             "research/tech-news/runs/YYYY-MM-DD-HHMM.md",
         )
+        self.assertNotIn("outputUrl", tech_evening)
 
         polska_evening = next(
             item
@@ -112,7 +133,7 @@ class GeneratePavbotManifestTest(unittest.TestCase):
             "research/reddit-radar/runs/YYYY-MM-DD-HHMM-reddit-radar.md",
         )
 
-    def test_manifest_collects_topics_and_all_artifact_types(self) -> None:
+    def test_manifest_collects_topics_and_public_artifact_types(self) -> None:
         generator = load_generator()
 
         manifest = generator.build_manifest(
@@ -124,6 +145,9 @@ class GeneratePavbotManifestTest(unittest.TestCase):
         self.assertIn("tech-news", topic_slugs)
         self.assertIn("polska-swiat", topic_slugs)
         self.assertIn("llm-ai-jobs-wroclaw", topic_slugs)
+        tech_topic = next(topic for topic in manifest["topics"] if topic["slug"] == "tech-news")
+        self.assertEqual(tech_topic["topicFilePath"], "")
+        self.assertEqual(tech_topic["url"], "")
 
         artifacts = manifest["artifacts"]
         by_path = {artifact["path"]: artifact for artifact in artifacts}
@@ -139,28 +163,95 @@ class GeneratePavbotManifestTest(unittest.TestCase):
             by_path["research/tech-news/podcasts/2026-06-22/podcast.mp3"]["type"],
             "podcastAudio",
         )
-        self.assertEqual(
-            by_path["research/tech-news/backlog.md"]["type"],
-            "backlog",
+        self.assertNotIn("research/tech-news/backlog.md", by_path)
+        self.assertNotIn("research/tech-news/index.md", by_path)
+        self.assertNotIn("research/tech-news/topic.md", by_path)
+        self.assertNotIn(
+            "research/codex-agent-automation/proposals/2026-06-17-docs-network-access.md",
+            by_path,
         )
-        self.assertEqual(
-            by_path["research/tech-news/index.md"]["type"],
-            "index",
+
+        timed_run = by_path["research/llm-ai-jobs-wroclaw/runs/2026-06-20-2152.md"]
+        self.assertEqual(timed_run["date"], "2026-06-20")
+        self.assertEqual(timed_run["time"], "21:52")
+
+    def test_manifest_can_include_developer_artifacts_when_explicitly_requested(self) -> None:
+        generator = load_generator()
+
+        manifest = generator.build_manifest(
+            self.repo_root,
+            raw_base_url=self.raw_base_url,
+            public_feed=False,
         )
-        self.assertEqual(
-            by_path["research/tech-news/topic.md"]["type"],
-            "topic",
-        )
+
+        by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+        self.assertEqual(by_path["research/tech-news/backlog.md"]["type"], "backlog")
+        self.assertEqual(by_path["research/tech-news/index.md"]["type"], "index")
+        self.assertEqual(by_path["research/tech-news/topic.md"]["type"], "topic")
         self.assertEqual(
             by_path[
                 "research/codex-agent-automation/proposals/2026-06-17-docs-network-access.md"
             ]["type"],
             "proposal",
         )
+        tech_topic = next(topic for topic in manifest["topics"] if topic["slug"] == "tech-news")
+        self.assertEqual(tech_topic["topicFilePath"], "research/tech-news/topic.md")
+        self.assertEqual(
+            tech_topic["url"],
+            "https://raw.githubusercontent.com/example/pavbot/main/research/tech-news/topic.md",
+        )
 
-        timed_run = by_path["research/llm-ai-jobs-wroclaw/runs/2026-06-20-2152.md"]
-        self.assertEqual(timed_run["date"], "2026-06-20")
-        self.assertEqual(timed_run["time"], "21:52")
+    def test_public_feed_exporter_copies_only_app_visible_files(self) -> None:
+        exporter = load_exporter()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            repo = root / "repo"
+            output = root / "public-feed"
+            topic_dir = repo / "research" / "tech-news"
+            podcast_dir = topic_dir / "podcasts" / "2026-06-25"
+            (repo / "docs").mkdir(parents=True)
+            (topic_dir / "runs").mkdir(parents=True)
+            (topic_dir / "data").mkdir(parents=True)
+            (topic_dir / "pdfs").mkdir(parents=True)
+            podcast_dir.mkdir(parents=True)
+
+            (repo / "docs" / "how-to-use.md").write_text(
+                """# How To Use Pavbot
+
+The current active automations are:
+
+- Name: `Pavbot Tech Research`
+- ID: `pavbot-tech-research`
+- Kind: `research`
+- Topic: `research/tech-news`
+- Cadence: daily
+- Output: `research/tech-news/runs/YYYY-MM-DD.md`
+""",
+                encoding="utf-8",
+            )
+            (topic_dir / "topic.md").write_text("# Topic Contract: tech-news\n", encoding="utf-8")
+            (topic_dir / "backlog.md").write_text("# Backlog\n", encoding="utf-8")
+            (topic_dir / "runs" / "2026-06-25.md").write_text("# Public report\n", encoding="utf-8")
+            (topic_dir / "data" / "2026-06-25-research.json").write_text("{}\n", encoding="utf-8")
+            (topic_dir / "pdfs" / "2026-06-25-tech-news.pdf").write_bytes(b"%PDF")
+            (podcast_dir / "podcast.mp3").write_bytes(b"mp3")
+            (podcast_dir / "script.md").write_text("# Script\n", encoding="utf-8")
+            (podcast_dir / "sources.md").write_text("# Sources\n", encoding="utf-8")
+            (podcast_dir / "draft.md").write_text("# Draft\n", encoding="utf-8")
+
+            manifest, copied = exporter.export_public_feed(repo, output, self.raw_base_url)
+
+            self.assertEqual(copied, len(manifest["artifacts"]))
+            self.assertTrue((output / "public" / "pavbot-manifest.json").is_file())
+            self.assertTrue((output / "research" / "tech-news" / "runs" / "2026-06-25.md").is_file())
+            self.assertTrue((output / "research" / "tech-news" / "podcasts" / "2026-06-25" / "script.md").is_file())
+            self.assertFalse((output / "docs" / "how-to-use.md").exists())
+            self.assertFalse((output / "research" / "tech-news" / "topic.md").exists())
+            self.assertFalse((output / "research" / "tech-news" / "backlog.md").exists())
+            self.assertFalse((output / "research" / "tech-news" / "podcasts" / "2026-06-25" / "sources.md").exists())
+            self.assertFalse((output / "research" / "tech-news" / "podcasts" / "2026-06-25" / "draft.md").exists())
+            self.assertFalse(any(path.startswith("docs/") for path in (item["path"] for item in manifest["artifacts"])))
 
     def test_manifest_collects_llm_jobs_data_json_as_jobs_data(self) -> None:
         generator = load_generator()

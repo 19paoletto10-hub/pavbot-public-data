@@ -5,6 +5,7 @@
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
 | High | Build reliable source shortlist | Better recurring sources reduce noise and duplicates. | Keep validating Just Join IT, Pracuj.pl, No Fluff Jobs, Sii, Capgemini, Addepto, CDQ, Grid Dynamics, Holisticon, deepsense.ai, GFT, Trans.eu, Tooploox, Deviniti, Rite NRG, UNIVIO, airSlate, DataArt, EPAM, ACAISOFT, T-Mobile, Monterail, ITDS, IN4GE, Axabee, 4soft, ITEAMLY, People Trust, People More, Cyclad, SOFTWARELY, SQUARE ONE, CodiLime, YOUR ITEAMS, cerebre, Netguru, Primotly, Remodevs, Callstack, Harvey Nash, Centra, BigTime, SmartRecruiters, Vazco, XTB, Team Up, PKO BP Finat, Tenarai, Lekta AI and emagine over the next runs. | In progress |
+| Medium | Monitor 3 Jul Sii + SNI + Capgemini wave | Dzisiejsza runda dołożyła dwa nowe first-party role `Sii`, nowy official `Capgemini Solution Architect / Agentic AI`, `Accenture GenAI Architect` oraz trzy board-first remote-Poland leady (`SNI`, `B3`, `MailerLite`), a dodatkowo świeżo wykryta karta `Holisticon` okazała się już wygaszona. | Re-check next run whether `Sii AI Architect`, `Sii Generative AI & Data Engineer`, `Capgemini Solution Architect / Agentic AI`, `Accenture GenAI Architect`, `SNI GenAI Platform Engineer`, `SNI GenAI Engineer (GCP)`, `B3 AI Engineer` and `MailerLite ML Engineer` stay public, and whether the expired `Holisticon` card disappears or reappears on a canonical page. | Open |
 | Medium | Monitor 2 Jul Wrocław/remote board burst | Dzisiejszy sweep dołożył nowy klaster wokół `Capgemini`, `Holisticon`, `SQUAD`, `Link Group`, `SCALO`, `Upvanta` i `DCV`, który może szybko zmienić tytuły lub źródła kanoniczne. | Re-check whether the new Wrocław/remote cards stay public, whether canonical employer pages appear for `Holisticon Connect`, `Link Group`, `SCALO`, `Upvanta` and `DCV`, and whether `Capgemini` title/salary aliases keep drifting. | Open |
 | Medium | Monitor 1 Jul capture sweep | Bieżąca runda dodała kilka mocnych, ale wcześniej niezaindeksowanych ról z `27-30 Jun` wokół agentic delivery, RAG i AI platform work. | Re-check whether `Capgemini Senior Agentic AI Developer`, `EPAM Senior .NET AI Engineer`, `RITS Senior AI Engineer`, `Montrose Applied AI Engineer`, `Espeo AI Solutions Engineer`, `Awareson Senior Data & AI Engineer`, `Awareson MLOps / LLMOps Engineer` and `Procter & Gamble Senior AI Engineer (Agentic AI)` remain public and whether first-party pages replace board-first URLs. | Open |
 | Medium | Monitor 30 Jun Wrocław/remote board drift | The current run added a strong mix of AI QA, Copilot Studio, MLOps and AI platform roles, plus an EPAM Wrocław mirror on top of the already tracked remote family. | Re-check next run whether `EPAM Senior AI QA Engineer`, `Team Up`, `Capgemini`, `PKO BP Finat`, `XTB`, `Tenarai`, `Lekta AI` and `emagine` stay public, whether the EPAM cloud-native Wrocław mirror remains aligned with the remote family, and whether board-only salary or location wording drifts. | Open |
@@ -36,6 +37,11 @@
 
 ## Review Notes
 
+- 2026-07-03: nowa popołudniowa fala przesunęła temat z boardowego klastru
+  `2 Jul` na bardziej wiarygodne połączenie `Sii` / `Capgemini` / `Accenture`
+  plus dwa nowe board-first tory `SNI`; jednocześnie świeżo wykryty
+  `Holisticon Connect Senior ML Platform Reliability & Infrastructure Engineer`
+  był już oznaczony jako `Offer expired`.
 - 2026-07-01: nowa nocna runda domknęła niezaindeksowany batch `Capgemini`,
   `EPAM .NET AI`, `RITS`, `Montrose`, `Espeo`, `Awareson` i `P&G`; to ważne,
   bo część tych kart była już publiczna w dniach `27-30 Jun`, ale dopiero teraz
