@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "topic": "aktualne-wydarzenia-mobile",
+  "runDate": "2026-07-04",
+  "runTime": "19:34",
+  "status": "Material update",
+  "headline": "Wydanie dnia: Ogólne i najważniejsze sygnały",
+  "leadParagraphs": [
+    "Wieczór 4 lipca jest materialnie inny od poranka, bo dwa krajowe wątki dostały już nie tylko sygnał, ale i wykonanie. Na Bobrze doszedł formalny zakaz korzystania z wody oraz monitoring WIOŚ i DUW, a Kleczew przeszedł z etapu zapowiedzi do gotowego komunikatu po wizycie premiera z konkretną skalą mocy, liczbą paneli i funkcją bezpieczeństwa energetycznego.",
+    "Politycznie dołożył się czytelniejszy język o stałej obecności wojsk USA w Polsce. Kancelaria Prezydenta mówi już publicznie, że taka obecność na wschodniej flance jest potrzebna, a w tle Ankara przechodzi w tryb realnej operacji bezpieczeństwa z forum przemysłu obronnego i twardym zabezpieczeniem szczytu.",
+    "Najważniejsza korekta wobec poranka dotyczy także świata. OCHA ma już nowy pełny Humanitarian Situation Report z 3 lipca, więc wątek Gazy i Zachodniego Brzegu przestaje opierać się wyłącznie na starszym raporcie z 26 czerwca i samym ostrzeżeniu z 1 lipca. Technologicznie lipiec jeszcze mocniej ustawia się pod obowiązki transparentności AI, pomostowe zasady CSAM online i zamknięty już nabór NATO DIANA."
+  ],
+  "sections": [
+    {
+      "id": "ogolne",
+      "title": "Ogólne",
+      "summary": "Dzień przesuwa się z samych ostrzeżeń do twardego trybu wykonania, w którym państwa nie tylko alarmują, ale wprowadzają zakazy, zabezpieczenia i raporty operacyjne.",
+      "articles": [
+        {
+          "id": "ogolne-1-bobr-przechodzi-z-alertu-do-formalnego-zakazu",
+          "section": "Ogólne",
+          "title": "Bóbr przechodzi z alertu do formalnego zakazu",
+          "lead": "Dolny Śląsk nie jest już na etapie samego SMS-a od RCB, bo weszło rozporządzenie wojewody i publiczny monitoring jakości wody.",
+          "facts": [
+            "Dolnośląski Urząd Wojewódzki wprowadził 4 lipca zakaz korzystania z wód Bobru od Zapory Pilchowickiej do zbiornika Rakowice.",
+            "Zakaz obejmuje kąpiele, pojenie zwierząt, połów ryb, wykorzystanie gospodarcze i używanie jednostek pływających.",
+            "WIOŚ potwierdza pobranie sześciu próbek wody na monitorowanym odcinku."
+          ],
+          "analysis": "To jest ważna zmiana jakościowa względem poranka, bo administracja przeszła z ostrzegania do egzekwowalnego reżimu ograniczeń i zbierania danych laboratoryjnych.",
+          "whyItMatters": "Lokalny incydent wodny szybko może przejść z tematu środowiskowego do sprawy zdrowia publicznego, samorządu i odpowiedzialności instytucji.",
+          "sources": [
+            {
+              "title": "Dolnośląski Urząd Wojewódzki",
+              "url": "https://www.gov.pl/web/dolnoslaski-uw/rozporzadzenie-nr-18-wojewody-dolnoslaskiego-z-dnia-4-lipca-2026-r-w-sprawie-wprowadzenia-zakazu-korzystania-z-wody-rzeki-bobr-na-terenie-wojewodztwa-dolnoslaskiego"
+            },
+            {
+              "title": "WIOŚ",
+              "url": "https://www.wroclaw.wios.gov.pl/sytuacja-na-rzece-bobr-aktualizacja-na-dzien-4-lipca/"
+            }
+          ],
+          "tags": [
+            "Ogólne",
+            "RCB"
+          ],
+          "ttsText": "Bóbr przechodzi z alertu do formalnego zakazu. Dolny Śląsk nie jest już na etapie samego SMS-a od RCB, bo weszło rozporządzenie wojewody i publiczny monitoring jakości wody.. Dolnośląski Urząd Wojewódzki wprowadził 4 lipca zakaz korzystania z wód Bobru od Zapory Pilchowickiej do zbiornika Rakowice.. Zakaz obejmuje kąpiele, pojenie zwierząt, połów ryb, wykorzystanie gospodarcze i używanie jednostek pływających.. WIOŚ potwierdza pobranie sześciu próbek wody na monitorowanym odcinku.. To jest ważna zmiana jakościowa względem poranka, bo administracja przeszła z ostrzegania do egzekwowalnego reżimu ograniczeń i zbierania danych laboratoryjnych.. Lokalny incydent wodny szybko może przejść z tematu środowiskowego do sprawy zdrowia publicznego, samorządu i odpowiedzialności instytucji.",
+          "priority": "High"
+        },
+        {
+          "id": "ogolne-2-ankara-wchodzi-w-tryb-realnej-operacji-bezpiecze",
+          "section": "Ogólne",
+          "title": "Ankara wchodzi w tryb realnej operacji bezpieczeństwa",
+          "lead": "Szczyt NATO w Ankarze przestaje być abstrakcyjną datą, bo gospodarze uruchamiają pełną logistykę i twarde zabezpieczenia.",
+          "facts": [
+            "NATO potwierdza lokalizację szczytu 7-8 lipca w kompleksie Beştepe oraz forum przemysłu obronnego 7 lipca.",
+            "AP opisuje tysiące policjantów, zakaz zgromadzeń i nowy obiekt lotniczy dla delegacji."
+          ],
+          "analysis": "Z perspektywy briefu to znak, że Ankara wchodzi w fazę, w której każde publiczne przesunięcie logistyczne może sygnalizować wagę polityczną spotkania.",
+          "whyItMatters": "To ustawia oczekiwania wobec szczytu NATO jako wydarzenia wykonawczego, a nie tylko ceremonialnego.",
+          "sources": [
+            {
+              "title": "NATO",
+              "url": "https://www.nato.int/en/news-and-events/events/media-advisories/2026/07/03/information-for-accredited-media"
+            },
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/turkey-nato-summit-tight-security-c2423abfaa605dbfb8228972047c1dbf"
+            }
+          ],
+          "tags": [
+            "Ogólne",
+            "NATO"
+          ],
+          "ttsText": "Ankara wchodzi w tryb realnej operacji bezpieczeństwa. Szczyt NATO w Ankarze przestaje być abstrakcyjną datą, bo gospodarze uruchamiają pełną logistykę i twarde zabezpieczenia.. NATO potwierdza lokalizację szczytu 7-8 lipca w kompleksie Beştepe oraz forum przemysłu obronnego 7 lipca.. AP opisuje tysiące policjantów, zakaz zgromadzeń i nowy obiekt lotniczy dla delegacji.. Z perspektywy briefu to znak, że Ankara wchodzi w fazę, w której każde publiczne przesunięcie logistyczne może sygnalizować wagę polityczną spotkania.. To ustawia oczekiwania wobec szczytu NATO jako wydarzenia wykonawczego, a nie tylko ceremonialnego.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polska",
+      "title": "Polska",
+      "summary": "Polska oś dnia jest praktyczna i infrastrukturalna: woda, energia i sprawność instytucji są dziś ważniejsze niż sam spór polityczny.",
+      "articles": [
+        {
+          "id": "polska-1-wojewoda-i-wios-uszczelniaja-odpowiedz-na-sytuac",
+          "section": "Polska",
+          "title": "Wojewoda i WIOŚ uszczelniają odpowiedź na sytuację na Bobrze",
+          "lead": "Wieczorem Bóbr jest już nie tylko ostrzeżeniem, ale pełnym pakietem zakazu i terenowego nadzoru.",
+          "facts": [
+            "Komunikat DUW z 4 lipca publikuje wyniki pomiarów terenowych z 4 lipca.",
+            "WIOŚ informuje, że nie stwierdzono śniętych ryb podczas wizji terenowej tego dnia.",
+            "WIOŚ nadal opisuje wizualne zanieczyszczenie od Zapory Pilchowickiej do ujścia do Jeziora Rakowickiego I, przy klarownej wodzie we Włodzicach Wielkich."
+          ],
+          "analysis": "Instytucje zaczynają budować publiczną ścieżkę dowodową, ale nadal nie ma oficjalnie podanej przyczyny incydentu ani terminu końca ograniczeń.",
+          "whyItMatters": "To jest dokładnie ten moment, w którym lokalny problem może albo szybko wygasnąć, albo przerodzić się w dłuższy kryzys środowiskowy.",
+          "sources": [
+            {
+              "title": "Komunikat DUW z 4 lipca",
+              "url": "https://www.gov.pl/web/dolnoslaski-uw/komunikat-dotyczacy-sytuacji-na-rzece-bobr-z-dn-4072026"
+            },
+            {
+              "title": "WIOŚ",
+              "url": "https://www.wroclaw.wios.gov.pl/sytuacja-na-rzece-bobr-aktualizacja-na-dzien-4-lipca/"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Wojewoda i WIOŚ uszczelniają odpowiedź na sytuację na Bobrze. Wieczorem Bóbr jest już nie tylko ostrzeżeniem, ale pełnym pakietem zakazu i terenowego nadzoru.. Komunikat DUW z 4 lipca publikuje wyniki pomiarów terenowych z 4 lipca.. WIOŚ informuje, że nie stwierdzono śniętych ryb podczas wizji terenowej tego dnia.. WIOŚ nadal opisuje wizualne zanieczyszczenie od Zapory Pilchowickiej do ujścia do Jeziora Rakowickiego I, przy klarownej wodzie we Włodzicach Wielkich.. Instytucje zaczynają budować publiczną ścieżkę dowodową, ale nadal nie ma oficjalnie podanej przyczyny incydentu ani terminu końca ograniczeń.. To jest dokładnie ten moment, w którym lokalny problem może albo szybko wygasnąć, albo przerodzić się w dłuższy kryzys środowiskowy.",
+          "priority": "Medium"
+        },
+        {
+          "id": "polska-2-kleczew-po-wizycie-premiera-dostaje-twardy-komun",
+          "section": "Polska",
+          "title": "Kleczew po wizycie premiera dostaje twardy komunikat o skali",
+          "lead": "Kleczew wieczorem nie jest już tylko przystankiem premiera, tylko gotową opowieścią rządu o OZE jako infrastrukturze bezpieczeństwa.",
+          "facts": [
+            "KPRM podaje, że instalacja ma prawie 270 megawatów mocy.",
+            "Ten sam komunikat mówi o prawie 500 tysiącach paneli na powierzchni ponad 400 hektarów.",
+            "Instalacja należąca do grupy ORLEN może zasilać nawet 100 tysięcy gospodarstw domowych i działa na terenach pogórniczych."
+          ],
+          "analysis": "Rząd świadomie opowiada dziś OZE nie jako miękką politykę klimatyczną, ale jako odporność systemu i praktyczne wykorzystanie zdegradowanych terenów.",
+          "whyItMatters": "Energia coraz wyraźniej staje się w briefie sprawą bezpieczeństwa publicznego i infrastruktury krytycznej.",
+          "sources": [
+            {
+              "title": "KPRM",
+              "url": "https://www.gov.pl/web/premier/rozwoj-oze-to-inwestycja-w-bezpieczenstwo-polski-i-czysta-energie"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Kleczew po wizycie premiera dostaje twardy komunikat o skali. Kleczew wieczorem nie jest już tylko przystankiem premiera, tylko gotową opowieścią rządu o OZE jako infrastrukturze bezpieczeństwa.. KPRM podaje, że instalacja ma prawie 270 megawatów mocy.. Ten sam komunikat mówi o prawie 500 tysiącach paneli na powierzchni ponad 400 hektarów.. Instalacja należąca do grupy ORLEN może zasilać nawet 100 tysięcy gospodarstw domowych i działa na terenach pogórniczych.. Rząd świadomie opowiada dziś OZE nie jako miękką politykę klimatyczną, ale jako odporność systemu i praktyczne wykorzystanie zdegradowanych terenów.. Energia coraz wyraźniej staje się w briefie sprawą bezpieczeństwa publicznego i infrastruktury krytycznej.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polityka",
+      "title": "Polityka",
+      "summary": "Polityczna warstwa dnia łączy symboliczną relację z USA z coraz bardziej bezpośrednim językiem o amerykańskiej obecności wojskowej w Polsce.",
+      "articles": [
+        {
+          "id": "polityka-1-kprp-zaostrza-publiczny-jezyk-o-stalej-obecnosci",
+          "section": "Polityka",
+          "title": "KPRP zaostrza publiczny język o stałej obecności USA",
+          "lead": "Kancelaria Prezydenta mówi już wprost o potrzebie stałej obecności wojsk amerykańskich na wschodniej flance NATO.",
+          "facts": [
+            "Minister Wojciech Bogucki przekazał 4 lipca, że według słów Prezydenta trzeba zrobić wszystko, by taka obecność była w Polsce.",
+            "Ten sam komunikat opisuje obecność żołnierzy USA obok Wojska Polskiego jako drugi filar bezpieczeństwa.",
+            "W tle przywołano też spotkanie w Juracie z prezydentami Litwy, Łotwy, Estonii i Rumunii jako format ustalania regionalnych priorytetów bezpieczeństwa."
+          ],
+          "analysis": "To nadal nie jest plan z terminem i budżetem, ale poziom publicznej deklaracji jest mocniejszy niż w poprzednich dniach.",
+          "whyItMatters": "Po Ankarze pytanie nie będzie już brzmiało, czy temat żyje, tylko czy państwo pokaże konkrety wykonawcze.",
+          "sources": [
+            {
+              "title": "Minister Wojciech Bogucki",
+              "url": "https://www.prezydent.pl/kancelaria/aktywnosc-ministrow/minister-bogucki-gosciem-w-telewizji-wpolsce24%2C122971"
+            }
+          ],
+          "tags": [
+            "Polityka",
+            "NATO"
+          ],
+          "ttsText": "KPRP zaostrza publiczny język o stałej obecności USA. Kancelaria Prezydenta mówi już wprost o potrzebie stałej obecności wojsk amerykańskich na wschodniej flance NATO.. Minister Wojciech Bogucki przekazał 4 lipca, że według słów Prezydenta trzeba zrobić wszystko, by taka obecność była w Polsce.. Ten sam komunikat opisuje obecność żołnierzy USA obok Wojska Polskiego jako drugi filar bezpieczeństwa.. W tle przywołano też spotkanie w Juracie z prezydentami Litwy, Łotwy, Estonii i Rumunii jako format ustalania regionalnych priorytetów bezpieczeństwa.. To nadal nie jest plan z terminem i budżetem, ale poziom publicznej deklaracji jest mocniejszy niż w poprzednich dniach.. Po Ankarze pytanie nie będzie już brzmiało, czy temat żyje, tylko czy państwo pokaże konkrety wykonawcze.",
+          "priority": "High"
+        },
+        {
+          "id": "polityka-2-relacja-z-usa-dostaje-miekki-ale-czytelny-gest-p",
+          "section": "Polityka",
+          "title": "Relacja z USA dostaje miękki, ale czytelny gest prezydencki",
+          "lead": "W rocznicę amerykańskiej niepodległości Prezydent RP dokłada symboliczny sygnał wzmacniający polityczny ton całego dnia.",
+          "facts": [
+            "Prezydent RP złożył gratulacje Stanom Zjednoczonym z okazji 250 lat niepodległości.",
+            "W tym samym komunikacie relacja polsko-amerykańska została opisana jako filar bezpieczeństwa Europy i NATO."
+          ],
+          "analysis": "Sam gest nie zmienia stanu sił, ale dobrze skleja się z ostrzejszym językiem KPRP o obecności wojskowej i z napięciem przed Ankarą.",
+          "whyItMatters": "W polityce bezpieczeństwa symbole często przygotowują grunt pod późniejsze decyzje i negocjacje.",
+          "sources": [
+            {
+              "title": "Prezydent RP",
+              "url": "https://www.prezydent.pl/aktualnosci/wydarzenia/250-lat-niepodleglosci-stanow-zjednoczonych%2C122942"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Relacja z USA dostaje miękki, ale czytelny gest prezydencki. W rocznicę amerykańskiej niepodległości Prezydent RP dokłada symboliczny sygnał wzmacniający polityczny ton całego dnia.. Prezydent RP złożył gratulacje Stanom Zjednoczonym z okazji 250 lat niepodległości.. W tym samym komunikacie relacja polsko-amerykańska została opisana jako filar bezpieczeństwa Europy i NATO.. Sam gest nie zmienia stanu sił, ale dobrze skleja się z ostrzejszym językiem KPRP o obecności wojskowej i z napięciem przed Ankarą.. W polityce bezpieczeństwa symbole często przygotowują grunt pod późniejsze decyzje i negocjacje.",
+          "priority": "Medium"
+        }
+      ]
+    },
+    {
+      "id": "sprawy-zagraniczne",
+      "title": "Sprawy zagraniczne",
+      "summary": "Światowa warstwa briefu to dziś mieszanka zarządzania wojną, dyplomacją handlową i nowego humanitarnego raportowania zamiast samej luki informacyjnej.",
+      "articles": [
+        {
+          "id": "sprawy-zagraniczne-1-ocha-zamyka-poranna-luke-nowym-raportem-humanita",
+          "section": "Sprawy zagraniczne",
+          "title": "OCHA zamyka poranną lukę nowym raportem humanitarnym",
+          "lead": "Wieczorem OCHA ma już nowy pełny Humanitarian Situation Report z 3 lipca, więc wątek humanitarny nie opiera się wyłącznie na starszym materiale z 26 czerwca.",
+          "facts": [
+            "OCHA Updates pokazuje nowy Humanitarian Situation Report | 3 July 2026.",
+            "Ta sama strona pokazuje też Reported impact snapshot | Gaza Strip (1 July 2026).",
+            "Według publicznego opisu nowego raportu ponad 2300 Palestyńczyków zostało przesiedlonych na Zachodnim Brzegu w 2026 roku z powodu ataków osadników i ograniczeń dostępu."
+          ],
+          "analysis": "Najważniejsze nie jest dziś nawet pojedyncze zdanie z raportu, tylko fakt, że źródło znów pracuje pełnym cyklem i pozwala bezpieczniej aktualizować brief.",
+          "whyItMatters": "W sprawach wojny i humanitaryzmu świeżość oraz jakość źródeł są równie ważne jak same liczby.",
+          "sources": [
+            {
+              "title": "OCHA Updates",
+              "url": "https://www.ochaopt.org/updates"
+            },
+            {
+              "title": "Humanitarian Situation Report | 3 July 2026",
+              "url": "https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026"
+            },
+            {
+              "title": "Reported impact snapshot | Gaza Strip (1 July 2026)",
+              "url": "https://www.ochaopt.org/content/reported-impact-snapshot-gaza-strip-1-july-2026"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "OCHA zamyka poranną lukę nowym raportem humanitarnym. Wieczorem OCHA ma już nowy pełny Humanitarian Situation Report z 3 lipca, więc wątek humanitarny nie opiera się wyłącznie na starszym materiale z 26 czerwca.. OCHA Updates pokazuje nowy Humanitarian Situation Report | 3 July 2026.. Ta sama strona pokazuje też Reported impact snapshot | Gaza Strip (1 July 2026).. Według publicznego opisu nowego raportu ponad 2300 Palestyńczyków zostało przesiedlonych na Zachodnim Brzegu w 2026 roku z powodu ataków osadników i ograniczeń dostępu.. Najważniejsze nie jest dziś nawet pojedyncze zdanie z raportu, tylko fakt, że źródło znów pracuje pełnym cyklem i pozwala bezpieczniej aktualizować brief.. W sprawach wojny i humanitaryzmu świeżość oraz jakość źródeł są równie ważne jak same liczby.",
+          "priority": "Medium"
+        },
+        {
+          "id": "sprawy-zagraniczne-2-iran-i-indo-pacyfik-pokazuja-dwa-rozne-sposoby-r",
+          "section": "Sprawy zagraniczne",
+          "title": "Iran i Indo-Pacyfik pokazują dwa różne sposoby reakcji na niestabilny świat",
+          "lead": "AP równolegle pokazuje rytuał państwowy po śmierci Chameneiego oraz chłodną dyplomację gospodarczą Kanady i Filipin.",
+          "facts": [
+            "AP o Iranie informuje o rozpoczęciu wielodniowego pogrzebu ajatollaha Alego Chameneiego.",
+            "Ten sam opis wskazuje, że irański rząd spodziewa się milionów ludzi na ulicach Teheranu w kolejnych dniach.",
+            "AP o Kanadzie i Filipinach podaje, że oba państwa chcą pogłębić handel, energię, współpracę obronną i dążyć do umowy o wolnym handlu."
+          ],
+          "analysis": "Jedna historia jest o legitymizacji po wojnie, druga o dywersyfikacji ryzyka; obie pokazują, że świat zarządza dziś niestabilnością bardzo różnymi narzędziami.",
+          "whyItMatters": "To daje lepszy kontekst dla polskiego briefu niż sama lista konfliktów i kryzysów.",
+          "sources": [
+            {
+              "title": "AP o Iranie",
+              "url": "https://apnews.com/article/khamenei-funeral-supreme-leader-iran-us-war-july-4-2026-f7168b934d457bdb8b8a2da855d1d03a"
+            },
+            {
+              "title": "AP o Kanadzie i Filipinach",
+              "url": "https://apnews.com/article/canada-philippines-marcos-carney-free-trade-a4226936fcaa3f2cd53a29ed53e37602"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Iran i Indo-Pacyfik pokazują dwa różne sposoby reakcji na niestabilny świat. AP równolegle pokazuje rytuał państwowy po śmierci Chameneiego oraz chłodną dyplomację gospodarczą Kanady i Filipin.. AP o Iranie informuje o rozpoczęciu wielodniowego pogrzebu ajatollaha Alego Chameneiego.. Ten sam opis wskazuje, że irański rząd spodziewa się milionów ludzi na ulicach Teheranu w kolejnych dniach.. AP o Kanadzie i Filipinach podaje, że oba państwa chcą pogłębić handel, energię, współpracę obronną i dążyć do umowy o wolnym handlu.. Jedna historia jest o legitymizacji po wojnie, druga o dywersyfikacji ryzyka; obie pokazują, że świat zarządza dziś niestabilnością bardzo różnymi narzędziami.. To daje lepszy kontekst dla polskiego briefu niż sama lista konfliktów i kryzysów.",
+          "priority": "Medium"
+        }
+      ]
+    },
+    {
+      "id": "technologia",
+      "title": "Technologia",
+      "summary": "Technologia jest dziś w trybie wdrożeniowym: regulacje AI, bezpieczeństwo platform i obronna innowacja mają konkretne daty, nie tylko hasła.",
+      "articles": [
+        {
+          "id": "technologia-1-komisja-domyka-lipcowe-odliczanie-do-transparent",
+          "section": "Technologia",
+          "title": "Komisja domyka lipcowe odliczanie do transparentności AI",
+          "lead": "Komisja Europejska ustawia lipiec jako miesiąc podpisów i publicznej listy sygnatariuszy przed wejściem obowiązków AI Act.",
+          "facts": [
+            "AI Office zapowiada, że sygnatariusze kodeksu transparentności treści AI będą publicznie ogłoszeni w lipcu 2026.",
+            "Kodeks transparentności AI opisuje znakowanie i wykrywanie treści AI oraz etykietowanie deepfake'ów.",
+            "Obowiązki transparentności z art. 50 AI Act mają zacząć obowiązywać 2 sierpnia 2026."
+          ],
+          "analysis": "To nie jest już dyskusja o przyszłej regulacji, tylko praktyczne przygotowanie rynku do obowiązków, które wchodzą za mniej niż miesiąc.",
+          "whyItMatters": "Temat AI wchodzi z poziomu debaty technologicznej na poziom compliance i wiarygodności informacji publicznej.",
+          "sources": [
+            {
+              "title": "AI Office",
+              "url": "https://digital-strategy.ec.europa.eu/en/library/how-sign-code-practice-transparency-ai-generated-content"
+            },
+            {
+              "title": "Kodeks transparentności AI",
+              "url": "https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Komisja domyka lipcowe odliczanie do transparentności AI. Komisja Europejska ustawia lipiec jako miesiąc podpisów i publicznej listy sygnatariuszy przed wejściem obowiązków AI Act.. AI Office zapowiada, że sygnatariusze kodeksu transparentności treści AI będą publicznie ogłoszeni w lipcu 2026.. Kodeks transparentności AI opisuje znakowanie i wykrywanie treści AI oraz etykietowanie deepfake'ów.. Obowiązki transparentności z art. 50 AI Act mają zacząć obowiązywać 2 sierpnia 2026.. To nie jest już dyskusja o przyszłej regulacji, tylko praktyczne przygotowanie rynku do obowiązków, które wchodzą za mniej niż miesiąc.. Temat AI wchodzi z poziomu debaty technologicznej na poziom compliance i wiarygodności informacji publicznej.",
+          "priority": "Medium"
+        },
+        {
+          "id": "technologia-2-ue-i-nato-ustawiaja-lipiec-pod-bezpieczenstwo-cy",
+          "section": "Technologia",
+          "title": "UE i NATO ustawiają lipiec pod bezpieczeństwo cyfrowe i obronne",
+          "lead": "Europa i NATO równolegle dopinają pomostowe zasady dla walki z CSAM online oraz przechodzą z naboru DIANA do etapu oceny.",
+          "facts": [
+            "Rada UE chce przywrócić środek tymczasowy dla wykrywania i zgłaszania materiałów CSAM online do 3 kwietnia 2028.",
+            "Ten sam komunikat wskazuje, że poprzedni środek wygasł 3 kwietnia 2026, więc celem jest uniknięcie luki prawnej.",
+            "MON przypomina, że nabór do NATO DIANA 2027 już się zamknął, a lipiec i sierpień należą do etapów oceny projektów."
+          ],
+          "analysis": "Wspólny mianownik jest prosty: bezpieczeństwo cyfrowe i obronna technologia są dziś opisywane tabelą terminów, nie narracją o przyszłości.",
+          "whyItMatters": "To pokazuje, że technologia w briefie jest częścią infrastruktury bezpieczeństwa państw i sojuszy.",
+          "sources": [
+            {
+              "title": "Rada UE",
+              "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/07/02/council-moves-to-reinstate-interim-measure-to-combat-child-sexual-abuse-online/"
+            },
+            {
+              "title": "MON",
+              "url": "https://www.gov.pl/web/obrona-narodowa/rusza-nabor-do-programu-akceleracyjnego-nato-diana-2027"
+            }
+          ],
+          "tags": [
+            "Technologia",
+            "NATO",
+            "UE",
+            "Bezpieczeństwo"
+          ],
+          "ttsText": "UE i NATO ustawiają lipiec pod bezpieczeństwo cyfrowe i obronne. Europa i NATO równolegle dopinają pomostowe zasady dla walki z CSAM online oraz przechodzą z naboru DIANA do etapu oceny.. Rada UE chce przywrócić środek tymczasowy dla wykrywania i zgłaszania materiałów CSAM online do 3 kwietnia 2028.. Ten sam komunikat wskazuje, że poprzedni środek wygasł 3 kwietnia 2026, więc celem jest uniknięcie luki prawnej.. MON przypomina, że nabór do NATO DIANA 2027 już się zamknął, a lipiec i sierpień należą do etapów oceny projektów.. Wspólny mianownik jest prosty: bezpieczeństwo cyfrowe i obronna technologia są dziś opisywane tabelą terminów, nie narracją o przyszłości.. To pokazuje, że technologia w briefie jest częścią infrastruktury bezpieczeństwa państw i sojuszy.",
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "RCB - Alert RCB: możliwe skażenie rzeki Bóbr",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb--mozliwe-skazenie-rzeki-bobr-wzdluz-gminy-wlen-i-lwowek-sl-0407"
+    },
+    {
+      "title": "Dolnośląski Urząd Wojewódzki - Rozporządzenie nr 18 Wojewody Dolnośląskiego z dnia 4 lipca 2026 r.",
+      "url": "https://www.gov.pl/web/dolnoslaski-uw/rozporzadzenie-nr-18-wojewody-dolnoslaskiego-z-dnia-4-lipca-2026-r-w-sprawie-wprowadzenia-zakazu-korzystania-z-wody-rzeki-bobr-na-terenie-wojewodztwa-dolnoslaskiego"
+    },
+    {
+      "title": "Dolnośląski Urząd Wojewódzki - Komunikat dotyczący sytuacji na rzece Bóbr z dn. 4.07.2026",
+      "url": "https://www.gov.pl/web/dolnoslaski-uw/komunikat-dotyczacy-sytuacji-na-rzece-bobr-z-dn-4072026"
+    },
+    {
+      "title": "WIOŚ Wrocław - Sytuacja na rzece Bóbr: aktualizacja na dzień 4 lipca",
+      "url": "https://www.wroclaw.wios.gov.pl/sytuacja-na-rzece-bobr-aktualizacja-na-dzien-4-lipca/"
+    },
+    {
+      "title": "KPRM - Rozwój OZE to inwestycja w bezpieczeństwo Polski i czystą energię",
+      "url": "https://www.gov.pl/web/premier/rozwoj-oze-to-inwestycja-w-bezpieczenstwo-polski-i-czysta-energie"
+    },
+    {
+      "title": "Kancelaria Prezydenta RP - Minister Bogucki gościem telewizji wPolsce24",
+      "url": "https://www.prezydent.pl/kancelaria/aktywnosc-ministrow/minister-bogucki-gosciem-w-telewizji-wpolsce24%2C122971"
+    },
+    {
+      "title": "Prezydent RP - 250 lat niepodległości Stanów Zjednoczonych",
+      "url": "https://www.prezydent.pl/aktualnosci/wydarzenia/250-lat-niepodleglosci-stanow-zjednoczonych%2C122942"
+    },
+    {
+      "title": "NATO - Information for accredited media",
+      "url": "https://www.nato.int/en/news-and-events/events/media-advisories/2026/07/03/information-for-accredited-media"
+    },
+    {
+      "title": "AP - Turkey's NATO summit security: Police deployment and public gathering ban",
+      "url": "https://apnews.com/article/turkey-nato-summit-tight-security-c2423abfaa605dbfb8228972047c1dbf"
+    },
+    {
+      "title": "AP - Iran begins dayslong funeral for Ayatollah Ali Khamenei",
+      "url": "https://apnews.com/article/khamenei-funeral-supreme-leader-iran-us-war-july-4-2026-f7168b934d457bdb8b8a2da855d1d03a"
+    },
+    {
+      "title": "AP - Canada and Philippines to strengthen trade and energy security ties",
+      "url": "https://apnews.com/article/canada-philippines-marcos-carney-free-trade-a4226936fcaa3f2cd53a29ed53e37602"
+    },
+    {
+      "title": "OCHA oPt - Updates",
+      "url": "https://www.ochaopt.org/updates"
+    },
+    {
+      "title": "OCHA oPt - Humanitarian Situation Report | 3 July 2026",
+      "url": "https://www.ochaopt.org/content/humanitarian-situation-report-3-july-2026"
+    },
+    {
+      "title": "OCHA oPt - Reported impact snapshot | Gaza Strip (1 July 2026)",
+      "url": "https://www.ochaopt.org/content/reported-impact-snapshot-gaza-strip-1-july-2026"
+    },
+    {
+      "title": "Komisja Europejska - How to sign the Code of Practice on transparency of AI-generated content",
+      "url": "https://digital-strategy.ec.europa.eu/en/library/how-sign-code-practice-transparency-ai-generated-content"
+    },
+    {
+      "title": "Komisja Europejska - Code of Practice on Transparency of AI-Generated Content",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/code-practice-ai-generated-content"
+    },
+    {
+      "title": "Rada UE - Council moves to reinstate interim measure to combat child sexual abuse online",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/07/02/council-moves-to-reinstate-interim-measure-to-combat-child-sexual-abuse-online/"
+    },
+    {
+      "title": "MON - Trwa nabór do programu akceleracyjnego NATO DIANA 2027",
+      "url": "https://www.gov.pl/web/obrona-narodowa/rusza-nabor-do-programu-akceleracyjnego-nato-diana-2027"
+    }
+  ],
+  "audioArtifacts": []
+}
