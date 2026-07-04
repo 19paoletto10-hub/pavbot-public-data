@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-04T01:36:44.219477+00:00",
+  "generatedAt": "2026-07-04T03:29:56.219872+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -35,7 +35,7 @@
       "kind": "research",
       "topic": "llm-ai-jobs-wroclaw",
       "topicPath": "research/llm-ai-jobs-wroclaw",
-      "cadence": "twice daily; repository reports use `YYYY-MM-DD-HHMM` filenames",
+      "cadence": "daily at 17:40 Europe/Warsaw; 03:40 run paused",
       "sourcePath": "",
       "sourceUrl": "",
       "output": "research/llm-ai-jobs-wroclaw/runs/YYYY-MM-DD-HHMM.md"
@@ -94,7 +94,7 @@
       "kind": "automation",
       "topic": "reddit-radar",
       "topicPath": "research/reddit-radar",
-      "cadence": "every 2 hours at :06 Europe/Warsaw",
+      "cadence": "00:06, 06:06, 12:06 and 18:06 Europe/Warsaw",
       "sourcePath": "",
       "sourceUrl": "",
       "output": "research/reddit-radar/runs/YYYY-MM-DD-HHMM-reddit-radar.md"
@@ -138,28 +138,21 @@
   "topics": [
     {
       "slug": "aktualne-wydarzenia-mobile",
-      "title": "Topic Contract: aktualne-wydarzenia-mobile",
+      "title": "Pavbot Aktualne Wydarzenia Mobile",
       "path": "research/aktualne-wydarzenia-mobile",
       "topicFilePath": "",
       "url": ""
     },
     {
-      "slug": "codex-agent-automation",
-      "title": "Topic Contract: codex-agent-automation",
-      "path": "research/codex-agent-automation",
-      "topicFilePath": "",
-      "url": ""
-    },
-    {
       "slug": "llm-ai-jobs-wroclaw",
-      "title": "Topic Contract: llm-ai-jobs-wroclaw",
+      "title": "Pavbot LLM/AI Jobs Wrocław",
       "path": "research/llm-ai-jobs-wroclaw",
       "topicFilePath": "",
       "url": ""
     },
     {
       "slug": "polska-swiat",
-      "title": "Topic Contract: polska-swiat",
+      "title": "Pavbot Polska Świat",
       "path": "research/polska-swiat",
       "topicFilePath": "",
       "url": ""
@@ -173,14 +166,14 @@
     },
     {
       "slug": "reddit-radar",
-      "title": "Topic Contract: reddit-radar",
+      "title": "Pavbot Reddit Radar",
       "path": "research/reddit-radar",
       "topicFilePath": "",
       "url": ""
     },
     {
       "slug": "tech-news",
-      "title": "Topic Contract: tech-news",
+      "title": "Pavbot Tech News",
       "path": "research/tech-news",
       "topicFilePath": "",
       "url": ""
@@ -219,6 +212,29 @@
       "sizeBytes": 8933,
       "date": "2026-07-04",
       "time": "00:08"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-07-04-0525.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Pavbot Puls Dnia News",
+      "path": "research/puls-dnia-news/runs/2026-07-04-0525.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-04-0525.md",
+      "sizeBytes": 5131,
+      "date": "2026-07-04",
+      "time": "05:25"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-04-0525-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-04-0525-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-04-0525-pulse-news.json",
+      "sizeBytes": 23331,
+      "date": "2026-07-04",
+      "time": "05:25",
+      "itemCount": 12
     },
     {
       "id": "research/tech-news/runs/2026-07-03.md",
@@ -7939,16 +7955,6 @@
       "path": "research/polska-swiat/pdfs/2026-06-17-polska-swiat.pdf",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-06-17-polska-swiat.pdf",
       "sizeBytes": 74275,
-      "date": "2026-06-17"
-    },
-    {
-      "id": "research/codex-agent-automation/runs/2026-06-17.md",
-      "type": "run",
-      "topic": "codex-agent-automation",
-      "title": "Daily Research Report: codex-agent-automation",
-      "path": "research/codex-agent-automation/runs/2026-06-17.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/codex-agent-automation/runs/2026-06-17.md",
-      "sizeBytes": 6194,
       "date": "2026-06-17"
     }
   ]
