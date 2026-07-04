@@ -1,0 +1,407 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-06-21",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy cykl przesuwa uwagę z samych modeli na infrastrukturę agentów: Cloudflare usuwa tarcie wdrożeń dla agentów, Google DeepMind publikuje roadmap kontroli agentów, a spór USA-Anthropic pokazuje, że frontier AI jest już tematem eksportu, bezpieczeństwa narodowego i standardów jailbreak. Dodatkowo Microsoft Teams daje mocny wątek prywatności pracy hybrydowej, a AUR/Arch Linux uzupełnia linię supply-chain malware obok wczorajszego GitHub malware."
+  ],
+  "summaryBullets": [
+    "Produkty: Cloudflare: produktowy sygnał AI",
+    "AI: Google DeepMind i Google: nowy sygnał AI",
+    "Cyber: Anthropic i Axios: cyberbezpieczeństwo i ryzyko technologiczne"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-06-21-0-cloudflare-produktowy-sygnal-ai-6d73ab9f47",
+      "section": "Produkty",
+      "title": "Cloudflare: produktowy sygnał AI",
+      "standfirst": "Cloudflare opublikował 19 czerwca \"Temporary Cloudflare Accounts for AI agents\". Agent może uruchomić wrangler deploy --temporary, wdrożyć Workera bez standardowego signup/OAuth/API-token flow, dostać tymczasowe konto i link do przejęcia przez człowieka; nieprzejęte konto wygasa po 60 minutach.",
+      "whatHappened": "Cloudflare opublikował 19 czerwca \"Temporary Cloudflare Accounts for AI agents\". Agent może uruchomić wrangler deploy --temporary, wdrożyć Workera bez standardowego signup/OAuth/API-token flow, dostać tymczasowe konto i link do przejęcia przez człowieka; nieprzejęte konto wygasa po 60 minutach.",
+      "whyItMatters": "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: Cloudflare opublikował 19 czerwca \"Temporary Cloudflare Accounts for AI agents\".",
+      "deeperAnalysis": [
+        "Cloudflare opublikował 19 czerwca \"Temporary Cloudflare Accounts for AI agents\". Agent może uruchomić wrangler deploy --temporary, wdrożyć Workera bez standardowego signup/OAuth/API-token flow, dostać tymczasowe konto i link do przejęcia przez człowieka; nieprzejęte konto wygasa po 60 minutach. Cloudflare opisuje to jako sposób na pętlę write, deploy, verify dla agentów kodujących. Źródło: Cloudflare.",
+        "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: Cloudflare opublikował 19 czerwca \"Temporary Cloudflare Accounts for AI agents\".",
+        "Analiza opiera się na źródłach: Cloudflare.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Cloudflare opublikował 19 czerwca \"Temporary Cloudflare Accounts for AI agents\".",
+        "Dlaczego ważne: produkty pokazują, co użytkownicy realnie zaczną stosować.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Cloudflare",
+          "url": "https://blog.cloudflare.com/temporary-accounts/"
+        }
+      ],
+      "priority": "Low",
+      "tags": [
+        "Produkty",
+        "AI",
+        "Cloudflare"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-21-1-google-deepmind-i-google-nowy-sygnal-ai-32043b41e3",
+      "section": "AI",
+      "title": "Google DeepMind i Google: nowy sygnał AI",
+      "standfirst": "Google DeepMind opublikował 18 czerwca AI Control Roadmap dla agentów. W praktyce firma traktuje zaawansowane agenty jak potencjalne zagrożenia wewnętrzne: łączy alignment z sandboxingiem, kontrolą uprawnień, monitoringiem przez zaufane systemy AI, detekcją, prewencją i reakcją.",
+      "whatHappened": "Google DeepMind opublikował 18 czerwca AI Control Roadmap dla agentów. W praktyce firma traktuje zaawansowane agenty jak potencjalne zagrożenia wewnętrzne: łączy alignment z sandboxingiem, kontrolą uprawnień, monitoringiem przez zaufane systemy AI, detekcją, prewencją i reakcją.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Google DeepMind opublikował 18 czerwca AI Control Roadmap dla agentów.",
+      "deeperAnalysis": [
+        "Google DeepMind opublikował 18 czerwca AI Control Roadmap dla agentów. W praktyce firma traktuje zaawansowane agenty jak potencjalne zagrożenia wewnętrzne: łączy alignment z sandboxingiem, kontrolą uprawnień, monitoringiem przez zaufane systemy AI, detekcją, prewencją i reakcją. DeepMind pisze też, że przeanalizował milion zadań agentów kodujących, aby budować lepsze monitory zachowań. Źródło: Google DeepMind.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Google DeepMind opublikował 18 czerwca AI Control Roadmap dla agentów.",
+        "Analiza opiera się na źródłach: Google DeepMind.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Google DeepMind opublikował 18 czerwca AI Control Roadmap dla agentów.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Google DeepMind",
+          "url": "https://deepmind.google/blog/securing-the-future-of-ai-agents/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-21-2-anthropic-i-axios-cyberbezpieczenstwo-i-ryzyko-technologiczne-565d4a6a06",
+      "section": "Cyber",
+      "title": "Anthropic i Axios: cyberbezpieczeństwo i ryzyko technologiczne",
+      "standfirst": "Wątek Anthropic/Fable/Mythos dalej się rozwija. Anthropic oficjalnie potwierdził 12 czerwca dyrektywę rządu USA blokującą dostęp cudzoziemców do Fable 5 i Mythos 5, przez co firma wyłączyła dostęp wszystkim klientom dla zgodności prawnej.",
+      "whatHappened": "Wątek Anthropic/Fable/Mythos dalej się rozwija. Anthropic oficjalnie potwierdził 12 czerwca dyrektywę rządu USA blokującą dostęp cudzoziemców do Fable 5 i Mythos 5, przez co firma wyłączyła dostęp wszystkim klientom dla zgodności prawnej.",
+      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: Wątek Anthropic/Fable/Mythos dalej się rozwija.",
+      "deeperAnalysis": [
+        "Wątek Anthropic/Fable/Mythos dalej się rozwija. Anthropic oficjalnie potwierdził 12 czerwca dyrektywę rządu USA blokującą dostęp cudzoziemców do Fable 5 i Mythos 5, przez co firma wyłączyła dostęp wszystkim klientom dla zgodności prawnej. Axios podał 19 czerwca, że Trump nie uważa już Anthropic za obecne zagrożenie bezpieczeństwa narodowego, ale nie wykluczył awaryjnych narzędzi typu Defense Production Act, jeśli sytuacja się pogorszy. Źródła: Anthropic, Axios, Bloomberg Law.",
+        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: Wątek Anthropic/Fable/Mythos dalej się rozwija.",
+        "Analiza opiera się na źródłach: Anthropic, Axios.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Wątek Anthropic/Fable/Mythos dalej się rozwija.",
+        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic",
+          "url": "https://www.anthropic.com/news/fable-mythos-access"
+        },
+        {
+          "title": "Axios",
+          "url": "https://www.axios.com/2026/06/19/trump-anthropic-national-security-the-axios-show"
+        },
+        {
+          "title": "Bloomberg Law",
+          "url": "https://news.bloomberglaw.com/health-law-and-business/trump-tells-axios-he-doesnt-see-anthropic-as-us-security-threat"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Cyber"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-21-3-microsoft-opisuje-workplace-check-in-w-microsoft-places-teams-ee853caa4d",
+      "section": "Inne",
+      "title": "Microsoft opisuje Workplace check-in w Microsoft Places/Teams",
+      "standfirst": "Microsoft opisuje Workplace check-in w Microsoft Places/Teams: lokalizacja pracy może być aktualizowana na podstawie firmowego Wi-Fi lub peryferiów biurkowych, funkcja jest domyślnie wyłączona, wymaga konfiguracji organizacji i zgody lokalizacyjnej użytkownika, a Microsoft deklaruje brak historii lokalizacji i brak widoków raportowych dla adminów. Business Insider Polska podbił 20 czerwca lokalny wątek obaw pracowników przed kontrolą obecności w biurze.",
+      "whatHappened": "Microsoft opisuje Workplace check-in w Microsoft Places/Teams: lokalizacja pracy może być aktualizowana na podstawie firmowego Wi-Fi lub peryferiów biurkowych, funkcja jest domyślnie wyłączona, wymaga konfiguracji organizacji i zgody lokalizacyjnej użytkownika, a Microsoft deklaruje brak historii lokalizacji i brak widoków raportowych dla adminów. Business Insider Polska podbił 20 czerwca lokalny wątek obaw pracowników przed kontrolą obecności w biurze.",
+      "whyItMatters": "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: Microsoft opisuje Workplace check-in w Microsoft Places/Teams: lokalizacja pracy może być aktualizowana na podstawie firmowego Wi-Fi lub peryferiów biurkowych, funkcja jest domyślnie wyłączona, wymaga konfiguracji organizacji i zgody lokalizacyjnej użytkownika, a Microsoft deklaruje brak historii lokalizacji i brak widoków raportowych dla adminów.",
+      "deeperAnalysis": [
+        "Microsoft opisuje Workplace check-in w Microsoft Places/Teams: lokalizacja pracy może być aktualizowana na podstawie firmowego Wi-Fi lub peryferiów biurkowych, funkcja jest domyślnie wyłączona, wymaga konfiguracji organizacji i zgody lokalizacyjnej użytkownika, a Microsoft deklaruje brak historii lokalizacji i brak widoków raportowych dla adminów. Business Insider Polska podbił 20 czerwca lokalny wątek obaw pracowników przed kontrolą obecności w biurze. Źródła: Microsoft Learn, Business Insider Polska.",
+        "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: Microsoft opisuje Workplace check-in w Microsoft Places/Teams: lokalizacja pracy może być aktualizowana na podstawie firmowego Wi-Fi lub peryferiów biurkowych, funkcja jest domyślnie wyłączona, wymaga konfiguracji organizacji i zgody lokalizacyjnej użytkownika, a Microsoft deklaruje brak historii lokalizacji i brak widoków raportowych dla adminów.",
+        "Analiza opiera się na źródłach: Microsoft Learn, Business Insider Polska.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek inne przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Microsoft opisuje Workplace check-in w Microsoft Places/Teams: lokalizacja pracy może być aktualizowana na podstawie firmowego Wi-Fi lub peryferiów biurkowych, funkcja jest domyślnie wyłączona, wymaga konfiguracji organizacji i zgody lokalizacyjnej użytkownika, a Microsoft deklaruje brak historii lokalizacji i brak widoków raportowych dla adminów.",
+        "Dlaczego ważne: sygnał może zmienić priorytety technologiczne.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek inne przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Microsoft Learn",
+          "url": "https://learn.microsoft.com/en-us/microsoft-365/places/configure-auto-detect-work-location"
+        },
+        {
+          "title": "Business Insider Polska",
+          "url": "https://businessinsider.com.pl/technologie/nowe-technologie/teams-rozpoznaje-obecnosc-w-biurze-przez-wi-fi-pracownicy-maja-obawy/dzwdryc"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Inne"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-21-4-arch-linux-i-aur-general-cyberbezpieczenstwo-i-ryzyko-technologiczne-fc152a0eae",
+      "section": "Cyber",
+      "title": "Arch Linux i aur-general: cyberbezpieczeństwo i ryzyko technologiczne",
+      "standfirst": "Arch Linux poinformował 12 czerwca o aktywnym incydencie z dużą liczbą złośliwych adopcji i aktualizacji pakietów w Arch User Repository. Lista aur-general pokazuje prace nad resetowaniem złośliwych commitów i blokowaniem kont, a Phoronix relacjonował, że skala mogła dojść do ponad 1,500 pakietów.",
+      "whatHappened": "Arch Linux poinformował 12 czerwca o aktywnym incydencie z dużą liczbą złośliwych adopcji i aktualizacji pakietów w Arch User Repository. Lista aur-general pokazuje prace nad resetowaniem złośliwych commitów i blokowaniem kont, a Phoronix relacjonował, że skala mogła dojść do ponad 1,500 pakietów.",
+      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: Arch Linux poinformował 12 czerwca o aktywnym incydencie z dużą liczbą złośliwych adopcji i aktualizacji pakietów w Arch User Repository.",
+      "deeperAnalysis": [
+        "Arch Linux poinformował 12 czerwca o aktywnym incydencie z dużą liczbą złośliwych adopcji i aktualizacji pakietów w Arch User Repository. Lista aur-general pokazuje prace nad resetowaniem złośliwych commitów i blokowaniem kont, a Phoronix relacjonował, że skala mogła dojść do ponad 1,500 pakietów. Wątek był wysoko na Hacker News 20 czerwca, co wzmacnia znaczenie supply-chain security dla developerów i agentów kodujących. Źródła: Arch Linux, aur-general, Phoronix, Hacker News.",
+        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: Arch Linux poinformował 12 czerwca o aktywnym incydencie z dużą liczbą złośliwych adopcji i aktualizacji pakietów w Arch User Repository.",
+        "Analiza opiera się na źródłach: Arch Linux, aur-general.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Arch Linux poinformował 12 czerwca o aktywnym incydencie z dużą liczbą złośliwych adopcji i aktualizacji pakietów w Arch User Repository.",
+        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Arch Linux",
+          "url": "https://archlinux.org/"
+        },
+        {
+          "title": "aur-general",
+          "url": "https://lists.archlinux.org/archives/list/aur-general%40lists.archlinux.org/thread/FGXPCB3ZVCJIV7FX323SBAX2JHYB7ZS4/"
+        },
+        {
+          "title": "Phoronix",
+          "url": "https://www.phoronix.com/news/Arch-Linux-AUR-More-Than-1500"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/front"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Cyber",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-21-5-product-hunt-regulacyjny-sygnal-technologiczny-8868c1cf60",
+      "section": "Regulacje",
+      "title": "Product Hunt: regulacyjny sygnał technologiczny",
+      "standfirst": "Product Hunt po raz trzeci z rzędu był użyteczny w porannym przebiegu. Strona pokazała m.",
+      "whatHappened": "Product Hunt po raz trzeci z rzędu był użyteczny w porannym przebiegu. Strona pokazała m.",
+      "whyItMatters": "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Product Hunt po raz trzeci z rzędu był użyteczny w porannym przebiegu.",
+      "deeperAnalysis": [
+        "Product Hunt po raz trzeci z rzędu był użyteczny w porannym przebiegu. Strona pokazała m.in. wczorajsze top produkty: Claude Code Artifacts, Zernio WhatsApp API, Firecrawl Research Index, ElevenAgents by ElevenLabs i API to MCP; w tygodniowych trendach widać Bond, Publora, Honen, Browse.sh oraz narzędzia agentowe/MCP. Źródło: Product Hunt.",
+        "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Product Hunt po raz trzeci z rzędu był użyteczny w porannym przebiegu.",
+        "Analiza opiera się na źródłach: Product Hunt.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Product Hunt po raz trzeci z rzędu był użyteczny w porannym przebiegu.",
+        "Dlaczego ważne: regulacje ustawiają ramy ryzyka i compliance.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Regulacje"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-21-6-business-insider-polska-regulacyjny-sygnal-technologiczny-09e82fd409",
+      "section": "Regulacje",
+      "title": "Business Insider Polska: regulacyjny sygnał technologiczny",
+      "standfirst": "Business Insider Polska opisał wdrożenie systemu antykolizyjnego Skody w tramwajach MPK Wrocław. System skanuje otoczenie, wykrywa przeszkody i dobiera hamowanie z uwzględnieniem komfortu pasażerów; Wrocław ma być pierwszym miastem w Polsce z takim rozwiązaniem.",
+      "whatHappened": "Business Insider Polska opisał wdrożenie systemu antykolizyjnego Skody w tramwajach MPK Wrocław. System skanuje otoczenie, wykrywa przeszkody i dobiera hamowanie z uwzględnieniem komfortu pasażerów; Wrocław ma być pierwszym miastem w Polsce z takim rozwiązaniem.",
+      "whyItMatters": "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Business Insider Polska opisał wdrożenie systemu antykolizyjnego Skody w tramwajach MPK Wrocław.",
+      "deeperAnalysis": [
+        "Business Insider Polska opisał wdrożenie systemu antykolizyjnego Skody w tramwajach MPK Wrocław. System skanuje otoczenie, wykrywa przeszkody i dobiera hamowanie z uwzględnieniem komfortu pasażerów; Wrocław ma być pierwszym miastem w Polsce z takim rozwiązaniem. Źródło: Business Insider Polska.",
+        "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Business Insider Polska opisał wdrożenie systemu antykolizyjnego Skody w tramwajach MPK Wrocław.",
+        "Analiza opiera się na źródłach: Business Insider Polska.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Business Insider Polska opisał wdrożenie systemu antykolizyjnego Skody w tramwajach MPK Wrocław.",
+        "Dlaczego ważne: regulacje ustawiają ramy ryzyka i compliance.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Business Insider Polska",
+          "url": "https://businessinsider.com.pl/technologie/tramwaje-we-wroclawiu-maja-sie-nie-zderzac-pomoze-sztuczna-inteligencja/bttjk01"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Regulacje"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-21-7-openai-news-i-anthropic-newsroom-nowy-sygnal-ai-115f7f2cca",
+      "section": "AI",
+      "title": "OpenAI News i Anthropic Newsroom: nowy sygnał AI",
+      "standfirst": "OpenAI News, Anthropic Newsroom, Google Research Blog i Android Developers Blog nie pokazały nowszych pozycji niż te znane z poprzednich przebiegów lub niż materiały z 18-17 czerwca w czasie porannego sprawdzenia 21 czerwca. Źródła: OpenAI News, Anthropic Newsroom, Google Research Blog, Android Developers Blog.",
+      "whatHappened": "OpenAI News, Anthropic Newsroom, Google Research Blog i Android Developers Blog nie pokazały nowszych pozycji niż te znane z poprzednich przebiegów lub niż materiały z 18-17 czerwca w czasie porannego sprawdzenia 21 czerwca. Źródła: OpenAI News, Anthropic Newsroom, Google Research Blog, Android Developers Blog.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI News, Anthropic Newsroom, Google Research Blog i Android Developers Blog nie pokazały nowszych pozycji niż te znane z poprzednich przebiegów lub niż materiały z 18-17 czerwca w czasie porannego sprawdzenia 21 czerwca.",
+      "deeperAnalysis": [
+        "OpenAI News, Anthropic Newsroom, Google Research Blog i Android Developers Blog nie pokazały nowszych pozycji niż te znane z poprzednich przebiegów lub niż materiały z 18-17 czerwca w czasie porannego sprawdzenia 21 czerwca. Źródła: OpenAI News, Anthropic Newsroom, Google Research Blog, Android Developers Blog.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI News, Anthropic Newsroom, Google Research Blog i Android Developers Blog nie pokazały nowszych pozycji niż te znane z poprzednich przebiegów lub niż materiały z 18-17 czerwca w czasie porannego sprawdzenia 21 czerwca.",
+        "Analiza opiera się na źródłach: OpenAI News, Anthropic Newsroom.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI News, Anthropic Newsroom, Google Research Blog i Android Developers Blog nie pokazały nowszych pozycji niż te znane z poprzednich przebiegów lub niż materiały z 18-17 czerwca w czasie porannego sprawdzenia 21 czerwca.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI News",
+          "url": "https://openai.com/news/"
+        },
+        {
+          "title": "Anthropic Newsroom",
+          "url": "https://www.anthropic.com/news"
+        },
+        {
+          "title": "Google Research Blog",
+          "url": "https://research.google/blog/"
+        },
+        {
+          "title": "Android Developers Blog",
+          "url": "https://android-developers.googleblog.com/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "OpenAI"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Cloudflare daje agentom tymczasowe konta do deployu",
+      "rationale": "To praktyczny krok w stronę infrastruktury \"agent-ready\": agent może sam wdrożyć i sprawdzić kod, a człowiek przejmuje zasób dopiero po walidacji.",
+      "sourcesLabel": "Cloudflare; Hacker News"
+    },
+    {
+      "priority": "High",
+      "title": "Google DeepMind traktuje agentów jak insider threat",
+      "rationale": "AI Control Roadmap przesuwa rozmowę z \"czy model jest aligned\" na \"jak ograniczamy uprawnienia, monitorujemy i blokujemy działania agentów\".",
+      "sourcesLabel": "Google DeepMind; Axios"
+    },
+    {
+      "priority": "High",
+      "title": "USA-Anthropic: model jako aktywo eksportowe",
+      "rationale": "Fable/Mythos są przykładem, że frontier AI wchodzi w reżim licencji, bezpieczeństwa narodowego i standardów testowania jailbreaków.",
+      "sourcesLabel": "Anthropic; Axios; Bloomberg Law"
+    },
+    {
+      "priority": "High",
+      "title": "AUR/Arch Linux i GitHub malware: supply chain pod agentów",
+      "rationale": "Po wczorajszym GitHub malware dochodzi AUR: pakiety, repozytoria i wyniki wyszukiwania stają się powierzchnią ataku dla ludzi oraz agentów.",
+      "sourcesLabel": "Arch Linux; aur-general; Phoronix; HN"
+    },
+    {
+      "priority": "Medium",
+      "title": "Teams wykrywa pracę z biura przez Wi-Fi",
+      "rationale": "Funkcja jest opisana jako współpraca, ale polski odbiorca usłyszy w tym realny spór o prywatność, telemetrykę pracy i powrót do biur.",
+      "sourcesLabel": "Microsoft Learn; Business Insider Polska"
+    },
+    {
+      "priority": "Medium",
+      "title": "Product Hunt: agentowe produkty utrzymują tempo",
+      "rationale": "Kolejny dzień pokazuje MCP, agentowe API, agentów do rozmów i narzędzia dla developerów. To dobry segment o tym, co startupy faktycznie wypuszczają.",
+      "sourcesLabel": "Product Hunt"
+    },
+    {
+      "priority": "Medium",
+      "title": "Wrocław testuje AI w tramwajach",
+      "rationale": "Lokalny, zrozumiały przykład AI poza chatbotami: transport publiczny, czujniki, hamowanie i bezpieczeństwo pasażerów.",
+      "sourcesLabel": "Business Insider Polska"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Cloudflare",
+      "url": "https://blog.cloudflare.com/temporary-accounts/"
+    },
+    {
+      "title": "Google DeepMind",
+      "url": "https://deepmind.google/blog/securing-the-future-of-ai-agents/"
+    },
+    {
+      "title": "Anthropic",
+      "url": "https://www.anthropic.com/news/fable-mythos-access"
+    },
+    {
+      "title": "Axios",
+      "url": "https://www.axios.com/2026/06/19/trump-anthropic-national-security-the-axios-show"
+    },
+    {
+      "title": "Bloomberg Law",
+      "url": "https://news.bloomberglaw.com/health-law-and-business/trump-tells-axios-he-doesnt-see-anthropic-as-us-security-threat"
+    },
+    {
+      "title": "Microsoft Learn",
+      "url": "https://learn.microsoft.com/en-us/microsoft-365/places/configure-auto-detect-work-location"
+    },
+    {
+      "title": "Business Insider Polska",
+      "url": "https://businessinsider.com.pl/technologie/nowe-technologie/teams-rozpoznaje-obecnosc-w-biurze-przez-wi-fi-pracownicy-maja-obawy/dzwdryc"
+    },
+    {
+      "title": "Arch Linux",
+      "url": "https://archlinux.org/"
+    },
+    {
+      "title": "aur-general",
+      "url": "https://lists.archlinux.org/archives/list/aur-general%40lists.archlinux.org/thread/FGXPCB3ZVCJIV7FX323SBAX2JHYB7ZS4/"
+    },
+    {
+      "title": "Phoronix",
+      "url": "https://www.phoronix.com/news/Arch-Linux-AUR-More-Than-1500"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/front"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Business Insider Polska",
+      "url": "https://businessinsider.com.pl/technologie/tramwaje-we-wroclawiu-maja-sie-nie-zderzac-pomoze-sztuczna-inteligencja/bttjk01"
+    },
+    {
+      "title": "OpenAI News",
+      "url": "https://openai.com/news/"
+    },
+    {
+      "title": "Anthropic Newsroom",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "title": "Google Research Blog",
+      "url": "https://research.google/blog/"
+    },
+    {
+      "title": "Android Developers Blog",
+      "url": "https://android-developers.googleblog.com/"
+    },
+    {
+      "title": "Axios: Trump admin blocks foreign access to Anthropic's most powerful AI",
+      "url": "https://www.axios.com/2026/06/12/anthropic-trump-mythos-fable-national-security"
+    }
+  ]
+}

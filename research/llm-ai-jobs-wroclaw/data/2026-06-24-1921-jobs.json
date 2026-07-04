@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-24",
+  "runTime": "19:21",
+  "executiveSummary": "Runda z 2026-06-24 19:21 CEST przyniosła materialny update głównie z dwóch źródeł. EPAM dołożył kilka nowych oficjalnych ról remote in Poland obejmujących bezpośrednio LLM-driven solutions, RAG, agent workflows, cloud-native AI i AI-enabled platform engineering. Równolegle ACAISOFT rozszerzył oficjalny hub careers o nowe kanoniczne role Python Engineer with C++ (AI project) oraz Python-Focused Fullstack (+React), obie osadzone wokół ewaluacji, weryfikacji i interfejsów dla systemów agentowych i LLM. Sprawdzone ponownie źródła deepsense.ai, Sii, KYOTU i śledzona rola Capgemini nie pokazały w tej rundzie nowej materialnej zmiany. Największe ryzyko dotyczy nadal ACAISOFT: publiczna taksonomia ról zmienia się między hubem careers a kartami employer-posted, a jednostki wynagrodzeń na oficjalnych stronach bywają wyrenderowane nieczytelnie.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Lead AI Engineer",
+      "company": "EPAM",
+      "location": "Remote in Poland.",
+      "workMode": "Remote",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Lead",
+      "fitSummary": "chatboty, Q&A platforms, agent workflows, prompt strategies,",
+      "whyInteresting": "to najmocniejsza nowa oficjalna rola tej rundy, bo",
+      "uncertainty": "rola jest szeroka i częściowo konsultingowa, więc zakres może",
+      "sourceURLs": [
+        "https://careers.epam.com/en/vacancy/lead-ai-engineer-bltfuun168yb6pyy1lp_en"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 2,
+      "title": "Senior Cloud Native Developer (Python & AI)",
+      "company": "EPAM",
+      "location": "Remote in Poland.",
+      "workMode": "Remote",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "LLM APIs, RAG pipelines, AI agents, Python, microservices,",
+      "whyInteresting": "dobre przecięcie AI platform/infrastructure i",
+      "uncertainty": "część wymagań jest platformowa, więc rola może być mniej",
+      "sourceURLs": [
+        "https://careers.epam.com/en/vacancy/senior-cloud-native-developer-python-ai-bltce99bd427bf423c0_en"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior AI Engineer",
+      "company": "EPAM",
+      "location": "Remote in Poland.",
+      "workMode": "Remote",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "conversational AI agents, fine-tuning, LoRA, wybór FT vs RAG,",
+      "whyInteresting": "rola jest wyraźnie osadzona w budowie agentów",
+      "uncertainty": "opis jest szeroki i może łączyć backend, MLE i produktowe AI",
+      "sourceURLs": [
+        "https://careers.epam.com/en/vacancy/senior-ai-engineer-bltimzj3s4lsusq7gfo_en"
+      ],
+      "tags": [
+        "RAG"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Senior Platform Engineer",
+      "company": "EPAM",
+      "location": "Remote in Poland.",
+      "workMode": "Remote",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "AI-enabled platform capabilities, internal developer platform,",
+      "whyInteresting": "mocny sygnał dla ścieżki AI platform i",
+      "uncertainty": "to rola bardziej platform engineering niż czyste LLM application",
+      "sourceURLs": [
+        "https://careers.epam.com/en/vacancy/senior-platform-engineer-blt0210e551862e3687_en"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 5,
+      "title": "Python Engineer with C++ (AI project)",
+      "company": "ACAISOFT",
+      "location": "oficjalna strona mówi Remote.",
+      "workMode": "Remote",
+      "compensation": "oficjalna strona pokazuje 160-200 PLN, ale jednostka jest",
+      "seniority": "Nieokreślony",
+      "fitSummary": "AI evaluation and optimization, wykrywanie problemów LLM,",
+      "whyInteresting": "jedna z ciekawszych publicznych ról wokół",
+      "uncertainty": "compensation unit na oficjalnej stronie jest mało wiarygodna i",
+      "sourceURLs": [
+        "https://www.acaisoft.com/careers",
+        "https://www.acaisoft.com/job/python-engineer-with-c-ai-project"
+      ],
+      "tags": [
+        "LLM",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Python-Focused Fullstack (+React)",
+      "company": "ACAISOFT",
+      "location": "oficjalna strona mówi Remote.",
+      "workMode": "Remote",
+      "compensation": "oficjalna strona pokazuje 140-210 PLN, ale jednostka jest",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM evaluation workflows, data visualizations, agentic systems,",
+      "whyInteresting": "to nietypowo praktyczna rola łącząca frontend,",
+      "uncertainty": "rola wygląda wiarygodnie technicznie, ale prezentacja płacy na",
+      "sourceURLs": [
+        "https://www.acaisoft.com/careers",
+        "https://www.acaisoft.com/job/fullstack-engineer-ai-project-2"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM",
+        "Python"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano nowy oficjalny klaster EPAM z rolami Lead AI Engineer,",
+    "Dodano nowe oficjalne kanoniczne role ACAISOFT:",
+    "Wcześniejszy klaster ACAISOFT wygląda dziś bardziej jak dynamicznie",
+    "Nie powielono deepsense.ai, Sii, KYOTU ani Capgemini, bo sprawdzone"
+  ],
+  "risks": [
+    "ACAISOFT nadal ma niespójne renderowanie wynagrodzeń na oficjalnych",
+    "ACAISOFT używa zmiennej taksonomii ról między hubem careers a kartami",
+    "Nowy klaster EPAM zawiera kilka ról bliskich sobie zakresem; ryzyko"
+  ],
+  "recommendedActions": [
+    "Low-risk action applied: dodano do Seen Opportunities nowe oficjalne role",
+    "Low-risk action applied: backlog rozszerzono o follow-up dla klastra EPAM",
+    "Follow-up: w następnej rundzie sprawdzić, czy EPAM utrzyma nowy klaster",
+    "Follow-up: potwierdzić, czy ACAISOFT utrzyma rozdział między"
+  ],
+  "checkedSources": [
+    {
+      "title": "EPAM - Lead AI Engineer",
+      "url": "https://careers.epam.com/en/vacancy/lead-ai-engineer-bltfuun168yb6pyy1lp_en",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM - Senior Cloud Native Developer (Python & AI)",
+      "url": "https://careers.epam.com/en/vacancy/senior-cloud-native-developer-python-ai-bltce99bd427bf423c0_en",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM - Senior Platform Engineer",
+      "url": "https://careers.epam.com/en/vacancy/senior-platform-engineer-blt0210e551862e3687_en",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM - Senior AI Engineer",
+      "url": "https://careers.epam.com/en/vacancy/senior-ai-engineer-bltimzj3s4lsusq7gfo_en",
+      "status": "checked"
+    },
+    {
+      "title": "Acaisoft careers",
+      "url": "https://www.acaisoft.com/careers",
+      "status": "checked"
+    },
+    {
+      "title": "Acaisoft - Python Engineer with C++ (AI project)",
+      "url": "https://www.acaisoft.com/job/python-engineer-with-c-ai-project",
+      "status": "checked"
+    },
+    {
+      "title": "Acaisoft - Python-Focused Fullstack (+React)",
+      "url": "https://www.acaisoft.com/job/fullstack-engineer-ai-project-2",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai careers",
+      "url": "https://deepsense.ai/careers/",
+      "status": "checked-no-material-change"
+    },
+    {
+      "title": "Sii - AI Engineer – GenAI & Cloud (f/m/x)",
+      "url": "https://sii.pl/en/job-ads/id/37069/ai-engineer-genai-cloud-f-m-x",
+      "status": "checked-no-material-change"
+    },
+    {
+      "title": "KYOTU - AI Engineer (GenAI / RAG / Agentic AI)",
+      "url": "https://www.pracuj.pl/praca/ai-engineer-genai-rag-agentic-ai-warszawa-poniatowskiego-1%2Coferta%2C1004868105",
+      "status": "checked-no-material-change"
+    },
+    {
+      "title": "Capgemini - Senior Software Engineer (Agentic AI, Cloud-native, On-prem)",
+      "url": "https://careers.capgemini.com/job/Wroc%C5%82aw-Senior-Software-Engineer-%28Agentic-AI%2C-Cloud-native%2C-On-prem%29/1388839033/",
+      "status": "checked-no-material-change"
+    }
+  ]
+}

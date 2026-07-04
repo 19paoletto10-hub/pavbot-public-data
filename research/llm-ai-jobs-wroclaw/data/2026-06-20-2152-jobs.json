@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-20",
+  "runTime": "21:52",
+  "executiveSummary": "Od porannej rundy z 2026-06-20 06:30 CEST zaszło kilka materialnych zmian. Najmocniejsze nowe role to oficjalny AI Engineer w Deviniti, oficjalny GCP AI Developer w Capgemini z Wrocławiem na liście lokalizacji, publiczny Senior Software Engineer, Applied AI w Oversee dla pracy zdalnej z Polski oraz Machine Learning Engineer (LLM) w UNIVIO z Wrocławiem i remote. Równolegle People More po raz kolejny zmieniło wynagrodzenie na tym samym URL, tym razem z porannego 30-41 CHF netto/h B2B z powrotem na 33-45 EUR netto/h B2B. Dodatkowo oficjalny URL Senior AI Engineer (f/m/x) w Sii jest już nieaktywny, mimo że publiczny mirror na Just Join IT nadal pokazuje tę rolę jako aktywną.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "AI Engineer",
+      "company": "Deviniti",
+      "location": "Wrocław + praca zdalna.",
+      "workMode": "Remote",
+      "compensation": "120-137 zł/h netto + VAT B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Python, FastAPI, LLM/GenAI, RAG, LangChain/LlamaIndex,",
+      "whyInteresting": "bardzo hands-on rola z polskiej strony pracodawcy,",
+      "uncertainty": "część opisu jest osadzona na stronie zbiorczej kariery, więc",
+      "sourceURLs": [
+        "https://deviniti.com/pl/praca-w-it/"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI",
+        "Python"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior Software Engineer, Applied AI (Remote from Poland)",
+      "company": "Oversee",
+      "location": "remote z Polski; publiczny mirror pokazuje też Wrocław,",
+      "workMode": "Remote",
+      "compensation": "33 600-41 160 PLN + VAT/mies. albo 200-245 PLN + VAT/h B2B",
+      "seniority": "Senior",
+      "fitSummary": "LLMs, RAG, agentic workflows, tool-calling systems, orchestration",
+      "whyInteresting": "jedna z bardziej konkretnych publicznych ról pod",
+      "uncertainty": "wynagrodzenie nie jest widoczne na canonical URL Workable,",
+      "sourceURLs": [
+        "https://apply.workable.com/oversee-1/j/33A5B179DC/",
+        "https://nofluffjobs.com/job/senior-software-engineer-applied-ai-remote-from-poland-oversee"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "GCP AI Developer",
+      "company": "Capgemini",
+      "location": "Wrocław + wiele lokalizacji w Polsce.",
+      "workMode": "Wrocław",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Generative AI, LLMs, RAG architectures, prompt engineering,",
+      "whyInteresting": "nowa oficjalna rola Capgemini z Wrocławiem na liście",
+      "uncertainty": "Capgemini nie precyzuje na stronie, czy to stricte zespołowa rola",
+      "sourceURLs": [
+        "https://careers.capgemini.com/job/Warszawa-GCP-AI-Developer/1383470933/"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GCP"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Machine Learning Engineer (LLM)",
+      "company": "UNIVIO",
+      "location": "Wrocław + remote.",
+      "workMode": "Remote",
+      "compensation": "18 480-22 680 PLN netto/mies. B2B albo",
+      "seniority": "Nieokreślony",
+      "fitSummary": "chatboty, RAG, semantic search, bazy wektorowe, LangChain,",
+      "whyInteresting": "rola jest osadzona we Wrocławiu, ale ma też remote i",
+      "uncertainty": "źródłem szczegółów jest publiczny job board, a nie osobna strona",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/univio-machine-learning-engineer-llm--wroclaw-ai-aff3fe1f"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "AI Engineer / LLM Engineer (AI-First | TypeScript)",
+      "company": "People More",
+      "location": "Wrocław + remote.",
+      "workMode": "Remote",
+      "compensation": "33-45 EUR netto/h B2B w bieżącym widoku publicznym.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "agentic systems, multi-agent architectures, RAG, multimodal",
+      "whyInteresting": "sama oferta nadal jest mocna, ale w tej rundzie",
+      "uncertainty": "listing jest skrajnie niestabilny pod względem waluty i sposobu",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/people-more-p-s-a--ai-engineer-llm-engineer-ai-first-typescript--wroclaw-ai-215fee79"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano nową oficjalną rolę GCP AI Developer w Capgemini z Wrocław, PL",
+    "Dodano nową oficjalną rolę AI Engineer w Deviniti.",
+    "Dodano nową publiczną rolę Senior Software Engineer, Applied AI w Oversee",
+    "Dodano nową publiczną rolę Machine Learning Engineer (LLM) w UNIVIO.",
+    "Zaktualizowano People More o kolejną materialną zmianę wynagrodzenia:",
+    "Zapisano, że canonical URL Senior AI Engineer (f/m/x) w Sii jest nieaktywny,"
+  ],
+  "risks": [
+    "People More nadal bardzo często zmienia publiczną prezentację stawek, więc",
+    "W przypadku Oversee część najpraktyczniejszych danych o wynagrodzeniu pochodzi",
+    "Sii pokazuje klasyczny problem job-board mirrorów: wtórne źródło może przez"
+  ],
+  "recommendedActions": [
+    "Low-risk action applied: dodano nowe wpisy Seen Opportunities dla",
+    "Low-risk action applied: zaktualizowano People More o powrót do",
+    "Follow-up: sprawdzić w następnej rundzie, czy Just Join IT usunie lub zmieni",
+    "Follow-up: ponownie zweryfikować Deviniti i Oversee, czy oferty utrzymają się"
+  ],
+  "checkedSources": [
+    {
+      "title": "People More - AI Engineer / LLM Engineer (AI-First | TypeScript)",
+      "url": "https://justjoin.it/job-offer/people-more-p-s-a--ai-engineer-llm-engineer-ai-first-typescript--wroclaw-ai-215fee79",
+      "status": "checked"
+    },
+    {
+      "title": "Capgemini - GCP AI Developer",
+      "url": "https://careers.capgemini.com/job/Warszawa-GCP-AI-Developer/1383470933/",
+      "status": "checked"
+    },
+    {
+      "title": "Deviniti - Praca w IT",
+      "url": "https://deviniti.com/pl/praca-w-it/",
+      "status": "checked"
+    },
+    {
+      "title": "Oversee - Senior Software Engineer, Applied AI (Remote from Poland)",
+      "url": "https://apply.workable.com/oversee-1/j/33A5B179DC/",
+      "status": "checked"
+    },
+    {
+      "title": "Oversee - No Fluff Jobs mirror with salary",
+      "url": "https://nofluffjobs.com/job/senior-software-engineer-applied-ai-remote-from-poland-oversee",
+      "status": "checked"
+    },
+    {
+      "title": "UNIVIO - Machine Learning Engineer (LLM)",
+      "url": "https://justjoin.it/job-offer/univio-machine-learning-engineer-llm--wroclaw-ai-aff3fe1f",
+      "status": "checked"
+    },
+    {
+      "title": "Sii - Senior AI Engineer (f/m/x)",
+      "url": "https://sii.pl/en/job-ads/id/36925/senior-ai-engineer-f-m-x/",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT - Job offers AI/ML, Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    }
+  ]
+}

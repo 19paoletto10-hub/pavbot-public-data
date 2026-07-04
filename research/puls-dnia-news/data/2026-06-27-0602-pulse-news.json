@@ -1,0 +1,509 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-06-27",
+  "runTime": "06:02",
+  "status": "Material update",
+  "headline": "USA uderzają w Iran, Polska wchodzi w upalny weekend, a Wenezuela i cła Trumpa podbijają poranny puls",
+  "summary": "O 06:02 najważniejsze są oficjalne amerykańskie uderzenie na Iran po ataku w Ormuz, nowy weekendowy alert upałowy i ceny paliw w Polsce, 920 ofiar w Wenezueli oraz świeża presja Trumpa na Europę w sprawie podatków cyfrowych.",
+  "items": [
+    {
+      "id": "pulse-2026-06-27-0602-01-alert-upal-polska",
+      "section": "Alerty",
+      "title": "IMGW i RCB ostrzegają przed weekendowym upałem do 42 stopni",
+      "lead": "Polska wchodzi w sobotę z czerwonymi alarmami i kulminacją gorąca zapowiadaną na niedzielę.",
+      "whatHappened": "Poranny zestaw krajowy otwiera fala upałów. TVN24 podaje, że w sobotę temperatury mają wynieść 34-38 stopni, a w niedzielę 36-42 stopnie, podczas gdy RCB ostrzega przed niemal ogólnokrajową falą gorąca z kulminacją 28 czerwca.",
+      "keyFacts": [
+        "TVN24 opisuje czerwone alarmy IMGW i scenariusz nawet 42 stopni Celsjusza w niedzielę.",
+        "RCB podkreśla, że najwyższe temperatury wystąpią w niedzielę 28 czerwca.",
+        "Ostrzeżenia zbiegają się z początkiem wakacji i wzmożonym ruchem weekendowym."
+      ],
+      "reactions": [
+        "Służby apelują o ograniczenie przebywania na słońcu i pilnowanie nawodnienia.",
+        "Temat ma natychmiastowy wymiar użytkowy dla podróży, pracy w terenie i zdrowia publicznego."
+      ],
+      "whyItMatters": "To najszerszy polski alert poranka, bo dotyczy praktycznie całego kraju i może przełożyć się na zdrowie, transport oraz infrastrukturę.",
+      "context": "Wieczorny run sygnalizował już weekendowy alert. Poranek przynosi bardziej konkretną skalę: 34-38 stopni w sobotę i 36-42 w niedzielę.",
+      "watchNext": [
+        "Czy IMGW i RCB podniosą jeszcze poziom komunikatów przed niedzielnym pikiem temperatur.",
+        "Czy pojawią się dodatkowe lokalne ograniczenia związane z wodą, transportem albo imprezami plenerowymi."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Upały w Polsce. Czerwone alarmy IMGW. Nawet 42 stopnie",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/upaly-w-polsce-czerwone-alarmy-imgw-nawet-42-stopnie-st9115734"
+        },
+        {
+          "title": "RCB: fala upałów w niemal całym kraju",
+          "url": "https://www.gov.pl/web/rcb/w-najblizszych-dniach-na-terenie-niemal-calego-kraju-prognozowana-jest-fala-upalow"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Pogoda",
+        "Upał"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-27-0602-02-paliwa-weekend",
+      "section": "Gospodarka",
+      "title": "Od soboty obowiązują wyższe limity cen paliw na cały weekend",
+      "lead": "Pb95 ma limit 6,02 zł za litr, a diesel 6,17 zł do poniedziałku.",
+      "whatHappened": "Ministerstwo Energii opublikowało nowe maksymalne ceny detaliczne paliw obowiązujące w okresie 27-29 czerwca. To poranny kosztowy punkt odniesienia dla kierowców rozpoczynających weekendowe wyjazdy.",
+      "keyFacts": [
+        "Benzyna 95 ma limit 6,02 zł za litr.",
+        "Benzyna 98 ma limit 6,70 zł za litr, a olej napędowy 6,17 zł za litr.",
+        "Nowa cena obowiązuje przez cały okres 27-29 czerwca, zgodnie z komunikatem ministerstwa."
+      ],
+      "reactions": [
+        "To bezpośrednia informacja dla kierowców przed ruchem wakacyjnym.",
+        "Temat zyskuje dodatkowe znaczenie przy napięciu na rynku ropy i w Ormuz."
+      ],
+      "whyItMatters": "Paliwa pozostają jedną z najbardziej praktycznych wiadomości gospodarczych dnia, bo wpływają natychmiast na koszt podróży dla szerokiej grupy odbiorców.",
+      "context": "Poprzedni run operował jeszcze piątkowymi limitami i prognozami. Poranek przynosi już obowiązujące stawki na cały weekend.",
+      "watchNext": [
+        "Czy po weekendzie ceny zostaną podniesione ponownie.",
+        "Czy napięcia geopolityczne przyspieszą wzrost kolejnych limitów detalicznych."
+      ],
+      "sources": [
+        {
+          "title": "Ministerstwo Energii: maksymalna cena detaliczna paliw obowiązująca w okresie 27-29 czerwca 2026 r.",
+          "url": "https://www.gov.pl/web/energia/maksymalna-cena-detaliczna-paliw-obowiazujaca-w-okresie-27-29-czerwca-2026-r"
+        },
+        {
+          "title": "TVN24 Biznes: Ceny paliw na sobotę, niedzielę oraz poniedziałek 27-29 czerwca 2026",
+          "url": "https://tvn24.pl/biznes/moto/ceny-paliw-na-sobote-niedziele-oraz-poniedzialek-27-29-czerwca-2026-ile-bedzie-kosztowala-benzyna-pb95-pb98-oraz-olej-napedowy-st9115095"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Paliwa",
+        "Kierowcy"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-0602-03-grozby-prezydent",
+      "section": "Polska",
+      "title": "Policja zatrzymała podejrzanego o groźby wobec prezydenta",
+      "lead": "Zielonogórska policja potwierdziła zatrzymanie mężczyzny podejrzewanego o groźby wobec Karola Nawrockiego.",
+      "whatHappened": "TVN24 podało późnym wieczorem, że zatrzymano mężczyznę podejrzewanego o kierowanie gróźb wobec prezydenta Karola Nawrockiego. Poranek przynosi ten temat jako nadal wysoki sygnał bezpieczeństwa państwa.",
+      "keyFacts": [
+        "Informację potwierdziła młodszy aspirant Anna Baran z Komendy Miejskiej Policji w Zielonej Górze.",
+        "Zatrzymanie miało miejsce w Czerwieńsku w województwie lubuskim.",
+        "Sprawa weszła do krajowego obiegu jako temat bezpieczeństwa, nie tylko polityki."
+      ],
+      "reactions": [
+        "Kolejne decyzje będą zależały od prokuratury i kwalifikacji czynu.",
+        "Temat utrzymuje wysoką rangę, bo dotyczy ochrony głowy państwa."
+      ],
+      "whyItMatters": "To bezpośredni temat bezpieczeństwa publicznego i państwowego, dlatego utrzymuje się wysoko także w porannym zestawie.",
+      "context": "W poprzednim runie był to świeży, późnowieczorny temat. Nad ranem nadal brak nowych ruchów procesowych, ale sama interwencja służb pozostaje materialna.",
+      "watchNext": [
+        "Czy zatrzymany usłyszy zarzuty i jakie środki zapobiegawcze zastosuje prokuratura.",
+        "Czy policja ujawni motyw lub formę kierowanych gróźb."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zatrzymano mężczyznę podejrzewanego o kierowanie gróźb w kierunku prezydenta",
+          "url": "https://tvn24.pl/polska/zatrzymano-mezczyzne-podejrzewanego-o-kierowanie-grozb-w-kierunku-prezydenta-karola-nawrockiego-st9116538"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Prezydent",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-27-0602-04-sikorski-ukraina",
+      "section": "Polityka",
+      "title": "Sikorski krytykuje reakcję Nawrockiego w sporze z Zełenskim",
+      "lead": "Szef MSZ ocenił, że gest prezydenta upokorzył Zełenskiego i utrudnił dalszy dialog.",
+      "whatHappened": "W wieczornej rozmowie w TVN24 Radosław Sikorski uznał, że odpowiedź prezydenta Karola Nawrockiego na decyzję Wołodymyra Zełenskiego była nieadekwatna. Szef MSZ powiedział, że sam doradzałby inne rozwiązanie i że ruch prezydenta ograniczył możliwość dalszego dialogu z Ukrainą.",
+      "keyFacts": [
+        "Sikorski mówił o kryzysie po tym, jak Zełenski nadał jednostce wojskowej nazwę związana z UPA, a Nawrocki odebrał mu Order Orła Białego.",
+        "Według szefa MSZ odpowiedź polskiego prezydenta osobiście upokorzyła Zełenskiego.",
+        "W wywiadzie padła też teza, że prezydent sam ograniczył sobie kanał rozmowy z ważnym państwem prowadzącym wojnę."
+      ],
+      "reactions": [
+        "Temat wzmacnia poranny wymiar polityki zagranicznej jako sporu wewnętrznego w Polsce.",
+        "Może wywołać dalsze odpowiedzi ze strony Pałacu Prezydenckiego albo obozu rządowego."
+      ],
+      "whyItMatters": "To najmocniejszy poranny wątek polityczny, bo łączy relacje z Ukrainą, politykę historyczną i konflikt między rządem a prezydentem.",
+      "context": "Wieczorny run skupiał się głównie na bezpieczeństwie i alertach. Poranek dokłada wyraźny, personalny spór o kierunek relacji z Ukrainą.",
+      "watchNext": [
+        "Czy Kancelaria Prezydenta odpowie na zarzuty Sikorskiego.",
+        "Czy spór przełoży się na kolejne wypowiedzi o akcesji Ukrainy do UE i o współpracy dwustronnej."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Sikorski - gdyby Nawrocki mnie zapytał, doradziłbym coś innego",
+          "url": "https://tvn24.pl/polska/kryzys-w-relacjach-polsko-ukrainskich-radoslaw-sikorski-gdyby-karol-nawrocki-mnie-zapytal-doradzilbym-cos-innego-st9116495"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Ukraina",
+        "Dyplomacja"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-0602-05-pamiatkowo-17latek",
+      "section": "Polska",
+      "title": "17-latek wyciągnięty z jeziora po długiej reanimacji",
+      "lead": "W Pamiątkowie nurkowie wyciągnęli z wody nastolatka, którego reanimowano blisko godzinę.",
+      "whatHappened": "TVN24 podało, że w Pamiątkowie nad jeziorem służby prowadziły akcję ratunkową po zaginięciu 17-latka pod wodą. Chłopaka wyciągnęli nurkowie specjalistycznej grupy ratownictwa wodnego, a reanimacja trwała blisko godzinę.",
+      "keyFacts": [
+        "Nastolatek został wydobyty z wody przez nurków, nie przez przypadkowych świadków.",
+        "Reanimacja według TVN24 trwała blisko godzinę.",
+        "To jeden z pierwszych mocnych sygnałów wodnego ryzyka na starcie upalnego weekendu."
+      ],
+      "reactions": [
+        "Temat wzmacnia ostrzeżenia dotyczące bezpieczeństwa nad wodą przy wysokich temperaturach.",
+        "Może wrócić w kolejnych runach, jeśli pojawią się informacje o stanie chłopaka."
+      ],
+      "whyItMatters": "Historia ma lokalny charakter, ale dla porannego użytkownika jest praktycznym sygnałem ryzyka nad wodą w pierwszy skrajnie gorący weekend wakacji.",
+      "context": "Wcześniejszy run nie eksponował tego tematu. Poranek pokazuje go jako czytelne ostrzeżenie o realnych skutkach tłoku i ryzyka nad wodą.",
+      "watchNext": [
+        "Czy pojawi się oficjalna informacja o stanie 17-latka.",
+        "Czy podobne interwencje zaczną częściej pojawiać się wraz z kulminacją upału."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Akcja ratunkowa nad jeziorem w Pamiątkowie",
+          "url": "https://tvn24.pl/polska/wielkopolskie-akcja-ratunkowa-nad-jeziorem-sluzby-wyciagnely-z-wody-nastolatka-st9116581"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Ratownictwo",
+        "Woda"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-0602-06-ignis-iss",
+      "section": "Technologia",
+      "title": "Misja IGNIS utrzymuje polski akcent technologiczny poranka",
+      "lead": "POLSA potwierdza, że Sławosz Uznański-Wiśniewski rozpoczął misję na ISS.",
+      "whatHappened": "POLSA utrzymuje oficjalny komunikat o rozpoczęciu misji IGNIS na Międzynarodowej Stacji Kosmicznej przez Sławosza Uznańskiego-Wiśniewskiego. Mimo nocnych napięć geopolitycznych to nadal najmocniejszy pozytywny polski wątek technologiczny w obiegu.",
+      "keyFacts": [
+        "To oficjalnie potwierdzony start polskiej misji na ISS.",
+        "POLSA opisuje ten moment jako wejście Polski do elitarnego grona państw aktywnych na stacji.",
+        "Temat łączy wymiar symboliczny, naukowy i publiczny."
+      ],
+      "reactions": [
+        "Wątek działa jako kontrapunkt wobec zdominowanego kryzysami poranka.",
+        "Buduje szeroko czytelne zainteresowanie sektorem nauki i kosmosu w Polsce."
+      ],
+      "whyItMatters": "To najsilniejszy polski temat technologiczny dostępny szerokiej publiczności i jeden z niewielu porannych sygnałów o pozytywnym ciężarze symbolicznym.",
+      "context": "Temat był obecny już poprzedniego wieczoru, ale pozostaje relewantny jako oficjalnie potwierdzony sukces państwowej agencji i polskiego astronauty.",
+      "watchNext": [
+        "Jakie eksperymenty z misji IGNIS zostaną pokazane jako pierwsze.",
+        "Czy pojawią się nowe materiały wideo albo komunikaty z pokładu ISS jeszcze dziś."
+      ],
+      "sources": [
+        {
+          "title": "POLSA: Polski astronauta rozpoczął misję IGNIS na Międzynarodowej Stacji Kosmicznej",
+          "url": "https://polsa.gov.pl/wydarzenia/polski-astronauta-rozpoczal-misje-ignis-na-miedzynarodowej-stacji-kosmicznej/"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "Kosmos",
+        "Polska"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-0602-07-usa-iran-ormuz",
+      "section": "Świat",
+      "title": "USA uderzyły w irańskie cele po ataku na statek w Ormuz",
+      "lead": "CENTCOM potwierdziło atak na magazyny dronów, rakiet i nadbrzeżne radary.",
+      "whatHappened": "Najmocniejsza zmiana globalnego poranka to oficjalnie potwierdzone uderzenie USA na Iran. CENTCOM podało, że siły amerykańskie zaatakowały irańskie magazyny rakiet i dronów oraz radary po ataku Iranu na singapurski statek handlowy `M/V Ever Lovely` w cieśninie Ormuz.",
+      "keyFacts": [
+        "Atak był odpowiedzią na uderzenie dronem z 25 czerwca na statek pod banderą Singapuru.",
+        "CENTCOM wskazało trzy klasy celów: magazyny rakiet, magazyny dronów i nadbrzeżne radary.",
+        "Amerykanie utrzymują, że irański atak naruszył porozumienie o zawieszeniu działań i swobodę żeglugi."
+      ],
+      "reactions": [
+        "BBC i CNN opisują ruch jako bezpośrednią eskalację po wcześniejszej wojnie słów.",
+        "Rynek i żegluga będą teraz patrzeć, czy Iran odpowie odwetowo i czy korytarz dalej się zamknie."
+      ],
+      "whyItMatters": "To najwyższy priorytet świata, bo przenosi konflikt z poziomu incydentu morskiego na otwartą odpowiedź wojskową USA w jednym z kluczowych korytarzy handlowych świata.",
+      "context": "W poprzednim runie dominował sam atak na statek i oskarżenie o naruszenie rozejmu. Teraz mamy już formalnie potwierdzone uderzenie USA.",
+      "watchNext": [
+        "Czy Iran ogłosi odwet albo nowe ograniczenia dla żeglugi w Ormuz.",
+        "Czy kolejne komunikaty wojskowe doprecyzują skalę szkód i cele dalszych działań."
+      ],
+      "sources": [
+        {
+          "title": "CENTCOM: U.S. Strikes Iran in Response to Attack on Commercial Vessel",
+          "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4528341/us-strikes-iran-in-response-to-attack-on-commercial-vessel/"
+        },
+        {
+          "title": "BBC: US conducts strikes on Iran after attack on cargo ship",
+          "url": "https://www.bbc.co.uk/news/articles/ckg590wqxwpo"
+        },
+        {
+          "title": "CNN: US strikes Iranian targets in response to attack on cargo ship",
+          "url": "https://edition.cnn.com/2026/06/26/politics/trump-iran-strike-agreement"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Iran",
+        "Ormuz"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-27-0602-08-liban-porozumienie",
+      "section": "Świat",
+      "title": "Izrael ma wycofać się z dwóch obszarów Libanu po nowym porozumieniu",
+      "lead": "Po czterech dniach rozmów w Waszyngtonie podpisano ramowe porozumienie, ale ryzyko wewnętrznej destabilizacji pozostaje.",
+      "whatHappened": "CNN podaje, że Izrael wycofa się z dwóch obszarów południowego Libanu i przekaże je armii libańskiej w ramach nowo podpisanego porozumienia. TVN24 równolegle opisuje ten ruch jako ramowe porozumienie Izraela z Libanem, przy jednoczesnych groźbach Hezbollahu o wojnie domowej.",
+      "keyFacts": [
+        "Deklaracja wycofania dotyczy dwóch obszarów i ma wynikać z porozumienia po rozmowach w Waszyngtonie.",
+        "Przekazanie terenów ma nastąpić armii libańskiej, nie formacjom powiązanym z Hezbollahem.",
+        "Oprócz sygnału deeskalacji pojawia się jednocześnie ostrzeżenie o niestabilności wewnętrznej."
+      ],
+      "reactions": [
+        "To jeden z nielicznych porannych sygnałów dyplomatycznego ruchu na Bliskim Wschodzie po nocy pełnej eskalacji wokół Iranu.",
+        "Rynek i obserwatorzy regionu będą patrzeć, czy porozumienie ma realne mechanizmy wdrożenia."
+      ],
+      "whyItMatters": "Temat jest duży, bo pokazuje równoległe procesy deeskalacji i destabilizacji w sąsiedztwie najgorętszego dziś teatru kryzysowego.",
+      "context": "Wieczorny run nie miał jeszcze tego wątku. Poranek dokłada nowy ruch dyplomatyczny obok militarnej eskalacji USA-Iran.",
+      "watchNext": [
+        "Czy Izrael poda harmonogram wycofania z obu obszarów.",
+        "Czy Hezbollah albo władze Libanu potwierdzą warunki wdrożenia porozumienia."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Israel to withdraw from two areas in Lebanon under newly signed agreement",
+          "url": "https://edition.cnn.com/2026/06/26/middleeast/israel-and-lebanon-sign-framework-agreement-latam-intl"
+        },
+        {
+          "title": "TVN24: Ramowe porozumienie Izraela z Libanem podpisane",
+          "url": "https://tvn24.pl/swiat/izrael-podpisal-porozumienie-z-libanem-hezbollah-grozi-wojna-domowa-st9116600"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Liban",
+        "Bliski Wschód"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-27-0602-09-wenezuela-920",
+      "section": "Świat",
+      "title": "W Wenezueli trwa wyścig z czasem przy co najmniej 920 ofiarach",
+      "lead": "Międzynarodowe ekipy ratunkowe dopiero docierają, a setki osób mogą nadal być pod gruzami.",
+      "whatHappened": "Poranny bilans po trzęsieniach ziemi w Wenezueli utrzymuje się na poziomie co najmniej 920 ofiar. BBC i CNN podkreślają, że akcja ratunkowa nadal trwa, rodziny szukają bliskich, a zagraniczne zespoły ratownicze dopiero zaczynają pracę na miejscu.",
+      "keyFacts": [
+        "BBC podaje co najmniej 920 ofiar i setki osób, które mogą pozostawać pod gruzami.",
+        "CNN opisuje sytuację jako wyścig z czasem o wydobycie ludzi spod zawalonych budynków.",
+        "Na miejsce dopiero docierają międzynarodowe zespoły ratunkowe."
+      ],
+      "reactions": [
+        "Skala katastrofy utrzymuje ten temat w ścisłym światowym topie mimo równoległych napięć wojskowych na Bliskim Wschodzie.",
+        "Nadchodzące aktualizacje mogą szybko zmieniać bilans i obraz potrzeb humanitarnych."
+      ],
+      "whyItMatters": "To największa bieżąca katastrofa humanitarna w porannym zestawie, z wysokim prawdopodobieństwem dalszego wzrostu liczby ofiar.",
+      "context": "Poprzedni run odnotował wieczorny skok do 920 ofiar. Nad ranem temat nie słabnie, bo ratownicy nadal walczą o dotarcie do uwięzionych.",
+      "watchNext": [
+        "Czy liczba ofiar wzrośnie po wejściu kolejnych ekip ratowniczych.",
+        "Jakie kraje i organizacje ogłoszą pomoc lub wsparcie medyczne."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Venezuela earthquakes kill 920 people as families desperate for news",
+          "url": "https://www.bbc.co.uk/news/articles/c39y79g7gzko"
+        },
+        {
+          "title": "CNN: Venezuela earthquake updates",
+          "url": "https://edition.cnn.com/2026/06/26/world/live-news/venezuela-earthquake-hnk"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wenezuela",
+        "Katastrofa"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-27-0602-10-uk-rekord-czerwca",
+      "section": "Świat",
+      "title": "Wielka Brytania pobiła czerwcowy rekord temperatury trzeci dzień z rzędu",
+      "lead": "Met Office podało 37,3 stopnia w Suffolk i zapowiada stopniowe słabnięcie fali upału.",
+      "whatHappened": "Met Office potwierdziło nowy, prowizoryczny rekord czerwca w Wielkiej Brytanii: 37,3 stopnia Celsjusza w Santon Downham w Suffolk 26 czerwca. BBC opisuje to jako trzeci z rzędu dzień bicia rekordu miesięcznego w czasie wyjątkowej fali gorąca.",
+      "keyFacts": [
+        "Nowa wartość 37,3 stopnia padła w Santon Downham w Suffolk.",
+        "Met Office zaznacza, że to trzeci kolejny dzień pobicia czerwcowego rekordu.",
+        "Prognoza na weekend wskazuje stopniowe łagodzenie warunków, choć południowy wschód Wielkiej Brytanii pozostaje zagrożony."
+      ],
+      "reactions": [
+        "Temat wzmacnia obraz europejskiej fali gorąca jako zdarzenia historycznego, a nie lokalnego epizodu.",
+        "Met Office powiązało skalę zjawiska z szerszym trendem klimatycznym i ryzykiem dla zdrowia oraz infrastruktury."
+      ],
+      "whyItMatters": "To najczytelniejszy poranny sygnał, że fala gorąca w Europie nadal ustanawia rekordy i ma znaczenie systemowe dla usług, zdrowia i energetyki.",
+      "context": "Wieczorem głównym europejskim symbolem gorąca były Niemcy. Nad ranem ciężar przesuwa się na oficjalnie potwierdzony rekord Wielkiej Brytanii.",
+      "watchNext": [
+        "Czy rekord 37,3 stopnia zostanie potwierdzony po pełnej weryfikacji Met Office.",
+        "Czy weekend przyniesie więcej ostrzeżeń dla zdrowia i infrastruktury w południowo-wschodniej Anglii."
+      ],
+      "sources": [
+        {
+          "title": "Met Office: Third consecutive day of a new June temperature record with end of heatwave in sight",
+          "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/third-consecutive-day-of-a-new-june-temperature-record-with-end-of-heatwave-in-sight"
+        },
+        {
+          "title": "BBC: Hottest June day record broken for third day in row as temperature hits 37.3C",
+          "url": "https://www.bbc.co.uk/news/articles/cn4d0n1l8zno"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Pogoda",
+        "Wielka Brytania"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-0602-11-trump-cyfrowe-cla",
+      "section": "Świat",
+      "title": "Trump grozi Europie 100-procentowym cłem za podatki cyfrowe",
+      "lead": "Waszyngton uderza w kraje, które utrzymują albo planują daniny wymierzone w amerykańskie firmy technologiczne.",
+      "whatHappened": "BBC podało, że Donald Trump zagroził 100-procentowym cłem wobec europejskich krajów rozwijających albo utrzymujących podatki cyfrowe. To nowy poranny sygnał napięcia na linii USA-Europa w obszarze handlu i regulacji technologii.",
+      "keyFacts": [
+        "Groźba dotyczy podatków cyfrowych wymierzonych w amerykańskie platformy technologiczne.",
+        "BBC wskazuje, że temat obejmuje nie tylko już istniejące rozwiązania, ale też państwa rozważające nowe wersje tych danin.",
+        "To ostrzeżenie pojawia się równolegle z nowymi napięciami geopolitycznymi i ryzykiem dla handlu międzynarodowego."
+      ],
+      "reactions": [
+        "Dla Europy to sygnał, że spór handlowy może wrócić do centrum relacji transatlantyckich.",
+        "Dla rynku technologicznego to potencjalna presja na politykę podatkową i regulacyjną po obu stronach Atlantyku."
+      ],
+      "whyItMatters": "To ważny temat gospodarczo-polityczny, bo dotyczy całej architektury relacji handlowych USA-Europa oraz podatkowego traktowania Big Tech.",
+      "context": "W poprzednim runie ten wątek nie istniał. Poranek dokłada świeży obszar ryzyka poza wojną i pogodą.",
+      "watchNext": [
+        "Czy Komisja Europejska lub poszczególne stolice odpowiedzą oficjalnie na groźbę Trumpa.",
+        "Czy pojawią się konkretne projekty retorsji albo zawieszenia prac nad podatkami cyfrowymi."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Trump threatens 100% tariff on European digital services taxes",
+          "url": "https://www.bbc.co.uk/news/articles/cn4rd71411ko"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "USA",
+        "Cła"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-27-0602-12-anthropic-mythos",
+      "section": "Technologia",
+      "title": "USA dopuściły ograniczony powrót modelu Anthropic Mythos",
+      "lead": "Po blokadzie związanej z cyberbezpieczeństwem model wraca tylko do wybranych organizacji.",
+      "whatHappened": "CNN podało, że administracja USA zgodziła się na ograniczone udostępnienie modelu Anthropic Mythos wybranym firmom i organizacjom po wcześniejszym zablokowaniu dostępu z powodów bezpieczeństwa. Anthropic nadal opisuje Mythos jako model o kontrolowanej dostępności i wysokiej wrażliwości dla cyberbezpieczeństwa.",
+      "keyFacts": [
+        "Według CNN wznowienie ma charakter selektywny, a nie pełnej publicznej premiery.",
+        "Anthropic publicznie utrzymuje, że Mythos 5 pozostaje modelem dla małej grupy zaufanych partnerów.",
+        "Spór dotyczy równowagi między użytecznością w cyberobronie a ryzykiem nadużyć."
+      ],
+      "reactions": [
+        "To sygnał, że rządy coraz bardziej bezpośrednio wpływają na sposób wypuszczania najpotężniejszych modeli AI.",
+        "Temat może szybko wrócić w kolejnych dniach, jeśli dostęp zostanie rozszerzony albo ponownie ograniczony."
+      ],
+      "whyItMatters": "To szeroko czytelny temat technologiczny, bo pokazuje przejście od zwykłej premiery modelu do kontroli państwowej nad dystrybucją najbardziej wrażliwych systemów AI.",
+      "context": "W poprzednim runie krajowy blok technologii opierał się na ISS. Poranek dokłada drugi, globalny wątek technologiczny o dużym ciężarze regulacyjnym.",
+      "watchNext": [
+        "Czy Anthropic opublikuje własne warunki nowego, limitowanego dostępu.",
+        "Czy inne firmy AI zostaną objęte podobnym trybem zatwierdzania przed szerszym release'em."
+      ],
+      "sources": [
+        {
+          "title": "CNN: US government allows Anthropic limited release of AI model that sparked cybersecurity concerns",
+          "url": "https://edition.cnn.com/2026/06/26/tech/anthropic-mythos-release"
+        },
+        {
+          "title": "Anthropic: Claude Mythos",
+          "url": "https://www.anthropic.com/claude/mythos"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "AI",
+        "Regulacje"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "CENTCOM: U.S. Strikes Iran in Response to Attack on Commercial Vessel",
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4528341/us-strikes-iran-in-response-to-attack-on-commercial-vessel/"
+    },
+    {
+      "title": "RCB: fala upałów w niemal całym kraju",
+      "url": "https://www.gov.pl/web/rcb/w-najblizszych-dniach-na-terenie-niemal-calego-kraju-prognozowana-jest-fala-upalow"
+    },
+    {
+      "title": "Ministerstwo Energii: maksymalna cena detaliczna paliw obowiązująca w okresie 27-29 czerwca 2026 r.",
+      "url": "https://www.gov.pl/web/energia/maksymalna-cena-detaliczna-paliw-obowiazujaca-w-okresie-27-29-czerwca-2026-r"
+    },
+    {
+      "title": "Met Office: Third consecutive day of a new June temperature record with end of heatwave in sight",
+      "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/third-consecutive-day-of-a-new-june-temperature-record-with-end-of-heatwave-in-sight"
+    },
+    {
+      "title": "POLSA: Polski astronauta rozpoczął misję IGNIS na Międzynarodowej Stacji Kosmicznej",
+      "url": "https://polsa.gov.pl/wydarzenia/polski-astronauta-rozpoczal-misje-ignis-na-miedzynarodowej-stacji-kosmicznej/"
+    },
+    {
+      "title": "BBC: US conducts strikes on Iran after attack on cargo ship",
+      "url": "https://www.bbc.co.uk/news/articles/ckg590wqxwpo"
+    },
+    {
+      "title": "BBC: Venezuela earthquakes kill 920 people as families desperate for news",
+      "url": "https://www.bbc.co.uk/news/articles/c39y79g7gzko"
+    },
+    {
+      "title": "BBC: Trump threatens 100% tariff on European digital services taxes",
+      "url": "https://www.bbc.co.uk/news/articles/cn4rd71411ko"
+    },
+    {
+      "title": "CNN: Israel to withdraw from two areas in Lebanon under newly signed agreement",
+      "url": "https://edition.cnn.com/2026/06/26/middleeast/israel-and-lebanon-sign-framework-agreement-latam-intl"
+    },
+    {
+      "title": "CNN: US government allows Anthropic limited release of AI model that sparked cybersecurity concerns",
+      "url": "https://edition.cnn.com/2026/06/26/tech/anthropic-mythos-release"
+    }
+  ]
+}

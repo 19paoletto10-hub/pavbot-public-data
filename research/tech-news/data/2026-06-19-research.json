@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-06-19",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy cykl przesuwa ciężar z samego \"kto ma najlepszy model\" na praktyczne zarządzanie AI: koszty w firmach, regulacje bez formalnej ustawy, aplikacje otwierane dla agentów oraz ryzyka supply-chain. Najmocniejsze tematy podcastowe to: firmowa kontrola wydatków na AI, nieformalna polityka AI administracji USA, Android 17 jako platforma dla agentów, Midjourney Medical oraz kampania malware w tysiącach repozytoriów GitHuba."
+  ],
+  "summaryBullets": [
+    "Produkty: OpenAI: produktowy sygnał AI",
+    "Regulacje: Wątek \"AI governance\" z 18 czerwca ma nową, bardziej praktyczną odsłonę",
+    "Regulacje: The Verge opisuje polityczny problem z amerykańską preempcją regulacji AI"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-06-19-0-openai-produktowy-sygnal-ai-ea68596c4e",
+      "section": "Produkty",
+      "title": "OpenAI: produktowy sygnał AI",
+      "standfirst": "OpenAI wprowadziło dla ChatGPT Enterprise nowe analityki zużycia kredytów i limity wydatków. Global Admin Console ma pokazywać użycie ChatGPT i Codex według użytkowników, produktów i modeli, a te same dane mają być dostępne przez Cost API.",
+      "whatHappened": "OpenAI wprowadziło dla ChatGPT Enterprise nowe analityki zużycia kredytów i limity wydatków. Global Admin Console ma pokazywać użycie ChatGPT i Codex według użytkowników, produktów i modeli, a te same dane mają być dostępne przez Cost API.",
+      "whyItMatters": "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: OpenAI wprowadziło dla ChatGPT Enterprise nowe analityki zużycia kredytów i limity wydatków.",
+      "deeperAnalysis": [
+        "OpenAI wprowadziło dla ChatGPT Enterprise nowe analityki zużycia kredytów i limity wydatków. Global Admin Console ma pokazywać użycie ChatGPT i Codex według użytkowników, produktów i modeli, a te same dane mają być dostępne przez Cost API. Source: OpenAI.",
+        "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: OpenAI wprowadziło dla ChatGPT Enterprise nowe analityki zużycia kredytów i limity wydatków.",
+        "Analiza opiera się na źródłach: OpenAI.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI wprowadziło dla ChatGPT Enterprise nowe analityki zużycia kredytów i limity wydatków.",
+        "Dlaczego ważne: produkty pokazują, co użytkownicy realnie zaczną stosować.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/chatgpt-enterprise-spend-controls/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Produkty",
+        "AI",
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-19-1-watek-ai-governance-z-18-czerwca-ma-nowa-bardziej-praktyczna-odslone-4e5b49009f",
+      "section": "Regulacje",
+      "title": "Wątek \"AI governance\" z 18 czerwca ma nową, bardziej praktyczną odsłonę",
+      "standfirst": "Wątek \"AI governance\" z 18 czerwca ma nową, bardziej praktyczną odsłonę: Axios i TVN24 opisują, że administracja USA buduje nieformalną politykę AI przez kontrole eksportu, dobrowolne testowanie, zamówienia publiczne i decyzje wykonawcze zamiast jednej formalnej ustawy. Sources: Axios, TVN24 Biznes.",
+      "whatHappened": "Wątek \"AI governance\" z 18 czerwca ma nową, bardziej praktyczną odsłonę: Axios i TVN24 opisują, że administracja USA buduje nieformalną politykę AI przez kontrole eksportu, dobrowolne testowanie, zamówienia publiczne i decyzje wykonawcze zamiast jednej formalnej ustawy. Sources: Axios, TVN24 Biznes.",
+      "whyItMatters": "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Wątek \"AI governance\" z 18 czerwca ma nową, bardziej praktyczną odsłonę: Axios i TVN24 opisują, że administracja USA buduje nieformalną politykę AI przez kontrole eksportu, dobrowolne testowanie, zamówienia publiczne i decyzje wykonawcze zamiast jednej formalnej ustawy.",
+      "deeperAnalysis": [
+        "Wątek \"AI governance\" z 18 czerwca ma nową, bardziej praktyczną odsłonę: Axios i TVN24 opisują, że administracja USA buduje nieformalną politykę AI przez kontrole eksportu, dobrowolne testowanie, zamówienia publiczne i decyzje wykonawcze zamiast jednej formalnej ustawy. Sources: Axios, TVN24 Biznes.",
+        "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Wątek \"AI governance\" z 18 czerwca ma nową, bardziej praktyczną odsłonę: Axios i TVN24 opisują, że administracja USA buduje nieformalną politykę AI przez kontrole eksportu, dobrowolne testowanie, zamówienia publiczne i decyzje wykonawcze zamiast jednej formalnej ustawy.",
+        "Analiza opiera się na źródłach: Axios, TVN24 Biznes.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Wątek \"AI governance\" z 18 czerwca ma nową, bardziej praktyczną odsłonę: Axios i TVN24 opisują, że administracja USA buduje nieformalną politykę AI przez kontrole eksportu, dobrowolne testowanie, zamówienia publiczne i decyzje wykonawcze zamiast jednej formalnej ustawy.",
+        "Dlaczego ważne: regulacje ustawiają ramy ryzyka i compliance.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Axios",
+          "url": "https://www.axios.com/2026/06/18/trump-shadow-ai-policy"
+        },
+        {
+          "title": "TVN24 Biznes",
+          "url": "https://tvn24.pl/biznes/tech/nieformalna-kontrola-zamiast-przepisow-tak-donald-trump-wplywa-na-rynek-ai-st9102829"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Regulacje",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-19-2-the-verge-opisuje-polityczny-problem-z-amerykanska-preempcja-regulacji-ai-18e91859d9",
+      "section": "Regulacje",
+      "title": "The Verge opisuje polityczny problem z amerykańską preempcją regulacji AI",
+      "standfirst": "The Verge opisuje polityczny problem z amerykańską preempcją regulacji AI: lobby Big Tech chce federalnych zasad nadpisujących przepisy stanowe, ale temat został połączony z ustawami o bezpieczeństwie dzieci online, co tworzy konflikt wokół KOSA i ogranicza szanse szybkiego przyjęcia pakietu. Source: The Verge.",
+      "whatHappened": "The Verge opisuje polityczny problem z amerykańską preempcją regulacji AI: lobby Big Tech chce federalnych zasad nadpisujących przepisy stanowe, ale temat został połączony z ustawami o bezpieczeństwie dzieci online, co tworzy konflikt wokół KOSA i ogranicza szanse szybkiego przyjęcia pakietu. Source: The Verge.",
+      "whyItMatters": "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: The Verge opisuje polityczny problem z amerykańską preempcją regulacji AI: lobby Big Tech chce federalnych zasad nadpisujących przepisy stanowe, ale temat został połączony z ustawami o bezpieczeństwie dzieci online, co tworzy konflikt wokół KOSA i ogranicza szanse szybkiego przyjęcia pakietu.",
+      "deeperAnalysis": [
+        "The Verge opisuje polityczny problem z amerykańską preempcją regulacji AI: lobby Big Tech chce federalnych zasad nadpisujących przepisy stanowe, ale temat został połączony z ustawami o bezpieczeństwie dzieci online, co tworzy konflikt wokół KOSA i ogranicza szanse szybkiego przyjęcia pakietu. Source: The Verge.",
+        "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: The Verge opisuje polityczny problem z amerykańską preempcją regulacji AI: lobby Big Tech chce federalnych zasad nadpisujących przepisy stanowe, ale temat został połączony z ustawami o bezpieczeństwie dzieci online, co tworzy konflikt wokół KOSA i ogranicza szanse szybkiego przyjęcia pakietu.",
+        "Analiza opiera się na źródłach: The Verge.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: The Verge opisuje polityczny problem z amerykańską preempcją regulacji AI: lobby Big Tech chce federalnych zasad nadpisujących przepisy stanowe, ale temat został połączony z ustawami o bezpieczeństwie dzieci online, co tworzy konflikt wokół KOSA i ogranicza szanse szybkiego przyjęcia pakietu.",
+        "Dlaczego ważne: regulacje ustawiają ramy ryzyka i compliance.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/policy/949970/ai-regulation-child-safety-kosa-congress"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Regulacje",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-19-3-openai-nowy-sygnal-ai-afddcf264a",
+      "section": "AI",
+      "title": "OpenAI: nowy sygnał AI",
+      "standfirst": "OpenAI podało, że zbanowało dwa klastry kont ChatGPT prawdopodobnie pochodzące z Chin, używane w operacjach wpływu wokół amerykańskiej debaty o centrach danych AI, cenach energii, taryfach i konkurencji technologicznej. Firma nie znalazła dowodu na istotne przebicie tych kampanii poza własną aktywność operatorów.",
+      "whatHappened": "OpenAI podało, że zbanowało dwa klastry kont ChatGPT prawdopodobnie pochodzące z Chin, używane w operacjach wpływu wokół amerykańskiej debaty o centrach danych AI, cenach energii, taryfach i konkurencji technologicznej. Firma nie znalazła dowodu na istotne przebicie tych kampanii poza własną aktywność operatorów.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI podało, że zbanowało dwa klastry kont ChatGPT prawdopodobnie pochodzące z Chin, używane w operacjach wpływu wokół amerykańskiej debaty o centrach danych AI, cenach energii, taryfach i konkurencji technologicznej.",
+      "deeperAnalysis": [
+        "OpenAI podało, że zbanowało dwa klastry kont ChatGPT prawdopodobnie pochodzące z Chin, używane w operacjach wpływu wokół amerykańskiej debaty o centrach danych AI, cenach energii, taryfach i konkurencji technologicznej. Firma nie znalazła dowodu na istotne przebicie tych kampanii poza własną aktywność operatorów. Source: OpenAI.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI podało, że zbanowało dwa klastry kont ChatGPT prawdopodobnie pochodzące z Chin, używane w operacjach wpływu wokół amerykańskiej debaty o centrach danych AI, cenach energii, taryfach i konkurencji technologicznej.",
+        "Analiza opiera się na źródłach: OpenAI.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI podało, że zbanowało dwa klastry kont ChatGPT prawdopodobnie pochodzące z Chin, używane w operacjach wpływu wokół amerykańskiej debaty o centrach danych AI, cenach energii, taryfach i konkurencji technologicznej.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-19-4-openai-cyberbezpieczenstwo-i-ryzyko-technologiczne-316bf1f3e2",
+      "section": "Cyber",
+      "title": "OpenAI: cyberbezpieczeństwo i ryzyko technologiczne",
+      "standfirst": "OpenAI zapowiedziało grant 7,5 mln USD dla The Alignment Project, funduszu UK AI Security Institute na niezależne badania alignmentu; cały fundusz ma przekraczać 27 mln GBP. To wzmacnia dzisiejszy obraz: safety i governance przechodzą z deklaracji do finansowania oraz procesów.",
+      "whatHappened": "OpenAI zapowiedziało grant 7,5 mln USD dla The Alignment Project, funduszu UK AI Security Institute na niezależne badania alignmentu; cały fundusz ma przekraczać 27 mln GBP. To wzmacnia dzisiejszy obraz: safety i governance przechodzą z deklaracji do finansowania oraz procesów.",
+      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: OpenAI zapowiedziało grant 7,5 mln USD dla The Alignment Project, funduszu UK AI Security Institute na niezależne badania alignmentu; cały fundusz ma przekraczać 27 mln GBP.",
+      "deeperAnalysis": [
+        "OpenAI zapowiedziało grant 7,5 mln USD dla The Alignment Project, funduszu UK AI Security Institute na niezależne badania alignmentu; cały fundusz ma przekraczać 27 mln GBP. To wzmacnia dzisiejszy obraz: safety i governance przechodzą z deklaracji do finansowania oraz procesów. Source: OpenAI.",
+        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: OpenAI zapowiedziało grant 7,5 mln USD dla The Alignment Project, funduszu UK AI Security Institute na niezależne badania alignmentu; cały fundusz ma przekraczać 27 mln GBP.",
+        "Analiza opiera się na źródłach: OpenAI.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI zapowiedziało grant 7,5 mln USD dla The Alignment Project, funduszu UK AI Security Institute na niezależne badania alignmentu; cały fundusz ma przekraczać 27 mln GBP.",
+        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/advancing-independent-research-ai-alignment/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Cyber",
+        "AI",
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-19-5-product-hunt-rano-19-czerwca-pokazuje-wyraznie-agentowy-sygnal-rynkowy-c3753847ac",
+      "section": "Regulacje",
+      "title": "Product Hunt rano 19 czerwca pokazuje wyraźnie agentowy sygnał rynkowy",
+      "standfirst": "Product Hunt rano 19 czerwca pokazuje wyraźnie agentowy sygnał rynkowy: wśród topowych premier są m. in.",
+      "whatHappened": "Product Hunt rano 19 czerwca pokazuje wyraźnie agentowy sygnał rynkowy: wśród topowych premier są m. in.",
+      "whyItMatters": "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Product Hunt rano 19 czerwca pokazuje wyraźnie agentowy sygnał rynkowy: wśród topowych premier są m.",
+      "deeperAnalysis": [
+        "Product Hunt rano 19 czerwca pokazuje wyraźnie agentowy sygnał rynkowy: wśród topowych premier są m.in. Upstream (\"inbox designed for humans and agents\"), Honestly do analizy Reddita i TikToka, Jesse do wyszukiwania live internetu dla sprzedaży, Tabstack Dev Tools do API zamiast scraperów, Elvin jako proaktywne AI oraz Viktor for Microsoft Teams jako \"AI employee\". Miesięczny leaderboard czerwca także jest mocno agentowy: Fundraisly, Bond, Publora, SellerClaw, Browse.sh i Framer AI Agents. Sources: Product Hunt, Product Hunt June 2026.",
+        "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Product Hunt rano 19 czerwca pokazuje wyraźnie agentowy sygnał rynkowy: wśród topowych premier są m.",
+        "Analiza opiera się na źródłach: Product Hunt, Product Hunt June 2026.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Product Hunt rano 19 czerwca pokazuje wyraźnie agentowy sygnał rynkowy: wśród topowych premier są m.",
+        "Dlaczego ważne: regulacje ustawiają ramy ryzyka i compliance.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/"
+        },
+        {
+          "title": "Product Hunt June 2026",
+          "url": "https://www.producthunt.com/leaderboard/monthly/2026/6"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Regulacje",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-19-6-hacker-news-front-i-midjourney-medical-regulacyjny-sygnal-technologiczny-7aa959376d",
+      "section": "Regulacje",
+      "title": "Hacker News front i Midjourney Medical: regulacyjny sygnał technologiczny",
+      "standfirst": "Hacker News podbił jako najważniejszy temat \"Midjourney Medical\". Midjourney zapowiada skaner ultradźwiękowy, 60-sekundowy proces skanowania, pierwszy \"research spa\" w San Francisco w 2027 r.",
+      "whatHappened": "Hacker News podbił jako najważniejszy temat \"Midjourney Medical\". Midjourney zapowiada skaner ultradźwiękowy, 60-sekundowy proces skanowania, pierwszy \"research spa\" w San Francisco w 2027 r.",
+      "whyItMatters": "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Hacker News podbił jako najważniejszy temat \"Midjourney Medical\".",
+      "deeperAnalysis": [
+        "Hacker News podbił jako najważniejszy temat \"Midjourney Medical\". Midjourney zapowiada skaner ultradźwiękowy, 60-sekundowy proces skanowania, pierwszy \"research spa\" w San Francisco w 2027 r. i wskazuje, że kolejnym ograniczeniem będą zgody regulacyjne, w tym FDA. To jest temat technologiczny, nie medyczna rekomendacja. Sources: Hacker News front, Midjourney Medical.",
+        "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Hacker News podbił jako najważniejszy temat \"Midjourney Medical\".",
+        "Analiza opiera się na źródłach: Hacker News front, Midjourney Medical.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Hacker News podbił jako najważniejszy temat \"Midjourney Medical\".",
+        "Dlaczego ważne: regulacje ustawiają ramy ryzyka i compliance.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News front",
+          "url": "https://news.ycombinator.com/front"
+        },
+        {
+          "title": "Midjourney Medical",
+          "url": "https://www.midjourney.com/medical/blogpost"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Regulacje"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-19-7-orchidfiles-i-hacker-news-front-cyberbezpieczenstwo-i-ryzyko-technologiczne-c88592bec8",
+      "section": "Cyber",
+      "title": "OrchidFiles i Hacker News front: cyberbezpieczeństwo i ryzyko technologiczne",
+      "standfirst": "OrchidFiles opisało kampanię dystrybucji malware przez około 10 tys. repozytoriów GitHuba.",
+      "whatHappened": "OrchidFiles opisało kampanię dystrybucji malware przez około 10 tys. repozytoriów GitHuba.",
+      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: OrchidFiles opisało kampanię dystrybucji malware przez około 10 tys.",
+      "deeperAnalysis": [
+        "OrchidFiles opisało kampanię dystrybucji malware przez około 10 tys. repozytoriów GitHuba. Wspólny wzorzec to kopiowane repozytoria, regularnie przepychany commit zmieniający README i link do archiwum ZIP zawierającego trojana; temat był numerem 3 na Hacker News. Sources: OrchidFiles, Hacker News front.",
+        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: OrchidFiles opisało kampanię dystrybucji malware przez około 10 tys.",
+        "Analiza opiera się na źródłach: OrchidFiles, Hacker News front.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: OrchidFiles opisało kampanię dystrybucji malware przez około 10 tys.",
+        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OrchidFiles",
+          "url": "https://orchidfiles.com/github-repositories-distributing-malware/"
+        },
+        {
+          "title": "Hacker News front",
+          "url": "https://news.ycombinator.com/front"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Cyber"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-19-8-google-opublikowalo-androida-17-dla-wiekszosci-wspieranych-urzadzen-pixel-dla-developerow-najwazniejsze-sa-36aaf4d2a9",
+      "section": "Produkty",
+      "title": "Google opublikowało Androida 17 dla większości wspieranych urządzeń Pixel. Dla developerów najważniejsze są",
+      "standfirst": "Google opublikowało Androida 17 dla większości wspieranych urządzeń Pixel. Dla developerów najważniejsze są: AppFunctions jako narzędzia odkrywane przez agentów i Android MCP, standard adaptive-first, brak opt-outu z resizability na dużych ekranach, App Bubbles, Compose-first, nowe limity pamięci, ochrony OTP SMS oraz wsparcie post-quantum cryptography.",
+      "whatHappened": "Google opublikowało Androida 17 dla większości wspieranych urządzeń Pixel. Dla developerów najważniejsze są: AppFunctions jako narzędzia odkrywane przez agentów i Android MCP, standard adaptive-first, brak opt-outu z resizability na dużych ekranach, App Bubbles, Compose-first, nowe limity pamięci, ochrony OTP SMS oraz wsparcie post-quantum cryptography.",
+      "whyItMatters": "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: Google opublikowało Androida 17 dla większości wspieranych urządzeń Pixel.",
+      "deeperAnalysis": [
+        "Google opublikowało Androida 17 dla większości wspieranych urządzeń Pixel. Dla developerów najważniejsze są: AppFunctions jako narzędzia odkrywane przez agentów i Android MCP, standard adaptive-first, brak opt-outu z resizability na dużych ekranach, App Bubbles, Compose-first, nowe limity pamięci, ochrony OTP SMS oraz wsparcie post-quantum cryptography. Source: Android Developers Blog.",
+        "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: Google opublikowało Androida 17 dla większości wspieranych urządzeń Pixel.",
+        "Analiza opiera się na źródłach: Android Developers Blog.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Google opublikowało Androida 17 dla większości wspieranych urządzeń Pixel.",
+        "Dlaczego ważne: produkty pokazują, co użytkownicy realnie zaczną stosować.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Android Developers Blog",
+          "url": "https://android-developers.googleblog.com/2026/06/Android-17.html"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Produkty"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-19-9-tvn24-biznes-produktowy-sygnal-ai-3dfbcda905",
+      "section": "Produkty",
+      "title": "TVN24 Biznes: produktowy sygnał AI",
+      "standfirst": "TVN24 odnotowuje protest kilkuset francuskich dziennikarzy i pracowników prasy przeciw planom zwolnień oraz wykorzystywaniu AI w pracy redakcyjnej. To dobry polski kontekst do szerszego tematu: AI w mediach przechodzi z narzędzia produktywności w spór o warunki pracy i wiarygodność redakcji.",
+      "whatHappened": "TVN24 odnotowuje protest kilkuset francuskich dziennikarzy i pracowników prasy przeciw planom zwolnień oraz wykorzystywaniu AI w pracy redakcyjnej. To dobry polski kontekst do szerszego tematu: AI w mediach przechodzi z narzędzia produktywności w spór o warunki pracy i wiarygodność redakcji.",
+      "whyItMatters": "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: TVN24 odnotowuje protest kilkuset francuskich dziennikarzy i pracowników prasy przeciw planom zwolnień oraz wykorzystywaniu AI w pracy redakcyjnej.",
+      "deeperAnalysis": [
+        "TVN24 odnotowuje protest kilkuset francuskich dziennikarzy i pracowników prasy przeciw planom zwolnień oraz wykorzystywaniu AI w pracy redakcyjnej. To dobry polski kontekst do szerszego tematu: AI w mediach przechodzi z narzędzia produktywności w spór o warunki pracy i wiarygodność redakcji. Source: TVN24 Biznes.",
+        "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: TVN24 odnotowuje protest kilkuset francuskich dziennikarzy i pracowników prasy przeciw planom zwolnień oraz wykorzystywaniu AI w pracy redakcyjnej.",
+        "Analiza opiera się na źródłach: TVN24 Biznes.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: TVN24 odnotowuje protest kilkuset francuskich dziennikarzy i pracowników prasy przeciw planom zwolnień oraz wykorzystywaniu AI w pracy redakcyjnej.",
+        "Dlaczego ważne: produkty pokazują, co użytkownicy realnie zaczną stosować.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes",
+          "url": "https://tvn24.pl/biznes/ze-swiata/protest-dziennikarzy-we-francji-powodem-fale-zwolnien-i-wykorzystanie-ai-w-pracy-st9103234"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Produkty",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-19-10-anthropic-newsroom-i-google-research-blog-nowy-sygnal-ai-9bf6f0aee0",
+      "section": "AI",
+      "title": "Anthropic Newsroom i Google Research Blog: nowy sygnał AI",
+      "standfirst": "Anthropic Newsroom nie pokazał nowego komunikatu z 19 czerwca; najnowsze widoczne pozycje pozostają wokół biura w Seulu z 17 czerwca oraz dyrektywy USA dotyczącej Fable 5 i Mythos 5 z 12 czerwca. Google Research Blog jako najnowszy wpis nadal pokazuje 16 czerwca i temat Earth AI dla odbudowy przyrody.",
+      "whatHappened": "Anthropic Newsroom nie pokazał nowego komunikatu z 19 czerwca; najnowsze widoczne pozycje pozostają wokół biura w Seulu z 17 czerwca oraz dyrektywy USA dotyczącej Fable 5 i Mythos 5 z 12 czerwca. Google Research Blog jako najnowszy wpis nadal pokazuje 16 czerwca i temat Earth AI dla odbudowy przyrody.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Anthropic Newsroom nie pokazał nowego komunikatu z 19 czerwca; najnowsze widoczne pozycje pozostają wokół biura w Seulu z 17 czerwca oraz dyrektywy USA dotyczącej Fable 5 i Mythos 5 z 12 czerwca.",
+      "deeperAnalysis": [
+        "Anthropic Newsroom nie pokazał nowego komunikatu z 19 czerwca; najnowsze widoczne pozycje pozostają wokół biura w Seulu z 17 czerwca oraz dyrektywy USA dotyczącej Fable 5 i Mythos 5 z 12 czerwca. Google Research Blog jako najnowszy wpis nadal pokazuje 16 czerwca i temat Earth AI dla odbudowy przyrody. Sources: Anthropic Newsroom, Google Research Blog.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Anthropic Newsroom nie pokazał nowego komunikatu z 19 czerwca; najnowsze widoczne pozycje pozostają wokół biura w Seulu z 17 czerwca oraz dyrektywy USA dotyczącej Fable 5 i Mythos 5 z 12 czerwca.",
+        "Analiza opiera się na źródłach: Anthropic Newsroom, Google Research Blog.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic Newsroom nie pokazał nowego komunikatu z 19 czerwca; najnowsze widoczne pozycje pozostają wokół biura w Seulu z 17 czerwca oraz dyrektywy USA dotyczącej Fable 5 i Mythos 5 z 12 czerwca.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic Newsroom",
+          "url": "https://www.anthropic.com/news"
+        },
+        {
+          "title": "Google Research Blog",
+          "url": "https://research.google/blog/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "AI w firmach wchodzi w fazę kontroli kosztów",
+      "rationale": "OpenAI pokazuje, że enterprise AI nie jest już tylko adopcją narzędzi, ale kontrolą budżetu, użytkowników, modeli i Codex/ChatGPT w jednym panelu.",
+      "sourcesLabel": "OpenAI"
+    },
+    {
+      "priority": "High",
+      "title": "USA reguluje AI bez nazywania tego regulacją",
+      "rationale": "Kontrole eksportu, dobrowolne testy i zamówienia publiczne zaczynają realnie sterować rynkiem AI, a firmy działają przy małej liczbie jasnych standardów.",
+      "sourcesLabel": "Axios; TVN24; The Verge"
+    },
+    {
+      "priority": "High",
+      "title": "Android 17: telefon jako platforma dla agentów",
+      "rationale": "AppFunctions i Android MCP oznaczają, że aplikacje mają wystawiać lokalne funkcje jako narzędzia dla Gemini i agentów; to może zmienić projektowanie aplikacji mobilnych.",
+      "sourcesLabel": "Android Developers Blog"
+    },
+    {
+      "priority": "High",
+      "title": "10 tys. repozytoriów GitHuba z trojanami",
+      "rationale": "Duży, konkretny wątek cyberbezpieczeństwa i supply-chain: atak podszywa się pod legalne projekty open source, a HN nadał mu mocny sygnał społeczności technicznej.",
+      "sourcesLabel": "OrchidFiles; Hacker News"
+    },
+    {
+      "priority": "Medium",
+      "title": "Midjourney Medical: od generatora obrazów do skanera ciała",
+      "rationale": "Temat jest spektakularny i kontrowersyjny: firma z generatywnego obrazu wchodzi w hardware, ultradźwięki, AI segmentację i regulacje medyczne.",
+      "sourcesLabel": "Midjourney; Hacker News"
+    },
+    {
+      "priority": "Medium",
+      "title": "Product Hunt pokazuje rynek agentów, nie tylko chatbotów",
+      "rationale": "Dzisiejsze premiery i czerwcowy leaderboard są pełne produktów \"agentic\": inboxy, sprzedaż, web automation, social listening, publishing API i AI employees.",
+      "sourcesLabel": "Product Hunt; Product Hunt June 2026"
+    },
+    {
+      "priority": "Medium",
+      "title": "AI jako cel operacji wpływu",
+      "rationale": "OpenAI pokazało, że debata o centrach danych, cenach energii i taryfach AI jest już atrakcyjnym polem dla operacji wpływu.",
+      "sourcesLabel": "OpenAI"
+    },
+    {
+      "priority": "Medium",
+      "title": "AI w redakcjach: produktywność kontra zaufanie i praca",
+      "rationale": "Protest francuskich dziennikarzy nadaje europejski i polsko-zrozumiały kontekst do automatyzacji mediów oraz pytania, gdzie kończy się narzędzie, a zaczyna zastępowanie redakcji.",
+      "sourcesLabel": "TVN24"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI",
+      "url": "https://openai.com/index/chatgpt-enterprise-spend-controls/"
+    },
+    {
+      "title": "Axios",
+      "url": "https://www.axios.com/2026/06/18/trump-shadow-ai-policy"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes/tech/nieformalna-kontrola-zamiast-przepisow-tak-donald-trump-wplywa-na-rynek-ai-st9102829"
+    },
+    {
+      "title": "The Verge",
+      "url": "https://www.theverge.com/policy/949970/ai-regulation-child-safety-kosa-congress"
+    },
+    {
+      "title": "OpenAI",
+      "url": "https://openai.com/index/prc-linked-influence-operations-ai-debates/"
+    },
+    {
+      "title": "OpenAI",
+      "url": "https://openai.com/index/advancing-independent-research-ai-alignment/"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Product Hunt June 2026",
+      "url": "https://www.producthunt.com/leaderboard/monthly/2026/6"
+    },
+    {
+      "title": "Hacker News front",
+      "url": "https://news.ycombinator.com/front"
+    },
+    {
+      "title": "Midjourney Medical",
+      "url": "https://www.midjourney.com/medical/blogpost"
+    },
+    {
+      "title": "OrchidFiles",
+      "url": "https://orchidfiles.com/github-repositories-distributing-malware/"
+    },
+    {
+      "title": "Android Developers Blog",
+      "url": "https://android-developers.googleblog.com/2026/06/Android-17.html"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes/ze-swiata/protest-dziennikarzy-we-francji-powodem-fale-zwolnien-i-wykorzystanie-ai-w-pracy-st9103234"
+    },
+    {
+      "title": "Anthropic Newsroom",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "title": "Google Research Blog",
+      "url": "https://research.google/blog/"
+    },
+    {
+      "title": "Reddit r/technology: Flock cameras discussion signal",
+      "url": "https://www.reddit.com/r/technology/comments/1tq8dn2/cities_are_covering_flock_cameras_with_trash_bags/"
+    }
+  ]
+}

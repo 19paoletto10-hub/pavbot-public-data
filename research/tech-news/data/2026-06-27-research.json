@@ -1,0 +1,329 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-06-27",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run jest materialną aktualizacją. Wczorajszy wątek GPT-5.6 przeszedł z etapu przecieków i relacji redakcyjnych do oficjalnego ograniczonego preview: OpenAI ogłosiło rodzinę GPT-5.6 Sol, Terra i Luna, opisało ceny, tryby max i ultra, dostęp przez API/Codex dla wybranych partnerów oraz start Sol na Cerebras w lipcu. Jednocześnie firma potwierdziła, że lista uczestników preview została udostępniona administracji USA.",
+    "Druga, ważniejsza oś to praktyczny model release governance. AP, Semafor i TechCrunch opisują, że Anthropic Mythos 5 może wrócić do wybranych amerykańskich organizacji krytycznej infrastruktury, podczas gdy Fable 5 pozostaje problemem. To wzmacnia obraz, w którym frontier AI z wysokimi zdolnościami cyber trafia do klientów przez bramkę rządową, a nie przez klasyczny publiczny launch.",
+    "Trzecia oś jest bardziej produktowo-rynkowa: OpenAI zatrudnia byłego szefa Ubera India jako pierwszego managing directora na Indie, Product Hunt pokazuje kolejną falę agentowych produktów, Aseon Labs zbiera 10 mln USD na \"pitstopy\" dla robotaxi, TikTok coraz bardziej zachowuje się jak super app, a spór Corgi/Papermark pokazuje, że provenance kodu open source staje się reputacyjnym ryzykiem dla startupów AI-era."
+  ],
+  "summaryBullets": [
+    "AI: GPT-5.6: oficjalne preview z bramką dostępu",
+    "Cyber: Anthropic Mythos: frontier model wraca przez listę uprawnionych",
+    "Produkty: Indie: OpenAI buduje lokalną strukturę operacyjną"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-06-27-0-gpt-5-6-oficjalne-preview-z-bramka-dostepu-6dd44c818f",
+      "section": "AI",
+      "title": "GPT-5.6: oficjalne preview z bramką dostępu",
+      "standfirst": "OpenAI uruchomiło ograniczone preview GPT-5.6 Sol, Terra i Luna. Dostęp zaczyna się od małej grupy zaufanych partnerów, a pełniejsza dostępność ma ruszyć w kolejnych tygodniach.",
+      "whatHappened": "OpenAI opublikowało oficjalny launch note, ceny modeli i system card dla serii GPT-5.6.",
+      "whyItMatters": "Premiera pokazuje, że najmocniejsze modele AI coraz częściej trafiają na rynek przez kontrolowane preview, audyt cyber i selekcję klientów.",
+      "deeperAnalysis": [
+        "Kontekst release governance jest tu ważniejszy niż sama tabela cen. OpenAI opisuje rodzinę Sol, Terra i Luna jako produkt gotowy do testów API/Codex, ale jednocześnie przyznaje, że startuje od ograniczonej listy partnerów, której status został udostępniony administracji USA.",
+        "System card dodaje drugą warstwę: seria jest klasyfikowana jako High w cyberbezpieczeństwie, lecz poniżej progu Cyber Critical. To ustawia dyskusję wokół tego, kto może testować modele frontier, jak wygląda monitoring agentów kodujących i kiedy vendor powinien opóźnić publiczny launch."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI pokazało GPT-5.6 w ograniczonym preview.",
+        "Dlaczego ważne: dostęp do najmocniejszych modeli coraz częściej zależy od bramek bezpieczeństwa.",
+        "Na co patrzeć dalej: czy ogólna dostępność ruszy w zapowiedzianych tygodniach i czy ograniczenia nie staną się stałym wzorcem."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: Previewing GPT-5.6 Sol",
+          "url": "https://openai.com/index/previewing-gpt-5-6-sol/"
+        },
+        {
+          "title": "OpenAI Deployment Safety Hub: GPT-5.6 Preview System Card",
+          "url": "https://deploymentsafety.openai.com/gpt-5-6-preview"
+        },
+        {
+          "title": "TechCrunch: OpenAI limits GPT-5.6 rollout",
+          "url": "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/"
+        },
+        {
+          "title": "AP: OpenAI and Anthropic limit latest ChatGPT products",
+          "url": "https://apnews.com/article/trump-ai-openai-gpt56-sol-cybersecurity-mythos-065d5398baac7f16c8265c2cb8ba2baa"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "OpenAI",
+        "Regulacje"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-27-1-anthropic-mythos-frontier-model-wraca-przez-liste-uprawnionych-28672d667a",
+      "section": "Cyber",
+      "title": "Anthropic Mythos: frontier model wraca przez listę uprawnionych",
+      "standfirst": "Mythos 5 ma wrócić do wybranych amerykańskich organizacji krytycznej infrastruktury i cyberobrony. Fable 5 pozostaje osobnym problemem po wcześniejszej dyrektywie rządu USA.",
+      "whatHappened": "AP, Semafor i TechCrunch opisały częściowe odblokowanie modelu Anthropic Mythos 5 dla ograniczonego grona klientów.",
+      "whyItMatters": "To praktyczny przykład licencjonowania frontier AI bez jednej formalnej ustawy: decyzje dostępowe zapadają model po modelu i klient po kliencie.",
+      "deeperAnalysis": [
+        "Anthropic wcześniej komunikował, że Fable 5 i Mythos 5 zostały objęte rządową dyrektywą, a dostęp dla cudzoziemców został zawieszony. Dzisiejsze relacje pokazują drugą fazę: nie całkowite uwolnienie modelu, tylko selektywny powrót tam, gdzie rząd i vendor uznają zastosowanie za defensywne.",
+        "Project Glasswing jest kluczowym kontekstem, bo firma przedstawiała Mythos jako narzędzie dla cyberobrońców i maintainerów krytycznego software'u. Dla rynku oznacza to nową klasę produktu AI: technicznie bardzo użyteczną, ale dystrybuowaną pod warunkiem zaufania, kontroli i opisu zastosowania."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic Mythos 5 ma trafić do wybranych podmiotów w USA.",
+        "Dlaczego ważne: granica między modelem produktowym a infrastrukturą krytyczną staje się coraz mniej oczywista.",
+        "Na co patrzeć dalej: czy podobne bramki dostępu obejmą kolejne modele cyber i agentic coding."
+      ],
+      "sources": [
+        {
+          "title": "AP: OpenAI and Anthropic limit latest ChatGPT products",
+          "url": "https://apnews.com/article/trump-ai-openai-gpt56-sol-cybersecurity-mythos-065d5398baac7f16c8265c2cb8ba2baa"
+        },
+        {
+          "title": "Semafor: US releases powerful Anthropic model Mythos",
+          "url": "https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies"
+        },
+        {
+          "title": "TechCrunch: Trump Admin releases Anthropic Mythos",
+          "url": "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/"
+        },
+        {
+          "title": "Anthropic: Project Glasswing",
+          "url": "https://www.anthropic.com/glasswing"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Anthropic",
+        "Cyber",
+        "Regulacje"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-27-2-indie-openai-buduje-lokalna-strukture-operacyjna-77b29966ad",
+      "section": "Produkty",
+      "title": "Indie: OpenAI buduje lokalną strukturę operacyjną",
+      "standfirst": "OpenAI zatrudniło Prabhjeeta Singha, byłego szefa Uber India and South Asia, jako pierwszego managing directora w Indiach. TechCrunch opisuje Indie jako drugi największy rynek OpenAI po USA.",
+      "whatHappened": "OpenAI obsadziło lokalnego lidera odpowiedzialnego za wzrost konsumencki, enterprise, partnerstwa, regulatorów i operacje.",
+      "whyItMatters": "Indie przestają być wyłącznie rynkiem użytkowników AI; stają się polem walki o dystrybucję, relacje z administracją i wdrożenia firmowe.",
+      "deeperAnalysis": [
+        "Zatrudnienie menedżera z Ubera jest sygnałem, że OpenAI potrzebuje w Indiach nie tylko marketingu, ale też operacyjnej maszyny do partnerstw, pricingu, compliance i enterprise sales. To podobny wzorzec jak w platformach mobilnych: skala użytkowników wymusza lokalne decyzje produktowe.",
+        "Dla polskiego słuchacza ten wątek jest ważny jako benchmark globalizacji AI. Jeżeli największe firmy modelowe będą budować country management dla rynków o strategicznej skali, to regulacje, języki, płatności i lokalne partnerstwa mogą stać się tak samo ważne jak benchmarki modeli."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI ma pierwszego managing directora w Indiach.",
+        "Dlaczego ważne: rynek AI przechodzi z fazy globalnego API do lokalnej dystrybucji i relacji regulacyjnych.",
+        "Na co patrzeć dalej: partnerstwa enterprise, lokalne ceny oraz pozycja OpenAI wobec IndiaAI i konkurentów chmurowych."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: OpenAI poaches Uber India chief",
+          "url": "https://techcrunch.com/2026/06/26/openai-poaches-uber-india-chief-to-lead-its-biggest-market-outside-the-u-s/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "OpenAI",
+        "Indie",
+        "Enterprise"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-27-3-robotaxi-ekonomie-autonomii-buduje-zaplecze-operacyjne-2f4a829910",
+      "section": "Infrastruktura",
+      "title": "Robotaxi: ekonomię autonomii buduje zaplecze operacyjne",
+      "standfirst": "Aseon Labs zebrał 10 mln USD seed na miejskie punkty obsługi robotaxi. Startup chce czyścić, ładować i inspectować pojazdy bliżej tras, zamiast odsyłać je do dużych depotów.",
+      "whatHappened": "TechCrunch opisał finansowanie Aseon Labs i model małych autonomicznych \"pitstopów\" dla flot robotaxi.",
+      "whyItMatters": "Komercjalizacja autonomicznego transportu zależy nie tylko od modelu jazdy, ale też od martwych kilometrów, ładowania, czyszczenia i real estate.",
+      "deeperAnalysis": [
+        "Ten temat jest dobrym antidotum na narrację, że robotaxi to wyłącznie problem AI driving stack. Nawet jeżeli pojazd jeździ sam, flota nadal potrzebuje inspekcji, energii, sprzątania, szybkiego serwisu i punktów rozmieszczonych tak, aby nie niszczyć ekonomii kursów pustymi przejazdami.",
+        "Aseon Labs celuje w warstwę operacyjną, którą użytkownik widzi dopiero wtedy, gdy jej zabraknie: dostępność pojazdów, higiena kabiny i czas powrotu auta do pracy. To przesuwa rozmowę o autonomii z laboratorium na logistykę miasta."
+      ],
+      "contextPoints": [
+        "Co się stało: startup chce budować miejskie pitstopy dla robotaxi.",
+        "Dlaczego ważne: infrastruktura obsługi może decydować o marży autonomicznej floty.",
+        "Na co patrzeć dalej: partnerstwa z operatorami robotaxi i lokalizacje pierwszych punktów."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: Aseon Labs robotaxi pitstops",
+          "url": "https://techcrunch.com/2026/06/26/this-silicon-valley-startup-has-raised-10m-to-build-pitstops-to-clean-and-charge-robotaxis/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Robotaxi",
+        "Infrastruktura",
+        "Transport"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-27-4-tiktok-droga-do-super-appki-zachodu-c0280db3fc",
+      "section": "Produkty",
+      "title": "TikTok: droga do super appki Zachodu",
+      "standfirst": "TechCrunch zebrał sygnały, że TikTok rozszerza się poza feed wideo: sport, commerce, hotel booking i fintech. Platforma coraz mocniej zachowuje się jak brama do codziennych usług.",
+      "whatHappened": "TikTok rozwija funkcje transakcyjne i usługowe, które zbliżają go do modelu super app.",
+      "whyItMatters": "To kontrapunkt do newsów stricte AI: najwięksi gracze walczą również o wyszukiwanie, zakupy, rezerwacje i płatności.",
+      "deeperAnalysis": [
+        "TikTok nie musi wygrać każdego rynku usług, żeby zmienić zachowania użytkowników. Jeżeli platforma skraca drogę od inspiracji wideo do transakcji, to zaczyna rywalizować z wyszukiwarkami, marketplace'ami, OTA i aplikacjami finansowymi naraz.",
+        "Dla firm technologicznych to ostrzeżenie, że \"AI features\" nie są jedynym kierunkiem ekspansji platform. Równie ważne jest posiadanie dystrybucji, danych intencji oraz momentu, w którym użytkownik jest gotowy kupić, zarezerwować albo sprawdzić usługę."
+      ],
+      "contextPoints": [
+        "Co się stało: TikTok testuje i rozwija kolejne warstwy usług poza wideo.",
+        "Dlaczego ważne: platformy społecznościowe próbują przejąć intencję użytkownika przed klasycznym wyszukiwaniem.",
+        "Na co patrzeć dalej: regulacje, fintech w Brazylii i tempo integracji booking/commercial features."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: TikTok's road to becoming a super app",
+          "url": "https://techcrunch.com/2026/06/26/tiktoks-road-to-becoming-a-super-app/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "TikTok",
+        "Platformy",
+        "Commerce"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "GPT-5.6 jest oficjalny, ale nie dla wszystkich",
+      "rationale": "Wczorajszy temat zmienił się z relacji o opóźnieniu w oficjalny produkt: Sol, Terra i Luna mają ceny, tryby pracy i ograniczony dostęp przez API/Codex. Najciekawsze jest to, że launch produktu AI wygląda teraz jak proces zatwierdzania infrastruktury krytycznej.",
+      "sourcesLabel": "OpenAI; TechCrunch; AP; HN"
+    },
+    {
+      "priority": "High",
+      "title": "Mythos wraca tylko przez bramkę rządu",
+      "rationale": "Częściowe odblokowanie Anthropic Mythos 5 pokazuje, że amerykański rząd nie tylko hamuje modele, ale też wybiera, którym cyber-obrońcom wolno używać najmocniejszych narzędzi. To praktyczny test \"frontier model licensing\" bez pełnej ustawy.",
+      "sourcesLabel": "AP; Semafor; Anthropic; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "System card GPT-5.6 mówi: agenci są mocniejsi i bardziej ryzykowni",
+      "rationale": "OpenAI pokazuje jednocześnie nowe zdolności cyber, automatyczne red-teamingi i problemy agentowe typu nadmierna uporczywość. To świetny temat do wyjaśnienia, dlaczego bezpieczeństwo agentów to nie tylko jailbreaki.",
+      "sourcesLabel": "OpenAI Deployment Safety Hub; OpenAI"
+    },
+    {
+      "priority": "Medium",
+      "title": "Indie stają się drugim polem bitwy OpenAI",
+      "rationale": "Zatrudnienie byłego szefa Uber India jako pierwszego country directora łączy produkt, enterprise, partnerstwa i regulatorów. Dobrze spina wcześniejsze tematy IndiaAI, AWS India i WhatsApp/CRED.",
+      "sourcesLabel": "TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Product Hunt: każdy buduje agenta albo pamięć dla agenta",
+      "rationale": "Agent Arena, Gemini Spark, note.md, Atlas i ModuleX pokazują, że makerzy budują nie tylko chatboty, ale rankingi agentów, pamięć lokalną, kontekst firmowy, MCP i workflow człowiek+AI.",
+      "sourcesLabel": "Product Hunt; Hacker News"
+    },
+    {
+      "priority": "Medium",
+      "title": "Robotaxi potrzebuje zaplecza, nie tylko autonomii",
+      "rationale": "Aseon Labs pokazuje przyziemną warstwę autonomicznego transportu: czyszczenie, ładowanie, inspekcja i real estate mogą decydować o ekonomii robotaxi tak samo jak model jazdy.",
+      "sourcesLabel": "TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "TikTok próbuje być super appką Zachodu",
+      "rationale": "Sport, zakupy, booking hoteli, wyszukiwanie i fintech pokazują, że TikTok nie chce być tylko feedem wideo. Dla odbiorcy w Polsce to dobry temat o platformach, które stają się bramą do codziennych usług.",
+      "sourcesLabel": "TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Era AI zaostrza spory o open source i nadzór",
+      "rationale": "Corgi/Papermark pokazuje problem zaufania do startupów budowanych na OSS, a Diamandis/WIRED pokazują kulturowy zwrot ku wszechobecnemu nadzorowi. To dwa różne, ale podcastowo mocne przykłady technologii bez jasnego kontraktu społecznego.",
+      "sourcesLabel": "TechCrunch; WIRED"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI",
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol/"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/26/openai-limits-gpt-5-6-rollout-after-government-request-says-restrictions-shouldnt-be-the-norm/"
+    },
+    {
+      "title": "GPT-5.6 Preview System Card",
+      "url": "https://deploymentsafety.openai.com/gpt-5-6-preview"
+    },
+    {
+      "title": "AP",
+      "url": "https://apnews.com/article/trump-ai-openai-gpt56-sol-cybersecurity-mythos-065d5398baac7f16c8265c2cb8ba2baa"
+    },
+    {
+      "title": "Anthropic",
+      "url": "https://www.anthropic.com/news/fable-mythos-access"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/26/trump-admin-releases-anthropic-mythos-to-be-used-by-more-than-100-us-companies-agencies/"
+    },
+    {
+      "title": "Semafor",
+      "url": "https://www.semafor.com/article/06/27/2026/us-releases-powerful-anthropic-model-mythos-to-some-us-companies"
+    },
+    {
+      "title": "Anthropic Project Glasswing",
+      "url": "https://www.anthropic.com/glasswing"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/26/openai-poaches-uber-india-chief-to-lead-its-biggest-market-outside-the-u-s/"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/26/this-silicon-valley-startup-has-raised-10m-to-build-pitstops-to-clean-and-charge-robotaxis/"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/news"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/26/corgi-the-buzzy-y-combinator-backed-insurance-tech-startup-says-it-didnt-steal-an-open-source-product/"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/26/tiktoks-road-to-becoming-a-super-app/"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/26/xprize-founder-says-humans-behave-better-when-theyre-being-watched/"
+    },
+    {
+      "title": "WIRED",
+      "url": "https://www.wired.com/story/how-qatar-became-fifas-technology-test-lab/"
+    },
+    {
+      "title": "OpenAI Help Center: A preview of GPT-5.6 Sol, Terra, and Luna",
+      "url": "https://help.openai.com/en/articles/20001325-a-preview-of-gpt-56-sol-terra-and-luna"
+    },
+    {
+      "title": "old Reddit / r/technology",
+      "url": "https://old.reddit.com/r/technology/"
+    },
+    {
+      "title": "TVN24 Biznes / Tech",
+      "url": "https://tvn24.pl/biznes/tech"
+    },
+    {
+      "title": "WP Tech: Sztuczna inteligencja",
+      "url": "https://tech.wp.pl/sztuczna-inteligencja%2Ctemat%2C6016396972122753"
+    },
+    {
+      "title": "Business Insider Polska: Technologie",
+      "url": "https://businessinsider.com.pl/technologie"
+    },
+    {
+      "title": "Komputer Świat: Sztuczna inteligencja",
+      "url": "https://www.komputerswiat.pl/nauka-i-technika/sztuczna-inteligencja"
+    }
+  ]
+}

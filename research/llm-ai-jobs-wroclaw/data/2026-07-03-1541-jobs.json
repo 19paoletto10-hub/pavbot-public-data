@@ -1,0 +1,289 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-07-03",
+  "runTime": "15:41",
+  "executiveSummary": "To jest wyraźny Material update: po wczorajszym boardowym klastrze wrócił mocny first-party sygnał z Sii, a Capgemini dołożyło kolejną oficjalną rolę wokół agentic AI. Równolegle pojawił się świeży publiczny batch SNI, B3 Consulting Poland i MailerLite dla pracy zdalnej z Polski. Najważniejsza negatywna obserwacja tej rundy: nowo wykryta karta Holisticon Connect Senior ML Platform Reliability & Infrastructure Engineer jest już publicznie oznaczona jako Offer expired, więc nie promuję jej do shortlisty aktywnych ofert.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "AI Architect – GenAI & Cloud (f/m/x)",
+      "company": "Sii",
+      "location": "Whole Poland remote / hybrid-office",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "knowledge-grounded AI systems, agent frameworks, model serving, data infrastructure, Azure/AWS/GCP, Python",
+      "whyInteresting": "to rzadki first-party sygnał architektoniczny, ale nadal bardzo techniczny i bliski wdrożeń produkcyjnych, z naciskiem na zamykanie luki między prototypem a systemem uruchomionym w produkcji.",
+      "uncertainty": "rola jest bardziej senior-architect niż czysty IC, więc dla części kandydatów może być mniej hands-on niż typowy LLM engineer.",
+      "sourceURLs": [
+        "https://sii.pl/en/job-ads/id/37068/ai-architect-genai-cloud-f-m-x"
+      ],
+      "tags": [
+        "GenAI",
+        "Python",
+        "AWS",
+        "Azure",
+        "GCP"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Generative AI & Data Engineer (f/m/x)",
+      "company": "Sii",
+      "location": "Whole Poland remote / hybrid-office",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM, RAG, embeddings, vector search, Azure AI Search, Python/PySpark",
+      "whyInteresting": "najmocniejszy nowy first-party IC sygnał tej rundy; wygląda na rolę łączącą delivery GenAI z twardym data engineeringiem i enterprise rolloutem.",
+      "uncertainty": "publiczna karta nie pokazuje salary, więc porównanie do boardowych widełek konkurencji pozostaje ograniczone.",
+      "sourceURLs": [
+        "https://sii.pl/en/job-ads/id/37346/generative-ai-data-engineer-f-m-x"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI",
+        "Python",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Solution Architect / Agentic AI",
+      "company": "Capgemini",
+      "location": "Wrocław + multiple PL locations / hybrid",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Agentic AI, Azure AI services, Copilot Studio, Power Apps, document processing pipelines, integration architecture",
+      "whyInteresting": "kolejny oficjalny Capgemini lead przesuwający shortlistę w stronę enterprise agentic AI, dokument processingu i architektury wdrożeń na stacku Microsoft.",
+      "uncertainty": "podobnie jak przy Sii to rola bliżej solution architecture niż typowego MLE, ale nadal jasno osadzona w technicznym delivery AI.",
+      "sourceURLs": [
+        "https://careers.capgemini.com/job-invite/509366/"
+      ],
+      "tags": [
+        "Agentic AI",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "GenAI Architect (AI&Data)",
+      "company": "Accenture",
+      "location": "Wrocław + remote Poland / hybrid",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "autonomous agentic AI ecosystems, enterprise AI strategy, LLMOps, evaluation pipelines, prompt management, cost monitoring",
+      "whyInteresting": "Accenture rozszerza wrocławski klaster z końca czerwca o kolejną rolę wokół agentic ecosystems i enterprise governance, co podbija wagę tej firmy jako regularnego źródła.",
+      "uncertainty": "oficjalna karta jest wielolokalizacyjna, a miejski sygnał Wrocław pochodzi z publicznego mirroru, więc warto pilnować dalszego driftu city aliasów.",
+      "sourceURLs": [
+        "https://www.accenture.com/pl-pl/careers/jobdetails?id=R00318996_en&title=Principal+Agentic+Architecture+%26+Enterprise+AI+Expert+%28AI%26Data%29",
+        "https://justjoin.it/job-offer/accenture-principal-agentic-architecture-enterprise-ai-expert-ai-data--wroclaw-architecture"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM",
+        "GenAI",
+        "LLMOps",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "GenAI Platform Engineer",
+      "company": "SNI",
+      "location": "Warszawa / remote Poland",
+      "workMode": "Remote",
+      "compensation": "160-180 PLN net/h B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLMOps, AWS SageMaker, Bedrock, deployment, serving, monitoring, infra dla LLM",
+      "whyInteresting": "mocny, praktyczny sygnał wokół platformy LLMOps, wdrożeń i monitoringu modeli, a nie tylko budowy samych promptów czy demo-agentów.",
+      "uncertainty": "rola jest board-first i pochodzi od pośrednika, więc warto szybko szukać bardziej kanonicznej karty.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/sni-genai-platform-engineer-warszawa-ai"
+      ],
+      "tags": [
+        "LLM",
+        "GenAI",
+        "LLMOps",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "GenAI Engineer (GCP)",
+      "company": "SNI",
+      "location": "Warszawa / remote Poland",
+      "workMode": "Remote",
+      "compensation": "160-180 PLN net/h B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Vertex AI, LLM, multimodal models, fine-tuning, agentic workflows, RAG",
+      "whyInteresting": "czytelny hands-on fit do produkcyjnych modeli i multimodal/LLM workloads na GCP, z wyraźnym naciskiem na fine-tuning i optymalizację.",
+      "uncertainty": "board-first karta; możliwy szybki drift tytułu lub pojawienie się osobnego employer URL.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/sni-genai-engineer-gcp--warszawa-ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM",
+        "GenAI",
+        "GCP"
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "AI Engineer",
+      "company": "B3 Consulting Poland",
+      "location": "Warszawa / remote Poland",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM integration, embeddings, reranking, prompt engineering, RAG, agentic systems",
+      "whyInteresting": "to świeży remote-Poland lead z praktycznym profilem jakościowym, gdzie AI jest wyraźnie rolą inżynierską, a nie dopiskiem do data work.",
+      "uncertainty": "brak first-party strony i brak publicznej salary, więc na razie to sygnał do monitorowania bardziej niż natychmiastowy top pick.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/b3-consulting-poland-ai-engineer-warszawa-ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 8,
+      "title": "Machine Learning Engineer",
+      "company": "MailerLite",
+      "location": "Poland (Remote)",
+      "workMode": "Remote",
+      "compensation": "55 000-80 000 EUR gross/year",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM work, fine-tuning, RAG, agentic assistant, product-facing ML",
+      "whyInteresting": "jedna z nielicznych aktualnie publicznych, w pełni remote-Poland ofert z wyraźnym produkcyjnym wątkiem fine-tuning i goal-driven assistantów na własnych danych.",
+      "uncertainty": "karta pozostaje board-first; warto sprawdzić, czy istnieje bezpośrednia strona MailerLite z tym samym URL albo szerszym opisem.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/mailerlite-machine-learning-engineer-poland-remote--ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Sii wróciło do shortlisty first-party z dwoma nowymi, aktywnymi rolami:",
+    "Capgemini dołożyło nową oficjalną kartę Solution Architect / Agentic AI,",
+    "Accenture poszerzyło wrocławski klaster o GenAI Architect (AI&Data).",
+    "SNI otworzyło dwa nowe publiczne tory: GenAI Platform Engineer i",
+    "B3 Consulting Poland i MailerLite dodały dwa nowe remote-Poland leady",
+    "Holisticon Connect Senior ML Platform Reliability & Infrastructure Engineer"
+  ],
+  "risks": [
+    "Dzisiejsza runda ma mieszany charakter: najmocniejsze nowe role z Sii i",
+    "Nowe role architektoniczne (Sii, Capgemini, Accenture) są mocno",
+    "Holisticon pokazał dziś kolejny sygnał deadline churn: świeżo wykryta",
+    "City/remote wording nadal potrafi driftować między official page a board"
+  ],
+  "recommendedActions": [
+    "W następnej rundzie priorytetowo sprawdź, czy Sii AI Architect,",
+    "Jeśli pojawią się kanoniczne strony pracodawcy dla SNI, B3 Consulting",
+    "Utrzymaj monitoring Holisticon, bo nowe karty tej firmy nadal potrafią"
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Wrocław AI/ML board",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: all-locations AI/ML board",
+      "url": "https://justjoin.it/job-offers/all-locations/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Sii: AI Architect – GenAI & Cloud (f/m/x)",
+      "url": "https://sii.pl/en/job-ads/id/37068/ai-architect-genai-cloud-f-m-x",
+      "status": "checked"
+    },
+    {
+      "title": "Sii: AI Engineer – GenAI & Cloud (f/m/x)",
+      "url": "https://sii.pl/en/job-ads/id/37069/ai-engineer-genai-cloud-f-m-x",
+      "status": "checked"
+    },
+    {
+      "title": "Sii: Generative AI & Data Engineer (f/m/x)",
+      "url": "https://sii.pl/en/job-ads/id/37346/generative-ai-data-engineer-f-m-x",
+      "status": "checked"
+    },
+    {
+      "title": "Capgemini Careers: Solution Architect / Agentic AI",
+      "url": "https://careers.capgemini.com/job-invite/509366/",
+      "status": "checked"
+    },
+    {
+      "title": "Capgemini Careers: GCP AI Developer",
+      "url": "https://careers.capgemini.com/job/Warszawa-GCP-AI-Developer/1383470933/",
+      "status": "checked"
+    },
+    {
+      "title": "Accenture official: GenAI Architect (AI&Data)",
+      "url": "https://www.accenture.com/pl-pl/careers/jobdetails?id=R00318996_en&title=Principal+Agentic+Architecture+%26+Enterprise+AI+Expert+%28AI%26Data%29",
+      "status": "checked"
+    },
+    {
+      "title": "Accenture board mirror: GenAI Architect (AI&Data)",
+      "url": "https://justjoin.it/job-offer/accenture-principal-agentic-architecture-enterprise-ai-expert-ai-data--wroclaw-architecture",
+      "status": "checked"
+    },
+    {
+      "title": "SNI: GenAI Platform Engineer",
+      "url": "https://justjoin.it/job-offer/sni-genai-platform-engineer-warszawa-ai",
+      "status": "checked"
+    },
+    {
+      "title": "SNI: GenAI Engineer (GCP)",
+      "url": "https://justjoin.it/job-offer/sni-genai-engineer-gcp--warszawa-ai",
+      "status": "checked"
+    },
+    {
+      "title": "B3 Consulting Poland: AI Engineer",
+      "url": "https://justjoin.it/job-offer/b3-consulting-poland-ai-engineer-warszawa-ai",
+      "status": "checked"
+    },
+    {
+      "title": "MailerLite: Machine Learning Engineer",
+      "url": "https://justjoin.it/job-offer/mailerlite-machine-learning-engineer-poland-remote--ai",
+      "status": "checked"
+    },
+    {
+      "title": "Holisticon Connect: Senior ML Platform Reliability & Infrastructure Engineer",
+      "url": "https://justjoin.it/job-offer/holisticon-connect-senior-ml-platform-reliability-infrastructure-engineer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai careers",
+      "url": "https://deepsense.ai/careers/",
+      "status": "checked"
+    },
+    {
+      "title": "Tooploox careers",
+      "url": "https://tooploox.com/careers",
+      "status": "checked"
+    },
+    {
+      "title": "Addepto careers",
+      "url": "https://addepto.com/career/",
+      "status": "checked"
+    },
+    {
+      "title": "CDQ careers",
+      "url": "https://www.cdq.com/about/careers",
+      "status": "checked"
+    }
+  ]
+}

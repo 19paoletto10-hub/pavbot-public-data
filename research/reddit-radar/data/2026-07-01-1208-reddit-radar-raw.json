@@ -1,0 +1,614 @@
+{
+  "id": "humor-2026-07-01-1208",
+  "title": "<RR> Reddit Radar",
+  "summary": "Kategorie: dev, AI, technology, mildlyinfuriating, memy. Najmocniej wybija się: <u>weAllHateThis</u>.",
+  "generatedAt": "2026-07-01T10:08:55.142982+00:00",
+  "displayTime": "12:08",
+  "nextRefreshAt": "2026-07-01T14:06:00+02:00",
+  "refreshIntervalHours": 2,
+  "items": [
+    {
+      "id": "https-www-reddit-com-r-programmerhumor-comments--cd22bb0732",
+      "title": "weAllHateThis",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://www.reddit.com/r/ProgrammerHumor/comments/1uke2f5/weallhatethis/",
+      "imageURL": "https://i.redd.it/ftnczlnfekah1.jpeg",
+      "score": 3444,
+      "comments": 87,
+      "tags": [
+        "memy",
+        "dev"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "redditCreatedAt": "2026-07-01T06:45:55.339000+00:00",
+      "whyFunny": "Zart trafia w klasyczny koszmar devow: odpalasz ten sam build drugi raz i zamiast poprawy dostajesz jeszcze wiecej czerwonych testow, wiec pipeline wyglada jakby sam robil sobie psikusa.",
+      "rawCommentSnippets": [
+        {
+          "body": "Jokes on you, 379 tests failed",
+          "score": 437
+        },
+        {
+          "body": "Damn only a third? I wish.",
+          "score": 74
+        },
+        {
+          "body": "Run it again after changing nothing, 463 failed tests.",
+          "score": 68
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top komentarz dopowiada, ze po pierwszym rerunie liczba awarii rośnie do 379 testow.",
+          "originalBody": "Jokes on you, 379 tests failed",
+          "explanation": "To rozwija mema o flakujacych testach: nic nie zmieniasz, a CI i tak znajduje nowy poziom porazki, co w devowym swiecie brzmi az za znajomo.",
+          "score": 437
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi komentarz ironizuje, ze tylko jedna trzecia czerwonych testow to i tak luksus.",
+          "originalBody": "Damn only a third? I wish.",
+          "explanation": "Puenta dziala, bo w wielu zespolach niestabilny build jest tak normalny, ze nawet katastrofa bywa traktowana jak przyzwoity wynik.",
+          "score": 74
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzeci komentujacy podbija absurd: po kolejnym rerunie, mimo braku zmian, pada juz 463 testow.",
+          "originalBody": "Run it again after changing nothing, 463 failed tests.",
+          "explanation": "Humor bierze sie z eskalacji: kazdy kolejny przebieg powinien uspokajac, a tutaj zachowuje sie jak generator nowej losowej awarii.",
+          "score": 68
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Przejrzano post i top komentarze w Safari read-only; wybrano 3 bezpieczne puenty o flakujacym CI.",
+      "radarKey": "https://www.reddit.com/r/programmerhumor/comments/1uke2f5/weallhatethis",
+      "radarFirstSeenAt": "2026-07-01T10:08:55.142982+00:00",
+      "radarLastSeenAt": "2026-07-01T10:08:55.142982+00:00"
+    },
+    {
+      "id": "https-www-reddit-com-r-technology-comments-1ujsz-f84dd26fa8",
+      "title": "County With 37 Data Centers Asks Schools to ‘Conserve Electricity’ / Henrico County is a major hub for data centers in Virginia. Its officials said it expects a 25% rise in electricity costs next year, and advised workers to close the blinds and turn off their computers to make up for it.",
+      "caption": "AI robi swoje, ludzie robią screeny, internet robi resztę.",
+      "sourceName": "r/technology",
+      "sourceURL": "https://www.reddit.com/r/technology/comments/1ujszte/county_with_37_data_centers_asks_schools_to/",
+      "imageURL": "https://www.404media.co/henrico-virginia-datacenter-energy-cost-email/",
+      "score": 7510,
+      "comments": 415,
+      "tags": [
+        "AI"
+      ],
+      "categoryLabel": "AI",
+      "postText": null,
+      "redditCreatedAt": "2026-06-30T15:51:21.094000+00:00",
+      "whyFunny": "Absurd polega na tym, ze hrabstwo najpierw wpuszcza dziesiatki energozernych data center, a potem każe szkolom gasic komputery i zaslaniac okna, jakby to uczniowie byli winni rachunkom.",
+      "rawCommentSnippets": [
+        {
+          "body": "They are consuming excessive amounts of resources and asking others to save electricity, Those data centers should disappear",
+          "score": 2225
+        },
+        {
+          "body": "We've heard the same nonsense in California on using water while almond farms still operate by flooding orchards to water them and converting other farmland, like for grapes, into almond orchards as well. Then they tell us to not wash our cars or conserve more water.",
+          "score": 855
+        },
+        {
+          "body": "Hashtag Why I Don’t Buy Almond Milk",
+          "score": 274
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Najmocniejszy komentarz punktuje, ze najwiecej pradu zuzywaja same data center, a oszczedzanie zrzuca sie na reszte.",
+          "originalBody": "They are consuming excessive amounts of resources and asking others to save electricity, Those data centers should disappear",
+          "explanation": "Komentarz lapie glowna ironie watku: najwiekszy gracz pożera zasoby, ale moralizowanie spada na zwyklych mieszkancow i szkoly.",
+          "score": 2225
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi komentarz porownuje to do kalifornijskich apeli o oszczedzanie wody, kiedy przemysl dalej leje ja litrami.",
+          "originalBody": "We've heard the same nonsense in California on using water while almond farms still operate by flooding orchards to water them and converting other farmland, like for grapes, into almond orchards as well. Then they tell us to not wash our cars or conserve more water.",
+          "explanation": "Rozszerza zart na klasyczny internetowy motyw: zwyklym ludziom sprzedaje sie wyrzeczenia, podczas gdy prawdziwy koszt siedzi po stronie wielkiej infrastruktury.",
+          "score": 855
+        },
+        {
+          "id": "comment-3",
+          "summary": "Hasztag o nieskupowaniu mleka migdalowego zamienia cala dyskusje w bardzo redditowy skręt konsumencki.",
+          "originalBody": "Hashtag Why I Don’t Buy Almond Milk",
+          "explanation": "Krotka puenta jest smieszna, bo z powaznej debaty o energetyce robi natychmiastowy wyrzut sumienia przy sklepowej polce.",
+          "score": 274
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Przejrzano post i top komentarze w Safari read-only; wybrano 3 bezpieczne komentarze o ironii oszczedzania pradu.",
+      "radarKey": "https://www.reddit.com/r/technology/comments/1ujszte/county_with_37_data_centers_asks_schools_to",
+      "radarFirstSeenAt": "2026-07-01T08:07:48.731644+00:00",
+      "radarLastSeenAt": "2026-07-01T10:08:55.142982+00:00"
+    },
+    {
+      "id": "https-www-reddit-com-r-technology-comments-1uk2p-9b379b7deb",
+      "title": "Old Reddit gets login requirement; Reddit “can’t promise” site will always exist",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/technology",
+      "sourceURL": "https://www.reddit.com/r/technology/comments/1uk2pw7/old_reddit_gets_login_requirement_reddit_cant/",
+      "imageURL": "https://arstechnica.com/gadgets/2026/06/reddit-will-require-you-to-log-in-to-use-old-reddit-com/",
+      "score": 3559,
+      "comments": 651,
+      "tags": [
+        "trend"
+      ],
+      "categoryLabel": "technology",
+      "postText": null,
+      "redditCreatedAt": "2026-06-30T21:48:24.194000+00:00",
+      "whyFunny": "Smiesznosc jest tu nostalgiczna: internet patrzy, jak stary, brzydki, ale ukochany interfejs znowu dostaje sygnal, ze moze zostac wylaczony, wiec komentarze brzmia jak stypa po dawnych forach.",
+      "rawCommentSnippets": [
+        {
+          "body": "Do other “forum” sites like Reddit even exist anymore?",
+          "score": 1744
+        },
+        {
+          "body": "Tech forums can be quite active, and you also have the federated alternatives. But something with the same user base? I don't think we'll ever have it again.",
+          "score": 941
+        },
+        {
+          "body": "Remember when digg came back for about a week?",
+          "score": 319
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Pierwszy komentarz pyta juz nie o Old Reddit, tylko czy w ogole istnieja jeszcze fora tej skali.",
+          "originalBody": "Do other “forum” sites like Reddit even exist anymore?",
+          "explanation": "To uruchamia wspolny kryzys wieku sredniego internetu: niby mowa o jednym widoku strony, a w tle wszyscy zegnaja cala epoke forow.",
+          "score": 1744
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi komentarz przyznaje, ze sa alternatywy, ale drugiego molocha z takim ruchem raczej juz nie bedzie.",
+          "originalBody": "Tech forums can be quite active, and you also have the federated alternatives. But something with the same user base? I don't think we'll ever have it again.",
+          "explanation": "Zamiast bohaterskiej obrony starego UI dostajemy spokojne pogodzenie sie z tym, ze wspolny internet raczej sie juz nie sklei w jednym miejscu.",
+          "score": 941
+        },
+        {
+          "id": "comment-3",
+          "summary": "Wzmianka o tym, ze powrot Digga trwal mniej wiecej tydzien, sluzy za caly dowod w sprawie.",
+          "originalBody": "Remember when digg came back for about a week?",
+          "explanation": "Ta linijka bawi, bo jednym zdaniem podsumowuje los wszystkich wielkich powrotow dawnych platform: duzo nostalgii, malo zycia.",
+          "score": 319
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Przejrzano post i top komentarze w Safari read-only; wybrano 3 bezpieczne komentarze o umierajacych forach.",
+      "radarKey": "https://www.reddit.com/r/technology/comments/1uk2pw7/old_reddit_gets_login_requirement_reddit_cant",
+      "radarFirstSeenAt": "2026-07-01T08:07:48.731644+00:00",
+      "radarLastSeenAt": "2026-07-01T10:08:55.142982+00:00"
+    },
+    {
+      "id": "https-www-reddit-com-r-mildlyinfuriating-comment-99a7cade8c",
+      "title": "No lights at all. Driving 35 in a 55. Nearly ended them. We're all lucky that I was enjoying slow drive home and was not a distracted driver.",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://www.reddit.com/r/mildlyinfuriating/comments/1uk8b2y/no_lights_at_all_driving_35_in_a_55_nearly_ended/",
+      "imageURL": "https://i.redd.it/9eww1hhuxiah1.jpeg",
+      "score": 5442,
+      "comments": 166,
+      "tags": [
+        "trend"
+      ],
+      "categoryLabel": "mildlyinfuriating",
+      "postText": "I didn't even see the guy in the black coat until 30 seconds after slamming on my brakes. I only saw the white shirt guy at the last second. Edit. They're on mopeds.",
+      "redditCreatedAt": "2026-07-01T01:51:08.046000+00:00",
+      "whyFunny": "Post dziala jak przypadkowy crossover drogi i horroru: dwa ledwo widoczne skutery wygladaja bardziej jak zjawy niz uczestnicy ruchu, wiec komentarze odruchowo uciekaja w popkulturowy strach.",
+      "rawCommentSnippets": [
+        {
+          "body": "Why does this look like a horror movie lol",
+          "score": 5943
+        },
+        {
+          "body": "Guy on the right looks like our old friend slender",
+          "score": 1728
+        },
+        {
+          "body": "They almost were real ghosts.",
+          "score": 86
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top komentarz od razu nazywa ten kadr tym, czym wyglada: scena z horroru.",
+          "originalBody": "Why does this look like a horror movie lol",
+          "explanation": "To najcelniej lapie komiczny kontrast: formalnie chodzi o ruch drogowy, ale wizualnie wszystko wyglada jak tani jumpscare.",
+          "score": 5943
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi komentarz porownuje sylwetke z prawej do Slender Mana.",
+          "originalBody": "Guy on the right looks like our old friend slender",
+          "explanation": "Porownanie jest zabawne, bo oddaje nieludzki, cienisty zarys postaci wylaniajacej sie z ciemnosci praktycznie bez swiatel.",
+          "score": 1728
+        },
+        {
+          "id": "comment-3",
+          "summary": "Sucha puenta dodaje, ze za chwile moglyby to byc juz prawdziwe duchy.",
+          "originalBody": "They almost were real ghosts.",
+          "explanation": "To czarny humor na minimalnej dawce: komentujacy obraca grozna sytuacje w jednozdaniowy dowcip o tym, jak blisko bylo katastrofy.",
+          "score": 86
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Przejrzano post i top komentarze w Safari read-only; wybrano 3 bezpieczne komentarze opisujace kadr jak scene z horroru.",
+      "radarKey": "https://www.reddit.com/r/mildlyinfuriating/comments/1uk8b2y/no_lights_at_all_driving_35_in_a_55_nearly_ended",
+      "radarFirstSeenAt": "2026-07-01T06:09:30.277842+00:00",
+      "radarLastSeenAt": "2026-07-01T10:08:55.142982+00:00"
+    },
+    {
+      "id": "https-www-reddit-com-r-memes-comments-1uk7h1g-no-8ab14e11f2",
+      "title": "Noooooooooooooooooooooo",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://www.reddit.com/r/memes/comments/1uk7h1g/noooooooooooooooooooooo/",
+      "imageURL": "https://i.redd.it/c4gv4lxqqiah1.jpeg",
+      "score": 2488,
+      "comments": 45,
+      "tags": [
+        "memy"
+      ],
+      "categoryLabel": "memy",
+      "postText": null,
+      "redditCreatedAt": "2026-07-01T01:11:19.953000+00:00",
+      "whyFunny": "Meme zeruje na jednym z najbardziej uniwersalnych mikrokoszmarow: sni ci sie, ze juz bylo za pozno, budzisz sie spanikowany, a najwieksza ulga dnia jest sucha posciel.",
+      "rawCommentSnippets": [
+        {
+          "body": "Waking up knowing I went in my dream but my body has the self control to keep from wetting the bed",
+          "score": 235
+        },
+        {
+          "body": "Ah dreams where your looking for the bathroom. I hate those.",
+          "score": 193
+        },
+        {
+          "body": "I've experienced both. It makes it even more of a relief when you're sure it feels real in the dream, remember about the real world, wake up and find that everything's bone dry.",
+          "score": 13
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Najlepszy komentarz opisuje glowna ulge mema: w snie juz po wszystkim, a organizm jednak utrzymal kontrole.",
+          "originalBody": "Waking up knowing I went in my dream but my body has the self control to keep from wetting the bed",
+          "explanation": "To dziala, bo kazdy natychmiast rozpoznaje ten moment paniki, po ktorym przychodzi absurdalnie wielka duma z wlasnej fizjologii.",
+          "score": 235
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi komentarz sprowadza zart do klasycznego snu o goraczkowym szukaniu lazienki.",
+          "originalBody": "Ah dreams where your looking for the bathroom. I hate those.",
+          "explanation": "Puenta trafia, bo to wspolny internetowy koszmar, ktory nie potrzebuje zadnego dodatkowego kontekstu.",
+          "score": 193
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzeci komentarz dopowiada, ze najzabawniejsza jest ta chwila, gdy sen brzmi realnie, a po przebudzeniu wszystko jednak jest suche.",
+          "originalBody": "I've experienced both. It makes it even more of a relief when you're sure it feels real in the dream, remember about the real world, wake up and find that everything's bone dry.",
+          "explanation": "To buduje komiczny kontrast miedzy katastrofa w glowie a kompletnie zwyczajnym, suchym finalem w realu.",
+          "score": 13
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Przejrzano post i top komentarze w Safari read-only; wybrano 3 bezpieczne komentarze o koszmarze z szukaniem toalety.",
+      "radarKey": "https://www.reddit.com/r/memes/comments/1uk7h1g/noooooooooooooooooooooo",
+      "radarFirstSeenAt": "2026-07-01T06:09:30.277842+00:00",
+      "radarLastSeenAt": "2026-07-01T10:08:55.142982+00:00"
+    },
+    {
+      "id": "https-www-reddit-com-r-facepalm-comments-1ujxyva-62593848d6",
+      "title": "Utah Cops Claim They Smell Alcohol on EVERYONE: “I mean I’m wearing Versace.”",
+      "caption": "AI robi swoje, ludzie robią screeny, internet robi resztę.",
+      "sourceName": "r/facepalm",
+      "sourceURL": "https://www.reddit.com/r/facepalm/comments/1ujxyva/utah_cops_claim_they_smell_alcohol_on_everyone_i/",
+      "imageURL": "https://youtube.com/shorts/SmqbVzaoYuo?is=_sSPyA5aenMmJTo9",
+      "score": 1519,
+      "comments": 168,
+      "tags": [
+        "AI"
+      ],
+      "categoryLabel": "AI",
+      "postText": "This is a compilation of Utah cops doing what they call “play differently”.",
+      "redditCreatedAt": "2026-06-30T18:51:26.436000+00:00",
+      "whyFunny": "Tutaj zabawnosc miesza sie z irytacja: funkcjonariusze brzmia jakby mieli jedna absurdalna wymowke na wszystko, a linia o Versace zamienia policyjna powage w prawie sitcomowa scene.",
+      "rawCommentSnippets": [
+        {
+          "body": "For those who followed the Bricks and Minifigs Lawsuit. The UTAH cops in that video said the EXACT same thing. The corruption of the Utah police needs a federal investigation. But I know that won't happen. Edit: Didn't realize that exact video was going to be included in this. Fucking crazy",
+          "score": 1000
+        },
+        {
+          "body": "Genuinely every cop in America says “This is X, we do things different around here,” or something like that; always think their department means something.",
+          "score": 141
+        },
+        {
+          "body": "I wish they'd asked \"what's so different about how you do things around here?\" What can the cop even answer? \"We don't respect civil rights?\"",
+          "score": 63
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top komentarz podkresla, ze to nie jednorazowy klip, tylko kolejna odslona tego samego utahskiego schematu.",
+          "originalBody": "For those who followed the Bricks and Minifigs Lawsuit. The UTAH cops in that video said the EXACT same thing. The corruption of the Utah police needs a federal investigation. But I know that won't happen. Edit: Didn't realize that exact video was going to be included in this. Fucking crazy",
+          "explanation": "To nadaje zartowi skale serialu: widzowie nie smieja sie z jednej wpadki, tylko z tego, jak regularnie wraca ten sam absurdalny tekst.",
+          "score": 1000
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi komentarz robi z frazy \"u nas robi sie inaczej\" ogolnoamerykanski mem o lokalnych szeryfach.",
+          "originalBody": "Genuinely every cop in America says “This is X, we do things different around here,” or something like that; always think their department means something.",
+          "explanation": "Humor bierze sie z rozpoznawalnosci: wystarczy jedno zdanie, by cala policyjna improwizacja zabrzmiala jak gotowy catchphrase z serialu.",
+          "score": 141
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzecia puenta pyta sarkastycznie, co niby jest tak wyjatkowego w tych metodach poza ignorowaniem praw obywatelskich.",
+          "originalBody": "I wish they'd asked \"what's so different about how you do things around here?\" What can the cop even answer? \"We don't respect civil rights?\"",
+          "explanation": "Komentarz jest ostry, ale celny: rozbraja policyjny slogan jednym pytaniem i pokazuje, jak szybko powaga sceny zamienia sie w absurd.",
+          "score": 63
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Przejrzano post i top komentarze w Safari read-only; wybrano 3 bezpieczne komentarze o powtarzalnym policyjnym absurdzie.",
+      "radarKey": "https://www.reddit.com/r/facepalm/comments/1ujxyva/utah_cops_claim_they_smell_alcohol_on_everyone_i",
+      "radarFirstSeenAt": "2026-07-01T06:09:30.277842+00:00",
+      "radarLastSeenAt": "2026-07-01T10:08:55.142982+00:00"
+    },
+    {
+      "id": "https-www-reddit-com-r-memes-comments-1ukc1to-gg-e04c917232",
+      "title": "Ggs to my cat",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://www.reddit.com/r/memes/comments/1ukc1to/ggs_to_my_cat/",
+      "imageURL": "https://i.redd.it/q31iikutujah1.jpeg",
+      "score": 1064,
+      "comments": 29,
+      "tags": [
+        "memy"
+      ],
+      "categoryLabel": "memy",
+      "postText": null,
+      "redditCreatedAt": "2026-07-01T04:56:00.974000+00:00",
+      "whyFunny": "Zart bierze dramatyczny jezyk gamingu i MCU, zeby opisac zakup RAM-u jak ofiare z ukochanego kota, wiec skala poswiecenia jest absurdalnie nieadekwatna do komputerowego upgradu.",
+      "rawCommentSnippets": [
+        {
+          "body": "\"In order to take the stone, you must lose that which you love. A soul for a soul.\" - Red Skull",
+          "score": 332
+        },
+        {
+          "body": "honestly, that cats face is kinda breaking my heart a little bit ;-; i hope you get really good RAM though! >.<",
+          "score": 278
+        },
+        {
+          "body": "That cat worths 6400 MT/s bandwidth modules, even without ears",
+          "score": 68
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Najlepszy komentarz wrzuca kota prosto do sceny z Vormiru: za kamien, a tu za RAM, trzeba oddac to, co sie kocha.",
+          "originalBody": "\"In order to take the stone, you must lose that which you love. A soul for a soul.\" - Red Skull",
+          "explanation": "To od razu ustawia mem w epickiej skali, przez co zwykly upgrade komputera zaczyna wygladac jak marvelowski dramat.",
+          "score": 332
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi komentarz przyznaje, ze mina kota rozwala cala bohaterska narracje i budzi wiecej wspolczucia niz ekscytacji upgradem.",
+          "originalBody": "honestly, that cats face is kinda breaking my heart a little bit ;-; i hope you get really good RAM though! >.<",
+          "explanation": "Humor bierze sie z kontrastu: techniczny zakup brzmi dumnie, ale twarz kota sprawia, ze internet automatycznie staje po stronie futrzaka.",
+          "score": 278
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzeci komentarz wycenia kota w jednostkach przepustowosci RAM-u, jakby byl pozycja w benchmarku.",
+          "originalBody": "That cat worths 6400 MT/s bandwidth modules, even without ears",
+          "explanation": "Nerdowski detal o MT/s podkreca zart, bo komentujacy traktuje zwierzaka jak walute w sklepie z podzespolami.",
+          "score": 68
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Przejrzano post i top komentarze w Safari read-only; wybrano 3 bezpieczne komentarze rozwijajace motyw \"soul for a soul\".",
+      "radarKey": "https://www.reddit.com/r/memes/comments/1ukc1to/ggs_to_my_cat",
+      "radarFirstSeenAt": "2026-07-01T06:09:30.277842+00:00",
+      "radarLastSeenAt": "2026-07-01T10:08:55.142982+00:00"
+    },
+    {
+      "id": "https-www-reddit-com-r-mildlyinfuriating-comment-0f96df8230",
+      "title": "AirBnB trying to charge an extra $150 for \"severe dirtiness\" and being left in an \"upsetting state\"",
+      "caption": "AI robi swoje, ludzie robią screeny, internet robi resztę.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://www.reddit.com/r/mildlyinfuriating/comments/1ujxt1g/airbnb_trying_to_charge_an_extra_150_for_severe/",
+      "imageURL": "https://www.reddit.com/gallery/1ujxt1g",
+      "score": 9333,
+      "comments": 1481,
+      "tags": [
+        "AI"
+      ],
+      "categoryLabel": "AI",
+      "postText": "The pictures were sent by the cleaners after we requested photos of \"the state we left it in\" The messages she said: \"The trash was not thrown it was full, there was a pan full of used oil. Food stuck all over the table runner and in the kid bedroom upstairs there was foil with a burnt side with substance. My cleaner charged me an extra $150 due to the sever dirtiness. If you took pictures before you left please share because what i walked into was very upsetting and it needs to be cleaned very thoroughly due to the used foil with substance. I have families and children that stay here.\" \"The…",
+      "redditCreatedAt": "2026-06-30T18:45:34.234000+00:00",
+      "whyFunny": "To bardziej internetowa farsa niz zwykly rant: gospodarz probuje dorzucic oplate za balagan, a komentarze natychmiast wyweszyly, ze dowody wygladaja na generowane albo inscenizowane, wiec watek skreca w komedie o AI-smieciach.",
+      "rawCommentSnippets": [
+        {
+          "body": "Zoom into the labels in the bin, clearly AI. Don't pay a thing and report to Airbnb, they likely won't do anything so then out them on any social you can",
+          "score": 11985
+        },
+        {
+          "body": "Yeah that’s wild because I swear you emptied the bin and took this photo before leaving. See how easy it is",
+          "score": 5367
+        },
+        {
+          "body": "Pretty rude of them after the huge tip OP left them",
+          "score": 2589
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Najwyzej oceniony komentarz twierdzi, ze etykiety w koszu wygladaja tak podejrzanie, iz cala scena pachnie AI.",
+          "originalBody": "Zoom into the labels in the bin, clearly AI. Don't pay a thing and report to Airbnb, they likely won't do anything so then out them on any social you can",
+          "explanation": "Reddit lubi moment, gdy ktos probuje zagrac maly scam, a tlum zamienia sie w amatorskie laboratorium od pikselowej kryminalistyki.",
+          "score": 11985
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi komentarz odwroca sytuacje: skoro zdjecie mozna zrobic komus po fakcie, to taki \"dowod\" nic juz nie znaczy.",
+          "originalBody": "Yeah that’s wild because I swear you emptied the bin and took this photo before leaving. See how easy it is",
+          "explanation": "Ta riposta jest smieszna, bo jednym zdaniem rozbraja cala powage oskarzenia i pokazuje, jak latwo sfabrykowac narracje.",
+          "score": 5367
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzecia puenta sugeruje, ze rzekomy balagan byl po prostu wyjatkowo chamskim \"napiwkiem\" dla gospodarza.",
+          "originalBody": "Pretty rude of them after the huge tip OP left them",
+          "explanation": "Dziala przez sucha przewrotke znaczen: tip zwykle jest mily, a tutaj staje sie sarkastyczna etykieta dla calej afery.",
+          "score": 2589
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Przejrzano post i top komentarze w Safari read-only; wybrano 3 bezpieczne komentarze o podejrzanie wygenerowanych \"dowodach\".",
+      "radarKey": "https://www.reddit.com/r/mildlyinfuriating/comments/1ujxt1g/airbnb_trying_to_charge_an_extra_150_for_severe",
+      "radarFirstSeenAt": "2026-07-01T04:14:52.269554+00:00",
+      "radarLastSeenAt": "2026-07-01T10:08:55.142982+00:00"
+    },
+    {
+      "id": "https-www-reddit-com-r-mildlyinfuriating-comment-8bd3a4c11d",
+      "title": "Received a kiss on the cheek and then had an allergic reaction to it.",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://www.reddit.com/r/mildlyinfuriating/comments/1uk6axg/received_a_kiss_on_the_cheek_and_then_had_an/",
+      "imageURL": "https://styles.redditmedia.com/t5_2ubgg/styles/communityIcon_lkxajjefezh51.png?width=96&height=96&frame=1&auto=webp&crop=96%3A96%2Csmart&s=136e3888f37faf10919f51a00a35281a38ed4a93",
+      "score": 3163,
+      "comments": 452,
+      "tags": [
+        "trend"
+      ],
+      "categoryLabel": "mildlyinfuriating",
+      "postText": null,
+      "redditCreatedAt": "2026-07-01T00:17:20.657000+00:00",
+      "whyFunny": "Post jest smieszny przez szkolny poziom skojarzen: dorosla sytuacja nagle zamienia sie w zart o \"cooties\", jakby internet wrocil do czwartej klasy w ciagu jednego refreshu.",
+      "rawCommentSnippets": [
+        {
+          "body": "Haven't seen a case of cooties this bad since the 4th Grade.",
+          "score": 5975
+        },
+        {
+          "body": "Was it a lip gloss or a chapstick that you're allergic to?",
+          "score": 5044
+        },
+        {
+          "body": "Oh I see you're allergic to old man",
+          "score": 9566
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Pierwszy komentarz natychmiast cofa cala historie do podstawowki i klasycznego strachu przed \"cooties\".",
+          "originalBody": "Haven't seen a case of cooties this bad since the 4th Grade.",
+          "explanation": "To otwiera watek dokladnie tam, gdzie internet chce isc: z doroslego problemu robi dziecinny, absurdalny zart o zarazkach od buziaka.",
+          "score": 5975
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugie pytanie podejrzewa blyszczyk albo pomadke, jakby sprawa miala rozsądne kosmetyczne wyjasnienie.",
+          "originalBody": "Was it a lip gloss or a chapstick that you're allergic to?",
+          "explanation": "Dziala, bo przez chwile wszystko brzmi jak zwykla alergia kontaktowa, zanim watek znowu skreci w strone absurdu.",
+          "score": 5044
+        },
+        {
+          "id": "comment-3",
+          "summary": "Najmocniejsza puenta podsumowuje wszystko brutalnie prosto: wychodzi na to, ze alergia byla po prostu na starego faceta.",
+          "originalBody": "Oh I see you're allergic to old man",
+          "explanation": "To zamyka zart jednym ciosem, bo zamiast medycznej diagnozy dostajemy najbardziej zlosliwie prosta odpowiedz mozliwa.",
+          "score": 9566
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Przejrzano post i top komentarze w Safari read-only; wybrano 3 bezpieczne komentarze o \"cooties\" i alergii na starszego pana.",
+      "radarKey": "https://www.reddit.com/r/mildlyinfuriating/comments/1uk6axg/received_a_kiss_on_the_cheek_and_then_had_an",
+      "radarFirstSeenAt": "2026-07-01T02:25:09.774047+00:00",
+      "radarLastSeenAt": "2026-07-01T10:08:55.142982+00:00"
+    },
+    {
+      "id": "https-www-reddit-com-r-programmerhumor-comments--dfc9f3e188",
+      "title": "realityCheck",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://www.reddit.com/r/ProgrammerHumor/comments/1ujx0uz/realitycheck/",
+      "imageURL": "https://styles.redditmedia.com/t5_2tex6/styles/communityIcon_70ds7qqgfr8b1.png?width=96&height=96&frame=1&auto=webp&crop=96%3A96%2Csmart&s=1549f96d9024ad4452835e52f098b6ca9bbd89b7",
+      "score": 1230,
+      "comments": 59,
+      "tags": [
+        "memy",
+        "dev"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "redditCreatedAt": "2026-06-30T18:17:18.280000+00:00",
+      "whyFunny": "Meme wbija szpile w dyskusje o \"vibe coderach\": zamiast fantazji, ze juniorzy z AI przejmuja rynek, komentarze sprowadzaja wszystko do brutalnej rzeczywistosci, ze i tak wszyscy szukaja seniorow.",
+      "rawCommentSnippets": [
+        {
+          "body": "What world are you living in? The industry is only hiring seniors who can do the vibing more competently.",
+          "score": 1196
+        },
+        {
+          "body": "People love to make up reasons to justify their problems.",
+          "score": 245
+        },
+        {
+          "body": "Meet the person years before the interview. Ideally, as a roommate or a frat brother. See if your brother in law is hiring?",
+          "score": 48
+        }
+      ],
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top komentarz odwraca caly paniczny slogan: nawet do \"vibingu\" rynek woli seniora.",
+          "originalBody": "What world are you living in? The industry is only hiring seniors who can do the vibing more competently.",
+          "explanation": "To bawi, bo zamiast sci-fi o AI zabierajacym etaty dostajemy bardzo przyziemna prawde o rynku, ktory i tak premiuje doswiadczenie.",
+          "score": 1196
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi komentarz sugeruje, ze internet lubi wymyslac modne wymowki dla starych problemow.",
+          "originalBody": "People love to make up reasons to justify their problems.",
+          "explanation": "Puenta jest celna, bo zdejmuje nadmuchany technologiczny dramat i zostawia zwykla ludzka potrzebe znalezienia winnego.",
+          "score": 245
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzeci komentarz sprowadza karierowe marzenia do znajomosci: najlepiej poznac rekrutera lata przed rozmowa.",
+          "originalBody": "Meet the person years before the interview. Ideally, as a roommate or a frat brother. See if your brother in law is hiring?",
+          "explanation": "Zart dziala przez cynizm: po calej debacie o AI finalnie wygrywa najstarsza technologia rynku pracy, czyli uklady.",
+          "score": 48
+        }
+      ],
+      "commentAnalysisStatus": "reviewed",
+      "commentAnalysisSource": "codex-computer-use-safari",
+      "commentAnalysisNote": "Przejrzano post i top komentarze w Safari read-only; wybrano 3 bezpieczne komentarze o rynku pracy i \"vibingu\".",
+      "radarKey": "https://www.reddit.com/r/programmerhumor/comments/1ujx0uz/realitycheck",
+      "radarFirstSeenAt": "2026-07-01T02:25:09.774047+00:00",
+      "radarLastSeenAt": "2026-07-01T10:08:55.142982+00:00"
+    }
+  ],
+  "source": "Codex Safari Reddit radar"
+}

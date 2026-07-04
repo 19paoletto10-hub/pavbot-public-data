@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-25",
+  "runTime": "17:23",
+  "executiveSummary": "Popołudniowa runda z 2026-06-25 17:23 CEST przyniosła pięć nowych, wcześniej nieśledzonych publicznych ról pasujących do scope: DEVAPO, SCALO, VeloBank, XTB i Link Group. Najmocniejszy sygnał stricte LLMOps / agentic daje dziś XTB, które wprost szuka osoby odpowiedzialnej za strategię LLMOps, agentic workflows, MCP servers i evaluation-driven development. Najmocniejszy sygnał remote-first dla praktycznego delivery enterprise AI to z kolei SCALO, gdzie opis jest bardzo konkretny w obszarach LLM, tool calling, guardrails, ewaluacji i obserwowalności. DEVAPO i VeloBank wnoszą dwa różne profile produkcyjnego AI engineeringu: od klientowych systemów RAG i agentów w wielu branżach po bankowy zespół AI z Azure OpenAI, embeddingami i aplikacjami konwersacyjnymi. Link Group daje nowy sygnał Wrocław + remote, ale nadal jest to oferta board-first, bez kanonicznej strony pracodawcy. Poprzednio obserwowane źródła CKSource/Tiugo, deepsense.ai, Acaisoft, KYOTU i Rossmann nie pokazały w tej rundzie nowej materialnej zmiany.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior AI Engineer",
+      "company": "XTB",
+      "location": "Remote, karta pokazuje Warszawa +4 Locations.",
+      "workMode": "Remote",
+      "compensation": "5 489 - 6 969 USD gross / month na umowie o pracę.",
+      "seniority": "Senior",
+      "fitSummary": "LLMOps, agentic workflows, MCP servers, RAG-eval,",
+      "whyInteresting": "jedna z najmocniejszych nowych publicznych ról dla",
+      "uncertainty": "źródło jest boardowe (Just Join IT), a nie bezpośrednia karta",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/xtb-senior-ai-engineer-warszawa-ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM",
+        "LLMOps"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior AI Engineer",
+      "company": "SCALO",
+      "location": "Remote; karta jest przypięta do Kraków.",
+      "workMode": "Remote",
+      "compensation": "7 416 - 7 548 USD net / month B2B.",
+      "seniority": "Senior",
+      "fitSummary": "produkcyjne aplikacje LLM, tool calling, integracje API,",
+      "whyInteresting": "bardzo precyzyjny, produkcyjny opis pracy z LLM,",
+      "uncertainty": "źródło jest publicznym boardem; brak znalezionej w tej rundzie",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/scalo-senior-ai-engineer-krakow-ai-b489131b"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "AI / LLM Engineer",
+      "company": "DEVAPO",
+      "location": "Whole Poland (remote work).",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM-powered applications, RAG systems, LangChain,",
+      "whyInteresting": "dobra mid-level rola z praktycznym, klientowym",
+      "uncertainty": "brak publicznej strony careers pracodawcy z tym samym canonical",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/ai-llm-engineer-warszawa-aleje-jerozolimskie-100%2Coferta%2C1004870453"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "AI Architect/Senior AI Engineer",
+      "company": "Link Group",
+      "location": "Wrocław +9, Remote.",
+      "workMode": "Remote",
+      "compensation": "40 - 46 USD net / h B2B.",
+      "seniority": "Senior",
+      "fitSummary": "LLM, RAG, Generative AI, AI automation, LangChain,",
+      "whyInteresting": "nowy sygnał Wrocław + remote, z wyraźnym",
+      "uncertainty": "oferta jest board-first i nie udało się w tej rundzie znaleźć",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/link-group-ai-architect-senior-ai-engineer-wroclaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "AI Engineerka / AI Engineer",
+      "company": "VeloBank",
+      "location": "publicznie Remote; karta doprecyzowuje pracę zdalną z",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Azure OpenAI, LangChain / LangGraph, FastAPI, embeddingi,",
+      "whyInteresting": "mocny fintechowy sygnał dla inżyniera, który buduje",
+      "uncertainty": "źródło jest boardowe (Just Join IT) i wymaga w następnej rundzie",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/velobank-s-a--ai-engineerka-ai-engineer-warszawa-ai"
+      ],
+      "tags": [
+        "Azure"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano pięć nowych, wcześniej nieśledzonych ról: DEVAPO, SCALO,",
+    "Najsilniejszy nowy sygnał LLMOps / agentic / MCP pochodzi z XTB.",
+    "Najsilniejszy nowy sygnał remote-first dla produkcyjnego Pythonowego delivery",
+    "CKSource/Tiugo, deepsense.ai, Acaisoft, KYOTU i Rossmann zostały"
+  ],
+  "risks": [
+    "Cztery z pięciu nowych ról są w tej rundzie potwierdzone publicznie głównie",
+    "Rossmann nadal pozostaje częściowo niespójny między hubem ofert i mirrorami",
+    "T-Mobile nadal jest szumne źródłowo: publiczne listy wyników nadal pokazują"
+  ],
+  "recommendedActions": [
+    "Wykonana akcja niskiego ryzyka: dodano do Seen Opportunities nowe role",
+    "Wykonana akcja niskiego ryzyka: zaktualizowano Current Understanding,",
+    "Follow-up: w następnej rundzie sprawdzić, czy nowe role dostaną lepsze",
+    "Follow-up: ponownie zweryfikować T-Mobile DevOps Engineer (AI Solutions),"
+  ],
+  "checkedSources": [
+    {
+      "title": "DEVAPO - AI / LLM Engineer",
+      "url": "https://www.pracuj.pl/praca/ai-llm-engineer-warszawa-aleje-jerozolimskie-100%2Coferta%2C1004870453",
+      "status": "checked"
+    },
+    {
+      "title": "SCALO - Senior AI Engineer",
+      "url": "https://justjoin.it/job-offer/scalo-senior-ai-engineer-krakow-ai-b489131b",
+      "status": "checked"
+    },
+    {
+      "title": "VeloBank - AI Engineerka / AI Engineer",
+      "url": "https://justjoin.it/job-offer/velobank-s-a--ai-engineerka-ai-engineer-warszawa-ai",
+      "status": "checked"
+    },
+    {
+      "title": "XTB - Senior AI Engineer",
+      "url": "https://justjoin.it/job-offer/xtb-senior-ai-engineer-warszawa-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Link Group - AI Architect/Senior AI Engineer",
+      "url": "https://justjoin.it/job-offer/link-group-ai-architect-senior-ai-engineer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "CKSource careers",
+      "url": "https://cksource.com/careers/",
+      "status": "checked-no-material-change"
+    },
+    {
+      "title": "Tiugo Technologies - Principal AI Engineer",
+      "url": "https://tiugotech.recruitee.com/o/principal-ai-engineer",
+      "status": "checked-no-material-change"
+    },
+    {
+      "title": "deepsense.ai careers",
+      "url": "https://deepsense.ai/careers/",
+      "status": "checked-no-material-change"
+    },
+    {
+      "title": "Acaisoft careers",
+      "url": "https://www.acaisoft.com/careers",
+      "status": "checked-no-material-change"
+    },
+    {
+      "title": "KYOTU - AI Engineer (GenAI / RAG / Agentic AI)",
+      "url": "https://www.pracuj.pl/praca/ai-engineer-genai-rag-agentic-ai-warszawa-poniatowskiego-1%2Coferta%2C1004868105",
+      "status": "checked-no-material-change"
+    },
+    {
+      "title": "Rossmann - Pracuj w IT hub",
+      "url": "https://kariera.rossmann.pl/pracuj-w-it",
+      "status": "checked"
+    }
+  ]
+}

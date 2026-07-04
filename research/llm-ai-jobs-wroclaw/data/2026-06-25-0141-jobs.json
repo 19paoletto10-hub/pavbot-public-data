@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-25",
+  "runTime": "01:41",
+  "executiveSummary": "Runda z 2026-06-25 01:41 CEST przyniosła trzy materialne sygnały. Po pierwsze, CKSource / Tiugo Technologies otworzył nową oficjalną rolę Principal Applied AI Engineer, która jest jedną z najmocniejszych publicznych ofert remote w Polsce dla praktycznych systemów agentowych i AI-assisted engineering. Po drugie, Accenture uruchomił nowy oficjalny klaster Wrocław +3 / hybrid z rolami ML/AI Engineer with Snowflake (AI&Data), GenAI Engineer (Mid) i Senior GenAI Engineer, mocno osadzonymi w LLM, RAG, agentic workflows i produkcyjnym delivery. Trzecia materialna zmiana dotyczy Rossmann: oficjalna strona szczegółowa AI / LLMOps Engineer jest teraz publicznie dostępna pod kanonicznym URL-em /20287 i wprost deklaruje pracę w trybie hybrydowym lub zdalnym, co zawęża wcześniejszy konflikt między listą Łódź-only a publicznymi mirrorami opisującymi remote/hybrid. deepsense.ai i Acaisoft nie pokazały w tej rundzie nowej materialnej zmiany.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Principal Applied AI Engineer",
+      "company": "CKSource / Tiugo Technologies",
+      "location": "Remote; hub kariery pokazuje Remote Warsaw Poznań,",
+      "workMode": "Remote",
+      "compensation": "38 000-45 000 PLN B2B miesięcznie.",
+      "seniority": "Principal",
+      "fitSummary": "agentic workflows, AI-assisted development systems, automatyzacja",
+      "whyInteresting": "to jedna z najmocniejszych nowych oficjalnych ofert",
+      "uncertainty": "oficjalny hub używa tytułu Principal Applied AI Engineer, a",
+      "sourceURLs": [
+        "https://cksource.com/careers/",
+        "https://tiugotech.recruitee.com/o/principal-ai-engineer"
+      ],
+      "tags": [
+        "Agentic AI"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior GenAI Engineer",
+      "company": "Accenture",
+      "location": "oficjalny URL mówi Multiple Locations, publiczny mirror",
+      "workMode": "oficjalny URL mówi Multiple Locations, publiczny mirror",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "autonomous multi-agent systems, embeddings pipelines, vector",
+      "whyInteresting": "rola jest wyraźnie senior-hands-on, z naciskiem na",
+      "uncertainty": "oficjalny Accenture URL nie pokazuje w podglądzie dokładnej listy",
+      "sourceURLs": [
+        "https://www.accenture.com/ae-en/careers/jobdetails?id=R00318995_en",
+        "https://justjoin.it/job-offer/accenture-senior-agentic-ai-data-engineer-wroclaw-ai"
+      ],
+      "tags": [
+        "GenAI"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "GenAI Engineer (Mid) (AI&Data)",
+      "company": "Accenture",
+      "location": "oficjalny URL Multiple Locations; mirror Wrocław +3,",
+      "workMode": "Wrocław",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Mid",
+      "fitSummary": "Python, LLM APIs, modele open-source, RAG pipelines,",
+      "whyInteresting": "dobra rola mid-level dla kogoś, kto realnie buduje",
+      "uncertainty": "jak wyżej, dokładna lista miast nie jest czytelna na kanonicznej",
+      "sourceURLs": [
+        "https://www.accenture.com/cz-en/careers/jobdetails?id=R00325345_en",
+        "https://justjoin.it/job-offer/accenture-genai-engineer-mid-ai-data--wroclaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI",
+        "Python"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "ML/AI Engineer with Snowflake (AI&Data)",
+      "company": "Accenture",
+      "location": "oficjalny URL Multiple Locations; mirror Wrocław +3,",
+      "workMode": "Wrocław",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLMs, Snowflake Cortex, AWS Bedrock, RAG/GraphRAG,",
+      "whyInteresting": "ciekawy miks GenAI i nowoczesnej platformy danych,",
+      "uncertainty": "rola jest bardziej data-platform + GenAI niż stricte modelowa,",
+      "sourceURLs": [
+        "https://www.accenture.com/pl-pl/careers/jobdetails?id=R00325695_en",
+        "https://justjoin.it/job-offer/accenture-ml-ai-engineer-with-snowflake-ai-data--wroclaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "AI / LLMOps Engineer (M/K)",
+      "company": "Rossmann SDP",
+      "location": "oficjalny detail page pokazuje Łódź, ale równocześnie",
+      "workMode": "oficjalny detail page pokazuje Łódź, ale równocześnie",
+      "compensation": "brak publicznych widełek na oficjalnej stronie.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "platforma agentowa na GCP, Python ADK, ewaluacja i",
+      "whyInteresting": "to nadal jedna z najmocniejszych publicznych ofert",
+      "uncertainty": "oficjalna oferta nie mówi, czy zdalnym oznacza pełną pracę z",
+      "sourceURLs": [
+        "https://kariera.rossmann.pl/pracuj-w-it/20287%2Cai-llmops-engineer",
+        "https://kariera.rossmann.pl/pracuj-w-it"
+      ],
+      "tags": [
+        "LLM",
+        "LLMOps",
+        "Python",
+        "GCP"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano nową oficjalną rolę CKSource / Tiugo Technologies w segmencie",
+    "Dodano nowy klaster Accenture z trzema publicznie widocznymi rolami",
+    "Zaktualizowano istniejącą rolę Rossmann: oficjalny detail page jest teraz",
+    "Nie powielono deepsense.ai ani Acaisoft, bo sprawdzone źródła nie"
+  ],
+  "risks": [
+    "Accenture pokazuje pełniejsze szczegóły techniczne na kanonicznych URL-ach,",
+    "CKSource / Tiugo ma niewielki drift nazwy stanowiska między hubem kariery",
+    "Rossmann wyraźniej mówi już o pracy zdalnej/hybrydowej, ale nadal nie"
+  ],
+  "recommendedActions": [
+    "Wykonana akcja niskiego ryzyka: dodano do Seen Opportunities nowy oficjalny klaster",
+    "Wykonana akcja niskiego ryzyka: zaktualizowano istniejący wpis Rossmann o nowy",
+    "Follow-up: w następnej rundzie sprawdzić, czy Accenture utrzyma pełny",
+    "Follow-up: sprawdzić, czy CKSource / Tiugo ustabilizuje tytuł roli między",
+    "Follow-up: obserwować, czy Rossmann utrzyma oficjalny detail page /20287"
+  ],
+  "checkedSources": [
+    {
+      "title": "CKSource careers",
+      "url": "https://cksource.com/careers/",
+      "status": "checked"
+    },
+    {
+      "title": "Tiugo Technologies - Principal AI Engineer",
+      "url": "https://tiugotech.recruitee.com/o/principal-ai-engineer",
+      "status": "checked"
+    },
+    {
+      "title": "Accenture - ML/AI Engineer with Snowflake (AI&Data)",
+      "url": "https://www.accenture.com/pl-pl/careers/jobdetails?id=R00325695_en",
+      "status": "checked"
+    },
+    {
+      "title": "Accenture - GenAI Engineer (Mid) (AI&Data)",
+      "url": "https://www.accenture.com/cz-en/careers/jobdetails?id=R00325345_en",
+      "status": "checked"
+    },
+    {
+      "title": "Accenture - Senior GenAI Engineer",
+      "url": "https://www.accenture.com/ae-en/careers/jobdetails?id=R00318995_en",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT - Accenture ML/AI Engineer with Snowflake (AI&Data), Wrocław +3",
+      "url": "https://justjoin.it/job-offer/accenture-ml-ai-engineer-with-snowflake-ai-data--wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT - Accenture GenAI Engineer (Mid) (AI&Data), Wrocław +3",
+      "url": "https://justjoin.it/job-offer/accenture-genai-engineer-mid-ai-data--wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT - Accenture Senior GenAI Engineer, Wrocław",
+      "url": "https://justjoin.it/job-offer/accenture-senior-agentic-ai-data-engineer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Rossmann - AI / LLMOps Engineer detail page",
+      "url": "https://kariera.rossmann.pl/pracuj-w-it/20287%2Cai-llmops-engineer",
+      "status": "checked"
+    },
+    {
+      "title": "Rossmann - Pracuj w IT hub",
+      "url": "https://kariera.rossmann.pl/pracuj-w-it",
+      "status": "checked"
+    },
+    {
+      "title": "deepsense.ai careers",
+      "url": "https://deepsense.ai/careers/",
+      "status": "checked-no-material-change"
+    },
+    {
+      "title": "Acaisoft careers",
+      "url": "https://www.acaisoft.com/careers",
+      "status": "checked-no-material-change"
+    }
+  ]
+}

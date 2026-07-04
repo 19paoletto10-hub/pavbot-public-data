@@ -1,0 +1,530 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-06-20",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy cykl wzmacnia cztery osie: AI w szkołach i zaufaniu społecznym, europejska suwerenność technologiczna, alternatywy dla Nvidii w infrastrukturze AI oraz bezpieczeństwo agentów kodujących. Najmocniejsze tematy podcastowe to: norweski zakaz AI w podstawówkach, francuski pakiet 655 mln EUR na AI w państwie, Google i Amazon jako realni rywale Nvidii, GitHub malware celujące w agentów oraz polskie dane o lęku przed deepfake'ami."
+  ],
+  "summaryBullets": [
+    "AI: Reuters przez Tribune i Engadget: nowy sygnał AI",
+    "Regulacje: Gouvernement.fr: regulacyjny sygnał technologiczny",
+    "AI: Ten sam francuski wątek łączy się z odchodzeniem od amerykańskich narzędzi w krytycznych systemach"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-06-20-0-reuters-przez-tribune-i-engadget-nowy-sygnal-ai-4dffd6fcf8",
+      "section": "AI",
+      "title": "Reuters przez Tribune i Engadget: nowy sygnał AI",
+      "standfirst": "Norwegia zapowiada niemal całkowite ograniczenie generatywnej AI dla uczniów szkół podstawowych od nowego roku szkolnego pod koniec sierpnia: klasy 1-7 mają zasadniczo nie używać AI, uczniowie 14-16 lat mogą korzystać ostrożnie pod nadzorem nauczyciela, a starsi mają uczyć się odpowiedzialnego użycia. Wątek był jednocześnie mocnym sygnałem na Hacker News.",
+      "whatHappened": "Norwegia zapowiada niemal całkowite ograniczenie generatywnej AI dla uczniów szkół podstawowych od nowego roku szkolnego pod koniec sierpnia: klasy 1-7 mają zasadniczo nie używać AI, uczniowie 14-16 lat mogą korzystać ostrożnie pod nadzorem nauczyciela, a starsi mają uczyć się odpowiedzialnego użycia. Wątek był jednocześnie mocnym sygnałem na Hacker News.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Norwegia zapowiada niemal całkowite ograniczenie generatywnej AI dla uczniów szkół podstawowych od nowego roku szkolnego pod koniec sierpnia: klasy 1-7 mają zasadniczo nie używać AI, uczniowie 14-16 lat mogą korzystać ostrożnie pod nadzorem nauczyciela, a starsi mają uczyć się odpowiedzialnego użycia.",
+      "deeperAnalysis": [
+        "Norwegia zapowiada niemal całkowite ograniczenie generatywnej AI dla uczniów szkół podstawowych od nowego roku szkolnego pod koniec sierpnia: klasy 1-7 mają zasadniczo nie używać AI, uczniowie 14-16 lat mogą korzystać ostrożnie pod nadzorem nauczyciela, a starsi mają uczyć się odpowiedzialnego użycia. Wątek był jednocześnie mocnym sygnałem na Hacker News. Sources: Reuters przez Tribune, Engadget, Hacker News.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Norwegia zapowiada niemal całkowite ograniczenie generatywnej AI dla uczniów szkół podstawowych od nowego roku szkolnego pod koniec sierpnia: klasy 1-7 mają zasadniczo nie używać AI, uczniowie 14-16 lat mogą korzystać ostrożnie pod nadzorem nauczyciela, a starsi mają uczyć się odpowiedzialnego użycia.",
+        "Analiza opiera się na źródłach: Reuters przez Tribune, Engadget.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Norwegia zapowiada niemal całkowite ograniczenie generatywnej AI dla uczniów szkół podstawowych od nowego roku szkolnego pod koniec sierpnia: klasy 1-7 mają zasadniczo nie używać AI, uczniowie 14-16 lat mogą korzystać ostrożnie pod nadzorem nauczyciela, a starsi mają uczyć się odpowiedzialnego użycia.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Reuters przez Tribune",
+          "url": "https://tribune.com.pk/story/2614102/norway-imposes-near-ban-on-ai-in-elementary-school"
+        },
+        {
+          "title": "Engadget",
+          "url": "https://www.engadget.com/2198117/norway-imposes-broad-restrictions-on-ai-for-elementary-school-kids/"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/front"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-20-1-gouvernement-fr-regulacyjny-sygnal-technologiczny-0078a94fad",
+      "section": "Regulacje",
+      "title": "Gouvernement.fr: regulacyjny sygnał technologiczny",
+      "standfirst": "Francuski rząd ogłosił przyspieszenie wykorzystania AI w administracji i dodatkowe 655 mln EUR przez France 2030. Plan obejmuje m.",
+      "whatHappened": "Francuski rząd ogłosił przyspieszenie wykorzystania AI w administracji i dodatkowe 655 mln EUR przez France 2030. Plan obejmuje m.",
+      "whyItMatters": "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Francuski rząd ogłosił przyspieszenie wykorzystania AI w administracji i dodatkowe 655 mln EUR przez France 2030.",
+      "deeperAnalysis": [
+        "Francuski rząd ogłosił przyspieszenie wykorzystania AI w administracji i dodatkowe 655 mln EUR przez France 2030. Plan obejmuje m.in. publiczny chatbot zdrowotny, jednolitego asystenta konwersacyjnego dla usług publicznych oraz wsparcie europejskich zdolności przez AI Gigafactories. Source: Gouvernement.fr.",
+        "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Francuski rząd ogłosił przyspieszenie wykorzystania AI w administracji i dodatkowe 655 mln EUR przez France 2030.",
+        "Analiza opiera się na źródłach: Gouvernement.fr.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Francuski rząd ogłosił przyspieszenie wykorzystania AI w administracji i dodatkowe 655 mln EUR przez France 2030.",
+        "Dlaczego ważne: regulacje ustawiają ramy ryzyka i compliance.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Gouvernement.fr",
+          "url": "https://www.gouvernement.fr/actualite/accelerer-l-ia-dans-l-etat-et-au-service-des-francais"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Regulacje",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-20-2-ten-sam-francuski-watek-laczy-sie-z-odchodzeniem-od-amerykanskich-narzedzi-w-krytycznych-systemach-70dffad57a",
+      "section": "AI",
+      "title": "Ten sam francuski wątek łączy się z odchodzeniem od amerykańskich narzędzi w krytycznych systemach",
+      "standfirst": "Ten sam francuski wątek łączy się z odchodzeniem od amerykańskich narzędzi w krytycznych systemach: The Guardian opisuje plan zastąpienia narzędzi Palantira w DGSI rozwiązaniami ChapsVision, a TVN24 Biznes podbiło 19 czerwca temat francuskiej suwerenności technologicznej. Sources: The Guardian, TVN24 Biznes.",
+      "whatHappened": "Ten sam francuski wątek łączy się z odchodzeniem od amerykańskich narzędzi w krytycznych systemach: The Guardian opisuje plan zastąpienia narzędzi Palantira w DGSI rozwiązaniami ChapsVision, a TVN24 Biznes podbiło 19 czerwca temat francuskiej suwerenności technologicznej. Sources: The Guardian, TVN24 Biznes.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Ten sam francuski wątek łączy się z odchodzeniem od amerykańskich narzędzi w krytycznych systemach: The Guardian opisuje plan zastąpienia narzędzi Palantira w DGSI rozwiązaniami ChapsVision, a TVN24 Biznes podbiło 19 czerwca temat francuskiej suwerenności technologicznej.",
+      "deeperAnalysis": [
+        "Ten sam francuski wątek łączy się z odchodzeniem od amerykańskich narzędzi w krytycznych systemach: The Guardian opisuje plan zastąpienia narzędzi Palantira w DGSI rozwiązaniami ChapsVision, a TVN24 Biznes podbiło 19 czerwca temat francuskiej suwerenności technologicznej. Sources: The Guardian, TVN24 Biznes.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Ten sam francuski wątek łączy się z odchodzeniem od amerykańskich narzędzi w krytycznych systemach: The Guardian opisuje plan zastąpienia narzędzi Palantira w DGSI rozwiązaniami ChapsVision, a TVN24 Biznes podbiło 19 czerwca temat francuskiej suwerenności technologicznej.",
+        "Analiza opiera się na źródłach: The Guardian, TVN24 Biznes.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Ten sam francuski wątek łączy się z odchodzeniem od amerykańskich narzędzi w krytycznych systemach: The Guardian opisuje plan zastąpienia narzędzi Palantira w DGSI rozwiązaniami ChapsVision, a TVN24 Biznes podbiło 19 czerwca temat francuskiej suwerenności technologicznej.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "The Guardian",
+          "url": "https://www.theguardian.com/world/2026/jun/16/france-ai-data-tools-palantir-chapsvision"
+        },
+        {
+          "title": "TVN24 Biznes",
+          "url": "https://tvn24.pl/biznes/tech/miliardowe-inwestycje-na-ai-francja-buduje-technologiczna-potege-st9104692"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-20-3-the-next-web-i-blackstone-infrastruktura-ai-i-compute-63645df77a",
+      "section": "Infrastruktura",
+      "title": "The Next Web i Blackstone: infrastruktura AI i compute",
+      "standfirst": "Google coraz mocniej próbuje przełamać dominację Nvidii w chipach AI. The Next Web, powołując się na WSJ, opisuje gwarancję 3,2 mld USD dla Lake Mariner, gdzie TPUs mają być wynajmowane Anthropic, oraz inne finansowania wokół River Bend i Texas.",
+      "whatHappened": "Google coraz mocniej próbuje przełamać dominację Nvidii w chipach AI. The Next Web, powołując się na WSJ, opisuje gwarancję 3,2 mld USD dla Lake Mariner, gdzie TPUs mają być wynajmowane Anthropic, oraz inne finansowania wokół River Bend i Texas.",
+      "whyItMatters": "Ten sygnał jest ważny, bo przekłada się na koszt, dostępność i skalowanie usług AI. Kluczowy fakt z raportu: Google coraz mocniej próbuje przełamać dominację Nvidii w chipach AI.",
+      "deeperAnalysis": [
+        "Google coraz mocniej próbuje przełamać dominację Nvidii w chipach AI. The Next Web, powołując się na WSJ, opisuje gwarancję 3,2 mld USD dla Lake Mariner, gdzie TPUs mają być wynajmowane Anthropic, oraz inne finansowania wokół River Bend i Texas. Oficjalnie Blackstone ogłosił też 5 mld USD początkowego kapitału dla spółki z Google, która ma dostarczyć 500 MW pojemności TPU od 2027 r. Sources: The Next Web, Blackstone.",
+        "Ten sygnał jest ważny, bo przekłada się na koszt, dostępność i skalowanie usług AI. Kluczowy fakt z raportu: Google coraz mocniej próbuje przełamać dominację Nvidii w chipach AI.",
+        "Analiza opiera się na źródłach: The Next Web, Blackstone.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek infrastruktura przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Google coraz mocniej próbuje przełamać dominację Nvidii w chipach AI.",
+        "Dlaczego ważne: infrastruktura decyduje o kosztach i dostępności produktów AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek infrastruktura przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "The Next Web",
+          "url": "https://thenextweb.com/news/google-nvidia-playbook-tpu-circular-financing-anthropic"
+        },
+        {
+          "title": "Blackstone",
+          "url": "https://www.blackstone.com/news/press/blackstone-announces-joint-venture-with-google-to-create-new-tpu-cloud/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Infrastruktura",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-20-4-anthropic-i-broadcom-infrastruktura-ai-i-compute-8446f176ed",
+      "section": "Infrastruktura",
+      "title": "Anthropic i Broadcom: infrastruktura AI i compute",
+      "standfirst": "Anthropic wcześniej potwierdził rozszerzenie partnerstwa z Google i Broadcom na wiele gigawatów następnej generacji TPU od 2027 r. ; dzisiejszy kontekst pokazuje, że compute supply chain staje się równie ważny jak same modele.",
+      "whatHappened": "Anthropic wcześniej potwierdził rozszerzenie partnerstwa z Google i Broadcom na wiele gigawatów następnej generacji TPU od 2027 r. ; dzisiejszy kontekst pokazuje, że compute supply chain staje się równie ważny jak same modele.",
+      "whyItMatters": "Ten sygnał jest ważny, bo przekłada się na koszt, dostępność i skalowanie usług AI. Kluczowy fakt z raportu: Anthropic wcześniej potwierdził rozszerzenie partnerstwa z Google i Broadcom na wiele gigawatów następnej generacji TPU od 2027 r.",
+      "deeperAnalysis": [
+        "Anthropic wcześniej potwierdził rozszerzenie partnerstwa z Google i Broadcom na wiele gigawatów następnej generacji TPU od 2027 r.; dzisiejszy kontekst pokazuje, że compute supply chain staje się równie ważny jak same modele. Source: Anthropic.",
+        "Ten sygnał jest ważny, bo przekłada się na koszt, dostępność i skalowanie usług AI. Kluczowy fakt z raportu: Anthropic wcześniej potwierdził rozszerzenie partnerstwa z Google i Broadcom na wiele gigawatów następnej generacji TPU od 2027 r.",
+        "Analiza opiera się na źródłach: Anthropic.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek infrastruktura przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic wcześniej potwierdził rozszerzenie partnerstwa z Google i Broadcom na wiele gigawatów następnej generacji TPU od 2027 r.",
+        "Dlaczego ważne: infrastruktura decyduje o kosztach i dostępności produktów AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek infrastruktura przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic",
+          "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Infrastruktura",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-20-5-times-of-india-infrastruktura-ai-i-compute-abb1adb136",
+      "section": "Infrastruktura",
+      "title": "Times of India: infrastruktura AI i compute",
+      "standfirst": "Amazon także przesuwa Trainium poza własną chmurę. Times of India relacjonuje wypowiedzi Petera DeSantisa, że AWS rozmawia o sprzedaży chipów Trainium do użycia w cudzych centrach danych, a Trainium3 jest w dużej mierze wyprzedany.",
+      "whatHappened": "Amazon także przesuwa Trainium poza własną chmurę. Times of India relacjonuje wypowiedzi Petera DeSantisa, że AWS rozmawia o sprzedaży chipów Trainium do użycia w cudzych centrach danych, a Trainium3 jest w dużej mierze wyprzedany.",
+      "whyItMatters": "Ten sygnał jest ważny, bo przekłada się na koszt, dostępność i skalowanie usług AI. Kluczowy fakt z raportu: Amazon także przesuwa Trainium poza własną chmurę.",
+      "deeperAnalysis": [
+        "Amazon także przesuwa Trainium poza własną chmurę. Times of India relacjonuje wypowiedzi Petera DeSantisa, że AWS rozmawia o sprzedaży chipów Trainium do użycia w cudzych centrach danych, a Trainium3 jest w dużej mierze wyprzedany. Source: Times of India.",
+        "Ten sygnał jest ważny, bo przekłada się na koszt, dostępność i skalowanie usług AI. Kluczowy fakt z raportu: Amazon także przesuwa Trainium poza własną chmurę.",
+        "Analiza opiera się na źródłach: Times of India.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek infrastruktura przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Amazon także przesuwa Trainium poza własną chmurę.",
+        "Dlaczego ważne: infrastruktura decyduje o kosztach i dostępności produktów AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek infrastruktura przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Times of India",
+          "url": "https://timesofindia.indiatimes.com/technology/tech-news/days-after-amazon-ceo-andy-jassy-made-his-ambitions-to-take-on-nvidia-very-clear-to-shareholders-amazons-ai-chief-peter-desantis-says-/articleshow/131849649.cms"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Infrastruktura",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-20-6-openai-opublikowalo-18-czerwca-badanie-z-boston-children-s-hospital-i-harvardem-79e05fb742",
+      "section": "AI",
+      "title": "OpenAI opublikowało 18 czerwca badanie z Boston Children's Hospital i Harvardem",
+      "standfirst": "OpenAI opublikowało 18 czerwca badanie z Boston Children's Hospital i Harvardem: model o3 Deep Research pomógł ekspertom ponownie przeanalizować 376 wcześniej nierozwiązanych przypadków rzadkich chorób dziecięcych i wskazał tropy, które po ludzkiej weryfikacji oraz potwierdzeniu klinicznym doprowadziły do 18 diagnoz. OpenAI podkreśla, że model nie diagnozował pacjentów i nie zastępuje decyzji klinicznych.",
+      "whatHappened": "OpenAI opublikowało 18 czerwca badanie z Boston Children's Hospital i Harvardem: model o3 Deep Research pomógł ekspertom ponownie przeanalizować 376 wcześniej nierozwiązanych przypadków rzadkich chorób dziecięcych i wskazał tropy, które po ludzkiej weryfikacji oraz potwierdzeniu klinicznym doprowadziły do 18 diagnoz. OpenAI podkreśla, że model nie diagnozował pacjentów i nie zastępuje decyzji klinicznych.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI opublikowało 18 czerwca badanie z Boston Children's Hospital i Harvardem: model o3 Deep Research pomógł ekspertom ponownie przeanalizować 376 wcześniej nierozwiązanych przypadków rzadkich chorób dziecięcych i wskazał tropy, które po ludzkiej weryfikacji oraz potwierdzeniu klinicznym doprowadziły do 18 diagnoz.",
+      "deeperAnalysis": [
+        "OpenAI opublikowało 18 czerwca badanie z Boston Children's Hospital i Harvardem: model o3 Deep Research pomógł ekspertom ponownie przeanalizować 376 wcześniej nierozwiązanych przypadków rzadkich chorób dziecięcych i wskazał tropy, które po ludzkiej weryfikacji oraz potwierdzeniu klinicznym doprowadziły do 18 diagnoz. OpenAI podkreśla, że model nie diagnozował pacjentów i nie zastępuje decyzji klinicznych. Source: OpenAI.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI opublikowało 18 czerwca badanie z Boston Children's Hospital i Harvardem: model o3 Deep Research pomógł ekspertom ponownie przeanalizować 376 wcześniej nierozwiązanych przypadków rzadkich chorób dziecięcych i wskazał tropy, które po ludzkiej weryfikacji oraz potwierdzeniu klinicznym doprowadziły do 18 diagnoz.",
+        "Analiza opiera się na źródłach: OpenAI.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI opublikowało 18 czerwca badanie z Boston Children's Hospital i Harvardem: model o3 Deep Research pomógł ekspertom ponownie przeanalizować 376 wcześniej nierozwiązanych przypadków rzadkich chorób dziecięcych i wskazał tropy, które po ludzkiej weryfikacji oraz potwierdzeniu klinicznym doprowadziły do 18 diagnoz.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/diagnose-rare-childhood-diseases/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-20-7-cybernews-rozwinal-wczorajszy-watek-github-malware-3fec1f2089",
+      "section": "Cyber",
+      "title": "Cybernews rozwinął wczorajszy wątek GitHub malware",
+      "standfirst": "Cybernews rozwinął wczorajszy wątek GitHub malware: kampania ma obejmować ponad 10 tys. złośliwych repozytoriów, a narzędzie git-malware-finder publikuje listę 9 330 wykrytych repozytoriów.",
+      "whatHappened": "Cybernews rozwinął wczorajszy wątek GitHub malware: kampania ma obejmować ponad 10 tys. złośliwych repozytoriów, a narzędzie git-malware-finder publikuje listę 9 330 wykrytych repozytoriów.",
+      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: Cybernews rozwinął wczorajszy wątek GitHub malware: kampania ma obejmować ponad 10 tys.",
+      "deeperAnalysis": [
+        "Cybernews rozwinął wczorajszy wątek GitHub malware: kampania ma obejmować ponad 10 tys. złośliwych repozytoriów, a narzędzie git-malware-finder publikuje listę 9 330 wykrytych repozytoriów. Istotny nowy akcent: złośliwe klony mogą celować nie tylko w ludzi, ale także w agentów AI szukających kodu i zależności. Sources: Cybernews, Git Malware Finder.",
+        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: Cybernews rozwinął wczorajszy wątek GitHub malware: kampania ma obejmować ponad 10 tys.",
+        "Analiza opiera się na źródłach: Cybernews, Git Malware Finder.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Cybernews rozwinął wczorajszy wątek GitHub malware: kampania ma obejmować ponad 10 tys.",
+        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Cybernews",
+          "url": "https://cybernews.com/security/10k-repos-github-malware-campaign-targets-ai-agents/"
+        },
+        {
+          "title": "Git Malware Finder",
+          "url": "https://github.com/orchidfiles/git-malware-finder/"
+        }
+      ],
+      "priority": "Low",
+      "tags": [
+        "Cyber",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-20-8-wp-tech-opublikowalo-polski-kontekst-spoleczny-a4fdbcb75f",
+      "section": "AI",
+      "title": "WP Tech opublikowało polski kontekst społeczny",
+      "standfirst": "WP Tech opublikowało polski kontekst społeczny: według raportu \"Polacy i AI 2026\" 56 proc. badanych uważa AI za wielkie osiągnięcie, ale tylko 37 proc.",
+      "whatHappened": "WP Tech opublikowało polski kontekst społeczny: według raportu \"Polacy i AI 2026\" 56 proc. badanych uważa AI za wielkie osiągnięcie, ale tylko 37 proc.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: WP Tech opublikowało polski kontekst społeczny: według raportu \"Polacy i AI 2026\" 56 proc.",
+      "deeperAnalysis": [
+        "WP Tech opublikowało polski kontekst społeczny: według raportu \"Polacy i AI 2026\" 56 proc. badanych uważa AI za wielkie osiągnięcie, ale tylko 37 proc. cieszy się z życia w epoce AI, 52 proc. odczuwa niepokój, 79 proc. boi się manipulacji swoim wizerunkiem lub głosem, a 57 proc. ma wątpliwości, czy odróżni treści prawdziwe od generowanych. Source: WP Tech.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: WP Tech opublikowało polski kontekst społeczny: według raportu \"Polacy i AI 2026\" 56 proc.",
+        "Analiza opiera się na źródłach: WP Tech.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: WP Tech opublikowało polski kontekst społeczny: według raportu \"Polacy i AI 2026\" 56 proc.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "WP Tech",
+          "url": "https://tech.wp.pl/polacy-sie-wypowiedzieli-wielkie-osiagniecie-czy-pulapka-przyszlosci%2C7298522765432832a"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-20-9-business-insider-polska-i-google-produktowy-sygnal-ai-ae60ed7bfb",
+      "section": "Produkty",
+      "title": "Business Insider Polska i Google: produktowy sygnał AI",
+      "standfirst": "Business Insider Polska, za Reuters, opisuje przesunięcie AI w Wielkiej Brytanii z pilotaży do produkcyjnych wdrożeń: firmy i administracja integrują AI z procesami biznesowymi, a według Google wdrożenia mogą podnieść produktywność nawet o 20 proc. Source: Business Insider Polska.",
+      "whatHappened": "Business Insider Polska, za Reuters, opisuje przesunięcie AI w Wielkiej Brytanii z pilotaży do produkcyjnych wdrożeń: firmy i administracja integrują AI z procesami biznesowymi, a według Google wdrożenia mogą podnieść produktywność nawet o 20 proc. Source: Business Insider Polska.",
+      "whyItMatters": "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: Business Insider Polska, za Reuters, opisuje przesunięcie AI w Wielkiej Brytanii z pilotaży do produkcyjnych wdrożeń: firmy i administracja integrują AI z procesami biznesowymi, a według Google wdrożenia mogą podnieść produktywność nawet o 20 proc.",
+      "deeperAnalysis": [
+        "Business Insider Polska, za Reuters, opisuje przesunięcie AI w Wielkiej Brytanii z pilotaży do produkcyjnych wdrożeń: firmy i administracja integrują AI z procesami biznesowymi, a według Google wdrożenia mogą podnieść produktywność nawet o 20 proc. Source: Business Insider Polska.",
+        "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: Business Insider Polska, za Reuters, opisuje przesunięcie AI w Wielkiej Brytanii z pilotaży do produkcyjnych wdrożeń: firmy i administracja integrują AI z procesami biznesowymi, a według Google wdrożenia mogą podnieść produktywność nawet o 20 proc.",
+        "Analiza opiera się na źródłach: Business Insider Polska.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Business Insider Polska, za Reuters, opisuje przesunięcie AI w Wielkiej Brytanii z pilotaży do produkcyjnych wdrożeń: firmy i administracja integrują AI z procesami biznesowymi, a według Google wdrożenia mogą podnieść produktywność nawet o 20 proc.",
+        "Dlaczego ważne: produkty pokazują, co użytkownicy realnie zaczną stosować.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Business Insider Polska",
+          "url": "https://businessinsider.com.pl/technologie/nowe-technologie/koniec-eksperymentow-z-ai-brytyjski-biznes-przechodzi-do-produkcyjnego-wykorzystania/7s9xchy"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Produkty",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-20-10-product-hunt-rano-20-czerwca-ponownie-pokazuje-mocny-rynek-agentowy-c24edaedfa",
+      "section": "Regulacje",
+      "title": "Product Hunt rano 20 czerwca ponownie pokazuje mocny rynek agentowy",
+      "standfirst": "Product Hunt rano 20 czerwca ponownie pokazuje mocny rynek agentowy: Claude Code Artifacts, Zernio WhatsApp API z agentami, Midjourney Scanner, Firecrawl Research Index, API to MCP, Unreal Engine 5. 8 z agentami, Ask Ad Manager by Google Ads, MeshPilot, Darkmoon, SerpApi for AI Apps and Agents oraz Upsolve AI.",
+      "whatHappened": "Product Hunt rano 20 czerwca ponownie pokazuje mocny rynek agentowy: Claude Code Artifacts, Zernio WhatsApp API z agentami, Midjourney Scanner, Firecrawl Research Index, API to MCP, Unreal Engine 5. 8 z agentami, Ask Ad Manager by Google Ads, MeshPilot, Darkmoon, SerpApi for AI Apps and Agents oraz Upsolve AI.",
+      "whyItMatters": "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Product Hunt rano 20 czerwca ponownie pokazuje mocny rynek agentowy: Claude Code Artifacts, Zernio WhatsApp API z agentami, Midjourney Scanner, Firecrawl Research Index, API to MCP, Unreal Engine 5.",
+      "deeperAnalysis": [
+        "Product Hunt rano 20 czerwca ponownie pokazuje mocny rynek agentowy: Claude Code Artifacts, Zernio WhatsApp API z agentami, Midjourney Scanner, Firecrawl Research Index, API to MCP, Unreal Engine 5.8 z agentami, Ask Ad Manager by Google Ads, MeshPilot, Darkmoon, SerpApi for AI Apps and Agents oraz Upsolve AI. Source: Product Hunt.",
+        "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Product Hunt rano 20 czerwca ponownie pokazuje mocny rynek agentowy: Claude Code Artifacts, Zernio WhatsApp API z agentami, Midjourney Scanner, Firecrawl Research Index, API to MCP, Unreal Engine 5.",
+        "Analiza opiera się na źródłach: Product Hunt.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Product Hunt rano 20 czerwca ponownie pokazuje mocny rynek agentowy: Claude Code Artifacts, Zernio WhatsApp API z agentami, Midjourney Scanner, Firecrawl Research Index, API to MCP, Unreal Engine 5.",
+        "Dlaczego ważne: regulacje ustawiają ramy ryzyka i compliance.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Regulacje",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-20-11-openai-news-i-anthropic-newsroom-nowy-sygnal-ai-5adf52e8eb",
+      "section": "AI",
+      "title": "OpenAI News i Anthropic Newsroom: nowy sygnał AI",
+      "standfirst": "OpenAI News, Anthropic Newsroom i Google Research Blog nie pokazały nowszych komunikatów z 20 czerwca w czasie porannego przebiegu; najnowsze widoczne pozycje to odpowiednio 18 czerwca dla OpenAI, 17 czerwca dla Anthropic i 16 czerwca dla Google Research. Sources: OpenAI News, Anthropic Newsroom, Google Research Blog.",
+      "whatHappened": "OpenAI News, Anthropic Newsroom i Google Research Blog nie pokazały nowszych komunikatów z 20 czerwca w czasie porannego przebiegu; najnowsze widoczne pozycje to odpowiednio 18 czerwca dla OpenAI, 17 czerwca dla Anthropic i 16 czerwca dla Google Research. Sources: OpenAI News, Anthropic Newsroom, Google Research Blog.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI News, Anthropic Newsroom i Google Research Blog nie pokazały nowszych komunikatów z 20 czerwca w czasie porannego przebiegu; najnowsze widoczne pozycje to odpowiednio 18 czerwca dla OpenAI, 17 czerwca dla Anthropic i 16 czerwca dla Google Research.",
+      "deeperAnalysis": [
+        "OpenAI News, Anthropic Newsroom i Google Research Blog nie pokazały nowszych komunikatów z 20 czerwca w czasie porannego przebiegu; najnowsze widoczne pozycje to odpowiednio 18 czerwca dla OpenAI, 17 czerwca dla Anthropic i 16 czerwca dla Google Research. Sources: OpenAI News, Anthropic Newsroom, Google Research Blog.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI News, Anthropic Newsroom i Google Research Blog nie pokazały nowszych komunikatów z 20 czerwca w czasie porannego przebiegu; najnowsze widoczne pozycje to odpowiednio 18 czerwca dla OpenAI, 17 czerwca dla Anthropic i 16 czerwca dla Google Research.",
+        "Analiza opiera się na źródłach: OpenAI News, Anthropic Newsroom.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI News, Anthropic Newsroom i Google Research Blog nie pokazały nowszych komunikatów z 20 czerwca w czasie porannego przebiegu; najnowsze widoczne pozycje to odpowiednio 18 czerwca dla OpenAI, 17 czerwca dla Anthropic i 16 czerwca dla Google Research.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI News",
+          "url": "https://openai.com/news/"
+        },
+        {
+          "title": "Anthropic Newsroom",
+          "url": "https://www.anthropic.com/news"
+        },
+        {
+          "title": "Google Research Blog",
+          "url": "https://research.google/blog/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "OpenAI"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Norwegia hamuje AI w podstawówkach",
+      "rationale": "To konkretny precedens regulacyjny: państwo nie tylko uczy \"AI literacy\", ale ogranicza AI tam, gdzie może osłabić czytanie, pisanie i matematykę.",
+      "sourcesLabel": "Reuters/Tribune; Engadget; Hacker News"
+    },
+    {
+      "priority": "High",
+      "title": "Francja buduje AI dla państwa i suwerenności",
+      "rationale": "655 mln EUR, publiczny chatbot zdrowotny i odchodzenie od Palantira łączą administrację, bezpieczeństwo danych i europejską autonomię technologiczną.",
+      "sourcesLabel": "Gouvernement.fr; The Guardian; TVN24"
+    },
+    {
+      "priority": "High",
+      "title": "Nvidia kontra Google i Amazon: wojna o chipy AI",
+      "rationale": "Google finansuje TPU cloud i projekty dla Anthropic, Amazon rozważa sprzedaż Trainium do cudzych data center. To przesuwa narrację z modeli na ekonomię compute.",
+      "sourcesLabel": "The Next Web; Blackstone; Anthropic; Times of India"
+    },
+    {
+      "priority": "High",
+      "title": "GitHub malware jako zagrożenie dla agentów kodujących",
+      "rationale": "Dzisiejszy follow-up pokazuje, że złośliwe klony repozytoriów mogą celować w agentów AI i poisoning wyników wyszukiwania, nie tylko w nieuważnych developerów.",
+      "sourcesLabel": "Cybernews; Git Malware Finder; OrchidFiles"
+    },
+    {
+      "priority": "Medium",
+      "title": "Polacy boją się deepfake'ów i utraty zaufania do informacji",
+      "rationale": "Dane WP Tech są mocnym lokalnym kontrapunktem do hype'u AI: 79 proc. lęku przed manipulacją głosem lub wizerunkiem i 57 proc. niepewności wobec treści.",
+      "sourcesLabel": "WP Tech"
+    },
+    {
+      "priority": "Medium",
+      "title": "AI w medycynie: obiecujący research, twarde ograniczenia",
+      "rationale": "OpenAI i Boston Children's pokazują 18 potwierdzonych diagnoz po reanalizie 376 przypadków, ale jednocześnie jasno mówią: model nie diagnozował i wymagał klinicznego potwierdzenia.",
+      "sourcesLabel": "OpenAI"
+    },
+    {
+      "priority": "Medium",
+      "title": "Product Hunt dalej jest pełen agentów i MCP",
+      "rationale": "Dzisiejsze premiery pokazują agentowe API, MCP, research indexy, agentów reklamowych i narzędzia developerskie. To dobry segment o tym, co startupy realnie budują.",
+      "sourcesLabel": "Product Hunt"
+    },
+    {
+      "priority": "Medium",
+      "title": "Wielka Brytania wychodzi z fazy pilotaży AI",
+      "rationale": "Polski BI, za Reuters, pokazuje operacyjny moment: AI zaczyna trafiać do procesów firm i administracji, nie tylko do slajdów zarządów.",
+      "sourcesLabel": "Business Insider Polska"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Reuters przez Tribune",
+      "url": "https://tribune.com.pk/story/2614102/norway-imposes-near-ban-on-ai-in-elementary-school"
+    },
+    {
+      "title": "Engadget",
+      "url": "https://www.engadget.com/2198117/norway-imposes-broad-restrictions-on-ai-for-elementary-school-kids/"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/front"
+    },
+    {
+      "title": "Gouvernement.fr",
+      "url": "https://www.gouvernement.fr/actualite/accelerer-l-ia-dans-l-etat-et-au-service-des-francais"
+    },
+    {
+      "title": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/jun/16/france-ai-data-tools-palantir-chapsvision"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes/tech/miliardowe-inwestycje-na-ai-francja-buduje-technologiczna-potege-st9104692"
+    },
+    {
+      "title": "The Next Web",
+      "url": "https://thenextweb.com/news/google-nvidia-playbook-tpu-circular-financing-anthropic"
+    },
+    {
+      "title": "Blackstone",
+      "url": "https://www.blackstone.com/news/press/blackstone-announces-joint-venture-with-google-to-create-new-tpu-cloud/"
+    },
+    {
+      "title": "Anthropic",
+      "url": "https://www.anthropic.com/news/google-broadcom-partnership-compute"
+    },
+    {
+      "title": "Times of India",
+      "url": "https://timesofindia.indiatimes.com/technology/tech-news/days-after-amazon-ceo-andy-jassy-made-his-ambitions-to-take-on-nvidia-very-clear-to-shareholders-amazons-ai-chief-peter-desantis-says-/articleshow/131849649.cms"
+    },
+    {
+      "title": "OpenAI",
+      "url": "https://openai.com/index/diagnose-rare-childhood-diseases/"
+    },
+    {
+      "title": "Cybernews",
+      "url": "https://cybernews.com/security/10k-repos-github-malware-campaign-targets-ai-agents/"
+    },
+    {
+      "title": "Git Malware Finder",
+      "url": "https://github.com/orchidfiles/git-malware-finder/"
+    },
+    {
+      "title": "WP Tech",
+      "url": "https://tech.wp.pl/polacy-sie-wypowiedzieli-wielkie-osiagniecie-czy-pulapka-przyszlosci%2C7298522765432832a"
+    },
+    {
+      "title": "Business Insider Polska",
+      "url": "https://businessinsider.com.pl/technologie/nowe-technologie/koniec-eksperymentow-z-ai-brytyjski-biznes-przechodzi-do-produkcyjnego-wykorzystania/7s9xchy"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "OpenAI News",
+      "url": "https://openai.com/news/"
+    },
+    {
+      "title": "Anthropic Newsroom",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "title": "Google Research Blog",
+      "url": "https://research.google/blog/"
+    }
+  ]
+}

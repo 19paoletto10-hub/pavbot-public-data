@@ -1,0 +1,669 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-06-23",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy przebieg przesuwa główny ciężar z samego \"agentic AI\" na praktyczne konsekwencje wdrożeniowe: cyberobrona, patchowanie open source, board-level AI cyber risk, produkcyjne protokoły agent-agent, ewaluacje proaktywnych agentów kodujących i energia dla centrów danych AI. Najmocniejsze tematy podcastowe to: OpenAI Daybreak i Patch the Planet, ostrzeżenie Five Eyes o frontier AI w cyber, Google ADK/A2A jako produkcyjny wzorzec multi-agent, metody mierzenia proaktywnych agentów Jules oraz Chevron/Microsoft jako dowód, że infrastruktura AI zaczyna wiązać Big Tech z długimi kontraktami energetycznymi."
+  ],
+  "summaryBullets": [
+    "Cyber: OpenAI opublikowało 22 czerwca rozszerzenie Daybreak",
+    "Cyber: Codex Security ma przechodzić od alertów do pełniejszego remediation loop",
+    "Cyber: OpenAI Patch the Planet i OpenAI Daybreak: cyberbezpieczeństwo i ryzyko technologiczne"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-06-23-0-openai-opublikowalo-22-czerwca-rozszerzenie-daybreak-e603ef2a77",
+      "section": "Cyber",
+      "title": "OpenAI opublikowało 22 czerwca rozszerzenie Daybreak",
+      "standfirst": "OpenAI opublikowało 22 czerwca rozszerzenie Daybreak: aktualizację Codex Security plugin, pełniejszą wersję GPT-5. 5-Cyber w ograniczonym dostępie dla trusted defenders, Daybreak Cyber Partner Program i Patch the Planet.",
+      "whatHappened": "OpenAI opublikowało 22 czerwca rozszerzenie Daybreak: aktualizację Codex Security plugin, pełniejszą wersję GPT-5. 5-Cyber w ograniczonym dostępie dla trusted defenders, Daybreak Cyber Partner Program i Patch the Planet.",
+      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: OpenAI opublikowało 22 czerwca rozszerzenie Daybreak: aktualizację Codex Security plugin, pełniejszą wersję GPT-5.",
+      "deeperAnalysis": [
+        "OpenAI opublikowało 22 czerwca rozszerzenie Daybreak: aktualizację Codex Security plugin, pełniejszą wersję GPT-5.5-Cyber w ograniczonym dostępie dla trusted defenders, Daybreak Cyber Partner Program i Patch the Planet. OpenAI podaje, że GPT-5.5-Cyber osiągnął 85.6% na CyberGym wobec 81.8% dla GPT-5.5, 39.5% wobec 25.95% na ExploitGym oraz 69.8% wobec 63.1% na SEC-bench Pro. Źródło: OpenAI Daybreak.",
+        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: OpenAI opublikowało 22 czerwca rozszerzenie Daybreak: aktualizację Codex Security plugin, pełniejszą wersję GPT-5.",
+        "Analiza opiera się na źródłach: OpenAI Daybreak.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI opublikowało 22 czerwca rozszerzenie Daybreak: aktualizację Codex Security plugin, pełniejszą wersję GPT-5.",
+        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI Daybreak",
+          "url": "https://openai.com/index/daybreak-securing-the-world/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Cyber",
+        "AI",
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-1-codex-security-ma-przechodzic-od-alertow-do-pelniejszego-remediation-loop-c4ee4fd3c5",
+      "section": "Cyber",
+      "title": "Codex Security ma przechodzić od alertów do pełniejszego remediation loop",
+      "standfirst": "Codex Security ma przechodzić od alertów do pełniejszego remediation loop: skanowania kodu, oceny reachability, dowodów walidacyjnych, generowania patchy, SARIF/CodeQL i integracji z Codex CLI oraz aplikacją Codex. OpenAI podaje, że research preview przeskanował ponad 30 mln commitów w ponad 30 tys.",
+      "whatHappened": "Codex Security ma przechodzić od alertów do pełniejszego remediation loop: skanowania kodu, oceny reachability, dowodów walidacyjnych, generowania patchy, SARIF/CodeQL i integracji z Codex CLI oraz aplikacją Codex. OpenAI podaje, że research preview przeskanował ponad 30 mln commitów w ponad 30 tys.",
+      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: Codex Security ma przechodzić od alertów do pełniejszego remediation loop: skanowania kodu, oceny reachability, dowodów walidacyjnych, generowania patchy, SARIF/CodeQL i integracji z Codex CLI oraz aplikacją Codex.",
+      "deeperAnalysis": [
+        "Codex Security ma przechodzić od alertów do pełniejszego remediation loop: skanowania kodu, oceny reachability, dowodów walidacyjnych, generowania patchy, SARIF/CodeQL i integracji z Codex CLI oraz aplikacją Codex. OpenAI podaje, że research preview przeskanował ponad 30 mln commitów w ponad 30 tys. codebase'ów, a ludzie oznaczyli ponad 70 tys. findings jako fixed, przy ponad 500 tys. findings automatycznie uznanych za naprawione. Źródło: OpenAI Daybreak.",
+        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: Codex Security ma przechodzić od alertów do pełniejszego remediation loop: skanowania kodu, oceny reachability, dowodów walidacyjnych, generowania patchy, SARIF/CodeQL i integracji z Codex CLI oraz aplikacją Codex.",
+        "Analiza opiera się na źródłach: OpenAI Daybreak.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Codex Security ma przechodzić od alertów do pełniejszego remediation loop: skanowania kodu, oceny reachability, dowodów walidacyjnych, generowania patchy, SARIF/CodeQL i integracji z Codex CLI oraz aplikacją Codex.",
+        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI Daybreak",
+          "url": "https://openai.com/index/daybreak-securing-the-world/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Cyber",
+        "AI",
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-2-openai-patch-the-planet-i-openai-daybreak-cyberbezpieczenstwo-i-ryzyko-technologiczne-3e7c0358e6",
+      "section": "Cyber",
+      "title": "OpenAI Patch the Planet i OpenAI Daybreak: cyberbezpieczeństwo i ryzyko technologiczne",
+      "standfirst": "Patch the Planet to nowa inicjatywa OpenAI, Trail of Bits, HackerOne i Calif dla utrzymywania krytycznego open source. OpenAI wymienia pierwszych uczestników m.",
+      "whatHappened": "Patch the Planet to nowa inicjatywa OpenAI, Trail of Bits, HackerOne i Calif dla utrzymywania krytycznego open source. OpenAI wymienia pierwszych uczestników m.",
+      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: Patch the Planet to nowa inicjatywa OpenAI, Trail of Bits, HackerOne i Calif dla utrzymywania krytycznego open source.",
+      "deeperAnalysis": [
+        "Patch the Planet to nowa inicjatywa OpenAI, Trail of Bits, HackerOne i Calif dla utrzymywania krytycznego open source. OpenAI wymienia pierwszych uczestników m.in. cURL, NATS Server, pyca/cryptography, Sigstore, aiohttp, Go, freenginx, Python i python.org. Trail of Bits ma pracować z Codex i GPT-5.5-Cyber przy triage, deduplikacji, patchach, testach i coordinated disclosure. Źródła: OpenAI Patch the Planet, OpenAI Daybreak.",
+        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: Patch the Planet to nowa inicjatywa OpenAI, Trail of Bits, HackerOne i Calif dla utrzymywania krytycznego open source.",
+        "Analiza opiera się na źródłach: OpenAI Patch the Planet, OpenAI Daybreak.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Patch the Planet to nowa inicjatywa OpenAI, Trail of Bits, HackerOne i Calif dla utrzymywania krytycznego open source.",
+        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI Patch the Planet",
+          "url": "https://openai.com/index/patch-the-planet/"
+        },
+        {
+          "title": "OpenAI Daybreak",
+          "url": "https://openai.com/index/daybreak-securing-the-world/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Cyber",
+        "AI",
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-3-openai-opisuje-w-patch-the-planet-bardzo-mocne-ale-wymagajace-ostroznej-interpretacji-wyniki-defensywne-4d9944622b",
+      "section": "Cyber",
+      "title": "OpenAI opisuje w Patch the Planet bardzo mocne, ale wymagające ostrożnej interpretacji wyniki defensywne",
+      "standfirst": "OpenAI opisuje w Patch the Planet bardzo mocne, ale wymagające ostrożnej interpretacji wyniki defensywne: setki issues do przeglądu, dziesiątki zmergowanych patchy, fuzzing lab zbudowany w mniej niż dzień, pipeline do szukania wariantów historycznych CVE oraz przykłady z Linux Kernel, OpenBSD, FreeBSD, dnsmasq i Firefox. Raport nie zawiera szczegółów exploitacyjnych; istotny jest trend: frontier AI przenosi wąskie gardło z wykrywania podatności na walidację, priorytetyzację i lądowanie poprawek.",
+      "whatHappened": "OpenAI opisuje w Patch the Planet bardzo mocne, ale wymagające ostrożnej interpretacji wyniki defensywne: setki issues do przeglądu, dziesiątki zmergowanych patchy, fuzzing lab zbudowany w mniej niż dzień, pipeline do szukania wariantów historycznych CVE oraz przykłady z Linux Kernel, OpenBSD, FreeBSD, dnsmasq i Firefox. Raport nie zawiera szczegółów exploitacyjnych; istotny jest trend: frontier AI przenosi wąskie gardło z wykrywania podatności na walidację, priorytetyzację i lądowanie poprawek.",
+      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: OpenAI opisuje w Patch the Planet bardzo mocne, ale wymagające ostrożnej interpretacji wyniki defensywne: setki issues do przeglądu, dziesiątki zmergowanych patchy, fuzzing lab zbudowany w mniej niż dzień, pipeline do szukania wariantów historycznych CVE oraz przykłady z Linux Kernel, OpenBSD, FreeBSD, dnsmasq i Firefox.",
+      "deeperAnalysis": [
+        "OpenAI opisuje w Patch the Planet bardzo mocne, ale wymagające ostrożnej interpretacji wyniki defensywne: setki issues do przeglądu, dziesiątki zmergowanych patchy, fuzzing lab zbudowany w mniej niż dzień, pipeline do szukania wariantów historycznych CVE oraz przykłady z Linux Kernel, OpenBSD, FreeBSD, dnsmasq i Firefox. Raport nie zawiera szczegółów exploitacyjnych; istotny jest trend: frontier AI przenosi wąskie gardło z wykrywania podatności na walidację, priorytetyzację i lądowanie poprawek. Źródło: OpenAI Patch the Planet.",
+        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: OpenAI opisuje w Patch the Planet bardzo mocne, ale wymagające ostrożnej interpretacji wyniki defensywne: setki issues do przeglądu, dziesiątki zmergowanych patchy, fuzzing lab zbudowany w mniej niż dzień, pipeline do szukania wariantów historycznych CVE oraz przykłady z Linux Kernel, OpenBSD, FreeBSD, dnsmasq i Firefox.",
+        "Analiza opiera się na źródłach: OpenAI Patch the Planet.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI opisuje w Patch the Planet bardzo mocne, ale wymagające ostrożnej interpretacji wyniki defensywne: setki issues do przeglądu, dziesiątki zmergowanych patchy, fuzzing lab zbudowany w mniej niż dzień, pipeline do szukania wariantów historycznych CVE oraz przykłady z Linux Kernel, OpenBSD, FreeBSD, dnsmasq i Firefox.",
+        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI Patch the Planet",
+          "url": "https://openai.com/index/patch-the-planet/"
+        }
+      ],
+      "priority": "Low",
+      "tags": [
+        "Cyber",
+        "AI",
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-4-ncsc-new-zealand-cyberbezpieczenstwo-i-ryzyko-technologiczne-67942b024a",
+      "section": "Cyber",
+      "title": "NCSC New Zealand: cyberbezpieczeństwo i ryzyko technologiczne",
+      "standfirst": "23 czerwca NCSC New Zealand poinformował, że liderzy cyberbezpieczeństwa Five Eyes wydali wspólne call to action dotyczące frontier AI. W komunikacie wskazują, że AI już obniża bariery dla atakujących, zwiększa tempo i złożoność ataków oraz skraca okno między odkryciem podatności i jej wykorzystaniem.",
+      "whatHappened": "23 czerwca NCSC New Zealand poinformował, że liderzy cyberbezpieczeństwa Five Eyes wydali wspólne call to action dotyczące frontier AI. W komunikacie wskazują, że AI już obniża bariery dla atakujących, zwiększa tempo i złożoność ataków oraz skraca okno między odkryciem podatności i jej wykorzystaniem.",
+      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: 23 czerwca NCSC New Zealand poinformował, że liderzy cyberbezpieczeństwa Five Eyes wydali wspólne call to action dotyczące frontier AI.",
+      "deeperAnalysis": [
+        "23 czerwca NCSC New Zealand poinformował, że liderzy cyberbezpieczeństwa Five Eyes wydali wspólne call to action dotyczące frontier AI. W komunikacie wskazują, że AI już obniża bariery dla atakujących, zwiększa tempo i złożoność ataków oraz skraca okno między odkryciem podatności i jej wykorzystaniem. Źródło: NCSC New Zealand.",
+        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: 23 czerwca NCSC New Zealand poinformował, że liderzy cyberbezpieczeństwa Five Eyes wydali wspólne call to action dotyczące frontier AI.",
+        "Analiza opiera się na źródłach: NCSC New Zealand.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: 23 czerwca NCSC New Zealand poinformował, że liderzy cyberbezpieczeństwa Five Eyes wydali wspólne call to action dotyczące frontier AI.",
+        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "NCSC New Zealand",
+          "url": "https://www.ncsc.govt.nz/news/leaders-of-five-eyes-cyber-security-agencies-call-to-action-on-ai-preparedness/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Cyber",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-5-uk-ncsc-cyberbezpieczenstwo-i-ryzyko-technologiczne-eb3e10c9a3",
+      "section": "Cyber",
+      "title": "UK NCSC: cyberbezpieczeństwo i ryzyko technologiczne",
+      "standfirst": "UK NCSC doprecyzował, że frontier AI może fundamentalnie zmienić zdolności ofensywne i defensywne w cyber, a horyzont nie jest liczony w latach, tylko w miesiącach. Agencje wzywają liderów do oceny ryzyka, podstawowych kontroli, redukcji attack surface, szybszego patchowania, pracy z legacy systems i traktowania cyber resilience jako odpowiedzialności zarządczej.",
+      "whatHappened": "UK NCSC doprecyzował, że frontier AI może fundamentalnie zmienić zdolności ofensywne i defensywne w cyber, a horyzont nie jest liczony w latach, tylko w miesiącach. Agencje wzywają liderów do oceny ryzyka, podstawowych kontroli, redukcji attack surface, szybszego patchowania, pracy z legacy systems i traktowania cyber resilience jako odpowiedzialności zarządczej.",
+      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: UK NCSC doprecyzował, że frontier AI może fundamentalnie zmienić zdolności ofensywne i defensywne w cyber, a horyzont nie jest liczony w latach, tylko w miesiącach.",
+      "deeperAnalysis": [
+        "UK NCSC doprecyzował, że frontier AI może fundamentalnie zmienić zdolności ofensywne i defensywne w cyber, a horyzont nie jest liczony w latach, tylko w miesiącach. Agencje wzywają liderów do oceny ryzyka, podstawowych kontroli, redukcji attack surface, szybszego patchowania, pracy z legacy systems i traktowania cyber resilience jako odpowiedzialności zarządczej. Źródło: UK NCSC.",
+        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: UK NCSC doprecyzował, że frontier AI może fundamentalnie zmienić zdolności ofensywne i defensywne w cyber, a horyzont nie jest liczony w latach, tylko w miesiącach.",
+        "Analiza opiera się na źródłach: UK NCSC.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: UK NCSC doprecyzował, że frontier AI może fundamentalnie zmienić zdolności ofensywne i defensywne w cyber, a horyzont nie jest liczony w latach, tylko w miesiącach.",
+        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "UK NCSC",
+          "url": "https://www.ncsc.gov.uk/news/the-ai-shift-in-cyber-risk-why-leaders-must-act-now"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Cyber",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-6-google-developers-opublikowal-22-czerwca-przyklad-produkcyjnego-multi-agent-pipeline-dd94c9b329",
+      "section": "Regulacje",
+      "title": "Google Developers opublikował 22 czerwca przykład produkcyjnego multi-agent pipeline",
+      "standfirst": "Google Developers opublikował 22 czerwca przykład produkcyjnego multi-agent pipeline: agent Python używa Gemini do ekstrakcji pól z kontraktów, agent Go wykonuje deterministyczną walidację compliance, a całość łączy Agent2Agent protocol i Google ADK. Materiał pokazuje Agent Cards pod /.",
+      "whatHappened": "Google Developers opublikował 22 czerwca przykład produkcyjnego multi-agent pipeline: agent Python używa Gemini do ekstrakcji pól z kontraktów, agent Go wykonuje deterministyczną walidację compliance, a całość łączy Agent2Agent protocol i Google ADK. Materiał pokazuje Agent Cards pod /.",
+      "whyItMatters": "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Google Developers opublikował 22 czerwca przykład produkcyjnego multi-agent pipeline: agent Python używa Gemini do ekstrakcji pól z kontraktów, agent Go wykonuje deterministyczną walidację compliance, a całość łączy Agent2Agent protocol i Google ADK.",
+      "deeperAnalysis": [
+        "Google Developers opublikował 22 czerwca przykład produkcyjnego multi-agent pipeline: agent Python używa Gemini do ekstrakcji pól z kontraktów, agent Go wykonuje deterministyczną walidację compliance, a całość łączy Agent2Agent protocol i Google ADK. Materiał pokazuje Agent Cards pod /.well-known/agent.json, JSON-RPC, task lifecycle, RemoteA2aAgent, shared state oraz fallback do manual review przy awarii usługi Go. Źródło: Google Developers Blog.",
+        "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Google Developers opublikował 22 czerwca przykład produkcyjnego multi-agent pipeline: agent Python używa Gemini do ekstrakcji pól z kontraktów, agent Go wykonuje deterministyczną walidację compliance, a całość łączy Agent2Agent protocol i Google ADK.",
+        "Analiza opiera się na źródłach: Google Developers Blog.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Google Developers opublikował 22 czerwca przykład produkcyjnego multi-agent pipeline: agent Python używa Gemini do ekstrakcji pól z kontraktów, agent Go wykonuje deterministyczną walidację compliance, a całość łączy Agent2Agent protocol i Google ADK.",
+        "Dlaczego ważne: regulacje ustawiają ramy ryzyka i compliance.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Google Developers Blog",
+          "url": "https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Regulacje"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-7-google-developers-opisal-tez-badania-nad-jules-i-proaktywnymi-agentami-kodujacymi-teza-d3ffa69002",
+      "section": "AI",
+      "title": "Google Developers opisał też badania nad Jules i proaktywnymi agentami kodującymi. Teza",
+      "standfirst": "Google Developers opisał też badania nad Jules i proaktywnymi agentami kodującymi. Teza: SWE-Bench mierzy zadania, ale nie mierzy celów i insight policy, czyli tego, czy agent wie, kiedy przerwać developerowi i z jakimi dowodami.",
+      "whatHappened": "Google Developers opisał też badania nad Jules i proaktywnymi agentami kodującymi. Teza: SWE-Bench mierzy zadania, ale nie mierzy celów i insight policy, czyli tego, czy agent wie, kiedy przerwać developerowi i z jakimi dowodami.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Google Developers opisał też badania nad Jules i proaktywnymi agentami kodującymi.",
+      "deeperAnalysis": [
+        "Google Developers opisał też badania nad Jules i proaktywnymi agentami kodującymi. Teza: SWE-Bench mierzy zadania, ale nie mierzy celów i insight policy, czyli tego, czy agent wie, kiedy przerwać developerowi i z jakimi dowodami. Google użyło 705 bugów i 1,178 CL z wewnętrznych codebase'ów; po jednej rundzie eksploracji agent miał średnio 4.5/5 trafności insightu, a zwiększenie exploration budget z dwóch do trzech rund podniosło Hit@5 z 33% do 57%. Źródło: Google Developers Blog.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Google Developers opisał też badania nad Jules i proaktywnymi agentami kodującymi.",
+        "Analiza opiera się na źródłach: Google Developers Blog.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Google Developers opisał też badania nad Jules i proaktywnymi agentami kodującymi.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Google Developers Blog",
+          "url": "https://developers.googleblog.com/measuring-what-matters-with-jules/"
+        }
+      ],
+      "priority": "Low",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-8-product-hunt-23-czerwca-pokazuje-bardzo-wyrazny-zestaw-narzedzi-agentowych-41062f9dd8",
+      "section": "Regulacje",
+      "title": "Product Hunt 23 czerwca pokazuje bardzo wyraźny zestaw narzędzi agentowych",
+      "standfirst": "Product Hunt 23 czerwca pokazuje bardzo wyraźny zestaw narzędzi agentowych: Skybridge jako open-source React framework dla MCP Apps, AgentX do ewaluacji agentów AI, Framer AI Agents, Viktor. com jako \"AI employee\" dla Slack/Teams oraz Unabyss jako MCP-native self-updating context layer.",
+      "whatHappened": "Product Hunt 23 czerwca pokazuje bardzo wyraźny zestaw narzędzi agentowych: Skybridge jako open-source React framework dla MCP Apps, AgentX do ewaluacji agentów AI, Framer AI Agents, Viktor. com jako \"AI employee\" dla Slack/Teams oraz Unabyss jako MCP-native self-updating context layer.",
+      "whyItMatters": "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Product Hunt 23 czerwca pokazuje bardzo wyraźny zestaw narzędzi agentowych: Skybridge jako open-source React framework dla MCP Apps, AgentX do ewaluacji agentów AI, Framer AI Agents, Viktor.",
+      "deeperAnalysis": [
+        "Product Hunt 23 czerwca pokazuje bardzo wyraźny zestaw narzędzi agentowych: Skybridge jako open-source React framework dla MCP Apps, AgentX do ewaluacji agentów AI, Framer AI Agents, Viktor.com jako \"AI employee\" dla Slack/Teams oraz Unabyss jako MCP-native self-updating context layer. Obok nich są Alai 2.0, HAQQ Legal AI on Mobile i Invoko. Źródło: Product Hunt.",
+        "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Product Hunt 23 czerwca pokazuje bardzo wyraźny zestaw narzędzi agentowych: Skybridge jako open-source React framework dla MCP Apps, AgentX do ewaluacji agentów AI, Framer AI Agents, Viktor.",
+        "Analiza opiera się na źródłach: Product Hunt.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Product Hunt 23 czerwca pokazuje bardzo wyraźny zestaw narzędzi agentowych: Skybridge jako open-source React framework dla MCP Apps, AgentX do ewaluacji agentów AI, Framer AI Agents, Viktor.",
+        "Dlaczego ważne: regulacje ustawiają ramy ryzyka i compliance.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Regulacje",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-9-hacker-news-22-czerwca-utc-pokazal-mocne-spolecznosciowe-sygnaly-techniczne-86eb87a491",
+      "section": "AI",
+      "title": "Hacker News 22 czerwca UTC pokazał mocne społecznościowe sygnały techniczne",
+      "standfirst": "Hacker News 22 czerwca UTC pokazał mocne społecznościowe sygnały techniczne: Deno Desktop miało ponad 1,000 punktów, Steam Machine launch ponad 1,200 punktów, issue o logowaniu Codex ponad 460 punktów, Sakana Fugu ponad 200 punktów, Moebius ponad 230 punktów i Oak, git alternative designed for agents, 148 punktów. Źródło: Hacker News.",
+      "whatHappened": "Hacker News 22 czerwca UTC pokazał mocne społecznościowe sygnały techniczne: Deno Desktop miało ponad 1,000 punktów, Steam Machine launch ponad 1,200 punktów, issue o logowaniu Codex ponad 460 punktów, Sakana Fugu ponad 200 punktów, Moebius ponad 230 punktów i Oak, git alternative designed for agents, 148 punktów. Źródło: Hacker News.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Hacker News 22 czerwca UTC pokazał mocne społecznościowe sygnały techniczne: Deno Desktop miało ponad 1,000 punktów, Steam Machine launch ponad 1,200 punktów, issue o logowaniu Codex ponad 460 punktów, Sakana Fugu ponad 200 punktów, Moebius ponad 230 punktów i Oak, git alternative designed for agents, 148 punktów.",
+      "deeperAnalysis": [
+        "Hacker News 22 czerwca UTC pokazał mocne społecznościowe sygnały techniczne: Deno Desktop miało ponad 1,000 punktów, Steam Machine launch ponad 1,200 punktów, issue o logowaniu Codex ponad 460 punktów, Sakana Fugu ponad 200 punktów, Moebius ponad 230 punktów i Oak, git alternative designed for agents, 148 punktów. Źródło: Hacker News.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Hacker News 22 czerwca UTC pokazał mocne społecznościowe sygnały techniczne: Deno Desktop miało ponad 1,000 punktów, Steam Machine launch ponad 1,200 punktów, issue o logowaniu Codex ponad 460 punktów, Sakana Fugu ponad 200 punktów, Moebius ponad 230 punktów i Oak, git alternative designed for agents, 148 punktów.",
+        "Analiza opiera się na źródłach: Hacker News.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Hacker News 22 czerwca UTC pokazał mocne społecznościowe sygnały techniczne: Deno Desktop miało ponad 1,000 punktów, Steam Machine launch ponad 1,200 punktów, issue o logowaniu Codex ponad 460 punktów, Sakana Fugu ponad 200 punktów, Moebius ponad 230 punktów i Oak, git alternative designed for agents, 148 punktów.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/front"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-10-deno-desktop-jest-wazny-jako-kierunek-dla-desktopowych-aplikacji-webowych-d3073ec625",
+      "section": "Inne",
+      "title": "Deno Desktop jest ważny jako kierunek dla desktopowych aplikacji webowych",
+      "standfirst": "Deno Desktop jest ważny jako kierunek dla desktopowych aplikacji webowych: deno desktop ma zamieniać projekt Deno, od pojedynczego pliku TypeScript po Next. js, w samodzielną aplikację desktopową.",
+      "whatHappened": "Deno Desktop jest ważny jako kierunek dla desktopowych aplikacji webowych: deno desktop ma zamieniać projekt Deno, od pojedynczego pliku TypeScript po Next. js, w samodzielną aplikację desktopową.",
+      "whyItMatters": "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: Deno Desktop jest ważny jako kierunek dla desktopowych aplikacji webowych: deno desktop ma zamieniać projekt Deno, od pojedynczego pliku TypeScript po Next.",
+      "deeperAnalysis": [
+        "Deno Desktop jest ważny jako kierunek dla desktopowych aplikacji webowych: deno desktop ma zamieniać projekt Deno, od pojedynczego pliku TypeScript po Next.js, w samodzielną aplikację desktopową. Funkcja ma wejść w Deno 2.9, jeszcze nie jest stabilna, i obiecuje m.in. małe binaria przez systemowy webview, zgodność z Node, auto-detekcję frameworków, in-process bindings, cross-compilation i binary-diff auto-update. Źródło: Deno Docs.",
+        "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: Deno Desktop jest ważny jako kierunek dla desktopowych aplikacji webowych: deno desktop ma zamieniać projekt Deno, od pojedynczego pliku TypeScript po Next.",
+        "Analiza opiera się na źródłach: Deno Docs.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek inne przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Deno Desktop jest ważny jako kierunek dla desktopowych aplikacji webowych: deno desktop ma zamieniać projekt Deno, od pojedynczego pliku TypeScript po Next.",
+        "Dlaczego ważne: sygnał może zmienić priorytety technologiczne.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek inne przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Deno Docs",
+          "url": "https://docs.deno.com/runtime/desktop/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Inne"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-11-github-openai-codex-issue-28224-i-hacker-news-produktowy-sygnal-ai-82177a440b",
+      "section": "Produkty",
+      "title": "GitHub openai/codex issue 28224 i Hacker News: produktowy sygnał AI",
+      "standfirst": "Issue openai/codex28224 dotyczące intensywnego zapisu logów SQLite w Codex CLI zostało zamknięte po merge dwóch PR 22 czerwca. Autor issue szacował wcześniej ok.",
+      "whatHappened": "Issue openai/codex28224 dotyczące intensywnego zapisu logów SQLite w Codex CLI zostało zamknięte po merge dwóch PR 22 czerwca. Autor issue szacował wcześniej ok.",
+      "whyItMatters": "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: Issue openai/codex28224 dotyczące intensywnego zapisu logów SQLite w Codex CLI zostało zamknięte po merge dwóch PR 22 czerwca.",
+      "deeperAnalysis": [
+        "Issue openai/codex28224 dotyczące intensywnego zapisu logów SQLite w Codex CLI zostało zamknięte po merge dwóch PR 22 czerwca. Autor issue szacował wcześniej ok. 640 TB zapisów rocznie na podstawie swojej maszyny, a update wskazuje, że fix może ograniczyć ok. 85% logów w jego użyciu. To nie jest nowy produkt, ale dobry przykład, że lokalne agenty potrzebują obserwowalności i kontroli kosztów zasobów, nie tylko jakości odpowiedzi. Źródła: GitHub openai/codex issue 28224, Hacker News.",
+        "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: Issue openai/codex28224 dotyczące intensywnego zapisu logów SQLite w Codex CLI zostało zamknięte po merge dwóch PR 22 czerwca.",
+        "Analiza opiera się na źródłach: GitHub openai/codex issue 28224, Hacker News.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Issue openai/codex28224 dotyczące intensywnego zapisu logów SQLite w Codex CLI zostało zamknięte po merge dwóch PR 22 czerwca.",
+        "Dlaczego ważne: produkty pokazują, co użytkownicy realnie zaczną stosować.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "GitHub openai/codex issue 28224",
+          "url": "https://github.com/openai/codex/issues/28224"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/front"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Produkty",
+        "AI",
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-12-oak-pozycjonuje-sie-jako-wersjonowanie-at-the-speed-of-agents-8f5c6882c7",
+      "section": "AI",
+      "title": "Oak pozycjonuje się jako wersjonowanie \"at the speed of agents\"",
+      "standfirst": "Oak pozycjonuje się jako wersjonowanie \"at the speed of agents\": branch per session, branch descriptions zamiast per-commit messages, content-addressed lazy mounts oraz CLI dla agentów. Publiczna beta jest oznaczona jako v0.",
+      "whatHappened": "Oak pozycjonuje się jako wersjonowanie \"at the speed of agents\": branch per session, branch descriptions zamiast per-commit messages, content-addressed lazy mounts oraz CLI dla agentów. Publiczna beta jest oznaczona jako v0.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Oak pozycjonuje się jako wersjonowanie \"at the speed of agents\": branch per session, branch descriptions zamiast per-commit messages, content-addressed lazy mounts oraz CLI dla agentów.",
+      "deeperAnalysis": [
+        "Oak pozycjonuje się jako wersjonowanie \"at the speed of agents\": branch per session, branch descriptions zamiast per-commit messages, content-addressed lazy mounts oraz CLI dla agentów. Publiczna beta jest oznaczona jako v0.99.0. To kolejny sygnał, że narzędzia developerskie zaczynają projektować podstawowe abstrakcje pod pracę agentów, nie tylko pod człowieka przy Git. Źródło: Oak.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Oak pozycjonuje się jako wersjonowanie \"at the speed of agents\": branch per session, branch descriptions zamiast per-commit messages, content-addressed lazy mounts oraz CLI dla agentów.",
+        "Analiza opiera się na źródłach: Oak.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Oak pozycjonuje się jako wersjonowanie \"at the speed of agents\": branch per session, branch descriptions zamiast per-commit messages, content-addressed lazy mounts oraz CLI dla agentów.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Oak",
+          "url": "https://oak.space/oak/oak"
+        }
+      ],
+      "priority": "Low",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-13-sakana-fugu-regulacyjny-sygnal-technologiczny-9cd51d848f",
+      "section": "Regulacje",
+      "title": "Sakana Fugu: regulacyjny sygnał technologiczny",
+      "standfirst": "Sakana Fugu oferuje multi-agent system jako jeden model API. Sakana opisuje dynamiczne orkiestracje puli modeli, wybór agentów i dostawców, zastosowania do coding/reasoning oraz brak dostępności w EU/EEA na czas pracy nad GDPR i regulacjami lokalnymi.",
+      "whatHappened": "Sakana Fugu oferuje multi-agent system jako jeden model API. Sakana opisuje dynamiczne orkiestracje puli modeli, wybór agentów i dostawców, zastosowania do coding/reasoning oraz brak dostępności w EU/EEA na czas pracy nad GDPR i regulacjami lokalnymi.",
+      "whyItMatters": "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Sakana Fugu oferuje multi-agent system jako jeden model API.",
+      "deeperAnalysis": [
+        "Sakana Fugu oferuje multi-agent system jako jeden model API. Sakana opisuje dynamiczne orkiestracje puli modeli, wybór agentów i dostawców, zastosowania do coding/reasoning oraz brak dostępności w EU/EEA na czas pracy nad GDPR i regulacjami lokalnymi. Źródło: Sakana Fugu.",
+        "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Sakana Fugu oferuje multi-agent system jako jeden model API.",
+        "Analiza opiera się na źródłach: Sakana Fugu.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Sakana Fugu oferuje multi-agent system jako jeden model API.",
+        "Dlaczego ważne: regulacje ustawiają ramy ryzyka i compliance.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Sakana Fugu",
+          "url": "https://sakana.ai/fugu/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Regulacje"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-14-moebius-project-page-infrastruktura-ai-i-compute-1b30f2789f",
+      "section": "Infrastruktura",
+      "title": "Moebius project page: infrastruktura AI i compute",
+      "standfirst": "Moebius to lekki framework inpaintingu 0. 22B parametrów.",
+      "whatHappened": "Moebius to lekki framework inpaintingu 0. 22B parametrów.",
+      "whyItMatters": "Ten sygnał jest ważny, bo przekłada się na koszt, dostępność i skalowanie usług AI. Kluczowy fakt z raportu: Moebius to lekki framework inpaintingu 0.",
+      "deeperAnalysis": [
+        "Moebius to lekki framework inpaintingu 0.22B parametrów. Autorzy twierdzą, że osiąga jakość porównywalną lub lepszą od 10B-level generalist models takich jak FLUX.1-Fill-Dev na sześciu benchmarkach, przy mniej niż 2% parametrów i ponad 15x przyspieszeniu całkowitego inference time. Źródło: Moebius project page.",
+        "Ten sygnał jest ważny, bo przekłada się na koszt, dostępność i skalowanie usług AI. Kluczowy fakt z raportu: Moebius to lekki framework inpaintingu 0.",
+        "Analiza opiera się na źródłach: Moebius project page.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek infrastruktura przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Moebius to lekki framework inpaintingu 0.",
+        "Dlaczego ważne: infrastruktura decyduje o kosztach i dostępności produktów AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek infrastruktura przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Moebius project page",
+          "url": "https://hustvl.github.io/Moebius/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Infrastruktura",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-15-chevron-i-microsoft-podpisaly-20-letnia-umowe-dla-project-kilby-fc04d0836b",
+      "section": "Inne",
+      "title": "Chevron i Microsoft podpisały 20-letnią umowę dla Project Kilby",
+      "standfirst": "Chevron i Microsoft podpisały 20-letnią umowę dla Project Kilby: współlokowanej elektrowni w West Texas, która ma dostarczać dedykowaną energię do centrum danych Microsoftu. Chevron podaje ok.",
+      "whatHappened": "Chevron i Microsoft podpisały 20-letnią umowę dla Project Kilby: współlokowanej elektrowni w West Texas, która ma dostarczać dedykowaną energię do centrum danych Microsoftu. Chevron podaje ok.",
+      "whyItMatters": "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: Chevron i Microsoft podpisały 20-letnią umowę dla Project Kilby: współlokowanej elektrowni w West Texas, która ma dostarczać dedykowaną energię do centrum danych Microsoftu.",
+      "deeperAnalysis": [
+        "Chevron i Microsoft podpisały 20-letnią umowę dla Project Kilby: współlokowanej elektrowni w West Texas, która ma dostarczać dedykowaną energię do centrum danych Microsoftu. Chevron podaje ok. 2.67 GW mocy, większość generacji z turbin GE Vernova i dodatkową moc z Solar Turbines, start pierwszej energii w 2028 roku i Final Investment Decision oczekiwane do końca 2026. Źródło: Business Wire / Chevron.",
+        "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: Chevron i Microsoft podpisały 20-letnią umowę dla Project Kilby: współlokowanej elektrowni w West Texas, która ma dostarczać dedykowaną energię do centrum danych Microsoftu.",
+        "Analiza opiera się na źródłach: Business Wire / Chevron.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek inne przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Chevron i Microsoft podpisały 20-letnią umowę dla Project Kilby: współlokowanej elektrowni w West Texas, która ma dostarczać dedykowaną energię do centrum danych Microsoftu.",
+        "Dlaczego ważne: sygnał może zmienić priorytety technologiczne.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek inne przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Business Wire / Chevron",
+          "url": "https://www.businesswire.com/news/home/20260622017964/en/Chevron-Signs-20-Year-Power-Agreement-with-Microsoft-for-West-Texas-Data-Center"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Inne"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-23-16-openai-news-i-anthropic-newsroom-nowy-sygnal-ai-db8cbb31dc",
+      "section": "AI",
+      "title": "OpenAI News i Anthropic Newsroom: nowy sygnał AI",
+      "standfirst": "OpenAI News potwierdza, że najnowsze pozycje to Patch the Planet, Daybreak i Codex-Maxxing z 22 czerwca. Anthropic Newsroom nie pokazał nowszego newsroom itemu niż wpis o Seoul office z 17 czerwca.",
+      "whatHappened": "OpenAI News potwierdza, że najnowsze pozycje to Patch the Planet, Daybreak i Codex-Maxxing z 22 czerwca. Anthropic Newsroom nie pokazał nowszego newsroom itemu niż wpis o Seoul office z 17 czerwca.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI News potwierdza, że najnowsze pozycje to Patch the Planet, Daybreak i Codex-Maxxing z 22 czerwca.",
+      "deeperAnalysis": [
+        "OpenAI News potwierdza, że najnowsze pozycje to Patch the Planet, Daybreak i Codex-Maxxing z 22 czerwca. Anthropic Newsroom nie pokazał nowszego newsroom itemu niż wpis o Seoul office z 17 czerwca. Google Research Blog nadal pokazuje jako najnowszy wpis z 16 czerwca, a Android Developers Blog nie wniósł dzisiaj nowszego materiału ponad post z 18 czerwca o Android developer verification. Źródła: OpenAI News, Anthropic Newsroom, Google Research Blog, Android Developers Blog.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI News potwierdza, że najnowsze pozycje to Patch the Planet, Daybreak i Codex-Maxxing z 22 czerwca.",
+        "Analiza opiera się na źródłach: OpenAI News, Anthropic Newsroom.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI News potwierdza, że najnowsze pozycje to Patch the Planet, Daybreak i Codex-Maxxing z 22 czerwca.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI News",
+          "url": "https://openai.com/news/"
+        },
+        {
+          "title": "Anthropic Newsroom",
+          "url": "https://www.anthropic.com/news"
+        },
+        {
+          "title": "Google Research Blog",
+          "url": "https://research.google/blog/"
+        },
+        {
+          "title": "Android Developers Blog",
+          "url": "https://android-developers.googleblog.com/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "OpenAI"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "OpenAI Daybreak: AI przechodzi od znajdowania luk do patchowania",
+      "rationale": "To mocny zwrot w cyber AI: Codex Security, GPT-5.5-Cyber, partnerzy i Patch the Planet próbują zamknąć cały loop od discovery do fixu, z człowiekiem nadal w kontroli.",
+      "sourcesLabel": "OpenAI Daybreak; Patch the Planet"
+    },
+    {
+      "priority": "High",
+      "title": "Five Eyes: frontier AI zmienia cyber w horyzoncie miesięcy",
+      "rationale": "Rządowe agencje mówią już językiem zarządów, nie tylko SOC: AI skraca czas od znalezienia podatności do ataku, więc cyber resilience staje się ryzykiem biznesowym.",
+      "sourcesLabel": "NCSC New Zealand; UK NCSC"
+    },
+    {
+      "priority": "High",
+      "title": "Google ADK/A2A: multi-agent jako produkcyjny backend, nie demo",
+      "rationale": "Pythonowy agent LLM plus deterministyczny agent Go pokazują realny wzorzec: agent cards, JSON-RPC, fail-safe manual review i audytowalne usługi w różnych językach.",
+      "sourcesLabel": "Google Developers Blog"
+    },
+    {
+      "priority": "High",
+      "title": "Jak mierzyć proaktywnych agentów kodujących",
+      "rationale": "Google proponuje przejście od \"agent rozwiązał ticket\" do \"agent znalazł właściwy insight i wiedział, kiedy przerwać pracę\". To bliskie codziennej pracy z Codex/Jules.",
+      "sourcesLabel": "Google Developers Blog"
+    },
+    {
+      "priority": "High",
+      "title": "Microsoft i Chevron: energia staje się częścią architektury AI",
+      "rationale": "20-letnia umowa na 2.67 GW pokazuje, że AI infrastructure to już nie tylko GPU i modele, ale długie kontrakty energetyczne, gaz, grid constraints i lokalna polityka.",
+      "sourcesLabel": "Business Wire / Chevron"
+    },
+    {
+      "priority": "Medium",
+      "title": "Product Hunt: MCP i agent evaluation w centrum startupów",
+      "rationale": "Skybridge, AgentX, Framer AI Agents, Viktor i Unabyss pokazują, że startupy budują warstwę aplikacji, ewaluacji i pamięci wokół agentów oraz MCP.",
+      "sourcesLabel": "Product Hunt"
+    },
+    {
+      "priority": "Medium",
+      "title": "Deno Desktop: web apps wracają na desktop inną ścieżką niż Electron",
+      "rationale": "deno desktop obiecuje małe binaria, Node compatibility, framework auto-detection i binary-diff updates. To temat dla developerów budujących lokalne narzędzia AI.",
+      "sourcesLabel": "Deno Docs; Hacker News"
+    },
+    {
+      "priority": "Medium",
+      "title": "Agent tooling reliability: Codex logging i Oak",
+      "rationale": "Codex issue o zapisach SQLite oraz Oak jako VCS projektowany dla agentów pokazują, że narzędzia agentowe potrzebują nowych prymitywów: branch per session, kontrola logów, audyt i review.",
+      "sourcesLabel": "GitHub; Oak; Hacker News"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI Daybreak",
+      "url": "https://openai.com/index/daybreak-securing-the-world/"
+    },
+    {
+      "title": "OpenAI Patch the Planet",
+      "url": "https://openai.com/index/patch-the-planet/"
+    },
+    {
+      "title": "NCSC New Zealand",
+      "url": "https://www.ncsc.govt.nz/news/leaders-of-five-eyes-cyber-security-agencies-call-to-action-on-ai-preparedness/"
+    },
+    {
+      "title": "UK NCSC",
+      "url": "https://www.ncsc.gov.uk/news/the-ai-shift-in-cyber-risk-why-leaders-must-act-now"
+    },
+    {
+      "title": "Google Developers Blog",
+      "url": "https://developers.googleblog.com/build-cross-language-multi-agent-team-with-google-agent-development-kit-and-a2a/"
+    },
+    {
+      "title": "Google Developers Blog",
+      "url": "https://developers.googleblog.com/measuring-what-matters-with-jules/"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/front"
+    },
+    {
+      "title": "Deno Docs",
+      "url": "https://docs.deno.com/runtime/desktop/"
+    },
+    {
+      "title": "GitHub openai/codex issue 28224",
+      "url": "https://github.com/openai/codex/issues/28224"
+    },
+    {
+      "title": "Oak",
+      "url": "https://oak.space/oak/oak"
+    },
+    {
+      "title": "Sakana Fugu",
+      "url": "https://sakana.ai/fugu/"
+    },
+    {
+      "title": "Moebius project page",
+      "url": "https://hustvl.github.io/Moebius/"
+    },
+    {
+      "title": "Business Wire / Chevron",
+      "url": "https://www.businesswire.com/news/home/20260622017964/en/Chevron-Signs-20-Year-Power-Agreement-with-Microsoft-for-West-Texas-Data-Center"
+    },
+    {
+      "title": "OpenAI News",
+      "url": "https://openai.com/news/"
+    },
+    {
+      "title": "Anthropic Newsroom",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "title": "Google Research Blog",
+      "url": "https://research.google/blog/"
+    },
+    {
+      "title": "Android Developers Blog",
+      "url": "https://android-developers.googleblog.com/"
+    }
+  ]
+}

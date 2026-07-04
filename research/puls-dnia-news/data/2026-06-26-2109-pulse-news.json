@@ -1,0 +1,517 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-06-26",
+  "runTime": "21:09",
+  "status": "Material update",
+  "headline": "RCB zaostrza alert na weekend, Radomsko wraca do wody, a Wenezuela i Ormuz podbijają wieczorne ryzyko",
+  "summary": "O 21:09 krajowy puls budują zatrzymanie w sprawie gróźb wobec prezydenta, ogólnopolski alert upałowy, częściowe przywracanie ciśnienia w Radomsku i nadal zablokowany odcinek po zderzeniu pociągów, a za granicą wyróżniają się 920 ofiar w Wenezueli, napięcie w Ormuz, rekordowy upał w Niemczech oraz mocne sygnały z Ukrainy, Rosji i USA.",
+  "items": [
+    {
+      "id": "pulse-2026-06-26-2109-01-grozby-prezydent",
+      "section": "Polska",
+      "title": "Zatrzymanie podejrzanego o groźby wobec prezydenta weszło do krajowego topu bezpieczeństwa",
+      "lead": "Policja potwierdziła zatrzymanie mężczyzny podejrzewanego o groźby wobec Karola Nawrockiego.",
+      "whatHappened": "TVN24 podało, że mężczyzna podejrzewany o kierowanie gróźb wobec prezydenta Karola Nawrockiego został zatrzymany w Czerwieńsku w województwie lubuskim. Informację potwierdziła młodsza aspirant Anna Baran z zielonogórskiej policji.",
+      "keyFacts": [
+        "Artykuł TVN24 został opublikowany po 20:50 czasu polskiego i wniósł nowy, wieczorny temat bezpieczeństwa.",
+        "Podejrzany został zatrzymany w Czerwieńsku w województwie lubuskim.",
+        "Potwierdzenie dla mediów przekazała policja z Zielonej Góry."
+      ],
+      "reactions": [
+        "Temat szybko przeszedł z poziomu doniesienia do realnej interwencji służb.",
+        "Kolejne decyzje proceduralne będą zależeć od prokuratury i kwalifikacji czynu."
+      ],
+      "whyItMatters": "To bezpośredni temat bezpieczeństwa państwa i ochrony głowy państwa, dlatego natychmiast wskoczył wysoko do wieczornego zestawu.",
+      "context": "W poprzednim runie ten wątek nie występował. Pojawił się dopiero pod koniec dnia jako nowy, krajowy sygnał alarmowy.",
+      "watchNext": [
+        "Czy zatrzymany usłyszy dziś zarzuty lub środki zapobiegawcze.",
+        "Czy policja lub prokuratura doprecyzują motyw i formę gróźb."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zatrzymano mężczyznę podejrzewanego o kierowanie gróźb w kierunku prezydenta",
+          "url": "https://tvn24.pl/polska/zatrzymano-mezczyzne-podejrzewanego-o-kierowanie-grozb-w-kierunku-prezydenta-karola-nawrockiego-st9116538"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Prezydent",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-26-2109-02-alert-rcb-upal",
+      "section": "Alerty",
+      "title": "RCB spina cały weekend jednym ostrzeżeniem przed upałem",
+      "lead": "Alert dla soboty i niedzieli obejmuje już cały kraj i ostrzega przed kulminacją gorąca.",
+      "whatHappened": "RCB utrzymuje, że niemal cała Polska wchodzi w falę upałów z kulminacją w niedzielę 28 czerwca, a wieczorny materiał TVN Meteo doprecyzowuje już alert na sobotę i niedzielę z prostym zaleceniem unikania słońca.",
+      "keyFacts": [
+        "RCB wskazuje, że najwyższe temperatury mają wystąpić w niedzielę 28 czerwca.",
+        "Komunikat łączy falę gorąca z początkiem wakacyjnego ruchu.",
+        "Wieczorny przekaz dla użytkownika jest już bardzo praktyczny: ograniczać ekspozycję na słońce."
+      ],
+      "reactions": [
+        "Alert ma wyraźnie użytkowy charakter i dotyczy zdrowia, podróży oraz aktywności na zewnątrz.",
+        "Wysoka temperatura wzmacnia znaczenie pozostałych tematów infrastrukturalnych, takich jak woda i kolej."
+      ],
+      "whyItMatters": "To najszerszy alert krajowy tego wieczoru, bo obejmuje praktycznie wszystkich użytkowników i nakłada się na początek wakacji.",
+      "context": "W poprzednim runie mowa była o ogólnej kulminacji upałów. Teraz przekaz przechodzi do pełnego weekendowego alertu dla całej Polski.",
+      "watchNext": [
+        "Czy IMGW lub RCB podniosą jeszcze poziom ostrzeżeń w sobotę.",
+        "Czy dojdą lokalne ograniczenia lub dodatkowe apele służb."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo: Alert RCB na sobotę 27.06 i niedzielę 28.06",
+          "url": "https://tvn24.pl/tvnmeteo/polska/upaly-w-polsce-alert-rcb-na-sobote-27-06-i-niedziele-28-06-unikaj-przebywania-na-sloncu-st9116490"
+        },
+        {
+          "title": "RCB: fala upałów w niemal całym kraju",
+          "url": "https://www.gov.pl/web/rcb/w-najblizszych-dniach-na-terenie-niemal-calego-kraju-prognozowana-jest-fala-upalow"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Pogoda",
+        "Upał"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-26-2109-03-radomsko-awaria-postep",
+      "section": "Polska",
+      "title": "Radomsko wychodzi z ostrej fazy kryzysu wodnego, ale awaria nie jest jeszcze zamknięta",
+      "lead": "Naprawa przy ul. Wilsona jest ukończona, lecz woda nadal nie wróciła stabilnie do wszystkich odbiorców.",
+      "whatHappened": "PGK Radomsko podało wieczorem, że awaria przy ul. Wilsona została usunięta i ciśnienie w sieci powinno rosnąć. Spółka zaznacza jednak, że nie wszędzie oznacza to natychmiastowy powrót wody, a równolegle nadal trwają prace przy usuwaniu awarii na ul. Grodzkiej.",
+      "keyFacts": [
+        "Aktualizacja PGK została oparta o stan prac z godziny 18:30.",
+        "Usunięto awarię przy ul. Wilsona, ale ciśnienie w sieci nadal może być zbyt niskie dla wyższych kondygnacji.",
+        "Drugie ognisko awarii na ul. Grodzkiej nadal wymaga naprawy."
+      ],
+      "reactions": [
+        "To częściowa poprawa wobec obrazu z poprzedniego runu, ale nie pełne zamknięcie kryzysu.",
+        "Wysokie temperatury zwiększają presję na szybkie przywrócenie stabilnych dostaw."
+      ],
+      "whyItMatters": "Temat pozostaje wysoko, bo dotyczy podstawowej usługi komunalnej dla dużej części miasta w czasie ogólnopolskiej fali upałów.",
+      "context": "W poprzednim runie Radomsko było opisane jako szeroka awaria obejmująca większość odbiorców. Wieczorem najważniejsza zmiana to częściowy postęp prac i stopniowy wzrost ciśnienia.",
+      "watchNext": [
+        "Czy jeszcze tej nocy zakończą się prace przy ul. Grodzkiej.",
+        "Czy PGK potwierdzi pełny powrót wody także na wyższych piętrach."
+      ],
+      "sources": [
+        {
+          "title": "PGK Radomsko",
+          "url": "https://pgk-radomsko.pl/"
+        },
+        {
+          "title": "Miasto Radomsko: awaria ul. Wilsona i Grodzkiej",
+          "url": "https://www.radomsko.pl/komunikaty/ostrzegawcze/szczegolywydarzenia/785/92/awaria-ul-wilsona-grodzka-mozliwe-braki-wody-dla-wiekszosci-odbiorcow"
+        },
+        {
+          "title": "TVN24: Większość mieszkańców Radomska bez bieżącej wody",
+          "url": "https://tvn24.pl/lodz/radomsko-zmaga-sie-z-awariami-wodociagowymi-wiekszosc-mieszkancow-bez-biezacej-wody-st9116260"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Woda",
+        "Infrastruktura"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-26-2109-04-bialosliwie-jeden-tor",
+      "section": "Polska",
+      "title": "Białośliwie nadal czeka na przywrócenie jednego toru po zderzeniu pociągów",
+      "lead": "Linia pozostaje zablokowana, a kolej mówi na razie tylko o częściowym wznowieniu ruchu.",
+      "whatHappened": "Po zderzeniu dwóch pociągów w Białośliwiu fragment trasy pozostaje nieprzejezdny. Według TVN24 i wypowiedzi PKP PLK celem na wieczór jest uruchomienie jednego toru z ograniczoną prędkością około 50 km/h, podczas gdy PKP Intercity nadal utrzymuje komunikat o przerwie w ruchu i zmianach w organizacji przejazdów.",
+      "keyFacts": [
+        "Śledczy zakończyli swoje czynności, ale techniczne usuwanie skutków nadal trwa.",
+        "Docelowy pierwszy krok to przywrócenie jednego toru, a nie pełnej przepustowości linii.",
+        "Ograniczona prędkość około 50 km/h oznacza, że nawet po wznowieniu ruchu skutki dla podróży pozostaną."
+      ],
+      "reactions": [
+        "Temat nadal mocno obciąża komunikację kolejową na odcinku Piła-Bydgoszcz.",
+        "Przewoźnicy i służby techniczne utrzymują tryb awaryjny."
+      ],
+      "whyItMatters": "To wciąż ważny temat użytkowy i bezpieczeństwa transportu, bo pełne udrożnienie linii nie zostało jeszcze potwierdzone.",
+      "context": "W poprzednim runie główny akcent padał na bilans i oczekiwanie. Wieczorem pojawia się bardziej konkretny techniczny cel: jeden tor jeszcze dziś.",
+      "watchNext": [
+        "Czy po 22:00 kolej potwierdzi uruchomienie jednego toru.",
+        "Czy zostanie podana wstępna przyczyna zderzenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Białośliwie po zderzeniu dwóch pociągów",
+          "url": "https://tvn24.pl/poznan/bialosliwie-po-zderzeniu-dwoch-pociagow-ruch-wciaz-wstrzymany-nowe-informacje-od-pkp-plk-st9114892"
+        },
+        {
+          "title": "PSP Wielkopolska: Zderzenie pociągów w Białośliwiu",
+          "url": "https://www.gov.pl/web/kwpsp-poznan/zderzenie-pociagow-w-bialosliwiu"
+        },
+        {
+          "title": "PKP Intercity: przerwa w ruchu na odcinku Białośliwie – Wyrzysk Osiek",
+          "url": "https://www.intercity.pl/pl/site/o-nas/dzial-prasowy/komunikaty/przerwa-w-ruchu-pociagow-na-odcinku-bialosliwie-%E2%80%93-wyrzysk-osiek-w-dniach-25-26.06.2026-roku.html"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Kolej",
+        "Transport"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-26-2109-05-paliwa-prognozy",
+      "section": "Gospodarka",
+      "title": "Weekendowe limity paliw nadal obowiązują, ale rynek szykuje droższy kolejny tydzień",
+      "lead": "Pb95 pozostaje na poziomie 5,95 zł, a analitycy widzą wzrost cen już w następnym tygodniu.",
+      "whatHappened": "Ministerstwo Energii utrzymuje oficjalne maksymalne ceny paliw na 26 czerwca, a TVN24 Biznes pokazuje wieczorem prognozy Reflex i e-petrol wskazujące na droższe paliwo już w przyszłym tygodniu.",
+      "keyFacts": [
+        "Oficjalny limit dla Pb95 wynosi 5,95 zł za litr.",
+        "Oficjalny limit dla Pb98 wynosi 6,65 zł za litr, a dla diesla 6,12 zł za litr.",
+        "Równolegle pojawiają się analityczne prognozy podwyżek na kolejny tydzień."
+      ],
+      "reactions": [
+        "To praktyczny sygnał dla kierowców przed weekendem i początkiem wakacyjnych wyjazdów.",
+        "Wątek zyskuje dodatkowe znaczenie przy napięciach wokół Ormuz."
+      ],
+      "whyItMatters": "Paliwa są jednym z najbardziej bezpośrednich kosztowych wskaźników dnia dla użytkownika końcowego.",
+      "context": "W poprzednim runie dominowały same oficjalne limity. Wieczorem ważniejsza staje się już trajektoria cen na kolejny tydzień.",
+      "watchNext": [
+        "Czy limity zmienią się w sobotę lub niedzielę.",
+        "Czy napięcia na rynku ropy przełożą się na szybsze podwyżki detaliczne."
+      ],
+      "sources": [
+        {
+          "title": "Ministerstwo Energii: maksymalna cena detaliczna paliw 26 czerwca 2026 r.",
+          "url": "https://www.gov.pl/web/energia/maksymalna-cena-detaliczna-paliw-obowiazujaca-26-czerwca-2026-r"
+        },
+        {
+          "title": "TVN24 Biznes: Droższe paliwo już w przyszłym tygodniu",
+          "url": "https://tvn24.pl/biznes/moto/drozsze-paliwo-juz-w-przyszlym-tygodniu-prognozy-analitykow-reflex-i-e-petrol-st9116160"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Paliwa",
+        "Kierowcy"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-26-2109-06-ignis-iss",
+      "section": "Technologia",
+      "title": "Misja IGNIS na ISS nadaje wieczorem polski akcent technologiczny",
+      "lead": "POLSA potwierdza, że Sławosz Uznański-Wiśniewski rozpoczął misję na Międzynarodowej Stacji Kosmicznej.",
+      "whatHappened": "POLSA potwierdziła rozpoczęcie misji IGNIS na Międzynarodowej Stacji Kosmicznej przez Sławosza Uznańskiego-Wiśniewskiego. W przekazie instytucji to moment symboliczny, bo Polska przestaje być tylko obserwatorem i wchodzi do elitarnego grona państw aktywnych na ISS.",
+      "keyFacts": [
+        "To oficjalnie potwierdzony start polskiej misji technologiczno-naukowej na ISS.",
+        "Misja została publicznie osadzona przez POLSA jako przełomowy krok dla kraju.",
+        "Temat pozostaje szeroko czytelny dla odbiorcy także poza sektorem kosmicznym."
+      ],
+      "reactions": [
+        "Wątek buduje pozytywny kontrapunkt wobec zdominowanego alertami i kryzysami dnia.",
+        "To również sygnał dla krajowego sektora nauki i technologii."
+      ],
+      "whyItMatters": "To najsilniejszy polski temat technologiczny dnia z dużą wartością symboliczną i publiczną.",
+      "context": "W poprzednim runie wiadomo było już, że Polak wszedł na ISS. Wieczorem temat utrzymuje się jako oficjalnie potwierdzony start misji IGNIS.",
+      "watchNext": [
+        "Jakie eksperymenty i aktywności zostaną pokazane jako pierwsze.",
+        "Czy pojawią się dodatkowe materiały z pokładu ISS jeszcze tej nocy."
+      ],
+      "sources": [
+        {
+          "title": "POLSA: Polski astronauta rozpoczął misję IGNIS",
+          "url": "https://polsa.gov.pl/wydarzenia/polski-astronauta-rozpoczal-misje-ignis-na-miedzynarodowej-stacji-kosmicznej/"
+        },
+        {
+          "title": "Urania: Polak na Międzynarodowej Stacji Kosmicznej",
+          "url": "https://www.urania.edu.pl/wiadomosci/polak-na-miedzynarodowej-stacji-kosmicznej"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "Kosmos",
+        "Polska"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-26-2109-07-urc-ukraina",
+      "section": "Świat",
+      "title": "Po URC 2026 Unia utrzymuje twardy przekaz dalszego wsparcia dla Ukrainy",
+      "lead": "Konferencja w Gdańsku zamyka dzień sygnałem, że odbudowa, obrona i reformy Ukrainy pozostają priorytetem UE.",
+      "whatHappened": "Komisja Europejska po Ukraine Recovery Conference 2026 w Gdańsku podkreśla, że Unia będzie dalej wspierać Ukrainę w obronie, odbudowie i reformach. W oficjalnym przekazie konferencja została osadzona jako kolejny krok po otwarciu pierwszego klastra negocjacji akcesyjnych.",
+      "keyFacts": [
+        "URC 2026 było współorganizowane przez Polskę i Ukrainę w Gdańsku.",
+        "Komisja Europejska łączy wsparcie finansowe i instytucjonalne z procesem integracji europejskiej Ukrainy.",
+        "Temat utrzymuje wagę regionalną także po zamknięciu najbardziej konferencyjnej części dnia."
+      ],
+      "reactions": [
+        "Dla Polski to ważny sygnał ciągłości regionalnego wsparcia i współpracy.",
+        "Dla rynków i partnerów rozwojowych to potwierdzenie, że odbudowa Ukrainy pozostaje na stole."
+      ],
+      "whyItMatters": "To jeden z ważniejszych tematów geopolitycznych tego dnia z punktu widzenia Polski i regionu.",
+      "context": "W poprzednim runie URC było jeszcze bardziej konferencyjnym tematem. Wieczorem zostaje domknięte oficjalnym komunikatem o trwałości wsparcia UE.",
+      "watchNext": [
+        "Czy po konferencji pojawią się nowe projekty sektorowe lub dodatkowe kwoty.",
+        "Jak szybko przełożą się te deklaracje na konkretne wdrożenia."
+      ],
+      "sources": [
+        {
+          "title": "Komisja Europejska: EU steps up support for Ukraine's defence, recovery and reconstruction",
+          "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1465"
+        },
+        {
+          "title": "URC 2026",
+          "url": "https://www.urc-international.com/"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Ukraina",
+        "UE"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-26-2109-08-wenezuela-920",
+      "section": "Świat",
+      "title": "Bilans po trzęsieniach ziemi w Wenezueli skoczył do co najmniej 920 ofiar",
+      "lead": "Wieczorny obraz katastrofy jest wyraźnie cięższy niż kilka godzin wcześniej.",
+      "whatHappened": "BBC podało wieczorem nowy bilans co najmniej 920 ofiar po trzęsieniach ziemi w Wenezueli i opisało historię matki, która zginęła, ratując córkę. To oznacza istotne pogorszenie obrazu katastrofy względem popołudniowych doniesień.",
+      "keyFacts": [
+        "Nowy bilans to co najmniej 920 ofiar.",
+        "Katastrofa przestała być tylko sejsmicznym newsem i stała się znacznie cięższym kryzysem humanitarnym.",
+        "USGS pozostaje odniesieniem dla samego zdarzenia sejsmicznego."
+      ],
+      "reactions": [
+        "Wątek humanitarny i skala ofiar wzmacniają globalny ciężar tego tematu.",
+        "Możliwe są kolejne korekty liczb wraz z napływem informacji z dotkniętych regionów."
+      ],
+      "whyItMatters": "To jeden z najcięższych światowych tematów wieczoru przez gwałtownie rosnący bilans ofiar i zniszczeń.",
+      "context": "W poprzednim runie w mediach krążył niższy bilans. Wieczorem skala tragedii jest już zdecydowanie większa.",
+      "watchNext": [
+        "Czy bilans ofiar będzie dalej rósł jeszcze tej nocy.",
+        "Jakie będą pierwsze szacunki dotyczące zniszczeń infrastruktury i pomocy."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Mother dies saving daughter in Venezuela earthquakes",
+          "url": "https://www.bbc.co.uk/news/articles/c0jydyz8z6jo"
+        },
+        {
+          "title": "USGS: eventpage us6000t7zc",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000t7zc"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wenezuela",
+        "Trzęsienie ziemi"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-26-2109-09-ormuz-rozejm",
+      "section": "Bezpieczeństwo",
+      "title": "Atak na statek w Ormuz przechodzi w spór o naruszenie rozejmu",
+      "lead": "Po trafieniu statku pod banderą Singapuru wstrzymano ewakuację, a Trump oskarżył Iran o złamanie porozumienia.",
+      "whatHappened": "BBC podaje, że statek pod banderą Singapuru został trafiony podczas przejścia przez cieśninę Ormuz, co doprowadziło do wstrzymania szerokiej ewakuacji z tego rejonu. Donald Trump publicznie oskarżył Iran o naruszenie porozumienia o zawieszeniu broni.",
+      "keyFacts": [
+        "Zdarzenie dotyczy jednej z kluczowych arterii światowego handlu energią.",
+        "Atak przesunął temat z ryzyka żeglugowego w stronę otwartego sporu politycznego o rozejm.",
+        "Wstrzymanie ewakuacji pokazuje, że zagrożenie operacyjne nie zostało wygaszone."
+      ],
+      "reactions": [
+        "Rynki i przewoźnicy będą patrzeć, czy incydent nie uruchomi kolejnych ograniczeń na szlaku.",
+        "Retoryka polityczna zwiększa ryzyko dalszej eskalacji."
+      ],
+      "whyItMatters": "To wieczorem jeden z najważniejszych tematów bezpieczeństwa gospodarczego, bo łączy żeglugę, energię i geopolitykę.",
+      "context": "W poprzednim runie akcent padał na sam atak i pauzę w ewakuacji. Wieczorem dochodzi do tego publiczne oskarżenie o naruszenie rozejmu.",
+      "watchNext": [
+        "Czy pojawią się kolejne incydenty na wodzie.",
+        "Czy Iran lub inni uczestnicy sporu odpowiedzą oficjalnie na zarzut naruszenia rozejmu."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Trump accuses Iran of ceasefire breach after Strait of Hormuz attack",
+          "url": "https://www.bbc.co.uk/news/articles/ckg54g0ry0vo"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Ormuz",
+        "Energia"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-26-2109-10-europa-upal-413",
+      "section": "Alerty",
+      "title": "Europa łapie nowy próg upału: Niemcy mają prowizoryczny rekord 41,3 stopnia",
+      "lead": "Fala gorąca zatrzymuje część wydarzeń publicznych i przesuwa się dalej na północ kontynentu.",
+      "whatHappened": "BBC podało prowizoryczny rekord Niemiec wynoszący 41,3 stopnia w Saarbrücken oraz informacje o wstrzymaniu części wydarzeń publicznych. Równolegle TVN Meteo pokazuje, że fala gorąca dochodzi już do Skandynawii, gdzie Duńska Gwardia Królewska zdjęła futrzane czapki.",
+      "keyFacts": [
+        "41,3 stopnia to nowy prowizoryczny rekord Niemiec.",
+        "Skutki upału przekładają się już na zmiany w organizacji życia publicznego.",
+        "Rozszerzanie się zjawiska na Skandynawię pokazuje skalę kontynentalną."
+      ],
+      "reactions": [
+        "To silny sygnał, że europejska fala gorąca nie jest lokalnym epizodem.",
+        "Temat łączy ryzyko zdrowotne, transportowe i politykę adaptacji do ekstremów pogodowych."
+      ],
+      "whyItMatters": "To najważniejszy wieczorny alert międzynarodowy dla Europy, bo pokazuje realne przekroczenie dotychczasowych progów temperatur i skutków społecznych.",
+      "context": "W poprzednim runie Europa była opisywana przez ogólną falę upałów. Teraz dochodzi konkretny rekord 41,3 stopnia i dalsze przesunięcie zjawiska na północ.",
+      "watchNext": [
+        "Czy rekord Niemiec zostanie oficjalnie potwierdzony po pełnej weryfikacji danych.",
+        "Jakie kolejne ograniczenia wprowadzą miasta i organizatorzy wydarzeń."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Europe's deadly heatwave breaks German record and halts public events",
+          "url": "https://www.bbc.co.uk/news/articles/cx2knzzwprgo"
+        },
+        {
+          "title": "TVN Meteo: Skandynawia zaczyna się smażyć",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/upal-w-europie-skandynawia-zaczyna-sie-smazyc-dunska-gwardia-krolewska-zdjela-futrzane-czapki-st9116376"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Europa",
+        "Upał"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-26-2109-11-siergiej-iwanow",
+      "section": "Świat",
+      "title": "Śmierć Siergieja Iwanowa zamyka dzień mocnym sygnałem z rosyjskiej elity władzy",
+      "lead": "Nie żyje były minister obrony Rosji i bliski współpracownik Władimira Putina.",
+      "whatHappened": "TVN24 podało, że zmarł 73-letni Siergiej Iwanow, były minister obrony Rosji i jeden z najbliższych współpracowników Władimira Putina. Przyczyny jego śmierci nie zostały podane do publicznej wiadomości.",
+      "keyFacts": [
+        "Iwanow należał do ścisłego otoczenia rosyjskiej elity bezpieczeństwa.",
+        "Miał 73 lata.",
+        "Na moment publikacji nie ujawniono oficjalnie przyczyny zgonu."
+      ],
+      "reactions": [
+        "To temat o znaczeniu politycznym i symbolicznym w kontekście rosyjskiej elity władzy.",
+        "Przy braku szczegółów przyczyny pojawia się naturalna przestrzeń na dalsze spekulacje i komentarze."
+      ],
+      "whyItMatters": "Każda zmiana dotycząca rozpoznawalnych figur rosyjskiego aparatu władzy ma znaczenie dla obserwatorów polityki Kremla.",
+      "context": "To nowy wieczorny temat, którego nie było w poprzednim zestawie. Wchodzi jako czysty sygnał personalno-polityczny.",
+      "watchNext": [
+        "Czy rosyjskie władze podadzą więcej szczegółów o przyczynie śmierci.",
+        "Jak śmierć Iwanowa zostanie opisana przez media bliskie Kremlowi."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Siergiej Iwanow nie żyje",
+          "url": "https://tvn24.pl/swiat/siergiej-iwanow-nie-zyje-byl-ministrem-obrony-rosji-i-bliskim-wspolpracownikiem-wladimira-putina-st9116008"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Rosja",
+        "Polityka"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-26-2109-12-usa-pkb-bea",
+      "section": "Gospodarka",
+      "title": "USA kończą dzień mocniejszym odczytem PKB za pierwszy kwartał",
+      "lead": "BEA podniosło trzeci szacunek annualizowanego wzrostu PKB USA do 2,1 proc.",
+      "whatHappened": "Biuro Analiz Ekonomicznych USA w trzecim szacunku podniosło annualizowany wzrost realnego PKB w pierwszym kwartale 2026 do 2,1 proc. To oficjalna rewizja w górę wobec poprzedniego odczytu.",
+      "keyFacts": [
+        "Nowy odczyt wynosi 2,1 proc. annualizowanego wzrostu realnego PKB.",
+        "To trzeci szacunek za pierwszy kwartał 2026.",
+        "Dane pojawiają się w dniu silnych napięć energetycznych i geopolitycznych."
+      ],
+      "reactions": [
+        "Lepszy odczyt gospodarczy łagodzi część obaw o krótkoterminową kondycję największej gospodarki świata.",
+        "Jednocześnie rynki będą zestawiać te dane z niestabilnością wokół ropy i żeglugi."
+      ],
+      "whyItMatters": "To najważniejszy twardy wskaźnik makroekonomiczny w wieczornym obiegu i dobry kontrapunkt dla pozostałych tematów ryzyka.",
+      "context": "W poprzednim runie temat był obecny, ale teraz zostaje utrzymany jako oficjalny benchmark makro na koniec dnia.",
+      "watchNext": [
+        "Jak dane o PKB zostaną odczytane przez rynek w połączeniu z cenami energii.",
+        "Czy pojawią się kolejne rewizje oczekiwań dla drugiego kwartału."
+      ],
+      "sources": [
+        {
+          "title": "BEA: GDP (Third Estimate), 1st Quarter 2026",
+          "url": "https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-1st"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "USA",
+        "PKB"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "CNN",
+      "url": "https://www.cnn.com/"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "RCB: fala upałów w niemal całym kraju",
+      "url": "https://www.gov.pl/web/rcb/w-najblizszych-dniach-na-terenie-niemal-calego-kraju-prognozowana-jest-fala-upalow"
+    },
+    {
+      "title": "PGK Radomsko",
+      "url": "https://pgk-radomsko.pl/"
+    },
+    {
+      "title": "PSP Wielkopolska: Zderzenie pociągów w Białośliwiu",
+      "url": "https://www.gov.pl/web/kwpsp-poznan/zderzenie-pociagow-w-bialosliwiu"
+    },
+    {
+      "title": "Ministerstwo Energii: maksymalna cena detaliczna paliw 26 czerwca 2026 r.",
+      "url": "https://www.gov.pl/web/energia/maksymalna-cena-detaliczna-paliw-obowiazujaca-26-czerwca-2026-r"
+    },
+    {
+      "title": "POLSA: Polski astronauta rozpoczął misję IGNIS",
+      "url": "https://polsa.gov.pl/wydarzenia/polski-astronauta-rozpoczal-misje-ignis-na-miedzynarodowej-stacji-kosmicznej/"
+    },
+    {
+      "title": "Komisja Europejska: wsparcie UE dla Ukrainy po URC 2026",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1465"
+    },
+    {
+      "title": "BBC News: Mother dies saving daughter in Venezuela earthquakes",
+      "url": "https://www.bbc.co.uk/news/articles/c0jydyz8z6jo"
+    },
+    {
+      "title": "BBC News: Trump accuses Iran of ceasefire breach after Strait of Hormuz attack",
+      "url": "https://www.bbc.co.uk/news/articles/ckg54g0ry0vo"
+    },
+    {
+      "title": "BBC News: Europe's deadly heatwave breaks German record and halts public events",
+      "url": "https://www.bbc.co.uk/news/articles/cx2knzzwprgo"
+    },
+    {
+      "title": "BEA: GDP (Third Estimate), 1st Quarter 2026",
+      "url": "https://www.bea.gov/news/2026/gdp-third-estimate-industries-corporate-profits-state-gdp-and-state-personal-income-1st"
+    }
+  ]
+}

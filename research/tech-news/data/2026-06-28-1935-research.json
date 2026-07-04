@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-06-28",
+  "runTime": "19:35",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny research jest materialną aktualizacją do porannego raportu. Nie pojawił się drugi przełomowy release modelu po GPT-5.6/Mythos, ale pojawiły się ważne dowody, że ograniczenia infrastrukturalne AI zaczynają dotykać nawet największych firm technologicznych. Reuters za Financial Times podał, że Google ograniczyło Meta dostęp do Gemini, bo Meta chciała więcej mocy niż Google było w stanie dostarczyć. To przesuwa rozmowę z \"czy firmy mają model\" na \"czy mają gwarantowany compute, token budget i plan awaryjny\".",
+    "Druga oś to pamięć i AI factories. TechCrunch opisuje Microna jako najnowszy obiekt fascynacji Wall Street dzięki boomowi na HBM, DRAM i NAND, a Tom's Hardware pokazuje konsumencki skutek: 32 GB DDR5 kosztuje już minimum około 375 USD według ich śledzenia cen. Równolegle Firmus/NVIDIA wzmacnia wątek regionalnych AI clouds w Azji i Australii, z planem dużej podaży GPU dla firm AI-native.",
+    "Trzecia oś to backlash regulacyjny i społeczny wobec technologii działającej w tle: Flock pokazuje AI-surveillance z natural-language search po nagraniach, The Guardian opisuje globalne przyspieszenie zakazów social mediów dla nastolatków, a Product Hunt i HN nadal pokazują agentowe narzędzia pracy, WebMCP i lokalne routowanie LLM jako dominujący sygnał makerów."
+  ],
+  "summaryBullets": [
+    "Infrastruktura: Google ogranicza Meta dostęp do Gemini",
+    "Infrastruktura: Micron i RAMageddon pokazują cenę pamięci AI",
+    "Infrastruktura: Firmus i Nvidia budują regionalną warstwę AI compute"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-06-28-1935-0-google-ogranicza-meta-dostep-do-gemini-dc07aad86d",
+      "section": "Infrastruktura",
+      "title": "Google ogranicza Meta dostęp do Gemini",
+      "standfirst": "Reuters za Financial Times podał, że Google ograniczyło Meta użycie Gemini, bo Meta chciała więcej mocy niż Google mogło dostarczyć. To mocny dowód, że nawet Big Tech zaczyna reglamentować dostęp do modeli przez brak compute.",
+      "whatHappened": "Google miało odmówić Meta pełnej zamówionej pojemności Gemini i zmusić ją do oszczędniejszego używania tokenów.",
+      "whyItMatters": "W AI przewagą nie jest już tylko model, ale gwarantowana przepustowość, budżet tokenów i niezależność od dostawcy.",
+      "deeperAnalysis": [
+        "Ten news jest ciekawy, bo dotyczy dwóch firm, które same są gigantami infrastruktury i modeli. Meta ma własne modele, własne akceleratory i ogromne plany data-center, a mimo to według FT korzystała z Gemini w części wewnętrznych zastosowań. Jeżeli nawet taki klient dostaje limit pojemności, mniejsze firmy powinny traktować capacity risk jako realny element architektury.",
+        "Google też nie wygląda tu jak dostawca z nieograniczonym zapasem. Reuters przypomina, że Sundar Pichai mówił o ograniczeniach compute w Google Cloud i rosnącym backlogu. To ważne, bo pokazuje niedopasowanie między publiczną narracją o \"wszędzie dostępnej AI\" a operacyjną rzeczywistością: ktoś musi zdecydować, kto dostaje GPU, pamięć, serving i tokeny w pierwszej kolejności.",
+        "Dla polskiego podcastu dobry kąt brzmi: AI przechodzi z ery API key do ery przydziałów. Firmy będą musiały pytać nie tylko o cenę modelu, ale o umowy capacity, fallback na własne modele, lokalny inference, routing i zasady degradacji usługi, gdy dostawca ograniczy dostęp."
+      ],
+      "contextPoints": [
+        "Co się stało: Reuters/FT opisują ograniczenie dostępu Meta do Gemini z powodu niedoboru mocy.",
+        "Dlaczego ważne: compute i token budget stają się zależnością biznesową porównywalną z chmurą lub energią.",
+        "Na co patrzeć dalej: komentarze Google/Meta, migracja Meta do własnych modeli oraz podobne limity dla innych klientów."
+      ],
+      "sources": [
+        {
+          "title": "Reuters/WHTC: Google limits Meta's use of Gemini",
+          "url": "https://whtc.com/2026/06/28/google-limits-metas-use-of-its-gemini-ai-models-ft-reports/"
+        },
+        {
+          "title": "Financial Times: Google caps Meta's Gemini use",
+          "url": "https://www.ft.com/content/c5d52f72-71ef-40bc-bad3-61afdba8b378"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/news"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Google",
+        "Meta",
+        "Gemini",
+        "Compute"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-28-1935-1-micron-i-ramageddon-pokazuja-cene-pamieci-ai-439eed6839",
+      "section": "Infrastruktura",
+      "title": "Micron i RAMageddon pokazują cenę pamięci AI",
+      "standfirst": "TechCrunch opisuje Microna jako nową gwiazdę Wall Street dzięki popytowi na pamięć do AI, a Tom's Hardware pokazuje ceny DDR5 uderzające w zwykłych użytkowników. Wąskie gardło AI przesuwa się z GPU na HBM, DRAM i NAND.",
+      "whatHappened": "Memory crunch stał się jednocześnie tematem giełdowym, data-center i konsumenckim.",
+      "whyItMatters": "Koszt AI zaczyna przenosić się z serwerowni na laptopy, PC, konsole i urządzenia końcowe.",
+      "deeperAnalysis": [
+        "Poranny raport mówił już o pamięci jako strategicznym wąskim gardle AI, ale wieczorne źródła dodają ostrzejszy obraz rynkowy. TechCrunch pokazuje, że Micron jest nagradzany za długoterminowe umowy i ekspozycję na HBM, a inwestorzy szukają kolejnych publicznych zwycięzców boomu AI poza Nvidią.",
+        "Tom's Hardware uziemia ten temat na poziomie koszyka zakupowego. Według ich indeksu DDR5 potrafi kosztować kilka razy więcej niż jesienią 2025 r., a najtańsze 32 GB w śledzonych ofertach przekracza 370 USD. To nie jest tylko problem entuzjastów PC: starsze i tańsze segmenty pamięci też mogą dostać rykoszetem, gdy producenci przesuwają moce na HBM i serwerowy DRAM.",
+        "Podcastowo warto to opowiedzieć jako \"rachunek za AI w częściach komputerowych\". Gdy Apple, Xbox, PC builders i producenci sprzętu płacą więcej za pamięć, zwykły użytkownik może finansować wyścig data centers nawet wtedy, gdy sam nie zamawia narzędzi AI."
+      ],
+      "contextPoints": [
+        "Co się stało: Micron korzysta z AI memory crunch, a ceny DDR5 pokazują konsumencki spillover.",
+        "Dlaczego ważne: pamięć staje się strategicznym zasobem AI obok GPU, energii i wody.",
+        "Na co patrzeć dalej: umowy Micron/Anthropic/Nvidia, ceny DDR5 w Europie i reakcje producentów laptopów."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: Micron as the next Nvidia",
+          "url": "https://techcrunch.com/2026/06/28/why-wall-street-thinks-us-memory-maker-micron-is-the-next-nvidia/"
+        },
+        {
+          "title": "Tom's Hardware: RAM price index 2026",
+          "url": "https://www.tomshardware.com/pc-components/ram/ram-price-index-2026-lowest-price-on-ddr5-and-ddr4-memory-of-all-capacities"
+        },
+        {
+          "title": "Tom's Hardware: 32GB DDR5 now costs $375 minimum",
+          "url": "https://www.tomshardware.com/pc-components/ddr5/32gb-of-ddr5-now-costs-usd375-minimum-ai-shortage-continues-to-squeeze-pc-building"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Micron",
+        "HBM",
+        "DDR5",
+        "Hardware"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-28-1935-2-firmus-i-nvidia-buduja-regionalna-warstwe-ai-compute-c1e4d111ee",
+      "section": "Infrastruktura",
+      "title": "Firmus i Nvidia budują regionalną warstwę AI compute",
+      "standfirst": "Firmus Technologies ma sprzedawać Nvidia-powered cloud services firmom AI-native, a reporting mówi o 170 tysięcy GPU w Batam od 2027 roku. To kolejny sygnał, że dostęp do compute będzie regionalizowany przez AI clouds, a nie tylko hyperscalerów.",
+      "whatHappened": "Australijska firma infrastrukturalna rozszerza współpracę z Nvidią i celuje w klientów AI-native w regionie Azja-Pacyfik.",
+      "whyItMatters": "Regionalne AI clouds mogą stać się planem B dla startupów i państw, które nie chcą zależeć wyłącznie od USA, Big Tech lub jednego hyperscalera.",
+      "deeperAnalysis": [
+        "Firmus nie jest tylko kolejnym ogłoszeniem o data center. W oficjalnych materiałach NVIDIA opisuje regionalne AI Clouds jako sposób na przeniesienie AI factories bliżej danych, deweloperów i wymogów suwerenności. Firmus wpisuje się w ten schemat przez Australię, Singapur i Azję Południowo-Wschodnią.",
+        "Reporting Reutersa o 170 tys. GPU w Batam jest większy niż wcześniejszy Project Southgate w Australii, ale warto zachować ostrożność: liczby pochodzą z firmowych deklaracji i kontraktowych planów, a realna wartość zależy od dostaw sprzętu, energii, chłodzenia, klientów oraz finansowania. Mimo to sam model biznesowy jest istotny: Nvidia nie tylko sprzedaje chipy, ale uczestniczy w ekosystemie chmur, marketplace'ów i udziału w przychodach.",
+        "Dla polskiego odbiorcy najważniejszy jest trend, nie sama nazwa Firmus. Jeżeli regionalne AI clouds będą rosły, Europa i Polska będą musiały pytać, czy budują własne zdolności compute, czy zostają wyłącznie klientami globalnych platform."
+      ],
+      "contextPoints": [
+        "Co się stało: Firmus/Nvidia wzmacniają regionalny AI cloud dla klientów AI-native.",
+        "Dlaczego ważne: compute staje się geopolityczną i operacyjną infrastrukturą, nie tylko usługą chmurową.",
+        "Na co patrzeć dalej: realne dostawy GPU, kontrakty klientów, finansowanie i europejskie odpowiedniki takich projektów."
+      ],
+      "sources": [
+        {
+          "title": "Reuters/TradingView: Firmus Technologies strikes AI access deal with Nvidia",
+          "url": "https://www.tradingview.com/news/reuters.com%2C2026%3Anewsml_L4N43001A%3A0-australia-s-firmus-technologies-strikes-ai-access-deal-with-nvidia/"
+        },
+        {
+          "title": "NVIDIA: AI Cloud Ecosystem",
+          "url": "https://blogs.nvidia.com/blog/ai-cloud-ecosystem/"
+        },
+        {
+          "title": "Firmus: Project Southgate agreement",
+          "url": "https://firmus.co/newsroom/firmus-signs-multi-year-agreement-with-global-hyperscale-customer-at-project-southgate"
+        },
+        {
+          "title": "Business Recorder: Firmus/Nvidia deal",
+          "url": "https://www.brecorder.com/news/40427543"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "NVIDIA",
+        "Firmus",
+        "AI Factory",
+        "APAC",
+        "Data Center"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-28-1935-3-flock-pokazuje-ze-ai-surveillance-staje-sie-wyszukiwarka-swiata-d2016e3be7",
+      "section": "Cyber",
+      "title": "Flock pokazuje, że AI-surveillance staje się wyszukiwarką świata",
+      "standfirst": "Engadget opisuje kamery Flock nie tylko jako czytniki tablic, ale jako AI-system do wyszukiwania w nagraniach po naturalnym opisie. To praktyczny przykład, jak AI zmienia zwykły monitoring w infrastrukturę masowego wyszukiwania osób i pojazdów.",
+      "whatHappened": "Publiczna debata o Flock wróciła przez skalę sieci, nadużycia, podatności i AI search po materiale z kamer.",
+      "whyItMatters": "Gdy monitoring staje się przeszukiwalny tekstem, znika granica między kamerą bezpieczeństwa a stałą bazą lokalizacji.",
+      "deeperAnalysis": [
+        "Najważniejszy element tekstu Engadget to nie sama liczba kamer, tylko zmiana interfejsu. Tradycyjna kamera wymagała człowieka oglądającego nagranie. System oparty o AI pozwala pytać bazę o opis pojazdu, nalepki, uszkodzenia albo inne cechy. To radykalnie obniża koszt śledzenia.",
+        "Drugi element to governance. Engadget zbiera doniesienia o bezpieczeństwie kamer, dostępie między jurysdykcjami, nadużyciach przez funkcjonariuszy i pośrednim dostępie służb federalnych przez lokalne programy współdzielenia. To są klasyczne problemy systemów danych, ale wzmocnione przez AI i skalę fizycznego świata.",
+        "W podcaście warto unikać operacyjnych szczegółów podatności i skupić się na pytaniu obywatelskim: kto może wyszukiwać rzeczywistość po opisie, kto zatwierdza takie wyszukiwania i jak długo przechowywane są wyniki?"
+      ],
+      "contextPoints": [
+        "Co się stało: Flock wrócił jako przykład AI-enhanced camera network z natural-language search.",
+        "Dlaczego ważne: AI obniża koszt masowego śledzenia i zwiększa ryzyko nadużyć.",
+        "Na co patrzeć dalej: audyty, warrant requirements, lokalne zakazy, reakcje ACLU i zabezpieczenia vendorów."
+      ],
+      "sources": [
+        {
+          "title": "Engadget: Flock cameras track more than your license plate",
+          "url": "https://www.engadget.com/2203000/flock-cameras-recording-license-plate/"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/news"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "Surveillance",
+        "Prywatność",
+        "Bezpieczeństwo",
+        "Policja"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-28-1935-4-zakazy-social-mediow-dla-nastolatkow-zblizaja-sie-do-punktu-zwrotnego-c864016a7a",
+      "section": "Regulacje",
+      "title": "Zakazy social mediów dla nastolatków zbliżają się do punktu zwrotnego",
+      "standfirst": "The Guardian opisuje globalne przyspieszenie ograniczeń wiekowych dla social mediów, z UK planującym próg 16 lat do wiosny 2027 r. Tech regulation coraz częściej wynika z utraty zaufania publicznego, a nie tylko z eksperckich konsultacji.",
+      "whatHappened": "Kolejne państwa wdrażają lub rozważają ograniczenia dostępu dzieci do dużych platform społecznościowych.",
+      "whyItMatters": "Platformy mogą dostać najtwardszą regulację wtedy, gdy użytkownicy i politycy przestają wierzyć w dobrowolne mechanizmy bezpieczeństwa.",
+      "deeperAnalysis": [
+        "To nie jest klasyczny news o jednej ustawie. Guardian pokazuje zmianę klimatu politycznego: Australia dała precedens, UK chce próg 16 lat, a podobne ruchy pojawiają się w Azji, Europie i obu Amerykach. Dla platform to groźne, bo oznacza przejście od wymogów raportowania i moderacji do prostego pytania: czy dziecko w ogóle może wejść na platformę.",
+        "Ważna jest też presja lobbyingowa. Big Tech może argumentować, że zakazy są łatwe do obchodzenia i mogą pogorszyć projektowanie bezpieczniejszych usług, ale ten argument działa tylko wtedy, gdy politycy wierzą w samoregulację. Guardian cytuje też obawę, że regulacja coraz częściej będzie napędzana publicznym gniewem, a nie powolnym procesem evidence-led policy.",
+        "Dla polskiego odbiorcy ten temat łączy AI, social media i ochronę dzieci. Algorytmy rekomendacji, addictive design, wiek użytkownika i odpowiedzialność platform będą wracać w kontekście DSA, edukacji i lokalnych sporów o telefony w szkołach."
+      ],
+      "contextPoints": [
+        "Co się stało: UK i inne kraje przesuwają się w stronę zakazów lub ostrych limitów wiekowych.",
+        "Dlaczego ważne: to może być nowy standard regulowania platform, jeśli narzędzia bezpieczeństwa zostaną uznane za niewystarczające.",
+        "Na co patrzeć dalej: model UK, egzekwowanie wieku, reakcje UE/DSA i czy Polska podejmie podobny temat."
+      ],
+      "sources": [
+        {
+          "title": "The Guardian: social media age bans near tipping point",
+          "url": "https://www.theguardian.com/world/2026/jun/28/tech-firms-are-losing-the-public-social-media-age-bans-near-tipping-point"
+        },
+        {
+          "title": "European Commission: TikTok addictive design under DSA",
+          "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_312"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Regulacje",
+        "Social Media",
+        "Dzieci",
+        "Meta",
+        "TikTok"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-28-1935-5-product-hunt-i-hn-pokazuja-praktyczny-zwrot-do-agentow-narzedziowych-48d2c39574",
+      "section": "Produkty",
+      "title": "Product Hunt i HN pokazują praktyczny zwrot do agentów narzędziowych",
+      "standfirst": "Dzisiejszy Product Hunt promuje agregację modeli, WebMCP-native chat, lokalne wyszukiwanie semantyczne i agenta przez przeglądarkę oraz wiadomości. Makerzy nie sprzedają już samego chatbota, tylko AI jako warstwę integracji narzędzi.",
+      "whatHappened": "Najwyżej widoczne premiery i wątki developerskie przesuwają AI w stronę model routing, lokalnego searchu, MCP i pracy przez wiele aplikacji.",
+      "whyItMatters": "Trwała adopcja agentów będzie zależeć od integracji, prywatności, kontroli kosztów i niezawodności, nie od samego \"wow\" modelu.",
+      "deeperAnalysis": [
+        "Product Hunt z 28 czerwca jest dobrym snapshotem nastroju rynku. discode.ai obiecuje ponad 100 modeli w jednym interfejsie, Persona.js WebMCP-native chat dla frontendów, Dotient lokalne semantyczne wyszukiwanie, a Lyto agenta przez przeglądarkę, narzędzia i wiadomości. To nie są przypadkowe kategorie: każda rozwiązuje problem orkiestracji i kontekstu.",
+        "Hacker News dodaje bardziej techniczny kontrapunkt. Wayfinder Router pokazuje deterministic routing między lokalnymi i hostowanymi LLM, a issue OpenAI Codex o wykluczaniu wrażliwych plików przypomina, że agenci pracujący w repozytoriach muszą rozumieć granice danych. To właśnie takie drobne mechanizmy będą decydować, czy agent w firmie jest wygodny, czy ryzykowny.",
+        "Podcastowo temat można opowiedzieć jako dojrzewanie agentów. Rynek nie pyta już tylko \"czy AI odpowie\", ale \"czy AI bezpiecznie użyje moich narzędzi, nie wyśle sekretów, wybierze właściwy model i da się kontrolować\"."
+      ],
+      "contextPoints": [
+        "Co się stało: Product Hunt i HN pokazują agentów jako warstwę integracji, routing i local-first search.",
+        "Dlaczego ważne: praktyczny agent wymaga uprawnień, prywatności, kosztów i fallbacków, a nie tylko mocnego modelu.",
+        "Na co patrzeć dalej: adopcja WebMCP, lokalne indeksy, polityki sensitive files i routing między modelami."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt daily 2026-06-28",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/6/28"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/news"
+        },
+        {
+          "title": "openai/codex issue 2847",
+          "url": "https://github.com/openai/codex/issues/2847"
+        },
+        {
+          "title": "Wayfinder Router",
+          "url": "https://github.com/itsthelore/wayfinder-router"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "Agenci",
+        "Product Hunt",
+        "Developer Tools",
+        "MCP"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Google reglamentuje Gemini dla Meta",
+      "rationale": "Nawet największe firmy mogą mieć problem z gwarantowanym dostępem do AI compute, więc token budget i fallback stają się tematem strategicznym.",
+      "sourcesLabel": "Reuters/WHTC; FT; HN"
+    },
+    {
+      "priority": "High",
+      "title": "Micron, HBM i DDR5: zwykły użytkownik płaci za AI",
+      "rationale": "Memory crunch łączy giełdową euforię wokół Microna z podwyżkami RAM dla PC, laptopów i urządzeń konsumenckich.",
+      "sourcesLabel": "TechCrunch; Tom's Hardware"
+    },
+    {
+      "priority": "Medium",
+      "title": "Firmus/Nvidia i regionalne AI factories",
+      "rationale": "Asia-Pacific pokazuje, że AI compute będzie budowany regionalnie dla firm AI-native, nie tylko przez hyperscalerów.",
+      "sourcesLabel": "Reuters; NVIDIA; Firmus"
+    },
+    {
+      "priority": "High",
+      "title": "Flock: AI-kamery jako wyszukiwarka fizycznego świata",
+      "rationale": "Natural-language search po kamerach zmienia monitoring w infrastrukturę śledzenia, z ryzykiem nadużyć i podatności.",
+      "sourcesLabel": "Engadget; HN"
+    },
+    {
+      "priority": "Medium",
+      "title": "Zakazy social mediów dla nastolatków",
+      "rationale": "UK, Australia i kolejne kraje pokazują, że platformy tracą zaufanie szybciej, niż potrafią udowodnić skuteczność safety tooling.",
+      "sourcesLabel": "The Guardian; European Commission"
+    },
+    {
+      "priority": "Medium",
+      "title": "Agenci praktyczni: WebMCP, local search i model routing",
+      "rationale": "Product Hunt i HN pokazują, że rynek agentów przenosi się z chatbotów do integracji narzędzi, prywatności i kontroli kosztów.",
+      "sourcesLabel": "Product Hunt; HN; GitHub"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Reuters/WHTC",
+      "url": "https://whtc.com/2026/06/28/google-limits-metas-use-of-its-gemini-ai-models-ft-reports/"
+    },
+    {
+      "title": "Financial Times",
+      "url": "https://www.ft.com/content/c5d52f72-71ef-40bc-bad3-61afdba8b378"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/06/28/why-wall-street-thinks-us-memory-maker-micron-is-the-next-nvidia/"
+    },
+    {
+      "title": "Tom's Hardware: price index",
+      "url": "https://www.tomshardware.com/pc-components/ram/ram-price-index-2026-lowest-price-on-ddr5-and-ddr4-memory-of-all-capacities"
+    },
+    {
+      "title": "Tom's Hardware: 32GB DDR5",
+      "url": "https://www.tomshardware.com/pc-components/ddr5/32gb-of-ddr5-now-costs-usd375-minimum-ai-shortage-continues-to-squeeze-pc-building"
+    },
+    {
+      "title": "Reuters/TradingView",
+      "url": "https://www.tradingview.com/news/reuters.com%2C2026%3Anewsml_L4N43001A%3A0-australia-s-firmus-technologies-strikes-ai-access-deal-with-nvidia/"
+    },
+    {
+      "title": "NVIDIA",
+      "url": "https://blogs.nvidia.com/blog/ai-cloud-ecosystem/"
+    },
+    {
+      "title": "Firmus",
+      "url": "https://firmus.co/newsroom/firmus-signs-multi-year-agreement-with-global-hyperscale-customer-at-project-southgate"
+    },
+    {
+      "title": "Business Recorder",
+      "url": "https://www.brecorder.com/news/40427543"
+    },
+    {
+      "title": "Engadget",
+      "url": "https://www.engadget.com/2203000/flock-cameras-recording-license-plate/"
+    },
+    {
+      "title": "The Guardian",
+      "url": "https://www.theguardian.com/world/2026/jun/28/tech-firms-are-losing-the-public-social-media-age-bans-near-tipping-point"
+    },
+    {
+      "title": "Product Hunt daily 2026-06-28",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/6/28"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/news"
+    },
+    {
+      "title": "openai/codex issue 2847",
+      "url": "https://github.com/openai/codex/issues/2847"
+    },
+    {
+      "title": "Wayfinder Router",
+      "url": "https://github.com/itsthelore/wayfinder-router"
+    },
+    {
+      "title": "Open-TYNDP",
+      "url": "https://github.com/open-energy-transition/open-tyndp"
+    },
+    {
+      "title": "old Reddit / r/technology",
+      "url": "https://old.reddit.com/r/technology/"
+    },
+    {
+      "title": "European Commission: TikTok addictive design under DSA",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_312"
+    },
+    {
+      "title": "404 Media: Reddit manipulation for AI Search",
+      "url": "https://www.404media.co/companies-are-using-reddit-to-manipulate-chatgpt-and-google-ai-search/"
+    },
+    {
+      "title": "TVN24 Biznes / Tech",
+      "url": "https://tvn24.pl/biznes/tech"
+    },
+    {
+      "title": "WP Tech: Sztuczna inteligencja",
+      "url": "https://tech.wp.pl/sztuczna-inteligencja%2Ctemat%2C6016396972122753"
+    },
+    {
+      "title": "Business Insider Polska: Technologie",
+      "url": "https://businessinsider.com.pl/technologie"
+    },
+    {
+      "title": "Komputer Świat: Sztuczna inteligencja",
+      "url": "https://www.komputerswiat.pl/nauka-i-technika/sztuczna-inteligencja"
+    }
+  ]
+}

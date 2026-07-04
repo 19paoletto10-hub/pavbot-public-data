@@ -1,0 +1,462 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-06-18",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Najmocniejszy dzisiejszy wątek to przesunięcie debaty o AI z poziomu produktów na poziom kontroli politycznej, bezpieczeństwa i zaufania. Równolegle społeczność techniczna mocno podbiła temat GLM-5.2 jako nowego lidera open-weightów, a polskie źródła dają dobry lokalny kontrapunkt: phishing UNC1151/Ghostwriter przeciw użytkownikom Gmaila oraz przepisy otwierające drogę do testów pojazdów autonomicznych."
+  ],
+  "summaryBullets": [
+    "AI: AP News i Anthropic: nowy sygnał AI",
+    "AI: Axios: nowy sygnał AI",
+    "Cyber: The Guardian i Anthropic: cyberbezpieczeństwo i ryzyko technologiczne"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-06-18-0-ap-news-i-anthropic-nowy-sygnal-ai-bb5e514a8e",
+      "section": "AI",
+      "title": "AP News i Anthropic: nowy sygnał AI",
+      "standfirst": "AP opisuje spotkanie G7 w Évian-les-Bains, gdzie Emmanuel Macron i Sam Altman wzywali do międzynarodowego forum i wspólnych standardów testowania oraz bezpieczeństwa AI. W tle pozostaje dyrektywa USA ograniczająca dostęp cudzoziemców do modeli Fable 5 i Mythos 5 Anthropic.",
+      "whatHappened": "AP opisuje spotkanie G7 w Évian-les-Bains, gdzie Emmanuel Macron i Sam Altman wzywali do międzynarodowego forum i wspólnych standardów testowania oraz bezpieczeństwa AI. W tle pozostaje dyrektywa USA ograniczająca dostęp cudzoziemców do modeli Fable 5 i Mythos 5 Anthropic.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: AP opisuje spotkanie G7 w Évian-les-Bains, gdzie Emmanuel Macron i Sam Altman wzywali do międzynarodowego forum i wspólnych standardów testowania oraz bezpieczeństwa AI.",
+      "deeperAnalysis": [
+        "AP opisuje spotkanie G7 w Évian-les-Bains, gdzie Emmanuel Macron i Sam Altman wzywali do międzynarodowego forum i wspólnych standardów testowania oraz bezpieczeństwa AI. W tle pozostaje dyrektywa USA ograniczająca dostęp cudzoziemców do modeli Fable 5 i Mythos 5 Anthropic. Source: AP News.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: AP opisuje spotkanie G7 w Évian-les-Bains, gdzie Emmanuel Macron i Sam Altman wzywali do międzynarodowego forum i wspólnych standardów testowania oraz bezpieczeństwa AI.",
+        "Analiza opiera się na źródłach: AP News.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: AP opisuje spotkanie G7 w Évian-les-Bains, gdzie Emmanuel Macron i Sam Altman wzywali do międzynarodowego forum i wspólnych standardów testowania oraz bezpieczeństwa AI.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "AP News",
+          "url": "https://apnews.com/article/g7-france-ai-sovereignty-7d783c6de4356962e338b8b8563d48ea"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-18-1-axios-nowy-sygnal-ai-63356d6255",
+      "section": "AI",
+      "title": "Axios: nowy sygnał AI",
+      "standfirst": "Axios wskazuje, że blokada Fable/Mythos zmieniła abstrakcyjną debatę o kontroli frontier AI w realny test: kto ma prawo zatrzymać model, na jakich dowodach i według jakiego procesu. Source: Axios.",
+      "whatHappened": "Axios wskazuje, że blokada Fable/Mythos zmieniła abstrakcyjną debatę o kontroli frontier AI w realny test: kto ma prawo zatrzymać model, na jakich dowodach i według jakiego procesu. Source: Axios.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Axios wskazuje, że blokada Fable/Mythos zmieniła abstrakcyjną debatę o kontroli frontier AI w realny test: kto ma prawo zatrzymać model, na jakich dowodach i według jakiego procesu.",
+      "deeperAnalysis": [
+        "Axios wskazuje, że blokada Fable/Mythos zmieniła abstrakcyjną debatę o kontroli frontier AI w realny test: kto ma prawo zatrzymać model, na jakich dowodach i według jakiego procesu. Source: Axios.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Axios wskazuje, że blokada Fable/Mythos zmieniła abstrakcyjną debatę o kontroli frontier AI w realny test: kto ma prawo zatrzymać model, na jakich dowodach i według jakiego procesu.",
+        "Analiza opiera się na źródłach: Axios.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Axios wskazuje, że blokada Fable/Mythos zmieniła abstrakcyjną debatę o kontroli frontier AI w realny test: kto ma prawo zatrzymać model, na jakich dowodach i według jakiego procesu.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Axios",
+          "url": "https://www.axios.com/2026/06/17/anthropic-fable-mythos-ai-model-government-oversight"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-18-2-the-guardian-i-anthropic-cyberbezpieczenstwo-i-ryzyko-technologiczne-3b8b246ad2",
+      "section": "Cyber",
+      "title": "The Guardian i Anthropic: cyberbezpieczeństwo i ryzyko technologiczne",
+      "standfirst": "The Guardian opublikował komentarz Stuarta Russella, który łączy sprawę Anthropic z ryzykiem autonomicznych cyberataków i postuluje licencjonowanie systemów wysokiego ryzyka przed ich budową i wdrożeniem. Source: The Guardian.",
+      "whatHappened": "The Guardian opublikował komentarz Stuarta Russella, który łączy sprawę Anthropic z ryzykiem autonomicznych cyberataków i postuluje licencjonowanie systemów wysokiego ryzyka przed ich budową i wdrożeniem. Source: The Guardian.",
+      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: The Guardian opublikował komentarz Stuarta Russella, który łączy sprawę Anthropic z ryzykiem autonomicznych cyberataków i postuluje licencjonowanie systemów wysokiego ryzyka przed ich budową i wdrożeniem.",
+      "deeperAnalysis": [
+        "The Guardian opublikował komentarz Stuarta Russella, który łączy sprawę Anthropic z ryzykiem autonomicznych cyberataków i postuluje licencjonowanie systemów wysokiego ryzyka przed ich budową i wdrożeniem. Source: The Guardian.",
+        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: The Guardian opublikował komentarz Stuarta Russella, który łączy sprawę Anthropic z ryzykiem autonomicznych cyberataków i postuluje licencjonowanie systemów wysokiego ryzyka przed ich budową i wdrożeniem.",
+        "Analiza opiera się na źródłach: The Guardian.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: The Guardian opublikował komentarz Stuarta Russella, który łączy sprawę Anthropic z ryzykiem autonomicznych cyberataków i postuluje licencjonowanie systemów wysokiego ryzyka przed ich budową i wdrożeniem.",
+        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "The Guardian",
+          "url": "https://www.theguardian.com/commentisfree/2026/jun/17/anthropic-ai-rsi-fable"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Cyber"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-18-3-anthropic-newsroom-i-anthropic-nowy-sygnal-ai-409a8eef30",
+      "section": "AI",
+      "title": "Anthropic Newsroom i Anthropic: nowy sygnał AI",
+      "standfirst": "Anthropic Newsroom nadal pokazuje jako najnowszy kluczowy komunikat oświadczenie z 12 czerwca 2026 o dyrektywie USA zawieszającej dostęp do Fable 5 i Mythos 5, a także wpis z 17 czerwca o biurze w Seulu i koreańskich partnerstwach. Source: Anthropic Newsroom.",
+      "whatHappened": "Anthropic Newsroom nadal pokazuje jako najnowszy kluczowy komunikat oświadczenie z 12 czerwca 2026 o dyrektywie USA zawieszającej dostęp do Fable 5 i Mythos 5, a także wpis z 17 czerwca o biurze w Seulu i koreańskich partnerstwach. Source: Anthropic Newsroom.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Anthropic Newsroom nadal pokazuje jako najnowszy kluczowy komunikat oświadczenie z 12 czerwca 2026 o dyrektywie USA zawieszającej dostęp do Fable 5 i Mythos 5, a także wpis z 17 czerwca o biurze w Seulu i koreańskich partnerstwach.",
+      "deeperAnalysis": [
+        "Anthropic Newsroom nadal pokazuje jako najnowszy kluczowy komunikat oświadczenie z 12 czerwca 2026 o dyrektywie USA zawieszającej dostęp do Fable 5 i Mythos 5, a także wpis z 17 czerwca o biurze w Seulu i koreańskich partnerstwach. Source: Anthropic Newsroom.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Anthropic Newsroom nadal pokazuje jako najnowszy kluczowy komunikat oświadczenie z 12 czerwca 2026 o dyrektywie USA zawieszającej dostęp do Fable 5 i Mythos 5, a także wpis z 17 czerwca o biurze w Seulu i koreańskich partnerstwach.",
+        "Analiza opiera się na źródłach: Anthropic Newsroom.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic Newsroom nadal pokazuje jako najnowszy kluczowy komunikat oświadczenie z 12 czerwca 2026 o dyrektywie USA zawieszającej dostęp do Fable 5 i Mythos 5, a także wpis z 17 czerwca o biurze w Seulu i koreańskich partnerstwach.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic Newsroom",
+          "url": "https://www.anthropic.com/news"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-18-4-artificial-analysis-i-hacker-news-front-nowy-sygnal-ai-63b6a04a80",
+      "section": "AI",
+      "title": "Artificial Analysis i Hacker News front: nowy sygnał AI",
+      "standfirst": "Artificial Analysis podało, że GLM-5. 2 od Z.",
+      "whatHappened": "Artificial Analysis podało, że GLM-5. 2 od Z.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Artificial Analysis podało, że GLM-5.",
+      "deeperAnalysis": [
+        "Artificial Analysis podało, że GLM-5.2 od Z.ai jest nowym liderem modeli open weights w ich Intelligence Index v4.1: wynik 51, 744B parametrów łącznie, 40B aktywnych, kontekst 1M tokenów i silny wynik w zadaniach agentowych. Ten link był jednocześnie numerem 1 na Hacker News z 17 czerwca UTC. Sources: Artificial Analysis, Hacker News front.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Artificial Analysis podało, że GLM-5.",
+        "Analiza opiera się na źródłach: Artificial Analysis, Hacker News front.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Artificial Analysis podało, że GLM-5.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Artificial Analysis",
+          "url": "https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index"
+        },
+        {
+          "title": "Hacker News front",
+          "url": "https://news.ycombinator.com/front"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-18-5-product-hunt-daily-leaderboard-produktowy-sygnal-ai-045a077202",
+      "section": "Produkty",
+      "title": "Product Hunt daily leaderboard: produktowy sygnał AI",
+      "standfirst": "Product Hunt dla 18 czerwca 2026 rano pokazuje \"No posts for this date\", ale sekcja trendów nadal eksponuje kategorie AI/vibe coding: Vibe Coding Tools, AI Dictation Apps, AI notetakers, Code Review Tools i No-code Platforms. Source: Product Hunt daily leaderboard.",
+      "whatHappened": "Product Hunt dla 18 czerwca 2026 rano pokazuje \"No posts for this date\", ale sekcja trendów nadal eksponuje kategorie AI/vibe coding: Vibe Coding Tools, AI Dictation Apps, AI notetakers, Code Review Tools i No-code Platforms. Source: Product Hunt daily leaderboard.",
+      "whyItMatters": "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: Product Hunt dla 18 czerwca 2026 rano pokazuje \"No posts for this date\", ale sekcja trendów nadal eksponuje kategorie AI/vibe coding: Vibe Coding Tools, AI Dictation Apps, AI notetakers, Code Review Tools i No-code Platforms.",
+      "deeperAnalysis": [
+        "Product Hunt dla 18 czerwca 2026 rano pokazuje \"No posts for this date\", ale sekcja trendów nadal eksponuje kategorie AI/vibe coding: Vibe Coding Tools, AI Dictation Apps, AI notetakers, Code Review Tools i No-code Platforms. Source: Product Hunt daily leaderboard.",
+        "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: Product Hunt dla 18 czerwca 2026 rano pokazuje \"No posts for this date\", ale sekcja trendów nadal eksponuje kategorie AI/vibe coding: Vibe Coding Tools, AI Dictation Apps, AI notetakers, Code Review Tools i No-code Platforms.",
+        "Analiza opiera się na źródłach: Product Hunt daily leaderboard.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Product Hunt dla 18 czerwca 2026 rano pokazuje \"No posts for this date\", ale sekcja trendów nadal eksponuje kategorie AI/vibe coding: Vibe Coding Tools, AI Dictation Apps, AI notetakers, Code Review Tools i No-code Platforms.",
+        "Dlaczego ważne: produkty pokazują, co użytkownicy realnie zaczną stosować.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt daily leaderboard",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/6/18"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Produkty",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-18-6-business-insider-polska-nowy-sygnal-ai-9e3ee794c5",
+      "section": "AI",
+      "title": "Business Insider Polska: nowy sygnał AI",
+      "standfirst": "Business Insider Polska opisał tezę Jeffa Bezosa z VivaTech, że AI może raczej stworzyć niedobór pracy niż masowe bezrobocie, kontrastując to z bieżącymi redukcjami etatów i obawami społecznymi. Source: Business Insider Polska.",
+      "whatHappened": "Business Insider Polska opisał tezę Jeffa Bezosa z VivaTech, że AI może raczej stworzyć niedobór pracy niż masowe bezrobocie, kontrastując to z bieżącymi redukcjami etatów i obawami społecznymi. Source: Business Insider Polska.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Business Insider Polska opisał tezę Jeffa Bezosa z VivaTech, że AI może raczej stworzyć niedobór pracy niż masowe bezrobocie, kontrastując to z bieżącymi redukcjami etatów i obawami społecznymi.",
+      "deeperAnalysis": [
+        "Business Insider Polska opisał tezę Jeffa Bezosa z VivaTech, że AI może raczej stworzyć niedobór pracy niż masowe bezrobocie, kontrastując to z bieżącymi redukcjami etatów i obawami społecznymi. Source: Business Insider Polska.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Business Insider Polska opisał tezę Jeffa Bezosa z VivaTech, że AI może raczej stworzyć niedobór pracy niż masowe bezrobocie, kontrastując to z bieżącymi redukcjami etatów i obawami społecznymi.",
+        "Analiza opiera się na źródłach: Business Insider Polska.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Business Insider Polska opisał tezę Jeffa Bezosa z VivaTech, że AI może raczej stworzyć niedobór pracy niż masowe bezrobocie, kontrastując to z bieżącymi redukcjami etatów i obawami społecznymi.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Business Insider Polska",
+          "url": "https://businessinsider.com.pl/technologie/nowe-technologie/paradoks-ai-mniej-ludzi-wiecej-pracy-bezos-przekonuje-ze-to-mozliwe/6bmqbbv"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-18-7-business-insider-polska-i-raport-wpvip-morning-consult-wzmacniaja-watek-ai-fatigue-e828945022",
+      "section": "AI",
+      "title": "Business Insider Polska i raport WPVIP/Morning Consult wzmacniają wątek \"AI fatigue\"",
+      "standfirst": "Business Insider Polska i raport WPVIP/Morning Consult wzmacniają wątek \"AI fatigue\": marki AI tracą zaufanie, a 60% konsumentów z badania WPVIP deklaruje, że AI w komunikacji marki działa zniechęcająco. Sources: Business Insider Polska, WordPress VIP.",
+      "whatHappened": "Business Insider Polska i raport WPVIP/Morning Consult wzmacniają wątek \"AI fatigue\": marki AI tracą zaufanie, a 60% konsumentów z badania WPVIP deklaruje, że AI w komunikacji marki działa zniechęcająco. Sources: Business Insider Polska, WordPress VIP.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Business Insider Polska i raport WPVIP/Morning Consult wzmacniają wątek \"AI fatigue\": marki AI tracą zaufanie, a 60% konsumentów z badania WPVIP deklaruje, że AI w komunikacji marki działa zniechęcająco.",
+      "deeperAnalysis": [
+        "Business Insider Polska i raport WPVIP/Morning Consult wzmacniają wątek \"AI fatigue\": marki AI tracą zaufanie, a 60% konsumentów z badania WPVIP deklaruje, że AI w komunikacji marki działa zniechęcająco. Sources: Business Insider Polska, WordPress VIP.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Business Insider Polska i raport WPVIP/Morning Consult wzmacniają wątek \"AI fatigue\": marki AI tracą zaufanie, a 60% konsumentów z badania WPVIP deklaruje, że AI w komunikacji marki działa zniechęcająco.",
+        "Analiza opiera się na źródłach: Business Insider Polska, WordPress VIP.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Business Insider Polska i raport WPVIP/Morning Consult wzmacniają wątek \"AI fatigue\": marki AI tracą zaufanie, a 60% konsumentów z badania WPVIP deklaruje, że AI w komunikacji marki działa zniechęcająco.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Business Insider Polska",
+          "url": "https://businessinsider.com.pl/technologie/nowe-technologie/sztuczna-inteligencja-traci-zaufanie-nostalgiczne-marki-gora/0444zh9"
+        },
+        {
+          "title": "WordPress VIP",
+          "url": "https://wpvip.com/future-of-the-web-2026/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-18-8-cert-polska-i-business-insider-polska-cyberbezpieczenstwo-i-ryzyko-technologiczne-439af781e8",
+      "section": "Cyber",
+      "title": "CERT Polska i Business Insider Polska: cyberbezpieczeństwo i ryzyko technologiczne",
+      "standfirst": "CERT Polska ostrzega, że UNC1151/Ghostwriter od marca 2026 prowadzi intensywne kampanie phishingowe przeciw użytkownikom Gmaila, wyłudzając nie tylko hasła, ale także drugi składnik logowania. Business Insider Polska podbił temat w kontekście polskich użytkowników.",
+      "whatHappened": "CERT Polska ostrzega, że UNC1151/Ghostwriter od marca 2026 prowadzi intensywne kampanie phishingowe przeciw użytkownikom Gmaila, wyłudzając nie tylko hasła, ale także drugi składnik logowania. Business Insider Polska podbił temat w kontekście polskich użytkowników.",
+      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: CERT Polska ostrzega, że UNC1151/Ghostwriter od marca 2026 prowadzi intensywne kampanie phishingowe przeciw użytkownikom Gmaila, wyłudzając nie tylko hasła, ale także drugi składnik logowania.",
+      "deeperAnalysis": [
+        "CERT Polska ostrzega, że UNC1151/Ghostwriter od marca 2026 prowadzi intensywne kampanie phishingowe przeciw użytkownikom Gmaila, wyłudzając nie tylko hasła, ale także drugi składnik logowania. Business Insider Polska podbił temat w kontekście polskich użytkowników. Sources: CERT Polska, Business Insider Polska.",
+        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: CERT Polska ostrzega, że UNC1151/Ghostwriter od marca 2026 prowadzi intensywne kampanie phishingowe przeciw użytkownikom Gmaila, wyłudzając nie tylko hasła, ale także drugi składnik logowania.",
+        "Analiza opiera się na źródłach: CERT Polska, Business Insider Polska.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: CERT Polska ostrzega, że UNC1151/Ghostwriter od marca 2026 prowadzi intensywne kampanie phishingowe przeciw użytkownikom Gmaila, wyłudzając nie tylko hasła, ale także drugi składnik logowania.",
+        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "CERT Polska",
+          "url": "https://cert.pl/posts/2026/06/UNC1151-kampania-gmail/"
+        },
+        {
+          "title": "Business Insider Polska",
+          "url": "https://businessinsider.com.pl/technologie/nowe-technologie/masz-konto-gmail-trwaja-bialoruskie-ataki-poradnik-jak-sie-zabezpieczyc/801v6v1"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Cyber",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-18-9-tvn24-biznes-wazny-sygnal-technologiczny-bed1b7b2ba",
+      "section": "Inne",
+      "title": "TVN24 Biznes: ważny sygnał technologiczny",
+      "standfirst": "TVN24 Biznes przypomina, że od 24 czerwca w Polsce mają obowiązywać przepisy umożliwiające testowanie pojazdów autonomicznych w realnym ruchu drogowym, przy czym nadal wymagana jest osoba zdolna przejąć kontrolę. Source: TVN24 Biznes.",
+      "whatHappened": "TVN24 Biznes przypomina, że od 24 czerwca w Polsce mają obowiązywać przepisy umożliwiające testowanie pojazdów autonomicznych w realnym ruchu drogowym, przy czym nadal wymagana jest osoba zdolna przejąć kontrolę. Source: TVN24 Biznes.",
+      "whyItMatters": "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: TVN24 Biznes przypomina, że od 24 czerwca w Polsce mają obowiązywać przepisy umożliwiające testowanie pojazdów autonomicznych w realnym ruchu drogowym, przy czym nadal wymagana jest osoba zdolna przejąć kontrolę.",
+      "deeperAnalysis": [
+        "TVN24 Biznes przypomina, że od 24 czerwca w Polsce mają obowiązywać przepisy umożliwiające testowanie pojazdów autonomicznych w realnym ruchu drogowym, przy czym nadal wymagana jest osoba zdolna przejąć kontrolę. Source: TVN24 Biznes.",
+        "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: TVN24 Biznes przypomina, że od 24 czerwca w Polsce mają obowiązywać przepisy umożliwiające testowanie pojazdów autonomicznych w realnym ruchu drogowym, przy czym nadal wymagana jest osoba zdolna przejąć kontrolę.",
+        "Analiza opiera się na źródłach: TVN24 Biznes.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek inne przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: TVN24 Biznes przypomina, że od 24 czerwca w Polsce mają obowiązywać przepisy umożliwiające testowanie pojazdów autonomicznych w realnym ruchu drogowym, przy czym nadal wymagana jest osoba zdolna przejąć kontrolę.",
+        "Dlaczego ważne: sygnał może zmienić priorytety technologiczne.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek inne przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes",
+          "url": "https://tvn24.pl/biznes/moto/polska-otwiera-sie-na-pojazdy-autonomiczne-wkrotce-nowe-przepisy-st9067878"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Inne"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-18-10-tvn24-biznes-podaje-takze-polski-kontekst-cyberbezpieczenstwa-7c7b55b57b",
+      "section": "Cyber",
+      "title": "TVN24 Biznes podaje także polski kontekst cyberbezpieczeństwa",
+      "standfirst": "TVN24 Biznes podaje także polski kontekst cyberbezpieczeństwa: ponad 5 mld zł planowanych wydatków w 2026 r. , wzrost incydentów sieciowych w 2025 r.",
+      "whatHappened": "TVN24 Biznes podaje także polski kontekst cyberbezpieczeństwa: ponad 5 mld zł planowanych wydatków w 2026 r. , wzrost incydentów sieciowych w 2025 r.",
+      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: TVN24 Biznes podaje także polski kontekst cyberbezpieczeństwa: ponad 5 mld zł planowanych wydatków w 2026 r.",
+      "deeperAnalysis": [
+        "TVN24 Biznes podaje także polski kontekst cyberbezpieczeństwa: ponad 5 mld zł planowanych wydatków w 2026 r., wzrost incydentów sieciowych w 2025 r. o ponad 144% rok do roku oraz ponad 140 mln zablokowanych wejść na nielegalne strony. Source: TVN24 Biznes.",
+        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: TVN24 Biznes podaje także polski kontekst cyberbezpieczeństwa: ponad 5 mld zł planowanych wydatków w 2026 r.",
+        "Analiza opiera się na źródłach: TVN24 Biznes.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: TVN24 Biznes podaje także polski kontekst cyberbezpieczeństwa: ponad 5 mld zł planowanych wydatków w 2026 r.",
+        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes",
+          "url": "https://tvn24.pl/biznes/z-kraju/wzrost-wydatkow-na-cyberbezpieczenstwo-polska-zbroi-sie-przed-niedzwiedziami-st9065734"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Cyber"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "G7, Anthropic i pytanie: kto ma wyłącznik do frontier AI?",
+      "rationale": "To najmocniejszy temat dnia: AI governance przestaje być teorią, bo państwa realnie blokują dostęp do modeli.",
+      "sourcesLabel": "AP News; Axios; Anthropic Newsroom"
+    },
+    {
+      "priority": "High",
+      "title": "GLM-5.2: open-weighty zbliżają się do frontierowych agentów",
+      "rationale": "Społeczność HN podbiła temat, a Artificial Analysis pokazuje wzrost w benchmarkach agentowych i naukowych. Dobry segment techniczny.",
+      "sourcesLabel": "Artificial Analysis; Hacker News"
+    },
+    {
+      "priority": "High",
+      "title": "UNC1151/Ghostwriter atakuje Gmaila w Polsce",
+      "rationale": "Lokalny, praktyczny i ważny wątek cyberbezpieczeństwa: phishing wyłudza także 2FA, a celem są szerokie grupy obywateli.",
+      "sourcesLabel": "CERT Polska; Business Insider Polska"
+    },
+    {
+      "priority": "Medium",
+      "title": "AI fatigue: konsumenci mają dość marek udających \"AI-first\"",
+      "rationale": "Łączy dane WPVIP/Morning Consult z polskim omówieniem BI. Dobre jako kontrapunkt do hype'u wokół agentów i modeli.",
+      "sourcesLabel": "WPVIP; Business Insider Polska"
+    },
+    {
+      "priority": "Medium",
+      "title": "Bezos kontra rynek pracy: AI stworzy niedobór ludzi czy zwolnienia?",
+      "rationale": "Nadaje się na dyskusję, bo zestawia optymistyczną narrację założyciela Amazona z realnymi redukcjami i lękiem pracowników.",
+      "sourcesLabel": "Business Insider Polska"
+    },
+    {
+      "priority": "Medium",
+      "title": "Polska szykuje przepisy pod testy autonomicznych pojazdów",
+      "rationale": "Konkretny polski wątek regulacyjno-technologiczny z datą wejścia zmian 24 czerwca i ograniczeniem: nadal potrzebny operator.",
+      "sourcesLabel": "TVN24 Biznes"
+    },
+    {
+      "priority": "Medium",
+      "title": "Cyberbudżet Polski rośnie, a AI automatyzuje ataki",
+      "rationale": "Łączy dane o wydatkach, skali incydentów i rządową narrację o \"osach\" i \"niedźwiedziach\" z praktycznym bezpieczeństwem.",
+      "sourcesLabel": "TVN24 Biznes; CERT Polska"
+    },
+    {
+      "priority": "Low",
+      "title": "Product Hunt bez postów 18 czerwca rano, ale AI tooling nadal dominuje trendy",
+      "rationale": "Słabszy news, ale dobry sygnał rynkowy: vibe coding, notetakers i code review tools nadal są wysoko w trendach.",
+      "sourcesLabel": "Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "AP News",
+      "url": "https://apnews.com/article/g7-france-ai-sovereignty-7d783c6de4356962e338b8b8563d48ea"
+    },
+    {
+      "title": "Axios",
+      "url": "https://www.axios.com/2026/06/17/anthropic-fable-mythos-ai-model-government-oversight"
+    },
+    {
+      "title": "The Guardian",
+      "url": "https://www.theguardian.com/commentisfree/2026/jun/17/anthropic-ai-rsi-fable"
+    },
+    {
+      "title": "Anthropic Newsroom",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "title": "Artificial Analysis",
+      "url": "https://artificialanalysis.ai/articles/glm-5-2-is-the-new-leading-open-weights-model-on-the-artificial-analysis-intelligence-index"
+    },
+    {
+      "title": "Hacker News front",
+      "url": "https://news.ycombinator.com/front"
+    },
+    {
+      "title": "Product Hunt daily leaderboard",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/6/18"
+    },
+    {
+      "title": "Business Insider Polska",
+      "url": "https://businessinsider.com.pl/technologie/nowe-technologie/paradoks-ai-mniej-ludzi-wiecej-pracy-bezos-przekonuje-ze-to-mozliwe/6bmqbbv"
+    },
+    {
+      "title": "Business Insider Polska",
+      "url": "https://businessinsider.com.pl/technologie/nowe-technologie/sztuczna-inteligencja-traci-zaufanie-nostalgiczne-marki-gora/0444zh9"
+    },
+    {
+      "title": "WordPress VIP",
+      "url": "https://wpvip.com/future-of-the-web-2026/"
+    },
+    {
+      "title": "CERT Polska",
+      "url": "https://cert.pl/posts/2026/06/UNC1151-kampania-gmail/"
+    },
+    {
+      "title": "Business Insider Polska",
+      "url": "https://businessinsider.com.pl/technologie/nowe-technologie/masz-konto-gmail-trwaja-bialoruskie-ataki-poradnik-jak-sie-zabezpieczyc/801v6v1"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes/moto/polska-otwiera-sie-na-pojazdy-autonomiczne-wkrotce-nowe-przepisy-st9067878"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes/z-kraju/wzrost-wydatkow-na-cyberbezpieczenstwo-polska-zbroi-sie-przed-niedzwiedziami-st9065734"
+    },
+    {
+      "title": "OpenAI News",
+      "url": "https://openai.com/news/"
+    }
+  ]
+}

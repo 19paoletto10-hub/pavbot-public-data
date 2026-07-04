@@ -1,0 +1,477 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-06-29",
+  "runTime": "09:01",
+  "status": "Material update",
+  "headline": "09:01: IMGW rozszerza ostrzeżenia, a puls dnia dokłada Ukrainę, ropę i utrzymane kryzysy bezpieczeństwa",
+  "summary": "Run z 09:01 CEST jest materialny względem opublikowanego baseline 2026-06-28-2100 i dokłada nowe poranne materiały ponad lokalny slot 06:01: ostrzeżenia IMGW objęły prawie cały kraj, pojawił się polityczny wątek szczytu o Ukrainie bez Wołodymyra Zełenskiego, a ropa drożeje po nowych atakach na Bliskim Wschodzie. Rdzeń feedu pozostaje operacyjny i bezpieczeństwowy: pogoda, kolej, lotnisko, Iran, Wenezuela i Pakistan-Afganistan utrzymują najwyższy priorytet.",
+  "items": [
+    {
+      "id": "pulse-2026-06-29-0901-01-alerty-imgw",
+      "section": "Alerty",
+      "title": "IMGW rozszerza ostrzeżenia, RCB utrzymuje alert burzowy",
+      "lead": "Prawie cały kraj jest w ostrzeżeniach pogodowych, a część regionów nadal ma alert RCB z ryzykiem przerw w dostawie prądu.",
+      "whatHappened": "TVN24 Meteo podało, że ostrzeżenia IMGW przed upałem i burzami objęły prawie cały kraj, a w części regionów obowiązują alarmy najwyższego stopnia. RCB utrzymuje na 29 czerwca własny alert dla wybranych powiatów północno-centralnej Polski z ostrzeżeniem przed deszczem, silnym wiatrem, burzami i możliwymi przerwami w dostawie prądu.",
+      "keyFacts": [
+        "IMGW według TVN24 objęło ostrzeżeniami prawie cały kraj.",
+        "RCB utrzymuje alert z ryzykiem przerw w dostawie prądu.",
+        "To szerszy obraz pogodowy niż w lokalnym slocie 06:01."
+      ],
+      "reactions": [
+        "To najmocniejsza krajowa karta użyteczna na start dnia.",
+        "Temat podnosi wagę monitoringu awarii, podtopień i zakłóceń transportowych."
+      ],
+      "whyItMatters": "Użytkownik dostaje od razu sygnał, że zagrożenie pogodowe ma zasięg krajowy, a nie punktowy.",
+      "context": "W 06:01 dominował poranny alert RCB i radar burz. O 09:01 dochodzi szersza skala ostrzeżeń IMGW obejmująca niemal cały kraj.",
+      "watchNext": [
+        "Czy pojawią się potwierdzone awarie prądu lub podtopienia przed południem.",
+        "Czy liczba powiatów objętych alertem RCB wzrośnie w kolejnych godzinach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo: Ostrzeżenia IMGW w prawie całym kraju",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/ostrzezenia-imgw-upaly-w-polsce-sa-czerwone-alarmy-grozne-burze-st9115734?source=rss"
+        },
+        {
+          "title": "RCB: Alert RCB - burze (29.06)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-2907"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "IMGW",
+        "RCB",
+        "Burze"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-0901-02-pkp",
+      "section": "Polska",
+      "title": "PKP Intercity utrzymuje 21 odwołanych pociągów",
+      "lead": "Poranek nadal otwiera się szerokim pakietem kolejowych odwołań, autobusami zastępczymi i zwrotami biletów.",
+      "whatHappened": "TVN24 podało, że PKP Intercity odwołało 21 pociągów z powodu wysokich temperatur. Oficjalny komunikat przewoźnika utrzymuje komunikację zastępczą, bezkosztowy zwrot niewykorzystanych biletów do 30 czerwca oraz dystrybucję wody pasażerom opóźnionych składów.",
+      "keyFacts": [
+        "Bilans poranny mówi o 21 odwołanych pociągach.",
+        "PKP Intercity organizuje komunikację zastępczą dla wybranych relacji.",
+        "Przewoźnik dopuszcza bezkosztowy zwrot niewykorzystanych biletów do 30 czerwca."
+      ],
+      "reactions": [
+        "To wciąż jedna z najbardziej praktycznych kart dla użytkownika.",
+        "Historia potwierdza, że fala upału przeszła z pogody do realnych kosztów transportowych."
+      ],
+      "whyItMatters": "Zakłócenia w dalekobieżnym ruchu kolejowym wpływają od razu na dojazdy, przesiadki i podróże służbowe w skali kraju.",
+      "context": "W 06:01 temat pojawił się jako nowa poranna eskalacja. O 09:01 pozostaje aktualny i nadal zasługuje na wysoką ekspozycję.",
+      "watchNext": [
+        "Czy liczba odwołanych pociągów wzrośnie wraz z dalszym upałem i burzami.",
+        "Czy problem przejdzie z odwołań do rozległych opóźnień na głównych liniach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Odwołano 21 pociągów. Wszystko przez \"wysokie temperatury\"",
+          "url": "https://tvn24.pl/polska/pkp-intercity-odwolalo-21-pociagow-winne-wysokie-temperatury-st9118930?source=rss"
+        },
+        {
+          "title": "PKP Intercity: Utrudnienia w ruchu pociągów PKP Intercity",
+          "url": "https://intercity.pl/site/o-nas/dzial-prasowy/komunikaty/utrudnienia-w-ruchu-pociagow-pkp-intercity.html"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "PKP Intercity",
+        "Kolej",
+        "Upał"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-0901-03-lotnisko",
+      "section": "Polska",
+      "title": "Lotnisko Chopina po naprawie pasa schodzi z fazy alarmowej",
+      "lead": "Nocna naprawa pasa zakończyła się, ale historia pozostaje ważnym sygnałem infrastrukturalnym po fali upału.",
+      "whatHappened": "TVN24 podało, że zakończyła się naprawa jednego z pasów startowych Lotniska Chopina. W niedzielę na pasie pojawiły się pęknięcia nawierzchni, co wymusiło jego zamknięcie i wywołało opóźnienia części lotów.",
+      "keyFacts": [
+        "Naprawa jednego z pasów startowych została zakończona.",
+        "Pas wcześniej zamknięto po pęknięciach nawierzchni.",
+        "Zamknięcie przełożyło się na opóźnienia części lotów."
+      ],
+      "reactions": [
+        "To mniej alarmowa, ale nadal istotna karta infrastrukturalna.",
+        "Historia dobrze pokazuje koszt skrajnych temperatur dla transportu."
+      ],
+      "whyItMatters": "Lotnisko Chopina jest kluczowym węzłem ruchu, więc nawet krótsza awaria pasa ma szerszy wpływ niż lokalny incydent.",
+      "context": "W 21:00 karta mówiła o świeżych pęknięciach, a w 06:01 o zakończeniu naprawy. O 09:01 temat zostaje jako istotny stan przejściowy z alarmu do normalizacji.",
+      "watchNext": [
+        "Czy lotnisko potwierdzi pełną stabilizację operacji w porannym banku odlotów.",
+        "Czy podobne uszkodzenia nie wrócą przy utrzymującym się skwarze."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pęknięcia pasa na lotnisku w Warszawie. \"Pogoda na pewno się przysłużyła\"",
+          "url": "https://tvn24.pl/polska/pekniecia-pasa-na-lotnisku-chopina-w-warszawie-zakonczyla-sie-naprawa-st9118722?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Lotnisko Chopina",
+        "Loty",
+        "Infrastruktura"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-29-0901-04-ukraina-szczyt",
+      "section": "Polityka",
+      "title": "Szczyt o Ukrainie bez Zełenskiego dokłada nowy zgrzyt polityczny",
+      "lead": "Poranny slot dostaje wyraźny sygnał polityczny: rozmowa o Ukrainie toczy się bez jej prezydenta.",
+      "whatHappened": "TVN24 opisało szczyt dotyczący Ukrainy bez udziału Wołodymyra Zełenskiego. W materiale padają komentarze o zażenowaniu po stronie ukraińskiej oraz o słabym politycznym obrazie takiego formatu rozmów.",
+      "keyFacts": [
+        "TVN24 opisuje szczyt o Ukrainie bez udziału Wołodymyra Zełenskiego.",
+        "W materiale pojawia się ocena, że po stronie ukraińskiej widać zażenowanie.",
+        "To nowy temat polityczny względem lokalnego slotu 06:01."
+      ],
+      "reactions": [
+        "Karta wzmacnia krajowo-polityczny wymiar feedu, nie tylko operacyjny.",
+        "Historia może wrócić w kolejnych godzinach, jeśli pojawią się reakcje partnerów zagranicznych."
+      ],
+      "whyItMatters": "Temat dotyczy wiarygodności i formatu rozmów o sprawie fundamentalnej dla bezpieczeństwa regionu.",
+      "context": "W poprzednich slotach dominowały pogoda, infrastruktura i bezpieczeństwo. O 09:01 dochodzi świeży element polityczny z silnym regionalnym tłem.",
+      "watchNext": [
+        "Czy pojawią się oficjalne komentarze strony ukraińskiej lub polskich uczestników.",
+        "Czy temat przełoży się na szerszą debatę o formule dalszych rozmów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Szczyt o Ukrainie bez Wołodymyra Zełenskiego",
+          "url": "https://tvn24.pl/polska/szczyt-o-ukrainie-bez-wolodymyra-zelenskiego-widzialem-w-oczach-ukrainskich-przyjaciol-pewne-zazenowanie-st9118925?source=rss"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Ukraina",
+        "Zełenski",
+        "Dyplomacja"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-29-0901-05-ropa",
+      "section": "Gospodarka",
+      "title": "Ropa drożeje po nowych atakach na Bliskim Wschodzie",
+      "lead": "Rynek paliw reaguje rano wzrostem cen, bo napięcie militarne znów wraca do głównej osi ryzyka.",
+      "whatHappened": "TVN24 Biznes podało, że ropa drożeje po nowych atakach na Bliskim Wschodzie. To rynkowa odpowiedź na utrzymujące się napięcie bezpieczeństwowe i ryzyko dalszych zakłóceń w regionie.",
+      "keyFacts": [
+        "TVN24 Biznes opisuje poranny wzrost cen ropy.",
+        "Ruch jest powiązany z nowymi atakami na Bliskim Wschodzie.",
+        "To świeża karta rynkowa ponad lokalny slot 06:01."
+      ],
+      "reactions": [
+        "Karta przekłada konflikt na prosty i czytelny wymiar ekonomiczny.",
+        "Temat dobrze łączy sekcję gospodarka z blokiem bezpieczeństwa."
+      ],
+      "whyItMatters": "Zmiany cen ropy szybko przenikają do oczekiwań inflacyjnych, kosztów transportu i nastroju rynków.",
+      "context": "W 06:01 energia była głównie tłem dla Iranu i Rosji. O 09:01 dochodzi bezpośrednia reakcja rynku paliw na nowe ataki.",
+      "watchNext": [
+        "Czy wzrost cen utrzyma się do kolejnych godzin handlu.",
+        "Czy pojawią się nowe sygnały o zakłóceniach dostaw w regionie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Ropa drożeje po nowych atakach na Bliskim Wschodzie",
+          "url": "https://tvn24.pl/biznes/ze-swiata/cena-ropy-naftowej-w-poniedzialek-29-czerwca-wzrost-po-nowych-atakach-na-bliskim-wschodzie-st9118965?source=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Ropa",
+        "Bliski Wschód",
+        "Rynki"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-0901-06-rosja-paliwa",
+      "section": "Gospodarka",
+      "title": "Rosja rozważa zakaz eksportu diesla po zakłóceniach dostaw",
+      "lead": "Kreml przyznaje problemy paliwowe po atakach dronowych i szuka szybkiej reakcji administracyjnej.",
+      "whatHappened": "TVN24 podało, że Władimir Putin przyznał występowanie utrudnień w dostawach paliw w części rosyjskich regionów po ukraińskich atakach dronowych. Według relacji rozważany jest zakaz eksportu oleju napędowego i powołanie specjalnego zespołu zadaniowego.",
+      "keyFacts": [
+        "Kreml przyznaje utrudnienia w dostawach paliw w części regionów Rosji.",
+        "Wątek jest wiązany z ukraińskimi atakami dronowymi.",
+        "Rozważany jest zakaz eksportu oleju napędowego."
+      ],
+      "reactions": [
+        "To wciąż jedna z ważniejszych kart gospodarczych o znaczeniu regionalnym.",
+        "Temat może szybko wrócić do geopolityki i rynku energii, jeśli eksport faktycznie zostanie ograniczony."
+      ],
+      "whyItMatters": "Problemy z rosyjskimi paliwami mogą wpływać na handel regionalny i oczekiwania wobec rynku energii w Europie.",
+      "context": "W 06:01 był to nowy sygnał gospodarczy. O 09:01 pozostaje istotny, bo łączy rosyjskie dostawy z szerszym napięciem energetycznym.",
+      "watchNext": [
+        "Czy Kreml faktycznie ogłosi formalny zakaz eksportu oleju napędowego.",
+        "Czy pojawi się przełożenie na ceny lub dostępność paliw w regionie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Kryzys paliwowy w Rosji. Putin rozważa zakaz eksportu",
+          "url": "https://tvn24.pl/swiat/kryzys-paliwowy-w-rosji-wladimir-putin-rozwaza-zakaz-eksportu-oleju-napedowego-st9118838?source=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Rosja",
+        "Paliwa",
+        "Eksport"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-0901-07-australia",
+      "section": "Technologia",
+      "title": "Australia chce mocniej karać platformy za łamanie zakazu dla dzieci",
+      "lead": "Rząd zaostrza egzekucję, bo dotychczasowe ograniczenia są szeroko obchodzone przez nastolatków.",
+      "whatHappened": "TVN24 Biznes podało, że Australia zapowiedziała wyższe kary dla platform, które nie egzekwują zakazu korzystania z mediów społecznościowych przez dzieci. BBC wcześniej opisywało ten kierunek zmian jako zaostrzenie jednej z najważniej obserwowanych regulacji platform.",
+      "keyFacts": [
+        "Rząd Australii chce mocniej karać platformy za łamanie zakazu.",
+        "Powodem są słabe efekty dotychczasowych ograniczeń.",
+        "To temat technologiczny z realnym wymiarem polityki publicznej."
+      ],
+      "reactions": [
+        "Karta ma znaczenie wykraczające poza branżę technologiczną.",
+        "To nadal jedna z lepszych pozycji technologicznych do szerokiego feedu."
+      ],
+      "whyItMatters": "Zaostrzenie egzekucji wobec platform może stać się wzorcem dla innych rządów, które chcą silniej ograniczać dostęp nieletnich do social mediów.",
+      "context": "W 06:01 historia była świeżym regulacyjnym dodatkiem. O 09:01 pozostaje w feedzie, bo dobrze równoważy blok bezpieczeństwa i gospodarki.",
+      "watchNext": [
+        "Czy platformy odpowiedzą publicznie na plan zaostrzenia kar.",
+        "Czy inne państwa zaczną kopiować australijski model egzekucji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Nastolatki masowo omijają zakaz. Rząd odpowiada",
+          "url": "https://tvn24.pl/biznes/ze-swiata/australia-nastolatki-masowo-omijaja-zakaz-mediow-spolecznosciowych-rzad-chce-zaostrzenia-przepisow-st9118886?source=rss"
+        },
+        {
+          "title": "BBC: Australia to double maximum penalty for platforms in breach of social media ban",
+          "url": "https://www.bbc.co.uk/news/articles/c78yv5g74e9o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "Australia",
+        "Social media",
+        "Regulacje"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-29-0901-08-pakistan-afganistan",
+      "section": "Bezpieczeństwo",
+      "title": "Pakistańskie uderzenia przy granicy z Afganistanem zabijają dziesiątki",
+      "lead": "Islamabad twierdzi, że odpowiada na ostatnie ataki terrorystyczne, ale napięcie graniczne wyraźnie rośnie.",
+      "whatHappened": "BBC podało, że pakistańskie uderzenia wzdłuż granicy z Afganistanem zabiły dziesiątki osób. Pakistan przedstawia operację jako odpowiedź na niedawne ataki terrorystyczne przeciwko cywilom.",
+      "keyFacts": [
+        "BBC opisuje śmiertelne pakistańskie uderzenia przy granicy z Afganistanem.",
+        "Pakistan uzasadnia je odpowiedzią na ostatnie ataki terrorystyczne.",
+        "To nadal nowy i szybko eskalujący temat bezpieczeństwa."
+      ],
+      "reactions": [
+        "Historia wnosi świeży południowoazjatycki komponent bezpieczeństwa do feedu.",
+        "To temat, który może szybko eskalować dyplomatycznie lub militarnie."
+      ],
+      "whyItMatters": "Napięcie Pakistan-Afganistan może destabilizować region i tworzyć kolejny równoległy front bezpieczeństwa obok Iranu.",
+      "context": "W 06:01 temat wszedł do feedu jako nowa karta. O 09:01 pozostaje wysoko, bo brak sygnałów deeskalacji.",
+      "watchNext": [
+        "Czy Kabul lub Islamabad wydadzą nowe oficjalne komunikaty o odpowiedzi.",
+        "Czy bilans ofiar wzrośnie wraz z doprecyzowaniem informacji."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Pakistani strikes kill dozens in Afghanistan",
+          "url": "https://www.bbc.co.uk/news/articles/cy8wygyed0wo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Pakistan",
+        "Afganistan",
+        "Konflikt"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-0901-09-iran",
+      "section": "Bezpieczeństwo",
+      "title": "USA i Iran mają na razie \"stand down\", ale kryzys nie znika",
+      "lead": "Waszyngton mówi o chwilowym wstrzymaniu eskalacji i trwających rozmowach, lecz tło pozostaje bardzo kruche.",
+      "whatHappened": "CNN podało, że według amerykańskich urzędników USA i Iran mają na razie \"stand down\", a rozmowy pozostają \"on track\". Tłem są weekendowe uderzenia, odwetowe działania i wzajemne groźby obu stron.",
+      "keyFacts": [
+        "CNN mówi o chwilowym trybie \"stand down for now\".",
+        "Według amerykańskich urzędników rozmowy pozostają \"on track\".",
+        "Tłem są weekendowe uderzenia i groźby obu stron."
+      ],
+      "reactions": [
+        "To nie jest jeszcze karta o deeskalacji, tylko o bardzo kruchej pauzie.",
+        "Historia nadal nadaje ton całemu blokowi bezpieczeństwa i rynkom energii."
+      ],
+      "whyItMatters": "Każde załamanie rozmów może szybko przełożyć się na nowe uderzenia i dalsze skoki cen energii.",
+      "context": "W 06:01 karta przesuwała ton z samej wymiany ciosów na poranny stan \"stand down\". O 09:01 pozostaje centralnym wątkiem bezpieczeństwa bez potwierdzonego przełomu.",
+      "watchNext": [
+        "Czy pojawią się oficjalne komunikaty potwierdzające utrzymanie rozmów.",
+        "Czy dojdzie do nowych uderzeń podważających obecną pauzę."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Live updates - US and Iran will \"stand down for now\" and talks \"on track\"",
+          "url": "https://edition.cnn.com/2026/06/29/world/live-news/iran-war-strikes-trump"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "USA",
+        "Iran",
+        "Bliski Wschód"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-0901-10-wenezuela",
+      "section": "Świat",
+      "title": "Bilans trzęsienia ziemi w Wenezueli przekracza 1450 ofiar",
+      "lead": "Ratownicy nadal przeszukują gruzowiska, a tysiące osób pozostają zaginione.",
+      "whatHappened": "CNN podało, że po trzęsieniu ziemi w Wenezueli zginęło co najmniej 1450 osób, a tysiące kolejnych pozostają zaginione. Osobna analiza CNN wskazuje, że władze kraju nie mogą odrzucać pomocy nawet od politycznych przeciwników.",
+      "keyFacts": [
+        "CNN podaje co najmniej 1450 ofiar śmiertelnych.",
+        "Tysiące osób pozostają zaginione.",
+        "Władze przyjmują pomoc także od politycznych przeciwników."
+      ],
+      "reactions": [
+        "To nadal jedna z najcięższych humanitarnie historii w całym feedzie.",
+        "Temat łączy wymiar ratunkowy z politycznym i międzynarodowym."
+      ],
+      "whyItMatters": "Skala ofiar i zniszczeń sprawia, że Wenezuela pozostaje jednym z kluczowych światowych kryzysów humanitarnych dnia.",
+      "context": "W 06:01 historia przeszła z ogólnego live update'u do konkretnych liczb. O 09:01 pozostaje wysoko, bo akcja ratunkowa nadal trwa.",
+      "watchNext": [
+        "Czy bilans ofiar wzrośnie wraz z dalszym przeszukiwaniem gruzów.",
+        "Czy pomoc zagraniczna zacznie zmieniać tempo akcji ratunkowej."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Live updates - Venezuela earthquake rescues continue, mounting death toll, thousands missing",
+          "url": "https://edition.cnn.com/2026/06/29/world/live-news/venezuela-earthquake-hnk"
+        },
+        {
+          "title": "CNN: Delcy Rodríguez’s Venezuela is in such dire straits she can’t afford to reject aid from either friends or foes",
+          "url": "https://edition.cnn.com/2026/06/29/americas/venezuela-rodriguez-friends-foes-latam-intl"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wenezuela",
+        "Trzęsienie ziemi",
+        "Ratownictwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-0901-11-eisenkot",
+      "section": "Świat",
+      "title": "Eisenkot wyrasta na głównego rywala Netanjahu przed wyborami",
+      "lead": "Były szef sztabu staje się dla CNN najpoważniejszym politycznym przeciwnikiem długoletniego premiera Izraela.",
+      "whatHappened": "CNN podało, że były szef sztabu Gadi Eisenkot jest dziś głównym politycznym rywalem Benjamina Netanjahu przed tegorocznymi wyborami w Izraelu. Materiał pokazuje jego rosnącą atrakcyjność jako politycznego przeciwieństwa obecnego lidera.",
+      "keyFacts": [
+        "CNN wskazuje Gadego Eisenkota jako głównego rywala Netanjahu.",
+        "Chodzi o tegoroczne wybory w Izraelu.",
+        "Atutem Eisenkota ma być odmienny styl przywództwa."
+      ],
+      "reactions": [
+        "To ważna karta polityczna w tle ciągłych napięć bezpieczeństwa wokół Izraela.",
+        "Historia może szybko zyskać na znaczeniu, jeśli pojawią się nowe sondaże lub reakcje obozu Netanjahu."
+      ],
+      "whyItMatters": "Zmiana układu sił w Izraelu może wpływać na politykę bezpieczeństwa regionu i relacje z partnerami zagranicznymi.",
+      "context": "W 06:01 temat wszedł do feedu jako nowy profil polityczny. O 09:01 nadal ma wartość, bo pokazuje możliwą zmianę przywództwa w państwie kluczowym dla regionu.",
+      "watchNext": [
+        "Czy pojawią się nowe sondaże wzmacniające pozycję Eisenkota.",
+        "Czy obóz Netanjahu odpowie nową ofensywą polityczną."
+      ],
+      "sources": [
+        {
+          "title": "CNN: The former military chief now challenging Netanyahu for Israel’s top job",
+          "url": "https://edition.cnn.com/2026/06/29/middleeast/israel-gadi-eisenkot-election-netanyahu-intl-cmd"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Izrael",
+        "Netanjahu",
+        "Wybory"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-29-0901-12-upaly-europa",
+      "section": "Świat",
+      "title": "WHO wiąże europejską falę gorąca z około 1300 zgonów",
+      "lead": "Europa nadal płaci wysoką cenę za ekstremalne temperatury, a Niemcy notują nowy rekord 41,7 stopnia.",
+      "whatHappened": "BBC podało, że WHO wiąże europejską falę gorąca z około 1300 zgonów. Ten sam materiał podaje też nowy rekord 41,7 stopnia Celsjusza w Niemczech i ostrzeżenie, że Europa nie jest przygotowana na tak wysokie temperatury.",
+      "keyFacts": [
+        "WHO według BBC łączy obecną falę gorąca z około 1300 zgonów.",
+        "Niemcy odnotowały rekord 41,7 stopnia Celsjusza.",
+        "BBC cytuje ostrzeżenie, że Europa nie jest przygotowana na takie temperatury."
+      ],
+      "reactions": [
+        "To ważna karta tła dla polskich zakłóceń kolejowych i lotniskowych.",
+        "Historia pozostaje szeroka i publicznie istotna mimo braku nowego lokalnego przełomu."
+      ],
+      "whyItMatters": "Fala gorąca jest wspólnym tłem dla licznych problemów infrastrukturalnych, zdrowotnych i energetycznych w Europie.",
+      "context": "W 06:01 temat już był obecny, ale nadal dobrze kotwiczy polski blok upałów i transportu w szerszym europejskim obrazie.",
+      "watchNext": [
+        "Czy kolejne kraje ogłoszą nowe rekordy temperatur lub dodatkowe ograniczenia.",
+        "Czy WHO lub rządy doprecyzują bilans zdrowotnych skutków fali gorąca."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Europe's heatwave linked to 1,300 deaths, WHO says, as Germany hits record 41.7C",
+          "url": "https://www.bbc.co.uk/news/articles/cn4d2vv935lo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Europa",
+        "Upały",
+        "WHO"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "RCB: Alert RCB - burze (29.06)",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-2907"
+    },
+    {
+      "title": "PKP Intercity: Utrudnienia w ruchu pociągów PKP Intercity",
+      "url": "https://intercity.pl/site/o-nas/dzial-prasowy/komunikaty/utrudnienia-w-ruchu-pociagow-pkp-intercity.html"
+    },
+    {
+      "title": "CNN: Live updates - US and Iran will \"stand down for now\" and talks \"on track\"",
+      "url": "https://edition.cnn.com/2026/06/29/world/live-news/iran-war-strikes-trump"
+    },
+    {
+      "title": "CNN: Live updates - Venezuela earthquake rescues continue, mounting death toll, thousands missing",
+      "url": "https://edition.cnn.com/2026/06/29/world/live-news/venezuela-earthquake-hnk"
+    }
+  ]
+}

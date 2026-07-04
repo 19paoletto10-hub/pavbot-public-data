@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-06-17",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy cykl ma kilka tematow dobrych do podcastu: OpenAI przesuwa akcent na benchmarki i praktyczne zastosowania AI w nauce, Anthropic pokazuje napiecie miedzy frontier-modelami a regulacja/cyberbezpieczenstwem, Product Hunt sygnalizuje popyt na narzedzia AI dla projektowania i tworzenia stron, a WP Tech daje polski, bardziej popularnonaukowy temat kosmiczny."
+  ],
+  "summaryBullets": [
+    "AI: OpenAI: Introducing LifeSciBench i OpenAI: nowy sygnał AI",
+    "Regulacje: OpenAI: A near-autonomous AI chemist improves a challenging reaction i OpenAI: regulacyjny sygnał technologiczny",
+    "Produkty: Anthropic: Statement on the US government directive i Anthropic: produktowy sygnał AI"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-06-17-0-openai-introducing-lifescibench-i-openai-nowy-sygnal-ai-d0392b3bde",
+      "section": "AI",
+      "title": "OpenAI: Introducing LifeSciBench i OpenAI: nowy sygnał AI",
+      "standfirst": "OpenAI opublikowalo 17 czerwca 2026 LifeSciBench, benchmark oparty na 750 eksperckich zadaniach z realnych workflow life-science, 1 062 artefaktach i 19 020 kryteriach oceny. Source: OpenAI: Introducing LifeSciBench.",
+      "whatHappened": "OpenAI opublikowalo 17 czerwca 2026 LifeSciBench, benchmark oparty na 750 eksperckich zadaniach z realnych workflow life-science, 1 062 artefaktach i 19 020 kryteriach oceny. Source: OpenAI: Introducing LifeSciBench.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI opublikowalo 17 czerwca 2026 LifeSciBench, benchmark oparty na 750 eksperckich zadaniach z realnych workflow life-science, 1 062 artefaktach i 19 020 kryteriach oceny.",
+      "deeperAnalysis": [
+        "OpenAI opublikowalo 17 czerwca 2026 LifeSciBench, benchmark oparty na 750 eksperckich zadaniach z realnych workflow life-science, 1 062 artefaktach i 19 020 kryteriach oceny. Source: OpenAI: Introducing LifeSciBench.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI opublikowalo 17 czerwca 2026 LifeSciBench, benchmark oparty na 750 eksperckich zadaniach z realnych workflow life-science, 1 062 artefaktach i 19 020 kryteriach oceny.",
+        "Analiza opiera się na źródłach: OpenAI: Introducing LifeSciBench.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI opublikowalo 17 czerwca 2026 LifeSciBench, benchmark oparty na 750 eksperckich zadaniach z realnych workflow life-science, 1 062 artefaktach i 19 020 kryteriach oceny.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: Introducing LifeSciBench",
+          "url": "https://openai.com/index/introducing-life-sci-bench/"
+        }
+      ],
+      "priority": "Low",
+      "tags": [
+        "AI",
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-17-1-openai-a-near-autonomous-ai-chemist-improves-a-challenging-reaction-i-openai-regulacyjny-sygnal-technologiczny-974b34c1a4",
+      "section": "Regulacje",
+      "title": "OpenAI: A near-autonomous AI chemist improves a challenging reaction i OpenAI: regulacyjny sygnał technologiczny",
+      "standfirst": "OpenAI opublikowalo 17 czerwca 2026 case study, w ktorym GPT-5. 4 polaczony z systemem Maria od Molecule.",
+      "whatHappened": "OpenAI opublikowalo 17 czerwca 2026 case study, w ktorym GPT-5. 4 polaczony z systemem Maria od Molecule.",
+      "whyItMatters": "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: OpenAI opublikowalo 17 czerwca 2026 case study, w ktorym GPT-5.",
+      "deeperAnalysis": [
+        "OpenAI opublikowalo 17 czerwca 2026 case study, w ktorym GPT-5.4 polaczony z systemem Maria od Molecule.one zaproponowal i testowal eksperymenty w chemii medycznej; wedlug OpenAI znaleziono dodatek poprawiajacy wydajnosc reakcji Chan-Lam Coupling dla ponad 80% testowanych substratow. Source: OpenAI: A near-autonomous AI chemist improves a challenging reaction.",
+        "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: OpenAI opublikowalo 17 czerwca 2026 case study, w ktorym GPT-5.",
+        "Analiza opiera się na źródłach: OpenAI: A near-autonomous AI chemist improves a challenging reaction.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI opublikowalo 17 czerwca 2026 case study, w ktorym GPT-5.",
+        "Dlaczego ważne: regulacje ustawiają ramy ryzyka i compliance.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: A near-autonomous AI chemist improves a challenging reaction",
+          "url": "https://openai.com/index/ai-chemist-improves-reaction/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Regulacje",
+        "AI",
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-17-2-anthropic-statement-on-the-us-government-directive-i-anthropic-produktowy-sygnal-ai-4fa986185d",
+      "section": "Produkty",
+      "title": "Anthropic: Statement on the US government directive i Anthropic: produktowy sygnał AI",
+      "standfirst": "Anthropic utrzymuje publiczny komunikat, ze dyrektywa rzadu USA wymusila zawieszenie dostepu do modeli Fable 5 i Mythos 5 dla cudzoziemcow, co w praktyce oznaczalo wylaczenie tych produktow dla klientow. Source: Anthropic: Statement on the US government directive.",
+      "whatHappened": "Anthropic utrzymuje publiczny komunikat, ze dyrektywa rzadu USA wymusila zawieszenie dostepu do modeli Fable 5 i Mythos 5 dla cudzoziemcow, co w praktyce oznaczalo wylaczenie tych produktow dla klientow. Source: Anthropic: Statement on the US government directive.",
+      "whyItMatters": "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: Anthropic utrzymuje publiczny komunikat, ze dyrektywa rzadu USA wymusila zawieszenie dostepu do modeli Fable 5 i Mythos 5 dla cudzoziemcow, co w praktyce oznaczalo wylaczenie tych produktow dla klientow.",
+      "deeperAnalysis": [
+        "Anthropic utrzymuje publiczny komunikat, ze dyrektywa rzadu USA wymusila zawieszenie dostepu do modeli Fable 5 i Mythos 5 dla cudzoziemcow, co w praktyce oznaczalo wylaczenie tych produktow dla klientow. Source: Anthropic: Statement on the US government directive.",
+        "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: Anthropic utrzymuje publiczny komunikat, ze dyrektywa rzadu USA wymusila zawieszenie dostepu do modeli Fable 5 i Mythos 5 dla cudzoziemcow, co w praktyce oznaczalo wylaczenie tych produktow dla klientow.",
+        "Analiza opiera się na źródłach: Anthropic: Statement on the US government directive.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic utrzymuje publiczny komunikat, ze dyrektywa rzadu USA wymusila zawieszenie dostepu do modeli Fable 5 i Mythos 5 dla cudzoziemcow, co w praktyce oznaczalo wylaczenie tych produktow dla klientow.",
+        "Dlaczego ważne: produkty pokazują, co użytkownicy realnie zaczną stosować.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic: Statement on the US government directive",
+          "url": "https://www.anthropic.com/news/fable-mythos-access"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Produkty"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-17-3-anthropic-seoul-office-and-partnerships-i-anthropic-nowy-sygnal-ai-b47f0adf0b",
+      "section": "AI",
+      "title": "Anthropic: Seoul office and partnerships i Anthropic: nowy sygnał AI",
+      "standfirst": "Anthropic oglosil 17 czerwca 2026 otwarcie biura w Seulu i partnerstwa w koreanskim ekosystemie AI, w tym wdrozenia Claude Code w NAVER oraz uzycie Claude w Nexon, LG CNS, Hanwha Solutions, Samsung SDS i Channel Corp. Source: Anthropic: Seoul office and partnerships.",
+      "whatHappened": "Anthropic oglosil 17 czerwca 2026 otwarcie biura w Seulu i partnerstwa w koreanskim ekosystemie AI, w tym wdrozenia Claude Code w NAVER oraz uzycie Claude w Nexon, LG CNS, Hanwha Solutions, Samsung SDS i Channel Corp. Source: Anthropic: Seoul office and partnerships.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Anthropic oglosil 17 czerwca 2026 otwarcie biura w Seulu i partnerstwa w koreanskim ekosystemie AI, w tym wdrozenia Claude Code w NAVER oraz uzycie Claude w Nexon, LG CNS, Hanwha Solutions, Samsung SDS i Channel Corp.",
+      "deeperAnalysis": [
+        "Anthropic oglosil 17 czerwca 2026 otwarcie biura w Seulu i partnerstwa w koreanskim ekosystemie AI, w tym wdrozenia Claude Code w NAVER oraz uzycie Claude w Nexon, LG CNS, Hanwha Solutions, Samsung SDS i Channel Corp. Source: Anthropic: Seoul office and partnerships.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Anthropic oglosil 17 czerwca 2026 otwarcie biura w Seulu i partnerstwa w koreanskim ekosystemie AI, w tym wdrozenia Claude Code w NAVER oraz uzycie Claude w Nexon, LG CNS, Hanwha Solutions, Samsung SDS i Channel Corp.",
+        "Analiza opiera się na źródłach: Anthropic: Seoul office and partnerships.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic oglosil 17 czerwca 2026 otwarcie biura w Seulu i partnerstwa w koreanskim ekosystemie AI, w tym wdrozenia Claude Code w NAVER oraz uzycie Claude w Nexon, LG CNS, Hanwha Solutions, Samsung SDS i Channel Corp.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic: Seoul office and partnerships",
+          "url": "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-17-4-product-hunt-daily-leaderboard-produktowy-sygnal-ai-060ffbe34e",
+      "section": "Produkty",
+      "title": "Product Hunt daily leaderboard: produktowy sygnał AI",
+      "standfirst": "Product Hunt wskazuje 17 czerwca 2026 Framer 3. 0 jako najwyzej widoczny launch dnia; opis podkresla agentow, branching, community i nowy design.",
+      "whatHappened": "Product Hunt wskazuje 17 czerwca 2026 Framer 3. 0 jako najwyzej widoczny launch dnia; opis podkresla agentow, branching, community i nowy design.",
+      "whyItMatters": "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: Product Hunt wskazuje 17 czerwca 2026 Framer 3.",
+      "deeperAnalysis": [
+        "Product Hunt wskazuje 17 czerwca 2026 Framer 3.0 jako najwyzej widoczny launch dnia; opis podkresla agentow, branching, community i nowy design. Trending categories obejmuja m.in. vibe coding tools, AI coding agents, AI code editors, AI notetakers i AI workflow automation. Source: Product Hunt daily leaderboard.",
+        "Ten sygnał jest ważny, bo pokazuje, które funkcje technologiczne przechodzą z eksperymentu do codziennego użycia. Kluczowy fakt z raportu: Product Hunt wskazuje 17 czerwca 2026 Framer 3.",
+        "Analiza opiera się na źródłach: Product Hunt daily leaderboard.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Product Hunt wskazuje 17 czerwca 2026 Framer 3.",
+        "Dlaczego ważne: produkty pokazują, co użytkownicy realnie zaczną stosować.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek produkty przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt daily leaderboard",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/6/17"
+        }
+      ],
+      "priority": "Low",
+      "tags": [
+        "Produkty",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-17-5-wp-tech-kosmos-wazny-sygnal-technologiczny-369c8db920",
+      "section": "Inne",
+      "title": "WP Tech: Kosmos: ważny sygnał technologiczny",
+      "standfirst": "WP Tech opublikowalo 17 czerwca 2026 material o misji Artemis II i rekordzie odleglosci kapsuly Orion. Source: WP Tech: Kosmos.",
+      "whatHappened": "WP Tech opublikowalo 17 czerwca 2026 material o misji Artemis II i rekordzie odleglosci kapsuly Orion. Source: WP Tech: Kosmos.",
+      "whyItMatters": "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: WP Tech opublikowalo 17 czerwca 2026 material o misji Artemis II i rekordzie odleglosci kapsuly Orion.",
+      "deeperAnalysis": [
+        "WP Tech opublikowalo 17 czerwca 2026 material o misji Artemis II i rekordzie odleglosci kapsuly Orion. Source: WP Tech: Kosmos.",
+        "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: WP Tech opublikowalo 17 czerwca 2026 material o misji Artemis II i rekordzie odleglosci kapsuly Orion.",
+        "Analiza opiera się na źródłach: WP Tech: Kosmos.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek inne przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: WP Tech opublikowalo 17 czerwca 2026 material o misji Artemis II i rekordzie odleglosci kapsuly Orion.",
+        "Dlaczego ważne: sygnał może zmienić priorytety technologiczne.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek inne przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "WP Tech: Kosmos",
+          "url": "https://tech.wp.pl/kosmos%2Ctemat%2C5984493782360705"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Inne"
+      ]
+    },
+    {
+      "id": "tech-news-2026-06-17-6-the-verge-openai-is-sunsetting-pulse-i-openai-nowy-sygnal-ai-02756b1638",
+      "section": "AI",
+      "title": "The Verge: OpenAI is sunsetting Pulse i OpenAI: nowy sygnał AI",
+      "standfirst": "The Verge informuje, ze OpenAI wygasza Pulse i sugeruje uzycie zaplanowanych zadan do codziennego briefingu. Source: The Verge: OpenAI is sunsetting Pulse.",
+      "whatHappened": "The Verge informuje, ze OpenAI wygasza Pulse i sugeruje uzycie zaplanowanych zadan do codziennego briefingu. Source: The Verge: OpenAI is sunsetting Pulse.",
+      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: The Verge informuje, ze OpenAI wygasza Pulse i sugeruje uzycie zaplanowanych zadan do codziennego briefingu.",
+      "deeperAnalysis": [
+        "The Verge informuje, ze OpenAI wygasza Pulse i sugeruje uzycie zaplanowanych zadan do codziennego briefingu. Source: The Verge: OpenAI is sunsetting Pulse.",
+        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: The Verge informuje, ze OpenAI wygasza Pulse i sugeruje uzycie zaplanowanych zadan do codziennego briefingu.",
+        "Analiza opiera się na źródłach: The Verge: OpenAI is sunsetting Pulse.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: The Verge informuje, ze OpenAI wygasza Pulse i sugeruje uzycie zaplanowanych zadan do codziennego briefingu.",
+        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "The Verge: OpenAI is sunsetting Pulse",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/951840/openai-is-sunsetting-pulse-which-showed-you-custom-daily-digests-in-chatgpt"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "OpenAI"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "AI w nauce przechodzi z demonstracji do benchmarkow i labow",
+      "rationale": "LifeSciBench i case z AI-chemikiem daja konkretny material o tym, jak mierzyc i wdrazac agentow naukowych",
+      "sourcesLabel": "OpenAI LifeSciBench; OpenAI AI chemist"
+    },
+    {
+      "priority": "High",
+      "title": "Frontier AI kontra regulacja i cyberbezpieczenstwo",
+      "rationale": "Historia Fable/Mythos pokazuje, ze zdolnosci cyber modeli moga natychmiast uruchamiac decyzje panstwowe",
+      "sourcesLabel": "Anthropic directive; Anthropic Fable/Mythos"
+    },
+    {
+      "priority": "Medium",
+      "title": "Korea jako pole wdrozen AI enterprise",
+      "rationale": "Anthropic pokazuje konkretne wdrozenia Claude Code i Claude w duzych koreanskich firmach",
+      "sourcesLabel": "Anthropic Seoul partnerships"
+    },
+    {
+      "priority": "Medium",
+      "title": "Narzedzia AI dla tworcow stron i produktow",
+      "rationale": "Framer 3.0 na Product Hunt oraz trendy kategorii pokazuja dalsza popularnosc agentow i vibe coding",
+      "sourcesLabel": "Product Hunt leaderboard"
+    },
+    {
+      "priority": "Medium",
+      "title": "Koniec Pulse i powrot do zaplanowanych briefingow",
+      "rationale": "To dobry meta-temat dla Pavbot: personalizowane briefingi przesuwaja sie w strone automatyzacji harmonogramowej",
+      "sourcesLabel": "The Verge"
+    },
+    {
+      "priority": "Low",
+      "title": "Artemis II i polski kontekst popularnonaukowy",
+      "rationale": "Temat mniej biznesowy, ale dobry na krotki segment oddechowy w polskim podcascie",
+      "sourcesLabel": "WP Tech"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI: Introducing LifeSciBench",
+      "url": "https://openai.com/index/introducing-life-sci-bench/"
+    },
+    {
+      "title": "OpenAI: A near-autonomous AI chemist improves a challenging reaction",
+      "url": "https://openai.com/index/ai-chemist-improves-reaction/"
+    },
+    {
+      "title": "Anthropic: Statement on the US government directive",
+      "url": "https://www.anthropic.com/news/fable-mythos-access"
+    },
+    {
+      "title": "Anthropic: Seoul office and partnerships",
+      "url": "https://www.anthropic.com/news/seoul-office-partnerships-korean-ai-ecosystem"
+    },
+    {
+      "title": "Product Hunt daily leaderboard",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/6/17"
+    },
+    {
+      "title": "WP Tech: Kosmos",
+      "url": "https://tech.wp.pl/kosmos%2Ctemat%2C5984493782360705"
+    },
+    {
+      "title": "The Verge: OpenAI is sunsetting Pulse",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/951840/openai-is-sunsetting-pulse-which-showed-you-custom-daily-digests-in-chatgpt"
+    },
+    {
+      "title": "Anthropic: Claude Fable 5 and Claude Mythos 5",
+      "url": "https://www.anthropic.com/news/claude-fable-5-mythos-5"
+    }
+  ]
+}
