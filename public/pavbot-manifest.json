@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-05T16:19:48.981078+00:00",
+  "generatedAt": "2026-07-05T17:44:32.204961+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -494,7 +494,7 @@
       "title": "Run 2026-07-05",
       "path": "research/polska-swiat/runs/2026-07-05.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-07-05.md",
-      "sizeBytes": 1472,
+      "sizeBytes": 20619,
       "date": "2026-07-05"
     },
     {
@@ -504,7 +504,7 @@
       "title": "Research data",
       "path": "research/polska-swiat/data/2026-07-05-research.json",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-07-05-research.json",
-      "sizeBytes": 13547,
+      "sizeBytes": 20115,
       "date": "2026-07-05"
     },
     {
@@ -544,7 +544,7 @@
       "title": "2026-07-05-polska-swiat.pdf",
       "path": "research/polska-swiat/pdfs/2026-07-05-polska-swiat.pdf",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-07-05-polska-swiat.pdf",
-      "sizeBytes": 31093,
+      "sizeBytes": 77096,
       "date": "2026-07-05"
     },
     {
@@ -1049,6 +1049,17 @@
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-04/podcast.mp3",
       "sizeBytes": 3906331,
       "date": "2026-07-04"
+    },
+    {
+      "id": "research/polska-swiat/pdfs/2026-07-04-1935-polska-swiat.pdf",
+      "type": "pdf",
+      "topic": "polska-swiat",
+      "title": "2026-07-04-1935-polska-swiat.pdf",
+      "path": "research/polska-swiat/pdfs/2026-07-04-1935-polska-swiat.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-07-04-1935-polska-swiat.pdf",
+      "sizeBytes": 53303,
+      "date": "2026-07-04",
+      "time": "19:35"
     },
     {
       "id": "research/llm-ai-jobs-wroclaw/runs/2026-07-04-1541.md",

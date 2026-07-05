@@ -2,220 +2,372 @@
   "schemaVersion": 1,
   "topic": "polska-swiat",
   "runDate": "2026-07-05",
-  "runTime": "09:44",
+  "runTime": null,
   "status": "Material update",
   "leadParagraphs": [
-    "Dzisiejszy run opiera się na skróconym fallbacku z publicznych źródeł, bo poranny raport 2026-07-05 nie istniał w chwili researchu. Najmocniejsze krajowe sygnały to Tusk o pierwszym kroku Ukrainy, nowy etap sprawy Szpitala Południowego, wejście w życie nowych obowiązków kryzysowych i kolejny ruch w energetyce.",
-    "W świecie najważniejsze są ukraińskie ataki na rosyjską infrastrukturę paliwową, napięcie przed szczytem NATO w Ankarze oraz Iran, który łączy wielodniowy pogrzeb Chameneia z presją w Ormuz. To zestaw tematów o realnym wpływie na bezpieczeństwo, dyplomację i rynek energii."
+    "Dzisiejszy run zamienia wczorajszy fallback w pełny, źródłowany przegląd dnia. Najmocniejsze krajowe sygnały to polityczne warunkowanie relacji z Ukrainą po wypowiedzi Donalda Tuska w Kleczewie, doprecyzowanie agendy energetycznej wokół pierwszego prądu z offshore i drugiej elektrowni jądrowej, oraz kontrola Ministerstwa Zdrowia w Szpitalu Południowym po doniesieniach o pomyłce przy in vitro. Równolegle 4 lipca weszły w życie nowe obowiązki w zarządzaniu kryzysowym, a światowy blok dnia to ukraiński atak na terminal w Petersburgu, napięcie przed szczytem NATO w Ankarze i wielodniowy pogrzeb Alego Chameneiego z powrotem tematu Ormuz."
   ],
   "summaryBullets": [
-    "Polityka: Tusk warunkuje kolejne kroki wobec Ukrainy",
-    "Polska: Szpital Południowy przechodzi z kontroli do kosztów kadrowych i systemowych",
-    "Świat: wojna, NATO i Iran podnoszą stawkę bezpieczeństwa"
+    "Polityka: Tusk stawia Ukrainie warunek",
+    "Gospodarka: Kleczew doprecyzowuje plan energetyczny",
+    "Polska: Szpital Południowy pod kontrolą po pomyłce przy in vitro"
   ],
   "articles": [
     {
-      "id": "polska-swiat-2026-07-05-0-tusk-oczekuje-pierwszego-kroku-od-ukrainy",
+      "id": "polska-swiat-2026-07-05-0-tusk-stawia-ukrainie-warunek-401c650122",
       "section": "Polityka",
-      "title": "Tusk oczekuje pierwszego kroku od Ukrainy",
-      "standfirst": "Premier Donald Tusk powiedział w Kleczewie, że Polska oczekuje od Ukrainy pierwszego kroku po decyzji Wołodymyra Zełenskiego. To przesuwa spór o pamięć historyczną z poziomu komentarza do poziomu realnej polityki.",
-      "whatHappened": "Tusk publicznie doprecyzował, czego Warszawa oczekuje od Kijowa po ostatnim napięciu wokół decyzji Zełenskiego.",
-      "whyItMatters": "To ważny sygnał dla relacji polsko-ukraińskich, bo pokazuje, że rozmowy o bezpieczeństwie są dziś ściśle połączone z pamięcią historyczną i gestami politycznymi.",
+      "title": "Tusk stawia Ukrainie warunek",
+      "standfirst": "Donald Tusk powiedział w Kleczewie, że Polska oczekuje od Ukrainy pierwszego kroku po decyzji Wołodymyra Zełenskiego. Premier dodał, że otrzymał list od Wiktora Juszczenki z apelem, by przeszłość nie rządziła przyszłością.",
+      "whatHappened": "Premier publicznie przesunął ciężar sporu na Kijów i poprosił o wyraźny sygnał po ukraińskiej stronie.",
+      "whyItMatters": "Relacja Warszawa-Kijów wchodzi w fazę warunkowej deeskalacji, a nie automatycznego wygaszania napięcia.",
       "deeperAnalysis": [
-        "W praktyce nie chodzi o samo podtrzymanie dialogu, ale o to, kto pierwszy wykona ruch, żeby obniżyć temperaturę sporu.",
-        "Dla podcastu to dobry temat otwierający, bo łączy dyplomację, historię i bieżącą politykę bez wchodzenia w spekulację."
+        "Wystąpienie w Kleczewie nie było jedynie komentarzem do jednej symbolicznej decyzji. Tusk użył tej sceny, by zakomunikować, że Polska oczekuje ruchu politycznego po stronie ukraińskiej, a nie wyłącznie wyjaśnień w mediach. To podnosi spór z poziomu publicystycznego do dyplomatycznego.",
+        "Równocześnie premier zasygnalizował, że kanał rozmowy nie jest zamknięty, bo dostał list od Wiktora Juszczenki i odwołał się do potrzeby wspólnego podejścia do trudnej historii. To sugeruje próbę połączenia twardego komunikatu z furtką do odbudowy relacji."
       ],
       "contextPoints": [
-        "Co się stało: premier mówi o pierwszym kroku po decyzji Zełenskiego.",
-        "Na co patrzeć dalej: odpowiedź Kijowa i dalszy ton polsko-ukraińskich komunikatów."
+        "Co się stało: Tusk zażądał pierwszego kroku od Ukrainy.",
+        "Dlaczego ważne: Spór historyczny zaczął wpływać na bieżącą dyplomację.",
+        "Na co patrzeć dalej: Czy Kijów odpowie oficjalnym gestem lub komunikatem."
       ],
       "sources": [
         {
-          "title": "PAP: Premier oczekuje od Ukrainy pierwszego kroku",
-          "url": "https://www.pap.pl/aktualnosci/premier-oczekujemy-od-ukrainy-pierwszego-kroku-po-nieszczesnej-decyzji-prezydenta"
-        },
-        {
-          "title": "TVN24: Donald Tusk oczekujemy od Ukrainy pierwszego kroku",
+          "title": "TVN24",
           "url": "https://tvn24.pl/polska/napiete-relacje-polski-i-ukrainy-premier-donald-tusk-oczekujemy-pierwszego-kroku-st9127782"
-        }
-      ],
-      "priority": "High",
-      "tags": ["Polityka", "Ukraina", "dyplomacja", "historia"]
-    },
-    {
-      "id": "polska-swiat-2026-07-05-1-szpital-poludniowy-pomylka-in-vitro-i-rzadowa-reakcja",
-      "section": "Zdrowie",
-      "title": "Szpital Południowy: pomyłka in vitro i rządowa reakcja",
-      "standfirst": "W Szpitalu Południowym doszło do pomyłki przy procedurze in vitro, a Ministerstwo Zdrowia prowadzi kontrolę. Premier łączy sprawę z walką z omijaniem kolejek i tak zwanymi salonikami VIP.",
-      "whatHappened": "Pacjentce podano zarodek innej pary, błąd został szybko wykryty, a rząd i miasto reagują na narastający kryzys.",
-      "whyItMatters": "Sprawa pokazuje, że publiczna ochrona zdrowia jest testem nie tylko medycznym, ale też instytucjonalnym i politycznym.",
-      "deeperAnalysis": [
-        "Ten temat wyszedł poza pojedynczy incydent i stał się debatą o standardach dostępu do publicznej ochrony zdrowia.",
-        "To dobry segment podcastu, bo pokazuje konkretny koszt systemowych nadużyć: utratę zaufania i konieczność zmian organizacyjnych."
-      ],
-      "contextPoints": [
-        "Co się stało: w szpitalu pojawiła się pomyłka przy in vitro i kontrola MZ.",
-        "Na co patrzeć dalej: rekomendacje MZ i NFZ oraz kolejne decyzje organizacyjne Warszawy."
-      ],
-      "sources": [
-        {
-          "title": "Onet: Poważna pomyłka w Szpitalu Południowym",
-          "url": "https://wiadomosci.onet.pl/kraj/kolejna-afera-w-szpitalu-poludniowym-pomylka-podczas-procedury-in-vitro/qcyhs3z"
         },
         {
-          "title": "Gov.pl / KPRM: Dostęp do publicznej ochrony zdrowia musi być równy dla wszystkich",
-          "url": "https://www.gov.pl/web/premier/dostep-do-publicznej-ochrony-zdrowia-musi-byc-rowny-dla-wszystkich---bez-wyjatkow"
+          "title": "Reuters przez Internazionale",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/07/03/poland-s-tusk-says-ukraine-wants-to-lower-tension-warsaw-poland-neighbour-east-should-confront-history"
         }
       ],
       "priority": "High",
-      "tags": ["zdrowie", "Warszawa", "Szpital Południowy", "NFZ", "samorząd"]
+      "tags": [
+        "Polska",
+        "Ukraina",
+        "dyplomacja",
+        "Tusk",
+        "Zełenski"
+      ]
     },
     {
-      "id": "polska-swiat-2026-07-05-2-rcb-nowe-obowiazki-zarzadzanie-kryzysowe",
-      "section": "Bezpieczeństwo",
-      "title": "RCB: nowe obowiązki w zarządzaniu kryzysowym",
-      "standfirst": "Od 4 lipca obowiązują nowe przepisy o zarządzaniu kryzysowym. RCB podkreśla, że zmiany obejmują administrację publiczną, operatorów infrastruktury krytycznej i podmioty krytyczne.",
-      "whatHappened": "Nowelizacja weszła w życie i zmienia praktyczne obowiązki przygotowawcze państwa.",
-      "whyItMatters": "To przekłada się na procedury, dokumentację i gotowość do reagowania na awarie, pogodę i kolejne kryzysy infrastrukturalne.",
+      "id": "polska-swiat-2026-07-05-1-kleczew-doprecyzowuje-plan-energetyczny-6024e0cf1c",
+      "section": "Gospodarka",
+      "title": "Kleczew doprecyzowuje plan energetyczny",
+      "standfirst": "Tusk powiedział w Kleczewie, że pierwszy prąd z offshore'u ma zostać pokazany w przyszłym tygodniu. Wskazał też Konin i Bełchatów jako porównywalne lokalizacje drugiej elektrowni jądrowej.",
+      "whatHappened": "Premier połączył krótki termin dla offshore'u z długoterminową decyzją o atomie.",
+      "whyItMatters": "To jeden z niewielu świeżych, konkretnych sygnałów o kolejności polskiej transformacji energetycznej w 2026 roku.",
       "deeperAnalysis": [
-        "W audycji warto to opisać jako przejście od deklaracji odporności do konkretnego reżimu obowiązków.",
-        "To temat mniej widowiskowy niż wojna, ale bardzo ważny dla realnej odporności państwa i sektora krytycznego."
+        "Wizyta w Kleczewie służyła nie tylko promocji OZE, ale też ustawieniu ram dla większych decyzji infrastrukturalnych. Zapowiedź pierwszego prądu z offshore'u daje czytelny termin na kolejny komunikat rządu, a to zwykle uruchamia lokalne i branżowe oczekiwania.",
+        "Równolegle premier wskazał Konin i Bełchatów jako lokalizacje porównywalne, ale podkreślił, że ostateczny wybór należy do ekspertów i zależy od geologii oraz innych kryteriów. To ważne, bo oddziela polityczne sympatie od formalnej ścieżki decyzyjnej."
       ],
       "contextPoints": [
-        "Co się stało: nowe obowiązki są już formalnie w mocy.",
-        "Na co patrzeć dalej: materiały wdrożeniowe RCB i sygnały o problemach z implementacją."
+        "Co się stało: Rząd zapowiedział bliski start pierwszego offshore'u i zawęził debatę o drugim atomie.",
+        "Dlaczego ważne: Energetyka przesuwa się z ogólnych deklaracji do konkretnych lokalizacji i terminów.",
+        "Na co patrzeć dalej: Czy w przyszłym tygodniu padnie oficjalna lokalizacja offshore i czy pojawią się dalsze wskazania atomowe."
       ],
       "sources": [
         {
-          "title": "Gov.pl / RCB: Jutro wchodzą w życie zmiany w ustawie o zarządzaniu kryzysowym",
-          "url": "https://www.gov.pl/web/rcb/jutro-wchodza-w-zycie-zmiany-w-ustawie-o-zarzadzaniu-kryzysowym-sprawdz-jak-sie-przygotowac"
-        }
-      ],
-      "priority": "Medium",
-      "tags": ["RCB", "zarządzanie kryzysowe", "infrastruktura krytyczna", "bezpieczeństwo"]
-    },
-    {
-      "id": "polska-swiat-2026-07-05-3-energia-offshore-i-druga-elektrownia-jadrowa",
-      "section": "Energia",
-      "title": "Energia: offshore i druga elektrownia jądrowa",
-      "standfirst": "Premier zapowiedział pokazanie miejsca pierwszego w historii Polski prądu z offshore i wskazał Konin oraz Bełchatów jako porównywalne lokalizacje drugiej elektrowni jądrowej.",
-      "whatHappened": "Rząd próbuje połączyć bieżącą transformację energetyczną z długim horyzontem inwestycji jądrowych.",
-      "whyItMatters": "To wpływa na ceny energii, bezpieczeństwo dostaw i mapę przyszłych inwestycji przemysłowych w Polsce.",
-      "deeperAnalysis": [
-        "Ta wypowiedź jest ważna, bo sprowadza energetykę z poziomu ogólnej obietnicy do poziomu konkretnej geografii i harmonogramu.",
-        "Dla podcastu to mocny blok gospodarczy: pokazuje, że energia staje się decyzją o miejscach, sieciach i finansowaniu, a nie tylko hasłem o transformacji."
-      ],
-      "contextPoints": [
-        "Co się stało: premier mówi o offshore i o dwóch możliwych lokalizacjach drugiej elektrowni jądrowej.",
-        "Na co patrzeć dalej: oficjalne decyzje ekspertów i kolejne komunikaty rządowe o harmonogramie."
-      ],
-      "sources": [
-        {
-          "title": "TVN24 Biznes: Pierwszy prąd z morskich farm wiatrowych",
+          "title": "TVN24 Biznes",
           "url": "https://tvn24.pl/biznes/z-kraju/druga-elektrownia-jadrowa-w-polsce-premier-donald-tusk-wskazal-dwie-mozliwe-lokalizacje-st9127822"
+        },
+        {
+          "title": "Polskie Radio",
+          "url": "https://www.polskieradio.pl/395/7786/Artykul/3705082,pm-tusk-visits-polands-biggest-solar-farm-hails-renewables"
         }
       ],
-      "priority": "Medium",
-      "tags": ["energia", "OZE", "offshore", "atom", "inwestycje"]
+      "priority": "High",
+      "tags": [
+        "energia",
+        "offshore",
+        "atom",
+        "OZE",
+        "Konin",
+        "Bełchatów"
+      ]
     },
     {
-      "id": "polska-swiat-2026-07-05-4-ukrainskie-drony-petersburg-i-test-nato",
-      "section": "Świat",
-      "title": "Ukraina, Petersburg i test NATO",
-      "standfirst": "AP opisuje ukraiński atak dronów na terminal naftowy w Petersburgu, a równolegle NATO idzie na szczyt w Ankarze z trudnym pytaniem o relację z Trumpem.",
-      "whatHappened": "Wojna dalej uderza w rosyjską infrastrukturę paliwową, a Sojusz próbuje utrzymać amerykańskie zaangażowanie.",
-      "whyItMatters": "To jeden z najważniejszych bloków dnia, bo łączy wojnę, energię i wiarygodność bezpieczeństwa w Europie.",
+      "id": "polska-swiat-2026-07-05-2-szpital-poludniowy-pod-kontrola-po-pomylce-przy-in-vitro-65d84929ea",
+      "section": "Polska",
+      "title": "Szpital Południowy pod kontrolą po pomyłce przy in vitro",
+      "standfirst": "Ministerstwo Zdrowia rozpoczęło kontrolę w Warszawskim Szpitalu Południowym po doniesieniach o pomyłce przy in vitro. TVN24 podał, że jedna z pacjentek miała otrzymać zarodek, z którym nie była genetycznie spokrewniona.",
+      "whatHappened": "Resort zdrowia i kontrola właścicielska weryfikują przebieg procedur.",
+      "whyItMatters": "To bezpośrednio dotyka zaufania do publicznej ochrony zdrowia, procedur IVF i nadzoru nad szpitalami.",
       "deeperAnalysis": [
-        "Ukraińskie ataki na energię rosyjską zwiększają presję na Kreml, a jednocześnie pokazują, że wojna toczy się także na poziomie logistyki i paliw.",
-        "Szczyt NATO w Ankarze jest testem, czy większe europejskie wydatki realnie przekładają się na zdolności i na trwałą obecność USA w Sojuszu."
+        "Sprawa ma dwa poziomy. Pierwszy to sam błąd proceduralny, który w tak wrażliwym obszarze natychmiast staje się kwestią bezpieczeństwa pacjentów i standardów pracy placówki. Drugi to reakcja systemu: kontrola MZ, działania NFZ i nadzór właścicielski, które mają ustalić, co dokładnie się wydarzyło.",
+        "Na tym etapie nie ma jeszcze finalnych ustaleń o odpowiedzialności ani o skali systemowej awarii, więc raport powinien trzymać się faktów z kontroli i nie rozszerzać ich na cały program in vitro. Najważniejsze będą wyniki postępowań, komunikaty szpitala i ewentualne decyzje administracyjne."
       ],
       "contextPoints": [
-        "Co się stało: Ukraina uderza w terminal naftowy w Petersburgu, a NATO szykuje szczyt w Ankarze.",
-        "Na co patrzeć dalej: kolejne komunikaty o skutkach ataku, a w NATO - o relacji Trump-Rutte i przemysłowym forum obronnym."
+        "Co się stało: W szpitalu zgłoszono pomyłkę przy procedurze in vitro.",
+        "Dlaczego ważne: To sprawdzian zaufania do systemu ochrony zdrowia i nadzoru.",
+        "Na co patrzeć dalej: Wyniki kontroli MZ/NFZ i stanowisko placówki."
       ],
       "sources": [
         {
-          "title": "AP: Ukrainian drones hit St Petersburg oil terminal",
-          "url": "https://apnews.com/article/c95b97c0ab5ca8d06050f09e54ea69a9"
+          "title": "TVN24",
+          "url": "https://tvn24.pl/polska/ministerstwo-zdrowia-rozpoczelo-kontrole-w-szpitalu-poludniowym-mialo-tam-dojsc-do-pomylki-przy-in-vitro-st9127413"
         },
         {
-          "title": "AP: NATO chief faces challenge at summit as Trump demands loyalty and not just burden-sharing",
+          "title": "Rzeczpospolita",
+          "url": "https://www.rp.pl/zdrowie/art44769271-kolejna-afera-w-szpitalu-poludniowym-pacjentce-podano-zarodek-innej-pary"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "zdrowie",
+        "in vitro",
+        "Warszawa",
+        "MZ",
+        "NFZ"
+      ]
+    },
+    {
+      "id": "polska-swiat-2026-07-05-3-nowe-obowiazki-kryzysowe-wchodza-w-zycie-9a90ad7abd",
+      "section": "Bezpieczeństwo",
+      "title": "Nowe obowiązki kryzysowe wchodzą w życie",
+      "standfirst": "RCB poinformowało, że od 4 lipca weszły w życie zmiany w ustawie o zarządzaniu kryzysowym. Nowe regulacje wymagają od wielu organizacji nowych procedur, dokumentacji i dostosowania procesów.",
+      "whatHappened": "System cywilnego zarządzania kryzysowego przeszedł z zapowiedzi do obowiązującego reżimu.",
+      "whyItMatters": "To wpływa na przygotowanie administracji, operatorów infrastruktury krytycznej i podmiotów krytycznych.",
+      "deeperAnalysis": [
+        "RCB opisuje zmianę jako dostosowanie prawa do współczesnych wyzwań związanych z ochroną infrastruktury krytycznej, ryzykiem i planowaniem reagowania. Najważniejsze na teraz jest nie tyle samo uchwalenie przepisów, ile praktyczne wdrożenie po stronie instytucji.",
+        "W kolejnych dniach warto sprawdzać, czy ministerstwa, wojewodowie i operatorzy publikują wytyczne, checklisty lub harmonogramy. Bez tego nie da się ocenić, czy reforma jest realnym wzmocnieniem, czy tylko formalną zmianą na papierze."
+      ],
+      "contextPoints": [
+        "Co się stało: Przepisy weszły w życie 4 lipca.",
+        "Dlaczego ważne: Zmieniają obowiązki szerokiego kręgu podmiotów.",
+        "Na co patrzeć dalej: Pierwsze wdrożenia i komunikaty sektorowe."
+      ],
+      "sources": [
+        {
+          "title": "RCB / gov.pl",
+          "url": "https://www.gov.pl/web/rcb/jutro-wchodza-w-zycie-zmiany-w-ustawie-o-zarzadzaniu-kryzysowym-sprawdz-jak-sie-przygotowac"
+        },
+        {
+          "title": "RCB komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "bezpieczeństwo",
+        "RCB",
+        "infrastruktura krytyczna",
+        "administracja",
+        "prawo"
+      ]
+    },
+    {
+      "id": "polska-swiat-2026-07-05-4-ukrainskie-drony-uderzaja-w-terminal-w-petersburgu-7cb9dc3982",
+      "section": "Świat",
+      "title": "Ukraińskie drony uderzają w terminal w Petersburgu",
+      "standfirst": "AP i Guardian opisują atak ukraińskich dronów na terminal naftowy w Petersburgu i port Vysotsk. Według rosyjskich władz zestrzelono 72 drony nad regionem, a Ukraina przedstawia operację jako uderzenie w przychody wojenne Rosji.",
+      "whatHappened": "Rosyjska infrastruktura paliwowa i portowa ponownie stała się celem głębokiego uderzenia.",
+      "whyItMatters": "To wzmacnia presję na rosyjskie paliwa i pokazuje, że wojna nadal uderza w logistykę oraz energetykę.",
+      "deeperAnalysis": [
+        "Z punktu widzenia wojny to nie jest pojedynczy incydent, tylko część dłuższej kampanii Ukrainy przeciw infrastrukturze energetycznej Rosji. Znaczenie mają tu nie tylko szkody materialne, ale też sygnał polityczny: Kijów uderza w źródła dochodu i zaplecze militarne przeciwnika.",
+        "W reportażach AP i Guardiana pojawia się też szerszy kontekst rosyjskich problemów z paliwem oraz dalszych nalotów na Ukrainę. To sprawia, że wątek jest istotny dla Polski pośrednio, bo wpływa na sytuację bezpieczeństwa i ryzyko eskalacji w regionie."
+      ],
+      "contextPoints": [
+        "Co się stało: Drony trafiły w terminal i okoliczne cele portowe.",
+        "Dlaczego ważne: Uderza to w rosyjskie przychody i logistykę wojenną.",
+        "Na co patrzeć dalej: Skala zniszczeń i odpowiedź Rosji."
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/russia-ukraine-war-oil-st-petersburg-c95b97c0ab5ca8d06050f09e54ea69a9"
+        },
+        {
+          "title": "Guardian",
+          "url": "https://www.theguardian.com/world/2026/jul/04/ukrainian-drones-hit-st-petersburg-oil-terminal-and-nearby-port"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "energia",
+        "wojna",
+        "drony"
+      ]
+    },
+    {
+      "id": "polska-swiat-2026-07-05-5-nato-przed-testem-lojalnosci-trumpa-9b85f0cc13",
+      "section": "Bezpieczeństwo",
+      "title": "NATO przed testem lojalności Trumpa",
+      "standfirst": "AP pisze, że przed szczytem NATO w Ankarze Mark Rutte musi utrzymać Donalda Trumpa przy Sojuszu. Problemem nie jest już tylko podział kosztów, ale oczekiwanie lojalności wobec USA.",
+      "whatHappened": "Przed szczytem rośnie presja na europejskich sojuszników, by pokazali wartość dla Waszyngtonu.",
+      "whyItMatters": "Od tonu rozmowy zależy wiarygodność amerykańskich gwarancji i poziom wsparcia dla Ukrainy.",
+      "deeperAnalysis": [
+        "Artykuł AP pokazuje, że stawką nie jest zwykły spór o wydatki obronne. Trump oczekuje politycznego potwierdzenia, że sojusznicy stoją po stronie USA także w sprawach Iranu i szerzej rozumianego układu transatlantyckiego.",
+        "Dla Polski i regionu ważne jest, że rozmowa o lojalności nakłada się na realne zagrożenia na wschodniej flance. Jeśli summit zakończy się tylko deklaracjami, bez jasnych sygnałów wsparcia, napięcie wokół bezpieczeństwa może się utrzymać."
+      ],
+      "contextPoints": [
+        "Co się stało: Rutte jedzie na szczyt z trudnym politycznie mandatem.",
+        "Dlaczego ważne: To test spójności NATO w roku wojny i napięć z USA.",
+        "Na co patrzeć dalej: Czy Trump potwierdzi udział i jaką linię przyjmie Ankara."
+      ],
+      "sources": [
+        {
+          "title": "AP",
           "url": "https://apnews.com/article/f8379b038dfbbf7afde80bb50a0bd96e"
         },
         {
-          "title": "NATO: NATO Summit Defence Industry Forum",
-          "url": "https://www.nato.int/en/news-and-events/events/event-programmes/2026/07/2026-ankara-nsdif"
+          "title": "NATO",
+          "url": "https://www.nato.int/en/news-and-events/events/2026/07/overview---2026-nato-summit-in-ankara-"
         }
       ],
       "priority": "High",
-      "tags": ["Ukraina", "Rosja", "NATO", "bezpieczeństwo", "energia"]
+      "tags": [
+        "NATO",
+        "USA",
+        "Turcja",
+        "Trump",
+        "Rutte"
+      ]
     },
     {
-      "id": "polska-swiat-2026-07-05-5-iran-pogrzeb-khameneia-i-ormuz",
+      "id": "polska-swiat-2026-07-05-6-iran-zegna-khameneiego-a-hormuz-wraca-do-gry-77b0518372",
       "section": "Świat",
-      "title": "Iran: pogrzeb Khameneia i Ormuz",
-      "standfirst": "AP opisuje wielodniowy pogrzeb Alego Chameneiego i presję Iranu na szlaki w Ormuz. To łączy żałobę, politykę i ryzyko dla globalnego rynku energii.",
-      "whatHappened": "Iran nadaje pogrzebowi wymiar polityczny i używa Cieśniny Ormuz jako dźwigni w rozmowach z USA.",
-      "whyItMatters": "Każde napięcie wokół Ormuz wraca do Europy przez ceny ropy, ubezpieczenia i transport morski.",
+      "title": "Iran żegna Khameneiego, a Hormuz wraca do gry",
+      "standfirst": "AP podała, że w Teheranie ruszył wielodniowy pogrzeb Alego Chameneiego, a rozmowy USA-Iran są wstrzymane na czas żałoby. Równolegle wraca temat Cieśniny Ormuz jako strategicznego punktu nacisku.",
+      "whatHappened": "Iran wykorzystuje żałobę do demonstracji siły i twardego tonu wobec USA i Izraela.",
+      "whyItMatters": "To zwiększa niepewność wokół rozmów, bezpieczeństwa morskiego i globalnych przepływów ropy.",
       "deeperAnalysis": [
-        "W tym przypadku rytuał państwowy jest jednocześnie narzędziem politycznej demonstracji i sygnałem wobec Waszyngtonu.",
-        "To ważny blok końcowy podcastu, bo łączy Bliski Wschód z europejskimi kosztami energii i ryzykiem transportowym."
+        "W samym rytuale pogrzebowym chodzi nie tylko o pamięć, ale też o pokazanie mobilizacji państwa po wojnie i o utrzymanie kontroli nad przekazem wewnętrznym. AP i inne źródła opisują to jako test zdolności reżimu do masowego pokazania poparcia.",
+        "Hormuz pozostaje kluczowy, bo każda zmiana w zasadach przepływu przez cieśninę może szybko przełożyć się na rynek energii i na zachowanie amerykańskiej floty w regionie. To temat do śledzenia osobno, bez łączenia go z polską polityką wewnętrzną."
       ],
       "contextPoints": [
-        "Co się stało: Iran rozpoczął pogrzeb Chameneia i utrzymuje presję na Ormuz.",
-        "Na co patrzeć dalej: kolejne komunikaty o negocjacjach USA-Iran i ewentualne nowe incydenty morskie."
+        "Co się stało: Rozpoczął się pogrzeb i przerwa w rozmowach z USA.",
+        "Dlaczego ważne: To wpływa na bezpieczeństwo energetyczne i ryzyko regionalne.",
+        "Na co patrzeć dalej: Czy po żałobie wrócą rozmowy i jakie warunki postawi Iran."
       ],
       "sources": [
         {
-          "title": "AP: Iran begins dayslong funeral for Supreme Leader Ayatollah Ali Khamenei",
-          "url": "https://apnews.com/article/f7168b934d457bdb8b8a2da855d1d03a"
+          "title": "AP",
+          "url": "https://apnews.com/article/khamenei-funeral-supreme-leader-iran-us-war-july-4-2026-f7168b934d457bdb8b8a2da855d1d03a"
+        },
+        {
+          "title": "AP - przygotowania",
+          "url": "https://apnews.com/article/ali-khamenei-funeral-supreme-leader-iran-us-war-july-3-2026-554d4f05f43ebbb86f81821eb18c0927"
+        },
+        {
+          "title": "Guardian",
+          "url": "https://www.theguardian.com/world/2026/jul/05/iran-control-strait-of-hormuz-ali-khamenei-funeral"
         }
       ],
       "priority": "Medium",
-      "tags": ["Iran", "Ormuz", "energia", "dyplomacja", "bezpieczeństwo"]
+      "tags": [
+        "Iran",
+        "Hormuz",
+        "USA",
+        "Izrael",
+        "energia"
+      ]
     }
   ],
-  "podcastTopics": [],
-  "checkedSources": [
+  "podcastTopics": [
     {
-      "title": "PAP: Premier oczekuje od Ukrainy pierwszego kroku",
-      "url": "https://www.pap.pl/aktualnosci/premier-oczekujemy-od-ukrainy-pierwszego-kroku-po-nieszczesnej-decyzji-prezydenta"
+      "priority": "High",
+      "title": "Tusk stawia Ukrainie warunek",
+      "rationale": "Najmocniejszy krajowy sygnał dyplomatyczny dnia; może zmienić ton relacji z Kijowem",
+      "sourcesLabel": "TVN24, Reuters"
     },
     {
-      "title": "TVN24: Donald Tusk oczekujemy od Ukrainy pierwszego kroku",
+      "priority": "High",
+      "title": "Kleczew otwiera offshore i atom",
+      "rationale": "Konkretne terminy i lokalizacje energetyczne zamiast ogólnych deklaracji",
+      "sourcesLabel": "TVN24 Biznes, Polskie Radio"
+    },
+    {
+      "priority": "High",
+      "title": "Szpital Południowy pod kontrolą",
+      "rationale": "Sprawa uderza w zaufanie do ochrony zdrowia i standardów IVF",
+      "sourcesLabel": "TVN24, Rzeczpospolita"
+    },
+    {
+      "priority": "Medium",
+      "title": "Nowe obowiązki kryzysowe",
+      "rationale": "Wejście w życie zmian wymaga wdrożeń po stronie administracji i operatorów",
+      "sourcesLabel": "gov.pl/RCB"
+    },
+    {
+      "priority": "High",
+      "title": "Ukraina uderza w Petersburg",
+      "rationale": "Deep strike na rosyjską infrastrukturę energii i logistyki",
+      "sourcesLabel": "AP, Guardian"
+    },
+    {
+      "priority": "High",
+      "title": "NATO i test lojalności Trumpa",
+      "rationale": "Może wyznaczyć ton całego szczytu w Ankarze i polityki wobec Ukrainy",
+      "sourcesLabel": "AP, NATO"
+    },
+    {
+      "priority": "Medium",
+      "title": "Iran, żałoba i Hormuz",
+      "rationale": "Rozmowy USA-Iran i bezpieczeństwo morskie są znów wrażliwe",
+      "sourcesLabel": "AP, Guardian"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24",
       "url": "https://tvn24.pl/polska/napiete-relacje-polski-i-ukrainy-premier-donald-tusk-oczekujemy-pierwszego-kroku-st9127782"
     },
     {
-      "title": "Onet: Poważna pomyłka w Szpitalu Południowym",
-      "url": "https://wiadomosci.onet.pl/kraj/kolejna-afera-w-szpitalu-poludniowym-pomylka-podczas-procedury-in-vitro/qcyhs3z"
-    },
-    {
-      "title": "Gov.pl / KPRM: Dostęp do publicznej ochrony zdrowia musi być równy dla wszystkich",
-      "url": "https://www.gov.pl/web/premier/dostep-do-publicznej-ochrony-zdrowia-musi-byc-rowny-dla-wszystkich---bez-wyjatkow"
-    },
-    {
-      "title": "Gov.pl / RCB: Jutro wchodzą w życie zmiany w ustawie o zarządzaniu kryzysowym",
-      "url": "https://www.gov.pl/web/rcb/jutro-wchodza-w-zycie-zmiany-w-ustawie-o-zarzadzaniu-kryzysowym-sprawdz-jak-sie-przygotowac"
-    },
-    {
-      "title": "TVN24 Biznes: Pierwszy prąd z morskich farm wiatrowych",
+      "title": "TVN24 Biznes",
       "url": "https://tvn24.pl/biznes/z-kraju/druga-elektrownia-jadrowa-w-polsce-premier-donald-tusk-wskazal-dwie-mozliwe-lokalizacje-st9127822"
     },
     {
-      "title": "AP: Ukrainian drones hit St Petersburg oil terminal",
-      "url": "https://apnews.com/article/c95b97c0ab5ca8d06050f09e54ea69a9"
+      "title": "Polskie Radio",
+      "url": "https://www.polskieradio.pl/395/7786/Artykul/3705082,pm-tusk-visits-polands-biggest-solar-farm-hails-renewables"
     },
     {
-      "title": "AP: NATO chief faces challenge at summit as Trump demands loyalty and not just burden-sharing",
+      "title": "gov.pl/RCB",
+      "url": "https://www.gov.pl/web/rcb/jutro-wchodza-w-zycie-zmiany-w-ustawie-o-zarzadzaniu-kryzysowym-sprawdz-jak-sie-przygotowac"
+    },
+    {
+      "title": "TVN24",
+      "url": "https://tvn24.pl/polska/ministerstwo-zdrowia-rozpoczelo-kontrole-w-szpitalu-poludniowym-mialo-tam-dojsc-do-pomylki-przy-in-vitro-st9127413"
+    },
+    {
+      "title": "Rzeczpospolita",
+      "url": "https://www.rp.pl/zdrowie/art44769271-kolejna-afera-w-szpitalu-poludniowym-pacjentce-podano-zarodek-innej-pary"
+    },
+    {
+      "title": "AP",
+      "url": "https://apnews.com/article/russia-ukraine-war-oil-st-petersburg-c95b97c0ab5ca8d06050f09e54ea69a9"
+    },
+    {
+      "title": "Guardian",
+      "url": "https://www.theguardian.com/world/2026/jul/04/ukrainian-drones-hit-st-petersburg-oil-terminal-and-nearby-port"
+    },
+    {
+      "title": "AP",
       "url": "https://apnews.com/article/f8379b038dfbbf7afde80bb50a0bd96e"
     },
     {
-      "title": "NATO: NATO Summit Defence Industry Forum",
-      "url": "https://www.nato.int/en/news-and-events/events/event-programmes/2026/07/2026-ankara-nsdif"
+      "title": "NATO",
+      "url": "https://www.nato.int/en/news-and-events/events/2026/07/overview---2026-nato-summit-in-ankara-"
     },
     {
-      "title": "AP: Iran begins dayslong funeral for Supreme Leader Ayatollah Ali Khamenei",
-      "url": "https://apnews.com/article/f7168b934d457bdb8b8a2da855d1d03a"
+      "title": "AP",
+      "url": "https://apnews.com/article/khamenei-funeral-supreme-leader-iran-us-war-july-4-2026-f7168b934d457bdb8b8a2da855d1d03a"
+    },
+    {
+      "title": "Guardian",
+      "url": "https://www.theguardian.com/world/2026/jul/05/iran-control-strait-of-hormuz-ali-khamenei-funeral"
+    },
+    {
+      "title": "Reuters przez Internazionale",
+      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/07/03/poland-s-tusk-says-ukraine-wants-to-lower-tension-warsaw-poland-neighbour-east-should-confront-history"
+    },
+    {
+      "title": "RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "AP - przygotowania",
+      "url": "https://apnews.com/article/ali-khamenei-funeral-supreme-leader-iran-us-war-july-3-2026-554d4f05f43ebbb86f81821eb18c0927"
     }
   ]
 }
