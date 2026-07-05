@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-05T07:36:06.472506+00:00",
+  "generatedAt": "2026-07-05T07:45:57.547036+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -351,6 +351,66 @@
       "date": "2026-07-05",
       "time": "06:02",
       "itemCount": 12
+    },
+    {
+      "id": "research/polska-swiat/runs/2026-07-05.md",
+      "type": "run",
+      "topic": "polska-swiat",
+      "title": "Run 2026-07-05",
+      "path": "research/polska-swiat/runs/2026-07-05.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-07-05.md",
+      "sizeBytes": 1472,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/polska-swiat/data/2026-07-05-research.json",
+      "type": "researchData",
+      "topic": "polska-swiat",
+      "title": "Research data",
+      "path": "research/polska-swiat/data/2026-07-05-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-07-05-research.json",
+      "sizeBytes": 13547,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-05/script.md",
+      "type": "podcastScript",
+      "topic": "polska-swiat",
+      "title": "script.md",
+      "path": "research/polska-swiat/podcasts/2026-07-05/script.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-05/script.md",
+      "sizeBytes": 7722,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-05/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "polska-swiat",
+      "title": "Podcast brief PDF",
+      "path": "research/polska-swiat/podcasts/2026-07-05/brief.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-05/brief.pdf",
+      "sizeBytes": 50667,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-05/podcast.mp3",
+      "type": "podcastAudio",
+      "topic": "polska-swiat",
+      "title": "Podcast audio",
+      "path": "research/polska-swiat/podcasts/2026-07-05/podcast.mp3",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-05/podcast.mp3",
+      "sizeBytes": 3622531,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/polska-swiat/pdfs/2026-07-05-polska-swiat.pdf",
+      "type": "pdf",
+      "topic": "polska-swiat",
+      "title": "2026-07-05-polska-swiat.pdf",
+      "path": "research/polska-swiat/pdfs/2026-07-05-polska-swiat.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-07-05-polska-swiat.pdf",
+      "sizeBytes": 31093,
+      "date": "2026-07-05"
     },
     {
       "id": "research/tech-news/runs/2026-07-04.md",
@@ -714,6 +774,28 @@
       "date": "2026-07-04",
       "time": "05:25",
       "itemCount": 12
+    },
+    {
+      "id": "research/polska-swiat/runs/2026-07-04-1935.md",
+      "type": "run",
+      "topic": "polska-swiat",
+      "title": "Daily Research Report: polska-swiat",
+      "path": "research/polska-swiat/runs/2026-07-04-1935.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-07-04-1935.md",
+      "sizeBytes": 7989,
+      "date": "2026-07-04",
+      "time": "19:35"
+    },
+    {
+      "id": "research/polska-swiat/data/2026-07-04-1935-research.json",
+      "type": "researchData",
+      "topic": "polska-swiat",
+      "title": "Research data",
+      "path": "research/polska-swiat/data/2026-07-04-1935-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-07-04-1935-research.json",
+      "sizeBytes": 15995,
+      "date": "2026-07-04",
+      "time": "19:35"
     },
     {
       "id": "research/polska-swiat/podcasts/2026-07-04/script.md",
