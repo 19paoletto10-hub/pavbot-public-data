@@ -22,6 +22,7 @@ final class ManifestStore {
     var lastNewArtifacts: [PavbotArtifact] = []
     var lastNewAutomations: [PavbotAutomation] = []
     var state: LoadState = .idle
+    var cloudKitNotice: String?
     var manifestURLString: String {
         didSet {
             PavbotConnectionDefaults.enforceLegacyUserDefaults()
@@ -38,6 +39,7 @@ final class ManifestStore {
     private let client: any ManifestFetching
     private let cache: ManifestCache
     private let notifier: any ArtifactNotifying
+    private let briefingProvider: (any BriefingMetadataFetching)?
     private let liveNotificationsEnabled: () -> Bool
     @ObservationIgnored private var autoRefreshTask: Task<Void, Never>?
     @ObservationIgnored private let reloadGate = ReloadGate()
@@ -47,12 +49,14 @@ final class ManifestStore {
         cache: ManifestCache = ManifestCache(),
         notifier: (any ArtifactNotifying)? = nil,
         manifestURLString: String? = nil,
+        briefingProvider: (any BriefingMetadataFetching)? = nil,
         liveNotificationsEnabled: @escaping () -> Bool = { LiveNotificationSettings.isEnabled() }
     ) {
         PavbotConnectionDefaults.enforceLegacyUserDefaults()
         self.client = client
         self.cache = cache
         self.notifier = notifier ?? ArtifactNotificationService()
+        self.briefingProvider = briefingProvider
         self.liveNotificationsEnabled = liveNotificationsEnabled
         self.manifestURLString = manifestURLString ?? Self.defaultManifestURL
         self.manifest = cache.load()
@@ -64,6 +68,8 @@ final class ManifestStore {
     func load(minimumInterval: TimeInterval = 0) async {
         guard reloadGate.begin(key: "manifest", minimumInterval: minimumInterval) else { return }
         defer { reloadGate.finish(key: "manifest") }
+
+        await refreshManifestURLFromCloudKit()
 
         if isUsingPlaceholderManifestURL {
             state = manifest == nil
@@ -132,6 +138,20 @@ final class ManifestStore {
 
     func reload(minimumInterval: TimeInterval = 0) async {
         await load(minimumInterval: minimumInterval)
+    }
+
+    private func refreshManifestURLFromCloudKit() async {
+        guard let briefingProvider else { return }
+        do {
+            guard let latest = try await briefingProvider.fetchLatestBriefings(limit: 1).first else {
+                cloudKitNotice = "CloudKit nie ma jeszcze gotowych briefingów. Używam domyślnego manifestu."
+                return
+            }
+            manifestURLString = latest.manifestUrl
+            cloudKitNotice = nil
+        } catch {
+            cloudKitNotice = "Nie udało się pobrać briefingów z CloudKit. Używam ostatniego manifestu."
+        }
     }
 
     func startAutoRefreshLoop(intervalSeconds: UInt64 = 300) {

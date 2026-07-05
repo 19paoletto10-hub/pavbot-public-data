@@ -34,8 +34,8 @@ Date: 2026-06-27
   sections of `Polska i Świat`.
 - `Dzisiaj`, `Jobs`, `Research`, and `Ustawienia` remain separate top-level
   areas.
-- Live notifications still require the MacBook/Docker/Cloudflare/APNs notifier
-  path to be online.
+- Live notifications require CloudKit Subscriptions, APNs, and the Production
+  CloudKit container to be configured.
 
 ## Pre-Archive Checklist
 

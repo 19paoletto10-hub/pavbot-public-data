@@ -23,7 +23,7 @@ Date: 2026-06-26
 
 - Keep technical terms only where they are actual product concepts: APNs, GitHub raw URL, Manifest URL, TestFlight.
 - Show cached data explicitly with a Polish banner when remote refresh fails.
-- Use one shared user-facing error model for manifest, network, notifier, audio and preview errors.
+- Use one shared user-facing error model for manifest, CloudKit, network, audio and preview errors.
 - Use `PavbotLoadState` for screen/store load states where possible, so errors carry title, message, CTA, icon and tint instead of raw strings.
 - Use `ReloadGate` for request deduplication and light throttling on manifest, weather and humor refresh paths.
 - Keep Research leads complete in the premium hero. The UI should structure long text with spacing and signals, not cut the source insight.

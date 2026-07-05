@@ -406,7 +406,7 @@ def test_main_publishes_audit_artifacts_after_collecting_safari_digest(monkeypat
                 "sourceName": "r/ProgrammerHumor",
                 "score": 1200,
                 "comments": 42,
-                "redditCreatedAt": "2026-07-01T00:00:00+00:00",
+                "redditCreatedAt": "2026-07-05T00:00:00+00:00",
                 "commentSnippets": [{"body": "A teraz czekamy na alarm.", "score": 55}],
             }
         ],
@@ -647,12 +647,7 @@ def test_post_file_posts_reviewed_computer_use_analysis(monkeypatch, tmp_path, c
         }
     )
     final_path, final_digest = write_post_file_pair(tmp_path, collector, final_item=final_item, raw_item=raw_item)
-    calls = []
     publish_calls = []
-
-    def fake_post_digest(digest, *, notifier_url, token):
-        calls.append({"digest": digest, "notifier_url": notifier_url, "token": token})
-        return {"status": "stored"}
 
     monkeypatch.setattr(
         collector,
@@ -662,7 +657,6 @@ def test_post_file_posts_reviewed_computer_use_analysis(monkeypatch, tmp_path, c
         ),
         raising=False,
     )
-    monkeypatch.setattr(collector, "post_digest", fake_post_digest)
     monkeypatch.setattr(
         collector.sys,
         "argv",
@@ -670,11 +664,9 @@ def test_post_file_posts_reviewed_computer_use_analysis(monkeypatch, tmp_path, c
             "collect_safari_reddit_humor.py",
             "--post-file",
             str(final_path),
-            "--notifier-url",
-            "https://notify.example.com",
+            "--post",
         ],
     )
-    monkeypatch.setenv("PAVBOT_HUMOR_INGEST_TOKEN", "file-token")
 
     assert collector.main() == 0
 
@@ -685,11 +677,12 @@ def test_post_file_posts_reviewed_computer_use_analysis(monkeypatch, tmp_path, c
         "2026-06-27-0806-reddit-radar-raw.json",
         "2026-06-27-0806-reddit-radar.md",
     }
-    assert calls == [{"digest": final_digest, "notifier_url": "https://notify.example.com", "token": "file-token"}]
-    assert "postResult" in capsys.readouterr().out
+    output = collector.json.loads(capsys.readouterr().out)
+    assert output["publishResult"] == "cloudkit-gate"
+    assert output["digest"] == final_digest
 
 
-def test_post_file_posts_no_safe_comments_with_diagnostic_note(monkeypatch, tmp_path):
+def test_post_file_posts_no_safe_comments_with_diagnostic_note(monkeypatch, tmp_path, capsys):
     collector = load_collector()
     final_item = reviewed_reddit_radar_item()
     final_item["commentHighlights"] = []
@@ -703,7 +696,6 @@ def test_post_file_posts_no_safe_comments_with_diagnostic_note(monkeypatch, tmp_
         }
     )
     final_path, final_digest = write_post_file_pair(tmp_path, collector, final_item=final_item, raw_item=raw_item)
-    calls = []
     publish_calls = []
 
     monkeypatch.setattr(
@@ -714,21 +706,15 @@ def test_post_file_posts_no_safe_comments_with_diagnostic_note(monkeypatch, tmp_
         ),
         raising=False,
     )
-    monkeypatch.setattr(
-        collector,
-        "post_digest",
-        lambda digest, *, notifier_url, token: calls.append(digest) or {"status": "stored"},
-    )
-    monkeypatch.setattr(collector.sys, "argv", ["collect_safari_reddit_humor.py", "--post-file", str(final_path)])
-    monkeypatch.setenv("PAVBOT_HUMOR_INGEST_TOKEN", "file-token")
+    monkeypatch.setattr(collector.sys, "argv", ["collect_safari_reddit_humor.py", "--post-file", str(final_path), "--post"])
 
     assert collector.main() == 0
 
     assert len(publish_calls) == 1
-    assert calls == [final_digest]
+    assert collector.json.loads(capsys.readouterr().out)["publishResult"] == "cloudkit-gate"
 
 
-def test_main_posts_existing_digest_file(monkeypatch, tmp_path, capsys):
+def test_main_post_file_without_standard_artifact_path_does_not_call_notifier(monkeypatch, tmp_path, capsys):
     collector = load_collector()
     digest_path = tmp_path / "reddit-radar.json"
     digest_path.write_text(
@@ -747,13 +733,6 @@ def test_main_posts_existing_digest_file(monkeypatch, tmp_path, capsys):
         ),
         encoding="utf-8",
     )
-    calls = []
-
-    def fake_post_digest(digest, *, notifier_url, token):
-        calls.append({"digest": digest, "notifier_url": notifier_url, "token": token})
-        return {"status": "stored"}
-
-    monkeypatch.setattr(collector, "post_digest", fake_post_digest)
     monkeypatch.setattr(
         collector.sys,
         "argv",
@@ -761,36 +740,29 @@ def test_main_posts_existing_digest_file(monkeypatch, tmp_path, capsys):
             "collect_safari_reddit_humor.py",
             "--post-file",
             str(digest_path),
-            "--notifier-url",
-            "https://notify.example.com",
+            "--post",
         ],
     )
-    monkeypatch.setenv("PAVBOT_HUMOR_INGEST_TOKEN", "file-token")
 
     assert collector.main() == 0
 
-    assert calls == [
-        {
-            "digest": collector.json.loads(digest_path.read_text(encoding="utf-8")),
-            "notifier_url": "https://notify.example.com",
-            "token": "file-token",
-        }
-    ]
-    assert "postResult" in capsys.readouterr().out
+    output = collector.json.loads(capsys.readouterr().out)
+    assert output["publishResult"] == "local-file-only"
+    assert output["digest"] == collector.json.loads(digest_path.read_text(encoding="utf-8"))
 
 
 def test_load_env_file_sets_missing_values_without_overriding(monkeypatch, tmp_path):
     collector = load_collector()
     env_file = tmp_path / ".env"
     env_file.write_text(
-        "PAVBOT_HUMOR_INGEST_TOKEN=file-token\n"
-        "PAVBOT_HUMOR_NOTIFIER_URL=https://notify.example.com\n",
+        "PAVBOT_CLOUDKIT_CONTAINER_ID=iCloud.com.paweltanski.pavbotviewer\n"
+        "PAVBOT_CLOUDKIT_ENVIRONMENT=production\n",
         encoding="utf-8",
     )
-    monkeypatch.setenv("PAVBOT_HUMOR_INGEST_TOKEN", "existing-token")
-    monkeypatch.delenv("PAVBOT_HUMOR_NOTIFIER_URL", raising=False)
+    monkeypatch.setenv("PAVBOT_CLOUDKIT_CONTAINER_ID", "iCloud.custom")
+    monkeypatch.delenv("PAVBOT_CLOUDKIT_ENVIRONMENT", raising=False)
 
     collector.load_env_file(env_file)
 
-    assert collector.os.environ["PAVBOT_HUMOR_INGEST_TOKEN"] == "existing-token"
-    assert collector.os.environ["PAVBOT_HUMOR_NOTIFIER_URL"] == "https://notify.example.com"
+    assert collector.os.environ["PAVBOT_CLOUDKIT_CONTAINER_ID"] == "iCloud.custom"
+    assert collector.os.environ["PAVBOT_CLOUDKIT_ENVIRONMENT"] == "production"

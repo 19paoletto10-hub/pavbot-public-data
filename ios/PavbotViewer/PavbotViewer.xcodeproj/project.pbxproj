@@ -17,6 +17,7 @@
 		141B1A8C8F44D2074C662224 /* AudioPlaybackService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B280FB52CD3B066BCB4E2FB /* AudioPlaybackService.swift */; };
 		15894A5E5C961814A07FDBC7 /* ActivityKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 262BB2F3084CBB7335E021BF /* ActivityKit.framework */; };
 		17031FD9AEB5E34F1A4E15B6 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41EEB32A16C7FA3A3E684630 /* SettingsView.swift */; };
+		17385DBCCFD370828DFF5C63 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2801AD94F9082D9292313A7 /* CloudKit.framework */; };
 		1919E425F63DDE1B5BCA83A8 /* pavbot-manifest.json in Resources */ = {isa = PBXBuildFile; fileRef = 9DFB8BD6470959155AB7F197 /* pavbot-manifest.json */; };
 		19AD95B738D9BE467D39C8AA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D784CC396015929C1EE0334 /* InfoPlist.strings */; };
 		1B58DD28D3DB78F9F69EE613 /* TodayLiveTopicSpeechController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92C841A1F8FBA1CCC606BF7 /* TodayLiveTopicSpeechController.swift */; };
@@ -50,7 +51,6 @@
 		77F0EDA0D65C07C73953FD28 /* AudioPlaybackBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652871B420DA47A50B800AEC /* AudioPlaybackBanner.swift */; };
 		7CE6BFB6DF61AD8DCD4F322D /* PavbotAudioActivityExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 46AC5FA30428A69116483128 /* PavbotAudioActivityExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		85311DD5C29045727EAFF123 /* PavbotAudioActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D61FC4BF12BB3ED862A233 /* PavbotAudioActivityAttributes.swift */; };
-		884B71DBA77F27872D2BCE06 /* AppDefaultsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84A06551D40336B957E563E /* AppDefaultsClient.swift */; };
 		8F7234979E297655E336A50A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7CD203D4E9EA86F2A8DA854 /* AVFoundation.framework */; };
 		9221218CCF8F3F05F59D2F7A /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC8AAA24B29F012891D9FB2 /* MediaPlayer.framework */; };
 		993BB441D8B739BCC05A311D /* AutomationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DC432622FB8C7B2D2F0C4D1 /* AutomationListView.swift */; };
@@ -71,6 +71,7 @@
 		CEB90ECA30442D7C24ECB252 /* ResearchNewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0923DD610163A9CEA7C08CCF /* ResearchNewsService.swift */; };
 		D6B31073AD8C2816A4EB663E /* JobsHistoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16A98EE648E0A4BF4F4598F0 /* JobsHistoryService.swift */; };
 		E3AC56F42A674025D84C634C /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D932715A009BB3305821F0FF /* CoreLocation.framework */; };
+		E603A62806B67FEB958C648D /* CloudKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE89891B7B7FDBB7CFA86789 /* CloudKitService.swift */; };
 		E6A6C7017560EE2FA3BC36C4 /* PulseNewsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B6FBF7E339F300A2C60D782 /* PulseNewsService.swift */; };
 		E7C83628F8826959C0378FB9 /* ResearchIssuePresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A73F520B216EFC770A384B40 /* ResearchIssuePresentation.swift */; };
 		F219793ADCA3160CCB77E6E4 /* TodayHumorDigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE825D44EAB3829608926F0E /* TodayHumorDigest.swift */; };
@@ -170,7 +171,6 @@
 		9D512854AD5B928D5701C914 /* AppAppearancePreference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAppearancePreference.swift; sourceTree = "<group>"; };
 		9DFB8BD6470959155AB7F197 /* pavbot-manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pavbot-manifest.json"; sourceTree = "<group>"; };
 		A73F520B216EFC770A384B40 /* ResearchIssuePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchIssuePresentation.swift; sourceTree = "<group>"; };
-		A84A06551D40336B957E563E /* AppDefaultsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefaultsClient.swift; sourceTree = "<group>"; };
 		A92C841A1F8FBA1CCC606BF7 /* TodayLiveTopicSpeechController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLiveTopicSpeechController.swift; sourceTree = "<group>"; };
 		ADB5F074E7D876C212469E3F /* PulseNewsDigest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseNewsDigest.swift; sourceTree = "<group>"; };
 		B05D0CE7DC57DAC9378884FD /* ResearchNewsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchNewsModels.swift; sourceTree = "<group>"; };
@@ -190,8 +190,10 @@
 		E36E99E399CB1D97AF718704 /* PavbotDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotDesign.swift; sourceTree = "<group>"; };
 		E3EB066F256FE9BE698F99D3 /* JobsDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsDataService.swift; sourceTree = "<group>"; };
 		E84229AB2A6D9AD1434791DB /* PavbotViewerTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PavbotViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE89891B7B7FDBB7CFA86789 /* CloudKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitService.swift; sourceTree = "<group>"; };
 		EED249FEEE03D833589C1529 /* DiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsView.swift; sourceTree = "<group>"; };
 		F139EEFBD6DE7999AD6C89D3 /* JobsBriefPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsBriefPresentation.swift; sourceTree = "<group>"; };
+		F2801AD94F9082D9292313A7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		F397497A364A4766EB8EEA6A /* ArtifactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactDetailView.swift; sourceTree = "<group>"; };
 		F556EA3F0FBD049F0E90692F /* WeatherLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLocationService.swift; sourceTree = "<group>"; };
 		FA490975E9DDDFDE415D90A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -215,6 +217,7 @@
 				8F7234979E297655E336A50A /* AVFoundation.framework in Frameworks */,
 				15894A5E5C961814A07FDBC7 /* ActivityKit.framework in Frameworks */,
 				26B137D17418BA3AD94AC44C /* Charts.framework in Frameworks */,
+				17385DBCCFD370828DFF5C63 /* CloudKit.framework in Frameworks */,
 				E3AC56F42A674025D84C634C /* CoreLocation.framework in Frameworks */,
 				9221218CCF8F3F05F59D2F7A /* MediaPlayer.framework in Frameworks */,
 				4637FC97A6B377972B57C833 /* PDFKit.framework in Frameworks */,
@@ -261,9 +264,9 @@
 		427C2F22CB46807FD7C61950 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				A84A06551D40336B957E563E /* AppDefaultsClient.swift */,
 				3F2AEF493B65E3050003DA5E /* ArtifactNotificationService.swift */,
 				1B280FB52CD3B066BCB4E2FB /* AudioPlaybackService.swift */,
+				EE89891B7B7FDBB7CFA86789 /* CloudKitService.swift */,
 				E3EB066F256FE9BE698F99D3 /* JobsDataService.swift */,
 				16A98EE648E0A4BF4F4598F0 /* JobsHistoryService.swift */,
 				B6489B361457D2D72C30D95D /* JobsMarkdownParser.swift */,
@@ -313,6 +316,7 @@
 				262BB2F3084CBB7335E021BF /* ActivityKit.framework */,
 				B7CD203D4E9EA86F2A8DA854 /* AVFoundation.framework */,
 				5333367ECD190BE7F495C18C /* Charts.framework */,
+				F2801AD94F9082D9292313A7 /* CloudKit.framework */,
 				D932715A009BB3305821F0FF /* CoreLocation.framework */,
 				1CC8AAA24B29F012891D9FB2 /* MediaPlayer.framework */,
 				7B73CD8205618D4A87B1004E /* PDFKit.framework */,
@@ -565,7 +569,6 @@
 			files = (
 				4DCD7042F46AE9A83D5B4A1D /* AccessibilityShowcaseFeature.swift in Sources */,
 				26DC35B41520EC2E20D7D2D8 /* AppAppearancePreference.swift in Sources */,
-				884B71DBA77F27872D2BCE06 /* AppDefaultsClient.swift in Sources */,
 				37B9941F081725AD1B926EEB /* AppRouter.swift in Sources */,
 				66504F7F205137ECCC1AFD58 /* ArtifactDetailView.swift in Sources */,
 				29CB56086EEE782839BE6637 /* ArtifactNotificationService.swift in Sources */,
@@ -574,6 +577,7 @@
 				141B1A8C8F44D2074C662224 /* AudioPlaybackService.swift in Sources */,
 				40B4BF7CBB93B97B5C874B51 /* AudioTimelineControls.swift in Sources */,
 				993BB441D8B739BCC05A311D /* AutomationListView.swift in Sources */,
+				E603A62806B67FEB958C648D /* CloudKitService.swift in Sources */,
 				FC588F3E0BB5115EDDFE0FCF /* ContentView.swift in Sources */,
 				43ED2F7B04F61F69390FB323 /* DailyWeatherReport.swift in Sources */,
 				AE934B26ECA2901711866DD3 /* DailyWisdom.swift in Sources */,

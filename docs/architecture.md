@@ -33,7 +33,7 @@ reviewable proposals.
   manually saved news stay in local storage without that retention limit.
 - The iOS viewer also stores saved Research articles locally for the
   `Polska` and `Świat` sections of `Polska i Świat`; this is an on-device
-  reading list and is not synchronized to GitHub or the notifier.
+  reading list and is not synchronized to GitHub or CloudKit.
 - The iOS weather screen may request approximate current location at refresh
   time. If permission is denied or unavailable, the app falls back to Wrocław.
 - The agent writes dated reports and updates the topic index/backlog.

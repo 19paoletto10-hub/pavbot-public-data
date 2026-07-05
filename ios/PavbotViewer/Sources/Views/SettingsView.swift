@@ -1,4 +1,5 @@
 import AVFoundation
+import CloudKit
 import SwiftUI
 import UIKit
 import UserNotifications
@@ -9,13 +10,13 @@ struct SettingsView: View {
     @Environment(PavbotHaptics.self) private var haptics
     @State private var notificationStatus = "Nie sprawdzono"
     @State private var liveAlertsStatus = "Wyłączone"
-    @State private var notificationServerReachability = "Nie sprawdzono"
+    @State private var cloudKitReachability = "Nie sprawdzono"
     @State private var deviceTokenRegistrationStatus = "Nie zarejestrowano"
     @State private var deviceTokenRegisteredAt = ""
     @State private var remoteDeviceToken = ""
     @State private var remoteRegistrationError = ""
     @State private var dailyWeatherAlertsEnabled = true
-    @State private var notificationServerValidationMessage: String?
+    @State private var cloudKitStatusMessage: String?
     @State private var speechVoicePreference = SpeechVoiceSettings.load()
     @State private var speechVoiceCatalog = SpeechVoiceCatalog.current()
     @State private var speechVoiceStatusMessage: String?
@@ -36,12 +37,12 @@ struct SettingsView: View {
         }
         .navigationTitle("Centrum połączeń")
         .onAppear {
-            notificationServerValidationMessage = NotificationServerSettings.validationMessage(for: NotificationServerSettings.serverURLString, required: true)
+            cloudKitStatusMessage = nil
             dailyWeatherAlertsEnabled = DailyWeatherNotificationSettings.isEnabled()
             refreshSpeechVoiceSettings()
             refreshRemoteNotificationDiagnostics()
             Task { await refreshNotificationStatus() }
-            Task { await refreshNotificationServerReachability() }
+            Task { await refreshCloudKitReachability() }
         }
         .onReceive(NotificationCenter.default.publisher(for: AVSpeechSynthesizer.availableVoicesDidChangeNotification)) { _ in
             refreshSpeechVoiceSettings()
@@ -69,10 +70,10 @@ struct SettingsView: View {
                 insights: [
                     PavbotInsight(title: "Manifest", value: store.manifest == nil ? "Brak" : "OK", systemImage: "doc.badge.gearshape", tint: store.manifest == nil ? .orange : .green),
                     PavbotInsight(title: "Alerty", value: liveAlertsStatus, systemImage: "bell.badge.fill", tint: liveAlertsStatus == "Włączone" ? .green : .orange),
-                    PavbotInsight(title: "Notifier", value: notificationServerReachability, systemImage: "antenna.radiowaves.left.and.right", tint: notificationServerReachability == "Dostępny" ? .green : .blue),
+                    PavbotInsight(title: "CloudKit", value: cloudKitReachability, systemImage: "icloud.fill", tint: cloudKitReachability == "Dostępny" ? .green : .blue),
                     PavbotInsight(title: "APNs", value: deviceTokenRegistrationStatus, systemImage: "iphone.radiowaves.left.and.right", tint: remoteDeviceToken.isEmpty ? .orange : .green)
                 ],
-                footnote: "Adresy produkcyjne są ukryte w UI; aplikacja nadal używa ich w konfiguracji i diagnostyce."
+                footnote: "Publiczne metadane briefingów pochodzą z CloudKit, a pliki z opublikowanego manifestu GitHub."
             )
 
             PavbotReadingCard(title: "Wygląd", subtitle: "Motyw i komfort czytania", systemImage: "paintpalette.fill", tint: .blue) {
@@ -119,9 +120,9 @@ struct SettingsView: View {
             PavbotReadingCard(title: "Połączenia Pavbot", subtitle: "Czytelny status bez surowych adresów URL", systemImage: "network", tint: .purple) {
                 LabeledContent("Połączenia Pavbot", value: "Produkcyjne")
                 LabeledContent("Manifest danych", value: store.manifest == nil ? "Niezaładowany" : "Załadowany")
-                LabeledContent("Serwer powiadomień", value: "Produkcyjny")
+                LabeledContent("CloudKit", value: PavbotConnectionDefaults.cloudKitContainerIdentifier)
 
-                Text("Pavbot używa produkcyjnych adresów połączeń. Pola są tylko do odczytu, żeby aplikacja zawsze pobierała właściwe dane.")
+                Text("Pavbot pobiera metadane briefingów z publicznej bazy CloudKit, a ustawienia użytkownika trzyma w prywatnej bazie iCloud.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
@@ -129,16 +130,16 @@ struct SettingsView: View {
             PavbotReadingCard(title: "Powiadomienia", subtitle: "APNs, alerty live i codzienna pogoda", systemImage: "bell.badge.fill", tint: .orange) {
                 LabeledContent("Status", value: notificationStatus)
                 LabeledContent("Alerty live", value: liveAlertsStatus)
-                LabeledContent("Serwer dostępny", value: notificationServerReachability)
+                LabeledContent("CloudKit", value: cloudKitReachability)
                 LabeledContent("Token urządzenia", value: deviceTokenRegistrationStatus)
                 LabeledContent("Środowisko APNs", value: RemoteNotificationDiagnostics.apnsEnvironmentLabel())
 
-                Text("Powiadomienia live korzystają z produkcyjnego Pavbot Notifier. Alerty wymagają zgody iOS.")
+                Text("Powiadomienia live korzystają z CloudKit Subscriptions oraz APNs. Alerty wymagają zgody iOS.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
 
-                if let notificationServerValidationMessage {
-                    Label(notificationServerValidationMessage, systemImage: "exclamationmark.triangle")
+                if let cloudKitStatusMessage {
+                    Label(cloudKitStatusMessage, systemImage: "exclamationmark.triangle")
                         .font(.caption)
                         .foregroundStyle(.orange)
                 }
@@ -153,7 +154,7 @@ struct SettingsView: View {
                     Label("Codzienna pogoda dla Wrocławia", systemImage: "cloud.sun")
                 }
 
-                Text("Gdy alerty live są włączone, Pavbot Notifier może wysyłać jeden polski briefing pogodowy codziennie o 07:30 Europe/Warsaw.")
+                Text("Gdy alerty live są włączone, CloudKit wysyła ciche powiadomienie po publikacji gotowego briefingu, a aplikacja dociąga aktualne dane.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
 
@@ -242,7 +243,7 @@ struct SettingsView: View {
                     insights: [
                         PavbotInsight(title: "Manifest", value: store.manifest == nil ? "Brak" : "OK", systemImage: "doc.badge.gearshape", tint: store.manifest == nil ? .orange : .green),
                         PavbotInsight(title: "Alerty", value: liveAlertsStatus, systemImage: "bell.badge.fill", tint: liveAlertsStatus == "Włączone" ? .green : .orange),
-                        PavbotInsight(title: "Notifier", value: notificationServerReachability, systemImage: "antenna.radiowaves.left.and.right", tint: notificationServerReachability == "Dostępny" ? .green : .blue),
+                        PavbotInsight(title: "CloudKit", value: cloudKitReachability, systemImage: "icloud.fill", tint: cloudKitReachability == "Dostępny" ? .green : .blue),
                         PavbotInsight(title: "APNs", value: deviceTokenRegistrationStatus, systemImage: "iphone.radiowaves.left.and.right", tint: remoteDeviceToken.isEmpty ? .orange : .green)
                     ]
                 )
@@ -282,8 +283,8 @@ struct SettingsView: View {
                     SettingsDashboardCard(title: "Połączenia", subtitle: "Produkcja i manifest danych", systemImage: "network", tint: .purple) {
                         LabeledContent("Połączenia Pavbot", value: "Produkcyjne")
                         LabeledContent("Manifest danych", value: store.manifest == nil ? "Niezaładowany" : "Załadowany")
-                        LabeledContent("Serwer powiadomień", value: "Produkcyjny")
-                        Text("Adresy są ukryte w UI, ale konfiguracja dalej używa produkcyjnych endpointów aplikacji.")
+                        LabeledContent("CloudKit", value: PavbotConnectionDefaults.cloudKitContainerIdentifier)
+                        Text("CloudKit jest źródłem metadanych i powiadomień, a manifest GitHub pozostaje źródłem opublikowanych plików.")
                             .font(.callout)
                             .foregroundStyle(.secondary)
                     }
@@ -291,12 +292,12 @@ struct SettingsView: View {
                     SettingsDashboardCard(title: "Powiadomienia", subtitle: "APNs i codzienna pogoda", systemImage: "bell.badge.fill", tint: .orange) {
                         LabeledContent("Status", value: notificationStatus)
                         LabeledContent("Alerty live", value: liveAlertsStatus)
-                        LabeledContent("Serwer dostępny", value: notificationServerReachability)
+                        LabeledContent("CloudKit", value: cloudKitReachability)
                         LabeledContent("Token urządzenia", value: deviceTokenRegistrationStatus)
                         LabeledContent("Środowisko APNs", value: RemoteNotificationDiagnostics.apnsEnvironmentLabel())
 
-                        if let notificationServerValidationMessage {
-                            Label(notificationServerValidationMessage, systemImage: "exclamationmark.triangle")
+                        if let cloudKitStatusMessage {
+                            Label(cloudKitStatusMessage, systemImage: "exclamationmark.triangle")
                                 .font(.callout)
                                 .foregroundStyle(.orange)
                         }
@@ -557,18 +558,13 @@ struct SettingsView: View {
     }
 
     private func requestNotifications() async {
-        if let message = NotificationServerSettings.validationMessage(for: NotificationServerSettings.serverURLString, required: true) {
-            notificationServerValidationMessage = message
-            haptics.play(.warning)
-            return
-        }
-
         LiveNotificationOnboarding.markPromptSeen()
         let granted = await RemoteNotificationPermission.requestAndRegister()
+        cloudKitStatusMessage = granted ? nil : RemoteNotificationDiagnostics.registrationError()
         LiveNotificationSettings.setEnabled(granted)
         haptics.play(granted ? .success : .warning)
         await refreshNotificationStatus()
-        await refreshNotificationServerReachability()
+        await refreshCloudKitReachability()
         refreshRemoteNotificationDiagnostics()
     }
 
@@ -580,26 +576,46 @@ struct SettingsView: View {
         deviceTokenRegisteredAt = RemoteNotificationDiagnostics.lastRegisteredAt()
     }
 
-    private func refreshNotificationServerReachability() async {
-        guard notificationServerValidationMessage == nil else {
-            notificationServerReachability = "Niepoprawny URL"
-            return
-        }
-
+    private func refreshCloudKitReachability() async {
         do {
-            var request = URLRequest(url: PavbotConnectionDefaults.statusURL)
-            request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-            request.timeoutInterval = 8
-            let (_, response) = try await URLSession.shared.data(for: request)
-            guard let httpResponse = response as? HTTPURLResponse else {
-                notificationServerReachability = "Niepoprawna odpowiedź"
-                return
-            }
-            notificationServerReachability = (200..<300).contains(httpResponse.statusCode)
-                ? "Dostępny"
-                : "HTTP \(httpResponse.statusCode)"
+            let status = try await cloudKitAccountStatus()
+            cloudKitReachability = status.pavbotLabel
+            cloudKitStatusMessage = status == .available ? nil : "CloudKit nie jest dostępny dla tego konta iCloud: \(status.pavbotLabel)."
         } catch {
-            notificationServerReachability = PavbotUserFacingError.network(error, context: .notifier).message
+            cloudKitReachability = "Błąd"
+            cloudKitStatusMessage = PavbotUserFacingError.network(error, context: .manifest).message
+        }
+    }
+
+    private func cloudKitAccountStatus() async throws -> CKAccountStatus {
+        let container = CKContainer(identifier: PavbotConnectionDefaults.cloudKitContainerIdentifier)
+        return try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<CKAccountStatus, Error>) in
+            container.accountStatus { status, error in
+                if let error {
+                    continuation.resume(throwing: error)
+                } else {
+                    continuation.resume(returning: status)
+                }
+            }
+        }
+    }
+}
+
+private extension CKAccountStatus {
+    var pavbotLabel: String {
+        switch self {
+        case .available:
+            "Dostępny"
+        case .noAccount:
+            "Brak iCloud"
+        case .restricted:
+            "Ograniczony"
+        case .couldNotDetermine:
+            "Nieustalony"
+        case .temporarilyUnavailable:
+            "Chwilowo niedostępny"
+        @unknown default:
+            "Nieznany"
         }
     }
 }

@@ -2,7 +2,6 @@ import Foundation
 import Observation
 
 protocol TodayHumorFetching {
-    func fetchLatestDigest(from serverURL: URL) async throws -> TodayHumorDigest
     func fetchDigest(from artifactURL: URL) async throws -> TodayHumorDigest
 }
 
@@ -18,17 +17,17 @@ final class TodayHumorStore {
 
     private let client: any TodayHumorFetching
     private let cache: TodayHumorCache
-    private let serverURLProvider: () -> URL?
+    private let preferManifestArtifact: Bool
     @ObservationIgnored private let reloadGate = ReloadGate()
 
     init(
         client: any TodayHumorFetching = TodayHumorClient(),
         cache: TodayHumorCache = TodayHumorCache(),
-        serverURLProvider: @escaping () -> URL? = { NotificationServerSettings.serverURL }
+        preferManifestArtifact: Bool = true
     ) {
         self.client = client
         self.cache = cache
-        self.serverURLProvider = serverURLProvider
+        self.preferManifestArtifact = preferManifestArtifact
         self.digest = cache.load()
         if digest != nil {
             state = .loaded
@@ -51,23 +50,16 @@ final class TodayHumorStore {
             in: manifest,
             manifestURLString: manifestURLString
         )
-        var loadedDigests: [TodayHumorDigest] = []
         var lastError: Error?
 
-        if let serverURL = serverURLProvider() {
-            do {
-                loadedDigests.append(try await client.fetchLatestDigest(from: serverURL))
-            } catch {
-                lastError = error
-            }
-        } else if manifestArtifactURL == nil {
-            cacheNotice = nil
+        guard let manifestArtifactURL, preferManifestArtifact else {
+            cacheNotice = digest == nil ? nil : PavbotCacheNoticeCopy.refreshFailed(context: "radar memów")
             state = digest == nil
                 ? .failed(
                     .custom(
-                        title: "Brak adresu notifiera",
-                        message: "Wpisz Notification server URL w ustawieniach, aby pobrać radar memów.",
-                        actionTitle: "Otwórz ustawienia",
+                        title: "Brak radaru memów",
+                        message: "CloudKit wskazuje manifest bez opublikowanego artefaktu Reddit Radar.",
+                        actionTitle: "Odśwież manifest",
                         systemImage: "sparkles.tv.fill",
                         tint: .purple
                     )
@@ -75,21 +67,15 @@ final class TodayHumorStore {
                 : .loaded
             return
         }
-
-        if let manifestArtifactURL {
-            do {
-                loadedDigests.append(try await client.fetchDigest(from: manifestArtifactURL))
-            } catch {
-                lastError = error
-            }
-        }
-
-        if let loadedDigest = Self.freshestDigest(loadedDigests) {
+        do {
+            let loadedDigest = try await client.fetchDigest(from: manifestArtifactURL)
             digest = loadedDigest
             cache.save(loadedDigest)
             cacheNotice = nil
             state = .loaded
             return
+        } catch {
+            lastError = error
         }
 
         if digest != nil {
@@ -97,21 +83,10 @@ final class TodayHumorStore {
             state = .loaded
         } else if let lastError {
             cacheNotice = nil
-            state = .failed(.network(lastError, context: .notifier))
+            state = .failed(.network(lastError, context: .manifest))
         } else {
             cacheNotice = nil
-            state = .failed(.network(TodayHumorClient.ClientError.invalidResponse, context: .notifier))
-        }
-    }
-
-    private static func freshestDigest(_ digests: [TodayHumorDigest]) -> TodayHumorDigest? {
-        digests.max { lhs, rhs in
-            let lhsDate = lhs.generatedAtDate ?? Date.distantPast
-            let rhsDate = rhs.generatedAtDate ?? Date.distantPast
-            if lhsDate != rhsDate {
-                return lhsDate < rhsDate
-            }
-            return lhs.id < rhs.id
+            state = .failed(.network(TodayHumorClient.ClientError.invalidResponse, context: .manifest))
         }
     }
 
@@ -151,19 +126,15 @@ struct TodayHumorClient: TodayHumorFetching {
         var errorDescription: String? {
             switch self {
             case .invalidResponse:
-                "Serwer humoru zwrócił nieprawidłową odpowiedź."
+                "Artefakt Reddit Radar zwrócił nieprawidłową odpowiedź."
             case .httpStatus(let status):
-                "Serwer humoru zwrócił HTTP \(status)."
+                "Artefakt Reddit Radar zwrócił HTTP \(status)."
             }
         }
     }
 
     var session: URLSession = .shared
     var decoder: JSONDecoder = .pavbot
-
-    func fetchLatestDigest(from serverURL: URL) async throws -> TodayHumorDigest {
-        try await send(Self.request(from: serverURL))
-    }
 
     func fetchDigest(from artifactURL: URL) async throws -> TodayHumorDigest {
         try await send(Self.artifactRequest(for: artifactURL))
@@ -178,14 +149,6 @@ struct TodayHumorClient: TodayHumorFetching {
         } catch PavbotHTTPClientError.httpStatus(let status) {
             throw ClientError.httpStatus(status)
         }
-    }
-
-    static func request(from serverURL: URL) throws -> URLRequest {
-        let url = serverURL
-            .appendingPathComponent("v1")
-            .appendingPathComponent("humor")
-            .appendingPathComponent("latest")
-        return PavbotHTTPClient.request(for: url)
     }
 
     static func artifactRequest(for url: URL) -> URLRequest {

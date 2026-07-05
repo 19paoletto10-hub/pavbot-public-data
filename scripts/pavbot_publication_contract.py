@@ -429,12 +429,34 @@ def verify_remote(repo_root: Path, topic_path: str, ref: str) -> PublicationBund
     return bundle
 
 
+def briefing_metadata(repo_root: Path, topic_path: str, manifest_url: str | None = None) -> dict:
+    bundle = bundle_for_topic(repo_root, topic_path)
+    category = topic_path.removeprefix("research/")
+    remote_paths = bundle.relative_remote_paths(repo_root)
+    audio_path = next((path for path in remote_paths if path.endswith(".mp3")), None)
+    payload = {
+        "briefingId": f"{category}:{bundle.stamp}",
+        "category": category,
+        "stamp": bundle.stamp,
+        "topicPath": topic_path,
+        "runPath": str(bundle.run_path.relative_to(repo_root)),
+        "remotePaths": remote_paths,
+        "audioPath": audio_path,
+        "status": "ready",
+        "version": 1,
+    }
+    if manifest_url:
+        payload["manifestUrl"] = manifest_url
+    return payload
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=("prepare", "verify-local", "verify-remote"))
+    parser.add_argument("command", choices=("prepare", "verify-local", "verify-remote", "briefing-metadata"))
     parser.add_argument("topic_path", help="Topic path like research/llm-ai-jobs-wroclaw")
     parser.add_argument("--repo-root", type=Path, default=Path.cwd())
     parser.add_argument("--ref", default="origin/main", help="Git ref for verify-remote")
+    parser.add_argument("--manifest-url", default="", help="Public manifest URL to include in briefing-metadata output")
     return parser.parse_args()
 
 
@@ -446,8 +468,10 @@ def main() -> int:
             prepare_topic(repo_root, args.topic_path)
         elif args.command == "verify-local":
             verify_local(repo_root, args.topic_path)
-        else:
+        elif args.command == "verify-remote":
             verify_remote(repo_root, args.topic_path, args.ref)
+        else:
+            print(json.dumps(briefing_metadata(repo_root, args.topic_path, args.manifest_url), ensure_ascii=False, indent=2))
     except ContractError as exc:
         print(str(exc), file=sys.stderr)
         return 1

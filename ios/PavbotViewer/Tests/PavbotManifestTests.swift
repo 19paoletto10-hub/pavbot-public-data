@@ -4,6 +4,7 @@ import SwiftUI
 import UIKit
 import AVFoundation
 import MediaPlayer
+import CloudKit
 @testable import PavbotViewer
 
 final class PavbotManifestTests: XCTestCase {
@@ -3051,7 +3052,7 @@ final class PavbotManifestTests: XCTestCase {
     func testUserFacingErrorsExposePolishCopyAndActions() {
         let manifestError = PavbotUserFacingError.manifest("Wklej publiczny adres GitHub raw manifestu w ustawieniach.")
         let networkError = PavbotUserFacingError.network(URLError(.notConnectedToInternet), context: .weather)
-        let notifierError = PavbotUserFacingError.network(URLError(.notConnectedToInternet), context: .notifier)
+        let cloudKitError = PavbotUserFacingError.network(URLError(.notConnectedToInternet), context: .cloudKit)
         let audioError = PavbotUserFacingError.audio("The operation could not be completed.")
 
         XCTAssertEqual(manifestError.title, "Manifest wymaga konfiguracji")
@@ -3061,8 +3062,8 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(networkError.title, "Nie udało się pobrać pogody")
         XCTAssertEqual(networkError.actionTitle, "Spróbuj ponownie")
         XCTAssertEqual(networkError.actionSystemImage, "arrow.clockwise")
-        XCTAssertEqual(notifierError.actionTitle, "Sprawdź status")
-        XCTAssertEqual(notifierError.actionSystemImage, "antenna.radiowaves.left.and.right")
+        XCTAssertEqual(cloudKitError.actionTitle, "Sprawdź CloudKit")
+        XCTAssertEqual(cloudKitError.actionSystemImage, "icloud")
         XCTAssertEqual(audioError.title, "Nie udało się odtworzyć audio")
         XCTAssertEqual(audioError.actionTitle, "Otwórz plik źródłowy")
         XCTAssertEqual(audioError.actionSystemImage, "arrow.up.right.square")
@@ -3091,17 +3092,91 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(ReportPackageCopy.refreshReportsAccessibilityLabel, "Odśwież raporty")
     }
 
-    func testNotificationServerURLValidationAllowsEmptyUntilUserEnablesAlerts() {
-        XCTAssertNil(NotificationServerSettings.validationMessage(for: "", required: false))
-        XCTAssertEqual(
-            NotificationServerSettings.validationMessage(for: "", required: true),
-            "Wpisz adres URL serwera powiadomień przed włączeniem alertów live."
+    func testCloudKitMigrationRemovesLegacyNotifierEndpointsFromIOSAppSources() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources")
+        let enumerator = try XCTUnwrap(FileManager.default.enumerator(at: sourcesURL, includingPropertiesForKeys: nil))
+        let forbiddenSnippets = [
+            "notify.paweltanski.com",
+            "/v1/app/defaults",
+            "/v1/devices",
+            "/v1/humor/latest",
+            "/v1/weather/daily"
+        ]
+        var violations: [String] = []
+
+        for case let fileURL as URL in enumerator where fileURL.pathExtension == "swift" {
+            let source = try String(contentsOf: fileURL)
+            for snippet in forbiddenSnippets where source.contains(snippet) {
+                violations.append("\(fileURL.lastPathComponent): \(snippet)")
+            }
+        }
+
+        XCTAssertTrue(violations.isEmpty, "Legacy notifier references must be removed from iOS sources: \(violations)")
+    }
+
+    func testCloudKitServiceDefinesBriefingSubscriptionAndPublicPrivateDatabases() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Services/CloudKitService.swift")
+        let source = try String(contentsOf: sourceURL)
+
+        XCTAssertTrue(source.contains("import CloudKit"))
+        XCTAssertTrue(source.contains("CKContainer"))
+        XCTAssertTrue(source.contains("publicCloudDatabase"))
+        XCTAssertTrue(source.contains("privateCloudDatabase"))
+        XCTAssertTrue(source.contains("fetchLatestBriefings"))
+        XCTAssertTrue(source.contains("fetchBriefing(by"))
+        XCTAssertTrue(source.contains("saveUserNotificationPreferences"))
+        XCTAssertTrue(source.contains("loadUserNotificationPreferences"))
+        XCTAssertTrue(source.contains("createOrUpdateSubscriptions"))
+        XCTAssertTrue(source.contains("briefings-ready-subscription"))
+        XCTAssertTrue(source.contains("status == %@"))
+        XCTAssertTrue(source.contains("briefingId == %@"))
+        XCTAssertFalse(source.contains("publicCloudDatabase.record(for: CKRecord.ID(recordName: briefingId))"))
+        XCTAssertTrue(source.contains("Logger(subsystem: Bundle.main.bundleIdentifier ?? \"PavbotViewer\", category: \"CloudKit\")"))
+        XCTAssertTrue(source.contains("shouldSendContentAvailable = true"))
+    }
+
+    func testUserPreferencesDecodeCloudKitBooleanCompatibility() throws {
+        let record = CKRecord(
+            recordType: UserNotificationPreferences.recordType,
+            recordID: CKRecord.ID(recordName: UserNotificationPreferences.recordName)
         )
-        XCTAssertEqual(
-            NotificationServerSettings.validationMessage(for: "http://notify.example.com", required: true),
-            "Użyj adresu URL serwera powiadomień z HTTPS."
-        )
-        XCTAssertNil(NotificationServerSettings.validationMessage(for: "https://notify.example.com", required: true))
+        record["preferredLocale"] = "pl_PL" as CKRecordValue
+        record["city"] = "Wrocław" as CKRecordValue
+        record["notificationHour"] = Int64(8) as CKRecordValue
+        record["enabledCategories"] = ["tech-news", "polska-swiat"] as NSArray
+        record["notificationsEnabled"] = Int64(1) as CKRecordValue
+
+        let preferences = try UserNotificationPreferences(record: record)
+
+        XCTAssertEqual(preferences.preferredLocale, "pl_PL")
+        XCTAssertEqual(preferences.city, "Wrocław")
+        XCTAssertEqual(preferences.notificationHour, 8)
+        XCTAssertEqual(preferences.enabledCategories, ["tech-news", "polska-swiat"])
+        XCTAssertTrue(preferences.notificationsEnabled)
+    }
+
+    func testCloudKitEntitlementsAndProjectConfigurationAreEnabled() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let projectRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+        let projectYML = try String(contentsOf: projectRoot.appendingPathComponent("project.yml"))
+        let entitlements = try String(contentsOf: projectRoot.appendingPathComponent("Sources/PavbotViewer.entitlements"))
+
+        XCTAssertTrue(projectYML.contains("CloudKit.framework"))
+        XCTAssertTrue(entitlements.contains("com.apple.developer.icloud-container-identifiers"))
+        XCTAssertTrue(entitlements.contains("iCloud.com.paweltanski.pavbotviewer"))
+        XCTAssertTrue(entitlements.contains("com.apple.developer.icloud-services"))
+        XCTAssertTrue(entitlements.contains("CloudKit"))
+        XCTAssertTrue(entitlements.contains("aps-environment"))
     }
 
     @MainActor
@@ -3130,131 +3205,25 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(store.isUsingPlaceholderManifestURL)
     }
 
-    func testNotificationServerSettingsIgnoresLegacySavedServerURL() {
+    func testConnectionDefaultsExposeManifestAndCloudKitContainerWithoutNotifier() {
         let defaults = UserDefaults.standard
-        let previous = defaults.string(forKey: NotificationServerSettings.urlDefaultsKey)
+        let previous = defaults.string(forKey: "pavbot.notificationServerURL")
         defer {
             if let previous {
-                defaults.set(previous, forKey: NotificationServerSettings.urlDefaultsKey)
+                defaults.set(previous, forKey: "pavbot.notificationServerURL")
             } else {
-                defaults.removeObject(forKey: NotificationServerSettings.urlDefaultsKey)
+                defaults.removeObject(forKey: "pavbot.notificationServerURL")
             }
         }
-        defaults.set("https://notify.legacy.example.com", forKey: NotificationServerSettings.urlDefaultsKey)
-
-        XCTAssertEqual(NotificationServerSettings.serverURLString, "https://notify.paweltanski.com")
-        XCTAssertEqual(NotificationServerSettings.serverURL?.absoluteString, "https://notify.paweltanski.com")
-    }
-
-    func testAppDefaultsClientUsesCanonicalBootstrapBeforePreferredNotifierURL() throws {
-        let endpoint = try XCTUnwrap(
-            AppDefaultsClient.defaultsEndpointURL(preferredServerURLString: "https://notify.example.com/")
-        )
-
-        XCTAssertEqual(endpoint.absoluteString, "\(AppDefaultsClient.bootstrapNotifierURLString)/v1/app/defaults")
-        XCTAssertEqual(AppDefaultsClient.bootstrapNotifierURLString, "https://notify.paweltanski.com")
-    }
-
-    func testAppDefaultsClientIncludesPreferredNotifierURLAsFallbackWhenItIsValid() throws {
-        let endpoints = AppDefaultsClient.defaultsEndpointURLs(preferredServerURLString: "https://notify.example.com/")
+        defaults.set("https://notify.legacy.example.com", forKey: "pavbot.notificationServerURL")
+        PavbotConnectionDefaults.enforceLegacyUserDefaults(defaults)
 
         XCTAssertEqual(
-            endpoints.map(\.absoluteString),
-            [
-                "\(AppDefaultsClient.bootstrapNotifierURLString)/v1/app/defaults",
-                "https://notify.example.com/v1/app/defaults"
-            ]
+            PavbotConnectionDefaults.manifestURLString,
+            "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json"
         )
-    }
-
-    func testAppDefaultsClientUsesBootstrapNotifierURLWhenPreferredURLIsInvalid() throws {
-        let endpoint = try XCTUnwrap(
-            AppDefaultsClient.defaultsEndpointURL(preferredServerURLString: "not a url")
-        )
-
-        XCTAssertEqual(
-            endpoint.absoluteString,
-            "\(AppDefaultsClient.bootstrapNotifierURLString)/v1/app/defaults"
-        )
-    }
-
-    func testAppDefaultsClientFetchesAndValidatesConnectionDefaults() async throws {
-        let payload = """
-        {
-          "schemaVersion": 1,
-          "manifestURL": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json",
-          "notificationServerURL": "https://notify.example.com",
-          "statusURL": "https://notify.example.com/status"
-        }
-        """.data(using: .utf8)!
-        let requestedURLs = URLRequestCapture()
-        let client = AppDefaultsClient(fetchData: { url in
-            await requestedURLs.record(url)
-            return payload
-        })
-
-        let defaults = try await client.fetchDefaults(preferredServerURLString: "")
-        let requestedURL = await requestedURLs.first()
-
-        XCTAssertEqual(
-            requestedURL?.absoluteString,
-            "\(AppDefaultsClient.bootstrapNotifierURLString)/v1/app/defaults"
-        )
-        XCTAssertEqual(defaults.schemaVersion, 1)
-        XCTAssertEqual(defaults.notificationServerURL, "https://notify.example.com")
-        XCTAssertNil(defaults.validationError)
-    }
-
-    func testAppDefaultsClientFallsBackToPreferredNotifierWhenCanonicalFails() async throws {
-        let payload = """
-        {
-          "schemaVersion": 1,
-          "manifestURL": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json",
-          "notificationServerURL": "https://notify.backup.example.com",
-          "statusURL": "https://notify.backup.example.com/status"
-        }
-        """.data(using: .utf8)!
-        let requestedURLs = URLRequestCapture()
-        let client = AppDefaultsClient(fetchData: { url in
-            await requestedURLs.record(url)
-            if url.absoluteString == "\(AppDefaultsClient.bootstrapNotifierURLString)/v1/app/defaults" {
-                throw AppDefaultsClientError.httpStatus(503)
-            }
-            return payload
-        })
-
-        let defaults = try await client.fetchDefaults(preferredServerURLString: "https://notify.backup.example.com")
-        let urls = await requestedURLs.all()
-
-        XCTAssertEqual(
-            urls.map(\.absoluteString),
-            [
-                "\(AppDefaultsClient.bootstrapNotifierURLString)/v1/app/defaults",
-                "https://notify.backup.example.com/v1/app/defaults"
-            ]
-        )
-        XCTAssertEqual(defaults.notificationServerURL, "https://notify.backup.example.com")
-    }
-
-    func testAppDefaultsClientRejectsInvalidBackendDefaults() async {
-        let payload = """
-        {
-          "schemaVersion": 1,
-          "manifestURL": "http://example.com/manifest.txt",
-          "notificationServerURL": "http://notify.example.com",
-          "statusURL": "http://notify.example.com/status"
-        }
-        """.data(using: .utf8)!
-        let client = AppDefaultsClient(fetchData: { _ in payload })
-
-        do {
-            _ = try await client.fetchDefaults(preferredServerURLString: "https://notify.example.com")
-            XCTFail("Invalid defaults should throw before Settings overwrites saved URLs.")
-        } catch AppDefaultsClientError.invalidDefaults(let message) {
-            XCTAssertTrue(message.contains("Manifest URL"))
-        } catch {
-            XCTFail("Unexpected error: \(error)")
-        }
+        XCTAssertEqual(PavbotConnectionDefaults.cloudKitContainerIdentifier, "iCloud.com.paweltanski.pavbotviewer")
+        XCTAssertNil(defaults.string(forKey: "pavbot.notificationServerURL"))
     }
 
     func testAppAppearancePreferencePersistsAndMapsColorScheme() throws {
@@ -3345,12 +3314,10 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(RemoteNotificationDiagnostics.registrationError(defaults: defaults), "")
     }
 
-    func testLiveNotificationOnboardingPromptsOnceAndRoutesMissingServerURLToSettings() {
+    func testLiveNotificationOnboardingPromptsOnceWithoutServerConfiguration() {
         let defaults = UserDefaults(suiteName: UUID().uuidString)!
 
         XCTAssertTrue(LiveNotificationOnboarding.shouldPrompt(defaults: defaults))
-        XCTAssertTrue(LiveNotificationOnboarding.needsSettingsBeforeSystemPrompt(serverURLString: ""))
-        XCTAssertFalse(LiveNotificationOnboarding.needsSettingsBeforeSystemPrompt(serverURLString: "https://notify.example.com"))
 
         LiveNotificationOnboarding.markPromptSeen(defaults: defaults)
 
@@ -3371,39 +3338,22 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(LiveNotificationSettings.isEnabled(defaults: defaults))
     }
 
-    func testRemoteNotificationRegistrationPolicyRequiresEnabledLiveAlertsAndValidServer() {
+    func testRemoteNotificationRegistrationPolicyRequiresEnabledLiveAlertsAndAuthorization() {
         XCTAssertTrue(
             RemoteNotificationRegistrationPolicy.shouldRegister(
                 liveNotificationsEnabled: true,
-                serverURLString: "https://notify.example.com",
                 authorizationStatus: .authorized
             )
         )
         XCTAssertFalse(
             RemoteNotificationRegistrationPolicy.shouldRegister(
                 liveNotificationsEnabled: false,
-                serverURLString: "https://notify.example.com",
                 authorizationStatus: .authorized
             )
         )
         XCTAssertFalse(
             RemoteNotificationRegistrationPolicy.shouldRegister(
                 liveNotificationsEnabled: true,
-                serverURLString: "",
-                authorizationStatus: .authorized
-            )
-        )
-        XCTAssertFalse(
-            RemoteNotificationRegistrationPolicy.shouldRegister(
-                liveNotificationsEnabled: true,
-                serverURLString: "http://notify.example.com",
-                authorizationStatus: .authorized
-            )
-        )
-        XCTAssertFalse(
-            RemoteNotificationRegistrationPolicy.shouldRegister(
-                liveNotificationsEnabled: true,
-                serverURLString: "https://notify.example.com",
                 authorizationStatus: .denied
             )
         )
@@ -3419,68 +3369,19 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(DailyWeatherNotificationSettings.isEnabled(defaults: defaults))
     }
 
-    func testRemoteNotificationRegistrationPayloadIncludesDailyWeatherPreference() throws {
-        let payload = RemoteNotificationRegistrar.RegistrationPayload(
-            deviceToken: "token",
-            platform: "ios",
-            bundleId: "com.paweltanski.pavbotviewer",
-            manifestURL: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
-            appVersion: "1.0",
-            buildNumber: "1",
-            dailyWeatherEnabled: true
-        )
+    func testRemoteNotificationAppDelegateUsesCloudKitNotificationRefreshInsteadOfBackendRegistration() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Services/ArtifactNotificationService.swift")
+        let source = try String(contentsOf: sourceURL)
 
-        let data = try JSONEncoder().encode(payload)
-        let json = try XCTUnwrap(JSONSerialization.jsonObject(with: data) as? [String: Any])
-
-        XCTAssertEqual(json["dailyWeatherEnabled"] as? Bool, true)
-    }
-
-    func testRemoteNotificationRegistrarUsesProductionDefaultsWhenLegacyURLsExist() async throws {
-        let defaults = UserDefaults.standard
-        let previousManifestURL = defaults.string(forKey: ManifestDefaults.urlDefaultsKey)
-        let previousNotificationServerURL = defaults.string(forKey: NotificationServerSettings.urlDefaultsKey)
-        defer {
-            if let previousManifestURL {
-                defaults.set(previousManifestURL, forKey: ManifestDefaults.urlDefaultsKey)
-            } else {
-                defaults.removeObject(forKey: ManifestDefaults.urlDefaultsKey)
-            }
-            if let previousNotificationServerURL {
-                defaults.set(previousNotificationServerURL, forKey: NotificationServerSettings.urlDefaultsKey)
-            } else {
-                defaults.removeObject(forKey: NotificationServerSettings.urlDefaultsKey)
-            }
-            CapturingURLProtocol.requestHandler = nil
-        }
-        defaults.set("https://raw.githubusercontent.com/legacy/pavbot/main/public/pavbot-manifest.json", forKey: ManifestDefaults.urlDefaultsKey)
-        defaults.set("https://notify.legacy.example.com", forKey: NotificationServerSettings.urlDefaultsKey)
-
-        let requestStore = CapturedRequestStore()
-        CapturingURLProtocol.requestHandler = { request in
-            requestStore.record(request, body: request.pavbotCapturedBody)
-            let response = HTTPURLResponse(
-                url: try XCTUnwrap(request.url),
-                statusCode: 200,
-                httpVersion: nil,
-                headerFields: nil
-            )!
-            return (response, Data())
-        }
-        let configuration = URLSessionConfiguration.ephemeral
-        configuration.protocolClasses = [CapturingURLProtocol.self]
-        let registrar = RemoteNotificationRegistrar(session: URLSession(configuration: configuration))
-
-        await registrar.register(deviceToken: Data([0xde, 0xad, 0xbe, 0xef]))
-
-        let request = try XCTUnwrap(requestStore.request)
-        XCTAssertEqual(request.url?.absoluteString, "https://notify.paweltanski.com/v1/devices")
-        let body = try XCTUnwrap(requestStore.body)
-        let json = try XCTUnwrap(JSONSerialization.jsonObject(with: body) as? [String: Any])
-        XCTAssertEqual(
-            json["manifestURL"] as? String,
-            "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json"
-        )
+        XCTAssertTrue(source.contains("didReceiveRemoteNotification"))
+        XCTAssertTrue(source.contains("CKNotification(fromRemoteNotificationDictionary:"))
+        XCTAssertTrue(source.contains("CloudKitPushRefreshCenter.shared"))
+        XCTAssertFalse(source.contains("RemoteNotificationRegistrar"))
+        XCTAssertFalse(source.contains("appendingPathComponent(\"v1/devices\")"))
     }
 
     func testSettingsConnectionCopyDoesNotOfferManualURLEditing() throws {
@@ -4049,45 +3950,46 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(source.contains("Text(report.recommendation)"))
     }
 
-    func testWeatherBriefClientBuildsLatestRequestWithLocation() throws {
+    func testWeatherBriefClientBuildsOpenMeteoForecastRequestWithLocation() throws {
         let client = WeatherBriefClient()
-        let serverURL = try XCTUnwrap(URL(string: "https://notify.example.com"))
         let location = WeatherBriefLocation(latitude: 52.2297, longitude: 21.0122, city: "Warszawa")
 
-        let request = try client.latestRequest(from: serverURL, location: location)
+        let request = try client.forecastRequest(for: location, forceRefresh: false)
         let url = try XCTUnwrap(request.url)
         let components = try XCTUnwrap(URLComponents(url: url, resolvingAgainstBaseURL: false))
         let query = Dictionary(uniqueKeysWithValues: (components.queryItems ?? []).map { ($0.name, $0.value ?? "") })
 
         XCTAssertEqual(request.httpMethod, "GET")
-        XCTAssertEqual(components.path, "/v1/weather/daily/latest")
-        XCTAssertEqual(query["lat"], "52.2297")
-        XCTAssertEqual(query["lon"], "21.0122")
-        XCTAssertEqual(query["city"], "Warszawa")
+        XCTAssertEqual(components.scheme, "https")
+        XCTAssertEqual(components.host, "api.open-meteo.com")
+        XCTAssertEqual(components.path, "/v1/forecast")
+        XCTAssertEqual(query["latitude"], "52.2297")
+        XCTAssertEqual(query["longitude"], "21.0122")
+        XCTAssertEqual(query["timezone"], "auto")
+        XCTAssertTrue(query["current"]?.contains("temperature_2m") == true)
+        XCTAssertTrue(query["hourly"]?.contains("precipitation_probability") == true)
+        XCTAssertTrue(query["daily"]?.contains("weather_code") == true)
         XCTAssertEqual(request.value(forHTTPHeaderField: "Cache-Control"), "no-cache")
     }
 
-    func testWeatherBriefClientBuildsRefreshRequestWithLocation() throws {
+    func testWeatherBriefClientUsesFallbackWroclawForDefaultLocation() throws {
         let client = WeatherBriefClient()
-        let serverURL = try XCTUnwrap(URL(string: "https://notify.example.com"))
-        let location = WeatherBriefLocation(latitude: 52.2297, longitude: 21.0122, city: "Warszawa")
 
-        let request = try client.refreshRequest(from: serverURL, location: location)
+        let request = try client.forecastRequest(for: nil, forceRefresh: true)
         let url = try XCTUnwrap(request.url)
         let components = try XCTUnwrap(URLComponents(url: url, resolvingAgainstBaseURL: false))
         let query = Dictionary(uniqueKeysWithValues: (components.queryItems ?? []).map { ($0.name, $0.value ?? "") })
 
-        XCTAssertEqual(request.httpMethod, "POST")
-        XCTAssertEqual(components.path, "/v1/weather/daily/refresh")
-        XCTAssertEqual(query["lat"], "52.2297")
-        XCTAssertEqual(query["lon"], "21.0122")
-        XCTAssertEqual(query["city"], "Warszawa")
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(components.host, "api.open-meteo.com")
+        XCTAssertEqual(query["latitude"], "51.1079")
+        XCTAssertEqual(query["longitude"], "17.0385")
+        XCTAssertEqual(request.cachePolicy, .reloadIgnoringLocalAndRemoteCacheData)
         XCTAssertEqual(request.value(forHTTPHeaderField: "Cache-Control"), "no-cache")
     }
 
-    func testWeatherBriefClientBuildsDistinctRequestsForDifferentIPhoneLocations() throws {
+    func testWeatherBriefClientBuildsDistinctOpenMeteoRequestsForDifferentIPhoneLocations() throws {
         let client = WeatherBriefClient()
-        let serverURL = try XCTUnwrap(URL(string: "https://notify.example.com"))
         let locations = [
             WeatherBriefLocation(latitude: 51.1079, longitude: 17.0385, city: "Wrocław"),
             WeatherBriefLocation(latitude: 35.9375, longitude: 14.3754, city: "Malta"),
@@ -4095,15 +3997,14 @@ final class PavbotManifestTests: XCTestCase {
         ]
 
         let queryItems = try locations.map { location -> [String: String] in
-            let request = try client.latestRequest(from: serverURL, location: location)
+            let request = try client.forecastRequest(for: location, forceRefresh: false)
             let url = try XCTUnwrap(request.url)
             let components = try XCTUnwrap(URLComponents(url: url, resolvingAgainstBaseURL: false))
             return Dictionary(uniqueKeysWithValues: (components.queryItems ?? []).map { ($0.name, $0.value ?? "") })
         }
 
-        XCTAssertEqual(queryItems.map { $0["city"] }, ["Wrocław", "Malta", "Berlin"])
-        XCTAssertEqual(queryItems.map { $0["lat"] }, ["51.1079", "35.9375", "52.52"])
-        XCTAssertEqual(queryItems.map { $0["lon"] }, ["17.0385", "14.3754", "13.405"])
+        XCTAssertEqual(queryItems.map { $0["latitude"] }, ["51.1079", "35.9375", "52.52"])
+        XCTAssertEqual(queryItems.map { $0["longitude"] }, ["17.0385", "14.3754", "13.405"])
     }
 
     func testWeatherLocationDisplayNameUsesReadablePlacemarkName() {
@@ -4188,7 +4089,7 @@ final class PavbotManifestTests: XCTestCase {
         let store = TodayHumorStore(
             client: FailingTodayHumorClient(error: URLError(.notConnectedToInternet)),
             cache: cache,
-            serverURLProvider: { URL(string: "https://notify.example.com") }
+            preferManifestArtifact: true
         )
 
         await store.load()
@@ -4202,12 +4103,7 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     @MainActor
-    func testTodayHumorStorePrefersFreshManifestDigestWhenNotifierIsStale() async throws {
-        let staleDigest = Self.makeTodayHumorDigest(
-            id: "humor-2026-07-04-0008",
-            generatedAt: "2026-07-03T22:08:39Z",
-            displayTime: "00:08"
-        )
+    func testTodayHumorStoreLoadsManifestDigestWithoutNotifier() async throws {
         let freshDigest = Self.makeTodayHumorDigest(
             id: "humor-2026-07-04-0618",
             generatedAt: "2026-07-04T04:18:15Z",
@@ -4235,9 +4131,9 @@ final class PavbotManifestTests: XCTestCase {
             ]
         )
         let store = TodayHumorStore(
-            client: StaticTodayHumorClient(serverDigest: staleDigest, artifactDigest: freshDigest),
+            client: StaticTodayHumorClient(artifactDigest: freshDigest),
             cache: TodayHumorCache(defaults: UserDefaults(suiteName: UUID().uuidString)!),
-            serverURLProvider: { URL(string: "https://notify.example.com") }
+            preferManifestArtifact: true
         )
 
         await store.load(
@@ -4410,7 +4306,7 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(panelSource.contains("TodayHumorDigestDiagnostics(digest: digest)"))
         XCTAssertTrue(panelSource.contains("hasCommentHighlightsWithoutOriginalBodies"))
         XCTAssertTrue(panelSource.contains("Odśwież radar, aby pobrać oryginalne komentarze."))
-        XCTAssertTrue(source.contains("Serwer: \\(serverLabel) · Digest: \\(digest.id) · Komentarze: \\(digest.originalCommentBodyCount)/\\(digest.commentHighlightCount)"))
+        XCTAssertTrue(source.contains("Manifest: \\(manifestHostLabel) · Digest: \\(digest.id) · Komentarze: \\(digest.originalCommentBodyCount)/\\(digest.commentHighlightCount)"))
     }
 
     func testTodayHumorPanelShowsSavedHistoryAndDetailBookmarkAction() throws {
@@ -4448,13 +4344,13 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertNil(digest.items[0].commentHighlights)
     }
 
-    func testTodayHumorClientBuildsLatestRequest() throws {
-        let serverURL = try XCTUnwrap(URL(string: "https://notify.example.com"))
-        let request = try TodayHumorClient.request(from: serverURL)
+    func testTodayHumorClientBuildsArtifactRequestOnly() throws {
+        let artifactURL = try XCTUnwrap(URL(string: "https://raw.githubusercontent.com/example/pavbot/main/research/reddit-radar/data/latest.json"))
+        let request = TodayHumorClient.artifactRequest(for: artifactURL)
         let url = try XCTUnwrap(request.url)
 
         XCTAssertEqual(request.httpMethod, "GET")
-        XCTAssertEqual(url.path, "/v1/humor/latest")
+        XCTAssertEqual(url.path, "/example/pavbot/main/research/reddit-radar/data/latest.json")
         XCTAssertEqual(request.value(forHTTPHeaderField: "Cache-Control"), "no-cache")
         XCTAssertEqual(request.value(forHTTPHeaderField: "Pragma"), "no-cache")
         XCTAssertEqual(request.timeoutInterval, 12)
@@ -8685,22 +8581,13 @@ private struct RefreshLockedWeatherBriefClient: WeatherBriefFetching {
 private struct FailingTodayHumorClient: TodayHumorFetching {
     let error: Error
 
-    func fetchLatestDigest(from serverURL: URL) async throws -> TodayHumorDigest {
-        throw error
-    }
-
     func fetchDigest(from artifactURL: URL) async throws -> TodayHumorDigest {
         throw error
     }
 }
 
 private struct StaticTodayHumorClient: TodayHumorFetching {
-    let serverDigest: TodayHumorDigest
     let artifactDigest: TodayHumorDigest
-
-    func fetchLatestDigest(from serverURL: URL) async throws -> TodayHumorDigest {
-        serverDigest
-    }
 
     func fetchDigest(from artifactURL: URL) async throws -> TodayHumorDigest {
         artifactDigest

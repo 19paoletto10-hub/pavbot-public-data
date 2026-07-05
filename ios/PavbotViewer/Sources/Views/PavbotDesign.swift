@@ -291,7 +291,7 @@ struct PavbotUserFacingError: Equatable {
         case mobileNews
         case weather
         case location
-        case notifier
+        case cloudKit
         case audio
         case speech
         case preview
@@ -347,7 +347,7 @@ struct PavbotUserFacingError: Equatable {
         case .weather:
             return PavbotUserFacingError(
                 title: "Nie udało się pobrać pogody",
-                message: "Sprawdź połączenie z notifierem i spróbuj ponownie. Szczegóły: \(rawMessage)",
+                message: "Sprawdź połączenie z Open-Meteo i spróbuj ponownie. Szczegóły: \(rawMessage)",
                 actionTitle: "Spróbuj ponownie",
                 actionSystemImage: "arrow.clockwise",
                 systemImage: "cloud.sun.fill",
@@ -380,14 +380,14 @@ struct PavbotUserFacingError: Equatable {
                 systemImage: "newspaper.fill",
                 tint: .orange
             )
-        case .notifier:
+        case .cloudKit:
             return PavbotUserFacingError(
-                title: "Notifier jest niedostępny",
-                message: "Sprawdź Docker, Cloudflare Tunnel i adres serwera powiadomień. Szczegóły: \(rawMessage)",
-                actionTitle: "Sprawdź status",
-                actionSystemImage: "antenna.radiowaves.left.and.right",
-                systemImage: "antenna.radiowaves.left.and.right",
-                tint: .orange
+                title: "CloudKit jest niedostępny",
+                message: "Sprawdź konto iCloud, uprawnienia CloudKit i połączenie sieciowe. Szczegóły: \(rawMessage)",
+                actionTitle: "Sprawdź CloudKit",
+                actionSystemImage: "icloud",
+                systemImage: "icloud.fill",
+                tint: .blue
             )
         case .preview:
             return PavbotUserFacingError(

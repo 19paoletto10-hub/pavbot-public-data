@@ -136,8 +136,8 @@ Settings -> Domyślne połączenia
 ```
 
 Confirm that the connection status is production and that the manifest is
-loaded. The raw manifest and notifier URLs remain in configuration and publish
-scripts, not in user-facing text fields.
+loaded. The raw manifest URL and CloudKit container remain in configuration and
+publish scripts, not in user-facing text fields.
 
 After reload:
 

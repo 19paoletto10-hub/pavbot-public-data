@@ -9,7 +9,6 @@ import os
 import re
 import subprocess
 import sys
-import urllib.request
 from copy import deepcopy
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -28,7 +27,6 @@ DEFAULT_SUBREDDITS = (
     "OutOfTheLoop",
     "facepalm",
 )
-DEFAULT_NOTIFIER_URL = "https://notify.paweltanski.com"
 DEFAULT_SOURCE = "Codex Safari Reddit radar"
 DEFAULT_ARTIFACT_ROOT = Path("research/reddit-radar")
 DEFAULT_HISTORY_LOOKBACK_HOURS = 72
@@ -998,22 +996,8 @@ end tell
     return payload if isinstance(payload, dict) else {}
 
 
-def post_digest(digest: dict[str, Any], *, notifier_url: str, token: str) -> dict[str, Any]:
-    if not token.strip():
-        raise RuntimeError("PAVBOT_HUMOR_INGEST_TOKEN is required when --post is used")
-    url = notifier_url.rstrip("/") + "/v1/humor/digest"
-    request = urllib.request.Request(
-        url,
-        data=json.dumps(digest).encode("utf-8"),
-        headers={
-            "Authorization": f"Bearer {token}",
-            "Content-Type": "application/json",
-            "Accept": "application/json",
-        },
-        method="POST",
-    )
-    with urllib.request.urlopen(request, timeout=20) as response:
-        return json.loads(response.read().decode("utf-8"))
+def post_digest(*_args: Any, **_kwargs: Any) -> dict[str, Any]:
+    raise RuntimeError("Legacy HTTP humor publication is disabled; use the manifest + CloudKit gate.")
 
 
 def publish_reddit_radar_artifacts(
@@ -1089,13 +1073,12 @@ def parse_subreddits(value: str) -> list[str]:
 
 
 def main() -> int:
-    load_env_file(Path("backend/pavbot-notifier/.env"))
+    load_env_file(Path(".pavbot/cloudkit.env"))
     parser = argparse.ArgumentParser(description="Collect Reddit humor digest from logged-in Safari.")
     parser.add_argument("--subreddits", default=os.environ.get("PAVBOT_SAFARI_REDDIT_SUBREDDITS", ""))
     parser.add_argument("--max-items", type=int, default=int(os.environ.get("PAVBOT_DAILY_HUMOR_MAX_ITEMS", "12")))
     parser.add_argument("--interval-hours", type=int, default=int(os.environ.get("PAVBOT_DAILY_HUMOR_INTERVAL_HOURS", "2")))
     parser.add_argument("--timezone", default=os.environ.get("PAVBOT_DAILY_HUMOR_TIMEZONE", "Europe/Warsaw"))
-    parser.add_argument("--notifier-url", default=os.environ.get("PAVBOT_HUMOR_NOTIFIER_URL", DEFAULT_NOTIFIER_URL))
     parser.add_argument("--artifact-root", default=os.environ.get("PAVBOT_REDDIT_RADAR_ARTIFACT_ROOT", str(DEFAULT_ARTIFACT_ROOT)))
     parser.add_argument("--replace-count", type=int, default=6)
     parser.add_argument(
@@ -1116,7 +1099,7 @@ def main() -> int:
         type=Path,
         help="Publish an already prepared Reddit Radar digest JSON file after pushing the matching audit artifacts to origin/main.",
     )
-    parser.add_argument("--post", action="store_true", help="Publish digest to notifier /v1/humor/digest.")
+    parser.add_argument("--post", action="store_true", help="Publish digest through the standard manifest + CloudKit gate.")
     args = parser.parse_args()
 
     if args.post_file:
@@ -1128,6 +1111,7 @@ def main() -> int:
             raw_digest=load_matching_reddit_radar_raw_digest(post_file),
             final_path=post_file,
         )
+        publish_result = "local-file-only"
         if post_file.name.endswith("-reddit-radar.json") and post_file.parts[-4:-1] == ("research", "reddit-radar", "data"):
             publish_reddit_radar_artifacts(
                 artifact_root=DEFAULT_ARTIFACT_ROOT,
@@ -1137,12 +1121,8 @@ def main() -> int:
                     "markdown": reddit_radar_markdown_path_for(post_file),
                 },
             )
-        result = post_digest(
-            public_digest,
-            notifier_url=args.notifier_url,
-            token=os.environ.get("PAVBOT_HUMOR_INGEST_TOKEN", ""),
-        )
-        print(json.dumps({"postResult": result, "digest": public_digest}, ensure_ascii=False, indent=2))
+            publish_result = "cloudkit-gate"
+        print(json.dumps({"publishResult": publish_result, "digest": public_digest}, ensure_ascii=False, indent=2))
         return 0
 
     posts = collect_posts_from_safari(parse_subreddits(args.subreddits))
@@ -1209,12 +1189,10 @@ def main() -> int:
             public_digest,
             raw_digest=digest_with_comment_analysis_defaults(digest),
         )
-        result = post_digest(
-            public_digest,
-            notifier_url=args.notifier_url,
-            token=os.environ.get("PAVBOT_HUMOR_INGEST_TOKEN", ""),
-        )
-        payload: dict[str, Any] = {"postResult": result, "digest": public_digest}
+        payload: dict[str, Any] = {
+            "publishResult": "cloudkit-gate" if artifact_paths else "local-file-only",
+            "digest": public_digest,
+        }
         if artifact_paths:
             payload["artifacts"] = {key: str(path) for key, path in artifact_paths.items()}
         print(json.dumps(payload, ensure_ascii=False, indent=2))

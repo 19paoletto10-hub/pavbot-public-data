@@ -56,7 +56,7 @@ struct ContentView: View {
                 LiveNotificationOnboarding.markPromptSeen()
             }
         } message: {
-            Text("Otrzymasz alert na iPhone, gdy GitHub wykryje nowe pliki automatyzacji Pavbot. Możesz zostawić to wyłączone i wrócić do ustawień później.")
+            Text("Otrzymasz alert na iPhone, gdy CloudKit opublikuje nowe briefingi Pavbot. Możesz zostawić to wyłączone i wrócić do ustawień później.")
         }
         .onChange(of: store.manifest) { _, _ in
             router.resolvePendingArtifact(in: store.manifest)
@@ -87,11 +87,6 @@ struct ContentView: View {
 
     private func enableLiveNotificationsFromPrompt() {
         LiveNotificationOnboarding.markPromptSeen()
-        if LiveNotificationOnboarding.needsSettingsBeforeSystemPrompt(serverURLString: NotificationServerSettings.serverURLString) {
-            router.selectedTab = .settings
-            return
-        }
-
         Task {
             _ = await RemoteNotificationPermission.requestAndRegister()
         }

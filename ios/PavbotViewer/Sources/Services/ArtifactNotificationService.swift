@@ -1,4 +1,5 @@
 import Foundation
+import CloudKit
 import UIKit
 import UserNotifications
 
@@ -65,38 +66,6 @@ struct ArtifactNotificationService: ArtifactNotifying {
     }
 }
 
-enum NotificationServerSettings {
-    static let urlDefaultsKey = "pavbot.notificationServerURL"
-
-    static var serverURLString: String {
-        get {
-            PavbotConnectionDefaults.notificationServerURLString
-        }
-        set {
-            PavbotConnectionDefaults.enforceLegacyUserDefaults()
-        }
-    }
-
-    static var serverURL: URL? {
-        PavbotConnectionDefaults.notificationServerURL
-    }
-
-    static func validationMessage(for value: String, required: Bool) -> String? {
-        let trimmed = value.trimmingCharacters(in: .whitespacesAndNewlines)
-        guard !trimmed.isEmpty else {
-            return required ? "Wpisz adres URL serwera powiadomień przed włączeniem alertów live." : nil
-        }
-        guard
-            let url = URL(string: trimmed),
-            url.scheme == "https",
-            url.host?.isEmpty == false
-        else {
-            return "Użyj adresu URL serwera powiadomień z HTTPS."
-        }
-        return nil
-    }
-}
-
 enum LiveNotificationSettings {
     static let enabledDefaultsKey = "pavbot.liveNotificationsEnabled"
 
@@ -120,21 +89,14 @@ enum LiveNotificationOnboarding {
         defaults.set(true, forKey: promptSeenDefaultsKey)
     }
 
-    static func needsSettingsBeforeSystemPrompt(serverURLString: String) -> Bool {
-        NotificationServerSettings.validationMessage(for: serverURLString, required: true) != nil
-    }
 }
 
 enum RemoteNotificationRegistrationPolicy {
     static func shouldRegister(
         liveNotificationsEnabled: Bool,
-        serverURLString: String,
         authorizationStatus: UNAuthorizationStatus
     ) -> Bool {
         guard liveNotificationsEnabled else { return false }
-        guard NotificationServerSettings.validationMessage(for: serverURLString, required: true) == nil else {
-            return false
-        }
         switch authorizationStatus {
         case .authorized, .provisional, .ephemeral:
             return true
@@ -149,17 +111,18 @@ enum RemoteNotificationRegistrationPolicy {
 @MainActor
 enum RemoteNotificationPermission {
     static func requestAndRegister() async -> Bool {
-        guard NotificationServerSettings.validationMessage(for: NotificationServerSettings.serverURLString, required: true) == nil else {
-            LiveNotificationSettings.setEnabled(false)
-            RemoteNotificationDiagnostics.saveRegistrationError("Brakuje adresu URL serwera powiadomień albo jest niepoprawny.")
-            return false
-        }
-
         let granted = (try? await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge])) ?? false
         if granted {
             LiveNotificationSettings.setEnabled(true)
             RemoteNotificationDiagnostics.saveRegistrationAttempt()
-            UIApplication.shared.registerForRemoteNotifications()
+            do {
+                try await CloudKitService.shared.createOrUpdateSubscriptions()
+                RemoteNotificationDiagnostics.saveRegistrationSuccess()
+                UIApplication.shared.registerForRemoteNotifications()
+            } catch {
+                RemoteNotificationDiagnostics.saveRegistrationError("CloudKit subscription failed: \(error.localizedDescription)")
+                return false
+            }
         } else {
             LiveNotificationSettings.setEnabled(false)
             RemoteNotificationDiagnostics.saveRegistrationError("Zgoda na powiadomienia nie została udzielona.")
@@ -171,14 +134,19 @@ enum RemoteNotificationPermission {
         let settings = await UNUserNotificationCenter.current().notificationSettings()
         guard RemoteNotificationRegistrationPolicy.shouldRegister(
             liveNotificationsEnabled: LiveNotificationSettings.isEnabled(),
-            serverURLString: NotificationServerSettings.serverURLString,
             authorizationStatus: settings.authorizationStatus
         ) else {
             return
         }
 
         RemoteNotificationDiagnostics.saveRegistrationAttempt()
-        UIApplication.shared.registerForRemoteNotifications()
+        do {
+            try await CloudKitService.shared.createOrUpdateSubscriptions()
+            RemoteNotificationDiagnostics.saveRegistrationSuccess()
+            UIApplication.shared.registerForRemoteNotifications()
+        } catch {
+            RemoteNotificationDiagnostics.saveRegistrationError("CloudKit subscription failed: \(error.localizedDescription)")
+        }
     }
 }
 
@@ -224,7 +192,7 @@ enum RemoteNotificationDiagnostics {
         defaults.set("Rejestrowanie", forKey: registrationStatusDefaultsKey)
     }
 
-    static func saveBackendRegistrationSuccess(defaults: UserDefaults = .standard) {
+    static func saveRegistrationSuccess(defaults: UserDefaults = .standard) {
         defaults.set("Zarejestrowano", forKey: registrationStatusDefaultsKey)
         defaults.set(ISO8601DateFormatter().string(from: Date()), forKey: lastRegisteredAtDefaultsKey)
         clearRegistrationError(defaults: defaults)
@@ -255,60 +223,6 @@ enum RemoteNotificationDiagnostics {
         #else
         return "Production"
         #endif
-    }
-}
-
-struct RemoteNotificationRegistrar {
-    struct RegistrationPayload: Encodable {
-        let deviceToken: String
-        let platform: String
-        let bundleId: String
-        let manifestURL: String
-        let appVersion: String
-        let buildNumber: String
-        let dailyWeatherEnabled: Bool
-    }
-
-    var session: URLSession = .shared
-
-    func register(deviceToken: Data) async {
-        guard let endpoint = NotificationServerSettings.serverURL?.appendingPathComponent("v1/devices") else {
-            RemoteNotificationDiagnostics.saveRegistrationError("Brakuje adresu URL serwera powiadomień.")
-            return
-        }
-
-        let bundle = Bundle.main
-        let payload = RegistrationPayload(
-            deviceToken: deviceToken.hexString,
-            platform: "ios",
-            bundleId: bundle.bundleIdentifier ?? "com.paweltanski.pavbotviewer",
-            manifestURL: PavbotConnectionDefaults.manifestURLString,
-            appVersion: bundle.infoDictionary?["CFBundleShortVersionString"] as? String ?? "",
-            buildNumber: bundle.infoDictionary?["CFBundleVersion"] as? String ?? "",
-            dailyWeatherEnabled: DailyWeatherNotificationSettings.isEnabled()
-        )
-
-        do {
-            var request = URLRequest(url: endpoint)
-            request.httpMethod = "POST"
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-            request.httpBody = try JSONEncoder().encode(payload)
-            let (data, response) = try await session.data(for: request)
-            guard let httpResponse = response as? HTTPURLResponse else {
-                RemoteNotificationDiagnostics.saveRegistrationError("Serwer powiadomień zwrócił nieprawidłową odpowiedź.")
-                return
-            }
-            guard (200..<300).contains(httpResponse.statusCode) else {
-                let responseBody = String(data: data, encoding: .utf8) ?? ""
-                let suffix = responseBody.isEmpty ? "" : " \(String(responseBody.prefix(240)))"
-                RemoteNotificationDiagnostics.saveRegistrationError("Serwer powiadomień zwrócił HTTP \(httpResponse.statusCode).\(suffix)")
-                return
-            }
-            RemoteNotificationDiagnostics.saveBackendRegistrationSuccess()
-        } catch {
-            RemoteNotificationDiagnostics.saveRegistrationError(PavbotUserFacingError.network(error, context: .notifier).message)
-            return
-        }
     }
 }
 
@@ -392,19 +306,31 @@ final class PavbotRemoteNotificationAppDelegate: NSObject, UIApplicationDelegate
         didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
     ) {
         RemoteNotificationDiagnostics.saveDeviceToken(deviceToken)
-        RemoteNotificationDiagnostics.saveRegistrationAttempt()
-        Task {
-            await RemoteNotificationRegistrar().register(deviceToken: deviceToken)
-        }
+        RemoteNotificationDiagnostics.saveRegistrationSuccess()
     }
 
     func application(
         _ application: UIApplication,
         didFailToRegisterForRemoteNotificationsWithError error: Error
     ) {
-        RemoteNotificationDiagnostics.saveRegistrationError(PavbotUserFacingError.network(error, context: .notifier).message)
+        RemoteNotificationDiagnostics.saveRegistrationError("APNs registration failed: \(error.localizedDescription)")
     }
 
+    func application(
+        _ application: UIApplication,
+        didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+        fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
+    ) {
+        Task { @MainActor in
+            let cloudKitNotification = CKNotification(fromRemoteNotificationDictionary: userInfo)
+            if cloudKitNotification?.subscriptionID == CloudKitService.briefingsReadySubscriptionID {
+                let result = await CloudKitPushRefreshCenter.shared.handleRemoteNotification(userInfo)
+                completionHandler(result)
+            } else {
+                completionHandler(.noData)
+            }
+        }
+    }
 }
 
 private extension String {

@@ -3,7 +3,7 @@ import SwiftUI
 @main
 struct PavbotViewerApp: App {
     @UIApplicationDelegateAdaptor(PavbotRemoteNotificationAppDelegate.self) private var appDelegate
-    @State private var store = ManifestStore()
+    @State private var store: ManifestStore
     @State private var router = AppRouter()
     @State private var audioCoordinator: PavbotAudioSessionCoordinator
     @State private var audioPlayback: AudioPlaybackService
@@ -21,6 +21,8 @@ struct PavbotViewerApp: App {
 
     init() {
         let coordinator = PavbotAudioSessionCoordinator()
+        let cloudKitService = CloudKitService.shared
+        _store = State(initialValue: ManifestStore(briefingProvider: cloudKitService))
         _audioCoordinator = State(initialValue: coordinator)
         _audioPlayback = State(initialValue: AudioPlaybackService(audioCoordinator: coordinator))
         PavbotConnectionDefaults.enforceLegacyUserDefaults()
@@ -41,6 +43,9 @@ struct PavbotViewerApp: App {
                 .preferredColorScheme(appearance.preference.preferredColorScheme)
                 .onAppear {
                     notificationDelegate.install(router: router)
+                    CloudKitPushRefreshCenter.shared.installRefreshHandler {
+                        await store.reload(minimumInterval: 0)
+                    }
                 }
                 .onOpenURL { url in
                     router.handleOpenURL(url)

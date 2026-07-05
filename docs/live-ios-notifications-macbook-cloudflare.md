@@ -1,5 +1,8 @@
 # Live iOS Notifications With MacBook And Cloudflare Tunnel
 
+Legacy reference only. Current iOS notification metadata and push refresh flow
+uses CloudKit Subscriptions + APNs; see `docs/CLOUDKIT_MIGRATION.md`.
+
 Pavbot live iOS notifications are an optional add-on. They stay disabled in
 the iOS app until the user enters a notification server URL and enables alerts.
 

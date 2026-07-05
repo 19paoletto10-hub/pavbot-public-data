@@ -78,8 +78,8 @@ polskich znaków diakrytycznych i zapisz
   Europe/Warsaw.
   It uses the logged-in local Safari session plus read-only Computer Use review
   to first publish the `research/reddit-radar/` audit package to `origin/main`
-  and only then publish `Śmiechowy radar` data to
-  `https://notify.paweltanski.com/v1/humor/digest`. It writes raw comment
+  and then expose `Śmiechowy radar` through the standard CloudKit briefing
+  gate. It writes raw comment
   context, per-item comment analysis status, final digest JSON, and a Polish
   Markdown analysis of the selected comments.
   The radar keeps at most 12 unique posts; each run adds non-duplicate finds,
@@ -103,7 +103,7 @@ of the public GitHub feed and must not be committed.
 The shared publication pipeline is:
 
 ```text
-prepare -> validate -> manifest -> push -> verify-remote
+prepare -> validate -> manifest -> push -> verify-remote -> CloudKit publish -> CloudKit verify
 ```
 
 `scripts/pavbot_commit_and_push_outputs.sh` is the orchestrator. Before
@@ -134,8 +134,8 @@ derives the public manifest URL from `PAVBOT_MANIFEST_URL`,
 `PAVBOT_RAW_BASE_URL`, the existing manifest `rawBaseUrl`, or the GitHub
 `origin` remote. It requires a working `origin` and push credentials for `main`.
 Do not push generated automation files separately from the refreshed manifest.
-The GitHub webhook for live iOS notifications fires only after this push
-succeeds.
+CloudKit publication happens only after this push succeeds and the remote
+manifest has been verified.
 
 Treat `git push` as necessary but not sufficient. After the push run
 `git fetch origin`; the script must then run
@@ -147,10 +147,9 @@ package key is visible on `origin/main` as a complete set of `run`, `jobsData`,
 and `pdf` artifacts, not just as a local commit.
 
 Do not consider an automation finished until the generated files have been
-committed and pushed to `origin/main` with the refreshed manifest. For
-notifier-backed outputs such as Reddit Radar, posting to the notifier without
-first committing and pushing the audit artifacts and manifest is only a
-partial publication.
+committed and pushed to `origin/main` with the refreshed manifest and the
+CloudKit `Briefing` publish/verify gate has passed. If CloudKit publish fails,
+the run is partially published even when GitHub push succeeded.
 
 Public automation output commits may include only app-visible files from
 `runs/`, `data/`, `pdfs/`, public podcast audio/script/brief files, and

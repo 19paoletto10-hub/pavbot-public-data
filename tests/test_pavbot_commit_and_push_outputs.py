@@ -55,6 +55,36 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
             local_head = self.git(repo, "rev-parse", "HEAD", stdout=True).strip()
             remote_head = self.git(repo, "ls-remote", "origin", "refs/heads/main", stdout=True).split()[0]
             self.assertEqual(local_head, remote_head)
+            self.assertIn("cloudkit briefing dry-run verified", result.stdout)
+
+    def test_publish_fails_when_cloudkit_publication_gate_fails(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
+            with tempfile.TemporaryDirectory() as publisher_dir:
+                failing_publisher = Path(publisher_dir) / "failing-cloudkit-publisher.sh"
+                failing_publisher.write_text(
+                    "#!/usr/bin/env bash\n"
+                    "echo 'cloudkit failed intentionally' >&2\n"
+                    "exit 42\n",
+                    encoding="utf-8",
+                )
+                failing_publisher.chmod(0o755)
+
+                result = self.run_publish_script(
+                    repo,
+                    "research/tech-news",
+                    cloudkit_dry_run=False,
+                    cloudkit_publisher=str(failing_publisher),
+                )
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("cloudkit failed intentionally", result.stderr)
+            self.assertIn("CloudKit publication failed", result.stderr)
 
     def test_llm_jobs_publish_includes_valid_data_json_outputs(self) -> None:
         with self.temporary_repo() as repo:
@@ -1651,6 +1681,8 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
         force_manifest: bool = False,
         manifest_url: str | None = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
         publish_branch: str | None = None,
+        cloudkit_dry_run: bool = True,
+        cloudkit_publisher: str | None = None,
     ) -> subprocess.CompletedProcess[str]:
         self.assertTrue(self.script_path.exists(), f"missing script: {self.script_path}")
         env = os.environ.copy()
@@ -1663,6 +1695,12 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             env["PAVBOT_MANIFEST_URL"] = manifest_url
         if publish_branch is not None:
             env["PAVBOT_PUBLISH_BRANCH"] = publish_branch
+        env.setdefault("PAVBOT_CLOUDKIT_CONTAINER_ID", "iCloud.com.paweltanski.pavbotviewer")
+        env.setdefault("PAVBOT_CLOUDKIT_ENVIRONMENT", "production")
+        if cloudkit_dry_run:
+            env["PAVBOT_CLOUDKIT_DRY_RUN"] = "1"
+        if cloudkit_publisher is not None:
+            env["PAVBOT_CLOUDKIT_PUBLISHER"] = cloudkit_publisher
         args = ["bash", str(self.script_path)]
         if isolated:
             args.append("--isolated")

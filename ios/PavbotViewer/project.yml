@@ -83,6 +83,7 @@ targets:
       - sdk: AVFoundation.framework
       - sdk: ActivityKit.framework
       - sdk: Charts.framework
+      - sdk: CloudKit.framework
       - sdk: CoreLocation.framework
       - sdk: MediaPlayer.framework
       - sdk: PDFKit.framework

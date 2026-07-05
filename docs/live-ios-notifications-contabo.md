@@ -1,5 +1,8 @@
 # Live iOS Notifications With Contabo/VPS
 
+Legacy reference only. Current iOS notification metadata and push refresh flow
+uses CloudKit Subscriptions + APNs; see `docs/CLOUDKIT_MIGRATION.md`.
+
 Pavbot live iOS notifications can run on Contabo as the production notifier
 host. This is the preferred setup when notifications should work 24/7 without
 depending on a MacBook, a local Docker daemon, or a temporary Cloudflare Quick

@@ -14,6 +14,7 @@ jobs_data_validator="$script_dir/validate_jobs_data.py"
 research_data_validator="$script_dir/validate_research_data.py"
 mobile_news_data_validator="$script_dir/validate_mobile_news_data.py"
 pulse_news_data_validator="$script_dir/validate_pulse_news_data.py"
+cloudkit_publisher="${PAVBOT_CLOUDKIT_PUBLISHER:-$script_dir/publish_cloudkit_briefings.py}"
 ledger_run_id=""
 ledger_publish_status="not_started"
 ledger_remote_verification_status="not_started"
@@ -47,6 +48,16 @@ Optional environment:
       Overrides automatic manifest URL resolution.
   PAVBOT_RAW_BASE_URL=https://raw.githubusercontent.com/<owner>/<repo>/<branch>/
       Used to derive PAVBOT_MANIFEST_URL when PAVBOT_MANIFEST_URL is unset.
+  PAVBOT_CLOUDKIT_CONTAINER_ID=iCloud.com.paweltanski.pavbotviewer
+      CloudKit container used by scripts/publish_cloudkit_briefings.py.
+  PAVBOT_CLOUDKIT_ENVIRONMENT=production
+      CloudKit environment passed to cktool.
+  PAVBOT_CLOUDKIT_TEAM_ID=SP774TZZU8
+      Apple Developer Program team id passed to cktool.
+  PAVBOT_CLOUDKIT_DRY_RUN=1
+      Verify deterministic Briefing records without calling cktool.
+  PAVBOT_CLOUDKIT_PUBLISHER=/path/to/publisher
+      Override the CloudKit publisher executable for tests.
 EOF
 }
 
@@ -894,6 +905,49 @@ PY
   sync_local_manifest_from_remote
 }
 
+run_cloudkit_publisher() {
+  local mode="$1"
+  shift
+
+  if [[ "$cloudkit_publisher" == *.py ]]; then
+    python3 "$cloudkit_publisher" "$mode" "$@"
+  else
+    "$cloudkit_publisher" "$mode" "$@"
+  fi
+}
+
+publish_cloudkit_briefings_gate() {
+  local mode="publish"
+  local container_id="${PAVBOT_CLOUDKIT_CONTAINER_ID:-iCloud.com.paweltanski.pavbotviewer}"
+  local environment="${PAVBOT_CLOUDKIT_ENVIRONMENT:-production}"
+  local team_id="${PAVBOT_CLOUDKIT_TEAM_ID:-SP774TZZU8}"
+  local -a common_args=(
+    "--manifest" "public/pavbot-manifest.json"
+    "--manifest-url" "$PAVBOT_MANIFEST_URL"
+    "--container-id" "$container_id"
+    "--environment" "$environment"
+    "--team-id" "$team_id"
+  )
+
+  [[ -f "$cloudkit_publisher" ]] || die "missing CloudKit publisher: $cloudkit_publisher"
+
+  if [[ "${PAVBOT_CLOUDKIT_DRY_RUN:-0}" == "1" ]]; then
+    if ! run_cloudkit_publisher "dry-run" "${common_args[@]}"; then
+      die "CloudKit publication failed"
+    fi
+    printf 'cloudkit briefing dry-run verified\n'
+    return 0
+  fi
+
+  if ! run_cloudkit_publisher "$mode" "${common_args[@]}"; then
+    die "CloudKit publication failed"
+  fi
+  if ! run_cloudkit_publisher "verify" "${common_args[@]}"; then
+    die "CloudKit publication failed"
+  fi
+  printf 'cloudkit briefing publication verified\n'
+}
+
 copy_or_remove_publish_path() {
   local rel_path="$1"
   local dest_root="$2"
@@ -971,6 +1025,7 @@ copy_publication_helpers_to_worktree() {
     "validate_mobile_news_data.py"
     "validate_pulse_news_data.py"
     "validate_research_data.py"
+    "publish_cloudkit_briefings.py"
   )
 
   mkdir -p "$dest_root/scripts"
@@ -1241,6 +1296,7 @@ publish_isolated() {
     run_publication_contract verify-remote "$repo_root" --ref "origin/$target_branch"
     ledger_remote_verification_status="ok"
     sync_local_manifest_from_remote
+    publish_cloudkit_briefings_gate
     printf 'pushed pavbot outputs for %s to origin/%s\n' "$topic_path" "$target_branch"
   else
     ledger_publish_status="skipped"
@@ -1362,5 +1418,6 @@ ledger_publish_status="ok"
 run_publication_contract verify-remote "$repo_root" --ref "origin/$target_branch"
 ledger_remote_verification_status="ok"
 sync_local_manifest_from_remote
+publish_cloudkit_briefings_gate
 
 printf 'pushed pavbot outputs for %s to origin/%s\n' "$topic_path" "$target_branch"

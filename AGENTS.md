@@ -39,12 +39,12 @@ This repository is a local-first research automation workspace.
   paths and that those paths exist on `origin/main`.
 - A newer local topic output than the latest remote manifest entry counts as a
   failed or partial publication, not as a successful run.
-- If manifest publication, remote verification, or notifier publication fails,
+- If manifest publication, remote verification, or CloudKit publication fails,
   report the run as failed or partially published. Do not describe it as
   finished successfully.
-- For notifier-backed feeds such as Reddit Radar, commit and push the audit
-  artifacts and refreshed manifest before posting the digest to the notifier;
-  the iOS app and webhook must not depend on unpublished local files.
+- For app-visible feeds such as Reddit Radar, commit and push the audit
+  artifacts and refreshed manifest before CloudKit publication; the iOS app
+  must not depend on unpublished local files.
 
 ## Verification
 

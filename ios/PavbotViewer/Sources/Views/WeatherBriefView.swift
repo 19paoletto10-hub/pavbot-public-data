@@ -2378,15 +2378,15 @@ private struct TodayHumorDigestDiagnostics: View {
     let digest: TodayHumorDigest
 
     var body: some View {
-        Text("Serwer: \(serverLabel) · Digest: \(digest.id) · Komentarze: \(digest.originalCommentBodyCount)/\(digest.commentHighlightCount)")
+        Text("Manifest: \(manifestHostLabel) · Digest: \(digest.id) · Komentarze: \(digest.originalCommentBodyCount)/\(digest.commentHighlightCount)")
             .font(.caption2.weight(.medium))
             .foregroundStyle(.secondary)
             .lineLimit(2)
             .fixedSize(horizontal: false, vertical: true)
     }
 
-    private var serverLabel: String {
-        NotificationServerSettings.serverURL?.host ?? NotificationServerSettings.serverURLString
+    private var manifestHostLabel: String {
+        URL(string: PavbotConnectionDefaults.manifestURLString)?.host ?? "CloudKit"
     }
 }
 

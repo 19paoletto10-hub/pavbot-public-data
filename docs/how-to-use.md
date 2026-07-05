@@ -117,8 +117,8 @@ The current active automations are:
 - Data: `research/reddit-radar/data/YYYY-MM-DD-HHMM-reddit-radar.json`
 - Raw data: `research/reddit-radar/data/YYYY-MM-DD-HHMM-reddit-radar-raw.json`
 - iOS surface: `Dzisiaj` humor panel and artifact timeline
-- Final digest posting happens only after the matching audit package is
-  published to `origin/main` so the manifest and notifier stay in sync.
+- Final digest publication happens through the standard manifest + CloudKit
+  gate after the matching audit package is published to `origin/main`.
 
 ## Manual Run
 
@@ -233,13 +233,10 @@ a local 48-hour history for smooth browsing. A news item saved by the user
 disappears from the active carousel, remains in `Zapisane`, and is not removed
 by the 48-hour cleanup.
 
-In `Ustawienia`, the app shows production connection statuses instead of raw
-Manifest URL or Notification server URL fields. The app still calls the
-notifier endpoint `/v1/app/defaults` internally and uses the configured GitHub
-raw manifest URL plus Cloudflare notifier URL. If a Quick Tunnel URL changes,
-update `PAVBOT_PUBLIC_NOTIFIER_URL`, restart the notifier, and rebuild or
-refresh the configured defaults rather than asking users to paste URLs in the
-app.
+In `Ustawienia`, the app shows production CloudKit/APNs connection statuses
+instead of raw URL fields. The app fetches the latest `Briefing` metadata from
+CloudKit, then loads the GitHub raw manifest URL from `Briefing.manifestUrl`.
+It no longer calls a Pavbot notifier defaults endpoint.
 
 After the run, verify the workspace:
 
@@ -256,6 +253,9 @@ override the default URL bundled or configured for the iOS app:
 ```bash
 # Optional override:
 # export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
+# export PAVBOT_CLOUDKIT_CONTAINER_ID="iCloud.com.paweltanski.pavbotviewer"
+# export PAVBOT_CLOUDKIT_ENVIRONMENT="production"
+# export PAVBOT_CLOUDKIT_TEAM_ID="SP774TZZU8"
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
@@ -264,24 +264,31 @@ The isolated publish script creates a temporary clean worktree from
 `python3 scripts/generate_pavbot_manifest.py`, commits the refreshed manifest
 with the outputs, and pushes directly to `origin/main`. Treat this as the
 required final publish step after each automation run so iOS receives the
-refreshed manifest and the new files in the same commit. Automation output publication is
-always production-bound to `origin/main`; `PAVBOT_PUBLISH_BRANCH` does not
-change the target branch for this script. After the push the script performs
+refreshed manifest and the new files in the same commit. Automation output
+publication is always production-bound to `origin/main`; `PAVBOT_PUBLISH_BRANCH`
+does not change the target branch for this script. After the push the script performs
 remote verification against `origin/main`: it checks the refreshed
 `public/pavbot-manifest.json`, verifies that the expected topic artifacts are
 present in the remote manifest, verifies that the same files exist on
 `origin/main`, and then synchronizes the local `public/pavbot-manifest.json`
-to the published remote state. This requires:
+to the published remote state. It then publishes/verifies CloudKit `Briefing`
+records unless `PAVBOT_CLOUDKIT_DRY_RUN=1` is set for local testing. This
+requires:
 
 - a working `origin` remote;
 - GitHub credentials or a token with permission to push to `main`;
-- either an auto-resolvable GitHub `origin` or an explicit `PAVBOT_MANIFEST_URL`.
+- either an auto-resolvable GitHub `origin` or an explicit `PAVBOT_MANIFEST_URL`;
+- local `cktool` authentication from `xcrun cktool save-token` for Production
+  CloudKit publication.
+
+CloudKit records are matched by the stable `briefingId` field, for example
+`tech-news:2026-07-05-1933`. The Codex publisher does not rely on CloudKit
+record names, because `cktool` creates those names itself.
 
 Do not mark a run successful until the script finishes without remote
-verification errors and the refreshed remote manifest plus current output files
-are visible on `origin/main`. For notifier-backed outputs such as Reddit Radar,
-posting to the notifier without first committing and pushing the audit
-artifacts and manifest is only a partial publication.
+verification errors, the refreshed remote manifest plus current output files
+are visible on `origin/main`, and the CloudKit `Briefing` publish/verify gate
+passes. If CloudKit publish fails, treat the run as partially published.
 
 Only `runs/`, `data/`, `pdfs/`, `podcasts/`, `topic.md`, `index.md`,
 `backlog.md`, and `public/pavbot-manifest.json` are publishable as automation outputs. Code,
@@ -297,18 +304,12 @@ To connect the iOS app to your own Codex-backed repository, follow
 `docs/connect-ios-app-to-your-repo.md`. Version 1 expects a public GitHub raw
 manifest URL.
 
-For optional live iOS notifications without a VPS, run the notifier on your
-MacBook and expose it with Cloudflare Tunnel:
-`docs/live-ios-notifications-macbook-cloudflare.md`. The app remains a reader:
-it does not configure Codex automations by itself, and the MacBook must stay
-awake for live webhook-driven push alerts to work. Push alerts are triggered by
-GitHub `push` webhooks, so the automation must publish to GitHub before the
-notifier can detect new files.
-
-When the iOS app is closed, only real APNs pushes can deliver an alert. If
-Docker, Cloudflare Tunnel, GitHub webhook delivery, or APNs configuration is
-down, the app will not receive a live notification until it is opened and
-manually refreshed.
+Live iOS notifications now use CloudKit Subscriptions and APNs. Configure the
+CloudKit container and `cktool` as described in `docs/CLOUDKIT_MIGRATION.md`.
+The app remains a reader: it does not configure Codex automations by itself.
+When the iOS app is closed, only real APNs pushes can deliver an alert; if
+CloudKit, APNs, or iCloud account access is unavailable, the app refreshes when
+opened manually.
 
 ## iOS Release
 
