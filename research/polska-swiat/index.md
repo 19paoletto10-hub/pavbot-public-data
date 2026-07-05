@@ -1,8 +1,10 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-03
+Last updated: 2026-07-04
 
 ## Current Understanding
+
+Run 2026-07-04 przesunął punkt ciężkości z samego readoutu MSZ na polityczne warunkowanie kanału polsko-ukraińskiego: Tusk powiedział dziś, że Polska oczekuje od Ukrainy pierwszego kroku po decyzji Zełenskiego. Równolegle warszawski kryzys wokół Szpitala Południowego wszedł w fazę realnych dymisji, RCB uruchomiło dziś w praktyce nowelizację ustawy o zarządzaniu kryzysowym, a światowy blok dnia przesunął się na ukraiński atak na terminal naftowy w Petersburgu, pogrzeb Khameneia i polityczny test odpowiedzi Wenezueli po trzęsieniach ziemi.
 
 Ten temat służy do codziennego researchu najważniejszych wiadomości z Polski i
 ze świata oraz do przygotowania polskiego podcastu newsowego około godziny
@@ -183,6 +185,15 @@ wtorkowe rekomendacje MZ/NFZ po sprawie Szpitala Południowego, czynności
 prokuratury po incydencie z sejmową kartą do głosowania oraz wyniki badań
 GIOŚ/WIOŚ w sprawie Bobru. W świecie nadal dominują Kijów/obrona powietrzna,
 Ormuz oraz kryzys humanitarny w Wenezueli.
+
+Wieczorny run 2026-07-04 przesunął punkt ciężkości z samego readoutu MSZ na
+polityczne warunkowanie kanału polsko-ukraińskiego: Tusk powiedział dziś, że
+Polska oczekuje od Ukrainy pierwszego kroku po decyzji Zełenskiego.
+Równolegle warszawski kryzys wokół Szpitala Południowego wszedł w fazę
+realnych dymisji, RCB uruchomiło dziś w praktyce nowelizację ustawy o
+zarządzaniu kryzysowym, a światowy blok dnia przesunął się na ukraiński atak
+na terminal naftowy w Petersburgu, pogrzeb Khameneia i polityczny test
+odpowiedzi Wenezueli po trzęsieniach ziemi.
 
 ## Stable Facts
 

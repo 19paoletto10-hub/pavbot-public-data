@@ -84,8 +84,7 @@ Status: Material update
   "language": "pl",
   "speed": 1.1,
   "variants": [
-    {"id": "female-piper", "engine": "piper", "voice": "pl_PL-gosia-medium"},
-    {"id": "male-xtts", "engine": "xtts", "voice": "Andrew Chipper"}
+    {"id": "female-piper", "engine": "piper", "voice": "pl_PL-gosia-medium"}
   ]
 }
 """,
@@ -114,7 +113,7 @@ Status: Material update
         self.assertIn("https://www.gov.pl/example", text)
         self.assertIn("Język TTS: pl", text)
         self.assertIn("female-piper", text)
-        self.assertIn("male-xtts", text)
+        self.assertNotIn("male-xtts", text)
 
 
 if __name__ == "__main__":

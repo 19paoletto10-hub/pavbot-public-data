@@ -22,3 +22,6 @@ __pycache__/
 # Pavbot notifier local secrets
 backend/pavbot-notifier/.env
 backend/pavbot-notifier/secrets/
+
+# Pavbot private runtime state and telemetry
+.pavbot/private/

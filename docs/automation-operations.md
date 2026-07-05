@@ -49,7 +49,8 @@ polskich znaków diakrytycznych i zapisz
 - `Pavbot Polska Świat Podcast 09:30` runs daily at 09:30 Europe/Warsaw and
   creates the MP3 podcast package from the Poland/world morning research. ID:
   `pavbot-polska-wiat-podcast-09-30`.
-- `Pavbot LLM/AI Jobs Wrocław Research` runs twice daily and updates
+- `Pavbot LLM/AI Jobs Wrocław Research` currently runs daily at 17:40
+  Europe/Warsaw; the 03:40 run is paused. It updates
   `research/llm-ai-jobs-wroclaw` with the full flow `Markdown -> jobsData JSON
   -> validate -> PDF -> publish`. The published package must expose matching
   `runs/YYYY-MM-DD-HHMM.md`, `data/YYYY-MM-DD-HHMM-jobs.json`, and
@@ -60,7 +61,7 @@ polskich znaków diakrytycznych i zapisz
   and updates `research/aktualne-wydarzenia-mobile` with one timestamped
   package: `runs/YYYY-MM-DD-HHMM.md`, `pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`,
   `pdfs/YYYY-MM-DD-HHMM-newspaper.pdf`, `podcasts/YYYY-MM-DD-HHMM/`, female
-  Piper MP3, male XTTS MP3, script, sources, and variant metadata. ID:
+  Piper MP3, script, sources, and variant metadata. ID:
   `pavbot-aktualne-wydarzenia-mobile-10-15`.
 - `Pavbot Aktualne Wydarzenia Mobile 19:33` runs daily at 19:33 Europe/Warsaw
   and updates `research/aktualne-wydarzenia-mobile` with the same timestamped
@@ -73,8 +74,8 @@ polskich znaków diakrytycznych i zapisz
   material articles are found, the same run must publish the refreshed
   `public/pavbot-manifest.json` and verify that `origin/main` exposes the new
   `pulseNewsData` path.
-- `Pavbot Reddit Safari Humor Radar` runs at 00:06, 02:06, 04:06, 06:06,
-  08:06, 10:06, 12:06, 14:06, 16:06, 18:06, 20:06 and 22:06 Europe/Warsaw.
+- `Pavbot Reddit Safari Humor Radar` runs at 00:06, 06:06, 12:06 and 18:06
+  Europe/Warsaw.
   It uses the logged-in local Safari session plus read-only Computer Use review
   to first publish the `research/reddit-radar/` audit package to `origin/main`
   and only then publish `Śmiechowy radar` data to
@@ -94,6 +95,10 @@ Every active automation must finish with the shared publication script:
 # export PAVBOT_MANIFEST_URL="https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json"
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
+
+The publish script records private runtime telemetry in local SQLite at
+`.pavbot/private/usage-ledger.sqlite3` when available. This ledger is not part
+of the public GitHub feed and must not be committed.
 
 The shared publication pipeline is:
 

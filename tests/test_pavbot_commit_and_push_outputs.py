@@ -157,6 +157,46 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 "pdf",
             )
 
+    def test_llm_jobs_publish_autogenerates_missing_pdf_when_jobs_data_exists(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "llm-ai-jobs-wroclaw",
+                "runs/2026-06-25-0141.md",
+                self.valid_jobs_markdown_report(),
+            )
+            self.write_topic_artifact(
+                repo,
+                "llm-ai-jobs-wroclaw",
+                "data/2026-06-25-0141-jobs.json",
+                json.dumps(self.valid_jobs_data_payload(), ensure_ascii=False) + "\n",
+            )
+
+            result = self.run_publish_script(repo, "research/llm-ai-jobs-wroclaw", isolated=True)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            changed_files = self.git(
+                repo,
+                "diff-tree",
+                "--no-commit-id",
+                "--name-only",
+                "-r",
+                "origin/main",
+                stdout=True,
+            ).splitlines()
+            self.assertIn(
+                "research/llm-ai-jobs-wroclaw/pdfs/2026-06-25-0141-llm-ai-jobs-wroclaw.pdf",
+                changed_files,
+            )
+            manifest = json.loads(
+                self.git(repo, "show", "origin/main:public/pavbot-manifest.json", stdout=True)
+            )
+            by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+            self.assertEqual(
+                by_path["research/llm-ai-jobs-wroclaw/pdfs/2026-06-25-0141-llm-ai-jobs-wroclaw.pdf"]["type"],
+                "pdf",
+            )
+
     def test_llm_jobs_publish_rejects_latest_run_when_jobs_data_cannot_be_rendered(self) -> None:
         with self.temporary_repo() as repo:
             self.write_topic_artifact(
@@ -173,6 +213,97 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
             self.assertEqual(
                 self.git(repo, "rev-list", "--count", "origin/main", stdout=True).strip(),
                 "1",
+            )
+
+    def test_llm_jobs_publish_fails_before_push_when_manifest_omits_latest_bundle_member(self) -> None:
+        with self.temporary_repo() as repo:
+            local_script = repo / "scripts" / "pavbot_commit_and_push_outputs.sh"
+            shutil.copy2(self.script_path, local_script)
+            stale_generator = repo / "scripts" / "generate_pavbot_manifest.py"
+            stale_generator.write_text(
+                """#!/usr/bin/env python3
+import json
+from pathlib import Path
+Path("public").mkdir(exist_ok=True)
+Path("public/pavbot-manifest.json").write_text(json.dumps({
+    "schemaVersion": 1,
+    "title": "stale",
+    "generatedAt": "2026-06-22T00:00:00+00:00",
+    "rawBaseUrl": "",
+    "automations": [],
+    "topics": [],
+    "artifacts": [
+        {
+            "id": "research/llm-ai-jobs-wroclaw/runs/2026-06-25-0141.md",
+            "type": "run",
+            "topic": "llm-ai-jobs-wroclaw",
+            "path": "research/llm-ai-jobs-wroclaw/runs/2026-06-25-0141.md",
+            "url": "",
+            "date": "2026-06-25"
+        },
+        {
+            "id": "research/llm-ai-jobs-wroclaw/data/2026-06-25-0141-jobs.json",
+            "type": "jobsData",
+            "topic": "llm-ai-jobs-wroclaw",
+            "path": "research/llm-ai-jobs-wroclaw/data/2026-06-25-0141-jobs.json",
+            "url": "",
+            "date": "2026-06-25"
+        }
+    ]
+}) + "\\n", encoding="utf-8")
+""",
+                encoding="utf-8",
+            )
+            self.git(
+                repo,
+                "add",
+                "scripts/pavbot_commit_and_push_outputs.sh",
+                "scripts/generate_pavbot_manifest.py",
+            )
+            self.git(repo, "commit", "-m", "stale publish toolchain")
+            self.git(repo, "push", "origin", "main")
+            self.write_topic_artifact(
+                repo,
+                "llm-ai-jobs-wroclaw",
+                "runs/2026-06-25-0141.md",
+                self.valid_jobs_markdown_report(),
+            )
+            self.write_topic_artifact(
+                repo,
+                "llm-ai-jobs-wroclaw",
+                "data/2026-06-25-0141-jobs.json",
+                json.dumps(self.valid_jobs_data_payload(), ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "llm-ai-jobs-wroclaw",
+                "pdfs/2026-06-25-0141-llm-ai-jobs-wroclaw.pdf",
+                "%PDF jobs report\n",
+            )
+
+            env = os.environ.copy()
+            env.pop("PAVBOT_RAW_BASE_URL", None)
+            env.pop("PAVBOT_PUBLISH_BRANCH", None)
+            env["PAVBOT_MANIFEST_URL"] = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+            env["PYTHONDONTWRITEBYTECODE"] = "1"
+            result = subprocess.run(
+                ["bash", str(local_script), "research/llm-ai-jobs-wroclaw"],
+                cwd=repo,
+                capture_output=True,
+                env=env,
+                text=True,
+                check=False,
+            )
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("generated manifest missing latest Jobs bundle paths", result.stderr)
+            self.assertIn(
+                "research/llm-ai-jobs-wroclaw/pdfs/2026-06-25-0141-llm-ai-jobs-wroclaw.pdf",
+                result.stderr,
+            )
+            self.assertEqual(
+                self.git(repo, "rev-list", "--count", "origin/main", stdout=True).strip(),
+                "2",
             )
 
     def test_research_publish_includes_valid_research_data_json_outputs(self) -> None:
@@ -1424,7 +1555,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                 "aktualne-wydarzenia-mobile",
                 "podcasts/2026-06-24-1015/tts_variants.json",
                 json.dumps(
-                    {"language": "pl", "variants": [{"id": "female-piper"}, {"id": "male-xtts"}]},
+                    {"language": "pl", "variants": [{"id": "female-piper"}]},
                     ensure_ascii=False,
                 ) + "\n",
             )
@@ -1433,12 +1564,6 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                 "aktualne-wydarzenia-mobile",
                 "podcasts/2026-06-24-1015/audio/female-piper/podcast.mp3",
                 "female mp3",
-            )
-            self.write_topic_artifact(
-                repo,
-                "aktualne-wydarzenia-mobile",
-                "podcasts/2026-06-24-1015/audio/male-xtts/podcast.mp3",
-                "male mp3",
             )
             self.write_topic_artifact(
                 repo,
@@ -1477,10 +1602,6 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                 changed_files,
             )
             self.assertIn(
-                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/male-xtts/podcast.mp3",
-                changed_files,
-            )
-            self.assertIn(
                 "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/script.md",
                 changed_files,
             )
@@ -1500,7 +1621,6 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                     "research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-1015-mobile-brief.pdf",
                     "research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-1015-newspaper.pdf",
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/female-piper/podcast.mp3",
-                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/male-xtts/podcast.mp3",
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/script.md",
                 ],
             )

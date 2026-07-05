@@ -9,10 +9,14 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 manifest_generator="$script_dir/generate_pavbot_manifest.py"
 public_feed_exporter="$script_dir/export_public_feed.py"
 publication_contract="$script_dir/pavbot_publication_contract.py"
+usage_ledger="$script_dir/pavbot_usage_ledger.py"
 jobs_data_validator="$script_dir/validate_jobs_data.py"
 research_data_validator="$script_dir/validate_research_data.py"
 mobile_news_data_validator="$script_dir/validate_mobile_news_data.py"
 pulse_news_data_validator="$script_dir/validate_pulse_news_data.py"
+ledger_run_id=""
+ledger_publish_status="not_started"
+ledger_remote_verification_status="not_started"
 
 usage() {
   cat >&2 <<'EOF'
@@ -58,6 +62,9 @@ require_clean_publish_scope() {
   while IFS= read -r -d '' entry; do
     status="${entry:0:2}"
     path="${entry:3}"
+    if is_private_runtime_path "$path"; then
+      continue
+    fi
     if ! is_allowed_publish_path "$path"; then
       bad_paths+=("$path")
     fi
@@ -84,6 +91,9 @@ has_publishable_changes() {
 
   while IFS= read -r -d '' entry; do
     path="${entry:3}"
+    if is_private_runtime_path "$path"; then
+      continue
+    fi
     if is_allowed_publish_path "$path"; then
       return 0
     fi
@@ -126,6 +136,18 @@ is_allowed_publish_path() {
       else
         is_standard_public_publish_path "$path"
       fi
+      ;;
+  esac
+}
+
+is_private_runtime_path() {
+  local path="$1"
+  case "$path" in
+    .pavbot/private|.pavbot/private/*)
+      return 0
+      ;;
+    *)
+      return 1
       ;;
   esac
 }
@@ -627,6 +649,90 @@ require_latest_pulse_news_data_in_manifest() {
   fi
 }
 
+latest_jobs_run_rel_path() {
+  if [[ "$topic_path" != "research/llm-ai-jobs-wroclaw" ]]; then
+    return 1
+  fi
+
+  if [[ ! -d "$topic_path/runs" ]]; then
+    return 1
+  fi
+
+  local latest
+  latest="$(
+    find "$topic_path/runs" -type f -name '*.md' 2>/dev/null \
+      | LC_ALL=C sort \
+      | tail -n 1
+  )"
+  [[ -n "$latest" ]] || return 1
+  printf '%s' "$latest"
+}
+
+latest_jobs_bundle_rel_paths() {
+  local run_path stamp
+  run_path="$(latest_jobs_run_rel_path)" || return 1
+  stamp="$(basename "$run_path" .md)"
+  printf '%s\n' \
+    "$run_path" \
+    "$topic_path/data/${stamp}-jobs.json" \
+    "$topic_path/pdfs/${stamp}-llm-ai-jobs-wroclaw.pdf"
+}
+
+missing_latest_jobs_manifest_paths() {
+  local manifest_path="public/pavbot-manifest.json"
+  local -a latest_paths=()
+  [[ -f "$manifest_path" ]] || return 1
+
+  while IFS= read -r rel_path; do
+    [[ -n "$rel_path" ]] || continue
+    latest_paths+=("$rel_path")
+  done < <(latest_jobs_bundle_rel_paths 2>/dev/null || true)
+  ((${#latest_paths[@]} > 0)) || return 1
+
+  python3 - "$manifest_path" "${latest_paths[@]}" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+manifest_path = Path(sys.argv[1])
+expected = sys.argv[2:]
+
+try:
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+except Exception:
+    for path in expected:
+        print(path)
+    raise SystemExit(1)
+
+manifest_paths = {
+    artifact.get("path")
+    for artifact in manifest.get("artifacts", [])
+    if isinstance(artifact, dict)
+}
+missing = [path for path in expected if path not in manifest_paths]
+for path in missing:
+    print(path)
+raise SystemExit(1 if missing else 0)
+PY
+}
+
+require_latest_jobs_bundle_in_manifest() {
+  local missing_paths
+  latest_jobs_run_rel_path >/dev/null 2>&1 || return 0
+
+  if ! missing_paths="$(missing_latest_jobs_manifest_paths 2>/dev/null)"; then
+    die "generated manifest missing latest Jobs bundle paths: ${missing_paths//$'\n'/ }"
+  fi
+}
+
+needs_manifest_refresh_for_jobs() {
+  latest_jobs_run_rel_path >/dev/null 2>&1 || return 1
+  if missing_latest_jobs_manifest_paths >/dev/null 2>&1; then
+    return 1
+  fi
+  return 0
+}
+
 needs_manifest_refresh_for_pulse_news() {
   local latest_rel_path
   latest_rel_path="$(latest_pulse_news_data_rel_path 2>/dev/null || true)"
@@ -1037,14 +1143,47 @@ copy_mobile_public_outputs_to_worktree() {
 }
 
 cleanup_isolated_worktree() {
-  local status=$?
+  local exit_status=$?
   if [[ -n "${isolated_worktree:-}" ]]; then
     git -C "$repo_root" worktree remove --force "$isolated_worktree" >/dev/null 2>&1 || true
   fi
   if [[ -n "${isolated_tmp:-}" ]]; then
     rm -rf "$isolated_tmp"
   fi
-  exit "$status"
+  finish_usage_ledger "$exit_status"
+  exit "$exit_status"
+}
+
+start_usage_ledger() {
+  local automation_id model output
+  [[ -f "$usage_ledger" ]] || return 0
+  automation_id="${PAVBOT_AUTOMATION_ID:-${topic_path#research/}-publish}"
+  model="${PAVBOT_MODEL:-}"
+  output="$(
+    python3 "$usage_ledger" start \
+      --automation-id "$automation_id" \
+      --topic "$topic_path" \
+      ${model:+--model "$model"} 2>/dev/null || true
+  )"
+  if [[ -n "$output" ]]; then
+    ledger_run_id="$(
+      python3 -c 'import json,sys; print(json.load(sys.stdin).get("runId",""))' <<< "$output" 2>/dev/null || true
+    )"
+  fi
+}
+
+finish_usage_ledger() {
+  local exit_status="$1"
+  local ledger_status="ok"
+  [[ -n "$ledger_run_id" && -f "$usage_ledger" ]] || return 0
+  if [[ "$exit_status" -ne 0 ]]; then
+    ledger_status="failed"
+  fi
+  python3 "$usage_ledger" finish \
+    --run-id "$ledger_run_id" \
+    --status "$ledger_status" \
+    --publish-status "$ledger_publish_status" \
+    --remote-verification-status "$ledger_remote_verification_status" >/dev/null 2>&1 || true
 }
 
 publish_isolated() {
@@ -1069,7 +1208,7 @@ publish_isolated() {
   (
     cd "$isolated_worktree"
 
-    if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ((force_manifest == 0)); then
+    if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ! needs_manifest_refresh_for_jobs && ((force_manifest == 0)); then
       printf 'no publishable changes for %s\n' "$topic_path"
       exit 0
     fi
@@ -1080,6 +1219,7 @@ publish_isolated() {
     python3 "$manifest_generator" --repo-root "$PWD"
     verify_public_manifest_scope
     require_latest_pulse_news_data_in_manifest
+    require_latest_jobs_bundle_in_manifest
     stage_publishable_paths
 
     if git diff --cached --quiet; then
@@ -1097,9 +1237,14 @@ publish_isolated() {
 
   git fetch origin "$target_branch" >/dev/null
   if [[ -f "$pushed_marker" ]]; then
+    ledger_publish_status="ok"
     run_publication_contract verify-remote "$repo_root" --ref "origin/$target_branch"
+    ledger_remote_verification_status="ok"
     sync_local_manifest_from_remote
     printf 'pushed pavbot outputs for %s to origin/%s\n' "$topic_path" "$target_branch"
+  else
+    ledger_publish_status="skipped"
+    ledger_remote_verification_status="skipped"
   fi
 }
 
@@ -1161,6 +1306,9 @@ cd "$repo_root"
 [[ -f "$pulse_news_data_validator" ]] || die "missing scripts/validate_pulse_news_data.py"
 git remote get-url origin >/dev/null 2>&1 || die "missing git remote: origin"
 
+start_usage_ledger
+trap 'pavbot_exit_status=$?; finish_usage_ledger "$pavbot_exit_status"; exit "$pavbot_exit_status"' EXIT
+
 pavbot_manifest_url="$(resolve_pavbot_manifest_url)"
 export PAVBOT_MANIFEST_URL="$pavbot_manifest_url"
 printf 'using Pavbot manifest URL: %s\n' "$PAVBOT_MANIFEST_URL"
@@ -1185,10 +1333,13 @@ run_publication_contract verify-local "$repo_root"
 python3 "$manifest_generator" --repo-root "$PWD"
 verify_public_manifest_scope
 require_latest_pulse_news_data_in_manifest
+require_latest_jobs_bundle_in_manifest
 
 require_clean_publish_scope
 
-if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ((force_manifest == 0)); then
+if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ! needs_manifest_refresh_for_jobs && ((force_manifest == 0)); then
+  ledger_publish_status="skipped"
+  ledger_remote_verification_status="skipped"
   printf 'no publishable changes for %s\n' "$topic_path"
   exit 0
 fi
@@ -1196,6 +1347,8 @@ fi
 stage_publishable_paths
 
 if git diff --cached --quiet; then
+  ledger_publish_status="skipped"
+  ledger_remote_verification_status="skipped"
   printf 'no publishable changes for %s\n' "$topic_path"
   exit 0
 fi
@@ -1205,7 +1358,9 @@ require_staged_scope
 topic_slug="${topic_path#research/}"
 git commit -m "chore(pavbot): publish ${topic_slug} automation outputs" >/dev/null
 git push origin "HEAD:$target_branch" >/dev/null
+ledger_publish_status="ok"
 run_publication_contract verify-remote "$repo_root" --ref "origin/$target_branch"
+ledger_remote_verification_status="ok"
 sync_local_manifest_from_remote
 
 printf 'pushed pavbot outputs for %s to origin/%s\n' "$topic_path" "$target_branch"

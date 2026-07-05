@@ -81,17 +81,16 @@ Jeśli walidacja zgłosi brak pięciu sekcji, mniej niż dwa artykuły w sekcji 
 powielony opis sekcji i lead artykułu, popraw raport Markdown i wygeneruj JSON
 ponownie przed renderem audio i publikacją.
 
-Wygeneruj dwa warianty TTS:
-`bash research/aktualne-wydarzenia-mobile/tools/render_two_tts_variants.sh research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/script.md research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM`.
+Wygeneruj jeden wymagany wariant TTS:
+`bash research/aktualne-wydarzenia-mobile/tools/render_mobile_tts_audio.sh research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/script.md research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM`.
 
-Warianty audio mają być zapisane jako:
+Wymagany wariant audio ma być zapisany jako:
 - `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/audio/female-piper/podcast.mp3`
-- `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/audio/male-xtts/podcast.mp3`
 
 Zapisz zbiorcze metadane w
 `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/tts_variants.json`.
-Jeśli jeden wariant TTS zawiedzie, nie twórz fałszywego MP3; zachowaj raport,
-PDF, skrypt, źródła i zapisz błąd w metadanych oraz backlogu.
+Jeśli wymagany wariant TTS zawiedzie, nie twórz fałszywego MP3; zachowaj
+raport, PDF, skrypt, źródła i zapisz błąd w metadanych oraz backlogu.
 
 Artefakty redakcyjne i diagnostyczne, czyli raport Markdown, `draft.md`,
 `sources.md` i `tts_variants.json`, nadal mają powstawać lokalnie na potrzeby
@@ -103,9 +102,9 @@ publikacja dla aplikacji iOS i webhooka ma obejmować:
 - `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/script.md`
 - `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/audio/*/podcast.mp3`
 
-Publikuj tylko te warianty audio, dla których istnieje poprawnie wyrenderowany
-`podcast.mp3`. Nie publikuj placeholderów, `tts_variants.json`, `render.json`,
-`sources.md`, raportów `runs/` ani dodatkowych PDF-ów.
+Publikuj tylko poprawnie wyrenderowany wymagany wariant audio
+`female-piper/podcast.mp3`. Nie publikuj placeholderów, `tts_variants.json`,
+`render.json`, `sources.md`, raportów `runs/` ani dodatkowych PDF-ów.
 
 Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS i webhooka
 notyfikacji push. Najpierw uruchom wspólny kontrakt publikacji:

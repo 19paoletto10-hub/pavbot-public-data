@@ -264,6 +264,8 @@ def test_send_apns_change_notifications_continues_after_device_failure():
     assert summary["sent"] == 1
     assert summary["failed"] == 1
     assert summary["skippedDevices"] == 1
+    assert summary["invalidDeviceTokens"] == 0
+    assert summary["_invalidDeviceTokens"] == []
     assert summary["errors"][0]["deviceTokenSuffix"] == "token"
     assert summary["errors"][0]["kind"] == "summary"
     assert summary["errors"][0]["id"] == "research/tech-news/runs/2026-06-22.md"
@@ -271,6 +273,169 @@ def test_send_apns_change_notifications_continues_after_device_failure():
     assert summary["errors"][0]["errorType"] == "RuntimeError"
     assert sender.calls[1]["userInfo"]["artifactIDs"] == ["research/tech-news/runs/2026-06-22.md"]
     assert sender.calls[1]["userInfo"]["artifactTopic"] == "tech-news"
+
+
+def test_send_apns_change_notifications_marks_dead_tokens_for_cleanup():
+    core = load_core()
+
+    class FakeAPNSError(RuntimeError):
+        def __init__(self, status_code, response_body):
+            self.status_code = status_code
+            self.response_body = response_body
+            super().__init__(f"APNs returned HTTP {status_code}: {response_body}")
+
+    class FakeSender:
+        async def send_alert(self, device_token, title, body, user_info):
+            if device_token == "bad-device-1":
+                raise FakeAPNSError(400, '{"reason":"BadDeviceToken"}')
+            if device_token == "gone-device-2":
+                raise FakeAPNSError(410, '{"reason":"Unregistered"}')
+
+    manifest_url = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+    summary = asyncio.run(
+        core.send_apns_change_notifications(
+            devices={
+                "bad-device-1": {"manifestURL": manifest_url},
+                "gone-device-2": {"manifestURL": manifest_url},
+                "good-device-3": {"manifestURL": manifest_url},
+            },
+            artifacts=[
+                {
+                    "id": "research/tech-news/runs/2026-06-22.md",
+                    "type": "run",
+                    "topic": "tech-news",
+                    "path": "research/tech-news/runs/2026-06-22.md",
+                }
+            ],
+            automations=[],
+            manifest_url_value=manifest_url,
+            sender=FakeSender(),
+        )
+    )
+
+    assert summary["attempted"] == 3
+    assert summary["sent"] == 1
+    assert summary["failed"] == 2
+    assert summary["invalidDeviceTokens"] == 2
+    assert set(summary["invalidDeviceTokenSuffixes"]) == {"ice-1", "ice-2"}
+    assert set(summary["_invalidDeviceTokens"]) == {"bad-device-1", "gone-device-2"}
+    assert all(error["invalidDeviceToken"] is True for error in summary["errors"])
+
+
+def test_send_apns_change_notifications_keeps_tokens_on_transient_errors():
+    core = load_core()
+
+    class FakeAPNSError(RuntimeError):
+        def __init__(self, status_code, response_body):
+            self.status_code = status_code
+            self.response_body = response_body
+            super().__init__(f"APNs returned HTTP {status_code}: {response_body}")
+
+    class FakeSender:
+        async def send_alert(self, device_token, title, body, user_info):
+            if device_token == "server-error":
+                raise FakeAPNSError(500, '{"reason":"InternalServerError"}')
+            if device_token == "rate-limit":
+                raise FakeAPNSError(429, '{"reason":"TooManyRequests"}')
+            if device_token == "network-error":
+                raise RuntimeError("BadDeviceToken in network log should not delete without APNs status")
+
+    manifest_url = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+    summary = asyncio.run(
+        core.send_apns_change_notifications(
+            devices={
+                "server-error": {"manifestURL": manifest_url},
+                "rate-limit": {"manifestURL": manifest_url},
+                "network-error": {"manifestURL": manifest_url},
+            },
+            artifacts=[
+                {
+                    "id": "research/tech-news/runs/2026-06-22.md",
+                    "type": "run",
+                    "topic": "tech-news",
+                    "path": "research/tech-news/runs/2026-06-22.md",
+                }
+            ],
+            automations=[],
+            manifest_url_value=manifest_url,
+            sender=FakeSender(),
+        )
+    )
+
+    assert summary["attempted"] == 3
+    assert summary["sent"] == 0
+    assert summary["failed"] == 3
+    assert summary["invalidDeviceTokens"] == 0
+    assert summary["invalidDeviceTokenSuffixes"] == []
+    assert summary["_invalidDeviceTokens"] == []
+    assert all("invalidDeviceToken" not in error for error in summary["errors"])
+
+
+def test_prune_invalid_device_tokens_removes_only_dead_tokens():
+    core = load_core()
+    devices = {
+        "bad-device": {"manifestURL": "https://example.com/manifest.json"},
+        "good-device": {"manifestURL": "https://example.com/manifest.json"},
+    }
+
+    removed = core.prune_invalid_device_tokens(devices, ["bad-device", "missing-device"])
+
+    assert removed == 1
+    assert devices == {"good-device": {"manifestURL": "https://example.com/manifest.json"}}
+
+
+def test_server_send_change_notifications_removes_dead_devices_without_exposing_tokens(tmp_path, monkeypatch):
+    server = load_server()
+    manifest_url = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+    monkeypatch.setenv("PAVBOT_NOTIFIER_DATA_DIR", str(tmp_path))
+    monkeypatch.setenv("PAVBOT_MANIFEST_URL", manifest_url)
+    (tmp_path / "devices.json").write_text(
+        json.dumps(
+            {
+                "dead-device-token": {"manifestURL": manifest_url},
+                "good-device-token": {"manifestURL": manifest_url},
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    class FakeAPNSError(RuntimeError):
+        status_code = 400
+        response_body = '{"reason":"BadDeviceToken"}'
+
+    class FakeSender:
+        async def send_alert(self, device_token, title, body, user_info):
+            if device_token == "dead-device-token":
+                raise FakeAPNSError("APNs returned HTTP 400: BadDeviceToken")
+
+    monkeypatch.setattr(server, "apns_sender", lambda: FakeSender())
+
+    summary = asyncio.run(
+        server.send_change_notifications(
+            [
+                {
+                    "id": "research/tech-news/runs/2026-06-22.md",
+                    "type": "run",
+                    "topic": "tech-news",
+                    "path": "research/tech-news/runs/2026-06-22.md",
+                }
+            ],
+            [],
+            {"artifacts": []},
+        )
+    )
+
+    devices = json.loads((tmp_path / "devices.json").read_text(encoding="utf-8"))
+    delivery = json.loads((tmp_path / "last-apns-delivery.json").read_text(encoding="utf-8"))
+
+    assert summary["invalidDeviceTokens"] == 1
+    assert summary["removedDevices"] == 1
+    assert "_invalidDeviceTokens" not in summary
+    assert devices == {"good-device-token": {"manifestURL": manifest_url}}
+    assert delivery["invalidDeviceTokens"] == 1
+    assert delivery["removedDevices"] == 1
+    assert "_invalidDeviceTokens" not in delivery
+    assert "dead-device-token" not in json.dumps(delivery)
 
 
 def test_apns_sender_raises_when_apns_is_not_configured():
@@ -476,12 +641,58 @@ def test_pulse_news_notification_uses_high_priority_article_teaser():
     assert call["userInfo"]["notificationKind"] == "pulseNews"
     assert call["userInfo"]["artifactTopic"] == "puls-dnia-news"
     assert call["userInfo"]["artifactDate"] == "2026-06-26"
-    assert call["userInfo"]["artifactIDs"] == [
-        "research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json",
-        "research/puls-dnia-news/runs/2026-06-26-2109.md",
-    ]
+    assert call["userInfo"]["artifactID"] == "research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json"
+    assert call["userInfo"]["artifactIDs"] == ["research/puls-dnia-news/data/2026-06-26-2109-pulse-news.json"]
     assert call["userInfo"]["pulseArticleID"] == "high-story"
     assert call["userInfo"]["pulseArticleTitle"] == "Rząd pokazuje nowy pakiet dla AI w administracji"
+
+
+def test_pulse_news_notification_keeps_apns_payload_compact_with_many_manifest_changes():
+    core = load_core()
+    manifest_url = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+    pulse_id = "research/puls-dnia-news/data/2026-07-04-0525-pulse-news.json"
+    artifacts = [
+        {
+            "id": f"research/archive/runs/2026-06-{index:02d}.md",
+            "type": "run",
+            "topic": "archive",
+            "path": f"research/archive/runs/2026-06-{index:02d}.md",
+            "date": "2026-06-26",
+        }
+        for index in range(150)
+    ]
+    artifacts.append(
+        {
+            "id": pulse_id,
+            "type": "pulseNewsData",
+            "topic": "puls-dnia-news",
+            "path": pulse_id,
+            "date": "2026-07-04",
+            "time": "05:25",
+            "itemCount": 12,
+        }
+    )
+
+    notification = core.build_change_notification(
+        artifacts=artifacts,
+        automations=[],
+        manifest_url_value=manifest_url,
+        pulse_news_digest={
+            "items": [
+                {
+                    "id": "borkowo",
+                    "title": "Ciało 64-latki w Borkowie, policja szuka jej męża",
+                    "lead": "Poranny alert policyjny wymaga dalszego śledzenia.",
+                    "priority": "high",
+                }
+            ]
+        },
+    )
+
+    assert notification["userInfo"]["artifactID"] == pulse_id
+    assert notification["userInfo"]["artifactIDs"] == [pulse_id]
+    payload = {"aps": {"alert": {"title": notification["title"], "body": notification["body"]}}, **notification["userInfo"]}
+    assert len(json.dumps(payload, ensure_ascii=False).encode("utf-8")) < 4096
 
 
 def test_pulse_news_notification_waits_when_digest_fetch_fails():
@@ -1592,6 +1803,63 @@ def test_daily_humor_status_reports_digest(tmp_path):
     assert status["redditSubreddits"] == ["Polska_wpz", "memes", "ProgrammerHumor"]
 
 
+def test_status_daily_humor_separates_stored_and_effective_manifest_digest(tmp_path, monkeypatch):
+    server = load_server()
+    manifest_url = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+    artifact_url = "https://raw.githubusercontent.com/example/pavbot/main/research/reddit-radar/data/2026-07-04-0618-reddit-radar.json"
+    stored_digest = {
+        "id": "humor-2026-07-04-0008",
+        "title": "<RR> Reddit Radar",
+        "generatedAt": "2026-07-03T22:08:00+00:00",
+        "items": [],
+    }
+    effective_digest = {
+        "id": "humor-2026-07-04-0618",
+        "title": "<RR> Reddit Radar",
+        "generatedAt": "2026-07-04T04:18:37+00:00",
+        "items": [{"id": "post-1", "title": "Fresh Reddit signal"}],
+    }
+    (tmp_path / "last-daily-humor.json").write_text(
+        json.dumps({"lastDigest": stored_digest, "lastRefreshAt": stored_digest["generatedAt"]}),
+        encoding="utf-8",
+    )
+    monkeypatch.setenv("PAVBOT_NOTIFIER_DATA_DIR", str(tmp_path))
+    monkeypatch.setenv("PAVBOT_MANIFEST_URL", manifest_url)
+    monkeypatch.setenv("PAVBOT_PUBLIC_NOTIFIER_URL", "https://notify.example.com")
+    monkeypatch.setenv("PAVBOT_DAILY_HUMOR_SOURCE_MODE", "external")
+    monkeypatch.setenv("PAVBOT_DAILY_HUMOR_ENABLED", "false")
+
+    async def fake_fetch_manifest(url):
+        if url == manifest_url:
+            return {
+                "rawBaseUrl": "https://raw.githubusercontent.com/example/pavbot/main/",
+                "artifacts": [
+                    {
+                        "id": "research/reddit-radar/data/2026-07-04-0618-reddit-radar.json",
+                        "type": "redditRadarData",
+                        "topic": "reddit-radar",
+                        "path": "research/reddit-radar/data/2026-07-04-0618-reddit-radar.json",
+                        "date": "2026-07-04",
+                        "time": "06:18",
+                    }
+                ],
+            }
+        if url == artifact_url:
+            return effective_digest
+        raise AssertionError(f"Unexpected fetch URL: {url}")
+
+    monkeypatch.setattr(server, "fetch_manifest", fake_fetch_manifest)
+
+    response = TestClient(server.app).get("/status")
+
+    assert response.status_code == 200
+    daily_humor_status = response.json()["dailyHumor"]
+    assert daily_humor_status["storedLastDigest"]["id"] == stored_digest["id"]
+    assert daily_humor_status["effectiveLatestDigest"]["id"] == effective_digest["id"]
+    assert daily_humor_status["lastDigest"]["id"] == effective_digest["id"]
+    assert daily_humor_status["effectiveDigestSource"] == "manifest"
+
+
 def test_daily_humor_external_mode_serves_last_codex_digest_even_when_stale(tmp_path):
     daily_humor = load_daily_humor()
     config = daily_humor.DailyHumorConfig(
@@ -1644,6 +1912,85 @@ def test_daily_humor_external_mode_serves_last_codex_digest_even_when_stale(tmp_
     assert result["source"] == "Codex Safari Reddit radar"
     assert state["producer"] == "codex-safari"
     assert state["lastError"] is None
+
+
+def test_daily_humor_external_mode_prefers_fresh_manifest_reddit_digest(tmp_path):
+    daily_humor = load_daily_humor()
+    config = daily_humor.DailyHumorConfig(
+        enabled=True,
+        interval_hours=6,
+        timezone_name="Europe/Warsaw",
+        max_items=2,
+        source_mode="external",
+    )
+    stale_digest = {
+        "id": "humor-2026-07-04-0008",
+        "title": "<RR> Reddit Radar",
+        "summary": "Starszy digest z lokalnego stanu.",
+        "generatedAt": "2026-07-03T22:08:39+00:00",
+        "displayTime": "00:08",
+        "nextRefreshAt": "2026-07-04T06:06:00+02:00",
+        "refreshIntervalHours": 6,
+        "source": "Codex Safari Reddit radar",
+        "items": [{"id": "old", "title": "Old", "caption": "Old"}],
+    }
+    fresh_digest = {
+        "id": "humor-2026-07-04-0618",
+        "title": "<RR> Reddit Radar",
+        "summary": "Świeży digest z publicznego manifestu.",
+        "generatedAt": "2026-07-04T04:18:37+00:00",
+        "displayTime": "06:18",
+        "nextRefreshAt": "2026-07-04T12:06:00+02:00",
+        "refreshIntervalHours": 6,
+        "source": "Codex Safari Reddit radar",
+        "items": [{"id": "fresh", "title": "Fresh", "caption": "Fresh"}],
+    }
+    manifest_url = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+    artifact_url = "https://raw.githubusercontent.com/example/pavbot/main/research/reddit-radar/data/2026-07-04-0618-reddit-radar.json"
+    manifest = {
+        "rawBaseUrl": "https://raw.githubusercontent.com/example/pavbot/main",
+        "artifacts": [
+            {
+                "type": "redditRadarData",
+                "topic": "reddit-radar",
+                "date": "2026-07-04",
+                "time": "06:18",
+                "path": "research/reddit-radar/data/2026-07-04-0618-reddit-radar.json",
+                "url": "research/reddit-radar/data/2026-07-04-0618-reddit-radar.json",
+            },
+            {
+                "type": "redditRadarData",
+                "topic": "reddit-radar",
+                "date": "2026-07-04",
+                "time": "00:08",
+                "path": "research/reddit-radar/data/2026-07-04-0008-reddit-radar.json",
+                "url": "research/reddit-radar/data/2026-07-04-0008-reddit-radar.json",
+            },
+        ],
+    }
+
+    daily_humor.save_external_humor_digest(
+        digest=stale_digest,
+        storage_dir=tmp_path,
+        received_at=daily_humor.datetime.fromisoformat("2026-07-03T22:09:00+00:00"),
+    )
+
+    async def fetch_json(url):
+        assert url in {manifest_url, artifact_url}
+        return manifest if url == manifest_url else fresh_digest
+
+    result = asyncio.run(
+        daily_humor.latest_humor_digest(
+            config=config,
+            storage_dir=tmp_path,
+            now=daily_humor.datetime.fromisoformat("2026-07-04T05:00:00+00:00"),
+            manifest_url=manifest_url,
+            fetch_json=fetch_json,
+        )
+    )
+
+    assert result["id"] == "humor-2026-07-04-0618"
+    assert result["displayTime"] == "06:18"
 
 
 def test_humor_digest_ingest_requires_bearer_token(tmp_path):
@@ -1868,7 +2215,74 @@ def test_daily_weather_manual_refresh_saves_report_without_sending_pushes(tmp_pa
     assert result["report"]["hourlyTemperature"][0]["temperature"] == 24.2
     assert state["lastManualRefreshAt"] == "2026-06-25T10:15:00+00:00"
     assert state["lastReport"]["id"] == "wroclaw-2026-06-25"
+    location_key = daily_weather.weather_location_key(config)
+    assert state["locationReports"][location_key]["lastManualRefreshAt"] == "2026-06-25T10:15:00+00:00"
+    assert state["locationReports"][location_key]["manualRefreshRetryAt"] == "2026-06-25T13:00:00+02:00"
+    assert state["locationReports"][location_key]["lastReport"]["id"] == "wroclaw-2026-06-25"
     assert "lastDelivery" not in result
+
+
+def test_daily_weather_manual_refresh_cooldown_is_per_location(tmp_path, monkeypatch):
+    daily_weather = load_daily_weather()
+    wroclaw = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.time(hour=7, minute=30),
+        timezone_name="Europe/Warsaw",
+        city="Wrocław",
+        latitude=51.1079,
+        longitude=17.0385,
+    )
+    berlin = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.time(hour=7, minute=30),
+        timezone_name="Europe/Warsaw",
+        city="Berlin",
+        latitude=52.52,
+        longitude=13.405,
+    )
+    calls = []
+
+    async def fake_fetch_daily_weather_report(*, config, generated_at):
+        calls.append(config.city)
+        return {
+            "id": f"{daily_weather.slugify(config.city)}-2026-06-25",
+            "city": config.city,
+            "date": "2026-06-25",
+            "generatedAt": generated_at.isoformat(),
+            "schemaVersion": 2,
+            "temperatureTimeline": [],
+            "hourlyPrecipitation": [],
+            "precipitationTimeline": [],
+        }
+
+    monkeypatch.setattr(daily_weather, "fetch_daily_weather_report", fake_fetch_daily_weather_report)
+    generated_at = daily_weather.datetime.fromisoformat("2026-06-25T10:15:00+00:00")
+
+    first = asyncio.run(
+        daily_weather.refresh_daily_weather_report(
+            config=wroclaw,
+            storage_dir=tmp_path,
+            generated_at=generated_at,
+        )
+    )
+    second = asyncio.run(
+        daily_weather.refresh_daily_weather_report(
+            config=berlin,
+            storage_dir=tmp_path,
+            generated_at=generated_at.replace(minute=30),
+        )
+    )
+    state = json.loads((tmp_path / "last-daily-weather.json").read_text(encoding="utf-8"))
+
+    assert calls == ["Wrocław", "Berlin"]
+    assert first["report"]["city"] == "Wrocław"
+    assert second["report"]["city"] == "Berlin"
+    wroclaw_key = daily_weather.weather_location_key(wroclaw)
+    berlin_key = daily_weather.weather_location_key(berlin)
+    assert state["locationReports"][wroclaw_key]["lastReport"]["city"] == "Wrocław"
+    assert state["locationReports"][berlin_key]["lastReport"]["city"] == "Berlin"
+    assert state["locationReports"][wroclaw_key]["lastManualRefreshAt"] == "2026-06-25T10:15:00+00:00"
+    assert state["locationReports"][berlin_key]["lastManualRefreshAt"] == "2026-06-25T10:30:00+00:00"
 
 
 def test_daily_weather_manual_refresh_is_blocked_until_next_hour(tmp_path, monkeypatch):
@@ -1915,6 +2329,132 @@ def test_daily_weather_manual_refresh_is_blocked_until_next_hour(tmp_path, monke
     assert state["manualRefreshRetryAt"] == "2026-06-25T13:00:00+02:00"
 
 
+def test_daily_weather_manual_refresh_lock_uses_same_location_report(tmp_path, monkeypatch):
+    daily_weather = load_daily_weather()
+    wroclaw = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.time(hour=7, minute=30),
+        timezone_name="Europe/Warsaw",
+        city="Wrocław",
+        latitude=51.1079,
+        longitude=17.0385,
+    )
+    berlin = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.time(hour=7, minute=30),
+        timezone_name="Europe/Warsaw",
+        city="Berlin",
+        latitude=52.52,
+        longitude=13.405,
+    )
+    wroclaw_key = daily_weather.weather_location_key(wroclaw)
+    berlin_key = daily_weather.weather_location_key(berlin)
+    (tmp_path / "last-daily-weather.json").write_text(
+        json.dumps(
+            {
+                "lastReport": {"id": "berlin-global", "city": "Berlin"},
+                "locationReports": {
+                    wroclaw_key: {
+                        "city": "Wrocław",
+                        "latitude": 51.1079,
+                        "longitude": 17.0385,
+                        "lastManualRefreshAt": "2026-06-25T10:15:00+00:00",
+                        "lastReport": {"id": "wroclaw-local", "city": "Wrocław"},
+                    },
+                    berlin_key: {
+                        "city": "Berlin",
+                        "latitude": 52.52,
+                        "longitude": 13.405,
+                        "lastManualRefreshAt": "2026-06-25T10:20:00+00:00",
+                        "lastReport": {"id": "berlin-local", "city": "Berlin"},
+                    },
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+    calls = {"fetch": 0}
+
+    async def fake_fetch_daily_weather_report(*, config, generated_at):
+        calls["fetch"] += 1
+        return {"id": "should-not-fetch"}
+
+    monkeypatch.setattr(daily_weather, "fetch_daily_weather_report", fake_fetch_daily_weather_report)
+
+    with pytest.raises(daily_weather.DailyWeatherRefreshLocked) as exc:
+        asyncio.run(
+            daily_weather.refresh_daily_weather_report(
+                config=wroclaw,
+                storage_dir=tmp_path,
+                generated_at=daily_weather.datetime.fromisoformat("2026-06-25T10:45:00+00:00"),
+            )
+        )
+    state = json.loads((tmp_path / "last-daily-weather.json").read_text(encoding="utf-8"))
+
+    assert calls["fetch"] == 0
+    assert exc.value.last_report == {"id": "wroclaw-local", "city": "Wrocław"}
+    assert state["locationReports"][wroclaw_key]["lastManualRefreshBlockedAt"] == "2026-06-25T10:45:00+00:00"
+    assert "lastManualRefreshBlockedAt" not in state["locationReports"][berlin_key]
+
+
+def test_latest_daily_weather_report_uses_manual_refresh_location_cache(tmp_path, monkeypatch):
+    daily_weather = load_daily_weather()
+    config = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.time(hour=7, minute=30),
+        timezone_name="Europe/Warsaw",
+        city="Berlin",
+        latitude=52.52,
+        longitude=13.405,
+    )
+    location_key = daily_weather.weather_location_key(config)
+    (tmp_path / "last-daily-weather.json").write_text(
+        json.dumps(
+            {
+                "locationReports": {
+                    location_key: {
+                        "city": "Berlin",
+                        "latitude": 52.52,
+                        "longitude": 13.405,
+                        "lastManualRefreshAt": "2026-06-25T10:15:00+00:00",
+                        "manualRefreshRetryAt": "2026-06-25T13:00:00+02:00",
+                        "lastReport": {
+                            "schemaVersion": 2,
+                            "id": "berlin-2026-06-25",
+                            "city": "Berlin",
+                            "date": "2026-06-25",
+                            "generatedAt": "2026-06-25T10:15:00+00:00",
+                            "temperatureTimeline": [],
+                            "hourlyPrecipitation": [],
+                            "precipitationTimeline": [],
+                        },
+                    }
+                }
+            }
+        ),
+        encoding="utf-8",
+    )
+    calls = {"fetch": 0}
+
+    async def fake_fetch_daily_weather_report(*, config, generated_at):
+        calls["fetch"] += 1
+        return {"id": "should-not-fetch"}
+
+    monkeypatch.setattr(daily_weather, "fetch_daily_weather_report", fake_fetch_daily_weather_report)
+
+    report = asyncio.run(
+        daily_weather.latest_daily_weather_report(
+            config=config,
+            storage_dir=tmp_path,
+            now=daily_weather.datetime.fromisoformat("2026-06-25T10:50:00+00:00"),
+        )
+    )
+
+    assert calls["fetch"] == 0
+    assert report["city"] == "Berlin"
+    assert report["id"] == "berlin-2026-06-25"
+
+
 def test_daily_weather_status_reports_last_manual_refresh(tmp_path):
     daily_weather = load_daily_weather()
     config = daily_weather.DailyWeatherConfig(
@@ -1958,6 +2498,66 @@ def test_daily_weather_status_reports_manual_refresh_retry_at(tmp_path):
     status = daily_weather.daily_weather_status(storage_dir=tmp_path, config=config)
 
     assert status["manualRefreshRetryAt"] == "2026-06-25T13:00:00+02:00"
+
+
+def test_daily_weather_status_prefers_current_location_state(tmp_path):
+    daily_weather = load_daily_weather()
+    wroclaw = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.time(hour=7, minute=30),
+        timezone_name="Europe/Warsaw",
+        city="Wrocław",
+        latitude=51.1079,
+        longitude=17.0385,
+    )
+    berlin = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.time(hour=7, minute=30),
+        timezone_name="Europe/Warsaw",
+        city="Berlin",
+        latitude=52.52,
+        longitude=13.405,
+    )
+    wroclaw_key = daily_weather.weather_location_key(wroclaw)
+    berlin_key = daily_weather.weather_location_key(berlin)
+    (tmp_path / "last-daily-weather.json").write_text(
+        json.dumps(
+            {
+                "lastReport": {"id": "berlin-global", "city": "Berlin"},
+                "lastManualRefreshAt": "2026-06-25T10:20:00+00:00",
+                "manualRefreshRetryAt": "2026-06-25T14:00:00+02:00",
+                "locationReports": {
+                    wroclaw_key: {
+                        "city": "Wrocław",
+                        "latitude": 51.1079,
+                        "longitude": 17.0385,
+                        "lastManualRefreshAt": "2026-06-25T10:15:00+00:00",
+                        "manualRefreshRetryAt": "2026-06-25T13:00:00+02:00",
+                        "lastHourlyRefreshAt": "2026-06-25T10:15:00+00:00",
+                        "nextHourlyRefreshAt": "2026-06-25T13:00:00+02:00",
+                        "lastReport": {"id": "wroclaw-local", "city": "Wrocław"},
+                    },
+                    berlin_key: {
+                        "city": "Berlin",
+                        "latitude": 52.52,
+                        "longitude": 13.405,
+                        "lastManualRefreshAt": "2026-06-25T10:20:00+00:00",
+                        "manualRefreshRetryAt": "2026-06-25T14:00:00+02:00",
+                        "lastReport": {"id": "berlin-local", "city": "Berlin"},
+                    },
+                },
+            }
+        ),
+        encoding="utf-8",
+    )
+
+    status = daily_weather.daily_weather_status(storage_dir=tmp_path, config=wroclaw)
+
+    assert status["lastReport"]["id"] == "wroclaw-local"
+    assert status["lastManualRefreshAt"] == "2026-06-25T10:15:00+00:00"
+    assert status["manualRefreshRetryAt"] == "2026-06-25T13:00:00+02:00"
+    assert status["lastHourlyRefreshAt"] == "2026-06-25T10:15:00+00:00"
+    assert status["nextHourlyRefreshAt"] == "2026-06-25T13:00:00+02:00"
 
 
 def test_hourly_weather_refresh_updates_cache_without_sending_pushes(tmp_path, monkeypatch):
@@ -2581,6 +3181,67 @@ def test_daily_weather_notifications_send_only_to_opted_in_devices():
     )
     assert sender.calls[0]["userInfo"]["notificationKind"] == "dailyWeather"
     assert sender.calls[0]["userInfo"]["weatherDate"] == "2026-06-25"
+
+
+def test_daily_weather_run_removes_only_dead_apns_devices(tmp_path, monkeypatch):
+    daily_weather = load_daily_weather()
+
+    class FakeAPNSError(RuntimeError):
+        status_code = 410
+        response_body = '{"reason":"Unregistered"}'
+
+    class FakeSender:
+        async def send_alert(self, device_token, title, body, user_info):
+            if device_token == "dead-weather-token":
+                raise FakeAPNSError("APNs returned HTTP 410: Unregistered")
+
+    async def fake_fetch_daily_weather_report(*, config, generated_at):
+        return {
+            "id": "wroclaw-test",
+            "city": config.city,
+            "date": generated_at.astimezone(config.zoneinfo).date().isoformat(),
+            "weekday": "sobota",
+            "temperature": {"current": 19.3, "unit": "°C"},
+            "conditions": {"label": "pochmurno"},
+        }
+
+    monkeypatch.setattr(daily_weather, "fetch_daily_weather_report", fake_fetch_daily_weather_report)
+    (tmp_path / "devices.json").write_text(
+        json.dumps(
+            {
+                "dead-weather-token": {"dailyWeatherEnabled": True},
+                "good-weather-token": {"dailyWeatherEnabled": True},
+                "files-only-token": {"dailyWeatherEnabled": False},
+            }
+        ),
+        encoding="utf-8",
+    )
+    config = daily_weather.DailyWeatherConfig(
+        enabled=True,
+        local_time=daily_weather.parse_time("07:30"),
+        timezone_name="Europe/Warsaw",
+        city="Wrocław",
+        latitude=51.1079,
+        longitude=17.0385,
+    )
+
+    result = asyncio.run(
+        daily_weather.run_daily_weather_once(
+            config=config,
+            storage_dir=tmp_path,
+            sender=FakeSender(),
+            force=True,
+        )
+    )
+    devices = json.loads((tmp_path / "devices.json").read_text(encoding="utf-8"))
+
+    assert result["status"] == "processed"
+    assert result["delivery"]["invalidDeviceTokens"] == 1
+    assert result["delivery"]["removedDevices"] == 1
+    assert "_invalidDeviceTokens" not in result["delivery"]
+    assert "dead-weather-token" not in devices
+    assert "good-weather-token" in devices
+    assert "files-only-token" in devices
 
 
 def test_forced_daily_weather_send_does_not_consume_scheduled_run(tmp_path, monkeypatch):

@@ -8,9 +8,10 @@ from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any, Callable
+from urllib.parse import urljoin
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
-from .core import load_json, save_json
+from .core import load_json, maybe_await, save_json
 
 
 DEFAULT_REDDIT_SUBREDDITS = ("Polska_wpz", "memes", "ProgrammerHumor")
@@ -133,14 +134,28 @@ async def latest_humor_digest(
     config: DailyHumorConfig,
     storage_dir: Path,
     now: datetime | None = None,
+    manifest_url: str | None = None,
+    fetch_json: Callable[[str], Any] | None = None,
 ) -> dict[str, Any]:
     state_path = storage_dir / "last-daily-humor.json"
     state = load_json(state_path, {})
     cached = state.get("lastDigest")
     now = now or datetime.now(timezone.utc)
     if config.external_source:
-        if isinstance(cached, dict):
-            return cached
+        manifest_digest = None
+        if manifest_url and fetch_json is not None:
+            try:
+                manifest_digest = await latest_manifest_humor_digest(
+                    manifest_url=manifest_url,
+                    fetch_json=fetch_json,
+                )
+            except Exception:
+                manifest_digest = None
+        freshest = freshest_humor_digest(
+            digest for digest in [cached, manifest_digest] if isinstance(digest, dict)
+        )
+        if freshest is not None:
+            return freshest
         return build_humor_digest(
             items=fallback_humor_items(config.max_items),
             config=config,
@@ -150,6 +165,84 @@ async def latest_humor_digest(
         return cached
     result = await run_humor_refresh_once(config=config, storage_dir=storage_dir, generated_at=now)
     return result["digest"]
+
+
+async def latest_manifest_humor_digest(
+    *,
+    manifest_url: str,
+    fetch_json: Callable[[str], Any],
+) -> dict[str, Any] | None:
+    manifest = await maybe_await(fetch_json(manifest_url))
+    if not isinstance(manifest, dict):
+        return None
+    artifact = latest_reddit_radar_data_artifact(manifest)
+    if artifact is None:
+        return None
+    artifact_url = resolved_manifest_artifact_url(
+        artifact=artifact,
+        manifest=manifest,
+        manifest_url=manifest_url,
+    )
+    if not artifact_url:
+        return None
+    digest = await maybe_await(fetch_json(artifact_url))
+    return digest if isinstance(digest, dict) else None
+
+
+def latest_reddit_radar_data_artifact(manifest: dict[str, Any]) -> dict[str, Any] | None:
+    artifacts = manifest.get("artifacts")
+    if not isinstance(artifacts, list):
+        return None
+    candidates = [
+        artifact
+        for artifact in artifacts
+        if isinstance(artifact, dict)
+        and artifact.get("topic") == "reddit-radar"
+        and artifact.get("type") == "redditRadarData"
+    ]
+    if not candidates:
+        return None
+    return max(
+        candidates,
+        key=lambda artifact: (
+            str(artifact.get("date") or ""),
+            str(artifact.get("time") or ""),
+            str(artifact.get("path") or artifact.get("url") or ""),
+        ),
+    )
+
+
+def resolved_manifest_artifact_url(
+    *,
+    artifact: dict[str, Any],
+    manifest: dict[str, Any],
+    manifest_url: str,
+) -> str | None:
+    artifact_url = str(artifact.get("url") or artifact.get("path") or "").strip()
+    if not artifact_url:
+        return None
+    if artifact_url.startswith("http://") or artifact_url.startswith("https://"):
+        return artifact_url
+    raw_base_url = str(manifest.get("rawBaseUrl") or "").strip()
+    if raw_base_url:
+        return urljoin(raw_base_url.rstrip("/") + "/", artifact_url.lstrip("/"))
+    base_url = manifest_url.rsplit("/", 1)[0] + "/"
+    if base_url.endswith("/public/"):
+        base_url = base_url[: -len("public/")]
+    return urljoin(base_url, artifact_url.lstrip("/"))
+
+
+def freshest_humor_digest(digests: Any) -> dict[str, Any] | None:
+    candidates = [digest for digest in digests if isinstance(digest, dict)]
+    if not candidates:
+        return None
+    return max(
+        candidates,
+        key=lambda digest: (
+            parse_datetime(digest.get("generatedAt")) or datetime.min.replace(tzinfo=timezone.utc),
+            str(digest.get("id") or ""),
+        ),
+    )
 
 
 async def run_humor_refresh_once(

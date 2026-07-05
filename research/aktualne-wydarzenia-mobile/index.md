@@ -1,16 +1,47 @@
 # Topic Index: aktualne-wydarzenia-mobile
 
-Last updated: 2026-07-03
+Last updated: 2026-07-05
 
 ## Current Understanding
 
+Poranny run z `2026-07-05-1016` dołożył publiczne wyniki WIOŚ dla Bobru z `3 lipca` oraz kolejne publikacje dla `2 lipca` i uzupełnienia do `30 czerwca`. To przesuwa temat z samego zakazu do pełniejszej warstwy danych, ale nadal nie daje przyczyny ani daty końca ograniczeń; DUW zapowiada kolejną aktualizację na `14:00`.
+
+W świecie doszła dziś Mołdawia. Dymisja premiera Munteanu i rządu stała się nowym politycznym problemem europejskim, a OCHA uzupełniła obraz Gazy o duży wzrost przypadków ospy wietrznej. Jednocześnie AP opisała ostrzejszą, bardziej osobistą presję Trumpa wobec NATO przed Ankarą, więc główny światowy wektor nadal biegnie przez sojusz, wojnę i humanitarne skutki konfliktów.
+
+W krajowej osi bezpieczeństwa Kleczew nadal jest ważny jako liczba i symbol, ale bez nowej decyzji wykonawczej. Publiczna linia o obecności USA pozostaje spójna, jednak nadal bez terminu, jednostki i kosztorysu stałej bazy.
+
+Warstwa technologiczna pozostaje bez nowego zwrotu: lipcowa lista sygnatariuszy kodeksu AI jeszcze się nie pojawiła, CSAM wraca jako pomostowy mechanizm do `2028`, a DIANA przeszła już z naboru do oceny.
+
+Wieczorny run z `2026-07-04-1934` przesunął temat z porannych sygnałów do
+bardziej wykonawczego stanu dnia. Bóbr nie jest już tylko alertem RCB, bo
+doszły rozporządzenie wojewody, publiczny zakres zakazów oraz terenowy
+monitoring WIOŚ z sześcioma próbkami i bez stwierdzonych śniętych ryb w wizji
+z `4 lipca`. To nadal nie daje przyczyny incydentu, ale wyraźnie zmienia wagę
+sprawy z lokalnego ostrzeżenia na twardą interwencję administracyjną.
+
+Kleczew też dojrzał między porankiem a wieczorem. Rząd ma już gotowy komunikat
+po wizycie z prawie `270 MW`, prawie `500 tys.` paneli, ponad `400 ha` i
+potencjałem dla `100 tys.` gospodarstw domowych, więc OZE zostało dziś
+opowiedziane nie jako abstrakcyjna transformacja, tylko jako policzalna
+infrastruktura bezpieczeństwa energetycznego.
+
+W osi polityczno-wojskowej KPRP dołożyła mocniejszy język o potrzebie stałej
+obecności wojsk USA w Polsce, a Ankara przechodzi już w tryb realnej operacji:
+NATO ma forum przemysłu obronnego i logistykę szczytu, Turcja zaś dokłada
+twarde zabezpieczenia. Najważniejsza korekta światowa dotyczy jednak OCHA.
+Poranna luka źródłowa została zamknięta, bo wieczorem dostępny jest już nowy
+`Humanitarian Situation Report | 3 July 2026` oraz snapshot Gazy z `1 lipca`.
+Lipiec jeszcze mocniej układa się więc jako miesiąc wdrożeń: zakazy na Bobrze,
+wykonawczy Kleczew, twardsza Ankara, świeższy humanitaryzm i coraz bliższe
+obowiązki transparentności AI.
+
 Temat służy do codziennego tworzenia mobilnego briefu o najważniejszych
-wydarzeniach publicznych z Polski i świata. Wieczorny run z `2026-07-03-1934`
-przesunął obraz dnia z porannego katalogu ryzyk na bardziej wykonawczą warstwę
-państwa i sojuszu: oficjalne gaszenie napięć Polska–Ukraina, wejście od
-`4 lipca 2026` nowych obowiązków z ustawy o zarządzaniu kryzysowym, mocniejszy
-przekaz KPRP o stałej bazie USA, nacisk na systemowe bezpieczeństwo gazowe oraz
-szczegółowy harmonogram Ankary.
+wydarzeniach publicznych z Polski i świata. Poranny run z `2026-07-04-1023`
+dodał nowy alert RCB o możliwym skażeniu Bobru, publiczną wizytę premiera i
+ministra energii w Kleczewie, prezydencki gest wobec USA oraz bardziej
+konkretny harmonogram Ankary. Brief dziś przesuwa się więc z samej reakcji na
+ryzyko do połączenia lokalnej wody, energii, symboliki sojuszu i policzalnego
+NATO.
 
 W Polsce wieczór nie przyniósł nowego wielkiego bilansu katastroficznego ponad
 poranny raport RCB o północnym wietrze, suszy hydrologicznej, `4` utonięciach,
@@ -55,6 +86,10 @@ najważniejsze pytania dotyczą teraz wdrożenia nowych obowiązków kryzysowych
 trwałości deeskalacji Polska–Ukraina, konkretnych parametrów bazy USA i Ankary
 oraz odzyskania stabilnego renderu audio bez ręcznych obejść.
 
+Poranny run `2026-07-04-1023` dodał do tego jeszcze bardziej praktyczny
+wektor: Bóbr jako lokalny problem wodny, Kleczew jako publiczny sygnał OZE i
+Ankarę jako już policzalny program, a nie tylko datę w kalendarzu.
+
 ## Stable Facts
 
 - Materiał ma korzystać z aktualnych, wiarygodnych źródeł i zachowywać linki do
@@ -69,6 +104,14 @@ oraz odzyskania stabilnego renderu audio bez ręcznych obejść.
 - Czy po kilku pierwszych produkcyjnych runach brief powinien już niemal
   całkowicie preferować wyniki i liczby po wydarzeniach, a mocniej ciąć same
   zapowiedzi?
+- Czy alert o możliwym skażeniu Bobru szybko dostanie przyczynę, lokalny bilans
+  i konkretny komunikat o remediacji?
+- Czy dzisiejsze wyniki Bobru i planowana aktualizacja o `14:00` pozwolą
+  wreszcie wskazać przyczynę incydentu?
+- Czy wizyta w Kleczewie przełoży się na nowy, twardy komunikat energetyczny,
+  czy zostanie na poziomie pokazu skali instalacji?
+- Kto przejmie ster w Mołdawii po dymisji premiera Munteanu i czy konsultacje
+  Sandu przyspieszą wybór nowego szefa rządu?
 - Czy w codziennym formacie lepiej utrzymywać pięć-sześć segmentów, czy zejść do
   czterech najmocniejszych tematów?
 - Jak szybko po podpisaniu Orki pojawi się publiczny harmonogram dostaw,
@@ -94,6 +137,9 @@ oraz odzyskania stabilnego renderu audio bez ręcznych obejść.
 - Czy wejście w życie nowelizacji ustawy o zarządzaniu kryzysowym od
   `4 lipca 2026` szybko przełoży się na publiczne checklisty, dokumenty albo
   pierwsze sygnały wdrożeniowe po stronie operatorów i administracji?
+- Czy po rozporządzeniu wojewody i pomiarach WIOŚ pojawi się oficjalny komunikat
+  podający przyczynę sytuacji na Bobrze, wyniki laboratoryjne i termin
+  zniesienia zakazu?
 - Czy obowiązujące od `1 lipca 2026` tymczasowe `3 euro` cło na małe przesyłki
   szybko przełoży się na praktyczne komunikaty platform, sprzedawców i służb
   celnych o kosztach oraz egzekucji?
@@ -109,6 +155,13 @@ oraz odzyskania stabilnego renderu audio bez ręcznych obejść.
   bezpieczeństwie Bałtyku.
 - Czy po wydarzeniach w Gdańsku pojawią się szczegółowe listy podpisanych umów,
   projektów i beneficjentów dla ogłoszonych pakietów finansowych.
+- Czy alert o Bobrze pozostanie lokalny, czy przerodzi się w szerszy problem
+  wodny, środowiskowy albo samorządowy.
+- Czy Kleczew po wizycie premiera i ministra energii stanie się początkiem
+  bardziej konkretnych komunikatów o inwestycjach, sieci albo bezpieczeństwie
+  energetycznym.
+- Czy Mołdawia szybko wskaże nowego premiera i czy dymisja zmieni ton wokół
+  europejskiej ścieżki kraju.
 - Czy propozycja Komisji Europejskiej o ochronie tymczasowej do 4 marca 2028
   roku zostanie szybko przyjęta przez Radę UE i jak będzie odbierana
   politycznie w państwach członkowskich.
@@ -130,9 +183,10 @@ oraz odzyskania stabilnego renderu audio bez ręcznych obejść.
   publiczne sygnały dalszej deeskalacji albo twardsze ustalenia wojskowe i
   gospodarcze przed szczytem NATO.
 - Jakość linków źródłowych przy materialnych twierdzeniach.
-- Czy oba warianty TTS powstają i zapisują status w `tts_variants.json`.
-- Czy proposal stabilizacji `male-xtts` przełoży się na brak ręcznego
-  przerywania kolejnych runów.
+- Czy wymagany wariant `female-piper` powstaje i zapisuje status w
+  `tts_variants.json`.
+- Czy wycofanie niestabilnego drugiego wariantu audio przełoży się na brak
+  ręcznego przerywania kolejnych runów.
 - Czy nowy proposal naprawy lokalnego `ffmpeg`/`x265` przywróci render MP3 dla
   `female-piper` bez naruszania zasad aktywnego tematu.
 - Czy obejście z `DYLD_FALLBACK_LIBRARY_PATH` okaże się powtarzalne w kolejnych
@@ -152,6 +206,14 @@ oraz odzyskania stabilnego renderu audio bez ręcznych obejść.
 
 ## Recent Reports
 
+- [2026-07-05-1016](runs/2026-07-05-1016.md) - poranek dokłada Bobrowi nowe tabele, Mołdawii dymisję rządu, Gazie ospę wietrzną i mocniejszy ton NATO.
+
+- [2026-07-04-1934](runs/2026-07-04-1934.md) - wieczór przełącza Bóbr w tryb
+  zakazu i monitoringu, domyka Kleczew po wizycie, wzmacnia wątek USA i
+  uzupełnia świat świeżym raportem OCHA.
+- [2026-07-04-1023](runs/2026-07-04-1023.md) - poranek przynosi alert RCB o
+  Bobrze, wizytę premiera w Kleczewie, symboliczny gest wobec USA, rozpisaną
+  Ankarę i stabilny wariant `female-piper`.
 - [2026-06-23](runs/2026-06-23.md) - pełny produkcyjny brief: V4, Turcja, UE,
   NATO, RCB, IMGW i USA-Iran.
 - [2026-06-24](runs/2026-06-24.md) - Turcja, SAFE, upał i susza, NATO-Waszyngton

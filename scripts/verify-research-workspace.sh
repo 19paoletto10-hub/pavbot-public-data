@@ -68,6 +68,9 @@ required_files=(
   "scripts/generate_pavbot_manifest.py"
   "scripts/pavbot_commit_and_push_outputs.sh"
   "scripts/pavbot_publication_contract.py"
+  "scripts/pavbot_preflight_source_check.py"
+  "scripts/pavbot_tts_healthcheck.sh"
+  "scripts/pavbot_usage_ledger.py"
   "scripts/pavbot_pdf_theme.py"
   "scripts/render_mobile_news_data.py"
   "scripts/render_research_pdf.py"
@@ -150,6 +153,7 @@ required_files=(
   "research/aktualne-wydarzenia-mobile/podcasts/.gitkeep"
   "research/aktualne-wydarzenia-mobile/proposals/.gitkeep"
   "research/aktualne-wydarzenia-mobile/automation-prompt.md"
+  "research/aktualne-wydarzenia-mobile/tools/render_mobile_tts_audio.sh"
   "research/aktualne-wydarzenia-mobile/tools/render_mobile_brief_pdf.py"
   "research/aktualne-wydarzenia-mobile/tools/render_mobile_newspaper_pdf.py"
   "research/aktualne-wydarzenia-mobile/tools/render_two_tts_variants.sh"
@@ -160,6 +164,7 @@ required_files=(
   "research/puls-dnia-news/data/.gitkeep"
   "research/puls-dnia-news/proposals/.gitkeep"
   "research/puls-dnia-news/automation-prompt.md"
+  "research/reddit-radar/automation-prompt.md"
 )
 
 missing=0
@@ -295,6 +300,9 @@ grep -q 'buildConfiguration = "Release"' ios/PavbotViewer/PavbotViewer.xcodeproj
 grep -q 'generate_pavbot_manifest.py' docs/how-to-use.md
 grep -q 'PAVBOT_MANIFEST_URL' docs/how-to-use.md
 grep -q 'pavbot_commit_and_push_outputs.sh' docs/how-to-use.md
+grep -q 'pavbot_usage_ledger.py' scripts/pavbot_commit_and_push_outputs.sh
+grep -q '.pavbot/private/usage-ledger.sqlite3' docs/automation-operations.md
+grep -q '.pavbot/private/' .gitignore
 grep -q 'Kind: `researchAudio`' docs/how-to-use.md
 grep -F -q 'RUN_STAMP=$(TZ=Europe/Warsaw date +%Y-%m-%d-%H%M)' docs/how-to-use.md
 grep -q 'runs/YYYY-MM-DD-HHMM.md' docs/how-to-use.md
@@ -477,9 +485,10 @@ grep -q 'Wprowadzenie' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'minimum dwa artykuły' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'render_mobile_news_data.py' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'validate_mobile_news_data.py' research/aktualne-wydarzenia-mobile/automation-prompt.md
-grep -q 'render_two_tts_variants.sh' research/aktualne-wydarzenia-mobile/automation-prompt.md
-grep -q 'female-piper' research/aktualne-wydarzenia-mobile/tools/render_two_tts_variants.sh
-grep -q 'male-xtts' research/aktualne-wydarzenia-mobile/tools/render_two_tts_variants.sh
+grep -q 'render_mobile_tts_audio.sh' research/aktualne-wydarzenia-mobile/automation-prompt.md
+grep -q 'female-piper' research/aktualne-wydarzenia-mobile/tools/render_mobile_tts_audio.sh
+! grep -q 'male-xtts' research/aktualne-wydarzenia-mobile/automation-prompt.md
+! grep -q 'male-xtts' research/aktualne-wydarzenia-mobile/tools/render_mobile_tts_audio.sh
 grep -q 'podcastAudioVariant' scripts/generate_pavbot_manifest.py
 grep -q 'jobsData' scripts/generate_pavbot_manifest.py
 grep -q 'case jobsData' ios/PavbotViewer/Sources/Models/PavbotManifest.swift
@@ -491,6 +500,12 @@ grep -q 'pulseNewsData' ios/PavbotViewer/Sources/Services/TodayLiveTopicsService
 grep -q 'TodayLiveTopicsPairPage' ios/PavbotViewer/Sources/Views/TodayLiveTopicsView.swift
 grep -q 'pavbot-puls-dnia-news-3h' docs/how-to-use.md
 grep -q 'pavbot-puls-dnia-news-3h' docs/automation-operations.md
+grep -q '00:06, 06:06, 12:06 and 18:06 Europe/Warsaw' docs/how-to-use.md
+grep -q 'daily at 17:40 Europe/Warsaw; 03:40 run paused' docs/how-to-use.md
+grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/reddit-radar' research/reddit-radar/automation-prompt.md
+grep -q 'verify-remote research/reddit-radar --ref origin/main' research/reddit-radar/automation-prompt.md
+! grep -qi 'do not commit' research/reddit-radar/automation-prompt.md
+! grep -qi 'do not push' research/reddit-radar/automation-prompt.md
 grep -q '\$daily-research-agent' research/puls-dnia-news/automation-prompt.md
 grep -q 'validate_pulse_news_data.py' research/puls-dnia-news/automation-prompt.md
 grep -q 'data/YYYY-MM-DD-HHMM-pulse-news.json' research/puls-dnia-news/automation-prompt.md

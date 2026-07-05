@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-05",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run przesuwa podcast w stronę całego łańcucha AI, a nie pojedynczego modelu. Z jednej strony kończy się epoka Mechanical Turk jako starego crowdsourcingowego zaplecza dla danych i annotacji. Z drugiej Mistral publikuje Leanstral 1.5 jako specjalistyczny model do Lean 4, a Midjourney otwiera kolejny front w sporze o to, kto ma ujawniać użycie AI w discovery.",
+    "Po stronie rynku i platform widać dwa równoległe sygnały. EquiLibre pokazuje, że kapitał nadal płynie do AI, tylko coraz częściej do wyspecjalizowanych zastosowań, takich jak trading i reinforcement learning. Telegram z kolei dostaje od indyjskich władz 15-dniowy termin na wzmocnienie walki z piractwem, co jest kolejnym sygnałem, że platform accountability przechodzi od pojedynczych takedownów do systemowej odpowiedzialności."
+  ],
+  "summaryBullets": [
+    "Infrastruktura: AWS Mechanical Turk wchodzi w wygaszanie",
+    "Modele: Mistral publikuje Leanstral 1.5",
+    "AI / prawo: Midjourney chce odkrycia po obu stronach"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-05-0-aws-mechanical-turk-wchodzi-w-wygaszanie-993f24cd85",
+      "section": "Infrastruktura",
+      "title": "AWS Mechanical Turk wchodzi w wygaszanie",
+      "standfirst": "AWS przestaje przyjmować nowych klientów do Mechanical Turk, a usługa trafia do trybu maintenance. To sygnał, że stara warstwa crowdsourcingu dla danych i annotacji wchodzi w fazę wygaszania.",
+      "whatHappened": "Amazon zapowiedział zamknięcie Mechanical Turk dla nowych klientów od 30 lipca 2026 roku.",
+      "whyItMatters": "To symboliczny koniec epoki, w której AI opierała się na masowym, taniutkim ludzkim wykonywaniu mikro-zadań, a nie na wyspecjalizowanych procesach jakości i danych.",
+      "deeperAnalysis": [
+        "Mechanical Turk był jednym z najbardziej rozpoznawalnych przykładów „ludzkiego backendu” dla internetu i później dla AI. Gdy AWS przenosi usługę do maintenance i zamyka ją dla nowych klientów, chodzi nie tylko o stary produkt, ale o zmieniający się model operacyjny całej branży. Coraz więcej firm chce kontrolowanych pipeline'ów do danych, walidacji i anotacji, zamiast luźnego marketplace'u.",
+        "To ważne również dlatego, że pokazuje ewolucję samego AWS. Jeżeli Amazon sam wygasza narzędzie, które kiedyś pomagało trenować i weryfikować systemy, to znaczy, że rdzeń rynku przesunął się w stronę bardziej zarządzalnych usług i własnych odpowiedników typu GroundTruth. Dla podcastu to dobry otwieracz, bo od razu ustawia ramę: AI nie żyje w próżni, tylko na warstwie pracy ludzi i procesów."
+      ],
+      "contextPoints": [
+        "Co się stało: AWS zamyka Mechanical Turk dla nowych klientów od 30 lipca 2026 roku.",
+        "Dlaczego ważne: rynek AI odchodzi od luźnego crowdsourcingu na rzecz kontrolowanych pipeline'ów danych.",
+        "Na co patrzeć dalej: migrację klientów do Ground Truth i reakcję rynku data labeling."
+      ],
+      "sources": [
+        {
+          "title": "The Register",
+          "url": "https://www.theregister.com/off-prem/2026/07/03/amazons-mechanical-turk-to-stop-accepting-new-customers-and-not-even-ai-can-save-it/5266274"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AWS",
+        "crowdsourcing",
+        "AI ops",
+        "labeling",
+        "SageMaker"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-05-1-mistral-publikuje-leanstral-1-5-bc7208cdbf",
+      "section": "Modele",
+      "title": "Mistral publikuje Leanstral 1.5",
+      "standfirst": "Mistral wypuszcza Leanstral 1.5, darmowy model Apache 2.0 do formal proof engineering w Lean 4. To nie jest ogólny czat, tylko wyspecjalizowane narzędzie do dowodów i weryfikacji.",
+      "whatHappened": "Firma udostępniła model o łącznej skali 119 miliardów parametrów, z czego 6 miliardów jest aktywnych.",
+      "whyItMatters": "Rynek AI przesuwa się w stronę modeli zadaniowych, które nie próbują robić wszystkiego, tylko rozwiązują jedną klasę problemów naprawdę dobrze.",
+      "deeperAnalysis": [
+        "Leanstral 1.5 jest ciekawy, bo pokazuje dojrzewanie całego segmentu „specjalistycznych agentów”. Mistral opisuje model nie jako kolejny ogólny LLM, ale jako narzędzie do Lean 4, które potrafi pracować w pętli z compilerem, poprawiać dowody i wykrywać błędy w repozytoriach. To jest inny poziom ambicji niż zwykła generacja tekstu.",
+        "W praktyce to także sygnał dla rynku open source: firmy nadal chcą otwartych modeli, ale coraz bardziej cenione są modele użyteczne w konkretnym workflow. W podcaście warto podkreślić, że to nie jest tylko „Mistral też ma model”, lecz przykład przejścia od generalistycznego AI do wąsko wyspecjalizowanego narzędzia produkcyjnego."
+      ],
+      "contextPoints": [
+        "Co się stało: Mistral opublikowało Leanstral 1.5 jako darmowy model Apache 2.0.",
+        "Dlaczego ważne: specjalizacja staje się ważniejsza niż ogólność, zwłaszcza w narzędziach proof engineering.",
+        "Na co patrzeć dalej: adopcję w Lean 4, benchmarki i integracje z agentowymi workflow developerów."
+      ],
+      "sources": [
+        {
+          "title": "Mistral AI",
+          "url": "https://mistral.ai/news/leanstral-1-5/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Mistral",
+        "open source",
+        "Lean 4",
+        "formal verification",
+        "code agent"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-05-2-midjourney-chce-odkrycia-po-obu-stronach-6f4d912f70",
+      "section": "AI / prawo",
+      "title": "Midjourney chce odkrycia po obu stronach",
+      "standfirst": "Midjourney prosi sąd, by Disney, Universal i Warner Bros ujawniły własne użycie AI. Spór o copyright przestaje być jednokierunkowy i wchodzi w fazę odkrywania praktyk po obu stronach.",
+      "whatHappened": "Start-up chce poszerzyć zakres discovery w batalii sądowej ze studiami.",
+      "whyItMatters": "Jeżeli studia same używają generatywnego AI, to argumenty o szkodzie rynkowej i fair use stają się dużo bardziej złożone.",
+      "deeperAnalysis": [
+        "To jest ważna historia nie tylko dla Midjourney, ale dla całej branży generatywnej. Jeśli sąd pozwoli na szersze odkrycie, spór przesunie się z prostego „czy trenowanie na cudzych obrazach jest dozwolone” na pytanie, jak studia same wykorzystują AI w produkcji, promocji i postprodukcji. To z kolei może zmienić ton całej debaty o uczciwym użyciu.",
+        "Warto też zauważyć, że ten front ma znaczenie operacyjne. Każdy większy dostawca AI może w pewnym momencie znaleźć się w sytuacji, w której musi ujawniać nie tylko dane wejściowe, ale również wewnętrzne prompty, wyniki i praktyki workflow. Dlatego ta historia dobrze spina się z podcastową tezą o przejściu z demo do governance."
+      ],
+      "contextPoints": [
+        "Co się stało: Midjourney chce rozszerzyć discovery na praktyki AI po stronie studiów.",
+        "Dlaczego ważne: sprawa copyright staje się dwukierunkowa i bardziej procesowa niż technologiczna.",
+        "Na co patrzeć dalej: decyzję sądu, zakres ujawnianych materiałów i reakcję innych studiów."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/04/midjourney-wants-hollywood-studios-to-reveal-the-details-of-their-ai-usage/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Midjourney",
+        "copyright",
+        "Hollywood",
+        "discovery",
+        "generative AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-05-3-equilibre-przyciaga-kapital-do-ai-tradingu-a280432194",
+      "section": "Startupy",
+      "title": "EquiLibre przyciąga kapitał do AI tradingu",
+      "standfirst": "EquiLibre, praski lab założony przez trzech byłych badaczy DeepMind, został wyceniony na 500 milionów dolarów po rundzie Series A. Firma twierdzi, że jej agenty handlują już na dużą skalę.",
+      "whatHappened": "Start-up zbudowany wokół reinforcement learning i tradingu wszedł do grona bardzo wysoko wycenianych AI labów.",
+      "whyItMatters": "Kapitał nadal płynie do AI, ale coraz częściej do projektów, które mają jasny scoring, jak trading, a nie tylko do ogólnych asystentów.",
+      "deeperAnalysis": [
+        "EquiLibre jest dobrym kontrapunktem dla narracji o „AI do wszystkiego”. Tutaj produkt jest bardzo konkretny: systemy uczą się na rynkach, liczą wynik, optymalizują się w oparciu o reinforcement learning i próbują robić to w realnym obrocie. To brzmi bardziej jak laboratorium niż klasyczny fintech.",
+        "To także europejski sygnał. Wysoko wyceniony zespół z Pragi pokazuje, że nie wszystko musi dziać się w San Francisco albo Londynie, żeby przyciągnąć pieniądze i talent. W podcaście ta historia dobrze brzmi jako przykład, że AI startupy dziś wygrywają wtedy, gdy mają bardzo precyzyjny problem i bardzo mierzalny wynik."
+      ],
+      "contextPoints": [
+        "Co się stało: EquiLibre zamknęło Series A przy wycenie 500 mln USD.",
+        "Dlaczego ważne: trading daje AI bardzo twardy scoring i szybki feedback loop.",
+        "Na co patrzeć dalej: skalę obrotów, stabilność wyników i ryzyko regulacyjne."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/06/30/the-deepmind-trio-who-built-a-poker-ai-are-now-making-money-for-quant-hedge-funds/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "fintech",
+        "trading",
+        "reinforcement learning",
+        "Europe"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-05-4-telegram-dostaje-15-dni-na-walke-z-piractwem-e9c3481689",
+      "section": "Platformy / regulacje",
+      "title": "Telegram dostaje 15 dni na walkę z piractwem",
+      "standfirst": "Indyjskie ministerstwo daje Telegramowi 15 dni na mocniejsze działania przeciw pirackim filmom i innym chronionym treściom. To kolejny krok od pojedynczych takedownów do odpowiedzialności platformy za cały system.",
+      "whatHappened": "Władze chcą action taken report i mocniejszych mechanizmów wykrywania, usuwania oraz blokowania repeat infringers.",
+      "whyItMatters": "Platformy komunikacyjne i społecznościowe są coraz częściej oceniane nie po tym, czy reagują na pojedyncze zgłoszenia, ale po tym, czy mają systemową kontrolę nad obiegiem treści.",
+      "deeperAnalysis": [
+        "W tym newsie ważna jest nie tylko treść wezwania, ale język, jakim posługuje się urząd. MIB wyraźnie przesuwa oczekiwania z reaktywnego usuwania kanałów na sprawdzanie, czy platforma ma realne mechanizmy przeciwdziałania powtarzalnym naruszeniom. To właśnie jest platform accountability.",
+        "To przydatny kontrast do poprzednich tematów: model może być coraz lepszy, ale jeśli dystrybucja, komunikacja i piractwo nie są pod kontrolą, to cały ekosystem znów wpada w problem zaufania. Telegram jest tu tylko najnowszym przykładem większego trendu."
+      ],
+      "contextPoints": [
+        "Co się stało: Indie dają Telegramowi 15 dni na wzmocnienie walki z piractwem.",
+        "Dlaczego ważne: komunikatory i platformy społecznościowe są oceniane po systemowych mechanizmach kontroli treści.",
+        "Na co patrzeć dalej: action taken report, odpowiedź Telegramu i ewentualne podobne wezwania wobec innych usług."
+      ],
+      "sources": [
+        {
+          "title": "Hindustan Times",
+          "url": "https://www.hindustantimes.com/india-news/15day-govt-notice-for-telegram-to-act-on-piracy-channels-101783190498854.html"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Telegram",
+        "India",
+        "copyright",
+        "platform accountability",
+        "moderation"
+      ]
+    }
+  ],
+  "podcastTopics": [],
+  "checkedSources": [
+    {
+      "title": "Techmeme",
+      "url": "https://www.techmeme.com/"
+    },
+    {
+      "title": "Techmeme River",
+      "url": "https://www.techmeme.com/river"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Mistral Leanstral 1.5",
+      "url": "https://mistral.ai/news/leanstral-1-5/"
+    },
+    {
+      "title": "TechCrunch o Midjourney",
+      "url": "https://techcrunch.com/2026/07/04/midjourney-wants-hollywood-studios-to-reveal-the-details-of-their-ai-usage/"
+    },
+    {
+      "title": "TechCrunch o EquiLibre",
+      "url": "https://techcrunch.com/2026/06/30/the-deepmind-trio-who-built-a-poker-ai-are-now-making-money-for-quant-hedge-funds/"
+    },
+    {
+      "title": "The Register o Mechanical Turk",
+      "url": "https://www.theregister.com/off-prem/2026/07/03/amazons-mechanical-turk-to-stop-accepting-new-customers-and-not-even-ai-can-save-it/5266274"
+    },
+    {
+      "title": "Hindustan Times o Telegram",
+      "url": "https://www.hindustantimes.com/india-news/15day-govt-notice-for-telegram-to-act-on-piracy-channels-101783190498854.html"
+    }
+  ]
+}

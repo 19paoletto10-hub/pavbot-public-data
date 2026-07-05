@@ -107,6 +107,10 @@ def source_links(text: str) -> list[tuple[str, str]]:
     return [(label.strip(), url.strip()) for label, url in re.findall(r"\[([^\]]+)\]\((https?://[^)]+)\)", text)]
 
 
+def strip_markdown_links(text: str) -> str:
+    return re.sub(r"\[([^\]]+)\]\((https?://[^)]+)\)", r"\1", text)
+
+
 def unique_links(links: list[tuple[str, str]]) -> list[tuple[str, str]]:
     unique: list[tuple[str, str]] = []
     seen: set[str] = set()
@@ -140,6 +144,8 @@ def split_sections(markdown_text: str) -> tuple[str, dict[str, list[str]], dict[
         line = raw.rstrip()
         stripped = line.strip()
         if not stripped:
+            if current in sections and sections[current] and sections[current][-1] != "":
+                sections[current].append("")
             continue
         if stripped.startswith("# "):
             title = stripped[2:].strip()
@@ -156,7 +162,9 @@ def split_sections(markdown_text: str) -> tuple[str, dict[str, list[str]], dict[
         section_lines = sections.setdefault(current, [])
         if stripped.startswith("- "):
             section_lines.append(stripped)
-        elif section_lines and section_lines[-1].startswith("- "):
+        elif section_lines and section_lines[-1] and section_lines[-1].startswith("- "):
+            section_lines[-1] = f"{section_lines[-1]} {stripped}"
+        elif section_lines and section_lines[-1]:
             section_lines[-1] = f"{section_lines[-1]} {stripped}"
         else:
             section_lines.append(stripped)
@@ -180,6 +188,7 @@ def build_styles() -> dict[str, ParagraphStyle]:
 
 def make_card(text: str, styles: dict[str, ParagraphStyle], background=colors.white) -> Table:
     clean = text[2:].strip() if text.startswith("- ") else text
+    clean = strip_markdown_links(clean)
     main_text, source_sep, source_text = clean.partition(" Source: ")
     lead, sentence_sep, rest = main_text.partition(". ")
 
@@ -317,6 +326,8 @@ def render_mobile_pdf(
         if section_name in sections:
             story.append(Paragraph("Nowe fakty", styles["section"]))
             for line in sections[section_name][:8]:
+                if not line.strip():
+                    continue
                 story.append(KeepTogether([make_card(line, styles), Spacer(1, 4)]))
             break
 
@@ -324,6 +335,8 @@ def render_mobile_pdf(
         if section_name in sections:
             story.append(Paragraph("Interpretacja", styles["section"]))
             for line in sections[section_name][:5]:
+                if not line.strip():
+                    continue
                 story.append(KeepTogether([make_card(line, styles, background=SURFACE), Spacer(1, 4)]))
             break
 
@@ -332,12 +345,12 @@ def render_mobile_pdf(
     story.append(Spacer(1, 5))
     script_preview = re.sub(r"\s+", " ", re.sub(r"^#.*$", "", script_text, flags=re.MULTILINE)).strip()
     if script_preview:
-        story.append(Paragraph(markdown_inline(short(script_preview, 520)), styles["body"]))
+        story.append(Paragraph(markdown_inline(short(script_preview, 320)), styles["body"]))
 
     story.append(PageBreak())
     story.append(Paragraph("Źródła", styles["section"]))
     if source_items:
-        story.append(source_list_flowable(source_items[:24], styles, limit=24))
+        story.append(source_list_flowable(source_items[:12], styles, limit=12))
     else:
         story.append(Paragraph("Brak linków źródłowych w raporcie lub sources.md.", styles["body"]))
 

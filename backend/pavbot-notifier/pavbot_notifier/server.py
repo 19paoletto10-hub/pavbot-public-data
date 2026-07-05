@@ -17,6 +17,7 @@ from .core import (
     load_json,
     normalized_public_notifier_url,
     notifier_status,
+    prune_invalid_device_tokens,
     save_json,
     send_apns_change_notifications,
     verify_github_signature,
@@ -33,6 +34,7 @@ from .daily_weather import (
 )
 from .daily_humor import (
     DailyHumorConfig,
+    compact_humor_digest,
     daily_humor_status,
     humor_ingest_token_is_valid,
     humor_scheduler_loop,
@@ -229,8 +231,41 @@ async def status() -> dict[str, Any]:
         apns_configured=apns_configured_from_env(),
         apns_environment=os.environ.get("APNS_ENV", "sandbox"),
         daily_weather=daily_weather_status(storage_dir=data_dir(), config=daily_weather_config()),
-        daily_humor=daily_humor_status(storage_dir=data_dir(), config=daily_humor_config()),
+        daily_humor=await daily_humor_status_for_response(),
     )
+
+
+async def daily_humor_status_for_response() -> dict[str, Any]:
+    status = daily_humor_status(storage_dir=data_dir(), config=daily_humor_config())
+    stored_last_digest = status.get("lastDigest")
+    status["storedLastDigest"] = stored_last_digest
+    status["effectiveLatestDigest"] = stored_last_digest
+    status["effectiveDigestSource"] = "stored"
+
+    manifest_url_value = os.environ.get("PAVBOT_MANIFEST_URL", "").strip()
+    if not manifest_url_value:
+        return status
+
+    try:
+        effective_digest = await latest_humor_digest(
+            config=daily_humor_config(),
+            storage_dir=data_dir(),
+            manifest_url=manifest_url_value,
+            fetch_json=fetch_manifest,
+        )
+    except Exception as exc:
+        status["effectiveDigestError"] = {
+            "type": type(exc).__name__,
+            "message": str(exc),
+        }
+        return status
+
+    effective_latest_digest = compact_humor_digest(effective_digest)
+    status["effectiveLatestDigest"] = effective_latest_digest
+    status["lastDigest"] = effective_latest_digest
+    if effective_latest_digest and effective_latest_digest.get("id") != (stored_last_digest or {}).get("id"):
+        status["effectiveDigestSource"] = "manifest"
+    return status
 
 
 @app.get("/v1/app/defaults")
@@ -310,7 +345,13 @@ async def daily_weather_refresh(
 @app.get("/v1/humor/latest")
 async def humor_latest() -> dict[str, Any]:
     try:
-        return await latest_humor_digest(config=daily_humor_config(), storage_dir=data_dir())
+        manifest_url_value = os.environ.get("PAVBOT_MANIFEST_URL", "").strip()
+        return await latest_humor_digest(
+            config=daily_humor_config(),
+            storage_dir=data_dir(),
+            manifest_url=manifest_url_value or None,
+            fetch_json=fetch_manifest if manifest_url_value else None,
+        )
     except httpx.HTTPError as exc:
         raise HTTPException(status_code=502, detail=f"Humor provider error: {exc}") from exc
 
@@ -366,6 +407,9 @@ async def github_webhook(
         "sent": 0,
         "failed": 0,
         "skippedDevices": 0,
+        "invalidDeviceTokens": 0,
+        "invalidDeviceTokenSuffixes": [],
+        "removedDevices": 0,
         "errors": [],
     }
 
@@ -441,7 +485,8 @@ async def send_change_notifications(
     manifest: dict[str, Any],
     pulse_news_digest: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
-    devices = load_json(data_dir() / "devices.json", {})
+    devices_path = data_dir() / "devices.json"
+    devices = load_json(devices_path, {})
     sender = apns_sender()
     manifest_url_value = os.environ.get("PAVBOT_MANIFEST_URL", "")
     summary = await send_apns_change_notifications(
@@ -452,6 +497,11 @@ async def send_change_notifications(
         sender=sender,
         pulse_news_digest=pulse_news_digest,
     )
+    removed_devices = prune_invalid_device_tokens(devices, summary.get("_invalidDeviceTokens", []))
+    summary["removedDevices"] = removed_devices
+    summary.pop("_invalidDeviceTokens", None)
+    if removed_devices:
+        save_json(devices_path, devices)
     save_json(
         data_dir() / "last-apns-delivery.json",
         {
@@ -492,6 +542,8 @@ def record_webhook_status(
             "apnsSent": (apns_summary or {}).get("sent", 0),
             "apnsFailed": (apns_summary or {}).get("failed", 0),
             "apnsSkippedDevices": (apns_summary or {}).get("skippedDevices", 0),
+            "apnsInvalidDeviceTokens": (apns_summary or {}).get("invalidDeviceTokens", 0),
+            "apnsRemovedDevices": (apns_summary or {}).get("removedDevices", 0),
             "apnsErrors": (apns_summary or {}).get("errors", []),
         },
     )

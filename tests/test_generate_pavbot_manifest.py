@@ -129,8 +129,18 @@ class GeneratePavbotManifestTest(unittest.TestCase):
         self.assertEqual(reddit_radar["topic"], "reddit-radar")
         self.assertEqual(reddit_radar["kind"], "automation")
         self.assertEqual(
+            reddit_radar["cadence"],
+            "00:06, 06:06, 12:06 and 18:06 Europe/Warsaw",
+        )
+        self.assertEqual(
             reddit_radar["output"],
             "research/reddit-radar/runs/YYYY-MM-DD-HHMM-reddit-radar.md",
+        )
+        self.assertNotIn("every 2 hours", reddit_radar["cadence"])
+
+        self.assertEqual(
+            jobs_research["cadence"],
+            "daily at 17:40 Europe/Warsaw; 03:40 run paused",
         )
 
     def test_manifest_collects_topics_and_public_artifact_types(self) -> None:

@@ -1,12 +1,41 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-03
+Last updated: 2026-07-05
 
 ## Current Understanding
 
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
+
+Po raporcie z 2026-07-05 najważniejsza nowa warstwa to przejście od ogólnych
+launchy AI do twardego control plane: AWS wygasza Mechanical Turk, Mistral
+specjalizuje model pod Lean 4, Midjourney próbuje rozszerzyć discovery,
+EquiLibre pokazuje kapitał dla AI tradingu, a Telegram dostaje 15 dni na walkę
+z piractwem. To razem oznacza, że dzisiejszy temat nie jest o jednym modelu,
+tylko o tym, kto dostarcza dane, kto specjalizuje workflow i kto odpowiada za
+dystrybucję treści.
+
+Po wieczornym raporcie z 2026-07-04-1933 najważniejsza nowa warstwa to
+operacyjny reality check dla agentów i local compute: Meta publicznie przyznaje,
+że agentowy rollout idzie wolniej, niż oczekiwano, Apple ustawia Mac mini i Mac
+Studio jako naturalne maszyny dla agentów, a Tesla pokazuje, że wewnętrzne
+wydatki na AI stają się zwykłym budżetem z approval workflow.
+
+Druga nowa warstwa to creative AI i governance opłat: ByteDance sprzedaje
+Seedance Hollywoodowi jako workflow, nie tylko demo, a Hopper przypomina, że
+transparentność checkoutu i fee disclosure nadal kończą się na FTC, nawet gdy
+produkt ma warstwę AI.
+
+Po raporcie z 2026-07-04 dochodzi jeszcze jedna warstwa: AI infrastruktura i
+interfejsy stają się produktami. Etched wychodzi ze stealth z working chip,
+AWS formalizuje FDE, OpenAI teasuje sprzęt dla Codex, a Product Hunt znów daje
+używalny publiczny sygnał launchów.
+
+Druga nowa warstwa to kapitał w AI video i wokół capacity: Higgsfield
+negocjuje rundę na 5 mld USD, a Techmeme River dorzuca Meta compute i Kling AI.
+To utrzymuje tezę, że inference, pamięć, dystrybucja i deployment motion są
+dziś równie ważne jak sam model.
 
 Po wieczornym raporcie z 2026-07-03-1933 najważniejsza nowa warstwa to
 platform safety jako odpowiedzialność systemu reklamowego: BBC/Techmeme i
@@ -766,6 +795,7 @@ transparentność środowiskową AI.
 
 ## Recent Reports
 
+- [2026-07-04](runs/2026-07-04.md)
 - [2026-07-03-1933](runs/2026-07-03-1933.md)
 - [2026-07-03](runs/2026-07-03.md)
 - [2026-06-30-1935](runs/2026-06-30-1935.md)

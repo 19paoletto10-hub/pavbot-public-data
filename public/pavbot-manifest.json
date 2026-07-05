@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-04T01:32:19.481210+00:00",
+  "generatedAt": "2026-07-05T16:19:48.981078+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -35,7 +35,7 @@
       "kind": "research",
       "topic": "llm-ai-jobs-wroclaw",
       "topicPath": "research/llm-ai-jobs-wroclaw",
-      "cadence": "twice daily; repository reports use `YYYY-MM-DD-HHMM` filenames",
+      "cadence": "daily at 17:40 Europe/Warsaw; 03:40 run paused",
       "sourcePath": "",
       "sourceUrl": "",
       "output": "research/llm-ai-jobs-wroclaw/runs/YYYY-MM-DD-HHMM.md"
@@ -94,7 +94,7 @@
       "kind": "automation",
       "topic": "reddit-radar",
       "topicPath": "research/reddit-radar",
-      "cadence": "every 2 hours at :06 Europe/Warsaw",
+      "cadence": "00:06, 06:06, 12:06 and 18:06 Europe/Warsaw",
       "sourcePath": "",
       "sourceUrl": "",
       "output": "research/reddit-radar/runs/YYYY-MM-DD-HHMM-reddit-radar.md"
@@ -138,15 +138,8 @@
   "topics": [
     {
       "slug": "aktualne-wydarzenia-mobile",
-      "title": "Topic Contract: aktualne-wydarzenia-mobile",
+      "title": "Pavbot Aktualne Wydarzenia Mobile",
       "path": "research/aktualne-wydarzenia-mobile",
-      "topicFilePath": "",
-      "url": ""
-    },
-    {
-      "slug": "codex-agent-automation",
-      "title": "Topic Contract: codex-agent-automation",
-      "path": "research/codex-agent-automation",
       "topicFilePath": "",
       "url": ""
     },
@@ -173,7 +166,7 @@
     },
     {
       "slug": "reddit-radar",
-      "title": "Topic Contract: reddit-radar",
+      "title": "Pavbot Reddit Radar",
       "path": "research/reddit-radar",
       "topicFilePath": "",
       "url": ""
@@ -188,6 +181,587 @@
   ],
   "artifacts": [
     {
+      "id": "research/tech-news/runs/2026-07-05.md",
+      "type": "run",
+      "topic": "tech-news",
+      "title": "Daily Research Report: tech-news",
+      "path": "research/tech-news/runs/2026-07-05.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-07-05.md",
+      "sizeBytes": 13105,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/tech-news/data/2026-07-05-research.json",
+      "type": "researchData",
+      "topic": "tech-news",
+      "title": "Research data",
+      "path": "research/tech-news/data/2026-07-05-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-07-05-research.json",
+      "sizeBytes": 13343,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-07-05/script.md",
+      "type": "podcastScript",
+      "topic": "tech-news",
+      "title": "Pavbot Tech Podcast: 2026-07-05",
+      "path": "research/tech-news/podcasts/2026-07-05/script.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-07-05/script.md",
+      "sizeBytes": 7520,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-07-05/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "tech-news",
+      "title": "Podcast brief PDF",
+      "path": "research/tech-news/podcasts/2026-07-05/brief.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-07-05/brief.pdf",
+      "sizeBytes": 41877,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-07-05/podcast.mp3",
+      "type": "podcastAudio",
+      "topic": "tech-news",
+      "title": "Podcast audio",
+      "path": "research/tech-news/podcasts/2026-07-05/podcast.mp3",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-07-05/podcast.mp3",
+      "sizeBytes": 3561609,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/tech-news/pdfs/2026-07-05-tech-news.pdf",
+      "type": "pdf",
+      "topic": "tech-news",
+      "title": "2026-07-05-tech-news.pdf",
+      "path": "research/tech-news/pdfs/2026-07-05-tech-news.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-07-05-tech-news.pdf",
+      "sizeBytes": 48366,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/reddit-radar/runs/2026-07-05-1809-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar 2026-07-05-1809",
+      "path": "research/reddit-radar/runs/2026-07-05-1809-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-07-05-1809-reddit-radar.md",
+      "sizeBytes": 11085,
+      "date": "2026-07-05",
+      "time": "18:09"
+    },
+    {
+      "id": "research/reddit-radar/runs/2026-07-05-1209-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar 2026-07-05-1209",
+      "path": "research/reddit-radar/runs/2026-07-05-1209-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-07-05-1209-reddit-radar.md",
+      "sizeBytes": 10790,
+      "date": "2026-07-05",
+      "time": "12:09"
+    },
+    {
+      "id": "research/reddit-radar/runs/2026-07-05-0608-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar 2026-07-05-0608",
+      "path": "research/reddit-radar/runs/2026-07-05-0608-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-07-05-0608-reddit-radar.md",
+      "sizeBytes": 12351,
+      "date": "2026-07-05",
+      "time": "06:08"
+    },
+    {
+      "id": "research/reddit-radar/runs/2026-07-05-0012-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar 2026-07-05-0012",
+      "path": "research/reddit-radar/runs/2026-07-05-0012-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-07-05-0012-reddit-radar.md",
+      "sizeBytes": 8947,
+      "date": "2026-07-05",
+      "time": "00:12"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-05-1809-reddit-radar-raw.json",
+      "type": "redditRadarRawData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar raw data",
+      "path": "research/reddit-radar/data/2026-07-05-1809-reddit-radar-raw.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-05-1809-reddit-radar-raw.json",
+      "sizeBytes": 50245,
+      "date": "2026-07-05",
+      "time": "18:09"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-05-1209-reddit-radar-raw.json",
+      "type": "redditRadarRawData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar raw data",
+      "path": "research/reddit-radar/data/2026-07-05-1209-reddit-radar-raw.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-05-1209-reddit-radar-raw.json",
+      "sizeBytes": 62570,
+      "date": "2026-07-05",
+      "time": "12:09"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-05-0608-reddit-radar-raw.json",
+      "type": "redditRadarRawData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar raw data",
+      "path": "research/reddit-radar/data/2026-07-05-0608-reddit-radar-raw.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-05-0608-reddit-radar-raw.json",
+      "sizeBytes": 40237,
+      "date": "2026-07-05",
+      "time": "06:08"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-05-0012-reddit-radar-raw.json",
+      "type": "redditRadarRawData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar raw data",
+      "path": "research/reddit-radar/data/2026-07-05-0012-reddit-radar-raw.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-05-0012-reddit-radar-raw.json",
+      "sizeBytes": 25919,
+      "date": "2026-07-05",
+      "time": "00:12"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-05-1809-reddit-radar.json",
+      "type": "redditRadarData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar data",
+      "path": "research/reddit-radar/data/2026-07-05-1809-reddit-radar.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-05-1809-reddit-radar.json",
+      "sizeBytes": 17852,
+      "date": "2026-07-05",
+      "time": "18:09"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-05-1209-reddit-radar.json",
+      "type": "redditRadarData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar data",
+      "path": "research/reddit-radar/data/2026-07-05-1209-reddit-radar.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-05-1209-reddit-radar.json",
+      "sizeBytes": 31753,
+      "date": "2026-07-05",
+      "time": "12:09"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-05-0608-reddit-radar.json",
+      "type": "redditRadarData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar data",
+      "path": "research/reddit-radar/data/2026-07-05-0608-reddit-radar.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-05-0608-reddit-radar.json",
+      "sizeBytes": 19514,
+      "date": "2026-07-05",
+      "time": "06:08"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-05-0012-reddit-radar.json",
+      "type": "redditRadarData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar data",
+      "path": "research/reddit-radar/data/2026-07-05-0012-reddit-radar.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-05-0012-reddit-radar.json",
+      "sizeBytes": 30718,
+      "date": "2026-07-05",
+      "time": "00:12"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-07-05-1802.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-07-05-1802.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-05-1802.md",
+      "sizeBytes": 6325,
+      "date": "2026-07-05",
+      "time": "18:02"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-07-05-1501.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-07-05-1501.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-05-1501.md",
+      "sizeBytes": 4427,
+      "date": "2026-07-05",
+      "time": "15:01"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-07-05-1207.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-07-05-1207.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-05-1207.md",
+      "sizeBytes": 6342,
+      "date": "2026-07-05",
+      "time": "12:07"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-07-05-0901.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-07-05-0901.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-05-0901.md",
+      "sizeBytes": 5722,
+      "date": "2026-07-05",
+      "time": "09:01"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-07-05-0602.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-07-05-0602.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-05-0602.md",
+      "sizeBytes": 5953,
+      "date": "2026-07-05",
+      "time": "06:02"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-05-1802-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-05-1802-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-05-1802-pulse-news.json",
+      "sizeBytes": 20536,
+      "date": "2026-07-05",
+      "time": "18:02",
+      "itemCount": 12
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-05-1501-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-05-1501-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-05-1501-pulse-news.json",
+      "sizeBytes": 20804,
+      "date": "2026-07-05",
+      "time": "15:01",
+      "itemCount": 12
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-05-1207-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-05-1207-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-05-1207-pulse-news.json",
+      "sizeBytes": 21609,
+      "date": "2026-07-05",
+      "time": "12:07",
+      "itemCount": 12
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-05-0901-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-05-0901-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-05-0901-pulse-news.json",
+      "sizeBytes": 20586,
+      "date": "2026-07-05",
+      "time": "09:01",
+      "itemCount": 12
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-05-0602-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-05-0602-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-05-0602-pulse-news.json",
+      "sizeBytes": 22343,
+      "date": "2026-07-05",
+      "time": "06:02",
+      "itemCount": 12
+    },
+    {
+      "id": "research/polska-swiat/runs/2026-07-05.md",
+      "type": "run",
+      "topic": "polska-swiat",
+      "title": "Run 2026-07-05",
+      "path": "research/polska-swiat/runs/2026-07-05.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-07-05.md",
+      "sizeBytes": 1472,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/polska-swiat/data/2026-07-05-research.json",
+      "type": "researchData",
+      "topic": "polska-swiat",
+      "title": "Research data",
+      "path": "research/polska-swiat/data/2026-07-05-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-07-05-research.json",
+      "sizeBytes": 13547,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-05/script.md",
+      "type": "podcastScript",
+      "topic": "polska-swiat",
+      "title": "script.md",
+      "path": "research/polska-swiat/podcasts/2026-07-05/script.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-05/script.md",
+      "sizeBytes": 7722,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-05/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "polska-swiat",
+      "title": "Podcast brief PDF",
+      "path": "research/polska-swiat/podcasts/2026-07-05/brief.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-05/brief.pdf",
+      "sizeBytes": 50667,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-05/podcast.mp3",
+      "type": "podcastAudio",
+      "topic": "polska-swiat",
+      "title": "Podcast audio",
+      "path": "research/polska-swiat/podcasts/2026-07-05/podcast.mp3",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-05/podcast.mp3",
+      "sizeBytes": 3622531,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/polska-swiat/pdfs/2026-07-05-polska-swiat.pdf",
+      "type": "pdf",
+      "topic": "polska-swiat",
+      "title": "2026-07-05-polska-swiat.pdf",
+      "path": "research/polska-swiat/pdfs/2026-07-05-polska-swiat.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-07-05-polska-swiat.pdf",
+      "sizeBytes": 31093,
+      "date": "2026-07-05"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/runs/2026-07-05-1544.md",
+      "type": "run",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "LLM/AI Jobs Wrocław",
+      "path": "research/llm-ai-jobs-wroclaw/runs/2026-07-05-1544.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-07-05-1544.md",
+      "sizeBytes": 9916,
+      "date": "2026-07-05",
+      "time": "15:44"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/pdfs/2026-07-05-1544-llm-ai-jobs-wroclaw.pdf",
+      "type": "pdf",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "2026-07-05-1544-llm-ai-jobs-wroclaw.pdf",
+      "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-07-05-1544-llm-ai-jobs-wroclaw.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-07-05-1544-llm-ai-jobs-wroclaw.pdf",
+      "sizeBytes": 55759,
+      "date": "2026-07-05",
+      "time": "15:44"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/data/2026-07-05-1544-jobs.json",
+      "type": "jobsData",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "Jobs data",
+      "path": "research/llm-ai-jobs-wroclaw/data/2026-07-05-1544-jobs.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-07-05-1544-jobs.json",
+      "sizeBytes": 8841,
+      "date": "2026-07-05",
+      "time": "15:44"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-05-1016/script.md",
+      "type": "podcastScript",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "Scenariusz: Mobile News Brief 2026-07-05 10:16",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-05-1016/script.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-05-1016/script.md",
+      "sizeBytes": 5396,
+      "date": "2026-07-05",
+      "time": "10:16"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-05-1016/audio/female-piper/podcast.mp3",
+      "type": "podcastAudioVariant",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "Podcast audio - female piper",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-05-1016/audio/female-piper/podcast.mp3",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-05-1016/audio/female-piper/podcast.mp3",
+      "sizeBytes": 2444402,
+      "date": "2026-07-05",
+      "time": "10:16"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-05-1016-newspaper.pdf",
+      "type": "pdf",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "2026-07-05-1016-newspaper.pdf",
+      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-05-1016-newspaper.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-07-05-1016-newspaper.pdf",
+      "sizeBytes": 64055,
+      "date": "2026-07-05",
+      "time": "10:16"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-05-1016-mobile-brief.pdf",
+      "type": "pdf",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "2026-07-05-1016-mobile-brief.pdf",
+      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-05-1016-mobile-brief.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-07-05-1016-mobile-brief.pdf",
+      "sizeBytes": 45356,
+      "date": "2026-07-05",
+      "time": "10:16"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/data/2026-07-05-1016-mobile-news.json",
+      "type": "mobileNewsData",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "Mobile news data",
+      "path": "research/aktualne-wydarzenia-mobile/data/2026-07-05-1016-mobile-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-07-05-1016-mobile-news.json",
+      "sizeBytes": 30554,
+      "date": "2026-07-05",
+      "time": "10:16"
+    },
+    {
+      "id": "research/tech-news/runs/2026-07-04.md",
+      "type": "run",
+      "topic": "tech-news",
+      "title": "Daily Research Report: tech-news",
+      "path": "research/tech-news/runs/2026-07-04.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-07-04.md",
+      "sizeBytes": 32144,
+      "date": "2026-07-04"
+    },
+    {
+      "id": "research/tech-news/runs/2026-07-04-1933.md",
+      "type": "run",
+      "topic": "tech-news",
+      "title": "Daily Research Report: tech-news",
+      "path": "research/tech-news/runs/2026-07-04-1933.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-07-04-1933.md",
+      "sizeBytes": 21613,
+      "date": "2026-07-04",
+      "time": "19:33"
+    },
+    {
+      "id": "research/tech-news/data/2026-07-04-research.json",
+      "type": "researchData",
+      "topic": "tech-news",
+      "title": "Research data",
+      "path": "research/tech-news/data/2026-07-04-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-07-04-research.json",
+      "sizeBytes": 28831,
+      "date": "2026-07-04"
+    },
+    {
+      "id": "research/tech-news/data/2026-07-04-1933-research.json",
+      "type": "researchData",
+      "topic": "tech-news",
+      "title": "Research data",
+      "path": "research/tech-news/data/2026-07-04-1933-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-07-04-1933-research.json",
+      "sizeBytes": 17899,
+      "date": "2026-07-04",
+      "time": "19:33"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-07-04/script.md",
+      "type": "podcastScript",
+      "topic": "tech-news",
+      "title": "Pavbot Tech Podcast: 2026-07-04",
+      "path": "research/tech-news/podcasts/2026-07-04/script.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-07-04/script.md",
+      "sizeBytes": 7906,
+      "date": "2026-07-04"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-07-04/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "tech-news",
+      "title": "Podcast brief PDF",
+      "path": "research/tech-news/podcasts/2026-07-04/brief.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-07-04/brief.pdf",
+      "sizeBytes": 48718,
+      "date": "2026-07-04"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-07-04/podcast.mp3",
+      "type": "podcastAudio",
+      "topic": "tech-news",
+      "title": "Podcast audio",
+      "path": "research/tech-news/podcasts/2026-07-04/podcast.mp3",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-07-04/podcast.mp3",
+      "sizeBytes": 3750933,
+      "date": "2026-07-04"
+    },
+    {
+      "id": "research/tech-news/pdfs/2026-07-04-tech-news.pdf",
+      "type": "pdf",
+      "topic": "tech-news",
+      "title": "2026-07-04-tech-news.pdf",
+      "path": "research/tech-news/pdfs/2026-07-04-tech-news.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-07-04-tech-news.pdf",
+      "sizeBytes": 102185,
+      "date": "2026-07-04"
+    },
+    {
+      "id": "research/tech-news/pdfs/2026-07-04-1933-tech-news.pdf",
+      "type": "pdf",
+      "topic": "tech-news",
+      "title": "2026-07-04-1933-tech-news.pdf",
+      "path": "research/tech-news/pdfs/2026-07-04-1933-tech-news.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-07-04-1933-tech-news.pdf",
+      "sizeBytes": 77551,
+      "date": "2026-07-04",
+      "time": "19:33"
+    },
+    {
+      "id": "research/reddit-radar/runs/2026-07-04-1809-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar 2026-07-04-1809",
+      "path": "research/reddit-radar/runs/2026-07-04-1809-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-07-04-1809-reddit-radar.md",
+      "sizeBytes": 10838,
+      "date": "2026-07-04",
+      "time": "18:09"
+    },
+    {
+      "id": "research/reddit-radar/runs/2026-07-04-1207-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar 2026-07-04-1207",
+      "path": "research/reddit-radar/runs/2026-07-04-1207-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-07-04-1207-reddit-radar.md",
+      "sizeBytes": 3734,
+      "date": "2026-07-04",
+      "time": "12:07"
+    },
+    {
+      "id": "research/reddit-radar/runs/2026-07-04-0618-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar 2026-07-04-0618",
+      "path": "research/reddit-radar/runs/2026-07-04-0618-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-07-04-0618-reddit-radar.md",
+      "sizeBytes": 10885,
+      "date": "2026-07-04",
+      "time": "06:18"
+    },
+    {
       "id": "research/reddit-radar/runs/2026-07-04-0008-reddit-radar.md",
       "type": "run",
       "topic": "reddit-radar",
@@ -197,6 +771,39 @@
       "sizeBytes": 5187,
       "date": "2026-07-04",
       "time": "00:08"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-04-1809-reddit-radar-raw.json",
+      "type": "redditRadarRawData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar raw data",
+      "path": "research/reddit-radar/data/2026-07-04-1809-reddit-radar-raw.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-04-1809-reddit-radar-raw.json",
+      "sizeBytes": 44523,
+      "date": "2026-07-04",
+      "time": "18:09"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-04-1207-reddit-radar-raw.json",
+      "type": "redditRadarRawData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar raw data",
+      "path": "research/reddit-radar/data/2026-07-04-1207-reddit-radar-raw.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-04-1207-reddit-radar-raw.json",
+      "sizeBytes": 45707,
+      "date": "2026-07-04",
+      "time": "12:07"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-04-0618-reddit-radar-raw.json",
+      "type": "redditRadarRawData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar raw data",
+      "path": "research/reddit-radar/data/2026-07-04-0618-reddit-radar-raw.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-04-0618-reddit-radar-raw.json",
+      "sizeBytes": 142250,
+      "date": "2026-07-04",
+      "time": "06:18"
     },
     {
       "id": "research/reddit-radar/data/2026-07-04-0008-reddit-radar-raw.json",
@@ -210,6 +817,39 @@
       "time": "00:08"
     },
     {
+      "id": "research/reddit-radar/data/2026-07-04-1809-reddit-radar.json",
+      "type": "redditRadarData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar data",
+      "path": "research/reddit-radar/data/2026-07-04-1809-reddit-radar.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-04-1809-reddit-radar.json",
+      "sizeBytes": 20659,
+      "date": "2026-07-04",
+      "time": "18:09"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-04-1207-reddit-radar.json",
+      "type": "redditRadarData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar data",
+      "path": "research/reddit-radar/data/2026-07-04-1207-reddit-radar.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-04-1207-reddit-radar.json",
+      "sizeBytes": 15571,
+      "date": "2026-07-04",
+      "time": "12:07"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-04-0618-reddit-radar.json",
+      "type": "redditRadarData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar data",
+      "path": "research/reddit-radar/data/2026-07-04-0618-reddit-radar.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-04-0618-reddit-radar.json",
+      "sizeBytes": 69325,
+      "date": "2026-07-04",
+      "time": "06:18"
+    },
+    {
       "id": "research/reddit-radar/data/2026-07-04-0008-reddit-radar.json",
       "type": "redditRadarData",
       "topic": "reddit-radar",
@@ -219,6 +859,229 @@
       "sizeBytes": 8933,
       "date": "2026-07-04",
       "time": "00:08"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-07-04-2102.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-07-04-2102.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-04-2102.md",
+      "sizeBytes": 5099,
+      "date": "2026-07-04",
+      "time": "21:02"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-07-04-1801.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-07-04-1801.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-04-1801.md",
+      "sizeBytes": 3465,
+      "date": "2026-07-04",
+      "time": "18:01"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-07-04-1502.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-07-04-1502.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-04-1502.md",
+      "sizeBytes": 4115,
+      "date": "2026-07-04",
+      "time": "15:02"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-07-04-1207.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-07-04-1207.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-04-1207.md",
+      "sizeBytes": 3106,
+      "date": "2026-07-04",
+      "time": "12:07"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-07-04-0602.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-07-04-0602.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-04-0602.md",
+      "sizeBytes": 4455,
+      "date": "2026-07-04",
+      "time": "06:02"
+    },
+    {
+      "id": "research/puls-dnia-news/runs/2026-07-04-0525.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Pavbot Puls Dnia News",
+      "path": "research/puls-dnia-news/runs/2026-07-04-0525.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-04-0525.md",
+      "sizeBytes": 5131,
+      "date": "2026-07-04",
+      "time": "05:25"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-04-2102-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-04-2102-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-04-2102-pulse-news.json",
+      "sizeBytes": 21051,
+      "date": "2026-07-04",
+      "time": "21:02",
+      "itemCount": 12
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-04-1801-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-04-1801-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-04-1801-pulse-news.json",
+      "sizeBytes": 25252,
+      "date": "2026-07-04",
+      "time": "18:01",
+      "itemCount": 14
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-04-1502-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-04-1502-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-04-1502-pulse-news.json",
+      "sizeBytes": 27841,
+      "date": "2026-07-04",
+      "time": "15:02",
+      "itemCount": 16
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-04-1207-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-04-1207-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-04-1207-pulse-news.json",
+      "sizeBytes": 28255,
+      "date": "2026-07-04",
+      "time": "12:07",
+      "itemCount": 16
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-04-0602-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-04-0602-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-04-0602-pulse-news.json",
+      "sizeBytes": 30017,
+      "date": "2026-07-04",
+      "time": "06:02",
+      "itemCount": 16
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-04-0525-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-04-0525-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-04-0525-pulse-news.json",
+      "sizeBytes": 23331,
+      "date": "2026-07-04",
+      "time": "05:25",
+      "itemCount": 12
+    },
+    {
+      "id": "research/polska-swiat/runs/2026-07-04-1935.md",
+      "type": "run",
+      "topic": "polska-swiat",
+      "title": "Daily Research Report: polska-swiat",
+      "path": "research/polska-swiat/runs/2026-07-04-1935.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-07-04-1935.md",
+      "sizeBytes": 7989,
+      "date": "2026-07-04",
+      "time": "19:35"
+    },
+    {
+      "id": "research/polska-swiat/data/2026-07-04-1935-research.json",
+      "type": "researchData",
+      "topic": "polska-swiat",
+      "title": "Research data",
+      "path": "research/polska-swiat/data/2026-07-04-1935-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-07-04-1935-research.json",
+      "sizeBytes": 15995,
+      "date": "2026-07-04",
+      "time": "19:35"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-04/script.md",
+      "type": "podcastScript",
+      "topic": "polska-swiat",
+      "title": "script.md",
+      "path": "research/polska-swiat/podcasts/2026-07-04/script.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-04/script.md",
+      "sizeBytes": 8305,
+      "date": "2026-07-04"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-04/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "polska-swiat",
+      "title": "Podcast brief PDF",
+      "path": "research/polska-swiat/podcasts/2026-07-04/brief.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-04/brief.pdf",
+      "sizeBytes": 51960,
+      "date": "2026-07-04"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-04/podcast.mp3",
+      "type": "podcastAudio",
+      "topic": "polska-swiat",
+      "title": "Podcast audio",
+      "path": "research/polska-swiat/podcasts/2026-07-04/podcast.mp3",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-04/podcast.mp3",
+      "sizeBytes": 3906331,
+      "date": "2026-07-04"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/runs/2026-07-04-1541.md",
+      "type": "run",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "LLM/AI Jobs Wrocław",
+      "path": "research/llm-ai-jobs-wroclaw/runs/2026-07-04-1541.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-07-04-1541.md",
+      "sizeBytes": 11005,
+      "date": "2026-07-04",
+      "time": "15:41"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/pdfs/2026-07-04-1541-llm-ai-jobs-wroclaw.pdf",
+      "type": "pdf",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "2026-07-04-1541-llm-ai-jobs-wroclaw.pdf",
+      "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-07-04-1541-llm-ai-jobs-wroclaw.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-07-04-1541-llm-ai-jobs-wroclaw.pdf",
+      "sizeBytes": 56712,
+      "date": "2026-07-04",
+      "time": "15:41"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/data/2026-07-04-1541-jobs.json",
+      "type": "jobsData",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "Jobs data",
+      "path": "research/llm-ai-jobs-wroclaw/data/2026-07-04-1541-jobs.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-07-04-1541-jobs.json",
+      "sizeBytes": 11818,
+      "date": "2026-07-04",
+      "time": "15:41"
     },
     {
       "id": "research/tech-news/runs/2026-07-03.md",
@@ -935,116 +1798,6 @@
       "sizeBytes": 12529,
       "date": "2026-07-03",
       "time": "15:41"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-03-1934/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-07-03 19:34",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-03-1934/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-03-1934/script.md",
-      "sizeBytes": 8207,
-      "date": "2026-07-03",
-      "time": "19:34"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-03-1017/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-07-03 10:17",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-03-1017/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-03-1017/script.md",
-      "sizeBytes": 7005,
-      "date": "2026-07-03",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-03-1934/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-03-1934/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-03-1934/audio/female-piper/podcast.mp3",
-      "sizeBytes": 4565635,
-      "date": "2026-07-03",
-      "time": "19:34"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-03-1017/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-03-1017/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-03-1017/audio/female-piper/podcast.mp3",
-      "sizeBytes": 3388603,
-      "date": "2026-07-03",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-03-1934-newspaper.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-07-03-1934-newspaper.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-03-1934-newspaper.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-07-03-1934-newspaper.pdf",
-      "sizeBytes": 76190,
-      "date": "2026-07-03",
-      "time": "19:34"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-03-1934-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-07-03-1934-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-03-1934-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-07-03-1934-mobile-brief.pdf",
-      "sizeBytes": 54385,
-      "date": "2026-07-03",
-      "time": "19:34"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-03-1017-newspaper.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-07-03-1017-newspaper.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-03-1017-newspaper.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-07-03-1017-newspaper.pdf",
-      "sizeBytes": 73495,
-      "date": "2026-07-03",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-03-1017-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-07-03-1017-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-03-1017-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-07-03-1017-mobile-brief.pdf",
-      "sizeBytes": 56079,
-      "date": "2026-07-03",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/data/2026-07-03-1934-mobile-news.json",
-      "type": "mobileNewsData",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Mobile news data",
-      "path": "research/aktualne-wydarzenia-mobile/data/2026-07-03-1934-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-07-03-1934-mobile-news.json",
-      "sizeBytes": 40478,
-      "date": "2026-07-03",
-      "time": "19:34"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/data/2026-07-03-1017-mobile-news.json",
-      "type": "mobileNewsData",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Mobile news data",
-      "path": "research/aktualne-wydarzenia-mobile/data/2026-07-03-1017-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-07-03-1017-mobile-news.json",
-      "sizeBytes": 39651,
-      "date": "2026-07-03",
-      "time": "10:17"
     },
     {
       "id": "research/tech-news/runs/2026-07-02.md",
@@ -1788,116 +2541,6 @@
       "time": "17:49"
     },
     {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-02-1934/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-07-02 19:34",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-02-1934/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-02-1934/script.md",
-      "sizeBytes": 6040,
-      "date": "2026-07-02",
-      "time": "19:34"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-02-1017/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-07-02 10:17",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-02-1017/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-02-1017/script.md",
-      "sizeBytes": 6968,
-      "date": "2026-07-02",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-02-1934/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-02-1934/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-02-1934/audio/female-piper/podcast.mp3",
-      "sizeBytes": 2854176,
-      "date": "2026-07-02",
-      "time": "19:34"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-02-1017/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-02-1017/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-02-1017/audio/female-piper/podcast.mp3",
-      "sizeBytes": 3311284,
-      "date": "2026-07-02",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-02-1934-newspaper.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-07-02-1934-newspaper.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-02-1934-newspaper.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-07-02-1934-newspaper.pdf",
-      "sizeBytes": 71517,
-      "date": "2026-07-02",
-      "time": "19:34"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-02-1934-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-07-02-1934-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-02-1934-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-07-02-1934-mobile-brief.pdf",
-      "sizeBytes": 49436,
-      "date": "2026-07-02",
-      "time": "19:34"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-02-1017-newspaper.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-07-02-1017-newspaper.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-02-1017-newspaper.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-07-02-1017-newspaper.pdf",
-      "sizeBytes": 71129,
-      "date": "2026-07-02",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-02-1017-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-07-02-1017-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-02-1017-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-07-02-1017-mobile-brief.pdf",
-      "sizeBytes": 51159,
-      "date": "2026-07-02",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/data/2026-07-02-1934-mobile-news.json",
-      "type": "mobileNewsData",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Mobile news data",
-      "path": "research/aktualne-wydarzenia-mobile/data/2026-07-02-1934-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-07-02-1934-mobile-news.json",
-      "sizeBytes": 36606,
-      "date": "2026-07-02",
-      "time": "19:34"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/data/2026-07-02-1017-mobile-news.json",
-      "type": "mobileNewsData",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Mobile news data",
-      "path": "research/aktualne-wydarzenia-mobile/data/2026-07-02-1017-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-07-02-1017-mobile-news.json",
-      "sizeBytes": 38512,
-      "date": "2026-07-02",
-      "time": "10:17"
-    },
-    {
       "id": "research/tech-news/runs/2026-07-01.md",
       "type": "run",
       "topic": "tech-news",
@@ -2639,116 +3282,6 @@
       "time": "01:41"
     },
     {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-01-1933/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-07-01 19:33",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-01-1933/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-01-1933/script.md",
-      "sizeBytes": 6221,
-      "date": "2026-07-01",
-      "time": "19:33"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-01-1017/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-07-01 10:17",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-01-1017/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-01-1017/script.md",
-      "sizeBytes": 5219,
-      "date": "2026-07-01",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-01-1933/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-01-1933/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-01-1933/audio/female-piper/podcast.mp3",
-      "sizeBytes": 2917172,
-      "date": "2026-07-01",
-      "time": "19:33"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-01-1017/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-01-1017/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-01-1017/audio/female-piper/podcast.mp3",
-      "sizeBytes": 2439575,
-      "date": "2026-07-01",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-01-1933-newspaper.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-07-01-1933-newspaper.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-01-1933-newspaper.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-07-01-1933-newspaper.pdf",
-      "sizeBytes": 80531,
-      "date": "2026-07-01",
-      "time": "19:33"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-01-1933-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-07-01-1933-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-01-1933-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-07-01-1933-mobile-brief.pdf",
-      "sizeBytes": 59529,
-      "date": "2026-07-01",
-      "time": "19:33"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-01-1017-newspaper.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-07-01-1017-newspaper.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-01-1017-newspaper.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-07-01-1017-newspaper.pdf",
-      "sizeBytes": 75282,
-      "date": "2026-07-01",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-01-1017-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-07-01-1017-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-01-1017-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-07-01-1017-mobile-brief.pdf",
-      "sizeBytes": 55113,
-      "date": "2026-07-01",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/data/2026-07-01-1933-mobile-news.json",
-      "type": "mobileNewsData",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Mobile news data",
-      "path": "research/aktualne-wydarzenia-mobile/data/2026-07-01-1933-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-07-01-1933-mobile-news.json",
-      "sizeBytes": 42410,
-      "date": "2026-07-01",
-      "time": "19:33"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/data/2026-07-01-1017-mobile-news.json",
-      "type": "mobileNewsData",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Mobile news data",
-      "path": "research/aktualne-wydarzenia-mobile/data/2026-07-01-1017-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-07-01-1017-mobile-news.json",
-      "sizeBytes": 40544,
-      "date": "2026-07-01",
-      "time": "10:17"
-    },
-    {
       "id": "research/tech-news/runs/2026-06-30-1935.md",
       "type": "run",
       "topic": "tech-news",
@@ -3413,116 +3946,6 @@
       "sizeBytes": 11943,
       "date": "2026-06-30",
       "time": "01:41"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-30-1935/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-06-30 19:35",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-30-1935/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-30-1935/script.md",
-      "sizeBytes": 5143,
-      "date": "2026-06-30",
-      "time": "19:35"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-30-1015/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-06-30 10:15",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-30-1015/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-30-1015/script.md",
-      "sizeBytes": 4533,
-      "date": "2026-06-30",
-      "time": "10:15"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-30-1935/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-30-1935/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-30-1935/audio/female-piper/podcast.mp3",
-      "sizeBytes": 2447560,
-      "date": "2026-06-30",
-      "time": "19:35"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-30-1015/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-30-1015/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-30-1015/audio/female-piper/podcast.mp3",
-      "sizeBytes": 2113814,
-      "date": "2026-06-30",
-      "time": "10:15"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-30-1935-newspaper.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-30-1935-newspaper.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-30-1935-newspaper.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-30-1935-newspaper.pdf",
-      "sizeBytes": 78908,
-      "date": "2026-06-30",
-      "time": "19:35"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-30-1935-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-30-1935-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-30-1935-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-30-1935-mobile-brief.pdf",
-      "sizeBytes": 55059,
-      "date": "2026-06-30",
-      "time": "19:35"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-30-1015-newspaper.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-30-1015-newspaper.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-30-1015-newspaper.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-30-1015-newspaper.pdf",
-      "sizeBytes": 68752,
-      "date": "2026-06-30",
-      "time": "10:15"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-30-1015-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-30-1015-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-30-1015-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-30-1015-mobile-brief.pdf",
-      "sizeBytes": 49595,
-      "date": "2026-06-30",
-      "time": "10:15"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/data/2026-06-30-1935-mobile-news.json",
-      "type": "mobileNewsData",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Mobile news data",
-      "path": "research/aktualne-wydarzenia-mobile/data/2026-06-30-1935-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-06-30-1935-mobile-news.json",
-      "sizeBytes": 40433,
-      "date": "2026-06-30",
-      "time": "19:35"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/data/2026-06-30-1015-mobile-news.json",
-      "type": "mobileNewsData",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Mobile news data",
-      "path": "research/aktualne-wydarzenia-mobile/data/2026-06-30-1015-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-06-30-1015-mobile-news.json",
-      "sizeBytes": 37535,
-      "date": "2026-06-30",
-      "time": "10:15"
     },
     {
       "id": "research/tech-news/runs/2026-06-29.md",
@@ -4366,116 +4789,6 @@
       "time": "01:41"
     },
     {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-29-1934/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-06-29 19:34",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-29-1934/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-29-1934/script.md",
-      "sizeBytes": 5695,
-      "date": "2026-06-29",
-      "time": "19:34"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-29-1017/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-06-29 10:17",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-29-1017/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-29-1017/script.md",
-      "sizeBytes": 4643,
-      "date": "2026-06-29",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-29-1934/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-29-1934/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-29-1934/audio/female-piper/podcast.mp3",
-      "sizeBytes": 2651464,
-      "date": "2026-06-29",
-      "time": "19:34"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-29-1017/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-29-1017/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-29-1017/audio/female-piper/podcast.mp3",
-      "sizeBytes": 2187749,
-      "date": "2026-06-29",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-29-1934-newspaper.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-29-1934-newspaper.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-29-1934-newspaper.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-29-1934-newspaper.pdf",
-      "sizeBytes": 73044,
-      "date": "2026-06-29",
-      "time": "19:34"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-29-1934-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-29-1934-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-29-1934-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-29-1934-mobile-brief.pdf",
-      "sizeBytes": 52689,
-      "date": "2026-06-29",
-      "time": "19:34"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-29-1017-newspaper.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-29-1017-newspaper.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-29-1017-newspaper.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-29-1017-newspaper.pdf",
-      "sizeBytes": 66699,
-      "date": "2026-06-29",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-29-1017-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-29-1017-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-29-1017-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-29-1017-mobile-brief.pdf",
-      "sizeBytes": 49990,
-      "date": "2026-06-29",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/data/2026-06-29-1934-mobile-news.json",
-      "type": "mobileNewsData",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Mobile news data",
-      "path": "research/aktualne-wydarzenia-mobile/data/2026-06-29-1934-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-06-29-1934-mobile-news.json",
-      "sizeBytes": 39432,
-      "date": "2026-06-29",
-      "time": "19:34"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/data/2026-06-29-1017-mobile-news.json",
-      "type": "mobileNewsData",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Mobile news data",
-      "path": "research/aktualne-wydarzenia-mobile/data/2026-06-29-1017-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-06-29-1017-mobile-news.json",
-      "sizeBytes": 36767,
-      "date": "2026-06-29",
-      "time": "10:17"
-    },
-    {
       "id": "research/tech-news/runs/2026-06-28.md",
       "type": "run",
       "topic": "tech-news",
@@ -5262,116 +5575,6 @@
       "time": "01:41"
     },
     {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1935/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-06-28 19:35",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1935/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1935/script.md",
-      "sizeBytes": 4416,
-      "date": "2026-06-28",
-      "time": "19:35"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1017/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-06-28 10:17",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1017/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1017/script.md",
-      "sizeBytes": 4292,
-      "date": "2026-06-28",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1935/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1935/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1935/audio/female-piper/podcast.mp3",
-      "sizeBytes": 2064626,
-      "date": "2026-06-28",
-      "time": "19:35"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1017/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1017/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-28-1017/audio/female-piper/podcast.mp3",
-      "sizeBytes": 2028239,
-      "date": "2026-06-28",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-28-1935-newspaper.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-28-1935-newspaper.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-28-1935-newspaper.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-28-1935-newspaper.pdf",
-      "sizeBytes": 67419,
-      "date": "2026-06-28",
-      "time": "19:35"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-28-1935-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-28-1935-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-28-1935-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-28-1935-mobile-brief.pdf",
-      "sizeBytes": 50341,
-      "date": "2026-06-28",
-      "time": "19:35"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-28-1017-newspaper.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-28-1017-newspaper.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-28-1017-newspaper.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-28-1017-newspaper.pdf",
-      "sizeBytes": 65952,
-      "date": "2026-06-28",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-28-1017-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-28-1017-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-28-1017-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-28-1017-mobile-brief.pdf",
-      "sizeBytes": 49872,
-      "date": "2026-06-28",
-      "time": "10:17"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/data/2026-06-28-1935-mobile-news.json",
-      "type": "mobileNewsData",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Mobile news data",
-      "path": "research/aktualne-wydarzenia-mobile/data/2026-06-28-1935-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-06-28-1935-mobile-news.json",
-      "sizeBytes": 36518,
-      "date": "2026-06-28",
-      "time": "19:35"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/data/2026-06-28-1017-mobile-news.json",
-      "type": "mobileNewsData",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Mobile news data",
-      "path": "research/aktualne-wydarzenia-mobile/data/2026-06-28-1017-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-06-28-1017-mobile-news.json",
-      "sizeBytes": 37746,
-      "date": "2026-06-28",
-      "time": "10:17"
-    },
-    {
       "id": "research/tech-news/runs/2026-06-27.md",
       "type": "run",
       "topic": "tech-news",
@@ -5819,61 +6022,6 @@
       "time": "01:41"
     },
     {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-27-1019/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-06-27 10:19",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-27-1019/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-27-1019/script.md",
-      "sizeBytes": 5159,
-      "date": "2026-06-27",
-      "time": "10:19"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-27-1019/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-27-1019/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-27-1019/audio/female-piper/podcast.mp3",
-      "sizeBytes": 2412908,
-      "date": "2026-06-27",
-      "time": "10:19"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-27-1019-newspaper.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-27-1019-newspaper.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-27-1019-newspaper.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-27-1019-newspaper.pdf",
-      "sizeBytes": 50274,
-      "date": "2026-06-27",
-      "time": "10:19"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-27-1019-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-27-1019-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-27-1019-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-27-1019-mobile-brief.pdf",
-      "sizeBytes": 41439,
-      "date": "2026-06-27",
-      "time": "10:19"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/data/2026-06-27-1019-mobile-news.json",
-      "type": "mobileNewsData",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Mobile news data",
-      "path": "research/aktualne-wydarzenia-mobile/data/2026-06-27-1019-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-06-27-1019-mobile-news.json",
-      "sizeBytes": 22057,
-      "date": "2026-06-27",
-      "time": "10:19"
-    },
-    {
       "id": "research/tech-news/runs/2026-06-26.md",
       "type": "run",
       "topic": "tech-news",
@@ -6132,116 +6280,6 @@
       "time": "01:42"
     },
     {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-1021/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-06-26 10:21",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-1021/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-1021/script.md",
-      "sizeBytes": 5131,
-      "date": "2026-06-26",
-      "time": "10:21"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-0257/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Script: Pavbot Aktualne Wydarzenia Mobile",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-0257/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-0257/script.md",
-      "sizeBytes": 6157,
-      "date": "2026-06-26",
-      "time": "02:57"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-1021/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-1021/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-1021/audio/female-piper/podcast.mp3",
-      "sizeBytes": 2416996,
-      "date": "2026-06-26",
-      "time": "10:21"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-0257/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-0257/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-0257/audio/female-piper/podcast.mp3",
-      "sizeBytes": 2835227,
-      "date": "2026-06-26",
-      "time": "02:57"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-1021-newspaper.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-26-1021-newspaper.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-1021-newspaper.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-1021-newspaper.pdf",
-      "sizeBytes": 53062,
-      "date": "2026-06-26",
-      "time": "10:21"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-1021-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-26-1021-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-1021-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-1021-mobile-brief.pdf",
-      "sizeBytes": 46448,
-      "date": "2026-06-26",
-      "time": "10:21"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-0257-newspaper.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-26-0257-newspaper.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-0257-newspaper.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-0257-newspaper.pdf",
-      "sizeBytes": 49418,
-      "date": "2026-06-26",
-      "time": "02:57"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-0257-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-26-0257-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-0257-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-26-0257-mobile-brief.pdf",
-      "sizeBytes": 44983,
-      "date": "2026-06-26",
-      "time": "02:57"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/data/2026-06-26-1021-mobile-news.json",
-      "type": "mobileNewsData",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Mobile news data",
-      "path": "research/aktualne-wydarzenia-mobile/data/2026-06-26-1021-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-06-26-1021-mobile-news.json",
-      "sizeBytes": 24274,
-      "date": "2026-06-26",
-      "time": "10:21"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/data/2026-06-26-0257-mobile-news.json",
-      "type": "mobileNewsData",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Mobile news data",
-      "path": "research/aktualne-wydarzenia-mobile/data/2026-06-26-0257-mobile-news.json",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-06-26-0257-mobile-news.json",
-      "sizeBytes": 22574,
-      "date": "2026-06-26",
-      "time": "02:57"
-    },
-    {
       "id": "research/tech-news/runs/2026-06-25.md",
       "type": "run",
       "topic": "tech-news",
@@ -6450,36 +6488,6 @@
       "time": "01:41"
     },
     {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-25/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-06-25",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-25/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-25/script.md",
-      "sizeBytes": 5505,
-      "date": "2026-06-25"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-25/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-25/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-25/audio/female-piper/podcast.mp3",
-      "sizeBytes": 2614155,
-      "date": "2026-06-25"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-25-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-25-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-25-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-25-mobile-brief.pdf",
-      "sizeBytes": 47373,
-      "date": "2026-06-25"
-    },
-    {
       "id": "research/tech-news/podcasts/2026-06-24/script.md",
       "type": "podcastScript",
       "topic": "tech-news",
@@ -6634,36 +6642,6 @@
       "sizeBytes": 7646,
       "date": "2026-06-24",
       "time": "17:44"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-06-24",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-24/script.md",
-      "sizeBytes": 5379,
-      "date": "2026-06-24"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-24/audio/female-piper/podcast.mp3",
-      "sizeBytes": 2425129,
-      "date": "2026-06-24"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-24-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-mobile-brief.pdf",
-      "sizeBytes": 43170,
-      "date": "2026-06-24"
     },
     {
       "id": "research/tech-news/runs/2026-06-23.md",
@@ -6850,46 +6828,6 @@
       "sizeBytes": 4612,
       "date": "2026-06-23",
       "time": "01:40"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/script.md",
-      "type": "podcastScript",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Scenariusz: Mobile News Brief 2026-06-23",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/script.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/script.md",
-      "sizeBytes": 4595,
-      "date": "2026-06-23"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/male-xtts/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - male xtts",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/male-xtts/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/male-xtts/podcast.mp3",
-      "sizeBytes": 2672330,
-      "date": "2026-06-23"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.mp3",
-      "type": "podcastAudioVariant",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "Podcast audio - female piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.mp3",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.mp3",
-      "sizeBytes": 2076310,
-      "date": "2026-06-23"
-    },
-    {
-      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-mobile-brief.pdf",
-      "type": "pdf",
-      "topic": "aktualne-wydarzenia-mobile",
-      "title": "2026-06-23-mobile-brief.pdf",
-      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-mobile-brief.pdf",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-mobile-brief.pdf",
-      "sizeBytes": 77165,
-      "date": "2026-06-23"
     },
     {
       "id": "research/tech-news/runs/2026-06-22.md",
@@ -7939,16 +7877,6 @@
       "path": "research/polska-swiat/pdfs/2026-06-17-polska-swiat.pdf",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-06-17-polska-swiat.pdf",
       "sizeBytes": 74275,
-      "date": "2026-06-17"
-    },
-    {
-      "id": "research/codex-agent-automation/runs/2026-06-17.md",
-      "type": "run",
-      "topic": "codex-agent-automation",
-      "title": "Daily Research Report: codex-agent-automation",
-      "path": "research/codex-agent-automation/runs/2026-06-17.md",
-      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/codex-agent-automation/runs/2026-06-17.md",
-      "sizeBytes": 6194,
       "date": "2026-06-17"
     }
   ]

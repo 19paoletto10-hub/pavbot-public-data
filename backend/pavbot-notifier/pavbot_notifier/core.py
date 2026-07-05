@@ -145,6 +145,10 @@ async def send_apns_change_notifications(
         "sent": 0,
         "failed": 0,
         "skippedDevices": 0,
+        "invalidDeviceTokens": 0,
+        "invalidDeviceTokenSuffixes": [],
+        "_invalidDeviceTokens": [],
+        "removedDevices": 0,
         "errors": [],
         "status": "skipped",
     }
@@ -220,12 +224,11 @@ def build_change_notification(
     artifact_dates = [str(item.get("date", "")) for item in artifacts if item.get("date")]
     topic = common_value(artifact_topics)
     date = common_value(artifact_dates)
+    pulse_artifacts = pulse_news_data_artifacts(artifacts)
 
     user_info: dict[str, Any] = {
         "manifestURL": manifest_url_value,
     }
-    if artifact_ids:
-        user_info["artifactIDs"] = artifact_ids
     if topic:
         user_info["artifactTopic"] = topic
     if date:
@@ -234,10 +237,12 @@ def build_change_notification(
         user_info["automationIDs"] = automation_ids
         user_info["automationID"] = automation_ids[0]
 
-    pulse_artifacts = pulse_news_data_artifacts(artifacts)
     if pulse_artifacts:
+        pulse_artifact_id = str(pulse_artifacts[0].get("id") or pulse_artifacts[0].get("path") or artifact_ids[0])
         user_info["notificationKind"] = "pulseNews"
         user_info["artifactTopic"] = PULSE_NEWS_TOPIC
+        user_info["artifactIDs"] = [pulse_artifact_id]
+        user_info["artifactID"] = pulse_artifact_id
         selected_article = selected_pulse_news_article(pulse_news_digest)
         if selected_article:
             user_info["pulseArticleID"] = selected_article["id"]
@@ -246,8 +251,11 @@ def build_change_notification(
             "title": PULSE_NEWS_NOTIFICATION_TITLE,
             "body": pulse_news_notification_body(selected_article),
             "userInfo": user_info,
-            "summaryID": str(pulse_artifacts[0].get("id") or artifact_ids[0]),
+            "summaryID": pulse_artifact_id,
         }
+
+    if artifact_ids:
+        user_info["artifactIDs"] = artifact_ids
 
     if artifact_ids:
         file_label = "file" if len(artifact_ids) == 1 else "files"
@@ -614,7 +622,56 @@ async def send_apns_alert_safely(
         response_body = getattr(exc, "response_body", None)
         if response_body:
             error["responseBody"] = response_body
+        if is_permanent_apns_token_error(exc):
+            error["invalidDeviceToken"] = True
+            invalid_tokens = summary.setdefault("_invalidDeviceTokens", [])
+            if device_token not in invalid_tokens:
+                invalid_tokens.append(device_token)
+                summary["invalidDeviceTokens"] = len(invalid_tokens)
+                summary.setdefault("invalidDeviceTokenSuffixes", []).append(device_token[-5:])
         summary["errors"].append(error)
+
+
+def is_permanent_apns_token_error(exc: Exception) -> bool:
+    status_code = getattr(exc, "status_code", None)
+    reason = apns_error_reason(exc)
+    return (status_code == 410 and reason == "Unregistered") or (
+        status_code == 400 and reason == "BadDeviceToken"
+    )
+
+
+def apns_error_reason(exc: Exception) -> str:
+    response_body = getattr(exc, "response_body", None)
+    candidates = [response_body, str(exc)]
+    for candidate in candidates:
+        if not candidate:
+            continue
+        if isinstance(candidate, bytes):
+            try:
+                candidate = candidate.decode("utf-8")
+            except UnicodeDecodeError:
+                continue
+        if isinstance(candidate, str):
+            try:
+                parsed = json.loads(candidate)
+            except json.JSONDecodeError:
+                parsed = None
+            if isinstance(parsed, dict) and isinstance(parsed.get("reason"), str):
+                return parsed["reason"]
+            if "BadDeviceToken" in candidate:
+                return "BadDeviceToken"
+            if "Unregistered" in candidate:
+                return "Unregistered"
+    return ""
+
+
+def prune_invalid_device_tokens(devices: dict[str, Any], invalid_device_tokens: list[str] | tuple[str, ...]) -> int:
+    removed = 0
+    for token in set(invalid_device_tokens):
+        if token in devices:
+            del devices[token]
+            removed += 1
+    return removed
 
 
 def delivery_status(summary: dict[str, Any]) -> str:

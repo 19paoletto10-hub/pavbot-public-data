@@ -67,7 +67,7 @@ The current active automations are:
 - Name: `Pavbot LLM/AI Jobs Wrocław Research`
 - ID: `pavbot-llm-ai-jobs-wroclaw-research`
 - Topic: `research/llm-ai-jobs-wroclaw`
-- Cadence: twice daily; repository reports use `YYYY-MM-DD-HHMM` filenames
+- Cadence: daily at 17:40 Europe/Warsaw; 03:40 run paused
 - Output: `research/llm-ai-jobs-wroclaw/runs/YYYY-MM-DD-HHMM.md`
 - PDF: `research/llm-ai-jobs-wroclaw/pdfs/YYYY-MM-DD-HHMM-llm-ai-jobs-wroclaw.pdf`
 
@@ -80,7 +80,7 @@ The current active automations are:
 - Newspaper PDF: `research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-newspaper.pdf`
 - Report: `research/aktualne-wydarzenia-mobile/runs/YYYY-MM-DD-HHMM.md`
 - Podcast package: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/`
-- Audio variants: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/audio/<variant>/podcast.mp3`
+- Required audio: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/audio/female-piper/podcast.mp3`
 
 - Name: `Pavbot Aktualne Wydarzenia Mobile 19:33`
 - ID: `pavbot-aktualne-wydarzenia-mobile-19-33`
@@ -91,7 +91,7 @@ The current active automations are:
 - Newspaper PDF: `research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-newspaper.pdf`
 - Report: `research/aktualne-wydarzenia-mobile/runs/YYYY-MM-DD-HHMM.md`
 - Podcast package: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/`
-- Audio variants: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/audio/<variant>/podcast.mp3`
+- Required audio: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/audio/female-piper/podcast.mp3`
 
 - Name: `Pavbot Puls Dnia 3h`
 - ID: `pavbot-puls-dnia-news-3h`
@@ -112,7 +112,7 @@ The current active automations are:
 - ID: `pavbot-reddit-safari-humor-radar`
 - Kind: `automation`
 - Topic: `research/reddit-radar`
-- Cadence: every 2 hours at :06 Europe/Warsaw
+- Cadence: 00:06, 06:06, 12:06 and 18:06 Europe/Warsaw
 - Output: `research/reddit-radar/runs/YYYY-MM-DD-HHMM-reddit-radar.md`
 - Data: `research/reddit-radar/data/YYYY-MM-DD-HHMM-reddit-radar.json`
 - Raw data: `research/reddit-radar/data/YYYY-MM-DD-HHMM-reddit-radar-raw.json`
@@ -194,8 +194,8 @@ Run the complete mobile current-events workflow for
 `runs/YYYY-MM-DD-HHMM.md`, mobile PDF in
 `pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`, newspaper PDF in
 `pdfs/YYYY-MM-DD-HHMM-newspaper.pdf`, podcast package in
-`podcasts/YYYY-MM-DD-HHMM/`, public `script.md` for local iPhone TTS, both MP3
-TTS variants when available, and `tts_variants.json`.
+`podcasts/YYYY-MM-DD-HHMM/`, public `script.md` for local iPhone TTS, the
+required `female-piper` MP3, and `tts_variants.json`.
 ```
 
 Shared local TTS models can be prepared with:

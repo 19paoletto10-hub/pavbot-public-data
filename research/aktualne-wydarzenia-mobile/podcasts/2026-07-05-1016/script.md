@@ -1,0 +1,25 @@
+# Scenariusz: Mobile News Brief 2026-07-05 10:16
+
+Dzień dobry. Jest niedziela, piąty lipca dwa tysiące dwudziestego szóstego roku, a poranny brief jest dziś mniej o alarmach, a bardziej o tym, że instytucje zaczęły dowozić liczby. To zawsze lepsze niż samo „uważaj”, choć oczywiście nadal nie jest to zaproszenie do świętowania.
+
+Zacznijmy od Bobru, bo tam wreszcie dochodzi do raportów, a nie tylko do ostrzeżeń. WIOŚ opublikował nowe wyniki badań próbek pobranych trzeciego lipca i dołożył też kolejne publikacje dla drugiego lipca oraz uzupełnienie za trzydziesty czerwca. To nie daje jeszcze odpowiedzi na pytanie o przyczynę incydentu, ale pokazuje, że sprawa wchodzi w bardziej laboratoryjny etap. I to jest ten moment, kiedy woda przestaje być „jakby dziwna”, a zaczyna być „sprawdźmy dokładnie, co mówią próbki”.
+
+W komunikacie Dolnośląskiego Urzędu Wojewódzkiego zakaz korzystania z wody nadal obowiązuje. Odcinek od Zapory Pilchowickiej do zbiornika Rakowice jest oznakowany, a kolejną aktualizację zapowiedziano na czternastą. Czyli dzień zaczyna się nie od nowych teorii, tylko od kolejnej rundy danych. I bardzo dobrze, bo w takich sprawach zgadywanie jest najgorszym gatunkiem publicystyki.
+
+W Polsce druga ważna oś to energia. Kleczew pozostaje dużym symbolem: dwieście siedemdziesiąt megawatów, prawie pięćset tysięcy paneli, ponad czterysta hektarów i możliwość zasilenia nawet stu tysięcy gospodarstw domowych. Tyle że dziś nie widać nowego follow-through. Nie ma kolejnej decyzji o sieci, finansowaniu ani magazynowaniu. To nadal ważny projekt, ale na razie bardziej jako pokaz skali niż nowy krok wykonawczy.
+
+Podobnie jest z amerykańską obecnością wojskową w Polsce. Z komunikatów BBN i Kancelarii Prezydenta wynika spójna linia: rotacja wojsk USA ma zostać dokończona, a kwestia stałej bazy jest traktowana oddzielnie. Tylko że publicznie nadal nie ma terminu, jednostki ani kosztorysu. Innymi słowy, kierunek jest jasny, ale harmonogram jeszcze nie przyszedł z drukarni.
+
+Przenieśmy się do Ankary. Tu napięcie rośnie z godziny na godzinę, i to nie tylko dlatego, że zbliża się szczyt NATO. AP pisze dziś wprost, że Mark Rutte ma coraz trudniejsze zadanie, bo Donald Trump przesuwa rozmowę z podziału kosztów na lojalność sojuszników. To mocna zmiana tonu. Z ekonomii sojuszu robi się polityka zaufania. A zaufanie, jak wiadomo, jest w NATO równie ważne jak liczby, tylko znacznie trudniejsze do wpisania do tabelki.
+
+Oficjalne materiały NATO i tureckie zabezpieczenia pokazują, że szczyt wchodzi w tryb operacyjny. Mamy potwierdzone daty, forum przemysłu obronnego, tysiące policjantów, zakaz zgromadzeń i dodatkową infrastrukturę lotniczą. To już nie jest zwykłe spotkanie dyplomatyczne. To jest test jedności, cierpliwości i zdolności do wspólnego mówienia jednym głosem, nawet jeśli każdy przyjeżdża z własnym bagażem politycznym.
+
+Za granicą najbardziej zaskakują dziś Mołdawia i Gaza. W Kiszyniowie premier Alexandru Munteanu podał się do dymisji, a wraz z nim upada rząd. Prezydent Maia Sandu ma zacząć konsultacje w przyszłym tygodniu. To ważne, bo Mołdawia pozostaje krajem, w którym każda zmiana gabinetu od razu rezonuje z pytaniem o kierunek europejski i odporność na naciski z zewnątrz.
+
+W Gazie OCHA podaje, że w dwa tygodnie zgłoszono prawie dziewięć tysięcy trzysta przypadków ospy wietrznej w ponad stu trzydziestu placówkach zdrowia. Ponad połowa przypadków jest w Chan Junus. To brzmi jak problem medyczny, ale w realiach Gazy jest też wskaźnikiem przeludnienia, kłopotów sanitarnych i zmęczonej do granic infrastruktury. Innymi słowy: nawet choroba zakaźna staje się tam komentarzem do stanu całego systemu życia codziennego.
+
+I jest jeszcze Ukraina. AP opisuje kolejny atak ukraińskich dronów na rosyjską infrastrukturę paliwową, tym razem w Petersburgu. Wojna znowu pokazuje, że nie kończy się na froncie. Uderza w energię, logistykę i poczucie bezpieczeństwa daleko od linii walk. To właśnie dlatego te ataki są ważne nie tylko militarnie, ale też gospodarczo i politycznie.
+
+Na końcu technologia, ale dziś nie w wersji „nowy gadżet”. Komisja Europejska nadal trzyma harmonogram kodeksu transparentności treści generowanych przez AI. Sygnatariusze mają zostać publicznie ogłoszeni jeszcze w lipcu, zanim drugiego sierpnia ruszą obowiązki z AI Act. Równolegle Rada UE chce przywrócić tymczasowy mechanizm wykrywania i zgłaszania materiałów związanych z wykorzystywaniem dzieci online do trzeciego kwietnia dwa tysiące dwudziestego ósmego roku, a MON przypomina, że nabór do NATO DIANA dwa tysiące dwadzieścia siedem jest już zamknięty i trwa ocena wniosków. To spokojny, ale ważny fragment dnia: technologia nie robi dziś huku, za to bez niej nie da się już sensownie zarządzać bezpieczeństwem ani regulacją.
+
+Podsumowanie jest proste. Poranek piątego lipca przynosi więcej danych niż wczoraj, ale nie przynosi pełnych odpowiedzi. Bóbr wchodzi w tryb laboratoryjny, Mołdawia w tryb kryzysu rządowego, NATO w tryb politycznej próby, a Gaza w tryb kolejnego humanitarnego ostrzeżenia. Taki dzień nie musi być spektakularny, żeby był ważny. Wystarczy, że jest konkretny. I dziś konkretny jest właśnie najbardziej.

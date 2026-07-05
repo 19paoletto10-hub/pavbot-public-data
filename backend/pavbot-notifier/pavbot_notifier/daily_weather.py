@@ -8,7 +8,7 @@ from pathlib import Path
 from typing import Any, Callable
 from zoneinfo import ZoneInfo, ZoneInfoNotFoundError
 
-from .core import delivery_status, load_json, save_json, send_apns_alert_safely
+from .core import delivery_status, load_json, prune_invalid_device_tokens, save_json, send_apns_alert_safely
 
 
 WARSAW_LATITUDE = 51.1079
@@ -181,6 +181,11 @@ async def run_daily_weather_once(
             report=report,
             sender=sender,
         )
+        removed_devices = prune_invalid_device_tokens(devices, delivery.get("_invalidDeviceTokens", []))
+        delivery["removedDevices"] = removed_devices
+        delivery.pop("_invalidDeviceTokens", None)
+        if removed_devices:
+            save_json(storage_dir / "devices.json", devices)
         next_run = next_daily_weather_run(now, config).isoformat()
         state = {
             **state,
@@ -313,29 +318,31 @@ async def refresh_daily_weather_report(
     state = load_json(state_path, {})
     retry_at = manual_refresh_retry_at(state=state, now=now, config=config)
     if retry_at is not None:
-        blocked_state = {
-            **state,
-            "lastManualRefreshBlockedAt": now.isoformat(),
-            "manualRefreshRetryAt": retry_at.isoformat(),
-            "nextRun": next_daily_weather_run(now, config).isoformat(),
-        }
+        blocked_state = save_manual_weather_state(
+            state=state,
+            config=config,
+            report=None,
+            refreshed_at=None,
+            retry_at=retry_at,
+            blocked_at=now,
+        )
+        blocked_state["nextRun"] = next_daily_weather_run(now, config).isoformat()
         save_json(state_path, blocked_state)
-        last_report = state.get("lastReport") if isinstance(state.get("lastReport"), dict) else None
+        last_report = cached_manual_weather_report_for_config(state=state, config=config)
         raise DailyWeatherRefreshLocked(retry_at=retry_at, last_report=last_report)
 
     report = await fetch_daily_weather_report(config=config, generated_at=now)
     next_manual_refresh = next_manual_refresh_at(now, config)
-    save_json(
-        state_path,
-        {
-            **state,
-            "lastReport": report,
-            "lastReportFetchedAt": now.isoformat(),
-            "lastManualRefreshAt": now.isoformat(),
-            "manualRefreshRetryAt": next_manual_refresh.isoformat(),
-            "nextRun": next_daily_weather_run(now, config).isoformat(),
-        },
+    refreshed_state = save_manual_weather_state(
+        state=state,
+        config=config,
+        report=report,
+        refreshed_at=now,
+        retry_at=next_manual_refresh,
     )
+    refreshed_state["lastReportFetchedAt"] = now.isoformat()
+    refreshed_state["nextRun"] = next_daily_weather_run(now, config).isoformat()
+    save_json(state_path, refreshed_state)
     return {
         "status": "refreshed",
         "report": report,
@@ -500,6 +507,10 @@ async def send_daily_weather_notifications(
         "sent": 0,
         "failed": 0,
         "skippedDevices": 0,
+        "invalidDeviceTokens": 0,
+        "invalidDeviceTokenSuffixes": [],
+        "_invalidDeviceTokens": [],
+        "removedDevices": 0,
         "errors": [],
         "status": "skipped",
         "apnsConfigured": bool(getattr(getattr(sender, "config", None), "is_configured", True)),
@@ -543,6 +554,7 @@ def daily_weather_status(
 ) -> dict[str, Any]:
     now = now or datetime.now(timezone.utc)
     state = load_json(storage_dir / "last-daily-weather.json", {})
+    location_state = location_state_for_config(state=state, config=config)
     return {
         "enabled": config.enabled,
         "city": config.city,
@@ -553,12 +565,16 @@ def daily_weather_status(
         "lastRunDate": state.get("lastRunDate"),
         "lastDelivery": state.get("lastDelivery"),
         "lastError": state.get("lastError"),
-        "lastHourlyRefreshAt": state.get("lastHourlyRefreshAt"),
-        "nextHourlyRefreshAt": state.get("nextHourlyRefreshAt") or next_hourly_weather_refresh(now, config).isoformat(),
-        "lastHourlyError": state.get("lastHourlyError"),
-        "lastManualRefreshAt": state.get("lastManualRefreshAt"),
-        "manualRefreshRetryAt": state.get("manualRefreshRetryAt"),
-        "lastReport": compact_report_status(state.get("lastReport")),
+        "lastHourlyRefreshAt": location_state.get("lastHourlyRefreshAt") or state.get("lastHourlyRefreshAt"),
+        "nextHourlyRefreshAt": (
+            location_state.get("nextHourlyRefreshAt")
+            or state.get("nextHourlyRefreshAt")
+            or next_hourly_weather_refresh(now, config).isoformat()
+        ),
+        "lastHourlyError": location_state.get("lastHourlyError") or state.get("lastHourlyError"),
+        "lastManualRefreshAt": location_state.get("lastManualRefreshAt") or state.get("lastManualRefreshAt"),
+        "manualRefreshRetryAt": location_state.get("manualRefreshRetryAt") or state.get("manualRefreshRetryAt"),
+        "lastReport": compact_report_status(location_state.get("lastReport") or state.get("lastReport")),
         "cachedLocations": compact_cached_locations(state.get("locationReports")),
     }
 
@@ -703,6 +719,9 @@ def compact_cached_locations(value: Any) -> list[dict[str, Any]]:
                 "city": item.get("city"),
                 "lastHourlyRefreshAt": item.get("lastHourlyRefreshAt"),
                 "nextHourlyRefreshAt": item.get("nextHourlyRefreshAt"),
+                "lastManualRefreshAt": item.get("lastManualRefreshAt"),
+                "manualRefreshRetryAt": item.get("manualRefreshRetryAt"),
+                "lastManualRefreshBlockedAt": item.get("lastManualRefreshBlockedAt"),
                 "lastReport": compact_report_status(item.get("lastReport")),
                 "lastHourlyError": item.get("lastHourlyError"),
             }
@@ -716,13 +735,73 @@ def manual_refresh_retry_at(
     now: datetime,
     config: DailyWeatherConfig,
 ) -> datetime | None:
-    last_refresh = parse_datetime(state.get("lastManualRefreshAt"))
+    location_state = location_state_for_config(state=state, config=config)
+    last_refresh = parse_datetime(location_state.get("lastManualRefreshAt"))
+    if last_refresh is None and should_use_legacy_weather_cache(config=config):
+        last_refresh = parse_datetime(state.get("lastManualRefreshAt"))
     if last_refresh is None:
         return None
     retry_at = next_manual_refresh_at(last_refresh, config)
     if now.astimezone(config.zoneinfo) < retry_at:
         return retry_at
     return None
+
+
+def cached_manual_weather_report_for_config(
+    *,
+    state: dict[str, Any],
+    config: DailyWeatherConfig,
+) -> dict[str, Any] | None:
+    location_state = location_state_for_config(state=state, config=config)
+    report = location_state.get("lastReport")
+    if isinstance(report, dict):
+        return report
+    legacy_report = state.get("lastReport")
+    if isinstance(legacy_report, dict) and should_use_legacy_weather_cache(config=config):
+        return legacy_report
+    return None
+
+
+def save_manual_weather_state(
+    *,
+    state: dict[str, Any],
+    config: DailyWeatherConfig,
+    report: dict[str, Any] | None,
+    refreshed_at: datetime | None,
+    retry_at: datetime | None,
+    blocked_at: datetime | None = None,
+) -> dict[str, Any]:
+    state = dict(state)
+    location_key = weather_location_key(config)
+    location_reports = state.get("locationReports")
+    if not isinstance(location_reports, dict):
+        location_reports = {}
+    previous_entry = location_reports.get(location_key)
+    if not isinstance(previous_entry, dict):
+        previous_entry = {}
+
+    location_entry: dict[str, Any] = {
+        "city": config.city,
+        "latitude": config.latitude,
+        "longitude": config.longitude,
+        "timezone": config.timezone_name,
+    }
+    if report is not None:
+        location_entry["lastReport"] = report
+        state["lastReport"] = report
+    if refreshed_at is not None:
+        location_entry["lastManualRefreshAt"] = refreshed_at.isoformat()
+        state["lastManualRefreshAt"] = refreshed_at.isoformat()
+    if retry_at is not None:
+        location_entry["manualRefreshRetryAt"] = retry_at.isoformat()
+        state["manualRefreshRetryAt"] = retry_at.isoformat()
+    if blocked_at is not None:
+        location_entry["lastManualRefreshBlockedAt"] = blocked_at.isoformat()
+        state["lastManualRefreshBlockedAt"] = blocked_at.isoformat()
+
+    location_reports[location_key] = {**previous_entry, **location_entry}
+    state["locationReports"] = location_reports
+    return state
 
 
 def next_manual_refresh_at(value: datetime, config: DailyWeatherConfig) -> datetime:
