@@ -492,7 +492,7 @@ private struct JobsHistorySummaryCard: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text("Historia ofert")
                         .font(.headline.weight(.semibold))
-                    Text("Scalone role z najnowszego raportu i dwóch poprzednich dni.")
+                    Text("Scalone role z najnowszego raportu i sześciu poprzednich dni.")
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)

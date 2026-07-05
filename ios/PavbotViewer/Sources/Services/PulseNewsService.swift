@@ -14,21 +14,24 @@ struct PulseNewsClient {
     }
 
     private static func defaultFetchData(url: URL) async throws -> Data {
-        var request = URLRequest(url: url)
-        request.cachePolicy = .reloadIgnoringLocalCacheData
-        let (data, response) = try await URLSession.shared.data(for: request)
-        if let http = response as? HTTPURLResponse, !(200..<300).contains(http.statusCode) {
-            throw PulseNewsClientError.httpStatus(http.statusCode)
+        do {
+            return try await PavbotHTTPClient().data(for: url)
+        } catch PavbotHTTPClientError.invalidResponse {
+            throw PulseNewsClientError.invalidResponse
+        } catch PavbotHTTPClientError.httpStatus(let status) {
+            throw PulseNewsClientError.httpStatus(status)
         }
-        return data
     }
 }
 
 enum PulseNewsClientError: LocalizedError, Equatable {
+    case invalidResponse
     case httpStatus(Int)
 
     var errorDescription: String? {
         switch self {
+        case .invalidResponse:
+            "Serwer danych Pulsu dnia zwrócił nieprawidłową odpowiedź."
         case .httpStatus(let statusCode):
             "Serwer danych Pulsu dnia zwrócił HTTP \(statusCode)."
         }

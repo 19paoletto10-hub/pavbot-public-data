@@ -117,10 +117,10 @@ final class TodayLiveTopicsStore {
         } catch {
             if snapshot != nil {
                 state = .loaded
-                emptyMessage = PavbotCacheNoticeCopy.refreshFailed(context: "Puls Dnia z ostatnich 48h")
+                emptyMessage = "Pokazuję ostatni zapisany Puls Dnia. \(PavbotCacheNoticeCopy.refreshFailed(context: "najnowszy Puls Dnia"))"
                 return true
             }
-            if showCachedPulseIfNeeded(message: PavbotCacheNoticeCopy.refreshFailed(context: "Puls Dnia z ostatnich 48h")) {
+            if showCachedPulseIfNeeded(message: "Pokazuję ostatni zapisany Puls Dnia. \(PavbotCacheNoticeCopy.refreshFailed(context: "najnowszy Puls Dnia"))") {
                 state = .loaded
                 return true
             }

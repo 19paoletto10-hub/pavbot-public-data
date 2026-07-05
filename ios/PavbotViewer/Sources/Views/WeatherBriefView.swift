@@ -3,7 +3,12 @@ import ImageIO
 import SwiftUI
 import UIKit
 
+private enum TodaySectionScrollID {
+    static let redditRadar = "today-section-reddit-radar"
+}
+
 struct WeatherBriefView: View {
+    @Environment(ManifestStore.self) private var manifestStore
     @Environment(WeatherBriefStore.self) private var weatherStore
     @Environment(TodayHumorStore.self) private var humorStore
     @Environment(AppRouter.self) private var router
@@ -23,36 +28,47 @@ struct WeatherBriefView: View {
                 horizontalSizeClass: horizontalSizeClass
             )
 
-            ScrollView {
-                VStack(alignment: .leading, spacing: layout.sectionSpacing) {
-                    switch weatherStore.state {
-                    case .loading where weatherStore.report == nil:
-                        loadingView
-                    case .failed(let error) where weatherStore.report == nil:
-                        missingConfigurationView(error: error)
-                    default:
-                        if let report = weatherStore.report {
-                            reportView(report, layout: layout)
-                        } else {
-                            missingConfigurationView(
-                                error: .custom(
-                                    title: "Brak raportu pogodowego",
-                                    message: "Brak raportu pogodowego.",
-                                    actionTitle: "Otwórz ustawienia",
-                                    systemImage: "cloud.sun.fill",
-                                    tint: .blue
+            ScrollViewReader { scrollProxy in
+                ScrollView {
+                    VStack(alignment: .leading, spacing: layout.sectionSpacing) {
+                        switch weatherStore.state {
+                        case .loading where weatherStore.report == nil:
+                            loadingView
+                        case .failed(let error) where weatherStore.report == nil:
+                            missingConfigurationView(error: error)
+                        default:
+                            if let report = weatherStore.report {
+                                reportView(report, layout: layout)
+                            } else {
+                                missingConfigurationView(
+                                    error: .custom(
+                                        title: "Brak raportu pogodowego",
+                                        message: "Brak raportu pogodowego.",
+                                        actionTitle: "Otwórz ustawienia",
+                                        systemImage: "cloud.sun.fill",
+                                        tint: .blue
+                                    )
                                 )
-                            )
+                            }
                         }
                     }
+                    .padding(.horizontal, layout.horizontalPadding)
+                    .padding(.vertical, layout.verticalPadding)
+                    .frame(maxWidth: layout.contentMaxWidth, alignment: .leading)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .environment(\.pavbotAdaptiveLayout, layout)
                 }
-                .padding(.horizontal, layout.horizontalPadding)
-                .padding(.vertical, layout.verticalPadding)
-                .frame(maxWidth: layout.contentMaxWidth, alignment: .leading)
-                .frame(maxWidth: .infinity, alignment: .center)
-                .environment(\.pavbotAdaptiveLayout, layout)
+                .background(Color(.systemGroupedBackground))
+                .onAppear {
+                    handlePendingTodaySectionTarget(scrollProxy: scrollProxy)
+                }
+                .onChange(of: router.selectedTodaySectionTarget) { _, _ in
+                    handlePendingTodaySectionTarget(scrollProxy: scrollProxy)
+                }
+                .onChange(of: weatherStore.report?.id) { _, _ in
+                    handlePendingTodaySectionTarget(scrollProxy: scrollProxy)
+                }
             }
-            .background(Color(.systemGroupedBackground))
         }
         .navigationTitle("Dzisiaj")
         .toolbar {
@@ -83,9 +99,9 @@ struct WeatherBriefView: View {
         }
         .sheet(isPresented: $isLocationEditorPresented) {
             WeatherLocationEditorView(
-                currentLocationLabel: ManualWeatherLocationSettings.location()?.city
-                    ?? weatherStore.report?.city
-                    ?? WeatherBriefLocation.fallback.city,
+                currentLocationLabel: WeatherLocationPreferenceSettings.currentLocationLabel(
+                    reportCity: weatherStore.report?.city
+                ),
                 refreshWeather: { location in
                     await weatherStore.refreshNow(location: location)
                 }
@@ -111,8 +127,9 @@ struct WeatherBriefView: View {
 
     private func refreshCurrentWeather() async {
         guard !isRefreshingTodayContent else { return }
+        await manifestStore.reload(minimumInterval: 0)
         await weatherStore.refreshSelectedLocation()
-        await humorStore.load()
+        await loadRedditRadar(minimumInterval: 0)
     }
 
     private var isRefreshingTodayContent: Bool {
@@ -128,7 +145,36 @@ struct WeatherBriefView: View {
         } else {
             await weatherStore.load(minimumInterval: minimumInterval)
         }
-        await humorStore.load(minimumInterval: minimumInterval)
+        await manifestStore.reload(minimumInterval: minimumInterval)
+        await loadRedditRadar(minimumInterval: minimumInterval)
+    }
+
+    private func loadRedditRadar(minimumInterval: TimeInterval = 0) async {
+        await humorStore.load(
+            minimumInterval: minimumInterval,
+            manifest: manifestStore.manifest,
+            manifestURLString: manifestStore.manifestURLString
+        )
+    }
+
+    private func handlePendingTodaySectionTarget(scrollProxy: ScrollViewProxy) {
+        guard router.selectedTab == .today, let target = router.selectedTodaySectionTarget else { return }
+
+        switch target {
+        case .redditRadar:
+            Task { @MainActor in
+                if weatherStore.report == nil {
+                    await loadTodayContent(minimumInterval: 0)
+                }
+                await manifestStore.reload(minimumInterval: 0)
+                await loadRedditRadar(minimumInterval: 0)
+                try? await Task.sleep(nanoseconds: 100_000_000)
+                withAnimation(.snappy(duration: 0.35)) {
+                    scrollProxy.scrollTo(TodaySectionScrollID.redditRadar, anchor: .top)
+                }
+                router.clearTodaySectionTarget(.redditRadar)
+            }
+        }
     }
 
     private func runTopHourRefreshLoop() async {
@@ -217,7 +263,7 @@ struct WeatherBriefView: View {
                 router.selectedTab = .research
             },
             reloadHumor: {
-                Task { await humorStore.load() }
+                Task { await loadRedditRadar() }
             },
             openHumorDetail: { item in
                 selectedCockpitHumorItem = item
@@ -288,8 +334,9 @@ struct WeatherBriefView: View {
                 layout: layout,
                 savedStore: savedHumorStore
             ) {
-                Task { await humorStore.load() }
+                Task { await loadRedditRadar() }
             }
+            .id(TodaySectionScrollID.redditRadar)
 
             if let generatedAtDate = report.generatedAtDate {
                 Text("Zaktualizowano \(generatedAtDate.formatted(date: .omitted, time: .shortened)) · \(report.source)")
@@ -367,8 +414,9 @@ struct WeatherBriefView: View {
                 layout: layout,
                 savedStore: savedHumorStore
             ) {
-                Task { await humorStore.load() }
+                Task { await loadRedditRadar() }
             }
+            .id(TodaySectionScrollID.redditRadar)
 
             if let generatedAtDate = report.generatedAtDate {
                 Text("Zaktualizowano \(generatedAtDate.formatted(date: .omitted, time: .shortened)) · \(report.source)")
@@ -715,6 +763,7 @@ private struct PavbotPhoneDailyCockpit: View {
                 openSaved: openSavedHumor,
                 openDetail: openHumorDetail
             )
+            .id(TodaySectionScrollID.redditRadar)
 
             weatherDetailsGrid
 
@@ -1623,7 +1672,7 @@ private struct WeatherLocationEditorView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(PavbotHaptics.self) private var haptics
     let currentLocationLabel: String
-    let refreshWeather: (WeatherBriefLocation) async -> Void
+    let refreshWeather: (WeatherBriefLocation?) async -> Void
     @State private var query = ""
     @State private var errorMessage: String?
     @State private var isResolving = false
@@ -1635,7 +1684,7 @@ private struct WeatherLocationEditorView: View {
                     VStack(alignment: .leading, spacing: 8) {
                         Text("Lokalizacja prognozy")
                             .font(.title2.weight(.bold))
-                        Text("Wpisz miasto, dla którego Pavbot ma pobierać pogodę. Wybór zapisuje się lokalnie i działa także po ponownym uruchomieniu aplikacji.")
+                        Text("Wpisz miasto albo użyj bieżącej lokalizacji iPhone'a. Wybór zapisuje się lokalnie i działa także po ponownym uruchomieniu aplikacji.")
                             .font(.callout)
                             .foregroundStyle(.secondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -1728,7 +1777,7 @@ private struct WeatherLocationEditorView: View {
 
         do {
             let location = try await WeatherLocationService().weatherLocation(for: trimmedQuery)
-            ManualWeatherLocationSettings.save(location)
+            WeatherLocationPreferenceSettings.save(.manual(location))
             await refreshWeather(location)
             haptics.play(.success)
             dismiss()
@@ -1744,8 +1793,8 @@ private struct WeatherLocationEditorView: View {
         errorMessage = nil
         defer { isResolving = false }
 
-        ManualWeatherLocationSettings.clear()
-        await refreshWeather(.fallback)
+        WeatherLocationPreferenceSettings.save(.defaultWroclaw)
+        await refreshWeather(nil)
         haptics.play(.success)
         dismiss()
     }
@@ -1758,7 +1807,7 @@ private struct WeatherLocationEditorView: View {
 
         do {
             let location = try await WeatherLocationService().currentWeatherLocation(mode: .requestIfNeeded)
-            ManualWeatherLocationSettings.save(location)
+            WeatherLocationPreferenceSettings.save(.currentDeviceLocation)
             await refreshWeather(location)
             haptics.play(.success)
             dismiss()

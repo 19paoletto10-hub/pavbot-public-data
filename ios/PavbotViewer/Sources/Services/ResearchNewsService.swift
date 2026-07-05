@@ -21,24 +21,22 @@ struct ResearchNewsClient {
 
     init(
         fetchData: @escaping @Sendable (URL) async throws -> Data = { url in
-            let (data, response) = try await URLSession.shared.data(for: ManifestClient.request(for: url))
-            guard let httpResponse = response as? HTTPURLResponse else {
+            do {
+                return try await PavbotHTTPClient().data(for: ManifestClient.request(for: url))
+            } catch PavbotHTTPClientError.invalidResponse {
                 throw ClientError.invalidResponse
+            } catch PavbotHTTPClientError.httpStatus(let status) {
+                throw ClientError.httpStatus(status)
             }
-            guard (200..<300).contains(httpResponse.statusCode) else {
-                throw ClientError.httpStatus(httpResponse.statusCode)
-            }
-            return data
         },
         fetchText: @escaping @Sendable (URL) async throws -> String = { url in
-            let (data, response) = try await URLSession.shared.data(for: ManifestClient.request(for: url))
-            guard let httpResponse = response as? HTTPURLResponse else {
+            do {
+                return try await PavbotHTTPClient().text(for: ManifestClient.request(for: url))
+            } catch PavbotHTTPClientError.invalidResponse {
                 throw ClientError.invalidResponse
+            } catch PavbotHTTPClientError.httpStatus(let status) {
+                throw ClientError.httpStatus(status)
             }
-            guard (200..<300).contains(httpResponse.statusCode) else {
-                throw ClientError.httpStatus(httpResponse.statusCode)
-            }
-            return String(decoding: data, as: UTF8.self)
         }
     ) {
         self.fetchData = fetchData

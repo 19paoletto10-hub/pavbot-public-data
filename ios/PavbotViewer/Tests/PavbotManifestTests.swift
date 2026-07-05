@@ -1957,15 +1957,23 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     @MainActor
-    func testJobsHistoryStoreLoadsAnchorDateAndTwoPreviousCalendarDays() async throws {
+    func testJobsHistoryStoreLoadsAnchorDateAndSixPreviousCalendarDays() async throws {
         let packages = [
             Self.jobsPackage(date: "2026-06-25", time: "17:41"),
             Self.jobsPackage(date: "2026-06-25", time: "01:41"),
             Self.jobsPackage(date: "2026-06-24", time: "19:21"),
             Self.jobsPackage(date: "2026-06-23", time: "17:41"),
-            Self.jobsPackage(date: "2026-06-22", time: "01:41")
+            Self.jobsPackage(date: "2026-06-22", time: "01:41"),
+            Self.jobsPackage(date: "2026-06-19", time: "01:41"),
+            Self.jobsPackage(date: "2026-06-18", time: "01:41")
         ]
         let client = JobsDataClient(fetchData: { url in
+            if url.absoluteString.contains("2026-06-18-0141") {
+                return try Self.jobsHistoryData(date: "2026-06-18", time: "01:41", company: "VeryOldCo", title: "Old AI Engineer", workMode: "Remote", sourceURL: "https://example.com/very-old")
+            }
+            if url.absoluteString.contains("2026-06-19-0141") {
+                return try Self.jobsHistoryData(date: "2026-06-19", time: "01:41", company: "SixDaysBackCo", title: "AI Platform Engineer", workMode: "Remote", sourceURL: "https://example.com/six-days")
+            }
             if url.absoluteString.contains("2026-06-22-0141") {
                 return try Self.jobsHistoryData(date: "2026-06-22", time: "01:41", company: "OldCo", title: "Legacy AI Engineer", workMode: "Remote", sourceURL: "https://example.com/old")
             }
@@ -1992,10 +2000,12 @@ final class PavbotManifestTests: XCTestCase {
         )
 
         XCTAssertEqual(store.state, .loaded)
-        XCTAssertEqual(store.snapshot?.includedDates, ["2026-06-25", "2026-06-24", "2026-06-23"])
-        XCTAssertEqual(store.snapshot?.reportCount, 4)
-        XCTAssertEqual(store.snapshot?.opportunities.count, 4)
-        XCTAssertFalse(store.snapshot?.opportunities.contains { $0.opportunity.company == "OldCo" } ?? true)
+        XCTAssertEqual(store.snapshot?.includedDates, ["2026-06-25", "2026-06-24", "2026-06-23", "2026-06-22", "2026-06-21", "2026-06-20", "2026-06-19"])
+        XCTAssertEqual(store.snapshot?.reportCount, 6)
+        XCTAssertEqual(store.snapshot?.opportunities.count, 6)
+        XCTAssertTrue(store.snapshot?.opportunities.contains { $0.opportunity.company == "OldCo" } ?? false)
+        XCTAssertTrue(store.snapshot?.opportunities.contains { $0.opportunity.company == "SixDaysBackCo" } ?? false)
+        XCTAssertFalse(store.snapshot?.opportunities.contains { $0.opportunity.company == "VeryOldCo" } ?? true)
     }
 
     func testJobsHistorySnapshotDropsSelectedDateOutsideLoadedWindow() {
@@ -2938,12 +2948,23 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(source.contains(".foregroundStyle(.green)"))
         XCTAssertTrue(source.contains("ForEach(state.keyNotes.prefix(3), id: \\.self)"))
         XCTAssertTrue(source.contains("Text(note)"))
+        let bannerStart = try XCTUnwrap(source.range(of: "private struct PavbotNotificationAudioBanner: View")?.lowerBound)
+        let bannerEnd = try XCTUnwrap(source.range(of: "private func deepLinkURL")?.lowerBound)
+        let bannerSource = String(source[bannerStart..<bannerEnd])
+        XCTAssertFalse(bannerSource.contains("ProgressView(value:"))
+        XCTAssertFalse(bannerSource.contains("playbackProgress("))
         XCTAssertTrue(source.contains("compactLeading:"))
         XCTAssertTrue(source.contains("PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 18)"))
         XCTAssertTrue(source.contains("compactTrailing:"))
+        XCTAssertTrue(source.contains("} compactLeading: {\n                PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 18)"))
+        XCTAssertTrue(source.contains("} compactTrailing: {\n                HStack(spacing: 5) {\n                    PavbotNewsDynamicIslandBadge(source: context.attributes.source, scale: .compact)\n                    PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 18)"))
+        XCTAssertTrue(source.contains(".frame(maxWidth: .infinity, alignment: .trailing)"))
         XCTAssertTrue(source.contains("DynamicIslandExpandedRegion(.trailing)"))
         XCTAssertTrue(source.contains("PavbotDynamicIslandTrailingStatus(source: context.attributes.source, state: context.state)"))
-        XCTAssertTrue(source.contains("} compactTrailing: {\n                PavbotNewsDynamicIslandBadge(source: context.attributes.source)"))
+        XCTAssertTrue(source.contains("PavbotAudioActivityIcon(source: source, isPlaying: state.isPlaying, size: 18)"))
+        XCTAssertTrue(source.contains("} minimal: {\n                PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 16)"))
+        XCTAssertFalse(source.contains("} compactLeading: {\n                PavbotNewsDynamicIslandBadge(source: context.attributes.source, scale: .compact)"))
+        XCTAssertFalse(source.contains("} compactTrailing: {\n                PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 18)\n            } minimal:"))
         XCTAssertFalse(source.contains("} compactTrailing: {\n                PavbotDynamicIslandTrailingStatus(source: context.attributes.source, state: context.state)"))
         XCTAssertFalse(source.contains("PavbotDynamicIslandSwapHint"))
         XCTAssertFalse(source.contains("Image(systemName: \"arrow.left.arrow.right\")"))
@@ -2951,12 +2972,16 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(source.contains("Text(compactProgress(context.state))"))
         XCTAssertFalse(source.contains("Text(timerInterval:"))
         XCTAssertTrue(source.contains("private struct PavbotDynamicIslandTrailingStatus: View"))
-        XCTAssertTrue(source.contains("HStack(spacing: 10)"))
+        XCTAssertTrue(source.contains("HStack(spacing: 7)"))
         XCTAssertTrue(source.contains("PavbotRemainingPlaybackLabel(state: state)"))
         XCTAssertTrue(source.contains("private struct PavbotNewsDynamicIslandBadge: View"))
+        XCTAssertTrue(source.contains("private enum PavbotNewsDynamicIslandBadgeScale"))
         XCTAssertTrue(source.contains("Text(\"PAV\")"))
+        XCTAssertTrue(source.contains("Divider()"))
         XCTAssertTrue(source.contains("Text(\"NEWS\")"))
         XCTAssertTrue(source.contains(".accessibilityLabel(\"Pavbot News, aktywne audio w tle\")"))
+        XCTAssertTrue(source.contains("case .mp3Podcast, .researchTTS:\n        .blue"))
+        XCTAssertTrue(source.contains("case .pulseDayTTS:\n        .orange"))
     }
 
     func testMobileNewsSpeechPassesSectionAndFactsToAudioActivity() throws {
@@ -2993,6 +3018,26 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(
             artifact.resolvedURL(manifestURL: manifestURL)?.absoluteString,
             "https://raw.githubusercontent.com/example/pavbot/main/research/tech-news/runs/2026-06-22.md"
+        )
+    }
+
+    func testKeepsAbsoluteArtifactURLFromManifest() throws {
+        let artifact = PavbotArtifact(
+            id: "absolute",
+            type: .run,
+            topic: "reddit-radar",
+            title: "Reddit Radar",
+            path: "research/reddit-radar/runs/2026-07-04-0618-reddit-radar.md",
+            url: "https://cdn.example.com/pavbot/reddit-radar/latest.md",
+            sizeBytes: 100,
+            date: "2026-07-04",
+            time: "06:18"
+        )
+        let manifestURL = try XCTUnwrap(URL(string: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"))
+
+        XCTAssertEqual(
+            artifact.resolvedURL(manifestURL: manifestURL)?.absoluteString,
+            "https://cdn.example.com/pavbot/reddit-radar/latest.md"
         )
     }
 
@@ -4022,6 +4067,45 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(request.value(forHTTPHeaderField: "Cache-Control"), "no-cache")
     }
 
+    func testWeatherBriefClientBuildsRefreshRequestWithLocation() throws {
+        let client = WeatherBriefClient()
+        let serverURL = try XCTUnwrap(URL(string: "https://notify.example.com"))
+        let location = WeatherBriefLocation(latitude: 52.2297, longitude: 21.0122, city: "Warszawa")
+
+        let request = try client.refreshRequest(from: serverURL, location: location)
+        let url = try XCTUnwrap(request.url)
+        let components = try XCTUnwrap(URLComponents(url: url, resolvingAgainstBaseURL: false))
+        let query = Dictionary(uniqueKeysWithValues: (components.queryItems ?? []).map { ($0.name, $0.value ?? "") })
+
+        XCTAssertEqual(request.httpMethod, "POST")
+        XCTAssertEqual(components.path, "/v1/weather/daily/refresh")
+        XCTAssertEqual(query["lat"], "52.2297")
+        XCTAssertEqual(query["lon"], "21.0122")
+        XCTAssertEqual(query["city"], "Warszawa")
+        XCTAssertEqual(request.value(forHTTPHeaderField: "Cache-Control"), "no-cache")
+    }
+
+    func testWeatherBriefClientBuildsDistinctRequestsForDifferentIPhoneLocations() throws {
+        let client = WeatherBriefClient()
+        let serverURL = try XCTUnwrap(URL(string: "https://notify.example.com"))
+        let locations = [
+            WeatherBriefLocation(latitude: 51.1079, longitude: 17.0385, city: "Wrocław"),
+            WeatherBriefLocation(latitude: 35.9375, longitude: 14.3754, city: "Malta"),
+            WeatherBriefLocation(latitude: 52.52, longitude: 13.405, city: "Berlin")
+        ]
+
+        let queryItems = try locations.map { location -> [String: String] in
+            let request = try client.latestRequest(from: serverURL, location: location)
+            let url = try XCTUnwrap(request.url)
+            let components = try XCTUnwrap(URLComponents(url: url, resolvingAgainstBaseURL: false))
+            return Dictionary(uniqueKeysWithValues: (components.queryItems ?? []).map { ($0.name, $0.value ?? "") })
+        }
+
+        XCTAssertEqual(queryItems.map { $0["city"] }, ["Wrocław", "Malta", "Berlin"])
+        XCTAssertEqual(queryItems.map { $0["lat"] }, ["51.1079", "35.9375", "52.52"])
+        XCTAssertEqual(queryItems.map { $0["lon"] }, ["17.0385", "14.3754", "13.405"])
+    }
+
     func testWeatherLocationDisplayNameUsesReadablePlacemarkName() {
         let name = WeatherLocationDisplayName.name(
             locality: "Wrocław",
@@ -4117,6 +4201,57 @@ final class PavbotManifestTests: XCTestCase {
         )
     }
 
+    @MainActor
+    func testTodayHumorStorePrefersFreshManifestDigestWhenNotifierIsStale() async throws {
+        let staleDigest = Self.makeTodayHumorDigest(
+            id: "humor-2026-07-04-0008",
+            generatedAt: "2026-07-03T22:08:39Z",
+            displayTime: "00:08"
+        )
+        let freshDigest = Self.makeTodayHumorDigest(
+            id: "humor-2026-07-04-0618",
+            generatedAt: "2026-07-04T04:18:15Z",
+            displayTime: "06:18"
+        )
+        let manifest = PavbotManifest(
+            schemaVersion: 1,
+            title: "Pavbot",
+            generatedAt: "2026-07-04T04:20:00Z",
+            rawBaseUrl: "https://raw.githubusercontent.com/example/repo/main",
+            automations: [],
+            topics: [],
+            artifacts: [
+                PavbotArtifact(
+                    id: "research/reddit-radar/data/2026-07-04-0618-reddit-radar.json",
+                    type: .redditRadarData,
+                    topic: "reddit-radar",
+                    title: "<RR> Reddit Radar",
+                    path: "research/reddit-radar/data/2026-07-04-0618-reddit-radar.json",
+                    url: "https://example.com/research/reddit-radar/data/2026-07-04-0618-reddit-radar.json",
+                    sizeBytes: 1234,
+                    date: "2026-07-04",
+                    time: "06:18"
+                )
+            ]
+        )
+        let store = TodayHumorStore(
+            client: StaticTodayHumorClient(serverDigest: staleDigest, artifactDigest: freshDigest),
+            cache: TodayHumorCache(defaults: UserDefaults(suiteName: UUID().uuidString)!),
+            serverURLProvider: { URL(string: "https://notify.example.com") }
+        )
+
+        await store.load(
+            minimumInterval: 0,
+            manifest: manifest,
+            manifestURLString: "https://raw.githubusercontent.com/example/repo/main/public/pavbot-manifest.json"
+        )
+
+        XCTAssertEqual(store.digest?.id, "humor-2026-07-04-0618")
+        XCTAssertEqual(store.digest?.displayTime, "06:18")
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertNil(store.cacheNotice)
+    }
+
     func testTodayHumorArtworkUsesFitModeInsteadOfCroppingImages() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let sourceURL = testsURL
@@ -4131,6 +4266,26 @@ final class PavbotManifestTests: XCTestCase {
 
         XCTAssertTrue(artworkSource.contains(".scaledToFit()"))
         XCTAssertFalse(artworkSource.contains(".scaledToFill()"))
+    }
+
+    func testWeatherBriefViewRoutesRedditRadarSectionTarget() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/WeatherBriefView.swift")
+        let source = try String(contentsOf: sourceURL)
+
+        XCTAssertTrue(source.contains("ScrollViewReader"))
+        XCTAssertTrue(source.contains("TodaySectionScrollID.redditRadar"))
+        XCTAssertTrue(source.contains("router.selectedTodaySectionTarget"))
+        XCTAssertTrue(source.contains("scrollProxy.scrollTo(TodaySectionScrollID.redditRadar"))
+        XCTAssertTrue(source.contains("router.clearTodaySectionTarget(.redditRadar)"))
+        XCTAssertTrue(source.contains("@Environment(ManifestStore.self) private var manifestStore"))
+        XCTAssertTrue(source.contains("await manifestStore.reload(minimumInterval: 0)"))
+        XCTAssertTrue(source.contains("await loadRedditRadar(minimumInterval: 0)"))
+        XCTAssertTrue(source.contains("manifest: manifestStore.manifest"))
+        XCTAssertTrue(source.contains("manifestURLString: manifestStore.manifestURLString"))
     }
 
     func testTodayHumorPanelShowsAllRadarItemsWithHorizontalImageBrowsing() throws {
@@ -4301,6 +4456,8 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(request.httpMethod, "GET")
         XCTAssertEqual(url.path, "/v1/humor/latest")
         XCTAssertEqual(request.value(forHTTPHeaderField: "Cache-Control"), "no-cache")
+        XCTAssertEqual(request.value(forHTTPHeaderField: "Pragma"), "no-cache")
+        XCTAssertEqual(request.timeoutInterval, 12)
     }
 
     func testTodayHumorSavedStorePersistsRemovesAndDeduplicatesItems() throws {
@@ -4417,7 +4574,8 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.report?.id, "warszawa-2026-06-25")
         XCTAssertEqual(store.report?.city, "Warszawa")
         XCTAssertEqual(cache.load()?.hourlyTemperature.count, 3)
-        XCTAssertEqual(client.latestLocations.map { $0?.city }, ["Warszawa"])
+        XCTAssertEqual(client.latestLocations.map { $0?.city }, [])
+        XCTAssertEqual(client.refreshLocations.map { $0?.city }, ["Warszawa"])
         XCTAssertEqual(store.locationNotice, "Bieżąca prognoza dla: Warszawa.")
     }
 
@@ -4437,7 +4595,8 @@ final class PavbotManifestTests: XCTestCase {
         await store.refreshNow(location: selectedLocation)
 
         XCTAssertNil(store.report)
-        XCTAssertEqual(client.latestLocations.map { $0?.city }, ["Warszawa"])
+        XCTAssertEqual(client.latestLocations.map { $0?.city }, [])
+        XCTAssertEqual(client.refreshLocations.map { $0?.city }, ["Warszawa"])
         if case .failed(let error) = store.state {
             XCTAssertEqual(error.title, "Nie udało się pobrać prognozy dla tej lokalizacji")
             XCTAssertTrue(error.message.contains("Warszawa"))
@@ -4488,7 +4647,7 @@ final class PavbotManifestTests: XCTestCase {
                 providerCalls += 1
                 return WeatherBriefLocation(latitude: 50.0614, longitude: 19.9366, city: "Kraków, Małopolskie")
             },
-            manualLocationProvider: { manualLocation }
+            locationPreferenceProvider: { .manual(manualLocation) }
         )
 
         await store.load()
@@ -4497,6 +4656,15 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(client.latestLocations.map { $0?.city }, ["Poznań, Wielkopolskie"])
         XCTAssertEqual(store.locationNotice, "Bieżąca prognoza dla: Poznań, Wielkopolskie.")
         XCTAssertEqual(store.state, .loaded)
+    }
+
+    @MainActor
+    func testWeatherLocationPreferenceMigratesLegacyManualLocation() async throws {
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        let legacyLocation = WeatherBriefLocation(latitude: 52.4064, longitude: 16.9252, city: "Poznań, Wielkopolskie")
+        ManualWeatherLocationSettings.save(legacyLocation, defaults: defaults)
+
+        XCTAssertEqual(WeatherLocationPreferenceSettings.preference(defaults: defaults), .manual(legacyLocation))
     }
 
     @MainActor
@@ -4513,15 +4681,73 @@ final class PavbotManifestTests: XCTestCase {
             locationProvider: { mode in
                 requestedModes.append(mode)
                 return WeatherBriefLocation(latitude: 50.0614, longitude: 19.9366, city: "Kraków, Małopolskie")
-            }
+            },
+            locationPreferenceProvider: { .currentDeviceLocation }
         )
 
-        await store.loadWithCurrentLocation()
+        await store.load()
 
         XCTAssertEqual(requestedModes, [.useIfAuthorized])
         XCTAssertEqual(client.latestLocations.map { $0?.city }, ["Kraków, Małopolskie"])
+        XCTAssertEqual(client.refreshLocations.map { $0?.city }, [])
         XCTAssertEqual(store.locationNotice, "Bieżąca prognoza dla: Kraków, Małopolskie.")
         XCTAssertEqual(store.state, .loaded)
+    }
+
+    @MainActor
+    func testWeatherStoreCurrentLocationPreferenceRefreshesDeviceLocationOnEachLoadAndRefresh() async throws {
+        let latestReport = try Self.dailyWeatherReport(city: "Malta", id: "malta-2026-06-25")
+        let refreshReport = try Self.dailyWeatherReport(city: "Berlin", id: "berlin-2026-06-25")
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        let client = SpyWeatherBriefClient(latestReport: latestReport, refreshReport: refreshReport)
+        var locations = [
+            WeatherBriefLocation(latitude: 35.9375, longitude: 14.3754, city: "Malta"),
+            WeatherBriefLocation(latitude: 52.52, longitude: 13.405, city: "Berlin")
+        ]
+        var requestedModes: [WeatherLocationMode] = []
+        let store = WeatherBriefStore(
+            client: client,
+            cache: WeatherBriefCache(defaults: defaults),
+            cooldown: WeatherRefreshCooldown(defaults: defaults),
+            serverURLProvider: { URL(string: "https://notify.example.com") },
+            locationProvider: { mode in
+                requestedModes.append(mode)
+                return locations.removeFirst()
+            },
+            locationPreferenceProvider: { .currentDeviceLocation }
+        )
+
+        await store.load()
+        await store.refreshSelectedLocation()
+
+        XCTAssertEqual(requestedModes, [.useIfAuthorized, .useIfAuthorized])
+        XCTAssertEqual(client.latestLocations.map { $0?.city }, ["Malta"])
+        XCTAssertEqual(client.refreshLocations.map { $0?.city }, ["Berlin"])
+        XCTAssertEqual(store.report?.id, "berlin-2026-06-25")
+    }
+
+    @MainActor
+    func testWeatherStoreManualRefreshUsesRefreshEndpointAndPassiveLoadUsesLatestEndpoint() async throws {
+        let latestReport = try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: Self.dailyWeatherFixtureData)
+        let refreshReport = try Self.dailyWeatherReport(city: "Warszawa", id: "warszawa-2026-06-25")
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        let client = SpyWeatherBriefClient(latestReport: latestReport, refreshReport: refreshReport)
+        let location = WeatherBriefLocation(latitude: 52.2297, longitude: 21.0122, city: "Warszawa")
+        let store = WeatherBriefStore(
+            client: client,
+            cache: WeatherBriefCache(defaults: defaults),
+            cooldown: WeatherRefreshCooldown(defaults: defaults),
+            serverURLProvider: { URL(string: "https://notify.example.com") },
+            locationProvider: { _ in location },
+            locationPreferenceProvider: { .currentDeviceLocation }
+        )
+
+        await store.load()
+        await store.refreshSelectedLocation()
+
+        XCTAssertEqual(client.latestLocations.map { $0?.city }, ["Warszawa"])
+        XCTAssertEqual(client.refreshLocations.map { $0?.city }, ["Warszawa"])
+        XCTAssertEqual(store.report?.id, "warszawa-2026-06-25")
     }
 
     @MainActor
@@ -4567,10 +4793,31 @@ final class PavbotManifestTests: XCTestCase {
 
         await store.refreshNow(location: .fallback)
 
-        XCTAssertEqual(client.latestLocations.map { $0?.city }, ["Wrocław"])
+        XCTAssertEqual(client.latestLocations.map { $0?.city }, [])
+        XCTAssertEqual(client.refreshLocations.map { $0?.city }, ["Wrocław"])
         XCTAssertEqual(store.state, .loaded)
         XCTAssertNil(store.manualRefreshRetryAt)
         XCTAssertNil(store.cacheNotice)
+    }
+
+    @MainActor
+    func testWeatherStoreManualRefreshExposesBackendRetryTimeWhenLocked() async throws {
+        let report = try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: Self.dailyWeatherFixtureData)
+        let retryAt = try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-06-25T11:00:00Z"))
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        let store = WeatherBriefStore(
+            client: RefreshLockedWeatherBriefClient(report: report, retryAt: retryAt),
+            cache: WeatherBriefCache(defaults: defaults),
+            cooldown: WeatherRefreshCooldown(defaults: defaults),
+            serverURLProvider: { URL(string: "https://notify.example.com") }
+        )
+        store.report = report
+
+        await store.refreshNow(location: .fallback)
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.manualRefreshRetryAt, retryAt)
+        XCTAssertEqual(store.cacheNotice, "Nie pobrano świeżych danych. Pokazuję zapisane dane: ostatni raport pogodowy.")
     }
 
     @MainActor
@@ -4845,6 +5092,86 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(researchViewSource.contains("private func handleResearchActivation() async"))
         XCTAssertTrue(topicChangeSource.contains("if router.selectedTab == .research"))
         XCTAssertTrue(topicChangeSource.contains("await loadSelectedResearchContent()"))
+    }
+
+    func testResearchViewFollowsLatestReportAfterManifestRefreshUnlessRoutePinned() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/ReportPackageViews.swift")
+        let source = try String(contentsOf: sourceURL)
+        let researchViewSource = try XCTUnwrap(
+            source.components(separatedBy: "struct ResearchView: View").dropFirst().first?
+                .components(separatedBy: "private struct ResearchLibraryHeader").first
+        )
+        let helperSource = try XCTUnwrap(
+            researchViewSource.components(separatedBy: "private func syncSelectedReportDayToLatestIfNeeded").dropFirst().first?
+                .components(separatedBy: "private func resolvePendingAudioArticleRouteIfNeeded").first
+        )
+
+        XCTAssertTrue(researchViewSource.contains("syncSelectedReportDayToLatestIfNeeded()"))
+        XCTAssertTrue(researchViewSource.contains("syncSelectedReportDayToLatestIfNeeded(manifest: manifest)"))
+        XCTAssertTrue(helperSource.contains("guard router.selectedReportArtifactIDs.isEmpty else { return }"))
+        XCTAssertTrue(helperSource.contains("guard force || !hasSelectedReportDay(in: packages) else { return }"))
+        XCTAssertTrue(helperSource.contains("latestReportKey(in: packages)"))
+        XCTAssertTrue(helperSource.contains("router.selectedReportDay = latestReportKey"))
+    }
+
+    func testResearchViewShowsFiveRunPickerForEachResearchTopic() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/ReportPackageViews.swift")
+        let source = try String(contentsOf: sourceURL)
+        let researchViewSource = try XCTUnwrap(
+            source.components(separatedBy: "struct ResearchView: View").dropFirst().first?
+                .components(separatedBy: "private struct ResearchLibraryHeader").first
+        )
+        let pickerSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct ResearchRunPicker").dropFirst().first?
+                .components(separatedBy: "private struct ResearchLibraryHeader").first
+        )
+
+        XCTAssertTrue(researchViewSource.contains("ResearchRunPicker("))
+        XCTAssertTrue(researchViewSource.contains("packages: packages"))
+        XCTAssertTrue(researchViewSource.contains("selectedReportDay: $router.selectedReportDay"))
+        XCTAssertTrue(pickerSource.contains("Array(packages.prefix(5))"))
+        XCTAssertTrue(pickerSource.contains("guard recentPackages.count > 1 else"))
+        XCTAssertTrue(pickerSource.contains("ForEach(recentPackages)"))
+        XCTAssertTrue(pickerSource.contains("selectedReportDay = package.key"))
+    }
+
+    func testResearchRunPickerSelectionFlowsIntoAllResearchLoads() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/ReportPackageViews.swift")
+        let source = try String(contentsOf: sourceURL)
+        let researchViewSource = try XCTUnwrap(
+            source.components(separatedBy: "struct ResearchView: View").dropFirst().first?
+                .components(separatedBy: "private struct ResearchLibraryHeader").first
+        )
+        let topicChangeSource = try XCTUnwrap(
+            researchViewSource.components(separatedBy: ".onChange(of: router.selectedResearchTopic)").dropFirst().first?
+                .components(separatedBy: ".onChange(of: router.selectedTab)").first
+        )
+        let loadNewsSource = try XCTUnwrap(
+            researchViewSource.components(separatedBy: "private func loadNewsIssue() async").dropFirst().first?
+                .components(separatedBy: "private func loadMobileMagazine() async").first
+        )
+        let loadMobileSource = try XCTUnwrap(
+            researchViewSource.components(separatedBy: "private func loadMobileMagazine() async").dropFirst().first?
+                .components(separatedBy: "private func loadSelectedResearchContent() async").first
+        )
+
+        XCTAssertTrue(loadNewsSource.contains("selectedDay: router.selectedReportDay"))
+        XCTAssertTrue(loadMobileSource.contains("selectedDay: router.selectedReportDay"))
+        XCTAssertTrue(topicChangeSource.contains("syncSelectedReportDayToLatestIfNeeded(topic: topic, force: true)"))
+        XCTAssertTrue(researchViewSource.contains("private func latestReportKey(in packages: [TopicReportPackage]) -> String?"))
+        XCTAssertTrue(researchViewSource.contains("private func hasSelectedReportDay(in packages: [TopicReportPackage]) -> Bool"))
     }
 
     func testResearchArticleSnapshotHostBuildsSynchronouslyWithoutLoadingOnlyTask() throws {
@@ -5558,7 +5885,7 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(reportSource.contains("Text(errorMessage)\n                    .font(.caption)\n                    .foregroundStyle(.red)"))
     }
 
-    func testProjectVersionIs242WithTimestampBuildNumber() throws {
+    func testProjectVersionIs244WithTimestampBuildNumber() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let projectYML = testsURL
             .deletingLastPathComponent()
@@ -5566,7 +5893,7 @@ final class PavbotManifestTests: XCTestCase {
             .appendingPathComponent("project.yml")
         let source = try String(contentsOf: projectYML)
 
-        XCTAssertTrue(source.contains("MARKETING_VERSION: \"2.4.2\""))
+        XCTAssertTrue(source.contains("MARKETING_VERSION: \"2.4.4\""))
         XCTAssertTrue(source.contains("BUILD_TIMESTAMP=\"$(date +%H%M%S)\""))
         XCTAssertTrue(source.contains("BUILD_NUMBER=\"${BUILD_DATE}.${BUILD_TIMESTAMP}\""))
         let buildNumbers = source
@@ -5732,8 +6059,10 @@ final class PavbotManifestTests: XCTestCase {
         let source = try String(contentsOf: sourceURL)
 
         XCTAssertTrue(source.contains("await reload(refreshManifest: true, minimumInterval: 0)"))
+        XCTAssertTrue(source.contains("await reload(refreshManifest: true, minimumInterval: 10)"))
         XCTAssertTrue(source.contains("pulseRouteReloadKey"))
-        XCTAssertTrue(source.contains("await manifestStore.reload(minimumInterval: 0)"))
+        XCTAssertTrue(source.contains("await manifestStore.reload(minimumInterval: minimumInterval)"))
+        XCTAssertTrue(source.contains("selectedMode = .latest"))
     }
 
     func testTodayLiveTopicsSavedStorePersistsAndRemovesTopics() throws {
@@ -5974,7 +6303,7 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.historySnapshots.map(\.headline), ["Lokalny Puls"])
         XCTAssertEqual(
             store.emptyMessage,
-            "Nie pobrano świeżych danych. Pokazuję zapisane dane: Puls Dnia z ostatnich 48h."
+            "Pokazuję ostatni zapisany Puls Dnia. Nie pobrano świeżych danych. Pokazuję zapisane dane: najnowszy Puls Dnia."
         )
     }
 
@@ -6614,6 +6943,7 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.state, .loaded)
         XCTAssertEqual(store.manifest?.generatedAt, "2026-06-27T01:07:23+00:00")
         XCTAssertEqual(store.lastNewArtifacts.map(\.id), ["new-run-2026-06-23"])
+        XCTAssertEqual(ManifestCache(defaults: defaults).load()?.generatedAt, "2026-06-27T01:07:23+00:00")
     }
 
     @MainActor
@@ -6636,8 +6966,46 @@ final class PavbotManifestTests: XCTestCase {
         let request = ManifestClient.request(for: url)
 
         XCTAssertEqual(request.cachePolicy, .reloadIgnoringLocalAndRemoteCacheData)
+        XCTAssertEqual(request.httpMethod, "GET")
         XCTAssertEqual(request.value(forHTTPHeaderField: "Cache-Control"), "no-cache")
         XCTAssertEqual(request.value(forHTTPHeaderField: "Pragma"), "no-cache")
+        XCTAssertEqual(request.timeoutInterval, 12)
+    }
+
+    func testPavbotHTTPClientBuildsNoCacheRequestWithTimeout() throws {
+        let url = try XCTUnwrap(URL(string: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"))
+        let request = PavbotHTTPClient.request(for: url, timeoutInterval: 8)
+
+        XCTAssertEqual(request.cachePolicy, .reloadIgnoringLocalAndRemoteCacheData)
+        XCTAssertEqual(request.httpMethod, "GET")
+        XCTAssertEqual(request.timeoutInterval, 8)
+        XCTAssertEqual(request.value(forHTTPHeaderField: "Cache-Control"), "no-cache")
+        XCTAssertEqual(request.value(forHTTPHeaderField: "Pragma"), "no-cache")
+    }
+
+    func testPavbotHTTPClientRejectsHTTPErrorStatus() async throws {
+        let configuration = URLSessionConfiguration.ephemeral
+        configuration.protocolClasses = [CapturingURLProtocol.self]
+        CapturingURLProtocol.requestHandler = { request in
+            XCTAssertEqual(request.value(forHTTPHeaderField: "Cache-Control"), "no-cache")
+            let response = try XCTUnwrap(HTTPURLResponse(
+                url: XCTUnwrap(request.url),
+                statusCode: 503,
+                httpVersion: nil,
+                headerFields: nil
+            ))
+            return (response, Data())
+        }
+        defer { CapturingURLProtocol.requestHandler = nil }
+
+        let client = PavbotHTTPClient(session: URLSession(configuration: configuration), timeoutInterval: 3)
+
+        do {
+            _ = try await client.data(for: XCTUnwrap(URL(string: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json")))
+            XCTFail("HTTP errors should throw")
+        } catch PavbotHTTPClientError.httpStatus(let status) {
+            XCTAssertEqual(status, 503)
+        }
     }
 
     @MainActor
@@ -6800,6 +7168,28 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     @MainActor
+    func testRouterOpensTodayRedditRadarFromRedditRadarNotificationUserInfo() {
+        let router = AppRouter()
+        router.selectedTab = .settings
+
+        router.handleNotification(
+            userInfo: [
+                "artifactTopic": "reddit-radar",
+                "artifactDate": "2026-07-04",
+                "artifactIDs": ["reddit-radar-data"]
+            ]
+        )
+
+        XCTAssertEqual(router.selectedTab, .today)
+        XCTAssertEqual(router.selectedTodaySectionTarget, .redditRadar)
+        XCTAssertNil(router.pendingArtifactID)
+        XCTAssertNil(router.artifactRoute)
+        XCTAssertNil(router.selectedArtifactDay)
+        XCTAssertNil(router.selectedReportDay)
+        XCTAssertTrue(router.artifactPath.isEmpty)
+    }
+
+    @MainActor
     func testRouterOpensArtifactFilterFromSummaryNotificationUserInfo() {
         let router = AppRouter()
         router.selectedTab = .settings
@@ -6881,6 +7271,40 @@ final class PavbotManifestTests: XCTestCase {
             sizeBytes: 100,
             date: date,
             time: time
+        )
+    }
+
+    private static func makeTodayHumorDigest(
+        id: String,
+        generatedAt: String,
+        displayTime: String
+    ) -> TodayHumorDigest {
+        TodayHumorDigest(
+            id: id,
+            title: "<RR> Reddit Radar",
+            summary: "Testowy radar Reddit",
+            generatedAt: generatedAt,
+            displayTime: displayTime,
+            nextRefreshAt: nil,
+            refreshIntervalHours: 6,
+            items: [
+                TodayHumorItem(
+                    id: "\(id)-item",
+                    title: "Testowy post Reddit",
+                    caption: "Krótki opis",
+                    sourceName: "r/test",
+                    sourceURL: "https://www.reddit.com/r/test/comments/example",
+                    imageURL: nil,
+                    score: 42,
+                    comments: 7,
+                    tags: ["test"],
+                    categoryLabel: "test",
+                    postText: nil,
+                    whyFunny: "Bo testuje wybór świeższego źródła.",
+                    commentHighlights: nil
+                )
+            ],
+            source: "Codex Safari Reddit radar"
         )
     }
 
@@ -8245,11 +8669,41 @@ private struct FailingWeatherBriefClient: WeatherBriefFetching {
     }
 }
 
+private struct RefreshLockedWeatherBriefClient: WeatherBriefFetching {
+    let report: DailyWeatherReport
+    let retryAt: Date
+
+    func fetchLatestReport(from serverURL: URL, location: WeatherBriefLocation?) async throws -> DailyWeatherReport {
+        report
+    }
+
+    func refreshReport(from serverURL: URL, location: WeatherBriefLocation?) async throws -> DailyWeatherReport {
+        throw WeatherBriefClient.ClientError.refreshLocked(retryAt)
+    }
+}
+
 private struct FailingTodayHumorClient: TodayHumorFetching {
     let error: Error
 
     func fetchLatestDigest(from serverURL: URL) async throws -> TodayHumorDigest {
         throw error
+    }
+
+    func fetchDigest(from artifactURL: URL) async throws -> TodayHumorDigest {
+        throw error
+    }
+}
+
+private struct StaticTodayHumorClient: TodayHumorFetching {
+    let serverDigest: TodayHumorDigest
+    let artifactDigest: TodayHumorDigest
+
+    func fetchLatestDigest(from serverURL: URL) async throws -> TodayHumorDigest {
+        serverDigest
+    }
+
+    func fetchDigest(from artifactURL: URL) async throws -> TodayHumorDigest {
+        artifactDigest
     }
 }
 
@@ -8352,15 +8806,23 @@ private final class CapturingURLProtocol: URLProtocol {
 @MainActor
 private final class SpyWeatherBriefClient: WeatherBriefFetching {
     let latestReport: DailyWeatherReport
+    let refreshedReport: DailyWeatherReport
     private(set) var latestLocations: [WeatherBriefLocation?] = []
+    private(set) var refreshLocations: [WeatherBriefLocation?] = []
 
-    init(latestReport: DailyWeatherReport) {
+    init(latestReport: DailyWeatherReport, refreshReport: DailyWeatherReport? = nil) {
         self.latestReport = latestReport
+        self.refreshedReport = refreshReport ?? latestReport
     }
 
     func fetchLatestReport(from serverURL: URL, location: WeatherBriefLocation?) async throws -> DailyWeatherReport {
         latestLocations.append(location)
         return latestReport
+    }
+
+    func refreshReport(from serverURL: URL, location: WeatherBriefLocation?) async throws -> DailyWeatherReport {
+        refreshLocations.append(location)
+        return refreshedReport
     }
 }
 

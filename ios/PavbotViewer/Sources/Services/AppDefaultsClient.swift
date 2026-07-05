@@ -44,17 +44,13 @@ struct AppDefaultsClient {
 
     init(fetchData: (@Sendable (URL) async throws -> Data)? = nil) {
         self.fetchData = fetchData ?? { url in
-            var request = URLRequest(url: url)
-            request.cachePolicy = .reloadIgnoringLocalAndRemoteCacheData
-            request.timeoutInterval = 8
-            let (data, response) = try await URLSession.shared.data(for: request)
-            guard let httpResponse = response as? HTTPURLResponse else {
+            do {
+                return try await PavbotHTTPClient(timeoutInterval: 8).data(for: url)
+            } catch PavbotHTTPClientError.invalidResponse {
                 throw AppDefaultsClientError.invalidResponse
+            } catch PavbotHTTPClientError.httpStatus(let status) {
+                throw AppDefaultsClientError.httpStatus(status)
             }
-            guard (200..<300).contains(httpResponse.statusCode) else {
-                throw AppDefaultsClientError.httpStatus(httpResponse.statusCode)
-            }
-            return data
         }
     }
 

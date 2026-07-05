@@ -130,6 +130,12 @@ struct ResearchView: View {
 
                 if let manifest = store.manifest {
                     let packages = manifest.reportPackages(for: router.selectedResearchTopic)
+                    ResearchRunPicker(
+                        topic: router.selectedResearchTopic,
+                        packages: packages,
+                        selectedReportDay: $router.selectedReportDay
+                    )
+
                     if router.selectedResearchTopic == .aktualne {
                         MobileNewsNativeContent(
                             packages: packages,
@@ -221,6 +227,7 @@ struct ResearchView: View {
                 ) {
                     Task {
                         await store.reload()
+                        syncSelectedReportDayToLatestIfNeeded()
                         await loadSelectedResearchContent()
                     }
                 }
@@ -228,6 +235,7 @@ struct ResearchView: View {
         }
         .refreshable {
             await store.reload()
+            syncSelectedReportDayToLatestIfNeeded()
             await loadSelectedResearchContent()
         }
         .task(id: researchLoadTrigger) {
@@ -237,13 +245,11 @@ struct ResearchView: View {
         .onAppear {
             mobileSpeechController.configureAudioCoordinator(audioCoordinator)
             podcastSpeechController.configureAudioCoordinator(audioCoordinator)
-            if router.selectedReportDay == nil {
-                router.selectedReportDay = store.manifest?.reportPackages(for: router.selectedResearchTopic).first?.date
-            }
+            syncSelectedReportDayToLatestIfNeeded()
         }
         .onChange(of: router.selectedResearchTopic) { _, topic in
             router.selectedReportArtifactIDs = []
-            router.selectedReportDay = store.manifest?.reportPackages(for: topic).first?.date
+            syncSelectedReportDayToLatestIfNeeded(topic: topic, force: true)
             selectedSection = nil
             selectedArticle = nil
             selectedMobileArticle = nil
@@ -268,9 +274,7 @@ struct ResearchView: View {
         }
         .onChange(of: store.manifest) { _, manifest in
             guard let manifest else { return }
-            if router.selectedReportDay == nil {
-                router.selectedReportDay = manifest.reportPackages(for: router.selectedResearchTopic).first?.date
-            }
+            syncSelectedReportDayToLatestIfNeeded(manifest: manifest)
         }
         .pavbotTabInfo(PavbotTabInfoContent.research(topicTitle: router.selectedResearchTopic.title, topicSystemImage: router.selectedResearchTopic.systemImage, topicTint: router.selectedResearchTopic.tint))
     }
@@ -305,9 +309,7 @@ struct ResearchView: View {
     }
 
     private func handleResearchActivation() async {
-        if router.selectedReportDay == nil {
-            router.selectedReportDay = store.manifest?.reportPackages(for: router.selectedResearchTopic).first?.date
-        }
+        syncSelectedReportDayToLatestIfNeeded()
         await loadSelectedResearchContent()
         await resolvePendingAudioArticleRouteIfNeeded()
     }
@@ -339,6 +341,35 @@ struct ResearchView: View {
             await loadMobileMagazine()
         } else {
             await loadNewsIssue()
+        }
+    }
+
+    private func syncSelectedReportDayToLatestIfNeeded(
+        topic: ReportTopicKind? = nil,
+        manifest: PavbotManifest? = nil,
+        force: Bool = false
+    ) {
+        guard router.selectedReportArtifactIDs.isEmpty else { return }
+        let activeManifest = manifest ?? store.manifest
+        let activeTopic = topic ?? router.selectedResearchTopic
+        let packages = activeManifest?.reportPackages(for: activeTopic) ?? []
+        guard force || !hasSelectedReportDay(in: packages) else { return }
+        guard let latestReportKey = latestReportKey(in: packages) else { return }
+        if router.selectedReportDay != latestReportKey {
+            router.selectedReportDay = latestReportKey
+        }
+    }
+
+    private func latestReportKey(in packages: [TopicReportPackage]) -> String? {
+        packages.first?.key
+    }
+
+    private func hasSelectedReportDay(in packages: [TopicReportPackage]) -> Bool {
+        guard let selectedReportDay = router.selectedReportDay else { return false }
+        return packages.contains { package in
+            package.key == selectedReportDay
+                || package.date == selectedReportDay
+                || package.key.hasPrefix(selectedReportDay)
         }
     }
 
@@ -380,6 +411,108 @@ struct ResearchView: View {
         store.state == .loading
             || newsStore.state == .loading
             || mobileNewsStore.state == .loading
+    }
+}
+
+private struct ResearchRunPicker: View {
+    let topic: ReportTopicKind
+    let packages: [TopicReportPackage]
+    @Binding var selectedReportDay: String?
+
+    private var recentPackages: [TopicReportPackage] {
+        Array(packages.prefix(5))
+    }
+
+    var body: some View {
+        if shouldShowPicker {
+            VStack(alignment: .leading, spacing: 10) {
+                HStack(spacing: 8) {
+                    Label("Przebieg", systemImage: "clock.arrow.circlepath")
+                        .font(.caption.weight(.bold))
+                        .foregroundStyle(topic.tint)
+                        .textCase(.uppercase)
+
+                    Spacer(minLength: 8)
+
+                    Text("Ostatnie \(recentPackages.count)")
+                        .font(.caption.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                }
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 8) {
+                        ForEach(recentPackages) { package in
+                            Button {
+                                selectedReportDay = package.key
+                            } label: {
+                                ResearchRunChip(
+                                    package: package,
+                                    isSelected: package.id == selectedPackageID,
+                                    tint: topic.tint
+                                )
+                            }
+                            .buttonStyle(.plain)
+                            .accessibilityLabel("Wybierz przebieg \(package.displayDate)")
+                        }
+                    }
+                    .padding(.vertical, 2)
+                }
+            }
+            .padding(12)
+            .background(Color(.systemBackground), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+            .overlay {
+                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    .stroke(topic.tint.opacity(0.16), lineWidth: 1)
+            }
+        }
+    }
+
+    private var shouldShowPicker: Bool {
+        guard recentPackages.count > 1 else { return false }
+        return true
+    }
+
+    private var selectedPackageID: String? {
+        guard let selectedReportDay else { return recentPackages.first?.id }
+        return recentPackages.first { package in
+            package.key == selectedReportDay
+                || package.date == selectedReportDay
+                || package.key.hasPrefix(selectedReportDay)
+        }?.id
+    }
+}
+
+private struct ResearchRunChip: View {
+    let package: TopicReportPackage
+    let isSelected: Bool
+    let tint: Color
+
+    var body: some View {
+        HStack(spacing: 7) {
+            Image(systemName: isSelected ? "checkmark.circle.fill" : "calendar")
+                .font(.caption.weight(.bold))
+                .foregroundStyle(isSelected ? tint : .secondary)
+                .frame(width: 16, height: 16)
+
+            VStack(alignment: .leading, spacing: 2) {
+                Text(package.displayDate.isEmpty ? package.key : package.displayDate)
+                    .font(.caption.weight(.bold))
+                    .foregroundStyle(isSelected ? tint : .primary)
+                    .lineLimit(1)
+                Text("\(package.artifacts.count) \(ReportPackageCopy.filesLabel)")
+                    .font(.caption2.weight(.semibold))
+                    .foregroundStyle(.secondary)
+                    .lineLimit(1)
+            }
+        }
+        .padding(.horizontal, 11)
+        .padding(.vertical, 9)
+        .frame(minHeight: 42)
+        .background(isSelected ? tint.opacity(0.12) : Color(.secondarySystemBackground), in: RoundedRectangle(cornerRadius: 11, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 11, style: .continuous)
+                .stroke(isSelected ? tint.opacity(0.5) : Color(.separator).opacity(0.2), lineWidth: 1)
+        }
     }
 }
 
@@ -2399,17 +2532,19 @@ private struct ReportTopicPackagesView<Header: View>: View {
                     accessibilityLabel: ReportPackageCopy.refreshReportsAccessibilityLabel,
                     accessibilityHint: "Odświeża manifest i listę raportów."
                 ) {
-                    Task { await store.reload() }
+                    Task {
+                        await store.reload()
+                        syncSelectedReportDayToLatestIfNeeded()
+                    }
                 }
             }
         }
         .refreshable {
             await store.reload()
+            syncSelectedReportDayToLatestIfNeeded()
         }
         .onAppear {
-            if router.selectedReportDay == nil {
-                router.selectedReportDay = store.manifest?.reportPackages(for: topic).first?.date
-            }
+            syncSelectedReportDayToLatestIfNeeded()
         }
         .onChange(of: topic) { _, _ in
             router.selectedReportArtifactIDs = []
@@ -2417,9 +2552,16 @@ private struct ReportTopicPackagesView<Header: View>: View {
         }
         .onChange(of: store.manifest) { _, manifest in
             guard let manifest else { return }
-            if router.selectedReportDay == nil {
-                router.selectedReportDay = manifest.reportPackages(for: topic).first?.date
-            }
+            syncSelectedReportDayToLatestIfNeeded(manifest: manifest)
+        }
+    }
+
+    private func syncSelectedReportDayToLatestIfNeeded(manifest: PavbotManifest? = nil) {
+        guard router.selectedReportArtifactIDs.isEmpty else { return }
+        let activeManifest = manifest ?? store.manifest
+        guard let latestDay = activeManifest?.reportPackages(for: topic).first?.date else { return }
+        if router.selectedReportDay != latestDay {
+            router.selectedReportDay = latestDay
         }
     }
 

@@ -46,7 +46,11 @@ struct PavbotAudioActivityWidget: Widget {
             } compactLeading: {
                 PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 18)
             } compactTrailing: {
-                PavbotNewsDynamicIslandBadge(source: context.attributes.source)
+                HStack(spacing: 5) {
+                    PavbotNewsDynamicIslandBadge(source: context.attributes.source, scale: .compact)
+                    PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 18)
+                }
+                .frame(maxWidth: .infinity, alignment: .trailing)
             } minimal: {
                 PavbotAudioActivityIcon(source: context.attributes.source, isPlaying: context.state.isPlaying, size: 16)
             }
@@ -91,8 +95,6 @@ private struct PavbotNotificationAudioBanner: View {
 
             if state.isFinished {
                 completionNotes
-            } else {
-                playbackProgress(topic: tabLabel)
             }
         }
     }
@@ -134,23 +136,6 @@ private struct PavbotNotificationAudioBanner: View {
         }
     }
 
-    private func playbackProgress(topic: String) -> some View {
-        VStack(spacing: 7) {
-            ProgressView(value: progressValue(state))
-                .tint(activityTint(source))
-
-            HStack {
-                Text(formatPlaybackTime(state.elapsed))
-                Spacer()
-                Text(topic)
-                    .lineLimit(1)
-                Spacer()
-                Text(state.duration > 0 ? formatPlaybackTime(state.duration) : "--:--")
-            }
-            .font(.caption.monospacedDigit())
-            .foregroundStyle(.secondary)
-        }
-    }
 }
 
 private func deepLinkURL(_ attributes: PavbotAudioActivityAttributes) -> URL? {
@@ -191,9 +176,15 @@ private struct PavbotDynamicIslandTrailingStatus: View {
     let state: PavbotAudioActivityAttributes.ContentState
 
     var body: some View {
-        HStack(spacing: 10) {
+        HStack(spacing: 7) {
             PavbotRemainingPlaybackLabel(state: state)
-            PavbotNewsDynamicIslandBadge(source: source)
+                .layoutPriority(0)
+
+            HStack(spacing: 5) {
+                PavbotNewsDynamicIslandBadge(source: source)
+                PavbotAudioActivityIcon(source: source, isPlaying: state.isPlaying, size: 18)
+            }
+            .layoutPriority(1)
         }
         .frame(maxWidth: .infinity, alignment: .trailing)
     }
@@ -214,11 +205,12 @@ private struct PavbotRemainingPlaybackLabel: View {
 
 private struct PavbotNewsDynamicIslandBadge: View {
     let source: PavbotAudioActivitySource
+    var scale: PavbotNewsDynamicIslandBadgeScale = .compact
 
     var body: some View {
         VStack(spacing: 0) {
             Text("PAV")
-                .font(.system(size: 7, weight: .black, design: .rounded))
+                .font(.system(size: scale.pavFontSize, weight: .black, design: .rounded))
                 .foregroundStyle(.white)
                 .minimumScaleFactor(0.72)
                 .lineLimit(1)
@@ -229,17 +221,17 @@ private struct PavbotNewsDynamicIslandBadge: View {
                 .overlay(.white.opacity(0.65))
 
             Text("NEWS")
-                .font(.system(size: 6, weight: .black, design: .rounded))
+                .font(.system(size: scale.newsFontSize, weight: .black, design: .rounded))
                 .foregroundStyle(activityTint(source))
                 .minimumScaleFactor(0.72)
                 .lineLimit(1)
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .background(.white)
         }
-        .frame(width: 30, height: 24)
-        .clipShape(RoundedRectangle(cornerRadius: 6, style: .continuous))
+        .frame(width: scale.size.width, height: scale.size.height)
+        .clipShape(RoundedRectangle(cornerRadius: scale.cornerRadius, style: .continuous))
         .overlay {
-            RoundedRectangle(cornerRadius: 6, style: .continuous)
+            RoundedRectangle(cornerRadius: scale.cornerRadius, style: .continuous)
                 .stroke(.white.opacity(0.72), lineWidth: 0.7)
         }
         .shadow(color: activityTint(source).opacity(0.24), radius: 2, x: 0, y: 1)
@@ -247,14 +239,53 @@ private struct PavbotNewsDynamicIslandBadge: View {
     }
 }
 
+private enum PavbotNewsDynamicIslandBadgeScale {
+    case compact
+    case minimal
+
+    var size: CGSize {
+        switch self {
+        case .compact:
+            CGSize(width: 30, height: 24)
+        case .minimal:
+            CGSize(width: 22, height: 18)
+        }
+    }
+
+    var cornerRadius: CGFloat {
+        switch self {
+        case .compact:
+            6
+        case .minimal:
+            5
+        }
+    }
+
+    var pavFontSize: CGFloat {
+        switch self {
+        case .compact:
+            7
+        case .minimal:
+            5.5
+        }
+    }
+
+    var newsFontSize: CGFloat {
+        switch self {
+        case .compact:
+            6
+        case .minimal:
+            4.8
+        }
+    }
+}
+
 private func activityTint(_ source: PavbotAudioActivitySource) -> Color {
     switch source {
-    case .mp3Podcast:
+    case .mp3Podcast, .researchTTS:
         .blue
     case .pulseDayTTS:
         .orange
-    case .researchTTS:
-        .teal
     }
 }
 

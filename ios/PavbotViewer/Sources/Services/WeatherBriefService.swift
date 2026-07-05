@@ -3,11 +3,16 @@ import Observation
 
 protocol WeatherBriefFetching {
     func fetchLatestReport(from serverURL: URL, location: WeatherBriefLocation?) async throws -> DailyWeatherReport
+    func refreshReport(from serverURL: URL, location: WeatherBriefLocation?) async throws -> DailyWeatherReport
 }
 
 extension WeatherBriefFetching {
     func fetchLatestReport(from serverURL: URL) async throws -> DailyWeatherReport {
         try await fetchLatestReport(from: serverURL, location: nil)
+    }
+
+    func refreshReport(from serverURL: URL, location: WeatherBriefLocation?) async throws -> DailyWeatherReport {
+        try await fetchLatestReport(from: serverURL, location: location)
     }
 }
 
@@ -32,6 +37,95 @@ enum ManualWeatherLocationSettings {
 
     static func clear(defaults: UserDefaults = .standard) {
         defaults.removeObject(forKey: defaultsKey)
+    }
+}
+
+enum WeatherLocationPreference: Codable, Equatable {
+    case defaultWroclaw
+    case manual(WeatherBriefLocation)
+    case currentDeviceLocation
+
+    private enum CodingKeys: String, CodingKey {
+        case mode
+        case location
+    }
+
+    private enum Mode: String, Codable {
+        case defaultWroclaw
+        case manual
+        case currentDeviceLocation
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let mode = try container.decode(Mode.self, forKey: .mode)
+        switch mode {
+        case .defaultWroclaw:
+            self = .defaultWroclaw
+        case .manual:
+            self = .manual(try container.decode(WeatherBriefLocation.self, forKey: .location))
+        case .currentDeviceLocation:
+            self = .currentDeviceLocation
+        }
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        switch self {
+        case .defaultWroclaw:
+            try container.encode(Mode.defaultWroclaw, forKey: .mode)
+        case .manual(let location):
+            try container.encode(Mode.manual, forKey: .mode)
+            try container.encode(location, forKey: .location)
+        case .currentDeviceLocation:
+            try container.encode(Mode.currentDeviceLocation, forKey: .mode)
+        }
+    }
+}
+
+enum WeatherLocationPreferenceSettings {
+    static let defaultsKey = "pavbot.weatherLocationPreference"
+
+    static func preference(defaults: UserDefaults = .standard) -> WeatherLocationPreference {
+        if let data = defaults.data(forKey: defaultsKey),
+           let preference = try? JSONDecoder().decode(WeatherLocationPreference.self, from: data) {
+            return preference
+        }
+
+        if let legacyLocation = ManualWeatherLocationSettings.location(defaults: defaults) {
+            return .manual(legacyLocation)
+        }
+
+        return .defaultWroclaw
+    }
+
+    static func save(_ preference: WeatherLocationPreference, defaults: UserDefaults = .standard) {
+        guard let data = try? JSONEncoder().encode(preference) else { return }
+        defaults.set(data, forKey: defaultsKey)
+
+        switch preference {
+        case .manual(let location):
+            ManualWeatherLocationSettings.save(location, defaults: defaults)
+        case .defaultWroclaw, .currentDeviceLocation:
+            ManualWeatherLocationSettings.clear(defaults: defaults)
+        }
+    }
+
+    static func currentLocationLabel(
+        defaults: UserDefaults = .standard,
+        reportCity: String?
+    ) -> String {
+        switch preference(defaults: defaults) {
+        case .defaultWroclaw:
+            return WeatherBriefLocation.fallback.city
+        case .manual(let location):
+            return location.city
+        case .currentDeviceLocation:
+            if let reportCity, !reportCity.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                return "Bieżąca lokalizacja: \(reportCity)"
+            }
+            return "Bieżąca lokalizacja"
+        }
     }
 }
 
@@ -63,7 +157,7 @@ final class WeatherBriefStore {
     private let cooldown: WeatherRefreshCooldown
     private let serverURLProvider: () -> URL?
     private let locationProvider: @MainActor (WeatherLocationMode) async throws -> WeatherBriefLocation?
-    private let manualLocationProvider: () -> WeatherBriefLocation?
+    private let locationPreferenceProvider: () -> WeatherLocationPreference
     @ObservationIgnored private let reloadGate = ReloadGate()
 
     init(
@@ -72,14 +166,14 @@ final class WeatherBriefStore {
         cooldown: WeatherRefreshCooldown = WeatherRefreshCooldown(),
         serverURLProvider: @escaping () -> URL? = { NotificationServerSettings.serverURL },
         locationProvider: @MainActor @escaping (WeatherLocationMode) async throws -> WeatherBriefLocation? = { _ in nil },
-        manualLocationProvider: @escaping () -> WeatherBriefLocation? = { ManualWeatherLocationSettings.location() }
+        locationPreferenceProvider: @escaping () -> WeatherLocationPreference = { WeatherLocationPreferenceSettings.preference() }
     ) {
         self.client = client
         self.cache = cache
         self.cooldown = cooldown
         self.serverURLProvider = serverURLProvider
         self.locationProvider = locationProvider
-        self.manualLocationProvider = manualLocationProvider
+        self.locationPreferenceProvider = locationPreferenceProvider
         self.report = cache.load()
         self.manualRefreshRetryAt = nil
         if report != nil {
@@ -100,7 +194,7 @@ final class WeatherBriefStore {
     }
 
     func refreshSelectedLocation(minimumInterval: TimeInterval = 0) async {
-        await loadLatest(minimumInterval: minimumInterval, locationMode: .useIfAuthorized)
+        await refreshLatest(minimumInterval: minimumInterval, location: nil)
     }
 
     private func loadLatest(minimumInterval: TimeInterval = 0, locationMode: WeatherLocationMode) async {
@@ -179,13 +273,13 @@ final class WeatherBriefStore {
             if let location {
                 resolvedLocation = location
             } else {
-                resolvedLocation = await resolvedWeatherLocation(mode: .useIfAuthorized)
+                resolvedLocation = await resolvedWeatherLocation(mode: .none)
             }
             requestedLocation = resolvedLocation
             if let resolvedLocation {
                 locationNotice = Self.loadingNotice(for: resolvedLocation)
             }
-            let loadedReport = try await client.fetchLatestReport(from: serverURL, location: resolvedLocation)
+            let loadedReport = try await client.refreshReport(from: serverURL, location: resolvedLocation)
             try Self.validate(loadedReport, matches: resolvedLocation)
             report = loadedReport
             cache.save(loadedReport)
@@ -194,6 +288,61 @@ final class WeatherBriefStore {
             cacheNotice = nil
             state = .loaded
         } catch {
+            manualRefreshRetryAt = Self.manualRefreshRetryAt(from: error)
+            handleWeatherLoadFailure(
+                error,
+                previousNotice: previousNotice,
+                requestedLocation: requestedLocation,
+                cachedMessage: PavbotCacheNoticeCopy.refreshFailed(context: "ostatni raport pogodowy")
+            )
+        }
+    }
+
+    private func refreshLatest(minimumInterval: TimeInterval = 0, location: WeatherBriefLocation?) async {
+        guard beginRequest(key: "weather.refresh", minimumInterval: minimumInterval) else { return }
+        defer { finishRequest(key: "weather.refresh") }
+
+        guard let serverURL = serverURLProvider() else {
+            cacheNotice = nil
+            state = report == nil
+                ? .failed(
+                    .custom(
+                        title: "Brak adresu notifiera",
+                        message: "Wpisz Notification server URL w ustawieniach, aby odświeżyć aktualną pogodę.",
+                        actionTitle: "Otwórz ustawienia",
+                        systemImage: "cloud.sun.fill"
+                    )
+                )
+                : .loaded
+            return
+        }
+
+        if report == nil {
+            state = .loading
+        }
+        let previousNotice = locationNotice
+        var requestedLocation: WeatherBriefLocation?
+        do {
+            let resolvedLocation: WeatherBriefLocation?
+            if let location {
+                resolvedLocation = location
+            } else {
+                resolvedLocation = await resolvedWeatherLocation(mode: .none)
+            }
+            requestedLocation = resolvedLocation
+            if let resolvedLocation {
+                locationNotice = Self.loadingNotice(for: resolvedLocation)
+            }
+            let loadedReport = try await client.refreshReport(from: serverURL, location: resolvedLocation)
+            try Self.validate(loadedReport, matches: resolvedLocation)
+            report = loadedReport
+            cache.save(loadedReport)
+            locationNotice = Self.successNotice(for: resolvedLocation, report: loadedReport, currentNotice: locationNotice)
+            manualRefreshRetryAt = nil
+            cacheNotice = nil
+            state = .loaded
+        } catch {
+            manualRefreshRetryAt = Self.manualRefreshRetryAt(from: error)
             handleWeatherLoadFailure(
                 error,
                 previousNotice: previousNotice,
@@ -217,15 +366,23 @@ final class WeatherBriefStore {
     }
 
     private func resolvedWeatherLocation(mode: WeatherLocationMode) async -> WeatherBriefLocation? {
-        if let manualLocation = manualLocationProvider() {
-            locationNotice = Self.notice(for: manualLocation)
-            return manualLocation
+        if mode == .none {
+            switch locationPreferenceProvider() {
+            case .defaultWroclaw:
+                locationNotice = Self.notice(for: .fallback)
+                return nil
+            case .manual(let manualLocation):
+                locationNotice = Self.notice(for: manualLocation)
+                return manualLocation
+            case .currentDeviceLocation:
+                return await currentDeviceLocation(mode: .useIfAuthorized)
+            }
         }
 
-        guard mode != .none else {
-            locationNotice = Self.notice(for: .fallback)
-            return nil
-        }
+        return await currentDeviceLocation(mode: mode)
+    }
+
+    private func currentDeviceLocation(mode: WeatherLocationMode) async -> WeatherBriefLocation? {
         do {
             let location = try await locationProvider(mode)
             locationNotice = Self.notice(for: location ?? .fallback)
@@ -343,6 +500,14 @@ final class WeatherBriefStore {
         }
 
         return .network(error, context: .weather)
+    }
+
+    private static func manualRefreshRetryAt(from error: Error) -> Date? {
+        if let clientError = error as? WeatherBriefClient.ClientError,
+           case .refreshLocked(let retryAt) = clientError {
+            return retryAt
+        }
+        return nil
     }
 
     private func beginRequest(key: String, minimumInterval: TimeInterval = 0) -> Bool {

@@ -3,6 +3,7 @@ import Observation
 
 protocol TodayHumorFetching {
     func fetchLatestDigest(from serverURL: URL) async throws -> TodayHumorDigest
+    func fetchDigest(from artifactURL: URL) async throws -> TodayHumorDigest
 }
 
 @MainActor
@@ -34,11 +35,32 @@ final class TodayHumorStore {
         }
     }
 
-    func load(minimumInterval: TimeInterval = 0) async {
+    func load(
+        minimumInterval: TimeInterval = 0,
+        manifest: PavbotManifest? = nil,
+        manifestURLString: String? = nil
+    ) async {
         guard beginRequest(minimumInterval: minimumInterval) else { return }
         defer { finishRequest() }
 
-        guard let serverURL = serverURLProvider() else {
+        if digest == nil {
+            state = .loading
+        }
+
+        let manifestArtifactURL = Self.latestRedditRadarDigestURL(
+            in: manifest,
+            manifestURLString: manifestURLString
+        )
+        var loadedDigests: [TodayHumorDigest] = []
+        var lastError: Error?
+
+        if let serverURL = serverURLProvider() {
+            do {
+                loadedDigests.append(try await client.fetchLatestDigest(from: serverURL))
+            } catch {
+                lastError = error
+            }
+        } else if manifestArtifactURL == nil {
             cacheNotice = nil
             state = digest == nil
                 ? .failed(
@@ -54,25 +76,59 @@ final class TodayHumorStore {
             return
         }
 
-        if digest == nil {
-            state = .loading
+        if let manifestArtifactURL {
+            do {
+                loadedDigests.append(try await client.fetchDigest(from: manifestArtifactURL))
+            } catch {
+                lastError = error
+            }
         }
 
-        do {
-            let loadedDigest = try await client.fetchLatestDigest(from: serverURL)
+        if let loadedDigest = Self.freshestDigest(loadedDigests) {
             digest = loadedDigest
             cache.save(loadedDigest)
             cacheNotice = nil
             state = .loaded
-        } catch {
-            if digest != nil {
-                cacheNotice = PavbotCacheNoticeCopy.refreshFailed(context: "radar memów")
-                state = .loaded
-            } else {
-                cacheNotice = nil
-                state = .failed(.network(error, context: .notifier))
-            }
+            return
         }
+
+        if digest != nil {
+            cacheNotice = PavbotCacheNoticeCopy.refreshFailed(context: "radar memów")
+            state = .loaded
+        } else if let lastError {
+            cacheNotice = nil
+            state = .failed(.network(lastError, context: .notifier))
+        } else {
+            cacheNotice = nil
+            state = .failed(.network(TodayHumorClient.ClientError.invalidResponse, context: .notifier))
+        }
+    }
+
+    private static func freshestDigest(_ digests: [TodayHumorDigest]) -> TodayHumorDigest? {
+        digests.max { lhs, rhs in
+            let lhsDate = lhs.generatedAtDate ?? Date.distantPast
+            let rhsDate = rhs.generatedAtDate ?? Date.distantPast
+            if lhsDate != rhsDate {
+                return lhsDate < rhsDate
+            }
+            return lhs.id < rhs.id
+        }
+    }
+
+    private static func latestRedditRadarDigestURL(
+        in manifest: PavbotManifest?,
+        manifestURLString: String?
+    ) -> URL? {
+        guard let manifest else { return nil }
+        let latestArtifact = manifest.artifacts
+            .filter { $0.topic == "reddit-radar" && $0.type == .redditRadarData }
+            .sorted(by: PavbotArtifact.automationDisplaySort)
+            .first
+        return latestArtifact?.resolvedURL(manifestURL: manifestURLString.flatMap(URL.init(string:)))
+    }
+
+    func load(minimumInterval: TimeInterval = 0) async {
+        await load(minimumInterval: minimumInterval, manifest: nil, manifestURLString: nil)
     }
 
     private func beginRequest(minimumInterval: TimeInterval = 0) -> Bool {
@@ -106,14 +162,22 @@ struct TodayHumorClient: TodayHumorFetching {
     var decoder: JSONDecoder = .pavbot
 
     func fetchLatestDigest(from serverURL: URL) async throws -> TodayHumorDigest {
-        let (data, response) = try await session.data(for: Self.request(from: serverURL))
-        guard let httpResponse = response as? HTTPURLResponse else {
+        try await send(Self.request(from: serverURL))
+    }
+
+    func fetchDigest(from artifactURL: URL) async throws -> TodayHumorDigest {
+        try await send(Self.artifactRequest(for: artifactURL))
+    }
+
+    private func send(_ request: URLRequest) async throws -> TodayHumorDigest {
+        do {
+            let data = try await PavbotHTTPClient(session: session).data(for: request)
+            return try decoder.decode(TodayHumorDigest.self, from: data)
+        } catch PavbotHTTPClientError.invalidResponse {
             throw ClientError.invalidResponse
+        } catch PavbotHTTPClientError.httpStatus(let status) {
+            throw ClientError.httpStatus(status)
         }
-        guard (200..<300).contains(httpResponse.statusCode) else {
-            throw ClientError.httpStatus(httpResponse.statusCode)
-        }
-        return try decoder.decode(TodayHumorDigest.self, from: data)
     }
 
     static func request(from serverURL: URL) throws -> URLRequest {
@@ -121,12 +185,11 @@ struct TodayHumorClient: TodayHumorFetching {
             .appendingPathComponent("v1")
             .appendingPathComponent("humor")
             .appendingPathComponent("latest")
-        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData)
-        request.httpMethod = "GET"
-        request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
-        request.setValue("no-cache", forHTTPHeaderField: "Pragma")
-        request.timeoutInterval = 12
-        return request
+        return PavbotHTTPClient.request(for: url)
+    }
+
+    static func artifactRequest(for url: URL) -> URLRequest {
+        return PavbotHTTPClient.request(for: url)
     }
 }
 

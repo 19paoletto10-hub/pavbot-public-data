@@ -156,6 +156,86 @@ final class ManifestStore {
     }
 }
 
+enum PavbotHTTPClientError: LocalizedError, Equatable {
+    case invalidResponse
+    case httpStatus(Int)
+
+    var errorDescription: String? {
+        switch self {
+        case .invalidResponse:
+            "The server returned an invalid response."
+        case .httpStatus(let status):
+            "The server returned HTTP \(status)."
+        }
+    }
+}
+
+struct PavbotHTTPClient {
+    var session: URLSession
+    var timeoutInterval: TimeInterval
+    var cachePolicy: URLRequest.CachePolicy
+
+    init(
+        session: URLSession = .shared,
+        timeoutInterval: TimeInterval = 12,
+        cachePolicy: URLRequest.CachePolicy = .reloadIgnoringLocalAndRemoteCacheData
+    ) {
+        self.session = session
+        self.timeoutInterval = timeoutInterval
+        self.cachePolicy = cachePolicy
+    }
+
+    func data(for url: URL) async throws -> Data {
+        try await data(for: Self.request(for: url, cachePolicy: cachePolicy, timeoutInterval: timeoutInterval))
+    }
+
+    func data(for request: URLRequest) async throws -> Data {
+        let (data, response) = try await session.data(for: normalized(request))
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw PavbotHTTPClientError.invalidResponse
+        }
+        guard (200..<300).contains(httpResponse.statusCode) else {
+            throw PavbotHTTPClientError.httpStatus(httpResponse.statusCode)
+        }
+        return data
+    }
+
+    func text(for url: URL) async throws -> String {
+        try await text(for: Self.request(for: url, cachePolicy: cachePolicy, timeoutInterval: timeoutInterval))
+    }
+
+    func text(for request: URLRequest) async throws -> String {
+        String(decoding: try await data(for: request), as: UTF8.self)
+    }
+
+    static func request(
+        for url: URL,
+        cachePolicy: URLRequest.CachePolicy = .reloadIgnoringLocalAndRemoteCacheData,
+        timeoutInterval: TimeInterval = 12
+    ) -> URLRequest {
+        var request = URLRequest(url: url, cachePolicy: cachePolicy, timeoutInterval: timeoutInterval)
+        request.httpMethod = "GET"
+        return noCache(request)
+    }
+
+    private func normalized(_ request: URLRequest) -> URLRequest {
+        var request = request
+        request.cachePolicy = cachePolicy
+        request.timeoutInterval = timeoutInterval
+        if request.httpMethod == nil {
+            request.httpMethod = "GET"
+        }
+        return Self.noCache(request)
+    }
+
+    private static func noCache(_ request: URLRequest) -> URLRequest {
+        var request = request
+        request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
+        request.setValue("no-cache", forHTTPHeaderField: "Pragma")
+        return request
+    }
+}
+
 struct ManifestClient: ManifestFetching {
     enum ClientError: LocalizedError {
         case invalidResponse
@@ -175,21 +255,18 @@ struct ManifestClient: ManifestFetching {
     var decoder: JSONDecoder = .pavbot
 
     func fetchManifest(from url: URL) async throws -> PavbotManifest {
-        let (data, response) = try await session.data(for: Self.request(for: url))
-        guard let httpResponse = response as? HTTPURLResponse else {
+        do {
+            let data = try await PavbotHTTPClient(session: session).data(for: Self.request(for: url))
+            return try decoder.decode(PavbotManifest.self, from: data)
+        } catch PavbotHTTPClientError.invalidResponse {
             throw ClientError.invalidResponse
+        } catch PavbotHTTPClientError.httpStatus(let status) {
+            throw ClientError.httpStatus(status)
         }
-        guard (200..<300).contains(httpResponse.statusCode) else {
-            throw ClientError.httpStatus(httpResponse.statusCode)
-        }
-        return try decoder.decode(PavbotManifest.self, from: data)
     }
 
     static func request(for url: URL) -> URLRequest {
-        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData)
-        request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
-        request.setValue("no-cache", forHTTPHeaderField: "Pragma")
-        return request
+        PavbotHTTPClient.request(for: url)
     }
 }
 

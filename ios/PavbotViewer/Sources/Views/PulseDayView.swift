@@ -71,10 +71,11 @@ struct PulseDayView: View {
             }
         }
         .task {
-            await reload(refreshManifest: false, minimumInterval: 10)
+            await reload(refreshManifest: true, minimumInterval: 10)
         }
         .task(id: pulseRouteReloadKey) {
             guard router.selectedTab == .pulseDay, pulseRouteReloadKey != "no-pulse-route" else { return }
+            selectedMode = .latest
             await reload(refreshManifest: true, minimumInterval: 0)
         }
         .onChange(of: manifestStore.manifest) { _, _ in
@@ -124,7 +125,7 @@ struct PulseDayView: View {
 
     private func reload(refreshManifest: Bool, minimumInterval: TimeInterval) async {
         if refreshManifest {
-            await manifestStore.reload(minimumInterval: 0)
+            await manifestStore.reload(minimumInterval: minimumInterval)
         }
         await liveTopicsStore.load(
             manifest: manifestStore.manifest,

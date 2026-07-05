@@ -38,6 +38,10 @@ struct TodayLiveTopicsPanel: View {
                 .accessibilityLabel("Otwórz zapisane newsy Pulsu dnia")
             }
 
+            if let emptyMessage, snapshot != nil {
+                PavbotCacheNoticeBanner(text: emptyMessage)
+            }
+
             switch state {
             case .idle where snapshot == nil, .loading where snapshot == nil:
                 HStack(spacing: 10) {

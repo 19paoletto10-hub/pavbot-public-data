@@ -101,6 +101,7 @@ struct HistoricalJobOpportunity: Identifiable, Equatable, Hashable {
 @Observable
 final class JobsHistoryStore {
     typealias LoadState = PavbotLoadState
+    private static let historyLookbackDays = 6
 
     var state: LoadState = .idle
     var snapshot: JobsHistorySnapshot?
@@ -190,7 +191,7 @@ final class JobsHistoryStore {
 
         var calendar = Calendar(identifier: .gregorian)
         calendar.timeZone = TimeZone(secondsFromGMT: 0) ?? .current
-        let includedDates = (0...2).compactMap { offset in
+        let includedDates = (0...historyLookbackDays).compactMap { offset in
             calendar.date(byAdding: .day, value: -offset, to: anchorDate)?.pavbotDayString
         }
         let includedDateSet = Set(includedDates)
