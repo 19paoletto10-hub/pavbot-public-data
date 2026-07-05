@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-07-04",
+  "runTime": "15:41",
+  "executiveSummary": "To jest wyraźny Material update. Dzisiejszy sweep przesunął shortlistę z samych dużych enterprise-architektur na bardziej praktyczne role hands-on w Wrocławiu i remote Poland: DCV, Addepto, SQUAD, DataArt, Grid Dynamics, EPAM, Devopsbay i Flyps. Najmocniejszy nowy sygnał jakościowy to połączenie twardego stacku produkcyjnego z jawną pracą nad LLM/RAG/agentic workflows. Dodatkowo poza top 8 pojawiły się warte dalszej obserwacji leady RemoDevs i RTB House.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior Software Engineer (AI Engineer)",
+      "company": "DCV Technologies",
+      "location": "Wrocław, hybryda 3/2",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Senior",
+      "fitSummary": "Python, FastAPI, Azure, LLM, RAG, LangChain, LangGraph, AutoGen, MLOps",
+      "whyInteresting": "to jeden z najmocniejszych dzisiejszych sygnałów Wrocławia, bo łączy produkcyjne AI z jasnym profilem senior backendu i regularną hybrydą.",
+      "uncertainty": "salary nie jest publiczne, więc porównanie do innych ofert pozostaje częściowe.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/dcv-technologies-senior-software-engineer-ai-engineer--wroclaw-python"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "MLOps",
+        "Python",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "AI Engineer (LLMs, Python)",
+      "company": "Addepto",
+      "location": "Świdnicka 40, Wrocław +4 / remote",
+      "workMode": "Remote",
+      "compensation": "12 600-19 320 PLN net/mies. B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM usage analytics, token forecasting, anomaly detection, Python, FastAPI, Docker, GCP",
+      "whyInteresting": "nowa, salary-bearing karta z bardzo konkretnym opisem pracy nad LLM usage analytics, forecastingiem i monitoringiem kosztów AI na GCP.",
+      "uncertainty": "to board lead, więc warto sprawdzić, czy Addepto nie wystawi tego samego role family na własnym careers hubie.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/addepto-ai-engineer-llms-python--wroclaw-ai-2ff00a32"
+      ],
+      "tags": [
+        "LLM",
+        "Python",
+        "GCP"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Applied Scientist (LLM)",
+      "company": "SQUAD",
+      "location": "plac Konstytucji 3 Maja, Wrocław / hybrid",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM, RAG, multi-agent systems, quantization, fine-tuning, evaluation, Python",
+      "whyInteresting": "rzadkie połączenie applied-science i LLM z realnym przejściem od research do production, plus edge/cloud deployment.",
+      "uncertainty": "rola jest bardziej research-heavy niż typowy backend AI IC, więc może nie pasować kandydatom szukającym czysto inżynierskiego delivery.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/squad-applied-scientist-llm--wroclaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Senior AI Developer with LLM Orchestration, Intelligent Knowledge Platform",
+      "company": "DataArt",
+      "location": "Plac Grunwaldzki 23, Wrocław +4 / remote",
+      "workMode": "Remote",
+      "compensation": "26 000-31 000 PLN net/mies. B2B lub 20 000-25 000 PLN brutto UoP",
+      "seniority": "Senior",
+      "fitSummary": "LLM orchestration, graph data modeling, RAG, databases, Python",
+      "whyInteresting": "bardzo mocny, salary-bearing remote/Wrocław lead z czytelnym profilem produkcyjnego knowledge platform i LLM orchestration.",
+      "uncertainty": "część podstron DataArt bywa multiplikowana po różnych miastach, więc warto pilnować city aliasów.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/dataart-senior-ai-developer-with-llm-orchestration-intelligent-knowledge-platform-wroclaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Staff Machine Learning Engineer",
+      "company": "Grid Dynamics Poland",
+      "location": "Jaworska 11-13, Wrocław +3 / hybrid",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Staff",
+      "fitSummary": "Google Cloud Platform, LLMs, Python, MLOps",
+      "whyInteresting": "staff-level Wrocław hybrid z twardym ML/platform scope i jawnym LLM/MLOps sygnałem, więc to dobry kandydat do produkcyjnego AI delivery.",
+      "uncertainty": "salary nie jest publiczne, a opis jest mniej szczegółowy niż w najlepszych first-party rolach.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/grid-dynamics-poland-staff-machine-learning-engineer-wroclaw-ai"
+      ],
+      "tags": [
+        "LLM",
+        "MLOps",
+        "Python"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Chief Forward Deployed Engineer",
+      "company": "EPAM Systems",
+      "location": "Piotra Skargi 1 i Traugutta 45, Wrocław / remote within Poland",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "agents, RAG, tool calling, context engineering, eval pipelines, observability, Python",
+      "whyInteresting": "bardzo mocny builder/consulting hybrid, z evals, observability i feedback loops wpisanymi w opis pracy, czyli dokładnie tam, gdzie praktyczne AI trafia do produkcji.",
+      "uncertainty": "to rola mocno client-facing, więc dla części osób może być bardziej delivery/discovery niż klasyczne IC.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/epam-systems-chief-forward-deployed-engineer-wroclaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "Python"
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "Senior ML/Python Engineer",
+      "company": "Devopsbay",
+      "location": "Leśna 1, Wrocław +4 / remote",
+      "workMode": "Remote",
+      "compensation": "200-240 PLN/h B2B",
+      "seniority": "Senior",
+      "fitSummary": "agentic AI, LLM, RAG, prompt engineering, evaluation, feedback loops, Snowflake, AWS",
+      "whyInteresting": "dzisiejszy świeży sygnał z Wrocławia z bardzo konkretnym LLM/agentic scope i jawnie rynkową stawką godzinową.",
+      "uncertainty": "to board-first lead, więc warto szybko sprawdzić, czy pojawi się canonical employer page albo czy tytuł nie skróci się do bardziej ogólnego wariantu.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/devopsbay-senior-ml-python-engineer-wroclaw-ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 8,
+      "title": "Senior Python Engineer (LLMs)",
+      "company": "Flyps",
+      "location": "Kraków +4 / 100% remote from Poland",
+      "workMode": "Remote",
+      "compensation": "26 000-33 000 PLN net + VAT miesięcznie",
+      "seniority": "Senior",
+      "fitSummary": "LLMs, FastAPI, Docker, Python, production AI, NLP",
+      "whyInteresting": "mocny remote-Poland lead z jasnym LLM/production profilem i dobrym salary bandem, mimo że nie jest wrocławski.",
+      "uncertainty": "board title pokazuje Kraków, więc to nie jest wrocławski lead; warto traktować go jako remote Poland, nie local Wrocław.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/flyps-senior-python-engineer-llms--krakow-python-3913abf3"
+      ],
+      "tags": [
+        "LLM",
+        "Python",
+        "AWS"
+      ]
+    }
+  ],
+  "changes": [
+    "Dzisiejszy run dodał wyraźnie bardziej praktyczny klaster Wrocław/remote Poland wokół DCV, Addepto, SQUAD, DataArt, Grid Dynamics, EPAM i Devopsbay.",
+    "Flyps dołożył mocny remote-Poland lead z czytelną stawką i pełnym profilem LLM backendu.",
+    "Poza top 8 pojawiły się dodatkowe leady RemoDevs Senior AI Engineer oraz RTB House Senior Software Engineer - AI Engineering, które zostawiam do dalszej obserwacji.",
+    "Dzisiejszy batch jest mniej architektoniczny niż wczorajszy klaster Sii/Capgemini/Accenture, a bardziej nastawiony na production delivery, RAG i agentic workflows."
+  ],
+  "risks": [
+    "Board-first leady nadal mogą szybko zmienić tytuł, widełki albo lokalizację, więc Addepto, Devopsbay, Flyps i podobne karty trzeba recheckować przy następnym przebiegu.",
+    "Część ról jest mocno client-facing albo consulting-heavy, więc realny udział hands-on codingu może być mniejszy niż sugeruje tytuł.",
+    "DataArt i Grid Dynamics mają multiple locations i czasem driftują między miastami, więc trzeba pilnować city aliasów.",
+    "Dla kilku ofert salary nadal nie jest publiczne, więc porównanie wartości rynkowej jest częściowo niepełne."
+  ],
+  "recommendedActions": [
+    "W następnej rundzie rechecknij aktywność DCV, Addepto, SQUAD, DataArt, Grid Dynamics, EPAM, Devopsbay i Flyps.",
+    "Jeśli Addepto, RemoDevs albo RTB House wystawią canonical employer pages, podmień board-first linki na źródła pierwszej strony.",
+    "Utrzymuj monitoring Sii/Capgemini/Accenture jako osobny, stabilny klaster architekturalny obok nowej fali hands-on delivery."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Wrocław AI/ML board",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: all-locations AI/ML board",
+      "url": "https://justjoin.it/job-offers/all-locations/ai",
+      "status": "checked"
+    },
+    {
+      "title": "DCV Technologies: Senior Software Engineer (AI Engineer)",
+      "url": "https://justjoin.it/job-offer/dcv-technologies-senior-software-engineer-ai-engineer--wroclaw-python",
+      "status": "checked"
+    },
+    {
+      "title": "Addepto: AI Engineer (LLMs, Python)",
+      "url": "https://justjoin.it/job-offer/addepto-ai-engineer-llms-python--wroclaw-ai-2ff00a32",
+      "status": "checked"
+    },
+    {
+      "title": "SQUAD: Applied Scientist (LLM)",
+      "url": "https://justjoin.it/job-offer/squad-applied-scientist-llm--wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "DataArt: Senior AI Developer with LLM Orchestration, Intelligent Knowledge Platform",
+      "url": "https://justjoin.it/job-offer/dataart-senior-ai-developer-with-llm-orchestration-intelligent-knowledge-platform-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Grid Dynamics Poland: Staff Machine Learning Engineer",
+      "url": "https://justjoin.it/job-offer/grid-dynamics-poland-staff-machine-learning-engineer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM Systems: Chief Forward Deployed Engineer",
+      "url": "https://justjoin.it/job-offer/epam-systems-chief-forward-deployed-engineer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Devopsbay: Senior ML/Python Engineer",
+      "url": "https://justjoin.it/job-offer/devopsbay-senior-ml-python-engineer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Flyps: Senior Python Engineer (LLMs)",
+      "url": "https://justjoin.it/job-offer/flyps-senior-python-engineer-llms--krakow-python-3913abf3",
+      "status": "checked"
+    },
+    {
+      "title": "RemoDevs careers",
+      "url": "https://remodevs.com/careers/",
+      "status": "checked"
+    },
+    {
+      "title": "RTB House: Senior Software Engineer - AI Engineering",
+      "url": "https://justjoin.it/job-offer/rtb-house-senior-software-engineer---ai-engineering-warszawa-python",
+      "status": "checked"
+    }
+  ]
+}
