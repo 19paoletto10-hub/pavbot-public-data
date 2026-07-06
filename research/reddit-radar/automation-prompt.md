@@ -11,7 +11,8 @@ Cel: użyj zalogowanej lokalnej sesji Safari wyłącznie do odczytu publicznych
 stron Reddita. Wybierz bezpieczne, nowe i niepowtarzające się tematy do sekcji
 iOS `Dzisiaj -> Śmiechowy radar`, przygotuj polską analizę posta i wybranych
 komentarzy, zapisz lokalny audit, opublikuj audit do `origin/main`, zweryfikuj
-zdalny manifest, a dopiero potem wyślij finalny digest na endpoint produkcyjny.
+zdalny manifest, a dopiero potem wystaw finalny digest przez CloudKit
+Briefing gate.
 
 Nie używaj Reddit OAuth. Nie klikaj vote/like/comment/share, nie wysyłaj
 formularzy, nie publikuj postów ani komentarzy i nie omijaj login/CAPTCHA.

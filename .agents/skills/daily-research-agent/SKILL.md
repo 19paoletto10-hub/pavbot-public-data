@@ -39,10 +39,10 @@ Run one research cycle for a single Pavbot topic.
 10. For every Pavbot automation run that writes app-visible artifacts, publish
     the finished output with
     `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>` so
-    the iOS app and live-notification webhook see the latest manifest on
-    GitHub.
-11. Treat publication as a five-step pipeline:
-    `prepare -> validate -> manifest -> push -> verify-remote`.
+    the iOS app sees the latest manifest on GitHub and receives a CloudKit
+    `Briefing` notification.
+11. Treat publication as the production pipeline:
+    `prepare -> validate -> manifest -> push -> verify-remote -> CloudKit publish -> CloudKit verify`.
     The publish script runs the shared helper
     `scripts/pavbot_publication_contract.py` to prepare missing deterministic
     artifacts for the latest package, validate local completeness, and verify
@@ -135,10 +135,10 @@ commits only generated outputs plus the refreshed manifest, pushes to
 `python3 scripts/pavbot_publication_contract.py verify-remote research/<topic> --ref origin/main`.
 Topic-specific prompts should define the exact artifact set that must be
 visible on `origin/main` before the run counts as complete.
-For notifier-backed outputs such as Reddit Radar, publish the audit artifacts
-and refreshed manifest before or alongside posting the digest to the notifier.
-If the notifier updates but the manifest does not, report a partial publication
-failure instead of success.
+For CloudKit-backed outputs such as Reddit Radar, publish the audit artifacts
+and refreshed manifest to `origin/main` before the CloudKit `Briefing` gate.
+If CloudKit publication or verification fails after the manifest push, report a
+partial publication failure instead of success.
 Never publish topic `tools/`, prompt edits, app code, docs, backend code, or
 other development changes as automation outputs.
 

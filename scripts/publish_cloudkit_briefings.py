@@ -21,6 +21,7 @@ DEFAULT_MANIFEST_URL = (
 )
 BRIEFING_RECORD_TYPE = "Briefing"
 READY_STATUS = "ready"
+CKTOOL_BARE_FILTER_VALUE = re.compile(r"^[A-Za-z0-9_.:/-]+$")
 
 
 def load_manifest(path: str | Path) -> dict[str, Any]:
@@ -306,8 +307,14 @@ def cktool_field_value(record: dict[str, Any], field_name: str) -> Any:
 
 def briefing_filter(record: dict[str, Any]) -> str:
     briefing_id = str(record["fields"]["briefingId"])
-    escaped = briefing_id.replace("\\", "\\\\").replace('"', '\\"')
-    return f'briefingId == "{escaped}"'
+    return f"briefingId == {cktool_filter_value(briefing_id)}"
+
+
+def cktool_filter_value(value: str) -> str:
+    if CKTOOL_BARE_FILTER_VALUE.fullmatch(value):
+        return value
+    escaped = value.replace("\\", "\\\\").replace('"', '\\"')
+    return f'"{escaped}"'
 
 
 def query_existing_records(
@@ -326,9 +333,6 @@ def query_existing_records(
         record["recordType"],
         "--filters",
         briefing_filter(record),
-        "--requested-fields",
-        "briefingId",
-        "status",
         "--limit",
         "10",
     ]
@@ -398,11 +402,6 @@ def verify_records(records: list[dict[str, Any]], container_id: str, environment
             record["recordType"],
             "--filters",
             briefing_filter(record),
-            "--filters",
-            'status == "ready"',
-            "--requested-fields",
-            "briefingId",
-            "status",
             "--limit",
             "1",
         ]

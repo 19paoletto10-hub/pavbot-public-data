@@ -17,10 +17,12 @@ understanding changes. Update `research/codex-agent-automation/backlog.md`
 when there are actionable follow-ups, review notes, open questions, or resolved
 items.
 
-After writing run artifacts, publish the outputs for the iOS app and push
-notification webhook. The script runs `python3 scripts/generate_pavbot_manifest.py`,
-refreshes `public/pavbot-manifest.json`, commits only allowed paths, and pushes
-to `origin/main`. The script derives `PAVBOT_MANIFEST_URL` from an environment
+After writing run artifacts, publish the outputs for the iOS app through the
+CloudKit Briefing gate. The script runs
+`python3 scripts/generate_pavbot_manifest.py`, refreshes
+`public/pavbot-manifest.json`, commits only allowed paths, pushes to
+`origin/main`, and then publishes/verifies the CloudKit `Briefing` record. The
+script derives `PAVBOT_MANIFEST_URL` from an environment
 override, `PAVBOT_RAW_BASE_URL`, the existing manifest `rawBaseUrl`, or GitHub
 `origin`; set it manually only for a non-standard URL. The resolved URL must
 match iOS `Settings -> Manifest URL`. Then run:

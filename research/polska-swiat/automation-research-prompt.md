@@ -78,18 +78,21 @@ Zaktualizuj `research/polska-swiat/index.md`, gdy zmienia się obecny stan
 wiedzy. Zaktualizuj `research/polska-swiat/backlog.md`, gdy pojawiają się
 konkretne follow-upy, notatki przeglądowe, pytania albo rozwiązane elementy.
 
-Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS i webhooka
-notyfikacji push. Najpierw uruchom wspólny kontrakt publikacji:
+Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS przez CloudKit
+Briefing gate. Najpierw uruchom wspólny kontrakt publikacji:
 
 `python3 scripts/pavbot_publication_contract.py prepare research/polska-swiat`
 
 `python3 scripts/pavbot_publication_contract.py verify-local research/polska-swiat`
 
-To jest pipeline `prepare -> validate -> manifest -> push -> verify-remote`.
+To jest pipeline
+`prepare -> validate -> manifest -> push -> verify-remote -> CloudKit publish -> CloudKit verify`.
 Etap `manifest` oznacza uruchomienie
 `python3 scripts/generate_pavbot_manifest.py --repo-root "$PWD"`. Skrypt
 odświeża `public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki i
 robi push na `origin/main`.
+Po udanym `verify-remote` skrypt publikuje i weryfikuje rekord CloudKit
+`Briefing` dla tego topicu; dopiero ten etap jest produkcyjnym alertem APNs.
 Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override środowiskowego,
 `PAVBOT_RAW_BASE_URL`, istniejącego `rawBaseUrl` w manifeście albo GitHub
 `origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Rozwiązany URL

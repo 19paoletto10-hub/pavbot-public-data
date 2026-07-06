@@ -253,7 +253,7 @@ def test_publish_replaces_existing_records_by_stable_briefing_id(monkeypatch) ->
     create_calls = [command for command in calls if "create-record" in command]
     assert len(delete_calls) == 1
     assert len(create_calls) == 1
-    assert "briefingId == \"aktualne-wydarzenia-mobile:2026-07-05-1936\"" in delete_calls[0]
+    assert "briefingId == aktualne-wydarzenia-mobile:2026-07-05-1936" in delete_calls[0]
     assert "--dry-run" in delete_calls[0]
     assert "false" in delete_calls[0]
     assert "--team-id" in create_calls[0]
@@ -303,8 +303,9 @@ def test_verify_requires_ready_record_fields_not_raw_stdout_text(monkeypatch) ->
         raise AssertionError("verify_records must fail when status field is not ready")
 
     assert calls
-    assert "briefingId == \"aktualne-wydarzenia-mobile:2026-07-05-1936\"" in calls[0]
-    assert "status == \"ready\"" in calls[0]
+    assert "briefingId == aktualne-wydarzenia-mobile:2026-07-05-1936" in calls[0]
+    assert "status == ready" not in calls[0]
+    assert "--requested-fields" not in calls[0]
 
 
 def test_verify_fails_fast_when_cktool_token_is_missing(monkeypatch) -> None:

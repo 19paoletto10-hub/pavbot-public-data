@@ -96,7 +96,8 @@ Artefakty redakcyjne i diagnostyczne, czyli raport Markdown, `draft.md`,
 `sources.md` i `tts_variants.json`, nadal mają powstawać lokalnie na potrzeby
 weryfikacji, renderu PDF i debugowania. Finalny `script.md` jest również
 publicznym tekstowym źródłem dla lokalnego TTS w aplikacji iOS. Publiczna
-publikacja dla aplikacji iOS i webhooka ma obejmować:
+publikacja dla aplikacji iOS przez manifest + CloudKit Briefing gate ma
+obejmować:
 - `research/aktualne-wydarzenia-mobile/data/YYYY-MM-DD-HHMM-mobile-news.json`
 - `research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`
 - `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/script.md`
@@ -106,14 +107,15 @@ Publikuj tylko poprawnie wyrenderowany wymagany wariant audio
 `female-piper/podcast.mp3`. Nie publikuj placeholderów, `tts_variants.json`,
 `render.json`, `sources.md`, raportów `runs/` ani dodatkowych PDF-ów.
 
-Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS i webhooka
-notyfikacji push. Najpierw uruchom wspólny kontrakt publikacji:
+Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS przez CloudKit
+Briefing gate. Najpierw uruchom wspólny kontrakt publikacji:
 
 `python3 scripts/pavbot_publication_contract.py prepare research/aktualne-wydarzenia-mobile`
 
 `python3 scripts/pavbot_publication_contract.py verify-local research/aktualne-wydarzenia-mobile`
 
-To jest pipeline `prepare -> validate -> manifest -> push -> verify-remote`.
+To jest pipeline
+`prepare -> validate -> manifest -> push -> verify-remote -> CloudKit publish -> CloudKit verify`.
 W tym temacie `prepare` może automatycznie odtworzyć tylko deterministyczne
 artefakty pochodne: `mobileNewsData`, `mobile-brief.pdf` i `newspaper.pdf`.
 Nie generuje audio ani brakującego `script.md`.

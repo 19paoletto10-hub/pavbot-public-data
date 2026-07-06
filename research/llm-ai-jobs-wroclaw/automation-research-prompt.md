@@ -125,7 +125,7 @@ powstanie albo weryfikacja wykryje pusty/nieczytelny plik, nie publikuj
 wynikow i zglos blad przebiegu.
 
 Po zapisaniu raportu, indeksu, backlogu, JSON i PDF opublikuj wyniki dla
-aplikacji iOS i webhooka notyfikacji push. Skrypt uruchamia
+aplikacji iOS przez CloudKit Briefing gate. Skrypt uruchamia
 `python3 scripts/pavbot_publication_contract.py prepare research/llm-ai-jobs-wroclaw`,
 potem
 `python3 scripts/pavbot_publication_contract.py verify-local research/llm-ai-jobs-wroclaw`,
@@ -134,7 +134,7 @@ a nastepnie uruchamia etap `manifest`, czyli
 `public/pavbot-manifest.json`, commituje tylko dozwolone sciezki i robi push
 na `origin/main`. To jest wspolny pipeline:
 
-`prepare -> validate -> manifest -> push -> verify-remote`
+`prepare -> validate -> manifest -> push -> verify-remote -> CloudKit publish -> CloudKit verify`
 
 Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override srodowiskowego,
 `PAVBOT_RAW_BASE_URL`, istniejacego `rawBaseUrl` w manifescie albo GitHub
