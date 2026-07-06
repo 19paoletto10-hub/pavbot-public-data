@@ -178,6 +178,24 @@ def build_briefing_records(
     return records
 
 
+def build_notification_payload(record: dict[str, Any]) -> dict[str, Any]:
+    fields = record["fields"]
+    title = str(fields["title"])
+    return {
+        "aps": {
+            "alert": {
+                "title": "Pavbot",
+                "subtitle": title,
+                "body": f"Nowe dane: {title}",
+            },
+            "sound": "default",
+        },
+        "briefingId": str(fields["briefingId"]),
+        "category": str(fields["category"]),
+        "manifestUrl": str(fields["manifestUrl"]),
+    }
+
+
 def topic_slug_for_path(topic_path: str | None) -> str | None:
     if topic_path is None:
         return None
@@ -611,7 +629,14 @@ def main(argv: list[str] | None = None) -> int:
             raise CloudKitPublisherError("manifest did not produce any Briefing records")
 
         if args.mode == "dry-run":
-            print(json.dumps({"status": "dry-run", "records": records}, ensure_ascii=False, indent=2))
+            dry_run_records = [
+                {
+                    **record,
+                    "notificationPayload": build_notification_payload(record),
+                }
+                for record in records
+            ]
+            print(json.dumps({"status": "dry-run", "records": dry_run_records}, ensure_ascii=False, indent=2))
             return 0
 
         if args.mode == "preflight":

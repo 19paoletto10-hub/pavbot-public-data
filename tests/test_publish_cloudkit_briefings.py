@@ -95,6 +95,66 @@ def manifest_with_two_topics() -> dict:
     return manifest
 
 
+def pulse_news_manifest() -> dict:
+    return {
+        "schemaVersion": 1,
+        "title": "Pavbot Automation Manifest",
+        "generatedAt": "2026-07-06T18:05:00+00:00",
+        "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
+        "automations": [
+            {
+                "id": "pavbot-puls-dnia-news-3h",
+                "name": "Pavbot Puls Dnia 3h",
+                "enabled": True,
+                "kind": "automation",
+                "topic": "puls-dnia-news",
+                "topicPath": "research/puls-dnia-news",
+                "cadence": "06:00, 09:00, 12:00, 15:00, 18:00 and 21:00 Europe/Warsaw",
+                "output": "research/puls-dnia-news/data/YYYY-MM-DD-HHMM-pulse-news.json",
+            }
+        ],
+        "topics": [
+            {
+                "slug": "puls-dnia-news",
+                "title": "Pavbot Puls Dnia News",
+                "path": "research/puls-dnia-news",
+                "topicFilePath": "",
+                "url": "",
+            },
+            {
+                "slug": "tech-news",
+                "title": "Tech News",
+                "path": "research/tech-news",
+                "topicFilePath": "",
+                "url": "",
+            },
+        ],
+        "artifacts": [
+            {
+                "id": "research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json",
+                "type": "pulseNewsData",
+                "topic": "puls-dnia-news",
+                "title": "Pulse news data",
+                "path": "research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json",
+                "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json",
+                "sizeBytes": 1234,
+                "date": "2026-07-06",
+                "time": "18:00",
+            },
+            {
+                "id": "research/tech-news/runs/2026-07-06.md",
+                "type": "run",
+                "topic": "tech-news",
+                "title": "Tech News",
+                "path": "research/tech-news/runs/2026-07-06.md",
+                "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-07-06.md",
+                "sizeBytes": 1234,
+                "date": "2026-07-06",
+            },
+        ],
+    }
+
+
 def test_build_briefing_records_from_manifest_uses_stable_record_ids_and_ready_status() -> None:
     publisher = load_publisher()
 
@@ -127,6 +187,32 @@ def test_build_briefing_records_can_scope_to_active_topic_only() -> None:
     assert records[0]["fields"]["category"] == "tech-news"
 
 
+def test_build_notification_payload_matches_apns_contract_for_pulse_news() -> None:
+    publisher = load_publisher()
+    manifest_url = "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json"
+    records = publisher.build_briefing_records(
+        pulse_news_manifest(),
+        manifest_url=manifest_url,
+        topic_path="research/puls-dnia-news",
+    )
+
+    payload = publisher.build_notification_payload(records[0])
+
+    assert payload == {
+        "aps": {
+            "alert": {
+                "title": "Pavbot",
+                "subtitle": "Pavbot Puls Dnia News · 2026-07-06 18:00",
+                "body": "Nowe dane: Pavbot Puls Dnia News · 2026-07-06 18:00",
+            },
+            "sound": "default",
+        },
+        "briefingId": "puls-dnia-news:2026-07-06-1800",
+        "category": "puls-dnia-news",
+        "manifestUrl": manifest_url,
+    }
+
+
 def test_dry_run_topic_argument_outputs_only_active_topic_record(tmp_path, capsys) -> None:
     publisher = load_publisher()
     manifest_path = tmp_path / "pavbot-manifest.json"
@@ -147,6 +233,34 @@ def test_dry_run_topic_argument_outputs_only_active_topic_record(tmp_path, capsy
     assert exit_code == 0
     output = json.loads(capsys.readouterr().out)
     assert [record["recordName"] for record in output["records"]] == ["tech-news:2026-07-05-1933"]
+
+
+def test_dry_run_topic_argument_outputs_notification_payload_for_active_topic_only(tmp_path, capsys) -> None:
+    publisher = load_publisher()
+    manifest_path = tmp_path / "pavbot-manifest.json"
+    manifest_url = "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json"
+    manifest_path.write_text(json.dumps(pulse_news_manifest()), encoding="utf-8")
+
+    exit_code = publisher.main(
+        [
+            "dry-run",
+            "--manifest",
+            str(manifest_path),
+            "--manifest-url",
+            manifest_url,
+            "--topic",
+            "research/puls-dnia-news",
+        ]
+    )
+
+    assert exit_code == 0
+    output = json.loads(capsys.readouterr().out)
+    assert [record["recordName"] for record in output["records"]] == ["puls-dnia-news:2026-07-06-1800"]
+    payload = output["records"][0]["notificationPayload"]
+    fields = output["records"][0]["fields"]
+    assert payload["briefingId"] == fields["briefingId"]
+    assert payload["category"] == fields["category"]
+    assert payload["manifestUrl"] == fields["manifestUrl"]
 
 
 def test_preflight_queries_cloudkit_without_creating_records(tmp_path, monkeypatch, capsys) -> None:

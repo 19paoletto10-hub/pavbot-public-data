@@ -3142,6 +3142,8 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(source.contains("Logger(subsystem: Bundle.main.bundleIdentifier ?? \"PavbotViewer\", category: \"CloudKit\")"))
         XCTAssertTrue(source.contains("shouldSendContentAvailable = true"))
         XCTAssertTrue(source.contains("titleLocalizationKey = \"PAVBOT_BRIEFING_NOTIFICATION_TITLE\""))
+        XCTAssertTrue(source.contains("subtitleLocalizationKey = \"PAVBOT_BRIEFING_NOTIFICATION_SUBTITLE\""))
+        XCTAssertTrue(source.contains("subtitleLocalizationArgs = [\"title\"]"))
         XCTAssertTrue(source.contains("alertLocalizationKey = \"PAVBOT_BRIEFING_NOTIFICATION_BODY\""))
         XCTAssertTrue(source.contains("alertLocalizationArgs = [\"title\"]"))
         XCTAssertTrue(source.contains("soundName = \"default\""))
@@ -3157,6 +3159,7 @@ final class PavbotManifestTests: XCTestCase {
         let strings = try String(contentsOf: stringsURL)
 
         XCTAssertTrue(strings.contains("PAVBOT_BRIEFING_NOTIFICATION_TITLE"))
+        XCTAssertTrue(strings.contains("PAVBOT_BRIEFING_NOTIFICATION_SUBTITLE"))
         XCTAssertTrue(strings.contains("PAVBOT_BRIEFING_NOTIFICATION_BODY"))
         XCTAssertTrue(strings.contains("Pavbot"))
         XCTAssertTrue(strings.contains("Nowe dane: %@"))
