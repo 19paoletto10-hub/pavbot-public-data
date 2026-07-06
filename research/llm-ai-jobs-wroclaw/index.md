@@ -1,22 +1,21 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-07-05 15:44 CEST
+Last updated: 2026-07-06 15:45 CEST
 
 ## Current Understanding
 
-Runda z `2026-07-05 15:44 CEST` dołożyła nowy board-heavy klaster:
-`FOTC AI Engineer / AI Technology Consultant`, `Ciklum Agentic AI & Automation
-Consultant`, `Travelplanet AI Enablement Lead`, `DCV Python Developer with
-GenAI`, `EPAM Senior Agentic Automation Engineer` oraz `Tooploox Agentic
-Product Engineer`.
+Runda z `2026-07-06 15:45 CEST` dołożyła nowy Wrocław/remote klaster:
+`Grid Dynamics AI Engineer / Senior AI Engineer`, `FOTC Senior Python + GenAI/
+ML Engineer` oraz `FOTC Machine Learning Infrastructure Engineer`. Jednocześnie
+`Tooploox Agentic Product Engineer` przeszło do stanu `Offer expired`, a
+`Vazco AI Technical Lead` wróciło do publicznego renderu salary w `EUR`
+zamiast wcześniejszego `CHF`.
 
-Najmocniejszy jakościowo sygnał nadal płynie z `first-party` źródeł, ale
-dzisiaj istotna jest też zmiana salary display na `Vazco AI Technical Lead`,
-które na publicznej karcie renderuje już `CHF` zamiast wcześniejszego
-PLN-band. Wcześniejszy klaster `Sii` / `Capgemini` / `Accenture` nadal wygląda
-stabilnie, a świeżo wykryta karta `Holisticon Connect Senior ML Platform
-Reliability & Infrastructure Engineer` pozostaje publicznie oznaczona jako
-`Offer expired`, co potwierdza szybki churn w części klastrów Holisticon.
+Najmocniejszy jakościowo sygnał nadal płynie z `first-party` źródeł i
+stabilnych direct-employer pages. `EPAM Senior Agentic Automation Engineer`
+pozostaje aktywne, a `Travelplanet AI Enablement Lead` wciąż jest publicznie
+widoczne jako Wrocław remote lead. Wcześniejszy klaster `Sii` / `Capgemini` /
+`Accenture` nadal wygląda stabilnie.
 
 ## Stable Facts
 
@@ -156,8 +155,11 @@ only when something meaningful changes.
 | justjoin-holisticon-connect-ai-scientist-principal-ai-engineer-drug-discovery-life-sciences-wroclaw | Holisticon Connect | AI Scientist / Principal AI Engineer – Drug Discovery & Life Sciences | Wrocław + remote | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: `23 520-28 560 PLN net/mies. B2B` or `17 000-20 000 PLN gross`; `graph ML`, `knowledge graphs`, `scientific workflows`, `drug discovery`; highly specialized hands-on AI. | [Holisticon Connect on Just Join IT](https://justjoin.it/job-offer/holisticon-connect-ai-scientist-principal-ai-engineer---drug-discovery-life-sciences-wroclaw-ai) |
 | justjoin-holisticon-insight-senior-data-engineer-data-platforms-ai-initiatives-wroclaw | Holisticon Insight | Senior Data Engineer – Data Platforms for AI Initiatives | Wrocław + remote | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: salary not public; `RAG systems`, vector databases, `Airflow`, `Kafka`, `BigQuery`, `Snowflake`, `ML/GenAI workloads`; strong AI data-platform role. | [Holisticon Insight on Just Join IT](https://justjoin.it/job-offer/holisticon-insight-senior-data-engineer---data-platforms-for-ai-initiatives-wroclaw-ai) |
 | justjoin-smartrecruiters-senior-ai-engineer-wroclaw-remote | SmartRecruiters Inc. | Senior AI Engineer | Wrocław + remote | 2026-06-29-1741 | 2026-06-29-1741 | Open | Initial capture: `21 000-36 000 PLN/month`; `agentic workflows`, `NLP`, `LLM fine-tuning`, `model evaluation`, production ML; strong product AI lead signal. | [SmartRecruiters on Just Join IT](https://justjoin.it/job-offer/smartrecruiters-inc--senior-ai-engineer-wroclaw-ai-b4e4c091) |
-| justjoin-vazco-ai-technical-lead-wroclaw | Vazco | AI Technical Lead | Wrocław + remote | 2026-06-29-1741 | 2026-07-05-1544 | Open | Initial capture: `23 000-28 800 PLN net/mies. B2B`; `multi-agent architectures`, `RAG`, `MCP`, evaluation and observability; more lead-shaped, but very hands-on AI. 2026-07-05-1544: current public page now renders salary as `4 945-6 192 CHF net per month - B2B`, so the previously recorded PLN band is no longer accurate. | [Vazco on Just Join IT](https://justjoin.it/job-offer/vazco-ai-technical-lead-wroclaw-ai-91eb2411) |
-| tooploox-agentic-product-engineer-wroclaw-remote | Tooploox | Agentic Product Engineer | Wrocław + remote | 2026-07-05-1544 | 2026-07-05-1544 | Open | Fresh live sibling of the now-expired tooling card; `4 332-7 581 CHF net per month - B2B` or `3 899-6 823 CHF gross per month - Permanent`; `coding agents`, `agentic workflows`, `evals`, `grounding checks` and Wrocław/Warsaw office flexibility. | [Just Join IT](https://justjoin.it/job-offer/tooploox-agentic-product-engineer-wroclaw-ai) |
+| justjoin-vazco-ai-technical-lead-wroclaw | Vazco | AI Technical Lead | Wrocław + remote | 2026-06-29-1741 | 2026-07-06-1545 | Open | Initial capture: `23 000-28 800 PLN net/mies. B2B`; `multi-agent architectures`, `RAG`, `MCP`, evaluation and observability; more lead-shaped, but very hands-on AI. 2026-07-05-1544: public page rendered salary as `4 945-6 192 CHF net per month - B2B`. 2026-07-06-1545: the public page now renders `5 365-6 718 EUR net per month - B2B`, so the CHF display did not persist. | [Vazco on Just Join IT](https://justjoin.it/job-offer/vazco-ai-technical-lead-wroclaw-ai-91eb2411) |
+| tooploox-agentic-product-engineer-wroclaw-remote | Tooploox | Agentic Product Engineer | Wrocław + remote | 2026-07-05-1544 | 2026-07-06-1545 | Expired | Fresh live sibling of the now-expired tooling card; `4 332-7 581 CHF net per month - B2B` or `3 899-6 823 CHF gross per month - Permanent`; `coding agents`, `agentic workflows`, `evals`, `grounding checks` and Wrocław/Warsaw office flexibility. 2026-07-06-1545: public page now says `Offer expired`. | [Just Join IT](https://justjoin.it/job-offer/tooploox-agentic-product-engineer-wroclaw-ai) |
+| justjoin-griddynamics-ai-engineer-senior-ai-engineer-wroclaw-hybrid | Grid Dynamics Poland | AI Engineer / Senior AI Engineer | Wrocław hybrid | 2026-07-06-1545 | 2026-07-06-1545 | Open | New Wrocław board card on Just Join IT; AI engineering focus, Python, `AI Engineering`, no public salary on the board snippet. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
+| justjoin-fotc-senior-python-genai-ml-engineer-wroclaw-remote | FOTC | Senior Python + GenAI/ ML Engineer | Wrocław + remote | 2026-07-06-1545 | 2026-07-06-1545 | Open | New Wrocław board card on Just Join IT; `Undisclosed Salary`, `PyTorch`, `Claude Code`, `AWS Bedrock`, `LangChain`, `LangGraph`, `Python`. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
+| justjoin-fotc-machine-learning-infrastructure-engineer-wroclaw-remote | FOTC | Machine Learning Infrastructure Engineer | Wrocław + remote | 2026-07-06-1545 | 2026-07-06-1545 | Open | New Wrocław board card on Just Join IT; `28 560-31 920 PLN/month`, `PyTorch`, `NumPy`, `GCP`, `BigQuery`, `Snowflake`, `Pandas`, `Python`. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
 | epam-senior-agentic-automation-engineer-wroclaw-remote | EPAM Systems | Senior Agentic Automation Engineer | Wrocław / remote | 2026-07-05-1544 | 2026-07-05-1544 | Open | Fresh board lead; design, development and deployment of intelligent multi-agent systems with security, auditability, performance, reusable templates and documentation. | [Just Join IT](https://justjoin.it/job-offer/epam-systems-senior-agentic-automation-engineer-wroclaw-ai) |
 | dcv-python-developer-genai-remote-poland | DCV Technologies | Python Developer with GenAI | Remote Poland | 2026-07-05-1544 | 2026-07-05-1544 | Open | Fresh board lead; `Remote from Poland`, `B2B`, `3 years of Python development`, hands-on `agentic AI architectures`, APIs, async/streaming data and SQL. | [Just Join IT](https://justjoin.it/job-offer/dcv-technologies-python-developer-with-genai-wroclaw-python) |
 | fotc-ai-engineer-ai-technology-consultant-wroclaw-remote | FOTC | AI Engineer / AI Technology Consultant | Wrocław + remote | 2026-07-05-1544 | 2026-07-05-1544 | Open | Fresh board lead published today; `Wrocław +9 locations`, `100% remote or hybrid`, discovery sessions, client-facing AI solution design, deployment standards and reusable AI libraries. | [Just Join IT](https://justjoin.it/job-offer/fotc-ai-engineer-ai-technology-consultant-wroclaw-data) |
@@ -335,6 +337,10 @@ only when something meaningful changes.
   `B3 Consulting Poland AI Engineer` i `MailerLite Machine Learning Engineer`;
   dodatkowo świeżo wykryta karta `Holisticon Connect Senior ML Platform
   Reliability & Infrastructure Engineer` okazała się już publicznie wygaszona.
+- 2026-07-06: board burst expanded again with `Grid Dynamics` and `FOTC`
+  Wrocław cards; `Tooploox Agentic Product Engineer` expired, while
+  `Vazco AI Technical Lead` reverted from `CHF` back to `EUR` on the public
+  page.
 - 2026-07-02: popołudniowy sweep dodał nowy klaster Wrocław/remote wokół
   `Capgemini GCP AI Developer`, `Holisticon Connect Senior AI Engineer`,
   `SQUAD Applied Scientist (LLM)`, `Holisticon Insight Senior Data Scientist

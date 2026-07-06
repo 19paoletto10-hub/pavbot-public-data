@@ -1,8 +1,34 @@
 # Topic Index: aktualne-wydarzenia-mobile
 
-Last updated: 2026-07-05
+Last updated: 2026-07-06
 
 ## Current Understanding
+
+Wieczorny run z `2026-07-06-1935` zamienił poranne oczekiwanie w bardziej wykonawczy obraz dnia. Bydgoszcz przestała być zapowiedzią i stała się podpisaną umową PGZ–WZL-2–Anduril o montażu, a potem produkcji Barracudy 500M w Polsce. To wzmacnia oś przemysłu obronnego i przesuwa ją z politycznego sygnału w stronę realnej zdolności, choć nadal bez publicznych wolumenów, harmonogramu i dokładnej skali polonizacji.
+
+Bóbr też wykonał krok, ale nadal nie doszedł do domknięcia. Po komunikacie z `14:00` są już nie tylko wcześniejsze wyniki mikrobiologiczne, lecz także nowe terenowe pomiary WIOŚ z `6 lipca`, utrzymany zakaz, kontrola nadzoru budowlanego, działania RDOŚ i śledztwo prokuratury. To czyni temat bardziej instytucjonalnym i dochodzeniowym, ale nadal bez publicznie podanej przyczyny incydentu oraz bez warunków zniesienia ograniczeń.
+
+Międzynarodowo główny ciężar dnia jeszcze mocniej przesunął się na relację Kijów–Ankara. Rosyjski atak urósł z porannego lokalnego bilansu do co najmniej `22` ofiar w skali Ukrainy według AP, więc summit NATO wchodzi w start z dużo twardszym tłem dla rozmów o Patriotach, planie `5%` i dowożeniu produkcji obronnej. Krajową przeciwwagą wobec samych tematów bezpieczeństwa stała się Deregulacja 2.0 z konkretnymi propozycjami podatkowymi i cyfrowymi, ale to na razie bardziej pakiet wykonawczy do obserwacji niż nowy polityczny przełom.
+
+Poranny run z `2026-07-06-1016` przesunął brief z wczorajszego porządkowania Bobru na dwa nowe, materialne sygnały: rosyjski atak na Kijów z rosnącym bilansem ofiar oraz zapowiedziane na dziś w Bydgoszczy podpisanie umowy PGZ–WZL-2–Anduril o Barracudzie 500. To ustawia dzień bardziej wokół wojny i przemysłu obronnego niż wokół samego lokalnego incydentu wodnego.
+
+Bobr nadal czeka na popołudniowy komunikat o `14:00`, więc lokalny wątek pozostaje w trybie nadzoru, a nie domknięcia. Ankara wchodzi już w tryb wykonawczy, ale teraz jej polityczny ciężar jest jeszcze mocniej podbity świeżym obrazem z Kijowa.
+
+Wieczorny run z `2026-07-05-1936` nie przewrócił porannej agendy, ale ją
+uporządkował. Bóbr przestał dziś być historią o możliwej rtęci, a stał się
+historią o oficjalnie komunikowanym ryzyku mikrobiologicznym. DUW, GIS i WIOŚ
+spójnie podały, że w próbkach z `2` i `3 lipca` rtęci nie wykryto, podstawą
+zakazu są wyniki bakteriologiczne, woda z sieci pozostaje bezpieczna, a
+sytuacja terenowa stabilizuje się przy utrzymanym zakazie co najmniej do
+kolejnego komunikatu z `6 lipca` o `14:00`.
+
+W świecie i polityce najważniejszy jest dziś bardziej stan przygotowania niż
+nowy pojedynczy przełom. Ankara weszła w tryb wykonawczy dzięki odświeżonym
+stronom NATO i NSDIF, Mołdawia ma już oficjalnie opisany tryb konsultacji po
+dymisji rządu, a Gaza wraca przez zdrowie publiczne i ponad `9 tys.` przypadków
+ospy wietrznej. Technologia nadal siedzi na kalendarzu: lista sygnatariuszy
+kodeksu AI wciąż nie została ujawniona, ale `2 sierpnia` nadal szybko się
+zbliża.
 
 Poranny run z `2026-07-05-1016` dołożył publiczne wyniki WIOŚ dla Bobru z `3 lipca` oraz kolejne publikacje dla `2 lipca` i uzupełnienia do `30 czerwca`. To przesuwa temat z samego zakazu do pełniejszej warstwy danych, ale nadal nie daje przyczyny ani daty końca ograniczeń; DUW zapowiada kolejną aktualizację na `14:00`.
 
@@ -96,8 +122,8 @@ Ankarę jako już policzalny program, a nie tylko datę w kalendarzu.
   materialnych twierdzeń. Source: [Topic contract](topic.md).
 - PDF ma być projektowany pod szybkie czytanie na telefonie, z faktami,
   interpretacją i źródłami oddzielonymi wizualnie. Source: [Topic contract](topic.md).
-- TTS ma powstawać w dwóch wariantach z prędkością finalną 1.03x oraz metadanymi
-  języka. Source: [Automation prompt](automation-prompt.md).
+- Wymagany wariant audio ma powstawać jako `female-piper` z prędkością finalną
+  `1.03x` oraz metadanymi języka. Source: [Automation prompt](automation-prompt.md).
 
 ## Open Questions
 
@@ -205,6 +231,10 @@ Ankarę jako już policzalny program, a nie tylko datę w kalendarzu.
   lepiej wykorzystać pionowy ekran iPhone'a.
 
 ## Recent Reports
+
+- [2026-07-06-1935](runs/2026-07-06-1935.md) - wieczór zamienia Bydgoszcz w podpisaną Barracudę, dodaje Bobrowi pomiary z 6 lipca i kontrolę śledczą oraz podbija Ankarę cięższym bilansem Ukrainy.
+- [2026-07-06-1016](runs/2026-07-06-1016.md) - poranek przesuwa brief na Kijów i Bydgoszcz, zostawia Bóbr na 14:00 i podbija Ankarę świeżym tłem wojennym.
+- [2026-07-05-1936](runs/2026-07-05-1936.md) - wieczór porządkuje Bóbr przez mikrobiologię zamiast rtęci, ustawia Ankarę w trybie wykonawczym i zostawia technologię na kalendarzu.
 
 - [2026-07-05-1016](runs/2026-07-05-1016.md) - poranek dokłada Bobrowi nowe tabele, Mołdawii dymisję rządu, Gazie ospę wietrzną i mocniejszy ton NATO.
 

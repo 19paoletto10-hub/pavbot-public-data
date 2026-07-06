@@ -11,9 +11,15 @@ def test_reddit_contract_requires_push_before_cloudkit_gate() -> None:
     lowered = prompt.lower()
 
     assert "pavbot_commit_and_push_outputs.sh --isolated research/reddit-radar" in prompt
-    assert "verify-remote research/reddit-radar --ref origin/main" in prompt
+    assert "Skrypt publikacji jest jedyną bramką produkcyjną" in prompt
+    assert "CloudKit Briefing" in prompt
+    assert "APNs" in prompt
     assert "post" in lowered and "cloudkit" in lowered
-    assert lowered.index("pavbot_commit_and_push_outputs.sh") < lowered.index("cloudkit")
+    assert lowered.index("pavbot_commit_and_push_outputs.sh") < lowered.index(
+        "skrypt publikacji jest jedyną bramką produkcyjną"
+    )
+    assert "prepare -> verify-local" not in prompt
+    assert "verify-remote research/reddit-radar --ref origin/main" not in prompt
     assert "do not commit" not in lowered
     assert "do not push" not in lowered
     assert "nie commituj" not in lowered

@@ -100,18 +100,16 @@ The publish script records private runtime telemetry in local SQLite at
 `.pavbot/private/usage-ledger.sqlite3` when available. This ledger is not part
 of the public GitHub feed and must not be committed.
 
-The shared publication pipeline is:
+Skrypt publikacji jest jedyną bramką produkcyjną; sam odświeża manifest,
+publikuje artefakty na origin/main, weryfikuje zdalny stan oraz tworzy i
+weryfikuje CloudKit Briefing. Produkcyjny flow iOS pozostaje: artefakty +
+`public/pavbot-manifest.json` na origin/main, potem CloudKit Briefing w
+`iCloud.com.paweltanski.pavbotviewer` / `production` / `SP774TZZU8`, potem
+APNs.
 
-```text
-prepare -> validate -> manifest -> push -> verify-remote -> CloudKit publish -> CloudKit verify
-```
-
-`scripts/pavbot_commit_and_push_outputs.sh` is the orchestrator. Before
-manifest generation it runs
-`python3 scripts/pavbot_publication_contract.py prepare research/<topic>` and
-`python3 scripts/pavbot_publication_contract.py verify-local research/<topic>`.
-The helper is the single source of truth for the latest package key and for the
-required bundle per topic:
+`scripts/pavbot_commit_and_push_outputs.sh` is the orchestrator. Its
+publication contract is the single source of truth for the latest package key
+and for the required bundle per topic:
 
 - `llm-ai-jobs-wroclaw`: `run + jobsData + pdf`
 - `tech-news`, `polska-swiat`: `run + researchData + pdf`
@@ -140,19 +138,11 @@ active `research/<topic>` record, so one automation publication produces one
 visible APNs alert for the matching run.
 This is the one visible APNs alert contract for production runs.
 
-Treat `git push` as necessary but not sufficient. After the push run
-`git fetch origin`; the script must then run
-`python3 scripts/pavbot_publication_contract.py verify-remote research/<topic> --ref origin/main`,
-confirm that the expected published files exist on `origin/main`, and confirm
-that `origin/main:public/pavbot-manifest.json` exposes the full required bundle
-for the active topic and package key. For Jobs, success means the current
-package key is visible on `origin/main` as a complete set of `run`, `jobsData`,
-and `pdf` artifacts, not just as a local commit.
-
-Do not consider an automation finished until the generated files have been
-committed and pushed to `origin/main` with the refreshed manifest and the
-CloudKit `Briefing` publish/verify gate has passed. If CloudKit publish fails,
-the run is partially published even when GitHub push succeeded.
+Do not consider an automation finished until
+`scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>` exits
+successfully. If the script fails, the run is failed or partially published
+even when a GitHub push succeeded. Manual commands are allowed only for
+diagnostics, not for finishing production publication.
 
 Public automation output commits may include only app-visible files from
 `runs/`, `data/`, `pdfs/`, public podcast audio/script/brief files, and

@@ -175,9 +175,6 @@ structured Jobs artifact in `data/YYYY-MM-DD-HHMM-jobs.json` with
 generate the PDF in
 `pdfs/YYYY-MM-DD-HHMM-llm-ai-jobs-wroclaw.pdf`, then publish with
 `scripts/pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw`.
-After publish, run `git fetch origin` and verify
-`origin/main:public/pavbot-manifest.json` plus the matching `runs/`, `data/`,
-and `pdfs/` package for the same `YYYY-MM-DD-HHMM`.
 Follow the topic contract and use proposals for any medium-risk or high-risk
 action.
 ```
@@ -258,25 +255,16 @@ override the default URL bundled or configured for the iOS app:
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
-The isolated publish script creates a temporary clean worktree from
-`origin/main`, copies only generated outputs from the active topic, runs
-`python3 scripts/generate_pavbot_manifest.py`, commits the refreshed manifest
-with the outputs, and pushes directly to `origin/main`. Treat this as the
-required final publish step after each automation run so iOS receives the
-refreshed manifest and the new files in the same commit. Automation output
-publication is always production-bound to `origin/main`; `PAVBOT_PUBLISH_BRANCH`
-does not change the target branch for this script. Before committing, the
-script runs a read-only CloudKit preflight with `cktool` so an expired CloudKit
-token is caught before the remote manifest changes. After the push the script
-performs remote verification against `origin/main`: it checks the refreshed
-`public/pavbot-manifest.json`, verifies that the expected topic artifacts are
-present in the remote manifest, verifies that the same files exist on
-`origin/main`, and then synchronizes the local `public/pavbot-manifest.json`
-to the published remote state. It then publishes/verifies exactly one CloudKit
-`Briefing` record for the active `research/<topic>` unless
-`PAVBOT_CLOUDKIT_DRY_RUN=1` is set for local testing. That record is the source
-of the visible APNs alert and the background refresh signal. This
-requires:
+Skrypt publikacji jest jedyną bramką produkcyjną; sam odświeża manifest,
+publikuje artefakty na origin/main, weryfikuje zdalny stan oraz tworzy i
+weryfikuje CloudKit Briefing. Produkcyjny flow iOS pozostaje: artefakty +
+`public/pavbot-manifest.json` na origin/main, potem CloudKit Briefing w
+`iCloud.com.paweltanski.pavbotviewer` / `production` / `SP774TZZU8`, potem
+APNs. Treat this as the required final publish step after each automation run
+so iOS receives the refreshed manifest and the new files in the same commit.
+Automation output publication is always production-bound to `origin/main`;
+`PAVBOT_PUBLISH_BRANCH` does not change the target branch for this script.
+This requires:
 
 - a working `origin` remote;
 - GitHub credentials or a token with permission to push to `main`;
@@ -288,16 +276,10 @@ CloudKit records are matched by the stable `briefingId` field, for example
 `tech-news:2026-07-05-1933`. The Codex publisher does not rely on CloudKit
 record names, because `cktool` creates those names itself.
 
-Do not mark a run successful until the script finishes without remote
-verification errors, the refreshed remote manifest plus current output files
-are visible on `origin/main`, and the CloudKit `Briefing` publish/verify gate
-passes. If CloudKit publish fails after the push, treat the run as partially
-published, refresh local `cktool` authentication with `xcrun cktool save-token`,
-and repair CloudKit without creating another commit:
-
-```bash
-scripts/pavbot_commit_and_push_outputs.sh --cloudkit-only research/<topic>
-```
+Do not mark a run successful unless the script exits successfully. If it fails,
+treat the run as failed or partially published. Manual commands are allowed
+only for diagnostics, not for finishing production publication outside the
+shared script.
 
 Only `runs/`, `data/`, `pdfs/`, `podcasts/`, `topic.md`, `index.md`,
 `backlog.md`, and `public/pavbot-manifest.json` are publishable as automation outputs. Code,

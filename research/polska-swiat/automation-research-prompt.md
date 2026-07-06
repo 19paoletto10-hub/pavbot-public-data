@@ -78,30 +78,23 @@ Zaktualizuj `research/polska-swiat/index.md`, gdy zmienia się obecny stan
 wiedzy. Zaktualizuj `research/polska-swiat/backlog.md`, gdy pojawiają się
 konkretne follow-upy, notatki przeglądowe, pytania albo rozwiązane elementy.
 
-Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS przez CloudKit
-Briefing gate. Najpierw uruchom wspólny kontrakt publikacji:
+Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS przez jedyny
+obowiązkowy CloudKit Briefing gate:
 
-`python3 scripts/pavbot_publication_contract.py prepare research/polska-swiat`
+`scripts/pavbot_commit_and_push_outputs.sh --isolated research/polska-swiat`
 
-`python3 scripts/pavbot_publication_contract.py verify-local research/polska-swiat`
-
-To jest pipeline
-`prepare -> validate -> manifest -> push -> verify-remote -> CloudKit publish -> CloudKit verify`.
-Etap `manifest` oznacza uruchomienie
-`python3 scripts/generate_pavbot_manifest.py --repo-root "$PWD"`. Skrypt
-odświeża `public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki i
-robi push na `origin/main`.
-Po udanym `verify-remote` skrypt publikuje i weryfikuje rekord CloudKit
-`Briefing` dla tego topicu; dopiero ten etap jest produkcyjnym alertem APNs.
+Skrypt publikacji jest jedyną bramką produkcyjną; sam odświeża manifest,
+publikuje artefakty na origin/main, weryfikuje zdalny stan oraz tworzy i
+weryfikuje CloudKit Briefing. Produkcyjny flow iOS pozostaje: artefakty +
+`public/pavbot-manifest.json` na origin/main, potem CloudKit Briefing w
+`iCloud.com.paweltanski.pavbotviewer` / `production` / `SP774TZZU8`, potem
+APNs.
 Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override środowiskowego,
 `PAVBOT_RAW_BASE_URL`, istniejącego `rawBaseUrl` w manifeście albo GitHub
-`origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Rozwiązany URL
-musi odpowiadać iOS `Settings -> Manifest URL`. Następnie uruchom:
-`scripts/pavbot_commit_and_push_outputs.sh --isolated --force-manifest research/polska-swiat`.
-Po pushu wykonaj `git fetch origin` i potwierdź, że `origin/main` zawiera
-bieżące ścieżki `runs/YYYY-MM-DD.md`, `data/YYYY-MM-DD-research.json` i
-`pdfs/YYYY-MM-DD-polska-swiat.pdf`, a zdalny manifest zawiera dla nich wpisy
-`run`, `researchData` i `pdf`.
+`origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Jeśli skrypt
+zwróci błąd, traktuj przebieg jako failed albo partially published; ręczne
+komendy są dozwolone wyłącznie do diagnostyki, nie do dokańczania produkcyjnej
+publikacji.
 
 Użyj risk gate z `docs/architecture.md`. Jeśli rekomendowana akcja zmieniałaby
 automatyzacje, instrukcje repo, skille, hooki, MCP, zależności albo pliki poza

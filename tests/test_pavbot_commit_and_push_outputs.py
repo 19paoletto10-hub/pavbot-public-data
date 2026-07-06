@@ -853,6 +853,53 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                 "pulseNewsData",
             )
 
+    def test_pulse_news_publish_excludes_pdf_outputs(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "puls-dnia-news",
+                "runs/2026-06-26-1200.md",
+                "# Puls dnia\n\nDate: 2026-06-26 12:00 CEST\nStatus: Material update\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "puls-dnia-news",
+                "data/2026-06-26-1200-pulse-news.json",
+                json.dumps(self.valid_pulse_news_data_payload(), ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "puls-dnia-news",
+                "pdfs/2026-06-26-1200-pulse-news.pdf",
+                "%PDF stale pulse pdf that must not be published\n",
+            )
+
+            result = self.run_publish_script(repo, "research/puls-dnia-news", isolated=True)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            changed_files = self.git(
+                repo,
+                "diff-tree",
+                "--no-commit-id",
+                "--name-only",
+                "-r",
+                "origin/main",
+                stdout=True,
+            ).splitlines()
+            self.assertIn("public/pavbot-manifest.json", changed_files)
+            self.assertIn("research/puls-dnia-news/data/2026-06-26-1200-pulse-news.json", changed_files)
+            self.assertIn("research/puls-dnia-news/runs/2026-06-26-1200.md", changed_files)
+            self.assertFalse(
+                any(path.startswith("research/puls-dnia-news/pdfs/") for path in changed_files),
+                changed_files,
+            )
+            manifest = json.loads(
+                self.git(repo, "show", "origin/main:public/pavbot-manifest.json", stdout=True)
+            )
+            by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+            self.assertIn("research/puls-dnia-news/data/2026-06-26-1200-pulse-news.json", by_path)
+            self.assertNotIn("research/puls-dnia-news/pdfs/2026-06-26-1200-pulse-news.pdf", by_path)
+
     def test_pulse_news_isolated_publish_uses_local_helpers_when_origin_lacks_them(self) -> None:
         with self.temporary_repo() as repo:
             self.git(

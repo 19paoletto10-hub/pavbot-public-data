@@ -109,10 +109,8 @@ backlog note inside the active topic.
 
 ## Public iOS Publication
 
-When the episode is part of a Pavbot automation, finish by publishing the topic
-outputs. The episode is not complete until the refreshed
-`public/pavbot-manifest.json` and the episode artifacts are pushed to
-`origin/main`:
+When the episode is part of a Pavbot automation, finish by running the single
+shared publish script. The episode is not complete until this script succeeds:
 
 ```bash
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
@@ -122,13 +120,14 @@ The publish script derives `PAVBOT_MANIFEST_URL` from an explicit environment
 override, `PAVBOT_RAW_BASE_URL`, the existing manifest `rawBaseUrl`, or the
 GitHub `origin` remote. The resolved URL must match the public raw manifest URL
 used in iOS `Settings -> Manifest URL`; the iOS app does not send this value
-back to Codex. The publish script runs `python3 scripts/generate_pavbot_manifest.py`
-in a temporary clean worktree, commits only generated outputs (`runs/`, `pdfs`,
-`podcasts/`, `index.md`, `backlog.md`) plus `public/pavbot-manifest.json`, and
-pushes to `origin/main`.
-After publishing, run `git fetch origin` and verify that
-`origin/main:public/pavbot-manifest.json` contains the current episode paths and
-that those files exist on `origin/main`. If this verification fails, report the
-episode as failed or partially published instead of successful.
+back to Codex. The script is the only production gate: it refreshes the
+manifest, publishes generated outputs (`runs/`, `pdfs`, `podcasts/`,
+`index.md`, `backlog.md`) plus `public/pavbot-manifest.json` to `origin/main`,
+verifies the remote state, and creates/verifies the CloudKit `Briefing`
+notification record.
+The production iOS flow is CloudKit/APNs subscriptions, not a legacy
+webhook/notifier channel. If this script fails, report the episode as failed or
+partially published instead of successful. Manual commands are allowed only for
+diagnostics, not for finishing production publication.
 Never publish topic `tools/`, prompt edits, app code, docs, backend code, or
 other development changes as automation outputs.

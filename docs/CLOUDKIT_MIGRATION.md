@@ -139,11 +139,9 @@ export PAVBOT_CLOUDKIT_TEAM_ID=SP774TZZU8
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
-The script order is:
-
-```text
-prepare -> validate -> manifest -> CloudKit preflight -> commit/push -> remote verify -> CloudKit publish -> CloudKit verify
-```
+Skrypt publikacji jest jedyną bramką produkcyjną; sam odświeża manifest,
+publikuje artefakty na origin/main, weryfikuje zdalny stan oraz tworzy i
+weryfikuje CloudKit Briefing.
 
 The CloudKit preflight is read-only. It checks local `cktool` authentication and
 the target container before anything is committed or pushed. This prevents a
@@ -163,21 +161,12 @@ PAVBOT_CLOUDKIT_DRY_RUN=1 \
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
-## CloudKit Repair
+## Failed Publication
 
-Use repair mode when `origin/main` already contains the correct manifest and
-topic artifacts, but CloudKit publication failed after the push:
-
-```bash
-export PAVBOT_CLOUDKIT_CONTAINER_ID=iCloud.com.paweltanski.pavbotviewer
-export PAVBOT_CLOUDKIT_ENVIRONMENT=production
-export PAVBOT_CLOUDKIT_TEAM_ID=SP774TZZU8
-scripts/pavbot_commit_and_push_outputs.sh --cloudkit-only research/<topic>
-```
-
-Repair mode verifies `origin/main`, synchronizes the local manifest from the
-published remote state, publishes the matching CloudKit `Briefing`, and verifies
-that the record exists. It does not create a new commit.
+If the shared publish script fails, report the run as failed or partially
+published. Manual commands are allowed only for diagnostics, not for finishing
+production publication outside `scripts/pavbot_commit_and_push_outputs.sh
+--isolated research/<topic>`.
 
 ## Development To Production
 

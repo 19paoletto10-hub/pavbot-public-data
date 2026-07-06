@@ -279,7 +279,6 @@ grep -q 'Kopiuj token APNs' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'RemoteNotificationDiagnostics' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
 grep -q 'RemoteNotificationDiagnostics' ios/PavbotViewer/Tests/PavbotManifestTests.swift
 grep -q 'visible APNs alert' docs/CLOUDKIT_MIGRATION.md
-grep -q 'publiczny raw' research/puls-dnia-news/automation-prompt.md
 grep -q 'Kopiuj token APNs' ios/PavbotViewer/Sources/Views/DiagnosticsView.swift
 grep -q 'Powiadomienia live' ios/PavbotViewer/Sources/Views/ContentView.swift
 grep -q 'startAutoRefreshLoop' ios/PavbotViewer/Sources/Views/ContentView.swift
@@ -307,11 +306,12 @@ grep -q 'buildConfiguration = "Release"' ios/PavbotViewer/PavbotViewer.xcodeproj
 ! test -f ios/PavbotViewer/PavbotViewer.xcodeproj/xcshareddata/xcschemes/PavbotViewerPush.xcscheme
 ! test -f ios/PavbotViewer/PavbotViewer.xcodeproj/xcshareddata/xcschemes/PavbotAudioActivityExtension.xcscheme
 ! test -f ios/PavbotViewer/Sources/PavbotViewerPush.entitlements
-grep -q 'generate_pavbot_manifest.py' docs/how-to-use.md
+grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/<topic>' docs/how-to-use.md
 grep -q 'PAVBOT_MANIFEST_URL' docs/how-to-use.md
 grep -q 'PAVBOT_CLOUDKIT_CONTAINER_ID' docs/how-to-use.md
 grep -q 'PAVBOT_CLOUDKIT_TEAM_ID' docs/how-to-use.md
-grep -q 'exactly one CloudKit' docs/how-to-use.md
+grep -q 'CloudKit Briefing' docs/how-to-use.md
+grep -q 'APNs' docs/how-to-use.md
 grep -q 'pavbot_commit_and_push_outputs.sh' docs/how-to-use.md
 grep -q 'CLOUDKIT_MIGRATION.md' docs/how-to-use.md
 grep -q 'Record Type: Briefing' docs/CLOUDKIT_MIGRATION.md
@@ -392,6 +392,22 @@ grep -q 'pavbot_commit_and_push_outputs.sh' .agents/skills/daily-news-podcast-ag
 if [[ -f .agents/skills/pavbot-live-notifier/SKILL.md ]]; then
   grep -q 'pavbot_commit_and_push_outputs.sh' .agents/skills/pavbot-live-notifier/SKILL.md
 fi
+active_automation_prompts=(
+  "research/codex-agent-automation/automation-prompt.md"
+  "research/tech-news/automation-research-prompt.md"
+  "research/tech-news/automation-podcast-prompt.md"
+  "research/polska-swiat/automation-research-prompt.md"
+  "research/polska-swiat/automation-podcast-prompt.md"
+  "research/llm-ai-jobs-wroclaw/automation-research-prompt.md"
+  "research/aktualne-wydarzenia-mobile/automation-prompt.md"
+  "research/puls-dnia-news/automation-prompt.md"
+  "research/reddit-radar/automation-prompt.md"
+)
+for prompt in "${active_automation_prompts[@]}"; do
+  grep -q 'Skrypt publikacji jest jedyną bramką produkcyjną' "$prompt"
+  grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/' "$prompt"
+  ! grep -q 'prepare -> verify-local' "$prompt"
+done
 grep -q '^# Topic Contract: codex-agent-automation$' research/codex-agent-automation/topic.md
 grep -q '^# Topic Contract: tech-news$' research/tech-news/topic.md
 grep -q '^# Topic Contract: polska-swiat$' research/polska-swiat/topic.md
@@ -401,18 +417,15 @@ grep -q '^# Pavbot Puls Dnia News$' research/puls-dnia-news/topic.md
 grep -q '^Status: ' research/codex-agent-automation/runs/2026-06-17.md
 grep -q 'Risk Gate' docs/architecture.md
 grep -q '\$daily-research-agent' research/codex-agent-automation/automation-prompt.md
-grep -q 'generate_pavbot_manifest.py' research/codex-agent-automation/automation-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/codex-agent-automation/automation-prompt.md
 grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/codex-agent-automation' research/codex-agent-automation/automation-prompt.md
 grep -q '\$daily-research-agent' research/tech-news/automation-research-prompt.md
-grep -q 'generate_pavbot_manifest.py' research/tech-news/automation-research-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/tech-news/automation-research-prompt.md
-grep -q 'pavbot_commit_and_push_outputs.sh --isolated --force-manifest research/tech-news' research/tech-news/automation-research-prompt.md
+grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/tech-news' research/tech-news/automation-research-prompt.md
 grep -q 'render_research_pdf.py' research/tech-news/automation-research-prompt.md
 grep -q 'render_research_pdf.py' .agents/skills/daily-research-agent/SKILL.md
 test -s research/tech-news/pdfs/2026-06-18-tech-news.pdf
 grep -q '\$daily-tech-podcast-agent' research/tech-news/automation-podcast-prompt.md
-grep -q 'generate_pavbot_manifest.py' research/tech-news/automation-podcast-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/tech-news/automation-podcast-prompt.md
 grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/tech-news' research/tech-news/automation-podcast-prompt.md
 grep -q 'render-podcast-audio.sh' research/tech-news/automation-podcast-prompt.md
@@ -425,11 +438,9 @@ grep -q 'coqui/XTTS-v2' .agents/scripts/podcast/download-local-tts-models.sh
 grep -q 'pl_PL-gosia-medium' .agents/scripts/podcast/download-local-tts-models.sh
 grep -q '.agents/scripts/podcast/render-podcast-audio.sh' .agents/skills/daily-tech-podcast-agent/scripts/render-podcast-audio.sh
 grep -q '\$daily-research-agent' research/polska-swiat/automation-research-prompt.md
-grep -q 'generate_pavbot_manifest.py' research/polska-swiat/automation-research-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/polska-swiat/automation-research-prompt.md
-grep -q 'pavbot_commit_and_push_outputs.sh --isolated --force-manifest research/polska-swiat' research/polska-swiat/automation-research-prompt.md
+grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/polska-swiat' research/polska-swiat/automation-research-prompt.md
 grep -q '\$daily-news-podcast-agent' research/polska-swiat/automation-podcast-prompt.md
-grep -q 'generate_pavbot_manifest.py' research/polska-swiat/automation-podcast-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/polska-swiat/automation-podcast-prompt.md
 grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/polska-swiat' research/polska-swiat/automation-podcast-prompt.md
 grep -q 'pełnych polskich znaków' research/polska-swiat/automation-podcast-prompt.md
@@ -446,25 +457,14 @@ grep -q 'render_jobs_data.py' docs/how-to-use.md
 grep -q 'validate_jobs_data.py' docs/how-to-use.md
 grep -q 'data/YYYY-MM-DD-HHMM-jobs.json' docs/how-to-use.md
 grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw' docs/how-to-use.md
-grep -q 'git fetch origin' docs/how-to-use.md
-grep -q 'origin/main:public/pavbot-manifest.json' docs/how-to-use.md
 grep -q '\$daily-research-agent' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
-grep -q 'generate_pavbot_manifest.py' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
 grep -q 'validate_jobs_data.py' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
 grep -q 'render_jobs_data.py' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
 grep -q 'data/YYYY-MM-DD-HHMM-jobs.json' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
 grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
-grep -q 'post-publish verification' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
-grep -q 'git fetch origin' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
-grep -q 'origin/main:public/pavbot-manifest.json' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
-grep -q 'RUN_PATH=' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
-grep -q 'DATA_PATH=' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
-grep -q 'PDF_PATH=' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
-grep -q 'git show "origin/main:$DATA_PATH" >/dev/null' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
+grep -q 'failed albo partially published' research/llm-ai-jobs-wroclaw/automation-research-prompt.md
 grep -q 'Markdown -> jobsData JSON' docs/automation-operations.md
-grep -q 'git fetch origin' docs/automation-operations.md
-grep -q 'origin/main:public/pavbot-manifest.json' docs/automation-operations.md
 grep -q 'pavbot-tech-research-19-33' docs/how-to-use.md
 grep -q 'pavbot-tech-research-19-33' docs/automation-operations.md
 grep -q 'research/tech-news/data/YYYY-MM-DD-HHMM-research.json' docs/how-to-use.md
@@ -512,13 +512,16 @@ grep -q 'pavbot-puls-dnia-news-3h' docs/automation-operations.md
 grep -q '00:06, 06:06, 12:06 and 18:06 Europe/Warsaw' docs/how-to-use.md
 grep -q 'daily at 17:40 Europe/Warsaw; 03:40 run paused' docs/how-to-use.md
 grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/reddit-radar' research/reddit-radar/automation-prompt.md
-grep -q 'verify-remote research/reddit-radar --ref origin/main' research/reddit-radar/automation-prompt.md
+grep -q 'Skrypt publikacji jest jedyną bramką produkcyjną' research/reddit-radar/automation-prompt.md
 ! grep -qi 'do not commit' research/reddit-radar/automation-prompt.md
 ! grep -qi 'do not push' research/reddit-radar/automation-prompt.md
 grep -q '\$daily-research-agent' research/puls-dnia-news/automation-prompt.md
 grep -q 'validate_pulse_news_data.py' research/puls-dnia-news/automation-prompt.md
 grep -q 'data/YYYY-MM-DD-HHMM-pulse-news.json' research/puls-dnia-news/automation-prompt.md
+grep -q 'Nie twórz PDF' research/puls-dnia-news/automation-prompt.md
 grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/puls-dnia-news' research/puls-dnia-news/automation-prompt.md
+grep -q 'Skrypt publikacji jest jedyną bramką produkcyjną' research/puls-dnia-news/automation-prompt.md
+grep -q 'zdalnym manifeście' research/puls-dnia-news/automation-prompt.md
 grep -q 'pulseNewsData' scripts/generate_pavbot_manifest.py
 
 latest_pulse_news_data="$(

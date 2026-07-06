@@ -192,8 +192,9 @@ def collect_artifacts(
         for path in sorted((topic_dir / "runs").glob("*.md")):
             add_artifact(artifacts, repo_root, raw_base_url, path, slug, "run")
 
-        for path in sorted((topic_dir / "pdfs").glob("*.pdf")):
-            add_artifact(artifacts, repo_root, raw_base_url, path, slug, "pdf")
+        if slug != PULSE_NEWS_TOPIC:
+            for path in sorted((topic_dir / "pdfs").glob("*.pdf")):
+                add_artifact(artifacts, repo_root, raw_base_url, path, slug, "pdf")
 
         if slug == LLM_JOBS_TOPIC:
             for path in sorted((topic_dir / "data").glob("*.json")):

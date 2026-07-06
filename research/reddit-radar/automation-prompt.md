@@ -34,13 +34,17 @@ Kolejność przebiegu:
    wybrane komentarze są bezpieczne. Jeśli po filtrach nie ma
    wystarczająco dobrych nowych tematów, zostaw poprzedni produkcyjny digest
    bez zmian i zapisz diagnozę w `runs/`.
-4. Opublikuj audit i manifest:
+4. Opublikuj audit i manifest jednym wspólnym skryptem:
    `scripts/pavbot_commit_and_push_outputs.sh --isolated research/reddit-radar`
-5. Zweryfikuj zdalny pakiet:
-   `python3 scripts/pavbot_publication_contract.py verify-remote research/reddit-radar --ref origin/main`
-6. Dopiero po udanym pushu, verify-remote i CloudKit verify uznaj digest za
-   produkcyjnie opublikowany. Standardowy publish script wysyła rekord
-   `Briefing` przez CloudKit gate.
+5. Dopiero po sukcesie tego skryptu uznaj digest za produkcyjnie opublikowany.
+   Skrypt publikacji jest jedyną bramką produkcyjną; sam odświeża manifest,
+   publikuje artefakty na origin/main, weryfikuje zdalny stan oraz tworzy i
+   weryfikuje CloudKit Briefing. Produkcyjny flow iOS pozostaje: artefakty +
+   `public/pavbot-manifest.json` na origin/main, potem CloudKit Briefing w
+   `iCloud.com.paweltanski.pavbotviewer` / `production` / `SP774TZZU8`, potem
+   APNs. Jeśli skrypt zwróci błąd, traktuj przebieg jako failed albo partially
+   published; ręczne komendy są dozwolone wyłącznie do diagnostyki, nie do
+   dokańczania produkcyjnej publikacji.
 
 Wymagane artefakty topicu:
 

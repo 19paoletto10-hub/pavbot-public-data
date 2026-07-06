@@ -1,61 +1,68 @@
 ---
 name: pavbot-live-notifier
-description: Use when Codex is asked to set up, debug, verify, or operate Pavbot iOS live notifications, GitHub webhook delivery, APNs device registration, Docker notifier hosting, or Cloudflare Tunnel on a MacBook.
+description: Use when Codex is asked to set up, debug, verify, or operate Pavbot iOS live notifications, CloudKit briefing publication, APNs registration, or production notification delivery.
 ---
 
 # Pavbot Live Notifier
 
-Operate the optional iOS live notification add-on for Pavbot.
+Operate Pavbot iOS live notifications through the CloudKit/APNs subscription
+flow.
 
 ## Read First
 
 1. `AGENTS.md`
-2. `docs/live-ios-notifications-macbook-cloudflare.md`
-3. `backend/pavbot-notifier/README.md`
-4. `backend/pavbot-notifier/.env.example`
-
-Use `docs/live-ios-notifications-contabo.md` only when the user explicitly asks
-for the VPS/Contabo path.
+2. `docs/CLOUDKIT_MIGRATION.md`
+3. `docs/how-to-use.md`
+4. `docs/automation-operations.md`
 
 ## Workflow
 
-1. Confirm the active manifest URL is the same value in:
-   - iOS `Settings -> Manifest URL`
-   - notifier `.env` as `PAVBOT_MANIFEST_URL`
-   - Codex automation environment as `PAVBOT_MANIFEST_URL`
+1. Confirm the active manifest URL is the same value in the iOS defaults,
+   automation environment, and `Briefing.manifestUrl`.
 2. Confirm each active automation finishes by running
-   `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>`. The GitHub
-   webhook only fires after the automation pushes its topic artifacts and
-   refreshed `public/pavbot-manifest.json` to `origin/main`.
-3. Check local notifier health:
+   `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>`.
+   The script is the only production gate: it pushes topic artifacts plus
+   `public/pavbot-manifest.json` to `origin/main`, verifies the remote state,
+   publishes one CloudKit `Briefing` for the active topic in
+   `iCloud.com.paweltanski.pavbotviewer` / `production` / `SP774TZZU8`, and
+   verifies that record before APNs delivery.
+3. Confirm local CloudKit credentials and production environment:
    ```bash
-   cd backend/pavbot-notifier
-   docker compose ps
-   curl http://localhost:8080/healthz
-   curl http://localhost:8080/status
+   xcrun cktool save-token
+   export PAVBOT_CLOUDKIT_CONTAINER_ID=iCloud.com.paweltanski.pavbotviewer
+   export PAVBOT_CLOUDKIT_ENVIRONMENT=production
+   export PAVBOT_CLOUDKIT_TEAM_ID=SP774TZZU8
    ```
-4. Check public Cloudflare Tunnel health:
+4. Verify the active topic record without publishing unrelated topics:
    ```bash
-   curl https://<cloudflare-domain>/healthz
-   curl https://<cloudflare-domain>/status
+   scripts/publish_cloudkit_briefings.py verify \
+     --manifest public/pavbot-manifest.json \
+     --topic research/<topic>
    ```
-5. Check GitHub webhook delivery in repository settings. The payload URL must
-   be `https://<cloudflare-domain>/webhooks/github`, event `push`, content type
-   `application/json`, and secret matching `GITHUB_WEBHOOK_SECRET`.
-6. If iOS has no push alerts, verify `/status` shows `registeredDevices > 0`,
-   a recent `lastWebhook`, `apnsConfigured: true`, the expected `manifestURL`,
-   and a useful `lastApnsDelivery` result.
+5. If iOS receives new data but no visible push, inspect:
+   - `CloudKitService.createOrUpdateSubscriptions()` for alert title/body,
+     sound, desired keys, and `shouldSendContentAvailable`.
+   - `ios/PavbotViewer/Sources/PavbotViewer.entitlements` for
+     `aps-environment`, CloudKit services, and production CloudKit environment.
+   - App Settings/Diagnostics for notification permission, APNs registration
+     status, token preview, iCloud availability, and Production APNs label.
+6. Validate on a real iPhone/TestFlight/App Store build. Simulator refresh can
+   test routing, but it cannot prove production APNs delivery.
 
 ## Safety Rules
 
-- Never commit `.env`, APNs `.p8` keys, tokens, or Cloudflare credentials.
+- Never commit `.env`, APNs `.p8` keys, CloudKit tokens, provisioning profiles,
+  or other credentials.
 - The repository uses one standard `PavbotViewer` scheme. Keep Push
-  Notifications entitlement on the normal Debug/Release build, and fix Apple
-  Developer signing/capability issues in Apple’s portal when they appear.
+  Notifications and CloudKit entitlement on the normal Debug/Release build,
+  and fix Apple Developer signing/capability issues in Apple’s portal when
+  they appear.
 - If Apple signing fails with PLA or missing Push Notifications capability,
   report the exact Apple-side action instead of trying to bypass signing.
-- The MacBook must be awake and online. Codex can create/run scripts, but the
-  Docker container and `cloudflared` process are the actual host.
+- Do not use a legacy webhook/notifier as a production channel. Do not
+  reintroduce the legacy Docker/FastAPI notifier, GitHub webhook APNs sender,
+  Cloudflare Tunnel, Contabo deployment, or `/v1/devices` token registration
+  path.
 
 ## Verification
 
@@ -63,8 +70,7 @@ Run:
 
 ```bash
 scripts/verify-research-workspace.sh
-.venv/bin/python -m pytest -q
-docker compose -f backend/pavbot-notifier/docker-compose.yml build
+python3 -m pytest -q tests/test_publish_cloudkit_briefings.py tests/test_pavbot_commit_and_push_outputs.py
 ```
 
 For iOS changes, also run the simulator test suite through XcodeBuildMCP.

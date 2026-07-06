@@ -125,55 +125,22 @@ powstanie albo weryfikacja wykryje pusty/nieczytelny plik, nie publikuj
 wynikow i zglos blad przebiegu.
 
 Po zapisaniu raportu, indeksu, backlogu, JSON i PDF opublikuj wyniki dla
-aplikacji iOS przez CloudKit Briefing gate. Skrypt uruchamia
-`python3 scripts/pavbot_publication_contract.py prepare research/llm-ai-jobs-wroclaw`,
-potem
-`python3 scripts/pavbot_publication_contract.py verify-local research/llm-ai-jobs-wroclaw`,
-a nastepnie uruchamia etap `manifest`, czyli
-`python3 scripts/generate_pavbot_manifest.py --repo-root "$PWD"`, odswieza
-`public/pavbot-manifest.json`, commituje tylko dozwolone sciezki i robi push
-na `origin/main`. To jest wspolny pipeline:
+aplikacji iOS przez jedyny obowiazkowy CloudKit Briefing gate:
 
-`prepare -> validate -> manifest -> push -> verify-remote -> CloudKit publish -> CloudKit verify`
-
-Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override srodowiskowego,
-`PAVBOT_RAW_BASE_URL`, istniejacego `rawBaseUrl` w manifescie albo GitHub
-`origin`; ustaw zmienna recznie tylko dla niestandardowego URL. Rozwiazany URL
-musi odpowiadac iOS `Settings -> Manifest URL`. Nastepnie uruchom:
 `scripts/pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw`.
 
-Po publishu wykonaj obowiazkowy etap `post-publish verification`. Uzyj tego
-samego `RUN_STAMP=YYYY-MM-DD-HHMM`, ktorego uzyles do nazw plikow, a nastepnie
-uruchom:
-
-`python3 scripts/pavbot_publication_contract.py verify-remote research/llm-ai-jobs-wroclaw --ref origin/main`
-
-Dla recznej kontroli zdalnej ustaw sciezki artefaktow dla tego samego stampu:
-
-`RUN_PATH="research/llm-ai-jobs-wroclaw/runs/${RUN_STAMP}.md"`
-
-`DATA_PATH="research/llm-ai-jobs-wroclaw/data/${RUN_STAMP}-jobs.json"`
-
-`PDF_PATH="research/llm-ai-jobs-wroclaw/pdfs/${RUN_STAMP}-llm-ai-jobs-wroclaw.pdf"`
-
-`git fetch origin`
-
-`git show origin/main:public/pavbot-manifest.json | grep -F "$RUN_PATH"`
-
-`git show origin/main:public/pavbot-manifest.json | grep -F "$DATA_PATH"`
-
-`git show origin/main:public/pavbot-manifest.json | grep -F "$PDF_PATH"`
-
-`git show "origin/main:$RUN_PATH" >/dev/null`
-
-`git show "origin/main:$DATA_PATH" >/dev/null`
-
-`git show "origin/main:$PDF_PATH" >/dev/null`
-
-To jest twardy warunek sukcesu. Jesli `origin/main:public/pavbot-manifest.json`
-nie zawiera biezacego package key albo ktorykolwiek z trzech artefaktow nie
-jest widoczny na `origin/main`, traktuj przebieg jako nieudany i nie raportuj
-go jako zakonczonego sukcesem.
+Skrypt publikacji jest jedyną bramką produkcyjną; sam odświeża manifest,
+publikuje artefakty na origin/main, weryfikuje zdalny stan oraz tworzy i
+weryfikuje CloudKit Briefing. Produkcyjny flow iOS pozostaje: artefakty +
+`public/pavbot-manifest.json` na origin/main, potem CloudKit Briefing w
+`iCloud.com.paweltanski.pavbotviewer` / `production` / `SP774TZZU8`, potem
+APNs.
+Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override srodowiskowego,
+`PAVBOT_RAW_BASE_URL`, istniejacego `rawBaseUrl` w manifescie albo GitHub
+`origin`; ustaw zmienna recznie tylko dla niestandardowego URL. Jesli skrypt
+zwroci blad, traktuj przebieg jako failed albo partially published; reczne
+komendy sa dozwolone wylacznie do diagnostyki, nie do dokanczania produkcyjnej
+publikacji.
 
 Uzyj risk gate z `docs/architecture.md`. W ramach tej automatyzacji wolno
 zmieniac tylko pliki w `research/llm-ai-jobs-wroclaw/`. Finalny krok publikacji

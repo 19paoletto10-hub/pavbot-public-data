@@ -48,15 +48,22 @@ i bez surowych URL-i w głównej treści. Po renderze wyrenderuj strony do PNG i
 sprawdź wizualnie spacing, stopki, polskie znaki oraz brak ucięć tekstu.
 
 Po zapisaniu artefaktów podcastu opublikuj wyniki dla aplikacji iOS przez
-CloudKit Briefing gate. Skrypt uruchamia
-`python3 scripts/generate_pavbot_manifest.py`, odświeża
-`public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki, robi push na
-`origin/main`, a potem publikuje i weryfikuje rekord CloudKit `Briefing`.
+jedyny obowiązkowy CloudKit Briefing gate:
+
+`scripts/pavbot_commit_and_push_outputs.sh --isolated research/tech-news`
+
+Skrypt publikacji jest jedyną bramką produkcyjną; sam odświeża manifest,
+publikuje artefakty na origin/main, weryfikuje zdalny stan oraz tworzy i
+weryfikuje CloudKit Briefing. Produkcyjny flow iOS pozostaje: artefakty +
+`public/pavbot-manifest.json` na origin/main, potem CloudKit Briefing w
+`iCloud.com.paweltanski.pavbotviewer` / `production` / `SP774TZZU8`, potem
+APNs.
 Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override środowiskowego,
 `PAVBOT_RAW_BASE_URL`, istniejącego `rawBaseUrl` w manifeście albo GitHub
 `origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Rozwiązany URL
-musi odpowiadać iOS `Settings -> Manifest URL`. Następnie uruchom:
-`scripts/pavbot_commit_and_push_outputs.sh --isolated research/tech-news`.
+musi odpowiadać iOS `Settings -> Manifest URL`. Jeśli skrypt zwróci błąd,
+traktuj przebieg jako failed albo partially published; ręczne komendy są
+dozwolone wyłącznie do diagnostyki, nie do dokańczania produkcyjnej publikacji.
 
 Nie zmyślaj faktów. Jeśli źródło jest niedostępne lub niejednoznaczne, zapisz
 to w `sources.md` i nie używaj niepotwierdzonego twierdzenia w podcaście.

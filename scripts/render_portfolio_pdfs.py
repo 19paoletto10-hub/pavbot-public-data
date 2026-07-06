@@ -549,7 +549,7 @@ AI_AUTOMATION_SPEC = DocumentSpec(
         ),
         (
             "Dlaczego jest wiarygodne",
-            "Repo zawiera iOS app, FastAPI notifier, manifest generator, walidatory, testy, "
+            "Repo zawiera iOS app, CloudKit publisher, manifest generator, walidatory, testy, "
             "dokumentację operacyjną i App Store archive 2.0.",
         ),
         (
@@ -693,7 +693,7 @@ PRODUCT_FOUNDER_SPEC = DocumentSpec(
         ),
         (
             "Od prototypu do release",
-            "Projekt przeszedł od automatyzacji researchu do aplikacji iOS, backendu notifiera, produkcyjnych URL-i, testów, dokumentacji i archive 2.0.",
+            "Projekt przeszedł od automatyzacji researchu do aplikacji iOS, CloudKit/APNs powiadomień, produkcyjnych feedów, testów, dokumentacji i archive 2.0.",
         ),
     ],
     architecture_steps=[

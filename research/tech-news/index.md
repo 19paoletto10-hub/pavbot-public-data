@@ -1,12 +1,37 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-05
+Last updated: 2026-07-06
 
 ## Current Understanding
 
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
+
+Po porannym raporcie z 2026-07-06 najważniejsza nowa warstwa to kontrola
+całego przepływu wokół AI: AWS wygasza Mechanical Turk dla nowych klientów,
+Cloudflare zaczyna wyceniać crawl i wywołania MCP, Google przenosi Gemini
+Spark na Maca, Midjourney rozgrywa discovery w Hollywood, a Anthropic i
+Alibaba twardnieją wokół dostępu do Claude Code. Product Hunt dorzuca do tego
+payments rail z Endl, więc publiczny stack agentów zaczyna obejmować nie tylko
+docs, testy i obserwowalność, ale też rozliczenia.
+
+Po raporcie z 2026-07-06 najważniejsza nowa warstwa to przejście od samego
+agentowego stacku do kontrolowanego release'u i wdrożenia: OpenAI previewuje
+GPT-5.6 jako ograniczony rollout z safety stackiem, Microsoft robi z
+deploymentu osobny biznes, Product Hunt potwierdza trwałość warstwy
+operacyjnej wokół agentów, a Bending Spoons i Agility pokazują publicznemu
+rynkowi, że AI i physical AI są oceniane przez efektywność i realne zamówienia.
+
+Po wieczornym raporcie z 2026-07-05-1933 najważniejsza nowa warstwa to
+agentowy stos narzędzi wokół modeli: WorkBuddy, DocsAlot, TryCase, MentionDrop
+MCP i CircleChat pokazują, że publiczny rynek zaczyna kupować dokumentację,
+środowiska testowe, sygnały i orkiestrację, a nie tylko sam model. Druga
+warstwa to funding koncentracja: TechCrunch pokazuje, że 2026 nadal produkuje
+unicorny, ale wygrywają wyspecjalizowane firmy AI. Trzecia warstwa to
+governance kalendarz: Telegram dostaje 15 dni od Indii, a Genewa ma już daty
+na UN/ITU AI governance, więc regulacje stają się bardziej konkretne niż
+abstrakcyjne.
 
 Po raporcie z 2026-07-05 najważniejsza nowa warstwa to przejście od ogólnych
 launchy AI do twardego control plane: AWS wygasza Mechanical Turk, Mistral
@@ -413,6 +438,10 @@ transparentność środowiskową AI.
   obniży koszt agentowych workflow po 31 sierpnia, jak zadziałają usage credits
   dla Fable 5 po 7 lipca oraz czy Mythos 5 wyjdzie poza zatwierdzone
   organizacje USA; porównywać z GPT-5.6, Gemini i OpenAI partner/FDE modelami.
+- Copilot product reset: obserwować, czy scalenie consumer i enterprise
+  Copilota z paid agents faktycznie poprawi retencję, czy tylko uprości
+  surface; śledzić rollout sierpniowy, pricing i to, czy Agent 365 / Copilot
+  Studio staną się realnym domyślnym workflow.
 - Open USD stablecoin consortium: śledzić produkcyjny start Open USD, realną
   rolę Stripe, Visa, Mastercard, Google, BlackRock i Coinbase, reserve
   economics dla partnerów, compliance oraz użycie w agentowych marketplace'ach
@@ -795,6 +824,8 @@ transparentność środowiskową AI.
 
 ## Recent Reports
 
+- [2026-07-06](runs/2026-07-06.md)
+- [2026-07-05-1933](runs/2026-07-05-1933.md)
 - [2026-07-04](runs/2026-07-04.md)
 - [2026-07-03-1933](runs/2026-07-03-1933.md)
 - [2026-07-03](runs/2026-07-03.md)

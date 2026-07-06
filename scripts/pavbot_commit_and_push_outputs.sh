@@ -29,7 +29,7 @@ Publishes one Pavbot automation output set by committing only app-visible files:
 
 Output allowlist:
   - research/<topic>/runs/
-  - research/<topic>/pdfs/
+  - research/<topic>/pdfs/ (except research/puls-dnia-news)
   - research/<topic>/data/
   - research/<topic>/podcasts/*/podcast.mp3
   - research/<topic>/podcasts/*/brief.pdf
@@ -145,6 +145,8 @@ is_allowed_publish_path() {
     *)
       if [[ "$topic_path" == "$mobile_public_only_topic" ]]; then
         is_mobile_public_publish_path "$path"
+      elif [[ "$topic_path" == "$pulse_news_topic" ]]; then
+        is_pulse_news_publish_path "$path"
       elif [[ "$topic_path" == "$reddit_radar_topic" ]]; then
         is_reddit_radar_publish_path "$path"
       else
@@ -158,6 +160,21 @@ is_private_runtime_path() {
   local path="$1"
   case "$path" in
     .pavbot/private|.pavbot/private/*)
+      return 0
+      ;;
+    *)
+      return 1
+      ;;
+  esac
+}
+
+is_pulse_news_publish_path() {
+  local path="$1"
+  case "$path" in
+    "$topic_path/runs"|"$topic_path/runs/"*.md)
+      return 0
+      ;;
+    "$topic_path/data"|"$topic_path/data/"*-pulse-news.json)
       return 0
       ;;
     *)
@@ -834,6 +851,18 @@ build_expected_publication_paths() {
 
   if [[ "$topic_path" == "$reddit_radar_topic" ]]; then
     build_reddit_radar_expected_paths
+    return 0
+  fi
+
+  if [[ "$topic_path" == "$pulse_news_topic" ]]; then
+    append_expected_public_paths_from_dir "$topic_path/runs"
+    shopt -s nullglob
+    for src in "$repo_root"/"$topic_path"/data/*-pulse-news.json; do
+      [[ -f "$src" ]] || continue
+      expected_remote_paths+=("${src#"$repo_root"/}")
+      expected_manifest_paths+=("${src#"$repo_root"/}")
+    done
+    shopt -u nullglob
     return 0
   fi
 

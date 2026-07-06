@@ -1,10 +1,16 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-04
+Last updated: 2026-07-06
 
 ## Current Understanding
 
 Run 2026-07-04 przesunął punkt ciężkości z samego readoutu MSZ na polityczne warunkowanie kanału polsko-ukraińskiego: Tusk powiedział dziś, że Polska oczekuje od Ukrainy pierwszego kroku po decyzji Zełenskiego. Równolegle warszawski kryzys wokół Szpitala Południowego wszedł w fazę realnych dymisji, RCB uruchomiło dziś w praktyce nowelizację ustawy o zarządzaniu kryzysowym, a światowy blok dnia przesunął się na ukraiński atak na terminal naftowy w Petersburgu, pogrzeb Khameneia i polityczny test odpowiedzi Wenezueli po trzęsieniach ziemi.
+
+Run 2026-07-05 zamienił wczorajszy fallback w pełny, źródłowany pakiet. Krajowo najbardziej znaczące są dziś dwa doprecyzowania: Tusk połączył spór z Ukrainą z oczekiwaniem pierwszego kroku i listem od Juszczenki, a blok energetyczny dostał konkret w postaci zapowiedzi pierwszego prądu z offshore'u i shortlisty Konin/Bełchatów dla drugiej elektrowni jądrowej. Równolegle kontrola MZ w Szpitalu Południowym i wejście w życie zmian w zarządzaniu kryzysowym przesunęły się z poziomu ogólnych sygnałów do poziomu obowiązujących, sprawdzanych procesów. Na świecie utrzymują się trzy mocne osie: Ukraina-Rosja, NATO-Ankara i Iran-Ormuz.
+
+Run 2026-07-06 przestawia krajowy blok z samej polityki komunikacyjnej na konkretne wykonanie przemysłowe: w Bydgoszczy rząd podpisał umowę PGZ/WZL-2 z Anduril wokół Barracudy-500, a MON doprecyzował, że chodzi o montaż, a potem produkcję w Polsce. Równolegle Kosiniak-Kamysz wskazał, że rotacja wojsk USA w Polsce wypełni się w najbliższych tygodniach, więc wątek amerykańskiej obecności schodzi z poziomu ogólnych deklaracji do praktycznej organizacji. Na świecie najważniejszy ruch to kolejny ciężki rosyjski atak na Kijów tuż przed szczytem NATO w Ankarze, gdzie Rutte naciska na wiarygodne plany wydatków obronnych; Iran utrzymuje żałobę po Khameneim, a temat Ormuz pozostaje aktywny.
+
+Wątki Szpitala Południowego i zmian kryzysowych pozostają w monitoringu, ale dziś nie dostały nowego rozstrzygnięcia.
 
 Ten temat służy do codziennego researchu najważniejszych wiadomości z Polski i
 ze świata oraz do przygotowania polskiego podcastu newsowego około godziny
@@ -252,6 +258,15 @@ odpowiedzi Wenezueli po trzęsieniach ziemi.
 - Pilchowice/Bóbr śledzić pod kątem oficjalnych wyników badań, komunikatów
   WIOŚ/Wód Polskich/Tauronu i decyzji wojewody; nie przesądzać przyczyn przed
   dokumentami.
+- Run 2026-07-05 potwierdził, że spór polsko-ukraiński, energia, Szpital
+  Południowy i kryzys-law rollout mają dziś osobne ścieżki źródłowe i nie
+  powinny być składane w jeden ogólny "pakiet napięć".
+- 2026-07-06: Evening research run created a material update. Strongest sources
+  were gov.pl/KPRM/MON and TVN24 for the Bydgoszcz Barracuda agreement and US
+  troop rotation, AP and TVN24 for the Kyiv strike, AP for the NATO spending
+  push, and AP/Guardian for the Khamenei funeral and Hormuz. Podcast should
+  keep the industrial-defense story separate from the live Ukraine/NATO
+  escalation and the Iran/Hormuz track.
 
 ## Recent Reports
 

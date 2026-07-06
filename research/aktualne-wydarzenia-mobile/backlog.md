@@ -4,7 +4,9 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
-| High | Track response to Bóbr contamination alert | Wieczorny run `2026-07-04-1934` potwierdził już zakaz wojewody i monitoring WIOŚ, a poranny run `2026-07-05-1016` dołożył kolejne publiczne wyniki laboratoryjne, ale nadal brak oficjalnej przyczyny incydentu i terminu zniesienia ograniczeń | In the next run, check whether DUW, WIOŚ, Sanepid or lokalne władze publikują przyczynę, wyniki próbek i harmonogram znoszenia zakazu | Open |
+| High | Track response to Bóbr contamination alert | Wieczorny run `2026-07-06-1935` dołożył już pomiary WIOŚ z `6 lipca`, utrzymany zakaz oraz równoległą kontrolę nadzoru budowlanego, działania RDOŚ i śledztwo prokuratury, ale nadal brak oficjalnej przyczyny incydentu oraz warunków zniesienia ograniczeń | In the next run, check whether DUW, WIOŚ, GIS, Sanepid, RDOŚ or prokuratura publikują przyczynę, wyniki laboratoryjne, ustalenia z kontroli i warunki zniesienia zakazu po komunikacie z `6 lipca` | Open |
+| Medium | Track Bydgoszcz Barracuda follow-through | Wieczorny run `2026-07-06-1935` potwierdził podpisanie umowy PGZ–WZL-2–Anduril o montażu i późniejszej produkcji Barracudy 500M w Polsce, ale nadal nie ma publicznych wolumenów, harmonogramu dostaw ani pełnej skali polonizacji | In the next run, verify whether MON, MAP, KPRM, PGZ or WZL-2 publikują zakres kontraktu, partnerów przemysłowych, terminy, transfer technologii i parametry produkcji beyond the signing note | Open |
+| Medium | Track legislative follow-through on Deregulacja 2.0 | Wieczorny run `2026-07-06-1935` dołożył konkretny pakiet podatkowo-cyfrowy, ale to nadal głównie zapowiedź kierunku i katalog rozwiązań, a nie wdrożone przepisy | In the next run, check whether KPRM, MF or Sejm publikują projekty ustaw, harmonogram legislacyjny albo doprecyzowanie dla e-paragonów, milczącej zgody i obniżonych odsetek | Open |
 | Medium | Track whether Kleczew visit yields concrete energy follow-through | Wieczorny komunikat po wizycie dostarczył skalę instalacji i język bezpieczeństwa energetycznego, ale nadal bez nowej decyzji regulacyjnej, inwestycyjnej albo sieciowej | In the next run, look for post-visit commitments on storage, grid, financing, new projects or timelines beyond the showcase numbers | Open |
 | Medium | Track Moldova caretaker nomination after PM resignation | Dymisja premiera Munteanu otwiera nowy europejski wątek polityczny, ale konsultacje Mai Sandu dopiero startują i nie ma jeszcze następcy ani rządowego harmonogramu | In the next run, check whether Sandu names a successor, how PAS and the opposition react, and whether Brussels or Warsaw issue readouts | Open |
 | High | Recover MP3 rendering after `ffmpeg`/`x265` breakage | Wieczorny run `2026-07-03-1934` ponownie wysypał standardowy render `female-piper` na błędzie `ffmpeg`/`x265`; realny MP3 odzyskano dopiero ręcznym pipeline'em `piper -> lame`, więc wspólne środowisko audio nadal jest realnie zepsute i nienaprawione | Review [proposal 2026-06-30](proposals/2026-06-30-recover-audio-pipeline-after-ffmpeg-breakage.md) and repair the shared audio environment or renderer outside the topic run | Open |
@@ -22,6 +24,17 @@
 
 ## Review Notes
 
+- 2026-07-06: Wieczorny run `2026-07-06-1935` potwierdził podpisanie Barracudy w Bydgoszczy, dodał komunikat DUW po `14:00` z pomiarami WIOŚ z `6 lipca` oraz uruchomionymi kontrolami i śledztwem, a w Polsce dołożył nowy pakiet Deregulacji 2.0.
+- 2026-07-06: Poranny run `2026-07-06-1016` dołożył nowy sygnał bezpieczeństwa
+  z Kijowa oraz zapowiedziane na południe podpisanie umowy PGZ–WZL-2–Anduril
+  o Barracudzie 500 w Bydgoszczy; Bóbr nadal czeka na komunikat o `14:00`.
+- 2026-07-05: Wieczorny run `2026-07-05-1936` doprecyzował poranny temat
+  Bobru przez nowe komunikaty DUW, GIS i WIOŚ: publicznie oddzielono ryzyko
+  mikrobiologiczne od rtęci, potwierdzono bezpieczną wodę z sieci, utrzymano
+  zakaz na rzece i przesunięto kolejny ważny checkpoint na `6 lipca` `14:00`.
+- 2026-07-05: Wymagany wariant audio `female-piper` został poprawnie
+  wygenerowany dla runu `2026-07-05-1936`, więc bieżący pakiet publikacyjny ma
+  realny MP3 bez placeholdera.
 - 2026-07-04: Wieczorny run `2026-07-04-1934` domknął poranny alert o Bobrze
   formalnym zakazem wojewody i monitoringiem WIOŚ, potwierdził powizytowy
   komunikat o Kleczewie, dołożył mocniejszy język KPRP o obecności USA oraz

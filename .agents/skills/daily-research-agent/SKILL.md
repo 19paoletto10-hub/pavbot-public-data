@@ -41,18 +41,16 @@ Run one research cycle for a single Pavbot topic.
     `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>` so
     the iOS app sees the latest manifest on GitHub and receives a CloudKit
     `Briefing` notification.
-11. Treat publication as the production pipeline:
-    `prepare -> validate -> manifest -> push -> verify-remote -> CloudKit publish -> CloudKit verify`.
-    The publish script runs the shared helper
-    `scripts/pavbot_publication_contract.py` to prepare missing deterministic
-    artifacts for the latest package, validate local completeness, and verify
-    the remote bundle after push.
-12. After publishing, verify against `origin/main` that the refreshed manifest
-    and the current topic outputs for the same package key are actually visible
-    remotely; do not treat a successful local push as sufficient evidence of
-    publication.
-13. If the publish step or remote manifest verification fails, report the run as
-    failed or partially published. Do not call the automation successful.
+11. Treat the publish script as the only production gate. It refreshes the
+    manifest, publishes artifacts to `origin/main`, verifies the remote state,
+    and creates/verifies the CloudKit `Briefing`.
+    The production iOS flow is CloudKit/APNs subscriptions: artifacts plus
+    `public/pavbot-manifest.json` on `origin/main`, then CloudKit `Briefing` in
+    `iCloud.com.paweltanski.pavbotviewer` / `production` / `SP774TZZU8`, then
+    APNs. Do not use a legacy webhook/notifier as a production channel.
+12. If the publish script fails, report the run as failed or partially
+    published. Manual commands are allowed only for diagnostics, not for
+    finishing production publication.
 
 ## Risk Gate
 
@@ -126,19 +124,19 @@ The publish script derives `PAVBOT_MANIFEST_URL` from an explicit environment
 override, `PAVBOT_RAW_BASE_URL`, the existing manifest `rawBaseUrl`, or the
 GitHub `origin` remote. The resolved URL must match the public raw manifest URL
 used in iOS `Settings -> Manifest URL`; the iOS app does not send this value
-back to Codex. The publish script first runs
-`python3 scripts/pavbot_publication_contract.py prepare research/<topic>` and
-`python3 scripts/pavbot_publication_contract.py verify-local research/<topic>`,
-then generates `public/pavbot-manifest.json` in a temporary clean worktree,
-commits only generated outputs plus the refreshed manifest, pushes to
-`origin/main`, and finishes with
-`python3 scripts/pavbot_publication_contract.py verify-remote research/<topic> --ref origin/main`.
+back to Codex. The script is the only production gate: it refreshes the
+manifest, publishes generated outputs plus the refreshed manifest to
+`origin/main`, verifies the remote state, and creates/verifies the CloudKit
+`Briefing` notification record.
+The production notification path is CloudKit/APNs subscriptions, not a legacy
+webhook/notifier channel.
 Topic-specific prompts should define the exact artifact set that must be
 visible on `origin/main` before the run counts as complete.
 For CloudKit-backed outputs such as Reddit Radar, publish the audit artifacts
 and refreshed manifest to `origin/main` before the CloudKit `Briefing` gate.
-If CloudKit publication or verification fails after the manifest push, report a
-partial publication failure instead of success.
+If the publish script fails, report a failed or partial publication instead of
+success. Manual commands are allowed only for diagnostics, not for finishing
+production publication.
 Never publish topic `tools/`, prompt edits, app code, docs, backend code, or
 other development changes as automation outputs.
 

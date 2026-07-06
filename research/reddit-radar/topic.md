@@ -21,6 +21,17 @@ share, submit forms, bypass login/CAPTCHA flows, or publish Reddit content.
 It may publish the final digest only after each item is marked `reviewed` or
 `no_safe_comments` from read-only Safari/Computer Use review.
 
+Editorial policy:
+
+- Conflict-driven or polarizing posts are allowed when they still fit a humor,
+  absurd, or internet-culture framing for the iOS `Dzisiaj -> Smiechowy radar`
+  section.
+- Reject posts or comment selections that lean on hate speech, dehumanization,
+  protected-class attacks, explicit calls for violence, doxxing, or slur-heavy
+  pile-ons.
+- For conflict-driven posts, prefer comments that explain the absurdity,
+  hypocrisy, or punchline without escalating the conflict itself.
+
 Rotation rules:
 
 - Keep at most 12 unique Reddit posts in the current radar.

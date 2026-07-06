@@ -107,25 +107,25 @@ Publikuj tylko poprawnie wyrenderowany wymagany wariant audio
 `female-piper/podcast.mp3`. Nie publikuj placeholderów, `tts_variants.json`,
 `render.json`, `sources.md`, raportów `runs/` ani dodatkowych PDF-ów.
 
-Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS przez CloudKit
-Briefing gate. Najpierw uruchom wspólny kontrakt publikacji:
+Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS przez jedyny
+obowiązkowy CloudKit Briefing gate:
 
-`python3 scripts/pavbot_publication_contract.py prepare research/aktualne-wydarzenia-mobile`
+`scripts/pavbot_commit_and_push_outputs.sh --isolated research/aktualne-wydarzenia-mobile`
 
-`python3 scripts/pavbot_publication_contract.py verify-local research/aktualne-wydarzenia-mobile`
-
-To jest pipeline
-`prepare -> validate -> manifest -> push -> verify-remote -> CloudKit publish -> CloudKit verify`.
-W tym temacie `prepare` może automatycznie odtworzyć tylko deterministyczne
+Skrypt publikacji jest jedyną bramką produkcyjną; sam odświeża manifest,
+publikuje artefakty na origin/main, weryfikuje zdalny stan oraz tworzy i
+weryfikuje CloudKit Briefing. Produkcyjny flow iOS pozostaje: artefakty +
+`public/pavbot-manifest.json` na origin/main, potem CloudKit Briefing w
+`iCloud.com.paweltanski.pavbotviewer` / `production` / `SP774TZZU8`, potem
+APNs. W tym temacie skrypt może automatycznie odtworzyć tylko deterministyczne
 artefakty pochodne: `mobileNewsData`, `mobile-brief.pdf` i `newspaper.pdf`.
 Nie generuje audio ani brakującego `script.md`.
-Skrypt odświeża `public/pavbot-manifest.json`, commituje tylko dozwolone
-ścieżki i robi push na `origin/main`.
 Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override środowiskowego,
 `PAVBOT_RAW_BASE_URL`, istniejącego `rawBaseUrl` w manifeście albo GitHub
 `origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Rozwiązany URL
-musi odpowiadać iOS `Settings -> Manifest URL`. Następnie uruchom:
-`scripts/pavbot_commit_and_push_outputs.sh --isolated research/aktualne-wydarzenia-mobile`.
+musi odpowiadać iOS `Settings -> Manifest URL`. Jeśli skrypt zwróci błąd,
+traktuj przebieg jako failed albo partially published; ręczne komendy są
+dozwolone wyłącznie do diagnostyki, nie do dokańczania produkcyjnej publikacji.
 
 Użyj risk gate z `docs/architecture.md`. W ramach tej automatyzacji wolno
 zmieniać tylko pliki w `research/aktualne-wydarzenia-mobile/` oraz manifest

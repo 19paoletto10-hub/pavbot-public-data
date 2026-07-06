@@ -18,15 +18,20 @@ when there are actionable follow-ups, review notes, open questions, or resolved
 items.
 
 After writing run artifacts, publish the outputs for the iOS app through the
-CloudKit Briefing gate. The script runs
-`python3 scripts/generate_pavbot_manifest.py`, refreshes
-`public/pavbot-manifest.json`, commits only allowed paths, pushes to
-`origin/main`, and then publishes/verifies the CloudKit `Briefing` record. The
-script derives `PAVBOT_MANIFEST_URL` from an environment
-override, `PAVBOT_RAW_BASE_URL`, the existing manifest `rawBaseUrl`, or GitHub
-`origin`; set it manually only for a non-standard URL. The resolved URL must
-match iOS `Settings -> Manifest URL`. Then run:
+only required production gate:
 `scripts/pavbot_commit_and_push_outputs.sh --isolated research/codex-agent-automation`.
+
+Skrypt publikacji jest jedyną bramką produkcyjną; sam odświeża manifest,
+publikuje artefakty na origin/main, weryfikuje zdalny stan oraz tworzy i
+weryfikuje CloudKit Briefing. Produkcyjny flow iOS pozostaje: artefakty +
+`public/pavbot-manifest.json` na origin/main, potem CloudKit Briefing w
+`iCloud.com.paweltanski.pavbotviewer` / `production` / `SP774TZZU8`, potem
+APNs. Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override środowiskowego,
+`PAVBOT_RAW_BASE_URL`, istniejącego `rawBaseUrl` w manifeście albo GitHub
+`origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Jeśli skrypt
+zwróci błąd, traktuj przebieg jako failed albo partially published; ręczne
+komendy są dozwolone wyłącznie do diagnostyki, nie do dokańczania produkcyjnej
+publikacji.
 
 Use the risk gate from `docs/architecture.md`. If a recommended action would
 change automations, repo-wide instructions, skills, hooks, MCP configuration,

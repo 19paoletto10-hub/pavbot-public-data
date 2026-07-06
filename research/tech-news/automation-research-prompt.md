@@ -71,26 +71,23 @@ Zaktualizuj `research/tech-news/index.md`, gdy zmienia się obecny stan wiedzy.
 Zaktualizuj `research/tech-news/backlog.md`, gdy pojawiają się konkretne
 follow-upy, notatki przeglądowe, pytania albo rozwiązane elementy.
 
-Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS przez CloudKit
-Briefing gate. Najpierw uruchom wspólny kontrakt publikacji:
+Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS przez jedyny
+obowiązkowy CloudKit Briefing gate:
 
-`python3 scripts/pavbot_publication_contract.py prepare research/tech-news`
+`scripts/pavbot_commit_and_push_outputs.sh --isolated research/tech-news`
 
-`python3 scripts/pavbot_publication_contract.py verify-local research/tech-news`
-
-To jest pipeline
-`prepare -> validate -> manifest -> push -> verify-remote -> CloudKit publish -> CloudKit verify`.
-Etap `manifest` oznacza uruchomienie
-`python3 scripts/generate_pavbot_manifest.py --repo-root "$PWD"`. Skrypt
-odświeża `public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki i
-robi push na `origin/main`.
-Po udanym `verify-remote` skrypt publikuje i weryfikuje rekord CloudKit
-`Briefing` dla tego topicu; dopiero ten etap jest produkcyjnym alertem APNs.
+Skrypt publikacji jest jedyną bramką produkcyjną; sam odświeża manifest,
+publikuje artefakty na origin/main, weryfikuje zdalny stan oraz tworzy i
+weryfikuje CloudKit Briefing. Produkcyjny flow iOS pozostaje: artefakty +
+`public/pavbot-manifest.json` na origin/main, potem CloudKit Briefing w
+`iCloud.com.paweltanski.pavbotviewer` / `production` / `SP774TZZU8`, potem
+APNs.
 Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override środowiskowego,
 `PAVBOT_RAW_BASE_URL`, istniejącego `rawBaseUrl` w manifeście albo GitHub
-`origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Rozwiązany URL
-musi odpowiadać iOS `Settings -> Manifest URL`. Następnie uruchom:
-`scripts/pavbot_commit_and_push_outputs.sh --isolated --force-manifest research/tech-news`.
+`origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Jeśli skrypt
+zwróci błąd, traktuj przebieg jako failed albo partially published; ręczne
+komendy są dozwolone wyłącznie do diagnostyki, nie do dokańczania produkcyjnej
+publikacji.
 
 Użyj risk gate z `docs/architecture.md`. Jeśli rekomendowana akcja zmieniałaby
 automatyzacje, instrukcje repo, skille, hooki, MCP, zależności albo pliki poza

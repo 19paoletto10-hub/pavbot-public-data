@@ -7,6 +7,7 @@
 | High | Review first three generated news podcasts | Confirms pacing, neutrality, MP3 generation, and Polish narration quality | Listen to each MP3 and record notes | Open |
 | Medium | Tune public source list | Repeated good sources should become explicit topic guidance | Prefer official institutions plus Onet/PAP, Guardian, Euronews and public AP/Reuters mirrors; consider topic.md refinement after weekend sample | Open |
 | Medium | Track Orka implementation details | Evening run confirmed signing and Baltic Pact, but full contract value, delivery guarantees and industrial execution still need official detail | Monitor MON/KPRM/Saab/PAP for value, delivery schedule, gap filler and Polish production-line specifics | Open |
+| High | Track Barracuda rollout | Bydgoszcz added a new U.S.-Polish defense-production track with local Barracuda-500 assembly and later production | Monitor PGZ/MON/Anduril for schedule, workshare, export-control and order-book detail | Open |
 | Medium | Monitor ABW influence-operation fallout | ABW described Russian-financed paid demonstrations among Ukrainian refugees and immediate expulsion of 11 foreigners | Watch for follow-up from ABW, Straż Graniczna, prokuratura and MSWiA; avoid broad claims beyond official communications | Open |
 | Medium | Define public-sector AI image handling note | MON admitted AI enhancement changed a photo, creating a recurring trust issue for official communications | Track whether MON/KPRM publish rules for generative AI in official media; if pattern repeats, propose topic guidance | Open |
 | Medium | Track SAFE resilience plenipotentiary execution | KPRM shifted SAFE from setup to oversight under a new state-resilience plenipotentiary | Monitor real reporting cadence, authority over ministries, Polish industry metrics, NATO/EU coordination and anti-disinformation standards | Open |
@@ -30,6 +31,8 @@
 | High | Track Russian provocation warnings and Polish readiness | Tusk publicly linked allied/media warnings about possible Russian provocation with Polish preparations for multiple scenarios | Monitor MON/MSZ/RCB/NATO, Baltic services and critical-infrastructure guidance; describe as warning/preparation unless an incident is officially confirmed | Open |
 | Medium | Track crisis-management law rollout | RCB says amendments enter into force on 4 July and create new duties for public administration, critical-infrastructure operators and critical entities; the implementation track is now live | Check RCB materials, sector guidance and whether today's entry into force exposes implementation gaps or immediate alerts | Open |
 | Medium | Track Sejm voting-card probe | PAP/TVN24 report prosecution checks after PSL accused Janusz Kowalski of using Jarosław Rzepa's voting card; Kowalski says it was a mistake | Monitor prosecutor communication, Sejm Ethics Committee, Prezydium Sejmu and any procedural fixes; avoid declaring wrongdoing before findings | Open |
+| Medium | Track Tusk-Ukraine first-step response | Today's Kleczew remarks turn the memory dispute into an explicit bilateral expectation | Watch for Kijów/MSZ response and whether Juszczenko's letter becomes a formal diplomatic channel | Open |
+| Medium | Track offshore power announcement | Tusk promised to show the first offshore-power site next week and tied it to the energy sequence | Re-check gov.pl, ORLEN and ministry briefings for the announced location and timing | Open |
 
 ## Review Notes
 
@@ -180,6 +183,13 @@
   Miasto for Pilchowice-Bóbr, and AP/Guardian/Euronews for Kyiv, Ormuz and
   Venezuela. Podcast should keep warnings, allegations and official decisions
   in separate lanes.
+- 2026-07-05: Evening research run replaced the fallback with source-backed
+  coverage. Strongest sources were TVN24/Reuters for the Ukraine first-step
+  line, TVN24 Biznes/Polskie Radio for the offshore and second-atom shortlist,
+  TVN24/Rzeczpospolita for Szpital Południowy, gov.pl/RCB for the crisis-law
+  rollout, AP/Guardian for St Petersburg, AP/NATO for Ankara and AP/Guardian
+  for Khamenei/Hormuz. Podcast should keep the Ukraine dispute, energy agenda,
+  health-control case and global security items in separate lanes.
 
 ## Done
 

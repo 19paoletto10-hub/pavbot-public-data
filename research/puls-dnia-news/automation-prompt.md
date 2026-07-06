@@ -53,13 +53,17 @@ Zweryfikuj JSON:
 
 Jeśli walidacja nie przejdzie, popraw pliki. Nie publikuj niepoprawnych danych.
 
-Na końcu opublikuj:
-- `python3 scripts/pavbot_publication_contract.py prepare research/puls-dnia-news`
-- `python3 scripts/pavbot_publication_contract.py verify-local research/puls-dnia-news`
-- `scripts/pavbot_commit_and_push_outputs.sh --isolated research/puls-dnia-news`
-- `python3 scripts/pavbot_publication_contract.py verify-remote research/puls-dnia-news --ref origin/main`
+Na końcu uruchom wyłącznie wspólny skrypt publikacji:
 
-Potwierdź też przez publiczny raw manifest i publiczny raw JSON, że iOS widzi
-najnowszy `pulseNewsData`. Nie zostawiaj stanu, w którym lokalnie istnieje
-nowszy `pulse-news.json` niż ten widoczny w zdalnym manifeście.
+`scripts/pavbot_commit_and_push_outputs.sh --isolated research/puls-dnia-news`
+
+Skrypt publikacji jest jedyną bramką produkcyjną; sam odświeża manifest,
+publikuje artefakty na origin/main, weryfikuje zdalny stan oraz tworzy i
+weryfikuje CloudKit Briefing. Produkcyjny flow iOS pozostaje: artefakty +
+`public/pavbot-manifest.json` na origin/main, potem CloudKit Briefing w
+`iCloud.com.paweltanski.pavbotviewer` / `production` / `SP774TZZU8`, potem
+APNs. Jeśli skrypt zwróci błąd, traktuj przebieg jako failed albo partially
+published; ręczne komendy są dozwolone wyłącznie do diagnostyki, nie do
+dokańczania produkcyjnej publikacji. Nie zostawiaj stanu, w którym lokalnie
+istnieje nowszy `pulse-news.json` niż ten widoczny w zdalnym manifeście.
 ```
