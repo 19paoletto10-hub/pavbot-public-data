@@ -7,6 +7,38 @@ private enum TodaySectionScrollID {
     static let redditRadar = "today-section-reddit-radar"
 }
 
+private enum WeatherPrecipitationIntensityFilter: Int, CaseIterable, Equatable {
+    case all = 0
+    case above20
+    case above40
+
+    var label: String {
+        switch self {
+        case .all:
+            "Wszystkie"
+        case .above20:
+            ">20%"
+        case .above40:
+            ">40%"
+        }
+    }
+
+    var minimumProbability: Int {
+        switch self {
+        case .all:
+            0
+        case .above20:
+            20
+        case .above40:
+            40
+        }
+    }
+
+    var isActive: Bool {
+        self != .all
+    }
+}
+
 struct WeatherBriefView: View {
     @Environment(ManifestStore.self) private var manifestStore
     @Environment(WeatherBriefStore.self) private var weatherStore
@@ -16,6 +48,7 @@ struct WeatherBriefView: View {
     @Environment(\.scenePhase) private var scenePhase
     @State private var rangeTileMode: WeatherRangeTileMode = .value
     @State private var precipitationTileMode: WeatherPrecipitationTileMode = .value
+    @State private var precipitationIntensityFilter: WeatherPrecipitationIntensityFilter = .all
     @State private var isLocationEditorPresented = false
     @State private var savedHumorStore = TodayHumorSavedStore()
     @State private var selectedCockpitHumorItem: TodayHumorItem?
@@ -310,8 +343,9 @@ struct WeatherBriefView: View {
                     }
                 }
                 .environment(\.pavbotAdaptiveLayout, layout)
-                WeatherPrecipitationTile(report: report, mode: precipitationTileMode) {
+                WeatherPrecipitationTile(report: report, mode: precipitationTileMode, intensityFilter: $precipitationIntensityFilter) {
                     withAnimation(.spring(response: 0.32, dampingFraction: 0.88)) {
+                        precipitationIntensityFilter = .all
                         precipitationTileMode.toggle()
                     }
                 }
@@ -391,8 +425,9 @@ struct WeatherBriefView: View {
                             rangeTileMode.toggle()
                         }
                     }
-                    WeatherPrecipitationTile(report: report, mode: precipitationTileMode) {
+                    WeatherPrecipitationTile(report: report, mode: precipitationTileMode, intensityFilter: $precipitationIntensityFilter) {
                         withAnimation(.spring(response: 0.32, dampingFraction: 0.88)) {
+                            precipitationIntensityFilter = .all
                             precipitationTileMode.toggle()
                         }
                     }
@@ -790,6 +825,7 @@ private struct PavbotPhoneDailyCockpit: View {
             systemImage: heroSymbol,
             tint: .blue,
             supportingText: precipitationAdvice,
+            primaryActionSummary: locationSummaryLine,
             primaryActionTitle: "Dostosuj lokalizację",
             primaryActionSystemImage: "location.circle.fill",
             primaryAction: editLocation
@@ -893,6 +929,13 @@ private struct PavbotPhoneDailyCockpit: View {
 
     private var precipitationAdvice: String {
         WeatherPrecipitationTilePresentation(report: report).advice
+    }
+
+    private var locationSummaryLine: String {
+        let cityLabel = report.city
+        let nowLabel = report.temperature.currentLabel
+        let conditionLabel = report.conditions.label
+        return "\(cityLabel): \(nowLabel), \(conditionLabel.lowercased()) · opady \(report.precipitation.probabilityLabel)"
     }
 
     private var freshnessLabel: String {
@@ -1890,6 +1933,7 @@ private struct WeatherPrecipitationTile: View {
     @Environment(\.pavbotAdaptiveLayout) private var layout
     let report: DailyWeatherReport
     let mode: WeatherPrecipitationTileMode
+    @Binding var intensityFilter: WeatherPrecipitationIntensityFilter
     let onToggle: () -> Void
 
     var body: some View {
@@ -1928,7 +1972,7 @@ private struct WeatherPrecipitationTile: View {
                 Text("Opady")
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.secondary)
-                Text("\(report.precipitation.totalLabel) · dotknij po godziny")
+                Text("\(report.precipitation.totalLabel) · stuknij, aby otworzyć wykres godzinowy")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
                     .lineLimit(2)
@@ -1938,8 +1982,28 @@ private struct WeatherPrecipitationTile: View {
 
     private var chartContent: some View {
         let presentation = WeatherPrecipitationTilePresentation(report: report)
+        let timelinePoints = presentation.timeline
+        let significantPoints = presentation.chartPoints
+        let rawChartPoints = significantPoints.isEmpty ? timelinePoints : significantPoints
+        let filteredChartPoints = applyIntensityFilter(to: rawChartPoints)
+        let chartPoints = optimizedChartPoints(filteredChartPoints)
+        let peakPoint = filteredChartPoints.max {
+            if $0.probability == $1.probability {
+                $0.amount < $1.amount
+            } else {
+                clampedProbability(for: $0.probability) < clampedProbability(for: $1.probability)
+            }
+        }
+        let peakLabel = peakPoint.map { "\(clampedProbability(for: $0.probability))% @ \($0.hourLabel)" } ?? "brak sygnałów"
+        let hasData = !rawChartPoints.isEmpty
+        let hasFilteredData = !filteredChartPoints.isEmpty
+        let hasStrongWindows = !significantPoints.isEmpty
+        let riskPoints = applyIntensityFilter(to: presentation.measurablePoints.isEmpty ? significantPoints : presentation.measurablePoints)
+        let riskWindows = riskWindowSummary(for: riskPoints)
+        let thresholdActive = intensityFilter.isActive
+        let yAxisTicks = Array(stride(from: 0, through: 100, by: 20))
 
-        return VStack(alignment: .leading, spacing: 8) {
+        return VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 8) {
                 Image(systemName: "cloud.rain.fill")
                     .font(.subheadline.weight(.semibold))
@@ -1950,8 +2014,47 @@ private struct WeatherPrecipitationTile: View {
                     Text("Opady")
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(.secondary)
-                    Text("Godzinowa prognoza")
+                    Text(intensityFilter == .all ? "Godzinowa prognoza" : "Silniejsze okna")
                         .font(.subheadline.bold())
+                    if thresholdActive {
+                        Text("Filtr: \(intensityFilter.label)")
+                            .font(.caption2.weight(.semibold))
+                            .foregroundStyle(.secondary)
+                    }
+                }
+            }
+
+            if hasData {
+                intensityFilterSegmentedControl
+            }
+
+            if hasData {
+                HStack(spacing: 6) {
+                    Label("Szczyt: \(peakLabel)", systemImage: "chart.line.uptrend.xyaxis")
+                        .font(.caption2.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.85)
+
+                    Spacer(minLength: 8)
+
+                    Text("Suma: \(presentation.dailyTotalLabel)")
+                        .font(.caption2.weight(.bold))
+                        .foregroundStyle(.secondary)
+                }
+                if let riskWindows {
+                    Text("Okna ryzyka: \(riskWindows)")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                } else if thresholdActive {
+                    Text("Brak okien powyżej \(intensityFilter.label). Przełącz filtr na „Wszystkie”.")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                } else if !hasStrongWindows {
+                    Text("Brak mocniejszych okien opadowych (poniżej 20%).")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
                 }
             }
 
@@ -1960,73 +2063,142 @@ private struct WeatherPrecipitationTile: View {
                 .lineSpacing(2)
                 .fixedSize(horizontal: false, vertical: true)
 
-            if presentation.chartPoints.isEmpty {
-                Text("Dotknij, aby wrócić do podsumowania opadów")
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
-            } else {
-                Chart(presentation.chartPoints) { point in
-                    BarMark(
-                        x: .value("Godzina", point.hourLabel),
-                        yStart: .value("Minimum", 0),
-                        yEnd: .value("Szansa opadów", chartValue(for: point)),
-                        width: .ratio(0.58)
-                    )
-                    .foregroundStyle(chartGradient(for: point.kind))
-                    .cornerRadius(6)
-                    .annotation(position: .top, alignment: .center, spacing: 4) {
-                        if point.isSignificant {
-                            WeatherPrecipitationChartValueLabel(
-                                probability: probabilityLabel(for: point),
-                                amount: amountDetailLabel(for: point),
-                                tint: color(for: point.kind)
+            if hasData {
+                if hasFilteredData {
+                    Chart {
+                        ForEach(chartPoints) { point in
+                            AreaMark(
+                                x: .value("Godzina", point.hourLabel),
+                                yStart: .value("Minimum", 0),
+                                yEnd: .value("Szansa opadów", chartValue(for: point))
                             )
+                            .foregroundStyle(
+                                LinearGradient(
+                                    colors: [Color.blue.opacity(0.26), Color.blue.opacity(0.05)],
+                                    startPoint: .top,
+                                    endPoint: .bottom
+                                )
+                            )
+                            .interpolationMethod(.catmullRom)
+
+                            BarMark(
+                                x: .value("Godzina", point.hourLabel),
+                                yStart: .value("Minimum", 0),
+                                yEnd: .value("Szansa opadów", chartValue(for: point)),
+                                width: .ratio(0.62)
+                            )
+                            .foregroundStyle(chartGradient(for: point.kind))
+                            .cornerRadius(7)
+                            .annotation(position: .top, alignment: .center, spacing: 4) {
+                                WeatherPrecipitationChartValueLabel(
+                                    probability: probabilityLabel(for: point),
+                                    amount: amountDetailLabel(for: point),
+                                    tint: color(for: point.kind)
+                                )
+                            }
+
+                            LineMark(
+                                x: .value("Godzina", point.hourLabel),
+                                y: .value("Szansa opadów", chartValue(for: point))
+                            )
+                            .foregroundStyle(.blue.gradient)
+                            .lineStyle(StrokeStyle(lineWidth: 1.8, lineCap: .round, lineJoin: .round))
+                            .interpolationMethod(.catmullRom)
+
+                            PointMark(
+                                x: .value("Godzina", point.hourLabel),
+                                y: .value("Szansa opadów", chartValue(for: point))
+                            )
+                            .symbolSize(24)
+                            .foregroundStyle(.blue.opacity(0.85))
+                        }
+
+                        if let maxProbability = filteredChartPoints.map({ clampedProbability(for: $0.probability) }).max(), maxProbability >= 40 {
+                            RuleMark(y: .value("Próg", 40))
+                                .foregroundStyle(Color.blue.opacity(0.16))
+                                .lineStyle(StrokeStyle(lineWidth: 0.6, dash: [4, 4]))
+                                .annotation(
+                                    position: .top,
+                                    alignment: .trailing,
+                                    spacing: 6,
+                                    overflowResolution: .init(horizontal: .fit, vertical: .fit)
+                                ) {
+                                    Text("40%")
+                                        .font(.caption2.weight(.semibold))
+                                        .foregroundStyle(.secondary)
+                                }
                         }
                     }
-                }
-                .chartXAxis {
-                    AxisMarks(values: .automatic(desiredCount: xAxisDesiredCount(for: presentation.chartPoints))) { value in
-                        AxisTick(stroke: StrokeStyle(lineWidth: 0.7))
-                            .foregroundStyle(Color.blue.opacity(0.22))
-                        AxisValueLabel {
-                            if let hour = value.as(String.self) {
-                                Text(hour)
-                                    .font(.caption2.weight(.semibold))
-                                    .foregroundStyle(.secondary)
+                    .chartXAxis {
+                        AxisMarks(values: .automatic(desiredCount: xAxisDesiredCount(for: chartPoints))) { value in
+                            AxisTick(stroke: StrokeStyle(lineWidth: 0.7))
+                                .foregroundStyle(Color.blue.opacity(0.22))
+                            AxisValueLabel {
+                                if let hour = value.as(String.self) {
+                                    Text(hour)
+                                        .font(.caption2.weight(.semibold))
+                                        .foregroundStyle(.secondary)
+                                }
                             }
                         }
                     }
-                }
-                .chartYAxis {
-                    AxisMarks(position: .leading, values: [0, 25, 50, 75, 100]) { value in
-                        AxisGridLine(stroke: StrokeStyle(lineWidth: 0.7, dash: [3, 4]))
-                            .foregroundStyle(Color.blue.opacity(0.16))
-                        AxisValueLabel {
-                            if let probability = value.as(Int.self) {
-                                Text("\(probability)%")
-                                    .font(.system(size: 9, weight: .semibold))
-                                    .foregroundStyle(.secondary)
+                    .chartYAxis {
+                        AxisMarks(position: .leading, values: yAxisTicks) { value in
+                            AxisGridLine(stroke: StrokeStyle(lineWidth: 0.7, dash: [3, 4]))
+                                .foregroundStyle(Color.blue.opacity(0.16))
+                            AxisValueLabel {
+                                if let probability = value.as(Int.self) {
+                                    Text("\(probability)%")
+                                        .font(.system(size: 9, weight: .semibold))
+                                        .foregroundStyle(.secondary)
+                                }
                             }
                         }
                     }
-                }
-                .chartYScale(domain: 0...100)
-                .chartPlotStyle { plotArea in
-                    plotArea
-                        .background(Color.blue.opacity(0.045), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                .stroke(Color.blue.opacity(0.10), lineWidth: 1)
-                        }
-                }
-                .frame(height: 118)
-                .accessibilityLabel("Mini wykres godzinowej szansy opadów")
+                    .chartYScale(domain: 0...100)
+                    .chartPlotStyle { plotArea in
+                        plotArea
+                            .background(
+                                LinearGradient(
+                                    colors: [Color.blue.opacity(0.02), Color.blue.opacity(0.08)],
+                                    startPoint: .top,
+                                    endPoint: .bottom
+                                ),
+                                in: RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            )
+                            .overlay {
+                                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                    .stroke(Color.blue.opacity(0.10), lineWidth: 1)
+                            }
+                    }
+                    .frame(height: 118)
+                    .accessibilityLabel("Mini wykres godzinowej szansy opadów")
 
-                WeatherPrecipitationChartLegend(tint: .blue, total: presentation.dailyTotalLabel)
+                    WeatherPrecipitationChartLegend(tint: .blue, total: presentation.dailyTotalLabel)
 
-                Text("Dotknij, aby wrócić do podsumowania")
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
+                    Text("Dotknij, aby wrócić do podsumowania")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                } else {
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("Brak punktów powyżej progu \(intensityFilter.label)")
+                            .font(.callout.weight(.semibold))
+                            .fixedSize(horizontal: false, vertical: true)
+                        Text("Przełącz filtr na „Wszystkie”, żeby zobaczyć pełny wykres.")
+                            .font(.caption2)
+                            .foregroundStyle(.secondary)
+                    }
+                    .frame(minHeight: 118)
+                }
+            } else {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Brak szczegółowej prognozy opadów godzinowych")
+                        .font(.callout.weight(.semibold))
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text("Dotknij, aby wrócić do podsumowania.")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
             }
         }
     }
@@ -2054,11 +2226,11 @@ private struct WeatherPrecipitationTile: View {
     }
 
     private func chartValue(for point: DailyWeatherHourlyPrecipitation) -> Int {
-        point.probability > 0 ? point.probability : 20
+        clampedProbability(for: point.probability)
     }
 
     private func probabilityLabel(for point: DailyWeatherHourlyPrecipitation) -> String {
-        point.probability > 0 ? "\(point.probability)%" : "opad"
+        point.probability > 0 ? "\(clampedProbability(for: point.probability))%" : "brak"
     }
 
     private func amountDetailLabel(for point: DailyWeatherHourlyPrecipitation) -> String? {
@@ -2067,6 +2239,113 @@ private struct WeatherPrecipitationTile: View {
 
     private func xAxisDesiredCount(for points: [DailyWeatherHourlyPrecipitation]) -> Int {
         min(max(points.count, 2), 4)
+    }
+
+    private var intensityFilterSegmentedControl: some View {
+        HStack(spacing: 6) {
+            Text("Mocne okna")
+                .font(.caption2.weight(.semibold))
+                .foregroundStyle(.secondary)
+
+            Spacer(minLength: 6)
+
+            HStack(spacing: 5) {
+                ForEach(WeatherPrecipitationIntensityFilter.allCases, id: \.self) { filter in
+                    Button {
+                        intensityFilter = filter
+                    } label: {
+                        Text(filter.label)
+                            .font(.caption2.weight(.semibold))
+                            .padding(.horizontal, 9)
+                            .padding(.vertical, 6)
+                            .background(
+                                Capsule()
+                                    .fill(intensityFilter == filter ? Color.blue : Color(.secondarySystemBackground))
+                            )
+                            .foregroundStyle(intensityFilter == filter ? .white : .secondary)
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel("Filtr opadów \(filter.label)")
+                }
+            }
+        }
+    }
+
+    private func applyIntensityFilter(to points: [DailyWeatherHourlyPrecipitation]) -> [DailyWeatherHourlyPrecipitation] {
+        guard intensityFilter != .all else { return points }
+        return points.filter { $0.probability > intensityFilter.minimumProbability }
+    }
+
+    private func optimizedChartPoints(_ points: [DailyWeatherHourlyPrecipitation]) -> [DailyWeatherHourlyPrecipitation] {
+        guard points.count > 2 else { return points }
+
+        let maximumVisiblePoints = layout.usesDashboardLayout ? 16 : 12
+        guard points.count > maximumVisiblePoints else { return points }
+
+        let step = Double(points.count - 1) / Double(maximumVisiblePoints - 1)
+        var selected: [DailyWeatherHourlyPrecipitation] = []
+        for index in 0..<maximumVisiblePoints {
+            let sourceIndex = Int(round(Double(index) * step))
+            let safeIndex = min(max(sourceIndex, 0), points.count - 1)
+            selected.append(points[safeIndex])
+        }
+        let deduplicated = selected.reduce(into: [DailyWeatherHourlyPrecipitation]()) { values, point in
+            if values.last?.id != point.id {
+                values.append(point)
+            }
+        }
+        return deduplicated
+    }
+
+    private func clampedProbability(for value: Int) -> Int {
+        min(max(value, 0), 100)
+    }
+
+    private func riskWindowSummary(for points: [DailyWeatherHourlyPrecipitation]) -> String? {
+        let sorted = points.sorted {
+            switch ($0.dateValue, $1.dateValue) {
+            case let (.some(firstDate), .some(secondDate)):
+                return firstDate < secondDate
+            default:
+                return $0.time < $1.time
+            }
+        }
+        guard var currentStart = sorted.first, var currentEnd = sorted.first else { return nil }
+
+        var windows: [(start: DailyWeatherHourlyPrecipitation, end: DailyWeatherHourlyPrecipitation)] = []
+        for point in sorted.dropFirst() {
+            if isAdjacent(first: currentEnd, second: point) {
+                currentEnd = point
+            } else {
+                windows.append((start: currentStart, end: currentEnd))
+                currentStart = point
+                currentEnd = point
+            }
+        }
+        windows.append((start: currentStart, end: currentEnd))
+
+        let rendered = windows.map { window in
+            window.start.id == window.end.id ? window.start.hourLabel : "\(window.start.hourLabel)-\(window.end.hourLabel)"
+        }
+        return joinPolish(rendered)
+    }
+
+    private func isAdjacent(first: DailyWeatherHourlyPrecipitation, second: DailyWeatherHourlyPrecipitation) -> Bool {
+        guard let firstDate = first.dateValue, let secondDate = second.dateValue else { return false }
+        return secondDate.timeIntervalSince(firstDate) <= 3_900 && secondDate.timeIntervalSince(firstDate) > 0
+    }
+
+    private func joinPolish(_ values: [String]) -> String {
+        switch values.count {
+        case 0:
+            return ""
+        case 1:
+            return values[0]
+        case 2:
+            return "\(values[0]) i \(values[1])"
+        default:
+            return "\(values.dropLast().joined(separator: ", ")) i \(values.last ?? "")"
+        }
     }
 }
 

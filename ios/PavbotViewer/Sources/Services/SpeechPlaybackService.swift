@@ -84,7 +84,10 @@ enum SpeechVoiceSettings {
     static func resolvedVoice(
         for preference: SpeechVoicePreference,
         voiceWithIdentifier: (String) -> AVSpeechSynthesisVoice? = { AVSpeechSynthesisVoice(identifier: $0) },
-        polishVoice: () -> AVSpeechSynthesisVoice? = { AVSpeechSynthesisVoice(language: "pl-PL") }
+        polishVoice: () -> AVSpeechSynthesisVoice? = {
+            SpeechVoiceSettings.bestPolishVoice()
+                ?? AVSpeechSynthesisVoice(language: "pl-PL")
+        }
     ) -> AVSpeechSynthesisVoice? {
         switch preference.mode {
         case .polishDefault:
@@ -105,12 +108,60 @@ enum SpeechVoiceSettings {
             return polishVoice()
         }
     }
+
+    private static func bestPolishVoice() -> AVSpeechSynthesisVoice? {
+        let polishCandidates = AVSpeechSynthesisVoice.speechVoices().filter {
+            $0.language == "pl-PL" || $0.language.hasPrefix("pl")
+        }
+        guard !polishCandidates.isEmpty else { return nil }
+
+        let sorted = polishCandidates.sorted { first, second in
+            let leftScore = polishVoicePriority(for: first)
+            let rightScore = polishVoicePriority(for: second)
+            if leftScore == rightScore {
+                return first.name.localizedCaseInsensitiveCompare(second.name) == .orderedAscending
+            }
+            return leftScore > rightScore
+        }
+        return sorted.first
+    }
+
+    private static func polishVoicePriority(for voice: AVSpeechSynthesisVoice) -> Int {
+        let signature = "\(voice.name) \(voice.identifier)".lowercased()
+        var score = 0
+
+        if signature.contains("zosia") || signature.contains("zośia") {
+            score += 700
+        }
+
+        if signature.contains("extended") || signature.contains("rozszerz") {
+            score += 120
+        }
+
+        switch voice.quality {
+        case .premium:
+            score += 90
+        case .enhanced:
+            score += 70
+        case .default:
+            score += 40
+        @unknown default:
+            score += 20
+        }
+
+        if voice.language == "pl-PL" {
+            score += 30
+        }
+
+        return score
+    }
 }
 
 struct SpeechVoiceOption: Identifiable, Equatable {
     let id: String
     let name: String
     let language: String
+    let quality: AVSpeechSynthesisVoiceQuality
     let qualityLabel: String
     let isPersonalVoice: Bool
 
@@ -140,6 +191,7 @@ struct SpeechVoiceOption: Identifiable, Equatable {
         id = voice.identifier
         name = voice.name
         language = voice.language
+        quality = voice.quality
         qualityLabel = Self.qualityLabel(for: voice.quality)
         if #available(iOS 17.0, *) {
             isPersonalVoice = voice.voiceTraits.contains(.isPersonalVoice)
@@ -266,9 +318,21 @@ struct SpeechVoiceCatalog: Equatable {
     }
 
     var defaultSystemVoice: SpeechVoiceOption? {
-        systemVoices.first(where: { $0.language == "pl-PL" })
-            ?? systemVoices.first(where: { $0.language.hasPrefix("pl") })
-            ?? systemVoices.first
+        let polishVoices = systemVoices.filter { $0.language == "pl-PL" || $0.language.hasPrefix("pl") }
+        guard !polishVoices.isEmpty else {
+            return systemVoices.first
+        }
+
+        let preferred = polishVoices.sorted { lhs, rhs in
+            let lhsScore = polishVoicePriority(for: lhs)
+            let rhsScore = polishVoicePriority(for: rhs)
+            if lhsScore == rhsScore {
+                if lhs.quality == rhs.quality { return false }
+                return voiceQualityPriority(lhs.quality) > voiceQualityPriority(rhs.quality)
+            }
+            return lhsScore > rhsScore
+        }
+        return preferred.first ?? polishVoices.first
     }
 
     private func sortedVoices(_ options: [SpeechVoiceOption]) -> [SpeechVoiceOption] {
@@ -287,6 +351,39 @@ struct SpeechVoiceCatalog: Equatable {
         if language.hasPrefix("pl") { return 1 }
         if language.hasPrefix("en") { return 2 }
         return 3
+    }
+
+    private func polishVoicePriority(for option: SpeechVoiceOption) -> Int {
+        let signature = "\(option.name) \(option.id)".lowercased()
+        var score = 0
+
+        if signature.contains("zosia") || signature.contains("zośia") {
+            score += 700
+        }
+
+        if signature.contains("extended") || signature.contains("rozszerz") {
+            score += 120
+        }
+
+        score += voiceQualityPriority(option.quality)
+        if option.language == "pl-PL" {
+            score += 30
+        }
+
+        return score
+    }
+
+    private func voiceQualityPriority(_ quality: AVSpeechSynthesisVoiceQuality) -> Int {
+        switch quality {
+        case .premium:
+            90
+        case .enhanced:
+            70
+        case .default:
+            40
+        @unknown default:
+            20
+        }
     }
 }
 
