@@ -59,6 +59,8 @@ Optional environment:
       Apple Developer Program team id passed to cktool.
   PAVBOT_CLOUDKIT_DRY_RUN=1
       Verify deterministic Briefing records without calling cktool.
+  PAVBOT_CLOUDKIT_TIMEOUT_SECONDS=60
+      cktool timeout in seconds, valid range 5..300.
   PAVBOT_CLOUDKIT_PUBLISHER=/path/to/publisher
       Override the CloudKit publisher executable for tests.
 EOF
@@ -67,6 +69,36 @@ EOF
 die() {
   printf 'error: %s\n' "$*" >&2
   exit 1
+}
+
+require_no_apns_secret_environment() {
+  local forbidden_names=(
+    PAVBOT_APNS_JWT
+    PAVBOT_APNS_TOKEN
+    APNS_AUTH_TOKEN
+    APNS_PRIVATE_KEY
+    PAVBOT_APNS_PRIVATE_KEY
+    PAVBOT_APNS_P8
+    APNS_KEY_PATH
+    PAVBOT_APNS_KEY_PATH
+    PAVBOT_APNS_DEVICE_TOKEN
+    PAVBOT_DEVICE_TOKEN
+  )
+  local present=()
+  local name
+
+  for name in "${forbidden_names[@]}"; do
+    if [[ -n "${!name:-}" ]]; then
+      present+=("$name")
+    fi
+  done
+
+  if ((${#present[@]} > 0)); then
+    printf 'Refusing to publish with APNs secret environment variables:\n' >&2
+    printf '  %s\n' "${present[@]}" >&2
+    printf 'Use APNs JWT, .p8 keys, and device tokens only in Apple Push Notifications Console smoke tests; do not pass them to the Pavbot production publish gate.\n' >&2
+    exit 1
+  fi
 }
 
 require_clean_publish_scope() {
@@ -1429,6 +1461,7 @@ topic_path="${topic_arg%/}"
 
 repo_root="$(git rev-parse --show-toplevel 2>/dev/null)" || die "not inside a git repository"
 cd "$repo_root"
+require_no_apns_secret_environment
 
 [[ -d "$topic_path" ]] || die "topic path does not exist: $topic_path"
 [[ -f "$manifest_generator" ]] || die "missing scripts/generate_pavbot_manifest.py"

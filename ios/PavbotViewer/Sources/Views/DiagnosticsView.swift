@@ -103,8 +103,8 @@ private struct DiagnosticsRemoteNotificationSection: View {
             systemImage: "bell.badge.fill",
             tint: .blue
         ) {
-            LabeledContent("APNs token", value: RemoteNotificationDiagnostics.deviceTokenPreview(for: deviceToken))
-            LabeledContent("Apple Console", value: "Development dla Xcode Debug")
+            LabeledContent("Token urządzenia APNs", value: RemoteNotificationDiagnostics.deviceTokenPreview(for: deviceToken))
+            LabeledContent("Apple Console", value: RemoteNotificationDiagnostics.apnsEnvironmentLabel())
 
             if !registrationError.isEmpty {
                 Label(registrationError, systemImage: "exclamationmark.triangle.fill")

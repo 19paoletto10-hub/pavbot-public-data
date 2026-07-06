@@ -158,7 +158,7 @@ struct SettingsView: View {
                     .font(.caption)
                     .foregroundStyle(.secondary)
 
-                LabeledContent("Token APNs", value: RemoteNotificationDiagnostics.deviceTokenPreview(for: remoteDeviceToken))
+                LabeledContent("Token urządzenia APNs", value: RemoteNotificationDiagnostics.deviceTokenPreview(for: remoteDeviceToken))
 
                 if !deviceTokenRegisteredAt.isEmpty {
                     LabeledContent("Zarejestrowano", value: deviceTokenRegisteredAt)
@@ -179,7 +179,7 @@ struct SettingsView: View {
                     .accessibilityHint("Kopiuje token urządzenia do Apple Push Notifications Console.")
                     .disabled(remoteDeviceToken.isEmpty)
 
-                Text("Użyj tego tokena w Apple Push Notifications Console. Wybierz Development dla buildów z Xcode i Production dla TestFlight.")
+                Text("Użyj tokena urządzenia w Apple Push Notifications Console. Wybierz Development dla buildów z Xcode i Production dla TestFlight.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }
@@ -314,7 +314,7 @@ struct SettingsView: View {
                             Label("Codzienna pogoda dla Wrocławia", systemImage: "cloud.sun")
                         }
 
-                        LabeledContent("Token APNs", value: RemoteNotificationDiagnostics.deviceTokenPreview(for: remoteDeviceToken))
+                        LabeledContent("Token urządzenia APNs", value: RemoteNotificationDiagnostics.deviceTokenPreview(for: remoteDeviceToken))
 
                         if !deviceTokenRegisteredAt.isEmpty {
                             LabeledContent("Zarejestrowano", value: deviceTokenRegisteredAt)

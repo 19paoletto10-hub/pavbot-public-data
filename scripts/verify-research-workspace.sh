@@ -276,13 +276,18 @@ grep -q 'CloudKit' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'cloudKitAccountStatus' ios/PavbotViewer/Sources/Views/SettingsView.swift
 ! grep -q 'PavbotConnectionDefaults.statusURL' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'Kopiuj token APNs' ios/PavbotViewer/Sources/Views/SettingsView.swift
+grep -q 'Token urządzenia APNs' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'RemoteNotificationDiagnostics' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
 grep -q 'RemoteNotificationDiagnostics' ios/PavbotViewer/Tests/PavbotManifestTests.swift
 grep -q 'visible APNs alert' docs/CLOUDKIT_MIGRATION.md
 grep -q 'Kopiuj token APNs' ios/PavbotViewer/Sources/Views/DiagnosticsView.swift
+grep -q 'Token urządzenia APNs' ios/PavbotViewer/Sources/Views/DiagnosticsView.swift
 grep -q 'Powiadomienia live' ios/PavbotViewer/Sources/Views/ContentView.swift
 grep -q 'startAutoRefreshLoop' ios/PavbotViewer/Sources/Views/ContentView.swift
 grep -q 'DEVELOPMENT_TEAM: SP774TZZU8' ios/PavbotViewer/project.yml
+grep -q 'appleDeveloperTeamIdentifier = "SP774TZZU8"' ios/PavbotViewer/Sources/Services/PavbotConnectionDefaults.swift
+grep -q 'apnsKeyIdentifier = "YWVNV6YGXJ"' ios/PavbotViewer/Sources/Services/PavbotConnectionDefaults.swift
+grep -q 'apnsTopic = "com.paweltanski.pavbotviewer"' ios/PavbotViewer/Sources/Services/PavbotConnectionDefaults.swift
 grep -q 'DEVELOPMENT_TEAM = SP774TZZU8' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
 grep -q 'CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
 grep -q 'APS_ENVIRONMENT = development;' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
@@ -319,8 +324,12 @@ grep -q 'Record Type: UserPreferences' docs/CLOUDKIT_MIGRATION.md
 grep -q 'briefings-ready-subscription' docs/CLOUDKIT_MIGRATION.md
 grep -q 'xcrun cktool save-token' docs/CLOUDKIT_MIGRATION.md
 grep -q 'PAVBOT_CLOUDKIT_TEAM_ID' docs/CLOUDKIT_MIGRATION.md
+grep -q 'YWVNV6YGXJ' docs/CLOUDKIT_MIGRATION.md
+grep -q 'AuthKey_YWVNV6YGXJ.p8' docs/CLOUDKIT_MIGRATION.md
 grep -q 'iCloud.com.paweltanski.pavbotviewer' docs/CLOUDKIT_MIGRATION.md
 grep -q 'visible APNs alert' docs/CLOUDKIT_MIGRATION.md
+grep -q 'YWVNV6YGXJ' docs/ios-appstore-release.md
+grep -q 'aps-environment=production' docs/ios-appstore-release.md
 grep -q 'pavbot_usage_ledger.py' scripts/pavbot_commit_and_push_outputs.sh
 grep -q '.pavbot/private/usage-ledger.sqlite3' docs/automation-operations.md
 grep -q '.pavbot/private/' .gitignore
@@ -350,6 +359,8 @@ grep -q 'Settings -> Domyślne połączenia' docs/connect-ios-app-to-your-repo.m
 grep -q 'pavbot_commit_and_push_outputs.sh' docs/automation-operations.md
 grep -q 'origin/main' docs/automation-operations.md
 grep -q 'one visible APNs alert' docs/automation-operations.md
+grep -q 'PAVBOT_APNS_JWT' scripts/pavbot_commit_and_push_outputs.sh
+! grep -R -q 'Backend Pavbot Notifier obsługuje' README.md docs scripts ios .agents
 ! git ls-files --error-unmatch backend/pavbot-notifier >/dev/null 2>&1
 ! grep -R -q 'RLZ8X7S7V2' ios docs .agents
 grep -q 'pavbot-manifest.json' docs/architecture.md

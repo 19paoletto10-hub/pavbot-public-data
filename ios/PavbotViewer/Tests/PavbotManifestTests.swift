@@ -3191,6 +3191,10 @@ final class PavbotManifestTests: XCTestCase {
         let entitlements = try String(contentsOf: projectRoot.appendingPathComponent("Sources/PavbotViewer.entitlements"))
 
         XCTAssertTrue(projectYML.contains("CloudKit.framework"))
+        XCTAssertTrue(projectYML.contains("DEVELOPMENT_TEAM: SP774TZZU8"))
+        XCTAssertTrue(projectYML.contains("PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer"))
+        XCTAssertTrue(projectYML.contains("APS_ENVIRONMENT: development"))
+        XCTAssertTrue(projectYML.contains("APS_ENVIRONMENT: production"))
         XCTAssertTrue(entitlements.contains("com.apple.developer.icloud-container-identifiers"))
         XCTAssertTrue(entitlements.contains("iCloud.com.paweltanski.pavbotviewer"))
         XCTAssertTrue(entitlements.contains("com.apple.developer.icloud-services"))
@@ -3229,15 +3233,9 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     func testConnectionDefaultsExposeManifestAndCloudKitContainerWithoutNotifier() {
-        let defaults = UserDefaults.standard
-        let previous = defaults.string(forKey: "pavbot.notificationServerURL")
-        defer {
-            if let previous {
-                defaults.set(previous, forKey: "pavbot.notificationServerURL")
-            } else {
-                defaults.removeObject(forKey: "pavbot.notificationServerURL")
-            }
-        }
+        let suiteName = "PavbotConnectionDefaults-\(UUID().uuidString)"
+        let defaults = UserDefaults(suiteName: suiteName)!
+        defer { defaults.removePersistentDomain(forName: suiteName) }
         defaults.set("https://notify.legacy.example.com", forKey: "pavbot.notificationServerURL")
         PavbotConnectionDefaults.enforceLegacyUserDefaults(defaults)
 
@@ -3246,6 +3244,9 @@ final class PavbotManifestTests: XCTestCase {
             "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json"
         )
         XCTAssertEqual(PavbotConnectionDefaults.cloudKitContainerIdentifier, "iCloud.com.paweltanski.pavbotviewer")
+        XCTAssertEqual(PavbotConnectionDefaults.appleDeveloperTeamIdentifier, "SP774TZZU8")
+        XCTAssertEqual(PavbotConnectionDefaults.apnsKeyIdentifier, "YWVNV6YGXJ")
+        XCTAssertEqual(PavbotConnectionDefaults.apnsTopic, "com.paweltanski.pavbotviewer")
         XCTAssertNil(defaults.string(forKey: "pavbot.notificationServerURL"))
     }
 
@@ -3335,6 +3336,24 @@ final class PavbotManifestTests: XCTestCase {
         RemoteNotificationDiagnostics.clearRegistrationError(defaults: defaults)
 
         XCTAssertEqual(RemoteNotificationDiagnostics.registrationError(defaults: defaults), "")
+    }
+
+    func testRemoteNotificationDiagnosticsCopyNamesDeviceTokenNotJWT() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources")
+        let settingsSource = try String(contentsOf: sourcesURL.appendingPathComponent("Views/SettingsView.swift"))
+        let diagnosticsSource = try String(contentsOf: sourcesURL.appendingPathComponent("Views/DiagnosticsView.swift"))
+
+        XCTAssertTrue(settingsSource.contains("Token urządzenia APNs"))
+        XCTAssertTrue(diagnosticsSource.contains("Token urządzenia APNs"))
+        XCTAssertTrue(diagnosticsSource.contains("RemoteNotificationDiagnostics.apnsEnvironmentLabel()"))
+        XCTAssertFalse(settingsSource.contains("Generated Token"))
+        XCTAssertFalse(diagnosticsSource.contains("Generated Token"))
+        XCTAssertFalse(settingsSource.contains("JWT"))
+        XCTAssertFalse(diagnosticsSource.contains("JWT"))
     }
 
     func testLiveNotificationOnboardingPromptsOnceWithoutServerConfiguration() {

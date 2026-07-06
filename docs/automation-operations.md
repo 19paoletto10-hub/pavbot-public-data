@@ -138,6 +138,15 @@ active `research/<topic>` record, so one automation publication produces one
 visible APNs alert for the matching run.
 This is the one visible APNs alert contract for production runs.
 
+Production push configuration uses Apple Developer team `SP774TZZU8`, APNs key
+ID `YWVNV6YGXJ`, APNs topic `com.paweltanski.pavbotviewer`, and CloudKit
+container `iCloud.com.paweltanski.pavbotviewer`. These identifiers may appear
+in code and docs. `AuthKey_YWVNV6YGXJ.p8`, generated JWTs, APNs device tokens,
+and private keys must remain local and ephemeral; the publish script refuses to
+run when APNs secret environment variables are present. Use Apple Push
+Notifications Console for manual JWT/device-token validation and one-off smoke
+alerts only.
+
 Do not consider an automation finished until
 `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>` exits
 successfully. If the script fails, the run is failed or partially published

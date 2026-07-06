@@ -155,7 +155,7 @@ def test_preflight_queries_cloudkit_without_creating_records(tmp_path, monkeypat
     manifest_path.write_text(json.dumps(sample_manifest()), encoding="utf-8")
     calls: list[list[str]] = []
 
-    def fake_run(command, text=False, capture_output=False):
+    def fake_run(command, text=False, capture_output=False, timeout=None):
         calls.append(command)
         return publisher.subprocess.CompletedProcess(command, 0, stdout='{"records":[]}', stderr="")
 
@@ -250,7 +250,7 @@ def test_publish_replaces_existing_records_by_stable_briefing_id(monkeypatch) ->
     )
     calls: list[list[str]] = []
 
-    def fake_run(command, check=False, text=False, capture_output=False):
+    def fake_run(command, check=False, text=False, capture_output=False, timeout=None):
         calls.append(command)
         if "query-records" in command:
             return publisher.subprocess.CompletedProcess(
@@ -299,7 +299,7 @@ def test_verify_requires_ready_record_fields_not_raw_stdout_text(monkeypatch) ->
     )
     calls: list[list[str]] = []
 
-    def fake_run(command, text=False, capture_output=False):
+    def fake_run(command, text=False, capture_output=False, timeout=None):
         calls.append(command)
         return publisher.subprocess.CompletedProcess(
             command,
@@ -339,6 +339,96 @@ def test_verify_requires_ready_record_fields_not_raw_stdout_text(monkeypatch) ->
     assert "--requested-fields" not in calls[0]
 
 
+def test_verify_requires_current_manifest_url_and_category(monkeypatch) -> None:
+    publisher = load_publisher()
+    records = publisher.build_briefing_records(
+        sample_manifest(),
+        manifest_url="https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+    )
+
+    def fake_run(command, text=False, capture_output=False, timeout=None):
+        return publisher.subprocess.CompletedProcess(
+            command,
+            0,
+            stdout=json.dumps(
+                {
+                    "records": [
+                        {
+                            "recordName": "stale-record",
+                            "fields": {
+                                "briefingId": {
+                                    "type": "stringType",
+                                    "value": "aktualne-wydarzenia-mobile:2026-07-05-1936",
+                                },
+                                "status": {"type": "stringType", "value": "ready"},
+                                "manifestUrl": {
+                                    "type": "stringType",
+                                    "value": "https://raw.githubusercontent.com/example/old/main/public/pavbot-manifest.json",
+                                },
+                                "category": {"type": "stringType", "value": "aktualne-wydarzenia-mobile"},
+                            },
+                        }
+                    ]
+                }
+            ),
+            stderr="",
+        )
+
+    monkeypatch.setattr(publisher.subprocess, "run", fake_run)
+
+    try:
+        publisher.verify_records(records, "iCloud.test", "production", "TEAM123")
+    except RuntimeError as error:
+        assert "CloudKit verification missing ready records" in str(error)
+    else:
+        raise AssertionError("verify_records must fail when manifestUrl is stale")
+
+
+def test_validate_publisher_config_rejects_wrong_production_values(tmp_path, capsys) -> None:
+    publisher = load_publisher()
+    manifest_path = tmp_path / "pavbot-manifest.json"
+    manifest_path.write_text(json.dumps(sample_manifest()), encoding="utf-8")
+
+    exit_code = publisher.main(
+        [
+            "dry-run",
+            "--manifest",
+            str(manifest_path),
+            "--manifest-url",
+            "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            "--container-id",
+            "iCloud.wrong.container",
+            "--environment",
+            "production",
+            "--team-id",
+            "WRONGTEAM",
+            "--topic",
+            "research/aktualne-wydarzenia-mobile",
+        ]
+    )
+
+    captured = capsys.readouterr()
+    assert exit_code == 1
+    assert "expected iCloud.com.paweltanski.pavbotviewer" in captured.err
+    assert "expected SP774TZZU8" in captured.err
+
+
+def test_run_cktool_uses_configured_timeout(monkeypatch) -> None:
+    publisher = load_publisher()
+    calls = []
+
+    def fake_run(command, text=False, capture_output=False, timeout=None):
+        calls.append({"command": command, "timeout": timeout})
+        return publisher.subprocess.CompletedProcess(command, 0, stdout='{"records":[]}', stderr="")
+
+    monkeypatch.setenv("PAVBOT_CLOUDKIT_TIMEOUT_SECONDS", "12")
+    monkeypatch.setattr(publisher.subprocess, "run", fake_run)
+
+    publisher.run_cktool(["xcrun", "cktool", "query-records"])
+
+    assert calls == [{"command": ["xcrun", "cktool", "query-records"], "timeout": 12}]
+
+
 def test_verify_fails_fast_when_cktool_token_is_missing(monkeypatch) -> None:
     publisher = load_publisher()
     records = publisher.build_briefing_records(
@@ -346,7 +436,7 @@ def test_verify_fails_fast_when_cktool_token_is_missing(monkeypatch) -> None:
         manifest_url="https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
     )
 
-    def fake_run(command, text=False, capture_output=False):
+    def fake_run(command, text=False, capture_output=False, timeout=None):
         return publisher.subprocess.CompletedProcess(
             command,
             1,
@@ -371,7 +461,7 @@ def test_verify_fails_fast_when_cktool_token_is_expired(monkeypatch) -> None:
         manifest_url="https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
     )
 
-    def fake_run(command, text=False, capture_output=False):
+    def fake_run(command, text=False, capture_output=False, timeout=None):
         return publisher.subprocess.CompletedProcess(
             command,
             1,

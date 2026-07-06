@@ -9,6 +9,8 @@ Date: 2026-07-06
 - Bundle ID: `com.paweltanski.pavbotviewer`
 - Live Activity extension: `com.paweltanski.pavbotviewer.audioactivity`
 - Apple Team ID: `SP774TZZU8`
+- APNs key ID: `YWVNV6YGXJ`
+- CloudKit container: `iCloud.com.paweltanski.pavbotviewer`
 - Marketing version: `2.4.5`
 - Build number: dynamic, set by the Xcode build phase from `PAVBOT_BUILD_NUMBER`
   or the latest git commit timestamp.
@@ -75,7 +77,10 @@ Date: 2026-07-06
 
 5. Confirm Xcode Signing & Capabilities for `PavbotViewer`:
    - Team: `SP774TZZU8`
+   - Bundle ID / APNs topic: `com.paweltanski.pavbotviewer`
+   - APNs key ID `YWVNV6YGXJ` exists in Apple Developer and is enabled for APNs
    - Push Notifications enabled for the App ID
+   - CloudKit container `iCloud.com.paweltanski.pavbotviewer` selected
    - Background Modes includes audio and remote notifications
    - Live Activities supported
 
@@ -88,6 +93,14 @@ Date: 2026-07-06
 5. Use `Product -> Archive`.
 6. In Organizer, choose `Distribute App`.
 7. Choose `App Store Connect -> Upload`.
+8. After export or upload, inspect the signed app entitlements:
+
+   ```bash
+   codesign -d --entitlements :- <PavbotViewer.app>
+   ```
+
+   Expected values include `aps-environment=production` and CloudKit container
+   `iCloud.com.paweltanski.pavbotviewer`.
 8. After processing, add the build to TestFlight in App Store Connect.
 
 Use a unique UTC timestamp build number when archiving for App Store Connect:

@@ -612,7 +612,7 @@ AI_AUTOMATION_SPEC = DocumentSpec(
         "Data validation",
         "Manifest-driven UX",
         "SwiftUI",
-        "FastAPI",
+        "CloudKit",
         "APNs",
         "Caching",
         "Fallback design",
@@ -623,7 +623,7 @@ AI_AUTOMATION_SPEC = DocumentSpec(
     evidence_title="Techniczne dowody jakości",
     evidence=[
         "Natywna aplikacja iOS z zakładkami Today, Pulse Day, Jobs, Research, audio/TTS, diagnostyką i ustawieniami.",
-        "Backend Pavbot Notifier obsługuje GitHub webhook, manifest diffing, rejestrację urządzeń i APNs.",
+        "CloudKit publisher publikuje zweryfikowane rekordy Briefing, a iOS odbiera APNs przez subskrypcje CloudKit.",
         "Artefakty publikowane są przez manifest zamiast ręcznego kopiowania danych do aplikacji.",
         "Wersja 2.0 wymusza produkcyjne URL-e i ignoruje stare lokalne ustawienia użytkownika.",
         "Walidacja obejmuje testy iOS, testy Python, workspace verifier, diff check oraz archive App Store Connect.",
@@ -632,7 +632,7 @@ AI_AUTOMATION_SPEC = DocumentSpec(
         "Pavbot to system AI automation end-to-end. Agenci Codex wykonują research, generują strukturalne dane, PDF-y i audio, manifest publikuje wyniki, a natywna aplikacja iOS pokazuje je z cache, fallbackami i powiadomieniami."
     ),
     pitch_long=(
-        "Najważniejsze w Pavbot jest to, że AI nie kończy się na odpowiedzi w czacie. Zbudowałem pipeline, w którym automatyzacje mają kontrakty tematów, zapisują raporty i dane, generator tworzy manifest, backend wykrywa nowe publikacje i może wysyłać APNs, a aplikacja iOS renderuje wyniki jako produkt. To pokazuje projektowanie agentów, integrację systemów, walidację danych, mobile UX i operacyjne myślenie o jakości."
+        "Najważniejsze w Pavbot jest to, że AI nie kończy się na odpowiedzi w czacie. Zbudowałem pipeline, w którym automatyzacje mają kontrakty tematów, zapisują raporty i dane, generator tworzy manifest, publisher weryfikuje publiczne artefakty i publikuje CloudKit Briefing, a aplikacja iOS renderuje wyniki oraz odbiera APNs przez subskrypcje. To pokazuje projektowanie agentów, integrację systemów, walidację danych, mobile UX i operacyjne myślenie o jakości."
     ),
     palette=Palette(AI_ACCENT, AI_ACCENT_DARK, AI_ACCENT_LIGHT),
 )

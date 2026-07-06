@@ -15,6 +15,7 @@ from typing import Any
 DEFAULT_CONTAINER_ID = "iCloud.com.paweltanski.pavbotviewer"
 DEFAULT_ENVIRONMENT = "production"
 DEFAULT_TEAM_ID = "SP774TZZU8"
+DEFAULT_APNS_KEY_ID = "YWVNV6YGXJ"
 DEFAULT_MANIFEST_URL = (
     "https://raw.githubusercontent.com/19paoletto10-hub/"
     "pavbot-public-data/main/public/pavbot-manifest.json"
@@ -22,6 +23,82 @@ DEFAULT_MANIFEST_URL = (
 BRIEFING_RECORD_TYPE = "Briefing"
 READY_STATUS = "ready"
 CKTOOL_BARE_FILTER_VALUE = re.compile(r"^[A-Za-z0-9_.:/-]+$")
+DEFAULT_CKTOOL_TIMEOUT_SECONDS = 60
+MIN_CKTOOL_TIMEOUT_SECONDS = 5
+MAX_CKTOOL_TIMEOUT_SECONDS = 300
+
+
+class CloudKitPublisherError(RuntimeError):
+    """Base error for operator-facing CloudKit publisher failures."""
+
+
+class ConfigurationError(CloudKitPublisherError):
+    pass
+
+
+class CktoolAuthError(CloudKitPublisherError):
+    pass
+
+
+class CktoolCommandError(CloudKitPublisherError):
+    pass
+
+
+class CloudKitVerificationError(CloudKitPublisherError):
+    pass
+
+
+class PublisherConfig:
+    def __init__(
+        self,
+        *,
+        manifest: str,
+        manifest_url: str,
+        container_id: str,
+        environment: str,
+        team_id: str,
+        topic: str | None,
+        all_topics: bool,
+    ) -> None:
+        self.manifest = manifest
+        self.manifest_url = manifest_url
+        self.container_id = container_id
+        self.environment = environment
+        self.team_id = team_id
+        self.topic = topic
+        self.all_topics = all_topics
+
+    @classmethod
+    def from_args(cls, args: argparse.Namespace) -> "PublisherConfig":
+        config = cls(
+            manifest=args.manifest,
+            manifest_url=args.manifest_url,
+            container_id=args.container_id,
+            environment=args.environment,
+            team_id=args.team_id,
+            topic=args.topic,
+            all_topics=args.all_topics,
+        )
+        validate_publisher_config(config)
+        return config
+
+
+def validate_publisher_config(config: PublisherConfig) -> None:
+    errors: list[str] = []
+    if config.container_id != DEFAULT_CONTAINER_ID:
+        errors.append(f"container id {config.container_id!r}; expected {DEFAULT_CONTAINER_ID}")
+    if config.environment.lower() != DEFAULT_ENVIRONMENT:
+        errors.append(f"environment {config.environment!r}; expected {DEFAULT_ENVIRONMENT}")
+    if config.team_id != DEFAULT_TEAM_ID:
+        errors.append(f"team id {config.team_id!r}; expected {DEFAULT_TEAM_ID}")
+    if not config.manifest_url.startswith("https://raw.githubusercontent.com/") or not config.manifest_url.endswith(
+        "/public/pavbot-manifest.json"
+    ):
+        errors.append("manifest URL must be a GitHub raw HTTPS public/pavbot-manifest.json URL")
+    if config.topic is not None and topic_slug_for_path(config.topic) is None:
+        errors.append("topic must be a non-empty research/<topic> path")
+    if errors:
+        raise ConfigurationError("Invalid production CloudKit configuration: " + "; ".join(errors))
 
 
 def load_manifest(path: str | Path) -> dict[str, Any]:
@@ -240,18 +317,64 @@ def cktool_scoped_args(container_id: str, environment: str) -> list[str]:
     ]
 
 
-def run_cktool(command: list[str], *, check: bool = True) -> subprocess.CompletedProcess[str]:
-    result = subprocess.run(command, text=True, capture_output=True)
-    if result.returncode != 0 and cktool_auth_is_missing(result.stderr):
-        raise RuntimeError(cktool_auth_error_message())
-    if check and result.returncode != 0:
-        raise subprocess.CalledProcessError(
-            result.returncode,
-            command,
-            output=result.stdout,
-            stderr=result.stderr,
+def cktool_timeout_seconds() -> int:
+    raw_value = os.environ.get("PAVBOT_CLOUDKIT_TIMEOUT_SECONDS")
+    if not raw_value:
+        return DEFAULT_CKTOOL_TIMEOUT_SECONDS
+    try:
+        value = int(raw_value)
+    except ValueError as error:
+        raise ConfigurationError("PAVBOT_CLOUDKIT_TIMEOUT_SECONDS must be an integer") from error
+    if value < MIN_CKTOOL_TIMEOUT_SECONDS or value > MAX_CKTOOL_TIMEOUT_SECONDS:
+        raise ConfigurationError(
+            "PAVBOT_CLOUDKIT_TIMEOUT_SECONDS must be between "
+            f"{MIN_CKTOOL_TIMEOUT_SECONDS} and {MAX_CKTOOL_TIMEOUT_SECONDS}"
         )
+    return value
+
+
+def safe_cktool_command(command: list[str]) -> str:
+    safe: list[str] = []
+    redact_next = False
+    for part in command:
+        if redact_next:
+            safe.append("<redacted>")
+            redact_next = False
+            continue
+        safe.append(part)
+        if part in {"--fields-json", "--user-token", "--management-token"}:
+            redact_next = True
+    return " ".join(safe)
+
+
+def run_cktool(command: list[str], *, check: bool = True) -> subprocess.CompletedProcess[str]:
+    timeout = cktool_timeout_seconds()
+    try:
+        result = subprocess.run(command, text=True, capture_output=True, timeout=timeout)
+    except subprocess.TimeoutExpired as error:
+        raise CktoolCommandError(
+            f"cktool timed out after {timeout}s while running {safe_cktool_command(command)}"
+        ) from error
+    if result.returncode != 0 and cktool_auth_is_missing(result.stderr):
+        raise CktoolAuthError(cktool_auth_error_message())
+    if check and result.returncode != 0:
+        raise CktoolCommandError(cktool_failure_message(result, command))
     return result
+
+
+def cktool_failure_message(result: subprocess.CompletedProcess[str], command: list[str]) -> str:
+    stderr = (result.stderr or "").strip()
+    normalized = stderr.lower()
+    if "container" in normalized:
+        hint = f"Confirm CloudKit container {DEFAULT_CONTAINER_ID} is enabled for team {DEFAULT_TEAM_ID}."
+    elif "team" in normalized:
+        hint = f"Confirm Apple Developer team {DEFAULT_TEAM_ID} is selected for cktool."
+    elif "record type" in normalized or "schema" in normalized or BRIEFING_RECORD_TYPE.lower() in normalized:
+        hint = "Confirm the production CloudKit schema contains public record type Briefing and required indexes."
+    else:
+        hint = "Run `xcrun cktool save-token` if authentication is stale, then retry or use --cloudkit-only after a verified push."
+    details = f": {stderr}" if stderr else ""
+    return f"cktool command failed ({safe_cktool_command(command)}){details}. {hint}"
 
 
 def cktool_auth_is_missing(stderr: str) -> bool:
@@ -306,7 +429,7 @@ def cktool_records_from_stdout(stdout: str) -> list[dict[str, Any]]:
     try:
         payload = json.loads(stdout)
     except json.JSONDecodeError as error:
-        raise RuntimeError("cktool returned non-JSON output") from error
+        raise CktoolCommandError("cktool returned non-JSON output") from error
     records = payload.get("records") if isinstance(payload, dict) else None
     if not isinstance(records, list):
         return []
@@ -447,14 +570,18 @@ def verify_records(records: list[dict[str, Any]], container_id: str, environment
             print(f"{error}: {record['recordName']}", file=sys.stderr)
             missing.append(record["recordName"])
             continue
+        expected_manifest_url = record["fields"].get("manifestUrl")
+        expected_category = record["fields"].get("category")
         if not any(
             cktool_field_value(item, "briefingId") == briefing_id
             and cktool_field_value(item, "status") == READY_STATUS
+            and cktool_field_value(item, "manifestUrl") == expected_manifest_url
+            and cktool_field_value(item, "category") == expected_category
             for item in records_payload
         ):
             missing.append(record["recordName"])
     if missing:
-        raise RuntimeError("CloudKit verification missing ready records: " + ", ".join(missing))
+        raise CloudKitVerificationError("CloudKit verification missing ready records: " + ", ".join(missing))
 
 
 def parse_args(argv: list[str] | None) -> argparse.Namespace:
@@ -473,30 +600,31 @@ def parse_args(argv: list[str] | None) -> argparse.Namespace:
 def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     try:
-        manifest = load_manifest(args.manifest)
+        config = PublisherConfig.from_args(args)
+        manifest = load_manifest(config.manifest)
         records = build_briefing_records(
             manifest,
-            manifest_url=args.manifest_url,
-            topic_path=None if args.all_topics else args.topic,
+            manifest_url=config.manifest_url,
+            topic_path=None if config.all_topics else config.topic,
         )
         if not records:
-            raise RuntimeError("manifest did not produce any Briefing records")
+            raise CloudKitPublisherError("manifest did not produce any Briefing records")
 
         if args.mode == "dry-run":
             print(json.dumps({"status": "dry-run", "records": records}, ensure_ascii=False, indent=2))
             return 0
 
         if args.mode == "preflight":
-            preflight_records(records, args.container_id, args.environment, args.team_id)
+            preflight_records(records, config.container_id, config.environment, config.team_id)
             print(json.dumps({"status": "preflight-ok", "recordCount": len(records)}, ensure_ascii=False))
             return 0
 
         if args.mode == "publish":
-            publish_records(records, args.container_id, args.environment, args.team_id)
+            publish_records(records, config.container_id, config.environment, config.team_id)
             print(json.dumps({"status": "published", "recordCount": len(records)}, ensure_ascii=False))
             return 0
 
-        verify_records(records, args.container_id, args.environment, args.team_id)
+        verify_records(records, config.container_id, config.environment, config.team_id)
         print(json.dumps({"status": "verified", "recordCount": len(records)}, ensure_ascii=False))
         return 0
     except Exception as error:

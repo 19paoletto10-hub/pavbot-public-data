@@ -27,6 +27,8 @@ The production app target uses:
 
 - Bundle ID: `com.paweltanski.pavbotviewer`
 - Team ID: `SP774TZZU8`
+- APNs key ID: `YWVNV6YGXJ`
+- APNs topic: `com.paweltanski.pavbotviewer`
 - APNs environment: `production`
 - CloudKit environment: `Production`
 
@@ -185,6 +187,10 @@ inspection:
 
 - Documentation:
   <https://developer.apple.com/documentation/usernotifications/testing-notifications-using-the-push-notification-console>
+- APNs token auth:
+  <https://developer.apple.com/documentation/usernotifications/establishing-a-token-based-connection-to-apns>
+- APS environment entitlement:
+  <https://developer.apple.com/documentation/bundleresources/entitlements/aps-environment>
 - Sending requests to APNs:
   <https://developer.apple.com/documentation/usernotifications/sending-notification-requests-to-apns>
 - Payload generation:
@@ -193,16 +199,39 @@ inspection:
 Production test values:
 
 - Team: `SP774TZZU8`
+- APNs key ID: `YWVNV6YGXJ`
 - Bundle ID / APNs topic: `com.paweltanski.pavbotviewer`
 - Environment: `Production`
 - Push type: `alert`
 - Priority: `High (10)`
 - Expiration: attempt delivery once for smoke tests
 
-Keep production device tokens, `.p8` keys, generated JWTs, and `cktool` tokens
-out of the repository. The APNs console can validate a JWT and send a manual
-test alert, but the production notification path is the CloudKit subscription
-created by the iOS app.
+Manual APNs smoke test runbook:
+
+1. In the iOS app, copy the **Token urządzenia APNs** from Settings or
+   Diagnostics.
+2. In Apple Push Notifications Console, generate a fresh JWT with
+   `AuthKey_YWVNV6YGXJ.p8`, key ID `YWVNV6YGXJ`, and team ID `SP774TZZU8`.
+3. Validate the JWT for `com.paweltanski.pavbotviewer` in `Production`.
+4. Validate the copied device token in `Production`.
+5. Send a one-off alert payload:
+
+   ```json
+   {
+     "aps": {
+       "alert": {
+         "title": "Pavbot test",
+         "body": "Manual APNs smoke test"
+       },
+       "sound": "default"
+     }
+   }
+   ```
+
+Keep production device tokens, `AuthKey_YWVNV6YGXJ.p8`, generated JWTs, and
+`cktool` tokens out of the repository. The APNs console can validate a JWT and
+send a manual test alert, but the production notification path is the CloudKit
+subscription created by the iOS app.
 
 ## Testing
 

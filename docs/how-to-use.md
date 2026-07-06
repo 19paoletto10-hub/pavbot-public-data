@@ -272,6 +272,18 @@ This requires:
 - local `cktool` authentication from `xcrun cktool save-token` for Production
   CloudKit publication.
 
+Production push identifiers are fixed and safe to document:
+
+- Apple Developer team: `SP774TZZU8`
+- APNs key ID: `YWVNV6YGXJ`
+- APNs topic / bundle ID: `com.paweltanski.pavbotviewer`
+- CloudKit container: `iCloud.com.paweltanski.pavbotviewer`
+
+Secrets stay local. Do not pass `AuthKey_YWVNV6YGXJ.p8`, generated JWTs, APNs
+device tokens, or private keys to the publish script, and do not commit them.
+Use Apple Push Notifications Console only for manual smoke tests after copying
+the iOS **Token urządzenia APNs** from Settings or Diagnostics.
+
 CloudKit records are matched by the stable `briefingId` field, for example
 `tech-news:2026-07-05-1933`. The Codex publisher does not rely on CloudKit
 record names, because `cktool` creates those names itself.

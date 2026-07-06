@@ -196,6 +196,29 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 self.assertIn("--topic", args)
                 self.assertIn("research/tech-news", args)
 
+    def test_publish_refuses_apns_secret_environment_variables(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
+
+            result = self.run_publish_script(
+                repo,
+                "research/tech-news",
+                extra_env={"PAVBOT_APNS_JWT": "dummy-apns-jwt"},
+            )
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("Refusing to publish with APNs secret environment variables", result.stderr)
+            self.assertIn("PAVBOT_APNS_JWT", result.stderr)
+            self.assertEqual(
+                self.git(repo, "rev-list", "--count", "origin/main", stdout=True).strip(),
+                "1",
+            )
+
     def test_llm_jobs_publish_includes_valid_data_json_outputs(self) -> None:
         with self.temporary_repo() as repo:
             self.write_topic_artifact(
@@ -1841,6 +1864,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
         cloudkit_dry_run: bool = True,
         cloudkit_publisher: str | None = None,
         cloudkit_only: bool = False,
+        extra_env: dict[str, str] | None = None,
     ) -> subprocess.CompletedProcess[str]:
         self.assertTrue(self.script_path.exists(), f"missing script: {self.script_path}")
         env = os.environ.copy()
@@ -1859,6 +1883,8 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             env["PAVBOT_CLOUDKIT_DRY_RUN"] = "1"
         if cloudkit_publisher is not None:
             env["PAVBOT_CLOUDKIT_PUBLISHER"] = cloudkit_publisher
+        if extra_env is not None:
+            env.update(extra_env)
         args = ["bash", str(self.script_path)]
         if isolated:
             args.append("--isolated")

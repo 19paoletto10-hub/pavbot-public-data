@@ -2,6 +2,9 @@
 
 ## Now
 
+- Keep CloudKit/APNs production identifiers aligned across iOS, publisher
+  docs, and Apple Developer: team `SP774TZZU8`, APNs key `YWVNV6YGXJ`, topic
+  `com.paweltanski.pavbotviewer`, container `iCloud.com.paweltanski.pavbotviewer`.
 - Keep `tech-news` as the active scheduled topic.
 - Keep `polska-swiat` as the active scheduled general-news topic.
 - Review the first three 08:00 research reports manually.
@@ -16,6 +19,10 @@
 
 ## Next
 
+- Add a short post-publish checklist that records CloudKit verify status and
+  whether a TestFlight device received the expected alert.
+- Add a lightweight local APNs smoke-test note template for Apple Push
+  Notifications Console; never store `.p8`, JWT, or device tokens in the repo.
 - Tune the `daily-research-agent` skill if reports are noisy or duplicated.
 - Tune the `daily-tech-podcast-agent` skill if scripts are too long, too short,
   or not broadcast-ready.
@@ -28,7 +35,8 @@
 
 ## Later
 
-- Add a Node.js 20 Codex SDK orchestrator for VPS/Docker.
+- Consider a CloudKit delivery metrics dashboard once the App Store/TestFlight
+  notification path has three verified production runs.
 - Add structured run metadata if Markdown reports become hard to query.
 - Consider hooks only after there is a concrete enforcement need.
 - Evaluate OpenClaw as an optional external observer runtime after the pilot
