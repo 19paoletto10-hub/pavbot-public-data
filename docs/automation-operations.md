@@ -138,6 +138,15 @@ active `research/<topic>` record, so one automation publication produces one
 visible APNs alert for the matching run.
 This is the one visible APNs alert contract for production runs.
 
+A manual Git push of topic data plus `public/pavbot-manifest.json` is not a
+production publication. It may make data visible in the app, but it does not
+guarantee an APNs alert because the push can bypass the CloudKit gate and never
+create or update the matching ready `Briefing` record. When the data is visible
+but no alert arrives after a successful script run and CloudKit verify, debug
+the device side first: notification permission, iCloud account, CloudKit
+subscription `briefings-ready-subscription`, production APNs token delivery, and
+whether that run actually changed or created the `Briefing` record.
+
 Production push configuration uses Apple Developer team `SP774TZZU8`, APNs key
 ID `YWVNV6YGXJ`, APNs topic `com.paweltanski.pavbotviewer`, and CloudKit
 container `iCloud.com.paweltanski.pavbotviewer`. These identifiers may appear

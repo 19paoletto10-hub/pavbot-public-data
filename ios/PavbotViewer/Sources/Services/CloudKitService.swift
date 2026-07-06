@@ -7,6 +7,37 @@ enum CloudKitConfiguration {
     static let containerIdentifier = PavbotConnectionDefaults.cloudKitContainerIdentifier
 }
 
+enum CloudKitRuntimeSupport {
+    static let disabledInUnitTestsMessage = "CloudKit runtime is disabled in the unit-test host."
+
+    static var isRunningUnitTests: Bool {
+        ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
+            || NSClassFromString("XCTestCase") != nil
+            || ProcessInfo.processInfo.arguments.contains { $0.localizedCaseInsensitiveContains("xctest") }
+    }
+
+    static func shouldUseCloudKitRuntime() -> Bool {
+        !isRunningUnitTests
+    }
+
+    static func requireCloudKitRuntime() throws {
+        guard shouldUseCloudKitRuntime() else {
+            throw CloudKitRuntimeError.disabledInUnitTests
+        }
+    }
+}
+
+enum CloudKitRuntimeError: LocalizedError, Equatable {
+    case disabledInUnitTests
+
+    var errorDescription: String? {
+        switch self {
+        case .disabledInUnitTests:
+            CloudKitRuntimeSupport.disabledInUnitTestsMessage
+        }
+    }
+}
+
 struct Briefing: Identifiable, Equatable, Sendable {
     static let recordType = "Briefing"
 
@@ -204,20 +235,26 @@ actor CloudKitService: BriefingMetadataFetching {
     static let shared = CloudKitService()
     static let briefingsReadySubscriptionID = "briefings-ready-subscription"
 
-    private let container: CKContainer
-    private let publicCloudDatabase: CKDatabase
-    private let privateCloudDatabase: CKDatabase
+    private let containerIdentifier: String
     private let logger: Logger
+    private var container: CKContainer {
+        CKContainer(identifier: containerIdentifier)
+    }
+    private var publicCloudDatabase: CKDatabase {
+        container.publicCloudDatabase
+    }
+    private var privateCloudDatabase: CKDatabase {
+        container.privateCloudDatabase
+    }
 
     init(containerIdentifier: String = CloudKitConfiguration.containerIdentifier) {
-        container = CKContainer(identifier: containerIdentifier)
-        publicCloudDatabase = container.publicCloudDatabase
-        privateCloudDatabase = container.privateCloudDatabase
+        self.containerIdentifier = containerIdentifier
         logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "PavbotViewer", category: "CloudKit")
     }
 
     func fetchLatestBriefings(limit: Int = 50) async throws -> [Briefing] {
         do {
+            try CloudKitRuntimeSupport.requireCloudKitRuntime()
             let predicate = NSPredicate(format: "status == %@", "ready")
             let query = CKQuery(recordType: Briefing.recordType, predicate: predicate)
             query.sortDescriptors = [NSSortDescriptor(key: "createdAt", ascending: false)]
@@ -235,6 +272,7 @@ actor CloudKitService: BriefingMetadataFetching {
 
     func fetchBriefing(by briefingId: String) async throws -> Briefing {
         do {
+            try CloudKitRuntimeSupport.requireCloudKitRuntime()
             let predicate = NSPredicate(format: "briefingId == %@", briefingId)
             let query = CKQuery(recordType: Briefing.recordType, predicate: predicate)
             let (matches, _) = try await publicCloudDatabase.records(matching: query, resultsLimit: 1)
@@ -254,6 +292,7 @@ actor CloudKitService: BriefingMetadataFetching {
 
     func saveUserNotificationPreferences(_ preferences: UserNotificationPreferences) async throws {
         do {
+            try CloudKitRuntimeSupport.requireCloudKitRuntime()
             let existing = try? await privateCloudDatabase.record(
                 for: CKRecord.ID(recordName: UserNotificationPreferences.recordName)
             )
@@ -267,6 +306,7 @@ actor CloudKitService: BriefingMetadataFetching {
 
     func loadUserNotificationPreferences() async throws -> UserNotificationPreferences {
         do {
+            try CloudKitRuntimeSupport.requireCloudKitRuntime()
             let record = try await privateCloudDatabase.record(
                 for: CKRecord.ID(recordName: UserNotificationPreferences.recordName)
             )
@@ -281,6 +321,7 @@ actor CloudKitService: BriefingMetadataFetching {
     }
 
     func createOrUpdateSubscriptions() async throws {
+        try CloudKitRuntimeSupport.requireCloudKitRuntime()
         let predicate = NSPredicate(format: "status == %@", "ready")
         let subscription = CKQuerySubscription(
             recordType: Briefing.recordType,

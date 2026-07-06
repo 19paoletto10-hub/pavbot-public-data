@@ -3189,6 +3189,10 @@ final class PavbotManifestTests: XCTestCase {
             .deletingLastPathComponent()
         let projectYML = try String(contentsOf: projectRoot.appendingPathComponent("project.yml"))
         let entitlements = try String(contentsOf: projectRoot.appendingPathComponent("Sources/PavbotViewer.entitlements"))
+        let cloudKitSource = try String(contentsOf: projectRoot.appendingPathComponent("Sources/Services/CloudKitService.swift"))
+        let notificationsSource = try String(contentsOf: projectRoot.appendingPathComponent("Sources/Services/ArtifactNotificationService.swift"))
+        let appSource = try String(contentsOf: projectRoot.appendingPathComponent("Sources/PavbotViewerApp.swift"))
+        let settingsSource = try String(contentsOf: projectRoot.appendingPathComponent("Sources/Views/SettingsView.swift"))
 
         XCTAssertTrue(projectYML.contains("CloudKit.framework"))
         XCTAssertTrue(projectYML.contains("DEVELOPMENT_TEAM: SP774TZZU8"))
@@ -3204,6 +3208,11 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(entitlements.contains("$(CLOUDKIT_ENVIRONMENT)"))
         XCTAssertTrue(projectYML.contains("CLOUDKIT_ENVIRONMENT: Development"))
         XCTAssertTrue(projectYML.contains("CLOUDKIT_ENVIRONMENT: Production"))
+        XCTAssertTrue(cloudKitSource.contains("XCTestConfigurationFilePath"))
+        XCTAssertTrue(cloudKitSource.contains("requireCloudKitRuntime()"))
+        XCTAssertTrue(appSource.contains("CloudKitRuntimeSupport.shouldUseCloudKitRuntime()"))
+        XCTAssertTrue(notificationsSource.contains("CloudKitRuntimeSupport.shouldUseCloudKitRuntime()"))
+        XCTAssertTrue(settingsSource.contains("CloudKitRuntimeSupport.requireCloudKitRuntime()"))
     }
 
     @MainActor

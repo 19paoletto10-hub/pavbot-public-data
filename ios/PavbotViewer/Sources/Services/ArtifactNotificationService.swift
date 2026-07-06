@@ -111,6 +111,12 @@ enum RemoteNotificationRegistrationPolicy {
 @MainActor
 enum RemoteNotificationPermission {
     static func requestAndRegister() async -> Bool {
+        guard CloudKitRuntimeSupport.shouldUseCloudKitRuntime() else {
+            LiveNotificationSettings.setEnabled(false)
+            RemoteNotificationDiagnostics.saveRegistrationError(CloudKitRuntimeSupport.disabledInUnitTestsMessage)
+            return false
+        }
+
         let granted = (try? await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge])) ?? false
         if granted {
             LiveNotificationSettings.setEnabled(true)
@@ -131,6 +137,11 @@ enum RemoteNotificationPermission {
     }
 
     static func refreshRegistrationIfNeeded() async {
+        guard CloudKitRuntimeSupport.shouldUseCloudKitRuntime() else {
+            RemoteNotificationDiagnostics.saveRegistrationError(CloudKitRuntimeSupport.disabledInUnitTestsMessage)
+            return
+        }
+
         let settings = await UNUserNotificationCenter.current().notificationSettings()
         guard RemoteNotificationRegistrationPolicy.shouldRegister(
             liveNotificationsEnabled: LiveNotificationSettings.isEnabled(),

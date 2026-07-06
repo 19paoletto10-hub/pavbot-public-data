@@ -21,8 +21,10 @@ struct PavbotViewerApp: App {
 
     init() {
         let coordinator = PavbotAudioSessionCoordinator()
-        let cloudKitService = CloudKitService.shared
-        _store = State(initialValue: ManifestStore(briefingProvider: cloudKitService))
+        let briefingProvider: (any BriefingMetadataFetching)? = CloudKitRuntimeSupport.shouldUseCloudKitRuntime()
+            ? CloudKitService.shared
+            : nil
+        _store = State(initialValue: ManifestStore(briefingProvider: briefingProvider))
         _audioCoordinator = State(initialValue: coordinator)
         _audioPlayback = State(initialValue: AudioPlaybackService(audioCoordinator: coordinator))
         PavbotConnectionDefaults.enforceLegacyUserDefaults()

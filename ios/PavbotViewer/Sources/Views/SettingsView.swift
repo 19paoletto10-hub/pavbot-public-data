@@ -588,6 +588,7 @@ struct SettingsView: View {
     }
 
     private func cloudKitAccountStatus() async throws -> CKAccountStatus {
+        try CloudKitRuntimeSupport.requireCloudKitRuntime()
         let container = CKContainer(identifier: PavbotConnectionDefaults.cloudKitContainerIdentifier)
         return try await withCheckedThrowingContinuation { (continuation: CheckedContinuation<CKAccountStatus, Error>) in
             container.accountStatus { status, error in
