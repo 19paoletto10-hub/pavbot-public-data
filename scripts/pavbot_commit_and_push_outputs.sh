@@ -927,6 +927,7 @@ publish_cloudkit_briefings_gate() {
     "--container-id" "$container_id"
     "--environment" "$environment"
     "--team-id" "$team_id"
+    "--topic" "$topic_path"
   )
 
   [[ -f "$cloudkit_publisher" ]] || die "missing CloudKit publisher: $cloudkit_publisher"

@@ -289,6 +289,11 @@ actor CloudKitService: BriefingMetadataFetching {
             options: [.firesOnRecordCreation, .firesOnRecordUpdate]
         )
         let notificationInfo = CKSubscription.NotificationInfo()
+        notificationInfo.titleLocalizationKey = "PAVBOT_BRIEFING_NOTIFICATION_TITLE"
+        notificationInfo.alertLocalizationKey = "PAVBOT_BRIEFING_NOTIFICATION_BODY"
+        notificationInfo.alertLocalizationArgs = ["title"]
+        notificationInfo.soundName = "default"
+        notificationInfo.desiredKeys = ["briefingId", "title", "summary", "manifestUrl", "category", "createdAt"]
         notificationInfo.shouldSendContentAvailable = true
         subscription.notificationInfo = notificationInfo
 

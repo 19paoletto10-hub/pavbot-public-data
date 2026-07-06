@@ -256,6 +256,7 @@ final class ArtifactNotificationDelegate: NSObject, UNUserNotificationCenterDele
 
 private enum NotificationRoutingCommand: Sendable {
     case dailyWeather(date: String?)
+    case cloudKitBriefing(CloudKitBriefingNotificationRoute)
     case artifactRoute(ArtifactNotificationRoute)
     case artifactID(String)
     case automationID(String)
@@ -264,6 +265,30 @@ private enum NotificationRoutingCommand: Sendable {
     init(userInfo: [AnyHashable: Any]) {
         if userInfo["notificationKind"] as? String == "dailyWeather" {
             self = .dailyWeather(date: userInfo["weatherDate"] as? String)
+            return
+        }
+        if let queryNotification = CKNotification(fromRemoteNotificationDictionary: userInfo) as? CKQueryNotification,
+           queryNotification.subscriptionID == CloudKitService.briefingsReadySubscriptionID {
+            var routeUserInfo: [AnyHashable: Any] = [:]
+            if let recordFields = queryNotification.recordFields {
+                for key in ["briefingId", "title", "summary", "manifestUrl", "category"] {
+                    if let value = recordFields[key] {
+                        routeUserInfo[key] = value
+                    }
+                }
+                if let createdAt = recordFields["createdAt"] as? Date {
+                    routeUserInfo["createdAt"] = ISO8601DateFormatter().string(from: createdAt)
+                } else if let createdAt = recordFields["createdAt"] {
+                    routeUserInfo["createdAt"] = createdAt
+                }
+            }
+            if let route = CloudKitBriefingNotificationRoute(userInfo: routeUserInfo) {
+                self = .cloudKitBriefing(route)
+                return
+            }
+        }
+        if let route = CloudKitBriefingNotificationRoute(userInfo: userInfo) {
+            self = .cloudKitBriefing(route)
             return
         }
         if let route = ArtifactNotificationRoute(userInfo: userInfo) {
@@ -286,6 +311,8 @@ private enum NotificationRoutingCommand: Sendable {
         switch self {
         case .dailyWeather(let date):
             router.openDailyWeather(date: date)
+        case .cloudKitBriefing(let route):
+            _ = router.openReportsForTopic(route.topic, latestDay: route.stamp)
         case .artifactRoute(let route):
             if !router.openReportRoute(route) {
                 router.openArtifactRoute(route)

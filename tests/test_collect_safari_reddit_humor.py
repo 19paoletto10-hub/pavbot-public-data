@@ -714,7 +714,7 @@ def test_post_file_posts_no_safe_comments_with_diagnostic_note(monkeypatch, tmp_
     assert collector.json.loads(capsys.readouterr().out)["publishResult"] == "cloudkit-gate"
 
 
-def test_main_post_file_without_standard_artifact_path_does_not_call_notifier(monkeypatch, tmp_path, capsys):
+def test_main_post_file_without_standard_artifact_path_does_not_call_cloudkit_gate(monkeypatch, tmp_path, capsys):
     collector = load_collector()
     digest_path = tmp_path / "reddit-radar.json"
     digest_path.write_text(

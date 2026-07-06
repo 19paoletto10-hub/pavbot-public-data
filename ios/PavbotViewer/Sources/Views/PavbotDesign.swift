@@ -456,11 +456,11 @@ struct PavbotUserFacingError: Equatable {
         case let value where value.contains("Showing cached data"):
             "Pokazuję dane z pamięci, bo odświeżenie nie powiodło się."
         case let value where value.contains("Reddit OAuth credentials"):
-            "Radar memów wymaga konfiguracji Reddit OAuth w notifierze."
+            "Radar memów wymaga świeżej publikacji przez standardowy manifest i CloudKit."
         case let value where value.contains("cancelled") || value.contains("The request timed out"):
-            "Połączenie trwało zbyt długo. Sprawdź internet, Docker i Cloudflare Tunnel."
+            "Połączenie trwało zbyt długo. Sprawdź internet, iCloud i CloudKit."
         case let value where value.contains("offline") || value.contains("not connected"):
-            "Brak połączenia z siecią albo serwer notifiera jest niedostępny."
+            "Brak połączenia z siecią albo CloudKit jest chwilowo niedostępny."
         case let value where value.isEmpty:
             "Spróbuj ponownie za chwilę."
         default:

@@ -16,6 +16,11 @@ zdalny manifest, a dopiero potem wyślij finalny digest na endpoint produkcyjny.
 Nie używaj Reddit OAuth. Nie klikaj vote/like/comment/share, nie wysyłaj
 formularzy, nie publikuj postów ani komentarzy i nie omijaj login/CAPTCHA.
 
+Konfliktowe lub polaryzujące posty są dozwolone, jeśli nadal działają jako
+humor/internet absurd i po read-only review da się wybrać bezpieczne komentarze.
+Nie publikuj zestawów opartych na mowie nienawiści, dehumanizacji, atakach na
+cechy chronione, wezwaniu do przemocy albo komentarzach napędzających pile-on.
+
 Kolejność przebiegu:
 
 1. Zbierz kandydatów i zapisz artefakty:
@@ -23,15 +28,18 @@ Kolejność przebiegu:
 2. Ręcznie lub przez read-only Computer Use/Safari review potwierdź komentarze
    każdego publikowanego itemu. Każdy item musi mieć status `reviewed` albo
    `no_safe_comments`.
-3. Nie publikuj słabego, zduplikowanego lub zbyt krótkiego zestawu. Jeśli po
-   filtrach nie ma wystarczająco dobrych nowych tematów, zostaw poprzedni
-   produkcyjny digest bez zmian i zapisz diagnozę w `runs/`.
+3. Nie publikuj słabego, zduplikowanego lub zbyt krótkiego zestawu. Dopuszczaj
+   konfliktowe tematy tylko wtedy, gdy absurd/punchline jest czytelny, a
+   wybrane komentarze są bezpieczne. Jeśli po filtrach nie ma
+   wystarczająco dobrych nowych tematów, zostaw poprzedni produkcyjny digest
+   bez zmian i zapisz diagnozę w `runs/`.
 4. Opublikuj audit i manifest:
    `scripts/pavbot_commit_and_push_outputs.sh --isolated research/reddit-radar`
 5. Zweryfikuj zdalny pakiet:
    `python3 scripts/pavbot_publication_contract.py verify-remote research/reddit-radar --ref origin/main`
-6. Dopiero po udanym pushu i verify-remote wyślij finalny digest do notifiera
-   produkcyjnego przez obsługiwaną ścieżkę skryptu albo endpoint notifiera.
+6. Dopiero po udanym pushu, verify-remote i CloudKit verify uznaj digest za
+   produkcyjnie opublikowany. Standardowy publish script wysyła rekord
+   `Briefing` przez CloudKit gate.
 
 Wymagane artefakty topicu:
 
@@ -39,6 +47,6 @@ Wymagane artefakty topicu:
 - `research/reddit-radar/data/YYYY-MM-DD-HHMM-reddit-radar.json`
 - `research/reddit-radar/runs/YYYY-MM-DD-HHMM-reddit-radar.md`
 
-Publikacja notifiera bez wcześniejszego `origin/main` i zdalnego manifestu jest
-stanem częściowym/nieudanym, nie sukcesem.
+Publikacja bez wcześniejszego `origin/main`, zdalnego manifestu i CloudKit gate
+jest stanem częściowym/nieudanym, nie sukcesem.
 ```

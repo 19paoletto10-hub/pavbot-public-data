@@ -419,8 +419,24 @@ private struct ResearchRunPicker: View {
     let packages: [TopicReportPackage]
     @Binding var selectedReportDay: String?
 
-    private var recentPackages: [TopicReportPackage] {
-        Array(packages.prefix(5))
+    private var recentReportDays: [String] {
+        TopicReportPackage.recentReportDays(in: packages, limit: 4)
+    }
+
+    private var selectedReportDate: String? {
+        let candidate = TopicReportPackage.selectedReportDate(in: packages, selectedReportDay: selectedReportDay)
+        if let candidate, recentReportDays.contains(candidate) {
+            return candidate
+        }
+        return recentReportDays.first
+    }
+
+    private var selectedDayPackages: [TopicReportPackage] {
+        packages(on: selectedReportDate)
+    }
+
+    private var daySummary: String {
+        recentReportDays.count == 1 ? "Ostatni dzień" : "Ostatnie \(recentReportDays.count) dni"
     }
 
     var body: some View {
@@ -434,28 +450,51 @@ private struct ResearchRunPicker: View {
 
                     Spacer(minLength: 8)
 
-                    Text("Ostatnie \(recentPackages.count)")
+                    Text(daySummary)
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(.secondary)
                 }
 
-                ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 8) {
-                        ForEach(recentPackages) { package in
-                            Button {
-                                selectedReportDay = package.key
-                            } label: {
-                                ResearchRunChip(
-                                    package: package,
-                                    isSelected: package.id == selectedPackageID,
-                                    tint: topic.tint
-                                )
+                if recentReportDays.count > 1 {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 8) {
+                            ForEach(recentReportDays, id: \.self) { day in
+                                Button {
+                                    selectedReportDay = packages(on: day).first?.key ?? day
+                                } label: {
+                                    ResearchDayFilterChip(
+                                        date: day,
+                                        isSelected: day == selectedReportDate,
+                                        tint: topic.tint
+                                    )
+                                }
+                                .buttonStyle(.plain)
+                                .accessibilityLabel("Pokaż przebiegi z dnia \(day)")
                             }
-                            .buttonStyle(.plain)
-                            .accessibilityLabel("Wybierz przebieg \(package.displayDate)")
                         }
+                        .padding(.vertical, 2)
                     }
-                    .padding(.vertical, 2)
+                }
+
+                if selectedDayPackages.count > 1 {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        HStack(spacing: 8) {
+                            ForEach(selectedDayPackages) { package in
+                                Button {
+                                    selectedReportDay = package.key
+                                } label: {
+                                    ResearchRunChip(
+                                        package: package,
+                                        isSelected: package.id == selectedPackageID,
+                                        tint: topic.tint
+                                    )
+                                }
+                                .buttonStyle(.plain)
+                                .accessibilityLabel("Wybierz przebieg \(package.displayDate)")
+                            }
+                        }
+                        .padding(.vertical, 2)
+                    }
                 }
             }
             .padding(12)
@@ -468,17 +507,48 @@ private struct ResearchRunPicker: View {
     }
 
     private var shouldShowPicker: Bool {
-        guard recentPackages.count > 1 else { return false }
-        return true
+        recentReportDays.count > 1 || selectedDayPackages.count > 1
     }
 
     private var selectedPackageID: String? {
-        guard let selectedReportDay else { return recentPackages.first?.id }
-        return recentPackages.first { package in
+        guard let selectedReportDay else { return selectedDayPackages.first?.id }
+        return selectedDayPackages.first { package in
             package.key == selectedReportDay
                 || package.date == selectedReportDay
                 || package.key.hasPrefix(selectedReportDay)
         }?.id
+    }
+
+    private func packages(on selectedReportDate: String?) -> [TopicReportPackage] {
+        TopicReportPackage.reportPackages(in: packages, on: selectedReportDate)
+    }
+}
+
+private struct ResearchDayFilterChip: View {
+    let date: String
+    let isSelected: Bool
+    let tint: Color
+
+    var body: some View {
+        HStack(spacing: 7) {
+            Image(systemName: isSelected ? "checkmark.circle.fill" : "calendar")
+                .font(.caption.weight(.bold))
+                .foregroundStyle(isSelected ? .white : tint)
+                .frame(width: 16, height: 16)
+
+            Text(date)
+                .font(.caption.weight(.bold))
+                .foregroundStyle(isSelected ? .white : tint)
+                .lineLimit(1)
+        }
+        .padding(.horizontal, 11)
+        .padding(.vertical, 9)
+        .frame(minHeight: 38)
+        .background(isSelected ? tint : tint.opacity(0.12), in: RoundedRectangle(cornerRadius: 11, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 11, style: .continuous)
+                .stroke(isSelected ? tint.opacity(0.5) : tint.opacity(0.18), lineWidth: 1)
+        }
     }
 }
 

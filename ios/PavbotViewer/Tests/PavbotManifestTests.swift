@@ -3141,6 +3141,25 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(source.contains("publicCloudDatabase.record(for: CKRecord.ID(recordName: briefingId))"))
         XCTAssertTrue(source.contains("Logger(subsystem: Bundle.main.bundleIdentifier ?? \"PavbotViewer\", category: \"CloudKit\")"))
         XCTAssertTrue(source.contains("shouldSendContentAvailable = true"))
+        XCTAssertTrue(source.contains("titleLocalizationKey = \"PAVBOT_BRIEFING_NOTIFICATION_TITLE\""))
+        XCTAssertTrue(source.contains("alertLocalizationKey = \"PAVBOT_BRIEFING_NOTIFICATION_BODY\""))
+        XCTAssertTrue(source.contains("alertLocalizationArgs = [\"title\"]"))
+        XCTAssertTrue(source.contains("soundName = \"default\""))
+        XCTAssertTrue(source.contains("desiredKeys = [\"briefingId\", \"title\", \"summary\", \"manifestUrl\", \"category\", \"createdAt\"]"))
+    }
+
+    func testCloudKitNotificationLocalizationStringsExist() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let stringsURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/pl.lproj/Localizable.strings")
+        let strings = try String(contentsOf: stringsURL)
+
+        XCTAssertTrue(strings.contains("PAVBOT_BRIEFING_NOTIFICATION_TITLE"))
+        XCTAssertTrue(strings.contains("PAVBOT_BRIEFING_NOTIFICATION_BODY"))
+        XCTAssertTrue(strings.contains("Pavbot"))
+        XCTAssertTrue(strings.contains("Nowe dane: %@"))
     }
 
     func testUserPreferencesDecodeCloudKitBooleanCompatibility() throws {
@@ -3177,6 +3196,10 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(entitlements.contains("com.apple.developer.icloud-services"))
         XCTAssertTrue(entitlements.contains("CloudKit"))
         XCTAssertTrue(entitlements.contains("aps-environment"))
+        XCTAssertTrue(entitlements.contains("com.apple.developer.icloud-container-environment"))
+        XCTAssertTrue(entitlements.contains("$(CLOUDKIT_ENVIRONMENT)"))
+        XCTAssertTrue(projectYML.contains("CLOUDKIT_ENVIRONMENT: Development"))
+        XCTAssertTrue(projectYML.contains("CLOUDKIT_ENVIRONMENT: Production"))
     }
 
     @MainActor
@@ -5014,7 +5037,31 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(helperSource.contains("router.selectedReportDay = latestReportKey"))
     }
 
-    func testResearchViewShowsFiveRunPickerForEachResearchTopic() throws {
+    func testResearchRunPickerGroupsRunsByFourRecentDays() throws {
+        let packages = [
+            Self.researchPackage(date: "2026-07-05", time: "19:33"),
+            Self.researchPackage(date: "2026-07-05", time: "08:10"),
+            Self.researchPackage(date: "2026-07-04", time: "19:33"),
+            Self.researchPackage(date: "2026-07-03", time: "19:33"),
+            Self.researchPackage(date: "2026-07-02", time: "19:33"),
+            Self.researchPackage(date: "2026-07-01", time: "19:33")
+        ]
+
+        XCTAssertEqual(
+            TopicReportPackage.recentReportDays(in: packages, limit: 4),
+            ["2026-07-05", "2026-07-04", "2026-07-03", "2026-07-02"]
+        )
+        XCTAssertEqual(
+            TopicReportPackage.reportPackages(in: packages, on: "2026-07-05").map(\.key),
+            ["2026-07-05-1933", "2026-07-05-0810"]
+        )
+        XCTAssertEqual(
+            TopicReportPackage.selectedReportDate(in: packages, selectedReportDay: "2026-07-05-0810"),
+            "2026-07-05"
+        )
+    }
+
+    func testResearchViewShowsFourDayRunPickerForEachResearchTopic() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let sourceURL = testsURL
             .deletingLastPathComponent()
@@ -5033,10 +5080,13 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(researchViewSource.contains("ResearchRunPicker("))
         XCTAssertTrue(researchViewSource.contains("packages: packages"))
         XCTAssertTrue(researchViewSource.contains("selectedReportDay: $router.selectedReportDay"))
-        XCTAssertTrue(pickerSource.contains("Array(packages.prefix(5))"))
-        XCTAssertTrue(pickerSource.contains("guard recentPackages.count > 1 else"))
-        XCTAssertTrue(pickerSource.contains("ForEach(recentPackages)"))
+        XCTAssertTrue(pickerSource.contains("recentReportDays(in: packages, limit: 4)"))
+        XCTAssertTrue(pickerSource.contains("ForEach(recentReportDays, id: \\.self)"))
+        XCTAssertTrue(pickerSource.contains("packages(on: selectedReportDate)"))
+        XCTAssertTrue(pickerSource.contains("ResearchDayFilterChip("))
+        XCTAssertTrue(pickerSource.contains("ForEach(selectedDayPackages)"))
         XCTAssertTrue(pickerSource.contains("selectedReportDay = package.key"))
+        XCTAssertFalse(pickerSource.contains("Array(packages.prefix(5))"))
     }
 
     func testResearchRunPickerSelectionFlowsIntoAllResearchLoads() throws {
@@ -5443,6 +5493,28 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(source.contains("WeatherTemperatureValueLabel(\n                                bar.temperatureLabel"))
         XCTAssertFalse(source.contains("Text(bar.temperatureLabel)\n                                .font(.system(size: 9, weight: .bold))"))
         XCTAssertFalse(source.contains("Text(bar.temperatureLabel)\n                                .font(.caption2.weight(.bold))"))
+    }
+
+    func testWeatherPrecipitationChartUsesReadableAxisLegendAndLabels() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/WeatherBriefView.swift")
+        let source = try String(contentsOf: sourceURL)
+        let tileSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct WeatherPrecipitationTile").dropFirst().first?
+                .components(separatedBy: "private struct WeatherMetricTile").first
+        )
+
+        XCTAssertTrue(tileSource.contains("WeatherPrecipitationChartValueLabel("))
+        XCTAssertTrue(tileSource.contains("WeatherPrecipitationChartLegend("))
+        XCTAssertTrue(tileSource.contains(".chartYAxis {"))
+        XCTAssertTrue(tileSource.contains("AxisGridLine"))
+        XCTAssertTrue(tileSource.contains("AxisValueLabel"))
+        XCTAssertTrue(tileSource.contains(".chartPlotStyle"))
+        XCTAssertTrue(tileSource.contains(".frame(height: 118)"))
+        XCTAssertFalse(tileSource.contains(".chartYAxis(.hidden)"))
     }
 
     func testTodayLiveTopicsSnapshotBuildsPolandAndWorldTopicsFromMobileNewsData() throws {
@@ -7108,6 +7180,26 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     @MainActor
+    func testRouterOpensResearchRunFromCloudKitBriefingNotificationUserInfo() {
+        let router = AppRouter()
+        router.selectedTab = .settings
+
+        router.handleNotification(
+            userInfo: [
+                "briefingId": "tech-news:2026-07-05-1933",
+                "category": "tech-news"
+            ]
+        )
+
+        XCTAssertEqual(router.selectedTab, .research)
+        XCTAssertEqual(router.selectedResearchTopic, .techNews)
+        XCTAssertEqual(router.selectedReportDay, "2026-07-05-1933")
+        XCTAssertTrue(router.selectedReportArtifactIDs.isEmpty)
+        XCTAssertNil(router.pendingArtifactID)
+        XCTAssertNil(router.artifactRoute)
+    }
+
+    @MainActor
     func testRouterOpensJobsTabFromJobsNotificationUserInfo() {
         let router = AppRouter()
         router.selectedTab = .settings
@@ -8442,6 +8534,28 @@ final class PavbotManifestTests: XCTestCase {
         output: "research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-mobile-brief.pdf",
         outputUrl: "https://raw.githubusercontent.com/example/pavbot/main/research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-mobile-brief.pdf"
     )
+
+    private static func researchPackage(date: String, time: String) -> TopicReportPackage {
+        let compactTime = time.replacingOccurrences(of: ":", with: "")
+        let key = "\(date)-\(compactTime)"
+        return TopicReportPackage(
+            topic: .techNews,
+            key: key,
+            artifacts: [
+                PavbotArtifact(
+                    id: "run-\(key)",
+                    type: .run,
+                    topic: "tech-news",
+                    title: "Daily Research Report: tech-news",
+                    path: "research/tech-news/runs/\(key).md",
+                    url: "research/tech-news/runs/\(key).md",
+                    sizeBytes: 200,
+                    date: date,
+                    time: time
+                )
+            ]
+        )
+    }
 
     private static func date(_ value: String) -> Date {
         ISO8601DateFormatter().date(from: value)!

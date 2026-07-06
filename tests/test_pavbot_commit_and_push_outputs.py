@@ -86,6 +86,35 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
             self.assertIn("cloudkit failed intentionally", result.stderr)
             self.assertIn("CloudKit publication failed", result.stderr)
 
+    def test_publish_passes_active_topic_to_cloudkit_publisher(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
+            with tempfile.TemporaryDirectory() as publisher_dir:
+                args_path = Path(publisher_dir) / "cloudkit-args.txt"
+                fake_publisher = Path(publisher_dir) / "record-cloudkit-args.sh"
+                fake_publisher.write_text(
+                    "#!/usr/bin/env bash\n"
+                    f"printf '%s\\n' \"$@\" >> {str(args_path)!r}\n",
+                    encoding="utf-8",
+                )
+                fake_publisher.chmod(0o755)
+
+                result = self.run_publish_script(
+                    repo,
+                    "research/tech-news",
+                    cloudkit_publisher=str(fake_publisher),
+                )
+
+                self.assertEqual(result.returncode, 0, result.stderr)
+                args = args_path.read_text(encoding="utf-8").splitlines()
+                self.assertIn("--topic", args)
+                self.assertIn("research/tech-news", args)
+
     def test_llm_jobs_publish_includes_valid_data_json_outputs(self) -> None:
         with self.temporary_repo() as repo:
             self.write_topic_artifact(

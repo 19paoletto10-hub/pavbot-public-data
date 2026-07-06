@@ -30,14 +30,16 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer
         INFOPLIST_FILE: Sources/Info.plist
-        CURRENT_PROJECT_VERSION: "260704.072438"
+        CURRENT_PROJECT_VERSION: "260706.004722"
       configs:
         Debug:
           CODE_SIGN_ENTITLEMENTS: Sources/PavbotViewer.entitlements
           APS_ENVIRONMENT: development
+          CLOUDKIT_ENVIRONMENT: Development
         Release:
           CODE_SIGN_ENTITLEMENTS: Sources/PavbotViewer.entitlements
           APS_ENVIRONMENT: production
+          CLOUDKIT_ENVIRONMENT: Production
     postBuildScripts:
       - name: Set Dynamic Build Number
         basedOnDependencyAnalysis: false
@@ -100,7 +102,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer.audioactivity
         INFOPLIST_FILE: AudioActivityExtension/Info.plist
-        CURRENT_PROJECT_VERSION: "260704.072438"
+        CURRENT_PROJECT_VERSION: "260706.004722"
         CODE_SIGN_STYLE: Automatic
         DEVELOPMENT_TEAM: SP774TZZU8
         SWIFT_VERSION: "5.9"

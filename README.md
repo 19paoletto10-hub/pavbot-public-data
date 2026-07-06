@@ -6,9 +6,9 @@ GitHub raw manifest, groups generated files by automation, and presents them as
 native iOS experiences: Today, Pulse Day, Jobs, Research, audio/TTS, saved
 articles, diagnostics, and live notification settings.
 
-This repository contains the complete product workspace: the iOS app, the
-optional APNs notifier backend, Codex automation prompts and skills, research
-rendering scripts, generated manifest tooling, tests, and operational docs.
+This repository contains the complete product workspace: the iOS app, Codex
+automation prompts and skills, research rendering scripts, generated manifest
+tooling, CloudKit publication tooling, tests, and operational docs.
 
 ## Product Capabilities
 
@@ -22,10 +22,10 @@ rendering scripts, generated manifest tooling, tests, and operational docs.
   powered by structured JSON or Markdown fallback.
 - **Audio** - MP3 playback, local iPhone TTS, rate controls, transcript support,
   mini-player, Now Playing integration, and Live Activity support.
-- **Notifications** - optional APNs push flow through a local or hosted Pavbot
-  notifier, GitHub webhook, and manifest diffing.
-- **Diagnostics** - manifest freshness, cache state, notifier status, device
-  token visibility, and connection defaults.
+- **Notifications** - CloudKit Subscriptions + APNs alerts after verified
+  automation publication.
+- **Diagnostics** - manifest freshness, cache state, CloudKit/APNs status,
+  device token visibility, and connection defaults.
 - **Accessibility** - system light/dark appearance, Dynamic Type, VoiceOver and
   Voice Control labels, reduced motion handling, contrast-aware UI, and
   transcript surfaces.
@@ -37,12 +37,9 @@ Codex automations
   -> research/<topic>/ outputs
   -> public/pavbot-manifest.json
   -> GitHub raw manifest
+  -> CloudKit Briefing record
+  -> APNs notification
   -> Pavbot iOS app
-
-GitHub webhook
-  -> backend/pavbot-notifier
-  -> APNs
-  -> iPhone notification routing
 ```
 
 The iOS app remains a reader and organizer. Automations publish outputs to the
@@ -54,16 +51,14 @@ manifest and renders native screens from structured artifacts such as
 
 - `ios/PavbotViewer/` - SwiftUI iOS app, tests, XcodeGen project, Live Activity
   extension, app icons, services, and native screens.
-- `backend/pavbot-notifier/` - Dockerized FastAPI notifier for GitHub webhooks,
-  APNs pushes, weather reports, humor feed, and app defaults.
 - `research/` - automation topics, prompts, run outputs, PDFs, podcast assets,
   structured data artifacts, topic indexes, and backlogs.
 - `.agents/` - Codex skills and shared scripts used by scheduled automations.
 - `scripts/` - manifest generation, publishing, PDF/data renderers, validators,
   and workspace verification.
 - `tests/` - Python tests for manifest generation, publishing, renderers,
-  validators, and notifier logic.
-- `docs/` - setup guides, architecture, notifier operations, App Store release
+  validators, and CloudKit publication logic.
+- `docs/` - setup guides, architecture, automation operations, App Store release
   checklist, iOS quality audit, and user connection instructions.
 - `public/pavbot-manifest.json` - generated manifest consumed by the app.
 
@@ -145,41 +140,15 @@ public feed changes, then pushes to `origin/main`.
 For a user-facing walkthrough of connecting an installed iOS app to a
 Codex-backed repository, see `docs/connect-ios-app-to-your-repo.md`.
 
-## Notifier Backend
+## CloudKit Notifications
 
-The optional notifier runs locally or behind Cloudflare Tunnel and provides:
+Pavbot notifications are production-bound to CloudKit + APNs. Each successful
+automation publish pushes the public feed to `origin/main`, verifies the remote
+manifest, publishes one ready `Briefing` record for the active topic, and lets
+CloudKit deliver the visible APNs alert.
 
-- GitHub webhook receiver.
-- manifest diffing and one summary push per publication.
-- APNs device registration and delivery diagnostics.
-- daily weather and humor endpoints.
-- `/v1/app/defaults` for app connection defaults.
-
-Configure secrets locally through ignored files only:
-
-```bash
-cp backend/pavbot-notifier/.env.example backend/pavbot-notifier/.env
-```
-
-Never commit `.env`, APNs `.p8` keys, provisioning profiles, or other secrets.
-
-Run locally:
-
-```bash
-docker compose -f backend/pavbot-notifier/docker-compose.yml up -d --build
-curl http://localhost:8080/status
-```
-
-Expose through Cloudflare Tunnel for local/dev use:
-
-```bash
-cloudflared tunnel --url http://localhost:8080
-```
-
-For the production VPS variant, deploy only `backend/pavbot-notifier` to
-Contabo and expose it through `https://notify.paweltanski.com` with the
-container bound to `127.0.0.1:18082`. See
-`docs/live-ios-notifications-contabo.md`.
+Local APNs `.p8` keys, webhook secrets, Docker, Cloudflare Tunnel, and the old
+notifier backend are no longer part of the production app path.
 
 ## Automations
 
@@ -194,11 +163,10 @@ scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 Treat publication as a hard success gate. After every run that writes
 app-visible artifacts, the publish script must regenerate
 `public/pavbot-manifest.json`, commit the topic outputs plus the manifest, push
-to `origin/main`, then verify the pushed manifest contains the current run
-paths. If that remote verification fails, the run is partially published or
-failed, not complete. Notifier-backed feeds such as Reddit Radar must publish
-their audit artifacts/manifest before or alongside posting the digest to the
-notifier so the iOS app and webhook do not depend on local-only files.
+to `origin/main`, verify the pushed manifest contains the current run paths,
+then publish and verify the matching CloudKit `Briefing` record. If remote
+verification or CloudKit publication fails, the run is partially published or
+failed, not complete.
 
 Current first-class topics include:
 

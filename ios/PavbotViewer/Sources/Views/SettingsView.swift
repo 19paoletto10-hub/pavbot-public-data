@@ -154,7 +154,7 @@ struct SettingsView: View {
                     Label("Codzienna pogoda dla Wrocławia", systemImage: "cloud.sun")
                 }
 
-                Text("Gdy alerty live są włączone, CloudKit wysyła ciche powiadomienie po publikacji gotowego briefingu, a aplikacja dociąga aktualne dane.")
+                Text("Gdy alerty live są włączone, CloudKit wysyła widoczny alert i sygnał odświeżenia po publikacji gotowego briefingu.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
 

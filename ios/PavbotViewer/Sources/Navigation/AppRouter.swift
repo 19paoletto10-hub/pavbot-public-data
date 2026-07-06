@@ -16,6 +16,21 @@ enum TodaySectionTarget: Hashable {
     case redditRadar
 }
 
+struct CloudKitBriefingNotificationRoute: Equatable, Sendable {
+    let topic: String
+    let stamp: String?
+
+    init?(userInfo: [AnyHashable: Any]) {
+        let briefingId = (userInfo["briefingId"] as? String ?? userInfo["briefingID"] as? String)?.nilIfBlank
+        let category = (userInfo["category"] as? String ?? userInfo["briefingCategory"] as? String)?.nilIfBlank
+        let parts = briefingId?.split(separator: ":", maxSplits: 1).map(String.init) ?? []
+        let topic = category ?? parts.first?.nilIfBlank
+        guard let topic else { return nil }
+        self.topic = topic
+        stamp = parts.count > 1 ? parts[1].nilIfBlank : nil
+    }
+}
+
 @MainActor
 @Observable
 final class AppRouter {
@@ -249,6 +264,11 @@ final class AppRouter {
             openDailyWeather(date: userInfo["weatherDate"] as? String)
             return
         }
+        if let briefingRoute = CloudKitBriefingNotificationRoute(userInfo: userInfo) {
+            if openReportsForTopic(briefingRoute.topic, latestDay: briefingRoute.stamp) {
+                return
+            }
+        }
         if let route = ArtifactNotificationRoute(userInfo: userInfo) {
             if openReportRoute(route) {
                 return
@@ -330,5 +350,12 @@ final class AppRouter {
 
     private func advanceReportRouteRevision() {
         reportRouteRevision += 1
+    }
+}
+
+private extension String {
+    var nilIfBlank: String? {
+        let trimmed = trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? nil : trimmed
     }
 }

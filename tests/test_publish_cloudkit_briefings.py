@@ -57,6 +57,44 @@ def sample_manifest() -> dict:
     }
 
 
+def manifest_with_two_topics() -> dict:
+    manifest = sample_manifest()
+    manifest["topics"] = manifest["topics"] + [
+        {
+            "slug": "tech-news",
+            "title": "Tech News",
+            "path": "research/tech-news",
+            "topicFilePath": "",
+            "url": "",
+        }
+    ]
+    manifest["artifacts"] = manifest["artifacts"] + [
+        {
+            "id": "research/tech-news/runs/2026-07-05-1933.md",
+            "type": "run",
+            "topic": "tech-news",
+            "title": "Tech News",
+            "path": "research/tech-news/runs/2026-07-05-1933.md",
+            "url": "https://raw.githubusercontent.com/example/pavbot/main/research/tech-news/runs/2026-07-05-1933.md",
+            "sizeBytes": 1234,
+            "date": "2026-07-05",
+            "time": "19:33",
+        },
+        {
+            "id": "research/tech-news/data/2026-07-05-1933-research.json",
+            "type": "researchData",
+            "topic": "tech-news",
+            "title": "Research data",
+            "path": "research/tech-news/data/2026-07-05-1933-research.json",
+            "url": "https://raw.githubusercontent.com/example/pavbot/main/research/tech-news/data/2026-07-05-1933-research.json",
+            "sizeBytes": 2345,
+            "date": "2026-07-05",
+            "time": "19:33",
+        },
+    ]
+    return manifest
+
+
 def test_build_briefing_records_from_manifest_uses_stable_record_ids_and_ready_status() -> None:
     publisher = load_publisher()
 
@@ -74,6 +112,41 @@ def test_build_briefing_records_from_manifest_uses_stable_record_ids_and_ready_s
     assert record["fields"]["manifestUrl"] == "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
     assert record["fields"]["audioUrl"].endswith("/podcast.mp3")
     assert record["fields"]["version"] == 1
+
+
+def test_build_briefing_records_can_scope_to_active_topic_only() -> None:
+    publisher = load_publisher()
+
+    records = publisher.build_briefing_records(
+        manifest_with_two_topics(),
+        manifest_url="https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+        topic_path="research/tech-news",
+    )
+
+    assert [record["recordName"] for record in records] == ["tech-news:2026-07-05-1933"]
+    assert records[0]["fields"]["category"] == "tech-news"
+
+
+def test_dry_run_topic_argument_outputs_only_active_topic_record(tmp_path, capsys) -> None:
+    publisher = load_publisher()
+    manifest_path = tmp_path / "pavbot-manifest.json"
+    manifest_path.write_text(json.dumps(manifest_with_two_topics()), encoding="utf-8")
+
+    exit_code = publisher.main(
+        [
+            "dry-run",
+            "--manifest",
+            str(manifest_path),
+            "--manifest-url",
+            "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            "--topic",
+            "research/tech-news",
+        ]
+    )
+
+    assert exit_code == 0
+    output = json.loads(capsys.readouterr().out)
+    assert [record["recordName"] for record in output["records"]] == ["tech-news:2026-07-05-1933"]
 
 
 def test_audio_url_ignores_podcast_brief_pdf_when_mp3_exists() -> None:

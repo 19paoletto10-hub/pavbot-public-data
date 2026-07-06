@@ -81,11 +81,16 @@ Configuration:
 - Record Type: `Briefing`
 - Predicate: `status == "ready"`
 - Options: fires on record creation and record update
-- Notification: content-available/background refresh
+- Notification: visible APNs alert plus content-available/background refresh
+- Localization keys: `PAVBOT_BRIEFING_NOTIFICATION_TITLE` and
+  `PAVBOT_BRIEFING_NOTIFICATION_BODY`
+- Desired keys: `briefingId`, `title`, `summary`, `manifestUrl`, `category`,
+  `createdAt`
 
-The push payload is treated only as a signal. The app parses `CKNotification`,
-then fetches the latest `Briefing` records from CloudKit and reloads the
-manifest URL from `Briefing.manifestUrl`.
+The push payload is both a user-visible alert and a refresh signal. The app
+parses `CKQueryNotification.recordFields`, routes taps through `briefingId`,
+fetches the latest `Briefing` records from CloudKit, and reloads the manifest
+URL from `Briefing.manifestUrl`.
 
 ## Xcode Capabilities
 
@@ -100,6 +105,7 @@ The project already declares:
 
 - `CloudKit.framework`
 - `aps-environment`
+- `com.apple.developer.icloud-container-environment`
 - `com.apple.developer.icloud-container-identifiers`
 - `com.apple.developer.icloud-services`
 
@@ -126,6 +132,12 @@ The script order is:
 prepare -> validate -> manifest -> commit/push -> remote verify -> CloudKit publish -> CloudKit verify
 ```
 
+For normal automation publishing, `scripts/pavbot_commit_and_push_outputs.sh`
+passes `--topic research/<topic>` to `scripts/publish_cloudkit_briefings.py`.
+That creates or verifies only one ready `Briefing` record for the active
+topic/run. Use `publish_cloudkit_briefings.py --all-topics` only for explicit
+manual backfills or audits.
+
 For local tests without `cktool`, use:
 
 ```bash
@@ -145,8 +157,9 @@ In CloudKit Console:
 
 ## Legacy Notifier Removal
 
-The Contabo notifier documentation and backend code remain in the repository
-only as legacy reference. New iOS builds must not call:
+The legacy Docker/FastAPI notifier, Contabo deployment files, Cloudflare Tunnel
+setup, GitHub webhook receiver, and `/v1/devices` APNs registration path have
+been removed from the repository. New iOS builds must not call:
 
 - `https://notify.paweltanski.com`
 - `/v1/app/defaults`

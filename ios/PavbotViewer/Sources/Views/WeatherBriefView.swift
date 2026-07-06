@@ -1968,30 +1968,61 @@ private struct WeatherPrecipitationTile: View {
                 Chart(presentation.chartPoints) { point in
                     BarMark(
                         x: .value("Godzina", point.hourLabel),
-                        y: .value("Szansa opadów", chartValue(for: point)),
-                        width: .ratio(0.72)
+                        yStart: .value("Minimum", 0),
+                        yEnd: .value("Szansa opadów", chartValue(for: point)),
+                        width: .ratio(0.58)
                     )
-                    .foregroundStyle(color(for: point.kind))
-                    .cornerRadius(4)
-                    .annotation(position: .top, alignment: .center) {
+                    .foregroundStyle(chartGradient(for: point.kind))
+                    .cornerRadius(6)
+                    .annotation(position: .top, alignment: .center, spacing: 4) {
                         if point.isSignificant {
-                            Text("\(point.probability)%")
-                                .font(.system(size: 8, weight: .bold))
-                                .foregroundStyle(.secondary)
+                            WeatherPrecipitationChartValueLabel(
+                                probability: probabilityLabel(for: point),
+                                amount: amountDetailLabel(for: point),
+                                tint: color(for: point.kind)
+                            )
                         }
                     }
                 }
                 .chartXAxis {
-                    AxisMarks(values: .automatic(desiredCount: 3)) { _ in
-                        AxisTick()
-                        AxisValueLabel()
-                            .font(.caption2)
+                    AxisMarks(values: .automatic(desiredCount: xAxisDesiredCount(for: presentation.chartPoints))) { value in
+                        AxisTick(stroke: StrokeStyle(lineWidth: 0.7))
+                            .foregroundStyle(Color.blue.opacity(0.22))
+                        AxisValueLabel {
+                            if let hour = value.as(String.self) {
+                                Text(hour)
+                                    .font(.caption2.weight(.semibold))
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
                     }
                 }
-                .chartYAxis(.hidden)
+                .chartYAxis {
+                    AxisMarks(position: .leading, values: [0, 25, 50, 75, 100]) { value in
+                        AxisGridLine(stroke: StrokeStyle(lineWidth: 0.7, dash: [3, 4]))
+                            .foregroundStyle(Color.blue.opacity(0.16))
+                        AxisValueLabel {
+                            if let probability = value.as(Int.self) {
+                                Text("\(probability)%")
+                                    .font(.system(size: 9, weight: .semibold))
+                                    .foregroundStyle(.secondary)
+                            }
+                        }
+                    }
+                }
                 .chartYScale(domain: 0...100)
-                .frame(height: 76)
+                .chartPlotStyle { plotArea in
+                    plotArea
+                        .background(Color.blue.opacity(0.045), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
+                        .overlay {
+                            RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                .stroke(Color.blue.opacity(0.10), lineWidth: 1)
+                        }
+                }
+                .frame(height: 118)
                 .accessibilityLabel("Mini wykres godzinowej szansy opadów")
+
+                WeatherPrecipitationChartLegend(tint: .blue, total: presentation.dailyTotalLabel)
 
                 Text("Dotknij, aby wrócić do podsumowania")
                     .font(.caption2)
@@ -2009,12 +2040,82 @@ private struct WeatherPrecipitationTile: View {
         case .mixed:
             .indigo
         case .possible:
-            .gray
+            .teal
         }
+    }
+
+    private func chartGradient(for kind: WeatherPrecipitationKind) -> LinearGradient {
+        let tint = color(for: kind)
+        return LinearGradient(
+            colors: [tint.opacity(0.95), tint.opacity(0.52)],
+            startPoint: .top,
+            endPoint: .bottom
+        )
     }
 
     private func chartValue(for point: DailyWeatherHourlyPrecipitation) -> Int {
         point.probability > 0 ? point.probability : 20
+    }
+
+    private func probabilityLabel(for point: DailyWeatherHourlyPrecipitation) -> String {
+        point.probability > 0 ? "\(point.probability)%" : "opad"
+    }
+
+    private func amountDetailLabel(for point: DailyWeatherHourlyPrecipitation) -> String? {
+        point.amount > 0 ? point.amountLabel : nil
+    }
+
+    private func xAxisDesiredCount(for points: [DailyWeatherHourlyPrecipitation]) -> Int {
+        min(max(points.count, 2), 4)
+    }
+}
+
+private struct WeatherPrecipitationChartValueLabel: View {
+    let probability: String
+    let amount: String?
+    let tint: Color
+
+    var body: some View {
+        VStack(spacing: 1) {
+            Text(probability)
+                .font(.system(size: 9, weight: .bold))
+                .foregroundStyle(tint)
+            if let amount {
+                Text(amount)
+                    .font(.system(size: 8, weight: .semibold))
+                    .foregroundStyle(.secondary)
+            }
+        }
+        .padding(.horizontal, 6)
+        .padding(.vertical, 4)
+        .background(Color(.systemBackground).opacity(0.94), in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 8, style: .continuous)
+                .stroke(tint.opacity(0.24), lineWidth: 1)
+        }
+    }
+}
+
+private struct WeatherPrecipitationChartLegend: View {
+    let tint: Color
+    let total: String
+
+    var body: some View {
+        HStack(spacing: 8) {
+            Label {
+                Text("szansa opadów")
+            } icon: {
+                Circle()
+                    .fill(tint.gradient)
+                    .frame(width: 7, height: 7)
+            }
+
+            Text("suma \(total)")
+        }
+        .font(.caption2.weight(.semibold))
+        .foregroundStyle(.secondary)
+        .lineLimit(1)
+        .minimumScaleFactor(0.82)
     }
 }
 

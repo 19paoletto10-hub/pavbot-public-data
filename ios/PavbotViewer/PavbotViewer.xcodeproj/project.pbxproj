@@ -33,6 +33,7 @@
 		30455BC8993912380DF950EC /* JobsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2833B2E922C4EDCA1C885B /* JobsView.swift */; };
 		377C34EC37DD46F25B4955BD /* PulseNewsDigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5F074E7D876C212469E3F /* PulseNewsDigest.swift */; };
 		37B9941F081725AD1B926EEB /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3769702F6D5E896F00B54419 /* AppRouter.swift */; };
+		3CCA1ED6FA8787B385D5F476 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8AFCEEF70B027024169EEC64 /* Localizable.strings */; };
 		3FDB992D0B671821332576C5 /* PavbotDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36E99E399CB1D97AF718704 /* PavbotDesign.swift */; };
 		40B4BF7CBB93B97B5C874B51 /* AudioTimelineControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55587551EFC7B8A1660D54 /* AudioTimelineControls.swift */; };
 		43ED2F7B04F61F69390FB323 /* DailyWeatherReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D898746D5C1A3322B93542A /* DailyWeatherReport.swift */; };
@@ -141,6 +142,7 @@
 		3B337475DD595B7A57A167AF /* PavbotViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PavbotViewer.entitlements; sourceTree = "<group>"; };
 		3F2AEF493B65E3050003DA5E /* ArtifactNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactNotificationService.swift; sourceTree = "<group>"; };
 		40135DE56B852E3461575FEF /* SavedResearchArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedResearchArticle.swift; sourceTree = "<group>"; };
+		4124E2CF7A4FCEC236E58FBE /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41EEB32A16C7FA3A3E684630 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		46AC5FA30428A69116483128 /* PavbotAudioActivityExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = PavbotAudioActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A8E6CA4203600F59D8F903F /* PavbotAudioActivityWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotAudioActivityWidget.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				3B337475DD595B7A57A167AF /* PavbotViewer.entitlements */,
 				9D3D88752808C42E687EEB21 /* PavbotViewerApp.swift */,
 				3D784CC396015929C1EE0334 /* InfoPlist.strings */,
+				8AFCEEF70B027024169EEC64 /* Localizable.strings */,
 				C93482AF37E91AFF3E79BA5C /* Models */,
 				A51BDBB327E12A05D73B4059 /* Navigation */,
 				1B0BB411375AA9BA55536C61 /* Resources */,
@@ -523,6 +526,7 @@
 			files = (
 				138C25094EEC6A2230199FCD /* Assets.xcassets in Resources */,
 				19AD95B738D9BE467D39C8AA /* InfoPlist.strings in Resources */,
+				3CCA1ED6FA8787B385D5F476 /* Localizable.strings in Resources */,
 				B1B30884BF45DD297F1D085C /* daily-wisdom.json in Resources */,
 				1919E425F63DDE1B5BCA83A8 /* pavbot-manifest.json in Resources */,
 			);
@@ -662,6 +666,14 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
+		8AFCEEF70B027024169EEC64 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4124E2CF7A4FCEC236E58FBE /* pl */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -704,9 +716,10 @@
 			buildSettings = {
 				APS_ENVIRONMENT = development;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLOUDKIT_ENVIRONMENT = Development;
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 260704.072438;
+				CURRENT_PROJECT_VERSION = 260706.004722;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -723,7 +736,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 260704.072438;
+				CURRENT_PROJECT_VERSION = 260706.004722;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = AudioActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -811,7 +824,7 @@
 			buildSettings = {
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 260704.072438;
+				CURRENT_PROJECT_VERSION = 260706.004722;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = AudioActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -892,9 +905,10 @@
 			buildSettings = {
 				APS_ENVIRONMENT = production;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLOUDKIT_ENVIRONMENT = Production;
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 260704.072438;
+				CURRENT_PROJECT_VERSION = 260706.004722;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -10,8 +10,6 @@ required_files=(
   "docs/how-to-use.md"
   "docs/CLOUDKIT_MIGRATION.md"
   "docs/connect-ios-app-to-your-repo.md"
-  "docs/live-ios-notifications-macbook-cloudflare.md"
-  "docs/live-ios-notifications-contabo.md"
   "docs/automation-operations.md"
   "requirements.txt"
   "public/pavbot-manifest.json"
@@ -20,6 +18,7 @@ required_files=(
   "ios/PavbotViewer/PavbotViewer.xcodeproj/xcshareddata/xcschemes/PavbotViewer.xcscheme"
   "ios/PavbotViewer/Sources/PavbotViewerApp.swift"
   "ios/PavbotViewer/Sources/PavbotViewer.entitlements"
+  "ios/PavbotViewer/Sources/pl.lproj/Localizable.strings"
   "ios/PavbotViewer/Sources/Models/PavbotManifest.swift"
   "ios/PavbotViewer/Sources/Models/JobsReport.swift"
   "ios/PavbotViewer/Sources/Models/PulseNewsDigest.swift"
@@ -230,6 +229,12 @@ grep -q 'privateCloudDatabase' ios/PavbotViewer/Sources/Services/CloudKitService
 grep -q 'briefingId == %@' ios/PavbotViewer/Sources/Services/CloudKitService.swift
 grep -q 'briefings-ready-subscription' ios/PavbotViewer/Sources/Services/CloudKitService.swift
 grep -q 'shouldSendContentAvailable = true' ios/PavbotViewer/Sources/Services/CloudKitService.swift
+grep -q 'titleLocalizationKey = "PAVBOT_BRIEFING_NOTIFICATION_TITLE"' ios/PavbotViewer/Sources/Services/CloudKitService.swift
+grep -q 'alertLocalizationKey = "PAVBOT_BRIEFING_NOTIFICATION_BODY"' ios/PavbotViewer/Sources/Services/CloudKitService.swift
+grep -q 'soundName = "default"' ios/PavbotViewer/Sources/Services/CloudKitService.swift
+grep -q 'desiredKeys = \["briefingId", "title", "summary", "manifestUrl", "category", "createdAt"\]' ios/PavbotViewer/Sources/Services/CloudKitService.swift
+grep -q 'PAVBOT_BRIEFING_NOTIFICATION_TITLE' ios/PavbotViewer/Sources/pl.lproj/Localizable.strings
+grep -q 'PAVBOT_BRIEFING_NOTIFICATION_BODY' ios/PavbotViewer/Sources/pl.lproj/Localizable.strings
 grep -q 'PavbotConnectionDefaults' ios/PavbotViewer/Sources/Services/PavbotConnectionDefaults.swift
 grep -q 'manifestURLString = "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json"' ios/PavbotViewer/Sources/Services/PavbotConnectionDefaults.swift
 grep -q 'cloudKitContainerIdentifier = "iCloud.com.paweltanski.pavbotviewer"' ios/PavbotViewer/Sources/Services/PavbotConnectionDefaults.swift
@@ -273,7 +278,7 @@ grep -q 'cloudKitAccountStatus' ios/PavbotViewer/Sources/Views/SettingsView.swif
 grep -q 'Kopiuj token APNs' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'RemoteNotificationDiagnostics' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
 grep -q 'RemoteNotificationDiagnostics' ios/PavbotViewer/Tests/PavbotManifestTests.swift
-grep -q 'public raw' docs/live-ios-notifications-macbook-cloudflare.md
+grep -q 'visible APNs alert' docs/CLOUDKIT_MIGRATION.md
 grep -q 'publiczny raw' research/puls-dnia-news/automation-prompt.md
 grep -q 'Kopiuj token APNs' ios/PavbotViewer/Sources/Views/DiagnosticsView.swift
 grep -q 'Powiadomienia live' ios/PavbotViewer/Sources/Views/ContentView.swift
@@ -285,6 +290,8 @@ grep -q 'APS_ENVIRONMENT = development;' ios/PavbotViewer/PavbotViewer.xcodeproj
 grep -q 'APS_ENVIRONMENT = production;' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
 grep -q 'aps-environment' ios/PavbotViewer/Sources/PavbotViewer.entitlements
 grep -q '$(APS_ENVIRONMENT)' ios/PavbotViewer/Sources/PavbotViewer.entitlements
+grep -q 'com.apple.developer.icloud-container-environment' ios/PavbotViewer/Sources/PavbotViewer.entitlements
+grep -q '$(CLOUDKIT_ENVIRONMENT)' ios/PavbotViewer/Sources/PavbotViewer.entitlements
 grep -q 'com.apple.developer.icloud-container-identifiers' ios/PavbotViewer/Sources/PavbotViewer.entitlements
 grep -q 'com.apple.developer.icloud-services' ios/PavbotViewer/Sources/PavbotViewer.entitlements
 grep -q 'iCloud.com.paweltanski.pavbotviewer' ios/PavbotViewer/Sources/PavbotViewer.entitlements
@@ -304,6 +311,7 @@ grep -q 'generate_pavbot_manifest.py' docs/how-to-use.md
 grep -q 'PAVBOT_MANIFEST_URL' docs/how-to-use.md
 grep -q 'PAVBOT_CLOUDKIT_CONTAINER_ID' docs/how-to-use.md
 grep -q 'PAVBOT_CLOUDKIT_TEAM_ID' docs/how-to-use.md
+grep -q 'exactly one CloudKit' docs/how-to-use.md
 grep -q 'pavbot_commit_and_push_outputs.sh' docs/how-to-use.md
 grep -q 'CLOUDKIT_MIGRATION.md' docs/how-to-use.md
 grep -q 'Record Type: Briefing' docs/CLOUDKIT_MIGRATION.md
@@ -312,6 +320,7 @@ grep -q 'briefings-ready-subscription' docs/CLOUDKIT_MIGRATION.md
 grep -q 'xcrun cktool save-token' docs/CLOUDKIT_MIGRATION.md
 grep -q 'PAVBOT_CLOUDKIT_TEAM_ID' docs/CLOUDKIT_MIGRATION.md
 grep -q 'iCloud.com.paweltanski.pavbotviewer' docs/CLOUDKIT_MIGRATION.md
+grep -q 'visible APNs alert' docs/CLOUDKIT_MIGRATION.md
 grep -q 'pavbot_usage_ledger.py' scripts/pavbot_commit_and_push_outputs.sh
 grep -q '.pavbot/private/usage-ledger.sqlite3' docs/automation-operations.md
 grep -q '.pavbot/private/' .gitignore
@@ -340,11 +349,9 @@ grep -q 'pavbot_commit_and_push_outputs.sh' docs/connect-ios-app-to-your-repo.md
 grep -q 'Settings -> Domyślne połączenia' docs/connect-ios-app-to-your-repo.md
 grep -q 'pavbot_commit_and_push_outputs.sh' docs/automation-operations.md
 grep -q 'origin/main' docs/automation-operations.md
-grep -q 'Legacy reference only' docs/live-ios-notifications-contabo.md
-grep -q 'Legacy reference only' docs/live-ios-notifications-macbook-cloudflare.md
-grep -q 'CloudKit Subscriptions + APNs' docs/live-ios-notifications-contabo.md
-grep -q 'CloudKit Subscriptions + APNs' docs/live-ios-notifications-macbook-cloudflare.md
-! grep -R -q 'RLZ8X7S7V2' ios backend docs
+grep -q 'one visible APNs alert' docs/automation-operations.md
+! git ls-files --error-unmatch backend/pavbot-notifier >/dev/null 2>&1
+! grep -R -q 'RLZ8X7S7V2' ios docs .agents
 grep -q 'pavbot-manifest.json' docs/architecture.md
 grep -q 'PAVBOT_MANIFEST_URL' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'generate_pavbot_manifest.py' scripts/pavbot_commit_and_push_outputs.sh
@@ -362,8 +369,10 @@ grep -q 'validate_jobs_data.py' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'validate_pulse_news_data.py' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'publish_cloudkit_briefings.py' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'CloudKit publication failed' scripts/pavbot_commit_and_push_outputs.sh
+grep -q '"--topic" "$topic_path"' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'iCloud.com.paweltanski.pavbotviewer' scripts/publish_cloudkit_briefings.py
 grep -q 'SP774TZZU8' scripts/publish_cloudkit_briefings.py
+grep -q 'topic_path' scripts/publish_cloudkit_briefings.py
 grep -q 'delete-records' scripts/publish_cloudkit_briefings.py
 grep -q 'cktool_records_from_stdout' scripts/publish_cloudkit_briefings.py
 grep -q 'stable application identity' docs/CLOUDKIT_MIGRATION.md

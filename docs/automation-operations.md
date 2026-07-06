@@ -135,7 +135,10 @@ derives the public manifest URL from `PAVBOT_MANIFEST_URL`,
 `origin` remote. It requires a working `origin` and push credentials for `main`.
 Do not push generated automation files separately from the refreshed manifest.
 CloudKit publication happens only after this push succeeds and the remote
-manifest has been verified.
+manifest has been verified. The CloudKit gate publishes and verifies only the
+active `research/<topic>` record, so one automation publication produces one
+visible APNs alert for the matching run.
+This is the one visible APNs alert contract for production runs.
 
 Treat `git push` as necessary but not sufficient. After the push run
 `git fetch origin`; the script must then run

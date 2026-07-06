@@ -271,8 +271,10 @@ remote verification against `origin/main`: it checks the refreshed
 `public/pavbot-manifest.json`, verifies that the expected topic artifacts are
 present in the remote manifest, verifies that the same files exist on
 `origin/main`, and then synchronizes the local `public/pavbot-manifest.json`
-to the published remote state. It then publishes/verifies CloudKit `Briefing`
-records unless `PAVBOT_CLOUDKIT_DRY_RUN=1` is set for local testing. This
+to the published remote state. It then publishes/verifies exactly one CloudKit
+`Briefing` record for the active `research/<topic>` unless
+`PAVBOT_CLOUDKIT_DRY_RUN=1` is set for local testing. That record is the source
+of the visible APNs alert and the background refresh signal. This
 requires:
 
 - a working `origin` remote;
@@ -304,16 +306,17 @@ To connect the iOS app to your own Codex-backed repository, follow
 `docs/connect-ios-app-to-your-repo.md`. Version 1 expects a public GitHub raw
 manifest URL.
 
-Live iOS notifications now use CloudKit Subscriptions and APNs. Configure the
+Live iOS notifications use CloudKit Subscriptions and APNs only. Configure the
 CloudKit container and `cktool` as described in `docs/CLOUDKIT_MIGRATION.md`.
-The app remains a reader: it does not configure Codex automations by itself.
-When the iOS app is closed, only real APNs pushes can deliver an alert; if
+The legacy webhook/notifier backend is not used by production builds. The app
+remains a reader: it does not configure Codex automations by itself. When the
+iOS app is closed, only real CloudKit/APNs pushes can deliver an alert; if
 CloudKit, APNs, or iCloud account access is unavailable, the app refreshes when
 opened manually.
 
 ## iOS Release
 
-The current iOS marketing version is `1.5`. The app and Live Activity extension
+The current iOS marketing version is `2.4.4`. The app and Live Activity extension
 read this from `ios/PavbotViewer/project.yml` through XcodeGen. Build numbers
 are still automatic through the `Set Dynamic Build Number` build phase.
 

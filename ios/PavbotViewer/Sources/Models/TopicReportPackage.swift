@@ -197,6 +197,56 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
         }
     }
 
+    static func recentReportDays(in packages: [TopicReportPackage], limit: Int) -> [String] {
+        guard limit > 0 else { return [] }
+        var seen = Set<String>()
+        var days: [String] = []
+
+        for package in packages {
+            guard let date = package.date?.trimmingCharacters(in: .whitespacesAndNewlines),
+                  !date.isEmpty,
+                  seen.insert(date).inserted
+            else { continue }
+
+            days.append(date)
+            if days.count == limit {
+                break
+            }
+        }
+
+        return days
+    }
+
+    static func reportPackages(in packages: [TopicReportPackage], on selectedReportDate: String?) -> [TopicReportPackage] {
+        guard let selectedReportDate = selectedReportDate?.trimmingCharacters(in: .whitespacesAndNewlines),
+              !selectedReportDate.isEmpty
+        else { return [] }
+
+        return packages.filter { $0.date == selectedReportDate }
+    }
+
+    static func selectedReportDate(in packages: [TopicReportPackage], selectedReportDay: String?) -> String? {
+        guard let selectedReportDay = selectedReportDay?.trimmingCharacters(in: .whitespacesAndNewlines),
+              !selectedReportDay.isEmpty
+        else {
+            return packages.first?.date
+        }
+
+        if let package = packages.first(where: { package in
+            package.key == selectedReportDay
+                || package.date == selectedReportDay
+                || package.key.hasPrefix(selectedReportDay)
+        }) {
+            return package.date
+        }
+
+        if selectedReportDay.count >= 10 {
+            return String(selectedReportDay.prefix(10))
+        }
+
+        return packages.first?.date
+    }
+
     private static func packageKey(for artifact: PavbotArtifact) -> String {
         let date = artifact.date ?? "no-date"
         if let time = artifact.time, !time.isEmpty {

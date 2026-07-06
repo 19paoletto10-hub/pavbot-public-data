@@ -32,7 +32,12 @@ def load_manifest(path: str | Path) -> dict[str, Any]:
     return manifest
 
 
-def build_briefing_records(manifest: dict[str, Any], manifest_url: str) -> list[dict[str, Any]]:
+def build_briefing_records(
+    manifest: dict[str, Any],
+    manifest_url: str,
+    topic_path: str | None = None,
+) -> list[dict[str, Any]]:
+    topic_filter = topic_slug_for_path(topic_path)
     topics = {
         str(topic.get("slug")): topic
         for topic in manifest.get("topics", [])
@@ -46,6 +51,8 @@ def build_briefing_records(manifest: dict[str, Any], manifest_url: str) -> list[
         stamp = artifact_stamp(artifact)
         path = str(artifact.get("path") or "").strip()
         if not topic or not stamp or not path:
+            continue
+        if topic_filter and topic != topic_filter:
             continue
         groups.setdefault((topic, stamp), []).append(artifact)
 
@@ -62,8 +69,7 @@ def build_briefing_records(manifest: dict[str, Any], manifest_url: str) -> list[
         created_at = created_at_for_stamp(stamp, artifacts)
         audio_url = first_artifact_url(artifacts, is_audio_artifact)
         image_url = first_artifact_url(artifacts, is_image_artifact)
-        primary_artifact = primary_artifact_for_summary(artifacts)
-        title = str(primary_artifact.get("title") or topic_title)
+        title = notification_title(topic_title, stamp)
         summary = briefing_summary(topic_title, stamp, artifacts)
         records.append(
             {
@@ -92,6 +98,17 @@ def build_briefing_records(manifest: dict[str, Any], manifest_url: str) -> list[
             }
         )
     return records
+
+
+def topic_slug_for_path(topic_path: str | None) -> str | None:
+    if topic_path is None:
+        return None
+    value = topic_path.strip().strip("/")
+    if not value:
+        return None
+    if value.startswith("research/"):
+        value = value.removeprefix("research/")
+    return value or None
 
 
 def artifact_stamp(artifact: dict[str, Any]) -> str | None:
@@ -157,6 +174,10 @@ def primary_artifact_for_summary(artifacts: list[dict[str, Any]]) -> dict[str, A
     return artifacts[0] if artifacts else {}
 
 
+def notification_title(topic_title: str, stamp: str) -> str:
+    return f"{topic_title} · {human_stamp(stamp)}"
+
+
 def briefing_summary(topic_title: str, stamp: str, artifacts: list[dict[str, Any]]) -> str:
     artifact_types = sorted(
         {
@@ -166,7 +187,17 @@ def briefing_summary(topic_title: str, stamp: str, artifacts: list[dict[str, Any
         }
     )
     suffix = f" Artefakty: {', '.join(artifact_types)}." if artifact_types else ""
-    return f"{topic_title}: publikacja {stamp} jest gotowa w manifeście Pavbot.{suffix}"
+    return f"{topic_title}: nowe dane z publikacji {human_stamp(stamp)} są gotowe w aplikacji Pavbot.{suffix}"
+
+
+def human_stamp(stamp: str) -> str:
+    match = re.fullmatch(r"(\d{4}-\d{2}-\d{2})(?:-(\d{2})(\d{2}))?", stamp)
+    if not match:
+        return stamp
+    date_part, hour, minute = match.groups()
+    if hour and minute:
+        return f"{date_part} {hour}:{minute}"
+    return date_part
 
 
 def first_artifact_url(artifacts: list[dict[str, Any]], predicate) -> str | None:
@@ -405,6 +436,8 @@ def parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser.add_argument("--container-id", default=os.environ.get("PAVBOT_CLOUDKIT_CONTAINER_ID", DEFAULT_CONTAINER_ID))
     parser.add_argument("--environment", default=os.environ.get("PAVBOT_CLOUDKIT_ENVIRONMENT", DEFAULT_ENVIRONMENT))
     parser.add_argument("--team-id", default=os.environ.get("PAVBOT_CLOUDKIT_TEAM_ID", DEFAULT_TEAM_ID))
+    parser.add_argument("--topic", default=None, help="Publish only the active research/<topic> briefing.")
+    parser.add_argument("--all-topics", action="store_true", help="Backfill or verify all latest topic briefings.")
     return parser.parse_args(argv)
 
 
@@ -412,7 +445,11 @@ def main(argv: list[str] | None = None) -> int:
     args = parse_args(argv)
     try:
         manifest = load_manifest(args.manifest)
-        records = build_briefing_records(manifest, manifest_url=args.manifest_url)
+        records = build_briefing_records(
+            manifest,
+            manifest_url=args.manifest_url,
+            topic_path=None if args.all_topics else args.topic,
+        )
         if not records:
             raise RuntimeError("manifest did not produce any Briefing records")
 
