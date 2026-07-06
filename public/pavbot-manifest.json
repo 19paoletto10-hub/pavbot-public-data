@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-06T13:11:40.256043+00:00",
+  "generatedAt": "2026-07-06T13:52:26.127481+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -459,6 +459,36 @@
       "path": "research/polska-swiat/podcasts/2026-07-06/podcast.mp3",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-06/podcast.mp3",
       "sizeBytes": 3782086,
+      "date": "2026-07-06"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/runs/2026-07-06.md",
+      "type": "run",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "Daily Research Report: llm-ai-jobs-wroclaw",
+      "path": "research/llm-ai-jobs-wroclaw/runs/2026-07-06.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/2026-07-06.md",
+      "sizeBytes": 4167,
+      "date": "2026-07-06"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/pdfs/2026-07-06-llm-ai-jobs-wroclaw.pdf",
+      "type": "pdf",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "2026-07-06-llm-ai-jobs-wroclaw.pdf",
+      "path": "research/llm-ai-jobs-wroclaw/pdfs/2026-07-06-llm-ai-jobs-wroclaw.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/pdfs/2026-07-06-llm-ai-jobs-wroclaw.pdf",
+      "sizeBytes": 40331,
+      "date": "2026-07-06"
+    },
+    {
+      "id": "research/llm-ai-jobs-wroclaw/data/2026-07-06-jobs.json",
+      "type": "jobsData",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "Jobs data",
+      "path": "research/llm-ai-jobs-wroclaw/data/2026-07-06-jobs.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-07-06-jobs.json",
+      "sizeBytes": 8227,
       "date": "2026-07-06"
     },
     {
