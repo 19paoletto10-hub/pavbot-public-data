@@ -5861,7 +5861,7 @@ final class PavbotManifestTests: XCTestCase {
             .appendingPathComponent("project.yml")
         let source = try String(contentsOf: projectYML)
 
-        XCTAssertTrue(source.contains("MARKETING_VERSION: \"2.4.4\""))
+        XCTAssertTrue(source.contains("MARKETING_VERSION: \"2.4.5\""))
         XCTAssertTrue(source.contains("BUILD_TIMESTAMP=\"$(date +%H%M%S)\""))
         XCTAssertTrue(source.contains("BUILD_NUMBER=\"${BUILD_DATE}.${BUILD_TIMESTAMP}\""))
         let buildNumbers = source

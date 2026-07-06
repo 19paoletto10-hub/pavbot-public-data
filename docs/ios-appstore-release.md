@@ -1,6 +1,6 @@
 # Pavbot iOS App Store Release
 
-Date: 2026-06-27
+Date: 2026-07-06
 
 ## Release Target
 
@@ -9,11 +9,11 @@ Date: 2026-06-27
 - Bundle ID: `com.paweltanski.pavbotviewer`
 - Live Activity extension: `com.paweltanski.pavbotviewer.audioactivity`
 - Apple Team ID: `SP774TZZU8`
-- Marketing version: `2.0`
+- Marketing version: `2.4.5`
 - Build number: dynamic, set by the Xcode build phase from `PAVBOT_BUILD_NUMBER`
   or the latest git commit timestamp.
 
-## What Version 2.0 Contains
+## What Version 2.4.5 Contains
 
 - Production connection URLs are fixed in the app and shown as read-only
   values in `Ustawienia`.
@@ -84,7 +84,7 @@ Date: 2026-06-27
 1. Open `ios/PavbotViewer/PavbotViewer.xcodeproj`.
 2. Select scheme `PavbotViewer`.
 3. Select `Any iOS Device (arm64)` or a physical iPhone.
-4. Confirm version `2.0` in target settings.
+4. Confirm version `2.4.5` in target settings.
 5. Use `Product -> Archive`.
 6. In Organizer, choose `Distribute App`.
 7. Choose `App Store Connect -> Upload`.
@@ -95,7 +95,7 @@ Use a unique UTC timestamp build number when archiving for App Store Connect:
 ```bash
 BUILD_NUMBER="$(date -u +%Y%m%d%H%M)"
 ARCHIVE_DATE="$(date +%Y-%m-%d)"
-ARCHIVE_PATH="$HOME/Library/Developer/Xcode/Archives/$ARCHIVE_DATE/PavbotViewer-2.0-$BUILD_NUMBER.xcarchive"
+ARCHIVE_PATH="$HOME/Library/Developer/Xcode/Archives/$ARCHIVE_DATE/PavbotViewer-2.4.5-$BUILD_NUMBER.xcarchive"
 
 PAVBOT_BUILD_NUMBER="$BUILD_NUMBER" xcodebuild archive \
   -project ios/PavbotViewer/PavbotViewer.xcodeproj \

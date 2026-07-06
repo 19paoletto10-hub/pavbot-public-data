@@ -301,10 +301,7 @@ final class PavbotAudioSessionCoordinator {
         currentSnapshot = nil
         endLiveActivity(snapshot: snapshot, isFinished: false)
         clearSystemAudioState()
-        Task { @MainActor in
-            await Task.yield()
-            stopControls?.stop()
-        }
+        stopControls?.stop()
     }
 
     func seekActive(to seconds: Double) {
