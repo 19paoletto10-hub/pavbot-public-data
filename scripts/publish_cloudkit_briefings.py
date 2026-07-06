@@ -243,10 +243,7 @@ def cktool_scoped_args(container_id: str, environment: str) -> list[str]:
 def run_cktool(command: list[str], *, check: bool = True) -> subprocess.CompletedProcess[str]:
     result = subprocess.run(command, text=True, capture_output=True)
     if result.returncode != 0 and cktool_auth_is_missing(result.stderr):
-        raise RuntimeError(
-            "CloudKit cktool authentication is missing. Run `xcrun cktool save-token` "
-            "for the Apple Developer team before publishing."
-        )
+        raise RuntimeError(cktool_auth_error_message())
     if check and result.returncode != 0:
         raise subprocess.CalledProcessError(
             result.returncode,
@@ -258,7 +255,28 @@ def run_cktool(command: list[str], *, check: bool = True) -> subprocess.Complete
 
 
 def cktool_auth_is_missing(stderr: str) -> bool:
-    return "No user token found" in stderr or "No management token found" in stderr
+    normalized = stderr.lower()
+    return any(
+        marker in normalized
+        for marker in (
+            "no user token found",
+            "no management token found",
+            "session has expired",
+            "authentication failed",
+            "user token may have been entered incorrectly",
+            "user token may have expired",
+            "user token may be required",
+            "new user token may be required",
+        )
+    )
+
+
+def cktool_auth_error_message() -> str:
+    return (
+        "CloudKit cktool authentication is missing or expired. Run "
+        "`xcrun cktool save-token` for Apple Developer team SP774TZZU8, "
+        "then rerun the Pavbot publish or `--cloudkit-only` repair command."
+    )
 
 
 def cktool_typed_fields(fields: dict[str, Any]) -> dict[str, dict[str, Any]]:
@@ -389,6 +407,16 @@ def publish_records(records: list[dict[str, Any]], container_id: str, environmen
         run_cktool(command)
 
 
+def preflight_records(records: list[dict[str, Any]], container_id: str, environment: str, team_id: str) -> None:
+    for record in records:
+        query_existing_records(
+            record,
+            container_id=container_id,
+            environment=environment,
+            team_id=team_id,
+        )
+
+
 def verify_records(records: list[dict[str, Any]], container_id: str, environment: str, team_id: str) -> None:
     missing: list[str] = []
     for record in records:
@@ -407,6 +435,8 @@ def verify_records(records: list[dict[str, Any]], container_id: str, environment
         ]
         result = run_cktool(command, check=False)
         if result.returncode != 0:
+            if cktool_auth_is_missing(result.stderr):
+                raise RuntimeError(cktool_auth_error_message())
             missing.append(record["recordName"])
             if result.stderr:
                 print(result.stderr, file=sys.stderr, end="")
@@ -429,7 +459,7 @@ def verify_records(records: list[dict[str, Any]], container_id: str, environment
 
 def parse_args(argv: list[str] | None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Publish Pavbot Briefing records to CloudKit.")
-    parser.add_argument("mode", choices=("dry-run", "publish", "verify"))
+    parser.add_argument("mode", choices=("dry-run", "preflight", "publish", "verify"))
     parser.add_argument("--manifest", default="public/pavbot-manifest.json")
     parser.add_argument("--manifest-url", default=os.environ.get("PAVBOT_MANIFEST_URL", DEFAULT_MANIFEST_URL))
     parser.add_argument("--container-id", default=os.environ.get("PAVBOT_CLOUDKIT_CONTAINER_ID", DEFAULT_CONTAINER_ID))
@@ -454,6 +484,11 @@ def main(argv: list[str] | None = None) -> int:
 
         if args.mode == "dry-run":
             print(json.dumps({"status": "dry-run", "records": records}, ensure_ascii=False, indent=2))
+            return 0
+
+        if args.mode == "preflight":
+            preflight_records(records, args.container_id, args.environment, args.team_id)
+            print(json.dumps({"status": "preflight-ok", "recordCount": len(records)}, ensure_ascii=False))
             return 0
 
         if args.mode == "publish":

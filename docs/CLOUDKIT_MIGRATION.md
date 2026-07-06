@@ -1,21 +1,34 @@
-# CloudKit Migration
+# CloudKit Production Workflow
 
-Pavbot no longer needs the Contabo notifier for iOS metadata, live briefing
-pushes, Reddit Radar, or weather. Codex remains the publisher: it generates
-topic artifacts, refreshes `public/pavbot-manifest.json`, commits and pushes to
-`origin/main`, verifies the remote manifest, and then publishes CloudKit
-metadata.
+This file describes the current production workflow for PavbotViewer metadata,
+CloudKit `Briefing` records, and APNs notifications.
+
+Codex is the publisher. A completed automation run writes topic artifacts,
+refreshes `public/pavbot-manifest.json`, verifies the exact files on
+`origin/main`, and then publishes one ready CloudKit `Briefing` record for the
+active topic. The iOS app reads CloudKit for briefing metadata and uses
+`Briefing.manifestUrl` to load the published manifest.
 
 ## CloudKit Container
 
-Suggested container:
+Production container:
 
 ```text
 iCloud.com.paweltanski.pavbotviewer
 ```
 
-The container ID must match `PavbotConnectionDefaults.cloudKitContainerIdentifier`
-and the iOS entitlements in `ios/PavbotViewer/Sources/PavbotViewer.entitlements`.
+The container ID must match:
+
+- `PavbotConnectionDefaults.cloudKitContainerIdentifier`
+- `ios/PavbotViewer/Sources/PavbotViewer.entitlements`
+- `ios/PavbotViewer/project.yml`
+
+The production app target uses:
+
+- Bundle ID: `com.paweltanski.pavbotviewer`
+- Team ID: `SP774TZZU8`
+- APNs environment: `production`
+- CloudKit environment: `Production`
 
 ## Public Record Type: Briefing
 
@@ -40,13 +53,13 @@ Recommended query indexes:
 - `briefingId` queryable
 - `category` queryable
 
-Production records should use `status = "ready"` only after the matching
-manifest and artifacts are verified on `origin/main`.
+Production records must use `status = "ready"` only after the matching manifest
+and artifacts are verified on `origin/main`.
 
 `briefingId` is the stable application identity used by both iOS and the Codex
 publisher. `xcrun cktool create-record` generates the CloudKit record name, so
-the publisher replaces existing records by querying/deleting on `briefingId`
-and the app also fetches individual briefings by the `briefingId` field.
+the publisher replaces existing records by querying/deleting on `briefingId`.
+The app also fetches individual briefings by the `briefingId` field.
 
 ## Private Record Type: UserPreferences
 
@@ -68,7 +81,7 @@ Recommended query indexes:
 
 - Record ID is enough for the current single-record model.
 
-## Subscription
+## iOS Subscription
 
 The iOS app creates this public database subscription idempotently:
 
@@ -101,7 +114,7 @@ Enable these capabilities for the PavbotViewer app target:
 - Push Notifications
 - Background Modes -> Remote notifications
 
-The project already declares:
+The project declares:
 
 - `CloudKit.framework`
 - `aps-environment`
@@ -117,7 +130,7 @@ Local CloudKit auth must stay outside the repo. Configure `cktool` locally:
 xcrun cktool save-token
 ```
 
-Then publish with:
+Publish a topic run with:
 
 ```bash
 export PAVBOT_CLOUDKIT_CONTAINER_ID=iCloud.com.paweltanski.pavbotviewer
@@ -129,8 +142,13 @@ scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 The script order is:
 
 ```text
-prepare -> validate -> manifest -> commit/push -> remote verify -> CloudKit publish -> CloudKit verify
+prepare -> validate -> manifest -> CloudKit preflight -> commit/push -> remote verify -> CloudKit publish -> CloudKit verify
 ```
+
+The CloudKit preflight is read-only. It checks local `cktool` authentication and
+the target container before anything is committed or pushed. This prevents a
+run from publishing a new remote manifest and then failing later because the
+CloudKit token expired.
 
 For normal automation publishing, `scripts/pavbot_commit_and_push_outputs.sh`
 passes `--topic research/<topic>` to `scripts/publish_cloudkit_briefings.py`.
@@ -145,6 +163,22 @@ PAVBOT_CLOUDKIT_DRY_RUN=1 \
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 ```
 
+## CloudKit Repair
+
+Use repair mode when `origin/main` already contains the correct manifest and
+topic artifacts, but CloudKit publication failed after the push:
+
+```bash
+export PAVBOT_CLOUDKIT_CONTAINER_ID=iCloud.com.paweltanski.pavbotviewer
+export PAVBOT_CLOUDKIT_ENVIRONMENT=production
+export PAVBOT_CLOUDKIT_TEAM_ID=SP774TZZU8
+scripts/pavbot_commit_and_push_outputs.sh --cloudkit-only research/<topic>
+```
+
+Repair mode verifies `origin/main`, synchronizes the local manifest from the
+published remote state, publishes the matching CloudKit `Briefing`, and verifies
+that the record exists. It does not create a new commit.
+
 ## Development To Production
 
 In CloudKit Console:
@@ -155,21 +189,31 @@ In CloudKit Console:
 4. Deploy schema changes to Production.
 5. Run `scripts/publish_cloudkit_briefings.py verify` against Production.
 
-## Legacy Notifier Removal
+## Push Notification Console
 
-The legacy Docker/FastAPI notifier, Contabo deployment files, Cloudflare Tunnel
-setup, GitHub webhook receiver, and `/v1/devices` APNs registration path have
-been removed from the repository. New iOS builds must not call:
+Use Apple's Push Notifications Console for manual APNs smoke tests and delivery
+inspection:
 
-- `https://notify.paweltanski.com`
-- `/v1/app/defaults`
-- `/v1/devices`
-- `/v1/humor/latest`
-- `/v1/weather/daily/*`
+- Documentation:
+  <https://developer.apple.com/documentation/usernotifications/testing-notifications-using-the-push-notification-console>
+- Sending requests to APNs:
+  <https://developer.apple.com/documentation/usernotifications/sending-notification-requests-to-apns>
+- Payload generation:
+  <https://developer.apple.com/documentation/usernotifications/generating-a-remote-notification>
 
-Weather now uses Open-Meteo directly from iOS with per-device location
-preferences. Reddit Radar is published as an artifact and exposed through the
-manifest/CloudKit briefing gate.
+Production test values:
+
+- Team: `SP774TZZU8`
+- Bundle ID / APNs topic: `com.paweltanski.pavbotviewer`
+- Environment: `Production`
+- Push type: `alert`
+- Priority: `High (10)`
+- Expiration: attempt delivery once for smoke tests
+
+Keep production device tokens, `.p8` keys, generated JWTs, and `cktool` tokens
+out of the repository. The APNs console can validate a JWT and send a manual
+test alert, but the production notification path is the CloudKit subscription
+created by the iOS app.
 
 ## Testing
 

@@ -21,7 +21,7 @@ ledger_remote_verification_status="not_started"
 
 usage() {
   cat >&2 <<'EOF'
-usage: scripts/pavbot_commit_and_push_outputs.sh [--isolated] [--force-manifest] research/<topic>
+usage: scripts/pavbot_commit_and_push_outputs.sh [--isolated] [--force-manifest] [--cloudkit-only] research/<topic>
 
 Publishes one Pavbot automation output set by committing only app-visible files:
   - generated public outputs from the selected research/<topic>/
@@ -42,6 +42,9 @@ Options:
   --force-manifest
               refresh and stage public/pavbot-manifest.json even when topic
               outputs are otherwise unchanged
+  --cloudkit-only
+              do not commit or push files; verify the latest remote topic
+              bundle and publish/verify its CloudKit Briefing record only
 
 Optional environment:
   PAVBOT_MANIFEST_URL=https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json
@@ -916,6 +919,31 @@ run_cloudkit_publisher() {
   fi
 }
 
+preflight_cloudkit_briefings_gate() {
+  local container_id="${PAVBOT_CLOUDKIT_CONTAINER_ID:-iCloud.com.paweltanski.pavbotviewer}"
+  local environment="${PAVBOT_CLOUDKIT_ENVIRONMENT:-production}"
+  local team_id="${PAVBOT_CLOUDKIT_TEAM_ID:-SP774TZZU8}"
+  local -a common_args=(
+    "--manifest" "public/pavbot-manifest.json"
+    "--manifest-url" "$PAVBOT_MANIFEST_URL"
+    "--container-id" "$container_id"
+    "--environment" "$environment"
+    "--team-id" "$team_id"
+    "--topic" "$topic_path"
+  )
+
+  [[ -f "$cloudkit_publisher" ]] || die "missing CloudKit publisher: $cloudkit_publisher"
+
+  if [[ "${PAVBOT_CLOUDKIT_DRY_RUN:-0}" == "1" ]]; then
+    return 0
+  fi
+
+  if ! run_cloudkit_publisher "preflight" "${common_args[@]}"; then
+    die "CloudKit preflight failed"
+  fi
+  printf 'cloudkit briefing preflight verified\n'
+}
+
 publish_cloudkit_briefings_gate() {
   local mode="publish"
   local container_id="${PAVBOT_CLOUDKIT_CONTAINER_ID:-iCloud.com.paweltanski.pavbotviewer}"
@@ -940,6 +968,10 @@ publish_cloudkit_briefings_gate() {
     return 0
   fi
 
+  if ! run_cloudkit_publisher "preflight" "${common_args[@]}"; then
+    die "CloudKit preflight failed"
+  fi
+  printf 'cloudkit briefing preflight verified\n'
   if ! run_cloudkit_publisher "$mode" "${common_args[@]}"; then
     die "CloudKit publication failed"
   fi
@@ -947,6 +979,16 @@ publish_cloudkit_briefings_gate() {
     die "CloudKit publication failed"
   fi
   printf 'cloudkit briefing publication verified\n'
+}
+
+publish_cloudkit_only() {
+  git fetch origin "$target_branch" >/dev/null
+  run_publication_contract verify-remote "$repo_root" --ref "origin/$target_branch"
+  ledger_publish_status="skipped"
+  ledger_remote_verification_status="ok"
+  sync_local_manifest_from_remote
+  publish_cloudkit_briefings_gate
+  printf 'cloudkit-only publication verified for %s on origin/%s\n' "$topic_path" "$target_branch"
 }
 
 copy_or_remove_publish_path() {
@@ -1284,6 +1326,7 @@ publish_isolated() {
     fi
 
     require_staged_scope
+    preflight_cloudkit_briefings_gate
 
     topic_slug="${topic_path#research/}"
     git commit -m "chore(pavbot): publish ${topic_slug} automation outputs" >/dev/null
@@ -1307,6 +1350,7 @@ publish_isolated() {
 
 isolated_mode=0
 force_manifest=0
+cloudkit_only=0
 topic_arg=""
 
 while (($# > 0)); do
@@ -1317,6 +1361,10 @@ while (($# > 0)); do
       ;;
     --force-manifest)
       force_manifest=1
+      shift
+      ;;
+    --cloudkit-only)
+      cloudkit_only=1
       shift
       ;;
     -h|--help)
@@ -1373,6 +1421,10 @@ printf 'using Pavbot manifest URL: %s\n' "$PAVBOT_MANIFEST_URL"
 git fetch origin "$target_branch" >/dev/null
 
 remote_ref="$(git rev-parse --verify "origin/$target_branch")" || die "missing origin/$target_branch"
+if ((cloudkit_only)); then
+  publish_cloudkit_only
+  exit 0
+fi
 if ((isolated_mode)); then
   publish_isolated
   exit 0
@@ -1411,6 +1463,7 @@ if git diff --cached --quiet; then
 fi
 
 require_staged_scope
+preflight_cloudkit_briefings_gate
 
 topic_slug="${topic_path#research/}"
 git commit -m "chore(pavbot): publish ${topic_slug} automation outputs" >/dev/null

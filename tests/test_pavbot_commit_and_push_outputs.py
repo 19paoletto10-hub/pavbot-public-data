@@ -69,6 +69,9 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 failing_publisher = Path(publisher_dir) / "failing-cloudkit-publisher.sh"
                 failing_publisher.write_text(
                     "#!/usr/bin/env bash\n"
+                    "if [ \"$1\" != publish ]; then\n"
+                    "  exit 0\n"
+                    "fi\n"
                     "echo 'cloudkit failed intentionally' >&2\n"
                     "exit 42\n",
                     encoding="utf-8",
@@ -85,6 +88,84 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("cloudkit failed intentionally", result.stderr)
             self.assertIn("CloudKit publication failed", result.stderr)
+
+    def test_publish_fails_cloudkit_preflight_before_push(self) -> None:
+        with self.temporary_repo() as repo:
+            head_before = self.git(repo, "rev-parse", "origin/main", stdout=True).strip()
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
+            with tempfile.TemporaryDirectory() as publisher_dir:
+                calls_path = Path(publisher_dir) / "cloudkit-calls.txt"
+                failing_publisher = Path(publisher_dir) / "preflight-fails-cloudkit-publisher.sh"
+                failing_publisher.write_text(
+                    "#!/usr/bin/env bash\n"
+                    f"printf '%s\\n' \"$1\" >> {str(calls_path)!r}\n"
+                    "if [ \"$1\" = preflight ]; then\n"
+                    "  echo 'cktool token expired; run xcrun cktool save-token' >&2\n"
+                    "  exit 42\n"
+                    "fi\n"
+                    "exit 0\n",
+                    encoding="utf-8",
+                )
+                failing_publisher.chmod(0o755)
+
+                result = self.run_publish_script(
+                    repo,
+                    "research/tech-news",
+                    cloudkit_dry_run=False,
+                    cloudkit_publisher=str(failing_publisher),
+                )
+
+                calls = calls_path.read_text(encoding="utf-8").splitlines()
+
+            head_after = self.git(repo, "rev-parse", "origin/main", stdout=True).strip()
+            self.assertNotEqual(result.returncode, 0)
+            self.assertEqual(calls, ["preflight"])
+            self.assertEqual(head_before, head_after)
+            self.assertIn("cktool token expired", result.stderr)
+            self.assertIn("CloudKit preflight failed", result.stderr)
+
+    def test_cloudkit_only_repairs_published_bundle_without_new_commit(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-23.md",
+                self.valid_research_markdown_report("tech-news", run_date="2026-06-23"),
+            )
+            publish_result = self.run_publish_script(repo, "research/tech-news")
+            self.assertEqual(publish_result.returncode, 0, publish_result.stderr)
+            head_before = self.git(repo, "rev-parse", "origin/main", stdout=True).strip()
+
+            with tempfile.TemporaryDirectory() as publisher_dir:
+                calls_path = Path(publisher_dir) / "cloudkit-calls.txt"
+                fake_publisher = Path(publisher_dir) / "record-cloudkit-calls.sh"
+                fake_publisher.write_text(
+                    "#!/usr/bin/env bash\n"
+                    f"printf '%s\\n' \"$1\" >> {str(calls_path)!r}\n",
+                    encoding="utf-8",
+                )
+                fake_publisher.chmod(0o755)
+
+                result = self.run_publish_script(
+                    repo,
+                    "research/tech-news",
+                    cloudkit_dry_run=False,
+                    cloudkit_publisher=str(fake_publisher),
+                    cloudkit_only=True,
+                )
+
+                calls = calls_path.read_text(encoding="utf-8").splitlines()
+
+            head_after = self.git(repo, "rev-parse", "origin/main", stdout=True).strip()
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertEqual(calls, ["preflight", "publish", "verify"])
+            self.assertEqual(head_before, head_after)
+            self.assertIn("cloudkit-only publication verified", result.stdout)
 
     def test_publish_passes_active_topic_to_cloudkit_publisher(self) -> None:
         with self.temporary_repo() as repo:
@@ -1712,6 +1793,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
         publish_branch: str | None = None,
         cloudkit_dry_run: bool = True,
         cloudkit_publisher: str | None = None,
+        cloudkit_only: bool = False,
     ) -> subprocess.CompletedProcess[str]:
         self.assertTrue(self.script_path.exists(), f"missing script: {self.script_path}")
         env = os.environ.copy()
@@ -1735,6 +1817,8 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             args.append("--isolated")
         if force_manifest:
             args.append("--force-manifest")
+        if cloudkit_only:
+            args.append("--cloudkit-only")
         args.append(topic_path)
         return subprocess.run(
             args,

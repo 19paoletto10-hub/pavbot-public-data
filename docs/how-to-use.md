@@ -236,7 +236,6 @@ by the 48-hour cleanup.
 In `Ustawienia`, the app shows production CloudKit/APNs connection statuses
 instead of raw URL fields. The app fetches the latest `Briefing` metadata from
 CloudKit, then loads the GitHub raw manifest URL from `Briefing.manifestUrl`.
-It no longer calls a Pavbot notifier defaults endpoint.
 
 After the run, verify the workspace:
 
@@ -266,8 +265,10 @@ with the outputs, and pushes directly to `origin/main`. Treat this as the
 required final publish step after each automation run so iOS receives the
 refreshed manifest and the new files in the same commit. Automation output
 publication is always production-bound to `origin/main`; `PAVBOT_PUBLISH_BRANCH`
-does not change the target branch for this script. After the push the script performs
-remote verification against `origin/main`: it checks the refreshed
+does not change the target branch for this script. Before committing, the
+script runs a read-only CloudKit preflight with `cktool` so an expired CloudKit
+token is caught before the remote manifest changes. After the push the script
+performs remote verification against `origin/main`: it checks the refreshed
 `public/pavbot-manifest.json`, verifies that the expected topic artifacts are
 present in the remote manifest, verifies that the same files exist on
 `origin/main`, and then synchronizes the local `public/pavbot-manifest.json`
@@ -290,7 +291,13 @@ record names, because `cktool` creates those names itself.
 Do not mark a run successful until the script finishes without remote
 verification errors, the refreshed remote manifest plus current output files
 are visible on `origin/main`, and the CloudKit `Briefing` publish/verify gate
-passes. If CloudKit publish fails, treat the run as partially published.
+passes. If CloudKit publish fails after the push, treat the run as partially
+published, refresh local `cktool` authentication with `xcrun cktool save-token`,
+and repair CloudKit without creating another commit:
+
+```bash
+scripts/pavbot_commit_and_push_outputs.sh --cloudkit-only research/<topic>
+```
 
 Only `runs/`, `data/`, `pdfs/`, `podcasts/`, `topic.md`, `index.md`,
 `backlog.md`, and `public/pavbot-manifest.json` are publishable as automation outputs. Code,
@@ -306,13 +313,12 @@ To connect the iOS app to your own Codex-backed repository, follow
 `docs/connect-ios-app-to-your-repo.md`. Version 1 expects a public GitHub raw
 manifest URL.
 
-Live iOS notifications use CloudKit Subscriptions and APNs only. Configure the
+Live iOS notifications use CloudKit Subscriptions and APNs. Configure the
 CloudKit container and `cktool` as described in `docs/CLOUDKIT_MIGRATION.md`.
-The legacy webhook/notifier backend is not used by production builds. The app
-remains a reader: it does not configure Codex automations by itself. When the
-iOS app is closed, only real CloudKit/APNs pushes can deliver an alert; if
-CloudKit, APNs, or iCloud account access is unavailable, the app refreshes when
-opened manually.
+The app remains a reader: it does not configure Codex automations by itself.
+When the iOS app is closed, only real CloudKit/APNs pushes can deliver an alert;
+if CloudKit, APNs, or iCloud account access is unavailable, the app refreshes
+when opened manually.
 
 ## iOS Release
 

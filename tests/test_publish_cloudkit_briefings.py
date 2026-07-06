@@ -149,6 +149,37 @@ def test_dry_run_topic_argument_outputs_only_active_topic_record(tmp_path, capsy
     assert [record["recordName"] for record in output["records"]] == ["tech-news:2026-07-05-1933"]
 
 
+def test_preflight_queries_cloudkit_without_creating_records(tmp_path, monkeypatch, capsys) -> None:
+    publisher = load_publisher()
+    manifest_path = tmp_path / "pavbot-manifest.json"
+    manifest_path.write_text(json.dumps(sample_manifest()), encoding="utf-8")
+    calls: list[list[str]] = []
+
+    def fake_run(command, text=False, capture_output=False):
+        calls.append(command)
+        return publisher.subprocess.CompletedProcess(command, 0, stdout='{"records":[]}', stderr="")
+
+    monkeypatch.setattr(publisher.subprocess, "run", fake_run)
+
+    exit_code = publisher.main(
+        [
+            "preflight",
+            "--manifest",
+            str(manifest_path),
+            "--manifest-url",
+            "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            "--topic",
+            "research/aktualne-wydarzenia-mobile",
+        ]
+    )
+
+    assert exit_code == 0
+    output = json.loads(capsys.readouterr().out)
+    assert output == {"status": "preflight-ok", "recordCount": 1}
+    assert [command[2] for command in calls] == ["query-records"]
+    assert not any("create-record" in command for command in calls)
+
+
 def test_audio_url_ignores_podcast_brief_pdf_when_mp3_exists() -> None:
     publisher = load_publisher()
     manifest = sample_manifest()
@@ -331,3 +362,28 @@ def test_verify_fails_fast_when_cktool_token_is_missing(monkeypatch) -> None:
         assert "xcrun cktool save-token" in str(error)
     else:
         raise AssertionError("verify_records must fail fast when cktool auth is missing")
+
+
+def test_verify_fails_fast_when_cktool_token_is_expired(monkeypatch) -> None:
+    publisher = load_publisher()
+    records = publisher.build_briefing_records(
+        sample_manifest(),
+        manifest_url="https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+    )
+
+    def fake_run(command, text=False, capture_output=False):
+        return publisher.subprocess.CompletedProcess(
+            command,
+            1,
+            stdout="",
+            stderr="Authentication failed. User token may have been entered incorrectly or has expired.",
+        )
+
+    monkeypatch.setattr(publisher.subprocess, "run", fake_run)
+
+    try:
+        publisher.verify_records(records, "iCloud.test", "production", "TEAM123")
+    except RuntimeError as error:
+        assert "xcrun cktool save-token" in str(error)
+    else:
+        raise AssertionError("verify_records must fail fast when cktool auth is expired")
