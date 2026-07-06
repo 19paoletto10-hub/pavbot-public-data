@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-06",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy materiał odchodzi od pojedynczych „model newsów” i skupia się na tym, jak AI jest faktycznie sprzedawane, wdrażane i kontrolowane. OpenAI uruchamia GPT-5.6 tylko dla ograniczonego grona partnerów, Microsoft robi z enterprise deployment osobny biznes, a Meta sama przyznaje, że agenci nie przyspieszyli tak szybko, jak oczekiwano.",
+    "Po stronie rynku produktowego Product Hunt pokazuje, że publiczny ekosystem narzędzi wokół agentów jest już bardzo gęsty. Z kolei Bending Spoons i Agility Robotics pokazują dwie różne formy kapitalizacji na AI: software roll-up z mocnym użyciem AI oraz humanoidy wchodzące na publiczny rynek."
+  ],
+  "summaryBullets": [
+    "AI / governance: GPT-5.6 staje się modelowym release'em pod nadzorem",
+    "Enterprise AI: Microsoft Frontier Company robi z wdrożeń osobny biznes",
+    "Big Tech / AI: Meta przyznaje, że agenci nie dowożą tempa"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-06-0-gpt-5-6-staje-sie-modelowym-release-em-pod-nadzorem-bb2b85ba3b",
+      "section": "AI / governance",
+      "title": "GPT-5.6 staje się modelowym release'em pod nadzorem",
+      "standfirst": "OpenAI nie wypuszcza GPT-5.6 jak zwykłej aktualizacji. To ograniczony preview z udziałem zaufanych partnerów i rządowego procesu dopuszczeń, czyli model release jako osobny proces governance.",
+      "whatHappened": "OpenAI opublikowało preview GPT-5.6 Sol, Terra i Luna, a start broad access został odłożony.",
+      "whyItMatters": "Frontier AI staje się sprawą nie tylko jakości modelu, ale też dystrybucji, polityki bezpieczeństwa i kontroli dostępu.",
+      "deeperAnalysis": [
+        "GPT-5.6 staje się modelowym release'em pod nadzorem Sekcja: AI / governance Priorytet: High Tagi: OpenAI, GPT-5.6, security, enterprise, Cerebras Standfirst: OpenAI nie wypuszcza GPT-5.6 jak zwykłej aktualizacji. To ograniczony preview z udziałem zaufanych partnerów i rządowego procesu dopuszczeń, czyli model release jako osobny proces governance. Co się stało: OpenAI opublikowało preview GPT-5.6 Sol, Terra i Luna, a start broad access został odłożony. Dlaczego ważne: Frontier AI staje się sprawą nie tylko jakości modelu, ale też dystrybucji, polityki bezpieczeństwa i kontroli dostępu. Źródła: - OpenAI: Previewing GPT-5.6 Sol - OpenAI Deployment Safety Hub: GPT-5.6 Preview System Card",
+        "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: GPT-5.",
+        "Analiza opiera się na źródłach: OpenAI o GPT-5.6 Sol.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek ai / governance przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: GPT-5.",
+        "Dlaczego ważne: sygnał może zmienić priorytety technologiczne.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai / governance przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: Previewing GPT-5.6 Sol",
+          "url": "https://openai.com/index/previewing-gpt-5-6-sol/"
+        },
+        {
+          "title": "OpenAI Deployment Safety Hub: GPT-5.6 Preview System Card",
+          "url": "https://deploymentsafety.openai.com/gpt-5-6-preview"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "GPT-5.6",
+        "security",
+        "enterprise",
+        "Cerebras"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-06-1-microsoft-frontier-company-robi-z-wdrozen-osobny-biznes-484b6f48fa",
+      "section": "Enterprise AI",
+      "title": "Microsoft Frontier Company robi z wdrożeń osobny biznes",
+      "standfirst": "Microsoft tworzy Frontier Company jako osobny operating business do wdrażania AI u klientów. To mocny sygnał, że największa wartość przenosi się z modelu do wdrożenia.",
+      "whatHappened": "Microsoft ogłosił 2,5 miliarda dolarów inwestycji i 6 tys. ekspertów przy klientach.",
+      "whyItMatters": "AI przestaje być „produktem w chmurze”, a coraz bardziej staje się usługą transformacji operacyjnej. Źródło: - Microsoft Frontier Company",
+      "deeperAnalysis": [
+        "Microsoft Frontier Company robi z wdrożeń osobny biznes Sekcja: Enterprise AI Priorytet: High Tagi: Microsoft, enterprise AI, deployment, FDE, outcomes Standfirst: Microsoft tworzy Frontier Company jako osobny operating business do wdrażania AI u klientów. To mocny sygnał, że największa wartość przenosi się z modelu do wdrożenia. Co się stało: Microsoft ogłosił 2,5 miliarda dolarów inwestycji i 6 tys. ekspertów przy klientach. Dlaczego ważne: AI przestaje być „produktem w chmurze”, a coraz bardziej staje się usługą transformacji operacyjnej. Źródło: - Microsoft Frontier Company",
+        "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: Microsoft Frontier Company robi z wdrożeń osobny biznes Sekcja: Enterprise AI Priorytet: High Tagi: Microsoft, enterprise AI, deployment, FDE, outcomes Standfirst: Microsoft tworzy Frontier Company jako osobny operating business do wdrażania AI u klientów.",
+        "Analiza opiera się na źródłach: OpenAI o GPT-5.6 Sol.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek enterprise ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Microsoft Frontier Company robi z wdrożeń osobny biznes Sekcja: Enterprise AI Priorytet: High Tagi: Microsoft, enterprise AI, deployment, FDE, outcomes Standfirst: Microsoft tworzy Frontier Company jako osobny operating business do wdrażania AI u klientów.",
+        "Dlaczego ważne: sygnał może zmienić priorytety technologiczne.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek enterprise ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Microsoft Frontier Company",
+          "url": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Microsoft",
+        "enterprise AI",
+        "deployment",
+        "FDE",
+        "outcomes"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-06-2-meta-przyznaje-ze-agenci-nie-dowoza-tempa-a94a374841",
+      "section": "Big Tech / AI",
+      "title": "Meta przyznaje, że agenci nie dowożą tempa",
+      "standfirst": "Zuckerberg mówi pracownikom wprost, że agenci AI nie przyspieszyli tak szybko, jak oczekiwano. To ważny kontrapunkt wobec całego rynku „AI replacement”.",
+      "whatHappened": "Meta sygnalizuje, że nawet po dużych zwolnieniach i przesunięciach do zespołów AI produkt nie osiągnął oczekiwanego tempa.",
+      "whyItMatters": "hype o agentach zderza się z realnym tempem wdrożeń i z kosztami infrastruktury. Źródło: - TechCrunch: Mark Zuckerberg tells staff that AI agents haven’t progressed as quickly as he’d hoped",
+      "deeperAnalysis": [
+        "Meta przyznaje, że agenci nie dowożą tempa Sekcja: Big Tech / AI Priorytet: High Tagi: Meta, agents, AI infrastructure, labor, deployment Standfirst: Zuckerberg mówi pracownikom wprost, że agenci AI nie przyspieszyli tak szybko, jak oczekiwano. To ważny kontrapunkt wobec całego rynku „AI replacement”. Co się stało: Meta sygnalizuje, że nawet po dużych zwolnieniach i przesunięciach do zespołów AI produkt nie osiągnął oczekiwanego tempa. Dlaczego ważne: hype o agentach zderza się z realnym tempem wdrożeń i z kosztami infrastruktury. Źródło: - TechCrunch: Mark Zuckerberg tells staff that AI agents haven’t progressed as quickly as he’d hoped",
+        "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: Meta przyznaje, że agenci nie dowożą tempa Sekcja: Big Tech / AI Priorytet: High Tagi: Meta, agents, AI infrastructure, labor, deployment Standfirst: Zuckerberg mówi pracownikom wprost, że agenci AI nie przyspieszyli tak szybko, jak oczekiwano.",
+        "Analiza opiera się na źródłach: OpenAI o GPT-5.6 Sol.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek big tech / ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Meta przyznaje, że agenci nie dowożą tempa Sekcja: Big Tech / AI Priorytet: High Tagi: Meta, agents, AI infrastructure, labor, deployment Standfirst: Zuckerberg mówi pracownikom wprost, że agenci AI nie przyspieszyli tak szybko, jak oczekiwano.",
+        "Dlaczego ważne: sygnał może zmienić priorytety technologiczne.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek big tech / ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: Mark Zuckerberg tells staff that AI agents haven’t progressed as quickly as he’d hoped",
+          "url": "https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Meta",
+        "agents",
+        "AI infrastructure",
+        "labor",
+        "deployment"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-06-3-product-hunt-pokazuje-agentowy-stos-narzedzi-e0ca720c38",
+      "section": "Product / launch signal",
+      "title": "Product Hunt pokazuje agentowy stos narzędzi",
+      "standfirst": "W weekendowej topce Product Hunt widać nie pojedynczy chatbot, ale cały stos narzędzi wokół agentów: biuro, tablicę zadań, dokumentację i środowiska testowe.",
+      "whatHappened": "Daily leaderboard z 5 lipca otwierają WorkBuddy, DocsAlot, TryCase i Endl.",
+      "whyItMatters": "publiczny rynek produktowy pokazuje, że następna fala AI to infrastruktura pracy, nie sam czat.",
+      "deeperAnalysis": [
+        "Product Hunt pokazuje agentowy stos narzędzi Sekcja: Product / launch signal Priorytet: Medium Tagi: Product Hunt, agents, workflow, coding, productivity Standfirst: W weekendowej topce Product Hunt widać nie pojedynczy chatbot, ale cały stos narzędzi wokół agentów: biuro, tablicę zadań, dokumentację i środowiska testowe. Co się stało: Daily leaderboard z 5 lipca otwierają WorkBuddy, DocsAlot, TryCase i Endl. Dlaczego ważne: publiczny rynek produktowy pokazuje, że następna fala AI to infrastruktura pracy, nie sam czat. Źródła: - Product Hunt: Best of July 5, 2026 - Product Hunt newsletter archive",
+        "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: Product Hunt pokazuje agentowy stos narzędzi Sekcja: Product / launch signal Priorytet: Medium Tagi: Product Hunt, agents, workflow, coding, productivity Standfirst: W weekendowej topce Product Hunt widać nie pojedynczy chatbot, ale cały stos narzędzi wokół agentów: biuro, tablicę zadań, dokumentację i środowiska testowe.",
+        "Analiza opiera się na źródłach: OpenAI o GPT-5.6 Sol.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek product / launch signal przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Product Hunt pokazuje agentowy stos narzędzi Sekcja: Product / launch signal Priorytet: Medium Tagi: Product Hunt, agents, workflow, coding, productivity Standfirst: W weekendowej topce Product Hunt widać nie pojedynczy chatbot, ale cały stos narzędzi wokół agentów: biuro, tablicę zadań, dokumentację i środowiska testowe.",
+        "Dlaczego ważne: sygnał może zmienić priorytety technologiczne.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek product / launch signal przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt: Best of July 5, 2026",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/7/5"
+        },
+        {
+          "title": "Product Hunt newsletter archive",
+          "url": "https://www.producthunt.com/newsletters/archive/daily"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Product Hunt",
+        "agents",
+        "workflow",
+        "coding",
+        "productivity"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-06-4-bending-spoons-pokazuje-ai-jako-dzwignie-operacyjna-b669aff98f",
+      "section": "Startup / IPO",
+      "title": "Bending Spoons pokazuje AI jako dźwignię operacyjną",
+      "standfirst": "Włoski software roll-up nie sprzedaje samej wizji AI, tylko twardą poprawę operacyjnej wydajności. To ciekawy europejski kontrapunkt dla amerykańskiej narracji o modelach.",
+      "whatHappened": "Spółka po IPO mówi, że AI pomogło podnieść produktywność i przychód na pracownika.",
+      "whyItMatters": "AI coraz częściej jest mierzone nie benchmarkiem, tylko rentownością i efektem na organizację.",
+      "deeperAnalysis": [
+        "Bending Spoons pokazuje AI jako dźwignię operacyjną Sekcja: Startup / IPO Priorytet: High Tagi: Bending Spoons, IPO, AI, SaaS, Europe Standfirst: Włoski software roll-up nie sprzedaje samej wizji AI, tylko twardą poprawę operacyjnej wydajności. To ciekawy europejski kontrapunkt dla amerykańskiej narracji o modelach. Co się stało: Spółka po IPO mówi, że AI pomogło podnieść produktywność i przychód na pracownika. Dlaczego ważne: AI coraz częściej jest mierzone nie benchmarkiem, tylko rentownością i efektem na organizację. Źródła: - TechCrunch: After $18B IPO, Bending Spoons founder says success comes from minimizing luck - TechCrunch: What is Bending Spoons?",
+        "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: Bending Spoons pokazuje AI jako dźwignię operacyjną Sekcja: Startup / IPO Priorytet: High Tagi: Bending Spoons, IPO, AI, SaaS, Europe Standfirst: Włoski software roll-up nie sprzedaje samej wizji AI, tylko twardą poprawę operacyjnej wydajności.",
+        "Analiza opiera się na źródłach: OpenAI o GPT-5.6 Sol.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek startup / ipo przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Bending Spoons pokazuje AI jako dźwignię operacyjną Sekcja: Startup / IPO Priorytet: High Tagi: Bending Spoons, IPO, AI, SaaS, Europe Standfirst: Włoski software roll-up nie sprzedaje samej wizji AI, tylko twardą poprawę operacyjnej wydajności.",
+        "Dlaczego ważne: sygnał może zmienić priorytety technologiczne.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek startup / ipo przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: After $18B IPO, Bending Spoons founder says success comes from minimizing luck",
+          "url": "https://techcrunch.com/2026/07/01/after-18b-ipo-bending-spoons-founder-says-success-comes-from-minimizing-luck/"
+        },
+        {
+          "title": "TechCrunch: What is Bending Spoons?",
+          "url": "https://techcrunch.com/2026/07/05/what-is-bending-spoons-everything-to-know-about-aols-acquirer/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Bending Spoons",
+        "IPO",
+        "AI",
+        "SaaS",
+        "Europe"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-06-5-agility-robotics-wchodzi-na-publiczny-rynek-21f152c58e",
+      "section": "Robotics",
+      "title": "Agility Robotics wchodzi na publiczny rynek",
+      "standfirst": "Agility Robotics idzie na giełdę przez SPAC. To nie jest obietnica robota w salonie, tylko próba skomercjalizowania humanoidów dla magazynów i fabryk.",
+      "whatHappened": "Agility i Churchill Capital Corp XI ogłosiły transakcję wyceniającą spółkę na około 2,5 miliarda dolarów.",
+      "whyItMatters": "fizyczna automatyzacja wychodzi z prezentacji i przechodzi do rynku publicznego.",
+      "deeperAnalysis": [
+        "Agility Robotics wchodzi na publiczny rynek Sekcja: Robotics Priorytet: High Tagi: robotics, SPAC, humanoids, warehouse automation Standfirst: Agility Robotics idzie na giełdę przez SPAC. To nie jest obietnica robota w salonie, tylko próba skomercjalizowania humanoidów dla magazynów i fabryk. Co się stało: Agility i Churchill Capital Corp XI ogłosiły transakcję wyceniającą spółkę na około 2,5 miliarda dolarów. Dlaczego ważne: fizyczna automatyzacja wychodzi z prezentacji i przechodzi do rynku publicznego. Źródła: - Agility Robotics press release - SEC filing",
+        "Ten sygnał jest ważny, bo warto obserwować dalszy rozwój tego wątku. Kluczowy fakt z raportu: Agility Robotics wchodzi na publiczny rynek Sekcja: Robotics Priorytet: High Tagi: robotics, SPAC, humanoids, warehouse automation Standfirst: Agility Robotics idzie na giełdę przez SPAC.",
+        "Analiza opiera się na źródłach: OpenAI o GPT-5.6 Sol.",
+        "W kolejnej rundzie warto sprawdzić, czy wątek robotics przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "contextPoints": [
+        "Co się stało: Agility Robotics wchodzi na publiczny rynek Sekcja: Robotics Priorytet: High Tagi: robotics, SPAC, humanoids, warehouse automation Standfirst: Agility Robotics idzie na giełdę przez SPAC.",
+        "Dlaczego ważne: sygnał może zmienić priorytety technologiczne.",
+        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek robotics przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+      ],
+      "sources": [
+        {
+          "title": "Agility Robotics press release",
+          "url": "https://www.agilityrobotics.com/content/agility-robotics-to-go-public-through-merger-with-churchill-capital-corp-xi"
+        },
+        {
+          "title": "SEC filing",
+          "url": "https://www.sec.gov/Archives/edgar/data/2074973/000121390026071290/ea029548401ex99-1.htm"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "robotics",
+        "SPAC",
+        "humanoids",
+        "warehouse automation"
+      ]
+    }
+  ],
+  "podcastTopics": [],
+  "checkedSources": [
+    {
+      "title": "OpenAI o GPT-5.6 Sol",
+      "url": "https://openai.com/index/previewing-gpt-5-6-sol/"
+    },
+    {
+      "title": "OpenAI GPT-5.6 Preview System Card",
+      "url": "https://deploymentsafety.openai.com/gpt-5-6-preview"
+    },
+    {
+      "title": "Business Insider o ograniczonym preview",
+      "url": "https://www.businessinsider.com/openai-gpt-5-6-limited-preview-us-government-ai-security-2026-6"
+    },
+    {
+      "title": "oficjalny blog Microsoftu o Frontier Company",
+      "url": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/"
+    },
+    {
+      "title": "TechCrunch o Meta i agentach",
+      "url": "https://techcrunch.com/2026/07/02/mark-zuckerberg-tells-staff-that-ai-agents-havent-progressed-as-quickly-as-hed-hoped/"
+    },
+    {
+      "title": "Product Hunt Leaderboard z 5 lipca 2026",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/7/5"
+    },
+    {
+      "title": "newsletter Product Hunt z 5 lipca 2026",
+      "url": "https://www.producthunt.com/newsletters/archive/daily"
+    },
+    {
+      "title": "Agility Robotics o SPAC",
+      "url": "https://www.agilityrobotics.com/content/agility-robotics-to-go-public-through-merger-with-churchill-capital-corp-xi"
+    },
+    {
+      "title": "TechCrunch o Bending Spoons",
+      "url": "https://techcrunch.com/2026/07/01/after-18b-ipo-bending-spoons-founder-says-success-comes-from-minimizing-luck/"
+    },
+    {
+      "title": "The Verge o Google Workspace commercial",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/961468/google-ai-commercial-founding-fathers-declaration-of-independence"
+    },
+    {
+      "title": "TechCrunch o Microsoft Frontier Company",
+      "url": "https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/"
+    }
+  ]
+}
