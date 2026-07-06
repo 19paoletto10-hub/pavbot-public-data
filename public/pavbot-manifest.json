@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-06T04:07:47.387049+00:00",
+  "generatedAt": "2026-07-06T04:09:09.490739+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -181,6 +181,17 @@
   ],
   "artifacts": [
     {
+      "id": "research/reddit-radar/runs/2026-07-06-0608-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar 2026-07-06-0608",
+      "path": "research/reddit-radar/runs/2026-07-06-0608-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-07-06-0608-reddit-radar.md",
+      "sizeBytes": 10138,
+      "date": "2026-07-06",
+      "time": "06:08"
+    },
+    {
       "id": "research/reddit-radar/runs/2026-07-06-0010-reddit-radar.md",
       "type": "run",
       "topic": "reddit-radar",
@@ -192,6 +203,17 @@
       "time": "00:10"
     },
     {
+      "id": "research/reddit-radar/data/2026-07-06-0608-reddit-radar-raw.json",
+      "type": "redditRadarRawData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar raw data",
+      "path": "research/reddit-radar/data/2026-07-06-0608-reddit-radar-raw.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-06-0608-reddit-radar-raw.json",
+      "sizeBytes": 66558,
+      "date": "2026-07-06",
+      "time": "06:08"
+    },
+    {
       "id": "research/reddit-radar/data/2026-07-06-0010-reddit-radar-raw.json",
       "type": "redditRadarRawData",
       "topic": "reddit-radar",
@@ -201,6 +223,17 @@
       "sizeBytes": 39448,
       "date": "2026-07-06",
       "time": "00:10"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-06-0608-reddit-radar.json",
+      "type": "redditRadarData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar data",
+      "path": "research/reddit-radar/data/2026-07-06-0608-reddit-radar.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-06-0608-reddit-radar.json",
+      "sizeBytes": 29924,
+      "date": "2026-07-06",
+      "time": "06:08"
     },
     {
       "id": "research/reddit-radar/data/2026-07-06-0010-reddit-radar.json",
