@@ -3347,6 +3347,16 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(RemoteNotificationDiagnostics.registrationError(defaults: defaults), "")
     }
 
+    func testRemoteNotificationDiagnosticsReportsRegisteredDeviceTokenReadiness() {
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+
+        XCTAssertFalse(RemoteNotificationDiagnostics.hasRegisteredDeviceToken(defaults: defaults))
+
+        RemoteNotificationDiagnostics.saveDeviceToken(Data([0x00, 0xab]), defaults: defaults)
+
+        XCTAssertTrue(RemoteNotificationDiagnostics.hasRegisteredDeviceToken(defaults: defaults))
+    }
+
     func testRemoteNotificationDiagnosticsCopyNamesDeviceTokenNotJWT() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let sourcesURL = testsURL
@@ -6814,7 +6824,7 @@ final class PavbotManifestTests: XCTestCase {
             cache: ManifestCache(defaults: UserDefaults(suiteName: UUID().uuidString)!),
             notifier: notifier,
             manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
-            liveNotificationsEnabled: { false }
+            liveNotificationsReady: { false }
         )
         store.manifest = previous
 
@@ -6826,7 +6836,7 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     @MainActor
-    func testStoreSkipsLocalCatchUpNotificationsWhenLiveNotificationsAreEnabled() async throws {
+    func testStoreSchedulesLocalCatchUpNotificationsWhenLiveNotificationsAreEnabledButNotReady() async throws {
         let previous = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
         let next = PavbotManifest(
             schemaVersion: previous.schemaVersion,
@@ -6843,7 +6853,36 @@ final class PavbotManifestTests: XCTestCase {
             cache: ManifestCache(defaults: UserDefaults(suiteName: UUID().uuidString)!),
             notifier: notifier,
             manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
-            liveNotificationsEnabled: { true }
+            liveNotificationsReady: { false }
+        )
+        store.manifest = previous
+
+        await store.load()
+
+        XCTAssertEqual(notifier.notifiedArtifactIDs, ["new-run-2026-06-23"])
+        XCTAssertTrue(notifier.notifiedAutomationIDs.isEmpty)
+        XCTAssertEqual(store.lastNewArtifacts.map(\.id), ["new-run-2026-06-23"])
+    }
+
+    @MainActor
+    func testStoreSkipsLocalCatchUpNotificationsWhenLiveNotificationsAreReady() async throws {
+        let previous = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
+        let next = PavbotManifest(
+            schemaVersion: previous.schemaVersion,
+            title: previous.title,
+            generatedAt: previous.generatedAt,
+            rawBaseUrl: previous.rawBaseUrl,
+            automations: previous.automations,
+            topics: previous.topics,
+            artifacts: [Self.newArtifact] + previous.artifacts
+        )
+        let notifier = SpyArtifactNotifier()
+        let store = ManifestStore(
+            client: StubManifestClient(manifest: next),
+            cache: ManifestCache(defaults: UserDefaults(suiteName: UUID().uuidString)!),
+            notifier: notifier,
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            liveNotificationsReady: { true }
         )
         store.manifest = previous
 
@@ -6872,7 +6911,7 @@ final class PavbotManifestTests: XCTestCase {
             cache: ManifestCache(defaults: UserDefaults(suiteName: UUID().uuidString)!),
             notifier: notifier,
             manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
-            liveNotificationsEnabled: { false }
+            liveNotificationsReady: { false }
         )
         store.manifest = previous
 

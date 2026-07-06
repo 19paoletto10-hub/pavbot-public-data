@@ -119,13 +119,14 @@ enum RemoteNotificationPermission {
 
         let granted = (try? await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge])) ?? false
         if granted {
-            LiveNotificationSettings.setEnabled(true)
             RemoteNotificationDiagnostics.saveRegistrationAttempt()
             do {
                 try await CloudKitService.shared.createOrUpdateSubscriptions()
+                LiveNotificationSettings.setEnabled(true)
                 RemoteNotificationDiagnostics.saveRegistrationSuccess()
                 UIApplication.shared.registerForRemoteNotifications()
             } catch {
+                LiveNotificationSettings.setEnabled(false)
                 RemoteNotificationDiagnostics.saveRegistrationError("CloudKit subscription failed: \(error.localizedDescription)")
                 return false
             }
@@ -174,6 +175,10 @@ enum RemoteNotificationDiagnostics {
 
     static func deviceToken(defaults: UserDefaults = .standard) -> String {
         defaults.string(forKey: deviceTokenDefaultsKey) ?? ""
+    }
+
+    static func hasRegisteredDeviceToken(defaults: UserDefaults = .standard) -> Bool {
+        !deviceToken(defaults: defaults).isEmpty
     }
 
     static func deviceTokenPreview(defaults: UserDefaults = .standard) -> String {
@@ -351,6 +356,7 @@ final class PavbotRemoteNotificationAppDelegate: NSObject, UIApplicationDelegate
         _ application: UIApplication,
         didFailToRegisterForRemoteNotificationsWithError error: Error
     ) {
+        LiveNotificationSettings.setEnabled(false)
         RemoteNotificationDiagnostics.saveRegistrationError("APNs registration failed: \(error.localizedDescription)")
     }
 

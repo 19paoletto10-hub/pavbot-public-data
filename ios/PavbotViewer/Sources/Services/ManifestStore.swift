@@ -40,7 +40,7 @@ final class ManifestStore {
     private let cache: ManifestCache
     private let notifier: any ArtifactNotifying
     private let briefingProvider: (any BriefingMetadataFetching)?
-    private let liveNotificationsEnabled: () -> Bool
+    private let liveNotificationsReady: () -> Bool
     @ObservationIgnored private var autoRefreshTask: Task<Void, Never>?
     @ObservationIgnored private let reloadGate = ReloadGate()
 
@@ -50,14 +50,16 @@ final class ManifestStore {
         notifier: (any ArtifactNotifying)? = nil,
         manifestURLString: String? = nil,
         briefingProvider: (any BriefingMetadataFetching)? = nil,
-        liveNotificationsEnabled: @escaping () -> Bool = { LiveNotificationSettings.isEnabled() }
+        liveNotificationsReady: @escaping () -> Bool = {
+            LiveNotificationSettings.isEnabled() && RemoteNotificationDiagnostics.hasRegisteredDeviceToken()
+        }
     ) {
         PavbotConnectionDefaults.enforceLegacyUserDefaults()
         self.client = client
         self.cache = cache
         self.notifier = notifier ?? ArtifactNotificationService()
         self.briefingProvider = briefingProvider
-        self.liveNotificationsEnabled = liveNotificationsEnabled
+        self.liveNotificationsReady = liveNotificationsReady
         self.manifestURLString = manifestURLString ?? Self.defaultManifestURL
         self.manifest = cache.load()
         if self.manifest != nil {
@@ -114,7 +116,7 @@ final class ManifestStore {
             lastNewAutomations = newAutomations
             manifest = loadedManifest
             cache.save(loadedManifest)
-            if (!newArtifacts.isEmpty || !newAutomations.isEmpty) && !liveNotificationsEnabled() {
+            if (!newArtifacts.isEmpty || !newAutomations.isEmpty) && !liveNotificationsReady() {
                 await notifier.notify(artifacts: newArtifacts, automations: newAutomations, manifestURL: url)
             }
             state = .loaded
