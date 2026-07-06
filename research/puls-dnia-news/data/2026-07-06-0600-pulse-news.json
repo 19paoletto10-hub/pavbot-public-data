@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-06",
+  "runTime": "06:00",
+  "status": "Material update",
+  "headline": "Warszawa, Kijów i nowa fala napięć w świecie",
+  "summary": "Nowy slot przyniósł krajowe zdarzenie w Warszawie, reakcję Polski na atak na Kijów oraz świeże światowe leady z Iranu, Francji, Wietnamu, Niemiec i Pacyfiku.",
+  "items": [
+    {
+      "id": "pulse-2026-07-06-0600-01-warszawa-autobus-przejscie-podziemne",
+      "section": "Polska",
+      "title": "Warszawski autobus wjechał w przejście podziemne",
+      "lead": "Kierowca miał powiedzieć policji, że doszło do pomyłki.",
+      "whatHappened": "TVN24 podało, że autobus wjechał w przejście podziemne w okolicach Dworca Zachodniego w Warszawie, a kierowca miał tłumaczyć zdarzenie pomyłką.",
+      "keyFacts": [
+        "Zdarzenie dotyczyło Ochoty i okolice Dworca Zachodniego.",
+        "W relacji TVN24 pojawiła się informacja o rannych."
+      ],
+      "reactions": [
+        "To jeden z najmocniejszych krajowych leadów bezpieczeństwa w tym slocie.",
+        "Sprawa może szybko dostać aktualizacje od służb i lokalnych mediów."
+      ],
+      "whyItMatters": "To bezpośredni incydent infrastrukturalny z potencjalnymi skutkami dla ruchu i bezpieczeństwa pasażerów.",
+      "context": "Wpisuje się w blok krajowych kart o natychmiastowym wpływie na czytelników w Warszawie.",
+      "watchNext": [
+        "Czy służby podadzą oficjalną liczbę poszkodowanych.",
+        "Czy pojawi się wyjaśnienie przyczyn wjazdu autobusu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Warszawa. Autobus wjechał w przejście podziemne",
+          "url": "https://tvn24.pl/tvnwarszawa/ochota/warszawa-autobus-wjechal-w-przejscie-podziemne-w-okolicach-dworca-zachodniego-sa-ranni-st9129454"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Warszawa",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-06-0600-02-zmasowany-atak-kijow-polskie-mysliwce",
+      "section": "Świat",
+      "title": "Po ataku na Kijów Polska poderwała myśliwce",
+      "lead": "TVN24 opisało nocny atak i reakcję polskich sił powietrznych.",
+      "whatHappened": "W relacji TVN24 zmasowany atak na Kijów połączono z informacją, że Polska poderwała myśliwce w reakcji na sytuację nad Ukrainą.",
+      "keyFacts": [
+        "To świeża aktualizacja dotycząca wojny w Ukrainie.",
+        "Polska reakcja pokazuje bezpośredni wpływ wydarzeń na bezpieczeństwo regionalne."
+      ],
+      "reactions": [
+        "To jeden z najważniejszych światowych leadów dla odbiorcy w Polsce.",
+        "Każda dalsza eskalacja może szybko zmienić kolejność kart w następnym slocie."
+      ],
+      "whyItMatters": "Łączy bezpośrednie zagrożenie dla Ukrainy z reakcją NATO-wskiego sąsiada.",
+      "context": "Ten materiał dobrze domyka blok wojenny i bezpieczeństwa w porannym feedzie.",
+      "watchNext": [
+        "Czy Ukraina albo Polska podadzą dodatkowe szczegóły o nalotach i przechwyceniach.",
+        "Czy pojawi się szersza reakcja sojuszników."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zmasowany atak na Kijów. Polska poderwała myśliwce",
+          "url": "https://tvn24.pl/swiat/zmasowany-atak-na-kijow-polska-poderwala-mysliwce-st9129674"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Bezpieczeństwo",
+        "NATO"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-06-0600-03-kowal-patrioty",
+      "section": "Polityka",
+      "title": "Kowal zaostrza spór o Patrioty",
+      "lead": "Paweł Kowal skomentował burzę wokół przekazania Patriotów Ukrainie.",
+      "whatHappened": "TVN24 opisało komentarz Pawła Kowala o zachowaniu opozycji w sprawie Patriotów dla Ukrainy, wskazując na ostre polityczne spięcie wokół tematu.",
+      "keyFacts": [
+        "Temat dotyczy wsparcia militarnego dla Ukrainy.",
+        "Wątek ma wyraźny wymiar krajowej debaty politycznej."
+      ],
+      "reactions": [
+        "To dobry kandydat na kartę polityczną, bo łączy bezpieczeństwo i spór partyjny.",
+        "Temat może wrócić w kolejnych wypowiedziach polityków."
+      ],
+      "whyItMatters": "Debata o Patriotach wpływa na polską politykę bezpieczeństwa i narrację wobec Ukrainy.",
+      "context": "To jeden z dwóch najmocniejszych krajowych leadów politycznych tego slotu.",
+      "watchNext": [
+        "Czy opozycja odpowie na zarzuty.",
+        "Czy sprawa przełoży się na oficjalne decyzje rządowe."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: \"Czy oni oszaleli?\". Kowal o burzy wokół Patriotów",
+          "url": "https://tvn24.pl/polska/pociski-patriot-dla-ukrainy-pawel-kowal-o-zachowaniu-opozycji-robia-sobie-zarty-st9129509"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Ukraina",
+        "Patrioty"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-06-0600-04-dym-nad-miastem-szkodliwe-zwiazki",
+      "section": "Bezpieczeństwo",
+      "title": "Dym nad miastem może zawierać szkodliwe związki",
+      "lead": "TVN24 Meteo ostrzega przed dymem i możliwymi skutkami dla okolicy.",
+      "whatHappened": "TVN24 podało, że dym spowił miasto i może zawierać szkodliwe związki, co podnosi ryzyko dla mieszkańców i służb.",
+      "keyFacts": [
+        "To karta związana z sytuacją kryzysową i jakością powietrza.",
+        "Materiał został opublikowany w sekcji Meteo, ale ma wyraźny komponent bezpieczeństwa."
+      ],
+      "reactions": [
+        "Karta jest ważna, bo łączy zdarzenie lokalne z praktycznym ryzykiem zdrowotnym.",
+        "Jeśli dym się utrzyma, może wymagać dodatkowych ostrzeżeń."
+      ],
+      "whyItMatters": "Dla czytelników to sygnał, że mogą pojawić się ograniczenia lub zalecenia ostrożności.",
+      "context": "To bardziej operacyjny niż polityczny materiał, ale dobrze wzmacnia blok alertowy feedu.",
+      "watchNext": [
+        "Czy pojawią się zalecenia dla mieszkańców.",
+        "Czy służby potwierdzą źródło dymu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo: Dym spowił miasto. Może zawierać szkodliwe związki",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/pozary-w-grecji-ewakuacja-trzech-miejscowosci-aresztowano-76-latka-st9128996"
+        }
+      ],
+      "tags": [
+        "Meteo",
+        "Bezpieczeństwo",
+        "Jakość powietrza"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-06-0600-05-iran-nieobecnosc-najwyzszego-przywodcy",
+      "section": "Świat",
+      "title": "Iran pożegnał ajatollaha bez najwyższego przywódcy",
+      "lead": "BBC opisuje nieobecność przywódcy Iranu podczas politycznie ważnego pogrzebu.",
+      "whatHappened": "BBC podało, że najwyższy przywódca Iranu nie pojawił się, gdy seniorzy władz uczestniczyli w pogrzebie ajatollaha, co wzmacnia pytania o układ sił w Teheranie.",
+      "keyFacts": [
+        "Materiał BBC łączy ceremonię z szerszym kontekstem politycznym.",
+        "To jeden z bardziej wrażliwych punktów w bieżącym obiegu światowym."
+      ],
+      "reactions": [
+        "Scena ma znaczenie symboliczne i może wrócić w kolejnych analizach BBC.",
+        "Wątek Iranu pozostaje jednym z najważniejszych dla regionu i relacji z Zachodem."
+      ],
+      "whyItMatters": "Wewnętrzne sygnały z Teheranu mają znaczenie dla bezpieczeństwa regionalnego i dyplomacji.",
+      "context": "To mocny światowy lead z centrum bliskowschodniego napięcia.",
+      "watchNext": [
+        "Czy BBC albo agencje podadzą więcej o następnym układzie przywództwa.",
+        "Czy pojawią się reakcje z Waszyngtonu lub Europy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Iran's supreme leader absent as senior officials attend ayatollah's funeral",
+          "url": "https://www.bbc.co.uk/news/articles/cevllyj9vv3o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Bliski Wschód",
+        "Polityka"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-06-0600-06-le-pen-apelacja-francja",
+      "section": "Świat",
+      "title": "Apelacja Marine Le Pen zmienia francuską układankę",
+      "lead": "BBC wyjaśnia, dlaczego wyrok apelacyjny ma znaczenie dla Francji.",
+      "whatHappened": "BBC opublikowało materiał o apelacji Marine Le Pen i o tym, dlaczego ten moment jest ważny dla francuskiej polityki.",
+      "keyFacts": [
+        "To świeży europejski temat polityczny.",
+        "Sprawa ma potencjał wpływu na układ sił po prawej stronie sceny politycznej."
+      ],
+      "reactions": [
+        "Temat jest wysoce komentowany i może generować kolejne analizy oraz reakcje partii.",
+        "To dobry światowy karton do feedu, bo łączy prawo i politykę."
+      ],
+      "whyItMatters": "Wyroki i apelacje wobec liderów dużych partii mogą zmieniać politykę całego kraju.",
+      "context": "Materiał wzmacnia europejską część feedu i utrzymuje balans między geopolityką a polityką krajową.",
+      "watchNext": [
+        "Czy pojawią się komentarze ze strony Le Pen i jej otoczenia.",
+        "Czy francuskie media rozwiną konsekwencje wyroku."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Marine Le Pen appeal verdict: Why this moment matters for France",
+          "url": "https://www.bbc.co.uk/news/articles/clyeele4leeo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "Polityka",
+        "Europa"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-06-0600-07-wietnam-falszywe-luksusy",
+      "section": "Gospodarka",
+      "title": "Wietnam uderza w czarny rynek luksusów",
+      "lead": "BBC opisuje walkę z handlem podróbkami dóbr premium.",
+      "whatHappened": "BBC napisało o Wietnamie jako o hubie fałszywych dóbr luksusowych i o działaniach władz przeciw czarnemu rynkowi.",
+      "keyFacts": [
+        "To temat gospodarczo-konsumencki z międzynarodowym zasięgiem.",
+        "Wątek dotyczy zarówno handlu, jak i egzekwowania prawa."
+      ],
+      "reactions": [
+        "Dobrze równoważy cięższe kart y wojenne i polityczne.",
+        "Może być interesujący dla czytelników śledzących globalny handel i marki."
+      ],
+      "whyItMatters": "Podróbki luksusowe to realny problem dla handlu, podatków i ochrony marek.",
+      "context": "To jedna z mniej alarmowych, ale nadal istotnych kart świata w tym slocie.",
+      "watchNext": [
+        "Czy pojawią się dane o skali konfiskat.",
+        "Czy marki lub organy celne wydadzą dodatkowe komentarze."
+      ],
+      "sources": [
+        {
+          "title": "BBC: A global hub for fake luxury goods, Vietnam cracks down on its black market",
+          "url": "https://www.bbc.co.uk/news/articles/cdx7zzywz7wo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Handel",
+        "Azja"
+      ],
+      "priority": "Low"
+    },
+    {
+      "id": "pulse-2026-07-06-0600-08-bavi-pacyfik-amerykanskie-wyspy",
+      "section": "Bezpieczeństwo",
+      "title": "Supertajfun Bavi uderza w wyspy Pacyfiku",
+      "lead": "BBC potwierdza lądowanie supertajfunu na terytoriach USA.",
+      "whatHappened": "BBC podało, że supertajfun Bavi dotarł do amerykańskich wysp Pacyfiku i przyniósł bardzo silne porywy wiatru.",
+      "keyFacts": [
+        "To aktualny alert pogodowo-kryzysowy na Pacyfiku.",
+        "Sytuacja dotyczy terytoriów USA i infrastruktury wojskowej."
+      ],
+      "reactions": [
+        "To karta o wysokim znaczeniu operacyjnym i bezpieczeństwa publicznego.",
+        "Następne komunikaty mogą szybko zmienić skalę szkód."
+      ],
+      "whyItMatters": "Ekstremalny żywioł wpływa na mieszkańców, transport i infrastrukturę w strategicznym regionie.",
+      "context": "Wraz z CNN to najważniejszy pogodowy temat światowy tego cyklu.",
+      "watchNext": [
+        "Czy pojawią się oficjalne raporty o szkodach i ewakuacjach.",
+        "Czy amerykańskie służby podniosą poziom ostrzeżeń."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Super Typhoon Bavi makes landfall on US Pacific islands with huge wind gusts",
+          "url": "https://www.bbc.co.uk/news/articles/cr7xpgx50jxo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Pogoda",
+        "USA",
+        "Pacyfik"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-06-0600-09-rosja-kryzys-paliwowy-drony",
+      "section": "Świat",
+      "title": "Rosja odczuwa kryzys paliwowy po atakach dronów",
+      "lead": "CNN opisuje skutki ukraińskiej eskalacji dla rosyjskich regionów.",
+      "whatHappened": "CNN podało, że prawie każdy rosyjski region odczuwa kryzys paliwowy po kolejnej eskalacji ukraińskich ataków dronowych.",
+      "keyFacts": [
+        "Materiał łączy wojnę dronową z zakłóceniami w dostawach paliwa.",
+        "To ważny sygnał o kosztach wojny dla rosyjskiej gospodarki regionalnej."
+      ],
+      "reactions": [
+        "To mocny światowy materiał o skutkach odwetu i presji logistycznej.",
+        "Wątek może zyskać większe znaczenie, jeśli pojawią się kolejne zakłócenia rynku."
+      ],
+      "whyItMatters": "Kryzys paliwowy ma znaczenie dla transportu, gospodarki i polityki wewnętrznej Rosji.",
+      "context": "To jeden z najmocniejszych materiałów CNN w tym slocie i naturalny duet z kartą o Kijowie.",
+      "watchNext": [
+        "Czy pojawią się kolejne ataki na infrastrukturę energetyczną.",
+        "Czy Rosja poda własne dane o niedoborach paliwa."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Almost every Russian region hit by fuel crisis, as Ukraine escalates drone attacks",
+          "url": "https://edition.cnn.com/2026/07/06/europe/russia-fuel-crisis-ukraine-drone-attacks-intl-vis"
+        }
+      ],
+      "tags": [
+        "Rosja",
+        "Ukraina",
+        "Energia"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-06-0600-10-kijow-rosyjskie-uderzenia-nato",
+      "section": "Świat",
+      "title": "Rosyjskie uderzenia na Kijów przed szczytem NATO",
+      "lead": "CNN łączy atak z politycznym kalendarzem Trumpa i NATO.",
+      "whatHappened": "CNN relacjonowało śmiertelne rosyjskie ataki na Kijów w przeddzień podróży Trumpa na kluczowy szczyt NATO.",
+      "keyFacts": [
+        "To jedno z najbardziej bezpośrednich ujęć wojny w Ukrainie w tym slocie.",
+        "Kalendarz dyplomatyczny USA i NATO zwiększa znaczenie materiału."
+      ],
+      "reactions": [
+        "To istotny lead dla odbiorców śledzących relacje USA-NATO-Rosja-Ukraina.",
+        "Może pojawić się szersza reakcja polityczna, jeśli liczba ofiar lub szkód wzrośnie."
+      ],
+      "whyItMatters": "Uderza w bezpieczeństwo Ukrainy i w tło polityczne rozmów sojuszniczych.",
+      "context": "Materiał dobrze domyka blok wojenny CNN obok paliwowego napięcia w Rosji.",
+      "watchNext": [
+        "Czy NATO lub administracja USA zabiorą głos.",
+        "Czy pojawią się nowe dane o skali ataku."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Deadly Russian strikes hammer Kyiv on eve of Trump trip to critical NATO summit",
+          "url": "https://edition.cnn.com/2026/07/05/europe/kyiv-ballistic-missile-attack-july-6-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "NATO",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-06-0600-11-afd-reelection-protests-police",
+      "section": "Świat",
+      "title": "AfD ponownie wybiera liderów mimo protestów",
+      "lead": "CNN opisuje starcia z policją podczas zjazdu skrajnej prawicy w Niemczech.",
+      "whatHappened": "CNN poinformowało, że liderzy Alternative for Germany zostali ponownie wybrani mimo protestów i starć z policją.",
+      "keyFacts": [
+        "Temat ma silny wymiar polityki wewnętrznej Niemiec.",
+        "Obraz starć z policją zwiększa ciężar społeczny materiału."
+      ],
+      "reactions": [
+        "To ważna karta dla obserwatorów europejskiej skrajnej prawicy.",
+        "Może pojawić się dalsza reakcja zarówno demonstrantów, jak i rządu."
+      ],
+      "whyItMatters": "Niemiecka scena polityczna ma bezpośrednie znaczenie dla całej Unii Europejskiej.",
+      "context": "To bardziej polityczny niż kryzysowy materiał, ale wzmacnia europejską część feedu.",
+      "watchNext": [
+        "Czy partia i policja opublikują dodatkowe komentarze.",
+        "Czy temat przełoży się na sondaże lub koalicyjną debatę."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Far-right Alternative for Germany party reelects leaders as protesters and police clash",
+          "url": "https://edition.cnn.com/2026/07/04/europe/germany-far-right-afd-protests-intl"
+        }
+      ],
+      "tags": [
+        "Niemcy",
+        "Polityka",
+        "Europa"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-06-0600-12-ciesnina-ormuz-energia",
+      "section": "Gospodarka",
+      "title": "CNN śledzi ruch w cieśninie Ormuz",
+      "lead": "Wizualizacja pokazuje, jak ważny pozostaje ten szlak dla energii.",
+      "whatHappened": "CNN opublikowało materiał wizualny o ruchu w cieśninie Ormuz, pokazując jej znaczenie dla przepływu surowców i globalnego rynku energii.",
+      "keyFacts": [
+        "To kartografia i analiza, a nie klasyczny news agencyjny break.",
+        "Mimo formy wizualnej temat pozostaje istotny dla rynku energii."
+      ],
+      "reactions": [
+        "Dobra karta na końcu feedu, bo daje kontekst dla napięć wokół Bliskiego Wschodu.",
+        "Może być użyteczna jako dłużej żyjący materiał wyjaśniający."
+      ],
+      "whyItMatters": "Cieśnina Ormuz jest jednym z kluczowych punktów dla światowych dostaw ropy i gazu.",
+      "context": "To stabilizujący, kontekstowy materiał gospodarczy po serii cięższych kart.",
+      "watchNext": [
+        "Czy CNN rozwinie wizualizację o nowe dane.",
+        "Czy napięcia w regionie wpłyną na ceny energii."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Tracking traffic in the Strait of Hormuz, in maps and charts",
+          "url": "https://edition.cnn.com/world/strait-of-hormuz-tracker-vis"
+        }
+      ],
+      "tags": [
+        "Energia",
+        "Bliski Wschód",
+        "Gospodarka"
+      ],
+      "priority": "Low"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 Najnowsze",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "BBC News World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    }
+  ]
+}
