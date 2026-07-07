@@ -352,7 +352,7 @@ enum AutomationKind: String, Codable, Equatable {
         case .researchAudio:
             [.mobileNewsData, .podcastScript, .podcastAudioVariant, .podcastAudio, .pdf, .run]
         case .automation:
-            [.pulseNewsData, .run, .proposal, .backlog, .index]
+            [.pulseNewsData, .redditRadarData, .run, .proposal, .backlog, .index]
         }
     }
 }
@@ -392,7 +392,7 @@ struct PavbotArtifact: Codable, Identifiable, Equatable, Hashable {
             return .pdf
         case .podcastAudio, .podcastAudioVariant:
             return .audio
-        case .podcastRender, .podcastTtsVariants, .jobsData, .researchData, .mobileNewsData, .pulseNewsData:
+        case .podcastRender, .podcastTtsVariants, .jobsData, .researchData, .mobileNewsData, .pulseNewsData, .redditRadarData:
             return .json
         case .podcastArtifact, .unknown:
             return .file
@@ -467,6 +467,7 @@ enum ArtifactType: Equatable, Hashable {
     case researchData
     case mobileNewsData
     case pulseNewsData
+    case redditRadarData
     case proposal
     case backlog
     case index
@@ -494,6 +495,7 @@ extension ArtifactType: Codable {
         case "researchData": self = .researchData
         case "mobileNewsData": self = .mobileNewsData
         case "pulseNewsData": self = .pulseNewsData
+        case "redditRadarData": self = .redditRadarData
         case "proposal": self = .proposal
         case "backlog": self = .backlog
         case "index": self = .index
@@ -525,6 +527,7 @@ extension ArtifactType: Codable {
         case .researchData: "researchData"
         case .mobileNewsData: "mobileNewsData"
         case .pulseNewsData: "pulseNewsData"
+        case .redditRadarData: "redditRadarData"
         case .proposal: "proposal"
         case .backlog: "backlog"
         case .index: "index"
@@ -551,6 +554,7 @@ extension ArtifactType: Codable {
         case .researchData: "Research data"
         case .mobileNewsData: "Mobile news data"
         case .pulseNewsData: "Pulse news data"
+        case .redditRadarData: "Reddit Radar data"
         case .proposal: "Proposal"
         case .backlog: "Backlog"
         case .index: "Index"

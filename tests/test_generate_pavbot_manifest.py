@@ -294,6 +294,46 @@ class GeneratePavbotManifestTest(unittest.TestCase):
         self.assertEqual(artifact["time"], "10:15")
         self.assertEqual(artifact["title"], "Mobile news data")
 
+    def test_manifest_collects_mobile_public_topic_without_topic_file(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            topic_dir = repo / "research" / "aktualne-wydarzenia-mobile"
+            data_dir = topic_dir / "data"
+            data_dir.mkdir(parents=True)
+            (data_dir / "2026-06-25-1015-mobile-news.json").write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "topic": "aktualne-wydarzenia-mobile",
+                        "runDate": "2026-06-25",
+                        "runTime": "10:15",
+                        "status": "Material update",
+                        "headline": "Wydanie dnia",
+                        "leadParagraphs": ["Najważniejsze wydarzenia dnia."],
+                        "sections": [],
+                        "checkedSources": [],
+                        "audioArtifacts": [],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        topics = {topic["slug"]: topic for topic in manifest["topics"]}
+        self.assertEqual(
+            topics["aktualne-wydarzenia-mobile"]["title"],
+            "Pavbot Aktualne Wydarzenia Mobile",
+        )
+        by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+        artifact = by_path["research/aktualne-wydarzenia-mobile/data/2026-06-25-1015-mobile-news.json"]
+        self.assertEqual(artifact["type"], "mobileNewsData")
+        self.assertEqual(artifact["topic"], "aktualne-wydarzenia-mobile")
+
     def test_manifest_collects_pulse_news_data_json_for_pulse_topic(self) -> None:
         generator = load_generator()
 
@@ -377,6 +417,53 @@ class GeneratePavbotManifestTest(unittest.TestCase):
         self.assertEqual(artifact["type"], "pulseNewsData")
         self.assertEqual(artifact["topic"], "puls-dnia-news")
         self.assertEqual(artifact["time"], "15:02")
+
+    def test_manifest_collects_reddit_radar_data_without_topic_file_and_ignores_raw_exports(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            data_dir = repo / "research" / "reddit-radar" / "data"
+            data_dir.mkdir(parents=True)
+            digest = {
+                "id": "humor-2026-07-07-0610",
+                "title": "<RR> Reddit Radar",
+                "summary": "Kategorie: memy i dev.",
+                "generatedAt": "2026-07-07T04:10:37+00:00",
+                "displayTime": "06:10",
+                "nextRefreshAt": "2026-07-07T12:06:00+02:00",
+                "refreshIntervalHours": 6,
+                "items": [{"id": "one"}, {"id": "two"}],
+                "source": "Codex Safari Reddit radar",
+            }
+            (data_dir / "2026-07-07-0610-reddit-radar.json").write_text(
+                json.dumps(digest, ensure_ascii=False) + "\n",
+                encoding="utf-8",
+            )
+            (data_dir / "2026-07-07-0610-reddit-radar-raw.json").write_text(
+                json.dumps({"items": [{"id": "raw"}]}, ensure_ascii=False) + "\n",
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        topic = next(item for item in manifest["topics"] if item["slug"] == "reddit-radar")
+        self.assertEqual(topic["title"], "Pavbot Reddit Radar")
+        artifacts = {
+            artifact["path"]: artifact
+            for artifact in manifest["artifacts"]
+            if artifact["topic"] == "reddit-radar"
+        }
+        self.assertEqual(
+            sorted(artifacts),
+            ["research/reddit-radar/data/2026-07-07-0610-reddit-radar.json"],
+        )
+        artifact = artifacts["research/reddit-radar/data/2026-07-07-0610-reddit-radar.json"]
+        self.assertEqual(artifact["type"], "redditRadarData")
+        self.assertEqual(artifact["date"], "2026-07-07")
+        self.assertEqual(artifact["time"], "06:10")
+        self.assertEqual(artifact["title"], "Reddit Radar data")
+        self.assertEqual(artifact["itemCount"], 2)
 
     def test_manifest_uses_public_raw_urls_and_json_serializes(self) -> None:
         generator = load_generator()

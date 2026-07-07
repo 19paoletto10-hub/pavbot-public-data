@@ -115,6 +115,55 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
             payload["records"][0]["fields"]["manifestUrl"],
         )
 
+    def test_dry_run_builds_reddit_radar_briefing_from_manifest_artifact(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest_path = Path(tmp) / "pavbot-manifest.json"
+            manifest_path.write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "topics": [
+                            {"slug": "reddit-radar", "title": "Pavbot Reddit Radar"},
+                        ],
+                        "artifacts": [
+                            {
+                                "id": "reddit-radar-data",
+                                "topic": "reddit-radar",
+                                "type": "redditRadarData",
+                                "title": "Reddit Radar data",
+                                "path": "research/reddit-radar/data/2026-07-07-0610-reddit-radar.json",
+                                "url": "research/reddit-radar/data/2026-07-07-0610-reddit-radar.json",
+                                "date": "2026-07-07",
+                                "time": "06:10",
+                            },
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(SCRIPT_PATH),
+                    "dry-run",
+                    "--manifest",
+                    str(manifest_path),
+                    "--topic",
+                    "research/reddit-radar",
+                ],
+                cwd=REPO_ROOT,
+                text=True,
+                capture_output=True,
+                check=False,
+            )
+
+        self.assertEqual(result.returncode, 0, result.stderr)
+        payload = json.loads(result.stdout)
+        self.assertEqual([record["fields"]["category"] for record in payload["records"]], ["reddit-radar"])
+        self.assertEqual(payload["records"][0]["fields"]["briefingId"], "reddit-radar:2026-07-07-0610")
+        self.assertEqual(payload["records"][0]["notificationPayload"]["category"], "reddit-radar")
+
 
 if __name__ == "__main__":
     unittest.main()

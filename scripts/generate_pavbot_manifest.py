@@ -21,6 +21,7 @@ MANIFEST_PATH_SUFFIX = "/public/pavbot-manifest.json"
 MOBILE_PUBLIC_ONLY_TOPIC = "aktualne-wydarzenia-mobile"
 LLM_JOBS_TOPIC = "llm-ai-jobs-wroclaw"
 PULSE_NEWS_TOPIC = "puls-dnia-news"
+REDDIT_RADAR_TOPIC = "reddit-radar"
 RESEARCH_DATA_TOPICS = {"tech-news", "polska-swiat"}
 
 
@@ -123,14 +124,32 @@ def collect_topics(repo_root: Path, raw_base_url: str) -> list[dict[str, Any]]:
 
 
 def has_topic_artifact_fallback(topic_dir: Path) -> bool:
+    if topic_dir.name == MOBILE_PUBLIC_ONLY_TOPIC:
+        return has_mobile_public_artifact(topic_dir)
     if topic_dir.name == PULSE_NEWS_TOPIC:
         return any((topic_dir / "data").glob("*-pulse-news.json"))
+    if topic_dir.name == REDDIT_RADAR_TOPIC:
+        return any((topic_dir / "data").glob("*-reddit-radar.json"))
     return False
 
 
+def has_mobile_public_artifact(topic_dir: Path) -> bool:
+    public_globs = (
+        "data/*-mobile-news.json",
+        "pdfs/*-mobile-brief.pdf",
+        "podcasts/*/script.md",
+        "podcasts/*/audio/*/podcast.mp3",
+    )
+    return any(any(topic_dir.glob(pattern)) for pattern in public_globs)
+
+
 def fallback_topic_title(slug: str) -> str:
+    if slug == MOBILE_PUBLIC_ONLY_TOPIC:
+        return "Pavbot Aktualne Wydarzenia Mobile"
     if slug == PULSE_NEWS_TOPIC:
         return "Pavbot Puls Dnia News"
+    if slug == REDDIT_RADAR_TOPIC:
+        return "Pavbot Reddit Radar"
     return slug
 
 
@@ -170,6 +189,9 @@ def collect_artifacts(
         elif slug == PULSE_NEWS_TOPIC:
             for path in sorted((topic_dir / "data").glob("*-pulse-news.json")):
                 add_artifact(artifacts, repo_root, raw_base_url, path, slug, "pulseNewsData")
+        elif slug == REDDIT_RADAR_TOPIC:
+            for path in sorted((topic_dir / "data").glob("*-reddit-radar.json")):
+                add_artifact(artifacts, repo_root, raw_base_url, path, slug, "redditRadarData")
         elif slug in RESEARCH_DATA_TOPICS:
             for path in sorted((topic_dir / "data").glob("*.json")):
                 add_artifact(artifacts, repo_root, raw_base_url, path, slug, "researchData")
@@ -272,14 +294,14 @@ def add_artifact(
         artifact["date"] = date
     if time:
         artifact["time"] = time
-    if artifact_type == "pulseNewsData":
-        item_count = pulse_news_item_count(path)
+    if artifact_type in {"pulseNewsData", "redditRadarData"}:
+        item_count = json_items_count(path)
         if item_count is not None:
             artifact["itemCount"] = item_count
     artifacts.append(artifact)
 
 
-def pulse_news_item_count(path: Path) -> int | None:
+def json_items_count(path: Path) -> int | None:
     try:
         payload = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError, UnicodeDecodeError):
@@ -353,6 +375,8 @@ def artifact_title(path: Path, artifact_type: str) -> str:
         return "Mobile news data"
     if artifact_type == "pulseNewsData":
         return "Pulse news data"
+    if artifact_type == "redditRadarData":
+        return "Reddit Radar data"
     return path.name
 
 

@@ -101,6 +101,9 @@ struct WeatherBriefView: View {
                 .onChange(of: weatherStore.report?.id) { _, _ in
                     handlePendingTodaySectionTarget(scrollProxy: scrollProxy)
                 }
+                .onChange(of: manifestStore.manifest?.generatedAt) { _, _ in
+                    Task { await loadRedditRadar(minimumInterval: 1) }
+                }
             }
         }
         .navigationTitle("Dzisiaj")
@@ -183,7 +186,11 @@ struct WeatherBriefView: View {
     }
 
     private func loadRedditRadar(minimumInterval: TimeInterval = 0) async {
-        await humorStore.load(minimumInterval: minimumInterval)
+        await humorStore.load(
+            from: manifestStore.manifest,
+            manifestURL: URL(string: manifestStore.manifestURLString),
+            minimumInterval: minimumInterval
+        )
     }
 
     private func handlePendingTodaySectionTarget(scrollProxy: ScrollViewProxy) {

@@ -2,7 +2,7 @@ import Foundation
 import Observation
 
 protocol TodayHumorFetching {
-    func fetchLatestDigest(from serverURL: URL) async throws -> TodayHumorDigest
+    func fetchLatestDigest(from artifact: PavbotArtifact, manifestURL: URL?) async throws -> TodayHumorDigest
 }
 
 @MainActor
@@ -17,40 +17,44 @@ final class TodayHumorStore {
 
     private let client: any TodayHumorFetching
     private let cache: TodayHumorCache
-    private let serverURLProvider: () -> URL?
     @ObservationIgnored private let reloadGate = ReloadGate()
 
     init(
         client: any TodayHumorFetching = TodayHumorClient(),
-        cache: TodayHumorCache = TodayHumorCache(),
-        serverURLProvider: @escaping () -> URL? = { NotificationServerSettings.serverURL }
+        cache: TodayHumorCache = TodayHumorCache()
     ) {
         self.client = client
         self.cache = cache
-        self.serverURLProvider = serverURLProvider
         self.digest = cache.load()
         if digest != nil {
             state = .loaded
         }
     }
 
-    func load(minimumInterval: TimeInterval = 0) async {
+    func load(
+        from manifest: PavbotManifest?,
+        manifestURL: URL?,
+        minimumInterval: TimeInterval = 0
+    ) async {
         guard beginRequest(minimumInterval: minimumInterval) else { return }
         defer { finishRequest() }
 
-        guard let serverURL = serverURLProvider() else {
-            cacheNotice = nil
-            state = digest == nil
-                ? .failed(
+        guard let artifact = Self.latestRedditRadarArtifact(in: manifest) else {
+            if digest != nil {
+                cacheNotice = "Pokazuję ostatni zapisany Reddit Radar. Manifest nie zawiera jeszcze świeżych danych."
+                state = .loaded
+            } else {
+                cacheNotice = nil
+                state = .failed(
                     .custom(
-                        title: "Brak adresu notifiera",
-                        message: "Wpisz Notification server URL w ustawieniach, aby pobrać radar memów.",
-                        actionTitle: "Otwórz ustawienia",
+                        title: "Brak Reddit Radar",
+                        message: "Manifest z CloudKit nie zawiera jeszcze redditRadarData dla research/reddit-radar.",
+                        actionTitle: "Odśwież manifest",
                         systemImage: "sparkles.tv.fill",
                         tint: .purple
                     )
                 )
-                : .loaded
+            }
             return
         }
 
@@ -59,7 +63,7 @@ final class TodayHumorStore {
         }
 
         do {
-            let loadedDigest = try await client.fetchLatestDigest(from: serverURL)
+            let loadedDigest = try await client.fetchLatestDigest(from: artifact, manifestURL: manifestURL)
             digest = loadedDigest
             cache.save(loadedDigest)
             cacheNotice = nil
@@ -85,19 +89,30 @@ final class TodayHumorStore {
         reloadGate.finish(key: "today.humor")
         isRefreshing = false
     }
+
+    private static func latestRedditRadarArtifact(in manifest: PavbotManifest?) -> PavbotArtifact? {
+        manifest?.artifacts
+            .filter { $0.topic == "reddit-radar" && $0.type == .redditRadarData }
+            .max { lhs, rhs in
+                (lhs.date ?? "", lhs.time ?? "", lhs.path) < (rhs.date ?? "", rhs.time ?? "", rhs.path)
+            }
+    }
 }
 
 struct TodayHumorClient: TodayHumorFetching {
     enum ClientError: LocalizedError {
         case invalidResponse
         case httpStatus(Int)
+        case missingArtifactURL(String)
 
         var errorDescription: String? {
             switch self {
             case .invalidResponse:
-                "Serwer humoru zwrócił nieprawidłową odpowiedź."
+                "CloudKit zwrócił nieprawidłowy artefakt Reddit Radar."
             case .httpStatus(let status):
-                "Serwer humoru zwrócił HTTP \(status)."
+                "Artefakt Reddit Radar zwrócił HTTP \(status)."
+            case .missingArtifactURL(let path):
+                "Nie można zbudować URL dla artefaktu Reddit Radar: \(path)."
             }
         }
     }
@@ -105,8 +120,11 @@ struct TodayHumorClient: TodayHumorFetching {
     var session: URLSession = .shared
     var decoder: JSONDecoder = .pavbot
 
-    func fetchLatestDigest(from serverURL: URL) async throws -> TodayHumorDigest {
-        let (data, response) = try await session.data(for: Self.request(from: serverURL))
+    func fetchLatestDigest(from artifact: PavbotArtifact, manifestURL: URL?) async throws -> TodayHumorDigest {
+        guard let url = artifact.resolvedURL(manifestURL: manifestURL) else {
+            throw ClientError.missingArtifactURL(artifact.path)
+        }
+        let (data, response) = try await session.data(for: Self.request(for: url))
         guard let httpResponse = response as? HTTPURLResponse else {
             throw ClientError.invalidResponse
         }
@@ -116,11 +134,7 @@ struct TodayHumorClient: TodayHumorFetching {
         return try decoder.decode(TodayHumorDigest.self, from: data)
     }
 
-    static func request(from serverURL: URL) throws -> URLRequest {
-        let url = serverURL
-            .appendingPathComponent("v1")
-            .appendingPathComponent("humor")
-            .appendingPathComponent("latest")
+    static func request(for url: URL) -> URLRequest {
         var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData)
         request.httpMethod = "GET"
         request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")

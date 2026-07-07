@@ -1756,6 +1756,7 @@ final class PavbotManifestTests: XCTestCase {
     func testResearchAndPodcastKindsExposePdfOutputs() throws {
         XCTAssertEqual(AutomationKind.research.preferredArtifactTypes, [.researchData, .run, .pdf])
         XCTAssertEqual(AutomationKind.podcast.preferredArtifactTypes, [.podcastAudio, .podcastAudioVariant, .podcastScript, .podcastBriefPdf])
+        XCTAssertEqual(AutomationKind.automation.preferredArtifactTypes, [.pulseNewsData, .redditRadarData, .run, .proposal, .backlog, .index])
     }
 
     func testAutomationClientBriefProvidesMarketingCopyForEveryAutomationKind() {
@@ -2663,13 +2664,56 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertNil(digest.items[0].commentHighlights)
     }
 
-    func testTodayHumorClientBuildsLatestRequest() throws {
-        let serverURL = try XCTUnwrap(URL(string: "https://notify.example.com"))
-        let request = try TodayHumorClient.request(from: serverURL)
+    @MainActor
+    func testTodayHumorStoreLoadsLatestDigestFromManifestRedditRadarArtifact() async throws {
+        let digest = try JSONDecoder.pavbot.decode(TodayHumorDigest.self, from: Self.todayHumorFixtureData)
+        let suiteName = UUID().uuidString
+        let defaults = UserDefaults(suiteName: suiteName)!
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+        let cache = TodayHumorCache(defaults: defaults)
+        let client = SpyTodayHumorClient(digest: digest)
+        let oldArtifact = PavbotArtifact(
+            id: "old-radar",
+            type: .redditRadarData,
+            topic: "reddit-radar",
+            title: "Reddit Radar data",
+            path: "research/reddit-radar/data/2026-07-07-0010-reddit-radar.json",
+            url: "research/reddit-radar/data/2026-07-07-0010-reddit-radar.json",
+            sizeBytes: 100,
+            date: "2026-07-07",
+            time: "00:10"
+        )
+        let latestArtifact = PavbotArtifact(
+            id: "latest-radar",
+            type: .redditRadarData,
+            topic: "reddit-radar",
+            title: "Reddit Radar data",
+            path: "research/reddit-radar/data/2026-07-07-0610-reddit-radar.json",
+            url: "research/reddit-radar/data/2026-07-07-0610-reddit-radar.json",
+            sizeBytes: 100,
+            date: "2026-07-07",
+            time: "06:10"
+        )
+        let manifest = try manifestWithAdditionalArtifacts([oldArtifact, latestArtifact])
+        let manifestURL = try XCTUnwrap(URL(string: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"))
+        let store = TodayHumorStore(client: client, cache: cache)
+
+        await store.load(from: manifest, manifestURL: manifestURL, minimumInterval: 0)
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.digest?.id, digest.id)
+        XCTAssertEqual(cache.load()?.id, digest.id)
+        XCTAssertEqual(client.requestedArtifact?.id, "latest-radar")
+        XCTAssertEqual(client.requestedManifestURL, manifestURL)
+    }
+
+    func testTodayHumorClientBuildsArtifactRequest() throws {
+        let artifactURL = try XCTUnwrap(URL(string: "https://raw.githubusercontent.com/example/pavbot/main/research/reddit-radar/data/latest.json"))
+        let request = TodayHumorClient.request(for: artifactURL)
         let url = try XCTUnwrap(request.url)
 
         XCTAssertEqual(request.httpMethod, "GET")
-        XCTAssertEqual(url.path, "/v1/humor/latest")
+        XCTAssertEqual(url.path, "/example/pavbot/main/research/reddit-radar/data/latest.json")
         XCTAssertEqual(request.value(forHTTPHeaderField: "Cache-Control"), "no-cache")
     }
 
@@ -3653,15 +3697,18 @@ final class PavbotManifestTests: XCTestCase {
         let ttsVariants = try JSONDecoder.pavbot.decode(ArtifactType.self, from: #""podcastTtsVariants""#.data(using: .utf8)!)
         let jobsData = try JSONDecoder.pavbot.decode(ArtifactType.self, from: #""jobsData""#.data(using: .utf8)!)
         let mobileNewsData = try JSONDecoder.pavbot.decode(ArtifactType.self, from: #""mobileNewsData""#.data(using: .utf8)!)
+        let redditRadarData = try JSONDecoder.pavbot.decode(ArtifactType.self, from: #""redditRadarData""#.data(using: .utf8)!)
 
         XCTAssertEqual(audioVariant, .podcastAudioVariant)
         XCTAssertEqual(ttsVariants, .podcastTtsVariants)
         XCTAssertEqual(jobsData, .jobsData)
         XCTAssertEqual(mobileNewsData, .mobileNewsData)
+        XCTAssertEqual(redditRadarData, .redditRadarData)
         XCTAssertEqual(audioVariant.label, "Audio variant")
         XCTAssertEqual(ttsVariants.label, "TTS variants")
         XCTAssertEqual(jobsData.label, "Jobs data")
         XCTAssertEqual(mobileNewsData.label, "Mobile news data")
+        XCTAssertEqual(redditRadarData.label, "Reddit Radar data")
 
         let artifact = PavbotArtifact(
             id: "variant",
@@ -3701,6 +3748,19 @@ final class PavbotManifestTests: XCTestCase {
             time: "10:15"
         )
         XCTAssertEqual(mobileDataArtifact.viewerKind, .json)
+
+        let redditDataArtifact = PavbotArtifact(
+            id: "reddit-radar-data",
+            type: .redditRadarData,
+            topic: "reddit-radar",
+            title: "Reddit Radar data",
+            path: "research/reddit-radar/data/2026-07-07-0610-reddit-radar.json",
+            url: "research/reddit-radar/data/2026-07-07-0610-reddit-radar.json",
+            sizeBytes: 100,
+            date: "2026-07-07",
+            time: "06:10"
+        )
+        XCTAssertEqual(redditDataArtifact.viewerKind, .json)
     }
 
     func testTimestampedMobileArtifactDisplayDateIncludesCreationTime() {
@@ -5400,6 +5460,22 @@ private struct FailingWeatherBriefClient: WeatherBriefFetching {
 
     func fetchLatestReport(from serverURL: URL, location: WeatherBriefLocation?) async throws -> DailyWeatherReport {
         throw error
+    }
+}
+
+private final class SpyTodayHumorClient: TodayHumorFetching {
+    let digest: TodayHumorDigest
+    private(set) var requestedArtifact: PavbotArtifact?
+    private(set) var requestedManifestURL: URL?
+
+    init(digest: TodayHumorDigest) {
+        self.digest = digest
+    }
+
+    func fetchLatestDigest(from artifact: PavbotArtifact, manifestURL: URL?) async throws -> TodayHumorDigest {
+        requestedArtifact = artifact
+        requestedManifestURL = manifestURL
+        return digest
     }
 }
 
