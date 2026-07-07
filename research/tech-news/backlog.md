@@ -5,6 +5,8 @@
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
 | High | Review first three generated podcasts | Confirms pacing, topic selection, MP3 generation, and Polish narration quality | Listen to each MP3 and record notes | Open |
+| High | Track AI-native legal services | Norm Ai shows regulated work being sold as an outcome-based agentic service with human oversight | Watch competitor economics, bar/regulator response and enterprise adoption | Open |
+| Medium | Track consumer AI scam defense | Savi suggests AI-generated fraud is becoming a standalone consumer security category | Watch app traction, telco/OS partnerships and scam-detection benchmarks | Open |
 | Medium | Improve Reddit fallback | Direct public Reddit fetch failed in this run, limiting community-signal coverage | Decide whether HN plus secondary reporting is enough or add another public Reddit access path | Open |
 | Medium | Tune source allowlist | Repeated good sources should become explicit topic guidance | Review source quality after three runs | Open |
 | Medium | Tune XTTS long-form rendering | XTTS worked for short samples but was too slow for the 2026-06-18 full podcast and warned about sentence length limits | Consider sentence chunking or use Piper as scheduled-production default | Open |

@@ -16,6 +16,13 @@ dane do treningu, Reddit pokazuje twarde metryki obrony przed spamem, Apple
 dopina bardziej ekspresyjną Siri, a Vercel/Product Hunt potwierdzają dojrzewanie
 stacku dla agentów.
 
+Wieczorny refresh z 2026-07-07 dokłada kolejną warstwę: Norm Ai pokazuje
+agentowe usługi w regulowanym prawie, Savi zamienia AI scams w produkt
+consumer security, Forterra ujawnia realne wdrożenie autonomous ground vehicles
+w Ukrainie, AP opisuje ochłodzenie AI stocks mimo mocnego Samsunga, a IEEE
+Spectrum wraz z Hacker News wzmacniają kontrtrend małych modeli działających
+tam, gdzie data center nie mają sensu.
+
 Po raporcie z 2026-06-27 najważniejsza nowa oś to oficjalizacja rządowo
 bramkowanego release'u frontier AI: OpenAI uruchomiło ograniczone preview
 GPT-5.6 Sol/Terra/Luna z publicznym system cardem, cenami, trybami `max` i
@@ -391,6 +398,12 @@ transparentność środowiskową AI.
 - Agent tooling reliability: Codex logging issue, Oak i Deno Desktop pokazują,
   że lokalne narzędzia agentowe wymagają kontroli zasobów, izolacji sesji,
   audytu, branch-per-session i nowych prymitywów pracy na desktopie.
+- AI-native legal services: Norm Ai pokazuje, że regulated work może być
+  sprzedawany jako outcome-based agentic service z ludzkim nadzorem; trzeba
+  śledzić reakcję konkurentów, izb prawniczych i enterprise buyers.
+- Consumer AI scam defense: Savi sugeruje, że deepfake voice scam i
+  impersonation fraud mogą stać się osobną kategorią consumer security; warto
+  obserwować dystrybucję przez telco, OS vendorów i app stores.
 
 ## Recent Reports
 
