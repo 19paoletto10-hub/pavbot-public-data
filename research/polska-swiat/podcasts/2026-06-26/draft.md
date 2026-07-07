@@ -1,0 +1,35 @@
+Dzień dobry. To poranny przegląd Polska i świat na piątek, dwudziestego szóstego czerwca dwa tysiące dwudziestego szóstego roku.
+
+Dzisiaj zaczynamy w Gdańsku, gdzie kończy się Konferencja na rzecz Odbudowy Ukrainy i gdzie przywódcy państw wschodniej flanki przyjęli Deklarację Gdańską. Potem przejdziemy do przygotowań NATO do szczytu w Ankarze, ostrzeżeń o możliwych rosyjskich prowokacjach wobec państw bałtyckich i Polski, prezydenckiego weta w sprawie systemu SENT, trzęsień ziemi w Wenezueli oraz upałów i suszy w Polsce.
+
+Pierwszy temat: Gdańsk i odbudowa Ukrainy. Kancelaria Premiera podaje, że dwudniowa konferencja zgromadziła przedstawicieli państw, instytucji międzynarodowych, biznesu i samorządów. Według KPRM podpisano ponad sto sześćdziesiąt porozumień o wartości dziesięciu miliardów euro. Premier Donald Tusk mówił, że odbudowa Ukrainy będzie możliwa dzięki solidarności, ale z punktu widzenia Polski równie ważne jest to, że solidarność zaczyna mieć bardzo praktyczny wymiar: energetykę, logistykę, infrastrukturę krytyczną, finansowanie i bezpieczeństwo.
+
+Konkretny przykład to polskie spółki energetyczne. Polskie Radio dwadzieścia cztery relacjonuje, że PGE, Orlen, Enea i Tauron podpisały list intencyjny dotyczący odbudowy i modernizacji ukraińskiej infrastruktury energetycznej. To nie rozwiązuje jeszcze problemu zniszczeń wojennych, ale pokazuje kierunek: Ukraina będzie potrzebowała nie tylko pieniędzy, lecz także partnerów technicznych, dostawców, know-how i stabilnych kanałów współpracy. Dla polskich firm to szansa gospodarcza, ale też test organizacyjny, bo projekty infrastrukturalne w państwie objętym wojną są obciążone wysokim ryzykiem.
+
+W praktyce stawką jest też pozycja Polski w powojennej mapie gospodarczej regionu. Jeżeli odbudowa będzie planowana przez lata, a nie przez pojedyncze konferencje, przewagę zyskają ci, którzy już teraz budują relacje, standardy techniczne i zaufanie operacyjne.
+
+Drugi element tego samego gdańskiego bloku to Deklaracja Gdańska. Dokument opublikowany przez KPRM mówi wprost, że Rosja pozostaje największym bezpośrednim i długoterminowym zagrożeniem dla bezpieczeństwa euroatlantyckiego. Przywódcy państw wschodniej flanki wskazują na kampanie dezinformacyjne, cyberataki, działania hybrydowe, użycie dronów i incydenty przy granicach. Deklaracja wspomina też o programie PURL, czyli mechanizmie finansowania priorytetowych dostaw uzbrojenia dla Ukrainy, oraz o koncepcji Eastern Flank Watch, która ma wzmacniać obserwację i odstraszanie na wschodniej granicy NATO.
+
+Dlaczego to ważne? Bo język dokumentu jest mniej ogólny niż typowe deklaracje dyplomatyczne. Nie chodzi wyłącznie o solidarność z Ukrainą, ale o opis codziennych narzędzi presji, które państwa regionu już rozpoznają jako element rosyjskiej strategii. Dla Polski oznacza to, że bezpieczeństwo nie kończy się na armii i sprzęcie. Obejmuje odporność informacyjną, cyberbezpieczeństwo, ochronę granic, systemy antydronowe i zdolność szybkiego rozpoznania prowokacji.
+
+Trzeci temat: NATO przed szczytem w Ankarze. Sekretarz generalny Sojuszu Mark Rutte w rozmowie przed szczytem mówił o NATO trzy zero, czyli o Sojuszu, który ma szybciej przekładać decyzje polityczne na realne zdolności wojskowe. Associated Press opisuje ten sam kontekst przez pryzmat planów obronnych, pieniędzy, kontraktów i presji, aby europejscy sojusznicy zwiększali tempo inwestycji.
+
+Dla Polski ten wątek jest bezpośredni. Jeżeli NATO ma odstraszać Rosję, to nie wystarczą komunikaty po szczycie. Potrzebne są magazyny amunicji, obrona powietrzna, systemy przeciw dronom, logistyka, mobilność wojsk i przemysł, który potrafi produkować szybciej niż w czasie pokoju. Ankara będzie więc kolejnym miejscem, gdzie pytanie o bezpieczeństwo Europy Środkowej zostanie przełożone na budżety i zamówienia. To również tło dla gdańskiej deklaracji: wschodnia flanka domaga się nie tylko uwagi, lecz także narzędzi.
+
+W tym sensie język o procentach wydatków obronnych jest tylko początkiem rozmowy. Liczy się to, czy pieniądze zamienią się w zdolności widoczne na granicy, w magazynach i w gotowości wojsk.
+
+Czwarty temat wymaga szczególnej ostrożności. The Guardian, powołując się na zachodnie źródła i państwa NATO, napisał o ostrzeżeniach, że Rosja może przygotowywać prowokacje wobec państw bałtyckich lub Polski. Nie jest to potwierdzony incydent, nie jest to też publicznie potwierdzona zapowiedź pełnoskalowego ataku. Z dostępnego opisu wynika raczej obraz presji hybrydowej: testowania reakcji, tworzenia niepewności i sprawdzania, jak szybko państwa regionu oraz Sojusz uzgadniają wspólną odpowiedź.
+
+To ważne właśnie dlatego, że prowokacje często działają poniżej progu otwartego konfliktu. Ich celem może być chaos informacyjny, napięcie społeczne, spór polityczny albo wymuszenie kosztownej mobilizacji. Dlatego najrozsądniejsza reakcja opinii publicznej to nie panika, lecz dyscyplina informacyjna: odróżnianie oficjalnych komunikatów od przecieków, nieudostępnianie sensacyjnych nagrań bez źródła i śledzenie stanowisk instytucji państwowych oraz NATO.
+
+Piąty temat: decyzje Prezydenta RP. Kancelaria Prezydenta poinformowała, że Karol Nawrocki podpisał pięć ustaw i zawetował jedną. Weto dotyczyło rozszerzenia systemu SENT, czyli systemu monitorowania przewozu i obrotu wybranymi towarami. Uzasadnienie Pałacu Prezydenckiego mówi o dodatkowych obciążeniach dla przedsiębiorców i o potrzebie deregulacji.
+
+To krajowy temat gospodarczo-polityczny, ale ma szersze znaczenie. SENT jest narzędziem państwa do ograniczania nadużyć podatkowych i kontroli wrażliwych przepływów towarów. Każde jego rozszerzenie oznacza więc napięcie między skutecznością kontroli a kosztami administracyjnymi dla firm. Prezydenckie weto przenosi ten spór z poziomu technicznej regulacji na poziom polityczny: ile kontroli jest potrzebne, a ile staje się barierą dla normalnego biznesu.
+
+Szósty temat łączy świat i pogodę. Associated Press oraz amerykańska służba geologiczna USGS informują o silnych trzęsieniach ziemi w Wenezueli, w tym o wstrząsie o magnitudzie siedem przecinek jeden w rejonie Montalbán. Dane o skutkach mogą się zmieniać, więc najważniejsza informacja na ten moment dotyczy skali zjawiska i działań służb.
+
+W Polsce z kolei Rządowe Centrum Bezpieczeństwa i IMGW wskazują na upały, burze oraz bardzo trudną sytuację hydrologiczną w części kraju. To temat praktyczny: wysokie temperatury zwiększają ryzyko dla osób starszych, dzieci i osób pracujących na zewnątrz, a susza hydrologiczna wpływa na rolnictwo, rzeki i lokalne zasoby wody. Warto sprawdzać bieżące alerty, bo prognozy burz i ostrzeżeń mogą zmieniać się w ciągu dnia.
+
+Na koniec: dzisiejsze wiadomości układają się w jeden wzór. W Gdańsku Polska mówi o odbudowie Ukrainy, ale też o długim cieniu rosyjskiego zagrożenia. NATO przygotowuje się do decyzji, które mają zamienić deklaracje w zdolności. W kraju wraca spór o granice regulacji gospodarczej. A pogoda i wydarzenia sejsmiczne przypominają, że bezpieczeństwo to także infrastruktura, odporność i gotowość służb.
+
+To był poranny przegląd Polska i świat. Dziękuję za uwagę.
