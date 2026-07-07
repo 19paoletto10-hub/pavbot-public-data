@@ -1,0 +1,327 @@
+{
+  "schemaVersion": 1,
+  "topic": "aktualne-wydarzenia-mobile",
+  "runDate": "2026-07-07",
+  "runTime": "10:25",
+  "status": "Material update",
+  "headline": "Wydanie dnia: Ogólne i najważniejsze sygnały",
+  "leadParagraphs": [
+    "Dzisiejsza materialna zmiana nie polega na jednym wielkim nagłówku, tylko na zbiegu kilku świeżych i praktycznych sygnałów. W kraju główną osią jest bezpieczeństwo codzienne: silny wiatr, burze i utrzymująca się susza hydrologiczna. W polityce krajowej wchodzą w życie nowe przepisy o Państwowej Inspekcji Pracy, a KPRM eksponuje temat deregulacji i pewności prawa podatkowego. Na poziomie międzynarodowym ciężar dnia przesuwa się w stronę Ukrainy i NATO: Kijów nadal liczy skutki rosyjskiego ataku, a szczyt w Ankarze ma być pokazem tego, czy sojusz naprawdę dowozi wcześniejsze zobowiązania.",
+    "Równolegle widać dwa cyfrowe sygnały o charakterze publicznym, nie marketingowym. Komisja Europejska przypomina o ryzykach dla małoletnich w sieci w ramach DSA, a CISA dokłada kolejną lukę do katalogu podatności aktywnie wykorzystywanych. To nie są najbardziej efektowne nagłówki dnia, ale razem tworzą obraz państwa i instytucji, które próbują reagować zanim problem urośnie do rozmiaru kryzysu."
+  ],
+  "sections": [
+    {
+      "id": "ogolne",
+      "title": "Ogólne",
+      "summary": "Poranek jest zbudowany z ostrzeżeń pogodowych i hydrologicznych, więc w tym bloku najważniejsze nie są emocje, tylko zasięg, stopień i praktyczny wpływ na dzień.",
+      "articles": [
+        {
+          "id": "ogolne-1-silny-wiatr-i-burze-wracaja-na-polnoc",
+          "section": "Ogólne",
+          "title": "Silny wiatr i burze wracają na północ",
+          "lead": "Najbardziej odczuwalny sygnał dnia to miks silnego wiatru na północy i burz na południu, czyli klasyczny letni układ bez żadnej klasycznej lekkości.",
+          "facts": [
+            "RCB podało ostrzeżenia trzeciego stopnia przed silnym wiatrem w województwach pomorskim i warmińsko-mazurskim, z porywami do 120 kilometrów na godzinę. Źródło: RCB - raport dobowy.",
+            "Ten sam raport obejmuje ostrzeżenia drugiego i pierwszego stopnia na wybrzeżu oraz burze w kilku województwach południowych. Źródło: RCB - raport dobowy."
+          ],
+          "analysis": "To nie jest tylko opis pogody, ale realne ryzyko przerw w transporcie, energetyce i planach lokalnych służb.",
+          "whyItMatters": "Odbiorca dostaje czytelną mapę tego, gdzie dzień może się naprawdę skomplikować, zanim pierwsze drzewa zaczną mieć własną wolę.",
+          "sources": [
+            {
+              "title": "RCB - raport dobowy",
+              "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Silny wiatr i burze wracają na północ. Najbardziej odczuwalny sygnał dnia to miks silnego wiatru na północy i burz na południu, czyli klasyczny letni układ bez żadnej klasycznej lekkości.. RCB podało ostrzeżenia trzeciego stopnia przed silnym wiatrem w województwach pomorskim i warmińsko-mazurskim, z porywami do 120 kilometrów na godzinę. Źródło: RCB - raport dobowy.. Ten sam raport obejmuje ostrzeżenia drugiego i pierwszego stopnia na wybrzeżu oraz burze w kilku województwach południowych. Źródło: RCB - raport dobowy.. To nie jest tylko opis pogody, ale realne ryzyko przerw w transporcie, energetyce i planach lokalnych służb.. Odbiorca dostaje czytelną mapę tego, gdzie dzień może się naprawdę skomplikować, zanim pierwsze drzewa zaczną mieć własną wolę.",
+          "priority": "Medium"
+        },
+        {
+          "id": "ogolne-2-susza-hydrologiczna-nie-odpuszcza",
+          "section": "Ogólne",
+          "title": "Susza hydrologiczna nie odpuszcza",
+          "lead": "Nawet tam, gdzie wiatr i burze chwilowo odciągają uwagę, wodny problem kraju pozostaje uporczywy i ogólnopolski.",
+          "facts": [
+            "RCB potwierdza suszę hydrologiczną na terenie całego kraju, obowiązującą do odwołania. Źródło: RCB - raport dobowy.",
+            "W raporcie odnotowano też przekroczenie stanu ostrzegawczego na jednej stacji hydrologicznej w dorzeczu Odry oraz 8 pożarów lasów poprzedniego dnia. Źródło: RCB - raport dobowy."
+          ],
+          "analysis": "To pokazuje, że lato ma dziś dwa różne oblicza jednocześnie: z jednej strony gwałtowne zjawiska, z drugiej chroniczny deficyt wody.",
+          "whyItMatters": "Taki układ potrafi komplikować rolnictwo, służby komunalne i planowanie infrastrukturalne równie skutecznie jak wielkie decyzje polityczne.",
+          "sources": [
+            {
+              "title": "RCB - raport dobowy",
+              "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Susza hydrologiczna nie odpuszcza. Nawet tam, gdzie wiatr i burze chwilowo odciągają uwagę, wodny problem kraju pozostaje uporczywy i ogólnopolski.. RCB potwierdza suszę hydrologiczną na terenie całego kraju, obowiązującą do odwołania. Źródło: RCB - raport dobowy.. W raporcie odnotowano też przekroczenie stanu ostrzegawczego na jednej stacji hydrologicznej w dorzeczu Odry oraz 8 pożarów lasów poprzedniego dnia. Źródło: RCB - raport dobowy.. To pokazuje, że lato ma dziś dwa różne oblicza jednocześnie: z jednej strony gwałtowne zjawiska, z drugiej chroniczny deficyt wody.. Taki układ potrafi komplikować rolnictwo, służby komunalne i planowanie infrastrukturalne równie skutecznie jak wielkie decyzje polityczne.",
+          "priority": "Medium"
+        }
+      ]
+    },
+    {
+      "id": "polska",
+      "title": "Polska",
+      "summary": "W kraju widać przede wszystkim wdrażanie i komunikowanie decyzji, a nie jedną wielką polityczną zmianę. To blok o tym, co zaczyna działać już teraz i co rząd chce mieć na pierwszym planie.",
+      "articles": [
+        {
+          "id": "polska-1-reforma-pip-wchodzi-w-zycie-8-lipca",
+          "section": "Polska",
+          "title": "Reforma PIP wchodzi w życie 8 lipca",
+          "lead": "Nowe przepisy o Państwowej Inspekcji Pracy wchodzą jutro, więc pracodawcy dostają ostatni dzień na sprawdzenie umów i procedur.",
+          "facts": [
+            "MRPiPS informuje, że 8 lipca 2026 roku zaczynają obowiązywać nowe przepisy o Państwowej Inspekcji Pracy. Źródło: MRPiPS - poradnik o reformie PIP.",
+            "Resort podkreśla, że reforma wzmacnia kompetencje kontrolne PIP wobec pozornych umów cywilnoprawnych. Źródło: MRPiPS - poradnik o reformie PIP."
+          ],
+          "analysis": "To zmiana operacyjna, nie tylko komunikacyjna. Jeśli ktoś traktował to jako odległą zapowiedź, kalendarz właśnie przestał być łaskawy.",
+          "whyItMatters": "Praktyczny wpływ może szybko pojawić się w kadrach, umowach i kontrolach, czyli tam, gdzie polityka spotyka się z papierologią.",
+          "sources": [
+            {
+              "title": "MRPiPS - poradnik o reformie PIP",
+              "url": "https://www.gov.pl/web/rodzina/jak-przygotowac-sie-do-reformy-panstwowej-inspekcji-pracy-nowy-poradnik-dla-pracodawcow"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Reforma PIP wchodzi w życie 8 lipca. Nowe przepisy o Państwowej Inspekcji Pracy wchodzą jutro, więc pracodawcy dostają ostatni dzień na sprawdzenie umów i procedur.. MRPiPS informuje, że 8 lipca 2026 roku zaczynają obowiązywać nowe przepisy o Państwowej Inspekcji Pracy. Źródło: MRPiPS - poradnik o reformie PIP.. Resort podkreśla, że reforma wzmacnia kompetencje kontrolne PIP wobec pozornych umów cywilnoprawnych. Źródło: MRPiPS - poradnik o reformie PIP.. To zmiana operacyjna, nie tylko komunikacyjna. Jeśli ktoś traktował to jako odległą zapowiedź, kalendarz właśnie przestał być łaskawy.. Praktyczny wpływ może szybko pojawić się w kadrach, umowach i kontrolach, czyli tam, gdzie polityka spotyka się z papierologią.",
+          "priority": "Medium"
+        },
+        {
+          "id": "polska-2-deregulacja-2-0-wraca-do-centrum",
+          "section": "Polska",
+          "title": "Deregulacja 2.0 wraca do centrum",
+          "lead": "KPRM znów eksponuje deregulację, tym razem pod hasłem przyjaznej administracji skarbowej i pewności prawa podatkowego.",
+          "facts": [
+            "Na stronie KPRM 6 lipca pojawił się komunikat o konferencji \"Deregulacja 2.0: przyjazna administracja skarbowa i pewność prawa podatkowego\". Źródło: KPRM - strona główna.",
+            "To jeden z najnowszych materiałów w sekcji komunikatów CIR, czyli temat jest aktywnie utrzymywany w głównym obiegu rządowego przekazu. Źródło: KPRM - strona główna."
+          ],
+          "analysis": "Rząd próbuje pokazać, że obok bezpieczeństwa państwa ma też własny program upraszczania kontaktu obywatela z fiskusem.",
+          "whyItMatters": "Dla firm i podatników to sygnał, że jesień legislacyjna nie musi zaczynać się od wielkich sporów, tylko od drobniejszych, ale odczuwalnych zmian w administracji.",
+          "sources": [
+            {
+              "title": "KPRM - strona główna",
+              "url": "https://www.gov.pl/web/premier"
+            }
+          ],
+          "tags": [
+            "Polska",
+            "KPRM"
+          ],
+          "ttsText": "Deregulacja 2.0 wraca do centrum. KPRM znów eksponuje deregulację, tym razem pod hasłem przyjaznej administracji skarbowej i pewności prawa podatkowego.. Na stronie KPRM 6 lipca pojawił się komunikat o konferencji \"Deregulacja 2.0: przyjazna administracja skarbowa i pewność prawa podatkowego\". Źródło: KPRM - strona główna.. To jeden z najnowszych materiałów w sekcji komunikatów CIR, czyli temat jest aktywnie utrzymywany w głównym obiegu rządowego przekazu. Źródło: KPRM - strona główna.. Rząd próbuje pokazać, że obok bezpieczeństwa państwa ma też własny program upraszczania kontaktu obywatela z fiskusem.. Dla firm i podatników to sygnał, że jesień legislacyjna nie musi zaczynać się od wielkich sporów, tylko od drobniejszych, ale odczuwalnych zmian w administracji.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polityka",
+      "title": "Polityka",
+      "summary": "W tej sekcji liczy się rytm instytucji i bezpieczeństwa państwa. Nie ma tu jednego spektakularnego głosowania, ale są decyzje, które porządkują pracę rządu i ramy bezpieczeństwa na lato.",
+      "articles": [
+        {
+          "id": "polityka-1-skrm-porzadkuje-letni-pakiet-ustaw",
+          "section": "Polityka",
+          "title": "SKRM porządkuje letni pakiet ustaw",
+          "lead": "Stały Komitet Rady Ministrów pracuje nad pakietem ustaw, który obejmuje zarówno świadczenia rodzinne, jak i nieruchomości oraz infrastrukturę.",
+          "facts": [
+            "Porządek obrad z 2 lipca obejmuje projekt dotyczący ustawy o pomocy państwa w wychowywaniu dzieci. Źródło: KPRM - porządki obrad SKRM.",
+            "Na liście są też projekty o nabywaniu nieruchomości przez cudzoziemców oraz sprawozdanie z programu \"Mosty dla Regionów\". Źródło: KPRM - porządki obrad SKRM."
+          ],
+          "analysis": "To pokazuje, że polityka rządu jest dziś bardziej techniczna niż teatralna. Ustawy idą w pakiecie, a nie pojedynczymi fajerwerkami.",
+          "whyItMatters": "Taki kalendarz często mówi więcej o rzeczywistych priorytetach państwa niż głośne komentarze w mediach społecznościowych.",
+          "sources": [
+            {
+              "title": "KPRM - porządki obrad SKRM",
+              "url": "https://www.gov.pl/web/premier/porzadki-obrad-stalego-komitetu-rady-ministrow"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "SKRM porządkuje letni pakiet ustaw. Stały Komitet Rady Ministrów pracuje nad pakietem ustaw, który obejmuje zarówno świadczenia rodzinne, jak i nieruchomości oraz infrastrukturę.. Porządek obrad z 2 lipca obejmuje projekt dotyczący ustawy o pomocy państwa w wychowywaniu dzieci. Źródło: KPRM - porządki obrad SKRM.. Na liście są też projekty o nabywaniu nieruchomości przez cudzoziemców oraz sprawozdanie z programu \"Mosty dla Regionów\". Źródło: KPRM - porządki obrad SKRM.. To pokazuje, że polityka rządu jest dziś bardziej techniczna niż teatralna. Ustawy idą w pakiecie, a nie pojedynczymi fajerwerkami.. Taki kalendarz często mówi więcej o rzeczywistych priorytetach państwa niż głośne komentarze w mediach społecznościowych.",
+          "priority": "Medium"
+        },
+        {
+          "id": "polityka-2-stopnie-alarmowe-zostaja-do-konca-sierpnia",
+          "section": "Polityka",
+          "title": "Stopnie alarmowe zostają do końca sierpnia",
+          "lead": "Premier przedłużył obowiązywanie części stopni alarmowych, więc bezpieczeństwo instytucjonalne pozostaje w trybie ostrożności.",
+          "facts": [
+            "RCB informuje, że Charlie na liniach kolejowych, Bravo-CRP w całym kraju i Bravo w całym kraju zostały przedłużone do 31 sierpnia 2026 roku. Źródło: RCB - raport dobowy.",
+            "Komunikat podaje też, że zarządzenia podpisał premier Donald Tusk. Źródło: RCB - raport dobowy."
+          ],
+          "analysis": "To formalny znak, że państwo dalej działa w podwyższonym reżimie ostrożności, zwłaszcza w obszarach infrastruktury krytycznej.",
+          "whyItMatters": "Dla odbiorcy to nie abstrakcja, tylko informacja o tym, że część procedur bezpieczeństwa nie wraca jeszcze do trybu wakacyjnego.",
+          "sources": [
+            {
+              "title": "RCB - raport dobowy",
+              "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+            }
+          ],
+          "tags": [
+            "Polityka",
+            "Bezpieczeństwo"
+          ],
+          "ttsText": "Stopnie alarmowe zostają do końca sierpnia. Premier przedłużył obowiązywanie części stopni alarmowych, więc bezpieczeństwo instytucjonalne pozostaje w trybie ostrożności.. RCB informuje, że Charlie na liniach kolejowych, Bravo-CRP w całym kraju i Bravo w całym kraju zostały przedłużone do 31 sierpnia 2026 roku. Źródło: RCB - raport dobowy.. Komunikat podaje też, że zarządzenia podpisał premier Donald Tusk. Źródło: RCB - raport dobowy.. To formalny znak, że państwo dalej działa w podwyższonym reżimie ostrożności, zwłaszcza w obszarach infrastruktury krytycznej.. Dla odbiorcy to nie abstrakcja, tylko informacja o tym, że część procedur bezpieczeństwa nie wraca jeszcze do trybu wakacyjnego.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "sprawy-zagraniczne",
+      "title": "Sprawy zagraniczne",
+      "summary": "Międzynarodowy blok dnia obraca się wokół wojny Rosji przeciw Ukrainie i polityki sojuszniczej. To nie jest spokojna mapa świata, tylko scena, na której każde kolejne zdanie ma wagę operacyjną.",
+      "articles": [
+        {
+          "id": "sprawy-zagraniczne-1-kijow-po-kolejnym-ciezkim-ataku",
+          "section": "Sprawy zagraniczne",
+          "title": "Kijów po kolejnym ciężkim ataku",
+          "lead": "Po rosyjskim ataku wciąż trwa akcja ratunkowa, a bilans użytych środków pokazuje skalę presji na ukraińską obronę powietrzną.",
+          "facts": [
+            "Prezydent Ukrainy podał, że po rosyjskim uderzeniu trwają działania ratunkowe i że w nocy użyto 68 rakiet. Źródło: Prezydent Ukrainy - adres o rosyjskim ataku.",
+            "W tym samym wystąpieniu mówi o ponad 350 dronach i 92-procentowym wskaźniku przechwytywania Shahedów. Źródło: Prezydent Ukrainy - adres o rosyjskim ataku."
+          ],
+          "analysis": "To sygnał, że wojna nie zwalnia z powodu kalendarza NATO. Wciąż trwa wyścig między masą rosyjskich ataków a zdolnością Ukrainy do obrony.",
+          "whyItMatters": "Ten obraz bezpośrednio wpływa na europejską politykę bezpieczeństwa i na presję, pod jaką są sojusznicy Kijowa.",
+          "sources": [
+            {
+              "title": "Prezydent Ukrainy - adres o rosyjskim ataku",
+              "url": "https://www.president.gov.ua/en/news/yakbi-ukrayina-otrimala-vid-ameriki-licenziyi-na-virobnictvo-105273"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne",
+            "NATO"
+          ],
+          "ttsText": "Kijów po kolejnym ciężkim ataku. Po rosyjskim ataku wciąż trwa akcja ratunkowa, a bilans użytych środków pokazuje skalę presji na ukraińską obronę powietrzną.. Prezydent Ukrainy podał, że po rosyjskim uderzeniu trwają działania ratunkowe i że w nocy użyto 68 rakiet. Źródło: Prezydent Ukrainy - adres o rosyjskim ataku.. W tym samym wystąpieniu mówi o ponad 350 dronach i 92-procentowym wskaźniku przechwytywania Shahedów. Źródło: Prezydent Ukrainy - adres o rosyjskim ataku.. To sygnał, że wojna nie zwalnia z powodu kalendarza NATO. Wciąż trwa wyścig między masą rosyjskich ataków a zdolnością Ukrainy do obrony.. Ten obraz bezpośrednio wpływa na europejską politykę bezpieczeństwa i na presję, pod jaką są sojusznicy Kijowa.",
+          "priority": "High"
+        },
+        {
+          "id": "sprawy-zagraniczne-2-nato-w-ankarze-stawia-na-dowiezienie-zobowiazan",
+          "section": "Sprawy zagraniczne",
+          "title": "NATO w Ankarze stawia na dowiezienie zobowiązań",
+          "lead": "Szczyt w Ankarze ma być mniej o deklaracjach, a bardziej o tym, co sojusz faktycznie jest w stanie dostarczyć.",
+          "facts": [
+            "NATO zapowiedziało, że szczyt 7-8 lipca w Ankarze skupi się na \"delivery\", wzmacnianiu zdolności i zwiększaniu produkcji obronnej. Źródło: NATO - preview szczytu w Ankarze.",
+            "Sekretarz generalny podkreślił też, że wsparcie dla Ukrainy pozostanie ważnym elementem szczytu i że sojusznicy muszą \"pull their weight\". Źródło: NATO - preview szczytu w Ankarze."
+          ],
+          "analysis": "To ważny test wiarygodności sojuszu. Jeśli słowa mają coś znaczyć, to właśnie teraz powinny zamienić się w liczby, sprzęt i decyzje.",
+          "whyItMatters": "Dla Polski i regionu to nie jest protokół dyplomatyczny, tylko bezpośredni wskaźnik bezpieczeństwa.",
+          "sources": [
+            {
+              "title": "NATO - preview szczytu w Ankarze",
+              "url": "https://www.nato.int/en/news-and-events/articles/news/2026/07/06/nato-secretary-general-previews-the-ankara-summit-highlights-progress-on-defence-spending"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne",
+            "NATO"
+          ],
+          "ttsText": "NATO w Ankarze stawia na dowiezienie zobowiązań. Szczyt w Ankarze ma być mniej o deklaracjach, a bardziej o tym, co sojusz faktycznie jest w stanie dostarczyć.. NATO zapowiedziało, że szczyt 7-8 lipca w Ankarze skupi się na \"delivery\", wzmacnianiu zdolności i zwiększaniu produkcji obronnej. Źródło: NATO - preview szczytu w Ankarze.. Sekretarz generalny podkreślił też, że wsparcie dla Ukrainy pozostanie ważnym elementem szczytu i że sojusznicy muszą \"pull their weight\". Źródło: NATO - preview szczytu w Ankarze.. To ważny test wiarygodności sojuszu. Jeśli słowa mają coś znaczyć, to właśnie teraz powinny zamienić się w liczby, sprzęt i decyzje.. Dla Polski i regionu to nie jest protokół dyplomatyczny, tylko bezpośredni wskaźnik bezpieczeństwa.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "technologia",
+      "title": "Technologia",
+      "summary": "W technologicznym bloku nie chodzi dziś o gadżety, tylko o internet jako przestrzeń ryzyka. Jeden sygnał dotyczy małoletnich, drugi aktywnie wykorzystywanych podatności.",
+      "articles": [
+        {
+          "id": "technologia-1-dsa-pokazuje-ryzyka-dla-dzieci-online",
+          "section": "Technologia",
+          "title": "DSA pokazuje ryzyka dla dzieci online",
+          "lead": "Komisja Europejska przypomina, że cyfrowe środowisko nadal wymaga twardszych bezpieczników, zwłaszcza tam, gdzie w grę wchodzą dzieci i młodzież.",
+          "facts": [
+            "Raport UE opublikowany 2 lipca wskazuje na ryzyka dla dzieci i młodych ludzi online w ramach oceny DSA. Źródło: Komisja Europejska - DSA i ochrona małoletnich online.",
+            "Komisja opisuje DSA jako długofalowe podejście do ograniczania tych zagrożeń, a nie jednorazową akcję. Źródło: Komisja Europejska - DSA i ochrona małoletnich online."
+          ],
+          "analysis": "To ważny sygnał, bo przesuwa rozmowę z poziomu \"czy regulować\" na poziom \"jak skutecznie chronić użytkowników\".",
+          "whyItMatters": "W praktyce to dotyczy platform, rodziców, szkół i regulatorów jednocześnie, czyli całego łańcucha odpowiedzialności.",
+          "sources": [
+            {
+              "title": "Komisja Europejska - DSA i ochrona małoletnich online",
+              "url": "https://digital-strategy.ec.europa.eu/en/news/report-highlights-importance-digital-services-act-protection-minors-online"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "DSA pokazuje ryzyka dla dzieci online. Komisja Europejska przypomina, że cyfrowe środowisko nadal wymaga twardszych bezpieczników, zwłaszcza tam, gdzie w grę wchodzą dzieci i młodzież.. Raport UE opublikowany 2 lipca wskazuje na ryzyka dla dzieci i młodych ludzi online w ramach oceny DSA. Źródło: Komisja Europejska - DSA i ochrona małoletnich online.. Komisja opisuje DSA jako długofalowe podejście do ograniczania tych zagrożeń, a nie jednorazową akcję. Źródło: Komisja Europejska - DSA i ochrona małoletnich online.. To ważny sygnał, bo przesuwa rozmowę z poziomu \"czy regulować\" na poziom \"jak skutecznie chronić użytkowników\".. W praktyce to dotyczy platform, rodziców, szkół i regulatorów jednocześnie, czyli całego łańcucha odpowiedzialności.",
+          "priority": "Medium"
+        },
+        {
+          "id": "technologia-2-cisa-dopisuje-nowa-luke-do-kev",
+          "section": "Technologia",
+          "title": "CISA dopisuje nową lukę do KEV",
+          "lead": "Amerykańska agencja cyberbezpieczeństwa znowu przypomina, że najbardziej kosztowne są nie nowe hasła, tylko stare błędy bez poprawek.",
+          "facts": [
+            "CISA 1 lipca dodała nową podatność do katalogu Known Exploited Vulnerabilities. Źródło: CISA - alert o nowej podatności.",
+            "W katalogu przy tej pozycji widnieje termin usunięcia 4 lipca, co pokazuje pilność reakcji na aktywne wykorzystanie. Źródło: CISA - Known Exploited Vulnerability Catalog."
+          ],
+          "analysis": "To klasyczny przykład, gdzie bezpieczeństwo IT sprowadza się do tempa łatania, a nie do efektownej narracji.",
+          "whyItMatters": "Dla organizacji oznacza to bardzo prosty wniosek: jeśli katalog KEV rośnie, to okno na zwlekanie szybko się zamyka.",
+          "sources": [
+            {
+              "title": "CISA - alert o nowej podatności",
+              "url": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog"
+            },
+            {
+              "title": "CISA - Known Exploited Vulnerability Catalog",
+              "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+            }
+          ],
+          "tags": [
+            "Technologia",
+            "Bezpieczeństwo"
+          ],
+          "ttsText": "CISA dopisuje nową lukę do KEV. Amerykańska agencja cyberbezpieczeństwa znowu przypomina, że najbardziej kosztowne są nie nowe hasła, tylko stare błędy bez poprawek.. CISA 1 lipca dodała nową podatność do katalogu Known Exploited Vulnerabilities. Źródło: CISA - alert o nowej podatności.. W katalogu przy tej pozycji widnieje termin usunięcia 4 lipca, co pokazuje pilność reakcji na aktywne wykorzystanie. Źródło: CISA - Known Exploited Vulnerability Catalog.. To klasyczny przykład, gdzie bezpieczeństwo IT sprowadza się do tempa łatania, a nie do efektownej narracji.. Dla organizacji oznacza to bardzo prosty wniosek: jeśli katalog KEV rośnie, to okno na zwlekanie szybko się zamyka.",
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "RCB - raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "MRPiPS - poradnik o reformie PIP",
+      "url": "https://www.gov.pl/web/rodzina/jak-przygotowac-sie-do-reformy-panstwowej-inspekcji-pracy-nowy-poradnik-dla-pracodawcow"
+    },
+    {
+      "title": "KPRM - strona główna",
+      "url": "https://www.gov.pl/web/premier"
+    },
+    {
+      "title": "KPRM - porządki obrad SKRM",
+      "url": "https://www.gov.pl/web/premier/porzadki-obrad-stalego-komitetu-rady-ministrow"
+    },
+    {
+      "title": "Prezydent Ukrainy - adres o rosyjskim ataku",
+      "url": "https://www.president.gov.ua/en/news/yakbi-ukrayina-otrimala-vid-ameriki-licenziyi-na-virobnictvo-105273"
+    },
+    {
+      "title": "NATO - preview szczytu w Ankarze",
+      "url": "https://www.nato.int/en/news-and-events/articles/news/2026/07/06/nato-secretary-general-previews-the-ankara-summit-highlights-progress-on-defence-spending"
+    },
+    {
+      "title": "Komisja Europejska - DSA i ochrona małoletnich online",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/report-highlights-importance-digital-services-act-protection-minors-online"
+    },
+    {
+      "title": "CISA - alert o nowej podatności",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog"
+    },
+    {
+      "title": "CISA - Known Exploited Vulnerability Catalog",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    }
+  ],
+  "audioArtifacts": []
+}
