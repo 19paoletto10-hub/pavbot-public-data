@@ -1,0 +1,541 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-03",
+  "runTime": "18:02",
+  "status": "Material update",
+  "headline": "18:02: kraj przechodzi na bezpieczeństwo i zdrowie, a świat dokłada Kijów, Iran i falę upałów",
+  "summary": "Slot 18:02 jest materialny względem 2026-07-02 21:01: krajowy feed przestawia się na bezpieczeństwo, ochronę zdrowia, pogodę i lokalną gospodarkę, a część zagraniczna dokłada cięższy pakiet o Kijowie, Iranie, śmiertelnej fali upałów, Nigerii, Pakistanie, trialu WHO dla Eboli i misji NASA ratowania teleskopu Swift.",
+  "items": [
+    {
+      "id": "pulse-2026-07-03-1802-01-zdrowie-ultimatum",
+      "section": "Polska",
+      "title": "Tusk daje resortowi zdrowia czas do wtorku i zapowiada możliwe dymisje",
+      "lead": "Premier żąda pilnych rekomendacji; jeśli ich nie dostanie, w środę mają zapaść także decyzje personalne.",
+      "whatHappened": "Donald Tusk ogłosił, że ministra zdrowia Jolanta Sobierańska-Grenda i szef NFZ Filip Nowak mają do wtorku przygotować satysfakcjonujące rekomendacje dla ochrony zdrowia. Jeśli plan nie spełni oczekiwań, premier zapowiada na środę decyzje także personalne.",
+      "keyFacts": [
+        "Termin politycznego rozliczenia został ustawiony na wtorek, a decyzje na środę.",
+        "Premier wskazał bezpośrednio kierownictwo resortu zdrowia i NFZ.",
+        "Materiał łączy temat z napięciami wokół nadużyć i funkcjonowania publicznej ochrony zdrowia."
+      ],
+      "reactions": [
+        "To jedna z najmocniejszych krajowych kart slotu, bo łączy kryzys usług publicznych z krótkim zegarem politycznym.",
+        "Sprawa natychmiast przechodzi z poziomu debaty branżowej na poziom możliwych zmian personalnych."
+      ],
+      "whyItMatters": "Karta dotyczy obszaru bezpośrednio dotykającego milionów pacjentów i może szybko przerodzić się w rekonstrukcję odpowiedzialności po stronie państwa.",
+      "context": "Wczorajszy wieczorny feed pokazywał bardziej instytucjonalne decyzje i usługi państwa; dzisiejszy kraj otwiera realny kryzys zarządzania w ochronie zdrowia.",
+      "watchNext": [
+        "Czy do wtorku pojawi się publiczny plan naprawczy dla NFZ, szpitali i wynagrodzeń.",
+        "Czy środowe decyzje obejmą dymisje albo przesunięcia w kierownictwie resortu i Funduszu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Donald Tusk chce pilnych rekomendacji w sprawie ochrony zdrowia",
+          "url": "https://tvn24.pl/polska/kryzys-w-ochronie-zdrowia-premier-donald-tusk-chce-pilnych-rekomendacji-od-ministry-zdrowia-i-kierownictwa-nfz-st9126402?source=rss"
+        }
+      ],
+      "tags": [
+        "Donald Tusk",
+        "ochrona zdrowia",
+        "NFZ",
+        "rząd"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-1802-02-patyra-slubowanie",
+      "section": "Polityka",
+      "title": "Sędzia TK Patyra publicznie upomina się o termin ślubowania u prezydenta",
+      "lead": "Wybrany w czerwcu sędzia Trybunału nadal nie dostał zaproszenia do Pałacu Prezydenckiego.",
+      "whatHappened": "Sławomir Patyra, wybrany do Trybunału Konstytucyjnego w czerwcu, zwrócił się do prezydenta Karola Nawrockiego o wskazanie terminu złożenia ślubowania. TVN24 podkreśla, że mimo wyboru nadal nie został zaproszony do Pałacu Prezydenckiego.",
+      "keyFacts": [
+        "Patyra został wybrany do TK w czerwcu 2026 roku.",
+        "W piątek wystąpił publicznie o termin ślubowania.",
+        "Brak zaproszenia utrzymuje stan niedomknięcia procedury po wyborze."
+      ],
+      "reactions": [
+        "To lżejsza od zdrowia karta krajowa, ale dobrze pokazuje, że w tle dnia rośnie też napięcie instytucjonalne.",
+        "Sprawa może szybko nabrać większego ciężaru, jeśli prezydent nadal będzie zwlekał albo padną zarzuty politycznej blokady."
+      ],
+      "whyItMatters": "To sygnał o przeciągającym się sporze proceduralnym wokół obsady kluczowej instytucji państwowej, a więc temat stricte ustrojowy, nie tylko personalny.",
+      "context": "Po wczorajszym materiale o ETPC dzisiejsza krajowa część feedu nadal trzyma wątek prawa i instytucji, ale już w czysto wewnętrznym polskim wydaniu.",
+      "watchNext": [
+        "Czy Pałac Prezydencki wskaże termin ślubowania w najbliższych dniach.",
+        "Czy sprawa przejdzie z poziomu apelu jednego sędziego na otwarty spór polityczny."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Sędzia TK wybrany w czerwcu zwrócił się do prezydenta",
+          "url": "https://tvn24.pl/polska/sedzia-tk-slawomir-patyra-zwrocil-sie-do-prezydenta-karola-nawrockiego-o-wskazanie-terminu-zlozenia-slubowania-st9127193?source=rss"
+        }
+      ],
+      "tags": [
+        "Trybunał Konstytucyjny",
+        "Karol Nawrocki",
+        "Sławomir Patyra",
+        "ślubowanie"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-03-1802-03-rosyjska-prowokacja",
+      "section": "Bezpieczeństwo",
+      "title": "Tusk: Polska szykuje scenariusze na wypadek rosyjskiej prowokacji",
+      "lead": "Premier mówi o intensywnych przygotowaniach i wskazuje na informacje od sojuszników.",
+      "whatHappened": "Donald Tusk skomentował medialne doniesienia o możliwej rosyjskiej prowokacji, zapewniając, że Polska bardzo intensywnie przygotowuje się do różnych scenariuszy. W przekazie pojawia się też odwołanie do wiedzy pozyskiwanej od sojuszników.",
+      "keyFacts": [
+        "Premier użył sformułowania o intensywnych przygotowaniach do różnych scenariuszy.",
+        "Podkreślił, że Polska jest świadoma zagrożeń również dzięki informacjom sojuszników.",
+        "Nie podano publicznie szczegółów konkretnego scenariusza prowokacji."
+      ],
+      "reactions": [
+        "To najmocniejsza krajowa karta bezpieczeństwa tego slotu i czytelny sygnał, że temat nie jest traktowany wyłącznie medialnie.",
+        "Brak konkretów utrzymuje wysoki poziom niepewności, ale sama publiczna reakcja premiera podnosi wagę sygnału."
+      ],
+      "whyItMatters": "Każde ostrzeżenie o możliwej prowokacji z komponentem rosyjskim ma bezpośredni ciężar dla państwa, służb i odbiorców śledzących ryzyko destabilizacji w regionie.",
+      "context": "W poprzednim feedzie główny ciężar bezpieczeństwa brał na siebie Kijów; dziś dochodzi wyraźna karta o bezpieczeństwie wewnętrznym Polski.",
+      "watchNext": [
+        "Czy pojawi się oficjalny komunikat służb albo doprecyzowanie charakteru zagrożenia.",
+        "Czy temat przełoży się na widoczne działania operacyjne lub nowe ostrzeżenia publiczne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Tusk o możliwej rosyjskiej prowokacji",
+          "url": "https://tvn24.pl/polska/rosyjska-prowokacja-w-polsce-donald-tusk-komentuje-doniesienia-medialne-st9127094?source=rss"
+        }
+      ],
+      "tags": [
+        "Rosja",
+        "bezpieczeństwo",
+        "Donald Tusk",
+        "sojusznicy"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-1802-04-wojska-usa-rotacja",
+      "section": "Bezpieczeństwo",
+      "title": "BBN: wstrzymana rotacja wojsk USA do Polski ma zostać dokończona",
+      "lead": "Warszawa słyszy z Waszyngtonu, że obecność rotacyjna nie jest kwestionowana.",
+      "whatHappened": "Szef Biura Bezpieczeństwa Narodowego Bartosz Grodecki przekazał po rozmowie z podsekretarzem obrony USA ds. politycznych, że wstrzymana rotacja amerykańskich wojsk do Polski zostanie dokończona. Dodał, że obecność rotacyjna jest rozpatrywana osobno od kwestii stałej bazy.",
+      "keyFacts": [
+        "BBN komunikuje, że rotacja wojsk USA ma zostać sfinalizowana.",
+        "Przekaz opiera się na rozmowie z przedstawicielem Pentagonu.",
+        "Oddzielono temat rotacyjnej obecności od debaty o stałej bazie w Polsce."
+      ],
+      "reactions": [
+        "To karta uspokajająca w porównaniu z wcześniejszym napięciem wokół ewentualnych ruchów wojskowych USA.",
+        "Jednocześnie pokazuje, że kwestia gwarancji wojskowych pozostaje politycznie czuła i wymaga stałego monitoringu."
+      ],
+      "whyItMatters": "Amerykańska obecność wojskowa to jeden z najważniejszych wskaźników realnego bezpieczeństwa Polski i wiarygodności wschodniej flanki NATO.",
+      "context": "W slocie z rosyjską prowokacją karta o wojskach USA działa jak drugi filar krajowego bezpieczeństwa: mniej alarmowy, ale strategicznie równie ważny.",
+      "watchNext": [
+        "Czy padną konkretne terminy i skala dokańczanej rotacji.",
+        "Czy temat wróci w szerszej rozmowie o stałej infrastrukturze wojskowej USA w Polsce."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nowe informacje o żołnierzach USA w Polsce",
+          "url": "https://tvn24.pl/polska/nowe-informacje-o-zolnierzach-usa-w-polsce-to-nie-jest-w-ogole-kwestionowane-st9125816"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Polska",
+        "BBN",
+        "NATO"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-1802-05-biala-laktopol",
+      "section": "Gospodarka",
+      "title": "Spór o czarną wodę w Białej grozi zamknięciem mleczarni i utratą 150 miejsc pracy",
+      "lead": "Bielsk Podlaski dostaje kartę łączącą środowisko, samorząd i realne ryzyko dla zatrudnienia.",
+      "whatHappened": "Po decyzji starostwa o wstrzymaniu pracy jednej z dwóch proszkowni Laktopolu-B prezes firmy zapowiada zamknięcie zakładu w Bielsku Podlaskim. Samorząd argumentuje, że ruch miał zatrzymać dopływ niedoczyszczonych ścieków do rzeki Białej, a spółka ostrzega przed utratą 150 miejsc pracy.",
+      "keyFacts": [
+        "Starostwo zatrzymało pracę jednej z dwóch proszkowni zakładu.",
+        "Prezes Laktopolu-B zapowiada zamknięcie mleczarni w reakcji na decyzję.",
+        "Według materiału zagrożonych jest 150 miejsc pracy."
+      ],
+      "reactions": [
+        "To lokalna sprawa, ale ma wyraźny ciężar gospodarczy i środowiskowy, więc nadaje się na kartę dla szerokiego feedu.",
+        "Temat może szybko eskalować, jeśli samorząd i firma nie uzgodnią modernizacji albo cofnięcia decyzji."
+      ],
+      "whyItMatters": "Karta pokazuje klasyczne zderzenie ochrony środowiska z interesem przemysłowym i miejscami pracy, czyli temat łatwo wykraczający poza skalę jednego miasta.",
+      "context": "Wczoraj gospodarka była bardziej użytkowa i dotyczyła rachunków za prąd; dziś dostaje lokalny, ale twardszy wymiar przemysłowy i pracowniczy.",
+      "watchNext": [
+        "Czy Laktopol-B potwierdzi zamiar zamknięcia zakładu konkretnymi decyzjami operacyjnymi.",
+        "Czy samorząd i spółka przedstawią plan modernizacji oczyszczania ścieków albo kompromis."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Czarna woda w rzece Białej i groźba likwidacji zakładu",
+          "url": "https://tvn24.pl/bialystok/bielsk-podlaski-czarna-woda-w-rzece-bialej-po-decyzji-starosty-chce-zamknac-mleczarnie-prace-straci-150-osob-st9127116?source=rss"
+        }
+      ],
+      "tags": [
+        "Bielsk Podlaski",
+        "Laktopol-B",
+        "mleczarnia",
+        "miejsca pracy"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-1802-06-imgw-wiatr",
+      "section": "Alerty",
+      "title": "Wiatr do 90 km/h i ryzyko burz; w Świnoujściu drzewa już blokują ulice",
+      "lead": "IMGW utrzymuje alerty, a północ kraju już dostaje realne szkody od silnego wiatru.",
+      "whatHappened": "TVN Meteo, powołując się na ostrzeżenia IMGW, informuje o silnym wietrze mogącym osiągać miejscami 90 km/h oraz o ryzyku lokalnych burz. W Świnoujściu porywy już przewracały drzewa, blokowały ulice i spadały na okolice przejść dla pieszych.",
+      "keyFacts": [
+        "Ostrzeżenia obejmowały alarmy pierwszego i drugiego stopnia.",
+        "Prognozowane porywy wiatru sięgały 90 km/h.",
+        "W Świnoujściu szkody były widoczne jeszcze w ciągu dnia."
+      ],
+      "reactions": [
+        "To użyteczna karta alertowa dla aplikacji, bo łączy prognozę z już odnotowanym skutkiem w terenie.",
+        "Jeśli wiatr i burze przesuną się dalej na południe lub w głąb kraju, temat może urosnąć przed wieczorem."
+      ],
+      "whyItMatters": "To bezpośrednia informacja użytkowa dla odbiorcy, a jednocześnie jedna z nielicznych kart, gdzie ostrzeżenie meteorologiczne już materializuje się w widocznych utrudnieniach.",
+      "context": "W poprzednim wieczornym feedzie alertowa karta była zdominowana przez pożary we Francji; teraz alert wraca na polskie podwórko i ma większą praktyczną wartość dla odbiorcy lokalnego.",
+      "watchNext": [
+        "Czy IMGW podniesie stopień ostrzeżeń albo rozszerzy obszar zagrożenia.",
+        "Czy pojawią się dodatkowe zgłoszenia szkód, przerw w ruchu albo awarii energetycznych."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo: Ostrzeżenia IMGW. Silny wiatr i ryzyko burz",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/ostrzezenia-imgw-piatek-3-07-silny-wiatr-i-ryzyko-burz-tu-bedzie-niebezpiecznie-st9124727"
+        },
+        {
+          "title": "TVN Meteo: Wiatr przewracał drzewa w Świnoujściu",
+          "url": "https://tvn24.pl/tvnmeteo/polska/wiatr-przewracal-drzewa-w-swinoujsciu-st9127106?source=rss"
+        },
+        {
+          "title": "IMGW Meteo",
+          "url": "https://meteo.imgw.pl/"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "silny wiatr",
+        "burze",
+        "Świnoujście"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-1802-07-kijow-30-ofiar",
+      "section": "Bezpieczeństwo",
+      "title": "Atak na Kijów zabija co najmniej 30 osób i mocniej testuje obronę Ukrainy",
+      "lead": "BBC podnosi bilans, a CNN opisuje nietypowo duży udział pocisków balistycznych i szybkich dronów.",
+      "whatHappened": "Rosyjski atak na Kijów został przez BBC opisany jako najbardziej masowy pod względem liczby użytych środków rażenia i podniósł bilans ofiar do co najmniej 30 zabitych. CNN dodaje, że uderzenie wyróżniało się dużym użyciem pocisków balistycznych i szybkich dronów odrzutowych, co dodatkowo obciąża ukraińską obronę powietrzną.",
+      "keyFacts": [
+        "BBC informuje o co najmniej 30 ofiarach śmiertelnych w Kijowie.",
+        "CNN podaje, że w pakiecie uderzeniowym było 28 z 77 pocisków rakietowych typu balistycznego.",
+        "Według CNN szybsze drony utrudniają przechwytywanie i zwiększają ryzyko dla cywilów."
+      ],
+      "reactions": [
+        "To najmocniejsza zagraniczna karta bezpieczeństwa całego slotu i wyraźnie cięższa odsłona wczorajszego tematu Kijowa.",
+        "Historia przestaje być tylko bilansem ofiar i staje się także kartą o adaptacji rosyjskiej taktyki uderzeń."
+      ],
+      "whyItMatters": "Dla polskiego odbiorcy wojna za wschodnią granicą pozostaje tematem bezpośrednio strategicznym, a wzrost śmiertelności i zmiana charakteru ataków mają znaczenie także dla dyskusji o wsparciu Ukrainy.",
+      "context": "W wczorajszym feedzie Kijów miał bilans 25 ofiar; dziś temat wraca cięższy liczbowo i technicznie, z mocniejszym akcentem na przeciążanie obrony.",
+      "watchNext": [
+        "Czy liczba ofiar nadal rośnie po zakończeniu akcji ratunkowych.",
+        "Czy partnerzy Ukrainy odpowiedzą nowymi deklaracjami dotyczącymi Patriotów i rakiet."
+      ],
+      "sources": [
+        {
+          "title": "BBC: 'Most massive' Russian attack on Kyiv kills at least 30",
+          "url": "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Russia’s latest attack on Kyiv was exceptionally deadly – here is why",
+          "url": "https://edition.cnn.com/2026/07/03/world/ukraine-russia-kyiv-attack-analysis-intl"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Kijów",
+        "Rosja",
+        "obrona powietrzna"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-1802-08-iran-zaloba",
+      "section": "Świat",
+      "title": "Iran zaczyna publiczną żałobę po Chameneim, a armia ostrzega USA i Izrael",
+      "lead": "Ciało najwyższego przywódcy wystawiono w Teheranie przed kilkudniową serią procesji.",
+      "whatHappened": "BBC opisuje początek publicznych uroczystości żałobnych po zabitym w lutym ajatollahu Alim Chameneim, którego ciało ma być wystawione w stołecznym Grand Mosalla. CNN dodaje, że w trakcie procesji irański generał ostrzegł USA i Izrael przed prowadzeniem uderzeń w czasie pogrzebów.",
+      "keyFacts": [
+        "BBC wskazuje, że ciało Chameneiego ma leżeć publicznie w Teheranie przed dalszymi uroczystościami.",
+        "CNN informuje o ostrzeżeniu armii pod adresem USA i Izraela.",
+        "To wielodniowe wydarzenie o znaczeniu krajowym, regionalnym i symbolicznym dla irańskiego systemu władzy."
+      ],
+      "reactions": [
+        "Temat przesuwa się z samego faktu śmierci na rytuał państwowy i sygnały wysyłane na zewnątrz.",
+        "Wysokie napięcie regionalne sprawia, że nawet ceremonia pogrzebowa staje się wydarzeniem bezpieczeństwa międzynarodowego."
+      ],
+      "whyItMatters": "Iran pozostaje jednym z kluczowych źródeł ryzyka geopolitycznego, a publiczna żałoba po przywódcy może generować nowe sygnały polityczne i wojskowe.",
+      "context": "W poprzednim feedzie dominował Watykan i papieski sygnał migracyjny; dziś ciężar religijno-polityczny przejmuje Iran, ale w dużo bardziej twardym geopolitycznie wydaniu.",
+      "watchNext": [
+        "Czy w trakcie pogrzebów pojawią się nowe deklaracje polityczne albo wojskowe.",
+        "Czy USA lub Izrael odpowiedzą publicznie na ostrzeżenia płynące z Iranu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Iran begins public mourning for Ayatollah killed in February",
+          "url": "https://www.bbc.co.uk/news/articles/cx2k4k7jqeno?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Khamenei’s casket on display as Iran prepares for days of funeral processions",
+          "url": "https://edition.cnn.com/2026/07/03/world/live-news/iran-funeral-war-trump"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Ali Chamenei",
+        "żałoba",
+        "Bliski Wschód"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-1802-09-francja-upaly",
+      "section": "Alerty",
+      "title": "Francja liczy 2025 nadmiarowych zgonów po szczycie fali upałów",
+      "lead": "Europejski pakiet pogodowy znów rośnie w ciężarze, a ostrzeżenia przed skrajnymi temperaturami nie znikają.",
+      "whatHappened": "BBC informuje, że Francja odnotowała 2025 nadmiarowych zgonów w szczycie ostatniej fali upałów. Jednocześnie prognozy dla Europy nadal ostrzegają przed kolejnymi epizodami ekstremalnej temperatury i dalszym ryzykiem pogodowym.",
+      "keyFacts": [
+        "Bilans nadmiarowych zgonów we Francji sięgnął 2025.",
+        "BBC sygnalizuje, że kontynent szykuje się na dalsze epizody skrajnej pogody.",
+        "Temat dotyczy nie pojedynczego pożaru, ale szerszego zdrowotnego kosztu upałów."
+      ],
+      "reactions": [
+        "To wyraźnie cięższa wersja wczorajszego alertu o pożarach we Francji, bo dochodzi policzalny koszt ludzki.",
+        "Karta dobrze łączy klimat, zdrowie publiczne i wysoką użyteczność ostrzegawczą."
+      ],
+      "whyItMatters": "Ekstremalna pogoda w Europie przestaje być jedynie problemem infrastruktury czy pożarów i coraz wyraźniej staje się tematem śmiertelności oraz odporności zdrowotnej.",
+      "context": "W poprzednim slocie Francja pojawiała się przez ogień i hektary; dziś wraca z dużo mocniejszym wskaźnikiem społecznym w postaci nadmiarowych zgonów.",
+      "watchNext": [
+        "Czy kolejne kraje Europy opublikują podobne szacunki nadmiarowej śmiertelności.",
+        "Czy służby pogodowe i zdrowotne podniosą poziom ostrzeżeń na następne dni."
+      ],
+      "sources": [
+        {
+          "title": "BBC: France records 2,025 excess deaths at peak of heatwave",
+          "url": "https://www.bbc.co.uk/news/articles/c3ry307rxqro?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "upały",
+        "klimat",
+        "zdrowie publiczne"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-1802-10-nigeria-usa",
+      "section": "Świat",
+      "title": "USA kończą wojskową misję w Nigerii po operacji przeciw Państwu Islamskiemu",
+      "lead": "Waszyngton ogłasza sukces wspólnej akcji rozpoczętej w grudniu, ale zostawia pytanie o trwałość efektu.",
+      "whatHappened": "BBC podaje, że Stany Zjednoczone wycofały wojska z Nigerii po wspólnej misji przeciwko Państwu Islamskiemu prowadzonej od grudnia poprzedniego roku. Amerykańska strona przedstawia operację jako sukces, co zamyka ważny epizod współpracy bezpieczeństwa w regionie.",
+      "keyFacts": [
+        "Misja rozpoczęła się w grudniu poprzedniego roku.",
+        "Wycofanie wojsk zostało zakomunikowane jako efekt zakończonej sukcesem operacji.",
+        "Dotyczy to obszaru, w którym aktywność dżihadystyczna pozostaje problemem regionalnym."
+      ],
+      "reactions": [
+        "To karta mniej widowiskowa od Kijowa czy Iranu, ale ważna geopolitycznie, bo dotyczy bezpośredniej projekcji siły USA.",
+        "Pojawia się klasyczne pytanie, czy sukces krótkiej operacji przetrwa po wyjściu wojsk z teatru działań."
+      ],
+      "whyItMatters": "Każdy ruch USA w obszarze operacji antyterrorystycznych wpływa na ocenę ich priorytetów wojskowych i na stabilność regionu po wycofaniu wsparcia.",
+      "context": "W zagranicznej części slotu ta karta równoważy tematy stricte katastroficzne i pokazuje szerszy obraz przemeblowania bezpieczeństwa międzynarodowego.",
+      "watchNext": [
+        "Czy po wyjściu USA pojawią się sygnały nawrotu aktywności Państwa Islamskiego w regionie.",
+        "Czy Nigeria i partnerzy regionalni zapowiedzą dalszy format współpracy bezpieczeństwa."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US withdraws troops from Nigeria after Islamic State mission",
+          "url": "https://www.bbc.co.uk/news/articles/cwylkvpl80xo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Nigeria",
+        "Państwo Islamskie",
+        "Afryka"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-03-1802-11-pakistan-autobus",
+      "section": "Alerty",
+      "title": "Co najmniej 32 osoby giną po upadku autobusu do wąwozu w Pakistanie",
+      "lead": "Katastrofa na trasie z Kwety do Peszawaru dokłada kolejną ciężką kartę do zagranicznego slotu.",
+      "whatHappened": "Przeładowany autobus jadący z Kwety do Peszawaru spadł do wąwozu w paśmie Dana Sar, zabijając co najmniej 32 osoby. BBC opisuje wypadek jako jedną z najcięższych bieżących kart katastroficznych dnia.",
+      "keyFacts": [
+        "Autobus jechał z Kwety do Peszawaru.",
+        "Co najmniej 32 osoby zginęły w katastrofie.",
+        "Wypadek wydarzył się w górskim rejonie Dana Sar."
+      ],
+      "reactions": [
+        "To prosta, ale mocna karta alertowa: wysoki bilans ofiar i brak potrzeby nadbudowy interpretacyjnej.",
+        "W feedzie działa jako zagraniczna karta katastroficzna równolegle do pogodowych i wojennych tematów."
+      ],
+      "whyItMatters": "Tak wysoki bilans ofiar sprawia, że temat przekracza lokalny wymiar i staje się jednym z głównych zdarzeń śmiertelnych bieżącego dnia.",
+      "context": "Po wczorajszych kartach o Damaszku i Wenezueli dzisiejszy slot nadal potrzebuje mocnej karty katastroficznej, ale o nowym geograficznie i faktograficznie ciężarze.",
+      "watchNext": [
+        "Czy bilans ofiar wzrośnie po zakończeniu akcji ratunkowej.",
+        "Czy władze Pakistanu podadzą przyczynę wypadku i stan rannych."
+      ],
+      "sources": [
+        {
+          "title": "BBC: At least 32 dead after overcrowded bus plunges into ravine in Pakistan",
+          "url": "https://www.bbc.co.uk/news/articles/czrxezg60x1o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Pakistan",
+        "katastrofa",
+        "autobus",
+        "ofiary"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-1802-12-nasa-swift",
+      "section": "Technologia",
+      "title": "NASA uruchamia misję ratowania spadającego teleskopu Swift",
+      "lead": "Robotyczny boost ma podnieść orbitę obserwatorium, zanim instrument spłonie w atmosferze.",
+      "whatHappened": "BBC informuje o starcie finansowanej przez NASA misji, której celem jest przechwycenie i podniesienie orbity teleskopu Neil Gehrels Swift Observatory. Oficjalna strona NASA opisuje kontrakt z Katalyst Space jako próbę uratowania obserwatorium przed utratą wysokości i wejściem w atmosferę.",
+      "keyFacts": [
+        "Misja ma podnieść orbitę obserwatorium Swift.",
+        "NASA wskazuje, że kontrakt realizuje Katalyst Space.",
+        "Celem jest uniknięcie spalenia instrumentu po dalszym spadku wysokości."
+      ],
+      "reactions": [
+        "To jedyna karta technologiczna slotu, ale ma klarowną narrację i dobrze kontrastuje z dominującym ciężarem wojny i katastrof.",
+        "Historia ma też walor strategiczny: pokazuje dojrzewanie usług serwisowania infrastruktury orbitalnej."
+      ],
+      "whyItMatters": "To publicznie czytelny przykład przejścia od budowania sprzętu kosmicznego do jego aktywnego ratowania i przedłużania życia na orbicie.",
+      "context": "Wczoraj technologia była reprezentowana przez usługę publiczną w mObywatelu; dziś rolę karty technologicznej przejmuje duży projekt kosmiczny o globalnym zasięgu.",
+      "watchNext": [
+        "Czy misja bezpiecznie wykona manewr podniesienia orbity Swift.",
+        "Czy NASA pokaże ten projekt jako wzorzec dla kolejnych usług serwisowania satelitów i teleskopów."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Nasa launches mission to save falling space telescope",
+          "url": "https://www.bbc.co.uk/news/articles/c0ry4xx7rk8o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "NASA: Swift Boost Mission",
+          "url": "https://science.nasa.gov/mission/swift/swift-boost-mission/"
+        }
+      ],
+      "tags": [
+        "NASA",
+        "Swift",
+        "kosmos",
+        "orbita"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "TVN24: Sędzia TK wybrany w czerwcu zwrócił się do prezydenta",
+      "url": "https://tvn24.pl/polska/sedzia-tk-slawomir-patyra-zwrocil-sie-do-prezydenta-karola-nawrockiego-o-wskazanie-terminu-zlozenia-slubowania-st9127193?source=rss"
+    },
+    {
+      "title": "TVN24: Tusk o możliwej rosyjskiej prowokacji",
+      "url": "https://tvn24.pl/polska/rosyjska-prowokacja-w-polsce-donald-tusk-komentuje-doniesienia-medialne-st9127094?source=rss"
+    },
+    {
+      "title": "TVN24: Nowe informacje o żołnierzach USA w Polsce",
+      "url": "https://tvn24.pl/polska/nowe-informacje-o-zolnierzach-usa-w-polsce-to-nie-jest-w-ogole-kwestionowane-st9125816"
+    },
+    {
+      "title": "TVN24: Kryzys w ochronie zdrowia",
+      "url": "https://tvn24.pl/polska/kryzys-w-ochronie-zdrowia-premier-donald-tusk-chce-pilnych-rekomendacji-od-ministry-zdrowia-i-kierownictwa-nfz-st9126402?source=rss"
+    },
+    {
+      "title": "TVN24: Czarna woda w rzece Białej",
+      "url": "https://tvn24.pl/bialystok/bielsk-podlaski-czarna-woda-w-rzece-bialej-po-decyzji-starosty-chce-zamknac-mleczarnie-prace-straci-150-osob-st9127116?source=rss"
+    },
+    {
+      "title": "TVN Meteo: Ostrzeżenia IMGW",
+      "url": "https://tvn24.pl/tvnmeteo/prognoza/ostrzezenia-imgw-piatek-3-07-silny-wiatr-i-ryzyko-burz-tu-bedzie-niebezpiecznie-st9124727"
+    },
+    {
+      "title": "TVN Meteo: Wiatr przewracał drzewa w Świnoujściu",
+      "url": "https://tvn24.pl/tvnmeteo/polska/wiatr-przewracal-drzewa-w-swinoujsciu-st9127106?source=rss"
+    },
+    {
+      "title": "IMGW Meteo",
+      "url": "https://meteo.imgw.pl/"
+    },
+    {
+      "title": "BBC: 'Most massive' Russian attack on Kyiv kills at least 30",
+      "url": "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "CNN: Russia’s latest attack on Kyiv was exceptionally deadly – here is why",
+      "url": "https://edition.cnn.com/2026/07/03/world/ukraine-russia-kyiv-attack-analysis-intl"
+    },
+    {
+      "title": "BBC: Iran begins public mourning for Ayatollah killed in February",
+      "url": "https://www.bbc.co.uk/news/articles/cx2k4k7jqeno?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "CNN: Khamenei’s casket on display as Iran prepares for days of funeral processions",
+      "url": "https://edition.cnn.com/2026/07/03/world/live-news/iran-funeral-war-trump"
+    },
+    {
+      "title": "BBC: France records 2,025 excess deaths at peak of heatwave",
+      "url": "https://www.bbc.co.uk/news/articles/c3ry307rxqro?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC: US withdraws troops from Nigeria after Islamic State mission",
+      "url": "https://www.bbc.co.uk/news/articles/cwylkvpl80xo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC: At least 32 dead after overcrowded bus plunges into ravine in Pakistan",
+      "url": "https://www.bbc.co.uk/news/articles/czrxezg60x1o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC: Ebola treatments trial begins in DR Congo",
+      "url": "https://www.bbc.co.uk/news/articles/c75ykve4zzxo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "WHO: patient enrolment begins in a scientific trial to identify the first effective treatments for Bundibugyo virus disease",
+      "url": "https://www.who.int/news/item/02-07-2026-patient-enrolment-begins-in-a-scientific-trial-to-identify-the-first-effective-treatments-for-bundibugyo-virus-disease"
+    },
+    {
+      "title": "BBC: Nasa launches mission to save falling space telescope",
+      "url": "https://www.bbc.co.uk/news/articles/c0ry4xx7rk8o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "NASA: Swift Boost Mission",
+      "url": "https://science.nasa.gov/mission/swift/swift-boost-mission/"
+    }
+  ]
+}

@@ -1,0 +1,513 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-01",
+  "runTime": "12:01",
+  "status": "Material update",
+  "headline": "12:01: Środek dnia przesuwa puls z porannych incydentów na politykę, inflację i nowy pakiet kart zagranicznych",
+  "summary": "Slot 12:01 jest materialny względem opublikowanego 09:02: poranne karty operacyjne ustępują miejsca sondażowi partyjnemu, impasowi wokół MiG-29 za technologie dronowe, inflacyjnemu efektowi droższego paliwa oraz nowym osiom zagranicznym o Francji, Sudanie, Wenezueli, Amazonie i pośrednich rozmowach USA-Iran.",
+  "items": [
+    {
+      "id": "pulse-2026-07-01-1201-01-burze-imgw",
+      "section": "Polska",
+      "title": "IMGW utrzymuje szerokie ostrzeżenia, więc środek dnia nadal stoi pod znakiem burz, ulew, gradu i upału",
+      "lead": "Pogoda wciąż jest systemowym ryzykiem dla kraju, nie tylko poranną ciekawostką radarową.",
+      "whatHappened": "TVN24 podało, że IMGW utrzymuje ostrzeżenia przed burzami i silnym deszczem w znacznej części Polski. Równolegle utrzymują się alarmy pierwszego i drugiego stopnia oraz najwyższe alerty dotyczące upału, a komunikaty RCB podtrzymują gotowość na szybkie skutki infrastrukturalne.",
+      "keyFacts": [
+        "IMGW ostrzega przed burzami, ulewami i gradem w większości kraju.",
+        "Obowiązują alarmy pierwszego i drugiego stopnia oraz czerwone alerty upałowe.",
+        "RCB nadal publikuje komunikaty ostrzegawcze dla ludności."
+      ],
+      "reactions": [
+        "To nadal jedna z najmocniejszych krajowych kart, bo może szybko przejść w awarie i szkody.",
+        "W południe ważniejsze od samej prognozy staje się to, czy zaczną dominować skutki operacyjne."
+      ],
+      "whyItMatters": "Jeżeli burze przyniosą lokalne zalania, przerwy w dostawie energii albo utrudnienia transportowe, układ pierwszych kart popołudnia może zmienić się natychmiast.",
+      "context": "O 09:02 karta była jeszcze oparta mocno na radarze i porannym ostrzeganiu. O 12:01 utrzymuje się jako szeroki reżim pogodowy dla większości kraju.",
+      "watchNext": [
+        "Czy IMGW lub RCB rozszerzą zakres ostrzeżeń albo przejdą do ostrzeżeń o skutkach.",
+        "Czy pojawią się raporty o zalaniach, awariach energetycznych lub problemach na drogach i kolei."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Burze, ulewy i grad. IMGW ostrzega w większości Polski",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/burze-ulewy-i-grad-w-srode-1-07-nawalnice-w-polsce-gdzie-trzeba-uwazac-aktualne-ostrzezenia-imgw-st9115734?source=rss"
+        },
+        {
+          "title": "IMGW: Aktualna i prognozowana sytuacja meteorologiczna i hydrologiczna – raport nr 135",
+          "url": "https://imgw.pl/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-135/"
+        },
+        {
+          "title": "RCB: Komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "Burze",
+        "Upał",
+        "Alerty"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-1201-02-sondaz",
+      "section": "Polityka",
+      "title": "Nowy sondaż daje KO prowadzenie, ale sejmowa arytmetyka nadal nie układa się pod spokojne rządzenie",
+      "lead": "Midday feed dostaje polityczną kartę, która zmienia ton krajowego bloku.",
+      "whatHappened": "TVN24 podało wyniki sondażu United Surveys by IBRiS dla Wirtualnej Polski. Koalicja Obywatelska ma według badania 29,2 proc., ale nie daje to samodzielnej ścieżki do rządzenia, podczas gdy PiS razem z obiema Konfederacjami mógłby zbudować większość w Sejmie.",
+      "keyFacts": [
+        "Koalicja Obywatelska ma w sondażu 29,2 proc.",
+        "Samo prowadzenie nie przekłada się na samodzielne rządzenie.",
+        "PiS wraz z obiema Konfederacjami miałby większość sejmową."
+      ],
+      "reactions": [
+        "To karta ważna politycznie, bo pokazuje rozjazd między pierwszym miejscem a realną arytmetyką władzy.",
+        "W feedzie krajowym jest to wyraźne odejście od samych zdarzeń operacyjnych na rzecz gry o większość."
+      ],
+      "whyItMatters": "Jeżeli wyniki sondażowe zaczną się utrwalać, narracja o stabilności przyszłego rządu może stać się jednym z głównych tematów dnia.",
+      "context": "W poprzednim slocie kraj dominowały burze, kopalnia i ewakuacja budynku. O 12:01 do środka dnia wchodzi czysta polityczna arytmetyka.",
+      "watchNext": [
+        "Czy sztaby partii odpowiedzą szybko komentarzami lub własnymi interpretacjami badania.",
+        "Czy pojawią się kolejne sondaże potwierdzające albo osłabiające ten układ mandatowy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nowy sondaż partyjny",
+          "url": "https://tvn24.pl/polska/ko-prowadzi-ale-bez-szans-na-samodzielne-rzadzenie-nowy-sondaz-partyjny-st9122389?source=rss"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Sondaż",
+        "KO",
+        "Sejm"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-01-1201-03-migi-drony",
+      "section": "Bezpieczeństwo",
+      "title": "Rozmowy o MiG-29 za ukraińskie technologie dronowe utknęły na kosztach i warunkach modernizacji",
+      "lead": "Nowa karta obronna przenosi uwagę z incydentów na strategiczny impas negocjacyjny.",
+      "whatHappened": "TVN24 opisuje trwające od miesięcy rozmowy o wymianie polskich MiG-29 za ukraińskie technologie dronowe. Według tej relacji jednym z głównych problemów jest to, kto miałby zapłacić za modernizację maszyn, ale spór dotyczy także szerszych warunków transakcji.",
+      "keyFacts": [
+        "Negocjacje trwają od wielu miesięcy.",
+        "Jedną z osi sporu mają być koszty modernizacji samolotów.",
+        "Do południa nie ma sygnału przełomu w rozmowach."
+      ],
+      "reactions": [
+        "To ważna karta dla feedu, bo łączy polską politykę, obronność i wsparcie Ukrainy.",
+        "Jednocześnie pozostaje to temat delikatny, bo część szczegółów ma charakter zakulisowy."
+      ],
+      "whyItMatters": "Jeżeli negocjacje ruszą albo zostaną oficjalnie zablokowane, temat może bardzo szybko przejść z analizy do twardej decyzji polityczno-wojskowej.",
+      "context": "Wcześniejszy slot nie miał tej osi. O 12:01 to jedna z nowych kart, które podnoszą ciężar polityczno-obronny krajowego bloku.",
+      "watchNext": [
+        "Czy pojawi się oficjalny komentarz MON, MSZ albo strony ukraińskiej.",
+        "Czy media doprecyzują zakres technologii dronowych i model finansowania."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Polskie myśliwce za ukraińskie drony. Kulisy impasu w negocjacjach",
+          "url": "https://tvn24.pl/polska/mig-i-wciaz-w-polsce-a-drony-w-ukrainie-kulisy-niedoszlej-wymiany-st9122484?source=rss"
+        }
+      ],
+      "tags": [
+        "MiG-29",
+        "Ukraina",
+        "Drony",
+        "MON"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-01-1201-04-paliwa-inflacja",
+      "section": "Gospodarka",
+      "title": "Niski odczyt inflacji może być tylko chwilą oddechu, bo droższe paliwa wracają do gry",
+      "lead": "Po porannym wzroście cen paliw dochodzi nowa makroekonomiczna interpretacja skutków.",
+      "whatHappened": "TVN24 Biznes podało wypowiedź byłego ministra gospodarki Piotra Woźniaka, który ocenił, że niski odczyt inflacji może być chwilowy. Jego zdaniem drożejące paliwa po zakończeniu programu dopłat zaczną ponownie podbijać dynamikę cen.",
+      "keyFacts": [
+        "Piotr Woźniak mówi o przejściowym charakterze niskiej inflacji.",
+        "Głównym czynnikiem ryzyka mają być drożejące paliwa.",
+        "To rozwinięcie porannej karty o powrocie wyższych cen na stacjach."
+      ],
+      "reactions": [
+        "Feed przesuwa temat paliw z poziomu paragonu na poziom szerszego wpływu makro.",
+        "To może zwiększyć wagę gospodarki w kolejnych slotach dnia."
+      ],
+      "whyItMatters": "Jeżeli paliwo zacznie szybko przekładać się na inflację i nastroje konsumenckie, temat wróci nie tylko do sekcji gospodarczej, ale też politycznej.",
+      "context": "O 09:02 wiadomo było głównie, że ceny rosną po końcu programu. O 12:01 dochodzi teza o możliwym szybkim przełożeniu na wskaźnik inflacji.",
+      "watchNext": [
+        "Czy pojawią się dodatkowe komentarze ekonomistów lub rządu o wpływie paliw na CPI.",
+        "Czy stacje paliw i sieci detaliczne pokażą szybsze niż oczekiwano podwyżki."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Woźniak: to chwilowy spadek inflacji. Drożejące paliwa podbiją ceny",
+          "url": "https://tvn24.pl/biznes/z-kraju/byly-minister-gospodarki-to-chwilowy-spadek-inflacji-drozejace-paliwa-po-zniesieniu-programu-cpn-podbija-ceny-st9122613?source=rss"
+        }
+      ],
+      "tags": [
+        "Inflacja",
+        "Paliwa",
+        "CPI",
+        "Gospodarka"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-01-1201-05-francja-upal",
+      "section": "Alerty",
+      "title": "Fala upałów we Francji przechodzi w kryzys humanitarny, a media mówią o nadmiarowych zgonach",
+      "lead": "Europejski upał przestaje być tylko kartą pogodową i wchodzi w obszar skutków społecznych.",
+      "whatHappened": "TVN24, powołując się na francuskie media, podało informację o około tysiącu nadmiarowych zgonów podczas fali upałów oraz o przeciążeniu zakładów pogrzebowych w rejonie Paryża. Oficjalny system Météo-France utrzymuje publiczny reżim ostrzegawczy związany z wysokimi temperaturami.",
+      "keyFacts": [
+        "TVN24 cytuje francuskie media mówiące o około 1000 nadmiarowych zgonów.",
+        "Zakłady pogrzebowe mają zgłaszać problemy z przyjmowaniem kolejnych ciał.",
+        "Météo-France utrzymuje aktywne ostrzeganie pogodowe."
+      ],
+      "reactions": [
+        "To jedna z nowych zagranicznych kart, która wnosi do feedu silny komponent humanitarny.",
+        "Jednocześnie dokładny bilans ofiar wymaga ostrożności, bo jest oparty na przekazach medialnych."
+      ],
+      "whyItMatters": "Jeżeli fala upałów będzie się przedłużać, temat może przejść z jednorazowej aktualizacji do wielodniowego europejskiego kryzysu zdrowotnego i infrastrukturalnego.",
+      "context": "Poprzedni slot nie miał tej osi. O 12:01 francuska fala upałów jest jedną z najmocniejszych nowych kart zagranicznych.",
+      "watchNext": [
+        "Czy pojawią się oficjalne francuskie dane o ofiarach i przeciążeniu służb.",
+        "Czy system ostrzeżeń Météo-France zostanie zaostrzony lub rozszerzony."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Fala upałów we Francji. Zakłady pogrzebowe nie mogą już pomieścić zmarłych",
+          "url": "https://tvn24.pl/swiat/francja-fala-upalow-powoduje-nadmiarowe-zgony-brakuje-miejsca-w-zakladach-pogrzebowych-st9122500?source=rss"
+        },
+        {
+          "title": "Météo-France Vigilance",
+          "url": "https://vigilance.meteofrance.fr/en"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "Upał",
+        "Europa",
+        "Alerty"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-1201-06-trump-krypto",
+      "section": "Gospodarka",
+      "title": "Trump nadal trzyma mocną kartę dnia po informacji o ponad miliardzie dolarów przychodu z krypto",
+      "lead": "Temat nie znika, bo wciąż przebija większość innych światowych historii skalą pieniędzy i polityki.",
+      "whatHappened": "BBC podało, że Donald Trump zarobił ponad miliard dolarów na kryptowalutach w pierwszym roku po powrocie do urzędu. Oficjalny dokument majątkowy OGE pozostaje podstawowym źródłem dla tej osi i pokazuje, że dochody z krypto wyraźnie przewyższają część tradycyjnych źródeł przychodu.",
+      "keyFacts": [
+        "BBC mówi o ponad 1 mld USD przychodu z kryptowalut.",
+        "Oficjalne ujawnienie OGE jest podstawą tej informacji.",
+        "Dochody z krypto wyprzedzają część bardziej klasycznych aktywów Trumpa."
+      ],
+      "reactions": [
+        "To nadal jedna z najcięższych kart gospodarczo-politycznych w zagranicznym bloku.",
+        "Temat wzmacnia pytania o konflikt interesów i wpływ polityki na rynek krypto."
+      ],
+      "whyItMatters": "Historia łączy politykę USA, regulacje rynku cyfrowych aktywów i debatę o etyce urzędowej w jednej bardzo nośnej karcie.",
+      "context": "Karta była już wysoko o 09:02 i pozostaje wysoko o 12:01, bo nowe źródło BBC nadaje jej jeszcze szerszy zasięg odbioru.",
+      "watchNext": [
+        "Czy pojawią się reakcje Kongresu, opozycji albo regulatorów rynku.",
+        "Czy media doprecyzują strukturę przychodów i zależności biznesowe wokół krypto."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Trump made more than $1bn from crypto in first year back in office",
+          "url": "https://www.bbc.co.uk/news/articles/cvgmv98ez3zo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "OGE: President Trump’s certified annual financial disclosure report",
+          "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4EC9A8E6DD078F2985258CA9002C9377/%24FILE/Trump%2C%20Donald%20J.%202025%20Annual%20278.pdf"
+        }
+      ],
+      "tags": [
+        "Trump",
+        "Kryptowaluty",
+        "USA",
+        "OGE"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-1201-07-birthright",
+      "section": "Świat",
+      "title": "Sąd Najwyższy USA utrzymuje obywatelstwo z urodzenia i zostawia Trumpa z dużą porażką migracyjną",
+      "lead": "Amerykańska karta prawno-polityczna nadal jest za duża, by wypaść ze środka dnia.",
+      "whatHappened": "BBC podało, że Sąd Najwyższy USA utrzymał obywatelstwo z urodzenia, co jest poważnym ciosem dla imigracyjnej agendy Trumpa. Oficjalna opinia sądu pozostaje kluczowym źródłem potwierdzającym wagę i zakres rozstrzygnięcia.",
+      "keyFacts": [
+        "Wyrok utrzymuje obywatelstwo z urodzenia.",
+        "BBC opisuje to jako duży cios dla agendy Trumpa.",
+        "Sprawa ma umocowanie w oficjalnej opinii Sądu Najwyższego."
+      ],
+      "reactions": [
+        "To wciąż jedna z najbardziej nośnych kart amerykańskiej polityki wewnętrznej.",
+        "Skala symboliczna sprawy utrzymuje ją wysoko mimo napływu nowych tematów."
+      ],
+      "whyItMatters": "Wyrok wpływa nie tylko na bieżącą politykę migracyjną, ale też na granice wykonawczej siły prezydenta w USA.",
+      "context": "O 09:02 karta już była silna i nadal nią pozostaje, bo jej znaczenie systemowe nie maleje wraz z kolejnymi godzinami dnia.",
+      "watchNext": [
+        "Czy Biały Dom zapowie dalsze kroki prawne lub polityczne po wyroku.",
+        "Czy organizacje praw obywatelskich i stany wykorzystają rozstrzygnięcie w kolejnych sporach."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US Supreme Court upholds birthright citizenship in blow to Trump",
+          "url": "https://www.bbc.co.uk/news/articles/cgmepnx1wzzo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Supreme Court: Trump v. Barbara (06/30/2026)",
+          "url": "https://www.supremecourt.gov/opinions/25pdf/25-365_4hdj.pdf"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Sąd Najwyższy",
+        "Migracja",
+        "Trump"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-1201-08-anthropic",
+      "section": "Technologia",
+      "title": "Anthropic zostaje numerem jeden w technologii po cofnięciu amerykańskiej blokady eksportowej",
+      "lead": "Karta AI trzyma się wysoko, bo dotyczy bezpośrednio geopolityki technologicznej USA.",
+      "whatHappened": "TVN24 podało, że administracja Donalda Trumpa zniosła ograniczenia eksportowe na najnowsze modele Anthropic, co kończy kilkutygodniowy spór z Departamentem Handlu. W newsroomie Anthropic temat pozostaje jedną z głównych osi komunikacyjnych firmy.",
+      "keyFacts": [
+        "USA cofnęły blokadę eksportową dotyczącą zaawansowanych modeli Anthropic.",
+        "Spór między firmą a Departamentem Handlu trwał kilka tygodni.",
+        "Karta łączy AI, handel i politykę zagraniczną USA."
+      ],
+      "reactions": [
+        "To najmocniejszy technologiczny temat obecnego slotu.",
+        "Decyzja może szybko zostać przełożona na konkurencję firm AI i debatę o bezpieczeństwie eksportowym."
+      ],
+      "whyItMatters": "Eksport zaawansowanych modeli AI to dziś nie tylko biznes, ale też narzędzie przewagi państwowej i regulacyjnej.",
+      "context": "Karta była już silna rano i nadal zostaje w zestawie, bo nowe zagraniczne tematy nie osłabiły jej znaczenia sektorowego.",
+      "watchNext": [
+        "Czy pojawią się warunki lub ograniczenia towarzyszące przywróceniu eksportu.",
+        "Czy konkurenci i regulatorzy zareagują na zmianę kursu administracji USA."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Przełom w sporze o AI. Trump cofa blokadę na modele Anthropic",
+          "url": "https://tvn24.pl/biznes/tech/sztuczna-inteligencja-usa-zniosly-blokade-na-modele-anthropic-claude-fable-5-i-mythos-5-znow-dostepna-st9122421?source=rss"
+        },
+        {
+          "title": "Anthropic Newsroom",
+          "url": "https://www.anthropic.com/news"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Anthropic",
+        "Eksport",
+        "USA"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-1201-09-iran-qatar",
+      "section": "Świat",
+      "title": "CNN widzi pośrednie rozmowy USA-Iran w Dosze, więc wątek katarski wchodzi na wyższy poziom napięcia",
+      "lead": "W południe dochodzi twardszy sygnał niż nocne zapewnienia o braku bezpośrednich spotkań.",
+      "whatHappened": "CNN podało, że amerykańscy i irańscy urzędnicy prowadzą dziś w Dosze pośrednie, techniczne rozmowy niskiego szczebla przez mediatorów z Kataru i Pakistanu. To rozwija wątek z nocnego materiału BBC, w którym Katar podkreślał brak zaplanowanych bezpośrednich rozmów i brak spotkań wysokiego szczebla.",
+      "keyFacts": [
+        "CNN mówi o pośrednich, technicznych rozmowach USA-Iran w Dosze.",
+        "Rozmowy mają być prowadzone przez mediatorów z Kataru i Pakistanu.",
+        "Wcześniejszy przekaz BBC podkreślał brak bezpośrednich i wysokiego szczebla spotkań."
+      ],
+      "reactions": [
+        "To jedna z najbardziej płynnych kart dnia, bo pojedynczy komunikat może całkowicie zmienić jej sens.",
+        "Różnica między brakiem rozmów bezpośrednich a istnieniem rozmów pośrednich jest ważna dyplomatycznie."
+      ],
+      "whyItMatters": "Każda oznaka realnego kanału rozmów między USA i Iranem wpływa na ocenę ryzyka regionalnego, cen energii i agendy dyplomatycznej Zachodu.",
+      "context": "O 09:02 w feedzie był raczej brak bezpośrednich rozmów. O 12:01 dochodzi mocniejszy sygnał, że techniczne kontakty jednak są prowadzone.",
+      "watchNext": [
+        "Czy pojawi się oficjalne potwierdzenie lub dementi ze strony USA, Kataru albo Iranu.",
+        "Czy rozmowy przejdą z poziomu technicznego na wyższy szczebel polityczny."
+      ],
+      "sources": [
+        {
+          "title": "CNN World live",
+          "url": "https://edition.cnn.com/2026/07/01/world/live-news/iran-war-trump"
+        },
+        {
+          "title": "BBC: US envoys in Doha to meet mediators but not Iranians, Qatar says",
+          "url": "https://www.bbc.co.uk/news/articles/cpd38x1dy4no?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "Katar",
+        "Dyplomacja"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-1201-10-sudan-rsf",
+      "section": "Bezpieczeństwo",
+      "title": "Amnesty oskarża RSF o zbrodnie przeciwko ludzkości w el-Faszer, więc Sudan wraca jako twarda karta bezpieczeństwa",
+      "lead": "To nowa południowa oś zagraniczna z bardzo ciężkim oskarżeniem o charakterze masowym.",
+      "whatHappened": "BBC podało, że Amnesty oskarża sudańskie RSF o zbrodnie przeciwko ludzkości w el-Faszer. Według opisu BBC raport dokłada się do materiału dowodowego o okrucieństwach, które według ONZ noszą cechy ludobójstwa.",
+      "keyFacts": [
+        "Amnesty oskarża RSF o zbrodnie przeciwko ludzkości w el-Faszer.",
+        "BBC podkreśla, że ONZ widzi w tych wydarzeniach cechy ludobójstwa.",
+        "To nowa, wyraźnie cięższa karta bezpieczeństwa w południowym slocie."
+      ],
+      "reactions": [
+        "Temat wnosi do feedu wysoką wagę humanitarną i prawną.",
+        "Jednocześnie opiera się na oskarżeniu organizacji praw człowieka, więc kluczowe będą dalsze potwierdzenia i reakcje międzynarodowe."
+      ],
+      "whyItMatters": "Jeżeli zarzuty będą szerzej podtrzymywane, Sudan może wrócić mocniej do zachodniej agendy dyplomatycznej i sankcyjnej.",
+      "context": "To nowa karta względem 09:02, która wzmacnia południowy blok zagraniczny cięższym oskarżeniem niż większość pozostałych tematów dnia.",
+      "watchNext": [
+        "Czy ONZ, USA albo UE odniosą się do raportu Amnesty.",
+        "Czy pojawią się nowe dowody, zdjęcia satelitarne albo sankcyjne konsekwencje."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Sudan's RSF committed crimes against humanity in el-Fasher, Amnesty says",
+          "url": "https://www.bbc.co.uk/news/articles/cz9lqvx0z1vo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Sudan",
+        "RSF",
+        "Amnesty",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-1201-11-wenezuela",
+      "section": "Świat",
+      "title": "W Wenezueli rośnie gniew po trzęsieniu ziemi, bo mieszkańcy sami odgruzowują budynki gołymi rękami",
+      "lead": "Poranna karta o uratowanym dziecku przechodzi w ostrzejszy obraz kryzysu państwowej niewydolności.",
+      "whatHappened": "CNN opisuje, że po śmiertelnych trzęsieniach ziemi w Wenezueli mieszkańcy sami próbują ratować bliskich spod gruzów, bo brakuje paliwa i ciężkiej mechanizacji. To rozwinięcie porannej historii o uratowanym trzylatku, która pokazywała jeszcze przede wszystkim wymiar ratunkowego cudu.",
+      "keyFacts": [
+        "Ludzie mają własnymi rękami odgruzowywać budynki po trzęsieniu ziemi.",
+        "CNN wskazuje na brak paliwa i niewystarczające wykorzystanie ciężkiego sprzętu.",
+        "Temat rozwija poranny wątek o uratowanym trzylatku."
+      ],
+      "reactions": [
+        "Karta zyskuje bardziej polityczny i społeczny ciężar niż rano.",
+        "Rosnący gniew wobec jakości reakcji państwa może szybko wywołać kolejne aktualizacje."
+      ],
+      "whyItMatters": "Jeżeli kryzys humanitarny pogłębi się i bilans ofiar wzrośnie, Wenezuela może wejść wyżej do globalnego obiegu informacyjnego dnia.",
+      "context": "O 09:02 dominuje emocjonalny wątek uratowanego dziecka. O 12:01 temat dojrzewa do opowieści o skali zaniedbań i frustracji społecznej.",
+      "watchNext": [
+        "Czy bilans ofiar wzrośnie i czy przyspieszy pomoc sprzętowa.",
+        "Czy władze odpowiedzą na zarzuty o niewystarczającą akcję ratunkową."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Venezuela earthquake: Anger grows as people rescue their own and fear true death toll is much higher",
+          "url": "https://edition.cnn.com/2026/07/01/americas/venezuela-earthquake-search-rescue-anger-latam-intl"
+        },
+        {
+          "title": "TVN24: Uratowali trzylatka spod gruzów. Sześć dni po trzęsieniu ziemi",
+          "url": "https://tvn24.pl/swiat/trzesienia-ziemi-w-wenezueli-uratowali-trzylatka-spod-gruzow-szesc-dni-po-katastrofie-st9122291?source=rss"
+        }
+      ],
+      "tags": [
+        "Wenezuela",
+        "Trzęsienie ziemi",
+        "Ratownictwo",
+        "Kryzys"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-01-1201-12-amazon-australia",
+      "section": "Gospodarka",
+      "title": "Australia pozywa Amazon za warunki subskrypcji i dokłada nową regulacyjną kartę do globalnej gospodarki",
+      "lead": "To mniejszy temat niż Trump czy Iran, ale wyraźnie nowy i czytelny dla sekcji ekonomiczno-technologicznej.",
+      "whatHappened": "BBC podało, że australijski regulator ACCC pozywa Amazon za rzekomo nieuczciwe warunki kontraktowe wobec subskrybentów. Według opisu BBC sprawa dotyczy możliwego naruszenia prawa chroniącego konsumentów.",
+      "keyFacts": [
+        "Pozew wnosi australijski regulator ACCC.",
+        "Spór dotyczy rzekomo nieuczciwych warunków umów z subskrybentami.",
+        "BBC opisuje sprawę jako potencjalne naruszenie prawa ochrony konsumenta."
+      ],
+      "reactions": [
+        "To nowa karta gospodarcza, która dobrze domyka blok świata poza geopolityką i kryzysami.",
+        "Presja regulacyjna na platformy cyfrowe pozostaje tematem wspólnym dla wielu rynków."
+      ],
+      "whyItMatters": "Jeżeli sprawa rozwinie się szerzej, może wpłynąć na praktyki subskrypcyjne dużych platform oraz na debatę o ochronie konsumenta w handlu cyfrowym.",
+      "context": "W poprzednim slocie tej osi nie było. O 12:01 daje ona feedowi nową, bardziej regulacyjną kartę gospodarczą.",
+      "watchNext": [
+        "Czy ACCC pokaże szczegóły zarzutów i oczekiwanych zmian umownych.",
+        "Czy Amazon odpowie formalnie albo zmieni warunki oferowane klientom."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Australia sues Amazon for making allegedly unfair contracts with subscribers",
+          "url": "https://www.bbc.co.uk/news/articles/c20yz9rzwy0o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Amazon",
+        "Australia",
+        "ACCC",
+        "Subskrypcje"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "IMGW: Aktualna i prognozowana sytuacja meteorologiczna i hydrologiczna – raport nr 135",
+      "url": "https://imgw.pl/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-135/"
+    },
+    {
+      "title": "RCB: Komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "Météo-France Vigilance",
+      "url": "https://vigilance.meteofrance.fr/en"
+    },
+    {
+      "title": "OGE: President Trump’s certified annual financial disclosure report",
+      "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4EC9A8E6DD078F2985258CA9002C9377/%24FILE/Trump%2C%20Donald%20J.%202025%20Annual%20278.pdf"
+    },
+    {
+      "title": "Supreme Court: Trump v. Barbara (06/30/2026)",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/25-365_4hdj.pdf"
+    },
+    {
+      "title": "Anthropic Newsroom",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "title": "CNN World live",
+      "url": "https://edition.cnn.com/2026/07/01/world/live-news/iran-war-trump"
+    },
+    {
+      "title": "CNN: Venezuela earthquake: Anger grows as people rescue their own and fear true death toll is much higher",
+      "url": "https://edition.cnn.com/2026/07/01/americas/venezuela-earthquake-search-rescue-anger-latam-intl"
+    },
+    {
+      "title": "BBC: Sudan's RSF committed crimes against humanity in el-Fasher, Amnesty says",
+      "url": "https://www.bbc.co.uk/news/articles/cz9lqvx0z1vo?at_medium=RSS&at_campaign=rss"
+    }
+  ]
+}

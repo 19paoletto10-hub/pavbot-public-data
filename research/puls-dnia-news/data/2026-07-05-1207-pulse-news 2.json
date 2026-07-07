@@ -1,0 +1,449 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-05",
+  "runTime": "12:07",
+  "status": "Material update",
+  "headline": "Gdańsk, IMGW i nowe światowe leady zmieniają puls dnia",
+  "summary": "Po 09:01 feed przesunął się na gdański incydent, ostrzeżenia IMGW oraz świeże światowe wątki z Trumpem, Iranem, Gazą, Chinami, Guam, Ukrainą, Wenezuelą, Peru i Niemcami.",
+  "items": [
+    {
+      "id": "pulse-2026-07-05-1207-01-gdansk-elewacja",
+      "section": "Polska",
+      "title": "Fragment elewacji spadł w Gdańsku",
+      "lead": "Dwie osoby zostały ranne, gdy odpadł fragment elewacji przy restauracyjnym ogródku w centrum miasta.",
+      "whatHappened": "TVN24 podało, że w centrum Gdańska fragment elewacji spadł na ogródek restauracyjny; poszkodowane zostały dwie osoby, a strażacy pracowali na miejscu przez kilka godzin.",
+      "keyFacts": [
+        "Zdarzenie dotyczyło budynku w centrum Gdańska.",
+        "Na miejscu interweniowali strażacy i zabezpieczali teren."
+      ],
+      "reactions": [
+        "To typowy letni alert bezpieczeństwa miejskiego i budowlanego.",
+        "Miasto i służby mogą sprawdzać stan pozostałych elewacji w okolicy."
+      ],
+      "whyItMatters": "To świeży incydent z obszaru bezpieczeństwa publicznego i miejskiej infrastruktury.",
+      "context": "W porannym feedzie to jeden z najbardziej konkretnych krajowych materiałów z bezpośrednim skutkiem dla mieszkańców i turystów.",
+      "watchNext": [
+        "Stan rannych i oficjalny komunikat służb.",
+        "Czy pojawią się informacje o przyczynie odpadnięcia elewacji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Fragment elewacji spadł na ogródek restauracyjny. Dwie osoby ranne",
+          "url": "https://tvn24.pl/trojmiasto/gdansk-fragment-elewacji-spadl-na-ogrodek-restauracyjny-dwie-osoby-ranne-st9128822?source=rss"
+        }
+      ],
+      "tags": [
+        "Gdańsk",
+        "Bezpieczeństwo",
+        "Wypadek"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-05-1207-02-imgw-burze-wiatr",
+      "section": "Polska",
+      "title": "IMGW ostrzega przed silnym wiatrem i burzami",
+      "lead": "Instytut wydał ostrzeżenia dla ośmiu województw, a lokalnie możliwy jest też drobny grad.",
+      "whatHappened": "TVN24 podało, że IMGW wydał ostrzeżenia przed silnym wiatrem, a lokalnie mogą pojawić się burze z drobnym gradem.",
+      "keyFacts": [
+        "Alarmy dotyczą ośmiu województw.",
+        "Ryzyko obejmuje wiatr, burze i lokalny grad."
+      ],
+      "reactions": [
+        "To ważny sygnał dla transportu, wydarzeń plenerowych i żeglugi.",
+        "Krajowy feed dalej pozostaje mocno pogodowy."
+      ],
+      "whyItMatters": "Ostrzeżenia wpływają na bezpieczeństwo w wielu regionach i mogą szybko zmienić logistykę dnia.",
+      "context": "To kontynuacja porannego pogodowego leadu, ale z bardziej konkretnym zasięgiem alertu.",
+      "watchNext": [
+        "Czy IMGW podniesie lub rozszerzy stopień ostrzeżenia.",
+        "Czy pojawią się lokalne szkody albo odwołania wydarzeń."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Silny wiatr, możliwe burze. Alarmy IMGW dla ośmiu województw",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/pogoda-burze-i-silny-wiatr-prognoza-zagrozen-alarmy-imgw-moga-objac-wiekszosc-kraju-st9128576?source=rss"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "Burze",
+        "Alert"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-05-1207-03-glogow-huta-wypadek",
+      "section": "Bezpieczeństwo",
+      "title": "Śmiertelny wypadek w hucie w Głogowie",
+      "lead": "W nocy z 3 na 4 lipca zginął 38-letni pracownik Huty Miedzi Głogów II.",
+      "whatHappened": "TVN24 podało, że 38-letni pracownik zginął podczas czyszczenia zbiornika na koncentrat miedzi; okoliczności zdarzenia ma wyjaśnić komisja.",
+      "keyFacts": [
+        "Do wypadku doszło podczas nocnych prac przy zbiorniku.",
+        "Sprawę będzie wyjaśniać komisja."
+      ],
+      "reactions": [
+        "To poważny sygnał dla nadzoru BHP w zakładach przemysłowych.",
+        "W regionie temat może wywołać pytania o procedury bezpieczeństwa."
+      ],
+      "whyItMatters": "To materiał z obszaru bezpieczeństwa pracy, z potencjalnymi konsekwencjami dla kontroli i procedur.",
+      "context": "W krajowym feedzie to najmocniejszy z dzisiejszych wątków w kategorii wypadków przemysłowych.",
+      "watchNext": [
+        "Komunikat spółki i służb.",
+        "Wyniki ustaleń komisji i ewentualne dalsze działania inspekcyjne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Tragiczny wypadek w hucie. Nie żyje 38-latek",
+          "url": "https://tvn24.pl/wroclaw/glogow-tragiczny-wypadek-w-hucie-nie-zyje-38-letni-pracownik-st9128795?source=rss"
+        }
+      ],
+      "tags": [
+        "Głogów",
+        "BHP",
+        "Wypadek"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-05-1207-04-putin-trump-call",
+      "section": "Polityka",
+      "title": "Putin i Trump rozmawiali przez 90 minut",
+      "lead": "Kreml nazwał rozmowę „biznesową”, a CNN podaje, że trwała blisko półtorej godziny.",
+      "whatHappened": "CNN podało, że Donald Trump i Władimir Putin rozmawiali 4 lipca około 90 minut; rosyjski komunikat opisał rozmowę jako „businesslike”, a w tle znów pojawił się temat wojny w Ukrainie.",
+      "keyFacts": [
+        "To jedna z najważniejszych rozmów politycznych dzisiejszego feedu.",
+        "Temat Ukrainy ponownie znalazł się w centrum komunikatu."
+      ],
+      "reactions": [
+        "Moskwa próbuje przedstawić kontakt jako normalny kanał polityczny.",
+        "Każda nowa wzmianka o Ukrainie może wywołać reakcję Kijowa i Waszyngtonu."
+      ],
+      "whyItMatters": "To sygnał o stanie bezpośredniego kanału Trump-Putin i o możliwym wpływie na wojnę w Ukrainie.",
+      "context": "To nowsza i bardziej precyzyjna wersja wątku, który rano w TVN24 był jeszcze tylko ogólną wzmianką o rozmowie Trumpa z Putinem i Zełenskim.",
+      "watchNext": [
+        "Czy pojawi się amerykański lub ukraiński komentarz.",
+        "Czy rozmowa przełoży się na konkretne ruchy dyplomatyczne."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Putin and Trump held “businesslike” 90-minute July 4 call, Moscow says",
+          "url": "https://edition.cnn.com/2026/07/05/europe/putin-trump-call-independence-day-intl"
+        },
+        {
+          "title": "TVN24: Donald Trump rozmawiał z Władimirem Putinem i Wołodymyrem Zełenskim",
+          "url": "https://tvn24.pl/swiat/rozmowa-donalda-trumpa-z-wladimirem-putinem-i-wolodymyrem-zelenskim-wojna-wsrod-tematow-st9128564?source=rss"
+        }
+      ],
+      "tags": [
+        "Trump",
+        "Putin",
+        "Ukraina"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-05-1207-05-chamenei-zaloba",
+      "section": "Świat",
+      "title": "Synowie Chameneiego dołączyli do żałoby w Teheranie",
+      "lead": "CNN opisuje drugi dzień publicznego pogrzebu i symboliczny udział rodziny w uroczystościach.",
+      "whatHappened": "CNN live update reports that Iranian leaders have been seen praying over the coffins at the public funeral in Tehran, while TVN24 podkreśla ostrą antyeuropejską retorykę wokół ceremonii.",
+      "keyFacts": [
+        "To drugi dzień publicznej żałoby po śmierci Chameneiego.",
+        "Wydarzenie pozostaje silnie polityczne, nie tylko ceremonialne."
+      ],
+      "reactions": [
+        "Teheran wykorzystuje pogrzeb do wysłania sygnału wewnętrznego i zewnętrznego.",
+        "Antyeuropejskie komentarze pokazują, że spór pozostaje bardzo ostry."
+      ],
+      "whyItMatters": "To ważny wskaźnik napięć na linii Iran-Zachód i na bieżąco kształtuje regionalny przekaz polityczny.",
+      "context": "W porównaniu z porannym feedem to rozwinięcie już bardzo gorącego irańskiego wątku.",
+      "watchNext": [
+        "Czy ceremonia przyniesie kolejne oficjalne komunikaty.",
+        "Czy pojawią się nowe reakcje USA, Europy lub sojuszników Iranu."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Three of Khamenei’s sons join mass mourning in Tehran, but not his successor",
+          "url": "https://edition.cnn.com/2026/07/05/world/live-news/iran-khamenei-funeral-war-trump"
+        },
+        {
+          "title": "TVN24: Irański polityk oskarża Europę. \"Barbarzyńska i dzika\"",
+          "url": "https://tvn24.pl/swiat/pogrzeb-w-iranie-bez-udzialu-europejskich-przywodcow-parlamentarzysta-nazwal-europe-barbarzynska-i-dzika-st9128531?source=rss"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Chamenei",
+        "Geopolityka"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-05-1207-06-gaza-ceasefire",
+      "section": "Świat",
+      "title": "Rozejm w Gazie nadal nie przekłada się na realną ulgę",
+      "lead": "CNN opisuje ciała pozostawione bez pochówku i fatalne warunki w mieście.",
+      "whatHappened": "CNN podaje, że mimo miesięcy rozmów o zawieszeniu broni w Gazie wciąż leżą niepochowane ciała, a warunki humanitarne pozostają skrajnie złe.",
+      "keyFacts": [
+        "To jedna z najmocniejszych humanitarnych kart dzisiejszego CNN.",
+        "Artykuł pokazuje, że „ceasefire” nie oznacza jeszcze stabilizacji terenu."
+      ],
+      "reactions": [
+        "To podważa narrację o szybkim wygaszeniu konfliktu.",
+        "Presja na mediatorów i organizacje humanitarne pozostaje wysoka."
+      ],
+      "whyItMatters": "To sygnał, że wojna i jej skutki humanitarne nadal trwają mimo politycznych deklaracji.",
+      "context": "To nowy, wyraźny wątek w dzisiejszym feedzie światowym i ważny kontrapunkt do dyplomatycznych komunikatów.",
+      "watchNext": [
+        "Czy pojawią się nowe propozycje mediacji.",
+        "Czy organizacje humanitarne rozszerzą apele o dostęp do terenu."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Bodies lie unclaimed and rats run rampant as months on Gaza’s ceasefire remains unfulfilled",
+          "url": "https://edition.cnn.com/2026/07/05/middleeast/gaza-israel-ceasefire-deal-intl"
+        }
+      ],
+      "tags": [
+        "Gaza",
+        "Humanitarne",
+        "Wojna"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-05-1207-07-jin-mingri-uwolnienie",
+      "section": "Świat",
+      "title": "Założyciel podziemnego kościoła wrócił do rodziny w USA",
+      "lead": "BBC i CNN potwierdzają uwolnienie Jin Mingriego po latach więzienia w Chinach.",
+      "whatHappened": "BBC podało, że Jin Mingri, założyciel jednego z największych podziemnych kościołów w Chinach, został zwolniony z więzienia; CNN dodało, że wrócił do rodziny w Stanach Zjednoczonych.",
+      "keyFacts": [
+        "Wątek ma wyraźny wymiar religijny i praw człowieka.",
+        "W tle pojawia się bezpośredni apel Donalda Trumpa do Xi Jinpinga."
+      ],
+      "reactions": [
+        "Sprawa będzie czytana jako sygnał wobec wspólnot religijnych w Chinach.",
+        "Może też wywołać komentarze w Waszyngtonie na tle relacji z Pekinem."
+      ],
+      "whyItMatters": "To jedna z ważniejszych wiadomości o prawach religijnych i relacjach USA-Chiny w dzisiejszym cyklu.",
+      "context": "BBC i CNN mówią tu zasadniczo o tym samym wydarzeniu, więc wątek jest dobrze potwierdzony.",
+      "watchNext": [
+        "Czy pojawi się komentarz chińskich władz.",
+        "Czy sprawa przełoży się na szerszy dialog USA-Chiny."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Chinese underground church figure Jin Mingri freed from prison",
+          "url": "https://www.bbc.co.uk/news/articles/c4gy51ky75vo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Founder of one of China’s biggest underground churches freed, reunites with family in US",
+          "url": "https://edition.cnn.com/2026/07/05/china/founder-china-underground-churche-ezra-jin-freed-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Chiny",
+        "Religia",
+        "Prawa człowieka"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-05-1207-08-guam-bavi",
+      "section": "Alerty",
+      "title": "Guam ewakuuje mieszkańców przed supertajfunem Bavi",
+      "lead": "BBC opisuje ewakuacje, a TVN24 ostrzega, że żywioł może znowu przybrać na sile.",
+      "whatHappened": "BBC podało, że na Guam rozpoczęły się ewakuacje, gdy supertajfun Bavi zbliża się do lądu; TVN24 zwraca uwagę, że mimo chwilowego osłabienia cyklon może się ponownie wzmocnić.",
+      "keyFacts": [
+        "BBC szacuje wiatr na ponad 160 mph i fale niemal 11 metrów.",
+        "TVN24 podkreśla ryzyko ponownego wzmocnienia zjawiska."
+      ],
+      "reactions": [
+        "To poważny alert dla mieszkańców Pacyfiku i służb kryzysowych.",
+        "Feed pogodowy nadal mocno akcentuje zdarzenia ekstremalne."
+      ],
+      "whyItMatters": "To bieżący, wysokiego ryzyka kryzys pogodowy z realnym potencjałem szkód.",
+      "context": "W poprzednim slocie TVN24 już sygnalizowało Bavi; BBC dodaje dziś wyraźny element ewakuacji.",
+      "watchNext": [
+        "Czy sztorm osiągnie Guam zgodnie z prognozą.",
+        "Czy pojawią się informacje o zniszczeniach i stanie infrastruktury."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Evacuations in Guam as super typhoon Bavi approaches",
+          "url": "https://www.bbc.co.uk/news/articles/cr7xpgx50jxo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "TVN24: Nieco osłabł, ale wkrótce znów przybierze na sile. Supertajfun coraz bliżej",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/nadciaga-supertajfun-bavi-niszczycielski-wiatr-wladze-wprowadzily-stan-wyjatkowy-st9127737?source=rss"
+        }
+      ],
+      "tags": [
+        "Guam",
+        "Supertajfun",
+        "Pogoda"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-05-1207-09-petersburg-terminal",
+      "section": "Świat",
+      "title": "Ukraina uderzyła w terminal naftowy w Petersburgu",
+      "lead": "BBC i TVN24 opisują atak na kluczową infrastrukturę generującą dochód dla rosyjskiej wojny.",
+      "whatHappened": "BBC podało, że Ukraina uderzyła w duży terminal naftowy w rosyjskim Petersburgu; prezydent Wołodymyr Zełenski nazwał ten cel ważną infrastrukturą finansującą rosyjską wojnę.",
+      "keyFacts": [
+        "Wątek dotyczy infrastruktury energetycznej i wojennej.",
+        "To jeden z głównych europejskich leadów BBC."
+      ],
+      "reactions": [
+        "Kijów pokazuje, że nadal może sięgać po cele strategiczne daleko od frontu.",
+        "Rosja będzie próbowała minimalizować skutki albo odpowiadać propagandowo."
+      ],
+      "whyItMatters": "To sygnał, że wojna nadal obejmuje głębokie zaplecze rosyjskiej logistyki i finansowania.",
+      "context": "W TVN24 temat był już w górnym światowym feedzie, a BBC utrzymało go wysoko jako jedną z najważniejszych kart.",
+      "watchNext": [
+        "Czy pojawią się rosyjskie dane o stratach.",
+        "Czy Ukraina poda więcej szczegółów o zasięgu uderzenia."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Ukraine hits major oil terminal in Russia's St Petersburg",
+          "url": "https://www.bbc.co.uk/news/articles/c8j2vmzxezro?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "TVN24: Atak na terminal naftowy w Petersburgu. Nad portem kłęby dymu, słychać było eksplozje",
+          "url": "https://tvn24.pl/swiat/ukrainski-atak-na-terminal-naftowy-w-petersburgu-nagranie-st9127761?source=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "Energia"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-05-1207-10-wenezuela-trzesienia",
+      "section": "Świat",
+      "title": "Wenezuelczycy wciąż wydobywają ofiary i ocalałych po trzęsieniach",
+      "lead": "CNN opisuje zarówno cudowne ocalenie, jak i rosnące pytania o prawdziwą skalę strat.",
+      "whatHappened": "CNN podało, że ratownicy wyciągnęli mężczyznę spod gruzów osiem dni po niszczycielskich trzęsieniach w Wenezueli, a osobny materiał zwraca uwagę, że oficjalny bilans ofiar wciąż budzi wątpliwości.",
+      "keyFacts": [
+        "To ciągle żywy kryzys humanitarny po trzęsieniach.",
+        "Oficjalne dane o zgonach są poddawane w wątpliwość przez obserwatorów."
+      ],
+      "reactions": [
+        "Ratownicy zyskują czas, ale sytuacja pozostaje chaotyczna.",
+        "Wątpliwości co do bilansu mogą wywołać presję na władze."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych humanitarnych tematów w dzisiejszym światowym feedzie.",
+      "context": "CNN wraca do Wenezueli w kilku materiałach, co pokazuje, że temat wciąż się rozwija.",
+      "watchNext": [
+        "Czy pojawią się nowe dane o ofiarach.",
+        "Czy ratownicy znajdą kolejnych ocalałych."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Man pulled from rubble in “miraculous” rescue 8 days after devastating Venezuela earthquakes",
+          "url": "https://edition.cnn.com/2026/07/02/americas/venezuela-earthquake-survivor-rescued-intl-hnk"
+        },
+        {
+          "title": "CNN: As Venezuelan morgues fill and the death toll slowly rises, questions remain about how many are truly gone",
+          "url": "https://edition.cnn.com/2026/07/02/americas/venezuela-earthquakes-morgue-death-toll-latam-intl"
+        }
+      ],
+      "tags": [
+        "Wenezuela",
+        "Trzęsienie ziemi",
+        "Ratownictwo"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-05-1207-11-peru-wybory",
+      "section": "Świat",
+      "title": "Keiko Fujimori wygrała wybory prezydenckie w Peru",
+      "lead": "CNN pisze o wyjątkowo wąskim zwycięstwie w mocno spolaryzowanym kraju.",
+      "whatHappened": "CNN podało, że konserwatywna kandydatka Keiko Fujimori została ogłoszona zwyciężczynią wyborów prezydenckich w Peru po tygodniach liczenia głosów i bardzo niewielkiej przewadze.",
+      "keyFacts": [
+        "Wynik zapadł po długim liczeniu głosów.",
+        "Różnica była bardzo mała, co utrzyma napięcie polityczne."
+      ],
+      "reactions": [
+        "To zwycięstwo nie zamyka politycznej polaryzacji.",
+        "Nowa prezydentura zacznie się pod presją sporu o legitymację i styl rządzenia."
+      ],
+      "whyItMatters": "To ważna zmiana polityczna w dużym państwie Ameryki Południowej.",
+      "context": "To świeży, nieobecny wcześniej wątek z latynoamerykańskiej części feedu CNN.",
+      "watchNext": [
+        "Czy pojawią się protesty lub zaskarżenia wyniku.",
+        "Jakie nazwiska wejdą do nowego gabinetu."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Keiko Fujimori declared winner of razor-edge Peru election",
+          "url": "https://edition.cnn.com/2026/07/03/americas/fujimori-wins-peruvian-election-latam-intl"
+        }
+      ],
+      "tags": [
+        "Peru",
+        "Wybory",
+        "Ameryka Łacińska"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-05-1207-12-afd-protesty",
+      "section": "Polityka",
+      "title": "AfD ponownie wybrała kierownictwo mimo protestów",
+      "lead": "W Niemczech doszło do starć demonstrantów z policją podczas zjazdu skrajnej prawicy.",
+      "whatHappened": "CNN podało, że delegaci Alternatywy dla Niemiec niemal jednogłośnie ponownie wybrali kierownictwo partii, w tym Alice Weidel, a jednocześnie dziesiątki tysięcy protestujących próbowało zakłócić zjazd; część starła się z policją.",
+      "keyFacts": [
+        "Wydarzenie łączy politykę wewnętrzną i napięcia uliczne.",
+        "Partia utrzymuje mobilizację mimo silnego sprzeciwu."
+      ],
+      "reactions": [
+        "To kolejny dowód, że skrajna prawica w Europie nadal umacnia swoją pozycję.",
+        "Protesty pokazują, że społeczny opór wobec AfD pozostaje bardzo silny."
+      ],
+      "whyItMatters": "To ważny barometr napięć politycznych w największej gospodarce Europy.",
+      "context": "CNN utrzymuje ten temat w europejskiej części feedu jako aktualny punkt sporu.",
+      "watchNext": [
+        "Czy po zjeździe pojawią się nowe sondaże i reakcje partii.",
+        "Czy policja poda bilans starć i zatrzymań."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Far-right Alternative for Germany party reelects leaders as protesters and police clash",
+          "url": "https://edition.cnn.com/2026/07/04/europe/germany-far-right-afd-protests-intl"
+        }
+      ],
+      "tags": [
+        "Niemcy",
+        "AfD",
+        "Polityka"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS Najnowsze",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24 RSS Świat",
+      "url": "https://tvn24.pl/swiat.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    }
+  ]
+}

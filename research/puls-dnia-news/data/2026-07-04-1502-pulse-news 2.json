@@ -1,0 +1,605 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-04",
+  "runTime": "15:02",
+  "status": "Material update",
+  "headline": "A6/S3, Zawiercie, Bavi i Peru wyznaczają puls dnia",
+  "summary": "Krajowy blok przesunął się z porannych wątków o Ukrainie i Otwocku na ZUS, korki pod Szczecinem, strzały w Zawierciu, chłód ze Svalbardu i Skawinę, a światowy pakiet utrzymał najwyższe ryzyko wokół Petersburga, Bavi, Iranu, Sum, Peru, papieskiej wizyty, AfD, Kijowa, Wenezueli i francuskiej fali upałów.",
+  "items": [
+    {
+      "id": "pulse-2026-07-04-1502-01-zus-place",
+      "section": "Polityka",
+      "title": "Spór o płace w ZUS grozi paraliżem zakładu",
+      "lead": "Spór płacowy wraca do krajowego top feedu.",
+      "whatHappened": "TVN24 opisuje konflikt o wynagrodzenia w ZUS i ostrzega, że bez porozumienia zakład może zostać sparaliżowany.",
+      "keyFacts": [
+        "To wątek administracji publicznej, nie tylko klasyczny spór związkowy.",
+        "Problem dotyczy instytucji obsługującej ogromną liczbę spraw i świadczeń.",
+        "Każde opóźnienie może przełożyć się na obsługę klientów i decyzji."
+      ],
+      "reactions": [
+        "To najmocniejsza karta polityki instytucjonalnej w tym slocie.",
+        "Najważniejsze będą kolejne komunikaty zarządu i stron sporu."
+      ],
+      "whyItMatters": "ZUS ma bezpośredni wpływ na wypłaty i obsługę świadczeń, więc konflikt płacowy szybko staje się sprawą publiczną.",
+      "context": "W poprzednim slocie krajowy blok był zdominowany przez relacje polsko-ukraińskie i linię otwocką. Teraz ciężar przesunął się na administrację.",
+      "watchNext": [
+        "Czy strony sporu podadzą harmonogram rozmów.",
+        "Czy pojawią się zakłócenia w obsłudze klientów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Spór o płace w ZUS",
+          "url": "https://tvn24.pl/gospodarka/spor-o-place-w-zus-zaklad-moze-zostac-sparalizowany-st9128258?source=rss"
+        }
+      ],
+      "tags": [
+        "ZUS",
+        "Płace",
+        "Administracja"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-04-1502-02-a6-s3-szczecin",
+      "section": "Alerty",
+      "title": "Wielokilometrowe korki na A6 i S3 pod Szczecinem",
+      "lead": "Poranny alert drogowy dotyczy dwóch głównych tras.",
+      "whatHappened": "TVN24 informuje o wielokilometrowych korkach na A6 i S3 pod Szczecinem, co utrudnia ruch tranzytowy i lokalne dojazdy.",
+      "keyFacts": [
+        "Problem dotyczy kluczowego odcinka pod Szczecinem.",
+        "Zatory utrudniają zarówno ruch lokalny, jak i tranzytowy.",
+        "Dla kierowców liczą się szybkie komunikaty o obejściach i czasie przejazdu."
+      ],
+      "reactions": [
+        "To praktyczny alert dla kierowców i przewoźników.",
+        "Warto śledzić komunikaty drogowe zamiast polegać na aktualizacjach z opóźnieniem."
+      ],
+      "whyItMatters": "Długie korki na głównych trasach od razu przekładają się na logistykę, bezpieczeństwo i punktualność dojazdów.",
+      "context": "Feed utrzymuje wysoki udział twardych alertów, a nie tylko miękkich newsów.",
+      "watchNext": [
+        "Czy służby podadzą przyczynę zatorów.",
+        "Czy korek rozleje się na dojazdy miejskie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wielokilometrowe korki na A6 i S3 pod Szczecinem",
+          "url": "https://tvn24.pl/szczecin/wielokilometrowe-korki-na-a6-i-s3-pod-szczecinem-st9128252?source=rss"
+        }
+      ],
+      "tags": [
+        "Szczecin",
+        "Drogi",
+        "Alert"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-04-1502-03-zawiercie-strzaly",
+      "section": "Alerty",
+      "title": "Strzały z okna w Zawierciu",
+      "lead": "Na ulicy doszło do groźnego incydentu.",
+      "whatHappened": "TVN24 podaje, że gdy przechodnie szli ulicą, z okna padły strzały; ludzie ukryli się i wezwali policję.",
+      "keyFacts": [
+        "Sprawa ma charakter bezpieczeństwa publicznego.",
+        "Policja została wezwana na miejsce po incydencie.",
+        "Na tym etapie najważniejsze są ustalenia co do sprawcy i broni."
+      ],
+      "reactions": [
+        "To jedna z najmocniejszych kart bezpieczeństwa lokalnego.",
+        "Czytelnik powinien śledzić komunikaty policji, nie plotki."
+      ],
+      "whyItMatters": "Incydent może oznaczać zagrożenie dla przechodniów i wymaga szybkiej weryfikacji przez służby.",
+      "context": "W tym slocie feed utrzymuje twardy profil bezpieczeństwa lokalnego.",
+      "watchNext": [
+        "Czy policja poda informacje o sprawcy.",
+        "Czy będą kolejne ostrzeżenia dla mieszkańców."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Szli ulicą, gdy z okna padły strzały",
+          "url": "https://tvn24.pl/katowice/zawiercie-szli-ulica-gdy-z-okna-padly-strzaly-ukryli-sie-i-wezwali-policje-st9128210?source=rss"
+        }
+      ],
+      "tags": [
+        "Policja",
+        "Zawiercie",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-04-1502-04-svalbard-chlod",
+      "section": "Alerty",
+      "title": "Chłód ze Svalbardu obniży temperatury w Polsce",
+      "lead": "Lipiec przynosi rzadki pogodowy zwrot.",
+      "whatHappened": "TVN24 prognozuje napływ chłodnego powietrza prosto ze Svalbardu, co w lipcu ma być sytuacją rzadką i odczuwalną w wielu regionach.",
+      "keyFacts": [
+        "To wyraźna zmiana po cieplejszym okresie.",
+        "Ochłodzenie może wpłynąć na planowanie wyjazdów i aktywności na zewnątrz.",
+        "Najbardziej użyteczne będą lokalne prognozy i ostrzeżenia."
+      ],
+      "reactions": [
+        "To informacja praktyczna dla codziennego planowania.",
+        "Warto patrzeć na regionalne prognozy, nie tylko na nagłówki."
+      ],
+      "whyItMatters": "Nagłe ochłodzenie zmienia warunki w ruchu drogowym, turystyce i aktywnościach na wodzie.",
+      "context": "Obok alertów policyjnych feed utrzymuje silny komponent pogodowy.",
+      "watchNext": [
+        "Czy prognoza potwierdzi się w kolejnych aktualizacjach.",
+        "Czy pojawią się ostrzeżenia dla konkretnego regionu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Chłód napłynie do Polski prosto ze Svalbardu",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/chlod-naplynie-do-polski-prosto-ze-svalbardu-to-w-lipcu-bardzo-rzadka-sytuacja-prognoza-pogody-st9127978?source=rss"
+        }
+      ],
+      "tags": [
+        "Pogoda",
+        "Polska",
+        "Alert"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-04-1502-05-skawina-tragedia",
+      "section": "Polska",
+      "title": "Skawina: nadal pytania po tragedii z czterema ofiarami",
+      "lead": "Sprawa pozostaje jednym z najmocniejszych krajowych wątków.",
+      "whatHappened": "TVN24 nadal eksponuje tragedię w Skawinie, w której zginęły cztery osoby, w tym ośmiodniowa dziewczynka.",
+      "keyFacts": [
+        "To zdarzenie o dużym ciężarze społecznym.",
+        "Pytania dotyczą przebiegu zdarzeń i motywu.",
+        "Każda nowa informacja może zmienić ocenę ryzyka i odpowiedzialności."
+      ],
+      "reactions": [
+        "To temat, który będzie wracał wraz z komunikatami śledczych.",
+        "Najważniejsza jest precyzja, nie spekulacja."
+      ],
+      "whyItMatters": "Skala ofiar sprawia, że sprawa może przejść w ogólnokrajowy temat bezpieczeństwa i śledztwa.",
+      "context": "W poprzednim slocie temat już był wysoko; teraz pozostaje aktywny bez wyraźnego wyciszenia.",
+      "watchNext": [
+        "Czy prokuratura poda nowe ustalenia.",
+        "Czy pojawią się informacje o motywie lub przebiegu zdarzenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Tragedia w Skawinie",
+          "url": "https://tvn24.pl/krakow/tragedia-w-skawinie-ciala-czterech-osob-w-tym-osmiodniowej-dziewczynki-st9127226?source=rss"
+        }
+      ],
+      "tags": [
+        "Skawina",
+        "Śledztwo",
+        "Polska"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-04-1502-06-kielce-mezczyzna",
+      "section": "Polska",
+      "title": "Policja szuka męża kobiety znalezionej w mieszkaniu",
+      "lead": "Kielce i okolice mają kolejny pilny alert kryminalny.",
+      "whatHappened": "TVN24 informuje, że w mieszkaniu znaleziono ciało kobiety, a ponad 100 policjantów szuka jej męża.",
+      "keyFacts": [
+        "To wątek z obszaru śledztwa i bezpieczeństwa publicznego.",
+        "Skala działań policyjnych jest wysoka jak na zdarzenie lokalne.",
+        "Dalsze komunikaty mogą szybko zmienić ocenę sytuacji."
+      ],
+      "reactions": [
+        "To temat, który może eskalować po jednym komunikacie policji.",
+        "Najbardziej liczą się oficjalne ustalenia, nie nieoficjalne relacje."
+      ],
+      "whyItMatters": "Poszukiwania na taką skalę sugerują, że służby traktują sprawę jako potencjalnie poważne zagrożenie.",
+      "context": "To kolejny lokalny alert kryminalny obok Zawiercia i Skawiny.",
+      "watchNext": [
+        "Czy policja poda rysopis lub status poszukiwań.",
+        "Czy prokuratura doprecyzuje kwalifikację sprawy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ciało kobiety w mieszkaniu, ponad 100 policjantów szuka jej męża",
+          "url": "https://tvn24.pl/kielce/cialo-kobiety-w-mieszkaniu-ponad-100-policjantow-szuka-jej-meza-st9127488?source=rss"
+        }
+      ],
+      "tags": [
+        "Kielce",
+        "Policja",
+        "Śledztwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-04-1502-07-petersburg-terminal",
+      "section": "Świat",
+      "title": "Ukraina uderza w terminal naftowy w Petersburgu",
+      "lead": "Nad portem unosił się dym po eksplozjach.",
+      "whatHappened": "TVN24 i BBC opisują ukraiński atak na terminal naftowy w Petersburgu; nad portem widać było kłęby dymu i słychać eksplozje.",
+      "keyFacts": [
+        "To kolejny sygnał eskalacji wokół rosyjskiej infrastruktury.",
+        "BBC umieszcza ten epizod w szerszym kontekście wojny.",
+        "Ataki tego typu mogą wpływać na logistykę i bezpieczeństwo energetyczne."
+      ],
+      "reactions": [
+        "To jedna z najważniejszych kart wojennych w tym slocie.",
+        "Warto patrzeć, czy Rosja poda oficjalne skutki i straty."
+      ],
+      "whyItMatters": "Terminale paliwowe są elementem infrastruktury krytycznej, więc każde uderzenie może mieć efekt operacyjny i propagandowy.",
+      "context": "W poprzednim slocie temat Petersburga już był obecny; teraz pozostaje aktywny i dobrze potwierdzony.",
+      "watchNext": [
+        "Czy Rosja poda skutki i straty.",
+        "Czy Ukraina potwierdzi szczegóły operacji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Atak na terminal naftowy w Petersburgu",
+          "url": "https://tvn24.pl/swiat/ukrainski-atak-na-terminal-naftowy-w-petersburgu-nagranie-st9127761?source=rss"
+        },
+        {
+          "title": "BBC: Ukraine hits major oil terminal in Russia's St Petersburg",
+          "url": "https://www.bbc.co.uk/news/articles/c8j2vmzxezro?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "Energia"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-04-1502-08-bavi-alert",
+      "section": "Świat",
+      "title": "Bavi zbliża się do regionu. Władze ogłaszają stan wyjątkowy",
+      "lead": "Supertajfun pozostaje aktywnym alertem regionalnym.",
+      "whatHappened": "TVN24 opisuje nadciągający supertajfun Bavi, a władze wprowadziły stan wyjątkowy; oficjalny komunikat Guam nadal utrzymuje wysoki poziom gotowości.",
+      "keyFacts": [
+        "To alert pogodowy o dużym potencjale lokalnych zniszczeń.",
+        "Władze reagują stanem wyjątkowym i komunikatami operacyjnymi.",
+        "Oficjalne ostrzeżenia są ważniejsze niż same nagłówki redakcyjne."
+      ],
+      "reactions": [
+        "To jeden z najpilniejszych globalnych alertów w tym slocie.",
+        "Najbardziej liczą się komunikaty ewakuacyjne i pogodowe."
+      ],
+      "whyItMatters": "Supertajfun może szybko przejść z newsu do realnego problemu bezpieczeństwa, infrastruktury i ewakuacji.",
+      "context": "Bavi pozostaje jednym z głównych punktów ryzyka w światowym bloku pogody i bezpieczeństwa.",
+      "watchNext": [
+        "Czy Guam utrzyma lub rozszerzy alerty.",
+        "Czy pojawią się raporty o skutkach wiatru i fali sztormowej."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nadciąga supertajfun. Władze wprowadziły stan wyjątkowy",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/nadciaga-supertajfun-bavi-niszczycielski-wiatr-wladze-wprowadzily-stan-wyjatkowy-st9127737?source=rss"
+        },
+        {
+          "title": "Guam State Emergency advisory on Typhoon Bavi",
+          "url": "https://ghs.guam.gov/ghsocd-public-advisory-no-4-typhoon-bavi-09w-%E2%80%94-guam-state-emergency-cor-3-flood-watch-issued-storm"
+        }
+      ],
+      "tags": [
+        "Tajfun",
+        "Guam",
+        "Alert"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-04-1502-09-khamenei-funeral",
+      "section": "Świat",
+      "title": "W Teheranie tłumy na pogrzebie Alego Chameneiego",
+      "lead": "Iran utrzymuje wysoki polityczny i symboliczny ciężar dnia.",
+      "whatHappened": "TVN24 i BBC pokazują tłumy na pierwszym dniu pogrzebu Alego Chameneiego, co podkreśla skalę społecznej mobilizacji wokół wydarzenia.",
+      "keyFacts": [
+        "To wątek o dużym znaczeniu dla Iranu i regionu.",
+        "BBC opisuje tłumy jako jeden z najważniejszych obrazów dnia.",
+        "Temat łączy politykę, bezpieczeństwo i symbolikę państwową."
+      ],
+      "reactions": [
+        "To jedna z centralnych kart bloku bliskowschodniego.",
+        "W kolejnych godzinach warto patrzeć na reakcje władz i regionalnych graczy."
+      ],
+      "whyItMatters": "Skala wydarzenia pokazuje, jak mocno temat Iranu nadal rezonuje w globalnej polityce i bezpieczeństwie.",
+      "context": "W poprzednim slocie temat był już wysoko; teraz pozostaje aktywny bez utraty znaczenia.",
+      "watchNext": [
+        "Czy pojawią się kolejne komentarze władz Iranu.",
+        "Czy temat przejdzie w szerszą debatę o regionie i USA."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Miliony ludzi na pogrzebie Alego Chameneiego",
+          "url": "https://tvn24.pl/swiat/iran-miliony-ludzi-na-pogrzebie-alego-chameneiego-st9127668?source=rss"
+        },
+        {
+          "title": "BBC: Large crowds gather in Tehran on first day of Ayatollah Khamenei's funeral",
+          "url": "https://www.bbc.co.uk/news/articles/c0ky2zen1kgo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Chamenei",
+        "Polityka"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-04-1502-10-sumy-atak",
+      "section": "Świat",
+      "title": "Rosja bombarduje Sumy bombami lotniczymi",
+      "lead": "Na Ukrainie znowu dochodzi do ofiar śmiertelnych.",
+      "whatHappened": "TVN24 podaje, że Rosja zaatakowała Sumy bombami lotniczymi, a w ataku zginęło kilka osób, w tym dziecko.",
+      "keyFacts": [
+        "To kolejny śmiertelny epizod wojny na Ukrainie.",
+        "Ofiary cywilne utrzymują temat wysoko w newsowym obiegu.",
+        "Atak dotyczy miasta, które już wielokrotnie było ostrzeliwane."
+      ],
+      "reactions": [
+        "To twardy sygnał eskalacji i ryzyka dla cywilów.",
+        "Warto śledzić komunikaty lokalnych władz i obrony cywilnej."
+      ],
+      "whyItMatters": "Ofiary wśród cywilów przypominają, że wojna pozostaje bezpośrednim zagrożeniem dla mieszkańców Ukrainy.",
+      "context": "W zestawie wojennym ten alert domyka blok wiadomości o Ukrainie obok Petersburga i Kijowa.",
+      "watchNext": [
+        "Czy pojawią się dalsze informacje o skali strat.",
+        "Czy Ukraina poda szczegóły obrony i ewakuacji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Rosja zaatakowała Sumy bombami lotniczymi",
+          "url": "https://tvn24.pl/swiat/rosja-zaatakowala-sumy-bombami-lotniczymi-nie-zyje-kilka-osob-w-tym-dziecko-st9127563?source=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "Wojna"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-04-1502-11-peru-wybory",
+      "section": "Świat",
+      "title": "Peru: Keiko Fujimori ogłoszona zwyciężczynią",
+      "lead": "Długie liczenie głosów wreszcie dało wynik.",
+      "whatHappened": "BBC i ONPE wskazują, że Keiko Fujimori została ogłoszona zwyciężczynią wyborów prezydenckich w Peru po długim liczeniu głosów.",
+      "keyFacts": [
+        "To jeden z najważniejszych wyników wyborczych w regionie.",
+        "ONPE pozostaje oficjalnym źródłem postępu liczenia.",
+        "BBC opisuje finał po długim i politycznie napiętym procesie."
+      ],
+      "reactions": [
+        "To najważniejsza karta polityczna Ameryki Południowej w tym slocie.",
+        "Rynek i polityka regionalna będą reagować na oficjalne potwierdzenia."
+      ],
+      "whyItMatters": "Wynik w Peru wpływa na kierunek polityki wewnętrznej, relacje regionalne i gospodarczy sentyment w Ameryce Łacińskiej.",
+      "context": "W poprzednim slocie Peru było już kluczowym tematem; teraz otrzymało mocniejsze potwierdzenie z oficjalnego źródła.",
+      "watchNext": [
+        "Czy ONPE opublikuje finalne zestawienia.",
+        "Jaką pierwszą reakcję da zwycięski sztab i opozycja."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Keiko Fujimori declared winner of Peru's presidential election weeks after vote",
+          "url": "https://www.bbc.co.uk/news/articles/cr5jpvv06e1o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "ONPE: Procesamiento de resultados en tiempo real",
+          "url": "https://segundavuelta.onpe.gob.pe/electores-y-miembros-de-mesa/resultados-en-tiempo-real/"
+        }
+      ],
+      "tags": [
+        "Peru",
+        "Wybory",
+        "Polityka"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-04-1502-12-papiez-migranci",
+      "section": "Świat",
+      "title": "Papież na wyspie migrantów z apelem do Europy",
+      "lead": "CNN i BBC nadają wizycie mocny wymiar polityczny.",
+      "whatHappened": "BBC i CNN opisują wizytę papieża na wyspie migrantów jako sygnał, że Europa powinna zrobić więcej dla migrantów i uchodźców.",
+      "keyFacts": [
+        "To wątek bardziej symboliczny niż operacyjny.",
+        "Łączy religię, migrację i europejską debatę publiczną.",
+        "CNN przedstawia wizytę jako ważny sygnał polityczny dla liderów w USA i Europie."
+      ],
+      "reactions": [
+        "To niższy priorytet niż alerty bezpieczeństwa, ale nadal ważny w globalnym feedzie.",
+        "Temat może szybko przenieść się do komentarzy politycznych i kościelnych."
+      ],
+      "whyItMatters": "Takie gesty wpływają na debatę o migracji, granicach i roli Kościoła w polityce europejskiej.",
+      "context": "Po ciężkich kartach wojennych i pogodowych ten materiał daje bardziej symboliczny wymiar dnia.",
+      "watchNext": [
+        "Czy pojawią się reakcje ze strony europejskich rządów.",
+        "Czy temat wróci w oficjalnych komentarzach Watykanu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Pope urges Europe to do more for migrants while visiting gateway island",
+          "url": "https://www.bbc.co.uk/news/articles/c5yz83n7q5no?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: First American pope marks July 4 on migrant island",
+          "url": "https://edition.cnn.com/2026/07/04/europe/pope-italy-migrants-us-intl"
+        }
+      ],
+      "tags": [
+        "Papież",
+        "Migracja",
+        "Europa"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-04-1502-13-afd-protesty",
+      "section": "Świat",
+      "title": "AfD wybiera liderów przy protestach i starciach",
+      "lead": "Niemiecka skrajna prawica znów trafia na czołówki.",
+      "whatHappened": "CNN podaje, że Alternatywa dla Niemiec wybrała liderów, gdy protestujący i policja ścierali się przed wydarzeniem.",
+      "keyFacts": [
+        "To ważny polityczny test dla niemieckiej skrajnej prawicy.",
+        "Starcia z policją pokazują skalę napięcia wokół wydarzenia.",
+        "CNN traktuje temat jako część szerszego europejskiego trendu politycznego."
+      ],
+      "reactions": [
+        "To jedna z mocniejszych kart politycznych w zachodniej Europie.",
+        "Warto śledzić, czy pojawią się reakcje rządu i innych partii."
+      ],
+      "whyItMatters": "Wzrost napięcia wokół AfD może przełożyć się na debatę o bezpieczeństwie, migracji i przyszłości niemieckiej polityki.",
+      "context": "Ten wątek dobrze uzupełnia blok o Europie obok papieża i Francji.",
+      "watchNext": [
+        "Czy pojawią się kolejne demonstracje.",
+        "Czy policja poda bilans incydentów."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Far-right Alternative for Germany party elects leaders as protesters and police clash",
+          "url": "https://edition.cnn.com/2026/07/04/europe/germany-far-right-afd-protests-intl"
+        }
+      ],
+      "tags": [
+        "Niemcy",
+        "AfD",
+        "Polityka"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-04-1502-14-kijow-atak",
+      "section": "Świat",
+      "title": "Rosja przeprowadza masywny atak na Kijów",
+      "lead": "CNN opisuje wyjątkowo śmiertelny cios na stolicę Ukrainy.",
+      "whatHappened": "CNN relacjonuje rosyjski masowy atak na Kijów, w którym zginęło co najmniej 30 osób.",
+      "keyFacts": [
+        "To jeden z najcięższych ataków na stolicę Ukrainy w tym zestawie wiadomości.",
+        "Bilans ofiar pokazuje skalę zagrożenia dla ludności cywilnej.",
+        "CNN podaje, że uderzenie było wyjątkowo śmiertelne."
+      ],
+      "reactions": [
+        "To twardy sygnał eskalacji i ryzyka dla mieszkańców miasta.",
+        "Kolejne komunikaty mogą zmienić ocenę skali zniszczeń."
+      ],
+      "whyItMatters": "Atak na stolicę Ukrainy ma znaczenie wojskowe, polityczne i humanitarne, a także wpływa na zachodnią debatę o wsparciu dla Kijowa.",
+      "context": "W połączeniu z Sumami i Petersburgiem daje to bardzo ciężki wojenny blok w tym slocie.",
+      "watchNext": [
+        "Czy pojawią się dalsze dane o ofiarach.",
+        "Czy Ukraina poda szczegóły obrony i zniszczeń."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Russia unleashes a massive assault on Ukraine’s capital, killing at least 30",
+          "url": "https://edition.cnn.com/2026/07/01/world/russian-strikes-kyiv-zelensky-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Kijów",
+        "Ukraina",
+        "Wojna"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-04-1502-15-wenezuela-ratunek",
+      "section": "Świat",
+      "title": "Wenezuela: ratownicy wciąż wydobywają ocalałych",
+      "lead": "Po trzęsieniach ziemi rośnie bilans i skala zniszczeń.",
+      "whatHappened": "CNN i BBC opisują zarówno dramat rodzin czekających przy prowizorycznej kostnicy, jak i spektakularne wydobycie mężczyzny spod gruzów osiem dni po wstrząsach.",
+      "keyFacts": [
+        "To połączenie kryzysu humanitarnego i akcji ratunkowej.",
+        "Skala katastrofy nadal się rozwija, więc bilans może się zmieniać.",
+        "BBC i CNN pokazują dwa różne, ale uzupełniające się obrazy tego samego kryzysu."
+      ],
+      "reactions": [
+        "To jedna z najmocniejszych kart katastroficznych w tym slocie.",
+        "W kolejnych godzinach ważne będą dane o ofiarach i brakujących osobach."
+      ],
+      "whyItMatters": "Katastrofa naturalna z tak późnymi akcjami ratunkowymi pokazuje, jak długo może utrzymywać się ryzyko po wstrząsach.",
+      "context": "Temat Wenezueli utrzymuje się w światowym obiegu od poprzednich slotów i nadal nie wygasł.",
+      "watchNext": [
+        "Czy lokalne władze podadzą nowy bilans.",
+        "Czy ratownicy znajdą kolejne osoby pod gruzami."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Anguished families left to identify Venezuela quake victims at makeshift morgue",
+          "url": "https://www.bbc.co.uk/news/articles/c20y2p9qqqko?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Man pulled from rubble in miraculous rescue after Venezuelan earthquakes",
+          "url": "https://edition.cnn.com/2026/07/04/world/video/watch-the-moment-a-man-was-pulled-out-from-rubble-8-days-after-venezuelan-earthquakes-hnk-digvid"
+        }
+      ],
+      "tags": [
+        "Wenezuela",
+        "Trzęsienie ziemi",
+        "Ratownictwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-04-1502-16-francja-upal",
+      "section": "Świat",
+      "title": "Francja liczy nadmiarowe zgony po fali upałów",
+      "lead": "Europa nadal odczuwa koszt ekstremalnych temperatur.",
+      "whatHappened": "BBC podaje, że Francja odnotowała 2 025 nadmiarowych zgonów w szczycie fali upałów, a reszta Europy szykuje się na kolejne ekstremalne zjawiska.",
+      "keyFacts": [
+        "To jeden z najmocniejszych pogodowych sygnałów dnia w Europie.",
+        "Skala nadmiarowych zgonów pokazuje realny koszt upałów.",
+        "BBC ostrzega, że ekstremalne warunki mogą się utrzymywać."
+      ],
+      "reactions": [
+        "To twardy dowód, że fala upałów nie jest tylko pogadanką pogodową.",
+        "Najważniejsze są lokalne ostrzeżenia zdrowotne i hydrometeorologiczne."
+      ],
+      "whyItMatters": "Ekstremalne temperatury wpływają na zdrowie publiczne, transport i gotowość służb w całej Europie.",
+      "context": "W tym slocie ten temat domyka europejski blok ryzyka obok Bavi i papieskiej wizyty.",
+      "watchNext": [
+        "Czy kolejne kraje podadzą nowe dane o skutkach upałów.",
+        "Czy pojawią się lokalne alerty zdrowotne i transportowe."
+      ],
+      "sources": [
+        {
+          "title": "BBC: France records 2,025 excess deaths at peak of heatwave",
+          "url": "https://www.bbc.co.uk/news/articles/c3ry307rxqro?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "Upał",
+        "Pogoda"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS Najnowsze",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24 RSS Świat",
+      "url": "https://tvn24.pl/swiat.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "ONPE: Procesamiento de resultados en tiempo real",
+      "url": "https://segundavuelta.onpe.gob.pe/electores-y-miembros-de-mesa/resultados-en-tiempo-real/"
+    },
+    {
+      "title": "Guam Bavi advisory",
+      "url": "https://ghs.guam.gov/ghsocd-public-advisory-no-4-typhoon-bavi-09w-%E2%80%94-guam-state-emergency-cor-3-flood-watch-issued-storm"
+    }
+  ]
+}
