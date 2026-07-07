@@ -181,7 +181,7 @@ final class ResearchNewsStore {
         }
 
         if let selectedDay,
-           let package = packages.first(where: { $0.date == selectedDay || $0.key.hasPrefix(selectedDay) }) {
+           let package = packages.first(where: { $0.matchesSelection(selectedDay) }) {
             return [package]
         }
 

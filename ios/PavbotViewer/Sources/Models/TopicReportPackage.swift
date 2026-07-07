@@ -104,6 +104,10 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
             .joined(separator: " ")
     }
 
+    var selectionKey: String {
+        key
+    }
+
     var researchReport: PavbotArtifact? {
         artifacts.first { $0.type == .run }
     }
@@ -170,6 +174,24 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
         return TopicReportPackage(topic: topic, key: key, artifacts: filteredArtifacts)
     }
 
+    func matchesSelection(_ selection: String?) -> Bool {
+        guard let selection = selection?.trimmingCharacters(in: .whitespacesAndNewlines), !selection.isEmpty else {
+            return false
+        }
+
+        let normalizedSelection = Self.normalizedSelectionKey(selection)
+        let normalizedKey = Self.normalizedSelectionKey(key)
+        if normalizedSelection == normalizedKey {
+            return true
+        }
+
+        if let date, normalizedSelection == Self.normalizedSelectionKey(date) {
+            return true
+        }
+
+        return normalizedKey.hasPrefix(normalizedSelection)
+    }
+
     static func packages(
         for topic: ReportTopicKind,
         in manifest: PavbotManifest
@@ -210,10 +232,61 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
 
         return date
     }
+
+    private static func normalizedSelectionKey(_ value: String) -> String {
+        value.trimmingCharacters(in: .whitespacesAndNewlines).replacingOccurrences(of: ":", with: "")
+    }
 }
 
 extension PavbotManifest {
     func reportPackages(for topic: ReportTopicKind) -> [TopicReportPackage] {
         TopicReportPackage.packages(for: topic, in: self)
+    }
+}
+
+extension PavbotArtifact {
+    var reportPackageSelectionKey: String? {
+        guard let date else { return nil }
+        if let time, !time.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            return "\(date)-\(time)"
+        }
+
+        let filename = URL(fileURLWithPath: path).deletingPathExtension().lastPathComponent
+        if filename.count >= 15 {
+            let prefix = String(filename.prefix(15))
+            if prefix.range(of: #"^\d{4}-\d{2}-\d{2}-\d{4}$"#, options: .regularExpression) != nil {
+                return prefix
+            }
+        }
+
+        return date
+    }
+}
+
+extension Array where Element == TopicReportPackage {
+    func fourDayBackHistoryWindow(calendar inputCalendar: Calendar = .pavbotUTC) -> [TopicReportPackage] {
+        let sortedPackages = sorted { $0.key > $1.key }
+        guard
+            let anchorDateString = sortedPackages.compactMap(\.date).first,
+            let anchorDate = DateFormatter.pavbotDay.date(from: anchorDateString),
+            let oldestIncludedDate = inputCalendar.date(byAdding: .day, value: -4, to: anchorDate)
+        else {
+            return sortedPackages
+        }
+
+        return sortedPackages.filter { package in
+            guard let dateString = package.date, let date = DateFormatter.pavbotDay.date(from: dateString) else {
+                return false
+            }
+            return date >= oldestIncludedDate && date <= anchorDate
+        }
+    }
+}
+
+private extension Calendar {
+    static var pavbotUTC: Calendar {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = TimeZone(secondsFromGMT: 0) ?? .current
+        return calendar
     }
 }

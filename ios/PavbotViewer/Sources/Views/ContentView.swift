@@ -86,7 +86,7 @@ private struct PavbotTabRootView: View {
                 WeatherBriefView()
             }
             .tabItem {
-                Label("Dzisiaj", systemImage: "sun.max")
+                Label(AppTab.today.displayTitle, systemImage: AppTab.today.systemImage)
             }
             .tag(AppTab.today)
 
@@ -94,7 +94,7 @@ private struct PavbotTabRootView: View {
                 PulseDayView()
             }
             .tabItem {
-                Label("Puls Dnia", systemImage: "globe.europe.africa.fill")
+                Label(AppTab.pulseDay.displayTitle, systemImage: AppTab.pulseDay.systemImage)
             }
             .tag(AppTab.pulseDay)
 
@@ -102,15 +102,15 @@ private struct PavbotTabRootView: View {
                 JobsView()
             }
             .tabItem {
-                Label("Jobs", systemImage: "briefcase")
+                Label(AppTab.jobs.displayTitle, systemImage: AppTab.jobs.systemImage)
             }
             .tag(AppTab.jobs)
 
             NavigationStack(path: $router.researchPath) {
-                ResearchView()
+                OverviewView()
             }
             .tabItem {
-                Label("Research", systemImage: "newspaper")
+                Label(AppTab.research.displayTitle, systemImage: AppTab.research.systemImage)
             }
             .tag(AppTab.research)
 
@@ -118,7 +118,7 @@ private struct PavbotTabRootView: View {
                 SettingsView()
             }
             .tabItem {
-                Label("Ustawienia", systemImage: "gearshape")
+                Label(AppTab.settings.displayTitle, systemImage: AppTab.settings.systemImage)
             }
             .tag(AppTab.settings)
         }
@@ -131,15 +131,15 @@ private struct PavbotSplitRootView: View {
     var body: some View {
         NavigationSplitView {
             List(selection: selectedTabBinding) {
-                Label("Dzisiaj", systemImage: "sun.max")
+                Label(AppTab.today.displayTitle, systemImage: AppTab.today.systemImage)
                     .tag(AppTab.today)
-                Label("Puls Dnia", systemImage: "globe.europe.africa.fill")
+                Label(AppTab.pulseDay.displayTitle, systemImage: AppTab.pulseDay.systemImage)
                     .tag(AppTab.pulseDay)
-                Label("Jobs", systemImage: "briefcase")
+                Label(AppTab.jobs.displayTitle, systemImage: AppTab.jobs.systemImage)
                     .tag(AppTab.jobs)
-                Label("Research", systemImage: "newspaper")
+                Label(AppTab.research.displayTitle, systemImage: AppTab.research.systemImage)
                     .tag(AppTab.research)
-                Label("Ustawienia", systemImage: "gearshape")
+                Label(AppTab.settings.displayTitle, systemImage: AppTab.settings.systemImage)
                     .tag(AppTab.settings)
             }
             .navigationTitle("Pavbot")
@@ -185,7 +185,7 @@ private struct PavbotSplitRootView: View {
         case .research:
             NavigationStack(path: $router.researchPath) {
                 AdaptiveDetailContainer {
-                    ResearchView()
+                    OverviewView()
                 }
             }
         case .today:
@@ -211,6 +211,35 @@ private struct PavbotSplitRootView: View {
                 AdaptiveDetailContainer {
                     DiagnosticsView()
                 }
+            }
+        }
+    }
+}
+
+private struct OverviewView: View {
+    @Environment(AppRouter.self) private var router
+
+    var body: some View {
+        @Bindable var router = router
+
+        VStack(spacing: 0) {
+            Picker("Widok Przeglądu", selection: $router.selectedOverviewMode) {
+                ForEach(OverviewMode.allCases) { mode in
+                    Text(mode.title).tag(mode)
+                }
+            }
+            .pickerStyle(.segmented)
+            .padding(.horizontal, 20)
+            .padding(.top, 12)
+            .padding(.bottom, 8)
+            .background(Color(.systemGroupedBackground))
+            .accessibilityLabel("Widok Przeglądu")
+
+            switch router.selectedOverviewMode {
+            case .files:
+                ArtifactTimelineView()
+            case .reports:
+                ResearchView()
             }
         }
     }

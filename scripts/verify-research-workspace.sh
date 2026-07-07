@@ -247,8 +247,8 @@ grep -q 'searchable' ios/PavbotViewer/Sources/Views/ArtifactTimelineView.swift
 grep -q 'DiagnosticsView' ios/PavbotViewer/Sources/Views/DiagnosticsView.swift
 grep -q 'JobsView' ios/PavbotViewer/Sources/Views/ContentView.swift
 grep -q 'ResearchView' ios/PavbotViewer/Sources/Views/ContentView.swift
-grep -q 'Label("Jobs"' ios/PavbotViewer/Sources/Views/ContentView.swift
-grep -q 'Label("Research"' ios/PavbotViewer/Sources/Views/ContentView.swift
+grep -q 'AppTab.jobs.displayTitle' ios/PavbotViewer/Sources/Views/ContentView.swift
+grep -q 'AppTab.research.displayTitle' ios/PavbotViewer/Sources/Views/ContentView.swift
 grep -q 'ArtifactTimelineView' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'DiagnosticsView' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'struct JobsView' ios/PavbotViewer/Sources/Views/JobsView.swift

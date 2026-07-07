@@ -95,6 +95,34 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(podcastGroup.artifacts(on: day, matching: route).map(\.id), ["audio-2026-06-22"])
     }
 
+    func testReportPackageHistoryWindowKeepsFourDaysBackFromLatestRun() throws {
+        let packages = [
+            Self.topicPackage(topic: .techNews, date: "2026-06-26"),
+            Self.topicPackage(topic: .techNews, date: "2026-06-25"),
+            Self.topicPackage(topic: .techNews, date: "2026-06-22"),
+            Self.topicPackage(topic: .techNews, date: "2026-06-21")
+        ]
+
+        XCTAssertEqual(packages.fourDayBackHistoryWindow().map(\.date), ["2026-06-26", "2026-06-25", "2026-06-22"])
+    }
+
+    func testReportPackageSelectionMatchesDateColonTimeAndCloudKitCompactStamp() {
+        let morning = Self.topicPackage(topic: .techNews, date: "2026-07-05", time: "08:00")
+        let evening = Self.topicPackage(topic: .techNews, date: "2026-07-05", time: "19:33")
+
+        XCTAssertTrue(morning.matchesSelection("2026-07-05-0800"))
+        XCTAssertTrue(morning.matchesSelection("2026-07-05-08:00"))
+        XCTAssertTrue(morning.matchesSelection("2026-07-05"))
+        XCTAssertFalse(morning.matchesSelection("2026-07-05-1933"))
+        XCTAssertTrue(evening.matchesSelection("2026-07-05-1933"))
+    }
+
+    func testOverviewTabContractUsesFilterableArtifactBrowserAsDefault() {
+        XCTAssertEqual(OverviewMode.defaultMode, .files)
+        XCTAssertEqual(AppTab.research.displayTitle, "Przegląd")
+        XCTAssertEqual(AppTab.research.systemImage, "square.grid.2x2")
+    }
+
     func testPodcastPackagePairsAudioWithBriefPDFForTheSameDay() throws {
         let manifest = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
         let podcastGroup = try XCTUnwrap(manifest.automationArtifactGroups.first { $0.id == "podcast" })
@@ -735,6 +763,27 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     @MainActor
+    func testResearchNewsStoreSelectsExactMorningRunWhenSameDayHasMultipleBriefings() async throws {
+        let morning = Self.topicPackage(topic: .techNews, date: "2026-07-05", time: "08:00")
+        let evening = Self.topicPackage(topic: .techNews, date: "2026-07-05", time: "19:33")
+        let store = ResearchNewsStore(
+            client: ResearchNewsClient(fetchText: { _ in Self.techResearchMarkdownFixture }),
+            cache: ResearchNewsCache(defaults: UserDefaults(suiteName: UUID().uuidString)!)
+        )
+
+        await store.load(
+            packages: [evening, morning],
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            topic: .techNews,
+            selectedDay: "2026-07-05-0800",
+            selectedArtifactIDs: []
+        )
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.selectedPackage?.key, "2026-07-05-08:00")
+    }
+
+    @MainActor
     func testResearchNewsStorePrefersResearchDataArtifactOverMarkdownFallback() async throws {
         let dataArtifact = Self.artifact(
             id: "tech-data",
@@ -1215,6 +1264,7 @@ final class PavbotManifestTests: XCTestCase {
         )
 
         XCTAssertEqual(router.selectedTab, .research)
+        XCTAssertEqual(router.selectedOverviewMode, .reports)
         XCTAssertEqual(router.selectedResearchTopic, .aktualne)
         XCTAssertEqual(router.selectedReportDay, "2026-06-25")
         XCTAssertEqual(router.selectedReportArtifactIDs, ["mobile-data"])
@@ -1733,6 +1783,7 @@ final class PavbotManifestTests: XCTestCase {
         _ = router.openReportsForTopic("tech-news", latestDay: "2026-06-22")
 
         XCTAssertEqual(router.selectedTab, .research)
+        XCTAssertEqual(router.selectedOverviewMode, .reports)
         XCTAssertEqual(router.selectedResearchTopic, .techNews)
         XCTAssertEqual(router.selectedReportDay, "2026-06-22")
         XCTAssertTrue(router.artifactPath.isEmpty)
@@ -1753,13 +1804,35 @@ final class PavbotManifestTests: XCTestCase {
         )
 
         XCTAssertEqual(router.selectedTab, .research)
+        XCTAssertEqual(router.selectedOverviewMode, .reports)
         XCTAssertEqual(router.selectedResearchTopic, .techNews)
         XCTAssertEqual(router.selectedReportDay, "2026-06-22")
         XCTAssertNil(router.artifactRoute)
     }
 
     @MainActor
-    func testRouterOpensGenericArtifactInArtifactPath() {
+    func testRouterOpensTimedResearchArtifactWithoutLosingRunTime() {
+        let router = AppRouter()
+        let artifact = Self.artifact(
+            id: "tech-run-2026-07-05-1933",
+            type: .run,
+            topic: "tech-news",
+            path: "research/tech-news/runs/2026-07-05-1933.md",
+            date: "2026-07-05",
+            time: "19:33"
+        )
+
+        router.openArtifact(artifact)
+
+        XCTAssertEqual(router.selectedTab, .research)
+        XCTAssertEqual(router.selectedOverviewMode, .reports)
+        XCTAssertEqual(router.selectedResearchTopic, .techNews)
+        XCTAssertEqual(router.selectedReportDay, "2026-07-05-19:33")
+        XCTAssertEqual(router.researchPath.map(\.id), ["tech-run-2026-07-05-1933"])
+    }
+
+    @MainActor
+    func testRouterOpensGenericArtifactInOverviewFilesPath() {
         let router = AppRouter()
         let artifact = Self.artifact(
             id: "automation-log-2026-06-22",
@@ -1771,16 +1844,17 @@ final class PavbotManifestTests: XCTestCase {
 
         router.openArtifact(artifact)
 
-        XCTAssertEqual(router.selectedTab, .artifacts)
-        XCTAssertEqual(router.artifactPath.map(\.id), ["automation-log-2026-06-22"])
+        XCTAssertEqual(router.selectedTab, .research)
+        XCTAssertEqual(router.selectedOverviewMode, .files)
+        XCTAssertTrue(router.artifactPath.isEmpty)
+        XCTAssertEqual(router.researchPath.map(\.id), ["automation-log-2026-06-22"])
         XCTAssertNil(router.pendingArtifactID)
         XCTAssertNil(router.artifactRoute)
         XCTAssertTrue(router.jobsPath.isEmpty)
-        XCTAssertTrue(router.researchPath.isEmpty)
     }
 
     @MainActor
-    func testRouterResolvesPendingGenericArtifactIntoArtifactPath() throws {
+    func testRouterResolvesPendingGenericArtifactIntoOverviewFilesPath() throws {
         let router = AppRouter()
         let artifact = Self.artifact(
             id: "automation-log-2026-06-23",
@@ -1794,8 +1868,10 @@ final class PavbotManifestTests: XCTestCase {
         router.handleOpenURL(try XCTUnwrap(URL(string: "pavbot://artifact?id=automation-log-2026-06-23")))
         router.resolvePendingArtifact(in: manifest)
 
-        XCTAssertEqual(router.selectedTab, .artifacts)
-        XCTAssertEqual(router.artifactPath.map(\.id), ["automation-log-2026-06-23"])
+        XCTAssertEqual(router.selectedTab, .research)
+        XCTAssertEqual(router.selectedOverviewMode, .files)
+        XCTAssertTrue(router.artifactPath.isEmpty)
+        XCTAssertEqual(router.researchPath.map(\.id), ["automation-log-2026-06-23"])
         XCTAssertNil(router.pendingArtifactID)
         XCTAssertNil(router.artifactRoute)
     }
@@ -4085,6 +4161,7 @@ final class PavbotManifestTests: XCTestCase {
         router.resolvePendingArtifact(in: manifest)
 
         XCTAssertEqual(router.selectedTab, .research)
+        XCTAssertEqual(router.selectedOverviewMode, .reports)
         XCTAssertEqual(router.selectedResearchTopic, .techNews)
         XCTAssertEqual(router.researchPath.map(\.id), ["audio-2026-06-22"])
         XCTAssertNil(router.pendingArtifactID)
@@ -4097,7 +4174,8 @@ final class PavbotManifestTests: XCTestCase {
 
         router.handleOpenURL(url)
 
-        XCTAssertEqual(router.selectedTab, .artifacts)
+        XCTAssertEqual(router.selectedTab, .research)
+        XCTAssertEqual(router.selectedOverviewMode, .files)
         XCTAssertEqual(router.pendingArtifactID, "audio-2026-06-22")
         XCTAssertTrue(router.artifactPath.isEmpty)
     }
@@ -4166,6 +4244,7 @@ final class PavbotManifestTests: XCTestCase {
         )
 
         XCTAssertEqual(router.selectedTab, .research)
+        XCTAssertEqual(router.selectedOverviewMode, .reports)
         XCTAssertEqual(router.selectedResearchTopic, .techNews)
         XCTAssertEqual(router.selectedReportDay, "2026-06-22")
         XCTAssertEqual(router.selectedReportArtifactIDs, ["run-2026-06-22", "audio-2026-06-22"])
@@ -5064,6 +5143,29 @@ final class PavbotManifestTests: XCTestCase {
             topic: .jobs,
             key: "\(date)-\(compactTime)",
             artifacts: artifacts
+        )
+    }
+
+    private static func topicPackage(topic: ReportTopicKind, date: String, time: String? = nil) -> TopicReportPackage {
+        let compactTime = time?.replacingOccurrences(of: ":", with: "") ?? ""
+        let pathStamp = compactTime.isEmpty ? date : "\(date)-\(compactTime)"
+        let key = time.map { "\(date)-\($0)" } ?? date
+        return TopicReportPackage(
+            topic: topic,
+            key: key,
+            artifacts: [
+                PavbotArtifact(
+                    id: "\(topic.topic)-run-\(pathStamp)",
+                    type: .run,
+                    topic: topic.topic,
+                    title: "\(topic.title) \(pathStamp)",
+                    path: "research/\(topic.topic)/runs/\(pathStamp).md",
+                    url: "research/\(topic.topic)/runs/\(pathStamp).md",
+                    sizeBytes: 200,
+                    date: date,
+                    time: time
+                )
+            ]
         )
     }
 

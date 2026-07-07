@@ -12,6 +12,68 @@ enum AppTab: Hashable {
     case settings
 }
 
+enum OverviewMode: String, CaseIterable, Identifiable {
+    case files
+    case reports
+
+    static let defaultMode: OverviewMode = .files
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .files:
+            "Pliki"
+        case .reports:
+            "Raporty"
+        }
+    }
+}
+
+extension AppTab {
+    var displayTitle: String {
+        switch self {
+        case .automations:
+            "Automatyzacje"
+        case .artifacts:
+            "Pliki"
+        case .jobs:
+            "Jobs"
+        case .pulseDay:
+            "Puls Dnia"
+        case .research:
+            "Przegląd"
+        case .today:
+            "Dzisiaj"
+        case .diagnostics:
+            "Diagnostyka"
+        case .settings:
+            "Ustawienia"
+        }
+    }
+
+    var systemImage: String {
+        switch self {
+        case .automations:
+            "bolt.fill"
+        case .artifacts:
+            "folder.fill"
+        case .jobs:
+            "briefcase"
+        case .pulseDay:
+            "globe.europe.africa.fill"
+        case .research:
+            "square.grid.2x2"
+        case .today:
+            "sun.max"
+        case .diagnostics:
+            "stethoscope"
+        case .settings:
+            "gearshape"
+        }
+    }
+}
+
 enum TodaySectionTarget: Hashable {
     case redditRadar
 }
@@ -45,6 +107,7 @@ final class AppRouter {
     var selectedResearchTopic: ReportTopicKind = .techNews
     var selectedReportDay: String?
     var selectedReportArtifactIDs: [String] = []
+    var selectedOverviewMode: OverviewMode = OverviewMode.defaultMode
     var jobsPath: [PavbotArtifact] = []
     var researchPath: [PavbotArtifact] = []
     var pendingAudioArticleRoute: PavbotAudioDestination?
@@ -58,6 +121,7 @@ final class AppRouter {
             selectedResearchTopic = topic
         }
         selectedTab = .research
+        selectedOverviewMode = .reports
         pendingAudioArticleRoute = destination
         artifactPath = []
         selectedTodaySectionTarget = nil
@@ -73,18 +137,20 @@ final class AppRouter {
     func openArtifact(_ artifact: PavbotArtifact) {
         if let reportTopic = ReportTopicKind(topic: artifact.topic) {
             selectedTab = reportTopic == .jobs ? .jobs : .research
+            selectedOverviewMode = reportTopic == .jobs ? selectedOverviewMode : .reports
             selectedResearchTopic = reportTopic == .jobs ? selectedResearchTopic : reportTopic
-            selectedReportDay = artifact.date
+            selectedReportDay = artifact.reportPackageSelectionKey
             selectedReportArtifactIDs = []
             artifactPath = []
             jobsPath = reportTopic == .jobs ? [artifact] : []
             researchPath = reportTopic == .jobs ? [] : [artifact]
         } else {
-            selectedTab = .artifacts
-            artifactPath = [artifact]
+            selectedTab = .research
+            selectedOverviewMode = .files
+            artifactPath = []
+            researchPath = [artifact]
             selectedReportArtifactIDs = []
             jobsPath = []
-            researchPath = []
         }
         pendingArtifactID = nil
         artifactRoute = nil
@@ -95,7 +161,8 @@ final class AppRouter {
     }
 
     func openArtifactRoute(_ route: ArtifactNotificationRoute) {
-        selectedTab = .artifacts
+        selectedTab = .research
+        selectedOverviewMode = .files
         artifactPath = []
         pendingArtifactID = nil
         artifactRoute = route
@@ -123,7 +190,8 @@ final class AppRouter {
 
     func selectArtifactAutomation(id: String?, day: String?, switchToArtifactsTab: Bool = true) {
         if switchToArtifactsTab {
-            selectedTab = .artifacts
+            selectedTab = .research
+            selectedOverviewMode = .files
         }
         artifactPath = []
         pendingArtifactID = nil
@@ -157,6 +225,7 @@ final class AppRouter {
             return false
         }
         selectedTab = reportTopic == .jobs ? .jobs : .research
+        selectedOverviewMode = reportTopic == .jobs ? selectedOverviewMode : .reports
         if reportTopic != .jobs {
             selectedResearchTopic = reportTopic
         }
@@ -241,6 +310,7 @@ final class AppRouter {
         }
 
         selectedTab = reportTopic == .jobs ? .jobs : .research
+        selectedOverviewMode = reportTopic == .jobs ? selectedOverviewMode : .reports
         if reportTopic != .jobs {
             selectedResearchTopic = reportTopic
         }
@@ -277,6 +347,8 @@ final class AppRouter {
             return
         }
         if let artifactID = userInfo["artifactID"] as? String {
+            selectedTab = .research
+            selectedOverviewMode = .files
             artifactPath = []
             pendingArtifactID = artifactID
             artifactRoute = nil
@@ -312,7 +384,8 @@ final class AppRouter {
         guard let artifactID = components?.queryItems?.first(where: { $0.name == "id" })?.value, !artifactID.isEmpty else {
             return
         }
-        selectedTab = .artifacts
+        selectedTab = .research
+        selectedOverviewMode = .files
         artifactPath = []
         pendingArtifactID = artifactID
         artifactRoute = nil

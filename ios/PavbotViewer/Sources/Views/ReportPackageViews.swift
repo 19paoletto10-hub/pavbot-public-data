@@ -39,6 +39,7 @@ struct ResearchView: View {
     @State private var selectedArticle: ResearchNewsArticle?
     @State private var selectedMobileArticle: MobileNewsArticle?
     @State private var isSavedResearchPresented = false
+    @State private var searchText = ""
 
     var body: some View {
         @Bindable var router = router
@@ -48,13 +49,19 @@ struct ResearchView: View {
                 ResearchTopicPicker(selection: $router.selectedResearchTopic)
 
                 if let manifest = store.manifest {
-                    let packages = manifest.reportPackages(for: router.selectedResearchTopic)
+                    let packages = visiblePackages(in: manifest, for: router.selectedResearchTopic)
+                    ResearchRunPicker(
+                        topic: router.selectedResearchTopic,
+                        packages: packages,
+                        selectedDay: $router.selectedReportDay
+                    )
                     if router.selectedResearchTopic == .aktualne {
                         MobileNewsNativeContent(
                             packages: packages,
                             magazine: mobileNewsStore.magazine,
                             state: mobileNewsStore.state,
                             cacheNotice: mobileNewsStore.cacheNotice,
+                            searchText: searchText,
                             selectedArticle: $selectedMobileArticle,
                             speechController: mobileSpeechController,
                             podcastSpeechController: podcastSpeechController,
@@ -69,6 +76,7 @@ struct ResearchView: View {
                             issue: newsStore.issue,
                             state: newsStore.state,
                             cacheNotice: newsStore.cacheNotice,
+                            searchText: searchText,
                             selectedSection: $selectedSection,
                             selectedArticle: $selectedArticle,
                             savedStore: savedResearchStore,
@@ -90,7 +98,8 @@ struct ResearchView: View {
             .padding(.vertical, 18)
         }
         .background(Color(.systemGroupedBackground))
-        .navigationTitle("Research")
+        .navigationTitle("Raporty")
+        .searchable(text: $searchText, placement: .navigationBarDrawer(displayMode: .always), prompt: "Szukaj w Przeglądzie")
         .navigationDestination(for: PavbotArtifact.self) { artifact in
             ArtifactDetailView(artifact: artifact)
         }
@@ -139,26 +148,24 @@ struct ResearchView: View {
             await loadSelectedResearchContent()
         }
         .task(id: loadKey) {
+            normalizeSelectedReportDay()
             await loadSelectedResearchContent()
         }
         .onAppear {
-            if router.selectedReportDay == nil {
-                router.selectedReportDay = store.manifest?.reportPackages(for: router.selectedResearchTopic).first?.date
-            }
+            normalizeSelectedReportDay()
         }
         .onChange(of: router.selectedResearchTopic) { _, topic in
             router.selectedReportArtifactIDs = []
-            router.selectedReportDay = store.manifest?.reportPackages(for: topic).first?.date
+            router.selectedReportDay = store.manifest.flatMap { visiblePackages(in: $0, for: topic).first?.selectionKey }
             selectedSection = nil
             selectedArticle = nil
             selectedMobileArticle = nil
+            searchText = ""
             mobileSpeechController.stop()
         }
         .onChange(of: store.manifest) { _, manifest in
             guard let manifest else { return }
-            if router.selectedReportDay == nil {
-                router.selectedReportDay = manifest.reportPackages(for: router.selectedResearchTopic).first?.date
-            }
+            normalizeSelectedReportDay(in: manifest)
         }
     }
 
@@ -176,7 +183,7 @@ struct ResearchView: View {
         guard let manifest = store.manifest else { return }
         guard router.selectedResearchTopic != .aktualne else { return }
         await newsStore.load(
-            packages: manifest.reportPackages(for: router.selectedResearchTopic),
+            packages: visiblePackages(in: manifest, for: router.selectedResearchTopic),
             manifestURLString: store.manifestURLString,
             topic: router.selectedResearchTopic,
             selectedDay: router.selectedReportDay,
@@ -187,7 +194,7 @@ struct ResearchView: View {
     private func loadMobileMagazine() async {
         guard let manifest = store.manifest else { return }
         await mobileNewsStore.load(
-            packages: manifest.reportPackages(for: .aktualne),
+            packages: visiblePackages(in: manifest, for: .aktualne),
             manifestURLString: store.manifestURLString,
             selectedDay: router.selectedReportDay,
             selectedArtifactIDs: router.selectedReportArtifactIDs
@@ -201,6 +208,30 @@ struct ResearchView: View {
             await loadNewsIssue()
         }
     }
+
+    private func visiblePackages(in manifest: PavbotManifest, for topic: ReportTopicKind) -> [TopicReportPackage] {
+        manifest.reportPackages(for: topic).fourDayBackHistoryWindow()
+    }
+
+    private func normalizeSelectedReportDay() {
+        guard let manifest = store.manifest else { return }
+        normalizeSelectedReportDay(in: manifest)
+    }
+
+    private func normalizeSelectedReportDay(in manifest: PavbotManifest) {
+        let packages = visiblePackages(in: manifest, for: router.selectedResearchTopic)
+        guard !packages.isEmpty else {
+            router.selectedReportDay = nil
+            return
+        }
+        guard let selected = router.selectedReportDay else {
+            router.selectedReportDay = packages.first?.selectionKey
+            return
+        }
+        if !packages.contains(where: { $0.matchesSelection(selected) }) {
+            router.selectedReportDay = packages.first?.selectionKey
+        }
+    }
 }
 
 private struct ResearchNativeContent: View {
@@ -209,6 +240,7 @@ private struct ResearchNativeContent: View {
     let issue: ResearchNewsIssue?
     let state: ResearchNewsStore.LoadState
     let cacheNotice: String?
+    let searchText: String
     @Binding var selectedSection: ResearchNewsSection?
     @Binding var selectedArticle: ResearchNewsArticle?
     let savedStore: SavedResearchArticleStore
@@ -270,7 +302,7 @@ private struct ResearchNativeContent: View {
         ResearchIssueHero(issue: issue, packageCount: packages.count)
         ResearchSectionFilterBar(topic: topic, selection: $selectedSection)
 
-        let articleSnapshot = ResearchArticleListSnapshot(issue: issue, selectedSection: selectedSection, searchText: "")
+        let articleSnapshot = ResearchArticleListSnapshot(issue: issue, selectedSection: selectedSection, searchText: searchText)
         if articleSnapshot.articles.isEmpty {
             ContentUnavailableView(
                 "Brak newsów dla filtra",
@@ -304,6 +336,7 @@ private struct MobileNewsNativeContent: View {
     let magazine: MobileNewsMagazine?
     let state: MobileNewsStore.LoadState
     let cacheNotice: String?
+    let searchText: String
     @Binding var selectedArticle: MobileNewsArticle?
     @ObservedObject var speechController: MobileNewsSpeechController
     @ObservedObject var podcastSpeechController: PodcastScriptSpeechController
@@ -372,7 +405,7 @@ private struct MobileNewsNativeContent: View {
             PodcastScriptSpeechMiniPlayer(speechController: podcastSpeechController)
         }
 
-        let sections = magazine.sections
+        let sections = visibleSections(in: magazine)
         if sections.isEmpty {
             ContentUnavailableView(
                 "Brak artykułów",
@@ -393,6 +426,21 @@ private struct MobileNewsNativeContent: View {
         }
 
         MobileNewsAddOns(magazine: magazine, podcastSpeechController: podcastSpeechController)
+    }
+
+    private func visibleSections(in magazine: MobileNewsMagazine) -> [MobileNewsSection] {
+        let query = searchText.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !query.isEmpty else { return magazine.sections }
+        return magazine.sections.compactMap { section in
+            let articles = section.articles.filter { $0.matchesSearch(query) }
+            guard !articles.isEmpty else { return nil }
+            return MobileNewsSection(
+                id: section.id,
+                title: section.title,
+                summary: section.summary,
+                articles: articles
+            )
+        }
     }
 }
 
@@ -2035,17 +2083,17 @@ private struct ReportTopicPackagesView<Header: View>: View {
         }
         .onAppear {
             if router.selectedReportDay == nil {
-                router.selectedReportDay = store.manifest?.reportPackages(for: topic).first?.date
+                router.selectedReportDay = store.manifest?.reportPackages(for: topic).first?.selectionKey
             }
         }
         .onChange(of: topic) { _, _ in
             router.selectedReportArtifactIDs = []
-            router.selectedReportDay = store.manifest?.reportPackages(for: topic).first?.date
+            router.selectedReportDay = store.manifest?.reportPackages(for: topic).first?.selectionKey
         }
         .onChange(of: store.manifest) { _, manifest in
             guard let manifest else { return }
             if router.selectedReportDay == nil {
-                router.selectedReportDay = manifest.reportPackages(for: topic).first?.date
+                router.selectedReportDay = manifest.reportPackages(for: topic).first?.selectionKey
             }
         }
     }
@@ -2055,10 +2103,10 @@ private struct ReportTopicPackagesView<Header: View>: View {
             return packages
         }
         return packages.sorted { lhs, rhs in
-            if lhs.date == selectedReportDay, rhs.date != selectedReportDay {
+            if lhs.matchesSelection(selectedReportDay), !rhs.matchesSelection(selectedReportDay) {
                 return true
             }
-            if rhs.date == selectedReportDay, lhs.date != selectedReportDay {
+            if rhs.matchesSelection(selectedReportDay), !lhs.matchesSelection(selectedReportDay) {
                 return false
             }
             return lhs.key > rhs.key
@@ -2080,6 +2128,60 @@ private struct ResearchTopicPicker: View {
             ResearchTopicButton(topic: .techNews, selection: $selection)
             ResearchTopicButton(topic: .polskaSwiat, selection: $selection)
             ResearchTopicButton(topic: .aktualne, selection: $selection)
+        }
+    }
+}
+
+private struct ResearchRunPicker: View {
+    let topic: ReportTopicKind
+    let packages: [TopicReportPackage]
+    @Binding var selectedDay: String?
+
+    var body: some View {
+        if packages.count > 1 {
+            VStack(alignment: .leading, spacing: 8) {
+                HStack(alignment: .firstTextBaseline) {
+                    Label("Runy z 4 dni wstecz", systemImage: "calendar.badge.clock")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(topic.tint)
+                    Spacer()
+                    Text("\(packages.count)")
+                        .font(.caption.weight(.bold))
+                        .foregroundStyle(.secondary)
+                }
+
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 8) {
+                        ForEach(packages) { package in
+                            let value = package.selectionKey
+                            let isSelected = package.matchesSelection(selectedDay)
+                            Button {
+                                selectedDay = value
+                            } label: {
+                                VStack(alignment: .leading, spacing: 2) {
+                                    Text(package.date ?? package.key)
+                                        .font(.caption.weight(.bold))
+                                    if let time = package.time {
+                                        Text(time)
+                                            .font(.caption2.weight(.medium))
+                                            .foregroundStyle(isSelected ? .white.opacity(0.82) : .secondary)
+                                    }
+                                }
+                                .frame(minHeight: 42, alignment: .center)
+                                .padding(.horizontal, 12)
+                                .padding(.vertical, 8)
+                                .foregroundStyle(isSelected ? .white : topic.tint)
+                                .background(isSelected ? topic.tint : topic.tint.opacity(0.12), in: Capsule())
+                            }
+                            .buttonStyle(.plain)
+                        }
+                    }
+                    .padding(.vertical, 2)
+                }
+                .accessibilityLabel("Historyczne runy Przeglądu")
+            }
+            .padding(14)
+            .background(Color(.systemBackground), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
         }
     }
 }
