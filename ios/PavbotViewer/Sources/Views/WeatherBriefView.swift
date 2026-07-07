@@ -183,11 +183,7 @@ struct WeatherBriefView: View {
     }
 
     private func loadRedditRadar(minimumInterval: TimeInterval = 0) async {
-        await humorStore.load(
-            minimumInterval: minimumInterval,
-            manifest: manifestStore.manifest,
-            manifestURLString: manifestStore.manifestURLString
-        )
+        await humorStore.load(minimumInterval: minimumInterval)
     }
 
     private func handlePendingTodaySectionTarget(scrollProxy: ScrollViewProxy) {
@@ -286,6 +282,7 @@ struct WeatherBriefView: View {
                     precipitationTileMode.toggle()
                 }
             },
+            precipitationIntensityFilter: $precipitationIntensityFilter,
             openPulseDay: {
                 router.selectedTab = .pulseDay
             },
@@ -760,6 +757,7 @@ private struct PavbotPhoneDailyCockpit: View {
     let editLocation: () -> Void
     let toggleRangeTile: () -> Void
     let togglePrecipitationTile: () -> Void
+    @Binding var precipitationIntensityFilter: WeatherPrecipitationIntensityFilter
     let openPulseDay: () -> Void
     let openJobs: () -> Void
     let openResearch: () -> Void
@@ -825,7 +823,6 @@ private struct PavbotPhoneDailyCockpit: View {
             systemImage: heroSymbol,
             tint: .blue,
             supportingText: precipitationAdvice,
-            primaryActionSummary: locationSummaryLine,
             primaryActionTitle: "Dostosuj lokalizację",
             primaryActionSystemImage: "location.circle.fill",
             primaryAction: editLocation
@@ -887,7 +884,12 @@ private struct PavbotPhoneDailyCockpit: View {
         ) {
             WeatherRangeTimelineTile(report: report, mode: rangeTileMode, onToggle: toggleRangeTile)
                 .environment(\.pavbotAdaptiveLayout, layout)
-            WeatherPrecipitationTile(report: report, mode: precipitationTileMode, onToggle: togglePrecipitationTile)
+            WeatherPrecipitationTile(
+                report: report,
+                mode: precipitationTileMode,
+                intensityFilter: $precipitationIntensityFilter,
+                onToggle: togglePrecipitationTile
+            )
                 .environment(\.pavbotAdaptiveLayout, layout)
             WeatherMetricTile(
                 title: "Odczuwalna",
@@ -2001,7 +2003,14 @@ private struct WeatherPrecipitationTile: View {
         let riskPoints = applyIntensityFilter(to: presentation.measurablePoints.isEmpty ? significantPoints : presentation.measurablePoints)
         let riskWindows = riskWindowSummary(for: riskPoints)
         let thresholdActive = intensityFilter.isActive
-        let yAxisTicks = Array(stride(from: 0, through: 100, by: 20))
+        let chartVisualization = precipitationChartVisualization(
+            hasData: hasData,
+            hasFilteredData: hasFilteredData,
+            chartPoints: chartPoints,
+            intensityFilterLabel: intensityFilter.label,
+            dailyTotalLabel: presentation.dailyTotalLabel,
+            showFortyPercentRule: filteredChartPoints.contains { $0.probability >= 40 }
+        )
 
         return VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 8) {
@@ -2063,134 +2072,20 @@ private struct WeatherPrecipitationTile: View {
                 .lineSpacing(2)
                 .fixedSize(horizontal: false, vertical: true)
 
-            if hasData {
-                if hasFilteredData {
-                    Chart {
-                        ForEach(chartPoints) { point in
-                            AreaMark(
-                                x: .value("Godzina", point.hourLabel),
-                                yStart: .value("Minimum", 0),
-                                yEnd: .value("Szansa opadów", chartValue(for: point))
-                            )
-                            .foregroundStyle(
-                                LinearGradient(
-                                    colors: [Color.blue.opacity(0.26), Color.blue.opacity(0.05)],
-                                    startPoint: .top,
-                                    endPoint: .bottom
-                                )
-                            )
-                            .interpolationMethod(.catmullRom)
+            chartVisualization
+        }
+    }
 
-                            BarMark(
-                                x: .value("Godzina", point.hourLabel),
-                                yStart: .value("Minimum", 0),
-                                yEnd: .value("Szansa opadów", chartValue(for: point)),
-                                width: .ratio(0.62)
-                            )
-                            .foregroundStyle(chartGradient(for: point.kind))
-                            .cornerRadius(7)
-                            .annotation(position: .top, alignment: .center, spacing: 4) {
-                                WeatherPrecipitationChartValueLabel(
-                                    probability: probabilityLabel(for: point),
-                                    amount: amountDetailLabel(for: point),
-                                    tint: color(for: point.kind)
-                                )
-                            }
-
-                            LineMark(
-                                x: .value("Godzina", point.hourLabel),
-                                y: .value("Szansa opadów", chartValue(for: point))
-                            )
-                            .foregroundStyle(.blue.gradient)
-                            .lineStyle(StrokeStyle(lineWidth: 1.8, lineCap: .round, lineJoin: .round))
-                            .interpolationMethod(.catmullRom)
-
-                            PointMark(
-                                x: .value("Godzina", point.hourLabel),
-                                y: .value("Szansa opadów", chartValue(for: point))
-                            )
-                            .symbolSize(24)
-                            .foregroundStyle(.blue.opacity(0.85))
-                        }
-
-                        if let maxProbability = filteredChartPoints.map({ clampedProbability(for: $0.probability) }).max(), maxProbability >= 40 {
-                            RuleMark(y: .value("Próg", 40))
-                                .foregroundStyle(Color.blue.opacity(0.16))
-                                .lineStyle(StrokeStyle(lineWidth: 0.6, dash: [4, 4]))
-                                .annotation(
-                                    position: .top,
-                                    alignment: .trailing,
-                                    spacing: 6,
-                                    overflowResolution: .init(horizontal: .fit, vertical: .fit)
-                                ) {
-                                    Text("40%")
-                                        .font(.caption2.weight(.semibold))
-                                        .foregroundStyle(.secondary)
-                                }
-                        }
-                    }
-                    .chartXAxis {
-                        AxisMarks(values: .automatic(desiredCount: xAxisDesiredCount(for: chartPoints))) { value in
-                            AxisTick(stroke: StrokeStyle(lineWidth: 0.7))
-                                .foregroundStyle(Color.blue.opacity(0.22))
-                            AxisValueLabel {
-                                if let hour = value.as(String.self) {
-                                    Text(hour)
-                                        .font(.caption2.weight(.semibold))
-                                        .foregroundStyle(.secondary)
-                                }
-                            }
-                        }
-                    }
-                    .chartYAxis {
-                        AxisMarks(position: .leading, values: yAxisTicks) { value in
-                            AxisGridLine(stroke: StrokeStyle(lineWidth: 0.7, dash: [3, 4]))
-                                .foregroundStyle(Color.blue.opacity(0.16))
-                            AxisValueLabel {
-                                if let probability = value.as(Int.self) {
-                                    Text("\(probability)%")
-                                        .font(.system(size: 9, weight: .semibold))
-                                        .foregroundStyle(.secondary)
-                                }
-                            }
-                        }
-                    }
-                    .chartYScale(domain: 0...100)
-                    .chartPlotStyle { plotArea in
-                        plotArea
-                            .background(
-                                LinearGradient(
-                                    colors: [Color.blue.opacity(0.02), Color.blue.opacity(0.08)],
-                                    startPoint: .top,
-                                    endPoint: .bottom
-                                ),
-                                in: RoundedRectangle(cornerRadius: 12, style: .continuous)
-                            )
-                            .overlay {
-                                RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                    .stroke(Color.blue.opacity(0.10), lineWidth: 1)
-                            }
-                    }
-                    .frame(height: 118)
-                    .accessibilityLabel("Mini wykres godzinowej szansy opadów")
-
-                    WeatherPrecipitationChartLegend(tint: .blue, total: presentation.dailyTotalLabel)
-
-                    Text("Dotknij, aby wrócić do podsumowania")
-                        .font(.caption2)
-                        .foregroundStyle(.secondary)
-                } else {
-                    VStack(alignment: .leading, spacing: 6) {
-                        Text("Brak punktów powyżej progu \(intensityFilter.label)")
-                            .font(.callout.weight(.semibold))
-                            .fixedSize(horizontal: false, vertical: true)
-                        Text("Przełącz filtr na „Wszystkie”, żeby zobaczyć pełny wykres.")
-                            .font(.caption2)
-                            .foregroundStyle(.secondary)
-                    }
-                    .frame(minHeight: 118)
-                }
-            } else {
+    private func precipitationChartVisualization(
+        hasData: Bool,
+        hasFilteredData: Bool,
+        chartPoints: [DailyWeatherHourlyPrecipitation],
+        intensityFilterLabel: String,
+        dailyTotalLabel: String,
+        showFortyPercentRule: Bool
+    ) -> AnyView {
+        guard hasData else {
+            return AnyView(
                 VStack(alignment: .leading, spacing: 6) {
                     Text("Brak szczegółowej prognozy opadów godzinowych")
                         .font(.callout.weight(.semibold))
@@ -2199,7 +2094,153 @@ private struct WeatherPrecipitationTile: View {
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                 }
+            )
+        }
+
+        guard hasFilteredData else {
+            return AnyView(
+                VStack(alignment: .leading, spacing: 6) {
+                    Text("Brak punktów powyżej progu \(intensityFilterLabel)")
+                        .font(.callout.weight(.semibold))
+                        .fixedSize(horizontal: false, vertical: true)
+                    Text("Przełącz filtr na „Wszystkie”, żeby zobaczyć pełny wykres.")
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
+                .frame(minHeight: 118)
+            )
+        }
+
+        return AnyView(
+            WeatherPrecipitationChartPanel(
+                chartPoints: chartPoints,
+                showFortyPercentRule: showFortyPercentRule,
+                dailyTotalLabel: dailyTotalLabel,
+                chartValue: { point in chartValue(for: point) },
+                probabilityLabel: { point in probabilityLabel(for: point) },
+                amountLabel: { point in amountDetailLabel(for: point) }
+            )
+        )
+    }
+
+    private struct WeatherPrecipitationChartPanel: View {
+        let chartPoints: [DailyWeatherHourlyPrecipitation]
+        let showFortyPercentRule: Bool
+        let dailyTotalLabel: String
+        let chartValue: (DailyWeatherHourlyPrecipitation) -> Int
+        let probabilityLabel: (DailyWeatherHourlyPrecipitation) -> String
+        let amountLabel: (DailyWeatherHourlyPrecipitation) -> String?
+
+        var body: some View {
+            VStack(alignment: .leading, spacing: 6) {
+                WeatherPrecipitationMiniChart(
+                    points: chartPoints,
+                    value: chartValue,
+                    labelForProbability: probabilityLabel,
+                    labelForAmount: amountLabel
+                )
+                WeatherPrecipitationChartLegend(tint: .blue, total: dailyTotalLabel)
+                Text("Dotknij, aby wrócić do podsumowania")
+                    .font(.caption2)
+                    .foregroundStyle(.secondary)
             }
+        }
+    }
+
+    private struct WeatherPrecipitationMiniChart: View {
+        let points: [DailyWeatherHourlyPrecipitation]
+        let value: (DailyWeatherHourlyPrecipitation) -> Int
+        let labelForProbability: (DailyWeatherHourlyPrecipitation) -> String
+        let labelForAmount: (DailyWeatherHourlyPrecipitation) -> String?
+
+        var body: some View {
+            GeometryReader { geometry in
+                let width = max(geometry.size.width, 1)
+                let height = max(geometry.size.height, 1)
+                let horizontalPadding: CGFloat = 12
+                let verticalPadding: CGFloat = 8
+                let plotWidth = max(width - horizontalPadding * 2, 1)
+                let plotHeight = max(height - verticalPadding * 2, 1)
+                let step = points.count > 1 ? plotWidth / CGFloat(points.count - 1) : plotWidth
+
+                let chartPath = points.enumerated().reduce(into: Path()) { path, current in
+                    let point = current.element
+                    let x = horizontalPadding + CGFloat(current.offset) * step
+                    let y = verticalPadding + CGFloat(100 - value(point)) / 100 * plotHeight
+                    if current.offset == 0 {
+                        path.move(to: CGPoint(x: x, y: y))
+                    } else {
+                        path.addLine(to: CGPoint(x: x, y: y))
+                    }
+                }
+
+                let areaPath = points.enumerated().reduce(into: Path()) { path, current in
+                    let point = current.element
+                    let x = horizontalPadding + CGFloat(current.offset) * step
+                    let y = verticalPadding + CGFloat(100 - value(point)) / 100 * plotHeight
+                    if current.offset == 0 {
+                        path.move(to: CGPoint(x: x, y: verticalPadding + plotHeight))
+                        path.addLine(to: CGPoint(x: x, y: y))
+                    } else {
+                        path.addLine(to: CGPoint(x: x, y: y))
+                    }
+                }
+
+                return AnyView(
+                    ZStack {
+                        RoundedRectangle(cornerRadius: 12, style: .continuous)
+                            .fill(LinearGradient(colors: [Color.blue.opacity(0.02), Color.blue.opacity(0.08)], startPoint: .top, endPoint: .bottom))
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 12, style: .continuous)
+                                    .stroke(Color.blue.opacity(0.10), lineWidth: 1)
+                            )
+
+                        areaPath
+                            .stroke(Color.blue.opacity(0.16), lineWidth: 0.1)
+
+                        chartPath
+                            .stroke(Color.blue.gradient, style: StrokeStyle(lineWidth: 2.2, lineCap: .round, lineJoin: .round))
+
+                        ForEach(points.indices, id: \.self) { index in
+                            let point = points[index]
+                            let x = horizontalPadding + CGFloat(index) * step
+                            let y = verticalPadding + CGFloat(100 - value(point)) / 100 * plotHeight
+                            Circle()
+                                .fill(Color.blue.opacity(0.92))
+                                .frame(width: 6, height: 6)
+                                .position(x: x, y: y)
+                        }
+
+                        if points.count >= 2 && points.first != nil {
+                            let fortyPercentY = verticalPadding + CGFloat(100 - 40) / 100 * plotHeight
+                            Path { rule in
+                                rule.move(to: CGPoint(x: horizontalPadding, y: fortyPercentY))
+                                rule.addLine(to: CGPoint(x: width - horizontalPadding, y: fortyPercentY))
+                            }
+                            .stroke(Color.blue.opacity(0.16), style: StrokeStyle(lineWidth: 0.8, dash: [4, 4]))
+                        }
+
+                        VStack {
+                            ForEach(points.indices.reversed(), id: \.self) { index in
+                                let point = points[index]
+                                if index.isMultiple(of: max(points.count / 4, 1)) {
+                                    let label = point.hourLabel
+                                    Text(label)
+                                        .font(.caption2.weight(.semibold))
+                                        .foregroundStyle(.secondary)
+                                        .frame(width: 36, alignment: .leading)
+                                        .position(
+                                            x: horizontalPadding + CGFloat(index) * step,
+                                            y: height - 3
+                                        )
+                                }
+                            }
+                        }
+                    }
+                )
+            }
+            .frame(height: 118)
+            .accessibilityLabel("Mini wykres godzinowej szansy opadów")
         }
     }
 

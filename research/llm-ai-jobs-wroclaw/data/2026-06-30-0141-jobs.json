@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-30",
+  "runTime": "01:41",
+  "executiveSummary": "Bieżąca runda przyniosła realny, nowy batch mocnych ról hands-on wokół produkcyjnych LLM-ów i AI infra: Sigmoidal, DataArt AI Developer, Pretius AI Engineer, Upvanta Data/MLOps Engineer – CT&C, EPAM Generative AI Operations Engineer (GenAI Ops) oraz nowy, wyraźnie produktowy Vazco Senior Full Stack & AI Developer. Dodatkowo XTB Senior AI Engineer wrócił na publiczny, mocniejszy wariant Warszawa +4 / Remote z jawnym wynagrodzeniem i bardziej jednoznacznym opisem platformy dla LLM/agentic AI. Najważniejsza korekta tej rundy dotyczy rodziny BigTime / DataArt: karta Senior AI Developer with LLM Orchestration, Intelligent Knowledge Platform, wczoraj zapisana board-first jako BigTime, obecnie ma już spójne publiczne potwierdzenie po stronie DataArt, więc nie powinna być dalej traktowana jako odrębna oferta BigTime.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "(AI) Software Engineer 3.0",
+      "company": "Sigmoidal",
+      "location": "Wrocław +4 / Remote",
+      "workMode": "Remote",
+      "compensation": "30 000-36 000 PLN netto / miesiąc B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "30 000-36 000 PLN netto / miesiąc B2B na publicznym boardzie",
+      "whyInteresting": "30 000-36 000 PLN netto / miesiąc B2B na publicznym boardzie",
+      "uncertainty": "stack obejmuje Claude, MCP, Python, FastAPI, AWS, EKS, Docker, SQL, NoSQL i React. Dlaczego interesujące: to bardzo mocny sygnał AI-native software engineeringu z naciskiem na przejście od prototypów Claude do produkcyjnych systemów. Fit LLM/AI: agentic workflows, MCP, AI coding, produkcyjne wdrożenia LLM. Niepewność: na tę chwilę to wciąż przede wszystkim publiczna karta job boardu, bez równie czytelnej kanonicznej strony careers",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/sigmoidal--ai-software-engineer-3-0-wroclaw-ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "AI Developer",
+      "company": "DataArt",
+      "location": "Wrocław +4 / Remote",
+      "workMode": "Remote",
+      "compensation": "23 000-26 000 PLN netto / miesiąc B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "23 000-26 000 PLN netto / miesiąc B2B albo 19 000-21 000 PLN brutto / miesiąc UoP",
+      "whyInteresting": "23 000-26 000 PLN netto / miesiąc B2B albo 19 000-21 000 PLN brutto / miesiąc UoP",
+      "uncertainty": "rola dotyczy governed enterprise AI platform, inteligentnych agentów, integracji systemów i RAG. Dlaczego interesujące: to nowa, wyraźnie hands-on karta DataArt obok wcześniej śledzonego senior role family, z bardzo sensownym połączeniem agentów, LLM-ów i enterprise integration. Fit LLM/AI: LLMs, AI agents, RAG, integracje API i platformy danych. Niepewność: publiczne surface’y Just Join IT pokazują lekki drift metadanych czasu publikacji/ważności, więc status trzeba szybko potwierdzić w następnej rundzie",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/dataart-ai-developer-wroclaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "AI Engineer",
+      "company": "Pretius",
+      "location": "Warszawa +2 / Remote",
+      "workMode": "Remote",
+      "compensation": "120-140 PLN netto / godz. B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "120-140 PLN netto / godz. B2B",
+      "whyInteresting": "120-140 PLN netto / godz. B2B",
+      "uncertainty": "opis wprost mówi o production-grade RAG and agentic LLM applications, orchestracji narzędzi i human-in-the-loop. Dlaczego interesujące: jedna z najbardziej konkretnych nowych ról remote-Poland w tej rundzie, bez consultingowego rozmycia i z bardzo praktycznym zakresem implementacyjnym. Fit LLM/AI: agentic AI, RAG, LangChain, LangGraph, vector search, GraphQL/REST, Python. Niepewność: nie udało się szybko znaleźć równie bogatej, kanonicznej strony employer dla samej rekrutacji",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/pretius-ai-engineer-warszawa-ai-6c56d267"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Data/MLOps Engineer – CT&C",
+      "company": "Upvanta",
+      "location": "Wrocław/Kraków +4 / Remote",
+      "workMode": "Remote",
+      "compensation": "1 200-1 300 PLN netto / dzień B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "1 200-1 300 PLN netto / dzień B2B",
+      "whyInteresting": "1 200-1 300 PLN netto / dzień B2B",
+      "uncertainty": "publiczny opis akcentuje Amazon SageMaker, PySpark, AWS CDK, feature stores, experiment tracking i model registries. Dlaczego interesujące: to bardzo sensowna rola AI platform / MLOps pod produkcyjne modele i analitykę czasu rzeczywistego, bliżej infrastruktury niż samej aplikacji LLM. Fit LLM/AI: MLOps, lifecycle modeli, platforma danych i deployment dla rozwiązań ML/AI. Niepewność: rola nie jest czysto LLM-first i nadal najlepiej potwierdza ją publiczny board",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/upvanta-sp-z-o-o--data-mlops-engineer---ct-c-wroclaw-ai"
+      ],
+      "tags": [
+        "LLM",
+        "MLOps",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Generative AI Operations Engineer (GenAI Ops)",
+      "company": "EPAM Systems",
+      "location": "Warsaw / Remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "wynagrodzenie niepubliczne",
+      "whyInteresting": "wynagrodzenie niepubliczne",
+      "uncertainty": "publiczny opis mówi o budowie i utrzymaniu infrastruktury operacyjnej dla LLMs, AI agents, multi-agent systems, CI/CD, Terraform, Docker i Kubernetes. Dlaczego interesujące: to bardzo mocny sygnał na styku GenAI infra i operations, a nie kolejna ogólna rola data/ML. Fit LLM/AI: GenAI Ops, agent-to-agent orchestration, deployment i observability dla dużych systemów AI. Niepewność: brak jawnych widełek i brak szybko odnalezionej równie szczegółowej strony kanonicznej poza publicznym boardem",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/epam-systems-generative-ai-operations-engineer-genai-ops--warsaw-ai"
+      ],
+      "tags": [
+        "LLM",
+        "GenAI"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Senior Full Stack & AI Developer",
+      "company": "Vazco",
+      "location": "Wrocław / Remote",
+      "workMode": "Remote",
+      "compensation": "15 000-20 000 PLN netto / miesiąc B2B",
+      "seniority": "Senior",
+      "fitSummary": "15 000-20 000 PLN netto / miesiąc B2B",
+      "whyInteresting": "15 000-20 000 PLN netto / miesiąc B2B",
+      "uncertainty": "publiczne wymagania obejmują TypeScript, Node.js, Next.js, React, React Native, Python i AI. Dlaczego interesujące: to nowy, bardziej implementacyjny companion role wobec już śledzonego AI Technical Lead, pokazujący, że Vazco rozwija realny zespół wokół AI product delivery. Fit LLM/AI: full-stack delivery dla produktów AI, z sensownym zapleczem Python/Node. Niepewność: na razie to sygnał głównie board-first i bez równie bogatej publicznej strony pracodawcy",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/vazco-senior-full-stack-ai-developer-wroclaw-ai-dfc3cd93"
+      ],
+      "tags": [
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "Senior AI Engineer",
+      "company": "XTB",
+      "location": "Warszawa +4 / Remote",
+      "workMode": "Remote",
+      "compensation": "20 400-25 900 PLN brutto / miesiąc",
+      "seniority": "Senior",
+      "fitSummary": "20 400-25 900 PLN brutto / miesiąc",
+      "whyInteresting": "20 400-25 900 PLN brutto / miesiąc",
+      "uncertainty": "opis obecnej publicznej karty wyraźnie mówi o budowie self-service developer platform dla LLM integration, agentic workflows i enterprise AI infrastructure. Dlaczego interesujące: to nie jest nowa rola, ale istotnie mocniejszy i bardziej użyteczny publiczny wariant niż wczorajszy Wrocław mirror bez jawnych widełek. Fit LLM/AI: platform engineering dla LLM/agentic AI, DevOps, orchestration, observability. Niepewność: XTB nadal rotuje city mirrors w Just Join IT, więc trzeba pilnować, który URL pozostanie publicznie dominujący",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/xtb-s-a--senior-ai-engineer-warszawa-ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Do short-listy doszły nowe role Sigmoidal, DataArt AI Developer, Pretius AI Engineer, Upvanta Data/MLOps Engineer – CT&C, EPAM Generative AI Operations Engineer (GenAI Ops) i Vazco Senior Full Stack & AI Developer.",
+    "XTB Senior AI Engineer wrócił na aktualnie silniejszy publiczny wariant Warszawa +4 / Remote z jawnym wynagrodzeniem 20 400-25 900 PLN brutto / miesiąc i doprecyzowanym platformowo-devopsowym opisem pod LLM/agentic AI.",
+    "Wczorajsza board-first karta BigTime Senior AI Developer with LLM Orchestration, Intelligent Knowledge Platform nie wygląda już jak stabilna, odrębna oferta BigTime: bieżące publiczne źródła i kanoniczna strona DataArt wskazują na tę samą rodzinę ról DataArt, więc dedup trzeba prowadzić po stronie DataArt, nie BigTime.",
+    "Oficjalna strona Holisticon Connect ML Software Engineer jest publicznie dostępna i dobrze pasuje do scope’u, ale pokazuje Publication date: 4 May 2026 oraz Application deadline: 22 May 2026, podczas gdy publiczny mirror Just Join IT nadal jest live. To ważny nowy sygnał, ale jeszcze nie wystarczająco czysty, by traktować go jak pewne aktywne otwarcie."
+  ],
+  "risks": [
+    "Kilka najmocniejszych nowych sygnałów nadal jest board-first: Sigmoidal, Upvanta, Pretius, Vazco, XTB i EPAM GenAI Ops, więc URL-e, city mirrors i copy ofert mogą szybko dryfować.",
+    "DataArt AI Developer wygląda bardzo dobrze merytorycznie, ale publiczne surface’y nie są jeszcze idealnie spójne co do metadanych czasu publikacji i ważności.",
+    "Holisticon Connect ML Software Engineer ma istotny konflikt official-vs-board wokół deadline’u, więc nie należy jeszcze traktować tej karty jako jednoznacznie aktywnej."
+  ],
+  "recommendedActions": [
+    "Re-check w następnej rundzie: Sigmoidal, DataArt AI Developer, Pretius, Upvanta, EPAM GenAI Ops, Vazco Senior Full Stack & AI Developer i XTB.",
+    "Pilnuj, czy BigTime utrzyma tylko Team Lead, Software Engineer, a rodzina Senior AI Developer with LLM Orchestration... pozostanie już jednoznacznie przypisana do DataArt.",
+    "Jeśli Sigmoidal, Upvanta, Pretius albo Vazco pokażą bogatsze publiczne strony careers, podmień board-first źródła na kanoniczne."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Wrocław AI/ML board",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: all-locations AI/ML board",
+      "url": "https://justjoin.it/job-offers/all-locations/ai",
+      "status": "checked"
+    },
+    {
+      "title": "No Fluff Jobs: Wrocław AI/ML board",
+      "url": "https://nofluffjobs.com/pl/wroclaw/artificial-intelligence",
+      "status": "checked"
+    },
+    {
+      "title": "Holisticon official ML Software Engineer page",
+      "url": "https://holisticon.pl/career/openings/pl/781-ml-software-engineer/",
+      "status": "checked"
+    },
+    {
+      "title": "DataArt official Senior AI Developer with LLM Orchestration, Intelligent Knowledge Platform",
+      "url": "https://www.dataart.team/vacancies/ml00159",
+      "status": "checked"
+    }
+  ]
+}

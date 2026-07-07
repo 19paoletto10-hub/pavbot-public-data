@@ -34,6 +34,7 @@
 		3FDB992D0B671821332576C5 /* PavbotDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36E99E399CB1D97AF718704 /* PavbotDesign.swift */; };
 		40B4BF7CBB93B97B5C874B51 /* AudioTimelineControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55587551EFC7B8A1660D54 /* AudioTimelineControls.swift */; };
 		43ED2F7B04F61F69390FB323 /* DailyWeatherReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D898746D5C1A3322B93542A /* DailyWeatherReport.swift */; };
+		AA12D3C44F6E2D5AB1C0BFA7 /* DailyWisdom.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5F3E0B2A6C8D9F1E4A8B2C1 /* DailyWisdom.swift */; };
 		4637FC97A6B377972B57C833 /* PDFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B73CD8205618D4A87B1004E /* PDFKit.framework */; };
 		4DC2D8DBD82ADA1FDB45F449 /* TemperatureTimelineChartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C30B4B3DD86228A8D3A7EE26 /* TemperatureTimelineChartModel.swift */; };
 		4DCD7042F46AE9A83D5B4A1D /* AccessibilityShowcaseFeature.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86A694DE2D0257318C284EB /* AccessibilityShowcaseFeature.swift */; };
@@ -41,6 +42,7 @@
 		597607DDD3CE7120DD479003 /* PavbotManifestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC573E4A2BA15F1C009018C /* PavbotManifestTests.swift */; };
 		5DDB42A0B03C04EFF52CDFEA /* PavbotRootLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11093FC02461B89D108DDFF7 /* PavbotRootLayout.swift */; };
 		5E84671285CAA3787BDE375D /* PavbotAudioActivityAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11D61FC4BF12BB3ED862A233 /* PavbotAudioActivityAttributes.swift */; };
+		6FA1C7A6D9E4C8B2F7D3A90B /* CloudKitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8F7D9C2B4E1A6F2D3C9B80D /* CloudKitService.swift */; };
 		62AFE83484AB7148EAB2645B /* TopicReportPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21FF1047640A421DB6DCAC2C /* TopicReportPackage.swift */; };
 		66504F7F205137ECCC1AFD58 /* ArtifactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F397497A364A4766EB8EEA6A /* ArtifactDetailView.swift */; };
 		6791D48AF0F76769404465A8 /* JobsReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AEE41E2B0AF8E61BF26451D /* JobsReport.swift */; };
@@ -156,6 +158,7 @@
 		77B21209E7330AD40BCFE094 /* ManifestURLValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestURLValidator.swift; sourceTree = "<group>"; };
 		7B73CD8205618D4A87B1004E /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
 		7D898746D5C1A3322B93542A /* DailyWeatherReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherReport.swift; sourceTree = "<group>"; };
+		C5F3E0B2A6C8D9F1E4A8B2C1 /* DailyWisdom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWisdom.swift; sourceTree = "<group>"; };
 		8AEE41E2B0AF8E61BF26451D /* JobsReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsReport.swift; sourceTree = "<group>"; };
 		8F396F2F4643AF33AA98E40B /* TodayHumorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayHumorService.swift; sourceTree = "<group>"; };
 		909EEC2353A43AC69F680BFB /* PodcastScriptSpeechService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PodcastScriptSpeechService.swift; sourceTree = "<group>"; };
@@ -165,6 +168,7 @@
 		9DFB8BD6470959155AB7F197 /* pavbot-manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "pavbot-manifest.json"; sourceTree = "<group>"; };
 		A73F520B216EFC770A384B40 /* ResearchIssuePresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchIssuePresentation.swift; sourceTree = "<group>"; };
 		A84A06551D40336B957E563E /* AppDefaultsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDefaultsClient.swift; sourceTree = "<group>"; };
+		A8F7D9C2B4E1A6F2D3C9B80D /* CloudKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitService.swift; sourceTree = "<group>"; };
 		A92C841A1F8FBA1CCC606BF7 /* TodayLiveTopicSpeechController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLiveTopicSpeechController.swift; sourceTree = "<group>"; };
 		ADB5F074E7D876C212469E3F /* PulseNewsDigest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseNewsDigest.swift; sourceTree = "<group>"; };
 		B05D0CE7DC57DAC9378884FD /* ResearchNewsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchNewsModels.swift; sourceTree = "<group>"; };
@@ -247,6 +251,7 @@
 			children = (
 				A84A06551D40336B957E563E /* AppDefaultsClient.swift */,
 				3F2AEF493B65E3050003DA5E /* ArtifactNotificationService.swift */,
+				A8F7D9C2B4E1A6F2D3C9B80D /* CloudKitService.swift */,
 				1B280FB52CD3B066BCB4E2FB /* AudioPlaybackService.swift */,
 				E3EB066F256FE9BE698F99D3 /* JobsDataService.swift */,
 				16A98EE648E0A4BF4F4598F0 /* JobsHistoryService.swift */,
@@ -333,6 +338,7 @@
 				D86A694DE2D0257318C284EB /* AccessibilityShowcaseFeature.swift */,
 				9D512854AD5B928D5701C914 /* AppAppearancePreference.swift */,
 				7D898746D5C1A3322B93542A /* DailyWeatherReport.swift */,
+				C5F3E0B2A6C8D9F1E4A8B2C1 /* DailyWisdom.swift */,
 				F139EEFBD6DE7999AD6C89D3 /* JobsBriefPresentation.swift */,
 				8AEE41E2B0AF8E61BF26451D /* JobsReport.swift */,
 				33E285B1693A0587B8744C9E /* MobileNewsMagazine.swift */,
@@ -557,6 +563,7 @@
 				993BB441D8B739BCC05A311D /* AutomationListView.swift in Sources */,
 				FC588F3E0BB5115EDDFE0FCF /* ContentView.swift in Sources */,
 				43ED2F7B04F61F69390FB323 /* DailyWeatherReport.swift in Sources */,
+				AA12D3C44F6E2D5AB1C0BFA7 /* DailyWisdom.swift in Sources */,
 				BF6147CDD4E1C41274A89BCD /* DiagnosticsView.swift in Sources */,
 				FA44D983217DB9EDE0295F84 /* JobsBriefPresentation.swift in Sources */,
 				0862424D4A2D15B6819EEF9D /* JobsDataService.swift in Sources */,
@@ -569,6 +576,7 @@
 				A52263532A7484AC40F87842 /* ManifestURLValidator.swift in Sources */,
 				B717F16BA894B3A95F509F7E /* MobileNewsMagazine.swift in Sources */,
 				57E7AA24308615F3B6ADFC64 /* MobileNewsService.swift in Sources */,
+				6FA1C7A6D9E4C8B2F7D3A90B /* CloudKitService.swift in Sources */,
 				5E84671285CAA3787BDE375D /* PavbotAudioActivityAttributes.swift in Sources */,
 				6836313CFAC74E14470B8D99 /* PavbotConnectionDefaults.swift in Sources */,
 				3FDB992D0B671821332576C5 /* PavbotDesign.swift in Sources */,

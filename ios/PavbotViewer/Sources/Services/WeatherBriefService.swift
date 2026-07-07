@@ -3,11 +3,16 @@ import Observation
 
 protocol WeatherBriefFetching {
     func fetchLatestReport(from serverURL: URL, location: WeatherBriefLocation?) async throws -> DailyWeatherReport
+    func refreshReport(from serverURL: URL, location: WeatherBriefLocation?) async throws -> DailyWeatherReport
 }
 
 extension WeatherBriefFetching {
     func fetchLatestReport(from serverURL: URL) async throws -> DailyWeatherReport {
         try await fetchLatestReport(from: serverURL, location: nil)
+    }
+
+    func refreshReport(from serverURL: URL, location: WeatherBriefLocation?) async throws -> DailyWeatherReport {
+        try await fetchLatestReport(from: serverURL, location: location)
     }
 }
 
@@ -35,13 +40,102 @@ enum ManualWeatherLocationSettings {
     }
 }
 
+enum WeatherLocationPreference: Codable, Equatable {
+    case defaultWroclaw
+    case manual(WeatherBriefLocation)
+    case currentDeviceLocation
+
+    private enum CodingKeys: String, CodingKey {
+        case mode
+        case location
+    }
+
+    private enum Mode: String, Codable {
+        case defaultWroclaw
+        case manual
+        case currentDeviceLocation
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let mode = try container.decode(Mode.self, forKey: .mode)
+        switch mode {
+        case .defaultWroclaw:
+            self = .defaultWroclaw
+        case .manual:
+            self = .manual(try container.decode(WeatherBriefLocation.self, forKey: .location))
+        case .currentDeviceLocation:
+            self = .currentDeviceLocation
+        }
+    }
+
+    func encode(to encoder: Encoder) throws {
+        var container = encoder.container(keyedBy: CodingKeys.self)
+        switch self {
+        case .defaultWroclaw:
+            try container.encode(Mode.defaultWroclaw, forKey: .mode)
+        case .manual(let location):
+            try container.encode(Mode.manual, forKey: .mode)
+            try container.encode(location, forKey: .location)
+        case .currentDeviceLocation:
+            try container.encode(Mode.currentDeviceLocation, forKey: .mode)
+        }
+    }
+}
+
+enum WeatherLocationPreferenceSettings {
+    static let defaultsKey = "pavbot.weatherLocationPreference"
+
+    static func preference(defaults: UserDefaults = .standard) -> WeatherLocationPreference {
+        if let data = defaults.data(forKey: defaultsKey),
+           let preference = try? JSONDecoder().decode(WeatherLocationPreference.self, from: data) {
+            return preference
+        }
+
+        if let legacyLocation = ManualWeatherLocationSettings.location(defaults: defaults) {
+            return .manual(legacyLocation)
+        }
+
+        return .defaultWroclaw
+    }
+
+    static func save(_ preference: WeatherLocationPreference, defaults: UserDefaults = .standard) {
+        guard let data = try? JSONEncoder().encode(preference) else { return }
+        defaults.set(data, forKey: defaultsKey)
+
+        switch preference {
+        case .manual(let location):
+            ManualWeatherLocationSettings.save(location, defaults: defaults)
+        case .defaultWroclaw, .currentDeviceLocation:
+            ManualWeatherLocationSettings.clear(defaults: defaults)
+        }
+    }
+
+    static func currentLocationLabel(
+        defaults: UserDefaults = .standard,
+        reportCity: String?
+    ) -> String {
+        switch preference(defaults: defaults) {
+        case .defaultWroclaw:
+            return WeatherBriefLocation.fallback.city
+        case .manual(let location):
+            return location.city
+        case .currentDeviceLocation:
+            if let reportCity, !reportCity.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+                return "Bieżąca lokalizacja: \(reportCity)"
+            }
+            return "Bieżąca lokalizacja"
+        }
+    }
+}
+
 private enum WeatherBriefStoreError: LocalizedError, Equatable {
     case mismatchedLocation(expected: String, actual: String)
 
     var errorDescription: String? {
         switch self {
         case .mismatchedLocation(let expected, let actual):
-            "Serwer zwrócił raport dla lokalizacji \(actual), a wybrana lokalizacja to \(expected). Odśwież notifier i spróbuj ponownie."
+            "Open-Meteo zwróciło raport dla lokalizacji \(actual), a wybrana lokalizacja to \(expected). Odśwież lokalizację i spróbuj ponownie."
         }
     }
 }
@@ -63,23 +157,23 @@ final class WeatherBriefStore {
     private let cooldown: WeatherRefreshCooldown
     private let serverURLProvider: () -> URL?
     private let locationProvider: @MainActor (WeatherLocationMode) async throws -> WeatherBriefLocation?
-    private let manualLocationProvider: () -> WeatherBriefLocation?
+    private let locationPreferenceProvider: () -> WeatherLocationPreference
     @ObservationIgnored private let reloadGate = ReloadGate()
 
     init(
         client: any WeatherBriefFetching = WeatherBriefClient(),
         cache: WeatherBriefCache = WeatherBriefCache(),
         cooldown: WeatherRefreshCooldown = WeatherRefreshCooldown(),
-        serverURLProvider: @escaping () -> URL? = { NotificationServerSettings.serverURL },
+        serverURLProvider: @escaping () -> URL? = { WeatherBriefClient.openMeteoBaseURL },
         locationProvider: @MainActor @escaping (WeatherLocationMode) async throws -> WeatherBriefLocation? = { _ in nil },
-        manualLocationProvider: @escaping () -> WeatherBriefLocation? = { ManualWeatherLocationSettings.location() }
+        locationPreferenceProvider: @escaping () -> WeatherLocationPreference = { WeatherLocationPreferenceSettings.preference() }
     ) {
         self.client = client
         self.cache = cache
         self.cooldown = cooldown
         self.serverURLProvider = serverURLProvider
         self.locationProvider = locationProvider
-        self.manualLocationProvider = manualLocationProvider
+        self.locationPreferenceProvider = locationPreferenceProvider
         self.report = cache.load()
         self.manualRefreshRetryAt = nil
         if report != nil {
@@ -100,27 +194,14 @@ final class WeatherBriefStore {
     }
 
     func refreshSelectedLocation(minimumInterval: TimeInterval = 0) async {
-        await loadLatest(minimumInterval: minimumInterval, locationMode: .useIfAuthorized)
+        await refreshLatest(minimumInterval: minimumInterval, location: nil)
     }
 
     private func loadLatest(minimumInterval: TimeInterval = 0, locationMode: WeatherLocationMode) async {
         guard beginRequest(key: "weather.latest", minimumInterval: minimumInterval) else { return }
         defer { finishRequest(key: "weather.latest") }
 
-        guard let serverURL = serverURLProvider() else {
-            cacheNotice = nil
-            state = report == nil
-                ? .failed(
-                    .custom(
-                        title: "Brak adresu notifiera",
-                        message: "Wpisz Notification server URL w ustawieniach, aby pobrać raport pogodowy.",
-                        actionTitle: "Otwórz ustawienia",
-                        systemImage: "cloud.sun.fill"
-                    )
-                )
-                : .loaded
-            return
-        }
+        let serverURL = serverURLProvider() ?? WeatherBriefClient.openMeteoBaseURL
 
         if report == nil {
             state = .loading
@@ -145,7 +226,7 @@ final class WeatherBriefStore {
                 error,
                 previousNotice: previousNotice,
                 requestedLocation: requestedLocation,
-                cachedMessage: "Pokazuję ostatni zapisany raport. Odświeżenie nie powiodło się."
+                cachedMessage: PavbotCacheNoticeCopy.refreshFailed(context: "ostatni raport pogodowy")
             )
         }
     }
@@ -154,20 +235,7 @@ final class WeatherBriefStore {
         guard beginRequest(key: "weather.refresh") else { return }
         defer { finishRequest(key: "weather.refresh") }
 
-        guard let serverURL = serverURLProvider() else {
-            cacheNotice = nil
-            state = report == nil
-                ? .failed(
-                    .custom(
-                        title: "Brak adresu notifiera",
-                        message: "Wpisz Notification server URL w ustawieniach, aby odświeżyć aktualną pogodę.",
-                        actionTitle: "Otwórz ustawienia",
-                        systemImage: "cloud.sun.fill"
-                    )
-                )
-                : .loaded
-            return
-        }
+        let serverURL = serverURLProvider() ?? WeatherBriefClient.openMeteoBaseURL
 
         if report == nil {
             state = .loading
@@ -179,13 +247,13 @@ final class WeatherBriefStore {
             if let location {
                 resolvedLocation = location
             } else {
-                resolvedLocation = await resolvedWeatherLocation(mode: .useIfAuthorized)
+                resolvedLocation = await resolvedWeatherLocation(mode: .none)
             }
             requestedLocation = resolvedLocation
             if let resolvedLocation {
                 locationNotice = Self.loadingNotice(for: resolvedLocation)
             }
-            let loadedReport = try await client.fetchLatestReport(from: serverURL, location: resolvedLocation)
+            let loadedReport = try await client.refreshReport(from: serverURL, location: resolvedLocation)
             try Self.validate(loadedReport, matches: resolvedLocation)
             report = loadedReport
             cache.save(loadedReport)
@@ -194,11 +262,53 @@ final class WeatherBriefStore {
             cacheNotice = nil
             state = .loaded
         } catch {
+            manualRefreshRetryAt = Self.manualRefreshRetryAt(from: error)
             handleWeatherLoadFailure(
                 error,
                 previousNotice: previousNotice,
                 requestedLocation: requestedLocation,
-                cachedMessage: "Pokazuję ostatni zapisany raport. Odświeżenie aktualnej pogody nie powiodło się."
+                cachedMessage: PavbotCacheNoticeCopy.refreshFailed(context: "ostatni raport pogodowy")
+            )
+        }
+    }
+
+    private func refreshLatest(minimumInterval: TimeInterval = 0, location: WeatherBriefLocation?) async {
+        guard beginRequest(key: "weather.refresh", minimumInterval: minimumInterval) else { return }
+        defer { finishRequest(key: "weather.refresh") }
+
+        let serverURL = serverURLProvider() ?? WeatherBriefClient.openMeteoBaseURL
+
+        if report == nil {
+            state = .loading
+        }
+        let previousNotice = locationNotice
+        var requestedLocation: WeatherBriefLocation?
+        do {
+            let resolvedLocation: WeatherBriefLocation?
+            if let location {
+                resolvedLocation = location
+            } else {
+                resolvedLocation = await resolvedWeatherLocation(mode: .none)
+            }
+            requestedLocation = resolvedLocation
+            if let resolvedLocation {
+                locationNotice = Self.loadingNotice(for: resolvedLocation)
+            }
+            let loadedReport = try await client.refreshReport(from: serverURL, location: resolvedLocation)
+            try Self.validate(loadedReport, matches: resolvedLocation)
+            report = loadedReport
+            cache.save(loadedReport)
+            locationNotice = Self.successNotice(for: resolvedLocation, report: loadedReport, currentNotice: locationNotice)
+            manualRefreshRetryAt = nil
+            cacheNotice = nil
+            state = .loaded
+        } catch {
+            manualRefreshRetryAt = Self.manualRefreshRetryAt(from: error)
+            handleWeatherLoadFailure(
+                error,
+                previousNotice: previousNotice,
+                requestedLocation: requestedLocation,
+                cachedMessage: PavbotCacheNoticeCopy.refreshFailed(context: "ostatni raport pogodowy")
             )
         }
     }
@@ -217,15 +327,23 @@ final class WeatherBriefStore {
     }
 
     private func resolvedWeatherLocation(mode: WeatherLocationMode) async -> WeatherBriefLocation? {
-        if let manualLocation = manualLocationProvider() {
-            locationNotice = Self.notice(for: manualLocation)
-            return manualLocation
+        if mode == .none {
+            switch locationPreferenceProvider() {
+            case .defaultWroclaw:
+                locationNotice = Self.notice(for: .fallback)
+                return nil
+            case .manual(let manualLocation):
+                locationNotice = Self.notice(for: manualLocation)
+                return manualLocation
+            case .currentDeviceLocation:
+                return await currentDeviceLocation(mode: .useIfAuthorized)
+            }
         }
 
-        guard mode != .none else {
-            locationNotice = Self.notice(for: .fallback)
-            return nil
-        }
+        return await currentDeviceLocation(mode: mode)
+    }
+
+    private func currentDeviceLocation(mode: WeatherLocationMode) async -> WeatherBriefLocation? {
         do {
             let location = try await locationProvider(mode)
             locationNotice = Self.notice(for: location ?? .fallback)
@@ -335,7 +453,7 @@ final class WeatherBriefStore {
         if let requestedLocation {
             return .custom(
                 title: "Nie udało się pobrać prognozy dla \(requestedLocation.city)",
-                message: "Sprawdź połączenie z notifierem i spróbuj ponownie. Szczegóły: \(error.localizedDescription)",
+                message: "Sprawdź połączenie z Open-Meteo i spróbuj ponownie. Szczegóły: \(error.localizedDescription)",
                 actionTitle: "Spróbuj ponownie",
                 systemImage: "cloud.sun.fill",
                 tint: .blue
@@ -343,6 +461,14 @@ final class WeatherBriefStore {
         }
 
         return .network(error, context: .weather)
+    }
+
+    private static func manualRefreshRetryAt(from error: Error) -> Date? {
+        if let clientError = error as? WeatherBriefClient.ClientError,
+           case .refreshLocked(let retryAt) = clientError {
+            return retryAt
+        }
+        return nil
     }
 
     private func beginRequest(key: String, minimumInterval: TimeInterval = 0) -> Bool {
@@ -408,6 +534,8 @@ struct WeatherRefreshCooldown {
 }
 
 struct WeatherBriefClient: WeatherBriefFetching {
+    static let openMeteoBaseURL = URL(string: "https://api.open-meteo.com")!
+
     enum ClientError: LocalizedError {
         case invalidResponse
         case httpStatus(Int)
@@ -416,11 +544,9 @@ struct WeatherBriefClient: WeatherBriefFetching {
         var errorDescription: String? {
             switch self {
             case .invalidResponse:
-                "Serwer pogody zwrócił nieprawidłową odpowiedź."
+                "Open-Meteo zwróciło nieprawidłową odpowiedź."
             case .httpStatus(let status):
-                status == 404
-                    ? "Notifier wymaga aktualizacji Dockera. Przebuduj i uruchom ponownie pavbot-notifier."
-                    : "Serwer pogody zwrócił HTTP \(status)."
+                "Open-Meteo zwróciło HTTP \(status)."
             case .refreshLocked(let retryAt):
                 if let retryAt {
                     "Raport pogodowy można odświeżyć ponownie po \(retryAt.formatted(date: .omitted, time: .shortened))."
@@ -443,63 +569,66 @@ struct WeatherBriefClient: WeatherBriefFetching {
     var decoder: JSONDecoder = .pavbot
 
     func fetchLatestReport(from serverURL: URL, location: WeatherBriefLocation?) async throws -> DailyWeatherReport {
-        try await send(latestRequest(from: serverURL, location: location))
+        try await send(forecastRequest(for: location, forceRefresh: false), location: location)
     }
 
     func refreshReport(from serverURL: URL, location: WeatherBriefLocation?) async throws -> DailyWeatherReport {
-        try await send(refreshRequest(from: serverURL, location: location))
+        try await send(forecastRequest(for: location, forceRefresh: true), location: location)
     }
 
-    func latestRequest(from serverURL: URL, location: WeatherBriefLocation?) throws -> URLRequest {
-        try request(
-            from: serverURL,
-            pathComponents: ["v1", "weather", "daily", "latest"],
-            method: "GET",
-            location: location
-        )
-    }
-
-    func refreshRequest(from serverURL: URL, location: WeatherBriefLocation?) throws -> URLRequest {
-        try request(
-            from: serverURL,
-            pathComponents: ["v1", "weather", "daily", "refresh"],
-            method: "POST",
-            location: location
-        )
-    }
-
-    private func request(
-        from serverURL: URL,
-        pathComponents: [String],
-        method: String,
-        location: WeatherBriefLocation?
-    ) throws -> URLRequest {
-        let endpoint = pathComponents.reduce(serverURL) { partialURL, component in
-            partialURL.appendingPathComponent(component)
-        }
+    func forecastRequest(for location: WeatherBriefLocation?, forceRefresh: Bool) throws -> URLRequest {
+        let resolvedLocation = location ?? .fallback
+        let endpoint = Self.openMeteoBaseURL
+            .appendingPathComponent("v1")
+            .appendingPathComponent("forecast")
         guard var components = URLComponents(url: endpoint, resolvingAgainstBaseURL: false) else {
             throw ClientError.invalidResponse
         }
-        if let location {
-            components.queryItems = [
-                URLQueryItem(name: "lat", value: Self.coordinateString(location.latitude)),
-                URLQueryItem(name: "lon", value: Self.coordinateString(location.longitude)),
-                URLQueryItem(name: "city", value: location.city)
-            ]
-        }
+        components.queryItems = [
+            URLQueryItem(name: "latitude", value: Self.coordinateString(resolvedLocation.latitude)),
+            URLQueryItem(name: "longitude", value: Self.coordinateString(resolvedLocation.longitude)),
+            URLQueryItem(name: "timezone", value: "auto"),
+            URLQueryItem(name: "current", value: [
+                "temperature_2m",
+                "apparent_temperature",
+                "relative_humidity_2m",
+                "weather_code",
+                "wind_speed_10m"
+            ].joined(separator: ",")),
+            URLQueryItem(name: "hourly", value: [
+                "temperature_2m",
+                "precipitation_probability",
+                "precipitation",
+                "rain",
+                "showers",
+                "snowfall"
+            ].joined(separator: ",")),
+            URLQueryItem(name: "daily", value: [
+                "weather_code",
+                "temperature_2m_max",
+                "temperature_2m_min",
+                "sunrise",
+                "sunset",
+                "precipitation_sum",
+                "precipitation_probability_max"
+            ].joined(separator: ","))
+        ]
         guard let url = components.url else {
             throw ClientError.invalidResponse
         }
 
-        var request = URLRequest(url: url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData)
-        request.httpMethod = method
+        var request = URLRequest(
+            url: url,
+            cachePolicy: forceRefresh ? .reloadIgnoringLocalAndRemoteCacheData : .reloadIgnoringLocalAndRemoteCacheData
+        )
+        request.httpMethod = "GET"
         request.setValue("no-cache", forHTTPHeaderField: "Cache-Control")
         request.setValue("no-cache", forHTTPHeaderField: "Pragma")
         request.timeoutInterval = 12
         return request
     }
 
-    private func send(_ request: URLRequest) async throws -> DailyWeatherReport {
+    private func send(_ request: URLRequest, location: WeatherBriefLocation?) async throws -> DailyWeatherReport {
         let (data, response) = try await session.data(for: request)
         guard let httpResponse = response as? HTTPURLResponse else {
             throw ClientError.invalidResponse
@@ -512,7 +641,8 @@ struct WeatherBriefClient: WeatherBriefFetching {
         guard (200..<300).contains(httpResponse.statusCode) else {
             throw ClientError.httpStatus(httpResponse.statusCode)
         }
-        return try decoder.decode(DailyWeatherReport.self, from: data)
+        let forecast = try decoder.decode(OpenMeteoForecastResponse.self, from: data)
+        return try forecast.dailyWeatherReport(location: location ?? .fallback)
     }
 
     private static func coordinateString(_ value: Double) -> String {
@@ -520,6 +650,257 @@ struct WeatherBriefClient: WeatherBriefFetching {
         return text
             .replacingOccurrences(of: #"0+$"#, with: "", options: .regularExpression)
             .replacingOccurrences(of: #"\.$"#, with: "", options: .regularExpression)
+    }
+}
+
+private struct OpenMeteoForecastResponse: Decodable {
+    let current: Current?
+    let currentUnits: CurrentUnits?
+    let hourly: Hourly?
+    let hourlyUnits: HourlyUnits?
+    let daily: Daily?
+    let dailyUnits: DailyUnits?
+
+    enum CodingKeys: String, CodingKey {
+        case current
+        case currentUnits = "current_units"
+        case hourly
+        case hourlyUnits = "hourly_units"
+        case daily
+        case dailyUnits = "daily_units"
+    }
+
+    struct Current: Decodable {
+        let time: String?
+        let temperature: Double?
+        let apparentTemperature: Double?
+        let relativeHumidity: Int?
+        let weatherCode: Int?
+        let windSpeed: Double?
+
+        enum CodingKeys: String, CodingKey {
+            case time
+            case temperature = "temperature_2m"
+            case apparentTemperature = "apparent_temperature"
+            case relativeHumidity = "relative_humidity_2m"
+            case weatherCode = "weather_code"
+            case windSpeed = "wind_speed_10m"
+        }
+    }
+
+    struct CurrentUnits: Decodable {
+        let temperature: String?
+        let windSpeed: String?
+
+        enum CodingKeys: String, CodingKey {
+            case temperature = "temperature_2m"
+            case windSpeed = "wind_speed_10m"
+        }
+    }
+
+    struct Hourly: Decodable {
+        let time: [String]
+        let temperature: [Double]
+        let precipitationProbability: [Int]?
+        let precipitation: [Double]?
+        let rain: [Double]?
+        let showers: [Double]?
+        let snowfall: [Double]?
+
+        enum CodingKeys: String, CodingKey {
+            case time
+            case temperature = "temperature_2m"
+            case precipitationProbability = "precipitation_probability"
+            case precipitation
+            case rain
+            case showers
+            case snowfall
+        }
+    }
+
+    struct HourlyUnits: Decodable {
+        let temperature: String?
+        let precipitation: String?
+
+        enum CodingKeys: String, CodingKey {
+            case temperature = "temperature_2m"
+            case precipitation
+        }
+    }
+
+    struct Daily: Decodable {
+        let time: [String]
+        let weatherCode: [Int]?
+        let temperatureMax: [Double]?
+        let temperatureMin: [Double]?
+        let sunrise: [String]?
+        let sunset: [String]?
+        let precipitationSum: [Double]?
+        let precipitationProbabilityMax: [Int]?
+
+        enum CodingKeys: String, CodingKey {
+            case time
+            case weatherCode = "weather_code"
+            case temperatureMax = "temperature_2m_max"
+            case temperatureMin = "temperature_2m_min"
+            case sunrise
+            case sunset
+            case precipitationSum = "precipitation_sum"
+            case precipitationProbabilityMax = "precipitation_probability_max"
+        }
+    }
+
+    struct DailyUnits: Decodable {
+        let temperatureMax: String?
+        let precipitationSum: String?
+
+        enum CodingKeys: String, CodingKey {
+            case temperatureMax = "temperature_2m_max"
+            case precipitationSum = "precipitation_sum"
+        }
+    }
+
+    func dailyWeatherReport(location: WeatherBriefLocation) throws -> DailyWeatherReport {
+        guard let day = daily?.time.first else {
+            throw WeatherBriefClient.ClientError.invalidResponse
+        }
+        let weatherCode = current?.weatherCode ?? daily?.weatherCode?.first ?? 0
+        let condition = Self.conditionLabel(for: weatherCode)
+        let temperatureUnit = currentUnits?.temperature ?? dailyUnits?.temperatureMax ?? "°C"
+        let precipitationUnit = dailyUnits?.precipitationSum ?? hourlyUnits?.precipitation ?? "mm"
+        let windUnit = currentUnits?.windSpeed ?? "km/h"
+        let generatedAt = ISO8601DateFormatter().string(from: Date())
+        let currentTemperature = current?.temperature
+        let minTemperature = daily?.temperatureMin?.first
+        let maxTemperature = daily?.temperatureMax?.first
+        let precipitationProbability = daily?.precipitationProbabilityMax?.first ?? hourly?.precipitationProbability?.max() ?? 0
+        let precipitationTotal = daily?.precipitationSum?.first
+
+        return DailyWeatherReport(
+            id: "\(Self.slug(location.city))-\(day)",
+            city: location.city,
+            date: day,
+            weekday: Self.weekday(for: day),
+            generatedAt: generatedAt,
+            nameDays: [],
+            headline: "\(location.city): \(condition.lowercased()) i \(Self.temperatureText(currentTemperature, unit: temperatureUnit))",
+            summary: "\(Self.weekday(for: day).capitalized), \(day). \(condition). Dane z Open-Meteo dla lokalizacji \(location.city).",
+            recommendation: Self.recommendation(probability: precipitationProbability),
+            temperature: DailyWeatherTemperature(
+                current: currentTemperature,
+                apparent: current?.apparentTemperature,
+                min: minTemperature,
+                max: maxTemperature,
+                unit: temperatureUnit
+            ),
+            conditions: DailyWeatherConditions(code: weatherCode, label: condition),
+            precipitation: DailyWeatherPrecipitation(
+                probability: precipitationProbability,
+                total: precipitationTotal,
+                unit: precipitationUnit
+            ),
+            wind: DailyWeatherWind(speed: current?.windSpeed, unit: windUnit),
+            humidity: current?.relativeHumidity ?? 0,
+            sunrise: daily?.sunrise?.first,
+            sunset: daily?.sunset?.first,
+            source: "Open-Meteo Forecast API",
+            hourlyTemperature: hourlyTemperature(unit: temperatureUnit),
+            temperatureTimeline: hourlyTemperature(unit: temperatureUnit),
+            hourlyPrecipitation: hourlyPrecipitation(unit: precipitationUnit),
+            precipitationTimeline: hourlyPrecipitation(unit: precipitationUnit)
+        )
+    }
+
+    private func hourlyTemperature(unit: String) -> [DailyWeatherHourlyTemperature] {
+        guard let hourly else { return [] }
+        return hourly.time.enumerated().compactMap { index, time in
+            guard index < hourly.temperature.count else { return nil }
+            return DailyWeatherHourlyTemperature(time: time, temperature: hourly.temperature[index], unit: unit)
+        }
+    }
+
+    private func hourlyPrecipitation(unit: String) -> [DailyWeatherHourlyPrecipitation] {
+        guard let hourly else { return [] }
+        return hourly.time.enumerated().map { index, time in
+            let probability = hourly.precipitationProbability?[safe: index] ?? 0
+            let amount = hourly.precipitation?[safe: index] ?? 0
+            let rain = hourly.rain?[safe: index] ?? 0
+            let showers = hourly.showers?[safe: index] ?? 0
+            let snowfall = hourly.snowfall?[safe: index] ?? 0
+            return DailyWeatherHourlyPrecipitation(
+                time: time,
+                probability: probability,
+                amount: amount,
+                rain: rain,
+                showers: showers,
+                snowfall: snowfall,
+                kind: Self.precipitationKind(rain: rain, showers: showers, snowfall: snowfall, probability: probability),
+                unit: unit
+            )
+        }
+    }
+
+    private static func conditionLabel(for code: Int) -> String {
+        switch code {
+        case 0: "Bezchmurnie"
+        case 1: "Głównie bezchmurnie"
+        case 2: "Częściowe zachmurzenie"
+        case 3: "Pochmurno"
+        case 45, 48: "Mgła"
+        case 51, 53, 55: "Mżawka"
+        case 61, 63, 65: "Deszcz"
+        case 66, 67: "Marznący deszcz"
+        case 71, 73, 75, 77: "Śnieg"
+        case 80, 81, 82: "Przelotne opady"
+        case 85, 86: "Przelotny śnieg"
+        case 95, 96, 99: "Burza"
+        default: "Warunki zmienne"
+        }
+    }
+
+    private static func precipitationKind(
+        rain: Double,
+        showers: Double,
+        snowfall: Double,
+        probability: Int
+    ) -> WeatherPrecipitationKind {
+        if snowfall > 0, rain > 0 || showers > 0 { return .mixed }
+        if snowfall > 0 { return .snow }
+        if rain > 0 || showers > 0 { return .rain }
+        return probability >= 20 ? .possible : .possible
+    }
+
+    private static func recommendation(probability: Int) -> String {
+        probability >= 40
+            ? "Na dziś: miej pod ręką parasol albo kurtkę przeciwdeszczową."
+            : "Na dziś: dzień powinien obyć się bez większych opadów."
+    }
+
+    private static func weekday(for day: String) -> String {
+        guard let date = DateFormatter.pavbotDay.date(from: day) else { return day }
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.locale = Locale(identifier: "pl_PL")
+        formatter.dateFormat = "EEEE"
+        return formatter.string(from: date)
+    }
+
+    private static func temperatureText(_ value: Double?, unit: String) -> String {
+        guard let value else { return "--\(unit)" }
+        return value.rounded() == value ? "\(Int(value))\(unit)" : String(format: "%.1f%@", value, unit)
+    }
+
+    private static func slug(_ value: String) -> String {
+        value
+            .folding(options: [.diacriticInsensitive, .caseInsensitive], locale: Locale(identifier: "pl_PL"))
+            .replacingOccurrences(of: #"[^a-z0-9]+"#, with: "-", options: .regularExpression)
+            .trimmingCharacters(in: CharacterSet(charactersIn: "-"))
+    }
+}
+
+private extension Array {
+    subscript(safe index: Int) -> Element? {
+        indices.contains(index) ? self[index] : nil
     }
 }
 

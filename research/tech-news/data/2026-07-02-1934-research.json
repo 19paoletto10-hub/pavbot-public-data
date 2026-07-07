@@ -1,0 +1,418 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-02",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorne sprawdzenie jest materialną aktualizacją po porannym raporcie z 2026-07-02. Najważniejsza nowa warstwa to przejście od \"mamy modele\" do \"musimy wdrożyć AI w operacjach klienta\": Microsoft ogłosił Microsoft Frontier Company z inwestycją 2,5 mld USD i 6 tys. ekspertów, dwa dni po wątku AWS FDE. To ustawia forward-deployed AI jako nową linię konkurencji Big Tech, konsultingu i laboratoriów AI.",
+    "Druga warstwa to jeszcze mocniejsze powiązanie frontier AI z państwem. Guardian, powołując się na FT, opisał wczesną propozycję Sama Altmana, aby OpenAI oraz potencjalnie inne firmy AI przekazały rządowi USA 5 proc. udziałów przez publiczny fundusz. Równolegle Altman promuje amerykańsko-led forum standardów AI. To pogłębia wczorajszy i poranny wątek access gating, export controls, ONZ i globalnego governance.",
+    "Trzecia warstwa to compute jako infrastruktura strategiczna: SoftBank tworzy SB Neo, amerykański neocloud z docelową skalą 10 GW, a Amazon Leo po nocnym starcie ma 396 satelitów i deklaruje ścieżkę do pierwszej usługi później w 2026 r. Po Together AI i raportach środowiskowych Amazon/Google temat \"kto ma energię, satelity i capacity\" stał się równie ważny jak \"kto ma najlepszy model\".",
+    "Czwarta warstwa to kontrola platform i zaufanie do ekosystemów. Oficjalny rollout Android Developer Verification zderzył się z ostrą reakcją F-Droid i ogromnym wątkiem HN; Product Hunt i HN nadal pokazują agentowe narzędzia, MCP cloud, AI data extraction, GTM agents i shared memory jako codzienną warstwę produktów. Dla polskiego odbiorcy dobrym kontrapunktem jest WP Tech o Orbital Compute: 100 tys. satelitów-data center brzmi futurystycznie, ale wynika z bardzo ziemskiego problemu mocy, chłodzenia i zezwoleń."
+  ],
+  "summaryBullets": [
+    "AI: Microsoft Frontier Company robi z wdrożeń AI nową linię frontu",
+    "Regulacje: OpenAI rozważa publiczny udział dla rządu USA",
+    "Infrastruktura: SoftBank SB Neo dokłada 10 GW do wyścigu o AI compute"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-02-1934-0-microsoft-frontier-company-robi-z-wdrozen-ai-nowa-linie-frontu-550b063f00",
+      "section": "AI",
+      "title": "Microsoft Frontier Company robi z wdrożeń AI nową linię frontu",
+      "standfirst": "Microsoft ogłosił Microsoft Frontier Company, jednostkę wartą 2,5 mld USD i opartą na 6000 ekspertów osadzanych u klientów. Firma chce zamienić enterprise AI z pilotażu w mierzalne systemy operacyjne.",
+      "whatHappened": "Microsoft uruchomił nową jednostkę do projektowania, wdrażania i ciągłego ulepszania systemów AI u klientów enterprise.",
+      "whyItMatters": "Big Tech konkuruje już nie tylko modelem i chmurą, ale też zdolnością wejścia w procesy klienta i dowiezienia ROI.",
+      "deeperAnalysis": [
+        "Poranny raport miał Together AI jako sygnał infrastruktury, a wcześniejszy wieczór AWS FDE jako sygnał wdrożeniowy. Microsoft łączy oba wątki z własną bazą klientów: jeśli Copilot, Azure AI i modele mają przestać być demonstracją, ktoś musi zbudować procesy, governance, integracje, pomiar ROI i stały cykl ulepszania.",
+        "Oficjalny blog Microsoftu mocno akcentuje ochronę danych i \"IQ\" klienta. To nie jest przypadkowe. Firmy boją się, że dostawca AI najpierw nauczy się ich procesów, a potem zamieni tę przewagę w generyczny produkt dla konkurentów. Microsoft próbuje więc sprzedać nie tylko inżynierów, ale też model zaufania: wdrażamy u was, mierzymy efekty, ale nie zjadamy waszej własności intelektualnej.",
+        "Najciekawszy podcastowo jest wyścig usługowy. AWS ma miliardowy FDE push, OpenAI i Anthropic mają własne deployment ventures, a Microsoft odpowiada skalą 6 tys. osób. To może zmienić rynek konsultingu, integratorów, partnerów cloud i pracy enterprise architectów: AI adoption staje się mniej zakupem narzędzia, a bardziej outsourcingiem części transformacji operacyjnej."
+      ],
+      "contextPoints": [
+        "Co się stało: Microsoft utworzył jednostkę do osadzania ekspertów AI u klientów.",
+        "Dlaczego ważne: rynek AI przesuwa się z model benchmarków do mierzalnych wdrożeń i ochrony procesów klienta.",
+        "Na co patrzeć dalej: pierwsze case studies, relacje z partnerami konsultingowymi, czy 2,5 mld USD to nowe środki, oraz wpływ na Copilot/Azure adoption."
+      ],
+      "sources": [
+        {
+          "title": "Microsoft",
+          "url": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/"
+        },
+        {
+          "title": "The Next Web",
+          "url": "https://thenextweb.com/news/microsoft-frontier-company-2-5-billion-ai-deployment"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Microsoft",
+        "Enterprise AI",
+        "FDE",
+        "Copilot",
+        "Big Tech"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-02-1934-1-openai-rozwaza-publiczny-udzial-dla-rzadu-usa-9ce8834752",
+      "section": "Regulacje",
+      "title": "OpenAI rozważa publiczny udział dla rządu USA",
+      "standfirst": "Guardian, za Financial Times, opisał wczesną propozycję, aby OpenAI przekazało 5 procent udziałów rządowi USA lub publicznemu funduszowi. Pomysł ma dzielić korzyści z AI i łagodzić polityczną presję wokół frontier labs.",
+      "whatHappened": "Według relacji FT/Guardian OpenAI prowadzi konceptualne rozmowy o publicznym wehikule udziałowym dla rządu USA.",
+      "whyItMatters": "Frontier AI zaczyna wyglądać jak strategiczny sektor, w którym państwo nie tylko reguluje, ale może też wejść kapitałowo.",
+      "deeperAnalysis": [
+        "To nie jest jeszcze transakcja ani obowiązujące prawo. Guardian podkreśla, że rozmowy są wczesne, a realizacja mogłaby wymagać decyzji Kongresu. Mimo to sam kierunek jest istotny: po access gating GPT-5.6, sporach eksportowych Anthropic i raporcie ONZ pojawia się kolejny model relacji państwo-lab: publiczny udział w ekonomicznym upside AI.",
+        "Altman od miesięcy próbuje opowiedzieć AI jako infrastrukturę o skali energii elektrycznej, a nie zwykły software. Public wealth fund ma być odpowiedzią na zarzut, że wartość wygenerowana przez AI trafi do garstki inwestorów i firm. Problemem będzie jednak niezależność regulacyjna: państwo jako współwłaściciel może mieć inne bodźce niż państwo jako neutralny nadzorca bezpieczeństwa, konkurencji i praw obywatelskich.",
+        "Dla polskiego słuchacza to mocny odcinek o \"nacjonalizacji upside\", bez udawania, że chodzi tylko o dobro publiczne. Jeżeli USA zbudują taki precedens, inne kraje mogą pytać, dlaczego mają kupować modele, chmurę i API bez udziału w korzyściach, ryzykach i standardach. To dobrze łączy się z ONZ, AI Act, polską ustawą AI i dyskusją o suwerenności technologicznej."
+      ],
+      "contextPoints": [
+        "Co się stało: media opisują pomysł 5 proc. udziału OpenAI dla rządu USA lub publicznego funduszu.",
+        "Dlaczego ważne: granica między regulacją, polityką przemysłową i finansowym udziałem państwa w AI zaczyna się zacierać.",
+        "Na co patrzeć dalej: stanowisko OpenAI, reakcję Kongresu, ewentualne podobne oczekiwania wobec Anthropic/Google/Meta i wpływ na IPO."
+      ],
+      "sources": [
+        {
+          "title": "Guardian",
+          "url": "https://www.theguardian.com/technology/2026/jul/02/openai-stake-us-government-ai-sam-altman"
+        },
+        {
+          "title": "Financial Times",
+          "url": "https://www.ft.com/content/7c803eab-8e80-4431-9a87-e943bf00e00b?syn-25a6b1a6=1"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/02/openai-proposed-donating-5-of-its-equity-to-a-us-sovereign-wealth-fund/"
+        },
+        {
+          "title": "TVN24",
+          "url": "https://tvn24.pl/biznes/tech/usa-bigtechy-pod-kontrola-rzadu-szef-openai-sam-altman-proponuje-nowy-model-wspolpracy-st9124495"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "USA",
+        "Regulacje",
+        "Sovereign wealth fund",
+        "Governance"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-02-1934-2-softbank-sb-neo-doklada-10-gw-do-wyscigu-o-ai-compute-cfc50a9e10",
+      "section": "Infrastruktura",
+      "title": "SoftBank SB Neo dokłada 10 GW do wyścigu o AI compute",
+      "standfirst": "SoftBank i SoftBank Group tworzą SB Neo, amerykański neocloud dla treningu i inferencji AI. Spółka ma docelowo używać infrastruktury AI w skali 10 GW.",
+      "whatHappened": "SoftBank zapowiedział amerykańską spółkę SB Neo, która ma oferować chipy i usługi cloud dla dużych firm oraz hyperscalerów.",
+      "whyItMatters": "Po Together AI i Meta compute cloud widać, że niezależna pojemność AI staje się strategicznym produktem sama w sobie.",
+      "deeperAnalysis": [
+        "SoftBank nie sprzedaje tu tylko kolejnej chmury. Oficjalny komunikat mówi o 10-gigawatowej skali energii i infrastruktury AI oraz o usługach dla dużych przedsiębiorstw, w tym hyperscalerów. To lokuje SB Neo w tym samym polu co neocloudy, firmy wynajmujące GPU, suwerenne AI factories i wewnętrzne klastry Big Tech.",
+        "Ważne jest też połączenie USA i Japonii. SoftBank chce wykorzystać doświadczenia z Infrinia AI Cloud OS w Japonii, ale uruchamia spółkę w Delaware, bo największy popyt i największe finansowanie AI compute są w Stanach. To kolejny sygnał, że infrastruktura AI zaczyna przypominać przemysł energetyczno-telekomunikacyjny: liczy się kapitał, prąd, działki, software orchestration i długie kontrakty.",
+        "Podcastowo warto zestawić SB Neo z porannym Together AI. Together sprzedaje open-model cloud i koszt inferencji, SoftBank sprzedaje wielkoskalową pojemność. W obu przypadkach model AI nie jest jedynym produktem: produktem jest pewność, że klient ma gdzie trenować i uruchamiać agenty, gdy rynek GPU oraz energia są przeciążone."
+      ],
+      "contextPoints": [
+        "Co się stało: SoftBank tworzy amerykański neocloud SB Neo z docelową skalą 10 GW.",
+        "Dlaczego ważne: compute capacity staje się osobnym frontem konkurencji obok modeli, aplikacji i regulacji.",
+        "Na co patrzeć dalej: pierwszych klientów, źródła energii, harmonogram FY2027, wpływ na CoreWeave/Nebius/Together AI i relacje z OpenAI."
+      ],
+      "sources": [
+        {
+          "title": "SoftBank",
+          "url": "https://group.softbank/en/news/press/20260702"
+        },
+        {
+          "title": "Techmeme River",
+          "url": "https://www.techmeme.com/river"
+        },
+        {
+          "title": "The Edge Markets / Bloomberg summary",
+          "url": "https://www.theedgemarkets.com/node/809183"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "SoftBank",
+        "Neocloud",
+        "AI chips",
+        "Data centers",
+        "Infrastruktura"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-02-1934-3-amazon-leo-zbliza-sie-do-pierwszej-uslugi-satelitarnej-43157404ee",
+      "section": "Infrastruktura",
+      "title": "Amazon Leo zbliża się do pierwszej usługi satelitarnej",
+      "standfirst": "Amazon po starcie LA-08 ma 396 satelitów Leo i deklaruje przejście z kampanii Atlas V na większe ładunki Vulcan. The Verge ocenia, że to próg do pierwszej usługi, ale nie do pełnej konkurencji ze Starlinkiem.",
+      "whatHappened": "Amazon wyniósł 29 satelitów i zakończył kampanię Atlas V dla Amazon Leo.",
+      "whyItMatters": "Satelitarna łączność wraca jako infrastruktura strategiczna dla konsumentów, firm, regionów słabo skomunikowanych i usług chmurowych.",
+      "deeperAnalysis": [
+        "Amazon Leo jest dobrym kontrapunktem do orbitalnych data centers: tu nie chodzi o przetwarzanie AI w kosmosie, tylko o realną sieć dostępową, która ma konkurować z dominacją SpaceX. Amazon podaje 396 satelitów po 14 misjach i zapowiada większe payloady na ULA Vulcan, co ma przyspieszyć deployment.",
+        "The Verge ostrożnie tonuje oczekiwania. Starlink startował z ograniczeniami, ale dziś ma ponad 10 tys. satelitów i dużo dojrzalszą usługę. Amazon może wejść z pierwszym pokryciem na wybranych szerokościach geograficznych, lecz początkowi użytkownicy muszą liczyć się z przerwami, ograniczoną pojemnością i stopniową poprawą wraz z kolejnymi startami.",
+        "Wątek podcastowy nie musi być kosmiczną ciekawostką. To jest infrastruktura platformowa: Amazon może łączyć Leo z AWS, logistyką, urządzeniami, klientami enterprise i regionami, gdzie światłowód albo 5G nie są opłacalne. W tle jest też zależność od rakiet konkurentów i problem, czy SpaceX pozostanie jedynym realnie globalnym graczem LEO."
+      ],
+      "contextPoints": [
+        "Co się stało: Amazon Leo osiągnął 396 satelitów po nocnym starcie 2 lipca 2026 r.",
+        "Dlaczego ważne: Amazon ma techniczny próg do startu usługi, ale jeszcze wieloletni dystans do skali Starlinka.",
+        "Na co patrzeć dalej: datę komercyjnej dostępności, terminale, ceny, jakość pierwszej usługi, starty Vulcan/New Glenn/Falcon 9 i kontrakty enterprise."
+      ],
+      "sources": [
+        {
+          "title": "Amazon",
+          "url": "https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-rocket-launch-progress-updates"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/science/960563/amazon-leo-service-tipping-point"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Amazon",
+        "Satelity",
+        "SpaceX",
+        "Internet",
+        "Łączność"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-02-1934-4-android-developer-verification-rozpala-spor-o-otwartosc-androida-7d0a2d91ff",
+      "section": "Cyber",
+      "title": "Android Developer Verification rozpala spór o otwartość Androida",
+      "standfirst": "Google potwierdza rollout Android Developer Verification od 30 września 2026 w czterech krajach, a F-Droid odpowiada ostrą krytyką. HN wyniósł temat do ponad 1300 punktów, pokazując silny opór społeczności open-source.",
+      "whatHappened": "Google wdraża weryfikację deweloperów dla certyfikowanych urządzeń Android, a F-Droid uznaje mechanizm za zagrożenie dla alternatywnych sklepów i sideloadingu.",
+      "whyItMatters": "To konflikt między bezpieczeństwem masowych użytkowników a prawem do instalowania niezależnego oprogramowania bez centralnej zgody Google.",
+      "deeperAnalysis": [
+        "Google przedstawia program jako ochronę przed scamami, malware i anonimowymi dystrybutorami złośliwych aplikacji. Z oficjalnego bloga wynika, że od 30 września startują Brazylia, Indonezja, Singapur i Tajlandia, a globalny rollout ma przyjść w 2027 r. Na urządzeniach z Androidem 8+ pojawia się usługa Android Developer Verifier, która sprawdza rejestrację aplikacji u zweryfikowanego dewelopera.",
+        "F-Droid widzi ten sam mechanizm jako platformowy gatekeeping. Problem dla repozytoriów open-source polega na tym, że wiele aplikacji jest budowanych i podpisywanych przez repozytorium, a autorzy mogą być pseudonimowi albo nie chcieć przekazywać Google swojej tożsamości prawnej. Nawet jeśli istnieje ADB albo \"advanced flow\", domyślna ścieżka instalacji może zostać podporządkowana centralnej rejestracji.",
+        "Tu nie ma prostego werdyktu bez pełnej analizy prawnej i technicznej. Dla podcastu lepsze jest pytanie: kto ma być trust rootem w mobilnym systemie operacyjnym? Google ma realny problem scam APK, ale społeczność ma realny problem z tym, że jedna firma kontroluje płynną instalację aplikacji na większości Androidów poza Chinami."
+      ],
+      "contextPoints": [
+        "Co się stało: Android Developer Verification ma zacząć obowiązywać w czterech krajach 30 września 2026 r.",
+        "Dlaczego ważne: otwartość Androida może zależeć nie od kodu źródłowego, lecz od domyślnego gatekeepera instalacji.",
+        "Na co patrzeć dalej: ścieżkę dla F-Droid, appeal process, retencję danych identity registry, reakcję UE/DMA i globalny rollout w 2027 r."
+      ],
+      "sources": [
+        {
+          "title": "Android Developers Blog",
+          "url": "https://android-developers.googleblog.com/2026/06/android-developer-verification.html"
+        },
+        {
+          "title": "Android Help",
+          "url": "https://support.google.com/android/answer/17065026"
+        },
+        {
+          "title": "F-Droid",
+          "url": "https://f-droid.org/en/2026/07/01/adv-malware.html"
+        },
+        {
+          "title": "The Hacker News",
+          "url": "https://thehackernews.com/2026/06/google-sets-sept-30-deadline-for.html"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=48755965"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Android",
+        "Google",
+        "F-Droid",
+        "Open source",
+        "Cyberbezpieczeństwo"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-02-1934-5-orbital-compute-pokazuje-skrajny-scenariusz-glodu-mocy-dla-ai-e4fcadb691",
+      "section": "Infrastruktura",
+      "title": "Orbital Compute pokazuje skrajny scenariusz głodu mocy dla AI",
+      "standfirst": "WP Tech opisał wniosek Orbital Compute o konstelację do 100 tysięcy satelitów-data center dla AI. To bardzo spekulacyjny projekt, ale dobrze pokazuje, jak moc i chłodzenie stają się narracją infrastrukturalną AI.",
+      "whatHappened": "Orbital Compute chce budować satelitarne centra danych dla AI, z deklarowanym docelowym rzędem 10 GW mocy.",
+      "whyItMatters": "Nawet jeśli projekt okaże się trudny technicznie, sam pomysł pokazuje, że ziemskie ograniczenia energetyczne są już główną barierą AI.",
+      "deeperAnalysis": [
+        "Orbital Compute jest ryzykownym tematem, bo między wnioskiem do FCC a realnym 100-tysięcznym systemem jest przepaść finansowa, techniczna i regulacyjna. WP Tech dobrze oddaje jednak sedno: startup próbuje sprzedać kosmos jako obejście problemów ziemskich data centers - braku mocy, działek, wody, zezwoleń i społecznego oporu.",
+        "Założenie brzmi prosto: w orbicie słoneczno-synchronicznej energia słoneczna jest bardziej przewidywalna, a chłodzenie można rozwiązywać radiacyjnie. Krytyka też jest prosta: radiacja ciepła w próżni jest wolna, elektronika ma problem z promieniowaniem kosmicznym, a masowe konstelacje dokładają ryzyko śmieci orbitalnych, interferencji i konfliktów z astronomią.",
+        "Podcastowo to dobry \"hype check\" po Amazon Leo i SoftBank SB Neo. Z jednej strony mamy realne satelity i realne 10 GW w planie neocloudu, z drugiej - projekty, które brzmią jak science fiction, ale wyrastają z tego samego rachunku: AI potrzebuje prądu i chłodzenia szybciej, niż lokalne społeczności i sieci energetyczne chcą je dostarczać."
+      ],
+      "contextPoints": [
+        "Co się stało: polskie WP Tech opisało projekt Orbital Compute i wniosek o wielką konstelację AI data centers.",
+        "Dlaczego ważne: skrajne projekty orbitalne pokazują realny stres infrastrukturalny AI na Ziemi.",
+        "Na co patrzeć dalej: dokumenty FCC, pierwsze demonstracje, finansowanie, krytykę astronomów, bezpieczeństwo orbitalne i niezależne oceny energetyczne."
+      ],
+      "sources": [
+        {
+          "title": "WP Tech",
+          "url": "https://tech.wp.pl/ambitny-projekt-100-tysiecy-satelitow-dla-sztucznej-inteligencji%2C7302949939603808a"
+        },
+        {
+          "title": "Orbital",
+          "url": "https://orbital.inc/"
+        },
+        {
+          "title": "TechCrunch o Orbital",
+          "url": "https://techcrunch.com/2026/06/09/how-an-e-scooter-founder-raised-5-million-to-build-space-data-centers/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "Orbital compute",
+        "Satelity",
+        "Data centers",
+        "Energia"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Microsoft Frontier Company i wyścig FDE",
+      "rationale": "Enterprise AI przestaje być zakupem narzędzia; Big Tech wysyła tysiące ludzi do procesów klienta, żeby dowieźć ROI i governance.",
+      "sourcesLabel": "Microsoft; TechCrunch; The Next Web"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI i 5 proc. udziału dla rządu USA",
+      "rationale": "Frontier AI zaczyna wyglądać jak sektor strategiczny, w którym państwo może chcieć udziału w upside, a nie tylko prawa do kontroli.",
+      "sourcesLabel": "Guardian; FT; TechCrunch; TVN24"
+    },
+    {
+      "priority": "High",
+      "title": "SoftBank SB Neo i 10 GW AI compute",
+      "rationale": "Neocloudy, energia i dostęp do chipów stają się osobnym produktem strategicznym obok modeli.",
+      "sourcesLabel": "SoftBank; Techmeme"
+    },
+    {
+      "priority": "Medium",
+      "title": "Amazon Leo kontra Starlink",
+      "rationale": "Amazon ma 396 satelitów i próg do pierwszej usługi, ale walka z przewagą SpaceX będzie wieloletnia.",
+      "sourcesLabel": "Amazon; The Verge"
+    },
+    {
+      "priority": "High",
+      "title": "Android Developer Verification i F-Droid",
+      "rationale": "Google sprzedaje weryfikację jako bezpieczeństwo, a open-source widzi centralny gatekeeping instalacji na Androidzie.",
+      "sourcesLabel": "Google; F-Droid; Hacker News; The Hacker News"
+    },
+    {
+      "priority": "Medium",
+      "title": "Orbital Compute i kosmiczne data centers",
+      "rationale": "Skrajny pomysł 100 tys. satelitów pokazuje, jak bardzo AI infrastruktura rozbija się o energię, chłodzenie i pozwolenia.",
+      "sourcesLabel": "WP Tech; Orbital; TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "MCP Cloud i Product Hunt agent stack",
+      "rationale": "Manufact, Context.dev, Needle i inne premiery pokazują, że MCP i agenty dostają warstwę deploymentu, danych i GTM.",
+      "sourcesLabel": "HN; Product Hunt; Manufact"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Microsoft Frontier Company",
+      "url": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/"
+    },
+    {
+      "title": "SoftBank SB Neo",
+      "url": "https://group.softbank/en/news/press/20260702"
+    },
+    {
+      "title": "Amazon Leo mission updates",
+      "url": "https://www.aboutamazon.com/news/innovation-at-amazon/project-kuiper-satellite-rocket-launch-progress-updates"
+    },
+    {
+      "title": "Android Developers Blog: developer verification",
+      "url": "https://android-developers.googleblog.com/2026/06/android-developer-verification.html"
+    },
+    {
+      "title": "Android Help: developer verification",
+      "url": "https://support.google.com/android/answer/17065026"
+    },
+    {
+      "title": "Orbital",
+      "url": "https://orbital.inc/"
+    },
+    {
+      "title": "Manufact MCP Cloud",
+      "url": "https://manufact.com/"
+    },
+    {
+      "title": "TechCrunch o Microsoft Frontier Company",
+      "url": "https://techcrunch.com/2026/07/02/microsoft-launches-its-own-ai-deployment-company-with-2-5-billion-commitment/"
+    },
+    {
+      "title": "The Next Web o Microsoft Frontier Company",
+      "url": "https://thenextweb.com/news/microsoft-frontier-company-2-5-billion-ai-deployment"
+    },
+    {
+      "title": "Guardian o propozycji 5 proc. udziału OpenAI dla rządu USA",
+      "url": "https://www.theguardian.com/technology/2026/jul/02/openai-stake-us-government-ai-sam-altman"
+    },
+    {
+      "title": "Financial Times: nagłówek i paywall o OpenAI",
+      "url": "https://www.ft.com/content/7c803eab-8e80-4431-9a87-e943bf00e00b?syn-25a6b1a6=1"
+    },
+    {
+      "title": "TechCrunch o propozycji OpenAI",
+      "url": "https://techcrunch.com/2026/07/02/openai-proposed-donating-5-of-its-equity-to-a-us-sovereign-wealth-fund/"
+    },
+    {
+      "title": "The Verge o Amazon Leo",
+      "url": "https://www.theverge.com/science/960563/amazon-leo-service-tipping-point"
+    },
+    {
+      "title": "The Hacker News o Android Developer Verification",
+      "url": "https://thehackernews.com/2026/06/google-sets-sept-30-deadline-for.html"
+    },
+    {
+      "title": "F-Droid o Android Developer Verifier",
+      "url": "https://f-droid.org/en/2026/07/01/adv-malware.html"
+    },
+    {
+      "title": "Techmeme River",
+      "url": "https://www.techmeme.com/river"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/news"
+    },
+    {
+      "title": "HN: Android Developer Verification",
+      "url": "https://news.ycombinator.com/item?id=48755965"
+    },
+    {
+      "title": "HN: Manufact MCP Cloud",
+      "url": "https://news.ycombinator.com/item?id=48762862"
+    },
+    {
+      "title": "Product Hunt homepage",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "old Reddit / r/technology",
+      "url": "https://old.reddit.com/r/technology/"
+    },
+    {
+      "title": "old Reddit / r/artificial",
+      "url": "https://old.reddit.com/r/artificial/"
+    },
+    {
+      "title": "WP Tech o Orbital Compute",
+      "url": "https://tech.wp.pl/ambitny-projekt-100-tysiecy-satelitow-dla-sztucznej-inteligencji%2C7302949939603808a"
+    },
+    {
+      "title": "TVN24 o propozycji OpenAI dla rządu USA",
+      "url": "https://tvn24.pl/biznes/tech/usa-bigtechy-pod-kontrola-rzadu-szef-openai-sam-altman-proponuje-nowy-model-wspolpracy-st9124495"
+    },
+    {
+      "title": "TVN24 o polskiej ustawie AI",
+      "url": "https://tvn24.pl/biznes/tech/sejmowa-komisja-zaakceptowala-projekt-ustawy-regulujacej-funkcjonowanie-systemow-ai-w-polsce-st9070776"
+    },
+    {
+      "title": "Business Insider Polska: AI Act i GPAI",
+      "url": "https://businessinsider.com.pl/technologie/nowe-technologie/sztuczna-inteligencja-pod-lupa-ue-nowe-zasady-gry-surowe-kary-i-walka-o-prawa/bkhxlb0"
+    }
+  ]
+}

@@ -2,6 +2,7 @@ import Foundation
 
 enum PavbotConnectionDefaults {
     static let manifestURLString = "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json"
+    static let cloudKitContainerIdentifier = "iCloud.com.paweltanski.pavbotviewer"
     static let notificationServerURLString = "https://notify.paweltanski.com"
     static let statusURLString = "https://notify.paweltanski.com/status"
 

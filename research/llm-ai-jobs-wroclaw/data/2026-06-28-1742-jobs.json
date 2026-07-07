@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-06-28",
+  "runTime": "17:42",
+  "executiveSummary": "Wieczorna runda przyniosła cztery nowe, mocne sygnały in-scope: YOUR ITEAMS Senior AI Engineer with .NET, cerebre Senior AI Engineer, Netguru AI Engineer i DEVAPO Python AI Engineer (GenAI). Najmocniejszy lead to YOUR ITEAMS, bo to direct-employer Pracuj.pl, jawne widełki, Whole Poland (remote work) oraz bardzo precyzyjny zakres wokół RAG, ewaluacji modeli i monitoringu jakości produkcyjnych LLM-ów. Do tego doszły dwie materialne aktualizacje wcześniej śledzonych ofert. Tooploox Senior AI Engineer ma teraz employer-posted, bogatszy publiczny detail z widełkami, RAG, LLM orchestration, MCP i doprecyzowaną polityką hybrydową. CodiLime przestał być tak niejednoznaczny geograficznie: publiczne strony CodiLime pokazują już wyraźnie wariant Poland · Fully Remote, choć ich układ URL-i nadal jest trochę niespójny.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior AI Engineer with .NET",
+      "company": "YOUR ITEAMS",
+      "location": "Whole Poland (remote work).",
+      "workMode": "Remote",
+      "compensation": "180-210 zł netto (+ VAT) / godz. B2B.",
+      "seniority": "Senior",
+      "fitSummary": "rola jest wprost o RAG, prompt engineering, ewaluacji modeli, wykrywaniu halucynacji, regresjach jakości i monitoringu LLM-ów na Azure AI Foundry.",
+      "whyInteresting": "to najbardziej kompletny i wiarygodny nowy sygnał tej rundy, z jawnymi widełkami i bardzo konkretnym opisem pracy produkcyjnej.",
+      "uncertainty": "niska; to direct-employer Pracuj.pl z precyzyjnym zakresem odpowiedzialności.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/senior-ai-engineer-with-net-warszawa%2Coferta%2C1004888376"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior AI Engineer",
+      "company": "cerebre",
+      "location": "100% remote z publicznie pokazanymi lokalizacjami obejmującymi Wrocław, Poznań, Kraków, Warszawę i Trójmiasto.",
+      "workMode": "Remote",
+      "compensation": "brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "publiczny opis obejmuje LLMs, RAG, AI agents, MCP, embeddings, vector databases, knowledge graph i produkcyjne systemy AI nad danymi inżynierskimi.",
+      "whyInteresting": "to jeden z najmocniejszych technicznie board-first leadów w całym temacie, bardzo daleki od generycznego \"AI Engineer\".",
+      "uncertainty": "średnia; rola jest publiczna i bogato opisana, ale na razie potwierdzona głównie przez Just Join IT.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/senior-ai-engineer-with-net-warszawa%2Coferta%2C1004888376"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "AI Engineer",
+      "company": "Netguru",
+      "location": "Remote, z listą biur obejmującą m.in. Wrocław.",
+      "workMode": "Remote",
+      "compensation": "12 000-19 200 PLN netto / mies. B2B lub 10 000-16 000 PLN brutto / mies. UoP.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "publiczny opis obejmuje Azure OpenAI, RAG, fine-tuning open-source modeli, agentic workflows, embeddings i vector databases.",
+      "whyInteresting": "to nowy remote-Poland sygnał z bardzo praktycznym stackiem oraz jawnymi widełkami B2B i UoP.",
+      "uncertainty": "średnia; publiczny detail jest mocny, ale nie znalazłem równie bogatej pierwszorzędnej strony careers Netguru dla tego samego ogłoszenia.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/senior-ai-engineer-with-net-warszawa%2Coferta%2C1004888376"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Python AI Engineer (GenAI)",
+      "company": "DEVAPO",
+      "location": "Remote, z publiczną listą lokalizacji obejmującą Wrocław.",
+      "workMode": "Remote",
+      "compensation": "120-180 PLN netto / godz. B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "opis obejmuje LLM, RAG, vector databases, embeddings, prompt engineering, multi-agent systems, LangChain, LlamaIndex, LangGraph, CrewAI, ewaluację AI i fine-tuning.",
+      "whyInteresting": "to wyraźnie bardziej hands-on i LLM-centryczna rola niż wcześniejsze, bardziej ogólne sygnały DEVAPO.",
+      "uncertainty": "średnia; to nadal board-first źródło, a DEVAPO ma już w indeksie pokrewną rolę AI / LLM Engineer, więc trzeba pilnować dedupu.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/senior-ai-engineer-with-net-warszawa%2Coferta%2C1004888376"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI",
+        "Python"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Senior AI Engineer",
+      "company": "Tooploox",
+      "location": "hybrydowo z bazą Wrocław, przy czym publiczny opis mówi, że można pracować zdalnie i pojawiać się w biurze few time a year we Wrocławiu lub Warszawie.",
+      "workMode": "Remote",
+      "compensation": "22 000-28 000 PLN + VAT / mies. B2B.",
+      "seniority": "Senior",
+      "fitSummary": "employer-posted detail pokazuje praktyczne LLM orchestration, zaawansowany RAG, tracing, monitoring, evale złożonych przepływów agentowych, MCP, vector databases i opcjonalne lokalne LLM-y.",
+      "whyInteresting": "to nie jest nowa oferta, ale publicznie stała się znacznie bogatsza i bardziej użyteczna do oceny.",
+      "uncertainty": "niska do średniej; to employer-posted No Fluff Jobs, ale wcześniejszy oficjalny listing Tooploox był uboższy i inaczej opisywał model pracy.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/senior-ai-engineer-with-net-warszawa%2Coferta%2C1004888376"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Mid/Senior AI engineer with networking experience",
+      "company": "CodiLime",
+      "location": "publiczne strony CodiLime pokazują już wariant Poland · Fully Remote.",
+      "workMode": "Remote",
+      "compensation": "16 000-25 000 PLN + VAT B2B.",
+      "seniority": "Senior",
+      "fitSummary": "publiczny opis obejmuje LLM-driven workflows, LangChain, LangGraph, structured tools, semantic search, vector databases, ewaluację, LLM-as-a-judge i MCP-like tools.",
+      "whyInteresting": "technicznie nadal jest to jeden z najciekawszych sygnałów na styku LLM, narzędzi agentowych i domeny networkingowej, ale ważniejsza w tej rundzie jest poprawa jakości źródła.",
+      "uncertainty": "średnia; listing page 7957689 pokazuje wariant Brazil, a openings page i application page wskazują Poland, więc geografia jest już znacznie lepsza niż rano, ale układ URL-i pozostaje trochę chaotyczny.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/senior-ai-engineer-with-net-warszawa%2Coferta%2C1004888376"
+      ],
+      "tags": [
+        "LLM",
+        "AWS"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodano cztery nowe role do shortlisty: YOUR ITEAMS Senior AI Engineer with .NET, cerebre Senior AI Engineer, Netguru AI Engineer i DEVAPO Python AI Engineer (GenAI).",
+    "Tooploox Senior AI Engineer dostał materialny upgrade jakości publicznego źródła: employer-posted szczegóły, jawne widełki oraz konkretny stack wokół RAG, ewaluacji i MCP.",
+    "CodiLime Mid/Senior AI engineer with networking experience ma teraz wyraźne publiczne potwierdzenie wariantu Poland · Fully Remote, więc poranny znak zapytania przy geografii osłabł.",
+    "Nie wykryto materialnej zmiany w śledzonych rano ofertach People Trust, Cyclad, IN4GE Senior GCP AI Developer, SOFTWARELY ani SQUARE ONE Python Developer (LLM)."
+  ],
+  "risks": [
+    "cerebre, Netguru i DEVAPO Python AI Engineer (GenAI) są nadal potwierdzone głównie przez publiczne boardy, a nie przez równie bogate kanoniczne strony careers.",
+    "CodiLime poprawił jawność lokalizacji, ale jego publiczne URL-e nadal nie są w pełni spójne między listing page, openings page i application page.",
+    "DEVAPO ma już w indeksie pokrewną rolę AI / LLM Engineer, więc trzeba pilnować, czy oba URL-e pozostaną odrębne, czy zbiegną się w jeden rodzinny hiring track.",
+    "Tooploox Senior AI Engineer ma lepszy employer-posted detail, ale nadal warto sprawdzić, czy publiczny model pracy nie będzie dalej dryfował między fully remote i lekką hybrydą."
+  ],
+  "recommendedActions": [
+    "Dodać YOUR ITEAMS, cerebre i Netguru do krótkiej listy regularnie sprawdzanych źródeł, mimo że na razie są głównie board-first.",
+    "W następnej rundzie najpierw potwierdzić, czy CodiLime utrzyma publiczny wariant Poland · Fully Remote oraz czy nie zmieni ponownie kanonicznego URL-a.",
+    "Monitorować, czy DEVAPO Python AI Engineer (GenAI) pozostaje odrębną rolą względem wcześniejszego AI / LLM Engineer.",
+    "Sprawdzić, czy Tooploox Senior AI Engineer utrzyma obecne widełki i doprecyzowaną politykę pojawiania się w biurze."
+  ],
+  "checkedSources": [
+    {
+      "title": "Pracuj.pl: Senior AI Engineer with .NET (YOUR ITEAMS)",
+      "url": "https://www.pracuj.pl/praca/senior-ai-engineer-with-net-warszawa%2Coferta%2C1004888376",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: cerebre Senior AI Engineer",
+      "url": "https://justjoin.it/job-offer/cerebre-senior-ai-engineer-poznan-python",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: Netguru AI Engineer",
+      "url": "https://justjoin.it/job-offer/netguru-ai-engineer-warszawa-python",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: DEVAPO Python AI Engineer (GenAI)",
+      "url": "https://justjoin.it/job-offer/devapo-python-ai-engineer-genai--krakow-python",
+      "status": "checked"
+    },
+    {
+      "title": "No Fluff Jobs: Tooploox Senior AI Engineer",
+      "url": "https://nofluffjobs.com/pl/job/senior-ai-engineer-tooploox-wroclaw-3",
+      "status": "checked"
+    },
+    {
+      "title": "CodiLime role page",
+      "url": "https://jobs.codilime.com/jobs/7957689-mid-senior-ai-engineer-with-networking-experience",
+      "status": "checked"
+    },
+    {
+      "title": "CodiLime openings",
+      "url": "https://jobs.codilime.com/jobs",
+      "status": "checked"
+    },
+    {
+      "title": "CodiLime application page / Poland variant",
+      "url": "https://jobs.codilime.com/jobs/7910871-mid-senior-ai-engineer-with-networking-experience/applications/new?utm_source=jjit",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: AI/ML offers",
+      "url": "https://justjoin.it/job-offers/all-locations/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: Python offers in Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/python",
+      "status": "checked"
+    },
+    {
+      "title": "No Fluff Jobs: AI/ML in Wrocław",
+      "url": "https://nofluffjobs.com/pl/wroclaw/artificial-intelligence",
+      "status": "checked"
+    }
+  ]
+}

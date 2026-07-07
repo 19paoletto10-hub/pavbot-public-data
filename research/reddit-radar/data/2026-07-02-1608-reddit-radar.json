@@ -1,0 +1,573 @@
+{
+  "id": "humor-2026-07-02-1608",
+  "title": "<RR> Reddit Radar",
+  "summary": "Kategorie: ProgrammerHumor, AI, technology, mildlyinfuriating, AskReddit. Najmocniej wybija sie: <u>milleniumPrizeWinningAnswer</u>.",
+  "generatedAt": "2026-07-02T14:08:32.934714+00:00",
+  "displayTime": "16:08",
+  "nextRefreshAt": "2026-07-02T18:06:00+02:00",
+  "refreshIntervalHours": 2,
+  "items": [
+    {
+      "id": "https-www-reddit-com-r-programmerhumor-comments--c6a6662e69",
+      "title": "milleniumPrizeWinningAnswer",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://www.reddit.com/r/ProgrammerHumor/comments/1ulbybi/milleniumprizewinninganswer/",
+      "imageURL": "https://i.redd.it/1avnbi48xrah1.jpeg",
+      "score": 2897,
+      "comments": 32,
+      "tags": [
+        "AI",
+        "dev"
+      ],
+      "categoryLabel": "ProgrammerHumor",
+      "postText": null,
+      "whyFunny": "Zart dziala, bo gif pokazuje banalne zadanie w Excelu potraktowane jak wielki triumf AI, a efekt konczy sie komicznie pewna siebie pomylka przy uzupelnianiu miesiecy.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Topowy komentarz udaje zachwyt, jakby spektakularna wpadka byla dowodem, ze wszystko dziala idealnie.",
+          "originalBody": "No problem at all? Well, that's fantastic. 😂",
+          "explanation": "Smieszne jest zderzenie korporacyjnego tonu \"no problem at all\" z oczywista katastrofa na ekranie; dokladnie tak brzmi wiele prezentacji o automatyzacji.",
+          "score": 513
+        },
+        {
+          "id": "comment-2",
+          "summary": "Krotka puenta o zastepowaniu ludzi przez AI odwraca modny slogan przeciwko samemu narzedziu.",
+          "originalBody": "“AI will replace you”",
+          "explanation": "Komentarz dziala, bo nie tlumaczy bledu technicznie; jednym cytatem wysmiewa obietnice, ze podobne automaty maja byc madrzejsze od czlowieka.",
+          "score": 434
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzecia odpowiedz kpi z algorytmu, ktory z pelnym spokojem produkuje bzdure i nawet nie widzi problemu.",
+          "originalBody": "Ignorance is bliss. The AI simply did that.",
+          "explanation": "To trafna puenta, bo pokazuje maszyne jak pewnego siebie praktykanta: robi cos zlego, ale z tak duza pewnoscia, ze przez chwile brzmi to jak funkcja.",
+          "score": 95
+        }
+      ],
+      "rawCommentSnippets": [
+        {
+          "body": "No problem at all? Well, that's fantastic. 😂",
+          "score": 513
+        },
+        {
+          "body": "“AI will replace you”",
+          "score": 434
+        },
+        {
+          "body": "Ignorance is bliss. The AI simply did that.",
+          "score": 95
+        }
+      ]
+    },
+    {
+      "id": "https-www-reddit-com-r-programmerhumor-comments--f2885ae953",
+      "title": "iLoveThisAlgorithm",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://www.reddit.com/r/ProgrammerHumor/comments/1ule4rh/ilovethisalgorithm/",
+      "imageURL": "https://i.redd.it/lqvsltswjsah1.png",
+      "score": 627,
+      "comments": 27,
+      "tags": [
+        "dev"
+      ],
+      "categoryLabel": "ProgrammerHumor",
+      "postText": null,
+      "whyFunny": "Mem redukuje caly problem obslugi bledow do leniwej, programistycznej magii: owin wszystko w try, a jesli cos sie wywali, uznaj to za ceche systemu.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Najwyzej oceniona odpowiedz proponuje absurdalnie prosta \"naprawe\": wsadzic cale main() w try i udawac, ze problem zniknal.",
+          "originalBody": "try { int main() { //code goes here } } problem solved.",
+          "explanation": "To bawi, bo komentujacy dopisuje do mema jeszcze gorszy antywzorzec i robi z niego rzekomo eleganckie rozwiazanie.",
+          "score": 137
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi komentarz dokreca srube, dodajac nieskonczona petle, czyli juz nie tylko ignorowanie bledow, ale ich wieczne recyklingowanie.",
+          "originalBody": "Even better.. int main() { while(true) { try { // code here }}}",
+          "explanation": "Puenta rosnie przez eskalacje: z kiepskiego pomyslu robi sie pelnoprawny koszmar utrzymaniowy.",
+          "score": 25
+        },
+        {
+          "id": "comment-3",
+          "summary": "Pytanie o jezyk, ktory w ogole pozwala tak obudowac main, zamienia zart w mini-dyskusje o tym, jak daleko mozna pojsc w zlych praktykach.",
+          "originalBody": "What languages support try catch handling around a top level function?",
+          "explanation": "To ciekawe, bo czesc watku zaczyna traktowac oczywisty mem jak powazny pattern, co tylko zwieksza komizm calej sceny.",
+          "score": 8
+        }
+      ],
+      "rawCommentSnippets": [
+        {
+          "body": "try { int main() { //code goes here } } problem solved.",
+          "score": 137
+        },
+        {
+          "body": "Even better.. int main() { while(true) { try { // code here }}}",
+          "score": 25
+        },
+        {
+          "body": "What languages support try catch handling around a top level function?",
+          "score": 8
+        }
+      ]
+    },
+    {
+      "id": "https-www-reddit-com-r-technology-comments-1ukhz-d479cfb9a3",
+      "title": "Anybody Who Thinks Orbital Data Centers are a Good Idea Is Suffering from AI Psychosis, Experts Argue",
+      "caption": "AI robi swoje, ludzie robią screeny, internet robi resztę.",
+      "sourceName": "r/technology",
+      "sourceURL": "https://www.reddit.com/r/technology/comments/1ukhzb2/anybody_who_thinks_orbital_data_centers_are_a/",
+      "imageURL": "https://tech.yahoo.com/ai/articles/anybody-thinks-orbital-data-centers-125444236.html?.tsrc=daily_mail&segment_id=DY_VTO_50_Supernova&ncid=crm_19908-1475736-20260701-0--A&bt_ee=jp%2FPV4EkljsWGekq5mnFwd%2B2S%2BN7gs2xhj6S1SfdUzqzemCpSDsQ2%2Bm%2BbYpgxLby&bt_ts=1782900633837",
+      "score": 8119,
+      "comments": 978,
+      "tags": [
+        "AI"
+      ],
+      "categoryLabel": "AI",
+      "postText": null,
+      "whyFunny": "Absurd bierze sie z samego pomyslu: ktos probuje sprzedac serwerownie na orbicie jak futurystyczny przelom, a Reddit natychmiast sprowadza to do pytan o cieplo, fizyke i kosmiczne buzzwordy.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Najmocniejszy komentarz punktuje centralna wade pomyslu: w prozni jeszcze trudniej pozbyc sie ciepla z centrum danych niz na Ziemi.",
+          "originalBody": "There's a certain amount of irony with people not understanding how space works. It would be significantly harder to vent the heat generated by datacenters in space than it would be anywhere on Earth..",
+          "explanation": "To dobra puenta, bo przebija marketing jednym banalnym prawem fizyki i odbiera calej wizji futurystyczna aure.",
+          "score": 1427
+        },
+        {
+          "id": "comment-2",
+          "summary": "Zart o turbinach wiatrowych w kosmosie specjalnie dokreca absurd do poziomu kompletnej antyfizyki.",
+          "originalBody": "Never mind data centers, I want wind turbines in space.",
+          "explanation": "Smieszne jest to, ze komentarz nie obala pomyslu argumentem, tylko proponuje jeszcze glupszy wariant i pokazuje, jak cienka jest granica miedzy pitch deckiem a parodia.",
+          "score": 823
+        },
+        {
+          "id": "comment-3",
+          "summary": "Komentarz o \"space whales\" udaje facebookowa panike ekologiczna i robi z calej dyskusji mem o zmyslonych skutkach ubocznych.",
+          "originalBody": "That’s just dumb. Space wind turbines kill space whales! Don’t you even read Facebook?",
+          "explanation": "Dziala, bo miesza powazny ton internetowych ostrzezen z calkowicie zmyslona ofiara, wiec wysmiewa zarowno idee, jak i styl debat wokol niej.",
+          "score": 591
+        }
+      ],
+      "rawCommentSnippets": [
+        {
+          "body": "There's a certain amount of irony with people not understanding how space works. It would be significantly harder to vent the heat generated by datacenters in space than it would be anywhere on Earth..",
+          "score": 1427
+        },
+        {
+          "body": "Never mind data centers, I want wind turbines in space.",
+          "score": 823
+        },
+        {
+          "body": "That’s just dumb. Space wind turbines kill space whales! Don’t you even read Facebook?",
+          "score": 591
+        }
+      ]
+    },
+    {
+      "id": "https-www-reddit-com-r-memes-comments-1ul5c4j-wh-8645735d54",
+      "title": "What the Entertainment Software Association did",
+      "caption": "AI robi swoje, ludzie robią screeny, internet robi resztę.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://www.reddit.com/r/memes/comments/1ul5c4j/what_the_entertainment_software_association_did/",
+      "imageURL": "https://i.redd.it/aghxals77qah1.jpeg",
+      "score": 4300,
+      "comments": 55,
+      "tags": [
+        "memy",
+        "AI"
+      ],
+      "categoryLabel": "AI",
+      "postText": null,
+      "whyFunny": "Mem dziala, bo branza gier probuje przedstawic prywatne serwery jak cos podejrzanego, chociaz dla graczy to zwykla codziennosc od lat; przepasc miedzy narracja a rzeczywistoscia jest sama w sobie puenta.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Topowy komentarz przypomina, ze sam Minecraft daje narzedzia do stawiania prywatnych serwerow, wiec caly alarm o \"nielegalnosci\" brzmi jak kabaret.",
+          "originalBody": "Conveniently forgetting to mention that Mojang provides all the tools to create a private server, when it should be \"illegal\"",
+          "explanation": "To trafia, bo jednym zdaniem rozbraja caly przekaz mema i pokazuje, ze branza probuje przepisac zasady, ktore sama wczesniej rozdawala.",
+          "score": 1282
+        },
+        {
+          "id": "comment-2",
+          "summary": "Druga odpowiedz wysmiewa sugestie, jakoby jedyna droga bylo placenie za oficjalny ekosystem, skoro serwer mozna postawic w kilka minut.",
+          "originalBody": "Honestly this is what gets me too. They act like the only option is to buy into their ecosystem when you can literally spin up a server in 10 minutes for free.",
+          "explanation": "Komentarz jest ciekawy, bo zamienia spor prawny w bardzo przyziemny test rzeczywistosci: gracze wiedza, ile to naprawde trwa.",
+          "score": 495
+        },
+        {
+          "id": "comment-3",
+          "summary": "Krotka wzmianka o zwyklym open to LAN jeszcze bardziej obniza stawke calego dramatu do poziomu klikniecia w domowej sieci.",
+          "originalBody": "Hell, you can even just open to LAN on a local network to host a server",
+          "explanation": "To smieszne przez kontrast: wielkie branzowe straszenie zderza sie z funkcja, ktora wielu ludzi traktuje jak banalny przelacznik.",
+          "score": 166
+        }
+      ],
+      "rawCommentSnippets": [
+        {
+          "body": "Conveniently forgetting to mention that Mojang provides all the tools to create a private server, when it should be \"illegal\"",
+          "score": 1282
+        },
+        {
+          "body": "Honestly this is what gets me too. They act like the only option is to buy into their ecosystem when you can literally spin up a server in 10 minutes for free.",
+          "score": 495
+        },
+        {
+          "body": "Hell, you can even just open to LAN on a local network to host a server",
+          "score": 166
+        }
+      ]
+    },
+    {
+      "id": "https-www-reddit-com-r-technology-comments-1ukkk-33418127d7",
+      "title": "The video game industry just told lawmakers Minecraft and Call of Duty private servers are illegal piracy",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/technology",
+      "sourceURL": "https://www.reddit.com/r/technology/comments/1ukkkul/the_video_game_industry_just_told_lawmakers/",
+      "imageURL": "https://www.techspot.com/news/112951-us-bill-against-paid-game-server-shutdowns-fails.html",
+      "score": 3207,
+      "comments": 200,
+      "tags": [
+        "trend"
+      ],
+      "categoryLabel": "technology",
+      "postText": null,
+      "whyFunny": "Zabawny jest nie sam news, tylko jego bezczelnosc: post opisuje probe nazwania piractwem praktyk, na ktorych przez lata budowano spolecznosci wokol Minecrafta i innych gier.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Najwyzej oceniona reakcja sprowadza sprawe do jednego faktu: EULA Minecrafta sama dopuszcza prywatne serwery.",
+          "originalBody": "What are they smoking? Minecraft’s own EULA allows private servers",
+          "explanation": "To dobra puenta, bo zamiast dlugiego wywodu wystarcza jedna linijka, zeby pokazac, jak bardzo deklaracja branzy rozmija sie z dokumentami.",
+          "score": 1955
+        },
+        {
+          "id": "comment-2",
+          "summary": "Komentarz o oficjalnych executable'ach przypomina, ze wydawca sam rozdaje narzedzia potrzebne do postawienia serwera.",
+          "originalBody": "They openly share the executables for both Java and Bedrock servers so people can run their own. Minecraft is going to die VERY fast if all he popular youtubers promoting it can't have their own servers to interact (and profit off) their followers.",
+          "explanation": "Smieszne i celne zarazem jest to, ze rzekomo nielegalny proceder zaczyna sie od plikow udostepnionych przez sama firme.",
+          "score": 896
+        },
+        {
+          "id": "comment-3",
+          "summary": "Uwagi o monetyzacji czytaja caly ruch jako probe odzyskania pelnej kontroli nad spolecznoscia i jej pieniedzmi.",
+          "originalBody": "It’s intentional. They are consolidating control for monetization as they don’t intend for consumers to own any rights in relation to how they use others intellectual property. I hate it, check the news from Sony.",
+          "explanation": "To ciekawe, bo przesuwa zart z poziomu \"co za bzdura\" na poziom \"wiemy dokladnie, po co ta bzdura powstala\".",
+          "score": 444
+        }
+      ],
+      "rawCommentSnippets": [
+        {
+          "body": "What are they smoking? Minecraft’s own EULA allows private servers",
+          "score": 1955
+        },
+        {
+          "body": "They openly share the executables for both Java and Bedrock servers so people can run their own. Minecraft is going to die VERY fast if all he popular youtubers promoting it can't have their own servers to interact (and profit off) their followers.",
+          "score": 896
+        },
+        {
+          "body": "It’s intentional. They are consolidating control for monetization as they don’t intend for consumers to own any rights in relation to how they use others intellectual property. I hate it, check the news from Sony.",
+          "score": 444
+        }
+      ]
+    },
+    {
+      "id": "https-www-reddit-com-r-technology-comments-1ukkd-affc55e8c4",
+      "title": "The iPhone contributed to 'a collapse in US fertility,' claims scientific study",
+      "caption": "AI robi swoje, ludzie robią screeny, internet robi resztę.",
+      "sourceName": "r/technology",
+      "sourceURL": "https://www.reddit.com/r/technology/comments/1ukkd60/the_iphone_contributed_to_a_collapse_in_us/",
+      "imageURL": "https://9to5mac.com/2026/07/01/the-iphone-contributed-to-a-collapse-in-us-fertility-claims-scientific-study/",
+      "score": 3104,
+      "comments": 561,
+      "tags": [
+        "AI"
+      ],
+      "categoryLabel": "AI",
+      "postText": null,
+      "whyFunny": "Naglowek brzmi jak parodia badan spolecznych: zamiast calej gospodarki i kultury winny ma byc jeden gadzet, wiec komentujacy blyskawicznie zaczynaja traktowac go jak wygodnego kozla ofiarnego.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Najmocniejsza odpowiedz jednym suchym haslem podmienia iPhone'a na duzo bardziej wiarygodnego winowajce: system finansowy po 2008 roku.",
+          "originalBody": "Financial system post 2008 crisis",
+          "explanation": "To dziala jak sucha komediowa kontra, bo caly nadety headline zostaje skasowany trzema slowami.",
+          "score": 2131
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi komentarz dorzuca wojny i mroczny klimat tamtych lat, pokazujac, jak absurdalne jest szukanie jednej eleganckiej przyczyny.",
+          "originalBody": "And the Iraq and Afghan wars. People forget just how shitty and dark those years were. Bush was Trump lite.",
+          "explanation": "Komentarz nie jest klasycznym zartem, ale dobrze punktuje memicznosc tezy: zlozony kryzys spoleczny zostaje zrzucony na smartfon.",
+          "score": 941
+        },
+        {
+          "id": "comment-3",
+          "summary": "Sarkastyczna uwaga o Social Security przenosi dyskusje z telefonu na szerszy lek ekonomiczny i robi to w tonie bardzo redditowej czarnej ironii.",
+          "originalBody": "Thankfully they are working to dissolve the once guaranteed Social Security and force everyone to contribute more into their financial playground known as the stock market. /s",
+          "explanation": "To ciekawe, bo zamiast klocic sie z headline'em wprost, komentarz pokazuje, ze ludzie czytaja go jak symptom duzo wiekszego absurdu systemowego.",
+          "score": 156
+        }
+      ],
+      "rawCommentSnippets": [
+        {
+          "body": "Financial system post 2008 crisis",
+          "score": 2131
+        },
+        {
+          "body": "And the Iraq and Afghan wars. People forget just how shitty and dark those years were. Bush was Trump lite.",
+          "score": 941
+        },
+        {
+          "body": "Thankfully they are working to dissolve the once guaranteed Social Security and force everyone to contribute more into their financial playground known as the stock market. /s",
+          "score": 156
+        }
+      ]
+    },
+    {
+      "id": "https-www-reddit-com-r-mildlyinfuriating-comment-024267144b",
+      "title": "The same face everywhere, even on a damn boarding pass, when there's no actual reason for it to be there, does get annoying after a while",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://www.reddit.com/r/mildlyinfuriating/comments/1ul854u/the_same_face_everywhere_even_on_a_damn_boarding/",
+      "imageURL": "https://i.redd.it/ytyivfz9vqah1.jpeg",
+      "score": 4263,
+      "comments": 320,
+      "tags": [
+        "trend"
+      ],
+      "categoryLabel": "mildlyinfuriating",
+      "postText": null,
+      "whyFunny": "Humor bierze sie z przesady tak wielkiej, ze boarding pass zaczyna wygladac jak nosnik kampanii wizerunkowej; zwykly dokument podrozny zamienia sie w mem o niekonczacym sie brandingu jednego czlowieka.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Najkrotsza reakcja \"What the actual\" dziala jak idealny skrot dla widza, ktory nie potrzebuje juz zadnego dopowiedzenia.",
+          "originalBody": "What the actual",
+          "explanation": "To smieszne, bo komentarz jest tak oszczedny, jak sama sytuacja jest przesadzona; niedowierzanie staje sie puenta.",
+          "score": 1174
+        },
+        {
+          "id": "comment-2",
+          "summary": "Porownanie do Trumpa blyskawicznie tlumaczy skale ego i wszechobecnosci nawet odbiorcy spoza lokalnego kontekstu.",
+          "originalBody": "He's India's trump",
+          "explanation": "Komentarz dziala, bo jednym memowym porownaniem zamienia regionalny obrazek w globalnie czytelny zart o kulcie jednostki.",
+          "score": 1206
+        },
+        {
+          "id": "comment-3",
+          "summary": "Riposta, ze to raczej Trump jest amerykanskim Modim, podbija stawke i robi z dyskusji licytacje na wiekszy kult twarzy.",
+          "originalBody": "He was there first, I would say trump is America's modi",
+          "explanation": "To ciekawe, bo nie oslabia zartu, tylko go eskaluje: zamiast sporu o szczegoly mamy konkurs na najbardziej napompowana wersje tego samego zjawiska.",
+          "score": 334
+        }
+      ],
+      "rawCommentSnippets": [
+        {
+          "body": "What the actual",
+          "score": 1174
+        },
+        {
+          "body": "He's India's trump",
+          "score": 1206
+        },
+        {
+          "body": "He was there first, I would say trump is America's modi",
+          "score": 334
+        }
+      ]
+    },
+    {
+      "id": "https-www-reddit-com-r-askreddit-comments-1ul1g2-dfe88c2b40",
+      "title": "What was the shortest lived fad?",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/AskReddit",
+      "sourceURL": "https://www.reddit.com/r/AskReddit/comments/1ul1g2n/what_was_the_shortest_lived_fad/",
+      "imageURL": "https://www.reddit.com/r/AskReddit/comments/1ul1g2n/what_was_the_shortest_lived_fad/",
+      "score": 1443,
+      "comments": 2098,
+      "tags": [
+        "trend"
+      ],
+      "categoryLabel": "AskReddit",
+      "postText": null,
+      "whyFunny": "Watek jest smieszny, bo pytanie o najkrotsza mode natychmiast wywoluje zbiorowa amnezje wokol 3D TV i innych sprzetowych cudow, ktore kiedys mialy byc przyszloscia salonu.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Najbardziej redditowa puenta brzmi po prostu: \"o kurde, zapomnialem, ze to w ogole istnialo\".",
+          "originalBody": "Oh shit I forgot about those 🤣",
+          "explanation": "To dziala, bo dokladnie taki jest test krotkotrwalej mody: znika tak skutecznie, ze nawet pamiec o niej jest juz wyblakla.",
+          "score": 1174
+        },
+        {
+          "id": "comment-2",
+          "summary": "Ktos natychmiast dorzuca curved TV, jakby chcial przypomniec, ze producenci potrafili odpalic dwie nietrafione rewolucje naraz.",
+          "originalBody": "Curved TVs say hai",
+          "explanation": "Komentarz dziala, bo jednym dopiskiem rozszerza zart z 3D na cala epoke sprzetowych \"must have\", ktorych nikt nie potrzebowal.",
+          "score": 534
+        },
+        {
+          "id": "comment-3",
+          "summary": "Riposta o rozmowie z lampa przerabia dawny showroom elektroniki na gotowy stand-up o agresywnej sprzedazy.",
+          "originalBody": "… at which point, the salesperson said “I’m over here, why were you just talking to the lampshade?”",
+          "explanation": "To najzabawniejsza mikrohistoria w watku, bo laczy martwy trend z rownie martwym stylem wciskania ludziom cudownego sprzetu.",
+          "score": 369
+        }
+      ],
+      "rawCommentSnippets": [
+        {
+          "body": "Oh shit I forgot about those 🤣",
+          "score": 1174
+        },
+        {
+          "body": "Curved TVs say hai",
+          "score": 534
+        },
+        {
+          "body": "… at which point, the salesperson said “I’m over here, why were you just talking to the lampshade?”",
+          "score": 369
+        }
+      ]
+    },
+    {
+      "id": "https-www-reddit-com-r-mildlyinfuriating-comment-f3b7bc394a",
+      "title": "Such a wonderful way to display and celebrate female power, especially when deciding who to put in the centre of the image /s",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://www.reddit.com/r/mildlyinfuriating/comments/1ul8fdb/such_a_wonderful_way_to_display_and_celebrate/",
+      "imageURL": "https://i.redd.it/e69ztfoyxqah1.jpeg",
+      "score": 3201,
+      "comments": 118,
+      "tags": [
+        "trend"
+      ],
+      "categoryLabel": "mildlyinfuriating",
+      "postText": null,
+      "whyFunny": "Absurd polega na tym, ze grafika majaca celebrowac kobiety zamienia sie w kolejny billboard jednego polityka; puenta jest czytelna nawet bez glebszego kontekstu.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Najmocniej wybija sie pytanie, czemu ta sama twarz musi ladowac doslownie na kazdej grafice.",
+          "originalBody": "Why does he put his face everywhere?",
+          "explanation": "To dobry komentarz otwierajacy, bo streszcza caly zart: wydarzenie ma wlasny temat, ale i tak zostaje przykryte obsesja na punkcie wizerunku lidera.",
+          "score": 709
+        },
+        {
+          "id": "comment-2",
+          "summary": "Porownanie do Trumpa zamienia lokalny przypadek w czytelny, globalny skrot o kulcie marki osobistej.",
+          "originalBody": "Trump only wishes he had Modi’s level of influence over the public",
+          "explanation": "Komentarz dziala, bo jednym memowym porownaniem tlumaczy, dlaczego ten obrazek jednoczesnie drazni i bawi.",
+          "score": 270
+        }
+      ]
+    },
+    {
+      "id": "https-www-reddit-com-r-memes-comments-1ul5krx-li-eff0801c9a",
+      "title": "Literally had to block them on my cashapp",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://www.reddit.com/r/memes/comments/1ul5krx/literally_had_to_block_them_on_my_cashapp/",
+      "imageURL": "https://i.redd.it/6u9z7y789qah1.jpeg",
+      "score": 3170,
+      "comments": 66,
+      "tags": [
+        "memy"
+      ],
+      "categoryLabel": "memy",
+      "postText": null,
+      "whyFunny": "Mem trafia w bardzo wspolne doswiadczenie: darmowy trial znika z glowy, a nocna notyfikacja z Apple wyglada jak alarm o napadzie na konto.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Topowy komentarz zamienia zwykle obciazenie karty w scene z kryminalu o trzeciej nad ranem.",
+          "originalBody": "And it always hits at 3 AM so you wake up to a notification that looks like a bank robbery",
+          "explanation": "Smieszne jest przesadne porownanie do bank robbery, bo dokladnie tak wyglada ten mikroatak paniki po przebudzeniu.",
+          "score": 981
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi komentarz punktuje drugi etap dramatu: goraczkowe sledztwo, ktorego trialu znow nie odwolales.",
+          "originalBody": "Then you spend next 20 min trying to remember which free trial you forgot to cancel",
+          "explanation": "To dopowiada mema o bardzo rozpoznawalny rytual winy i liczenia subskrypcji.",
+          "score": 277
+        },
+        {
+          "id": "comment-3",
+          "summary": "Komentarz z wpisem do kalendarza dorzuca przyziemne, troche zbyt dorosle rozwiazanie do internetowego chaosu.",
+          "originalBody": "This is why I always mark my phone calendar 2 days before a free trial ends.",
+          "explanation": "Dziala jako kontrapunkt: wszyscy zartuja z paniki, a ktos wnosi nudna, ale boleśnie potrzebna procedure obronna.",
+          "score": 60
+        }
+      ]
+    },
+    {
+      "id": "https-www-reddit-com-r-memes-comments-1ul6jrw-sp-a0ec099db2",
+      "title": "Spiderman: Home alone",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://www.reddit.com/r/memes/comments/1ul6jrw/spiderman_home_alone/",
+      "imageURL": "https://i.redd.it/ylbbjeuchqah1.jpeg",
+      "score": 2532,
+      "comments": 56,
+      "tags": [
+        "memy"
+      ],
+      "categoryLabel": "memy",
+      "postText": null,
+      "whyFunny": "Zart jest prosty i skuteczny: mem miesza tytuly filmow o Spider-Manie z obrazkiem, ktory wyglada jak bardzo nieudana wersja Home Alone.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Najwyzej oceniona puenta dopisuje brakujace ogniwo do serii: po Homecoming i Far From Home dostajemy Home Alone.",
+          "originalBody": "Coming Far From Home",
+          "explanation": "Komentarz dziala, bo zamiast tlumaczyc mema po prostu dopina go jednym idealnie brzmiacym tytulem.",
+          "score": 418
+        },
+        {
+          "id": "comment-2",
+          "summary": "Komentarz o friendly neighborhood przenosi zart z poziomu tytulu na poziom przesadnie doslownej interpretacji bohatera.",
+          "originalBody": "Bro took \"friendly neighborhood\" way too seriously.",
+          "explanation": "To zabawne, bo traktuje slogan Spider-Mana tak serio, jakby bohater doslownie postanowil zamieszkac sasiadom na scianie.",
+          "score": 19
+        }
+      ]
+    },
+    {
+      "id": "https-www-reddit-com-r-technology-comments-1ul1d-68e16d3acc",
+      "title": "‘We are screwed’: People near data centers dread heat wave pollution.",
+      "caption": "Krótki sygnał społecznościowy, dobry do szybkiego przewinięcia.",
+      "sourceName": "r/technology",
+      "sourceURL": "https://www.reddit.com/r/technology/comments/1ul1duz/we_are_screwed_people_near_data_centers_dread/",
+      "imageURL": "https://www.politico.com/news/2026/07/01/data-center-boom-collides-with-record-heat-testing-power-grid-00983009",
+      "score": 1658,
+      "comments": 139,
+      "tags": [
+        "trend"
+      ],
+      "categoryLabel": "technology",
+      "postText": null,
+      "whyFunny": "To bardziej czarna ironia niz czysty mem: technologia majaca ratowac przyszlosc jest tu opisana jak sasiad, ktory dusi okolice agregatem podczas fali upalow.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Najlepszy komentarz wysmiewa rządowe rozwiazanie porownaniem do wiercenia dziur w dnie lodzi, zeby spuscic wode.",
+          "originalBody": "> To relieve some of the pressure, the Department of Energy granted permission Tuesday to the region’s grid operator, PJM Interconnection, to potentially force data centers to use backup diesel generators. That’s like saying “to help relieve the water in the boat, the Department of Energy allows the data centers to drill holes in the bottom”",
+          "explanation": "To trafna puenta, bo jednym obrazem pokazuje absurd gaszenia kryzysu energetycznego jeszcze brudniejsza energia.",
+          "score": 397
+        },
+        {
+          "id": "comment-2",
+          "summary": "Krótka uwaga, ze problem bedzie rosl wraz z kolejnymi centrami danych, przycina caly watek do jednego zdania.",
+          "originalBody": "And as long as data centers continue to be built, that will increase.",
+          "explanation": "To nie jest wielki zart slowny, ale dziala jako sucha puenta: dokladamy kolejne serwerownie i udajemy zaskoczenie skutkami.",
+          "score": 334
+        }
+      ]
+    }
+  ],
+  "source": "Codex Safari Reddit radar"
+}

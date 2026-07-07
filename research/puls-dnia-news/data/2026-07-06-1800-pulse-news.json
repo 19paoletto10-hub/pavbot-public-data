@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-06",
+  "runTime": "18:00",
+  "status": "Material update",
+  "headline": "Polityka w Polsce, pożary w Europie i nowe ostrzeżenia z frontów",
+  "summary": "Od 15:02 feed przesunął się ku sporom o pomoc wojskową dla Ukrainy, modyfikacjom PPK i nowemu alertowi lotniczemu, a blok światowy odświeżyły Ukraina, Sri Lanka, Francja, Nigeria, Kuba, Rosja i Gaza.",
+  "items": [
+    {
+      "id": "pulse-2026-07-06-1800-01-ukraine-donations",
+      "section": "Polska",
+      "title": "Burza o donacje uzbrojenia dla Ukrainy",
+      "lead": "W polskiej polityce wrócił spór o przekazywanie uzbrojenia Ukrainie.",
+      "whatHappened": "TVN24 opisało debatę wokół donacji uzbrojenia dla Ukrainy; w nagłówku pojawił się apel, by zatrzymać to szaleństwo.",
+      "keyFacts": [
+        "Nagłówek odwołuje się do komentarzy polityków.",
+        "Spór dotyczy dalszego wsparcia wojskowego dla Ukrainy."
+      ],
+      "reactions": [
+        "Temat podbija emocje w krajowej debacie bezpieczeństwa.",
+        "To sygnał, że wsparcie dla Ukrainy pozostaje politycznie wrażliwe."
+      ],
+      "whyItMatters": "To wpływa na narrację o polskim wsparciu wojskowym dla Ukrainy i na debatę o kosztach pomocy.",
+      "context": "Takie spory zwykle wracają przy kolejnych pakietach wsparcia i komentarzach rządu.",
+      "watchNext": [
+        "Czy pojawią się doprecyzowania od rządu lub MON.",
+        "Czy temat rozwinie się w kolejną wymianę politycznych komentarzy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Burza o donacje uzbrojenia dla Ukrainy",
+          "url": "https://tvn24.pl/polska/burza-o-donacje-uzbrojenia-dla-ukrainy-politycy-komentuja-st9130124?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Ukraina",
+        "Polityka",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-06-1800-02-barracuda-tusk",
+      "section": "Polska",
+      "title": "Tusk komentuje umowę na pociski Barracuda",
+      "lead": "Premier odniósł się do umowy dotyczącej pocisków Barracuda.",
+      "whatHappened": "TVN24 podało, że Donald Tusk opublikował nagranie o umowie w sprawie pocisków Barracuda i zasugerował, że Kreml nie będzie zadowolony.",
+      "keyFacts": [
+        "Wypowiedź miała formę krótkiego nagrania.",
+        "Temat łączy politykę krajową z obszarem bezpieczeństwa."
+      ],
+      "reactions": [
+        "To komunikat obliczony na efekt polityczny i odstraszający.",
+        "Sprawa może wrócić przy dalszych szczegółach umowy."
+      ],
+      "whyItMatters": "Broń dalekiego zasięgu i publiczne komentarze o niej wpływają na sygnały odstraszania i debatę o bezpieczeństwie.",
+      "context": "To wpisuje się w szerszy polski wątek wsparcia dla Ukrainy i reakcji Rosji.",
+      "watchNext": [
+        "Czy rząd poda więcej szczegółów o samej umowie.",
+        "Czy pojawi się reakcja Moskwy lub sojuszników."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Donald Tusk o umowie w sprawie pocisków",
+          "url": "https://tvn24.pl/polska/donald-tusk-o-umowie-w-sprawie-pociskow-baarracuda-opublikowal-nagranie-w-ktorym-nawiazal-do-wladcy-pierscieni-st9130976?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Polityka",
+        "Bezpieczeństwo",
+        "Ukraina"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-06-1800-03-ppk-changes",
+      "section": "Gospodarka",
+      "title": "KNF chce zmian w PPK",
+      "lead": "Komisja wskazuje, że program oszczędnościowy wymaga korekt.",
+      "whatHappened": "TVN24 Biznes podało, że KNF apeluje o niezbędne modyfikacje w Pracowniczych Planach Kapitałowych.",
+      "keyFacts": [
+        "Chodzi o program oszczędnościowy dla pracowników.",
+        "Sygnał pochodzi od nadzoru finansowego."
+      ],
+      "reactions": [
+        "To może oznaczać presję na ustawodawcę i rynek finansowy.",
+        "Uczestnicy systemu będą śledzić, czy pojawią się konkretne propozycje zmian."
+      ],
+      "whyItMatters": "PPK dotyka milionów pracowników i pracodawców, więc nawet techniczne korekty mają duży zasięg.",
+      "context": "To temat bardziej regulacyjny niż polityczny, ale z realnym skutkiem dla gospodarstw domowych.",
+      "watchNext": [
+        "Czy KNF poda szczegóły postulowanych zmian.",
+        "Czy pojawi się odpowiedź rządu albo PFR."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: PPK wymaga niezbędnych modyfikacji",
+          "url": "https://tvn24.pl/biznes/z-kraju/pracownicze-plany-kapitalowe-program-oszczednosciowy-wymaga-niezbednych-modyfikacji-knf-apeluje-st9131025?source=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "PPK",
+        "Finanse",
+        "Regulacje"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-06-1800-04-warsaw-emergency-landing",
+      "section": "Bezpieczeństwo",
+      "title": "Awaryjne lądowanie samolotu z Warszawy do Oslo",
+      "lead": "Maszyna lecąca ze stolicy Polski musiała przerwać rejs.",
+      "whatHappened": "TVN24 poinformowało o awaryjnym lądowaniu samolotu, który startował z Warszawy i leciał do Oslo.",
+      "keyFacts": [
+        "Zdarzenie dotyczyło połączenia z Warszawy do Oslo.",
+        "Nagłówek nie podaje w tym momencie dodatkowych szczegółów technicznych."
+      ],
+      "reactions": [
+        "To operacyjny alert dla pasażerów i przewoźnika.",
+        "Dalsze komunikaty mogą zmienić ocenę przyczyny zdarzenia."
+      ],
+      "whyItMatters": "Każde awaryjne lądowanie ma znaczenie dla bezpieczeństwa lotniczego i może wpływać na inne połączenia.",
+      "context": "Takie incydenty szybko generują kolejne aktualizacje od przewoźników i służb lotniskowych.",
+      "watchNext": [
+        "Czy przewoźnik poda przyczynę awaryjnego lądowania.",
+        "Czy pojawią się informacje o opóźnieniach lub zmianie pasażerów na inne loty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Awaryjne lądowanie samolotu z Warszawy do Oslo",
+          "url": "https://tvn24.pl/tvnwarszawa/wlochy/awaryjne-ladowanie-samolotu-z-warszawy-do-oslo-st9131102?source=rss"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Lotnictwo",
+        "Warszawa",
+        "Alert"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-06-1800-05-ukraine-interceptors",
+      "section": "Świat",
+      "title": "Ukraina ostrzega przed brakami interceptorów",
+      "lead": "Po kolejnym rosyjskim ataku obrona powietrzna ma problem z zasobami.",
+      "whatHappened": "BBC podało, że Ukraina ostrzega przed niedoborem pocisków przechwytujących po ataku na Kijów; w bilansie pojawiło się 22 zabitych.",
+      "keyFacts": [
+        "BBC opisało atak jako użycie 68 rakiet i 351 dronów.",
+        "Bilans ofiar wzrósł względem wcześniejszych doniesień."
+      ],
+      "reactions": [
+        "To zwiększa presję na partnerów w sprawie obrony przeciwlotniczej.",
+        "Braki interceptorów pozostają wąskim gardłem ukraińskiej obrony."
+      ],
+      "whyItMatters": "To jeden z najważniejszych sygnałów o realnej skuteczności i ograniczeniach ukraińskiej obrony.",
+      "context": "Temat łączy się z rosyjskimi uderzeniami na infrastrukturę i ciągłym wsparciem sojuszników.",
+      "watchNext": [
+        "Czy partnerzy ogłoszą nowe dostawy obrony powietrznej.",
+        "Czy Ukraina poda dalszy bilans strat."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Ukraine warns of interceptor missile shortage as 22 killed in Kyiv region",
+          "url": "https://www.bbc.co.uk/news/articles/cewqqnd7zdwo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Ukraina",
+        "Rosja",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-06-1800-06-sri-lanka-riots",
+      "section": "Świat",
+      "title": "Sri Lanka liczy 26 ofiar więziennych zamieszek",
+      "lead": "Negombo zmaga się z jednymi z najgorszych więziennych rozruchów od lat.",
+      "whatHappened": "BBC podało, że zamieszki w więzieniu na Sri Lance zakończyły się 26 ofiarami śmiertelnymi i ponad 100 rannymi.",
+      "keyFacts": [
+        "W poprzednich doniesieniach liczba ofiar była niższa.",
+        "BBC opisuje je jako najgorsze więzienne rozruchy od lat."
+      ],
+      "reactions": [
+        "Władze muszą przywrócić kontrolę i wyjaśnić przebieg starć.",
+        "Skala zdarzenia sugeruje poważny kryzys bezpieczeństwa w zakładzie karnym."
+      ],
+      "whyItMatters": "To ważny sygnał o przestępczości zorganizowanej i kondycji służb więziennych w regionie.",
+      "context": "Takie incydenty zwykle wymuszają dodatkowe zabezpieczenia w innych zakładach karnych.",
+      "watchNext": [
+        "Czy pojawi się oficjalny, ostateczny bilans ofiar.",
+        "Czy władze wskażą przyczynę eskalacji."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Sri Lanka prison riots leave 26 dead and more than 100 injured",
+          "url": "https://www.bbc.co.uk/news/articles/cvg77klne3yo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Sri Lanka",
+        "Bezpieczeństwo",
+        "Przestępczość"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-06-1800-07-france-wildfire",
+      "section": "Świat",
+      "title": "Pożar lasów we Francji zmusza do ewakuacji 10 tysięcy osób",
+      "lead": "Z ogniem walczy południowa Francja, a mieszkańcy muszą się ewakuować.",
+      "whatHappened": "BBC poinformowało o pożarze w południowej Francji, który wymusił ewakuację 10 000 osób.",
+      "keyFacts": [
+        "Pożar objął tereny leśne w regionie Pyrénées-Orientales.",
+        "Sytuacja wpłynęła także na organizację Tour de France."
+      ],
+      "reactions": [
+        "To kolejny sygnał o wysokim ryzyku pożarowym w Europie.",
+        "Władze lokalne muszą równolegle chronić ludzi i infrastrukturę."
+      ],
+      "whyItMatters": "Masowa ewakuacja pokazuje, jak szybko pogoda i pożary mogą przerodzić się w kryzys cywilny.",
+      "context": "To ważny alert dla Europy w sezonie wysokich temperatur i suszy.",
+      "watchNext": [
+        "Czy ogień zostanie opanowany w najbliższych godzinach.",
+        "Czy pojawią się nowe komunikaty o dodatkowych ewakuacjach."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Wildfire in southern France forces evacuation of 10,000 people",
+          "url": "https://www.bbc.co.uk/news/articles/crlwweye9glo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Francja",
+        "Pożary",
+        "Alert"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-06-1800-08-nigeria-south-africa",
+      "section": "Świat",
+      "title": "Nigeria alarmuje po śmierci dwóch obywateli w RPA",
+      "lead": "Spór o antyimigrancką przemoc ponownie uderza w relacje regionalne.",
+      "whatHappened": "BBC podało, że Nigeria poinformowała o śmierci dwóch swoich obywateli w Republice Południowej Afryki na tle wzrostu ataków antyimigranckich.",
+      "keyFacts": [
+        "Jeden z przypadków miał dotyczyć działań policji.",
+        "Sprawa szybko nabrała wymiaru dyplomatycznego."
+      ],
+      "reactions": [
+        "To może zaostrzyć napięcia między państwami.",
+        "Władze będą musiały odpowiedzieć na zarzuty o ochronę migrantów."
+      ],
+      "whyItMatters": "Incydent dotyka zarówno bezpieczeństwa migrantów, jak i relacji między państwami Afryki.",
+      "context": "Takie wydarzenia często prowadzą do oficjalnych not i wyjaśnień ambasad.",
+      "watchNext": [
+        "Czy pojawi się reakcja władz RPA.",
+        "Czy Nigeria zgłosi formalny protest dyplomatyczny."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Nigeria says two nationals killed in South Africa amid rise of anti-migrant attacks",
+          "url": "https://www.bbc.co.uk/news/articles/cqj11lxwnn0o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Nigeria",
+        "RPA",
+        "Migracja"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-06-1800-09-cuba-hotels",
+      "section": "Świat",
+      "title": "Hotele na Kubie stoją puste",
+      "lead": "Amerykańska presja i słaby popyt uderzają w kubańską turystykę.",
+      "whatHappened": "CNN opisało sytuację kubańskich hoteli, które stoją puste, gdy amerykańska kampania presji odstrasza turystów.",
+      "keyFacts": [
+        "CNN wskazuje na efekt polityki USA wobec Kuby.",
+        "Problem ma bezpośredni wymiar gospodarczy."
+      ],
+      "reactions": [
+        "To kolejny dowód, że polityka i turystyka są mocno sprzężone.",
+        "Brak gości oznacza presję na lokalny sektor usług."
+      ],
+      "whyItMatters": "Turystyka to kluczowy element kubańskiej gospodarki, więc pustki w hotelach są sygnałem ostrzegawczym.",
+      "context": "To temat łączący politykę Waszyngtonu z realnym stanem kubańskiej gospodarki.",
+      "watchNext": [
+        "Czy Cuba Tourism Authority poda nowe dane o obłożeniu.",
+        "Czy w USA pojawią się kolejne zmiany w polityce wobec Kuby."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Cuba’s hotels sit empty as US pressure campaign drives tourists away",
+          "url": "https://edition.cnn.com/2026/07/06/americas/cuba-hotels-us-tourists-latam-intl"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Kuba",
+        "Gospodarka",
+        "Turystyka"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-06-1800-10-russia-fuel-crisis",
+      "section": "Świat",
+      "title": "Rosyjski kryzys paliwowy obejmuje niemal każdy region",
+      "lead": "Rosyjskie regiony odczuwają skutki ukraińskich ataków dronowych.",
+      "whatHappened": "CNN napisało, że prawie każdy region Rosji odczuwa kryzys paliwowy, a Ukraina nasila ataki dronowe.",
+      "keyFacts": [
+        "CNN wiąże problem z rosnącą presją na rosyjską logistykę.",
+        "Temat łączy gospodarkę z wojną i infrastrukturą."
+      ],
+      "reactions": [
+        "To może utrudnić mobilność i zaopatrzenie w Rosji.",
+        "Ukraińska strategia ataków na zaplecze ma wymiar ekonomiczny."
+      ],
+      "whyItMatters": "Niedobory paliwa to nie tylko problem rynku, ale też sygnał presji na rosyjskie zaplecze wojenne.",
+      "context": "CNN traktuje tę historię jako efekt narastającej kampanii dronowej Ukrainy.",
+      "watchNext": [
+        "Czy Rosja wprowadzi kolejne ograniczenia lub priorytetyzację paliw.",
+        "Czy Ukraina rozszerzy skalę ataków na zaplecze."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Almost every Russian region hit by fuel crisis, as Ukraine escalates drone attacks",
+          "url": "https://edition.cnn.com/2026/07/06/europe/russia-fuel-crisis-ukraine-drone-attacks-intl-vis"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Rosja",
+        "Ukraina",
+        "Gospodarka"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-06-1800-11-kyiv-strikes",
+      "section": "Świat",
+      "title": "Rosyjskie uderzenia znów niszczą Kijów",
+      "lead": "CNN opisuje ciężkie rosyjskie ataki przed szczytem NATO.",
+      "whatHappened": "CNN podało, że śmiertelne rosyjskie uderzenia na Kijów przypadły na dzień przed podróżą Trumpa na kluczowy szczyt NATO.",
+      "keyFacts": [
+        "Ataki wpisują się w serię uderzeń na ukraińskie miasta.",
+        "CNN podkreśla znaczenie momentu politycznego."
+      ],
+      "reactions": [
+        "To może zwiększyć presję na sojuszników przed szczytem.",
+        "Kijów pozostaje głównym symbolem kosztów wojny."
+      ],
+      "whyItMatters": "Połączenie intensywnych ataków i kalendarza NATO podnosi stawkę dyplomatyczną.",
+      "context": "Temat rozgrywa się równolegle z ostrzeżeniami BBC o brakach interceptorów.",
+      "watchNext": [
+        "Czy szczyt NATO przyniesie nowe zapowiedzi wsparcia dla Ukrainy.",
+        "Czy pojawi się kolejny bilans ofiar lub zniszczeń."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Deadly Russian strikes hammer Kyiv on eve of Trump trip to critical NATO summit",
+          "url": "https://edition.cnn.com/2026/07/05/europe/kyiv-ballistic-missile-attack-july-6-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Ukraina",
+        "Rosja",
+        "NATO"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-06-1800-12-gaza-government",
+      "section": "Świat",
+      "title": "Hamas chce rozwiązać rząd w Gazie",
+      "lead": "CNN relacjonuje kolejne polityczne przesunięcie w Strefie Gazy.",
+      "whatHappened": "CNN napisało, że Hamas chce rozwiązać rząd w Gazie, gdy plan zawieszenia broni wspierany przez USA stoi w miejscu.",
+      "keyFacts": [
+        "Sprawa wiąże się z impasem wokół planu rozejmu.",
+        "To temat polityczny, a nie tylko militarny."
+      ],
+      "reactions": [
+        "To może zmienić układ administracyjny w Strefie Gazy.",
+        "Impuls negocjacyjny pozostaje słaby bez przełomu w rozmowach."
+      ],
+      "whyItMatters": "Zmiana po stronie Hamasu wpływa na to, kto i jak będzie zarządzał Gazą w czasie zawieszenia broni.",
+      "context": "To jeden z najważniejszych węzłów bliskowschodniego kryzysu politycznego.",
+      "watchNext": [
+        "Czy mediacja USA i regionu przyniesie nową propozycję.",
+        "Czy Hamas potwierdzi szczegóły planowanej zmiany."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Hamas says it will dissolve Gaza government as US-brokered ceasefire plan stalls",
+          "url": "https://edition.cnn.com/2026/07/06/middleeast/hamas-dissolves-gaza-government-intl"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Gaza",
+        "Bliski Wschód",
+        "Polityka"
+      ],
+      "priority": "High"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24: Najnowsze wiadomości XML",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24: Najnowsze wiadomości",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "BBC News World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    }
+  ]
+}

@@ -1,0 +1,497 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-06-29",
+  "runTime": "18:02",
+  "status": "Material update",
+  "headline": "18:02: burze dają szkody w Polsce, a świat podbija bilanse w Stade, Afganistanie i Wenezueli",
+  "summary": "Run z 18:02 CEST jest materialny względem publicznego baselinu 2026-06-29-1630, bo kilka kart dostało twardsze skutki i wyższe liczby. Polska część feedu przechodzi z samego ostrzegania do potwierdzonych zalań i nowego ryzyka wokół składowiska odpadów w Wołominie, a blok międzynarodowy podnosi wagę przez sześć ofiar w Stade, co najmniej 28 cywilów zabitych w Afganistanie według ONZ oraz ponad 1700 ofiar po trzęsieniu ziemi w Wenezueli.",
+  "items": [
+    {
+      "id": "pulse-2026-06-29-1802-01-burze-zalania",
+      "section": "Alerty",
+      "title": "Burze przechodzą w konkretne szkody: są zalania i połamane drzewa",
+      "lead": "Pogodowy temat dnia przestaje być tylko ostrzeżeniem i daje pierwsze twarde skutki.",
+      "whatHappened": "TVN Meteo podało, że przez część kraju nadal przechodzi gwałtowny front z deszczem i burzami, a na Pomorzu Zachodnim pojawiły się zalania i połamane drzewa. RCB utrzymuje alert ostrzegający przed intensywnym deszczem, silnym wiatrem, burzami i możliwymi przerwami w dostawie prądu.",
+      "keyFacts": [
+        "Na Pomorzu Zachodnim pojawiły się zalania i szkody po silnym wietrze.",
+        "Straż pożarna interweniowała po lokalnych skutkach gwałtownej pogody.",
+        "RCB nadal ostrzega przed możliwymi przerwami w dostawie prądu."
+      ],
+      "reactions": [
+        "Karta wraca na otwarcie, bo ma najwyższą użyteczność operacyjną dla użytkownika w kraju.",
+        "Względem 16:30 temat jest mocniejszy, bo dochodzą potwierdzone szkody, a nie tylko strefy opadów."
+      ],
+      "whyItMatters": "To najbardziej praktyczny sygnał krajowy na najbliższe godziny, bo może szybko przekładać się na awarie, utrudnienia i kolejne alarmy.",
+      "context": "W runie 16:30 centralnym motywem były trzy strefy opadów. O 18:02 temat awansuje dzięki konkretnym lokalnym skutkom.",
+      "watchNext": [
+        "Czy pojawią się nowe potwierdzone awarie prądu lub zamknięcia dróg.",
+        "Czy alert RCB zostanie utrzymany także na godziny wieczorne."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo: \"Lunęło. Burza jak w tropikach\". Są zalania",
+          "url": "https://tvn24.pl/tvnmeteo/polska/burze-w-poniedzialek-29-06-lunelo-jak-w-tropikach-sa-zalania-st9120128?source=rss"
+        },
+        {
+          "title": "RCB: Alert RCB - burze (29.06)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-2907"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Burze",
+        "RCB",
+        "Pogoda"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1802-02-wolomin",
+      "section": "Alerty",
+      "title": "Straż pilnuje składowiska odpadów w Wołominie, by upał nie wywołał skażenia",
+      "lead": "Upał dokłada nową kartę bezpieczeństwa wokół jednego z największych takich składowisk w Polsce.",
+      "whatHappened": "TVN24 podało, że w Wołominie straż pożarna prewencyjnie monitoruje składowisko odpadów niebezpiecznych przy ulicy Łukasiewicza. Celem jest niedopuszczenie do rozlania znajdujących się tam substancji podczas obecnych upałów.",
+      "keyFacts": [
+        "Chodzi o jedno z największych w Polsce składowisk odpadów niebezpiecznych.",
+        "Służby działają prewencyjnie z powodu wysokich temperatur.",
+        "Ryzyko dotyczy ewentualnego rozlania niebezpiecznych substancji."
+      ],
+      "reactions": [
+        "To nowa krajowa karta bezpieczeństwa, której nie było w runie 16:30.",
+        "Temat wzmacnia alertowy charakter wieczornego zestawu bez schodzenia w lokalną błahostkę."
+      ],
+      "whyItMatters": "Łączy falę upałów z możliwym ryzykiem środowiskowym i pokazuje, że służby reagują jeszcze przed awarią.",
+      "context": "Poprzedni run skupiał się na pogodzie, kolei i granicy. O 18:02 dochodzi osobny temat bezpieczeństwa chemicznego i środowiskowego.",
+      "watchNext": [
+        "Czy pojawi się oficjalny komunikat PSP lub samorządu z dodatkowymi szczegółami.",
+        "Czy wysokie temperatury wymuszą podobne działania przy innych obiektach ryzyka."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Strażacy na składowisku niebezpiecznych odpadów. Z powodu upału",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/wolomin-skladowisko-przy-ulicy-lukasiewicza-w-wolominie-w-upal-prewencyjnie-pilnuje-go-straz-pozarna-st9120218?source=rss"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Wołomin",
+        "Upał",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1802-03-pociagi",
+      "section": "Polska",
+      "title": "Resort nadal trzyma pierwszeństwo dla pociągów pasażerskich kosztem towarowych",
+      "lead": "Państwo pozostaje w trybie zarządzania przepustowością sieci kolejowej.",
+      "whatHappened": "Ministerstwo Infrastruktury przekazało, że w poniedziałek od 13:00 do 19:00 wstrzymano pociągi towarowe, a pasażerskie dostały pierwszeństwo. Na 18:02 karta pozostaje bardzo użyteczna, bo użytkownik nadal jest przed końcem okna obowiązywania tej decyzji.",
+      "keyFacts": [
+        "Decyzja obowiązuje w poniedziałek od 13:00 do 19:00.",
+        "Ruch towarowy został ograniczony, aby przepuścić pociągi pasażerskie.",
+        "Źródłem jest komunikat przytoczony przez TVN24 Biznes za Ministerstwem Infrastruktury."
+      ],
+      "reactions": [
+        "To nadal najmocniejsza krajowa karta infrastrukturalna dnia.",
+        "Temat zostaje, bo jego okno czasowe nie wygasło w momencie tego runu."
+      ],
+      "whyItMatters": "Wpływa jednocześnie na pasażerów, logistykę i obraz odporności infrastruktury w warunkach pogodowej presji.",
+      "context": "W runie 16:30 był to nowy sygnał zarządczy. O 18:02 wciąż ma wysoki priorytet, bo decyzja nadal obowiązuje.",
+      "watchNext": [
+        "Czy po 19:00 resort ogłosi powrót do zwykłego ruchu.",
+        "Czy pojawią się dodatkowe ograniczenia na głównych liniach kolejowych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Wstrzymany ruch części pociągów. Jest decyzja resortu",
+          "url": "https://tvn24.pl/biznes/z-kraju/wstrzymany-ruch-czesci-pociagow-jest-decyzja-resortu-st9119988?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Kolej",
+        "Transport",
+        "Ministerstwo Infrastruktury"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1802-04-rog",
+      "section": "Polityka",
+      "title": "Akt oskarżenia dla członków Ruchu Obrony Granic zostaje mocną kartą porządkową",
+      "lead": "Temat graniczny nadal ma ciężar państwowy, bo jest już na etapie sądowym.",
+      "whatHappened": "Do sądu w Słubicach trafił akt oskarżenia przeciwko dwóm członkom Ruchu Obrony Granic, którym śledczy zarzucają podszywanie się pod funkcjonariuszy Straży Granicznej i zatrzymywanie cudzoziemców. To nadal silna karta polityczno-porządkowa w krajowym bloku.",
+      "keyFacts": [
+        "Akt oskarżenia dotyczy dwóch osób.",
+        "Śledczy zarzucają im podszywanie się pod funkcjonariuszy Straży Granicznej.",
+        "Sprawa ma bezpośredni wymiar porządku publicznego i bezpieczeństwa granicznego."
+      ],
+      "reactions": [
+        "Temat utrzymuje równowagę między pogodą, transportem i bezpieczeństwem wewnętrznym.",
+        "Karta zostaje, bo ma większą wagę państwową niż lżejsze popołudniowe newsy polityczne."
+      ],
+      "whyItMatters": "Dotyczy uzurpacji uprawnień służb i napięć wokół kontroli granicznych, więc ma znaczenie instytucjonalne i społeczne.",
+      "context": "W runie 16:30 temat wszedł jako nowa karta. O 18:02 pozostaje wystarczająco mocny, by nie wypaść z zestawu.",
+      "watchNext": [
+        "Czy prokuratura ujawni dalsze szczegóły zarzutów i środków zapobiegawczych.",
+        "Czy sprawa wywoła kolejną reakcję polityczną wokół samozwańczych kontroli granicznych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zatrzymali do kontroli cudzoziemców. Członkowie Ruchu Obrony Granic oskarżeni",
+          "url": "https://tvn24.pl/lubuskie/slubice-czlonkowie-ruchu-obrony-granic-oskarzeni-o-podszywanie-sie-pod-straznikow-granicznych-st9120043?source=rss"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Granica",
+        "Słubice",
+        "Sąd"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1802-05-ai",
+      "section": "Technologia",
+      "title": "Akcje AI pozostają pod presją, bo rynek nie widzi szybkiego zwrotu z boomu",
+      "lead": "Technologia zostaje w feedzie przez twardy sygnał z giełd, nie przez gadżety.",
+      "whatHappened": "TVN24 Biznes opisało szeroką wyprzedaż akcji spółek związanych ze sztuczną inteligencją. Inwestorzy coraz mocniej kwestionują tempo, w jakim boom AI ma przełożyć się na realne zyski.",
+      "keyFacts": [
+        "Spadki obejmują rynki technologiczne od Azji po Stany Zjednoczone.",
+        "W tle jest obawa, że oczekiwane zyski z AI materializują się zbyt wolno.",
+        "To nadal najmocniejsza publicznie relewantna karta technologiczna dnia."
+      ],
+      "reactions": [
+        "Karta utrzymuje sektor technologiczny w zestawie bez rozcieńczania priorytetu bezpieczeństwa.",
+        "Temat daje użytkownikowi ekonomiczny kontekst wokół AI zamiast kolejnego miękkiego newsa branżowego."
+      ],
+      "whyItMatters": "Zmiana sentymentu wobec AI wpływa na wyceny, inwestycje i oczekiwania wobec całego sektora technologicznego.",
+      "context": "Temat wszedł do feedu w południe i nadal nie ma mocniejszego szerokiego zamiennika technologicznego.",
+      "watchNext": [
+        "Czy korekta rozszerzy się na cały Nasdaq i powiązane indeksy.",
+        "Czy kolejne firmy zrewidują oczekiwania dotyczące monetyzacji produktów AI."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Wielka wyprzedaż akcji AI. Miliardy znikają z giełdy",
+          "url": "https://tvn24.pl/biznes/tech/ai-wielka-wyprzedaz-akcji-sektora-sztucznej-inteligencji-inwestorzy-na-rynku-akcji-technologicznych-bywaja-niecierpliwi-st9119030?source=rss"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "AI",
+        "Giełda",
+        "Rynki"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-29-1802-06-bialorus",
+      "section": "Świat",
+      "title": "Bruksela nadal szykuje presję na Mińsk po alarmie Zełenskiego",
+      "lead": "Europejski wymiar wojny utrzymuje się dzięki sygnałowi możliwych dalszych sankcji.",
+      "whatHappened": "TVN24 Biznes podało, że Komisja Europejska sygnalizuje możliwość dalszych sankcji wobec reżimu Alaksandra Łukaszenki. W tle pozostaje ocena, że Rosja coraz mocniej wciąga Białoruś w wojnę przeciw Ukrainie.",
+      "keyFacts": [
+        "Bruksela mówi o możliwych dalszych sankcjach wobec Mińska.",
+        "Temat został powiązany z alarmem Wołodymyra Zełenskiego.",
+        "To nadal mocna europejska karta geopolityczna na tle dominującego Bliskiego Wschodu."
+      ],
+      "reactions": [
+        "Karta utrzymuje w feedzie wymiar bezpieczeństwa na wschodniej flance Europy.",
+        "Pozostaje silniejsza od lżejszych newsów politycznych z Zachodu pojawiających się w BBC."
+      ],
+      "whyItMatters": "Zaostrzenie linii UE wobec Mińska może wpływać na bezpieczeństwo regionu, relacje z Rosją i napięcia na granicach.",
+      "context": "W runie 16:30 była to nowa karta. O 18:02 nadal zostaje, bo nie pojawił się mocniejszy europejski zamiennik.",
+      "watchNext": [
+        "Czy Komisja Europejska wskaże konkretne instrumenty sankcyjne.",
+        "Czy temat przejdzie z poziomu politycznego w bardziej operacyjne ruchy wojskowe lub graniczne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Zełenski alarmuje, Bruksela reaguje na działania Łukaszenki",
+          "url": "https://tvn24.pl/biznes/ze-swiata/zelenski-alarmuje-bruksela-reaguje-na-dzialania-lukaszenki-st9120052?source=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Białoruś",
+        "UE",
+        "Ukraina"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1802-07-iran",
+      "section": "Bezpieczeństwo",
+      "title": "USA mówią o świeżych rozmowach z Iranem, ale sam rozejm nadal skrzypi",
+      "lead": "Największy temat bezpieczeństwa dnia nie wygasa, tylko zmienia ton na bardziej dyplomatyczny i sporny.",
+      "whatHappened": "BBC podaje, że po wymianie uderzeń USA i Iran mają na razie przejść w tryb stand down. CNN dodaje, że administracja USA mówi o wtorkowych rozmowach w Katarze, podczas gdy Iran twierdzi, że żadne spotkanie nie jest ustalone.",
+      "keyFacts": [
+        "Obie strony sygnalizują chwilowe wyhamowanie po weekendowej wymianie ciosów.",
+        "USA komunikują możliwość rozmów we wtorek w Katarze.",
+        "Teheran podważa istnienie uzgodnionego spotkania."
+      ],
+      "reactions": [
+        "Karta zostaje obowiązkowa, bo pojedynczy komunikat może znowu wywrócić cały blok światowy.",
+        "Względem 16:30 temat przesuwa się z samego stand down w stronę sporu o realność rozmów."
+      ],
+      "whyItMatters": "Od stabilności tego rozejmu zależy rynek energii, bezpieczeństwo żeglugi i ryzyko dalszej eskalacji USA-Iran.",
+      "context": "To centralny temat dnia już od porannego slotu, ale o 18:02 dostaje nowy dyplomatyczny wątek do obserwacji.",
+      "watchNext": [
+        "Czy rozmowy w Katarze rzeczywiście dojdą do skutku.",
+        "Czy pojawi się nowy ruch wokół cieśniny Ormuz lub kolejne uderzenia."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US says it has agreed to 'stand down' after exchange of strikes with Iran",
+          "url": "https://www.bbc.co.uk/news/articles/c872rjw17qpo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Trump says US and Iran to hold fresh talks after strikes strain ceasefire",
+          "url": "https://edition.cnn.com/2026/06/29/world/live-news/iran-war-strikes-trump"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Iran",
+        "USA",
+        "Katar"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1802-08-afghanistan",
+      "section": "Bezpieczeństwo",
+      "title": "ONZ mówi już o co najmniej 28 cywilach zabitych po pakistańskich uderzeniach",
+      "lead": "Afganistan dostaje twardszy bilans i mocniejsze oficjalne potwierdzenie niż w poprzednim runie.",
+      "whatHappened": "BBC podało, że pakistańskie uderzenia zabiły co najmniej 28 cywilów w Afganistanie, a UNAMA potwierdziła również 49 rannych. Pakistan utrzymuje, że celował w bojowników, natomiast władze talibskie mówią o ofiarach cywilnych.",
+      "keyFacts": [
+        "UNAMA potwierdziła co najmniej 28 zabitych cywilów i 49 rannych.",
+        "Uderzenia objęły prowincje Paktya, Paktika i Kunar.",
+        "Strony konfliktu inaczej opisują cel i charakter ataków."
+      ],
+      "reactions": [
+        "Względem 16:30 karta wyraźnie się wzmacnia dzięki twardemu potwierdzeniu ONZ.",
+        "To jeden z najmocniejszych nowych argumentów za materialnością slotu 18:02."
+      ],
+      "whyItMatters": "Wyższy i oficjalnie potwierdzony bilans cywilny zwiększa ryzyko dalszej destabilizacji na granicy Pakistan-Afganistan.",
+      "context": "W runie 16:30 temat opierał się na bardziej ogólnym sformułowaniu o dziesiątkach ofiar. O 18:02 wchodzi precyzyjny bilans od UNAMA.",
+      "watchNext": [
+        "Czy pojawi się reakcja międzynarodowa na skalę ofiar cywilnych.",
+        "Czy dojdzie do kolejnych uderzeń lub odwetu przy granicy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Pakistani strikes kill at least 28 civilians in Afghanistan, UN says",
+          "url": "https://www.bbc.co.uk/news/articles/cy8wygyed0wo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "UNAMA Statement on civilian casualties",
+          "url": "https://unama.unmissions.org/en/news/unama-statement-on-civilian-casualties"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Afganistan",
+        "Pakistan",
+        "ONZ"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1802-09-venezuela",
+      "section": "Świat",
+      "title": "Wenezuela przekracza 1700 ofiar, a ratownicy nadal szukają ocalałych",
+      "lead": "Katastrofa w Ameryce Łacińskiej rośnie szybciej, niż pokazywał poprzedni slot.",
+      "whatHappened": "CNN podaje, że po trzęsieniu ziemi w Wenezueli zginęło już ponad 1700 osób. W La Guairze i Caracas ratownicy nadal przeszukują gruzy, a kolejne wstrząsy wtórne podtrzymują chaos i strach mieszkańców.",
+      "keyFacts": [
+        "Bilans ofiar przekroczył 1700 osób.",
+        "Akcja ratunkowa trwa nadal w La Guairze i Caracas.",
+        "Wstrząsy wtórne utrudniają działania i podbijają niepewność."
+      ],
+      "reactions": [
+        "Karta dostaje wyższy priorytet, bo liczby są wyraźnie większe niż w runie 16:30.",
+        "To jeden z dwóch najmocniejszych humanitarnych tematów zagranicznych obok Afganistanu."
+      ],
+      "whyItMatters": "Rosnący bilans ofiar i trwająca akcja ratunkowa czynią z Wenezueli jeden z najcięższych kryzysów dnia.",
+      "context": "W poprzednim runie CNN mówiło o co najmniej 1450 ofiarach. O 18:02 próg rośnie powyżej 1700, więc temat nie może wypaść z feedu.",
+      "watchNext": [
+        "Czy bilans ofiar i liczba zaginionych dalej wzrosną.",
+        "Czy ruszy większa międzynarodowa operacja pomocowa."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Venezuela earthquake aftershocks reignite fears as survivors seek answers",
+          "url": "https://edition.cnn.com/2026/06/29/world/live-news/venezuela-earthquake-hnk"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wenezuela",
+        "Trzęsienie ziemi",
+        "Ratownictwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1802-10-stade",
+      "section": "Świat",
+      "title": "Stade rośnie do sześciu ofiar po strzelaninie w ośrodku opieki",
+      "lead": "Niemiecki temat dostaje nowy próg liczbowy i mocniejszy powód do utrzymania w zestawie.",
+      "whatHappened": "BBC i CNN podają, że bilans ofiar strzelaniny w ośrodku opieki nad młodzieżą w Stade wzrósł do sześciu osób. Policja mówi też o kolejnych rannych, a CNN podkreśla, że ofiary były pracownikami placówki, nie jej podopiecznymi.",
+      "keyFacts": [
+        "Pięć osób zmarło na miejscu, a szósta w szpitalu.",
+        "Policja informuje również o osobach rannych.",
+        "Ofiary były pracownikami ośrodka."
+      ],
+      "reactions": [
+        "Wzrost bilansu z pięciu do sześciu ofiar czyni kartę materialną względem 16:30.",
+        "Temat pozostaje ważny, bo łączy bezpieczeństwo publiczne z wysoką wagą społeczną."
+      ],
+      "whyItMatters": "Podbity bilans ofiar zmienia skalę zdarzenia i utrzymuje wysoką uwagę na bezpieczeństwie publicznym w Europie.",
+      "context": "W runie 16:30 karta weszła z pięcioma ofiarami. O 18:02 pojawia się wyraźnie gorszy bilans i dodatkowe potwierdzenia.",
+      "watchNext": [
+        "Czy śledczy ujawnią motyw i pełny bilans rannych.",
+        "Czy pojawią się kolejne informacje o sprawcy lub sporze rodzinnym wskazywanym przez BBC."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Sixth person dies after shooting at youth welfare centre in Germany",
+          "url": "https://www.bbc.co.uk/news/articles/c17yzzw1vkjo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Six killed in shooting at German youth facility, police say",
+          "url": "https://edition.cnn.com/2026/06/29/europe/stade-germany-shooting-intl"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Niemcy",
+        "Stade",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1802-11-ebola",
+      "section": "Alerty",
+      "title": "Kinszasa zakazuje masowych zgromadzeń, by zatrzymać rozprzestrzenianie się Ebola",
+      "lead": "Afrykańska karta alertowa zostaje, bo ma bezpośredni wymiar zdrowotny i polityczny.",
+      "whatHappened": "BBC podało, że władze Demokratycznej Republiki Konga zakazały masowych zgromadzeń w Kinszasie, aby ograniczyć rozprzestrzenianie się Ebola. Opozycja oskarża rząd o wykorzystywanie epidemii do blokowania protestów.",
+      "keyFacts": [
+        "Zakaz dotyczy masowych zgromadzeń w stolicy kraju.",
+        "Powodem ma być ograniczenie rozprzestrzeniania się Ebola.",
+        "W tle pojawia się spór polityczny z opozycją."
+      ],
+      "reactions": [
+        "Karta zostaje, bo łączy zdrowie publiczne z napięciem politycznym.",
+        "To nadal jeden z bardziej użytecznych alertów zagranicznych dla szybkiego feedu."
+      ],
+      "whyItMatters": "Rozszerzenie ograniczeń w stolicy oznacza, że temat Ebola ma wpływ nie tylko zdrowotny, ale też społeczny i polityczny.",
+      "context": "Temat wszedł do feedu w runie 16:30 i nie stracił świeżości przed wieczornym slotem.",
+      "watchNext": [
+        "Czy władze rozszerzą ograniczenia poza Kinszasę.",
+        "Czy pojawią się nowe dane o skali ogniska i oficjalnej reakcji międzynarodowej."
+      ],
+      "sources": [
+        {
+          "title": "BBC: DR Congo bans mass gatherings in the capital to prevent spread of Ebola",
+          "url": "https://www.bbc.co.uk/news/articles/c992k7zk981o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Ebola",
+        "DRK",
+        "Zdrowie publiczne"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-29-1802-12-heatwave",
+      "section": "Świat",
+      "title": "Europejska fala gorąca nadal wiązana jest z około 1300 zgonów",
+      "lead": "Upał pozostaje dużą kartą międzynarodową, bo łączy rekordy temperatur z realnym kosztem ludzkim.",
+      "whatHappened": "BBC podało, że WHO wiąże europejską falę gorąca z około 1300 zgonów, a Niemcy ustanowiły rekord 41,7 stopnia Celsjusza. To nadal jedna z najbardziej społecznie relewantnych kart zagranicznych dnia.",
+      "keyFacts": [
+        "WHO wiąże falę gorąca z około 1300 zgonów.",
+        "Niemcy odnotowały rekord 41,7 stopnia Celsjusza.",
+        "Temat pozostaje istotny dla całej Europy, nie tylko jednego państwa."
+      ],
+      "reactions": [
+        "Karta utrzymuje szeroki europejski kontekst pogodowy obok bardziej gwałtownych kryzysów punktowych.",
+        "Jej utrzymanie wzmacnia spójność zestawu z polskimi tematami upału i burz."
+      ],
+      "whyItMatters": "To sygnał, że ekstremalna pogoda w Europie ma już nie tylko wymiar meteorologiczny, ale wyraźnie śmiertelny i systemowy.",
+      "context": "Temat był już mocny w runie 16:30 i nadal pozostaje jedną z najlepszych kart do pokazania szerokiego europejskiego tła dnia.",
+      "watchNext": [
+        "Czy kolejne państwa zgłoszą nowe rekordy temperatur lub dodatkowe zgony.",
+        "Czy pojawią się nowe rekomendacje WHO i krajowych służb zdrowia."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Europe's heatwave 'linked to 1,300 deaths' as more records broken",
+          "url": "https://www.bbc.co.uk/news/articles/cn4d2vv935lo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Europa",
+        "Upał",
+        "WHO"
+      ],
+      "priority": "High"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "RCB: Alert RCB - burze (29.06)",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-2907"
+    },
+    {
+      "title": "UNAMA Statement on civilian casualties",
+      "url": "https://unama.unmissions.org/en/news/unama-statement-on-civilian-casualties"
+    },
+    {
+      "title": "TVN Meteo: \"Lunęło. Burza jak w tropikach\". Są zalania",
+      "url": "https://tvn24.pl/tvnmeteo/polska/burze-w-poniedzialek-29-06-lunelo-jak-w-tropikach-sa-zalania-st9120128?source=rss"
+    },
+    {
+      "title": "TVN24: Strażacy na składowisku niebezpiecznych odpadów. Z powodu upału",
+      "url": "https://tvn24.pl/tvnwarszawa/okolice/wolomin-skladowisko-przy-ulicy-lukasiewicza-w-wolominie-w-upal-prewencyjnie-pilnuje-go-straz-pozarna-st9120218?source=rss"
+    },
+    {
+      "title": "TVN24 Biznes: Wstrzymany ruch części pociągów. Jest decyzja resortu",
+      "url": "https://tvn24.pl/biznes/z-kraju/wstrzymany-ruch-czesci-pociagow-jest-decyzja-resortu-st9119988?source=rss"
+    },
+    {
+      "title": "BBC: Sixth person dies after shooting at youth welfare centre in Germany",
+      "url": "https://www.bbc.co.uk/news/articles/c17yzzw1vkjo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC: Pakistani strikes kill at least 28 civilians in Afghanistan, UN says",
+      "url": "https://www.bbc.co.uk/news/articles/cy8wygyed0wo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "CNN: Trump says US and Iran to hold fresh talks after strikes strain ceasefire",
+      "url": "https://edition.cnn.com/2026/06/29/world/live-news/iran-war-strikes-trump"
+    },
+    {
+      "title": "CNN: Venezuela earthquake aftershocks reignite fears as survivors seek answers",
+      "url": "https://edition.cnn.com/2026/06/29/world/live-news/venezuela-earthquake-hnk"
+    }
+  ]
+}

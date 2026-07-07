@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-02",
+  "runTime": "21:01",
+  "status": "Material update",
+  "headline": "21:01: Polska przechodzi na alerty i decyzje instytucji, a świat dokłada Kijów, Damaszek i cięższą Wenezuelę",
+  "summary": "Slot 21:01 wyraźnie różni się od 18:01: krajowy feed zamienia polityczno-zdrowotny pakiet na ewakuację bloku, Odyseusza w mObywatelu, rachunki za prąd i ETPC, a świat dokłada wyższy bilans po ataku na Kijów, zamach w Damaszku, pożary we Francji, spór o realną skalę tragedii w Wenezueli, pełną ekskomunikę SSPX i migracyjny sygnał papieża.",
+  "items": [
+    {
+      "id": "pulse-2026-07-02-2101-01-ursynow-ewakuacja",
+      "section": "Polska",
+      "title": "Ursynów ewakuuje blok po ogłoszeniu klęski budowlanej",
+      "lead": "Jedna z najmocniejszych krajowych kart slotu: około 40 rodzin ma pilnie opuścić budynek.",
+      "whatHappened": "Mieszkańcy bloku na warszawskim Ursynowie dowiedzieli się, że ogłoszono klęskę budowlaną i z dnia na dzień mają opuścić budynek. TVN24 opisuje, że mieszkańcy od miesięcy prosili o remont, wcześniej słysząc zapewnienia, że obiekt jest bezpieczny.",
+      "keyFacts": [
+        "Według TVN24 około 40 rodzin ma się wyprowadzić z budynku.",
+        "Materiał opisuje formalne ogłoszenie klęski budowlanej.",
+        "Mieszkańcy wcześniej alarmowali o stanie technicznym i zabiegali o remont."
+      ],
+      "reactions": [
+        "To lokalny temat, ale o wysokiej wartości ostrzegawczej dla wieczornego feedu.",
+        "Sprawa może szybko przejść z poziomu osiedlowego na miejski i polityczny, jeśli pojawi się zarzut zaniedbań."
+      ],
+      "whyItMatters": "To bezpośrednie ryzyko dla mieszkańców i czytelny sygnał, że wieczorny krajowy feed przesuwa się z debaty politycznej w stronę twardych zdarzeń operacyjnych.",
+      "context": "W slocie 18:01 dominowały weto prezydenta i pieniądze dla zdrowia; o 21:01 kraj otwiera nie polityka, lecz nagły problem bezpieczeństwa mieszkaniowego.",
+      "watchNext": [
+        "Czy pojawi się oficjalny komunikat nadzoru budowlanego lub miasta o przyczynach decyzji.",
+        "Czy mieszkańcy dostaną lokale zastępcze i jaki będzie zakres dalszej ewakuacji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: 40 rodzin musi opuścić blok na Ursynowie",
+          "url": "https://tvn24.pl/tvnwarszawa/ursynow/40-rodzin-musi-opuscic-blok-na-ursynowie-budynek-grozi-zawaleniem-st9125545?source=rss"
+        }
+      ],
+      "tags": [
+        "Ursynów",
+        "Warszawa",
+        "Klęska budowlana",
+        "Ewakuacja"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-2101-02-odyseusz-mobywatel",
+      "section": "Technologia",
+      "title": "Odyseusz wchodzi do mObywatela i dokłada moduł kryzysowy",
+      "lead": "Polska karta technologiczno-usługowa: podróż można już zgłosić z poziomu mObywatela.",
+      "whatHappened": "TVN24 i MSZ podają, że system Odyseusz udostępnia wybrane funkcje w aplikacji mObywatel. Użytkownik może zgłosić podróż, sprawdzić informacje o innych krajach i korzystać z modułu sytuacji kryzysowych, a w lipcu ma ruszyć oddzielna aplikacja mobilna.",
+      "keyFacts": [
+        "MSZ potwierdza dostępność części funkcji Odyseusza w mObywatelu.",
+        "Wśród nowych usług są zgłoszenie podróży, informacje o krajach i moduł kryzysowy.",
+        "Resort zapowiada osobną aplikację mobilną jeszcze w lipcu."
+      ],
+      "reactions": [
+        "To praktyczna karta dla sezonu urlopowego i jedyna wyraźnie publiczna technologia w tym slocie.",
+        "Państwowy kanał kryzysowy staje się bliższy zwykłemu użytkownikowi, a nie tylko podróżnikowi śledzącemu MSZ ręcznie."
+      ],
+      "whyItMatters": "To poszerza realny zasięg narzędzia bezpieczeństwa dla Polaków za granicą i wzmacnia użyteczność mobilnych usług państwa w czasie sezonu wyjazdowego.",
+      "context": "Temat zastępuje bardziej geopolityczny ton poprzedniego slotu i wprowadza lżejszą, ale bardzo użytkową kartę publicznej infrastruktury cyfrowej.",
+      "watchNext": [
+        "Czy MSZ poda dokładną datę startu osobnej aplikacji Odyseusz.",
+        "Czy resort pokaże, jak szeroko zadziała moduł kryzysowy podczas realnych zdarzeń."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Odyseusz dostępny w mObywatelu",
+          "url": "https://tvn24.pl/biznes/turystyka/odyseusz-dostepny-w-mobywatelu-oddzielna-aplikacja-w-lipcu-st9125616?source=rss"
+        },
+        {
+          "title": "MSZ: Odyseusz w aplikacji mObywatel",
+          "url": "https://www.gov.pl/web/dyplomacja/odyseusz-w-aplikacji-mobywatel"
+        }
+      ],
+      "tags": [
+        "Odyseusz",
+        "mObywatel",
+        "MSZ",
+        "Podróże"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-02-2101-03-rachunki-prad",
+      "section": "Gospodarka",
+      "title": "Prezydent podpisuje ustawę upraszczającą rachunki za prąd",
+      "lead": "Wieczorna karta gospodarcza schodzi z wielkiej polityki na czytelność rachunków domowych.",
+      "whatHappened": "TVN24 podaje, że prezydent podpisał ustawę, która ma uprościć rachunki za energię elektryczną dla gospodarstw domowych. Zmiany mają ułatwić odbiorcom zrozumienie składowych faktury.",
+      "keyFacts": [
+        "Ustawa dotyczy gospodarstw domowych i uproszczenia informacji na rachunkach.",
+        "Celem jest bardziej czytelne pokazanie składowych ceny energii.",
+        "Decyzja prezydenta zamyka etap podpisu i przesuwa temat do wdrożenia."
+      ],
+      "reactions": [
+        "To mniej spektakularna karta niż spory o wielkie koszty systemowe, ale bliższa codziennemu doświadczeniu odbiorców.",
+        "Wieczorny feed dostaje tym ruchem spokojniejszy, konsumencki komponent gospodarczy."
+      ],
+      "whyItMatters": "Energia pozostaje wrażliwym obszarem dla gospodarstw domowych, a prostszy rachunek to potencjalnie czytelniejsza presja cenowa i mniejsza asymetria informacji.",
+      "context": "O 18:01 gospodarka była ciężka i fiskalna przez temat NFZ; o 21:01 przesuwa się na bardziej praktyczny wymiar rachunków i usług.",
+      "watchNext": [
+        "Kiedy dostawcy energii zaczną pokazywać nowe wzory rachunków.",
+        "Czy regulator lub spółki doprecyzują, jak bardzo uproszczona będzie prezentacja opłat."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Uproszczenie rachunków za prąd. Jest podpis prezydenta",
+          "url": "https://tvn24.pl/biznes/z-kraju/nowelizacja-ustawy-o-energii-elektrycznej-uproszczenie-rachunkow-za-prad-jest-podpis-prezydenta-st9125452?source=rss"
+        }
+      ],
+      "tags": [
+        "Energia",
+        "Rachunki",
+        "Prezydent",
+        "Gospodarstwa domowe"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-02-2101-04-etpc-akty-urodzenia",
+      "section": "Polityka",
+      "title": "ETPC rozdziela dwie sprawy z Polski o akty urodzenia dzieci par jednopłciowych",
+      "lead": "Wieczorna karta prawna: jeden polski przypadek przegrywa w Strasburgu, drugi nie.",
+      "whatHappened": "Europejski Trybunał Praw Człowieka rozstrzygnął dwie sprawy dotyczące odmowy rejestracji przez polskie władze zagranicznych aktów urodzenia dzieci par jednopłciowych. W jednej z nich uznano naruszenie konwencji, a druga została oddalona.",
+      "keyFacts": [
+        "Spór dotyczy odmowy rejestracji zagranicznych aktów urodzenia dzieci par jednopłciowych.",
+        "W jednej sprawie ETPC stwierdził naruszenie konwencji.",
+        "W drugiej sprawie trybunał nie przyznał racji skarżącym."
+      ],
+      "reactions": [
+        "To temat praw człowieka i administracji państwowej, który może wrócić do polskiej debaty prawnej i politycznej.",
+        "Nie jest to karta alarmowa, ale ma wysoki ciężar interpretacyjny dla polityki rodzinnej i prawnej."
+      ],
+      "whyItMatters": "Wyrok wzmacnia presję na polskie instytucje, by precyzyjniej uzasadniały granice uznawania dokumentów rodzinnych i praw dzieci.",
+      "context": "W poprzednim slocie polska polityka była klasycznie partyjno-rządowa; teraz pojawia się wersja bardziej sądowa i prawno-konwencyjna.",
+      "watchNext": [
+        "Czy pojawią się komentarze rządu, RPO lub organizacji praw człowieka do obu rozstrzygnięć.",
+        "Czy temat przełoży się na nowe propozycje ustawowe lub linię orzeczniczą w kraju."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: ETPC orzekł w dwóch sprawach z Polski",
+          "url": "https://tvn24.pl/swiat/rejestracja-zagranicznych-aktow-urodzenia-dzieci-par-jednoplciowych-etpc-orzekl-w-dwoch-sprawach-z-polski-st9125462?source=rss"
+        }
+      ],
+      "tags": [
+        "ETPC",
+        "Polska",
+        "Prawa człowieka",
+        "Akty urodzenia"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-02-2101-05-kyiv-25-ofiar",
+      "section": "Bezpieczeństwo",
+      "title": "Kijów podnosi bilans do 25 ofiar, a Zełenski zapowiada nasilenie rosyjskich ataków",
+      "lead": "Najcięższa karta bezpieczeństwa: stolica Ukrainy płaci wyższą cenę niż w feedzie z 18:01.",
+      "whatHappened": "BBC podało, że po rosyjskim uderzeniu na Kijów zginęło co najmniej 25 osób, a był to atak z największą liczbą użytych środków przeciwko stolicy i szerokim zasięgiem trafień. TVN24 cytuje Wołodymyra Zełenskiego, który ocenia, że wraz z problemami Putina ataki będą się nasilać, i wzywa partnerów do realizacji uzgodnionych dostaw uzbrojenia.",
+      "keyFacts": [
+        "BBC podniosło bilans ofiar po ataku na Kijów do co najmniej 25 zabitych.",
+        "Redakcja opisuje go jako atak z największą liczbą użytych środków przeciw stolicy.",
+        "Zełenski apeluje do sojuszników o dowiezienie zobowiązań wojskowych."
+      ],
+      "reactions": [
+        "Karta pozostaje głównym filarem części międzynarodowej, ale jest wyraźnie cięższa niż o 18:01.",
+        "Retoryka Zełenskiego podnosi stawkę politycznie, bo łączy bilans ofiar z presją na zachodnią pomoc."
+      ],
+      "whyItMatters": "To realne pogorszenie obrazu wojny w jednym z najważniejszych tematów europejskiego bezpieczeństwa, z możliwym wpływem na kolejne decyzje sojuszników Ukrainy.",
+      "context": "W poprzednim slocie feed mówił o 20 ofiarach; o 21:01 temat wraca z wyższym bilansem i twardszym komunikatem politycznym ze strony Kijowa.",
+      "watchNext": [
+        "Czy bilans ofiar wzrośnie po zakończeniu akcji ratunkowych.",
+        "Czy partnerzy Ukrainy odpowiedzą nowymi decyzjami sprzętowymi lub finansowymi."
+      ],
+      "sources": [
+        {
+          "title": "BBC: 'Most massive' Russian attack on Kyiv kills at least 25",
+          "url": "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "TVN24: Zełenski po kolejnych atakach na Kijów",
+          "url": "https://tvn24.pl/swiat/ukraina-zmasowany-atak-na-kijow-wolodymyr-zelenski-reaguje-wladimir-putin-bedzie-tylko-nasilal-ataki-st9125526?source=rss"
+        }
+      ],
+      "tags": [
+        "Kijów",
+        "Ukraina",
+        "Rosja",
+        "Zełenski"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-2101-06-pozary-francja",
+      "section": "Alerty",
+      "title": "Południe Francji walczy z pożarami po fali upałów",
+      "lead": "Karta pogodowa znów staje się kartą kryzysową: ogień bierze ponad tysiąc hektarów.",
+      "whatHappened": "TVN Meteo podaje, że na południu Francji szaleją pożary lasów i pól. Z ogniem walczą setki strażaków, a akcję gaśniczą utrudnia silny wiatr, który roznosi front pożarów.",
+      "keyFacts": [
+        "Ogień strawił ponad 1000 hektarów pól i lasów.",
+        "Na miejscu działa kilkuset strażaków.",
+        "Silny wiatr utrudnia opanowanie żywiołu."
+      ],
+      "reactions": [
+        "To naturalna kontynuacja karty upałów z poprzedniego slotu, ale w bardziej kryzysowej formie.",
+        "Temat wzmacnia europejski komponent alertowy bez potrzeby sięgania po miękkie newsy pogodowe."
+      ],
+      "whyItMatters": "Europa Środkowa i Południowa coraz częściej przechodzą z samej fali upałów do strat terenowych, ewakuacji i presji na służby ratownicze.",
+      "context": "O 18:01 feed pokazywał zgony na Węgrzech związane z upałem; o 21:01 dochodzi karta o żywiole, który już niszczy teren we Francji.",
+      "watchNext": [
+        "Czy pożary wymuszą nowe ewakuacje lub zamknięcia infrastruktury.",
+        "Czy kolejne kraje regionu zgłoszą podobne pożary po tej samej fali upałów."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo: Po rekordowych upałach wybuchły pożary we Francji",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/upaly-w-europie-pozary-lasow-we-francji-wiatr-roznosi-ogien-st9124730?source=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "Pożary",
+        "Upały",
+        "Strażacy"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-2101-07-damaszek-bomba",
+      "section": "Świat",
+      "title": "Bomba w kawiarni w centrum Damaszku zabija co najmniej sześć osób",
+      "lead": "Nowa twarda karta świata: śmiertelny wybuch tuż przy ważnym budynku państwowym.",
+      "whatHappened": "BBC podaje, że w centralnym Damaszku doszło do wybuchu bomby w kawiarni położonej blisko Pałacu Sprawiedliwości. Syryjskie media państwowe mówią o co najmniej sześciu ofiarach śmiertelnych, a bezpośrednio po zdarzeniu nie było jasne, kto odpowiada za atak.",
+      "keyFacts": [
+        "Według BBC i syryjskich mediów państwowych zginęło co najmniej 6 osób.",
+        "Wybuch nastąpił w kawiarni w pobliżu Pałacu Sprawiedliwości.",
+        "Bezpośrednio po zdarzeniu nie było informacji o przyznaniu się sprawców."
+      ],
+      "reactions": [
+        "Temat natychmiast wchodzi do najwyższej ligi wieczornego feedu, bo łączy centrum stolicy i ofiary śmiertelne.",
+        "Na tym etapie duża część wiedzy operacyjnej nadal pochodzi z mediów państwowych, więc karta zostaje z ostrożnym opisem."
+      ],
+      "whyItMatters": "To przypomnienie, że Syria pozostaje niestabilna bezpieczeństwowo, a pojedynczy zamach w stolicy potrafi natychmiast zmienić międzynarodowy rozkład kart dnia.",
+      "context": "W 18:01 część światowa była ciężka, ale bez świeżego zamachu terrorystycznego w regionie; o 21:01 dochodzi jednoznaczny temat przemocy politycznej.",
+      "watchNext": [
+        "Czy pojawi się odpowiedzialność organizacyjna lub wersja władz o motywie ataku.",
+        "Czy bilans ofiar wzrośnie wraz z napływem informacji z Damaszku."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Bomb blast at central Damascus cafe kills six, state media say",
+          "url": "https://www.bbc.co.uk/news/articles/cn0vwxyz40zo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Damaszek",
+        "Syria",
+        "Zamach",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-2101-08-wenezuela-zanizony-bilans",
+      "section": "Świat",
+      "title": "W Wenezueli rośnie presja wokół oficjalnego bilansu ofiar trzęsienia ziemi",
+      "lead": "Katastrofa przestaje być tylko liczbą ofiar i staje się sporem o wiarygodność państwa.",
+      "whatHappened": "CNN opisuje, że oficjalny bilans po bliźniaczych trzęsieniach ziemi w Wenezueli wzrósł do co najmniej 2295 zabitych, ale część lekarzy sądowych oraz opozycja sugerują, że władze mogą poważnie zaniżać skalę tragedii. Jedna z patolożek mówi CNN o przerobie około 400 ciał dziennie w prowizorycznej kostnicy w La Guairze.",
+      "keyFacts": [
+        "Oficjalny bilans wzrósł do co najmniej 2295 ofiar śmiertelnych.",
+        "CNN cytuje relację z kostnicy o około 400 ciałach dziennie w La Guairze.",
+        "Opozycja i część personelu medycznego podważają wiarygodność danych władz."
+      ],
+      "reactions": [
+        "To nowa, cięższa wersja tematu Wenezueli niż sama karta ratunkowa z poprzedniego slotu.",
+        "Katastrofa przesuwa się z human interest do obszaru kryzysu zaufania wobec państwa."
+      ],
+      "whyItMatters": "Jeśli oficjalny bilans jest zaniżany, skala humanitarna i polityczna tragedii może być dużo większa niż wynika z komunikatów władz, co zmienia ocenę całego kryzysu.",
+      "context": "O 18:01 Wenezuela była historią o uratowanym mężczyźnie; o 21:01 główną osią staje się pytanie, ilu ofiar naprawdę nie policzono.",
+      "watchNext": [
+        "Czy pojawią się niezależne szacunki zaginionych lub ofiar od organizacji pomocowych.",
+        "Czy władze Wenezueli opublikują nowe dane odpowiadające na zarzuty o zaniżanie skali katastrofy."
+      ],
+      "sources": [
+        {
+          "title": "CNN: As Venezuelan morgues fill and death toll slowly mounts, questions remain about how many are truly gone",
+          "url": "https://edition.cnn.com/2026/07/02/americas/venezuela-earthquakes-morgue-death-toll-latam-intl"
+        }
+      ],
+      "tags": [
+        "Wenezuela",
+        "Trzęsienie ziemi",
+        "Bilans ofiar",
+        "Kryzys humanitarny"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-2101-09-wenezuela-cudowne-uratowanie",
+      "section": "Świat",
+      "title": "Ratownicy wyciągają żywego mężczyznę spod gruzów po ośmiu dniach w Wenezueli",
+      "lead": "W tym samym kryzysie pojawia się niezwykle rzadki sygnał nadziei pośród rosnących strat.",
+      "whatHappened": "CNN opisuje akcję ratowniczą, w której mężczyznę wydobyto żywego spod gruzów dziewięciopiętrowego budynku osiem dni po trzęsieniach ziemi w Wenezueli. Redakcja nazywa operację niemal cudowną z uwagi na czas, jaki upłynął od katastrofy.",
+      "keyFacts": [
+        "Mężczyznę uratowano po ośmiu dniach od trzęsień ziemi.",
+        "Akcja dotyczyła zawalonego dziewięciopiętrowego budynku.",
+        "To jeden z najmocniejszych sygnałów ratunkowych po katastrofie."
+      ],
+      "reactions": [
+        "Temat zostaje w feedzie mimo wejścia cięższej karty o bilansie ofiar, bo tworzy mocny kontrast emocjonalny i informacyjny.",
+        "Historia ma wysoki potencjał dalszych aktualizacji, jeśli pojawią się kolejni odnalezieni."
+      ],
+      "whyItMatters": "Pokazuje, że mimo skali tragedii działania ratowników nadal mogą przynosić realne efekty i że operacja poszukiwawcza nie jest jeszcze zamknięta.",
+      "context": "W 18:01 był to główny motyw wenezuelski; o 21:01 schodzi na drugi plan, ale pozostaje ważnym kontrapunktem wobec rosnących zarzutów o zaniżanie strat.",
+      "watchNext": [
+        "Czy ratownicy odnajdą kolejne żywe osoby po tak długim czasie.",
+        "Czy władze ogłoszą zmianę strategii poszukiwawczej lub zakończenie części akcji."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Man pulled from rubble in ‘miraculous’ rescue 8 days after devastating Venezuela earthquakes",
+          "url": "https://edition.cnn.com/2026/07/02/americas/venezuela-earthquake-survivor-rescued-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Wenezuela",
+        "Ratownictwo",
+        "Ocalały",
+        "Trzęsienie ziemi"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-02-2101-10-vatikan-sspx",
+      "section": "Świat",
+      "title": "Watykan rozszerza ekskomunikę na cały ruch SSPX po buncie wobec papieża",
+      "lead": "Kościelny konflikt przechodzi z niszy do globalnej karty obejmującej setki tysięcy wiernych.",
+      "whatHappened": "BBC i CNN opisują, że Watykan uznał duchownych i wiernych związanych z SSPX za będących w schizmie i objętych ekskomuniką po święceniach czterech biskupów wbrew woli papieża Leo XIV. BBC szacuje skalę ruchu na około 600 tysięcy wyznawców.",
+      "keyFacts": [
+        "Sankcja dotyczy całego ruchu po nieautoryzowanych święceniach czterech biskupów.",
+        "BBC wskazuje na około 600 tysięcy wiernych dotkniętych decyzją.",
+        "CNN opisuje sprawę jako jawny bunt wobec ostrzeżeń papieża."
+      ],
+      "reactions": [
+        "To dużo cięższa i szerzej zdefiniowana karta niż poranny obraz niszowego konfliktu kościelnego.",
+        "Spór religijny staje się także tematem polityki globalnej, bo dotyczy autorytetu nowego papieża."
+      ],
+      "whyItMatters": "Pokazuje, że papież Leo XIV zaczyna pontyfikat od twardego egzekwowania dyscypliny wobec ruchów kwestionujących jego władzę, co może uruchomić szerszy spór w świecie katolickim.",
+      "context": "W 18:01 karta była już mocna, ale o 21:01 ma pełniejszą definicję sankcji i większą jasność co do skali objętych nią wiernych.",
+      "watchNext": [
+        "Czy SSPX odpowie formalnie i spróbuje podważyć zakres ekskomuniki.",
+        "Czy Watykan opublikuje dalsze instrukcje dla diecezji i wiernych."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Vatican excommunicates conservative SSPX followers",
+          "url": "https://www.bbc.co.uk/news/articles/c5yz95188jjo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Breakaway Catholic group excommunicated after defying warnings from Pope Leo",
+          "url": "https://edition.cnn.com/2026/07/02/europe/vatican-excommunicates-breakaway-catholic-group-intl"
+        }
+      ],
+      "tags": [
+        "Watykan",
+        "SSPX",
+        "Papież Leo XIV",
+        "Ekskomunika"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-2101-11-papiez-lampedusa",
+      "section": "Świat",
+      "title": "Papież wybiera Lampedusę na 4 lipca i wysyła czytelny sygnał migracyjny do USA",
+      "lead": "To miększa karta świata, ale z mocnym politycznym przekazem skierowanym także do Waszyngtonu.",
+      "whatHappened": "CNN pisze, że papież Leo XIV odwiedzi Lampedusę 4 lipca, by zaakcentować los migrantów. Redakcja interpretuje ten ruch jako pośredni sygnał wobec przywódców USA i kolejny punkt napięcia między papiestwem a administracją Trumpa.",
+      "keyFacts": [
+        "Wizyta w Lampedusie została zaplanowana na 4 lipca.",
+        "CNN wiąże ją bezpośrednio z tematem migrantów i politycznym przekazem wobec USA.",
+        "Lampedusa pozostaje symbolicznym miejscem europejskiego kryzysu migracyjnego."
+      ],
+      "reactions": [
+        "Nie jest to karta twardego bezpieczeństwa, ale dobrze domyka wieczorny miks Watykanu, polityki i migracji.",
+        "Znaczenie tego ruchu zależy od późniejszych reakcji politycznych bardziej niż od samego faktu podróży."
+      ],
+      "whyItMatters": "Papież wykorzystuje symboliczne miejsce i amerykańską datę narodową, by nadać tematowi migrantów wymiar międzynarodowego komentarza politycznego.",
+      "context": "Po twardej karcie o ekskomunice dochodzi bardziej dyplomatyczny sygnał pokazujący, że Watykan próbuje równolegle kształtować debatę globalną.",
+      "watchNext": [
+        "Czy Biały Dom lub amerykańscy politycy odniosą się do wymowy tej wizyty.",
+        "Czy papież wygłosi na Lampedusie mocniejsze przesłanie niż samo pojawienie się na wyspie."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Pope’s July 4 visit to migrant hotspot sends a veiled message to US leaders",
+          "url": "https://edition.cnn.com/2026/07/02/europe/pope-italy-us-immigration-intl"
+        }
+      ],
+      "tags": [
+        "Papież Leo XIV",
+        "Lampedusa",
+        "Migranci",
+        "USA"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-02-2101-12-rpa-dozywocie",
+      "section": "Świat",
+      "title": "Sprawcy zabójstwa brytyjskiej pary w RPA dostają dożywocie",
+      "lead": "Wieczorny feed domyka globalna karta kryminalna z mocnym finałem procesowym.",
+      "whatHappened": "BBC podaje, że zabójcy brytyjskiej pary w RPA zostali skazani na dożywocie. Ofiary zbierały rzadkie rośliny i nasiona, a ich ciała znaleziono później w rzece, co uczyniło sprawę głośną także poza Afryką Południową.",
+      "keyFacts": [
+        "Zapadły wyroki dożywocia dla sprawców zabójstwa brytyjskiej pary.",
+        "Ofiary zbierały rzadkie rośliny i nasiona przed śmiercią.",
+        "BBC przypomina, że ich ciała odnaleziono po kilku dniach w rzece."
+      ],
+      "reactions": [
+        "To nie jest największa karta geopolityczna dnia, ale zapewnia wyraźne domknięcie jednego z głośniejszych wątków kryminalnych.",
+        "Temat dobrze równoważy feed po serii wojenno-katastroficznych kart, bo daje twardy finał procesowy."
+      ],
+      "whyItMatters": "Wyrok kończy jedną z szeroko komentowanych spraw przemocy wobec cudzoziemców i przypomina o napięciach bezpieczeństwa także poza klasycznymi strefami wojny.",
+      "context": "W slocie 18:01 Afryka była obecna przez spór Ghana-RPA; o 21:01 region wraca już nie dyplomatycznie, lecz przez prawomocne domknięcie brutalnej sprawy karnej.",
+      "watchNext": [
+        "Czy obrona złoży odwołania lub pojawią się dalsze ustalenia procesowe.",
+        "Czy sprawa wróci do debaty o bezpieczeństwie turystów i badaczy w regionie."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Killers of British couple in South Africa sentenced to life in prison",
+          "url": "https://www.bbc.co.uk/news/articles/cvgm49j9692o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "RPA",
+        "Wielka Brytania",
+        "Proces",
+        "Zbrodnia"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "MSZ: Odyseusz w aplikacji mObywatel",
+      "url": "https://www.gov.pl/web/dyplomacja/odyseusz-w-aplikacji-mobywatel"
+    }
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-05",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny run nie dokłada jednej wielkiej premiery modelu. Dokłada coś ważniejszego: coraz wyraźniejszy stos narzędzi wokół agentów. Dzisiejsze topowe sygnały pokazują, że rynek przesuwa się od samego „AI modelu” do warstwy dokumentacji, testowania, sygnałów rynkowych i orkiestracji pracy.",
+    "Równolegle kapitał dalej płynie do AI, ale coraz częściej do wyspecjalizowanych firm i workflow, a nie do ogólnych asystentów. Na drugim biegunie rośnie też ciężar governance: Indie dociskają Telegram w sprawie piractwa, a Genewa dostaje daty i instytucje pod globalne AI governance."
+  ],
+  "summaryBullets": [
+    "Startupy: AI unicorny dalej dominują funding",
+    "Produkty: Product Hunt pokazuje stos narzędzi dla agentów",
+    "Startupy: LinqAlpha wchodzi do finansów przez AI"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-05-1933-0-ai-unicorny-dalej-dominuja-funding-3ea3688999",
+      "section": "Startupy",
+      "title": "AI unicorny dalej dominują funding",
+      "standfirst": "TechCrunch opublikował żywą listę nowych unicornów z 2026 roku i pisze, że do tej pory powstało ich prawie 90. Większość jest powiązana z AI.",
+      "whatHappened": "TechCrunch zebrał i zaktualizował listę świeżych unicornów, w której przewijają się MainFunc, EXA, Recursive, Positron, Xbow, Corgi i Blitzy.",
+      "whyItMatters": "To pokazuje, że kapitał wciąż płynie do AI, ale coraz częściej do wyspecjalizowanych firm i workflow, a nie do kolejnego ogólnego czatu.",
+      "deeperAnalysis": [
+        "Najważniejszy wniosek z tej listy nie brzmi „AI znów ma dobry dzień”. Bardziej interesujące jest to, że kolejne duże wyceny zbierają firmy siedzące bliżej infrastruktury, wyszukiwania, cyberbezpieczeństwa, finansów i automatyzacji pracy. To jest już rynek specjalizacji, a nie tylko rynek modeli.",
+        "Warto też zwrócić uwagę na charakter tych firm. W 2026 coraz trudniej sprzedać samą narrację o „kolejnym LLM”. Znacznie lepiej sprzedaje się produkt, który rozwiązuje wąski problem z jasnym feedback loopem i mierzalnym wynikiem. Właśnie dlatego taka lista jest ważna dla podcastu: pokazuje, gdzie inwestorzy nadal widzą skalowalny zwrot."
+      ],
+      "contextPoints": [
+        "TechCrunch opiera się na danych Crunchbase i PitchBook, więc to nie jest pojedynczy przeciek, tylko szeroka próba rynku.",
+        "Wśród przykładów dominują firmy bliżej workflow i infrastruktury niż ogólnego chatbota.",
+        "Na kolejne dni warto sprawdzić, czy ten rozkład branż się utrzyma."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/05/almost-40-new-unicorns-have-been-minted-so-far-this-year-here-they-are/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "startupy",
+        "funding",
+        "unicorn",
+        "venture capital"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-05-1933-1-product-hunt-pokazuje-stos-narzedzi-dla-agentow-225ee623d0",
+      "section": "Produkty",
+      "title": "Product Hunt pokazuje stos narzędzi dla agentów",
+      "standfirst": "Dzisiejszy Product Hunt jest mocno agentowy. W czołówce są WorkBuddy, DocsAlot, TryCase, MentionDrop MCP i CircleChat.",
+      "whatHappened": "Na szczycie listy widać produkty do pracy biurowej, dokumentacji dla ludzi i modeli, tymczasowych środowisk testowych, sygnałów rynkowych i orkiestracji agentów.",
+      "whyItMatters": "To sygnał, że rynek przestaje pytać tylko o model i zaczyna kupować warstwę operacyjną wokół modeli.",
+      "deeperAnalysis": [
+        "WorkBuddy, DocsAlot, TryCase, MentionDrop MCP i CircleChat tworzą logiczny łańcuch: dokumentacja, wykonanie, test, sygnał zwrotny i koordynacja. To nie są już wyłącznie „fajne demo z AI”, tylko próbki całego systemu pracy dla agentów.",
+        "Tencent opisuje WorkBuddy jako narzędzie biurowe z całym ekosystemem agentowym, DocsAlot stawia na dokumentację czytelną dla ludzi i modeli, TryCase daje tymczasowe środowiska dla coding agentów, MentionDrop MCP zbiera sygnały o marce z kontrolowanych źródeł publicznych, a CircleChat próbuje nadać agentom boski workflow z task boardem i oceną LLM.",
+        "To dobrze łączy się z publicznym wątkiem na Product Hunt o obserwowalności agentów. Skoro użytkownicy pytają, jak w ogóle wiedzieć, co robi ich coding agent, to naturalne staje się zapotrzebowanie na narzędzia, które robią z agentów system audytowalny, a nie tylko szybszy."
+      ],
+      "contextPoints": [
+        "Product Hunt pokazuje nie pojedynczy produkt, ale całą warstwę narzędzi wokół agentów.",
+        "Tencent, DocsAlot, MentionDrop i CircleChat dostarczają publiczne opisy funkcji, które wykraczają poza zwykły czat.",
+        "Publiczny wątek o obserwowalności agentów tłumaczy, dlaczego takie narzędzia są dziś potrzebne."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/7/5"
+        },
+        {
+          "title": "Tencent o WorkBuddy",
+          "url": "https://www.tencent.com/en-us/articles/2202350.html"
+        },
+        {
+          "title": "DocsAlot",
+          "url": "https://docsalot.dev/"
+        },
+        {
+          "title": "MentionDrop MCP",
+          "url": "https://www.mentiondrop.com/mcp"
+        },
+        {
+          "title": "CircleChat",
+          "url": "https://circlechat.co/"
+        },
+        {
+          "title": "TryCase",
+          "url": "https://www.producthunt.com/products/trycase"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Product Hunt",
+        "agent stack",
+        "MCP",
+        "docs",
+        "QA",
+        "workflow"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-05-1933-2-linqalpha-wchodzi-do-finansow-przez-ai-f38efc814f",
+      "section": "Startupy",
+      "title": "LinqAlpha wchodzi do finansów przez AI",
+      "standfirst": "LinqAlpha ogłosiło rundę Series A na 22 mln USD, prowadzoną przez AVP, Atinum Investment i GFT Ventures. Firma pozycjonuje się jako „Alpha Intelligence Layer” dla globalnych rynków publicznych.",
+      "whatHappened": "Start-up dodał do swojego profilu świeże finansowanie i mocniej podkreślił instytucjonalny use case.",
+      "whyItMatters": "To konkretny przykład, że AI w finansach nadal przyciąga kapitał, ale tylko tam, gdzie workflow jest wyspecjalizowany i mierzalny.",
+      "deeperAnalysis": [
+        "LinqAlpha nie sprzedaje „kolejnego ogólnego asystenta”. Sprzedaje warstwę badawczą dla rynku publicznego: przetwarzanie danych, sygnały, research i kontekst dla instytucjonalnych użytkowników. To znacząco inny produkt niż consumer AI i znacznie lepszy kandydat do długiego enterprise sales cycle.",
+        "Ważne jest też to, że spółka mówi o globalnych rynkach publicznych, a nie tylko o jednym geograficznym segmencie. To sugeruje, że produktem docelowym są duże workflow w hedge funds, asset management i pośrednich biurach badawczych, gdzie liczy się język, skala i integracja z istniejącym procesem.",
+        "Dla podcastu to dobry przykład „AI po cichu wchodzi do instytucji”. Nie przez spektakularny model, tylko przez warstwę, która ułatwia analizę, selekcję i przygotowanie decyzji inwestycyjnych. To jest klasyczny ruch od demo do narzędzia produkcyjnego."
+      ],
+      "contextPoints": [
+        "Oficjalny blog LinqAlpha i PR Newswire mówią o 22 mln USD rundy Series A.",
+        "Produkt jest pozycjonowany pod użytkownika instytucjonalnego, nie konsumenckiego.",
+        "Warto obserwować, czy po fundingowym komunikacie pojawi się realna adopcja przez fundusze."
+      ],
+      "sources": [
+        {
+          "title": "LinqAlpha blog",
+          "url": "https://linqalpha.com/blog/linqalpha-raises-22-million-to-build-the-alpha-intelligence-layer-for-global-public-markets"
+        },
+        {
+          "title": "PR Newswire",
+          "url": "https://www.prnewswire.com/news-releases/linqalpha-raises-22-million-to-build-the-alpha-intelligence-layer-for-global-public-markets-302816647.html"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "fintech",
+        "markets",
+        "hedge funds",
+        "research"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-05-1933-3-indie-przesuwaja-telegram-do-odpowiedzialnosci-platformy-a14b1f2cd6",
+      "section": "Regulacje",
+      "title": "Indie przesuwają Telegram do odpowiedzialności platformy",
+      "standfirst": "Indyjskie media podają, że władze wysłały Telegramowi 15-dniowe wezwanie do mocniejszej walki z pirackimi filmami i serialami. Chodzi już nie tylko o pojedyncze takedowny.",
+      "whatHappened": "Platforma dostała oczekiwanie przygotowania action taken report i bardziej systemowych mechanizmów wykrywania oraz usuwania pirackich kanałów.",
+      "whyItMatters": "To wyraźny precedens dla platform accountability w komunikatorach i aplikacjach dystrybucyjnych.",
+      "deeperAnalysis": [
+        "W tej historii najciekawsza jest zmiana języka regulatora. Nie chodzi już o to, żeby usunąć konkretny kanał po skardze. Chodzi o to, czy platforma ma proces i narzędzia, które ograniczają powtarzalne naruszenia w całym ekosystemie.",
+        "To ważne także przed erą agentów zakupowych i agentów dystrybucyjnych. Jeśli zwykły komunikator może zostać oceniony po zdolności do blokowania piractwa na poziomie systemu, to przyszłe platformy agentowe będą musiały pokazać podobną kontrolę nad tym, co ich boty widzą, kupują i udostępniają.",
+        "W praktyce to też sygnał dla innych platform. Jeśli Indie utrzymają ten ton, podobne oczekiwania mogą przejść na inne usługi komunikacyjne i społecznościowe, nie tylko na Telegram."
+      ],
+      "contextPoints": [
+        "Publikacje w Indiach mówią o 15-dniowym terminie na odpowiedź i wzmocnienie egzekucji.",
+        "Problem dotyczy piractwa filmów, seriali i treści chronionych, czyli obszaru o dużej skali publicznej.",
+        "Warto śledzić odpowiedź Telegramu i to, czy pojawią się podobne wezwania wobec innych platform."
+      ],
+      "sources": [
+        {
+          "title": "Times of India",
+          "url": "https://timesofindia.indiatimes.com/india/govt-sends-notice-to-telegram-over-pirated-films-shows/articleshow/132189347.cms"
+        },
+        {
+          "title": "Mint",
+          "url": "https://www.livemint.com/technology/tech-news/india-issues-notice-to-telegram-over-piracy-channels-11752095747154.html"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Telegram",
+        "India",
+        "piracy",
+        "platform accountability",
+        "moderation"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-05-1933-4-genewa-buduje-globalne-ai-governance-6e2a7a91f1",
+      "section": "Regulacje",
+      "title": "Genewa buduje globalne AI governance",
+      "standfirst": "UN i ITU zapięły kalendarz AI governance w Genewie. Global Dialogue on AI Governance ma się odbyć 6-7 lipca, a AI for Good Global Commission ma pierwsze spotkanie 8 lipca.",
+      "whatHappened": "Zamiast ogólnej deklaracji pojawia się konkretna data, instytucja i miejsce dla globalnej rozmowy o AI.",
+      "whyItMatters": "To ustawia alternatywę dla amerykańskiego lekkiego podejścia i pokazuje, że AI staje się tematem dyplomacji technologicznej.",
+      "deeperAnalysis": [
+        "Genewa jest dziś ważna nie dlatego, że ktoś ogłasza kolejny dokument. Ważna jest dlatego, że agenda AI governance ma już termin, uczestników i forum, które łączy państwa, firmy i ekspertów. To tworzy realny rytm dla polityki, zamiast kolejnego ogólnego „trzeba coś zrobić”.",
+        "W praktyce oznacza to też, że globalna debata o AI przestaje być tylko rozmową o bezpieczeństwie modeli. Wchodzi w zakres współpracy międzynarodowej, standardów, odpowiedzialności i sposobu, w jaki państwa będą reagować na frontier systems, cyber risk i publiczne zaufanie.",
+        "To dobrze nadaje się do podcastu, bo ma jasny kalendarz i mocny kontrast: z jednej strony USA z lekkim reżimem i dużą rolą rynku, z drugiej UN/ITU próbujące budować wspólne forum, zanim rynkowe i regulacyjne różnice zrobią się jeszcze większe."
+      ],
+      "contextPoints": [
+        "Global Dialogue on AI Governance ma się odbyć 6-7 lipca w Genewie.",
+        "AI for Good Global Commission ma pierwsze spotkanie 8 lipca.",
+        "To dobry termin na follow-up o tym, czy padną konkretne deklaracje od frontier labs i rządów."
+      ],
+      "sources": [
+        {
+          "title": "UN Global Dialogue on AI Governance",
+          "url": "https://www.un.org/global-dialogue-ai-governance/en"
+        },
+        {
+          "title": "ITU AI for Good Global Commission",
+          "url": "https://www.itu.int/en/mediacentre/Pages/PR-2026-07-02-AI-for-Good-Global-Commission.aspx"
+        },
+        {
+          "title": "Axios",
+          "url": "https://www.axios.com/2026/07/01/un-ai-commission-ceos-world-leaders"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "governance",
+        "UN",
+        "ITU",
+        "regulation"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-05-1933-5-bending-spoons-pokazuje-publiczny-roll-up-z-ai-w-tle-206081e0e1",
+      "section": "Startupy",
+      "title": "Bending Spoons pokazuje publiczny roll-up z AI w tle",
+      "standfirst": "Financial Times profiluje dziś Bending Spoons jako firmę wartą około 23 mld USD, zbudowaną na fali akwizycji, w tym AOL, Vimeo i Evernote.",
+      "whatHappened": "Firma pokazuje, że software roll-up może być publiczną strategią wzrostu, a nie tylko prywatnym eksperymentem.",
+      "whyItMatters": "To dobry przykład, jak centralizacja i automatyzacja mogą zastępować klasyczny wzrost produktowy.",
+      "deeperAnalysis": [
+        "Bending Spoons jest ciekawy, bo łączy dwie rzeczy, które rzadko składają się w jeden podcastowy temat: roll-up legacy software i nowoczesne AI/automation ops. Zamiast budować jedną wielką platformę od zera, firma składa portfel narzędzi i szuka przewagi w ich przebudowie.",
+        "To ważny sygnał dla rynku, bo pokazuje, że sztuczna inteligencja nie jest tylko narzędziem do tworzenia nowych produktów. Może być też warstwą operacyjną, która obniża koszty integracji, supportu, przeglądu kodu i zarządzania portfolio przejętych marek. Taki model może być atrakcyjny dla rynku publicznego, jeśli utrzyma tempo wzrostu.",
+        "Dla podcastu to fajny kontrapunkt do „czystych” startupów AI. Tu nie ma jednego modelu, jednego endpointu ani jednego laboratorium. Jest konsolidacja, proces i kapitał. Właśnie dlatego historia jest użyteczna jako szerszy komentarz do rynku tech."
+      ],
+      "contextPoints": [
+        "FT opisuje firmę jako publicznie wartą około 23 mld USD.",
+        "Model opiera się na długim holdingu i integracji wielu przejętych marek.",
+        "Warto obserwować, czy podobne europejskie roll-upy zaczną bardziej otwarcie używać AI jako argumentu operacyjnego."
+      ],
+      "sources": [
+        {
+          "title": "Financial Times",
+          "url": "https://www.ft.com/content/7f7c4e95-3f0d-4e74-a06c-2f43d0f2fcb5"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Bending Spoons",
+        "IPO",
+        "software roll-up",
+        "acquisitions",
+        "AI ops"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "AI unicorny dalej dominują funding",
+      "rationale": "TechCrunch pokazuje, że 2026 nadal produkuje unicorny, ale wygrywają wyspecjalizowane firmy AI, a nie ogólne demo modeli.",
+      "sourcesLabel": "TechCrunch; Crunchbase/PitchBook"
+    },
+    {
+      "priority": "High",
+      "title": "Product Hunt pokazuje stos narzędzi dla agentów",
+      "rationale": "WorkBuddy, DocsAlot, TryCase, MentionDrop MCP i CircleChat pokazują, jak wokół agentów wyrasta pełna warstwa operacyjna.",
+      "sourcesLabel": "Product Hunt; Tencent; DocsAlot; MentionDrop; CircleChat"
+    },
+    {
+      "priority": "High",
+      "title": "LinqAlpha wchodzi do finansów przez AI",
+      "rationale": "Instytucjonalny research i rynek publiczny to dobry test dla wyspecjalizowanego AI, a nie dla ogólnego chatbota.",
+      "sourcesLabel": "LinqAlpha blog; PR Newswire"
+    },
+    {
+      "priority": "High",
+      "title": "Indie przesuwają Telegram do odpowiedzialności platformy",
+      "rationale": "15-dniowe wezwanie pokazuje, że regulacja komunikatorów przechodzi od takedownów do odpowiedzialności systemowej.",
+      "sourcesLabel": "Times of India; Mint"
+    },
+    {
+      "priority": "High",
+      "title": "Genewa buduje globalne AI governance",
+      "rationale": "UN i ITU mają już daty, więc debata o AI governance przestaje być abstrakcyjna i staje się kalendarzem.",
+      "sourcesLabel": "UN; ITU; Axios"
+    },
+    {
+      "priority": "Medium",
+      "title": "Bending Spoons jako publiczny roll-up z AI w tle",
+      "rationale": "FT pokazuje model software roll-upu, który korzysta z automatyzacji i centralizacji, a nie tylko z jednego produktu.",
+      "sourcesLabel": "Financial Times"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Techmeme",
+      "url": "https://www.techmeme.com/"
+    },
+    {
+      "title": "Techmeme River",
+      "url": "https://www.techmeme.com/river"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Best of Product Hunt: July 5, 2026",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/7/5"
+    },
+    {
+      "title": "TechCrunch o nowych unicornach",
+      "url": "https://techcrunch.com/2026/07/05/almost-40-new-unicorns-have-been-minted-so-far-this-year-here-they-are/"
+    },
+    {
+      "title": "LinqAlpha blog",
+      "url": "https://linqalpha.com/blog/linqalpha-raises-22-million-to-build-the-alpha-intelligence-layer-for-global-public-markets"
+    },
+    {
+      "title": "PR Newswire o LinqAlpha",
+      "url": "https://www.prnewswire.com/news-releases/linqalpha-raises-22-million-to-build-the-alpha-intelligence-layer-for-global-public-markets-302816647.html"
+    },
+    {
+      "title": "Tencent o WorkBuddy",
+      "url": "https://www.tencent.com/en-us/articles/2202350.html"
+    },
+    {
+      "title": "DocsAlot",
+      "url": "https://docsalot.dev/"
+    },
+    {
+      "title": "MentionDrop MCP",
+      "url": "https://www.mentiondrop.com/mcp"
+    },
+    {
+      "title": "CircleChat",
+      "url": "https://circlechat.co/"
+    },
+    {
+      "title": "TryCase na Product Hunt",
+      "url": "https://www.producthunt.com/products/trycase"
+    },
+    {
+      "title": "Times of India o Telegram",
+      "url": "https://timesofindia.indiatimes.com/india/govt-sends-notice-to-telegram-over-pirated-films-shows/articleshow/132189347.cms"
+    },
+    {
+      "title": "Mint o Telegram",
+      "url": "https://www.livemint.com/technology/tech-news/india-issues-notice-to-telegram-over-piracy-channels-11752095747154.html"
+    },
+    {
+      "title": "UN Global Dialogue on AI Governance",
+      "url": "https://www.un.org/global-dialogue-ai-governance/en"
+    },
+    {
+      "title": "ITU AI for Good Global Commission",
+      "url": "https://www.itu.int/en/mediacentre/Pages/PR-2026-07-02-AI-for-Good-Global-Commission.aspx"
+    },
+    {
+      "title": "Financial Times o Bending Spoons",
+      "url": "https://www.ft.com/content/7f7c4e95-3f0d-4e74-a06c-2f43d0f2fcb5"
+    },
+    {
+      "title": "Axios o UN AI commission",
+      "url": "https://www.axios.com/2026/07/01/un-ai-commission-ceos-world-leaders"
+    }
+  ]
+}

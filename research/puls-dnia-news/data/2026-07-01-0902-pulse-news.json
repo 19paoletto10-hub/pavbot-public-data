@@ -1,0 +1,505 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-01",
+  "runTime": "09:02",
+  "status": "Material update",
+  "headline": "09:02: Burze stają się zdarzeniem operacyjnym, a kraj dokłada kopalnię, ewakuację i droższe paliwo",
+  "summary": "Slot 09:02 jest materialny względem opublikowanego 06:02: krajowy blok przechodzi z samych ostrzeżeń do aktywnych zdarzeń pogodowych, pożaru w kopalni Sośnica, ewakuacji bloku na Ursynowie i wzrostu cen paliw, a w świecie dochodzi nowa oś Doha-USA-Iran przy utrzymaniu najmocniejszych kart o Trumpie, Sądzie Najwyższym USA, Anthropic i Dubnej.",
+  "items": [
+    {
+      "id": "pulse-2026-07-01-0902-01-burze",
+      "section": "Polska",
+      "title": "Burze są już aktywne od rana, a alert RCB obejmuje 11 województw i podnosi ryzyko awarii",
+      "lead": "Poranny slot przechodzi z prognozy na realne zjawiska widoczne na radarze i w alertach.",
+      "whatHappened": "TVN24 podało, że od rana w części kraju grzmi i miejscami ulewnie pada, a równolegle RCB rozesłało alert dla 11 województw z ostrzeżeniem przed intensywnym deszczem, silnym wiatrem i burzami. Raport IMGW nr 135 nadal podtrzymuje kombinację upału, burz i gwałtownych opadów.",
+      "keyFacts": [
+        "Poranne burze są już aktywne i widoczne na radarze opadów.",
+        "Alert RCB obejmuje 11 województw i ostrzega między innymi przed możliwymi przerwami w dostawie prądu.",
+        "IMGW utrzymuje wysoki poziom ryzyka dla części kraju także po starcie dnia."
+      ],
+      "reactions": [
+        "To najmocniejsza krajowa karta slotu, bo jej treść może zmieniać się jeszcze szybciej niż w 06:02.",
+        "W feedzie ważniejsze od samej prognozy staje się teraz tempo rozwoju realnych skutków."
+      ],
+      "whyItMatters": "Jeżeli burze przejdą w szkody infrastrukturalne albo dłuższe przerwy w zasilaniu, układ pierwszych kart dnia będzie wymagał natychmiastowej korekty.",
+      "context": "O 06:02 kraj żył przede wszystkim szerokim pakietem ostrzeżeń. O 09:02 karta jest już bardziej operacyjna, bo dotyczy czynnych burz i aktywnego alertowania ludności.",
+      "watchNext": [
+        "Czy IMGW lub RCB rozszerzą zakres ostrzeżeń na kolejne powiaty albo województwa.",
+        "Czy pojawią się raporty o szkodach, awariach energetycznych lub utrudnieniach na drogach i kolei."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Gdzie jest burza? Grzmi od samego rana, dość ulewnie pada",
+          "url": "https://tvn24.pl/tvnmeteo/polska/gdzie-jest-burza-burze-w-srode-01-07-radar-opadow-i-burz-na-zywo-st9122177?source=rss"
+        },
+        {
+          "title": "TVN24: Burze w Polsce. Alert RCB dla 11 województw",
+          "url": "https://tvn24.pl/tvnmeteo/polska/burze-w-polsce-alert-rcb-na-1-07-mozliwe-przerwy-w-dostawie-pradu-st9122252?source=rss"
+        },
+        {
+          "title": "RCB: Komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        },
+        {
+          "title": "IMGW: Aktualna i prognozowana sytuacja meteorologiczna i hydrologiczna – raport nr 135",
+          "url": "https://imgw.pl/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-135/"
+        }
+      ],
+      "tags": [
+        "Burze",
+        "RCB",
+        "IMGW",
+        "Alerty"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0902-02-sosnica",
+      "section": "Bezpieczeństwo",
+      "title": "Pożar w kopalni Sośnica uruchamia poranny alarm operacyjny, ale załogę wycofano bez ofiar",
+      "lead": "Nowa krajowa karta bezpieczeństwa wchodzi do feedu z samego rana.",
+      "whatHappened": "TVN24 podało, że w KWK Sośnica w Gliwicach doszło do pożaru niemal kilometr pod ziemią. Polska Grupa Górnicza przekazała w komunikacie cytowanym przez stację, że cała załoga została bezpiecznie wycofana z zagrożonego rejonu i nikt nie został poszkodowany.",
+      "keyFacts": [
+        "Pożar wybuchł niemal kilometr pod ziemią w kopalni Sośnica.",
+        "Załoga zagrożonego rejonu została wycofana.",
+        "Na ten moment nie ma informacji o osobach poszkodowanych."
+      ],
+      "reactions": [
+        "To wyraźnie świeższa i bardziej operacyjna karta niż większość lokalnych tematów z 06:02.",
+        "Brak ofiar ogranicza dramatyzm, ale temat pozostaje ważny z punktu widzenia bezpieczeństwa przemysłowego."
+      ],
+      "whyItMatters": "Gdyby akcja w kopalni się przedłużyła lub pojawiły się wtórne zagrożenia, historia mogłaby szybko awansować w krajowej hierarchii dnia.",
+      "context": "W poprzednim opublikowanym slocie krajowy blok zdominowały pogoda i polityka. O 09:02 dochodzi nowe zdarzenie przemysłowe o wysokiej wadze operacyjnej.",
+      "watchNext": [
+        "Czy Polska Grupa Górnicza poda przyczynę pożaru i czas przywrócenia normalnej pracy.",
+        "Czy służby zgłoszą konieczność dłuższych działań ratowniczych lub zabezpieczających."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pożar w kopalni, wycofano górników",
+          "url": "https://tvn24.pl/katowice/pozar-w-kopalni-sosnica-w-gliwicach-wycofano-gornikow-st9122287?source=rss"
+        }
+      ],
+      "tags": [
+        "Kopalnia",
+        "Sośnica",
+        "Pożar",
+        "Śląsk"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0902-03-ursynow",
+      "section": "Polska",
+      "title": "Blok na Ursynowie dostał zakaz użytkowania, a mieszkańcy muszą się wyprowadzić przez ryzyko zawalenia",
+      "lead": "To szybka, konkretna karta miejsko-bezpieczeństwowa z realnym skutkiem dla mieszkańców.",
+      "whatHappened": "TVN24 podało, że nadzór budowlany zakazał użytkowania niszczejącego bloku na Ursynowie, bo konstrukcja grozi zawaleniem. Lokale mają zostać opróżnione, wejście do budynku zamurowane, a powrót ma być możliwy dopiero po wykonaniu niezbędnych prac remontowych.",
+      "keyFacts": [
+        "Decyzja zapadła po ocenie nadzoru budowlanego.",
+        "Mieszkańcy muszą opuścić lokale.",
+        "Powrót jest uzależniony od przeprowadzenia prac zabezpieczających i remontowych."
+      ],
+      "reactions": [
+        "Temat działa mocno w feedzie, bo łączy bezpieczeństwo mieszkańców z obrazem słabości zarządzania budynkiem.",
+        "To jedna z najczytelniejszych nowych kart krajowych względem 06:02."
+      ],
+      "whyItMatters": "Decyzja ma natychmiastowy skutek życiowy dla mieszkańców i może wywołać pytania o odpowiedzialność zarządcy oraz skalę problemu technicznego.",
+      "context": "W poprzednim slocie dominowały sprawy ogólnokrajowe. O 09:02 dochodzi twarde lokalne zdarzenie z potencjałem szerokiego rezonansu społecznego.",
+      "watchNext": [
+        "Czy władze miasta albo spółdzielnia przedstawią plan relokacji mieszkańców.",
+        "Czy pojawią się dodatkowe ustalenia o przyczynach degradacji budynku i odpowiedzialności za stan techniczny."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Blok może runąć, mieszkańcy muszą się wyprowadzić",
+          "url": "https://tvn24.pl/tvnwarszawa/ursynow/warszawa-blok-na-ursynowie-grozi-zawaleniem-mieszkancy-musza-sie-wyniesc-decyzja-nadzoru-budowlanego-st9120902?source=rss"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "Ursynów",
+        "NadzórBudowlany",
+        "Mieszkańcy"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0902-04-paliwa",
+      "section": "Gospodarka",
+      "title": "Koniec programu CPN wraca na dystrybutory, a paliwo drożeje już od 1 lipca",
+      "lead": "Ta zmiana jest mniej widowiskowa niż burze, ale uderza w codzienny koszt życia.",
+      "whatHappened": "TVN24 Biznes podało, że wraz z powrotem pełnego VAT i wcześniejszym zakończeniem obniżki akcyzy od 1 lipca na stacjach paliw wracają wyższe ceny benzyny i diesla. W porannych analizach pojawia się oczekiwany wzrost rzędu około 30 do 50 groszy na litrze.",
+      "keyFacts": [
+        "Od 1 lipca wygasły elementy programu Ceny Paliwa Niżej.",
+        "Analitycy oczekują podwyżek benzyny i diesla.",
+        "Różnice cen między stacjami mają znów stać się bardziej wyraźne."
+      ],
+      "reactions": [
+        "To jedna z najbardziej masowych ekonomicznie zmian dnia, bo dotyczy praktycznie każdego kierowcy.",
+        "W porannym feedzie temat działa jako szybki sygnał presji kosztowej, a nie jako klasyczna karta makro."
+      ],
+      "whyItMatters": "Nawet umiarkowana podwyżka paliw szybko przekłada się na nastroje konsumenckie i koszt transportu, a więc ma większy zasięg społeczny niż wiele jednorazowych newsów politycznych.",
+      "context": "W 06:02 kartę gospodarczą budował głównie Trump i krypto. O 09:02 kraj dorzuca temat bezpośrednio odczuwalny dla polskich gospodarstw domowych.",
+      "watchNext": [
+        "Czy stacje będą przerzucały wzrost kosztów równomiernie, czy różnice regionalne zaczną szybko rosnąć.",
+        "Czy analitycy skorygują oczekiwania cenowe po pierwszym pełnym dniu obowiązywania nowych stawek."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Koniec z obniżką cen paliw. Na stacjach widać wyższe ceny",
+          "url": "https://tvn24.pl/biznes/moto/koniec-z-obnizka-cen-paliw-tyle-zaplacimy-za-paliwo-po-wygasnieciu-programu-cpn-st9122206?source=rss"
+        },
+        {
+          "title": "TVN24: Sześć rzeczy, które warto wiedzieć 1 lipca 2026 roku",
+          "url": "https://tvn24.pl/polska/szesc-rzeczy-ktore-warto-wiedziec-1-lipca-2026-roku-najwazniejsze-informacje-st9122162"
+        }
+      ],
+      "tags": [
+        "Paliwa",
+        "CPN",
+        "VAT",
+        "Kierowcy"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-01-0902-05-trump-krypto",
+      "section": "Gospodarka",
+      "title": "Trump utrzymuje presję na agendzie dnia po ujawnieniu ponad 1,4 miliarda dolarów dochodu z krypto",
+      "lead": "Skala wpływów jest tak duża, że temat dalej wypycha klasyczny biznes Trumpa z pierwszego planu.",
+      "whatHappened": "TVN24 Biznes, za Reuters i dokumentem OGE, opisuje że roczne ujawnienie majątkowe Trumpa za 2025 rok pokazuje ponad 1,4 miliarda dolarów dochodu z aktywów kryptowalutowych. To podtrzymuje pytania o konflikt interesów między polityką prezydenta a prywatnymi zyskami jego otoczenia biznesowego.",
+      "keyFacts": [
+        "Dochód z krypto przekroczył 1,4 miliarda dolarów według ujawnienia za 2025 rok.",
+        "Skala wpływów przewyższa tradycyjne filary biznesu kojarzone z marką Trump.",
+        "Temat łączy politykę regulacyjną z prywatnym interesem finansowym urzędującego prezydenta."
+      ],
+      "reactions": [
+        "To nadal jedna z najmocniejszych kart gospodarczo-politycznych świata.",
+        "Historia może napędzać kolejną falę pytań o etykę i przejrzystość władzy."
+      ],
+      "whyItMatters": "Im większa część majątku Trumpa zależy od krypto, tym trudniej oddzielić kierunek polityki publicznej od prywatnego bodźca finansowego.",
+      "context": "Karta była mocna już o 06:02 i pozostaje w feedzie, bo poranny obieg medialny dopiero rozkłada skutki tego ujawnienia.",
+      "watchNext": [
+        "Czy Biały Dom albo sztab Trumpa odniosą się do zarzutów o konflikt interesów.",
+        "Czy przeciwnicy polityczni zaczną łączyć ujawnienie z bieżącymi decyzjami regulacyjnymi wobec branży krypto."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Dziewięć razy więcej. Rodzina Trumpów mnoży przychody z kryptowalut",
+          "url": "https://tvn24.pl/biznes/ze-swiata/majatek-donalda-trumpa-w-2025-roku-oswiadczenie-majatkowe-dziewieciokrotny-wzrost-przychodow-z-kryptowalut-st9122267?source=rss"
+        },
+        {
+          "title": "OGE: President Trump’s certified annual financial disclosure report",
+          "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4EC9A8E6DD078F2985258CA9002C9377/%24FILE/Trump%2C%20Donald%20J.%202025%20Annual%20278.pdf"
+        }
+      ],
+      "tags": [
+        "Trump",
+        "Krypto",
+        "OGE",
+        "USA"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0902-06-birthright",
+      "section": "Świat",
+      "title": "Sąd Najwyższy USA utrzymuje obywatelstwo z urodzenia i zostawia Trumpa z ciężką porażką migracyjną",
+      "lead": "To wciąż jedna z najważniejszych decyzji instytucjonalnych dnia w świecie zachodnim.",
+      "whatHappened": "BBC i opublikowana opinia Sądu Najwyższego pokazują, że w sprawie Trump v. Barbara większość 6 do 3 utrzymała zasadę obywatelstwa z urodzenia dla dzieci urodzonych w USA także wtedy, gdy rodzice przebywają tam nielegalnie lub tymczasowo. Wyrok podcina jedną z najostrzejszych obietnic migracyjnych Trumpa.",
+      "keyFacts": [
+        "Wyrok zapadł stosunkiem głosów 6 do 3.",
+        "Sąd utrzymał obywatelstwo od urodzenia dla dzieci urodzonych w USA.",
+        "To ważna porażka dla agendy migracyjnej Trumpa."
+      ],
+      "reactions": [
+        "Temat pozostaje centralny, bo łączy prawo konstytucyjne, politykę migracyjną i kalendarz polityczny USA.",
+        "Każda kolejna reakcja Białego Domu może szybko nadać tej karcie nowy wymiar polityczny."
+      ],
+      "whyItMatters": "Spór dotyka samej definicji członkostwa w państwie i może wyznaczać granice przyszłych prób zaostrzenia polityki imigracyjnej.",
+      "context": "Choć historia jest znana od nocy, o 09:02 nadal należy do najważniejszych kart świata i nie ma silniejszego zamiennika z USA.",
+      "watchNext": [
+        "Czy administracja Trumpa zapowie nowy ruch legislacyjny albo procesowy.",
+        "Jak szybko wyrok stanie się osią kolejnych sporów migracyjnych i kampanijnych."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US Supreme Court upholds birthright citizenship in blow to Trump",
+          "url": "https://www.bbc.co.uk/news/articles/cgmepnx1wzzo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Supreme Court: Trump v. Barbara (06/30/2026)",
+          "url": "https://www.supremecourt.gov/opinions/25pdf/25-365_4hdj.pdf"
+        }
+      ],
+      "tags": [
+        "USA",
+        "SądNajwyższy",
+        "Migracja",
+        "Trump"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0902-07-anthropic",
+      "section": "Technologia",
+      "title": "Anthropic odzyskuje zielone światło eksportowe dla Fable i Mythos, więc temat zostaje numerem jeden w AI",
+      "lead": "Po czerwonej blokadzie wraca pytanie, kto ostatecznie ustala granice eksportu modeli.",
+      "whatHappened": "BBC podało, że USA cofnęły zakaz eksportowy obejmujący najbardziej zaawansowane narzędzia Anthropic, a firma zapowiada przywrócenie dostępu do modeli Fable i Mythos. To utrzymuje temat w centrum technologicznego obiegu dnia.",
+      "keyFacts": [
+        "Blokada eksportowa na zaawansowane modele Anthropic została cofnięta.",
+        "Firma zapowiedziała przywrócenie dostępu do modeli Fable i Mythos.",
+        "Decyzja pokazuje, jak niestabilna pozostaje polityka wokół eksportu zaawansowanej AI."
+      ],
+      "reactions": [
+        "To najmocniejsza karta technologiczna, bo dotyczy bezpośrednio dostępu do topowych modeli.",
+        "Sprawa jest też czytana jako sygnał polityczny o granicach kontroli nad AI."
+      ],
+      "whyItMatters": "Dostępność takich modeli wpływa jednocześnie na konkurencję rynkową, bezpieczeństwo cyber i globalny układ sił w AI.",
+      "context": "Temat wszedł do feedu o 06:02 i nadal jest wystarczająco świeży oraz ważny, by utrzymać miejsce w slocie 09:02.",
+      "watchNext": [
+        "Czy pojawią się dodatkowe warunki lub ograniczenia techniczne po przywróceniu dostępu.",
+        "Czy inni dostawcy AI zostaną objęci podobnie zmienną polityką eksportową."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Anthropic says US lifts export ban on its advanced AI tools",
+          "url": "https://www.bbc.co.uk/news/articles/cdr42623e1do?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Anthropic Newsroom",
+          "url": "https://www.anthropic.com/news"
+        }
+      ],
+      "tags": [
+        "Anthropic",
+        "AI",
+        "Eksport",
+        "USA"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0902-08-doha-iran",
+      "section": "Świat",
+      "title": "Doha nie widzi bezpośrednich rozmów USA-Iran, mimo że amerykańscy wysłannicy są już na miejscu",
+      "lead": "Nowa karta dyplomatyczna podnosi temperaturę wokół pytania, czy kanał rozmów z Iranem w ogóle działa.",
+      "whatHappened": "BBC podało, że amerykańscy wysłannicy są w Dosze na spotkaniach z mediatorami, ale Katar twierdzi, że nie zaplanowano ani bezpośrednich rozmów, ani formalnych negocjacji USA-Iran. CNN utrzymuje ten wątek jako żywy temat dnia w swojej relacji światowej.",
+      "keyFacts": [
+        "Wysłannicy USA są w Dosze na rozmowach z mediatorami.",
+        "Katar mówi, że nie ma zaplanowanych bezpośrednich rozmów z Irańczykami.",
+        "To osłabia oczekiwania na szybkie dyplomatyczne przełamanie."
+      ],
+      "reactions": [
+        "To nowa oś w feedzie względem 06:02, bo przesuwa uwagę z uderzeń i blokad na realny stan kanałów negocjacyjnych.",
+        "Temat może szybko awansować, jeśli pojawi się choćby częściowe potwierdzenie spotkań lub ich zerwania."
+      ],
+      "whyItMatters": "Gdy napięcie z Iranem pozostaje wysokie, nawet brak rozmów jest informacją strategiczną dla rynków, dyplomacji i bezpieczeństwa regionu.",
+      "context": "W poprzednim opublikowanym slocie feed miał Afganistan-Pakistan. O 09:02 ciężar przesuwa się na Doha-USA-Iran i pytanie o wiarygodność mediacji.",
+      "watchNext": [
+        "Czy Katar, USA lub Iran potwierdzą jednak bezpośrednie kontakty albo nowy harmonogram rozmów.",
+        "Czy brak rozmów przełoży się na dalszą eskalację polityczną albo rynkową."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US envoys in Doha to meet mediators but not Iranians, Qatar says",
+          "url": "https://www.bbc.co.uk/news/articles/cpd38x1dy4no?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN World live",
+          "url": "https://edition.cnn.com/2026/07/01/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "Doha",
+        "Dyplomacja"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0902-09-dubna",
+      "section": "Bezpieczeństwo",
+      "title": "Dubna zostaje w feedzie, bo Ukraina nadal mówi o trafieniu rosyjskiego centrum łączności satelitarnej",
+      "lead": "To wciąż jedna z najmocniejszych kart wojennych dnia mimo niepełnych potwierdzeń.",
+      "whatHappened": "CNN podał, że Ukraina twierdzi, iż uderzyła w centrum łączności satelitarnej Dubna pod Moskwą. Rosja informuje o nocnym ataku dronów i śmierci niemowlęcia, ale nie potwierdza ukraińskiego opisu celu.",
+      "keyFacts": [
+        "Ukraina mówi o trafieniu obiektu łączności satelitarnej w Dubnej.",
+        "Rosja potwierdza atak dronów, ale nie potwierdza charakteru celu.",
+        "Rosyjskie komunikaty mówią o ofierze śmiertelnej po stronie cywilnej."
+      ],
+      "reactions": [
+        "Karta pozostaje wysoko, bo dotyczy infrastruktury strategicznej w pobliżu Moskwy.",
+        "Jednocześnie trzeba utrzymać ostrożny język, bo część danych pochodzi bezpośrednio od stron konfliktu."
+      ],
+      "whyItMatters": "Ataki na infrastrukturę łączności dalekiego zasięgu mogą mieć znaczenie większe niż zwykły bilans nocnego nalotu, jeśli faktycznie ograniczają zdolności operacyjne Rosji.",
+      "context": "To temat już obecny o 06:02, ale nadal wystarczająco mocny, by pozostać w aktualnym zestawie kart.",
+      "watchNext": [
+        "Czy pojawi się niezależne potwierdzenie charakteru trafionego obiektu.",
+        "Czy Rosja odpowie nową falą uderzeń albo nową narracją o skutkach ataku."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Ukraine launches major drone attack on Moscow, hitting a satellite center and killing a baby",
+          "url": "https://edition.cnn.com/2026/06/30/europe/moscow-dubna-attack-ukraine-intl"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "Dubna",
+        "Drony"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-01-0902-10-venezuela-child",
+      "section": "Świat",
+      "title": "Wenezuela utrzymuje emocjonalną kartę dnia po wydobyciu trzylatka spod gruzów po sześciu dniach",
+      "lead": "To najbardziej namacalny znak, że akcja ratunkowa nadal przynosi przełomy mimo skali katastrofy.",
+      "whatHappened": "BBC podało, że z ruin w stanie La Guaira wydobyto żywego trzyletniego chłopca po sześciu dniach od trzęsienia ziemi i przewieziono go do szpitala. Ta historia utrzymuje kryzys w Wenezueli wysoko w światowym feedzie także kilka dni po głównym wstrząsie.",
+      "keyFacts": [
+        "Trzylatek został wydobyty żywy po sześciu dniach.",
+        "Do akcji doszło w stanie La Guaira.",
+        "Dziecko zostało przewiezione do szpitala."
+      ],
+      "reactions": [
+        "To najmocniejszy ludzki kąt wenezuelskiego kryzysu w bieżącym slocie.",
+        "Historia naturalnie utrzymuje uwagę opinii publicznej na akcji ratunkowej."
+      ],
+      "whyItMatters": "Pojedyncze uratowane życie przedłuża zainteresowanie światem ratowniczym i przypomina, że mimo skali zniszczeń wciąż są powody, by kontynuować poszukiwania.",
+      "context": "O 06:02 feed miał dwa kąty Wenezueli. O 09:02 zostaje ten silniejszy emocjonalnie i bardziej jednoznacznie aktualny.",
+      "watchNext": [
+        "Czy ratownicy wydobędą kolejnych ocalałych albo podniosą bilans ofiar.",
+        "Czy pojawią się nowe komunikaty o stanie dziecka i tempie dalszych poszukiwań."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Three-year-old rescued and taken to hospital six days after Venezuela quake",
+          "url": "https://www.bbc.co.uk/news/articles/c1jykwk8n18o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Wenezuela",
+        "TrzęsienieZiemi",
+        "Ratownictwo",
+        "LaGuaira"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-01-0902-11-greece-fire",
+      "section": "Świat",
+      "title": "Pożar pod Salonikami wciąż ma ofiary, a ponad stu strażaków walczy o zatrzymanie frontu ognia",
+      "lead": "Europa południowa nadal dokłada do poranka kartę klimatyczno-bezpieczeństwową.",
+      "whatHappened": "BBC podało, że pożar w północnej Grecji w rejonie Salonik ma już co najmniej dwie ofiary, wymusił ewakuacje i angażuje ponad 100 strażaków. To utrzymuje temat jako ważny sygnał letniego ryzyka pożarowego w regionie.",
+      "keyFacts": [
+        "Bilans ofiar wynosi co najmniej dwie osoby.",
+        "W działaniach bierze udział ponad 100 strażaków.",
+        "Pożar wymusił ewakuację okolicznych miejscowości."
+      ],
+      "reactions": [
+        "Karta pozostaje ważna, bo dotyczy klasycznego wakacyjnego ryzyka w południowej Europie.",
+        "Jej siła zależy od tego, czy pożar zostanie szybko ograniczony, czy zacznie się rozlewać."
+      ],
+      "whyItMatters": "Pożary w tym regionie szybko wpływają na bezpieczeństwo mieszkańców, transport i percepcję wakacyjnego ryzyka w Europie.",
+      "context": "Temat był obecny już wcześniej, ale nadal pozostaje jednym z najbardziej konkretnych europejskich sygnałów zagrożenia.",
+      "watchNext": [
+        "Czy greckie służby podniosą bilans ofiar albo rozszerzą ewakuacje.",
+        "Czy warunki pogodowe pozwolą opanować ogień jeszcze przed południem."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Firefighters struggle to contain deadly Greek wildfire",
+          "url": "https://www.bbc.co.uk/news/articles/c0qy3nkex0qo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Grecja",
+        "Pożar",
+        "Saloniki",
+        "Ewakuacja"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-01-0902-12-lahore",
+      "section": "Świat",
+      "title": "Lahore zostaje w zestawie po śmierci 14 dzieci w zawaleniu dachu ośrodka korepetycyjnego",
+      "lead": "To nadal jedna z najmocniejszych azjatyckich kart bezpieczeństwa i odpowiedzialności instytucji.",
+      "whatHappened": "BBC podało, że w przedmieściach Lahore zawalił się dach ośrodka korepetycyjnego, zabijając 14 dzieci i raniąc kolejne osoby. W śledztwie zatrzymano dwie osoby.",
+      "keyFacts": [
+        "W katastrofie zginęło 14 dzieci.",
+        "Część poszkodowanych trafiła do szpitala.",
+        "Śledczy zatrzymali dwie osoby."
+      ],
+      "reactions": [
+        "Karta pozostaje mocna przez skalę ofiar i pytania o standardy bezpieczeństwa budynków.",
+        "To temat, który może szybko dostać drugą falę reakcji politycznych i śledczych."
+      ],
+      "whyItMatters": "Katastrofy tego typu szybko zamieniają się w debatę o nadzorze, odpowiedzialności lokalnych władz i jakości infrastruktury edukacyjnej.",
+      "context": "Temat był obecny już o 06:02, ale nadal nie stracił ciężaru i pozostaje jednym z najsilniejszych newsów azjatyckich poranka.",
+      "watchNext": [
+        "Czy śledczy rozszerzą listę zatrzymanych albo wskażą bezpośrednią przyczynę zawalenia.",
+        "Czy władze ogłoszą szerszy przegląd bezpieczeństwa podobnych budynków."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Roof collapse kills 14 children at Pakistan tuition centre",
+          "url": "https://www.bbc.co.uk/news/articles/cr7x38lle1jo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Pakistan",
+        "Lahore",
+        "Katastrofa",
+        "Dzieci"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "RCB: Komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "IMGW: Aktualna i prognozowana sytuacja meteorologiczna i hydrologiczna – raport nr 135",
+      "url": "https://imgw.pl/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-135/"
+    },
+    {
+      "title": "OGE: President Trump’s certified annual financial disclosure report",
+      "url": "https://extapps2.oge.gov/201/Presiden.nsf/PAS%2BIndex/4EC9A8E6DD078F2985258CA9002C9377/%24FILE/Trump%2C%20Donald%20J.%202025%20Annual%20278.pdf"
+    },
+    {
+      "title": "Supreme Court: Trump v. Barbara (06/30/2026)",
+      "url": "https://www.supremecourt.gov/opinions/25pdf/25-365_4hdj.pdf"
+    },
+    {
+      "title": "Anthropic Newsroom",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "title": "BBC: US envoys in Doha to meet mediators but not Iranians, Qatar says",
+      "url": "https://www.bbc.co.uk/news/articles/cpd38x1dy4no?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "CNN World live",
+      "url": "https://edition.cnn.com/2026/07/01/world/live-news/iran-war-trump"
+    }
+  ]
+}

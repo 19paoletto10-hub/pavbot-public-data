@@ -1,0 +1,426 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-06",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run nie jest o kolejnym pojedynczym modelu. Najmocniej wybrzmiewa formalizacja kontrolnej warstwy wokół AI: Amazon zamyka Mechanical Turk dla nowych klientów, Cloudflare zaczyna wyceniać crawl i wywołania MCP, Google przenosi Gemini Spark na Maca, a Midjourney i Microsoft pokazują, że spory o dane, interfejs i opłacalne wdrożenia rozgrywają się już na poziomie procesu.",
+    "Równolegle widać dwa ważne przesunięcia rynkowe. Po pierwsze, publiczne sygnały produktowe nadal są agentowe, ale teraz wchodzą też płatności i rozliczenia. Po drugie, rynek publiczny zaczyna być mniej wyrozumiały wobec AI hype'u: FT wprost pisze, że OpenAI i Anthropic mogą mieć problem z wejściem na giełdę, bo koszt utrzymania przewagi na froncie robi się brutalny."
+  ],
+  "summaryBullets": [
+    "Infrastruktura: MTurk schodzi z rynku dla nowych klientów",
+    "Infrastruktura: Cloudflare sprzedaje crawl i MCP w modelu per-use",
+    "Produkty: Gemini Spark staje się agentem na Macu"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-06-0-mturk-schodzi-z-rynku-dla-nowych-klientow-7b3df09ceb",
+      "section": "Infrastruktura",
+      "title": "MTurk schodzi z rynku dla nowych klientów",
+      "standfirst": "Amazon Mechanical Turk ma zostać zamknięty dla nowych klientów 30 lipca 2026 r., a AWS utrzymuje usługę w trybie maintenance.",
+      "whatHappened": "Oficjalne strony MTurk i AWS mówią wprost, że nowe konta przestaną być przyjmowane 30 lipca, a istniejący klienci mają działać dalej bez nowych funkcji.",
+      "whyItMatters": "To zamyka jedną z najstarszych warstw ludzkiego work-for-hire w chmurze i pokazuje, że old-school crowdwork schodzi na drugi plan wobec managed labeling i syntetycznych danych.",
+      "deeperAnalysis": [
+        "MTurk był kiedyś prostym API do kupowania ludzkiej uwagi. W 2026 ta warstwa jest mniej atrakcyjna niż prywatne workforce'y, Ground Truth i vendorzy labelingu, więc decyzja AWS wygląda jak odcięcie produktu od przyszłości, a nie tylko kosmetyczna zmiana cennika.",
+        "Dla zespołów AI to ważny moment, bo przypomina, jak bardzo zmienił się pipeline od czasów „collect tasks - human annotation - train model”. Jeśli nowe wejścia do MTurk znikają, to inne kanały pozyskiwania danych dostają mocniejszy argument sprzedażowy i większą wagę operacyjną."
+      ],
+      "contextPoints": [
+        "Co się stało: Banner na MTurk i dokumenty AWS wskazują datę 30 lipca 2026 r. jako cutoff dla nowych klientów.",
+        "Dlaczego ważne: To sygnał końca jednej z klasycznych warstw human-in-the-loop w chmurze.",
+        "Na co patrzeć dalej: czy AWS publikuje prostą ścieżkę migracji do Ground Truth i czy vendorzy labelingu przejmują ten popyt."
+      ],
+      "sources": [
+        {
+          "title": "Amazon Mechanical Turk",
+          "url": "https://www.mturk.com/"
+        },
+        {
+          "title": "AWS service availability updates",
+          "url": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-service-availability/"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/05/amazon-will-stop-accepting-new-customers-for-mechanical-turk/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "labeling",
+        "crowdsourcing",
+        "AWS",
+        "infrastructure"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-06-1-cloudflare-sprzedaje-crawl-i-mcp-w-modelu-per-use-a06540d671",
+      "section": "Infrastruktura",
+      "title": "Cloudflare sprzedaje crawl i MCP w modelu per-use",
+      "standfirst": "Cloudflare uruchomił waitlistę Monetization Gateway, która ma pobierać opłaty za strony, zbiory danych, API i wywołania MCP przez x402.",
+      "whatHappened": "Blog Cloudflare opisuje model pay-per-use oraz przykładowe integracje, w tym Ceramic i You.com.",
+      "whyItMatters": "To może zmienić ekonomię crawl, access i tool calling dla agentów, bo zamiast blokować ruch, właściciel zasobu może go po prostu wycenić.",
+      "deeperAnalysis": [
+        "To jest ważne nie dlatego, że „AI będzie płacić za wszystko” brzmi efektownie. Ważne jest to, że Cloudflare próbuje znormalizować billing na styku treści, API i narzędzi MCP, czyli tam, gdzie dziś powstaje największe tarcie między wydawcami, botami i agentami.",
+        "Jeśli taki model się przyjmie, AI web przestanie być binarnym światem allow/deny. Zacznie przypominać klasyczny internet usługowy, w którym dostęp, limity i rozliczenie są jawne, a właściciel zasobu może rozdzielić crawl od realnego użycia. To jest bardzo konkretny ruch w stronę agentic internet economics."
+      ],
+      "contextPoints": [
+        "Co się stało: Cloudflare otworzył waitlistę do Monetization Gateway i wskazał x402 jako warstwę rozliczeń.",
+        "Dlaczego ważne: Billing za użycie może stać się standardem dla AI crawl, API i wywołań MCP.",
+        "Na co patrzeć dalej: czy publisherzy i developerzy zaczną realnie używać tego zamiast prostego blokowania botów."
+      ],
+      "sources": [
+        {
+          "title": "Cloudflare blog",
+          "url": "https://blog.cloudflare.com/content-independence-day-no-ai-crawl-without-compensation/"
+        },
+        {
+          "title": "Cloudflare Monetization Gateway",
+          "url": "https://blog.cloudflare.com/monetization-gateway/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Cloudflare",
+        "x402",
+        "MCP",
+        "payments",
+        "AI search"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-06-2-gemini-spark-staje-sie-agentem-na-macu-1a0f3a241b",
+      "section": "Produkty",
+      "title": "Gemini Spark staje się agentem na Macu",
+      "standfirst": "Google opublikował aktualizację Gemini Spark z macOS, połączeniami do aplikacji i obsługą zadań wykonywanych zdalnie na komputerze użytkownika.",
+      "whatHappened": "Aktualizacja Google bloga wymienia Mac, Canva, Dropbox, Tasks, Keep, Instacart, OpenTable i Zillow jako część nowego workflow Spark.",
+      "whyItMatters": "To przenosi agenta z czatu do warstwy desktopowego workflow engine i pokazuje, że Google chce kontrolować zadania, a nie tylko odpowiedzi.",
+      "deeperAnalysis": [
+        "Najciekawsze w tym ruchu jest to, że Spark ma działać nawet wtedy, gdy laptop jest zamknięty, a zadania mogą być delegowane z telefonu. To już nie jest zwykły „chatbot z dodatkami”, tylko agent z własnym czasem pracy, pamięcią i połączeniem do aplikacji.",
+        "Integracje z MCP też są istotne, bo otwierają ecosystem play poza samym Google Workspace. Jeśli Spark ma być osobistym control plane, to musi wchodzić w zewnętrzne aplikacje, a nie tylko w natywne usługi Google. Właśnie dlatego to ważny sygnał dla konkurencji w macOS, browser automation i enterprise workflow."
+      ],
+      "contextPoints": [
+        "Co się stało: Spark dostał macOS, connected apps i zdalne wykonywanie zadań.",
+        "Dlaczego ważne: desktop agent staje się produktem platformowym, a nie eksperymentem.",
+        "Na co patrzeć dalej: permission UX, rollout poza US Ultra i to, czy Spark naprawdę utrzyma zadania w tle przez dłuższy czas."
+      ],
+      "sources": [
+        {
+          "title": "Google Blog",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/"
+        },
+        {
+          "title": "The Gemini app becomes more agentic",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/next-evolution-gemini-app/"
+        },
+        {
+          "title": "Gemini 3.5: frontier intelligence with action",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Gemini",
+        "macOS",
+        "agents",
+        "MCP"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-06-3-midjourney-rozgrywa-discovery-na-ai-w-hollywood-4401b7da93",
+      "section": "Regulacje",
+      "title": "Midjourney rozgrywa discovery na AI w Hollywood",
+      "standfirst": "Midjourney chce, by studia Hollywood ujawniły własne użycie AI w sporze o prawa autorskie, co przenosi ciężar z samych obrazów na proces wewnętrzny.",
+      "whatHappened": "TechCrunch opisuje, że startup walczy o szerszy dostęp do dokumentów związanych z użyciem AI przez studia w trwającym sporze.",
+      "whyItMatters": "Jeśli sąd dopuści reciprocal disclosure, procesy o generatywne obrazy mogą stać się dużo bardziej symetryczne i kosztowne dla obu stron.",
+      "deeperAnalysis": [
+        "Ten spór jest większy niż pojedynczy generator obrazów. Midjourney próbuje pokazać, że jeśli studia oskarżają model o naruszenia, to same powinny ujawnić, jak używają AI we własnym łańcuchu produkcyjnym. To zmienia discovery z technicznego detalizmu w strategiczną broń procesową.",
+        "Jeżeli taka logika się utrzyma, kolejne sprawy o generatywne treści będą dotyczyły nie tylko outputu, ale też promptów, logów, workflow i wewnętrznych polityk użycia AI. To może wpłynąć na to, jak firmy dokumentują pracę z modelami, jeszcze zanim w ogóle dojdzie do procesu."
+      ],
+      "contextPoints": [
+        "Co się stało: Midjourney próbuje poszerzyć zakres discovery w sporze z Hollywood.",
+        "Dlaczego ważne: reciprocity może stać się nowym wzorcem dowodowym w sporach o generatywną treść.",
+        "Na co patrzeć dalej: zakres decyzji sądu i to, czy podobną taktykę przejmą inni pozwani w sprawach o AI."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/04/midjourney-wants-hollywood-studios-to-reveal-the-details-of-their-ai-usage/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Midjourney",
+        "copyright",
+        "discovery",
+        "Hollywood",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-06-4-microsoft-porzadkuje-copilot-i-frontier-company-9d14463630",
+      "section": "Produkty",
+      "title": "Microsoft porządkuje Copilot i Frontier Company",
+      "standfirst": "Microsoft inwestuje 2,5 mld USD w Frontier Company i 6 tys. ekspertów, a reporting mówi równocześnie o scaleniu consumer i enterprise Copilot w jedną aplikację.",
+      "whatHappened": "Official blog opisuje Frontier Company jako outcome-driven engineering, a The Information i PYMNTS mówią o cięciu zbędnych funkcji, płatnych agentach i nowej wersji Copilota.",
+      "whyItMatters": "To sygnał, że Microsoft przestawia AI z „wszędzie trochę” na „mniej powierzchni produktu, więcej mierzalnego workflow”.",
+      "deeperAnalysis": [
+        "Microsoft w praktyce mówi klientom, że sama obecność Copilota nie wystarcza. Frontier Company ma sprzedawać wdrożenie, zmianę procesu i wynik biznesowy, więc AI staje się usługą organizacyjną, a nie tylko funkcją w interfejsie.",
+        "Po stronie produktu widać równoległy reset: mniej clutteru, więcej spójności i więcej płatnych agentów. To jest ważne, bo pokazuje, że nawet bardzo duża dystrybucja nie rozwiązuje problemu adoption. Użytkownik musi nadal widzieć wyraźny powód, by płacić i zostać."
+      ],
+      "contextPoints": [
+        "Co się stało: Frontier Company ma embedować ekspertów u klientów, a Copilot ma zostać uproszczony.",
+        "Dlaczego ważne: Microsoft przesuwa ciężar z szerokiej obecności na outcome i retencję.",
+        "Na co patrzeć dalej: sierpniowy rollout, pricing paid agents i czy Copilot Studio / Agent 365 stanie się faktyczną ścieżką wzrostu."
+      ],
+      "sources": [
+        {
+          "title": "Microsoft Blog",
+          "url": "https://blogs.microsoft.com/blog/2026/07/02/microsoft-frontier-company-ai-engineering-that-amplifies-and-protects-your-intelligence/"
+        },
+        {
+          "title": "PYMNTS",
+          "url": "https://www.pymnts.com/news/artificial-intelligence/2026/microsoft-merges-enterprise-and-consumer-copilot-apps/"
+        },
+        {
+          "title": "The Information",
+          "url": "https://www.theinformation.com/articles/microsoft-memo-details-ai-app-overhaul-earn-right-exist"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Microsoft",
+        "Copilot",
+        "enterprise AI",
+        "agents",
+        "deployment"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-06-5-anthropic-i-alibaba-twardnieja-wokol-claude-code-f43f8ef423",
+      "section": "Regulacje",
+      "title": "Anthropic i Alibaba twardnieją wokół Claude Code",
+      "standfirst": "FT pisze, że Anthropic zamyka luki umożliwiające chińskim firmom dostęp do Claude, a Reuters i TechCrunch podają, że Alibaba zakaże pracownikom używania Claude Code od 10 lipca.",
+      "whatHappened": "Anthropic monitoruje m.in. strefy czasowe i transfer-station services, a Alibaba klasyfikuje Claude Code jako high-risk software i wskazuje Qoder jako alternatywę.",
+      "whyItMatters": "Frontier coding tools stają się geopolitycznie kontrolowanym zasobem, a access control opiera się na wykrywaniu, a nie tylko na regulaminie.",
+      "deeperAnalysis": [
+        "W tej historii najciekawsze jest to, że blokada nie wygląda jak pojedynczy toggle w panelu. To raczej cat-and-mouse między firmami a użytkownikami, którzy próbują obejść ograniczenia przez konta pośrednie, strefy czasowe i inne sygnały środowiskowe.",
+        "To też ważny precedens dla całego rynku coding agents. Jeśli narzędzia typu Claude Code są traktowane jak element infrastruktury bezpieczeństwa i ryzyka, to firmy zaczną budować bardziej formalne polityki dostępu, audytu i wykrywania nadużyć. Model capabilities będą coraz częściej zależały od tożsamości i geolokalizacji, nie tylko od płatnego planu."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic wzmacnia blokady na chiński dostęp, a Alibaba przygotowuje własny zakaz użycia Claude Code przez pracowników.",
+        "Dlaczego ważne: access control staje się integralną częścią frontier AI business model.",
+        "Na co patrzeć dalej: czy pojawią się podobne blokady u kolejnych producentów coding agents oraz jaka będzie odpowiedź regulatorów i firm w Chinach."
+      ],
+      "sources": [
+        {
+          "title": "Financial Times",
+          "url": "https://www.ft.com/content/ad033063-60f9-4c0c-8d8a-9193a83e6f60?syn-25a6b1a6=1"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/"
+        },
+        {
+          "title": "Reuters via Yahoo Finance",
+          "url": "https://finance.yahoo.com/technology/ai/articles/alibaba-ban-claude-code-workplace-065029370.html"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "Alibaba",
+        "Claude Code",
+        "China",
+        "access control"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-06-6-product-hunt-pokazuje-agentowy-stack-z-payments-a86904e386",
+      "section": "Produkty",
+      "title": "Product Hunt pokazuje agentowy stack z payments",
+      "standfirst": "Na Product Hunt nadal prowadzą WorkBuddy, DocsAlot, Endl, TryCase, MentionDrop MCP i CircleChat, a Endl dodaje warstwę płatności dla fiat, stablecoinów i kart.",
+      "whatHappened": "Homepage i forum pokazują, że publiczny popyt dotyczy już nie tylko agentów, ale też obserwowalności i rozliczeń.",
+      "whyItMatters": "To mocny sygnał, że rynek kupuje pełny operacyjny stack wokół agentów, a nie sam model.",
+      "deeperAnalysis": [
+        "WorkBuddy, DocsAlot, TryCase, MentionDrop MCP i CircleChat tworzą logiczny stos: dokumentacja, testowanie, sygnał rynkowy i orkiestracja. Endl domyka ten obraz, bo wprowadza money movement jako kolejny element produktu wokół agentów i globalnych workflow.",
+        "Równie ważny jest publiczny wątek o tym, jak w ogóle wiedzieć, co robią coding agenty. Jeśli użytkownicy pytają o obserwowalność, to znikają złudzenia, że wystarczy sam model. Potrzebne są limity, historia działań, board zadań i rozliczenia, czyli infrastruktura operacyjna, nie tylko prompt."
+      ],
+      "contextPoints": [
+        "Co się stało: Product Hunt homepage i forum thread pokazują silny agentowy popyt oraz Endl jako payments layer.",
+        "Dlaczego ważne: publiczny rynek potwierdza, że wokół agentów powstaje cały ekosystem pomocniczy.",
+        "Na co patrzeć dalej: czy te launchy utrzymają się poza dniem premiery i czy payments layer zacznie być standardem dla agentów."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/"
+        },
+        {
+          "title": "Product Hunt forum thread o agentach",
+          "url": "https://www.producthunt.com/p/pushary/how-do-you-stay-aware-of-what-your-ai-coding-agents-are-doing"
+        },
+        {
+          "title": "Endl on Product Hunt",
+          "url": "https://www.producthunt.com/products/endl"
+        },
+        {
+          "title": "Best of Product Hunt: July 5, 2026",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/7/5"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Product Hunt",
+        "agents",
+        "payments",
+        "observability",
+        "MCP"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-06-7-openai-i-anthropic-moga-miec-problem-z-gielda-245c4f8bcb",
+      "section": "Startupy",
+      "title": "OpenAI i Anthropic mogą mieć problem z giełdą",
+      "standfirst": "FT twierdzi, że OpenAI i Anthropic mogą mieć problem z giełdą, bo koszty utrzymania przewagi na froncie są brutalne.",
+      "whatHappened": "Artykuł opisuje wysokie wyceny, rosnące przychody i jednocześnie niepewność co do długoterminowej rentowności modeli frontier.",
+      "whyItMatters": "To nowy kontrapunkt dla hossy unicornów z poprzednich dni - publiczny rynek będzie pytał o marże, nie tylko o tempo modeli.",
+      "deeperAnalysis": [
+        "Najważniejsza zmiana w tonie rynku polega na tym, że public markets zaczynają patrzeć na frontier AI jak na ciężki przemysł, a nie lekki software. Jeśli utrzymanie przewagi wymaga ogromnych nakładów na compute, ludzi i infrastrukturę, to prosta narracja „więcej użytkowników = większa wartość” staje się mniej przekonująca.",
+        "To dobrze tłumaczy, dlaczego obok wycen pojawiają się wątpliwości co do timing'u IPO. OpenAI i Anthropic mogą mieć świetne przychody i nadal problem z giełdowym storytellingiem, jeśli inwestorzy uznają, że model biznesowy jest bardziej kapitałochłonny niż wynika to z obecnych narracji."
+      ],
+      "contextPoints": [
+        "Co się stało: FT opisał rosnące valuations i jednocześnie public-market skepticism.",
+        "Dlaczego ważne: rynek zaczyna wymagać dowodów na trwałą ekonomię, nie tylko na przewagę modelową.",
+        "Na co patrzeć dalej: czy kolejne raporty o przychodach i capexie poprawią czy pogorszą narrację przed potencjalnymi IPO."
+      ],
+      "sources": [
+        {
+          "title": "Financial Times",
+          "url": "https://www.ft.com/content/7bff5ad3-a7dc-4641-be97-7f383446ff75"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "OpenAI",
+        "Anthropic",
+        "IPO",
+        "funding",
+        "public markets"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "MTurk schodzi z rynku dla nowych klientów",
+      "rationale": "To koniec jednej z najstarszych warstw ludzkiego labelingu jako usługi w chmurze i dobry sygnał o tym, gdzie idzie AI ops.",
+      "sourcesLabel": "Amazon Mechanical Turk; AWS; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Cloudflare sprzedaje crawl i MCP w modelu per-use",
+      "rationale": "Cloudflare przenosi ekonomię AI web access z blokowania na billing, co może przestawić relacje między wydawcami, botami i agentami.",
+      "sourcesLabel": "Cloudflare blog"
+    },
+    {
+      "priority": "High",
+      "title": "Gemini Spark staje się agentem na Macu",
+      "rationale": "Google przesuwa Gemini z czatu do desktopowego workflow engine z integracjami i zdalnym wykonaniem zadań.",
+      "sourcesLabel": "Google Blog"
+    },
+    {
+      "priority": "High",
+      "title": "Midjourney rozgrywa discovery na AI w Hollywood",
+      "rationale": "Spór o obrazy przechodzi w spór o ujawnienie własnego użycia AI przez studia, co może ustawić nowy precedens.",
+      "sourcesLabel": "TechCrunch; court filing"
+    },
+    {
+      "priority": "High",
+      "title": "Microsoft porządkuje Copilot i Frontier Company",
+      "rationale": "Microsoft pokazuje, że komercjalizacja AI wymaga mniej powierzchni produktu i więcej wdrożeniowej dyscypliny oraz płatnych workflow.",
+      "sourcesLabel": "Microsoft Blog; PYMNTS; The Information"
+    },
+    {
+      "priority": "High",
+      "title": "Anthropic i Alibaba twardnieją wokół Claude Code",
+      "rationale": "Frontier coding tools stają się geopolitycznie kontrolowanym zasobem, a access control opiera się na wykrywaniu i blokadach korporacyjnych.",
+      "sourcesLabel": "FT; TechCrunch; Reuters"
+    },
+    {
+      "priority": "High",
+      "title": "Product Hunt pokazuje agentowy stack z payments",
+      "rationale": "Publiczny sygnał produktowy mówi dziś o dokumentacji, testach, obserwowalności i płatnościach wokół agentów.",
+      "sourcesLabel": "Product Hunt; forum thread; Endl"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI i Anthropic mogą mieć problem z giełdą",
+      "rationale": "FT przypomina, że koszt utrzymania przewagi na froncie może wyprzedzać cierpliwość publicznych rynków.",
+      "sourcesLabel": "Financial Times"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Amazon Mechanical Turk",
+      "url": "https://www.mturk.com/"
+    },
+    {
+      "title": "AWS service availability updates",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/06/aws-service-availability/"
+    },
+    {
+      "title": "AWS weekly roundup",
+      "url": "https://aws.amazon.com/blogs/aws/aws-weekly-roundup-claude-sonnet-5-on-aws-amazon-workspaces-for-ai-agents-aws-service-availability-updates-and-more-july-6-2026/"
+    },
+    {
+      "title": "Cloudflare blog",
+      "url": "https://blog.cloudflare.com/content-independence-day-no-ai-crawl-without-compensation/"
+    },
+    {
+      "title": "Cloudflare Monetization Gateway",
+      "url": "https://blog.cloudflare.com/monetization-gateway/"
+    },
+    {
+      "title": "Google Blog",
+      "url": "https://blog.google/innovation-and-ai/products/gemini-app/gemini-spark-updates-june-2026/"
+    },
+    {
+      "title": "TechCrunch o Mechanical Turk",
+      "url": "https://techcrunch.com/2026/07/05/amazon-will-stop-accepting-new-customers-for-mechanical-turk/"
+    },
+    {
+      "title": "TechCrunch o Midjourney",
+      "url": "https://techcrunch.com/2026/07/04/midjourney-wants-hollywood-studios-to-reveal-the-details-of-their-ai-usage/"
+    },
+    {
+      "title": "TechCrunch o Alibaba i Claude Code",
+      "url": "https://techcrunch.com/2026/07/04/alibaba-reportedly-bans-employees-from-using-claude-code/"
+    },
+    {
+      "title": "The Information o Copilot",
+      "url": "https://www.theinformation.com/articles/microsoft-memo-details-ai-app-overhaul-earn-right-exist"
+    },
+    {
+      "title": "PYMNTS o Copilot",
+      "url": "https://www.pymnts.com/news/artificial-intelligence/2026/microsoft-merges-enterprise-and-consumer-copilot-apps/"
+    },
+    {
+      "title": "FT o IPO sceptycyzmie",
+      "url": "https://www.ft.com/content/7bff5ad3-a7dc-4641-be97-7f383446ff75"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Product Hunt forum thread o agentach",
+      "url": "https://www.producthunt.com/p/pushary/how-do-you-stay-aware-of-what-your-ai-coding-agents-are-doing"
+    },
+    {
+      "title": "Hacker News o GPT-5.6 w Codex",
+      "url": "https://news.ycombinator.com/item?id=48799614"
+    }
+  ]
+}
