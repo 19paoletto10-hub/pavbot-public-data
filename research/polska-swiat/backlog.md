@@ -6,9 +6,9 @@
 | --- | --- | --- | --- | --- |
 | High | Review first three generated news podcasts | Confirms pacing, neutrality, MP3 generation, and Polish narration quality | Listen to each MP3 and record notes | Open |
 | Medium | Tune public source list | Repeated good sources should become explicit topic guidance | Prefer official institutions plus Onet/PAP, Guardian, Euronews and public AP/Reuters mirrors; consider topic.md refinement after weekend sample | Open |
-| High | Verify post-Ankara outcomes | The 7 July run is a summit-start snapshot, not a final NATO decision package | On 8-9 July compare final NATO declaration, Polish bilateral readouts and Ukraine-support language with today's preview | Open |
-| High | Track Patriot/interceptor decisions for Ukraine | Russian ballistic strikes made air-defence supply the operational center of the summit story | Check AP, NATO, White House, KPRM/MON and Ukrainian official channels for concrete interceptor, licensing or production decisions | Open |
-| Medium | Monitor Ormuz attribution carefully | AP confirms a tanker strike but does not record an official Iranian claim; Polish summaries cite Axios/PAP on two ships | Separate confirmed maritime incident facts from responsibility claims and retaliation forecasts | Open |
+| High | Verify post-Ankara outcomes | The summit already produced a concrete procurement package and a Trump-Erdogan F-35 signal, but not the final NATO decision package | On 8-9 July compare final NATO declaration, Polish bilateral readouts, today's procurement announcements and Ukraine-support language with the preview | Open |
+| High | Track Patriot/interceptor decisions for Ukraine | Russian ballistic strikes still make air-defence supply the operational center of the summit story, even after the counter-drone package | Check AP, NATO, White House, KPRM/MON and Ukrainian official channels for concrete interceptor, licensing or production decisions | Open |
+| Medium | Monitor Ormuz attribution carefully | UKMTO now confirms the tanker strike, but it still does not record an official Iranian claim | Separate confirmed maritime incident facts from responsibility claims and retaliation forecasts | Open |
 | Medium | Align automation flags with scripts | Heartbeat requires `--require-app-articles` and `--force-manifest`, but current local scripts do not expose those options | Prepare a scoped proposal before any script or automation change; continue validating JSON/PDF with existing commands meanwhile | Open |
 
 ## Review Notes
@@ -80,6 +80,10 @@
   for the cabinet agenda and PAP via Radio Maryja for weather alerts. Podcast
   should label the NATO material as a summit-start snapshot until the Wednesday
   declaration is published.
+- 2026-07-07 evening: NATO forum switched the story from preview to concrete
+  procurement and the Trump-Erdogan F-35 signal made Ankara more transactional.
+  Follow-up should focus on Polish industrial spillover, the final declaration
+  and whether any new air-defense decision addresses the Patriot gap.
 
 ## Done
 

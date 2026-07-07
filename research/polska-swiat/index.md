@@ -64,6 +64,12 @@ ukraiński apel o przechwytujące pociski Patriot po ciężkim rosyjskim ataku.
 Drugim blokiem bezpieczeństwa jest rosyjsko-białoruska presja informacyjna
 wokół "Tarczy Wschód" i ćwiczeń "Dzielny Dzik 26". Trzecim blokiem światowym
 jest odnowione ryzyko w Cieśninie Ormuz po trafieniu tankowca.
+Po wieczornym update 7 lipca szczyt przeszedł z tonu do konkretów: NATO
+ogłosiło pakiet ponad 40 mld USD na zdolności przeciwdronowe, nowy AWACS,
+Tritony, strategic airlift, projekt surowców krytycznych i apel do prywatnego
+kapitału, a Trump przy bilateralnym spotkaniu z Erdoğanem otworzył drogę do
+zniesienia sankcji blokujących F-35 dla Turcji. To wzmacnia tezę, że Ankara
+jest dziś testem przemysłowym i transakcyjnym, a nie tylko politycznym.
 
 ## Stable Facts
 
@@ -101,6 +107,8 @@ jest odnowione ryzyko w Cieśninie Ormuz po trafieniu tankowca.
   segment tylko wtedy, gdy RCB/IMGW wskazują szeroki zasięg lub ryzyko szkód.
 - Wątki polityczne z Wielkiej Brytanii śledzić pod kątem wpływu na wsparcie dla
   Ukrainy, NATO i europejską politykę bezpieczeństwa.
+- Konkrety forum obronnego w Ankarze śledzić pod kątem udziału polskich firm,
+  nowych marketplace'ów NATO i ewentualnego śladu po stronie MON/KPRM.
 - Przy publikacji automatyzacji researchowej używać izolowanego skryptu
   publikacyjnego, który commit/push ogranicza do aktywnego tematu i manifestu.
 - Relacje redakcyjne o E5 i rozmowach liderów w Berlinie traktować jako ważny
@@ -128,6 +136,7 @@ jest odnowione ryzyko w Cieśninie Ormuz po trafieniu tankowca.
 
 ## Recent Reports
 
+- [2026-07-07-1933](runs/2026-07-07-1933.md)
 - [2026-07-07](runs/2026-07-07.md)
 - [2026-07-06](runs/2026-07-06.md)
 - [2026-07-05](runs/2026-07-05.md)
