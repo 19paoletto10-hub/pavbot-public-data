@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-02",
+  "runTime": "18:01",
+  "status": "Material update",
+  "headline": "18:01: Warszawa dostaje weto i rachunek za zdrowie, a świat podnosi koszty wojny, katastrof i kontroli",
+  "summary": "Wieczorny slot wyraźnie różni się od 06:02 i 12:02: krajowy feed przechodzi na weto prezydenta, finansowanie podwyżek w ochronie zdrowia i rozmowę Sikorski-Sybiha, a świat dokłada cięższe aktualizacje z Kijowa, Wenezueli, Watykanu, Pekinu, cyberbezpieczeństwa i granic UE.",
+  "items": [
+    {
+      "id": "pulse-2026-07-02-1801-01-weta-nawrocki",
+      "section": "Polityka",
+      "title": "Nawrocki zawetował dwie ustawy, a spór najmocniej ogniskuje się wokół praw ucznia",
+      "lead": "Wieczorny feed otwiera prezydenckie weto z mocnym sporem o model szkoły i zakres biurokracji.",
+      "whatHappened": "Karol Nawrocki poinformował, że zawetował dwie ustawy. TVN24 pokazuje, że jedną z głównych osi sporu są przepisy o prawach i obowiązkach ucznia oraz Rzeczniku Praw Uczniowskich, które prezydent określił jako drogę do „szkolnej prokuratury”, a oficjalna strona prezydenta potwierdza szerszy pakiet decyzji: pięć podpisanych ustaw, dwa weta i jedno skierowanie do Trybunału Konstytucyjnego.",
+      "keyFacts": [
+        "Oficjalny komunikat prezydenta mówi o pakiecie 5 podpisanych ustaw, 2 wet i 1 skierowania do TK.",
+        "TVN24 wskazuje, że jednym z wetowanych projektów jest ustawa o prawach i obowiązkach ucznia oraz Rzeczniku Praw Uczniowskich.",
+        "Prezydent uzasadnia ruch obawą przed wzrostem biurokracji i formalnych sporów w szkołach."
+      ],
+      "reactions": [
+        "Barbara Nowacka skrytykowała decyzję jako uderzenie w postulaty młodych i organizacji edukacyjnych.",
+        "Politycznie to jeden z najmocniejszych wieczornych sygnałów, bo otwiera nowy front sporu między Pałacem Prezydenckim a rządem."
+      ],
+      "whyItMatters": "To decyzja o natychmiastowym ciężarze politycznym i symbolicznym, bo dotyczy szkoły, praw ucznia i realnej zdolności obozu rządzącego do przeprowadzania zmian ustawowych.",
+      "context": "W slocie 12:02 dominowały bezpieczeństwo i instytucje państwa; o 18:01 pierwszą kartą jest weto prezydenta i edukacyjny spór ustrojowy.",
+      "watchNext": [
+        "Czy kancelaria prezydenta doprecyzuje pełną listę wetowanych ustaw i ich uzasadnienia.",
+        "Czy rząd i większość sejmowa zapowiedzą próbę odrzucenia wet."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Prezydent Karol Nawrocki zawetował dwie ustawy",
+          "url": "https://tvn24.pl/polska/prezydent-karol-nawrocki-zawetowal-dwie-ustawy-mowi-o-szkolnej-prokuraturze-st9125334?source=rss"
+        },
+        {
+          "title": "Prezydent RP: podpisał 5 ustaw; 2 zawetował i jedną skierował do TK",
+          "url": "https://www.prezydent.pl/prawo/ustawy-podpisane/prezydent-podpisal-5-ustaw-2-zawetowal-i-jedna-skierowal-do-tk-w-trybie-kontroli-prewencyjnej%2C122829"
+        }
+      ],
+      "tags": [
+        "Nawrocki",
+        "Weto",
+        "Edukacja",
+        "Pałac Prezydencki"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-1801-02-podwyzki-zdrowie",
+      "section": "Gospodarka",
+      "title": "Podwyżki w ochronie zdrowia ruszą tylko dla etatów, a NFZ dostaje kolejny rachunek",
+      "lead": "Resort zdrowia wybiera węższy wariant podwyżek, ale nie usuwa presji finansowej z systemu.",
+      "whatHappened": "TVN24 podało, że po dodatkowej ekspertyzie wybrano wariant rekomendacji AOTMiT obejmujący ustawowe podwyżki tylko dla osób na umowach o pracę. Jednocześnie wcześniejszy komunikat Ministerstwa Zdrowia wskazywał, że brak kompromisu wokół ustawy podwyżkowej oznacza dla NFZ koszt rzędu około 7 miliardów złotych rocznie od lipca 2026 roku.",
+      "keyFacts": [
+        "Wybrany wariant nie obejmuje osób pracujących na kontraktach i umowach cywilnoprawnych.",
+        "MZ sygnalizowało wcześniej, że obecny wariant może kosztować NFZ około 7 mld zł rocznie.",
+        "Nie ma publicznej informacji o dodatkowym źródle pieniędzy dla NFZ na ten cel."
+      ],
+      "reactions": [
+        "Przedstawiciele części szpitali i pracodawców ostrzegają, że różnicowanie zasad podwyżek może przerzucić koszty na placówki.",
+        "To nie jest miękka karta sektorowa, tylko praktyczny test wydolności publicznych finansów zdrowia."
+      ],
+      "whyItMatters": "Decyzja dotyczy jednocześnie rynku pracy, budżetu państwa i jakości ochrony zdrowia, więc może szybko przełożyć się na napięcia płacowe i organizacyjne.",
+      "context": "W południe dominowały cła, PIP i bezpieczeństwo; wieczorem do topu wchodzi kosztowna decyzja systemowa w ochronie zdrowia.",
+      "watchNext": [
+        "Czy MZ lub NFZ pokażą konkretny mechanizm sfinansowania podwyżek.",
+        "Czy pojawią się zapowiedzi korekty zasad dla kontraktowców."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Podwyżki w ochronie zdrowia 2026",
+          "url": "https://tvn24.pl/zdrowie/podwyzki-w-ochronie-zdrowia-2026-ile-beda-kosztowaly-skad-nfz-wezmie-pieniadze-st9125353?source=rss"
+        },
+        {
+          "title": "Ministerstwo Zdrowia: Brak porozumienia w sprawie tzw. ustawy podwyżkowej",
+          "url": "https://www.gov.pl/web/zdrowie/brak-porozumienia-w-rozmowach-zespolu-trojstronnego-w-sprawie-tzw-ustawy-podwyzkowej-bedziemy-ponosic-tego-koszt"
+        }
+      ],
+      "tags": [
+        "Zdrowie",
+        "NFZ",
+        "Podwyżki",
+        "AOTMiT"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-1801-03-sikorski-sybiha",
+      "section": "Polityka",
+      "title": "Sikorski spotka się z Sybihą, a rozmowa ma objąć front i napięcia historyczne",
+      "lead": "Do feedu wchodzi delikatny test polsko-ukraińskiej dyplomacji pod rosnącą presją wojny.",
+      "whatHappened": "Według TVN24 wśród tematów rozmowy Radosława Sikorskiego i Andrija Sybihy mają być relacje między Polską a Ukrainą oraz sytuacja na froncie. W tle jest świeży spór o ukraiński Panteon Narodowy i medialne doniesienia, że Kijów może przywieźć do Warszawy propozycję kompromisu wokół pamięci historycznej.",
+      "keyFacts": [
+        "Potwierdzona jest planowana rozmowa ministrów spraw zagranicznych Polski i Ukrainy.",
+        "Oficjalnie wskazany zakres obejmuje relacje dwustronne i sytuację na froncie.",
+        "Doniesienia o historycznym kompromisie pozostają na etapie relacji medialnych, a nie pełnego komunikatu rządowego."
+      ],
+      "reactions": [
+        "Sama zapowiedź spotkania jest sygnałem, że obie strony chcą trzymać kanał polityczny otwarty mimo sporów.",
+        "Wieczorny feed dostaje dzięki temu bardziej dyplomatyczny, ale nadal twardy wymiar bezpieczeństwa."
+      ],
+      "whyItMatters": "Każde przesunięcie w relacjach Warszawa-Kijów ma znaczenie dla pomocy wojskowej, spójności regionu i napięć wokół polityki pamięci.",
+      "context": "Południowy slot skupiał się na bezpieczeństwie wewnętrznym; wieczorem część tej energii przechodzi na bezpieczeństwo zewnętrzne i dyplomację z Ukrainą.",
+      "watchNext": [
+        "Czy po spotkaniu pojawi się wspólny komunikat z konkretnymi ustaleniami.",
+        "Czy temat Panteonu Narodowego i postaci historycznych rzeczywiście wyjdzie na poziom oficjalny."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Radosław Sikorski spotka się z ukraińskim ministrem spraw zagranicznych",
+          "url": "https://tvn24.pl/polska/radoslaw-sikorski-spotka-sie-z-ukrainskim-ministrem-spraw-zagranicznych-st9125312?source=rss"
+        }
+      ],
+      "tags": [
+        "Sikorski",
+        "Sybiha",
+        "Ukraina",
+        "Dyplomacja"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-02-1801-04-upaly-wegry",
+      "section": "Alerty",
+      "title": "Rekordowe upały dociskają Europę Środkową, a na Węgrzech zmarło dwóch listonoszy",
+      "lead": "Karta pogodowa wraca, ale już jako problem zdrowia publicznego i obciążenia infrastruktury pracy.",
+      "whatHappened": "TVN Meteo podało, że fala upałów przyniosła na Węgrzech nowy rekord temperatury 42 stopni Celsjusza. Operator pocztowy Magyar Posta potwierdził, że w ostatnich dniach zmarło dwóch jego pracowników, a równolegle kraj mierzy się z rekordowym letnim zapotrzebowaniem na energię.",
+      "keyFacts": [
+        "We wtorek w miejscowości Szecseny temperatura sięgnęła 42 stopni Celsjusza.",
+        "Magyar Posta potwierdziła śmierć dwóch listonoszy w ostatnich dniach.",
+        "Węgry odnotowały rekordowe letnie obciążenie systemu energetycznego."
+      ],
+      "reactions": [
+        "Związki zawodowe i pracodawcy wdrażają dodatkowe środki ochronne, ale temat pokazuje, że ryzyko przestało być wyłącznie meteorologiczne.",
+        "To jedna z tych kart, które mogą szybko awansować, jeśli dojdą kolejne zgony albo awarie energetyczne."
+      ],
+      "whyItMatters": "Skrajne temperatury coraz szybciej przekładają się na zgony w pracy, problemy energetyczne i pytania o odporność państw na fale gorąca.",
+      "context": "W południe feed miał francuską kartę o upałach; wieczorem akcent przesuwa się na Europę Środkową i bezpośredni koszt zdrowotny na Węgrzech.",
+      "watchNext": [
+        "Czy pojawi się formalne potwierdzenie związku przyczynowego między zgonami a upałem.",
+        "Czy rekordy temperatur i popytu na energię będą rosły także w kolejnych dniach."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo: Dwóch listonoszy zmarło w pracy. Prawdopodobnie przez upały",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/wegry-dwoch-listonoszy-zmarlo-w-pracy-prawdopodobnie-przez-upaly-st9125320?source=rss"
+        }
+      ],
+      "tags": [
+        "Upał",
+        "Węgry",
+        "Energia",
+        "Zdrowie publiczne"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-02-1801-05-kyiv-20-ofiar",
+      "section": "Świat",
+      "title": "Kijów podnosi bilans do co najmniej 20 ofiar po największym ataku od miesięcy",
+      "lead": "Najmocniejsza karta świata jeszcze raz podbija poranny temat wojny do cięższego poziomu.",
+      "whatHappened": "BBC podało, że po nocnym rosyjskim ataku dronowo-rakietowym na Kijów zginęło co najmniej 20 osób, a około 90 zostało rannych. Mer Witalij Kliczko mówi o najbardziej masowym ataku na stolicę Ukrainy, a miasto ogłosiło dzień żałoby.",
+      "keyFacts": [
+        "Bilans ofiar wzrósł do co najmniej 20 zabitych.",
+        "Około 90 osób zostało rannych, w tym dzieci.",
+        "Władze Kijowa mówią o najszerszym i najbardziej masowym ataku na miasto od miesięcy."
+      ],
+      "reactions": [
+        "Rosja twierdzi, że uderzała w cele wojskowe, a Ukraina oskarża ją o celowanie w obszary cywilne.",
+        "To pozostaje absolutny top zagranicznego feedu, bo temat łączy ofiary cywilne, skalę ataku i regionalne ryzyko bezpieczeństwa."
+      ],
+      "whyItMatters": "Rosnący bilans ofiar i skala użytych środków walki wzmacniają presję na sojuszników Ukrainy i podnoszą temperaturę całego regionu.",
+      "context": "O 06:02 i 12:02 temat już był ważny, ale wieczorem wraca z wyższym bilansem i mocniejszym opisem skali ataku.",
+      "watchNext": [
+        "Czy liczba ofiar wzrośnie po zakończeniu prac ratunkowych.",
+        "Czy pojawi się nowa odpowiedź polityczna lub wojskowa Ukrainy i jej partnerów."
+      ],
+      "sources": [
+        {
+          "title": "BBC: 'Most massive' Russian attack on Kyiv kills at least 20",
+          "url": "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Kijów",
+        "Rosja",
+        "Ukraina",
+        "Atak rakietowy"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-1801-06-wenezuela-ocalaly",
+      "section": "Świat",
+      "title": "Po ośmiu dniach spod gruzów w Wenezueli wyciągnięto żywego mężczyznę",
+      "lead": "Katastrofa nadal zabija, ale pojawia się pierwszy naprawdę duży sygnał ratunkowego przełomu.",
+      "whatHappened": "BBC i CNN podały, że ratownicy wydobyli żywego Hernána Gila po ośmiu dniach pod gruzami po trzęsieniach ziemi w Wenezueli. Operacja była bardzo złożona, trwała ponad 100 godzin od momentu zlokalizowania mężczyzny, a równolegle potwierdzony bilans ofiar sięga już blisko 2300 osób.",
+      "keyFacts": [
+        "Hernán Gil został wydobyty żywy po ośmiu dniach pod gruzami.",
+        "Samo dotarcie do poszkodowanego zajęło ratownikom ponad 100 godzin.",
+        "Potwierdzony bilans ofiar trzęsień sięga około 2300 zabitych, a wielu ludzi nadal uznaje się za zaginionych."
+      ],
+      "reactions": [
+        "Ratownicy opisują akcję jako wyjątkowo trudną technicznie i symboliczną dla morale całej operacji.",
+        "Temat pozostaje wysoki w feedzie, bo łączy skalę katastrofy z rzadkim, pozytywnym sygnałem ratunkowym."
+      ],
+      "whyItMatters": "To jedna z największych historii katastroficznych dnia: z jednej strony ogromny bilans ofiar, z drugiej dowód, że akcje ratunkowe nadal mają sens mimo upływu czasu.",
+      "context": "W południe dominował obraz przepełnionych kostnic i niepewnego bilansu; wieczorem do tej samej katastrofy dochodzi przełomowe uratowanie człowieka.",
+      "watchNext": [
+        "Czy pojawią się kolejne uratowane osoby albo nowe oficjalne bilanse zaginionych.",
+        "Czy władze pokażą szerszy plan pomocy dla La Guairy i innych zniszczonych rejonów."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Venezuela quake survivor pulled out alive after eight days",
+          "url": "https://www.bbc.co.uk/news/articles/ce375v12z0qo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Man pulled from rubble in ‘miraculous’ rescue 8 days after devastating Venezuela earthquakes",
+          "url": "https://edition.cnn.com/2026/07/02/americas/venezuela-earthquake-survivor-rescued-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Wenezuela",
+        "Trzęsienie ziemi",
+        "Ratownictwo",
+        "Katastrofa"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-1801-07-vatican-sspx",
+      "section": "Świat",
+      "title": "Watykan rozszerza ekskomunikę na setki tysięcy wiernych SSPX po nieautoryzowanych święceniach",
+      "lead": "Kościelny spór przechodzi z niszowego konfliktu do pełnoskalowego rozłamu o globalnym zasięgu.",
+      "whatHappened": "BBC podało, że po konsekracji czterech nowych biskupów SSPX w Genewie, przeprowadzonej wbrew bezpośredniej instrukcji papieża Leona XIV, Watykan ekskomunikował wszystkich sześciu biskupów ruchu. W nietypowym kroku uznano też świeckich członków grupy za schizmatyków i objęto ich ekskomuniką.",
+      "keyFacts": [
+        "SSPX przeprowadziło święcenia biskupie mimo zakazu papieża Leona XIV.",
+        "Ekskomunikowani zostali wszyscy biskupi SSPX.",
+        "BBC opisuje skalę ruchu na około 600 tysięcy wiernych na świecie."
+      ],
+      "reactions": [
+        "Watykan deklaruje, że osoby opuszczające ruch będą mogły wrócić do Kościoła.",
+        "To dużo cięższa wersja południowej karty, bo dotyczy już nie tylko hierarchów, ale całej wspólnoty wiernych."
+      ],
+      "whyItMatters": "Decyzja uderza w spójność Kościoła katolickiego i może wywołać długotrwałe skutki duszpasterskie oraz polityczno-religijne w wielu krajach.",
+      "context": "O 12:02 feed pokazywał ekskomunikę po święceniach bez zgody papieża; o 18:01 temat wraca jako pełnoskalowy, liczbowo większy rozłam.",
+      "watchNext": [
+        "Czy Watykan opublikuje dalsze wyjaśnienia prawne i duszpasterskie.",
+        "Czy SSPX odpowie instytucjonalnie i spróbuje podważać zakres sankcji."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Vatican excommunicates hundreds of thousands of SSPX followers",
+          "url": "https://www.bbc.co.uk/news/articles/c5yz95188jjo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Watykan",
+        "SSPX",
+        "Ekskomunika",
+        "Kościół katolicki"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-1801-08-pekin-motyw",
+      "section": "Świat",
+      "title": "Pekin wskazuje na osobiste motywy pilota po zderzeniu samolotu z najwyższym wieżowcem miasta",
+      "lead": "Wieczorne doprecyzowanie zamienia miejską sensację w oficjalnie opisaną sprawę bezpieczeństwa publicznego.",
+      "whatHappened": "BBC i CNN podały, że władze w Pekinie wskazały na „powody osobiste” jako przyczynę lotu, w którym mały samolot uderzył w CITIC Tower. Oficjalne komunikaty mówią o 66-letnim pilocie Liu, jego problemach ze snem i lękiem, zapiskach o odebraniu sobie życia oraz 13 rannych osobach na ziemi.",
+      "keyFacts": [
+        "Pilot miał 66 lat i według władz wcześniej wyrażał myśli samobójcze.",
+        "W zderzeniu zginął pilot, a 13 osób zostało rannych.",
+        "Władze uznały zdarzenie za zagrożenie bezpieczeństwa publicznego wywołane przyczynami osobistymi."
+      ],
+      "reactions": [
+        "W Chinach temat był mocno cenzurowany, co dodatkowo napędzało spekulacje o prawdziwym motywie i skali luki bezpieczeństwa.",
+        "To już nie tylko szokujący incydent, ale oficjalnie opisana awaria systemu kontroli lotu i bezpieczeństwa stolicy."
+      ],
+      "whyItMatters": "Zdarzenie pokazało, że nawet w jednym z najsilniej kontrolowanych miast świata mogą wystąpić krytyczne luki w ochronie przestrzeni powietrznej i obiektów strategicznych.",
+      "context": "W południe feed opierał się głównie na hipotezie samobójczych motywów; wieczorem dochodzi formalne potwierdzenie władz i więcej danych o pilocie.",
+      "watchNext": [
+        "Czy władze Chin ogłoszą dodatkowe środki bezpieczeństwa dla lotnictwa ogólnego.",
+        "Czy pojawią się nowe informacje o tym, jak samolot ominął część kontroli."
+      ],
+      "sources": [
+        {
+          "title": "BBC: China says pilot crashed small plane into skyscraper for 'personal reasons'",
+          "url": "https://www.bbc.co.uk/news/articles/cr47129ky6do?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Authorities say man who flew plane into Beijing skyscraper previously expressed suicidal thoughts",
+          "url": "https://edition.cnn.com/2026/07/02/china/china-beijing-skyscraper-plane-crash-pilot-hnk-intl"
+        }
+      ],
+      "tags": [
+        "Pekin",
+        "Lotnictwo",
+        "CITIC Tower",
+        "Bezpieczeństwo publiczne"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-02-1801-09-scattered-spider",
+      "section": "Technologia",
+      "title": "Domniemany członek Scattered Spider trafia z Finlandii do USA",
+      "lead": "Cyberkarta dostaje twardy ruch śledczy zamiast samej reputacji grupy.",
+      "whatHappened": "BBC i amerykański Departament Sprawiedliwości podały, że 19-letni Peter Stokes został zatrzymany w Finlandii na podstawie czerwonej noty Interpolu i wyekstradowany do USA. Zarzuty obejmują włamania komputerowe, spisek i oszustwo, a śledczy łączą Scattered Spider z ponad setką naruszeń sieci i ponad 100 milionami dolarów okupów.",
+      "keyFacts": [
+        "Peter Stokes został aresztowany w Finlandii w kwietniu i wydany USA.",
+        "DOJ zarzuca mu udział w grupie powiązanej z ponad 100 naruszeniami sieci.",
+        "Śledczy mówią o ponad 100 mln dolarów okupów oraz dodatkowych milionach strat ofiar."
+      ],
+      "reactions": [
+        "DOJ przedstawia sprawę jako efekt wieloletniej pracy i międzynarodowej współpracy śledczej.",
+        "To jedna z najmocniejszych dzisiejszych kart cyber, bo pokazuje przejście od analizy zagrożenia do realnych zatrzymań."
+      ],
+      "whyItMatters": "Scattered Spider od dawna jest symbolem agresywnego cyberwymuszenia; zatrzymanie domniemanego członka grupy może przynieść nowe informacje o metodach ataków i sieci współpracowników.",
+      "context": "W południe technologia skupiała się na narzędziach cyberobrony; wieczorem akcent przesuwa się na śledztwo i egzekwowanie prawa wobec cyberprzestępców.",
+      "watchNext": [
+        "Czy pojawią się kolejne zatrzymania lub akty oskarżenia wobec innych członków grupy.",
+        "Czy sprawa ujawni nowe szczegóły o najgłośniejszych atakach przypisywanych Scattered Spider."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Alleged Scattered Spider hacker arrested in Finland",
+          "url": "https://www.bbc.co.uk/news/articles/cwy0we4yw1lo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "DOJ: Alleged member of Scattered Spider arrested in Finland and extradited to the United States",
+          "url": "https://www.justice.gov/opa/pr/alleged-member-criminal-cyber-hacking-group-scattered-spider-arrested-finland-and-extradited"
+        }
+      ],
+      "tags": [
+        "Scattered Spider",
+        "Cybercrime",
+        "DOJ",
+        "Finlandia"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-02-1801-10-ees-kolejki",
+      "section": "Gospodarka",
+      "title": "Ryanair i Berlin ostrzegają przed wakacyjnym chaosem po starcie unijnego systemu EES",
+      "lead": "Nowe kontrole graniczne obiecują bezpieczeństwo, ale już generują kolejki liczone w godzinach.",
+      "whatHappened": "BBC podało, że Ryanair i szefowa lotniska w Berlinie ostrzegają przed silnymi zakłóceniami po uruchomieniu unijnego Entry-Exit System. Nowy system wymaga od podróżnych spoza UE rejestracji biometrii przy wjeździe, a Berlin mówi o kolejkach sięgających od godziny do dwóch godzin na części terminali.",
+      "keyFacts": [
+        "EES wymaga rejestracji danych biometrycznych podróżnych spoza UE przy wjeździe do większości krajów europejskich.",
+        "Lotnisko w Berlinie mówi o kolejkach od około jednej do dwóch godzin.",
+        "Ryanair chce odłożenia wdrożenia do końca letniego szczytu podróży."
+      ],
+      "reactions": [
+        "Linie lotnicze ostrzegają przed stresem, opóźnieniami i ryzykiem utraty lotów przez pasażerów.",
+        "Komisja Europejska deklaruje gotowość do dalszego wsparcia, ale nie usuwa to krótkoterminowego ryzyka wakacyjnego chaosu."
+      ],
+      "whyItMatters": "To karta praktyczna dla dużej liczby podróżnych i jednocześnie test tego, czy UE potrafi wdrażać nowe narzędzia bezpieczeństwa bez paraliżowania ruchu lotniczego.",
+      "context": "W slocie 06:02 była karta o USMCA, a wieczorem zagraniczna gospodarka przechodzi na codzienny, odczuwalny problem podróży przez granice UE.",
+      "watchNext": [
+        "Czy Komisja Europejska dopuści opóźnienie lub miękkie wdrożenie systemu.",
+        "Czy kolejne lotniska potwierdzą podobnie długie kolejki."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Ryanair warns of 'nightmare' if new EU border checks not delayed",
+          "url": "https://www.bbc.co.uk/news/articles/c8x2y74wp9eo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "EES",
+        "Ryanair",
+        "Lotniska",
+        "Granice UE"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-02-1801-11-ghana-rpa",
+      "section": "Świat",
+      "title": "Ghana i RPA wchodzą w spór dyplomatyczny po doniesieniach o zabójstwie migranta",
+      "lead": "Temat migracyjny przechodzi z lokalnej przemocy do otwartego sporu między państwami.",
+      "whatHappened": "BBC podało, że ministerstwo spraw zagranicznych Ghany wysłało formalny protest po doniesieniach o zastrzeleniu obywatela Ghany w Kapsztadzie. Władze RPA odpowiadają, że nie mają zapisu takiej zbrodni w wskazanej lokalizacji i wskazują na inną sprawę zabójstwa Ghańczyka w Nyandze, powiązaną z wymuszeniami.",
+      "keyFacts": [
+        "Ghana twierdzi, że w Kapsztadzie zginął jej 40-letni obywatel Bashiru Isak.",
+        "RPA zaprzecza, by miała potwierdzenie takiego zabójstwa w wskazanym miejscu.",
+        "Policja RPA równolegle bada zabójstwo innego Ghańczyka, Kwabeny Boagena, w Nyandze."
+      ],
+      "reactions": [
+        "Spór nakłada się na rosnące w RPA nastroje antyimigranckie i napięcia wokół przemocy wobec migrantów.",
+        "To nie jest już lokalna kronika kryminalna, tylko konflikt dyplomatyczny z potencjalnym skutkiem regionalnym."
+      ],
+      "whyItMatters": "Jeśli różnice w relacjach obu rządów się utrzymają, temat może przejść z poziomu lokalnego incydentu do szerszego sporu o bezpieczeństwo migrantów i wiarygodność służb.",
+      "context": "Wieczorny świat potrzebuje także kart polityczno-społecznych poza Europą i wojną; ten temat to właśnie taki przypadek.",
+      "watchNext": [
+        "Czy Ghana otrzyma od RPA szczegółowe dane z dochodzenia albo je zakwestionuje.",
+        "Czy napięcia antyimigranckie w RPA przyniosą kolejne incydenty z udziałem cudzoziemców."
+      ],
+      "sources": [
+        {
+          "title": "BBC: South Africa and Ghana in row over alleged killing of Ghanaian migrant in Cape Town",
+          "url": "https://www.bbc.co.uk/news/articles/c982k1j3d70o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Ghana",
+        "RPA",
+        "Migranci",
+        "Dyplomacja"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-02-1801-12-csis-2mln",
+      "section": "Świat",
+      "title": "CSIS szacuje, że wojna Rosji z Ukrainą przekroczyła już dwa miliony łącznych ofiar",
+      "lead": "Analityczna karta świata dokłada twardy obraz skali wyniszczenia, nawet bez pełnych danych rządowych.",
+      "whatHappened": "CNN, powołując się na nowy raport CSIS, podało, że łączne straty osobowe wojny Rosji z Ukrainą przekroczyły już 2 miliony. Sam CSIS szacuje rosyjskie straty na około 1,4 miliona rannych, zabitych i zaginionych żołnierzy, a ukraińskie na 525 do 625 tysięcy.",
+      "keyFacts": [
+        "CSIS ocenia rosyjskie straty na około 1,4 mln, w tym 400 do 450 tys. zabitych.",
+        "Ukraińskie straty mają wynosić około 525 do 625 tys., w tym 125 do 150 tys. zabitych.",
+        "Łączne straty obu stron mają już przekraczać 2 mln ludzi."
+      ],
+      "reactions": [
+        "Autorzy raportu podkreślają, że wojna staje się dla Rosji coraz bardziej kosztowna także w relacji strat do niewielkich zysków terytorialnych.",
+        "To ważna karta analityczna, choć nie opiera się na oficjalnych dziennych danych publikowanych przez Moskwę czy Kijów."
+      ],
+      "whyItMatters": "Szacunek na poziomie ponad 2 milionów ofiar zmienia skalę postrzegania wojny i wzmacnia argument, że konflikt stał się długotrwałą wojną wyniszczenia o historycznie wysokim koszcie.",
+      "context": "Poza dziennym bilansem ataku na Kijów wieczorny feed dostaje tu szerszy, strategiczny obraz kosztu wojny.",
+      "watchNext": [
+        "Czy zachodnie wywiady i ośrodki analityczne potwierdzą lub skorygują te szacunki.",
+        "Czy tak wysoki koszt wojny przełoży się na nową debatę o rekrutacji i presji politycznej w Rosji."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Bloodier than Stalingrad: Number of casualties in Russia’s war on Ukraine reaches 2 million",
+          "url": "https://edition.cnn.com/2026/07/02/world/russia-war-casualities-ukraine-2-million-intl"
+        },
+        {
+          "title": "CSIS: Russian Blood and Treasure: The Ballooning Costs of Putin's War",
+          "url": "https://www.csis.org/analysis/russian-blood-and-treasure-ballooning-costs-putins-war"
+        }
+      ],
+      "tags": [
+        "CSIS",
+        "Rosja",
+        "Ukraina",
+        "Wojna"
+      ],
+      "priority": "High"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "Prezydent RP: podpisał 5 ustaw; 2 zawetował i jedną skierował do TK",
+      "url": "https://www.prezydent.pl/prawo/ustawy-podpisane/prezydent-podpisal-5-ustaw-2-zawetowal-i-jedna-skierowal-do-tk-w-trybie-kontroli-prewencyjnej%2C122829"
+    },
+    {
+      "title": "Ministerstwo Zdrowia: Brak porozumienia w sprawie tzw. ustawy podwyżkowej",
+      "url": "https://www.gov.pl/web/zdrowie/brak-porozumienia-w-rozmowach-zespolu-trojstronnego-w-sprawie-tzw-ustawy-podwyzkowej-bedziemy-ponosic-tego-koszt"
+    },
+    {
+      "title": "DOJ: Alleged member of Scattered Spider arrested in Finland and extradited to the United States",
+      "url": "https://www.justice.gov/opa/pr/alleged-member-criminal-cyber-hacking-group-scattered-spider-arrested-finland-and-extradited"
+    },
+    {
+      "title": "CSIS: Russian Blood and Treasure: The Ballooning Costs of Putin's War",
+      "url": "https://www.csis.org/analysis/russian-blood-and-treasure-ballooning-costs-putins-war"
+    }
+  ]
+}

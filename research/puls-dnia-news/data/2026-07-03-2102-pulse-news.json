@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-03",
+  "runTime": "21:02",
+  "status": "Material update",
+  "headline": "21:02: Polska przechodzi w cyber, presję Rosji i kryzys zdrowotny, a świat dokłada Kijów, upały i Iran",
+  "summary": "Feed jest materialnie nowy względem wczorajszego 21:01: kraj otwierają wyciek danych Hotres, ostrzeżenie Tuska przed rosyjską presją i kontrola w Szpitalu Południowym, a część międzynarodowa przesuwa się na 30 ofiar w Kijowie, 2 025 nadmiarowych zgonów po fali upałów we Francji, śledztwo po zamachu w Monako, irański pokaz siły, katastrofę w Pakistanie, ebolę w DRK i misję NASA.",
+  "items": [
+    {
+      "id": "pulse-2026-07-03-2102-01-hotres-wyciek",
+      "section": "Gospodarka",
+      "title": "Wyciek z Hotres uderza w rezerwacje wakacyjne polskich hoteli",
+      "lead": "Dane gości już trafiają do kampanii podszywania się pod obiekty noclegowe.",
+      "whatHappened": "TVN24 podało, że system Hotres obsługujący rezerwacje w polskich obiektach noclegowych potwierdził wyciek danych. Niebezpiecznik opisuje, że atak wykorzystał SQL injection, a przestępcy już wysyłają do gości wiarygodnie wyglądające wiadomości z próbą wyłudzenia płatności.",
+      "keyFacts": [
+        "Wyciec miały dane rezerwacji wakacyjnych z polskich hoteli i innych obiektów noclegowych.",
+        "Niebezpiecznik wskazuje na SQL injection jako źródło naruszenia.",
+        "Wśród ujawnionych danych mają być imię i nazwisko, e-mail, telefon, daty pobytu i kwota rezerwacji."
+      ],
+      "reactions": [
+        "To jedna z najmocniejszych krajowych kart użytkowych tego slotu, bo dotyczy szczytu sezonu urlopowego.",
+        "Temat szybko wychodzi poza samą branżę hotelową i staje się ostrzeżeniem konsumenckim dla tysięcy podróżnych."
+      ],
+      "whyItMatters": "To bezpośrednie ryzyko finansowe dla klientów i test przejrzystości reakcji operatora oraz samych hoteli wobec dużego incydentu danych osobowych.",
+      "context": "W opublikowanym slocie z 2 lipca część krajowa była bardziej instytucjonalna i usługowa. Dziś otwiera ją twardy wakacyjny incydent cyber i ryzyko oszustw.",
+      "watchNext": [
+        "Czy Hotres albo PUODO ujawnią skalę wycieku i liczbę dotkniętych rekordów.",
+        "Czy hotele zaczną masowo informować klientów o ryzyku podszywania się i fałszywych dopłat."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wyciek danych z hoteli",
+          "url": "https://tvn24.pl/biznes/tech/hotres-wyciek-danych-w-branzy-turystycznej-wlamywacze-uzyskali-dostep-st9127424?source=rss"
+        },
+        {
+          "title": "Niebezpiecznik: Wyciek danych gości wielu polskich hoteli",
+          "url": "https://niebezpiecznik.pl/post/wyciek-danych-gosci-wielu-polskich-hoteli/"
+        }
+      ],
+      "tags": [
+        "Hotres",
+        "Hotele",
+        "Wyciek danych",
+        "Phishing"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-2102-02-tusk-rosja",
+      "section": "Polityka",
+      "title": "Tusk i służby ostrzegają przed rosyjską presją na Polskę",
+      "lead": "Warszawa mówi o przygotowaniach na różne scenariusze zagrożenia.",
+      "whatHappened": "Donald Tusk powiedział, że Polska intensywnie przygotowuje się do różnych scenariuszy po doniesieniach o możliwej rosyjskiej prowokacji. BBC i TVN24 podbijają ostrzegawczy ton, a wypowiedź koordynatora służb specjalnych na gov.pl opisuje wyraźnie podniesiony poziom wojny informacyjnej i próbę rozgrywania napięć polsko-ukraińskich.",
+      "keyFacts": [
+        "Premier mówi o przygotowaniach państwa na różne warianty zagrożenia.",
+        "BBC pisze o krytycznych miesiącach przed Polską w obliczu rosyjskiego zagrożenia.",
+        "Gov.pl cytuje Tomasza Siemoniaka o nasilonej wojnie informacyjnej w polskiej infosferze."
+      ],
+      "reactions": [
+        "To karta, która przesuwa krajowy feed z bieżącej debaty w stronę bezpieczeństwa państwa i odporności hybrydowej.",
+        "Sam przekaz jest ostrzegawczy, ale już wystarczająco mocny, by ustawić ton dla całego wieczornego pakietu politycznego."
+      ],
+      "whyItMatters": "Rosyjska presja informacyjna i możliwe działania prowokacyjne mają bezpośredni wpływ na bezpieczeństwo wewnętrzne, relacje z Ukrainą i percepcję ryzyka przez opinię publiczną.",
+      "context": "W ostatnim opublikowanym feedzie mocniej wybrzmiewały decyzje instytucji i tematy usługowe. Dziś polityczny rdzeń wraca w formule ostrzegawczej i kontrwywiadowczej.",
+      "watchNext": [
+        "Czy rząd albo służby pokażą kolejne, bardziej konkretne środki reagowania.",
+        "Czy partnerzy sojuszniczy publicznie potwierdzą skalę zagrożenia lub podadzą nowe ostrzeżenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Tusk o możliwej rosyjskiej prowokacji",
+          "url": "https://tvn24.pl/polska/rosyjska-prowokacja-w-polsce-donald-tusk-komentuje-doniesienia-medialne-st9127094?source=rss"
+        },
+        {
+          "title": "BBC: Tusk warns critical months ahead for Poland in face of Russian threat",
+          "url": "https://www.bbc.co.uk/news/articles/cj0gp88q4l4o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Gov.pl: Koordynator służb specjalnych w programie Poranna rozmowa w RMF FM",
+          "url": "https://www.gov.pl/web/sluzby-specjalne/koordynator-sluzb-specjalnych-w-programie-poranna-rozmowa-w-rmf-fm"
+        }
+      ],
+      "tags": [
+        "Tusk",
+        "Rosja",
+        "Bezpieczeństwo państwa",
+        "Służby"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-2102-03-szpital-poludniowy-in-vitro",
+      "section": "Polska",
+      "title": "Resort zdrowia kontroluje Szpital Południowy po alarmie wokół in vitro",
+      "lead": "Kontrola rusza po informacji, że pacjentce wszczepiono nie jej zarodek.",
+      "whatHappened": "TVN24 podało, że Ministerstwo Zdrowia rozpoczęło kontrolę w Warszawskim Szpitalu Południowym po doniesieniach o pomyłce w procedurze in vitro. Według opisu sprawy jedna z pacjentek miała otrzymać zarodek, z którym nie była genetycznie spokrewniona.",
+      "keyFacts": [
+        "Ministerstwo Zdrowia weszło z kontrolą do placówki.",
+        "Sednem sprawy jest możliwa pomyłka przy procedurze in vitro.",
+        "Opisany przypadek dotyczy sytuacji o bardzo wysokiej wadze etycznej, prawnej i medycznej."
+      ],
+      "reactions": [
+        "To jeden z najcięższych krajowych tematów dnia, bo łączy bezpieczeństwo pacjenta z zaufaniem do procedur medycznych.",
+        "Sprawa ma potencjał szybko przejść z poziomu jednostkowego incydentu do debaty systemowej o nadzorze i standardach."
+      ],
+      "whyItMatters": "Jeśli zarzut się potwierdzi, będzie to uderzenie w zaufanie do procedur rozrodu wspomaganego i mocny test dla nadzoru państwa nad placówkami medycznymi.",
+      "context": "W opublikowanym 21:01 z 2 lipca zdrowie pojawiało się tylko pośrednio. Teraz dostaje własną, wyjątkowo ciężką kartę o bezpieczeństwie procedur.",
+      "watchNext": [
+        "Jakie będą wstępne ustalenia kontroli i czy pojawią się decyzje personalne.",
+        "Czy placówka albo resort pokażą, jakie procedury mają ograniczyć ryzyko podobnych błędów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Kontrola w Szpitalu Południowym po alarmie wokół in vitro",
+          "url": "https://tvn24.pl/polska/ministerstwo-zdrowia-rozpoczelo-kontrole-w-szpitalu-poludniowym-mialo-tam-dojsc-do-pomylki-przy-in-vitro-st9127413?source=rss"
+        }
+      ],
+      "tags": [
+        "Szpital Południowy",
+        "In vitro",
+        "Ministerstwo Zdrowia",
+        "Kontrola"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-2102-04-krakow-komisja",
+      "section": "Polska",
+      "title": "Archidiecezja krakowska powołuje komisję do spraw wykorzystania dorosłych",
+      "lead": "Nowa komisja ma badać krzywdy dorosłych w sytuacji zależności lub bezbronności.",
+      "whatHappened": "Archidiecezja krakowska ogłosiła powołanie komisji do badania przypadków seksualnego wykorzystania dorosłych przez duchownych. TVN24 podaje, że chodzi o osoby skrzywdzone jako dorośli w sytuacji bezbronności lub zależności, a pracami pokieruje dr Marek Lasota.",
+      "keyFacts": [
+        "Komisja została powołana 3 lipca przez archidiecezję krakowską.",
+        "Zakres obejmuje wykorzystanie dorosłych, a nie wyłącznie osób małoletnich.",
+        "W komunikacie wskazano szczególnie osoby zależne lub bezbronne."
+      ],
+      "reactions": [
+        "To temat instytucjonalny, ale o dużym ciężarze społecznym i wizerunkowym dla Kościoła.",
+        "Sam fakt utworzenia komisji pokazuje, że część kościelnych tematów odpowiedzialności przesuwa się na nowy obszar."
+      ],
+      "whyItMatters": "To może otworzyć nową kategorię rozliczeń i zgłoszeń, wykraczającą poza dotychczas najczęściej opisywane sprawy dotyczące osób małoletnich.",
+      "context": "W poprzednim feedzie temat prawny z Polski dotyczył ETPC i dokumentów rodzinnych. Dziś krajowa karta prawno-instytucjonalna wraca wokół odpowiedzialności Kościoła.",
+      "watchNext": [
+        "Czy archidiecezja poda tryb zgłaszania spraw i skład całego zespołu.",
+        "Czy podobne komisje ogłoszą kolejne diecezje lub pojawią się pierwsze sprawy zgłaszane publicznie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Komisja Archidiecezji Krakowskiej ws. wykorzystania dorosłych",
+          "url": "https://tvn24.pl/krakow/kardynal-powolal-komisje-zbada-przypadki-seksualnego-wykorzystania-doroslych-przez-duchownych-st9127291?source=rss"
+        }
+      ],
+      "tags": [
+        "Archidiecezja Krakowska",
+        "Kościół",
+        "Komisja",
+        "Odpowiedzialność"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-03-2102-05-kyiv-30",
+      "section": "Bezpieczeństwo",
+      "title": "Po największym ostrzale Kijowa bilans rośnie do co najmniej 30 zabitych",
+      "lead": "Najcięższa karta bezpieczeństwa slotu znów podbija cenę ataku na stolicę Ukrainy.",
+      "whatHappened": "BBC podało, że po najpotężniejszym rosyjskim ostrzale Kijowa liczba ofiar śmiertelnych wzrosła do co najmniej 30. Redakcja opisuje, że atak objął szeroki obszar miasta i użyto w nim największej dotąd liczby środków rażenia skierowanych na stolicę.",
+      "keyFacts": [
+        "Bilans po ataku wzrósł z 25 do co najmniej 30 ofiar śmiertelnych.",
+        "BBC opisuje ostrzał jako najbardziej masowy przeciw Kijowowi.",
+        "Trafienia objęły szeroki obszar stolicy i podbiły polityczny ciężar wojennej karty dnia."
+      ],
+      "reactions": [
+        "To wyraźnie cięższa wersja tematu, który był już wczoraj jednym z filarów feedu.",
+        "Rosnący bilans znów podnosi presję na partnerów Ukrainy i na ocenę rosyjskiej strategii eskalacji."
+      ],
+      "whyItMatters": "Kijów pozostaje symbolicznym i operacyjnym centrum wojny, więc każdy wzrost bilansu ofiar natychmiast wpływa na europejską debatę o wsparciu wojskowym i obronie powietrznej.",
+      "context": "W opublikowanym 21:01 z 2 lipca karta zamykała się na poziomie 25 ofiar. Dzisiejszy slot nie tylko ją utrzymuje, ale jeszcze wyraźniej zaostrza.",
+      "watchNext": [
+        "Czy bilans dalej wzrośnie wraz z końcem akcji ratunkowych.",
+        "Czy pojawią się nowe deklaracje sprzętowe lub finansowe od sojuszników Ukrainy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Most massive Russian attack on Kyiv kills at least 30",
+          "url": "https://www.bbc.co.uk/news/articles/c4gyv05gk4do?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Kijów",
+        "Ukraina",
+        "Rosja",
+        "Ofiary"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-2102-06-france-heatwave",
+      "section": "Alerty",
+      "title": "Francja liczy 2 025 nadmiarowych zgonów po szczycie fali upałów",
+      "lead": "Europejski alert pogodowy przechodzi z pożarów w twardy bilans ofiar.",
+      "whatHappened": "BBC informuje, że Francja odnotowała 2 025 nadmiarowych zgonów w szczycie fali upałów. Równocześnie meteorolodzy ostrzegają, że Europa w kolejnych dniach może dostać jeszcze jedną serię ekstremalnych temperatur.",
+      "keyFacts": [
+        "We Francji mowa o 2 025 nadmiarowych zgonach związanych ze szczytem upałów.",
+        "Temat przechodzi z opisu warunków pogodowych na bilans zdrowotny i systemowy.",
+        "Prognozy mówią o dalszym ryzyku ekstremalnych temperatur w Europie."
+      ],
+      "reactions": [
+        "To alarm o skali wyraźnie większej niż wczorajsze karty o pożarach i wysokich temperaturach.",
+        "Upał staje się nie tylko tłem pogodowym, ale liczbą zgonów i testem przygotowania państw."
+      ],
+      "whyItMatters": "Kiedy fala upałów zamienia się w liczbę nadmiarowych zgonów, temat staje się pełnoprawnym kryzysem zdrowia publicznego i zarządzania kryzysowego.",
+      "context": "W ostatnim opublikowanym feedzie Francja była kartą pożarową. Dzisiejsza wersja jest cięższa, bo skupia się na skutkach śmiertelnych i skali europejskiej.",
+      "watchNext": [
+        "Czy kolejne kraje opublikują podobne szacunki nadmiarowych zgonów.",
+        "Czy nowe alerty pogodowe wymuszą zamknięcia szkół, pracy albo infrastruktury w kolejnych regionach."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Europe heatwave - France records 2,025 excess deaths",
+          "url": "https://www.bbc.co.uk/news/articles/c3ry307rxqro?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "Upały",
+        "Zdrowie publiczne",
+        "Europa"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-2102-07-monaco-bomb-suspect",
+      "section": "Świat",
+      "title": "Po zamachu w Monako policja ściga podejrzaną przebraną za mężczyznę",
+      "lead": "Śledczy zakładają, że sprawczyni mogła działać z innymi i wcześniej rozpoznawała cel.",
+      "whatHappened": "BBC opisuje nowy etap śledztwa po zamachu bombowym w Monako. Według ustaleń policji podejrzana Ukrainka miała przebrać się za mężczyznę, przez kilka dni obserwować miejsce ataku i prawdopodobnie nie działała sama.",
+      "keyFacts": [
+        "Podejrzana jest obywatelką Ukrainy według relacji BBC.",
+        "Śledczy uważają, że była przebrana za mężczyznę.",
+        "Policja zakłada, że mogła mieć wspólników i wcześniej prowadzić rozpoznanie."
+      ],
+      "reactions": [
+        "To mocna europejska karta bezpieczeństwa nawet bez ostatecznego ustalenia motywu.",
+        "Temat szybko zyskuje ciężar transgraniczny, bo łączy zamach, ucieczkę i możliwą siatkę pomocników."
+      ],
+      "whyItMatters": "Świeży trop po zamachu w jednym z najbardziej strzeżonych miejsc Europy natychmiast podnosi pytania o zabezpieczenia i o ewentualne międzynarodowe tło sprawy.",
+      "context": "W opublikowanym 21:01 z 2 lipca część światowa miała Damaszek jako kartę wybuchu. Dziś podobny ciężar wraca w europejskiej wersji śledczej.",
+      "watchNext": [
+        "Czy dojdzie do zatrzymania podejrzanej albo ujawnienia wspólników.",
+        "Czy śledczy wskażą motyw i sposób wniesienia ładunku wybuchowego."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Ukrainian suspect hunted by police after Monaco bomb attack",
+          "url": "https://www.bbc.co.uk/news/articles/c4gy603z2qlo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Monako",
+        "Zamach",
+        "Policja",
+        "Śledztwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-2102-08-iran-funeral",
+      "section": "Świat",
+      "title": "Iran zamienia pogrzeb Chameneiego w regionalny pokaz siły",
+      "lead": "CNN widzi w wielodniowej żałobie sygnał polityczny wobec Trumpa i USA.",
+      "whatHappened": "BBC informuje o rozpoczęciu publicznej żałoby po ajatollahu Alim Chameneim, którego ciało ma być wystawione w Wielkim Mosalli w Teheranie. CNN opisuje cały proces jako wielodniowy pogrzebowy spektakl rozpisany na pięć miast w dwóch krajach i czytelny, demonstracyjny komunikat wobec Donalda Trumpa oraz Stanów Zjednoczonych.",
+      "keyFacts": [
+        "Publiczna żałoba po Chameneim ruszyła 3 lipca w Teheranie.",
+        "CNN pisze o ceremonii rozpisanej na pięć miast w dwóch krajach.",
+        "Relacje obu redakcji pokazują wydarzenie jako akt pamięci i jednocześnie politycznej demonstracji."
+      ],
+      "reactions": [
+        "To karta bardziej symboliczna niż militarna, ale mocna w wymiarze geopolitycznym.",
+        "Iran wykorzystuje pogrzeb do budowania wewnętrznej mobilizacji i zewnętrznego przekazu siły."
+      ],
+      "whyItMatters": "Rytuał państwowy po śmierci przywódcy może wpływać na dynamikę regionalną, relacje z USA i wewnętrzny układ legitymizacji władzy w Iranie.",
+      "context": "Wczorajszy slot miał karty kościelno-symboliczne wokół Watykanu. Dziś podobny wymiar symboli wraca w dużo twardszej, bliskowschodniej odsłonie państwowej.",
+      "watchNext": [
+        "Czy z Teheranu padną nowe sygnały wobec USA, Izraela albo regionu.",
+        "Czy frekwencja i przekaz uroczystości przełożą się na dalsze decyzje polityczne wewnątrz Iranu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Iran begins public mourning for Ayatollah killed in February",
+          "url": "https://www.bbc.co.uk/news/articles/cx2k4k7jqeno?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Iran sends defiant message to Trump with colossal funeral for slain Supreme Leader Ali Khamenei",
+          "url": "https://edition.cnn.com/2026/07/03/middleeast/iran-leader-funeral-trump-intl"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Chamenei",
+        "USA",
+        "Bliski Wschód"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-2102-09-nigeria-us-withdrawal",
+      "section": "Świat",
+      "title": "USA wycofują wojska z Nigerii po misji przeciw Państwu Islamskiemu",
+      "lead": "Waszyngton mówi o sukcesie operacji, ale zostawia pytania o trwałość efektu.",
+      "whatHappened": "BBC podało, że Stany Zjednoczone wycofały żołnierzy z Nigerii po wspólnej operacji przeciw Państwu Islamskiemu. Według strony amerykańskiej misja rozpoczęta w grudniu ubiegłego roku zakończyła się sukcesem.",
+      "keyFacts": [
+        "Wycofanie następuje po wspólnej misji USA i Nigerii przeciw Państwu Islamskiemu.",
+        "Operacja miała trwać od grudnia poprzedniego roku.",
+        "Waszyngton opisuje rezultat jako udany."
+      ],
+      "reactions": [
+        "To karta o ruchu wojskowym, ale równie ważna jako sygnał o amerykańskiej gotowości do zamykania punktowych misji.",
+        "Pytanie nie brzmi tylko czy misja zadziałała, lecz czy lokalne siły utrzymają efekt po wyjściu USA."
+      ],
+      "whyItMatters": "Zmiany w obecności wojsk USA wpływają na bezpieczeństwo regionu i na ocenę, jak długo partnerzy zachodni chcą podtrzymywać operacje antyterrorystyczne w Afryce.",
+      "context": "Wczorajszy feed dotykał Afryki przez dyplomację i proces w RPA. Dzisiejsza karta przenosi ciężar na wojskową obecność USA w Nigerii.",
+      "watchNext": [
+        "Czy po wycofaniu pojawią się nowe ataki lub sygnały od Państwa Islamskiego w regionie.",
+        "Czy Nigeria albo USA doprecyzują, jakie wsparcie pozostaje mimo formalnego wyjścia wojsk."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US withdraws troops from Nigeria after Islamic State mission",
+          "url": "https://www.bbc.co.uk/news/articles/cwylkvpl80xo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Nigeria",
+        "USA",
+        "Państwo Islamskie",
+        "Wojsko"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-07-03-2102-10-pakistan-bus",
+      "section": "Alerty",
+      "title": "Przepełniony autobus spada do wąwozu w Pakistanie, giną co najmniej 32 osoby",
+      "lead": "Wieczorny alert świata to ciężka katastrofa transportowa na górskiej trasie.",
+      "whatHappened": "BBC podało, że autobus jadący z Quetty do Peszawaru runął do wąwozu w paśmie Dana Sar. W katastrofie zginęły co najmniej 32 osoby, a skala tragedii od razu wyniosła temat do głównych kart międzynarodowych.",
+      "keyFacts": [
+        "Autobus był przepełniony według opisu BBC.",
+        "Pojazd spadł do wąwozu na trasie między Quettą a Peszawarem.",
+        "Bilans ofiar śmiertelnych wynosi co najmniej 32 osoby."
+      ],
+      "reactions": [
+        "To czysta karta alarmowa bez politycznej otoczki, ale z bardzo wysoką liczbą ofiar.",
+        "Temat może szybko przejść w debatę o stanie transportu i bezpieczeństwie na górskich trasach Pakistanu."
+      ],
+      "whyItMatters": "Katastrofy komunikacyjne z tak wysokim bilansem ofiar pozostają jednymi z najbardziej namacalnych wskaźników słabości infrastruktury i egzekwowania standardów bezpieczeństwa.",
+      "context": "Wczoraj alerty w feedzie były związane z budynkiem, pożarami i pogodą. Dziś dokładana jest ciężka katastrofa transportowa w Azji Południowej.",
+      "watchNext": [
+        "Czy bilans ofiar wzrośnie po zakończeniu akcji ratunkowej.",
+        "Czy władze wskażą przyczynę wypadku i ewentualne naruszenia przewoźnika."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Pakistan - overcrowded bus plunges into ravine, killing at least 32",
+          "url": "https://www.bbc.co.uk/news/articles/czrxezg60x1o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Pakistan",
+        "Autobus",
+        "Katastrofa",
+        "Ofiary"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-2102-11-ebola-trial-drc",
+      "section": "Alerty",
+      "title": "W DRK rusza trial terapii na odmianę eboli Bundibugyo",
+      "lead": "WHO otwiera nabór pacjentów do pierwszego badania szukającego skutecznego leczenia.",
+      "whatHappened": "WHO ogłosiła start naboru pacjentów do badania PARTNERS, które ma pomóc wyłonić pierwsze skuteczne terapie dla choroby wywoływanej wirusem Bundibugyo. BBC przypomina, że według danych WHO w Demokratycznej Republice Konga potwierdzono już 1 406 przypadków, 301 podejrzanych i 438 zgonów.",
+      "keyFacts": [
+        "Trial PARTNERS otworzył nabór 2 lipca według WHO.",
+        "Celem jest znalezienie pierwszych skutecznych terapii przeciw Bundibugyo virus disease.",
+        "Według BBC i danych WHO w DRK mowa już o 1 406 potwierdzonych przypadkach i 438 zgonach."
+      ],
+      "reactions": [
+        "To karta zdrowia publicznego o dużej wadze, bo łączy bieżący kryzys z ruchem badawczym, a nie tylko samym bilansem zachorowań.",
+        "Temat daje feedowi ważny wymiar globalnego zdrowia, którego nie było wczoraj wśród głównych kart."
+      ],
+      "whyItMatters": "Przejście od samego reagowania do testowania terapii może zmienić trajektorię odpowiedzi na epidemię i skalę ryzyka dla regionu.",
+      "context": "W poprzednim opublikowanym feedzie dominowały wojna, pożary i bezpieczeństwo. Dziś dochodzi pełnoprawna karta zakaźna z konkretnym ruchem badawczym WHO.",
+      "watchNext": [
+        "Czy trial zacznie szybko rekrutować kolejnych pacjentów i poda pierwsze sygnały bezpieczeństwa terapii.",
+        "Czy WHO zaktualizuje bilans ogniska lub wprowadzi nowe zalecenia dla regionu."
+      ],
+      "sources": [
+        {
+          "title": "WHO: Patient enrolment begins in a scientific trial to identify the first effective treatments for Bundibugyo virus disease",
+          "url": "https://www.who.int/news/item/02-07-2026-patient-enrolment-begins-in-a-scientific-trial-to-identify-the-first-effective-treatments-for-bundibugyo-virus-disease"
+        },
+        {
+          "title": "BBC: Ebola treatments trial begins in the Democratic Republic of Congo",
+          "url": "https://www.bbc.co.uk/news/articles/c75ykve4zzxo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "DRK",
+        "Ebola",
+        "WHO",
+        "Trial"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-07-03-2102-12-swift-boost",
+      "section": "Technologia",
+      "title": "NASA wysyła robota, by podbić orbitę teleskopu Swift",
+      "lead": "Kosmiczna karta dnia: obserwatorium ma zostać przechwycone, zanim spłonie w atmosferze.",
+      "whatHappened": "BBC i NASA informują o starcie robota finansowanego przez NASA, który ma przechwycić teleskop Swift na orbicie i podnieść go na bezpieczniejszy pułap. Swift działa od ponad dwóch dekad, ale jego orbita weszła w fazę szybkiego spadku i bez interwencji obserwatorium miałoby spłonąć w atmosferze.",
+      "keyFacts": [
+        "Misja ma przechwycić Swift w połowie orbity i podnieść go na bezpieczniejszą wysokość.",
+        "NASA opisuje Swift jako obserwatorium w fazie szybkiego spadku orbity.",
+        "To rzadka karta technologiczna łącząca ratowanie infrastruktury kosmicznej z realną operacją orbitalną."
+      ],
+      "reactions": [
+        "Temat dobrze równoważy ciężki polityczno-kryzysowy zestaw reszty slotu.",
+        "Jednocześnie pokazuje, że technologia kosmiczna coraz częściej dotyczy serwisowania istniejącej infrastruktury, a nie tylko nowych startów."
+      ],
+      "whyItMatters": "Udane przedłużenie życia Swift byłoby ważnym sygnałem dla przyszłych misji serwisowania i lepszego wykorzystania kosztownej infrastruktury naukowej na orbicie.",
+      "context": "W opublikowanym feedzie z 2 lipca technologia była lokalna i państwowa przez Odyseusza. Dziś przechodzi na globalną kartę naukowo-kosmiczną.",
+      "watchNext": [
+        "Czy przechwycenie i podbicie orbity przebiegnie zgodnie z planem.",
+        "Czy NASA potraktuje misję jako model dla kolejnych działań serwisowych na orbicie."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Nasa launches robot to save Swift telescope falling to Earth",
+          "url": "https://www.bbc.co.uk/news/articles/c0ry4xx7rk8o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "NASA: Swift Boost Media Resources",
+          "url": "https://science.nasa.gov/mission/swift/swift-boost-mission/swift-boost-media-resources/"
+        }
+      ],
+      "tags": [
+        "NASA",
+        "Swift",
+        "Kosmos",
+        "Orbita"
+      ],
+      "priority": "Medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "Niebezpiecznik: Wyciek danych gości wielu polskich hoteli",
+      "url": "https://niebezpiecznik.pl/post/wyciek-danych-gosci-wielu-polskich-hoteli/"
+    },
+    {
+      "title": "Gov.pl: Koordynator służb specjalnych w programie Poranna rozmowa w RMF FM",
+      "url": "https://www.gov.pl/web/sluzby-specjalne/koordynator-sluzb-specjalnych-w-programie-poranna-rozmowa-w-rmf-fm"
+    },
+    {
+      "title": "WHO: Trial PARTNERS dla Bundibugyo virus disease",
+      "url": "https://www.who.int/news/item/02-07-2026-patient-enrolment-begins-in-a-scientific-trial-to-identify-the-first-effective-treatments-for-bundibugyo-virus-disease"
+    },
+    {
+      "title": "NASA: Swift Boost Media Resources",
+      "url": "https://science.nasa.gov/mission/swift/swift-boost-mission/swift-boost-media-resources/"
+    }
+  ]
+}

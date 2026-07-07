@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-06-30",
+  "runTime": "21:02",
+  "status": "Material update",
+  "headline": "21:02: Burze robią już szkody, a świat dokłada Pakistan, Grecję i niemiecki alarm o skrajnej prawicy",
+  "summary": "Slot 21:02 względem publicznego baseline'u z 26 czerwca i lokalnego slotu 18:00 podnosi krajowy blok z samych ostrzeżeń do realnych szkód burzowych, utrzymuje temat przeciążenia ratownictwa i incydentu LOT, dokłada szybki odczyt inflacji GUS oraz wymienia część zagranicznych kart na Pakistan, Grecję, raport o skrajnej prawicy w Niemczech i pozew przeciw Mecie.",
+  "items": [
+    {
+      "id": "pulse-2026-06-30-2102-01-burze",
+      "section": "Alerty",
+      "title": "Burze przynoszą już grad, zalania i uszkodzone dachy, a IMGW utrzymuje wysoki poziom ryzyka",
+      "lead": "Wieczorny blok pogodowy przestaje być wyłącznie prognozą i przechodzi w realne szkody terenowe.",
+      "whatHappened": "TVN Meteo podało, że wtorkowe burze przyniosły już grad, pierwsze zalania i zgłoszenia o powalonych drzewach. W województwie lubuskim silny wiatr uszkodził dachy, a IMGW w raporcie nr 135 nadal utrzymuje ryzyko burzowe i potrzebę śledzenia kolejnych ostrzeżeń.",
+      "keyFacts": [
+        "Burze weszły już w fazę potwierdzonych szkód, a nie tylko ostrzeżeń.",
+        "Interwencje strażaków dotyczą głównie drzew, zalań i szkód po silnym wietrze.",
+        "IMGW utrzymuje aktywny komponent ostrzegawczy dla kolejnych godzin."
+      ],
+      "reactions": [
+        "To najmocniejsza krajowa karta slotu, bo łączy pogodę, bezpieczeństwo i szybkość zmian.",
+        "Wieczorny feed powinien akcentować przejście z ryzyka prognozowanego na ryzyko już materializujące się w terenie."
+      ],
+      "whyItMatters": "Jeśli szkody rosną jeszcze przed nocą, kolejny slot może wymagać ostrzejszego alarmowego ustawienia całego krajowego bloku.",
+      "context": "O 18:00 dominowała jeszcze prognoza frontów i ryzyko. O 21:02 są już pierwsze potwierdzone skutki burz.",
+      "watchNext": [
+        "Czy IMGW rozszerzy lub podniesie ostrzeżenia dla kolejnych województw.",
+        "Czy pojawią się większe podtopienia, awarie energetyczne albo utrudnienia transportowe."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo: Sypnęło gradem. Są pierwsze zalania",
+          "url": "https://tvn24.pl/tvnmeteo/polska/sypnelo-gradem-sa-pierwsze-zalania-st9122059?source=rss"
+        },
+        {
+          "title": "IMGW: Aktualna i prognozowana sytuacja meteorologiczna i hydrologiczna – raport nr 135",
+          "url": "https://imgw.pl/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-135/"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "Burze",
+        "Grad",
+        "Zalania"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-2102-02-lot",
+      "section": "Polska",
+      "title": "Rejs z Warszawy do Tel Awiwu kończy się alarmem o porwaniu i przechwyceniem przez Izrael",
+      "lead": "Omyłkowy sygnał pilota uruchomił pełną procedurę bezpieczeństwa i przekierowanie samolotu do Bułgarii.",
+      "whatHappened": "TVN24 podało, że samolot lecący z Warszawy do Tel Awiwu został przekierowany na lotnisko w Bułgarii po tym, jak pilot przez pomyłkę aktywował alarm o porwaniu. Izrael poderwał myśliwce, a tamtejsze władze zapowiedziały dochodzenie w sprawie całego incydentu.",
+      "keyFacts": [
+        "Chodzi o rejs z Warszawy do Tel Awiwu, który nie doleciał planowo do celu.",
+        "Przyczyną alarmu miało być omyłkowe uruchomienie komunikatu bezpieczeństwa.",
+        "Izrael potraktował sygnał poważnie i uruchomił procedurę z udziałem lotnictwa wojskowego."
+      ],
+      "reactions": [
+        "To nadal jedna z najmocniejszych krajowych kart, bo łączy Polskę, lotnictwo i napięty region.",
+        "Każdy oficjalny komunikat PLL LOT albo izraelskich służb może jeszcze podbić wagę tej historii."
+      ],
+      "whyItMatters": "Nawet omyłkowy alarm porwania pokazuje, jak szybko zwykła operacja lotnicza może zmienić się w międzynarodowy incydent bezpieczeństwa.",
+      "context": "Temat wszedł do feedu o 18:00 i pozostaje wysoko, bo nie został przykryty nowym formalnym komunikatem wyjaśniającym.",
+      "watchNext": [
+        "Czy PLL LOT opublikuje pełniejsze wyjaśnienie procedury i przyczyny alarmu.",
+        "Czy izraelskie służby wskażą dodatkowe wnioski dla połączeń do regionu wysokiego ryzyka."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Samolot z Warszawy przekierowany. \"Załoga zgłosiła stan zagrożenia\", po czym go \"wycofała\"",
+          "url": "https://tvn24.pl/polska/samolot-z-warszawy-przekierowany-zaloga-zglosila-stan-zagrozenia-po-czym-go-wycofala-st9121895?source=rss"
+        }
+      ],
+      "tags": [
+        "LOT",
+        "Izrael",
+        "Lotnictwo",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-2102-03-prm",
+      "section": "Alerty",
+      "title": "Upał nadal przeciąża pogotowie, a dyspozytorzy odbierają blisko 20 tysięcy zgłoszeń",
+      "lead": "Fala gorąca już bezpośrednio uderza w wydolność systemu ratownictwa medycznego.",
+      "whatHappened": "TVN24 Warszawa podało, że dyspozytorzy medyczni w Polsce odebrali blisko 20 tysięcy zgłoszeń w jeden dzień. Krajowe Centrum Monitorowania Ratownictwa Medycznego oceniło, że system Państwowego Ratownictwa Medycznego pracuje pod rekordowym obciążeniem, a jedną z głównych przyczyn pozostaje ekstremalny upał.",
+      "keyFacts": [
+        "Skala obciążenia została opisana jako rekordowa przez centrum monitorowania ratownictwa.",
+        "Mowa o blisko 20 tysiącach zgłoszeń w jeden dzień.",
+        "Temat zdrowotny wzmacnia alarmowy charakter całego wieczornego slotu."
+      ],
+      "reactions": [
+        "To karta, która spina pogodę z realnym kosztem dla służb i mieszkańców.",
+        "Jeśli liczba zgłoszeń wzrośnie jeszcze po nocnych burzach, temat może wejść na sam szczyt porannego feedu."
+      ],
+      "whyItMatters": "Wysokie temperatury przestają być tłem pogodowym i stają się problemem operacyjnym dla państwowego systemu ratunkowego.",
+      "context": "O 18:00 temat dopiero ustawił ton zdrowotny slotu. O 21:02 pozostaje ważny, bo burze mogą dokładać kolejne wezwania.",
+      "watchNext": [
+        "Czy służby pokażą nowe dane o interwencjach i zgłoszeniach nocą.",
+        "Czy pojawią się dodatkowe ostrzeżenia dla seniorów, dzieci i osób pracujących na zewnątrz."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Warszawa: Wysoka temperatura i \"rekordowe obciążenie\" pogotowia ratunkowego",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/upaly-i-rekordowe-obciazenie-pogotowia-ratunkowego-st9121706?source=rss"
+        }
+      ],
+      "tags": [
+        "Upał",
+        "Pogotowie",
+        "Ratownictwo",
+        "Zdrowie"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-2102-04-cpi",
+      "section": "Polska",
+      "title": "GUS zaskakuje niższą inflacją: czerwiec schodzi do 2,5 procent rok do roku",
+      "lead": "Wieczorny blok krajowy dostaje twardy sygnał gospodarczy, który może przesunąć rozmowę na stopy i ceny.",
+      "whatHappened": "GUS opublikował szybki szacunek, według którego ceny towarów i usług konsumpcyjnych w czerwcu 2026 roku wzrosły o 2,5 procent rok do roku, a miesiąc do miesiąca spadły o 0,5 procent. TVN24 Biznes zwrócił uwagę, że odczyt był niższy od rynkowych prognoz i może zwiększyć oczekiwania na obniżki stóp.",
+      "keyFacts": [
+        "Szybki szacunek GUS pokazał 2,5 procent inflacji rok do roku.",
+        "W ujęciu miesięcznym ceny spadły o 0,5 procent.",
+        "Odczyt jest niższy od oczekiwań rynku przywołanych przez TVN24 Biznes."
+      ],
+      "reactions": [
+        "To najmocniejsza nowa karta gospodarcza tego slotu i wyraźny kontrapunkt dla bloku alarmowego.",
+        "Temat może szybko przejść z samego odczytu CPI do spekulacji o ścieżce stóp procentowych."
+      ],
+      "whyItMatters": "Inflacja dokładnie przy celu NBP zmienia ton debaty gospodarczej i może wpływać na ceny, kredyty i oczekiwania rynku już w najbliższych dniach.",
+      "context": "O 18:00 krajowy blok był mocniej bezpieczeństwowo-pogodowy. O 21:02 dochodzi wyraźny sygnał makroekonomiczny z GUS.",
+      "watchNext": [
+        "Czy ekonomiści i rynek zaczną mocniej wyceniać obniżki stóp procentowych.",
+        "Czy pojawi się szybka reakcja NBP albo członków RPP na odczyt CPI."
+      ],
+      "sources": [
+        {
+          "title": "GUS: Szybki szacunek wskaźnika cen towarów i usług konsumpcyjnych w czerwcu 2026 r.",
+          "url": "https://stat.gov.pl/obszary-tematyczne/ceny-handel/wskazniki-cen/szybki-szacunek-wskaznika-cen-towarow-i-uslug-konsumpcyjnych-w-czerwcu-2026-r-%2C21%2C42.html"
+        },
+        {
+          "title": "TVN24 Biznes: Inflacja w czerwcu 2026 roku. Ceny towarów i usług w Polsce, nowe dane GUS",
+          "url": "https://tvn24.pl/biznes/z-kraju/inflacja-w-czerwcu-2026-roku-ceny-towarow-i-uslug-w-polsce-nowe-dane-gus-st9120612"
+        }
+      ],
+      "tags": [
+        "GUS",
+        "Inflacja",
+        "CPI",
+        "Gospodarka"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-2102-05-meta",
+      "section": "Technologia",
+      "title": "Meta nie zablokowała pozwu o uzależnianie dzieci od Facebooka i Instagrama",
+      "lead": "Sąd zostawia przy życiu jedną z najmocniejszych spraw o projektowanie platform pod dzieci.",
+      "whatHappened": "TVN24 Tech podało za Reuters, że sędzia federalna odrzuciła wniosek Meta Platforms o oddalenie pozwu złożonego przez 29 prokuratorów generalnych stanów USA. W pozwie zarzuca się Mecie projektowanie Facebooka i Instagrama w sposób uzależniający dla dzieci oraz ukrywanie szkodliwych skutków przed opinią publiczną.",
+      "keyFacts": [
+        "Pozew złożyło 29 prokuratorów generalnych stanów USA.",
+        "Sąd nie zgodził się na oddalenie sprawy na tym etapie.",
+        "Spór dotyczy uzależniającego projektowania usług dla dzieci i nastolatków."
+      ],
+      "reactions": [
+        "To wyraźnie cięższa technologiczna karta niż miękkie historie o trendach AI.",
+        "Temat może wejść szerzej do debaty o odpowiedzialności platform i projektowaniu produktów dla nieletnich."
+      ],
+      "whyItMatters": "Sprawa dotyka realnej odpowiedzialności największych platform za skutki zdrowotne i społeczne ich mechanik angażowania użytkowników.",
+      "context": "W slocie 18:00 technologia była bardziej rynkowa i związana z humanoidami. O 21:02 blok technologiczny przechodzi na odpowiedzialność platform.",
+      "watchNext": [
+        "Czy Meta odpowie szerzej poza standardowym stanowiskiem procesowym.",
+        "Czy inne stany albo regulatorzy dołożą podobne roszczenia lub działania."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Tech: Sąd odrzucił wniosek. Meta zmierzy się z pozwem za uzależnianie dzieci",
+          "url": "https://tvn24.pl/biznes/tech/usa-meta-platforms-odpowie-za-uzaleznianie-dzieci-sad-odrzucil-wniosek-wlasciciela-facebooka-i-instagrama-st9122055?source=rss"
+        }
+      ],
+      "tags": [
+        "Meta",
+        "Facebook",
+        "Instagram",
+        "Prawo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-2102-06-doha",
+      "section": "Świat",
+      "title": "Doha przyjmuje wysłanników USA, ale Katar wyklucza bezpośrednie rozmowy z Iranem",
+      "lead": "Kanał dyplomatyczny wokół Iranu działa, ale gospodarze studzą oczekiwania co do przełomu twarzą w twarz.",
+      "whatHappened": "BBC i CNN podały, że w Dosze są wysłannicy USA rozmawiający z mediatorami. Jednocześnie rzecznik katarskiego MSZ zaznaczył, że nie zaplanowano żadnych bezpośrednich rozmów ani wysokiego szczebla spotkania między USA a Iranem.",
+      "keyFacts": [
+        "Rozmowy trwają przez mediatorów, a nie w bezpośrednim formacie amerykańsko-irańskim.",
+        "Katar oficjalnie schłodził wcześniejsze oczekiwania dotyczące szybkiego przełomu.",
+        "To nadal jedna z najważniejszych kart bezpieczeństwa międzynarodowego dnia."
+      ],
+      "reactions": [
+        "Historia pozostaje wysoko, ale ciężar narracji przesuwa się z oczekiwanego przełomu na ograniczenia procesu.",
+        "Jeden komunikat z Doszy może jeszcze całkowicie zmienić rangę tej karty."
+      ],
+      "whyItMatters": "Rozbieżność między politycznymi sygnałami a oficjalnym stanowiskiem gospodarza pokazuje, jak kruchy pozostaje kanał rozmów wokół Iranu.",
+      "context": "Temat był już obecny o 18:00 i zostaje, bo nadal należy do najważniejszych geopolitycznych osi dnia.",
+      "watchNext": [
+        "Czy Katar albo USA ogłoszą konkretny wynik rozmów z mediatorami.",
+        "Czy pojawi się jakikolwiek ślad bezpośredniego kontaktu z przedstawicielami Iranu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US envoys in Doha to meet mediators but not Iranians, Qatar says",
+          "url": "https://www.bbc.co.uk/news/articles/cpd38x1dy4no?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN live: US envoys arrive in Qatar for talks with mediators about Iran",
+          "url": "https://edition.cnn.com/2026/06/30/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "Katar",
+        "Dyplomacja"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-2102-07-pakistan",
+      "section": "Świat",
+      "title": "W Lahore zawala się dach ośrodka korepetycyjnego, ginie 14 dzieci",
+      "lead": "Wieczorny feed dostaje nową, ciężką kartę katastroficzną z dużą liczbą ofiar wśród dzieci.",
+      "whatHappened": "BBC podało, że w dzielnicy Kahna w Lahore zawalił się dach ośrodka korepetycyjnego. Zginęło 14 dzieci, osiem osób zostało rannych, a dwie osoby zatrzymano w związku ze sprawą.",
+      "keyFacts": [
+        "Bilans podawany przez BBC to 14 zabitych dzieci i ośmioro rannych.",
+        "Do tragedii doszło w ośrodku korepetycyjnym w Lahore.",
+        "Po zdarzeniu zatrzymano dwie osoby."
+      ],
+      "reactions": [
+        "To jedna z najmocniejszych nowych zagranicznych kart tego slotu z uwagi na skalę ofiar i wiek poszkodowanych.",
+        "Temat może szybko rozwinąć się w debatę o standardach budowlanych i odpowiedzialności lokalnych władz."
+      ],
+      "whyItMatters": "Duża liczba ofiar wśród dzieci natychmiast podnosi ciężar polityczny i społeczny tej historii, nawet jeśli punkt wyjścia jest lokalny.",
+      "context": "Tej karty nie było o 18:00. To jedna z głównych nowych osi zagranicznych wieczoru.",
+      "watchNext": [
+        "Czy bilans ofiar i rannych wzrośnie po dalszych pracach służb.",
+        "Czy władze ogłoszą konkretną odpowiedzialność za stan budynku."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Roof collapse kills 14 children at Pakistan tuition centre",
+          "url": "https://www.bbc.co.uk/news/articles/cr7x38lle1jo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Pakistan",
+        "Lahore",
+        "Dzieci",
+        "Katastrofa"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-2102-08-grecja",
+      "section": "Świat",
+      "title": "Strażacy walczą z groźnym pożarem w Grecji po śmierci co najmniej jednej osoby",
+      "lead": "Nowa karta pogodowo-pożarowa pokazuje, że ekstremalne warunki uderzają nie tylko w Polskę.",
+      "whatHappened": "BBC podało, że ponad 100 strażaków walczy z pożarem w pobliżu Salonik w Grecji. Ogień pochłonął co najmniej jedną ofiarę i nadal wymaga dużej mobilizacji służb.",
+      "keyFacts": [
+        "W akcję gaśniczą zaangażowano ponad 100 strażaków.",
+        "Pożar jest śmiertelny i nadal nie został całkowicie opanowany.",
+        "Historia wpisuje się w szerszy międzynarodowy wzór pogodowo-klimatyczny dnia."
+      ],
+      "reactions": [
+        "To mocna karta, bo rozszerza globalny blok zagrożeń pogodowych poza Polskę.",
+        "Jeśli pożar się rozszerzy, temat może szybko wejść wyżej w kolejnych slotach."
+      ],
+      "whyItMatters": "Połączenie aktywnego pożaru i ofiary śmiertelnej oznacza, że temat ma zarówno wymiar ratowniczy, jak i polityczny.",
+      "context": "O 18:00 zagraniczny blok pogodowy skupiał się na Ghanie. O 21:02 zostaje częściowo wymieniony na nowy pożar w Grecji.",
+      "watchNext": [
+        "Czy liczba ofiar wzrośnie albo pojawią się ewakuacje kolejnych obszarów.",
+        "Czy greckie służby ogłoszą pełniejsze informacje o przyczynie pożaru."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Firefighters struggle to contain deadly Greek wildfire",
+          "url": "https://www.bbc.co.uk/news/articles/c0qy3nkex0qo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Grecja",
+        "Pożar",
+        "Saloniki",
+        "Strażacy"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-2102-09-niemcy",
+      "section": "Świat",
+      "title": "Niemiecki kontrwywiad mówi o niemal 60 tysiącach skrajnie prawicowych ekstremistów",
+      "lead": "Wieczorny raport z Niemiec podnosi alarm o skali i potencjale przemocy na skrajnej prawicy.",
+      "whatHappened": "BBC podało, że niemiecki wywiad wewnętrzny szacuje liczbę skrajnie prawicowych ekstremistów na prawie 60 tysięcy. Ponad jedna czwarta zidentyfikowanych osób ma być uznawana za skłonną do przemocy.",
+      "keyFacts": [
+        "Liczba skrajnie prawicowych ekstremistów ma sięgać prawie 60 tysięcy.",
+        "Ponad jedna czwarta tej grupy ma być kwalifikowana jako skłonna do przemocy.",
+        "Źródłem danych jest niemiecki wywiad wewnętrzny cytowany przez BBC."
+      ],
+      "reactions": [
+        "To jedna z mocniejszych kart polityczno-bezpieczeństwowych wieczoru w Europie.",
+        "Temat może szybko wywołać debatę o bezpieczeństwie wewnętrznym, migracji i polityce wobec radykalnych środowisk."
+      ],
+      "whyItMatters": "Skala zjawiska i udział osób zdolnych do przemocy mają bezpośrednie znaczenie dla bezpieczeństwa publicznego w największej gospodarce Europy.",
+      "context": "Tej karty nie było o 18:00. To nowy europejski sygnał bezpieczeństwa wewnętrznego w wieczornym feedzie.",
+      "watchNext": [
+        "Czy niemieckie władze pokażą nowe działania operacyjne lub legislacyjne.",
+        "Czy raport uruchomi silniejszą reakcję partii politycznych i debatę o radykalizacji."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Almost 60,000 far-right extremists in Germany, intelligence agency says",
+          "url": "https://www.bbc.co.uk/news/articles/crlw4ng79wzo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Niemcy",
+        "Skrajna prawica",
+        "Ekstremizm",
+        "Bezpieczeństwo"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-2102-10-rpa",
+      "section": "Świat",
+      "title": "Marsze antyimigracyjne w RPA utrzymują wysoki poziom napięcia pod osłoną policji",
+      "lead": "Protest nie jest już tylko zapowiedzią i może szybko przejść w realne incydenty przemocy.",
+      "whatHappened": "BBC podało, że tysiące osób wyszły w RPA na antyimigracyjne marsze pod silną obecnością policji. Część cudzoziemców opuściła kraj jeszcze przed upływem ultimatum stawianego przez wrogie migrantom grupy.",
+      "keyFacts": [
+        "Protesty mają już skalę uliczną i wymagają cięższego zabezpieczenia policyjnego.",
+        "BBC wskazuje, że część cudzoziemców opuściła kraj jeszcze przed terminem ultimatum.",
+        "Temat łączy bezpieczeństwo publiczne, migrację i ryzyko przemocy zbiorowej."
+      ],
+      "reactions": [
+        "To nadal jedna z bardziej zapalnych kart zagranicznych, bo wydarzenia mogą szybko przeskoczyć z demonstracji do ataków.",
+        "Przy braku deeskalacji temat może utrzymać się także w nocnym i porannym slocie."
+      ],
+      "whyItMatters": "Ulica, migracja i presja tłumu tworzą mieszankę, która może błyskawicznie przejść w realne zagrożenie dla ludzi i mienia.",
+      "context": "Temat wszedł do feedu o 18:00 i zostaje, bo nadal nie ma sygnału trwałej deeskalacji.",
+      "watchNext": [
+        "Czy policja zgłosi przemoc, zatrzymania lub ofiary.",
+        "Czy rząd RPA zabierze głos w sprawie ochrony cudzoziemców i ultimatum."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Thousands of anti-migrant protesters march in South Africa amid heavy police presence",
+          "url": "https://www.bbc.co.uk/news/articles/cy4eq1l184po?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "RPA",
+        "Migracja",
+        "Protesty",
+        "Policja"
+      ],
+      "priority": "High"
+    },
+    {
+      "id": "pulse-2026-06-30-2102-11-senegal",
+      "section": "Świat",
+      "title": "Parlament Senegalu chce przyciąć władzę prezydenta, a przed izbą trwają protesty",
+      "lead": "Spór konstytucyjny w Afryce Zachodniej nie wygasa i nadal ma potencjał ulicznej eskalacji.",
+      "whatHappened": "BBC podało, że większość parlamentarzystów Senegalu uzgodniła zmiany ograniczające część uprawnień prezydenta. Propozycje wywołały protesty przed parlamentem, co przenosi napięcie z procesu legislacyjnego także na ulicę.",
+      "keyFacts": [
+        "Zmiany uzyskały poparcie większości deputowanych.",
+        "Spór wywołał protesty przed parlamentem.",
+        "Temat łączy instytucjonalny konflikt z szybkim ryzykiem destabilizacji."
+      ],
+      "reactions": [
+        "To ważna polityczna karta zagraniczna, nawet jeśli ciężar dnia przesuwa się na Pakistan i Niemcy.",
+        "Jeśli protesty się rozszerzą albo obóz prezydenta odpowie ostrzej, temat może wrócić wyżej."
+      ],
+      "whyItMatters": "Zmiany w balansie władzy i szybka reakcja ulicy mogą przełożyć się na destabilizację polityczną w regionie.",
+      "context": "Temat pojawił się już o 18:00 i pozostaje, bo nadal jest aktywnym kryzysem politycznym, a nie zamkniętym epizodem.",
+      "watchNext": [
+        "Czy prezydent albo jego obóz publicznie odrzucą projekt.",
+        "Czy protesty pozostaną pokojowe, czy przejdą w starcia z policją."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Senegalese MPs move to clip presidential powers as tensions mount",
+          "url": "https://www.bbc.co.uk/news/articles/cgl352xjgngo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Senegal",
+        "Parlament",
+        "Prezydent",
+        "Protesty"
+      ],
+      "priority": "Medium"
+    },
+    {
+      "id": "pulse-2026-06-30-2102-12-monako",
+      "section": "Bezpieczeństwo",
+      "title": "Monako i Francja prowadzą szeroką obławę po bombie wymierzonej w ukraińskiego biznesmena",
+      "lead": "Śledczy coraz wyraźniej opisują atak jako próbę zabójstwa, a nie incydent bez szerszego tła.",
+      "whatHappened": "BBC i CNN podały, że po wybuchu paczki w Monako trwa szeroka obława obejmująca księstwo i Francję. Śledczy traktują sprawę jako próbę zabójstwa ukraińskiego biznesmena, a nie klasyczny akt terroru.",
+      "keyFacts": [
+        "Obława obejmuje nie tylko Monako, ale też terytorium Francji.",
+        "Śledczy opisują sprawę jako próbę zabójstwa.",
+        "To nadal rozwijająca się historia bezpieczeństwa o międzynarodowym wymiarze."
+      ],
+      "reactions": [
+        "Temat zostaje w feedzie, bo nie ma jeszcze przełomu w identyfikacji sprawców ani motywu.",
+        "Każda nowa informacja o wykonawcach lub tle ataku może szybko zmienić rangę tej karty."
+      ],
+      "whyItMatters": "To nie wygląda na zamknięty incydent, tylko na rozwijającą się sprawę z międzynarodowym wymiarem bezpieczeństwa i śledztwa.",
+      "context": "Karta była już obecna o 18:00 i zostaje dzięki dalszej obławie oraz coraz precyzyjniejszej kwalifikacji ataku.",
+      "watchNext": [
+        "Czy śledczy wskażą sprawców lub źródło użytego ładunku.",
+        "Czy pojawią się oficjalne informacje o motywie i stanie rannych."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Manhunt after bomb injures Ukrainian oligarch in Monaco",
+          "url": "https://www.bbc.co.uk/news/articles/cpv37wx03v7o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Manhunt after Monaco bomb attack wounds Ukrainian tycoon in attempted assassination",
+          "url": "https://edition.cnn.com/2026/06/30/world/monaco-manhunt-explosion-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Monako",
+        "Francja",
+        "Bomba",
+        "Śledztwo"
+      ],
+      "priority": "High"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "IMGW: Aktualna i prognozowana sytuacja meteorologiczna i hydrologiczna – raport nr 135",
+      "url": "https://imgw.pl/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-135/"
+    },
+    {
+      "title": "GUS: Szybki szacunek wskaźnika cen towarów i usług konsumpcyjnych w czerwcu 2026 r.",
+      "url": "https://stat.gov.pl/obszary-tematyczne/ceny-handel/wskazniki-cen/szybki-szacunek-wskaznika-cen-towarow-i-uslug-konsumpcyjnych-w-czerwcu-2026-r-%2C21%2C42.html"
+    },
+    {
+      "title": "TVN Meteo: Sypnęło gradem. Są pierwsze zalania",
+      "url": "https://tvn24.pl/tvnmeteo/polska/sypnelo-gradem-sa-pierwsze-zalania-st9122059?source=rss"
+    },
+    {
+      "title": "BBC: Roof collapse kills 14 children at Pakistan tuition centre",
+      "url": "https://www.bbc.co.uk/news/articles/cr7x38lle1jo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC: Almost 60,000 far-right extremists in Germany, intelligence agency says",
+      "url": "https://www.bbc.co.uk/news/articles/crlw4ng79wzo?at_medium=RSS&at_campaign=rss"
+    }
+  ]
+}

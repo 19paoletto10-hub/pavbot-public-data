@@ -1,0 +1,401 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-03",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorne sprawdzenie jest materialną aktualizacją po porannym raporcie z 2026-07-03. Najmocniejszy nowy wątek to platform safety i odpowiedzialność reklamowa: BBC opisało płatne reklamy na Instagramie w Indiach prowadzące do materiałów CSAM, a indyjskie MeitY ma wezwać Meta do wyjaśnień. To przesuwa rozmowę z abstrakcyjnej moderacji treści na pytanie, jak system reklamowy dużej platformy zatwierdza i monetyzuje skrajnie szkodliwe materiały.",
+    "Druga warstwa to rozjazd w globalnym governance AI. Financial Times opisał stanowisko odchodzącego doradcy Srirama Krishnana, że administracja Trumpa nie zbuduje scentralizowanego regulatora typu \"FDA dla AI\", nawet po wyjątkowych interwencjach przy frontier modelach. Równolegle ITU i ONZ budują AI for Good Global Commission przed spotkaniami w Genewie. To dobrze dopina poranny wątek panelu naukowego ONZ: USA sygnalizują lekki reżim, a ONZ próbuje budować forum koordynacyjne.",
+    "Trzecia warstwa to AI access control jako cyber-geopolityka i supply chain security. FT podał, że Anthropic zamyka obejścia pozwalające chińskim firmom korzystać z Claude przez podmioty zagraniczne i chmurę, a SCMP opisał zakaz Claude Code w Alibaba od 10 lipca. W tym samym pakiecie są GoDaddy kontra indyjski sąd o prywatność domen, śledztwo Indii po wycieku Tata Electronics dotyczącego dostaw Apple oraz komunikat DOJ o ekstradycji podejrzanego w sprawie Scattered Spider.",
+    "Czwarta warstwa jest bardziej produktowa: Product Hunt pokazuje Glaze by Raycast jako \"chat to Mac app\", Osloq do reprodukcji issue na GitHubie, Vox do głosowego Copilota i kolejne narzędzia agentowe; HN wzmacnia lokalne LLM-y i krytykę pamięci w Claude. WP Tech dodał polski, lżejszy, ale technicznie ciekawy temat: satelita YAM-9/NAVI-Orbital rozpoznaje obiekty na orbicie lokalnie, bez ciągłego wysyłania surowych danych na Ziemię."
+  ],
+  "summaryBullets": [
+    "Cyber: Instagram i Meta pod presją Indii po reklamach CSAM",
+    "Regulacje: USA sygnalizują lekki reżim AI, ONZ buduje forum koordynacyjne",
+    "AI: Anthropic i Alibaba pokazują geopolitykę dostępu do agentów"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-03-1933-0-instagram-i-meta-pod-presja-indii-po-reklamach-csam-b2a63647c0",
+      "section": "Cyber",
+      "title": "Instagram i Meta pod presją Indii po reklamach CSAM",
+      "standfirst": "BBC opisało reklamy na Instagramie w Indiach promujące materiały CSAM, a indyjskie MeitY ma wezwać Meta do wyjaśnień. To jeden z najpoważniejszych dzisiejszych sygnałów o zawodności moderacji reklamowej dużej platformy.",
+      "whatHappened": "Indyjskie władze reagują na doniesienia, że system reklamowy Instagramu przepuszczał skrajnie szkodliwe treści i kierował użytkowników poza platformę.",
+      "whyItMatters": "Jeżeli płatny system reklamowy monetyzuje materiały zakazane, problemem nie jest tylko moderacja postów, lecz cały łańcuch zatwierdzania, targetowania i rozliczania reklam.",
+      "deeperAnalysis": [
+        "Poranny raport miał Hopper/FTC jako temat dark patterns, ale wieczorny sygnał z Indii jest znacznie cięższy. Tu nie chodzi o mylące opłaty, tylko o to, czy platforma potrafi zablokować reklamy związane z najpoważniejszą kategorią krzywdy. Według Techmeme źródłem pierwotnym była BBC; indyjskie media biznesowe i technologiczne szybko dodały reakcję administracji.",
+        "Najważniejszy element to fakt, że mowa o reklamach, a nie wyłącznie o organicznych treściach użytkowników. Reklama przechodzi przez osobny system polityk, klasyfikacji, płatności, audytu i rozliczeń. Jeśli taki system nie zatrzymuje skrajnie nielegalnych materiałów, regulatorzy będą pytać o odpowiedzialność biznesową, nie tylko o błędy automatycznego wykrywania.",
+        "Dla podcastu temat trzeba prowadzić ostrożnie i bez sensacyjnych szczegółów. Najlepszy kąt to \"platforma jako marketplace ryzyka\": Meta ma globalną skalę, AI review i tysiące zasad reklamowych, ale realny test to najtrudniejsze przypadki w lokalnych językach, w Indiach, na Telegramie i w płatnych kampaniach, gdzie bodziec biznesowy działa po stronie emisji reklamy."
+      ],
+      "contextPoints": [
+        "Co się stało: BBC opisało reklamy na Instagramie, a MeitY ma wezwać Meta do wyjaśnień.",
+        "Dlaczego ważne: systemy reklamowe Big Tech będą rozliczane z bezpieczeństwa równie mocno jak feedy i rekomendacje.",
+        "Na co patrzeć dalej: odpowiedź Meta, działania MeitY, usunięcia kont, audyt reklam, rolę Telegrama i ewentualne sankcje lub lokalne wymogi compliance."
+      ],
+      "sources": [
+        {
+          "title": "Techmeme",
+          "url": "https://techmeme.com/index.html"
+        },
+        {
+          "title": "Moneycontrol",
+          "url": "https://www.moneycontrol.com/news/business/companies/it-minister-ashwini-vaishnaw-directs-meity-to-summon-meta-over-instagram-ads-promoting-child-sexual-abuse-material-13965529.html"
+        },
+        {
+          "title": "Economic Times",
+          "url": "https://m.economictimes.com/tech/technology/ashwini-vaishnaw-directs-meity-to-summon-meta-regarding-instagram-ads-promoting-child-sexual-abuse-material/articleshow/132160557.cms"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Meta",
+        "Instagram",
+        "Reklamy",
+        "Child safety",
+        "Platform safety",
+        "Indie"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-03-1933-1-usa-sygnalizuja-lekki-rezim-ai-onz-buduje-forum-koordynacyjne-aaaffc2dd6",
+      "section": "Regulacje",
+      "title": "USA sygnalizują lekki reżim AI, ONZ buduje forum koordynacyjne",
+      "standfirst": "Financial Times podał, że odchodzący doradca AI Sriram Krishnan wyklucza amerykański regulator typu FDA dla AI. W tym samym tygodniu ITU i ONZ przygotowują AI for Good Global Commission oraz spotkania governance w Genewie.",
+      "whatHappened": "USA komunikują niechęć do scentralizowanego licencjonowania AI, a ONZ próbuje równolegle ustawić wielostronną koordynację.",
+      "whyItMatters": "Po model-gatingu GPT-5.6/Mythos spór przechodzi z teorii do realnego pytania, kto ma prawo spowalniać, dopuszczać albo koordynować frontier modele.",
+      "deeperAnalysis": [
+        "Poranny raport zawierał wątek UN AI scientific panel. Wieczorem doszedł kontrapunkt z USA: według FT Sriram Krishnan przedstawia administrację Trumpa jako przeciwną ciężkiej biurokracji dla AI, nawet jeśli w szczególnych przypadkach bezpieczeństwa narodowego rząd ingerował w release najbardziej zaawansowanych modeli. To nie usuwa kontroli, ale przesuwa ją z klasycznego regulatora do selektywnych decyzji polityczno-bezpieczeństwowych.",
+        "Po drugiej stronie jest ONZ/ITU. AI for Good Global Summit ma odbyć się w Genewie 7-10 lipca 2026 r., a Axios pisał o pierwszym spotkaniu AI for Good Global Commission 8 lipca. To forum nie jest twardym regulatorem, ale tworzy scenę dla państw, firm i organizacji międzynarodowych, które chcą wspólnych standardów, capacity building i zaufania do AI.",
+        "Najważniejsze napięcie brzmi: USA nie chcą \"jednego urzędu od dopuszczania modeli\", ale świat i tak szuka wspólnych reguł. Dla polskiego odbiorcy warto połączyć to z AI Act i polską ustawą AI: Europa buduje formalne ramy, USA wolą lekki i branżowy model, a ONZ próbuje stworzyć miejsce, gdzie te podejścia mogą przynajmniej rozmawiać."
+      ],
+      "contextPoints": [
+        "Co się stało: FT opisał amerykańską niechęć do centralnego regulatora AI, a ITU/ONZ przygotowują lipcowe spotkania AI governance.",
+        "Dlaczego ważne: światowe reguły AI mogą powstać jako mozaika wyjątków bezpieczeństwa, standardów branżowych, prawa UE i forów ONZ, nie jako jeden globalny regulator.",
+        "Na co patrzeć dalej: spotkania 6-8 lipca w Genewie, stanowisko USA po wypowiedziach Krishnana, reakcje UE i to, czy frontier labs zaproponują własne mechanizmy clearinghouse."
+      ],
+      "sources": [
+        {
+          "title": "Financial Times",
+          "url": "https://www.ft.com/content/5128e476-db8b-48ac-a8fb-0f16d0f5c2ed"
+        },
+        {
+          "title": "ITU AI for Good",
+          "url": "https://aiforgood.itu.int/"
+        },
+        {
+          "title": "Axios",
+          "url": "https://www.axios.com/2026/07/01/un-ai-commission-ceos-world-leaders"
+        },
+        {
+          "title": "Business Insider Polska",
+          "url": "https://businessinsider.com.pl/technologie/nowe-technologie/sztuczna-inteligencja-pod-lupa-ue-nowe-zasady-gry-surowe-kary-i-walka-o-prawa/bkhxlb0"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI governance",
+        "USA",
+        "ONZ",
+        "Regulacje",
+        "Frontier AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-03-1933-2-anthropic-i-alibaba-pokazuja-geopolityke-dostepu-do-agentow-c4a0a313ba",
+      "section": "AI",
+      "title": "Anthropic i Alibaba pokazują geopolitykę dostępu do agentów",
+      "standfirst": "Financial Times podał, że Anthropic zamyka obejścia pozwalające chińskim firmom używać Claude, a SCMP opisał zakaz Claude Code w Alibaba od 10 lipca. Spór o model access przenosi się z API do narzędzi developerskich.",
+      "whatHappened": "Anthropic ma aktywnie egzekwować zakaz dostępu z Chin, a Alibaba ma wewnętrznie blokować Claude Code z powodów bezpieczeństwa.",
+      "whyItMatters": "AI coding agents stają się częścią geopolityki, supply chain security i kontroli przepływu wiedzy między amerykańskimi modelami a chińskimi firmami.",
+      "deeperAnalysis": [
+        "To rozwinięcie wcześniejszego wątku o distillation, export controls i Mythos/Fable, ale bardziej operacyjne. FT opisuje praktyki typu zagraniczne spółki zależne, chmura, VPN-y i pośrednicy przekazujący zapytania. Anthropic odpowiada dynamicznym wykrywaniem i egzekwowaniem warunków korzystania. To pokazuje, że access policy dla modeli nie kończy się na checkboxie przy rejestracji.",
+        "SCMP dodaje drugą stronę sporu: Alibaba ma zakazać Claude Code, argumentując ryzyko ukrytego kodu używanego do rozpoznawania użytkowników z Chin. Niezależnie od tego, jak ocenić te claimy, efekt jest jasny: narzędzie developerskie z dostępem do repozytorium, shell, filesystemu i promptów firmowych będzie traktowane jak potencjalnie wrażliwy element infrastruktury.",
+        "Dla podcastu najlepszy kąt to \"agent jako narzędzie wywiadowczo-przemysłowe\". Claude Code nie jest zwykłym chatbotem. Może widzieć kod, logikę produktu, błędy, architekturę i zachowania inżynierów. Jeżeli jednocześnie jest produktem amerykańskiej firmy i narzędziem pożądanym przez chińskie zespoły, to kontrola dostępu staje się elementem rywalizacji technologicznej."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic ma zamykać obejścia dostępu do Claude, a Alibaba ma zakazać Claude Code w biurach.",
+        "Dlaczego ważne: narzędzia agentowe zaczynają być oceniane jak software supply chain i strategiczne kanały transferu wiedzy.",
+        "Na co patrzeć dalej: oficjalną odpowiedź Anthropic/Alibaba, reakcje Microsoft Azure, kolejne bany w chińskich firmach i czy podobne podejście obejmie Cursor, Codex, Gemini CLI lub inne coding agents."
+      ],
+      "sources": [
+        {
+          "title": "Financial Times",
+          "url": "https://www.ft.com/content/ad033063-60f9-4c0c-8d8a-9193a83e6f60"
+        },
+        {
+          "title": "South China Morning Post",
+          "url": "https://www.scmp.com/tech/big-tech/article/3359375/alibaba-bans-staff-using-claude-code-over-anthropic-spyware-concerns"
+        },
+        {
+          "title": "Techmeme River",
+          "url": "https://www.techmeme.com/river"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "Claude Code",
+        "Alibaba",
+        "Chiny",
+        "Model access",
+        "Cyber"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-03-1933-3-godaddy-kontra-indie-domenowa-prywatnosc-zderza-sie-z-walka-z-oszustwami-e5a89e1696",
+      "section": "Cyber",
+      "title": "GoDaddy kontra Indie: domenowa prywatność zderza się z walką z oszustwami",
+      "standfirst": "GoDaddy zaskarżyło indyjskie dyrektywy dotyczące fałszywych stron i domyślnej prywatności danych właścicieli domen. Firma ostrzega, że walka z podszywaniem się pod marki może osłabić prywatność legalnych operatorów stron.",
+      "whatHappened": "Spór o fake websites w Indiach przerodził się w konflikt o to, czy domain registrars mają domyślnie ujawniać lub ograniczać ochronę danych rejestrantów.",
+      "whyItMatters": "Antyfraudowe działania wobec domen mogą bardzo łatwo zmienić się w globalny standard identyfikacji właścicieli stron, z konsekwencjami dla aktywistów, małych firm i bezpieczeństwa operacyjnego.",
+      "deeperAnalysis": [
+        "To dobry przykład, że cyberbezpieczeństwo nie zawsze oznacza łatwy kompromis. Marki i konsumenci mają realny problem z fałszywymi stronami, phishingiem i podszywaniem się pod znane firmy. Sądy i regulatorzy próbują zmusić rejestratorów do szybszej reakcji. GoDaddy odpowiada, że dyrektywy Delhi High Court mogą naruszyć prywatność legalnych właścicieli domen i wypchnąć rejestratorów z rynku.",
+        "W tle jest szerszy problem WHOIS po GDPR. Dawniej dane właścicieli domen były łatwiej dostępne, potem prywatność i ochrona danych ograniczyły publiczne ujawnianie. Teraz presja trademark/fraud próbuje odwrócić część tego trendu. Im większy rynek i większy globalny rejestrator, tym bardziej lokalne postanowienie sądu może mieć efekt poza jednym krajem.",
+        "Podcastowo to dobry techniczny segment: \"kto ma prawo wiedzieć, kto stoi za stroną\". Dla ścigania oszustw jawność pomaga, ale dla dziennikarzy, organizacji pozarządowych, małych przedsiębiorców i osób w krajach autorytarnych domyślna prywatność bywa elementem bezpieczeństwa. Wątek łączy platform trust, cyber fraud i prywatność infrastrukturalną."
+      ],
+      "contextPoints": [
+        "Co się stało: GoDaddy kwestionuje indyjskie dyrektywy sądowe wobec rejestratorów domen.",
+        "Dlaczego ważne: mechanizmy antyfraudowe mogą wpłynąć na globalną prywatność rejestracji domen.",
+        "Na co patrzeć dalej: dalsze decyzje Delhi High Court, reakcję innych rejestratorów, skutki dla ICANN/WHOIS i przypadki brand impersonation w Indiach."
+      ],
+      "sources": [
+        {
+          "title": "Moneycontrol",
+          "url": "https://www.moneycontrol.com/news/business/godaddy-warns-india-s-fake-website-crackdown-could-make-the-internet-less-safe-13965241.html/amp"
+        },
+        {
+          "title": "Techmeme",
+          "url": "https://www.techmeme.com/260703/p7"
+        },
+        {
+          "title": "World Trademark Review",
+          "url": "https://www.worldtrademarkreview.com/article/delhi-high-court-says-domain-name-registrars-must-end-default-registrant-privacy-in-watershed-moment-ip"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "GoDaddy",
+        "Domeny",
+        "Prywatność",
+        "Indie",
+        "Trademark",
+        "Cyberbezpieczeństwo"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-03-1933-4-wyciek-tata-electronics-odslania-ryzyko-supply-chain-apple-1889a48b9d",
+      "section": "Cyber",
+      "title": "Wyciek Tata Electronics odsłania ryzyko supply chain Apple",
+      "standfirst": "Indyjskie MeitY sprawdza wyciek danych Tata Electronics, dostawcy Apple. Według Moneycontrol i Reutersa materiały obejmują listy dostawców, mapowanie komponentów oraz pliki dotyczące niewydanych modeli iPhone 18 Pro.",
+      "whatHappened": "Naruszenie u dostawcy Apple ujawniło materiały produkcyjne i projektowe, które nie musiały znajdować się bezpośrednio w systemach Apple.",
+      "whyItMatters": "Największe firmy technologiczne mogą mieć świetne zabezpieczenia centralne, ale ich tajemnice produktowe są rozproszone po dostawcach, fabrykach, audytorach i partnerach.",
+      "deeperAnalysis": [
+        "To nie jest tylko historia o przecieku designu telefonu. Jeżeli w wycieku znajdują się mapowania komponentów, listy dostawców i dokumenty inżynieryjne, to naruszenie może dotykać relacji zakupowych, strategii produkcji i przewag negocjacyjnych. Apple od lat dywersyfikuje produkcję poza Chiny, a Indie są kluczowym elementem tej strategii; taki incydent pokazuje koszt przyspieszonego rozszerzania łańcucha dostaw.",
+        "Ransomware w supply chain działa inaczej niż klasyczne włamanie do centrali firmy. Atakujący mogą nie potrzebować dostępu do Apple, jeśli znajdą partnera posiadającego lokalne pliki, testy, zdjęcia, dokumentację jakościową albo komunikację projektową. To trudniejsze do kontrolowania, bo wymaga jednolitych standardów bezpieczeństwa w wielu jurysdykcjach i u partnerów o różnej dojrzałości.",
+        "Dla podcastu warto zestawić to z Anthropic/Alibaba i GoDaddy: wszystkie trzy historie dotyczą kontroli dostępu do infrastruktury zaufania. W jednym przypadku chodzi o modele, w drugim o domeny, a tutaj o fabryki i dokumentację sprzętu. Technologia jest globalna, ale ryzyko często wycieka przez lokalny element łańcucha."
+      ],
+      "contextPoints": [
+        "Co się stało: Indie badają wyciek z Tata Electronics po publikacji plików powiązanych z niewydanymi produktami Apple.",
+        "Dlaczego ważne: hardware supply chain stał się powierzchnią ataku na tajemnice produktowe i relacje dostawców.",
+        "Na co patrzeć dalej: audyt Tata, zalecenia CERT-In, reakcję Apple, wpływ na dywersyfikację produkcji w Indiach i kolejne próbki danych z dark webu."
+      ],
+      "sources": [
+        {
+          "title": "Moneycontrol",
+          "url": "https://www.moneycontrol.com/technology/meity-begins-probe-into-tata-electronics-cyber-leak-exposing-confidential-apple-iphone-18-pro-files-article-13965295.html"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/tech/959229/iphone-18-pro-leak-apple-dark-web"
+        },
+        {
+          "title": "Economic Times",
+          "url": "https://economictimes.indiatimes.com/industry/cons-products/electronics/apple-supplier-tata-electronics-tightens-internal-controls-after-data-breach/articleshow/132013629.cms"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Apple",
+        "Tata Electronics",
+        "Ransomware",
+        "Supply chain",
+        "Indie",
+        "iPhone"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-03-1933-5-yam-9-i-navi-orbital-przenosza-ai-z-data-center-na-satelite-fe134ca531",
+      "section": "Infrastruktura",
+      "title": "YAM-9 i NAVI-Orbital przenoszą AI z data center na satelitę",
+      "standfirst": "WP Tech opisał satelitę YAM-9, który dzięki NAVI-Orbital i Gemma 3 ma rozpoznawać obiekty bez stałego przesyłania surowych danych na Ziemię. Paper arXiv wskazuje demonstrację onboard VLM z 16 kwietnia 2026 r.",
+      "whatHappened": "System NASA JPL i Loft Orbital uruchomił vision-language model bezpośrednio na satelicie obserwacyjnym.",
+      "whyItMatters": "Edge AI w kosmosie może zmniejszyć wąskie gardło transmisji danych i skrócić czas od zdjęcia do decyzji.",
+      "deeperAnalysis": [
+        "Ten temat jest lżejszy niż Meta/India albo Anthropic/Alibaba, ale dobrze domyka tygodniowy wątek infrastruktury. Większość AI newsów mówi o gigantycznych data centers, GPU, HBM i energii. YAM-9 pokazuje przeciwny kierunek: mały model i software orchestration działają tam, gdzie powstają dane, zanim trafią do ziemskiego centrum analitycznego.",
+        "Paper arXiv opisuje NAVI-Orbital jako system z lokalnym vision-language model Gemma 3, natural-language retasking i modułami do detekcji oraz dialogu. Deklarowany wynik naziemny 88,16 proc. na kuratorowanym zbiorze AID nie oznacza gotowego systemu operacyjnego dla każdej misji, ale pokazuje, że foundation models można ścieśnić do sprzętu satelitarnego i wykorzystać do semantic compression.",
+        "Podcastowo to dobry kontrast do Orbital Compute. Tam startup chciał wynosić data centers w kosmos, tu satelita robi małą część AI u siebie, żeby nie wysyłać wszystkiego na dół. W praktyce to druga, bardziej realistyczna ścieżka: nie przenosimy całej chmury na orbitę, tylko przenosimy decyzję bliżej sensora."
+      ],
+      "contextPoints": [
+        "Co się stało: YAM-9/NAVI-Orbital pokazał onboard vision-language inference na satelicie.",
+        "Dlaczego ważne: przetwarzanie przy sensorze może zmienić ekonomię danych satelitarnych, katastrof naturalnych i monitoringu infrastruktury.",
+        "Na co patrzeć dalej: peer review paperu, kolejne zdjęcia orbitalne, ograniczenia fałszywych detekcji, zastosowania disaster response i prywatność zautomatyzowanego nadzoru."
+      ],
+      "sources": [
+        {
+          "title": "WP Tech",
+          "url": "https://tech.wp.pl/przelomowa-technologia-satelita-samodzielnie-rozpoznaje-na-co-patrzy%2C7303284486080864a"
+        },
+        {
+          "title": "arXiv",
+          "url": "https://arxiv.org/abs/2606.18271"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/06/15/a-satellite-just-learned-to-find-things-on-its-own-heres-what-that-means/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Satelity",
+        "NASA JPL",
+        "Gemma 3",
+        "Edge AI",
+        "Earth observation",
+        "WP Tech"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Instagram, CSAM i odpowiedzialność reklamowa Meta w Indiach",
+      "rationale": "Najcięższy temat dnia: płatny system reklamowy może stać się kanałem szkody, więc regulatorzy będą pytać o proces zatwierdzania i monetyzacji reklam.",
+      "sourcesLabel": "BBC przez Techmeme; Moneycontrol; Economic Times"
+    },
+    {
+      "priority": "High",
+      "title": "USA bez \"FDA dla AI\" kontra ONZ w Genewie",
+      "rationale": "Po access gating frontier modeli widać dwa modele governance: lekki, selektywny reżim USA i wielostronną koordynację ONZ/ITU.",
+      "sourcesLabel": "FT; ITU; Axios"
+    },
+    {
+      "priority": "High",
+      "title": "Anthropic, Alibaba i geopolityka Claude Code",
+      "rationale": "Coding agents z dostępem do kodu firmowego stają się elementem bezpieczeństwa narodowego, kontroli dostępu i supply chain risk.",
+      "sourcesLabel": "FT; SCMP; Techmeme"
+    },
+    {
+      "priority": "Medium",
+      "title": "GoDaddy i prywatność domen w Indiach",
+      "rationale": "Walka z fake websites zderza się z ochroną danych rejestrantów i może ustawić precedens dla globalnej infrastruktury domen.",
+      "sourcesLabel": "Moneycontrol; Techmeme; World Trademark Review"
+    },
+    {
+      "priority": "High",
+      "title": "Tata Electronics i wyciek supply chain Apple",
+      "rationale": "Produkty Big Tech są chronione nie tylko przez centralne zespoły cyber, ale też przez lokalnych dostawców i fabryki.",
+      "sourcesLabel": "Moneycontrol; The Verge; Economic Times"
+    },
+    {
+      "priority": "Medium",
+      "title": "DOJ kontra Scattered Spider",
+      "rationale": "Ekstradycja podejrzanego pokazuje, że grupy ransomware i social-engineeringowe są traktowane jak transgraniczny problem egzekwowania prawa.",
+      "sourcesLabel": "DOJ; The Record przez Techmeme"
+    },
+    {
+      "priority": "Medium",
+      "title": "YAM-9: AI na satelicie zamiast w data center",
+      "rationale": "Dobry pozytywny kontrast infrastrukturalny: przetwarzanie bliżej sensora może być realniejszą ścieżką niż orbitalne data centers.",
+      "sourcesLabel": "WP Tech; arXiv; TechCrunch"
+    },
+    {
+      "priority": "Low",
+      "title": "Product Hunt: Glaze, Osloq, Vox i desktop agents",
+      "rationale": "Codzienny rynek agentów przenosi się na Mac apps, GitHub issue reproduction, głosowego Copilota i developer workflow.",
+      "sourcesLabel": "Product Hunt; Glaze by Raycast; HN"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Techmeme",
+      "url": "https://www.techmeme.com/"
+    },
+    {
+      "title": "Techmeme River",
+      "url": "https://www.techmeme.com/river"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/news"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "old Reddit / r/technology",
+      "url": "https://old.reddit.com/r/technology/"
+    },
+    {
+      "title": "old Reddit / r/artificial",
+      "url": "https://old.reddit.com/r/artificial/"
+    },
+    {
+      "title": "BBC przez Techmeme o reklamach na Instagramie",
+      "url": "https://techmeme.com/index.html"
+    },
+    {
+      "title": "Moneycontrol o wezwaniu Meta przez MeitY",
+      "url": "https://www.moneycontrol.com/news/business/companies/it-minister-ashwini-vaishnaw-directs-meity-to-summon-meta-over-instagram-ads-promoting-child-sexual-abuse-material-13965529.html"
+    },
+    {
+      "title": "Financial Times o podejściu USA do regulacji AI",
+      "url": "https://www.ft.com/content/5128e476-db8b-48ac-a8fb-0f16d0f5c2ed"
+    },
+    {
+      "title": "Financial Times o dostępie chińskich firm do Claude",
+      "url": "https://www.ft.com/content/ad033063-60f9-4c0c-8d8a-9193a83e6f60"
+    },
+    {
+      "title": "South China Morning Post o zakazie Claude Code w Alibaba",
+      "url": "https://www.scmp.com/tech/big-tech/article/3359375/alibaba-bans-staff-using-claude-code-over-anthropic-spyware-concerns"
+    },
+    {
+      "title": "Moneycontrol o GoDaddy",
+      "url": "https://www.moneycontrol.com/news/business/godaddy-warns-india-s-fake-website-crackdown-could-make-the-internet-less-safe-13965241.html/amp"
+    },
+    {
+      "title": "Moneycontrol o wycieku Tata Electronics",
+      "url": "https://www.moneycontrol.com/technology/meity-begins-probe-into-tata-electronics-cyber-leak-exposing-confidential-apple-iphone-18-pro-files-article-13965295.html"
+    },
+    {
+      "title": "DOJ o Scattered Spider",
+      "url": "https://www.justice.gov/usao-ndil/pr/alleged-member-criminal-cyber-hacking-group-scattered-spider-arrested-finland-and"
+    },
+    {
+      "title": "ITU AI for Good",
+      "url": "https://aiforgood.itu.int/"
+    },
+    {
+      "title": "Axios o AI for Good Global Commission",
+      "url": "https://www.axios.com/2026/07/01/un-ai-commission-ceos-world-leaders"
+    },
+    {
+      "title": "arXiv: NAVI-Orbital",
+      "url": "https://arxiv.org/abs/2606.18271"
+    },
+    {
+      "title": "WP Tech o satelicie YAM-9 i NAVI-Orbital",
+      "url": "https://tech.wp.pl/przelomowa-technologia-satelita-samodzielnie-rozpoznaje-na-co-patrzy%2C7303284486080864a"
+    },
+    {
+      "title": "Business Insider Polska: AI Act i GPAI",
+      "url": "https://businessinsider.com.pl/technologie/nowe-technologie/sztuczna-inteligencja-pod-lupa-ue-nowe-zasady-gry-surowe-kary-i-walka-o-prawa/bkhxlb0"
+    },
+    {
+      "title": "TVN24 o polskiej ustawie AI",
+      "url": "https://tvn24.pl/biznes/tech/sejmowa-komisja-zaakceptowala-projekt-ustawy-regulujacej-funkcjonowanie-systemow-ai-w-polsce-st9070776"
+    }
+  ]
+}
