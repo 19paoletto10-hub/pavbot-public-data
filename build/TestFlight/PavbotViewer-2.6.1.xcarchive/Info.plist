@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>ApplicationProperties</key>
+	<dict>
+		<key>ApplicationPath</key>
+		<string>Applications/PavbotViewer.app</string>
+		<key>Architectures</key>
+		<array>
+			<string>arm64</string>
+		</array>
+		<key>CFBundleIdentifier</key>
+		<string>com.paweltanski.pavbotviewer</string>
+		<key>CFBundleShortVersionString</key>
+		<string>2.6.1</string>
+		<key>CFBundleVersion</key>
+		<string>260708.003757</string>
+		<key>SigningIdentity</key>
+		<string>Apple Development: tanski.pawel@icloud.com (RLZ8X7S7V2)</string>
+		<key>Team</key>
+		<string>SP774TZZU8</string>
+	</dict>
+	<key>ArchiveVersion</key>
+	<integer>2</integer>
+	<key>CreationDate</key>
+	<date>2026-07-07T22:38:40Z</date>
+	<key>Name</key>
+	<string>PavbotViewer</string>
+	<key>SchemeName</key>
+	<string>PavbotViewer</string>
+</dict>
+</plist>
