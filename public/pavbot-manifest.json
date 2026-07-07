@@ -1,9 +1,97 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-07T22:21:15.844306+00:00",
+  "generatedAt": "2026-07-07T22:54:25.814815+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
-  "automations": [],
+  "automations": [
+    {
+      "id": "pavbot-aktualne-wydarzenia-mobile-10-15",
+      "name": "Pavbot Aktualne Wydarzenia Mobile 10:15",
+      "enabled": true,
+      "kind": "researchAudio",
+      "topic": "aktualne-wydarzenia-mobile",
+      "topicPath": "research/aktualne-wydarzenia-mobile",
+      "cadence": "daily at 10:15 local time",
+      "sourcePath": "docs/how-to-use.md",
+      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "output": "research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf",
+      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf"
+    },
+    {
+      "id": "pavbot-llm-ai-jobs-wroclaw-research",
+      "name": "Pavbot LLM/AI Jobs Wrocław Research",
+      "enabled": true,
+      "kind": "research",
+      "topic": "llm-ai-jobs-wroclaw",
+      "topicPath": "research/llm-ai-jobs-wroclaw",
+      "cadence": "twice daily; repository reports use `YYYY-MM-DD-HHMM` filenames",
+      "sourcePath": "docs/how-to-use.md",
+      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "output": "research/llm-ai-jobs-wroclaw/runs/YYYY-MM-DD-HHMM.md",
+      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/runs/YYYY-MM-DD-HHMM.md"
+    },
+    {
+      "id": "pavbot-polska-wiat-podcast-09-30",
+      "name": "Pavbot Polska Świat Podcast 09:30",
+      "enabled": true,
+      "kind": "podcast",
+      "topic": "polska-swiat",
+      "topicPath": "research/polska-swiat",
+      "cadence": "daily at 09:30 local time",
+      "sourcePath": "docs/how-to-use.md",
+      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "output": "research/polska-swiat/podcasts/YYYY-MM-DD/podcast.mp3",
+      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/YYYY-MM-DD/podcast.mp3"
+    },
+    {
+      "id": "pavbot-polska-wiat-research-08-30",
+      "name": "Pavbot Polska Świat Research 08:30",
+      "enabled": true,
+      "kind": "research",
+      "topic": "polska-swiat",
+      "topicPath": "research/polska-swiat",
+      "cadence": "daily at 08:30 local time",
+      "sourcePath": "docs/how-to-use.md",
+      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md"
+    },
+    {
+      "id": "pavbot-puls-dnia-news-3h",
+      "name": "Pavbot Puls Dnia 3h",
+      "enabled": true,
+      "kind": "automation",
+      "topic": "puls-dnia-news",
+      "topicPath": "research/puls-dnia-news",
+      "cadence": "06:00, 09:00, 12:00, 15:00, 18:00 and 21:00 Europe/Warsaw",
+      "sourcePath": "docs/how-to-use.md",
+      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "output": "research/puls-dnia-news/data/YYYY-MM-DD-HHMM-pulse-news.json",
+      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/YYYY-MM-DD-HHMM-pulse-news.json"
+    },
+    {
+      "id": "pavbot-tech-podcast-09-00",
+      "name": "Pavbot Tech Podcast 09:00",
+      "enabled": true,
+      "kind": "podcast",
+      "topic": "tech-news",
+      "topicPath": "research/tech-news",
+      "cadence": "daily at 09:00 local time",
+      "sourcePath": "docs/how-to-use.md",
+      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "output": "research/tech-news/podcasts/YYYY-MM-DD/podcast.mp3",
+      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/YYYY-MM-DD/podcast.mp3"
+    },
+    {
+      "id": "codex-agent-automation-daily-research",
+      "name": "Pavbot Tech Research 08:00",
+      "enabled": true,
+      "kind": "research",
+      "topic": "tech-news",
+      "topicPath": "research/tech-news",
+      "cadence": "daily at 08:00 local time",
+      "sourcePath": "docs/how-to-use.md",
+      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md"
+    }
+  ],
   "topics": [
     {
       "slug": "aktualne-wydarzenia-mobile",
