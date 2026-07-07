@@ -112,6 +112,76 @@ struct Briefing: Identifiable, Equatable, Sendable {
     }
 }
 
+struct CloudKitArtifact: Identifiable, Equatable, Sendable {
+    static let recordType = "Artifact"
+
+    var id: String { artifactId }
+
+    let artifactId: String
+    let briefingId: String
+    let topic: String
+    let stamp: String
+    let type: String
+    let title: String
+    let path: String
+    let url: String
+    let sizeBytes: Int
+    let date: String?
+    let time: String?
+    let manifestUrl: String
+    let status: String
+    let createdAt: Date
+    let version: Int
+
+    init(record: CKRecord) throws {
+        artifactId = try Self.requiredString("artifactId", in: record)
+        briefingId = try Self.requiredString("briefingId", in: record)
+        topic = try Self.requiredString("topic", in: record)
+        stamp = try Self.requiredString("stamp", in: record)
+        type = try Self.requiredString("type", in: record)
+        title = try Self.requiredString("title", in: record)
+        path = try Self.requiredString("path", in: record)
+        url = try Self.requiredString("url", in: record)
+        sizeBytes = try Self.requiredInt("sizeBytes", in: record)
+        date = Self.optionalString("date", in: record)
+        time = Self.optionalString("time", in: record)
+        manifestUrl = try Self.requiredString("manifestUrl", in: record)
+        status = try Self.requiredString("status", in: record)
+        createdAt = try Self.requiredDate("createdAt", in: record)
+        version = try Self.requiredInt("version", in: record)
+    }
+
+    private static func optionalString(_ key: String, in record: CKRecord) -> String? {
+        guard let value = record[key] as? String else { return nil }
+        let trimmed = value.trimmingCharacters(in: .whitespacesAndNewlines)
+        return trimmed.isEmpty ? nil : value
+    }
+
+    private static func requiredString(_ key: String, in record: CKRecord) throws -> String {
+        guard let value = record[key] as? String, !value.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty else {
+            throw CloudKitRecordMappingError.missingField(recordType: record.recordType, field: key)
+        }
+        return value
+    }
+
+    private static func requiredDate(_ key: String, in record: CKRecord) throws -> Date {
+        guard let value = record[key] as? Date else {
+            throw CloudKitRecordMappingError.missingField(recordType: record.recordType, field: key)
+        }
+        return value
+    }
+
+    private static func requiredInt(_ key: String, in record: CKRecord) throws -> Int {
+        if let value = record[key] as? Int {
+            return value
+        }
+        if let value = record[key] as? Int64 {
+            return Int(value)
+        }
+        throw CloudKitRecordMappingError.missingField(recordType: record.recordType, field: key)
+    }
+}
+
 struct UserNotificationPreferences: Equatable, Sendable {
     static let recordType = "UserPreferences"
     static let recordName = "current-user-preferences"
@@ -194,15 +264,70 @@ enum CloudKitRecordMappingError: LocalizedError, Equatable {
     }
 }
 
+enum CloudKitBriefingNotificationMode: String, CaseIterable, Identifiable, Sendable {
+    case visibleAlert
+    case silentRefresh
+
+    static let defaultsKey = "pavbot.cloudKitBriefingNotificationMode"
+    static let defaultValue: Self = .visibleAlert
+
+    var id: String { rawValue }
+
+    var title: String {
+        switch self {
+        case .visibleAlert:
+            "Widoczny alert"
+        case .silentRefresh:
+            "Ciche odświeżenie"
+        }
+    }
+
+    var detail: String {
+        switch self {
+        case .visibleAlert:
+            "Pokazuje baner z dźwiękiem i odświeża manifest po publikacji briefingu."
+        case .silentRefresh:
+            "Odświeża dane w tle bez banera i dźwięku."
+        }
+    }
+
+    var subscriptionID: String {
+        switch self {
+        case .visibleAlert:
+            "briefings-ready-visible-alert-subscription-v2"
+        case .silentRefresh:
+            "briefings-ready-silent-refresh-subscription-v1"
+        }
+    }
+
+    static func load(defaults: UserDefaults = .standard) -> Self {
+        guard let rawValue = defaults.string(forKey: defaultsKey), let mode = Self(rawValue: rawValue) else {
+            return defaultValue
+        }
+        return mode
+    }
+
+    static func save(_ mode: Self, defaults: UserDefaults = .standard) {
+        defaults.set(mode.rawValue, forKey: defaultsKey)
+    }
+
+    static func mode(forSubscriptionID subscriptionID: String?) -> Self? {
+        guard let subscriptionID else { return nil }
+        return allCases.first { $0.subscriptionID == subscriptionID }
+    }
+}
+
 protocol BriefingMetadataFetching: Sendable {
     func fetchLatestBriefings(limit: Int) async throws -> [Briefing]
     func fetchBriefing(by briefingId: String) async throws -> Briefing
-    func createOrUpdateSubscriptions() async throws
+    func fetchArtifacts(for briefingId: String) async throws -> [CloudKitArtifact]
+    func createOrUpdateSubscriptions(mode: CloudKitBriefingNotificationMode) async throws
 }
 
 actor CloudKitService: BriefingMetadataFetching {
     static let shared = CloudKitService()
-    static let briefingsReadySubscriptionID = "briefings-ready-subscription"
+    static let legacyBriefingsReadySubscriptionID = "briefings-ready-subscription"
+    static let briefingNotificationDesiredKeys = ["briefingId", "title", "summary", "manifestUrl", "category", "createdAt"]
 
     private let container: CKContainer
     private let publicCloudDatabase: CKDatabase
@@ -252,6 +377,24 @@ actor CloudKitService: BriefingMetadataFetching {
         }
     }
 
+    func fetchArtifacts(for briefingId: String) async throws -> [CloudKitArtifact] {
+        do {
+            let predicate = NSPredicate(value: true)
+            let query = CKQuery(recordType: CloudKitArtifact.recordType, predicate: predicate)
+            let (matches, _) = try await publicCloudDatabase.records(matching: query, resultsLimit: 200)
+            let artifacts = try matches.map { _, result in
+                try CloudKitArtifact(record: result.get())
+            }.filter { artifact in
+                artifact.briefingId == briefingId
+            }.sorted { $0.path < $1.path }
+            logger.info("Fetched \(artifacts.count, privacy: .public) CloudKit artifacts for \(briefingId, privacy: .public).")
+            return artifacts
+        } catch {
+            logger.error("CloudKit artifact fetch failed for \(briefingId, privacy: .public): \(Self.logMessage(for: error), privacy: .public)")
+            throw error
+        }
+    }
+
     func saveUserNotificationPreferences(_ preferences: UserNotificationPreferences) async throws {
         do {
             let existing = try? await privateCloudDatabase.record(
@@ -280,28 +423,14 @@ actor CloudKitService: BriefingMetadataFetching {
         }
     }
 
-    func createOrUpdateSubscriptions() async throws {
-        let predicate = NSPredicate(format: "status == %@", "ready")
-        let subscription = CKQuerySubscription(
-            recordType: Briefing.recordType,
-            predicate: predicate,
-            subscriptionID: Self.briefingsReadySubscriptionID,
-            options: [.firesOnRecordCreation, .firesOnRecordUpdate]
-        )
-        let notificationInfo = CKSubscription.NotificationInfo()
-        notificationInfo.titleLocalizationKey = "PAVBOT_BRIEFING_NOTIFICATION_TITLE"
-        notificationInfo.alertLocalizationKey = "PAVBOT_BRIEFING_NOTIFICATION_BODY"
-        notificationInfo.alertLocalizationArgs = ["title"]
-        notificationInfo.soundName = "default"
-        notificationInfo.desiredKeys = ["briefingId", "title", "summary", "manifestUrl", "category", "createdAt"]
-        // Briefing-ready pushes must be a visible alert, not a silent background push.
-        subscription.notificationInfo = notificationInfo
+    func createOrUpdateSubscriptions(mode: CloudKitBriefingNotificationMode = .load()) async throws {
+        let subscription = Self.briefingSubscription(for: mode)
 
         do {
             try await withCheckedThrowingContinuation { continuation in
                 let operation = CKModifySubscriptionsOperation(
                     subscriptionsToSave: [subscription],
-                    subscriptionIDsToDelete: []
+                    subscriptionIDsToDelete: Self.inactiveBriefingSubscriptionIDs(for: mode)
                 )
                 operation.modifySubscriptionsResultBlock = { result in
                     switch result {
@@ -313,11 +442,53 @@ actor CloudKitService: BriefingMetadataFetching {
                 }
                 publicCloudDatabase.add(operation)
             }
-            logger.info("CloudKit subscription \(Self.briefingsReadySubscriptionID, privacy: .public) is ready.")
+            logger.info("CloudKit subscription \(mode.subscriptionID, privacy: .public) is ready for \(mode.title, privacy: .public).")
         } catch {
             logger.error("CloudKit subscription update failed: \(Self.logMessage(for: error), privacy: .public)")
             throw error
         }
+    }
+
+    static func briefingSubscription(for mode: CloudKitBriefingNotificationMode) -> CKQuerySubscription {
+        let predicate = NSPredicate(format: "status == %@", "ready")
+        let subscription = CKQuerySubscription(
+            recordType: Briefing.recordType,
+            predicate: predicate,
+            subscriptionID: mode.subscriptionID,
+            options: [.firesOnRecordCreation, .firesOnRecordUpdate]
+        )
+        subscription.notificationInfo = briefingNotificationInfo(for: mode)
+        return subscription
+    }
+
+    static func briefingNotificationInfo(for mode: CloudKitBriefingNotificationMode) -> CKSubscription.NotificationInfo {
+        let notificationInfo = CKSubscription.NotificationInfo()
+        switch mode {
+        case .visibleAlert:
+            notificationInfo.titleLocalizationKey = "PAVBOT_BRIEFING_NOTIFICATION_TITLE"
+            notificationInfo.alertLocalizationKey = "PAVBOT_BRIEFING_NOTIFICATION_BODY"
+            notificationInfo.alertLocalizationArgs = ["title"]
+            notificationInfo.soundName = "default"
+            notificationInfo.shouldSendContentAvailable = true
+        case .silentRefresh:
+            notificationInfo.shouldSendContentAvailable = true
+        }
+        notificationInfo.desiredKeys = Self.briefingNotificationDesiredKeys
+        return notificationInfo
+    }
+
+    static func inactiveBriefingSubscriptionIDs(for mode: CloudKitBriefingNotificationMode) -> [String] {
+        [legacyBriefingsReadySubscriptionID] + CloudKitBriefingNotificationMode.allCases
+            .filter { $0 != mode }
+            .map(\.subscriptionID)
+    }
+
+    static func isBriefingsReadySubscriptionID(_ subscriptionID: String?) -> Bool {
+        guard let subscriptionID else { return false }
+        if subscriptionID == legacyBriefingsReadySubscriptionID {
+            return true
+        }
+        return CloudKitBriefingNotificationMode.allCases.contains { $0.subscriptionID == subscriptionID }
     }
 
     private static func logMessage(for error: Error) -> String {
@@ -344,7 +515,7 @@ final class CloudKitPushRefreshCenter {
     func handleRemoteNotification(_ userInfo: [AnyHashable: Any]) async -> UIBackgroundFetchResult {
         guard
             let notification = CKNotification(fromRemoteNotificationDictionary: userInfo),
-            notification.subscriptionID == CloudKitService.briefingsReadySubscriptionID
+            CloudKitService.isBriefingsReadySubscriptionID(notification.subscriptionID)
         else {
             logger.debug("Ignoring non-Pavbot CloudKit push.")
             return .noData

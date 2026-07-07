@@ -1,9 +1,8 @@
-# Live iOS Notifications With Contabo/VPS
+# Legacy Live iOS Notifications With Contabo/VPS
 
-Pavbot live iOS notifications can run on Contabo as the production notifier
-host. This is the preferred setup when notifications should work 24/7 without
-depending on a MacBook, a local Docker daemon, or a temporary Cloudflare Quick
-Tunnel.
+Pavbot legacy APNs notifier utilities can run on Contabo as an optional
+production host. Current briefing notifications do not use this path; the iOS
+app receives briefing pushes from the CloudKit `Briefing` subscription.
 
 This repository keeps the MacBook setup as a development/backup path. The
 Contabo path is isolated so it can share a server with other applications.
@@ -13,7 +12,7 @@ Contabo path is isolated so it can share a server with other applications.
 Recommended public URL:
 
 ```text
-https://notify.paweltanski.com
+https://notifier.example.com
 ```
 
 The service itself must stay private on localhost:
@@ -23,20 +22,20 @@ The service itself must stay private on localhost:
 ```
 
 Do not expose container port `8080` directly to the internet. GitHub, iOS, and
-APNs-facing diagnostics should only use HTTPS on `notify.paweltanski.com`.
+APNs-facing diagnostics should only use HTTPS on your notifier domain.
 
 ## Architecture
 
 - Codex automations publish artifacts and `public/pavbot-manifest.json` to
   `origin/main`.
 - GitHub sends one `push` webhook to
-  `https://notify.paweltanski.com/webhooks/github`.
+  `https://notifier.example.com/webhooks/github`.
 - The Contabo notifier fetches `PAVBOT_MANIFEST_URL`, diffs the manifest, and
   sends APNs alerts for new artifacts.
-- The iOS app registers device tokens with
-  `POST https://notify.paweltanski.com/v1/devices`.
+- Legacy iOS builds can register device tokens with
+  `POST https://notifier.example.com/v1/devices`.
 - The app can restore connection defaults from
-  `GET https://notify.paweltanski.com/v1/app/defaults`.
+  `GET https://notifier.example.com/v1/app/defaults`.
 
 Use only one active webhook destination for production. Running MacBook and
 Contabo webhooks at the same time can send duplicate notifications to the same
@@ -63,8 +62,8 @@ review Docker build cache and unused images manually before deploying.
 - `backend/pavbot-notifier/docker-compose.contabo.yml` - Contabo override:
   local-only bind, log caps, stable compose project name.
 - `backend/pavbot-notifier/.env.contabo.example` - production template for
-  `notify.paweltanski.com`.
-- `backend/pavbot-notifier/nginx/notify.paweltanski.com.conf` - Nginx vhost
+  your notifier domain.
+- `backend/pavbot-notifier/nginx/pavbot-notifier.example.conf` - Nginx vhost
   example for HTTPS reverse proxy.
 - `backend/pavbot-notifier/scripts/contabo-preflight.sh` - server-side safety
   check.
@@ -111,7 +110,7 @@ secret values:
 
 ```dotenv
 PAVBOT_MANIFEST_URL=https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json
-PAVBOT_PUBLIC_NOTIFIER_URL=https://notify.paweltanski.com
+PAVBOT_PUBLIC_NOTIFIER_URL=https://notifier.example.com
 PAVBOT_CONTABO_BIND_PORT=18082
 GITHUB_WEBHOOK_SECRET=...
 APNS_ENV=production
@@ -160,10 +159,10 @@ inside the container.
 Install the vhost without changing the existing `paweltanski.com` site:
 
 ```bash
-cp /opt/pavbot-notifier/nginx/notify.paweltanski.com.conf \
-  /etc/nginx/sites-available/notify.paweltanski.com.conf
-ln -sfn /etc/nginx/sites-available/notify.paweltanski.com.conf \
-  /etc/nginx/sites-enabled/notify.paweltanski.com.conf
+cp /opt/pavbot-notifier/nginx/pavbot-notifier.example.conf \
+  /etc/nginx/sites-available/pavbot-notifier.conf
+ln -sfn /etc/nginx/sites-available/pavbot-notifier.conf \
+  /etc/nginx/sites-enabled/pavbot-notifier.conf
 ```
 
 Create the certificate:
@@ -171,7 +170,7 @@ Create the certificate:
 ```bash
 certbot certonly --webroot \
   -w /var/www/paweltanski/webroot \
-  -d notify.paweltanski.com
+  -d notifier.example.com
 ```
 
 Then validate and reload:
@@ -186,27 +185,15 @@ systemctl reload nginx
 GitHub webhook:
 
 ```text
-Payload URL: https://notify.paweltanski.com/webhooks/github
+Payload URL: https://notifier.example.com/webhooks/github
 Content type: application/json
 Secret: same as GITHUB_WEBHOOK_SECRET
 Events: push
 ```
 
-iOS:
-
-```text
-Settings -> Notification server URL -> https://notify.paweltanski.com
-Settings -> Enable file alerts
-```
-
-If the app still has an old temporary tunnel URL, use:
-
-```text
-Settings -> Przywróć ustawienia domyślne
-```
-
-This calls `/v1/app/defaults` and fills the current manifest and notifier URLs
-from the Contabo `.env`.
+iOS briefing push is configured in-app through CloudKit under
+`Ustawienia -> Powiadomienia -> Tryb briefingów`. Legacy builds that still use a
+notifier URL should point at the generic notifier domain above.
 
 ## Verification
 
@@ -220,9 +207,9 @@ curl http://127.0.0.1:18082/status
 Publicly:
 
 ```bash
-curl https://notify.paweltanski.com/healthz
-curl https://notify.paweltanski.com/status
-curl https://notify.paweltanski.com/v1/app/defaults
+curl https://notifier.example.com/healthz
+curl https://notifier.example.com/status
+curl https://notifier.example.com/v1/app/defaults
 ```
 
 Expected `/status` after iOS registration:
@@ -230,7 +217,7 @@ Expected `/status` after iOS registration:
 - `apnsConfigured: true`
 - `apnsEnvironment: production`
 - `registeredDevices >= 1`
-- `publicNotifierURL: https://notify.paweltanski.com`
+- `publicNotifierURL: https://notifier.example.com`
 
 After a `puls-dnia-news` publish, verify:
 

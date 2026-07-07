@@ -77,7 +77,7 @@ python3 scripts/validate_pulse_news_data.py research/puls-dnia-news/data/YYYY-MM
 Jeśli walidacja nie przejdzie, popraw JSON i raport. Nie publikuj niepoprawnych
 danych.
 
-Na końcu opublikuj wynik dla aplikacji iOS i webhooka powiadomień:
+Na końcu opublikuj wynik dla aplikacji iOS przez CloudKit briefing i manifest danych:
 
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/puls-dnia-news
 

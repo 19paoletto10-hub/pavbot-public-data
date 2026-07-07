@@ -72,6 +72,18 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
         self.assertEqual(command.count("--database-type"), 1)
         self.assertEqual(command[command.index("--database-type") + 1], "public")
 
+    def test_cktool_schema_hint_explains_missing_artifact_record_type(self) -> None:
+        publish_cloudkit_briefings = self.load_publisher_module()
+
+        hint = publish_cloudkit_briefings.cktool_schema_hint(
+            "An unknown error occured with message: not-found.",
+            ["xcrun", "cktool", "query-records", "--record-type", "Artifact"],
+        )
+
+        self.assertIsNotNone(hint)
+        self.assertIn("Artifact record type", hint)
+        self.assertIn("scripts/pavbot_commit_and_push_outputs.sh --all-topics", hint)
+
     def test_publish_records_performs_real_cloudkit_create_or_replace(self) -> None:
         publish_cloudkit_briefings = self.load_publisher_module()
         args = argparse.Namespace(
@@ -113,13 +125,295 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
             publish_cloudkit_briefings.query_existing_records = original_query
             publish_cloudkit_briefings.run_cktool = original_run
 
-        self.assertEqual([call[2] for call in calls], ["delete-records", "create-record"])
+        self.assertEqual([call[2] for call in calls], ["delete-record", "create-record"])
+        self.assertIn("--record-name", calls[0])
+        self.assertIn("existing-briefing-record", calls[0])
         self.assertIn("--record-type", calls[1])
         self.assertIn("--fields-json", calls[1])
         created_fields = json.loads(calls[1][calls[1].index("--fields-json") + 1])
         self.assertEqual(created_fields["briefingId"]["value"], "puls-dnia-news:2026-07-06-1800")
         self.assertEqual(created_fields["category"]["value"], "puls-dnia-news")
         self.assertEqual(created_fields["status"]["value"], "ready")
+
+    def test_publish_records_skips_existing_record_when_fields_match(self) -> None:
+        publish_cloudkit_briefings = self.load_publisher_module()
+        args = argparse.Namespace(
+            team_id="SP774TZZU8",
+            container_id="iCloud.com.paweltanski.pavbotviewer",
+            environment="production",
+        )
+        record = {
+            "recordType": "Briefing",
+            "fields": {
+                "briefingId": "puls-dnia-news:2026-07-06-1800",
+                "title": "Pavbot Puls Dnia News · 2026-07-06 18:00",
+                "status": "ready",
+                "version": 1,
+            },
+        }
+        original_query = publish_cloudkit_briefings.query_existing_records
+        original_run = publish_cloudkit_briefings.run_cktool
+
+        def fake_query_existing_records(_record, _args):
+            return [
+                {
+                    "recordName": "existing-briefing-record",
+                    "fields": {
+                        "briefingId": {"value": "puls-dnia-news:2026-07-06-1800"},
+                        "title": {"value": "Pavbot Puls Dnia News · 2026-07-06 18:00"},
+                        "status": {"value": "ready"},
+                        "version": {"value": 1},
+                    },
+                }
+            ]
+
+        def fail_run_cktool(command):
+            self.fail(f"matching CloudKit record should not be recreated: {command}")
+
+        publish_cloudkit_briefings.query_existing_records = fake_query_existing_records
+        publish_cloudkit_briefings.run_cktool = fail_run_cktool
+        try:
+            publish_cloudkit_briefings.publish_records([record], args)
+        finally:
+            publish_cloudkit_briefings.query_existing_records = original_query
+            publish_cloudkit_briefings.run_cktool = original_run
+
+    def test_all_topics_backfill_creates_missing_briefings_only(self) -> None:
+        publish_cloudkit_briefings = self.load_publisher_module()
+        args = argparse.Namespace(
+            team_id="SP774TZZU8",
+            container_id="iCloud.com.paweltanski.pavbotviewer",
+            environment="production",
+        )
+        existing_briefing = {
+            "recordType": "Briefing",
+            "fields": {
+                "briefingId": "puls-dnia-news:2026-07-06-1800",
+                "title": "Pavbot Puls Dnia News · 2026-07-06 18:00",
+                "summary": "Gotowe.",
+                "manifestUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json",
+                "createdAt": "2026-07-06T18:00:00+00:00",
+                "locale": "pl-PL",
+                "category": "puls-dnia-news",
+                "status": "ready",
+                "version": 1,
+            },
+        }
+        missing_briefing = {
+            "recordType": "Briefing",
+            "fields": {
+                "briefingId": "llm-ai-jobs-wroclaw:2026-07-07-1732",
+                "title": "LLM AI Jobs Wroclaw · 2026-07-07 17:32",
+                "summary": "Gotowe.",
+                "manifestUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json",
+                "createdAt": "2026-07-07T17:32:00+00:00",
+                "locale": "pl-PL",
+                "category": "llm-ai-jobs-wroclaw",
+                "status": "ready",
+                "version": 1,
+            },
+        }
+        calls: list[str] = []
+        original_query_type = publish_cloudkit_briefings.query_records_by_type
+        original_query_existing = publish_cloudkit_briefings.query_existing_records
+        original_run = publish_cloudkit_briefings.run_cktool
+
+        publish_cloudkit_briefings.query_records_by_type = lambda _record_type, _args: []
+
+        def fake_query_existing_records(record, _args):
+            if record["recordType"] == "Briefing" and record["fields"]["briefingId"] == existing_briefing["fields"]["briefingId"]:
+                return [{"recordName": "existing-briefing-record", "fields": {"briefingId": {"value": existing_briefing["fields"]["briefingId"]}}}]
+            return []
+
+        def fake_run_cktool(command):
+            if command[2] == "create-record":
+                calls.append(command[command.index("--record-type") + 1])
+            return subprocess.CompletedProcess(command, 0, stdout='{"records":[]}', stderr="")
+
+        publish_cloudkit_briefings.query_existing_records = fake_query_existing_records
+        publish_cloudkit_briefings.run_cktool = fake_run_cktool
+        try:
+            publish_cloudkit_briefings.publish_publication_records(
+                [existing_briefing, missing_briefing],
+                [],
+                args,
+                replace_briefings=False,
+            )
+        finally:
+            publish_cloudkit_briefings.query_records_by_type = original_query_type
+            publish_cloudkit_briefings.query_existing_records = original_query_existing
+            publish_cloudkit_briefings.run_cktool = original_run
+
+        self.assertEqual(calls, ["Briefing"])
+
+    def test_query_existing_records_filters_cktool_results_locally(self) -> None:
+        publish_cloudkit_briefings = self.load_publisher_module()
+        args = argparse.Namespace(
+            team_id="SP774TZZU8",
+            container_id="iCloud.com.paweltanski.pavbotviewer",
+            environment="production",
+        )
+        record = {
+            "recordType": "Briefing",
+            "fields": {"briefingId": "puls-dnia-news:2026-07-07-2105"},
+        }
+        original_run = publish_cloudkit_briefings.run_cktool
+
+        def fake_run_cktool(command):
+            self.assertNotIn("--filters", command)
+            return subprocess.CompletedProcess(
+                command,
+                0,
+                stdout=json.dumps(
+                    {
+                        "records": [
+                            {
+                                "recordName": "other-record",
+                                "fields": {"briefingId": {"value": "reddit-radar:2026-07-07-1808"}},
+                            },
+                            {
+                                "recordName": "pulse-record",
+                                "fields": {"briefingId": {"value": "puls-dnia-news:2026-07-07-2105"}},
+                            },
+                        ]
+                    }
+                ),
+                stderr="",
+            )
+
+        publish_cloudkit_briefings.run_cktool = fake_run_cktool
+        try:
+            matches = publish_cloudkit_briefings.query_existing_records(record, args)
+        finally:
+            publish_cloudkit_briefings.run_cktool = original_run
+
+        self.assertEqual([item["recordName"] for item in matches], ["pulse-record"])
+
+    def test_verify_records_retries_until_cloudkit_query_catches_up(self) -> None:
+        publish_cloudkit_briefings = self.load_publisher_module()
+        args = argparse.Namespace(
+            team_id="SP774TZZU8",
+            container_id="iCloud.com.paweltanski.pavbotviewer",
+            environment="production",
+        )
+        record = {
+            "recordType": "Briefing",
+            "fields": {"briefingId": "puls-dnia-news:2026-07-07-2105"},
+        }
+        calls = 0
+        original_query = publish_cloudkit_briefings.query_existing_records
+        original_sleep = publish_cloudkit_briefings.time.sleep
+
+        def fake_query_existing_records(_record, _args):
+            nonlocal calls
+            calls += 1
+            return [] if calls == 1 else [{"recordName": "pulse-record"}]
+
+        publish_cloudkit_briefings.query_existing_records = fake_query_existing_records
+        publish_cloudkit_briefings.time.sleep = lambda _seconds: None
+        try:
+            publish_cloudkit_briefings.verify_records([record], args)
+        finally:
+            publish_cloudkit_briefings.query_existing_records = original_query
+            publish_cloudkit_briefings.time.sleep = original_sleep
+
+        self.assertEqual(calls, 2)
+
+    def test_publish_publication_records_writes_artifacts_before_briefing(self) -> None:
+        publish_cloudkit_briefings = self.load_publisher_module()
+        args = argparse.Namespace(
+            team_id="SP774TZZU8",
+            container_id="iCloud.com.paweltanski.pavbotviewer",
+            environment="production",
+        )
+        briefing = {
+            "recordType": "Briefing",
+            "fields": {
+                "briefingId": "puls-dnia-news:2026-07-06-1800",
+                "title": "Pavbot Puls Dnia News · 2026-07-06 18:00",
+                "summary": "Gotowe.",
+                "manifestUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json",
+                "createdAt": "2026-07-06T18:00:00+00:00",
+                "locale": "pl-PL",
+                "category": "puls-dnia-news",
+                "status": "ready",
+                "version": 1,
+            },
+        }
+        artifact = {
+            "recordType": "Artifact",
+            "fields": {
+                "artifactId": "research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json",
+                "briefingId": "puls-dnia-news:2026-07-06-1800",
+                "path": "research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json",
+                "createdAt": "2026-07-06T18:00:00+00:00",
+                "status": "ready",
+                "version": 1,
+            },
+        }
+        calls: list[str] = []
+        original_query_type = publish_cloudkit_briefings.query_records_by_type
+        original_query_existing = publish_cloudkit_briefings.query_existing_records
+        original_run = publish_cloudkit_briefings.run_cktool
+
+        publish_cloudkit_briefings.query_records_by_type = lambda _record_type, _args: []
+        publish_cloudkit_briefings.query_existing_records = lambda _record, _args: []
+
+        def fake_run_cktool(command):
+            if command[2] == "create-record":
+                calls.append(command[command.index("--record-type") + 1])
+            return subprocess.CompletedProcess(command, 0, stdout='{"records":[]}', stderr="")
+
+        publish_cloudkit_briefings.run_cktool = fake_run_cktool
+        try:
+            publish_cloudkit_briefings.publish_publication_records([briefing], [artifact], args)
+        finally:
+            publish_cloudkit_briefings.query_records_by_type = original_query_type
+            publish_cloudkit_briefings.query_existing_records = original_query_existing
+            publish_cloudkit_briefings.run_cktool = original_run
+
+        self.assertEqual(calls, ["Artifact", "Briefing"])
+
+    def test_verify_publication_records_fails_when_artifact_set_is_incomplete(self) -> None:
+        publish_cloudkit_briefings = self.load_publisher_module()
+        args = argparse.Namespace(
+            team_id="SP774TZZU8",
+            container_id="iCloud.com.paweltanski.pavbotviewer",
+            environment="production",
+        )
+        briefing = {
+            "recordType": "Briefing",
+            "fields": {"briefingId": "puls-dnia-news:2026-07-06-1800"},
+        }
+        artifact = {
+            "recordType": "Artifact",
+            "fields": {
+                "artifactId": "research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json",
+                "briefingId": "puls-dnia-news:2026-07-06-1800",
+                "path": "research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json",
+            },
+        }
+        original_query_existing = publish_cloudkit_briefings.query_existing_records
+        original_query_type = publish_cloudkit_briefings.query_records_by_type
+
+        def fake_query_existing_records(record, _args):
+            return [{"recordName": "existing"}]
+
+        def fake_query_records_by_type(record_type, _args):
+            if record_type == "Artifact":
+                return []
+            return [{"recordName": "briefing", "fields": {"briefingId": {"value": "puls-dnia-news:2026-07-06-1800"}}}]
+
+        publish_cloudkit_briefings.query_existing_records = fake_query_existing_records
+        publish_cloudkit_briefings.query_records_by_type = fake_query_records_by_type
+        try:
+            with self.assertRaises(publish_cloudkit_briefings.CloudKitVerificationError) as context:
+                publish_cloudkit_briefings.verify_publication_records([briefing], [artifact], args)
+        finally:
+            publish_cloudkit_briefings.query_existing_records = original_query_existing
+            publish_cloudkit_briefings.query_records_by_type = original_query_type
+
+        self.assertIn("Artifact records do not match", str(context.exception))
 
     def test_run_cktool_reports_actionable_hint_for_expired_user_token(self) -> None:
         publish_cloudkit_briefings = self.load_publisher_module()
@@ -209,6 +503,89 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
             payload["records"][0]["notificationPayload"]["manifestUrl"],
             payload["records"][0]["fields"]["manifestUrl"],
         )
+
+    def test_dry_run_emits_artifact_records_for_selected_briefing(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            manifest_path = Path(tmp) / "pavbot-manifest.json"
+            manifest_path.write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "topics": [
+                            {"slug": "puls-dnia-news", "title": "Pavbot Puls Dnia News"},
+                        ],
+                        "artifacts": [
+                            {
+                                "id": "pulse-run",
+                                "topic": "puls-dnia-news",
+                                "type": "run",
+                                "title": "Puls run",
+                                "path": "research/puls-dnia-news/runs/2026-07-06-1800.md",
+                                "url": "research/puls-dnia-news/runs/2026-07-06-1800.md",
+                                "sizeBytes": 42,
+                                "date": "2026-07-06",
+                                "time": "18:00",
+                            },
+                            {
+                                "id": "pulse-data",
+                                "topic": "puls-dnia-news",
+                                "type": "pulseNewsData",
+                                "title": "Puls data",
+                                "path": "research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json",
+                                "url": "research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json",
+                                "sizeBytes": 100,
+                                "date": "2026-07-06",
+                                "time": "18:00",
+                            },
+                        ],
+                    }
+                ),
+                encoding="utf-8",
+            )
+
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(SCRIPT_PATH),
+                    "dry-run",
+                    "--manifest",
+                    str(manifest_path),
+                    "--topic",
+                    "research/puls-dnia-news",
+                ],
+                cwd=REPO_ROOT,
+                text=True,
+                capture_output=True,
+                check=False,
+            )
+
+        self.assertEqual(result.returncode, 0, result.stderr)
+        payload = json.loads(result.stdout)
+        briefing = payload["records"][0]
+        artifacts = payload["artifacts"]
+
+        self.assertEqual(briefing["fields"]["briefingId"], "puls-dnia-news:2026-07-06-1800")
+        self.assertEqual(briefing["fields"]["artifactCount"], 2)
+        self.assertEqual(
+            json.loads(briefing["fields"]["artifactIdsJson"]),
+            [
+                "research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json",
+                "research/puls-dnia-news/runs/2026-07-06-1800.md",
+            ],
+        )
+        self.assertEqual(
+            briefing["fields"]["primaryArtifactId"],
+            "research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json",
+        )
+        self.assertEqual([artifact["recordType"] for artifact in artifacts], ["Artifact", "Artifact"])
+        self.assertEqual(
+            [artifact["fields"]["path"] for artifact in artifacts],
+            [
+                "research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json",
+                "research/puls-dnia-news/runs/2026-07-06-1800.md",
+            ],
+        )
+        self.assertTrue(all(artifact["fields"]["briefingId"] == "puls-dnia-news:2026-07-06-1800" for artifact in artifacts))
 
     def test_dry_run_builds_reddit_radar_briefing_from_manifest_artifact(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:

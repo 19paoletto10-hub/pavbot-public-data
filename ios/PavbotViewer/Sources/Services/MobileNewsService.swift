@@ -148,8 +148,7 @@ final class MobileNewsStore {
             return [package]
         }
 
-        if let selectedDay,
-           let package = packages.first(where: { $0.date == selectedDay || $0.key.hasPrefix(selectedDay) }) {
+        if let package = TopicReportPackage.selectedPackage(in: packages, selectedReportDay: selectedDay) {
             return [package]
         }
 

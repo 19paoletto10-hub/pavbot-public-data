@@ -731,6 +731,7 @@ private struct PavbotPhoneDailyCockpit: View {
     let reloadHumor: () -> Void
     let openHumorDetail: (TodayHumorItem) -> Void
     let openSavedHumor: () -> Void
+    @State private var expandedWeatherTile: WeatherExpandedTile?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -842,6 +843,19 @@ private struct PavbotPhoneDailyCockpit: View {
     }
 
     private var weatherDetailsGrid: some View {
+        ZStack {
+            if let expandedWeatherTile {
+                expandedWeatherTileView(expandedWeatherTile)
+                    .transition(.weatherTileFlip)
+            } else {
+                collapsedWeatherTiles
+                    .transition(.weatherTileFlip)
+            }
+        }
+        .animation(.spring(response: 0.42, dampingFraction: 0.84), value: expandedWeatherTile)
+    }
+
+    private var collapsedWeatherTiles: some View {
         LazyVGrid(
             columns: [
                 GridItem(.flexible(), spacing: 12),
@@ -849,10 +863,16 @@ private struct PavbotPhoneDailyCockpit: View {
             ],
             spacing: 12
         ) {
-            WeatherRangeTimelineTile(report: report, mode: rangeTileMode, onToggle: toggleRangeTile)
-                .environment(\.pavbotAdaptiveLayout, layout)
-            WeatherPrecipitationTile(report: report, mode: precipitationTileMode, onToggle: togglePrecipitationTile)
-                .environment(\.pavbotAdaptiveLayout, layout)
+            WeatherRangeTimelineTile(report: report, mode: .value) {
+                expandedWeatherTile = .temperature
+            }
+            .environment(\.pavbotAdaptiveLayout, layout)
+
+            WeatherPrecipitationTile(report: report, mode: .value) {
+                expandedWeatherTile = .precipitation
+            }
+            .environment(\.pavbotAdaptiveLayout, layout)
+
             WeatherMetricTile(
                 title: "Odczuwalna",
                 value: report.temperature.apparentLabel,
@@ -865,6 +885,22 @@ private struct PavbotPhoneDailyCockpit: View {
                 systemImage: "wind",
                 tint: .cyan
             )
+        }
+    }
+
+    @ViewBuilder
+    private func expandedWeatherTileView(_ tile: WeatherExpandedTile) -> some View {
+        switch tile {
+        case .temperature:
+            WeatherRangeTimelineTile(report: report, mode: .chart, isExpanded: true) {
+                expandedWeatherTile = nil
+            }
+            .environment(\.pavbotAdaptiveLayout, layout)
+        case .precipitation:
+            WeatherPrecipitationTile(report: report, mode: .chart, isExpanded: true) {
+                expandedWeatherTile = nil
+            }
+            .environment(\.pavbotAdaptiveLayout, layout)
         }
     }
 
@@ -1370,15 +1406,53 @@ private struct TodayHumorSideScrollList: View {
     }
 }
 
+private enum WeatherExpandedTile: Equatable {
+    case temperature
+    case precipitation
+}
+
+private struct WeatherTileFlipModifier: ViewModifier {
+    let angle: Double
+    let scale: CGFloat
+
+    func body(content: Content) -> some View {
+        content
+            .rotation3DEffect(
+                .degrees(angle),
+                axis: (x: 0, y: 1, z: 0),
+                perspective: 0.72
+            )
+            .scaleEffect(scale)
+            .opacity(abs(angle) > 86 ? 0.12 : 1)
+    }
+}
+
+private extension AnyTransition {
+    static var weatherTileFlip: AnyTransition {
+        .asymmetric(
+            insertion: .modifier(
+                active: WeatherTileFlipModifier(angle: 88, scale: 0.96),
+                identity: WeatherTileFlipModifier(angle: 0, scale: 1)
+            ),
+            removal: .modifier(
+                active: WeatherTileFlipModifier(angle: -88, scale: 0.96),
+                identity: WeatherTileFlipModifier(angle: 0, scale: 1)
+            )
+        )
+        .combined(with: .opacity)
+    }
+}
+
 private struct WeatherRangeTimelineTile: View {
     @Environment(\.pavbotAdaptiveLayout) private var layout
     let report: DailyWeatherReport
     let mode: WeatherRangeTileMode
+    var isExpanded = false
     let onToggle: () -> Void
 
     var body: some View {
         Button(action: onToggle) {
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: isExpanded ? 14 : 12) {
                 switch mode {
                 case .value:
                     valueContent
@@ -1386,14 +1460,18 @@ private struct WeatherRangeTimelineTile: View {
                     chartContent
                 }
             }
-            .padding(16)
-            .frame(maxWidth: .infinity, minHeight: layout.weatherTileMinHeight, alignment: .leading)
-            .background(.background, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+            .padding(isExpanded ? 18 : 16)
+            .frame(maxWidth: .infinity, minHeight: tileMinHeight, alignment: .leading)
+            .background(tileBackground, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+            .overlay {
+                RoundedRectangle(cornerRadius: 18, style: .continuous)
+                    .stroke(Color.red.opacity(isExpanded ? 0.18 : 0.10), lineWidth: 1)
+            }
             .contentShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
         }
         .buttonStyle(.plain)
-        .accessibilityLabel("Zakres dnia. Przełącz wykres temperatury godzinowej.")
-        .accessibilityValue(mode == .chart ? "Pokazuję wykres słupkowy" : report.temperature.rangeLabel)
+        .accessibilityLabel("Temperatura. Przełącz wykres godzinowy.")
+        .accessibilityValue(mode == .chart ? "Pokazuję wykres godzinowy temperatury" : report.temperature.rangeLabel)
     }
 
     private var valueContent: some View {
@@ -1412,7 +1490,7 @@ private struct WeatherRangeTimelineTile: View {
                 Text("Zakres dnia")
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.secondary)
-                Text("Dotknij, aby zobaczyć wykres")
+                Text("Godzinowy wykres")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
             }
@@ -1420,9 +1498,9 @@ private struct WeatherRangeTimelineTile: View {
     }
 
     private var chartContent: some View {
-        let model = TemperatureTimelineChartModel(report: report, maxVisibleLabels: 4)
+        let model = TemperatureTimelineChartModel(report: report, maxVisibleLabels: isExpanded ? 7 : 3)
 
-        return VStack(alignment: .leading, spacing: 8) {
+        return VStack(alignment: .leading, spacing: isExpanded ? 12 : 8) {
             HStack(spacing: 8) {
                 Image(systemName: "chart.bar.xaxis")
                     .font(.subheadline.weight(.semibold))
@@ -1443,51 +1521,45 @@ private struct WeatherRangeTimelineTile: View {
                 VStack(alignment: .leading, spacing: 3) {
                     Text("Brak danych godzinowych")
                         .font(.caption.weight(.semibold))
-                    Text("Dotknij, aby wrócić do zakresu")
+                    Text("Zakres dnia: \(report.temperature.rangeLabel)")
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                 }
                 .frame(maxWidth: .infinity, minHeight: 64, alignment: .leading)
             } else {
-                Chart(model.bars) { bar in
-                    BarMark(
-                        x: .value("Godzina", bar.date, unit: .hour),
-                        yStart: .value("Punkt bazowy", bar.yStart),
-                        yEnd: .value("Temperatura", bar.yEnd),
-                        width: .ratio(0.68)
-                    )
-                    .foregroundStyle(WeatherTimelineChartData.temperatureColor(for: bar.temperature))
-                    .cornerRadius(5)
-                    .annotation(position: .top, alignment: .center) {
-                        if model.visibleLabelIDs.contains(bar.id) {
-                            WeatherTemperatureChartBubbleLabel(
-                                bar.temperatureLabel,
-                                temperature: bar.temperature,
-                                font: .system(size: 9, weight: .bold),
-                                horizontalPadding: 3,
-                                verticalPadding: 1
-                            )
-                        }
-                    }
-                }
-                .chartXAxis {
-                    AxisMarks(values: .automatic(desiredCount: 3)) { _ in
-                        AxisTick()
-                        AxisValueLabel(format: .dateTime.hour(.defaultDigits(amPM: .omitted)))
-                            .font(.caption2)
-                    }
-                }
-                .chartYAxis(.hidden)
-                .chartYScale(domain: model.domain)
-                .frame(height: 98)
-                .accessibilityLabel("Mini wykres słupkowy temperatury godzinowej")
+                WeatherTemperatureBarChart(model: model, isExpanded: isExpanded)
 
-                Text("Dotknij, aby wrócić do zakresu")
+                Text(chartFooterText(model: model))
                     .font(.caption2)
                     .foregroundStyle(.secondary)
             }
         }
     }
+
+    private var tileMinHeight: CGFloat {
+        guard isExpanded else { return layout.weatherTileMinHeight }
+        return max((layout.weatherTileMinHeight * 2) + 12, 324)
+    }
+
+    private var tileBackground: LinearGradient {
+        LinearGradient(
+            colors: [
+                Color(.systemBackground),
+                Color.red.opacity(isExpanded ? 0.055 : 0.025),
+                Color.orange.opacity(isExpanded ? 0.055 : 0.018)
+            ],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+    }
+
+    private func chartFooterText(model: TemperatureTimelineChartModel) -> String {
+        guard isExpanded, let last = model.bars.last else {
+            return report.temperature.rangeLabel
+        }
+        return "Do \(last.date.formatted(date: .omitted, time: .shortened)) · zakres \(report.temperature.rangeLabel)"
+    }
+
 }
 
 private struct TemperatureTimelineChartTile: View {
@@ -1517,48 +1589,7 @@ private struct TemperatureTimelineChartTile: View {
                 }
                 .frame(maxWidth: .infinity, minHeight: 140, alignment: .leading)
             } else {
-                Chart(model.bars) { bar in
-                    BarMark(
-                        x: .value("Godzina", bar.date, unit: .hour),
-                        yStart: .value("Punkt bazowy", bar.yStart),
-                        yEnd: .value("Temperatura", bar.yEnd),
-                        width: .ratio(0.66)
-                    )
-                    .foregroundStyle(temperatureColor(for: bar.temperature))
-                    .cornerRadius(7)
-                    .annotation(position: .top, alignment: .center) {
-                        if model.visibleLabelIDs.contains(bar.id) {
-                            WeatherTemperatureChartBubbleLabel(
-                                bar.temperatureLabel,
-                                temperature: bar.temperature,
-                                font: .caption2.weight(.bold),
-                                horizontalPadding: 5,
-                                verticalPadding: 2
-                            )
-                        }
-                    }
-                }
-                .chartXAxis {
-                    AxisMarks(values: .automatic(desiredCount: 5)) { value in
-                        AxisGridLine()
-                        AxisTick()
-                        AxisValueLabel(format: .dateTime.hour(.defaultDigits(amPM: .omitted)))
-                    }
-                }
-                .chartYAxis {
-                    AxisMarks(position: .leading) { value in
-                        AxisGridLine()
-                        AxisTick()
-                        AxisValueLabel {
-                            if let temperature = value.as(Double.self) {
-                                Text("\(Int(temperature.rounded()))°")
-                            }
-                        }
-                    }
-                }
-                .chartYScale(domain: model.domain)
-                .frame(height: 205)
-                .accessibilityLabel("Słupkowy wykres temperatury godzinowej do końca dnia")
+                WeatherTemperatureBarChart(model: model, isExpanded: true, chartHeight: 220)
 
                 if let last = model.bars.last {
                     Text("Prognoza od aktualnej godziny do \(last.date.formatted(date: .omitted, time: .shortened)).")
@@ -1573,8 +1604,125 @@ private struct TemperatureTimelineChartTile: View {
         .accessibilityElement(children: .combine)
     }
 
-    private func temperatureColor(for value: Double) -> Color {
-        WeatherTimelineChartData.temperatureColor(for: value)
+}
+
+private struct WeatherTemperatureBarChart: View {
+    let model: TemperatureTimelineChartModel
+    let isExpanded: Bool
+    var chartHeight: CGFloat?
+
+    private var chartContentHeight: CGFloat {
+        chartHeight ?? (isExpanded ? 238 : 112)
+    }
+
+    private var expandedContentWidth: CGFloat {
+        max(CGFloat(model.bars.count) * 46, 620)
+    }
+
+    var body: some View {
+        Group {
+            if isExpanded {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    chart
+                        .frame(width: expandedContentWidth, height: chartContentHeight)
+                        .padding(.top, 22)
+                        .padding(.horizontal, 3)
+                }
+                .frame(height: chartContentHeight + 28)
+            } else {
+                chart
+                    .frame(height: chartContentHeight)
+            }
+        }
+        .accessibilityLabel(isExpanded ? "Słupkowy wykres temperatury godzinowej" : "Mini wykres temperatury godzinowej")
+    }
+
+    private var chart: some View {
+        Chart {
+            ForEach(model.bars) { bar in
+                BarMark(
+                    x: .value("Godzina", bar.date, unit: .hour),
+                    yStart: .value("Minimum", bar.yStart),
+                    yEnd: .value("Temperatura", bar.yEnd),
+                    width: .fixed(isExpanded ? 18 : 7)
+                )
+                .foregroundStyle(temperatureBarGradient(for: bar.temperature))
+                .clipShape(RoundedRectangle(cornerRadius: isExpanded ? 6 : 3, style: .continuous))
+                .annotation(position: .top, alignment: .center, spacing: isExpanded ? 7 : 3) {
+                    if isExpanded || model.visibleLabelIDs.contains(bar.id) {
+                        WeatherTemperatureChartBubbleLabel(
+                            bar.temperatureLabel,
+                            temperature: bar.temperature,
+                            font: .system(size: isExpanded ? 11 : 9, weight: .bold),
+                            horizontalPadding: isExpanded ? 8 : 5,
+                            verticalPadding: isExpanded ? 5 : 3
+                        )
+                    }
+                }
+            }
+        }
+        .chartXAxisLabel(position: .bottom, alignment: .center) {
+            WeatherChartAxisTitle("Godzina")
+        }
+        .chartXAxis {
+            AxisMarks(values: .stride(by: .hour, count: 2)) { _ in
+                AxisGridLine(stroke: StrokeStyle(lineWidth: isExpanded ? 0.8 : 0.55, dash: [3, 5]))
+                    .foregroundStyle(Color.red.opacity(isExpanded ? 0.14 : 0.08))
+                AxisTick(stroke: StrokeStyle(lineWidth: 0.8))
+                    .foregroundStyle(Color.red.opacity(isExpanded ? 0.30 : 0.18))
+                AxisValueLabel(format: .dateTime.hour(.defaultDigits(amPM: .omitted)))
+                    .font(.system(size: isExpanded ? 10 : 8, weight: .semibold))
+                    .foregroundStyle(Color.primary.opacity(isExpanded ? 0.68 : 0.48))
+            }
+        }
+        .chartYAxis {
+            AxisMarks(position: .leading, values: .automatic(desiredCount: isExpanded ? 5 : 3)) { value in
+                AxisGridLine(stroke: StrokeStyle(lineWidth: isExpanded ? 0.75 : 0.55, dash: [3, 5]))
+                    .foregroundStyle(Color.red.opacity(isExpanded ? 0.13 : 0.08))
+                AxisValueLabel {
+                    if isExpanded, let temperature = value.as(Double.self) {
+                        Text("\(Int(temperature.rounded()))°")
+                            .font(.system(size: 9, weight: .semibold))
+                            .foregroundStyle(Color.primary.opacity(0.58))
+                    }
+                }
+            }
+        }
+        .chartYAxisLabel(position: .leading, alignment: .center) {
+            if isExpanded {
+                WeatherChartAxisTitle("Temperatura °C")
+            }
+        }
+        .chartXScale(range: .plotDimension(padding: isExpanded ? 24 : 8))
+        .chartYScale(domain: model.domain)
+        .chartPlotStyle { plotArea in
+            plotArea
+                .background(
+                    LinearGradient(
+                        colors: [
+                            Color.red.opacity(isExpanded ? 0.060 : 0.035),
+                            Color.orange.opacity(isExpanded ? 0.045 : 0.025),
+                            Color(.systemBackground).opacity(0.55)
+                        ],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ),
+                    in: RoundedRectangle(cornerRadius: 14, style: .continuous)
+                )
+                .overlay {
+                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                        .stroke(Color.red.opacity(isExpanded ? 0.16 : 0.09), lineWidth: 1)
+                }
+        }
+    }
+
+    private func temperatureBarGradient(for value: Double) -> LinearGradient {
+        let tint = WeatherTimelineChartData.temperatureColor(for: value)
+        return LinearGradient(
+            colors: [tint.opacity(0.96), tint.opacity(0.58)],
+            startPoint: .top,
+            endPoint: .bottom
+        )
     }
 }
 
@@ -1604,16 +1752,15 @@ private struct WeatherTemperatureChartBubbleLabel: View {
 
         Text(text)
             .font(font)
-            .foregroundStyle(.white)
-            .shadow(color: Color.black.opacity(0.32), radius: 1, x: 0, y: 1)
+            .foregroundStyle(bubbleColor)
             .padding(.horizontal, horizontalPadding)
             .padding(.vertical, verticalPadding)
-            .background(bubbleColor, in: Capsule())
+            .background(Color(.systemBackground).opacity(0.97), in: Capsule())
             .overlay {
                 Capsule()
-                    .stroke(Color(.systemBackground).opacity(0.72), lineWidth: 1)
+                    .stroke(bubbleColor.opacity(0.30), lineWidth: 1)
             }
-            .shadow(color: bubbleColor.opacity(0.28), radius: 4, x: 0, y: 2)
+            .shadow(color: Color.black.opacity(0.08), radius: 5, x: 0, y: 3)
             .accessibilityLabel(text)
     }
 }
@@ -1890,11 +2037,12 @@ private struct WeatherPrecipitationTile: View {
     @Environment(\.pavbotAdaptiveLayout) private var layout
     let report: DailyWeatherReport
     let mode: WeatherPrecipitationTileMode
+    var isExpanded = false
     let onToggle: () -> Void
 
     var body: some View {
         Button(action: onToggle) {
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: isExpanded ? 14 : 12) {
                 switch mode {
                 case .value:
                     valueContent
@@ -1902,9 +2050,13 @@ private struct WeatherPrecipitationTile: View {
                     chartContent
                 }
             }
-            .padding(16)
-            .frame(maxWidth: .infinity, minHeight: layout.weatherTileMinHeight, alignment: .leading)
-            .background(.background, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+            .padding(isExpanded ? 18 : 16)
+            .frame(maxWidth: .infinity, minHeight: tileMinHeight, alignment: .leading)
+            .background(tileBackground, in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+            .overlay {
+                RoundedRectangle(cornerRadius: 18, style: .continuous)
+                    .stroke(Color.blue.opacity(isExpanded ? 0.18 : 0.10), lineWidth: 1)
+            }
             .contentShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
         }
         .buttonStyle(.plain)
@@ -1928,7 +2080,7 @@ private struct WeatherPrecipitationTile: View {
                 Text("Opady")
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.secondary)
-                Text("\(report.precipitation.totalLabel) · dotknij po godziny")
+                Text("\(report.precipitation.totalLabel) · godziny")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
                     .lineLimit(2)
@@ -1938,8 +2090,9 @@ private struct WeatherPrecipitationTile: View {
 
     private var chartContent: some View {
         let presentation = WeatherPrecipitationTilePresentation(report: report)
+        let chartPoints = presentation.timeline.filter { $0.dateValue != nil }
 
-        return VStack(alignment: .leading, spacing: 8) {
+        return VStack(alignment: .leading, spacing: isExpanded ? 12 : 8) {
             HStack(spacing: 8) {
                 Image(systemName: "cloud.rain.fill")
                     .font(.subheadline.weight(.semibold))
@@ -1960,101 +2113,183 @@ private struct WeatherPrecipitationTile: View {
                 .lineSpacing(2)
                 .fixedSize(horizontal: false, vertical: true)
 
-            if presentation.chartPoints.isEmpty {
-                Text("Dotknij, aby wrócić do podsumowania opadów")
+            if chartPoints.isEmpty {
+                Text("Brak godzinowych danych opadów")
                     .font(.caption2)
                     .foregroundStyle(.secondary)
             } else {
-                Chart(presentation.chartPoints) { point in
-                    BarMark(
-                        x: .value("Godzina", point.hourLabel),
-                        yStart: .value("Minimum", 0),
-                        yEnd: .value("Szansa opadów", chartValue(for: point)),
-                        width: .ratio(0.58)
-                    )
-                    .foregroundStyle(chartGradient(for: point.kind))
-                    .cornerRadius(6)
-                    .annotation(position: .top, alignment: .center, spacing: 4) {
-                        if point.isSignificant {
-                            WeatherPrecipitationChartValueLabel(
-                                probability: probabilityLabel(for: point),
-                                amount: amountDetailLabel(for: point),
-                                tint: color(for: point.kind)
-                            )
-                        }
-                    }
-                }
-                .chartXAxis {
-                    AxisMarks(values: .automatic(desiredCount: xAxisDesiredCount(for: presentation.chartPoints))) { value in
-                        AxisTick(stroke: StrokeStyle(lineWidth: 0.7))
-                            .foregroundStyle(Color.blue.opacity(0.22))
-                        AxisValueLabel {
-                            if let hour = value.as(String.self) {
-                                Text(hour)
-                                    .font(.caption2.weight(.semibold))
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-                    }
-                }
-                .chartYAxis {
-                    AxisMarks(position: .leading, values: [0, 25, 50, 75, 100]) { value in
-                        AxisGridLine(stroke: StrokeStyle(lineWidth: 0.7, dash: [3, 4]))
-                            .foregroundStyle(Color.blue.opacity(0.16))
-                        AxisValueLabel {
-                            if let probability = value.as(Int.self) {
-                                Text("\(probability)%")
-                                    .font(.system(size: 9, weight: .semibold))
-                                    .foregroundStyle(.secondary)
-                            }
-                        }
-                    }
-                }
-                .chartYScale(domain: 0...100)
-                .chartPlotStyle { plotArea in
-                    plotArea
-                        .background(Color.blue.opacity(0.045), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
-                        .overlay {
-                            RoundedRectangle(cornerRadius: 12, style: .continuous)
-                                .stroke(Color.blue.opacity(0.10), lineWidth: 1)
-                        }
-                }
-                .frame(height: 118)
-                .accessibilityLabel("Mini wykres godzinowej szansy opadów")
+                WeatherPrecipitationBarChart(points: chartPoints, isExpanded: isExpanded)
 
                 WeatherPrecipitationChartLegend(tint: .blue, total: presentation.dailyTotalLabel)
 
-                Text("Dotknij, aby wrócić do podsumowania")
+                Text(isExpanded ? "Suma dnia \(presentation.dailyTotalLabel)" : presentation.dailyTotalLabel)
                     .font(.caption2)
                     .foregroundStyle(.secondary)
             }
         }
     }
 
+    private var tileMinHeight: CGFloat {
+        guard isExpanded else { return layout.weatherTileMinHeight }
+        return max((layout.weatherTileMinHeight * 2) + 12, 324)
+    }
+
+    private var tileBackground: LinearGradient {
+        LinearGradient(
+            colors: [
+                Color(.systemBackground),
+                Color.blue.opacity(isExpanded ? 0.055 : 0.026),
+                Color.teal.opacity(isExpanded ? 0.045 : 0.018)
+            ],
+            startPoint: .topLeading,
+            endPoint: .bottomTrailing
+        )
+    }
+}
+
+private struct WeatherPrecipitationBarChart: View {
+    let points: [DailyWeatherHourlyPrecipitation]
+    let isExpanded: Bool
+
+    private var chartContentHeight: CGFloat {
+        isExpanded ? 238 : 112
+    }
+
+    private var expandedContentWidth: CGFloat {
+        max(CGFloat(points.count) * 46, 620)
+    }
+
+    var body: some View {
+        Group {
+            if isExpanded {
+                ScrollView(.horizontal, showsIndicators: false) {
+                    chart
+                        .frame(width: expandedContentWidth, height: chartContentHeight)
+                        .padding(.top, 22)
+                        .padding(.horizontal, 3)
+                }
+                .frame(height: chartContentHeight + 28)
+            } else {
+                chart
+                    .frame(height: chartContentHeight)
+            }
+        }
+        .accessibilityLabel(isExpanded ? "Słupkowy wykres godzinowej szansy opadów" : "Mini wykres godzinowej szansy opadów")
+    }
+
+    private var chart: some View {
+        Chart {
+            RuleMark(y: .value("Umiarkowana szansa", 50))
+                .foregroundStyle(Color.blue.opacity(isExpanded ? 0.22 : 0.12))
+                .lineStyle(StrokeStyle(lineWidth: 1, dash: [5, 5]))
+
+            ForEach(points) { point in
+                if let date = point.dateValue {
+                    BarMark(
+                        x: .value("Godzina", date, unit: .hour),
+                        yStart: .value("Minimum", 0),
+                        yEnd: .value("Szansa opadów", chartValue(for: point)),
+                        width: .fixed(isExpanded ? 18 : 7)
+                    )
+                    .foregroundStyle(chartGradient(for: point.kind))
+                    .clipShape(RoundedRectangle(cornerRadius: isExpanded ? 6 : 3, style: .continuous))
+                    .annotation(position: .top, alignment: .center, spacing: isExpanded ? 7 : 3) {
+                        if shouldShowAnnotation(for: point) {
+                            WeatherPrecipitationChartValueLabel(
+                                probability: probabilityLabel(for: point),
+                                amount: amountDetailLabel(for: point),
+                                tint: color(for: point.kind),
+                                isExpanded: isExpanded
+                            )
+                        }
+                    }
+                }
+            }
+        }
+        .chartXAxisLabel(position: .bottom, alignment: .center) {
+            WeatherChartAxisTitle("Godzina")
+        }
+        .chartXAxis {
+            AxisMarks(values: .stride(by: .hour, count: 2)) { _ in
+                AxisGridLine(stroke: StrokeStyle(lineWidth: isExpanded ? 0.8 : 0.55, dash: [3, 5]))
+                    .foregroundStyle(Color.blue.opacity(isExpanded ? 0.14 : 0.08))
+                AxisTick(stroke: StrokeStyle(lineWidth: 0.8))
+                    .foregroundStyle(Color.blue.opacity(isExpanded ? 0.30 : 0.18))
+                AxisValueLabel(format: .dateTime.hour(.defaultDigits(amPM: .omitted)))
+                    .font(.system(size: isExpanded ? 10 : 8, weight: .semibold))
+                    .foregroundStyle(Color.primary.opacity(isExpanded ? 0.68 : 0.48))
+            }
+        }
+        .chartYAxis {
+            AxisMarks(position: .leading, values: [0, 25, 50, 75, 100]) { value in
+                AxisGridLine(stroke: StrokeStyle(lineWidth: isExpanded ? 0.75 : 0.55, dash: [3, 5]))
+                    .foregroundStyle(Color.blue.opacity(isExpanded ? 0.14 : 0.08))
+                AxisValueLabel {
+                    if isExpanded, let probability = value.as(Int.self) {
+                        Text("\(probability)%")
+                            .font(.system(size: 9, weight: .semibold))
+                            .foregroundStyle(Color.primary.opacity(0.58))
+                    }
+                }
+            }
+        }
+        .chartYAxisLabel(position: .leading, alignment: .center) {
+            if isExpanded {
+                WeatherChartAxisTitle("Szansa %")
+            }
+        }
+        .chartXScale(range: .plotDimension(padding: isExpanded ? 24 : 8))
+        .chartYScale(domain: 0...100)
+        .chartPlotStyle { plotArea in
+            plotArea
+                .background(
+                    LinearGradient(
+                        colors: [
+                            Color.blue.opacity(isExpanded ? 0.060 : 0.035),
+                            Color.teal.opacity(isExpanded ? 0.040 : 0.022),
+                            Color(.systemBackground).opacity(0.55)
+                        ],
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ),
+                    in: RoundedRectangle(cornerRadius: 14, style: .continuous)
+                )
+                .overlay {
+                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                        .stroke(Color.blue.opacity(isExpanded ? 0.16 : 0.09), lineWidth: 1)
+                }
+        }
+    }
+
     private func color(for kind: WeatherPrecipitationKind) -> Color {
         switch kind {
         case .rain:
-            .blue
+            Color(red: 0.08, green: 0.33, blue: 0.88)
         case .snow:
-            .cyan
+            Color(red: 0.04, green: 0.56, blue: 0.72)
         case .mixed:
-            .indigo
+            Color(red: 0.34, green: 0.28, blue: 0.82)
         case .possible:
-            .teal
+            Color(red: 0.00, green: 0.50, blue: 0.46)
         }
     }
 
     private func chartGradient(for kind: WeatherPrecipitationKind) -> LinearGradient {
         let tint = color(for: kind)
         return LinearGradient(
-            colors: [tint.opacity(0.95), tint.opacity(0.52)],
+            colors: [tint.opacity(0.96), tint.opacity(0.56)],
             startPoint: .top,
             endPoint: .bottom
         )
     }
 
     private func chartValue(for point: DailyWeatherHourlyPrecipitation) -> Int {
-        point.probability > 0 ? point.probability : 20
+        point.probability
+    }
+
+    private func shouldShowAnnotation(for point: DailyWeatherHourlyPrecipitation) -> Bool {
+        guard point.probability > 0 || point.amount > 0 else { return false }
+        return isExpanded || point.isSignificant
     }
 
     private func probabilityLabel(for point: DailyWeatherHourlyPrecipitation) -> String {
@@ -2062,11 +2297,7 @@ private struct WeatherPrecipitationTile: View {
     }
 
     private func amountDetailLabel(for point: DailyWeatherHourlyPrecipitation) -> String? {
-        point.amount > 0 ? point.amountLabel : nil
-    }
-
-    private func xAxisDesiredCount(for points: [DailyWeatherHourlyPrecipitation]) -> Int {
-        min(max(points.count, 2), 4)
+        point.amount > 0 ? point.amountLabel : "0 \(point.unit)"
     }
 }
 
@@ -2074,25 +2305,42 @@ private struct WeatherPrecipitationChartValueLabel: View {
     let probability: String
     let amount: String?
     let tint: Color
+    var isExpanded = false
 
     var body: some View {
         VStack(spacing: 1) {
             Text(probability)
-                .font(.system(size: 9, weight: .bold))
+                .font(.system(size: isExpanded ? 11 : 9, weight: .bold))
                 .foregroundStyle(tint)
             if let amount {
                 Text(amount)
-                    .font(.system(size: 8, weight: .semibold))
+                    .font(.system(size: isExpanded ? 9 : 8, weight: .semibold))
                     .foregroundStyle(.secondary)
             }
         }
-        .padding(.horizontal, 6)
-        .padding(.vertical, 4)
-        .background(Color(.systemBackground).opacity(0.94), in: RoundedRectangle(cornerRadius: 8, style: .continuous))
+        .padding(.horizontal, isExpanded ? 8 : 6)
+        .padding(.vertical, isExpanded ? 5 : 4)
+        .background(Color(.systemBackground).opacity(0.97), in: RoundedRectangle(cornerRadius: 9, style: .continuous))
         .overlay {
-            RoundedRectangle(cornerRadius: 8, style: .continuous)
-                .stroke(tint.opacity(0.24), lineWidth: 1)
+            RoundedRectangle(cornerRadius: 9, style: .continuous)
+                .stroke(tint.opacity(0.30), lineWidth: 1)
         }
+        .shadow(color: Color.black.opacity(0.08), radius: 5, x: 0, y: 3)
+    }
+}
+
+private struct WeatherChartAxisTitle: View {
+    let title: String
+
+    init(_ title: String) {
+        self.title = title
+    }
+
+    var body: some View {
+        Text(title)
+            .font(.system(size: 9, weight: .bold))
+            .foregroundStyle(.secondary)
+            .textCase(.uppercase)
     }
 }
 

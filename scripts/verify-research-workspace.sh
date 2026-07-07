@@ -67,10 +67,12 @@ required_files=(
   "ios/PavbotViewer/Tests/PavbotManifestTests.swift"
   "scripts/generate_pavbot_manifest.py"
   "scripts/pavbot_commit_and_push_outputs.sh"
+  "scripts/pavbot_pdf_theme.py"
   "scripts/render_research_pdf.py"
   "scripts/render_research_data.py"
   "scripts/validate_research_data.py"
   "scripts/validate_jobs_data.py"
+  "scripts/validate_mobile_news_data.py"
   "scripts/validate_pulse_news_data.py"
   "tests/test_generate_pavbot_manifest.py"
   "tests/test_pavbot_commit_and_push_outputs.py"
@@ -218,7 +220,7 @@ grep -q 'filteredArtifacts' ios/PavbotViewer/Sources/Models/PavbotManifest.swift
 grep -q 'UNUserNotificationCenter' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
 grep -q 'LiveNotificationOnboarding' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
 grep -q 'RemoteNotificationPermission' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
-grep -q 'CloudKitService.shared.createOrUpdateSubscriptions()' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
+grep -q 'createOrUpdateSubscriptions(mode: mode)' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
 ! grep -q 'RemoteNotificationRegistrar' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
 ! grep -q 'NotificationServerSettings' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
 ! grep -q '/v1/devices' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
@@ -261,12 +263,21 @@ grep -q 'Manifest danych' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'normalne alerty z dźwiękiem' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'Włącz / odśwież powiadomienia live' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'ponownie rejestruje alerty briefingów' ios/PavbotViewer/Sources/Views/SettingsView.swift
+grep -q 'Tryb briefingów' ios/PavbotViewer/Sources/Views/SettingsView.swift
+grep -q 'lastCloudKitPushSummary' ios/PavbotViewer/Sources/Views/SettingsView.swift
 ! grep -q 'Notification server URL' ios/PavbotViewer/Sources/Views/SettingsView.swift
 ! grep -q 'PavbotConnectionDefaults.statusURL' ios/PavbotViewer/Sources/Views/SettingsView.swift
-! grep -q 'shouldSendContentAvailable = true' ios/PavbotViewer/Sources/Services/CloudKitService.swift
-grep -q 'visible alert, not a silent background push' ios/PavbotViewer/Sources/Services/CloudKitService.swift
+grep -q 'CloudKitBriefingNotificationMode' ios/PavbotViewer/Sources/Services/CloudKitService.swift
+grep -q 'briefings-ready-visible-alert-subscription-v2' ios/PavbotViewer/Sources/Services/CloudKitService.swift
+grep -q 'briefings-ready-silent-refresh-subscription-v1' ios/PavbotViewer/Sources/Services/CloudKitService.swift
+grep -q 'titleLocalizationKey = "PAVBOT_BRIEFING_NOTIFICATION_TITLE"' ios/PavbotViewer/Sources/Services/CloudKitService.swift
+grep -q 'alertLocalizationArgs = \["title"\]' ios/PavbotViewer/Sources/Services/CloudKitService.swift
+grep -q 'soundName = "default"' ios/PavbotViewer/Sources/Services/CloudKitService.swift
+grep -q 'shouldSendContentAvailable = true' ios/PavbotViewer/Sources/Services/CloudKitService.swift
+grep -q 'inactiveBriefingSubscriptionIDs' ios/PavbotViewer/Sources/Services/CloudKitService.swift
 grep -q 'Kopiuj token APNs' ios/PavbotViewer/Sources/Views/SettingsView.swift
 grep -q 'RemoteNotificationDiagnostics' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
+grep -q 'saveCloudKitPush' ios/PavbotViewer/Sources/Services/ArtifactNotificationService.swift
 grep -q 'RemoteNotificationDiagnostics' ios/PavbotViewer/Tests/PavbotManifestTests.swift
 grep -q 'Kopiuj token APNs' ios/PavbotViewer/Sources/Views/DiagnosticsView.swift
 grep -q 'Powiadomienia live' ios/PavbotViewer/Sources/Views/ContentView.swift
@@ -293,6 +304,8 @@ grep -q 'buildConfiguration = "Release"' ios/PavbotViewer/PavbotViewer.xcodeproj
 grep -q 'generate_pavbot_manifest.py' docs/how-to-use.md
 grep -q 'PAVBOT_MANIFEST_URL' docs/how-to-use.md
 grep -q 'pavbot_commit_and_push_outputs.sh' docs/how-to-use.md
+grep -q 'CloudKit `Briefing` subscription' docs/how-to-use.md
+grep -q 'Tryb briefingów' docs/how-to-use.md
 grep -q 'Kind: `researchAudio`' docs/how-to-use.md
 grep -F -q 'RUN_STAMP=$(TZ=Europe/Warsaw date +%Y-%m-%d-%H%M)' docs/how-to-use.md
 grep -q 'runs/YYYY-MM-DD-HHMM.md' docs/how-to-use.md
@@ -335,6 +348,7 @@ grep -q 'pavbot-notifier' backend/pavbot-notifier/cloudflare/config.example.yml
 grep -q 'uvicorn' backend/pavbot-notifier/Dockerfile
 grep -q 'FastAPI' backend/pavbot-notifier/pavbot_notifier/server.py
 grep -q '@app.get("/status")' backend/pavbot-notifier/pavbot_notifier/server.py
+grep -q 'process_manifest_change_notifications' backend/pavbot-notifier/pavbot_notifier/server.py
 grep -q 'verify_github_signature' backend/pavbot-notifier/pavbot_notifier/core.py
 grep -q 'notifier_status' backend/pavbot-notifier/pavbot_notifier/core.py
 grep -q 'send_apns_change_notifications' backend/pavbot-notifier/pavbot_notifier/core.py
@@ -343,10 +357,17 @@ grep -q 'last-device-registration.json' backend/pavbot-notifier/pavbot_notifier/
 grep -q 'apnsAttempted' backend/pavbot-notifier/pavbot_notifier/server.py
 grep -q 'APNSSender' backend/pavbot-notifier/pavbot_notifier/apns.py
 grep -q 'APNSConfigurationError' backend/pavbot-notifier/pavbot_notifier/apns.py
+grep -q 'CloudKit `Briefing` subscription' backend/pavbot-notifier/README.md
+grep -q 'CloudKit stores public briefing metadata plus one `Artifact` record per file' docs/how-to-use.md
+grep -q 'Production CloudKit must expose record type `Artifact`' docs/how-to-use.md
+grep -q '`Artifact` metadata' backend/pavbot-notifier/README.md
+grep -q 'write the CloudKit `Briefing` record last' backend/pavbot-notifier/README.md
 ! grep -R -q 'RLZ8X7S7V2' ios backend docs
 grep -q 'pavbot-manifest.json' docs/architecture.md
 grep -q 'PAVBOT_MANIFEST_URL' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'generate_pavbot_manifest.py' scripts/pavbot_commit_and_push_outputs.sh
+grep -q 'draw_mobile_page' scripts/pavbot_pdf_theme.py
+grep -q 'MOBILE_PAGE_SIZE' scripts/pavbot_pdf_theme.py
 grep -q -- '--isolated' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'git worktree add --detach' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'copy_publishable_outputs_to_worktree' scripts/pavbot_commit_and_push_outputs.sh
@@ -355,10 +376,20 @@ grep -q 'topic_path/pdfs' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'topic_path/data' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'topic_path/podcasts' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'validate_jobs_data.py' scripts/pavbot_commit_and_push_outputs.sh
+grep -q 'Validate Pavbot mobileNewsData JSON artifacts' scripts/validate_mobile_news_data.py
 grep -q 'validate_pulse_news_data.py' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'git fetch origin' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'git push origin "HEAD:$target_branch"' scripts/pavbot_commit_and_push_outputs.sh
+grep -q 'run_cloudkit_publisher "publish"' scripts/pavbot_commit_and_push_outputs.sh
+grep -q 'run_cloudkit_publisher "verify"' scripts/pavbot_commit_and_push_outputs.sh
+grep -q -- '--all-topics' scripts/pavbot_commit_and_push_outputs.sh
+grep -q 'require_latest_reddit_radar_data_in_manifest' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'outside allowed publish paths' scripts/pavbot_commit_and_push_outputs.sh
+grep -q 'ARTIFACT_RECORD_TYPE = "Artifact"' scripts/publish_cloudkit_briefings.py
+grep -q 'build_artifact_records' scripts/publish_cloudkit_briefings.py
+grep -q 'verify_artifact_sets' scripts/publish_cloudkit_briefings.py
+grep -q 'struct CloudKitArtifact' ios/PavbotViewer/Sources/Services/CloudKitService.swift
+grep -q 'fetchArtifacts(for' ios/PavbotViewer/Sources/Services/CloudKitService.swift
 grep -q 'pavbot_commit_and_push_outputs.sh' tests/test_pavbot_commit_and_push_outputs.py
 grep -q 'isolated=True' tests/test_pavbot_commit_and_push_outputs.py
 grep -q 'tools/helper.sh' tests/test_pavbot_commit_and_push_outputs.py
@@ -509,6 +540,40 @@ for artifact in manifest.get("artifacts", []):
 
 print(
     f"manifest missing latest pulseNewsData artifact: {expected_path}",
+    file=sys.stderr,
+)
+raise SystemExit(1)
+PY
+fi
+
+latest_reddit_radar_data="$(
+  {
+    git ls-files -- 'research/reddit-radar/data' \
+      | grep -E '/[^/]+-reddit-radar\.json$' \
+      || true
+  } | LC_ALL=C sort \
+    | tail -n 1
+)"
+if [[ -n "$latest_reddit_radar_data" ]]; then
+  python3 - public/pavbot-manifest.json "$latest_reddit_radar_data" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+manifest_path = Path(sys.argv[1])
+expected_path = sys.argv[2]
+manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+
+for artifact in manifest.get("artifacts", []):
+    if (
+        artifact.get("path") == expected_path
+        and artifact.get("topic") == "reddit-radar"
+        and artifact.get("type") == "redditRadarData"
+    ):
+        raise SystemExit(0)
+
+print(
+    f"manifest missing latest redditRadarData artifact: {expected_path}",
     file=sys.stderr,
 )
 raise SystemExit(1)

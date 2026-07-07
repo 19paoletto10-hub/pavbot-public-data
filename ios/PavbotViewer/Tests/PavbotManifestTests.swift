@@ -3192,21 +3192,128 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(source.contains("privateCloudDatabase"))
         XCTAssertTrue(source.contains("fetchLatestBriefings"))
         XCTAssertTrue(source.contains("fetchBriefing(by"))
+        XCTAssertTrue(source.contains("struct CloudKitArtifact"))
+        XCTAssertTrue(source.contains("fetchArtifacts(for"))
         XCTAssertTrue(source.contains("saveUserNotificationPreferences"))
         XCTAssertTrue(source.contains("loadUserNotificationPreferences"))
         XCTAssertTrue(source.contains("createOrUpdateSubscriptions"))
-        XCTAssertTrue(source.contains("briefings-ready-subscription"))
+        XCTAssertTrue(source.contains("briefings-ready-visible-alert-subscription-v2"))
+        XCTAssertTrue(source.contains("briefings-ready-silent-refresh-subscription-v1"))
         XCTAssertTrue(source.contains("status == %@"))
         XCTAssertTrue(source.contains("briefingId == %@"))
         XCTAssertFalse(source.contains("publicCloudDatabase.record(for: CKRecord.ID(recordName: briefingId))"))
         XCTAssertTrue(source.contains("Logger(subsystem: Bundle.main.bundleIdentifier ?? \"PavbotViewer\", category: \"CloudKit\")"))
-        XCTAssertFalse(source.contains("shouldSendContentAvailable = true"))
         XCTAssertTrue(source.contains("titleLocalizationKey = \"PAVBOT_BRIEFING_NOTIFICATION_TITLE\""))
         XCTAssertTrue(source.contains("alertLocalizationKey = \"PAVBOT_BRIEFING_NOTIFICATION_BODY\""))
         XCTAssertTrue(source.contains("alertLocalizationArgs = [\"title\"]"))
         XCTAssertTrue(source.contains("soundName = \"default\""))
-        XCTAssertTrue(source.contains("desiredKeys = [\"briefingId\", \"title\", \"summary\", \"manifestUrl\", \"category\", \"createdAt\"]"))
-        XCTAssertTrue(source.contains("visible alert, not a silent background push"))
+        XCTAssertTrue(source.contains("briefingNotificationDesiredKeys = [\"briefingId\", \"title\", \"summary\", \"manifestUrl\", \"category\", \"createdAt\"]"))
+        XCTAssertTrue(source.contains("desiredKeys = Self.briefingNotificationDesiredKeys"))
+        XCTAssertTrue(source.contains("subscriptionIDsToDelete: Self.inactiveBriefingSubscriptionIDs(for: mode)"))
+    }
+
+    func testCloudKitArtifactMapsRecordMetadata() throws {
+        let record = CKRecord(
+            recordType: CloudKitArtifact.recordType,
+            recordID: CKRecord.ID(recordName: "artifact-record")
+        )
+        record["artifactId"] = "research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json" as CKRecordValue
+        record["briefingId"] = "puls-dnia-news:2026-07-06-1800" as CKRecordValue
+        record["topic"] = "puls-dnia-news" as CKRecordValue
+        record["stamp"] = "2026-07-06-1800" as CKRecordValue
+        record["type"] = "pulseNewsData" as CKRecordValue
+        record["title"] = "Puls data" as CKRecordValue
+        record["path"] = "research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json" as CKRecordValue
+        record["url"] = "https://raw.githubusercontent.com/example/pavbot/main/research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json" as CKRecordValue
+        record["sizeBytes"] = Int64(100) as CKRecordValue
+        record["date"] = "2026-07-06" as CKRecordValue
+        record["time"] = "18:00" as CKRecordValue
+        record["manifestUrl"] = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json" as CKRecordValue
+        record["status"] = "ready" as CKRecordValue
+        record["createdAt"] = Self.date("2026-07-06T18:00:00Z") as CKRecordValue
+        record["version"] = Int64(1) as CKRecordValue
+
+        let artifact = try CloudKitArtifact(record: record)
+
+        XCTAssertEqual(artifact.id, "research/puls-dnia-news/data/2026-07-06-1800-pulse-news.json")
+        XCTAssertEqual(artifact.briefingId, "puls-dnia-news:2026-07-06-1800")
+        XCTAssertEqual(artifact.topic, "puls-dnia-news")
+        XCTAssertEqual(artifact.type, "pulseNewsData")
+        XCTAssertEqual(artifact.sizeBytes, 100)
+        XCTAssertEqual(artifact.status, "ready")
+        XCTAssertEqual(artifact.version, 1)
+    }
+
+    func testCloudKitBriefingNotificationModeDefaultsToVisibleAlertAndPersists() {
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+
+        XCTAssertEqual(CloudKitBriefingNotificationMode.load(defaults: defaults), .visibleAlert)
+
+        CloudKitBriefingNotificationMode.save(.silentRefresh, defaults: defaults)
+
+        XCTAssertEqual(CloudKitBriefingNotificationMode.load(defaults: defaults), .silentRefresh)
+        XCTAssertEqual(defaults.string(forKey: "pavbot.cloudKitBriefingNotificationMode"), "silentRefresh")
+    }
+
+    func testCloudKitVisibleAlertNotificationInfoIncludesAlertSoundAndRefreshSignal() {
+        let info = CloudKitService.briefingNotificationInfo(for: .visibleAlert)
+
+        XCTAssertEqual(info.titleLocalizationKey, "PAVBOT_BRIEFING_NOTIFICATION_TITLE")
+        XCTAssertEqual(info.alertLocalizationKey, "PAVBOT_BRIEFING_NOTIFICATION_BODY")
+        XCTAssertEqual(info.alertLocalizationArgs ?? [], ["title"])
+        XCTAssertEqual(info.soundName, "default")
+        XCTAssertEqual(info.desiredKeys ?? [], ["briefingId", "title", "summary", "manifestUrl", "category", "createdAt"])
+        XCTAssertTrue(info.shouldSendContentAvailable)
+    }
+
+    func testCloudKitSilentRefreshNotificationInfoHasNoVisibleAlertFields() {
+        let info = CloudKitService.briefingNotificationInfo(for: .silentRefresh)
+
+        XCTAssertNil(info.titleLocalizationKey)
+        XCTAssertNil(info.alertLocalizationKey)
+        XCTAssertNil(info.alertLocalizationArgs)
+        XCTAssertNil(info.soundName)
+        XCTAssertEqual(info.desiredKeys ?? [], ["briefingId", "title", "summary", "manifestUrl", "category", "createdAt"])
+        XCTAssertTrue(info.shouldSendContentAvailable)
+    }
+
+    func testCloudKitBriefingSubscriptionModeUsesDistinctIDsAndDeletesInactiveSubscriptions() {
+        XCTAssertEqual(CloudKitBriefingNotificationMode.visibleAlert.subscriptionID, "briefings-ready-visible-alert-subscription-v2")
+        XCTAssertEqual(CloudKitBriefingNotificationMode.silentRefresh.subscriptionID, "briefings-ready-silent-refresh-subscription-v1")
+        XCTAssertEqual(
+            Set(CloudKitService.inactiveBriefingSubscriptionIDs(for: .visibleAlert)),
+            Set(["briefings-ready-subscription", "briefings-ready-silent-refresh-subscription-v1"])
+        )
+        XCTAssertEqual(
+            Set(CloudKitService.inactiveBriefingSubscriptionIDs(for: .silentRefresh)),
+            Set(["briefings-ready-subscription", "briefings-ready-visible-alert-subscription-v2"])
+        )
+        XCTAssertTrue(CloudKitService.isBriefingsReadySubscriptionID("briefings-ready-subscription"))
+        XCTAssertTrue(CloudKitService.isBriefingsReadySubscriptionID("briefings-ready-visible-alert-subscription-v2"))
+        XCTAssertTrue(CloudKitService.isBriefingsReadySubscriptionID("briefings-ready-silent-refresh-subscription-v1"))
+        XCTAssertFalse(CloudKitService.isBriefingsReadySubscriptionID("unrelated"))
+    }
+
+    func testRemoteNotificationDiagnosticsStoresCloudKitPushModeAndPayloadKind() {
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        let userInfo: [AnyHashable: Any] = [
+            "aps": [
+                "alert": "Nowy briefing",
+                "sound": "default",
+                "content-available": 1
+            ]
+        ]
+
+        RemoteNotificationDiagnostics.saveCloudKitPush(
+            userInfo: userInfo,
+            subscriptionID: CloudKitBriefingNotificationMode.visibleAlert.subscriptionID,
+            defaults: defaults
+        )
+
+        XCTAssertEqual(defaults.string(forKey: RemoteNotificationDiagnostics.lastCloudKitPushSubscriptionIDDefaultsKey), "briefings-ready-visible-alert-subscription-v2")
+        XCTAssertEqual(defaults.string(forKey: RemoteNotificationDiagnostics.lastCloudKitPushModeDefaultsKey), "Widoczny alert")
+        XCTAssertEqual(defaults.string(forKey: RemoteNotificationDiagnostics.lastCloudKitPushPayloadKindDefaultsKey), "Alert + odświeżenie")
+        XCTAssertTrue(RemoteNotificationDiagnostics.lastCloudKitPushSummary(defaults: defaults).contains("Widoczny alert"))
     }
 
     func testCloudKitNotificationLocalizationStringsExist() throws {
@@ -5974,7 +6081,7 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(reportSource.contains("Text(errorMessage)\n                    .font(.caption)\n                    .foregroundStyle(.red)"))
     }
 
-    func testProjectVersionIs244WithTimestampBuildNumber() throws {
+    func testProjectVersionIs26WithTimestampBuildNumber() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let projectYML = testsURL
             .deletingLastPathComponent()
@@ -5982,7 +6089,7 @@ final class PavbotManifestTests: XCTestCase {
             .appendingPathComponent("project.yml")
         let source = try String(contentsOf: projectYML)
 
-        XCTAssertTrue(source.contains("MARKETING_VERSION: \"2.4.5\""))
+        XCTAssertTrue(source.contains("MARKETING_VERSION: \"2.6\""))
         XCTAssertTrue(source.contains("BUILD_TIMESTAMP=\"$(date +%H%M%S)\""))
         XCTAssertTrue(source.contains("BUILD_NUMBER=\"${BUILD_DATE}.${BUILD_TIMESTAMP}\""))
         let buildNumbers = source
@@ -7001,6 +7108,33 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.manifest?.automations.map(\.id), ["research", "podcast"])
         XCTAssertEqual(store.state.error?.title, "Pokazuję dane z cache")
         XCTAssertTrue(store.state.error?.message.contains("Remote manifest is older") == true)
+    }
+
+    @MainActor
+    func testStoreAcceptsOlderRemoteManifestWhenItAddsCatalogArtifacts() async throws {
+        let cached = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
+        let olderRemoteWithNewArtifact = PavbotManifest(
+            schemaVersion: cached.schemaVersion,
+            title: cached.title,
+            generatedAt: "2026-06-22T11:59:00+00:00",
+            rawBaseUrl: cached.rawBaseUrl,
+            automations: cached.automations,
+            topics: cached.topics,
+            artifacts: [Self.newArtifact] + cached.artifacts
+        )
+        let store = ManifestStore(
+            client: StubManifestClient(manifest: olderRemoteWithNewArtifact),
+            cache: ManifestCache(defaults: UserDefaults(suiteName: UUID().uuidString)!),
+            notifier: SpyArtifactNotifier(),
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+        )
+        store.manifest = cached
+
+        await store.load()
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.manifest?.artifacts.first?.id, "new-run-2026-06-23")
+        XCTAssertEqual(store.lastNewArtifacts.map(\.id), ["new-run-2026-06-23"])
     }
 
     @MainActor

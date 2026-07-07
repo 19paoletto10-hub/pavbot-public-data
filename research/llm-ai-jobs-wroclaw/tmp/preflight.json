@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "automationId": "llm-ai-jobs-wroc-aw-17-40",
+  "topicPath": "research/llm-ai-jobs-wroclaw",
+  "checkedAt": "2026-07-04T13:42:32Z",
+  "materialChangeHint": "unknown",
+  "reason": "no_previous_state",
+  "latestRemoteArtifact": "research/llm-ai-jobs-wroclaw/runs/2026-07-03-1541.md",
+  "sources": [
+    {
+      "name": "justjoin_wroclaw_ai",
+      "ref": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "ok",
+      "sha256": "6a808cb79b38538747bccfb4350a87d7611067680239168cce92f779ff1ec9d6",
+      "bytes": 1853626,
+      "changed": null
+    },
+    {
+      "name": "addepto_careers",
+      "ref": "https://addepto.com/career/",
+      "status": "ok",
+      "sha256": "c4736872717c6d94b617bf1a4bc644f5beac337bc4990f98e01697fb7b20a121",
+      "bytes": 181844,
+      "changed": null
+    },
+    {
+      "name": "remodevs_careers",
+      "ref": "https://remodevs.com/careers/",
+      "status": "ok",
+      "sha256": "075ec40dcbef136218f6db3ae5454acffdc66a0062f4369a96cc254b5c7abb5c",
+      "bytes": 53983,
+      "changed": null
+    },
+    {
+      "name": "squad_board",
+      "ref": "https://justjoin.it/job-offer/squad-applied-scientist-llm--wroclaw-ai",
+      "status": "ok",
+      "sha256": "1f6c90db73cb22b8d269e28614f4263442f83d2f2a23187d2b5f6b4105c9c0e8",
+      "bytes": 798193,
+      "changed": null
+    }
+  ]
+}

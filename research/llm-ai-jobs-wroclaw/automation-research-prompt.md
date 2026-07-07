@@ -96,8 +96,8 @@ powstanie albo weryfikacja wykryje pusty/nieczytelny plik, nie publikuj
 wynikow i zglos blad przebiegu.
 
 Po zapisaniu raportu, indeksu, backlogu, JSON i PDF opublikuj wyniki dla
-aplikacji iOS i webhooka notyfikacji push. Skrypt uruchamia
-`python3 scripts/generate_pavbot_manifest.py`, odswieza
+aplikacji iOS przez metadane briefingu w CloudKit oraz publiczny manifest
+danych. Skrypt uruchamia `python3 scripts/generate_pavbot_manifest.py`, odswieza
 `public/pavbot-manifest.json`, commituje tylko dozwolone sciezki i robi push na
 `origin/main`. Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override
 srodowiskowego, `PAVBOT_RAW_BASE_URL`, istniejacego `rawBaseUrl` w manifescie

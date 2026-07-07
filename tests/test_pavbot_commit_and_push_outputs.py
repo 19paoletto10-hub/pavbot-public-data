@@ -22,8 +22,10 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
 
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertIn("pushed pavbot outputs", result.stdout)
-            self.assertIn("cloudkit briefing preflight verified", result.stdout)
-            self.assertIn("cloudkit briefing publication verified", result.stdout)
+            self.assertIn("cloudkit briefing/artifact preflight verified", result.stdout)
+            self.assertIn("cloudkit briefing/artifact publication verified", result.stdout)
+            cloudkit_log = (repo.parent / "cloudkit-publisher.log").read_text(encoding="utf-8").splitlines()
+            self.assertEqual(cloudkit_log, ["preflight", "publish", "verify"])
             changed_files = self.git(
                 repo,
                 "diff-tree",
@@ -582,10 +584,38 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
 
             self.assertEqual(second.returncode, 0, second.stderr)
             self.assertIn("no publishable changes", second.stdout)
+            cloudkit_log = (repo.parent / "cloudkit-publisher.log").read_text(encoding="utf-8").splitlines()
+            self.assertEqual(cloudkit_log, ["preflight", "publish", "verify", "publish", "verify"])
             self.assertEqual(
                 self.git(repo, "rev-parse", "HEAD", stdout=True).strip(),
                 head_after_first_publish,
             )
+
+    def test_reddit_radar_publish_requires_latest_data_in_manifest(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "reddit-radar",
+                "data/2026-07-07-1808-reddit-radar.json",
+                json.dumps(self.valid_reddit_radar_payload("2026-07-07-1808"), ensure_ascii=False) + "\n",
+            )
+
+            result = self.run_publish_script(repo, "research/reddit-radar")
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            manifest = json.loads(
+                self.git(repo, "show", "origin/main:public/pavbot-manifest.json", stdout=True)
+            )
+            reddit_artifacts = [
+                artifact
+                for artifact in manifest["artifacts"]
+                if artifact["topic"] == "reddit-radar" and artifact["type"] == "redditRadarData"
+            ]
+            self.assertEqual(
+                reddit_artifacts[0]["path"],
+                "research/reddit-radar/data/2026-07-07-1808-reddit-radar.json",
+            )
+            self.assertEqual(reddit_artifacts[0]["time"], "18:08")
 
     def test_cloudkit_dry_run_is_diagnostic_only_and_refuses_production_push(self) -> None:
         with self.temporary_repo() as repo:
@@ -600,6 +630,18 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                 self.git(repo, "rev-list", "--count", "origin/main", stdout=True).strip(),
                 "1",
             )
+
+    def test_all_topics_backfill_runs_cloudkit_publish_and_verify_without_commit(self) -> None:
+        with self.temporary_repo() as repo:
+            head_before = self.git(repo, "rev-parse", "HEAD", stdout=True).strip()
+
+            result = self.run_publish_script(repo, "", all_topics=True)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertIn("cloudkit all-topics publication verified", result.stdout)
+            cloudkit_log = (repo.parent / "cloudkit-publisher.log").read_text(encoding="utf-8").splitlines()
+            self.assertEqual(cloudkit_log, ["publish", "verify"])
+            self.assertEqual(self.git(repo, "rev-parse", "HEAD", stdout=True).strip(), head_before)
 
     def test_uses_existing_manifest_raw_base_url_when_manifest_env_is_missing(self) -> None:
         with self.temporary_repo() as repo:
@@ -953,6 +995,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
         isolated: bool = False,
         manifest_url: str | None = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
         cloudkit_dry_run: bool = False,
+        all_topics: bool = False,
     ) -> subprocess.CompletedProcess[str]:
         self.assertTrue(self.script_path.exists(), f"missing script: {self.script_path}")
         env = os.environ.copy()
@@ -983,7 +1026,10 @@ esac
         args = ["bash", str(self.script_path)]
         if isolated:
             args.append("--isolated")
-        args.append(topic_path)
+        if all_topics:
+            args.append("--all-topics")
+        else:
+            args.append(topic_path)
         return subprocess.run(
             args,
             cwd=repo,
@@ -1078,6 +1124,36 @@ esac
             ],
             "podcastTopics": [],
             "checkedSources": [{"title": "OpenAI", "url": "https://openai.com/news"}],
+        }
+
+    def valid_reddit_radar_payload(self, stamp: str) -> dict:
+        date_part, time_part = stamp.rsplit("-", 1)
+        return {
+            "id": f"humor-{stamp}",
+            "title": "<RR> Reddit Radar",
+            "summary": "Testowy radar Reddita.",
+            "generatedAt": f"{date_part}T{time_part[:2]}:{time_part[2:]}:00+00:00",
+            "displayTime": f"{time_part[:2]}:{time_part[2:]}",
+            "nextRefreshAt": None,
+            "refreshIntervalHours": 2,
+            "items": [
+                {
+                    "id": "reddit-item-1",
+                    "title": "Test meme",
+                    "caption": "Krótki test.",
+                    "sourceName": "r/test",
+                    "sourceURL": "https://www.reddit.com/r/test/comments/example",
+                    "imageURL": None,
+                    "score": 100,
+                    "comments": 5,
+                    "tags": ["memy"],
+                    "categoryLabel": "memy",
+                    "postText": None,
+                    "whyFunny": "Bo test pilnuje kontraktu.",
+                    "commentHighlights": [],
+                }
+            ],
+            "source": "Codex Safari Reddit radar",
         }
 
     def valid_mobile_news_data_payload(self) -> dict:
@@ -1252,7 +1328,13 @@ class TemporaryPavbotRepo:
             ),
             encoding="utf-8",
         )
-        for slug in ("tech-news", "llm-ai-jobs-wroclaw", "aktualne-wydarzenia-mobile", "puls-dnia-news"):
+        for slug in (
+            "tech-news",
+            "llm-ai-jobs-wroclaw",
+            "aktualne-wydarzenia-mobile",
+            "puls-dnia-news",
+            "reddit-radar",
+        ):
             topic = repo / "research" / slug
             topic.mkdir(parents=True)
             (topic / "topic.md").write_text(f"# Topic Contract: {slug}\n", encoding="utf-8")

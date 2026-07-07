@@ -323,24 +323,31 @@ async def github_webhook(
         record_webhook_status(event=x_github_event, status="ignored")
         return {"status": "ignored", "event": x_github_event}
 
+    return await process_manifest_change_notifications(
+        event=x_github_event or "push",
+        source="github-webhook",
+        topic_path="",
+    )
+
+
+async def process_manifest_change_notifications(
+    *,
+    event: str,
+    source: str,
+    topic_path: str,
+) -> dict[str, Any]:
     current_manifest = await fetch_manifest(manifest_url())
     state_path = data_dir() / "last-manifest.json"
     previous_manifest = load_json(state_path, None)
     changes = compute_manifest_changes(previous_manifest, current_manifest)
-    apns_summary: dict[str, Any] = {
-        "attempted": 0,
-        "sent": 0,
-        "failed": 0,
-        "skippedDevices": 0,
-        "errors": [],
-    }
+    apns_summary = empty_apns_summary()
 
     if changes.has_changes:
         apns_summary = await send_change_notifications(changes.artifacts, changes.automations, current_manifest)
 
     save_json(state_path, current_manifest)
     record_webhook_status(
-        event=x_github_event or "push",
+        event=event,
         status="processed",
         new_artifacts=len(changes.artifacts),
         new_automations=len(changes.automations),
@@ -348,9 +355,22 @@ async def github_webhook(
     )
     return {
         "status": "processed",
+        "source": source,
+        "topicPath": topic_path,
         "newArtifacts": len(changes.artifacts),
         "newAutomations": len(changes.automations),
         "apns": apns_summary,
+    }
+
+
+def empty_apns_summary() -> dict[str, Any]:
+    return {
+        "attempted": 0,
+        "sent": 0,
+        "failed": 0,
+        "skippedDevices": 0,
+        "errors": [],
+        "status": "skipped",
     }
 
 
@@ -372,7 +392,7 @@ async def send_change_notifications(
 ) -> dict[str, Any]:
     devices = load_json(data_dir() / "devices.json", {})
     sender = apns_sender()
-    manifest_url_value = os.environ.get("PAVBOT_MANIFEST_URL", "")
+    manifest_url_value = manifest_url()
     summary = await send_apns_change_notifications(
         devices=devices,
         artifacts=artifacts,

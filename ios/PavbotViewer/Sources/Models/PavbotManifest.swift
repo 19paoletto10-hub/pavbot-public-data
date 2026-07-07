@@ -236,6 +236,10 @@ struct PavbotManifest: Codable, Equatable {
         return generatedAtDate < otherGeneratedAtDate
     }
 
+    func hasCatalogUpdates(comparedTo previous: PavbotManifest) -> Bool {
+        !newArtifacts(comparedTo: previous).isEmpty || !newAutomations(comparedTo: previous).isEmpty
+    }
+
     func topicTitle(for slug: String) -> String {
         topics.first { $0.slug == slug }?.title ?? slug
     }

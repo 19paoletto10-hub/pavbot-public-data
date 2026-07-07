@@ -232,11 +232,7 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
             return packages.first?.date
         }
 
-        if let package = packages.first(where: { package in
-            package.key == selectedReportDay
-                || package.date == selectedReportDay
-                || package.key.hasPrefix(selectedReportDay)
-        }) {
+        if let package = selectedPackage(in: packages, selectedReportDay: selectedReportDay) {
             return package.date
         }
 
@@ -245,6 +241,33 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
         }
 
         return packages.first?.date
+    }
+
+    static func selectedPackage(in packages: [TopicReportPackage], selectedReportDay: String?) -> TopicReportPackage? {
+        guard let selectedReportDay = selectedReportDay?.trimmingCharacters(in: .whitespacesAndNewlines),
+              !selectedReportDay.isEmpty
+        else {
+            return packages.first
+        }
+
+        if let exactKey = packages.first(where: { $0.key == selectedReportDay }) {
+            return exactKey
+        }
+
+        if let exactDisplay = packages.first(where: { $0.displayDate == selectedReportDay }) {
+            return exactDisplay
+        }
+
+        if selectedReportDay.count > 10,
+           let keyedPrefix = packages.first(where: { $0.key.hasPrefix(selectedReportDay) }) {
+            return keyedPrefix
+        }
+
+        if let exactDate = packages.first(where: { $0.date == selectedReportDay }) {
+            return exactDate
+        }
+
+        return packages.first(where: { $0.key.hasPrefix(selectedReportDay) })
     }
 
     private static func packageKey(for artifact: PavbotArtifact) -> String {

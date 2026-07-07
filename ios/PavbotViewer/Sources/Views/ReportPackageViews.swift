@@ -511,12 +511,8 @@ private struct ResearchRunPicker: View {
     }
 
     private var selectedPackageID: String? {
-        guard let selectedReportDay else { return selectedDayPackages.first?.id }
-        return selectedDayPackages.first { package in
-            package.key == selectedReportDay
-                || package.date == selectedReportDay
-                || package.key.hasPrefix(selectedReportDay)
-        }?.id
+        TopicReportPackage.selectedPackage(in: selectedDayPackages, selectedReportDay: selectedReportDay)?.id
+            ?? selectedDayPackages.first?.id
     }
 
     private func packages(on selectedReportDate: String?) -> [TopicReportPackage] {
@@ -565,11 +561,11 @@ private struct ResearchRunChip: View {
                 .frame(width: 16, height: 16)
 
             VStack(alignment: .leading, spacing: 2) {
-                Text(package.displayDate.isEmpty ? package.key : package.displayDate)
+                Text(title)
                     .font(.caption.weight(.bold))
                     .foregroundStyle(isSelected ? tint : .primary)
                     .lineLimit(1)
-                Text("\(package.artifacts.count) \(ReportPackageCopy.filesLabel)")
+                Text(subtitle)
                     .font(.caption2.weight(.semibold))
                     .foregroundStyle(.secondary)
                     .lineLimit(1)
@@ -583,6 +579,40 @@ private struct ResearchRunChip: View {
             RoundedRectangle(cornerRadius: 11, style: .continuous)
                 .stroke(isSelected ? tint.opacity(0.5) : Color(.separator).opacity(0.2), lineWidth: 1)
         }
+    }
+
+    private var title: String {
+        runPeriodTitle
+    }
+
+    private var subtitle: String {
+        let fileCount = "\(package.artifacts.count) \(ReportPackageCopy.filesLabel)"
+        if let time = clean(package.time) {
+            return "\(time) · \(fileCount)"
+        }
+        return "\(package.date ?? package.key) · \(fileCount)"
+    }
+
+    private var runPeriodTitle: String {
+        guard let time = clean(package.time),
+              let hour = Int(time.prefix(2))
+        else {
+            return "Poranna"
+        }
+
+        switch hour {
+        case 0..<12:
+            return "Poranna"
+        case 12..<17:
+            return "Dzienna"
+        default:
+            return "Wieczorna"
+        }
+    }
+
+    private func clean(_ value: String?) -> String? {
+        let trimmed = value?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
+        return trimmed.isEmpty ? nil : trimmed
     }
 }
 

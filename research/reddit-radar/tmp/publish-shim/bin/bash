@@ -1,0 +1,10 @@
+#!/bin/sh
+
+case "$1" in
+  */scripts/pavbot_commit_and_push_outputs.sh)
+    echo "publish shim: skipped $1 $*" >&2
+    exit 0
+    ;;
+esac
+
+exec /bin/bash "$@"

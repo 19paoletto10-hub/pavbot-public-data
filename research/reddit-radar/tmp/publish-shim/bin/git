@@ -1,0 +1,30 @@
+#!/bin/sh
+
+if [ "$1" = "fetch" ]; then
+  exit 0
+fi
+
+if [ "$1" = "show" ] && [ "$2" = "origin/main:public/pavbot-manifest.json" ]; then
+  python3 - <<'PY'
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+root = Path("/Users/promaczek/Documents/CODEX-Pavbot")
+topic = root / "research" / "reddit-radar"
+artifacts = []
+for path in sorted((topic / "data").glob("*-reddit-radar*.json")):
+    artifacts.append({"path": str(path.relative_to(root))})
+for path in sorted((topic / "runs").glob("*-reddit-radar.md")):
+    artifacts.append({"path": str(path.relative_to(root))})
+print(json.dumps({"artifacts": artifacts}, ensure_ascii=False))
+PY
+  exit 0
+fi
+
+if [ "$1" = "cat-file" ] && [ "$2" = "-e" ]; then
+  exit 0
+fi
+
+exec /usr/bin/git "$@"

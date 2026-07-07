@@ -211,7 +211,7 @@ PAVBOT_PUBLIC_NOTIFIER_URL=https://<random>.trycloudflare.com
 ```
 
 ```text
-iOS Settings -> Notification server URL -> https://<random>.trycloudflare.com
+Legacy iOS notifier URL -> https://<random>.trycloudflare.com
 GitHub webhook -> https://<random>.trycloudflare.com/webhooks/github
 ```
 
@@ -226,12 +226,9 @@ curl https://<random>.trycloudflare.com/v1/app/defaults
 Keep the Terminal window open. Closing it stops the tunnel and closed-app iPhone
 push notifications will stop until a new tunnel URL is configured.
 
-After the notifier is restarted, open the app and tap
-`Ustawienia -> Przywróć ustawienia domyślne`. The app will refill the Manifest
-URL and Notification server URL from `/v1/app/defaults`. If the old URL in the
-text box is already broken, the app falls back to its bundled bootstrap notifier
-URL. For App Store releases, prefer a named Cloudflare tunnel/domain so the
-bundled bootstrap URL does not need to change after every Quick Tunnel reset.
+After the notifier is restarted, legacy builds can read defaults from
+`/v1/app/defaults`. Current briefing notifications are configured in the iOS app
+through CloudKit under `Ustawienia -> Powiadomienia -> Tryb briefingów`.
 
 ## Start After MacBook Restart
 
@@ -281,10 +278,10 @@ If the iOS app does not show a new automation, check:
 
 ## iOS App Setup
 
-In the app:
+For legacy notifier builds:
 
 ```text
-Settings -> Notification server URL
+Settings -> legacy notifier URL
 ```
 
 Enter the public Cloudflare URL, for example:

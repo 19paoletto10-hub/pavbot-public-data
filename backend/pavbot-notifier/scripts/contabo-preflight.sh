@@ -55,7 +55,7 @@ echo "--- nginx ---"
 if command -v nginx >/dev/null 2>&1; then
   nginx -t
 else
-  echo "nginx not found; configure an existing reverse proxy before exposing notify.paweltanski.com"
+  echo "nginx not found; configure an existing reverse proxy before exposing the notifier domain"
 fi
 
 echo

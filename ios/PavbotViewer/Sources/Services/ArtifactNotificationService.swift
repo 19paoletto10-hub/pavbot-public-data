@@ -150,13 +150,14 @@ enum RemoteNotificationRegistrationPolicy {
 
 @MainActor
 enum RemoteNotificationPermission {
-    static func requestAndRegister() async -> Bool {
+    static func requestAndRegister(mode: CloudKitBriefingNotificationMode = .load()) async -> Bool {
         let granted = (try? await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge])) ?? false
         if granted {
             LiveNotificationSettings.setEnabled(true)
             RemoteNotificationDiagnostics.saveRegistrationAttempt()
             do {
-                try await CloudKitService.shared.createOrUpdateSubscriptions()
+                CloudKitBriefingNotificationMode.save(mode)
+                try await CloudKitService.shared.createOrUpdateSubscriptions(mode: mode)
                 RemoteNotificationDiagnostics.saveRegistrationSuccess()
                 UIApplication.shared.registerForRemoteNotifications()
             } catch {
@@ -170,7 +171,7 @@ enum RemoteNotificationPermission {
         return granted
     }
 
-    static func refreshRegistrationIfNeeded() async {
+    static func refreshRegistrationIfNeeded(mode: CloudKitBriefingNotificationMode = .load()) async {
         let settings = await UNUserNotificationCenter.current().notificationSettings()
         guard RemoteNotificationRegistrationPolicy.shouldRegister(
             liveNotificationsEnabled: LiveNotificationSettings.isEnabled(),
@@ -181,7 +182,8 @@ enum RemoteNotificationPermission {
 
         RemoteNotificationDiagnostics.saveRegistrationAttempt()
         do {
-            try await CloudKitService.shared.createOrUpdateSubscriptions()
+            CloudKitBriefingNotificationMode.save(mode)
+            try await CloudKitService.shared.createOrUpdateSubscriptions(mode: mode)
             RemoteNotificationDiagnostics.saveRegistrationSuccess()
             UIApplication.shared.registerForRemoteNotifications()
         } catch {
@@ -197,6 +199,10 @@ enum RemoteNotificationDiagnostics {
     static let registrationStatusDefaultsKey = "pavbot.lastRemoteNotificationRegistrationStatus"
     static let lastRegisteredAtDefaultsKey = "pavbot.lastRemoteNotificationRegisteredAt"
     static let apnsEnvironmentDefaultsKey = "pavbot.apnsEnvironment"
+    static let lastCloudKitPushReceivedAtDefaultsKey = "pavbot.lastCloudKitPushReceivedAt"
+    static let lastCloudKitPushSubscriptionIDDefaultsKey = "pavbot.lastCloudKitPushSubscriptionID"
+    static let lastCloudKitPushModeDefaultsKey = "pavbot.lastCloudKitPushMode"
+    static let lastCloudKitPushPayloadKindDefaultsKey = "pavbot.lastCloudKitPushPayloadKind"
 
     static func saveDeviceToken(_ deviceToken: Data, defaults: UserDefaults = .standard) {
         defaults.set(deviceToken.hexString, forKey: deviceTokenDefaultsKey)
@@ -281,6 +287,57 @@ enum RemoteNotificationDiagnostics {
         return "Production"
         #endif
     }
+
+    static func saveCloudKitPush(
+        userInfo: [AnyHashable: Any],
+        subscriptionID: String?,
+        defaults: UserDefaults = .standard
+    ) {
+        guard CloudKitService.isBriefingsReadySubscriptionID(subscriptionID) else { return }
+
+        let mode = CloudKitBriefingNotificationMode.mode(forSubscriptionID: subscriptionID)?.title ?? "Legacy / nieznany"
+        defaults.set(ISO8601DateFormatter().string(from: Date()), forKey: lastCloudKitPushReceivedAtDefaultsKey)
+        defaults.set(subscriptionID ?? "Nieznany", forKey: lastCloudKitPushSubscriptionIDDefaultsKey)
+        defaults.set(mode, forKey: lastCloudKitPushModeDefaultsKey)
+        defaults.set(cloudKitPayloadKind(userInfo: userInfo), forKey: lastCloudKitPushPayloadKindDefaultsKey)
+    }
+
+    static func lastCloudKitPushSummary(defaults: UserDefaults = .standard) -> String {
+        guard let receivedAt = defaults.string(forKey: lastCloudKitPushReceivedAtDefaultsKey), !receivedAt.isEmpty else {
+            return "Brak"
+        }
+        let mode = defaults.string(forKey: lastCloudKitPushModeDefaultsKey) ?? "Nieznany"
+        let kind = defaults.string(forKey: lastCloudKitPushPayloadKindDefaultsKey) ?? "Nieznany"
+        let subscriptionID = defaults.string(forKey: lastCloudKitPushSubscriptionIDDefaultsKey) ?? "Nieznany"
+        return "\(receivedAt) · \(mode) · \(kind) · \(subscriptionID)"
+    }
+
+    private static func cloudKitPayloadKind(userInfo: [AnyHashable: Any]) -> String {
+        guard let aps = userInfo["aps"] as? [String: Any] else {
+            return "Nieznany"
+        }
+
+        let hasVisibleAlert = aps["alert"] != nil || aps["sound"] != nil
+        let hasBackgroundRefresh: Bool
+        if let value = aps["content-available"] as? Int {
+            hasBackgroundRefresh = value == 1
+        } else if let value = aps["content-available"] as? Bool {
+            hasBackgroundRefresh = value
+        } else {
+            hasBackgroundRefresh = false
+        }
+
+        switch (hasVisibleAlert, hasBackgroundRefresh) {
+        case (true, true):
+            return "Alert + odświeżenie"
+        case (true, false):
+            return "Alert"
+        case (false, true):
+            return "Ciche odświeżenie"
+        case (false, false):
+            return "Nieznany"
+        }
+    }
 }
 
 final class ArtifactNotificationDelegate: NSObject, UNUserNotificationCenterDelegate {
@@ -303,7 +360,10 @@ final class ArtifactNotificationDelegate: NSObject, UNUserNotificationCenterDele
         _ center: UNUserNotificationCenter,
         didReceive response: UNNotificationResponse
     ) async {
-        let command = NotificationRoutingCommand(userInfo: response.notification.request.content.userInfo)
+        let userInfo = response.notification.request.content.userInfo
+        let cloudKitNotification = CKNotification(fromRemoteNotificationDictionary: userInfo)
+        RemoteNotificationDiagnostics.saveCloudKitPush(userInfo: userInfo, subscriptionID: cloudKitNotification?.subscriptionID)
+        let command = NotificationRoutingCommand(userInfo: userInfo)
         await MainActor.run {
             guard let router else { return }
             command.apply(to: router)
@@ -325,7 +385,7 @@ private enum NotificationRoutingCommand: Sendable {
             return
         }
         if let queryNotification = CKNotification(fromRemoteNotificationDictionary: userInfo) as? CKQueryNotification,
-           queryNotification.subscriptionID == CloudKitService.briefingsReadySubscriptionID {
+           CloudKitService.isBriefingsReadySubscriptionID(queryNotification.subscriptionID) {
             var routeUserInfo: [AnyHashable: Any] = [:]
             if let recordFields = queryNotification.recordFields {
                 for key in ["briefingId", "title", "summary", "manifestUrl", "category"] {
@@ -407,7 +467,8 @@ final class PavbotRemoteNotificationAppDelegate: NSObject, UIApplicationDelegate
     ) {
         Task { @MainActor in
             let cloudKitNotification = CKNotification(fromRemoteNotificationDictionary: userInfo)
-            if cloudKitNotification?.subscriptionID == CloudKitService.briefingsReadySubscriptionID {
+            RemoteNotificationDiagnostics.saveCloudKitPush(userInfo: userInfo, subscriptionID: cloudKitNotification?.subscriptionID)
+            if CloudKitService.isBriefingsReadySubscriptionID(cloudKitNotification?.subscriptionID) {
                 let result = await CloudKitPushRefreshCenter.shared.handleRemoteNotification(userInfo)
                 completionHandler(result)
             } else {

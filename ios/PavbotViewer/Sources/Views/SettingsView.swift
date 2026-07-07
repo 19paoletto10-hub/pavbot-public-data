@@ -16,6 +16,8 @@ struct SettingsView: View {
     @State private var remoteDeviceToken = ""
     @State private var remoteRegistrationError = ""
     @State private var dailyWeatherAlertsEnabled = true
+    @State private var briefingNotificationMode = CloudKitBriefingNotificationMode.load()
+    @State private var lastCloudKitPushSummary = "Brak"
     @State private var cloudKitStatusMessage: String?
     @State private var speechVoicePreference = SpeechVoiceSettings.load()
     @State private var speechVoiceCatalog = SpeechVoiceCatalog.current()
@@ -39,6 +41,7 @@ struct SettingsView: View {
         .onAppear {
             cloudKitStatusMessage = nil
             dailyWeatherAlertsEnabled = DailyWeatherNotificationSettings.isEnabled()
+            briefingNotificationMode = CloudKitBriefingNotificationMode.load()
             refreshSpeechVoiceSettings()
             refreshRemoteNotificationDiagnostics()
             Task { await refreshNotificationStatus() }
@@ -51,8 +54,20 @@ struct SettingsView: View {
             DailyWeatherNotificationSettings.setEnabled(newValue)
             guard LiveNotificationSettings.isEnabled() else { return }
             Task {
-                await RemoteNotificationPermission.refreshRegistrationIfNeeded()
+                await RemoteNotificationPermission.refreshRegistrationIfNeeded(mode: briefingNotificationMode)
                 refreshRemoteNotificationDiagnostics()
+            }
+        }
+        .onChange(of: briefingNotificationMode) { _, newValue in
+            CloudKitBriefingNotificationMode.save(newValue)
+            guard LiveNotificationSettings.isEnabled() else {
+                refreshRemoteNotificationDiagnostics()
+                return
+            }
+            Task {
+                await RemoteNotificationPermission.refreshRegistrationIfNeeded(mode: newValue)
+                refreshRemoteNotificationDiagnostics()
+                haptics.play(remoteRegistrationError.isEmpty ? .success : .warning)
             }
         }
     }
@@ -133,6 +148,8 @@ struct SettingsView: View {
                 LabeledContent("CloudKit", value: cloudKitReachability)
                 LabeledContent("Token urządzenia", value: deviceTokenRegistrationStatus)
                 LabeledContent("Środowisko APNs", value: RemoteNotificationDiagnostics.apnsEnvironmentLabel())
+
+                briefingNotificationModeContent
 
                 Text("Powiadomienia live przychodzą jako normalne alerty z dźwiękiem. Odświeżenie ponownie rejestruje alerty briefingów.")
                     .font(.caption)
@@ -296,6 +313,8 @@ struct SettingsView: View {
                         LabeledContent("Token urządzenia", value: deviceTokenRegistrationStatus)
                         LabeledContent("Środowisko APNs", value: RemoteNotificationDiagnostics.apnsEnvironmentLabel())
 
+                        briefingNotificationModeContent
+
                         if let cloudKitStatusMessage {
                             Label(cloudKitStatusMessage, systemImage: "exclamationmark.triangle")
                                 .font(.callout)
@@ -362,6 +381,34 @@ struct SettingsView: View {
                         }
                     }
                 }
+        }
+    }
+
+    @ViewBuilder
+    private var briefingNotificationModeContent: some View {
+        LabeledContent("Tryb briefingów", value: briefingNotificationMode.title)
+
+        Picker("Tryb briefingów", selection: $briefingNotificationMode) {
+            ForEach(CloudKitBriefingNotificationMode.allCases) { mode in
+                Text(mode.title).tag(mode)
+            }
+        }
+        .pickerStyle(.segmented)
+
+        Text(briefingNotificationMode.detail)
+            .font(.caption)
+            .foregroundStyle(.secondary)
+            .fixedSize(horizontal: false, vertical: true)
+
+        VStack(alignment: .leading, spacing: 4) {
+            Text("Ostatni push CloudKit")
+                .font(.caption)
+                .foregroundStyle(.secondary)
+            Text(lastCloudKitPushSummary)
+                .font(.caption2)
+                .foregroundStyle(.secondary)
+                .textSelection(.enabled)
+                .fixedSize(horizontal: false, vertical: true)
         }
     }
 
@@ -559,7 +606,7 @@ struct SettingsView: View {
 
     private func requestNotifications() async {
         LiveNotificationOnboarding.markPromptSeen()
-        let granted = await RemoteNotificationPermission.requestAndRegister()
+        let granted = await RemoteNotificationPermission.requestAndRegister(mode: briefingNotificationMode)
         cloudKitStatusMessage = granted ? nil : RemoteNotificationDiagnostics.registrationError()
         LiveNotificationSettings.setEnabled(granted)
         haptics.play(granted ? .success : .warning)
@@ -574,6 +621,7 @@ struct SettingsView: View {
         remoteRegistrationError = RemoteNotificationDiagnostics.registrationError()
         deviceTokenRegistrationStatus = RemoteNotificationDiagnostics.registrationStatus()
         deviceTokenRegisteredAt = RemoteNotificationDiagnostics.lastRegisteredAt()
+        lastCloudKitPushSummary = RemoteNotificationDiagnostics.lastCloudKitPushSummary()
     }
 
     private func refreshCloudKitReachability() async {

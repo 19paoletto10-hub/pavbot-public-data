@@ -97,7 +97,7 @@ Artefakty redakcyjne i diagnostyczne, czyli raport Markdown, `draft.md`,
 `sources.md` i `tts_variants.json`, nadal mają powstawać lokalnie na potrzeby
 weryfikacji, renderu PDF i debugowania. Finalny `script.md` jest również
 publicznym tekstowym źródłem dla lokalnego TTS w aplikacji iOS. Publiczna
-publikacja dla aplikacji iOS i webhooka ma obejmować:
+publikacja dla aplikacji iOS przez CloudKit briefing i manifest danych ma obejmować:
 - `research/aktualne-wydarzenia-mobile/data/YYYY-MM-DD-HHMM-mobile-news.json`
 - `research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`
 - `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/script.md`
@@ -107,10 +107,11 @@ Publikuj tylko te warianty audio, dla których istnieje poprawnie wyrenderowany
 `podcast.mp3`. Nie publikuj placeholderów, `tts_variants.json`, `render.json`,
 `sources.md`, raportów `runs/` ani dodatkowych PDF-ów.
 
-Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS i webhooka
-notyfikacji push. Skrypt uruchamia `python3 scripts/generate_pavbot_manifest.py`,
-odświeża `public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki i robi
-push na `origin/main`.
+Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS przez metadane
+briefingu w CloudKit oraz publiczny manifest danych. Skrypt uruchamia
+`python3 scripts/generate_pavbot_manifest.py`, odświeża
+`public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki i robi push na
+`origin/main`.
 Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override środowiskowego,
 `PAVBOT_RAW_BASE_URL`, istniejącego `rawBaseUrl` w manifeście albo GitHub
 `origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Rozwiązany URL

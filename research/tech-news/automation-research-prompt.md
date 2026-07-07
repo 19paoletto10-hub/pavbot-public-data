@@ -69,10 +69,11 @@ Zaktualizuj `research/tech-news/index.md`, gdy zmienia się obecny stan wiedzy.
 Zaktualizuj `research/tech-news/backlog.md`, gdy pojawiają się konkretne
 follow-upy, notatki przeglądowe, pytania albo rozwiązane elementy.
 
-Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS i webhooka
-notyfikacji push. Skrypt uruchamia `python3 scripts/generate_pavbot_manifest.py`,
-odświeża `public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki i robi
-push na `origin/main`.
+Po zapisaniu artefaktów opublikuj wyniki dla aplikacji iOS przez metadane
+briefingu w CloudKit oraz publiczny manifest danych. Skrypt uruchamia
+`python3 scripts/generate_pavbot_manifest.py`, odświeża
+`public/pavbot-manifest.json`, commituje tylko dozwolone ścieżki i robi push na
+`origin/main`.
 Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override środowiskowego,
 `PAVBOT_RAW_BASE_URL`, istniejącego `rawBaseUrl` w manifeście albo GitHub
 `origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Rozwiązany URL

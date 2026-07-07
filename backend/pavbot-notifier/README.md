@@ -1,14 +1,15 @@
 # Pavbot iOS Live Notifier
 
-Docker service for optional iOS live notifications. It receives GitHub webhooks,
-fetches the Pavbot manifest, detects new automation files or new automations,
-and sends APNs notifications to registered iOS devices.
-It can also send one daily Wrocław weather briefing at 07:30 Europe/Warsaw
-when daily weather alerts are enabled, refresh weather cache hourly, and keep a
-Reddit-only humor/meme digest fresh every 3 hours for the iOS `Dzisiaj` tab.
+Docker service for optional legacy APNs utilities. It can receive GitHub
+webhooks, fetch the Pavbot manifest, detect new automation files or new
+automations, and send APNs notifications to registered iOS devices. It can also
+send one daily Wrocław weather briefing at 07:30 Europe/Warsaw when daily
+weather alerts are enabled, refresh weather cache hourly, and keep a Reddit-only
+humor/meme digest fresh every 3 hours for the iOS `Dzisiaj` tab.
 
-Live notifications are optional and disabled in the iOS app until a notification
-server URL is configured in Settings.
+Current briefing push delivery does not use this service. Pavbot iOS reads
+`Briefing` metadata from CloudKit and receives visible or silent notifications
+through the CloudKit `Briefing` subscription registered by the app.
 
 ## Flow
 
@@ -107,17 +108,12 @@ Public endpoints:
 
 Full guide: `docs/live-ios-notifications-macbook-cloudflare.md`.
 
-Put the public HTTPS URL of this service into the iOS app:
-
-```text
-Settings -> Notification server URL -> Enable file alerts
-```
-
-The iOS app also has `Settings -> Przywróć ustawienia domyślne`. It calls
-`GET /v1/app/defaults` and fills both the Manifest URL and Notification server
-URL from the notifier environment. After changing `PAVBOT_PUBLIC_NOTIFIER_URL`
-or `PAVBOT_MANIFEST_URL`, restart the notifier and use that button to refresh
-the app settings.
+Briefing automations should publish the public manifest plus CloudKit
+`Artifact` metadata, then write the CloudKit `Briefing` record last. The iOS
+app owns the CloudKit subscription mode in Settings under `Powiadomienia ->
+Tryb briefingów`; only `Briefing` is subscribed for visible push, so a
+publication sends one phone notification instead of one alert per file. This
+legacy notifier is not the main briefing push path.
 
 GitHub webhook:
 
@@ -134,7 +130,7 @@ PAVBOT_CONTABO_BIND_PORT=18082 \
 backend/pavbot-notifier/scripts/deploy-contabo.sh
 ```
 
-The Contabo production variant is intended for `https://notify.paweltanski.com`
+The Contabo production variant is intended for your own HTTPS notifier domain
 behind the server's existing Nginx reverse proxy. It binds the container only on
 `127.0.0.1:18082`, caps Docker logs, and keeps `.env` plus APNs `.p8` secrets
 server-local. Fill `/opt/pavbot-notifier/.env` from `.env.contabo.example`,

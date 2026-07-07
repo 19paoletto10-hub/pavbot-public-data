@@ -95,7 +95,9 @@ final class ManifestStore {
         do {
             let previousManifest = manifest
             let loadedManifest = try await client.fetchManifest(from: url)
-            if let previousManifest, loadedManifest.isOlder(than: previousManifest) {
+            if let previousManifest,
+               loadedManifest.isOlder(than: previousManifest),
+               !loadedManifest.hasCatalogUpdates(comparedTo: previousManifest) {
                 lastNewArtifacts = []
                 lastNewAutomations = []
                 state = .failed(

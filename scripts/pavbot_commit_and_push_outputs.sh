@@ -4,6 +4,7 @@ set -euo pipefail
 target_branch="${PAVBOT_PUBLISH_BRANCH:-main}"
 mobile_public_only_topic="research/aktualne-wydarzenia-mobile"
 pulse_news_topic="research/puls-dnia-news"
+reddit_radar_topic="research/reddit-radar"
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 manifest_generator="$script_dir/generate_pavbot_manifest.py"
 cloudkit_publisher="${PAVBOT_CLOUDKIT_PUBLISHER:-$script_dir/publish_cloudkit_briefings.py}"
@@ -15,6 +16,7 @@ pulse_news_data_validator="$script_dir/validate_pulse_news_data.py"
 usage() {
   cat >&2 <<'EOF'
 usage: scripts/pavbot_commit_and_push_outputs.sh [--isolated] research/<topic>
+       scripts/pavbot_commit_and_push_outputs.sh --all-topics
 
 Publishes one Pavbot automation output set by committing only:
   - generated outputs from the selected research/<topic>/
@@ -31,6 +33,9 @@ Output allowlist:
 Options:
   --isolated  publish from a temporary clean worktree based on origin/main,
               copying only allowlisted outputs from the current workspace
+  --all-topics
+              synchronize CloudKit Briefing and Artifact records for all
+              current manifest topics without committing or pushing Git changes
 
 Optional environment:
   PAVBOT_MANIFEST_URL=https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json
@@ -38,7 +43,7 @@ Optional environment:
   PAVBOT_RAW_BASE_URL=https://raw.githubusercontent.com/<owner>/<repo>/<branch>/
       Used to derive PAVBOT_MANIFEST_URL when PAVBOT_MANIFEST_URL is unset.
   PAVBOT_CLOUDKIT_CONTAINER_ID=iCloud.com.paweltanski.pavbotviewer
-      Production CloudKit container for Briefing records.
+      Production CloudKit container for Briefing and Artifact records.
   PAVBOT_CLOUDKIT_ENVIRONMENT=production
       CloudKit environment for cktool.
   PAVBOT_CLOUDKIT_TEAM_ID=SP774TZZU8
@@ -494,6 +499,77 @@ needs_manifest_refresh_for_pulse_news() {
   return 0
 }
 
+latest_reddit_radar_data_rel_path() {
+  if [[ "$topic_path" != "$reddit_radar_topic" ]]; then
+    return 1
+  fi
+
+  if [[ ! -d "$topic_path/data" ]]; then
+    return 1
+  fi
+
+  local latest
+  latest="$(
+    find "$topic_path/data" -type f -name '*-reddit-radar.json' 2>/dev/null \
+      | LC_ALL=C sort \
+      | tail -n 1
+  )"
+  [[ -n "$latest" ]] || return 1
+  printf '%s' "$latest"
+}
+
+manifest_contains_reddit_radar_data_path() {
+  local rel_path="$1"
+  local manifest_path="public/pavbot-manifest.json"
+  [[ -f "$manifest_path" ]] || return 1
+
+  python3 - "$manifest_path" "$rel_path" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+manifest_path = Path(sys.argv[1])
+rel_path = sys.argv[2]
+
+try:
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+except Exception:
+    raise SystemExit(1)
+
+for artifact in manifest.get("artifacts", []):
+    if (
+        artifact.get("path") == rel_path
+        and artifact.get("topic") == "reddit-radar"
+        and artifact.get("type") == "redditRadarData"
+    ):
+        raise SystemExit(0)
+
+raise SystemExit(1)
+PY
+}
+
+require_latest_reddit_radar_data_in_manifest() {
+  local latest_rel_path
+  latest_rel_path="$(latest_reddit_radar_data_rel_path 2>/dev/null || true)"
+  [[ -n "$latest_rel_path" ]] || return 0
+
+  if ! manifest_contains_reddit_radar_data_path "$latest_rel_path"; then
+    die "generated manifest missing redditRadarData for $latest_rel_path"
+  fi
+}
+
+needs_manifest_refresh_for_reddit_radar() {
+  local latest_rel_path
+  latest_rel_path="$(latest_reddit_radar_data_rel_path 2>/dev/null || true)"
+  [[ -n "$latest_rel_path" ]] || return 1
+
+  if manifest_contains_reddit_radar_data_path "$latest_rel_path"; then
+    return 1
+  fi
+
+  return 0
+}
+
 latest_mobile_news_data_rel_path() {
   if [[ "$topic_path" != "$mobile_public_only_topic" ]]; then
     return 1
@@ -584,7 +660,7 @@ preflight_cloudkit_briefings_gate() {
     die "PAVBOT_CLOUDKIT_DRY_RUN=1 is diagnostic-only; production publish requires real CloudKit Briefing create/update. Unset PAVBOT_CLOUDKIT_DRY_RUN and refresh cktool with: xcrun cktool save-token --type user --method keychain --force"
   fi
   run_cloudkit_publisher "preflight" "${args[@]}" >/dev/null || die "CloudKit preflight failed"
-  printf 'cloudkit briefing preflight verified\n'
+  printf 'cloudkit briefing/artifact preflight verified\n'
 }
 
 publish_cloudkit_briefings_gate() {
@@ -596,7 +672,19 @@ publish_cloudkit_briefings_gate() {
   fi
   run_cloudkit_publisher "publish" "${args[@]}" >/dev/null || die "CloudKit publication failed"
   run_cloudkit_publisher "verify" "${args[@]}" >/dev/null || die "CloudKit verification failed"
-  printf 'cloudkit briefing publication verified\n'
+  printf 'cloudkit briefing/artifact publication verified\n'
+}
+
+publish_cloudkit_all_topics_gate() {
+  local args=(--manifest "public/pavbot-manifest.json" --manifest-url "$PAVBOT_MANIFEST_URL" --all-topics)
+  [[ -f "$cloudkit_publisher" ]] || die "missing CloudKit publisher: $cloudkit_publisher"
+  if [[ "${PAVBOT_CLOUDKIT_DRY_RUN:-}" == "1" ]]; then
+    run_cloudkit_publisher "dry-run" "${args[@]}" >/dev/null || die "CloudKit all-topics dry-run failed"
+    die "PAVBOT_CLOUDKIT_DRY_RUN=1 is diagnostic-only; production publish requires real CloudKit Briefing create/update. Unset PAVBOT_CLOUDKIT_DRY_RUN and refresh cktool with: xcrun cktool save-token --type user --method keychain --force"
+  fi
+  run_cloudkit_publisher "publish" "${args[@]}" >/dev/null || die "CloudKit all-topics publication failed"
+  run_cloudkit_publisher "verify" "${args[@]}" >/dev/null || die "CloudKit all-topics verification failed"
+  printf 'cloudkit all-topics publication verified\n'
 }
 
 verify_remote_publication() {
@@ -729,7 +817,8 @@ publish_isolated() {
   (
     cd "$isolated_worktree"
 
-    if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ! needs_manifest_refresh_for_mobile_news; then
+    if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ! needs_manifest_refresh_for_reddit_radar && ! needs_manifest_refresh_for_mobile_news; then
+      publish_cloudkit_briefings_gate
       printf 'no publishable changes for %s\n' "$topic_path"
       exit 0
     fi
@@ -741,9 +830,11 @@ publish_isolated() {
     python3 "$manifest_generator" --repo-root "$PWD"
     require_latest_mobile_news_data_in_manifest
     require_latest_pulse_news_data_in_manifest
+    require_latest_reddit_radar_data_in_manifest
     stage_publishable_paths
 
     if git diff --cached --quiet; then
+      publish_cloudkit_briefings_gate
       printf 'no publishable changes for %s\n' "$topic_path"
       exit 0
     fi
@@ -766,10 +857,15 @@ publish_isolated() {
 }
 
 isolated_mode=0
+all_topics_mode=0
 topic_arg=""
 
 while (($# > 0)); do
   case "$1" in
+    --all-topics)
+      all_topics_mode=1
+      shift
+      ;;
     --isolated)
       isolated_mode=1
       shift
@@ -793,22 +889,35 @@ while (($# > 0)); do
   esac
 done
 
-if [[ -z "$topic_arg" ]]; then
+if ((all_topics_mode)) && [[ -n "$topic_arg" ]]; then
+  usage
+  exit 2
+fi
+
+if ((all_topics_mode)) && ((isolated_mode)); then
+  die "--all-topics does not support --isolated because it only heals CloudKit from the current manifest"
+fi
+
+if ((! all_topics_mode)) && [[ -z "$topic_arg" ]]; then
   usage
   exit 2
 fi
 
 topic_path="${topic_arg%/}"
-[[ -n "$topic_path" ]] || die "topic path is required"
-[[ "$topic_path" == research/* ]] || die "topic path must start with research/"
-[[ "$topic_path" != "research/templates" && "$topic_path" != "research/templates/"* ]] || die "research/templates is not publishable"
-[[ "$topic_path" != /* ]] || die "topic path must be relative"
-[[ "$topic_path" != *"/../"* && "$topic_path" != "../"* && "$topic_path" != *"/.." && "$topic_path" != ".." ]] || die "topic path must not contain .."
+if ((! all_topics_mode)); then
+  [[ -n "$topic_path" ]] || die "topic path is required"
+  [[ "$topic_path" == research/* ]] || die "topic path must start with research/"
+  [[ "$topic_path" != "research/templates" && "$topic_path" != "research/templates/"* ]] || die "research/templates is not publishable"
+  [[ "$topic_path" != /* ]] || die "topic path must be relative"
+  [[ "$topic_path" != *"/../"* && "$topic_path" != "../"* && "$topic_path" != *"/.." && "$topic_path" != ".." ]] || die "topic path must not contain .."
+fi
 
 repo_root="$(git rev-parse --show-toplevel 2>/dev/null)" || die "not inside a git repository"
 cd "$repo_root"
 
-[[ -d "$topic_path" ]] || die "topic path does not exist: $topic_path"
+if ((! all_topics_mode)); then
+  [[ -d "$topic_path" ]] || die "topic path does not exist: $topic_path"
+fi
 [[ -f "$manifest_generator" ]] || die "missing scripts/generate_pavbot_manifest.py"
 [[ -f "$cloudkit_publisher" ]] || die "missing scripts/publish_cloudkit_briefings.py"
 [[ -f "$jobs_data_validator" ]] || die "missing scripts/validate_jobs_data.py"
@@ -820,6 +929,11 @@ git remote get-url origin >/dev/null 2>&1 || die "missing git remote: origin"
 pavbot_manifest_url="$(resolve_pavbot_manifest_url)"
 export PAVBOT_MANIFEST_URL="$pavbot_manifest_url"
 printf 'using Pavbot manifest URL: %s\n' "$PAVBOT_MANIFEST_URL"
+
+if ((all_topics_mode)); then
+  publish_cloudkit_all_topics_gate
+  exit 0
+fi
 
 git fetch origin "$target_branch" >/dev/null
 
@@ -836,7 +950,8 @@ fi
 
 require_clean_publish_scope
 
-if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ! needs_manifest_refresh_for_mobile_news; then
+if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ! needs_manifest_refresh_for_reddit_radar && ! needs_manifest_refresh_for_mobile_news; then
+  publish_cloudkit_briefings_gate
   printf 'no publishable changes for %s\n' "$topic_path"
   exit 0
 fi
@@ -848,12 +963,14 @@ validate_pulse_news_data_outputs
 python3 "$manifest_generator" --repo-root "$PWD"
 require_latest_mobile_news_data_in_manifest
 require_latest_pulse_news_data_in_manifest
+require_latest_reddit_radar_data_in_manifest
 
 require_clean_publish_scope
 
 stage_publishable_paths
 
 if git diff --cached --quiet; then
+  publish_cloudkit_briefings_gate
   printf 'no publishable changes for %s\n' "$topic_path"
   exit 0
 fi

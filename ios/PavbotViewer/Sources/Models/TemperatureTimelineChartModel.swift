@@ -90,14 +90,14 @@ enum WeatherTimelineChartData {
 
     static func temperatureColor(for value: Double) -> Color {
         switch value {
-        case ..<8:
-            return .blue
-        case 8..<18:
-            return .cyan
-        case 18..<26:
-            return .orange
+        case ..<6:
+            return Color(red: 0.18, green: 0.40, blue: 0.92)
+        case 6..<15:
+            return Color(red: 0.03, green: 0.58, blue: 0.68)
+        case 15..<24:
+            return Color(red: 0.94, green: 0.50, blue: 0.15)
         default:
-            return .red
+            return Color(red: 0.86, green: 0.18, blue: 0.16)
         }
     }
 }

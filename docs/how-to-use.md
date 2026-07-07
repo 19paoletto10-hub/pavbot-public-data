@@ -190,12 +190,10 @@ a local 48-hour history for smooth browsing. A news item saved by the user
 disappears from the active carousel, remains in `Zapisane`, and is not removed
 by the 48-hour cleanup.
 
-In `Ustawienia`, use `Przywróć ustawienia domyślne` when the Manifest URL or
-Notification server URL is stale. The app calls the notifier endpoint
-`/v1/app/defaults`, fills the current GitHub raw manifest URL and Cloudflare
-notifier URL, then reloads the manifest. If a Quick Tunnel URL changes, update
-`PAVBOT_PUBLIC_NOTIFIER_URL`, restart the notifier, and tap this button in the
-app.
+In `Ustawienia`, keep the Manifest URL pointed at the public GitHub raw
+manifest. Briefing notifications are controlled by the CloudKit `Briefing`
+subscription mode under `Powiadomienia -> Tryb briefingów`; refresh live
+notifications there after changing between visible alerts and silent refresh.
 
 After the run, verify the workspace:
 
@@ -234,10 +232,39 @@ Only `runs/`, `data/`, `pdfs/`, `podcasts/`, `index.md`, `backlog.md`, and
 docs, prompt edits, topic tools, iOS changes, and backend changes must go
 through a separate development branch/commit.
 
-The iOS app reads this URL but does not send it back to Codex automations. For
-advanced compatibility, `PAVBOT_RAW_BASE_URL` and `--raw-base-url` still work;
-the publish script also uses `PAVBOT_RAW_BASE_URL` to derive the manifest URL
-when `PAVBOT_MANIFEST_URL` is unset.
+For briefing live push, the iOS app uses the CloudKit `Briefing` subscription.
+CloudKit stores public briefing metadata plus one `Artifact` record per file
+from the latest publication. The files themselves stay in GitHub raw and the
+manifest remains the source of their public URLs. Automations do not call a
+separate notifier endpoint after publish.
+
+The publish order is important: `scripts/pavbot_commit_and_push_outputs.sh`
+pushes the manifest to GitHub, writes/verifies CloudKit `Artifact` records,
+then writes the `Briefing` record last. Only `Briefing` is subscribed for
+visible push, so one publication creates one phone notification, not one
+notification per file. If a topic already has no Git diff, the script still
+runs the CloudKit publish/verify heal path. To backfill all latest topics from
+the current manifest without a Git commit, run:
+
+```bash
+scripts/pavbot_commit_and_push_outputs.sh --all-topics
+```
+
+Production CloudKit must expose record type `Artifact` before the backfill can
+write file metadata. The fields are: string `artifactId`, `briefingId`, `topic`,
+`stamp`, `type`, `title`, `path`, `url`, `date`, `time`, `manifestUrl`,
+`status`; integer `sizeBytes`, `version`; timestamp `createdAt`. `Briefing`
+stores `artifactCount`, `primaryArtifactId`, and `artifactIdsJson` as summary
+fields and remains the only record type that drives visible push.
+
+In Settings, `Tryb briefingów` defaults to `Widoczny alert`, which creates a
+CloudKit subscription with a banner, sound, and background refresh. `Ciche
+odświeżenie` remains available when you want background refresh without a
+visible alert.
+
+For advanced compatibility, `PAVBOT_RAW_BASE_URL` and `--raw-base-url` still
+work; the publish script also uses `PAVBOT_RAW_BASE_URL` to derive the manifest
+URL when `PAVBOT_MANIFEST_URL` is unset.
 
 To connect the iOS app to your own Codex-backed repository, follow
 `docs/connect-ios-app-to-your-repo.md`. Version 1 expects a public GitHub raw
