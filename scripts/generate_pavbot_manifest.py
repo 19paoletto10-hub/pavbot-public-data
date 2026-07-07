@@ -457,6 +457,24 @@ def write_manifest(manifest: dict[str, Any], output_path: Path) -> None:
     )
 
 
+def validate_publish_manifest(manifest: dict[str, Any], repo_root: Path) -> None:
+    if manifest.get("automations"):
+        return
+    if not manifest.get("topics") and not manifest.get("artifacts"):
+        return
+
+    docs_path = repo_root / "docs" / "how-to-use.md"
+    docs_hint = (
+        "missing docs/how-to-use.md"
+        if not docs_path.exists()
+        else "missing or unparsable 'The current active automations are:' section"
+    )
+    raise ValueError(
+        "refusing to write manifest with 0 automations while topics or artifacts exist; "
+        f"{docs_hint}"
+    )
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate the Pavbot public manifest.")
     parser.add_argument(
@@ -484,6 +502,11 @@ def parse_args() -> argparse.Namespace:
             "Used to derive --raw-base-url when --raw-base-url is not set."
         ),
     )
+    parser.add_argument(
+        "--allow-empty-automations",
+        action="store_true",
+        help="Allow writing a manifest with topics/artifacts but no automations.",
+    )
     return parser.parse_args()
 
 
@@ -499,6 +522,11 @@ def main() -> None:
         raise SystemExit(f"error: {exc}") from exc
 
     manifest = build_manifest(repo_root, raw_base_url=raw_base_url)
+    if not args.allow_empty_automations:
+        try:
+            validate_publish_manifest(manifest, repo_root)
+        except ValueError as exc:
+            raise SystemExit(f"error: {exc}") from exc
     write_manifest(manifest, output_path)
     print(f"manifest written: {display_path(output_path, repo_root)}")
 

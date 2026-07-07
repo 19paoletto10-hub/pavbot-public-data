@@ -632,6 +632,51 @@ class GeneratePavbotManifestTest(unittest.TestCase):
 
         self.assertIn("manifest written:", result.stdout)
 
+    def test_cli_refuses_manifest_with_artifacts_but_no_automations(self) -> None:
+        script_path = (
+            Path(__file__).resolve().parents[1]
+            / "scripts"
+            / "generate_pavbot_manifest.py"
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp) / "repo"
+            output_path = Path(tmp) / "manifest.json"
+            topic_dir = repo_root / "research" / "tech-news" / "runs"
+            topic_dir.mkdir(parents=True)
+            (topic_dir.parent / "topic.md").write_text(
+                "# Topic Contract: tech-news\n",
+                encoding="utf-8",
+            )
+            (topic_dir / "2026-07-08.md").write_text(
+                "# Daily Research Report: tech-news\n",
+                encoding="utf-8",
+            )
+
+            env = os.environ.copy()
+            env.pop("PAVBOT_RAW_BASE_URL", None)
+            env["PAVBOT_MANIFEST_URL"] = (
+                "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+            )
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(script_path),
+                    "--repo-root",
+                    str(repo_root),
+                    "--output",
+                    str(output_path),
+                ],
+                capture_output=True,
+                env=env,
+                text=True,
+                check=False,
+            )
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertFalse(output_path.exists())
+        self.assertIn("refusing to write manifest with 0 automations", result.stderr)
+        self.assertIn("missing docs/how-to-use.md", result.stderr)
+
     def test_manifest_uses_explicit_automation_kind_from_docs(self) -> None:
         generator = load_generator()
 
