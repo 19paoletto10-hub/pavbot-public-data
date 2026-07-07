@@ -1,0 +1,381 @@
+{
+  "schemaVersion": 1,
+  "topic": "aktualne-wydarzenia-mobile",
+  "runDate": "2026-07-07",
+  "runTime": "19:35",
+  "status": "Material update",
+  "headline": "Wydanie dnia: Ogólne i najważniejsze sygnały",
+  "leadParagraphs": [
+    "Wieczorny obraz dnia jest bardziej wykonawczy niż poranny. W Polsce doszły dziś konkretne decyzje Rady Ministrów: pakiet przeciw greenwashingowi, elektroniczna komunikacja między pracodawcą a związkami i radą pracowników oraz zmiany wzmacniające ochronę danych świadków. Równolegle utrzymuje się krajowe tło bezpieczeństwa: alert RCB o bardzo silnym wietrze, susza hydrologiczna i przedłużone stopnie alarmowe.",
+    "Największa materialna zmiana w warstwie międzynarodowej przyszła z Ankary. Pierwszy dzień wydarzeń wokół szczytu NATO przyniósł już nie tylko zapowiedzi, ale komunikat o nowych zakupach obronnych liczonych w dziesiątkach miliardów oraz aktualizację, że europejscy sojusznicy i Kanada zwiększyli bazowe wydatki obronne o prawie 20 procent rok do roku. W technologicznym tle dnia Komisja Europejska dołożyła nowy, bieżący plan działań dla styku cyberbezpieczeństwa i zaawansowanej AI."
+  ],
+  "sections": [
+    {
+      "id": "ogolne",
+      "title": "Ogólne",
+      "summary": "Wieczorny przekrój dnia pokazuje, że Polska nadal żyje jednocześnie pogodą, procedurą i bezpieczeństwem. Nie ma jednego totalnego przełomu, ale jest kilka wątków, które z poziomu sygnału przeszły na poziom konkretu.",
+      "articles": [
+        {
+          "id": "ogolne-1-wieczor-pod-znakiem-wiatru-i-burz",
+          "section": "Ogólne",
+          "title": "Wieczór pod znakiem wiatru i burz",
+          "lead": "Najbardziej przyziemny, ale nadal najbliższy odbiorcy temat to bardzo silny wiatr na północy i burze na południu, które zostają z nami także na noc z 7 na 8 lipca.",
+          "facts": [
+            "RCB wysłało 7 lipca alert o bardzo silnym wietrze na 7-8 lipca. Źródło: RCB - alert o silnym wietrze.",
+            "Raport dobowy RCB utrzymuje ostrzeżenia do 8 lipca, w tym trzeci stopień dla części północy i pierwszy stopień burzowy dla województw południowych. Źródło: RCB - raport dobowy."
+          ],
+          "analysis": "Ten temat nie zyskał nowej dramaturgii, ale zyskał czas trwania. W praktyce ważne jest już nie tylko to, gdzie wieje, ale też jak długo ryzyko zostaje aktywne.",
+          "whyItMatters": "Wieczorny odbiorca dostaje sygnał, że sprawa nie zamknęła się po poranku i może wejść w nocne skutki dla transportu, energetyki i lokalnych służb.",
+          "sources": [
+            {
+              "title": "RCB - alert o silnym wietrze",
+              "url": "https://www.gov.pl/web/rcb/alert-rcb---silny-wiatr-0707"
+            },
+            {
+              "title": "RCB - raport dobowy",
+              "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Wieczór pod znakiem wiatru i burz. Najbardziej przyziemny, ale nadal najbliższy odbiorcy temat to bardzo silny wiatr na północy i burze na południu, które zostają z nami także na noc z 7 na 8 lipca.. RCB wysłało 7 lipca alert o bardzo silnym wietrze na 7-8 lipca. Źródło: RCB - alert o silnym wietrze.. Raport dobowy RCB utrzymuje ostrzeżenia do 8 lipca, w tym trzeci stopień dla części północy i pierwszy stopień burzowy dla województw południowych. Źródło: RCB - raport dobowy.. Ten temat nie zyskał nowej dramaturgii, ale zyskał czas trwania. W praktyce ważne jest już nie tylko to, gdzie wieje, ale też jak długo ryzyko zostaje aktywne.. Wieczorny odbiorca dostaje sygnał, że sprawa nie zamknęła się po poranku i może wejść w nocne skutki dla transportu, energetyki i lokalnych służb.",
+          "priority": "Medium"
+        },
+        {
+          "id": "ogolne-2-susza-hydrologiczna-i-rezim-alarmowy-nie-schodza",
+          "section": "Ogólne",
+          "title": "Susza hydrologiczna i reżim alarmowy nie schodzą z radaru",
+          "lead": "Pod letnimi alertami pogodowymi nadal pracuje drugi, mniej widowiskowy, ale strategiczny problem: chronicznie niski poziom wody i utrzymany formalny reżim bezpieczeństwa.",
+          "facts": [
+            "RCB nadal wskazuje suszę hydrologiczną na terenie całego kraju. Źródło: RCB - raport dobowy.",
+            "Osobny komunikat RCB potwierdza obowiązywanie stopni BRAVO, CHARLIE i BRAVO-CRP do 31 sierpnia 2026 roku. Źródło: RCB - stopnie alarmowe do 31 sierpnia 2026 r.."
+          ],
+          "analysis": "To połączenie mówi, że państwo nadal jedzie jednocześnie na dwóch osiach: doraźne zjawiska pogodowe i dłuższy reżim ostrożności infrastrukturalnej.",
+          "whyItMatters": "Takie tło zmienia sposób czytania całego dnia, bo nawet drobniejsze lokalne zdarzenia wpadają w szerszy system podwyższonej czujności.",
+          "sources": [
+            {
+              "title": "RCB - raport dobowy",
+              "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+            },
+            {
+              "title": "RCB - stopnie alarmowe do 31 sierpnia 2026 r.",
+              "url": "https://www.gov.pl/web/rcb/przedluzenie-obowiazywania-stopni-alarmowych-do-31-sierpnia-2026-r"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Susza hydrologiczna i reżim alarmowy nie schodzą z radaru. Pod letnimi alertami pogodowymi nadal pracuje drugi, mniej widowiskowy, ale strategiczny problem: chronicznie niski poziom wody i utrzymany formalny reżim bezpieczeństwa.. RCB nadal wskazuje suszę hydrologiczną na terenie całego kraju. Źródło: RCB - raport dobowy.. Osobny komunikat RCB potwierdza obowiązywanie stopni BRAVO, CHARLIE i BRAVO-CRP do 31 sierpnia 2026 roku. Źródło: RCB - stopnie alarmowe do 31 sierpnia 2026 r... To połączenie mówi, że państwo nadal jedzie jednocześnie na dwóch osiach: doraźne zjawiska pogodowe i dłuższy reżim ostrożności infrastrukturalnej.. Takie tło zmienia sposób czytania całego dnia, bo nawet drobniejsze lokalne zdarzenia wpadają w szerszy system podwyższonej czujności.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polska",
+      "title": "Polska",
+      "summary": "Krajowa sekcja wieczorem przesuwa akcent z samych zapowiedzi na decyzje, które mają odczuć konsumenci, pracodawcy i pracownicy. To nie jest krzykliwa polityka, tylko dość twarde porządkowanie reguł gry.",
+      "articles": [
+        {
+          "id": "polska-1-rzad-bierze-sie-za-greenwashing",
+          "section": "Polska",
+          "title": "Rząd bierze się za greenwashing",
+          "lead": "Najbardziej namacalna decyzja krajowa z 7 lipca to przyjęcie projektu, który ma ograniczyć marketingowe deklaracje ekologiczne bez wiarygodnego potwierdzenia.",
+          "facts": [
+            "Rada Ministrów przyjęła projekt zmian w ustawie o przeciwdziałaniu nieuczciwym praktykom rynkowym oraz ustawie o prawach konsumenta. Źródło: KPRM - komunikat po posiedzeniu Rady Ministrów.",
+            "KPRM wskazuje, że oznaczenia o wpływie produktu na środowisko mają być dopuszczalne wyłącznie w ramach uznanego systemu certyfikacji albo ustanowione przez instytucję publiczną. Źródło: KPRM - nowe decyzje Rady Ministrów."
+          ],
+          "analysis": "To nie zmienia rynku z dnia na dzień, ale przesuwa ciężar dowodu na producenta i porządkuje język, którym sprzedaje się ekologiczność.",
+          "whyItMatters": "Dla konsumenta to prosty test państwa: czy potrafi ograniczyć najtańszy rodzaj marketingowego nadużycia.",
+          "sources": [
+            {
+              "title": "KPRM - komunikat po posiedzeniu Rady Ministrów",
+              "url": "https://www.gov.pl/web/premier/komunikat-po-posiedzeniu-rady-ministrow96"
+            },
+            {
+              "title": "KPRM - nowe decyzje Rady Ministrów",
+              "url": "https://www.gov.pl/web/premier/nowe-decyzje-rady-ministrow"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Rząd bierze się za greenwashing. Najbardziej namacalna decyzja krajowa z 7 lipca to przyjęcie projektu, który ma ograniczyć marketingowe deklaracje ekologiczne bez wiarygodnego potwierdzenia.. Rada Ministrów przyjęła projekt zmian w ustawie o przeciwdziałaniu nieuczciwym praktykom rynkowym oraz ustawie o prawach konsumenta. Źródło: KPRM - komunikat po posiedzeniu Rady Ministrów.. KPRM wskazuje, że oznaczenia o wpływie produktu na środowisko mają być dopuszczalne wyłącznie w ramach uznanego systemu certyfikacji albo ustanowione przez instytucję publiczną. Źródło: KPRM - nowe decyzje Rady Ministrów.. To nie zmienia rynku z dnia na dzień, ale przesuwa ciężar dowodu na producenta i porządkuje język, którym sprzedaje się ekologiczność.. Dla konsumenta to prosty test państwa: czy potrafi ograniczyć najtańszy rodzaj marketingowego nadużycia.",
+          "priority": "Medium"
+        },
+        {
+          "id": "polska-2-ostatni-dzwonek-przed-wejsciem-reformy-pip",
+          "section": "Polska",
+          "title": "Ostatni dzwonek przed wejściem reformy PIP",
+          "lead": "Drugi krajowy sygnał jest kalendarzowy, ale bardzo praktyczny: 8 lipca 2026 roku nowe przepisy o PIP przestają być obietnicą i zaczynają obowiązywać.",
+          "facts": [
+            "MRPiPS przypomina, że nowe przepisy o Państwowej Inspekcji Pracy wchodzą w życie 8 lipca 2026 roku. Źródło: MRPiPS - poradnik o reformie PIP.",
+            "Resort podkreśla, że kluczowe będzie badanie realnych warunków wykonywania pracy, a nie tylko nazwy umowy, oraz że możliwe są sankcje finansowe za nieprawidłowości. Źródło: MRPiPS - poradnik o reformie PIP."
+          ],
+          "analysis": "To nie jest już temat legislacyjny, tylko operacyjny. Od jutra firmy będą oceniane bardziej przez praktykę zatrudnienia niż przez kreatywność w nazywaniu dokumentów.",
+          "whyItMatters": "Dla pracodawców i pracowników to moment, w którym abstrakcyjna reforma schodzi z konferencji do kadr i kontroli.",
+          "sources": [
+            {
+              "title": "MRPiPS - poradnik o reformie PIP",
+              "url": "https://www.gov.pl/web/rodzina/jak-przygotowac-sie-do-reformy-panstwowej-inspekcji-pracy-nowy-poradnik-dla-pracodawcow"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Ostatni dzwonek przed wejściem reformy PIP. Drugi krajowy sygnał jest kalendarzowy, ale bardzo praktyczny: 8 lipca 2026 roku nowe przepisy o PIP przestają być obietnicą i zaczynają obowiązywać.. MRPiPS przypomina, że nowe przepisy o Państwowej Inspekcji Pracy wchodzą w życie 8 lipca 2026 roku. Źródło: MRPiPS - poradnik o reformie PIP.. Resort podkreśla, że kluczowe będzie badanie realnych warunków wykonywania pracy, a nie tylko nazwy umowy, oraz że możliwe są sankcje finansowe za nieprawidłowości. Źródło: MRPiPS - poradnik o reformie PIP.. To nie jest już temat legislacyjny, tylko operacyjny. Od jutra firmy będą oceniane bardziej przez praktykę zatrudnienia niż przez kreatywność w nazywaniu dokumentów.. Dla pracodawców i pracowników to moment, w którym abstrakcyjna reforma schodzi z konferencji do kadr i kontroli.",
+          "priority": "Medium"
+        }
+      ]
+    },
+    {
+      "id": "polityka",
+      "title": "Polityka",
+      "summary": "W politycznej warstwie dnia widać bardziej mechanikę państwa niż spektakl. Najwięcej znaczą drobne, ale konkretne ruchy instytucjonalne i sposób, w jaki Warszawa ustawia się wobec Ankary oraz wojny w Ukrainie.",
+      "articles": [
+        {
+          "id": "polityka-1-e-mail-wchodzi-do-relacji-pracodawca-zwiazki",
+          "section": "Polityka",
+          "title": "E-mail wchodzi do relacji pracodawca-związki",
+          "lead": "Jedna z ważniejszych politycznych decyzji dnia jest mało widowiskowa, ale bardzo codzienna: rząd otwiera drogę do elektronicznej komunikacji tam, gdzie długo rządził papier.",
+          "facts": [
+            "Rada Ministrów przyjęła projekt ułatwiający komunikację między pracodawcą, zakładową organizacją związkową oraz radą pracowników. Źródło: KPRM - komunikat po posiedzeniu Rady Ministrów.",
+            "KPRM podaje, że zamiast obowiązkowego papierowego obiegu będzie można korzystać także z formy elektronicznej, w tym z e-maila, jeśli strony to uzgodnią. Źródło: KPRM - nowe decyzje Rady Ministrów."
+          ],
+          "analysis": "To deregulacja w wersji użytkowej, nie sloganowej. Dla wielu organizacji oznacza po prostu mniej tarcia i mniej formalnego teatru.",
+          "whyItMatters": "Czasem właśnie takie techniczne zmiany pokazują, czy państwo naprawdę cyfryzuje procesy, czy tylko o tym opowiada.",
+          "sources": [
+            {
+              "title": "KPRM - komunikat po posiedzeniu Rady Ministrów",
+              "url": "https://www.gov.pl/web/premier/komunikat-po-posiedzeniu-rady-ministrow96"
+            },
+            {
+              "title": "KPRM - nowe decyzje Rady Ministrów",
+              "url": "https://www.gov.pl/web/premier/nowe-decyzje-rady-ministrow"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "E-mail wchodzi do relacji pracodawca-związki. Jedna z ważniejszych politycznych decyzji dnia jest mało widowiskowa, ale bardzo codzienna: rząd otwiera drogę do elektronicznej komunikacji tam, gdzie długo rządził papier.. Rada Ministrów przyjęła projekt ułatwiający komunikację między pracodawcą, zakładową organizacją związkową oraz radą pracowników. Źródło: KPRM - komunikat po posiedzeniu Rady Ministrów.. KPRM podaje, że zamiast obowiązkowego papierowego obiegu będzie można korzystać także z formy elektronicznej, w tym z e-maila, jeśli strony to uzgodnią. Źródło: KPRM - nowe decyzje Rady Ministrów.. To deregulacja w wersji użytkowej, nie sloganowej. Dla wielu organizacji oznacza po prostu mniej tarcia i mniej formalnego teatru.. Czasem właśnie takie techniczne zmiany pokazują, czy państwo naprawdę cyfryzuje procesy, czy tylko o tym opowiada.",
+          "priority": "Medium"
+        },
+        {
+          "id": "polityka-2-panstwo-dopisuje-instrukcje-do-planow-kryzysowyc",
+          "section": "Polityka",
+          "title": "Państwo dopisuje instrukcję do planów kryzysowych",
+          "lead": "RCB dorzuciło dziś mały, ale ważny komunikat dla urzędów i administracji kryzysowej: po nowelizacji nadal da się domykać plany przygotowane na wcześniejszych zasadach.",
+          "facts": [
+            "RCB informuje, że wpływają pytania o możliwość dalszego uzgadniania i zatwierdzania planów zarządzania kryzysowego opracowanych według wcześniejszych przepisów. Źródło: RCB - wyjaśnienie o planach zarządzania kryzysowego.",
+            "Instytucja opublikowała 7 lipca oficjalną odpowiedź wyjaśniającą ciągłość tego procesu. Źródło: RCB - wyjaśnienie o planach zarządzania kryzysowego."
+          ],
+          "analysis": "To nie jest nagłówek na pierwszą stronę, ale jest to klasyczny przykład tego, jak państwo unika proceduralnej luki w obszarze bezpieczeństwa.",
+          "whyItMatters": "W praktyce właśnie takie komunikaty decydują, czy system kryzysowy działa płynnie, gdy prawo zmienia się szybciej niż biurowa dokumentacja.",
+          "sources": [
+            {
+              "title": "RCB - wyjaśnienie o planach zarządzania kryzysowego",
+              "url": "https://www.gov.pl/web/rcb/zatwierdzanie-planow-zarzadzania-kryzysowego-wyjasniamy"
+            }
+          ],
+          "tags": [
+            "Polityka",
+            "RCB"
+          ],
+          "ttsText": "Państwo dopisuje instrukcję do planów kryzysowych. RCB dorzuciło dziś mały, ale ważny komunikat dla urzędów i administracji kryzysowej: po nowelizacji nadal da się domykać plany przygotowane na wcześniejszych zasadach.. RCB informuje, że wpływają pytania o możliwość dalszego uzgadniania i zatwierdzania planów zarządzania kryzysowego opracowanych według wcześniejszych przepisów. Źródło: RCB - wyjaśnienie o planach zarządzania kryzysowego.. Instytucja opublikowała 7 lipca oficjalną odpowiedź wyjaśniającą ciągłość tego procesu. Źródło: RCB - wyjaśnienie o planach zarządzania kryzysowego.. To nie jest nagłówek na pierwszą stronę, ale jest to klasyczny przykład tego, jak państwo unika proceduralnej luki w obszarze bezpieczeństwa.. W praktyce właśnie takie komunikaty decydują, czy system kryzysowy działa płynnie, gdy prawo zmienia się szybciej niż biurowa dokumentacja.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "sprawy-zagraniczne",
+      "title": "Sprawy zagraniczne",
+      "summary": "Wieczorny blok zagraniczny obraca się wokół Ankary i wiarygodności sojuszu. Po porannych zapowiedziach pojawiły się już liczby, inicjatywy i bardziej mierzalny obraz tego, czy NATO umie przejść od deklaracji do dostaw.",
+      "articles": [
+        {
+          "id": "sprawy-zagraniczne-1-ankara-pokazuje-dziesiatki-miliardow-na-zakupy-o",
+          "section": "Sprawy zagraniczne",
+          "title": "Ankara pokazuje dziesiątki miliardów na zakupy obronne",
+          "lead": "Najmocniejszy nowy sygnał z zagranicy to nie hasło, tylko skala: NATO mówi o nowych zakupach liczonych w dziesiątkach miliardów.",
+          "facts": [
+            "NATO podało 7 lipca, że na forum przemysłu obronnego w Ankarze ogłoszono duże nowe zakupy, które mają wzmocnić odstraszanie i obronę sojuszu. Źródło: NATO - dziesiątki miliardów nowych zakupów.",
+            "W tym samym komunikacie opisano uruchomienie inicjatyw NATO Front Door for Industry, publicznego demand signal oraz NATO Engine, a także nowe działania w obszarach przestrzeni kosmicznej, rozpoznania, uderzeń i zintegrowanej obrony powietrznej i przeciwrakietowej. Źródło: NATO - dziesiątki miliardów nowych zakupów."
+          ],
+          "analysis": "To pierwszy prawdziwie materialny test szczytu. Jeśli Ankara ma coś znaczyć, musi zostawić po sobie właśnie takie ślady: platformy, zamówienia i moce produkcyjne.",
+          "whyItMatters": "Dla Polski i regionu bardziej liczą się hale, samoloty i systemy niż kolejne deklaracje o jedności.",
+          "sources": [
+            {
+              "title": "NATO - dziesiątki miliardów nowych zakupów",
+              "url": "https://www.nato.int/en/news-and-events/articles/news/2026/07/07/tens-of-billions-in-new-procurements-revealed-at-the-nato-summit-defence-industry-forum-in-ankara"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne",
+            "NATO"
+          ],
+          "ttsText": "Ankara pokazuje dziesiątki miliardów na zakupy obronne. Najmocniejszy nowy sygnał z zagranicy to nie hasło, tylko skala: NATO mówi o nowych zakupach liczonych w dziesiątkach miliardów.. NATO podało 7 lipca, że na forum przemysłu obronnego w Ankarze ogłoszono duże nowe zakupy, które mają wzmocnić odstraszanie i obronę sojuszu. Źródło: NATO - dziesiątki miliardów nowych zakupów.. W tym samym komunikacie opisano uruchomienie inicjatyw NATO Front Door for Industry, publicznego demand signal oraz NATO Engine, a także nowe działania w obszarach przestrzeni kosmicznej, rozpoznania, uderzeń i zintegrowanej obrony powietrznej i przeciwrakietowej. Źródło: NATO - dziesiątki miliardów nowych zakupów.. To pierwszy prawdziwie materialny test szczytu. Jeśli Ankara ma coś znaczyć, musi zostawić po sobie właśnie takie ślady: platformy, zamówienia i moce produkcyjne.. Dla Polski i regionu bardziej liczą się hale, samoloty i systemy niż kolejne deklaracje o jedności.",
+          "priority": "High"
+        },
+        {
+          "id": "sprawy-zagraniczne-2-wydatki-obronne-rosna-szybciej-niz-harmonogram",
+          "section": "Sprawy zagraniczne",
+          "title": "Wydatki obronne rosną szybciej niż harmonogram",
+          "lead": "Drugi zagraniczny konkret z NATO to świeży rachunek wydatkowy, który pokazuje, że część sojuszu ruszyła szybciej niż wynikałoby z odległego terminu dwa tysiące trzydzieści pięć.",
+          "facts": [
+            "NATO podało, że europejscy sojusznicy i Kanada zwiększyli bazowe wydatki obronne w 2025 roku o niemal 20 procent wobec 2024 roku. Źródło: NATO - aktualizacja wydatków obronnych.",
+            "Według NATO już w 2026 roku pięciu sojuszników ma spełnić próg 3,5 procent dla podstawowych wymagań obronnych, a siedemnastu próg 1,5 procent dla wydatków obronno-bezpieczeństwowych, przed uzgodnionym terminem 2035 roku. Źródło: NATO - aktualizacja wydatków obronnych."
+          ],
+          "analysis": "To nie rozwiązuje wszystkich pytań o wsparcie Ukrainy, ale pokazuje, że presja na wydatki nie jest już tylko retorycznym biczem.",
+          "whyItMatters": "W relacji Europa-USA właśnie liczby wydatkowe są walutą wiarygodności.",
+          "sources": [
+            {
+              "title": "NATO - aktualizacja wydatków obronnych",
+              "url": "https://www.nato.int/en/news-and-events/articles/news/2026/07/07/defence-investment-update-record-spending-in-europe-and-canada"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne",
+            "NATO"
+          ],
+          "ttsText": "Wydatki obronne rosną szybciej niż harmonogram. Drugi zagraniczny konkret z NATO to świeży rachunek wydatkowy, który pokazuje, że część sojuszu ruszyła szybciej niż wynikałoby z odległego terminu dwa tysiące trzydzieści pięć.. NATO podało, że europejscy sojusznicy i Kanada zwiększyli bazowe wydatki obronne w 2025 roku o niemal 20 procent wobec 2024 roku. Źródło: NATO - aktualizacja wydatków obronnych.. Według NATO już w 2026 roku pięciu sojuszników ma spełnić próg 3,5 procent dla podstawowych wymagań obronnych, a siedemnastu próg 1,5 procent dla wydatków obronno-bezpieczeństwowych, przed uzgodnionym terminem 2035 roku. Źródło: NATO - aktualizacja wydatków obronnych.. To nie rozwiązuje wszystkich pytań o wsparcie Ukrainy, ale pokazuje, że presja na wydatki nie jest już tylko retorycznym biczem.. W relacji Europa-USA właśnie liczby wydatkowe są walutą wiarygodności.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "technologia",
+      "title": "Technologia",
+      "summary": "Technologiczna sekcja nie jest dziś dodatkiem do reszty świata, tylko jego cyfrowym zapleczem. Wieczorem najważniejsze są ryzyka związane z AI w cyberbezpieczeństwie oraz fakt, że stare problemy platform i podatności wcale nie zniknęły.",
+      "articles": [
+        {
+          "id": "technologia-1-bruksela-szykuje-plan-na-cyber-i-zaawansowana-ai",
+          "section": "Technologia",
+          "title": "Bruksela szykuje plan na cyber i zaawansowaną AI",
+          "lead": "Najświeższa zmiana technologiczna dnia to unijny plan odpowiedzi na sytuację, w której zaawansowane modele AI potrafią pomagać zarówno obrońcom, jak i atakującym.",
+          "facts": [
+            "Komisja Europejska 7 lipca przedstawiła Action Plan on Cybersecurity and Artificial Intelligence. Źródło: Komisja Europejska - plan działań dla cyberbezpieczeństwa i AI.",
+            "Komisja wskazuje, że zaawansowane modele AI mogą identyfikować podatności, automatyzować ataki i zwiększać skalę incydentów, dlatego plan ma połączyć państwa członkowskie, przemysł i organizacje unijne wokół wspólnej odpowiedzi. Źródło: Komisja Europejska - plan działań dla cyberbezpieczeństwa i AI."
+          ],
+          "analysis": "To ważne przesunięcie, bo Unia przestaje mówić o AI i cyberze osobno, a zaczyna traktować je jako jeden układ ryzyka i przewagi.",
+          "whyItMatters": "Dla administracji i infrastruktury krytycznej stawką jest nie moda na AI, tylko tempo, w jakim obrona potrafi dogonić nowe sposoby automatyzacji ataku.",
+          "sources": [
+            {
+              "title": "Komisja Europejska - plan działań dla cyberbezpieczeństwa i AI",
+              "url": "https://digital-strategy.ec.europa.eu/en/news/commission-presents-eu-action-plan-cybersecurity-and-artificial-intelligence"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Bruksela szykuje plan na cyber i zaawansowaną AI. Najświeższa zmiana technologiczna dnia to unijny plan odpowiedzi na sytuację, w której zaawansowane modele AI potrafią pomagać zarówno obrońcom, jak i atakującym.. Komisja Europejska 7 lipca przedstawiła Action Plan on Cybersecurity and Artificial Intelligence. Źródło: Komisja Europejska - plan działań dla cyberbezpieczeństwa i AI.. Komisja wskazuje, że zaawansowane modele AI mogą identyfikować podatności, automatyzować ataki i zwiększać skalę incydentów, dlatego plan ma połączyć państwa członkowskie, przemysł i organizacje unijne wokół wspólnej odpowiedzi. Źródło: Komisja Europejska - plan działań dla cyberbezpieczeństwa i AI.. To ważne przesunięcie, bo Unia przestaje mówić o AI i cyberze osobno, a zaczyna traktować je jako jeden układ ryzyka i przewagi.. Dla administracji i infrastruktury krytycznej stawką jest nie moda na AI, tylko tempo, w jakim obrona potrafi dogonić nowe sposoby automatyzacji ataku.",
+          "priority": "Medium"
+        },
+        {
+          "id": "technologia-2-cisa-i-dsa-przypominaja-ze-internet-nadal-wymaga",
+          "section": "Technologia",
+          "title": "CISA i DSA przypominają, że internet nadal wymaga twardych bezpieczników",
+          "lead": "Drugi wątek technologiczny to brak przełomu, który sam w sobie jest ważny: ryzyka platformowe i aktywnie wykorzystywane podatności nadal siedzą na stole i nigdzie się nie wybierają.",
+          "facts": [
+            "Raport DSA z 2 lipca wskazuje na ryzyka dla dzieci i młodzieży online, w tym wpływ rekomendacji i wyborów projektowych platform na ekspozycję na szkodliwe treści oraz zachowania uzależniające. Źródło: Komisja Europejska - raport DSA o ochronie małoletnich.",
+            "CISA 1 lipca dodała jedną nową podatność do katalogu Known Exploited Vulnerabilities na podstawie dowodów aktywnego wykorzystywania. Źródła: CISA - nowa podatność w katalogu KEV, CISA - katalog Known Exploited Vulnerabilities."
+          ],
+          "analysis": "Jeden temat dotyczy wielkich platform, drugi codziennej higieny bezpieczeństwa, ale wspólny mianownik jest prosty: internet nadal generuje ryzyka szybciej niż społeczeństwa lubią je porządkować.",
+          "whyItMatters": "Ten duet dobrze pokazuje, że bezpieczeństwo cyfrowe to jednocześnie regulacja, projektowanie i zwykłe tempo łatania podatności.",
+          "sources": [
+            {
+              "title": "Komisja Europejska - raport DSA o ochronie małoletnich",
+              "url": "https://digital-strategy.ec.europa.eu/en/news/report-highlights-importance-digital-services-act-protection-minors-online"
+            },
+            {
+              "title": "CISA - nowa podatność w katalogu KEV",
+              "url": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog"
+            },
+            {
+              "title": "CISA - katalog Known Exploited Vulnerabilities",
+              "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "CISA i DSA przypominają, że internet nadal wymaga twardych bezpieczników. Drugi wątek technologiczny to brak przełomu, który sam w sobie jest ważny: ryzyka platformowe i aktywnie wykorzystywane podatności nadal siedzą na stole i nigdzie się nie wybierają.. Raport DSA z 2 lipca wskazuje na ryzyka dla dzieci i młodzieży online, w tym wpływ rekomendacji i wyborów projektowych platform na ekspozycję na szkodliwe treści oraz zachowania uzależniające. Źródło: Komisja Europejska - raport DSA o ochronie małoletnich.. CISA 1 lipca dodała jedną nową podatność do katalogu Known Exploited Vulnerabilities na podstawie dowodów aktywnego wykorzystywania. Źródła: CISA - nowa podatność w katalogu KEV, CISA - katalog Known Exploited Vulnerabilities.. Jeden temat dotyczy wielkich platform, drugi codziennej higieny bezpieczeństwa, ale wspólny mianownik jest prosty: internet nadal generuje ryzyka szybciej niż społeczeństwa lubią je porządkować.. Ten duet dobrze pokazuje, że bezpieczeństwo cyfrowe to jednocześnie regulacja, projektowanie i zwykłe tempo łatania podatności.",
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "RCB - raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "RCB - alert o silnym wietrze",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---silny-wiatr-0707"
+    },
+    {
+      "title": "RCB - wyjaśnienie o planach zarządzania kryzysowego",
+      "url": "https://www.gov.pl/web/rcb/zatwierdzanie-planow-zarzadzania-kryzysowego-wyjasniamy"
+    },
+    {
+      "title": "RCB - stopnie alarmowe do 31 sierpnia 2026 r.",
+      "url": "https://www.gov.pl/web/rcb/przedluzenie-obowiazywania-stopni-alarmowych-do-31-sierpnia-2026-r"
+    },
+    {
+      "title": "KPRM - nowe decyzje Rady Ministrów",
+      "url": "https://www.gov.pl/web/premier/nowe-decyzje-rady-ministrow"
+    },
+    {
+      "title": "KPRM - komunikat po posiedzeniu Rady Ministrów",
+      "url": "https://www.gov.pl/web/premier/komunikat-po-posiedzeniu-rady-ministrow96"
+    },
+    {
+      "title": "MRPiPS - poradnik o reformie PIP",
+      "url": "https://www.gov.pl/web/rodzina/jak-przygotowac-sie-do-reformy-panstwowej-inspekcji-pracy-nowy-poradnik-dla-pracodawcow"
+    },
+    {
+      "title": "KPRM - premier o interesie Polski i Ukrainie",
+      "url": "https://www.gov.pl/web/premier/premier-w-interesie-polski-jest-aby-ukraina-nie-przegrala-tej-wojny"
+    },
+    {
+      "title": "Prezydent RP - przyjazd do Turcji na szczyt NATO",
+      "url": "https://www.prezydent.pl/aktualnosci/wizyty-zagraniczne/ankara%2C123052"
+    },
+    {
+      "title": "Prezydent RP - wypowiedź szefa BPM o współpracy transatlantyckiej",
+      "url": "https://www.prezydent.pl/kancelaria/aktywnosc-ministrow/szef-bpm-wpolsce24%2C123050"
+    },
+    {
+      "title": "NATO - program szczytu 2026",
+      "url": "https://www.nato.int/en/news-and-events/events/event-programmes/2026/07/nato-summit-2026"
+    },
+    {
+      "title": "NATO - zapowiedź szczytu w Ankarze",
+      "url": "https://www.nato.int/en/news-and-events/articles/news/2026/07/06/nato-secretary-general-previews-the-ankara-summit-highlights-progress-on-defence-spending"
+    },
+    {
+      "title": "NATO - dziesiątki miliardów nowych zakupów",
+      "url": "https://www.nato.int/en/news-and-events/articles/news/2026/07/07/tens-of-billions-in-new-procurements-revealed-at-the-nato-summit-defence-industry-forum-in-ankara"
+    },
+    {
+      "title": "NATO - aktualizacja wydatków obronnych",
+      "url": "https://www.nato.int/en/news-and-events/articles/news/2026/07/07/defence-investment-update-record-spending-in-europe-and-canada"
+    },
+    {
+      "title": "Komisja Europejska - plan działań dla cyberbezpieczeństwa i AI",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-presents-eu-action-plan-cybersecurity-and-artificial-intelligence"
+    },
+    {
+      "title": "Komisja Europejska - raport DSA o ochronie małoletnich",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/report-highlights-importance-digital-services-act-protection-minors-online"
+    },
+    {
+      "title": "CISA - nowa podatność w katalogu KEV",
+      "url": "https://www.cisa.gov/news-events/alerts/2026/07/01/cisa-adds-one-known-exploited-vulnerability-catalog"
+    },
+    {
+      "title": "CISA - katalog Known Exploited Vulnerabilities",
+      "url": "https://www.cisa.gov/known-exploited-vulnerabilities-catalog"
+    }
+  ],
+  "audioArtifacts": []
+}
