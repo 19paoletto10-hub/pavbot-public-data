@@ -1,3 +1,4 @@
+import CloudKit
 import Foundation
 import UIKit
 import UserNotifications
@@ -121,7 +122,7 @@ enum LiveNotificationOnboarding {
     }
 
     static func needsSettingsBeforeSystemPrompt(serverURLString: String) -> Bool {
-        NotificationServerSettings.validationMessage(for: serverURLString, required: true) != nil
+        false
     }
 }
 
@@ -149,17 +150,25 @@ enum RemoteNotificationRegistrationPolicy {
 @MainActor
 enum RemoteNotificationPermission {
     static func requestAndRegister() async -> Bool {
-        guard NotificationServerSettings.validationMessage(for: NotificationServerSettings.serverURLString, required: true) == nil else {
+        guard CloudKitRuntimeSupport.shouldUseCloudKitRuntime() else {
             LiveNotificationSettings.setEnabled(false)
-            RemoteNotificationDiagnostics.saveRegistrationError("Notification server URL is missing or invalid.")
+            RemoteNotificationDiagnostics.saveRegistrationError(CloudKitRuntimeSupport.disabledInUnitTestsMessage)
             return false
         }
 
         let granted = (try? await UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .sound, .badge])) ?? false
         if granted {
-            LiveNotificationSettings.setEnabled(true)
             RemoteNotificationDiagnostics.saveRegistrationAttempt()
-            UIApplication.shared.registerForRemoteNotifications()
+            do {
+                try await CloudKitService.shared.createOrUpdateSubscriptions()
+                LiveNotificationSettings.setEnabled(true)
+                RemoteNotificationDiagnostics.saveBackendRegistrationSuccess()
+                UIApplication.shared.registerForRemoteNotifications()
+            } catch {
+                LiveNotificationSettings.setEnabled(false)
+                RemoteNotificationDiagnostics.saveRegistrationError("CloudKit subscription failed: \(error.localizedDescription)")
+                return false
+            }
         } else {
             LiveNotificationSettings.setEnabled(false)
             RemoteNotificationDiagnostics.saveRegistrationError("Notification permission was not granted.")
@@ -168,6 +177,11 @@ enum RemoteNotificationPermission {
     }
 
     static func refreshRegistrationIfNeeded() async {
+        guard CloudKitRuntimeSupport.shouldUseCloudKitRuntime() else {
+            RemoteNotificationDiagnostics.saveRegistrationError(CloudKitRuntimeSupport.disabledInUnitTestsMessage)
+            return
+        }
+
         let settings = await UNUserNotificationCenter.current().notificationSettings()
         guard RemoteNotificationRegistrationPolicy.shouldRegister(
             liveNotificationsEnabled: LiveNotificationSettings.isEnabled(),
@@ -178,7 +192,13 @@ enum RemoteNotificationPermission {
         }
 
         RemoteNotificationDiagnostics.saveRegistrationAttempt()
-        UIApplication.shared.registerForRemoteNotifications()
+        do {
+            try await CloudKitService.shared.createOrUpdateSubscriptions()
+            RemoteNotificationDiagnostics.saveBackendRegistrationSuccess()
+            UIApplication.shared.registerForRemoteNotifications()
+        } catch {
+            RemoteNotificationDiagnostics.saveRegistrationError("CloudKit subscription failed: \(error.localizedDescription)")
+        }
     }
 }
 
@@ -342,6 +362,7 @@ final class ArtifactNotificationDelegate: NSObject, UNUserNotificationCenterDele
 
 private enum NotificationRoutingCommand: Sendable {
     case dailyWeather(date: String?)
+    case cloudKitBriefing(CloudKitBriefingNotificationRoute)
     case artifactRoute(ArtifactNotificationRoute)
     case artifactID(String)
     case automationID(String)
@@ -350,6 +371,30 @@ private enum NotificationRoutingCommand: Sendable {
     init(userInfo: [AnyHashable: Any]) {
         if userInfo["notificationKind"] as? String == "dailyWeather" {
             self = .dailyWeather(date: userInfo["weatherDate"] as? String)
+            return
+        }
+        if let queryNotification = CKNotification(fromRemoteNotificationDictionary: userInfo) as? CKQueryNotification,
+           queryNotification.subscriptionID == CloudKitService.briefingsReadySubscriptionID {
+            var routeUserInfo: [AnyHashable: Any] = [:]
+            if let recordFields = queryNotification.recordFields {
+                for key in ["briefingId", "title", "summary", "manifestUrl", "category"] {
+                    if let value = recordFields[key] {
+                        routeUserInfo[key] = value
+                    }
+                }
+                if let createdAt = recordFields["createdAt"] as? Date {
+                    routeUserInfo["createdAt"] = ISO8601DateFormatter().string(from: createdAt)
+                } else if let createdAt = recordFields["createdAt"] {
+                    routeUserInfo["createdAt"] = createdAt
+                }
+            }
+            if let route = CloudKitBriefingNotificationRoute(userInfo: routeUserInfo) {
+                self = .cloudKitBriefing(route)
+                return
+            }
+        }
+        if let route = CloudKitBriefingNotificationRoute(userInfo: userInfo) {
+            self = .cloudKitBriefing(route)
             return
         }
         if let route = ArtifactNotificationRoute(userInfo: userInfo) {
@@ -372,6 +417,8 @@ private enum NotificationRoutingCommand: Sendable {
         switch self {
         case .dailyWeather(let date):
             router.openDailyWeather(date: date)
+        case .cloudKitBriefing(let route):
+            _ = router.openReportsForTopic(route.topic, latestDay: route.stamp)
         case .artifactRoute(let route):
             if !router.openReportRoute(route) {
                 router.openArtifactRoute(route)
@@ -392,10 +439,7 @@ final class PavbotRemoteNotificationAppDelegate: NSObject, UIApplicationDelegate
         didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data
     ) {
         RemoteNotificationDiagnostics.saveDeviceToken(deviceToken)
-        RemoteNotificationDiagnostics.saveRegistrationAttempt()
-        Task {
-            await RemoteNotificationRegistrar().register(deviceToken: deviceToken)
-        }
+        RemoteNotificationDiagnostics.saveBackendRegistrationSuccess()
     }
 
     func application(
@@ -403,6 +447,22 @@ final class PavbotRemoteNotificationAppDelegate: NSObject, UIApplicationDelegate
         didFailToRegisterForRemoteNotificationsWithError error: Error
     ) {
         RemoteNotificationDiagnostics.saveRegistrationError(PavbotUserFacingError.network(error, context: .notifier).message)
+    }
+
+    func application(
+        _ application: UIApplication,
+        didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+        fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void
+    ) {
+        Task { @MainActor in
+            let cloudKitNotification = CKNotification(fromRemoteNotificationDictionary: userInfo)
+            if cloudKitNotification?.subscriptionID == CloudKitService.briefingsReadySubscriptionID {
+                let result = await CloudKitPushRefreshCenter.shared.handleRemoteNotification(userInfo)
+                completionHandler(result)
+            } else {
+                completionHandler(.noData)
+            }
+        }
     }
 
 }

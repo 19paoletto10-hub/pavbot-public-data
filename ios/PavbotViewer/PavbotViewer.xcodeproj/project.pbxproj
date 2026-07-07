@@ -10,6 +10,7 @@
 		036DCA6D533771B778BAEF1F /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 279DFFBC15E4A98DCF519B73 /* UserNotifications.framework */; };
 		0862424D4A2D15B6819EEF9D /* JobsDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EB066F256FE9BE698F99D3 /* JobsDataService.swift */; };
 		08B816DFDEAEA7F909850448 /* WeatherBriefService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50CE914EED9058E2E6826511 /* WeatherBriefService.swift */; };
+		0A4E35E34F0C4D0794A8B901 /* AppDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4E35E24F0C4D0794A8B901 /* AppDataRepository.swift */; };
 		0C5508D3B4756EC179DEBB29 /* SavedResearchArticle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40135DE56B852E3461575FEF /* SavedResearchArticle.swift */; };
 		10007BDB581CA2F061D4D0EB /* WeatherLocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F556EA3F0FBD049F0E90692F /* WeatherLocationService.swift */; };
 		138C25094EEC6A2230199FCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBAB3DC30A61CB521D5C3649 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		1B58DD28D3DB78F9F69EE613 /* TodayLiveTopicSpeechController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92C841A1F8FBA1CCC606BF7 /* TodayLiveTopicSpeechController.swift */; };
 		1B8F6637C22649F1954A8E1B /* TodayLiveTopics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5312D36BCDBEDC5A6295A40E /* TodayLiveTopics.swift */; };
 		26B137D17418BA3AD94AC44C /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5333367ECD190BE7F495C18C /* Charts.framework */; };
+		2B11D239804C8E0F83B8E0C7 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C29F4020F6C4A313845E4B3E /* CloudKit.framework */; };
 		26DC35B41520EC2E20D7D2D8 /* AppAppearancePreference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D512854AD5B928D5701C914 /* AppAppearancePreference.swift */; };
 		282BB106B682BA4ED6DAC2C0 /* WeatherBriefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672A72A9905930AD5017C278 /* WeatherBriefView.swift */; };
 		2946726C948D4F66BA4F4D2E /* SpeechPlaybackControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2791E7D48947FBC752F3AEBE /* SpeechPlaybackControls.swift */; };
@@ -31,6 +33,7 @@
 		30455BC8993912380DF950EC /* JobsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD2833B2E922C4EDCA1C885B /* JobsView.swift */; };
 		377C34EC37DD46F25B4955BD /* PulseNewsDigest.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADB5F074E7D876C212469E3F /* PulseNewsDigest.swift */; };
 		37B9941F081725AD1B926EEB /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3769702F6D5E896F00B54419 /* AppRouter.swift */; };
+		3D4B740B1A5F44D4B03B32B2 /* GeneratedPackage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D4B740A1A5F44D4B03B32B2 /* GeneratedPackage.swift */; };
 		3FDB992D0B671821332576C5 /* PavbotDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36E99E399CB1D97AF718704 /* PavbotDesign.swift */; };
 		40B4BF7CBB93B97B5C874B51 /* AudioTimelineControls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B55587551EFC7B8A1660D54 /* AudioTimelineControls.swift */; };
 		43ED2F7B04F61F69390FB323 /* DailyWeatherReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D898746D5C1A3322B93542A /* DailyWeatherReport.swift */; };
@@ -117,6 +120,7 @@
 
 /* Begin PBXFileReference section */
 		0923DD610163A9CEA7C08CCF /* ResearchNewsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchNewsService.swift; sourceTree = "<group>"; };
+		0A4E35E24F0C4D0794A8B901 /* AppDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataRepository.swift; sourceTree = "<group>"; };
 		0B77334FB18DD6C5F16B3585 /* SavedResearchArticlesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedResearchArticlesView.swift; sourceTree = "<group>"; };
 		11093FC02461B89D108DDFF7 /* PavbotRootLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotRootLayout.swift; sourceTree = "<group>"; };
 		11D61FC4BF12BB3ED862A233 /* PavbotAudioActivityAttributes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotAudioActivityAttributes.swift; sourceTree = "<group>"; };
@@ -136,6 +140,7 @@
 		317DE1CF3DAAEE158AD02BBB /* PavbotConnectionDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotConnectionDefaults.swift; sourceTree = "<group>"; };
 		33E285B1693A0587B8744C9E /* MobileNewsMagazine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileNewsMagazine.swift; sourceTree = "<group>"; };
 		3769702F6D5E896F00B54419 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		3D4B740A1A5F44D4B03B32B2 /* GeneratedPackage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneratedPackage.swift; sourceTree = "<group>"; };
 		3B337475DD595B7A57A167AF /* PavbotViewer.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PavbotViewer.entitlements; sourceTree = "<group>"; };
 		3F2AEF493B65E3050003DA5E /* ArtifactNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactNotificationService.swift; sourceTree = "<group>"; };
 		40135DE56B852E3461575FEF /* SavedResearchArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedResearchArticle.swift; sourceTree = "<group>"; };
@@ -175,6 +180,7 @@
 		B101DC0CC0E2D100DB7164D0 /* PavbotViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PavbotViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6489B361457D2D72C30D95D /* JobsMarkdownParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsMarkdownParser.swift; sourceTree = "<group>"; };
 		B7CD203D4E9EA86F2A8DA854 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		C29F4020F6C4A313845E4B3E /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		B881CFFC8F93124D872D5FFB /* TodayLiveTopicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLiveTopicsView.swift; sourceTree = "<group>"; };
 		BBAB3DC30A61CB521D5C3649 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE825D44EAB3829608926F0E /* TodayHumorDigest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayHumorDigest.swift; sourceTree = "<group>"; };
@@ -213,6 +219,7 @@
 				8F7234979E297655E336A50A /* AVFoundation.framework in Frameworks */,
 				15894A5E5C961814A07FDBC7 /* ActivityKit.framework in Frameworks */,
 				26B137D17418BA3AD94AC44C /* Charts.framework in Frameworks */,
+				2B11D239804C8E0F83B8E0C7 /* CloudKit.framework in Frameworks */,
 				E3AC56F42A674025D84C634C /* CoreLocation.framework in Frameworks */,
 				9221218CCF8F3F05F59D2F7A /* MediaPlayer.framework in Frameworks */,
 				4637FC97A6B377972B57C833 /* PDFKit.framework in Frameworks */,
@@ -250,6 +257,7 @@
 			isa = PBXGroup;
 			children = (
 				A84A06551D40336B957E563E /* AppDefaultsClient.swift */,
+				0A4E35E24F0C4D0794A8B901 /* AppDataRepository.swift */,
 				3F2AEF493B65E3050003DA5E /* ArtifactNotificationService.swift */,
 				A8F7D9C2B4E1A6F2D3C9B80D /* CloudKitService.swift */,
 				1B280FB52CD3B066BCB4E2FB /* AudioPlaybackService.swift */,
@@ -302,6 +310,7 @@
 				262BB2F3084CBB7335E021BF /* ActivityKit.framework */,
 				B7CD203D4E9EA86F2A8DA854 /* AVFoundation.framework */,
 				5333367ECD190BE7F495C18C /* Charts.framework */,
+				C29F4020F6C4A313845E4B3E /* CloudKit.framework */,
 				D932715A009BB3305821F0FF /* CoreLocation.framework */,
 				1CC8AAA24B29F012891D9FB2 /* MediaPlayer.framework */,
 				7B73CD8205618D4A87B1004E /* PDFKit.framework */,
@@ -340,6 +349,7 @@
 				7D898746D5C1A3322B93542A /* DailyWeatherReport.swift */,
 				C5F3E0B2A6C8D9F1E4A8B2C1 /* DailyWisdom.swift */,
 				F139EEFBD6DE7999AD6C89D3 /* JobsBriefPresentation.swift */,
+				3D4B740A1A5F44D4B03B32B2 /* GeneratedPackage.swift */,
 				8AEE41E2B0AF8E61BF26451D /* JobsReport.swift */,
 				33E285B1693A0587B8744C9E /* MobileNewsMagazine.swift */,
 				5AAF18DACEBDAEC0782CD370 /* PavbotManifest.swift */,
@@ -469,6 +479,14 @@
 					1A1182BCAB775DFBFA8726CC = {
 						DevelopmentTeam = SP774TZZU8;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					52EF15468EB4217C12C91A42 = {
 						DevelopmentTeam = SP774TZZU8;
@@ -553,6 +571,7 @@
 				4DCD7042F46AE9A83D5B4A1D /* AccessibilityShowcaseFeature.swift in Sources */,
 				26DC35B41520EC2E20D7D2D8 /* AppAppearancePreference.swift in Sources */,
 				884B71DBA77F27872D2BCE06 /* AppDefaultsClient.swift in Sources */,
+				0A4E35E34F0C4D0794A8B901 /* AppDataRepository.swift in Sources */,
 				37B9941F081725AD1B926EEB /* AppRouter.swift in Sources */,
 				66504F7F205137ECCC1AFD58 /* ArtifactDetailView.swift in Sources */,
 				29CB56086EEE782839BE6637 /* ArtifactNotificationService.swift in Sources */,
@@ -566,6 +585,7 @@
 				AA12D3C44F6E2D5AB1C0BFA7 /* DailyWisdom.swift in Sources */,
 				BF6147CDD4E1C41274A89BCD /* DiagnosticsView.swift in Sources */,
 				FA44D983217DB9EDE0295F84 /* JobsBriefPresentation.swift in Sources */,
+				3D4B740B1A5F44D4B03B32B2 /* GeneratedPackage.swift in Sources */,
 				0862424D4A2D15B6819EEF9D /* JobsDataService.swift in Sources */,
 				D6B31073AD8C2816A4EB663E /* JobsHistoryService.swift in Sources */,
 				F261CA16E44C142414380669 /* JobsMarkdownParser.swift in Sources */,
@@ -679,6 +699,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CLOUDKIT_ENVIRONMENT = Development;
 				CURRENT_PROJECT_VERSION = 260627.202;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -869,6 +890,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CLOUDKIT_ENVIRONMENT = Production;
 				CURRENT_PROJECT_VERSION = 260627.202;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

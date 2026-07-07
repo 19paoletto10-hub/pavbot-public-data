@@ -9,6 +9,9 @@ enum CloudKitConfiguration {
 
 enum CloudKitRuntimeSupport {
     static let disabledInUnitTestsMessage = "CloudKit runtime is disabled in the unit-test host."
+    static let missingEntitlementsMessage = "CloudKit runtime is disabled because the signed app is missing the Pavbot iCloud container entitlement."
+    private static let iCloudServicesEntitlement = "com.apple.developer.icloud-services"
+    private static let iCloudContainersEntitlement = "com.apple.developer.icloud-container-identifiers"
 
     static var isRunningUnitTests: Bool {
         ProcessInfo.processInfo.environment["XCTestConfigurationFilePath"] != nil
@@ -21,19 +24,44 @@ enum CloudKitRuntimeSupport {
     }
 
     static func requireCloudKitRuntime() throws {
-        guard shouldUseCloudKitRuntime() else {
+        guard !isRunningUnitTests else {
             throw CloudKitRuntimeError.disabledInUnitTests
         }
+    }
+
+    static func entitlementsSupportCloudKit(
+        _ entitlements: [String: Any],
+        containerIdentifier: String = CloudKitConfiguration.containerIdentifier
+    ) -> Bool {
+        let services = stringArrayEntitlement(iCloudServicesEntitlement, in: entitlements)
+        let containers = stringArrayEntitlement(iCloudContainersEntitlement, in: entitlements)
+        return services.contains("CloudKit") && containers.contains(containerIdentifier)
+    }
+
+    private static func stringArrayEntitlement(_ key: String, in entitlements: [String: Any]) -> [String] {
+        if let values = entitlements[key] as? [String] {
+            return values
+        }
+        if let value = entitlements[key] as? String {
+            return [value]
+        }
+        if let values = entitlements[key] as? NSArray {
+            return values.compactMap { $0 as? String }
+        }
+        return []
     }
 }
 
 enum CloudKitRuntimeError: LocalizedError, Equatable {
     case disabledInUnitTests
+    case missingEntitlements
 
     var errorDescription: String? {
         switch self {
         case .disabledInUnitTests:
             CloudKitRuntimeSupport.disabledInUnitTestsMessage
+        case .missingEntitlements:
+            CloudKitRuntimeSupport.missingEntitlementsMessage
         }
     }
 }
@@ -231,7 +259,7 @@ protocol BriefingMetadataFetching: Sendable {
     func createOrUpdateSubscriptions() async throws
 }
 
-actor CloudKitService: BriefingMetadataFetching {
+actor CloudKitService: BriefingMetadataFetching, GeneratedPackageRemoteFetching {
     static let shared = CloudKitService()
     static let briefingsReadySubscriptionID = "briefings-ready-subscription"
 
@@ -251,6 +279,27 @@ actor CloudKitService: BriefingMetadataFetching {
     init(containerIdentifier: String = CloudKitConfiguration.containerIdentifier) {
         self.containerIdentifier = containerIdentifier
         logger = Logger(subsystem: Bundle.main.bundleIdentifier ?? "PavbotViewer", category: "CloudKit")
+    }
+
+    func fetchLatestGeneratedPackage() async throws -> GeneratedPackage {
+        do {
+            try CloudKitRuntimeSupport.requireCloudKitRuntime()
+            let predicate = NSPredicate(format: "status == %@", "ready")
+            let query = CKQuery(recordType: "GeneratedPackage", predicate: predicate)
+            query.sortDescriptors = [NSSortDescriptor(key: "generatedAt", ascending: false)]
+            let (matches, _) = try await publicCloudDatabase.records(matching: query, resultsLimit: 1)
+            guard let first = matches.first else {
+                throw CloudKitRecordMappingError.missingRecord(
+                    recordType: "GeneratedPackage",
+                    field: "status",
+                    value: "ready"
+                )
+            }
+            return try await generatedPackage(from: first.1.get())
+        } catch {
+            logger.error("CloudKit generated package fetch failed: \(Self.logMessage(for: error), privacy: .public)")
+            throw error
+        }
     }
 
     func fetchLatestBriefings(limit: Int = 50) async throws -> [Briefing] {
@@ -331,6 +380,13 @@ actor CloudKitService: BriefingMetadataFetching {
             options: [.firesOnRecordCreation, .firesOnRecordUpdate]
         )
         let notificationInfo = CKSubscription.NotificationInfo()
+        notificationInfo.titleLocalizationKey = "Pavbot"
+        notificationInfo.subtitleLocalizationKey = "%@"
+        notificationInfo.subtitleLocalizationArgs = ["title"]
+        notificationInfo.alertLocalizationKey = "Nowe dane: %@"
+        notificationInfo.alertLocalizationArgs = ["title"]
+        notificationInfo.soundName = "default"
+        notificationInfo.desiredKeys = ["briefingId", "title", "summary", "manifestUrl", "category", "createdAt"]
         notificationInfo.shouldSendContentAvailable = true
         subscription.notificationInfo = notificationInfo
 
@@ -362,6 +418,54 @@ actor CloudKitService: BriefingMetadataFetching {
             return "\(ckError.code): \(ckError.localizedDescription)"
         }
         return error.localizedDescription
+    }
+
+    private func generatedPackage(from record: CKRecord) async throws -> GeneratedPackage {
+        let packageId = record["packageId"] as? String
+        let environment = (record["environment"] as? String)
+            .flatMap(GeneratedPackageEnvironment.init(rawValue:))
+        let manifestURLString = record["manifestUrl"] as? String ?? record["manifestURL"] as? String
+
+        if let manifest = try decodeEmbeddedManifest(from: record) {
+            return GeneratedPackage(
+                manifest: manifest,
+                manifestURL: manifestURLString.flatMap(URL.init(string:)),
+                source: .cloudKit,
+                packageId: packageId,
+                environment: environment
+            )
+        }
+
+        guard
+            let manifestURLString,
+            let manifestURL = URL(string: manifestURLString)
+        else {
+            throw CloudKitRecordMappingError.missingField(recordType: record.recordType, field: "manifestJSON|manifestUrl")
+        }
+
+        let manifest = try await ManifestClient().fetchManifest(from: manifestURL)
+        return GeneratedPackage(
+            manifest: manifest,
+            manifestURL: manifestURL,
+            source: .cloudKit,
+            packageId: packageId,
+            environment: environment
+        )
+    }
+
+    private func decodeEmbeddedManifest(from record: CKRecord) throws -> PavbotManifest? {
+        if let manifestJSON = record["manifestJSON"] as? String ?? record["manifestJson"] as? String {
+            guard let data = manifestJSON.data(using: .utf8) else {
+                throw CloudKitRecordMappingError.missingField(recordType: record.recordType, field: "manifestJSON")
+            }
+            return try JSONDecoder.pavbot.decode(PavbotManifest.self, from: data)
+        }
+
+        if let data = record["manifestData"] as? Data {
+            return try JSONDecoder.pavbot.decode(PavbotManifest.self, from: data)
+        }
+
+        return nil
     }
 }
 

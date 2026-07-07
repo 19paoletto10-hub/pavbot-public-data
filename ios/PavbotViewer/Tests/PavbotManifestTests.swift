@@ -1850,7 +1850,8 @@ final class PavbotManifestTests: XCTestCase {
         let attributes = PavbotAudioActivityAttributes(
             artifactID: "audio-2026-06-22",
             artifactPath: "research/tech-news/podcasts/2026-06-22/podcast.mp3",
-            topic: "tech-news"
+            topic: "tech-news",
+            source: .mp3Podcast
         )
         let state = PavbotAudioActivityAttributes.ContentState(
             title: "Podcast audio",
@@ -2175,12 +2176,157 @@ final class PavbotManifestTests: XCTestCase {
         let defaults = UserDefaults(suiteName: UUID().uuidString)!
 
         XCTAssertTrue(LiveNotificationOnboarding.shouldPrompt(defaults: defaults))
-        XCTAssertTrue(LiveNotificationOnboarding.needsSettingsBeforeSystemPrompt(serverURLString: ""))
+        XCTAssertFalse(LiveNotificationOnboarding.needsSettingsBeforeSystemPrompt(serverURLString: ""))
         XCTAssertFalse(LiveNotificationOnboarding.needsSettingsBeforeSystemPrompt(serverURLString: "https://notify.example.com"))
 
         LiveNotificationOnboarding.markPromptSeen(defaults: defaults)
 
         XCTAssertFalse(LiveNotificationOnboarding.shouldPrompt(defaults: defaults))
+    }
+
+    func testCloudKitRuntimeSupportRequiresSignedCloudKitEntitlements() {
+        let validEntitlements: [String: Any] = [
+            "com.apple.developer.icloud-services": ["CloudKit"],
+            "com.apple.developer.icloud-container-identifiers": ["iCloud.com.paweltanski.pavbotviewer"]
+        ]
+        let missingContainer: [String: Any] = [
+            "com.apple.developer.icloud-services": ["CloudKit"],
+            "com.apple.developer.icloud-container-identifiers": ["iCloud.com.example.other"]
+        ]
+        let missingService: [String: Any] = [
+            "com.apple.developer.icloud-container-identifiers": ["iCloud.com.paweltanski.pavbotviewer"]
+        ]
+
+        XCTAssertTrue(
+            CloudKitRuntimeSupport.entitlementsSupportCloudKit(
+                validEntitlements,
+                containerIdentifier: "iCloud.com.paweltanski.pavbotviewer"
+            )
+        )
+        XCTAssertFalse(
+            CloudKitRuntimeSupport.entitlementsSupportCloudKit(
+                missingContainer,
+                containerIdentifier: "iCloud.com.paweltanski.pavbotviewer"
+            )
+        )
+        XCTAssertFalse(
+            CloudKitRuntimeSupport.entitlementsSupportCloudKit(
+                missingService,
+                containerIdentifier: "iCloud.com.paweltanski.pavbotviewer"
+            )
+        )
+    }
+
+    func testPavbotViewerEntitlementsDeclareProductionCloudKitContainer() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let entitlementsURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/PavbotViewer.entitlements")
+        let data = try Data(contentsOf: entitlementsURL)
+        let plist = try XCTUnwrap(
+            PropertyListSerialization.propertyList(from: data, options: [], format: nil) as? [String: Any]
+        )
+
+        XCTAssertEqual(plist["aps-environment"] as? String, "$(APS_ENVIRONMENT)")
+        XCTAssertEqual(plist["com.apple.developer.icloud-container-environment"] as? String, "$(CLOUDKIT_ENVIRONMENT)")
+        XCTAssertEqual(plist["com.apple.developer.icloud-services"] as? [String], ["CloudKit"])
+        XCTAssertEqual(
+            plist["com.apple.developer.icloud-container-identifiers"] as? [String],
+            ["iCloud.com.paweltanski.pavbotviewer"]
+        )
+    }
+
+    func testCloudKitServiceDefinesVisibleBriefingNotificationSubscription() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Services/CloudKitService.swift")
+        let source = try String(contentsOf: sourceURL)
+
+        XCTAssertTrue(source.contains("notificationInfo.titleLocalizationKey = \"Pavbot\""))
+        XCTAssertTrue(source.contains("notificationInfo.subtitleLocalizationKey = \"%@\""))
+        XCTAssertTrue(source.contains("notificationInfo.subtitleLocalizationArgs = [\"title\"]"))
+        XCTAssertTrue(source.contains("notificationInfo.alertLocalizationKey = \"Nowe dane: %@\""))
+        XCTAssertTrue(source.contains("notificationInfo.alertLocalizationArgs = [\"title\"]"))
+        XCTAssertTrue(source.contains("notificationInfo.soundName = \"default\""))
+        XCTAssertTrue(source.contains("\"briefingId\""))
+        XCTAssertTrue(source.contains("\"manifestUrl\""))
+        XCTAssertTrue(source.contains("\"category\""))
+        XCTAssertTrue(source.contains("\"createdAt\""))
+    }
+
+    func testRemoteNotificationPermissionCreatesCloudKitSubscription() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Services/ArtifactNotificationService.swift")
+        let source = try String(contentsOf: sourceURL)
+
+        XCTAssertTrue(source.contains("try await CloudKitService.shared.createOrUpdateSubscriptions()"))
+        XCTAssertTrue(source.contains("didReceiveRemoteNotification userInfo"))
+        XCTAssertTrue(source.contains("CloudKitPushRefreshCenter.shared.handleRemoteNotification(userInfo)"))
+    }
+
+    func testGeneratedPackageWrapsExistingManifestWithoutChangingArtifacts() throws {
+        let manifest = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
+        let manifestURL = try XCTUnwrap(URL(string: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"))
+
+        let package = GeneratedPackage(manifest: manifest, manifestURL: manifestURL, source: .githubManifest)
+
+        XCTAssertEqual(package.schemaVersion, "1.0.0")
+        XCTAssertEqual(package.source, .githubManifest)
+        XCTAssertEqual(package.environment, .prod)
+        XCTAssertEqual(package.manifest, manifest)
+        XCTAssertEqual(package.artifacts.count, manifest.artifacts.count)
+        XCTAssertEqual(package.artifacts.first?.storageHint, "cloudKitRecordOrGitHubRaw")
+    }
+
+    func testFallbackRepositoryUsesGitHubWhenCloudKitPackageIsUnavailable() async throws {
+        let manifest = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
+        let suiteName = UUID().uuidString
+        let defaults = UserDefaults(suiteName: suiteName)!
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+        let cache = LocalGeneratedPackageCache(defaults: defaults)
+        let repository = FallbackAppDataRepository(
+            cloudKit: ThrowingGeneratedPackageFetcher(),
+            gitHub: GitHubManifestRepository(
+                client: StubManifestClient(manifest: manifest),
+                manifestURLString: { "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json" }
+            ),
+            cache: cache
+        )
+
+        let package = try await repository.fetchLatestPackage()
+
+        XCTAssertEqual(package.source, .githubManifest)
+        XCTAssertEqual(package.manifest, manifest)
+        XCTAssertEqual(cache.load()?.manifest, manifest)
+    }
+
+    func testFallbackRepositoryReturnsLocalPackageWhenCloudKitAndGitHubFail() async throws {
+        let manifest = try JSONDecoder.pavbot.decode(PavbotManifest.self, from: Self.fixtureData)
+        let suiteName = UUID().uuidString
+        let defaults = UserDefaults(suiteName: suiteName)!
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+        let cache = LocalGeneratedPackageCache(defaults: defaults)
+        cache.save(GeneratedPackage(
+            manifest: manifest,
+            manifestURL: URL(string: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"),
+            source: .githubManifest
+        ))
+        let repository = FallbackAppDataRepository(
+            cloudKit: ThrowingGeneratedPackageFetcher(),
+            gitHub: ThrowingGeneratedPackageFetcher(),
+            cache: cache
+        )
+
+        let package = try await repository.fetchLatestPackage()
+
+        XCTAssertEqual(package.source, .localCache)
+        XCTAssertEqual(package.manifest, manifest)
     }
 
     func testLiveNotificationSettingsPersistEnabledState() {
@@ -2368,21 +2514,20 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(report.timelineTemperaturePoints(startingAt: now).map(\.time), ["2026-06-25T06:00", "2026-06-25T07:00"])
     }
 
-    func testWeatherBriefClientBuildsLatestRequestWithLocation() throws {
+    func testWeatherBriefClientBuildsForecastRequestWithLocation() throws {
         let client = WeatherBriefClient()
-        let serverURL = try XCTUnwrap(URL(string: "https://notify.example.com"))
         let location = WeatherBriefLocation(latitude: 52.2297, longitude: 21.0122, city: "Warszawa")
 
-        let request = try client.latestRequest(from: serverURL, location: location)
+        let request = try client.forecastRequest(for: location, forceRefresh: false)
         let url = try XCTUnwrap(request.url)
         let components = try XCTUnwrap(URLComponents(url: url, resolvingAgainstBaseURL: false))
         let query = Dictionary(uniqueKeysWithValues: (components.queryItems ?? []).map { ($0.name, $0.value ?? "") })
 
         XCTAssertEqual(request.httpMethod, "GET")
-        XCTAssertEqual(components.path, "/v1/weather/daily/latest")
-        XCTAssertEqual(query["lat"], "52.2297")
-        XCTAssertEqual(query["lon"], "21.0122")
-        XCTAssertEqual(query["city"], "Warszawa")
+        XCTAssertEqual(components.path, "/v1/forecast")
+        XCTAssertEqual(query["latitude"], "52.2297")
+        XCTAssertEqual(query["longitude"], "21.0122")
+        XCTAssertEqual(query["timezone"], "auto")
         XCTAssertEqual(request.value(forHTTPHeaderField: "Cache-Control"), "no-cache")
     }
 
@@ -2469,7 +2614,7 @@ final class PavbotManifestTests: XCTestCase {
 
         XCTAssertEqual(store.state, .loaded)
         XCTAssertEqual(store.report?.id, "wroclaw-2026-06-25")
-        XCTAssertEqual(store.cacheNotice, "Pokazuję ostatni zapisany raport. Odświeżenie nie powiodło się.")
+        XCTAssertEqual(store.cacheNotice, "Nie pobrano świeżych danych. Pokazuję zapisane dane: ostatni raport pogodowy.")
     }
 
     @MainActor
@@ -2563,7 +2708,7 @@ final class PavbotManifestTests: XCTestCase {
                 providerCalls += 1
                 return WeatherBriefLocation(latitude: 50.0614, longitude: 19.9366, city: "Kraków, Małopolskie")
             },
-            manualLocationProvider: { manualLocation }
+            locationPreferenceProvider: { .manual(manualLocation) }
         )
 
         await store.load()
@@ -2571,7 +2716,10 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(providerCalls, 0)
         XCTAssertEqual(client.latestLocations.map { $0?.city }, ["Poznań, Wielkopolskie"])
         XCTAssertEqual(store.locationNotice, "Bieżąca prognoza dla: Poznań, Wielkopolskie.")
-        XCTAssertEqual(store.state, .loaded)
+        guard case .loaded = store.state else {
+            XCTFail("Expected weather store to load.")
+            return
+        }
     }
 
     @MainActor
@@ -3986,6 +4134,25 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     @MainActor
+    func testRouterOpensPulseDayTabFromCloudKitBriefingPayload() {
+        let router = AppRouter()
+        router.selectedTab = .settings
+
+        router.handleNotification(
+            userInfo: [
+                "briefingId": "puls-dnia-news:2026-07-06-1800",
+                "category": "puls-dnia-news",
+                "manifestUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/public/pavbot-manifest.json"
+            ]
+        )
+
+        XCTAssertEqual(router.selectedTab, .pulseDay)
+        XCTAssertEqual(router.selectedReportDay, "2026-07-06-1800")
+        XCTAssertNil(router.pendingArtifactID)
+        XCTAssertNil(router.artifactRoute)
+    }
+
+    @MainActor
     func testRouterOpensArtifactFilterFromSummaryNotificationUserInfo() {
         let router = AppRouter()
         router.selectedTab = .settings
@@ -5087,6 +5254,12 @@ private struct StubManifestClient: ManifestFetching {
 
     func fetchManifest(from url: URL) async throws -> PavbotManifest {
         manifest
+    }
+}
+
+private struct ThrowingGeneratedPackageFetcher: GeneratedPackageRemoteFetching {
+    func fetchLatestGeneratedPackage() async throws -> GeneratedPackage {
+        throw URLError(.badServerResponse)
     }
 }
 

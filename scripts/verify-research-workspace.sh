@@ -473,8 +473,11 @@ grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/puls-dnia-news' r
 grep -q 'pulseNewsData' scripts/generate_pavbot_manifest.py
 
 latest_pulse_news_data="$(
-  find research/puls-dnia-news/data -type f -name '*-pulse-news.json' 2>/dev/null \
-    | LC_ALL=C sort \
+  {
+    git ls-files -- 'research/puls-dnia-news/data' \
+      | grep -E '/[^/]+-pulse-news\.json$' \
+      || true
+  } | LC_ALL=C sort \
     | tail -n 1
 )"
 if [[ -n "$latest_pulse_news_data" ]]; then
@@ -504,7 +507,7 @@ PY
 fi
 
 for topic in llm-ai-jobs-wroclaw tech-news polska-swiat; do
-  for run_file in "research/$topic"/runs/*.md; do
+  while IFS= read -r run_file; do
     [[ -f "$run_file" ]] || continue
     run_stem="$(basename "$run_file" .md)"
     pdf_file="research/$topic/pdfs/$run_stem-$topic.pdf"
@@ -512,11 +515,11 @@ for topic in llm-ai-jobs-wroclaw tech-news polska-swiat; do
       printf 'missing required research PDF: %s -> %s\n' "$run_file" "$pdf_file" >&2
       exit 1
     fi
-  done
+  done < <(git ls-files -- "research/$topic/runs" | grep -E '/runs/[^/]+\.md$' || true)
 done
 
 for topic in tech-news polska-swiat; do
-  for podcast_dir in "research/$topic"/podcasts/*; do
+  while IFS= read -r podcast_dir; do
     [[ -d "$podcast_dir" ]] || continue
     if [[ -f "$podcast_dir/podcast.mp3" || -f "$podcast_dir/script.md" || -f "$podcast_dir/render.json" || -f "$podcast_dir/draft.md" || -f "$podcast_dir/sources.md" ]]; then
       if [[ ! -s "$podcast_dir/brief.pdf" ]]; then
@@ -524,7 +527,7 @@ for topic in tech-news polska-swiat; do
         exit 1
       fi
     fi
-  done
+  done < <(git ls-files -- "research/$topic/podcasts" | xargs -n 1 dirname | LC_ALL=C sort -u || true)
 done
 
 printf 'research workspace verified: %d required files present\n' "${#required_files[@]}"

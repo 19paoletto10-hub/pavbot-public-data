@@ -6,6 +6,7 @@ mobile_public_only_topic="research/aktualne-wydarzenia-mobile"
 pulse_news_topic="research/puls-dnia-news"
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 manifest_generator="$script_dir/generate_pavbot_manifest.py"
+cloudkit_publisher="${PAVBOT_CLOUDKIT_PUBLISHER:-$script_dir/publish_cloudkit_briefings.py}"
 jobs_data_validator="$script_dir/validate_jobs_data.py"
 research_data_validator="$script_dir/validate_research_data.py"
 mobile_news_data_validator="$script_dir/validate_mobile_news_data.py"
@@ -36,6 +37,14 @@ Optional environment:
       Overrides automatic manifest URL resolution.
   PAVBOT_RAW_BASE_URL=https://raw.githubusercontent.com/<owner>/<repo>/<branch>/
       Used to derive PAVBOT_MANIFEST_URL when PAVBOT_MANIFEST_URL is unset.
+  PAVBOT_CLOUDKIT_CONTAINER_ID=iCloud.com.paweltanski.pavbotviewer
+      Production CloudKit container for Briefing records.
+  PAVBOT_CLOUDKIT_ENVIRONMENT=production
+      CloudKit environment for cktool.
+  PAVBOT_CLOUDKIT_TEAM_ID=SP774TZZU8
+      Apple Developer team id for cktool.
+  PAVBOT_CLOUDKIT_DRY_RUN=1
+      Validate the derived Briefing notification payload without calling cktool.
 EOF
 }
 
@@ -484,6 +493,49 @@ needs_manifest_refresh_for_pulse_news() {
   return 0
 }
 
+run_cloudkit_publisher() {
+  local mode="$1"
+  shift
+
+  if [[ "$cloudkit_publisher" == *.py ]]; then
+    python3 "$cloudkit_publisher" "$mode" "$@"
+  else
+    "$cloudkit_publisher" "$mode" "$@"
+  fi
+}
+
+preflight_cloudkit_briefings_gate() {
+  local args=(--manifest "public/pavbot-manifest.json" --manifest-url "$PAVBOT_MANIFEST_URL" --topic "$topic_path")
+  [[ -f "$cloudkit_publisher" ]] || die "missing CloudKit publisher: $cloudkit_publisher"
+  if [[ "${PAVBOT_CLOUDKIT_DRY_RUN:-}" == "1" ]]; then
+    run_cloudkit_publisher "dry-run" "${args[@]}" >/dev/null || die "CloudKit dry-run failed"
+    printf 'cloudkit briefing dry-run verified\n'
+    return 0
+  fi
+  run_cloudkit_publisher "preflight" "${args[@]}" >/dev/null || die "CloudKit preflight failed"
+  printf 'cloudkit briefing preflight verified\n'
+}
+
+publish_cloudkit_briefings_gate() {
+  local args=(--manifest "public/pavbot-manifest.json" --manifest-url "$PAVBOT_MANIFEST_URL" --topic "$topic_path")
+  [[ -f "$cloudkit_publisher" ]] || die "missing CloudKit publisher: $cloudkit_publisher"
+  if [[ "${PAVBOT_CLOUDKIT_DRY_RUN:-}" == "1" ]]; then
+    run_cloudkit_publisher "dry-run" "${args[@]}" >/dev/null || die "CloudKit publication dry-run failed"
+    printf 'cloudkit briefing dry-run verified\n'
+    return 0
+  fi
+  run_cloudkit_publisher "publish" "${args[@]}" >/dev/null || die "CloudKit publication failed"
+  run_cloudkit_publisher "verify" "${args[@]}" >/dev/null || die "CloudKit verification failed"
+  printf 'cloudkit briefing publication verified\n'
+}
+
+verify_remote_publication() {
+  git fetch origin "$target_branch" >/dev/null
+  git cat-file -e "origin/$target_branch:public/pavbot-manifest.json" \
+    || die "remote verification failed: missing public/pavbot-manifest.json on origin/$target_branch"
+  printf 'remote publication verified on origin/%s\n' "$target_branch"
+}
+
 copy_or_remove_publish_path() {
   local rel_path="$1"
   local dest_root="$2"
@@ -626,10 +678,13 @@ publish_isolated() {
     fi
 
     require_staged_scope
+    preflight_cloudkit_briefings_gate
 
     topic_slug="${topic_path#research/}"
     git commit -m "chore(pavbot): publish ${topic_slug} automation outputs" >/dev/null
     git push origin "HEAD:$target_branch" >/dev/null
+    verify_remote_publication
+    publish_cloudkit_briefings_gate
     touch "$pushed_marker"
   )
 
@@ -684,6 +739,7 @@ cd "$repo_root"
 
 [[ -d "$topic_path" ]] || die "topic path does not exist: $topic_path"
 [[ -f "$manifest_generator" ]] || die "missing scripts/generate_pavbot_manifest.py"
+[[ -f "$cloudkit_publisher" ]] || die "missing scripts/publish_cloudkit_briefings.py"
 [[ -f "$jobs_data_validator" ]] || die "missing scripts/validate_jobs_data.py"
 [[ -f "$research_data_validator" ]] || die "missing scripts/validate_research_data.py"
 [[ -f "$mobile_news_data_validator" ]] || die "missing scripts/validate_mobile_news_data.py"
@@ -731,9 +787,12 @@ if git diff --cached --quiet; then
 fi
 
 require_staged_scope
+preflight_cloudkit_briefings_gate
 
 topic_slug="${topic_path#research/}"
 git commit -m "chore(pavbot): publish ${topic_slug} automation outputs" >/dev/null
 git push origin "HEAD:$target_branch" >/dev/null
+verify_remote_publication
+publish_cloudkit_briefings_gate
 
 printf 'pushed pavbot outputs for %s to origin/%s\n' "$topic_path" "$target_branch"

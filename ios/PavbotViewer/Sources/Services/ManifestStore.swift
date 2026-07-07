@@ -37,8 +37,10 @@ final class ManifestStore {
 
     private let client: any ManifestFetching
     private let cache: ManifestCache
+    private let packageCache: LocalGeneratedPackageCache
     private let notifier: any ArtifactNotifying
     private let briefingProvider: (any BriefingMetadataFetching)?
+    private let packageProvider: (any GeneratedPackageRemoteFetching)?
     private let liveNotificationsEnabled: () -> Bool
     @ObservationIgnored private var autoRefreshTask: Task<Void, Never>?
     @ObservationIgnored private let reloadGate = ReloadGate()
@@ -46,19 +48,23 @@ final class ManifestStore {
     init(
         client: any ManifestFetching = ManifestClient(),
         cache: ManifestCache = ManifestCache(),
+        packageCache: LocalGeneratedPackageCache = LocalGeneratedPackageCache(),
         notifier: (any ArtifactNotifying)? = nil,
         manifestURLString: String? = nil,
         briefingProvider: (any BriefingMetadataFetching)? = nil,
+        packageProvider: (any GeneratedPackageRemoteFetching)? = nil,
         liveNotificationsEnabled: @escaping () -> Bool = { LiveNotificationSettings.isEnabled() }
     ) {
         PavbotConnectionDefaults.enforceLegacyUserDefaults()
         self.client = client
         self.cache = cache
+        self.packageCache = packageCache
         self.notifier = notifier ?? ArtifactNotificationService()
         self.briefingProvider = briefingProvider
+        self.packageProvider = packageProvider
         self.liveNotificationsEnabled = liveNotificationsEnabled
         self.manifestURLString = manifestURLString ?? Self.defaultManifestURL
-        self.manifest = cache.load()
+        self.manifest = cache.load() ?? packageCache.load()?.manifest
         if self.manifest != nil {
             self.state = .loaded
         }
@@ -70,7 +76,7 @@ final class ManifestStore {
 
         await refreshManifestURLFromCloudKit()
 
-        if isUsingPlaceholderManifestURL {
+        if isUsingPlaceholderManifestURL, packageProvider == nil {
             state = manifest == nil
                 ? .failed(.manifest("Set your public GitHub raw manifest URL in Settings."))
                 : .loaded
@@ -81,19 +87,26 @@ final class ManifestStore {
         case .valid:
             break
         case .invalid(let message):
-            state = .failed(.manifest(message))
-            return
-        }
-
-        guard let url = URL(string: manifestURLString) else {
-            state = .failed(.manifest("Enter a valid manifest URL."))
-            return
+            if packageProvider == nil {
+                state = .failed(.manifest(message))
+                return
+            }
         }
 
         state = .loading
         do {
             let previousManifest = manifest
-            let loadedManifest = try await client.fetchManifest(from: url)
+            let fallbackManifestURLString = manifestURLString
+            let repository = FallbackAppDataRepository(
+                cloudKit: packageProvider,
+                gitHub: GitHubManifestRepository(
+                    client: client,
+                    manifestURLString: { fallbackManifestURLString }
+                ),
+                cache: packageCache
+            )
+            let loadedPackage = try await repository.fetchLatestPackage()
+            let loadedManifest = loadedPackage.manifest
             if let previousManifest, loadedManifest.isOlder(than: previousManifest) {
                 lastNewArtifacts = []
                 lastNewAutomations = []
@@ -107,6 +120,21 @@ final class ManifestStore {
                 )
                 return
             }
+            if loadedPackage.source == .localCache {
+                manifest = loadedManifest
+                cache.save(loadedManifest)
+                lastNewArtifacts = []
+                lastNewAutomations = []
+                state = .failed(
+                    .custom(
+                        title: "Pokazuję dane z cache",
+                        message: "CloudKit i GitHub fallback są chwilowo niedostępne. Pokazuję ostatnią poprawną paczkę.",
+                        actionTitle: "Odśwież ponownie",
+                        systemImage: "externaldrive.fill.badge.checkmark"
+                    )
+                )
+                return
+            }
             let newArtifacts = loadedManifest.newArtifacts(comparedTo: previousManifest)
             let newAutomations = loadedManifest.newAutomations(comparedTo: previousManifest)
             lastNewArtifacts = newArtifacts
@@ -114,7 +142,10 @@ final class ManifestStore {
             manifest = loadedManifest
             cache.save(loadedManifest)
             if (!newArtifacts.isEmpty || !newAutomations.isEmpty) && !liveNotificationsEnabled() {
-                await notifier.notify(artifacts: newArtifacts, automations: newAutomations, manifestURL: url)
+                let notificationURL = loadedPackage.manifestURL.flatMap(URL.init(string:))
+                    ?? URL(string: manifestURLString)
+                    ?? URL(string: Self.defaultManifestURL)!
+                await notifier.notify(artifacts: newArtifacts, automations: newAutomations, manifestURL: notificationURL)
             }
             state = .loaded
         } catch {

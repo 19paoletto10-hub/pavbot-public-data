@@ -22,6 +22,7 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
 
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertIn("pushed pavbot outputs", result.stdout)
+            self.assertIn("cloudkit briefing dry-run verified", result.stdout)
             changed_files = self.git(
                 repo,
                 "diff-tree",
@@ -845,6 +846,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             env.pop("PAVBOT_MANIFEST_URL", None)
         else:
             env["PAVBOT_MANIFEST_URL"] = manifest_url
+        env["PAVBOT_CLOUDKIT_DRY_RUN"] = "1"
         args = ["bash", str(self.script_path)]
         if isolated:
             args.append("--isolated")

@@ -32,9 +32,11 @@ targets:
         Debug:
           CODE_SIGN_ENTITLEMENTS: Sources/PavbotViewer.entitlements
           APS_ENVIRONMENT: development
+          CLOUDKIT_ENVIRONMENT: Development
         Release:
           CODE_SIGN_ENTITLEMENTS: Sources/PavbotViewer.entitlements
           APS_ENVIRONMENT: production
+          CLOUDKIT_ENVIRONMENT: Production
     postBuildScripts:
       - name: Set Dynamic Build Number
         basedOnDependencyAnalysis: false
@@ -84,6 +86,7 @@ targets:
       - sdk: AVFoundation.framework
       - sdk: ActivityKit.framework
       - sdk: Charts.framework
+      - sdk: CloudKit.framework
       - sdk: CoreLocation.framework
       - sdk: MediaPlayer.framework
       - sdk: PDFKit.framework
