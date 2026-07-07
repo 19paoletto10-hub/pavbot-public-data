@@ -1,0 +1,6 @@
+interface:
+  display_name: "Daily News Podcast Agent"
+  short_description: "Polish world news podcast MP3"
+  default_prompt: "Use $daily-news-podcast-agent to create today's Polish Poland/world news podcast MP3."
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,7 @@
+tunnel: pavbot-notifier
+credentials-file: /Users/YOU/.cloudflared/<TUNNEL_ID>.json
+
+ingress:
+  - hostname: notify.example.com
+    service: http://localhost:8080
+  - service: http_status:404

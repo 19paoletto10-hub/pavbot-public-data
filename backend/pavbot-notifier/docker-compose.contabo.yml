@@ -1,0 +1,16 @@
+name: pavbot-notifier
+
+services:
+  pavbot-notifier:
+    restart: unless-stopped
+    ports: !override
+      - "127.0.0.1:${PAVBOT_CONTABO_BIND_PORT:-18082}:8080"
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  pavbot-notifier-data:
+    name: pavbot-notifier-data

@@ -1,0 +1,145 @@
+name: PavbotViewer
+options:
+  bundleIdPrefix: com.paweltanski
+  developmentLanguage: pl
+  deploymentTarget:
+    iOS: "17.0"
+  createIntermediateGroups: true
+  postGenCommand: rm -f PavbotViewer.xcodeproj/xcshareddata/xcschemes/PavbotAudioActivityExtension.xcscheme
+settings:
+  base:
+    CODE_SIGN_STYLE: Automatic
+    DEVELOPMENT_TEAM: SP774TZZU8
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+    MARKETING_VERSION: "2.4.5"
+    SWIFT_VERSION: "5.9"
+configs:
+  Debug: debug
+  Release: release
+targets:
+  PavbotViewer:
+    type: application
+    platform: iOS
+    sources:
+      - path: Sources
+        excludes:
+          - "**/* 2.swift"
+      - path: ../../public/pavbot-manifest.json
+        buildPhase: resources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer
+        INFOPLIST_FILE: Sources/Info.plist
+        CURRENT_PROJECT_VERSION: "260706.004722"
+      configs:
+        Debug:
+          CODE_SIGN_ENTITLEMENTS: Sources/PavbotViewer.entitlements
+          APS_ENVIRONMENT: development
+          CLOUDKIT_ENVIRONMENT: Development
+        Release:
+          CODE_SIGN_ENTITLEMENTS: Sources/PavbotViewer.entitlements
+          APS_ENVIRONMENT: production
+          CLOUDKIT_ENVIRONMENT: Production
+    postBuildScripts:
+      - name: Set Dynamic Build Number
+        basedOnDependencyAnalysis: false
+        inputFiles:
+          - $(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)
+          - $(TARGET_BUILD_DIR)/$(WRAPPER_NAME)/PlugIns/PavbotAudioActivityExtension.appex/Info.plist
+        script: |
+          set -euo pipefail
+          if [ -n "${PAVBOT_BUILD_NUMBER:-}" ]; then
+            BUILD_NUMBER="$PAVBOT_BUILD_NUMBER"
+          else
+            BUILD_DATE="$(date +%y%m%d)"
+            BUILD_TIMESTAMP="$(date +%H%M%S)"
+            BUILD_NUMBER="${BUILD_DATE}.${BUILD_TIMESTAMP}"
+          fi
+          invalid_build_number() {
+            echo "error: CFBundleVersion '$BUILD_NUMBER' must contain one to three period-separated numeric components"
+            exit 1
+          }
+          case "$BUILD_NUMBER" in
+            ''|*[!0-9.]*|.*|*..*|*.) invalid_build_number ;;
+          esac
+          COMPONENT_COUNT="$(printf '%s' "$BUILD_NUMBER" | awk -F '[.]' '{print NF}')"
+          FIRST_COMPONENT="${BUILD_NUMBER%%.*}"
+          if [ "$FIRST_COMPONENT" = "0" ] || [ "$COMPONENT_COUNT" -gt 3 ]; then
+            invalid_build_number
+          fi
+          set_build_number() {
+            local plist_path="$1"
+            if [ -f "$plist_path" ]; then
+              /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $BUILD_NUMBER" "$plist_path"
+              echo "Set CFBundleVersion to $BUILD_NUMBER in $plist_path"
+            fi
+          }
+          APP_INFO_PLIST="${TARGET_BUILD_DIR}/${INFOPLIST_PATH}"
+          EXTENSION_INFO_PLIST="${TARGET_BUILD_DIR}/${WRAPPER_NAME}/PlugIns/PavbotAudioActivityExtension.appex/Info.plist"
+          set_build_number "$APP_INFO_PLIST"
+          set_build_number "$EXTENSION_INFO_PLIST"
+          if [ ! -f "$APP_INFO_PLIST" ]; then
+            echo "warning: Info.plist not found at $APP_INFO_PLIST"
+          fi
+    dependencies:
+      - sdk: AVFoundation.framework
+      - sdk: ActivityKit.framework
+      - sdk: Charts.framework
+      - sdk: CloudKit.framework
+      - sdk: CoreLocation.framework
+      - sdk: MediaPlayer.framework
+      - sdk: PDFKit.framework
+      - sdk: UserNotifications.framework
+      - target: PavbotAudioActivityExtension
+        embed: true
+  PavbotAudioActivityExtension:
+    type: app-extension
+    platform: iOS
+    sources:
+      - path: AudioActivityExtension
+      - path: Sources/Services/PavbotAudioActivityAttributes.swift
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer.audioactivity
+        INFOPLIST_FILE: AudioActivityExtension/Info.plist
+        CURRENT_PROJECT_VERSION: "260706.004722"
+        CODE_SIGN_STYLE: Automatic
+        DEVELOPMENT_TEAM: SP774TZZU8
+        SWIFT_VERSION: "5.9"
+        APPLICATION_EXTENSION_API_ONLY: YES
+        SKIP_INSTALL: YES
+    dependencies:
+      - sdk: ActivityKit.framework
+      - sdk: WidgetKit.framework
+    scheme:
+      management:
+        isShown: false
+  PavbotViewerTests:
+    type: bundle.unit-test
+    platform: iOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: PavbotViewer
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer.tests
+        GENERATE_INFOPLIST_FILE: YES
+schemes:
+  PavbotViewer:
+    build:
+      targets:
+        PavbotViewer: all
+        PavbotViewerTests: [test]
+    run:
+      config: Debug
+    test:
+      config: Debug
+      targets:
+        - PavbotViewerTests
+    profile:
+      config: Release
+    analyze:
+      config: Debug
+    archive:
+      config: Release

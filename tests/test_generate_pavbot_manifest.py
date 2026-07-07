@@ -1,0 +1,864 @@
+from __future__ import annotations
+
+import importlib.util
+import json
+import os
+import subprocess
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+from unittest.mock import patch
+
+
+def load_generator():
+    module_path = (
+        Path(__file__).resolve().parents[1]
+        / "scripts"
+        / "generate_pavbot_manifest.py"
+    )
+    spec = importlib.util.spec_from_file_location("generate_pavbot_manifest", module_path)
+    module = importlib.util.module_from_spec(spec)
+    assert spec.loader is not None
+    spec.loader.exec_module(module)
+    return module
+
+
+class GeneratePavbotManifestTest(unittest.TestCase):
+    def setUp(self) -> None:
+        self.repo_root = Path(__file__).resolve().parents[1]
+        self.raw_base_url = "https://raw.githubusercontent.com/example/pavbot/main/"
+
+    def test_manifest_includes_active_automations_from_docs(self) -> None:
+        generator = load_generator()
+
+        manifest = generator.build_manifest(
+            self.repo_root,
+            raw_base_url=self.raw_base_url,
+        )
+
+        automation_ids = {item["id"] for item in manifest["automations"]}
+        self.assertIn("codex-agent-automation-daily-research", automation_ids)
+        self.assertIn("pavbot-tech-podcast-09-00", automation_ids)
+        self.assertIn("pavbot-polska-wiat-research-08-30", automation_ids)
+        self.assertIn("pavbot-polska-wiat-podcast-09-30", automation_ids)
+        self.assertIn("pavbot-llm-ai-jobs-wroclaw-research", automation_ids)
+        self.assertTrue(all(item["enabled"] for item in manifest["automations"]))
+
+        tech_research = next(
+            item
+            for item in manifest["automations"]
+            if item["id"] == "codex-agent-automation-daily-research"
+        )
+        self.assertEqual(tech_research["topic"], "tech-news")
+        self.assertEqual(tech_research["topicPath"], "research/tech-news")
+        self.assertEqual(tech_research["kind"], "research")
+
+        jobs_research = next(
+            item
+            for item in manifest["automations"]
+            if item["id"] == "pavbot-llm-ai-jobs-wroclaw-research"
+        )
+        self.assertEqual(jobs_research["topic"], "llm-ai-jobs-wroclaw")
+        self.assertEqual(jobs_research["topicPath"], "research/llm-ai-jobs-wroclaw")
+        self.assertEqual(jobs_research["kind"], "research")
+
+    def test_manifest_collects_topics_and_all_artifact_types(self) -> None:
+        generator = load_generator()
+
+        manifest = generator.build_manifest(
+            self.repo_root,
+            raw_base_url=self.raw_base_url,
+        )
+
+        topic_slugs = {topic["slug"] for topic in manifest["topics"]}
+        self.assertIn("tech-news", topic_slugs)
+        self.assertIn("polska-swiat", topic_slugs)
+        self.assertIn("llm-ai-jobs-wroclaw", topic_slugs)
+
+        artifacts = manifest["artifacts"]
+        by_path = {artifact["path"]: artifact for artifact in artifacts}
+        self.assertEqual(
+            by_path["research/tech-news/runs/2026-06-22.md"]["type"],
+            "run",
+        )
+        self.assertEqual(
+            by_path["research/tech-news/pdfs/2026-06-22-tech-news.pdf"]["type"],
+            "pdf",
+        )
+        self.assertEqual(
+            by_path["research/tech-news/podcasts/2026-06-22/podcast.mp3"]["type"],
+            "podcastAudio",
+        )
+        self.assertEqual(
+            by_path["research/tech-news/backlog.md"]["type"],
+            "backlog",
+        )
+        self.assertEqual(
+            by_path["research/tech-news/index.md"]["type"],
+            "index",
+        )
+        self.assertEqual(
+            by_path["research/tech-news/topic.md"]["type"],
+            "topic",
+        )
+        self.assertEqual(
+            by_path[
+                "research/codex-agent-automation/proposals/2026-06-17-docs-network-access.md"
+            ]["type"],
+            "proposal",
+        )
+
+        timed_run = by_path["research/llm-ai-jobs-wroclaw/runs/2026-06-20-2152.md"]
+        self.assertEqual(timed_run["date"], "2026-06-20")
+        self.assertEqual(timed_run["time"], "21:52")
+
+    def test_manifest_collects_llm_jobs_data_json_as_jobs_data(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            topic_dir = repo / "research" / "llm-ai-jobs-wroclaw"
+            data_dir = topic_dir / "data"
+            data_dir.mkdir(parents=True)
+            (topic_dir / "topic.md").write_text("# Topic Contract: llm-ai-jobs-wroclaw\n", encoding="utf-8")
+            (data_dir / "2026-06-25-0141-jobs.json").write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "status": "Material update",
+                        "runDate": "2026-06-25",
+                        "runTime": "01:41",
+                        "executiveSummary": "Nowe oferty AI.",
+                        "opportunities": [
+                            {
+                                "rank": 1,
+                                "title": "Principal AI Engineer",
+                                "company": "CKSource",
+                                "location": "Remote Poland",
+                                "workMode": "Remote",
+                                "compensation": "38 000-45 000 PLN",
+                                "seniority": "Principal",
+                                "fitSummary": "Agentic workflows",
+                                "whyInteresting": "Silny fit LLM",
+                                "uncertainty": "Tytuł ma drift",
+                                "sourceURLs": ["https://example.com/job"],
+                                "tags": ["LLM", "Agentic AI"],
+                            }
+                        ],
+                        "changes": ["Nowa rola"],
+                        "risks": [],
+                        "recommendedActions": ["Sprawdzić za tydzień"],
+                        "checkedSources": [{"title": "CKSource careers", "url": "https://example.com"}],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        artifact = next(
+            item
+            for item in manifest["artifacts"]
+            if item["path"] == "research/llm-ai-jobs-wroclaw/data/2026-06-25-0141-jobs.json"
+        )
+        self.assertEqual(artifact["type"], "jobsData")
+        self.assertEqual(artifact["topic"], "llm-ai-jobs-wroclaw")
+        self.assertEqual(artifact["date"], "2026-06-25")
+        self.assertEqual(artifact["time"], "01:41")
+        self.assertEqual(artifact["title"], "Jobs data")
+
+    def test_manifest_collects_research_data_json_for_research_topics(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            topic_dir = repo / "research" / "tech-news"
+            data_dir = topic_dir / "data"
+            data_dir.mkdir(parents=True)
+            (topic_dir / "topic.md").write_text("# Topic Contract: tech-news\n", encoding="utf-8")
+            (data_dir / "2026-06-25-research.json").write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "topic": "tech-news",
+                        "runDate": "2026-06-25",
+                        "runTime": None,
+                        "status": "Material update",
+                        "leadParagraphs": ["AI i infrastruktura są dziś kluczowe."],
+                        "summaryBullets": ["AI: OpenAI publikuje zmianę."],
+                        "articles": [
+                            {
+                                "id": "tech-1",
+                                "section": "AI",
+                                "title": "OpenAI publikuje zmianę",
+                                "standfirst": "OpenAI publikuje zmianę.",
+                                "whatHappened": "OpenAI publikuje zmianę.",
+                                "whyItMatters": "To ważne dla adopcji AI.",
+                                "deeperAnalysis": ["Analiza pierwsza.", "Analiza druga."],
+                                "contextPoints": ["Co się stało: test.", "Dlaczego ważne: test."],
+                                "sources": [{"title": "OpenAI", "url": "https://openai.com/news"}],
+                                "priority": "High",
+                                "tags": ["AI"],
+                            }
+                        ],
+                        "podcastTopics": [],
+                        "checkedSources": [{"title": "OpenAI", "url": "https://openai.com/news"}],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        artifact = next(
+            item
+            for item in manifest["artifacts"]
+            if item["path"] == "research/tech-news/data/2026-06-25-research.json"
+        )
+        self.assertEqual(artifact["type"], "researchData")
+        self.assertEqual(artifact["topic"], "tech-news")
+        self.assertEqual(artifact["date"], "2026-06-25")
+        self.assertEqual(artifact["title"], "Research data")
+
+    def test_manifest_collects_mobile_news_data_json_for_mobile_topic(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            topic_dir = repo / "research" / "aktualne-wydarzenia-mobile"
+            data_dir = topic_dir / "data"
+            pdf_dir = topic_dir / "pdfs"
+            audio_dir = topic_dir / "podcasts" / "2026-06-25-1015" / "audio" / "female-piper"
+            data_dir.mkdir(parents=True)
+            pdf_dir.mkdir(parents=True)
+            audio_dir.mkdir(parents=True)
+            (topic_dir / "topic.md").write_text(
+                "# Topic Contract: aktualne-wydarzenia-mobile\n",
+                encoding="utf-8",
+            )
+            (data_dir / "2026-06-25-1015-mobile-news.json").write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "topic": "aktualne-wydarzenia-mobile",
+                        "runDate": "2026-06-25",
+                        "runTime": "10:15",
+                        "status": "Material update",
+                        "headline": "Wydanie dnia",
+                        "leadParagraphs": ["Najważniejsze wydarzenia dnia."],
+                        "sections": [
+                            {
+                                "id": "polska",
+                                "title": "Polska",
+                                "summary": "Najważniejsze krajowe sygnały.",
+                                "articles": [
+                                    {
+                                        "id": "polska-1",
+                                        "section": "Polska",
+                                        "title": "Gdańsk gospodarzem rozmów",
+                                        "lead": "Polska wzmacnia rolę gospodarza rozmów.",
+                                        "facts": ["KPRM zapowiedziało spotkanie."],
+                                        "analysis": "To zwiększa wagę dyplomatyczną dnia.",
+                                        "whyItMatters": "Użytkownik widzi, co realnie zmienia się w otoczeniu.",
+                                        "sources": [{"title": "KPRM", "url": "https://www.gov.pl/web/premier"}],
+                                        "tags": ["Polska"],
+                                        "ttsText": "Polska wzmacnia rolę gospodarza rozmów. To zwiększa wagę dyplomatyczną dnia.",
+                                        "priority": "High",
+                                    }
+                                ],
+                            }
+                        ],
+                        "checkedSources": [{"title": "KPRM", "url": "https://www.gov.pl/web/premier"}],
+                        "audioArtifacts": [],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            (pdf_dir / "2026-06-25-1015-mobile-brief.pdf").write_bytes(b"%PDF mobile brief")
+            (audio_dir / "podcast.mp3").write_bytes(b"mp3")
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+        artifact = by_path["research/aktualne-wydarzenia-mobile/data/2026-06-25-1015-mobile-news.json"]
+        self.assertEqual(artifact["type"], "mobileNewsData")
+        self.assertEqual(artifact["topic"], "aktualne-wydarzenia-mobile")
+        self.assertEqual(artifact["date"], "2026-06-25")
+        self.assertEqual(artifact["time"], "10:15")
+        self.assertEqual(artifact["title"], "Mobile news data")
+
+    def test_manifest_collects_mobile_public_topic_without_topic_file(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            topic_dir = repo / "research" / "aktualne-wydarzenia-mobile"
+            data_dir = topic_dir / "data"
+            data_dir.mkdir(parents=True)
+            (data_dir / "2026-06-25-1015-mobile-news.json").write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "topic": "aktualne-wydarzenia-mobile",
+                        "runDate": "2026-06-25",
+                        "runTime": "10:15",
+                        "status": "Material update",
+                        "headline": "Wydanie dnia",
+                        "leadParagraphs": ["Najważniejsze wydarzenia dnia."],
+                        "sections": [],
+                        "checkedSources": [],
+                        "audioArtifacts": [],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        topics = {topic["slug"]: topic for topic in manifest["topics"]}
+        self.assertEqual(
+            topics["aktualne-wydarzenia-mobile"]["title"],
+            "Pavbot Aktualne Wydarzenia Mobile",
+        )
+        by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+        artifact = by_path["research/aktualne-wydarzenia-mobile/data/2026-06-25-1015-mobile-news.json"]
+        self.assertEqual(artifact["type"], "mobileNewsData")
+        self.assertEqual(artifact["topic"], "aktualne-wydarzenia-mobile")
+
+    def test_manifest_collects_pulse_news_data_json_for_pulse_topic(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            topic_dir = repo / "research" / "puls-dnia-news"
+            data_dir = topic_dir / "data"
+            data_dir.mkdir(parents=True)
+            (topic_dir / "topic.md").write_text(
+                "# Topic Contract: puls-dnia-news\n",
+                encoding="utf-8",
+            )
+            (data_dir / "2026-06-26-1200-pulse-news.json").write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "topic": "puls-dnia-news",
+                        "runDate": "2026-06-26",
+                        "runTime": "12:00",
+                        "status": "Material update",
+                        "headline": "Puls dnia",
+                        "summary": "Najważniejsze tematy z ostatnich godzin.",
+                        "items": [{"id": "one"}, {"id": "two"}],
+                        "checkedSources": [],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        artifact = next(
+            item
+            for item in manifest["artifacts"]
+            if item["path"] == "research/puls-dnia-news/data/2026-06-26-1200-pulse-news.json"
+        )
+        self.assertEqual(artifact["type"], "pulseNewsData")
+        self.assertEqual(artifact["topic"], "puls-dnia-news")
+        self.assertEqual(artifact["date"], "2026-06-26")
+        self.assertEqual(artifact["time"], "12:00")
+        self.assertEqual(artifact["title"], "Pulse news data")
+        self.assertEqual(artifact["itemCount"], 2)
+
+    def test_manifest_collects_pulse_news_data_without_topic_file(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            data_dir = repo / "research" / "puls-dnia-news" / "data"
+            data_dir.mkdir(parents=True)
+            (data_dir / "2026-06-26-1502-pulse-news.json").write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "topic": "puls-dnia-news",
+                        "runDate": "2026-06-26",
+                        "runTime": "15:02",
+                        "status": "Material update",
+                        "headline": "Puls dnia",
+                        "summary": "Najważniejsze tematy z ostatnich godzin.",
+                        "items": [],
+                        "checkedSources": [],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        topic = next(item for item in manifest["topics"] if item["slug"] == "puls-dnia-news")
+        self.assertEqual(topic["title"], "Pavbot Puls Dnia News")
+        artifact = next(
+            item
+            for item in manifest["artifacts"]
+            if item["path"] == "research/puls-dnia-news/data/2026-06-26-1502-pulse-news.json"
+        )
+        self.assertEqual(artifact["type"], "pulseNewsData")
+        self.assertEqual(artifact["topic"], "puls-dnia-news")
+        self.assertEqual(artifact["time"], "15:02")
+
+    def test_manifest_collects_reddit_radar_data_without_topic_file_and_ignores_raw_exports(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo = Path(tmp)
+            data_dir = repo / "research" / "reddit-radar" / "data"
+            data_dir.mkdir(parents=True)
+            digest = {
+                "id": "humor-2026-07-07-0610",
+                "title": "<RR> Reddit Radar",
+                "summary": "Kategorie: memy i dev.",
+                "generatedAt": "2026-07-07T04:10:37+00:00",
+                "displayTime": "06:10",
+                "nextRefreshAt": "2026-07-07T12:06:00+02:00",
+                "refreshIntervalHours": 6,
+                "items": [{"id": "one"}, {"id": "two"}],
+                "source": "Codex Safari Reddit radar",
+            }
+            (data_dir / "2026-07-07-0610-reddit-radar.json").write_text(
+                json.dumps(digest, ensure_ascii=False) + "\n",
+                encoding="utf-8",
+            )
+            (data_dir / "2026-07-07-0610-reddit-radar-raw.json").write_text(
+                json.dumps({"items": [{"id": "raw"}]}, ensure_ascii=False) + "\n",
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo, raw_base_url=self.raw_base_url)
+
+        topic = next(item for item in manifest["topics"] if item["slug"] == "reddit-radar")
+        self.assertEqual(topic["title"], "Pavbot Reddit Radar")
+        artifacts = {
+            artifact["path"]: artifact
+            for artifact in manifest["artifacts"]
+            if artifact["topic"] == "reddit-radar"
+        }
+        self.assertEqual(
+            sorted(artifacts),
+            ["research/reddit-radar/data/2026-07-07-0610-reddit-radar.json"],
+        )
+        artifact = artifacts["research/reddit-radar/data/2026-07-07-0610-reddit-radar.json"]
+        self.assertEqual(artifact["type"], "redditRadarData")
+        self.assertEqual(artifact["date"], "2026-07-07")
+        self.assertEqual(artifact["time"], "06:10")
+        self.assertEqual(artifact["title"], "Reddit Radar data")
+        self.assertEqual(artifact["itemCount"], 2)
+
+    def test_manifest_uses_public_raw_urls_and_json_serializes(self) -> None:
+        generator = load_generator()
+
+        manifest = generator.build_manifest(
+            self.repo_root,
+            raw_base_url=self.raw_base_url,
+        )
+
+        artifact = next(
+            item
+            for item in manifest["artifacts"]
+            if item["path"] == "research/tech-news/runs/2026-06-22.md"
+        )
+        self.assertEqual(
+            artifact["url"],
+            "https://raw.githubusercontent.com/example/pavbot/main/research/tech-news/runs/2026-06-22.md",
+        )
+        self.assertGreater(artifact["sizeBytes"], 0)
+
+        encoded = json.dumps(manifest, ensure_ascii=False)
+        self.assertIn("Pavbot", encoded)
+
+    def test_manifest_url_env_resolves_repo_root_raw_base_url(self) -> None:
+        generator = load_generator()
+
+        with patch.dict(
+            "os.environ",
+            {
+                "PAVBOT_MANIFEST_URL": "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            },
+            clear=True,
+        ), patch.object(sys, "argv", ["generate_pavbot_manifest.py"]):
+            args = generator.parse_args()
+
+        self.assertEqual(
+            generator.resolve_raw_base_url(args.raw_base_url, args.manifest_url),
+            "https://raw.githubusercontent.com/example/pavbot/main/",
+        )
+
+    def test_default_manifest_url_resolves_production_raw_base_url(self) -> None:
+        generator = load_generator()
+
+        with patch.dict("os.environ", {}, clear=True), patch.object(sys, "argv", ["generate_pavbot_manifest.py"]):
+            args = generator.parse_args()
+
+        self.assertEqual(
+            generator.resolve_raw_base_url(args.raw_base_url, args.manifest_url),
+            "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
+        )
+
+    def test_raw_base_url_takes_precedence_over_manifest_url(self) -> None:
+        generator = load_generator()
+
+        with patch.object(
+            sys,
+            "argv",
+            [
+                "generate_pavbot_manifest.py",
+                "--raw-base-url",
+                "https://raw.githubusercontent.com/example/override/main/",
+                "--manifest-url",
+                "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            ],
+        ):
+            args = generator.parse_args()
+
+        self.assertEqual(
+            generator.resolve_raw_base_url(args.raw_base_url, args.manifest_url),
+            "https://raw.githubusercontent.com/example/override/main/",
+        )
+
+    def test_raw_base_url_env_takes_precedence_over_manifest_url_env(self) -> None:
+        generator = load_generator()
+
+        with patch.dict(
+            "os.environ",
+            {
+                "PAVBOT_RAW_BASE_URL": "https://raw.githubusercontent.com/example/env-override/main/",
+                "PAVBOT_MANIFEST_URL": "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            },
+            clear=True,
+        ), patch.object(sys, "argv", ["generate_pavbot_manifest.py"]):
+            args = generator.parse_args()
+
+        self.assertEqual(
+            generator.resolve_raw_base_url(args.raw_base_url, args.manifest_url),
+            "https://raw.githubusercontent.com/example/env-override/main/",
+        )
+
+    def test_invalid_manifest_url_raises_clear_error(self) -> None:
+        generator = load_generator()
+
+        with self.assertRaisesRegex(
+            ValueError,
+            "PAVBOT_MANIFEST_URL must be a public GitHub raw manifest URL",
+        ):
+            generator.resolve_raw_base_url(
+                "",
+                "https://github.com/example/pavbot/blob/main/public/pavbot-manifest.json",
+            )
+
+    def test_cli_rejects_invalid_manifest_url_with_clear_error(self) -> None:
+        script_path = (
+            Path(__file__).resolve().parents[1]
+            / "scripts"
+            / "generate_pavbot_manifest.py"
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            env = os.environ.copy()
+            env.pop("PAVBOT_RAW_BASE_URL", None)
+            env["PAVBOT_MANIFEST_URL"] = (
+                "https://github.com/example/pavbot/blob/main/public/pavbot-manifest.json"
+            )
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(script_path),
+                    "--repo-root",
+                    str(self.repo_root),
+                    "--output",
+                    str(Path(tmp) / "manifest.json"),
+                ],
+                capture_output=True,
+                env=env,
+                text=True,
+                check=False,
+            )
+
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn(
+            "PAVBOT_MANIFEST_URL must be a public GitHub raw manifest URL",
+            result.stderr,
+        )
+
+    def test_cli_accepts_absolute_output_path_outside_repo(self) -> None:
+        script_path = (
+            Path(__file__).resolve().parents[1]
+            / "scripts"
+            / "generate_pavbot_manifest.py"
+        )
+        with tempfile.TemporaryDirectory() as tmp:
+            output_path = Path(tmp) / "manifest.json"
+            env = os.environ.copy()
+            env.pop("PAVBOT_RAW_BASE_URL", None)
+            env["PAVBOT_MANIFEST_URL"] = (
+                "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+            )
+            result = subprocess.run(
+                [
+                    sys.executable,
+                    str(script_path),
+                    "--repo-root",
+                    str(self.repo_root),
+                    "--output",
+                    str(output_path),
+                ],
+                capture_output=True,
+                env=env,
+                text=True,
+                check=False,
+            )
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertTrue(output_path.exists())
+
+        self.assertIn("manifest written:", result.stdout)
+
+    def test_manifest_uses_explicit_automation_kind_from_docs(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp)
+            docs_dir = repo_root / "docs"
+            topic_dir = repo_root / "research" / "aktualne-wydarzenia-mobile"
+            docs_dir.mkdir(parents=True)
+            topic_dir.mkdir(parents=True)
+            (topic_dir / "topic.md").write_text(
+                "# Topic Contract: aktualne-wydarzenia-mobile\n",
+                encoding="utf-8",
+            )
+            (docs_dir / "how-to-use.md").write_text(
+                """# How To Use Pavbot
+
+The current active automations are:
+
+- Name: `Pavbot Aktualne Wydarzenia Mobile 10:15`
+- ID: `pavbot-aktualne-wydarzenia-mobile-10-15`
+- Kind: `researchAudio`
+- Topic: `research/aktualne-wydarzenia-mobile`
+- Cadence: daily at 10:15 local time
+- Output: `research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-mobile-brief.pdf`
+
+## Later
+""",
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo_root)
+
+        automation = manifest["automations"][0]
+        self.assertEqual(automation["kind"], "researchAudio")
+        self.assertEqual(automation["topic"], "aktualne-wydarzenia-mobile")
+
+    def test_manifest_collects_only_mobile_public_audio_variants_from_audio_subfolders(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp)
+            topic_dir = repo_root / "research" / "aktualne-wydarzenia-mobile"
+            podcast_dir = topic_dir / "podcasts" / "2026-06-23"
+            female_audio = podcast_dir / "audio" / "female-piper" / "podcast.mp3"
+            male_audio = podcast_dir / "audio" / "male-xtts" / "podcast.mp3"
+            female_audio.parent.mkdir(parents=True)
+            male_audio.parent.mkdir(parents=True)
+            (topic_dir / "topic.md").parent.mkdir(parents=True, exist_ok=True)
+            (topic_dir / "topic.md").write_text(
+                "# Topic Contract: aktualne-wydarzenia-mobile\n",
+                encoding="utf-8",
+            )
+            female_audio.write_bytes(b"female mp3")
+            male_audio.write_bytes(b"male mp3")
+            (female_audio.parent / "podcast.raw.mp3").write_bytes(b"raw female mp3")
+            (male_audio.parent / "podcast.raw.mp3").write_bytes(b"raw male mp3")
+            (female_audio.parent / "render.log").write_text("ok\n", encoding="utf-8")
+            (male_audio.parent / "render.log").write_text("ok\n", encoding="utf-8")
+            (podcast_dir / "tts_variants.json").write_text(
+                '{"language": "pl"}\n',
+                encoding="utf-8",
+            )
+
+            manifest = generator.build_manifest(repo_root)
+
+        by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+        self.assertEqual(
+            by_path[
+                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.mp3"
+            ]["type"],
+            "podcastAudioVariant",
+        )
+        self.assertEqual(
+            by_path[
+                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/male-xtts/podcast.mp3"
+            ]["title"],
+            "Podcast audio - male xtts",
+        )
+        self.assertNotIn(
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/tts_variants.json",
+            by_path,
+        )
+        self.assertNotIn(
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.raw.mp3",
+            by_path,
+        )
+        self.assertNotIn(
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/male-xtts/render.log",
+            by_path,
+        )
+
+    def test_manifest_collects_only_public_mobile_pdf_and_audio_artifacts(self) -> None:
+        generator = load_generator()
+
+        with tempfile.TemporaryDirectory() as tmp:
+            repo_root = Path(tmp)
+            topic_dir = repo_root / "research" / "aktualne-wydarzenia-mobile"
+            run_path = topic_dir / "runs" / "2026-06-23-1015.md"
+            pdf_path = topic_dir / "pdfs" / "2026-06-23-1015-mobile-brief.pdf"
+            newspaper_pdf_path = topic_dir / "pdfs" / "2026-06-23-1015-newspaper.pdf"
+            data_path = topic_dir / "data" / "2026-06-23-1015-mobile-news.json"
+            podcast_dir = topic_dir / "podcasts" / "2026-06-23-1015"
+            female_audio = podcast_dir / "audio" / "female-piper" / "podcast.mp3"
+            female_render = podcast_dir / "audio" / "female-piper" / "render.json"
+
+            female_audio.parent.mkdir(parents=True)
+            run_path.parent.mkdir(parents=True)
+            pdf_path.parent.mkdir(parents=True)
+            (topic_dir / "topic.md").write_text(
+                "# Topic Contract: aktualne-wydarzenia-mobile\n",
+                encoding="utf-8",
+            )
+            run_path.write_text("# Mobile report\n", encoding="utf-8")
+            pdf_path.write_bytes(b"%PDF timestamped mobile brief")
+            newspaper_pdf_path.write_bytes(b"%PDF timestamped mobile newspaper")
+            data_path.parent.mkdir(parents=True)
+            data_path.write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "topic": "aktualne-wydarzenia-mobile",
+                        "runDate": "2026-06-23",
+                        "runTime": "10:15",
+                        "status": "Material update",
+                        "headline": "Wydanie",
+                        "leadParagraphs": ["Lead"],
+                        "sections": [
+                            {
+                                "id": "ogolne",
+                                "title": "Ogólne",
+                                "summary": "Sygnały dnia.",
+                                "articles": [
+                                    {
+                                        "id": "a1",
+                                        "section": "Ogólne",
+                                        "title": "Test",
+                                        "lead": "Lead",
+                                        "facts": ["Fakt"],
+                                        "analysis": "Analiza",
+                                        "whyItMatters": "Znaczenie",
+                                        "sources": [{"title": "Źródło", "url": "https://example.com"}],
+                                        "tags": ["Ogólne"],
+                                        "ttsText": "Lead. Analiza. Znaczenie.",
+                                        "priority": "High",
+                                    }
+                                ],
+                            }
+                        ],
+                        "checkedSources": [{"title": "Źródło", "url": "https://example.com"}],
+                        "audioArtifacts": [],
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            (podcast_dir / "script.md").write_text("# Script\n", encoding="utf-8")
+            (podcast_dir / "sources.md").write_text("# Sources\n", encoding="utf-8")
+            (podcast_dir / "tts_variants.json").write_text(
+                '{"language": "pl"}\n',
+                encoding="utf-8",
+            )
+            female_audio.write_bytes(b"female mp3")
+            female_render.write_text('{"status": "ok"}\n', encoding="utf-8")
+            (female_audio.parent / "podcast.raw.mp3").write_bytes(b"raw mp3")
+            (female_audio.parent / "render.log").write_text("raw log\n", encoding="utf-8")
+
+            manifest = generator.build_manifest(repo_root)
+
+        by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+        expected = {
+            "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-1015-mobile-brief.pdf": "pdf",
+            "research/aktualne-wydarzenia-mobile/data/2026-06-23-1015-mobile-news.json": "mobileNewsData",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/script.md": "podcastScript",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/podcast.mp3": "podcastAudioVariant",
+        }
+        for path, artifact_type in expected.items():
+            with self.subTest(path=path):
+                self.assertEqual(by_path[path]["type"], artifact_type)
+                self.assertEqual(by_path[path]["date"], "2026-06-23")
+                self.assertEqual(by_path[path]["time"], "10:15")
+
+        for path in (
+            "research/aktualne-wydarzenia-mobile/runs/2026-06-23-1015.md",
+            "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-1015-newspaper.pdf",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/sources.md",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/tts_variants.json",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/render.json",
+        ):
+            with self.subTest(path=path):
+                self.assertNotIn(path, by_path)
+
+        self.assertNotIn(
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/podcast.raw.mp3",
+            by_path,
+        )
+        self.assertNotIn(
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/render.log",
+            by_path,
+        )
+
+    def test_mobile_automation_contract_documents_single_warsaw_run_stamp(self) -> None:
+        automation_prompt = (
+            self.repo_root
+            / "research"
+            / "aktualne-wydarzenia-mobile"
+            / "automation-prompt.md"
+        ).read_text(encoding="utf-8")
+        how_to_use = (self.repo_root / "docs" / "how-to-use.md").read_text(
+            encoding="utf-8"
+        )
+
+        self.assertIn(
+            "RUN_STAMP=$(TZ=Europe/Warsaw date +%Y-%m-%d-%H%M)",
+            automation_prompt,
+        )
+        self.assertIn("RUN_DATE=${RUN_STAMP:0:10}", automation_prompt)
+        for expected_path in (
+            "runs/YYYY-MM-DD-HHMM.md",
+            "pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf",
+            "pdfs/YYYY-MM-DD-HHMM-newspaper.pdf",
+            "podcasts/YYYY-MM-DD-HHMM/",
+        ):
+            with self.subTest(expected_path=expected_path):
+                self.assertIn(expected_path, automation_prompt)
+                self.assertIn(expected_path, how_to_use)
+
+
+if __name__ == "__main__":
+    unittest.main()

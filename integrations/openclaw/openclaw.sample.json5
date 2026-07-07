@@ -1,0 +1,40 @@
+// Non-secret OpenClaw config sketch for a future Pavbot observer agent.
+// Do not copy credentials, tokens, sessions, or real auth profiles into this repo.
+// Adjust paths outside this repository before use.
+{
+  agents: {
+    defaults: {
+      // Keep the OpenClaw workspace outside the Pavbot repository.
+      workspace: "~/.openclaw/workspace-pavbot-observer",
+
+      // Use sandboxing for the observer. Official OpenClaw docs describe
+      // workspaceAccess "ro" as mounting the agent workspace read-only at /agent.
+      sandbox: {
+        mode: "all",
+        scope: "agent",
+        backend: "docker",
+        workspaceAccess: "ro",
+        docker: {
+          // Optional: expose Pavbot research artifacts read-only.
+          // Replace this example path with the absolute Pavbot repo path on
+          // the machine running OpenClaw.
+          binds: [
+            "/ABSOLUTE/PATH/TO/CODEX-Pavbot/research:/pavbot-research:ro"
+          ]
+        }
+      }
+    },
+    list: [
+      {
+        id: "pavbot-observer",
+        workspace: "~/.openclaw/workspace-pavbot-observer",
+        sandbox: {
+          mode: "all",
+          scope: "agent",
+          backend: "docker",
+          workspaceAccess: "ro"
+        }
+      }
+    ]
+  }
+}
