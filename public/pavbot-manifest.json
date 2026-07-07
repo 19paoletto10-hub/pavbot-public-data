@@ -1,10 +1,17 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-07T07:12:09.561441+00:00",
+  "generatedAt": "2026-07-07T07:30:55.923195+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [],
   "topics": [
+    {
+      "slug": "aktualne-wydarzenia-mobile",
+      "title": "Pavbot Aktualne Wydarzenia Mobile",
+      "path": "research/aktualne-wydarzenia-mobile",
+      "topicFilePath": "research/aktualne-wydarzenia-mobile/topic.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/topic.md"
+    },
     {
       "slug": "llm-ai-jobs-wroclaw",
       "title": "Topic Contract: llm-ai-jobs-wroclaw",
@@ -53,6 +60,66 @@
       "path": "research/tech-news/data/2026-07-07-research.json",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-07-07-research.json",
       "sizeBytes": 23795,
+      "date": "2026-07-07"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-07-07/sources.md",
+      "type": "podcastSources",
+      "topic": "tech-news",
+      "title": "sources.md",
+      "path": "research/tech-news/podcasts/2026-07-07/sources.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-07-07/sources.md",
+      "sizeBytes": 4211,
+      "date": "2026-07-07"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-07-07/script.md",
+      "type": "podcastScript",
+      "topic": "tech-news",
+      "title": "script.md",
+      "path": "research/tech-news/podcasts/2026-07-07/script.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-07-07/script.md",
+      "sizeBytes": 8213,
+      "date": "2026-07-07"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-07-07/render.json",
+      "type": "podcastRender",
+      "topic": "tech-news",
+      "title": "render.json",
+      "path": "research/tech-news/podcasts/2026-07-07/render.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-07-07/render.json",
+      "sizeBytes": 310,
+      "date": "2026-07-07"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-07-07/draft.md",
+      "type": "podcastDraft",
+      "topic": "tech-news",
+      "title": "Szkic odcinka",
+      "path": "research/tech-news/podcasts/2026-07-07/draft.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-07-07/draft.md",
+      "sizeBytes": 2206,
+      "date": "2026-07-07"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-07-07/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "tech-news",
+      "title": "Podcast brief PDF",
+      "path": "research/tech-news/podcasts/2026-07-07/brief.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-07-07/brief.pdf",
+      "sizeBytes": 39895,
+      "date": "2026-07-07"
+    },
+    {
+      "id": "research/tech-news/podcasts/2026-07-07/podcast.mp3",
+      "type": "podcastAudio",
+      "topic": "tech-news",
+      "title": "Podcast audio",
+      "path": "research/tech-news/podcasts/2026-07-07/podcast.mp3",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/podcasts/2026-07-07/podcast.mp3",
+      "sizeBytes": 3970009,
       "date": "2026-07-07"
     },
     {
@@ -492,6 +559,50 @@
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-07-06-jobs.json",
       "sizeBytes": 8227,
       "date": "2026-07-06"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-06-1935/script.md",
+      "type": "podcastScript",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "Mobile News Brief 2026-07-06 19:35",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-06-1935/script.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-06-1935/script.md",
+      "sizeBytes": 3910,
+      "date": "2026-07-06",
+      "time": "19:35"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-06-1935/audio/female-piper/podcast.mp3",
+      "type": "podcastAudioVariant",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "Podcast audio - female piper",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-06-1935/audio/female-piper/podcast.mp3",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-06-1935/audio/female-piper/podcast.mp3",
+      "sizeBytes": 1773997,
+      "date": "2026-07-06",
+      "time": "19:35"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-06-1935-mobile-brief.pdf",
+      "type": "pdf",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "2026-07-06-1935-mobile-brief.pdf",
+      "path": "research/aktualne-wydarzenia-mobile/pdfs/2026-07-06-1935-mobile-brief.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/2026-07-06-1935-mobile-brief.pdf",
+      "sizeBytes": 46962,
+      "date": "2026-07-06",
+      "time": "19:35"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/data/2026-07-06-1935-mobile-news.json",
+      "type": "mobileNewsData",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "Mobile news data",
+      "path": "research/aktualne-wydarzenia-mobile/data/2026-07-06-1935-mobile-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/data/2026-07-06-1935-mobile-news.json",
+      "sizeBytes": 31622,
+      "date": "2026-07-06",
+      "time": "19:35"
     },
     {
       "id": "research/tech-news/runs/2026-07-05.md",
