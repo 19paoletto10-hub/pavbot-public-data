@@ -20,6 +20,8 @@ struct DailyWeatherReport: Codable, Equatable, Identifiable {
     let source: String
     let hourlyTemperature: [DailyWeatherHourlyTemperature]
     let temperatureTimeline: [DailyWeatherHourlyTemperature]
+    let hourlyPrecipitation: [DailyWeatherHourlyPrecipitation]
+    let precipitationTimeline: [DailyWeatherHourlyPrecipitation]
 
     init(
         id: String,
@@ -40,7 +42,9 @@ struct DailyWeatherReport: Codable, Equatable, Identifiable {
         sunset: String?,
         source: String,
         hourlyTemperature: [DailyWeatherHourlyTemperature] = [],
-        temperatureTimeline: [DailyWeatherHourlyTemperature] = []
+        temperatureTimeline: [DailyWeatherHourlyTemperature] = [],
+        hourlyPrecipitation: [DailyWeatherHourlyPrecipitation] = [],
+        precipitationTimeline: [DailyWeatherHourlyPrecipitation] = []
     ) {
         self.id = id
         self.city = city
@@ -61,6 +65,8 @@ struct DailyWeatherReport: Codable, Equatable, Identifiable {
         self.source = source
         self.hourlyTemperature = hourlyTemperature
         self.temperatureTimeline = temperatureTimeline
+        self.hourlyPrecipitation = hourlyPrecipitation
+        self.precipitationTimeline = precipitationTimeline
     }
 
     enum CodingKeys: String, CodingKey {
@@ -83,6 +89,8 @@ struct DailyWeatherReport: Codable, Equatable, Identifiable {
         case source
         case hourlyTemperature
         case temperatureTimeline
+        case hourlyPrecipitation
+        case precipitationTimeline
     }
 
     init(from decoder: Decoder) throws {
@@ -106,6 +114,8 @@ struct DailyWeatherReport: Codable, Equatable, Identifiable {
         source = try container.decode(String.self, forKey: .source)
         hourlyTemperature = try container.decodeIfPresent([DailyWeatherHourlyTemperature].self, forKey: .hourlyTemperature) ?? []
         temperatureTimeline = try container.decodeIfPresent([DailyWeatherHourlyTemperature].self, forKey: .temperatureTimeline) ?? []
+        hourlyPrecipitation = try container.decodeIfPresent([DailyWeatherHourlyPrecipitation].self, forKey: .hourlyPrecipitation) ?? []
+        precipitationTimeline = try container.decodeIfPresent([DailyWeatherHourlyPrecipitation].self, forKey: .precipitationTimeline) ?? []
     }
 
     var nameDaysLabel: String {
@@ -145,6 +155,40 @@ struct DailyWeatherReport: Codable, Equatable, Identifiable {
         }
         return filtered.isEmpty ? hourlyTemperature : filtered
     }
+
+    func timelinePrecipitationPoints(
+        startingAt now: Date = Date(),
+        calendar inputCalendar: Calendar = .current
+    ) -> [DailyWeatherHourlyPrecipitation] {
+        if !precipitationTimeline.isEmpty {
+            return precipitationTimeline
+        }
+
+        let currentDay = DateFormatter.pavbotDay.string(from: now)
+        guard currentDay == date else {
+            return hourlyPrecipitation
+        }
+
+        var calendar = inputCalendar
+        calendar.timeZone = DateFormatter.pavbotWeatherHour.timeZone ?? .current
+        let currentHour = calendar.dateInterval(of: .hour, for: now)?.start ?? now
+        let filtered = hourlyPrecipitation.filter { item in
+            guard item.time.hasPrefix(date), let dateValue = item.dateValue else { return false }
+            return dateValue >= currentHour
+        }
+        return filtered.isEmpty ? hourlyPrecipitation : filtered
+    }
+
+    var weatherNarrativeRecommendation: String {
+        let precipitation = WeatherPrecipitationTilePresentation(report: self)
+        guard precipitation.hasHourlyData else {
+            return recommendation
+        }
+        guard !recommendation.containsPrecipitationHourWindow else {
+            return recommendation
+        }
+        return precipitation.advice
+    }
 }
 
 struct DailyWeatherHourlyTemperature: Codable, Equatable, Identifiable {
@@ -173,6 +217,199 @@ struct DailyWeatherHourlyTemperature: Codable, Equatable, Identifiable {
     }
 }
 
+struct DailyWeatherHourlyPrecipitation: Codable, Equatable, Identifiable {
+    let time: String
+    let probability: Int
+    let amount: Double
+    let rain: Double
+    let showers: Double
+    let snowfall: Double
+    let kind: WeatherPrecipitationKind
+    let unit: String
+
+    var id: String { time }
+
+    var dateValue: Date? {
+        DateFormatter.pavbotWeatherHour.date(from: time)
+    }
+
+    var hourLabel: String {
+        if let time = time.split(separator: "T").last {
+            return String(time.prefix(5))
+        }
+        return time
+    }
+
+    var isSignificant: Bool {
+        probability >= 20 || amount > 0
+    }
+
+    var amountLabel: String {
+        if amount.rounded() == amount {
+            return "\(Int(amount)) \(unit)"
+        }
+        return String(format: "%.1f %@", amount, unit)
+    }
+}
+
+enum WeatherPrecipitationKind: String, Codable, Equatable {
+    case rain
+    case snow
+    case mixed
+    case possible
+
+    var polishGenitiveLabel: String {
+        switch self {
+        case .rain:
+            "deszczu"
+        case .snow:
+            "śniegu"
+        case .mixed:
+            "deszczu ze śniegiem"
+        case .possible:
+            "opadów"
+        }
+    }
+
+    var practicalAdvice: String {
+        switch self {
+        case .rain:
+            "weź parasol lub lekką kurtkę przeciwdeszczową"
+        case .snow:
+            "uważaj na śliskie chodniki i zaplanuj wolniejsze wyjście"
+        case .mixed:
+            "weź coś przeciwdeszczowego i uważaj na śliskie miejsca"
+        case .possible:
+            "miej pod ręką parasol, jeśli wychodzisz na dłużej"
+        }
+    }
+}
+
+struct WeatherPrecipitationTilePresentation: Equatable {
+    let city: String
+    let dailyProbabilityLabel: String
+    let dailyTotalLabel: String
+    let timeline: [DailyWeatherHourlyPrecipitation]
+
+    init(
+        report: DailyWeatherReport,
+        now: Date = Date(),
+        calendar: Calendar = .current
+    ) {
+        city = report.city
+        dailyProbabilityLabel = report.precipitation.probabilityLabel
+        dailyTotalLabel = report.precipitation.totalLabel
+        timeline = report.timelinePrecipitationPoints(startingAt: now, calendar: calendar)
+    }
+
+    var significantPoints: [DailyWeatherHourlyPrecipitation] {
+        timeline.filter(\.isSignificant)
+    }
+
+    var measurablePoints: [DailyWeatherHourlyPrecipitation] {
+        timeline.filter { point in
+            point.amount > 0 || point.rain > 0 || point.showers > 0 || point.snowfall > 0
+        }
+    }
+
+    var hasHourlyData: Bool {
+        !timeline.isEmpty
+    }
+
+    var chartPoints: [DailyWeatherHourlyPrecipitation] {
+        significantPoints
+    }
+
+    var advice: String {
+        guard hasHourlyData else {
+            return "Dzisiaj ryzyko opadów wynosi \(dailyProbabilityLabel), ale brak godzinowego rozkładu dla tej lokalizacji."
+        }
+        guard !significantPoints.isEmpty else {
+            return "Do końca dnia nie widać istotnych opadów dla \(city); parasol raczej nie będzie potrzebny."
+        }
+
+        let advicePoints = measurablePoints.isEmpty ? significantPoints : measurablePoints
+        let kind = dominantKind(in: advicePoints)
+        let timeText = timeWindowsText(for: advicePoints)
+        if measurablePoints.isEmpty || kind == .possible {
+            return "Ryzyko opadów widać \(timeText), więc \(kind.practicalAdvice)."
+        }
+        return "Opadów \(kind.polishGenitiveLabel) spodziewaj się \(timeText), więc \(kind.practicalAdvice)."
+    }
+
+    private func dominantKind(in points: [DailyWeatherHourlyPrecipitation]) -> WeatherPrecipitationKind {
+        if points.contains(where: { $0.kind == .mixed }) {
+            return .mixed
+        }
+        if points.contains(where: { $0.kind == .snow }) {
+            return .snow
+        }
+        if points.contains(where: { $0.kind == .rain }) {
+            return .rain
+        }
+        return .possible
+    }
+
+    private func timeWindowsText(for points: [DailyWeatherHourlyPrecipitation]) -> String {
+        let windows = groupedWindows(for: points).map { window in
+            window.start.id == window.end.id ? window.start.hourLabel : "\(window.start.hourLabel)-\(window.end.hourLabel)"
+        }
+        return "około \(joinPolish(windows))"
+    }
+
+    private func groupedWindows(
+        for points: [DailyWeatherHourlyPrecipitation]
+    ) -> [(start: DailyWeatherHourlyPrecipitation, end: DailyWeatherHourlyPrecipitation)] {
+        let sortedPoints = points.sorted { first, second in
+            switch (first.dateValue, second.dateValue) {
+            case let (.some(firstDate), .some(secondDate)):
+                return firstDate < secondDate
+            default:
+                return first.time < second.time
+            }
+        }
+        guard var currentStart = sortedPoints.first, var currentEnd = sortedPoints.first else {
+            return []
+        }
+
+        var windows: [(start: DailyWeatherHourlyPrecipitation, end: DailyWeatherHourlyPrecipitation)] = []
+        for point in sortedPoints.dropFirst() {
+            if areAdjacentHours(currentEnd, point) {
+                currentEnd = point
+            } else {
+                windows.append((start: currentStart, end: currentEnd))
+                currentStart = point
+                currentEnd = point
+            }
+        }
+        windows.append((start: currentStart, end: currentEnd))
+        return windows
+    }
+
+    private func areAdjacentHours(
+        _ first: DailyWeatherHourlyPrecipitation,
+        _ second: DailyWeatherHourlyPrecipitation
+    ) -> Bool {
+        guard let firstDate = first.dateValue, let secondDate = second.dateValue else {
+            return false
+        }
+        return secondDate.timeIntervalSince(firstDate) <= 3_900
+    }
+
+    private func joinPolish(_ items: [String]) -> String {
+        switch items.count {
+        case 0:
+            return ""
+        case 1:
+            return items[0]
+        case 2:
+            return "\(items[0]) i \(items[1])"
+        default:
+            return "\(items.dropLast().joined(separator: ", ")) i \(items.last ?? "")"
+        }
+    }
+}
+
 struct WeatherBriefLocation: Codable, Equatable {
     let latitude: Double
     let longitude: Double
@@ -191,6 +428,36 @@ enum WeatherRangeTileMode: Equatable {
 
     mutating func toggle() {
         self = self == .value ? .chart : .value
+    }
+}
+
+enum WeatherPrecipitationTileMode: Equatable {
+    case value
+    case chart
+
+    mutating func toggle() {
+        self = self == .value ? .chart : .value
+    }
+}
+
+private extension String {
+    var containsPrecipitationHourWindow: Bool {
+        guard range(
+            of: #"(?<!\d)\d{1,2}:\d{2}\s*(?:-\s*\d{1,2}:\d{2})?(?!\d)"#,
+            options: .regularExpression
+        ) != nil else {
+            return false
+        }
+
+        let text = lowercased()
+        return [
+            "deszcz",
+            "mżawk",
+            "opad",
+            "parasol",
+            "śnieg",
+            "ulew"
+        ].contains { text.contains($0) }
     }
 }
 

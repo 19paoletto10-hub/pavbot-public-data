@@ -184,6 +184,7 @@ struct SpeechVoiceOption: Identifiable, Equatable {
         self.name = name
         self.language = language
         self.qualityLabel = qualityLabel
+        self.quality = .default
         self.isPersonalVoice = isPersonalVoice
     }
 
