@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-07-07",
+  "runTime": "17:32",
+  "executiveSummary": "Dzisiejsza runda dołożyła kilka wyraźnie nowych, publicznych leadów we Wrocławiu i remote Poland: ITDS otworzył rolę security wokół AI/LLM, SQUAD pokazał applied-science LLM, Holisticon i DataArt dodały bardzo konkretne role infra/developer z publicznymi widełkami, a Callstack wystawił mocny remote AI systems signal. Zamiast kolejnej porcji ogólnych board-first kart, rynek wygląda dziś bardziej na przesunięty w stronę AI platform, bezpieczeństwa i systemów produkcyjnych.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior Product Security Engineer - AI & LLM",
+      "company": "ITDS Polska Sp. z o.o.",
+      "location": "Centrum, Wrocław / office",
+      "workMode": "Wrocław",
+      "compensation": "30 000 - 50 000 PLN brutto / miesiąc",
+      "seniority": "Senior",
+      "fitSummary": "Zabezpieczanie aplikacji AI, narzędzi LLM, AI agents i infrastruktury; rola security skoncentrowana na produkcyjnych systemach AI.",
+      "whyInteresting": "Nowa wrocławska rola z jawnymi widełkami i bardzo rzadkim połączeniem cyber + LLM + AI agents.",
+      "uncertainty": "Tryb pracy wygląda na biurowy; brak informacji o pracy zdalnej.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/itds-senior-product-security-engineer---ai-llm-wroclaw-ai"
+      ],
+      "tags": [
+        "LLM",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Applied Scientist (LLM)",
+      "company": "SQUAD",
+      "location": "plac Konstytucji 3 Maja, Wrocław / hybrid",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM, RAG, multi-agent architectures i Python; bardziej projektowanie systemów i modeli niż ogólne feature engineering.",
+      "whyInteresting": "Najmocniejszy nowy applied-science sygnał dzisiejszej rundy i jeden z nielicznych jawnie LLM-first na wrocławskim boardzie.",
+      "uncertainty": "Publiczna karta nie pokazała mi widełek płacowych.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/squad-applied-scientist-llm--wroclaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Machine Learning Infrastructure Engineer",
+      "company": "Holisticon Connect",
+      "location": "Fabryczna 6, Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "28 560 - 31 920 PLN netto / miesiąc B2B lub 23 000 - 25 000 PLN brutto / miesiąc UoP",
+      "seniority": "Nieokreślony",
+      "fitSummary": "ML infrastructure z PyTorch, NumPy, GCP, BigQuery, Snowflake, Pandas i Pythonem; bardziej platforma niż aplikacja.",
+      "whyInteresting": "To kolejny solidny sygnał, że wrocławski rynek przesuwa się od samych aplikacji AI w stronę infrastruktury produkcyjnej.",
+      "uncertainty": "Rola nie jest jawnie LLM-first, więc traktuję ją jako ML/infra, nie czysty LLM.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/holisticon-connect-machine-learning-infrastructure-engineer-wroclaw-ai"
+      ],
+      "tags": [
+        "Python",
+        "AWS",
+        "GCP"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "AI Developer",
+      "company": "DataArt",
+      "location": "plac Grunwaldzki 23, Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "23 000 - 26 000 PLN netto / miesiąc B2B lub 19 000 - 21 000 PLN brutto / miesiąc UoP",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLMs, RAG i produkcyjny development AI; hands-on rola developerska, nie konsultingowa.",
+      "whyInteresting": "Publiczne widełki, jasny Wrocław + remote i konkretny LLM/RAG zakres czynią to jednym z najłatwiejszych do działania nowych leadów dnia.",
+      "uncertainty": "Opis jest krótki, ale zakres AI jest jasno publiczny.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/dataart-ai-developer-wroclaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Senior AI System Engineer",
+      "company": "Callstack",
+      "location": "Prosta 36, Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "LLM & multi-agent architectures, RAG pipelines, AI governance, Python i TypeScript.",
+      "whyInteresting": "Najmocniejszy systemowy sygnał w rundzie; to już nie tylko feature engineering, ale platforma, biblioteki i governance dla produkcyjnego AI.",
+      "uncertainty": "Wynagrodzenie nie jest publiczne; karta łączy remote z wrocławskim biurem.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/callstack-senior-ai-system-engineer-wroclaw-ai-d121a189"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodałem pięć nowych, publicznych leadów na shortlistę, z czego dwa mają jawne widełki płacowe w samym boardzie.",
+    "Dzisiejszy sygnał jest bardziej platformowo-security-first niż wczoraj: ITDS i Callstack wzmacniają warstwę AI systems / AI security, a Holisticon i DataArt potwierdzają produkcyjną infrastrukturę ML/LLM.",
+    "Nie powieliłem słabszych, bardziej ogólnych kart boardowych, żeby utrzymać shortlistę blisko realnego fitu LLM/AI."
+  ],
+  "risks": [
+    "Board-first oferty nadal mogą rotować szybko, więc tytuł, widełki albo tryb pracy mogą się zmienić przed następną rundą.",
+    "Callstack i SQUAD są mocne merytorycznie, ale na razie opieram się na publicznych kartach Just Join IT, a nie na osobnych canonical employer pages.",
+    "Część szerszych leadów z boarda jest bardziej ogólna niż core LLM/AI, więc deduplikacja i selekcja nadal muszą być ostre."
+  ],
+  "recommendedActions": [
+    "Sprawdź ponownie pięć nowych leadów jutro i preferuj kanoniczne strony pracodawców, jeśli się pojawią.",
+    "Trzymaj klaster AI security / AI systems na aktywnej shortlistcie, bo dzisiaj wygląda on bardziej trwało niż jednorazowy board burst.",
+    "Nie promuj słabszych, ogólnych kart AI-adjacent bez wyraźnego produkcyjnego kąta LLM / ML systems."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Wrocław AI/ML board",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "ITDS: Senior Product Security Engineer - AI & LLM",
+      "url": "https://justjoin.it/job-offer/itds-senior-product-security-engineer---ai-llm-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "SQUAD: Applied Scientist (LLM)",
+      "url": "https://justjoin.it/job-offer/squad-applied-scientist-llm--wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Holisticon Connect: Machine Learning Infrastructure Engineer",
+      "url": "https://justjoin.it/job-offer/holisticon-connect-machine-learning-infrastructure-engineer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "DataArt: AI Developer",
+      "url": "https://justjoin.it/job-offer/dataart-ai-developer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Callstack: Senior AI System Engineer",
+      "url": "https://justjoin.it/job-offer/callstack-senior-ai-system-engineer-wroclaw-ai-d121a189",
+      "status": "checked"
+    }
+  ]
+}

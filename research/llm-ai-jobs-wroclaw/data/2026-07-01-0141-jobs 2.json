@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-07-01",
+  "runTime": "01:41",
+  "executiveSummary": "Bieżąca runda przyniosła materialny update, ale w specyficznym trybie: nie chodzi tylko o oferty opublikowane po 2026-06-30 18:05 CEST, lecz o domknięcie szerszego, publicznego sweepu źródeł z 27-30 czerwca, który do tej pory nie był w pełni zapisany w Seen Opportunities. Najmocniejsze nowe sygnały to Capgemini Senior Agentic AI Developer, EPAM Senior .NET AI Engineer, RITS Senior AI Engineer, Montrose Applied AI Engineer, Espeo AI Solutions Engineer oraz dwa różne tory Awareson: delivery Agentic AI / Azure i platformowy MLOps / LLMOps. Najciekawszy wspólny mianownik tego batcha to przesunięcie z prostych integracji LLM w stronę pełniejszych systemów produkcyjnych: agentic workflows, retrieval/evaluation, AI platform engineering, data pipelines pod GenAI oraz enterprise-grade delivery. Na sprawdzonych źródłach Sii GenAI & Cloud i CKSource / Tiugo nie pojawiła się dziś nowa materialna zmiana względem indeksu.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior Agentic AI Developer",
+      "company": "Capgemini",
+      "location": "Wrocław + Kraków/Opole/Warszawa/Gdańsk/Poznań/Lublin/Katowice, hybryda",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "Wrocław + Kraków/Opole/Warszawa/Gdańsk/Poznań/Lublin/Katowice, hybryda",
+      "whyInteresting": "Wrocław + Kraków/Opole/Warszawa/Gdańsk/Poznań/Lublin/Katowice, hybryda",
+      "uncertainty": "wynagrodzenie niepubliczne. Dlaczego interesujące: to oficjalna, wyraźnie delivery-centric rola pod budowę agentów AI do klasyfikacji dokumentów, ekstrakcji danych i workflow automation, a nie kolejny ogólny „AI engineer”. Fit LLM/AI: AI agents, Azure AI services, Copilot Studio, Azure OpenAI, Python, projektowanie i orkiestracja agentów LLM. Niepewność: strona oficjalna nie pokazuje widełek, a publiczne mirrory tytułu mogą jeszcze dryfować",
+      "sourceURLs": [
+        "https://careers.capgemini.com/job-invite/509355/"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM",
+        "Python",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior .NET AI Engineer",
+      "company": "EPAM Systems",
+      "location": "zdalnie z Polski, karta z biurem w Warszawie",
+      "workMode": "Remote",
+      "compensation": ".NET",
+      "seniority": "Senior",
+      "fitSummary": "nie znalazłem równie mocnej first-party detail page na publicznym hubie EPAM",
+      "whyInteresting": "nie znalazłem równie mocnej first-party detail page na publicznym hubie EPAM",
+      "uncertainty": "wynagrodzenie niepubliczne. Dlaczego interesujące: rzadki, mocno praktyczny miks enterprise .NET i nowoczesnej warstwy AI/ML, z odpowiedzialnością za integrację, ewaluację i skalowanie modeli. Fit LLM/AI: .NET 8, ASP.NET Core, RAG, vector databases, Azure OpenAI, AKS, dobór modeli i frameworków pod koszt/latency/performance. Niepewność: obecnie najmocniejszym publicznym źródłem jest karta Just Join IT",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/epam-systems-senior-net-ai-engineer-warsaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior AI Engineer",
+      "company": "RITS",
+      "location": "remote Poland",
+      "workMode": "Remote",
+      "compensation": "1 100-1 300 PLN netto + VAT / dzień B2B",
+      "seniority": "Senior",
+      "fitSummary": "remote Poland",
+      "whyInteresting": "remote Poland",
+      "uncertainty": "1 100-1 300 PLN netto + VAT / dzień B2B. Dlaczego interesujące: bardzo czytelna, hands-on rola wokół LangGraph i GraphRAG, z wiedzą o knowledge graphach, retrieval i reasoning pipelines. Fit LLM/AI: Python, LangGraph, GraphRAG, embedding-based retrieval i pytania w języku naturalnym nad rozproszonymi danymi. Niepewność: oferta jest board-first, bez mocniejszej strony pracodawcy",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/rits-senior-ai-engineer-warszawa-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Applied AI Engineer",
+      "company": "Montrose Software",
+      "location": "Kraków / hybryda / remote z Polski",
+      "workMode": "Remote",
+      "compensation": "21 400-28 500 PLN netto / miesiąc B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Kraków / hybryda / remote z Polski",
+      "whyInteresting": "Kraków / hybryda / remote z Polski",
+      "uncertainty": "21 400-28 500 PLN netto / miesiąc B2B lub 16 000-24 000 PLN brutto / miesiąc UoP. Dlaczego interesujące: rola obejmuje cały lifecycle AI/Data od MVP i PoC po produkcję, z wyraźnym mindsetem MLOps i LLMOps. Fit LLM/AI: lakehouse / Databricks, cloud-native delivery, AI/Data productization, proof-of-concept to production. Niepewność: opis jest szeroki i domain-agnostic, więc konkretne użycia LLM mogą zależeć od projektu",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/montrose-software-polska-sp-z-o-o-applied-ai-engineer-krakow-ai"
+      ],
+      "tags": [
+        "LLM",
+        "MLOps",
+        "LLMOps"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "AI Solutions Engineer",
+      "company": "Espeo Software",
+      "location": "remote Poland, kwartalne wizyty w Poznaniu i okazjonalne spotkania u klienta",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "remote Poland, kwartalne wizyty w Poznaniu i okazjonalne spotkania u klienta",
+      "whyInteresting": "remote Poland, kwartalne wizyty w Poznaniu i okazjonalne spotkania u klienta",
+      "uncertainty": "widełki niepubliczne, 12-20h/tydzień B2B z możliwością przejścia do 40h/tydzień. Dlaczego interesujące: to forward-deployed, customer-facing rola pod dowożenie produkcyjnych wdrożeń AI od PoC do stabilizacji, a nie sam consulting bez implementacji. Fit LLM/AI: LLM APIs, RAG architectures, agentic workflows, OpenAI API, LangChain, LangGraph, retrieval, monitoring i ewaluacja jakości rozwiązań. Niepewność: nietypowy model godzinowy i board-first źródło",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/espeo-software-ai-solutions-engineer-poznan-ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Senior Data & AI Engineer (Agentic AI / Azure)",
+      "company": "Awareson",
+      "location": "100% Remote",
+      "workMode": "Remote",
+      "compensation": "200-240 PLN/h B2B",
+      "seniority": "Senior",
+      "fitSummary": "100% Remote",
+      "whyInteresting": "100% Remote",
+      "uncertainty": "200-240 PLN/h B2B. Dlaczego interesujące: mocny remote-Poland sygnał łączący data engineering z wdrożeniami LLM i agentic workflows w dużym środowisku enterprise. Fit LLM/AI: Azure, data pipelines, LLM integration, Agentic AI, RAG-based AI systems, observability data i produkcyjne integracje usług AI. Niepewność: obecnie to board-first karta rekrutacyjna",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/awareson-sp-z-o-o--senior-data-ai-engineer-agentic-ai-azure--warszawa-ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "MLOps / LLMOps Engineer (AI Platform Engineer)",
+      "company": "Awareson",
+      "location": "Warszawa, hybryda z minimum 1 dniem tygodniowo onsite",
+      "workMode": "Hybrid",
+      "compensation": "160-180 PLN/h B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Warszawa, hybryda z minimum 1 dniem tygodniowo onsite",
+      "whyInteresting": "Warszawa, hybryda z minimum 1 dniem tygodniowo onsite",
+      "uncertainty": "160-180 PLN/h B2B. Dlaczego interesujące: bardzo czysty AI-platform sygnał pod produkcyjne MLOps/LLMOps, automatyzację workflow i zgodność z AI Act. Fit LLM/AI: production-grade AI platform, monitoring modeli i GenAI, hybrydowa chmura, compliance, operacjonalizacja ML/GenAI. Niepewność: rola jest atrakcyjna technicznie, ale ma twardy wymóg obecności w Warszawie",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/awareson-sp-z-o-o--mlops-llmops-engineer-ai-platform-engineer--warszawa-ai"
+      ],
+      "tags": [
+        "LLM",
+        "GenAI",
+        "MLOps",
+        "LLMOps"
+      ]
+    },
+    {
+      "rank": 8,
+      "title": "Senior AI Engineer (Agentic AI)",
+      "company": "Procter & Gamble",
+      "location": "Warszawa, hybryda",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "Warszawa, hybryda",
+      "whyInteresting": "Warszawa, hybryda",
+      "uncertainty": "wynagrodzenie niepubliczne. Dlaczego interesujące: duża korporacja wystawiła rolę stricte pod autonomiczne systemy AI, reasoning i multi-agent architectures, co jest mocniejszym sygnałem niż ogólne „AI transformation”. Fit LLM/AI: agentic AI, data-to-deployment, data pipelines, deployment agentów i integracja z procesami biznesowymi. Niepewność: model pracy to hybryda z pracą z domu dwa dni tygodniowo, więc to nie jest zdalna rola dla całej Polski",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/procter-gamble-senior-ai-engineer-agentic-ai--warszawa-ai-0eba4da0"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Najważniejsza różnica względem 2026-06-30 18:05 CEST to nie pojedyncza korekta starej oferty, tylko domknięcie niezaindeksowanego jeszcze batcha ról z 27-30 czerwca, odkrytych w szerszym sweepie Just Join IT plus oficjalnych źródeł.",
+    "Capgemini rozszerzyło wcześniejszy wrocławski klaster o nową oficjalną rolę Senior Agentic AI Developer, która jest bardziej hands-on delivery niż wcześniej śledzone karty Lead AI, GCP AI Developer czy Copilot Studio Developer.",
+    "EPAM dołożył nową, wyraźnie produkcyjną kartę Senior .NET AI Engineer, czyli inną rodzinę niż wcześniej śledzone role Python/Go/GenAI Ops/Cloud Native.",
+    "Awareson pojawił się w dwóch odrębnych torach: 100% Remote delivery pod Agentic AI / Azure oraz warszawskiej platformie MLOps / LLMOps; oba były wcześniej nieobecne w indeksie.",
+    "Na sprawdzonych dziś źródłach Sii GenAI & Cloud i CKSource / Tiugo nie stwierdziłem nowej materialnej zmiany względem poprzedniego stanu."
+  ],
+  "risks": [
+    "Kilka najmocniejszych nowych ról nadal jest potwierdzonych głównie przez publiczne boardy, więc URL-e, nazwy i polityki pracy zdalnej mogą dryfować szybciej niż przy kartach first-party.",
+    "Część ofert z tego raportu jest „nowa dla indeksu”, ale niekoniecznie „opublikowana dziś”; dla czytelnika ważne jest rozróżnienie między nowym odkryciem w repo a świeżo dodaną kartą na rynku.",
+    "Espeo ma nietypowy model 12-20h/tydzień z opcją przejścia do 40h, więc trzeba sprawdzić przy kolejnej rundzie, czy rola nie zmieniła trybu współpracy.",
+    "Procter & Gamble i Awareson MLOps / LLMOps mają sensowny fit techniczny, ale ich modele pracy są bardziej warszawsko-hybrydowe niż wrocławsko-zdalne."
+  ],
+  "recommendedActions": [
+    "W następnej rundzie priorytetowo sprawdź: Capgemini Senior Agentic AI Developer, EPAM Senior .NET AI Engineer, RITS Senior AI Engineer, Montrose Applied AI Engineer, Espeo AI Solutions Engineer, Awareson Senior Data & AI Engineer i Awareson MLOps / LLMOps Engineer.",
+    "Szukaj mocniejszych first-party stron dla EPAM .NET AI, RITS, Espeo i Awareson; jeśli się pojawią, podmień board-first źródła w indeksie.",
+    "Dodatkowo obserwuj, czy warszawski klaster Procter & Gamble rozrośnie się w osobną rodzinę ról AI, czy pozostanie pojedynczym wyjątkiem poza głównym priorytetem Wrocław/remote Poland."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Wrocław AI/ML board",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: all-locations AI/ML board",
+      "url": "https://justjoin.it/job-offers/all-locations/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Capgemini Careers: Senior Agentic AI Developer",
+      "url": "https://careers.capgemini.com/job-invite/509355/",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM Systems: Senior .NET AI Engineer",
+      "url": "https://justjoin.it/job-offer/epam-systems-senior-net-ai-engineer-warsaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "RITS: Senior AI Engineer",
+      "url": "https://justjoin.it/job-offer/rits-senior-ai-engineer-warszawa-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Montrose Software: Applied AI Engineer",
+      "url": "https://justjoin.it/job-offer/montrose-software-polska-sp-z-o-o-applied-ai-engineer-krakow-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Espeo Software: AI Solutions Engineer",
+      "url": "https://justjoin.it/job-offer/espeo-software-ai-solutions-engineer-poznan-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Awareson: Senior Data & AI Engineer (Agentic AI / Azure)",
+      "url": "https://justjoin.it/job-offer/awareson-sp-z-o-o--senior-data-ai-engineer-agentic-ai-azure--warszawa-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Awareson: MLOps / LLMOps Engineer (AI Platform Engineer)",
+      "url": "https://justjoin.it/job-offer/awareson-sp-z-o-o--mlops-llmops-engineer-ai-platform-engineer--warszawa-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Sii official: AI Engineer – GenAI & Cloud (f/m/x)",
+      "url": "https://sii.pl/en/job-ads/id/37069/ai-engineer-genai-cloud-f-m-x",
+      "status": "checked"
+    },
+    {
+      "title": "CKSource careers",
+      "url": "https://cksource.com/careers/",
+      "status": "checked"
+    },
+    {
+      "title": "Spyrosoft careers: Lead AI Consultant",
+      "url": "https://careers.spyro-soft.com/jobs/7847907-lead-ai-consultant",
+      "status": "checked"
+    }
+  ]
+}
