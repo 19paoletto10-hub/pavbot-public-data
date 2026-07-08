@@ -17,7 +17,9 @@ Na początku runu ustal jeden wspólny czas utworzenia w strefie Europe/Warsaw i
 używaj go we wszystkich nazwach plików tego przebiegu:
 `RUN_STAMP=$(TZ=Europe/Warsaw date +%Y-%m-%d-%H%M)` oraz
 `RUN_DATE=${RUN_STAMP:0:10}`. W przykładach poniżej `YYYY-MM-DD-HHMM` oznacza
-wartość `RUN_STAMP`, a `YYYY-MM-DD` oznacza `RUN_DATE`.
+wartość `RUN_STAMP`, a `YYYY-MM-DD` oznacza `RUN_DATE`. Ten sam stamp musi
+zostać przekazany do publikacji jako twarda bramka sukcesu:
+`export PAVBOT_EXPECTED_MOBILE_NEWS_STAMP="$RUN_STAMP"`.
 
 Sprawdź aktualne publiczne źródła internetowe dotyczące najważniejszych
 wydarzeń z Polski i świata: polityki, bezpieczeństwa, dyplomacji, decyzji
@@ -115,7 +117,14 @@ briefingu w CloudKit oraz publiczny manifest danych. Skrypt uruchamia
 Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override środowiskowego,
 `PAVBOT_RAW_BASE_URL`, istniejącego `rawBaseUrl` w manifeście albo GitHub
 `origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Rozwiązany URL
-musi odpowiadać iOS `Settings -> Manifest URL`. Następnie uruchom:
+musi odpowiadać iOS `Settings -> Manifest URL`. Przed publikacją upewnij się,
+że `PAVBOT_EXPECTED_MOBILE_NEWS_STAMP="$RUN_STAMP"` wskazuje bieżący przebieg;
+wspólny skrypt musi odmówić sukcesu, jeśli nie istnieje dokładnie
+`research/aktualne-wydarzenia-mobile/data/${RUN_STAMP}-mobile-news.json` albo
+manifest nie promuje go jako `mobileNewsData`. Wspólny skrypt odświeża token
+użytkownika CloudKit dla `cktool` przed produkcyjną publikacją komendą
+`xcrun cktool save-token --type user --method keychain --force`. Następnie
+uruchom:
 `scripts/pavbot_commit_and_push_outputs.sh --isolated research/aktualne-wydarzenia-mobile`.
 
 Użyj risk gate z `docs/architecture.md`. W ramach tej automatyzacji wolno

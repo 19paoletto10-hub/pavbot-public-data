@@ -81,6 +81,10 @@ Na końcu opublikuj wynik dla aplikacji iOS przez CloudKit briefing i manifest d
 
 scripts/pavbot_commit_and_push_outputs.sh --isolated research/puls-dnia-news
 
+Wspólny skrypt odświeża token użytkownika CloudKit dla `cktool` przed
+produkcyjną publikacją komendą
+`xcrun cktool save-token --type user --method keychain --force`.
+
 Skrypt ma odświeżyć `public/pavbot-manifest.json`, commitować tylko dozwolone
 pliki aktywnego topicu oraz manifest, a następnie zrobić push na `origin/main`.
 Po publikacji sprawdź, że manifest zawiera najnowszy plik

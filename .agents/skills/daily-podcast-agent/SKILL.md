@@ -121,8 +121,12 @@ override, `PAVBOT_RAW_BASE_URL`, the existing manifest `rawBaseUrl`, or the
 GitHub `origin` remote. The resolved URL must match the public raw manifest URL
 used in iOS `Settings -> Manifest URL`; the iOS app does not send this value
 back to Codex. The publish script runs `python3 scripts/generate_pavbot_manifest.py`
-in a temporary clean worktree, commits only generated outputs (`runs/`, `pdfs`,
-`podcasts/`, `index.md`, `backlog.md`) plus `public/pavbot-manifest.json`, and
-pushes to `origin/main`.
+in a temporary clean worktree, refreshes the cktool user token once before
+production CloudKit preflight/publish, commits only generated outputs (`runs/`,
+`pdfs`, `podcasts/`, `index.md`, `backlog.md`) plus
+`public/pavbot-manifest.json`, and pushes to `origin/main`.
+If the cktool refresh still fails because Apple requires a fresh login, run
+`xcrun cktool save-token --type user --method keychain --force` manually in the
+local session, then rerun the same publish script.
 Never publish topic `tools/`, prompt edits, app code, docs, backend code, or
 other development changes as automation outputs.

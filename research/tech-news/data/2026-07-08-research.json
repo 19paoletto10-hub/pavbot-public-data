@@ -1,0 +1,422 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-08",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run pokazuje przesunięcie z modelowego hype'u do domyślnych ustawień, cross-device agentów i kosztów inference. Meta, Anthropic i Microsoft popychają AI bliżej codziennego workflow, a Discord, Norm AI i Savi pokazują, że największe konsekwencje są już operacyjne: moderacja, compliance i obrona przed scamami.",
+    "W tle widać też mocny sygnał społecznościowy. Product Hunt jest znów pełen agentów i narzędzi wokół agentów, a Hacker News eksponuje robotics, agent-security i lokalny TTS. To dobry materiał na podcast, bo łączy produkt, ryzyko i realny popyt, zamiast kolejnego abstrakcyjnego benchmarku."
+  ],
+  "summaryBullets": [
+    "Regulacje: Meta Muse Image i publiczne profile Instagramu",
+    "Produkty: Claude Cowork przechodzi na web i mobile",
+    "Infrastruktura: Microsoft przełącza część AI na MAI"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-08-0-meta-muse-image-i-publiczne-profile-instagramu-102acdf9d8",
+      "section": "Regulacje",
+      "title": "Meta Muse Image i publiczne profile Instagramu",
+      "standfirst": "Meta uruchamia Muse Image i Muse Video, a publiczne profile Instagramu mogą być wciągane do generacji jako źródło referencji przez @-mention.",
+      "whatHappened": "Muse Image działa już w Meta AI, na Instagram Stories w USA i w WhatsApp w wybranych krajach, z możliwością opt-out w ustawieniach.",
+      "whyItMatters": "To zmienia domyślną relację między publiczną publikacją a użyciem w generatywnej AI z wyraźnej zgody na opt-out.",
+      "deeperAnalysis": [
+        "Meta nie sprzedaje Muse Image jako zwykłego generatora obrazów, tylko jako kreatywnego partnera, który zna kontekst użytkownika. To oznacza, że model jest mocno osadzony w ekosystemie Instagramu, a nie tylko w abstrakcyjnym promptowaniu. W praktyce publiczne profile stają się elementem wejściowym do nowych obrazów, co przesuwa granicę między publikacją treści a ich wtórnym wykorzystaniem.",
+        "Najważniejszy spór nie dotyczy samej jakości obrazu, tylko normy domyślnej. Jeżeli opt-out ma być jedyną realną ochroną, to Meta testuje, jak daleko można przesunąć zgodę użytkownika w stronę re-use by default bez wywołania trwałej reakcji regulatorów i twórców. To będzie ważny sygnał dla całej klasy produktów social+AI."
+      ],
+      "contextPoints": [
+        "Co się stało: Meta wypuściła Muse Image i Muse Video oraz zintegrowała generację z Instagramem, WhatsAppem i meta.ai.",
+        "Dlaczego ważne: publiczne treści użytkowników stają się materiałem dla generatywnego workflow.",
+        "Na co patrzeć dalej: czy opt-out pozostanie czytelny, czy pojawi się backlash i czy Meta rozszerzy integrację na Facebook i Messenger."
+      ],
+      "sources": [
+        {
+          "title": "Meta AI Blog",
+          "url": "https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/"
+        },
+        {
+          "title": "Wired",
+          "url": "https://www.wired.com/story/meta-now-lets-anyone-use-your-instagram-photos-in-ai-images-unless-you-opt-out/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Meta",
+        "Instagram",
+        "Muse Image",
+        "prywatność",
+        "generative media",
+        "opt-out"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-08-1-claude-cowork-przechodzi-na-web-i-mobile-177cda3fbc",
+      "section": "Produkty",
+      "title": "Claude Cowork przechodzi na web i mobile",
+      "standfirst": "Anthropic przenosi Claude Cowork z desktopu na web i mobile, a sesje oraz pliki mają podążać za użytkownikiem między urządzeniami.",
+      "whatHappened": "Zadania mogą teraz działać w chmurze, a scheduled tasks mają uruchamiać się nawet wtedy, gdy laptop jest zamknięty.",
+      "whyItMatters": "To przesuwa asystenta z lokalnego copilota w stronę zawsze dostępnego, wielourządzeniowego agenta pracy.",
+      "deeperAnalysis": [
+        "Najciekawsze w tym ruchu jest nie samo rozszerzenie platformy, tylko zmiana modelu wykonania. Anthropic wyraźnie stawia na remote sessions, więc Cowork przestaje być „rzeczą z jednego komputera”, a zaczyna być usługą, która żyje w koncie użytkownika. To naturalnie zwiększa użyteczność, ale też stawia wyżej poprzeczkę dla bezpieczeństwa, uprawnień i audytu.",
+        "Ta aktualizacja pasuje do szerszej zmiany rynku, w której asystenci nie mają już tylko odpowiadać, ale wykonywać pracę asynchronicznie, często poza bezpośrednią obserwacją użytkownika. Jeśli mobilny Cowork się przyjmie, to enterprise workflows zaczną zakładać ciągłość między telefonem, desktopem i chmurą, a nie osobne tryby pracy."
+      ],
+      "contextPoints": [
+        "Co się stało: Claude Cowork wszedł na web i mobile w publicznej becie.",
+        "Dlaczego ważne: sesja agenta przestaje być przywiązana do jednego urządzenia.",
+        "Na co patrzeć dalej: limit dostępu, control plane dla administracji i to, czy mobile stanie się domyślnym punktem wejścia."
+      ],
+      "sources": [
+        {
+          "title": "Claude Help Center",
+          "url": "https://support.claude.com/en/articles/12138966-release-notes"
+        },
+        {
+          "title": "Anthropic support",
+          "url": "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/961978/anthropic-claude-cowork-mobile-web"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "Claude Cowork",
+        "mobile",
+        "web",
+        "agent",
+        "productivity"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-08-2-microsoft-przelacza-czesc-ai-na-mai-fe900abff3",
+      "section": "Infrastruktura",
+      "title": "Microsoft przełącza część AI na MAI",
+      "standfirst": "Microsoft routuje część promptów do własnych modeli MAI, żeby obniżać koszty i zmniejszać zależność od zewnętrznych laboratoriów.",
+      "whatHappened": "Strategia jest spójna z Build 2026, gdzie firma pokazała siedem modeli rozwijanych in-house i budowała narrację o własnym AI stacku.",
+      "whyItMatters": "To sygnał, że platformy productivity chcą kontrolować nie tylko doświadczenie użytkownika, ale też ekonomię inference.",
+      "deeperAnalysis": [
+        "Microsoft długo był przykładem firmy, która na zewnątrz sprzedawała wielomodelową wygodę, a wewnątrz opierała się na partnerach. Teraz kierunek jest odwrotny: własne modele mają przejąć część ruchu tam, gdzie liczy się koszt, kontrola i przewidywalność. To bardziej przypomina integrację pionową niż zwykłą optymalizację dostawców.",
+        "W praktyce to może zmienić układ sił w całym ekosystemie Copilot i Microsoft 365. Jeżeli MAI będzie coraz częściej używane w Excelu, Wordzie i Foundry, to konkurencja nie będzie już walczyć tylko o lepszy model, ale o to, kto obsłuży najtańszy i najstabilniejszy przepływ promptów w enterprise."
+      ],
+      "contextPoints": [
+        "Co się stało: TechCrunch opisał ruch Microsoftu w stronę własnych modeli MAI.",
+        "Dlaczego ważne: koszt AI staje się decydującym parametrem architektury produktu.",
+        "Na co patrzeć dalej: jak szybko MAI rozszerzy się poza pojedyncze aplikacje i czy partnerzy dostaną to samo routing policy."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/"
+        },
+        {
+          "title": "Microsoft AI",
+          "url": "https://microsoft.ai/news/building-a-hill-climbing-machine-launching-seven-new-mai-models/"
+        },
+        {
+          "title": "Microsoft Build recap",
+          "url": "https://developer.microsoft.com/blog/build-recap"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Microsoft",
+        "MAI",
+        "OpenAI",
+        "Anthropic",
+        "koszty",
+        "Copilot"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-08-3-discord-pokazuje-koszt-false-positive-1d2789aef8",
+      "section": "Cyber",
+      "title": "Discord pokazuje koszt false positive",
+      "standfirst": "Discord przyznał, że bug w AI moderation błędnie banował ponad 8 tysięcy kont za obrazy z siatką, od szachownic po tekstury gier.",
+      "whatHappened": "Problem trwał od maja i wymagał ręcznego odwracania części decyzji, zamiast w pełni automatycznego unbanu.",
+      "whyItMatters": "To praktyczny przykład, że skala moderacji AI wymaga nie tylko modelu, ale też dobrego appeal flow i kontroli błędów.",
+      "deeperAnalysis": [
+        "Ten incydent jest ważny, bo pokazuje, że AI moderation nie psuje się tylko przez złe klasyfikacje treści, lecz przez zbyt sztywne heurystyki i brak odporności operacyjnej. Gridy, szachownice i tekstury gier to banalne, nieszkodliwe obrazy, które w określonym systemie bezpieczeństwa zaczęły wyglądać jak problem. To klasyczny przykład, jak automatyzacja potrafi zamienić marginalny błąd w masowy problem produktu.",
+        "Drugi wniosek jest bardziej produktowy niż techniczny: jeśli platforma używa AI do ochrony przed AI, musi równie mocno inwestować w przejrzystość odwołań i szybkie cofanie decyzji. W przeciwnym razie safety stack zaczyna zjadać własną reputację, a użytkownicy widzą tylko ban, nie mechanizm naprawy."
+      ],
+      "contextPoints": [
+        "Co się stało: Discord zbanował tysiące użytkowników za benign images.",
+        "Dlaczego ważne: błędna moderacja na dużą skalę jest samodzielnym ryzykiem produktowym.",
+        "Na co patrzeć dalej: czy Discord opublikuje więcej szczegółów o root cause i jak poprawi unban flow."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/07/discord-admits-ai-moderation-bug-wrongfully-banned-users-over-harmless-images/"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/games/962156/discord-accidental-bans-grid-images"
+        },
+        {
+          "title": "Discord Support",
+          "url": "https://x.com/discord_support/status/2074282860123767135"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Discord",
+        "moderation",
+        "false positives",
+        "AI",
+        "trust safety"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-08-4-norm-ai-zamienia-compliance-w-produkt-48cf1c1f1a",
+      "section": "Regulacje",
+      "title": "Norm AI zamienia compliance w produkt",
+      "standfirst": "Norm AI zebrało 120 mln USD w Series C przy wycenie 1,2 mld USD, a model biznesowy łączy supervised agents z prawniczą obsługą Norm Law.",
+      "whatHappened": "Firma opisuje agentic law jako system dla wysokiego ryzyka, z nadzorem prawników i rozliczaniem opartym na wyniku, nie na godzinach.",
+      "whyItMatters": "To dowód, że AI w usługach prawnych wychodzi z fazy kopilota i wchodzi w pełne, kontrolowane workflow.",
+      "deeperAnalysis": [
+        "Norm AI jest ciekawy, bo łączy trzy warstwy naraz: model, workflow i odpowiedzialność prawną. To nie jest zwykły produkt „dla prawników”, tylko próba zbudowania infrastruktury, w której agent działa w granicach reguł, a człowiek nadzoruje krytyczne decyzje. Taki układ jest znacznie bliższy realnemu enterprise adoption niż prosty chatbot.",
+        "Warto też patrzeć na ekonomię. Jeżeli klient płaci za wynik, a nie za czas, to całe zarządzanie ryzykiem, audit trail i eskalacja błędów stają się częścią produktu, nie dodatkiem. To może być wzorzec dla innych branż regulowanych, od finance po healthcare."
+      ],
+      "contextPoints": [
+        "Co się stało: Norm AI zamknęło dużą rundę i podbiło wycenę do 1,2 mld USD.",
+        "Dlaczego ważne: regulated AI zaczyna przypominać software-plus-service, a nie prosty model API.",
+        "Na co patrzeć dalej: czy Norm AI pokaże powtarzalne legal workflows i mierzalny review-time reduction."
+      ],
+      "sources": [
+        {
+          "title": "PRNewswire",
+          "url": "https://www.prnewswire.com/news-releases/norm-ai-raises-120-million-at-a-1-2-billion-valuation-led-by-khosla-ventures-to-deliver-the-full-stack-model-for-legal-ai-302819152.html"
+        },
+        {
+          "title": "Norm AI",
+          "url": "https://www.norm.ai/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Norm AI",
+        "legal AI",
+        "compliance",
+        "Khosla",
+        "regulated work"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-08-5-savi-sprzedaje-ochrone-przed-ai-scams-99c1adc0f5",
+      "section": "Cyber",
+      "title": "Savi sprzedaje ochronę przed AI scams",
+      "standfirst": "Savi wypuściło aplikację iOS/Android, która filtruje połączenia, SMS-y i voicemail pod kątem AI-powered scams.",
+      "whatHappened": "Produkt łączy Scamwise, voicemail, text protection i live-call monitoring w jedną usługę dla rodzin.",
+      "whyItMatters": "To nowa kategoria consumer security, która powstaje razem z voice cloningiem i coraz bardziej przekonującymi scamami.",
+      "deeperAnalysis": [
+        "Savi celuje w problem, który zwykłe zabezpieczenia telefonów i operatorów rozwiązują coraz słabiej: wiarygodne, spersonalizowane oszustwa. Jeśli scam potrafi mówić ludzkim głosem i zachowywać się jak znajomy kontakt, sama klasyczna filtracja spamowa przestaje wystarczać. Stąd pomysł na warstwę behavior-based, która ocenia nie tylko numer, ale też przebieg rozmowy.",
+        "To ciekawy sygnał biznesowy, bo consumer security zwykle rośnie dopiero wtedy, gdy zagrożenie staje się masowe i zrozumiałe. Savi pokazuje, że AI scam defense może wejść na rynek jako osobny produkt, a nie funkcja wbudowana w telefon. Największe pytanie brzmi, czy użytkownicy zaakceptują kompromis między prywatnością rozmów a skutecznością ochrony."
+      ],
+      "contextPoints": [
+        "Co się stało: Savi uruchomiło ochronę przed scamami na iPhone i Androidzie.",
+        "Dlaczego ważne: AI scam defense może stać się osobną kategorią produktu.",
+        "Na co patrzeć dalej: integracje z operatorami, skuteczność live-call monitoring i reakcja użytkowników na model płatny."
+      ],
+      "sources": [
+        {
+          "title": "Savi launch",
+          "url": "https://www.savisecurity.com/blog/savi-launch"
+        },
+        {
+          "title": "Savi",
+          "url": "https://www.savisecurity.com/"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/07/savis-app-aims-to-protect-consumers-from-realistic-ai-scams-like-kidnappers-demanding-ransom/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Savi",
+        "scam defense",
+        "consumer security",
+        "voice scams",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-08-6-forterra-wysyla-autonomie-na-prawdziwa-wojne-9b578a8810",
+      "section": "Infrastruktura",
+      "title": "Forterra wysyła autonomię na prawdziwą wojnę",
+      "standfirst": "Forterra ujawniła, że 105 autonomicznych Lancerów działa w Ukrainie w ramach programu rządowego.",
+      "whatHappened": "TechCrunch opisuje to jako największe publicznie ujawnione wdrożenie amerykańskich autonomous ground vehicles w warunkach bojowych.",
+      "whyItMatters": "To znak, że autonomy lądowa przestaje być demo i staje się battlefield infrastructure.",
+      "deeperAnalysis": [
+        "Najmocniejszy element tej historii to nie sama liczba pojazdów, tylko fakt, że system działa w realnym konflikcie, a nie na poligonie. Forterra twierdzi, że dostarczyła platformy w mniej niż sześć miesięcy i że służą one do logistyki oraz ewakuacji. Taki deployment oznacza, że produkt musi wytrzymać nie tylko techniczną ocenę, ale też zabrudzenia, warunki pogodowe, zakłócenia i tempo wojny.",
+        "To ważne również dla szerszego rynku physical AI. Jeżeli ground autonomy zaczyna dowozić ładunki i ewakuować rannych w aktywnym konflikcie, to państwa i wykonawcy obronni będą inaczej patrzeć na popyt, procurement i wymagania niezawodności. W praktyce wojna staje się najbardziej wymagającym benchmarkiem, jaki ten sektor może dostać."
+      ],
+      "contextPoints": [
+        "Co się stało: Forterra ujawniła dostawy 105 Lancerów do Ukrainy.",
+        "Dlaczego ważne: battlefield autonomy wchodzi w etap operacyjny, nie demonstracyjny.",
+        "Na co patrzeć dalej: dalsze liczby wdrożeń, koszty, bezpieczeństwo łączności i reakcje innych defense-tech firm."
+      ],
+      "sources": [
+        {
+          "title": "Forterra",
+          "url": "https://www.forterra.com/posts/forterra-reveals-it-rapidly-manufactured-and-deployed-autonomous-systems-to-ukraine-at-scale-in-russo-ukrainian-war"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/07/the-first-american-autonomous-ground-vehicles-are-fighting-in-ukraine/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Forterra",
+        "Ukraine",
+        "autonomy",
+        "defense tech",
+        "ground vehicles"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Meta Muse Image zmienia zasady gry na Instagramie",
+      "rationale": "Publiczne profile stają się materiałem wejściowym do generacji, więc to mocny temat o zgodzie, prywatności i social AI.",
+      "sourcesLabel": "Meta AI Blog · Wired"
+    },
+    {
+      "priority": "High",
+      "title": "Claude Cowork wychodzi z desktopu na telefon",
+      "rationale": "Agent, który działa na web i mobile oraz podąża za sesją między urządzeniami, zmienia oczekiwania wobec pracy z AI.",
+      "sourcesLabel": "Claude Help Center · The Verge"
+    },
+    {
+      "priority": "High",
+      "title": "Microsoft zaczyna ciąć koszty przez własne modele",
+      "rationale": "Routing promptów do MAI pokazuje, że największe platformy chcą kontrolować nie tylko UI, ale też inference economics.",
+      "sourcesLabel": "TechCrunch · Microsoft AI"
+    },
+    {
+      "priority": "High",
+      "title": "Discord pokazuje koszt błędów moderacji AI",
+      "rationale": "Ponad 8 tysięcy fałszywych banów to rzadki, policzalny przykład, że AI safety stack może sam stać się problemem produktu.",
+      "sourcesLabel": "TechCrunch · The Verge"
+    },
+    {
+      "priority": "High",
+      "title": "Norm AI zamienia compliance w produkt",
+      "rationale": "Legal AI z nadzorem prawników i wyceną 1,2 mld USD to silny sygnał, że agentic law staje się realnym segmentem rynku.",
+      "sourcesLabel": "PRNewswire · Norm AI"
+    },
+    {
+      "priority": "Medium",
+      "title": "Savi sprzedaje ochronę przed AI scams",
+      "rationale": "Consumer security dla voice cloning i scam calls to nowa kategoria, która może szybko urosnąć razem z oszustwami AI.",
+      "sourcesLabel": "Savi · TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Forterra wysyła autonomię na prawdziwą wojnę",
+      "rationale": "Publicznie ujawnione wdrożenie 105 ground vehicles w Ukrainie pokazuje, że autonomy ma już battlefield economics, nie tylko demo value.",
+      "sourcesLabel": "Forterra · TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "UN formalizuje globalny governance AI",
+      "rationale": "AI for Good Global Commission w Genewie to sygnał, że rozmowa o AI governance przechodzi z deklaracji do instytucji.",
+      "sourcesLabel": "ITU · Axios"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Meta AI Blog: Introducing Muse Image and Muse Video",
+      "url": "https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/"
+    },
+    {
+      "title": "TechCrunch: Meta just launched a new AI generator, Muse Image, and users are already pushing back over use of their photos",
+      "url": "https://techcrunch.com/2026/07/07/meta-rolls-out-muse-a-new-ai-image-generator/"
+    },
+    {
+      "title": "Wired: Meta now lets anyone use your Instagram photos in AI images-unless you opt out",
+      "url": "https://www.wired.com/story/meta-now-lets-anyone-use-your-instagram-photos-in-ai-images-unless-you-opt-out/"
+    },
+    {
+      "title": "Claude Help Center: Release notes",
+      "url": "https://support.claude.com/en/articles/12138966-release-notes"
+    },
+    {
+      "title": "Anthropic support: Get started with Claude Cowork",
+      "url": "https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork"
+    },
+    {
+      "title": "TechCrunch: Microsoft joins AI cost-cutting trend by relying more on its own models",
+      "url": "https://techcrunch.com/2026/07/07/microsoft-joins-ai-cost-cutting-trend-by-relying-more-on-its-own-models/"
+    },
+    {
+      "title": "Microsoft AI: Building a hill-climbing machine, launching seven new MAI models",
+      "url": "https://microsoft.ai/news/building-a-hill-climbing-machine-launching-seven-new-mai-models/"
+    },
+    {
+      "title": "TechCrunch: Discord admits AI moderation bug wrongfully banned users over harmless images",
+      "url": "https://techcrunch.com/2026/07/07/discord-admits-ai-moderation-bug-wrongfully-banned-users-over-harmless-images/"
+    },
+    {
+      "title": "The Verge: Discord accidentally banned over 8,000 people for posting grids and other benign images",
+      "url": "https://www.theverge.com/games/962156/discord-accidental-bans-grid-images"
+    },
+    {
+      "title": "PRNewswire: Norm Ai Raises $120 Million at a $1.2 Billion Valuation",
+      "url": "https://www.prnewswire.com/news-releases/norm-ai-raises-120-million-at-a-1-2-billion-valuation-led-by-khosla-ventures-to-deliver-the-full-stack-model-for-legal-ai-302819152.html"
+    },
+    {
+      "title": "Norm AI: Agentic Law",
+      "url": "https://www.norm.ai/"
+    },
+    {
+      "title": "Savi: Today We Launch Savi: Scam Protection for Every Family",
+      "url": "https://www.savisecurity.com/blog/savi-launch"
+    },
+    {
+      "title": "Savi: Smarter protection from scams and fraud",
+      "url": "https://www.savisecurity.com/"
+    },
+    {
+      "title": "TechCrunch: Savi app aims to protect consumers from realistic AI scams like kidnappers demanding ransom",
+      "url": "https://techcrunch.com/2026/07/07/savis-app-aims-to-protect-consumers-from-realistic-ai-scams-like-kidnappers-demanding-ransom/"
+    },
+    {
+      "title": "Forterra: Forterra Reveals It Rapidly Manufactured and Deployed Autonomous Systems to Ukraine at Scale in Russo-Ukrainian War",
+      "url": "https://www.forterra.com/posts/forterra-reveals-it-rapidly-manufactured-and-deployed-autonomous-systems-to-ukraine-at-scale-in-russo-ukrainian-war"
+    },
+    {
+      "title": "TechCrunch: The first American autonomous ground vehicles are fighting in Ukraine",
+      "url": "https://techcrunch.com/2026/07/07/the-first-american-autonomous-ground-vehicles-are-fighting-in-ukraine/"
+    },
+    {
+      "title": "ITU: AI for Good Global Commission",
+      "url": "https://aiforgood.itu.int/"
+    },
+    {
+      "title": "ITU: Programme - AI for Good 2026",
+      "url": "https://aiforgood.itu.int/summit26/programme/"
+    },
+    {
+      "title": "Axios: UN launches AI for Good commission",
+      "url": "https://www.axios.com/2026/07/01/un-ai-commission-ceos-world-leaders"
+    },
+    {
+      "title": "Product Hunt: Top Products Launching Today",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Hacker News: front page",
+      "url": "https://news.ycombinator.com/"
+    }
+  ]
+}

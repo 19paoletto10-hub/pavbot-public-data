@@ -52,7 +52,10 @@ metadane briefingu w CloudKit oraz publiczny manifest danych. Skrypt uruchamia
 Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override środowiskowego,
 `PAVBOT_RAW_BASE_URL`, istniejącego `rawBaseUrl` w manifeście albo GitHub
 `origin`; ustaw zmienną ręcznie tylko dla niestandardowego URL. Rozwiązany URL
-musi odpowiadać iOS `Settings -> Manifest URL`. Następnie uruchom:
+musi odpowiadać iOS `Settings -> Manifest URL`. Wspólny skrypt odświeża token
+użytkownika CloudKit dla `cktool` przed produkcyjną publikacją komendą
+`xcrun cktool save-token --type user --method keychain --force`. Następnie
+uruchom:
 `scripts/pavbot_commit_and_push_outputs.sh --isolated research/polska-swiat`.
 
 Nie zmyślaj faktów. Jeśli źródło jest niedostępne lub niejednoznaczne, zapisz to

@@ -51,6 +51,7 @@ final class TodayHumorStore {
             manifestURLString: manifestURLString
         )
         var lastError: Error?
+        var latestDigestWithoutOriginalCommentBodies: TodayHumorDigest?
 
         guard !manifestArtifactURLs.isEmpty, preferManifestArtifact else {
             cacheNotice = digest == nil ? nil : PavbotCacheNoticeCopy.refreshFailed(context: "radar memów")
@@ -71,10 +72,13 @@ final class TodayHumorStore {
         for manifestArtifactURL in manifestArtifactURLs {
             do {
                 let loadedDigest = try await client.fetchDigest(from: manifestArtifactURL)
-                digest = loadedDigest
-                cache.save(loadedDigest)
-                cacheNotice = nil
-                state = .loaded
+                if loadedDigest.hasCommentHighlightsWithoutAnyOriginalBodies {
+                    if latestDigestWithoutOriginalCommentBodies == nil {
+                        latestDigestWithoutOriginalCommentBodies = loadedDigest
+                    }
+                    continue
+                }
+                applyLoadedDigest(loadedDigest)
                 return
             } catch {
                 lastError = error
@@ -82,7 +86,9 @@ final class TodayHumorStore {
             }
         }
 
-        if digest != nil {
+        if let latestDigestWithoutOriginalCommentBodies {
+            applyLoadedDigest(latestDigestWithoutOriginalCommentBodies)
+        } else if digest != nil {
             cacheNotice = PavbotCacheNoticeCopy.refreshFailed(context: "radar memów")
             state = .loaded
         } else if let lastError {
@@ -92,6 +98,13 @@ final class TodayHumorStore {
             cacheNotice = nil
             state = .failed(.network(TodayHumorClient.ClientError.invalidResponse, context: .manifest))
         }
+    }
+
+    private func applyLoadedDigest(_ loadedDigest: TodayHumorDigest) {
+        digest = loadedDigest
+        cache.save(loadedDigest)
+        cacheNotice = nil
+        state = .loaded
     }
 
     private static func redditRadarDigestURLs(

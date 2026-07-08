@@ -16,9 +16,13 @@ Use this skill when Codex is asked to set up, debug, or operate Pavbot live noti
 ## Workflow
 
 1. Verify the manifest and notification payload contract before publishing.
-2. Use `scripts/publish_cloudkit_briefings.py` for CloudKit briefing publication.
-3. Use `scripts/pavbot_commit_and_push_outputs.sh` to commit and push generated Pavbot outputs.
-4. Run `scripts/verify-research-workspace.sh` before declaring the workspace ready.
+2. Refresh the CloudKit `cktool` user token immediately before publication with
+   `xcrun cktool save-token --type user --method keychain --force`; the shared
+   publish script does this automatically unless `PAVBOT_CKTOOL_REFRESH_COMMAND`
+   is overridden for tests or local diagnostics.
+3. Use `scripts/publish_cloudkit_briefings.py` for CloudKit briefing publication.
+4. Use `scripts/pavbot_commit_and_push_outputs.sh` to commit and push generated Pavbot outputs.
+5. Run `scripts/verify-research-workspace.sh` before declaring the workspace ready.
 
 ## Safety
 

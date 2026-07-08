@@ -248,6 +248,11 @@ from the latest publication. The files themselves stay in GitHub raw and the
 manifest remains the source of their public URLs. Automations do not call a
 separate notifier endpoint after publish.
 
+Every CloudKit publish or backfill must refresh the local `cktool` user token
+immediately before publication. The shared publish script does this by default
+with `xcrun cktool save-token --type user --method keychain --force`; override
+`PAVBOT_CKTOOL_REFRESH_COMMAND` only for tests or local diagnostics.
+
 The publish order is important: `scripts/pavbot_commit_and_push_outputs.sh`
 pushes the manifest to GitHub, writes/verifies CloudKit `Artifact` records,
 then writes the `Briefing` record last. Only `Briefing` is subscribed for

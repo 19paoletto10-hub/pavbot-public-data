@@ -51,6 +51,10 @@ scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 The iOS app does not send this value back to Codex automations. By default, the
 publish script derives it from `PAVBOT_RAW_BASE_URL`, the existing manifest
 `rawBaseUrl`, or the GitHub `origin` remote.
+For CloudKit-backed publication, the shared script refreshes the local `cktool`
+user token immediately before publish with
+`xcrun cktool save-token --type user --method keychain --force`; override
+`PAVBOT_CKTOOL_REFRESH_COMMAND` only for tests or local diagnostics.
 
 ## 3. Generate Public Raw URLs
 

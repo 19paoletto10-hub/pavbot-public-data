@@ -24,7 +24,9 @@ CloudKit briefing metadata and the public data manifest. The script runs
 `origin/main`. The script derives `PAVBOT_MANIFEST_URL` from an environment
 override, `PAVBOT_RAW_BASE_URL`, the existing manifest `rawBaseUrl`, or GitHub
 `origin`; set it manually only for a non-standard URL. The resolved URL must
-match iOS `Settings -> Manifest URL`. Then run:
+match iOS `Settings -> Manifest URL`. The shared script refreshes the CloudKit
+`cktool` user token before production publish with
+`xcrun cktool save-token --type user --method keychain --force`. Then run:
 `scripts/pavbot_commit_and_push_outputs.sh --isolated research/codex-agent-automation`.
 
 Use the risk gate from `docs/architecture.md`. If a recommended action would

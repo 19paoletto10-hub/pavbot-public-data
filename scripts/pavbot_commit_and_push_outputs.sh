@@ -8,6 +8,8 @@ reddit_radar_topic="research/reddit-radar"
 script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 manifest_generator="$script_dir/generate_pavbot_manifest.py"
 cloudkit_publisher="${PAVBOT_CLOUDKIT_PUBLISHER:-$script_dir/publish_cloudkit_briefings.py}"
+cktool_refresh_command="${PAVBOT_CKTOOL_REFRESH_COMMAND:-xcrun cktool save-token --type user --method keychain --force}"
+cktool_token_refreshed=0
 jobs_data_validator="$script_dir/validate_jobs_data.py"
 research_data_validator="$script_dir/validate_research_data.py"
 mobile_news_data_validator="$script_dir/validate_mobile_news_data.py"
@@ -51,6 +53,12 @@ Optional environment:
   PAVBOT_CLOUDKIT_DRY_RUN=1
       Diagnostic-only mode. Validates the derived Briefing notification payload
       without calling cktool, then refuses production publish.
+  PAVBOT_CKTOOL_REFRESH_COMMAND='xcrun cktool save-token --type user --method keychain --force'
+      Command run once before production CloudKit preflight/publish to refresh
+      the cktool user token. Override only for tests or local diagnostics.
+  PAVBOT_EXPECTED_MOBILE_NEWS_STAMP=YYYY-MM-DD-HHMM
+      For research/aktualne-wydarzenia-mobile, require this exact native
+      mobileNewsData package to exist and be promoted into the manifest.
 EOF
 }
 
@@ -600,6 +608,50 @@ require_latest_reddit_radar_data_in_manifest() {
   fi
 }
 
+require_latest_reddit_radar_original_comment_bodies() {
+  local latest_rel_path
+  latest_rel_path="$(latest_reddit_radar_data_rel_path 2>/dev/null || true)"
+  [[ -n "$latest_rel_path" ]] || return 0
+
+  python3 - "$latest_rel_path" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+path = Path(sys.argv[1])
+try:
+    payload = json.loads(path.read_text(encoding="utf-8"))
+except Exception as exc:
+    print(f"redditRadarData is not readable JSON: {path}: {exc}", file=sys.stderr)
+    raise SystemExit(1)
+
+highlight_count = 0
+original_body_count = 0
+items = payload.get("items") if isinstance(payload, dict) else None
+for item in items if isinstance(items, list) else []:
+    if not isinstance(item, dict):
+        continue
+    highlights = item.get("commentHighlights")
+    if not isinstance(highlights, list):
+        continue
+    for highlight in highlights:
+        if not isinstance(highlight, dict):
+            continue
+        highlight_count += 1
+        original_body = highlight.get("originalBody")
+        if isinstance(original_body, str) and original_body.strip():
+            original_body_count += 1
+
+if highlight_count > 0 and original_body_count == 0:
+    print(
+        "redditRadarData missing original comment bodies: "
+        f"{path} has {highlight_count} commentHighlights but 0 usable originalBody fields",
+        file=sys.stderr,
+    )
+    raise SystemExit(1)
+PY
+}
+
 needs_manifest_refresh_for_reddit_radar() {
   local latest_rel_path
   latest_rel_path="$(latest_reddit_radar_data_rel_path 2>/dev/null || true)"
@@ -629,6 +681,26 @@ latest_mobile_news_data_rel_path() {
   )"
   [[ -n "$latest" ]] || return 1
   printf '%s' "$latest"
+}
+
+expected_mobile_news_stamp() {
+  if [[ "$topic_path" != "$mobile_public_only_topic" ]]; then
+    return 1
+  fi
+
+  local stamp="${PAVBOT_EXPECTED_MOBILE_NEWS_STAMP:-}"
+  [[ -n "$stamp" ]] || return 1
+
+  if [[ ! "$stamp" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{4}$ ]]; then
+    die "invalid PAVBOT_EXPECTED_MOBILE_NEWS_STAMP: $stamp (expected YYYY-MM-DD-HHMM)"
+  fi
+
+  printf '%s' "$stamp"
+}
+
+mobile_news_data_rel_path_for_stamp() {
+  local stamp="$1"
+  printf '%s/data/%s-mobile-news.json' "$topic_path" "$stamp"
 }
 
 manifest_contains_mobile_news_data_path() {
@@ -671,12 +743,85 @@ require_latest_mobile_news_data_in_manifest() {
   fi
 }
 
-needs_manifest_refresh_for_mobile_news() {
-  local latest_rel_path
-  latest_rel_path="$(latest_mobile_news_data_rel_path 2>/dev/null || true)"
-  [[ -n "$latest_rel_path" ]] || return 1
+require_expected_mobile_news_data_in_manifest() {
+  local expected_stamp expected_rel_path
+  expected_stamp="$(expected_mobile_news_stamp 2>/dev/null || true)"
+  [[ -n "$expected_stamp" ]] || return 0
 
-  if manifest_contains_mobile_news_data_path "$latest_rel_path"; then
+  expected_rel_path="$(mobile_news_data_rel_path_for_stamp "$expected_stamp")"
+  if ! manifest_contains_mobile_news_data_path "$expected_rel_path"; then
+    die "generated manifest missing expected mobileNewsData for $expected_rel_path"
+  fi
+}
+
+latest_mobile_news_package_stamp() {
+  if [[ "$topic_path" != "$mobile_public_only_topic" ]]; then
+    return 1
+  fi
+
+  python3 - "$topic_path" <<'PY'
+import re
+import sys
+from pathlib import Path
+
+topic = Path(sys.argv[1])
+stamp_re = re.compile(r"(?P<date>\d{4}-\d{2}-\d{2})-(?P<time>\d{4})")
+stamps: set[str] = set()
+
+for base in ("runs", "data", "pdfs", "podcasts"):
+    root = topic / base
+    if not root.exists():
+        continue
+    for path in root.rglob("*"):
+        text = path.name if base == "podcasts" and path.is_dir() else path.stem
+        match = stamp_re.search(text)
+        if match:
+            stamps.add(f"{match.group('date')}-{match.group('time')}")
+
+if not stamps:
+    raise SystemExit(1)
+
+print(sorted(stamps)[-1])
+PY
+}
+
+required_mobile_news_package_stamp() {
+  local expected_stamp
+  expected_stamp="$(expected_mobile_news_stamp 2>/dev/null || true)"
+  if [[ -n "$expected_stamp" ]]; then
+    printf '%s' "$expected_stamp"
+    return 0
+  fi
+
+  latest_mobile_news_package_stamp
+}
+
+require_latest_mobile_news_data_for_latest_package() {
+  local required_stamp data_rel_path reason
+  required_stamp="$(required_mobile_news_package_stamp 2>/dev/null || true)"
+  [[ -n "$required_stamp" ]] || return 0
+
+  data_rel_path="$(mobile_news_data_rel_path_for_stamp "$required_stamp")"
+  if [[ ! -f "$data_rel_path" ]]; then
+    reason="latest"
+    if [[ -n "${PAVBOT_EXPECTED_MOBILE_NEWS_STAMP:-}" ]]; then
+      reason="expected"
+    fi
+    die "missing mobileNewsData for $reason mobile package: $data_rel_path"
+  fi
+}
+
+needs_manifest_refresh_for_mobile_news() {
+  local expected_stamp rel_path
+  expected_stamp="$(expected_mobile_news_stamp 2>/dev/null || true)"
+  if [[ -n "$expected_stamp" ]]; then
+    rel_path="$(mobile_news_data_rel_path_for_stamp "$expected_stamp")"
+  else
+    rel_path="$(latest_mobile_news_data_rel_path 2>/dev/null || true)"
+  fi
+  [[ -n "$rel_path" ]] || return 1
+
+  if manifest_contains_mobile_news_data_path "$rel_path"; then
     return 1
   fi
 
@@ -694,13 +839,35 @@ run_cloudkit_publisher() {
   fi
 }
 
+refresh_cktool_user_token_once() {
+  if [[ "$cktool_token_refreshed" == "1" ]]; then
+    return 0
+  fi
+
+  if [[ -z "${cktool_refresh_command//[[:space:]]/}" ]]; then
+    die "empty PAVBOT_CKTOOL_REFRESH_COMMAND"
+  fi
+
+  if [[ -z "${PAVBOT_CKTOOL_REFRESH_COMMAND:-}" && ! -t 0 ]]; then
+    printf 'cktool user token refresh skipped: non-interactive terminal; using existing keychain token\n'
+    cktool_token_refreshed=1
+    return 0
+  fi
+
+  printf 'refreshing cktool user token\n'
+  bash -lc "$cktool_refresh_command" || die "cktool user token refresh failed; run manually and retry: xcrun cktool save-token --type user --method keychain --force"
+  cktool_token_refreshed=1
+  printf 'cktool user token refreshed\n'
+}
+
 preflight_cloudkit_briefings_gate() {
   local args=(--manifest "public/pavbot-manifest.json" --manifest-url "$PAVBOT_MANIFEST_URL" --topic "$topic_path")
   [[ -f "$cloudkit_publisher" ]] || die "missing CloudKit publisher: $cloudkit_publisher"
   if [[ "${PAVBOT_CLOUDKIT_DRY_RUN:-}" == "1" ]]; then
     run_cloudkit_publisher "dry-run" "${args[@]}" >/dev/null || die "CloudKit dry-run failed"
-    die "PAVBOT_CLOUDKIT_DRY_RUN=1 is diagnostic-only; production publish requires real CloudKit Briefing create/update. Unset PAVBOT_CLOUDKIT_DRY_RUN and refresh cktool with: xcrun cktool save-token --type user --method keychain --force"
+    die "PAVBOT_CLOUDKIT_DRY_RUN=1 is diagnostic-only; production publish requires real CloudKit Briefing create/update. Unset PAVBOT_CLOUDKIT_DRY_RUN; the publish script refreshes cktool automatically before production CloudKit calls."
   fi
+  refresh_cktool_user_token_once
   run_cloudkit_publisher "preflight" "${args[@]}" >/dev/null || die "CloudKit preflight failed"
   printf 'cloudkit briefing/artifact preflight verified\n'
 }
@@ -710,8 +877,9 @@ publish_cloudkit_briefings_gate() {
   [[ -f "$cloudkit_publisher" ]] || die "missing CloudKit publisher: $cloudkit_publisher"
   if [[ "${PAVBOT_CLOUDKIT_DRY_RUN:-}" == "1" ]]; then
     run_cloudkit_publisher "dry-run" "${args[@]}" >/dev/null || die "CloudKit publication dry-run failed"
-    die "PAVBOT_CLOUDKIT_DRY_RUN=1 is diagnostic-only; production publish requires real CloudKit Briefing create/update. Unset PAVBOT_CLOUDKIT_DRY_RUN and refresh cktool with: xcrun cktool save-token --type user --method keychain --force"
+    die "PAVBOT_CLOUDKIT_DRY_RUN=1 is diagnostic-only; production publish requires real CloudKit Briefing create/update. Unset PAVBOT_CLOUDKIT_DRY_RUN; the publish script refreshes cktool automatically before production CloudKit calls."
   fi
+  refresh_cktool_user_token_once
   run_cloudkit_publisher "publish" "${args[@]}" >/dev/null || die "CloudKit publication failed"
   run_cloudkit_publisher "verify" "${args[@]}" >/dev/null || die "CloudKit verification failed"
   printf 'cloudkit briefing/artifact publication verified\n'
@@ -722,8 +890,9 @@ publish_cloudkit_all_topics_gate() {
   [[ -f "$cloudkit_publisher" ]] || die "missing CloudKit publisher: $cloudkit_publisher"
   if [[ "${PAVBOT_CLOUDKIT_DRY_RUN:-}" == "1" ]]; then
     run_cloudkit_publisher "dry-run" "${args[@]}" >/dev/null || die "CloudKit all-topics dry-run failed"
-    die "PAVBOT_CLOUDKIT_DRY_RUN=1 is diagnostic-only; production publish requires real CloudKit Briefing create/update. Unset PAVBOT_CLOUDKIT_DRY_RUN and refresh cktool with: xcrun cktool save-token --type user --method keychain --force"
+    die "PAVBOT_CLOUDKIT_DRY_RUN=1 is diagnostic-only; production publish requires real CloudKit Briefing create/update. Unset PAVBOT_CLOUDKIT_DRY_RUN; the publish script refreshes cktool automatically before production CloudKit calls."
   fi
+  refresh_cktool_user_token_once
   run_cloudkit_publisher "publish" "${args[@]}" >/dev/null || die "CloudKit all-topics publication failed"
   run_cloudkit_publisher "verify" "${args[@]}" >/dev/null || die "CloudKit all-topics verification failed"
   printf 'cloudkit all-topics publication verified\n'
@@ -845,7 +1014,10 @@ copy_mobile_public_outputs_to_worktree() {
     "$dest_topic_root/podcasts"
 
   mkdir -p "$dest_topic_root"
-  latest_stamp="$(latest_mobile_public_output_stamp "$src_root" 2>/dev/null || true)"
+  latest_stamp="$(expected_mobile_news_stamp 2>/dev/null || true)"
+  if [[ -z "$latest_stamp" ]]; then
+    latest_stamp="$(latest_mobile_public_output_stamp "$src_root" 2>/dev/null || true)"
+  fi
   [[ -n "$latest_stamp" ]] || return 0
 
   shopt -s nullglob
@@ -912,6 +1084,7 @@ publish_isolated() {
 
   git fetch origin "$target_branch" >/dev/null
   remote_ref="$(git rev-parse --verify "origin/$target_branch")" || die "missing origin/$target_branch"
+  require_latest_mobile_news_data_for_latest_package
 
   isolated_tmp="$(mktemp -d "${TMPDIR:-/tmp}/pavbot-publish.XXXXXX")"
   isolated_worktree="$isolated_tmp/worktree"
@@ -925,6 +1098,8 @@ publish_isolated() {
     cd "$isolated_worktree"
 
     if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ! needs_manifest_refresh_for_reddit_radar && ! needs_manifest_refresh_for_mobile_news; then
+      require_latest_mobile_news_data_for_latest_package
+      require_latest_reddit_radar_original_comment_bodies
       verify_manifest_artifact_paths_local
       publish_cloudkit_briefings_gate
       printf 'no publishable changes for %s\n' "$topic_path"
@@ -934,10 +1109,13 @@ publish_isolated() {
     validate_jobs_data_outputs
     require_latest_research_data_for_latest_run
     validate_research_data_outputs
+    require_latest_mobile_news_data_for_latest_package
     validate_mobile_news_data_outputs
     validate_pulse_news_data_outputs
+    require_latest_reddit_radar_original_comment_bodies
     python3 "$manifest_generator" --repo-root "$PWD"
     verify_manifest_artifact_paths_local
+    require_expected_mobile_news_data_in_manifest
     require_latest_mobile_news_data_in_manifest
     require_latest_pulse_news_data_in_manifest
     require_latest_reddit_radar_data_in_manifest
@@ -1061,6 +1239,8 @@ fi
 require_clean_publish_scope
 
 if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ! needs_manifest_refresh_for_reddit_radar && ! needs_manifest_refresh_for_mobile_news; then
+  require_latest_mobile_news_data_for_latest_package
+  require_latest_reddit_radar_original_comment_bodies
   verify_manifest_artifact_paths_local
   publish_cloudkit_briefings_gate
   printf 'no publishable changes for %s\n' "$topic_path"
@@ -1070,10 +1250,13 @@ fi
 validate_jobs_data_outputs
 require_latest_research_data_for_latest_run
 validate_research_data_outputs
+require_latest_mobile_news_data_for_latest_package
 validate_mobile_news_data_outputs
 validate_pulse_news_data_outputs
+require_latest_reddit_radar_original_comment_bodies
 python3 "$manifest_generator" --repo-root "$PWD"
 verify_manifest_artifact_paths_local
+require_expected_mobile_news_data_in_manifest
 require_latest_mobile_news_data_in_manifest
 require_latest_pulse_news_data_in_manifest
 require_latest_reddit_radar_data_in_manifest

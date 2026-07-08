@@ -40,6 +40,10 @@ struct TodayHumorDigest: Codable, Equatable, Identifiable {
     var hasCommentHighlightsWithoutOriginalBodies: Bool {
         commentHighlightCount > originalCommentBodyCount
     }
+
+    var hasCommentHighlightsWithoutAnyOriginalBodies: Bool {
+        commentHighlightCount > 0 && originalCommentBodyCount == 0
+    }
 }
 
 struct TodayHumorItem: Codable, Equatable, Identifiable {

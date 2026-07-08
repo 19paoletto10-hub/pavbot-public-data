@@ -102,8 +102,10 @@ danych. Skrypt uruchamia `python3 scripts/generate_pavbot_manifest.py`, odswieza
 `origin/main`. Skrypt sam wyprowadza `PAVBOT_MANIFEST_URL` z override
 srodowiskowego, `PAVBOT_RAW_BASE_URL`, istniejacego `rawBaseUrl` w manifescie
 albo GitHub `origin`; ustaw zmienna recznie tylko dla niestandardowego URL.
-Rozwiazany URL musi odpowiadac iOS `Settings -> Manifest URL`. Nastepnie
-uruchom:
+Rozwiazany URL musi odpowiadac iOS `Settings -> Manifest URL`. Wspolny skrypt
+odswieza token uzytkownika CloudKit dla `cktool` przed produkcyjna publikacja
+komenda `xcrun cktool save-token --type user --method keychain --force`.
+Nastepnie uruchom:
 `scripts/pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw`.
 
 Po publishu wykonaj obowiazkowy etap `post-publish verification`. Uzyj tego

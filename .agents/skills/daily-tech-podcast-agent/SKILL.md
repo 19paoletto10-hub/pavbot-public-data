@@ -28,7 +28,9 @@ Then follow the shared workflow in `$daily-podcast-agent`:
 - keep rerendering/revising until `podcast.mp3` is 450-510 seconds;
 - write `render.json` next to the MP3.
 - create `brief.pdf` with the shared PDF renderer after audio metadata exists.
-- publish the final topic output with
+- publish the final topic output with the shared script; it refreshes the
+  `cktool` user token before production CloudKit calls using
+  `xcrun cktool save-token --type user --method keychain --force`.
   `scripts/pavbot_commit_and_push_outputs.sh --isolated research/tech-news`.
 
 Default output folder:

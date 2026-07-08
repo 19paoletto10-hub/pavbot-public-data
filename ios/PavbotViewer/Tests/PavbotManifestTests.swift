@@ -4407,6 +4407,7 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(cached.commentHighlightCount, 3)
         XCTAssertEqual(cached.originalCommentBodyCount, 1)
         XCTAssertTrue(cached.hasCommentHighlightsWithoutOriginalBodies)
+        XCTAssertFalse(cached.hasCommentHighlightsWithoutAnyOriginalBodies)
         XCTAssertFalse(cached.nextRefreshLabel.isEmpty)
     }
 
@@ -4564,6 +4565,97 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertNil(store.cacheNotice)
     }
 
+    @MainActor
+    func testTodayHumorStoreFallsBackToOlderDigestWhenLatestHasNoOriginalCommentBodies() async throws {
+        let incompleteDigest = Self.makeTodayHumorDigest(
+            id: "humor-2026-07-08-0609",
+            generatedAt: "2026-07-08T04:09:00Z",
+            displayTime: "06:09",
+            commentHighlights: [
+                TodayHumorCommentHighlight(
+                    id: "comment-1",
+                    summary: "Komentarz jest opisany, ale nie ma oryginału.",
+                    originalBody: nil,
+                    explanation: "Bez oryginału kafelek nie ma drugiej strony.",
+                    score: 12
+                )
+            ]
+        )
+        let completeDigest = Self.makeTodayHumorDigest(
+            id: "humor-2026-07-07-0010",
+            generatedAt: "2026-07-06T22:10:00Z",
+            displayTime: "00:10",
+            commentHighlights: [
+                TodayHumorCommentHighlight(
+                    id: "comment-1",
+                    summary: "Komentarz ma opis.",
+                    originalBody: "This is the original Reddit comment.",
+                    explanation: "Oryginał zasila odwrotną stronę kafelka.",
+                    score: 33
+                )
+            ]
+        )
+        let latestArtifact = PavbotArtifact(
+            id: "research/reddit-radar/data/2026-07-08-0609-reddit-radar.json",
+            type: .redditRadarData,
+            topic: "reddit-radar",
+            title: "<RR> Reddit Radar",
+            path: "research/reddit-radar/data/2026-07-08-0609-reddit-radar.json",
+            url: "https://example.com/research/reddit-radar/data/2026-07-08-0609-reddit-radar.json",
+            sizeBytes: 9000,
+            date: "2026-07-08",
+            time: "06:09"
+        )
+        let completeArtifact = PavbotArtifact(
+            id: "research/reddit-radar/data/2026-07-07-0010-reddit-radar.json",
+            type: .redditRadarData,
+            topic: "reddit-radar",
+            title: "<RR> Reddit Radar",
+            path: "research/reddit-radar/data/2026-07-07-0010-reddit-radar.json",
+            url: "https://example.com/research/reddit-radar/data/2026-07-07-0010-reddit-radar.json",
+            sizeBytes: 8900,
+            date: "2026-07-07",
+            time: "00:10"
+        )
+        let manifest = PavbotManifest(
+            schemaVersion: 1,
+            title: "Pavbot",
+            generatedAt: "2026-07-08T04:20:00Z",
+            rawBaseUrl: "https://raw.githubusercontent.com/example/repo/main",
+            automations: [],
+            topics: [],
+            artifacts: [completeArtifact, latestArtifact]
+        )
+        let capture = URLRequestCapture()
+        let store = TodayHumorStore(
+            client: PathRoutingTodayHumorClient(
+                digestsByLastPathComponent: [
+                    "2026-07-08-0609-reddit-radar.json": incompleteDigest,
+                    "2026-07-07-0010-reddit-radar.json": completeDigest,
+                ],
+                capture: capture
+            ),
+            cache: TodayHumorCache(defaults: UserDefaults(suiteName: UUID().uuidString)!),
+            preferManifestArtifact: true
+        )
+
+        await store.load(
+            minimumInterval: 0,
+            manifest: manifest,
+            manifestURLString: "https://raw.githubusercontent.com/example/repo/main/public/pavbot-manifest.json"
+        )
+
+        let requestedPaths = await capture.all().map(\.lastPathComponent)
+        XCTAssertEqual(requestedPaths, [
+            "2026-07-08-0609-reddit-radar.json",
+            "2026-07-07-0010-reddit-radar.json",
+        ])
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.digest?.id, "humor-2026-07-07-0010")
+        XCTAssertEqual(store.digest?.originalCommentBodyCount, 1)
+        XCTAssertNil(store.cacheNotice)
+    }
+
     func testTodayHumorArtworkUsesFitModeInsteadOfCroppingImages() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let sourceURL = testsURL
@@ -4703,6 +4795,9 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(cardSource.contains("Oryginalny komentarz"))
         XCTAssertTrue(cardSource.contains(".frame(maxWidth: .infinity, alignment: .leading)"))
         XCTAssertTrue(cardSource.contains(".contentShape(RoundedRectangle(cornerRadius: 14, style: .continuous))"))
+        XCTAssertTrue(cardSource.contains("rotation3DEffect"))
+        XCTAssertTrue(cardSource.contains(".onTapGesture"))
+        XCTAssertTrue(cardSource.contains(".accessibilityAddTraits(.isButton)"))
         XCTAssertTrue(cardSource.contains("Stuknij, aby zobaczyć oryginalny komentarz"))
         XCTAssertTrue(cardSource.contains("Stuknij, aby wrócić do analizy"))
     }
@@ -7685,7 +7780,8 @@ final class PavbotManifestTests: XCTestCase {
     private static func makeTodayHumorDigest(
         id: String,
         generatedAt: String,
-        displayTime: String
+        displayTime: String,
+        commentHighlights: [TodayHumorCommentHighlight]? = nil
     ) -> TodayHumorDigest {
         TodayHumorDigest(
             id: id,
@@ -7709,7 +7805,7 @@ final class PavbotManifestTests: XCTestCase {
                     categoryLabel: "test",
                     postText: nil,
                     whyFunny: "Bo testuje wybór świeższego źródła.",
-                    commentHighlights: nil
+                    commentHighlights: commentHighlights
                 )
             ],
             source: "Codex Safari Reddit radar"
@@ -9139,6 +9235,19 @@ private struct FallbackTodayHumorClient: TodayHumorFetching {
             throw TodayHumorClient.ClientError.httpStatus(404)
         }
         return fallbackDigest
+    }
+}
+
+private struct PathRoutingTodayHumorClient: TodayHumorFetching {
+    let digestsByLastPathComponent: [String: TodayHumorDigest]
+    let capture: URLRequestCapture
+
+    func fetchDigest(from artifactURL: URL) async throws -> TodayHumorDigest {
+        await capture.record(artifactURL)
+        guard let digest = digestsByLastPathComponent[artifactURL.lastPathComponent] else {
+            throw TodayHumorClient.ClientError.httpStatus(404)
+        }
+        return digest
     }
 }
 

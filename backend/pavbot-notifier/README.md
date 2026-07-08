@@ -114,6 +114,10 @@ app owns the CloudKit subscription mode in Settings under `Powiadomienia ->
 Tryb briefingów`; only `Briefing` is subscribed for visible push, so a
 publication sends one phone notification instead of one alert per file. This
 legacy notifier is not the main briefing push path.
+Every CloudKit-backed publish or backfill must refresh the local `cktool` user
+token immediately before publication. The shared publish script does this by
+default with `xcrun cktool save-token --type user --method keychain --force`;
+override `PAVBOT_CKTOOL_REFRESH_COMMAND` only for tests or local diagnostics.
 
 GitHub webhook:
 

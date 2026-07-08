@@ -3056,35 +3056,67 @@ private struct TodayHumorCommentHighlightCard: View {
     @State private var isShowingOriginal = false
 
     var body: some View {
-        Group {
-            if canToggleOriginal {
-                Button {
-                    isShowingOriginal.toggle()
-                } label: {
-                    cardContent
+        if canToggleOriginal {
+            flipCard
+                .contentShape(RoundedRectangle(cornerRadius: 14, style: .continuous))
+                .onTapGesture {
+                    withAnimation(.spring(response: 0.28, dampingFraction: 0.86)) {
+                        isShowingOriginal.toggle()
+                    }
                 }
-                .buttonStyle(.plain)
+                .accessibilityElement(children: .combine)
                 .accessibilityLabel(accessibilityLabel)
                 .accessibilityHint(isShowingOriginal ? "Stuknij, aby wrócić do analizy." : "Stuknij, aby zobaczyć oryginalny komentarz.")
-            } else {
-                cardContent
+                .accessibilityAddTraits(.isButton)
+        } else {
+            cardFace(isOriginal: false) {
+                analysisContent
             }
         }
     }
 
-    private var cardContent: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            if isShowingOriginal, let originalBody {
-                originalContent(originalBody)
-            } else {
+    private var flipCard: some View {
+        ZStack(alignment: .topLeading) {
+            cardFace(isOriginal: false) {
                 analysisContent
             }
+            .opacity(isShowingOriginal ? 0 : 1)
+            .rotation3DEffect(
+                .degrees(isShowingOriginal ? -180 : 0),
+                axis: (x: 0, y: 1, z: 0),
+                perspective: 0.72
+            )
+
+            if let originalBody {
+                cardFace(isOriginal: true) {
+                    originalContent(originalBody)
+                }
+                .opacity(isShowingOriginal ? 1 : 0)
+                .rotation3DEffect(
+                    .degrees(isShowingOriginal ? 0 : 180),
+                    axis: (x: 0, y: 1, z: 0),
+                    perspective: 0.72
+                )
+            }
+        }
+        .animation(.spring(response: 0.28, dampingFraction: 0.86), value: isShowingOriginal)
+    }
+
+    private func cardFace<Content: View>(
+        isOriginal: Bool,
+        @ViewBuilder content: () -> Content
+    ) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            content()
         }
         .padding(14)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(cardBackground, in: RoundedRectangle(cornerRadius: 14, style: .continuous))
+        .background(
+            isOriginal ? Color.purple.opacity(0.10) : Color(.secondarySystemGroupedBackground),
+            in: RoundedRectangle(cornerRadius: 14, style: .continuous)
+        )
         .overlay {
-            if isShowingOriginal {
+            if isOriginal {
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
                     .stroke(Color.purple.opacity(0.28), lineWidth: 1)
             }

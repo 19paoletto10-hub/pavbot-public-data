@@ -26,6 +26,8 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
             self.assertIn("cloudkit briefing/artifact publication verified", result.stdout)
             cloudkit_log = (repo.parent / "cloudkit-publisher.log").read_text(encoding="utf-8").splitlines()
             self.assertEqual(cloudkit_log, ["preflight", "publish", "verify"])
+            cktool_refresh_log = (repo.parent / "cktool-refresh.log").read_text(encoding="utf-8").splitlines()
+            self.assertEqual(cktool_refresh_log, ["refresh"])
             changed_files = self.git(
                 repo,
                 "diff-tree",
@@ -502,7 +504,7 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 "1",
             )
 
-    def test_mobile_topic_isolated_publish_anchors_latest_package_on_mobile_news_data(self) -> None:
+    def test_mobile_topic_isolated_publish_refuses_latest_package_without_mobile_news_data(self) -> None:
         with self.temporary_repo() as repo:
             self.write_topic_artifact(
                 repo,
@@ -525,22 +527,83 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
 
             result = self.run_publish_script(repo, "research/aktualne-wydarzenia-mobile", isolated=True)
 
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("missing mobileNewsData for latest mobile package", result.stderr)
+            self.assertIn(
+                "research/aktualne-wydarzenia-mobile/data/2026-06-26-1015-mobile-news.json",
+                result.stderr,
+            )
+            self.assertFalse((repo.parent / "cloudkit-publisher.log").exists())
+
+    def test_mobile_topic_expected_stamp_refuses_publish_without_matching_mobile_news_data(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "data/2026-06-25-1015-mobile-news.json",
+                json.dumps(self.valid_mobile_news_data_payload(), ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "pdfs/2026-06-25-1015-mobile-brief.pdf",
+                "%PDF mobile brief",
+            )
+
+            result = self.run_publish_script(
+                repo,
+                "research/aktualne-wydarzenia-mobile",
+                isolated=True,
+                extra_env={"PAVBOT_EXPECTED_MOBILE_NEWS_STAMP": "2026-06-26-1015"},
+            )
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("missing mobileNewsData for expected mobile package", result.stderr)
+            self.assertIn(
+                "research/aktualne-wydarzenia-mobile/data/2026-06-26-1015-mobile-news.json",
+                result.stderr,
+            )
+            self.assertFalse((repo.parent / "cloudkit-publisher.log").exists())
+
+    def test_mobile_topic_expected_stamp_publishes_matching_mobile_news_data(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "data/2026-06-25-1015-mobile-news.json",
+                json.dumps(self.valid_mobile_news_data_payload(), ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "data/2026-06-26-1015-mobile-news.json",
+                json.dumps(self.valid_mobile_news_data_payload(), ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "pdfs/2026-06-26-1015-mobile-brief.pdf",
+                "%PDF mobile brief",
+            )
+
+            result = self.run_publish_script(
+                repo,
+                "research/aktualne-wydarzenia-mobile",
+                isolated=True,
+                extra_env={"PAVBOT_EXPECTED_MOBILE_NEWS_STAMP": "2026-06-26-1015"},
+            )
+
             self.assertEqual(result.returncode, 0, result.stderr)
             manifest = json.loads(
                 self.git(repo, "show", "origin/main:public/pavbot-manifest.json", stdout=True)
             )
             paths = {artifact["path"] for artifact in manifest["artifacts"]}
-
             self.assertIn(
-                "research/aktualne-wydarzenia-mobile/data/2026-06-25-1015-mobile-news.json",
-                paths,
-            )
-            self.assertIn(
-                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-25-1015/script.md",
+                "research/aktualne-wydarzenia-mobile/data/2026-06-26-1015-mobile-news.json",
                 paths,
             )
             self.assertNotIn(
-                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-26-1015/script.md",
+                "research/aktualne-wydarzenia-mobile/data/2026-06-25-1015-mobile-news.json",
                 paths,
             )
 
@@ -605,6 +668,8 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             self.assertIn("no publishable changes", second.stdout)
             cloudkit_log = (repo.parent / "cloudkit-publisher.log").read_text(encoding="utf-8").splitlines()
             self.assertEqual(cloudkit_log, ["preflight", "publish", "verify", "publish", "verify"])
+            cktool_refresh_log = (repo.parent / "cktool-refresh.log").read_text(encoding="utf-8").splitlines()
+            self.assertEqual(cktool_refresh_log, ["refresh", "refresh"])
             self.assertEqual(
                 self.git(repo, "rev-parse", "HEAD", stdout=True).strip(),
                 head_after_first_publish,
@@ -679,6 +744,30 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             )
             self.assertEqual(reddit_artifacts[0]["time"], "18:08")
 
+    def test_reddit_radar_publish_refuses_comment_highlights_without_original_bodies(self) -> None:
+        with self.temporary_repo() as repo:
+            payload = self.valid_reddit_radar_payload("2026-07-07-1808")
+            payload["items"][0]["commentHighlights"] = [
+                {
+                    "id": "comment-1",
+                    "summary": "Komentarz jest opisany bez oryginału.",
+                    "explanation": "Appka nie ma wtedy drugiej strony kafelka.",
+                    "score": 7,
+                }
+            ]
+            self.write_topic_artifact(
+                repo,
+                "reddit-radar",
+                "data/2026-07-07-1808-reddit-radar.json",
+                json.dumps(payload, ensure_ascii=False) + "\n",
+            )
+
+            result = self.run_publish_script(repo, "research/reddit-radar")
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("redditRadarData missing original comment bodies", result.stderr)
+            self.assertFalse((repo.parent / "cloudkit-publisher.log").exists())
+
     def test_cloudkit_dry_run_is_diagnostic_only_and_refuses_production_push(self) -> None:
         with self.temporary_repo() as repo:
             self.write_valid_research_outputs(repo, "tech-news", "2026-06-23")
@@ -688,6 +777,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("PAVBOT_CLOUDKIT_DRY_RUN=1 is diagnostic-only", result.stderr)
             self.assertNotIn("pushed pavbot outputs", result.stdout)
+            self.assertFalse((repo.parent / "cktool-refresh.log").exists())
             self.assertEqual(
                 self.git(repo, "rev-list", "--count", "origin/main", stdout=True).strip(),
                 "1",
@@ -703,6 +793,8 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             self.assertIn("cloudkit all-topics publication verified", result.stdout)
             cloudkit_log = (repo.parent / "cloudkit-publisher.log").read_text(encoding="utf-8").splitlines()
             self.assertEqual(cloudkit_log, ["publish", "verify"])
+            cktool_refresh_log = (repo.parent / "cktool-refresh.log").read_text(encoding="utf-8").splitlines()
+            self.assertEqual(cktool_refresh_log, ["refresh"])
             self.assertEqual(self.git(repo, "rev-parse", "HEAD", stdout=True).strip(), head_before)
 
     def test_uses_existing_manifest_raw_base_url_when_manifest_env_is_missing(self) -> None:
@@ -1059,6 +1151,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
         manifest_url: str | None = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
         cloudkit_dry_run: bool = False,
         all_topics: bool = False,
+        extra_env: dict[str, str] | None = None,
     ) -> subprocess.CompletedProcess[str]:
         self.assertTrue(self.script_path.exists(), f"missing script: {self.script_path}")
         env = os.environ.copy()
@@ -1084,6 +1177,19 @@ esac
         cloudkit_stub.chmod(0o755)
         env["PAVBOT_CLOUDKIT_PUBLISHER"] = str(cloudkit_stub)
         env["PAVBOT_TEST_CLOUDKIT_LOG"] = str(repo.parent / "cloudkit-publisher.log")
+        cktool_refresh_stub = repo.parent / "fake_cktool_refresh.sh"
+        cktool_refresh_stub.write_text(
+            """#!/usr/bin/env bash
+set -euo pipefail
+printf 'refresh\n' >> "${PAVBOT_TEST_CKTOOL_REFRESH_LOG:?}"
+""",
+            encoding="utf-8",
+        )
+        cktool_refresh_stub.chmod(0o755)
+        env["PAVBOT_CKTOOL_REFRESH_COMMAND"] = str(cktool_refresh_stub)
+        env["PAVBOT_TEST_CKTOOL_REFRESH_LOG"] = str(repo.parent / "cktool-refresh.log")
+        if extra_env:
+            env.update(extra_env)
         if cloudkit_dry_run:
             env["PAVBOT_CLOUDKIT_DRY_RUN"] = "1"
         args = ["bash", str(self.script_path)]
@@ -1230,7 +1336,15 @@ esac
                     "categoryLabel": "memy",
                     "postText": None,
                     "whyFunny": "Bo test pilnuje kontraktu.",
-                    "commentHighlights": [],
+                    "commentHighlights": [
+                        {
+                            "id": "comment-1",
+                            "summary": "Komentarz testowy.",
+                            "originalBody": "Original Reddit comment.",
+                            "explanation": "Oryginał zasila flip-card w aplikacji.",
+                            "score": 5,
+                        }
+                    ],
                 }
             ],
             "source": "Codex Safari Reddit radar",

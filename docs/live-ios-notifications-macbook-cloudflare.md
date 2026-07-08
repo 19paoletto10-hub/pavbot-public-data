@@ -17,7 +17,9 @@ ports or router port forwarding.
    `https://notify.example.com/webhooks/github`.
 4. Each Codex automation publishes its topic with
    `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>`, which refreshes
-   `public/pavbot-manifest.json` and pushes it to `origin/main`.
+   the local `cktool` user token with
+   `xcrun cktool save-token --type user --method keychain --force`, refreshes
+   `public/pavbot-manifest.json`, and pushes it to `origin/main`.
 5. The notifier fetches `PAVBOT_MANIFEST_URL`, diffs it against the last stored
    manifest, and sends APNs alerts for new files or newly enabled automations.
 6. The iOS app registers the APNs device token with

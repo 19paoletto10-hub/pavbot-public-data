@@ -181,6 +181,34 @@ grep -q '^name: daily-news-podcast-agent$' .agents/skills/daily-news-podcast-age
 grep -q '^name: pavbot-live-notifier$' .agents/skills/pavbot-live-notifier/SKILL.md
 grep -q 'Cloudflare Tunnel' .agents/skills/pavbot-live-notifier/SKILL.md
 grep -q 'PAVBOT_MANIFEST_URL' .agents/skills/pavbot-live-notifier/SKILL.md
+
+cktool_refresh_command='xcrun cktool save-token --type user --method keychain --force'
+cktool_refresh_instruction_files=(
+  "scripts/pavbot_commit_and_push_outputs.sh"
+  "docs/how-to-use.md"
+  "docs/automation-operations.md"
+  "docs/connect-ios-app-to-your-repo.md"
+  "docs/live-ios-notifications-macbook-cloudflare.md"
+  "backend/pavbot-notifier/README.md"
+  ".agents/skills/daily-research-agent/SKILL.md"
+  ".agents/skills/daily-podcast-agent/SKILL.md"
+  ".agents/skills/daily-tech-podcast-agent/SKILL.md"
+  ".agents/skills/daily-news-podcast-agent/SKILL.md"
+  ".agents/skills/pavbot-live-notifier/SKILL.md"
+  "research/codex-agent-automation/automation-prompt.md"
+  "research/tech-news/automation-research-prompt.md"
+  "research/tech-news/automation-podcast-prompt.md"
+  "research/polska-swiat/automation-research-prompt.md"
+  "research/polska-swiat/automation-podcast-prompt.md"
+  "research/llm-ai-jobs-wroclaw/automation-research-prompt.md"
+  "research/aktualne-wydarzenia-mobile/automation-prompt.md"
+  "research/puls-dnia-news/automation-prompt.md"
+)
+
+for file in "${cktool_refresh_instruction_files[@]}"; do
+  grep -F -q "$cktool_refresh_command" "$file"
+done
+
 python3 -m json.tool public/pavbot-manifest.json >/dev/null
 grep -q '"schemaVersion": 1' public/pavbot-manifest.json
 grep -q 'Pavbot Automation Manifest' public/pavbot-manifest.json
@@ -485,6 +513,7 @@ grep -q 'PAVBOT_MANIFEST_URL' research/aktualne-wydarzenia-mobile/automation-pro
 grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/aktualne-wydarzenia-mobile' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -F -q 'RUN_STAMP=$(TZ=Europe/Warsaw date +%Y-%m-%d-%H%M)' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -F -q 'RUN_DATE=${RUN_STAMP:0:10}' research/aktualne-wydarzenia-mobile/automation-prompt.md
+grep -F -q 'PAVBOT_EXPECTED_MOBILE_NEWS_STAMP="$RUN_STAMP"' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'runs/YYYY-MM-DD-HHMM.md' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'pdfs/YYYY-MM-DD-HHMM-newspaper.pdf' research/aktualne-wydarzenia-mobile/automation-prompt.md
