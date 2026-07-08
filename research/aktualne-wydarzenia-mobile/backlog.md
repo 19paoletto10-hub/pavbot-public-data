@@ -6,7 +6,8 @@
 | --- | --- | --- | --- | --- |
 | High | Monitor weather and hydrology through the week | Poranny alert z 8 lipca nadal trzyma północny wschód, a susza hydrologiczna obejmuje cały kraj | In the next run, check whether alerts escalate, ease, or move regionalnie and whether fire/hydrology signals change | Open |
 | High | Track PIP implementation after 8 July | Reforma właśnie weszła w życie i może szybko przejść z komunikatu w praktykę kontrolną | In the next run, check for employer guidance, control activity, and public reactions | Open |
-| High | Follow NATO Ankara summit with concrete Ukraine support | Drugi dzień szczytu ma już liczbowe zamówienia, ale czekamy na końcowy readout i szczegóły dla Ukrainy | After day 2, check for final decisions, ammunition/air-defense numbers, and dates | Open |
+| High | Track health reform package after 8 July | Wieczorna konferencja zdrowotna dała konkretny pakiet, ale nie wiemy jeszcze, jak szybko przejdzie do formalnych decyzji | In the next run, check for legislative follow-up, implementation notes, and reactions from hospitals or NFZ | Open |
+| High | Follow NATO Ankara declaration into implementation | Szczyt dał €70 mld dla Ukrainy w 2026 roku i ponad 50 mld dolarów nowych zamówień, ale krajowe wkłady i harmonogramy pozostają nieostre | In the next run, check for national follow-up, procurement detail, and Poland-specific readouts | Open |
 | Medium | Track EU cyber-AI implementation follow-up | Komisja opublikowała plan cyber-AI i dopisała go do istniejących ram, ale wykonawcze szczegóły mogą jeszcze dojść | In the next run, check whether EU bodies, regulators, platforms, or vendors respond with concrete implementation steps | Open |
 | High | Stabilize `male-xtts` in current-events pipeline | `female-piper` pozostaje wymaganym stabilnym wariantem, ale `male-xtts` nadal trzeba monitorować pod kątem pełnego renderu | After render, verify whether the male variant succeeds; keep `female-piper` as the required stable output | Open |
 
@@ -65,6 +66,13 @@
   a szczyt NATO w Ankarze przestawił się na zamówienia i liczby.
 - 2026-07-08: Komisja Europejska opublikowała plan cyber-AI i dopisała go do
   AI Act, NIS2, DORA i Cyber Resilience Act.
+- 2026-07-08: Wieczorny run `2026-07-08-1935` domknął przejście z zapowiedzi
+  do zobowiązań: deklaracja ankarska dała €70 mld dla Ukrainy w 2026 roku,
+  Ministerstwo Zdrowia opublikowało pakiet zmian, a PIP doprecyzowała model
+  egzekwowania z ZUS i KAS.
+- 2026-07-08: Komisja Europejska otworzyła konsultację o suwerenności danych,
+  poszerzając dzisiejszy wątek technologiczny z cyber-AI na zależności danych i
+  dostęp państw trzecich.
 
 ## Done
 

@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-07
+Last updated: 2026-07-08
 
 ## Current Understanding
 
@@ -77,6 +77,15 @@ przemysłu obronnego, Ukrainy i krajowego sporu o donacje Patriotów. Równolegl
 drugi dzień szczytu pozostaje otwarty do konferencji Ruttego i deklaracji
 końcowej, a Ormuz przeszedł od incydentu morskiego do uderzeń USA w Iran i
 publicznego poparcia tej reakcji przez sekretarza generalnego NATO.
+Po wieczornym runie 8 lipca szczyt ma już oficjalną deklarację końcową:
+ponad 50 mld USD nowych zamówień, 70 mld euro wsparcia dla Ukrainy w 2026 r.
+i potwierdzoną linię wobec Iranu oraz wolności żeglugi w Ormuz. Polska ma
+czytelny ślad w europejskim serwisie PAC-3 i pozostawieniu holenderskich
+Patriotów w Jasionce do końca roku, ale pełny zakres krajowego udziału
+przemysłowego nadal wymaga dalszego sprawdzania w readoutach i follow-upach.
+Nowym światowym akcentem jest amerykańska licencja dla Ukrainy na produkcję
+Patriotów, co przenosi rozmowę z samych dostaw na potencjalny model
+licencyjno-produkcyjny.
 
 ## Stable Facts
 
@@ -143,12 +152,15 @@ publicznego poparcia tej reakcji przez sekretarza generalnego NATO.
 - Po 8 lipca wrócić do szczegółów porozumienia PAC-3: lokalizacja, udział
   polskich firm, harmonogram, zakres transferu technologii i relacja do
   zapasów dla Ukrainy.
+- Po 8 lipca sprawdzić, czy amerykańska licencja dla Ukrainy na produkcję
+  Patriotów przełoży się na kontrakt, zakład i harmonogram wdrożenia.
 - Wątek wojskowej współpracy kosmicznej Polska-USA śledzić jako część
   zdolności NATO: łączność satelitarna, GPS/NAVWAR, ostrzeganie rakietowe,
   ARGUS i Centrum Operacji Satelitarnych.
 
 ## Recent Reports
 
+- [2026-07-08-1933](runs/2026-07-08-1933.md)
 - [2026-07-08](runs/2026-07-08.md)
 - [2026-07-07-1933](runs/2026-07-07-1933.md)
 - [2026-07-07](runs/2026-07-07.md)

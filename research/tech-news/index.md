@@ -1,12 +1,18 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-07
+Last updated: 2026-07-08
 
 ## Current Understanding
 
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
+
+Po wieczornym refreshu z 2026-07-08 główna nowa oś przesuwa się jeszcze niżej
+w stacku: Apple/Broadcom, DeepSeek, SambaNova, Prime Intellect i ZML pokazują
+rynkowy wyścig o custom silicon, inference economics i portable execution across
+chips. To już nie tylko pytanie o to, jaki model wygrywa, ale gdzie i jak da się
+go tanio oraz niezawodnie uruchamiać.
 
 Po raporcie z 2026-07-08 główna nowa oś to przesunięcie z modelowego hype'u do
 domyślnych ustawień i operacyjnych ścieżek dostępu: Meta Muse Image wciąga

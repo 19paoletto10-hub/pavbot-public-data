@@ -962,6 +962,25 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             self.assertIn("outside allowed publish paths", result.stderr)
             self.assertIn("research/tech-news/tools/helper.sh", result.stderr)
 
+    def test_non_isolated_publish_falls_back_to_isolated_when_head_is_unsynced(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_valid_research_outputs(repo, "tech-news", "2026-06-23")
+            (repo / "docs" / "unrelated.md").write_text("local-only change\n", encoding="utf-8")
+            self.git(repo, "add", "docs/unrelated.md")
+            self.git(repo, "commit", "-m", "local unrelated commit")
+
+            result = self.run_publish_script(repo, "research/tech-news")
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertIn("using isolated publish path", result.stdout)
+            self.assertIn("pushed pavbot outputs", result.stdout)
+            manifest = json.loads(
+                self.git(repo, "show", "origin/main:public/pavbot-manifest.json", stdout=True)
+            )
+            artifact_paths = {artifact["path"] for artifact in manifest["artifacts"]}
+            self.assertIn("research/tech-news/runs/2026-06-23.md", artifact_paths)
+            self.assertIn("research/tech-news/data/2026-06-23-research.json", artifact_paths)
+
     def test_isolated_publish_ignores_development_changes_and_pushes_outputs(self) -> None:
         with self.temporary_repo() as repo:
             self.write_valid_research_outputs(repo, "tech-news", "2026-06-23")

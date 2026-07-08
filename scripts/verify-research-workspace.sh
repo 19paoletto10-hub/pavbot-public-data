@@ -413,8 +413,8 @@ grep -q 'Validate Pavbot mobileNewsData JSON artifacts' scripts/validate_mobile_
 grep -q 'validate_pulse_news_data.py' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'git fetch origin' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'git push origin "HEAD:$target_branch"' scripts/pavbot_commit_and_push_outputs.sh
-grep -q 'run_cloudkit_publisher "publish"' scripts/pavbot_commit_and_push_outputs.sh
-grep -q 'run_cloudkit_publisher "verify"' scripts/pavbot_commit_and_push_outputs.sh
+grep -q 'run_cloudkit_publisher_with_fresh_token "publish"' scripts/pavbot_commit_and_push_outputs.sh
+grep -q 'run_cloudkit_publisher_with_fresh_token "verify"' scripts/pavbot_commit_and_push_outputs.sh
 grep -q -- '--all-topics' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'require_latest_reddit_radar_data_in_manifest' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'outside allowed publish paths' scripts/pavbot_commit_and_push_outputs.sh

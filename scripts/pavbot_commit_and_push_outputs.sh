@@ -1357,7 +1357,10 @@ fi
 
 local_ref="$(git rev-parse --verify HEAD)"
 if [[ "$local_ref" != "$remote_ref" ]]; then
-  die "local HEAD must match origin/$target_branch before publishing; sync the workspace first"
+  printf 'local HEAD (%s) does not match origin/%s (%s); using isolated publish path\n' \
+    "$local_ref" "$target_branch" "$remote_ref"
+  publish_isolated
+  exit 0
 fi
 
 require_clean_publish_scope

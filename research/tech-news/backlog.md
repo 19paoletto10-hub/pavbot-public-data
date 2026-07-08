@@ -5,6 +5,7 @@
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
 | High | Track Meta Muse Image privacy backlash | Public Instagram reuse could trigger consent and default-setting scrutiny | Watch opt-out defaults, complaint volume and policy edits | Open |
+| High | Track inference silicon race | Apple/Broadcom, DeepSeek, SambaNova, Prime Intellect and ZML show the market shifting from model hype to custom silicon and portable inference stacks | Watch customer adoption, manufacturing constraints, financing risk and benchmark/performance claims | Open |
 | High | Track Microsoft in-house model migration | MAI routing may change Copilot economics and vendor mix | Watch rollout breadth across 365, Foundry and partner surfaces | Open |
 | High | Track Claude Cowork cross-device adoption | Mobile/web sessions may become the default agent UX | Watch enterprise limits, approvals and handoff behavior | Open |
 | High | Track Discord moderation false positives | The ban bug shows brittleness in AI safety stacks | Watch root-cause fix, appeal flow and recurrence risk | Open |
@@ -21,7 +22,7 @@
 | Medium | Watch Android agent APIs | Android 17 AppFunctions and Android MCP may become a durable agent-platform storyline | Recheck developer adoption and examples after the initial release cycle | Open |
 | Medium | Track AI in schools regulation | Norway introduced a strong age-based AI restriction signal that may spread in Europe | Recheck Nordic/EU education policy and Polish ministry commentary in later runs | Open |
 | Medium | Track European AI sovereignty stack | France is pairing public-sector AI funding with ChapsVision/Palantir replacement and AI Gigafactories | Watch France, Mistral, EU AI Gigafactories and Polish equivalents | Open |
-| Medium | Track AI chip alternatives | Google TPUs and Amazon Trainium are moving from internal cloud optimization toward external compute businesses | Watch customer adoption, financing risk and Nvidia response | Open |
+| Medium | Track AI chip alternatives | Google TPUs, Amazon Trainium and the wider inference-silicon wave are moving from internal cloud optimization toward external compute businesses | Watch customer adoption, manufacturing constraints, financing risk and Nvidia response | Open |
 | High | Track agent-ready deployment infrastructure | Cloudflare Temporary Accounts and self-managed OAuth remove signup/auth/delegated-access friction for AI agents | Watch Cloudflare, Vercel, Netlify, Fly.io, Replit, OAuth consent/revocation and auth.md-style flows | Open |
 | High | Track AI control standards | Google DeepMind's AI Control Roadmap may become a reference point for agent permissions, monitoring and incident response | Recheck follow-up papers, policy reactions and competing frameworks | Open |
 | High | Track Anthropic export-control resolution | Fable/Mythos shows frontier models becoming export-control and national-security assets; Mythos 5 is now partially redeployed to approved US cyber/infrastructure organizations | Watch Anthropic statements, Commerce actions, Mythos/Fable availability, Project Glasswing participants, AP/Semafor/TechCrunch follow-ups and international response | Open |

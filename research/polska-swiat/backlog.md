@@ -6,7 +6,6 @@
 | --- | --- | --- | --- | --- |
 | High | Review first three generated news podcasts | Confirms pacing, neutrality, MP3 generation, and Polish narration quality | Listen to each MP3 and record notes | Open |
 | Medium | Tune public source list | Repeated good sources should become explicit topic guidance | Prefer official institutions plus Onet/PAP, Guardian, Euronews and public AP/Reuters mirrors; consider topic.md refinement after weekend sample | Open |
-| High | Verify post-Ankara outcomes | The summit already produced a concrete procurement package and a Trump-Erdogan F-35 signal, but not the final NATO decision package | On 8-9 July compare final NATO declaration, Polish bilateral readouts, today's procurement announcements and Ukraine-support language with the preview | Open |
 | High | Track Patriot/interceptor decisions for Ukraine | Russian ballistic strikes still make air-defence supply the operational center of the summit story, even after the counter-drone package | Check AP, NATO, White House, KPRM/MON and Ukrainian official channels for concrete interceptor, licensing or production decisions | Open |
 | Medium | Monitor Ormuz attribution carefully | UKMTO now confirms the tanker strike, but it still does not record an official Iranian claim | Separate confirmed maritime incident facts from responsibility claims and retaliation forecasts | Open |
 | Medium | Align automation flags with scripts | Heartbeat requires `--require-app-articles` and `--force-manifest`, but current local scripts do not expose those options | Prepare a scoped proposal before any script or automation change; continue validating JSON/PDF with existing commands meanwhile | Open |
@@ -93,6 +92,9 @@
   Euronews for USA-Iran/Ormuz and NATO tensions, plus RCB/PAP/RMF24/TVN24 for
   weather risk. Podcast should be explicit that this is a pre-declaration
   morning snapshot: the final NATO line still needs an afternoon/evening check.
+- 2026-07-08 evening: final NATO declaration published, Poland's PAC-3 service
+  hub became a concrete post-summit outcome and Trump's Patriot license for
+  Ukraine moved the air-defence story from procurement into production.
 - 2026-07-08: Repo-wide verifier currently fails on an iOS signing expectation
   outside the active topic (`CODE_SIGN_IDENTITY = "Apple Distribution";`), so a
   risk-gated proposal was created instead of changing project or verifier files.
@@ -102,3 +104,4 @@
 | Date | Item | Outcome |
 | --- | --- | --- |
 | 2026-06-20 | Review first three Polska/świat reports | Three scheduled reports were produced on 2026-06-18, 2026-06-19 and 2026-06-20. Source quality is acceptable when official institutions remain primary and dynamic news pages are treated as secondary signals. |
+| 2026-07-08 | Verify post-Ankara outcomes | Final NATO declaration is published and the immediate outcome check is complete; follow-up now moved into PAC-3 and Patriot implementation items. |

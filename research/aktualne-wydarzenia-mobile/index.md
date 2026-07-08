@@ -5,21 +5,24 @@ Last updated: 2026-07-08
 ## Current Understanding
 
 Temat służy do codziennego tworzenia mobilnego briefu o najważniejszych
-wydarzeniach publicznych z Polski i świata. Poranek 8 lipca przesunął akcent z
-samego opisu na wdrożenie: RCB wysłało nowy alert wiatrowy i utrzymuje
-hydrologiczne ryzyka w kraju, PIP weszła w nowe uprawnienia, a NATO w Ankarze
-przeszło do zamówień, inwestycji i harmonogramu wykonania.
+wydarzeniach publicznych z Polski i świata. Wieczór 8 lipca potwierdził ruch z
+trybu zapowiedzi do trybu zobowiązań. Pogoda pozostała ważnym tłem, ale główny
+ciężar dnia przeszedł na instytucjonalne wykonanie: PIP pracuje już w modelu
+z wymianą danych z ZUS i KAS, a Ministerstwo Zdrowia opublikowało pakiet zmian
+obejmujący e-rejestrację, e-kolejkę i mocniejszą przejrzystość systemu.
 
-Warstwa polityczna jest równie konkretna. Premier wiąże wsparcie Ukrainy z
-bezpieczeństwem Polski, a prezydent podkreśla znaczenie solidarności
-sojuszniczej, wschodniej flanki i stałej obecności USA. W technologii
-Komisja Europejska publikuje plan cyber-AI, który podpina zaawansowaną AI pod
-istniejące ramy regulacyjne i bezpieczeństwa.
+Najmocniejszy sygnał międzynarodowy przyszedł z Ankary. NATO zamknęło szczyt
+deklaracją z €70 mld wsparcia dla Ukrainy w 2026 roku, perspektywą utrzymania
+co najmniej równoważnego poziomu w 2027 roku oraz ponad 50 mld dolarów nowych
+zamówień obronnych. Politycznie linia krajowa pozostaje spójna: premier łączy
+wsparcie Ukrainy z bezpieczeństwem Polski, a prezydent pilnuje USA i wschodniej
+flanki.
 
-Format ma pozostać krótki, źródłowy i mobile-first. Najważniejsze jest
-oddzielenie faktów od interpretacji, utrzymanie żywych linków przy każdym
-materialnym twierdzeniu i zachowanie spójnej produkcji: report, JSON, PDF,
-scenariusz audio oraz publikacja do manifestu.
+W technologii Komisja Europejska buduje dwie równoległe osie: cyber-AI jako
+operacyjny model bezpieczeństwa oraz dzisiejszą konsultację o suwerenności
+danych. Format powinien dalej oddzielać fakty od interpretacji i pilnować
+spójnej produkcji: report, JSON, PDF, scenariusz audio oraz publikacja do
+manifestu.
 
 ## Stable Facts
 
@@ -36,26 +39,34 @@ scenariusz audio oraz publikacja do manifestu.
 
 ## Open Questions
 
-- Czy po starcie reformy PIP pojawią się pierwsze operacyjne FAQ, skargi albo
-  sygnały z kontroli?
-- Czy drugi dzień szczytu NATO przyniesie końcowy readout z konkretnymi
-  liczbami dla Ukrainy i wschodniej flanki?
-- Czy alert wiatrowy i hydrologia zmienią się dziś z porannego ryzyka w
-  spokojniejsze tło, czy wręcz przeciwnie?
-- Czy Komisja Europejska albo ENISA dołożą wykonawcze szczegóły do planu
-  cyber-AI jeszcze przed końcem tygodnia?
+- Jak szybko pakiet zdrowotny przejdzie z konferencji do formalnego toru
+  legislacyjnego albo dokumentów wykonawczych?
+- Czy po wejściu reformy PIP pojawią się pierwsze sygnały praktycznych kontroli,
+  skarg i sporów wokół kryteriów etatu?
+- Czy po deklaracji ankarskiej pojawi się dokładniejsze rozpisanie narodowych
+  wkładów do pakietu dla Ukrainy i nowych zamówień obronnych?
+- Czy Komisja Europejska albo ENISA szybko dołożą wykonawcze szczegóły do planu
+  cyber-AI i konsultacji o suwerenności danych?
 
 ## Watch Items
 
 - Czy `female-piper` pozostaje stabilnym obowiązkowym wariantem.
 - Czy `male-xtts` tym razem przejdzie pełny render bez ręcznej interwencji.
-- Czy PIP po starcie reformy opublikuje praktyczne instrukcje dla pracodawców.
-- Czy NATO wypuści końcowy komunikat z dodatkowymi liczbami dla Ukrainy.
-- Czy RCB i IMGW zawężą alert wiatrowy bez nowych incydentów terenowych.
-- Czy plan Komisji dla cyberbezpieczeństwa i AI szybko przełoży się na dalsze komunikaty wykonawcze.
+- Czy pakiet zdrowotny dostanie formalny ciąg dalszy już 9 lipca.
+- Czy PIP opublikuje praktyczne instrukcje dla pracodawców po pierwszym dniu
+  reformy.
+- Czy po deklaracji z Ankary pojawią się polskie albo sojusznicze doprecyzowania
+  o wkładach dla Ukrainy i nowych zamówieniach.
+- Czy RCB i IMGW utrzymają brak nowej szerokiej eskalacji pogodowej przez noc.
 
 ## Recent Reports
 
+- [2026-07-08-1935](runs/2026-07-08-1935.md) - deklaracja ankarska z €70 mld
+  dla Ukrainy, pakiet zmian zdrowotnych, operacyjne wdrożenie PIP i konsultacja
+  UE o suwerenności danych.
+- [2026-07-08-1021](runs/2026-07-08-1021.md) - poranny alert wiatrowy,
+  wejście PIP w życie, linia rządu i prezydenta wobec Ukrainy oraz plan UE
+  dla cyber-AI.
 - [2026-07-07-1935](runs/2026-07-07-1935.md) - decyzje Rady Ministrów,
   alerty RCB, pierwszy konkretny bilans Ankary i plan UE dla cyber-AI.
 - [2026-07-07-1025](runs/2026-07-07-1025.md) - wiatr, susza, PIP, deregulacja,
@@ -63,9 +74,3 @@ scenariusz audio oraz publikacja do manifestu.
 - [2026-06-27-1019](runs/2026-06-27-1019.md) - sankcje UE do 31 lipca 2027,
   propozycja ochrony tymczasowej do 4 marca 2028 i eskalacja alertów upałowych
   do 42°C.
-
-## Recent Reports
-
-- [2026-07-08-1021](runs/2026-07-08-1021.md) - poranny alert wiatrowy,
-  wejście PIP w życie, linia rządu i prezydenta wobec Ukrainy oraz plan UE
-  dla cyber-AI.
