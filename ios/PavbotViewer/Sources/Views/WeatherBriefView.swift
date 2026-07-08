@@ -1649,14 +1649,26 @@ private struct WeatherTemperatureBarChart: View {
                 .foregroundStyle(temperatureBarGradient(for: bar.temperature))
                 .clipShape(RoundedRectangle(cornerRadius: isExpanded ? 6 : 3, style: .continuous))
                 .annotation(position: .top, alignment: .center, spacing: isExpanded ? 7 : 3) {
-                    if isExpanded || model.visibleLabelIDs.contains(bar.id) {
-                        WeatherTemperatureChartBubbleLabel(
-                            bar.temperatureLabel,
-                            temperature: bar.temperature,
-                            font: .system(size: isExpanded ? 11 : 9, weight: .bold),
-                            horizontalPadding: isExpanded ? 8 : 5,
-                            verticalPadding: isExpanded ? 5 : 3
-                        )
+                    if isExpanded {
+                        Group {
+                            WeatherTemperatureChartBubbleLabel(
+                                bar.temperatureLabel,
+                                temperature: bar.temperature,
+                                font: .system(size: 11, weight: .bold),
+                                horizontalPadding: 8,
+                                verticalPadding: 5
+                            )
+                        }
+                    } else if model.visibleLabelIDs.contains(bar.id) {
+                        Group {
+                            WeatherTemperatureChartBubbleLabel(
+                                bar.temperatureLabel,
+                                temperature: bar.temperature,
+                                font: .system(size: 9, weight: .bold),
+                                horizontalPadding: 5,
+                                verticalPadding: 3
+                            )
+                        }
                     }
                 }
             }
@@ -1752,13 +1764,13 @@ private struct WeatherTemperatureChartBubbleLabel: View {
 
         Text(text)
             .font(font)
-            .foregroundStyle(bubbleColor)
+            .foregroundStyle(.white)
             .padding(.horizontal, horizontalPadding)
             .padding(.vertical, verticalPadding)
-            .background(Color(.systemBackground).opacity(0.97), in: Capsule())
+            .background(bubbleColor, in: Capsule())
             .overlay {
                 Capsule()
-                    .stroke(bubbleColor.opacity(0.30), lineWidth: 1)
+                    .stroke(Color(.systemBackground).opacity(0.72), lineWidth: 1)
             }
             .shadow(color: Color.black.opacity(0.08), radius: 5, x: 0, y: 3)
             .accessibilityLabel(text)
@@ -2171,7 +2183,7 @@ private struct WeatherPrecipitationBarChart: View {
                 .frame(height: chartContentHeight + 28)
             } else {
                 chart
-                    .frame(height: chartContentHeight)
+                    .frame(height: 118)
             }
         }
         .accessibilityLabel(isExpanded ? "Słupkowy wykres godzinowej szansy opadów" : "Mini wykres godzinowej szansy opadów")
