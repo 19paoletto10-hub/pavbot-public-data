@@ -75,21 +75,23 @@ scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>
 
 The isolated script creates a temporary clean worktree from `origin/main`,
 copies only generated outputs from the active topic, refreshes
-`public/pavbot-manifest.json`, refreshes the cktool user token once before
-production CloudKit preflight/publish, commits those files, and pushes to
+`public/pavbot-manifest.json`, refreshes the cktool user token before every
+production CloudKit action, commits those files, and pushes to
 `origin/main`. By default it runs
 `xcrun cktool save-token --type user --method keychain --force`; override
 `PAVBOT_CKTOOL_REFRESH_COMMAND` only for tests or local diagnostics. Apple user
-token creation is prompt-driven, so a non-interactive automation run skips this
-prompt-only refresh and uses the existing keychain token instead. It derives the
-public manifest URL from `PAVBOT_MANIFEST_URL`, `PAVBOT_RAW_BASE_URL`, the
-existing manifest `rawBaseUrl`, or the GitHub `origin` remote. It requires a
-working `origin` and push credentials for `main`. Do not push generated
-automation files separately from the refreshed manifest. The GitHub webhook for
-live iOS notifications fires only after this push succeeds. If Apple still
-rejects the keychain token, complete the manual cktool login locally with the
-same `xcrun cktool save-token --type user --method keychain --force` command,
-paste the Apple Developer user token, and rerun the shared publish script.
+token creation is prompt-driven, so fully unattended runs should provide a
+fresh Apple Developer user token through `PAVBOT_CKTOOL_USER_TOKEN`; the script
+then writes it to the cktool keychain entry non-interactively. If that secret is
+not set, a non-interactive automation run skips the prompt-only refresh and uses
+the existing keychain token instead. It derives the public manifest URL from
+`PAVBOT_MANIFEST_URL`, `PAVBOT_RAW_BASE_URL`, the existing manifest
+`rawBaseUrl`, or the GitHub `origin` remote. It requires a working `origin` and
+push credentials for `main`. Do not push generated automation files separately
+from the refreshed manifest. The GitHub webhook for live iOS notifications fires
+only after this push succeeds. If Apple still rejects the keychain token, create
+a fresh Apple Developer user token, expose it as `PAVBOT_CKTOOL_USER_TOKEN`,
+and rerun the shared publish script.
 
 Treat `git push` as necessary but not sufficient. Run `git fetch origin` and
 verify `origin/main:public/pavbot-manifest.json` before declaring success. For

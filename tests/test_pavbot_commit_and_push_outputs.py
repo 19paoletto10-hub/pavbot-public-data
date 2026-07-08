@@ -27,7 +27,7 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
             cloudkit_log = (repo.parent / "cloudkit-publisher.log").read_text(encoding="utf-8").splitlines()
             self.assertEqual(cloudkit_log, ["preflight", "publish", "verify"])
             cktool_refresh_log = (repo.parent / "cktool-refresh.log").read_text(encoding="utf-8").splitlines()
-            self.assertEqual(cktool_refresh_log, ["refresh"])
+            self.assertEqual(cktool_refresh_log, ["refresh", "refresh", "refresh"])
             changed_files = self.git(
                 repo,
                 "diff-tree",
@@ -117,6 +117,50 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 self.git(repo, "rev-list", "--count", "HEAD", stdout=True).strip(),
                 "1",
             )
+
+    def test_publish_uses_cktool_user_token_secret_without_refresh_command_override(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_valid_research_outputs(repo, "tech-news", "2026-06-23")
+            fake_bin = repo.parent / "bin"
+            fake_bin.mkdir()
+            xcrun_stub = fake_bin / "xcrun"
+            xcrun_stub.write_text(
+                """#!/usr/bin/env bash
+set -euo pipefail
+printf '%s\n' "$*" >> "${PAVBOT_TEST_XCRUN_ARGS_LOG:?}"
+cat > "${PAVBOT_TEST_XCRUN_STDIN_LOG:?}"
+""",
+                encoding="utf-8",
+            )
+            xcrun_stub.chmod(0o755)
+
+            result = self.run_publish_script(
+                repo,
+                "research/tech-news",
+                extra_env={
+                    "PATH": f"{fake_bin}{os.pathsep}{os.environ['PATH']}",
+                    "PAVBOT_CKTOOL_REFRESH_COMMAND": None,
+                    "PAVBOT_CKTOOL_USER_TOKEN": "fresh-user-token",
+                    "PAVBOT_TEST_XCRUN_ARGS_LOG": str(repo.parent / "xcrun-args.log"),
+                    "PAVBOT_TEST_XCRUN_STDIN_LOG": str(repo.parent / "xcrun-stdin.log"),
+                },
+            )
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertIn("cktool user token refreshed", result.stdout)
+            self.assertEqual(
+                (repo.parent / "xcrun-args.log").read_text(encoding="utf-8").splitlines(),
+                [
+                    "cktool save-token --type user --method keychain --force",
+                    "cktool save-token --type user --method keychain --force",
+                    "cktool save-token --type user --method keychain --force",
+                ],
+            )
+            self.assertEqual(
+                (repo.parent / "xcrun-stdin.log").read_text(encoding="utf-8").splitlines(),
+                ["e", "fresh-user-token", "e", "fresh-user-token", "e", "fresh-user-token"],
+            )
+            self.assertFalse((repo.parent / "cktool-refresh.log").exists())
 
     def test_research_publish_includes_valid_research_data_json_outputs(self) -> None:
         with self.temporary_repo() as repo:
@@ -669,7 +713,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             cloudkit_log = (repo.parent / "cloudkit-publisher.log").read_text(encoding="utf-8").splitlines()
             self.assertEqual(cloudkit_log, ["preflight", "publish", "verify", "publish", "verify"])
             cktool_refresh_log = (repo.parent / "cktool-refresh.log").read_text(encoding="utf-8").splitlines()
-            self.assertEqual(cktool_refresh_log, ["refresh", "refresh"])
+            self.assertEqual(cktool_refresh_log, ["refresh", "refresh", "refresh", "refresh", "refresh"])
             self.assertEqual(
                 self.git(repo, "rev-parse", "HEAD", stdout=True).strip(),
                 head_after_first_publish,
@@ -794,7 +838,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             cloudkit_log = (repo.parent / "cloudkit-publisher.log").read_text(encoding="utf-8").splitlines()
             self.assertEqual(cloudkit_log, ["publish", "verify"])
             cktool_refresh_log = (repo.parent / "cktool-refresh.log").read_text(encoding="utf-8").splitlines()
-            self.assertEqual(cktool_refresh_log, ["refresh"])
+            self.assertEqual(cktool_refresh_log, ["refresh", "refresh"])
             self.assertEqual(self.git(repo, "rev-parse", "HEAD", stdout=True).strip(), head_before)
 
     def test_uses_existing_manifest_raw_base_url_when_manifest_env_is_missing(self) -> None:
@@ -1061,6 +1105,12 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             self.write_topic_artifact(
                 repo,
                 "aktualne-wydarzenia-mobile",
+                "runs/2026-06-24-1015.md",
+                "# Local report\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
                 "data/2026-06-24-1015-mobile-news.json",
                 json.dumps(self.valid_mobile_news_data_payload(), ensure_ascii=False) + "\n",
             )
@@ -1069,6 +1119,12 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                 "aktualne-wydarzenia-mobile",
                 "pdfs/2026-06-24-1015-mobile-brief.pdf",
                 "%PDF mobile brief",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "pdfs/2026-06-24-1015-newspaper.pdf",
+                "%PDF mobile newspaper",
             )
             self.write_topic_artifact(
                 repo,
@@ -1085,8 +1141,50 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             self.write_topic_artifact(
                 repo,
                 "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-24-1015/audio/female-piper/render.json",
+                "{\"status\": \"ok\"}\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-24-1015/audio/male-xtts/render.json",
+                "{\"status\": \"failed\"}\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-24-1015/audio/male-xtts/render.log",
+                "failed\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-24-1015/audio/female-piper/podcast.raw.mp3",
+                "raw mp3",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
                 "podcasts/2026-06-24-1015/script.md",
                 "# Local script\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-24-1015/draft.md",
+                "# Local draft\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-24-1015/sources.md",
+                "# Local sources\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "aktualne-wydarzenia-mobile",
+                "podcasts/2026-06-24-1015/tts_variants.json",
+                "{\"language\": \"pl\"}\n",
             )
 
             result = self.run_publish_script(repo, "research/aktualne-wydarzenia-mobile", isolated=True)
@@ -1110,14 +1208,22 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                     "research/aktualne-wydarzenia-mobile/index.md",
                     "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-1015-newspaper.pdf",
                     "research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-1015-mobile-brief.pdf",
+                    "research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-1015-newspaper.pdf",
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/render.json",
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/script.md",
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/sources.md",
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/tts_variants.json",
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/female-piper/podcast.mp3",
+                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/female-piper/render.json",
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/male-xtts/podcast.mp3",
+                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/male-xtts/render.json",
+                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/male-xtts/render.log",
+                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/draft.md",
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/script.md",
+                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/sources.md",
+                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/tts_variants.json",
                     "research/aktualne-wydarzenia-mobile/runs/2026-06-23-1015.md",
+                    "research/aktualne-wydarzenia-mobile/runs/2026-06-24-1015.md",
                 ],
             )
 
@@ -1134,9 +1240,17 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                 [
                     "research/aktualne-wydarzenia-mobile/data/2026-06-24-1015-mobile-news.json",
                     "research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-1015-mobile-brief.pdf",
+                    "research/aktualne-wydarzenia-mobile/pdfs/2026-06-24-1015-newspaper.pdf",
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/female-piper/podcast.mp3",
+                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/female-piper/render.json",
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/male-xtts/podcast.mp3",
+                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/male-xtts/render.json",
+                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/male-xtts/render.log",
+                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/draft.md",
                     "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/script.md",
+                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/sources.md",
+                    "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/tts_variants.json",
+                    "research/aktualne-wydarzenia-mobile/runs/2026-06-24-1015.md",
                 ],
             )
 
@@ -1151,7 +1265,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
         manifest_url: str | None = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
         cloudkit_dry_run: bool = False,
         all_topics: bool = False,
-        extra_env: dict[str, str] | None = None,
+        extra_env: dict[str, str | None] | None = None,
     ) -> subprocess.CompletedProcess[str]:
         self.assertTrue(self.script_path.exists(), f"missing script: {self.script_path}")
         env = os.environ.copy()
@@ -1189,7 +1303,11 @@ printf 'refresh\n' >> "${PAVBOT_TEST_CKTOOL_REFRESH_LOG:?}"
         env["PAVBOT_CKTOOL_REFRESH_COMMAND"] = str(cktool_refresh_stub)
         env["PAVBOT_TEST_CKTOOL_REFRESH_LOG"] = str(repo.parent / "cktool-refresh.log")
         if extra_env:
-            env.update(extra_env)
+            for key, value in extra_env.items():
+                if value is None:
+                    env.pop(key, None)
+                else:
+                    env[key] = value
         if cloudkit_dry_run:
             env["PAVBOT_CLOUDKIT_DRY_RUN"] = "1"
         args = ["bash", str(self.script_path)]

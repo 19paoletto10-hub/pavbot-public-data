@@ -9,7 +9,6 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 manifest_generator="$script_dir/generate_pavbot_manifest.py"
 cloudkit_publisher="${PAVBOT_CLOUDKIT_PUBLISHER:-$script_dir/publish_cloudkit_briefings.py}"
 cktool_refresh_command="${PAVBOT_CKTOOL_REFRESH_COMMAND:-xcrun cktool save-token --type user --method keychain --force}"
-cktool_token_refreshed=0
 jobs_data_validator="$script_dir/validate_jobs_data.py"
 research_data_validator="$script_dir/validate_research_data.py"
 mobile_news_data_validator="$script_dir/validate_mobile_news_data.py"
@@ -54,8 +53,12 @@ Optional environment:
       Diagnostic-only mode. Validates the derived Briefing notification payload
       without calling cktool, then refuses production publish.
   PAVBOT_CKTOOL_REFRESH_COMMAND='xcrun cktool save-token --type user --method keychain --force'
-      Command run once before production CloudKit preflight/publish to refresh
-      the cktool user token. Override only for tests or local diagnostics.
+      Command run before every production CloudKit action to refresh the
+      cktool user token. Override only for tests or local diagnostics.
+  PAVBOT_CKTOOL_USER_TOKEN=<Apple Developer user token>
+      Optional secret for unattended runs. When set and no refresh-command
+      override is provided, the script saves this token to the cktool keychain
+      entry non-interactively before production CloudKit calls.
   PAVBOT_EXPECTED_MOBILE_NEWS_STAMP=YYYY-MM-DD-HHMM
       For research/aktualne-wydarzenia-mobile, require this exact native
       mobileNewsData package to exist and be promoted into the manifest.
@@ -171,6 +174,9 @@ is_allowed_staged_path() {
 is_mobile_public_publish_path() {
   local path="$1"
   case "$path" in
+    "$topic_path/runs/"*.md)
+      return 0
+      ;;
     "$topic_path/data/"*-mobile-news.json)
       return 0
       ;;
@@ -186,6 +192,21 @@ is_mobile_public_publish_path() {
     "$topic_path/podcasts/"*/script.md)
       return 0
       ;;
+    "$topic_path/podcasts/"*/draft.md)
+      return 0
+      ;;
+    "$topic_path/podcasts/"*/sources.md)
+      return 0
+      ;;
+    "$topic_path/podcasts/"*/tts_variants.json)
+      return 0
+      ;;
+    "$topic_path/podcasts/"*/audio/*/render.json)
+      return 0
+      ;;
+    "$topic_path/podcasts/"*/audio/*/render.log)
+      return 0
+      ;;
     *)
       return 1
       ;;
@@ -197,6 +218,10 @@ mobile_public_output_stamp() {
   local name stamp
 
   case "$rel_path" in
+    runs/*.md)
+      name="$(basename "$rel_path")"
+      stamp="${name%.md}"
+      ;;
     data/*-mobile-news.json)
       name="$(basename "$rel_path")"
       stamp="${name%-mobile-news.json}"
@@ -217,6 +242,26 @@ mobile_public_output_stamp() {
       stamp="${rel_path#podcasts/}"
       stamp="${stamp%%/*}"
       ;;
+    podcasts/*/draft.md)
+      stamp="${rel_path#podcasts/}"
+      stamp="${stamp%%/*}"
+      ;;
+    podcasts/*/sources.md)
+      stamp="${rel_path#podcasts/}"
+      stamp="${stamp%%/*}"
+      ;;
+    podcasts/*/tts_variants.json)
+      stamp="${rel_path#podcasts/}"
+      stamp="${stamp%%/*}"
+      ;;
+    podcasts/*/audio/*/render.json)
+      stamp="${rel_path#podcasts/}"
+      stamp="${stamp%%/*}"
+      ;;
+    podcasts/*/audio/*/render.log)
+      stamp="${rel_path#podcasts/}"
+      stamp="${stamp%%/*}"
+      ;;
     *)
       return 1
       ;;
@@ -231,6 +276,15 @@ latest_mobile_public_output_stamp() {
   local src rel_path stamp latest=""
 
   shopt -s nullglob
+  for src in "$src_root"/runs/*.md; do
+    rel_path="${src#"$src_root"/}"
+    stamp="$(mobile_public_output_stamp "$rel_path")" || continue
+    [[ "$stamp" == "$latest_stamp" ]] || continue
+    dest_path="$dest_topic_root/runs/$(basename "$src")"
+    mkdir -p "$(dirname "$dest_path")"
+    cp "$src" "$dest_path"
+  done
+
   for src in "$src_root"/data/*-mobile-news.json; do
     rel_path="${src#"$src_root"/}"
     stamp="$(mobile_public_output_stamp "$rel_path")" || continue
@@ -839,25 +893,36 @@ run_cloudkit_publisher() {
   fi
 }
 
-refresh_cktool_user_token_once() {
-  if [[ "$cktool_token_refreshed" == "1" ]]; then
-    return 0
-  fi
-
+refresh_cktool_user_token() {
   if [[ -z "${cktool_refresh_command//[[:space:]]/}" ]]; then
     die "empty PAVBOT_CKTOOL_REFRESH_COMMAND"
   fi
 
+  if [[ -z "${PAVBOT_CKTOOL_REFRESH_COMMAND:-}" && -n "${PAVBOT_CKTOOL_USER_TOKEN:-}" ]]; then
+    printf 'refreshing cktool user token from PAVBOT_CKTOOL_USER_TOKEN\n'
+    printf 'e\n%s\n' "$PAVBOT_CKTOOL_USER_TOKEN" \
+      | xcrun cktool save-token --type user --method keychain --force \
+      || die "cktool user token refresh failed from PAVBOT_CKTOOL_USER_TOKEN"
+    printf 'cktool user token refreshed\n'
+    return 0
+  fi
+
   if [[ -z "${PAVBOT_CKTOOL_REFRESH_COMMAND:-}" && ! -t 0 ]]; then
     printf 'cktool user token refresh skipped: non-interactive terminal; using existing keychain token\n'
-    cktool_token_refreshed=1
     return 0
   fi
 
   printf 'refreshing cktool user token\n'
   bash -lc "$cktool_refresh_command" || die "cktool user token refresh failed; run manually and retry: xcrun cktool save-token --type user --method keychain --force"
-  cktool_token_refreshed=1
   printf 'cktool user token refreshed\n'
+}
+
+run_cloudkit_publisher_with_fresh_token() {
+  local mode="$1"
+  shift
+
+  refresh_cktool_user_token
+  run_cloudkit_publisher "$mode" "$@"
 }
 
 preflight_cloudkit_briefings_gate() {
@@ -867,8 +932,7 @@ preflight_cloudkit_briefings_gate() {
     run_cloudkit_publisher "dry-run" "${args[@]}" >/dev/null || die "CloudKit dry-run failed"
     die "PAVBOT_CLOUDKIT_DRY_RUN=1 is diagnostic-only; production publish requires real CloudKit Briefing create/update. Unset PAVBOT_CLOUDKIT_DRY_RUN; the publish script refreshes cktool automatically before production CloudKit calls."
   fi
-  refresh_cktool_user_token_once
-  run_cloudkit_publisher "preflight" "${args[@]}" >/dev/null || die "CloudKit preflight failed"
+  run_cloudkit_publisher_with_fresh_token "preflight" "${args[@]}" >/dev/null || die "CloudKit preflight failed"
   printf 'cloudkit briefing/artifact preflight verified\n'
 }
 
@@ -879,9 +943,8 @@ publish_cloudkit_briefings_gate() {
     run_cloudkit_publisher "dry-run" "${args[@]}" >/dev/null || die "CloudKit publication dry-run failed"
     die "PAVBOT_CLOUDKIT_DRY_RUN=1 is diagnostic-only; production publish requires real CloudKit Briefing create/update. Unset PAVBOT_CLOUDKIT_DRY_RUN; the publish script refreshes cktool automatically before production CloudKit calls."
   fi
-  refresh_cktool_user_token_once
-  run_cloudkit_publisher "publish" "${args[@]}" >/dev/null || die "CloudKit publication failed"
-  run_cloudkit_publisher "verify" "${args[@]}" >/dev/null || die "CloudKit verification failed"
+  run_cloudkit_publisher_with_fresh_token "publish" "${args[@]}" >/dev/null || die "CloudKit publication failed"
+  run_cloudkit_publisher_with_fresh_token "verify" "${args[@]}" >/dev/null || die "CloudKit verification failed"
   printf 'cloudkit briefing/artifact publication verified\n'
 }
 
@@ -892,9 +955,8 @@ publish_cloudkit_all_topics_gate() {
     run_cloudkit_publisher "dry-run" "${args[@]}" >/dev/null || die "CloudKit all-topics dry-run failed"
     die "PAVBOT_CLOUDKIT_DRY_RUN=1 is diagnostic-only; production publish requires real CloudKit Briefing create/update. Unset PAVBOT_CLOUDKIT_DRY_RUN; the publish script refreshes cktool automatically before production CloudKit calls."
   fi
-  refresh_cktool_user_token_once
-  run_cloudkit_publisher "publish" "${args[@]}" >/dev/null || die "CloudKit all-topics publication failed"
-  run_cloudkit_publisher "verify" "${args[@]}" >/dev/null || die "CloudKit all-topics verification failed"
+  run_cloudkit_publisher_with_fresh_token "publish" "${args[@]}" >/dev/null || die "CloudKit all-topics publication failed"
+  run_cloudkit_publisher_with_fresh_token "verify" "${args[@]}" >/dev/null || die "CloudKit all-topics verification failed"
   printf 'cloudkit all-topics publication verified\n'
 }
 
@@ -1058,6 +1120,51 @@ copy_mobile_public_outputs_to_worktree() {
   done
 
   for src in "$src_root"/podcasts/*/script.md; do
+    rel_path="${src#"$src_root"/}"
+    stamp="$(mobile_public_output_stamp "$rel_path")" || continue
+    [[ "$stamp" == "$latest_stamp" ]] || continue
+    dest_path="$dest_topic_root/${src#"$src_root"/}"
+    mkdir -p "$(dirname "$dest_path")"
+    cp "$src" "$dest_path"
+  done
+
+  for src in "$src_root"/podcasts/*/draft.md; do
+    rel_path="${src#"$src_root"/}"
+    stamp="$(mobile_public_output_stamp "$rel_path")" || continue
+    [[ "$stamp" == "$latest_stamp" ]] || continue
+    dest_path="$dest_topic_root/${src#"$src_root"/}"
+    mkdir -p "$(dirname "$dest_path")"
+    cp "$src" "$dest_path"
+  done
+
+  for src in "$src_root"/podcasts/*/sources.md; do
+    rel_path="${src#"$src_root"/}"
+    stamp="$(mobile_public_output_stamp "$rel_path")" || continue
+    [[ "$stamp" == "$latest_stamp" ]] || continue
+    dest_path="$dest_topic_root/${src#"$src_root"/}"
+    mkdir -p "$(dirname "$dest_path")"
+    cp "$src" "$dest_path"
+  done
+
+  for src in "$src_root"/podcasts/*/tts_variants.json; do
+    rel_path="${src#"$src_root"/}"
+    stamp="$(mobile_public_output_stamp "$rel_path")" || continue
+    [[ "$stamp" == "$latest_stamp" ]] || continue
+    dest_path="$dest_topic_root/${src#"$src_root"/}"
+    mkdir -p "$(dirname "$dest_path")"
+    cp "$src" "$dest_path"
+  done
+
+  for src in "$src_root"/podcasts/*/audio/*/render.json; do
+    rel_path="${src#"$src_root"/}"
+    stamp="$(mobile_public_output_stamp "$rel_path")" || continue
+    [[ "$stamp" == "$latest_stamp" ]] || continue
+    dest_path="$dest_topic_root/${src#"$src_root"/}"
+    mkdir -p "$(dirname "$dest_path")"
+    cp "$src" "$dest_path"
+  done
+
+  for src in "$src_root"/podcasts/*/audio/*/render.log; do
     rel_path="${src#"$src_root"/}"
     stamp="$(mobile_public_output_stamp "$rel_path")" || continue
     [[ "$stamp" == "$latest_stamp" ]] || continue

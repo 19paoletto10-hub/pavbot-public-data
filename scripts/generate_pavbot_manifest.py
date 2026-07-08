@@ -139,10 +139,17 @@ def has_topic_artifact_fallback(topic_dir: Path) -> bool:
 
 def has_mobile_public_artifact(topic_dir: Path) -> bool:
     public_globs = (
+        "runs/*.md",
         "data/*-mobile-news.json",
         "pdfs/*-mobile-brief.pdf",
+        "pdfs/*-newspaper.pdf",
         "podcasts/*/script.md",
+        "podcasts/*/draft.md",
+        "podcasts/*/sources.md",
+        "podcasts/*/tts_variants.json",
         "podcasts/*/audio/*/podcast.mp3",
+        "podcasts/*/audio/*/render.json",
+        "podcasts/*/audio/*/render.log",
     )
     return any(any(topic_dir.glob(pattern)) for pattern in public_globs)
 
@@ -238,10 +245,16 @@ def collect_mobile_public_artifacts(
     topic_dir: Path,
     slug: str,
 ) -> None:
+    for path in sorted((topic_dir / "runs").glob("*.md")):
+        add_artifact(artifacts, repo_root, raw_base_url, path, slug, "run")
+
     for path in sorted((topic_dir / "data").glob("*-mobile-news.json")):
         add_artifact(artifacts, repo_root, raw_base_url, path, slug, "mobileNewsData")
 
     for path in sorted((topic_dir / "pdfs").glob("*-mobile-brief.pdf")):
+        add_artifact(artifacts, repo_root, raw_base_url, path, slug, "pdf")
+
+    for path in sorted((topic_dir / "pdfs").glob("*-newspaper.pdf")):
         add_artifact(artifacts, repo_root, raw_base_url, path, slug, "pdf")
 
     podcasts_dir = topic_dir / "podcasts"
@@ -249,15 +262,21 @@ def collect_mobile_public_artifacts(
         return
 
     for date_dir in sorted(path for path in podcasts_dir.iterdir() if path.is_dir()):
-        add_artifact(
-            artifacts,
-            repo_root,
-            raw_base_url,
-            date_dir / "script.md",
-            slug,
-            "podcastScript",
-            forced_date=parse_date_parts(date_dir.name),
-        )
+        for name, artifact_type in (
+            ("script.md", "podcastScript"),
+            ("draft.md", "podcastDraft"),
+            ("sources.md", "podcastSources"),
+            ("tts_variants.json", "podcastTtsVariants"),
+        ):
+            add_artifact(
+                artifacts,
+                repo_root,
+                raw_base_url,
+                date_dir / name,
+                slug,
+                artifact_type,
+                forced_date=parse_date_parts(date_dir.name),
+            )
 
         for path in sorted(date_dir.glob("audio/*/podcast.mp3")):
             add_artifact(
@@ -267,6 +286,28 @@ def collect_mobile_public_artifacts(
                 path,
                 slug,
                 "podcastAudioVariant",
+                forced_date=parse_date_parts(date_dir.name),
+            )
+
+        for path in sorted(date_dir.glob("audio/*/render.json")):
+            add_artifact(
+                artifacts,
+                repo_root,
+                raw_base_url,
+                path,
+                slug,
+                "podcastRender",
+                forced_date=parse_date_parts(date_dir.name),
+            )
+
+        for path in sorted(date_dir.glob("audio/*/render.log")):
+            add_artifact(
+                artifacts,
+                repo_root,
+                raw_base_url,
+                path,
+                slug,
+                "podcastArtifact",
                 forced_date=parse_date_parts(date_dir.name),
             )
 

@@ -529,7 +529,9 @@ def cktool_auth_hint(stderr: str) -> str | None:
         return None
     return (
         "CloudKit database operations require a fresh cktool user token. "
-        "Run: xcrun cktool save-token --type user --method keychain --force. "
+        "For unattended automations, provide a fresh Apple Developer user token "
+        "as PAVBOT_CKTOOL_USER_TOKEN and rerun the publish script. For manual "
+        "repair, run: xcrun cktool save-token --type user --method keychain --force. "
         "Before retrying, unset CLOUDKIT_USER_TOKEN CLOUDKIT_MANAGEMENT_TOKEN PAVBOT_CLOUDKIT_DRY_RUN "
         "so stale environment tokens or diagnostic mode cannot override Keychain."
     )

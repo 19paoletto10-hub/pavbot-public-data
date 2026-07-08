@@ -755,17 +755,21 @@ The current active automations are:
             ]["title"],
             "Podcast audio - male xtts",
         )
-        self.assertNotIn(
-            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/tts_variants.json",
-            by_path,
+        self.assertEqual(
+            by_path[
+                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/tts_variants.json"
+            ]["type"],
+            "podcastTtsVariants",
         )
         self.assertNotIn(
             "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/female-piper/podcast.raw.mp3",
             by_path,
         )
-        self.assertNotIn(
-            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/male-xtts/render.log",
-            by_path,
+        self.assertEqual(
+            by_path[
+                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23/audio/male-xtts/render.log"
+            ]["type"],
+            "podcastArtifact",
         )
 
     def test_manifest_collects_only_public_mobile_pdf_and_audio_artifacts(self) -> None:
@@ -834,6 +838,7 @@ The current active automations are:
                 encoding="utf-8",
             )
             (podcast_dir / "script.md").write_text("# Script\n", encoding="utf-8")
+            (podcast_dir / "draft.md").write_text("# Draft\n", encoding="utf-8")
             (podcast_dir / "sources.md").write_text("# Sources\n", encoding="utf-8")
             (podcast_dir / "tts_variants.json").write_text(
                 '{"language": "pl"}\n',
@@ -849,25 +854,22 @@ The current active automations are:
         by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
         expected = {
             "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-1015-mobile-brief.pdf": "pdf",
+            "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-1015-newspaper.pdf": "pdf",
             "research/aktualne-wydarzenia-mobile/data/2026-06-23-1015-mobile-news.json": "mobileNewsData",
+            "research/aktualne-wydarzenia-mobile/runs/2026-06-23-1015.md": "run",
             "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/script.md": "podcastScript",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/draft.md": "podcastDraft",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/sources.md": "podcastSources",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/tts_variants.json": "podcastTtsVariants",
             "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/podcast.mp3": "podcastAudioVariant",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/render.json": "podcastRender",
+            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/render.log": "podcastArtifact",
         }
         for path, artifact_type in expected.items():
             with self.subTest(path=path):
                 self.assertEqual(by_path[path]["type"], artifact_type)
                 self.assertEqual(by_path[path]["date"], "2026-06-23")
                 self.assertEqual(by_path[path]["time"], "10:15")
-
-        for path in (
-            "research/aktualne-wydarzenia-mobile/runs/2026-06-23-1015.md",
-            "research/aktualne-wydarzenia-mobile/pdfs/2026-06-23-1015-newspaper.pdf",
-            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/sources.md",
-            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/tts_variants.json",
-            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/render.json",
-        ):
-            with self.subTest(path=path):
-                self.assertNotIn(path, by_path)
 
         self.assertNotIn(
             "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/podcast.raw.mp3",

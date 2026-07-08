@@ -114,16 +114,19 @@ override, `PAVBOT_RAW_BASE_URL`, the existing manifest `rawBaseUrl`, or the
 GitHub `origin` remote. The resolved URL must match the public raw manifest URL
 used in iOS `Settings -> Manifest URL`; the iOS app does not send this value
 back to Codex. The publish script runs `python3 scripts/generate_pavbot_manifest.py`
-in a temporary clean worktree, refreshes the cktool user token once before
-production CloudKit preflight/publish, commits only generated outputs (`runs/`,
+in a temporary clean worktree, refreshes the cktool user token before every
+production CloudKit action, commits only generated outputs (`runs/`,
 `pdfs/`, `podcasts/`, `index.md`, `backlog.md`) plus
 `public/pavbot-manifest.json`, and pushes to `origin/main`.
-Because Apple user-token creation is interactive, non-interactive automation
-runs skip the prompt-only refresh and use the existing keychain token. If
-CloudKit still rejects that token, run
-`xcrun cktool save-token --type user --method keychain --force` manually in a
-local terminal, paste the Apple Developer user token, then rerun the same
-publish script.
+Because Apple user-token creation is interactive, fully unattended automation
+runs should provide a fresh Apple Developer user token as
+`PAVBOT_CKTOOL_USER_TOKEN`; the publish script saves it to the cktool keychain
+entry non-interactively before CloudKit calls. If that secret is not set,
+non-interactive runs skip the prompt-only refresh and use the existing keychain
+token. If CloudKit still rejects the token, create a fresh Apple Developer user
+token with `xcrun cktool save-token --type user --method keychain --force` in a
+local terminal, expose that token as `PAVBOT_CKTOOL_USER_TOKEN` for unattended
+runs, then rerun the same publish script.
 After the push, run `git fetch origin` and verify
 `origin/main:public/pavbot-manifest.json` plus the current topic output paths
 for the same package key or run stamp. Topic-specific prompts should define the
