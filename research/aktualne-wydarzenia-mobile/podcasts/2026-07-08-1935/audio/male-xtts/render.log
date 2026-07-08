@@ -6,3 +6,87 @@
   self.speakers = torch.load(speaker_file_path)
 /Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/utils/io.py:54: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
   return torch.load(f, map_location=map_location, **kwargs)
+ > Using model: xtts
+ > Text splitted to sentences.
+['Dobry wieczór.', 'Jest środa, ósmy lipca dwa tysiące dwudziestego szóstego roku.', 'To jest wieczorny mobile news brief Pavbota.', 'Dzisiejszy dzień zaczął się od ostrzeżeń, zapowiedzi i kilku ważnych pytań.', 'Kończy się już znacznie bardziej konkretnie.', 'Państwo i sojusz przestały mówić „zaraz pokażemy slajdy”, a zaczęły mówić „oto liczby, terminy i narzędzia”.', 'I właśnie to jest najważniejsza zmiana tego wieczoru.', 'Zacznijmy od tła, bo ono nie zniknęło.', 'Pogoda nadal jest ważna, ale nie dołożyła wieczorem nowej szerokiej eskalacji ponad poranny pakiet.', 'RCB utrzymuje w raporcie dobowym ostrzeżenia wiatrowe na północy i suszę hydrologiczną w całym kraju.', 'IMGW opisuje silny wiatr wzdłuż Wybrzeża, wahania poziomu morza i raczej opadanie albo wyrównany przebieg stanów wody na rzekach.', 'Krótko mówiąc: to już nie jest headline dnia, ale nadal nie jest też moment na pełne „temat zamknięty”.', 'Pogoda zeszła z trybu awantura, ale jeszcze nie do trybu piknik.', 'Prawdziwy ciężar dnia przesunął się do instytucji państwa.', 'Pierwszy przykład to Państwowa Inspekcja Pracy.', 'Rano mówiliśmy głównie o tym, że reforma weszła w życie.', 'Wieczorem widać już więcej praktyki.', 'PIP i resort pracy pokazują, że nowy model ma działać nie tylko na podstawie skarg i intuicji, ale także dzięki wymianie danych z ZUS i Krajową Administracją Skarbową.', 'Inspekcja podkreśla też, że nowe przepisy nie zmieniają samej definicji stosunku pracy.', 'Zmieniają narzędzia, tempo i zasięg kontroli.', 'To ważne, bo przesuwa ciężar z tego, co wpisano w nagłówku umowy, na to, jak praca naprawdę wyglądała.', 'To oznacza też coś prostego dla rynku: jeśli ktoś działa uczciwie, to dostaje jasność.', 'Jeśli ktoś dotąd liczył, że papier wszystko przykryje, to właśnie dostał gorszy wieczór niż reszta kraju.', 'Drugi duży krajowy temat to zdrowie.', 'I tutaj zmiana między rankiem a wieczorem jest bardzo wyraźna.', 'Premier zapowiadał rozwiązania systemowe, a Ministerstwo Zdrowia opublikowało już konkretny pakiet.', 'Najmocniejsze elementy to przyspieszenie Centralnej e-Rejestracji dla wszystkich trzydziestu dziewięciu specjalizacji do końca dwa tysiące dwudziestego siódmego roku, uruchomienie Centralnej e-Kolejki do planowych zabiegów szpitalnych, a także większa przejrzystość zatrudnienia i dostępu do świadczeń.', 'W pakiecie są też kary do miliona złotych za brak przejrzystości oraz propozycje ograniczające najbardziej agresywne anomalie płacowe i organizacyjne.', 'To nie jest może temat, który robi największy polityczny hałas, ale jest jednym z tych, które najmocniej dotykają codziennego życia.', 'Bo pacjenta mniej interesuje efektowny cytat z konferencji, a bardziej to, czy system będzie czytelniejszy, kolejka bardziej uczciwa, a dostęp mniej zależny od chaosu i lokalnych układów.', 'W warstwie stricte politycznej widać dziś próbę spięcia dwóch porządków.', 'Donald Tusk utrzymał twardą linię, że w interesie Polski jest, aby Ukraina nie przegrała tej wojny.', 'Jednocześnie jego obóz chce pokazać, że bezpieczeństwo zewnętrzne nie jest wymówką do odkładania porządków wewnątrz państwa.', 'Wieczorny pakiet zdrowotny dobrze wpisuje się w ten przekaz: z jednej strony geopolityka, z drugiej strony system, który ma wreszcie działać trochę mniej po polsku, a trochę bardziej po ludzku.', 'Równolegle w Ankarze prezydent Karol Nawrocki pilnował klasycznego polskiego zestawu priorytetów.', 'Solidarność sojusznicza, infrastruktura wschodniej flanki, relacje ze Stanami Zjednoczonymi i trwała obecność amerykańskich żołnierzy w Polsce.', 'To nie jest opowieść odkrywcza, ale akurat w NATO odkrywczość nie zawsze jest zaletą.', 'Czasem najważniejsze jest konsekwentne powtarzanie tego, co chce się potem dostać w decyzjach i budżetach.', 'I właśnie z Ankary przychodzi dziś najmocniejszy międzynarodowy konkret.', 'NATO opublikowało deklarację szczytu.', 'Najważniejsza nowa liczba dotyczy Ukrainy: sojusznicy deklarują siedemdziesiąt miliardów euro wsparcia wojskowego, pomocy i szkoleń w dwa tysiące dwudziestym szóstym roku.', 'Co równie ważne, mówią też o utrzymaniu co najmniej równoważnego poziomu zobowiązań w roku dwa tysiące dwudziestym siódmym.', 'To już nie jest zwykłe „stoimy po waszej stronie”, tylko kwota i horyzont, które można potem sprawdzać bez lupy i bez poezji.', 'Drugi ważny punkt z Ankary to produkcja i zakupy.', 'Deklaracja mówi o ponad stu trzydziestu dziewięciu miliardach dolarów wzrostu inwestycji europejskich sojuszników i Kanady w podstawowe wymagania obronne w dwa tysiące dwudziestym piątym roku oraz o ponad pięćdziesięciu miliardach dolarów nowych zamówień ogłoszonych w Ankarze.', 'To pokazuje, że NATO coraz mniej opowiada o samym odstraszaniu, a coraz bardziej o fabrykach, łańcuchach dostaw i zdolności dostarczenia sprzętu na czas.', 'Innymi słowy: mniej ceremonii, więcej arkusza kalkulacyjnego.', 'A w obecnej sytuacji bezpieczeństwa to akurat komplement.', 'W technologii też nie chodzi dziś o fajerwerki, tylko o infrastrukturę i kontrolę.', 'Komisja Europejska rozwija plan łączący cyberbezpieczeństwo ze sztuczną inteligencją.', 'Chodzi o to, żeby AI była wdrażana bezpiecznie i odpowiedzialnie, a nie na zasadzie „najpierw wypuśćmy, potem zobaczymy, kto będzie gasił pożar”.', 'Plan ma być spięty z już istniejącymi ramami, takimi jak AI Act, NIS dwa, DORA czy Cyber Resilience Act.', 'To znaczy, że Bruksela nie buduje osobnego świata dla AI, tylko próbuje ją wszyć w szerszy system odpowiedzialności i odporności.', 'Do tego Komisja otworzyła dziś konsultację o suwerenności danych Unii Europejskiej.', 'To może brzmieć technicznie, ale chodzi o bardzo praktyczne pytania: gdzie są europejskie dane, kto ma do nich dostęp, jakie są zależności od państw trzecich i czy Europa umie narzucić własne reguły w chmurze, AI i usługach cyfrowych.', 'Czyli jeśli cyber-AI mówi, jak bezpiecznie używać modeli, to ta konsultacja pyta, gdzie w ogóle trzymać rzeczy, których te modele będą dotykać.', 'Najkrótsze podsumowanie tego wieczoru jest więc takie: pogoda została w tle, ale nie zniknęła.', 'PIP weszła w etap realnego egzekwowania.', 'Ministerstwo Zdrowia przeszło z zapowiedzi do konkretnego pakietu.', 'NATO zamknęło szczyt kwotą dla Ukrainy i nowymi zakupami, a Bruksela jednocześnie porządkuje AI, cyber i dane.', 'To jest dzień, w którym mniej było wielkich słów, a więcej mechaniki państwa i sojuszu.', 'I szczerze mówiąc, to całkiem zdrowy objaw.', 'To był wieczorny mobile news brief Pavbota.', 'Spokojnego wieczoru i do usłyszenia.']
+Traceback (most recent call last):
+  File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 105, in <module>
+    main()
+  File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 96, in main
+    tts.tts_to_file(**kwargs)
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/api.py", line 334, in tts_to_file
+    wav = self.tts(
+          ^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/api.py", line 276, in tts
+    wav = self.synthesizer.tts(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/utils/synthesizer.py", line 386, in tts
+    outputs = self.tts_model.synthesize(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/models/xtts.py", line 412, in synthesize
+    return self.inference(text, language, gpt_cond_latent, speaker_embedding, **settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/models/xtts.py", line 541, in inference
+    gpt_codes = self.gpt.generate(
+                ^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/gpt.py", line 590, in generate
+    gen = self.gpt_inference.generate(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/generation/utils.py", line 1648, in generate
+    return self.sample(
+           ^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/generation/utils.py", line 2730, in sample
+    outputs = self(
+              ^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/gpt_inference.py", line 97, in forward
+    transformer_outputs = self.transformer(
+                          ^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 900, in forward
+    outputs = block(
+              ^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 390, in forward
+    attn_outputs = self.attn(
+                   ^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 312, in forward
+    query, key, value = self.c_attn(hidden_states).split(self.split_size, dim=2)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/pytorch_utils.py", line 106, in forward
+    x = torch.addmm(self.bias, x.view(-1, x.size(-1)), self.weight)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt

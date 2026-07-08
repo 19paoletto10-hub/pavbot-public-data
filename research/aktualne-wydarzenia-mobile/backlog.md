@@ -73,6 +73,10 @@
 - 2026-07-08: Komisja Europejska otworzyła konsultację o suwerenności danych,
   poszerzając dzisiejszy wątek technologiczny z cyber-AI na zależności danych i
   dostęp państw trzecich.
+- 2026-07-08: W runie `2026-07-08-1935` wariant `female-piper` ponownie
+  wyrenderował poprawny MP3, natomiast `male-xtts` znów zakończył się
+  kontrolowanym przerwaniem po długim CPU; stan zapisano w
+  `podcasts/2026-07-08-1935/tts_variants.json` oraz `audio/male-xtts/render.log`.
 
 ## Done
 

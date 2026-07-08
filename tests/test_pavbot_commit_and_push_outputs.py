@@ -27,7 +27,7 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
             cloudkit_log = (repo.parent / "cloudkit-publisher.log").read_text(encoding="utf-8").splitlines()
             self.assertEqual(cloudkit_log, ["preflight", "publish", "verify"])
             cktool_refresh_log = (repo.parent / "cktool-refresh.log").read_text(encoding="utf-8").splitlines()
-            self.assertEqual(cktool_refresh_log, ["refresh"])
+            self.assertEqual(cktool_refresh_log, ["refresh", "refresh", "refresh"])
             changed_files = self.git(
                 repo,
                 "diff-tree",
@@ -149,11 +149,15 @@ cat >> "${PAVBOT_TEST_XCRUN_STDIN_LOG:?}"
             self.assertEqual(result.returncode, 0, result.stderr)
             self.assertEqual(
                 (repo.parent / "xcrun-args.log").read_text(encoding="utf-8").splitlines(),
-                ["cktool save-token --type user --method keychain --force"],
+                [
+                    "cktool save-token --type user --method keychain --force",
+                    "cktool save-token --type user --method keychain --force",
+                    "cktool save-token --type user --method keychain --force",
+                ],
             )
             self.assertEqual(
                 (repo.parent / "xcrun-stdin.log").read_text(encoding="utf-8").splitlines(),
-                ["e", "fresh-user-token"],
+                ["e", "fresh-user-token", "e", "fresh-user-token", "e", "fresh-user-token"],
             )
             self.assertFalse((repo.parent / "cktool-refresh.log").exists())
 
@@ -708,7 +712,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             cloudkit_log = (repo.parent / "cloudkit-publisher.log").read_text(encoding="utf-8").splitlines()
             self.assertEqual(cloudkit_log, ["preflight", "publish", "verify", "publish", "verify"])
             cktool_refresh_log = (repo.parent / "cktool-refresh.log").read_text(encoding="utf-8").splitlines()
-            self.assertEqual(cktool_refresh_log, ["refresh", "refresh"])
+            self.assertEqual(cktool_refresh_log, ["refresh", "refresh", "refresh", "refresh", "refresh"])
             self.assertEqual(
                 self.git(repo, "rev-parse", "HEAD", stdout=True).strip(),
                 head_after_first_publish,
@@ -833,7 +837,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             cloudkit_log = (repo.parent / "cloudkit-publisher.log").read_text(encoding="utf-8").splitlines()
             self.assertEqual(cloudkit_log, ["publish", "verify"])
             cktool_refresh_log = (repo.parent / "cktool-refresh.log").read_text(encoding="utf-8").splitlines()
-            self.assertEqual(cktool_refresh_log, ["refresh"])
+            self.assertEqual(cktool_refresh_log, ["refresh", "refresh"])
             self.assertEqual(self.git(repo, "rev-parse", "HEAD", stdout=True).strip(), head_before)
 
     def test_uses_existing_manifest_raw_base_url_when_manifest_env_is_missing(self) -> None:
