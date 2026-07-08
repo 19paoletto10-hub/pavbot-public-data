@@ -118,6 +118,138 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 "1",
             )
 
+    def test_llm_jobs_isolated_publish_refuses_latest_package_without_jobs_data(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "llm-ai-jobs-wroclaw",
+                "data/2026-07-07-1732-jobs.json",
+                json.dumps(self.valid_jobs_data_payload_for("2026-07-07", "17:32"), ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "llm-ai-jobs-wroclaw",
+                "runs/2026-07-08-1544.md",
+                "# LLM/AI Jobs Wrocław\n\nDate: 2026-07-08 15:44 CEST\nStatus: Material update\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "llm-ai-jobs-wroclaw",
+                "pdfs/2026-07-08-1544-llm-ai-jobs-wroclaw.pdf",
+                "%PDF jobs report",
+            )
+
+            result = self.run_publish_script(repo, "research/llm-ai-jobs-wroclaw", isolated=True)
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("missing jobsData for latest jobs package", result.stderr)
+            self.assertIn(
+                "research/llm-ai-jobs-wroclaw/data/2026-07-08-1544-jobs.json",
+                result.stderr,
+            )
+            self.assertFalse((repo.parent / "cloudkit-publisher.log").exists())
+
+    def test_llm_jobs_expected_stamp_refuses_publish_without_matching_jobs_data(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "llm-ai-jobs-wroclaw",
+                "data/2026-07-07-1732-jobs.json",
+                json.dumps(self.valid_jobs_data_payload_for("2026-07-07", "17:32"), ensure_ascii=False) + "\n",
+            )
+
+            result = self.run_publish_script(
+                repo,
+                "research/llm-ai-jobs-wroclaw",
+                isolated=True,
+                extra_env={"PAVBOT_EXPECTED_JOBS_STAMP": "2026-07-08-1544"},
+            )
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("missing jobsData for expected jobs package", result.stderr)
+            self.assertIn(
+                "research/llm-ai-jobs-wroclaw/data/2026-07-08-1544-jobs.json",
+                result.stderr,
+            )
+            self.assertFalse((repo.parent / "cloudkit-publisher.log").exists())
+
+    def test_llm_jobs_isolated_publish_refreshes_stale_manifest_when_outputs_are_unchanged(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "llm-ai-jobs-wroclaw",
+                "runs/2026-07-08-1544.md",
+                "# LLM/AI Jobs Wrocław\n\nDate: 2026-07-08 15:44 CEST\nStatus: Material update\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "llm-ai-jobs-wroclaw",
+                "data/2026-07-08-1544-jobs.json",
+                json.dumps(self.valid_jobs_data_payload_for("2026-07-08", "15:44"), ensure_ascii=False) + "\n",
+            )
+            self.write_existing_manifest(repo, "https://raw.githubusercontent.com/example/pavbot/main/")
+            self.git(repo, "add", ".")
+            self.git(repo, "commit", "-m", "seed jobs output with stale manifest")
+            self.git(repo, "push", "origin", "main")
+            head_before = self.git(repo, "rev-parse", "origin/main", stdout=True).strip()
+
+            result = self.run_publish_script(repo, "research/llm-ai-jobs-wroclaw", isolated=True)
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertIn("pushed pavbot outputs", result.stdout)
+            head_after = self.git(repo, "rev-parse", "origin/main", stdout=True).strip()
+            self.assertNotEqual(head_before, head_after)
+            changed_files = self.git(
+                repo,
+                "diff-tree",
+                "--no-commit-id",
+                "--name-only",
+                "-r",
+                "origin/main",
+                stdout=True,
+            ).splitlines()
+            self.assertEqual(changed_files, ["public/pavbot-manifest.json"])
+            manifest = json.loads(
+                self.git(repo, "show", "origin/main:public/pavbot-manifest.json", stdout=True)
+            )
+            by_path = {artifact["path"]: artifact for artifact in manifest["artifacts"]}
+            self.assertEqual(
+                by_path["research/llm-ai-jobs-wroclaw/data/2026-07-08-1544-jobs.json"]["type"],
+                "jobsData",
+            )
+
+    def test_llm_jobs_expected_stamp_publishes_matching_jobs_data(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "llm-ai-jobs-wroclaw",
+                "data/2026-07-07-1732-jobs.json",
+                json.dumps(self.valid_jobs_data_payload_for("2026-07-07", "17:32"), ensure_ascii=False) + "\n",
+            )
+            self.write_topic_artifact(
+                repo,
+                "llm-ai-jobs-wroclaw",
+                "data/2026-07-08-1544-jobs.json",
+                json.dumps(self.valid_jobs_data_payload_for("2026-07-08", "15:44"), ensure_ascii=False) + "\n",
+            )
+
+            result = self.run_publish_script(
+                repo,
+                "research/llm-ai-jobs-wroclaw",
+                isolated=True,
+                extra_env={"PAVBOT_EXPECTED_JOBS_STAMP": "2026-07-08-1544"},
+            )
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            manifest = json.loads(
+                self.git(repo, "show", "origin/main:public/pavbot-manifest.json", stdout=True)
+            )
+            paths = {artifact["path"] for artifact in manifest["artifacts"]}
+            self.assertIn(
+                "research/llm-ai-jobs-wroclaw/data/2026-07-08-1544-jobs.json",
+                paths,
+            )
+
     def test_publish_uses_cktool_user_token_secret_without_refresh_command_override(self) -> None:
         with self.temporary_repo() as repo:
             self.write_valid_research_outputs(repo, "tech-news", "2026-06-23")
@@ -1392,11 +1524,14 @@ printf 'refresh\n' >> "${PAVBOT_TEST_CKTOOL_REFRESH_LOG:?}"
         )
 
     def valid_jobs_data_payload(self) -> dict:
+        return self.valid_jobs_data_payload_for("2026-06-25", "01:41")
+
+    def valid_jobs_data_payload_for(self, run_date: str, run_time: str) -> dict:
         return {
             "schemaVersion": 1,
             "status": "Material update",
-            "runDate": "2026-06-25",
-            "runTime": "01:41",
+            "runDate": run_date,
+            "runTime": run_time,
             "executiveSummary": "Runda przyniosła nowe role LLM/AI.",
             "opportunities": [
                 {

@@ -149,8 +149,8 @@ Full guide: `docs/live-ios-notifications-contabo.md`.
 - Create an APNs Auth Key in Apple Developer.
 - Set `APNS_TEAM_ID=SP774TZZU8`, `APNS_KEY_ID`, `APNS_BUNDLE_ID`, and
   `APNS_PRIVATE_KEY_PATH`.
-- Use `APNS_ENV=sandbox` for Xcode-installed `PavbotViewer` builds and
-  `APNS_ENV=production` for TestFlight/App Store builds.
+- Use `APNS_ENV=production` for current Pavbot builds; the app target signs
+  with the production APNs environment.
 - Use Apple Push Notifications Console with the APNs token copied from the iOS
   app Settings or Diagnostics screen to validate delivery before relying on
   GitHub webhook-driven pushes.

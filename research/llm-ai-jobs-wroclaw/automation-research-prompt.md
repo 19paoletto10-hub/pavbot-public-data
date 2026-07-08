@@ -111,7 +111,7 @@ preflight/publish. Bez tego sekretu nieinteraktywny run uzyje tylko
 istniejacego tokenu z keychain i moze wymagac odnowienia sekretu, jesli Apple
 odrzuci sesje.
 Nastepnie uruchom:
-`scripts/pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw`.
+`PAVBOT_EXPECTED_JOBS_STAMP="$RUN_STAMP" scripts/pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw`.
 
 Po publishu wykonaj obowiazkowy etap `post-publish verification`. Uzyj tego
 samego `RUN_STAMP=YYYY-MM-DD-HHMM`, ktorego uzyles do nazw plikow, a nastepnie

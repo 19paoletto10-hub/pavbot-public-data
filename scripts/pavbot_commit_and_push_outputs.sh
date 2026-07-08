@@ -62,6 +62,9 @@ Optional environment:
   PAVBOT_EXPECTED_MOBILE_NEWS_STAMP=YYYY-MM-DD-HHMM
       For research/aktualne-wydarzenia-mobile, require this exact native
       mobileNewsData package to exist and be promoted into the manifest.
+  PAVBOT_EXPECTED_JOBS_STAMP=YYYY-MM-DD-HHMM
+      For research/llm-ai-jobs-wroclaw, require this exact native jobsData
+      package to exist and be promoted into the manifest.
 EOF
 }
 
@@ -427,6 +430,175 @@ validate_jobs_data_outputs() {
   fi
 
   python3 "$jobs_data_validator" "${files[@]}"
+}
+
+latest_jobs_data_rel_path() {
+  if [[ "$topic_path" != "research/llm-ai-jobs-wroclaw" ]]; then
+    return 1
+  fi
+
+  if [[ ! -d "$topic_path/data" ]]; then
+    return 1
+  fi
+
+  local latest
+  latest="$(
+    find "$topic_path/data" -type f -name '*-jobs.json' 2>/dev/null \
+      | LC_ALL=C sort \
+      | tail -n 1
+  )"
+  [[ -n "$latest" ]] || return 1
+  printf '%s' "$latest"
+}
+
+expected_jobs_stamp() {
+  if [[ "$topic_path" != "research/llm-ai-jobs-wroclaw" ]]; then
+    return 1
+  fi
+
+  local stamp="${PAVBOT_EXPECTED_JOBS_STAMP:-}"
+  [[ -n "$stamp" ]] || return 1
+
+  if [[ ! "$stamp" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}-[0-9]{4}$ ]]; then
+    die "invalid PAVBOT_EXPECTED_JOBS_STAMP: $stamp (expected YYYY-MM-DD-HHMM)"
+  fi
+
+  printf '%s' "$stamp"
+}
+
+jobs_data_rel_path_for_stamp() {
+  local stamp="$1"
+  printf '%s/data/%s-jobs.json' "$topic_path" "$stamp"
+}
+
+manifest_contains_jobs_data_path() {
+  local rel_path="$1"
+  local manifest_path="public/pavbot-manifest.json"
+  [[ -f "$manifest_path" ]] || return 1
+
+  python3 - "$manifest_path" "$rel_path" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+manifest_path = Path(sys.argv[1])
+rel_path = sys.argv[2]
+
+try:
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+except Exception:
+    raise SystemExit(1)
+
+for artifact in manifest.get("artifacts", []):
+    if (
+        artifact.get("path") == rel_path
+        and artifact.get("topic") == "llm-ai-jobs-wroclaw"
+        and artifact.get("type") == "jobsData"
+    ):
+        raise SystemExit(0)
+
+raise SystemExit(1)
+PY
+}
+
+require_latest_jobs_data_in_manifest() {
+  local latest_rel_path
+  latest_rel_path="$(latest_jobs_data_rel_path 2>/dev/null || true)"
+  [[ -n "$latest_rel_path" ]] || return 0
+
+  if ! manifest_contains_jobs_data_path "$latest_rel_path"; then
+    die "generated manifest missing jobsData for $latest_rel_path"
+  fi
+}
+
+require_expected_jobs_data_in_manifest() {
+  local expected_stamp expected_rel_path
+  expected_stamp="$(expected_jobs_stamp 2>/dev/null || true)"
+  [[ -n "$expected_stamp" ]] || return 0
+
+  expected_rel_path="$(jobs_data_rel_path_for_stamp "$expected_stamp")"
+  if ! manifest_contains_jobs_data_path "$expected_rel_path"; then
+    die "generated manifest missing expected jobsData for $expected_rel_path"
+  fi
+}
+
+latest_jobs_package_stamp() {
+  if [[ "$topic_path" != "research/llm-ai-jobs-wroclaw" ]]; then
+    return 1
+  fi
+
+  python3 - "$topic_path" <<'PY'
+import re
+import sys
+from pathlib import Path
+
+topic = Path(sys.argv[1])
+stamp_re = re.compile(r"(?P<date>\d{4}-\d{2}-\d{2})(?:-(?P<time>\d{4}))?")
+stamps: set[str] = set()
+
+for base in ("runs", "data", "pdfs"):
+    root = topic / base
+    if not root.exists():
+        continue
+    for path in root.rglob("*"):
+        if not path.is_file():
+            continue
+        match = stamp_re.search(path.stem)
+        if not match:
+            continue
+        stamp = match.group("date")
+        if match.group("time"):
+            stamp = f"{stamp}-{match.group('time')}"
+        stamps.add(stamp)
+
+if not stamps:
+    raise SystemExit(1)
+
+print(sorted(stamps)[-1])
+PY
+}
+
+required_jobs_package_stamp() {
+  local expected_stamp
+  expected_stamp="$(expected_jobs_stamp 2>/dev/null || true)"
+  if [[ -n "$expected_stamp" ]]; then
+    printf '%s' "$expected_stamp"
+    return 0
+  fi
+
+  latest_jobs_package_stamp
+}
+
+require_latest_jobs_data_for_latest_package() {
+  local required_stamp data_rel_path reason
+  required_stamp="$(required_jobs_package_stamp 2>/dev/null || true)"
+  [[ -n "$required_stamp" ]] || return 0
+
+  data_rel_path="$(jobs_data_rel_path_for_stamp "$required_stamp")"
+  if [[ ! -f "$data_rel_path" ]]; then
+    reason="latest"
+    if [[ -n "${PAVBOT_EXPECTED_JOBS_STAMP:-}" ]]; then
+      reason="expected"
+    fi
+    die "missing jobsData for $reason jobs package: $data_rel_path"
+  fi
+}
+
+needs_manifest_refresh_for_jobs_data() {
+  local expected_stamp rel_path
+  expected_stamp="$(expected_jobs_stamp 2>/dev/null || true)"
+  if [[ -n "$expected_stamp" ]]; then
+    rel_path="$(jobs_data_rel_path_for_stamp "$expected_stamp")"
+  else
+    rel_path="$(latest_jobs_data_rel_path 2>/dev/null || true)"
+  fi
+  [[ -n "$rel_path" ]] || return 1
+
+  if manifest_contains_jobs_data_path "$rel_path"; then
+    return 1
+  fi
+
+  return 0
 }
 
 validate_research_data_outputs() {
@@ -1200,6 +1372,7 @@ publish_isolated() {
 
   git fetch origin "$target_branch" >/dev/null
   remote_ref="$(git rev-parse --verify "origin/$target_branch")" || die "missing origin/$target_branch"
+  require_latest_jobs_data_for_latest_package
   require_latest_mobile_news_data_for_latest_package
 
   isolated_tmp="$(mktemp -d "${TMPDIR:-/tmp}/pavbot-publish.XXXXXX")"
@@ -1213,7 +1386,8 @@ publish_isolated() {
   (
     cd "$isolated_worktree"
 
-    if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ! needs_manifest_refresh_for_reddit_radar && ! needs_manifest_refresh_for_mobile_news; then
+    if ! has_publishable_changes && ! needs_manifest_refresh_for_jobs_data && ! needs_manifest_refresh_for_pulse_news && ! needs_manifest_refresh_for_reddit_radar && ! needs_manifest_refresh_for_mobile_news; then
+      require_latest_jobs_data_for_latest_package
       require_latest_mobile_news_data_for_latest_package
       require_latest_reddit_radar_original_comment_bodies
       verify_manifest_artifact_paths_local
@@ -1223,6 +1397,7 @@ publish_isolated() {
     fi
 
     validate_jobs_data_outputs
+    require_latest_jobs_data_for_latest_package
     require_latest_research_data_for_latest_run
     validate_research_data_outputs
     require_latest_mobile_news_data_for_latest_package
@@ -1231,6 +1406,8 @@ publish_isolated() {
     require_latest_reddit_radar_original_comment_bodies
     python3 "$manifest_generator" --repo-root "$PWD"
     verify_manifest_artifact_paths_local
+    require_expected_jobs_data_in_manifest
+    require_latest_jobs_data_in_manifest
     require_expected_mobile_news_data_in_manifest
     require_latest_mobile_news_data_in_manifest
     require_latest_pulse_news_data_in_manifest
@@ -1357,7 +1534,8 @@ fi
 
 require_clean_publish_scope
 
-if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ! needs_manifest_refresh_for_reddit_radar && ! needs_manifest_refresh_for_mobile_news; then
+if ! has_publishable_changes && ! needs_manifest_refresh_for_jobs_data && ! needs_manifest_refresh_for_pulse_news && ! needs_manifest_refresh_for_reddit_radar && ! needs_manifest_refresh_for_mobile_news; then
+  require_latest_jobs_data_for_latest_package
   require_latest_mobile_news_data_for_latest_package
   require_latest_reddit_radar_original_comment_bodies
   verify_manifest_artifact_paths_local
@@ -1367,6 +1545,7 @@ if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ! nee
 fi
 
 validate_jobs_data_outputs
+require_latest_jobs_data_for_latest_package
 require_latest_research_data_for_latest_run
 validate_research_data_outputs
 require_latest_mobile_news_data_for_latest_package
@@ -1375,6 +1554,8 @@ validate_pulse_news_data_outputs
 require_latest_reddit_radar_original_comment_bodies
 python3 "$manifest_generator" --repo-root "$PWD"
 verify_manifest_artifact_paths_local
+require_expected_jobs_data_in_manifest
+require_latest_jobs_data_in_manifest
 require_expected_mobile_news_data_in_manifest
 require_latest_mobile_news_data_in_manifest
 require_latest_pulse_news_data_in_manifest

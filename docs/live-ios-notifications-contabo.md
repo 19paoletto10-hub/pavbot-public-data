@@ -124,8 +124,8 @@ PAVBOT_DAILY_HUMOR_INTERVAL_HOURS=2
 PAVBOT_HUMOR_INGEST_TOKEN=<long-random-token>
 ```
 
-Use `APNS_ENV=production` for TestFlight/App Store. Use `sandbox` only for
-debug builds installed directly from Xcode.
+Use `APNS_ENV=production` for current Pavbot builds; the app target signs with
+the production APNs environment.
 
 Copy the APNs key to:
 

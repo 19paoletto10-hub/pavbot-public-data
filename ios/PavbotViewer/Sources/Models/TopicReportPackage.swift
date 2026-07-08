@@ -247,6 +247,10 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
         }
     }
 
+    static func keysMatch(_ lhs: String, _ rhs: String) -> Bool {
+        normalizedPackageKey(lhs) == normalizedPackageKey(rhs)
+    }
+
     static func selectedReportDate(in packages: [TopicReportPackage], selectedReportDay: String?) -> String? {
         guard let selectedReportDay = selectedReportDay?.trimmingCharacters(in: .whitespacesAndNewlines),
               !selectedReportDay.isEmpty
@@ -272,7 +276,7 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
             return packages.first
         }
 
-        if let exactKey = packages.first(where: { $0.key == selectedReportDay }) {
+        if let exactKey = packages.first(where: { keysMatch($0.key, selectedReportDay) }) {
             return exactKey
         }
 
@@ -295,7 +299,7 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
     private static func packageKey(for artifact: PavbotArtifact) -> String {
         let date = artifact.date ?? "no-date"
         if let time = artifact.time, !time.isEmpty {
-            return "\(date)-\(time)"
+            return "\(date)-\(compactTime(time))"
         }
 
         let filename = URL(fileURLWithPath: artifact.path).deletingPathExtension().lastPathComponent
@@ -307,6 +311,18 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
         }
 
         return date
+    }
+
+    private static func normalizedPackageKey(_ value: String) -> String {
+        value.replacingOccurrences(of: ":", with: "")
+    }
+
+    private static func compactTime(_ value: String) -> String {
+        let digits = value.filter(\.isNumber)
+        if digits.count >= 4 {
+            return String(digits.prefix(4))
+        }
+        return value.replacingOccurrences(of: ":", with: "")
     }
 
     private static func isCanonicalResearchDataPath(_ path: String) -> Bool {

@@ -415,7 +415,7 @@ def build_notification_payload(record: dict[str, Any]) -> dict[str, Any]:
             "alert": {
                 "title": "Pavbot",
                 "subtitle": title,
-                "body": f"Aktualizacja automatyzacji: {title}",
+                "body": f"Nowe dane: {title}",
             },
             "sound": "default",
         },

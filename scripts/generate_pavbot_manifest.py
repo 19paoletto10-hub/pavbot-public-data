@@ -238,18 +238,27 @@ def collect_mobile_public_artifacts(
     topic_dir: Path,
     slug: str,
 ) -> None:
+    for path in sorted((topic_dir / "runs").glob("*.md")):
+        add_artifact(artifacts, repo_root, raw_base_url, path, slug, "run")
+
     for path in sorted((topic_dir / "data").glob("*-mobile-news.json")):
         add_artifact(artifacts, repo_root, raw_base_url, path, slug, "mobileNewsData")
 
-    for path in sorted((topic_dir / "pdfs").glob("*-mobile-brief.pdf")):
-        add_artifact(artifacts, repo_root, raw_base_url, path, slug, "pdf")
+    for pattern in ("*-mobile-brief.pdf", "*-newspaper.pdf"):
+        for path in sorted((topic_dir / "pdfs").glob(pattern)):
+            add_artifact(artifacts, repo_root, raw_base_url, path, slug, "pdf")
 
     podcasts_dir = topic_dir / "podcasts"
     if not podcasts_dir.exists():
         return
 
     for date_dir in sorted(path for path in podcasts_dir.iterdir() if path.is_dir()):
-        for name, artifact_type in (("script.md", "podcastScript"),):
+        for name, artifact_type in (
+            ("script.md", "podcastScript"),
+            ("draft.md", "podcastDraft"),
+            ("sources.md", "podcastSources"),
+            ("tts_variants.json", "podcastTtsVariants"),
+        ):
             add_artifact(
                 artifacts,
                 repo_root,
@@ -260,17 +269,17 @@ def collect_mobile_public_artifacts(
                 forced_date=parse_date_parts(date_dir.name),
             )
 
-        for path in sorted(date_dir.glob("audio/*/podcast.mp3")):
-            add_artifact(
-                artifacts,
-                repo_root,
-                raw_base_url,
-                path,
-                slug,
-                "podcastAudioVariant",
-                forced_date=parse_date_parts(date_dir.name),
-            )
-
+        for pattern in ("audio/*/podcast.mp3", "audio/*/render.json", "audio/*/render.log"):
+            for path in sorted(date_dir.glob(pattern)):
+                add_artifact(
+                    artifacts,
+                    repo_root,
+                    raw_base_url,
+                    path,
+                    slug,
+                    infer_podcast_artifact_type(path),
+                    forced_date=parse_date_parts(date_dir.name),
+                )
 
 def add_artifact(
     artifacts: list[dict[str, Any]],

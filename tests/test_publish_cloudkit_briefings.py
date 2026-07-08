@@ -44,7 +44,7 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
                     "alert": {
                         "title": "Pavbot",
                         "subtitle": "Pavbot Puls Dnia 3h · 2026-07-06 18:00",
-                        "body": "Aktualizacja automatyzacji: Pavbot Puls Dnia 3h · 2026-07-06 18:00",
+                        "body": "Nowe dane: Pavbot Puls Dnia 3h · 2026-07-06 18:00",
                     },
                     "sound": "default",
                 },

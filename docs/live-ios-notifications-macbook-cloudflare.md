@@ -94,7 +94,7 @@ Set these values in `.env`:
 PAVBOT_MANIFEST_URL=https://raw.githubusercontent.com/<owner>/<repo>/<branch>/public/pavbot-manifest.json
 PAVBOT_PUBLIC_NOTIFIER_URL=https://notify.example.com
 GITHUB_WEBHOOK_SECRET=change-me
-APNS_ENV=sandbox
+APNS_ENV=production
 APNS_TEAM_ID=SP774TZZU8
 APNS_KEY_ID=<APPLE_APNS_KEY_ID>
 APNS_BUNDLE_ID=com.paweltanski.pavbotviewer
@@ -107,8 +107,8 @@ PAVBOT_DAILY_WEATHER_LAT=51.1079
 PAVBOT_DAILY_WEATHER_LON=17.0385
 ```
 
-Use `APNS_ENV=sandbox` for Xcode-installed `PavbotViewer` builds. Use
-`APNS_ENV=production` for TestFlight/App Store builds.
+Use `APNS_ENV=production` for current Pavbot builds; the app target signs with
+the production APNs environment.
 
 ## Cloudflare Tunnel Setup
 
@@ -180,7 +180,7 @@ Requirements:
 - `.env` must have `PAVBOT_DAILY_WEATHER_ENABLED=true`.
 - The iOS device must be registered with live alerts and `Daily Wrocław weather
   alerts` enabled in Settings.
-- TestFlight/App Store builds require `APNS_ENV=production`.
+- Current Pavbot builds require `APNS_ENV=production`.
 
 Check status:
 
@@ -307,8 +307,7 @@ https://icloud.developer.apple.com/dashboard/notifications/teams/SP774TZZU8/app/
 
 Use these values:
 
-- Environment: `Development` for Xcode-installed `PavbotViewer`; `Production`
-  only for TestFlight/App Store builds.
+- Environment: `Production` for current Pavbot builds.
 - Recipient: copy the APNs device token from Pavbot iOS
   `Settings -> Copy APNs device token` or `Diagnostics -> Copy APNs device token`.
 - `apns-topic`: `com.paweltanski.pavbotviewer`
@@ -324,7 +323,7 @@ Smoke payload:
     "alert": {
       "title": "Pavbot",
       "subtitle": "Nowy plik",
-      "body": "Wykryto nowy artefakt automatyzacji."
+      "body": "Nowe dane: Nowy plik"
     },
     "sound": "default"
   },

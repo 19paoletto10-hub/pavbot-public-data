@@ -247,9 +247,43 @@ final class PavbotManifestTests: XCTestCase {
         let packages = manifest.reportPackages(for: .jobs)
 
         XCTAssertEqual(packages.count, 1)
-        XCTAssertEqual(packages[0].key, "2026-06-25-01:41")
+        XCTAssertEqual(packages[0].key, "2026-06-25-0141")
         XCTAssertEqual(packages[0].researchReport?.id, "jobs-run-2026-06-25-0141")
         XCTAssertEqual(packages[0].dataArtifact?.id, "jobs-data-2026-06-25-0141")
+    }
+
+    func testJobsReportPackagesPairColonTimeWithCompactJobsDataFilename() throws {
+        let manifest = try manifestWithAdditionalArtifacts([
+            PavbotArtifact(
+                id: "jobs-run-2026-07-08-1544",
+                type: .run,
+                topic: "llm-ai-jobs-wroclaw",
+                title: "LLM AI Jobs Wrocław",
+                path: "research/llm-ai-jobs-wroclaw/runs/2026-07-08-1544.md",
+                url: "research/llm-ai-jobs-wroclaw/runs/2026-07-08-1544.md",
+                sizeBytes: 300,
+                date: "2026-07-08",
+                time: "15:44"
+            ),
+            PavbotArtifact(
+                id: "jobs-data-2026-07-08-1544",
+                type: .jobsData,
+                topic: "llm-ai-jobs-wroclaw",
+                title: "Jobs data",
+                path: "research/llm-ai-jobs-wroclaw/data/2026-07-08-1544-jobs.json",
+                url: "research/llm-ai-jobs-wroclaw/data/2026-07-08-1544-jobs.json",
+                sizeBytes: 400,
+                date: "2026-07-08",
+                time: nil
+            )
+        ])
+
+        let packages = manifest.reportPackages(for: .jobs)
+
+        XCTAssertEqual(packages.count, 1)
+        XCTAssertEqual(packages[0].key, "2026-07-08-1544")
+        XCTAssertEqual(packages[0].researchReport?.id, "jobs-run-2026-07-08-1544")
+        XCTAssertEqual(packages[0].dataArtifact?.id, "jobs-data-2026-07-08-1544")
     }
 
     func testResearchReportPackagesExposeTechAndPolskaTopics() throws {
@@ -1995,6 +2029,53 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     @MainActor
+    func testJobsStorePrefersLatestJobsDataOverNewerMarkdownOnlyPackage() async throws {
+        let markdownOnlyLatest = PavbotArtifact(
+            id: "jobs-run-2026-07-08-1544",
+            type: .run,
+            topic: "llm-ai-jobs-wroclaw",
+            title: "LLM/AI Jobs Wrocław",
+            path: "research/llm-ai-jobs-wroclaw/runs/2026-07-08-1544.md",
+            url: "research/llm-ai-jobs-wroclaw/runs/2026-07-08-1544.md",
+            sizeBytes: 200,
+            date: "2026-07-08",
+            time: "15:44"
+        )
+        let jobsData = PavbotArtifact(
+            id: "jobs-data-2026-07-07-1732",
+            type: .jobsData,
+            topic: "llm-ai-jobs-wroclaw",
+            title: "Jobs data",
+            path: "research/llm-ai-jobs-wroclaw/data/2026-07-07-1732-jobs.json",
+            url: "research/llm-ai-jobs-wroclaw/data/2026-07-07-1732-jobs.json",
+            sizeBytes: 200,
+            date: "2026-07-07",
+            time: "17:32"
+        )
+        let packages = [
+            TopicReportPackage(topic: .jobs, key: "2026-07-08-1544", artifacts: [markdownOnlyLatest]),
+            TopicReportPackage(topic: .jobs, key: "2026-07-07-1732", artifacts: [jobsData])
+        ]
+        let client = JobsDataClient(
+            fetchData: { _ in Self.jobsDataFixtureData },
+            fetchText: { _ in XCTFail("A newer Markdown-only package should not hide the latest jobsData package"); return Self.jobsMarkdownFixture }
+        )
+        let store = JobsStore(client: client, cache: JobsReportCache(defaults: UserDefaults(suiteName: UUID().uuidString)!))
+
+        await store.load(
+            packages: packages,
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            selectedDay: nil,
+            selectedArtifactIDs: []
+        )
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.source, .jobsData)
+        XCTAssertEqual(store.selectedPackage?.key, "2026-07-07-1732")
+        XCTAssertEqual(store.selectedPackage?.dataArtifact?.id, "jobs-data-2026-07-07-1732")
+    }
+
+    @MainActor
     func testJobsStoreFallsBackToNextPackageWhenNewestPackageCannotLoad() async throws {
         let brokenLatestData = PavbotArtifact(
             id: "broken-jobs-data",
@@ -3392,6 +3473,34 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(defaults.string(forKey: "pavbot.cloudKitBriefingNotificationMode"), "silentRefresh")
     }
 
+    func testCloudKitBriefingNotificationRouteUsesCategoryAndStampFromBriefingID() throws {
+        let route = try XCTUnwrap(
+            CloudKitBriefingNotificationRoute(
+                userInfo: [
+                    "briefingId": "pavbot-puls-dnia-news-3h:2026-07-06-1800",
+                    "category": "puls-dnia-news",
+                    "manifestUrl": "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+                ]
+            )
+        )
+
+        XCTAssertEqual(route.topic, "puls-dnia-news")
+        XCTAssertEqual(route.stamp, "2026-07-06-1800")
+    }
+
+    func testCloudKitBriefingNotificationRouteFallsBackToBriefingIDTopic() throws {
+        let route = try XCTUnwrap(
+            CloudKitBriefingNotificationRoute(
+                userInfo: [
+                    "briefingId": "reddit-radar:2026-07-07-0610"
+                ]
+            )
+        )
+
+        XCTAssertEqual(route.topic, "reddit-radar")
+        XCTAssertEqual(route.stamp, "2026-07-07-0610")
+    }
+
     func testCloudKitVisibleAlertNotificationInfoIncludesAlertSoundAndRefreshSignal() {
         let info = CloudKitService.briefingNotificationInfo(for: .visibleAlert)
 
@@ -3494,6 +3603,7 @@ final class PavbotManifestTests: XCTestCase {
             .deletingLastPathComponent()
         let projectYML = try String(contentsOf: projectRoot.appendingPathComponent("project.yml"))
         let entitlements = try String(contentsOf: projectRoot.appendingPathComponent("Sources/PavbotViewer.entitlements"))
+        let infoPlist = try String(contentsOf: projectRoot.appendingPathComponent("Sources/Info.plist"))
 
         XCTAssertTrue(projectYML.contains("CloudKit.framework"))
         XCTAssertTrue(entitlements.contains("com.apple.developer.icloud-container-identifiers"))
@@ -3507,8 +3617,35 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(projectYML.contains("APS_ENVIRONMENT: production"))
         XCTAssertTrue(projectYML.contains("CODE_SIGN_IDENTITY: Apple Distribution"))
         XCTAssertTrue(projectYML.contains("CODE_SIGN_STYLE: Manual"))
+        XCTAssertTrue(infoPlist.contains("UIBackgroundModes"))
+        XCTAssertTrue(infoPlist.contains("remote-notification"))
         XCTAssertFalse(projectYML.contains("CLOUDKIT_ENVIRONMENT: Development"))
         XCTAssertFalse(projectYML.contains("APS_ENVIRONMENT: development"))
+    }
+
+    func testPushConsoleInstructionsMatchProductionEntitlement() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let projectRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+        let repoRoot = projectRoot
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+        let settings = try String(contentsOf: projectRoot.appendingPathComponent("Sources/Views/SettingsView.swift"))
+        let diagnostics = try String(contentsOf: projectRoot.appendingPathComponent("Sources/Views/DiagnosticsView.swift"))
+        let smokeDoc = try String(
+            contentsOf: repoRoot.appendingPathComponent("docs/live-ios-notifications-macbook-cloudflare.md")
+        )
+
+        XCTAssertTrue(settings.contains("Wybierz Production dla tej kompilacji Pavbot."))
+        XCTAssertTrue(diagnostics.contains("Production dla tej kompilacji"))
+        XCTAssertTrue(smokeDoc.contains("Environment: `Production` for current Pavbot builds."))
+        XCTAssertTrue(smokeDoc.contains("APNS_ENV=production"))
+        XCTAssertFalse(settings.contains("Development dla buildów z Xcode"))
+        XCTAssertFalse(diagnostics.contains("Development dla Xcode"))
+        XCTAssertFalse(smokeDoc.contains("Development` for Xcode-installed"))
+        XCTAssertFalse(smokeDoc.contains("APNS_ENV=sandbox"))
+        XCTAssertFalse(smokeDoc.contains("Xcode-installed `PavbotViewer` builds"))
     }
 
     @MainActor

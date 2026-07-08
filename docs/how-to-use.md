@@ -141,7 +141,7 @@ structured Jobs artifact in `data/YYYY-MM-DD-HHMM-jobs.json` with
 `render_jobs_data.py`, validate it with `scripts/validate_jobs_data.py`,
 generate the PDF in
 `pdfs/YYYY-MM-DD-HHMM-llm-ai-jobs-wroclaw.pdf`, then publish with
-`scripts/pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw`.
+`PAVBOT_EXPECTED_JOBS_STAMP=YYYY-MM-DD-HHMM scripts/pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw`.
 After publish, run `git fetch origin` and verify
 `origin/main:public/pavbot-manifest.json` plus the matching `runs/`, `data/`,
 and `pdfs/` package for the same `YYYY-MM-DD-HHMM`.
@@ -231,7 +231,8 @@ single publish step after each automation run so iOS receives the refreshed
 manifest and the new files in the same commit. After the push, run
 `git fetch origin` and verify `origin/main:public/pavbot-manifest.json`; for
 Jobs, also verify the same package key is present remotely as `run`, `jobsData`,
-and `pdf`. This requires:
+and `pdf`. For unattended Jobs runs, set `PAVBOT_EXPECTED_JOBS_STAMP` to the
+current `YYYY-MM-DD-HHMM` package before invoking the publish script. This requires:
 
 - a working `origin` remote;
 - GitHub credentials or a token with permission to push to `main`;

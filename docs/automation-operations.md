@@ -42,7 +42,8 @@ polskich znaków diakrytycznych i zapisz
   `pavbot-polska-wiat-podcast-09-30`.
 - `Pavbot LLM/AI Jobs Wrocław Research` runs twice daily and updates
   `research/llm-ai-jobs-wroclaw` with the full flow `Markdown -> jobsData JSON
-  -> validate -> PDF -> publish`. The published package must expose matching
+  -> validate -> PDF -> publish`. Publish with `PAVBOT_EXPECTED_JOBS_STAMP`
+  set to the current package key. The published package must expose matching
   `runs/YYYY-MM-DD-HHMM.md`, `data/YYYY-MM-DD-HHMM-jobs.json`, and
   `pdfs/YYYY-MM-DD-HHMM-llm-ai-jobs-wroclaw.pdf` entries for the same package
   key on `origin/main`. Repository manifest ID:

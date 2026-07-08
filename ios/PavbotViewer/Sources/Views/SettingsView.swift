@@ -196,7 +196,7 @@ struct SettingsView: View {
                     .accessibilityHint("Kopiuje token urządzenia do Apple Push Notifications Console.")
                     .disabled(remoteDeviceToken.isEmpty)
 
-                Text("Użyj tego tokena w Apple Push Notifications Console. Wybierz Development dla buildów z Xcode i Production dla TestFlight.")
+                Text("Użyj tego tokena w Apple Push Notifications Console. Wybierz Production dla tej kompilacji Pavbot.")
                     .font(.caption)
                     .foregroundStyle(.secondary)
             }

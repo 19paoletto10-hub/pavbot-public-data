@@ -190,7 +190,12 @@ final class JobsStore {
         selectedDay _: String?,
         selectedArtifactIDs: [String]
     ) -> [TopicReportPackage] {
-        let sortedPackages = packages.sorted { $0.key > $1.key }
+        let sortedPackages = packages.sorted {
+            if ($0.dataArtifact != nil) != ($1.dataArtifact != nil) {
+                return $0.dataArtifact != nil
+            }
+            return $0.key > $1.key
+        }
         let artifactIDs = Set(selectedArtifactIDs)
         if !artifactIDs.isEmpty,
            let package = sortedPackages.first(where: { package in

@@ -385,7 +385,7 @@ struct ResearchView: View {
     private func hasSelectedReportDay(in packages: [TopicReportPackage]) -> Bool {
         guard let selectedReportDay = router.selectedReportDay else { return false }
         return packages.contains { package in
-            package.key == selectedReportDay
+            TopicReportPackage.keysMatch(package.key, selectedReportDay)
                 || package.date == selectedReportDay
                 || package.key.hasPrefix(selectedReportDay)
         }
