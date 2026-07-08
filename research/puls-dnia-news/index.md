@@ -16,6 +16,12 @@ The 21:05 slot on 2026-07-07 added late-evening items on wind alerts, an
 evacuation in Krynica Morska, Ziobro extradition, Toyota's Texas expansion,
 Le Pen, NATO, Farage, Hungary's state TV reset, Gaza and China.
 
+The 2026-07-08 12:01 slot shifted the domestic mix toward very strong wind in
+the north, healthcare reform signals, a BBN reaction to Budanov and a custody
+death, while the international feed stayed anchored in Iran-US escalation,
+NATO procurement, Le Pen, Farage, Russian fuel shortages, Kyiv strikes, China
+and Monaco.
+
 ## Data Shape
 
 The native iOS feed expects:
