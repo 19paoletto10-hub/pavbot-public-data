@@ -4,11 +4,11 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
-| High | Monitor weather and hydrology through the week | Dzisiejszy run pokazuje silny wiatr, burze i suszę hydrologiczną jednocześnie | In the next run, check whether alerts escalate, ease, or move regionalnie and whether fire/hydrology signals change | Open |
-| High | Track PIP implementation after 8 July | Reforma właśnie wchodzi w życie i może szybko przejść z komunikatu w praktykę kontrolną | In the next run, check for employer guidance, control activity, and public reactions | Open |
-| High | Follow NATO Ankara summit with concrete Ukraine support | Dzień 1 dał zakupy i liczby wydatkowe, ale nadal brakuje finalnego komunikatu i pakietu wsparcia dla Ukrainy | After day 2, check for final decisions, ammunition/air-defense numbers, and dates | Open |
-| Medium | Track EU cyber-AI and DSA/CISA follow-ups | Evening run added a fresh EU cyber-AI plan on top of the earlier DSA and KEV signals | In the next run, check whether EU bodies, regulators, platforms, or vendors respond with concrete implementation steps | Open |
-| High | Stabilize `male-xtts` in current-events pipeline | `female-piper` succeeded again, but `male-xtts` hung during XTTS render and had to be interrupted manually | After render, verify whether the male variant succeeds; keep `female-piper` as the required stable output | Open |
+| High | Monitor weather and hydrology through the week | Poranny alert z 8 lipca nadal trzyma północny wschód, a susza hydrologiczna obejmuje cały kraj | In the next run, check whether alerts escalate, ease, or move regionalnie and whether fire/hydrology signals change | Open |
+| High | Track PIP implementation after 8 July | Reforma właśnie weszła w życie i może szybko przejść z komunikatu w praktykę kontrolną | In the next run, check for employer guidance, control activity, and public reactions | Open |
+| High | Follow NATO Ankara summit with concrete Ukraine support | Drugi dzień szczytu ma już liczbowe zamówienia, ale czekamy na końcowy readout i szczegóły dla Ukrainy | After day 2, check for final decisions, ammunition/air-defense numbers, and dates | Open |
+| Medium | Track EU cyber-AI implementation follow-up | Komisja opublikowała plan cyber-AI i dopisała go do istniejących ram, ale wykonawcze szczegóły mogą jeszcze dojść | In the next run, check whether EU bodies, regulators, platforms, or vendors respond with concrete implementation steps | Open |
+| High | Stabilize `male-xtts` in current-events pipeline | `female-piper` pozostaje wymaganym stabilnym wariantem, ale `male-xtts` nadal trzeba monitorować pod kątem pełnego renderu | After render, verify whether the male variant succeeds; keep `female-piper` as the required stable output | Open |
 
 ## Review Notes
 
@@ -59,6 +59,12 @@
   `male-xtts` znów zawiesił się podczas renderu i został przerwany
   kontrolowanie; stan zapisano w
   `podcasts/2026-07-07-1935/tts_variants.json` oraz `audio/male-xtts/render.log`.
+- 2026-07-08: Rano alert RCB zawęził się do Warmińsko-Mazurskiego, a raport
+  dobowy nadal pokazuje wiatr, wezbrania i suszę hydrologiczną jednocześnie.
+- 2026-07-08: Reforma PIP weszła w życie, KPRM nadal domyka pakiet z 7 lipca,
+  a szczyt NATO w Ankarze przestawił się na zamówienia i liczby.
+- 2026-07-08: Komisja Europejska opublikowała plan cyber-AI i dopisała go do
+  AI Act, NIS2, DORA i Cyber Resilience Act.
 
 ## Done
 

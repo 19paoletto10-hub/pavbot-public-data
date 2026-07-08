@@ -120,7 +120,10 @@ struct ResearchView: View {
             PavbotPremiumScreenScaffold(layout: layout) {
                 ResearchLibraryHeader(
                     topic: router.selectedResearchTopic,
-                    packageCount: store.manifest?.reportPackages(for: router.selectedResearchTopic).count ?? 0,
+                    packageCount: nativeContentPackages(
+                        from: store.manifest?.reportPackages(for: router.selectedResearchTopic) ?? [],
+                        topic: router.selectedResearchTopic
+                    ).count,
                     savedCount: savedResearchStore.savedArticles.count,
                     isRefreshing: isRefreshingSelectedResearchContent,
                     layout: layout
@@ -129,7 +132,10 @@ struct ResearchView: View {
                 ResearchTopicPicker(selection: $router.selectedResearchTopic)
 
                 if let manifest = store.manifest {
-                    let packages = manifest.reportPackages(for: router.selectedResearchTopic)
+                    let packages = nativeContentPackages(
+                        from: manifest.reportPackages(for: router.selectedResearchTopic),
+                        topic: router.selectedResearchTopic
+                    )
                     ResearchRunPicker(
                         topic: router.selectedResearchTopic,
                         packages: packages,
@@ -227,7 +233,7 @@ struct ResearchView: View {
                 ) {
                     Task {
                         await store.reload()
-                        syncSelectedReportDayToLatestIfNeeded()
+                        syncSelectedReportDayToLatestIfNeeded(force: true)
                         await loadSelectedResearchContent()
                     }
                 }
@@ -235,7 +241,7 @@ struct ResearchView: View {
         }
         .refreshable {
             await store.reload()
-            syncSelectedReportDayToLatestIfNeeded()
+            syncSelectedReportDayToLatestIfNeeded(force: true)
             await loadSelectedResearchContent()
         }
         .task(id: researchLoadTrigger) {
@@ -274,7 +280,7 @@ struct ResearchView: View {
         }
         .onChange(of: store.manifest) { _, manifest in
             guard let manifest else { return }
-            syncSelectedReportDayToLatestIfNeeded(manifest: manifest)
+            syncSelectedReportDayToLatestIfNeeded(manifest: manifest, force: true)
         }
         .pavbotTabInfo(PavbotTabInfoContent.research(topicTitle: router.selectedResearchTopic.title, topicSystemImage: router.selectedResearchTopic.systemImage, topicTint: router.selectedResearchTopic.tint))
     }
@@ -318,7 +324,10 @@ struct ResearchView: View {
         guard let manifest = store.manifest else { return }
         guard router.selectedResearchTopic != .aktualne else { return }
         await newsStore.load(
-            packages: manifest.reportPackages(for: router.selectedResearchTopic),
+            packages: nativeContentPackages(
+                from: manifest.reportPackages(for: router.selectedResearchTopic),
+                topic: router.selectedResearchTopic
+            ),
             manifestURLString: store.manifestURLString,
             topic: router.selectedResearchTopic,
             selectedDay: router.selectedReportDay,
@@ -329,7 +338,10 @@ struct ResearchView: View {
     private func loadMobileMagazine() async {
         guard let manifest = store.manifest else { return }
         await mobileNewsStore.load(
-            packages: manifest.reportPackages(for: .aktualne),
+            packages: nativeContentPackages(
+                from: manifest.reportPackages(for: .aktualne),
+                topic: .aktualne
+            ),
             manifestURLString: store.manifestURLString,
             selectedDay: router.selectedReportDay,
             selectedArtifactIDs: router.selectedReportArtifactIDs
@@ -352,7 +364,10 @@ struct ResearchView: View {
         guard router.selectedReportArtifactIDs.isEmpty else { return }
         let activeManifest = manifest ?? store.manifest
         let activeTopic = topic ?? router.selectedResearchTopic
-        let packages = activeManifest?.reportPackages(for: activeTopic) ?? []
+        let packages = nativeContentPackages(
+            from: activeManifest?.reportPackages(for: activeTopic) ?? [],
+            topic: activeTopic
+        )
         guard force || !hasSelectedReportDay(in: packages) else { return }
         guard let latestReportKey = latestReportKey(in: packages) else { return }
         if router.selectedReportDay != latestReportKey {
@@ -411,6 +426,13 @@ struct ResearchView: View {
         store.state == .loading
             || newsStore.state == .loading
             || mobileNewsStore.state == .loading
+    }
+
+    private func nativeContentPackages(
+        from packages: [TopicReportPackage],
+        topic: ReportTopicKind
+    ) -> [TopicReportPackage] {
+        TopicReportPackage.nativeContentPackages(for: topic, in: packages)
     }
 }
 

@@ -285,8 +285,13 @@ grep -q 'startAutoRefreshLoop' ios/PavbotViewer/Sources/Views/ContentView.swift
 grep -q 'DEVELOPMENT_TEAM: SP774TZZU8' ios/PavbotViewer/project.yml
 grep -q 'DEVELOPMENT_TEAM = SP774TZZU8' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
 grep -q 'CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
-grep -q 'APS_ENVIRONMENT = development;' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
 grep -q 'APS_ENVIRONMENT = production;' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
+grep -q 'CLOUDKIT_ENVIRONMENT = Production;' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
+grep -q 'CODE_SIGN_IDENTITY = "Apple Distribution";' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
+grep -q 'CODE_SIGN_STYLE = Manual;' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
+! grep -q 'APS_ENVIRONMENT = development;' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
+! grep -q 'CLOUDKIT_ENVIRONMENT = Development;' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
+! grep -q 'CODE_SIGN_IDENTITY = "iPhone Developer";' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
 grep -q 'aps-environment' ios/PavbotViewer/Sources/PavbotViewer.entitlements
 grep -q '$(APS_ENVIRONMENT)' ios/PavbotViewer/Sources/PavbotViewer.entitlements
 grep -q 'postGenCommand: rm -f PavbotViewer.xcodeproj/xcshareddata/xcschemes/PavbotAudioActivityExtension.xcscheme' ios/PavbotViewer/project.yml

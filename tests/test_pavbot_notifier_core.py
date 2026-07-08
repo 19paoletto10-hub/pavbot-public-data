@@ -388,6 +388,108 @@ def test_send_apns_change_notifications_sends_single_summary_per_device():
     assert sender.calls[0]["userInfo"]["artifactTopic"] == "mobile"
 
 
+def test_send_apns_change_notifications_uses_automation_name_for_artifact_update():
+    core = load_core()
+
+    notification = core.build_change_notification(
+        artifacts=[
+            {
+                "id": "research/tech-news/runs/2026-07-08.md",
+                "type": "run",
+                "topic": "tech-news",
+                "path": "research/tech-news/runs/2026-07-08.md",
+                "date": "2026-07-08",
+            }
+        ],
+        automations=[
+            {
+                "id": "codex-agent-automation-daily-research",
+                "name": "Pavbot Tech Research 08:00",
+                "topic": "tech-news",
+            }
+        ],
+        manifest_url_value="https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+    )
+
+    assert notification["body"] == "Aktualizacja automatyzacji: Pavbot Tech Research 08:00 · 2026-07-08 · 1 nowy plik"
+    assert notification["userInfo"]["automationID"] == "codex-agent-automation-daily-research"
+    assert notification["userInfo"]["automationIDs"] == ["codex-agent-automation-daily-research"]
+
+
+def test_filter_manifest_changes_for_paths_avoids_catch_up_storm():
+    core = load_core()
+    changes = core.ManifestChanges(
+        artifacts=[
+            {
+                "id": "research/tech-news/runs/2026-07-07.md",
+                "path": "research/tech-news/runs/2026-07-07.md",
+                "topic": "tech-news",
+            },
+            {
+                "id": "research/tech-news/runs/2026-07-08.md",
+                "path": "research/tech-news/runs/2026-07-08.md",
+                "topic": "tech-news",
+            },
+        ],
+        automations=[],
+    )
+
+    filtered = core.filter_manifest_changes_for_paths(
+        changes,
+        {
+            "public/pavbot-manifest.json",
+            "research/tech-news/runs/2026-07-08.md",
+        },
+    )
+
+    assert [artifact["id"] for artifact in filtered.artifacts] == ["research/tech-news/runs/2026-07-08.md"]
+    assert filtered.automations == []
+
+
+def test_send_apns_change_notifications_uses_bounded_parallel_delivery():
+    core = load_core()
+
+    class FakeSender:
+        def __init__(self):
+            self.active = 0
+            self.max_active = 0
+
+        async def send_alert(self, device_token, title, body, user_info):
+            self.active += 1
+            self.max_active = max(self.max_active, self.active)
+            await asyncio.sleep(0.01)
+            self.active -= 1
+
+    sender = FakeSender()
+    manifest_url = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+    devices = {
+        f"token-{index}": {"manifestURL": manifest_url}
+        for index in range(4)
+    }
+
+    summary = asyncio.run(
+        core.send_apns_change_notifications(
+            devices=devices,
+            artifacts=[
+                {
+                    "id": "research/tech-news/runs/2026-07-08.md",
+                    "type": "run",
+                    "topic": "tech-news",
+                    "path": "research/tech-news/runs/2026-07-08.md",
+                }
+            ],
+            automations=[],
+            manifest_url_value=manifest_url,
+            sender=sender,
+            max_concurrent_sends=2,
+        )
+    )
+
+    assert summary["attempted"] == 4
+    assert summary["sent"] == 4
+    assert sender.max_active == 2
+
+
 def test_pulse_news_notification_uses_high_priority_article_teaser():
     core = load_core()
 
@@ -625,6 +727,89 @@ def test_process_manifest_change_notifications_sends_for_new_artifacts_and_recor
     assert last_delivery["sent"] == 1
     assert last_webhook["event"] == "push"
     assert last_webhook["newArtifacts"] == 1
+
+
+def test_process_manifest_change_notifications_filters_to_current_push_paths_and_automation(tmp_path, monkeypatch):
+    server = load_server()
+    manifest_url = "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json"
+    previous_manifest = {
+        "automations": [
+            {
+                "id": "codex-agent-automation-daily-research",
+                "name": "Pavbot Tech Research 08:00",
+                "topic": "tech-news",
+                "topicPath": "research/tech-news",
+                "kind": "research",
+            }
+        ],
+        "artifacts": [],
+    }
+    current_manifest = {
+        "automations": previous_manifest["automations"],
+        "artifacts": [
+            {
+                "id": "research/tech-news/runs/2026-07-07.md",
+                "type": "run",
+                "topic": "tech-news",
+                "path": "research/tech-news/runs/2026-07-07.md",
+                "date": "2026-07-07",
+            },
+            {
+                "id": "research/tech-news/runs/2026-07-08.md",
+                "type": "run",
+                "topic": "tech-news",
+                "path": "research/tech-news/runs/2026-07-08.md",
+                "date": "2026-07-08",
+            },
+        ],
+    }
+    (tmp_path / "last-manifest.json").write_text(json.dumps(previous_manifest), encoding="utf-8")
+    (tmp_path / "devices.json").write_text(
+        json.dumps({"device-token": {"manifestURL": manifest_url}}),
+        encoding="utf-8",
+    )
+
+    class FakeSender:
+        def __init__(self):
+            self.calls = []
+
+        async def send_alert(self, device_token, title, body, user_info):
+            self.calls.append(
+                {
+                    "deviceToken": device_token,
+                    "title": title,
+                    "body": body,
+                    "userInfo": user_info,
+                }
+            )
+
+    sender = FakeSender()
+
+    async def fake_fetch_manifest(url):
+        assert url == manifest_url
+        return current_manifest
+
+    monkeypatch.setattr(server, "data_dir", lambda: tmp_path)
+    monkeypatch.setattr(server, "manifest_url", lambda: manifest_url)
+    monkeypatch.setattr(server, "fetch_manifest", fake_fetch_manifest)
+    monkeypatch.setattr(server, "apns_sender", lambda: sender)
+
+    result = asyncio.run(
+        server.process_manifest_change_notifications(
+            event="push",
+            source="github-webhook",
+            topic_path="",
+            changed_paths={
+                "public/pavbot-manifest.json",
+                "research/tech-news/runs/2026-07-08.md",
+            },
+        )
+    )
+
+    assert result["newArtifacts"] == 1
+    assert sender.calls[0]["body"] == "Aktualizacja automatyzacji: Pavbot Tech Research 08:00 · 2026-07-08 · 1 nowy plik"
+    assert sender.calls[0]["userInfo"]["artifactIDs"] == ["research/tech-news/runs/2026-07-08.md"]
+    assert sender.calls[0]["userInfo"]["automationID"] == "codex-agent-automation-daily-research"
 
 
 def test_process_manifest_change_notifications_does_not_duplicate_when_manifest_is_unchanged(tmp_path, monkeypatch):

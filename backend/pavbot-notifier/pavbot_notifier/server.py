@@ -14,7 +14,10 @@ from .apns import APNSConfig, APNSSender, read_private_key
 from .core import (
     app_connection_defaults,
     compute_manifest_changes,
+    filter_manifest_changes_for_paths,
+    github_push_changed_paths,
     load_json,
+    matching_automations_for_artifacts,
     normalized_public_notifier_url,
     notifier_status,
     save_json,
@@ -327,6 +330,7 @@ async def github_webhook(
         event=x_github_event or "push",
         source="github-webhook",
         topic_path="",
+        changed_paths=github_push_changed_paths(body),
     )
 
 
@@ -335,11 +339,15 @@ async def process_manifest_change_notifications(
     event: str,
     source: str,
     topic_path: str,
+    changed_paths: set[str] | None = None,
 ) -> dict[str, Any]:
     current_manifest = await fetch_manifest(manifest_url())
     state_path = data_dir() / "last-manifest.json"
     previous_manifest = load_json(state_path, None)
-    changes = compute_manifest_changes(previous_manifest, current_manifest)
+    changes = filter_manifest_changes_for_paths(
+        compute_manifest_changes(previous_manifest, current_manifest),
+        changed_paths,
+    )
     apns_summary = empty_apns_summary()
 
     if changes.has_changes:
@@ -393,10 +401,14 @@ async def send_change_notifications(
     devices = load_json(data_dir() / "devices.json", {})
     sender = apns_sender()
     manifest_url_value = manifest_url()
+    notification_automations = merge_automation_lists(
+        automations,
+        matching_automations_for_artifacts(manifest, artifacts),
+    )
     summary = await send_apns_change_notifications(
         devices=devices,
         artifacts=artifacts,
-        automations=automations,
+        automations=notification_automations,
         manifest_url_value=manifest_url_value,
         sender=sender,
     )
@@ -408,6 +420,16 @@ async def send_change_notifications(
         },
     )
     return summary
+
+
+def merge_automation_lists(*automation_lists: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    merged: dict[str, dict[str, Any]] = {}
+    for automations in automation_lists:
+        for automation in automations:
+            automation_id = str(automation.get("id") or "").strip()
+            if automation_id:
+                merged[automation_id] = automation
+    return sorted(merged.values(), key=lambda item: str(item.get("name") or item.get("id") or ""))
 
 
 def record_webhook_status(

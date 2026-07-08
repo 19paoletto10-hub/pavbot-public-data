@@ -27,9 +27,9 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
 
         record = {
             "fields": {
-                "briefingId": "puls-dnia-news:2026-07-06-1800",
+                "briefingId": "pavbot-puls-dnia-news-3h:2026-07-06-1800",
                 "category": "puls-dnia-news",
-                "title": "Pavbot Puls Dnia News · 2026-07-06 18:00",
+                "title": "Pavbot Puls Dnia 3h · 2026-07-06 18:00",
                 "manifestUrl": (
                     "https://raw.githubusercontent.com/19paoletto10-hub/"
                     "pavbot-public-data/main/public/pavbot-manifest.json"
@@ -43,12 +43,12 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
                 "aps": {
                     "alert": {
                         "title": "Pavbot",
-                        "subtitle": "Pavbot Puls Dnia News · 2026-07-06 18:00",
-                        "body": "Nowe dane: Pavbot Puls Dnia News · 2026-07-06 18:00",
+                        "subtitle": "Pavbot Puls Dnia 3h · 2026-07-06 18:00",
+                        "body": "Aktualizacja automatyzacji: Pavbot Puls Dnia 3h · 2026-07-06 18:00",
                     },
                     "sound": "default",
                 },
-                "briefingId": "puls-dnia-news:2026-07-06-1800",
+                "briefingId": "pavbot-puls-dnia-news-3h:2026-07-06-1800",
                 "category": "puls-dnia-news",
                 "manifestUrl": (
                     "https://raw.githubusercontent.com/19paoletto10-hub/"
@@ -415,6 +415,86 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
 
         self.assertIn("Artifact records do not match", str(context.exception))
 
+    def test_build_records_split_same_topic_stamp_by_automation(self) -> None:
+        publish_cloudkit_briefings = self.load_publisher_module()
+        manifest = {
+            "schemaVersion": 1,
+            "topics": [
+                {"slug": "tech-news", "title": "Pavbot Tech News"},
+            ],
+            "automations": [
+                {
+                    "id": "codex-agent-automation-daily-research",
+                    "name": "Pavbot Tech Research 08:00",
+                    "kind": "research",
+                    "topic": "tech-news",
+                    "topicPath": "research/tech-news",
+                },
+                {
+                    "id": "pavbot-tech-podcast-09-00",
+                    "name": "Pavbot Tech Podcast 09:00",
+                    "kind": "podcast",
+                    "topic": "tech-news",
+                    "topicPath": "research/tech-news",
+                    "output": "research/tech-news/podcasts/YYYY-MM-DD/podcast.mp3",
+                },
+            ],
+            "artifacts": [
+                {
+                    "id": "tech-run",
+                    "topic": "tech-news",
+                    "type": "run",
+                    "title": "Tech run",
+                    "path": "research/tech-news/runs/2026-07-08.md",
+                    "url": "research/tech-news/runs/2026-07-08.md",
+                    "sizeBytes": 42,
+                    "date": "2026-07-08",
+                },
+                {
+                    "id": "tech-podcast",
+                    "topic": "tech-news",
+                    "type": "podcastAudio",
+                    "title": "Podcast audio",
+                    "path": "research/tech-news/podcasts/2026-07-08/podcast.mp3",
+                    "url": "research/tech-news/podcasts/2026-07-08/podcast.mp3",
+                    "sizeBytes": 100,
+                    "date": "2026-07-08",
+                },
+            ],
+        }
+
+        briefings = publish_cloudkit_briefings.build_briefing_records(
+            manifest,
+            "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            "research/tech-news",
+        )
+        artifacts = publish_cloudkit_briefings.build_artifact_records(
+            manifest,
+            "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            "research/tech-news",
+        )
+
+        by_id = {record["fields"]["briefingId"]: record for record in briefings}
+        self.assertEqual(
+            sorted(by_id),
+            [
+                "codex-agent-automation-daily-research:2026-07-08",
+                "pavbot-tech-podcast-09-00:2026-07-08",
+            ],
+        )
+        self.assertEqual(by_id["codex-agent-automation-daily-research:2026-07-08"]["fields"]["title"], "Pavbot Tech Research 08:00 · 2026-07-08")
+        self.assertEqual(by_id["pavbot-tech-podcast-09-00:2026-07-08"]["fields"]["title"], "Pavbot Tech Podcast 09:00 · 2026-07-08")
+        self.assertEqual(
+            {
+                artifact["fields"]["path"]: artifact["fields"]["briefingId"]
+                for artifact in artifacts
+            },
+            {
+                "research/tech-news/runs/2026-07-08.md": "codex-agent-automation-daily-research:2026-07-08",
+                "research/tech-news/podcasts/2026-07-08/podcast.mp3": "pavbot-tech-podcast-09-00:2026-07-08",
+            },
+        )
+
     def test_run_cktool_reports_actionable_hint_for_expired_user_token(self) -> None:
         publish_cloudkit_briefings = self.load_publisher_module()
         original_run = publish_cloudkit_briefings.subprocess.run
@@ -448,6 +528,16 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
                 json.dumps(
                     {
                         "schemaVersion": 1,
+                        "automations": [
+                            {
+                                "id": "pavbot-puls-dnia-news-3h",
+                                "name": "Pavbot Puls Dnia 3h",
+                                "kind": "automation",
+                                "topic": "puls-dnia-news",
+                                "topicPath": "research/puls-dnia-news",
+                                "output": "research/puls-dnia-news/data/YYYY-MM-DD-HHMM-pulse-news.json",
+                            }
+                        ],
                         "topics": [
                             {"slug": "puls-dnia-news", "title": "Pavbot Puls Dnia News"},
                             {"slug": "tech-news", "title": "Pavbot Tech News"},
@@ -497,7 +587,7 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         payload = json.loads(result.stdout)
         self.assertEqual([record["fields"]["category"] for record in payload["records"]], ["puls-dnia-news"])
-        self.assertEqual(payload["records"][0]["notificationPayload"]["briefingId"], "puls-dnia-news:2026-07-06-1800")
+        self.assertEqual(payload["records"][0]["notificationPayload"]["briefingId"], "pavbot-puls-dnia-news-3h:2026-07-06-1800")
         self.assertEqual(payload["records"][0]["notificationPayload"]["category"], "puls-dnia-news")
         self.assertEqual(
             payload["records"][0]["notificationPayload"]["manifestUrl"],
@@ -511,6 +601,16 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
                 json.dumps(
                     {
                         "schemaVersion": 1,
+                        "automations": [
+                            {
+                                "id": "pavbot-puls-dnia-news-3h",
+                                "name": "Pavbot Puls Dnia 3h",
+                                "kind": "automation",
+                                "topic": "puls-dnia-news",
+                                "topicPath": "research/puls-dnia-news",
+                                "output": "research/puls-dnia-news/data/YYYY-MM-DD-HHMM-pulse-news.json",
+                            }
+                        ],
                         "topics": [
                             {"slug": "puls-dnia-news", "title": "Pavbot Puls Dnia News"},
                         ],
@@ -564,7 +664,7 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
         briefing = payload["records"][0]
         artifacts = payload["artifacts"]
 
-        self.assertEqual(briefing["fields"]["briefingId"], "puls-dnia-news:2026-07-06-1800")
+        self.assertEqual(briefing["fields"]["briefingId"], "pavbot-puls-dnia-news-3h:2026-07-06-1800")
         self.assertEqual(briefing["fields"]["artifactCount"], 2)
         self.assertEqual(
             json.loads(briefing["fields"]["artifactIdsJson"]),
@@ -585,7 +685,7 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
                 "research/puls-dnia-news/runs/2026-07-06-1800.md",
             ],
         )
-        self.assertTrue(all(artifact["fields"]["briefingId"] == "puls-dnia-news:2026-07-06-1800" for artifact in artifacts))
+        self.assertTrue(all(artifact["fields"]["briefingId"] == "pavbot-puls-dnia-news-3h:2026-07-06-1800" for artifact in artifacts))
 
     def test_dry_run_builds_reddit_radar_briefing_from_manifest_artifact(self) -> None:
         with tempfile.TemporaryDirectory() as tmp:
@@ -594,6 +694,16 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
                 json.dumps(
                     {
                         "schemaVersion": 1,
+                        "automations": [
+                            {
+                                "id": "pavbot-reddit-safari-humor-radar",
+                                "name": "Pavbot Reddit Safari Humor Radar",
+                                "kind": "automation",
+                                "topic": "reddit-radar",
+                                "topicPath": "research/reddit-radar",
+                                "output": "research/reddit-radar/data/YYYY-MM-DD-HHMM-reddit-radar.json",
+                            }
+                        ],
                         "topics": [
                             {"slug": "reddit-radar", "title": "Pavbot Reddit Radar"},
                         ],
@@ -633,7 +743,7 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
         self.assertEqual(result.returncode, 0, result.stderr)
         payload = json.loads(result.stdout)
         self.assertEqual([record["fields"]["category"] for record in payload["records"]], ["reddit-radar"])
-        self.assertEqual(payload["records"][0]["fields"]["briefingId"], "reddit-radar:2026-07-07-0610")
+        self.assertEqual(payload["records"][0]["fields"]["briefingId"], "pavbot-reddit-safari-humor-radar:2026-07-07-0610")
         self.assertEqual(payload["records"][0]["notificationPayload"]["category"], "reddit-radar")
 
 

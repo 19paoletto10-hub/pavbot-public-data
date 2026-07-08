@@ -10,6 +10,9 @@
 | High | Track Patriot/interceptor decisions for Ukraine | Russian ballistic strikes still make air-defence supply the operational center of the summit story, even after the counter-drone package | Check AP, NATO, White House, KPRM/MON and Ukrainian official channels for concrete interceptor, licensing or production decisions | Open |
 | Medium | Monitor Ormuz attribution carefully | UKMTO now confirms the tanker strike, but it still does not record an official Iranian claim | Separate confirmed maritime incident facts from responsibility claims and retaliation forecasts | Open |
 | Medium | Align automation flags with scripts | Heartbeat requires `--require-app-articles` and `--force-manifest`, but current local scripts do not expose those options | Prepare a scoped proposal before any script or automation change; continue validating JSON/PDF with existing commands meanwhile | Open |
+| High | Track Polish PAC-3 service hub details | MON announced a concrete Ankara agreement, but location, technical scope and Polish industrial role still need confirmation | Check MON, NSPA/NATO, US, Dutch, German and Swedish readouts after the summit | Open |
+| Medium | Follow Poland-US military space declaration | MON signed a statement of intent with U.S. Space Force, including missile warning and GPS/NAVWAR areas | Watch for implementation schedule, exercises, satellite milestones and ARGUS/COS updates | Open |
+| Medium | Resolve repo verifier iOS signing mismatch | `scripts/verify-research-workspace.sh` currently expects Apple Distribution signing while the local Xcode project contains Apple Development, so the repo-wide verifier fails outside this topic | Review proposal `proposals/2026-07-08-repair-verifier-signing-check.md` before changing iOS project or verifier rules | Open |
 
 ## Review Notes
 
@@ -84,6 +87,15 @@
   procurement and the Trump-Erdogan F-35 signal made Ankara more transactional.
   Follow-up should focus on Polish industrial spillover, the final declaration
   and whether any new air-defense decision addresses the Patriot gap.
+- 2026-07-08: Wednesday morning research run created a material update. Strongest
+  sources were MON for PAC-3 service, Jasionka Patriots and space cooperation
+  with the USA, NATO for the day-two programme and procurement package, AP and
+  Euronews for USA-Iran/Ormuz and NATO tensions, plus RCB/PAP/RMF24/TVN24 for
+  weather risk. Podcast should be explicit that this is a pre-declaration
+  morning snapshot: the final NATO line still needs an afternoon/evening check.
+- 2026-07-08: Repo-wide verifier currently fails on an iOS signing expectation
+  outside the active topic (`CODE_SIGN_IDENTITY = "Apple Distribution";`), so a
+  risk-gated proposal was created instead of changing project or verifier files.
 
 ## Done
 

@@ -77,6 +77,16 @@ The current active automations are:
 - iOS retention: fetched runs are cached locally for 48 hours; saved news stay
   local until the user removes them.
 
+- Name: `Pavbot Reddit Safari Humor Radar`
+- ID: `pavbot-reddit-safari-humor-radar`
+- Kind: `automation`
+- Topic: `research/reddit-radar`
+- Cadence: every 2 hours at 00:06, 02:06, 04:06, 06:06, 08:06, 10:06, 12:06,
+  14:06, 16:06, 18:06, 20:06 and 22:06 Europe/Warsaw
+- Output: `research/reddit-radar/data/YYYY-MM-DD-HHMM-reddit-radar.json`
+- Report: `research/reddit-radar/runs/YYYY-MM-DD-HHMM-reddit-radar.md`
+- iOS surface: `Dzisiaj -> Śmiechowy radar`
+
 ## Manual Run
 
 Use a manual run when you want to test the workflow before the next scheduled

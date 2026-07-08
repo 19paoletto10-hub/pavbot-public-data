@@ -127,6 +127,14 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
         artifacts.first { $0.type == .mobileNewsData }
     }
 
+    var hasNativeResearchContent: Bool {
+        researchDataArtifact != nil || researchReport != nil
+    }
+
+    var hasNativeMobileNewsContent: Bool {
+        mobileNewsDataArtifact != nil
+    }
+
     var podcastBriefPDF: PavbotArtifact? {
         artifacts.first { $0.type == .podcastBriefPdf }
     }
@@ -223,6 +231,20 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
         else { return [] }
 
         return packages.filter { $0.date == selectedReportDate }
+    }
+
+    static func nativeContentPackages(
+        for topic: ReportTopicKind,
+        in packages: [TopicReportPackage]
+    ) -> [TopicReportPackage] {
+        switch topic {
+        case .aktualne:
+            packages.filter(\.hasNativeMobileNewsContent)
+        case .techNews, .polskaSwiat:
+            packages.filter(\.hasNativeResearchContent)
+        case .jobs:
+            packages
+        }
     }
 
     static func selectedReportDate(in packages: [TopicReportPackage], selectedReportDay: String?) -> String? {

@@ -16,7 +16,7 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
 
     def test_commits_and_pushes_only_topic_outputs_and_manifest(self) -> None:
         with self.temporary_repo() as repo:
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_valid_research_outputs(repo, "tech-news", "2026-06-23")
 
             result = self.run_publish_script(repo, "research/tech-news")
 
@@ -39,6 +39,7 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 sorted(changed_files),
                 [
                     "public/pavbot-manifest.json",
+                    "research/tech-news/data/2026-06-23-research.json",
                     "research/tech-news/runs/2026-06-23.md",
                 ],
             )
@@ -174,6 +175,24 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
             self.assertIn("missing required field: articles", result.stderr)
             self.assertEqual(
                 self.git(repo, "rev-list", "--count", "HEAD", stdout=True).strip(),
+                "1",
+            )
+
+    def test_research_publish_refuses_run_without_matching_research_data(self) -> None:
+        with self.temporary_repo() as repo:
+            self.write_topic_artifact(
+                repo,
+                "tech-news",
+                "runs/2026-06-25.md",
+                "# Tech News\n\nDate: 2026-06-25\nStatus: Material update\n",
+            )
+
+            result = self.run_publish_script(repo, "research/tech-news", isolated=True)
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("missing researchData for latest research run", result.stderr)
+            self.assertEqual(
+                self.git(repo, "rev-list", "--count", "origin/main", stdout=True).strip(),
                 "1",
             )
 
@@ -575,7 +594,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
 
     def test_exits_without_commit_when_outputs_are_unchanged(self) -> None:
         with self.temporary_repo() as repo:
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_valid_research_outputs(repo, "tech-news", "2026-06-23")
             first = self.run_publish_script(repo, "research/tech-news")
             self.assertEqual(first.returncode, 0, first.stderr)
             head_after_first_publish = self.git(repo, "rev-parse", "HEAD", stdout=True).strip()
@@ -590,6 +609,49 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                 self.git(repo, "rev-parse", "HEAD", stdout=True).strip(),
                 head_after_first_publish,
             )
+
+    def test_noop_publish_refuses_manifest_with_missing_artifact_paths(self) -> None:
+        with self.temporary_repo() as repo:
+            manifest_path = repo / "public" / "pavbot-manifest.json"
+            manifest_path.parent.mkdir(parents=True, exist_ok=True)
+            manifest_path.write_text(
+                json.dumps(
+                    {
+                        "schemaVersion": 1,
+                        "title": "Pavbot Automation Manifest",
+                        "generatedAt": "2026-07-08T13:15:49+00:00",
+                        "rawBaseUrl": "https://raw.githubusercontent.com/example/pavbot/main/",
+                        "automations": [],
+                        "topics": [],
+                        "artifacts": [
+                            {
+                                "id": "research/reddit-radar/data/2026-07-08-0609-reddit-radar.json",
+                                "type": "redditRadarData",
+                                "topic": "reddit-radar",
+                                "title": "Reddit Radar data",
+                                "path": "research/reddit-radar/data/2026-07-08-0609-reddit-radar.json",
+                                "url": "https://raw.githubusercontent.com/example/pavbot/main/research/reddit-radar/data/2026-07-08-0609-reddit-radar.json",
+                                "sizeBytes": 9000,
+                                "date": "2026-07-08",
+                                "time": "06:09",
+                            }
+                        ],
+                    },
+                    indent=2,
+                )
+                + "\n",
+                encoding="utf-8",
+            )
+            self.git(repo, "add", "public/pavbot-manifest.json")
+            self.git(repo, "commit", "-m", "seed ghost manifest")
+            self.git(repo, "push", "origin", "main")
+
+            result = self.run_publish_script(repo, "research/reddit-radar", isolated=True)
+
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("manifest references missing artifact paths", result.stderr)
+            self.assertIn("research/reddit-radar/data/2026-07-08-0609-reddit-radar.json", result.stderr)
+            self.assertFalse((repo.parent / "cloudkit-publisher.log").exists())
 
     def test_reddit_radar_publish_requires_latest_data_in_manifest(self) -> None:
         with self.temporary_repo() as repo:
@@ -619,7 +681,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
 
     def test_cloudkit_dry_run_is_diagnostic_only_and_refuses_production_push(self) -> None:
         with self.temporary_repo() as repo:
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_valid_research_outputs(repo, "tech-news", "2026-06-23")
 
             result = self.run_publish_script(repo, "research/tech-news", cloudkit_dry_run=True)
 
@@ -646,7 +708,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
     def test_uses_existing_manifest_raw_base_url_when_manifest_env_is_missing(self) -> None:
         with self.temporary_repo() as repo:
             self.write_existing_manifest(repo, "https://raw.githubusercontent.com/example/from-manifest/main/")
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_valid_research_outputs(repo, "tech-news", "2026-06-23")
 
             result = self.run_publish_script(repo, "research/tech-news", manifest_url=None)
 
@@ -664,7 +726,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
     def test_derives_manifest_url_from_https_github_origin_when_env_is_missing(self) -> None:
         with self.temporary_repo() as repo:
             self.configure_github_origin_rewrite(repo, "https://github.com/example/pavbot.git")
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_valid_research_outputs(repo, "tech-news", "2026-06-23")
 
             result = self.run_publish_script(repo, "research/tech-news", manifest_url=None)
 
@@ -682,7 +744,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
     def test_derives_manifest_url_from_ssh_github_origin_when_env_is_missing(self) -> None:
         with self.temporary_repo() as repo:
             self.configure_github_origin_rewrite(repo, "git@github.com:example/pavbot.git")
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_valid_research_outputs(repo, "tech-news", "2026-06-23")
 
             result = self.run_publish_script(repo, "research/tech-news", manifest_url=None)
 
@@ -705,7 +767,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
         for remote_url in remote_urls:
             with self.subTest(remote_url=remote_url), self.temporary_repo() as repo:
                 self.configure_github_origin_rewrite(repo, remote_url)
-                self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+                self.write_valid_research_outputs(repo, "tech-news", "2026-06-23")
 
                 result = self.run_publish_script(repo, "research/tech-news", manifest_url=None)
 
@@ -723,7 +785,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
     def test_explicit_manifest_url_still_takes_precedence(self) -> None:
         with self.temporary_repo() as repo:
             self.write_existing_manifest(repo, "https://raw.githubusercontent.com/example/from-manifest/main/")
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_valid_research_outputs(repo, "tech-news", "2026-06-23")
 
             result = self.run_publish_script(
                 repo,
@@ -771,7 +833,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
 
     def test_isolated_publish_ignores_development_changes_and_pushes_outputs(self) -> None:
         with self.temporary_repo() as repo:
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_valid_research_outputs(repo, "tech-news", "2026-06-23")
             (repo / "docs" / "unrelated.md").write_text("development change\n", encoding="utf-8")
             tool_path = repo / "research" / "tech-news" / "tools" / "helper.sh"
             tool_path.parent.mkdir(parents=True, exist_ok=True)
@@ -794,6 +856,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
                 sorted(changed_files),
                 [
                     "public/pavbot-manifest.json",
+                    "research/tech-news/data/2026-06-23-research.json",
                     "research/tech-news/runs/2026-06-23.md",
                 ],
             )
@@ -803,7 +866,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
 
     def test_isolated_publish_reports_noop_without_push_message(self) -> None:
         with self.temporary_repo() as repo:
-            self.write_topic_artifact(repo, "tech-news", "runs/2026-06-23.md", "# Report\n")
+            self.write_valid_research_outputs(repo, "tech-news", "2026-06-23")
             first = self.run_publish_script(repo, "research/tech-news", isolated=True)
             self.assertEqual(first.returncode, 0, first.stderr)
 
@@ -1048,6 +1111,23 @@ esac
         path = repo / "research" / topic / relative_path
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(content, encoding="utf-8")
+
+    def write_valid_research_outputs(self, repo: Path, topic: str, date: str) -> None:
+        self.write_topic_artifact(
+            repo,
+            topic,
+            f"runs/{date}.md",
+            f"# {topic}\n\nDate: {date}\nStatus: Material update\n",
+        )
+        payload = self.valid_research_data_payload()
+        payload["topic"] = topic
+        payload["runDate"] = date
+        self.write_topic_artifact(
+            repo,
+            topic,
+            f"data/{date}-research.json",
+            json.dumps(payload, ensure_ascii=False) + "\n",
+        )
 
     def write_existing_manifest(self, repo: Path, raw_base_url: str) -> None:
         manifest_path = repo / "public" / "pavbot-manifest.json"

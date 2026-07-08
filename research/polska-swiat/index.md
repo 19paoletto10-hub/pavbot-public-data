@@ -70,6 +70,13 @@ Tritony, strategic airlift, projekt surowców krytycznych i apel do prywatnego
 kapitału, a Trump przy bilateralnym spotkaniu z Erdoğanem otworzył drogę do
 zniesienia sankcji blokujących F-35 dla Turcji. To wzmacnia tezę, że Ankara
 jest dziś testem przemysłowym i transakcyjnym, a nie tylko politycznym.
+Po porannym runie 8 lipca najważniejszy polski konkret z Ankary to porozumienie
+o serwisowaniu pocisków PAC-3 w Europie oraz potwierdzenie pozostawienia
+holenderskich Patriotów w Jasionce do końca roku. To łączy wątek NATO,
+przemysłu obronnego, Ukrainy i krajowego sporu o donacje Patriotów. Równolegle
+drugi dzień szczytu pozostaje otwarty do konferencji Ruttego i deklaracji
+końcowej, a Ormuz przeszedł od incydentu morskiego do uderzeń USA w Iran i
+publicznego poparcia tej reakcji przez sekretarza generalnego NATO.
 
 ## Stable Facts
 
@@ -133,9 +140,16 @@ jest dziś testem przemysłowym i transakcyjnym, a nie tylko politycznym.
   `--require-app-articles` i `--force-manifest`, ale obecne skrypty ich nie
   obsługują; dopóki skrypty nie zostaną zmienione, wymuszać jakość raportem i
   walidacją JSON, nie zmianą automatyzacji w unattended runie.
+- Po 8 lipca wrócić do szczegółów porozumienia PAC-3: lokalizacja, udział
+  polskich firm, harmonogram, zakres transferu technologii i relacja do
+  zapasów dla Ukrainy.
+- Wątek wojskowej współpracy kosmicznej Polska-USA śledzić jako część
+  zdolności NATO: łączność satelitarna, GPS/NAVWAR, ostrzeganie rakietowe,
+  ARGUS i Centrum Operacji Satelitarnych.
 
 ## Recent Reports
 
+- [2026-07-08](runs/2026-07-08.md)
 - [2026-07-07-1933](runs/2026-07-07-1933.md)
 - [2026-07-07](runs/2026-07-07.md)
 - [2026-07-06](runs/2026-07-06.md)

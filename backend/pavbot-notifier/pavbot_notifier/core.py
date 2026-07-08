@@ -16,6 +16,7 @@ PULSE_NEWS_NOTIFICATION_TITLE = "Nowe tematy - Puls dnia"
 PULSE_NEWS_FALLBACK_BODY = "Nowy zestaw tematów jest gotowy. Otwórz Puls dnia i sprawdź najnowsze karty."
 PULSE_NEWS_CTA = "Otwórz Puls dnia i przewiń najnowsze tematy."
 PULSE_NEWS_BODY_LIMIT = 160
+DEFAULT_APNS_CONCURRENCY = 8
 
 
 @dataclass(frozen=True)
@@ -64,6 +65,62 @@ def compute_manifest_changes(
     return ManifestChanges(artifacts=artifacts, automations=automations)
 
 
+def filter_manifest_changes_for_paths(
+    changes: ManifestChanges,
+    changed_paths: set[str] | list[str] | tuple[str, ...] | None,
+) -> ManifestChanges:
+    if changed_paths is None:
+        return changes
+
+    normalized_paths = {str(path).strip().lstrip("/") for path in changed_paths if str(path).strip()}
+    if not normalized_paths:
+        return ManifestChanges(artifacts=[], automations=[])
+
+    artifacts = [
+        artifact
+        for artifact in changes.artifacts
+        if manifest_item_matches_paths(artifact, normalized_paths)
+    ]
+    automations = [
+        automation
+        for automation in changes.automations
+        if manifest_item_matches_paths(automation, normalized_paths)
+    ]
+    return ManifestChanges(artifacts=artifacts, automations=automations)
+
+
+def manifest_item_matches_paths(item: dict[str, Any], changed_paths: set[str]) -> bool:
+    for key in ("path", "id", "sourcePath", "topicPath", "output"):
+        value = str(item.get(key) or "").strip().lstrip("/")
+        if value and value in changed_paths:
+            return True
+    return False
+
+
+def github_push_changed_paths(payload: bytes | dict[str, Any]) -> set[str] | None:
+    if isinstance(payload, bytes):
+        try:
+            payload = json.loads(payload.decode("utf-8"))
+        except (UnicodeDecodeError, json.JSONDecodeError):
+            return None
+    if not isinstance(payload, dict):
+        return None
+
+    paths: set[str] = set()
+    commits = payload.get("commits")
+    for commit in commits if isinstance(commits, list) else []:
+        if not isinstance(commit, dict):
+            continue
+        for key in ("added", "modified", "removed"):
+            values = commit.get(key)
+            if not isinstance(values, list):
+                continue
+            for value in values:
+                if isinstance(value, str) and value.strip():
+                    paths.add(value.strip().lstrip("/"))
+    return paths
+
+
 def verify_github_signature(secret: str, body: bytes, signature_header: str | None) -> bool:
     if not secret:
         return True
@@ -105,6 +162,7 @@ async def send_apns_change_notifications(
     manifest_url_value: str,
     sender: Any,
     fetch_json: Any | None = None,
+    max_concurrent_sends: int = DEFAULT_APNS_CONCURRENCY,
 ) -> dict[str, Any]:
     summary: dict[str, Any] = {
         "attempted": 0,
@@ -134,6 +192,23 @@ async def send_apns_change_notifications(
     if notification is None:
         return summary
 
+    send_tasks = []
+    concurrency = max(1, int(max_concurrent_sends or DEFAULT_APNS_CONCURRENCY))
+    semaphore = asyncio.Semaphore(concurrency)
+
+    async def send_to_device(device_token: str) -> None:
+        async with semaphore:
+            await send_apns_alert_safely(
+                sender=sender,
+                device_token=device_token,
+                title=notification["title"],
+                body=notification["body"],
+                user_info=notification["userInfo"],
+                summary=summary,
+                kind="summary",
+                item_id=notification["summaryID"],
+            )
+
     for device_token, registration in devices.items():
         if not isinstance(registration, dict):
             summary["skippedDevices"] += 1
@@ -141,17 +216,10 @@ async def send_apns_change_notifications(
         if registration.get("manifestURL") and registration.get("manifestURL") != manifest_url_value:
             summary["skippedDevices"] += 1
             continue
+        send_tasks.append(asyncio.create_task(send_to_device(device_token)))
 
-        await send_apns_alert_safely(
-            sender=sender,
-            device_token=device_token,
-            title=notification["title"],
-            body=notification["body"],
-            user_info=notification["userInfo"],
-            summary=summary,
-            kind="summary",
-            item_id=notification["summaryID"],
-        )
+    if send_tasks:
+        await asyncio.gather(*send_tasks)
 
     summary["status"] = delivery_status(summary)
     return summary
@@ -166,6 +234,8 @@ def build_change_notification(
 ) -> dict[str, Any] | None:
     artifact_ids = [str(item.get("id", "")) for item in artifacts if item.get("id")]
     automation_ids = [str(item.get("id", "")) for item in automations if item.get("id")]
+    automation_names = [clean_notification_text(item.get("name")) for item in automations if item.get("name")]
+    automation_names = [name for name in automation_names if name]
     if not artifact_ids and not automation_ids:
         return None
 
@@ -203,13 +273,20 @@ def build_change_notification(
         }
 
     if artifact_ids:
-        file_label = "file" if len(artifact_ids) == 1 else "files"
-        topic_label = topic or "Pavbot"
+        file_label = "nowy plik" if len(artifact_ids) == 1 else "nowe pliki"
         date_label = f" · {date}" if date else ""
-        body = f"{topic_label}{date_label} · {len(artifact_ids)} new {file_label}"
+        if len(automation_names) == 1:
+            body = f"Aktualizacja automatyzacji: {automation_names[0]}{date_label} · {len(artifact_ids)} {file_label}"
+        elif automation_names:
+            body = f"Aktualizacja automatyzacji: {len(automation_names)} automatyzacje{date_label} · {len(artifact_ids)} {file_label}"
+        else:
+            topic_label = topic or "Pavbot"
+            body = f"{topic_label}{date_label} · {len(artifact_ids)} {file_label}"
     else:
-        automation_label = "automation" if len(automation_ids) == 1 else "automations"
-        body = f"{len(automation_ids)} new {automation_label}"
+        if len(automation_names) == 1:
+            body = f"Aktualizacja automatyzacji: {automation_names[0]}"
+        else:
+            body = f"Aktualizacja automatyzacji: {len(automation_ids)} automatyzacje"
 
     return {
         "title": "Pavbot",
@@ -330,6 +407,89 @@ def common_value(values: list[str]) -> str:
     if len(unique_values) == 1:
         return next(iter(unique_values))
     return ""
+
+
+def matching_automations_for_artifacts(
+    manifest: dict[str, Any],
+    artifacts: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    automations_by_topic = enabled_automations_by_topic(manifest)
+    selected: dict[str, dict[str, Any]] = {}
+    for artifact in artifacts:
+        topic = str(artifact.get("topic") or "").strip()
+        if not topic:
+            continue
+        automation = selected_automation_for_artifact(topic, artifact, automations_by_topic)
+        automation_id = str(automation.get("id") or "").strip()
+        if automation_id:
+            selected[automation_id] = automation
+    return sorted(selected.values(), key=lambda item: str(item.get("name") or item.get("id") or ""))
+
+
+def enabled_automations_by_topic(manifest: dict[str, Any]) -> dict[str, list[dict[str, Any]]]:
+    result: dict[str, list[dict[str, Any]]] = {}
+    for automation in manifest.get("automations", []):
+        if not isinstance(automation, dict):
+            continue
+        if not automation.get("enabled", True):
+            continue
+        automation_id = str(automation.get("id") or "").strip()
+        topic = automation_topic_slug(automation)
+        if not automation_id or not topic:
+            continue
+        result.setdefault(topic, []).append(automation)
+    for automations in result.values():
+        automations.sort(key=lambda item: (str(item.get("kind") or ""), str(item.get("name") or ""), str(item.get("id") or "")))
+    return result
+
+
+def automation_topic_slug(automation: dict[str, Any]) -> str:
+    topic = str(automation.get("topic") or "").strip()
+    if topic.startswith("research/"):
+        topic = topic.removeprefix("research/")
+    if topic:
+        return topic.strip("/")
+    topic_path = str(automation.get("topicPath") or "").strip().strip("/")
+    if topic_path.startswith("research/"):
+        return topic_path.removeprefix("research/")
+    return topic_path
+
+
+def selected_automation_for_artifact(
+    topic: str,
+    artifact: dict[str, Any],
+    automations_by_topic: dict[str, list[dict[str, Any]]],
+) -> dict[str, Any]:
+    candidates = automations_by_topic.get(topic, [])
+    if not candidates:
+        return {}
+    if len(candidates) == 1:
+        return candidates[0]
+
+    podcast_artifact = artifact_is_podcast(artifact)
+    matching = [automation for automation in candidates if automation_is_podcast(automation) == podcast_artifact]
+    if matching:
+        research_like = [
+            automation
+            for automation in matching
+            if "research" in str(automation.get("kind") or automation.get("name") or "").lower()
+        ]
+        return (research_like or matching)[0]
+    return candidates[0]
+
+
+def automation_is_podcast(automation: dict[str, Any]) -> bool:
+    text = " ".join(
+        str(automation.get(key) or "")
+        for key in ("kind", "name", "output")
+    ).lower()
+    return "podcast" in text or "/podcasts/" in text
+
+
+def artifact_is_podcast(artifact: dict[str, Any]) -> bool:
+    path = str(artifact.get("path") or artifact.get("id") or "").lower()
+    artifact_type = str(artifact.get("type") or "").lower()
+    return "/podcasts/" in path or artifact_type.startswith("podcast") or "audio" in artifact_type
 
 
 async def send_apns_alert_safely(

@@ -46,13 +46,13 @@ final class TodayHumorStore {
             state = .loading
         }
 
-        let manifestArtifactURL = Self.latestRedditRadarDigestURL(
+        let manifestArtifactURLs = Self.redditRadarDigestURLs(
             in: manifest,
             manifestURLString: manifestURLString
         )
         var lastError: Error?
 
-        guard let manifestArtifactURL, preferManifestArtifact else {
+        guard !manifestArtifactURLs.isEmpty, preferManifestArtifact else {
             cacheNotice = digest == nil ? nil : PavbotCacheNoticeCopy.refreshFailed(context: "radar memów")
             state = digest == nil
                 ? .failed(
@@ -67,15 +67,19 @@ final class TodayHumorStore {
                 : .loaded
             return
         }
-        do {
-            let loadedDigest = try await client.fetchDigest(from: manifestArtifactURL)
-            digest = loadedDigest
-            cache.save(loadedDigest)
-            cacheNotice = nil
-            state = .loaded
-            return
-        } catch {
-            lastError = error
+
+        for manifestArtifactURL in manifestArtifactURLs {
+            do {
+                let loadedDigest = try await client.fetchDigest(from: manifestArtifactURL)
+                digest = loadedDigest
+                cache.save(loadedDigest)
+                cacheNotice = nil
+                state = .loaded
+                return
+            } catch {
+                lastError = error
+                continue
+            }
         }
 
         if digest != nil {
@@ -90,16 +94,15 @@ final class TodayHumorStore {
         }
     }
 
-    private static func latestRedditRadarDigestURL(
+    private static func redditRadarDigestURLs(
         in manifest: PavbotManifest?,
         manifestURLString: String?
-    ) -> URL? {
-        guard let manifest else { return nil }
-        let latestArtifact = manifest.artifacts
+    ) -> [URL] {
+        guard let manifest else { return [] }
+        return manifest.artifacts
             .filter { $0.topic == "reddit-radar" && $0.type == .redditRadarData }
             .sorted(by: PavbotArtifact.automationDisplaySort)
-            .first
-        return latestArtifact?.resolvedURL(manifestURL: manifestURLString.flatMap(URL.init(string:)))
+            .compactMap { $0.resolvedURL(manifestURL: manifestURLString.flatMap(URL.init(string:))) }
     }
 
     func load(minimumInterval: TimeInterval = 0) async {

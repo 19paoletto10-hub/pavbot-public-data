@@ -965,6 +965,55 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     @MainActor
+    func testResearchNewsStoreSkipsPodcastOnlyPackageWhenLoadingLatestNativeIssue() async throws {
+        let podcastOnlyPackage = TopicReportPackage(
+            topic: .techNews,
+            key: "2026-07-08",
+            artifacts: [
+                Self.artifact(
+                    id: "tech-podcast",
+                    type: .podcastAudio,
+                    topic: "tech-news",
+                    path: "research/tech-news/podcasts/2026-07-08/podcast.mp3",
+                    date: "2026-07-08"
+                )
+            ]
+        )
+        let dataPackage = TopicReportPackage(
+            topic: .techNews,
+            key: "2026-07-07",
+            artifacts: [
+                Self.artifact(
+                    id: "tech-data",
+                    type: .researchData,
+                    topic: "tech-news",
+                    path: "research/tech-news/data/2026-07-07-research.json",
+                    date: "2026-07-07"
+                )
+            ]
+        )
+        let store = ResearchNewsStore(
+            client: ResearchNewsClient(
+                fetchData: { _ in Self.researchDataFixtureData },
+                fetchText: { _ in XCTFail("Podcast-only package should be skipped before Markdown fallback"); return Self.techResearchMarkdownFixture }
+            ),
+            cache: ResearchNewsCache(defaults: UserDefaults(suiteName: UUID().uuidString)!)
+        )
+
+        await store.load(
+            packages: [podcastOnlyPackage, dataPackage],
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            topic: .techNews,
+            selectedDay: nil,
+            selectedArtifactIDs: []
+        )
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.selectedPackage?.key, "2026-07-07")
+        XCTAssertEqual(store.selectedPackage?.researchDataArtifact?.id, "tech-data")
+    }
+
+    @MainActor
     func testResearchNewsStoreChoosesCanonicalResearchDataWhenDuplicateArtifactExists() async throws {
         let duplicateArtifact = Self.artifact(
             id: "tech-data-duplicate",
@@ -1184,6 +1233,53 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.magazine?.headline, "Wydanie dnia")
         XCTAssertEqual(store.selectedPackage?.mobileNewsDataArtifact?.id, "mobile-data")
         XCTAssertEqual(store.magazine?.pdfArtifact?.id, "mobile-pdf")
+    }
+
+    @MainActor
+    func testMobileNewsStoreSkipsPackageWithoutMobileNewsDataWhenLoadingLatestMagazine() async throws {
+        let scriptOnlyPackage = TopicReportPackage(
+            topic: .aktualne,
+            key: "2026-07-08-10:15",
+            artifacts: [
+                Self.artifact(
+                    id: "mobile-script",
+                    type: .podcastScript,
+                    topic: "aktualne-wydarzenia-mobile",
+                    path: "research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1015/script.md",
+                    date: "2026-07-08",
+                    time: "10:15"
+                )
+            ]
+        )
+        let dataPackage = TopicReportPackage(
+            topic: .aktualne,
+            key: "2026-07-07-10:15",
+            artifacts: [
+                Self.artifact(
+                    id: "mobile-data",
+                    type: .mobileNewsData,
+                    topic: "aktualne-wydarzenia-mobile",
+                    path: "research/aktualne-wydarzenia-mobile/data/2026-07-07-1015-mobile-news.json",
+                    date: "2026-07-07",
+                    time: "10:15"
+                )
+            ]
+        )
+        let store = MobileNewsStore(
+            client: MobileNewsClient(fetchData: { _ in Self.mobileNewsDataFixtureData }),
+            cache: MobileNewsCache(defaults: UserDefaults(suiteName: UUID().uuidString)!)
+        )
+
+        await store.load(
+            packages: [scriptOnlyPackage, dataPackage],
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            selectedDay: nil,
+            selectedArtifactIDs: []
+        )
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.selectedPackage?.key, "2026-07-07-10:15")
+        XCTAssertEqual(store.selectedPackage?.mobileNewsDataArtifact?.id, "mobile-data")
     }
 
     @MainActor
@@ -3366,8 +3462,12 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(entitlements.contains("aps-environment"))
         XCTAssertTrue(entitlements.contains("com.apple.developer.icloud-container-environment"))
         XCTAssertTrue(entitlements.contains("$(CLOUDKIT_ENVIRONMENT)"))
-        XCTAssertTrue(projectYML.contains("CLOUDKIT_ENVIRONMENT: Development"))
         XCTAssertTrue(projectYML.contains("CLOUDKIT_ENVIRONMENT: Production"))
+        XCTAssertTrue(projectYML.contains("APS_ENVIRONMENT: production"))
+        XCTAssertTrue(projectYML.contains("CODE_SIGN_IDENTITY: Apple Distribution"))
+        XCTAssertTrue(projectYML.contains("CODE_SIGN_STYLE: Manual"))
+        XCTAssertFalse(projectYML.contains("CLOUDKIT_ENVIRONMENT: Development"))
+        XCTAssertFalse(projectYML.contains("APS_ENVIRONMENT: development"))
     }
 
     @MainActor
@@ -4399,6 +4499,71 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertNil(store.cacheNotice)
     }
 
+    @MainActor
+    func testTodayHumorStoreFallsBackToOlderManifestDigestWhenLatestFetchFails() async throws {
+        let fallbackDigest = Self.makeTodayHumorDigest(
+            id: "humor-2026-07-08-0011",
+            generatedAt: "2026-07-07T22:11:00Z",
+            displayTime: "00:11"
+        )
+        let latestArtifact = PavbotArtifact(
+            id: "research/reddit-radar/data/2026-07-08-0609-reddit-radar.json",
+            type: .redditRadarData,
+            topic: "reddit-radar",
+            title: "<RR> Reddit Radar",
+            path: "research/reddit-radar/data/2026-07-08-0609-reddit-radar.json",
+            url: "https://example.com/research/reddit-radar/data/2026-07-08-0609-reddit-radar.json",
+            sizeBytes: 9000,
+            date: "2026-07-08",
+            time: "06:09"
+        )
+        let fallbackArtifact = PavbotArtifact(
+            id: "research/reddit-radar/data/2026-07-08-0011-reddit-radar.json",
+            type: .redditRadarData,
+            topic: "reddit-radar",
+            title: "<RR> Reddit Radar",
+            path: "research/reddit-radar/data/2026-07-08-0011-reddit-radar.json",
+            url: "https://example.com/research/reddit-radar/data/2026-07-08-0011-reddit-radar.json",
+            sizeBytes: 8900,
+            date: "2026-07-08",
+            time: "00:11"
+        )
+        let manifest = PavbotManifest(
+            schemaVersion: 1,
+            title: "Pavbot",
+            generatedAt: "2026-07-08T04:20:00Z",
+            rawBaseUrl: "https://raw.githubusercontent.com/example/repo/main",
+            automations: [],
+            topics: [],
+            artifacts: [fallbackArtifact, latestArtifact]
+        )
+        let capture = URLRequestCapture()
+        let store = TodayHumorStore(
+            client: FallbackTodayHumorClient(
+                failingPathComponent: "2026-07-08-0609-reddit-radar.json",
+                fallbackDigest: fallbackDigest,
+                capture: capture
+            ),
+            cache: TodayHumorCache(defaults: UserDefaults(suiteName: UUID().uuidString)!),
+            preferManifestArtifact: true
+        )
+
+        await store.load(
+            minimumInterval: 0,
+            manifest: manifest,
+            manifestURLString: "https://raw.githubusercontent.com/example/repo/main/public/pavbot-manifest.json"
+        )
+
+        let requestedPaths = await capture.all().map(\.lastPathComponent)
+        XCTAssertEqual(requestedPaths, [
+            "2026-07-08-0609-reddit-radar.json",
+            "2026-07-08-0011-reddit-radar.json",
+        ])
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.digest?.id, "humor-2026-07-08-0011")
+        XCTAssertNil(store.cacheNotice)
+    }
+
     func testTodayHumorArtworkUsesFitModeInsteadOfCroppingImages() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let sourceURL = testsURL
@@ -5258,7 +5423,7 @@ final class PavbotManifestTests: XCTestCase {
         )
 
         XCTAssertTrue(researchViewSource.contains("syncSelectedReportDayToLatestIfNeeded()"))
-        XCTAssertTrue(researchViewSource.contains("syncSelectedReportDayToLatestIfNeeded(manifest: manifest)"))
+        XCTAssertTrue(researchViewSource.contains("syncSelectedReportDayToLatestIfNeeded(manifest: manifest, force: true)"))
         XCTAssertTrue(helperSource.contains("guard router.selectedReportArtifactIDs.isEmpty else { return }"))
         XCTAssertTrue(helperSource.contains("guard force || !hasSelectedReportDay(in: packages) else { return }"))
         XCTAssertTrue(helperSource.contains("latestReportKey(in: packages)"))
@@ -6089,7 +6254,7 @@ final class PavbotManifestTests: XCTestCase {
             .appendingPathComponent("project.yml")
         let source = try String(contentsOf: projectYML)
 
-        XCTAssertTrue(source.contains("MARKETING_VERSION: \"2.6\""))
+        XCTAssertTrue(source.contains("MARKETING_VERSION: \"2.6.2\""))
         XCTAssertTrue(source.contains("BUILD_TIMESTAMP=\"$(date +%H%M%S)\""))
         XCTAssertTrue(source.contains("BUILD_NUMBER=\"${BUILD_DATE}.${BUILD_TIMESTAMP}\""))
         let buildNumbers = source
@@ -8960,6 +9125,20 @@ private struct StaticTodayHumorClient: TodayHumorFetching {
 
     func fetchDigest(from artifactURL: URL) async throws -> TodayHumorDigest {
         artifactDigest
+    }
+}
+
+private struct FallbackTodayHumorClient: TodayHumorFetching {
+    let failingPathComponent: String
+    let fallbackDigest: TodayHumorDigest
+    let capture: URLRequestCapture
+
+    func fetchDigest(from artifactURL: URL) async throws -> TodayHumorDigest {
+        await capture.record(artifactURL)
+        if artifactURL.lastPathComponent == failingPathComponent {
+            throw TodayHumorClient.ClientError.httpStatus(404)
+        }
+        return fallbackDigest
     }
 }
 

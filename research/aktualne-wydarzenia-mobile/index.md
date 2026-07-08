@@ -1,21 +1,20 @@
 # Topic Index: aktualne-wydarzenia-mobile
 
-Last updated: 2026-07-07
+Last updated: 2026-07-08
 
 ## Current Understanding
 
 Temat służy do codziennego tworzenia mobilnego briefu o najważniejszych
-wydarzeniach publicznych z Polski i świata. Wieczorem 7 lipca środek ciężkości
-przesunął się z samych zapowiedzi na wykonanie: Rada Ministrów przyjęła pakiet
-projektów od greenwashingu po e-komunikację w relacjach pracy, RCB utrzymało
-obraz silnego wiatru, suszy hydrologicznej i podwyższonej czujności, a NATO w
-Ankarze pokazało już twarde liczby zakupów i wzrostu wydatków obronnych.
+wydarzeniach publicznych z Polski i świata. Poranek 8 lipca przesunął akcent z
+samego opisu na wdrożenie: RCB wysłało nowy alert wiatrowy i utrzymuje
+hydrologiczne ryzyka w kraju, PIP weszła w nowe uprawnienia, a NATO w Ankarze
+przeszło do zamówień, inwestycji i harmonogramu wykonania.
 
-Warstwa cyfrowa też przestała być tylko tłem. Oprócz nadal ważnych sygnałów
-DSA i CISA pojawił się świeży plan Komisji Europejskiej dla cyberbezpieczeństwa
-i zaawansowanej AI. Obecne rozumienie dnia jest więc proste: mniej deklaracji,
-więcej instytucjonalnych ruchów, które można mierzyć decyzją, liczbą albo
-harmonogramem wdrożenia.
+Warstwa polityczna jest równie konkretna. Premier wiąże wsparcie Ukrainy z
+bezpieczeństwem Polski, a prezydent podkreśla znaczenie solidarności
+sojuszniczej, wschodniej flanki i stałej obecności USA. W technologii
+Komisja Europejska publikuje plan cyber-AI, który podpina zaawansowaną AI pod
+istniejące ramy regulacyjne i bezpieczeństwa.
 
 Format ma pozostać krótki, źródłowy i mobile-first. Najważniejsze jest
 oddzielenie faktów od interpretacji, utrzymanie żywych linków przy każdym
@@ -37,23 +36,23 @@ scenariusz audio oraz publikacja do manifestu.
 
 ## Open Questions
 
-- Czy po wejściu w życie reformy PIP 8 lipca pojawią się już pierwsze
-  komunikaty operacyjne, reakcje pracodawców albo sygnały o praktyce kontroli?
-- Czy drugi dzień szczytu NATO w Ankarze zakończy się konkretnym komunikatem
-  z liczbami lub terminami dla wsparcia Ukrainy?
-- Czy nocne i poranne skutki wiatru, burz i suszy zmienią priorytety RCB lub
-  przełożą się na szkody terenowe?
-- Czy plan Komisji dla cyberbezpieczeństwa i AI szybko przełoży się na
-  komunikaty wykonawcze w UE, ENISA albo u operatorów infrastruktury?
+- Czy po starcie reformy PIP pojawią się pierwsze operacyjne FAQ, skargi albo
+  sygnały z kontroli?
+- Czy drugi dzień szczytu NATO przyniesie końcowy readout z konkretnymi
+  liczbami dla Ukrainy i wschodniej flanki?
+- Czy alert wiatrowy i hydrologia zmienią się dziś z porannego ryzyka w
+  spokojniejsze tło, czy wręcz przeciwnie?
+- Czy Komisja Europejska albo ENISA dołożą wykonawcze szczegóły do planu
+  cyber-AI jeszcze przed końcem tygodnia?
 
 ## Watch Items
 
-- Czy `male-xtts` nadal wymaga ręcznej interwencji, czy kończy się bez błędu.
-- Czy `female-piper` pozostaje stabilnym wariantem wymaganym dla każdego runu.
-- Czy PIP po 8 lipca zacznie generować praktyczne komunikaty wdrożeniowe.
-- Czy po drugim dniu szczytu NATO pojawi się oficjalny readout z liczbami dla Ukrainy.
-- Czy ostrzeżenia RCB i sytuacja hydrologiczna przejdą w realne nocne skutki terenowe.
-- Czy plan Komisji dla cyberbezpieczeństwa i AI dostanie szybkie rozwinięcia wdrożeniowe.
+- Czy `female-piper` pozostaje stabilnym obowiązkowym wariantem.
+- Czy `male-xtts` tym razem przejdzie pełny render bez ręcznej interwencji.
+- Czy PIP po starcie reformy opublikuje praktyczne instrukcje dla pracodawców.
+- Czy NATO wypuści końcowy komunikat z dodatkowymi liczbami dla Ukrainy.
+- Czy RCB i IMGW zawężą alert wiatrowy bez nowych incydentów terenowych.
+- Czy plan Komisji dla cyberbezpieczeństwa i AI szybko przełoży się na dalsze komunikaty wykonawcze.
 
 ## Recent Reports
 
@@ -64,3 +63,9 @@ scenariusz audio oraz publikacja do manifestu.
 - [2026-06-27-1019](runs/2026-06-27-1019.md) - sankcje UE do 31 lipca 2027,
   propozycja ochrony tymczasowej do 4 marca 2028 i eskalacja alertów upałowych
   do 42°C.
+
+## Recent Reports
+
+- [2026-07-08-1021](runs/2026-07-08-1021.md) - poranny alert wiatrowy,
+  wejście PIP w życie, linia rządu i prezydenta wobec Ukrainy oraz plan UE
+  dla cyber-AI.

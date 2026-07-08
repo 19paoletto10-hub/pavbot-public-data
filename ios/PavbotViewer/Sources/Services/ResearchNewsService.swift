@@ -170,19 +170,29 @@ final class ResearchNewsStore {
         selectedDay: String?,
         selectedArtifactIDs: [String]
     ) -> [TopicReportPackage] {
+        let loadablePackages = packages.filter(\.hasNativeResearchContent)
         let artifactIDs = Set(selectedArtifactIDs)
         if !artifactIDs.isEmpty,
-           let package = packages.first(where: { package in
+           let package = loadablePackages.first(where: { package in
                package.artifacts.contains { artifactIDs.contains($0.id) }
            }) {
             return [package]
         }
 
-        if let package = TopicReportPackage.selectedPackage(in: packages, selectedReportDay: selectedDay) {
-            return [package]
+        if let selectedDay = selectedDay?.trimmingCharacters(in: .whitespacesAndNewlines),
+           !selectedDay.isEmpty {
+            let selectedPackages = loadablePackages.filter { package in
+                package.key == selectedDay
+                    || package.displayDate == selectedDay
+                    || package.date == selectedDay
+                    || package.key.hasPrefix(selectedDay)
+            }
+            if !selectedPackages.isEmpty {
+                return selectedPackages
+            }
         }
 
-        return packages
+        return loadablePackages
     }
 
     private enum ParserError: LocalizedError {

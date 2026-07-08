@@ -390,6 +390,48 @@ validate_research_data_outputs() {
   python3 "$research_data_validator" "${files[@]}"
 }
 
+latest_research_run_rel_path() {
+  case "$topic_path" in
+    "research/tech-news"|"research/polska-swiat")
+      ;;
+    *)
+      return 1
+      ;;
+  esac
+
+  if [[ ! -d "$topic_path/runs" ]]; then
+    return 1
+  fi
+
+  local latest
+  latest="$(
+    find "$topic_path/runs" -type f -name '*.md' 2>/dev/null \
+      | LC_ALL=C sort \
+      | tail -n 1
+  )"
+  [[ -n "$latest" ]] || return 1
+  printf '%s' "$latest"
+}
+
+research_data_rel_path_for_run() {
+  local run_rel_path="$1"
+  local stem
+  stem="$(basename "$run_rel_path" .md)"
+  [[ -n "$stem" ]] || return 1
+  printf '%s/data/%s-research.json' "$topic_path" "$stem"
+}
+
+require_latest_research_data_for_latest_run() {
+  local latest_run_rel_path data_rel_path
+  latest_run_rel_path="$(latest_research_run_rel_path 2>/dev/null || true)"
+  [[ -n "$latest_run_rel_path" ]] || return 0
+
+  data_rel_path="$(research_data_rel_path_for_run "$latest_run_rel_path")" || return 0
+  if [[ ! -f "$data_rel_path" ]]; then
+    die "missing researchData for latest research run: $data_rel_path (from $latest_run_rel_path)"
+  fi
+}
+
 validate_mobile_news_data_outputs() {
   if [[ "$topic_path" != "$mobile_public_only_topic" ]]; then
     return 0
@@ -687,10 +729,75 @@ publish_cloudkit_all_topics_gate() {
   printf 'cloudkit all-topics publication verified\n'
 }
 
+manifest_artifact_paths() {
+  local manifest_path="public/pavbot-manifest.json"
+  [[ -f "$manifest_path" ]] || return 0
+
+  python3 - "$manifest_path" <<'PY'
+import json
+import sys
+from pathlib import Path
+
+manifest_path = Path(sys.argv[1])
+try:
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+except Exception as exc:
+    raise SystemExit(f"cannot read manifest artifact paths: {exc}")
+
+for artifact in manifest.get("artifacts", []):
+    if not isinstance(artifact, dict):
+        continue
+    path = str(artifact.get("path") or "").strip()
+    if path:
+        print(path)
+PY
+}
+
+fail_missing_manifest_artifact_paths() {
+  local scope="$1"
+  shift
+  printf 'error: manifest references missing artifact paths (%s):\n' "$scope" >&2
+  printf '  %s\n' "$@" >&2
+  exit 1
+}
+
+verify_manifest_artifact_paths_local() {
+  local missing=()
+  local path
+
+  while IFS= read -r path; do
+    [[ -n "$path" ]] || continue
+    if [[ ! -f "$path" ]]; then
+      missing+=("$path")
+    fi
+  done < <(manifest_artifact_paths)
+
+  if ((${#missing[@]} > 0)); then
+    fail_missing_manifest_artifact_paths "local worktree" "${missing[@]}"
+  fi
+}
+
+verify_manifest_artifact_paths_remote() {
+  local missing=()
+  local path
+
+  while IFS= read -r path; do
+    [[ -n "$path" ]] || continue
+    if ! git cat-file -e "origin/$target_branch:$path" 2>/dev/null; then
+      missing+=("$path")
+    fi
+  done < <(manifest_artifact_paths)
+
+  if ((${#missing[@]} > 0)); then
+    fail_missing_manifest_artifact_paths "origin/$target_branch" "${missing[@]}"
+  fi
+}
+
 verify_remote_publication() {
   git fetch origin "$target_branch" >/dev/null
   git cat-file -e "origin/$target_branch:public/pavbot-manifest.json" \
     || die "remote verification failed: missing public/pavbot-manifest.json on origin/$target_branch"
+  verify_manifest_artifact_paths_remote
   printf 'remote publication verified on origin/%s\n' "$target_branch"
 }
 
@@ -818,16 +925,19 @@ publish_isolated() {
     cd "$isolated_worktree"
 
     if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ! needs_manifest_refresh_for_reddit_radar && ! needs_manifest_refresh_for_mobile_news; then
+      verify_manifest_artifact_paths_local
       publish_cloudkit_briefings_gate
       printf 'no publishable changes for %s\n' "$topic_path"
       exit 0
     fi
 
     validate_jobs_data_outputs
+    require_latest_research_data_for_latest_run
     validate_research_data_outputs
     validate_mobile_news_data_outputs
     validate_pulse_news_data_outputs
     python3 "$manifest_generator" --repo-root "$PWD"
+    verify_manifest_artifact_paths_local
     require_latest_mobile_news_data_in_manifest
     require_latest_pulse_news_data_in_manifest
     require_latest_reddit_radar_data_in_manifest
@@ -951,16 +1061,19 @@ fi
 require_clean_publish_scope
 
 if ! has_publishable_changes && ! needs_manifest_refresh_for_pulse_news && ! needs_manifest_refresh_for_reddit_radar && ! needs_manifest_refresh_for_mobile_news; then
+  verify_manifest_artifact_paths_local
   publish_cloudkit_briefings_gate
   printf 'no publishable changes for %s\n' "$topic_path"
   exit 0
 fi
 
 validate_jobs_data_outputs
+require_latest_research_data_for_latest_run
 validate_research_data_outputs
 validate_mobile_news_data_outputs
 validate_pulse_news_data_outputs
 python3 "$manifest_generator" --repo-root "$PWD"
+verify_manifest_artifact_paths_local
 require_latest_mobile_news_data_in_manifest
 require_latest_pulse_news_data_in_manifest
 require_latest_reddit_radar_data_in_manifest

@@ -118,14 +118,14 @@ def human_stamp(stamp: str) -> str:
     return f"{date_part} {hour}:{minute}" if hour and minute else date_part
 
 
-def notification_title(topic_title: str, stamp: str) -> str:
-    return f"{topic_title} · {human_stamp(stamp)}"
+def notification_title(automation_name: str, stamp: str) -> str:
+    return f"{automation_name} · {human_stamp(stamp)}"
 
 
-def briefing_summary(topic_title: str, stamp: str, artifacts: list[dict[str, Any]]) -> str:
+def briefing_summary(automation_name: str, stamp: str, artifacts: list[dict[str, Any]]) -> str:
     artifact_types = sorted({str(artifact.get("type")) for artifact in artifacts if artifact.get("type")})
     suffix = f" Artefakty: {', '.join(artifact_types)}." if artifact_types else ""
-    return f"{topic_title}: nowe dane z publikacji {human_stamp(stamp)} są gotowe w aplikacji Pavbot.{suffix}"
+    return f"Aktualizacja automatyzacji {automation_name}: publikacja {human_stamp(stamp)} jest gotowa w aplikacji Pavbot.{suffix}"
 
 
 def first_artifact_url(artifacts: list[dict[str, Any]], predicate) -> str | None:
@@ -174,6 +174,139 @@ def latest_artifact_groups(
     return [(topic, stamp, artifacts) for topic, (stamp, artifacts) in sorted(latest_by_topic.items())]
 
 
+def automation_topic_slug(automation: dict[str, Any]) -> str:
+    topic = str(automation.get("topic") or "").strip()
+    if topic:
+        return topic_slug_for_path(topic) or topic
+    return topic_slug_for_path(str(automation.get("topicPath") or "")) or ""
+
+
+def enabled_automations_by_topic(manifest: dict[str, Any]) -> dict[str, list[dict[str, Any]]]:
+    result: dict[str, list[dict[str, Any]]] = {}
+    for automation in manifest.get("automations", []):
+        if not isinstance(automation, dict):
+            continue
+        if not automation.get("enabled", True):
+            continue
+        automation_id = str(automation.get("id") or "").strip()
+        topic = automation_topic_slug(automation)
+        if not automation_id or not topic:
+            continue
+        result.setdefault(topic, []).append(automation)
+    for topic, automations in result.items():
+        automations.sort(key=lambda item: (str(item.get("kind") or ""), str(item.get("name") or ""), str(item.get("id") or "")))
+    return result
+
+
+def topic_titles(manifest: dict[str, Any]) -> dict[str, str]:
+    return {
+        str(topic.get("slug")): str(topic.get("title") or topic.get("slug"))
+        for topic in manifest.get("topics", [])
+        if isinstance(topic, dict) and topic.get("slug")
+    }
+
+
+def automation_is_podcast(automation: dict[str, Any]) -> bool:
+    text = " ".join(
+        str(automation.get(key) or "")
+        for key in ("kind", "name", "output")
+    ).lower()
+    return "podcast" in text or "/podcasts/" in text
+
+
+def artifact_is_podcast(artifact: dict[str, Any]) -> bool:
+    path = artifact_path(artifact).lower()
+    artifact_type = str(artifact.get("type") or "").lower()
+    return "/podcasts/" in path or artifact_type.startswith("podcast") or "audio" in artifact_type
+
+
+def fallback_automation(topic: str, titles: dict[str, str]) -> dict[str, Any]:
+    title = titles.get(topic) or topic
+    return {
+        "id": topic,
+        "name": title,
+        "topic": topic,
+        "topicPath": f"research/{topic}",
+    }
+
+
+def selected_automation_for_artifact(
+    *,
+    topic: str,
+    artifact: dict[str, Any],
+    automations_by_topic: dict[str, list[dict[str, Any]]],
+    titles: dict[str, str],
+) -> dict[str, Any]:
+    candidates = automations_by_topic.get(topic, [])
+    if not candidates:
+        return fallback_automation(topic, titles)
+    if len(candidates) == 1:
+        return candidates[0]
+
+    podcast_artifact = artifact_is_podcast(artifact)
+    matching = [automation for automation in candidates if automation_is_podcast(automation) == podcast_artifact]
+    if podcast_artifact and matching:
+        return matching[0]
+    if matching:
+        research_like = [
+            automation
+            for automation in matching
+            if "research" in str(automation.get("kind") or automation.get("name") or "").lower()
+        ]
+        return (research_like or matching)[0]
+    return candidates[0]
+
+
+def latest_automation_artifact_groups(
+    manifest: dict[str, Any],
+    topic_path: str | None = None,
+) -> list[tuple[dict[str, Any], str, str, list[dict[str, Any]]]]:
+    topic_filter = topic_slug_for_path(topic_path)
+    automations_by_topic = enabled_automations_by_topic(manifest)
+    titles = topic_titles(manifest)
+    grouped: dict[tuple[str, str, str], tuple[dict[str, Any], str, str, list[dict[str, Any]]]] = {}
+
+    for artifact in manifest.get("artifacts", []):
+        if not isinstance(artifact, dict):
+            continue
+        topic = str(artifact.get("topic") or "").strip()
+        stamp = artifact_stamp(artifact)
+        path = artifact_path(artifact)
+        if not topic or not stamp or not path:
+            continue
+        if topic_filter and topic != topic_filter:
+            continue
+
+        automation = selected_automation_for_artifact(
+            topic=topic,
+            artifact=artifact,
+            automations_by_topic=automations_by_topic,
+            titles=titles,
+        )
+        automation_id = str(automation.get("id") or topic).strip()
+        key = (automation_id, topic, stamp)
+        if key not in grouped:
+            grouped[key] = (automation, topic, stamp, [])
+        grouped[key][3].append(artifact)
+
+    latest_by_automation: dict[tuple[str, str], tuple[dict[str, Any], str, str, list[dict[str, Any]]]] = {}
+    for automation, topic, stamp, artifacts in grouped.values():
+        automation_id = str(automation.get("id") or topic)
+        latest_key = (automation_id, topic)
+        current = latest_by_automation.get(latest_key)
+        if current is None or stamp > current[2]:
+            latest_by_automation[latest_key] = (automation, topic, stamp, artifacts)
+
+    return sorted(
+        latest_by_automation.values(),
+        key=lambda item: (
+            item[1],
+            str(item[0].get("name") or item[0].get("id") or ""),
+            item[2],
+        ),
+    )
+
+
 def artifact_path(artifact: dict[str, Any]) -> str:
     return str(artifact.get("path") or "").strip()
 
@@ -201,22 +334,17 @@ def build_briefing_records(
     manifest_url: str,
     topic_path: str | None = None,
 ) -> list[dict[str, Any]]:
-    topics = {
-        str(topic.get("slug")): topic
-        for topic in manifest.get("topics", [])
-        if isinstance(topic, dict) and topic.get("slug")
-    }
-
     records: list[dict[str, Any]] = []
-    for topic, stamp, artifacts in latest_artifact_groups(manifest, topic_path):
+    for automation, topic, stamp, artifacts in latest_automation_artifact_groups(manifest, topic_path):
         artifacts = sorted_publication_artifacts(artifacts)
         artifact_ids = [artifact_path(artifact) for artifact in artifacts if artifact_path(artifact)]
-        topic_title = str(topics.get(topic, {}).get("title") or topic)
-        briefing_id = f"{topic}:{stamp}"
+        automation_id = str(automation.get("id") or topic)
+        automation_name = str(automation.get("name") or automation_id)
+        briefing_id = f"{automation_id}:{stamp}"
         fields = {
             "briefingId": briefing_id,
-            "title": notification_title(topic_title, stamp),
-            "summary": briefing_summary(topic_title, stamp, artifacts),
+            "title": notification_title(automation_name, stamp),
+            "summary": briefing_summary(automation_name, stamp, artifacts),
             "manifestUrl": manifest_url,
             "artifactCount": len(artifact_ids),
             "primaryArtifactId": primary_artifact_id(artifacts),
@@ -246,8 +374,8 @@ def build_artifact_records(
     topic_path: str | None = None,
 ) -> list[dict[str, Any]]:
     records: list[dict[str, Any]] = []
-    for topic, stamp, artifacts in latest_artifact_groups(manifest, topic_path):
-        briefing_id = f"{topic}:{stamp}"
+    for automation, topic, stamp, artifacts in latest_automation_artifact_groups(manifest, topic_path):
+        briefing_id = f"{str(automation.get('id') or topic)}:{stamp}"
         for artifact in sorted_publication_artifacts(artifacts):
             path = artifact_path(artifact)
             if not path:
@@ -287,7 +415,7 @@ def build_notification_payload(record: dict[str, Any]) -> dict[str, Any]:
             "alert": {
                 "title": "Pavbot",
                 "subtitle": title,
-                "body": f"Nowe dane: {title}",
+                "body": f"Aktualizacja automatyzacji: {title}",
             },
             "sound": "default",
         },
