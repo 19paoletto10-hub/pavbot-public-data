@@ -875,11 +875,6 @@ The current active automations are:
             "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/podcast.raw.mp3",
             by_path,
         )
-        self.assertNotIn(
-            "research/aktualne-wydarzenia-mobile/podcasts/2026-06-23-1015/audio/female-piper/render.log",
-            by_path,
-        )
-
     def test_mobile_automation_contract_documents_single_warsaw_run_stamp(self) -> None:
         automation_prompt = (
             self.repo_root

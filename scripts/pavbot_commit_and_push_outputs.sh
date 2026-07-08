@@ -9,6 +9,7 @@ script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 manifest_generator="$script_dir/generate_pavbot_manifest.py"
 cloudkit_publisher="${PAVBOT_CLOUDKIT_PUBLISHER:-$script_dir/publish_cloudkit_briefings.py}"
 cktool_refresh_command="${PAVBOT_CKTOOL_REFRESH_COMMAND:-xcrun cktool save-token --type user --method keychain --force}"
+cktool_token_refreshed=0
 jobs_data_validator="$script_dir/validate_jobs_data.py"
 research_data_validator="$script_dir/validate_research_data.py"
 mobile_news_data_validator="$script_dir/validate_mobile_news_data.py"
@@ -894,6 +895,10 @@ run_cloudkit_publisher() {
 }
 
 refresh_cktool_user_token() {
+  if ((cktool_token_refreshed)); then
+    return 0
+  fi
+
   if [[ -z "${cktool_refresh_command//[[:space:]]/}" ]]; then
     die "empty PAVBOT_CKTOOL_REFRESH_COMMAND"
   fi
@@ -903,17 +908,20 @@ refresh_cktool_user_token() {
     printf 'e\n%s\n' "$PAVBOT_CKTOOL_USER_TOKEN" \
       | xcrun cktool save-token --type user --method keychain --force \
       || die "cktool user token refresh failed from PAVBOT_CKTOOL_USER_TOKEN"
+    cktool_token_refreshed=1
     printf 'cktool user token refreshed\n'
     return 0
   fi
 
   if [[ -z "${PAVBOT_CKTOOL_REFRESH_COMMAND:-}" && ! -t 0 ]]; then
     printf 'cktool user token refresh skipped: non-interactive terminal; using existing keychain token\n'
+    cktool_token_refreshed=1
     return 0
   fi
 
   printf 'refreshing cktool user token\n'
   bash -lc "$cktool_refresh_command" || die "cktool user token refresh failed; run manually and retry: xcrun cktool save-token --type user --method keychain --force"
+  cktool_token_refreshed=1
   printf 'cktool user token refreshed\n'
 }
 
@@ -1083,6 +1091,15 @@ copy_mobile_public_outputs_to_worktree() {
   [[ -n "$latest_stamp" ]] || return 0
 
   shopt -s nullglob
+  for src in "$src_root"/runs/*.md; do
+    rel_path="${src#"$src_root"/}"
+    stamp="$(mobile_public_output_stamp "$rel_path")" || continue
+    [[ "$stamp" == "$latest_stamp" ]] || continue
+    dest_path="$dest_topic_root/runs/$(basename "$src")"
+    mkdir -p "$(dirname "$dest_path")"
+    cp "$src" "$dest_path"
+  done
+
   for src in "$src_root"/data/*-mobile-news.json; do
     rel_path="${src#"$src_root"/}"
     stamp="$(mobile_public_output_stamp "$rel_path")" || continue

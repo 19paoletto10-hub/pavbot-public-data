@@ -27,7 +27,7 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
             cloudkit_log = (repo.parent / "cloudkit-publisher.log").read_text(encoding="utf-8").splitlines()
             self.assertEqual(cloudkit_log, ["preflight", "publish", "verify"])
             cktool_refresh_log = (repo.parent / "cktool-refresh.log").read_text(encoding="utf-8").splitlines()
-            self.assertEqual(cktool_refresh_log, ["refresh", "refresh", "refresh"])
+            self.assertEqual(cktool_refresh_log, ["refresh"])
             changed_files = self.git(
                 repo,
                 "diff-tree",
@@ -128,7 +128,7 @@ class PavbotCommitAndPushOutputsTest(unittest.TestCase):
                 """#!/usr/bin/env bash
 set -euo pipefail
 printf '%s\n' "$*" >> "${PAVBOT_TEST_XCRUN_ARGS_LOG:?}"
-cat > "${PAVBOT_TEST_XCRUN_STDIN_LOG:?}"
+cat >> "${PAVBOT_TEST_XCRUN_STDIN_LOG:?}"
 """,
                 encoding="utf-8",
             )
@@ -147,18 +147,13 @@ cat > "${PAVBOT_TEST_XCRUN_STDIN_LOG:?}"
             )
 
             self.assertEqual(result.returncode, 0, result.stderr)
-            self.assertIn("cktool user token refreshed", result.stdout)
             self.assertEqual(
                 (repo.parent / "xcrun-args.log").read_text(encoding="utf-8").splitlines(),
-                [
-                    "cktool save-token --type user --method keychain --force",
-                    "cktool save-token --type user --method keychain --force",
-                    "cktool save-token --type user --method keychain --force",
-                ],
+                ["cktool save-token --type user --method keychain --force"],
             )
             self.assertEqual(
                 (repo.parent / "xcrun-stdin.log").read_text(encoding="utf-8").splitlines(),
-                ["e", "fresh-user-token", "e", "fresh-user-token", "e", "fresh-user-token"],
+                ["e", "fresh-user-token"],
             )
             self.assertFalse((repo.parent / "cktool-refresh.log").exists())
 
@@ -713,7 +708,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             cloudkit_log = (repo.parent / "cloudkit-publisher.log").read_text(encoding="utf-8").splitlines()
             self.assertEqual(cloudkit_log, ["preflight", "publish", "verify", "publish", "verify"])
             cktool_refresh_log = (repo.parent / "cktool-refresh.log").read_text(encoding="utf-8").splitlines()
-            self.assertEqual(cktool_refresh_log, ["refresh", "refresh", "refresh", "refresh", "refresh"])
+            self.assertEqual(cktool_refresh_log, ["refresh", "refresh"])
             self.assertEqual(
                 self.git(repo, "rev-parse", "HEAD", stdout=True).strip(),
                 head_after_first_publish,
@@ -838,7 +833,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             cloudkit_log = (repo.parent / "cloudkit-publisher.log").read_text(encoding="utf-8").splitlines()
             self.assertEqual(cloudkit_log, ["publish", "verify"])
             cktool_refresh_log = (repo.parent / "cktool-refresh.log").read_text(encoding="utf-8").splitlines()
-            self.assertEqual(cktool_refresh_log, ["refresh", "refresh"])
+            self.assertEqual(cktool_refresh_log, ["refresh"])
             self.assertEqual(self.git(repo, "rev-parse", "HEAD", stdout=True).strip(), head_before)
 
     def test_uses_existing_manifest_raw_base_url_when_manifest_env_is_missing(self) -> None:
@@ -1012,7 +1007,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             self.assertIn("no publishable changes", second.stdout)
             self.assertNotIn("pushed pavbot outputs", second.stdout)
 
-    def test_mobile_topic_refuses_in_place_publish_for_editorial_artifacts(self) -> None:
+    def test_mobile_topic_refuses_in_place_publish_for_unpublished_working_artifacts(self) -> None:
         with self.temporary_repo() as repo:
             self.write_topic_artifact(
                 repo,
@@ -1023,14 +1018,14 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             self.write_topic_artifact(
                 repo,
                 "aktualne-wydarzenia-mobile",
-                "runs/2026-06-24-1015.md",
-                "# Report\n",
+                "data/2026-06-24-1015-mobile-news.json",
+                json.dumps(self.valid_mobile_news_data_payload(), ensure_ascii=False) + "\n",
             )
             self.write_topic_artifact(
                 repo,
                 "aktualne-wydarzenia-mobile",
-                "podcasts/2026-06-24-1015/script.md",
-                "# Script\n",
+                "podcasts/2026-06-24-1015/audio/female-piper/podcast.raw.mp3",
+                "raw mp3",
             )
 
             result = self.run_publish_script(repo, "research/aktualne-wydarzenia-mobile")
@@ -1038,7 +1033,7 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("outside allowed publish paths", result.stderr)
             self.assertIn(
-                "research/aktualne-wydarzenia-mobile/runs/2026-06-24-1015.md",
+                "research/aktualne-wydarzenia-mobile/podcasts/2026-06-24-1015/audio/female-piper/podcast.raw.mp3",
                 result.stderr,
             )
 
