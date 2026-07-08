@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-09-0008",
+  "status": "no_material_change",
+  "generatedAt": "2026-07-08T22:08:00+00:00",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-09T00:07:54+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm"
+    ],
+    "notes": [
+      "Safari Computer Use access worked for this run.",
+      "No Reddit social actions were performed.",
+      "Current public winner bundle remained 2026-07-08-1808."
+    ]
+  },
+  "currentPublicBundle": "2026-07-08-1808",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-09-0008-reddit-radar.json",
+  "newCandidates": [
+    {
+      "subreddit": "r/memes",
+      "title": "Money is money",
+      "url": "https://www.reddit.com/r/memes/comments/1uqxsev/money_is_money/",
+      "scoreLabel": "5.3K",
+      "decision": "weaker_than_active_memes_card"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "askingTheRealQuestionHere",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uqumic/askingtherealquestionhere/",
+      "scoreLabel": "1.8K",
+      "decision": "weaker_than_active_dev_card"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "I asked for \"no tomato\" and they gave me a tomato bigger than the patty",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uqyix4/i_asked_for_no_tomato_and_they_gave_me_a_tomato/",
+      "scoreLabel": "30K",
+      "decision": "strong_single_candidate_but_not_full_bundle_upgrade"
+    },
+    {
+      "subreddit": "r/facepalm",
+      "title": "4th of July Board in Central Texas. An update and some explanations.",
+      "url": "https://www.reddit.com/r/facepalm/comments/1uqt0m1/4th_of_july_board_in_central_texas_an_update_and/",
+      "scoreLabel": "2K",
+      "decision": "not_better_than_active_facepalm_card"
+    }
+  ]
+}
