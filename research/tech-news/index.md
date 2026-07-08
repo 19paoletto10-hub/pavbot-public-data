@@ -8,6 +8,16 @@ Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
 
+Po raporcie z 2026-07-08 główna nowa oś to przesunięcie z modelowego hype'u do
+domyślnych ustawień i operacyjnych ścieżek dostępu: Meta Muse Image wciąga
+publiczne profile Instagramu do generacji, Anthropic przenosi Cowork na web i
+mobile, Microsoft routuje część promptów do własnych modeli MAI, a Discord
+pokazuje koszt false positive w moderacji AI. Równolegle Norm AI i Savi
+zamieniają prawo oraz consumer scam defense w product categories, Forterra
+ujawnia battlefield autonomy w Ukrainie, a ITU/UN formalizują globalny
+governance przez AI for Good Global Commission. Product Hunt i Hacker News
+dalej premiują agentów, search i lokalny TTS jako sygnał popytu.
+
 Po raporcie z 2026-07-07 najważniejsza nowa oś to przejście od samego modelowego
 hype'u do kosztów i ryzyk operacyjnych AI: Microsoft łączy cięcia etatów z
 Frontier Company, Sysdig opisuje JADEPUFFER jako agentic ransomware, SK Hynix

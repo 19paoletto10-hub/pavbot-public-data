@@ -4,6 +4,12 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Meta Muse Image privacy backlash | Public Instagram reuse could trigger consent and default-setting scrutiny | Watch opt-out defaults, complaint volume and policy edits | Open |
+| High | Track Microsoft in-house model migration | MAI routing may change Copilot economics and vendor mix | Watch rollout breadth across 365, Foundry and partner surfaces | Open |
+| High | Track Claude Cowork cross-device adoption | Mobile/web sessions may become the default agent UX | Watch enterprise limits, approvals and handoff behavior | Open |
+| High | Track Discord moderation false positives | The ban bug shows brittleness in AI safety stacks | Watch root-cause fix, appeal flow and recurrence risk | Open |
+| High | Track Forterra battlefield autonomy | Ukraine deployment gives rare public proof of ground autonomy at scale | Watch new mission data, procurement and safety lessons | Open |
+| Medium | Track UN AI for Good Commission output | Geneva meeting will show whether global AI governance has concrete follow-through | Watch commissioner statements and published follow-ups | Open |
 | High | Review first three generated podcasts | Confirms pacing, topic selection, MP3 generation, and Polish narration quality | Listen to each MP3 and record notes | Open |
 | High | Track AI-native legal services | Norm Ai shows regulated work being sold as an outcome-based agentic service with human oversight | Watch competitor economics, bar/regulator response and enterprise adoption | Open |
 | Medium | Track consumer AI scam defense | Savi suggests AI-generated fraud is becoming a standalone consumer security category | Watch app traction, telco/OS partnerships and scam-detection benchmarks | Open |
