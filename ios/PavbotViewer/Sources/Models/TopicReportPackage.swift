@@ -247,6 +247,62 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
         }
     }
 
+    static func nativeContentReloadKey(
+        for topic: ReportTopicKind,
+        in packages: [TopicReportPackage]
+    ) -> String {
+        packages
+            .sorted { $0.key > $1.key }
+            .map { package in
+                let artifactKey = package.nativeReloadArtifacts(for: topic)
+                    .sorted { lhs, rhs in
+                        if lhs.type.rawValue != rhs.type.rawValue {
+                            return lhs.type.rawValue < rhs.type.rawValue
+                        }
+                        return lhs.path < rhs.path
+                    }
+                    .map { artifact in
+                        [
+                            artifact.id,
+                            artifact.type.rawValue,
+                            artifact.path,
+                            String(artifact.sizeBytes),
+                            artifact.date ?? "",
+                            artifact.time ?? ""
+                        ].joined(separator: "#")
+                    }
+                    .joined(separator: "~")
+                return [package.key, artifactKey].filter { !$0.isEmpty }.joined(separator: "@")
+            }
+            .joined(separator: "||")
+    }
+
+    static func latestSelectableReportKey(
+        in packages: [TopicReportPackage],
+        currentSelection: String?,
+        selectedArtifactIDs: [String],
+        forceLatest: Bool
+    ) -> String? {
+        guard selectedArtifactIDs.isEmpty else { return nil }
+        let sortedPackages = packages.sorted { $0.key > $1.key }
+        guard let latestKey = sortedPackages.first?.key else { return nil }
+
+        if forceLatest {
+            return currentSelection == latestKey ? nil : latestKey
+        }
+
+        guard let currentSelection else {
+            return latestKey
+        }
+
+        let selectionStillExists = sortedPackages.contains { package in
+            keysMatch(package.key, currentSelection)
+                || package.date == currentSelection
+                || package.key.hasPrefix(currentSelection)
+        }
+        return selectionStillExists ? nil : latestKey
+    }
+
     static func keysMatch(_ lhs: String, _ rhs: String) -> Bool {
         normalizedPackageKey(lhs) == normalizedPackageKey(rhs)
     }
@@ -336,6 +392,17 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
     private static func isFinderStyleDuplicate(_ path: String) -> Bool {
         let stem = URL(fileURLWithPath: path).deletingPathExtension().lastPathComponent
         return stem.range(of: #" \d+$"#, options: .regularExpression) != nil
+    }
+
+    private func nativeReloadArtifacts(for topic: ReportTopicKind) -> [PavbotArtifact] {
+        switch topic {
+        case .jobs:
+            [dataArtifact, researchReport, pdfReport].compactMap { $0 }
+        case .aktualne:
+            [mobileNewsDataArtifact].compactMap { $0 }
+        case .techNews, .polskaSwiat:
+            [researchDataArtifact, researchReport].compactMap { $0 }
+        }
     }
 }
 

@@ -85,7 +85,14 @@ token creation is prompt-driven, so fully unattended runs should provide a
 fresh Apple Developer user token through `PAVBOT_CKTOOL_USER_TOKEN`; the script
 then writes it to the cktool keychain entry non-interactively. If that secret is
 not set, a non-interactive automation run skips the prompt-only refresh and uses
-the existing keychain token instead. It derives the public manifest URL from
+the existing keychain token instead. For the production Pavbot CloudKit
+container, unattended runs can instead use CloudKit Web Services
+server-to-server auth by setting `PAVBOT_CLOUDKIT_AUTH_MODE=server-to-server`,
+`PAVBOT_CLOUDKIT_SERVER_KEY_ID`, and
+`PAVBOT_CLOUDKIT_SERVER_PRIVATE_KEY_PATH` in the local
+`~/.config/pavbot/cloudkit.env` file. That local file stays outside the
+repository and causes the publish wrapper to skip `cktool` user-token refresh.
+It derives the public manifest URL from
 `PAVBOT_MANIFEST_URL`, `PAVBOT_RAW_BASE_URL`, the existing manifest
 `rawBaseUrl`, or the GitHub `origin` remote. It requires a working `origin` and
 push credentials for `main`. Do not push generated automation files separately

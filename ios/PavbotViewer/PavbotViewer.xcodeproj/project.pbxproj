@@ -722,7 +722,7 @@
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 260708.172713;
+				CURRENT_PROJECT_VERSION = 260708.215301;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -740,7 +740,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = PavbotAudioActivityExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 260708.172713;
+				CURRENT_PROJECT_VERSION = 260708.215301;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = AudioActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -830,7 +830,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = PavbotAudioActivityExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 260708.172713;
+				CURRENT_PROJECT_VERSION = 260708.215301;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = AudioActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -916,7 +916,7 @@
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 260708.172713;
+				CURRENT_PROJECT_VERSION = 260708.215301;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

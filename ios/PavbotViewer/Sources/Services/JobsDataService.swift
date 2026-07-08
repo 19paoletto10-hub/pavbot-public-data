@@ -7,6 +7,35 @@ struct JobsReportPackage: Equatable {
     let source: JobsReportSource
 }
 
+struct JobsNativeDataNotice: Equatable {
+    let title: String
+    let message: String
+    let latestKey: String
+    let selectedKey: String
+
+    init?(
+        packages: [TopicReportPackage],
+        selectedPackage: TopicReportPackage?,
+        source: JobsReportSource?
+    ) {
+        guard
+            source == .jobsData,
+            let selectedPackage,
+            selectedPackage.dataArtifact != nil,
+            let latestPackage = packages.sorted(by: { $0.key > $1.key }).first,
+            latestPackage.key != selectedPackage.key,
+            latestPackage.dataArtifact == nil
+        else {
+            return nil
+        }
+
+        title = "Najnowsza paczka czeka na jobsData"
+        latestKey = latestPackage.key
+        selectedKey = selectedPackage.key
+        message = "Najnowszy raport Praca \(latestKey) jest w manifeście, ale nie ma jeszcze jobsData. Pokazuję ostatnie dane strukturalne \(selectedKey)."
+    }
+}
+
 struct JobsDataClient {
     enum ClientError: LocalizedError {
         case invalidResponse

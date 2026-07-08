@@ -1,6 +1,14 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+cloudkit_env_file="${PAVBOT_CLOUDKIT_ENV_FILE:-$HOME/.config/pavbot/cloudkit.env}"
+if [[ -f "$cloudkit_env_file" ]]; then
+  set -a
+  # shellcheck source=/dev/null
+  source "$cloudkit_env_file"
+  set +a
+fi
+
 target_branch="${PAVBOT_PUBLISH_BRANCH:-main}"
 mobile_public_only_topic="research/aktualne-wydarzenia-mobile"
 pulse_news_topic="research/puls-dnia-news"
@@ -59,6 +67,14 @@ Optional environment:
       Optional secret for unattended runs. When set and no refresh-command
       override is provided, the script saves this token to the cktool keychain
       entry non-interactively before production CloudKit calls.
+  PAVBOT_CLOUDKIT_AUTH_MODE=server-to-server
+      Use CloudKit Web Services server-to-server auth instead of cktool.
+      The wrapper also reads ~/.config/pavbot/cloudkit.env, or the path in
+      PAVBOT_CLOUDKIT_ENV_FILE, before CloudKit publication.
+  PAVBOT_CLOUDKIT_SERVER_KEY_ID=<CloudKit server-to-server key id>
+      Key ID from CloudKit Console Tokens & Keys.
+  PAVBOT_CLOUDKIT_SERVER_PRIVATE_KEY_PATH=/path/to/eckey.pem
+      Local private key matching the server-to-server public key in CloudKit.
   PAVBOT_EXPECTED_MOBILE_NEWS_STAMP=YYYY-MM-DD-HHMM
       For research/aktualne-wydarzenia-mobile, require this exact native
       mobileNewsData package to exist and be promoted into the manifest.
@@ -1066,6 +1082,11 @@ run_cloudkit_publisher() {
 }
 
 refresh_cktool_user_token() {
+  if [[ "${PAVBOT_CLOUDKIT_AUTH_MODE:-}" == "server-to-server" ]]; then
+    printf 'cktool user token refresh skipped: using CloudKit server-to-server auth\n'
+    return 0
+  fi
+
   if [[ -z "${cktool_refresh_command//[[:space:]]/}" ]]; then
     die "empty PAVBOT_CKTOOL_REFRESH_COMMAND"
   fi

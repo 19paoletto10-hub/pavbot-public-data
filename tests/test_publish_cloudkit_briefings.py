@@ -3,11 +3,13 @@ from __future__ import annotations
 import argparse
 import importlib
 import json
+import os
 import subprocess
 import sys
 import tempfile
 import unittest
 from pathlib import Path
+from types import SimpleNamespace
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -83,6 +85,130 @@ class PublishCloudKitBriefingsTest(unittest.TestCase):
         self.assertIsNotNone(hint)
         self.assertIn("Artifact record type", hint)
         self.assertIn("scripts/pavbot_commit_and_push_outputs.sh --all-topics", hint)
+
+    def test_cloudkit_web_services_client_signs_query_requests(self) -> None:
+        publish_cloudkit_briefings = self.load_publisher_module()
+        requests = []
+
+        with tempfile.TemporaryDirectory() as tmp:
+            key_path = Path(tmp) / "cloudkit-server-key.pem"
+            subprocess.run(
+                ["openssl", "ecparam", "-name", "prime256v1", "-genkey", "-noout", "-out", str(key_path)],
+                check=True,
+                capture_output=True,
+            )
+            args = SimpleNamespace(
+                container_id="iCloud.com.paweltanski.pavbotviewer",
+                environment="production",
+                cloudkit_auth_mode="server-to-server",
+                server_key_id="server-key-id",
+                server_private_key_path=str(key_path),
+            )
+
+            class FakeResponse:
+                def __enter__(self):
+                    return self
+
+                def __exit__(self, *_exc):
+                    return False
+
+                def read(self):
+                    return b'{"records":[]}'
+
+            original_urlopen = publish_cloudkit_briefings.urllib.request.urlopen
+
+            def fake_urlopen(request, *, timeout):
+                requests.append((request, timeout))
+                return FakeResponse()
+
+            publish_cloudkit_briefings.urllib.request.urlopen = fake_urlopen
+            try:
+                records = publish_cloudkit_briefings.CloudKitWebServicesClient(args).query_records_by_type("Briefing")
+            finally:
+                publish_cloudkit_briefings.urllib.request.urlopen = original_urlopen
+
+        self.assertEqual(records, [])
+        self.assertEqual(len(requests), 1)
+        request, timeout = requests[0]
+        self.assertEqual(timeout, publish_cloudkit_briefings.DEFAULT_CKTOOL_TIMEOUT_SECONDS)
+        self.assertEqual(
+            request.full_url,
+            "https://api.apple-cloudkit.com/database/1/iCloud.com.paweltanski.pavbotviewer/production/public/records/query",
+        )
+        self.assertEqual(request.headers["X-apple-cloudkit-request-keyid"], "server-key-id")
+        self.assertIn("X-apple-cloudkit-request-iso8601date", request.headers)
+        self.assertIn("X-apple-cloudkit-request-signaturev1", request.headers)
+        body = json.loads(request.data.decode("utf-8"))
+        self.assertEqual(body["query"]["recordType"], "Briefing")
+        self.assertEqual(body["resultsLimit"], 200)
+        self.assertNotIn("EC PRIVATE KEY", request.headers["X-apple-cloudkit-request-signaturev1"])
+
+    def test_query_records_by_type_uses_server_to_server_backend_when_configured(self) -> None:
+        publish_cloudkit_briefings = self.load_publisher_module()
+        args = SimpleNamespace(
+            cloudkit_auth_mode="server-to-server",
+            server_key_id="server-key-id",
+            server_private_key_path="/tmp/cloudkit-server-key.pem",
+        )
+        calls: list[str] = []
+        original_client = publish_cloudkit_briefings.CloudKitWebServicesClient
+        original_run = publish_cloudkit_briefings.run_cktool
+
+        class FakeClient:
+            def __init__(self, _args):
+                pass
+
+            def query_records_by_type(self, record_type):
+                calls.append(record_type)
+                return [{"recordName": "from-web-services"}]
+
+        def fail_run_cktool(command):
+            self.fail(f"server-to-server mode should not call cktool: {command}")
+
+        publish_cloudkit_briefings.CloudKitWebServicesClient = FakeClient
+        publish_cloudkit_briefings.run_cktool = fail_run_cktool
+        try:
+            records = publish_cloudkit_briefings.query_records_by_type("Briefing", args)
+        finally:
+            publish_cloudkit_briefings.CloudKitWebServicesClient = original_client
+            publish_cloudkit_briefings.run_cktool = original_run
+
+        self.assertEqual(calls, ["Briefing"])
+        self.assertEqual(records, [{"recordName": "from-web-services"}])
+
+    def test_load_cloudkit_local_env_sets_missing_values_only(self) -> None:
+        publish_cloudkit_briefings = self.load_publisher_module()
+        original_auth_mode = os.environ.get("PAVBOT_CLOUDKIT_AUTH_MODE")
+        original_key_id = os.environ.get("PAVBOT_CLOUDKIT_SERVER_KEY_ID")
+        try:
+            os.environ["PAVBOT_CLOUDKIT_AUTH_MODE"] = "cktool"
+            os.environ.pop("PAVBOT_CLOUDKIT_SERVER_KEY_ID", None)
+            with tempfile.TemporaryDirectory() as tmp:
+                env_path = Path(tmp) / "cloudkit.env"
+                env_path.write_text(
+                    "\n".join(
+                        [
+                            "PAVBOT_CLOUDKIT_AUTH_MODE=server-to-server",
+                            "PAVBOT_CLOUDKIT_SERVER_KEY_ID=server-key-id",
+                        ]
+                    )
+                    + "\n",
+                    encoding="utf-8",
+                )
+
+                publish_cloudkit_briefings.load_cloudkit_local_env(env_path)
+
+            self.assertEqual(os.environ["PAVBOT_CLOUDKIT_AUTH_MODE"], "cktool")
+            self.assertEqual(os.environ["PAVBOT_CLOUDKIT_SERVER_KEY_ID"], "server-key-id")
+        finally:
+            if original_auth_mode is None:
+                os.environ.pop("PAVBOT_CLOUDKIT_AUTH_MODE", None)
+            else:
+                os.environ["PAVBOT_CLOUDKIT_AUTH_MODE"] = original_auth_mode
+            if original_key_id is None:
+                os.environ.pop("PAVBOT_CLOUDKIT_SERVER_KEY_ID", None)
+            else:
+                os.environ["PAVBOT_CLOUDKIT_SERVER_KEY_ID"] = original_key_id
 
     def test_publish_records_performs_real_cloudkit_create_or_replace(self) -> None:
         publish_cloudkit_briefings = self.load_publisher_module()

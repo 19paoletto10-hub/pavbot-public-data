@@ -2,12 +2,16 @@
 from __future__ import annotations
 
 import argparse
+import base64
+import hashlib
 import json
 import os
 import re
 import subprocess
 import sys
 import time
+import urllib.error
+import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -25,6 +29,7 @@ ARTIFACT_RECORD_TYPE = "Artifact"
 READY_STATUS = "ready"
 DEFAULT_CKTOOL_TIMEOUT_SECONDS = 60
 CKTOOL_BARE_FILTER_VALUE = re.compile(r"^[A-Za-z0-9_.:/-]+$")
+DEFAULT_CLOUDKIT_ENV_FILE = "~/.config/pavbot/cloudkit.env"
 PRIMARY_ARTIFACT_TYPE_PRIORITY = (
     "pulseNewsData",
     "redditRadarData",
@@ -50,6 +55,10 @@ class CktoolCommandError(CloudKitPublisherError):
     pass
 
 
+class CloudKitWebServicesError(CloudKitPublisherError):
+    pass
+
+
 class CloudKitVerificationError(CloudKitPublisherError):
     pass
 
@@ -60,6 +69,30 @@ def load_manifest(path: str | Path) -> dict[str, Any]:
     if not isinstance(manifest, dict):
         raise ConfigurationError("manifest must be a JSON object")
     return manifest
+
+
+def unquote_env_value(value: str) -> str:
+    value = value.strip()
+    if len(value) >= 2 and value[0] == value[-1] and value[0] in {"'", '"'}:
+        return value[1:-1]
+    return value
+
+
+def load_cloudkit_local_env(path: str | Path | None = None) -> None:
+    env_path = Path(path or os.environ.get("PAVBOT_CLOUDKIT_ENV_FILE", DEFAULT_CLOUDKIT_ENV_FILE)).expanduser()
+    if not env_path.is_file():
+        return
+    for raw_line in env_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("export "):
+            line = line.removeprefix("export ").strip()
+        key, separator, value = line.partition("=")
+        key = key.strip()
+        if separator != "=" or not key or not re.fullmatch(r"[A-Za-z_][A-Za-z0-9_]*", key):
+            continue
+        os.environ.setdefault(key, unquote_env_value(value))
 
 
 def topic_slug_for_path(topic_path: str | None) -> str | None:
@@ -450,6 +483,14 @@ def validate_config(args: argparse.Namespace) -> None:
         errors.append("pass --topic research/<topic> or --all-topics")
     if args.topic is not None and topic_slug_for_path(args.topic) is None:
         errors.append("topic must be a non-empty research/<topic> path")
+    if cloudkit_web_services_enabled(args):
+        if not str(getattr(args, "server_key_id", "") or "").strip():
+            errors.append("server-to-server CloudKit auth requires PAVBOT_CLOUDKIT_SERVER_KEY_ID")
+        private_key_path = str(getattr(args, "server_private_key_path", "") or "").strip()
+        if not private_key_path:
+            errors.append("server-to-server CloudKit auth requires PAVBOT_CLOUDKIT_SERVER_PRIVATE_KEY_PATH")
+        elif not Path(private_key_path).is_file():
+            errors.append(f"server-to-server CloudKit private key not found: {private_key_path}")
     if errors:
         raise ConfigurationError("Invalid production CloudKit configuration: " + "; ".join(errors))
 
@@ -568,6 +609,150 @@ def cktool_records(stdout: str) -> list[dict[str, Any]]:
     return [record for record in records if isinstance(record, dict)] if isinstance(records, list) else []
 
 
+def cloudkit_web_services_enabled(args: argparse.Namespace) -> bool:
+    mode = str(getattr(args, "cloudkit_auth_mode", "") or os.environ.get("PAVBOT_CLOUDKIT_AUTH_MODE", "cktool")).strip()
+    return mode == "server-to-server"
+
+
+def cloudkit_web_timestamp(value: str) -> int:
+    normalized = normalize_datetime_string(value)
+    if normalized.endswith("+00:00"):
+        return int(datetime.fromisoformat(normalized).timestamp() * 1000)
+    return int(datetime.fromisoformat(value).timestamp() * 1000)
+
+
+def cloudkit_web_fields(fields: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    result: dict[str, dict[str, Any]] = {}
+    for key, value in fields.items():
+        if value is None:
+            continue
+        if key == "createdAt":
+            result[key] = {"value": cloudkit_web_timestamp(str(value))}
+        else:
+            result[key] = {"value": value}
+    return result
+
+
+class CloudKitWebServicesClient:
+    base_url = "https://api.apple-cloudkit.com"
+
+    def __init__(self, args: argparse.Namespace) -> None:
+        self.container_id = args.container_id
+        self.environment = args.environment
+        self.key_id = str(getattr(args, "server_key_id", "") or "")
+        self.private_key_path = str(getattr(args, "server_private_key_path", "") or "")
+        self.timeout = int(os.environ.get("PAVBOT_CLOUDKIT_TIMEOUT_SECONDS", str(DEFAULT_CKTOOL_TIMEOUT_SECONDS)))
+
+    def query_records_by_type(self, record_type: str) -> list[dict[str, Any]]:
+        records: list[dict[str, Any]] = []
+        continuation_marker: str | None = None
+        while True:
+            body: dict[str, Any] = {
+                "query": {"recordType": record_type},
+                "resultsLimit": 200,
+                "numbersAsStrings": False,
+            }
+            if continuation_marker:
+                body["continuationMarker"] = continuation_marker
+            payload = self.request("records/query", body)
+            for record in payload.get("records") if isinstance(payload.get("records"), list) else []:
+                if isinstance(record, dict):
+                    self.raise_record_error(record)
+                    records.append(record)
+            marker = payload.get("continuationMarker")
+            continuation_marker = marker if isinstance(marker, str) and marker else None
+            if not continuation_marker:
+                return records
+
+    def create_record(self, record: dict[str, Any]) -> None:
+        payload = {
+            "operations": [
+                {
+                    "operationType": "create",
+                    "record": {
+                        "recordType": record["recordType"],
+                        "fields": cloudkit_web_fields(record["fields"]),
+                    },
+                }
+            ],
+            "numbersAsStrings": False,
+        }
+        self.raise_response_record_errors(self.request("records/modify", payload))
+
+    def delete_record(self, record_name: str) -> None:
+        payload = {
+            "operations": [
+                {
+                    "operationType": "forceDelete",
+                    "record": {"recordName": record_name},
+                }
+            ]
+        }
+        self.raise_response_record_errors(self.request("records/modify", payload))
+
+    def request(self, operation: str, payload: dict[str, Any]) -> dict[str, Any]:
+        path = f"/database/1/{self.container_id}/{self.environment}/public/{operation}"
+        body = json.dumps(payload, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+        headers = self.signed_headers(path, body)
+        request = urllib.request.Request(f"{self.base_url}{path}", data=body, headers=headers, method="POST")
+        try:
+            with urllib.request.urlopen(request, timeout=self.timeout) as response:
+                response_body = response.read().decode("utf-8")
+        except urllib.error.HTTPError as error:
+            error_body = error.read().decode("utf-8", errors="replace")
+            raise CloudKitWebServicesError(f"CloudKit Web Services HTTP {error.code}: {error_body}") from error
+        except urllib.error.URLError as error:
+            raise CloudKitWebServicesError(f"CloudKit Web Services request failed: {error.reason}") from error
+        try:
+            result = json.loads(response_body)
+        except json.JSONDecodeError as error:
+            raise CloudKitWebServicesError("CloudKit Web Services returned non-JSON output") from error
+        if not isinstance(result, dict):
+            raise CloudKitWebServicesError("CloudKit Web Services returned a non-object response")
+        self.raise_record_error(result)
+        return result
+
+    def signed_headers(self, path: str, body: bytes) -> dict[str, str]:
+        date = datetime.now(timezone.utc).replace(microsecond=0).strftime("%Y-%m-%dT%H:%M:%SZ")
+        body_digest = base64.b64encode(hashlib.sha256(body).digest()).decode("ascii")
+        message = f"{date}:{body_digest}:{path}".encode("utf-8")
+        signature = self.sign(message)
+        return {
+            "content-type": "text/plain",
+            "X-Apple-CloudKit-Request-KeyID": self.key_id,
+            "X-Apple-CloudKit-Request-ISO8601Date": date,
+            "X-Apple-CloudKit-Request-SignatureV1": signature,
+        }
+
+    def sign(self, message: bytes) -> str:
+        result = subprocess.run(
+            ["openssl", "dgst", "-sha256", "-sign", self.private_key_path],
+            input=message,
+            capture_output=True,
+            check=False,
+        )
+        if result.returncode != 0:
+            stderr = result.stderr.decode("utf-8", errors="replace").strip()
+            raise CloudKitWebServicesError(f"CloudKit server-to-server signing failed: {stderr}")
+        return base64.b64encode(result.stdout).decode("ascii")
+
+    @staticmethod
+    def raise_response_record_errors(payload: dict[str, Any]) -> None:
+        records = payload.get("records")
+        if not isinstance(records, list):
+            return
+        for record in records:
+            if isinstance(record, dict):
+                CloudKitWebServicesClient.raise_record_error(record)
+
+    @staticmethod
+    def raise_record_error(payload: dict[str, Any]) -> None:
+        error_code = payload.get("serverErrorCode")
+        if isinstance(error_code, str) and error_code:
+            reason = str(payload.get("reason") or "CloudKit Web Services operation failed")
+            raise CloudKitWebServicesError(f"{error_code}: {reason}")
+
+
 def record_unique_field(record: dict[str, Any]) -> str:
     if record.get("recordType") == ARTIFACT_RECORD_TYPE:
         return "artifactId"
@@ -575,6 +760,8 @@ def record_unique_field(record: dict[str, Any]) -> str:
 
 
 def query_records_by_type(record_type: str, args: argparse.Namespace) -> list[dict[str, Any]]:
+    if cloudkit_web_services_enabled(args):
+        return CloudKitWebServicesClient(args).query_records_by_type(record_type)
     base_command = cktool_base_args(args, "query-records") + [
         "--record-type",
         record_type,
@@ -647,6 +834,9 @@ def cloudkit_record_matches(existing: dict[str, Any], desired: dict[str, Any]) -
 
 
 def delete_existing_record(record_name: str, args: argparse.Namespace) -> None:
+    if cloudkit_web_services_enabled(args):
+        CloudKitWebServicesClient(args).delete_record(record_name)
+        return
     command = cktool_base_args(args, "delete-record", include_team_id=False) + [
         "--record-name",
         record_name,
@@ -675,6 +865,9 @@ def publish_records(records: list[dict[str, Any]], args: argparse.Namespace) -> 
 
 
 def create_record(record: dict[str, Any], args: argparse.Namespace) -> None:
+    if cloudkit_web_services_enabled(args):
+        CloudKitWebServicesClient(args).create_record(record)
+        return
     fields_json = json.dumps(cktool_typed_fields(record["fields"]), ensure_ascii=False, separators=(",", ":"))
     command = cktool_base_args(args, "create-record") + [
         "--record-type",
@@ -791,12 +984,16 @@ def parse_args(argv: list[str]) -> argparse.Namespace:
     parser.add_argument("--container-id", default=os.environ.get("PAVBOT_CLOUDKIT_CONTAINER_ID", DEFAULT_CONTAINER_ID))
     parser.add_argument("--environment", default=os.environ.get("PAVBOT_CLOUDKIT_ENVIRONMENT", DEFAULT_ENVIRONMENT))
     parser.add_argument("--team-id", default=os.environ.get("PAVBOT_CLOUDKIT_TEAM_ID", DEFAULT_TEAM_ID))
+    parser.add_argument("--cloudkit-auth-mode", choices=["cktool", "server-to-server"], default=os.environ.get("PAVBOT_CLOUDKIT_AUTH_MODE", "cktool"))
+    parser.add_argument("--server-key-id", default=os.environ.get("PAVBOT_CLOUDKIT_SERVER_KEY_ID", ""))
+    parser.add_argument("--server-private-key-path", default=os.environ.get("PAVBOT_CLOUDKIT_SERVER_PRIVATE_KEY_PATH", ""))
     parser.add_argument("--topic")
     parser.add_argument("--all-topics", action="store_true")
     return parser.parse_args(argv)
 
 
 def main(argv: list[str]) -> int:
+    load_cloudkit_local_env()
     args = parse_args(argv)
     try:
         validate_config(args)

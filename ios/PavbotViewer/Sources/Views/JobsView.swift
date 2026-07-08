@@ -23,12 +23,21 @@ struct JobsView: View {
             PavbotPremiumScreenScaffold(layout: layout) {
                     if let manifest = store.manifest {
                         let packages = manifest.reportPackages(for: .jobs)
+                        let nativeDataNotice = JobsNativeDataNotice(
+                            packages: packages,
+                            selectedPackage: jobsStore.selectedPackage,
+                            source: jobsStore.source
+                        )
                         JobsHeader(
                             packageCount: packages.count,
                             report: jobsStore.report,
                             source: jobsStore.source,
                             layout: layout
                         )
+
+                        if let nativeDataNotice {
+                            JobsNativeDataNoticeBanner(notice: nativeDataNotice)
+                        }
 
                         if packages.isEmpty {
                             PavbotStateCard(
@@ -126,8 +135,11 @@ struct JobsView: View {
     }
 
     private var loadKey: String {
-        [
-            store.manifest?.generatedAt,
+        let packageReloadKey = store.manifest
+            .map { TopicReportPackage.nativeContentReloadKey(for: .jobs, in: $0.reportPackages(for: .jobs)) }
+            ?? "no-packages"
+        return [
+            packageReloadKey,
             routedReportDay,
             router.selectedReportArtifactIDs.joined(separator: "|"),
             store.manifestURLString
@@ -676,6 +688,38 @@ private struct JobsHeader: View {
             ],
             startsCollapsed: true
         )
+    }
+}
+
+private struct JobsNativeDataNoticeBanner: View {
+    let notice: JobsNativeDataNotice
+
+    var body: some View {
+        HStack(alignment: .top, spacing: 10) {
+            Image(systemName: "exclamationmark.triangle.fill")
+                .font(.headline.weight(.semibold))
+                .foregroundStyle(.orange)
+                .frame(width: 26, height: 26)
+
+            VStack(alignment: .leading, spacing: 4) {
+                Text(notice.title)
+                    .font(.subheadline.weight(.semibold))
+                    .foregroundStyle(.primary)
+                Text(notice.message)
+                    .font(.footnote)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+
+            Spacer(minLength: 0)
+        }
+        .padding(12)
+        .background(Color.orange.opacity(0.10), in: RoundedRectangle(cornerRadius: 10, style: .continuous))
+        .overlay {
+            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                .stroke(Color.orange.opacity(0.18), lineWidth: 1)
+        }
+        .accessibilityElement(children: .combine)
     }
 }
 

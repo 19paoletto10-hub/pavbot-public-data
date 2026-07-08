@@ -19,7 +19,7 @@ enum ReportPackageCopy {
 }
 
 struct ResearchLoadRequest: Hashable {
-    let manifestGeneratedAt: String
+    let nativeContentReloadKey: String
     let manifestURLString: String
     let topic: ReportTopicKind
     let selectedDay: String?
@@ -280,14 +280,29 @@ struct ResearchView: View {
         }
         .onChange(of: store.manifest) { _, manifest in
             guard let manifest else { return }
-            syncSelectedReportDayToLatestIfNeeded(manifest: manifest, force: true)
+            syncSelectedReportDayToLatestIfNeeded(
+                manifest: manifest,
+                force: shouldForceLatestOnActivation
+            )
+            guard router.selectedTab == .research else { return }
+            Task {
+                await loadSelectedResearchContent()
+                await resolvePendingAudioArticleRouteIfNeeded()
+            }
         }
         .pavbotTabInfo(PavbotTabInfoContent.research(topicTitle: router.selectedResearchTopic.title, topicSystemImage: router.selectedResearchTopic.systemImage, topicTint: router.selectedResearchTopic.tint))
     }
 
     private var researchLoadRequest: ResearchLoadRequest {
-        ResearchLoadRequest(
-            manifestGeneratedAt: store.manifest?.generatedAt ?? "no-manifest",
+        let packages = nativeContentPackages(
+            from: store.manifest?.reportPackages(for: router.selectedResearchTopic) ?? [],
+            topic: router.selectedResearchTopic
+        )
+        return ResearchLoadRequest(
+            nativeContentReloadKey: TopicReportPackage.nativeContentReloadKey(
+                for: router.selectedResearchTopic,
+                in: packages
+            ),
             manifestURLString: store.manifestURLString,
             topic: router.selectedResearchTopic,
             selectedDay: router.selectedReportDay,
@@ -315,7 +330,7 @@ struct ResearchView: View {
     }
 
     private func handleResearchActivation() async {
-        syncSelectedReportDayToLatestIfNeeded()
+        syncSelectedReportDayToLatestIfNeeded(force: shouldForceLatestOnActivation)
         await loadSelectedResearchContent()
         await resolvePendingAudioArticleRouteIfNeeded()
     }
@@ -363,32 +378,22 @@ struct ResearchView: View {
     ) {
         let activeManifest = manifest ?? store.manifest
         let activeTopic = topic ?? router.selectedResearchTopic
-        if !router.selectedReportArtifactIDs.isEmpty {
-            guard force && activeTopic == .aktualne else { return }
-            router.selectedReportArtifactIDs = []
-        }
         let packages = nativeContentPackages(
             from: activeManifest?.reportPackages(for: activeTopic) ?? [],
             topic: activeTopic
         )
-        guard force || !hasSelectedReportDay(in: packages) else { return }
-        guard let latestReportKey = latestReportKey(in: packages) else { return }
-        if router.selectedReportDay != latestReportKey {
+        if let latestReportKey = TopicReportPackage.latestSelectableReportKey(
+            in: packages,
+            currentSelection: router.selectedReportDay,
+            selectedArtifactIDs: router.selectedReportArtifactIDs,
+            forceLatest: force
+        ) {
             router.selectedReportDay = latestReportKey
         }
     }
 
-    private func latestReportKey(in packages: [TopicReportPackage]) -> String? {
-        packages.first?.key
-    }
-
-    private func hasSelectedReportDay(in packages: [TopicReportPackage]) -> Bool {
-        guard let selectedReportDay = router.selectedReportDay else { return false }
-        return packages.contains { package in
-            TopicReportPackage.keysMatch(package.key, selectedReportDay)
-                || package.date == selectedReportDay
-                || package.key.hasPrefix(selectedReportDay)
-        }
+    private var shouldForceLatestOnActivation: Bool {
+        router.selectedResearchTopic == .aktualne
     }
 
     private func resolvePendingAudioArticleRouteIfNeeded() async {

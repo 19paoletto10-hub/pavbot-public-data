@@ -972,6 +972,35 @@ Path("public/pavbot-manifest.json").write_text(json.dumps({
             self.assertEqual(cktool_refresh_log, ["refresh", "refresh"])
             self.assertEqual(self.git(repo, "rev-parse", "HEAD", stdout=True).strip(), head_before)
 
+    def test_server_to_server_cloudkit_mode_skips_cktool_refresh(self) -> None:
+        with self.temporary_repo() as repo:
+            result = self.run_publish_script(
+                repo,
+                "",
+                all_topics=True,
+                extra_env={"PAVBOT_CLOUDKIT_AUTH_MODE": "server-to-server"},
+            )
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertIn("cloudkit all-topics publication verified", result.stdout)
+            self.assertFalse((repo.parent / "cktool-refresh.log").exists())
+
+    def test_local_cloudkit_env_file_can_enable_server_to_server_mode(self) -> None:
+        with self.temporary_repo() as repo:
+            env_path = repo.parent / "cloudkit.env"
+            env_path.write_text("PAVBOT_CLOUDKIT_AUTH_MODE=server-to-server\n", encoding="utf-8")
+
+            result = self.run_publish_script(
+                repo,
+                "",
+                all_topics=True,
+                extra_env={"PAVBOT_CLOUDKIT_ENV_FILE": str(env_path)},
+            )
+
+            self.assertEqual(result.returncode, 0, result.stderr)
+            self.assertIn("cloudkit all-topics publication verified", result.stdout)
+            self.assertFalse((repo.parent / "cktool-refresh.log").exists())
+
     def test_uses_existing_manifest_raw_base_url_when_manifest_env_is_missing(self) -> None:
         with self.temporary_repo() as repo:
             self.write_existing_manifest(repo, "https://raw.githubusercontent.com/example/from-manifest/main/")
@@ -1441,6 +1470,7 @@ esac
         cloudkit_stub.chmod(0o755)
         env["PAVBOT_CLOUDKIT_PUBLISHER"] = str(cloudkit_stub)
         env["PAVBOT_TEST_CLOUDKIT_LOG"] = str(repo.parent / "cloudkit-publisher.log")
+        env["PAVBOT_CLOUDKIT_ENV_FILE"] = str(repo.parent / "missing-cloudkit.env")
         cktool_refresh_stub = repo.parent / "fake_cktool_refresh.sh"
         cktool_refresh_stub.write_text(
             """#!/usr/bin/env bash

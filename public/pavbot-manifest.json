@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-08T17:49:30.963426+00:00",
+  "generatedAt": "2026-07-08T20:35:32.154288+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -372,6 +372,17 @@
       "time": "00:11"
     },
     {
+      "id": "research/puls-dnia-news/runs/2026-07-08-2101.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-07-08-2101.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-08-2101.md",
+      "sizeBytes": 6326,
+      "date": "2026-07-08",
+      "time": "21:01"
+    },
+    {
       "id": "research/puls-dnia-news/runs/2026-07-08-1803.md",
       "type": "run",
       "topic": "puls-dnia-news",
@@ -414,6 +425,18 @@
       "sizeBytes": 5597,
       "date": "2026-07-08",
       "time": "09:01"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-08-2101-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-08-2101-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-08-2101-pulse-news.json",
+      "sizeBytes": 27944,
+      "date": "2026-07-08",
+      "time": "21:01",
+      "itemCount": 12
     },
     {
       "id": "research/puls-dnia-news/data/2026-07-08-1803-pulse-news.json",
@@ -619,6 +642,17 @@
       "time": "15:44"
     },
     {
+      "id": "research/llm-ai-jobs-wroclaw/data/2026-07-08-1544-jobs.json",
+      "type": "jobsData",
+      "topic": "llm-ai-jobs-wroclaw",
+      "title": "Jobs data",
+      "path": "research/llm-ai-jobs-wroclaw/data/2026-07-08-1544-jobs.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/data/2026-07-08-1544-jobs.json",
+      "sizeBytes": 10395,
+      "date": "2026-07-08",
+      "time": "15:44"
+    },
+    {
       "id": "research/aktualne-wydarzenia-mobile/runs/2026-07-08-1935.md",
       "type": "run",
       "topic": "aktualne-wydarzenia-mobile",
@@ -639,6 +673,17 @@
       "sizeBytes": 19444,
       "date": "2026-07-08",
       "time": "10:21"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1935/tts_variants.json",
+      "type": "podcastTtsVariants",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "TTS variants metadata",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1935/tts_variants.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1935/tts_variants.json",
+      "sizeBytes": 1050,
+      "date": "2026-07-08",
+      "time": "19:35"
     },
     {
       "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1021/tts_variants.json",
@@ -694,6 +739,17 @@
       "sizeBytes": 5945,
       "date": "2026-07-08",
       "time": "10:21"
+    },
+    {
+      "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1935/audio/male-xtts/render.json",
+      "type": "podcastRender",
+      "topic": "aktualne-wydarzenia-mobile",
+      "title": "render.json",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1935/audio/male-xtts/render.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1935/audio/male-xtts/render.json",
+      "sizeBytes": 336,
+      "date": "2026-07-08",
+      "time": "19:35"
     },
     {
       "id": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1935/audio/female-piper/render.json",
@@ -779,7 +835,7 @@
       "title": "render.log",
       "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1935/audio/male-xtts/render.log",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1935/audio/male-xtts/render.log",
-      "sizeBytes": 984,
+      "sizeBytes": 13944,
       "date": "2026-07-08",
       "time": "19:35"
     },
@@ -9519,7 +9575,7 @@
       "title": "Automation Prompt: LLM/AI Jobs Wroclaw Research",
       "path": "research/llm-ai-jobs-wroclaw/automation-research-prompt.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/llm-ai-jobs-wroclaw/automation-research-prompt.md",
-      "sizeBytes": 7798
+      "sizeBytes": 7838
     },
     {
       "id": "research/codex-agent-automation/topic.md",

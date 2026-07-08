@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-07-08",
+  "runTime": "15:44",
+  "executiveSummary": "Dzisiejsza runda przesunęła shortlistę w stronę oficjalnych, produkcyjnych ról AI infrastructure i AI security. ITDS ma trzy aktywne wrocławskie oferty, EY utrzymuje AI Engineering Lead w modelu hybrid, Sii ma aktywne role GenAI/Senior AI, a GFT nadal pokazuje hybrydowe role AI/LLM z Wrocławiem jako jedną z lokalizacji.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "AWS Cloud DevOps Engineer - Kubernetes and AI Infrastructure",
+      "company": "ITDS",
+      "location": "Wrocław / onsite",
+      "workMode": "Wrocław",
+      "compensation": "40 000 - 60 000 PLN brutto",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Platform engineering, Kubernetes, AWS i opcjonalne workloady LLM; najmocniejszy dzisiejszy sygnał AI infrastructure.",
+      "whyInteresting": "Oficjalny employer URL, jawne widełki i lokalny Wrocław czynią tę rolę najbardziej operacyjnie użytecznym leadem rundy.",
+      "uncertainty": "Rola jest infrastructure-first; zakres LLM wymaga potwierdzenia w rozmowie lub kolejnym sprawdzeniu.",
+      "sourceURLs": [
+        "https://itds.pl/pl/praca/aws-cloud-devops-engineer-kubernetes-ai-infrastructure/"
+      ],
+      "tags": [
+        "LLM",
+        "AWS",
+        "MLOps"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior AI Security Engineer - Machine Learning and Infrastructure",
+      "company": "ITDS",
+      "location": "Wrocław / onsite",
+      "workMode": "Wrocław",
+      "compensation": "30 000 - 50 000 PLN brutto",
+      "seniority": "Senior",
+      "fitSummary": "Bezpieczeństwo systemów AI, LLM, agentów i infrastruktury; rzadkie połączenie AI security z produkcyjną platformą.",
+      "whyInteresting": "Drugi mocny oficjalny lead ITDS i sygnał, że lokalny rynek obejmuje już security dla AI, nie tylko development.",
+      "uncertainty": "Tryb pracy wygląda na onsite; brak potwierdzenia elastyczności remote.",
+      "sourceURLs": [
+        "https://itds.pl/it-jobs/senior-ai-security-engineer-machine-learning-infrastructure/"
+      ],
+      "tags": [
+        "LLM",
+        "Agentic AI",
+        "MLOps"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Production Support Engineer - AI and LLM",
+      "company": "ITDS",
+      "location": "Wrocław / onsite",
+      "workMode": "Wrocław",
+      "compensation": "20 000 - 35 000 PLN brutto",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Wsparcie produkcyjne systemów AI/LLM; mniej research, więcej niezawodności i utrzymania.",
+      "whyInteresting": "Trzecia oficjalna oferta ITDS budująca lokalny klaster AI operations we Wrocławiu.",
+      "uncertainty": "Zakres może być bardziej support/operations niż hands-on model engineering.",
+      "sourceURLs": [
+        "https://itds.pl/it-jobs/production-support-engineer-ai-llm/"
+      ],
+      "tags": [
+        "LLM",
+        "LLMOps"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "AI Engineering Lead (GenAI and LLM Systems)",
+      "company": "EY",
+      "location": "Wrocław / hybrid, 2 days office and 3 days remote",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Lead",
+      "fitSummary": "AI-driven DevOps, deployment, monitoring i reliability dla systemów GenAI/LLM.",
+      "whyInteresting": "Oficjalna strona EY i jednoznaczny zakres GenAI/LLM sprawiają, że to mocny lead dla roli techniczno-liderskiej.",
+      "uncertainty": "Brak widełek i szczegółów seniority poza poziomem Lead.",
+      "sourceURLs": [
+        "https://careers.ey.com/ey/job/Wroc%C5%82aw-AI-Engineering-Lead-%28GenAI-%26-LLM-Systems%29-DS-50-086/1375497633/"
+      ],
+      "tags": [
+        "GenAI",
+        "LLM",
+        "MLOps"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "AI Engineer - GenAI and Cloud (f/m/x)",
+      "company": "Sii",
+      "location": "Wrocław / multi-location",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "GenAI i cloud engineering; oficjalny URL Sii potwierdza aktywny sygnał w lokalnym anchor poincie.",
+      "whyInteresting": "Sii pozostaje realnym lokalnym kanałem dla ról GenAI/cloud, nawet jeśli oferta jest multi-location.",
+      "uncertainty": "Wrocław może być jedną z lokalizacji, a nie jedynym miejscem pracy.",
+      "sourceURLs": [
+        "https://sii.pl/en/job-ads/id/37069/ai-engineer-genai-cloud-f-m-x"
+      ],
+      "tags": [
+        "GenAI",
+        "Cloud",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Senior AI Engineer (f/m/x)",
+      "company": "Sii",
+      "location": "Wrocław / multi-location",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "Senior AI engineering na oficjalnym URL Sii; wzmacnia sygnał, że oferta AI w Sii jest nadal aktywna.",
+      "whyInteresting": "W połączeniu z rolą GenAI/cloud pokazuje więcej niż pojedynczy przypadkowy listing.",
+      "uncertainty": "Trzeba potwierdzić dokładny zakres LLM/GenAI i lokalizację w kolejnym sprawdzeniu.",
+      "sourceURLs": [
+        "https://sii.pl/oferty-pracy/id/37173/senior-ai-engineer-f-m-x/"
+      ],
+      "tags": [
+        "GenAI",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "Data Engineer / Data Scientist (AI and LLM Solutions) Expert",
+      "company": "GFT",
+      "location": "Wrocław as one of hybrid locations",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Expert",
+      "fitSummary": "AI and LLM Solutions na oficjalnym portalu GFT, z Wrocławiem jako jedną z opcji hybrydowych.",
+      "whyInteresting": "Dobre dopasowanie dla profilu data/LLM, choć nie jest wyłącznie wrocławskie.",
+      "uncertainty": "Multi-location listing; realna dostępność Wrocławia wymaga potwierdzenia.",
+      "sourceURLs": [
+        "https://jobs.gft.com/Poland/job/Warszawa-Data-Engineer-Data-Scientist-%28AI-%26-LLM-Solutions%29-Expert-00-839/1370179733/"
+      ],
+      "tags": [
+        "LLM",
+        "Python",
+        "Cloud"
+      ]
+    },
+    {
+      "rank": 8,
+      "title": "Senior Data Engineer / Data Scientist (AI and LLM Solutions)",
+      "company": "GFT",
+      "location": "Wrocław as one of hybrid locations",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "Senior data/AI role around AI and LLM Solutions, also listed with Wrocław as a hybrid option.",
+      "whyInteresting": "Utrzymuje GFT na aktywnej shortlistcie jako drugi podobny sygnał AI/LLM.",
+      "uncertainty": "Multi-location i brak widełek ograniczają pewność priorytetu.",
+      "sourceURLs": [
+        "https://jobs.gft.com/Poland/job/Krak%C3%B3w-Senior-Data-Engineer-Data-Scientist-%28AI-%26-LLM-Solutions%29-30-302/1370188033/"
+      ],
+      "tags": [
+        "LLM",
+        "Python",
+        "Cloud"
+      ]
+    }
+  ],
+  "changes": [
+    "Najważniejsza zmiana to przejście od pojedynczych leadów do oficjalnego klastra ITDS wokół AI infrastructure, AI security i production support.",
+    "Sii wrócił do aktywnego official URL dla Senior AI Engineer, więc wcześniejszy mismatch board-versus-official jest słabszy niż w poprzednim runie.",
+    "Tooploox AI Product Engineer (Tooling) pokazuje Offer expired i nie jest aktywnym leadem."
+  ],
+  "risks": [
+    "Kilka ról jest multi-location albo hybrid, więc Wrocław bywa tylko jednym z dopuszczonych punktów, nie zawsze jedynym.",
+    "Board-first listingi mogą wygasnąć lub zmienić tytuł szybko.",
+    "Sii i ITDS potrafią przechodzić między slugami i URL-ami bez zmiany samej roli, więc canonical URL tracking zostaje kluczowy."
+  ],
+  "recommendedActions": [
+    "Trzymać ITDS, EY, Sii i GFT na następnej weryfikacji.",
+    "Usunąć wygasły Tooploox tooling z aktywnej shortlisty, chyba że pojawi się ponownie.",
+    "Obserwować, czy ITDS dalej rozwija oddzielny klaster AI infrastructure / security, czy tylko aktualizuje istniejące role."
+  ],
+  "checkedSources": [
+    {
+      "title": "ITDS: Production Support Engineer - AI and LLM",
+      "url": "https://itds.pl/it-jobs/production-support-engineer-ai-llm/",
+      "status": "checked"
+    },
+    {
+      "title": "ITDS: AWS Cloud DevOps Engineer - Kubernetes and AI Infrastructure",
+      "url": "https://itds.pl/pl/praca/aws-cloud-devops-engineer-kubernetes-ai-infrastructure/",
+      "status": "checked"
+    },
+    {
+      "title": "ITDS: Senior AI Security Engineer - Machine Learning and Infrastructure",
+      "url": "https://itds.pl/it-jobs/senior-ai-security-engineer-machine-learning-infrastructure/",
+      "status": "checked"
+    },
+    {
+      "title": "EY Careers: AI Engineering Lead (GenAI and LLM Systems)",
+      "url": "https://careers.ey.com/ey/job/Wroc%C5%82aw-AI-Engineering-Lead-%28GenAI-%26-LLM-Systems%29-DS-50-086/1375497633/",
+      "status": "checked"
+    },
+    {
+      "title": "Sii: AI Engineer - GenAI and Cloud (f/m/x)",
+      "url": "https://sii.pl/en/job-ads/id/37069/ai-engineer-genai-cloud-f-m-x",
+      "status": "checked"
+    },
+    {
+      "title": "Sii: Senior AI Engineer (f/m/x)",
+      "url": "https://sii.pl/oferty-pracy/id/37173/senior-ai-engineer-f-m-x/",
+      "status": "checked"
+    },
+    {
+      "title": "GFT: Data Engineer / Data Scientist (AI and LLM Solutions) Expert",
+      "url": "https://jobs.gft.com/Poland/job/Warszawa-Data-Engineer-Data-Scientist-%28AI-%26-LLM-Solutions%29-Expert-00-839/1370179733/",
+      "status": "checked"
+    },
+    {
+      "title": "GFT: Senior Data Engineer / Data Scientist (AI and LLM Solutions)",
+      "url": "https://jobs.gft.com/Poland/job/Krak%C3%B3w-Senior-Data-Engineer-Data-Scientist-%28AI-%26-LLM-Solutions%29-30-302/1370188033/",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: Wrocław AI/ML board",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: Tooploox AI Product Engineer (Tooling)",
+      "url": "https://justjoin.it/job-offer/tooploox-ai-product-engineer-tooling--wroclaw-ai",
+      "status": "checked-inactive"
+    }
+  ]
+}

@@ -1232,6 +1232,69 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(packages[0].preferredPreviewArtifact?.id, "mobile-data")
     }
 
+    func testNativeContentReloadKeyChangesWhenAktualneDataArtifactChangesWithoutGeneratedAt() {
+        let olderPackage = TopicReportPackage(
+            topic: .aktualne,
+            key: "2026-07-08-1021",
+            artifacts: [
+                Self.artifact(
+                    id: "mobile-data-2026-07-08-1021",
+                    type: .mobileNewsData,
+                    topic: "aktualne-wydarzenia-mobile",
+                    path: "research/aktualne-wydarzenia-mobile/data/2026-07-08-1021-mobile-news.json",
+                    date: "2026-07-08",
+                    time: "10:21"
+                )
+            ]
+        )
+        let newerPackage = TopicReportPackage(
+            topic: .aktualne,
+            key: "2026-07-08-1935",
+            artifacts: [
+                Self.artifact(
+                    id: "mobile-data-2026-07-08-1935",
+                    type: .mobileNewsData,
+                    topic: "aktualne-wydarzenia-mobile",
+                    path: "research/aktualne-wydarzenia-mobile/data/2026-07-08-1935-mobile-news.json",
+                    date: "2026-07-08",
+                    time: "19:35"
+                )
+            ]
+        )
+
+        let before = TopicReportPackage.nativeContentReloadKey(for: .aktualne, in: [olderPackage])
+        let after = TopicReportPackage.nativeContentReloadKey(for: .aktualne, in: [newerPackage, olderPackage])
+
+        XCTAssertNotEqual(before, after)
+        XCTAssertTrue(after.contains("2026-07-08-1935"))
+        XCTAssertTrue(after.contains("mobile-data-2026-07-08-1935"))
+    }
+
+    func testResearchSelectionKeepsRoutePinnedAktualnePackageDuringForcedLatestSync() {
+        let packages = [
+            Self.mobileNewsPackage(date: "2026-07-08", time: "19:35"),
+            Self.mobileNewsPackage(date: "2026-07-08", time: "10:21")
+        ]
+
+        XCTAssertNil(
+            TopicReportPackage.latestSelectableReportKey(
+                in: packages,
+                currentSelection: "2026-07-08-1021",
+                selectedArtifactIDs: ["mobile-data-2026-07-08-1021"],
+                forceLatest: true
+            )
+        )
+        XCTAssertEqual(
+            TopicReportPackage.latestSelectableReportKey(
+                in: Array(packages.reversed()),
+                currentSelection: "2026-07-08-1021",
+                selectedArtifactIDs: [],
+                forceLatest: true
+            ),
+            "2026-07-08-1935"
+        )
+    }
+
     @MainActor
     func testMobileNewsStorePrefersMobileNewsDataArtifact() async throws {
         let dataArtifact = Self.artifact(
@@ -2073,6 +2136,36 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(store.source, .jobsData)
         XCTAssertEqual(store.selectedPackage?.key, "2026-07-07-1732")
         XCTAssertEqual(store.selectedPackage?.dataArtifact?.id, "jobs-data-2026-07-07-1732")
+    }
+
+    func testJobsNativeDataNoticeExplainsWhenLatestPackageHasNoJobsData() {
+        let latestMarkdownOnly = TopicReportPackage(
+            topic: .jobs,
+            key: "2026-07-08-1544",
+            artifacts: [
+                Self.artifact(
+                    id: "jobs-run-2026-07-08-1544",
+                    type: .run,
+                    topic: "llm-ai-jobs-wroclaw",
+                    path: "research/llm-ai-jobs-wroclaw/runs/2026-07-08-1544.md",
+                    date: "2026-07-08",
+                    time: "15:44"
+                )
+            ]
+        )
+        let selectedDataPackage = Self.jobsPackage(date: "2026-07-07", time: "17:32")
+
+        let notice = JobsNativeDataNotice(
+            packages: [latestMarkdownOnly, selectedDataPackage],
+            selectedPackage: selectedDataPackage,
+            source: .jobsData
+        )
+
+        XCTAssertEqual(notice?.title, "Najnowsza paczka czeka na jobsData")
+        XCTAssertEqual(notice?.latestKey, "2026-07-08-1544")
+        XCTAssertEqual(notice?.selectedKey, "2026-07-07-1732")
+        XCTAssertTrue(notice?.message.contains("2026-07-08-1544") == true)
+        XCTAssertTrue(notice?.message.contains("2026-07-07-1732") == true)
     }
 
     @MainActor
@@ -5695,13 +5788,13 @@ final class PavbotManifestTests: XCTestCase {
                 .components(separatedBy: "private func resolvePendingAudioArticleRouteIfNeeded").first
         )
 
-        XCTAssertTrue(researchViewSource.contains("syncSelectedReportDayToLatestIfNeeded()"))
-        XCTAssertTrue(researchViewSource.contains("syncSelectedReportDayToLatestIfNeeded(manifest: manifest, force: true)"))
-        XCTAssertTrue(helperSource.contains("if !router.selectedReportArtifactIDs.isEmpty"))
-        XCTAssertTrue(helperSource.contains("guard force && activeTopic == .aktualne else { return }"))
-        XCTAssertTrue(helperSource.contains("router.selectedReportArtifactIDs = []"))
-        XCTAssertTrue(helperSource.contains("guard force || !hasSelectedReportDay(in: packages) else { return }"))
-        XCTAssertTrue(helperSource.contains("latestReportKey(in: packages)"))
+        XCTAssertTrue(researchViewSource.contains("nativeContentReloadKey"))
+        XCTAssertTrue(researchViewSource.contains("syncSelectedReportDayToLatestIfNeeded(force: shouldForceLatestOnActivation)"))
+        XCTAssertTrue(researchViewSource.contains("syncSelectedReportDayToLatestIfNeeded(\n                manifest: manifest,\n                force: shouldForceLatestOnActivation"))
+        XCTAssertTrue(researchViewSource.contains("await loadSelectedResearchContent()"))
+        XCTAssertFalse(helperSource.contains("router.selectedReportArtifactIDs = []"))
+        XCTAssertTrue(helperSource.contains("TopicReportPackage.latestSelectableReportKey("))
+        XCTAssertTrue(helperSource.contains("selectedArtifactIDs: router.selectedReportArtifactIDs"))
         XCTAssertTrue(helperSource.contains("router.selectedReportDay = latestReportKey"))
     }
 
@@ -5784,8 +5877,8 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(loadNewsSource.contains("selectedDay: router.selectedReportDay"))
         XCTAssertTrue(loadMobileSource.contains("selectedDay: router.selectedReportDay"))
         XCTAssertTrue(topicChangeSource.contains("syncSelectedReportDayToLatestIfNeeded(topic: topic, force: true)"))
-        XCTAssertTrue(researchViewSource.contains("private func latestReportKey(in packages: [TopicReportPackage]) -> String?"))
-        XCTAssertTrue(researchViewSource.contains("private func hasSelectedReportDay(in packages: [TopicReportPackage]) -> Bool"))
+        XCTAssertTrue(researchViewSource.contains("TopicReportPackage.latestSelectableReportKey("))
+        XCTAssertTrue(researchViewSource.contains("private var shouldForceLatestOnActivation: Bool"))
     }
 
     func testResearchArticleSnapshotHostBuildsSynchronouslyWithoutLoadingOnlyTask() throws {
@@ -9023,6 +9116,28 @@ final class PavbotManifestTests: XCTestCase {
             topic: .jobs,
             key: "\(date)-\(compactTime)",
             artifacts: artifacts
+        )
+    }
+
+    private static func mobileNewsPackage(date: String, time: String) -> TopicReportPackage {
+        let compactTime = time.replacingOccurrences(of: ":", with: "")
+        let key = "\(date)-\(compactTime)"
+        return TopicReportPackage(
+            topic: .aktualne,
+            key: key,
+            artifacts: [
+                PavbotArtifact(
+                    id: "mobile-data-\(key)",
+                    type: .mobileNewsData,
+                    topic: "aktualne-wydarzenia-mobile",
+                    title: "Mobile news data",
+                    path: "research/aktualne-wydarzenia-mobile/data/\(key)-mobile-news.json",
+                    url: "research/aktualne-wydarzenia-mobile/data/\(key)-mobile-news.json",
+                    sizeBytes: 200,
+                    date: date,
+                    time: time
+                )
+            ]
         )
     }
 
