@@ -232,6 +232,7 @@ struct ResearchView: View {
                     accessibilityHint: "Odświeża manifest i wybraną kartę Przegląd."
                 ) {
                     Task {
+                        router.clearReportRouteSelection()
                         await store.reload()
                         syncSelectedReportDayToLatestIfNeeded(force: true)
                         await loadSelectedResearchContent()
@@ -240,6 +241,7 @@ struct ResearchView: View {
             }
         }
         .refreshable {
+            router.clearReportRouteSelection()
             await store.reload()
             syncSelectedReportDayToLatestIfNeeded(force: true)
             await loadSelectedResearchContent()

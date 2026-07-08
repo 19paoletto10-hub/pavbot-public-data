@@ -183,7 +183,7 @@ private struct PavbotTabRootView: View {
             get: { selectedVisibleTab },
             set: { newValue in
                 selectedVisibleTab = newValue
-                router.selectedTab = newValue
+                router.selectTabFromUser(newValue)
             }
         )
     }
@@ -249,7 +249,7 @@ private struct PavbotSplitRootView: View {
             get: { router.selectedTab },
             set: { newValue in
                 if let newValue {
-                    router.selectedTab = newValue
+                    router.selectTabFromUser(newValue)
                 }
             }
         )

@@ -135,8 +135,7 @@ struct PulseDayView: View {
     }
 
     private func openAktualneMagazine() {
-        router.selectedTab = .research
-        router.selectedResearchTopic = .aktualne
+        router.openResearchTopicFromUser(.aktualne)
     }
 }
 

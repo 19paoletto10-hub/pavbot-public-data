@@ -1232,6 +1232,54 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(packages[0].preferredPreviewArtifact?.id, "mobile-data")
     }
 
+    func testAktualneReportPackagesUseMobileNewsArtifactsVisibleInAutomationSettings() throws {
+        let automation = PavbotAutomation(
+            id: "pavbot-aktualne-wydarzenia-mobile-10-15",
+            name: "Pavbot Aktualne Wydarzenia Mobile 10:15",
+            enabled: true,
+            kind: .researchAudio,
+            topic: "aktualne-wydarzenia-mobile",
+            topicPath: "research/aktualne-wydarzenia-mobile",
+            cadence: "daily at 10:15 local time",
+            sourcePath: "docs/how-to-use.md",
+            sourceUrl: "https://raw.githubusercontent.com/example/pavbot/main/docs/how-to-use.md",
+            output: "research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf",
+            outputUrl: "https://raw.githubusercontent.com/example/pavbot/main/research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf"
+        )
+        let mobileData = Self.artifact(
+            id: "mobile-data-2026-07-08-1021",
+            type: .mobileNewsData,
+            topic: "aktualne-wydarzenia-mobile",
+            path: "research/aktualne-wydarzenia-mobile/data/2026-07-08-1021-mobile-news.json",
+            date: "2026-07-08",
+            time: "10:21"
+        )
+        let renderLog = Self.artifact(
+            id: "mobile-render-2026-07-08-1021",
+            type: .podcastRender,
+            topic: "aktualne-wydarzenia-mobile",
+            path: "research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1021/audio/female-piper/render.json",
+            date: "2026-07-08",
+            time: "10:21"
+        )
+        let manifest = PavbotManifest(
+            schemaVersion: 1,
+            title: "Pavbot",
+            generatedAt: "2026-07-08T08:30:00Z",
+            rawBaseUrl: "https://raw.githubusercontent.com/example/pavbot/main",
+            automations: [automation],
+            topics: [],
+            artifacts: [mobileData, renderLog]
+        )
+
+        let settingsGroup = try XCTUnwrap(manifest.automationArtifactGroup(for: automation.id))
+        let packages = manifest.reportPackages(for: .aktualne)
+
+        XCTAssertEqual(settingsGroup.artifacts.map(\.id), ["mobile-data-2026-07-08-1021"])
+        XCTAssertEqual(packages.flatMap { $0.artifacts.map(\.id) }, settingsGroup.artifacts.map(\.id))
+        XCTAssertEqual(packages.first?.mobileNewsDataArtifact?.id, "mobile-data-2026-07-08-1021")
+    }
+
     func testNativeContentReloadKeyChangesWhenAktualneDataArtifactChangesWithoutGeneratedAt() {
         let olderPackage = TopicReportPackage(
             topic: .aktualne,
@@ -4293,7 +4341,28 @@ final class PavbotManifestTests: XCTestCase {
         let now = try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-06-25T04:45:00Z"))
 
         XCTAssertEqual(report.temperatureTimeline.map(\.time), ["2026-06-25T06:00", "2026-06-25T07:00"])
-        XCTAssertEqual(report.timelineTemperaturePoints(startingAt: now).map(\.time), ["2026-06-25T06:00", "2026-06-25T07:00"])
+        XCTAssertEqual(report.timelineTemperaturePoints(startingAt: now).map(\.time), ["2026-06-25T07:00"])
+    }
+
+    func testTemperatureTimelineUsesReportGeneratedHourAndCurrentDayForCharts() throws {
+        let report = try Self.weatherReportWithTimelines(
+            generatedAt: "2026-06-25T05:31:00+00:00",
+            temperatureTimeline: [
+                Self.temperaturePoint(day: "2026-06-24", hour: "23:00", temperature: 18.7),
+                Self.temperaturePoint(day: "2026-06-25", hour: "05:00", temperature: 19.8),
+                Self.temperaturePoint(day: "2026-06-25", hour: "06:00", temperature: 21.4),
+                Self.temperaturePoint(day: "2026-06-25", hour: "07:00", temperature: 22.1),
+                Self.temperaturePoint(day: "2026-06-25", hour: "08:00", temperature: 23.0),
+                Self.temperaturePoint(day: "2026-06-26", hour: "00:00", temperature: 17.9)
+            ],
+            precipitationTimeline: []
+        )
+        let earlierAppOpen = try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-06-25T02:00:00Z"))
+
+        XCTAssertEqual(
+            report.timelineTemperaturePoints(startingAt: earlierAppOpen).map(\.time),
+            ["2026-06-25T07:00", "2026-06-25T08:00"]
+        )
     }
 
     func testTemperatureTimelineFallsBackToHourlyTemperatureFromCurrentHour() throws {
@@ -4304,7 +4373,7 @@ final class PavbotManifestTests: XCTestCase {
         let now = try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-06-25T04:45:00Z"))
 
         XCTAssertTrue(report.temperatureTimeline.isEmpty)
-        XCTAssertEqual(report.timelineTemperaturePoints(startingAt: now).map(\.time), ["2026-06-25T06:00", "2026-06-25T07:00"])
+        XCTAssertEqual(report.timelineTemperaturePoints(startingAt: now).map(\.time), ["2026-06-25T07:00"])
     }
 
     func testDecodesHourlyPrecipitationTimelineForToday() throws {
@@ -4319,7 +4388,28 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(report.hourlyPrecipitation[1].amountLabel, "0.2 mm")
         XCTAssertEqual(report.hourlyPrecipitation[2].kind, .rain)
         XCTAssertEqual(report.precipitationTimeline.map(\.time), ["2026-06-25T06:00", "2026-06-25T07:00"])
-        XCTAssertEqual(report.timelinePrecipitationPoints(startingAt: now).map(\.time), ["2026-06-25T06:00", "2026-06-25T07:00"])
+        XCTAssertEqual(report.timelinePrecipitationPoints(startingAt: now).map(\.time), ["2026-06-25T07:00"])
+    }
+
+    func testPrecipitationTimelineUsesReportGeneratedHourAndCurrentDayForCharts() throws {
+        let report = try Self.weatherReportWithTimelines(
+            generatedAt: "2026-06-25T05:31:00+00:00",
+            temperatureTimeline: [],
+            precipitationTimeline: [
+                Self.precipitationPoint(day: "2026-06-24", hour: "23:00", probability: 80, amount: 0.8, rain: 0.8, kind: "rain"),
+                Self.precipitationPoint(day: "2026-06-25", hour: "05:00", probability: 5, amount: 0, rain: 0, kind: "possible"),
+                Self.precipitationPoint(day: "2026-06-25", hour: "06:00", probability: 35, amount: 0.2, rain: 0.2, kind: "rain"),
+                Self.precipitationPoint(day: "2026-06-25", hour: "07:00", probability: 80, amount: 1.4, rain: 1.0, showers: 0.4, kind: "rain"),
+                Self.precipitationPoint(day: "2026-06-25", hour: "08:00", probability: 40, amount: 0.1, rain: 0.1, kind: "rain"),
+                Self.precipitationPoint(day: "2026-06-26", hour: "00:00", probability: 70, amount: 0.6, rain: 0.6, kind: "rain")
+            ]
+        )
+        let earlierAppOpen = try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-06-25T02:00:00Z"))
+
+        XCTAssertEqual(
+            report.timelinePrecipitationPoints(startingAt: earlierAppOpen).map(\.time),
+            ["2026-06-25T07:00", "2026-06-25T08:00"]
+        )
     }
 
     func testPrecipitationTimelineFallsBackToHourlyPrecipitationFromCurrentHour() throws {
@@ -4330,7 +4420,7 @@ final class PavbotManifestTests: XCTestCase {
         let now = try XCTUnwrap(ISO8601DateFormatter().date(from: "2026-06-25T04:45:00Z"))
 
         XCTAssertTrue(report.precipitationTimeline.isEmpty)
-        XCTAssertEqual(report.timelinePrecipitationPoints(startingAt: now).map(\.time), ["2026-06-25T06:00", "2026-06-25T07:00"])
+        XCTAssertEqual(report.timelinePrecipitationPoints(startingAt: now).map(\.time), ["2026-06-25T07:00"])
     }
 
     func testDailyWeatherReportDecodesOlderPayloadWithoutHourlyPrecipitation() throws {
@@ -5716,6 +5806,37 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(localTopicChangeSource.contains("selectedArticle = nil"))
         XCTAssertTrue(localTopicChangeSource.contains("selectedMobileArticle = nil"))
         XCTAssertFalse(localTopicChangeSource.contains("store.reload"))
+    }
+
+    func testManualResearchNavigationUsesRouterHelpersAndRefreshClearsRouteSelection() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let viewsRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let contentSource = try String(contentsOf: viewsRoot.appendingPathComponent("ContentView.swift"))
+        let pulseSource = try String(contentsOf: viewsRoot.appendingPathComponent("PulseDayView.swift"))
+        let researchSource = try String(contentsOf: viewsRoot.appendingPathComponent("ReportPackageViews.swift"))
+        let refreshSource = try XCTUnwrap(
+            researchSource.components(separatedBy: ".toolbar {").dropFirst().first?
+                .components(separatedBy: ".task(id: researchLoadTrigger)").first
+        )
+        let pullToRefreshSource = try XCTUnwrap(
+            refreshSource.components(separatedBy: ".refreshable {").dropFirst().first
+        )
+
+        XCTAssertEqual(contentSource.components(separatedBy: "router.selectTabFromUser(newValue)").count - 1, 2)
+        XCTAssertFalse(contentSource.contains("router.selectedTab = newValue"))
+        XCTAssertTrue(pulseSource.contains("router.openResearchTopicFromUser(.aktualne)"))
+        XCTAssertEqual(refreshSource.components(separatedBy: "router.clearReportRouteSelection()").count - 1, 2)
+        XCTAssertLessThan(
+            try XCTUnwrap(refreshSource.range(of: "router.clearReportRouteSelection()")?.lowerBound),
+            try XCTUnwrap(refreshSource.range(of: "await store.reload")?.lowerBound)
+        )
+        XCTAssertLessThan(
+            try XCTUnwrap(pullToRefreshSource.range(of: "router.clearReportRouteSelection()")?.lowerBound),
+            try XCTUnwrap(pullToRefreshSource.range(of: "await store.reload")?.lowerBound)
+        )
     }
 
     func testResearchRenderingUsesPrecomputedIssueAndArticlePresentations() throws {
@@ -8009,6 +8130,22 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     @MainActor
+    func testManualResearchTabSelectionClearsStaleAktualneReportRoute() {
+        let router = AppRouter()
+        router.selectedTab = .pulseDay
+        router.selectedResearchTopic = .aktualne
+        router.selectedReportDay = "2026-07-08-1021"
+        router.selectedReportArtifactIDs = ["mobile-data-2026-07-08-1021"]
+
+        router.selectTabFromUser(.research)
+
+        XCTAssertEqual(router.selectedTab, .research)
+        XCTAssertEqual(router.selectedResearchTopic, .aktualne)
+        XCTAssertNil(router.selectedReportDay)
+        XCTAssertTrue(router.selectedReportArtifactIDs.isEmpty)
+    }
+
+    @MainActor
     func testRouterOpensTodayTabFromDailyWeatherNotificationUserInfo() {
         let router = AppRouter()
         router.selectedTab = .settings
@@ -8752,6 +8889,55 @@ final class PavbotManifestTests: XCTestCase {
         }
         let data = try JSONSerialization.data(withJSONObject: json)
         return try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: data)
+    }
+
+    private static func weatherReportWithTimelines(
+        generatedAt: String,
+        temperatureTimeline: [[String: Any]],
+        precipitationTimeline: [[String: Any]]
+    ) throws -> DailyWeatherReport {
+        var json = try XCTUnwrap(JSONSerialization.jsonObject(with: dailyWeatherFixtureData) as? [String: Any])
+        json["generatedAt"] = generatedAt
+        json["hourlyTemperature"] = temperatureTimeline
+        json["temperatureTimeline"] = temperatureTimeline
+        json["hourlyPrecipitation"] = precipitationTimeline
+        json["precipitationTimeline"] = precipitationTimeline
+        let data = try JSONSerialization.data(withJSONObject: json)
+        return try JSONDecoder.pavbot.decode(DailyWeatherReport.self, from: data)
+    }
+
+    private static func temperaturePoint(
+        day: String = "2026-06-25",
+        hour: String,
+        temperature: Double
+    ) -> [String: Any] {
+        [
+            "time": "\(day)T\(hour)",
+            "temperature": temperature,
+            "unit": "°C"
+        ]
+    }
+
+    private static func precipitationPoint(
+        day: String,
+        hour: String,
+        probability: Int,
+        amount: Double,
+        rain: Double,
+        showers: Double = 0,
+        snowfall: Double = 0,
+        kind: String
+    ) -> [String: Any] {
+        [
+            "time": "\(day)T\(hour)",
+            "probability": probability,
+            "amount": amount,
+            "rain": rain,
+            "showers": showers,
+            "snowfall": snowfall,
+            "kind": kind,
+            "unit": "mm"
+        ]
     }
 
     private static func precipitationPoint(

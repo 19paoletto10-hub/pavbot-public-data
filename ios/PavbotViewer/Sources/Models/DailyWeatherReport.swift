@@ -137,46 +137,24 @@ struct DailyWeatherReport: Codable, Equatable, Identifiable {
         startingAt now: Date = Date(),
         calendar inputCalendar: Calendar = .current
     ) -> [DailyWeatherHourlyTemperature] {
-        if !temperatureTimeline.isEmpty {
-            return temperatureTimeline
-        }
-
-        let currentDay = DateFormatter.pavbotDay.string(from: now)
-        guard currentDay == date else {
-            return hourlyTemperature
-        }
-
-        var calendar = inputCalendar
-        calendar.timeZone = DateFormatter.pavbotWeatherHour.timeZone ?? .current
-        let currentHour = calendar.dateInterval(of: .hour, for: now)?.start ?? now
-        let filtered = hourlyTemperature.filter { item in
-            guard item.time.hasPrefix(date), let dateValue = item.dateValue else { return false }
-            return dateValue >= currentHour
-        }
-        return filtered.isEmpty ? hourlyTemperature : filtered
+        timelinePoints(
+            preferred: temperatureTimeline,
+            fallback: hourlyTemperature,
+            startingAt: now,
+            calendar: inputCalendar
+        )
     }
 
     func timelinePrecipitationPoints(
         startingAt now: Date = Date(),
         calendar inputCalendar: Calendar = .current
     ) -> [DailyWeatherHourlyPrecipitation] {
-        if !precipitationTimeline.isEmpty {
-            return precipitationTimeline
-        }
-
-        let currentDay = DateFormatter.pavbotDay.string(from: now)
-        guard currentDay == date else {
-            return hourlyPrecipitation
-        }
-
-        var calendar = inputCalendar
-        calendar.timeZone = DateFormatter.pavbotWeatherHour.timeZone ?? .current
-        let currentHour = calendar.dateInterval(of: .hour, for: now)?.start ?? now
-        let filtered = hourlyPrecipitation.filter { item in
-            guard item.time.hasPrefix(date), let dateValue = item.dateValue else { return false }
-            return dateValue >= currentHour
-        }
-        return filtered.isEmpty ? hourlyPrecipitation : filtered
+        timelinePoints(
+            preferred: precipitationTimeline,
+            fallback: hourlyPrecipitation,
+            startingAt: now,
+            calendar: inputCalendar
+        )
     }
 
     var weatherNarrativeRecommendation: String {
@@ -189,6 +167,48 @@ struct DailyWeatherReport: Codable, Equatable, Identifiable {
         }
         return precipitation.advice
     }
+
+    private func timelinePoints<Point: DailyWeatherTimelinePoint>(
+        preferred: [Point],
+        fallback: [Point],
+        startingAt now: Date,
+        calendar inputCalendar: Calendar
+    ) -> [Point] {
+        let source = preferred.isEmpty ? fallback : preferred
+        let reportDayPoints = source.filter { item in
+            item.time.hasPrefix(date) && item.dateValue != nil
+        }
+        guard !reportDayPoints.isEmpty else {
+            return source
+        }
+
+        let currentDay = DateFormatter.pavbotDay.string(from: now)
+        guard currentDay == date else {
+            return reportDayPoints
+        }
+
+        let startHour = timelineStartHour(startingAt: now, calendar: inputCalendar)
+        return reportDayPoints.filter { item in
+            guard let dateValue = item.dateValue else { return false }
+            return dateValue >= startHour
+        }
+    }
+
+    private func timelineStartHour(startingAt now: Date, calendar inputCalendar: Calendar) -> Date {
+        var calendar = inputCalendar
+        calendar.timeZone = DateFormatter.pavbotWeatherHour.timeZone ?? .current
+
+        let generatedAtReportDay = generatedAtDate.flatMap { generatedDate -> Date? in
+            DateFormatter.pavbotDay.string(from: generatedDate) == date ? generatedDate : nil
+        }
+        let anchor = generatedAtReportDay ?? now
+        return calendar.dateInterval(of: .hour, for: anchor)?.start ?? anchor
+    }
+}
+
+private protocol DailyWeatherTimelinePoint {
+    var time: String { get }
+    var dateValue: Date? { get }
 }
 
 struct DailyWeatherHourlyTemperature: Codable, Equatable, Identifiable {
@@ -216,6 +236,8 @@ struct DailyWeatherHourlyTemperature: Codable, Equatable, Identifiable {
         return String(format: "%.1f%@", temperature, unit)
     }
 }
+
+extension DailyWeatherHourlyTemperature: DailyWeatherTimelinePoint {}
 
 struct DailyWeatherHourlyPrecipitation: Codable, Equatable, Identifiable {
     let time: String
@@ -251,6 +273,8 @@ struct DailyWeatherHourlyPrecipitation: Codable, Equatable, Identifiable {
         return String(format: "%.1f %@", amount, unit)
     }
 }
+
+extension DailyWeatherHourlyPrecipitation: DailyWeatherTimelinePoint {}
 
 enum WeatherPrecipitationKind: String, Codable, Equatable {
     case rain

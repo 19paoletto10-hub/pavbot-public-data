@@ -94,6 +94,22 @@ final class AppRouter {
     var pendingAudioArticleRoute: PavbotAudioDestination?
     private(set) var reportRouteRevision = 0
 
+    func clearReportRouteSelection() {
+        selectedReportDay = nil
+        selectedReportArtifactIDs = []
+    }
+
+    func selectTabFromUser(_ tab: AppTab) {
+        clearReportRouteSelection()
+        selectedTab = tab
+    }
+
+    func openResearchTopicFromUser(_ topic: ReportTopicKind) {
+        clearReportRouteSelection()
+        selectedResearchTopic = topic
+        selectedTab = .research
+    }
+
     func openAudioDestination(_ destination: PavbotAudioDestination) {
         switch destination {
         case .mobileNewsArticle:

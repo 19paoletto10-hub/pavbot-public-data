@@ -185,8 +185,7 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
         for topic: ReportTopicKind,
         in manifest: PavbotManifest
     ) -> [TopicReportPackage] {
-        let artifacts = manifest.artifacts
-            .filter { $0.topic == topic.topic }
+        let artifacts = packageSourceArtifacts(for: topic, in: manifest)
             .filter { $0.date != nil }
 
         let grouped = Dictionary(grouping: artifacts) { artifact in
@@ -203,6 +202,20 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
         .sorted { lhs, rhs in
             lhs.key > rhs.key
         }
+    }
+
+    private static func packageSourceArtifacts(
+        for topic: ReportTopicKind,
+        in manifest: PavbotManifest
+    ) -> [PavbotArtifact] {
+        if topic == .aktualne,
+           let automationGroup = manifest.automationArtifactGroups.first(where: { group in
+               group.automation.topic == topic.topic && group.automation.kind == .researchAudio
+           }) {
+            return automationGroup.artifacts
+        }
+
+        return manifest.artifacts.filter { $0.topic == topic.topic }
     }
 
     static func recentReportDays(in packages: [TopicReportPackage], limit: Int) -> [String] {
