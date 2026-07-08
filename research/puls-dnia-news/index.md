@@ -22,6 +22,12 @@ death, while the international feed stayed anchored in Iran-US escalation,
 NATO procurement, Le Pen, Farage, Russian fuel shortages, Kyiv strikes, China
 and Monaco.
 
+The 2026-07-08 15:02 slot hardened the domestic feed around an active wind
+alert, a sharp cold snap, unchanged rates, health-system recommendations,
+BBN comments on Budanov and a worsening unemployment trend. The world feed
+stayed centered on Iran-US escalation, NATO procurement, Le Pen, Russian fuel
+shortages and China weather, while also adding a telecom outage in Australia.
+
 ## Data Shape
 
 The native iOS feed expects:
