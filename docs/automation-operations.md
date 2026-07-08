@@ -48,12 +48,15 @@ polskich znaków diakrytycznych i zapisz
   `pdfs/YYYY-MM-DD-HHMM-llm-ai-jobs-wroclaw.pdf` entries for the same package
   key on `origin/main`. Repository manifest ID:
   `pavbot-llm-ai-jobs-wroclaw-research`.
-- `Pavbot Aktualne Wydarzenia Mobile 10:15` runs daily at 10:15 Europe/Warsaw
-  and updates `research/aktualne-wydarzenia-mobile` with one timestamped
-  package: `runs/YYYY-MM-DD-HHMM.md`, `pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`,
+- `Pavbot Aktualne Wydarzenia Mobile 10:15` and `Pavbot Aktualne Wydarzenia
+  Mobile 19:35` run daily at 10:15 and 19:35 Europe/Warsaw. Each run updates
+  `research/aktualne-wydarzenia-mobile` with one timestamped package:
+  `runs/YYYY-MM-DD-HHMM.md`, `data/YYYY-MM-DD-HHMM-mobile-news.json`,
+  `pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`,
   `pdfs/YYYY-MM-DD-HHMM-newspaper.pdf`, `podcasts/YYYY-MM-DD-HHMM/`, female
-  Piper MP3, male XTTS MP3, script, sources, and variant metadata. ID:
-  `pavbot-aktualne-wydarzenia-mobile-10-15`.
+  Piper MP3, male XTTS MP3, script, sources, and variant metadata. IDs:
+  `pavbot-aktualne-wydarzenia-mobile-10-15` and
+  `pavbot-aktualne-wydarzenia-mobile-19-35`.
 - `Pavbot Puls Dnia 3h` runs at 06:00, 09:00, 12:00, 15:00, 18:00 and 21:00
   Europe/Warsaw and updates `research/puls-dnia-news` with a timestamped
   Markdown report plus `data/YYYY-MM-DD-HHMM-pulse-news.json`. ID:

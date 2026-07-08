@@ -62,7 +62,9 @@ final class TodayLiveTopicsStore {
         }
 
         guard
-            let package = manifest.reportPackages(for: .aktualne).first(where: { $0.mobileNewsDataArtifact != nil }),
+            let package = TopicReportPackage
+                .nativeContentPackages(for: .aktualne, in: manifest.reportPackages(for: .aktualne))
+                .first,
             let artifact = package.mobileNewsDataArtifact,
             let url = artifact.resolvedURL(manifestURL: URL(string: manifestURLString))
         else {

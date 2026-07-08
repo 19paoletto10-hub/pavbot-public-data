@@ -70,6 +70,7 @@ required_files=(
   "scripts/pavbot_pdf_theme.py"
   "scripts/render_research_pdf.py"
   "scripts/render_research_data.py"
+  "scripts/render_mobile_news_data.py"
   "scripts/validate_research_data.py"
   "scripts/validate_jobs_data.py"
   "scripts/validate_mobile_news_data.py"
@@ -79,6 +80,7 @@ required_files=(
   "tests/test_validate_jobs_data.py"
   "tests/test_validate_pulse_news_data.py"
   "tests/test_render_research_data.py"
+  "tests/test_render_mobile_news_data.py"
   "tests/test_render_research_pdf.py"
   "tests/test_render_jobs_data.py"
   "tests/test_render_mobile_brief_pdf.py"
@@ -214,6 +216,7 @@ grep -q '"schemaVersion": 1' public/pavbot-manifest.json
 grep -q 'Pavbot Automation Manifest' public/pavbot-manifest.json
 grep -q 'pavbot-llm-ai-jobs-wroclaw-research' public/pavbot-manifest.json
 grep -q 'pavbot-aktualne-wydarzenia-mobile-10-15' public/pavbot-manifest.json
+grep -q 'pavbot-aktualne-wydarzenia-mobile-19-35' public/pavbot-manifest.json
 grep -q 'pavbot-puls-dnia-news-3h' public/pavbot-manifest.json
 grep -q 'researchAudio' public/pavbot-manifest.json
 grep -q 'YYYY-MM-DD-HHMM-mobile-brief.pdf' public/pavbot-manifest.json
@@ -410,6 +413,7 @@ grep -q 'topic_path/data' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'topic_path/podcasts' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'validate_jobs_data.py' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'Validate Pavbot mobileNewsData JSON artifacts' scripts/validate_mobile_news_data.py
+grep -q 'def render_mobile_news_data' scripts/render_mobile_news_data.py
 grep -q 'validate_pulse_news_data.py' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'git fetch origin' scripts/pavbot_commit_and_push_outputs.sh
 grep -q 'git push origin "HEAD:$target_branch"' scripts/pavbot_commit_and_push_outputs.sh
@@ -507,7 +511,9 @@ grep -q 'Markdown -> jobsData JSON' docs/automation-operations.md
 grep -q 'git fetch origin' docs/automation-operations.md
 grep -q 'origin/main:public/pavbot-manifest.json' docs/automation-operations.md
 grep -q 'pavbot-aktualne-wydarzenia-mobile-10-15' docs/how-to-use.md
+grep -q 'pavbot-aktualne-wydarzenia-mobile-19-35' docs/how-to-use.md
 grep -q 'pavbot-aktualne-wydarzenia-mobile-10-15' docs/automation-operations.md
+grep -q 'pavbot-aktualne-wydarzenia-mobile-19-35' docs/automation-operations.md
 grep -q '\$daily-research-agent' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'PAVBOT_MANIFEST_URL' research/aktualne-wydarzenia-mobile/automation-prompt.md
 grep -q 'pavbot_commit_and_push_outputs.sh --isolated research/aktualne-wydarzenia-mobile' research/aktualne-wydarzenia-mobile/automation-prompt.md

@@ -66,6 +66,17 @@ The current active automations are:
 - Podcast package: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/`
 - Audio variants: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/audio/<variant>/podcast.mp3`
 
+- Name: `Pavbot Aktualne Wydarzenia Mobile 19:35`
+- ID: `pavbot-aktualne-wydarzenia-mobile-19-35`
+- Kind: `researchAudio`
+- Topic: `research/aktualne-wydarzenia-mobile`
+- Cadence: daily at 19:35 local time
+- Output: `research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf`
+- Newspaper PDF: `research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-newspaper.pdf`
+- Report: `research/aktualne-wydarzenia-mobile/runs/YYYY-MM-DD-HHMM.md`
+- Podcast package: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/`
+- Audio variants: `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/audio/<variant>/podcast.mp3`
+
 - Name: `Pavbot Puls Dnia 3h`
 - ID: `pavbot-puls-dnia-news-3h`
 - Kind: `automation`

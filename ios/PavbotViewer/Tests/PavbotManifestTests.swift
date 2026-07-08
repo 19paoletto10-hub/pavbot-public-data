@@ -1280,6 +1280,55 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(packages.first?.mobileNewsDataArtifact?.id, "mobile-data-2026-07-08-1021")
     }
 
+    func testAktualneUsesCanonicalMobileAutomationGroupWhenMultipleResearchAudioAutomationsExist() throws {
+        let wrongAutomation = PavbotAutomation(
+            id: "pavbot-aktualne-wydarzenia-mobile-19-35",
+            name: "Pavbot Aktualne Wydarzenia Mobile 19:35",
+            enabled: true,
+            kind: .researchAudio,
+            topic: "aktualne-wydarzenia-mobile",
+            topicPath: "research/aktualne-wydarzenia-mobile",
+            cadence: "daily at 19:35 local time",
+            sourcePath: "docs/how-to-use.md",
+            sourceUrl: "https://raw.githubusercontent.com/example/pavbot/main/docs/how-to-use.md",
+            output: "research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf",
+            outputUrl: "https://raw.githubusercontent.com/example/pavbot/main/research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf"
+        )
+        let canonicalAutomation = PavbotAutomation(
+            id: ReportTopicKind.aktualneMobileNewsAutomationID,
+            name: "Pavbot Aktualne Wydarzenia Mobile 10:15",
+            enabled: true,
+            kind: .researchAudio,
+            topic: "aktualne-wydarzenia-mobile",
+            topicPath: "research/aktualne-wydarzenia-mobile",
+            cadence: "daily at 10:15 local time",
+            sourcePath: "docs/how-to-use.md",
+            sourceUrl: "https://raw.githubusercontent.com/example/pavbot/main/docs/how-to-use.md",
+            output: "research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf",
+            outputUrl: "https://raw.githubusercontent.com/example/pavbot/main/research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf"
+        )
+        let mobileData = Self.artifact(
+            id: "mobile-data-2026-07-08-1935",
+            type: .mobileNewsData,
+            topic: "aktualne-wydarzenia-mobile",
+            path: "research/aktualne-wydarzenia-mobile/data/2026-07-08-1935-mobile-news.json",
+            date: "2026-07-08",
+            time: "19:35"
+        )
+        let manifest = PavbotManifest(
+            schemaVersion: 1,
+            title: "Pavbot",
+            generatedAt: "2026-07-08T20:40:00Z",
+            rawBaseUrl: "https://raw.githubusercontent.com/example/pavbot/main",
+            automations: [wrongAutomation, canonicalAutomation],
+            topics: [],
+            artifacts: [mobileData]
+        )
+
+        XCTAssertEqual(manifest.aktualneMobileNewsAutomationArtifactGroup?.id, canonicalAutomation.id)
+        XCTAssertEqual(manifest.reportPackages(for: .aktualne).first?.mobileNewsDataArtifact?.id, "mobile-data-2026-07-08-1935")
+    }
+
     func testNativeContentReloadKeyChangesWhenAktualneDataArtifactChangesWithoutGeneratedAt() {
         let olderPackage = TopicReportPackage(
             topic: .aktualne,
@@ -1456,10 +1505,10 @@ final class PavbotManifestTests: XCTestCase {
 
         XCTAssertEqual(store.state, .loaded)
         XCTAssertEqual(store.magazine?.headline, "Wydanie dnia")
-        XCTAssertEqual(
-            store.cacheNotice,
-            "Nie pobrano świeżych danych. Pokazuję zapisane dane: magazyn Aktualne."
+        XCTAssertTrue(
+            store.cacheNotice?.hasPrefix("Nie pobrano świeżych danych. Pokazuję zapisane dane: magazyn Aktualne.") == true
         )
+        XCTAssertTrue(store.cacheNotice?.contains(dataArtifact.path) == true)
     }
 
     @MainActor
@@ -1501,6 +1550,62 @@ final class PavbotManifestTests: XCTestCase {
 
         XCTAssertNil(store.magazine)
         XCTAssertNotEqual(store.state, .loaded)
+    }
+
+    @MainActor
+    func testMobileNewsStoreFallsBackToLatestAvailablePackageWhenSelectedDayFetchFailsWithoutArtifactIDs() async throws {
+        let stalePackage = Self.mobileNewsPackage(date: "2026-07-08", time: "10:21")
+        let latestPackage = Self.mobileNewsPackage(date: "2026-07-08", time: "19:35")
+        let fetcher = MobileNewsFetchRecorder(
+            data: Self.mobileNewsDataFixtureData,
+            failingURLFragment: "2026-07-08-1021"
+        )
+        let store = MobileNewsStore(
+            client: MobileNewsClient(fetchData: { url in try await fetcher.fetchData(for: url) }),
+            cache: MobileNewsCache(defaults: UserDefaults(suiteName: UUID().uuidString)!)
+        )
+
+        await store.load(
+            packages: [latestPackage, stalePackage],
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            selectedDay: stalePackage.key,
+            selectedArtifactIDs: []
+        )
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.selectedPackage?.key, latestPackage.key)
+        XCTAssertEqual(fetcher.requestedURLFragments(), [
+            "2026-07-08-1021-mobile-news.json",
+            "2026-07-08-1935-mobile-news.json"
+        ])
+    }
+
+    @MainActor
+    func testMobileNewsStoreFallsBackWhenArtifactIDsSelectExactMissingPackage() async throws {
+        let stalePackage = Self.mobileNewsPackage(date: "2026-07-08", time: "10:21")
+        let latestPackage = Self.mobileNewsPackage(date: "2026-07-08", time: "19:35")
+        let fetcher = MobileNewsFetchRecorder(
+            data: Self.mobileNewsDataFixtureData,
+            failingURLFragment: "2026-07-08-1935"
+        )
+        let store = MobileNewsStore(
+            client: MobileNewsClient(fetchData: { url in try await fetcher.fetchData(for: url) }),
+            cache: MobileNewsCache(defaults: UserDefaults(suiteName: UUID().uuidString)!)
+        )
+
+        await store.load(
+            packages: [latestPackage, stalePackage],
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            selectedDay: stalePackage.key,
+            selectedArtifactIDs: [latestPackage.mobileNewsDataArtifact?.id ?? ""]
+        )
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.selectedPackage?.key, stalePackage.key)
+        XCTAssertEqual(fetcher.requestedURLFragments(), [
+            "2026-07-08-1935-mobile-news.json",
+            "2026-07-08-1021-mobile-news.json"
+        ])
     }
 
     @MainActor
@@ -1941,6 +2046,20 @@ final class PavbotManifestTests: XCTestCase {
             artifactIDs: ["mobile-data"]
         )))
         XCTAssertEqual(Self.reportRouteRevision(in: router), 2)
+    }
+
+    @MainActor
+    func testRouterManualResearchTopicSelectionClearsReportRouteSelection() {
+        let router = AppRouter()
+        router.selectedResearchTopic = .techNews
+        router.selectedReportDay = "2026-07-08-1021"
+        router.selectedReportArtifactIDs = ["mobile-data-2026-07-08-1021"]
+
+        router.selectResearchTopicFromUser(.aktualne)
+
+        XCTAssertEqual(router.selectedResearchTopic, .aktualne)
+        XCTAssertNil(router.selectedReportDay)
+        XCTAssertTrue(router.selectedReportArtifactIDs.isEmpty)
     }
 
     func testDecodesJobsReportDataForNativeJobsUI() throws {
@@ -5817,6 +5936,11 @@ final class PavbotManifestTests: XCTestCase {
         let contentSource = try String(contentsOf: viewsRoot.appendingPathComponent("ContentView.swift"))
         let pulseSource = try String(contentsOf: viewsRoot.appendingPathComponent("PulseDayView.swift"))
         let researchSource = try String(contentsOf: viewsRoot.appendingPathComponent("ReportPackageViews.swift"))
+        let servicesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Services")
+        let todayLiveTopicsSource = try String(contentsOf: servicesRoot.appendingPathComponent("TodayLiveTopicsService.swift"))
         let refreshSource = try XCTUnwrap(
             researchSource.components(separatedBy: ".toolbar {").dropFirst().first?
                 .components(separatedBy: ".task(id: researchLoadTrigger)").first
@@ -5828,6 +5952,11 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(contentSource.components(separatedBy: "router.selectTabFromUser(newValue)").count - 1, 2)
         XCTAssertFalse(contentSource.contains("router.selectedTab = newValue"))
         XCTAssertTrue(pulseSource.contains("router.openResearchTopicFromUser(.aktualne)"))
+        XCTAssertTrue(researchSource.contains("router.selectResearchTopicFromUser($0)"))
+        XCTAssertTrue(researchSource.contains("ResearchTopicPicker(selection: researchTopicSelection)"))
+        XCTAssertFalse(researchSource.contains("ResearchTopicPicker(selection: $router.selectedResearchTopic)"))
+        XCTAssertTrue(todayLiveTopicsSource.contains("TopicReportPackage"))
+        XCTAssertTrue(todayLiveTopicsSource.contains(".nativeContentPackages(for: .aktualne"))
         XCTAssertEqual(refreshSource.components(separatedBy: "router.clearReportRouteSelection()").count - 1, 2)
         XCTAssertLessThan(
             try XCTUnwrap(refreshSource.range(of: "router.clearReportRouteSelection()")?.lowerBound),
@@ -9556,6 +9685,34 @@ final class PavbotManifestTests: XCTestCase {
 
     private static func date(_ value: String) -> Date {
         ISO8601DateFormatter().date(from: value)!
+    }
+}
+
+private final class MobileNewsFetchRecorder: @unchecked Sendable {
+    private let lock = NSLock()
+    private var urls: [URL] = []
+    private let data: Data
+    private let failingURLFragment: String
+
+    init(data: Data, failingURLFragment: String) {
+        self.data = data
+        self.failingURLFragment = failingURLFragment
+    }
+
+    func fetchData(for url: URL) async throws -> Data {
+        lock.withLock {
+            urls.append(url)
+        }
+        if url.absoluteString.contains(failingURLFragment) {
+            throw MobileNewsClient.ClientError.httpStatus(404)
+        }
+        return data
+    }
+
+    func requestedURLFragments() -> [String] {
+        lock.withLock {
+            urls.map { $0.lastPathComponent }
+        }
     }
 }
 

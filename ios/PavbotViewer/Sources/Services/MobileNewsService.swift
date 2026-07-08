@@ -83,6 +83,7 @@ final class MobileNewsStore {
         cacheNotice = nil
         state = .loading
         var lastError: Error?
+        var attempts: [MobileNewsLoadAttempt] = []
 
         for package in candidates {
             selectedPackage = package
@@ -90,10 +91,12 @@ final class MobileNewsStore {
                 let artifact = package.mobileNewsDataArtifact,
                 let url = artifact.resolvedURL(manifestURL: URL(string: manifestURLString))
             else {
+                attempts.append(MobileNewsLoadAttempt(package: package, artifactPath: package.mobileNewsDataArtifact?.path, url: nil))
                 lastError = MobileNewsError.missingDataArtifact
                 continue
             }
 
+            attempts.append(MobileNewsLoadAttempt(package: package, artifactPath: artifact.path, url: url))
             do {
                 let data = try await client.fetchData(url)
                 let decoded = try JSONDecoder.pavbot.decode(MobileNewsMagazine.self, from: data)
@@ -112,19 +115,23 @@ final class MobileNewsStore {
 
         loadCachedMagazine(matching: candidates)
         if magazine != nil {
-            cacheNotice = PavbotCacheNoticeCopy.refreshFailed(context: "magazyn Aktualne")
+            cacheNotice = [
+                PavbotCacheNoticeCopy.refreshFailed(context: "magazyn Aktualne"),
+                MobileNewsLoadAttempt.summary(for: attempts)
+            ]
+            .compactMap { $0 }
+            .joined(separator: " ")
             state = .loaded
         } else {
             cacheNotice = nil
             state = .failed(
-                lastError.map { .network($0, context: .preview) }
-                    ?? .custom(
-                        title: "Nie udało się wczytać Aktualne",
-                        message: "Nie udało się pobrać danych magazynu 10:15.",
-                        actionTitle: "Odśwież magazyn",
-                        systemImage: ReportTopicKind.aktualne.systemImage,
-                        tint: ReportTopicKind.aktualne.tint
-                    )
+                .custom(
+                    title: "Nie udało się wczytać Aktualne",
+                    message: MobileNewsLoadAttempt.failureMessage(lastError: lastError, attempts: attempts),
+                    actionTitle: "Odśwież magazyn",
+                    systemImage: ReportTopicKind.aktualne.systemImage,
+                    tint: ReportTopicKind.aktualne.tint
+                )
             )
         }
     }
@@ -148,13 +155,16 @@ final class MobileNewsStore {
         selectedDay: String?,
         selectedArtifactIDs: [String]
     ) -> [TopicReportPackage] {
-        let loadablePackages = packages.filter(\.hasNativeMobileNewsContent)
+        let loadablePackages = packages
+            .filter(\.hasNativeMobileNewsContent)
+            .sorted { $0.key > $1.key }
         let artifactIDs = Set(selectedArtifactIDs)
         if !artifactIDs.isEmpty,
            let package = loadablePackages.first(where: { package in
                package.artifacts.contains { artifactIDs.contains($0.id) }
            }) {
             return [package]
+                + loadablePackages.filter { $0.id != package.id }
         }
 
         if let selectedDay = selectedDay?.trimmingCharacters(in: .whitespacesAndNewlines),
@@ -167,10 +177,49 @@ final class MobileNewsStore {
             }
             if !selectedPackages.isEmpty {
                 return selectedPackages
+                    + loadablePackages.filter { package in
+                        !selectedPackages.contains(where: { $0.id == package.id })
+                    }
             }
         }
 
         return loadablePackages
+    }
+}
+
+private struct MobileNewsLoadAttempt {
+    let package: TopicReportPackage
+    let artifactPath: String?
+    let url: URL?
+
+    static func summary(for attempts: [Self]) -> String? {
+        guard !attempts.isEmpty else { return nil }
+        return "Próbowane mobileNewsData: \(attempts.map(\.displayValue).joined(separator: "; "))."
+    }
+
+    static func failureMessage(lastError: Error?, attempts: [Self]) -> String {
+        let attempted = summary(for: attempts) ?? "Manifest nie wskazał żadnej paczki mobileNewsData do pobrania."
+        let details = lastError.map { "Szczegóły: \($0.localizedDescription)" }
+        return [
+            "Nie udało się pobrać danych magazynu Aktualne.",
+            attempted,
+            details
+        ]
+        .compactMap { $0 }
+        .joined(separator: " ")
+    }
+
+    private var displayValue: String {
+        [
+            package.key,
+            artifactPath,
+            url?.absoluteString
+        ]
+        .compactMap { value -> String? in
+            let trimmed = value?.trimmingCharacters(in: .whitespacesAndNewlines)
+            return trimmed?.isEmpty == false ? trimmed : nil
+        }
+        .joined(separator: " -> ")
     }
 }
 

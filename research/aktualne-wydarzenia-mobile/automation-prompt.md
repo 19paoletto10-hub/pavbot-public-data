@@ -1,11 +1,12 @@
-# Automation Prompt: Pavbot Aktualne Wydarzenia Mobile 10:15
+# Automation Prompt: Pavbot Aktualne Wydarzenia Mobile 10:15 / 19:35
 
 ```text
 $daily-research-agent
 
-Uruchom kompletny codzienny workflow dla
+Uruchom kompletny workflow dla bieżącego porannego albo wieczornego wydania
 `research/aktualne-wydarzenia-mobile`. Pracuj po polsku i używaj poprawnych
-polskich znaków.
+polskich znaków. Ta sama procedura obowiązuje dla heartbeatów 10:15 i 19:35
+Europe/Warsaw.
 
 Najpierw przeczytaj `AGENTS.md`, `docs/architecture.md`,
 `research/aktualne-wydarzenia-mobile/topic.md`,
@@ -20,6 +21,9 @@ używaj go we wszystkich nazwach plików tego przebiegu:
 wartość `RUN_STAMP`, a `YYYY-MM-DD` oznacza `RUN_DATE`. Ten sam stamp musi
 zostać przekazany do publikacji jako twarda bramka sukcesu:
 `export PAVBOT_EXPECTED_MOBILE_NEWS_STAMP="$RUN_STAMP"`.
+Jeśli bieżący przebieg jest poranny, nie nadpisuj ani nie usuwaj wieczornego
+pakietu z tego samego dnia. Jeśli przebieg jest wieczorny, traktuj poranne
+wydanie jako kontekst i zachowaj oba pakiety w manifeście.
 
 Sprawdź aktualne publiczne źródła internetowe dotyczące najważniejszych
 wydarzeń z Polski i świata: polityki, bezpieczeństwa, dyplomacji, decyzji
@@ -126,6 +130,10 @@ użytkownika CloudKit dla `cktool` przed produkcyjną publikacją komendą
 `xcrun cktool save-token --type user --method keychain --force`. Następnie
 uruchom:
 `scripts/pavbot_commit_and_push_outputs.sh --isolated research/aktualne-wydarzenia-mobile`.
+Po publikacji sprawdź publiczny manifest i raw URL dla bieżącego stampu. Sukces
+porannego lub wieczornego wydania oznacza, że `origin/main` zawiera pasujące
+artefakty `mobileNewsData`, `mobile-brief.pdf`, `script.md` i każdy istniejący
+`audio/*/podcast.mp3` dla tego samego `RUN_STAMP`.
 
 Użyj risk gate z `docs/architecture.md`. W ramach tej automatyzacji wolno
 zmieniać tylko pliki w `research/aktualne-wydarzenia-mobile/` oraz manifest

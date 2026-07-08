@@ -129,7 +129,7 @@ struct ResearchView: View {
                     layout: layout
                 )
 
-                ResearchTopicPicker(selection: $router.selectedResearchTopic)
+                ResearchTopicPicker(selection: researchTopicSelection)
 
                 if let manifest = store.manifest {
                     let packages = nativeContentPackages(
@@ -317,6 +317,13 @@ struct ResearchView: View {
             request: researchLoadRequest,
             routeRevision: router.reportRouteRevision,
             isResearchActive: router.selectedTab == .research
+        )
+    }
+
+    private var researchTopicSelection: Binding<ReportTopicKind> {
+        Binding(
+            get: { router.selectedResearchTopic },
+            set: { router.selectResearchTopicFromUser($0) }
         )
     }
 

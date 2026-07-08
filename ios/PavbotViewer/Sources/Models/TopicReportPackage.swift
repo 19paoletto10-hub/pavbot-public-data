@@ -7,6 +7,8 @@ enum ReportTopicKind: String, CaseIterable, Codable, Identifiable, Equatable, Ha
     case polskaSwiat
     case aktualne
 
+    static let aktualneMobileNewsAutomationID = "pavbot-aktualne-wydarzenia-mobile-10-15"
+
     var id: String { rawValue }
 
     init?(topic: String) {
@@ -209,9 +211,7 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
         in manifest: PavbotManifest
     ) -> [PavbotArtifact] {
         if topic == .aktualne,
-           let automationGroup = manifest.automationArtifactGroups.first(where: { group in
-               group.automation.topic == topic.topic && group.automation.kind == .researchAudio
-           }) {
+           let automationGroup = manifest.mobileNewsAutomationArtifactGroup(for: topic) {
             return automationGroup.artifacts
         }
 
@@ -422,5 +422,17 @@ struct TopicReportPackage: Identifiable, Equatable, Hashable {
 extension PavbotManifest {
     func reportPackages(for topic: ReportTopicKind) -> [TopicReportPackage] {
         TopicReportPackage.packages(for: topic, in: self)
+    }
+
+    var aktualneMobileNewsAutomationArtifactGroup: AutomationArtifactGroup? {
+        mobileNewsAutomationArtifactGroup(for: .aktualne)
+    }
+
+    func mobileNewsAutomationArtifactGroup(for topic: ReportTopicKind) -> AutomationArtifactGroup? {
+        guard topic == .aktualne else { return nil }
+        return automationArtifactGroup(for: ReportTopicKind.aktualneMobileNewsAutomationID)
+            ?? automationArtifactGroups.first { group in
+                group.automation.topic == topic.topic && group.automation.kind == .researchAudio
+            }
     }
 }

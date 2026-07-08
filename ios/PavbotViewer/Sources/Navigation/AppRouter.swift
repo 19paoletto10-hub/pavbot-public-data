@@ -110,6 +110,11 @@ final class AppRouter {
         selectedTab = .research
     }
 
+    func selectResearchTopicFromUser(_ topic: ReportTopicKind) {
+        clearReportRouteSelection()
+        selectedResearchTopic = topic
+    }
+
     func openAudioDestination(_ destination: PavbotAudioDestination) {
         switch destination {
         case .mobileNewsArticle:

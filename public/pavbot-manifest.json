@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-08T20:35:32.154288+00:00",
+  "generatedAt": "2026-07-08T22:35:15.806477+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -12,6 +12,19 @@
       "topic": "aktualne-wydarzenia-mobile",
       "topicPath": "research/aktualne-wydarzenia-mobile",
       "cadence": "daily at 10:15 local time",
+      "sourcePath": "docs/how-to-use.md",
+      "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
+      "output": "research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf",
+      "outputUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf"
+    },
+    {
+      "id": "pavbot-aktualne-wydarzenia-mobile-19-35",
+      "name": "Pavbot Aktualne Wydarzenia Mobile 19:35",
+      "enabled": true,
+      "kind": "researchAudio",
+      "topic": "aktualne-wydarzenia-mobile",
+      "topicPath": "research/aktualne-wydarzenia-mobile",
+      "cadence": "daily at 19:35 local time",
       "sourcePath": "docs/how-to-use.md",
       "sourceUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/docs/how-to-use.md",
       "output": "research/aktualne-wydarzenia-mobile/pdfs/YYYY-MM-DD-HHMM-mobile-brief.pdf",
@@ -157,6 +170,40 @@
     }
   ],
   "artifacts": [
+    {
+      "id": "research/reddit-radar/runs/2026-07-09-0008-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Daily Research Report: Reddit Radar",
+      "path": "research/reddit-radar/runs/2026-07-09-0008-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-07-09-0008-reddit-radar.md",
+      "sizeBytes": 4115,
+      "date": "2026-07-09",
+      "time": "00:08"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-09-0008-reddit-radar.json",
+      "type": "redditRadarData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar data",
+      "path": "research/reddit-radar/data/2026-07-09-0008-reddit-radar.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-09-0008-reddit-radar.json",
+      "sizeBytes": 11260,
+      "date": "2026-07-09",
+      "time": "00:08",
+      "itemCount": 5
+    },
+    {
+      "id": "research/reddit-radar/pdfs/2026-07-09-0008-reddit-radar.pdf",
+      "type": "pdf",
+      "topic": "reddit-radar",
+      "title": "2026-07-09-0008-reddit-radar.pdf",
+      "path": "research/reddit-radar/pdfs/2026-07-09-0008-reddit-radar.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/pdfs/2026-07-09-0008-reddit-radar.pdf",
+      "sizeBytes": 70939,
+      "date": "2026-07-09",
+      "time": "00:08"
+    },
     {
       "id": "research/tech-news/runs/2026-07-08.md",
       "type": "run",
