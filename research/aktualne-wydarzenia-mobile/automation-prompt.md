@@ -79,14 +79,6 @@ widocznymi linkami źródeł i dopracowanymi stopkami. Po renderze wyrenderuj
 strony do PNG i sprawdź wizualnie spacing, polskie znaki oraz brak ucięć lub
 nakładania tekstu.
 
-Wygeneruj strukturalne dane dla natywnego widoku `Research -> Aktualne`:
-`python3 scripts/render_mobile_news_data.py research/aktualne-wydarzenia-mobile/runs/YYYY-MM-DD-HHMM.md research/aktualne-wydarzenia-mobile/data/YYYY-MM-DD-HHMM-mobile-news.json`.
-Następnie uruchom walidację:
-`python3 scripts/validate_mobile_news_data.py research/aktualne-wydarzenia-mobile/data/YYYY-MM-DD-HHMM-mobile-news.json`.
-Jeśli walidacja zgłosi brak pięciu sekcji, mniej niż dwa artykuły w sekcji albo
-powielony opis sekcji i lead artykułu, popraw raport Markdown i wygeneruj JSON
-ponownie przed renderem audio i publikacją.
-
 Wygeneruj dwa warianty TTS:
 `bash research/aktualne-wydarzenia-mobile/tools/render_two_tts_variants.sh research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/script.md research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM`.
 
@@ -98,6 +90,17 @@ Zapisz zbiorcze metadane w
 `research/aktualne-wydarzenia-mobile/podcasts/YYYY-MM-DD-HHMM/tts_variants.json`.
 Jeśli jeden wariant TTS zawiedzie, nie twórz fałszywego MP3; zachowaj raport,
 PDF, skrypt, źródła i zapisz błąd w metadanych oraz backlogu.
+
+Dopiero po renderze TTS wygeneruj strukturalne dane dla natywnego widoku
+`Research -> Aktualne`, ponieważ JSON musi zawierać `audioArtifacts` wskazujące
+istniejące pliki MP3:
+`python3 scripts/render_mobile_news_data.py research/aktualne-wydarzenia-mobile/runs/YYYY-MM-DD-HHMM.md research/aktualne-wydarzenia-mobile/data/YYYY-MM-DD-HHMM-mobile-news.json`.
+Następnie uruchom walidację:
+`python3 scripts/validate_mobile_news_data.py research/aktualne-wydarzenia-mobile/data/YYYY-MM-DD-HHMM-mobile-news.json`.
+Jeśli walidacja zgłosi brak pięciu sekcji, mniej niż dwa artykuły w sekcji,
+brak `audioArtifacts`, pustą listę audio albo powielony opis sekcji i lead
+artykułu, popraw raport Markdown lub audio workflow i wygeneruj JSON ponownie
+przed publikacją.
 
 Artefakty redakcyjne i diagnostyczne, czyli raport Markdown, `draft.md`,
 `sources.md` i `tts_variants.json`, nadal mają powstawać lokalnie na potrzeby

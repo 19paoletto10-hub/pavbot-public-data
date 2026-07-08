@@ -27,6 +27,48 @@ struct MobileNewsMagazine: Codable, Equatable, Identifiable {
         case audioArtifacts
     }
 
+    init(
+        schemaVersion: Int,
+        topic: String,
+        runDate: String,
+        runTime: String?,
+        status: String,
+        headline: String,
+        leadParagraphs: [String],
+        sections: [MobileNewsSection],
+        checkedSources: [ResearchNewsSource],
+        audioArtifacts: [MobileNewsAudioArtifact],
+        package: TopicReportPackage? = nil
+    ) {
+        self.schemaVersion = schemaVersion
+        self.topic = topic
+        self.runDate = runDate
+        self.runTime = runTime
+        self.status = status
+        self.headline = headline
+        self.leadParagraphs = leadParagraphs
+        self.sections = sections
+        self.checkedSources = checkedSources
+        self.audioArtifacts = audioArtifacts
+        self.package = package
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.init(
+            schemaVersion: try container.decode(Int.self, forKey: .schemaVersion),
+            topic: try container.decode(String.self, forKey: .topic),
+            runDate: try container.decode(String.self, forKey: .runDate),
+            runTime: try container.decodeIfPresent(String.self, forKey: .runTime),
+            status: try container.decode(String.self, forKey: .status),
+            headline: try container.decode(String.self, forKey: .headline),
+            leadParagraphs: try container.decode([String].self, forKey: .leadParagraphs),
+            sections: try container.decode([MobileNewsSection].self, forKey: .sections),
+            checkedSources: try container.decodeIfPresent([ResearchNewsSource].self, forKey: .checkedSources) ?? [],
+            audioArtifacts: try container.decodeIfPresent([MobileNewsAudioArtifact].self, forKey: .audioArtifacts) ?? []
+        )
+    }
+
     var id: String {
         [mobileNewsNonBlank(topic), mobileNewsNonBlank(runDate), mobileNewsNonBlank(runTime)]
             .compactMap { $0 }

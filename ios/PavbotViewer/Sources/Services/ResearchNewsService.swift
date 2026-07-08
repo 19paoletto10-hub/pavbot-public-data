@@ -181,10 +181,16 @@ final class ResearchNewsStore {
 
         if let selectedDay = selectedDay?.trimmingCharacters(in: .whitespacesAndNewlines),
            !selectedDay.isEmpty {
-            let selectedPackages = loadablePackages.filter { package in
+            let exactPackages = loadablePackages.filter { package in
                 TopicReportPackage.keysMatch(package.key, selectedDay)
                     || package.displayDate == selectedDay
-                    || package.date == selectedDay
+            }
+            if !exactPackages.isEmpty {
+                return exactPackages
+            }
+
+            let selectedPackages = loadablePackages.filter { package in
+                package.date == selectedDay
                     || package.key.hasPrefix(selectedDay)
             }
             if !selectedPackages.isEmpty {

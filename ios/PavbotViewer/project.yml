@@ -34,14 +34,10 @@ targets:
       configs:
         Debug:
           CODE_SIGN_ENTITLEMENTS: Sources/PavbotViewer.entitlements
-          CODE_SIGN_STYLE: Manual
-          CODE_SIGN_IDENTITY: Apple Distribution
           APS_ENVIRONMENT: production
           CLOUDKIT_ENVIRONMENT: Production
         Release:
           CODE_SIGN_ENTITLEMENTS: Sources/PavbotViewer.entitlements
-          CODE_SIGN_STYLE: Manual
-          CODE_SIGN_IDENTITY: Apple Distribution
           APS_ENVIRONMENT: production
           CLOUDKIT_ENVIRONMENT: Production
     postBuildScripts:

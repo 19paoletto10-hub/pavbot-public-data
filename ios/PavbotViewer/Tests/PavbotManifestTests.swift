@@ -1048,6 +1048,56 @@ final class PavbotManifestTests: XCTestCase {
     }
 
     @MainActor
+    func testResearchNewsStoreLoadsExactMorningRunWhenSameDayEveningRunExists() async throws {
+        let eveningPackage = TopicReportPackage(
+            topic: .techNews,
+            key: "2026-07-08-1933",
+            artifacts: [
+                Self.artifact(
+                    id: "tech-evening-data",
+                    type: .researchData,
+                    topic: "tech-news",
+                    path: "research/tech-news/data/2026-07-08-1933-research.json",
+                    date: "2026-07-08",
+                    time: "19:33"
+                )
+            ]
+        )
+        let morningPackage = TopicReportPackage(
+            topic: .techNews,
+            key: "2026-07-08",
+            artifacts: [
+                Self.artifact(
+                    id: "tech-morning-data",
+                    type: .researchData,
+                    topic: "tech-news",
+                    path: "research/tech-news/data/2026-07-08-research.json",
+                    date: "2026-07-08"
+                )
+            ]
+        )
+        let store = ResearchNewsStore(
+            client: ResearchNewsClient(
+                fetchData: { _ in Self.researchDataFixtureData },
+                fetchText: { _ in XCTFail("researchData should be enough for the selected run"); return Self.techResearchMarkdownFixture }
+            ),
+            cache: ResearchNewsCache(defaults: UserDefaults(suiteName: UUID().uuidString)!)
+        )
+
+        await store.load(
+            packages: [eveningPackage, morningPackage],
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            topic: .techNews,
+            selectedDay: "2026-07-08",
+            selectedArtifactIDs: []
+        )
+
+        XCTAssertEqual(store.state, .loaded)
+        XCTAssertEqual(store.selectedPackage?.key, "2026-07-08")
+        XCTAssertEqual(store.selectedPackage?.researchDataArtifact?.id, "tech-morning-data")
+    }
+
+    @MainActor
     func testResearchNewsStoreChoosesCanonicalResearchDataWhenDuplicateArtifactExists() async throws {
         let duplicateArtifact = Self.artifact(
             id: "tech-data-duplicate",
@@ -1158,6 +1208,27 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(magazine.sections[0].articles[0].ttsText.contains("Polska jest gospodarzem ważnych rozmów"))
         XCTAssertFalse(magazine.sections[0].articles[0].ttsText.contains("https://"))
         XCTAssertEqual(magazine.articleCount, 5)
+    }
+
+    func testDecodesMobileNewsMagazineWhenAudioArtifactsAreMissing() throws {
+        let data = """
+        {
+          "schemaVersion": 1,
+          "topic": "aktualne-wydarzenia-mobile",
+          "runDate": "2026-07-08",
+          "runTime": "19:35",
+          "status": "Material update",
+          "headline": "Wydanie dnia",
+          "leadParagraphs": ["Najważniejsze wydarzenia dnia."],
+          "sections": [],
+          "checkedSources": []
+        }
+        """.data(using: .utf8)!
+
+        let magazine = try JSONDecoder.pavbot.decode(MobileNewsMagazine.self, from: data)
+
+        XCTAssertEqual(magazine.displayDate, "2026-07-08 19:35")
+        XCTAssertTrue(magazine.audioArtifacts.isEmpty)
     }
 
     func testMobileNewsSectionHidesSummaryWhenItDuplicatesArticleLead() throws {
@@ -3875,10 +3946,16 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(entitlements.contains("$(CLOUDKIT_ENVIRONMENT)"))
         XCTAssertTrue(projectYML.contains("CLOUDKIT_ENVIRONMENT: Production"))
         XCTAssertTrue(projectYML.contains("APS_ENVIRONMENT: production"))
-        XCTAssertTrue(projectYML.contains("CODE_SIGN_IDENTITY: Apple Distribution"))
-        XCTAssertTrue(projectYML.contains("CODE_SIGN_STYLE: Manual"))
+        XCTAssertTrue(projectYML.contains("CODE_SIGN_STYLE: Automatic"))
+        XCTAssertTrue(projectYML.contains("DEVELOPMENT_TEAM: SP774TZZU8"))
+        XCTAssertFalse(projectYML.contains("CODE_SIGN_STYLE: Manual"))
+        XCTAssertFalse(projectYML.contains("CODE_SIGN_IDENTITY: Apple Distribution"))
         XCTAssertTrue(infoPlist.contains("UIBackgroundModes"))
         XCTAssertTrue(infoPlist.contains("remote-notification"))
+        XCTAssertFalse(infoPlist.contains("<string>processing</string>"))
+        XCTAssertFalse(infoPlist.contains("<string>location</string>"))
+        XCTAssertFalse(infoPlist.contains("<string>fetch</string>"))
+        XCTAssertFalse(infoPlist.contains("BGTaskSchedulerPermittedIdentifiers"))
         XCTAssertFalse(projectYML.contains("CLOUDKIT_ENVIRONMENT: Development"))
         XCTAssertFalse(projectYML.contains("APS_ENVIRONMENT: development"))
     }
@@ -6091,11 +6168,14 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(researchViewSource.contains("ResearchRunPicker("))
         XCTAssertTrue(researchViewSource.contains("packages: packages"))
         XCTAssertTrue(researchViewSource.contains("selectedReportDay: $router.selectedReportDay"))
+        XCTAssertTrue(researchViewSource.contains("selectedArtifactIDs: $router.selectedReportArtifactIDs"))
         XCTAssertTrue(pickerSource.contains("recentReportDays(in: packages, limit: 4)"))
         XCTAssertTrue(pickerSource.contains("ForEach(recentReportDays, id: \\.self)"))
         XCTAssertTrue(pickerSource.contains("packages(on: selectedReportDate)"))
         XCTAssertTrue(pickerSource.contains("ResearchDayFilterChip("))
         XCTAssertTrue(pickerSource.contains("ForEach(selectedDayPackages)"))
+        XCTAssertTrue(pickerSource.contains("@Binding var selectedArtifactIDs: [String]"))
+        XCTAssertTrue(pickerSource.contains("selectedArtifactIDs = []"))
         XCTAssertTrue(pickerSource.contains("selectedReportDay = package.key"))
         XCTAssertFalse(pickerSource.contains("Array(packages.prefix(5))"))
     }

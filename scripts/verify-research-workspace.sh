@@ -318,10 +318,11 @@ grep -q 'DEVELOPMENT_TEAM = SP774TZZU8' ios/PavbotViewer/PavbotViewer.xcodeproj/
 grep -q 'CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
 grep -q 'APS_ENVIRONMENT = production;' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
 grep -q 'CLOUDKIT_ENVIRONMENT = Production;' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
-grep -q 'CODE_SIGN_IDENTITY = "Apple Distribution";' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
-grep -q 'CODE_SIGN_STYLE = Manual;' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
+grep -q 'CODE_SIGN_STYLE = Automatic;' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
 ! grep -q 'APS_ENVIRONMENT = development;' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
 ! grep -q 'CLOUDKIT_ENVIRONMENT = Development;' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
+! grep -q 'CODE_SIGN_STYLE = Manual;' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
+! grep -q 'CODE_SIGN_IDENTITY = "Apple Distribution";' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
 ! grep -q 'CODE_SIGN_IDENTITY = "iPhone Developer";' ios/PavbotViewer/PavbotViewer.xcodeproj/project.pbxproj
 grep -q 'aps-environment' ios/PavbotViewer/Sources/PavbotViewer.entitlements
 grep -q '$(APS_ENVIRONMENT)' ios/PavbotViewer/Sources/PavbotViewer.entitlements
@@ -652,6 +653,19 @@ print(
 )
 raise SystemExit(1)
 PY
+fi
+
+mobile_news_data_files=()
+while IFS= read -r mobile_news_data_file; do
+  [[ -n "$mobile_news_data_file" ]] || continue
+  mobile_news_data_files+=("$mobile_news_data_file")
+done < <(
+  git ls-files -- 'research/aktualne-wydarzenia-mobile/data' \
+    | grep -E '/[^/]+-mobile-news\.json$' \
+    || true
+)
+if ((${#mobile_news_data_files[@]} > 0)); then
+  python3 scripts/validate_mobile_news_data.py "${mobile_news_data_files[@]}"
 fi
 
 for topic in llm-ai-jobs-wroclaw tech-news polska-swiat; do

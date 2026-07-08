@@ -1682,7 +1682,12 @@ printf 'refresh\n' >> "${PAVBOT_TEST_CKTOOL_REFRESH_LOG:?}"
             "leadParagraphs": ["Najważniejszy opis dnia."],
             "sections": sections,
             "checkedSources": [{"title": "KPRM", "url": "https://www.gov.pl/web/premier"}],
-            "audioArtifacts": [],
+            "audioArtifacts": [
+                {
+                    "variant": "female-piper",
+                    "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-06-25-1015/audio/female-piper/podcast.mp3",
+                }
+            ],
         }
 
     def mobile_news_article_payload(self, slug: str, section: str, index: int) -> dict:

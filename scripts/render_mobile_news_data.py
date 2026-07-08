@@ -26,6 +26,7 @@ def render_mobile_news_data(markdown_path: Path, output_path: Path) -> dict[str,
 def parse_report(markdown: str, markdown_path: Path) -> dict[str, Any]:
     sections = markdown_sections(markdown)
     run_date, run_time = parse_run_date_time(markdown, markdown_path)
+    stamp = f"{run_date}-{run_time.replace(':', '')}"
     checked_sources = extract_sources(
         sections.get("Zakres sprawdzonych źródeł", "")
         or sections.get("Źródła", "")
@@ -45,7 +46,68 @@ def parse_report(markdown: str, markdown_path: Path) -> dict[str, Any]:
         "leadParagraphs": lead_paragraphs or ["Wydanie zawiera aktualne informacje z Polski i świata."],
         "checkedSources": checked_sources,
         "sections": mobile_sections,
+        "audioArtifacts": collect_audio_artifacts(markdown_path, stamp),
     }
+
+
+def collect_audio_artifacts(markdown_path: Path, stamp: str) -> list[dict[str, str]]:
+    topic_root = topic_root_for(markdown_path)
+    variants_path = topic_root / "podcasts" / stamp / "tts_variants.json"
+    if not variants_path.is_file():
+        return []
+
+    try:
+        payload = json.loads(variants_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return []
+
+    artifacts: list[dict[str, str]] = []
+    for variant in payload.get("variants", []):
+        if not isinstance(variant, dict) or variant.get("status") != "ok":
+            continue
+        variant_id = str(variant.get("id") or "").strip()
+        output_file = str(variant.get("output_file") or "").strip()
+        if not variant_id or not output_file:
+            continue
+        if not audio_output_exists(topic_root, output_file):
+            continue
+        artifacts.append({"variant": variant_id, "path": normalized_artifact_path(topic_root, output_file)})
+    return artifacts
+
+
+def topic_root_for(markdown_path: Path) -> Path:
+    parts = markdown_path.resolve().parts
+    if TOPIC in parts:
+        index = parts.index(TOPIC)
+        return Path(*parts[: index + 1])
+    return markdown_path.parent.parent
+
+
+def audio_output_exists(topic_root: Path, output_file: str) -> bool:
+    return any(candidate.is_file() and candidate.stat().st_size > 0 for candidate in audio_output_candidates(topic_root, output_file))
+
+
+def audio_output_candidates(topic_root: Path, output_file: str) -> list[Path]:
+    raw_path = Path(output_file)
+    candidates = [raw_path]
+    if not raw_path.is_absolute():
+        candidates.append(topic_root / raw_path)
+        parts = raw_path.parts
+        if TOPIC in parts:
+            index = parts.index(TOPIC)
+            candidates.append(topic_root.joinpath(*parts[index + 1 :]))
+    return candidates
+
+
+def normalized_artifact_path(topic_root: Path, output_file: str) -> str:
+    raw_path = Path(output_file)
+    if not raw_path.is_absolute():
+        return output_file
+    try:
+        relative = raw_path.relative_to(topic_root.parent.parent)
+        return relative.as_posix()
+    except ValueError:
+        return raw_path.as_posix()
 
 
 def markdown_sections(markdown: str) -> dict[str, str]:

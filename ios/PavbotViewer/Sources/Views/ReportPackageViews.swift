@@ -139,7 +139,8 @@ struct ResearchView: View {
                     ResearchRunPicker(
                         topic: router.selectedResearchTopic,
                         packages: packages,
-                        selectedReportDay: $router.selectedReportDay
+                        selectedReportDay: $router.selectedReportDay,
+                        selectedArtifactIDs: $router.selectedReportArtifactIDs
                     )
 
                     if router.selectedResearchTopic == .aktualne {
@@ -457,6 +458,7 @@ private struct ResearchRunPicker: View {
     let topic: ReportTopicKind
     let packages: [TopicReportPackage]
     @Binding var selectedReportDay: String?
+    @Binding var selectedArtifactIDs: [String]
 
     private var recentReportDays: [String] {
         TopicReportPackage.recentReportDays(in: packages, limit: 4)
@@ -499,6 +501,7 @@ private struct ResearchRunPicker: View {
                         HStack(spacing: 8) {
                             ForEach(recentReportDays, id: \.self) { day in
                                 Button {
+                                    selectedArtifactIDs = []
                                     selectedReportDay = packages(on: day).first?.key ?? day
                                 } label: {
                                     ResearchDayFilterChip(
@@ -520,6 +523,7 @@ private struct ResearchRunPicker: View {
                         HStack(spacing: 8) {
                             ForEach(selectedDayPackages) { package in
                                 Button {
+                                    selectedArtifactIDs = []
                                     selectedReportDay = package.key
                                 } label: {
                                     ResearchRunChip(
@@ -1168,15 +1172,34 @@ private struct PodcastScriptSpeechMiniPlayer: View {
 }
 
 private struct MobileNewsHero: View {
+    @Environment(ManifestStore.self) private var store
+    @Environment(AudioPlaybackService.self) private var audioPlayback
+    @Environment(PavbotHaptics.self) private var haptics
+
     let magazine: MobileNewsMagazine
     let packageCount: Int
     @State private var isContextExpanded = false
+
+    private var audioPlaybackTarget: (artifact: PavbotArtifact, url: URL)? {
+        guard let artifact = magazine.audioArtifact,
+              let url = artifact.resolvedURL(manifestURL: URL(string: store.manifestURLString)) else {
+            return nil
+        }
+        return (artifact, url)
+    }
+
+    private var isPodcastPlaying: Bool {
+        guard let target = audioPlaybackTarget else { return false }
+        return audioPlayback.currentArtifact?.id == target.artifact.id
+            && audioPlayback.currentURL == target.url
+            && audioPlayback.isPlaying
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             HStack(alignment: .top, spacing: 12) {
                 VStack(alignment: .leading, spacing: 8) {
-                    StatusBadge(text: "Magazyn 10:15", systemImage: "newspaper.fill", tint: .orange)
+                    StatusBadge(text: "Magazyn", systemImage: "newspaper.fill", tint: .orange)
                     Text(magazine.displayDate)
                         .font(.footnote.weight(.semibold))
                         .foregroundStyle(.secondary)
@@ -1188,9 +1211,25 @@ private struct MobileNewsHero: View {
 
                 Spacer(minLength: 8)
 
-                Image(systemName: "iphone.gen3")
-                    .font(.title.weight(.semibold))
-                    .foregroundStyle(.orange)
+                if let target = audioPlaybackTarget {
+                    Button {
+                        togglePodcastPlayback(target)
+                    } label: {
+                        Image(systemName: isPodcastPlaying ? "pause.fill" : "play.fill")
+                            .font(.headline.weight(.bold))
+                            .foregroundStyle(.white)
+                            .frame(width: 46, height: 46)
+                            .background(.purple, in: Circle())
+                            .shadow(color: .purple.opacity(0.28), radius: 8, y: 4)
+                    }
+                    .buttonStyle(.plain)
+                    .accessibilityLabel(isPodcastPlaying ? "Pauza podcastu" : "Odtwórz podcast")
+                    .accessibilityHint(target.artifact.title)
+                } else {
+                    Image(systemName: "iphone.gen3")
+                        .font(.title.weight(.semibold))
+                        .foregroundStyle(.orange)
+                }
             }
 
             HStack(spacing: 10) {
@@ -1234,6 +1273,15 @@ private struct MobileNewsHero: View {
             RoundedRectangle(cornerRadius: 18, style: .continuous)
                 .stroke(Color.orange.opacity(0.18), lineWidth: 1)
         }
+    }
+
+    private func togglePodcastPlayback(_ target: (artifact: PavbotArtifact, url: URL)) {
+        if isPodcastPlaying {
+            audioPlayback.pause()
+        } else {
+            audioPlayback.play(artifact: target.artifact, url: target.url)
+        }
+        haptics.play(.lightImpact)
     }
 }
 

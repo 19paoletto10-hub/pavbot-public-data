@@ -25,6 +25,39 @@ class RenderMobileNewsDataTest(unittest.TestCase):
             output = report.parents[1] / "data" / "2026-07-08-1935-mobile-news.json"
             report.parent.mkdir(parents=True)
             report.write_text(self.report_markdown(), encoding="utf-8")
+            audio_file = (
+                report.parents[1]
+                / "podcasts"
+                / "2026-07-08-1935"
+                / "audio"
+                / "female-piper"
+                / "podcast.mp3"
+            )
+            audio_file.parent.mkdir(parents=True)
+            audio_file.write_bytes(b"mp3")
+            (report.parents[1] / "podcasts" / "2026-07-08-1935" / "tts_variants.json").write_text(
+                """{
+                  "variants": [
+                    {
+                      "id": "female-piper",
+                      "engine": "piper",
+                      "voice": "pl_PL-gosia-medium",
+                      "status": "ok",
+                      "duration_seconds": 387.1,
+                      "output_file": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1935/audio/female-piper/podcast.mp3",
+                      "render_json": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1935/audio/female-piper/render.json",
+                      "error": null
+                    },
+                    {
+                      "id": "male-xtts",
+                      "status": "failed",
+                      "output_file": null,
+                      "error": "render failed"
+                    }
+                  ]
+                }""",
+                encoding="utf-8",
+            )
 
             payload = renderer.render_mobile_news_data(report, output)
 
@@ -37,7 +70,34 @@ class RenderMobileNewsDataTest(unittest.TestCase):
             self.assertEqual([section["title"] for section in payload["sections"]], renderer.REQUIRED_SECTION_TITLES)
             self.assertEqual(payload["sections"][0]["articles"][0]["title"], "Pierwszy sygnal")
             self.assertEqual(payload["sections"][0]["articles"][0]["sources"][0]["title"], "RCB")
+            self.assertEqual(
+                payload["audioArtifacts"],
+                [
+                    {
+                        "variant": "female-piper",
+                        "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1935/audio/female-piper/podcast.mp3",
+                    }
+                ],
+            )
             self.assertFalse(validator.validate_payload(payload))
+
+    def test_validator_rejects_payload_without_audio_artifacts(self) -> None:
+        validator = load_module("validate_mobile_news_data", "scripts/validate_mobile_news_data.py")
+        payload = self.valid_payload()
+        payload.pop("audioArtifacts")
+
+        errors = validator.validate_payload(payload)
+
+        self.assertIn("missing required field: audioArtifacts", errors)
+
+    def test_validator_rejects_payload_with_empty_audio_artifacts(self) -> None:
+        validator = load_module("validate_mobile_news_data", "scripts/validate_mobile_news_data.py")
+        payload = self.valid_payload()
+        payload["audioArtifacts"] = []
+
+        errors = validator.validate_payload(payload)
+
+        self.assertIn("audioArtifacts must contain at least one item", errors)
 
     def report_markdown(self) -> str:
         sections = "\n\n".join(
@@ -88,6 +148,53 @@ Fakty:
 Analiza: Analiza drugiego artykulu w sekcji {title}.
 Dlaczego to ważne: Znaczenie drugiego artykulu w sekcji {title}.
 """
+
+    def valid_payload(self) -> dict:
+        sections = []
+        for title in ["Ogólne", "Polska", "Polityka", "Sprawy zagraniczne", "Technologia"]:
+            sections.append(
+                {
+                    "id": title.lower().replace(" ", "-"),
+                    "title": title,
+                    "summary": f"Podsumowanie {title}",
+                    "articles": [
+                        self.article(title, 1),
+                        self.article(title, 2),
+                    ],
+                }
+            )
+        return {
+            "schemaVersion": 1,
+            "topic": "aktualne-wydarzenia-mobile",
+            "runDate": "2026-07-08",
+            "runTime": "19:35",
+            "status": "Material update",
+            "headline": "Wydanie dnia",
+            "leadParagraphs": ["Najważniejsze wydarzenia dnia."],
+            "checkedSources": [{"title": "RCB", "url": "https://example.com/rcb"}],
+            "sections": sections,
+            "audioArtifacts": [
+                {
+                    "variant": "female-piper",
+                    "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-08-1935/audio/female-piper/podcast.mp3",
+                }
+            ],
+        }
+
+    def article(self, section: str, index: int) -> dict:
+        return {
+            "id": f"{section}-{index}",
+            "section": section,
+            "title": f"{section} artykuł {index}",
+            "lead": f"Lead {index}",
+            "facts": [f"Fakt {index}"],
+            "analysis": f"Analiza {index}",
+            "whyItMatters": f"Znaczenie {index}",
+            "sources": [{"title": "RCB", "url": "https://example.com/rcb"}],
+            "tags": [section],
+            "ttsText": f"Tekst TTS {index}",
+            "priority": "High",
+        }
 
 
 if __name__ == "__main__":

@@ -486,10 +486,6 @@
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 2630;
 				TargetAttributes = {
-					1A1182BCAB775DFBFA8726CC = {
-						DevelopmentTeam = SP774TZZU8;
-						ProvisioningStyle = Manual;
-					};
 					52EF15468EB4217C12C91A42 = {
 						DevelopmentTeam = SP774TZZU8;
 						ProvisioningStyle = Automatic;
@@ -720,15 +716,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLOUDKIT_ENVIRONMENT = Production;
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 260708.225332;
+				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.paweltanski.pavbotviewer;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -914,15 +912,17 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLOUDKIT_ENVIRONMENT = Production;
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Distribution";
-				CODE_SIGN_STYLE = Manual;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 260708.225332;
+				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.paweltanski.pavbotviewer;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -20,6 +20,7 @@ REQUIRED_FIELDS = {
     "leadParagraphs",
     "sections",
     "checkedSources",
+    "audioArtifacts",
 }
 REQUIRED_SECTION_FIELDS = {"id", "title", "summary", "articles"}
 REQUIRED_ARTICLE_FIELDS = {
@@ -138,10 +139,11 @@ def validate_articles(value: Any, errors: list[str], section_prefix: str, expect
 
 
 def validate_audio_artifacts(value: Any, errors: list[str]) -> None:
-    if value is None:
-        return
     if not isinstance(value, list):
         errors.append("audioArtifacts must be a list")
+        return
+    if not value:
+        errors.append("audioArtifacts must contain at least one item")
         return
     for index, artifact in enumerate(value):
         prefix = f"audioArtifacts[{index}]"
@@ -149,8 +151,10 @@ def validate_audio_artifacts(value: Any, errors: list[str]) -> None:
             errors.append(f"{prefix} must be an object")
             continue
         for field in ("variant", "path"):
-            if field in artifact and not non_empty_string(artifact[field]):
+            if not non_empty_string(artifact.get(field)):
                 errors.append(f"{prefix}.{field} must be a non-empty string")
+        if "path" in artifact and non_empty_string(artifact["path"]) and not artifact["path"].endswith(".mp3"):
+            errors.append(f"{prefix}.path must point to an mp3 file")
 
 
 def validate_sources(value: Any, errors: list[str], field_name: str) -> None:
