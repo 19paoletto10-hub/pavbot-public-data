@@ -361,9 +361,12 @@ struct ResearchView: View {
         manifest: PavbotManifest? = nil,
         force: Bool = false
     ) {
-        guard router.selectedReportArtifactIDs.isEmpty else { return }
         let activeManifest = manifest ?? store.manifest
         let activeTopic = topic ?? router.selectedResearchTopic
+        if !router.selectedReportArtifactIDs.isEmpty {
+            guard force && activeTopic == .aktualne else { return }
+            router.selectedReportArtifactIDs = []
+        }
         let packages = nativeContentPackages(
             from: activeManifest?.reportPackages(for: activeTopic) ?? [],
             topic: activeTopic

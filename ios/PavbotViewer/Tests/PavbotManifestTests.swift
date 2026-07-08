@@ -1287,7 +1287,6 @@ final class PavbotManifestTests: XCTestCase {
         let defaults = UserDefaults(suiteName: UUID().uuidString)!
         let cache = MobileNewsCache(defaults: defaults)
         let cachedMagazine = try JSONDecoder.pavbot.decode(MobileNewsMagazine.self, from: Self.mobileNewsDataFixtureData)
-        cache.save(cachedMagazine)
         let dataArtifact = Self.artifact(
             id: "mobile-data",
             type: .mobileNewsData,
@@ -1297,6 +1296,7 @@ final class PavbotManifestTests: XCTestCase {
             time: "10:15"
         )
         let package = TopicReportPackage(topic: .aktualne, key: "2026-06-25-1015", artifacts: [dataArtifact])
+        cache.save(cachedMagazine, package: package)
         let store = MobileNewsStore(
             client: MobileNewsClient(fetchData: { _ in throw URLError(.notConnectedToInternet) }),
             cache: cache
@@ -1315,6 +1315,47 @@ final class PavbotManifestTests: XCTestCase {
             store.cacheNotice,
             "Nie pobrano świeżych danych. Pokazuję zapisane dane: magazyn Aktualne."
         )
+    }
+
+    @MainActor
+    func testMobileNewsStoreDoesNotShowCachedMagazineForDifferentPackageWhenRefreshFails() async throws {
+        let defaults = UserDefaults(suiteName: UUID().uuidString)!
+        let cache = MobileNewsCache(defaults: defaults)
+        let cachedMagazine = try JSONDecoder.pavbot.decode(MobileNewsMagazine.self, from: Self.mobileNewsDataFixtureData)
+        let olderArtifact = Self.artifact(
+            id: "mobile-data-old",
+            type: .mobileNewsData,
+            topic: "aktualne-wydarzenia-mobile",
+            path: "research/aktualne-wydarzenia-mobile/data/2026-06-25-1015-mobile-news.json",
+            date: "2026-06-25",
+            time: "10:15"
+        )
+        let olderPackage = TopicReportPackage(topic: .aktualne, key: "2026-06-25-1015", artifacts: [olderArtifact])
+        cache.save(cachedMagazine, package: olderPackage)
+
+        let latestArtifact = Self.artifact(
+            id: "mobile-data-latest",
+            type: .mobileNewsData,
+            topic: "aktualne-wydarzenia-mobile",
+            path: "research/aktualne-wydarzenia-mobile/data/2026-06-25-1935-mobile-news.json",
+            date: "2026-06-25",
+            time: "19:35"
+        )
+        let latestPackage = TopicReportPackage(topic: .aktualne, key: "2026-06-25-1935", artifacts: [latestArtifact])
+        let store = MobileNewsStore(
+            client: MobileNewsClient(fetchData: { _ in throw URLError(.notConnectedToInternet) }),
+            cache: cache
+        )
+
+        await store.load(
+            packages: [latestPackage],
+            manifestURLString: "https://raw.githubusercontent.com/example/pavbot/main/public/pavbot-manifest.json",
+            selectedDay: nil,
+            selectedArtifactIDs: []
+        )
+
+        XCTAssertNil(store.magazine)
+        XCTAssertNotEqual(store.state, .loaded)
     }
 
     @MainActor
@@ -5519,7 +5560,9 @@ final class PavbotManifestTests: XCTestCase {
 
         XCTAssertTrue(researchViewSource.contains("syncSelectedReportDayToLatestIfNeeded()"))
         XCTAssertTrue(researchViewSource.contains("syncSelectedReportDayToLatestIfNeeded(manifest: manifest, force: true)"))
-        XCTAssertTrue(helperSource.contains("guard router.selectedReportArtifactIDs.isEmpty else { return }"))
+        XCTAssertTrue(helperSource.contains("if !router.selectedReportArtifactIDs.isEmpty"))
+        XCTAssertTrue(helperSource.contains("guard force && activeTopic == .aktualne else { return }"))
+        XCTAssertTrue(helperSource.contains("router.selectedReportArtifactIDs = []"))
         XCTAssertTrue(helperSource.contains("guard force || !hasSelectedReportDay(in: packages) else { return }"))
         XCTAssertTrue(helperSource.contains("latestReportKey(in: packages)"))
         XCTAssertTrue(helperSource.contains("router.selectedReportDay = latestReportKey"))

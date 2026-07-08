@@ -63,8 +63,9 @@ final class MobileNewsStore {
         selectedArtifactIDs: [String]
     ) async {
         let candidates = selectPackages(from: packages, selectedDay: selectedDay, selectedArtifactIDs: selectedArtifactIDs)
+        keepOnlyMagazineMatching(candidates: candidates)
         guard !candidates.isEmpty else {
-            loadCachedMagazine()
+            loadCachedMagazine(matching: [])
             if magazine == nil {
                 state = .failed(
                     .custom(
@@ -99,7 +100,7 @@ final class MobileNewsStore {
                 let magazine = decoded.withPackage(package)
                 self.magazine = magazine
                 selectedPackage = package
-                cache.save(magazine)
+                cache.save(magazine, package: package)
                 cacheNotice = nil
                 state = .loaded
                 return
@@ -109,7 +110,7 @@ final class MobileNewsStore {
             }
         }
 
-        loadCachedMagazine()
+        loadCachedMagazine(matching: candidates)
         if magazine != nil {
             cacheNotice = PavbotCacheNoticeCopy.refreshFailed(context: "magazyn Aktualne")
             state = .loaded
@@ -128,8 +129,15 @@ final class MobileNewsStore {
         }
     }
 
-    private func loadCachedMagazine() {
-        if let cached = cache.load() {
+    private func keepOnlyMagazineMatching(candidates: [TopicReportPackage]) {
+        guard let currentPackageID = magazine?.package?.id else { return }
+        if !candidates.contains(where: { $0.id == currentPackageID }) {
+            magazine = nil
+        }
+    }
+
+    private func loadCachedMagazine(matching candidates: [TopicReportPackage]) {
+        if let cached = cache.load(matching: candidates) {
             magazine = cached
             state = .loaded
         }
@@ -168,20 +176,47 @@ final class MobileNewsStore {
 
 struct MobileNewsCache {
     private let defaults: UserDefaults
-    private let key = "pavbot.cachedMobileNewsMagazine"
+    private let key = "pavbot.cachedMobileNewsMagazine.v2"
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
     }
 
-    func load() -> MobileNewsMagazine? {
+    func load(matching candidates: [TopicReportPackage]) -> MobileNewsMagazine? {
         guard let data = defaults.data(forKey: key) else { return nil }
-        return try? JSONDecoder.pavbot.decode(MobileNewsMagazine.self, from: data)
+        guard let cached = try? JSONDecoder.pavbot.decode(CachedMobileNewsMagazine.self, from: data) else {
+            return nil
+        }
+        guard let package = candidates.first(where: { cached.matches(package: $0) }) else {
+            return nil
+        }
+        return cached.magazine.withPackage(package)
     }
 
-    func save(_ magazine: MobileNewsMagazine) {
-        guard let data = try? JSONEncoder().encode(magazine) else { return }
+    func save(_ magazine: MobileNewsMagazine, package: TopicReportPackage) {
+        let cached = CachedMobileNewsMagazine(
+            magazine: magazine,
+            packageID: package.id,
+            mobileNewsDataPath: package.mobileNewsDataArtifact?.path,
+            runDate: magazine.runDate,
+            runTime: magazine.runTime
+        )
+        guard let data = try? JSONEncoder().encode(cached) else { return }
         defaults.set(data, forKey: key)
+    }
+}
+
+private struct CachedMobileNewsMagazine: Codable {
+    let magazine: MobileNewsMagazine
+    let packageID: String
+    let mobileNewsDataPath: String?
+    let runDate: String
+    let runTime: String?
+
+    func matches(package: TopicReportPackage) -> Bool {
+        package.id == packageID
+            || package.mobileNewsDataArtifact?.path == mobileNewsDataPath
+            || (package.date == runDate && package.time == runTime)
     }
 }
 
