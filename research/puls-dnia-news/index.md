@@ -53,6 +53,14 @@ weather pressure on the north. Internationally, Iran stays central, while
 NATO/Ukraina, Le Pen and Grenlandia remain live political pressure points; the
 tech slot is still anchored by Microsoft and the broader AI policy cycle.
 
+The 2026-07-09 15:02 slot shifts the domestic feed toward the health-reform
+split, doctor reactions, the Poznań anti-Ukrainian case and the Lubartów
+hospital-oversight dispute, while IMGW keeps the alert layer on wind and
+bursts. Abroad, Iran remains the top-risk item, but Ukraine Patriots and the
+new UK-led deep precision strike initiative put NATO security back in focus;
+technology now leans more clearly into AI regulation and Samsung's profit
+signal.
+
 ## Data Shape
 
 The native iOS feed expects:
