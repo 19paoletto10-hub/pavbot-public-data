@@ -4147,7 +4147,8 @@ final class PavbotManifestTests: XCTestCase {
 
     @MainActor
     func testAutomationTranslationStoreCachesTranslatedDynamicText() async throws {
-        let store = AutomationTranslationStore()
+        let defaults = UserDefaults(suiteName: "AutomationTranslationCache-\(UUID().uuidString)")!
+        let store = AutomationTranslationStore(defaults: defaults)
         var translationCalls = 0
 
         let first = await store.localizedText("Nowy artykuł automatyzacji", language: .english) { source, target in
@@ -4169,6 +4170,610 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(second, "New automation article")
         XCTAssertEqual(polish, "Nowy artykuł automatyzacji")
         XCTAssertEqual(translationCalls, 1)
+    }
+
+    @MainActor
+    func testAutomationTranslationStoreFailedRequestCanBeRetriedWithoutCachingFallback() throws {
+        let defaults = UserDefaults(suiteName: "AutomationTranslationRetry-\(UUID().uuidString)")!
+        let store = AutomationTranslationStore(defaults: defaults)
+
+        store.requestTranslation(for: "Treść do ponowienia", language: .english)
+        let firstRequest = try XCTUnwrap(store.nextPendingRequest())
+        XCTAssertEqual(store.translationState(for: firstRequest.key), .preparing)
+
+        store.fail(firstRequest, reason: "network")
+        XCTAssertEqual(store.translationState(for: firstRequest.key), .failed)
+        XCTAssertEqual(store.displayText("Treść do ponowienia", language: .english), "Treść do ponowienia")
+
+        store.requestTranslation(for: "Treść do ponowienia", language: .english)
+        let retryRequest = try XCTUnwrap(store.nextPendingRequest())
+        XCTAssertEqual(retryRequest.key, firstRequest.key)
+        XCTAssertEqual(store.translationState(for: retryRequest.key), .preparing)
+    }
+
+    @MainActor
+    func testAutomationTranslationStoreEmptyTranslationDoesNotCacheFallback() throws {
+        let defaults = UserDefaults(suiteName: "AutomationTranslationEmpty-\(UUID().uuidString)")!
+        let store = AutomationTranslationStore(defaults: defaults)
+
+        store.requestTranslation(for: "Nie zapisuj fallbacku", language: .english)
+        let request = try XCTUnwrap(store.nextPendingRequest())
+        store.finish(request, translatedText: "   ")
+
+        XCTAssertEqual(store.translationState(for: request.key), .failed)
+        XCTAssertEqual(store.displayText("Nie zapisuj fallbacku", language: .english), "Nie zapisuj fallbacku")
+
+        let reloadedStore = AutomationTranslationStore(defaults: defaults)
+        XCTAssertEqual(reloadedStore.translationState(for: request.key), nil)
+        XCTAssertEqual(reloadedStore.displayText("Nie zapisuj fallbacku", language: .english), "Nie zapisuj fallbacku")
+    }
+
+    @MainActor
+    func testAutomationTranslationStorePersistsSuccessfulTranslationsOnly() throws {
+        let defaults = UserDefaults(suiteName: "AutomationTranslationPersistence-\(UUID().uuidString)")!
+        let firstStore = AutomationTranslationStore(defaults: defaults)
+
+        firstStore.requestTranslation(for: "Nowa treść do cache", language: .english)
+        let request = try XCTUnwrap(firstStore.nextPendingRequest())
+        firstStore.finish(request, translatedText: "New cached content")
+
+        let reloadedStore = AutomationTranslationStore(defaults: defaults)
+        XCTAssertEqual(reloadedStore.displayText("Nowa treść do cache", language: .english), "New cached content")
+        XCTAssertEqual(reloadedStore.translationState(for: request.key), .translated)
+    }
+
+    @MainActor
+    func testAutomationTranslationStoreNormalizesLegacyPendingBundleStates() throws {
+        let defaults = UserDefaults(suiteName: "AutomationTranslationLegacyBundle-\(UUID().uuidString)")!
+        let directory = FileManager.default.temporaryDirectory
+            .appendingPathComponent("AutomationTranslationLegacyBundle-\(UUID().uuidString)", isDirectory: true)
+        defer { try? FileManager.default.removeItem(at: directory) }
+
+        let document = AutomationTranslationDocument(
+            contentKind: "unit",
+            contentID: "legacy",
+            fields: [
+                AutomationTranslationField(path: "presentation.title", sourceText: "Tytuł"),
+                AutomationTranslationField(path: "presentation.standfirst", sourceText: "Lead"),
+                AutomationTranslationField(path: "presentation.body", sourceText: "Treść")
+            ]
+        )
+        var legacyBundle = AutomationTranslationBundle(document: document, targetLanguage: .english)
+        legacyBundle.translations["presentation.title"] = "Title"
+        legacyBundle.fieldStates = [
+            "presentation.title": .translated,
+            "presentation.standfirst": .queued,
+            "presentation.body": .preparing
+        ]
+
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        let legacyURL = directory.appendingPathComponent("\(AutomationTranslationHasher.sha256(legacyBundle.id)).json")
+        try JSONEncoder().encode(legacyBundle).write(to: legacyURL)
+
+        let store = AutomationTranslationStore(defaults: defaults, translationsDirectory: directory)
+        XCTAssertEqual(
+            store.displayText("Tytuł", document: document, path: "presentation.title", language: .english),
+            "Title"
+        )
+        let normalized = store.bundle(for: document, language: .english)
+        XCTAssertEqual(normalized.fieldStates["presentation.title"], .translated)
+        XCTAssertNil(normalized.fieldStates["presentation.standfirst"])
+        XCTAssertNil(normalized.fieldStates["presentation.body"])
+
+        store.requestTranslation(for: "Lead", document: document, path: "presentation.standfirst", language: .english)
+        let retryRequest = try XCTUnwrap(store.nextPendingRequest())
+        XCTAssertEqual(retryRequest.fieldPath, "presentation.standfirst")
+    }
+
+    @MainActor
+    func testTranslatedContentBundleLoadsWithoutRequeueingRequests() throws {
+        let defaults = UserDefaults(suiteName: "AutomationTranslationTranslatedBundle-\(UUID().uuidString)")!
+        let directory = FileManager.default.temporaryDirectory
+            .appendingPathComponent("AutomationTranslationTranslatedBundle-\(UUID().uuidString)", isDirectory: true)
+        defer { try? FileManager.default.removeItem(at: directory) }
+
+        let document = AutomationTranslationDocument(
+            contentKind: "mobileNews",
+            contentID: "aktualne",
+            fields: [
+                AutomationTranslationField(path: "headline", sourceText: "Nagłówek"),
+                AutomationTranslationField(path: "sections.main.articles.a.title", sourceText: "Tytuł newsa")
+            ]
+        )
+        var bundle = AutomationTranslationBundle(document: document, targetLanguage: .english)
+        bundle.translations = [
+            "headline": "Headline",
+            "sections.main.articles.a.title": "News title"
+        ]
+        bundle.fieldStates = [
+            "headline": .translated,
+            "sections.main.articles.a.title": .translated
+        ]
+
+        try FileManager.default.createDirectory(at: directory, withIntermediateDirectories: true)
+        let url = directory.appendingPathComponent("\(AutomationTranslationHasher.sha256(bundle.id)).json")
+        try JSONEncoder().encode(bundle).write(to: url)
+
+        let store = AutomationTranslationStore(defaults: defaults, translationsDirectory: directory)
+        store.register(document, language: .english)
+
+        XCTAssertNil(store.nextPendingRequest())
+        XCTAssertEqual(store.displayText("Nagłówek", document: document, path: "headline", language: .english), "Headline")
+        XCTAssertEqual(
+            store.displayText("Tytuł newsa", document: document, path: "sections.main.articles.a.title", language: .english),
+            "News title"
+        )
+    }
+
+    @MainActor
+    func testAutomationTranslationQueueProvidesVisibleFieldsInBatches() throws {
+        let defaults = UserDefaults(suiteName: "AutomationTranslationBatch-\(UUID().uuidString)")!
+        let store = AutomationTranslationStore(defaults: defaults)
+        let document = AutomationTranslationDocument(
+            contentKind: "researchIssue",
+            contentID: "polska-swiat",
+            fields: [
+                AutomationTranslationField(path: "articles.a.body", sourceText: String(repeating: "Długi tekst. ", count: 80)),
+                AutomationTranslationField(path: "articles.a.presentation.title", sourceText: "Tytuł A"),
+                AutomationTranslationField(path: "articles.a.presentation.standfirst", sourceText: "Lead A"),
+                AutomationTranslationField(path: "articles.b.presentation.title", sourceText: "Tytuł B")
+            ]
+        )
+
+        store.register(document, language: .english)
+        let batch = store.nextPendingBatch(maxCount: 12, maxCharacters: 3500)
+
+        XCTAssertEqual(batch.map(\.fieldPath), [
+            "articles.a.presentation.title",
+            "articles.b.presentation.title",
+            "articles.a.presentation.standfirst"
+        ])
+        XCTAssertTrue(batch.allSatisfy { $0.sourceText.count <= 420 })
+    }
+
+    @MainActor
+    func testAutomationTranslationRegisterCanLimitEagerQueueToVisiblePaths() throws {
+        let defaults = UserDefaults(suiteName: "AutomationTranslationVisibleOnly-\(UUID().uuidString)")!
+        let store = AutomationTranslationStore(defaults: defaults)
+        let document = AutomationTranslationDocument(
+            contentKind: "researchIssue",
+            contentID: "visible-first",
+            fields: [
+                AutomationTranslationField(path: "presentation.title", sourceText: "Nagłówek"),
+                AutomationTranslationField(path: "presentation.lead", sourceText: "Lead"),
+                AutomationTranslationField(path: "articles.a.presentation.title", sourceText: "Tytuł A"),
+                AutomationTranslationField(path: "articles.a.body", sourceText: "Treść A"),
+                AutomationTranslationField(path: "articles.b.presentation.title", sourceText: "Tytuł B")
+            ]
+        )
+
+        store.register(
+            document,
+            language: .russian,
+            eagerPaths: [
+                "presentation.title",
+                "articles.a.presentation.title"
+            ]
+        )
+        let batch = store.nextPendingBatch(maxCount: 12, maxCharacters: 3500)
+
+        XCTAssertEqual(Set(batch.compactMap(\.fieldPath)), [
+            "presentation.title",
+            "articles.a.presentation.title"
+        ])
+        XCTAssertTrue(batch.allSatisfy { $0.targetLanguageCode == "ru" })
+    }
+
+    @MainActor
+    func testTransientTranslationFailureRetriesAfterBackoffWithoutPersistingFallback() async throws {
+        let defaults = UserDefaults(suiteName: "AutomationTranslationTransientRetry-\(UUID().uuidString)")!
+        let directory = FileManager.default.temporaryDirectory
+            .appendingPathComponent("AutomationTranslationTransientRetry-\(UUID().uuidString)", isDirectory: true)
+        defer { try? FileManager.default.removeItem(at: directory) }
+        let store = AutomationTranslationStore(defaults: defaults, translationsDirectory: directory)
+        let document = AutomationTranslationDocument(
+            contentKind: "researchIssue",
+            contentID: "transient",
+            fields: [
+                AutomationTranslationField(path: "presentation.title", sourceText: "Tytuł")
+            ]
+        )
+
+        store.register(document, language: .english, eagerPaths: ["presentation.title"])
+        let request = try XCTUnwrap(store.nextPendingRequest())
+        store.retryAfterTransientFailure([request], reason: "TranslationErrorDomain Code=14", delay: .milliseconds(5))
+        XCTAssertEqual(store.displayText("Tytuł", document: document, path: "presentation.title", language: .english), "Tytuł")
+
+        try await Task.sleep(for: .milliseconds(25))
+        let retryRequest = try XCTUnwrap(store.nextPendingRequest())
+        XCTAssertEqual(retryRequest.fieldPath, "presentation.title")
+        XCTAssertEqual(retryRequest.key, request.key)
+
+        let bundle = store.bundle(for: document, language: .english)
+        XCTAssertNil(bundle.translations["presentation.title"])
+        XCTAssertNil(bundle.fieldStates["presentation.title"])
+    }
+
+    @MainActor
+    func testAutomationTranslationStoreQueuesRussianTargetForAutomationContent() throws {
+        let defaults = UserDefaults(suiteName: "AutomationTranslationRussian-\(UUID().uuidString)")!
+        let store = AutomationTranslationStore(defaults: defaults)
+        let document = AutomationTranslationDocument(
+            contentKind: "pulseDay",
+            contentID: "ru-target",
+            fields: [
+                AutomationTranslationField(path: "headline", sourceText: "Wieczorny puls dnia"),
+                AutomationTranslationField(path: "topics.topic-1.title", sourceText: "Tytuł tematu")
+            ]
+        )
+
+        store.register(document, language: .russian)
+        let batch = store.nextPendingBatch(maxCount: 12, maxCharacters: 3500)
+
+        XCTAssertFalse(batch.isEmpty)
+        XCTAssertTrue(batch.allSatisfy { $0.targetLanguageCode == "ru" })
+        XCTAssertTrue(batch.allSatisfy { $0.sourceLanguageCode == "pl" })
+    }
+
+    @MainActor
+    func testExternalRedditCommentTranslationDoesNotExposeSourceFallbackAsTranslatedText() throws {
+        let defaults = UserDefaults(suiteName: "ExternalRedditTranslation-\(UUID().uuidString)")!
+        let store = AutomationTranslationStore(defaults: defaults)
+        let originalComment = "This is the original Reddit comment."
+
+        store.requestExternalTranslation(for: originalComment, language: .polish)
+        let queuedResolution = store.externalResolution(for: originalComment, language: .polish)
+        XCTAssertEqual(queuedResolution.text, originalComment)
+        XCTAssertEqual(queuedResolution.state, .queued)
+        XCTAssertTrue(queuedResolution.usedSourceFallback)
+
+        let request = try XCTUnwrap(store.nextPendingRequest())
+        XCTAssertEqual(request.sourceLanguageCode, "en")
+        XCTAssertEqual(request.targetLanguageCode, "pl")
+        XCTAssertEqual(request.key.sourceLanguage, "en")
+
+        store.finish(request, translatedText: "To jest oryginalny komentarz z Reddita.")
+        let translatedResolution = store.externalResolution(for: originalComment, language: .polish)
+        XCTAssertEqual(translatedResolution.text, "To jest oryginalny komentarz z Reddita.")
+        XCTAssertEqual(translatedResolution.state, .translated)
+        XCTAssertFalse(translatedResolution.usedSourceFallback)
+    }
+
+    @MainActor
+    func testRedditOriginalCommentDocumentQueuesEnglishToPolishTranslation() throws {
+        let defaults = UserDefaults(suiteName: "RedditDocumentPolishTranslation-\(UUID().uuidString)")!
+        let store = AutomationTranslationStore(defaults: defaults)
+        let digest = TodayHumorDigest(
+            id: "reddit-polish-test",
+            title: "<RR> Reddit Radar",
+            summary: "Polskie podsumowanie radarowe",
+            generatedAt: "2026-07-09T21:35:00Z",
+            displayTime: "2026-07-09 23:35",
+            nextRefreshAt: nil,
+            refreshIntervalHours: 6,
+            items: [
+                TodayHumorItem(
+                    id: "post-1",
+                    title: "Polski tytuł",
+                    caption: "Polski opis",
+                    sourceName: "r/test",
+                    sourceURL: "https://www.reddit.com/r/test/comments/post_1",
+                    imageURL: nil,
+                    score: 44,
+                    comments: 8,
+                    tags: [],
+                    categoryLabel: "Komentarze",
+                    postText: "Polski tekst posta",
+                    whyFunny: "Polskie wyjaśnienie",
+                    commentHighlights: [
+                        TodayHumorCommentHighlight(
+                            id: "comment-1",
+                            summary: "Polskie streszczenie komentarza",
+                            originalBody: "This is the original Reddit comment.",
+                            explanation: "Polskie wyjaśnienie komentarza",
+                            score: 12
+                        )
+                    ]
+                )
+            ],
+            source: "unit"
+        )
+
+        store.register(digest.automationTranslationDocument, language: .polish)
+        let request = try XCTUnwrap(store.nextPendingRequest())
+        XCTAssertEqual(request.sourceLanguageCode, "en")
+        XCTAssertEqual(request.targetLanguageCode, "pl")
+        XCTAssertEqual(request.fieldPath, "items.post-1.comments.comment-1.originalBody")
+    }
+
+    @MainActor
+    func testAutomationTranslationStoreWritesAndReadsContentBundleFiles() throws {
+        let defaults = UserDefaults(suiteName: "AutomationTranslationBundle-\(UUID().uuidString)")!
+        let directory = FileManager.default.temporaryDirectory
+            .appendingPathComponent("AutomationTranslationBundle-\(UUID().uuidString)", isDirectory: true)
+        defer { try? FileManager.default.removeItem(at: directory) }
+
+        let document = AutomationTranslationDocument(
+            contentKind: "unit",
+            contentID: "daily-pulse",
+            fields: [
+                AutomationTranslationField(path: "article.title", sourceText: "Tytuł artykułu"),
+                AutomationTranslationField(path: "article.ttsText", sourceText: "Tekst do czytania")
+            ]
+        )
+        let store = AutomationTranslationStore(defaults: defaults, translationsDirectory: directory)
+
+        store.register(document, language: .english)
+        let firstRequest = try XCTUnwrap(store.nextPendingRequest())
+        XCTAssertEqual(firstRequest.documentID, document.id)
+        XCTAssertEqual(firstRequest.fieldPath, "article.title")
+        store.finish(firstRequest, translatedText: "Article title")
+
+        let bundleFiles = try FileManager.default.contentsOfDirectory(at: directory, includingPropertiesForKeys: nil)
+        XCTAssertEqual(bundleFiles.count, 1)
+        let bundle = try JSONDecoder.pavbot.decode(AutomationTranslationBundle.self, from: Data(contentsOf: bundleFiles[0]))
+        XCTAssertEqual(bundle.contentKind, "unit")
+        XCTAssertEqual(bundle.targetLanguage, "en")
+        XCTAssertEqual(bundle.translations["article.title"], "Article title")
+        XCTAssertEqual(bundle.fieldStates["article.title"], .translated)
+
+        let reloadedStore = AutomationTranslationStore(defaults: defaults, translationsDirectory: directory)
+        XCTAssertEqual(
+            reloadedStore.displayText("Tytuł artykułu", document: document, path: "article.title", language: .english),
+            "Article title"
+        )
+    }
+
+    @MainActor
+    func testAutomationTranslationBundleFailureDoesNotPersistPolishFallbackAndCanRetry() throws {
+        let defaults = UserDefaults(suiteName: "AutomationTranslationBundleRetry-\(UUID().uuidString)")!
+        let directory = FileManager.default.temporaryDirectory
+            .appendingPathComponent("AutomationTranslationBundleRetry-\(UUID().uuidString)", isDirectory: true)
+        defer { try? FileManager.default.removeItem(at: directory) }
+
+        let document = AutomationTranslationDocument(
+            contentKind: "unit",
+            contentID: "retry",
+            fields: [
+                AutomationTranslationField(path: "topic.lead", sourceText: "Polski lead")
+            ]
+        )
+        let store = AutomationTranslationStore(defaults: defaults, translationsDirectory: directory)
+
+        store.requestTranslation(for: "Polski lead", document: document, path: "topic.lead", language: .english)
+        let failedRequest = try XCTUnwrap(store.nextPendingRequest())
+        store.fail(failedRequest, reason: "native translation unavailable")
+
+        let bundleFiles = try FileManager.default.contentsOfDirectory(at: directory, includingPropertiesForKeys: nil)
+        let bundle = try JSONDecoder.pavbot.decode(AutomationTranslationBundle.self, from: Data(contentsOf: bundleFiles[0]))
+        XCTAssertNil(bundle.translations["topic.lead"])
+        XCTAssertEqual(bundle.fieldStates["topic.lead"], .failed)
+        XCTAssertEqual(store.displayText("Polski lead", document: document, path: "topic.lead", language: .english), "Polski lead")
+
+        store.requestTranslation(for: "Polski lead", document: document, path: "topic.lead", language: .english)
+        let retryRequest = try XCTUnwrap(store.nextPendingRequest())
+        XCTAssertEqual(retryRequest.key, failedRequest.key)
+        XCTAssertEqual(store.translationState(for: retryRequest.key), .preparing)
+    }
+
+    @MainActor
+    func testRequiredLocalizedTextReturnsTranslatedResultAndIOS17StyleFallback() async throws {
+        let defaults = UserDefaults(suiteName: "AutomationTranslationRequired-\(UUID().uuidString)")!
+        let store = AutomationTranslationStore(defaults: defaults)
+        let document = AutomationTranslationDocument(
+            contentKind: "unit",
+            contentID: "tts",
+            fields: [
+                AutomationTranslationField(path: "speechText", sourceText: "Tekst do odczytu")
+            ]
+        )
+
+        let translated = await store.requiredLocalizedText(
+            "Tekst do odczytu",
+            language: .english,
+            document: document,
+            path: "speechText"
+        ) { source, target in
+            XCTAssertEqual(source, "Tekst do odczytu")
+            XCTAssertEqual(target, "en")
+            return "Text to read"
+        }
+        let polish = await store.requiredLocalizedText(
+            "Tekst do odczytu",
+            language: .polish,
+            document: document,
+            path: "speechText"
+        )
+
+        XCTAssertEqual(translated.text, "Text to read")
+        XCTAssertTrue(translated.isTranslated)
+        XCTAssertEqual(polish.text, "Tekst do odczytu")
+        XCTAssertFalse(polish.usedSourceFallback)
+    }
+
+    func testTTSUsesRequiredTranslationBeforePlaybackForTargetLanguages() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Services")
+        let mobileNewsSource = try String(contentsOf: sourcesRoot.appendingPathComponent("MobileNewsService.swift"))
+        let pulseSpeechSource = try String(contentsOf: sourcesRoot.appendingPathComponent("TodayLiveTopicSpeechController.swift"))
+
+        XCTAssertTrue(mobileNewsSource.contains("translationStore.requiredLocalizedText("))
+        XCTAssertTrue(mobileNewsSource.contains("playback.failPlayback(message: Self.translationPendingMessage(language: language))"))
+        XCTAssertFalse(mobileNewsSource.contains("let speechText = await translationStore.localizedText(sourceText, language: language)"))
+        XCTAssertTrue(pulseSpeechSource.contains("translationStore.requiredLocalizedText("))
+        XCTAssertTrue(pulseSpeechSource.contains("playback.failPlayback(message: Self.translationPendingMessage(language: language))"))
+        XCTAssertFalse(pulseSpeechSource.contains("let speechText = await translationStore.localizedText(sourceText, language: language)"))
+    }
+
+    func testNativeAutomationTranslationHostPreparesAvailabilityBeforeTranslate() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/PavbotDesign.swift")
+        let source = try String(contentsOf: sourceURL)
+
+        XCTAssertTrue(source.contains("LanguageAvailability()"))
+        XCTAssertTrue(source.contains("availability.status("))
+        XCTAssertTrue(source.contains("try await session.prepareTranslation()"))
+        XCTAssertTrue(source.contains("translationStore.markPreparing(request)"))
+        XCTAssertTrue(source.contains("translationStore.unsupported(request"))
+        XCTAssertTrue(source.contains("Logger(subsystem: \"PavbotViewer\", category: \"AutomationTranslation\")"))
+    }
+
+    func testAutomationTranslationDisplayDoesNotUseGlobalRevisionInvalidation() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Services/SpeechPlaybackService.swift")
+        let source = try String(contentsOf: sourceURL)
+        let displayTextSource = try XCTUnwrap(
+            source.components(separatedBy: "func displayText").dropFirst().first?
+                .components(separatedBy: "func displayExternalText").first
+        )
+        let displayExternalTextSource = try XCTUnwrap(
+            source.components(separatedBy: "func displayExternalText").dropFirst().first?
+                .components(separatedBy: "func requestTranslation").first
+        )
+
+        XCTAssertFalse(displayTextSource.contains("_ = pendingRevision"))
+        XCTAssertFalse(displayExternalTextSource.contains("_ = pendingRevision"))
+    }
+
+    func testPavbotTranslatedAutomationTextUsesLocalStateInsteadOfGlobalInvalidation() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/PavbotDesign.swift")
+        let source = try String(contentsOf: sourceURL)
+        let translatedTextSource = try XCTUnwrap(
+            source.components(separatedBy: "struct PavbotTranslatedAutomationText").dropFirst().first?
+                .components(separatedBy: "struct PavbotTranslatedExternalText").first
+        )
+
+        XCTAssertTrue(translatedTextSource.contains("@State private var renderedText"))
+        XCTAssertTrue(translatedTextSource.contains("await translationStore.resolvedText"))
+        XCTAssertFalse(translatedTextSource.contains("Text(displayText)"))
+    }
+
+    func testCoreAutomationTabsMarkDynamicPayloadsForTranslationInAllTargetLanguages() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let todaySource = try String(contentsOf: sourcesRoot.appendingPathComponent("TodayLiveTopicsView.swift"))
+        let pulseSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PulseDayView.swift"))
+        let reviewSource = try String(contentsOf: sourcesRoot.appendingPathComponent("ReportPackageViews.swift"))
+
+        XCTAssertTrue(todaySource.contains("document: snapshot.automationTranslationDocument"))
+        XCTAssertTrue(todaySource.contains("path: \"summary\""))
+        XCTAssertTrue(todaySource.contains("TodayLiveTopicsSnapshot.storyTranslationFieldPaths"))
+        XCTAssertTrue(todaySource.contains("translationStore.register(snapshot.automationTranslationDocument"))
+
+        XCTAssertTrue(pulseSource.contains("document: snapshot.automationTranslationDocument"))
+        XCTAssertTrue(pulseSource.contains("TodayLiveTopicsSnapshot.translationPathPrefix"))
+        XCTAssertTrue(pulseSource.contains("translationStore.register(snapshot.automationTranslationDocument"))
+
+        XCTAssertTrue(reviewSource.contains("mobileNewsTranslationDocument"))
+        XCTAssertTrue(reviewSource.contains("translationDocument: translationDocument"))
+        XCTAssertTrue(reviewSource.contains("translationFieldPaths"))
+        XCTAssertTrue(reviewSource.contains("registerResearchTranslations()"))
+        XCTAssertTrue(reviewSource.contains("eagerPaths: researchVisibleTranslationPaths"))
+
+        XCTAssertTrue(reviewSource.contains("languageStore.preference.rawValue"))
+        XCTAssertFalse(todaySource.contains("if languageStore.preference == .english"))
+        XCTAssertFalse(pulseSource.contains("if languageStore.preference == .english"))
+        XCTAssertFalse(reviewSource.contains("if languageStore.preference == .english"))
+    }
+
+    func testTranslationPersistenceIsDebouncedInsteadOfSavingEveryStateChange() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Services/SpeechPlaybackService.swift")
+        let source = try String(contentsOf: sourceURL)
+        let updateBundleStateSource = try XCTUnwrap(
+            source.components(separatedBy: "private func updateBundleState").dropFirst().first?
+                .components(separatedBy: "private func loadBundle").first
+        )
+
+        XCTAssertTrue(source.contains("scheduleBundleSave"))
+        XCTAssertTrue(source.contains("flushPendingBundleWrites"))
+        XCTAssertFalse(updateBundleStateSource.contains("saveBundle(bundle)"))
+    }
+
+    func testTranslationHostDrainsBatchesWithBackoffForTransientErrors() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/PavbotDesign.swift")
+        let source = try String(contentsOf: sourceURL)
+        let hostSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct PavbotNativeAutomationTranslationHost").dropFirst().first?
+                .components(separatedBy: "struct PavbotAutomationTranslationHost").first
+        )
+
+        XCTAssertTrue(hostSource.contains("continueActiveSessionIfPossible"))
+        XCTAssertTrue(hostSource.contains("retryAfterTransientFailure"))
+        XCTAssertTrue(hostSource.contains("isTransientTranslationError"))
+        XCTAssertTrue(hostSource.contains("maxCharacters: 2_500"))
+        let singleBatchSource = try XCTUnwrap(
+            hostSource.components(separatedBy: "private func translateActiveBatch").dropFirst().first?
+                .components(separatedBy: "private func continueActiveSessionIfPossible").first
+        )
+        XCTAssertFalse(singleBatchSource.contains("completeActiveSession()"))
+    }
+
+    func testSavedResearchArticlesUseAutomationTranslationForDynamicContent() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/SavedResearchArticlesView.swift")
+        let source = try String(contentsOf: sourceURL)
+        let trimmedLines = source
+            .split(separator: "\n")
+            .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+
+        XCTAssertFalse(trimmedLines.contains("Text(saved.article.title)"))
+        XCTAssertFalse(trimmedLines.contains("Text(saved.article.summary)"))
+        XCTAssertFalse(trimmedLines.contains("Text(saved.article.body)"))
+        XCTAssertTrue(source.contains("PavbotTranslatedAutomationText(saved.article.title)"))
+        XCTAssertTrue(source.contains("PavbotTranslatedAutomationText(saved.article.summary)"))
+        XCTAssertTrue(source.contains("PavbotTranslatedAutomationText(saved.article.body)"))
+        XCTAssertTrue(source.contains("StatusBadge(\n                            text: \"\\(saved.topic.title) - \\(saved.article.section.rawValue)\",\n                            systemImage: saved.topic.systemImage,\n                            tint: saved.topic.tint,\n                            translatesAutomationText: true"))
+    }
+
+    func testCoreNewsViewsAvoidRawDynamicArticleText() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let reportSource = try String(contentsOf: sourcesRoot.appendingPathComponent("ReportPackageViews.swift"))
+        let pulseSource = try String(contentsOf: sourcesRoot.appendingPathComponent("TodayLiveTopicsView.swift"))
+        let savedSource = try String(contentsOf: sourcesRoot.appendingPathComponent("SavedResearchArticlesView.swift"))
+
+        for source in [reportSource, pulseSource, savedSource] {
+            let rawTextLines = source
+                .split(separator: "\n")
+                .map { $0.trimmingCharacters(in: .whitespacesAndNewlines) }
+                .filter { $0.hasPrefix("Text(") }
+            XCTAssertFalse(rawTextLines.contains("Text(article.title)"))
+            XCTAssertFalse(rawTextLines.contains("Text(article.lead)"))
+            XCTAssertFalse(rawTextLines.contains("Text(article.summary)"))
+            XCTAssertFalse(rawTextLines.contains("Text(article.body)"))
+            XCTAssertFalse(rawTextLines.contains("Text(topic.title)"))
+            XCTAssertFalse(rawTextLines.contains("Text(topic.lead)"))
+        }
     }
 
     func testSettingsExposeApplicationLanguagePicker() throws {
@@ -4243,9 +4848,12 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(designSource.contains("TranslationSession.Configuration("))
         XCTAssertTrue(pulseSource.contains("PavbotTranslatedAutomationText(topic.title"))
         XCTAssertTrue(pulseSource.contains("PavbotTranslatedAutomationText(topic.lead"))
+        XCTAssertTrue(pulseSource.contains("translationStore.register(snapshot.automationTranslationDocument"))
         XCTAssertTrue(researchSource.contains("PavbotTranslatedAutomationText(article.title"))
         XCTAssertTrue(researchSource.contains("PavbotTranslatedAutomationText(article.lead"))
         XCTAssertTrue(researchSource.contains("PavbotTranslatedAutomationText(text"))
+        XCTAssertTrue(researchSource.contains("translationStore.register(magazine.automationTranslationDocument"))
+        XCTAssertTrue(researchSource.contains("translationStore.register(issue.automationTranslationDocument"))
     }
 
     func testTodayViewUsesNativeTranslationForWeatherWisdomAndRedditContent() throws {
@@ -4268,6 +4876,8 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(todaySource.contains("PavbotTranslatedAutomationText(item.title)"))
         XCTAssertTrue(todaySource.contains("PavbotTranslatedAutomationText(item.caption)"))
         XCTAssertTrue(todaySource.contains("@Environment(AppLanguageStore.self) private var languageStore"))
+        XCTAssertTrue(todaySource.contains("translationStore.register(digest.automationTranslationDocument"))
+        XCTAssertTrue(todaySource.contains("translationStore.register(saved.automationTranslationDocument"))
     }
 
     func testTodayAndReviewStaticUiCopyUsesLocalizedKeysAfterLanguageSwitch() throws {
@@ -5628,6 +6238,12 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(cardSource.contains("originalBody"))
         XCTAssertTrue(cardSource.contains("Oryginalny komentarz"))
         XCTAssertTrue(cardSource.contains("Tłumaczenie komentarza"))
+        XCTAssertLessThan(
+            try XCTUnwrap(cardSource.range(of: "Text(\"\\\"\\(originalBody)\\\"\")")?.lowerBound),
+            try XCTUnwrap(cardSource.range(of: "PavbotTranslatedExternalText(originalBody)")?.lowerBound)
+        )
+        XCTAssertTrue(cardSource.contains("PavbotTranslatedExternalText(originalBody)"))
+        XCTAssertFalse(cardSource.contains("PavbotTranslatedExternalText(\"\\\"\\(originalBody)\\\"\")"))
         XCTAssertTrue(cardSource.contains("PavbotTranslatedExternalText(originalBody)"))
         XCTAssertTrue(source.contains("import Translation"))
         XCTAssertFalse(cardSource.contains("TodayHumorCommentTranslationView("))
@@ -5639,6 +6255,80 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(cardSource.contains(".accessibilityAddTraits(.isButton)"))
         XCTAssertTrue(cardSource.contains("Stuknij, aby zobaczyć oryginalny komentarz"))
         XCTAssertTrue(cardSource.contains("Stuknij, aby wrócić do analizy"))
+
+        let designSource = try String(
+            contentsOf: sourceURL
+                .deletingLastPathComponent()
+                .appendingPathComponent("PavbotDesign.swift")
+        )
+        let externalTextSource = try XCTUnwrap(
+            designSource.components(separatedBy: "struct PavbotTranslatedExternalText").dropFirst().first?
+                .components(separatedBy: "@available(iOS 18.0, *)").first
+        )
+        XCTAssertTrue(externalTextSource.contains("externalResolution("))
+        XCTAssertTrue(externalTextSource.contains("resolution.isTranslated"))
+        XCTAssertTrue(externalTextSource.contains("Przygotowuję tłumaczenie komentarza"))
+        XCTAssertFalse(externalTextSource.contains("displayExternalText(sourceText"))
+    }
+
+    func testResearchLoadersRegisterTranslationDocumentsImmediatelyAfterLoading() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/ReportPackageViews.swift")
+        let source = try String(contentsOf: sourceURL)
+        let loadNewsIssueSource = try XCTUnwrap(
+            source.components(separatedBy: "private func loadNewsIssue() async").dropFirst().first?
+                .components(separatedBy: "private func loadMobileMagazine() async").first
+        )
+        let loadMobileMagazineSource = try XCTUnwrap(
+            source.components(separatedBy: "private func loadMobileMagazine() async").dropFirst().first?
+                .components(separatedBy: "private func loadSelectedResearchContent() async").first
+        )
+
+        XCTAssertTrue(loadNewsIssueSource.contains("await newsStore.load("))
+        XCTAssertTrue(loadNewsIssueSource.contains("translationStore.register(issue.automationTranslationDocument, language: languageStore.preference)"))
+        XCTAssertTrue(loadMobileMagazineSource.contains("await mobileNewsStore.load("))
+        XCTAssertTrue(loadMobileMagazineSource.contains("translationStore.register(magazine.automationTranslationDocument, language: languageStore.preference)"))
+    }
+
+    func testResearchIssueTranslationDocumentPrioritizesVisibleCardFieldsBeforeLongBody() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Services/SpeechPlaybackService.swift")
+        let source = try String(contentsOf: sourceURL)
+        let issueDocumentSource = try XCTUnwrap(
+            source.components(separatedBy: "extension ResearchNewsIssue").dropFirst().first?
+                .components(separatedBy: "extension SavedResearchArticle").first
+        )
+
+        let cardTitleIndex = try XCTUnwrap(issueDocumentSource.range(of: "presentation.title\", articlePresentation.title")?.lowerBound)
+        let cardLeadIndex = try XCTUnwrap(issueDocumentSource.range(of: "presentation.standfirst\", articlePresentation.standfirst")?.lowerBound)
+        let cardBulletsIndex = try XCTUnwrap(issueDocumentSource.range(of: "presentation.bullets\", articlePresentation.bullets")?.lowerBound)
+        let bodyIndex = try XCTUnwrap(issueDocumentSource.range(of: "body\", article.body")?.lowerBound)
+        let deeperIndex = try XCTUnwrap(issueDocumentSource.range(of: "deeperAnalysis\", article.deeperAnalysis")?.lowerBound)
+
+        XCTAssertLessThan(cardTitleIndex, bodyIndex)
+        XCTAssertLessThan(cardLeadIndex, bodyIndex)
+        XCTAssertLessThan(cardBulletsIndex, deeperIndex)
+    }
+
+    func testResearchKeywordRailTranslatesDynamicKeywords() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/ReportPackageViews.swift")
+        let source = try String(contentsOf: sourceURL)
+        let keywordRailSource = try XCTUnwrap(
+            source.components(separatedBy: "private struct ResearchKeywordRail").dropFirst().first?
+                .components(separatedBy: "private struct ResearchSectionFilterBar").first
+        )
+
+        XCTAssertTrue(keywordRailSource.contains("translatesAutomationText: true"))
     }
 
     func testTodayHumorPanelShowsDigestDiagnosticsAndOriginalBodyRefreshHint() throws {
@@ -6493,7 +7183,7 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(researchViewSource.contains("private var shouldForceLatestOnActivation: Bool"))
     }
 
-    func testResearchArticleSnapshotHostBuildsSynchronouslyWithoutLoadingOnlyTask() throws {
+    func testResearchArticleSnapshotHostUsesPrecomputedStateInsteadOfBodyRebuilds() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let sourceURL = testsURL
             .deletingLastPathComponent()
@@ -6505,10 +7195,10 @@ final class PavbotManifestTests: XCTestCase {
                 .components(separatedBy: "private struct MobileNewsNativeContent").first
         )
 
-        XCTAssertTrue(snapshotHostSource.contains("let snapshot = ResearchArticleListSnapshot(issue: issue, selectedSection: selectedSection, searchText: \"\")"))
-        XCTAssertFalse(snapshotHostSource.contains("@State private var snapshot"))
-        XCTAssertFalse(snapshotHostSource.contains("@State private var snapshotKey"))
-        XCTAssertFalse(snapshotHostSource.contains(".task(id: currentKey)"))
+        XCTAssertTrue(snapshotHostSource.contains("@State private var snapshot"))
+        XCTAssertTrue(snapshotHostSource.contains("@State private var snapshotKey"))
+        XCTAssertTrue(snapshotHostSource.contains(".task(id: currentSnapshotKey)"))
+        XCTAssertFalse(snapshotHostSource.contains("let snapshot = ResearchArticleListSnapshot(issue: issue, selectedSection: selectedSection, searchText: \"\")"))
         XCTAssertFalse(snapshotHostSource.contains("Układam artykuły"))
     }
 

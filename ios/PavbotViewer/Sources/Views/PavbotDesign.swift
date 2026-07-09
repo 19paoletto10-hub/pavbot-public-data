@@ -1,5 +1,6 @@
 import SwiftUI
 import Translation
+import OSLog
 
 struct PavbotLocalizedText: View {
     @Environment(AppLanguageStore.self) private var languageStore
@@ -1904,6 +1905,9 @@ struct PavbotNewsStoryPresentation: Identifiable, Equatable {
     let sourceCount: Int
     let previewTags: [String]
     let canReadAloud: Bool
+    let translationDocument: AutomationTranslationDocument?
+    let translationPathPrefix: String?
+    let translationFieldPaths: [String: String]
 
     init(
         id: String,
@@ -1915,7 +1919,10 @@ struct PavbotNewsStoryPresentation: Identifiable, Equatable {
         facts: [String],
         sources: [ResearchNewsSource],
         tags: [String],
-        canReadAloud: Bool
+        canReadAloud: Bool,
+        translationDocument: AutomationTranslationDocument? = nil,
+        translationPathPrefix: String? = nil,
+        translationFieldPaths: [String: String] = [:]
     ) {
         let cleanLead = Self.clean(lead)
         let cleanedFacts = facts.map(Self.clean).filter { !$0.isEmpty }
@@ -1931,12 +1938,25 @@ struct PavbotNewsStoryPresentation: Identifiable, Equatable {
         self.sourceCount = sources.count
         self.previewTags = Array(cleanedTags.removingDuplicates().prefix(3))
         self.canReadAloud = canReadAloud
+        self.translationDocument = translationDocument
+        self.translationPathPrefix = translationPathPrefix
+        self.translationFieldPaths = translationFieldPaths
     }
 
     private static func clean(_ value: String) -> String {
         value
             .replacingOccurrences(of: #"\s+"#, with: " ", options: .regularExpression)
             .trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}
+
+private extension PavbotNewsStoryPresentation {
+    func translationPath(_ field: String) -> String? {
+        if let mappedPath = translationFieldPaths[field] {
+            return mappedPath
+        }
+        guard let translationPathPrefix else { return nil }
+        return "\(translationPathPrefix).\(field)"
     }
 }
 
@@ -1972,7 +1992,12 @@ struct PavbotNewsStoryCard: View {
                     .accessibilityHidden(true)
 
                 PavbotArticleKeywordRows(horizontalSpacing: 6, verticalSpacing: 6) {
-                    PavbotNewsSectionBadge(title: presentation.section, tint: tint)
+                    PavbotNewsSectionBadge(
+                        title: presentation.section,
+                        tint: tint,
+                        document: presentation.translationDocument,
+                        path: presentation.translationPath("section")
+                    )
                     PavbotNewsPriorityBadge(style: presentation.priorityStyle)
                     PavbotSourceCountBadge(count: presentation.sourceCount, tint: tint)
                     if isSaved {
@@ -1983,13 +2008,21 @@ struct PavbotNewsStoryCard: View {
                 .layoutPriority(1)
             }
 
-            PavbotTranslatedAutomationText(presentation.title)
+            PavbotTranslatedAutomationText(
+                presentation.title,
+                document: presentation.translationDocument,
+                path: presentation.translationPath("presentation.title")
+            )
                 .font(isFeatured ? .title3.weight(.bold) : .headline.weight(.semibold))
                 .foregroundStyle(.primary)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .fixedSize(horizontal: false, vertical: true)
 
-            PavbotTranslatedAutomationText(presentation.lead)
+            PavbotTranslatedAutomationText(
+                presentation.lead,
+                document: presentation.translationDocument,
+                path: presentation.translationPath("presentation.standfirst")
+            )
                 .font(isFeatured ? .callout.weight(.medium) : .callout)
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
@@ -1998,7 +2031,7 @@ struct PavbotNewsStoryCard: View {
 
             if !presentation.previewFacts.isEmpty {
                 VStack(alignment: .leading, spacing: 7) {
-                    ForEach(presentation.previewFacts, id: \.self) { fact in
+                    ForEach(Array(presentation.previewFacts.enumerated()), id: \.offset) { index, fact in
                         HStack(alignment: .top, spacing: 8) {
                             Image(systemName: "checkmark.circle.fill")
                                 .font(.caption.weight(.semibold))
@@ -2006,7 +2039,11 @@ struct PavbotNewsStoryCard: View {
                                 .padding(.top, 2)
                                 .accessibilityHidden(true)
 
-                            PavbotTranslatedAutomationText(fact)
+                            PavbotTranslatedAutomationText(
+                                fact,
+                                document: presentation.translationDocument,
+                                path: presentation.translationPath("presentation.bullets.\(index)")
+                            )
                                 .font(.footnote)
                                 .foregroundStyle(.secondary)
                                 .lineSpacing(2)
@@ -2020,13 +2057,15 @@ struct PavbotNewsStoryCard: View {
 
             if !presentation.previewTags.isEmpty {
                 PavbotArticleKeywordRows(horizontalSpacing: 6, verticalSpacing: 6) {
-                    ForEach(presentation.previewTags, id: \.self) { tag in
+                    ForEach(Array(presentation.previewTags.enumerated()), id: \.offset) { index, tag in
                         PavbotArticleTagChip(
                             title: tag,
                             systemImage: "tag.fill",
                             tint: tint,
                             accessibilityPrefix: "Tag newsa",
-                            translatesAutomationText: true
+                            translatesAutomationText: true,
+                            translationDocument: presentation.translationDocument,
+                            translationPath: presentation.translationPath("tags.\(index)")
                         )
                     }
                 }
@@ -2134,9 +2173,11 @@ struct PavbotTopStoryCard: View {
 struct PavbotNewsSectionBadge: View {
     let title: String
     let tint: Color
+    var document: AutomationTranslationDocument?
+    var path: String?
 
     var body: some View {
-        PavbotTranslatedAutomationText(title)
+        PavbotTranslatedAutomationText(title, document: document, path: path)
             .font(.caption2.weight(.black))
             .foregroundStyle(tint)
             .lineLimit(1)
@@ -2246,11 +2287,13 @@ struct PavbotArticleTagChip: View {
     let tint: Color
     var accessibilityPrefix = "Tag"
     var translatesAutomationText = false
+    var translationDocument: AutomationTranslationDocument?
+    var translationPath: String?
 
     var body: some View {
         Label {
             if translatesAutomationText {
-                PavbotTranslatedAutomationText(title)
+                PavbotTranslatedAutomationText(title, document: translationDocument, path: translationPath)
             } else {
                 Text(LocalizedStringKey(title))
             }
@@ -2521,11 +2564,13 @@ struct StatusBadge: View {
     let systemImage: String
     var tint: Color = .accentColor
     var translatesAutomationText = false
+    var translationDocument: AutomationTranslationDocument?
+    var translationPath: String?
 
     var body: some View {
         Label {
             if translatesAutomationText {
-                PavbotTranslatedAutomationText(text)
+                PavbotTranslatedAutomationText(text, document: translationDocument, path: translationPath)
             } else {
                 Text(LocalizedStringKey(text))
             }
@@ -2593,23 +2638,62 @@ extension Int {
 struct PavbotTranslatedAutomationText: View {
     @Environment(AppLanguageStore.self) private var languageStore
     @Environment(AutomationTranslationStore.self) private var translationStore
+    @State private var renderedText: String?
     let sourceText: String
+    let document: AutomationTranslationDocument?
+    let path: String?
 
-    init(_ sourceText: String) {
+    init(_ sourceText: String, document: AutomationTranslationDocument? = nil, path: String? = nil) {
         self.sourceText = sourceText
+        self.document = document
+        self.path = path
     }
 
     var body: some View {
-        Text(translationStore.displayText(sourceText, language: languageStore.preference))
-            .task(id: "\(sourceText)::\(languageStore.preference.rawValue)") {
-                translationStore.requestTranslation(for: sourceText, language: languageStore.preference)
+        Text(renderedText ?? displayText)
+            .task(id: taskID) {
+                let fallback = displayText
+                renderedText = fallback
+                let resolution = await translationStore.resolvedText(
+                    sourceText,
+                    document: document,
+                    path: path,
+                    language: languageStore.preference
+                )
+                guard !Task.isCancelled else { return }
+                if resolution.isTranslated {
+                    renderedText = resolution.text
+                } else if renderedText == nil || renderedText == sourceText {
+                    renderedText = fallback
+                }
             }
+    }
+
+    private var displayText: String {
+        if let document, let path {
+            return translationStore.displayText(
+                sourceText,
+                document: document,
+                path: path,
+                language: languageStore.preference
+            )
+        }
+        return translationStore.displayText(sourceText, language: languageStore.preference)
+    }
+
+    private var taskID: String {
+        [
+            document?.id ?? "standalone",
+            path ?? sourceText,
+            languageStore.preference.rawValue
+        ].joined(separator: "::")
     }
 }
 
 struct PavbotTranslatedExternalText: View {
     @Environment(AppLanguageStore.self) private var languageStore
     @Environment(AutomationTranslationStore.self) private var translationStore
+    @State private var renderedText: String?
     let sourceText: String
 
     init(_ sourceText: String) {
@@ -2617,17 +2701,60 @@ struct PavbotTranslatedExternalText: View {
     }
 
     var body: some View {
-        Text(translationStore.displayExternalText(sourceText, language: languageStore.preference))
-            .task(id: "external::\(sourceText)::\(languageStore.preference.rawValue)") {
-                translationStore.requestExternalTranslation(for: sourceText, language: languageStore.preference)
+        Group {
+            if #available(iOS 18.0, *) {
+                Text(renderedText ?? externalDisplayText(for: currentResolution))
+            } else {
+                Text(sourceText)
             }
+        }
+        .task(id: "external::\(sourceText)::\(languageStore.preference.rawValue)") {
+            guard #available(iOS 18.0, *) else {
+                renderedText = sourceText
+                return
+            }
+            renderedText = externalDisplayText(for: currentResolution)
+            let resolution = await translationStore.resolvedExternalText(
+                sourceText,
+                language: languageStore.preference
+            )
+            guard !Task.isCancelled else { return }
+            renderedText = externalDisplayText(for: resolution)
+        }
+    }
+
+    private var currentResolution: AutomationTranslationResolution {
+        translationStore.externalResolution(
+            for: sourceText,
+            language: languageStore.preference
+        )
+    }
+
+    private func externalDisplayText(for resolution: AutomationTranslationResolution) -> String {
+        guard resolution.isTranslated else {
+            return externalTranslationPendingText(language: languageStore.preference)
+        }
+        return resolution.text
+    }
+
+    private func externalTranslationPendingText(language: AppLanguagePreference) -> String {
+        switch language {
+        case .polish:
+            "Przygotowuję tłumaczenie komentarza..."
+        case .english:
+            "Preparing the comment translation..."
+        case .russian:
+            "Готовлю перевод комментария..."
+        }
     }
 }
 
 @available(iOS 18.0, *)
 private struct PavbotNativeAutomationTranslationHost: View {
+    private static let logger = Logger(subsystem: "PavbotViewer", category: "AutomationTranslation")
+
     let translationStore: AutomationTranslationStore
-    @State private var activeRequest: AutomationTranslationRequest?
+    @State private var activeBatch: [AutomationTranslationRequest] = []
     @State private var translationConfiguration: TranslationSession.Configuration?
 
     var body: some View {
@@ -2639,33 +2766,131 @@ private struct PavbotNativeAutomationTranslationHost: View {
                 activateNextRequestIfNeeded()
             }
             .translationTask(translationConfiguration) { session in
-                await translateActiveRequest(using: session)
+                await translateActiveSession(using: session)
             }
     }
 
     private func activateNextRequestIfNeeded() {
-        guard activeRequest == nil else { return }
-        guard let request = translationStore.nextPendingRequest() else { return }
-        activeRequest = request
+        guard activeBatch.isEmpty else { return }
+        let batch = translationStore.nextPendingBatch(maxCount: 8, maxCharacters: 2_500)
+        guard let request = batch.first else { return }
+        activeBatch = batch
         translationConfiguration = TranslationSession.Configuration(
             source: request.sourceLanguageCode.map { Locale.Language(identifier: $0) },
             target: Locale.Language(identifier: request.targetLanguageCode)
         )
     }
 
-    private func translateActiveRequest(using session: TranslationSession) async {
-        guard let request = activeRequest else { return }
-        do {
-            let response = try await session.translate(request.sourceText)
-            guard !Task.isCancelled else { return }
-            translationStore.finish(request, translatedText: response.targetText)
-        } catch {
-            guard !Task.isCancelled else { return }
-            translationStore.fail(request)
+    private func translateActiveSession(using session: TranslationSession) async {
+        while let firstRequest = activeBatch.first {
+            let batch = activeBatch
+            let shouldContinue = await translateActiveBatch(batch, firstRequest: firstRequest, using: session)
+            guard shouldContinue, !Task.isCancelled else { break }
+            guard continueActiveSessionIfPossible(after: firstRequest) else { break }
+            await Task.yield()
         }
-        activeRequest = nil
+
+        completeActiveSession()
+    }
+
+    private func translateActiveBatch(
+        _ batch: [AutomationTranslationRequest],
+        firstRequest: AutomationTranslationRequest,
+        using session: TranslationSession
+    ) async -> Bool {
+        do {
+            let targetLanguage = Locale.Language(identifier: firstRequest.targetLanguageCode)
+            let availability = LanguageAvailability()
+            let status: LanguageAvailability.Status
+            if let sourceLanguageCode = firstRequest.sourceLanguageCode {
+                status = await availability.status(
+                    from: Locale.Language(identifier: sourceLanguageCode),
+                    to: targetLanguage
+                )
+            } else {
+                status = try await availability.status(for: firstRequest.sourceText, to: targetLanguage)
+            }
+
+            guard status == .installed || status == .supported else {
+                Self.logger.error(
+                    "Unsupported translation batch source=\(firstRequest.sourceLanguageCode ?? "auto", privacy: .public) target=\(firstRequest.targetLanguageCode, privacy: .public) status=\(String(describing: status), privacy: .public) count=\(batch.count, privacy: .public)"
+                )
+                translationStore.unsupportedBatch(batch, reason: String(describing: status))
+                return true
+            }
+
+            try await session.prepareTranslation()
+            let translationRequests = batch.map { request in
+                TranslationSession.Request(
+                    sourceText: request.sourceText,
+                    clientIdentifier: request.id
+                )
+            }
+            let responses = try await session.translations(from: translationRequests)
+            guard !Task.isCancelled else { return false }
+
+            var responseByID: [String: String] = [:]
+            for response in responses {
+                if let clientIdentifier = response.clientIdentifier {
+                    responseByID[clientIdentifier] = response.targetText
+                }
+            }
+            let translated = batch.compactMap { request -> (AutomationTranslationRequest, String)? in
+                guard let targetText = responseByID[request.id] else { return nil }
+                return (request, targetText)
+            }
+            translationStore.finishBatch(translated)
+            for request in batch where responseByID[request.id] == nil {
+                translationStore.fail(request, reason: "missing batch response")
+            }
+        } catch {
+            guard !Task.isCancelled else { return false }
+            Self.logger.error(
+                "Translation batch failed source=\(firstRequest.sourceLanguageCode ?? "auto", privacy: .public) target=\(firstRequest.targetLanguageCode, privacy: .public) count=\(batch.count, privacy: .public) error=\(String(describing: error), privacy: .public)"
+            )
+            if isTransientTranslationError(error) {
+                translationStore.retryAfterTransientFailure(batch, reason: String(describing: error))
+            } else {
+                for request in batch {
+                    translationStore.fail(request, reason: String(describing: error))
+                }
+            }
+            return false
+        }
+
+        return true
+    }
+
+    private func continueActiveSessionIfPossible(after request: AutomationTranslationRequest) -> Bool {
+        let nextBatch = translationStore.nextPendingBatch(
+            sourceLanguageCode: request.sourceLanguageCode,
+            targetLanguageCode: request.targetLanguageCode,
+            maxCount: 8,
+            maxCharacters: 2_500
+        )
+        guard !nextBatch.isEmpty else { return false }
+        activeBatch = nextBatch
+        return true
+    }
+
+    private func completeActiveSession() {
+        activeBatch = []
         translationConfiguration = nil
-        activateNextRequestIfNeeded()
+        Task { @MainActor in
+            await Task.yield()
+            activateNextRequestIfNeeded()
+        }
+    }
+
+    private func isTransientTranslationError(_ error: Error) -> Bool {
+        let nsError = error as NSError
+        if nsError.domain == "TranslationErrorDomain", nsError.code == 14 || nsError.code == 20 {
+            return true
+        }
+        if let underlying = nsError.userInfo[NSUnderlyingErrorKey] as? Error {
+            return isTransientTranslationError(underlying)
+        }
+        return false
     }
 }
 

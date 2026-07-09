@@ -1,5 +1,6 @@
 import AVFoundation
 import Combine
+import CryptoKit
 import Foundation
 import Observation
 
@@ -11,6 +12,11 @@ struct AutomationTranslationKey: Hashable {
     var id: String {
         "\(sourceLanguage)::\(targetLanguage)::\(sourceText)"
     }
+
+    var persistentID: String {
+        let hash = AutomationTranslationHasher.sha256(sourceText)
+        return "\(sourceLanguage)::\(targetLanguage)::\(hash)"
+    }
 }
 
 struct AutomationTranslationRequest: Identifiable, Equatable {
@@ -18,8 +24,156 @@ struct AutomationTranslationRequest: Identifiable, Equatable {
     let sourceText: String
     let sourceLanguageCode: String?
     let targetLanguageCode: String
+    let documentID: String?
+    let fieldPath: String?
 
     var id: String { key.id }
+
+    init(
+        key: AutomationTranslationKey,
+        sourceText: String,
+        sourceLanguageCode: String?,
+        targetLanguageCode: String,
+        documentID: String? = nil,
+        fieldPath: String? = nil
+    ) {
+        self.key = key
+        self.sourceText = sourceText
+        self.sourceLanguageCode = sourceLanguageCode
+        self.targetLanguageCode = targetLanguageCode
+        self.documentID = documentID
+        self.fieldPath = fieldPath
+    }
+}
+
+enum AutomationTranslationState: String, Codable, Equatable, Hashable {
+    case queued
+    case preparing
+    case translated
+    case failed
+    case unsupported
+}
+
+struct AutomationTranslationField: Codable, Equatable, Hashable {
+    let path: String
+    let sourceText: String
+    let sourceLanguageCode: String?
+
+    init(path: String, sourceText: String, sourceLanguageCode: String? = "pl") {
+        self.path = path
+        self.sourceText = sourceText
+        self.sourceLanguageCode = sourceLanguageCode
+    }
+
+    var trimmedSourceText: String {
+        sourceText.trimmingCharacters(in: .whitespacesAndNewlines)
+    }
+}
+
+struct AutomationTranslationDocument: Codable, Equatable, Identifiable {
+    let contentKind: String
+    let contentID: String
+    let sourceLanguage: String
+    let fields: [AutomationTranslationField]
+    let sourceHash: String
+
+    var id: String {
+        [contentKind, contentID, sourceHash].joined(separator: "::")
+    }
+
+    init(
+        contentKind: String,
+        contentID: String,
+        sourceLanguage: String = "pl",
+        fields: [AutomationTranslationField]
+    ) {
+        self.contentKind = contentKind
+        self.contentID = contentID
+        self.sourceLanguage = sourceLanguage
+        self.fields = Self.normalizedFields(fields)
+        self.sourceHash = Self.sourceHash(for: self.fields)
+    }
+
+    func bundleID(targetLanguage: AppLanguagePreference) -> String {
+        [
+            contentKind,
+            contentID,
+            sourceHash,
+            sourceLanguage,
+            targetLanguage.rawValue
+        ]
+        .joined(separator: "::")
+    }
+
+    private static func normalizedFields(_ fields: [AutomationTranslationField]) -> [AutomationTranslationField] {
+        var seen = Set<String>()
+        return fields.compactMap { field in
+            let path = field.path.trimmingCharacters(in: .whitespacesAndNewlines)
+            let text = field.trimmedSourceText
+            guard !path.isEmpty, !text.isEmpty, seen.insert(path).inserted else { return nil }
+            return AutomationTranslationField(
+                path: path,
+                sourceText: text,
+                sourceLanguageCode: field.sourceLanguageCode
+            )
+        }
+    }
+
+    private static func sourceHash(for fields: [AutomationTranslationField]) -> String {
+        let source = fields
+            .sorted { $0.path < $1.path }
+            .map { field in
+                [
+                    field.path,
+                    field.sourceLanguageCode ?? "auto",
+                    field.trimmedSourceText
+                ]
+                .joined(separator: "\u{1f}")
+            }
+            .joined(separator: "\u{1e}")
+        return AutomationTranslationHasher.sha256(source)
+    }
+}
+
+struct AutomationTranslationBundle: Codable, Equatable, Identifiable {
+    let id: String
+    let contentKind: String
+    let contentID: String
+    let sourceHash: String
+    let sourceLanguage: String
+    let targetLanguage: String
+    var translations: [String: String]
+    var fieldStates: [String: AutomationTranslationState]
+    var updatedAt: Date
+
+    init(document: AutomationTranslationDocument, targetLanguage: AppLanguagePreference) {
+        self.id = document.bundleID(targetLanguage: targetLanguage)
+        self.contentKind = document.contentKind
+        self.contentID = document.contentID
+        self.sourceHash = document.sourceHash
+        self.sourceLanguage = document.sourceLanguage
+        self.targetLanguage = targetLanguage.rawValue
+        self.translations = [:]
+        self.fieldStates = [:]
+        self.updatedAt = Date()
+    }
+}
+
+struct AutomationTranslationResolution: Equatable {
+    let text: String
+    let state: AutomationTranslationState
+    let usedSourceFallback: Bool
+
+    var isTranslated: Bool {
+        state == .translated && !usedSourceFallback
+    }
+}
+
+enum AutomationTranslationHasher {
+    static func sha256(_ value: String) -> String {
+        let digest = SHA256.hash(data: Data(value.utf8))
+        return digest.map { String(format: "%02x", $0) }.joined()
+    }
 }
 
 @MainActor
@@ -29,19 +183,48 @@ final class AutomationTranslationStore {
 
     private(set) var pendingRevision = 0
 
+    @ObservationIgnored private let fileManager: FileManager
+    @ObservationIgnored private let translationsDirectory: URL
     @ObservationIgnored private var cachedTranslations: [AutomationTranslationKey: String] = [:]
+    @ObservationIgnored private var registeredDocuments: [String: AutomationTranslationDocument] = [:]
+    @ObservationIgnored private var bundles: [String: AutomationTranslationBundle] = [:]
+    @ObservationIgnored private var requestStates: [AutomationTranslationKey: AutomationTranslationState] = [:]
     @ObservationIgnored private var pendingRequests: [AutomationTranslationRequest] = []
     @ObservationIgnored private var inFlightKeys: Set<AutomationTranslationKey> = []
     @ObservationIgnored private var waiters: [AutomationTranslationKey: [CheckedContinuation<String, Never>]] = [:]
+    @ObservationIgnored private var requiredWaiters: [AutomationTranslationKey: [CheckedContinuation<AutomationTranslationResolution, Never>]] = [:]
+    @ObservationIgnored private var dirtyBundleIDs: Set<String> = []
+    @ObservationIgnored private var bundleSaveTask: Task<Void, Never>?
+
+    init(
+        defaults: UserDefaults = .standard,
+        fileManager: FileManager = .default,
+        translationsDirectory: URL? = nil
+    ) {
+        _ = defaults
+        self.fileManager = fileManager
+        self.translationsDirectory = translationsDirectory ?? Self.defaultTranslationsDirectory(fileManager: fileManager)
+    }
 
     func displayText(_ sourceText: String, language: AppLanguagePreference) -> String {
         guard let request = request(for: sourceText, language: language) else { return sourceText }
-        return cachedTranslations[request.key] ?? sourceText
+        return cachedTranslation(for: request) ?? sourceText
     }
 
     func displayExternalText(_ sourceText: String, language: AppLanguagePreference) -> String {
         guard let request = externalRequest(for: sourceText, language: language) else { return sourceText }
-        return cachedTranslations[request.key] ?? sourceText
+        return cachedTranslation(for: request) ?? sourceText
+    }
+
+    func externalResolution(for sourceText: String, language: AppLanguagePreference) -> AutomationTranslationResolution {
+        guard let request = externalRequest(for: sourceText, language: language) else {
+            return AutomationTranslationResolution(text: sourceText, state: .translated, usedSourceFallback: false)
+        }
+        if let cached = cachedTranslation(for: request) {
+            return AutomationTranslationResolution(text: cached, state: .translated, usedSourceFallback: false)
+        }
+        let state = requestStates[request.key] ?? (pendingRequests.contains(where: { $0.key == request.key }) ? .queued : .queued)
+        return AutomationTranslationResolution(text: request.sourceText, state: state, usedSourceFallback: true)
     }
 
     func requestTranslation(for sourceText: String, language: AppLanguagePreference) {
@@ -56,19 +239,216 @@ final class AutomationTranslationStore {
         enqueue(request)
     }
 
+    func register(
+        _ document: AutomationTranslationDocument,
+        language: AppLanguagePreference,
+        eagerPaths: Set<String>? = nil
+    ) {
+        guard !document.fields.isEmpty else { return }
+        registeredDocuments[document.id] = document
+        var didChangeBundle = false
+
+        let translatableFields = document.fields.compactMap { field -> (AutomationTranslationField, AutomationTranslationRequest)? in
+            guard let request = request(for: field, document: document, language: language) else { return nil }
+            return (field, request)
+        }
+        guard !translatableFields.isEmpty else { return }
+
+        var bundle = loadOrCreateBundle(for: document, language: language)
+        for (field, request) in translatableFields {
+            if let translated = bundle.translations[field.path]?.trimmingCharacters(in: .whitespacesAndNewlines),
+               !translated.isEmpty {
+                _ = storeTranslatedText(translated, for: request, persistBundle: false)
+                if bundle.fieldStates[field.path] != .translated {
+                    bundle.fieldStates[field.path] = .translated
+                    didChangeBundle = true
+                }
+                continue
+            }
+
+            if let cached = cachedTranslation(for: request) {
+                bundle.translations[field.path] = cached
+                if bundle.fieldStates[field.path] != .translated {
+                    bundle.fieldStates[field.path] = .translated
+                    didChangeBundle = true
+                }
+                continue
+            }
+
+            if bundle.fieldStates[field.path] == .unsupported {
+                continue
+            }
+
+            if shouldEagerlyQueue(request, eagerPaths: eagerPaths) {
+                enqueue(request)
+            } else if bundle.fieldStates[field.path] == .queued || bundle.fieldStates[field.path] == .preparing || bundle.fieldStates[field.path] == .failed {
+                bundle.fieldStates.removeValue(forKey: field.path)
+                didChangeBundle = true
+            }
+        }
+        if didChangeBundle {
+            scheduleBundleSave(bundle)
+        }
+    }
+
+    func requestTranslation(
+        for sourceText: String,
+        document: AutomationTranslationDocument,
+        path: String,
+        language: AppLanguagePreference
+    ) {
+        registeredDocuments[document.id] = document
+        guard let field = document.field(path: path) else {
+            requestTranslation(for: sourceText, language: language)
+            return
+        }
+        guard let request = request(for: field, document: document, language: language) else { return }
+
+        var bundle = loadOrCreateBundle(for: document, language: language)
+        if let translated = bundle.translations[field.path]?.trimmingCharacters(in: .whitespacesAndNewlines),
+           !translated.isEmpty {
+            _ = storeTranslatedText(translated, for: request, persistBundle: false)
+            if bundle.fieldStates[field.path] != .translated {
+                bundle.fieldStates[field.path] = .translated
+                scheduleBundleSave(bundle)
+            }
+            return
+        }
+
+        if let cached = cachedTranslation(for: request) {
+            bundle.translations[field.path] = cached
+            bundle.fieldStates[field.path] = .translated
+            scheduleBundleSave(bundle)
+            return
+        }
+
+        if requestStates[request.key] == .unsupported {
+            requestStates.removeValue(forKey: request.key)
+        }
+        enqueue(request)
+    }
+
+    func displayText(
+        _ sourceText: String,
+        document: AutomationTranslationDocument,
+        path: String,
+        language: AppLanguagePreference
+    ) -> String {
+        guard let field = document.field(path: path) else {
+            return displayText(sourceText, language: language)
+        }
+        guard let request = request(for: field, document: document, language: language) else {
+            return sourceText
+        }
+        let bundle = loadOrCreateBundle(for: document, language: language)
+        if let translated = bundle.translations[field.path]?.trimmingCharacters(in: .whitespacesAndNewlines),
+           !translated.isEmpty {
+            return translated
+        }
+        return cachedTranslation(for: request) ?? sourceText
+    }
+
+    func resolvedText(
+        _ sourceText: String,
+        document: AutomationTranslationDocument? = nil,
+        path: String? = nil,
+        language: AppLanguagePreference
+    ) async -> AutomationTranslationResolution {
+        if let document, let path, let field = document.field(path: path) {
+            registeredDocuments[document.id] = document
+            guard let request = request(for: field, document: document, language: language) else {
+                return AutomationTranslationResolution(text: sourceText, state: .translated, usedSourceFallback: false)
+            }
+            if let cached = cachedTranslation(for: request) {
+                return AutomationTranslationResolution(text: cached, state: .translated, usedSourceFallback: false)
+            }
+            if requestStates[request.key] == .unsupported {
+                return AutomationTranslationResolution(text: request.sourceText, state: .unsupported, usedSourceFallback: true)
+            }
+            guard #available(iOS 18.0, *) else {
+                return AutomationTranslationResolution(text: sourceText, state: .unsupported, usedSourceFallback: true)
+            }
+            return await withCheckedContinuation { continuation in
+                requiredWaiters[request.key, default: []].append(continuation)
+                enqueue(request)
+            }
+        }
+
+        guard let request = request(for: sourceText, language: language) else {
+            return AutomationTranslationResolution(text: sourceText, state: .translated, usedSourceFallback: false)
+        }
+        if let cached = cachedTranslation(for: request) {
+            return AutomationTranslationResolution(text: cached, state: .translated, usedSourceFallback: false)
+        }
+        if requestStates[request.key] == .unsupported {
+            return AutomationTranslationResolution(text: request.sourceText, state: .unsupported, usedSourceFallback: true)
+        }
+        guard #available(iOS 18.0, *) else {
+            return AutomationTranslationResolution(text: sourceText, state: .unsupported, usedSourceFallback: true)
+        }
+        return await withCheckedContinuation { continuation in
+            requiredWaiters[request.key, default: []].append(continuation)
+            enqueue(request)
+        }
+    }
+
+    func resolvedExternalText(
+        _ sourceText: String,
+        language: AppLanguagePreference
+    ) async -> AutomationTranslationResolution {
+        guard let request = externalRequest(for: sourceText, language: language) else {
+            return AutomationTranslationResolution(text: sourceText, state: .translated, usedSourceFallback: false)
+        }
+        if let cached = cachedTranslation(for: request) {
+            return AutomationTranslationResolution(text: cached, state: .translated, usedSourceFallback: false)
+        }
+        if requestStates[request.key] == .unsupported {
+            return AutomationTranslationResolution(text: request.sourceText, state: .unsupported, usedSourceFallback: true)
+        }
+        guard #available(iOS 18.0, *) else {
+            return AutomationTranslationResolution(text: sourceText, state: .unsupported, usedSourceFallback: true)
+        }
+        return await withCheckedContinuation { continuation in
+            requiredWaiters[request.key, default: []].append(continuation)
+            enqueue(request)
+        }
+    }
+
+    func requiredLocalizedText(
+        _ sourceText: String,
+        language: AppLanguagePreference,
+        document: AutomationTranslationDocument? = nil,
+        path: String? = nil,
+        translator: Translator? = nil
+    ) async -> AutomationTranslationResolution {
+        if let document, let path, let field = document.field(path: path) {
+            return await requiredLocalizedField(field, document: document, language: language, translator: translator)
+        }
+
+        guard let request = request(for: sourceText, language: language) else {
+            return AutomationTranslationResolution(text: sourceText, state: .translated, usedSourceFallback: false)
+        }
+        return await requiredLocalizedText(for: request, language: language, translator: translator)
+    }
+
     func localizedText(
         _ sourceText: String,
         language: AppLanguagePreference,
         translator: Translator? = nil
     ) async -> String {
         guard let request = request(for: sourceText, language: language) else { return sourceText }
-        if let cached = cachedTranslations[request.key] {
+        if let cached = cachedTranslation(for: request) {
             return cached
+        }
+        if requestStates[request.key] == .unsupported {
+            return sourceText
         }
 
         if let translator {
             let translated = await translator(request.sourceText, request.targetLanguageCode)
-            return storeTranslatedText(translated, for: request)
+            let clean = translated.trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !clean.isEmpty else { return sourceText }
+            return storeTranslatedText(clean, for: request)
         }
 
         guard #available(iOS 18.0, *) else { return sourceText }
@@ -82,22 +462,203 @@ final class AutomationTranslationStore {
     func nextPendingRequest() -> AutomationTranslationRequest? {
         guard !pendingRequests.isEmpty else { return nil }
         let request = pendingRequests.removeFirst()
-        inFlightKeys.insert(request.key)
+        return prepareForProcessing(request)
+    }
+
+    func nextPendingBatch(maxCount: Int = 12, maxCharacters: Int = 3_500) -> [AutomationTranslationRequest] {
+        guard let first = pendingRequests.first else { return [] }
+        return nextPendingBatch(
+            sourceLanguageCode: first.sourceLanguageCode,
+            targetLanguageCode: first.targetLanguageCode,
+            maxCount: maxCount,
+            maxCharacters: maxCharacters
+        )
+    }
+
+    func nextPendingRequest(
+        sourceLanguageCode: String?,
+        targetLanguageCode: String
+    ) -> AutomationTranslationRequest? {
+        guard let index = pendingRequests.firstIndex(where: { request in
+            request.sourceLanguageCode == sourceLanguageCode
+                && request.targetLanguageCode == targetLanguageCode
+        }) else {
+            return nil
+        }
+        let request = pendingRequests.remove(at: index)
+        return prepareForProcessing(request)
+    }
+
+    func nextPendingBatch(
+        sourceLanguageCode: String?,
+        targetLanguageCode: String,
+        maxCount: Int = 12,
+        maxCharacters: Int = 3_500
+    ) -> [AutomationTranslationRequest] {
+        guard maxCount > 0, maxCharacters > 0 else { return [] }
+
+        var selected: [AutomationTranslationRequest] = []
+        var selectedIndexes: [Int] = []
+        var characterCount = 0
+
+        for (index, request) in pendingRequests.enumerated() {
+            guard request.sourceLanguageCode == sourceLanguageCode,
+                  request.targetLanguageCode == targetLanguageCode
+            else { continue }
+
+            let nextCount = characterCount + request.sourceText.count
+            if !selected.isEmpty, (selected.count >= maxCount || nextCount > maxCharacters) {
+                break
+            }
+            selected.append(request)
+            selectedIndexes.append(index)
+            characterCount = nextCount
+            if selected.count >= maxCount {
+                break
+            }
+        }
+
+        for index in selectedIndexes.reversed() {
+            pendingRequests.remove(at: index)
+        }
+        return selected.map(prepareForProcessing)
+    }
+
+    func markPreparing(_ request: AutomationTranslationRequest) {
+        requestStates[request.key] = .preparing
+        updateBundleState(for: request, state: .preparing)
         pendingRevision += 1
-        return request
     }
 
     func finish(_ request: AutomationTranslationRequest, translatedText: String) {
-        let resolvedText = storeTranslatedText(translatedText, for: request)
+        let clean = translatedText.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !clean.isEmpty else {
+            fail(request, reason: "empty translation")
+            return
+        }
+        let resolvedText = storeTranslatedText(clean, for: request)
         inFlightKeys.remove(request.key)
+        requestStates[request.key] = .translated
         resumeWaiters(for: request.key, text: resolvedText)
+        resumeRequiredWaiters(
+            for: request.key,
+            resolution: AutomationTranslationResolution(text: resolvedText, state: .translated, usedSourceFallback: false)
+        )
         pendingRevision += 1
     }
 
-    func fail(_ request: AutomationTranslationRequest) {
-        inFlightKeys.remove(request.key)
-        resumeWaiters(for: request.key, text: request.sourceText)
+    func finishBatch(_ translations: [(AutomationTranslationRequest, String)]) {
+        guard !translations.isEmpty else { return }
+        var dirtyBundlesByID: [String: AutomationTranslationBundle] = [:]
+
+        for (request, translatedText) in translations {
+            let clean = translatedText.trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !clean.isEmpty else {
+                fail(request, reason: "empty translation")
+                continue
+            }
+
+            cachedTranslations[request.key] = clean
+            inFlightKeys.remove(request.key)
+            requestStates[request.key] = .translated
+            resumeWaiters(for: request.key, text: clean)
+            resumeRequiredWaiters(
+                for: request.key,
+                resolution: AutomationTranslationResolution(text: clean, state: .translated, usedSourceFallback: false)
+            )
+
+            if let bundle = bundleUpdatedByTranslation(for: request, translatedText: clean) {
+                dirtyBundlesByID[bundle.id] = bundle
+            }
+        }
+
+        for bundle in dirtyBundlesByID.values {
+            scheduleBundleSave(bundle)
+        }
         pendingRevision += 1
+    }
+
+    func fail(_ request: AutomationTranslationRequest, reason: String? = nil) {
+        inFlightKeys.remove(request.key)
+        requestStates[request.key] = .failed
+        updateBundleState(for: request, state: .failed)
+        resumeWaiters(for: request.key, text: request.sourceText)
+        resumeRequiredWaiters(
+            for: request.key,
+            resolution: AutomationTranslationResolution(text: request.sourceText, state: .failed, usedSourceFallback: true)
+        )
+        pendingRevision += 1
+    }
+
+    func retryAfterTransientFailure(
+        _ requests: [AutomationTranslationRequest],
+        reason: String? = nil,
+        delay: Duration = .milliseconds(650)
+    ) {
+        guard !requests.isEmpty else { return }
+        for request in requests {
+            inFlightKeys.remove(request.key)
+            requestStates[request.key] = .failed
+            updateBundleState(for: request, state: .failed)
+        }
+        pendingRevision += 1
+
+        Task { @MainActor in
+            try? await Task.sleep(for: delay)
+            guard !Task.isCancelled else { return }
+            for request in requests {
+                guard cachedTranslation(for: request) == nil else { continue }
+                guard requestStates[request.key] != .unsupported else { continue }
+                enqueue(request)
+            }
+        }
+    }
+
+    func unsupported(_ request: AutomationTranslationRequest, reason: String? = nil) {
+        inFlightKeys.remove(request.key)
+        requestStates[request.key] = .unsupported
+        updateBundleState(for: request, state: .unsupported)
+        resumeWaiters(for: request.key, text: request.sourceText)
+        resumeRequiredWaiters(
+            for: request.key,
+            resolution: AutomationTranslationResolution(text: request.sourceText, state: .unsupported, usedSourceFallback: true)
+        )
+        pendingRevision += 1
+    }
+
+    func unsupportedBatch(_ requests: [AutomationTranslationRequest], reason: String? = nil) {
+        guard !requests.isEmpty else { return }
+        var dirtyBundlesByID: [String: AutomationTranslationBundle] = [:]
+        for request in requests {
+            inFlightKeys.remove(request.key)
+            requestStates[request.key] = .unsupported
+            if let bundle = bundleUpdatedByState(for: request, state: .unsupported, shouldPersist: true) {
+                dirtyBundlesByID[bundle.id] = bundle
+            }
+            resumeWaiters(for: request.key, text: request.sourceText)
+            resumeRequiredWaiters(
+                for: request.key,
+                resolution: AutomationTranslationResolution(text: request.sourceText, state: .unsupported, usedSourceFallback: true)
+            )
+        }
+        for bundle in dirtyBundlesByID.values {
+            scheduleBundleSave(bundle)
+        }
+        pendingRevision += 1
+    }
+
+    func translationState(for key: AutomationTranslationKey) -> AutomationTranslationState? {
+        if let state = requestStates[key] {
+            return state
+        }
+        if cachedTranslations[key] != nil {
+            return .translated
+        }
+        return nil
+    }
+
+    func bundle(for document: AutomationTranslationDocument, language: AppLanguagePreference) -> AutomationTranslationBundle {
+        loadOrCreateBundle(for: document, language: language)
     }
 
     private func request(for sourceText: String, language: AppLanguagePreference) -> AutomationTranslationRequest? {
@@ -115,34 +676,682 @@ final class AutomationTranslationStore {
     private func externalRequest(for sourceText: String, language: AppLanguagePreference) -> AutomationTranslationRequest? {
         let trimmed = sourceText.trimmingCharacters(in: .whitespacesAndNewlines)
         guard !trimmed.isEmpty else { return nil }
+        let sourceLanguageCode = "en"
         let targetLanguageCode = language.rawValue
-        let key = AutomationTranslationKey(sourceLanguage: "auto", targetLanguage: targetLanguageCode, sourceText: trimmed)
+        guard sourceLanguageCode != targetLanguageCode else { return nil }
+        let key = AutomationTranslationKey(sourceLanguage: sourceLanguageCode, targetLanguage: targetLanguageCode, sourceText: trimmed)
         return AutomationTranslationRequest(
             key: key,
             sourceText: trimmed,
-            sourceLanguageCode: nil,
+            sourceLanguageCode: sourceLanguageCode,
             targetLanguageCode: targetLanguageCode
         )
     }
 
+    private func request(
+        for field: AutomationTranslationField,
+        document: AutomationTranslationDocument,
+        language: AppLanguagePreference
+    ) -> AutomationTranslationRequest? {
+        let trimmed = field.trimmedSourceText
+        guard !trimmed.isEmpty else { return nil }
+
+        let sourceLanguage = field.sourceLanguageCode ?? "auto"
+        let targetLanguageCode: String
+        if field.sourceLanguageCode == nil {
+            targetLanguageCode = language.rawValue
+        } else if sourceLanguage == "pl" {
+            guard let target = language.translationTargetIdentifier else { return nil }
+            targetLanguageCode = target
+        } else {
+            targetLanguageCode = language.rawValue
+        }
+
+        guard sourceLanguage != targetLanguageCode else { return nil }
+        let key = AutomationTranslationKey(
+            sourceLanguage: sourceLanguage,
+            targetLanguage: targetLanguageCode,
+            sourceText: trimmed
+        )
+        return AutomationTranslationRequest(
+            key: key,
+            sourceText: trimmed,
+            sourceLanguageCode: field.sourceLanguageCode,
+            targetLanguageCode: targetLanguageCode,
+            documentID: document.id,
+            fieldPath: field.path
+        )
+    }
+
+    private func requiredLocalizedField(
+        _ field: AutomationTranslationField,
+        document: AutomationTranslationDocument,
+        language: AppLanguagePreference,
+        translator: Translator?
+    ) async -> AutomationTranslationResolution {
+        register(document, language: language)
+        guard let request = request(for: field, document: document, language: language) else {
+            return AutomationTranslationResolution(text: field.trimmedSourceText, state: .translated, usedSourceFallback: false)
+        }
+        return await requiredLocalizedText(for: request, language: language, translator: translator)
+    }
+
+    private func requiredLocalizedText(
+        for request: AutomationTranslationRequest,
+        language: AppLanguagePreference,
+        translator: Translator?
+    ) async -> AutomationTranslationResolution {
+        if let cached = cachedTranslation(for: request) {
+            return AutomationTranslationResolution(text: cached, state: .translated, usedSourceFallback: false)
+        }
+        if requestStates[request.key] == .unsupported {
+            return AutomationTranslationResolution(text: request.sourceText, state: .unsupported, usedSourceFallback: true)
+        }
+
+        if let translator {
+            let translated = await translator(request.sourceText, request.targetLanguageCode)
+            let clean = translated.trimmingCharacters(in: .whitespacesAndNewlines)
+            guard !clean.isEmpty else {
+                return AutomationTranslationResolution(text: request.sourceText, state: .failed, usedSourceFallback: true)
+            }
+            pendingRequests.removeAll { $0.key == request.key }
+            inFlightKeys.remove(request.key)
+            requestStates[request.key] = .translated
+            let resolved = storeTranslatedText(clean, for: request)
+            updateBundleTranslation(for: request, translatedText: resolved)
+            return AutomationTranslationResolution(text: resolved, state: .translated, usedSourceFallback: false)
+        }
+
+        guard #available(iOS 18.0, *) else {
+            return AutomationTranslationResolution(text: request.sourceText, state: .unsupported, usedSourceFallback: true)
+        }
+
+        return await withCheckedContinuation { continuation in
+            requiredWaiters[request.key, default: []].append(continuation)
+            enqueue(request)
+        }
+    }
+
     private func enqueue(_ request: AutomationTranslationRequest) {
-        guard cachedTranslations[request.key] == nil else { return }
+        guard cachedTranslation(for: request) == nil else {
+            requestStates[request.key] = .translated
+            updateBundleState(for: request, state: .translated)
+            return
+        }
+        guard requestStates[request.key] != .unsupported else { return }
         guard !inFlightKeys.contains(request.key) else { return }
         guard !pendingRequests.contains(where: { $0.key == request.key }) else { return }
         pendingRequests.append(request)
+        pendingRequests.sort { lhs, rhs in
+            let lhsPriority = translationPriority(for: lhs)
+            let rhsPriority = translationPriority(for: rhs)
+            if lhsPriority != rhsPriority {
+                return lhsPriority < rhsPriority
+            }
+            return lhs.sourceText.count < rhs.sourceText.count
+        }
+        requestStates[request.key] = .queued
+        updateBundleState(for: request, state: .queued)
         pendingRevision += 1
     }
 
-    private func storeTranslatedText(_ translatedText: String, for request: AutomationTranslationRequest) -> String {
+    private func translationPriority(for request: AutomationTranslationRequest) -> Int {
+        guard let path = request.fieldPath else { return 30 }
+        if path == "headline"
+            || path == "title"
+            || path == "scopeTitle"
+            || path.hasSuffix(".title")
+            || path.hasSuffix(".scopeTitle")
+        {
+            return 0
+        }
+        if path == "lead"
+            || path == "summary"
+            || path == "presentation.lead"
+            || path == "presentation.standfirst"
+            || path.hasSuffix(".lead")
+            || path.hasSuffix(".summary")
+            || path.hasSuffix(".presentation.standfirst")
+        {
+            return 1
+        }
+        if path == "section" || path.hasSuffix(".section") || path == "status" {
+            return 2
+        }
+        if path == "presentation.summary" || path.hasSuffix(".presentation.summary") {
+            return 3
+        }
+        if path.contains(".presentation.bullets.") || path.contains(".signals.") || path.contains(".quickPoints.") {
+            return 4
+        }
+        if path.contains(".tags.") || path.contains(".keywords.") {
+            return 5
+        }
+        if path.contains(".body") || path.contains(".ttsText") || path.contains(".deeperAnalysis") {
+            return 20
+        }
+        return 10
+    }
+
+    private func shouldEagerlyQueue(_ request: AutomationTranslationRequest, eagerPaths: Set<String>?) -> Bool {
+        if let eagerPaths {
+            guard let fieldPath = request.fieldPath, eagerPaths.contains(fieldPath) else { return false }
+        }
+        let priority = translationPriority(for: request)
+        guard priority <= 5 else { return false }
+        return request.sourceText.count <= 420
+    }
+
+    private func prepareForProcessing(_ request: AutomationTranslationRequest) -> AutomationTranslationRequest {
+        inFlightKeys.insert(request.key)
+        requestStates[request.key] = .preparing
+        updateBundleState(for: request, state: .preparing)
+        pendingRevision += 1
+        return request
+    }
+
+    private func storeTranslatedText(
+        _ translatedText: String,
+        for request: AutomationTranslationRequest,
+        persistBundle: Bool = true
+    ) -> String {
         let clean = translatedText.trimmingCharacters(in: .whitespacesAndNewlines)
-        let resolved = clean.isEmpty ? request.sourceText : clean
-        cachedTranslations[request.key] = resolved
-        return resolved
+        cachedTranslations[request.key] = clean
+        if persistBundle {
+            updateBundleTranslation(for: request, translatedText: clean)
+        }
+        return clean
+    }
+
+    private func cachedTranslation(for request: AutomationTranslationRequest) -> String? {
+        if let cached = cachedTranslations[request.key] {
+            return cached
+        }
+        guard let documentID = request.documentID,
+              let fieldPath = request.fieldPath,
+              let document = registeredDocuments[documentID],
+              let language = AppLanguagePreference(rawValue: request.targetLanguageCode)
+        else { return nil }
+
+        let bundle = loadOrCreateBundle(for: document, language: language)
+        guard let translated = bundle.translations[fieldPath]?.trimmingCharacters(in: .whitespacesAndNewlines),
+              !translated.isEmpty
+        else { return nil }
+
+        cachedTranslations[request.key] = translated
+        requestStates[request.key] = .translated
+        return translated
     }
 
     private func resumeWaiters(for key: AutomationTranslationKey, text: String) {
         let continuations = waiters.removeValue(forKey: key) ?? []
         continuations.forEach { $0.resume(returning: text) }
+    }
+
+    private func resumeRequiredWaiters(for key: AutomationTranslationKey, resolution: AutomationTranslationResolution) {
+        let continuations = requiredWaiters.removeValue(forKey: key) ?? []
+        continuations.forEach { $0.resume(returning: resolution) }
+    }
+
+    private func loadOrCreateBundle(
+        for document: AutomationTranslationDocument,
+        language: AppLanguagePreference
+    ) -> AutomationTranslationBundle {
+        let bundleID = document.bundleID(targetLanguage: language)
+        if let bundle = bundles[bundleID] {
+            return bundle
+        }
+
+        if let loaded = loadBundle(id: bundleID) {
+            bundles[bundleID] = loaded
+            return loaded
+        }
+
+        let bundle = AutomationTranslationBundle(document: document, targetLanguage: language)
+        bundles[bundleID] = bundle
+        return bundle
+    }
+
+    private func updateBundleTranslation(for request: AutomationTranslationRequest, translatedText: String) {
+        guard let bundle = bundleUpdatedByTranslation(for: request, translatedText: translatedText) else { return }
+        scheduleBundleSave(bundle)
+    }
+
+    private func updateBundleState(for request: AutomationTranslationRequest, state: AutomationTranslationState) {
+        _ = bundleUpdatedByState(
+            for: request,
+            state: state,
+            shouldPersist: state == .translated || state == .unsupported
+        )
+    }
+
+    private func bundleUpdatedByTranslation(
+        for request: AutomationTranslationRequest,
+        translatedText: String
+    ) -> AutomationTranslationBundle? {
+        guard let documentID = request.documentID,
+              let fieldPath = request.fieldPath,
+              let document = registeredDocuments[documentID],
+              let language = AppLanguagePreference(rawValue: request.targetLanguageCode)
+        else { return nil }
+
+        var bundle = loadOrCreateBundle(for: document, language: language)
+        bundle.translations[fieldPath] = translatedText
+        bundle.fieldStates[fieldPath] = .translated
+        bundles[bundle.id] = bundle
+        return bundle
+    }
+
+    private func bundleUpdatedByState(
+        for request: AutomationTranslationRequest,
+        state: AutomationTranslationState,
+        shouldPersist: Bool
+    ) -> AutomationTranslationBundle? {
+        guard let documentID = request.documentID,
+              let fieldPath = request.fieldPath,
+              let document = registeredDocuments[documentID],
+              let language = AppLanguagePreference(rawValue: request.targetLanguageCode)
+        else { return nil }
+
+        var bundle = loadOrCreateBundle(for: document, language: language)
+        switch state {
+        case .translated, .unsupported:
+            bundle.fieldStates[fieldPath] = state
+        case .queued, .preparing, .failed:
+            bundle.fieldStates.removeValue(forKey: fieldPath)
+        }
+        bundles[bundle.id] = bundle
+        if shouldPersist {
+            scheduleBundleSave(bundle)
+        }
+        return bundle
+    }
+
+    private func loadBundle(id: String) -> AutomationTranslationBundle? {
+        let url = bundleURL(id: id)
+        guard let data = try? Data(contentsOf: url) else { return nil }
+        guard let decoded = try? JSONDecoder.pavbot.decode(AutomationTranslationBundle.self, from: data) else {
+            return nil
+        }
+        let normalized = normalizedBundle(decoded)
+        if normalized != decoded {
+            scheduleBundleSave(normalized)
+        }
+        return normalized
+    }
+
+    private func normalizedBundle(_ bundle: AutomationTranslationBundle) -> AutomationTranslationBundle {
+        var normalized = bundle
+        normalized.fieldStates = normalized.fieldStates.compactMapValues { state in
+            switch state {
+            case .translated, .unsupported:
+                state
+            case .queued, .preparing, .failed:
+                nil
+            }
+        }
+        for (path, translation) in Array(normalized.translations) {
+            let clean = translation.trimmingCharacters(in: .whitespacesAndNewlines)
+            if clean.isEmpty {
+                normalized.translations.removeValue(forKey: path)
+                normalized.fieldStates.removeValue(forKey: path)
+            } else {
+                normalized.translations[path] = clean
+                normalized.fieldStates[path] = .translated
+            }
+        }
+        return normalized
+    }
+
+    private func scheduleBundleSave(_ bundle: AutomationTranslationBundle) {
+        var mutableBundle = bundle
+        mutableBundle.updatedAt = Date()
+        bundles[mutableBundle.id] = mutableBundle
+        dirtyBundleIDs.insert(mutableBundle.id)
+        bundleSaveTask?.cancel()
+        bundleSaveTask = Task { @MainActor in
+            try? await Task.sleep(for: .milliseconds(400))
+            guard !Task.isCancelled else { return }
+            self.flushPendingBundleWrites()
+        }
+    }
+
+    func flushPendingBundleWrites() {
+        let bundleIDs = dirtyBundleIDs
+        dirtyBundleIDs.removeAll()
+        bundleSaveTask?.cancel()
+        bundleSaveTask = nil
+
+        for bundleID in bundleIDs {
+            guard let bundle = bundles[bundleID] else { continue }
+            saveBundle(bundle)
+        }
+    }
+
+    private func saveBundle(_ bundle: AutomationTranslationBundle) {
+        var mutableBundle = normalizedBundle(bundle)
+        mutableBundle.updatedAt = Date()
+        bundles[mutableBundle.id] = mutableBundle
+        do {
+            try fileManager.createDirectory(at: translationsDirectory, withIntermediateDirectories: true)
+            let data = try JSONEncoder().encode(mutableBundle)
+            try data.write(to: bundleURL(id: mutableBundle.id), options: [.atomic])
+        } catch {
+            // Translation bundles are a performance/consistency cache; failed writes should not block reading.
+        }
+    }
+
+    private func bundleURL(id: String) -> URL {
+        translationsDirectory.appendingPathComponent("\(AutomationTranslationHasher.sha256(id)).json")
+    }
+
+    private static func defaultTranslationsDirectory(fileManager: FileManager) -> URL {
+        let base = fileManager.urls(for: .applicationSupportDirectory, in: .userDomainMask).first
+            ?? fileManager.temporaryDirectory
+        return base
+            .appendingPathComponent("Pavbot", isDirectory: true)
+            .appendingPathComponent("Translations", isDirectory: true)
+    }
+}
+
+extension AutomationTranslationDocument {
+    func field(path: String) -> AutomationTranslationField? {
+        fields.first { $0.path == path }
+    }
+}
+
+struct AutomationTranslationFieldBuilder {
+    private(set) var fields: [AutomationTranslationField] = []
+
+    mutating func append(_ path: String, _ value: String?, sourceLanguageCode: String? = "pl") {
+        guard let value else { return }
+        let clean = value.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !clean.isEmpty else { return }
+        fields.append(
+            AutomationTranslationField(
+                path: path,
+                sourceText: clean,
+                sourceLanguageCode: sourceLanguageCode
+            )
+        )
+    }
+
+    mutating func appendList(_ path: String, _ values: [String], sourceLanguageCode: String? = "pl") {
+        for (index, value) in values.enumerated() {
+            append("\(path).\(index)", value, sourceLanguageCode: sourceLanguageCode)
+        }
+    }
+}
+
+extension MobileNewsMagazine {
+    var automationTranslationDocument: AutomationTranslationDocument {
+        var builder = AutomationTranslationFieldBuilder()
+        builder.append("headline", headline)
+        builder.append("status", status)
+        builder.appendList("leadParagraphs", leadParagraphs)
+
+        for section in sections {
+            let sectionPath = "sections.\(section.id)"
+            builder.append("\(sectionPath).title", section.title)
+            builder.append("\(sectionPath).summary", section.summary)
+
+            for article in section.articles {
+                let articlePath = "\(sectionPath).articles.\(article.id)"
+                builder.append("\(articlePath).section", article.section)
+                builder.append("\(articlePath).title", article.title)
+                builder.append("\(articlePath).lead", article.lead)
+                builder.appendList("\(articlePath).facts", article.facts)
+                builder.append("\(articlePath).analysis", article.analysis)
+                builder.append("\(articlePath).whyItMatters", article.whyItMatters)
+                builder.appendList("\(articlePath).tags", article.tags)
+                builder.append("\(articlePath).ttsText", article.ttsText)
+            }
+        }
+
+        return AutomationTranslationDocument(
+            contentKind: "mobileNews",
+            contentID: id,
+            fields: builder.fields
+        )
+    }
+
+    func translationPath(for article: MobileNewsArticle, field: String) -> String {
+        let sectionID = sections.first(where: { section in
+            section.articles.contains(where: { $0.id == article.id })
+        })?.id ?? article.section
+        return "sections.\(sectionID).articles.\(article.id).\(field)"
+    }
+}
+
+extension TodayLiveTopicsSnapshot {
+    var automationTranslationDocument: AutomationTranslationDocument {
+        var builder = AutomationTranslationFieldBuilder()
+        builder.append("headline", headline)
+        builder.append("summary", summary)
+        builder.append("sourceLabel", sourceLabel)
+
+        for topic in allTopics {
+            let topicPath = "topics.\(topic.id)"
+            builder.append("\(topicPath).section", topic.section)
+            builder.append("\(topicPath).scopeTitle", topic.scope.title)
+            builder.append("\(topicPath).title", topic.title)
+            builder.append("\(topicPath).lead", topic.lead)
+            builder.appendList("\(topicPath).keyFacts", topic.keyFacts)
+            builder.appendList("\(topicPath).reactions", topic.reactions)
+            builder.append("\(topicPath).whyItMatters", topic.whyItMatters)
+            builder.append("\(topicPath).context", topic.context)
+            builder.appendList("\(topicPath).watchNext", topic.watchNext)
+            builder.appendList("\(topicPath).tags", topic.tags)
+            builder.append("\(topicPath).speechText", TodayLiveTopicSpeechController.speechText(for: topic, language: .polish))
+        }
+
+        return AutomationTranslationDocument(
+            contentKind: "pulseDay",
+            contentID: id,
+            fields: builder.fields
+        )
+    }
+
+    static func translationPath(for topic: TodayLiveTopic, field: String) -> String {
+        "topics.\(topic.id).\(field)"
+    }
+
+    static func translationPathPrefix(for topic: TodayLiveTopic) -> String {
+        "topics.\(topic.id)"
+    }
+
+    static func storyTranslationFieldPaths(for topic: TodayLiveTopic) -> [String: String] {
+        let prefix = translationPathPrefix(for: topic)
+        var paths: [String: String] = [
+            "section": "\(prefix).section",
+            "presentation.title": "\(prefix).title",
+            "presentation.standfirst": "\(prefix).lead"
+        ]
+        for index in topic.keyFacts.indices {
+            paths["presentation.bullets.\(index)"] = "\(prefix).keyFacts.\(index)"
+        }
+        for index in topic.tags.indices {
+            paths["tags.\(index)"] = "\(prefix).tags.\(index)"
+        }
+        return paths
+    }
+}
+
+extension TodayLiveTopic {
+    var automationTranslationDocument: AutomationTranslationDocument {
+        var builder = AutomationTranslationFieldBuilder()
+        builder.append("section", section)
+        builder.append("scopeTitle", scope.title)
+        builder.append("title", title)
+        builder.append("lead", lead)
+        builder.appendList("keyFacts", keyFacts)
+        builder.appendList("reactions", reactions)
+        builder.append("whyItMatters", whyItMatters)
+        builder.append("context", context)
+        builder.appendList("watchNext", watchNext)
+        builder.appendList("tags", tags)
+        builder.append("speechText", TodayLiveTopicSpeechController.speechText(for: self, language: .polish))
+        return AutomationTranslationDocument(
+            contentKind: "pulseDayTopic",
+            contentID: id,
+            fields: builder.fields
+        )
+    }
+
+    static func storyTranslationFieldPaths(for topic: TodayLiveTopic) -> [String: String] {
+        var paths: [String: String] = [
+            "section": "section",
+            "presentation.title": "title",
+            "presentation.standfirst": "lead"
+        ]
+        for index in topic.keyFacts.indices {
+            paths["presentation.bullets.\(index)"] = "keyFacts.\(index)"
+        }
+        for index in topic.tags.indices {
+            paths["tags.\(index)"] = "tags.\(index)"
+        }
+        return paths
+    }
+}
+
+extension ResearchNewsIssue {
+    var automationTranslationDocument: AutomationTranslationDocument {
+        let presentation = ResearchIssuePresentation(issue: self)
+        var builder = AutomationTranslationFieldBuilder()
+        builder.append("status", status)
+        builder.append("lead", lead)
+        builder.append("presentation.eyebrow", presentation.eyebrow)
+        builder.append("presentation.title", presentation.title)
+        builder.append("presentation.lead", presentation.lead)
+        builder.appendList("presentation.leadParagraphs", presentation.leadParagraphs)
+        builder.appendList("presentation.quickPoints", presentation.quickPoints)
+        builder.append("presentation.signalsTitle", presentation.signalsTitle)
+        builder.append("presentation.keywordsTitle", presentation.keywordsTitle)
+
+        for signal in presentation.signals {
+            let signalPath = "presentation.signals.\(signal.id)"
+            builder.append("\(signalPath).section", signal.section.rawValue)
+            builder.append("\(signalPath).title", signal.title)
+            builder.append("\(signalPath).summary", signal.summary)
+            builder.appendList("\(signalPath).bullets", signal.bullets)
+        }
+
+        for keyword in presentation.keywords {
+            builder.append("presentation.keywords.\(keyword.id).title", keyword.title)
+        }
+
+        for article in articles {
+            let articlePresentation = ResearchArticlePresentation(article: article, topic: topic)
+            let articlePath = "articles.\(article.id)"
+            builder.append("\(articlePath).section", article.section.rawValue)
+            builder.append("\(articlePath).presentation.title", articlePresentation.title)
+            builder.append("\(articlePath).presentation.standfirst", articlePresentation.standfirst)
+            builder.append("\(articlePath).presentation.summary", articlePresentation.summary)
+            builder.appendList("\(articlePath).presentation.bullets", articlePresentation.bullets)
+            builder.appendList("\(articlePath).tags", article.tags)
+
+            builder.append("\(articlePath).title", article.title)
+            builder.append("\(articlePath).summary", article.summary)
+            builder.append("\(articlePath).body", article.body)
+            builder.append("\(articlePath).whatHappened", article.whatHappened)
+            builder.append("\(articlePath).whyItMatters", article.whyItMatters)
+            builder.appendList("\(articlePath).deeperAnalysis", article.deeperAnalysis ?? [])
+            builder.appendList("\(articlePath).contextPoints", article.contextPoints ?? [])
+            builder.appendList("\(articlePath).presentation.paragraphs", articlePresentation.paragraphs)
+            builder.appendList("\(articlePath).presentation.deeperAnalysis", articlePresentation.deeperAnalysis)
+            builder.appendList("\(articlePath).presentation.contextPoints", articlePresentation.contextPoints)
+            builder.append("\(articlePath).ttsText", MobileNewsArticle(researchArticle: article, topic: topic).ttsText)
+        }
+
+        return AutomationTranslationDocument(
+            contentKind: "researchIssue",
+            contentID: id,
+            fields: builder.fields
+        )
+    }
+
+    func translationPath(for article: ResearchNewsArticle, field: String) -> String {
+        "articles.\(article.id).\(field)"
+    }
+}
+
+extension SavedResearchArticle {
+    var automationTranslationDocument: AutomationTranslationDocument {
+        var builder = AutomationTranslationFieldBuilder()
+        builder.append("topic.title", topic.title)
+        builder.append("article.section", article.section.rawValue)
+        builder.append("article.title", article.title)
+        builder.append("article.summary", article.summary)
+        builder.append("article.body", article.body)
+        builder.append("article.whatHappened", article.whatHappened)
+        builder.append("article.whyItMatters", article.whyItMatters)
+        builder.appendList("article.deeperAnalysis", article.deeperAnalysis ?? [])
+        builder.appendList("article.contextPoints", article.contextPoints ?? [])
+        builder.appendList("article.tags", article.tags)
+
+        return AutomationTranslationDocument(
+            contentKind: "savedResearchArticle",
+            contentID: id,
+            fields: builder.fields
+        )
+    }
+}
+
+extension TodayHumorDigest {
+    var automationTranslationDocument: AutomationTranslationDocument {
+        var builder = AutomationTranslationFieldBuilder()
+        builder.append("title", title)
+        builder.append("summary", summary)
+        for item in items {
+            let itemPath = "items.\(item.id)"
+            builder.append("\(itemPath).title", item.title)
+            builder.append("\(itemPath).caption", item.caption)
+            builder.append("\(itemPath).sourceName", item.sourceName)
+            builder.append("\(itemPath).categoryLabel", item.categoryLabel)
+            builder.append("\(itemPath).postText", item.postText)
+            builder.append("\(itemPath).whyFunny", item.whyFunny)
+            builder.appendList("\(itemPath).tags", item.tags)
+            for highlight in item.commentHighlights ?? [] {
+                let highlightPath = "\(itemPath).comments.\(highlight.id)"
+                builder.append("\(highlightPath).summary", highlight.summary)
+                builder.append("\(highlightPath).explanation", highlight.explanation)
+                builder.append("\(highlightPath).originalBody", highlight.originalBody, sourceLanguageCode: "en")
+            }
+        }
+
+        return AutomationTranslationDocument(
+            contentKind: "redditRadar",
+            contentID: id,
+            sourceLanguage: "mixed",
+            fields: builder.fields
+        )
+    }
+}
+
+extension SavedTodayHumorItem {
+    var automationTranslationDocument: AutomationTranslationDocument {
+        var builder = AutomationTranslationFieldBuilder()
+        builder.append("digestTitle", digestTitle)
+        let itemPath = "item.\(item.id)"
+        builder.append("\(itemPath).title", item.title)
+        builder.append("\(itemPath).caption", item.caption)
+        builder.append("\(itemPath).sourceName", item.sourceName)
+        builder.append("\(itemPath).categoryLabel", item.categoryLabel)
+        builder.append("\(itemPath).postText", item.postText)
+        builder.append("\(itemPath).whyFunny", item.whyFunny)
+        builder.appendList("\(itemPath).tags", item.tags)
+        for highlight in item.commentHighlights ?? [] {
+            let highlightPath = "\(itemPath).comments.\(highlight.id)"
+            builder.append("\(highlightPath).summary", highlight.summary)
+            builder.append("\(highlightPath).explanation", highlight.explanation)
+            builder.append("\(highlightPath).originalBody", highlight.originalBody, sourceLanguageCode: "en")
+        }
+        return AutomationTranslationDocument(
+            contentKind: "savedRedditRadar",
+            contentID: id,
+            sourceLanguage: "mixed",
+            fields: builder.fields
+        )
     }
 }
 
@@ -668,6 +1877,12 @@ final class SpeechPlaybackService: NSObject, ObservableObject, AVSpeechSynthesiz
             keyNotes: keyNotes,
             tabLabel: tabLabel
         )
+    }
+
+    func failPlayback(message: String) {
+        stop()
+        errorMessage = message
+        playbackState = .failed(message)
     }
 
     func start(

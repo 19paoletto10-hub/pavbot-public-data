@@ -13,6 +13,8 @@ struct WeatherBriefView: View {
     @Environment(WeatherBriefStore.self) private var weatherStore
     @Environment(TodayHumorStore.self) private var humorStore
     @Environment(AppRouter.self) private var router
+    @Environment(AppLanguageStore.self) private var languageStore
+    @Environment(AutomationTranslationStore.self) private var translationStore
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @Environment(\.scenePhase) private var scenePhase
     @State private var rangeTileMode: WeatherRangeTileMode = .value
@@ -86,6 +88,9 @@ struct WeatherBriefView: View {
         .task {
             await loadTodayContent(minimumInterval: 20)
         }
+        .task(id: redditTranslationRegistrationKey) {
+            registerRedditTranslations()
+        }
         .task {
             await runTopHourRefreshLoop()
         }
@@ -124,6 +129,32 @@ struct WeatherBriefView: View {
                 .pavbotLargeObjectPresentation()
         }
         .pavbotTabInfo(.today)
+    }
+
+    private var redditTranslationRegistrationKey: String {
+        [
+            languageStore.preference.rawValue,
+            humorStore.digest?.automationTranslationDocument.id ?? "no-reddit-digest",
+            humorStore.recentDigests
+                .map { $0.automationTranslationDocument.id }
+                .joined(separator: "|"),
+            savedHumorStore.savedItems
+                .map { $0.automationTranslationDocument.id }
+                .joined(separator: "|")
+        ]
+        .joined(separator: "::")
+    }
+
+    private func registerRedditTranslations() {
+        if let digest = humorStore.digest {
+            translationStore.register(digest.automationTranslationDocument, language: languageStore.preference)
+        }
+        for digest in humorStore.recentDigests {
+            translationStore.register(digest.automationTranslationDocument, language: languageStore.preference)
+        }
+        for saved in savedHumorStore.savedItems {
+            translationStore.register(saved.automationTranslationDocument, language: languageStore.preference)
+        }
     }
 
     private func refreshCurrentWeather() async {
@@ -3355,7 +3386,7 @@ private struct TodayHumorCommentHighlightCard: View {
         VStack(alignment: .leading, spacing: 8) {
             headerLabel("Oryginalny komentarz", systemImage: "quote.opening")
 
-            PavbotTranslatedExternalText("\"\(originalBody)\"")
+            Text("\"\(originalBody)\"")
                 .font(.callout.weight(.semibold))
                 .foregroundStyle(.primary)
                 .lineSpacing(3)

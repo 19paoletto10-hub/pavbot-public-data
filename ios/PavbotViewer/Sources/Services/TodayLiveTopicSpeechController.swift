@@ -57,12 +57,33 @@ final class TodayLiveTopicSpeechController: ObservableObject {
         language: AppLanguagePreference,
         translationStore: AutomationTranslationStore
     ) async {
-        let sourceText = Self.speechText(for: topic, language: language)
-        let speechText = await translationStore.localizedText(sourceText, language: language)
+        let document = Self.translationDocument(for: topic)
+        let speechResolution = await translationStore.requiredLocalizedText(
+            Self.speechText(for: topic, language: .polish),
+            language: language,
+            document: document,
+            path: "speechText"
+        )
+        guard Self.canUseForSpeech(speechResolution, language: language) else {
+            playback.failPlayback(message: Self.translationPendingMessage(language: language))
+            return
+        }
+
+        let titleResolution = await translationStore.requiredLocalizedText(
+            topic.title,
+            language: language,
+            document: document,
+            path: "title"
+        )
+        guard Self.canUseForSpeech(titleResolution, language: language) else {
+            playback.failPlayback(message: Self.translationPendingMessage(language: language))
+            return
+        }
+
         playback.play(
             itemID: topic.id,
-            title: await translationStore.localizedText(topic.title, language: language),
-            text: speechText
+            title: titleResolution.text,
+            text: speechResolution.text
         )
     }
 
@@ -94,7 +115,7 @@ final class TodayLiveTopicSpeechController: ObservableObject {
         playback.stop()
     }
 
-    static func speechText(for topic: TodayLiveTopic, language: AppLanguagePreference = .polish) -> String {
+    nonisolated static func speechText(for topic: TodayLiveTopic, language: AppLanguagePreference = .polish) -> String {
         var sections: [String] = []
         let copy = SpeechCopy(language: language)
         append(topic.title, to: &sections)
@@ -107,23 +128,23 @@ final class TodayLiveTopicSpeechController: ObservableObject {
         return sections.joined(separator: "\n\n")
     }
 
-    private static func append(_ value: String, to sections: inout [String]) {
+    nonisolated private static func append(_ value: String, to sections: inout [String]) {
         guard let clean = cleanSpeechLine(value) else { return }
         sections.append(clean)
     }
 
-    private static func appendWithTitle(_ title: String, text: String, to sections: inout [String]) {
+    nonisolated private static func appendWithTitle(_ title: String, text: String, to sections: inout [String]) {
         guard let clean = cleanSpeechLine(text) else { return }
         sections.append("\(title). \(clean)")
     }
 
-    private static func appendList(title: String, items: [String], to sections: inout [String]) {
+    nonisolated private static func appendList(title: String, items: [String], to sections: inout [String]) {
         let cleanItems = items.compactMap(cleanSpeechLine)
         guard !cleanItems.isEmpty else { return }
         sections.append(([title + "."] + cleanItems).joined(separator: " "))
     }
 
-    private static func cleanSpeechLine(_ value: String) -> String? {
+    nonisolated private static func cleanSpeechLine(_ value: String) -> String? {
         let withoutURLs = value.replacingOccurrences(
             of: #"https?://\S+"#,
             with: "",
@@ -133,6 +154,42 @@ final class TodayLiveTopicSpeechController: ObservableObject {
             .replacingOccurrences(of: #"\s+"#, with: " ", options: .regularExpression)
             .trimmingCharacters(in: .whitespacesAndNewlines)
         return normalized.isEmpty ? nil : normalized
+    }
+
+    private static func translationDocument(for topic: TodayLiveTopic) -> AutomationTranslationDocument {
+        var builder = AutomationTranslationFieldBuilder()
+        builder.append("section", topic.section)
+        builder.append("title", topic.title)
+        builder.append("lead", topic.lead)
+        builder.appendList("keyFacts", topic.keyFacts)
+        builder.appendList("reactions", topic.reactions)
+        builder.append("whyItMatters", topic.whyItMatters)
+        builder.append("context", topic.context)
+        builder.appendList("watchNext", topic.watchNext)
+        builder.appendList("tags", topic.tags)
+        builder.append("speechText", speechText(for: topic, language: .polish))
+        return AutomationTranslationDocument(
+            contentKind: "pulseDayTopic",
+            contentID: topic.id,
+            fields: builder.fields
+        )
+    }
+
+    private static func canUseForSpeech(_ resolution: AutomationTranslationResolution, language: AppLanguagePreference) -> Bool {
+        guard language != .polish else { return true }
+        guard #available(iOS 18.0, *) else { return true }
+        return resolution.isTranslated
+    }
+
+    private static func translationPendingMessage(language: AppLanguagePreference) -> String {
+        switch language {
+        case .polish:
+            "Tekst do odczytu nie jest gotowy."
+        case .english:
+            "Preparing the translated text for reading. Try again in a moment."
+        case .russian:
+            "Перевод для чтения готовится. Попробуйте еще раз через мгновение."
+        }
     }
 
     private struct SpeechCopy {

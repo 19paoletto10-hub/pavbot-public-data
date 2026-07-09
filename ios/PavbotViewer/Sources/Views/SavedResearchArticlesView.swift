@@ -3,6 +3,8 @@ import SwiftUI
 struct SavedResearchArticlesView: View {
     @Environment(\.dismiss) private var dismiss
     @Environment(PavbotHaptics.self) private var haptics
+    @Environment(AppLanguageStore.self) private var languageStore
+    @Environment(AutomationTranslationStore.self) private var translationStore
     let store: SavedResearchArticleStore
 
     @State private var query = ""
@@ -61,6 +63,21 @@ struct SavedResearchArticlesView: View {
                 }
             }
         }
+        .task(id: translationRegistrationKey) {
+            for saved in store.savedArticles {
+                translationStore.register(saved.automationTranslationDocument, language: languageStore.preference)
+            }
+        }
+    }
+
+    private var translationRegistrationKey: String {
+        [
+            languageStore.preference.rawValue,
+            store.savedArticles
+                .map { $0.automationTranslationDocument.id }
+                .joined(separator: "|")
+        ]
+        .joined(separator: "::")
     }
 }
 
@@ -78,18 +95,18 @@ private struct SavedResearchArticleRow: View {
 
                 VStack(alignment: .leading, spacing: 4) {
                     HStack(spacing: 6) {
-                        Text(saved.topic.title.uppercased())
+                        PavbotTranslatedAutomationText(saved.topic.title.uppercased())
                             .font(.caption2.weight(.bold))
                             .foregroundStyle(saved.topic.tint)
-                        Text(saved.article.section.rawValue.uppercased())
+                        PavbotTranslatedAutomationText(saved.article.section.rawValue.uppercased())
                             .font(.caption2.weight(.bold))
                             .foregroundStyle(.secondary)
                     }
-                    Text(saved.article.title)
+                    PavbotTranslatedAutomationText(saved.article.title)
                         .font(.headline.weight(.semibold))
                         .foregroundStyle(.primary)
                         .fixedSize(horizontal: false, vertical: true)
-                    Text(saved.article.summary)
+                    PavbotTranslatedAutomationText(saved.article.summary)
                         .font(.callout)
                         .foregroundStyle(.secondary)
                         .lineSpacing(3)
@@ -131,18 +148,19 @@ private struct SavedResearchArticleDetailView: View {
                         StatusBadge(
                             text: "\(saved.topic.title) - \(saved.article.section.rawValue)",
                             systemImage: saved.topic.systemImage,
-                            tint: saved.topic.tint
+                            tint: saved.topic.tint,
+                            translatesAutomationText: true
                         )
-                        Text(saved.article.title)
+                        PavbotTranslatedAutomationText(saved.article.title)
                             .font(.title2.weight(.bold))
                             .fixedSize(horizontal: false, vertical: true)
-                        Text(saved.article.summary)
+                        PavbotTranslatedAutomationText(saved.article.summary)
                             .font(.headline)
                             .foregroundStyle(.secondary)
                             .lineSpacing(4)
                             .fixedSize(horizontal: false, vertical: true)
 
-                        Text(saved.article.body)
+                        PavbotTranslatedAutomationText(saved.article.body)
                             .font(.body)
                             .lineSpacing(5)
                             .fixedSize(horizontal: false, vertical: true)

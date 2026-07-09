@@ -107,12 +107,19 @@ struct ResearchArticleCardSnapshot: Identifiable, Equatable {
 
 struct ResearchArticleListSnapshot: Equatable {
     let issuePresentation: ResearchIssuePresentation
+    let translationDocument: AutomationTranslationDocument
     let articles: [ResearchArticleCardSnapshot]
     let topArticle: ResearchArticleCardSnapshot?
     let remainingArticles: [ResearchArticleCardSnapshot]
 
-    init(issue: ResearchNewsIssue, selectedSection: ResearchNewsSection?, searchText: String) {
+    init(
+        issue: ResearchNewsIssue,
+        translationDocument document: AutomationTranslationDocument,
+        selectedSection: ResearchNewsSection?,
+        searchText: String
+    ) {
         issuePresentation = ResearchIssuePresentation(issue: issue)
+        translationDocument = document
         let cardSnapshots = issue
             .filteredArticles(section: selectedSection, query: searchText)
             .map { article in
@@ -129,7 +136,9 @@ struct ResearchArticleListSnapshot: Equatable {
                         facts: articlePresentation.bullets,
                         sources: article.sources,
                         tags: articlePresentation.keywords.map(\.title),
-                        canReadAloud: false
+                        canReadAloud: false,
+                        translationDocument: document,
+                        translationPathPrefix: "articles.\(article.id)"
                     )
                 )
             }
@@ -161,6 +170,8 @@ struct ResearchView: View {
     @Environment(ManifestStore.self) private var store
     @Environment(AppRouter.self) private var router
     @Environment(PavbotAudioSessionCoordinator.self) private var audioCoordinator
+    @Environment(AppLanguageStore.self) private var languageStore
+    @Environment(AutomationTranslationStore.self) private var translationStore
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
 
     @State private var newsStore = ResearchNewsStore()
@@ -173,6 +184,8 @@ struct ResearchView: View {
     @State private var selectedMobileArticle: MobileNewsArticle?
     @State private var isSavedResearchPresented = false
     @State private var handledReportRouteRevision = 0
+    @State private var newsTranslationDocument: AutomationTranslationDocument?
+    @State private var mobileNewsTranslationDocument: AutomationTranslationDocument?
 
     var body: some View {
         @Bindable var router = router
@@ -213,6 +226,7 @@ struct ResearchView: View {
                         MobileNewsNativeContent(
                             packages: packages,
                             magazine: mobileNewsStore.magazine,
+                            translationDocument: mobileNewsTranslationDocument,
                             state: mobileNewsStore.state,
                             cacheNotice: mobileNewsStore.cacheNotice,
                             selectedArticle: $selectedMobileArticle,
@@ -228,6 +242,7 @@ struct ResearchView: View {
                             topic: router.selectedResearchTopic,
                             packages: packages,
                             issue: newsStore.issue,
+                            translationDocument: newsTranslationDocument,
                             state: newsStore.state,
                             cacheNotice: newsStore.cacheNotice,
                             selectedSection: $selectedSection,
@@ -263,6 +278,7 @@ struct ResearchView: View {
                 ResearchArticleReader(
                     article: article,
                     issue: issue,
+                    translationDocument: newsTranslationDocument ?? issue.automationTranslationDocument,
                     speechController: mobileSpeechController,
                     savedStore: savedResearchStore
                 )
@@ -274,6 +290,7 @@ struct ResearchView: View {
                 MobileNewsArticleReader(
                     article: article,
                     magazine: magazine,
+                    translationDocument: mobileNewsTranslationDocument ?? magazine.automationTranslationDocument,
                     speechController: mobileSpeechController,
                     savedStore: savedResearchStore
                 )
@@ -316,6 +333,9 @@ struct ResearchView: View {
         .task(id: researchLoadTrigger) {
             let trigger = researchLoadTrigger
             await handleResearchLoadTrigger(trigger)
+        }
+        .task(id: researchTranslationRegistrationKey) {
+            registerResearchTranslations()
         }
         .onAppear {
             mobileSpeechController.configureAudioCoordinator(audioCoordinator)
@@ -387,6 +407,15 @@ struct ResearchView: View {
         )
     }
 
+    private var researchTranslationRegistrationKey: String {
+        [
+            languageStore.preference.rawValue,
+            mobileNewsStore.magazine.map(mobileTranslationRegistrationToken) ?? "no-mobile-news",
+            newsStore.issue.map(researchTranslationRegistrationToken) ?? "no-issue"
+        ]
+        .joined(separator: "::")
+    }
+
     private var researchTopicSelection: Binding<ReportTopicKind> {
         Binding(
             get: { router.selectedResearchTopic },
@@ -424,6 +453,15 @@ struct ResearchView: View {
             selectedDay: router.selectedReportDay,
             selectedArtifactIDs: router.selectedReportArtifactIDs
         )
+        if let issue = newsStore.issue {
+            let document = issue.automationTranslationDocument
+            newsTranslationDocument = document
+            translationStore.register(
+                document,
+                language: languageStore.preference,
+                eagerPaths: researchVisibleTranslationPaths(for: issue)
+            )
+        }
     }
 
     private func loadMobileMagazine() async {
@@ -437,6 +475,15 @@ struct ResearchView: View {
             selectedDay: router.selectedReportDay,
             selectedArtifactIDs: router.selectedReportArtifactIDs
         )
+        if let magazine = mobileNewsStore.magazine {
+            let document = magazine.automationTranslationDocument
+            mobileNewsTranslationDocument = document
+            translationStore.register(
+                document,
+                language: languageStore.preference,
+                eagerPaths: researchVisibleTranslationPaths(for: magazine)
+            )
+        }
     }
 
     private func loadSelectedResearchContent() async {
@@ -445,6 +492,121 @@ struct ResearchView: View {
         } else {
             await loadNewsIssue()
         }
+    }
+
+    private func registerResearchTranslations() {
+        if let magazine = mobileNewsStore.magazine {
+            let document = mobileNewsTranslationDocument ?? magazine.automationTranslationDocument
+            mobileNewsTranslationDocument = document
+            translationStore.register(
+                document,
+                language: languageStore.preference,
+                eagerPaths: researchVisibleTranslationPaths(for: magazine)
+            )
+        }
+        if let issue = newsStore.issue {
+            let document = newsTranslationDocument ?? issue.automationTranslationDocument
+            newsTranslationDocument = document
+            translationStore.register(
+                document,
+                language: languageStore.preference,
+                eagerPaths: researchVisibleTranslationPaths(for: issue)
+            )
+        }
+    }
+
+    private func mobileTranslationRegistrationToken(for magazine: MobileNewsMagazine) -> String {
+        [
+            magazine.id,
+            "\(magazine.sections.count)",
+            "\(magazine.articleCount)",
+            magazine.sections.first?.id ?? "no-first-section",
+            magazine.sections.last?.id ?? "no-last-section"
+        ]
+        .joined(separator: "|")
+    }
+
+    private func researchTranslationRegistrationToken(for issue: ResearchNewsIssue) -> String {
+        [
+            issue.id,
+            "\(issue.articles.count)",
+            issue.articles.first?.id ?? "no-first-article",
+            issue.articles.last?.id ?? "no-last-article"
+        ]
+        .joined(separator: "|")
+    }
+
+    private func researchVisibleTranslationPaths(for magazine: MobileNewsMagazine) -> Set<String> {
+        var paths = Set<String>(["headline", "status"])
+        for index in magazine.leadParagraphs.indices {
+            paths.insert("leadParagraphs.\(index)")
+        }
+        for section in magazine.sections {
+            let sectionPath = "sections.\(section.id)"
+            paths.insert("\(sectionPath).title")
+            paths.insert("\(sectionPath).summary")
+            for article in section.articles.prefix(3) {
+                let articlePath = "\(sectionPath).articles.\(article.id)"
+                paths.insert("\(articlePath).section")
+                paths.insert("\(articlePath).title")
+                paths.insert("\(articlePath).lead")
+                for index in article.facts.indices {
+                    paths.insert("\(articlePath).facts.\(index)")
+                }
+                for index in article.tags.indices {
+                    paths.insert("\(articlePath).tags.\(index)")
+                }
+            }
+        }
+        return paths
+    }
+
+    private func researchVisibleTranslationPaths(for issue: ResearchNewsIssue) -> Set<String> {
+        let presentation = ResearchIssuePresentation(issue: issue)
+        var paths = Set<String>([
+            "status",
+            "lead",
+            "presentation.eyebrow",
+            "presentation.title",
+            "presentation.lead",
+            "presentation.signalsTitle",
+            "presentation.keywordsTitle"
+        ])
+        for index in presentation.leadParagraphs.indices {
+            paths.insert("presentation.leadParagraphs.\(index)")
+        }
+        for index in presentation.quickPoints.indices {
+            paths.insert("presentation.quickPoints.\(index)")
+        }
+        for signal in presentation.signals {
+            let signalPath = "presentation.signals.\(signal.id)"
+            paths.insert("\(signalPath).section")
+            paths.insert("\(signalPath).title")
+            paths.insert("\(signalPath).summary")
+            for index in signal.bullets.indices {
+                paths.insert("\(signalPath).bullets.\(index)")
+            }
+        }
+        for keyword in presentation.keywords {
+            paths.insert("presentation.keywords.\(keyword.id).title")
+        }
+
+        let visibleArticles = issue.filteredArticles(section: selectedSection, query: "").prefix(6)
+        for article in visibleArticles {
+            let articlePresentation = ResearchArticlePresentation(article: article, topic: issue.topic)
+            let articlePath = "articles.\(article.id)"
+            paths.insert("\(articlePath).section")
+            paths.insert("\(articlePath).presentation.title")
+            paths.insert("\(articlePath).presentation.standfirst")
+            paths.insert("\(articlePath).presentation.summary")
+            for index in articlePresentation.bullets.indices {
+                paths.insert("\(articlePath).presentation.bullets.\(index)")
+            }
+            for index in article.tags.indices {
+                paths.insert("\(articlePath).tags.\(index)")
+            }
+        }
+        return paths
     }
 
     private func syncSelectedReportDayToLatestIfNeeded(
@@ -783,6 +945,7 @@ private struct ResearchNativeContent: View {
     let topic: ReportTopicKind
     let packages: [TopicReportPackage]
     let issue: ResearchNewsIssue?
+    let translationDocument: AutomationTranslationDocument?
     let state: ResearchNewsStore.LoadState
     let cacheNotice: String?
     @Binding var selectedSection: ResearchNewsSection?
@@ -847,6 +1010,7 @@ private struct ResearchNativeContent: View {
 
         ResearchArticleSnapshotHost(
             issue: issue,
+            translationDocument: translationDocument ?? issue.automationTranslationDocument,
             topic: topic,
             packageCount: packages.count,
             selectedSection: $selectedSection,
@@ -868,16 +1032,71 @@ private struct ResearchNativeContent: View {
 
 private struct ResearchArticleSnapshotHost: View {
     let issue: ResearchNewsIssue
+    let translationDocument: AutomationTranslationDocument
     let topic: ReportTopicKind
     let packageCount: Int
     @Binding var selectedSection: ResearchNewsSection?
     @Binding var selectedArticle: ResearchNewsArticle?
     let speechController: MobileNewsSpeechController
     let savedStore: SavedResearchArticleStore
+    @State private var snapshot: ResearchArticleListSnapshot
+    @State private var snapshotKey: ResearchArticleSnapshotKey
+
+    init(
+        issue: ResearchNewsIssue,
+        translationDocument: AutomationTranslationDocument,
+        topic: ReportTopicKind,
+        packageCount: Int,
+        selectedSection: Binding<ResearchNewsSection?>,
+        selectedArticle: Binding<ResearchNewsArticle?>,
+        speechController: MobileNewsSpeechController,
+        savedStore: SavedResearchArticleStore
+    ) {
+        self.issue = issue
+        self.translationDocument = translationDocument
+        self.topic = topic
+        self.packageCount = packageCount
+        _selectedSection = selectedSection
+        _selectedArticle = selectedArticle
+        self.speechController = speechController
+        self.savedStore = savedStore
+
+        let initialKey = ResearchArticleSnapshotKey(
+            issue: issue,
+            selectedSection: selectedSection.wrappedValue,
+            searchText: ""
+        )
+        _snapshotKey = State(initialValue: initialKey)
+        _snapshot = State(
+            initialValue: ResearchArticleListSnapshot(
+                issue: issue,
+                translationDocument: translationDocument,
+                selectedSection: selectedSection.wrappedValue,
+                searchText: ""
+            )
+        )
+    }
 
     var body: some View {
-        let snapshot = ResearchArticleListSnapshot(issue: issue, selectedSection: selectedSection, searchText: "")
         snapshotContent(snapshot)
+            .task(id: currentSnapshotKey) {
+                rebuildSnapshotIfNeeded(for: currentSnapshotKey)
+            }
+    }
+
+    private var currentSnapshotKey: ResearchArticleSnapshotKey {
+        ResearchArticleSnapshotKey(issue: issue, selectedSection: selectedSection, searchText: "")
+    }
+
+    private func rebuildSnapshotIfNeeded(for key: ResearchArticleSnapshotKey) {
+        guard key != snapshotKey else { return }
+        snapshot = ResearchArticleListSnapshot(
+            issue: issue,
+            translationDocument: translationDocument,
+            selectedSection: selectedSection,
+            searchText: ""
+        )
+        snapshotKey = key
     }
 
     @ViewBuilder
@@ -885,7 +1104,8 @@ private struct ResearchArticleSnapshotHost: View {
         ResearchIssueHero(
             issue: issue,
             presentation: articleSnapshot.issuePresentation,
-            packageCount: packageCount
+            packageCount: packageCount,
+            translationDocument: articleSnapshot.translationDocument
         )
 
         MobileNewsSpeechMiniPlayerHost(speechController: speechController)
@@ -939,6 +1159,7 @@ private struct ResearchArticleSnapshotHost: View {
 private struct MobileNewsNativeContent: View {
     let packages: [TopicReportPackage]
     let magazine: MobileNewsMagazine?
+    let translationDocument: AutomationTranslationDocument?
     let state: MobileNewsStore.LoadState
     let cacheNotice: String?
     @Binding var selectedArticle: MobileNewsArticle?
@@ -1001,7 +1222,9 @@ private struct MobileNewsNativeContent: View {
             PavbotCacheNoticeBanner(text: cacheNotice)
         }
 
-        MobileNewsHero(magazine: magazine, packageCount: packages.count)
+        let document = translationDocument ?? magazine.automationTranslationDocument
+
+        MobileNewsHero(magazine: magazine, translationDocument: document, packageCount: packages.count)
 
         MobileNewsSpeechMiniPlayerHost(speechController: speechController)
 
@@ -1021,6 +1244,7 @@ private struct MobileNewsNativeContent: View {
                     MobileNewsSectionBlock(
                         section: section,
                         magazine: magazine,
+                        translationDocument: document,
                         selectedArticle: $selectedArticle,
                         speechController: speechController,
                         savedStore: savedStore
@@ -1255,6 +1479,7 @@ private struct MobileNewsHero: View {
     @Environment(AppLanguageStore.self) private var languageStore
 
     let magazine: MobileNewsMagazine
+    let translationDocument: AutomationTranslationDocument
     let packageCount: Int
     @State private var isContextExpanded = false
 
@@ -1282,7 +1507,11 @@ private struct MobileNewsHero: View {
                         .font(.footnote.weight(.semibold))
                         .foregroundStyle(.secondary)
                         .textCase(.uppercase)
-                    PavbotTranslatedAutomationText(magazine.headline)
+                    PavbotTranslatedAutomationText(
+                        magazine.headline,
+                        document: translationDocument,
+                        path: "headline"
+                    )
                         .font(.title2.weight(.bold))
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -1317,7 +1546,14 @@ private struct MobileNewsHero: View {
             }
 
             HStack(spacing: 8) {
-                StatusBadge(text: magazine.status, systemImage: "checkmark.seal.fill", tint: .green)
+                StatusBadge(
+                    text: magazine.status,
+                    systemImage: "checkmark.seal.fill",
+                    tint: .green,
+                    translatesAutomationText: true,
+                    translationDocument: translationDocument,
+                    translationPath: "status"
+                )
                 if magazine.pdfArtifact != nil {
                     StatusBadge(text: "PDF", systemImage: "doc.richtext.fill", tint: .red)
                 }
@@ -1329,7 +1565,11 @@ private struct MobileNewsHero: View {
             DisclosureGroup(isExpanded: $isContextExpanded) {
                 VStack(alignment: .leading, spacing: 10) {
                     ForEach(Array(magazine.leadParagraphs.enumerated()), id: \.offset) { index, paragraph in
-                        PavbotTranslatedAutomationText(paragraph)
+                        PavbotTranslatedAutomationText(
+                            paragraph,
+                            document: translationDocument,
+                            path: "leadParagraphs.\(index)"
+                        )
                             .font(index == 0 ? .body.weight(.semibold) : .callout)
                             .foregroundStyle(index == 0 ? .primary : .secondary)
                             .lineSpacing(4)
@@ -1366,6 +1606,7 @@ private struct MobileNewsHero: View {
 private struct MobileNewsSectionBlock: View {
     let section: MobileNewsSection
     let magazine: MobileNewsMagazine
+    let translationDocument: AutomationTranslationDocument
     @Binding var selectedArticle: MobileNewsArticle?
     let speechController: MobileNewsSpeechController
     let savedStore: SavedResearchArticleStore
@@ -1388,14 +1629,22 @@ private struct MobileNewsSectionBlock: View {
                     .frame(width: 36, height: 36)
                     .background(Color.orange.opacity(0.12), in: RoundedRectangle(cornerRadius: 10, style: .continuous))
                 VStack(alignment: .leading, spacing: 3) {
-                    PavbotTranslatedAutomationText(section.title)
+                    PavbotTranslatedAutomationText(
+                        section.title,
+                        document: translationDocument,
+                        path: "sections.\(section.id).title"
+                    )
                         .font(.headline.weight(.bold))
                     if let summary = section.displaySummary {
                         Text(LocalizedStringKey("Stan sekcji"))
                             .font(.caption2.weight(.bold))
                             .foregroundStyle(.orange)
                             .textCase(.uppercase)
-                        PavbotTranslatedAutomationText(summary)
+                        PavbotTranslatedAutomationText(
+                            summary,
+                            document: translationDocument,
+                            path: "sections.\(section.id).summary"
+                        )
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -1408,6 +1657,7 @@ private struct MobileNewsSectionBlock: View {
                     MobileNewsArticleRow(
                         article: topArticle,
                         magazine: magazine,
+                        translationDocument: translationDocument,
                         selectedArticle: $selectedArticle,
                         speechController: speechController,
                         savedStore: savedStore,
@@ -1419,6 +1669,7 @@ private struct MobileNewsSectionBlock: View {
                     MobileNewsArticleRow(
                         article: article,
                         magazine: magazine,
+                        translationDocument: translationDocument,
                         selectedArticle: $selectedArticle,
                         speechController: speechController,
                         savedStore: savedStore
@@ -1432,6 +1683,7 @@ private struct MobileNewsSectionBlock: View {
 private struct MobileNewsArticleRow: View {
     let article: MobileNewsArticle
     let magazine: MobileNewsMagazine
+    let translationDocument: AutomationTranslationDocument
     @Binding var selectedArticle: MobileNewsArticle?
     let speechController: MobileNewsSpeechController
     let savedStore: SavedResearchArticleStore
@@ -1445,10 +1697,15 @@ private struct MobileNewsArticleRow: View {
         !article.ttsText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
 
+    private func translationPath(_ field: String) -> String {
+        magazine.translationPath(for: article, field: field)
+    }
+
     var body: some View {
         MobileNewsArticleSpeechActionHost(
             article: article,
             magazine: magazine,
+            translationDocument: translationDocument,
             selectedArticle: $selectedArticle,
             speechController: speechController,
             isFeatured: isFeatured,
@@ -1464,6 +1721,7 @@ private struct MobileNewsArticleSpeechActionHost: View {
     @Environment(PavbotHaptics.self) private var haptics
     let article: MobileNewsArticle
     let magazine: MobileNewsMagazine
+    let translationDocument: AutomationTranslationDocument
     @Binding var selectedArticle: MobileNewsArticle?
     @ObservedObject var speechController: MobileNewsSpeechController
     let isFeatured: Bool
@@ -1482,6 +1740,8 @@ private struct MobileNewsArticleSpeechActionHost: View {
             } label: {
                 MobileNewsArticleCard(
                     article: article,
+                    magazine: magazine,
+                    translationDocument: translationDocument,
                     isSaved: isSaved,
                     isActiveRead: isCurrent,
                     isFeatured: isFeatured
@@ -1588,9 +1848,31 @@ private struct MobileNewsArticleSpeechActionHost: View {
 
 private struct MobileNewsArticleCard: View {
     let article: MobileNewsArticle
+    let magazine: MobileNewsMagazine
+    let translationDocument: AutomationTranslationDocument
     var isSaved = false
     var isActiveRead = false
     var isFeatured = false
+
+    private var translationPathPrefix: String {
+        let titlePath = magazine.translationPath(for: article, field: "title")
+        return String(titlePath.dropLast(".title".count))
+    }
+
+    private var translationFieldPaths: [String: String] {
+        var paths: [String: String] = [
+            "section": magazine.translationPath(for: article, field: "section"),
+            "presentation.title": magazine.translationPath(for: article, field: "title"),
+            "presentation.standfirst": magazine.translationPath(for: article, field: "lead")
+        ]
+        for index in article.facts.indices {
+            paths["presentation.bullets.\(index)"] = magazine.translationPath(for: article, field: "facts.\(index)")
+        }
+        for index in article.tags.indices {
+            paths["tags.\(index)"] = magazine.translationPath(for: article, field: "tags.\(index)")
+        }
+        return paths
+    }
 
     var body: some View {
         PavbotNewsStoryCard(
@@ -1604,7 +1886,10 @@ private struct MobileNewsArticleCard: View {
                 facts: article.facts,
                 sources: article.sources,
                 tags: article.tags,
-                canReadAloud: !article.ttsText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+                canReadAloud: !article.ttsText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
+                translationDocument: translationDocument,
+                translationPathPrefix: translationPathPrefix,
+                translationFieldPaths: translationFieldPaths
             ),
             tint: .orange,
             isSaved: isSaved,
@@ -1892,6 +2177,7 @@ private struct MobileNewsArticleReader: View {
 
     let article: MobileNewsArticle
     let magazine: MobileNewsMagazine
+    let translationDocument: AutomationTranslationDocument
     @ObservedObject var speechController: MobileNewsSpeechController
     let savedStore: SavedResearchArticleStore
 
@@ -1903,16 +2189,35 @@ private struct MobileNewsArticleReader: View {
         !article.ttsText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
     }
 
+    private func translationPath(_ field: String) -> String {
+        magazine.translationPath(for: article, field: field)
+    }
+
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 18) {
                     VStack(alignment: .leading, spacing: 13) {
-                        StatusBadge(text: article.section, systemImage: "newspaper.fill", tint: .orange, translatesAutomationText: true)
-                        PavbotTranslatedAutomationText(article.title)
+                        StatusBadge(
+                            text: article.section,
+                            systemImage: "newspaper.fill",
+                            tint: .orange,
+                            translatesAutomationText: true,
+                            translationDocument: translationDocument,
+                            translationPath: translationPath("section")
+                        )
+                        PavbotTranslatedAutomationText(
+                            article.title,
+                            document: translationDocument,
+                            path: translationPath("title")
+                        )
                             .font(.title2.weight(.bold))
                             .fixedSize(horizontal: false, vertical: true)
-                        PavbotTranslatedAutomationText(article.lead)
+                        PavbotTranslatedAutomationText(
+                            article.lead,
+                            document: translationDocument,
+                            path: translationPath("lead")
+                        )
                             .font(.headline)
                             .foregroundStyle(.secondary)
                             .lineSpacing(4)
@@ -1923,9 +2228,24 @@ private struct MobileNewsArticleReader: View {
                         }
 
                         Divider()
-                        MobileNewsTextSection(title: "Fakty", items: article.facts)
-                        MobileNewsTextBlock(title: "Analiza", text: article.analysis)
-                        MobileNewsTextBlock(title: "Dlaczego to ważne", text: article.whyItMatters)
+                        MobileNewsTextSection(
+                            title: "Fakty",
+                            items: article.facts,
+                            document: translationDocument,
+                            pathPrefix: translationPath("facts")
+                        )
+                        MobileNewsTextBlock(
+                            title: "Analiza",
+                            text: article.analysis,
+                            document: translationDocument,
+                            path: translationPath("analysis")
+                        )
+                        MobileNewsTextBlock(
+                            title: "Dlaczego to ważne",
+                            text: article.whyItMatters,
+                            document: translationDocument,
+                            path: translationPath("whyItMatters")
+                        )
                     }
                     .padding(18)
                     .frame(maxWidth: .infinity, alignment: .leading)
@@ -2105,6 +2425,8 @@ private struct MobileNewsPodcastSpeechRatePicker: View {
 private struct MobileNewsTextSection: View {
     let title: String
     let items: [String]
+    var document: AutomationTranslationDocument?
+    var pathPrefix: String?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 9) {
@@ -2112,13 +2434,17 @@ private struct MobileNewsTextSection: View {
                 .font(.caption.weight(.bold))
                 .foregroundStyle(.secondary)
                 .textCase(.uppercase)
-            ForEach(items, id: \.self) { item in
+            ForEach(Array(items.enumerated()), id: \.offset) { index, item in
                 HStack(alignment: .top, spacing: 8) {
                     Circle()
                         .fill(Color.orange)
                         .frame(width: 5, height: 5)
                         .padding(.top, 7)
-                    PavbotTranslatedAutomationText(item)
+                    PavbotTranslatedAutomationText(
+                        item,
+                        document: document,
+                        path: pathPrefix.map { "\($0).\(index)" }
+                    )
                         .font(.callout)
                         .foregroundStyle(.primary)
                         .lineSpacing(3)
@@ -2132,6 +2458,8 @@ private struct MobileNewsTextSection: View {
 private struct MobileNewsTextBlock: View {
     let title: String
     let text: String
+    var document: AutomationTranslationDocument?
+    var path: String?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
@@ -2139,7 +2467,7 @@ private struct MobileNewsTextBlock: View {
                 .font(.caption.weight(.bold))
                 .foregroundStyle(.secondary)
                 .textCase(.uppercase)
-            PavbotTranslatedAutomationText(text)
+            PavbotTranslatedAutomationText(text, document: document, path: path)
                 .font(.callout)
                 .lineSpacing(4)
                 .fixedSize(horizontal: false, vertical: true)
@@ -2178,18 +2506,30 @@ private struct ResearchIssueHero: View {
     let issue: ResearchNewsIssue
     let presentation: ResearchIssuePresentation
     let packageCount: Int
+    let translationDocument: AutomationTranslationDocument
     @State private var isContextExpanded = false
 
     var body: some View {
         VStack(alignment: .leading, spacing: 18) {
             HStack(alignment: .top, spacing: 12) {
                 VStack(alignment: .leading, spacing: 8) {
-                    StatusBadge(text: presentation.eyebrow, systemImage: "newspaper.fill", tint: issue.topic.tint)
+                    StatusBadge(
+                        text: presentation.eyebrow,
+                        systemImage: "newspaper.fill",
+                        tint: issue.topic.tint,
+                        translatesAutomationText: true,
+                        translationDocument: translationDocument,
+                        translationPath: "presentation.eyebrow"
+                    )
                     Text(issue.displayDate.isEmpty ? issue.topic.title : issue.displayDate)
                         .font(.footnote.weight(.semibold))
                         .foregroundStyle(.secondary)
                         .textCase(.uppercase)
-                    PavbotTranslatedAutomationText(presentation.title)
+                    PavbotTranslatedAutomationText(
+                        presentation.title,
+                        document: translationDocument,
+                        path: "presentation.title"
+                    )
                         .font(.title2.weight(.bold))
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -2202,9 +2542,19 @@ private struct ResearchIssueHero: View {
                     .accessibilityHidden(true)
             }
 
-            ResearchSignalSummary(presentation: presentation, tint: issue.topic.tint)
+            ResearchSignalSummary(
+                issue: issue,
+                presentation: presentation,
+                tint: issue.topic.tint,
+                translationDocument: translationDocument
+            )
 
-            ResearchKeywordRail(keywords: presentation.keywords, tint: issue.topic.tint)
+            ResearchKeywordRail(
+                issue: issue,
+                keywords: presentation.keywords,
+                tint: issue.topic.tint,
+                translationDocument: translationDocument
+            )
 
             HStack(spacing: 10) {
                 MetricTile(title: "Newsy", value: "\(issue.articles.count)", systemImage: "doc.text.fill", tint: issue.topic.tint)
@@ -2213,7 +2563,14 @@ private struct ResearchIssueHero: View {
             }
 
             HStack(spacing: 8) {
-                StatusBadge(text: issue.status, systemImage: "checkmark.seal.fill", tint: .green)
+                StatusBadge(
+                    text: issue.status,
+                    systemImage: "checkmark.seal.fill",
+                    tint: .green,
+                    translatesAutomationText: true,
+                    translationDocument: translationDocument,
+                    translationPath: "status"
+                )
                 if issue.audioArtifact != nil {
                     StatusBadge(text: "Audio", systemImage: "play.circle.fill", tint: .purple)
                 }
@@ -2230,10 +2587,15 @@ private struct ResearchIssueHero: View {
                     ResearchLeadParagraphs(
                         paragraphs: presentation.leadParagraphs,
                         keywords: presentation.keywords,
-                        tint: issue.topic.tint
+                        tint: issue.topic.tint,
+                        translationDocument: translationDocument
                     )
 
-                    ResearchQuickPoints(points: presentation.quickPoints, tint: issue.topic.tint)
+                    ResearchQuickPoints(
+                        points: presentation.quickPoints,
+                        tint: issue.topic.tint,
+                        translationDocument: translationDocument
+                    )
                 }
                 .padding(.top, 8)
             } label: {
@@ -2267,6 +2629,7 @@ private struct ResearchLeadParagraphs: View {
     let paragraphs: [String]
     let keywords: [ResearchIssueKeyword]
     let tint: Color
+    let translationDocument: AutomationTranslationDocument
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -2275,7 +2638,9 @@ private struct ResearchLeadParagraphs: View {
                     text: paragraph,
                     keywords: keywords,
                     tint: tint,
-                    font: index == 0 ? .body.weight(.semibold) : .callout
+                    font: index == 0 ? .body.weight(.semibold) : .callout,
+                    document: translationDocument,
+                    path: "presentation.leadParagraphs.\(index)"
                 )
                 .foregroundStyle(index == 0 ? .primary : .secondary)
             }
@@ -2287,6 +2652,7 @@ private struct ResearchLeadParagraphs: View {
 private struct ResearchQuickPoints: View {
     let points: [String]
     let tint: Color
+    let translationDocument: AutomationTranslationDocument
 
     var body: some View {
         if !points.isEmpty {
@@ -2297,14 +2663,18 @@ private struct ResearchQuickPoints: View {
                     .textCase(.uppercase)
 
                 VStack(alignment: .leading, spacing: 7) {
-                    ForEach(points, id: \.self) { point in
+                    ForEach(Array(points.enumerated()), id: \.offset) { index, point in
                         HStack(alignment: .top, spacing: 8) {
                             Circle()
                                 .fill(tint)
                                 .frame(width: 5, height: 5)
                                 .padding(.top, 7)
                                 .accessibilityHidden(true)
-                            PavbotTranslatedAutomationText(point)
+                            PavbotTranslatedAutomationText(
+                                point,
+                                document: translationDocument,
+                                path: "presentation.quickPoints.\(index)"
+                            )
                                 .font(.callout)
                                 .foregroundStyle(.primary)
                                 .lineSpacing(3)
@@ -2325,10 +2695,12 @@ struct HighlightedResearchText: View {
     let tint: Color
     var font: Font = .body
     var lineLimit: Int?
+    var document: AutomationTranslationDocument?
+    var path: String?
 
     var body: some View {
         if languageStore.preference.translationTargetIdentifier != nil {
-            PavbotTranslatedAutomationText(text)
+            PavbotTranslatedAutomationText(text, document: document, path: path)
                 .font(font)
                 .foregroundStyle(.primary)
                 .lineSpacing(4)
@@ -2348,18 +2720,34 @@ struct HighlightedResearchText: View {
 }
 
 private struct ResearchSignalSummary: View {
+    let issue: ResearchNewsIssue
     let presentation: ResearchIssuePresentation
     let tint: Color
+    let translationDocument: AutomationTranslationDocument
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Label(LocalizedStringKey(presentation.signalsTitle), systemImage: "bolt.fill")
+            HStack(spacing: 8) {
+                Image(systemName: "bolt.fill")
+                    .font(.subheadline.weight(.bold))
+                    .foregroundStyle(tint)
+                    .accessibilityHidden(true)
+                PavbotTranslatedAutomationText(
+                    presentation.signalsTitle,
+                    document: translationDocument,
+                    path: "presentation.signalsTitle"
+                )
                 .font(.subheadline.weight(.bold))
                 .foregroundStyle(tint)
+            }
 
             VStack(spacing: 10) {
                 ForEach(presentation.signals) { signal in
-                    ResearchSignalRow(signal: signal, tint: tint)
+                    ResearchSignalRow(
+                        signal: signal,
+                        tint: tint,
+                        translationDocument: translationDocument
+                    )
 
                     if signal.id != presentation.signals.last?.id {
                         Divider()
@@ -2374,6 +2762,7 @@ private struct ResearchSignalSummary: View {
 private struct ResearchSignalRow: View {
     let signal: ResearchIssueSignal
     let tint: Color
+    let translationDocument: AutomationTranslationDocument
 
     var body: some View {
         HStack(alignment: .top, spacing: 12) {
@@ -2385,20 +2774,38 @@ private struct ResearchSignalRow: View {
                 .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 4) {
-                PavbotTranslatedAutomationText(signal.section.rawValue)
+                PavbotTranslatedAutomationText(
+                    signal.section.rawValue,
+                    document: translationDocument,
+                    path: "presentation.signals.\(signal.id).section"
+                )
                     .font(.caption2.weight(.bold))
                     .foregroundStyle(tint)
                     .textCase(.uppercase)
-                PavbotTranslatedAutomationText(signal.title)
+                PavbotTranslatedAutomationText(
+                    signal.title,
+                    document: translationDocument,
+                    path: "presentation.signals.\(signal.id).title"
+                )
                     .font(.subheadline.weight(.semibold))
                     .foregroundStyle(.primary)
                     .fixedSize(horizontal: false, vertical: true)
-                PavbotTranslatedAutomationText(signal.summary)
+                PavbotTranslatedAutomationText(
+                    signal.summary,
+                    document: translationDocument,
+                    path: "presentation.signals.\(signal.id).summary"
+                )
                     .font(.footnote)
                     .foregroundStyle(.secondary)
                     .lineSpacing(3)
                     .fixedSize(horizontal: false, vertical: true)
-                ResearchArticleBulletList(points: signal.bullets, tint: tint, font: .footnote)
+                ResearchArticleBulletList(
+                    points: signal.bullets,
+                    tint: tint,
+                    font: .footnote,
+                    document: translationDocument,
+                    pathPrefix: "presentation.signals.\(signal.id).bullets"
+                )
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -2410,18 +2817,24 @@ private struct ResearchArticleBulletList: View {
     let points: [String]
     let tint: Color
     var font: Font = .callout
+    var document: AutomationTranslationDocument?
+    var pathPrefix: String?
 
     var body: some View {
         if !points.isEmpty {
             VStack(alignment: .leading, spacing: 7) {
-                ForEach(points, id: \.self) { point in
+                ForEach(Array(points.enumerated()), id: \.offset) { index, point in
                     HStack(alignment: .top, spacing: 8) {
                         Image(systemName: "checkmark.circle.fill")
                             .font(.caption.weight(.semibold))
                             .foregroundStyle(tint)
                             .padding(.top, 2)
                             .accessibilityHidden(true)
-                        PavbotTranslatedAutomationText(point)
+                        PavbotTranslatedAutomationText(
+                            point,
+                            document: document,
+                            path: pathPrefix.map { "\($0).\(index)" }
+                        )
                             .font(font)
                             .foregroundStyle(.secondary)
                             .lineSpacing(3)
@@ -2435,8 +2848,10 @@ private struct ResearchArticleBulletList: View {
 }
 
 private struct ResearchKeywordRail: View {
+    let issue: ResearchNewsIssue
     let keywords: [ResearchIssueKeyword]
     let tint: Color
+    let translationDocument: AutomationTranslationDocument
 
     var body: some View {
         if !keywords.isEmpty {
@@ -2453,7 +2868,10 @@ private struct ResearchKeywordRail: View {
                                 title: keyword.title,
                                 systemImage: keyword.systemImage,
                                 tint: tint,
-                                accessibilityPrefix: "Słowo kluczowe"
+                                accessibilityPrefix: "Słowo kluczowe",
+                                translatesAutomationText: true,
+                                translationDocument: translationDocument,
+                                translationPath: "presentation.keywords.\(keyword.id).title"
                             )
                         }
                     }
@@ -2597,10 +3015,12 @@ private struct ResearchArticleReader: View {
 
     private let presentation: ResearchArticlePresentation
     private let speechArticle: MobileNewsArticle
+    private let translationDocument: AutomationTranslationDocument
 
     init(
         article: ResearchNewsArticle,
         issue: ResearchNewsIssue,
+        translationDocument: AutomationTranslationDocument,
         speechController: MobileNewsSpeechController,
         savedStore: SavedResearchArticleStore
     ) {
@@ -2610,6 +3030,7 @@ private struct ResearchArticleReader: View {
         self.savedStore = savedStore
         self.presentation = ResearchArticlePresentation(article: article, topic: issue.topic)
         self.speechArticle = MobileNewsArticle(researchArticle: article, topic: issue.topic)
+        self.translationDocument = translationDocument
     }
 
     private var canSave: Bool {
@@ -2625,28 +3046,48 @@ private struct ResearchArticleReader: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 18) {
                     VStack(alignment: .leading, spacing: 10) {
-                        StatusBadge(text: article.section.rawValue, systemImage: article.section.systemImage, tint: issue.topic.tint, translatesAutomationText: true)
-                        PavbotTranslatedAutomationText(presentation.title)
+                        StatusBadge(
+                            text: article.section.rawValue,
+                            systemImage: article.section.systemImage,
+                            tint: issue.topic.tint,
+                            translatesAutomationText: true,
+                            translationDocument: translationDocument,
+                            translationPath: issue.translationPath(for: article, field: "section")
+                        )
+                        PavbotTranslatedAutomationText(
+                            presentation.title,
+                            document: translationDocument,
+                            path: issue.translationPath(for: article, field: "presentation.title")
+                        )
                             .font(.title2.weight(.bold))
                             .fixedSize(horizontal: false, vertical: true)
                         HighlightedResearchText(
                             text: presentation.standfirst,
                             keywords: presentation.keywords,
                             tint: issue.topic.tint,
-                            font: .headline
+                            font: .headline,
+                            document: translationDocument,
+                            path: issue.translationPath(for: article, field: "presentation.standfirst")
                         )
                         ResearchArticleSpeechControlsHost(
                             article: speechArticle,
                             speechController: speechController,
                             destination: .researchArticle(topic: issue.topic, articleID: article.id)
                         )
-                        ResearchArticleBulletList(points: presentation.bullets, tint: issue.topic.tint)
+                        ResearchArticleBulletList(
+                            points: presentation.bullets,
+                            tint: issue.topic.tint,
+                            document: translationDocument,
+                            pathPrefix: issue.translationPath(for: article, field: "presentation.bullets")
+                        )
                         Divider()
                         ResearchArticleBody(
                             title: "Pełny opis",
                             paragraphs: presentation.paragraphs,
                             keywords: presentation.keywords,
-                            tint: issue.topic.tint
+                            tint: issue.topic.tint,
+                            document: translationDocument,
+                            pathPrefix: issue.translationPath(for: article, field: "presentation.paragraphs")
                         )
                     }
                     .padding(18)
@@ -2704,6 +3145,8 @@ private struct ResearchArticleBody: View {
     let paragraphs: [String]
     let keywords: [ResearchIssueKeyword]
     let tint: Color
+    var document: AutomationTranslationDocument?
+    var pathPrefix: String?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
@@ -2712,8 +3155,15 @@ private struct ResearchArticleBody: View {
                 .foregroundStyle(.secondary)
                 .textCase(.uppercase)
 
-            ForEach(Array(paragraphs.enumerated()), id: \.offset) { _, paragraph in
-                HighlightedResearchText(text: paragraph, keywords: keywords, tint: tint, font: .callout)
+            ForEach(Array(paragraphs.enumerated()), id: \.offset) { index, paragraph in
+                HighlightedResearchText(
+                    text: paragraph,
+                    keywords: keywords,
+                    tint: tint,
+                    font: .callout,
+                    document: document,
+                    path: pathPrefix.map { "\($0).\(index)" }
+                )
                     .foregroundStyle(.secondary)
             }
         }
@@ -3003,9 +3453,9 @@ private struct ReportTopicHeader: View {
                     .background(topic.tint.opacity(0.14), in: RoundedRectangle(cornerRadius: 8))
 
                 VStack(alignment: .leading, spacing: 5) {
-                    Text(topic.title)
+                    Text(LocalizedStringKey(topic.title))
                         .font(.title2.weight(.bold))
-                    Text(topic.subtitle)
+                    Text(LocalizedStringKey(topic.subtitle))
                         .font(.subheadline)
                         .foregroundStyle(.secondary)
                 }

@@ -4,6 +4,8 @@ struct PulseDayView: View {
     @Environment(ManifestStore.self) private var manifestStore
     @Environment(AppRouter.self) private var router
     @Environment(PavbotHaptics.self) private var haptics
+    @Environment(AppLanguageStore.self) private var languageStore
+    @Environment(AutomationTranslationStore.self) private var translationStore
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
     @State private var liveTopicsStore = TodayLiveTopicsStore()
     @State private var savedStore = TodayLiveTopicSavedStore()
@@ -73,6 +75,9 @@ struct PulseDayView: View {
         .task {
             await reload(refreshManifest: true, minimumInterval: 10)
         }
+        .task(id: pulseTranslationRegistrationKey) {
+            registerPulseTranslations()
+        }
         .task(id: pulseRouteReloadKey) {
             guard router.selectedTab == .pulseDay, pulseRouteReloadKey != "no-pulse-route" else { return }
             selectedMode = .latest
@@ -95,7 +100,9 @@ struct PulseDayView: View {
                 topic: selection.topic,
                 source: selection.source,
                 displayDate: selection.displayDate,
-                savedStore: savedStore
+                savedStore: savedStore,
+                translationDocument: selection.translationDocument,
+                translationPathPrefix: selection.translationPathPrefix
             )
             .pavbotLargeObjectPresentation()
         }
@@ -136,6 +143,26 @@ struct PulseDayView: View {
 
     private func openAktualneMagazine() {
         router.openResearchTopicFromUser(.aktualne)
+    }
+
+    private var pulseTranslationRegistrationKey: String {
+        [
+            languageStore.preference.rawValue,
+            liveTopicsStore.snapshot?.automationTranslationDocument.id ?? "no-snapshot",
+            liveTopicsStore.historySnapshots
+                .map { $0.automationTranslationDocument.id }
+                .joined(separator: "|")
+        ]
+        .joined(separator: "::")
+    }
+
+    private func registerPulseTranslations() {
+        if let snapshot = liveTopicsStore.snapshot {
+            translationStore.register(snapshot.automationTranslationDocument, language: languageStore.preference)
+        }
+        for snapshot in liveTopicsStore.historySnapshots {
+            translationStore.register(snapshot.automationTranslationDocument, language: languageStore.preference)
+        }
     }
 }
 
@@ -294,14 +321,25 @@ private struct PulseDayHistoryRunCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .firstTextBaseline, spacing: 10) {
-                StatusBadge(text: snapshot.sourceLabel, systemImage: "newspaper.fill", tint: .orange)
+                StatusBadge(
+                    text: snapshot.sourceLabel,
+                    systemImage: "newspaper.fill",
+                    tint: .orange,
+                    translatesAutomationText: true,
+                    translationDocument: snapshot.automationTranslationDocument,
+                    translationPath: "sourceLabel"
+                )
                 Spacer()
                 Text(snapshot.displayDate)
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.secondary)
             }
 
-            PavbotTranslatedAutomationText(snapshot.headline)
+            PavbotTranslatedAutomationText(
+                snapshot.headline,
+                document: snapshot.automationTranslationDocument,
+                path: "headline"
+            )
                 .font(.headline.weight(.semibold))
                 .fixedSize(horizontal: false, vertical: true)
 
@@ -320,21 +358,35 @@ private struct PulseDayHistoryRunCard: View {
                             selectedTopic = TodayLiveTopicSelection(
                                 topic: topic,
                                 source: snapshot.source,
-                                displayDate: snapshot.displayDate
+                                displayDate: snapshot.displayDate,
+                                translationDocument: snapshot.automationTranslationDocument,
+                                translationPathPrefix: TodayLiveTopicsSnapshot.translationPathPrefix(for: topic)
                             )
                         } label: {
                             HStack(alignment: .top, spacing: 10) {
-                                PavbotTranslatedAutomationText(topic.section)
+                                PavbotTranslatedAutomationText(
+                                    topic.section,
+                                    document: snapshot.automationTranslationDocument,
+                                    path: TodayLiveTopicsSnapshot.translationPath(for: topic, field: "section")
+                                )
                                     .font(.caption2.weight(.bold))
                                     .foregroundStyle(.orange)
                                     .textCase(.uppercase)
                                     .frame(width: 78, alignment: .leading)
                                 VStack(alignment: .leading, spacing: 3) {
-                                    PavbotTranslatedAutomationText(topic.title)
+                                    PavbotTranslatedAutomationText(
+                                        topic.title,
+                                        document: snapshot.automationTranslationDocument,
+                                        path: TodayLiveTopicsSnapshot.translationPath(for: topic, field: "title")
+                                    )
                                         .font(.subheadline.weight(.semibold))
                                         .foregroundStyle(.primary)
                                         .fixedSize(horizontal: false, vertical: true)
-                                    PavbotTranslatedAutomationText(topic.lead)
+                                    PavbotTranslatedAutomationText(
+                                        topic.lead,
+                                        document: snapshot.automationTranslationDocument,
+                                        path: TodayLiveTopicsSnapshot.translationPath(for: topic, field: "lead")
+                                    )
                                         .font(.caption)
                                         .foregroundStyle(.secondary)
                                         .lineLimit(2)
@@ -461,12 +513,16 @@ private struct PulseDayHistoryRunDetailView: View {
                                     selectedTopic = TodayLiveTopicSelection(
                                         topic: topic,
                                         source: snapshot.source,
-                                        displayDate: snapshot.displayDate
+                                        displayDate: snapshot.displayDate,
+                                        translationDocument: snapshot.automationTranslationDocument,
+                                        translationPathPrefix: TodayLiveTopicsSnapshot.translationPathPrefix(for: topic)
                                     )
                                 } label: {
                                     PulseDayHistoryTopicRow(
                                         topic: topic,
-                                        isSaved: savedStore.isSaved(topic)
+                                        isSaved: savedStore.isSaved(topic),
+                                        translationDocument: snapshot.automationTranslationDocument,
+                                        translationPathPrefix: TodayLiveTopicsSnapshot.translationPathPrefix(for: topic)
                                     )
                                 }
                                 .buttonStyle(.plain)
@@ -493,7 +549,9 @@ private struct PulseDayHistoryRunDetailView: View {
                     topic: selection.topic,
                     source: selection.source,
                     displayDate: selection.displayDate,
-                    savedStore: savedStore
+                    savedStore: savedStore,
+                    translationDocument: selection.translationDocument,
+                    translationPathPrefix: selection.translationPathPrefix
                 )
                 .pavbotLargeObjectPresentation()
             }
@@ -503,15 +561,30 @@ private struct PulseDayHistoryRunDetailView: View {
     private var header: some View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(alignment: .firstTextBaseline, spacing: 10) {
-                StatusBadge(text: snapshot.sourceLabel, systemImage: "newspaper.fill", tint: .orange)
+                StatusBadge(
+                    text: snapshot.sourceLabel,
+                    systemImage: "newspaper.fill",
+                    tint: .orange,
+                    translatesAutomationText: true,
+                    translationDocument: snapshot.automationTranslationDocument,
+                    translationPath: "sourceLabel"
+                )
                 StatusBadge(text: snapshot.displayDate, systemImage: "clock.fill", tint: .blue)
             }
 
-            PavbotTranslatedAutomationText(snapshot.headline)
+            PavbotTranslatedAutomationText(
+                snapshot.headline,
+                document: snapshot.automationTranslationDocument,
+                path: "headline"
+            )
                 .font(.title2.weight(.bold))
                 .fixedSize(horizontal: false, vertical: true)
 
-            PavbotTranslatedAutomationText(snapshot.summary)
+            PavbotTranslatedAutomationText(
+                snapshot.summary,
+                document: snapshot.automationTranslationDocument,
+                path: "summary"
+            )
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
@@ -591,11 +664,17 @@ private struct PulseDaySectionFilterBar: View {
 private struct PulseDayHistoryTopicRow: View {
     let topic: TodayLiveTopic
     let isSaved: Bool
+    var translationDocument: AutomationTranslationDocument?
+    var translationPathPrefix: String?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .firstTextBaseline, spacing: 8) {
-                PavbotTranslatedAutomationText(topic.section)
+                PavbotTranslatedAutomationText(
+                    topic.section,
+                    document: translationDocument,
+                    path: translationPath("section")
+                )
                     .font(.caption2.weight(.bold))
                     .foregroundStyle(.orange)
                     .textCase(.uppercase)
@@ -614,12 +693,20 @@ private struct PulseDayHistoryTopicRow: View {
                 }
             }
 
-            PavbotTranslatedAutomationText(topic.title)
+            PavbotTranslatedAutomationText(
+                topic.title,
+                document: translationDocument,
+                path: translationPath("title")
+            )
                 .font(.headline.weight(.semibold))
                 .foregroundStyle(.primary)
                 .fixedSize(horizontal: false, vertical: true)
 
-            PavbotTranslatedAutomationText(topic.lead)
+            PavbotTranslatedAutomationText(
+                topic.lead,
+                document: translationDocument,
+                path: translationPath("lead")
+            )
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
@@ -627,13 +714,15 @@ private struct PulseDayHistoryTopicRow: View {
 
             if !topic.tags.isEmpty {
                 PavbotArticleKeywordRows(horizontalSpacing: 7, verticalSpacing: 6) {
-                    ForEach(topic.tags.prefix(4), id: \.self) { tag in
+                    ForEach(Array(topic.tags.prefix(4).enumerated()), id: \.offset) { index, tag in
                         PavbotArticleTagChip(
                             title: tag,
                             systemImage: "tag.fill",
                             tint: .orange,
                             accessibilityPrefix: "Tag tematu",
-                            translatesAutomationText: true
+                            translatesAutomationText: true,
+                            translationDocument: translationDocument,
+                            translationPath: translationPath("tags.\(index)")
                         )
                     }
                 }
@@ -647,5 +736,11 @@ private struct PulseDayHistoryTopicRow: View {
                 .stroke(Color.orange.opacity(0.10), lineWidth: 1)
         }
         .contentShape(RoundedRectangle(cornerRadius: 18, style: .continuous))
+    }
+
+    private func translationPath(_ field: String) -> String? {
+        guard translationDocument != nil else { return nil }
+        guard let translationPathPrefix else { return field }
+        return "\(translationPathPrefix).\(field)"
     }
 }

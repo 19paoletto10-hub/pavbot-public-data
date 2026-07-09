@@ -84,6 +84,22 @@ struct TodayLiveTopicSelection: Identifiable, Equatable {
     let topic: TodayLiveTopic
     let source: TodayLiveTopicsSource
     let displayDate: String
+    let translationDocument: AutomationTranslationDocument?
+    let translationPathPrefix: String?
+
+    init(
+        topic: TodayLiveTopic,
+        source: TodayLiveTopicsSource,
+        displayDate: String,
+        translationDocument: AutomationTranslationDocument? = nil,
+        translationPathPrefix: String? = nil
+    ) {
+        self.topic = topic
+        self.source = source
+        self.displayDate = displayDate
+        self.translationDocument = translationDocument
+        self.translationPathPrefix = translationPathPrefix
+    }
 
     var id: String {
         [source.rawValue, displayDate, topic.id].joined(separator: "|")

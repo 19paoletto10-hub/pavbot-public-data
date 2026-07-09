@@ -1,6 +1,8 @@
 import SwiftUI
 
 struct TodayLiveTopicsPanel: View {
+    @Environment(AppLanguageStore.self) private var languageStore
+    @Environment(AutomationTranslationStore.self) private var translationStore
     let snapshot: TodayLiveTopicsSnapshot?
     let state: TodayLiveTopicsStore.LoadState
     let emptyMessage: String?
@@ -92,6 +94,19 @@ struct TodayLiveTopicsPanel: View {
             TodayLiveTopicsSavedView(savedStore: savedStore)
                 .pavbotLargeObjectPresentation()
         }
+        .task(id: translationRegistrationKey) {
+            if let snapshot {
+                translationStore.register(snapshot.automationTranslationDocument, language: languageStore.preference)
+            }
+        }
+    }
+
+    private var translationRegistrationKey: String {
+        [
+            languageStore.preference.rawValue,
+            snapshot?.automationTranslationDocument.id ?? "no-snapshot"
+        ]
+        .joined(separator: "::")
     }
 }
 
@@ -143,10 +158,18 @@ private struct TodayLiveTopicsGrid: View {
                         selectedTopic = TodayLiveTopicSelection(
                             topic: topStory,
                             source: snapshot.source,
-                            displayDate: snapshot.displayDate
+                            displayDate: snapshot.displayDate,
+                            translationDocument: snapshot.automationTranslationDocument,
+                            translationPathPrefix: TodayLiveTopicsSnapshot.translationPathPrefix(for: topStory)
                         )
                     } label: {
-                        TodayLiveTopicRow(topic: topStory, isSaved: savedStore.isSaved(topStory), isFeatured: true)
+                        TodayLiveTopicRow(
+                            topic: topStory,
+                            isSaved: savedStore.isSaved(topStory),
+                            isFeatured: true,
+                            translationDocument: snapshot.automationTranslationDocument,
+                            translationPathPrefix: TodayLiveTopicsSnapshot.translationPathPrefix(for: topStory)
+                        )
                     }
                     .buttonStyle(.plain)
                 }
@@ -158,10 +181,17 @@ private struct TodayLiveTopicsGrid: View {
                             selectedTopic = TodayLiveTopicSelection(
                                 topic: topic,
                                 source: snapshot.source,
-                                displayDate: snapshot.displayDate
+                                displayDate: snapshot.displayDate,
+                                translationDocument: snapshot.automationTranslationDocument,
+                                translationPathPrefix: TodayLiveTopicsSnapshot.translationPathPrefix(for: topic)
                             )
                         } label: {
-                            TodayLiveTopicRow(topic: topic, isSaved: savedStore.isSaved(topic))
+                            TodayLiveTopicRow(
+                                topic: topic,
+                                isSaved: savedStore.isSaved(topic),
+                                translationDocument: snapshot.automationTranslationDocument,
+                                translationPathPrefix: TodayLiveTopicsSnapshot.translationPathPrefix(for: topic)
+                            )
                         }
                         .buttonStyle(.plain)
                     }
@@ -180,10 +210,17 @@ private struct PulseIssueMasthead: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             PulseIssueMastheadMetadataRow(snapshot: snapshot)
-            PulseIssueMastheadTitle(headline: snapshot.headline)
+            PulseIssueMastheadTitle(
+                headline: snapshot.headline,
+                translationDocument: snapshot.automationTranslationDocument
+            )
 
             DisclosureGroup(isExpanded: $isContextExpanded) {
-                PavbotTranslatedAutomationText(snapshot.summary)
+                PavbotTranslatedAutomationText(
+                    snapshot.summary,
+                    document: snapshot.automationTranslationDocument,
+                    path: "summary"
+                )
                     .font(.callout)
                     .foregroundStyle(.secondary)
                     .lineSpacing(3)
@@ -223,9 +260,14 @@ private struct PulseIssueMastheadMetadataRow: View {
 
 private struct PulseIssueMastheadTitle: View {
     let headline: String
+    let translationDocument: AutomationTranslationDocument
 
     var body: some View {
-        PavbotTranslatedAutomationText(headline)
+        PavbotTranslatedAutomationText(
+            headline,
+            document: translationDocument,
+            path: "headline"
+        )
             .font(.title3.weight(.bold))
             .lineSpacing(2)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -241,6 +283,8 @@ struct TodayLiveTopicDetailView: View {
     let source: TodayLiveTopicsSource
     let displayDate: String
     let savedStore: TodayLiveTopicSavedStore?
+    var translationDocument: AutomationTranslationDocument?
+    var translationPathPrefix: String?
     @StateObject private var speechController = TodayLiveTopicSpeechController()
 
     private var isSaved: Bool {
@@ -252,14 +296,29 @@ struct TodayLiveTopicDetailView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
                     VStack(alignment: .leading, spacing: 12) {
-                        StatusBadge(text: topic.scope.title, systemImage: topic.scope.systemImage, tint: .orange)
+                        StatusBadge(
+                            text: topic.scope.title,
+                            systemImage: topic.scope.systemImage,
+                            tint: .orange,
+                            translatesAutomationText: true,
+                            translationDocument: translationDocument,
+                            translationPath: translationPath("scopeTitle")
+                        )
                         if isSaved {
                             StatusBadge(text: "Zapisany", systemImage: "bookmark.fill", tint: .blue)
                         }
-                        PavbotTranslatedAutomationText(topic.title)
+                        PavbotTranslatedAutomationText(
+                            topic.title,
+                            document: translationDocument,
+                            path: translationPath("title")
+                        )
                             .font(.title.weight(.bold))
                             .fixedSize(horizontal: false, vertical: true)
-                        PavbotTranslatedAutomationText(topic.lead)
+                        PavbotTranslatedAutomationText(
+                            topic.lead,
+                            document: translationDocument,
+                            path: translationPath("lead")
+                        )
                             .font(.headline)
                             .foregroundStyle(.secondary)
                             .lineSpacing(4)
@@ -271,11 +330,39 @@ struct TodayLiveTopicDetailView: View {
 
                     TodayLiveTopicSpeechPanel(topic: topic, speechController: speechController)
 
-                    TodayLiveTopicTextSection(title: "Key facts", items: topic.keyFacts, tint: .orange)
-                    TodayLiveTopicTextSection(title: "Reakcje na sytuację", items: topic.reactions, tint: .blue)
-                    TodayLiveTopicTextBlock(title: "Dlaczego to ważne", text: topic.whyItMatters)
-                    TodayLiveTopicTextBlock(title: "Kontekst", text: topic.context)
-                    TodayLiveTopicTextSection(title: "Co obserwować dalej", items: topic.watchNext, tint: .purple)
+                    TodayLiveTopicTextSection(
+                        title: "Key facts",
+                        items: topic.keyFacts,
+                        tint: .orange,
+                        document: translationDocument,
+                        pathPrefix: translationPath("keyFacts")
+                    )
+                    TodayLiveTopicTextSection(
+                        title: "Reakcje na sytuację",
+                        items: topic.reactions,
+                        tint: .blue,
+                        document: translationDocument,
+                        pathPrefix: translationPath("reactions")
+                    )
+                    TodayLiveTopicTextBlock(
+                        title: "Dlaczego to ważne",
+                        text: topic.whyItMatters,
+                        document: translationDocument,
+                        path: translationPath("whyItMatters")
+                    )
+                    TodayLiveTopicTextBlock(
+                        title: "Kontekst",
+                        text: topic.context,
+                        document: translationDocument,
+                        path: translationPath("context")
+                    )
+                    TodayLiveTopicTextSection(
+                        title: "Co obserwować dalej",
+                        items: topic.watchNext,
+                        tint: .purple,
+                        document: translationDocument,
+                        pathPrefix: translationPath("watchNext")
+                    )
 
                     if !topic.sources.isEmpty {
                         VStack(alignment: .leading, spacing: 10) {
@@ -322,6 +409,12 @@ struct TodayLiveTopicDetailView: View {
                 }
             }
         }
+    }
+
+    private func translationPath(_ field: String) -> String? {
+        guard translationDocument != nil else { return nil }
+        guard let translationPathPrefix else { return field }
+        return "\(translationPathPrefix).\(field)"
     }
 }
 
@@ -522,10 +615,18 @@ private struct TodayLiveTopicsCarousel: View {
                     selectedTopic = TodayLiveTopicSelection(
                         topic: topStory,
                         source: snapshot.source,
-                        displayDate: snapshot.displayDate
+                        displayDate: snapshot.displayDate,
+                        translationDocument: snapshot.automationTranslationDocument,
+                        translationPathPrefix: TodayLiveTopicsSnapshot.translationPathPrefix(for: topStory)
                     )
                 } label: {
-                    TodayLiveTopicRow(topic: topStory, isSaved: savedStore.isSaved(topStory), isFeatured: true)
+                    TodayLiveTopicRow(
+                        topic: topStory,
+                        isSaved: savedStore.isSaved(topStory),
+                        isFeatured: true,
+                        translationDocument: snapshot.automationTranslationDocument,
+                        translationPathPrefix: TodayLiveTopicsSnapshot.translationPathPrefix(for: topStory)
+                    )
                 }
                 .buttonStyle(.plain)
             }
@@ -535,6 +636,7 @@ private struct TodayLiveTopicsCarousel: View {
                     pair: pair,
                     source: snapshot.source,
                     displayDate: snapshot.displayDate,
+                    translationDocument: snapshot.automationTranslationDocument,
                     layout: layout,
                     selectedTopic: $selectedTopic,
                     savedStore: savedStore,
@@ -653,6 +755,7 @@ private struct TodayLiveTopicsPairPage: View {
     let pair: TodayLiveTopicPair
     let source: TodayLiveTopicsSource
     let displayDate: String
+    let translationDocument: AutomationTranslationDocument
     let layout: TodayLiveTopicsCarouselLayout
     @Binding var selectedTopic: TodayLiveTopicSelection?
     let savedStore: TodayLiveTopicSavedStore
@@ -666,10 +769,17 @@ private struct TodayLiveTopicsPairPage: View {
                     selectedTopic = TodayLiveTopicSelection(
                         topic: topic,
                         source: source,
-                        displayDate: displayDate
+                        displayDate: displayDate,
+                        translationDocument: translationDocument,
+                        translationPathPrefix: TodayLiveTopicsSnapshot.translationPathPrefix(for: topic)
                     )
                 } label: {
-                    TodayLiveTopicPreviewCard(topic: topic, isSaved: savedStore.isSaved(topic))
+                    TodayLiveTopicPreviewCard(
+                        topic: topic,
+                        isSaved: savedStore.isSaved(topic),
+                        translationDocument: translationDocument,
+                        translationPathPrefix: TodayLiveTopicsSnapshot.translationPathPrefix(for: topic)
+                    )
                 }
                 .buttonStyle(.plain)
                 .simultaneousGesture(cardSwipeGesture, including: .all)
@@ -690,6 +800,8 @@ private struct TodayLiveTopicsPairPage: View {
 private struct TodayLiveTopicPreviewCard: View {
     let topic: TodayLiveTopic
     let isSaved: Bool
+    let translationDocument: AutomationTranslationDocument
+    let translationPathPrefix: String
 
     var body: some View {
         VStack(alignment: .leading, spacing: 11) {
@@ -703,7 +815,12 @@ private struct TodayLiveTopicPreviewCard: View {
                     .accessibilityHidden(true)
 
                 PavbotArticleKeywordRows(horizontalSpacing: 5, verticalSpacing: 5) {
-                    PavbotNewsSectionBadge(title: topic.section, tint: .orange)
+                    PavbotNewsSectionBadge(
+                        title: topic.section,
+                        tint: .orange,
+                        document: translationDocument,
+                        path: "\(translationPathPrefix).section"
+                    )
                     PavbotNewsPriorityBadge(style: PavbotNewsPriorityStyle(topic.priority))
                     PavbotSourceCountBadge(count: topic.sources.count, tint: .orange)
                     if isSaved {
@@ -721,14 +838,22 @@ private struct TodayLiveTopicPreviewCard: View {
                     .accessibilityHidden(true)
             }
 
-            PavbotTranslatedAutomationText(topic.title)
+            PavbotTranslatedAutomationText(
+                topic.title,
+                document: translationDocument,
+                path: "\(translationPathPrefix).title"
+            )
                 .font(.headline.weight(.bold))
                 .foregroundStyle(.primary)
                 .lineSpacing(2)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .fixedSize(horizontal: false, vertical: true)
 
-            PavbotTranslatedAutomationText(topic.lead)
+            PavbotTranslatedAutomationText(
+                topic.lead,
+                document: translationDocument,
+                path: "\(translationPathPrefix).lead"
+            )
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
@@ -782,6 +907,8 @@ private struct TodayLiveTopicRow: View {
     let topic: TodayLiveTopic
     let isSaved: Bool
     var isFeatured = false
+    var translationDocument: AutomationTranslationDocument?
+    var translationPathPrefix: String?
 
     var body: some View {
         PavbotNewsStoryCard(
@@ -795,7 +922,10 @@ private struct TodayLiveTopicRow: View {
                 facts: topic.keyFacts,
                 sources: topic.sources,
                 tags: topic.tags,
-                canReadAloud: true
+                canReadAloud: true,
+                translationDocument: translationDocument,
+                translationPathPrefix: translationPathPrefix,
+                translationFieldPaths: TodayLiveTopicsSnapshot.storyTranslationFieldPaths(for: topic)
             ),
             tint: .orange,
             isSaved: isSaved,
@@ -960,7 +1090,9 @@ private struct TodayLiveTopicsSavedView: View {
                     topic: saved.topic,
                     source: saved.source,
                     displayDate: saved.displayDate,
-                    savedStore: savedStore
+                    savedStore: savedStore,
+                    translationDocument: saved.topic.automationTranslationDocument,
+                    translationPathPrefix: nil
                 )
                 .pavbotLargeObjectPresentation()
             }
@@ -969,12 +1101,17 @@ private struct TodayLiveTopicsSavedView: View {
 }
 
 private struct TodayLiveTopicsSavedRow: View {
+    @Environment(AppLanguageStore.self) private var languageStore
     let saved: SavedTodayLiveTopic
+
+    private var translationDocument: AutomationTranslationDocument {
+        saved.topic.automationTranslationDocument
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .top) {
-                StatusBadge(text: saved.sourceLabel, systemImage: "bookmark.fill", tint: .blue)
+                StatusBadge(text: sourceLabel, systemImage: "bookmark.fill", tint: .blue)
                 Spacer()
                 VStack(alignment: .trailing, spacing: 6) {
                     Text(saved.savedAt.formatted(date: .abbreviated, time: .shortened))
@@ -985,12 +1122,20 @@ private struct TodayLiveTopicsSavedRow: View {
                 }
             }
 
-            PavbotTranslatedAutomationText(saved.topic.title)
+            PavbotTranslatedAutomationText(
+                saved.topic.title,
+                document: translationDocument,
+                path: "title"
+            )
                 .font(.headline.weight(.semibold))
                 .foregroundStyle(.primary)
                 .fixedSize(horizontal: false, vertical: true)
 
-            PavbotTranslatedAutomationText(saved.topic.lead)
+            PavbotTranslatedAutomationText(
+                saved.topic.lead,
+                document: translationDocument,
+                path: "lead"
+            )
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
@@ -999,13 +1144,15 @@ private struct TodayLiveTopicsSavedRow: View {
 
             if !saved.topic.tags.isEmpty {
                 PavbotArticleKeywordRows(horizontalSpacing: 7, verticalSpacing: 6) {
-                    ForEach(saved.topic.tags.prefix(3), id: \.self) { tag in
+                    ForEach(Array(saved.topic.tags.prefix(3).enumerated()), id: \.offset) { index, tag in
                         PavbotArticleTagChip(
                             title: tag,
                             systemImage: "tag.fill",
                             tint: .blue,
                             accessibilityPrefix: "Tag zapisanego tematu",
-                            translatesAutomationText: true
+                            translatesAutomationText: true,
+                            translationDocument: translationDocument,
+                            translationPath: "tags.\(index)"
                         )
                     }
                 }
@@ -1015,12 +1162,31 @@ private struct TodayLiveTopicsSavedRow: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color(.systemBackground), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
     }
+
+    private var sourceLabel: String {
+        switch (saved.source, languageStore.preference) {
+        case (.pulseNews, .polish):
+            "Puls dnia 3h"
+        case (.pulseNews, .english):
+            "Daily Pulse 3h"
+        case (.pulseNews, .russian):
+            "Пульс дня 3 ч"
+        case (.mobileNews, .polish):
+            "Dane fallbackowe z magazynu 10:15"
+        case (.mobileNews, .english):
+            "10:15 magazine fallback"
+        case (.mobileNews, .russian):
+            "Резервные данные журнала 10:15"
+        }
+    }
 }
 
 private struct TodayLiveTopicTextSection: View {
     let title: String
     let items: [String]
     let tint: Color
+    var document: AutomationTranslationDocument?
+    var pathPrefix: String?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -1028,13 +1194,17 @@ private struct TodayLiveTopicTextSection: View {
                 .font(.caption.weight(.bold))
                 .foregroundStyle(.secondary)
                 .textCase(.uppercase)
-            ForEach(items, id: \.self) { item in
+            ForEach(Array(items.enumerated()), id: \.offset) { index, item in
                 HStack(alignment: .top, spacing: 9) {
                     Circle()
                         .fill(tint)
                         .frame(width: 6, height: 6)
                         .padding(.top, 7)
-                    PavbotTranslatedAutomationText(item)
+                    PavbotTranslatedAutomationText(
+                        item,
+                        document: document,
+                        path: pathPrefix.map { "\($0).\(index)" }
+                    )
                         .font(.callout)
                         .lineSpacing(4)
                         .fixedSize(horizontal: false, vertical: true)
@@ -1050,6 +1220,8 @@ private struct TodayLiveTopicTextSection: View {
 private struct TodayLiveTopicTextBlock: View {
     let title: String
     let text: String
+    var document: AutomationTranslationDocument?
+    var path: String?
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
@@ -1057,7 +1229,7 @@ private struct TodayLiveTopicTextBlock: View {
                 .font(.caption.weight(.bold))
                 .foregroundStyle(.secondary)
                 .textCase(.uppercase)
-            PavbotTranslatedAutomationText(text)
+            PavbotTranslatedAutomationText(text, document: document, path: path)
                 .font(.callout)
                 .lineSpacing(4)
                 .fixedSize(horizontal: false, vertical: true)

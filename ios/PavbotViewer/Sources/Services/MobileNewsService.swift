@@ -385,36 +385,106 @@ final class MobileNewsSpeechController: ObservableObject {
         translationStore: AutomationTranslationStore,
         destination: PavbotAudioDestination? = nil
     ) async {
-        let sourceText = nonBlankSpeechText(article.speechText(language: language)) ?? article.lead
-        let speechText = await translationStore.localizedText(sourceText, language: language)
-        let title = await translationStore.localizedText(article.title, language: language)
+        let document = Self.translationDocument(for: article)
+        let sourceText = nonBlankSpeechText(article.speechText(language: .polish)) ?? article.lead
+        let speechResolution = await translationStore.requiredLocalizedText(
+            sourceText,
+            language: language,
+            document: document,
+            path: "ttsText"
+        )
+        guard Self.canUseForSpeech(speechResolution, language: language) else {
+            playback.failPlayback(message: Self.translationPendingMessage(language: language))
+            return
+        }
+
+        let titleResolution = await translationStore.requiredLocalizedText(
+            article.title,
+            language: language,
+            document: document,
+            path: "title"
+        )
+        guard Self.canUseForSpeech(titleResolution, language: language) else {
+            playback.failPlayback(message: Self.translationPendingMessage(language: language))
+            return
+        }
+
         let keyNotes = await translatedKeyNotes(
             Array(article.facts.prefix(3)),
             language: language,
-            translationStore: translationStore
+            translationStore: translationStore,
+            document: document
         )
-        let tabLabel = await translationStore.localizedText(article.section, language: language)
+        let tabLabelResolution = await translationStore.requiredLocalizedText(
+            article.section,
+            language: language,
+            document: document,
+            path: "section"
+        )
 
         playback.play(
             itemID: article.id,
-            title: title,
-            text: speechText,
+            title: titleResolution.text,
+            text: speechResolution.text,
             destination: destination,
             keyNotes: keyNotes,
-            tabLabel: tabLabel
+            tabLabel: Self.canUseForSpeech(tabLabelResolution, language: language) ? tabLabelResolution.text : nil
         )
     }
 
     private func translatedKeyNotes(
         _ notes: [String],
         language: AppLanguagePreference,
-        translationStore: AutomationTranslationStore
+        translationStore: AutomationTranslationStore,
+        document: AutomationTranslationDocument
     ) async -> [String] {
         var translated: [String] = []
-        for note in notes {
-            translated.append(await translationStore.localizedText(note, language: language))
+        for (index, note) in notes.enumerated() {
+            let resolution = await translationStore.requiredLocalizedText(
+                note,
+                language: language,
+                document: document,
+                path: "facts.\(index)"
+            )
+            if Self.canUseForSpeech(resolution, language: language) {
+                translated.append(resolution.text)
+            }
         }
         return translated
+    }
+
+    private static func translationDocument(for article: MobileNewsArticle) -> AutomationTranslationDocument {
+        var builder = AutomationTranslationFieldBuilder()
+        builder.append("section", article.section)
+        builder.append("title", article.title)
+        builder.append("lead", article.lead)
+        builder.appendList("facts", article.facts)
+        builder.append("analysis", article.analysis)
+        builder.append("whyItMatters", article.whyItMatters)
+        builder.appendList("tags", article.tags)
+        builder.append("ttsText", nonBlankSpeechText(article.speechText(language: .polish)) ?? article.lead)
+        return AutomationTranslationDocument(
+            contentKind: "mobileNewsArticle",
+            contentID: article.id,
+            fields: builder.fields
+        )
+    }
+
+    private static func canUseForSpeech(_ resolution: AutomationTranslationResolution, language: AppLanguagePreference) -> Bool {
+        guard language != .polish else { return true }
+        guard #available(iOS 18.0, *) else { return true }
+        return resolution.isTranslated
+    }
+
+    private static func translationPendingMessage(language: AppLanguagePreference) -> String {
+        switch language {
+        case .polish:
+            "Tekst do odczytu nie jest gotowy."
+        case .english:
+            "Preparing the translated text for reading. Try again in a moment."
+        case .russian:
+            "Перевод для чтения готовится. Попробуйте еще раз через мгновение."
+        }
     }
 
     func setSpeechRate(_ rate: MobileNewsSpeechRate) {
