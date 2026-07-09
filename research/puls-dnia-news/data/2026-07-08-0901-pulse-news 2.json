@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-08",
+  "runTime": "09:01",
+  "status": "Material update",
+  "headline": "Poranny puls: PIP rusza, wiatr trzyma północ, USA-Iran i NATO dominują światowe nagłówki",
+  "summary": "Feedy TVN24, BBC i CNN przyniosły nowy poranny pakiet o zmianach na rynku pracy, utrzymujących się alertach pogodowych oraz eskalacji wokół USA-Iran, NATO, Le Pen, Farage'a, Rosji, Chin i Węgier.",
+  "checkedSources": [
+    {
+      "title": "TVN24: najnowsze XML",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24: najnowsze",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "BBC News World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "Gov.pl RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "PIP Gdańsk: nowe uprawnienia od 8 lipca",
+      "url": "https://gdansk.pip.gov.pl/aktualnosci/od-8-lipca-2026-r-panstwowa-inspekcja-pracy-zyska-nowe-uprawnienia"
+    },
+    {
+      "title": "GUS rynek pracy 24.06.2026",
+      "url": "https://ssgk.stat.gov.pl/Rynek_pracy.html"
+    },
+    {
+      "title": "NATO pre-summit press conference",
+      "url": "https://www.nato.int/en/news-and-events/events/transcripts/2026/07/06/pre-summit-press-conference-by-nato-secretary-general-mark-rutte-ahead-of-the-2026-nato-summit-in-ankara"
+    }
+  ],
+  "items": [
+    {
+      "id": "pl-wiatr-alerty",
+      "section": "Alerty",
+      "title": "Wiatr i burze nadal trzymają północ",
+      "lead": "RCB i IMGW utrzymują ostrzeżenia.",
+      "whatHappened": "Poranny slot nadal pokazuje silny wiatr na północy kraju, a TVN24 opisuje prewencyjne ewakuacje i zabezpieczenia plażowe.",
+      "keyFacts": [
+        "RCB ostrzega przed silnym wiatrem i prosi o zabezpieczenie luźnych przedmiotów.",
+        "TVN24 opisuje ewakuacje i działania prewencyjne w regionach nadmorskich."
+      ],
+      "reactions": [
+        "Służby lokalne pozostają w podwyższonej gotowości.",
+        "To nadal najpilniejszy krajowy wątek porannego feedu."
+      ],
+      "whyItMatters": "To może szybko przełożyć się na interwencje straży, opóźnienia transportowe i przerwy w dostawach prądu.",
+      "context": "Wieczorny slot już sygnalizował tę samą pogodową falę; rano temat nie zniknął.",
+      "watchNext": [
+        "Czy alerty zostaną przedłużone lub wycofane.",
+        "Czy pojawią się kolejne ewakuacje lub przerwy w dostawach prądu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Prewencyjne ewakuacje i worki na plaży. Wiało i nadal wieje",
+          "url": "https://tvn24.pl/tvnmeteo/polska/burze-i-wichury-w-polsce-ewakuacja-harcerzy-worki-na-plazy-wialo-i-nadal-wieje-st9132582?source=rss"
+        },
+        {
+          "title": "Gov.pl RCB komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Alerty",
+        "pogoda",
+        "RCB"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-pip-reforma",
+      "section": "Gospodarka",
+      "title": "Reforma PIP wchodzi dziś w życie",
+      "lead": "Nowe uprawnienia inspekcji pracy startują 8 lipca.",
+      "whatHappened": "Od 8 lipca PIP zyskuje narzędzia do mocniejszego egzekwowania prawa pracy, w tym możliwość administracyjnego ustalania stosunku pracy tam, gdzie etat był maskowany umową cywilnoprawną.",
+      "keyFacts": [
+        "Oficjalne materiały PIP i resortu pracy opisują reformę jako odpowiedź na pozorne samozatrudnienie i nadużycia na rynku pracy.",
+        "Pracodawcy są zachęcani do wcześniejszego przeglądu umów i dokumentacji."
+      ],
+      "reactions": [
+        "PIP publikuje poradniki dla pracodawców.",
+        "Resort pracy od miesięcy sygnalizował potrzebę przygotowania się do zmian."
+      ],
+      "whyItMatters": "To jedna z większych zmian regulacyjnych na rynku pracy i może uruchomić serię sporów o status zatrudnienia.",
+      "context": "Zmiana była zapowiadana od miesięcy i dziś przestaje być tylko projektem.",
+      "watchNext": [
+        "Czy pojawią się pierwsze decyzje PIP.",
+        "Czy firmy zaczną masowo rewidować B2B i zlecenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Rewolucja na rynku pracy. Zmiany wchodzą w życie",
+          "url": "https://tvn24.pl/biznes/z-kraju/reforma-pip-od-8-lipca-2026-rewolucja-na-rynku-pracy-zmiany-wchodza-w-zycie-st9133071?source=rss"
+        },
+        {
+          "title": "PIP Gdańsk: Od 8 lipca 2026 r. Państwowa Inspekcja Pracy zyska nowe uprawnienia",
+          "url": "https://gdansk.pip.gov.pl/aktualnosci/od-8-lipca-2026-r-panstwowa-inspekcja-pracy-zyska-nowe-uprawnienia"
+        },
+        {
+          "title": "Gov.pl Rodzina: Reforma Państwowej Inspekcji Pracy",
+          "url": "https://www.gov.pl/web/rodzina/reforma-panstwowej-inspekcji-pracy"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Gospodarka",
+        "praca",
+        "PIP"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-bezrobocie-wzrost",
+      "section": "Polska",
+      "title": "Bezrobotnych jest wyraźnie więcej niż rok temu",
+      "lead": "TVN24 opisuje wzrost liczby bezrobotnych.",
+      "whatHappened": "TVN24 pisze, że bezrobotnych w Polsce jest ponad 100 tysięcy więcej niż rok temu, a dane GUS za maj 2026 pokazują 915,9 tys. zarejestrowanych bezrobotnych i stopę 5,9%.",
+      "keyFacts": [
+        "GUS podaje wzrost liczby zarejestrowanych bezrobotnych o 17% rok do roku.",
+        "Maj 2026 przyniósł 915,9 tys. osób bez pracy w urzędach pracy."
+      ],
+      "reactions": [
+        "To sygnał słabszego rynku pracy albo zmian statystycznych.",
+        "Warto zestawić to z kolejną publikacją GUS."
+      ],
+      "whyItMatters": "To ważny wskaźnik nastrojów konsumenckich i sygnał dla gospodarki domowej.",
+      "context": "Tekst TVN24 nie zastępuje oficjalnego komunikatu, ale sygnalizuje ważny trend do weryfikacji.",
+      "watchNext": [
+        "Sprawdzić następny komunikat GUS.",
+        "Porównać dane regionalnie i sektorowo."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Bezrobotni w Polsce. Ponad 100 tysięcy więcej niż rok temu",
+          "url": "https://tvn24.pl/biznes/dla-pracownika/bezrobotni-w-polsce-ponad-100-tysiecy-wiecej-niz-rok-temu-st9133114?source=rss"
+        },
+        {
+          "title": "GUS: Rynek pracy 24.06.2026",
+          "url": "https://ssgk.stat.gov.pl/Rynek_pracy.html"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Gospodarka",
+        "rynek pracy",
+        "GUS"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-borowski-nikita",
+      "section": "Polska",
+      "title": "Nie żyje Adam Borowski ps. Nikita",
+      "lead": "TVN24 podaje informację o śmierci powstańca.",
+      "whatHappened": "TVN24 informuje o śmierci Adama Borowskiego ps. Nikita, powstańca warszawskiego.",
+      "keyFacts": [
+        "To wiadomość o wyraźnym znaczeniu historycznym i lokalnym.",
+        "Temat może uruchomić wspomnienia i materiały archiwalne w mediach warszawskich."
+      ],
+      "reactions": [
+        "Środowiska kombatanckie zwykle szybko reagują na takie wiadomości.",
+        "Wiadomość ma charakter pamięciowy, nie polityczny."
+      ],
+      "whyItMatters": "To ważny sygnał dla pamięci historycznej i lokalnego obiegu informacji o powstańcach warszawskich.",
+      "context": "To jeden z mniej systemowych, ale wyraźnych porannych krajowych sygnałów.",
+      "watchNext": [
+        "Czy pojawi się oficjalny biogram i uroczystości pożegnalne.",
+        "Czy warszawskie media rozwiną temat w materiał wspomnieniowy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nie żyje Adam Borowski ps. Nikita. Walczył w Powstaniu Warszawskim",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-nie-zyje-adam-borowski-ps-nikita-walczyl-w-powstaniu-warszawskim-st9133078?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Warszawa",
+        "historia",
+        "społeczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-dom-dziecka-zarzuty",
+      "section": "Bezpieczeństwo",
+      "title": "Pracownik domu dziecka w areszcie",
+      "lead": "TVN24 opisuje pięć zarzutów seksualnych.",
+      "whatHappened": "TVN24 podaje, że pracownik domu dziecka w Nowej Rudzie trafił do aresztu po usłyszeniu pięciu zarzutów o charakterze seksualnym.",
+      "keyFacts": [
+        "Sprawa dotyczy instytucji opieki nad dziećmi, więc ma wysoki ciężar społeczny.",
+        "Na tym etapie kluczowe są czynności prokuratury i zabezpieczenie małoletnich."
+      ],
+      "reactions": [
+        "Sprawą zajmują się policja i prokuratura.",
+        "Placówki opiekuńcze zwykle po takich zdarzeniach przeglądają procedury bezpieczeństwa."
+      ],
+      "whyItMatters": "To bezpośredni sygnał ryzyka dla dzieci i test nadzoru nad placówkami opiekuńczymi.",
+      "context": "To jeden z najbardziej wrażliwych lokalnych tematów w porannym zestawie.",
+      "watchNext": [
+        "Czy prokuratura ujawni kolejne szczegóły śledztwa.",
+        "Czy placówka wyda komunikat o zabezpieczeniu wychowanków."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pracownik domu dziecka w areszcie. Usłyszał pięć zarzutów o charakterze seksualnym",
+          "url": "https://tvn24.pl/wroclaw/nowa-ruda-pracownik-domu-dziecka-w-areszcie-uslyszal-piec-zarzutow-o-charakterze-seksualnym-st9133097?source=rss"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Polska",
+        "prokuratura",
+        "dzieci"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-iran-strikes",
+      "section": "Świat",
+      "title": "USA i Iran wymieniają ciosy przy Ormuz",
+      "lead": "BBC i CNN opisują nową eskalację.",
+      "whatHappened": "BBC i CNN pokazują wymianę uderzeń USA-Iran, ataki na jednostki przy cieśninie Ormuz oraz wejście tego wątku na czoło agendy NATO.",
+      "keyFacts": [
+        "CNN prowadzi live updates z wojennego pakietu na szczycie NATO.",
+        "BBC opisuje ataki na trzy jednostki przy Ormuz i pytanie o dalszą eskalację."
+      ],
+      "reactions": [
+        "Trump jest fizycznie w centrum szczytu NATO, więc konflikt wchodzi równolegle do agendy sojuszu.",
+        "Rynki ropy i bezpieczeństwo żeglugi mogą reagować natychmiast."
+      ],
+      "whyItMatters": "To może przełożyć się na ceny energii, bezpieczeństwo morskie i priorytety dyplomatyczne NATO.",
+      "context": "Ta historia była już w ruchu wczoraj wieczorem; rano wciąż rośnie, zamiast wygasać.",
+      "watchNext": [
+        "Czy pojawią się kolejne oficjalne oświadczenia USA i Iranu.",
+        "Czy NATO przesunie komunikację bardziej w stronę Bliskiego Wschodu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US and Iran trade strikes after tankers hit in Strait of Hormuz",
+          "url": "https://www.bbc.co.uk/news/articles/cwykq59jwpvo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Live updates - US-Iran trade strikes in biggest test of ceasefire, Trump at NATO summit",
+          "url": "https://www.cnn.com/2026/07/08/world/live-news/iran-war-nato-summit-ukraine-trump"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "USA",
+        "Iran",
+        "NATO"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-le-pen",
+      "section": "Świat",
+      "title": "Le Pen wraca do gry mimo wyroku",
+      "lead": "BBC i CNN trzymają temat francuskiej prawicy.",
+      "whatHappened": "BBC i CNN opisują, że Marine Le Pen chce kandydować w wyborach prezydenckich 2027 mimo przegranej apelacji i utrzymanego prawa do startu.",
+      "keyFacts": [
+        "Sprawa pozostaje jednym z najważniejszych testów dla francuskiej sceny politycznej.",
+        "Wątek łączy sądy, skrajną prawicę i kampanię przed 2027 rokiem."
+      ],
+      "reactions": [
+        "Francuska prawica utrzymuje polityczną presję wokół wyroku.",
+        "To nadal jeden z głównych europejskich tematów dnia."
+      ],
+      "whyItMatters": "To ustawia oś sporów o wiarygodność sądów, skrajną prawicę i przyszłość wyborów prezydenckich we Francji.",
+      "context": "To rozwinięcie wątku, który wczoraj był już wysoko w światowym feedzie.",
+      "watchNext": [
+        "Czy Le Pen poda kolejne kroki procesowe i kampanijne.",
+        "Czy centroprawica i rząd francuski odpowiedzą politycznie."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Will Le Pen rise again? French nationalist leader defiant after court's ruling",
+          "url": "https://www.bbc.co.uk/news/articles/cvgdlprp1r3o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Marine Le Pen to run for French presidency despite losing court appeal",
+          "url": "https://www.cnn.com/2026/07/07/europe/marine-le-pen-france-court-ruling-intl"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Francja",
+        "Polityka",
+        "Le Pen"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-nato-zamowienia",
+      "section": "Świat",
+      "title": "NATO przyspiesza zakupy rakietowe",
+      "lead": "Sojusz pokazuje nowe zamówienia i większe wydatki.",
+      "whatHappened": "BBC pisze o pakiecie 37 mld funtów na nowy projekt rakietowy, a NATO oficjalnie potwierdza duże nowe zamówienia po forum przemysłu obronnego w Ankarze.",
+      "keyFacts": [
+        "NATO komunikuje wzrost inwestycji i większą produkcję przemysłową w obronności.",
+        "Forum w Ankarze ma pokazać, że wydatki trzeba przekładać na konkretne zdolności."
+      ],
+      "reactions": [
+        "To kolejny sygnał wzrostu wydatków obronnych w Europie.",
+        "Produkcja przemysłowa staje się równie ważna jak same zobowiązania budżetowe."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na priorytety bezpieczeństwa Europy, zamówienia zbrojeniowe i presję na przemysł.",
+      "context": "Temat był obecny już wczoraj, ale dziś dostaje oficjalne potwierdzenie i liczby.",
+      "watchNext": [
+        "Czy NATO poda kolejne szczegóły pakietu zamówień.",
+        "Czy rządy krajowe doprecyzują własne harmonogramy wydatków."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Nato allies announce £37bn for new missile project",
+          "url": "https://www.bbc.co.uk/news/articles/ckg4e3lwzqzo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "NATO: Pre-summit press conference by NATO Secretary General Mark Rutte",
+          "url": "https://www.nato.int/en/news-and-events/events/transcripts/2026/07/06/pre-summit-press-conference-by-nato-secretary-general-mark-rutte-ahead-of-the-2026-nato-summit-in-ankara"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "NATO",
+        "obronność",
+        "Europa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-rosja-paliwo",
+      "section": "Świat",
+      "title": "Rosyjskie braki paliw zaczynają ciążyć",
+      "lead": "BBC i CNN pokazują presję na zaplecze wojny.",
+      "whatHappened": "BBC opisuje, czy Putin zmieni kurs w Ukrainie, a CNN wcześniej sygnalizowała kryzys paliwowy w Rosji po presji wojennej i atakach dronowych.",
+      "keyFacts": [
+        "Braki paliw są wskaźnikiem napięcia logistycznego i gospodarczego.",
+        "Wątek łączy front, zaplecze przemysłowe i nastroje społeczne."
+      ],
+      "reactions": [
+        "To może przełożyć się na logistykę i ceny wewnętrzne w Rosji.",
+        "Każda kolejna decyzja Kremla będzie czytana przez pryzmat dostępności paliw."
+      ],
+      "whyItMatters": "To sygnał zużycia wojennego zaplecza, a nie tylko kolejny nagłówek operacyjny.",
+      "context": "To jeden z tematów, który nie jest widowiskowy, ale może mieć długie konsekwencje.",
+      "watchNext": [
+        "Czy pojawią się kolejne lokalne raporty o brakach lub racjonowaniu.",
+        "Czy Ukraina zwiększy presję na infrastrukturę paliwową."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Russian fuel shortages bite – but will Putin change tack in Ukraine war?",
+          "url": "https://www.bbc.co.uk/news/articles/cr7xk8j0j2do?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN World: Russia fuel crisis after drone attacks",
+          "url": "https://www.cnn.com/2026/07/06/europe/russia-fuel-crisis-ukraine-drone-attacks-intl-vis"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Rosja",
+        "Ukraina",
+        "paliwa"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-chiny-tajfun",
+      "section": "Świat",
+      "title": "Chiński tajfun wywołał powodzie i tornada",
+      "lead": "BBC opisuje gwałtowną pogodę i nowe szkody.",
+      "whatHappened": "BBC podaje, że tajfun wywołał powodzie i rzadkie tornada w Chinach, z szybkim zalewaniem ulic i stratami w kilku regionach.",
+      "keyFacts": [
+        "Ekstremalna pogoda przyspiesza ryzyko lokalnych ewakuacji i zniszczeń infrastruktury.",
+        "Tornada w takim układzie pogodowym są relatywnie rzadkie i zwracają uwagę mediów."
+      ],
+      "reactions": [
+        "Służby muszą liczyć straty i możliwe kolejne przesunięcia ludności.",
+        "To kolejny sygnał wzrostu kosztów ekstremalnej pogody w Azji."
+      ],
+      "whyItMatters": "To wpływa na bezpieczeństwo, logistykę i obraz globalnych ryzyk pogodowych.",
+      "context": "To czysty temat zagraniczny bez silnego lokalnego odpowiednika, ale z dużą wagą w świecie.",
+      "watchNext": [
+        "Czy pojawią się kolejne informacje o ofiarach i ewakuacjach.",
+        "Czy chińskie służby pokażą szacunki szkód i odbudowy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: 'The water just came so fast': Typhoon triggers floods and rare tornadoes in China",
+          "url": "https://www.bbc.co.uk/news/articles/c79ygnv9e93o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Chiny",
+        "pogoda",
+        "katastrofy"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-farage-parlament",
+      "section": "Świat",
+      "title": "Farage opuszcza parlament i celuje w reelekcję",
+      "lead": "CNN opisuje spór o darowizny i nowy start polityczny.",
+      "whatHappened": "CNN podaje, że Nigel Farage rezygnuje z miejsca w brytyjskim parlamencie i chce ubiegać się o reelekcję po sporze o darowizny.",
+      "keyFacts": [
+        "To sygnał, że brytyjska prawica znów może wejść w okres wewnętrznej rekonstrukcji.",
+        "Spór o finansowanie kampanii pozostaje politycznie drażliwy."
+      ],
+      "reactions": [
+        "Farage próbował zbudować narrację o powrocie i odświeżeniu mandatu.",
+        "Konkurenci będą podkreślać ryzyko reputacyjne wokół darowizn."
+      ],
+      "whyItMatters": "To może zmienić układ sił w brytyjskiej prawicy i wpłynąć na kampanię wyborczą.",
+      "context": "CNN opisuje to jako ruch po konflikcie o pieniądze i zaufanie.",
+      "watchNext": [
+        "Czy Farage formalnie ogłosi warunki nowej kampanii.",
+        "Czy pojawią się kolejne ujawnienia dotyczące darowizn."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Nigel Farage quits UK parliament amid financial donations controversy and will seek re-election",
+          "url": "https://www.cnn.com/2026/07/07/uk/nigel-farage-reform-intl"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wielka Brytania",
+        "Polityka",
+        "Farage"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-wegry-tv",
+      "section": "Świat",
+      "title": "Węgierska telewizja publiczna zawiesza wiadomości",
+      "lead": "CNN opisuje przebudowę po latach Orbána.",
+      "whatHappened": "CNN podaje, że węgierska telewizja państwowa zawiesza serwis informacyjny jako element szerokiej przebudowy redakcyjnej po latach rządów Orbána.",
+      "keyFacts": [
+        "To nie jest kosmetyczna zmiana, tylko przebudowa sposobu działania publicznego nadawcy.",
+        "Temat ma znaczenie dla debaty o mediach publicznych i kontroli politycznej."
+      ],
+      "reactions": [
+        "Krytycy będą czytać to jako test niezależności mediów publicznych.",
+        "Rząd może przedstawiać ruch jako modernizację formatów."
+      ],
+      "whyItMatters": "To ważny sygnał dla jakości debaty publicznej i pluralizmu mediów na Węgrzech.",
+      "context": "To wątek mocno europejski, ale z szerszym znaczeniem dla standardów medialnych.",
+      "watchNext": [
+        "Czy pojawi się oficjalne uzasadnienie lub harmonogram zmian.",
+        "Czy redakcja zostanie odtworzona w nowej formie."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Hungarian state TV suspends news broadcast for revamp after Orban years",
+          "url": "https://www.cnn.com/2026/07/07/europe/hungarian-state-tv-news-suspended-intl"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Węgry",
+        "media",
+        "Polityka"
+      ],
+      "priority": "medium"
+    }
+  ]
+}

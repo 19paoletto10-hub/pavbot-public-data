@@ -11,6 +11,9 @@
 - `CNN World RSS` appears stale in the current runtime; prefer
   `edition.cnn.com/world` discovery plus primary confirmations until the feed
   recovers.
+- Prefer direct TVN24 article URLs over front-page bundle headlines when both
+  are available, because the bundle tiles can mix several stories in one card
+  and make deduplication harder in later runs.
 
 ## Done
 

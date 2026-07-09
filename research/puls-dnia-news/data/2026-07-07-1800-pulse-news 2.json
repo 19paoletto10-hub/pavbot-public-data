@@ -1,0 +1,489 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-07",
+  "runTime": "18:00",
+  "status": "Material update",
+  "headline": "Wieczorny puls: alerty pogodowe w Polsce, Le Pen, NATO i nowe kryzysy w Europie oraz na świecie",
+  "summary": "Feed nadal prowadzą burze i wiatr w Polsce, a światowe nagłówki dołożyły Le Pen, NATO w Ankarze, Grenlandię, Monako, Damaszek, Francję, Chiny i Rosję.",
+  "items": [
+    {
+      "id": "pl-alerty-wiatr-pomorze",
+      "section": "Alerty",
+      "title": "Silny wiatr rozszerza alerty na północ",
+      "lead": "RCB i IMGW ostrzegają przed bardzo silnym wiatrem.",
+      "whatHappened": "TVN24 podał, że na 7 i 8 lipca obowiązują kolejne alerty RCB, a IMGW utrzymuje ostrzeżenia przed burzami i silnym wiatrem na północy kraju.",
+      "keyFacts": [
+        "Komunikaty dotyczą ryzyka przerw w dostawie prądu i utrudnień na otwartych przestrzeniach.",
+        "Służby proszą o zabezpieczenie luźnych przedmiotów i śledzenie lokalnych ostrzeżeń."
+      ],
+      "reactions": [
+        "RCB apeluje o ostrożność.",
+        "To nadal najpilniejszy krajowy wątek operacyjny dnia."
+      ],
+      "whyItMatters": "Może wpływać na transport, wydarzenia plenerowe i bezpieczeństwo mieszkańców.",
+      "context": "To kolejny komunikat w serii niestabilnej pogody obserwowanej na początku lipca.",
+      "watchNext": [
+        "Czy IMGW rozszerzy lub wycofa ostrzeżenia.",
+        "Czy lokalne służby zgłoszą skutki wiatru i wyładowań."
+      ],
+      "sources": [
+        {
+          "title": "TVN24",
+          "url": "https://tvn24.pl/polska/burze-i-wichury-ostrzezenia-imgw-we-wtorek-7-07-imgw-wydal-ostrzezenia-trzeciego-stopnia-st9131368?source=rss"
+        },
+        {
+          "title": "TVN24",
+          "url": "https://tvn24.pl/polska/jestes-stad-unikaj-otwartych-przestrzeni-jest-alert-rcb-st9131748"
+        },
+        {
+          "title": "Gov.pl - RCB",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---bardzo-silne-opady-deszczu-0707"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Alerty",
+        "pogoda",
+        "IMGW"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-migranci-ciezarowka-budzisko",
+      "section": "Polska",
+      "title": "54 migrantów w naczepie ciężarówki",
+      "lead": "Straż Graniczna zatrzymała przewóz przy granicy.",
+      "whatHappened": "TVN24 podał, że przy Budzisku zatrzymano ciężarówkę, w której naczepie znajdowało się 54 migrantów.",
+      "keyFacts": [
+        "Sprawa dotyczy odcinka granicznego i możliwego przemytu ludzi.",
+        "To temat bezpieczeństwa i kontroli granic."
+      ],
+      "reactions": [
+        "Służby prowadzą czynności wyjaśniające.",
+        "Sprawa może wrócić w politycznej debacie o granicy."
+      ],
+      "whyItMatters": "Łączy wątek migracyjny z bezpieczeństwem granicznym i działaniem służb.",
+      "context": "Takie przypadki są zwykle punktowo ważne dla oceny presji na granicy.",
+      "watchNext": [
+        "Czy pojawią się nowe informacje o organizatorach przewozu.",
+        "Czy służby podadzą więcej danych o narodowości i stanie migrantów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24",
+          "url": "https://tvn24.pl/bialystok/budzisko-wiozl-w-ciezarowce-54-migrantow-zatrzymali-go-na-granicy-st9131909?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "granica",
+        "migracja",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-kosiniak-strategia-wyborcza",
+      "section": "Polityka",
+      "title": "Kosiniak-Kamysz komentuje ruchy prezydenckie",
+      "lead": "PSL czyta ostatnie decyzje przez pryzmat kampanii.",
+      "whatHappened": "TVN24 opisał wypowiedź Władysława Kosiniaka-Kamysza, według którego środowisko prezydenta przyjęło strategię wyborczą.",
+      "keyFacts": [
+        "Wątek dotyczy bieżącej strategii obozu rządowego i prezydenckiego.",
+        "Jest to materiał polityczny, nie legislacyjny."
+      ],
+      "reactions": [
+        "Komentarz wzmacnia narrację o kampanijnej rywalizacji.",
+        "Temat może wywołać dalsze odpowiedzi z Pałacu Prezydenckiego."
+      ],
+      "whyItMatters": "Sygnalizuje, jak koalicja odczytuje ruchy ośrodka prezydenckiego.",
+      "context": "To jeden z krajowych wątków, który uzupełnia alerty pogodowe i graniczne.",
+      "watchNext": [
+        "Czy pojawią się kontrkomentarze ze strony obozu prezydenckiego.",
+        "Czy temat przełoży się na kolejne wypowiedzi o kampanii i bezpieczeństwie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24",
+          "url": "https://tvn24.pl/polska/wladyslaw-kosiniak-kamysz-srodowisko-prezydenta-przyjelo-strategie-wyborcza-st9132506?source=rss"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Polska",
+        "kampania",
+        "PSL"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-marine-le-pen",
+      "section": "Świat",
+      "title": "Marine Le Pen ma drogę do wyborów",
+      "lead": "Sąd uznał winę, ale dopuścił ją do startu.",
+      "whatHappened": "BBC podała, że Marine Le Pen została uznana za winną, ale sąd pozwolił jej kandydować w wyborach prezydenckich pod warunkiem noszenia elektronicznej opaski.",
+      "keyFacts": [
+        "To jedna z najważniejszych politycznych historii dnia we Francji.",
+        "Sprawa pozostaje związana z sankcją i warunkami jej wykonania."
+      ],
+      "reactions": [
+        "Le Pen odrzuca warunki, które uważa za politycznie motywowane.",
+        "Wynik wzmacnia debatę o przyszłości skrajnej prawicy we Francji."
+      ],
+      "whyItMatters": "Może wpłynąć na układ sił przed kolejnymi wyborami prezydenckimi.",
+      "context": "To kolejny etap długiego sporu o odpowiedzialność polityczną i korupcyjną.",
+      "watchNext": [
+        "Czy Le Pen przyjmie warunki sądu.",
+        "Jak zareagują jej rywale i kierownictwo partii."
+      ],
+      "sources": [
+        {
+          "title": "BBC",
+          "url": "https://www.bbc.co.uk/news/articles/cly85qjg45no?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Francja",
+        "polityka",
+        "sądy"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-zelensky-nato-air-defence",
+      "section": "Świat",
+      "title": "Zełenski naciska na obronę powietrzną",
+      "lead": "Po rosyjskich atakach Ukraina chce więcej ochrony.",
+      "whatHappened": "BBC podała, że Wołodymyr Zełenski wykorzystuje szczyt NATO do nacisku na systemy obrony przeciwlotniczej po intensywnych rosyjskich uderzeniach.",
+      "keyFacts": [
+        "Wątek dotyczy przede wszystkim interceptorów i baterii przeciwlotniczych.",
+        "NATO równolegle pokazuje gotowość do rozmów o obronie i produkcji sprzętu."
+      ],
+      "reactions": [
+        "Kijów szuka konkretnych deklaracji sprzętowych.",
+        "Sojusz jest pod presją, by przedstawić szybkie decyzje."
+      ],
+      "whyItMatters": "To może przesądzić o tempie kolejnych pakietów wsparcia dla Ukrainy.",
+      "context": "Świeże rosyjskie uderzenia zwiększają wagę rozmów w Ankarze.",
+      "watchNext": [
+        "Czy padną deklaracje o Patriotach i interceptorach.",
+        "Jakie państwa ogłoszą nowe pakiety wsparcia."
+      ],
+      "sources": [
+        {
+          "title": "BBC",
+          "url": "https://www.bbc.co.uk/news/articles/c9d227e5zj6o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "NATO Secretary General preview",
+          "url": "https://www.nato.int/en/news-and-events/articles/news/2026/07/06/nato-secretary-general-previews-the-ankara-summit-highlights-progress-on-defence-spending"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Ukraina",
+        "NATO",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-trump-greenland",
+      "section": "Świat",
+      "title": "Trump wraca do sporu o Grenlandię",
+      "lead": "W Ankarze znowu uderza w Danię.",
+      "whatHappened": "TVN24 podał, że Donald Trump stwierdził w Ankarze, iż Grenlandia powinna być kontrolowana przez USA, a nie Danię.",
+      "keyFacts": [
+        "To kolejny sygnał napięć wokół europejskich sojuszy i Arktyki.",
+        "Wątek pojawia się przy okazji szczytu NATO."
+      ],
+      "reactions": [
+        "Deklaracja może wywołać ostre reakcje w Kopenhadze i w NATO.",
+        "Trump wykorzystuje forum sojuszu do eskalacji własnej agendy."
+      ],
+      "whyItMatters": "Dotyka sojuszniczych relacji USA z Danią i szerszej polityki wobec Arktyki.",
+      "context": "To wpisuje się w serię napiętych wypowiedzi wokół ankarańskiego szczytu.",
+      "watchNext": [
+        "Czy Dania odpowie publicznie.",
+        "Czy temat wróci w komunikatach końcowych NATO."
+      ],
+      "sources": [
+        {
+          "title": "TVN24",
+          "url": "https://tvn24.pl/swiat/donald-trump-w-ankarze-grenlandia-powinna-byc-kontrolowana-przez-usa-nie-danie-st9132572?source=rss"
+        },
+        {
+          "title": "CNN World live news",
+          "url": "https://edition.cnn.com/2026/07/07/world/live-news/nato-summit-trump"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "USA",
+        "Dania",
+        "NATO"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-monaco-ukraine-suspect",
+      "section": "Świat",
+      "title": "Podejrzana o atak w Monako nie żyje",
+      "lead": "BBC i CNN łączą sprawę z Ukrainą.",
+      "whatHappened": "BBC i CNN podały, że kobieta podejrzana o atak bombowy w Monako została znaleziona martwa na Ukrainie.",
+      "keyFacts": [
+        "Sprawa łączy działania policyjne w Europie z poszukiwaniami poza granicami kraju.",
+        "Na tym etapie kluczowe są potwierdzenie tożsamości i okoliczności śmierci."
+      ],
+      "reactions": [
+        "Służby nie podają jeszcze pełnego obrazu sprawy.",
+        "Nagłówek podnosi znaczenie wątku bezpieczeństwa transgranicznego."
+      ],
+      "whyItMatters": "Może wpłynąć na współpracę policyjną i ocenę zagrożeń w regionie.",
+      "context": "To dynamiczny temat kryminalno-bezpieczeństwowy z europejskim zasięgiem.",
+      "watchNext": [
+        "Czy Monako lub Ukraina podadzą więcej oficjalnych szczegółów.",
+        "Czy pojawią się zarzuty i identyfikacja podejrzanej."
+      ],
+      "sources": [
+        {
+          "title": "BBC",
+          "url": "https://www.bbc.co.uk/news/articles/c5yz3770yg8o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN Europe",
+          "url": "https://edition.cnn.com/2026/07/07/europe/monaco-suspect-body-found-ukraine-intl"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Europa",
+        "bezpieczeństwo",
+        "kryminalne"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-damascus-macron-explosion",
+      "section": "Świat",
+      "title": "Eksplozje w Damaszku podczas wizyty Macrona",
+      "lead": "BBC podaje, że rannych zostało 18 osób.",
+      "whatHappened": "BBC i CNN opisują eksplozje w pobliżu hotelu prezydenta Francji w Damaszku podczas jego wizyty, a BBC podaje liczbę 18 rannych.",
+      "keyFacts": [
+        "To wydarzenie łączy bezpieczeństwo dyplomatyczne z konfliktem regionalnym.",
+        "Szczegóły sprawców i motywu pozostają niejasne."
+      ],
+      "reactions": [
+        "Francuskie i lokalne służby podnoszą poziom zainteresowania bezpieczeństwem wizyty.",
+        "Incydent natychmiast podbija napięcie wokół Syrii."
+      ],
+      "whyItMatters": "Bezpośrednio dotyczy bezpieczeństwa delegacji państwowej i sytuacji w Syrii.",
+      "context": "To jeden z najmocniejszych wątków bezpieczeństwa w dzisiejszym feedzie.",
+      "watchNext": [
+        "Czy pojawi się oficjalny komunikat Francji.",
+        "Czy służby wskażą sprawców lub cel ataku."
+      ],
+      "sources": [
+        {
+          "title": "BBC",
+          "url": "https://www.bbc.co.uk/news/articles/c2eylx1jj9ko?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN Middle East",
+          "url": "https://edition.cnn.com/2026/07/07/middleeast/explosion-damascus-macron-hotel-syria-intl"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Syria",
+        "Francja",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-southern-france-wildfire",
+      "section": "Świat",
+      "title": "Pożary na południu Francji zmusiły do ewakuacji",
+      "lead": "Ogień objął region i przesiedlił tysiące osób.",
+      "whatHappened": "BBC podała, że pożary w południowej Francji doprowadziły do ewakuacji około 10 000 osób, a żandarmeria potwierdza dużą mobilizację służb.",
+      "keyFacts": [
+        "Pożary zagrażają gęsto zaludnionym i turystycznym obszarom.",
+        "Władze apelują o zachowanie szczególnej ostrożności."
+      ],
+      "reactions": [
+        "Służby prowadzą szeroką akcję gaśniczą.",
+        "Kryzys może wymagać dalszych ewakuacji, jeśli wiatr się utrzyma."
+      ],
+      "whyItMatters": "To duże zagrożenie dla bezpieczeństwa publicznego i infrastruktury lokalnej.",
+      "context": "Europa Południowa pozostaje wrażliwa na pożary i fale upałów.",
+      "watchNext": [
+        "Czy ewakuacje zostaną rozszerzone.",
+        "Czy pojawią się raporty o zniszczeniach i ofiarach."
+      ],
+      "sources": [
+        {
+          "title": "BBC",
+          "url": "https://www.bbc.co.uk/news/articles/crlwweye9glo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Gendarmerie nationale",
+          "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/en-images/pyrenees-orientales-mobilisation-massive-sur-le-front-de-l-incendie"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Francja",
+        "pożary",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-china-tornado-hubei",
+      "section": "Świat",
+      "title": "Rzadkie tornado uderzyło w Chiny",
+      "lead": "BBC pokazuje gwałtowną pogodę w Hubei.",
+      "whatHappened": "BBC opisała rzadkie tornado w centralnych Chinach, a China.org.cn potwierdza, że w Hubei są ofiary i zaginieni.",
+      "keyFacts": [
+        "To jedno z najcięższych pogodowych zdarzeń w dzisiejszym feedzie.",
+        "Skala strat nadal może się zmieniać wraz z kolejnymi meldunkami."
+      ],
+      "reactions": [
+        "Lokalne służby ratunkowe działają w trybie kryzysowym.",
+        "Chińskie media państwowe akcentują bilans ofiar i zaginionych."
+      ],
+      "whyItMatters": "Łączy bezpośrednie ryzyko dla mieszkańców z możliwymi stratami infrastrukturalnymi.",
+      "context": "To ważny przykład ekstremalnej pogody poza Europą i USA.",
+      "watchNext": [
+        "Czy China.org.cn zaktualizuje bilans ofiar.",
+        "Czy pojawią się obrazy zniszczeń i oficjalne alerty pogodowe."
+      ],
+      "sources": [
+        {
+          "title": "BBC",
+          "url": "https://www.bbc.co.uk/news/videos/cq61d22ved2o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "China.org.cn",
+          "url": "https://www.china.org.cn/2026-07/07/content_118586057.shtml"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Chiny",
+        "pogoda",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-hormuz-tanker",
+      "section": "Świat",
+      "title": "Tankowiec trafiony przy cieśninie Ormuz",
+      "lead": "CNN ostrzega przed ryzykiem dla rynku energii.",
+      "whatHappened": "CNN podał, że tankowiec został trafiony w pobliżu cieśniny Ormuz, co znowu podnosi obawy o zakłócenia dostaw energii.",
+      "keyFacts": [
+        "Cieśnina Ormuz pozostaje krytycznym punktem dla światowego handlu energią.",
+        "Każdy incydent w tym rejonie szybko odbija się na rynkach."
+      ],
+      "reactions": [
+        "Rynek reaguje na wzrost ryzyka geopolitycznego.",
+        "Temat może wywołać kolejne komentarze państw regionu."
+      ],
+      "whyItMatters": "Może wpłynąć na ceny surowców i bezpieczeństwo morskich szlaków transportowych.",
+      "context": "To jeden z najważniejszych punktów strategicznych na mapie globalnej energii.",
+      "watchNext": [
+        "Czy pojawią się dane o sprawcy i skali uszkodzeń.",
+        "Czy rynki energii zareagują kolejnym skokiem cen."
+      ],
+      "sources": [
+        {
+          "title": "CNN Middle East",
+          "url": "https://edition.cnn.com/2026/07/07/middleeast/hormuz-tanker-iran-attack-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Bliski Wschód",
+        "energia",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-russia-fuel-crisis",
+      "section": "Świat",
+      "title": "Rosja pogłębia kryzys paliwowy",
+      "lead": "CNN opisuje presję po atakach dronów.",
+      "whatHappened": "CNN podał, że niemal każdy region Rosji odczuwa kryzys paliwowy w tle ukraińskich ataków dronowych na infrastrukturę energetyczną.",
+      "keyFacts": [
+        "Wątek łączy logistykę paliwową z wojną dronową.",
+        "Sytuacja ma znaczenie zarówno dla rynku, jak i dla zaplecza wojennego."
+      ],
+      "reactions": [
+        "Rosyjskie media i władze mogą próbować minimalizować skalę problemu.",
+        "Dla Ukrainy to dowód skuteczności presji na zaplecze energetyczne."
+      ],
+      "whyItMatters": "Kryzys paliwowy może wpływać na transport, gospodarkę i zdolności militarne Rosji.",
+      "context": "To kolejny przykład, jak wojna przenosi się na infrastrukturę cywilną i energetyczną.",
+      "watchNext": [
+        "Czy Rosja wprowadzi nowe ograniczenia sprzedaży paliw.",
+        "Czy pojawią się kolejne ataki dronowe na infrastrukturę."
+      ],
+      "sources": [
+        {
+          "title": "CNN Europe",
+          "url": "https://edition.cnn.com/2026/07/06/europe/russia-fuel-crisis-ukraine-drone-attacks-intl-vis"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Rosja",
+        "energia",
+        "wojna"
+      ],
+      "priority": "high"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24: najnowsze XML",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24: najnowsze",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "BBC News World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "Gov.pl - RCB alert",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---bardzo-silne-opady-deszczu-0707"
+    },
+    {
+      "title": "IMGW - prognoza tygodniowa",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-02-07.2026-09-07-2026/"
+    },
+    {
+      "title": "NATO - Secretary General preview",
+      "url": "https://www.nato.int/en/news-and-events/articles/news/2026/07/06/nato-secretary-general-previews-the-ankara-summit-highlights-progress-on-defence-spending"
+    },
+    {
+      "title": "Gendarmerie nationale - Pyrénées-Orientales fire",
+      "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/en-images/pyrenees-orientales-mobilisation-massive-sur-le-front-de-l-incendie"
+    },
+    {
+      "title": "China.org.cn - Hubei storms",
+      "url": "https://www.china.org.cn/2026-07/07/content_118586057.shtml"
+    }
+  ]
+}

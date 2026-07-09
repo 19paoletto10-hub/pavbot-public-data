@@ -1,0 +1,549 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-07",
+  "runTime": "09:01",
+  "status": "material update",
+  "headline": "Poranny puls: alerty w Polsce, NATO w Ankarze i nowe ryzyka globalne",
+  "summary": "Krajowy feed przesunął się na alerty pogodowe i ewakuację we Wrocławiu, a w świecie dominują Ormuz, Ukraina, Chiny, Francja, Kuba i restrukturyzacja Microsoftu.",
+  "items": [
+    {
+      "id": "pl-zdrowie-reforma",
+      "section": "Polska",
+      "title": "Reforma ochrony zdrowia czeka na podpis",
+      "lead": "TVN24 wskazuje, że rząd chce zmian w systemie ochrony zdrowia, a ustawa czeka na podpis prezydenta.",
+      "whatHappened": "Poranny materiał TVN24 przeniósł uwagę na kolejny pakiet zmian w ochronie zdrowia. W tle są prace nad e-zdrowiem i uporządkowaniem reguł działania systemu.",
+      "keyFacts": [
+        "TVN24 datuje materiał na 7 lipca 2026 rano.",
+        "Gov.pl opisuje równoległe prace nad ustawami dotyczącymi e-zdrowia i organizacji świadczeń.",
+        "Temat dotyczy pacjentów, kolejek i sposobu finansowania świadczeń."
+      ],
+      "reactions": [
+        "Resort przedstawia zmiany jako usprawnienie systemu.",
+        "Opozycja i część środowisk medycznych zwykle skupiają się na tempie wdrożenia."
+      ],
+      "whyItMatters": "Zmiany w zdrowiu wpływają bezpośrednio na dostępność świadczeń i organizację pracy placówek.",
+      "context": "To kontynuacja serii ustaw i projektów porządkujących e-zdrowie oraz szerszą architekturę ochrony zdrowia.",
+      "watchNext": [
+        "Sprawdzić, czy prezydent podpisze ustawę.",
+        "Obserwować harmonogram wdrożeń i komunikaty resortu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24",
+          "url": "https://tvn24.pl/polska/zarobki-lekarzy-rzad-chce-zmian-w-prawie-ustawa-czeka-na-podpis-prezydenta-karola-nawrockiego-st9131339?source=rss"
+        },
+        {
+          "title": "Gov.pl - Ministerstwo Zdrowia",
+          "url": "https://www.gov.pl/web/zdrowie/sejm-uchwalil-nowelizacje-ustawy-o-krajowej-sieci-onkologicznej-edilo-usprawni-koordynacje-leczenia-pacjentow"
+        }
+      ],
+      "tags": [
+        "zdrowie",
+        "ustawa",
+        "rząd",
+        "pacjenci"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-wroclaw-evacuation",
+      "section": "Alerty",
+      "title": "Ewakuacja 3 tys. osób we Wrocławiu",
+      "lead": "Niewybuch na Szczepinie wymusił poranną akcję ewakuacyjną w rejonie ul. Trzemeskiej.",
+      "whatHappened": "TVN24 podało, że we Wrocławiu znaleziono niewybuch z czasów II wojny światowej. Policja i służby zapowiedziały ewakuację mieszkańców z wyznaczonej strefy przed działaniem patrolu saperskiego.",
+      "keyFacts": [
+        "Akcja dotyczy rejonu ul. Trzemeskiej na Szczepinie.",
+        "Służby apelują o opuszczenie strefy w wyznaczonym czasie.",
+        "Takie znaleziska zwykle oznaczają czasowe utrudnienia w ruchu i transporcie."
+      ],
+      "reactions": [
+        "Policja prosi mieszkańców o stosowanie się do poleceń.",
+        "Lokalne służby przygotowują zabezpieczenie terenu i logistykę ewakuacji."
+      ],
+      "whyItMatters": "To bezpośredni alert bezpieczeństwa dla tysięcy mieszkańców i okolicznej infrastruktury.",
+      "context": "W dużych miastach niewybuchy z II wojny nadal regularnie powodują krótkie, ale szerokie akcje służb.",
+      "watchNext": [
+        "Potwierdzić, kiedy zakończy się akcja saperów.",
+        "Sprawdzić komunikaty o zamknięciach ulic i komunikacji miejskiej."
+      ],
+      "sources": [
+        {
+          "title": "TVN24",
+          "url": "https://tvn24.pl/wroclaw/wroclaw-znaleziono-niewybuch-ewakuacja-trzech-tysiecy-osob-st9131386?source=rss"
+        },
+        {
+          "title": "Policja Wrocław",
+          "url": "https://wroclaw.policja.gov.pl/"
+        }
+      ],
+      "tags": [
+        "alert",
+        "Wrocław",
+        "niewybuch",
+        "ewakuacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-imgw-storms",
+      "section": "Alerty",
+      "title": "IMGW ostrzega przed burzami i wichurami",
+      "lead": "Na wtorek obowiązują wysokie ostrzeżenia pogodowe, a prognoza wskazuje na silny wiatr i burze.",
+      "whatHappened": "TVN24 podało ostrzeżenia IMGW trzeciego stopnia dla części kraju. Oficjalna tygodniowa prognoza IMGW pokazuje, że pierwsza połowa tygodnia ma przynieść silniejszy wiatr i lokalne burze.",
+      "keyFacts": [
+        "To komunikat z porannego okna 7 lipca 2026.",
+        "IMGW wskazuje na większą dynamikę pogody na początku tygodnia.",
+        "Taki poziom ostrzeżeń zwiększa ryzyko zalań, przerw w zasilaniu i utrudnień drogowych."
+      ],
+      "reactions": [
+        "Służby pogodowe zalecają ostrożność i śledzenie aktualizacji.",
+        "Operatorzy infrastruktury zwykle podnoszą gotowość na awarie po burzach."
+      ],
+      "whyItMatters": "Burze i wichury w lipcu szybko przekładają się na szkody lokalne oraz zakłócenia transportu.",
+      "context": "To część szerokiego, letniego wzorca niestabilnej pogody nad Polską i Bałtykiem.",
+      "watchNext": [
+        "Śledzić, czy IMGW rozszerzy lub odwoła ostrzeżenia.",
+        "Sprawdzić, czy pojawią się przerwy w dostawach prądu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24",
+          "url": "https://tvn24.pl/tvnmeteo/polska/burze-i-wichury-ostrzezenia-imgw-we-wtorek-7-07-imgw-wydal-ostrzezenia-trzeciego-stopnia-st9131368?source=rss"
+        },
+        {
+          "title": "IMGW aktualności",
+          "url": "https://imgw.pl/category/aktualnosci/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "IMGW",
+        "alert",
+        "wiatr"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-nato-delegation",
+      "section": "Polityka",
+      "title": "Polska delegacja jedzie na szczyt NATO w Ankarze",
+      "lead": "Prezydent, szef MON i szef MSZ mają reprezentować Polskę podczas szczytu 7-8 lipca.",
+      "whatHappened": "TVN24 opisało skład polskiej delegacji na szczyt NATO. Oficjalne strony NATO i Kancelarii Prezydenta potwierdzają termin i wagę spotkania w Ankarze.",
+      "keyFacts": [
+        "Szczyt NATO odbywa się w Ankarze 7-8 lipca 2026.",
+        "W komunikacji publicznej Polska akcentuje współpracę transatlantycką i wsparcie Ukrainy.",
+        "To jedno z głównych wydarzeń bezpieczeństwa w lipcowym kalendarzu."
+      ],
+      "reactions": [
+        "Warszawa sygnalizuje wysoki poziom reprezentacji politycznej.",
+        "NATO podkreśla inwestycje w obronność i przemysł obronny."
+      ],
+      "whyItMatters": "Decyzje z Ankary mogą wpłynąć na wsparcie dla Ukrainy i priorytety bezpieczeństwa w regionie.",
+      "context": "Szczyt jest kontynuacją przygotowań omawianych w kanałach NATO i polskich instytucjach od miesięcy.",
+      "watchNext": [
+        "Sprawdzić wspólny komunikat po szczycie.",
+        "Obserwować decyzje o wydatkach obronnych i Ukrainie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24",
+          "url": "https://tvn24.pl/polska/plan-szczytu-nato-w-ankarze-polske-reprezentowac-beda-karol-nawrocki-wladyslaw-kosiniak-kamysz-i-radoslaw-sikorski-st9131352?source=rss"
+        },
+        {
+          "title": "NATO - Ankara Summit",
+          "url": "https://www.nato.int/en/news-and-events/events/2026/07/overview---2026-nato-summit-in-ankara-"
+        },
+        {
+          "title": "Prezydent RP - zapowiedzi prasowe",
+          "url": "https://www.prezydent.pl/dla-mediow/zapowiedzi-prasowe"
+        }
+      ],
+      "tags": [
+        "NATO",
+        "Ankara",
+        "bezpieczeństwo",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-wola-cocaine",
+      "section": "Bezpieczeństwo",
+      "title": "Warszawska policja przejęła ponad 10 kg kokainy",
+      "lead": "CBŚP udaremniło przemyt narkotyków z Hiszpanii do Polski i zatrzymało podejrzanych.",
+      "whatHappened": "TVN24 opisało akcję w Warszawie, a policja potwierdziła, że funkcjonariusze z Woli zabezpieczyli ponad 10 kg czystej kokainy ukrytej w pojeździe.",
+      "keyFacts": [
+        "Policja podała, że narkotyki miały trafić na warszawski rynek.",
+        "Zatrzymani usłyszeli zarzuty i zostali tymczasowo aresztowani.",
+        "Sprawa ma charakter międzynarodowy i obejmuje przemyt z Hiszpanii."
+      ],
+      "reactions": [
+        "Służby traktują to jako kolejne uderzenie w lokalny łańcuch dystrybucji narkotyków.",
+        "Prokuratura prowadzi dalsze czynności procesowe."
+      ],
+      "whyItMatters": "To duży przechwyt na rynku stołecznym i sygnał aktywności zorganizowanej przestępczości.",
+      "context": "CBŚP i policja regularnie raportują podobne przejęcia na szlakach z Europy Zachodniej do Polski.",
+      "watchNext": [
+        "Sprawdzić, czy policja poda kolejne zatrzymania.",
+        "Obserwować rozwój śledztwa prokuratury."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Warszawa",
+          "url": "https://tvn24.pl/tvnwarszawa/wola/warszawa-wola-kokaina-z-hiszpanii-akcja-w-warszawie-st9131197?source=rss"
+        },
+        {
+          "title": "Policja.pl",
+          "url": "https://policja.pl/"
+        }
+      ],
+      "tags": [
+        "narkotyki",
+        "Warszawa",
+        "CBŚP",
+        "przemyt"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-zelensky-nato-air-defence",
+      "section": "Świat",
+      "title": "Zełenski chce naciskać NATO o obronę przeciwlotniczą",
+      "lead": "BBC podaje, że Ukraina jedzie do Ankary po więcej systemów obrony po intensywnych rosyjskich atakach.",
+      "whatHappened": "BBC opisuje plan Zełenskiego, by na tle rosyjskich uderzeń domagać się od sojuszników dodatkowych systemów obrony powietrznej. Temat wchodzi wprost w agendę szczytu NATO.",
+      "keyFacts": [
+        "Wątek dotyczy bezpośrednio bezpieczeństwa Ukrainy i obrony sojuszniczej.",
+        "Szczyt NATO w Ankarze nadaje sprawie dodatkowy ciężar polityczny.",
+        "Rosyjskie uderzenia pozostają głównym kontekstem żądań Kijowa."
+      ],
+      "reactions": [
+        "Sojusznicy będą ważyć tempo i skalę wsparcia.",
+        "Ukraina szuka publicznego sygnału dalszego zaangażowania Zachodu."
+      ],
+      "whyItMatters": "Decyzje o obronie przeciwlotniczej wpływają na odporność Ukrainy i wiarygodność NATO.",
+      "context": "To kolejny dowód, że wojna Rosji przeciw Ukrainie pozostaje główną osią europejskiego bezpieczeństwa.",
+      "watchNext": [
+        "Sprawdzić, czy NATO ogłosi nowe pakiety wsparcia.",
+        "Monitorować kolejne rosyjskie ataki i ich skutki."
+      ],
+      "sources": [
+        {
+          "title": "BBC News RSS",
+          "url": "https://www.bbc.co.uk/news/articles/c9d227e5zj6o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "NATO - Ankara Summit",
+          "url": "https://www.nato.int/en/news-and-events/events/2026/07/overview---2026-nato-summit-in-ankara-"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "NATO",
+        "wojna",
+        "obrona powietrzna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-hormuz-tanker",
+      "section": "Świat",
+      "title": "Tankowiec trafiony przy cieśninie Ormuz",
+      "lead": "CNN i UKMTO opisują atak na jednostkę przepływającą w rejonie cieśniny Ormuz.",
+      "whatHappened": "CNN informuje o incydencie morskim w okolicy Ormuzu, gdy tankowiec został trafiony i wybuchł pożar na pokładzie. UKMTO potwierdza zgłoszenie o uderzeniu niezidentyfikowanego pocisku.",
+      "keyFacts": [
+        "Chodzi o jeden z najważniejszych szlaków przesyłu ropy na świecie.",
+        "UKMTO publikuje komunikaty bezpieczeństwa dla żeglugi handlowej.",
+        "Incydent zwiększa ryzyko zakłóceń w transporcie morskim i cenach energii."
+      ],
+      "reactions": [
+        "Armatorzy i armie regionu zwykle podnoszą gotowość po takich zdarzeniach.",
+        "Rynek obserwuje każdy sygnał eskalacji w Zatoce Perskiej."
+      ],
+      "whyItMatters": "Ormuz to wąskie gardło dla globalnej podaży energii i handel morski reaguje na takie incydenty natychmiast.",
+      "context": "Ataki na żeglugę w tym rejonie mają natychmiastowe skutki regionalne i finansowe.",
+      "watchNext": [
+        "Sprawdzić, czy UKMTO opublikuje kolejną notę.",
+        "Obserwować reakcję Iranu, USA i państw Zatoki."
+      ],
+      "sources": [
+        {
+          "title": "CNN World",
+          "url": "https://edition.cnn.com/2026/07/07/middleeast/hormuz-tanker-iran-attack-intl-hnk"
+        },
+        {
+          "title": "UKMTO",
+          "url": "https://www.ukmto.org/"
+        }
+      ],
+      "tags": [
+        "Ormuz",
+        "ropa",
+        "żegluga",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-china-slbm-test",
+      "section": "Świat",
+      "title": "Chiny testują rakietę balistyczną z okrętu podwodnego",
+      "lead": "CNN opisuje rzadki test strategicznej rakiety, który wywołał niepokój państw Pacyfiku.",
+      "whatHappened": "CNN podało, że Chiny przeprowadziły test rakiety balistycznej odpalanej z okrętu podwodnego. Oficjalne chińskie ministerstwo obrony potwierdziło udany test.",
+      "keyFacts": [
+        "To rzadko widoczny publicznie element chińskiej triady strategicznej.",
+        "Państwa regionu Pacyfiku odczytują taki ruch jako sygnał siły i gotowości.",
+        "Test zwiększa znaczenie kontroli zbrojeń i komunikacji wojskowej."
+      ],
+      "reactions": [
+        "Sąsiedzi Chin sygnalizują większą ostrożność wobec Pekinu.",
+        "W Waszyngtonie i w regionie rośnie uwaga wokół strategicznej równowagi sił."
+      ],
+      "whyItMatters": "Strategiczne testy Chin wpływają na bezpieczeństwo w Azji i napięcia wokół odstraszania nuklearnego.",
+      "context": "Wysoka aktywność wojskowa w Azji pozostaje jednym z kluczowych globalnych ryzyk bezpieczeństwa.",
+      "watchNext": [
+        "Sprawdzić, czy Pekin poda dodatkowe szczegóły testu.",
+        "Monitorować reakcje Japonii, Australii i USA."
+      ],
+      "sources": [
+        {
+          "title": "CNN World",
+          "url": "https://edition.cnn.com/2026/07/06/china/china-tests-submarine-launched-ballistic-missile-intl-hnk-ml"
+        },
+        {
+          "title": "Chinese Ministry of National Defense",
+          "url": "https://eng.mod.gov.cn/2025xb/N/T/16472056.html"
+        }
+      ],
+      "tags": [
+        "Chiny",
+        "rakieta",
+        "Pacyfik",
+        "strategia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-france-wildfire",
+      "section": "Świat",
+      "title": "Pożar na południu Francji ewakuował tysiące osób",
+      "lead": "BBC i francuskie służby mówią o dużym pożarze oraz ewakuacji około 10 tysięcy mieszkańców.",
+      "whatHappened": "BBC podało, że pożar w południowej Francji wymusił ewakuację około 10 tysięcy osób. Gendarmerie opisuje masową mobilizację służb na froncie pożaru i działania zabezpieczające.",
+      "keyFacts": [
+        "To jeden z najpoważniejszych letnich pożarów w regionie.",
+        "Służby muszą jednocześnie chronić mieszkańców i utrzymać drogi dojazdowe dla straży pożarnej.",
+        "W regionie trwają wysokie temperatury i ryzyko dalszego rozprzestrzeniania ognia."
+      ],
+      "reactions": [
+        "Prefektura i służby bezpieczeństwa organizują ewakuację oraz korytarze dojazdowe.",
+        "Lokalne władze adaptują ruch drogowy i wydarzenia publiczne."
+      ],
+      "whyItMatters": "Pożary w południowej Europie szybko stają się kryzysem humanitarnym i infrastrukturalnym.",
+      "context": "To kolejny przykład, jak letnie fale upałów przekładają się na nagłe zagrożenia lokalne.",
+      "watchNext": [
+        "Sprawdzić, czy liczba ewakuowanych wzrośnie.",
+        "Obserwować komunikaty o zamknięciach dróg i kolei."
+      ],
+      "sources": [
+        {
+          "title": "BBC News RSS",
+          "url": "https://www.bbc.co.uk/news/articles/crlwweye9glo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Gendarmerie / Interior Ministry",
+          "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/en-images/pyrenees-orientales-mobilisation-massive-sur-le-front-de-l-incendie"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "pożar",
+        "ewakuacja",
+        "alert"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-human-trafficking-crackdown",
+      "section": "Świat",
+      "title": "Globalna akcja przeciw handlowi ludźmi",
+      "lead": "BBC i INTERPOL podają, że w międzynarodowej operacji zatrzymano ponad 1000 osób.",
+      "whatHappened": "BBC informuje o globalnym uderzeniu w sieci handlu ludźmi. INTERPOL podał, że operacja prowadzona przez Austria i Rumunię, koordynowana z Europolem, Frontexem i Ameripolem, doprowadziła do setek aresztowań za handel ludźmi i przestępstwa powiązane.",
+      "keyFacts": [
+        "To działania kilku służb z różnych kontynentów.",
+        "Operacja dotyka zarówno handlu ludźmi, jak i przestępstw towarzyszących.",
+        "Skala aresztowań pokazuje, że sieci są dobrze zakorzenione transgranicznie."
+      ],
+      "reactions": [
+        "INTERPOL przedstawia akcję jako model współpracy operacyjnej.",
+        "Służby podkreślają konieczność dalszych działań po stronie państw i platform online."
+      ],
+      "whyItMatters": "Handel ludźmi pozostaje ciężkim przestępstwem transgranicznym i wymaga stałej presji służb.",
+      "context": "To jedna z największych koordynowanych akcji przeciwko sieciom wykorzystującym ofiary w wielu krajach.",
+      "watchNext": [
+        "Sprawdzić, czy INTERPOL poda dalsze liczby i regiony działań.",
+        "Obserwować, czy ujawnione zostaną kolejne sieci przestępcze."
+      ],
+      "sources": [
+        {
+          "title": "BBC News RSS",
+          "url": "https://www.bbc.co.uk/news/articles/c5yzzzdwqjko?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "INTERPOL News",
+          "url": "https://www.interpol.int/News-and-Events/News"
+        }
+      ],
+      "tags": [
+        "handel ludźmi",
+        "INTERPOL",
+        "aresztowania",
+        "przestępczość"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-cuba-blackout",
+      "section": "Świat",
+      "title": "Kuba zmaga się z kolejnym kryzysem energetycznym",
+      "lead": "CNN opisuje blackout i napięty system energetyczny, a państwowy operator pokazuje wielodniowy deficyt mocy.",
+      "whatHappened": "CNN podało, że Kuba doświadczyła szerokiego blackoutu i utrzymującej się presji na sieć energetyczną. Oficjalny biuletyn Unión Eléctrica pokazuje codzienny deficyt mocy i awarie jednostek wytwórczych.",
+      "keyFacts": [
+        "Biuletyn państwowy mówił o dużej luce między popytem a możliwością wytwarzania.",
+        "Deficyt energii przekłada się na codzienne przerwy w dostawach prądu.",
+        "To nie tylko temat techniczny, ale też polityczny i społeczny."
+      ],
+      "reactions": [
+        "Władze tłumaczą problem niedoborem mocy i obciążeniem systemu.",
+        "Mieszkańcy odczuwają skutki bezpośrednio w gospodarce domowej i usługach."
+      ],
+      "whyItMatters": "Blackouty na Kubie uderzają w codzienne życie, biznes i stabilność państwa.",
+      "context": "Kuba od dłuższego czasu mierzy się z chronicznym niedoinwestowaniem i niedoborem energii.",
+      "watchNext": [
+        "Sprawdzić, czy operator poda plan stabilizacji systemu.",
+        "Monitorować, czy pojawią się kolejne regionalne blackouty."
+      ],
+      "sources": [
+        {
+          "title": "CNN World",
+          "url": "https://edition.cnn.com/2026/07/06/americas/cuba-blackout-electrical-grid-intl-latam"
+        },
+        {
+          "title": "Unión Eléctrica",
+          "url": "https://www.unionelectrica.cu/nota-informativa/"
+        }
+      ],
+      "tags": [
+        "Kuba",
+        "energia",
+        "blackout",
+        "gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-microsoft-layoffs",
+      "section": "Świat",
+      "title": "Microsoft tnie etaty, także w Xbox",
+      "lead": "Microsoft potwierdził około 4 800 redukcji, a CNN wskazuje na mocne cięcia w Xbox.",
+      "whatHappened": "Oficjalny blog Microsoftu potwierdza likwidację około 4 800 stanowisk, czyli 2,1 procent globalnej siły roboczej. CNN zwraca uwagę, że najmocniej odczuwa to dział Xbox.",
+      "keyFacts": [
+        "To jeden z większych sygnałów restrukturyzacji w big tech w tym kwartale.",
+        "Firma mówi o zmianie priorytetów i koncentracji na kluczowych obszarach.",
+        "Cięcia uderzają też w gry i rozrywkę, nie tylko w klasyczne IT."
+      ],
+      "reactions": [
+        "Rynek odczytuje ruch jako dalszą presję na efektywność kosztową.",
+        "Dla pracowników to sygnał, że nawet duże spółki nadal redukują koszty po poprzednich falach wzrostu."
+      ],
+      "whyItMatters": "W big tech to ważny sygnał dla rynku pracy, inwestycji i strategii produktowych.",
+      "context": "Cięcia wpisują się w szerszą falę optymalizacji po okresie agresywnego wzrostu zatrudnienia.",
+      "watchNext": [
+        "Sprawdzić, czy firma poda więcej szczegółów o obszarach objętych redukcją.",
+        "Obserwować reakcję rynku i konkurencji w sektorze gier."
+      ],
+      "sources": [
+        {
+          "title": "Microsoft Blog",
+          "url": "https://blogs.microsoft.com/blog/2026/07/06/the-latest-in-our-company-transformation/"
+        },
+        {
+          "title": "CNN Tech",
+          "url": "https://edition.cnn.com/2026/07/06/tech/microsoft-layoffs-xbox"
+        }
+      ],
+      "tags": [
+        "Microsoft",
+        "Xbox",
+        "zwolnienia",
+        "technologia"
+      ],
+      "priority": "high"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 - najnowsze XML",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24 - najnowsze",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "BBC News World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "Gov.pl - Ministerstwo Zdrowia",
+      "url": "https://www.gov.pl/web/zdrowie/sejm-uchwalil-nowelizacje-ustawy-o-krajowej-sieci-onkologicznej-edilo-usprawni-koordynacje-leczenia-pacjentow"
+    },
+    {
+      "title": "IMGW aktualności",
+      "url": "https://imgw.pl/category/aktualnosci/"
+    },
+    {
+      "title": "Policja Wrocław",
+      "url": "https://wroclaw.policja.gov.pl/"
+    },
+    {
+      "title": "NATO Summit in Ankara",
+      "url": "https://www.nato.int/en/news-and-events/events/2026/07/overview---2026-nato-summit-in-ankara-"
+    },
+    {
+      "title": "Prezydent RP - zapowiedzi prasowe",
+      "url": "https://www.prezydent.pl/dla-mediow/zapowiedzi-prasowe"
+    },
+    {
+      "title": "Policja.pl",
+      "url": "https://policja.pl/"
+    },
+    {
+      "title": "UKMTO",
+      "url": "https://www.ukmto.org/"
+    },
+    {
+      "title": "Ministry of National Defense of the PRC",
+      "url": "https://eng.mod.gov.cn/2025xb/N/T/16472056.html"
+    },
+    {
+      "title": "Gendarmerie / Interior Ministry",
+      "url": "https://www.gendarmerie.interieur.gouv.fr/gendinfo/en-images/pyrenees-orientales-mobilisation-massive-sur-le-front-de-l-incendie"
+    },
+    {
+      "title": "INTERPOL News",
+      "url": "https://www.interpol.int/News-and-Events/News"
+    },
+    {
+      "title": "Unión Eléctrica",
+      "url": "https://www.unionelectrica.cu/nota-informativa/"
+    },
+    {
+      "title": "Microsoft Blog",
+      "url": "https://blogs.microsoft.com/blog/2026/07/06/the-latest-in-our-company-transformation/"
+    }
+  ]
+}

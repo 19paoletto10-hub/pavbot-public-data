@@ -33,6 +33,12 @@ pressure, evacuated harcerze, new scanners at Chopin, PIP reform and AI
 dezinformation, while the world feed strengthened around Iran, Ukraine/NATO,
 Le Pen, Russian fuel shortages, Telstra and severe weather in China.
 
+The 2026-07-09 06:02 slot shifted the feed away from the wczorajszy blok
+health-macro toward legal and political items in Poland, alert-heavy weather,
+and a new global mix centered on Iran, Grenlandia, Le Pen, France fires and
+the German doctor verdict. For the current morning cadence, direct article
+pages are more reliable than bundle headlines when TVN24 exposes them.
+
 ## Data Shape
 
 The native iOS feed expects:
