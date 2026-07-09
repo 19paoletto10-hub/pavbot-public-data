@@ -61,6 +61,12 @@ new UK-led deep precision strike initiative put NATO security back in focus;
 technology now leans more clearly into AI regulation and Samsung's profit
 signal.
 
+The 2026-07-09 18:00 slot moves the domestic mix toward a formal Supreme
+Court appointment, a local predator warning, a Warsaw crash, weather
+interventions and the unchanged RPP line, while the world block stays
+dominated by Iran, Ormuz, NATO and Ukraine. OpenAI's GPT-5.6 cycle is now the
+clearest technology signal in the feed.
+
 ## Data Shape
 
 The native iOS feed expects:
