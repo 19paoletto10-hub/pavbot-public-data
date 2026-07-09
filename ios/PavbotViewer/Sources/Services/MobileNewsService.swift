@@ -379,6 +379,44 @@ final class MobileNewsSpeechController: ObservableObject {
         )
     }
 
+    func speak(
+        _ article: MobileNewsArticle,
+        language: AppLanguagePreference,
+        translationStore: AutomationTranslationStore,
+        destination: PavbotAudioDestination? = nil
+    ) async {
+        let sourceText = nonBlankSpeechText(article.speechText(language: language)) ?? article.lead
+        let speechText = await translationStore.localizedText(sourceText, language: language)
+        let title = await translationStore.localizedText(article.title, language: language)
+        let keyNotes = await translatedKeyNotes(
+            Array(article.facts.prefix(3)),
+            language: language,
+            translationStore: translationStore
+        )
+        let tabLabel = await translationStore.localizedText(article.section, language: language)
+
+        playback.play(
+            itemID: article.id,
+            title: title,
+            text: speechText,
+            destination: destination,
+            keyNotes: keyNotes,
+            tabLabel: tabLabel
+        )
+    }
+
+    private func translatedKeyNotes(
+        _ notes: [String],
+        language: AppLanguagePreference,
+        translationStore: AutomationTranslationStore
+    ) async -> [String] {
+        var translated: [String] = []
+        for note in notes {
+            translated.append(await translationStore.localizedText(note, language: language))
+        }
+        return translated
+    }
+
     func setSpeechRate(_ rate: MobileNewsSpeechRate) {
         playback.setSpeechRate(rate)
     }

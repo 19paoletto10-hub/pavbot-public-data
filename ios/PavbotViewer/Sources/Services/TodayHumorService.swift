@@ -109,16 +109,43 @@ final class TodayHumorStore {
     }
 
     private func applyLoadedDigests(_ loadedDigests: [TodayHumorDigest]) {
-        guard let firstDigest = loadedDigests.first else { return }
-        digest = firstDigest
-        recentDigests = Array(loadedDigests.prefix(Self.historyLimit))
-        cache.save(firstDigest)
+        guard let preferredDigest = Self.preferredDisplayDigest(from: loadedDigests) else { return }
+        digest = preferredDigest
+        recentDigests = Self.displayHistory(from: loadedDigests, preferredDigest: preferredDigest)
+        cache.save(preferredDigest)
         cache.saveHistory(recentDigests)
         cacheNotice = nil
         state = .loaded
     }
 
     private static let historyLimit = 3
+
+    private static func preferredDisplayDigest(from digests: [TodayHumorDigest]) -> TodayHumorDigest? {
+        guard let firstDigest = digests.first else { return nil }
+        if firstDigest.hasCommentHighlightsWithoutAnyOriginalBodies,
+           let completeDigest = digests.first(where: { $0.originalCommentBodyCount > 0 }) {
+            return completeDigest
+        }
+        return firstDigest
+    }
+
+    private static func displayHistory(
+        from digests: [TodayHumorDigest],
+        preferredDigest: TodayHumorDigest
+    ) -> [TodayHumorDigest] {
+        var seenIDs = Set<String>()
+        var history: [TodayHumorDigest] = []
+
+        for candidate in [preferredDigest] + digests {
+            guard seenIDs.insert(candidate.id).inserted else { continue }
+            history.append(candidate)
+            if history.count == Self.historyLimit {
+                break
+            }
+        }
+
+        return history
+    }
 
     private static func redditRadarDigestURLs(
         in manifest: PavbotManifest?,

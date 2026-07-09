@@ -3237,10 +3237,10 @@ private struct TodayHumorDetailSection: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Label(title, systemImage: systemImage)
+            Label(LocalizedStringKey(title), systemImage: systemImage)
                 .font(.headline.weight(.semibold))
                 .foregroundStyle(.purple)
-            Text(text)
+            PavbotTranslatedAutomationText(text)
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
@@ -3253,7 +3253,6 @@ private struct TodayHumorDetailSection: View {
 
 private struct TodayHumorCommentHighlightCard: View {
     let highlight: TodayHumorCommentHighlight
-    let targetLanguageCode = "pl"
 
     @State private var isShowingOriginal = false
 
@@ -3356,29 +3355,22 @@ private struct TodayHumorCommentHighlightCard: View {
         VStack(alignment: .leading, spacing: 8) {
             headerLabel("Oryginalny komentarz", systemImage: "quote.opening")
 
-            Text("\"\(originalBody)\"")
+            PavbotTranslatedExternalText("\"\(originalBody)\"")
                 .font(.callout.weight(.semibold))
                 .foregroundStyle(.primary)
                 .lineSpacing(3)
                 .fixedSize(horizontal: false, vertical: true)
 
             VStack(alignment: .leading, spacing: 5) {
-                Label(LocalizedStringKey("Tłumaczenie na polski"), systemImage: "translate")
+                Label(LocalizedStringKey("Tłumaczenie komentarza"), systemImage: "translate")
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.purple)
 
-                if #available(iOS 18.0, *) {
-                    TodayHumorCommentTranslationView(
-                        sourceText: originalBody,
-                        targetLanguageCode: targetLanguageCode
-                    )
-                } else {
-                    Text(LocalizedStringKey("Tłumaczenie komentarzy wymaga iOS 18 lub nowszego."))
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                        .lineSpacing(2)
-                        .fixedSize(horizontal: false, vertical: true)
-                }
+                PavbotTranslatedExternalText(originalBody)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .lineSpacing(2)
+                    .fixedSize(horizontal: false, vertical: true)
             }
             .padding(.top, 4)
 
@@ -3423,92 +3415,6 @@ private struct TodayHumorCommentHighlightCard: View {
             return "Oryginalny komentarz. \(originalBody)"
         }
         return "Analiza komentarza. \(highlight.summary). \(highlight.explanation)"
-    }
-}
-
-@available(iOS 18.0, *)
-private struct TodayHumorCommentTranslationView: View {
-    let sourceText: String
-    let targetLanguageCode: String
-
-    @State private var translatedText: String?
-    @State private var translationConfiguration: TranslationSession.Configuration?
-    @State private var translationErrorMessage: String?
-    @State private var isTranslating = false
-
-    var body: some View {
-        Group {
-            if let translatedText {
-                Text(translatedText)
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-                    .lineSpacing(2)
-                    .fixedSize(horizontal: false, vertical: true)
-            } else if isTranslating {
-                Label(LocalizedStringKey("Tłumaczę komentarz..."), systemImage: "arrow.triangle.2.circlepath")
-                    .font(.caption)
-                    .foregroundStyle(.secondary)
-            } else if let translationErrorMessage {
-                VStack(alignment: .leading, spacing: 6) {
-                    Text(translationErrorMessage)
-                        .font(.caption)
-                        .foregroundStyle(.secondary)
-                        .lineSpacing(2)
-                        .fixedSize(horizontal: false, vertical: true)
-
-                    Button {
-                        translateComment()
-                    } label: {
-                        Label(LocalizedStringKey("Spróbuj ponownie"), systemImage: "translate")
-                            .font(.caption.weight(.semibold))
-                    }
-                    .buttonStyle(.plain)
-                    .foregroundStyle(.purple)
-                }
-            } else {
-                Button {
-                    translateComment()
-                } label: {
-                    Label(LocalizedStringKey("Przetłumacz komentarz"), systemImage: "translate")
-                        .font(.caption.weight(.semibold))
-                }
-                .buttonStyle(.plain)
-                .foregroundStyle(.purple)
-            }
-        }
-        .task {
-            translateComment()
-        }
-        .translationTask(translationConfiguration) { session in
-            await translateComment(using: session)
-        }
-    }
-
-    private func translateComment() {
-        guard translatedText == nil, !isTranslating else { return }
-        isTranslating = true
-        translationErrorMessage = nil
-        if translationConfiguration == nil {
-            translationConfiguration = TranslationSession.Configuration(
-                source: nil,
-                target: Locale.Language(identifier: targetLanguageCode)
-            )
-        } else {
-            translationConfiguration?.invalidate()
-        }
-    }
-
-    @MainActor
-    private func translateComment(using session: TranslationSession) async {
-        do {
-            let response = try await session.translate(sourceText)
-            translatedText = response.targetText
-            translationErrorMessage = nil
-        } catch {
-            translatedText = nil
-            translationErrorMessage = "Nie udało się przetłumaczyć komentarza. Spróbuj ponownie."
-        }
-        isTranslating = false
     }
 }
 

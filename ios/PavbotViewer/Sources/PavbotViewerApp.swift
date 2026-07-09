@@ -16,6 +16,7 @@ struct PavbotViewerApp: App {
     @State private var todayHumor = TodayHumorStore()
     @State private var appearance = AppAppearanceStore()
     @State private var language = AppLanguageStore()
+    @State private var automationTranslations = AutomationTranslationStore()
     @State private var haptics = PavbotHaptics()
     @State private var imagePreview = PavbotImagePreviewStore()
     private let notificationDelegate = ArtifactNotificationDelegate()
@@ -40,10 +41,14 @@ struct PavbotViewerApp: App {
                 .environment(todayHumor)
                 .environment(appearance)
                 .environment(language)
+                .environment(automationTranslations)
                 .environment(haptics)
                 .environment(imagePreview)
                 .environment(\.locale, language.preference.locale)
                 .preferredColorScheme(appearance.preference.preferredColorScheme)
+                .background {
+                    PavbotAutomationTranslationHost(translationStore: automationTranslations)
+                }
                 .onAppear {
                     notificationDelegate.install(router: router)
                     CloudKitPushRefreshCenter.shared.installRefreshHandler {

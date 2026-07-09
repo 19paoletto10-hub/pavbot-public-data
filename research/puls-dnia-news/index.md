@@ -67,6 +67,12 @@ interventions and the unchanged RPP line, while the world block stays
 dominated by Iran, Ormuz, NATO and Ukraine. OpenAI's GPT-5.6 cycle is now the
 clearest technology signal in the feed.
 
+The 2026-07-09 21:02 slot shifts the domestic mix toward euro pressure, PAŻP
+financing stress, Mogilno, Poznań and a fresh weather-alert bundle, while the
+world block adds new CNN/BBC coverage on Iran, Ukrainian Patriots, a Greek
+F-16 crash, a Chinese factory fire and the Sudan ICC probe. The tech block did
+not add a distinct new signal in this run.
+
 ## Data Shape
 
 The native iOS feed expects:

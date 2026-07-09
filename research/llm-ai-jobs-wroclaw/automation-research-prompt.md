@@ -19,6 +19,13 @@ generative AI, ewaluacja modeli, inference, fine-tuning i bliskie role
 inzynierskie. Nie raportuj ogolnych BI/data roles bez wyraznego watku AI/LLM,
 czystego sales/marketingu ani ofert wymagajacych logowania do zrodla.
 
+Ten prompt jest kontraktem wykonawczym dla tej automatyzacji. Wynik runu ma
+zaktualizowac komplet artefaktow wykorzystywanych przez aplikacje Pavbot i repo:
+`runs/YYYY-MM-DD-HHMM.md`, `data/YYYY-MM-DD-HHMM-jobs.json`,
+`pdfs/YYYY-MM-DD-HHMM-llm-ai-jobs-wroclaw.pdf`, `index.md`, `backlog.md` oraz
+po publishu `public/pavbot-manifest.json`. Brak ktoregokolwiek z tych
+obowiazkowych artefaktow oznacza nieudany przebieg.
+
 Sprawdz aktualne publiczne zrodla: publiczne job boardy i publiczne strony
 karier firm. Korzystaj tylko ze zrodel dostepnych bez logowania. Preferuj
 kanoniczne strony pracodawcow, gdy mozna je znalezc. Zapisz link dla kazdej
@@ -84,7 +91,7 @@ Uzyj bundlowanego runtime Codex, jesli jest dostepny przez
 `codex_app.load_workspace_dependencies`; preferowany interpreter to zwrocona
 sciezka Python. Uruchom:
 
-`<bundled-python> research/llm-ai-jobs-wroclaw/tools/render_report_pdf.py <markdown-report> <pdf-output>`
+`<bundled-python> research/llm-ai-jobs-wroclaw/tools/render_report_pdf.py <markdown-report> <pdf-output> --topic llm-ai-jobs-wroclaw`
 
 Po wygenerowaniu PDF zweryfikuj go `pdfplumber` i `pdftoppm`, jesli narzedzia
 sa dostepne. Sprawdz, czy ma format telefonu 390 x 844 pt, tekst nie jest
@@ -110,6 +117,9 @@ zapisze go do keychain dla `cktool` nieinteraktywnie przed CloudKit
 preflight/publish. Bez tego sekretu nieinteraktywny run uzyje tylko
 istniejacego tokenu z keychain i moze wymagac odnowienia sekretu, jesli Apple
 odrzuci sesje.
+Nie edytuj `public/pavbot-manifest.json` recznie; ten plik ma zostac
+odswiezony przez wspolny skrypt publikacji na podstawie biezacych artefaktow
+tematu.
 Nastepnie uruchom:
 `PAVBOT_EXPECTED_JOBS_STAMP="$RUN_STAMP" scripts/pavbot_commit_and_push_outputs.sh --isolated research/llm-ai-jobs-wroclaw`.
 

@@ -1,6 +1,150 @@
 import AVFoundation
 import Combine
 import Foundation
+import Observation
+
+struct AutomationTranslationKey: Hashable {
+    let sourceLanguage: String
+    let targetLanguage: String
+    let sourceText: String
+
+    var id: String {
+        "\(sourceLanguage)::\(targetLanguage)::\(sourceText)"
+    }
+}
+
+struct AutomationTranslationRequest: Identifiable, Equatable {
+    let key: AutomationTranslationKey
+    let sourceText: String
+    let sourceLanguageCode: String?
+    let targetLanguageCode: String
+
+    var id: String { key.id }
+}
+
+@MainActor
+@Observable
+final class AutomationTranslationStore {
+    typealias Translator = @MainActor (_ sourceText: String, _ targetLanguageCode: String) async -> String
+
+    private(set) var pendingRevision = 0
+
+    @ObservationIgnored private var cachedTranslations: [AutomationTranslationKey: String] = [:]
+    @ObservationIgnored private var pendingRequests: [AutomationTranslationRequest] = []
+    @ObservationIgnored private var inFlightKeys: Set<AutomationTranslationKey> = []
+    @ObservationIgnored private var waiters: [AutomationTranslationKey: [CheckedContinuation<String, Never>]] = [:]
+
+    func displayText(_ sourceText: String, language: AppLanguagePreference) -> String {
+        guard let request = request(for: sourceText, language: language) else { return sourceText }
+        return cachedTranslations[request.key] ?? sourceText
+    }
+
+    func displayExternalText(_ sourceText: String, language: AppLanguagePreference) -> String {
+        guard let request = externalRequest(for: sourceText, language: language) else { return sourceText }
+        return cachedTranslations[request.key] ?? sourceText
+    }
+
+    func requestTranslation(for sourceText: String, language: AppLanguagePreference) {
+        guard let request = request(for: sourceText, language: language) else { return }
+        guard cachedTranslations[request.key] == nil else { return }
+        enqueue(request)
+    }
+
+    func requestExternalTranslation(for sourceText: String, language: AppLanguagePreference) {
+        guard let request = externalRequest(for: sourceText, language: language) else { return }
+        guard cachedTranslations[request.key] == nil else { return }
+        enqueue(request)
+    }
+
+    func localizedText(
+        _ sourceText: String,
+        language: AppLanguagePreference,
+        translator: Translator? = nil
+    ) async -> String {
+        guard let request = request(for: sourceText, language: language) else { return sourceText }
+        if let cached = cachedTranslations[request.key] {
+            return cached
+        }
+
+        if let translator {
+            let translated = await translator(request.sourceText, request.targetLanguageCode)
+            return storeTranslatedText(translated, for: request)
+        }
+
+        guard #available(iOS 18.0, *) else { return sourceText }
+
+        return await withCheckedContinuation { continuation in
+            waiters[request.key, default: []].append(continuation)
+            enqueue(request)
+        }
+    }
+
+    func nextPendingRequest() -> AutomationTranslationRequest? {
+        guard !pendingRequests.isEmpty else { return nil }
+        let request = pendingRequests.removeFirst()
+        inFlightKeys.insert(request.key)
+        pendingRevision += 1
+        return request
+    }
+
+    func finish(_ request: AutomationTranslationRequest, translatedText: String) {
+        let resolvedText = storeTranslatedText(translatedText, for: request)
+        inFlightKeys.remove(request.key)
+        resumeWaiters(for: request.key, text: resolvedText)
+        pendingRevision += 1
+    }
+
+    func fail(_ request: AutomationTranslationRequest) {
+        inFlightKeys.remove(request.key)
+        resumeWaiters(for: request.key, text: request.sourceText)
+        pendingRevision += 1
+    }
+
+    private func request(for sourceText: String, language: AppLanguagePreference) -> AutomationTranslationRequest? {
+        let trimmed = sourceText.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty, let targetLanguageCode = language.translationTargetIdentifier else { return nil }
+        let key = AutomationTranslationKey(sourceLanguage: "pl", targetLanguage: targetLanguageCode, sourceText: trimmed)
+        return AutomationTranslationRequest(
+            key: key,
+            sourceText: trimmed,
+            sourceLanguageCode: "pl",
+            targetLanguageCode: targetLanguageCode
+        )
+    }
+
+    private func externalRequest(for sourceText: String, language: AppLanguagePreference) -> AutomationTranslationRequest? {
+        let trimmed = sourceText.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !trimmed.isEmpty else { return nil }
+        let targetLanguageCode = language.rawValue
+        let key = AutomationTranslationKey(sourceLanguage: "auto", targetLanguage: targetLanguageCode, sourceText: trimmed)
+        return AutomationTranslationRequest(
+            key: key,
+            sourceText: trimmed,
+            sourceLanguageCode: nil,
+            targetLanguageCode: targetLanguageCode
+        )
+    }
+
+    private func enqueue(_ request: AutomationTranslationRequest) {
+        guard cachedTranslations[request.key] == nil else { return }
+        guard !inFlightKeys.contains(request.key) else { return }
+        guard !pendingRequests.contains(where: { $0.key == request.key }) else { return }
+        pendingRequests.append(request)
+        pendingRevision += 1
+    }
+
+    private func storeTranslatedText(_ translatedText: String, for request: AutomationTranslationRequest) -> String {
+        let clean = translatedText.trimmingCharacters(in: .whitespacesAndNewlines)
+        let resolved = clean.isEmpty ? request.sourceText : clean
+        cachedTranslations[request.key] = resolved
+        return resolved
+    }
+
+    private func resumeWaiters(for key: AutomationTranslationKey, text: String) {
+        let continuations = waiters.removeValue(forKey: key) ?? []
+        continuations.forEach { $0.resume(returning: text) }
+    }
+}
 
 protocol SpeechAudioSessionConfiguring {
     func activateForSpeech() throws

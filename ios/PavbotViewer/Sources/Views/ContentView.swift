@@ -137,7 +137,7 @@ private struct PavbotTabRootView: View {
                 WeatherBriefView()
             }
             .tabItem {
-                appTabLabel(title: AppTab.today.displayTitle, systemImage: AppTab.today.systemImage)
+                appTabLabel(title: AppTab.today.displayTitle(language: languageStore.preference), systemImage: AppTab.today.systemImage)
             }
             .tag(AppTab.today)
 
@@ -145,7 +145,7 @@ private struct PavbotTabRootView: View {
                 PulseDayView()
             }
             .tabItem {
-                appTabLabel(title: AppTab.pulseDay.displayTitle, systemImage: AppTab.pulseDay.systemImage)
+                appTabLabel(title: AppTab.pulseDay.displayTitle(language: languageStore.preference), systemImage: AppTab.pulseDay.systemImage)
             }
             .tag(AppTab.pulseDay)
 
@@ -153,7 +153,7 @@ private struct PavbotTabRootView: View {
                 JobsView()
             }
             .tabItem {
-                appTabLabel(title: AppTab.jobs.displayTitle, systemImage: AppTab.jobs.systemImage)
+                appTabLabel(title: AppTab.jobs.displayTitle(language: languageStore.preference), systemImage: AppTab.jobs.systemImage)
             }
             .tag(AppTab.jobs)
 
@@ -161,7 +161,7 @@ private struct PavbotTabRootView: View {
                 ResearchView()
             }
             .tabItem {
-                appTabLabel(title: AppTab.research.displayTitle, systemImage: AppTab.research.systemImage)
+                appTabLabel(title: AppTab.research.displayTitle(language: languageStore.preference), systemImage: AppTab.research.systemImage)
             }
             .tag(AppTab.research)
 
@@ -169,7 +169,7 @@ private struct PavbotTabRootView: View {
                 phoneSettingsTabContent
             }
             .tabItem {
-                appTabLabel(title: AppTab.settings.displayTitle, systemImage: AppTab.settings.systemImage)
+                appTabLabel(title: AppTab.settings.displayTitle(language: languageStore.preference), systemImage: AppTab.settings.systemImage)
             }
             .tag(AppTab.settings)
         }
@@ -214,11 +214,8 @@ private struct PavbotTabRootView: View {
     }
 
     private func appTabLabel(title: String, systemImage: String) -> some View {
-        Label {
-            PavbotLocalizedText(title)
-        } icon: {
-            Image(systemName: systemImage)
-        }
+        let localizedTitle = title
+        return Label(localizedTitle, systemImage: systemImage)
     }
 }
 
@@ -240,15 +237,15 @@ private struct PavbotSplitRootView: View {
     var body: some View {
         NavigationSplitView {
             List(selection: selectedTabBinding) {
-                appTabLabel(title: AppTab.today.displayTitle, systemImage: AppTab.today.systemImage)
+                appTabLabel(title: AppTab.today.displayTitle(language: languageStore.preference), systemImage: AppTab.today.systemImage)
                     .tag(AppTab.today)
-                appTabLabel(title: AppTab.pulseDay.displayTitle, systemImage: AppTab.pulseDay.systemImage)
+                appTabLabel(title: AppTab.pulseDay.displayTitle(language: languageStore.preference), systemImage: AppTab.pulseDay.systemImage)
                     .tag(AppTab.pulseDay)
-                appTabLabel(title: AppTab.jobs.displayTitle, systemImage: AppTab.jobs.systemImage)
+                appTabLabel(title: AppTab.jobs.displayTitle(language: languageStore.preference), systemImage: AppTab.jobs.systemImage)
                     .tag(AppTab.jobs)
-                appTabLabel(title: AppTab.research.displayTitle, systemImage: AppTab.research.systemImage)
+                appTabLabel(title: AppTab.research.displayTitle(language: languageStore.preference), systemImage: AppTab.research.systemImage)
                     .tag(AppTab.research)
-                appTabLabel(title: AppTab.settings.displayTitle, systemImage: AppTab.settings.systemImage)
+                appTabLabel(title: AppTab.settings.displayTitle(language: languageStore.preference), systemImage: AppTab.settings.systemImage)
                     .tag(AppTab.settings)
             }
             .id("pavbot-split-sidebar-\(languageStore.preference.rawValue)")
@@ -259,11 +256,8 @@ private struct PavbotSplitRootView: View {
     }
 
     private func appTabLabel(title: String, systemImage: String) -> some View {
-        Label {
-            PavbotLocalizedText(title)
-        } icon: {
-            Image(systemName: systemImage)
-        }
+        let localizedTitle = title
+        return Label(localizedTitle, systemImage: systemImage)
     }
 
     private var selectedTabBinding: Binding<AppTab?> {

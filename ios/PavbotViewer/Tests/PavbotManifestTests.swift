@@ -1745,6 +1745,41 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(text.contains("- "))
     }
 
+    func testMobileNewsArticleSpeechTextLocalizesSectionLabelsForTargetLanguages() throws {
+        let article = ResearchNewsArticle(
+            id: "research-tts-labels",
+            title: "OpenAI publikuje nowe modele",
+            section: .ai,
+            body: "Pełny opis artykułu.",
+            summary: "Krótki lead.",
+            whatHappened: "Firma pokazała nowy pakiet narzędzi.",
+            whyItMatters: "To zmienia tempo wdrożeń AI.",
+            deeperAnalysis: ["Analiza dla czytnika."],
+            contextPoints: ["Kontekst rynku."],
+            sources: [ResearchNewsSource(title: "OpenAI Blog", url: "https://example.com/openai")],
+            priority: "Top",
+            tags: ["AI"]
+        )
+        let adapted = MobileNewsArticle(researchArticle: article, topic: .techNews)
+
+        let english = adapted.speechText(language: .english)
+        let russian = adapted.speechText(language: .russian)
+
+        XCTAssertTrue(english.contains("What happened."))
+        XCTAssertTrue(english.contains("Why it matters."))
+        XCTAssertTrue(english.contains("Sources."))
+        XCTAssertFalse(english.contains("Co się stało."))
+        XCTAssertFalse(english.contains("Dlaczego to ważne."))
+        XCTAssertFalse(english.contains("Źródła."))
+
+        XCTAssertTrue(russian.contains("Что произошло."))
+        XCTAssertTrue(russian.contains("Почему это важно."))
+        XCTAssertTrue(russian.contains("Источники."))
+        XCTAssertFalse(russian.contains("Co się stało."))
+        XCTAssertFalse(russian.contains("Dlaczego to ważne."))
+        XCTAssertFalse(russian.contains("Źródła."))
+    }
+
     @MainActor
     func testResearchArticleAdapterUsesMobileNewsSpeechControllerSnapshot() throws {
         let package = TopicReportPackage(topic: .polskaSwiat, key: "2026-06-25", artifacts: [
@@ -4083,6 +4118,20 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertEqual(AppLanguagePreference.load(from: defaults), .english)
     }
 
+    func testAppTabTitlesResolveForSelectedApplicationLanguage() throws {
+        XCTAssertEqual(AppTab.today.displayTitle(language: .polish), "Dzisiaj")
+        XCTAssertEqual(AppTab.today.displayTitle(language: .english), "Today")
+        XCTAssertEqual(AppTab.today.displayTitle(language: .russian), "Сегодня")
+
+        XCTAssertEqual(AppTab.pulseDay.displayTitle(language: .polish), "Puls Dnia")
+        XCTAssertEqual(AppTab.pulseDay.displayTitle(language: .english), "Daily Pulse")
+        XCTAssertEqual(AppTab.pulseDay.displayTitle(language: .russian), "Пульс дня")
+
+        XCTAssertEqual(AppTab.jobs.displayTitle(language: .english), "Work")
+        XCTAssertEqual(AppTab.research.displayTitle(language: .english), "Review")
+        XCTAssertEqual(AppTab.settings.displayTitle(language: .english), "Settings")
+    }
+
     func testAppLanguagePreferenceIsInjectedIntoRootLocale() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let sourceURL = testsURL
@@ -4094,6 +4143,32 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(source.contains("@State private var language = AppLanguageStore()"))
         XCTAssertTrue(source.contains(".environment(language)"))
         XCTAssertTrue(source.contains(".environment(\\.locale, language.preference.locale)"))
+    }
+
+    @MainActor
+    func testAutomationTranslationStoreCachesTranslatedDynamicText() async throws {
+        let store = AutomationTranslationStore()
+        var translationCalls = 0
+
+        let first = await store.localizedText("Nowy artykuł automatyzacji", language: .english) { source, target in
+            translationCalls += 1
+            XCTAssertEqual(source, "Nowy artykuł automatyzacji")
+            XCTAssertEqual(target, "en")
+            return "New automation article"
+        }
+        let second = await store.localizedText("Nowy artykuł automatyzacji", language: .english) { _, _ in
+            translationCalls += 1
+            return "Unexpected duplicate"
+        }
+        let polish = await store.localizedText("Nowy artykuł automatyzacji", language: .polish) { _, _ in
+            translationCalls += 1
+            return "Unexpected Polish translation"
+        }
+
+        XCTAssertEqual(first, "New automation article")
+        XCTAssertEqual(second, "New automation article")
+        XCTAssertEqual(polish, "Nowy artykuł automatyzacji")
+        XCTAssertEqual(translationCalls, 1)
     }
 
     func testSettingsExposeApplicationLanguagePicker() throws {
@@ -4134,6 +4209,8 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(contentSource.contains("appTabLabel(title: AppTab.today.displayTitle"))
         XCTAssertTrue(contentSource.contains("appTabLabel(title: AppTab.settings.displayTitle"))
         XCTAssertTrue(contentSource.contains("@Environment(AppLanguageStore.self) private var languageStore"))
+        XCTAssertTrue(contentSource.contains("AppTab.today.displayTitle(language: languageStore.preference)"))
+        XCTAssertTrue(contentSource.contains("Label(localizedTitle, systemImage: systemImage)"))
         XCTAssertTrue(contentSource.contains(".id(\"pavbot-tab-root-\\(languageStore.preference.rawValue)\")"))
         XCTAssertTrue(contentSource.contains(".id(\"pavbot-split-sidebar-\\(languageStore.preference.rawValue)\")"))
         XCTAssertTrue(designSource.contains("Text(LocalizedStringKey(title))"))
@@ -4150,13 +4227,19 @@ final class PavbotManifestTests: XCTestCase {
             .deletingLastPathComponent()
             .appendingPathComponent("Sources/Views")
         let designSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PavbotDesign.swift"))
+        let appSource = try String(contentsOf: sourcesRoot.deletingLastPathComponent().appendingPathComponent("PavbotViewerApp.swift"))
         let pulseSource = try String(contentsOf: sourcesRoot.appendingPathComponent("TodayLiveTopicsView.swift"))
         let researchSource = try String(contentsOf: sourcesRoot.appendingPathComponent("ReportPackageViews.swift"))
 
+        XCTAssertTrue(appSource.contains("@State private var automationTranslations = AutomationTranslationStore()"))
+        XCTAssertTrue(appSource.contains(".environment(automationTranslations)"))
+        XCTAssertTrue(appSource.contains("PavbotAutomationTranslationHost(translationStore: automationTranslations)"))
         XCTAssertTrue(designSource.contains("import Translation"))
         XCTAssertTrue(designSource.contains("struct PavbotTranslatedAutomationText"))
+        XCTAssertTrue(designSource.contains("struct PavbotAutomationTranslationHost"))
+        XCTAssertTrue(designSource.contains("@Environment(AutomationTranslationStore.self) private var translationStore"))
         XCTAssertTrue(designSource.contains("@Environment(AppLanguageStore.self) private var languageStore"))
-        XCTAssertTrue(designSource.contains("translationTargetIdentifier"))
+        XCTAssertTrue(designSource.contains("target: Locale.Language(identifier: request.targetLanguageCode)"))
         XCTAssertTrue(designSource.contains("TranslationSession.Configuration("))
         XCTAssertTrue(pulseSource.contains("PavbotTranslatedAutomationText(topic.title"))
         XCTAssertTrue(pulseSource.contains("PavbotTranslatedAutomationText(topic.lead"))
@@ -5544,15 +5627,11 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(cardSource.contains("isShowingOriginal.toggle()"))
         XCTAssertTrue(cardSource.contains("originalBody"))
         XCTAssertTrue(cardSource.contains("Oryginalny komentarz"))
-        XCTAssertTrue(cardSource.contains("Tłumaczenie na polski"))
+        XCTAssertTrue(cardSource.contains("Tłumaczenie komentarza"))
+        XCTAssertTrue(cardSource.contains("PavbotTranslatedExternalText(originalBody)"))
         XCTAssertTrue(source.contains("import Translation"))
-        XCTAssertTrue(cardSource.contains("@available(iOS 18.0, *)"))
-        XCTAssertTrue(cardSource.contains("TodayHumorCommentTranslationView("))
-        XCTAssertTrue(cardSource.contains("@State private var translationConfiguration: TranslationSession.Configuration?"))
-        XCTAssertTrue(cardSource.contains("TranslationSession.Configuration("))
-        XCTAssertTrue(cardSource.contains("target: Locale.Language(identifier: targetLanguageCode)"))
-        XCTAssertTrue(cardSource.contains("private func translateComment(using session: TranslationSession) async"))
-        XCTAssertTrue(cardSource.contains("try await session.translate(sourceText)"))
+        XCTAssertFalse(cardSource.contains("TodayHumorCommentTranslationView("))
+        XCTAssertFalse(cardSource.contains("targetLanguageCode = \"pl\""))
         XCTAssertTrue(cardSource.contains(".frame(maxWidth: .infinity, alignment: .leading)"))
         XCTAssertTrue(cardSource.contains(".contentShape(RoundedRectangle(cornerRadius: 14, style: .continuous))"))
         XCTAssertTrue(cardSource.contains("rotation3DEffect"))
@@ -5596,7 +5675,7 @@ final class PavbotManifestTests: XCTestCase {
                 .components(separatedBy: "private struct TodayHumorSavedView").first
         )
 
-        XCTAssertTrue(panelSource.contains("Label(\"Zapisane\", systemImage: \"bookmark.fill\")"))
+        XCTAssertTrue(panelSource.contains("Label(LocalizedStringKey(\"Zapisane\"), systemImage: \"bookmark.fill\")"))
         XCTAssertTrue(panelSource.contains("@State private var isSavedPresented = false"))
         XCTAssertTrue(panelSource.contains("TodayHumorSavedView(savedStore: savedStore)"))
         XCTAssertTrue(source.contains("private struct TodayHumorSavedView"))
@@ -6135,12 +6214,12 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(researchSource.contains("private struct ResearchLibraryHeader"))
         XCTAssertTrue(researchSource.contains("@State private var isContextExpanded = false"))
         XCTAssertTrue(researchSource.contains("DisclosureGroup(isExpanded: $isContextExpanded)"))
-        XCTAssertTrue(researchSource.contains("Label(\"Kontekst wydania\", systemImage: \"text.quote\")"))
+        XCTAssertTrue(researchSource.contains("Label(LocalizedStringKey(\"Kontekst wydania\"), systemImage: \"text.quote\")"))
         XCTAssertTrue(pulseSource.contains("private struct PulseDayHeroHeader"))
         XCTAssertTrue(pulseSource.contains("PavbotPremiumCard"))
         XCTAssertTrue(todaySource.contains("private struct PulseIssueMasthead"))
         XCTAssertTrue(todaySource.contains("DisclosureGroup(isExpanded: $isContextExpanded)"))
-        XCTAssertTrue(todaySource.contains("Label(\"Kontekst wydania\", systemImage: \"text.quote\")"))
+        XCTAssertTrue(todaySource.contains("Label(LocalizedStringKey(\"Kontekst wydania\"), systemImage: \"text.quote\")"))
         XCTAssertTrue(jobsSource.contains("startsCollapsed: true"))
     }
 
@@ -6684,7 +6763,7 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(designSource.contains("Image(systemName: \"info.circle.fill\")"))
         XCTAssertTrue(designSource.contains(".sheet(item: $presentedInfo)"))
         XCTAssertTrue(designSource.contains(".pavbotLargeObjectPresentation()"))
-        XCTAssertTrue(designSource.contains(".accessibilityLabel(\"Otwórz instrukcję karty \\(infoContent.title)\")"))
+        XCTAssertTrue(designSource.contains(".accessibilityLabel(Text(LocalizedStringKey(\"Otwórz instrukcję karty\")))"))
         XCTAssertTrue(designSource.contains("Jak korzystać"))
         XCTAssertTrue(designSource.contains("Co możesz sprawdzić"))
         XCTAssertTrue(designSource.contains("Praktyczne wskazówki"))
@@ -6948,6 +7027,24 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(text.contains("Co obserwować dalej."))
         XCTAssertFalse(text.contains("https://"))
         XCTAssertFalse(text.contains("Przeczytaj artykuł"))
+    }
+
+    @MainActor
+    func testTodayLiveTopicSpeechTextLocalizesSectionLabelsForTargetLanguages() throws {
+        let topic = Self.pulseNewsFixtureTopic(id: "speech-topic-en", title: "Temat do czytania")
+
+        let english = TodayLiveTopicSpeechController.speechText(for: topic, language: .english)
+        let russian = TodayLiveTopicSpeechController.speechText(for: topic, language: .russian)
+
+        XCTAssertTrue(english.contains("Key facts."))
+        XCTAssertTrue(english.contains("Why it matters."))
+        XCTAssertFalse(english.contains("Najważniejsze fakty."))
+        XCTAssertFalse(english.contains("Dlaczego to ważne."))
+
+        XCTAssertTrue(russian.contains("Ключевые факты."))
+        XCTAssertTrue(russian.contains("Почему это важно."))
+        XCTAssertFalse(russian.contains("Najważniejsze fakty."))
+        XCTAssertFalse(russian.contains("Dlaczego to ważne."))
     }
 
     @MainActor
@@ -7228,7 +7325,8 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(designSource.contains(".background(tint.opacity(0.10), in: Capsule())"))
         XCTAssertTrue(designSource.contains("var accessibilityPrefix = \"Tag\""))
         XCTAssertTrue(designSource.contains("struct PavbotSourceCountBadge: View"))
-        XCTAssertTrue(designSource.contains("Label(\"\\(count) źr.\", systemImage: \"link\")"))
+        XCTAssertTrue(designSource.contains("Label(sourceCountLabel, systemImage: \"link\")"))
+        XCTAssertTrue(designSource.contains("case .english:\n            \"\\(count) src.\""))
         XCTAssertTrue(designSource.contains("count == 1 ? \"1 użyte źródło\" : \"\\(count) użytych źródeł\""))
         XCTAssertTrue(designSource.contains("private struct PavbotTwoLineFlowLayout: Layout"))
         XCTAssertTrue(designSource.contains("var maxRows = 2"))

@@ -19,6 +19,14 @@ Run one research cycle for a single Pavbot topic.
    - `research/<topic>/index.md`
    - `research/<topic>/backlog.md`
    - the latest file in `research/<topic>/runs/`, if one exists
+   - `research/<topic>/automation-research-prompt.md`, if it exists
+
+If `research/<topic>/automation-research-prompt.md` exists, treat it as the
+topic-specific execution contract for that run. It may add or override generic
+workflow details such as timestamped filenames, required JSON/data artifacts,
+PDF render commands, publication flags, dedup rules, and remote verification
+checks. Follow the topic prompt exactly unless it conflicts with `AGENTS.md` or
+the risk gate.
 
 ## Workflow
 
@@ -35,11 +43,13 @@ Run one research cycle for a single Pavbot topic.
 7. Update `research/<topic>/index.md` when the current understanding changes.
 8. Update `research/<topic>/backlog.md` when there are actionable follow-ups,
    review notes, open questions, or resolved items.
-9. Use the risk gate before making any change.
-10. For scheduled Pavbot automations, publish the finished output with
+9. Create any topic-specific structured data artifacts required by the topic
+   prompt, for example `data/*.json` packages consumed by the iOS app.
+10. Use the risk gate before making any change.
+11. For scheduled Pavbot automations, publish the finished output with
     `scripts/pavbot_commit_and_push_outputs.sh --isolated research/<topic>` so the iOS app
     and live-notification webhook see the latest manifest on GitHub.
-11. After publishing, verify against `origin/main` that the refreshed manifest
+12. After publishing, verify against `origin/main` that the refreshed manifest
     and the current topic outputs are actually visible remotely; do not treat a
     successful local push as sufficient evidence of publication.
 
@@ -49,6 +59,7 @@ Low-risk changes may be applied directly:
 
 - Create the dated report inside the active topic.
 - Create the mobile-first PDF version of the dated report inside the active topic.
+- Create topic-scoped structured data artifacts required by the active topic.
 - Update the active topic index or backlog.
 - Add source links and concise notes.
 - Mark an existing topic backlog item as done.

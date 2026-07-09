@@ -48,7 +48,21 @@ final class TodayLiveTopicSpeechController: ObservableObject {
         playback.play(
             itemID: topic.id,
             title: topic.title,
-            text: Self.speechText(for: topic)
+            text: Self.speechText(for: topic, language: .polish)
+        )
+    }
+
+    func speak(
+        _ topic: TodayLiveTopic,
+        language: AppLanguagePreference,
+        translationStore: AutomationTranslationStore
+    ) async {
+        let sourceText = Self.speechText(for: topic, language: language)
+        let speechText = await translationStore.localizedText(sourceText, language: language)
+        playback.play(
+            itemID: topic.id,
+            title: await translationStore.localizedText(topic.title, language: language),
+            text: speechText
         )
     }
 
@@ -80,15 +94,16 @@ final class TodayLiveTopicSpeechController: ObservableObject {
         playback.stop()
     }
 
-    static func speechText(for topic: TodayLiveTopic) -> String {
+    static func speechText(for topic: TodayLiveTopic, language: AppLanguagePreference = .polish) -> String {
         var sections: [String] = []
+        let copy = SpeechCopy(language: language)
         append(topic.title, to: &sections)
         append(topic.lead, to: &sections)
-        appendList(title: "Najważniejsze fakty", items: topic.keyFacts, to: &sections)
-        appendList(title: "Reakcje na sytuację", items: topic.reactions, to: &sections)
-        appendWithTitle("Dlaczego to ważne", text: topic.whyItMatters, to: &sections)
-        appendWithTitle("Kontekst", text: topic.context, to: &sections)
-        appendList(title: "Co obserwować dalej", items: topic.watchNext, to: &sections)
+        appendList(title: copy.keyFacts, items: topic.keyFacts, to: &sections)
+        appendList(title: copy.reactions, items: topic.reactions, to: &sections)
+        appendWithTitle(copy.whyItMatters, text: topic.whyItMatters, to: &sections)
+        appendWithTitle(copy.context, text: topic.context, to: &sections)
+        appendList(title: copy.watchNext, items: topic.watchNext, to: &sections)
         return sections.joined(separator: "\n\n")
     }
 
@@ -118,5 +133,36 @@ final class TodayLiveTopicSpeechController: ObservableObject {
             .replacingOccurrences(of: #"\s+"#, with: " ", options: .regularExpression)
             .trimmingCharacters(in: .whitespacesAndNewlines)
         return normalized.isEmpty ? nil : normalized
+    }
+
+    private struct SpeechCopy {
+        let keyFacts: String
+        let reactions: String
+        let whyItMatters: String
+        let context: String
+        let watchNext: String
+
+        init(language: AppLanguagePreference) {
+            switch language {
+            case .polish:
+                keyFacts = "Najważniejsze fakty"
+                reactions = "Reakcje na sytuację"
+                whyItMatters = "Dlaczego to ważne"
+                context = "Kontekst"
+                watchNext = "Co obserwować dalej"
+            case .english:
+                keyFacts = "Key facts"
+                reactions = "Reactions"
+                whyItMatters = "Why it matters"
+                context = "Context"
+                watchNext = "What to watch next"
+            case .russian:
+                keyFacts = "Ключевые факты"
+                reactions = "Реакции"
+                whyItMatters = "Почему это важно"
+                context = "Контекст"
+                watchNext = "За чем следить дальше"
+            }
+        }
     }
 }

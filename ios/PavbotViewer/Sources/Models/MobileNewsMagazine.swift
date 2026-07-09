@@ -180,6 +180,45 @@ struct MobileNewsArticle: Codable, Equatable, Identifiable, Hashable {
             $0.range(of: trimmed, options: [.caseInsensitive, .diacriticInsensitive]) != nil
         }
     }
+
+    func speechText(language: AppLanguagePreference) -> String {
+        guard language != .polish else { return ttsText }
+        let replacements = MobileNewsSpeechCopy(language: language).replacements
+        return replacements.reduce(ttsText) { text, replacement in
+            text.replacingOccurrences(of: replacement.source, with: replacement.target)
+        }
+    }
+}
+
+private struct MobileNewsSpeechCopy {
+    let replacements: [(source: String, target: String)]
+
+    init(language: AppLanguagePreference) {
+        switch language {
+        case .polish:
+            replacements = []
+        case .english:
+            replacements = [
+                ("Sekcja.", "Section."),
+                ("Co się stało.", "What happened."),
+                ("Najważniejsze punkty.", "Key points."),
+                ("Dlaczego to ważne.", "Why it matters."),
+                ("Kontekst.", "Context."),
+                ("Pełny opis.", "Full description."),
+                ("Źródła.", "Sources.")
+            ]
+        case .russian:
+            replacements = [
+                ("Sekcja.", "Раздел."),
+                ("Co się stało.", "Что произошло."),
+                ("Najważniejsze punkty.", "Ключевые пункты."),
+                ("Dlaczego to ważne.", "Почему это важно."),
+                ("Kontekst.", "Контекст."),
+                ("Pełny opis.", "Полное описание."),
+                ("Źródła.", "Источники.")
+            ]
+        }
+    }
 }
 
 extension MobileNewsArticle {

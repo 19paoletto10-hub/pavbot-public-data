@@ -326,6 +326,8 @@ struct TodayLiveTopicDetailView: View {
 }
 
 private struct TodayLiveTopicSpeechPanel: View {
+    @Environment(AppLanguageStore.self) private var languageStore
+    @Environment(AutomationTranslationStore.self) private var translationStore
     @Environment(PavbotHaptics.self) private var haptics
     let topic: TodayLiveTopic
     @ObservedObject var speechController: TodayLiveTopicSpeechController
@@ -459,7 +461,13 @@ private struct TodayLiveTopicSpeechPanel: View {
         } else if isCurrent, speechController.isSpeaking {
             speechController.pause()
         } else {
-            speechController.speak(topic)
+            Task {
+                await speechController.speak(
+                    topic,
+                    language: languageStore.preference,
+                    translationStore: translationStore
+                )
+            }
         }
     }
 }

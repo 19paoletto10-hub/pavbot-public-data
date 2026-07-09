@@ -2592,6 +2592,7 @@ extension Int {
 
 struct PavbotTranslatedAutomationText: View {
     @Environment(AppLanguageStore.self) private var languageStore
+    @Environment(AutomationTranslationStore.self) private var translationStore
     let sourceText: String
 
     init(_ sourceText: String) {
@@ -2599,63 +2600,81 @@ struct PavbotTranslatedAutomationText: View {
     }
 
     var body: some View {
-        if let targetLanguageCode = languageStore.preference.translationTargetIdentifier,
-           !sourceText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
-            if #available(iOS 18.0, *) {
-                PavbotNativeAutomationTranslationText(
-                    sourceText: sourceText,
-                    targetLanguageCode: targetLanguageCode
-                )
-            } else {
-                Text(sourceText)
+        Text(translationStore.displayText(sourceText, language: languageStore.preference))
+            .task(id: "\(sourceText)::\(languageStore.preference.rawValue)") {
+                translationStore.requestTranslation(for: sourceText, language: languageStore.preference)
             }
-        } else {
-            Text(sourceText)
-        }
+    }
+}
+
+struct PavbotTranslatedExternalText: View {
+    @Environment(AppLanguageStore.self) private var languageStore
+    @Environment(AutomationTranslationStore.self) private var translationStore
+    let sourceText: String
+
+    init(_ sourceText: String) {
+        self.sourceText = sourceText
+    }
+
+    var body: some View {
+        Text(translationStore.displayExternalText(sourceText, language: languageStore.preference))
+            .task(id: "external::\(sourceText)::\(languageStore.preference.rawValue)") {
+                translationStore.requestExternalTranslation(for: sourceText, language: languageStore.preference)
+            }
     }
 }
 
 @available(iOS 18.0, *)
-private struct PavbotNativeAutomationTranslationText: View {
-    let sourceText: String
-    let targetLanguageCode: String
-    @State private var translatedText = ""
+private struct PavbotNativeAutomationTranslationHost: View {
+    let translationStore: AutomationTranslationStore
+    @State private var activeRequest: AutomationTranslationRequest?
     @State private var translationConfiguration: TranslationSession.Configuration?
-    @State private var requestedKey = ""
-
-    private var displayText: String {
-        translatedText.isEmpty ? sourceText : translatedText
-    }
 
     var body: some View {
-        Text(displayText)
-            .task(id: "\(sourceText)::\(targetLanguageCode)") {
-                prepareTranslationIfNeeded()
+        Color.clear
+            .frame(width: 0, height: 0)
+            .allowsHitTesting(false)
+            .accessibilityHidden(true)
+            .task(id: translationStore.pendingRevision) {
+                activateNextRequestIfNeeded()
             }
             .translationTask(translationConfiguration) { session in
-                await translateAutomationText(using: session)
+                await translateActiveRequest(using: session)
             }
     }
 
-    private func prepareTranslationIfNeeded() {
-        let key = "\(sourceText)::\(targetLanguageCode)"
-        guard requestedKey != key else { return }
-        requestedKey = key
-        translatedText = ""
+    private func activateNextRequestIfNeeded() {
+        guard activeRequest == nil else { return }
+        guard let request = translationStore.nextPendingRequest() else { return }
+        activeRequest = request
         translationConfiguration = TranslationSession.Configuration(
-            source: Locale.Language(identifier: "pl"),
-            target: Locale.Language(identifier: targetLanguageCode)
+            source: request.sourceLanguageCode.map { Locale.Language(identifier: $0) },
+            target: Locale.Language(identifier: request.targetLanguageCode)
         )
     }
 
-    private func translateAutomationText(using session: TranslationSession) async {
+    private func translateActiveRequest(using session: TranslationSession) async {
+        guard let request = activeRequest else { return }
         do {
-            let response = try await session.translate(sourceText)
+            let response = try await session.translate(request.sourceText)
             guard !Task.isCancelled else { return }
-            translatedText = response.targetText.trimmingCharacters(in: .whitespacesAndNewlines)
+            translationStore.finish(request, translatedText: response.targetText)
         } catch {
             guard !Task.isCancelled else { return }
-            translatedText = ""
+            translationStore.fail(request)
+        }
+        activeRequest = nil
+        translationConfiguration = nil
+        activateNextRequestIfNeeded()
+    }
+}
+
+struct PavbotAutomationTranslationHost: View {
+    let translationStore: AutomationTranslationStore
+
+    var body: some View {
+        if #available(iOS 18.0, *) {
+            PavbotNativeAutomationTranslationHost(translationStore: translationStore)
         }
     }
 }

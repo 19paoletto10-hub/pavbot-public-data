@@ -1459,6 +1459,8 @@ private struct MobileNewsArticleRow: View {
 }
 
 private struct MobileNewsArticleSpeechActionHost: View {
+    @Environment(AppLanguageStore.self) private var languageStore
+    @Environment(AutomationTranslationStore.self) private var translationStore
     @Environment(PavbotHaptics.self) private var haptics
     let article: MobileNewsArticle
     let magazine: MobileNewsMagazine
@@ -1571,10 +1573,14 @@ private struct MobileNewsArticleSpeechActionHost: View {
         } else if isCurrent, speechController.isSpeaking {
             speechController.pause()
         } else {
-            speechController.speak(
-                article,
-                destination: .mobileNewsArticle(topic: .aktualne, articleID: article.id)
-            )
+            Task {
+                await speechController.speak(
+                    article,
+                    language: languageStore.preference,
+                    translationStore: translationStore,
+                    destination: .mobileNewsArticle(topic: .aktualne, articleID: article.id)
+                )
+            }
         }
         haptics.play(.lightImpact)
     }
@@ -1970,6 +1976,8 @@ private struct MobileNewsArticleReader: View {
 }
 
 private struct MobileNewsSpeechControls: View {
+    @Environment(AppLanguageStore.self) private var languageStore
+    @Environment(AutomationTranslationStore.self) private var translationStore
     @Environment(PavbotHaptics.self) private var haptics
     let article: MobileNewsArticle
     let speechController: MobileNewsSpeechController
@@ -1988,7 +1996,14 @@ private struct MobileNewsSpeechControls: View {
                     } else if isCurrent, speechController.isSpeaking {
                         speechController.pause()
                     } else {
-                        speechController.speak(article, destination: destination)
+                        Task {
+                            await speechController.speak(
+                                article,
+                                language: languageStore.preference,
+                                translationStore: translationStore,
+                                destination: destination
+                            )
+                        }
                     }
                     haptics.play(.lightImpact)
                 } label: {

@@ -14,23 +14,59 @@ enum AppTab: Hashable {
 
 extension AppTab {
     var displayTitle: String {
+        displayTitle(language: .polish)
+    }
+
+    func displayTitle(language: AppLanguagePreference) -> String {
         switch self {
         case .automations:
-            "Automatyzacje"
+            switch language {
+            case .polish: "Automatyzacje"
+            case .english: "Automations"
+            case .russian: "Автоматизации"
+            }
         case .artifacts:
-            "Pliki"
+            switch language {
+            case .polish: "Pliki"
+            case .english: "Files"
+            case .russian: "Файлы"
+            }
         case .jobs:
-            "Praca"
+            switch language {
+            case .polish: "Praca"
+            case .english: "Work"
+            case .russian: "Работа"
+            }
         case .pulseDay:
-            "Puls Dnia"
+            switch language {
+            case .polish: "Puls Dnia"
+            case .english: "Daily Pulse"
+            case .russian: "Пульс дня"
+            }
         case .research:
-            "Przegląd"
+            switch language {
+            case .polish: "Przegląd"
+            case .english: "Review"
+            case .russian: "Обзор"
+            }
         case .today:
-            "Dzisiaj"
+            switch language {
+            case .polish: "Dzisiaj"
+            case .english: "Today"
+            case .russian: "Сегодня"
+            }
         case .diagnostics:
-            "Diagnostyka"
+            switch language {
+            case .polish: "Diagnostyka"
+            case .english: "Diagnostics"
+            case .russian: "Диагностика"
+            }
         case .settings:
-            "Ustawienia"
+            switch language {
+            case .polish: "Ustawienia"
+            case .english: "Settings"
+            case .russian: "Настройки"
+            }
         }
     }
 
