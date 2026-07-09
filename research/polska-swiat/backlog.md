@@ -12,6 +12,9 @@
 | High | Track Polish PAC-3 service hub details | MON announced a concrete Ankara agreement, but location, technical scope and Polish industrial role still need confirmation | Check MON, NSPA/NATO, US, Dutch, German and Swedish readouts after the summit | Open |
 | Medium | Follow Poland-US military space declaration | MON signed a statement of intent with U.S. Space Force, including missile warning and GPS/NAVWAR areas | Watch for implementation schedule, exercises, satellite milestones and ARGUS/COS updates | Open |
 | Medium | Resolve repo verifier iOS signing mismatch | `scripts/verify-research-workspace.sh` currently expects Apple Distribution signing while the local Xcode project contains Apple Development, so the repo-wide verifier fails outside this topic | Review proposal `proposals/2026-07-08-repair-verifier-signing-check.md` before changing iOS project or verifier rules | Open |
+| High | Track USA-Iran/Gulf escalation after Ormuz strikes | AP reports a new U.S. strike wave and Iranian targeting of Bahrain, Kuwait and Qatar, turning Ormuz into a broader Gulf crisis | Check AP, CENTCOM, UKMTO, Gulf state statements and NATO follow-up before podcast or evening update | Open |
+| High | Monitor health reform package | MZ announced central e-registration, central e-queue, pay limits, restrictions on medical companies and sanctions for unequal access, but implementation depends on legislation | Track draft bills, consultations, NFZ details, medical-sector response and patient groups | Open |
+| Medium | Track U.S. military presence conversation after Ankara | Nawrocki says he spoke with Trump about permanent U.S. military presence in Poland, but implementation is left to Polish defence channels | Watch Prezydent RP, MON, U.S. Embassy/DoD and NATO readouts for concrete basing or force-posture steps | Open |
 
 ## Review Notes
 
@@ -98,6 +101,13 @@
 - 2026-07-08: Repo-wide verifier currently fails on an iOS signing expectation
   outside the active topic (`CODE_SIGN_IDENTITY = "Apple Distribution";`), so a
   risk-gated proposal was created instead of changing project or verifier files.
+- 2026-07-09: Thursday morning research run created a material update. Strongest
+  sources were AP for USA-Iran/Gulf escalation and Russian strikes on Ukraine,
+  NATO for the final Ankara declaration, Guardian/Euronews for caveats around
+  the Patriot production license, MZ/Polsat/RMF24 for the health reform package,
+  and Rzeczpospolita/PAP/RMF24 for Nawrocki-Zełenski plus the U.S. presence
+  thread. Podcast should avoid overselling the Patriot license as near-term
+  military relief.
 
 ## Done
 
