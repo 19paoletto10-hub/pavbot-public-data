@@ -46,6 +46,13 @@ also carries Sudan war-crimes reporting, Kyiv strikes, Le Pen, Farage,
 Hormuz shipping risk, a Chinese missile test, steady NBP rates and two fresh
 CNN tech items about Microsoft and Anthropic.
 
+The 2026-07-09 12:02 slot keeps the domestic core on health, Poznań, S8,
+Chopin and RPP, but adds a clearer transport and market layer: new skaners at
+Chopin, a stronger oil-market reaction to the Middle East and continued
+weather pressure on the north. Internationally, Iran stays central, while
+NATO/Ukraina, Le Pen and Grenlandia remain live political pressure points; the
+tech slot is still anchored by Microsoft and the broader AI policy cycle.
+
 ## Data Shape
 
 The native iOS feed expects:
