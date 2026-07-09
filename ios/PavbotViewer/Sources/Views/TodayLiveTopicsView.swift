@@ -14,7 +14,7 @@ struct TodayLiveTopicsPanel: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(alignment: .firstTextBaseline, spacing: 10) {
-                Label("Puls Dnia", systemImage: "globe.europe.africa.fill")
+                Label(LocalizedStringKey("Puls Dnia"), systemImage: "globe.europe.africa.fill")
                     .font(.headline.weight(.semibold))
                     .foregroundStyle(.orange)
                 Spacer()
@@ -28,7 +28,7 @@ struct TodayLiveTopicsPanel: View {
                 Button {
                     isSavedPresented = true
                 } label: {
-                    Label("Zapisane", systemImage: "bookmark.fill")
+                    Label(LocalizedStringKey("Zapisane"), systemImage: "bookmark.fill")
                         .labelStyle(.iconOnly)
                         .font(.caption.weight(.bold))
                         .frame(width: 32, height: 32)
@@ -46,7 +46,7 @@ struct TodayLiveTopicsPanel: View {
             case .idle where snapshot == nil, .loading where snapshot == nil:
                 HStack(spacing: 10) {
                     ProgressView()
-                    Text("Ładuję najważniejsze tematy z automatyzacji Puls Dnia...")
+                    Text(LocalizedStringKey("Ładuję najważniejsze tematy z automatyzacji Puls Dnia..."))
                         .font(.callout)
                         .foregroundStyle(.secondary)
                 }
@@ -125,10 +125,10 @@ private struct TodayLiveTopicsGrid: View {
 
             if topics.isEmpty {
                 VStack(alignment: .leading, spacing: 10) {
-                    Label("Wszystkie tematy z tego wydania są zapisane", systemImage: "bookmark.fill")
+                    Label(LocalizedStringKey("Wszystkie tematy z tego wydania są zapisane"), systemImage: "bookmark.fill")
                         .font(.headline.weight(.semibold))
                         .foregroundStyle(.blue)
-                    Text("Zajrzyj do zapisanych albo odśwież manifest, gdy automatyzacja opublikuje nowy Puls Dnia.")
+                    Text(LocalizedStringKey("Zajrzyj do zapisanych albo odśwież manifest, gdy automatyzacja opublikuje nowy Puls Dnia."))
                         .font(.callout)
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
@@ -183,14 +183,14 @@ private struct PulseIssueMasthead: View {
             PulseIssueMastheadTitle(headline: snapshot.headline)
 
             DisclosureGroup(isExpanded: $isContextExpanded) {
-                Text(snapshot.summary)
+                PavbotTranslatedAutomationText(snapshot.summary)
                     .font(.callout)
                     .foregroundStyle(.secondary)
                     .lineSpacing(3)
                     .padding(.top, 6)
                     .fixedSize(horizontal: false, vertical: true)
             } label: {
-                Label("Kontekst wydania", systemImage: "text.quote")
+                Label(LocalizedStringKey("Kontekst wydania"), systemImage: "text.quote")
                     .font(.caption.weight(.bold))
                     .foregroundStyle(.orange)
                     .textCase(.uppercase)
@@ -225,7 +225,7 @@ private struct PulseIssueMastheadTitle: View {
     let headline: String
 
     var body: some View {
-        Text(headline)
+        PavbotTranslatedAutomationText(headline)
             .font(.title3.weight(.bold))
             .lineSpacing(2)
             .frame(maxWidth: .infinity, alignment: .leading)
@@ -256,10 +256,10 @@ struct TodayLiveTopicDetailView: View {
                         if isSaved {
                             StatusBadge(text: "Zapisany", systemImage: "bookmark.fill", tint: .blue)
                         }
-                        Text(topic.title)
+                        PavbotTranslatedAutomationText(topic.title)
                             .font(.title.weight(.bold))
                             .fixedSize(horizontal: false, vertical: true)
-                        Text(topic.lead)
+                        PavbotTranslatedAutomationText(topic.lead)
                             .font(.headline)
                             .foregroundStyle(.secondary)
                             .lineSpacing(4)
@@ -279,7 +279,7 @@ struct TodayLiveTopicDetailView: View {
 
                     if !topic.sources.isEmpty {
                         VStack(alignment: .leading, spacing: 10) {
-                            Text("Źródła")
+                            Text(LocalizedStringKey("Źródła"))
                                 .font(.headline.weight(.semibold))
                             ForEach(topic.sources) { source in
                                 if let url = URL(string: source.url) {
@@ -296,7 +296,7 @@ struct TodayLiveTopicDetailView: View {
                 .padding(20)
             }
             .background(Color(.systemGroupedBackground))
-            .navigationTitle("Temat dnia")
+            .navigationTitle(LocalizedStringKey("Temat dnia"))
             .navigationBarTitleDisplayMode(.inline)
             .onAppear {
                 speechController.configureAudioCoordinator(audioCoordinator)
@@ -313,7 +313,7 @@ struct TodayLiveTopicDetailView: View {
                         Image(systemName: isSaved ? "bookmark.fill" : "bookmark")
                     }
                     .disabled(savedStore == nil)
-                    .accessibilityLabel(isSaved ? "Usuń z zapisanych" : "Zapisz news")
+                    .accessibilityLabel(Text(LocalizedStringKey(isSaved ? "Usuń z zapisanych" : "Zapisz news")))
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Gotowe") {
@@ -344,11 +344,11 @@ private struct TodayLiveTopicSpeechPanel: View {
                     .background(Color.orange.opacity(0.14), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text("Odczyt artykułu")
-                        .font(.caption.weight(.bold))
+                            Text(LocalizedStringKey("Odczyt artykułu"))
+                                .font(.caption.weight(.bold))
                         .foregroundStyle(.secondary)
                         .textCase(.uppercase)
-                    Text(isCurrent ? statusText : "Przeczytaj ten temat głosem iPhone’a.")
+                    Text(LocalizedStringKey(isCurrent ? statusText : "Przeczytaj ten temat głosem iPhone’a."))
                         .font(.callout)
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
@@ -362,7 +362,7 @@ private struct TodayLiveTopicSpeechPanel: View {
                     handlePrimaryAction()
                     haptics.play(.lightImpact)
                 } label: {
-                    Label(primaryTitle, systemImage: primaryIcon)
+                    Label(LocalizedStringKey(primaryTitle), systemImage: primaryIcon)
                         .font(.subheadline.weight(.semibold))
                         .foregroundStyle(.white)
                         .padding(.horizontal, 14)
@@ -370,14 +370,14 @@ private struct TodayLiveTopicSpeechPanel: View {
                         .background(Color.orange, in: Capsule())
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel(primaryAccessibilityLabel)
+                .accessibilityLabel(Text(LocalizedStringKey(primaryAccessibilityLabel)))
 
                 if isCurrent {
                     Button {
                         speechController.stop()
                         haptics.play(.warning)
                     } label: {
-                        Label("Stop", systemImage: "stop.fill")
+                        Label(LocalizedStringKey("Stop"), systemImage: "stop.fill")
                             .font(.subheadline.weight(.semibold))
                             .foregroundStyle(.secondary)
                             .padding(.horizontal, 14)
@@ -385,7 +385,7 @@ private struct TodayLiveTopicSpeechPanel: View {
                             .background(Color(.secondarySystemBackground), in: Capsule())
                     }
                     .buttonStyle(.plain)
-                    .accessibilityLabel("Zatrzymaj odczyt artykułu")
+                    .accessibilityLabel(Text(LocalizedStringKey("Zatrzymaj odczyt artykułu")))
                 }
             }
 
@@ -403,7 +403,7 @@ private struct TodayLiveTopicSpeechPanel: View {
             }
 
             if let errorMessage = speechController.errorMessage {
-                Text(errorMessage)
+                Text(LocalizedStringKey(errorMessage))
                     .font(.caption)
                     .foregroundStyle(.red)
                     .fixedSize(horizontal: false, vertical: true)
@@ -540,10 +540,10 @@ private struct TodayLiveTopicsCarousel: View {
                     ))
             } else if topStory == nil {
                 VStack(alignment: .leading, spacing: 10) {
-                    Label("Wszystkie tematy z tego wydania są zapisane", systemImage: "bookmark.fill")
+                    Label(LocalizedStringKey("Wszystkie tematy z tego wydania są zapisane"), systemImage: "bookmark.fill")
                         .font(.headline.weight(.semibold))
                         .foregroundStyle(.blue)
-                    Text("Zajrzyj do zapisanych albo odśwież manifest, gdy automatyzacja opublikuje nowy Puls Dnia.")
+                    Text(LocalizedStringKey("Zajrzyj do zapisanych albo odśwież manifest, gdy automatyzacja opublikuje nowy Puls Dnia."))
                         .font(.callout)
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
@@ -713,14 +713,14 @@ private struct TodayLiveTopicPreviewCard: View {
                     .accessibilityHidden(true)
             }
 
-            Text(topic.title)
+            PavbotTranslatedAutomationText(topic.title)
                 .font(.headline.weight(.bold))
                 .foregroundStyle(.primary)
                 .lineSpacing(2)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .fixedSize(horizontal: false, vertical: true)
 
-            Text(topic.lead)
+            PavbotTranslatedAutomationText(topic.lead)
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
@@ -827,7 +827,7 @@ private struct TodayLiveTopicsCarouselControls: View {
                 .frame(maxWidth: .infinity)
 
                 if isPaused {
-                    Label("Pauza", systemImage: "pause.circle.fill")
+                    Label(LocalizedStringKey("Pauza"), systemImage: "pause.circle.fill")
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(.secondary)
                 }
@@ -863,15 +863,15 @@ private struct TodayLiveTopicsEmptyState: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Label(title, systemImage: "newspaper")
+            Label(LocalizedStringKey(title), systemImage: "newspaper")
                 .font(.headline.weight(.semibold))
                 .foregroundStyle(.orange)
-            Text(message)
+            Text(LocalizedStringKey(message))
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .fixedSize(horizontal: false, vertical: true)
             Button(action: openAktualne) {
-                Label("Otwórz Aktualne", systemImage: "arrow.right.circle.fill")
+                Label(LocalizedStringKey("Otwórz Aktualne"), systemImage: "arrow.right.circle.fill")
                     .font(.subheadline.weight(.semibold))
             }
             .buttonStyle(.borderedProminent)
@@ -897,9 +897,9 @@ private struct TodayLiveTopicsSavedView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 14) {
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("Zapisane Pulsu Dnia")
+                        Text(LocalizedStringKey("Zapisane Pulsu Dnia"))
                             .font(.title2.weight(.bold))
-                        Text("Zapisane newsy zostają lokalnie w aplikacji. Możesz wrócić do faktów, reakcji i źródeł nawet po kolejnych odświeżeniach feedu.")
+                        Text(LocalizedStringKey("Zapisane newsy zostają lokalnie w aplikacji. Możesz wrócić do faktów, reakcji i źródeł nawet po kolejnych odświeżeniach feedu."))
                             .font(.callout)
                             .foregroundStyle(.secondary)
                             .lineSpacing(3)
@@ -911,9 +911,9 @@ private struct TodayLiveTopicsSavedView: View {
 
                     if savedTopics.isEmpty {
                         VStack(alignment: .leading, spacing: 10) {
-                            Label("Brak zapisanych newsów", systemImage: "bookmark")
+                            Label(LocalizedStringKey("Brak zapisanych newsów"), systemImage: "bookmark")
                                 .font(.headline.weight(.semibold))
-                            Text(query.isEmpty ? "Otwórz temat w Pulsie Dnia i użyj przycisku zapisania." : "Nie znaleziono zapisanego tematu dla wpisanego tekstu.")
+                            Text(LocalizedStringKey(query.isEmpty ? "Otwórz temat w Pulsie Dnia i użyj przycisku zapisania." : "Nie znaleziono zapisanego tematu dla wpisanego tekstu."))
                                 .font(.callout)
                                 .foregroundStyle(.secondary)
                         }
@@ -977,12 +977,12 @@ private struct TodayLiveTopicsSavedRow: View {
                 }
             }
 
-            Text(saved.topic.title)
+            PavbotTranslatedAutomationText(saved.topic.title)
                 .font(.headline.weight(.semibold))
                 .foregroundStyle(.primary)
                 .fixedSize(horizontal: false, vertical: true)
 
-            Text(saved.topic.lead)
+            PavbotTranslatedAutomationText(saved.topic.lead)
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
@@ -996,7 +996,8 @@ private struct TodayLiveTopicsSavedRow: View {
                             title: tag,
                             systemImage: "tag.fill",
                             tint: .blue,
-                            accessibilityPrefix: "Tag zapisanego tematu"
+                            accessibilityPrefix: "Tag zapisanego tematu",
+                            translatesAutomationText: true
                         )
                     }
                 }
@@ -1015,7 +1016,7 @@ private struct TodayLiveTopicTextSection: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .font(.caption.weight(.bold))
                 .foregroundStyle(.secondary)
                 .textCase(.uppercase)
@@ -1025,7 +1026,7 @@ private struct TodayLiveTopicTextSection: View {
                         .fill(tint)
                         .frame(width: 6, height: 6)
                         .padding(.top, 7)
-                    Text(item)
+                    PavbotTranslatedAutomationText(item)
                         .font(.callout)
                         .lineSpacing(4)
                         .fixedSize(horizontal: false, vertical: true)
@@ -1044,11 +1045,11 @@ private struct TodayLiveTopicTextBlock: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .font(.caption.weight(.bold))
                 .foregroundStyle(.secondary)
                 .textCase(.uppercase)
-            Text(text)
+            PavbotTranslatedAutomationText(text)
                 .font(.callout)
                 .lineSpacing(4)
                 .fixedSize(horizontal: false, vertical: true)

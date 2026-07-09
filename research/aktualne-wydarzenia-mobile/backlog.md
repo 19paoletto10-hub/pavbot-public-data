@@ -4,12 +4,12 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
-| High | Monitor weather and hydrology through the week | Poranny alert z 8 lipca nadal trzyma północny wschód, a susza hydrologiczna obejmuje cały kraj | In the next run, check whether alerts escalate, ease, or move regionalnie and whether fire/hydrology signals change | Open |
+| High | Monitor weather and hydrology through the week | Wieczorny run z 9 lipca dokłada ostrzeżenia RCB przed burzami i wezbraniami przy utrzymanej suszy hydrologicznej | In the next run, check whether overnight alerts escalate, ease, or convert into local damage reports and whether hydrology changes regionally | Open |
 | High | Track PIP implementation after 8 July | Reforma właśnie weszła w życie i może szybko przejść z komunikatu w praktykę kontrolną | In the next run, check for employer guidance, control activity, and public reactions | Open |
-| High | Track health reform package after 8 July | Wieczorna konferencja zdrowotna dała konkretny pakiet, ale nie wiemy jeszcze, jak szybko przejdzie do formalnych decyzji | In the next run, check for legislative follow-up, implementation notes, and reactions from hospitals or NFZ | Open |
+| High | Track health reform package after 8 July | Pakiet zdrowotny wszedł 9 lipca w otwarty dialog z NRL i jednocześnie ma ślad w agendzie SKRM, więc rośnie szansa na szybki konflikt albo formalny postęp | In the next run, check for NRL response, legislative follow-up, and concrete implementation notes from the government side | Open |
 | High | Follow NATO Ankara declaration into implementation | Szczyt dał €70 mld dla Ukrainy w 2026 roku i ponad 50 mld dolarów nowych zamówień, ale krajowe wkłady i harmonogramy pozostają nieostre | In the next run, check for national follow-up, procurement detail, and Poland-specific readouts | Open |
 | Medium | Track EU cyber-AI implementation follow-up | Komisja opublikowała plan cyber-AI i dopisała go do istniejących ram, ale wykonawcze szczegóły mogą jeszcze dojść | In the next run, check whether EU bodies, regulators, platforms, or vendors respond with concrete implementation steps | Open |
-| High | Stabilize `male-xtts` in current-events pipeline | `female-piper` pozostaje wymaganym stabilnym wariantem, ale `male-xtts` nadal trzeba monitorować pod kątem pełnego renderu | After render, verify whether the male variant succeeds; keep `female-piper` as the required stable output | Open |
+| High | Verify `male-xtts` repeatability in current-events pipeline | Poranny sukces z 9 lipca nie utrzymał się wieczorem; wariant znów zawiesił się na etapie XTTS inference i wymagał kontrolowanego przerwania | In the next run, try the standard pipeline again and confirm whether failure repeats with the same inference pattern while keeping `female-piper` as the required stable output | Open |
 
 ## Review Notes
 
@@ -77,6 +77,12 @@
   wyrenderował poprawny MP3, natomiast `male-xtts` znów zakończył się
   kontrolowanym przerwaniem po długim CPU; stan zapisano w
   `podcasts/2026-07-08-1935/tts_variants.json` oraz `audio/male-xtts/render.log`.
+- 2026-07-09: Wieczorny run `2026-07-09-1935` dołożył raport RCB o burzach i
+  wezbraniach, dialog MZ z NRL oraz publiczne filary Deregulacji 2.0.
+- 2026-07-09: W runie `2026-07-09-1935` `female-piper` ponownie wyrenderował
+  poprawny MP3, natomiast `male-xtts` zawiesił się podczas inferencji i został
+  przerwany kontrolowanie; stan zapisano w
+  `podcasts/2026-07-09-1935/tts_variants.json` oraz `audio/male-xtts/render.log`.
 
 ## Done
 

@@ -4,6 +4,15 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Anthropic Reflect rollout | Claude self-monitoring could become a durable product category with privacy and enterprise implications | Watch rollout breadth, memory settings, export options and admin controls | Open |
+| High | Track Anthropic governance refresh | Bernanke on LTBT reinforces Anthropic's governance story at a time when frontier AI access is getting gated | Watch trust powers, follow-up board changes and regulator reaction | Open |
+| High | Track Ollama open-model platform growth | Ollama's funding and user count show local/open-model infrastructure still has real demand | Watch cloud expansion, desktop positioning, pricing and model support | Open |
+| Medium | Track Flint downstream adoption | Microsoft Research's chart DSL could become an agent output layer if it crosses from demo to workflow | Watch HN traction, examples in downstream tools and interoperability with analytics stacks | Open |
+| Medium | Track Cloudflare Drop abuse risk | Easy static deploy is useful for prototypes but also lowers the cost of disposable landing pages | Watch security controls, account flows and abuse reports | Open |
+| High | Track GPT-Live rollout and voice adoption | Full-duplex voice is now default in ChatGPT Voice and may become the main agent interface | Watch API timing, retention and safety feedback | Open |
+| High | Track Grok 4.5 benchmark and EU access | xAI is making coding and agentic tasks a headline competitive claim | Watch independent evals, pricing and regional availability | Open |
+| High | Track TypeScript 7 migration issues | Native Go port could create ecosystem regressions even if performance is strong | Watch editor support, plugin compatibility and CI fallout | Open |
+| High | Track NHTSA AV enforcement follow-through | First-responder interference is now a concrete regulatory issue | Watch developer meetings, enforcement actions and OEM responses | Open |
 | High | Track Meta Muse Image privacy backlash | Public Instagram reuse could trigger consent and default-setting scrutiny | Watch opt-out defaults, complaint volume and policy edits | Open |
 | High | Track inference silicon race | Apple/Broadcom, DeepSeek, SambaNova, Prime Intellect and ZML show the market shifting from model hype to custom silicon and portable inference stacks | Watch customer adoption, manufacturing constraints, financing risk and benchmark/performance claims | Open |
 | High | Track Microsoft in-house model migration | MAI routing may change Copilot economics and vendor mix | Watch rollout breadth across 365, Foundry and partner surfaces | Open |

@@ -2,6 +2,7 @@ import Charts
 import ImageIO
 import SwiftUI
 import UIKit
+import Translation
 
 private enum TodaySectionScrollID {
     static let redditRadar = "today-section-reddit-radar"
@@ -232,6 +233,7 @@ struct WeatherBriefView: View {
             cacheNotice: weatherStore.cacheNotice,
             locationNotice: weatherStore.locationNotice,
             humorDigest: humorStore.digest,
+            humorRecentDigests: humorStore.recentDigests,
             humorState: humorStore.state,
             humorCacheNotice: humorStore.cacheNotice,
             isRefreshingHumor: humorStore.isRefreshing,
@@ -328,6 +330,7 @@ struct WeatherBriefView: View {
 
             TodayHumorPanel(
                 digest: humorStore.digest,
+                historyDigests: humorStore.recentDigests,
                 state: humorStore.state,
                 cacheNotice: humorStore.cacheNotice,
                 isRefreshing: humorStore.isRefreshing,
@@ -408,6 +411,7 @@ struct WeatherBriefView: View {
 
             TodayHumorPanel(
                 digest: humorStore.digest,
+                historyDigests: humorStore.recentDigests,
                 state: humorStore.state,
                 cacheNotice: humorStore.cacheNotice,
                 isRefreshing: humorStore.isRefreshing,
@@ -434,6 +438,7 @@ struct WeatherBriefView: View {
 }
 
 private struct PavbotPhoneCockpitHeader: View {
+    @Environment(AppLanguageStore.self) private var languageStore
     let report: DailyWeatherReport
     let isRefreshing: Bool
     let freshnessLabel: String
@@ -465,7 +470,7 @@ private struct PavbotPhoneCockpitHeader: View {
                     .minimumScaleFactor(0.82)
                     .fixedSize(horizontal: false, vertical: true)
 
-                Text(dynamicDaySubtitle)
+                PavbotLocalizedInterpolation(key: "Lokalizacja: %@ · %@.", report.city, localizedConditionLabel.lowercased(with: languageStore.preference.locale))
                     .font(.callout.weight(.semibold))
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
@@ -477,7 +482,7 @@ private struct PavbotPhoneCockpitHeader: View {
                     .lineLimit(1)
                     .minimumScaleFactor(0.75)
 
-                Text(report.conditions.label)
+                Text(LocalizedStringKey(report.conditions.label))
                     .font(.title3.weight(.semibold))
                     .foregroundStyle(.secondary)
                     .lineLimit(2)
@@ -488,22 +493,24 @@ private struct PavbotPhoneCockpitHeader: View {
     }
 
     private var dynamicDayTitle: String {
-        "\(report.weekday.capitalized), \(shortDateLabel)"
-    }
-
-    private var dynamicDaySubtitle: String {
-        "Lokalizacja: \(report.city) · \(report.conditions.label.lowercased())."
-    }
-
-    private var shortDateLabel: String {
         guard let dateValue = DateFormatter.pavbotDay.date(from: report.date) else {
             return report.displayDate
         }
-        let formatter = DateFormatter()
-        formatter.calendar = Calendar(identifier: .gregorian)
-        formatter.locale = Locale(identifier: "pl_PL")
-        formatter.setLocalizedDateFormatFromTemplate("dMMMM")
-        return formatter.string(from: dateValue)
+        return dateValue.formatted(
+            .dateTime
+                .weekday(.wide)
+                .day()
+                .month(.wide)
+                .locale(languageStore.preference.locale)
+        )
+    }
+
+    private var localizedConditionLabel: String {
+        String(
+            localized: String.LocalizationValue(report.conditions.label),
+            bundle: .main,
+            locale: languageStore.preference.locale
+        )
     }
 }
 
@@ -714,6 +721,7 @@ private struct PavbotPhoneDailyCockpit: View {
     let cacheNotice: String?
     let locationNotice: String?
     let humorDigest: TodayHumorDigest?
+    let humorRecentDigests: [TodayHumorDigest]
     let humorState: TodayHumorStore.LoadState
     let humorCacheNotice: String?
     let isRefreshingHumor: Bool
@@ -757,6 +765,7 @@ private struct PavbotPhoneDailyCockpit: View {
 
             TodayHumorFeaturedPreview(
                 digest: humorDigest,
+                historyDigests: humorRecentDigests,
                 state: humorState,
                 cacheNotice: humorCacheNotice,
                 isRefreshing: isRefreshingHumor,
@@ -1045,16 +1054,16 @@ private struct DailyWisdomBanner: View {
                     .foregroundStyle(.orange)
                     .textCase(.uppercase)
 
-                Text("„\(entry.text)”")
+                PavbotTranslatedAutomationText(entry.text)
                     .font(.title3.weight(.bold))
                     .lineSpacing(3)
                     .fixedSize(horizontal: false, vertical: true)
 
                 VStack(alignment: .leading, spacing: 5) {
-                    Text(entry.attribution)
+                    PavbotTranslatedAutomationText(entry.attribution)
                         .font(.subheadline.weight(.semibold))
                         .foregroundStyle(.primary)
-                    Text(entry.context)
+                    PavbotTranslatedAutomationText(entry.context)
                         .font(.callout)
                         .foregroundStyle(.secondary)
                         .lineSpacing(2)
@@ -1082,7 +1091,7 @@ private struct DailyWisdomBanner: View {
                 categoryCapsule
             }
 
-            Text("„\(entry.text)”")
+            PavbotTranslatedAutomationText(entry.text)
                 .font(.title3.weight(.heavy))
                 .lineSpacing(3)
                 .fixedSize(horizontal: false, vertical: true)
@@ -1119,7 +1128,7 @@ private struct DailyWisdomBanner: View {
                 .foregroundStyle(.orange)
                 .textCase(.uppercase)
 
-            Text(text)
+            PavbotTranslatedAutomationText(text)
                 .font(.callout)
                 .foregroundStyle(.primary)
                 .lineSpacing(3)
@@ -1229,12 +1238,37 @@ private struct DailyWisdomBanner: View {
 
 private struct TodayHumorFeaturedPreview: View {
     let digest: TodayHumorDigest?
+    let historyDigests: [TodayHumorDigest]
     let state: TodayHumorStore.LoadState
     let cacheNotice: String?
     let isRefreshing: Bool
     let reload: () -> Void
     let openSaved: () -> Void
     let openDetail: (TodayHumorItem) -> Void
+    @State private var selectedDigestID: String?
+
+    private var availableDigests: [TodayHumorDigest] {
+        var seenIDs = Set<String>()
+        var result: [TodayHumorDigest] = []
+
+        for candidate in historyDigests + [digest].compactMap({ $0 }) {
+            guard seenIDs.insert(candidate.id).inserted else { continue }
+            result.append(candidate)
+            if result.count == 3 {
+                break
+            }
+        }
+
+        return result
+    }
+
+    private var selectedDigest: TodayHumorDigest? {
+        if let selectedDigestID,
+           let selected = availableDigests.first(where: { $0.id == selectedDigestID }) {
+            return selected
+        }
+        return availableDigests.first ?? digest
+    }
 
     var body: some View {
         PavbotPremiumCard(tint: .purple, cornerRadius: 26, horizontalPadding: 18, verticalPadding: 18) {
@@ -1250,28 +1284,32 @@ private struct TodayHumorFeaturedPreview: View {
                         .background(Color.orange.opacity(0.12), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
                 }
 
-                if digest == nil, state == .idle || state == .loading {
+                if selectedDigest == nil, digest == nil, state == .idle || state == .loading {
                     loadingContent
-                } else if case .failed(let error) = state, digest == nil {
+                } else if case .failed(let error) = state, selectedDigest == nil, digest == nil {
                     errorContent(error)
-                } else if let digest {
+                } else if let digest = selectedDigest {
                     digestContent(digest)
                 } else {
-                    Text("Brak postów do pokazania.")
+                    Text(LocalizedStringKey("Brak postów do pokazania."))
                         .font(.callout)
                         .foregroundStyle(.secondary)
                 }
             }
+        }
+        .onChange(of: availableDigests.map(\.id)) { _, ids in
+            guard let selectedDigestID, !ids.contains(selectedDigestID) else { return }
+            self.selectedDigestID = nil
         }
     }
 
     private var header: some View {
         HStack(alignment: .center, spacing: 10) {
             VStack(alignment: .leading, spacing: 4) {
-                Label("Śmiechowy radar", systemImage: "sparkles.tv.fill")
+                Label(LocalizedStringKey("Śmiechowy radar"), systemImage: "sparkles.tv.fill")
                     .font(.headline.weight(.semibold))
                     .foregroundStyle(.purple)
-                Text("Przesuwaj w bok, żeby przejrzeć wszystkie posty z obrazem i opisem.")
+                Text(LocalizedStringKey("Przesuwaj w bok, żeby przejrzeć wszystkie posty z obrazem i opisem."))
                     .font(.callout)
                     .foregroundStyle(.secondary)
             }
@@ -1319,28 +1357,61 @@ private struct TodayHumorFeaturedPreview: View {
     private func digestContent(_ digest: TodayHumorDigest) -> some View {
         VStack(alignment: .leading, spacing: 13) {
             HStack(alignment: .firstTextBaseline, spacing: 8) {
-                Text(digest.title)
-                    .font(.title3.weight(.bold))
-                    .lineLimit(2)
+                    PavbotTranslatedAutomationText(digest.title)
+                        .font(.title3.weight(.bold))
+                        .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
 
                 Spacer(minLength: 8)
 
-                PavbotFreshnessBadge(
-                    label: "co \(digest.refreshIntervalHours)h",
-                    systemImage: "clock.arrow.circlepath",
-                    tint: .purple
-                )
+                PavbotRedditIntervalBadge(hours: digest.refreshIntervalHours, tint: .purple)
             }
 
             TodayHumorSummaryText(summary: digest.summary)
 
+            if availableDigests.count > 1 {
+                TodayHumorRunHistoryPicker(
+                    digests: availableDigests,
+                    selectedDigestID: Binding(
+                        get: { selectedDigest?.id ?? availableDigests.first?.id },
+                        set: { selectedDigestID = $0 }
+                    )
+                )
+            }
+
             TodayHumorSideScrollList(items: digest.items, openDetail: openDetail)
 
-            Text("Ostatnio: \(digest.displayTime) · następne: \(digest.nextRefreshLabel)")
+            PavbotRedditScheduleText(lastUpdate: digest.displayTime, nextUpdate: digest.nextRefreshLabel)
                 .font(.caption.weight(.medium))
                 .foregroundStyle(.secondary)
         }
+    }
+}
+
+private struct PavbotRedditScheduleText: View {
+    let lastUpdate: String
+    let nextUpdate: String
+
+    var body: some View {
+        PavbotLocalizedInterpolation(key: "Ostatnio: %@ · następne: %@", lastUpdate, nextUpdate)
+    }
+}
+
+private struct PavbotRedditIntervalBadge: View {
+    let hours: Int
+    let tint: Color
+
+    var body: some View {
+        HStack(spacing: 5) {
+            Image(systemName: "clock.arrow.circlepath")
+            PavbotLocalizedInterpolation(key: "co %dh", hours)
+        }
+        .font(.caption.weight(.bold))
+        .foregroundStyle(tint)
+        .padding(.horizontal, 10)
+        .padding(.vertical, 7)
+        .background(tint.opacity(0.12), in: Capsule())
+        .accessibilityElement(children: .combine)
     }
 }
 
@@ -1360,12 +1431,12 @@ private struct TodayHumorSideScrollList: View {
                                 TodayHumorArtwork(imageLink: item.imageLink, height: item.imageLink == nil ? 104 : 148)
 
                                 VStack(alignment: .leading, spacing: 7) {
-                                    Text(item.title)
+                                    PavbotTranslatedAutomationText(item.title)
                                         .font(.headline.weight(.semibold))
                                         .foregroundStyle(.primary)
                                         .lineLimit(3)
                                         .fixedSize(horizontal: false, vertical: true)
-                                    Text(item.caption)
+                                    PavbotTranslatedAutomationText(item.caption)
                                         .font(.callout)
                                         .foregroundStyle(.secondary)
                                         .lineLimit(4)
@@ -1373,10 +1444,14 @@ private struct TodayHumorSideScrollList: View {
                                 }
 
                                 HStack(spacing: 8) {
-                                    Label(item.sourceName, systemImage: "link")
-                                        .font(.caption.weight(.medium))
-                                        .foregroundStyle(.secondary)
-                                        .lineLimit(1)
+                                    Label {
+                                        PavbotTranslatedAutomationText(item.sourceName)
+                                    } icon: {
+                                        Image(systemName: "link")
+                                    }
+                                    .font(.caption.weight(.medium))
+                                    .foregroundStyle(.secondary)
+                                    .lineLimit(1)
 
                                     Spacer(minLength: 8)
 
@@ -1487,10 +1562,10 @@ private struct WeatherRangeTimelineTile: View {
                     .font(.title3.bold())
                     .lineLimit(1)
                     .minimumScaleFactor(0.72)
-                Text("Zakres dnia")
+                Text(LocalizedStringKey("Zakres dnia"))
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.secondary)
-                Text("Godzinowy wykres")
+                Text(LocalizedStringKey("Godzinowy wykres"))
                     .font(.caption2)
                     .foregroundStyle(.secondary)
             }
@@ -1508,10 +1583,10 @@ private struct WeatherRangeTimelineTile: View {
                     .frame(width: 28, height: 28)
                     .background(Color.red.opacity(0.12), in: RoundedRectangle(cornerRadius: 9, style: .continuous))
                 VStack(alignment: .leading, spacing: 1) {
-                    Text("Zakres dnia")
+                    Text(LocalizedStringKey("Zakres dnia"))
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(.secondary)
-                    Text("Temperatura godzinowa")
+                    Text(LocalizedStringKey("Temperatura godzinowa"))
                         .font(.subheadline.bold())
                         .foregroundStyle(.primary)
                 }
@@ -1519,9 +1594,9 @@ private struct WeatherRangeTimelineTile: View {
 
             if model.bars.isEmpty {
                 VStack(alignment: .leading, spacing: 3) {
-                    Text("Brak danych godzinowych")
+                    Text(LocalizedStringKey("Brak danych godzinowych"))
                         .font(.caption.weight(.semibold))
-                    Text("Zakres dnia: \(report.temperature.rangeLabel)")
+                    PavbotLocalizedInterpolation(key: "Zakres dnia: %@", report.temperature.rangeLabel)
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                 }
@@ -2005,12 +2080,12 @@ private struct WeatherHeroCard: View {
                     .font(.system(size: 64, weight: .bold, design: .rounded))
                     .lineLimit(1)
                     .minimumScaleFactor(0.75)
-                Text(report.conditions.label)
+                Text(LocalizedStringKey(report.conditions.label))
                     .font(.title3.weight(.semibold))
                     .foregroundStyle(.secondary)
             }
 
-            Text(report.headline)
+            PavbotTranslatedAutomationText(report.headline)
                 .font(.title3.weight(.semibold))
                 .foregroundStyle(.primary)
                 .fixedSize(horizontal: false, vertical: true)
@@ -2089,10 +2164,10 @@ private struct WeatherPrecipitationTile: View {
                     .font(.title3.bold())
                     .lineLimit(1)
                     .minimumScaleFactor(0.72)
-                Text("Opady")
+                Text(LocalizedStringKey("Opady"))
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.secondary)
-                Text("\(report.precipitation.totalLabel) · godziny")
+                PavbotLocalizedInterpolation(key: "%@ · godziny", report.precipitation.totalLabel)
                     .font(.caption2)
                     .foregroundStyle(.secondary)
                     .lineLimit(2)
@@ -2112,10 +2187,10 @@ private struct WeatherPrecipitationTile: View {
                     .frame(width: 28, height: 28)
                     .background(Color.blue.opacity(0.12), in: RoundedRectangle(cornerRadius: 9, style: .continuous))
                 VStack(alignment: .leading, spacing: 1) {
-                    Text("Opady")
+                    Text(LocalizedStringKey("Opady"))
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(.secondary)
-                    Text("Godzinowa prognoza")
+                    Text(LocalizedStringKey("Godzinowa prognoza"))
                         .font(.subheadline.bold())
                 }
             }
@@ -2126,7 +2201,7 @@ private struct WeatherPrecipitationTile: View {
                 .fixedSize(horizontal: false, vertical: true)
 
             if chartPoints.isEmpty {
-                Text("Brak godzinowych danych opadów")
+                Text(LocalizedStringKey("Brak godzinowych danych opadów"))
                     .font(.caption2)
                     .foregroundStyle(.secondary)
             } else {
@@ -2134,9 +2209,15 @@ private struct WeatherPrecipitationTile: View {
 
                 WeatherPrecipitationChartLegend(tint: .blue, total: presentation.dailyTotalLabel)
 
-                Text(isExpanded ? "Suma dnia \(presentation.dailyTotalLabel)" : presentation.dailyTotalLabel)
-                    .font(.caption2)
-                    .foregroundStyle(.secondary)
+                if isExpanded {
+                    PavbotLocalizedInterpolation(key: "Suma dnia %@", presentation.dailyTotalLabel)
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                } else {
+                    Text(presentation.dailyTotalLabel)
+                        .font(.caption2)
+                        .foregroundStyle(.secondary)
+                }
             }
         }
     }
@@ -2400,11 +2481,11 @@ private struct WeatherMetricTile: View {
                     .font(.title3.bold())
                     .lineLimit(1)
                     .minimumScaleFactor(0.72)
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.secondary)
                 if let caption {
-                    Text(caption)
+                    Text(LocalizedStringKey(caption))
                         .font(.caption2)
                         .foregroundStyle(.secondary)
                 }
@@ -2425,7 +2506,7 @@ private struct WeatherNarrativePanel: View {
                 .font(.headline)
                 .foregroundStyle(.blue)
 
-            Text(report.summary)
+            PavbotTranslatedAutomationText(report.summary)
                 .font(.body)
                 .lineSpacing(4)
                 .fixedSize(horizontal: false, vertical: true)
@@ -2440,7 +2521,7 @@ private struct WeatherNarrativePanel: View {
                 }
             }
 
-            Text(report.weatherNarrativeRecommendation)
+            PavbotTranslatedAutomationText(report.weatherNarrativeRecommendation)
                 .font(.callout.weight(.semibold))
                 .lineSpacing(3)
                 .padding(14)
@@ -2461,6 +2542,7 @@ private struct WeatherNarrativePanel: View {
 
 private struct TodayHumorPanel: View {
     let digest: TodayHumorDigest?
+    let historyDigests: [TodayHumorDigest]
     let state: TodayHumorStore.LoadState
     let cacheNotice: String?
     let isRefreshing: Bool
@@ -2469,18 +2551,42 @@ private struct TodayHumorPanel: View {
     let reload: () -> Void
     @State private var selectedHumorItem: TodayHumorItem?
     @State private var isSavedPresented = false
+    @State private var selectedDigestID: String?
+
+    private var availableDigests: [TodayHumorDigest] {
+        var seenIDs = Set<String>()
+        var result: [TodayHumorDigest] = []
+
+        for candidate in historyDigests + [digest].compactMap({ $0 }) {
+            guard seenIDs.insert(candidate.id).inserted else { continue }
+            result.append(candidate)
+            if result.count == 3 {
+                break
+            }
+        }
+
+        return result
+    }
+
+    private var selectedDigest: TodayHumorDigest? {
+        if let selectedDigestID,
+           let selected = availableDigests.first(where: { $0.id == selectedDigestID }) {
+            return selected
+        }
+        return availableDigests.first ?? digest
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             HStack(alignment: .firstTextBaseline, spacing: 10) {
-                Label("Śmiechowy radar", systemImage: "sparkles.tv.fill")
+                Label(LocalizedStringKey("Śmiechowy radar"), systemImage: "sparkles.tv.fill")
                     .font(.headline.weight(.semibold))
                     .foregroundStyle(.purple)
                 Spacer()
                 Button {
                     isSavedPresented = true
                 } label: {
-                    Label("Zapisane", systemImage: "bookmark.fill")
+                    Label(LocalizedStringKey("Zapisane"), systemImage: "bookmark.fill")
                         .font(.caption.weight(.bold))
                         .labelStyle(.iconOnly)
                         .frame(width: 32, height: 32)
@@ -2508,15 +2614,15 @@ private struct TodayHumorPanel: View {
                     .background(Color.orange.opacity(0.12), in: RoundedRectangle(cornerRadius: 12, style: .continuous))
             }
 
-            if digest == nil, state == .idle || state == .loading {
+            if selectedDigest == nil, digest == nil, state == .idle || state == .loading {
                 HStack(spacing: 10) {
                     ProgressView()
-                    Text("Szukam świeżych memów i lekkich trendów...")
+                    Text(LocalizedStringKey("Szukam świeżych memów i lekkich trendów..."))
                         .font(.callout)
                         .foregroundStyle(.secondary)
                 }
                 .frame(maxWidth: .infinity, minHeight: 130, alignment: .leading)
-            } else if case .failed(let error) = state, digest == nil {
+            } else if case .failed(let error) = state, selectedDigest == nil, digest == nil {
                 VStack(alignment: .leading, spacing: 8) {
                     Text(error.title)
                         .font(.subheadline.weight(.semibold))
@@ -2526,10 +2632,10 @@ private struct TodayHumorPanel: View {
                 }
                 .frame(maxWidth: .infinity, minHeight: 130, alignment: .leading)
             } else {
-                if let digest {
+                if let digest = selectedDigest {
                     digestContent(digest)
                 } else {
-                    Text("Brak memów do pokazania.")
+                    Text(LocalizedStringKey("Brak memów do pokazania."))
                         .font(.callout)
                         .foregroundStyle(.secondary)
                 }
@@ -2544,9 +2650,9 @@ private struct TodayHumorPanel: View {
         .sheet(item: $selectedHumorItem) { item in
             TodayHumorDetailSheet(
                 item: item,
-                digestID: digest?.id ?? "",
-                digestTitle: digest?.title ?? "<RR> Reddit Radar",
-                displayTime: digest?.displayTime ?? "",
+                digestID: selectedDigest?.id ?? "",
+                digestTitle: selectedDigest?.title ?? "<RR> Reddit Radar",
+                displayTime: selectedDigest?.displayTime ?? "",
                 savedStore: savedStore
             )
             .pavbotLargeObjectPresentation()
@@ -2555,26 +2661,37 @@ private struct TodayHumorPanel: View {
             TodayHumorSavedView(savedStore: savedStore)
                 .pavbotLargeObjectPresentation()
         }
+        .onChange(of: availableDigests.map(\.id)) { _, ids in
+            guard let selectedDigestID, !ids.contains(selectedDigestID) else { return }
+            self.selectedDigestID = nil
+        }
     }
 
     private func digestContent(_ digest: TodayHumorDigest) -> some View {
         VStack(alignment: .leading, spacing: 14) {
             VStack(alignment: .leading, spacing: 6) {
                 HStack(spacing: 8) {
-                    Text(digest.title)
+                    PavbotTranslatedAutomationText(digest.title)
                         .font(.title3.weight(.bold))
                     Spacer()
-                    Label("co \(digest.refreshIntervalHours)h", systemImage: "clock.arrow.circlepath")
-                        .font(.caption.weight(.semibold))
-                        .foregroundStyle(.secondary)
+                    PavbotRedditIntervalBadge(hours: digest.refreshIntervalHours, tint: .secondary)
                 }
                 TodayHumorSummaryText(summary: digest.summary)
-                Text("Ostatnio: \(digest.displayTime) · następne: \(digest.nextRefreshLabel)")
+                PavbotRedditScheduleText(lastUpdate: digest.displayTime, nextUpdate: digest.nextRefreshLabel)
                     .font(.caption.weight(.medium))
                     .foregroundStyle(.secondary)
+                if availableDigests.count > 1 {
+                    TodayHumorRunHistoryPicker(
+                        digests: availableDigests,
+                        selectedDigestID: Binding(
+                            get: { selectedDigest?.id ?? availableDigests.first?.id },
+                            set: { selectedDigestID = $0 }
+                        )
+                    )
+                }
                 TodayHumorDigestDiagnostics(digest: digest)
                 if digest.hasCommentHighlightsWithoutOriginalBodies {
-                    Text("Odśwież radar, aby pobrać oryginalne komentarze.")
+                    Text(LocalizedStringKey("Odśwież radar, aby pobrać oryginalne komentarze."))
                         .font(.caption2.weight(.medium))
                         .foregroundStyle(.orange)
                         .fixedSize(horizontal: false, vertical: true)
@@ -2606,6 +2723,57 @@ private struct TodayHumorPanel: View {
     }
 }
 
+private struct TodayHumorRunHistoryPicker: View {
+    let digests: [TodayHumorDigest]
+    @Binding var selectedDigestID: String?
+    var isReadOnly = false
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Label(LocalizedStringKey("Ostatnie 3 przebiegi"), systemImage: "clock.arrow.circlepath")
+                .font(.caption.weight(.bold))
+                .foregroundStyle(.purple)
+
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 8) {
+                    ForEach(Array(digests.prefix(3).enumerated()), id: \.element.id) { index, digest in
+                        runButton(digest: digest, isLatest: index == 0)
+                    }
+                }
+                .padding(.vertical, 2)
+            }
+        }
+        .accessibilityElement(children: .contain)
+        .accessibilityLabel(Text(LocalizedStringKey("Wybierz przebieg Reddit Radar")))
+    }
+
+    private func runButton(digest: TodayHumorDigest, isLatest: Bool) -> some View {
+        let isSelected = selectedDigestID == nil ? isLatest : selectedDigestID == digest.id
+
+        return Button {
+            guard !isReadOnly else { return }
+            selectedDigestID = digest.id
+        } label: {
+            VStack(alignment: .leading, spacing: 3) {
+                Label(digest.displayTime, systemImage: isSelected ? "checkmark.circle.fill" : "clock")
+                    .font(.caption.weight(.bold))
+                Text(isLatest ? LocalizedStringKey("Najnowszy przebieg") : LocalizedStringKey("Historyczny przebieg"))
+                    .font(.caption2.weight(.semibold))
+                    .foregroundStyle(isSelected ? .white.opacity(0.82) : .secondary)
+            }
+            .foregroundStyle(isSelected ? .white : .purple)
+            .padding(.horizontal, 12)
+            .padding(.vertical, 9)
+            .background(
+                isSelected ? Color.purple : Color.purple.opacity(0.10),
+                in: RoundedRectangle(cornerRadius: 14, style: .continuous)
+            )
+        }
+        .buttonStyle(.plain)
+        .disabled(isReadOnly)
+    }
+}
+
 private struct TodayHumorCard: View {
     let item: TodayHumorItem
     let layout: PavbotAdaptiveLayout
@@ -2617,11 +2785,11 @@ private struct TodayHumorCard: View {
                 TodayHumorArtwork(imageLink: item.imageLink, height: item.imageLink == nil ? 96 : 128)
 
                 VStack(alignment: .leading, spacing: 7) {
-                    Text(item.title)
+                    PavbotTranslatedAutomationText(item.title)
                         .font(layout.isPhone ? .subheadline.weight(.semibold) : .headline.weight(.semibold))
                         .lineLimit(layout.isPhone ? 3 : 4)
                         .fixedSize(horizontal: false, vertical: true)
-                    Text(item.caption)
+                    PavbotTranslatedAutomationText(item.caption)
                         .font(layout.isPhone ? .caption : .callout)
                         .foregroundStyle(.secondary)
                         .lineLimit(layout.isPhone ? 3 : 4)
@@ -2630,7 +2798,7 @@ private struct TodayHumorCard: View {
 
                 HStack(spacing: 6) {
                     ForEach(item.tags.prefix(3), id: \.self) { tag in
-                        Text(tag)
+                        PavbotTranslatedAutomationText(tag)
                             .font(.caption2.weight(.bold))
                             .foregroundStyle(.purple)
                             .padding(.horizontal, 8)
@@ -2640,10 +2808,14 @@ private struct TodayHumorCard: View {
                 }
 
                 HStack(spacing: 10) {
-                    Label(item.sourceName, systemImage: "link")
-                        .font(.caption.weight(.medium))
-                        .foregroundStyle(.secondary)
-                        .lineLimit(1)
+                    Label {
+                        PavbotTranslatedAutomationText(item.sourceName)
+                    } icon: {
+                        Image(systemName: "link")
+                    }
+                    .font(.caption.weight(.medium))
+                    .foregroundStyle(.secondary)
+                    .lineLimit(1)
 
                     Spacer()
 
@@ -2711,14 +2883,29 @@ private struct TodayHumorArtwork: View {
 }
 
 private struct TodayHumorSummaryText: View {
+    @Environment(AppLanguageStore.self) private var languageStore
     let summary: String
 
     var body: some View {
-        parsedSummary
-            .font(.callout)
-            .lineSpacing(3)
-            .foregroundStyle(.secondary)
-            .fixedSize(horizontal: false, vertical: true)
+        if languageStore.preference.translationTargetIdentifier != nil {
+            PavbotTranslatedAutomationText(cleanSummary)
+                .font(.callout)
+                .lineSpacing(3)
+                .foregroundStyle(.secondary)
+                .fixedSize(horizontal: false, vertical: true)
+        } else {
+            parsedSummary
+                .font(.callout)
+                .lineSpacing(3)
+                .foregroundStyle(.secondary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+    }
+
+    private var cleanSummary: String {
+        summary
+            .replacingOccurrences(of: "<u>", with: "")
+            .replacingOccurrences(of: "</u>", with: "")
     }
 
     private var parsedSummary: Text {
@@ -2796,17 +2983,17 @@ private struct TodayHumorDetailSheet: View {
 
                     VStack(alignment: .leading, spacing: 12) {
                         HStack(spacing: 8) {
-                            StatusBadge(text: item.sourceName, systemImage: "link", tint: .purple)
+                            StatusBadge(text: item.sourceName, systemImage: "link", tint: .purple, translatesAutomationText: true)
                             if let categoryLabel = item.categoryLabel, !categoryLabel.isEmpty {
-                                StatusBadge(text: categoryLabel, systemImage: "tag.fill", tint: .blue)
+                                StatusBadge(text: categoryLabel, systemImage: "tag.fill", tint: .blue, translatesAutomationText: true)
                             }
                         }
 
-                        Text(item.title)
+                        PavbotTranslatedAutomationText(item.title)
                             .font(.title2.weight(.bold))
                             .fixedSize(horizontal: false, vertical: true)
 
-                        Text(item.caption)
+                        PavbotTranslatedAutomationText(item.caption)
                             .font(.body)
                             .foregroundStyle(.secondary)
                             .lineSpacing(3)
@@ -2833,7 +3020,7 @@ private struct TodayHumorDetailSheet: View {
                     }
 
                     VStack(alignment: .leading, spacing: 10) {
-                        Label("Analiza komentarzy", systemImage: "quote.bubble.fill")
+                        Label(LocalizedStringKey("Analiza komentarzy"), systemImage: "quote.bubble.fill")
                             .font(.headline.weight(.semibold))
                             .foregroundStyle(.purple)
 
@@ -2842,7 +3029,7 @@ private struct TodayHumorDetailSheet: View {
                                 TodayHumorCommentHighlightCard(highlight: highlight)
                             }
                         } else {
-                            Text("Automatyzacja nie znalazła jeszcze trzech bezpiecznych komentarzy do pokazania dla tego posta.")
+                            Text(LocalizedStringKey("Automatyzacja nie znalazła jeszcze trzech bezpiecznych komentarzy do pokazania dla tego posta."))
                                 .font(.callout)
                                 .foregroundStyle(.secondary)
                                 .lineSpacing(3)
@@ -2854,7 +3041,7 @@ private struct TodayHumorDetailSheet: View {
 
                     if let sourceLink = item.sourceLink {
                         Link(destination: sourceLink) {
-                            Label("Otwórz na Reddicie", systemImage: "safari")
+                            Label(LocalizedStringKey("Otwórz na Reddicie"), systemImage: "safari")
                                 .font(.headline.weight(.semibold))
                                 .frame(maxWidth: .infinity)
                         }
@@ -2880,11 +3067,11 @@ private struct TodayHumorDetailSheet: View {
                         haptics.play(wasSaved ? .lightImpact : .success)
                     } label: {
                         Label(
-                            isSaved ? "Usuń z zapisanych" : "Zapisz Reddit",
+                            LocalizedStringKey(isSaved ? "Usuń z zapisanych" : "Zapisz Reddit"),
                             systemImage: isSaved ? "bookmark.fill" : "bookmark"
                         )
                     }
-                    .accessibilityLabel(isSaved ? "Usuń z zapisanych Redditów" : "Zapisz Reddit")
+                    .accessibilityLabel(Text(LocalizedStringKey(isSaved ? "Usuń z zapisanych Redditów" : "Zapisz Reddit")))
                 }
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Gotowe") {
@@ -2914,9 +3101,9 @@ private struct TodayHumorSavedView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 14) {
                     VStack(alignment: .leading, spacing: 8) {
-                        Text("Zapisane Reddit Radar")
+                        Text(LocalizedStringKey("Zapisane Reddit Radar"))
                             .font(.title2.weight(.bold))
-                        Text("Posty zapisują się lokalnie na tym urządzeniu, razem z opisem i analizą komentarzy z chwili publikacji radaru.")
+                        Text(LocalizedStringKey("Posty zapisują się lokalnie na tym urządzeniu, razem z opisem i analizą komentarzy z chwili publikacji radaru."))
                             .font(.callout)
                             .foregroundStyle(.secondary)
                             .lineSpacing(3)
@@ -2928,9 +3115,9 @@ private struct TodayHumorSavedView: View {
 
                     if savedItems.isEmpty {
                         VStack(alignment: .leading, spacing: 10) {
-                            Label("Brak zapisanych Redditów", systemImage: "bookmark")
+                            Label(LocalizedStringKey("Brak zapisanych Redditów"), systemImage: "bookmark")
                                 .font(.headline.weight(.semibold))
-                            Text(query.isEmpty ? "Otwórz post w Śmiechowym radarze i użyj ikony zakładki." : "Nie znaleziono zapisanego posta dla wpisanego tekstu.")
+                            Text(LocalizedStringKey(query.isEmpty ? "Otwórz post w Śmiechowym radarze i użyj ikony zakładki." : "Nie znaleziono zapisanego posta dla wpisanego tekstu."))
                                 .font(.callout)
                                 .foregroundStyle(.secondary)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -2961,7 +3148,7 @@ private struct TodayHumorSavedView: View {
                                         savedStore.remove(saved)
                                         haptics.play(.lightImpact)
                                     } label: {
-                                        Label("Usuń z zapisanych", systemImage: "trash")
+                                        Label(LocalizedStringKey("Usuń z zapisanych"), systemImage: "trash")
                                     }
                                 }
                             }
@@ -2991,19 +3178,19 @@ private struct TodayHumorSavedRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 11) {
             HStack(alignment: .top, spacing: 10) {
-                StatusBadge(text: saved.item.sourceName, systemImage: "bookmark.fill", tint: .purple)
+                StatusBadge(text: saved.item.sourceName, systemImage: "bookmark.fill", tint: .purple, translatesAutomationText: true)
                 Spacer()
                 Text(saved.savedAt.formatted(date: .abbreviated, time: .shortened))
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.secondary)
             }
 
-            Text(saved.item.title)
+            PavbotTranslatedAutomationText(saved.item.title)
                 .font(.headline.weight(.semibold))
                 .foregroundStyle(.primary)
                 .fixedSize(horizontal: false, vertical: true)
 
-            Text(saved.item.caption)
+            PavbotTranslatedAutomationText(saved.item.caption)
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
@@ -3030,7 +3217,8 @@ private struct TodayHumorSavedRow: View {
                             title: tag,
                             systemImage: "tag.fill",
                             tint: .purple,
-                            accessibilityPrefix: "Tag zapisanego Reddita"
+                            accessibilityPrefix: "Tag zapisanego Reddita",
+                            translatesAutomationText: true
                         )
                     }
                 }
@@ -3065,6 +3253,8 @@ private struct TodayHumorDetailSection: View {
 
 private struct TodayHumorCommentHighlightCard: View {
     let highlight: TodayHumorCommentHighlight
+    let targetLanguageCode = "pl"
+
     @State private var isShowingOriginal = false
 
     var body: some View {
@@ -3140,22 +3330,22 @@ private struct TodayHumorCommentHighlightCard: View {
         VStack(alignment: .leading, spacing: 8) {
             headerLabel("Czego dotyczy", systemImage: "text.bubble.fill")
 
-            Text(highlight.summary)
+            PavbotTranslatedAutomationText(highlight.summary)
                 .font(.callout.weight(.semibold))
                 .fixedSize(horizontal: false, vertical: true)
 
-            Label("Dlaczego ciekawe/śmieszne", systemImage: "sparkles")
+            Label(LocalizedStringKey("Dlaczego ciekawe/śmieszne"), systemImage: "sparkles")
                 .font(.caption.weight(.semibold))
                 .foregroundStyle(.purple)
 
-            Text(highlight.explanation)
+            PavbotTranslatedAutomationText(highlight.explanation)
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .lineSpacing(2)
                 .fixedSize(horizontal: false, vertical: true)
 
             if canToggleOriginal {
-                Text("Stuknij, aby zobaczyć oryginalny komentarz")
+                Text(LocalizedStringKey("Stuknij, aby zobaczyć oryginalny komentarz"))
                     .font(.caption2.weight(.medium))
                     .foregroundStyle(.secondary)
             }
@@ -3172,7 +3362,27 @@ private struct TodayHumorCommentHighlightCard: View {
                 .lineSpacing(3)
                 .fixedSize(horizontal: false, vertical: true)
 
-            Text("Stuknij, aby wrócić do analizy")
+            VStack(alignment: .leading, spacing: 5) {
+                Label(LocalizedStringKey("Tłumaczenie na polski"), systemImage: "translate")
+                    .font(.caption.weight(.semibold))
+                    .foregroundStyle(.purple)
+
+                if #available(iOS 18.0, *) {
+                    TodayHumorCommentTranslationView(
+                        sourceText: originalBody,
+                        targetLanguageCode: targetLanguageCode
+                    )
+                } else {
+                    Text(LocalizedStringKey("Tłumaczenie komentarzy wymaga iOS 18 lub nowszego."))
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .lineSpacing(2)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+            }
+            .padding(.top, 4)
+
+            Text(LocalizedStringKey("Stuknij, aby wrócić do analizy"))
                 .font(.caption2.weight(.medium))
                 .foregroundStyle(.secondary)
         }
@@ -3180,7 +3390,7 @@ private struct TodayHumorCommentHighlightCard: View {
 
     private func headerLabel(_ title: String, systemImage: String) -> some View {
         HStack(spacing: 8) {
-            Label(title, systemImage: systemImage)
+            Label(LocalizedStringKey(title), systemImage: systemImage)
                 .font(.caption.weight(.semibold))
                 .foregroundStyle(.purple)
             Spacer()
@@ -3213,6 +3423,92 @@ private struct TodayHumorCommentHighlightCard: View {
             return "Oryginalny komentarz. \(originalBody)"
         }
         return "Analiza komentarza. \(highlight.summary). \(highlight.explanation)"
+    }
+}
+
+@available(iOS 18.0, *)
+private struct TodayHumorCommentTranslationView: View {
+    let sourceText: String
+    let targetLanguageCode: String
+
+    @State private var translatedText: String?
+    @State private var translationConfiguration: TranslationSession.Configuration?
+    @State private var translationErrorMessage: String?
+    @State private var isTranslating = false
+
+    var body: some View {
+        Group {
+            if let translatedText {
+                Text(translatedText)
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .lineSpacing(2)
+                    .fixedSize(horizontal: false, vertical: true)
+            } else if isTranslating {
+                Label(LocalizedStringKey("Tłumaczę komentarz..."), systemImage: "arrow.triangle.2.circlepath")
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+            } else if let translationErrorMessage {
+                VStack(alignment: .leading, spacing: 6) {
+                    Text(translationErrorMessage)
+                        .font(.caption)
+                        .foregroundStyle(.secondary)
+                        .lineSpacing(2)
+                        .fixedSize(horizontal: false, vertical: true)
+
+                    Button {
+                        translateComment()
+                    } label: {
+                        Label(LocalizedStringKey("Spróbuj ponownie"), systemImage: "translate")
+                            .font(.caption.weight(.semibold))
+                    }
+                    .buttonStyle(.plain)
+                    .foregroundStyle(.purple)
+                }
+            } else {
+                Button {
+                    translateComment()
+                } label: {
+                    Label(LocalizedStringKey("Przetłumacz komentarz"), systemImage: "translate")
+                        .font(.caption.weight(.semibold))
+                }
+                .buttonStyle(.plain)
+                .foregroundStyle(.purple)
+            }
+        }
+        .task {
+            translateComment()
+        }
+        .translationTask(translationConfiguration) { session in
+            await translateComment(using: session)
+        }
+    }
+
+    private func translateComment() {
+        guard translatedText == nil, !isTranslating else { return }
+        isTranslating = true
+        translationErrorMessage = nil
+        if translationConfiguration == nil {
+            translationConfiguration = TranslationSession.Configuration(
+                source: nil,
+                target: Locale.Language(identifier: targetLanguageCode)
+            )
+        } else {
+            translationConfiguration?.invalidate()
+        }
+    }
+
+    @MainActor
+    private func translateComment(using session: TranslationSession) async {
+        do {
+            let response = try await session.translate(sourceText)
+            translatedText = response.targetText
+            translationErrorMessage = nil
+        } catch {
+            translatedText = nil
+            translationErrorMessage = "Nie udało się przetłumaczyć komentarza. Spróbuj ponownie."
+        }
+        isTranslating = false
     }
 }
 

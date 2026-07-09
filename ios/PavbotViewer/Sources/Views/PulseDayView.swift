@@ -25,9 +25,9 @@ struct PulseDayView: View {
                         layout: layout
                     )
 
-                    Picker("Widok Pulsu Dnia", selection: $selectedMode) {
+                    Picker(LocalizedStringKey("Widok Pulsu Dnia"), selection: $selectedMode) {
                         ForEach(PulseDayMode.allCases) { mode in
-                            Text(mode.title).tag(mode)
+                            Text(LocalizedStringKey(mode.title)).tag(mode)
                         }
                     }
                     .pickerStyle(.segmented)
@@ -58,13 +58,13 @@ struct PulseDayView: View {
             }
             .environment(\.pavbotAdaptiveLayout, layout)
         }
-        .navigationTitle("Puls Dnia")
+        .navigationTitle(LocalizedStringKey("Puls Dnia"))
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
                 PavbotRefreshToolbarButton(
                     isRefreshing: isRefreshingPulseDay,
-                    accessibilityLabel: "Odśwież Puls Dnia",
-                    accessibilityHint: "Odświeża manifest oraz dane Pulsu Dnia."
+                    accessibilityLabel: String(localized: "Odśwież Puls Dnia"),
+                    accessibilityHint: String(localized: "Odświeża manifest oraz dane Pulsu Dnia.")
                 ) {
                     Task { await reload(refreshManifest: true, minimumInterval: 0) }
                 }
@@ -156,6 +156,7 @@ private enum PulseDayMode: String, CaseIterable, Identifiable {
 }
 
 private struct PulseDayHeroHeader: View {
+    @Environment(AppLanguageStore.self) private var languageStore
     let snapshot: TodayLiveTopicsSnapshot?
     let isRefreshing: Bool
     let layout: PavbotAdaptiveLayout
@@ -172,18 +173,18 @@ private struct PulseDayHeroHeader: View {
                     .accessibilityHidden(true)
 
                 VStack(alignment: .leading, spacing: 7) {
-                    Text("Puls Dnia")
+                    Text(LocalizedStringKey("Puls Dnia"))
                         .font(.title2.weight(.bold))
-                    Text(layout.usesDashboardLayout
+                    Text(LocalizedStringKey(layout.usesDashboardLayout
                         ? "Top tematy, historia i lokalny zapis w newsroomowym układzie."
-                        : "Najważniejsze tematy są od razu pod ręką, z faktami i odczytem.")
+                        : "Najważniejsze tematy są od razu pod ręką, z faktami i odczytem."))
                         .font(.callout)
                         .foregroundStyle(.secondary)
                         .lineLimit(2)
                         .fixedSize(horizontal: false, vertical: true)
 
                     HStack(spacing: 8) {
-                        StatusBadge(text: "\(snapshot?.allTopics.count ?? 0) tematów", systemImage: "doc.text.fill", tint: .orange)
+                        StatusBadge(text: topicCountLabel(snapshot?.allTopics.count ?? 0), systemImage: "doc.text.fill", tint: .orange)
                         StatusBadge(text: snapshot?.displayDate ?? "Ładowanie", systemImage: "clock.fill", tint: .blue)
                         if isRefreshing {
                             StatusBadge(text: "Odświeżam", systemImage: "arrow.clockwise", tint: .blue)
@@ -193,9 +194,21 @@ private struct PulseDayHeroHeader: View {
             }
         }
     }
+
+    private func topicCountLabel(_ count: Int) -> String {
+        switch languageStore.preference {
+        case .polish:
+            "\(count) tematów"
+        case .english:
+            count == 1 ? "1 topic" : "\(count) topics"
+        case .russian:
+            "\(count) тем"
+        }
+    }
 }
 
 private struct PulseDayHistoryView: View {
+    @Environment(AppLanguageStore.self) private var languageStore
     let snapshots: [TodayLiveTopicsSnapshot]
     @Binding var selectedTopic: TodayLiveTopicSelection?
     let savedStore: TodayLiveTopicSavedStore
@@ -205,16 +218,16 @@ private struct PulseDayHistoryView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 14) {
             HStack(alignment: .firstTextBaseline, spacing: 10) {
-                Label("Historia z 48h", systemImage: "clock.arrow.circlepath")
+                Label(LocalizedStringKey("Historia z 48h"), systemImage: "clock.arrow.circlepath")
                     .font(.headline.weight(.semibold))
                     .foregroundStyle(.orange)
                 Spacer()
-                Text("\(snapshots.count) runów")
+                Text(runCountLabel(snapshots.count))
                     .font(.caption.weight(.semibold))
                     .foregroundStyle(.secondary)
             }
 
-            Text("Aplikacja pokazuje lokalnie zapamiętane runy Pulsu Dnia z ostatnich 48 godzin. Starsze niezapisane newsy są czyszczone automatycznie, żeby feed był szybki i świeży.")
+            Text(LocalizedStringKey("Aplikacja pokazuje lokalnie zapamiętane runy Pulsu Dnia z ostatnich 48 godzin. Starsze niezapisane newsy są czyszczone automatycznie, żeby feed był szybki i świeży."))
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
@@ -222,9 +235,9 @@ private struct PulseDayHistoryView: View {
 
             if snapshots.isEmpty {
                 VStack(alignment: .leading, spacing: 10) {
-                    Label("Brak lokalnej historii", systemImage: "tray")
+                    Label(LocalizedStringKey("Brak lokalnej historii"), systemImage: "tray")
                         .font(.headline.weight(.semibold))
-                    Text("Starsze niezapisane newsy są czyszczone po 48h. Odśwież Puls Dnia, gdy automatyzacja opublikuje kolejny run.")
+                    Text(LocalizedStringKey("Starsze niezapisane newsy są czyszczone po 48h. Odśwież Puls Dnia, gdy automatyzacja opublikuje kolejny run."))
                         .font(.callout)
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
@@ -254,9 +267,21 @@ private struct PulseDayHistoryView: View {
                 .stroke(Color.orange.opacity(0.16), lineWidth: 1)
         }
     }
+
+    private func runCountLabel(_ count: Int) -> String {
+        switch languageStore.preference {
+        case .polish:
+            "\(count) runów"
+        case .english:
+            count == 1 ? "1 run" : "\(count) runs"
+        case .russian:
+            "\(count) запусков"
+        }
+    }
 }
 
 private struct PulseDayHistoryRunCard: View {
+    @Environment(AppLanguageStore.self) private var languageStore
     let snapshot: TodayLiveTopicsSnapshot
     @Binding var selectedTopic: TodayLiveTopicSelection?
     let savedStore: TodayLiveTopicSavedStore
@@ -276,16 +301,16 @@ private struct PulseDayHistoryRunCard: View {
                     .foregroundStyle(.secondary)
             }
 
-            Text(snapshot.headline)
+            PavbotTranslatedAutomationText(snapshot.headline)
                 .font(.headline.weight(.semibold))
                 .fixedSize(horizontal: false, vertical: true)
 
-            Text("\(presentation.allTopics.count) tematów znalezionych w tym runie")
+            Text(foundTopicsLabel(presentation.allTopics.count))
                 .font(.caption.weight(.semibold))
                 .foregroundStyle(.secondary)
 
             if presentation.allTopics.isEmpty {
-                Label("Ten run nie zawiera tematów do pokazania", systemImage: "tray")
+                Label(LocalizedStringKey("Ten run nie zawiera tematów do pokazania"), systemImage: "tray")
                     .font(.callout.weight(.semibold))
                     .foregroundStyle(.secondary)
             } else {
@@ -299,21 +324,22 @@ private struct PulseDayHistoryRunCard: View {
                             )
                         } label: {
                             HStack(alignment: .top, spacing: 10) {
-                                Text(topic.section.uppercased())
+                                PavbotTranslatedAutomationText(topic.section)
                                     .font(.caption2.weight(.bold))
                                     .foregroundStyle(.orange)
+                                    .textCase(.uppercase)
                                     .frame(width: 78, alignment: .leading)
                                 VStack(alignment: .leading, spacing: 3) {
-                                    Text(topic.title)
+                                    PavbotTranslatedAutomationText(topic.title)
                                         .font(.subheadline.weight(.semibold))
                                         .foregroundStyle(.primary)
                                         .fixedSize(horizontal: false, vertical: true)
-                                    Text(topic.lead)
+                                    PavbotTranslatedAutomationText(topic.lead)
                                         .font(.caption)
                                         .foregroundStyle(.secondary)
                                         .lineLimit(2)
                                     if savedStore.isSaved(topic) {
-                                        Label("Zapisany", systemImage: "bookmark.fill")
+                                        Label(LocalizedStringKey("Zapisany"), systemImage: "bookmark.fill")
                                             .font(.caption2.weight(.semibold))
                                             .foregroundStyle(.blue)
                                     }
@@ -331,17 +357,17 @@ private struct PulseDayHistoryRunCard: View {
                 }
 
                 HStack(spacing: 10) {
-                    Text(presentation.previewStatusText)
+                    Text(previewStatusLabel)
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(.secondary)
                     Spacer(minLength: 0)
                     Button(action: openRun) {
-                        Label(presentation.openAllButtonTitle, systemImage: "list.bullet.rectangle.portrait.fill")
+                        Label(LocalizedStringKey(presentation.openAllButtonTitle), systemImage: "list.bullet.rectangle.portrait.fill")
                             .font(.subheadline.weight(.semibold))
                     }
                     .buttonStyle(.bordered)
                     .tint(.orange)
-                    .accessibilityLabel("Zobacz wszystkie artykuły z runu \(snapshot.displayDate)")
+                    .accessibilityLabel(Text(LocalizedStringKey("Zobacz wszystkie artykuły z wybranego runu")))
                 }
                 .padding(.top, 2)
             }
@@ -349,6 +375,39 @@ private struct PulseDayHistoryRunCard: View {
         .padding(16)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color(.systemBackground), in: RoundedRectangle(cornerRadius: 18, style: .continuous))
+    }
+
+    private func foundTopicsLabel(_ count: Int) -> String {
+        switch languageStore.preference {
+        case .polish:
+            "\(count) tematów znalezionych w tym runie"
+        case .english:
+            count == 1 ? "1 topic found in this run" : "\(count) topics found in this run"
+        case .russian:
+            "\(count) тем найдено в этом запуске"
+        }
+    }
+
+    private var previewStatusLabel: String {
+        if presentation.hiddenTopicCount <= 0 {
+            switch languageStore.preference {
+            case .polish:
+                return "\(presentation.allTopics.count) tematów"
+            case .english:
+                return presentation.allTopics.count == 1 ? "1 topic" : "\(presentation.allTopics.count) topics"
+            case .russian:
+                return "\(presentation.allTopics.count) тем"
+            }
+        }
+
+        switch languageStore.preference {
+        case .polish:
+            return "Pokazano \(presentation.previewTopics.count) z \(presentation.allTopics.count)"
+        case .english:
+            return "Showing \(presentation.previewTopics.count) of \(presentation.allTopics.count)"
+        case .russian:
+            return "Показано \(presentation.previewTopics.count) из \(presentation.allTopics.count)"
+        }
     }
 }
 
@@ -385,9 +444,9 @@ private struct PulseDayHistoryRunDetailView: View {
 
                     if filteredTopics.isEmpty {
                         VStack(alignment: .leading, spacing: 10) {
-                            Label("Brak artykułów w tej sekcji", systemImage: "tray")
+                            Label(LocalizedStringKey("Brak artykułów w tej sekcji"), systemImage: "tray")
                                 .font(.headline.weight(.semibold))
-                            Text("Wybierz inną sekcję albo wróć do widoku wszystkich artykułów.")
+                            Text(LocalizedStringKey("Wybierz inną sekcję albo wróć do widoku wszystkich artykułów."))
                                 .font(.callout)
                                 .foregroundStyle(.secondary)
                                 .fixedSize(horizontal: false, vertical: true)
@@ -418,12 +477,14 @@ private struct PulseDayHistoryRunDetailView: View {
                 .padding(20)
             }
             .background(Color(.systemGroupedBackground))
-            .navigationTitle("Run Pulsu Dnia")
+            .navigationTitle(LocalizedStringKey("Run Pulsu Dnia"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button("Gotowe") {
+                    Button {
                         dismiss()
+                    } label: {
+                        Text(LocalizedStringKey("Gotowe"))
                     }
                 }
             }
@@ -446,11 +507,11 @@ private struct PulseDayHistoryRunDetailView: View {
                 StatusBadge(text: snapshot.displayDate, systemImage: "clock.fill", tint: .blue)
             }
 
-            Text(snapshot.headline)
+            PavbotTranslatedAutomationText(snapshot.headline)
                 .font(.title2.weight(.bold))
                 .fixedSize(horizontal: false, vertical: true)
 
-            Text(snapshot.summary)
+            PavbotTranslatedAutomationText(snapshot.summary)
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
@@ -495,7 +556,18 @@ private struct PulseDaySectionFilterBar: View {
                             selectedSection = filter.id
                         }
                     } label: {
-                        Text(filter.title)
+                        if filter.id == allSectionsID {
+                            Text(LocalizedStringKey(filter.title))
+                                .font(.caption.weight(.semibold))
+                                .foregroundStyle(selectedSection == filter.id ? .white : .orange)
+                                .padding(.horizontal, 12)
+                                .padding(.vertical, 8)
+                                .background(
+                                    selectedSection == filter.id ? Color.orange : Color.orange.opacity(0.10),
+                                    in: Capsule()
+                                )
+                        } else {
+                            PavbotTranslatedAutomationText(filter.title)
                             .font(.caption.weight(.semibold))
                             .foregroundStyle(selectedSection == filter.id ? .white : .orange)
                             .padding(.horizontal, 12)
@@ -504,9 +576,10 @@ private struct PulseDaySectionFilterBar: View {
                                 selectedSection == filter.id ? Color.orange : Color.orange.opacity(0.10),
                                 in: Capsule()
                             )
+                        }
                     }
                     .buttonStyle(.plain)
-                    .accessibilityLabel("Pokaż sekcję \(filter.title)")
+                    .accessibilityLabel(Text(LocalizedStringKey("Pokaż sekcję")))
                     .accessibilityAddTraits(selectedSection == filter.id ? .isSelected : [])
                 }
             }
@@ -522,11 +595,12 @@ private struct PulseDayHistoryTopicRow: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .firstTextBaseline, spacing: 8) {
-                Text(topic.section.uppercased())
+                PavbotTranslatedAutomationText(topic.section)
                     .font(.caption2.weight(.bold))
                     .foregroundStyle(.orange)
+                    .textCase(.uppercase)
                 if isSaved {
-                    Label("Zapisany", systemImage: "bookmark.fill")
+                    Label(LocalizedStringKey("Zapisany"), systemImage: "bookmark.fill")
                         .font(.caption2.weight(.semibold))
                         .foregroundStyle(.blue)
                 }
@@ -540,12 +614,12 @@ private struct PulseDayHistoryTopicRow: View {
                 }
             }
 
-            Text(topic.title)
+            PavbotTranslatedAutomationText(topic.title)
                 .font(.headline.weight(.semibold))
                 .foregroundStyle(.primary)
                 .fixedSize(horizontal: false, vertical: true)
 
-            Text(topic.lead)
+            PavbotTranslatedAutomationText(topic.lead)
                 .font(.callout)
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
@@ -558,7 +632,8 @@ private struct PulseDayHistoryTopicRow: View {
                             title: tag,
                             systemImage: "tag.fill",
                             tint: .orange,
-                            accessibilityPrefix: "Tag tematu"
+                            accessibilityPrefix: "Tag tematu",
+                            translatesAutomationText: true
                         )
                     }
                 }

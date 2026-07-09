@@ -14,7 +14,7 @@ struct PavbotSpeechRatePicker: View {
         }
         .pickerStyle(.segmented)
         .frame(maxWidth: 220)
-        .accessibilityLabel(title)
+        .accessibilityLabel(Text(LocalizedStringKey(title)))
         .onChange(of: speechRate) { _, _ in
             haptics.play(.selection)
         }
@@ -51,7 +51,7 @@ struct PavbotSpeechTimelineScrubber: View {
                     in: 0...1,
                     onEditingChanged: handleEditingChanged
                 )
-                .accessibilityLabel("Oś czasu czytania")
+                .accessibilityLabel(Text(LocalizedStringKey("Oś czasu czytania")))
 
                 HStack {
                     Text(pavbotPlaybackTime(draftProgress.map { $0 * estimatedDuration } ?? estimatedElapsed))
@@ -62,7 +62,7 @@ struct PavbotSpeechTimelineScrubber: View {
                 .foregroundStyle(.secondary)
 
                 if let currentSegmentText {
-                    Text("Fragment \(currentSegmentIndex + 1) z \(timeline.segments.count)")
+                    PavbotLocalizedInterpolation(key: "Fragment %d z %d", currentSegmentIndex + 1, timeline.segments.count)
                         .font(.caption.weight(.semibold))
                         .foregroundStyle(.secondary)
                     Text(currentSegmentText)

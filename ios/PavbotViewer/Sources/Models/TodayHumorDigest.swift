@@ -21,8 +21,43 @@ struct TodayHumorDigest: Codable, Equatable, Identifiable {
     }
 
     var nextRefreshLabel: String {
-        guard let nextRefreshDate else { return "co \(refreshIntervalHours)h" }
-        return nextRefreshDate.formatted(date: .omitted, time: .shortened)
+        if let generatedAtDate,
+           let fallbackDate = Self.nextAutomationSlot(after: generatedAtDate) {
+            return Self.clockLabel(for: fallbackDate)
+        }
+        return "co \(refreshIntervalHours)h"
+    }
+
+    private static func nextAutomationSlot(after date: Date, calendar: Calendar = .current) -> Date? {
+        let scheduleHours = [0, 6, 12, 18]
+        let components = calendar.dateComponents([.year, .month, .day, .hour], from: date)
+        guard let currentHour = components.hour else { return nil }
+        let nextHour = scheduleHours.first { $0 > currentHour }
+        var nextComponents = components
+        nextComponents.minute = 0
+        nextComponents.second = 0
+        nextComponents.nanosecond = 0
+
+        if let nextHour {
+            nextComponents.hour = nextHour
+            return calendar.date(from: nextComponents)
+        }
+
+        guard let nextDay = calendar.date(byAdding: .day, value: 1, to: date) else { return nil }
+        nextComponents = calendar.dateComponents([.year, .month, .day], from: nextDay)
+        nextComponents.hour = 0
+        nextComponents.minute = 0
+        nextComponents.second = 0
+        nextComponents.nanosecond = 0
+        return calendar.date(from: nextComponents)
+    }
+
+    private static func clockLabel(for date: Date) -> String {
+        let formatter = DateFormatter()
+        formatter.calendar = Calendar(identifier: .gregorian)
+        formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.dateFormat = "HH:mm"
+        return formatter.string(from: date)
     }
 
     var commentHighlightCount: Int {

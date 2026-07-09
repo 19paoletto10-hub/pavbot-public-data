@@ -1,0 +1,463 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-08",
+  "runTime": "15:02",
+  "status": "Material update",
+  "headline": "Silny wiatr, stopy bez zmian i świeża fala globalnych napięć",
+  "summary": "Po południu krajowy feed nadal kręci się wokół pogody, gospodarki i zdrowia, a światowy pozostaje zdominowany przez Iran-USA, NATO, Le Pen, rosyjskie paliwo, Chiny i awarię infrastruktury w Australii.",
+  "items": [
+    {
+      "id": "pl-wiatr-rcb-baltyk-100",
+      "section": "Alerty",
+      "title": "Silny wiatr nadal sieje szkody na północy",
+      "lead": "RCB utrzymuje alert, a TVN24 relacjonuje porywy ponad 100 km/h nad Bałtykiem.",
+      "whatHappened": "Alert RCB na 8 lipca nadal obowiązuje. TVN24 opisuje sztorm na północy kraju, porywy przekraczające 100 km/h i zrywane transmisje na żywo.",
+      "keyFacts": [
+        "Alert dotyczy 8 lipca.",
+        "Nad Bałtykiem porywy przekraczają 100 km/h."
+      ],
+      "reactions": [
+        "Służby i mieszkańcy muszą utrzymywać gotowość na kolejne interwencje.",
+        "Operatorzy infrastruktury i wydarzeń plenerowych liczą się z przerwami i szkodami."
+      ],
+      "whyItMatters": "To bezpośrednie ryzyko dla transportu, energetyki, wybrzeża i bezpieczeństwa lokalnego.",
+      "context": "To najważniejszy krajowy sygnał operacyjny z wcześniejszych slotów, ale z nową, mocniejszą relacją o skutkach.",
+      "watchNext": [
+        "Czy RCB przedłuży alert poza 8 lipca.",
+        "Czy pojawią się nowe szkody lub przerwy w dostawach energii."
+      ],
+      "sources": [
+        {
+          "title": "Alert RCB - prognozowany bardzo silny wiatr (08.07)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb--prognozowany-bardzo-silny-wiatr-0807"
+        },
+        {
+          "title": "TVN24: Wiatr zrywał sygnał. Warunki są niełatwe",
+          "url": "https://tvn24.pl/tvnmeteo/polska/wiatr-zrywal-sygnal-warunki-sa-nielatwe-st9131846"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Alerty",
+        "Pogoda",
+        "Bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-rpp-stopy-bez-zmian",
+      "section": "Gospodarka",
+      "title": "RPP utrzymała stopy bez zmian",
+      "lead": "Rada Polityki Pieniężnej zostawiła stopy na dotychczasowym poziomie.",
+      "whatHappened": "TVN24 podało, że Rada Polityki Pieniężnej zdecydowała o pozostawieniu stóp procentowych bez zmian. Serwis dodał, że decyzja była zgodna z oczekiwaniami analityków.",
+      "keyFacts": [
+        "Brak zmiany oznacza utrzymanie bieżącego kosztu pieniądza.",
+        "To jedna z najważniejszych decyzji gospodarczych dnia."
+      ],
+      "reactions": [
+        "Rynki będą teraz szukać sygnału, jak długo potrwa pauza.",
+        "Kredytobiorcy nie dostają natychmiastowej ulgi kosztowej."
+      ],
+      "whyItMatters": "Decyzja wpływa na raty, wyceny kredytu i oczekiwania inflacyjne.",
+      "context": "To twardy sygnał z gospodarki, który szybko przełoży się na komentarze banków i rynku długu.",
+      "watchNext": [
+        "Komunikat NBP po posiedzeniu.",
+        "Reakcja banków i rynku obligacji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Jest decyzja w sprawie stóp procentowych",
+          "url": "https://tvn24.pl/biznes/z-kraju/stopy-procentowe-w-lipcu-2026-roku-jest-decyzja-rpp-st9133190?source=rss"
+        },
+        {
+          "title": "NBP: podstawowe stopy procentowe",
+          "url": "https://nbp.pl/polityka-pieniezna/decyzje-rpp/podstawowe-stopy-procentowe-nbp/"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Stopy procentowe",
+        "NBP",
+        "Polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-zdrowie-rekomendacje",
+      "section": "Polityka",
+      "title": "Zdrowie wraca na rządową agendę",
+      "lead": "Resort zdrowia pokazał pakiet rekomendacji z e-rejestracją i centralną e-kolejką.",
+      "whatHappened": "Ministra zdrowia przedstawiła rekomendacje zmian w ochronie zdrowia. Wśród nich są maksymalne poziomy wynagrodzeń, przyspieszenie e-rejestracji oraz centralna e-kolejka.",
+      "keyFacts": [
+        "Pakiet jest opisywany jako odpowiedź na bezpieczeństwo pacjentów.",
+        "Zmiany mają dotyczyć organizacji i cyfryzacji systemu."
+      ],
+      "reactions": [
+        "Placówki medyczne będą szukać szczegółów wdrożenia.",
+        "Temat może szybko wrócić jako spór o koszty i organizację systemu."
+      ],
+      "whyItMatters": "To może zmienić dostępność świadczeń i rozkład kosztów w systemie.",
+      "context": "To najnowsza odsłona krajowej debaty o zdrowiu, wyraźnie bardziej konkretna niż wcześniejsze zapowiedzi.",
+      "watchNext": [
+        "Czy pojawi się projekt legislacyjny.",
+        "Czy NFZ i resort podadzą harmonogram wdrożenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pierwszy krok został już wykonany. Ministra zdrowia przedstawiła rekomendacje ws. zmian w ochronie zdrowia",
+          "url": "https://tvn24.pl/zdrowie/zmiany-w-ochronie-zdrowia-ministra-zdrowia-jolanta-sobieranska-grenda-przedstawila-rekomendacje-st9133643?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Polityka",
+        "Zdrowie",
+        "Reformy"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-bbn-budanow-0807",
+      "section": "Polityka",
+      "title": "BBN skrytykowało słowa Budanowa",
+      "lead": "Polska strona uznała komentarz za niepotrzebny i nieodpowiedzialny.",
+      "whatHappened": "TVN24 opisało reakcję szefa BBN na słowa Kyryły Budanowa. Spór dotyczy publicznej komunikacji wokół bezpieczeństwa i napięć w regionie.",
+      "keyFacts": [
+        "Wątek dotyczy relacji polskich władz bezpieczeństwa z ukraińskim wywiadem.",
+        "Ocena była ostra i publiczna."
+      ],
+      "reactions": [
+        "Takie spory szybko przenoszą się do debaty politycznej.",
+        "Dyplomatyczne konsekwencje zależą od dalszych reakcji ukraińskiej strony."
+      ],
+      "whyItMatters": "Wrażliwe wypowiedzi o bezpieczeństwie mogą wpływać na relacje między sojusznikami i odbiór zagrożeń.",
+      "context": "To część szerszego regionalnego kontekstu wojennego, który nadal mocno wybrzmiewa w feedzie.",
+      "watchNext": [
+        "Czy pojawi się odpowiedź ze strony ukraińskiej.",
+        "Czy temat przejdzie w kanał dyplomatyczny."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Szef BBN skomentował słowa Kyryły Budanowa",
+          "url": "https://tvn24.pl/polska/szef-bbn-zareagowal-na-slowa-kyrylo-budanowa-jest-w-glebokim-bledzie-st9133200?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Bezpieczeństwo",
+        "Polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-ochlodzenie-40-stopni",
+      "section": "Alerty",
+      "title": "Zimno wróciło w ciągu kilku dni",
+      "lead": "TVN24 opisuje spadek temperatury o blisko 40 stopni po przejściu niżu Bernadette.",
+      "whatHappened": "Mocne ochłodzenie w Polsce jest związane z niżem Bernadette, który sprowadził arktyczne powietrze. Odczyty z lokalnych stacji pokazują spadek temperatury o blisko 40 stopni w nieco ponad tydzień.",
+      "keyFacts": [
+        "Zmiana temperatury jest wyjątkowo gwałtowna jak na początek lipca.",
+        "TVN24 pyta, jak długo utrzyma się zimno."
+      ],
+      "reactions": [
+        "To zwiększa wagę prognoz dla rolnictwa, transportu i ruchu turystycznego.",
+        "Mieszkańcy mogą odczuć różnicę bardziej niż po samym alertcie wietrznym."
+      ],
+      "whyItMatters": "Tak duża zmiana temperatury szybko wpływa na zdrowie, energetykę i planowanie pracy w terenie.",
+      "context": "To drugi pogodowy sygnał dnia, już nie o samym wietrze, lecz o dużym spadku temperatury.",
+      "watchNext": [
+        "Czy ochłodzenie utrzyma się przez kolejną dobę.",
+        "Czy pojawią się kolejne ostrzeżenia meteorologiczne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ochłodzenie o 40 stopni w ciągu nieco ponad tygodnia",
+          "url": "https://tvn24.pl/tvnmeteo/polska/ochlodzenie-o-40-stopni-w-ciagu-nieco-ponad-tygodnia-dla-mnie-to-jest-szokujace-jak-dlugo-bedzie-zimno-st9133693?source=rss"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Alerty",
+        "Pogoda",
+        "Zdrowie"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-bezrobocie-100k",
+      "section": "Gospodarka",
+      "title": "Bezrobocie wyżej niż rok temu",
+      "lead": "TVN24 podało, że liczba bezrobotnych jest o ponad 100 tysięcy większa niż rok wcześniej.",
+      "whatHappened": "Serwis opisał pogorszenie wskaźników rynku pracy i wskazał, że bezrobotnych w Polsce jest o ponad 100 tysięcy więcej niż rok temu.",
+      "keyFacts": [
+        "To twardy sygnał z rynku pracy.",
+        "Temat wzmacnia presję na dyskusję o wzroście i ochronie zatrudnienia."
+      ],
+      "reactions": [
+        "Pracownicy i pracodawcy będą szukać oznak dalszego osłabienia koniunktury.",
+        "Politycznie może to podbić presję na działania osłonowe."
+      ],
+      "whyItMatters": "Rynek pracy szybko przekłada się na nastroje gospodarstw domowych i debatę o polityce społecznej.",
+      "context": "To drugi krajowy wątek gospodarczy, który uzupełnia decyzję RPP o obraz rynku pracy.",
+      "watchNext": [
+        "Czy kolejne dane potwierdzą trend.",
+        "Czy rząd odpowie nowymi instrumentami wsparcia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Bezrobotni w Polsce. Ponad 100 tysięcy więcej niż rok temu",
+          "url": "https://tvn24.pl/biznes/dla-pracownika/bezrobotni-w-polsce-ponad-100-tysiecy-wiecej-niz-rok-temu-st9133114"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Rynek pracy",
+        "Polska"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "sw-iran-ceasefire-over",
+      "section": "Świat",
+      "title": "Iran i USA znów podnoszą stawkę",
+      "lead": "CNN mówi wprost, że zawieszenie broni jest już za nami.",
+      "whatHappened": "CNN live coverage opisuje, że po wymianie uderzeń z Iranem Trump uznał zawieszenie broni za zakończone. Serwis podkreśla, że rozmowy nadal mogą trwać, ale konflikt znów dominuje szczyt NATO.",
+      "keyFacts": [
+        "To bieżąca aktualizacja konfliktu Iran-USA.",
+        "Wątek nadal przyćmiewa agendę NATO."
+      ],
+      "reactions": [
+        "Rynki i sojusznicy będą reagować na każdy kolejny sygnał eskalacji.",
+        "Dyplomacja pozostaje otwarta, ale w warunkach dużej niepewności."
+      ],
+      "whyItMatters": "To może zmienić ryzyko regionalne, ceny energii i priorytety bezpieczeństwa sojuszników.",
+      "context": "To najgorętszy globalny temat dnia i wyraźna aktualizacja wobec porannego stanu feedu.",
+      "watchNext": [
+        "Czy pojawi się kolejna fala uderzeń.",
+        "Jak NATO przesunie swoją narrację wobec eskalacji."
+      ],
+      "sources": [
+        {
+          "title": "CNN live: Iran war, NATO summit, Ukraine, Trump",
+          "url": "https://edition.cnn.com/2026/07/08/world/live-news/iran-war-nato-summit-ukraine-trump"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Bezpieczeństwo",
+        "Iran",
+        "USA"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-nato-missile-project",
+      "section": "Świat",
+      "title": "NATO ogłasza nowe finansowanie pocisków",
+      "lead": "Sojusznicy zapowiadają 37 miliardów funtów na nowy projekt rakietowy.",
+      "whatHappened": "BBC podało, że sojusznicy NATO ogłosili 37 mld funtów na nowy projekt pocisków, a Keir Starmer ma zebrać około tuzina liderów w Ankarze.",
+      "keyFacts": [
+        "To jeden z największych nowych pakietów uzbrojeniowych dnia.",
+        "Spotkanie odbywa się w Ankarze, w cieniu napięć z Iranem."
+      ],
+      "reactions": [
+        "To wzmocni debatę o wydatkach obronnych w Europie.",
+        "Stolice będą porównywać własne zobowiązania z tym pakietem."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na tempo dozbrajania NATO i priorytety przemysłu obronnego.",
+      "context": "To stabilny drugi filar światowego feedu obok Iranu.",
+      "watchNext": [
+        "Czy pojawi się szczegółowy podział finansowania.",
+        "Czy inni sojusznicy dołożą własne zobowiązania."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Nato allies announce £37bn for new missile project",
+          "url": "https://www.bbc.co.uk/news/articles/ckg4e3lwzqzo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "NATO",
+        "Bezpieczeństwo",
+        "Obronność"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-le-pen-court-appeal",
+      "section": "Świat",
+      "title": "Le Pen wraca do walki o prezydenturę",
+      "lead": "Francuska liderka skrajnej prawicy mimo przegranej apelacji nie rezygnuje ze startu.",
+      "whatHappened": "BBC i CNN opisują, że Marine Le Pen chce wrócić do wyścigu prezydenckiego mimo utrzymania wyroku w sprawie nadużycia funduszy UE.",
+      "keyFacts": [
+        "Apelacja nie zatrzymała jej kampanii.",
+        "Sprawa pozostaje jednym z głównych tematów francuskiej polityki."
+      ],
+      "reactions": [
+        "Francuska prawica ma kolejny punkt mobilizacji.",
+        "Przeciwnicy Le Pen będą eksponować jej konflikt z sądem."
+      ],
+      "whyItMatters": "To nadal może przestawić układ sił w wyborach prezydenckich we Francji.",
+      "context": "Wątek jest z poprzednich slotów, ale dziś wraca z nowym potwierdzeniem kampanijnym.",
+      "watchNext": [
+        "Czy złoży dalsze odwołania.",
+        "Czy kampania przełoży się na sondaże."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Will Le Pen rise again?",
+          "url": "https://www.bbc.co.uk/news/articles/cvgdlprp1r3o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Marine Le Pen to run for presidency despite losing court appeal",
+          "url": "https://edition.cnn.com/2026/07/07/europe/marine-le-pen-france-court-ruling-intl"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Polityka",
+        "Francja",
+        "Wybory"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "sw-russia-fuel-shortages",
+      "section": "Świat",
+      "title": "Rosji zaczyna brakować paliwa",
+      "lead": "BBC pisze o rosnących niedoborach paliw pod presją wojny dronowej.",
+      "whatHappened": "BBC relacjonuje, że w Rosji nawet w Moskwie władze nie są w stanie zagwarantować dostaw paliwa, a presja ekonomiczna może wymusić zmianę kursu lub eskalację.",
+      "keyFacts": [
+        "To sygnał, że wojna uderza w logistykę i rynek paliw.",
+        "Wątek jest ściśle powiązany z wojną w Ukrainie."
+      ],
+      "reactions": [
+        "Rosyjskie władze mogą próbować łatać niedobory interwencją administracyjną.",
+        "Obserwatorzy będą śledzić, czy pojawi się szerszy wpływ na ceny i transport."
+      ],
+      "whyItMatters": "Niedobory paliw to realny wskaźnik kosztów wojny i potencjalny nacisk na dalsze decyzje Kremla.",
+      "context": "To jeden z najbardziej konsekwentnych, ale nadal aktualnych światowych wątków gospodarczo-bezpieczeństwowych.",
+      "watchNext": [
+        "Czy Rosja ograniczy sprzedaż lub wprowadzi kolejne interwencje.",
+        "Czy Ukraina nasili presję na infrastrukturę paliwową."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Russian fuel shortages bite",
+          "url": "https://www.bbc.co.uk/news/articles/cr7xk8j0j2do?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Gospodarka",
+        "Rosja",
+        "Wojna"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "sw-china-tornado-floods",
+      "section": "Świat",
+      "title": "Tyfon i tornado uderzyły w środkowe Chiny",
+      "lead": "BBC i CNN opisują powodzie oraz rzadkie tornada, które odcięły ludzi od pomocy.",
+      "whatHappened": "BBC opisuje gwałtowne powodzie i rzadkie tornada w Chinach, a CNN wskazuje, że w Hubei tornado było na tyle silne, że wyrwało człowieka z 12. piętra mieszkania.",
+      "keyFacts": [
+        "To poważny epizod pogodowy o dużym zasięgu skutków.",
+        "Lokalne społeczności mają problemy z dostępem do żywności i pomocy."
+      ],
+      "reactions": [
+        "Chińskie służby będą w trybie ratunkowym i porządkowym.",
+        "Wątek może szybko wejść do szerszego obrazu ekstremalnej pogody w Azji."
+      ],
+      "whyItMatters": "To kolejny sygnał, że ekstremalna pogoda staje się jednym z głównych światowych ryzyk dnia.",
+      "context": "Ten temat dobrze domyka część alertową globalnego feedu.",
+      "watchNext": [
+        "Czy pojawią się nowe ofiary lub ewakuacje.",
+        "Czy służby podadzą szacunki szkód i strat."
+      ],
+      "sources": [
+        {
+          "title": "BBC: The water just came so fast",
+          "url": "https://www.bbc.co.uk/news/articles/c79ygnv9e93o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Deadly tornado in central China",
+          "url": "https://edition.cnn.com/2026/07/07/china/man-blown-from-12th-floor-apartment-deadly-tornado-china-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Pogoda",
+        "Chiny",
+        "Alerty"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "sw-australia-telecom-outage",
+      "section": "Świat",
+      "title": "Awaria telekomu sparaliżowała część Australii",
+      "lead": "BBC podaje, że awaria u największego operatora zakłóciła pociągi i połączenia alarmowe.",
+      "whatHappened": "Według BBC serwery w centrach danych w Sydney i Melbourne miały odpowiadać za awarię, która dotknęła pociągi i połączenia alarmowe, a dokładna przyczyna nadal nie jest znana.",
+      "keyFacts": [
+        "To już nie tylko problem komercyjny, ale infrastrukturalny.",
+        "Skutki dotknęły transport i usługi ratunkowe."
+      ],
+      "reactions": [
+        "Operator będzie pod presją, by szybko podać przyczynę i zakres awarii.",
+        "Rząd i regulator mogą zażądać wyjaśnień oraz planu naprawczego."
+      ],
+      "whyItMatters": "To przypomina, jak łatwo awaria cyfrowa przeradza się w realny problem bezpieczeństwa publicznego.",
+      "context": "To najmocniejszy infrastrukturalny alert w świecie poza wojną i pogodą.",
+      "watchNext": [
+        "Czy operator poda przyczynę i harmonogram napraw.",
+        "Czy regulator wszczyna postępowanie."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Trains and emergency calls affected after major outage at Australia's largest telecoms company",
+          "url": "https://www.bbc.co.uk/news/articles/cgevw0d95pdo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Infrastruktura",
+        "Bezpieczeństwo",
+        "Australia"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24: najnowsze XML",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24: najnowsze",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "BBC News World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "Gov.pl RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "Alert RCB 08.07",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb--prognozowany-bardzo-silny-wiatr-0807"
+    },
+    {
+      "title": "NBP: podstawowe stopy procentowe",
+      "url": "https://nbp.pl/polityka-pieniezna/decyzje-rpp/podstawowe-stopy-procentowe-nbp/"
+    }
+  ]
+}

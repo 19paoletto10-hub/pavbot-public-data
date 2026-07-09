@@ -78,20 +78,23 @@ enum SpeechVoiceSettings {
     }
 
     static func resolvedVoice(in defaults: UserDefaults = .standard) -> AVSpeechSynthesisVoice? {
-        resolvedVoice(for: load(from: defaults))
+        resolvedVoice(for: load(from: defaults), appLanguage: AppLanguagePreference.load(from: defaults))
     }
 
     static func resolvedVoice(
         for preference: SpeechVoicePreference,
+        appLanguage: AppLanguagePreference = .polish,
         voiceWithIdentifier: (String) -> AVSpeechSynthesisVoice? = { AVSpeechSynthesisVoice(identifier: $0) },
-        polishVoice: () -> AVSpeechSynthesisVoice? = { AVSpeechSynthesisVoice(language: "pl-PL") }
+        languageVoice: (String) -> AVSpeechSynthesisVoice? = { AVSpeechSynthesisVoice(language: $0) }
     ) -> AVSpeechSynthesisVoice? {
+        let fallbackLanguage = defaultVoiceLanguage(for: appLanguage)
+
         switch preference.mode {
         case .polishDefault:
-            return polishVoice()
+            return languageVoice(fallbackLanguage)
         case .selectedVoice:
             guard let identifier = preference.voiceIdentifier, let voice = voiceWithIdentifier(identifier) else {
-                return polishVoice()
+                return languageVoice(fallbackLanguage)
             }
             return voice
         case .personalVoice:
@@ -102,7 +105,18 @@ enum SpeechVoiceSettings {
             if let personalVoiceIdentifier, let voice = voiceWithIdentifier(personalVoiceIdentifier) {
                 return voice
             }
-            return polishVoice()
+            return languageVoice(fallbackLanguage)
+        }
+    }
+
+    static func defaultVoiceLanguage(for appLanguage: AppLanguagePreference) -> String {
+        switch appLanguage {
+        case .polish:
+            "pl-PL"
+        case .english:
+            "en-US"
+        case .russian:
+            "ru-RU"
         }
     }
 }
@@ -265,10 +279,15 @@ struct SpeechVoiceCatalog: Equatable {
         return nil
     }
 
-    var defaultSystemVoice: SpeechVoiceOption? {
-        systemVoices.first(where: { $0.language == "pl-PL" })
-            ?? systemVoices.first(where: { $0.language.hasPrefix("pl") })
+    func defaultSystemVoice(for languageCode: String) -> SpeechVoiceOption? {
+        let languagePrefix = languageCode.split(separator: "-").first.map(String.init) ?? languageCode
+        return systemVoices.first(where: { $0.language == languageCode })
+            ?? systemVoices.first(where: { $0.language.hasPrefix(languagePrefix) })
             ?? systemVoices.first
+    }
+
+    var defaultSystemVoice: SpeechVoiceOption? {
+        defaultSystemVoice(for: "pl-PL")
     }
 
     private func sortedVoices(_ options: [SpeechVoiceOption]) -> [SpeechVoiceOption] {

@@ -11,6 +11,7 @@ final class TodayHumorStore {
     typealias LoadState = PavbotLoadState
 
     var digest: TodayHumorDigest?
+    var recentDigests: [TodayHumorDigest] = []
     var state: LoadState = .idle
     var cacheNotice: String?
     var isRefreshing = false
@@ -29,6 +30,11 @@ final class TodayHumorStore {
         self.cache = cache
         self.preferManifestArtifact = preferManifestArtifact
         self.digest = cache.load()
+        self.recentDigests = cache.loadHistory()
+        if let digest, !recentDigests.contains(where: { $0.id == digest.id }) {
+            recentDigests.insert(digest, at: 0)
+            recentDigests = Array(recentDigests.prefix(Self.historyLimit))
+        }
         if digest != nil {
             state = .loaded
         }
@@ -51,7 +57,7 @@ final class TodayHumorStore {
             manifestURLString: manifestURLString
         )
         var lastError: Error?
-        var latestDigestWithoutOriginalCommentBodies: TodayHumorDigest?
+        var loadedHistory: [TodayHumorDigest] = []
 
         guard !manifestArtifactURLs.isEmpty, preferManifestArtifact else {
             cacheNotice = digest == nil ? nil : PavbotCacheNoticeCopy.refreshFailed(context: "radar memów")
@@ -72,22 +78,20 @@ final class TodayHumorStore {
         for manifestArtifactURL in manifestArtifactURLs {
             do {
                 let loadedDigest = try await client.fetchDigest(from: manifestArtifactURL)
-                if loadedDigest.hasCommentHighlightsWithoutAnyOriginalBodies {
-                    if latestDigestWithoutOriginalCommentBodies == nil {
-                        latestDigestWithoutOriginalCommentBodies = loadedDigest
-                    }
-                    continue
+                if !loadedHistory.contains(where: { $0.id == loadedDigest.id }) {
+                    loadedHistory.append(loadedDigest)
                 }
-                applyLoadedDigest(loadedDigest)
-                return
+                if loadedHistory.count == Self.historyLimit {
+                    break
+                }
             } catch {
                 lastError = error
                 continue
             }
         }
 
-        if let latestDigestWithoutOriginalCommentBodies {
-            applyLoadedDigest(latestDigestWithoutOriginalCommentBodies)
+        if !loadedHistory.isEmpty {
+            applyLoadedDigests(loadedHistory)
         } else if digest != nil {
             cacheNotice = PavbotCacheNoticeCopy.refreshFailed(context: "radar memów")
             state = .loaded
@@ -101,11 +105,20 @@ final class TodayHumorStore {
     }
 
     private func applyLoadedDigest(_ loadedDigest: TodayHumorDigest) {
-        digest = loadedDigest
-        cache.save(loadedDigest)
+        applyLoadedDigests([loadedDigest])
+    }
+
+    private func applyLoadedDigests(_ loadedDigests: [TodayHumorDigest]) {
+        guard let firstDigest = loadedDigests.first else { return }
+        digest = firstDigest
+        recentDigests = Array(loadedDigests.prefix(Self.historyLimit))
+        cache.save(firstDigest)
+        cache.saveHistory(recentDigests)
         cacheNotice = nil
         state = .loaded
     }
+
+    private static let historyLimit = 3
 
     private static func redditRadarDigestURLs(
         in manifest: PavbotManifest?,
@@ -175,6 +188,7 @@ struct TodayHumorClient: TodayHumorFetching {
 struct TodayHumorCache {
     private let defaults: UserDefaults
     private let key = "pavbot.cachedTodayHumorDigest"
+    private let historyKey = "pavbot.cachedTodayHumorDigestHistory"
 
     init(defaults: UserDefaults = .standard) {
         self.defaults = defaults
@@ -188,5 +202,17 @@ struct TodayHumorCache {
     func save(_ digest: TodayHumorDigest) {
         guard let data = try? JSONEncoder().encode(digest) else { return }
         defaults.set(data, forKey: key)
+    }
+
+    func loadHistory() -> [TodayHumorDigest] {
+        guard let data = defaults.data(forKey: historyKey) else {
+            return load().map { [$0] } ?? []
+        }
+        return (try? JSONDecoder.pavbot.decode([TodayHumorDigest].self, from: data)) ?? []
+    }
+
+    func saveHistory(_ digests: [TodayHumorDigest]) {
+        guard let data = try? JSONEncoder().encode(Array(digests.prefix(3))) else { return }
+        defaults.set(data, forKey: historyKey)
     }
 }

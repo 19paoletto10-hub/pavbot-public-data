@@ -1,0 +1,331 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-07",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny refresh przesuwa temat z samego hype'u modelowego na trzy konkretne warstwy: agentowe usługi w regulowanych branżach, consumer security przeciw AI scams oraz realną autonomię na polu walki. Norm Ai pokazuje outcome-priced legal AI, Savi zamienia walkę z deepfake'ami i voice scamami w produkt konsumencki, a Forterra publicznie ujawnia 105 autonomicznych Lancerów w Ukrainie.",
+    "Druga oś to infrastruktura i rynek. AP opisuje kolejną falę słabości w AI stocks mimo mocnych danych Samsunga, a IEEE Spectrum razem z Hacker News wzmacniają tezę, że małe modele i edge inference są realnym kontrtrendem wobec data-center-first AI. Cyber nadal jest kruchy: defacement dwóch stron Army przypomina, że nawet AI integration centers zaczynają od podstawowego web hygiene."
+  ],
+  "summaryBullets": [
+    "Regulacje: Norm Ai zamienia prawo w produkt agentowy",
+    "Cyber: Savi buduje konsumencki anty-scam",
+    "Infrastruktura: Forterra pokazuje autonomię na prawdziwym froncie"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-07-1939-0-norm-ai-zamienia-prawo-w-produkt-agentowy-01bc3d3e0a",
+      "section": "Regulacje",
+      "title": "Norm Ai zamienia prawo w produkt agentowy",
+      "standfirst": "Norm Ai zebrał 120 mln USD przy wycenie 1,2 mld USD i twierdzi, że jego AI-native law firm działa na agentach nadzorowanych przez prawników.",
+      "whatHappened": "Spółka zamknęła rundę Series C i rozbudowuje własną platformę agentic law oraz Norm Law, czyli AI-native kancelarię dla klientów enterprise.",
+      "whyItMatters": "To jeden z najczytelniejszych dziś przykładów, że AI wchodzi do regulowanego work flow z modelem opartym o rezultat, nadzór człowieka i odpowiedzialność produktową.",
+      "deeperAnalysis": [
+        "Norm nie sprzedaje zwykłej automatyzacji dokumentów. Próbuje zrobić z pracy prawniczej warstwę usług opartą o agentów, w której człowiek nadzoruje model, a cena wynika z rezultatu, nie z bilingu godzinowego.",
+        "To ważne, bo taki model daje enterprise prosty sygnał: nie chodzi o „AI w próżni”, tylko o mierzalne wyniki, kontrolę ryzyka i odpowiedzialność. Jeśli ten wzorzec się przyjmie, legal tech może stać się jedną z pierwszych dużych kategorii, gdzie agentowy stack jest rozliczany jak usługa operacyjna, nie jak demo.",
+        "Największe pytanie brzmi, czy to wyjątek wygodny dla inwestorów, czy początek szerszej kategorii usług prawnych z AI jako interfejsem."
+      ],
+      "contextPoints": [
+        "PRNewswire podaje, że Norm obsługuje klientów zarządzających ponad 30 bln USD aktywów.",
+        "Spółka mówi, że od początku zebrała ponad 260 mln USD.",
+        "Warto obserwować reakcję konkurentów i izb adwokackich oraz ewentualne komentarze regulatorów."
+      ],
+      "sources": [
+        {
+          "title": "PRNewswire",
+          "url": "https://www.prnewswire.com/news-releases/norm-ai-raises-120-million-at-a-1-2-billion-valuation-led-by-khosla-ventures-to-deliver-the-full-stack-model-for-legal-ai-302819152.html"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/07/ai-law-startup-norm-raises-120m-hits-unicorn-valuation/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "legal tech",
+        "agenci",
+        "compliance",
+        "startupy"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-07-1939-1-savi-buduje-konsumencki-anty-scam-b3a1aec0b7",
+      "section": "Cyber",
+      "title": "Savi buduje konsumencki anty-scam",
+      "standfirst": "Savi Security uruchomił aplikację na iPhone i Androida oraz zebrał 7 mln USD seed, żeby chronić użytkowników przed AI-generated scams.",
+      "whatHappened": "Startup wystartował z produktem dla rodzin i osób indywidualnych, który ma wykrywać podejrzane połączenia, wiadomości i strony, zanim wyrządzą szkody.",
+      "whyItMatters": "Consumer fraud staje się jednym z najbardziej namacalnych kosztów ery generatywnej AI, więc anty-scam może być kolejną dużą kategorią aplikacji bezpieczeństwa.",
+      "deeperAnalysis": [
+        "Savi przenosi walkę z oszustwami z poziomu enterprise na zwykły telefon. To ważna zmiana, bo voice cloning, podszywanie się pod bliskich i syntetyczne wiadomości nie są już problemem „gdzieś w internecie”, tylko codziennym ryzykiem dla rodzin.",
+        "Produktowa teza Savi jest prosta: jeśli użytkownik nie zaufa swojemu instynktowi, ma dostać dodatkową warstwę oceny ryzyka. To może wyglądać jak klasyczne scam filtering, ale w praktyce jest to odpowiedź na nową klasę ataków, w których tani generator treści obniża koszt manipulacji do poziomu masowego spamowania.",
+        "Na dziś to wczesny sygnał, nie dowód trwałego popytu. Jeżeli jednak app dostanie dystrybucję przez telco, producentów telefonów albo app stores, consumer AI security może stać się stałą kategorią na rynku."
+      ],
+      "contextPoints": [
+        "Założyciele mają tło w cyber defense i consumer products, więc łączą dwie perspektywy.",
+        "Strona Savi podaje, że produkt działa obecnie tylko w USA.",
+        "Warto patrzeć, czy pojawią się partnerstwa z operatorami, bankami albo platformami mobilnymi."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/07/savis-app-aims-to-protect-consumers-from-realistic-ai-scams-like-kidnappers-demanding-ransom/"
+        },
+        {
+          "title": "Savi press page",
+          "url": "https://www.savisecurity.com/press"
+        },
+        {
+          "title": "Savi site",
+          "url": "https://www.savisecurity.com/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "scams",
+        "deepfake",
+        "mobile",
+        "consumer security"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-07-1939-2-forterra-pokazuje-autonomie-na-prawdziwym-froncie-45d8660d08",
+      "section": "Infrastruktura",
+      "title": "Forterra pokazuje autonomię na prawdziwym froncie",
+      "standfirst": "Forterra powiedziała, że w Ukrainie działa 105 autonomicznych pojazdów Lancer, które przejechały ponad 2,500 mil i wykonały ponad 1,100 misji.",
+      "whatHappened": "Spółka publicznie ujawniła skalę wdrożenia autonomicznych ground vehicles w realnym konflikcie zbrojnym.",
+      "whyItMatters": "To rzadki, namacalny benchmark dla battlefield autonomy, bo pokazuje przejście z demo do logistycznego i operacyjnego użycia na wojnie.",
+      "deeperAnalysis": [
+        "Forterra przedstawia tę historię jako dowód, że autonomia na ziemi ma już zastosowanie w warunkach bojowych. To ważne, bo ground autonomy zwykle bywa opóźniana przez trudniejsze warunki terenowe, większą masę, kwestie bezpieczeństwa i złożoność misji.",
+        "W Ukrainie problemem nie są tylko precyzyjne cele, ale też transport, ewakuacja, dostarczanie ładunków i przetrwanie w strefie, gdzie drony i artyleria ograniczają ruch człowieka. Jeżeli liczby Forterry są reprezentatywne, oznacza to, że UGV przestają być ciekawostką, a stają się elementem infrastruktury wojennej.",
+        "To nadal vendor disclosure, więc nie traktuję tego jako niezależnie zweryfikowanego benchmarku. Ale jako sygnał rynkowy i produktowy jest to dziś jeden z najmocniejszych tekstów o fizycznej autonomii."
+      ],
+      "contextPoints": [
+        "Forterra podaje, że dostarczyła pojazdy w ramach programu rządu USA.",
+        "Firma twierdzi, że pełna dostawa zajęła mniej niż sześć miesięcy.",
+        "Warto obserwować follow-up o procurement, attrition i powtórzenia u innych dostawców defense tech."
+      ],
+      "sources": [
+        {
+          "title": "Forterra",
+          "url": "https://www.forterra.com/posts/forterra-reveals-it-rapidly-manufactured-and-deployed-autonomous-systems-to-ukraine-at-scale-in-russo-ukrainian-war"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/07/the-first-american-autonomous-ground-vehicles-are-fighting-in-ukraine/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "autonomy",
+        "robotics",
+        "defense",
+        "Ukraine",
+        "battlefield"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-07-1939-3-ai-stocks-zaczynaja-sie-chwiac-mimo-mocnego-samsunga-a9c271112f",
+      "section": "Infrastruktura",
+      "title": "AI stocks zaczynają się chwiać mimo mocnego Samsunga",
+      "standfirst": "AP podał, że AI stocks znów spadają, a mocne guidance Samsunga nie zatrzymało wyprzedaży w Samsung, Micron i Intel.",
+      "whatHappened": "Rynek zareagował słabo mimo dobrych danych z Korei, a presja objęła również spółki powiązane z memory i chipami dla AI.",
+      "whyItMatters": "To znak, że rynek zaczyna pytać nie tylko o wzrost popytu na AI, ale też o to, czy ogromny capex na infrastrukturę faktycznie się spłaci.",
+      "deeperAnalysis": [
+        "Dzisiejszy ruch rynku nie podważa tezy o boomie na pamięć i chipy, ale zmienia ton rozmowy. Z fazy prostego entuzjazmu przechodzimy do pytania o marże, timing i zwrot z inwestycji w data center oraz pamięć.",
+        "To dobrze domyka poranny wątek SK Hynix. Rano mieliśmy listing i memory supercycle, a wieczorem dostajemy sygnał, że publiczny rynek jest już bardziej wymagający. Innymi słowy, popyt na AI hardware nadal istnieje, ale wyceny nie rosną automatycznie razem z narracją.",
+        "W praktyce to ważne dla całego łańcucha dostaw, od memory po inference silicon. Jeśli presja na AI stocks się utrzyma, rozmowa o inwestycjach w infrastrukturę zacznie być bardziej defensywna."
+      ],
+      "contextPoints": [
+        "AP podał, że Samsung spadł o 6.9%, Micron o 6.1%, a Intel o 9.2%.",
+        "Nvidia zyskała 0.9%, ale nie zmieniło to szerszego obrazu słabości sektora.",
+        "Warto sprawdzić, czy ten ruch utrzyma się po kolejnych sesjach."
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/stocks-markets-oil-ai-iran-e0194864aba4379a069ce31becae2558"
+        },
+        {
+          "title": "Samsung Newsroom",
+          "url": "https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-second-quarter-2026"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "chips",
+        "memory",
+        "AI stocks",
+        "Samsung",
+        "Micron",
+        "markets"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-07-1939-4-male-modele-ai-wygrywaja-tam-gdzie-nie-ma-data-center-ceb5597ca7",
+      "section": "AI",
+      "title": "Małe modele AI wygrywają tam, gdzie nie ma data center",
+      "standfirst": "IEEE Spectrum opisuje, jak small AI models zyskują znaczenie w miejscach bez stabilnego internetu i bez data center, a Hacker News wypchnął tekst wysoko na front page.",
+      "whatHappened": "Artykuł pokazuje konkretne wdrożenia małych modeli na telefonach, Arduino i innych niskomocowych urządzeniach.",
+      "whyItMatters": "To mocny kontrtrend wobec frontier AI, bo przypomina, że realna użyteczność często zależy od kosztu, energii i łączności, a nie od wielkości modelu.",
+      "deeperAnalysis": [
+        "IEEE Spectrum opisuje rynek, który wygląda zupełnie inaczej niż hype wokół największych modeli. W zastosowaniach medycznych, rolniczych i przemysłowych liczy się to, czy model działa offline, jest tani w utrzymaniu i nie wymaga stałego dostępu do chmury.",
+        "To nie jest argument przeciwko dużym modelom. To raczej dowód, że przyszłość AI będzie wielowarstwowa: duże modele do ogólnego reasoning i małe, specjalistyczne modele do zadań lokalnych, niskokosztowych i wrażliwych na łączność.",
+        "Warto potraktować ten materiał jako sygnał strategiczny, bo pasuje do tegorocznego przesunięcia w stronę efektywności, dystrybucji i edge inference."
+      ],
+      "contextPoints": [
+        "Artykuł opisuje use case'y z Brazylii, Indii, Rwandy i innych rynków z ograniczoną infrastrukturą.",
+        "W tekście pojawiają się phone-based, Arduino i low-power wdrożenia.",
+        "HN zainteresował się tekstem mocno, ale to nadal sygnał uwagi, nie wdrożenia w skali rynku."
+      ],
+      "sources": [
+        {
+          "title": "IEEE Spectrum",
+          "url": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/front?day=2026-07-07"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "edge AI",
+        "tinyML",
+        "offline",
+        "mobile",
+        "low-power"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-07-1939-5-defacement-army-sites-przypomina-o-podstawowej-cyberhigienie-6dfb0bfe9d",
+      "section": "Cyber",
+      "title": "Defacement Army sites przypomina o podstawowej cyberhigienie",
+      "standfirst": "TechCrunch i CyberScoop opisali defacement dwóch stron US Army, w tym AI Integration Center, przez prosty atak na warstwę webową.",
+      "whatHappened": "Na stronach pojawiły się polityczne komunikaty, a Army miała je szybko zdjąć po zgłoszeniu.",
+      "whyItMatters": "To przypomnienie, że nawet instytucje związane z AI i emerging tech zaczynają od zwykłej higieny CMS, pluginów i stron błędów.",
+      "deeperAnalysis": [
+        "Ten incydent nie wygląda jak spektakularny cyberatak na model AI. Właśnie dlatego jest ważny. Publiczne powierzchnie technologiczne przegrywają często nie z zaawansowanym adversary, tylko z prostą kompromitacją webową i słabą konfiguracją.",
+        "W kontekście dzisiejszego reportu to też sygnał, że AI centers, defense innovation labs i podobne instytucje będą targetem nie tylko za swoje modele, ale też za zwykłe public-facing systems. Bez podstawowej higieny nie ma sensu mówić o zaawansowanej obronie.",
+        "Nie ma tu dowodu na wyciek danych, ale jest wystarczająco dużo materiału, żeby potraktować to jako przypomnienie o podstawach security."
+      ],
+      "contextPoints": [
+        "Defacement dotyczył Open Innovation Lab i AI Integration Center.",
+        "Cyberscoop podał, że Army zdjęła strony po kontakcie redakcji.",
+        "Na dziś brak twardego potwierdzenia, że dane zostały skradzione."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/07/hacktivists-call-out-trump-by-hacking-and-defacing-us-army-websites/"
+        },
+        {
+          "title": "CyberScoop",
+          "url": "https://cyberscoop.com/us-army-websites-defaced-404-hijacking-kurdistan/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "cyber",
+        "government",
+        "web security",
+        "public sector",
+        "ai surfaces"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Norm zamienia prawo w produkt agentowy",
+      "rationale": "To jeden z najmocniejszych dziś sygnałów, że AI wchodzi do regulowanego work flow z modelem opłat za rezultat, a nie za godziny.",
+      "sourcesLabel": "PRNewswire; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Savi buduje konsumencki anty-scam",
+      "rationale": "AI scams stają się kategorią produktową dla zwykłych użytkowników, nie tylko problemem działów bezpieczeństwa.",
+      "sourcesLabel": "TechCrunch; Savi press page"
+    },
+    {
+      "priority": "High",
+      "title": "Forterra pokazuje autonomię na prawdziwym froncie",
+      "rationale": "Publiczne ujawnienie 105 pojazdów w Ukrainie daje rzadki benchmark dla battlefield autonomy i UGV.",
+      "sourcesLabel": "Forterra; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "AI stocks zaczynają się chwiać mimo mocnego Samsunga",
+      "rationale": "Dzisiejszy selloff pokazuje, że rynek zaczyna mocniej pytać o zwrot z AI capex, pamięci i chipów.",
+      "sourcesLabel": "AP; Samsung Newsroom"
+    },
+    {
+      "priority": "Medium",
+      "title": "Małe modele AI wygrywają tam, gdzie nie ma data center",
+      "rationale": "To ważny kontrtrend wobec frontier AI, bo pokazuje realne use case'y offline, low-power i edge.",
+      "sourcesLabel": "IEEE Spectrum; Hacker News"
+    },
+    {
+      "priority": "Medium",
+      "title": "Defacement Army sites przypomina o podstawowej cyberhigienie",
+      "rationale": "Nawet instytucje wokół AI Integration Center nadal przegrywają z prostymi web attacks, zanim w ogóle dojdzie do AI.",
+      "sourcesLabel": "TechCrunch; CyberScoop"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "PRNewswire",
+      "url": "https://www.prnewswire.com/news-releases/norm-ai-raises-120-million-at-a-1-2-billion-valuation-led-by-khosla-ventures-to-deliver-the-full-stack-model-for-legal-ai-302819152.html"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/07/ai-law-startup-norm-raises-120m-hits-unicorn-valuation/"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/07/savis-app-aims-to-protect-consumers-from-realistic-ai-scams-like-kidnappers-demanding-ransom/"
+    },
+    {
+      "title": "Savi press page",
+      "url": "https://www.savisecurity.com/press"
+    },
+    {
+      "title": "Forterra",
+      "url": "https://www.forterra.com/posts/forterra-reveals-it-rapidly-manufactured-and-deployed-autonomous-systems-to-ukraine-at-scale-in-russo-ukrainian-war"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/07/the-first-american-autonomous-ground-vehicles-are-fighting-in-ukraine/"
+    },
+    {
+      "title": "AP",
+      "url": "https://apnews.com/article/stocks-markets-oil-ai-iran-e0194864aba4379a069ce31becae2558"
+    },
+    {
+      "title": "Samsung Newsroom",
+      "url": "https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-second-quarter-2026"
+    },
+    {
+      "title": "IEEE Spectrum",
+      "url": "https://spectrum.ieee.org/small-language-models-ai-pharmaceuticals"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/front?day=2026-07-07"
+    },
+    {
+      "title": "TechCrunch",
+      "url": "https://techcrunch.com/2026/07/07/hacktivists-call-out-trump-by-hacking-and-defacing-us-army-websites/"
+    },
+    {
+      "title": "CyberScoop",
+      "url": "https://cyberscoop.com/us-army-websites-defaced-404-hijacking-kurdistan/"
+    },
+    {
+      "title": "Savi site",
+      "url": "https://www.savisecurity.com/"
+    }
+  ]
+}

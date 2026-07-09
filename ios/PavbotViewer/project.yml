@@ -11,7 +11,7 @@ settings:
     CODE_SIGN_STYLE: Automatic
     DEVELOPMENT_TEAM: SP774TZZU8
     ENABLE_USER_SCRIPT_SANDBOXING: NO
-    MARKETING_VERSION: "2.6.3"
+    MARKETING_VERSION: "2.6.4"
     SWIFT_VERSION: "5.9"
 configs:
   Debug: debug
@@ -30,7 +30,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer
         INFOPLIST_FILE: Sources/Info.plist
-        CURRENT_PROJECT_VERSION: "260708.225332"
+        CURRENT_PROJECT_VERSION: "260709.040728"
       configs:
         Debug:
           CODE_SIGN_ENTITLEMENTS: Sources/PavbotViewer.entitlements
@@ -40,47 +40,6 @@ targets:
           CODE_SIGN_ENTITLEMENTS: Sources/PavbotViewer.entitlements
           APS_ENVIRONMENT: production
           CLOUDKIT_ENVIRONMENT: Production
-    postBuildScripts:
-      - name: Set Dynamic Build Number
-        basedOnDependencyAnalysis: false
-        inputFiles:
-          - $(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)
-          - $(TARGET_BUILD_DIR)/$(WRAPPER_NAME)/PlugIns/PavbotAudioActivityExtension.appex/Info.plist
-        script: |
-          set -euo pipefail
-          if [ -n "${PAVBOT_BUILD_NUMBER:-}" ]; then
-            BUILD_NUMBER="$PAVBOT_BUILD_NUMBER"
-          else
-            BUILD_DATE="$(date +%y%m%d)"
-            BUILD_TIMESTAMP="$(date +%H%M%S)"
-            BUILD_NUMBER="${BUILD_DATE}.${BUILD_TIMESTAMP}"
-          fi
-          invalid_build_number() {
-            echo "error: CFBundleVersion '$BUILD_NUMBER' must contain one to three period-separated numeric components"
-            exit 1
-          }
-          case "$BUILD_NUMBER" in
-            ''|*[!0-9.]*|.*|*..*|*.) invalid_build_number ;;
-          esac
-          COMPONENT_COUNT="$(printf '%s' "$BUILD_NUMBER" | awk -F '[.]' '{print NF}')"
-          FIRST_COMPONENT="${BUILD_NUMBER%%.*}"
-          if [ "$FIRST_COMPONENT" = "0" ] || [ "$COMPONENT_COUNT" -gt 3 ]; then
-            invalid_build_number
-          fi
-          set_build_number() {
-            local plist_path="$1"
-            if [ -f "$plist_path" ]; then
-              /usr/libexec/PlistBuddy -c "Set :CFBundleVersion $BUILD_NUMBER" "$plist_path"
-              echo "Set CFBundleVersion to $BUILD_NUMBER in $plist_path"
-            fi
-          }
-          APP_INFO_PLIST="${TARGET_BUILD_DIR}/${INFOPLIST_PATH}"
-          EXTENSION_INFO_PLIST="${TARGET_BUILD_DIR}/${WRAPPER_NAME}/PlugIns/PavbotAudioActivityExtension.appex/Info.plist"
-          set_build_number "$APP_INFO_PLIST"
-          set_build_number "$EXTENSION_INFO_PLIST"
-          if [ ! -f "$APP_INFO_PLIST" ]; then
-            echo "warning: Info.plist not found at $APP_INFO_PLIST"
-          fi
     dependencies:
       - sdk: AVFoundation.framework
       - sdk: ActivityKit.framework
@@ -102,7 +61,7 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer.audioactivity
         INFOPLIST_FILE: AudioActivityExtension/Info.plist
-        CURRENT_PROJECT_VERSION: "260708.225332"
+        CURRENT_PROJECT_VERSION: "260709.040728"
         CODE_SIGN_STYLE: Automatic
         DEVELOPMENT_TEAM: SP774TZZU8
         SWIFT_VERSION: "5.9"

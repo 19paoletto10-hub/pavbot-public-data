@@ -7,6 +7,7 @@ enum AudioPlaybackBannerLayout {
     static let splitBottomClearance: CGFloat = 20
     static let estimatedBannerHeight: CGFloat = 68
     static let buttonHitSize: CGFloat = 44
+    static let alwaysOnTopZIndex: Double = 10_000
 
     static func bottomClearance(for layoutStyle: PavbotRootLayoutStyle, bottomSafeArea: CGFloat = 0) -> CGFloat {
         switch layoutStyle {

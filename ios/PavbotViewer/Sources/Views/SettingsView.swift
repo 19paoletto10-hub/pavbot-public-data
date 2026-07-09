@@ -7,6 +7,7 @@ import UserNotifications
 struct SettingsView: View {
     @Environment(ManifestStore.self) private var store
     @Environment(AppAppearanceStore.self) private var appearanceStore
+    @Environment(AppLanguageStore.self) private var languageStore
     @Environment(PavbotHaptics.self) private var haptics
     @State private var notificationStatus = "Nie sprawdzono"
     @State private var liveAlertsStatus = "Wyłączone"
@@ -74,6 +75,7 @@ struct SettingsView: View {
 
     private func settingsPhoneDashboard(layout: PavbotAdaptiveLayout) -> some View {
         @Bindable var appearanceStore = appearanceStore
+        @Bindable var languageStore = languageStore
 
         return PavbotPremiumScreenScaffold(layout: layout) {
             PavbotCommandHero(
@@ -83,25 +85,49 @@ struct SettingsView: View {
                 systemImage: "gearshape.2.fill",
                 tint: .blue,
                 insights: [
-                    PavbotInsight(title: "Manifest", value: store.manifest == nil ? "Brak" : "OK", systemImage: "doc.badge.gearshape", tint: store.manifest == nil ? .orange : .green),
-                    PavbotInsight(title: "Alerty", value: liveAlertsStatus, systemImage: "bell.badge.fill", tint: liveAlertsStatus == "Włączone" ? .green : .orange),
-                    PavbotInsight(title: "CloudKit", value: cloudKitReachability, systemImage: "icloud.fill", tint: cloudKitReachability == "Dostępny" ? .green : .blue),
-                    PavbotInsight(title: "APNs", value: deviceTokenRegistrationStatus, systemImage: "iphone.radiowaves.left.and.right", tint: remoteDeviceToken.isEmpty ? .orange : .green)
+                    PavbotInsight(title: "Manifest", value: localizedSettingsValue(store.manifest == nil ? "Brak" : "OK"), systemImage: "doc.badge.gearshape", tint: store.manifest == nil ? .orange : .green),
+                    PavbotInsight(title: "Alerty", value: localizedSettingsValue(liveAlertsStatus), systemImage: "bell.badge.fill", tint: liveAlertsStatus == "Włączone" ? .green : .orange),
+                    PavbotInsight(title: "CloudKit", value: localizedSettingsValue(cloudKitReachability), systemImage: "icloud.fill", tint: cloudKitReachability == "Dostępny" ? .green : .blue),
+                    PavbotInsight(title: "APNs", value: localizedSettingsValue(deviceTokenRegistrationStatus), systemImage: "iphone.radiowaves.left.and.right", tint: remoteDeviceToken.isEmpty ? .orange : .green)
                 ],
                 footnote: "Publiczne metadane briefingów pochodzą z CloudKit, a pliki z opublikowanego manifestu GitHub."
             )
 
             PavbotReadingCard(title: "Wygląd", subtitle: "Motyw i komfort czytania", systemImage: "paintpalette.fill", tint: .blue) {
-                Picker("Motyw aplikacji", selection: $appearanceStore.preference) {
+                Picker(selection: $appearanceStore.preference) {
                     ForEach(AppAppearancePreference.allCases) { preference in
-                        Text(preference.title).tag(preference)
+                        Text(localizedSettingsValue(preference.title)).tag(preference)
                     }
+                } label: {
+                    PavbotLocalizedText("Motyw aplikacji")
                 }
                 .pickerStyle(.segmented)
 
-                Text("Auto używa ustawień systemu iOS. Jasny oraz Ciemny wymuszają wygląd tylko w Pavbot.")
+                Text(localizedSettingsValue("Auto używa ustawień systemu iOS. Jasny oraz Ciemny wymuszają wygląd tylko w Pavbot."))
                     .font(.caption)
                     .foregroundStyle(.secondary)
+            }
+
+            PavbotReadingCard(title: "Język aplikacji", subtitle: "Interfejs i tłumaczenia treści", systemImage: "globe", tint: .indigo) {
+                Picker(selection: $languageStore.preference) {
+                    ForEach(AppLanguagePreference.allCases) { language in
+                        Text(language.shortTitle).tag(language)
+                    }
+                } label: {
+                    PavbotLocalizedText("Język aplikacji")
+                }
+                .pickerStyle(.segmented)
+
+                LabeledContent {
+                    Text(localizedSettingsValue(languageStore.preference.title))
+                } label: {
+                    PavbotLocalizedText("Aktywny język")
+                }
+
+                Text(localizedSettingsValue("Polski jest domyślny. Po wyborze ENG albo RU interfejs używa lokalizacji aplikacji, a teksty automatyzacji w Pulsie Dnia i Przeglądzie są tłumaczone natywnie przez iOS."))
+                    .font(.caption)
+                    .foregroundStyle(.secondary)
+                    .fixedSize(horizontal: false, vertical: true)
             }
 
             PavbotReadingCard(title: "Dostępność i komfort", subtitle: "Haptyka oraz deklarowane funkcje dostępności", systemImage: "accessibility.fill", tint: .green) {
@@ -133,8 +159,8 @@ struct SettingsView: View {
             }
 
             PavbotReadingCard(title: "Połączenia Pavbot", subtitle: "Czytelny status bez surowych adresów URL", systemImage: "network", tint: .purple) {
-                LabeledContent("Połączenia Pavbot", value: "Produkcyjne")
-                LabeledContent("Manifest danych", value: store.manifest == nil ? "Niezaładowany" : "Załadowany")
+                LabeledContent("Połączenia Pavbot", value: localizedSettingsValue("Produkcyjne"))
+                LabeledContent("Manifest danych", value: localizedSettingsValue(store.manifest == nil ? "Niezaładowany" : "Załadowany"))
                 LabeledContent("CloudKit", value: PavbotConnectionDefaults.cloudKitContainerIdentifier)
 
                 Text("Pavbot pobiera metadane briefingów z CloudKit, a opublikowane pliki z manifestu danych.")
@@ -143,10 +169,10 @@ struct SettingsView: View {
             }
 
             PavbotReadingCard(title: "Powiadomienia", subtitle: "APNs, alerty live i codzienna pogoda", systemImage: "bell.badge.fill", tint: .orange) {
-                LabeledContent("Status", value: notificationStatus)
-                LabeledContent("Alerty live", value: liveAlertsStatus)
-                LabeledContent("CloudKit", value: cloudKitReachability)
-                LabeledContent("Token urządzenia", value: deviceTokenRegistrationStatus)
+                LabeledContent("Status", value: localizedSettingsValue(notificationStatus))
+                LabeledContent("Alerty live", value: localizedSettingsValue(liveAlertsStatus))
+                LabeledContent("CloudKit", value: localizedSettingsValue(cloudKitReachability))
+                LabeledContent("Token urządzenia", value: localizedSettingsValue(deviceTokenRegistrationStatus))
                 LabeledContent("Środowisko APNs", value: RemoteNotificationDiagnostics.apnsEnvironmentLabel())
 
                 briefingNotificationModeContent
@@ -247,6 +273,7 @@ struct SettingsView: View {
 
     private func settingsDashboard(layout: PavbotAdaptiveLayout) -> some View {
         @Bindable var appearanceStore = appearanceStore
+        @Bindable var languageStore = languageStore
 
         return PavbotPremiumScreenScaffold(layout: layout) {
                 PavbotCommandHero(
@@ -258,23 +285,47 @@ struct SettingsView: View {
                     systemImage: "gearshape.2.fill",
                     tint: .blue,
                     insights: [
-                        PavbotInsight(title: "Manifest", value: store.manifest == nil ? "Brak" : "OK", systemImage: "doc.badge.gearshape", tint: store.manifest == nil ? .orange : .green),
-                        PavbotInsight(title: "Alerty", value: liveAlertsStatus, systemImage: "bell.badge.fill", tint: liveAlertsStatus == "Włączone" ? .green : .orange),
-                        PavbotInsight(title: "CloudKit", value: cloudKitReachability, systemImage: "icloud.fill", tint: cloudKitReachability == "Dostępny" ? .green : .blue),
-                        PavbotInsight(title: "APNs", value: deviceTokenRegistrationStatus, systemImage: "iphone.radiowaves.left.and.right", tint: remoteDeviceToken.isEmpty ? .orange : .green)
+                        PavbotInsight(title: "Manifest", value: localizedSettingsValue(store.manifest == nil ? "Brak" : "OK"), systemImage: "doc.badge.gearshape", tint: store.manifest == nil ? .orange : .green),
+                        PavbotInsight(title: "Alerty", value: localizedSettingsValue(liveAlertsStatus), systemImage: "bell.badge.fill", tint: liveAlertsStatus == "Włączone" ? .green : .orange),
+                        PavbotInsight(title: "CloudKit", value: localizedSettingsValue(cloudKitReachability), systemImage: "icloud.fill", tint: cloudKitReachability == "Dostępny" ? .green : .blue),
+                        PavbotInsight(title: "APNs", value: localizedSettingsValue(deviceTokenRegistrationStatus), systemImage: "iphone.radiowaves.left.and.right", tint: remoteDeviceToken.isEmpty ? .orange : .green)
                     ]
                 )
 
                 LazyVGrid(columns: layout.adaptiveColumns(minimum: 320), spacing: layout.cardSpacing) {
                     SettingsDashboardCard(title: "Wygląd", subtitle: "Motyw i komfort czytania", systemImage: "paintpalette.fill", tint: .blue) {
-                        Picker("Motyw aplikacji", selection: $appearanceStore.preference) {
+                        Picker(selection: $appearanceStore.preference) {
                             ForEach(AppAppearancePreference.allCases) { preference in
-                                Text(preference.title).tag(preference)
+                                Text(localizedSettingsValue(preference.title)).tag(preference)
                             }
+                        } label: {
+                            PavbotLocalizedText("Motyw aplikacji")
                         }
                         .pickerStyle(.segmented)
 
-                        Text("Auto używa ustawień systemu iOS. Jasny oraz Ciemny wymuszają wygląd tylko w Pavbot.")
+                        Text(localizedSettingsValue("Auto używa ustawień systemu iOS. Jasny oraz Ciemny wymuszają wygląd tylko w Pavbot."))
+                            .font(.callout)
+                            .foregroundStyle(.secondary)
+                            .fixedSize(horizontal: false, vertical: true)
+                    }
+
+                    SettingsDashboardCard(title: "Język aplikacji", subtitle: "PL, ENG, RU oraz tłumaczenie newsów", systemImage: "globe", tint: .indigo) {
+                        Picker(selection: $languageStore.preference) {
+                            ForEach(AppLanguagePreference.allCases) { language in
+                                Text(language.shortTitle).tag(language)
+                            }
+                        } label: {
+                            PavbotLocalizedText("Język aplikacji")
+                        }
+                        .pickerStyle(.segmented)
+
+                        LabeledContent {
+                            Text(localizedSettingsValue(languageStore.preference.title))
+                        } label: {
+                            PavbotLocalizedText("Aktywny język")
+                        }
+
+                        Text(localizedSettingsValue("Teksty automatyzacji w Pulsie Dnia i Przeglądzie są tłumaczone natywnie przez iOS. Polski pozostaje domyślnym językiem źródłowym."))
                             .font(.callout)
                             .foregroundStyle(.secondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -298,8 +349,8 @@ struct SettingsView: View {
                     }
 
                     SettingsDashboardCard(title: "Połączenia", subtitle: "Produkcja i manifest danych", systemImage: "network", tint: .purple) {
-                        LabeledContent("Połączenia Pavbot", value: "Produkcyjne")
-                        LabeledContent("Manifest danych", value: store.manifest == nil ? "Niezaładowany" : "Załadowany")
+                        LabeledContent("Połączenia Pavbot", value: localizedSettingsValue("Produkcyjne"))
+                        LabeledContent("Manifest danych", value: localizedSettingsValue(store.manifest == nil ? "Niezaładowany" : "Załadowany"))
                         LabeledContent("CloudKit", value: PavbotConnectionDefaults.cloudKitContainerIdentifier)
                         Text("CloudKit jest źródłem metadanych i alertów, a manifest danych pozostaje źródłem opublikowanych plików.")
                             .font(.callout)
@@ -307,10 +358,10 @@ struct SettingsView: View {
                     }
 
                     SettingsDashboardCard(title: "Powiadomienia", subtitle: "APNs i codzienna pogoda", systemImage: "bell.badge.fill", tint: .orange) {
-                        LabeledContent("Status", value: notificationStatus)
-                        LabeledContent("Alerty live", value: liveAlertsStatus)
-                        LabeledContent("CloudKit", value: cloudKitReachability)
-                        LabeledContent("Token urządzenia", value: deviceTokenRegistrationStatus)
+                        LabeledContent("Status", value: localizedSettingsValue(notificationStatus))
+                        LabeledContent("Alerty live", value: localizedSettingsValue(liveAlertsStatus))
+                        LabeledContent("CloudKit", value: localizedSettingsValue(cloudKitReachability))
+                        LabeledContent("Token urządzenia", value: localizedSettingsValue(deviceTokenRegistrationStatus))
                         LabeledContent("Środowisko APNs", value: RemoteNotificationDiagnostics.apnsEnvironmentLabel())
 
                         briefingNotificationModeContent
@@ -386,16 +437,16 @@ struct SettingsView: View {
 
     @ViewBuilder
     private var briefingNotificationModeContent: some View {
-        LabeledContent("Tryb briefingów", value: briefingNotificationMode.title)
+        LabeledContent("Tryb briefingów", value: localizedSettingsValue(briefingNotificationMode.title))
 
         Picker("Tryb briefingów", selection: $briefingNotificationMode) {
             ForEach(CloudKitBriefingNotificationMode.allCases) { mode in
-                Text(mode.title).tag(mode)
+                Text(LocalizedStringKey(mode.title)).tag(mode)
             }
         }
         .pickerStyle(.segmented)
 
-        Text(briefingNotificationMode.detail)
+        Text(LocalizedStringKey(briefingNotificationMode.detail))
             .font(.caption)
             .foregroundStyle(.secondary)
             .fixedSize(horizontal: false, vertical: true)
@@ -404,7 +455,7 @@ struct SettingsView: View {
             Text("Ostatni push CloudKit")
                 .font(.caption)
                 .foregroundStyle(.secondary)
-            Text(lastCloudKitPushSummary)
+            Text(localizedSettingsValue(lastCloudKitPushSummary))
                 .font(.caption2)
                 .foregroundStyle(.secondary)
                 .textSelection(.enabled)
@@ -421,14 +472,14 @@ struct SettingsView: View {
 
         Picker("Tryb głosu", selection: speechVoiceModeBinding) {
             ForEach(SpeechVoiceMode.allCases) { mode in
-                Text(mode.title).tag(mode)
+                Text(LocalizedStringKey(mode.title)).tag(mode)
             }
         }
         .pickerStyle(.segmented)
 
         switch speechVoicePreference.mode {
         case .polishDefault:
-            LabeledContent("Aktywny głos", value: speechVoiceCatalog.defaultSystemVoice?.displayTitle ?? "pl-PL")
+            LabeledContent("Aktywny głos", value: speechVoiceCatalog.defaultSystemVoice(for: defaultSpeechVoiceLanguage)?.displayTitle ?? defaultSpeechVoiceLanguage)
         case .selectedVoice:
             if speechVoiceCatalog.systemVoices.isEmpty {
                 Label("Brak dostępnych głosów systemowych. Pavbot spróbuje użyć pl-PL.", systemImage: "exclamationmark.triangle")
@@ -443,7 +494,7 @@ struct SettingsView: View {
                 .pickerStyle(.menu)
             }
         case .personalVoice:
-            LabeledContent("Status Personal Voice", value: speechVoiceCatalog.personalVoiceStatusLabel)
+            LabeledContent("Status Personal Voice", value: localizedSettingsValue(speechVoiceCatalog.personalVoiceStatusLabel))
 
             if speechVoiceCatalog.personalVoiceAuthorization != .authorized {
                 Button {
@@ -470,7 +521,7 @@ struct SettingsView: View {
         }
 
         if let speechVoiceStatusMessage {
-            Label(speechVoiceStatusMessage, systemImage: "info.circle")
+            Label(localizedSettingsValue(speechVoiceStatusMessage), systemImage: "info.circle")
                 .font(.caption)
                 .foregroundStyle(.orange)
                 .fixedSize(horizontal: false, vertical: true)
@@ -582,9 +633,17 @@ struct SettingsView: View {
         haptics.play(.selection)
         speechVoicePreview.start(
             itemID: "settings-tts-preview",
-            title: "Test głosu",
-            text: "Pavbot będzie czytać newsy tym głosem. Domyślnie używam stabilnego polskiego TTS."
+            title: localizedSettingsValue("Test głosu"),
+            text: localizedSettingsValue("Pavbot będzie czytać newsy tym głosem. Domyślnie używam stabilnego polskiego TTS.")
         )
+    }
+
+    private func localizedSettingsValue(_ key: String) -> String {
+        String(localized: String.LocalizationValue(key), bundle: .main, locale: languageStore.preference.locale)
+    }
+
+    private var defaultSpeechVoiceLanguage: String {
+        SpeechVoiceSettings.defaultVoiceLanguage(for: languageStore.preference)
     }
 
     private var hapticToggleBinding: Binding<Bool> {
@@ -686,10 +745,10 @@ private struct SettingsDashboardCard<Content: View>: View {
                     .accessibilityHidden(true)
 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(title)
+                    Text(LocalizedStringKey(title))
                         .font(.title3.weight(.bold))
                         .fixedSize(horizontal: false, vertical: true)
-                    Text(subtitle)
+                    Text(LocalizedStringKey(subtitle))
                         .font(.callout)
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
@@ -723,18 +782,18 @@ private struct AccessibilityShowcaseCard: View {
                     .background(Color.blue.opacity(0.12), in: RoundedRectangle(cornerRadius: 9, style: .continuous))
 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(feature.title)
+                    Text(LocalizedStringKey(feature.title))
                         .font(.subheadline.weight(.semibold))
                         .foregroundStyle(.primary)
                         .fixedSize(horizontal: false, vertical: true)
-                    Text(feature.appStoreName)
+                    Text(LocalizedStringKey(feature.appStoreName))
                         .font(.caption2.weight(.bold))
                         .foregroundStyle(.secondary)
                         .textCase(.uppercase)
                 }
             }
 
-            Text(feature.summary)
+            Text(LocalizedStringKey(feature.summary))
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .lineSpacing(2)

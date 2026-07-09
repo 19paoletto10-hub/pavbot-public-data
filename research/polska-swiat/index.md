@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-08
+Last updated: 2026-07-09
 
 ## Current Understanding
 
@@ -86,6 +86,20 @@ przemysłowego nadal wymaga dalszego sprawdzania w readoutach i follow-upach.
 Nowym światowym akcentem jest amerykańska licencja dla Ukrainy na produkcję
 Patriotów, co przenosi rozmowę z samych dostaw na potencjalny model
 licencyjno-produkcyjny.
+Po porannym runie 9 lipca główny ciężar przesuwa się z samej deklaracji NATO na
+konsekwencje: USA-Iran weszły w kolejną rundę uderzeń i irańskiej odpowiedzi
+wobec państw Zatoki, licencja Patriot dla Ukrainy została skorygowana przez
+realne ograniczenia produkcyjne, a polski bilans Ankary obejmuje PAC-3,
+Jasionkę i rozmowę Nawrocki-Trump o obecności wojsk USA. W kraju na pierwszy
+plan wszedł pakiet zmian Ministerstwa Zdrowia dotyczący kolejek, wynagrodzeń,
+spółek lekarskich i przejrzystości szpitali.
+Po wieczornym runie 9 lipca centrum ciężkości przesunęło się dalej: AP opisuje
+już regionalną eskalację USA-Iran z Bahrajnem, Kuwejtem, Katarem i Jordanią,
+Ministerstwo Zdrowia potwierdza kurs po rozmowie z NIL i doprecyzowuje 240 zł
+stawki godzinowej, a Ministerstwo Sprawiedliwości uruchamia Deregulację 2.0
+jako nowy blok cyfryzacji i skracania procedur sądowych. Wątki PAC-3, Jasionki
+i obecności wojsk USA pozostają ważnym follow-upem, ale dziś nie dostały nowego
+twardego polskiego komunikatu.
 
 ## Stable Facts
 
@@ -157,9 +171,17 @@ licencyjno-produkcyjny.
 - Wątek wojskowej współpracy kosmicznej Polska-USA śledzić jako część
   zdolności NATO: łączność satelitarna, GPS/NAVWAR, ostrzeganie rakietowe,
   ARGUS i Centrum Operacji Satelitarnych.
+- Po 9 lipca monitorować USA-Iran jako kryzys regionalny obejmujący nie tylko
+  Ormuz, ale też Bahrajn, Kuwejt i Katar.
+- Pakiet Ministerstwa Zdrowia śledzić w trybie legislacyjnym: odróżniać
+  zapowiedzi od projektów ustaw, konsultacji i realnego wdrożenia e-kolejki.
+- Deregulację 2.0 śledzić pod kątem tego, czy konferencyjne zapowiedzi przejdą
+  w projekty ustaw, harmonogram wdrożenia i czytelny język publiczny.
 
 ## Recent Reports
 
+- [2026-07-09-1933](runs/2026-07-09-1933.md)
+- [2026-07-09](runs/2026-07-09.md)
 - [2026-07-08-1933](runs/2026-07-08-1933.md)
 - [2026-07-08](runs/2026-07-08.md)
 - [2026-07-07-1933](runs/2026-07-07-1933.md)

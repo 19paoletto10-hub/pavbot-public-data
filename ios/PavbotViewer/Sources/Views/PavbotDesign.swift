@@ -1,4 +1,34 @@
 import SwiftUI
+import Translation
+
+struct PavbotLocalizedText: View {
+    @Environment(AppLanguageStore.self) private var languageStore
+    let key: String
+
+    init(_ key: String) {
+        self.key = key
+    }
+
+    var body: some View {
+        Text(String(localized: String.LocalizationValue(key), bundle: .main, locale: languageStore.preference.locale))
+    }
+}
+
+struct PavbotLocalizedInterpolation: View {
+    @Environment(AppLanguageStore.self) private var languageStore
+    let key: String
+    let arguments: [CVarArg]
+
+    init(key: String, _ arguments: CVarArg...) {
+        self.key = key
+        self.arguments = arguments
+    }
+
+    var body: some View {
+        let format = String(localized: String.LocalizationValue(key), bundle: .main, locale: languageStore.preference.locale)
+        Text(String(format: format, locale: languageStore.preference.locale, arguments: arguments))
+    }
+}
 
 enum PavbotViewportClass: Equatable {
     case phone
@@ -572,10 +602,10 @@ struct PavbotScreenHeader: View {
                 .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 5) {
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.title2.weight(.bold))
                     .fixedSize(horizontal: false, vertical: true)
-                Text(subtitle)
+                Text(LocalizedStringKey(subtitle))
                     .font(.subheadline)
                     .foregroundStyle(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
@@ -672,7 +702,7 @@ struct PavbotTabInfoContent: Identifiable {
         let isHistory = subtabTitle == "Historia"
         return PavbotTabInfoContent(
             id: "pulse-day-\(subtabTitle)",
-            title: "Puls Dnia · \(subtabTitle)",
+            title: isHistory ? "Puls Dnia · Historia" : "Puls Dnia · Najnowsze",
             eyebrow: isHistory ? "Historia briefingów" : "Najnowszy briefing",
             summary: isHistory
                 ? "Ta podzakładka pokazuje poprzednie wydania Pulsu Dnia, żeby szybko wrócić do kontekstu z ostatnich publikacji."
@@ -711,7 +741,7 @@ struct PavbotTabInfoContent: Identifiable {
         let isAllOffers = subtabTitle == "Wszystkie oferty"
         return PavbotTabInfoContent(
             id: "jobs-\(subtabTitle)",
-            title: "Praca · \(subtabTitle)",
+            title: isAllOffers ? "Praca · Wszystkie oferty" : "Praca · Brief dnia",
             eyebrow: isAllOffers ? "Pełny radar ofert" : "Brief dnia",
             summary: isAllOffers
                 ? "Ta podzakładka służy do przeglądania szerszej historii ról AI/LLM, filtrowania i porównywania ofert między raportami."
@@ -749,7 +779,7 @@ struct PavbotTabInfoContent: Identifiable {
     static func research(topicTitle: String, topicSystemImage: String, topicTint: Color) -> PavbotTabInfoContent {
         PavbotTabInfoContent(
             id: "research-\(topicTitle)",
-            title: "Przegląd · \(topicTitle)",
+            title: "Przegląd · Wybrany temat",
             eyebrow: "Wybrany temat",
             summary: "Ta podzakładka pokazuje aktualnie wybrany temat Przeglądu: raporty, artykuły, PDF-y, audio i zapisane materiały w jednym miejscu.",
             systemImage: topicSystemImage,
@@ -758,7 +788,7 @@ struct PavbotTabInfoContent: Identifiable {
                 PavbotTabInfoSection(
                     title: "Jak korzystać",
                     systemImage: "rectangle.stack.fill",
-                    body: "Wybierz temat \(topicTitle), przeglądaj najnowsze wydanie, a metryki w hero rozwijaj tylko wtedy, gdy potrzebujesz więcej kontekstu."
+                    body: "Wybierz temat w górnej części Przeglądu, przeglądaj najnowsze wydanie, a metryki w hero rozwijaj tylko wtedy, gdy potrzebujesz więcej kontekstu."
                 ),
                 PavbotTabInfoSection(
                     title: "Co możesz sprawdzić",
@@ -797,7 +827,7 @@ struct PavbotTabInfoSheet: View {
                 PavbotPremiumScreenScaffold(layout: layout, spacing: 18) {
                     PavbotCommandHero(
                         eyebrow: content.eyebrow,
-                        title: "Jak działa karta \(content.title)",
+                        title: "Jak działa ta karta",
                         subtitle: content.summary,
                         systemImage: content.systemImage,
                         tint: content.tint
@@ -819,7 +849,7 @@ struct PavbotTabInfoSheet: View {
                                         .frame(width: 24, height: 24)
                                         .background(content.tint.gradient, in: Circle())
 
-                                    Text(tip)
+                                    Text(LocalizedStringKey(tip))
                                         .font(.callout)
                                         .foregroundStyle(.primary)
                                         .lineSpacing(3)
@@ -831,12 +861,14 @@ struct PavbotTabInfoSheet: View {
                 }
                 .environment(\.pavbotAdaptiveLayout, layout)
             }
-            .navigationTitle("Info")
+            .navigationTitle(LocalizedStringKey("Info"))
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button("Zamknij") {
+                    Button {
                         dismiss()
+                    } label: {
+                        Text(LocalizedStringKey("Zamknij"))
                     }
                     .font(.callout.weight(.semibold))
                 }
@@ -859,10 +891,10 @@ private struct PavbotTabInfoSectionCard: View {
                     .background(tint.opacity(0.12), in: RoundedRectangle(cornerRadius: 14, style: .continuous))
                     .accessibilityHidden(true)
 
-                Text(section.title)
+                Text(LocalizedStringKey(section.title))
                     .font(.headline.weight(.bold))
 
-                Text(section.body)
+                Text(LocalizedStringKey(section.body))
                     .font(.callout)
                     .foregroundStyle(.secondary)
                     .lineSpacing(3)
@@ -870,7 +902,7 @@ private struct PavbotTabInfoSectionCard: View {
             }
         }
         .accessibilityElement(children: .combine)
-        .accessibilityLabel("\(section.title). \(section.body)")
+        .accessibilityLabel(Text(LocalizedStringKey(section.title)))
     }
 }
 
@@ -890,8 +922,8 @@ private struct PavbotTabInfoModifier: ViewModifier {
                     }
                     .buttonStyle(.plain)
                     .foregroundStyle(infoContent.tint)
-                    .accessibilityLabel("Otwórz instrukcję karty \(infoContent.title)")
-                    .accessibilityHint("Pokazuje, jak korzystać z tej zakładki i jakie informacje można w niej sprawdzić.")
+                    .accessibilityLabel(Text(LocalizedStringKey("Otwórz instrukcję karty")))
+                    .accessibilityHint(Text(LocalizedStringKey("Pokazuje, jak korzystać z tej zakładki i jakie informacje można w niej sprawdzić.")))
                 }
             }
             .sheet(item: $presentedInfo) { info in
@@ -953,19 +985,19 @@ struct PavbotCommandHero: View {
 
                     VStack(alignment: .leading, spacing: 7) {
                         if let eyebrow {
-                            Text(eyebrow)
+                            Text(LocalizedStringKey(eyebrow))
                                 .font(.caption.weight(.bold))
                                 .foregroundStyle(tint)
                                 .textCase(.uppercase)
                                 .tracking(0.8)
                         }
 
-                        Text(title)
+                        Text(LocalizedStringKey(title))
                             .font(.largeTitle.weight(.bold))
                             .lineSpacing(1)
                             .fixedSize(horizontal: false, vertical: true)
 
-                        Text(subtitle)
+                        Text(LocalizedStringKey(subtitle))
                             .font(.body)
                             .foregroundStyle(.secondary)
                             .lineSpacing(3)
@@ -981,7 +1013,7 @@ struct PavbotCommandHero: View {
                             }
                         } label: {
                             HStack(spacing: 10) {
-                                Label(isExpanded ? "Ukryj szczegóły" : "Pokaż szczegóły", systemImage: "slider.horizontal.3")
+                                Label(LocalizedStringKey(isExpanded ? "Ukryj szczegóły" : "Pokaż szczegóły"), systemImage: "slider.horizontal.3")
                                     .font(.callout.weight(.bold))
                                 Spacer(minLength: 8)
                                 Image(systemName: isExpanded ? "chevron.up.circle.fill" : "chevron.down.circle.fill")
@@ -993,7 +1025,7 @@ struct PavbotCommandHero: View {
                             .background(tint.opacity(0.10), in: Capsule())
                         }
                         .buttonStyle(.plain)
-                        .accessibilityLabel(isExpanded ? "Ukryj szczegóły karty \(title)" : "Pokaż szczegóły karty \(title)")
+                        .accessibilityLabel(Text(LocalizedStringKey(isExpanded ? "Ukryj szczegóły karty" : "Pokaż szczegóły karty")))
                     }
 
                     if isExpanded {
@@ -1003,7 +1035,7 @@ struct PavbotCommandHero: View {
                 }
 
                 if let footnote {
-                    Text(footnote)
+                    Text(LocalizedStringKey(footnote))
                         .font(.callout.weight(.medium))
                         .foregroundStyle(.secondary)
                         .fixedSize(horizontal: false, vertical: true)
@@ -1032,17 +1064,17 @@ struct PavbotSignalCard: View {
                 .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 3) {
-                Text(value)
+                Text(LocalizedStringKey(value))
                     .font(.title3.weight(.bold))
                     .foregroundStyle(.primary)
                     .lineLimit(2)
                     .minimumScaleFactor(0.78)
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.subheadline.weight(.semibold))
                     .foregroundStyle(.secondary)
                     .lineLimit(2)
                 if let subtitle {
-                    Text(subtitle)
+                    Text(LocalizedStringKey(subtitle))
                         .font(.footnote)
                         .foregroundStyle(.secondary)
                         .lineLimit(2)
@@ -1069,7 +1101,7 @@ struct PavbotStatusRail: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
             if let title {
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.headline.weight(.semibold))
             }
 
@@ -1127,10 +1159,10 @@ struct PavbotActionTray: View {
         PavbotPremiumCard(tint: .blue, cornerRadius: 24) {
             VStack(alignment: .leading, spacing: 14) {
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(title)
+                    Text(LocalizedStringKey(title))
                         .font(.headline.weight(.bold))
                     if let subtitle {
-                        Text(subtitle)
+                        Text(LocalizedStringKey(subtitle))
                             .font(.callout)
                             .foregroundStyle(.secondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -1188,11 +1220,11 @@ struct PavbotReadingCard<Content: View>: View {
                     .accessibilityHidden(true)
 
                 VStack(alignment: .leading, spacing: 4) {
-                    Text(title)
+                    Text(LocalizedStringKey(title))
                         .font(.headline.weight(.bold))
                         .fixedSize(horizontal: false, vertical: true)
                     if let subtitle {
-                        Text(subtitle)
+                        Text(LocalizedStringKey(subtitle))
                             .font(.callout)
                             .foregroundStyle(.secondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -1284,17 +1316,17 @@ struct PavbotBriefingHeroCard: View {
                         .accessibilityHidden(true)
 
                     VStack(alignment: .leading, spacing: 6) {
-                        Text(eyebrow)
+                        Text(LocalizedStringKey(eyebrow))
                             .font(.caption.weight(.bold))
                             .foregroundStyle(tint)
                             .textCase(.uppercase)
 
-                        Text(title)
+                        PavbotTranslatedAutomationText(title)
                             .font(.title3.weight(.bold))
                             .lineLimit(3)
                             .fixedSize(horizontal: false, vertical: true)
 
-                        Text(subtitle)
+                        PavbotTranslatedAutomationText(subtitle)
                             .font(.callout)
                             .foregroundStyle(.secondary)
                             .lineSpacing(3)
@@ -1304,7 +1336,7 @@ struct PavbotBriefingHeroCard: View {
                 }
 
                 if let supportingText, !supportingText.isEmpty {
-                    Text(supportingText)
+                    PavbotTranslatedAutomationText(supportingText)
                         .font(.callout.weight(.semibold))
                         .lineSpacing(3)
                         .fixedSize(horizontal: false, vertical: true)
@@ -1375,7 +1407,7 @@ struct PavbotStateCard: View {
                 .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 6) {
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.headline.weight(.semibold))
                 Text(message)
                     .font(.callout)
@@ -1505,7 +1537,7 @@ struct PavbotInsightStrip: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .font(.headline.weight(.semibold))
                 .fixedSize(horizontal: false, vertical: true)
 
@@ -1523,7 +1555,7 @@ struct PavbotInsightStrip: View {
                                 .font(.callout.weight(.bold))
                                 .lineLimit(1)
                                 .minimumScaleFactor(0.8)
-                            Text(insight.title)
+                            Text(LocalizedStringKey(insight.title))
                                 .font(.caption.weight(.semibold))
                                 .foregroundStyle(.secondary)
                                 .lineLimit(1)
@@ -1598,7 +1630,7 @@ private struct PavbotNewsTopicSwitcherCell: View {
 
             VStack(alignment: .leading, spacing: 3) {
                 HStack(spacing: 6) {
-                    Text(title)
+                    Text(LocalizedStringKey(title))
                         .font(.subheadline.weight(.bold))
                         .foregroundStyle(.primary)
                         .lineLimit(1)
@@ -1611,7 +1643,7 @@ private struct PavbotNewsTopicSwitcherCell: View {
                         .background(isSelected ? Color(.systemBackground).opacity(0.9) : tint.opacity(0.10), in: Capsule())
                 }
 
-                Text(subtitle)
+                Text(LocalizedStringKey(subtitle))
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .lineLimit(2)
@@ -1640,7 +1672,7 @@ struct PavbotFreshnessBadge: View {
     var tint: Color = .green
 
     var body: some View {
-        Label(label, systemImage: systemImage)
+        Label(LocalizedStringKey(label), systemImage: systemImage)
             .font(.caption.weight(.bold))
             .foregroundStyle(tint)
             .padding(.horizontal, 10)
@@ -1667,11 +1699,11 @@ struct PavbotCompactStoryRow: View {
                 .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 4) {
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.headline.weight(.semibold))
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
-                Text(subtitle)
+                Text(LocalizedStringKey(subtitle))
                     .font(.callout)
                     .foregroundStyle(.secondary)
                     .lineLimit(2)
@@ -1681,7 +1713,7 @@ struct PavbotCompactStoryRow: View {
             Spacer(minLength: 8)
 
             if let trailingText {
-                Text(trailingText)
+                Text(LocalizedStringKey(trailingText))
                     .font(.caption.weight(.bold))
                     .foregroundStyle(tint)
                     .padding(.horizontal, 8)
@@ -1708,7 +1740,7 @@ struct PavbotPrimaryActionCapsule: View {
 
     var body: some View {
         Button(action: action) {
-            Label(title, systemImage: systemImage)
+            Label(LocalizedStringKey(title), systemImage: systemImage)
                 .font(.callout.weight(.bold))
                 .frame(maxWidth: .infinity, minHeight: 46)
                 .foregroundStyle(.white)
@@ -1951,13 +1983,13 @@ struct PavbotNewsStoryCard: View {
                 .layoutPriority(1)
             }
 
-            Text(presentation.title)
+            PavbotTranslatedAutomationText(presentation.title)
                 .font(isFeatured ? .title3.weight(.bold) : .headline.weight(.semibold))
                 .foregroundStyle(.primary)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .fixedSize(horizontal: false, vertical: true)
 
-            Text(presentation.lead)
+            PavbotTranslatedAutomationText(presentation.lead)
                 .font(isFeatured ? .callout.weight(.medium) : .callout)
                 .foregroundStyle(.secondary)
                 .lineSpacing(3)
@@ -1974,7 +2006,7 @@ struct PavbotNewsStoryCard: View {
                                 .padding(.top, 2)
                                 .accessibilityHidden(true)
 
-                            Text(fact)
+                            PavbotTranslatedAutomationText(fact)
                                 .font(.footnote)
                                 .foregroundStyle(.secondary)
                                 .lineSpacing(2)
@@ -1993,7 +2025,8 @@ struct PavbotNewsStoryCard: View {
                             title: tag,
                             systemImage: "tag.fill",
                             tint: tint,
-                            accessibilityPrefix: "Tag newsa"
+                            accessibilityPrefix: "Tag newsa",
+                            translatesAutomationText: true
                         )
                     }
                 }
@@ -2103,15 +2136,16 @@ struct PavbotNewsSectionBadge: View {
     let tint: Color
 
     var body: some View {
-        Text(title.uppercased())
+        PavbotTranslatedAutomationText(title)
             .font(.caption2.weight(.black))
             .foregroundStyle(tint)
             .lineLimit(1)
             .minimumScaleFactor(0.84)
+            .textCase(.uppercase)
             .padding(.horizontal, 8)
             .padding(.vertical, 5)
             .background(tint.opacity(0.10), in: Capsule())
-            .accessibilityLabel("Sekcja: \(title)")
+            .accessibilityLabel(Text(LocalizedStringKey("Sekcja: \(title)")))
     }
 }
 
@@ -2119,7 +2153,7 @@ struct PavbotNewsPriorityBadge: View {
     let style: PavbotNewsPriorityStyle
 
     var body: some View {
-        Label(style.shortTitle, systemImage: style.systemImage)
+        Label(LocalizedStringKey(style.shortTitle), systemImage: style.systemImage)
             .font(.caption2.weight(.bold))
             .foregroundStyle(style.tint)
             .lineLimit(1)
@@ -2127,13 +2161,13 @@ struct PavbotNewsPriorityBadge: View {
             .padding(.horizontal, 7)
             .padding(.vertical, 4)
             .background(style.tint.opacity(0.11), in: Capsule())
-            .accessibilityLabel(style.title)
+            .accessibilityLabel(Text(LocalizedStringKey(style.title)))
     }
 }
 
 struct PavbotNewsSavedBadge: View {
     var body: some View {
-        Label("Zapisany", systemImage: "bookmark.fill")
+        Label(LocalizedStringKey("Zapisany"), systemImage: "bookmark.fill")
             .font(.caption2.weight(.bold))
             .foregroundStyle(.blue)
             .lineLimit(1)
@@ -2141,7 +2175,7 @@ struct PavbotNewsSavedBadge: View {
             .padding(.horizontal, 8)
             .padding(.vertical, 5)
             .background(Color.blue.opacity(0.10), in: Capsule())
-            .accessibilityLabel("Zapisany")
+            .accessibilityLabel(Text(LocalizedStringKey("Zapisany")))
     }
 }
 
@@ -2151,7 +2185,7 @@ private struct PavbotStoryActionPill: View {
     let tint: Color
 
     var body: some View {
-        Label(title, systemImage: systemImage)
+        Label(LocalizedStringKey(title), systemImage: systemImage)
             .font(.caption.weight(.bold))
             .foregroundStyle(tint)
             .lineLimit(1)
@@ -2211,9 +2245,18 @@ struct PavbotArticleTagChip: View {
     let systemImage: String
     let tint: Color
     var accessibilityPrefix = "Tag"
+    var translatesAutomationText = false
 
     var body: some View {
-        Label(title, systemImage: systemImage)
+        Label {
+            if translatesAutomationText {
+                PavbotTranslatedAutomationText(title)
+            } else {
+                Text(LocalizedStringKey(title))
+            }
+        } icon: {
+            Image(systemName: systemImage)
+        }
             .font(.caption.weight(.semibold))
             .foregroundStyle(tint)
             .lineLimit(1)
@@ -2225,12 +2268,13 @@ struct PavbotArticleTagChip: View {
 }
 
 struct PavbotSourceCountBadge: View {
+    @Environment(AppLanguageStore.self) private var languageStore
     let count: Int
     let tint: Color
 
     var body: some View {
         if count > 0 {
-            Label("\(count) źr.", systemImage: "link")
+            Label(sourceCountLabel, systemImage: "link")
                 .font(.caption.weight(.semibold))
                 .foregroundStyle(tint)
                 .lineLimit(1)
@@ -2242,8 +2286,26 @@ struct PavbotSourceCountBadge: View {
         }
     }
 
+    private var sourceCountLabel: String {
+        switch languageStore.preference {
+        case .polish:
+            "\(count) źr."
+        case .english:
+            "\(count) src."
+        case .russian:
+            "\(count) ист."
+        }
+    }
+
     private var accessibilityLabel: String {
-        count == 1 ? "1 użyte źródło" : "\(count) użytych źródeł"
+        switch languageStore.preference {
+        case .polish:
+            count == 1 ? "1 użyte źródło" : "\(count) użytych źródeł"
+        case .english:
+            count == 1 ? "1 source used" : "\(count) sources used"
+        case .russian:
+            count == 1 ? "1 источник" : "\(count) источников"
+        }
     }
 }
 
@@ -2365,10 +2427,10 @@ struct PavbotActionRow: View {
                 .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 3) {
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.subheadline.weight(.semibold))
                     .foregroundStyle(.primary)
-                Text(subtitle)
+                Text(LocalizedStringKey(subtitle))
                     .font(.caption)
                     .foregroundStyle(.secondary)
                     .lineLimit(3)
@@ -2435,13 +2497,13 @@ struct MetricTile: View {
                 .font(.title2.weight(.semibold))
                 .monospacedDigit()
 
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .font(.caption)
                 .foregroundStyle(.secondary)
                 .lineLimit(1)
 
             if let subtitle, !subtitle.isEmpty {
-                Text(subtitle)
+                Text(LocalizedStringKey(subtitle))
                     .font(.caption2.weight(.medium))
                     .foregroundStyle(.tertiary)
                     .lineLimit(2)
@@ -2458,9 +2520,18 @@ struct StatusBadge: View {
     let text: String
     let systemImage: String
     var tint: Color = .accentColor
+    var translatesAutomationText = false
 
     var body: some View {
-        Label(text, systemImage: systemImage)
+        Label {
+            if translatesAutomationText {
+                PavbotTranslatedAutomationText(text)
+            } else {
+                Text(LocalizedStringKey(text))
+            }
+        } icon: {
+            Image(systemName: systemImage)
+        }
             .font(.caption.weight(.medium))
             .padding(.horizontal, 9)
             .padding(.vertical, 5)
@@ -2516,5 +2587,75 @@ extension ArtifactViewerKind {
 extension Int {
     var fileSizeLabel: String {
         ByteCountFormatter.string(fromByteCount: Int64(self), countStyle: .file)
+    }
+}
+
+struct PavbotTranslatedAutomationText: View {
+    @Environment(AppLanguageStore.self) private var languageStore
+    let sourceText: String
+
+    init(_ sourceText: String) {
+        self.sourceText = sourceText
+    }
+
+    var body: some View {
+        if let targetLanguageCode = languageStore.preference.translationTargetIdentifier,
+           !sourceText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty {
+            if #available(iOS 18.0, *) {
+                PavbotNativeAutomationTranslationText(
+                    sourceText: sourceText,
+                    targetLanguageCode: targetLanguageCode
+                )
+            } else {
+                Text(sourceText)
+            }
+        } else {
+            Text(sourceText)
+        }
+    }
+}
+
+@available(iOS 18.0, *)
+private struct PavbotNativeAutomationTranslationText: View {
+    let sourceText: String
+    let targetLanguageCode: String
+    @State private var translatedText = ""
+    @State private var translationConfiguration: TranslationSession.Configuration?
+    @State private var requestedKey = ""
+
+    private var displayText: String {
+        translatedText.isEmpty ? sourceText : translatedText
+    }
+
+    var body: some View {
+        Text(displayText)
+            .task(id: "\(sourceText)::\(targetLanguageCode)") {
+                prepareTranslationIfNeeded()
+            }
+            .translationTask(translationConfiguration) { session in
+                await translateAutomationText(using: session)
+            }
+    }
+
+    private func prepareTranslationIfNeeded() {
+        let key = "\(sourceText)::\(targetLanguageCode)"
+        guard requestedKey != key else { return }
+        requestedKey = key
+        translatedText = ""
+        translationConfiguration = TranslationSession.Configuration(
+            source: Locale.Language(identifier: "pl"),
+            target: Locale.Language(identifier: targetLanguageCode)
+        )
+    }
+
+    private func translateAutomationText(using session: TranslationSession) async {
+        do {
+            let response = try await session.translate(sourceText)
+            guard !Task.isCancelled else { return }
+            translatedText = response.targetText.trimmingCharacters(in: .whitespacesAndNewlines)
+        } catch {
+            guard !Task.isCancelled else { return }
+            translatedText = ""
+        }
     }
 }

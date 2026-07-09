@@ -23,15 +23,17 @@ struct ContentView: View {
                         bottomSafeArea: proxy.safeAreaInsets.bottom
                     )
                 }
+                .overlay {
+                    PavbotImagePreviewHost(imagePreviewStore: imagePreviewStore)
+                }
                 .overlay(alignment: .bottom) {
                     AudioPlaybackOverlayHost(
                         layoutStyle: layoutStyle,
                         bottomSafeArea: proxy.safeAreaInsets.bottom
                     )
+                    .ignoresSafeArea(.keyboard, edges: .bottom)
+                    .zIndex(AudioPlaybackBannerLayout.alwaysOnTopZIndex)
                 }
-        }
-        .overlay {
-            PavbotImagePreviewHost(imagePreviewStore: imagePreviewStore)
         }
         .sensoryFeedback(.selection, trigger: router.selectedTab) { oldValue, newValue in
             oldValue != newValue && haptics.isEnabled
@@ -117,13 +119,14 @@ private struct AudioPlaybackOverlayHost: View {
             AudioPlaybackBanner()
                 .padding(.bottom, AudioPlaybackBannerLayout.bottomClearance(for: layoutStyle, bottomSafeArea: bottomSafeArea))
                 .transition(.move(edge: .bottom).combined(with: .opacity))
-                .zIndex(10)
+                .zIndex(AudioPlaybackBannerLayout.alwaysOnTopZIndex)
         }
     }
 }
 
 private struct PavbotTabRootView: View {
     @Environment(AppRouter.self) private var router
+    @Environment(AppLanguageStore.self) private var languageStore
     @State private var selectedVisibleTab: AppTab = .today
 
     var body: some View {
@@ -134,7 +137,7 @@ private struct PavbotTabRootView: View {
                 WeatherBriefView()
             }
             .tabItem {
-                Label(AppTab.today.displayTitle, systemImage: AppTab.today.systemImage)
+                appTabLabel(title: AppTab.today.displayTitle, systemImage: AppTab.today.systemImage)
             }
             .tag(AppTab.today)
 
@@ -142,7 +145,7 @@ private struct PavbotTabRootView: View {
                 PulseDayView()
             }
             .tabItem {
-                Label(AppTab.pulseDay.displayTitle, systemImage: AppTab.pulseDay.systemImage)
+                appTabLabel(title: AppTab.pulseDay.displayTitle, systemImage: AppTab.pulseDay.systemImage)
             }
             .tag(AppTab.pulseDay)
 
@@ -150,7 +153,7 @@ private struct PavbotTabRootView: View {
                 JobsView()
             }
             .tabItem {
-                Label(AppTab.jobs.displayTitle, systemImage: AppTab.jobs.systemImage)
+                appTabLabel(title: AppTab.jobs.displayTitle, systemImage: AppTab.jobs.systemImage)
             }
             .tag(AppTab.jobs)
 
@@ -158,7 +161,7 @@ private struct PavbotTabRootView: View {
                 ResearchView()
             }
             .tabItem {
-                Label(AppTab.research.displayTitle, systemImage: AppTab.research.systemImage)
+                appTabLabel(title: AppTab.research.displayTitle, systemImage: AppTab.research.systemImage)
             }
             .tag(AppTab.research)
 
@@ -166,10 +169,11 @@ private struct PavbotTabRootView: View {
                 phoneSettingsTabContent
             }
             .tabItem {
-                Label(AppTab.settings.displayTitle, systemImage: AppTab.settings.systemImage)
+                appTabLabel(title: AppTab.settings.displayTitle, systemImage: AppTab.settings.systemImage)
             }
             .tag(AppTab.settings)
         }
+        .id("pavbot-tab-root-\(languageStore.preference.rawValue)")
         .onAppear {
             syncVisibleTabFromRouter()
         }
@@ -208,6 +212,14 @@ private struct PavbotTabRootView: View {
             SettingsView()
         }
     }
+
+    private func appTabLabel(title: String, systemImage: String) -> some View {
+        Label {
+            PavbotLocalizedText(title)
+        } icon: {
+            Image(systemName: systemImage)
+        }
+    }
 }
 
 private extension AppTab {
@@ -223,24 +235,34 @@ private extension AppTab {
 
 private struct PavbotSplitRootView: View {
     @Environment(AppRouter.self) private var router
+    @Environment(AppLanguageStore.self) private var languageStore
 
     var body: some View {
         NavigationSplitView {
             List(selection: selectedTabBinding) {
-                Label(AppTab.today.displayTitle, systemImage: AppTab.today.systemImage)
+                appTabLabel(title: AppTab.today.displayTitle, systemImage: AppTab.today.systemImage)
                     .tag(AppTab.today)
-                Label(AppTab.pulseDay.displayTitle, systemImage: AppTab.pulseDay.systemImage)
+                appTabLabel(title: AppTab.pulseDay.displayTitle, systemImage: AppTab.pulseDay.systemImage)
                     .tag(AppTab.pulseDay)
-                Label(AppTab.jobs.displayTitle, systemImage: AppTab.jobs.systemImage)
+                appTabLabel(title: AppTab.jobs.displayTitle, systemImage: AppTab.jobs.systemImage)
                     .tag(AppTab.jobs)
-                Label(AppTab.research.displayTitle, systemImage: AppTab.research.systemImage)
+                appTabLabel(title: AppTab.research.displayTitle, systemImage: AppTab.research.systemImage)
                     .tag(AppTab.research)
-                Label(AppTab.settings.displayTitle, systemImage: AppTab.settings.systemImage)
+                appTabLabel(title: AppTab.settings.displayTitle, systemImage: AppTab.settings.systemImage)
                     .tag(AppTab.settings)
             }
+            .id("pavbot-split-sidebar-\(languageStore.preference.rawValue)")
             .navigationTitle("Pavbot")
         } detail: {
             detail
+        }
+    }
+
+    private func appTabLabel(title: String, systemImage: String) -> some View {
+        Label {
+            PavbotLocalizedText(title)
+        } icon: {
+            Image(systemName: systemImage)
         }
     }
 

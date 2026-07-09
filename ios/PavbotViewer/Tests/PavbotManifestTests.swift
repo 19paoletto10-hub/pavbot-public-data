@@ -3426,6 +3426,24 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(source.contains(".accessibilityElement(children: .combine)"))
     }
 
+    func testAudioPlaybackBannerStaysAbovePreviewAndKeyboardOverlays() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let contentSource = try String(contentsOf: sourcesRoot.appendingPathComponent("ContentView.swift"))
+        let bannerSource = try String(contentsOf: sourcesRoot.appendingPathComponent("AudioPlaybackBanner.swift"))
+
+        XCTAssertTrue(bannerSource.contains("static let alwaysOnTopZIndex: Double"))
+        XCTAssertTrue(contentSource.contains(".zIndex(AudioPlaybackBannerLayout.alwaysOnTopZIndex)"))
+        XCTAssertTrue(contentSource.contains(".ignoresSafeArea(.keyboard, edges: .bottom)"))
+
+        let previewOverlay = try XCTUnwrap(contentSource.range(of: "PavbotImagePreviewHost(imagePreviewStore: imagePreviewStore)"))
+        let audioOverlay = try XCTUnwrap(contentSource.range(of: "AudioPlaybackOverlayHost("))
+        XCTAssertLessThan(previewOverlay.lowerBound, audioOverlay.lowerBound)
+    }
+
     func testAudioPlaybackSessionCarriesArticleDestinationForMiniPlayerRouting() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let sourcesRoot = testsURL
@@ -4042,6 +4060,182 @@ final class PavbotManifestTests: XCTestCase {
 
         AppAppearancePreference.light.save(to: defaults)
         XCTAssertEqual(AppAppearancePreference.load(from: defaults), .light)
+    }
+
+    func testAppLanguagePreferenceDefaultsToPolishAndPersistsTargetLanguages() throws {
+        let suiteName = "AppLanguageTests-\(UUID().uuidString)"
+        let defaults = try XCTUnwrap(UserDefaults(suiteName: suiteName))
+        defer { defaults.removePersistentDomain(forName: suiteName) }
+
+        XCTAssertEqual(AppLanguagePreference.load(from: defaults), .polish)
+        XCTAssertEqual(AppLanguagePreference.allCases.map(\.rawValue), ["pl", "en", "ru"])
+        XCTAssertEqual(AppLanguagePreference.polish.localeIdentifier, "pl")
+        XCTAssertEqual(AppLanguagePreference.english.localeIdentifier, "en")
+        XCTAssertEqual(AppLanguagePreference.russian.localeIdentifier, "ru")
+        XCTAssertNil(AppLanguagePreference.polish.translationTargetIdentifier)
+        XCTAssertEqual(AppLanguagePreference.english.translationTargetIdentifier, "en")
+        XCTAssertEqual(AppLanguagePreference.russian.translationTargetIdentifier, "ru")
+
+        AppLanguagePreference.russian.save(to: defaults)
+        XCTAssertEqual(AppLanguagePreference.load(from: defaults), .russian)
+
+        AppLanguagePreference.english.save(to: defaults)
+        XCTAssertEqual(AppLanguagePreference.load(from: defaults), .english)
+    }
+
+    func testAppLanguagePreferenceIsInjectedIntoRootLocale() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourceURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/PavbotViewerApp.swift")
+        let source = try String(contentsOf: sourceURL)
+
+        XCTAssertTrue(source.contains("@State private var language = AppLanguageStore()"))
+        XCTAssertTrue(source.contains(".environment(language)"))
+        XCTAssertTrue(source.contains(".environment(\\.locale, language.preference.locale)"))
+    }
+
+    func testSettingsExposeApplicationLanguagePicker() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let settingsURL = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views/SettingsView.swift")
+        let source = try String(contentsOf: settingsURL)
+
+        XCTAssertTrue(source.contains("@Environment(AppLanguageStore.self) private var languageStore"))
+        XCTAssertTrue(source.contains("PavbotReadingCard(title: \"Język aplikacji\""))
+        XCTAssertTrue(source.contains("SettingsDashboardCard(title: \"Język aplikacji\""))
+        XCTAssertTrue(source.contains("Picker(selection: $languageStore.preference)"))
+        XCTAssertTrue(source.contains("ForEach(AppLanguagePreference.allCases)"))
+        XCTAssertTrue(source.contains("Teksty automatyzacji w Pulsie Dnia i Przeglądzie są tłumaczone natywnie przez iOS."))
+    }
+
+    func testSettingsHeadersAppearanceModesAndTabsUseLocalizedKeys() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources")
+        let settingsSource = try String(contentsOf: sourcesRoot.appendingPathComponent("Views/SettingsView.swift"))
+        let contentSource = try String(contentsOf: sourcesRoot.appendingPathComponent("Views/ContentView.swift"))
+        let designSource = try String(contentsOf: sourcesRoot.appendingPathComponent("Views/PavbotDesign.swift"))
+
+        XCTAssertTrue(settingsSource.contains("Text(localizedSettingsValue(preference.title)).tag(preference)"))
+        XCTAssertTrue(settingsSource.contains("localizedSettingsValue(store.manifest == nil ? \"Brak\" : \"OK\")"))
+        XCTAssertTrue(settingsSource.contains("LabeledContent(\"Status\", value: localizedSettingsValue(notificationStatus))"))
+        XCTAssertTrue(settingsSource.contains("Text(LocalizedStringKey(mode.title)).tag(mode)"))
+        XCTAssertTrue(settingsSource.contains("Text(LocalizedStringKey(briefingNotificationMode.detail))"))
+        XCTAssertTrue(settingsSource.contains("Text(LocalizedStringKey(feature.title))"))
+        XCTAssertTrue(settingsSource.contains("Text(LocalizedStringKey(feature.summary))"))
+        XCTAssertTrue(settingsSource.contains("Text(LocalizedStringKey(title))"))
+        XCTAssertTrue(settingsSource.contains("Text(LocalizedStringKey(subtitle))"))
+        XCTAssertTrue(contentSource.contains("appTabLabel(title: AppTab.today.displayTitle"))
+        XCTAssertTrue(contentSource.contains("appTabLabel(title: AppTab.settings.displayTitle"))
+        XCTAssertTrue(contentSource.contains("@Environment(AppLanguageStore.self) private var languageStore"))
+        XCTAssertTrue(contentSource.contains(".id(\"pavbot-tab-root-\\(languageStore.preference.rawValue)\")"))
+        XCTAssertTrue(contentSource.contains(".id(\"pavbot-split-sidebar-\\(languageStore.preference.rawValue)\")"))
+        XCTAssertTrue(designSource.contains("Text(LocalizedStringKey(title))"))
+        XCTAssertTrue(designSource.contains("Text(LocalizedStringKey(subtitle))"))
+        XCTAssertFalse(designSource.contains("Text(title)\n                        .font(.headline.weight(.bold))"))
+        XCTAssertFalse(designSource.contains("\n                    Text(subtitle)\n                            .font(.callout)"))
+        XCTAssertTrue(designSource.contains("Text(LocalizedStringKey(text))"))
+    }
+
+    func testAutomationNewsViewsUseNativeTranslationForSelectedLanguage() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let designSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PavbotDesign.swift"))
+        let pulseSource = try String(contentsOf: sourcesRoot.appendingPathComponent("TodayLiveTopicsView.swift"))
+        let researchSource = try String(contentsOf: sourcesRoot.appendingPathComponent("ReportPackageViews.swift"))
+
+        XCTAssertTrue(designSource.contains("import Translation"))
+        XCTAssertTrue(designSource.contains("struct PavbotTranslatedAutomationText"))
+        XCTAssertTrue(designSource.contains("@Environment(AppLanguageStore.self) private var languageStore"))
+        XCTAssertTrue(designSource.contains("translationTargetIdentifier"))
+        XCTAssertTrue(designSource.contains("TranslationSession.Configuration("))
+        XCTAssertTrue(pulseSource.contains("PavbotTranslatedAutomationText(topic.title"))
+        XCTAssertTrue(pulseSource.contains("PavbotTranslatedAutomationText(topic.lead"))
+        XCTAssertTrue(researchSource.contains("PavbotTranslatedAutomationText(article.title"))
+        XCTAssertTrue(researchSource.contains("PavbotTranslatedAutomationText(article.lead"))
+        XCTAssertTrue(researchSource.contains("PavbotTranslatedAutomationText(text"))
+    }
+
+    func testTodayViewUsesNativeTranslationForWeatherWisdomAndRedditContent() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let todaySource = try String(contentsOf: sourcesRoot.appendingPathComponent("WeatherBriefView.swift"))
+        let designSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PavbotDesign.swift"))
+
+        XCTAssertTrue(designSource.contains("PavbotTranslatedAutomationText(title)"))
+        XCTAssertTrue(designSource.contains("PavbotTranslatedAutomationText(subtitle)"))
+        XCTAssertTrue(designSource.contains("PavbotTranslatedAutomationText(supportingText)"))
+        XCTAssertTrue(todaySource.contains("PavbotTranslatedAutomationText(entry.text)"))
+        XCTAssertTrue(todaySource.contains("PavbotTranslatedAutomationText(entry.context)"))
+        XCTAssertTrue(todaySource.contains("text: entry.reflectionText"))
+        XCTAssertTrue(todaySource.contains("PavbotTranslatedAutomationText(report.summary)"))
+        XCTAssertTrue(todaySource.contains("PavbotTranslatedAutomationText(report.weatherNarrativeRecommendation)"))
+        XCTAssertTrue(todaySource.contains("PavbotTranslatedAutomationText(item.title)"))
+        XCTAssertTrue(todaySource.contains("PavbotTranslatedAutomationText(item.caption)"))
+        XCTAssertTrue(todaySource.contains("@Environment(AppLanguageStore.self) private var languageStore"))
+    }
+
+    func testTodayAndReviewStaticUiCopyUsesLocalizedKeysAfterLanguageSwitch() throws {
+        let testsURL = URL(fileURLWithPath: #filePath)
+        let sourcesRoot = testsURL
+            .deletingLastPathComponent()
+            .deletingLastPathComponent()
+            .appendingPathComponent("Sources/Views")
+        let todaySource = try String(contentsOf: sourcesRoot.appendingPathComponent("WeatherBriefView.swift"))
+        let researchSource = try String(contentsOf: sourcesRoot.appendingPathComponent("ReportPackageViews.swift"))
+        let designSource = try String(contentsOf: sourcesRoot.appendingPathComponent("PavbotDesign.swift"))
+
+        XCTAssertTrue(designSource.contains("Text(LocalizedStringKey(insight.title))"))
+        XCTAssertTrue(designSource.contains("Label(LocalizedStringKey(label), systemImage: systemImage)"))
+        XCTAssertTrue(designSource.contains("Label(LocalizedStringKey(label), systemImage: systemImage)"))
+        XCTAssertTrue(todaySource.contains("Text(LocalizedStringKey(report.conditions.label))"))
+        XCTAssertTrue(todaySource.contains("PavbotLocalizedInterpolation(key: \"Lokalizacja: %@ · %@.\","))
+        XCTAssertTrue(todaySource.contains("PavbotRedditScheduleText(lastUpdate: digest.displayTime, nextUpdate: digest.nextRefreshLabel)"))
+        XCTAssertTrue(todaySource.contains("PavbotRedditIntervalBadge(hours: digest.refreshIntervalHours"))
+        XCTAssertTrue(todaySource.contains("Label(LocalizedStringKey(\"Dlaczego ciekawe/śmieszne\"), systemImage: \"sparkles\")"))
+        XCTAssertTrue(todaySource.contains("PavbotTranslatedAutomationText(highlight.summary)"))
+        XCTAssertTrue(todaySource.contains("PavbotTranslatedAutomationText(highlight.explanation)"))
+        XCTAssertTrue(researchSource.contains("Text(LocalizedStringKey(\"Przegląd\"))"))
+        XCTAssertTrue(researchSource.contains("StatusBadge(text: ReportPackageCopy.packageCountLabel(packageCount, language: languageStore.preference)"))
+        XCTAssertTrue(researchSource.contains("MetricTile(title: \"Artykuły\", value: \"\\(magazine.articleCount)\""))
+        XCTAssertTrue(researchSource.contains("value: ReportPackageCopy.yesNo(magazine.audioArtifact != nil, language: languageStore.preference)"))
+        XCTAssertTrue(researchSource.contains("PavbotTranslatedAutomationText(magazine.headline)"))
+        XCTAssertTrue(researchSource.contains("PavbotTranslatedAutomationText(section.title)"))
+        XCTAssertTrue(researchSource.contains("Text(LocalizedStringKey(\"Stan sekcji\"))"))
+        XCTAssertTrue(researchSource.contains("Label(LocalizedStringKey(\"Kontekst wydania\"), systemImage: \"text.quote\")"))
+        XCTAssertTrue(researchSource.contains("Text(LocalizedStringKey(title))"))
+        XCTAssertTrue(researchSource.contains("StatusBadge(text: article.section, systemImage: \"newspaper.fill\", tint: .orange, translatesAutomationText: true)"))
+    }
+
+    func testRedditScheduleFallsBackToFixedAutomationSlotsWhenPayloadOmitsNextRefresh() throws {
+        let payload = """
+        {
+          "id": "humor-2026-07-09-0030",
+          "title": "Reddit Radar",
+          "summary": "Krótki radar.",
+          "generatedAt": "2026-07-09T00:30:00+02:00",
+          "displayTime": "00:30",
+          "refreshIntervalHours": 2,
+          "items": [],
+          "source": "Codex Safari Reddit radar"
+        }
+        """.data(using: .utf8)!
+
+        let digest = try JSONDecoder.pavbot.decode(TodayHumorDigest.self, from: payload)
+
+        XCTAssertEqual(digest.nextRefreshLabel, "06:00")
     }
 
     func testHapticPreferenceDefaultsToEnabledAndPersists() throws {
@@ -5350,6 +5544,15 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertTrue(cardSource.contains("isShowingOriginal.toggle()"))
         XCTAssertTrue(cardSource.contains("originalBody"))
         XCTAssertTrue(cardSource.contains("Oryginalny komentarz"))
+        XCTAssertTrue(cardSource.contains("Tłumaczenie na polski"))
+        XCTAssertTrue(source.contains("import Translation"))
+        XCTAssertTrue(cardSource.contains("@available(iOS 18.0, *)"))
+        XCTAssertTrue(cardSource.contains("TodayHumorCommentTranslationView("))
+        XCTAssertTrue(cardSource.contains("@State private var translationConfiguration: TranslationSession.Configuration?"))
+        XCTAssertTrue(cardSource.contains("TranslationSession.Configuration("))
+        XCTAssertTrue(cardSource.contains("target: Locale.Language(identifier: targetLanguageCode)"))
+        XCTAssertTrue(cardSource.contains("private func translateComment(using session: TranslationSession) async"))
+        XCTAssertTrue(cardSource.contains("try await session.translate(sourceText)"))
         XCTAssertTrue(cardSource.contains(".frame(maxWidth: .infinity, alignment: .leading)"))
         XCTAssertTrue(cardSource.contains(".contentShape(RoundedRectangle(cornerRadius: 14, style: .continuous))"))
         XCTAssertTrue(cardSource.contains("rotation3DEffect"))
@@ -6944,7 +7147,7 @@ final class PavbotManifestTests: XCTestCase {
         XCTAssertFalse(reportSource.contains("Text(errorMessage)\n                    .font(.caption)\n                    .foregroundStyle(.red)"))
     }
 
-    func testProjectVersionIs26WithTimestampBuildNumber() throws {
+    func testProjectVersionDoesNotMutateSignedBundles() throws {
         let testsURL = URL(fileURLWithPath: #filePath)
         let projectYML = testsURL
             .deletingLastPathComponent()
@@ -6952,9 +7155,10 @@ final class PavbotManifestTests: XCTestCase {
             .appendingPathComponent("project.yml")
         let source = try String(contentsOf: projectYML)
 
-        XCTAssertTrue(source.contains("MARKETING_VERSION: \"2.6.3\""))
-        XCTAssertTrue(source.contains("BUILD_TIMESTAMP=\"$(date +%H%M%S)\""))
-        XCTAssertTrue(source.contains("BUILD_NUMBER=\"${BUILD_DATE}.${BUILD_TIMESTAMP}\""))
+        XCTAssertTrue(source.contains("MARKETING_VERSION: \"2.6.4\""))
+        XCTAssertFalse(source.contains("postBuildScripts:"))
+        XCTAssertFalse(source.contains("PlistBuddy -c \"Set :CFBundleVersion"))
+        XCTAssertFalse(source.contains("PlugIns/PavbotAudioActivityExtension.appex/Info.plist"))
         let buildNumbers = source
             .components(separatedBy: .newlines)
             .filter { $0.contains("CURRENT_PROJECT_VERSION:") }

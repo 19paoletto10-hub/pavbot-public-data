@@ -1,0 +1,649 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-09",
+  "runTime": "09:01",
+  "status": "Material update",
+  "headline": "Zdrowie, Iran i rynki",
+  "summary": "Poranny slot dokłada krajowe zmiany w ochronie zdrowia, korytarz życia na S8 i alert pogodowy, a światowy rdzeń nadal kręci się wokół Iranu, NATO i europejskiej polityki. W gospodarce RPP utrzymała stopy, a w tech wybijają się cięcia w Microsoft i decyzja USA wobec Anthropic.",
+  "items": [
+    {
+      "id": "pl-nawrocki-zelenski-patrioty-0901",
+      "section": "Polityka",
+      "title": "Nawrocki po spotkaniu z Zełenskim i Patriotach",
+      "lead": "Po rozmowie z Zełenskim prezydent odciął swoją odpowiedzialność od decyzji o Patriotach.",
+      "whatHappened": "Karol Nawrocki spotkał się z Wołodymyrem Zełenskim podczas szczytu NATO w Ankarze, a później skomentował przekazanie Ukrainie pocisków do systemu Patriot. Powiedział, że to nie była jego decyzja, tylko decyzja rządu.",
+      "keyFacts": [
+        "Spotkanie odbyło się podczas szczytu NATO w Ankarze.",
+        "Nawrocki powiedział, że kwestia Patriotów nie należała do niego.",
+        "Temat łączy Ukrainę, NATO i krajowy spór o kompetencje w bezpieczeństwie."
+      ],
+      "reactions": [
+        "Rząd i Pałac Prezydencki mogą dalej wymieniać komunikaty o odpowiedzialności za bezpieczeństwo.",
+        "Dla Ukrainy ważna jest spójność przekazu sojuszników."
+      ],
+      "whyItMatters": "To kluczowy sygnał o tym, jak Polska komunikuje wsparcie dla Ukrainy i kto bierze odpowiedzialność za decyzje wojskowe.",
+      "context": "To jeden z najważniejszych politycznych sygnałów poranka.",
+      "watchNext": [
+        "Czy rząd odpowie na komentarz prezydenta.",
+        "Czy pojawią się szczegóły o dalszym wsparciu dla Ukrainy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nawrocki spotkał się z Wołodymyrem Zełenskim",
+          "url": "https://tvn24.pl/swiat/szczyt-nato-w-turcji-karol-nawrocki-spotkal-sie-z-wolodymyrem-zelenskim-st9134283"
+        },
+        {
+          "title": "TVN24: Nawrocki o przekazaniu pocisków do Patriotów",
+          "url": "https://tvn24.pl/polska/spiecie-o-przekazanie-ukrainie-rakiet-do-systemu-patriot-karol-nawrocki-ta-decyzja-nie-byla-moja-st9134418"
+        },
+        {
+          "title": "NATO summits",
+          "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/nato-summits"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Ukraina",
+        "NATO",
+        "Bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-zmiany-zdrowie-0901",
+      "section": "Polska",
+      "title": "Minister zdrowia zapowiada pakiet zmian",
+      "lead": "Resort zdrowia chce większego bezpieczeństwa pacjentów i prostszych reguł finansowania.",
+      "whatHappened": "Minister zdrowia Jolanta Sobierańska-Grenda przedstawiła pakiet zmian w ochronie zdrowia, obejmujący większe bezpieczeństwo pacjentów, równy dostęp do świadczeń i bardziej przejrzyste finansowanie. W pakiecie jest też przyspieszona Centralna e-Rejestracja.",
+      "keyFacts": [
+        "Gov.pl potwierdza prezentację pakietu zmian 8 lipca 2026.",
+        "W planie są rozwiązania przeciw kominom płacowym i lekarskim spółkom.",
+        "Resort zapowiada też kary za brak przejrzystości w dostępie do świadczeń."
+      ],
+      "reactions": [
+        "Środowiska medyczne będą oceniać, czy zmiany da się wdrożyć bez chaosu.",
+        "Pacjenci mogą zyskać prostszy dostęp, jeśli projekt przejdzie dalej."
+      ],
+      "whyItMatters": "To realna próba przestawienia ochrony zdrowia na bardziej czytelne i kontrolowalne zasady.",
+      "context": "TVN24 umieścił ten pakiet obok innych krajowych tematów bezpieczeństwa i ekonomii.",
+      "watchNext": [
+        "Czy resort poda szczegółowy harmonogram prac legislacyjnych.",
+        "Czy pojawią się reakcje lekarzy i szpitali."
+      ],
+      "sources": [
+        {
+          "title": "gov.pl: Większe bezpieczeństwo pacjentów i pakiet zmian",
+          "url": "https://www.gov.pl/web/zdrowie/wieksze-bezpieczenstwo-pacjentow-rowny-dostep-do-swiadczen-i-przejrzyste-finansowanie-minister-zdrowia-przedstawila-pakiet-zmian-w-ochronie-zdrowia"
+        },
+        {
+          "title": "TVN24: Nawrocki spotkał się z Zełenskim, ministra zdrowia zapowiedziała zmiany",
+          "url": "https://tvn24.pl/polska/szesc-rzeczy-ktore-warto-wiedziec-w-czwartek-9-lipca-najwazniejsze-informacje-st9134629"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Zdrowie",
+        "Rząd",
+        "Ochrona zdrowia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-poznan-kontrolerzy-0901",
+      "section": "Polska",
+      "title": "Kontrola w Poznaniu skończyła się zatrzymaniem",
+      "lead": "Grupa próbowała wejść do biura pomocy Ukraińcom i została zatrzymana przez policję.",
+      "whatHappened": "W Poznaniu osoby przedstawiające się jako obywatele RP próbowały wejść do biura pomocy prawnej dla Ukraińców i je \"skontrolować\". Policja zatrzymała dwie osoby, a MSWiA publicznie skrytykowało incydent.",
+      "keyFacts": [
+        "Biuro nie wpuściło grupy do środka.",
+        "MSWiA podkreśliło, że nie ma przyzwolenia na hejt i zachowania motywowane narodowościowo.",
+        "Sprawa dotyczy napięć wokół pomocy Ukraińcom w Polsce."
+      ],
+      "reactions": [
+        "Możliwe są dalsze komentarze polityków i służb.",
+        "Temat wzmacnia debatę o mowie nienawiści wobec Ukraińców."
+      ],
+      "whyItMatters": "To sygnał, że napięcia wokół Ukrainy przekładają się na incydenty w terenie.",
+      "context": "To jeden z najmocniejszych krajowych tematów bezpieczeństwa społecznego w tym slocie.",
+      "watchNext": [
+        "Czy policja poda kwalifikację czynu.",
+        "Czy MSWiA lub miasto wystąpią z dodatkowym komunikatem."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zatrzymani 'kontrolerzy' biura pomagającego Ukraińcom",
+          "url": "https://tvn24.pl/polska/szesc-rzeczy-ktore-warto-wiedziec-w-czwartek-9-lipca-najwazniejsze-informacje-st9134629"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Ukraina",
+        "Policja",
+        "Społeczne"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-s8-korytarz-zycia-0901",
+      "section": "Polska",
+      "title": "Korytarz życia na S8 znów był problemem",
+      "lead": "Na S8 kierowcy utrudniali przejazd strażakom jadącym do kolizji.",
+      "whatHappened": "Na S8 w Wypędach doszło do kolizji, a strażacy mieli problem z utworzeniem korytarza życia, bo część kierowców reagowała klaksonami i wyzwiskami. TVN Warszawa opisał sytuację jako przykład złych nawyków na drodze.",
+      "keyFacts": [
+        "Źródłem jest aktualny materiał TVN Warszawa z 9 lipca 2026.",
+        "Korytarz życia był utrudniony mimo potrzeb służb.",
+        "W zdarzeniu brały udział pojazdy osobowe i tir."
+      ],
+      "reactions": [
+        "Służby mogą ponowić apel o przepisywanie drogi pojazdom ratunkowym.",
+        "Nagranie może stać się kolejnym przykładem złych nawyków kierowców."
+      ],
+      "whyItMatters": "Każde opóźnienie w dojeździe służb realnie obniża bezpieczeństwo na trasie.",
+      "context": "To najczytelniejszy krajowy sygnał bezpieczeństwa operacyjnego obok pogody.",
+      "watchNext": [
+        "Czy pojawią się kolejne nagrania z miejsca zdarzenia.",
+        "Czy ruch na S8 szybko wróci do normy."
+      ],
+      "sources": [
+        {
+          "title": "TVN Warszawa: Korytarz życia na S8",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/s8-wypedy-zamiast-tworzyc-korytarz-zycia-trabili-i-wyzywali-strazakow-st9134232"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Bezpieczeństwo",
+        "Drogowe",
+        "Warszawa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-iran-strikes-bbc-0901",
+      "section": "Świat",
+      "title": "USA znów uderzają w Iran",
+      "lead": "BBC pisze o kolejnych eksplozjach i nowych uderzeniach na południu Iranu.",
+      "whatHappened": "BBC podało, że USA przeprowadziły kolejne uderzenia na Iran, a w południowej części kraju słychać było eksplozje. CNN nadal prowadzi bieżący live updates z wojny Iran-USA.",
+      "keyFacts": [
+        "BBC World RSS opublikował tę informację 9 lipca 2026 o 05:21 GMT.",
+        "CNN World utrzymuje temat w formie live updates.",
+        "Sprawa pozostaje połączona z napięciem na Bliskim Wschodzie."
+      ],
+      "reactions": [
+        "Rynki i służby morskie będą reagować na każdy nowy komunikat.",
+        "To główny globalny risk item poranka."
+      ],
+      "whyItMatters": "Każda eskalacja wokół Iranu może wpływać na bezpieczeństwo regionalne i ceny energii.",
+      "context": "Ten wątek nadal dominuje w BBC i CNN.",
+      "watchNext": [
+        "Czy pojawi się oficjalny komunikat USA lub Iranu.",
+        "Czy ceny ropy i koszty transportu zareagują jeszcze dziś."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US launches more strikes on Iran",
+          "url": "https://www.bbc.co.uk/news/articles/cz75zjj5wp8o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Iran war live updates",
+          "url": "https://www.cnn.com/2026/07/09/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Iran",
+        "USA",
+        "Bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-sudan-icc-0901",
+      "section": "Świat",
+      "title": "ICC ma przełom w śledztwie ws. Sudanu",
+      "lead": "BBC opisuje ważny postęp w dochodzeniu dotyczącym zbrodni wojennych.",
+      "whatHappened": "BBC przekazało, że Międzynarodowy Trybunał Karny poinformował o przełomie w śledztwie dotyczącym zbrodni wojennych w Sudanie. To bardziej procesowy niż natychmiastowy operacyjnie temat, ale ważny dla prawa międzynarodowego.",
+      "keyFacts": [
+        "Źródłem jest BBC World RSS z 8 lipca 2026 wieczorem.",
+        "Sprawa dotyczy dokumentowania zbrodni w toczącym się konflikcie.",
+        "Temat pokazuje, że odpowiedzialność za wojny nadal trafia do sądów międzynarodowych."
+      ],
+      "reactions": [
+        "Może pojawić się dalszy nacisk na strony konfliktu i partnerów regionalnych.",
+        "To ważny kontrapunkt wobec bardziej gorących newsów militarnych."
+      ],
+      "whyItMatters": "Pokazuje, że obok Iranu wciąż żywe są duże sprawy odpowiedzialności za wojny.",
+      "context": "Daje równowagę między newsami militarnymi a prawnymi.",
+      "watchNext": [
+        "Czy ICC poda więcej szczegółów o przełomie.",
+        "Czy pojawią się reakcje państw regionu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: International court tells BBC of breakthrough in Sudan war crimes probe",
+          "url": "https://www.bbc.co.uk/news/articles/c9928zr2m5xo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Sudan",
+        "Prawo międzynarodowe",
+        "Bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-kyiv-strikes-nato-0901",
+      "section": "Świat",
+      "title": "Rosyjskie uderzenia na Kijów znów podnoszą stawkę",
+      "lead": "CNN opisuje ciężkie ataki na Kijów w przeddzień kluczowej dyplomacji NATO.",
+      "whatHappened": "CNN podał, że rosyjskie uderzenia na Kijów były wyjątkowo ciężkie tuż przed podróżą Trumpa na ważny szczyt NATO. Wątek łączy wojnę w Ukrainie z presją dyplomatyczną wokół sojuszu.",
+      "keyFacts": [
+        "Materiał CNN pochodzi z 5 lipca 2026.",
+        "Wątek łączy Ukrainę, Rosję i NATO.",
+        "Ataki pojawiły się w tym samym cyklu co debata o wsparciu sojuszników."
+      ],
+      "reactions": [
+        "Oczekuj kolejnych reakcji sojuszników.",
+        "Zwiększa się presja na spójny przekaz o obronie Ukrainy."
+      ],
+      "whyItMatters": "To jeden z najsilniejszych sygnałów wojny, bezpośrednio połączony z dyplomacją NATO.",
+      "context": "Wpisuje się w szerszą falę napięć wokół szczytu w Ankarze.",
+      "watchNext": [
+        "Czy NATO poda dodatkowe zobowiązania wobec Ukrainy.",
+        "Czy pojawi się oficjalna reakcja USA po atakach."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Deadly Russian strikes hammer Kyiv",
+          "url": "https://www.cnn.com/2026/07/05/europe/kyiv-ballistic-missile-attack-july-6-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Ukraina",
+        "Rosja",
+        "NATO"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pol-le-pen-court-0901",
+      "section": "Polityka",
+      "title": "Le Pen mimo przegranej apelacji dalej chce startować",
+      "lead": "CNN opisuje kolejny ruch Marine Le Pen po niekorzystnym wyroku.",
+      "whatHappened": "CNN podał, że Marine Le Pen zamierza ubiegać się o prezydenturę mimo przegranej apelacji sądowej. Temat łączy francuską skrajną prawicę, sądy i walkę o polityczne przetrwanie.",
+      "keyFacts": [
+        "Wątek dotyczy francuskiej skrajnej prawicy.",
+        "Sprawa łączy politykę i sądy.",
+        "To nadal gorący temat europejski."
+      ],
+      "reactions": [
+        "Francuska scena polityczna może wejść w kolejną fazę napięcia.",
+        "Komentarze prawicy i centrum będą kluczowe."
+      ],
+      "whyItMatters": "To ważne dla równowagi politycznej we Francji i całej UE.",
+      "context": "W europejskim feedzie to jeden z najbardziej rozpoznawalnych tematów dnia.",
+      "watchNext": [
+        "Czy Le Pen zbuduje nową linię kampanijną.",
+        "Czy francuskie sądy lub partie odpowiedzą na jej ruch."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Marine Le Pen to run for presidency despite losing court appeal",
+          "url": "https://www.cnn.com/2026/07/07/europe/marine-le-pen-france-court-ruling-intl"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Francja",
+        "UE",
+        "Sądy"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pol-farage-donations-0901",
+      "section": "Polityka",
+      "title": "Farage wraca do gry mimo finansowej burzy",
+      "lead": "CNN pisze, że Farage opuszcza parlament i szykuje się do reelekcji.",
+      "whatHappened": "CNN podał, że Nigel Farage rezygnuje z miejsca w parlamencie i zamierza wrócić do walki o reelekcję w cieniu kontrowersji wokół darowizn. To kolejny sygnał niestabilności brytyjskiej polityki.",
+      "keyFacts": [
+        "Dotyczy brytyjskiej prawicy populistycznej.",
+        "W tle są finanse i kampania.",
+        "Sprawa wpisuje się w szerszy europejski trend antyestablishmentowy."
+      ],
+      "reactions": [
+        "Reform i jego przeciwnicy będą próbować wykorzystać temat komunikacyjnie.",
+        "Wielka Brytania dostaje kolejny sygnał o niestabilności politycznej."
+      ],
+      "whyItMatters": "To ważne dla brytyjskiej sceny politycznej i jej wpływu na debatę europejską.",
+      "context": "Wspiera szerszy blok polityczny obok Le Pen.",
+      "watchNext": [
+        "Czy Farage ogłosi nową strategię kampanii.",
+        "Czy pojawią się dalsze pytania o darowizny."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Nigel Farage quits UK parliament amid financial donations controversy",
+          "url": "https://www.cnn.com/2026/07/07/uk/nigel-farage-reform-intl"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Wielka Brytania",
+        "Prawica",
+        "Wybory"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "sec-hormuz-vessels-0901",
+      "section": "Bezpieczeństwo",
+      "title": "Iran znów uderza w ruch morski przy Ormuzie",
+      "lead": "CNN pisze o ataku na trzy statki w pobliżu kluczowej cieśniny.",
+      "whatHappened": "CNN podaje, że Iran uderzył w trzy statki w pobliżu cieśniny Ormuz, gdy Trump przybył na szczyt NATO. To bezpośredni wątek bezpieczeństwa morskiego i energii.",
+      "keyFacts": [
+        "Cieśnina Ormuz jest kluczowa dla transportu ropy.",
+        "Wydarzenie może natychmiast odbić się na rynkach.",
+        "Temat łączy geopolitykę z logistyką morską."
+      ],
+      "reactions": [
+        "Armatorzy i ubezpieczyciele będą śledzić sytuację godzina po godzinie.",
+        "Możliwa jest dalsza eskalacja komunikatów z regionu."
+      ],
+      "whyItMatters": "Każdy incydent w Ormuzie ma znaczenie globalne, nie tylko regionalne.",
+      "context": "To jeden z najważniejszych punktów ryzyka dla rynku energii.",
+      "watchNext": [
+        "Czy pojawią się ograniczenia żeglugi.",
+        "Czy rynek ropy zareaguje na nowy poziom zagrożenia."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Iran strikes three vessels near Strait of Hormuz",
+          "url": "https://www.cnn.com/2026/07/07/middleeast/hormuz-tanker-iran-attack-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Iran",
+        "Morze",
+        "Ropa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sec-china-missile-test-0901",
+      "section": "Bezpieczeństwo",
+      "title": "Chiny testują pocisk z okrętu podwodnego",
+      "lead": "CNN opisuje rzadki test, który niepokoi państwa Pacyfiku.",
+      "whatHappened": "CNN opisał rzadki test chińskiego pocisku balistycznego odpalanego z okrętu podwodnego, który wzbudził niepokój państw Pacyfiku. To sygnał modernizacji chińskich zdolności odstraszania.",
+      "keyFacts": [
+        "Test odbił się szeroko w regionie Indo-Pacyfiku.",
+        "Taki ruch ma wymiar wojskowy i polityczny.",
+        "To ważny wskaźnik napięć strategicznych poza Europą."
+      ],
+      "reactions": [
+        "Sąsiedzi Chin mogą przyspieszyć własne plany obronne.",
+        "USA i sojusznicy potraktują to jako kolejną demonstrację siły."
+      ],
+      "whyItMatters": "To ważny wskaźnik napięć strategicznych w Indo-Pacyfiku.",
+      "context": "Dobrze równoważy europejsko-irański blok bezpieczeństwa.",
+      "watchNext": [
+        "Czy Pekin wyjaśni cel testu.",
+        "Czy pojawią się oficjalne reakcje państw regionu."
+      ],
+      "sources": [
+        {
+          "title": "CNN: China conducts rare submarine-launched ballistic missile test",
+          "url": "https://www.cnn.com/2026/07/06/china/china-tests-submarine-launched-ballistic-missile-intl-hnk-ml"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Chiny",
+        "Indo-Pacyfik",
+        "Wojsko"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gosp-rpp-rates-0901",
+      "section": "Gospodarka",
+      "title": "RPP zostawia stopy bez zmian",
+      "lead": "NBP potwierdził decyzję zgodną z oczekiwaniami rynku.",
+      "whatHappened": "Rada Polityki Pieniężnej utrzymała stopy procentowe bez zmian, a TVN24 podkreśla, że decyzja była zgodna z przewidywaniami analityków. To daje kredytobiorcom chwilę oddechu, ale nie zamyka tematu kolejnych ruchów.",
+      "keyFacts": [
+        "Komunikat podał Narodowy Bank Polski.",
+        "RPP ostatni raz obniżyła stopy w grudniu ubiegłego roku.",
+        "Temat nadal łączy inflację, raty kredytów i oczekiwania rynku."
+      ],
+      "reactions": [
+        "Kredytobiorcy zyskują chwilę oddechu.",
+        "Rynek będzie dalej słuchał sygnałów RPP o następnym ruchu."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na raty kredytów i oczekiwania inflacyjne.",
+      "context": "To jeden z najważniejszych krajowych sygnałów finansowych poranka.",
+      "watchNext": [
+        "Czy RPP zasygnalizuje kolejne cięcia.",
+        "Czy analitycy zmienią prognozy dla kredytów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Stopy procentowe w lipcu 2026 roku. Jest decyzja RPP",
+          "url": "https://tvn24.pl/biznes/z-kraju/stopy-procentowe-w-lipcu-2026-roku-jest-decyzja-rpp-st9133190"
+        },
+        {
+          "title": "NBP: komunikat RPP",
+          "url": "https://nbp.pl/"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "NBP",
+        "Stopy procentowe",
+        "Kredyty"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gosp-airline-costs-0901",
+      "section": "Gospodarka",
+      "title": "Linie lotnicze płacą więcej przez konflikt",
+      "lead": "TVN24 pokazuje skok kosztów lotniczych w USA.",
+      "whatHappened": "TVN24 opisał mocny wzrost wydatków linii lotniczych w USA w maju, wiążąc go z kosztami paliwa i konfliktem. To pokazuje, jak geopolityka przenosi się na transport i ceny.",
+      "keyFacts": [
+        "Wydatki przekroczyły 6,66 mld dolarów.",
+        "Wzrost rok do roku był bardzo wysoki.",
+        "Temat łączy rynek lotniczy z geopolityką."
+      ],
+      "reactions": [
+        "Linie mogą próbować przerzucać część kosztów na pasażerów.",
+        "Rynek paliw lotniczych pozostaje wrażliwy na konflikt."
+      ],
+      "whyItMatters": "To szybki przykład, jak wojna i paliwa uderzają w koszty transportu.",
+      "context": "Dobry gospodarczy kontrapunkt dla Iranu i Ormuzu.",
+      "watchNext": [
+        "Czy kolejne raporty potwierdzą utrzymanie presji kosztowej.",
+        "Czy przewoźnicy zaczną aktualizować prognozy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ogromne wydatki linii lotniczych. To wpływ konfliktu",
+          "url": "https://tvn24.pl/biznes/ze-swiata/wydatki-linii-lotniczych-usa-przekroczono-szesc-miliardow-dolarow-w-maju-st9134645"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Lotnictwo",
+        "Paliwa",
+        "Rynki"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-microsoft-xbox-layoffs-0901",
+      "section": "Technologia",
+      "title": "Microsoft tnie etaty, w tym w Xbox",
+      "lead": "CNN podaje o dużej redukcji zatrudnienia w big tech.",
+      "whatHappened": "CNN podał, że Microsoft zwalnia około 4 800 osób, w tym w Xbox. To jedna z większych redukcji w tym cyklu i ważny sygnał dla rynku technologicznego.",
+      "keyFacts": [
+        "Cięcia dotykają także działu gamingowego.",
+        "To jedna z większych redukcji w big tech w tym cyklu.",
+        "Rynek pracy w tech pozostaje pod presją kosztową."
+      ],
+      "reactions": [
+        "Inwestorzy będą to czytać jako sygnał kontroli kosztów.",
+        "Pracownicy i partnerzy mogą spodziewać się kolejnych cięć lub restrukturyzacji."
+      ],
+      "whyItMatters": "To ważny sygnał dla całego rynku technologicznego.",
+      "context": "To jeden z najmocniejszych tech-newsów obecnego slota.",
+      "watchNext": [
+        "Czy Microsoft poda szerszy plan restrukturyzacji.",
+        "Czy inne firmy big tech pójdą podobnym tropem."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Microsoft axes about 4,800 jobs, including major cuts to Xbox",
+          "url": "https://www.cnn.com/2026/07/08/tech/microsoft-layoffs-xbox"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "Microsoft",
+        "Xbox",
+        "Rynek pracy"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "tech-anthropic-export-control-0901",
+      "section": "Technologia",
+      "title": "Biały Dom luzuje ograniczenia wobec Anthropic",
+      "lead": "CNN pisze o zmianie kursu USA wobec najważniejszych modeli AI.",
+      "whatHappened": "CNN opisał decyzję Białego Domu o zniesieniu kontroli eksportowych, które wcześniej ograniczały dostęp Anthropic do jego najbardziej zaawansowanych modeli. To ważny sygnał dla regulacji AI i polityki przemysłowej USA.",
+      "keyFacts": [
+        "Sprawa dotyczy regulacji technologii AI.",
+        "Decyzja USA wpływa na konkurencję w modelach.",
+        "Temat łączy politykę przemysłową z bezpieczeństwem technologicznym."
+      ],
+      "reactions": [
+        "Rynek AI może to odczytać jako ulgę regulacyjną.",
+        "Konkurenci będą analizować, czy USA zmieniają kurs."
+      ],
+      "whyItMatters": "To ważny sygnał, że regulacje AI nadal są kształtowane politycznie.",
+      "context": "Dobry drugi tech-kafelek obok cięć w Microsoft.",
+      "watchNext": [
+        "Czy pojawią się podobne decyzje wobec innych firm AI.",
+        "Czy regulatorzy odpowiedzą na ten ruch."
+      ],
+      "sources": [
+        {
+          "title": "CNN: White House lifts export control on Anthropic",
+          "url": "https://www.cnn.com/2026/06/30/tech/anthropic-export-control-ban-lifted-white-house"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "AI",
+        "USA",
+        "Regulacje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "alerty-imgw-burze-0901",
+      "section": "Alerty",
+      "title": "IMGW ostrzega przed burzami i silnym deszczem",
+      "lead": "Północny wschód kraju wchodzi w trudniejszy pogodowo slot.",
+      "whatHappened": "TVN24 i IMGW ostrzegają przed burzami z silnym deszczem w północno-wschodniej Polsce. Warunki są spójne z chłodniejszą, niestabilną aurą z tygodniowej prognozy IMGW.",
+      "keyFacts": [
+        "Ostrzeżenia pierwszego stopnia obejmują kilka województw.",
+        "Ryzyko dotyczy opadów, burz i lokalnych utrudnień.",
+        "Warunki pogodowe są zgodne z tygodniową prognozą IMGW."
+      ],
+      "reactions": [
+        "Służby i kierowcy powinni przygotować się na trudne warunki.",
+        "To nadal żywy alert operacyjny, nie tylko prognoza."
+      ],
+      "whyItMatters": "Bezpośrednio wpływa na transport, bezpieczeństwo i codzienne funkcjonowanie.",
+      "context": "To naturalne domknięcie poranka po materiale o anomalii temperatury.",
+      "watchNext": [
+        "Czy IMGW zaktualizuje ostrzeżenia.",
+        "Czy pogoda pogorszy się również poza północnym wschodem."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Uwaga na burze z silnym deszczem. Ostrzeżenia IMGW",
+          "url": "https://tvn24.pl/tvnmeteo/polska/pogoda-w-polsce-uwaga-na-burze-z-silnym-deszczem-ostrzezenia-imgw-st9134639"
+        },
+        {
+          "title": "IMGW-PIB: prognoza pogody na tydzień 02.07-09.07.2026",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-02-07-2026-09-07-2026/"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Pogoda",
+        "IMGW",
+        "Burze"
+      ],
+      "priority": "high"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24: Najnowsze",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "TVN24: Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24: Świat",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24: Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24: TVN Warszawa",
+      "url": "https://tvn24.pl/tvnwarszawa"
+    },
+    {
+      "title": "TVN24: TVN Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "CNN World live Iran",
+      "url": "https://www.cnn.com/2026/07/09/world/live-news/iran-war-trump"
+    },
+    {
+      "title": "gov.pl: Ministerstwo Zdrowia",
+      "url": "https://www.gov.pl/web/zdrowie"
+    },
+    {
+      "title": "IMGW-PIB",
+      "url": "https://imgw.pl/"
+    },
+    {
+      "title": "NATO summits",
+      "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/nato-summits"
+    }
+  ]
+}

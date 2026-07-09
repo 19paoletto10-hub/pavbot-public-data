@@ -143,6 +143,8 @@
 		3F2AEF493B65E3050003DA5E /* ArtifactNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactNotificationService.swift; sourceTree = "<group>"; };
 		40135DE56B852E3461575FEF /* SavedResearchArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedResearchArticle.swift; sourceTree = "<group>"; };
 		4124E2CF7A4FCEC236E58FBE /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
+		41AF4E5E3CC14F5DAAF28001 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		41AF4E5E3CC14F5DAAF28002 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41EEB32A16C7FA3A3E684630 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		46AC5FA30428A69116483128 /* PavbotAudioActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PavbotAudioActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A8E6CA4203600F59D8F903F /* PavbotAudioActivityWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotAudioActivityWidget.swift; sourceTree = "<group>"; };
@@ -427,7 +429,6 @@
 				DACFDCC0923B3351EA2A538A /* Resources */,
 				CCBD74AEB3F92DA17FE7593C /* Frameworks */,
 				C8CD2220EEB4ABCD5BE9974E /* Embed Foundation Extensions */,
-				DA697C8E230CD8DF706F03F8 /* Set Dynamic Build Number */,
 			);
 			buildRules = (
 			);
@@ -502,6 +503,8 @@
 			knownRegions = (
 				Base,
 				pl,
+				en,
+				ru,
 			);
 			mainGroup = 97730D03CD2378087F9B345E;
 			minimizedProjectReferenceProxies = 1;
@@ -531,30 +534,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		DA697C8E230CD8DF706F03F8 /* Set Dynamic Build Number */ = {
-			isa = PBXShellScriptBuildPhase;
-			alwaysOutOfDate = 1;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"$(TARGET_BUILD_DIR)/$(INFOPLIST_PATH)",
-				"$(TARGET_BUILD_DIR)/$(WRAPPER_NAME)/PlugIns/PavbotAudioActivityExtension.appex/Info.plist",
-			);
-			name = "Set Dynamic Build Number";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "set -euo pipefail\nif [ -n \"${PAVBOT_BUILD_NUMBER:-}\" ]; then\n  BUILD_NUMBER=\"$PAVBOT_BUILD_NUMBER\"\nelse\n  BUILD_DATE=\"$(date +%y%m%d)\"\n  BUILD_TIMESTAMP=\"$(date +%H%M%S)\"\n  BUILD_NUMBER=\"${BUILD_DATE}.${BUILD_TIMESTAMP}\"\nfi\ninvalid_build_number() {\n  echo \"error: CFBundleVersion '$BUILD_NUMBER' must contain one to three period-separated numeric components\"\n  exit 1\n}\ncase \"$BUILD_NUMBER\" in\n  ''|*[!0-9.]*|.*|*..*|*.) invalid_build_number ;;\nesac\nCOMPONENT_COUNT=\"$(printf '%s' \"$BUILD_NUMBER\" | awk -F '[.]' '{print NF}')\"\nFIRST_COMPONENT=\"${BUILD_NUMBER%%.*}\"\nif [ \"$FIRST_COMPONENT\" = \"0\" ] || [ \"$COMPONENT_COUNT\" -gt 3 ]; then\n  invalid_build_number\nfi\nset_build_number() {\n  local plist_path=\"$1\"\n  if [ -f \"$plist_path\" ]; then\n    /usr/libexec/PlistBuddy -c \"Set :CFBundleVersion $BUILD_NUMBER\" \"$plist_path\"\n    echo \"Set CFBundleVersion to $BUILD_NUMBER in $plist_path\"\n  fi\n}\nAPP_INFO_PLIST=\"${TARGET_BUILD_DIR}/${INFOPLIST_PATH}\"\nEXTENSION_INFO_PLIST=\"${TARGET_BUILD_DIR}/${WRAPPER_NAME}/PlugIns/PavbotAudioActivityExtension.appex/Info.plist\"\nset_build_number \"$APP_INFO_PLIST\"\nset_build_number \"$EXTENSION_INFO_PLIST\"\nif [ ! -f \"$APP_INFO_PLIST\" ]; then\n  echo \"warning: Info.plist not found at $APP_INFO_PLIST\"\nfi\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		43D760CB67E11A2182AA0C68 /* Sources */ = {
@@ -668,6 +647,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				4124E2CF7A4FCEC236E58FBE /* pl */,
+				41AF4E5E3CC14F5DAAF28001 /* en */,
+				41AF4E5E3CC14F5DAAF28002 /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -718,7 +699,7 @@
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 260708.225332;
+				CURRENT_PROJECT_VERSION = 260709.040728;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -738,7 +719,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = PavbotAudioActivityExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 260708.225332;
+				CURRENT_PROJECT_VERSION = 260709.040728;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = AudioActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -809,7 +790,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 2.6.3;
+				MARKETING_VERSION = 2.6.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -828,7 +809,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = PavbotAudioActivityExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 260708.225332;
+				CURRENT_PROJECT_VERSION = 260709.040728;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = AudioActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -893,7 +874,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 2.6.3;
+				MARKETING_VERSION = 2.6.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -914,7 +895,7 @@
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 260708.225332;
+				CURRENT_PROJECT_VERSION = 260709.040728;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (

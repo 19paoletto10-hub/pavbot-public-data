@@ -16,6 +16,72 @@ enum ReportPackageCopy {
     static let latestMetricTitle = "Najnowszy"
     static let latestBadgeTitle = "Najnowsze"
     static let filesLabel = "plików"
+
+    static func packageCountLabel(_ count: Int, language: AppLanguagePreference = .polish) -> String {
+        switch language {
+        case .polish:
+            "\(count) pak."
+        case .english:
+            "\(count) pkg."
+        case .russian:
+            "\(count) пак."
+        }
+    }
+
+    static func savedCountLabel(_ count: Int, language: AppLanguagePreference = .polish) -> String {
+        switch language {
+        case .polish:
+            "\(count) zapis."
+        case .english:
+            "\(count) saved"
+        case .russian:
+            "\(count) сохр."
+        }
+    }
+
+    static func editionCountLabel(_ count: Int, language: AppLanguagePreference = .polish) -> String {
+        switch language {
+        case .polish:
+            "\(count) wydań"
+        case .english:
+            "\(count) editions"
+        case .russian:
+            "\(count) изд."
+        }
+    }
+
+    static func podcastTopicCountLabel(_ count: Int, language: AppLanguagePreference = .polish) -> String {
+        switch language {
+        case .polish:
+            "\(count) tematów podcastu"
+        case .english:
+            "\(count) podcast topics"
+        case .russian:
+            "\(count) тем подкаста"
+        }
+    }
+
+    static func fileCountLabel(_ count: Int, language: AppLanguagePreference = .polish) -> String {
+        switch language {
+        case .polish:
+            "\(count) plików"
+        case .english:
+            "\(count) files"
+        case .russian:
+            "\(count) файлов"
+        }
+    }
+
+    static func yesNo(_ value: Bool, language: AppLanguagePreference = .polish) -> String {
+        switch (value, language) {
+        case (true, .polish): "Tak"
+        case (false, .polish): "Brak"
+        case (true, .english): "Yes"
+        case (false, .english): "None"
+        case (true, .russian): "Да"
+        case (false, .russian): "Нет"
+        }
+    }
 }
 
 struct ResearchLoadRequest: Hashable {
@@ -455,6 +521,7 @@ struct ResearchView: View {
 }
 
 private struct ResearchRunPicker: View {
+    @Environment(AppLanguageStore.self) private var languageStore
     let topic: ReportTopicKind
     let packages: [TopicReportPackage]
     @Binding var selectedReportDay: String?
@@ -477,14 +544,21 @@ private struct ResearchRunPicker: View {
     }
 
     private var daySummary: String {
-        recentReportDays.count == 1 ? "Ostatni dzień" : "Ostatnie \(recentReportDays.count) dni"
+        switch languageStore.preference {
+        case .polish:
+            recentReportDays.count == 1 ? "Ostatni dzień" : "Ostatnie \(recentReportDays.count) dni"
+        case .english:
+            recentReportDays.count == 1 ? "Last day" : "Last \(recentReportDays.count) days"
+        case .russian:
+            recentReportDays.count == 1 ? "Последний день" : "Последние \(recentReportDays.count) дн."
+        }
     }
 
     var body: some View {
         if shouldShowPicker {
             VStack(alignment: .leading, spacing: 10) {
                 HStack(spacing: 8) {
-                    Label("Przebieg", systemImage: "clock.arrow.circlepath")
+                    Label(LocalizedStringKey("Przebieg"), systemImage: "clock.arrow.circlepath")
                         .font(.caption.weight(.bold))
                         .foregroundStyle(topic.tint)
                         .textCase(.uppercase)
@@ -511,7 +585,7 @@ private struct ResearchRunPicker: View {
                                     )
                                 }
                                 .buttonStyle(.plain)
-                                .accessibilityLabel("Pokaż przebiegi z dnia \(day)")
+                                .accessibilityLabel(Text(LocalizedStringKey("Pokaż przebiegi z wybranego dnia")))
                             }
                         }
                         .padding(.vertical, 2)
@@ -529,11 +603,12 @@ private struct ResearchRunPicker: View {
                                     ResearchRunChip(
                                         package: package,
                                         isSelected: package.id == selectedPackageID,
-                                        tint: topic.tint
+                                        tint: topic.tint,
+                                        language: languageStore.preference
                                     )
                                 }
                                 .buttonStyle(.plain)
-                                .accessibilityLabel("Wybierz przebieg \(package.displayDate)")
+                                .accessibilityLabel(Text(LocalizedStringKey("Wybierz przebieg")))
                             }
                         }
                         .padding(.vertical, 2)
@@ -595,6 +670,7 @@ private struct ResearchRunChip: View {
     let package: TopicReportPackage
     let isSelected: Bool
     let tint: Color
+    let language: AppLanguagePreference
 
     var body: some View {
         HStack(spacing: 7) {
@@ -604,7 +680,7 @@ private struct ResearchRunChip: View {
                 .frame(width: 16, height: 16)
 
             VStack(alignment: .leading, spacing: 2) {
-                Text(title)
+                Text(LocalizedStringKey(title))
                     .font(.caption.weight(.bold))
                     .foregroundStyle(isSelected ? tint : .primary)
                     .lineLimit(1)
@@ -629,7 +705,7 @@ private struct ResearchRunChip: View {
     }
 
     private var subtitle: String {
-        let fileCount = "\(package.artifacts.count) \(ReportPackageCopy.filesLabel)"
+        let fileCount = ReportPackageCopy.fileCountLabel(package.artifacts.count, language: language)
         if let time = clean(package.time) {
             return "\(time) · \(fileCount)"
         }
@@ -660,6 +736,7 @@ private struct ResearchRunChip: View {
 }
 
 private struct ResearchLibraryHeader: View {
+    @Environment(AppLanguageStore.self) private var languageStore
     let topic: ReportTopicKind
     let packageCount: Int
     let savedCount: Int
@@ -678,11 +755,11 @@ private struct ResearchLibraryHeader: View {
                     .accessibilityHidden(true)
 
                 VStack(alignment: .leading, spacing: 7) {
-                    Text("Przegląd")
+                    Text(LocalizedStringKey("Przegląd"))
                         .font(.title2.weight(.bold))
-                    Text(layout.usesDashboardLayout
+                    Text(LocalizedStringKey(layout.usesDashboardLayout
                         ? "Raporty, magazyny i zapisane artykuły w newsroomowym układzie."
-                        : "Najpierw konkretne newsy, potem pełny kontekst wydania.")
+                        : "Najpierw konkretne newsy, potem pełny kontekst wydania."))
                         .font(.callout)
                         .foregroundStyle(.secondary)
                         .lineLimit(2)
@@ -690,8 +767,8 @@ private struct ResearchLibraryHeader: View {
 
                     HStack(spacing: 8) {
                         StatusBadge(text: topic.title, systemImage: topic.systemImage, tint: topic.tint)
-                        StatusBadge(text: "\(packageCount) pak.", systemImage: "shippingbox.fill", tint: .blue)
-                        StatusBadge(text: "\(savedCount) zapis.", systemImage: "bookmark.fill", tint: .purple)
+                        StatusBadge(text: ReportPackageCopy.packageCountLabel(packageCount, language: languageStore.preference), systemImage: "shippingbox.fill", tint: .blue)
+                        StatusBadge(text: ReportPackageCopy.savedCountLabel(savedCount, language: languageStore.preference), systemImage: "bookmark.fill", tint: .purple)
                         if isRefreshing {
                             StatusBadge(text: "Odświeżam", systemImage: "arrow.clockwise", tint: .blue)
                         }
@@ -1175,6 +1252,7 @@ private struct MobileNewsHero: View {
     @Environment(ManifestStore.self) private var store
     @Environment(AudioPlaybackService.self) private var audioPlayback
     @Environment(PavbotHaptics.self) private var haptics
+    @Environment(AppLanguageStore.self) private var languageStore
 
     let magazine: MobileNewsMagazine
     let packageCount: Int
@@ -1204,7 +1282,7 @@ private struct MobileNewsHero: View {
                         .font(.footnote.weight(.semibold))
                         .foregroundStyle(.secondary)
                         .textCase(.uppercase)
-                    Text(magazine.headline)
+                    PavbotTranslatedAutomationText(magazine.headline)
                         .font(.title2.weight(.bold))
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -1235,7 +1313,7 @@ private struct MobileNewsHero: View {
             HStack(spacing: 10) {
                 MetricTile(title: "Artykuły", value: "\(magazine.articleCount)", systemImage: "doc.text.fill", tint: .orange)
                 MetricTile(title: "Źródła", value: "\(magazine.sourceCount)", systemImage: "link.circle.fill", tint: .blue)
-                MetricTile(title: "Audio", value: magazine.audioArtifact == nil ? "Brak" : "Tak", systemImage: "waveform", tint: .purple)
+                MetricTile(title: "Audio", value: ReportPackageCopy.yesNo(magazine.audioArtifact != nil, language: languageStore.preference), systemImage: "waveform", tint: .purple)
             }
 
             HStack(spacing: 8) {
@@ -1244,14 +1322,14 @@ private struct MobileNewsHero: View {
                     StatusBadge(text: "PDF", systemImage: "doc.richtext.fill", tint: .red)
                 }
                 if packageCount > 1 {
-                    StatusBadge(text: "\(packageCount) wydań", systemImage: "calendar", tint: .gray)
+                    StatusBadge(text: ReportPackageCopy.editionCountLabel(packageCount, language: languageStore.preference), systemImage: "calendar", tint: .gray)
                 }
             }
 
             DisclosureGroup(isExpanded: $isContextExpanded) {
                 VStack(alignment: .leading, spacing: 10) {
                     ForEach(Array(magazine.leadParagraphs.enumerated()), id: \.offset) { index, paragraph in
-                        Text(paragraph)
+                        PavbotTranslatedAutomationText(paragraph)
                             .font(index == 0 ? .body.weight(.semibold) : .callout)
                             .foregroundStyle(index == 0 ? .primary : .secondary)
                             .lineSpacing(4)
@@ -1260,7 +1338,7 @@ private struct MobileNewsHero: View {
                 }
                 .padding(.top, 8)
             } label: {
-                Label("Kontekst wydania", systemImage: "text.quote")
+                Label(LocalizedStringKey("Kontekst wydania"), systemImage: "text.quote")
                     .font(.caption.weight(.bold))
                     .foregroundStyle(.orange)
                     .textCase(.uppercase)
@@ -1310,14 +1388,14 @@ private struct MobileNewsSectionBlock: View {
                     .frame(width: 36, height: 36)
                     .background(Color.orange.opacity(0.12), in: RoundedRectangle(cornerRadius: 10, style: .continuous))
                 VStack(alignment: .leading, spacing: 3) {
-                    Text(section.title)
+                    PavbotTranslatedAutomationText(section.title)
                         .font(.headline.weight(.bold))
                     if let summary = section.displaySummary {
-                        Text("Stan sekcji")
+                        Text(LocalizedStringKey("Stan sekcji"))
                             .font(.caption2.weight(.bold))
                             .foregroundStyle(.orange)
                             .textCase(.uppercase)
-                        Text(summary)
+                        PavbotTranslatedAutomationText(summary)
                             .font(.subheadline)
                             .foregroundStyle(.secondary)
                             .fixedSize(horizontal: false, vertical: true)
@@ -1441,9 +1519,7 @@ private struct MobileNewsArticleSpeechActionHost: View {
 
                     Spacer()
 
-                    Text("\(article.sources.count) źr.")
-                        .font(.caption.weight(.semibold))
-                        .foregroundStyle(.secondary)
+                    PavbotSourceCountBadge(count: article.sources.count, tint: .secondary)
                 }
                 .padding(.horizontal, 4)
             }
@@ -1826,11 +1902,11 @@ private struct MobileNewsArticleReader: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 18) {
                     VStack(alignment: .leading, spacing: 13) {
-                        StatusBadge(text: article.section, systemImage: "newspaper.fill", tint: .orange)
-                        Text(article.title)
+                        StatusBadge(text: article.section, systemImage: "newspaper.fill", tint: .orange, translatesAutomationText: true)
+                        PavbotTranslatedAutomationText(article.title)
                             .font(.title2.weight(.bold))
                             .fixedSize(horizontal: false, vertical: true)
-                        Text(article.lead)
+                        PavbotTranslatedAutomationText(article.lead)
                             .font(.headline)
                             .foregroundStyle(.secondary)
                             .lineSpacing(4)
@@ -1851,7 +1927,7 @@ private struct MobileNewsArticleReader: View {
 
                     if !article.sources.isEmpty {
                         VStack(alignment: .leading, spacing: 10) {
-                            Text("Źródła")
+                            Text(LocalizedStringKey("Źródła"))
                                 .font(.headline.weight(.semibold))
                             ForEach(article.sources) { source in
                                 if let url = URL(string: source.url) {
@@ -2017,7 +2093,7 @@ private struct MobileNewsTextSection: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 9) {
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .font(.caption.weight(.bold))
                 .foregroundStyle(.secondary)
                 .textCase(.uppercase)
@@ -2027,7 +2103,7 @@ private struct MobileNewsTextSection: View {
                         .fill(Color.orange)
                         .frame(width: 5, height: 5)
                         .padding(.top, 7)
-                    Text(item)
+                    PavbotTranslatedAutomationText(item)
                         .font(.callout)
                         .foregroundStyle(.primary)
                         .lineSpacing(3)
@@ -2044,11 +2120,11 @@ private struct MobileNewsTextBlock: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .font(.caption.weight(.bold))
                 .foregroundStyle(.secondary)
                 .textCase(.uppercase)
-            Text(text)
+            PavbotTranslatedAutomationText(text)
                 .font(.callout)
                 .lineSpacing(4)
                 .fixedSize(horizontal: false, vertical: true)
@@ -2083,6 +2159,7 @@ private struct MobileNewsReaderAddOns: View {
 }
 
 private struct ResearchIssueHero: View {
+    @Environment(AppLanguageStore.self) private var languageStore
     let issue: ResearchNewsIssue
     let presentation: ResearchIssuePresentation
     let packageCount: Int
@@ -2097,7 +2174,7 @@ private struct ResearchIssueHero: View {
                         .font(.footnote.weight(.semibold))
                         .foregroundStyle(.secondary)
                         .textCase(.uppercase)
-                    Text(presentation.title)
+                    PavbotTranslatedAutomationText(presentation.title)
                         .font(.title2.weight(.bold))
                         .fixedSize(horizontal: false, vertical: true)
                 }
@@ -2117,7 +2194,7 @@ private struct ResearchIssueHero: View {
             HStack(spacing: 10) {
                 MetricTile(title: "Newsy", value: "\(issue.articles.count)", systemImage: "doc.text.fill", tint: issue.topic.tint)
                 MetricTile(title: "Źródła", value: "\(issue.sourceCount)", systemImage: "link.circle.fill", tint: .blue)
-                MetricTile(title: "PDF", value: issue.hasPDF ? "Tak" : "Brak", systemImage: "doc.richtext.fill", tint: issue.hasPDF ? .red : .orange)
+                MetricTile(title: "PDF", value: ReportPackageCopy.yesNo(issue.hasPDF, language: languageStore.preference), systemImage: "doc.richtext.fill", tint: issue.hasPDF ? .red : .orange)
             }
 
             HStack(spacing: 8) {
@@ -2126,10 +2203,10 @@ private struct ResearchIssueHero: View {
                     StatusBadge(text: "Audio", systemImage: "play.circle.fill", tint: .purple)
                 }
                 if !issue.podcastTopics.isEmpty {
-                    StatusBadge(text: "\(issue.podcastTopics.count) tematów podcastu", systemImage: "mic.fill", tint: .orange)
+                    StatusBadge(text: ReportPackageCopy.podcastTopicCountLabel(issue.podcastTopics.count, language: languageStore.preference), systemImage: "mic.fill", tint: .orange)
                 }
                 if packageCount > 1 {
-                    StatusBadge(text: "\(packageCount) wydań", systemImage: "calendar", tint: .gray)
+                    StatusBadge(text: ReportPackageCopy.editionCountLabel(packageCount, language: languageStore.preference), systemImage: "calendar", tint: .gray)
                 }
             }
 
@@ -2145,7 +2222,7 @@ private struct ResearchIssueHero: View {
                 }
                 .padding(.top, 8)
             } label: {
-                Label("Kontekst wydania", systemImage: "text.quote")
+                Label(LocalizedStringKey("Kontekst wydania"), systemImage: "text.quote")
                     .font(.caption.weight(.bold))
                     .foregroundStyle(issue.topic.tint)
                     .textCase(.uppercase)
@@ -2199,7 +2276,7 @@ private struct ResearchQuickPoints: View {
     var body: some View {
         if !points.isEmpty {
             VStack(alignment: .leading, spacing: 8) {
-                Text("W skrócie")
+                Text(LocalizedStringKey("W skrócie"))
                     .font(.caption.weight(.bold))
                     .foregroundStyle(tint)
                     .textCase(.uppercase)
@@ -2212,7 +2289,7 @@ private struct ResearchQuickPoints: View {
                                 .frame(width: 5, height: 5)
                                 .padding(.top, 7)
                                 .accessibilityHidden(true)
-                            Text(point)
+                            PavbotTranslatedAutomationText(point)
                                 .font(.callout)
                                 .foregroundStyle(.primary)
                                 .lineSpacing(3)
@@ -2227,6 +2304,7 @@ private struct ResearchQuickPoints: View {
 }
 
 struct HighlightedResearchText: View {
+    @Environment(AppLanguageStore.self) private var languageStore
     let text: String
     let keywords: [ResearchIssueKeyword]
     let tint: Color
@@ -2234,13 +2312,23 @@ struct HighlightedResearchText: View {
     var lineLimit: Int?
 
     var body: some View {
-        Text(ResearchKeywordHighlighter.attributedText(text, keywords: keywords, tint: tint))
-            .font(font)
-            .foregroundStyle(.primary)
-            .lineSpacing(4)
-            .lineLimit(lineLimit)
-            .fixedSize(horizontal: false, vertical: true)
-            .accessibilityLabel(text)
+        if languageStore.preference.translationTargetIdentifier != nil {
+            PavbotTranslatedAutomationText(text)
+                .font(font)
+                .foregroundStyle(.primary)
+                .lineSpacing(4)
+                .lineLimit(lineLimit)
+                .fixedSize(horizontal: false, vertical: true)
+                .accessibilityLabel(text)
+        } else {
+            Text(ResearchKeywordHighlighter.attributedText(text, keywords: keywords, tint: tint))
+                .font(font)
+                .foregroundStyle(.primary)
+                .lineSpacing(4)
+                .lineLimit(lineLimit)
+                .fixedSize(horizontal: false, vertical: true)
+                .accessibilityLabel(text)
+        }
     }
 }
 
@@ -2250,7 +2338,7 @@ private struct ResearchSignalSummary: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Label(presentation.signalsTitle, systemImage: "bolt.fill")
+            Label(LocalizedStringKey(presentation.signalsTitle), systemImage: "bolt.fill")
                 .font(.subheadline.weight(.bold))
                 .foregroundStyle(tint)
 
@@ -2282,14 +2370,15 @@ private struct ResearchSignalRow: View {
                 .accessibilityHidden(true)
 
             VStack(alignment: .leading, spacing: 4) {
-                Text(signal.section.rawValue.uppercased())
+                PavbotTranslatedAutomationText(signal.section.rawValue)
                     .font(.caption2.weight(.bold))
                     .foregroundStyle(tint)
-                Text(signal.title)
+                    .textCase(.uppercase)
+                PavbotTranslatedAutomationText(signal.title)
                     .font(.subheadline.weight(.semibold))
                     .foregroundStyle(.primary)
                     .fixedSize(horizontal: false, vertical: true)
-                Text(signal.summary)
+                PavbotTranslatedAutomationText(signal.summary)
                     .font(.footnote)
                     .foregroundStyle(.secondary)
                     .lineSpacing(3)
@@ -2317,7 +2406,7 @@ private struct ResearchArticleBulletList: View {
                             .foregroundStyle(tint)
                             .padding(.top, 2)
                             .accessibilityHidden(true)
-                        Text(point)
+                        PavbotTranslatedAutomationText(point)
                             .font(font)
                             .foregroundStyle(.secondary)
                             .lineSpacing(3)
@@ -2337,7 +2426,7 @@ private struct ResearchKeywordRail: View {
     var body: some View {
         if !keywords.isEmpty {
             VStack(alignment: .leading, spacing: 9) {
-                Text("Słowa kluczowe")
+                Text(LocalizedStringKey("Słowa kluczowe"))
                     .font(.caption.weight(.bold))
                     .foregroundStyle(.secondary)
                     .textCase(.uppercase)
@@ -2521,8 +2610,8 @@ private struct ResearchArticleReader: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 18) {
                     VStack(alignment: .leading, spacing: 10) {
-                        StatusBadge(text: article.section.rawValue, systemImage: article.section.systemImage, tint: issue.topic.tint)
-                        Text(presentation.title)
+                        StatusBadge(text: article.section.rawValue, systemImage: article.section.systemImage, tint: issue.topic.tint, translatesAutomationText: true)
+                        PavbotTranslatedAutomationText(presentation.title)
                             .font(.title2.weight(.bold))
                             .fixedSize(horizontal: false, vertical: true)
                         HighlightedResearchText(
@@ -2551,7 +2640,7 @@ private struct ResearchArticleReader: View {
 
                     if !article.sources.isEmpty {
                         VStack(alignment: .leading, spacing: 10) {
-                            Text("Źródła")
+                            Text(LocalizedStringKey("Źródła"))
                                 .font(.headline.weight(.semibold))
                             ForEach(article.sources) { source in
                                 if let url = URL(string: source.url) {
@@ -2603,7 +2692,7 @@ private struct ResearchArticleBody: View {
 
     var body: some View {
         VStack(alignment: .leading, spacing: 12) {
-            Text(title)
+            Text(LocalizedStringKey(title))
                 .font(.caption.weight(.bold))
                 .foregroundStyle(.secondary)
                 .textCase(.uppercase)
@@ -2864,7 +2953,7 @@ private struct ResearchTopicCompactCell: View {
                     .minimumScaleFactor(0.8)
             }
 
-            Text(item.title)
+            Text(LocalizedStringKey(item.title))
                 .font(.caption.weight(.bold))
                 .foregroundStyle(.primary)
                 .lineLimit(2)
