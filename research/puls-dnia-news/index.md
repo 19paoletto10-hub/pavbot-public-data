@@ -39,6 +39,13 @@ and a new global mix centered on Iran, Grenlandia, Le Pen, France fires and
 the German doctor verdict. For the current morning cadence, direct article
 pages are more reliable than bundle headlines when TVN24 exposes them.
 
+The 2026-07-09 09:01 slot adds a more operational domestic mix around health
+reform, the Poznań anti-Ukrainian incident, the S8 korytarz życia problem and
+IMGW storm alerts. Abroad, the lead remains Iran and NATO, but the slot now
+also carries Sudan war-crimes reporting, Kyiv strikes, Le Pen, Farage,
+Hormuz shipping risk, a Chinese missile test, steady NBP rates and two fresh
+CNN tech items about Microsoft and Anthropic.
+
 ## Data Shape
 
 The native iOS feed expects:
