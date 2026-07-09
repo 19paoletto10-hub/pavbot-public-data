@@ -143,10 +143,8 @@
 		3F2AEF493B65E3050003DA5E /* ArtifactNotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactNotificationService.swift; sourceTree = "<group>"; };
 		40135DE56B852E3461575FEF /* SavedResearchArticle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedResearchArticle.swift; sourceTree = "<group>"; };
 		4124E2CF7A4FCEC236E58FBE /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/Localizable.strings; sourceTree = "<group>"; };
-		41AF4E5E3CC14F5DAAF28001 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		41AF4E5E3CC14F5DAAF28002 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		41EEB32A16C7FA3A3E684630 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		46AC5FA30428A69116483128 /* PavbotAudioActivityExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = PavbotAudioActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		46AC5FA30428A69116483128 /* PavbotAudioActivityExtension.appex */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = "wrapper.app-extension"; path = PavbotAudioActivityExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A8E6CA4203600F59D8F903F /* PavbotAudioActivityWidget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotAudioActivityWidget.swift; sourceTree = "<group>"; };
 		4DA03BE9ABC459BCDEF3CF86 /* pl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = pl; path = pl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E9F8D53BA1EE402D2A3C79C /* daily-wisdom.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "daily-wisdom.json"; sourceTree = "<group>"; };
@@ -165,7 +163,6 @@
 		7281DED9013D729732CE9CEF /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		74D2EB19316C6ED24DF8D373 /* PulseDayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseDayView.swift; sourceTree = "<group>"; };
 		77B21209E7330AD40BCFE094 /* ManifestURLValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManifestURLValidator.swift; sourceTree = "<group>"; };
-		7B08F52B2FFD93F8005D2144 /* PavbotAudioActivityExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = PavbotAudioActivityExtension.entitlements; sourceTree = "<group>"; };
 		7B73CD8205618D4A87B1004E /* PDFKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PDFKit.framework; path = System/Library/Frameworks/PDFKit.framework; sourceTree = SDKROOT; };
 		7D898746D5C1A3322B93542A /* DailyWeatherReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyWeatherReport.swift; sourceTree = "<group>"; };
 		8AEE41E2B0AF8E61BF26451D /* JobsReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsReport.swift; sourceTree = "<group>"; };
@@ -179,7 +176,7 @@
 		A92C841A1F8FBA1CCC606BF7 /* TodayLiveTopicSpeechController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLiveTopicSpeechController.swift; sourceTree = "<group>"; };
 		ADB5F074E7D876C212469E3F /* PulseNewsDigest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PulseNewsDigest.swift; sourceTree = "<group>"; };
 		B05D0CE7DC57DAC9378884FD /* ResearchNewsModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResearchNewsModels.swift; sourceTree = "<group>"; };
-		B101DC0CC0E2D100DB7164D0 /* PavbotViewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PavbotViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B101DC0CC0E2D100DB7164D0 /* PavbotViewer.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = PavbotViewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6489B361457D2D72C30D95D /* JobsMarkdownParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsMarkdownParser.swift; sourceTree = "<group>"; };
 		B7CD203D4E9EA86F2A8DA854 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		B881CFFC8F93124D872D5FFB /* TodayLiveTopicsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayLiveTopicsView.swift; sourceTree = "<group>"; };
@@ -194,13 +191,15 @@
 		E1CA2061F8730E38CAE8AB4C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		E36E99E399CB1D97AF718704 /* PavbotDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PavbotDesign.swift; sourceTree = "<group>"; };
 		E3EB066F256FE9BE698F99D3 /* JobsDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsDataService.swift; sourceTree = "<group>"; };
-		E84229AB2A6D9AD1434791DB /* PavbotViewerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PavbotViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E32016BDB91E29484CA6C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		E84229AB2A6D9AD1434791DB /* PavbotViewerTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = PavbotViewerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE89891B7B7FDBB7CFA86789 /* CloudKitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitService.swift; sourceTree = "<group>"; };
 		EED249FEEE03D833589C1529 /* DiagnosticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiagnosticsView.swift; sourceTree = "<group>"; };
 		F139EEFBD6DE7999AD6C89D3 /* JobsBriefPresentation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsBriefPresentation.swift; sourceTree = "<group>"; };
 		F2801AD94F9082D9292313A7 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		F397497A364A4766EB8EEA6A /* ArtifactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtifactDetailView.swift; sourceTree = "<group>"; };
 		F556EA3F0FBD049F0E90692F /* WeatherLocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherLocationService.swift; sourceTree = "<group>"; };
+		F626414E871CD09DD3BB6CFE /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA490975E9DDDFDE415D90A9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FD2833B2E922C4EDCA1C885B /* JobsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -335,7 +334,6 @@
 		97730D03CD2378087F9B345E = {
 			isa = PBXGroup;
 			children = (
-				7B08F52B2FFD93F8005D2144 /* PavbotAudioActivityExtension.entitlements */,
 				4C0EB2B80912B7046DBBB478 /* AudioActivityExtension */,
 				E786D6BCAAA8CF7E4830AE31 /* CODEX-Pavbot */,
 				3A241A5947B03C6C85AED7D5 /* Sources */,
@@ -485,8 +483,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
-				LastUpgradeCheck = 2630;
+				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					1A1182BCAB775DFBFA8726CC = {
+						DevelopmentTeam = SP774TZZU8;
+						ProvisioningStyle = Automatic;
+					};
 					52EF15468EB4217C12C91A42 = {
 						DevelopmentTeam = SP774TZZU8;
 						ProvisioningStyle = Automatic;
@@ -502,8 +504,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				Base,
-				pl,
 				en,
+				pl,
 				ru,
 			);
 			mainGroup = 97730D03CD2378087F9B345E;
@@ -646,9 +648,9 @@
 		8AFCEEF70B027024169EEC64 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
+				E5E32016BDB91E29484CA6C5 /* en */,
 				4124E2CF7A4FCEC236E58FBE /* pl */,
-				41AF4E5E3CC14F5DAAF28001 /* en */,
-				41AF4E5E3CC14F5DAAF28002 /* ru */,
+				F626414E871CD09DD3BB6CFE /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -697,17 +699,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLOUDKIT_ENVIRONMENT = Production;
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 260709.040728;
-				DEVELOPMENT_TEAM = SP774TZZU8;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 260710.012331;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.paweltanski.pavbotviewer;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -719,7 +718,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = PavbotAudioActivityExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 260709.040728;
+				CURRENT_PROJECT_VERSION = 260710.012331;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = AudioActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -790,13 +789,12 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 2.6.4;
+				MARKETING_VERSION = 2.6.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.9;
@@ -809,7 +807,7 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_ENTITLEMENTS = PavbotAudioActivityExtension.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 260709.040728;
+				CURRENT_PROJECT_VERSION = 260710.012331;
 				DEVELOPMENT_TEAM = SP774TZZU8;
 				INFOPLIST_FILE = AudioActivityExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -874,12 +872,11 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
-				MARKETING_VERSION = 2.6.4;
+				MARKETING_VERSION = 2.6.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
-				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.9;
@@ -893,17 +890,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLOUDKIT_ENVIRONMENT = Production;
 				CODE_SIGN_ENTITLEMENTS = Sources/PavbotViewer.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 260709.040728;
-				DEVELOPMENT_TEAM = SP774TZZU8;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 260710.012331;
 				INFOPLIST_FILE = Sources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.paweltanski.pavbotviewer;
-				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

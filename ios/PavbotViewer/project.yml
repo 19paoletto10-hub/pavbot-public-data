@@ -11,7 +11,7 @@ settings:
     CODE_SIGN_STYLE: Automatic
     DEVELOPMENT_TEAM: SP774TZZU8
     ENABLE_USER_SCRIPT_SANDBOXING: NO
-    MARKETING_VERSION: "2.6.4"
+    MARKETING_VERSION: "2.6.5"
     SWIFT_VERSION: "5.9"
 configs:
   Debug: debug
@@ -24,13 +24,14 @@ targets:
       - path: Sources
         excludes:
           - "**/* 2.swift"
+          - "Resources/daily-wisdom 2.json"
       - path: ../../public/pavbot-manifest.json
         buildPhase: resources
     settings:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer
         INFOPLIST_FILE: Sources/Info.plist
-        CURRENT_PROJECT_VERSION: "260709.040728"
+        CURRENT_PROJECT_VERSION: "260710.012331"
       configs:
         Debug:
           CODE_SIGN_ENTITLEMENTS: Sources/PavbotViewer.entitlements
@@ -61,7 +62,8 @@ targets:
       base:
         PRODUCT_BUNDLE_IDENTIFIER: com.paweltanski.pavbotviewer.audioactivity
         INFOPLIST_FILE: AudioActivityExtension/Info.plist
-        CURRENT_PROJECT_VERSION: "260709.040728"
+        CURRENT_PROJECT_VERSION: "260710.012331"
+        CODE_SIGN_ENTITLEMENTS: PavbotAudioActivityExtension.entitlements
         CODE_SIGN_STYLE: Automatic
         DEVELOPMENT_TEAM: SP774TZZU8
         SWIFT_VERSION: "5.9"

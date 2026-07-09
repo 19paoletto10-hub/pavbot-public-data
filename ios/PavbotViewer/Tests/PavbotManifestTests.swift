@@ -7942,7 +7942,7 @@ final class PavbotManifestTests: XCTestCase {
             .appendingPathComponent("project.yml")
         let source = try String(contentsOf: projectYML)
 
-        XCTAssertTrue(source.contains("MARKETING_VERSION: \"2.6.4\""))
+        XCTAssertTrue(source.contains("MARKETING_VERSION: \"2.6.5\""))
         XCTAssertFalse(source.contains("postBuildScripts:"))
         XCTAssertFalse(source.contains("PlistBuddy -c \"Set :CFBundleVersion"))
         XCTAssertFalse(source.contains("PlugIns/PavbotAudioActivityExtension.appex/Info.plist"))
