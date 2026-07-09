@@ -93,6 +93,13 @@ realne ograniczenia produkcyjne, a polski bilans Ankary obejmuje PAC-3,
 Jasionkę i rozmowę Nawrocki-Trump o obecności wojsk USA. W kraju na pierwszy
 plan wszedł pakiet zmian Ministerstwa Zdrowia dotyczący kolejek, wynagrodzeń,
 spółek lekarskich i przejrzystości szpitali.
+Po wieczornym runie 9 lipca centrum ciężkości przesunęło się dalej: AP opisuje
+już regionalną eskalację USA-Iran z Bahrajnem, Kuwejtem, Katarem i Jordanią,
+Ministerstwo Zdrowia potwierdza kurs po rozmowie z NIL i doprecyzowuje 240 zł
+stawki godzinowej, a Ministerstwo Sprawiedliwości uruchamia Deregulację 2.0
+jako nowy blok cyfryzacji i skracania procedur sądowych. Wątki PAC-3, Jasionki
+i obecności wojsk USA pozostają ważnym follow-upem, ale dziś nie dostały nowego
+twardego polskiego komunikatu.
 
 ## Stable Facts
 
@@ -168,9 +175,12 @@ spółek lekarskich i przejrzystości szpitali.
   Ormuz, ale też Bahrajn, Kuwejt i Katar.
 - Pakiet Ministerstwa Zdrowia śledzić w trybie legislacyjnym: odróżniać
   zapowiedzi od projektów ustaw, konsultacji i realnego wdrożenia e-kolejki.
+- Deregulację 2.0 śledzić pod kątem tego, czy konferencyjne zapowiedzi przejdą
+  w projekty ustaw, harmonogram wdrożenia i czytelny język publiczny.
 
 ## Recent Reports
 
+- [2026-07-09-1933](runs/2026-07-09-1933.md)
 - [2026-07-09](runs/2026-07-09.md)
 - [2026-07-08-1933](runs/2026-07-08-1933.md)
 - [2026-07-08](runs/2026-07-08.md)

@@ -15,6 +15,7 @@
 | High | Track USA-Iran/Gulf escalation after Ormuz strikes | AP reports a new U.S. strike wave and Iranian targeting of Bahrain, Kuwait and Qatar, turning Ormuz into a broader Gulf crisis | Check AP, CENTCOM, UKMTO, Gulf state statements and NATO follow-up before podcast or evening update | Open |
 | High | Monitor health reform package | MZ announced central e-registration, central e-queue, pay limits, restrictions on medical companies and sanctions for unequal access, but implementation depends on legislation | Track draft bills, consultations, NFZ details, medical-sector response and patient groups | Open |
 | Medium | Track U.S. military presence conversation after Ankara | Nawrocki says he spoke with Trump about permanent U.S. military presence in Poland, but implementation is left to Polish defence channels | Watch Prezydent RP, MON, U.S. Embassy/DoD and NATO readouts for concrete basing or force-posture steps | Open |
+| Medium | Track Deregulacja 2.0 rollout | Justice ministry moved the story from conference language into a broad digital-courts program; implementation still needs legal text and schedule | Watch KPRM/MS follow-up, draft laws, court-community reaction and public-facing examples of online hearings | Open |
 
 ## Review Notes
 
@@ -108,6 +109,10 @@
   and Rzeczpospolita/PAP/RMF24 for Nawrocki-Zełenski plus the U.S. presence
   thread. Podcast should avoid overselling the Patriot license as near-term
   military relief.
+- 2026-07-09 evening: AP widened the USA-Iran crisis into the Gulf, MZ
+  confirmed dialogue with NIL and a 240 zł/hour parameter, and the justice
+  ministry launched Deregulacja 2.0 with online hearings and automatic registry
+  access. PAC-3/Jasionka did not receive a fresh follow-up.
 
 ## Done
 
