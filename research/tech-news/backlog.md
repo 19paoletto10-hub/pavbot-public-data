@@ -4,6 +4,10 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track GPT-Live rollout and voice adoption | Full-duplex voice is now default in ChatGPT Voice and may become the main agent interface | Watch API timing, retention and safety feedback | Open |
+| High | Track Grok 4.5 benchmark and EU access | xAI is making coding and agentic tasks a headline competitive claim | Watch independent evals, pricing and regional availability | Open |
+| High | Track TypeScript 7 migration issues | Native Go port could create ecosystem regressions even if performance is strong | Watch editor support, plugin compatibility and CI fallout | Open |
+| High | Track NHTSA AV enforcement follow-through | First-responder interference is now a concrete regulatory issue | Watch developer meetings, enforcement actions and OEM responses | Open |
 | High | Track Meta Muse Image privacy backlash | Public Instagram reuse could trigger consent and default-setting scrutiny | Watch opt-out defaults, complaint volume and policy edits | Open |
 | High | Track inference silicon race | Apple/Broadcom, DeepSeek, SambaNova, Prime Intellect and ZML show the market shifting from model hype to custom silicon and portable inference stacks | Watch customer adoption, manufacturing constraints, financing risk and benchmark/performance claims | Open |
 | High | Track Microsoft in-house model migration | MAI routing may change Copilot economics and vendor mix | Watch rollout breadth across 365, Foundry and partner surfaces | Open |

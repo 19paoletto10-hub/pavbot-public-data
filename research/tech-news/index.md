@@ -1,12 +1,21 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-08
+Last updated: 2026-07-09
 
 ## Current Understanding
 
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
+
+Poranny run z 2026-07-09 przesuwa ciężar z samych modeli na warstwę rozmowy,
+benchmarków i runtime. GPT-Live i Grok 4.5 pokazują, że voice oraz agentic work
+stają się główną osią rywalizacji, OpenAI publicznie kwestionuje jakość
+SWE-Bench Pro, ZML/SambaNova/Prime Intellect potwierdzają, że inference
+economics i post-training loop są osobnym rynkiem, a TypeScript 7 oraz Google
+Photos Video Remix przenoszą tę samą zmianę do dev tools i consumer apps.
+NHTSA równolegle robi z first-responder safety konkretne wymaganie produktowe
+dla AV, a Samsung wyznacza już kolejny hardware checkpoint na 22 lipca.
 
 Po wieczornym refreshu z 2026-07-08 główna nowa oś przesuwa się jeszcze niżej
 w stacku: Apple/Broadcom, DeepSeek, SambaNova, Prime Intellect i ZML pokazują
