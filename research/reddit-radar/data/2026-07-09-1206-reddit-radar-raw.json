@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-09-1206",
+  "status": "no_material_change",
+  "generatedAt": "2026-07-09T10:06:00+00:00",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-09T12:09:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Safari Apple Events and DOM access worked for this run.",
+      "Computer Use returned cgWindowNotFound, so comment review used the existing Safari DOM fallback.",
+      "No Reddit social actions were performed.",
+      "Current public winner bundle remained 2026-07-09-0610."
+    ]
+  },
+  "currentPublicBundle": "2026-07-09-0610",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-09-1206-reddit-radar.json",
+  "newCandidates": [
+    {
+      "subreddit": "r/memes",
+      "title": "Holy Father for a reason",
+      "url": "https://old.reddit.com/r/memes/comments/1ur8p6a/holy_father_for_a_reason/?sort=top",
+      "scoreLabel": "19.7K",
+      "decision": "strong_single_candidate_but_not_full_bundle_upgrade"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "heyLookThisIsAGlass",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1uresuh/heylookthisisaglass/?sort=top",
+      "scoreLabel": "1.6K",
+      "decision": "still_weaker_than_active_dev_card"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "I asked for \"no tomato\" and they gave me a tomato bigger than the patty",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1uqyix4/i_asked_for_no_tomato_and_they_gave_me_a_tomato/?sort=top",
+      "scoreLabel": "53.9K",
+      "decision": "strong_single_candidate_but_not_full_bundle_upgrade"
+    },
+    {
+      "subreddit": "r/facepalm",
+      "title": "I wish my boss would just put \"Jack on leave\"",
+      "url": "https://old.reddit.com/r/facepalm/comments/1uox0lj/i_wish_my_boss_would_just_put_jack_on_leave/?sort=top",
+      "scoreLabel": "35.9K",
+      "decision": "active_facepalm_card_still_best"
+    },
+    {
+      "subreddit": "r/AskReddit",
+      "title": "What's the best cat name you have ever heard?",
+      "url": "https://old.reddit.com/r/AskReddit/comments/1urc2xk/whats_the_best_cat_name_you_have_ever_heard/?sort=top",
+      "scoreLabel": "808",
+      "decision": "light_but_too_small_to_replace_active_askreddit_card"
+    }
+  ]
+}
