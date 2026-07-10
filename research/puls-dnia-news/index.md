@@ -45,6 +45,13 @@ incident dominated Poland. The world feed added Farage, the Austrian burkini
 judgment, Erdogan's diplomatic gift, OpenAI's ChatGPT Work launch, NASA's
 Swift boost mission and the lingering Bałtyk storm aftermath.
 
+The 2026-07-10 15:01 slot moved the feed again, this time toward the Kaczyński
+and Tusk clash, Obajtek in Solino, the Katowice children's oncology warning,
+the Mokotów robbery, the Poznań car arsons and a weather warm-up to nearly 30
+degrees. BBC and CNN added fresh world pressure from the East Asia typhoon,
+SK Hynix's US share sale, US-Iran talks, Spanish wildfires, China’s reusable
+rocket breakthrough and Ukraine’s strikes near Crimea.
+
 ## Data Shape
 
 The native iOS feed expects:
