@@ -11,16 +11,6 @@
 - `CNN World RSS` appears stale in the current runtime; prefer
   `edition.cnn.com/world` discovery plus primary confirmations until the feed
   recovers.
-- Prefer direct TVN24 article URLs over front-page bundle headlines when both
-  are available, because the bundle tiles can mix several stories in one card
-  and make deduplication harder in later runs.
-- Watch whether the Poznań espionage allegation gets formal confirmation from
-  prosecutors or ABW.
-- Watch whether PAŻP funding pressure turns into a broader aviation response.
-- Watch whether IMGW extends the storm band into fresh warnings or damage
-  reports.
-- Watch whether Iran-driven energy costs keep lifting oil and airline expense
-  stories into the next 3-hour run.
 
 ## Done
 

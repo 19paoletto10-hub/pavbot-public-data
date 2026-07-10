@@ -33,45 +33,12 @@ pressure, evacuated harcerze, new scanners at Chopin, PIP reform and AI
 dezinformation, while the world feed strengthened around Iran, Ukraine/NATO,
 Le Pen, Russian fuel shortages, Telstra and severe weather in China.
 
-The 2026-07-09 06:02 slot shifted the feed away from the wczorajszy blok
-health-macro toward legal and political items in Poland, alert-heavy weather,
-and a new global mix centered on Iran, Grenlandia, Le Pen, France fires and
-the German doctor verdict. For the current morning cadence, direct article
-pages are more reliable than bundle headlines when TVN24 exposes them.
-
-The 2026-07-09 09:01 slot adds a more operational domestic mix around health
-reform, the Poznań anti-Ukrainian incident, the S8 korytarz życia problem and
-IMGW storm alerts. Abroad, the lead remains Iran and NATO, but the slot now
-also carries Sudan war-crimes reporting, Kyiv strikes, Le Pen, Farage,
-Hormuz shipping risk, a Chinese missile test, steady NBP rates and two fresh
-CNN tech items about Microsoft and Anthropic.
-
-The 2026-07-09 12:02 slot keeps the domestic core on health, Poznań, S8,
-Chopin and RPP, but adds a clearer transport and market layer: new skaners at
-Chopin, a stronger oil-market reaction to the Middle East and continued
-weather pressure on the north. Internationally, Iran stays central, while
-NATO/Ukraina, Le Pen and Grenlandia remain live political pressure points; the
-tech slot is still anchored by Microsoft and the broader AI policy cycle.
-
-The 2026-07-09 15:02 slot shifts the domestic feed toward the health-reform
-split, doctor reactions, the Poznań anti-Ukrainian case and the Lubartów
-hospital-oversight dispute, while IMGW keeps the alert layer on wind and
-bursts. Abroad, Iran remains the top-risk item, but Ukraine Patriots and the
-new UK-led deep precision strike initiative put NATO security back in focus;
-technology now leans more clearly into AI regulation and Samsung's profit
-signal.
-
-The 2026-07-09 18:00 slot moves the domestic mix toward a formal Supreme
-Court appointment, a local predator warning, a Warsaw crash, weather
-interventions and the unchanged RPP line, while the world block stays
-dominated by Iran, Ormuz, NATO and Ukraine. OpenAI's GPT-5.6 cycle is now the
-clearest technology signal in the feed.
-
-The 2026-07-09 21:02 slot shifts the domestic mix toward euro pressure, PAŻP
-financing stress, Mogilno, Poznań and a fresh weather-alert bundle, while the
-world block adds new CNN/BBC coverage on Iran, Ukrainian Patriots, a Greek
-F-16 crash, a Chinese factory fire and the Sudan ICC probe. The tech block did
-not add a distinct new signal in this run.
+The 2026-07-10 06:00 slot shifted the pulse toward criminal and institutional
+news: the NIK indictment, PAŻP financing risk after the Pfizer ruling,
+Obajtek's clash at Solino, the Łódź rape case, and the Poznań spy-related
+incident dominated Poland. The world feed added Farage, the Austrian burkini
+judgment, Erdogan's diplomatic gift, OpenAI's ChatGPT Work launch, NASA's
+Swift boost mission and the lingering Bałtyk storm aftermath.
 
 ## Data Shape
 

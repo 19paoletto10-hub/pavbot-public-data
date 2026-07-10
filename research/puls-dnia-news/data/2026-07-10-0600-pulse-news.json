@@ -1,0 +1,461 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-10",
+  "runTime": "06:00",
+  "status": "Material update",
+  "headline": "Poranny puls: Poznań, Solino, PAŻP i nowe sygnały z AI",
+  "summary": "Na starcie 10 lipca feed przesunął się w stronę spraw karnych i politycznych w Polsce, przy jednoczesnym utrzymaniu alertu sztormowego oraz silnych wątków międzynarodowych i technologicznych.",
+  "items": [
+    {
+      "id": "pl-nik-2026-07-10-0600",
+      "section": "Polityka",
+      "title": "Były szef NIK z aktem oskarżenia",
+      "lead": "Prokuratura zamyka ważny wątek wokół Mariana B.",
+      "whatHappened": "Prokuratura skierowała do sądu akt oskarżenia przeciwko byłemu szefowi NIK Marianowi B. TVN24 podał, że sprawa dotyczy nakłaniania do ujawnienia tajemnicy skarbowej.",
+      "keyFacts": [
+        "Materiał TVN24 opublikowano 10 lipca rano.",
+        "Sprawa jest prowadzona przez prokuraturę regionalną."
+      ],
+      "reactions": [
+        "Sprawa ma wyraźny ciężar instytucjonalny i polityczny.",
+        "To jeden z najmocniejszych krajowych tematów poranka."
+      ],
+      "whyItMatters": "Dotyczy byłego szefa jednej z najważniejszych instytucji kontrolnych państwa i może generować dalsze skutki polityczne.",
+      "context": "Wcześniejsze postępowania wokół Mariana B. już wcześniej były publicznie komentowane. Ten run dodaje formalny krok procesowy.",
+      "watchNext": [
+        "Sprawdzić, czy prokuratura poda szczegóły aktu oskarżenia.",
+        "Śledzić reakcje obozów politycznych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Były szef NIK z aktem oskarżenia",
+          "url": "https://tvn24.pl/biznes/z-kraju/byly-prezes-nik-marian-b-oskarzony-za-naklanianie-do-ujawnienia-tajemnicy-skarbowej-st9136098"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Prokuratura",
+        "NIK"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-pazp-pfizer-2026-07-10-0600",
+      "section": "Gospodarka",
+      "title": "PAŻP bez pieniędzy po sprawie Pfizera",
+      "lead": "Wyrok w Brukseli uderzył w finansowanie służby żeglugi.",
+      "whatHappened": "PAŻP poinformowała, że środki z opłat trasowych zostały zablokowane po belgijskim wyroku w sporze Pfizer kontra Polska. Agencja zapowiada działania prawne, by odblokować pieniądze i utrzymać ciągłość operacyjną.",
+      "keyFacts": [
+        "Zablokowane zostały środki należne PAŻP z opłat trasowych.",
+        "Agencja twierdzi, że to ponad 80 procent jej przychodów."
+      ],
+      "reactions": [
+        "PAŻP zapowiada formalny sprzeciw.",
+        "Sprawa wywołuje ryzyko operacyjne dla finansowania żeglugi powietrznej."
+      ],
+      "whyItMatters": "To bezpośrednio dotyka infrastruktury bezpieczeństwa lotniczego i może wymagać szybkiej reakcji państwa.",
+      "context": "TVN24 przypomina, że spór dotyczy wyroku belgijskiego sądu w sprawie Polska kontra Pfizer i wykonania roszczenia wobec Polski.",
+      "watchNext": [
+        "Sprawdzić, czy rząd poda plan awaryjny.",
+        "Monitorować decyzje PAŻP i Eurocontrol."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: PAŻP bez pieniędzy po procesie Pfizera",
+          "url": "https://tvn24.pl/biznes/z-kraju/rykoszet-po-procesie-pfizera-polska-agencja-zeglugi-powietrznej-bez-pieniedzy-st9136061"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Lotnictwo",
+        "Pfizer"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-solino-obajtek-2026-07-10-0600",
+      "section": "Polityka",
+      "title": "Obajtek szarpał się z prezesem Solino",
+      "lead": "Konflikt wokół protestu przerodził się w szarpaninę.",
+      "whatHappened": "Daniel Obajtek przyszedł do kopalni soli Solino, żeby poprzeć protestujących pracowników, i próbował siłowo wejść do siedziby spółki. Według TVN24 doszło do szarpaniny z prezesem Wojciechem Kotlarkiem, a na miejsce wezwano policję.",
+      "keyFacts": [
+        "Zdarzenie miało miejsce 9 lipca 2026 roku.",
+        "Obajtek był w towarzystwie posła Przemysława Czarnka."
+      ],
+      "reactions": [
+        "Sprawa natychmiast weszła do obiegu politycznego.",
+        "Strajk w Solino zyskał dodatkowy rozgłos."
+      ],
+      "whyItMatters": "Łączy spór pracowniczy, politykę i zarządzanie państwową spółką, więc może mieć dalsze skutki publiczne.",
+      "context": "Materiał TVN24 pokazuje, że obok protestu pracowników szybko pojawił się wątek interwencji i sporu o prawo wejścia na teren zakładu.",
+      "watchNext": [
+        "Śledzić ewentualne zawiadomienia do prokuratury.",
+        "Monitorować komunikaty Orlenu i Solino."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Chaos w kopalni soli. Obajtek szarpał się z prezesem",
+          "url": "https://tvn24.pl/biznes/z-kraju/chaos-w-kopalni-soli-solino-obajtek-silowal-sie-z-prezesem-zarzadu-st9135354"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Energetyka",
+        "Orlen"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-sondaz-2026-07-10-0600",
+      "section": "Polityka",
+      "title": "Nowy sondaż pokazuje lekkie spadki KO i PiS",
+      "lead": "Lewica łapie lepszy moment niż dwa największe obozy.",
+      "whatHappened": "Opinia24 opublikowała nowy sondaż partyjny. TVN24 podaje, że zarówno Koalicja Obywatelska, jak i PiS odnotowały niewielki spadek, a uwagę zwraca wynik Nowej Lewicy.",
+      "keyFacts": [
+        "Badanie opublikowano 10 lipca 2026 roku.",
+        "Temat dotyczy bieżących preferencji parlamentarnych."
+      ],
+      "reactions": [
+        "To sygnał, że układ sił nadal jest ruchomy.",
+        "Lewica może próbować wykorzystać ten wynik komunikacyjnie."
+      ],
+      "whyItMatters": "Sondaż wpływa na bieżącą narrację polityczną i może ustawiać komentarze wokół koalicji rządzącej oraz opozycji.",
+      "context": "W poprzednich slotach feed był bardziej zdominowany przez sprawy zdrowotne i pogodowe. Ten run mocniej wraca do polityki partyjnej.",
+      "watchNext": [
+        "Sprawdzić pełny rozkład procentowy w badaniu.",
+        "Obserwować reakcje partii w ciągu dnia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nowy sondaż partyjny",
+          "url": "https://tvn24.pl/polska/nowy-sondaz-partyjny-lider-z-niewielkim-spadkiem-kto-zyskuje-st9135865"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Sondaż",
+        "Sejm"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-lodz-gwalt-2026-07-10-0600",
+      "section": "Bezpieczeństwo",
+      "title": "W Łodzi po brutalnym gwałcie zmarła kobieta",
+      "lead": "Śledczy zatrzymali 63-latka, a sprawa ma ciężki finał.",
+      "whatHappened": "Na Osiedlu Górniak w Łodzi doszło do brutalnego gwałtu na trzydziestokilkuletniej kobiecie. Poszkodowana zmarła w szpitalu, a policja zatrzymała 63-latka, który trafił do aresztu.",
+      "keyFacts": [
+        "TVN24 cytuje policję i prokuraturę z Łodzi.",
+        "Śledczy badają, czy skutki śmiertelne wynikają z obrażeń."
+      ],
+      "reactions": [
+        "To jeden z najmocniejszych społecznie i prawnie tematów poranka.",
+        "Sprawa wywołuje standardową potrzebę ostrożnego, ale szybkiego monitoringu."
+      ],
+      "whyItMatters": "To sprawa o wysokiej wadze bezpieczeństwa publicznego i przemocy wobec kobiet.",
+      "context": "Materiał odnosi się też do szerszego problemu przemocy domowej i pokazuje, że śledztwo dopiero się rozwija.",
+      "watchNext": [
+        "Monitorować decyzje prokuratury.",
+        "Sprawdzić, czy pojawią się dalsze zarzuty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Brutalny gwałt na młodej kobiecie w Łodzi",
+          "url": "https://tvn24.pl/lodz/brutalny-gwalt-na-mlodej-kobiecie-w-lodzi-zmarla-osierocila-corke-st9135366"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Łódź",
+        "Policja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-poznan-spy-2026-07-10-0600",
+      "section": "Bezpieczeństwo",
+      "title": "Poznań i zarzut szpiegostwa w tle antyukraińskiego incydentu",
+      "lead": "Sprawa biura dla Ukraińców weszła w obszar służb i dezinformacji.",
+      "whatHappened": "W Poznaniu zatrzymano osoby, które próbowały wejść do biura pomocy prawnej dla Ukraińców i przeprowadzać tam własną „kontrolę”. TVN24 podał też nieoficjalnie, że jeden z mężczyzn wcześniej został zatrzymany przez ABW pod zarzutem szpiegostwa na rzecz Rosji.",
+      "keyFacts": [
+        "Zatrzymani usłyszeli już zarzuty.",
+        "Wątek łączy antyukraiński incydent z bezpieczeństwem państwa."
+      ],
+      "reactions": [
+        "Komentarze polityków sugerują, że sprawa będzie dalej wykorzystywana w debacie publicznej.",
+        "To temat szczególnie podatny na dezinformację."
+      ],
+      "whyItMatters": "Dotyczy publicznego bezpieczeństwa, napięć wokół Ukrainy i potencjalnej aktywności obcych służb.",
+      "context": "TVN24 opisuje to jako próbę „pseudokontroli”, a dyskusja wokół sprawy już przeniosła się na poziom polityczny.",
+      "watchNext": [
+        "Czekać na oficjalne stanowisko ABW i prokuratury.",
+        "Obserwować, czy pojawią się kolejne zatrzymania."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Antyukraiński incydent w Poznaniu",
+          "url": "https://tvn24.pl/polska/antyukrainski-incydent-w-poznaniu-ryszard-petru-o-ruskim-szpiegu-w-dzialaniu-st9135957"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Poznań",
+        "ABW"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-farage-2026-07-10-0600",
+      "section": "Świat",
+      "title": "Farage oddaje mandat i wywołuje wybory uzupełniające",
+      "lead": "Reform UK próbuje zagrać pod nastroje antyestablishmentowe.",
+      "whatHappened": "Nigel Farage zrezygnował z mandatu posła po kontrowersjach wokół finansów. Lider Reform UK zapowiedział, że wystartuje w wyborach uzupełniających, a główne brytyjskie partie ogłosiły bojkot głosowania.",
+      "keyFacts": [
+        "To materiał TVN24 z 8 lipca 2026 roku.",
+        "Sprawa dotyczy też rejestru interesów poselskich i standardów parlamentarnych."
+      ],
+      "reactions": [
+        "Konserwatyści i Partia Pracy odrzucają ten manewr jako polityczny teatr.",
+        "Farage przedstawia ruch jako test poparcia."
+      ],
+      "whyItMatters": "To ważny sygnał dla brytyjskiej polityki i test siły Reform UK przed kolejnymi starciami.",
+      "context": "TVN24 opisuje sprawę jako manewr wyprzedzający wobec możliwych konsekwencji etycznych.",
+      "watchNext": [
+        "Śledzić, czy zostanie formalnie uruchomiona petycja o odwołanie.",
+        "Sprawdzać, kto ostatecznie wystartuje w okręgu Clacton-on-Sea."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nigel Farage rezygnuje z mandatu posła",
+          "url": "https://tvn24.pl/swiat/wielka-brytania-lider-reform-uk-nigel-farage-zrezygnowal-z-mandatu-posla-st9132953"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wielka Brytania",
+        "Polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-burkini-2026-07-10-0600",
+      "section": "Świat",
+      "title": "Sąd uznał zakaz kąpieli w burkini za dyskryminację",
+      "lead": "Austriacki wyrok wchodzi do europejskiej debaty o wolności i religii.",
+      "whatHappened": "TVN24 podał, że sąd w Salzburgu uznał zakaz kąpieli w burkini w hotelu za dyskryminację. Sprawa natychmiast trafiła do obiegu polityczno-społecznego jako temat o prawach mniejszości i standardach usług.",
+      "keyFacts": [
+        "Materiał opublikowano 10 lipca 2026 roku.",
+        "Sprawa dotyczy hotelowego regulaminu i standardów równego traktowania."
+      ],
+      "reactions": [
+        "To temat chwytliwy dla europejskich mediów i polityków.",
+        "Może wracać w debacie o integracji i wolności religijnej."
+      ],
+      "whyItMatters": "Wyrok może być cytowany jako precedens w rozmowach o dyskryminacji w usługach prywatnych.",
+      "context": "TVN24 ustawił sprawę jako starcie z narracją skrajnej prawicy, ale sedno jest prawno-społeczne.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się pełne uzasadnienie wyroku.",
+        "Monitorować reakcję organizacji praw człowieka."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zakaz kąpieli w burkini to dyskryminacja? Jest wyrok sądu",
+          "url": "https://tvn24.pl/swiat/austria-zakaz-kapieli-w-burkini-to-dyskryminacja-zapadl-wyrok-sadu-w-salzburgu-st9135642"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Prawo",
+        "Europa"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-erdogan-gift-2026-07-10-0600",
+      "section": "Świat",
+      "title": "Prezent Erdogana trafia do muzeum",
+      "lead": "Bruksela i Ankara załatwiają temat wojskowego upominku.",
+      "whatHappened": "Rzecznik Komisji Europejskiej potwierdził, że grawerowany pistolet podarowany Ursuli von der Leyen przez Recepa Tayyipa Erdogana trafi do muzeum wojskowego po bezpiecznym przetransportowaniu do Belgii. TVN24 podał też, że podobny prezent otrzymał Karol Nawrocki.",
+      "keyFacts": [
+        "Sprawa dotyczy pożegnalnych prezentów wręczonych na szczycie NATO.",
+        "Broń ma zostać dezaktywowana przed przekazaniem do muzeum."
+      ],
+      "reactions": [
+        "Temat szybko stał się medialnym symbolem protokołu dyplomatycznego.",
+        "Może wrócić przy okazji kolejnych komentarzy o relacjach z Turcją."
+      ],
+      "whyItMatters": "To drobny, ale symboliczny temat dyplomatyczny, który łatwo przebija się do obiegu publicznego.",
+      "context": "Sprawa pokazuje, jak element protokołu może przejść w news o szerokim zasięgu.",
+      "watchNext": [
+        "Sprawdzić, czy KE poda więcej szczegółów logistycznych.",
+        "Monitorować reakcje kancelarii prezydenta RP."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pistolet od Erdogana trafi do muzeum",
+          "url": "https://tvn24.pl/swiat/pistolet-prezent-od-erdogana-trafi-do-muzeum-rzecznik-komisji-europejskiej-potwierdza-st9135540"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Turcja",
+        "UE"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "tech-chatgpt-2026-07-10-0600",
+      "section": "Technologia",
+      "title": "OpenAI uruchamia ChatGPT Work i GPT-5.6",
+      "lead": "ChatGPT dostaje tryb pracy, a nie tylko odpowiedzi.",
+      "whatHappened": "OpenAI ogłosiło ChatGPT Work, agentową warstwę do pracy na aplikacjach, plikach i zadaniach, oraz nowy model GPT-5.6. TVN24 opisuje to jako największą zmianę w ChatGPT od dawna i łączy ją z rosnącymi obawami o bezpieczeństwo i kontrolę modeli AI.",
+      "keyFacts": [
+        "Oficjalny wpis OpenAI ma datę 9 lipca 2026 roku.",
+        "ChatGPT Work ma działać także z zaplanowanymi zadaniami."
+      ],
+      "reactions": [
+        "To mocny sygnał dla rynku narzędzi produktywności i agentów AI.",
+        "Wątek bezpieczeństwa będzie wracał przy każdym kolejnym wdrożeniu."
+      ],
+      "whyItMatters": "To jedna z największych zmian produktowych OpenAI ostatnich miesięcy i potencjalnie ważny kierunek dla codziennej pracy z AI.",
+      "context": "OpenAI opisuje integracje z plikami, aplikacjami, browserem i harmonogramowaniem zadań. TVN24 dodaje kontekst wyścigu o najbardziej zaawansowane modele AI.",
+      "watchNext": [
+        "Sprawdzić, jak szybko funkcja trafi do wszystkich planów.",
+        "Obserwować odpowiedź konkurentów OpenAI."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Rewolucyjne zmiany w ChatGPT",
+          "url": "https://tvn24.pl/biznes/tech/rewolucyjne-zmiany-w-chatgpt-to-najbardziej-rozwiniety-model-openai-st9135890"
+        },
+        {
+          "title": "OpenAI: ChatGPT is now a partner for your most ambitious work",
+          "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "AI",
+        "OpenAI"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-nasa-swift-2026-07-10-0600",
+      "section": "Świat",
+      "title": "NASA uruchamia misję, która ma podnieść orbitę Swift",
+      "lead": "Robotyczny serwis ma wydłużyć życie obserwatorium.",
+      "whatHappened": "NASA opisała Swift Boost Mission, w której Katalyst Space ma podnieść orbitę obserwatorium Neil Gehrels Swift po przyspieszonym spadku orbity. To kolejny przykład komercyjnej technologii serwisowania satelitów.",
+      "keyFacts": [
+        "Oficjalna strona NASA opisuje start i cel misji.",
+        "Misja wykorzystuje robotyczny statek LINK do boostu orbity."
+      ],
+      "reactions": [
+        "To ważny test dla rynku usług orbitalnych.",
+        "Szybkie serwisowanie satelitów staje się realnym kierunkiem rozwoju branży."
+      ],
+      "whyItMatters": "Misja może wydłużyć życie ważnego obserwatorium i jednocześnie potwierdzić, że komercyjny serwis w kosmosie staje się praktycznym narzędziem.",
+      "context": "NASA wskazuje na wpływ aktywności słonecznej na szybszy spadek orbity Swift i traktuje misję jako demonstrację nowej zdolności.",
+      "watchNext": [
+        "Sprawdzić, czy NASA poda pierwsze wyniki kontaktu ze statkiem LINK.",
+        "Monitorować kolejne kroki misji w blogu Swift."
+      ],
+      "sources": [
+        {
+          "title": "NASA: Swift Boost Mission",
+          "url": "https://science.nasa.gov/mission/swift/swift-boost-mission/"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "NASA",
+        "Kosmos"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "alert-baltyk-2026-07-10-0600",
+      "section": "Alerty",
+      "title": "Sztorm nad Bałtykiem zostawił szkody na wybrzeżu",
+      "lead": "Plażowe punkty i wypożyczalnie wciąż liczą straty.",
+      "whatHappened": "W nadmorskich miejscowościach trwa liczenie strat po środowym sztormie na Morzu Bałtyckim. TVN24 opisuje uszkodzone bary i wypożyczalnie na plażach oraz nadal wymagającą ostrożności sytuację na wybrzeżu.",
+      "keyFacts": [
+        "Materiał był aktualizowany 9 lipca wieczorem.",
+        "Źródła meteorologiczne nadal pokazują warunki wymagające uwagi."
+      ],
+      "reactions": [
+        "To najważniejszy bieżący alert pogodowy poranka.",
+        "Może wracać w kolejnych slotach, jeśli szkody i ostrzeżenia się utrzymają."
+      ],
+      "whyItMatters": "Szorstka pogoda nad morzem wpływa na bezpieczeństwo mieszkańców i turystów oraz na lokalny biznes.",
+      "context": "W poprzednich slotach to właśnie silny wiatr i alerty pogodowe napędzały feed. Ten poranek pokazuje już skutki po sztormie.",
+      "watchNext": [
+        "Monitorować komunikaty IMGW i lokalnych służb.",
+        "Sprawdzić, czy pojawią się dalsze ograniczenia nad Bałtykiem."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Sztorm nad Bałtykiem",
+          "url": "https://tvn24.pl/tvnmeteo/polska/sztorm-nad-baltykiem-pospolite-ruszenie-ale-nie-wszystko-dalo-sie-uratowac-st9134771"
+        },
+        {
+          "title": "IMGW Bałtyk",
+          "url": "https://baltyk.imgw.pl/"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Bałtyk",
+        "Pogoda"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24: Najnowsze",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24: Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24: Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24: Świat",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24: Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC News YouTube: US and Iran ramp up strikes",
+      "url": "https://www.youtube.com/watch?v=WWk3uvgQpcs"
+    },
+    {
+      "title": "CNN Newsroom YouTube: China's Pacific ballistic missile launch",
+      "url": "https://www.youtube.com/watch?v=McREzAKRyac"
+    },
+    {
+      "title": "OpenAI: ChatGPT is now a partner for your most ambitious work",
+      "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/"
+    },
+    {
+      "title": "NASA: Swift Boost Mission",
+      "url": "https://science.nasa.gov/mission/swift/swift-boost-mission/"
+    },
+    {
+      "title": "gov.pl: ostrzeżenia",
+      "url": "https://www.gov.pl/web/gov/ostrzezenia"
+    },
+    {
+      "title": "IMGW Bałtyk",
+      "url": "https://baltyk.imgw.pl/"
+    }
+  ]
+}
