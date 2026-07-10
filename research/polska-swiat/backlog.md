@@ -11,11 +11,13 @@
 | Medium | Align automation flags with scripts | Heartbeat requires `--require-app-articles` and `--force-manifest`, but current local scripts do not expose those options | Prepare a scoped proposal before any script or automation change; continue validating JSON/PDF with existing commands meanwhile | Open |
 | High | Track Polish PAC-3 service hub details | MON announced a concrete Ankara agreement, but location, technical scope and Polish industrial role still need confirmation | Check MON, NSPA/NATO, US, Dutch, German and Swedish readouts after the summit | Open |
 | Medium | Follow Poland-US military space declaration | MON signed a statement of intent with U.S. Space Force, including missile warning and GPS/NAVWAR areas | Watch for implementation schedule, exercises, satellite milestones and ARGUS/COS updates | Open |
-| Medium | Resolve repo verifier iOS signing mismatch | `scripts/verify-research-workspace.sh` currently expects Apple Distribution signing while the local Xcode project contains Apple Development, so the repo-wide verifier fails outside this topic | Review proposal `proposals/2026-07-08-repair-verifier-signing-check.md` before changing iOS project or verifier rules | Open |
 | High | Track USA-Iran/Gulf escalation after Ormuz strikes | AP reports a new U.S. strike wave and Iranian targeting of Bahrain, Kuwait and Qatar, turning Ormuz into a broader Gulf crisis | Check AP, CENTCOM, UKMTO, Gulf state statements and NATO follow-up before podcast or evening update | Open |
 | High | Monitor health reform package | MZ announced central e-registration, central e-queue, pay limits, restrictions on medical companies and sanctions for unequal access, but implementation depends on legislation | Track draft bills, consultations, NFZ details, medical-sector response and patient groups | Open |
 | Medium | Track U.S. military presence conversation after Ankara | Nawrocki says he spoke with Trump about permanent U.S. military presence in Poland, but implementation is left to Polish defence channels | Watch Prezydent RP, MON, U.S. Embassy/DoD and NATO readouts for concrete basing or force-posture steps | Open |
 | Medium | Track Deregulacja 2.0 rollout | Justice ministry moved the story from conference language into a broad digital-courts program; implementation still needs legal text and schedule | Watch KPRM/MS follow-up, draft laws, court-community reaction and public-facing examples of online hearings | Open |
+| High | Track PAŻP-Pfizer-Eurocontrol freeze | PAŻP says EUROCONTROL zajęło wierzytelności z opłat trasowych w związku z belgijskim wyrokiem Pfizer-RP, although the case did not concern PAŻP | Watch PAŻP formal objection, government response, Belgian appeal and any operational impact on air-navigation financing | Open |
+| High | Track Baltic Power and Choczewo grid launch | KPRM says first energy from Poland's first offshore wind farm enters the national grid through the 400 kV Choczewo station | Check KPRM, ORLEN, Baltic Power, PSE and URE for commissioning milestones, test status and grid impact | Open |
+| High | Follow Poznań anti-Ukrainian incident and foreign-influence angle | Prosecutorial charges after the office incident now intersect with media reports that one participant had an earlier espionage charge | Separate confirmed incident charges from unofficial ABW-related reporting; watch prosecutor, ABW and WOT statements | Open |
 
 ## Review Notes
 
@@ -113,6 +115,13 @@
   confirmed dialogue with NIL and a 240 zł/hour parameter, and the justice
   ministry launched Deregulacja 2.0 with online hearings and automatic registry
   access. PAC-3/Jasionka did not receive a fresh follow-up.
+- 2026-07-10: Friday morning research run created a material update. Strongest
+  sources were AP for Ukraine's fuel-infrastructure strikes and USA-Iran/Gulf,
+  Guardian/Euronews/PAP/TVN24 for Patriot licensing details, KPRM/Baltic Power
+  for Choczewo, PAŻP/TVN24/Rzeczpospolita/Money for the Eurocontrol freeze,
+  and TVN24/Interia/Polsat/WP/Onet for the Poznań anti-Ukrainian incident.
+  Podcast should keep the PAŻP and Poznań stories precise, because both mix
+  confirmed facts with legally sensitive or source-sensitive context.
 
 ## Done
 
@@ -120,3 +129,4 @@
 | --- | --- | --- |
 | 2026-06-20 | Review first three Polska/świat reports | Three scheduled reports were produced on 2026-06-18, 2026-06-19 and 2026-06-20. Source quality is acceptable when official institutions remain primary and dynamic news pages are treated as secondary signals. |
 | 2026-07-08 | Verify post-Ankara outcomes | Final NATO declaration is published and the immediate outcome check is complete; follow-up now moved into PAC-3 and Patriot implementation items. |
+| 2026-07-10 | Resolve repo verifier iOS signing mismatch | `scripts/verify-research-workspace.sh` passed during the 2026-07-10 morning research run, so the old blocker is no longer active. |

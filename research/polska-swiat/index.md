@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-09
+Last updated: 2026-07-10
 
 ## Current Understanding
 
@@ -100,6 +100,14 @@ stawki godzinowej, a Ministerstwo Sprawiedliwości uruchamia Deregulację 2.0
 jako nowy blok cyfryzacji i skracania procedur sądowych. Wątki PAC-3, Jasionki
 i obecności wojsk USA pozostają ważnym follow-upem, ale dziś nie dostały nowego
 twardego polskiego komunikatu.
+Po porannym runie 10 lipca agenda przesuwa się z deklaracji na odporność
+systemów: Ukraina uderza w rosyjskie paliwo i jednocześnie uzgadnia techniczne
+warunki produkcji PAC-3, Zatoka Perska pozostaje aktywnym kryzysem USA-Iran,
+a Polska ma trzy mocne krajowe wątki infrastrukturalno-bezpieczeństwowe:
+Choczewo/Baltic Power jako pierwszy morski wiatr w sieci, zajęcie środków PAŻP
+przez EUROCONTROL w cieniu sporu Pfizer-RP oraz poznański incydent
+antyukraiński z medialnie opisywanym wcześniejszym zarzutem szpiegostwa wobec
+jednego z uczestników.
 
 ## Stable Facts
 
@@ -172,14 +180,23 @@ twardego polskiego komunikatu.
   zdolności NATO: łączność satelitarna, GPS/NAVWAR, ostrzeganie rakietowe,
   ARGUS i Centrum Operacji Satelitarnych.
 - Po 9 lipca monitorować USA-Iran jako kryzys regionalny obejmujący nie tylko
-  Ormuz, ale też Bahrajn, Kuwejt i Katar.
+  Ormuz, ale też Bahrajn, Kuwejt, Katar i reakcję rynku energii.
 - Pakiet Ministerstwa Zdrowia śledzić w trybie legislacyjnym: odróżniać
   zapowiedzi od projektów ustaw, konsultacji i realnego wdrożenia e-kolejki.
 - Deregulację 2.0 śledzić pod kątem tego, czy konferencyjne zapowiedzi przejdą
   w projekty ustaw, harmonogram wdrożenia i czytelny język publiczny.
+- Po 10 lipca śledzić Baltic Power/Choczewo jako temat wdrożeniowy: testy,
+  wyprowadzenie mocy, tempo instalacji turbin i wpływ na krajową sieć.
+- Wątek PAŻP-Pfizer-Eurocontrol prowadzić jako sprawę finansowania
+  infrastruktury krytycznej, oddzielając spór szczepionkowy państwa od zadań
+  agencji żeglugi powietrznej.
+- Incydent poznański omawiać ostrożnie: potwierdzone zarzuty po incydencie
+  oddzielać od medialnych ustaleń o wcześniejszej sprawie ABW i czekać na
+  oficjalne komunikaty prokuratury, ABW lub WOT.
 
 ## Recent Reports
 
+- [2026-07-10](runs/2026-07-10.md)
 - [2026-07-09-1933](runs/2026-07-09-1933.md)
 - [2026-07-09](runs/2026-07-09.md)
 - [2026-07-08-1933](runs/2026-07-08-1933.md)
