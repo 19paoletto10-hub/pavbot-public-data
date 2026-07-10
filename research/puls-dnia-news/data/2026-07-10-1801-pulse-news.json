@@ -1,0 +1,478 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-10",
+  "runTime": "18:01",
+  "status": "Material update",
+  "headline": "Romanowski, burze i nowa fala światowych leadów",
+  "summary": "Nowy slot przesunął krajowy puls na Romanowskiego, akcesję Ukrainy i Mołdawii, nielegalne leki, psychoterapię i zarobki lekarzy. Świat dopowiada tajfunem w Azji, strzałem ICE w Houston, incydentem Ryanaira, odtajnionymi materiałami UAP, chińskim przełomem rakietowym i nową narracją wokół Iranu.",
+  "checkedSources": [
+    {
+      "title": "TVN24: Wiadomości z kraju i ze świata",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24: Wiadomości z kraju",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24: Wiadomości ze świata",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC News World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "IMGW: Synoptyczna prognoza pogody od 10.07.2026 do 12.07.2026 r.",
+      "url": "https://imgw.pl/synoptyczna-prognoza-pogody-od-10-07-2026-do-12-07-2026-r/"
+    },
+    {
+      "title": "PAGASA Weather",
+      "url": "https://www.pagasa.dost.gov.ph/weather"
+    },
+    {
+      "title": "U.S. Department of War news page",
+      "url": "https://www.defense.gov/news/"
+    }
+  ],
+  "items": [
+    {
+      "id": "pl-alerty-imgw-burze-2026-07-10-1801",
+      "section": "Alerty",
+      "title": "IMGW ostrzega przed burzami i gradem",
+      "lead": "Na części kraju wracają przelotne opady, burze i możliwy grad.",
+      "whatHappened": "TVN24 opisał nowe ostrzeżenia IMGW na 10 lipca, a synoptyczna prognoza wskazuje na przelotne opady, lokalne burze i ryzyko gradu w kilku regionach.",
+      "keyFacts": [
+        "To świeży sygnał z porannego i popołudniowego pakietu pogodowego z 10 lipca 2026 roku.",
+        "W prognozie IMGW pojawiają się opady, burze i porywy wiatru do 60 km/h w czasie burz."
+      ],
+      "reactions": [
+        "To może szybko zmieniać ruch i plan dnia w regionach objętych ostrzeżeniem.",
+        "To jeden z najbardziej operacyjnych alertów w tym slocie."
+      ],
+      "whyItMatters": "Krótki, ale praktyczny alert dla użytkownika iOS: wpływa na bezpieczeństwo, przemieszczanie się i lokalne plany.",
+      "context": "Poprzedni slot był bardziej polityczny; ten run ponownie przywraca pogodę jako temat operacyjny.",
+      "watchNext": [
+        "Sprawdzić, czy IMGW utrzyma lub zaostrzy ostrzeżenia w kolejnych godzinach.",
+        "Porównać alert z lokalnymi komunikatami RCB i samorządów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Może padać grad. Ostrzeżenia IMGW przed silnym deszczem z burzami na 10.07",
+          "url": "https://tvn24.pl/polska/moze-padac-grad-ostrzezenia-imgw-przed-silnym-deszczem-z-burzami-na-10-07-st9134639"
+        },
+        {
+          "title": "IMGW: Synoptyczna prognoza pogody od 10.07.2026 do 12.07.2026 r.",
+          "url": "https://imgw.pl/synoptyczna-prognoza-pogody-od-10-07-2026-do-12-07-2026-r/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "IMGW",
+        "burze",
+        "grad"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-romanowski-2026-07-10-1801",
+      "section": "Polityka",
+      "title": "Romanowski znów pod presją prokuratury",
+      "lead": "Nowy materiał TVN24 wraca do pytania, co prokuratura może zrobić w sprawie posła PiS.",
+      "whatHappened": "TVN24 opisał sprawę Marcina Romanowskiego w kontekście jego pobytu poza Węgrami i możliwych dalszych kroków prokuratury.",
+      "keyFacts": [
+        "Materiał pojawił się 10 lipca 2026 roku.",
+        "Wątek wraca do sporu o skuteczność ścigania i możliwe dalsze procedury."
+      ],
+      "reactions": [
+        "To temat o wysokim ładunku politycznym.",
+        "Każda nowa informacja może wywołać kolejną falę komentarzy."
+      ],
+      "whyItMatters": "To test dla instytucji ścigania i kolejny nośnik sporu rząd–opozycja.",
+      "context": "Romanowski pozostaje jednym z najczęściej wracających tematów polityczno-prokuratorskich w tym tygodniu.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się oficjalny komunikat prokuratury.",
+        "Obserwować reakcje PiS i KO na kolejne ruchy organów ścigania."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Marcin Romanowski poza Węgrami. Co może w sprawie posła PiS zrobić prokuratura",
+          "url": "https://tvn24.pl/polska/marcin-romanowski-poza-wegrami-co-moze-w-sprawie-posla-pis-zrobic-prokuratura-st9136017"
+        },
+        {
+          "title": "TVN24: Sąd się nie zgodził. Nowe informacje o Romanowskim",
+          "url": "https://tvn24.pl/polska/marcin-romanowski-nadal-scigany-ena-sad-odrzucil-wniosek-obrony-st9137439"
+        }
+      ],
+      "tags": [
+        "Romanowski",
+        "prokuratura",
+        "PiS"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-ue-ukraina-moldawia-2026-07-10-1801",
+      "section": "Polityka",
+      "title": "Ukraina i Mołdawia bliżej kolejnego etapu UE",
+      "lead": "Bruksela dała wstępne zielone światło dla dalszego procesu akcesyjnego.",
+      "whatHappened": "TVN24 podał, że Ukraina i Mołdawia dostały wstępną zgodę na otwarcie kolejnego etapu w drodze do Unii Europejskiej.",
+      "keyFacts": [
+        "To ważny polityczny sygnał dla Kijowa i Kiszyniowa.",
+        "Temat ma znaczenie także dla polskiej dyplomacji i regionu."
+      ],
+      "reactions": [
+        "To wzmacnia narrację o dalszym zakotwiczaniu Ukrainy w UE.",
+        "To może wrócić w debacie o bezpieczeństwie i finansowaniu rozszerzenia."
+      ],
+      "whyItMatters": "To jeden z istotniejszych europejskich newsów w tym slocie, łączący politykę, bezpieczeństwo i gospodarkę.",
+      "context": "W poprzednich slotach Ukraina wracała głównie jako temat bezpieczeństwa i relacji z Polską.",
+      "watchNext": [
+        "Sprawdzić, które rozdziały negocjacyjne zostaną formalnie otwarte.",
+        "Obserwować komentarze Warszawy, Kijowa i stolic UE."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Akcesja Ukrainy i Mołdawia do Unii Europejskiej. Jest wstępna zgoda na otwarcie kolejnego etapu",
+          "url": "https://tvn24.pl/swiat/akcesja-ukrainy-i-moldawia-do-unii-europejskiej-jest-wstepna-zgoda-na-otwarcie-kolejnego-etapu-st9137452"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Mołdawia",
+        "UE",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-nielegalne-leki-2026-07-10-1801",
+      "section": "Polska",
+      "title": "Nielegalne leki sprzedawano w sieci",
+      "lead": "Sprawa dotyczy reklamy i sprzedaży preparatów poza legalnym obiegiem.",
+      "whatHappened": "TVN24 opisał schemat reklamowania i sprzedaży nielegalnych leków w internecie.",
+      "keyFacts": [
+        "Materiał jest świeży i dotyczy obrotu w sieci.",
+        "To temat z pogranicza zdrowia publicznego, prawa i bezpieczeństwa konsumenta."
+      ],
+      "reactions": [
+        "Może pojawić się reakcja inspekcji farmaceutycznej lub służb.",
+        "To temat, który zwykle szybko uruchamia pytania o skalę i odpowiedzialność."
+      ],
+      "whyItMatters": "Fałszywe lub nielegalne leki są bezpośrednim ryzykiem zdrowotnym, szczególnie dla osób kupujących online.",
+      "context": "Rynek suplementów i leków w sieci od dawna jest podatny na nadużycia.",
+      "watchNext": [
+        "Sprawdzić, czy służby ujawnią liczbę zabezpieczonych produktów i zatrzymanych osób.",
+        "Obserwować, czy pojawią się ostrzeżenia GIS albo GIF."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nielegalne leki reklamowali i sprzedawali w sieci",
+          "url": "https://tvn24.pl/polska/nielegalne-leki-reklamowali-i-sprzedawali-w-sieci-st9137472"
+        }
+      ],
+      "tags": [
+        "leki",
+        "internet",
+        "zdrowie",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-psychoterapia-dzieci-2026-07-10-1801",
+      "section": "Zdrowie",
+      "title": "Fundacja TVN uruchamia wsparcie psychoterapii",
+      "lead": "Program ma pomóc dzieciom i młodzieży bez długiego czekania.",
+      "whatHappened": "TVN24 opisał ogólnopolski program dofinansowania psychoterapii dla dzieci i młodzieży realizowany przez Fundację TVN.",
+      "keyFacts": [
+        "To nowy program wsparcia dla rodzin szukających pomocy.",
+        "Materiał wskazuje, jak skorzystać z finansowania."
+      ],
+      "reactions": [
+        "To jeden z nielicznych pozytywnych i konkretnych newsów społecznych w tym slocie.",
+        "Może wywołać duże zainteresowanie wśród rodzin i placówek terapeutycznych."
+      ],
+      "whyItMatters": "Dostęp do psychoterapii dla młodych osób jest w Polsce jednym z najbardziej wrażliwych tematów zdrowotnych.",
+      "context": "Temat łączy zdrowie publiczne, dostępność świadczeń i presję na system.",
+      "watchNext": [
+        "Sprawdzić, jak szybko wyczerpują się miejsca i czy program rozszerzy zasięg.",
+        "Obserwować reakcje środowisk medycznych i organizacji pacjenckich."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ogólnopolski program dofinansowania psychoterapii dla dzieci i młodzieży. Jak skorzystać?",
+          "url": "https://tvn24.pl/polska/fundacja-tvn-ogolnopolski-program-dofinansowania-psychoterapii-dla-dzieci-i-mlodziezy-jak-skorzystac-st9137413"
+        }
+      ],
+      "tags": [
+        "psychoterapia",
+        "dzieci",
+        "zdrowie",
+        "Fundacja TVN"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-zarobki-lekarzy-2026-07-10-1801",
+      "section": "Gospodarka",
+      "title": "TVN24 zbiera dane o zarobkach lekarzy",
+      "lead": "Pytania do ponad 200 szpitali pokazują, jak rozjeżdża się obraz wynagrodzeń.",
+      "whatHappened": "TVN24 zebrał dane z ponad 200 szpitali i opisał, ile naprawdę zarabiają lekarze.",
+      "keyFacts": [
+        "To materiał oparty na dużej próbie placówek.",
+        "Temat dotyka finansowania ochrony zdrowia i presji płacowej."
+      ],
+      "reactions": [
+        "To może wrócić w sporze o budżet zdrowia i kontrakty.",
+        "To także ważny sygnał dla pacjentów i samych placówek."
+      ],
+      "whyItMatters": "Wynagrodzenia lekarzy wpływają na dostępność świadczeń, migrację kadr i politykę zdrowotną.",
+      "context": "W zdrowiu publicznym zarobki i niedobór personelu stale wracają jako jeden pakiet.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się reakcje resortu zdrowia lub szpitali.",
+        "Obserwować, czy materiał wywoła szerszą debatę o kontraktach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ile naprawdę zarabiają lekarze. Mamy dane z ponad 200 szpitali",
+          "url": "https://tvn24.pl/polska/ile-zarabiaja-lekarze-wyslalismy-pytania-do-ponad-500-szpitali-st9136735"
+        }
+      ],
+      "tags": [
+        "lekarze",
+        "wynagrodzenia",
+        "zdrowie",
+        "szpitale"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "sw-typhoon-east-asia-2026-07-10-1801",
+      "section": "Świat",
+      "title": "Azja Wschodnia szykuje się na niszczycielski tajfun",
+      "lead": "BBC opisuje zagrożenie po osuwiskach na Filipinach i kierunek ruchu burzy.",
+      "whatHappened": "BBC podał, że tajfun Bavi zbliża się do Tajwanu i południowo-wschodnich Chin, a na Filipinach osuwiska zabiły 15 osób.",
+      "keyFacts": [
+        "To jeden z najmocniejszych sztormów tego sezonu w regionie.",
+        "PAGASA i lokalne służby utrzymują ostrzeżenia pogodowe."
+      ],
+      "reactions": [
+        "To temat z wysokim ryzykiem eskalacji w kolejnych godzinach.",
+        "Może wpływać na transport, ewakuacje i łańcuchy dostaw w regionie."
+      ],
+      "whyItMatters": "Skala zjawiska i skutki w Filipinach czynią z niego istotny alert międzynarodowy.",
+      "context": "Wschodnioazjatyckie zjawiska pogodowe wracają teraz jako jeden z głównych tematów światowych feedów.",
+      "watchNext": [
+        "Śledzić komunikaty PAGASA i Tajwanu.",
+        "Sprawdzić, czy burza zmieni tor lub siłę przed wejściem nad ląd."
+      ],
+      "sources": [
+        {
+          "title": "BBC: East Asia braces for destructive typhoon as landslides kill 15 in Philippines",
+          "url": "https://www.bbc.co.uk/news/articles/c04y6wr03gxo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "PAGASA Weather",
+          "url": "https://www.pagasa.dost.gov.ph/weather"
+        }
+      ],
+      "tags": [
+        "tajfun",
+        "Filipiny",
+        "Tajwan",
+        "Chiny",
+        "alert"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-ice-houston-2026-07-10-1801",
+      "section": "Świat",
+      "title": "ICE zastrzelił w Houston nie tę osobę",
+      "lead": "Amerykańskie służby przyznały, że celem był ktoś inny.",
+      "whatHappened": "BBC podał, że agent ICE zastrzelił w Houston Lorenzo Salgado Araujo podczas kontroli drogowej, a DHS twierdzi, że nie był on zamierzonym celem.",
+      "keyFacts": [
+        "To jeden z najpoważniejszych amerykańskich incydentów imigracyjno-policyjnych w tym slocie.",
+        "Sprawa prawdopodobnie uruchomi dalsze pytania o użycie siły."
+      ],
+      "reactions": [
+        "Temat ma potencjał polityczny i prawny.",
+        "Może szybko wrócić w debacie o ICE i nadzorze nad służbami."
+      ],
+      "whyItMatters": "To zdarzenie ma znaczenie dla bezpieczeństwa publicznego, polityki imigracyjnej i odpowiedzialności służb.",
+      "context": "Kwestie migracyjne i użycie siły przez federalne służby pozostają w USA bardzo spolaryzowane.",
+      "watchNext": [
+        "Sprawdzić, czy DHS lub lokalna policja opublikują więcej szczegółów.",
+        "Obserwować, czy pojawią się nagrania lub oficjalna rekonstrukcja zdarzenia."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Man fatally shot by ICE in Houston was not intended target, DHS says",
+          "url": "https://www.bbc.co.uk/news/articles/cm2rm66xd17o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "ICE",
+        "Houston",
+        "bezpieczeństwo",
+        "migracja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-ryanair-window-2026-07-10-1801",
+      "section": "Świat",
+      "title": "Pasażer Ryanaira wypadł częściowo przez okno",
+      "lead": "Na pokładzie doszło do dramatycznej awarii i urazu pasażera.",
+      "whatHappened": "BBC opisał relacje pasażerów z lotu Ryanaira, podczas którego w locie pękła szyba, a jeden z pasażerów częściowo wystawał z rozbitego okna.",
+      "keyFacts": [
+        "To poważny incydent bezpieczeństwa lotniczego.",
+        "Sprawa dotyczy awarii technicznej i natychmiastowej reakcji załogi."
+      ],
+      "reactions": [
+        "To może wywołać pytania o procedury linii i obsługi technicznej.",
+        "Incydent ma duży potencjał viralowy, ale jest też realnym problemem bezpieczeństwa."
+      ],
+      "whyItMatters": "Bezpieczeństwo lotnicze to temat wysokiego zaufania publicznego; takie incydenty szybko trafiają do głównego nurtu.",
+      "context": "BBC podał zdarzenie jako świeży lead z działu world.",
+      "watchNext": [
+        "Sprawdzić komunikat Ryanaira albo lotniska w Grecji.",
+        "Obserwować, czy pojawią się oficjalne szczegóły o przyczynie pęknięcia szyby."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Man nearly sucked out of window mid-air on Ryanair plane, passengers say",
+          "url": "https://www.bbc.co.uk/news/articles/cgk65knkyzdo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Ryanair",
+        "lotnictwo",
+        "bezpieczeństwo",
+        "Grecja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-uap-videos-2026-07-10-1801",
+      "section": "Technologia",
+      "title": "USA odtajnienia kolejne filmy o UAP",
+      "lead": "Pentagon wraca do kolejnej paczki materiałów o niezidentyfikowanych zjawiskach.",
+      "whatHappened": "BBC poinformował, że Stany Zjednoczone odtajnili kolejne nagrania związane z UAP, a Departament Obrony opisał to jako następną publikację materiałów.",
+      "keyFacts": [
+        "To oficjalna publikacja rządowa, a nie tylko internetowy przeciek.",
+        "Temat znów łączy bezpieczeństwo, technologię i transparentność państwa."
+      ],
+      "reactions": [
+        "Materiał przyciąga uwagę mediów, bo UAP nadal budzą duże zainteresowanie.",
+        "To także przypomnienie, że Pentagon konsekwentnie publikuje kolejne pakiety danych."
+      ],
+      "whyItMatters": "To ważne jako przykład oficjalnego ujawniania danych o zjawiskach obserwowanych przez wojsko.",
+      "context": "W USA UAP to od lat temat na styku obronności, badań i popkultury.",
+      "watchNext": [
+        "Sprawdzić, jakie dokładnie wideo opublikowano i czy zawiera nowe wnioski.",
+        "Obserwować, czy Pentagon zapowie następny pakiet materiałów."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US declassifies even more UFO videos",
+          "url": "https://www.bbc.co.uk/news/videos/c8x2zez8qwzo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "U.S. Department of War news page",
+          "url": "https://www.defense.gov/news/"
+        }
+      ],
+      "tags": [
+        "UAP",
+        "UFO",
+        "Pentagon",
+        "transparentność",
+        "technologia"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-china-reusable-rocket-2026-07-10-1801",
+      "section": "Technologia",
+      "title": "Chiny chwalą przełom w rakiecie wielokrotnego użytku",
+      "lead": "Państwowe media mówią o pierwszym takim locie w kraju.",
+      "whatHappened": "CNN i BBC podały, że Chiny po raz pierwszy miały udany test rakiety wielokrotnego użytku, co ma przyspieszyć ich pogoń za USA w sektorze kosmicznym.",
+      "keyFacts": [
+        "To ważny sygnał dla rynku kosmicznego i technologii startowych.",
+        "W tle jest rywalizacja z amerykańskimi firmami i agencjami."
+      ],
+      "reactions": [
+        "To może zwiększyć presję na zachodnich konkurentów kosmicznych.",
+        "To kolejny argument, że chiński sektor kosmiczny szybko dojrzewa."
+      ],
+      "whyItMatters": "Technologia wielokrotnego użytku obniża koszty startów i ma znaczenie dla przemysłu kosmicznego oraz obronności.",
+      "context": "W poprzednim slocie pojawiał się już podobny sygnał, ale dziś front page nadal trzyma ten wątek wysoko.",
+      "watchNext": [
+        "Sprawdzić, czy Chiny i producenci rakiety ujawnią więcej danych testowych.",
+        "Obserwować reakcje rynku kosmicznego i mediów branżowych."
+      ],
+      "sources": [
+        {
+          "title": "CNN: China reports reusable rocket breakthrough as it vies to catch up with the US",
+          "url": "https://edition.cnn.com/2026/07/10/china/china-reusable-rockets-test-breakthrough-intl-hnk"
+        },
+        {
+          "title": "BBC: China lands reusable rocket for first time, state media says",
+          "url": "https://www.bbc.co.uk/news/articles/cm2rmmx86pdo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Chiny",
+        "kosmos",
+        "rakiety",
+        "technologia"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "polityka-iran-talks-2026-07-10-1801",
+      "section": "Świat",
+      "title": "Trump mówi o rozmowach z Iranem",
+      "lead": "CNN znów ustawia Iran w centrum amerykańskiej polityki zagranicznej.",
+      "whatHappened": "CNN podał, że Donald Trump ponownie ogłosił koniec zawieszenia broni, ale jednocześnie stwierdził, że USA zgodziły się na rozmowy z Iranem.",
+      "keyFacts": [
+        "To świeża zmiana tonu po serii twardych komunikatów.",
+        "Wątek łączy politykę, bezpieczeństwo i ryzyko eskalacji na Bliskim Wschodzie."
+      ],
+      "reactions": [
+        "Rynek i dyplomacja będą czytać każdy kolejny komunikat dosłownie.",
+        "To temat, który może szybko zmieniać narrację dnia."
+      ],
+      "whyItMatters": "Iran pozostaje jednym z najbardziej wrażliwych punktów globalnej polityki i bezpieczeństwa.",
+      "context": "W poprzednim slocie Iran już był ważny, ale dzisiejszy nagłówek z CNN pokazuje, że temat nadal dominuje.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się harmonogram rozmów albo reakcja Teheranu.",
+        "Obserwować, czy Biały Dom doprecyzuje warunki."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Trump again declares ceasefire over but says US has agreed to talks with Iran",
+          "url": "https://edition.cnn.com/2026/07/10/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "dyplomacja",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    }
+  ]
+}

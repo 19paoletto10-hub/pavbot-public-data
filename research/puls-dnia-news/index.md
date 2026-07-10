@@ -52,6 +52,13 @@ degrees. BBC and CNN added fresh world pressure from the East Asia typhoon,
 SK Hynix's US share sale, US-Iran talks, Spanish wildfires, China’s reusable
 rocket breakthrough and Ukraine’s strikes near Crimea.
 
+The 2026-07-10 18:01 slot pushed the domestic feed toward Romanowski, the
+Ukraine-Moldova EU step, illegal medicines, the Fundacja TVN psychotherapy
+program, doctors' pay data and an IMGW thunderstorm alert. BBC and CNN
+shifted the world mix toward the East Asia typhoon, the Houston ICE shooting,
+the Ryanair window incident, UAP video declassification, China's reusable
+rocket test and renewed Iran talks.
+
 ## Data Shape
 
 The native iOS feed expects:
