@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-07-10",
+  "runTime": "15:42",
+  "executiveSummary": "Dzisiejszy sweep dodał nowy, mocny klaster wokol ITDS, Link Group i Netguru. Najwazniejsze zmiany to nowa rola ITDS wokol finansowego AI, odswiezony board mirror CKSource z driftujacym tytulem i waluta, nowy publiczny Link Group Principal AI Engineer oraz wygaszony Holisticon science lead. Na Wroclaw boardzie pojawily sie tez dodatkowe, jeszcze niekanoniczne sygnaly z Tenarai, Upvanta i Entrada AI.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior Java Developer - AI and Financial Technology",
+      "company": "ITDS",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "21 000 - 24 150 PLN B2B",
+      "seniority": "Senior",
+      "fitSummary": "LLMs in production, agent-based architectures, Spring AI, LangChain4j, embeddings, vector databases, AI observability",
+      "whyInteresting": "najmocniejszy nowy lead z dzisiejszego runu, bo łączy finansowe AI z jawnym production scope i pełnym remote",
+      "uncertainty": "to first-party source, ale warto sprawdzić, czy zakres nie przesunie się jeszcze bardziej w stronę klasycznego backendu",
+      "sourceURLs": [
+        "https://itds.pl/it-jobs/senior-java-developer-ai-and-financial-technology/"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Principal AI Engineer",
+      "company": "Link Group",
+      "location": "Wrocław +4 / remote",
+      "workMode": "Remote",
+      "compensation": "150 - 180 PLN/h B2B",
+      "seniority": "Principal",
+      "fitSummary": "production AI/ML, GenAI, LLMs, AWS, Azure, governance, feedback loops",
+      "whyInteresting": "seniority i salary band są bardzo czytelne, a opis dobrze trafia w praktyczne delivery AI",
+      "uncertainty": "board-first karta może jeszcze zmienić lokalizację lub tytuł",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/link-group-principal-ai-engineer-wroclaw-ai-12ab6eef"
+      ],
+      "tags": [
+        "LLM",
+        "GenAI",
+        "AWS",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "AI Engineer",
+      "company": "Netguru",
+      "location": "Wrocław +4 / remote",
+      "workMode": "Remote",
+      "compensation": "12 000 - 19 200 PLN net B2B lub 10 000 - 16 000 PLN gross UoP",
+      "seniority": "Nieokreślony",
+      "fitSummary": "RAG, embeddings, vector databases, OpenAI / Azure OpenAI, agentic workflows",
+      "whyInteresting": "mocny, aktywny lead z dobrym salary bandem i jasnym production scope wokół RAG oraz agentic workflows",
+      "uncertainty": "board signal może być później skonsolidowany do canonical employer page",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/netguru-ai-engineer-wroclaw-ai-b5662556"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Principal AI Engineer",
+      "company": "CKSource / Tiugo Technologies",
+      "location": "Wrocław + remote",
+      "workMode": "Remote",
+      "compensation": "CHF salary display on board mirror",
+      "seniority": "Principal",
+      "fitSummary": "principal-level applied AI, production AI scope, senior product engineering",
+      "whyInteresting": "materialny drift tytułu, waluty i lokalizacji nadal trwa, więc to ważny sygnał dedupe i title tracking",
+      "uncertainty": "board mirror różni się od canonical page, która dalej sugeruje Principal Applied AI Engineer",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/cksource-principal-ai-engineer-warszawa-ai"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 5,
+      "title": "AI Scientist / Principal AI Engineer - Drug Discovery and Life Sciences",
+      "company": "Holisticon Connect",
+      "location": "Wrocław",
+      "workMode": "Wrocław",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Principal",
+      "fitSummary": "life sciences, drug discovery, AI science, production ML",
+      "whyInteresting": "wyspecjalizowany lead nadal jest wart śledzenia, ale dziś przeszedł w expired i wypada z aktywnej shortlisty",
+      "uncertainty": "oferta jest już nieaktywna",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/holisticon-connect-ai-scientist-principal-ai-engineer---drug-discovery-life-sciences-wroclaw-ai"
+      ],
+      "tags": []
+    }
+  ],
+  "changes": [
+    "Doszedl nowy publiczny klaster wokol ITDS finance/agentic AI, Link Group i Netguru.",
+    "CKSource/Tiugo zrobil kolejny drift: board mirror zmienil tytul, walute i liste lokalizacji.",
+    "Holisticon science lead przeszedl w expired, wiec jeden z bardziej wyspecjalizowanych leadow z wczorajszego okresu juz nie jest aktywny."
+  ],
+  "risks": [
+    "Board mirrors moga zmieniac walute, tytul i lokalizacje bez rzeczywistej zmiany roli.",
+    "ITDS autonomous-systems role jest EU-remote, ale nie jest wprost Poland-remote, wiec traktuje ja jako sygnal poboczny.",
+    "Tenarai, Upvanta i Entrada AI sa obecnie widoczne glownie na zbiorczym boardzie, wiec nadal warto szukac canonical employer pages."
+  ],
+  "recommendedActions": [
+    "Recheck ITDS, CKSource, Link Group i Netguru w nastepnym przebiegu.",
+    "Poszukaj canonical pages dla Tenarai, Upvanta i Entrada AI, jesli karty nadal beda zyly.",
+    "Zdejmij wygasly Holisticon science lead z aktywnej shortlisty."
+  ],
+  "checkedSources": [
+    {
+      "title": "ITDS job offers",
+      "url": "https://itds.pl/it-jobs/",
+      "status": "checked"
+    },
+    {
+      "title": "ITDS: Senior Java Developer - AI and Financial Technology",
+      "url": "https://itds.pl/it-jobs/senior-java-developer-ai-and-financial-technology/",
+      "status": "checked"
+    },
+    {
+      "title": "ITDS: Senior AI and Python Engineer - Autonomous Systems Development",
+      "url": "https://itds.pl/it-jobs/senior-ai-and-python-engineer-autonomous-systems-development/",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: Wroclaw AI/ML board",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "CKSource: Principal AI Engineer",
+      "url": "https://justjoin.it/job-offer/cksource-principal-ai-engineer-warszawa-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Link Group: Principal AI Engineer",
+      "url": "https://justjoin.it/job-offer/link-group-principal-ai-engineer-wroclaw-ai-12ab6eef",
+      "status": "checked"
+    },
+    {
+      "title": "Netguru: AI Engineer",
+      "url": "https://justjoin.it/job-offer/netguru-ai-engineer-wroclaw-ai-b5662556",
+      "status": "checked"
+    },
+    {
+      "title": "Holisticon Connect: AI Scientist / Principal AI Engineer - Drug Discovery and Life Sciences",
+      "url": "https://justjoin.it/job-offer/holisticon-connect-ai-scientist-principal-ai-engineer---drug-discovery-life-sciences-wroclaw-ai",
+      "status": "checked"
+    }
+  ]
+}
