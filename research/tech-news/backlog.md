@@ -4,10 +4,14 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track ChatGPT Work and GPT-Live rollout | OpenAI is merging voice, desktop, browser and scheduled tasks into one surface | Watch rollout breadth, security controls and Atlas migration | Open |
+| Medium | Track Meta Model API monetization | Muse Spark 1.1 now has a public developer API preview and pricing pressure may reset AI API economics | Watch pricing, partner adoption and enterprise use cases | Open |
+| Medium | Track Anthropic reflection UX | Claude reflection and hard questions push trust into the product UI | Watch beta retention, privacy framing and enterprise reception | Open |
+| Medium | Track AI-native telco distribution | Deutsche Telekom shows how AI can be embedded into core communications without a new app | Watch customer adoption, language coverage and operator copycats | Open |
 | High | Track Meta Muse Image privacy backlash | Public Instagram reuse could trigger consent and default-setting scrutiny | Watch opt-out defaults, complaint volume and policy edits | Open |
 | High | Track inference silicon race | Apple/Broadcom, DeepSeek, SambaNova, Prime Intellect and ZML show the market shifting from model hype to custom silicon and portable inference stacks | Watch customer adoption, manufacturing constraints, financing risk and benchmark/performance claims | Open |
 | High | Track Microsoft in-house model migration | MAI routing may change Copilot economics and vendor mix | Watch rollout breadth across 365, Foundry and partner surfaces | Open |
-| High | Track OpenAI GPT-5.6 rollout and Atlas wind-down | OpenAI has moved GPT-5.6 into ChatGPT and Microsoft 365 Copilot while retiring Atlas | Watch rollout breadth, Atlas migration deadline, Chrome extension behavior and pricing | Open |
+| High | Track OpenAI GPT-5.6 rollout and Atlas wind-down | OpenAI has moved GPT-5.6 into ChatGPT and Microsoft 365 Copilot while retiring Atlas and folding ChatGPT Work/GPT-Live into the same surface | Watch rollout breadth, Atlas migration deadline, ChatGPT Work, GPT-Live, Chrome extension behavior and pricing | Open |
 | Medium | Track Google AI ad transparency labels | Google is now labeling AI-made ads in a visible consumer UI | Watch rollout consistency, advertiser reaction and regulatory citations | Open |
 | Medium | Track Microsoft AI climate externalities | The 25% emissions jump gives a concrete benchmark for the cost of data-center growth | Watch future sustainability reports, power contracts and water-use reporting | Open |
 | Medium | Track Anthropic LTBT governance signaling | Ben Bernanke's appointment makes governance a product differentiator in frontier AI | Watch LTBT actions, board changes and public mission language | Open |

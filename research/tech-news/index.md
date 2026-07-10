@@ -4,6 +4,10 @@ Last updated: 2026-07-10
 
 ## Current Understanding
 
+Po wieczornym refreshu z 2026-07-10 główna nowa oś przesuwa się z samego release'u modeli do warstwy pracy, głosu i monetyzacji: OpenAI łączy ChatGPT Work, GPT-Live, Codex i desktop browser w jeden surface operacyjny, Meta otwiera public preview Meta Model API dla Muse Spark 1.1, Anthropic dokłada reflection i publiczne hard questions do Claude UX, a Deutsche Telekom pokazuje AI-native telco bez nowej aplikacji.
+
+Community signal pozostaje agentowy, ale jest już wyraźnie bardziej praktyczny i trochę bardziej zmęczony niż w poprzednich dniach. Product Hunt premiuje PlugThis, Sim, Scarlett, ConnectMachine 2.0 i GPT-5.6, a Hacker News częściej pyta o koszt, lokalne uruchamianie modeli i sens coding agents niż o sam hype wokół frontier modeli.
+
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
@@ -172,6 +176,15 @@ transparentność środowiskową AI.
 - AI climate externalities: Microsoft's latest sustainability report gives a
   concrete emissions benchmark for the data-center buildout; watch whether
   other hyperscalers publish similar deltas.
+- OpenAI work/voice surface: ChatGPT Work, GPT-Live and the merged desktop app
+  should be watched for rollout breadth, approvals, scheduling controls and
+  whether the browser handoff feels cohesive outside demos.
+- Meta Model API monetization: Muse Spark 1.1 now has a public developer
+  surface; watch pricing, adoption and whether developers treat Meta as a real
+  AI platform provider.
+- Anthropic reflection UX: Claude reflection and public hard questions may
+  become a repeatable trust pattern; watch beta retention, privacy framing and
+  enterprise reception.
 - Agent stack commercialization: Vercel and Product Hunt show agent search,
   autocomplete and observability moving into productized infrastructure;
   watch for repeatable adoption signals rather than one-day launches.

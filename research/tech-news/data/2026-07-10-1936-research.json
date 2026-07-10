@@ -1,0 +1,274 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-10",
+  "runTime": "19:36",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny refresh z 2026-07-10 przesuwa środek ciężkości z samych premier modeli na warstwę, która je faktycznie sprzedaje i osadza w pracy. OpenAI łączy ChatGPT Work, GPT-Live, Codex i desktop/built-in browser w jeden powierzchniowy workflow, Meta otwiera publiczny Meta Model API dla Muse Spark 1.1, a Anthropic dorzuca reflection i publiczne hard questions jako produktowy trust layer.",
+    "Równolegle widać, że rynek nie tylko testuje modele, ale też ich dystrybucję. Deutsche Telekom pokazuje AI-native telco bez nowej aplikacji, Product Hunt premiuje agentowe narzędzia i workflow, a Hacker News bardziej niż hype komentuje koszty, codzienną użyteczność i zmęczenie coding agentami."
+  ],
+  "summaryBullets": [
+    "Produkty: ChatGPT Work i GPT-Live spinają office stack",
+    "AI: Meta zamienia Muse Spark 1.1 w płatny surface dla deweloperów",
+    "Regulacje: Anthropic przenosi zaufanie do interfejsu"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-10-1936-0-chatgpt-work-i-gpt-live-spinaja-office-stack-3568b28c2a",
+      "section": "Produkty",
+      "title": "ChatGPT Work i GPT-Live spinają office stack",
+      "standfirst": "OpenAI łączy voice, desktop i agentowe wykonywanie pracy w jednym produkcie.",
+      "whatHappened": "ChatGPT Work startuje razem z GPT-Live, a Codex zostaje włączony do desktopowej aplikacji ChatGPT z wbudowaną przeglądarką i computer use.",
+      "whyItMatters": "To przesuwa ChatGPT z roli czatu do roli warstwy wykonawczej dla pracy biurowej i technicznej.",
+      "deeperAnalysis": [
+        "OpenAI nie sprzedaje już pojedynczego modelu. Sprzedaje środowisko, które ma przejąć znaczną część codziennych zadań: od researchu i przygotowywania dokumentów, przez slajdy i arkusze, po zadania cykliczne uruchamiane po stronie desktopu i webu. To ważny zwrot, bo użytkownik nie musi składać workflow z kilku narzędzi. Dostaje jedną ścieżkę, w której model, browser i narzędzie do pracy nad plikami są spięte w całość.",
+        "Najciekawszy element to nie sama lista funkcji, tylko sposób ich opakowania. Scheduled Tasks, browser use i integrations z aplikacjami zmieniają ChatGPT z asystenta w system delegowania pracy. W praktyce oznacza to, że produkt zaczyna konkurować nie tylko z innymi modelami, ale też z klasycznymi narzędziami produktywności, BI i lightweight automation.",
+        "To też moment, w którym bezpieczeństwo i governance przestają być dodatkiem do modelu, a stają się częścią codziennego UX. OpenAI wyraźnie podkreśla approvals, organization controls i monitorowanie działań. To będzie kluczowe, jeśli ChatGPT Work ma wejść do enterprise bez tworzenia nowej klasy shadow AI."
+      ],
+      "contextPoints": [
+        "Co się stało: ChatGPT Work, GPT-Live i desktop Codex łączą się w jeden produktowy surface.",
+        "Dlaczego ważne: OpenAI próbuje przejąć warstwę wykonawczą pracy, nie tylko warstwę odpowiedzi.",
+        "Na co patrzeć dalej: szerokość rolloutów, kontrola dostępu w organizacjach i to, czy Atlas migration faktycznie zakończy browser play."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: ChatGPT is now a partner for your most ambitious work",
+          "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/"
+        },
+        {
+          "title": "OpenAI: Introducing GPT-Live",
+          "url": "https://openai.com/index/introducing-gpt-live/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "ChatGPT Work",
+        "GPT-Live",
+        "Codex",
+        "desktop",
+        "voice"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-10-1936-1-meta-zamienia-muse-spark-1-1-w-platny-surface-dla-deweloperow-0787ef6991",
+      "section": "AI",
+      "title": "Meta zamienia Muse Spark 1.1 w płatny surface dla deweloperów",
+      "standfirst": "Muse Spark 1.1 wychodzi poza demo i trafia do public preview API dla deweloperów.",
+      "whatHappened": "Meta uruchomiła Muse Spark 1.1 razem z public preview Meta Model API i opisuje model jako narzędzie do zadań agentowych.",
+      "whyItMatters": "Meta przestaje być tylko konsumenckim frontem treści. Buduje też produkt dla developerów i zaczyna realnie monetyzować własny stack AI.",
+      "deeperAnalysis": [
+        "Najważniejsze w tym release nie jest samo słowo \"multimodal\". Istotne jest to, że Meta opakowuje model pod agentic tasks: planowanie, delegowanie, computer use i orkiestrację wielu subagentów. To zmienia znaczenie modelu z narzędzia do generowania treści w narzędzie do realizacji pracy. W praktyce otwiera to drzwi do bardziej przewidywalnych integracji w aplikacjach, workflow automation i narzędziach dla firm.",
+        "Public preview Meta Model API jest strategiczne, bo przesuwa konkurencję z poziomu benchmarków na poziom dystrybucji i cen. Gdy Business Insider opisuje pricing jako agresywny, to sygnał, że Meta chce kupić adopcję przez koszt i dostępność, a nie przez premium branding. Taki ruch może wywrzeć presję na innych dostawców, szczególnie tam, gdzie liczy się wysoka liczba wywołań, a nie tylko jednorazowy trial.",
+        "Warto też odczytywać ten release przez pryzmat infrastruktury. Duże context window, multi-agent orchestration i computer use sugerują, że Meta celuje w długie, złożone zadania, a nie tylko w krótkie interakcje. To dokładnie ten obszar, w którym koszty compute, latency i retention zaczynają mieć większe znaczenie niż \"wow effect\" pojedynczego demo."
+      ],
+      "contextPoints": [
+        "Co się stało: Meta opublikowała Muse Spark 1.1 i public preview Meta Model API.",
+        "Dlaczego ważne: Firma zaczyna sprzedawać własną warstwę agentic AI jako developer product.",
+        "Na co patrzeć dalej: pricing, early partners, enterprise adoption i reakcja OpenAI/Anthropic."
+      ],
+      "sources": [
+        {
+          "title": "Meta AI Blog: Introducing Muse Spark 1.1",
+          "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"
+        },
+        {
+          "title": "Meta for Developers: News for Developers",
+          "url": "https://developers.meta.com/blog/"
+        },
+        {
+          "title": "Business Insider: Meta launches Muse Spark 1.1 with aggressive pricing",
+          "url": "https://www.businessinsider.com/meta-launches-muse-spark-1-1-cost-effective-ai-2026-7"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Meta",
+        "Muse Spark",
+        "Meta Model API",
+        "agents",
+        "computer use",
+        "pricing"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-10-1936-2-anthropic-przenosi-zaufanie-do-interfejsu-7d5606961c",
+      "section": "Regulacje",
+      "title": "Anthropic przenosi zaufanie do interfejsu",
+      "standfirst": "Anthropic dokłada do Claude publiczne pytania i beta-feature do samoobserwacji użycia.",
+      "whatHappened": "Firma prosi publiczność o najtrudniejsze pytania o AI i testuje możliwość refleksji nad tym, jak użytkownik korzysta z Claude.",
+      "whyItMatters": "To przesuwa governance z poziomu boardu i policy page do poziomu codziennego UX, gdzie użytkownik widzi własne wzorce użycia.",
+      "deeperAnalysis": [
+        "Anthropic coraz wyraźniej buduje przewagę nie tylko na modelach, ale na narracji zaufania. \"Inviting hard questions\" jest komunikatem do rynku, że firma chce pokazywać pracę, a nie tylko wynik. Z kolei reflection feature daje użytkownikowi narzędzie do spojrzenia na własne zużycie modelu i zadania sobie pytania, czy AI faktycznie wspiera cele, czy tylko zwiększa liczbę interakcji.",
+        "To ciekawy kontrapunkt wobec bardziej agresywnego productization OpenAI. Anthropic nie rezygnuje z ambicji technicznych, ale mocniej akcentuje odpowiedzialność, auto-monitoring i publiczne uzasadnianie decyzji. W świecie, gdzie AI staje się coraz bardziej osadzone w pracy i komunikacji, taki trust layer może być ważny dla enterprise buyers i regulatorów.",
+        "Nie jest jednak pewne, czy użytkownicy potraktują tę funkcję jako realną pomoc, czy raczej jako miękką kontrolę zachowań. Dlatego warto obserwować, czy reflection zostanie faktycznie użyteczna w praktyce, czy tylko stanie się kolejnym elementem komunikacji marki."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic uruchomiło publiczne hard questions i beta reflection on Claude use.",
+        "Dlaczego ważne: Trust i governance wchodzą do interfejsu produktu, nie tylko do dokumentów.",
+        "Na co patrzeć dalej: adopcja beta, reakcje enterprise i to, czy podobne wzorce skopiuje reszta rynku."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic: Inviting hard questions",
+          "url": "https://www.anthropic.com/news/hard-questions"
+        },
+        {
+          "title": "Anthropic: A new way to reflect on how you use Claude",
+          "url": "https://www.anthropic.com/news/reflect-with-claude"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "Claude",
+        "governance",
+        "reflection",
+        "trust"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-10-1936-3-deutsche-telekom-testuje-ai-native-telco-82ecd56e37",
+      "section": "Produkty",
+      "title": "Deutsche Telekom testuje AI-native telco",
+      "standfirst": "OpenAI i Deutsche Telekom pokazują, jak AI można wbudować w komunikację bez tworzenia nowej aplikacji.",
+      "whatHappened": "Case study opisuje live translation, in-call assistants i post-call summaries w podstawowych doświadczeniach telekomunikacyjnych.",
+      "whyItMatters": "To bardzo konkretny wzorzec dla branż regulowanych, które chcą wprowadzić AI bez rozbijania istniejących przyzwyczajeń użytkownika.",
+      "deeperAnalysis": [
+        "Najmocniejszy sygnał z tego case study jest prosty: AI nie musi żyć w osobnej apce, żeby być użyteczne. Jeśli telco może wkleić tłumaczenie na żywo, asystenta podczas rozmowy i podsumowanie po rozmowie bez zmuszania klienta do nauki nowego interfejsu, to podobny model mogą skopiować banki, ubezpieczyciele i inni operatorzy usług masowych.",
+        "To także wskazówka, że przyszła konkurencja AI nie będzie rozgrywać się wyłącznie na poziomie modeli. Będzie też zależeć od tego, kto kontroluje punkt kontaktu z użytkownikiem. Telekom ma dostęp do komunikacji i kontekstu; model dostarcza inteligencję. Razem tworzą produkt, który jest trudniejszy do zignorowania niż sam czat.",
+        "W praktyce taki układ zmniejsza tarcie adopcyjne, ale zwiększa wagę kontroli dostępu, prywatności i rozliczalności. Im bliżej core communication surface, tym ważniejsze będą przejrzyste reguły wykorzystania danych i jasne wyłączenia dla użytkowników."
+      ],
+      "contextPoints": [
+        "Co się stało: Deutsche Telekom wdraża AI w customer interactions bez nowej aplikacji.",
+        "Dlaczego ważne: To gotowy template dla AI-native usług w regulowanych branżach.",
+        "Na co patrzeć dalej: adopcja klientów, rozszerzenie języków i czy inni operatorzy skopiują ten model."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: How Deutsche Telekom is rewiring telecommunications with AI",
+          "url": "https://openai.com/index/deutsche-telekom/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Deutsche Telekom",
+        "OpenAI",
+        "telecom",
+        "live translation",
+        "in-call assistants"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-10-1936-4-product-hunt-i-hn-pokazuja-rynek-agentow-f4274cab5a",
+      "section": "Produkty",
+      "title": "Product Hunt i HN pokazują rynek agentów",
+      "standfirst": "Launch boards i forum threads coraz częściej premiują workflow, automatyzację i narzędzia dla agentów.",
+      "whatHappened": "Product Hunt na 10 lipca pokazuje m.in. PlugThis, Sim, Scarlett, ConnectMachine 2.0 i GPT-5.6, a HN Ask page żyje pytaniami o coding agents, lokalne modele i zmęczenie LLM-ami.",
+      "whyItMatters": "To sygnał, że rynek przechodzi z demo-first do workflow-first, a zarazem zaczyna odróżniać hype od użyteczności.",
+      "deeperAnalysis": [
+        "Product Hunt jest dziś mocnym lustrem dla tego, co ludzie chcą budować i kupować: Chrome extensions, open-source workspaces, Slack co-workers, digital business cards i AI productivity narzędzia. To nie są już głównie \"wow, działa\" demonstracje. To są produkty, które próbują wejść do codziennej pracy i zarabiać na tym samym problemie, co większe platformy.",
+        "Hacker News pokazuje drugą stronę tego samego rynku. Obok ciekawości jest tam zmęczenie, sceptycyzm i pytanie o realny zwrot z coding agentów. Ta mieszanka jest cenna, bo sugeruje, że popyt na agentów nadal istnieje, ale coraz bardziej zależy od jakości i kosztu, a nie od samego faktu użycia AI.",
+        "W praktyce to oznacza, że kolejne zwycięskie produkty będą musiały rozwiązywać konkretny workflow, a nie tylko \"dodawać AI\". To ważna zmiana dla twórców narzędzi, bo sygnał z launch boards jest coraz bardziej zbliżony do sygnału z rynku pracy: ludzie chcą mniej interakcji z modelem, więcej gotowego rezultatu."
+      ],
+      "contextPoints": [
+        "Co się stało: Product Hunt i HN utrzymują silny agentowy i workflow-heavy miks.",
+        "Dlaczego ważne: Community signal potwierdza popyt na narzędzia wykonawcze, nie tylko modele.",
+        "Na co patrzeć dalej: które launchy przełożą się na retention, a które znikną po jednym dniu."
+      ],
+      "sources": [
+        {
+          "title": "Best of Product Hunt: July 10, 2026",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/7/10"
+        },
+        {
+          "title": "Hacker News: Ask page",
+          "url": "https://news.ycombinator.com/ask"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Product Hunt",
+        "Hacker News",
+        "agents",
+        "workflows",
+        "coding"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "ChatGPT Work i GPT-Live spinają office stack",
+      "rationale": "OpenAI łączy voice, browser, desktop i scheduled tasks w jeden surface pracy.",
+      "sourcesLabel": "OpenAI, Business Insider"
+    },
+    {
+      "priority": "High",
+      "title": "Meta zamienia Muse Spark 1.1 w płatny surface dla deweloperów",
+      "rationale": "Public preview API i agresywne pricing pressure zmieniają ekonomię AI tools.",
+      "sourcesLabel": "Meta AI Blog, Meta for Developers, Business Insider"
+    },
+    {
+      "priority": "High",
+      "title": "Anthropic przenosi zaufanie do interfejsu",
+      "rationale": "Reflection i public hard questions robią z governance product feature.",
+      "sourcesLabel": "Anthropic"
+    },
+    {
+      "priority": "Medium",
+      "title": "Deutsche Telekom pokazuje AI-native telco",
+      "rationale": "AI włączone bez nowej appki to dobry template dla regulated industries.",
+      "sourcesLabel": "OpenAI, Deutsche Telekom"
+    },
+    {
+      "priority": "Medium",
+      "title": "Product Hunt i HN sygnalizują agentic workflow boom",
+      "rationale": "Launch boards i HN threads pokazują jednocześnie popyt i zmęczenie.",
+      "sourcesLabel": "Product Hunt, Hacker News"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI: ChatGPT is now a partner for your most ambitious work",
+      "url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work/"
+    },
+    {
+      "title": "OpenAI: Introducing GPT-Live",
+      "url": "https://openai.com/index/introducing-gpt-live/"
+    },
+    {
+      "title": "OpenAI: How Deutsche Telekom is rewiring telecommunications with AI",
+      "url": "https://openai.com/index/deutsche-telekom/"
+    },
+    {
+      "title": "Meta AI Blog: Introducing Muse Spark 1.1",
+      "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"
+    },
+    {
+      "title": "Meta for Developers: News for Developers",
+      "url": "https://developers.meta.com/blog/"
+    },
+    {
+      "title": "Anthropic: Inviting hard questions",
+      "url": "https://www.anthropic.com/news/hard-questions"
+    },
+    {
+      "title": "Anthropic: A new way to reflect on how you use Claude",
+      "url": "https://www.anthropic.com/news/reflect-with-claude"
+    },
+    {
+      "title": "Business Insider: Meta launches Muse Spark 1.1 with aggressive pricing",
+      "url": "https://www.businessinsider.com/meta-launches-muse-spark-1-1-cost-effective-ai-2026-7"
+    },
+    {
+      "title": "Best of Product Hunt: July 10, 2026",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/7/10"
+    },
+    {
+      "title": "Hacker News: Ask page",
+      "url": "https://news.ycombinator.com/ask"
+    }
+  ]
+}
