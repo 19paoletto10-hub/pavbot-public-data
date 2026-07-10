@@ -1,6 +1,6 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-09
+Last updated: 2026-07-10
 
 ## Current Understanding
 
@@ -8,14 +8,18 @@ Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
 polskiego podcastu około godziny 09:00.
 
-Poranny run z 2026-07-09 przesuwa ciężar z samych modeli na warstwę rozmowy,
-benchmarków i runtime. GPT-Live i Grok 4.5 pokazują, że voice oraz agentic work
-stają się główną osią rywalizacji, OpenAI publicznie kwestionuje jakość
-SWE-Bench Pro, ZML/SambaNova/Prime Intellect potwierdzają, że inference
-economics i post-training loop są osobnym rynkiem, a TypeScript 7 oraz Google
-Photos Video Remix przenoszą tę samą zmianę do dev tools i consumer apps.
-NHTSA równolegle robi z first-responder safety konkretne wymaganie produktowe
-dla AV, a Samsung wyznacza już kolejny hardware checkpoint na 22 lipca.
+Po raporcie z 2026-07-10 główna nowa oś to przejście z preview do pełnego
+productization: GPT-5.6 wchodzi do ChatGPT i Microsoft 365 Copilot, Atlas ma
+datę wygaszenia, a browser-based agentic work przesuwa się do ChatGPT i Codex.
+Równolegle Meta wypuszcza Muse Spark 1.1 do zadań agentowych, Google oznacza
+reklamy tworzone przez AI, Microsoft pokazuje 25-procentowy wzrost emisji,
+UE wraca do sporu o Chat Control, a Anthropic wzmacnia governance przez
+nominację Ben Bernanke do LTBT.
+
+Community signal pozostaje agentowy, ale jest już wyraźnie bardziej praktyczny
+niż w pierwszych tygodniach tematu: Product Hunt premiuje Framer AI Agents,
+Coasty i Cursor for iOS, a Hacker News trzyma się GPT-5.6, Chat Control,
+GLM 5.2 i Anthropic LTBT zamiast ogólnego modelowego hype'u.
 
 Po wieczornym refreshu z 2026-07-08 główna nowa oś przesuwa się jeszcze niżej
 w stacku: Apple/Broadcom, DeepSeek, SambaNova, Prime Intellect i ZML pokazują
@@ -32,14 +36,6 @@ zamieniają prawo oraz consumer scam defense w product categories, Forterra
 ujawnia battlefield autonomy w Ukrainie, a ITU/UN formalizują globalny
 governance przez AI for Good Global Commission. Product Hunt i Hacker News
 dalej premiują agentów, search i lokalny TTS jako sygnał popytu.
-
-Wieczorny refresh z 2026-07-09 dorzuca warstwę produktu i governance nad tym
-stackiem: Anthropic Reflect zamienia użycie Claude w self-monitoring, Ben
-Bernanke wzmacnia Long-Term Benefit Trust, Ollama potwierdza silny popyt na
-local-first open models, Flint od Microsoft Research celuje w wizualizację
-wyników agentów, a Cloudflare Drop radykalnie obniża próg publikacji
-statycznych stron. To przesuwa temat z samych modeli na to, jak AI jest
-obserwowane, opakowywane i wypuszczane do sieci.
 
 Po raporcie z 2026-07-07 najważniejsza nowa oś to przejście od samego modelowego
 hype'u do kosztów i ryzyk operacyjnych AI: Microsoft łączy cięcia etatów z
@@ -162,12 +158,20 @@ transparentność środowiskową AI.
 - Consumer privacy defaults: Google Search Services History and saved media
   make AI training opt-out part of the core product flow; monitor backlash,
   legal scrutiny and whether other platforms copy the pattern.
+- OpenAI productization shift: GPT-5.6 is now tied to Microsoft 365 Copilot
+  while Atlas is being deprecated; watch the August 9 wind-down, Chrome
+  extension behavior and whether ChatGPT/Codex absorb the browser use case.
 - Agentic cyber: JADEPUFFER is a concrete case of partially autonomous
   ransomware; watch for repeat incidents, defensive guidance and CISA-style
   follow-ups.
 - Memory supercycle: SK Hynix's U.S. listing is a concrete test of whether AI
   memory demand remains hot; watch pricing, demand and whether the cycle
   broadens beyond a few hyperscalers.
+- AI transparency in ads: Google is now labeling AI-generated ads in a visible
+  consumer UI; watch whether other ad platforms copy the disclosure pattern.
+- AI climate externalities: Microsoft's latest sustainability report gives a
+  concrete emissions benchmark for the data-center buildout; watch whether
+  other hyperscalers publish similar deltas.
 - Agent stack commercialization: Vercel and Product Hunt show agent search,
   autocomplete and observability moving into productized infrastructure;
   watch for repeatable adoption signals rather than one-day launches.

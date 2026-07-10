@@ -1,0 +1,374 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-10",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "10 lipca 2026 główna zmiana to przejście od preview do produktu: OpenAI wypycha GPT-5.6 do ChatGPT i Microsoft 365 Copilot, a Atlas dostaje datę wygaszenia i ma zostać zastąpiony przez te same agentowe możliwości w ChatGPT i Codex. To już nie jest tylko kolejny model, ale próba skonsolidowania przeglądarki, pracy i asystenta w jednym workflow.",
+    "Druga oś to przejście od modelowego hype'u do kosztów, zasad i kontroli. Microsoft pokazuje twardy wzrost emisji związany z rozbudową data center, Meta dowozi Muse Spark 1.1 jako model do zadań agentowych, Google zaczyna oznaczać reklamy tworzone przez AI, UE wraca do sporu o Chat Control, a Anthropic wzmacnia governance przez nominację Ben Bernanke do LTBT. Hacker News i Product Hunt nadal premiują agentów, coding tools i lokalne AI, ale coraz częściej widać tam już produkty, nie tylko demo."
+  ],
+  "summaryBullets": [
+    "Produkty: OpenAI GPT-5.6 wchodzi do Copilota i żegna Atlas",
+    "Infrastruktura: Microsoft pokazuje klimatyczny koszt AI",
+    "AI: Meta Muse Spark 1.1 przyspiesza agentic stack"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-10-0-openai-gpt-5-6-wchodzi-do-copilota-i-zegna-atlas-a4394ec731",
+      "section": "Produkty",
+      "title": "OpenAI GPT-5.6 wchodzi do Copilota i żegna Atlas",
+      "standfirst": "GPT-5.6 trafia do ChatGPT i Microsoft 365 Copilot, a Atlas dostaje datę wygaszenia i przeniesienie agentic browser features do ChatGPT oraz Codex.",
+      "whatHappened": "OpenAI ogłosiło GPT-5.6, a Help Center ustawiło Atlas na stop przed 9 sierpnia 2026 roku.",
+      "whyItMatters": "To pokazuje, że OpenAI konsoliduje model, przeglądarkę i workflow pracy w jednym produkcie, zamiast utrzymywać je jako osobne eksperymenty.",
+      "deeperAnalysis": [
+        "GPT-5.6 nie jest tylko kolejną nazwą modelu. OpenAI rozdziela rodzinę na Sol, Terra i Luna, a jednocześnie wkłada tę rodzinę w konkretne surfaces: ChatGPT, Microsoft 365 Copilot i narzędzia dla pracy z kodem oraz dokumentami. To sygnał, że model coraz mniej służy do pokazywania benchmarków, a coraz bardziej do stałego routingu zadań.",
+        "Równolegle Atlas dostaje status produktu schodzącego. OpenAI nie broni już idei osobnego browsera jako nowego defaultu internetu, tylko przesuwa użyteczne fragmenty do ChatGPT desktop app, Chrome extension i Codex. To ważne, bo sugeruje, że browser wars zaczynają się rozstrzygać nie wokół pełnej przeglądarki, lecz wokół warstwy kontekstu i agentowego wykonania."
+      ],
+      "contextPoints": [
+        "Co się stało: GPT-5.6 został ogłoszony jako nowa rodzina modeli, a Atlas ma zostać wycofany do 2026-08-09.",
+        "Dlaczego ważne: OpenAI łączy model, workflow i browser w jeden produktowy stos.",
+        "Na co patrzeć dalej: szerokość rolloutów w ChatGPT, Microsoft 365, API i wpływ na inne agentic browsers."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI GPT-5.6",
+          "url": "https://openai.com/index/gpt-5-6/"
+        },
+        {
+          "title": "OpenAI w Microsoft 365 Copilot",
+          "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/"
+        },
+        {
+          "title": "OpenAI Help Center: Atlas deprecation",
+          "url": "https://help.openai.com/ja-jp/articles/20001371-evolving-atlas-into-chatgpt-for-browser-based-agentic-work"
+        },
+        {
+          "title": "OpenAI Help Center: Model Release Notes",
+          "url": "https://help.openai.com/en/articles/9624314-model-release-notes"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "GPT-5.6",
+        "Copilot",
+        "Atlas",
+        "ChatGPT",
+        "browser"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-10-1-microsoft-pokazuje-klimatyczny-koszt-ai-9ec277f37a",
+      "section": "Infrastruktura",
+      "title": "Microsoft pokazuje klimatyczny koszt AI",
+      "standfirst": "Microsoft podał 25-procentowy wzrost emisji w 2025 roku do 34 milionów ton metrycznych, a firma wskazuje na rozbudowę data center i rosnący popyt AI.",
+      "whatHappened": "2026 Environmental Sustainability Report pokazuje, że wybrane interwencje nie wystarczyły, by utrzymać emisje na wcześniejszej ścieżce.",
+      "whyItMatters": "To jeden z niewielu twardych wskaźników pokazujących, jak koszt klimatyczny AI przebija się z poziomu infrastruktury do raportów publicznych.",
+      "deeperAnalysis": [
+        "Microsoft od dawna jest symbolem czystej infrastruktury i ambitnych climate goals. Dzisiejszy raport jest więc szczególnie ważny, bo pokazuje, że skala rozbudowy data center i AI workloadów przestaje mieścić się w prostym komunikacie o zrównoważonym wzroście. Sama firma przyznaje, że rozwiązania sustainability nie skalują się tak szybko jak potrzeby.",
+        "To nie jest jedynie problem PR-owy. Jeśli największy cloud provider przyznaje wzrost emisji o jedną czwartą, to presja przenosi się na utilites, permitting, water usage i lokalne społeczności wokół nowych kampusów. W praktyce AI przestaje być tylko software story, a staje się także story o energii, materiałach i rozliczalności klimatycznej."
+      ],
+      "contextPoints": [
+        "Co się stało: Microsoft opublikował roczny raport sustainability i przyznał wzrost emisji.",
+        "Dlaczego ważne: liczby pokazują, że AI ma materialny koszt środowiskowy, a nie tylko koszt tokenów.",
+        "Na co patrzeć dalej: kolejne raporty Big Tech, kontrakty energetyczne i lokalne protesty wobec data center."
+      ],
+      "sources": [
+        {
+          "title": "Microsoft On the Issues",
+          "url": "https://blogs.microsoft.com/on-the-issues/2026/07/09/responsibly-building-the-ai-future/"
+        },
+        {
+          "title": "Microsoft 2026 Sustainability Report",
+          "url": "https://www.microsoft.com/en-us/corporate-responsibility/topics/sustainability/report/"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/tech/963728/microsoft-sustainability-report-2026"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Microsoft",
+        "emissions",
+        "sustainability",
+        "data centers",
+        "AI",
+        "climate"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-10-2-meta-muse-spark-1-1-przyspiesza-agentic-stack-a99d1f6804",
+      "section": "AI",
+      "title": "Meta Muse Spark 1.1 przyspiesza agentic stack",
+      "standfirst": "Meta AI wypuściła Muse Spark 1.1 jako multimodal reasoning model z naciskiem na tool use, computer use, coding i multimodal understanding.",
+      "whatHappened": "Model pojawił się 9 lipca 2026 roku wraz z raportem ewaluacyjnym i safety framingiem.",
+      "whyItMatters": "Meta przesuwa się z generacji obrazów i wideo do modeli, które mają wykonywać pracę, a nie tylko tworzyć treść.",
+      "deeperAnalysis": [
+        "Muse Spark 1.1 jest ciekawy nie dlatego, że Meta pokazuje kolejny branding, tylko dlatego, że model jest opisany jako narzędzie do agentic tasks. Tool use, computer use i coding to dokładnie te obszary, gdzie użytkownicy przestają pytać o ładniejszą odpowiedź, a zaczynają oczekiwać wykonania zadania. To zmienia konkurencję z \"kto ma lepszy chatbot\" na \"kto ma lepszy worker\".",
+        "Drugi ważny sygnał to sam raport bezpieczeństwa. Meta najwyraźniej chce zbudować narrację, że Muse Spark 1.1 jest wdrażany z większą kontrolą i przygotowaniem niż czyste demo. To może być istotne dla tego, gdzie model trafi najpierw: do AI Studio, creator tooling czy developer surfaces. W każdym z tych miejsc będzie to bezpośredni test, czy Meta potrafi zamienić social context w produktowe execution."
+      ],
+      "contextPoints": [
+        "Co się stało: Meta ogłosiła Muse Spark 1.1 jako nowy model z agentic task focus.",
+        "Dlaczego ważne: Meta wchodzi głębiej w workflow AI i komputerowe wykonywanie zadań.",
+        "Na co patrzeć dalej: gdzie model pojawi się w Meta AI, czy trafi do API i jakie będą wyniki safety review."
+      ],
+      "sources": [
+        {
+          "title": "Meta AI Blog",
+          "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"
+        },
+        {
+          "title": "Muse Spark 1.1 evaluation report",
+          "url": "https://ai.meta.com/static-resource/muse-spark-1-1-evaluation-report"
+        },
+        {
+          "title": "Meta AI Blog home",
+          "url": "https://ai.meta.com/blog/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Meta",
+        "Muse Spark",
+        "multimodal",
+        "agents",
+        "computer use",
+        "coding"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-10-3-google-zaczyna-oznaczac-reklamy-tworzone-przez-ai-8872047dd9",
+      "section": "Regulacje",
+      "title": "Google zaczyna oznaczać reklamy tworzone przez AI",
+      "standfirst": "Google dodaje etykiety AI do reklam tworzonych lub edytowanych przez własne narzędzia generatywne w My Ad Center na Search, YouTube i Discover.",
+      "whatHappened": "Firma wprowadza widoczne disclosure typu \"How this ad was made\" oraz automatyczne oznaczanie reklam tworzonych jej własnymi narzędziami AI.",
+      "whyItMatters": "To przesuwa AI disclosure z poziomu abstrakcyjnej polityki do domyślnego elementu wielkiego produktu reklamowego.",
+      "deeperAnalysis": [
+        "Google nie czeka na zewnętrzny przymus, tylko sam wprowadza widoczność tego, czy reklama była tworzona przez AI. To ważne, bo Google Ads i YouTube są zbyt duże, by traktować to jako niszową zmianę kosmetyczną. Jeśli disclosure stanie się normą w tych kanałach, rynek reklamowy szybko uzna AI-made creative za standardową kategorię, nie wyjątek.",
+        "Ten ruch ma też warstwę polityczną. Etykieta pomaga budować zaufanie użytkowników, ale jednocześnie przygotowuje Google na pytania regulatorów, czy generatywne reklamy są wystarczająco transparentne. W praktyce to może stać się wzorcem dla innych platform: jeśli Google zrobiło to na swoich własnych powierzchniach, trudno będzie długo bronić braku podobnego labelingu gdzie indziej."
+      ],
+      "contextPoints": [
+        "Co się stało: Google wdraża nowe etykiety dla reklam stworzonych lub edytowanych przez AI.",
+        "Dlaczego ważne: disclosure staje się częścią interfejsu reklamowego, a nie dodatkiem po fakcie.",
+        "Na co patrzeć dalej: adopcja po stronie reklamodawców, reakcje regulatorów i ewentualne rozszerzenie na inne powierzchnie."
+      ],
+      "sources": [
+        {
+          "title": "Google Blog",
+          "url": "https://blog.google/products/ads-commerce/google-ads-ai-transparency-labels/"
+        },
+        {
+          "title": "The Verge tech page",
+          "url": "https://www.theverge.com/tech"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "ads",
+        "transparency",
+        "AI label",
+        "adtech"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-10-4-chat-control-wraca-do-unijnej-agendy-b423f38bcf",
+      "section": "Regulacje",
+      "title": "Chat Control wraca do unijnej agendy",
+      "standfirst": "Spór o Chat Control 1.0 wraca po proceduralnym manewrze, który pozwala utrzymać możliwość skanowania prywatnych wiadomości mimo oporu części MEP-ów.",
+      "whatHappened": "Wired opisuje przegłosowanie rozwiązania, a Legislative Observatory pokazuje przyspieszenie procedury po lipcowych ruchach w Parlamencie Europejskim.",
+      "whyItMatters": "To bezpośrednio dotyczy prywatności, szyfrowania i tego, jak bardzo komunikatory w Europie mogą zostać zmuszone do skanowania treści.",
+      "deeperAnalysis": [
+        "Najważniejsze w tym wątku jest to, że debata nie wraca dlatego, że społeczny konsensus się zmienił. Wraca, bo procedura umożliwiła utrzymanie starego mechanizmu pod nową presją polityczną. Dla zespołów produktowych oznacza to, że ryzyko regulacyjne nie znika nawet wtedy, gdy wcześniejsza wersja planu została formalnie odrzucona.",
+        "To jest też ważne dla Polski, bo message scanning w UE bardzo łatwo przechodzi z poziomu abstrakcyjnej debaty do bardzo konkretnego wymogu compliance dla komunikatorów, usług mailowych i platform społecznościowych. Nawet jeśli nie wszystkie szyfrowane usługi zostaną objęte w ten sam sposób, sam fakt utrzymania tematu przy życiu jest sygnałem, że prywatność komunikacji pozostaje podatna na powroty \"dla dobra bezpieczeństwa\"."
+      ],
+      "contextPoints": [
+        "Co się stało: proceduralny manewr utrzymał na stole europejskie message scanning.",
+        "Dlaczego ważne: to może wpływać na produkty komunikacyjne i ustawienia prywatności w UE.",
+        "Na co patrzeć dalej: finalny tekst, zakres wyjątków dla end-to-end encryption i reakcja operatorów usług."
+      ],
+      "sources": [
+        {
+          "title": "Wired",
+          "url": "https://www.wired.com/story/a-majority-of-european-lawmakers-voted-against-letting-big-tech-read-our-messages-theyre-going-to-anyway/"
+        },
+        {
+          "title": "EP Legislative Observatory",
+          "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025%2F0429%28COD%29"
+        },
+        {
+          "title": "Patrick Breyer",
+          "url": "https://www.patrick-breyer.de/en/eu-parliament-greenlights-chat-control-1-0-breyer-our-children-lose-out/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "EU",
+        "privacy",
+        "encryption",
+        "chat control",
+        "child safety",
+        "Parliament"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-10-5-anthropic-doklada-bernanke-do-ltbt-9b6223870d",
+      "section": "Regulacje",
+      "title": "Anthropic dokłada Bernanke do LTBT",
+      "standfirst": "Anthropic appoints Ben Bernanke to its Long-Term Benefit Trust, czyli organ, który ma realny wpływ na mission oversight i composition boardu.",
+      "whatHappened": "Oficjalny wpis mówi o lipcowej nominacji byłego szefa Fed do niezależnego body Anthropic.",
+      "whyItMatters": "W frontier AI governance zaczyna być elementem produktu i strategii rynkowej, a nie tylko dodatkiem PR.",
+      "deeperAnalysis": [
+        "To nie jest zwykła rada doradcza. Long-Term Benefit Trust ma mechanizmy wpływu na zarządzanie Anthropic, więc Bernanke nie trafia tam jako dekoracja, tylko jako część realnego systemu kontroli. W praktyce to sygnał, że Anthropic chce budować zaufanie nie tylko wśród użytkowników, ale też regulatorów, enterprise buyers i świata polityki.",
+        "W szerszym kontekście to ciekawy kontrast wobec bardziej agresywnego, produktowego rytmu OpenAI. Anthropic sygnalizuje, że public-benefit framing i governance są jego przewagą konkurencyjną. Jeśli rynek frontier AI coraz bardziej przypomina infrastrukturę krytyczną, to takie ciało nadzoru może stać się częścią odpowiedzi na pytanie, kto ma prawo decydować o release'ach, ograniczeniach i board-level tradeoffs."
+      ],
+      "contextPoints": [
+        "Co się stało: Ben Bernanke został członkiem Long-Term Benefit Trust Anthropic.",
+        "Dlaczego ważne: governance staje się częścią konkurencji między frontier labs.",
+        "Na co patrzeć dalej: publiczne działania LTBT i to, czy sygnał governance przełoży się na konkretne decyzje produktowe."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic: Ben Bernanke appointed to Anthropic Long-Term Benefit Trust",
+          "url": "https://www.anthropic.com/news/ben-bernanke"
+        },
+        {
+          "title": "Anthropic: The Long-Term Benefit Trust",
+          "url": "https://www.anthropic.com/news/the-long-term-benefit-trust"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "governance",
+        "LTBT",
+        "Ben Bernanke",
+        "frontier AI"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "GPT-5.6 wchodzi do Copilota, a Atlas znika",
+      "rationale": "OpenAI zamienia browser i asystenta w jeden workflow, a nie osobne produkty.",
+      "sourcesLabel": "OpenAI, Help Center, TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Microsoft pokazuje klimatyczny koszt AI",
+      "rationale": "25-procentowy wzrost emisji to twardy, łatwy do opowiedzenia koszt boomu data center.",
+      "sourcesLabel": "Microsoft, The Verge"
+    },
+    {
+      "priority": "High",
+      "title": "Meta Muse Spark 1.1 przyspiesza agentic stack",
+      "rationale": "Meta wchodzi z generacji obrazów w tool use, computer use i coding.",
+      "sourcesLabel": "Meta AI Blog, evaluation report"
+    },
+    {
+      "priority": "High",
+      "title": "Google zaczyna oznaczać reklamy tworzone przez AI",
+      "rationale": "Disclosure staje się częścią ad stacku i może stać się nowym standardem platformowym.",
+      "sourcesLabel": "Google Blog, The Verge"
+    },
+    {
+      "priority": "High",
+      "title": "Chat Control wraca jako spór o prywatność",
+      "rationale": "Proceduralny manewr pokazuje, że message scanning może wracać mimo oporu większości.",
+      "sourcesLabel": "Wired, EP Observatory"
+    },
+    {
+      "priority": "High",
+      "title": "Anthropic dokłada Bernanke do LTBT",
+      "rationale": "Governance frontier AI staje się częścią konkurencji, nie tylko PR-u.",
+      "sourcesLabel": "Anthropic, LTBT"
+    },
+    {
+      "priority": "Medium",
+      "title": "Lyzr i Mercor pokazują gorący rynek agentów",
+      "rationale": "Startupy agentowe nadal przyciągają kapitał i automatyzują własny proces sprzedaży.",
+      "sourcesLabel": "TechCrunch"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI: GPT-5.6: Frontier intelligence that scales with your ambition",
+      "url": "https://openai.com/index/gpt-5-6/"
+    },
+    {
+      "title": "OpenAI: GPT-5.6 is now the preferred model in Microsoft 365 Copilot",
+      "url": "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot/"
+    },
+    {
+      "title": "OpenAI Help Center: Evolving Atlas into ChatGPT for browser-based agentic work",
+      "url": "https://help.openai.com/ja-jp/articles/20001371-evolving-atlas-into-chatgpt-for-browser-based-agentic-work"
+    },
+    {
+      "title": "OpenAI Help Center: Model Release Notes",
+      "url": "https://help.openai.com/en/articles/9624314-model-release-notes"
+    },
+    {
+      "title": "TechCrunch: OpenAI is shutting down Atlas, but its AI browser ambitions are still growing",
+      "url": "https://techcrunch.com/2026/07/09/openai-is-shutting-down-atlas-but-its-ai-browser-ambitions-are-still-growing/"
+    },
+    {
+      "title": "Microsoft: Responsibly building the AI future",
+      "url": "https://blogs.microsoft.com/on-the-issues/2026/07/09/responsibly-building-the-ai-future/"
+    },
+    {
+      "title": "The Verge: Microsoft carbon emissions went up 25 percent last year",
+      "url": "https://www.theverge.com/tech/963728/microsoft-sustainability-report-2026"
+    },
+    {
+      "title": "Meta AI Blog: Introducing Muse Spark 1.1",
+      "url": "https://ai.meta.com/blog/introducing-muse-spark-meta-model-api/"
+    },
+    {
+      "title": "Meta AI: Muse Spark 1.1 evaluation report",
+      "url": "https://ai.meta.com/static-resource/muse-spark-1-1-evaluation-report"
+    },
+    {
+      "title": "Google Blog: Expanding AI transparency in ads",
+      "url": "https://blog.google/products/ads-commerce/google-ads-ai-transparency-labels/"
+    },
+    {
+      "title": "Wired: A Majority of European Lawmakers Voted Against Letting Big Tech Read Our Messages. They are Going to Anyway",
+      "url": "https://www.wired.com/story/a-majority-of-european-lawmakers-voted-against-letting-big-tech-read-our-messages-theyre-going-to-anyway/"
+    },
+    {
+      "title": "European Parliament Legislative Observatory: 2025/0429(COD)",
+      "url": "https://oeil.europarl.europa.eu/oeil/en/procedure-file?reference=2025%2F0429%28COD%29"
+    },
+    {
+      "title": "Patrick Breyer: EU Parliament greenlights Chat Control 1.0",
+      "url": "https://www.patrick-breyer.de/en/eu-parliament-greenlights-chat-control-1-0-breyer-our-children-lose-out/"
+    },
+    {
+      "title": "Anthropic: Ben Bernanke appointed to Anthropic Long-Term Benefit Trust",
+      "url": "https://www.anthropic.com/news/ben-bernanke"
+    },
+    {
+      "title": "Anthropic: The Long-Term Benefit Trust",
+      "url": "https://www.anthropic.com/news/the-long-term-benefit-trust"
+    },
+    {
+      "title": "TechCrunch: An AI agent startup just let its agent run its $100M fundraise",
+      "url": "https://techcrunch.com/2026/07/09/an-ai-agent-startup-just-let-its-agent-run-its-100-million-fundraise/"
+    },
+    {
+      "title": "TechCrunch: Mercor is in talks for a $20B valuation",
+      "url": "https://techcrunch.com/2026/07/09/mercor-is-in-talks-for-a-20b-valuation/"
+    },
+    {
+      "title": "Product Hunt: The best new products in tech",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Hacker News: front page",
+      "url": "https://news.ycombinator.com/"
+    }
+  ]
+}
