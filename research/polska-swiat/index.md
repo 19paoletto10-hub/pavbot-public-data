@@ -108,6 +108,10 @@ Choczewo/Baltic Power jako pierwszy morski wiatr w sieci, zajęcie środków PA�
 przez EUROCONTROL w cieniu sporu Pfizer-RP oraz poznański incydent
 antyukraiński z medialnie opisywanym wcześniejszym zarzutem szpiegostwa wobec
 jednego z uczestników.
+Po wieczornym runie 10 lipca Baltic Power wszedł w `first power`, PAŻP
+publicznie uspokaja ciągłość żeglugi powietrznej mimo zajęcia wierzytelności,
+a AP doprecyzowało USA-Iran jako serię nieprzyznanych nalotów na południowy
+Iran i irański odwet na Bahrajn, Jordanię, Kuwejt i Katar.
 
 ## Stable Facts
 
@@ -197,6 +201,7 @@ jednego z uczestników.
 ## Recent Reports
 
 - [2026-07-10](runs/2026-07-10.md)
+- [2026-07-10-1933](runs/2026-07-10-1933.md)
 - [2026-07-09-1933](runs/2026-07-09-1933.md)
 - [2026-07-09](runs/2026-07-09.md)
 - [2026-07-08-1933](runs/2026-07-08-1933.md)
