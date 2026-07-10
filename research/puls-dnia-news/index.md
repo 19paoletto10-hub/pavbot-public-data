@@ -59,6 +59,12 @@ shifted the world mix toward the East Asia typhoon, the Houston ICE shooting,
 the Ryanair window incident, UAP video declassification, China's reusable
 rocket test and renewed Iran talks.
 
+The 2026-07-10 21:01 slot moved the feed into a more operational mix:
+Ursynów police violence, illegal meds, PAŻP financing pressure, a Mława
+illegal tobacco factory, Czarzasty and Ukraine's EU path, Trump's Iran
+warnings, Spanish wildfires, the East Asia typhoon, Ryanair's window failure,
+Meta's DSA trouble and China's reusable rocket milestone.
+
 ## Data Shape
 
 The native iOS feed expects:

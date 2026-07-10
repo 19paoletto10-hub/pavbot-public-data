@@ -1,0 +1,493 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-10",
+  "runTime": "21:01",
+  "status": "Material update",
+  "headline": "Burze, atak na policjantów i nowe napięcia globalne",
+  "summary": "Slot 21:01 przesunął feed w stronę bezpieczeństwa publicznego, lokalnych interwencji i mocnych światowych leadów: Ursynów, nielegalne leki, PAŻP i fabryka tytoniu w Polsce; Iran, Hiszpania, tajfun, Ryanair, Meta i chińska rakieta na świecie.",
+  "checkedSources": [
+    {
+      "title": "TVN24: Wiadomości z kraju i ze świata",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24: Wiadomości z kraju",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24: Wiadomości ze świata",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24: Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24: Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "TVN Warszawa",
+      "url": "https://tvn24.pl/tvnwarszawa"
+    },
+    {
+      "title": "BBC News World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "IMGW: Synoptyczna prognoza pogody od 10.07.2026 do 12.07.2026 r.",
+      "url": "https://imgw.pl/synoptyczna-prognoza-pogody-od-10-07-2026-do-12-07-2026-r/"
+    },
+    {
+      "title": "PAGASA: Forecast Weather Conditions",
+      "url": "https://www.pagasa.dost.gov.ph/weather"
+    },
+    {
+      "title": "European Commission: Commission preliminarily finds the addictive design of Instagram and Facebook in breach of the Digital Services Act",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-addictive-design-instagram-and-facebook-breach-digital-services-act"
+    }
+  ],
+  "items": [
+    {
+      "id": "alerty-imgw-burze-grad-2026-07-10-2101",
+      "section": "Alerty",
+      "title": "IMGW znów ostrzega przed burzami i gradem",
+      "lead": "Na północy i wschodzie kraju wracają przelotne opady, burze i ryzyko gradu.",
+      "whatHappened": "TVN24 opisał ostrzeżenia IMGW na 10 lipca, a prognoza nadal wskazuje na przelotne opady, lokalne burze i możliwy grad w części kraju.",
+      "keyFacts": [
+        "W części regionów obowiązują żółte ostrzeżenia pierwszego stopnia.",
+        "Prognoza IMGW mówi o opadach, porywach wiatru i lokalnym gradzie."
+      ],
+      "reactions": [
+        "To temat operacyjny dla mieszkańców, kierowców i organizatorów wydarzeń plenerowych.",
+        "Może szybko zmienić plan dnia w regionach objętych alertem."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na bezpieczeństwo, ruch i lokalne decyzje dnia.",
+      "context": "Ten slot ponownie przywraca pogodę jako temat praktyczny, nie tylko tło.",
+      "watchNext": [
+        "Sprawdzić, czy IMGW utrzyma ostrzeżenia w kolejnych godzinach.",
+        "Porównać alert z lokalnymi komunikatami RCB i samorządów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Może padać grad. Ostrzeżenia IMGW przed silnym deszczem z burzami na 10.07",
+          "url": "https://tvn24.pl/polska/moze-padac-grad-ostrzezenia-imgw-przed-silnym-deszczem-z-burzami-na-10-07-st9134639"
+        },
+        {
+          "title": "IMGW: Synoptyczna prognoza pogody od 10.07.2026 do 12.07.2026 r.",
+          "url": "https://imgw.pl/synoptyczna-prognoza-pogody-od-10-07-2026-do-12-07-2026-r/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "IMGW",
+        "burze",
+        "grad"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-bezpieczenstwo-ursynow-atak-policjanci-2026-07-10-2101",
+      "section": "Bezpieczeństwo",
+      "title": "Atak na policjantów na Ursynowie",
+      "lead": "Funkcjonariusze CBZC zostali zaatakowani przy stacji Kabaty, a jeden trafił do szpitala.",
+      "whatHappened": "Na Ursynowie nieznany mężczyzna zaatakował funkcjonariusza CBZC kastetem, a potem użył także maczety. Policjanci ruszyli w pościg, zatrzymali napastnika i postawili mu trzy zarzuty.",
+      "keyFacts": [
+        "Jeden z funkcjonariuszy doznał urazu nogi i trafił do szpitala.",
+        "Mężczyzna został zatrzymany na terenie stacji Kabaty."
+      ],
+      "reactions": [
+        "To jeden z najmocniejszych krajowych sygnałów bezpieczeństwa w tym slocie.",
+        "Sprawa może jeszcze wygenerować komunikaty policji i prokuratury."
+      ],
+      "whyItMatters": "To bezpośredni sygnał o ryzyku przemocy wobec służb i o charakterze lokalnego zagrożenia.",
+      "context": "Warszawskie newsy w tym slocie są bardziej operacyjne niż polityczne.",
+      "watchNext": [
+        "Sprawdzić, czy policja podała dodatkowe motywy ataku.",
+        "Obserwować, czy pojawią się kolejne zarzuty lub opis stanu rannego funkcjonariusza."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Atak na policjantów na Ursynowie",
+          "url": "https://tvn24.pl/tvnwarszawa/ursynow/atak-na-policjantow-na-ursynowie-st9137305"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "CBZC",
+        "policja",
+        "atak"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-polska-nielegalne-leki-2026-07-10-2101",
+      "section": "Polska",
+      "title": "Nielegalne leki reklamowano i sprzedawano w sieci",
+      "lead": "CBZC zatrzymało 12 osób w sprawie sprzedaży medykamentów bez prawa do obrotu.",
+      "whatHappened": "TVN24 podał, że funkcjonariusze CBZC rozbili grupę podejrzewaną o reklamowanie i sprzedaż nielegalnych leków przez internet.",
+      "keyFacts": [
+        "Zatrzymano 12 osób w wieku od 25 do 50 lat, w tym dwie kobiety.",
+        "Akcję przeprowadzono na terenie siedmiu województw."
+      ],
+      "reactions": [
+        "To temat łączący zdrowie publiczne, cyberprzestępczość i ryzyko oszustwa.",
+        "Takie sprawy zwykle prowadzą do dalszych działań śledczych i kontroli rynku."
+      ],
+      "whyItMatters": "Nielegalny obrót lekami może bezpośrednio uderzać w bezpieczeństwo pacjentów.",
+      "context": "Po tematykach politycznych i personalnych feed wraca do twardych spraw konsumenckich i zdrowotnych.",
+      "watchNext": [
+        "Sprawdzić, czy służby podadzą listę zabezpieczonych substancji lub kanałów sprzedaży.",
+        "Obserwować, czy pojawią się kolejne zatrzymania lub zarzuty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nielegalne leki reklamowali i sprzedawali w sieci",
+          "url": "https://tvn24.pl/polska/nielegalne-leki-reklamowali-i-sprzedawali-w-sieci-st9137472"
+        }
+      ],
+      "tags": [
+        "leki",
+        "CBZC",
+        "internet",
+        "zdrowie"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-gospodarka-pazp-pfizer-2026-07-10-2101",
+      "section": "Gospodarka",
+      "title": "PAŻP czeka na pomoc po sporze z Pfizerem",
+      "lead": "Rząd zapowiada wsparcie po zajęciu wierzytelności agencji.",
+      "whatHappened": "TVN24 podał, że Polska Agencja Żeglugi Powietrznej ma dostać niezbędne wsparcie po zajęciu wierzytelności w związku ze sporem sądowym dotyczącym Pfizera.",
+      "keyFacts": [
+        "Sprawa ma bezpośredni wpływ na płynność finansową PAŻP.",
+        "To jeden z najważniejszych gospodarczo-instytucjonalnych tematów dnia."
+      ],
+      "reactions": [
+        "To może mieć znaczenie dla bezpieczeństwa i finansowania infrastruktury lotniczej.",
+        "Temat łączy politykę, zdrowie publiczne i realne ryzyko budżetowe."
+      ],
+      "whyItMatters": "PAŻP to kluczowa instytucja dla ruchu lotniczego i bezpieczeństwa operacyjnego kraju.",
+      "context": "W tym slocie gospodarka wraca przez pryzmat sporu prawnego i skutków dla instytucji publicznej.",
+      "watchNext": [
+        "Sprawdzić, czy rząd poda szczegóły mechanizmu wsparcia.",
+        "Obserwować, czy spór z Pfizerem wpływa na dalsze decyzje finansowe."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: \"Sprawa jest dość paskudna\". Donald Tusk zapowiada pomoc dla PAŻP po zajęciu pieniędzy w związku z konfliktem z Pfizerem",
+          "url": "https://tvn24.pl/biznes/z-kraju/sprawa-jest-dosc-paskudna-donald-tusk-zapowiada-pomoc-dla-pazp-po-zajeciu-pieniedzy-w-zwiazku-z-konfliktem-z-pfizerem-st9137320"
+        }
+      ],
+      "tags": [
+        "PAŻP",
+        "Pfizer",
+        "budżet",
+        "gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-polska-mlawa-tyton-2026-07-10-2101",
+      "section": "Polska",
+      "title": "Nielegalna fabryka tytoniu zlikwidowana pod Mławą",
+      "lead": "Służby zatrzymały pięć osób na gorącym uczynku.",
+      "whatHappened": "TVN24 opisał rozbicie nielegalnej fabryki tytoniu pod Mławą. Według śledczych zatrzymani mieli uczestniczyć w produkcji wyrobów tytoniowych poza legalnym obrotem.",
+      "keyFacts": [
+        "Zatrzymano pięć osób.",
+        "Akcja służb odbyła się na gorącym uczynku."
+      ],
+      "reactions": [
+        "To kolejny sygnał walki ze szarą strefą w kraju.",
+        "Takie sprawy zwykle oznaczają dalsze wyliczanie strat Skarbu Państwa."
+      ],
+      "whyItMatters": "Nielegalny tytoń to równocześnie problem fiskalny, kryminalny i zdrowotny.",
+      "context": "Po pracy służb w Warszawie kolejny krajowy temat dotyczy przestępczości gospodarczej.",
+      "watchNext": [
+        "Sprawdzić, czy służby ujawnią skalę zabezpieczonej produkcji.",
+        "Obserwować, czy pojawią się kolejne zatrzymania lub zarzuty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nielegalna fabryka tytoniu zlikwidowana",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/mlawa-nielegalna-fabryka-tytoniu-zlikwidowana-pieciu-zatrzymanych-na-goracym-uczynku-st9137554"
+        }
+      ],
+      "tags": [
+        "tytoń",
+        "Mława",
+        "szara strefa",
+        "policja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-polityka-czarzasty-ue-2026-07-10-2101",
+      "section": "Polityka",
+      "title": "Czarzasty o akcesji Ukrainy do UE",
+      "lead": "Krajowa debata o Ukrainie i Unii wraca na front TVN24.",
+      "whatHappened": "TVN24 pokazał materiał z Włodzimierzem Czarzastym i jego komentarzem o akcesji Ukrainy do Unii Europejskiej. Wątek utrzymuje temat Kijowa wysoko w polskiej polityce.",
+      "keyFacts": [
+        "Materiał dotyczy stanowiska Czarzastego wobec ścieżki Ukrainy do UE.",
+        "To kolejny sygnał, że temat Ukrainy pozostaje w krajowej debacie."
+      ],
+      "reactions": [
+        "To wzmacnia spór o tempo i warunki europejskiego wsparcia dla Kijowa.",
+        "W tym slocie temat nie jest dominujący, ale nadal jest wyraźny politycznie."
+      ],
+      "whyItMatters": "Ukraina pozostaje jednym z najważniejszych punktów polskiej polityki zagranicznej.",
+      "context": "To bardziej komentarz polityczny niż twarda decyzja instytucjonalna, ale nadal ma znaczenie dla układu debaty.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się dalsze reakcje z obozów politycznych.",
+        "Obserwować, czy temat przejdzie w konkretne decyzje lub spory parlamentarne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Włodzimierz Czarzasty o akcesji Ukrainy do Unii Europejskiej",
+          "url": "https://tvn24.pl/polska/wlodzimierz-czarzasty-o-akcesji-ukrainy-do-unii-europejskiej-chlopie-jezeli-ty-myslisz-st9137621"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "UE",
+        "Czarzasty",
+        "polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-trump-iran-zamach-2026-07-10-2101",
+      "section": "Świat",
+      "title": "Trump mówi, że jest na liście Iranu",
+      "lead": "Iran znów wraca do centrum napięcia, a Trump podbija stawkę komunikacyjną.",
+      "whatHappened": "TVN24 podał wypowiedź Donalda Trumpa o planie zamachu na niego i o tym, że jest na liście Iranu. CNN w live update dodał, że zawieszenie broni jest według Trumpa skończone, ale rozmowy mają trwać dalej.",
+      "keyFacts": [
+        "CNN opisał to jako live update o końcu zawieszenia broni i kontynuacji rozmów.",
+        "Temat nadal oscyluje wokół ryzyka eskalacji i dyplomatycznych prób powrotu do rozmów."
+      ],
+      "reactions": [
+        "To jeden z najmocniejszych geopolitycznych leadów dnia.",
+        "Sygnał jest bardziej o napięciu i komunikacji politycznej niż o trwałym rozwiązaniu."
+      ],
+      "whyItMatters": "Iran pozostaje jednym z głównych punktów ryzyka dla bezpieczeństwa regionalnego i globalnego.",
+      "context": "W poprzednim slocie Iran już był silny; teraz temat dalej trwa, ale z nowym komunikacyjnym akcentem Trumpa.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się kolejne oficjalne reakcje USA lub Iranu.",
+        "Obserwować, czy rozmowy dyplomatyczne rzeczywiście ruszą dalej."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Donald Trump o planie zamachu na niego. \"Jestem na liście Iranu\"",
+          "url": "https://tvn24.pl/swiat/donald-trump-o-planie-zamachu-na-niego-jestem-na-liscie-iranu-st9137637"
+        },
+        {
+          "title": "CNN: Live updates: Trump again declares ceasefire over but says US has agreed to talks with Iran",
+          "url": "https://edition.cnn.com/2026/07/10/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Trump",
+        "dyplomacja",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-hiszpania-pozar-lasu-2026-07-10-2101",
+      "section": "Świat",
+      "title": "Pożary w Hiszpanii zabijają kolejne osoby",
+      "lead": "BBC i CNN opisują śmiertelne pożary lasów na południu Hiszpanii.",
+      "whatHappened": "BBC podało, że pożary lasów w południowej Hiszpanii zabiły co najmniej 12 osób i pozostawiły kolejne zaginione. CNN pisał o ofiarach, które próbowały uciekać wzdłuż koryta rzeki.",
+      "keyFacts": [
+        "BBC mówi o co najmniej 12 ofiarach i 23 zaginionych.",
+        "CNN opisał, że część ofiar próbowała uciekać przez teren przy rzece."
+      ],
+      "reactions": [
+        "To jeden z najcięższych europejskich tematów pogodowo-katastroficznych dnia.",
+        "Może wywołać dalsze reakcje służb i władz regionalnych."
+      ],
+      "whyItMatters": "Pożary tego typu wpływają na bezpieczeństwo, infrastrukturę i sezonowe ryzyko klimatyczne w Europie Południowej.",
+      "context": "W tym slocie skala pożarów w Hiszpanii mocno podbija światowy news-flow obok Iranu i tajfunu.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się kolejne bilanse ofiar i ewakuacji.",
+        "Obserwować, czy lokalne służby opanują fronty pożarowe."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Wildfire in southern Spain leaves at least 12 dead and 23 missing",
+          "url": "https://www.bbc.co.uk/news/articles/c8e2382jk7jo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Victims of Spanish wildfires killed while trying to escape along river bed 'trap'",
+          "url": "https://edition.cnn.com/2026/07/10/europe/wildfires-southern-spain-deaths-intl"
+        }
+      ],
+      "tags": [
+        "Hiszpania",
+        "pożary",
+        "Europa",
+        "katastrofa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-typhoon-azja-wschodnia-2026-07-10-2101",
+      "section": "Świat",
+      "title": "Azja Wschodnia szykuje się na niszczycielski tajfun",
+      "lead": "PAGASA utrzymuje ostrzeżenia, a BBC pisze o osuwiskach na Filipinach.",
+      "whatHappened": "BBC poinformowało, że East Asia braces for destructive typhoon as landslides killed 15 in the Philippines. Oficjalny biuletyn PAGASA utrzymuje Typhoon INDAY i opisuje jego pozycję, siłę oraz zagrożenie dla kolejnych obszarów.",
+      "keyFacts": [
+        "PAGASA podaje, że o 15:00 lokalnego czasu sztorm był ok. 520 km na wschód-północny wschód od Itbayat.",
+        "Biuletyn utrzymuje wiatr do 140 km/h i porywy do 170 km/h."
+      ],
+      "reactions": [
+        "To jest twardy alert pogodowy z potencjałem do szybkiego pogorszenia sytuacji w regionie.",
+        "Filipiny i okolice pozostają w strefie podwyższonego ryzyka osuwisk i sztormów."
+      ],
+      "whyItMatters": "Tajfun i osuwiska mogą szybko przełożyć się na ofiary, ewakuacje i zakłócenia transportu.",
+      "context": "W tym slocie Azja Wschodnia daje jeden z najmocniejszych światowych sygnałów pogodowych.",
+      "watchNext": [
+        "Sprawdzić kolejne biuletyny PAGASA i ewentualne rozszerzenie ostrzeżeń.",
+        "Obserwować, czy Taiwan i Filipiny raportują nowe szkody lub ewakuacje."
+      ],
+      "sources": [
+        {
+          "title": "BBC: East Asia braces for destructive typhoon as landslides kill 15 in Philippines",
+          "url": "https://www.bbc.co.uk/news/articles/c04y6wr03gxo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "PAGASA: Forecast Weather Conditions",
+          "url": "https://www.pagasa.dost.gov.ph/weather"
+        }
+      ],
+      "tags": [
+        "tajfun",
+        "Filipiny",
+        "PAGASA",
+        "pogoda"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-ryanair-window-2026-07-10-2101",
+      "section": "Świat",
+      "title": "Pasażer Ryanaira został wyssany ku oknu po pęknięciu szyby",
+      "lead": "BBC i CNN opisują dramatyczny incydent na pokładzie samolotu.",
+      "whatHappened": "BBC podało, że pasażerowie widzieli człowieka częściowo wysuwanego przez rozbite okno po pęknięciu szyby na pokładzie Ryanaira. CNN opisał to jako sytuację, w której pasażer został wyrwany aż do barków.",
+      "keyFacts": [
+        "To jeden z najbardziej niepokojących incydentów lotniczych dnia.",
+        "Obie redakcje opisują go jako nagłe zdarzenie wymagające natychmiastowej reakcji załogi."
+      ],
+      "reactions": [
+        "To silny materiał pod debatę o bezpieczeństwie technicznym i serwisowaniu floty.",
+        "Może szybko wygenerować dodatkowe pytania o procedury przewoźnika."
+      ],
+      "whyItMatters": "Takie zdarzenie natychmiast podbija uwagę opinii publicznej i bezpieczeństwo lotnicze.",
+      "context": "Po burzach i katastrofach pogodowych feed dostaje też mocny lotniczy temat bezpieczeństwa.",
+      "watchNext": [
+        "Sprawdzić, czy linia lotnicza poda komunikat o przyczynie awarii.",
+        "Obserwować, czy pojawią się szczegóły o stanie pasażera i załogi."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Man nearly sucked out of window mid-air on Ryanair plane, passengers say",
+          "url": "https://www.bbc.co.uk/news/articles/cgk65knkyzdo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Ryanair passenger sucked out of airplane 'to his shoulders' after window breaks",
+          "url": "https://edition.cnn.com/2026/07/10/travel/ryanair-passenger-sucked-out-plane-scli-intl"
+        }
+      ],
+      "tags": [
+        "lotnictwo",
+        "Ryanair",
+        "bezpieczeństwo",
+        "Europa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "tech-meta-dsa-2026-07-10-2101",
+      "section": "Technologia",
+      "title": "UE zarzuca Meta uzależniający design Facebooka i Instagrama",
+      "lead": "Komisja Europejska wstępnie uznała, że Meta łamie DSA.",
+      "whatHappened": "Komisja Europejska ogłosiła wstępne ustalenia, że uzależniający design Facebooka i Instagrama narusza Digital Services Act. CNN opisał sprawę jako możliwe naruszenie unijnego prawa przez Meta.",
+      "keyFacts": [
+        "W komunikacie Komisja podkreśla problem uzależniającego projektu platform.",
+        "Sprawa może skończyć się bardzo wysoką karą finansową, jeśli ustalenia się utrzymają."
+      ],
+      "reactions": [
+        "To bardzo ważny sygnał regulacyjny dla platform społecznościowych.",
+        "Temat uderza także w dyskusję o bezpieczeństwie dzieci i nastolatków w sieci."
+      ],
+      "whyItMatters": "To jedna z ważniejszych decyzji regulacyjnych wobec wielkich platform w tym slocie.",
+      "context": "Po tygodniach talk o AI i chipach technologia wraca tu przez prawo i projektowanie aplikacji.",
+      "watchNext": [
+        "Sprawdzić odpowiedź Meta i dalsze kroki Komisji.",
+        "Obserwować, czy sprawa przejdzie do finałowej decyzji i ewentualnej kary."
+      ],
+      "sources": [
+        {
+          "title": "European Commission: Commission preliminarily finds the addictive design of Instagram and Facebook in breach of the Digital Services Act",
+          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-preliminarily-finds-addictive-design-instagram-and-facebook-breach-digital-services-act"
+        },
+        {
+          "title": "CNN: Facebook and Instagram’s 'addictive design' may violate European law, EU Commission finds",
+          "url": "https://edition.cnn.com/2026/07/10/tech/meta-eu-addictive-design"
+        }
+      ],
+      "tags": [
+        "Meta",
+        "UE",
+        "DSA",
+        "technologia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "tech-china-rocket-2026-07-10-2101",
+      "section": "Technologia",
+      "title": "Chiny przełamały barierę rakiety wielokrotnego użytku",
+      "lead": "CNN i BBC opisują pierwszy udany odzysk pierwszego stopnia Long March 10B.",
+      "whatHappened": "CNN podał, że Chiny osiągnęły przełom w testach rakiety wielokrotnego użytku, a BBC opisało pierwszy udany odzysk pierwszego stopnia rakiety przez państwowe media.",
+      "keyFacts": [
+        "To pierwszy tak udany publicznie opisany test odzysku stopnia rakiety w tym programie.",
+        "Technologia ma obniżać koszty i przyspieszać rozwój chińskich lotów orbitalnych."
+      ],
+      "reactions": [
+        "To wyraźny sygnał przyspieszenia wyścigu kosmicznego z USA.",
+        "Temat ma znaczenie nie tylko technologiczne, ale też strategiczne."
+      ],
+      "whyItMatters": "Rakiety wielokrotnego użytku zmieniają ekonomię startów i konkurencję w sektorze kosmicznym.",
+      "context": "W tym slocie technologia jest wyraźnie podbita przez regulacje i kosmos, a nie przez codzienny produktowy news.",
+      "watchNext": [
+        "Sprawdzić, czy Chiny ogłoszą harmonogram kolejnych testów i próbnego ponownego użycia.",
+        "Obserwować reakcje SpaceX i konkurentów z sektora kosmicznego."
+      ],
+      "sources": [
+        {
+          "title": "CNN: China reports reusable rocket breakthrough as it vies to catch up with the US",
+          "url": "https://edition.cnn.com/2026/07/10/china/china-reusable-rockets-test-breakthrough-intl-hnk"
+        },
+        {
+          "title": "BBC: China lands reusable rocket for first time, state media says",
+          "url": "https://www.bbc.co.uk/news/articles/cm2rmmx86pdo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Chiny",
+        "rakieta",
+        "SpaceX",
+        "technologia"
+      ],
+      "priority": "high"
+    }
+  ]
+}
