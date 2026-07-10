@@ -12,6 +12,11 @@ The live run contract is now active with timestamped Markdown and
 `pulse-news.json` outputs using one shared Europe/Warsaw run stamp. Material
 items are discovered from TVN24, BBC and CNN, then confirmed with official or
 primary public sources when the claim is safety-, market- or policy-relevant.
+The 2026-07-10 12:08 slot moved the feed toward Jedwabne, Bosacki's warning
+to Kyiv, the Myrcha immunity request, PAŻP financing pressure after the
+Pfizer ruling, NBP's new inflation projection, a British tobacco-packaging
+plan, SK Hynix's New York debut, U.S. restrictions aimed at Chinese autos,
+heat alerts, and renewed BBC/CNN signals on Iran and China.
 The 21:05 slot on 2026-07-07 added late-evening items on wind alerts, an
 evacuation in Krynica Morska, Ziobro extradition, Toyota's Texas expansion,
 Le Pen, NATO, Farage, Hungary's state TV reset, Gaza and China.
