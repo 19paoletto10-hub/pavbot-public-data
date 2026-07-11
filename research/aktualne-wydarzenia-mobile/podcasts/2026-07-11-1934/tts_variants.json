@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-07-11T17:57:06.378750+00:00",
+  "language": "pl",
+  "language_detection": "local-polish-heuristic",
+  "speed": 1.03,
+  "variants": [
+    {
+      "id": "female-piper",
+      "engine": "piper",
+      "voice": "pl_PL-gosia-medium",
+      "model": "rhasspy/piper-voices:pl_PL-gosia-medium",
+      "status": "ok",
+      "duration_seconds": 392.570295,
+      "output_file": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-11-1934/audio/female-piper/podcast.mp3",
+      "render_json": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-11-1934/audio/female-piper/render.json",
+      "error": null
+    },
+    {
+      "id": "male-xtts",
+      "engine": "xtts",
+      "voice": "Andrew Chipper",
+      "model": "coqui/XTTS-v2",
+      "status": "failed",
+      "duration_seconds": null,
+      "output_file": null,
+      "render_json": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-11-1934/audio/male-xtts/render.json",
+      "error": "Interrupted after prolonged XTTS inference on CPU; no MP3 produced."
+    }
+  ]
+}

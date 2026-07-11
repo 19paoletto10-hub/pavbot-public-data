@@ -1,0 +1,82 @@
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/utils/generic.py:311: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/xtts_manager.py:5: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  self.speakers = torch.load(speaker_file_path)
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/utils/io.py:54: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  return torch.load(f, map_location=map_location, **kwargs)
+ > Using model: xtts
+ > Text splitted to sentences.
+['Dzień dobry, a właściwie dobry wieczór.', 'Sobota, jedenastego lipca dwa tysiące dwudziestego szóstego roku.', 'To jest wieczorny mobile news brief Pavbota.', 'Dzisiejszy wieczór nie wygląda jak jeden wielki alarm.', 'Wygląda raczej jak dzień, w którym kilka różnych porządków naraz weszło na ten sam ekran.', 'Historia weszła do oficjalnego języka państwa, regulatorzy zaczęli liczyć stopnie i progi, a za granicą nikt nawet nie udaje, że będzie spokojnie.', 'Krótko mówiąc: mniej jednego wielkiego wybuchu, więcej spraw, które naprawdę zostają na dłużej.', 'Zacznijmy od Polski i od tego, co najmocniej zmieniło ton dnia od poranka.', 'Jedenasty lipca przyniósł oficjalne obchody osiemdziesiątej trzeciej rocznicy zbrodni wołyńskiej.', 'Prezydent Karol Nawrocki podczas uroczystości w Radrużu mówił, że pamięć, historia i prawda o ludobójstwie wołyńskim kształtują przyszłość.', 'Przypomniał też o około stu dwudziestu tysiącach polskich cywilów pomordowanych przez ukraińskich nacjonalistów.', 'To nie był więc wyłącznie ceremonialny punkt kalendarza, tylko mocny komunikat polityczny.', 'Podobnie zabrzmiał premier Donald Tusk.', 'W swoim oświadczeniu napisał, że prawda o tej zbrodni oznacza nazwanie winnych, potępienie sprawców i pamięć o każdej ofierze.', 'Dodał też, że po latach udało się wznowić poszukiwania i ekshumacje ofiar na Ukrainie, a w Warszawie ma stanąć Mur Pamięci z nazwiskami odnalezionych i zidentyfikowanych zamordowanych.', 'Najważniejsze jest jednak to, że premier połączył pamięć z teraźniejszością.', 'Powiedział wprost, że solidarność Polski, Ukrainy i Europy wobec wspólnych zagrożeń musi opierać się na prawdzie, pamięci i nadziei.', 'Czyli historia nie siedzi już na półce.', 'Historia weszła dziś do push notificationu państwa.', 'Drugi polski wątek jest mniej symboliczny, ale bardzo praktyczny.', 'Rządowe Centrum Bezpieczeństwa utrzymywało dziś ostrzeżenia pierwszego stopnia przed burzami w warmińsko-mazurskim, podlaskim, lubelskim i mazowieckim do godziny dziewiętnastej.', 'Jednocześnie raport dalej pokazuje suszę hydrologiczną w całym kraju.', 'To znaczy, że najbardziej widowiskowa część zagrożenia schodzi wieczorem, ale ten bardziej uparty problem zostaje.', 'Po burzy zostaje to, co najmniej instagramowe: susza.', 'RCB podaje też, że nie ma dziś przekroczeń stanów alarmowych ani ostrzegawczych, więc nie ma nowej eskalacji, ale nie ma też pełnego uspokojenia.', 'W sprawach krajowych warto też odnotować, że Państwowa Inspekcja Pracy przeszła z ogólnego mówienia o ochronie pracownika do twardych liczb.', 'Nowe przepisy, które zaczną obowiązywać jedenastego stycznia dwa tysiące dwudziestego siódmego roku, wprowadzają maksymalnie trzydzieści pięć stopni w pomieszczeniach pracy oraz trzydzieści dwa stopnie przy ciężkiej pracy fizycznej na otwartej przestrzeni.', 'Po przekroczeniu tych progów praca nie będzie mogła być wykonywana.', 'To jest ważne, bo upał w Polsce przez lata był często traktowany jak dyskusja o zdrowym rozsądku, a teraz staje się kwestią konkretnego progu regulacyjnego.', 'Termometr dostał wreszcie paragraf.', 'Podobnie rzecz ma się w zdrowiu.', 'Ministerstwo Zdrowia utrzymuje, że pierwszy wniosek w konkursie na konsolidację szpitali złożył Uniwersytet Medyczny w Poznaniu, a na wsparcie takich procesów z Funduszu Medycznego przeznaczono ponad miliard złotych.', 'To nie jest jeszcze wielka reforma całego systemu, ale jest to pierwszy dokument, który pokazuje, że temat ruszył z konferencji do procedury.', 'I w polityce publicznej właśnie ten moment zwykle robi największą różnicę: gdy prezentacja zamienia się w formularz.', 'W polityce bezpieczeństwa po Ankarze nie pojawił się dziś nowy wielki polski komunikat, ale NATO podtrzymuje bardzo twardą linię.', 'W podsumowaniu szczytu sojusz ponownie potwierdza żelazne zobowiązanie do artykułu piątego i odstraszania w formule trzysta sześćdziesiąt stopni.', 'Dla Polski ważniejsze od ceremonialnych zdań jest jednak to, co przyszło rano z MON: praktyczny follow-up wokół serwisowania pocisków PAC trzy w Europie.', 'Innymi słowy, po szczycie liczy się już nie to, kto stał obok kogo do zdjęcia, tylko kto potrafi naprawić system wtedy, kiedy będzie naprawdę potrzebny.', 'Za granicą najbardziej nerwowo pozostaje wokół Iranu i cieśniny Ormuz.', 'Associated Press podaje, że Stany Zjednoczone chcą od Iranu publicznego potwierdzenia, iż cieśnina pozostaje otwarta dla międzynarodowej żeglugi i że ataki na statki ustaną.', 'To nie jest detal dla analityków od map.', 'To jest miejsce, w którym polityka, ropa, transport i ceny paliw siedzą przy jednym stole.', 'A kiedy przy tym stole zaczyna się przepychanka, rachunek dość szybko dostaje reszta świata.', 'Drugi wątek zagraniczny prowadzi z Gazy.', 'Hamas ma rozwiązać swój rząd i przekazać władzę komitetowi technicznemu wspieranemu przez ONZ.', 'Brzmi poważnie, ale nadal nie ma jasności, czy wraz z tym ruchem przyjdzie realna odpowiedź na pytanie o rozbrojenie i bezpieczeństwo.', 'Czyli zmiana szyldu jest możliwa, ale zmiana rzeczywistości wcale nie jest jeszcze gwarantowana.', 'Na koniec technologia, bo tu też zrobiło się konkretniej.', 'Komisja Europejska podała, że wstępnie uznała Meta za naruszającą Digital Services Act przez uzależniający projekt Instagrama i Facebooka.', 'W komunikacie padają bardzo konkretne elementy: infinite scroll, autoplay, powiadomienia push i mocno spersonalizowane rekomendacje.', 'To ważny moment, bo Europa pokazuje, że nie chce już rozliczać tylko pojedynczych treści.', 'Chce rozliczać sam mechanizm, który sprawia, że użytkownik ma scrollować jeszcze chwilę, jeszcze minutę, jeszcze pół nocy.', 'Europa znowu udowadnia, że potrafi regulować nawet samą architekturę rozproszenia uwagi.', 'Równolegle Komisja prowadzi konsultację o suwerenności danych, czyli pyta, kto może widzieć, przenosić i przetwarzać europejskie dane poza Unią.', 'To oznacza, że cyfrowa polityka Brukseli idzie dziś dwoma torami naraz.', 'Jednym torem ściga projekt platform, a drugim szykuje większe przemeblowanie zasad dla danych, chmury i zależności od państw trzecich.', 'Mniej abstrakcyjnej debaty, więcej infrastruktury, compliance i bardzo realnych decyzji zakupowych.', 'Jeśli zamknąć ten dzień w jednym zdaniu, to wygląda on tak: Polska mówi dziś o pamięci historycznej w czasie teraźniejszym, państwo zaczyna regulować rzeczy, które wcześniej puszczano na zdrowy rozsądek, a świat zewnętrzny dalej przypomina, że bezpieczeństwo i gospodarka nie lubią wakacyjnego luzu.', 'Trzymajcie się spokojnego wieczoru.', 'I jeśli coś dziś scrollować bez końca, to najlepiej prognozę pogody tylko raz, a nie jak Instagram chciałby odruchowo.']
+[!] Warning: The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio.
+[!] Warning: The text length exceeds the character limit of 224 for language 'pl', this might cause truncated audio.
+Traceback (most recent call last):
+  File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 105, in <module>
+    main()
+  File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 96, in main
+    tts.tts_to_file(**kwargs)
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/api.py", line 334, in tts_to_file
+    wav = self.tts(
+          ^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/api.py", line 276, in tts
+    wav = self.synthesizer.tts(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/utils/synthesizer.py", line 386, in tts
+    outputs = self.tts_model.synthesize(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/models/xtts.py", line 412, in synthesize
+    return self.inference(text, language, gpt_cond_latent, speaker_embedding, **settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/models/xtts.py", line 541, in inference
+    gpt_codes = self.gpt.generate(
+                ^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/gpt.py", line 590, in generate
+    gen = self.gpt_inference.generate(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/generation/utils.py", line 1648, in generate
+    return self.sample(
+           ^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/generation/utils.py", line 2730, in sample
+    outputs = self(
+              ^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/gpt_inference.py", line 97, in forward
+    transformer_outputs = self.transformer(
+                          ^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 900, in forward
+    outputs = block(
+              ^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 390, in forward
+    attn_outputs = self.attn(
+                   ^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1782, in _call_impl
+    def _call_impl(self, *args, **kwargs):
+
+KeyboardInterrupt
