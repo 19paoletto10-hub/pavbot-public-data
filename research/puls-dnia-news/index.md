@@ -12,6 +12,11 @@ The live run contract is now active with timestamped Markdown and
 `pulse-news.json` outputs using one shared Europe/Warsaw run stamp. Material
 items are discovered from TVN24, BBC and CNN, then confirmed with official or
 primary public sources when the claim is safety-, market- or policy-relevant.
+The 2026-07-11 15:00 slot keeps the feed heavy on Kaczyński, Wołyń, border
+control, storms and Hormuz, while adding a current Iran nuclear-satellite
+signal, fresh Kijów casualties, an updated Ebola warning, Baltic Power's
+energy-security signal and a technology item about Meta rolling back an AI
+image feature.
 The 2026-07-10 12:08 slot moved the feed toward Jedwabne, Bosacki's warning
 to Kyiv, the Myrcha immunity request, PAŻP financing pressure after the
 Pfizer ruling, NBP's new inflation projection, a British tobacco-packaging
