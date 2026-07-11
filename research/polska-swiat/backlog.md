@@ -18,6 +18,11 @@
 | High | Track PAŻP-Pfizer-Eurocontrol freeze | PAŻP says EUROCONTROL zajęło wierzytelności z opłat trasowych w związku z belgijskim wyrokiem Pfizer-RP; Rzeczpospolita later reported that continuity of air navigation is not threatened | Watch PAŻP formal objection, government response, Belgian appeal and any operational impact on air-navigation financing | Open |
 | High | Track Baltic Power and Choczewo grid launch | KPRM says first energy from Poland's first offshore wind farm enters the national grid through the 400 kV Choczewo station; PAP now reports `first power` | Check KPRM, ORLEN, Baltic Power, PSE and URE for commissioning milestones, test status and grid impact | Open |
 | High | Follow Poznań anti-Ukrainian incident and foreign-influence angle | Prosecutorial charges after the office incident now intersect with media reports that one participant had an earlier espionage charge | Separate confirmed incident charges from unofficial ABW-related reporting; watch prosecutor, ABW and WOT statements | Open |
+| High | Track Wołyń anniversary diplomacy | 83rd anniversary combines memory politics and current Poland-Ukraine security cooperation | Check official readouts from Prezydent RP, MON, Ukrainian side and reactions before podcast | Open |
+| High | Track Ukraine long-range impact command | Zelenskyy formalized the energy-strike campaign, increasing its military and escalation significance | Watch Guardian/AP/Ukrainian official channels and Russian response | Open |
+| High | Track Hormuz guarantee demand and Trump-Iran threats | U.S. demands safe/open strait and Trump threatened retaliation after funeral calls against him | Check AP, CENTCOM, State Department, Iranian and Gulf statements | Open |
+| Medium | Track Russian oil sanctions and EU price-cap deadline | EU faces 15 July cap revision while a U.S. sanctions bill against buyers of Russian energy advances politically | Watch Euronews, Consilium, AP and Guardian for decisions | Open |
+| Medium | Monitor Smoleńsk monthly public-order escalation | Kaczyński/Tusk/police clash can fuel domestic polarization but should not dominate the security agenda | Use direct sources and avoid overamplifying insults | Open |
 
 ## Review Notes
 
@@ -122,6 +127,12 @@
   and TVN24/Interia/Polsat/WP/Onet for the Poznań anti-Ukrainian incident.
   Podcast should keep the PAŻP and Poznań stories precise, because both mix
   confirmed facts with legally sensitive or source-sensitive context.
+- 2026-07-11: Saturday morning research run created a material update.
+  Strongest sources were Prezydent RP/PAP/TVN24 for Wołyń, Guardian/AP for
+  Ukraine's energy-strike campaign and Patriot constraints, AP for Iran/Hormuz,
+  Euronews for the Russian oil-cap deadline, and RCB for hydrology. Podcast
+  should keep Wołyń precise and non-inflammatory, and keep the monthly Smoleńsk
+  dispute proportional.
 
 ## Done
 

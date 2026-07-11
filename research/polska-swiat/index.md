@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-10
+Last updated: 2026-07-11
 
 ## Current Understanding
 
@@ -112,6 +112,13 @@ Po wieczornym runie 10 lipca Baltic Power wszedł w `first power`, PAŻP
 publicznie uspokaja ciągłość żeglugi powietrznej mimo zajęcia wierzytelności,
 a AP doprecyzowało USA-Iran jako serię nieprzyznanych nalotów na południowy
 Iran i irański odwet na Bahrajn, Jordanię, Kuwejt i Katar.
+Po porannym runie 11 lipca ciężar tematu przesuwa się na trzy osie: Wołyń jako
+test pamięci i relacji z Ukrainą; Ukraina formalizuje kampanię uderzeń w
+rosyjską energetykę przez dowództwo dalekiego oddziaływania; USA-Iran przechodzi
+w fazę żądań gwarancji dla Ormuz i ostrzeżeń Trumpa po pogrzebie Alego
+Chameneiego. Dodatkowym wątkiem jest sankcyjna presja na rosyjską ropę przed
+unijnym terminem 15 lipca oraz krajowy spór o miesięcznicę smoleńską i język
+wobec policji.
 
 ## Stable Facts
 
@@ -197,9 +204,24 @@ Iran i irański odwet na Bahrajn, Jordanię, Kuwejt i Katar.
 - Incydent poznański omawiać ostrożnie: potwierdzone zarzuty po incydencie
   oddzielać od medialnych ustaleń o wcześniejszej sprawie ABW i czekać na
   oficjalne komunikaty prokuratury, ABW lub WOT.
+- Po 11 lipca wątek Wołynia prowadzić jako pamięć historyczną i dyplomację:
+  oddzielać upamiętnienie ofiar od bieżących decyzji wojskowych wobec Ukrainy i
+  monitorować oficjalne readouty Prezydenta RP, MON oraz strony ukraińskiej.
+- Ukraińskie dowództwo dalekiego oddziaływania śledzić pod kątem operacyjnych
+  skutków dla rosyjskiej energetyki i możliwej odpowiedzi Rosji; nie dopowiadać
+  szczegółów operacyjnych bez źródeł.
+- EU/U.S. sanctions on Russian oil: do 15 lipca monitorować decyzję o limicie
+  cenowym UE oraz finalną wersję amerykańskiej ustawy sankcyjnej wobec nabywców
+  rosyjskich surowców.
+- Spór po miesięcznicy smoleńskiej utrzymywać w proporcji jako wątek porządku
+  publicznego i języka wobec policji, bez nadawania mu większej wagi niż tematom
+  bezpieczeństwa międzynarodowego.
+- RCB/hydrologia: jeżeli ostrzeżenia wygasają, w kolejnych raportach wspominać
+  tylko suszę ogólnokrajową albo nowe alerty o szerokim zasięgu.
 
 ## Recent Reports
 
+- [2026-07-11](runs/2026-07-11.md)
 - [2026-07-10](runs/2026-07-10.md)
 - [2026-07-10-1933](runs/2026-07-10-1933.md)
 - [2026-07-09-1933](runs/2026-07-09-1933.md)
