@@ -71,6 +71,11 @@ leans harder into Hormuz negotiations, Russian shipping disruptions, Ukraine's
 attacks on Russian energy infrastructure, WHO's bigger-Ebola warning, the CNN
 case in DRC, the Spanish wildfire and Meta's AI rollback.
 
+The 2026-07-11 12:02 slot kept the domestic feed centered on storm alerts,
+Wołyń, Kaczyński and the Lubelszczyzna funnel cloud, while the world feed
+shifted from generic Hormuz tension to explicit Oman diplomacy, kept Spain,
+Ebola and Bavi high, and added fresh CNN material on Ukraine and Mexico.
+
 ## Data Shape
 
 The native iOS feed expects:

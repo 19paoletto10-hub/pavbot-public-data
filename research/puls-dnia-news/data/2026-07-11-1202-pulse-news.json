@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-11",
+  "runTime": "12:02",
+  "status": "Material update",
+  "headline": "Burze w Polsce, Hormuz w Omanie",
+  "summary": "Polska została dziś przy alertach IMGW, Wołyniu i Kaczyńskim, a świat przesuwa się od ogólnego napięcia wokół Hormuz do bardziej konkretnej dyplomacji w Omanie; w tle zostają Hiszpania, Ebola, tajfun Bavi, Meta oraz nowe wątki CNN z Ukrainy i Meksyku.",
+  "checkedSources": [
+    {
+      "title": "TVN24: Wiadomości z kraju i ze świata",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24: Wiadomości z kraju",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24: Wiadomości ze świata",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24: Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24: Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "TVN24: Najważniejsze RSS",
+      "url": "https://tvn24.pl/najwazniejsze.xml"
+    },
+    {
+      "title": "TVN24: Polska RSS",
+      "url": "https://tvn24.pl/polska.xml"
+    },
+    {
+      "title": "TVN24: Świat RSS",
+      "url": "https://tvn24.pl/swiat.xml"
+    },
+    {
+      "title": "BBC News World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "IMGW: Prognoza pogody na tydzień 06.07 – 12.07.2026",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-06-07-12-07-2026/"
+    },
+    {
+      "title": "WHO: Ebola outbreak - DRC 2026",
+      "url": "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"
+    },
+    {
+      "title": "GOV.UK: Spain travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/spain"
+    }
+  ],
+  "items": [
+    {
+      "id": "pl-alerty-imgw-burze-2026-07-11-1202",
+      "section": "Alerty",
+      "title": "IMGW utrzymuje burze w czterech regionach",
+      "lead": "Weekendowy alert pogodowy nadal jest operacyjny.",
+      "whatHappened": "IMGW i TVN24 utrzymują ostrzeżenia przed burzami, lokalnym gradem i porywami wiatru do 60 km/h w czterech województwach, więc pogoda pozostaje jednym z głównych ryzyk dnia.",
+      "keyFacts": [
+        "Ostrzeżenia obejmują zachodnią i północno-wschodnią część kraju.",
+        "Najmocniejsze zjawiska mogą pojawić się w godzinach popołudniowych i wieczornych."
+      ],
+      "reactions": [
+        "To bezpośredni temat dla kierowców, plenerów i organizatorów wydarzeń.",
+        "Kolejny komunikat IMGW może szybko zmienić ocenę ryzyka."
+      ],
+      "whyItMatters": "To najprostszy alert, który może realnie wpłynąć na bezpieczeństwo i logistykę dnia.",
+      "context": "Po kilku dniach niestabilnej pogody alert nadal zasługuje na wysoki priorytet w aplikacji.",
+      "watchNext": [
+        "Sprawdzić kolejny komunikat IMGW i lokalne ostrzeżenia RCB.",
+        "Obserwować, czy alert zostanie rozszerzony na kolejne regiony."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Burze. Ostrzeżenia IMGW - sobota 11.07.",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/burze-ostrzezenia-imgw-sobota-11-07-tu-spodziewane-sa-wyladowania-st9137764"
+        },
+        {
+          "title": "IMGW: Prognoza pogody na tydzień 06.07 – 12.07.2026",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-06-07-12-07-2026/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "IMGW",
+        "burze",
+        "grad"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-polityka-kaczynski-warszawa-2026-07-11-1202",
+      "section": "Polityka",
+      "title": "Kaczyński i warszawska napaść trzymają czołówkę",
+      "lead": "Poranny pakiet TVN24 miesza spór polityczny z bezpieczeństwem publicznym.",
+      "whatHappened": "TVN24 w porannym zestawieniu łączy komentarz Jarosława Kaczyńskiego z napaścią na policjantów CBZC w Warszawie. W tym samym materiale pojawia się też wątek ukraińskich ataków na rosyjskie cele energetyczne.",
+      "keyFacts": [
+        "W Warszawie zaatakowani zostali policjanci z Centralnego Biura Zwalczania Cyberprzestępczości.",
+        "Napastnik miał kastety na dłoniach i maczetę w plecaku."
+      ],
+      "reactions": [
+        "To nadal jeden z tematów, który napędza krajową kolejność leadów.",
+        "Połączenie polityki i przemocy ulicznej podnosi wagę materiału."
+      ],
+      "whyItMatters": "Spór wokół Kaczyńskiego i incydent w Warszawie pokazują, że krajowy feed pozostaje w trybie wysokiej temperatury.",
+      "context": "To temat bardziej o napięciu politycznym i porządkowym niż o jednym incydencie.",
+      "watchNext": [
+        "Sprawdzić, czy TVN24 rozwinie ten wątek w osobny materiał.",
+        "Obserwować, czy reakcje partii przesuną temat dalej w ciągu dnia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Burza po słowach Kaczyńskiego, napaść na policjantów, rosyjskie ...",
+          "url": "https://tvn24.pl/polska/piec-rzeczy-ktore-warto-wiedziec-w-sobote-11-lipca-najwazniejsze-informacje-st9137755"
+        }
+      ],
+      "tags": [
+        "Kaczyński",
+        "polityka",
+        "Warszawa",
+        "TVN24"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-polska-wolyn-2026-07-11-1202",
+      "section": "Polska",
+      "title": "Kosiniak-Kamysz jedzie na Wołyń",
+      "lead": "Temat ma historyczną wagę i może wywołać reakcje dyplomatyczne.",
+      "whatHappened": "Władysław Kosiniak-Kamysz zapowiedział udział w uroczystościach w 83. rocznicę Krwawej Niedzieli i przypomniał o upamiętnieniu ofiar zbrodni wołyńskiej.",
+      "keyFacts": [
+        "To rocznicowy temat o wysokiej wrażliwości historycznej i politycznej.",
+        "Wątek dotyczy pamięci, dyplomacji i relacji polsko-ukraińskich."
+      ],
+      "reactions": [
+        "To może wywołać kolejne komentarze po obu stronach granicy.",
+        "Temat ma potencjał, by wrócić do czołówki krajowych newsów."
+      ],
+      "whyItMatters": "Wołyń pozostaje jednym z najcięższych punktów w polsko-ukraińskiej agendzie publicznej.",
+      "context": "W tym slocie temat ma charakter bardziej symboliczny niż operacyjny, ale nadal jest politycznie gorący.",
+      "watchNext": [
+        "Sprawdzić przebieg uroczystości i ewentualne reakcje po stronie Ukrainy.",
+        "Obserwować, czy ministerstwo wyda dodatkowy komunikat po wizycie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Władysław Kosiniak-Kamysz na Wołyniu",
+          "url": "https://tvn24.pl/polska/ukraina-szef-mon-wladyslaw-kosiniak-kamysz-na-wolyniu-odda-hold-ofiarom-zbrodni-wolynskiej-st9137743"
+        }
+      ],
+      "tags": [
+        "Wołyń",
+        "MON",
+        "Ukraina",
+        "Polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-alerty-lubelszczyzna-lej-2026-07-11-1202",
+      "section": "Alerty",
+      "title": "Lej kondensacyjny nad Lubelszczyzną",
+      "lead": "Zjawisko potwierdza, że burzowy front jest aktywny.",
+      "whatHappened": "TVN24 opisał i pokazał lej kondensacyjny widoczny nad Lubelszczyzną. To zalążek trąby powietrznej, więc materiał dobrze pasuje do porannego bloku ostrzeżeń pogodowych.",
+      "keyFacts": [
+        "Zjawisko zostało uchwycone na zdjęciach przez mieszkańców regionu.",
+        "Lej kondensacyjny nie zawsze schodzi do ziemi, ale wymaga uwagi przy burzach."
+      ],
+      "reactions": [
+        "To wzmacnia ostrożność wobec całego weekendowego pakietu pogodowego.",
+        "W praktyce jest to bardziej sygnał operacyjny niż samodzielny kryzys."
+      ],
+      "whyItMatters": "W połączeniu z alertem IMGW temat daje czytelny sygnał o niestabilnej pogodzie.",
+      "context": "Ten typ zjawiska zwykle podbija zainteresowanie, gdy region i tak jest już objęty ostrzeżeniami.",
+      "watchNext": [
+        "Sprawdzić, czy IMGW nie zaostrzy komunikatów w tym regionie.",
+        "Obserwować, czy pojawią się kolejne nagrania z podobnymi zjawiskami."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Lej kondensacyjny zawirował nad Lubelszczyzną",
+          "url": "https://tvn24.pl/tvnmeteo/polska/lej-kondensacyjny-na-lubelszczyznie-zalazek-traby-powietrznej-nad-polska-st9137464"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "Lubelszczyzna",
+        "burze",
+        "alert"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "sw-gospodarka-hormuz-bbc-2026-07-11-1202",
+      "section": "Gospodarka",
+      "title": "USA chcą gwarancji dla żeglugi przez Hormuz",
+      "lead": "BBC opisuje nową rundę presji na Iran.",
+      "whatHappened": "BBC podało, że Waszyngton chce od Iranu publicznej deklaracji, iż cieśnina Ormuz pozostaje otwarta dla żeglugi i że statki nie będą atakowane.",
+      "keyFacts": [
+        "W rozmowach w Omanie mają uczestniczyć amerykańscy urzędnicy, w tym JD Vance.",
+        "Temat łączy bezpieczeństwo żeglugi z rynkiem energii."
+      ],
+      "reactions": [
+        "To sygnał, że kryzys wokół Ormuz wchodzi w bardziej formalną fazę dyplomatyczną.",
+        "Każde twarde oświadczenie Iranu może poruszyć rynki paliwowe i ubezpieczeniowe."
+      ],
+      "whyItMatters": "Cieśnina Ormuz pozostaje jednym z najważniejszych punktów dla globalnego handlu energią.",
+      "context": "To kontynuacja napięcia, które już wcześniej podnosiło koszty i ryzyko żeglugi w regionie.",
+      "watchNext": [
+        "Sprawdzić, czy rozmowy w Omanie przyniosą publiczne gwarancje.",
+        "Obserwować zmiany w ruchu statków i komentarze rynku ropy."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: US wants Iran to pledge to stop shooting at ships in Strait of Hormuz",
+          "url": "https://www.bbc.co.uk/news/articles/crelyq79x71o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Hormuz",
+        "Iran",
+        "USA",
+        "energia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-gospodarka-hormuz-cnn-2026-07-11-1202",
+      "section": "Gospodarka",
+      "title": "Iran przenosi negocjacje do Omanu",
+      "lead": "CNN pokazuje, że Hormuz wchodzi w fazę dyplomatyczną.",
+      "whatHappened": "CNN opisuje, że irański minister spraw zagranicznych jest w Omanie, gdzie rozmowy mają dotyczyć cieśniny Ormuz, gdy ruch statków wyraźnie zwalnia.",
+      "keyFacts": [
+        "CNN łączy rozmowy z tempem ruchu statków przez kluczowy szlak.",
+        "Wątek jest kontynuacją napięcia między USA i Iranem."
+      ],
+      "reactions": [
+        "To przesuwa temat z samej eskalacji do prób kontrolowania ryzyka żeglugi.",
+        "Rynki będą patrzeć przede wszystkim na każdą deklarację z Omanu."
+      ],
+      "whyItMatters": "Jeśli Oman wypracuje jakąś formułę bezpieczeństwa, wpływ wyjdzie poza politykę i dotknie globalnej logistyki.",
+      "context": "To wciąż ten sam konfliktowy obszar, ale z coraz wyraźniejszym ciężarem rozmów dyplomatycznych.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się wspólne oświadczenie po rozmowach w Omanie.",
+        "Obserwować, czy traffic slowdown w Ormuz się utrzyma."
+      ],
+      "sources": [
+        {
+          "title": "CNN World: Iran foreign minister in Oman to discuss Strait of Hormuz as traffic slows amid tensions",
+          "url": "https://edition.cnn.com/2026/07/11/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "Hormuz",
+        "Iran",
+        "Oman",
+        "shipping"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-swiat-hiszpania-pozar-2026-07-11-1202",
+      "section": "Świat",
+      "title": "Hiszpania walczy z jednym z najgorszych pożarów",
+      "lead": "BBC podaje już co najmniej 12 ofiar.",
+      "whatHappened": "BBC opisuje, że południowa Hiszpania walczy z jednym z najbardziej śmiercionośnych pożarów w ostatnim czasie. Liczba ofiar wzrosła do co najmniej 12, a kolejne osoby pozostają zaginione.",
+      "keyFacts": [
+        "W materiale przewijają się także ewakuacje i zaginięcia mieszkańców.",
+        "GOV.UK utrzymuje ostrzeżenia podróżne dla Hiszpanii."
+      ],
+      "reactions": [
+        "To dalej jest jeden z najczytelniejszych tematów bezpieczeństwa publicznego w Europie.",
+        "Pożar pozostaje też testem dla lokalnych służb i infrastruktury."
+      ],
+      "whyItMatters": "Skala pożaru, ofiary i ewakuacje podbijają wagę tematu poza samą Hiszpanią.",
+      "context": "To nie jest już tylko historyjka pogodowa, ale pełny kryzys sezonu letniego.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się nowe dane o ofiarach i zaginionych.",
+        "Obserwować, czy sytuacja wpłynie na ostrzeżenia podróżne."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Spain battles to contain one of its deadliest wildfires as at least 12 killed",
+          "url": "https://www.bbc.co.uk/news/articles/c1wyv383j2xo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "GOV.UK: Spain travel advice",
+          "url": "https://www.gov.uk/foreign-travel-advice/spain"
+        }
+      ],
+      "tags": [
+        "Hiszpania",
+        "pożary",
+        "bezpieczeństwo",
+        "Europa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-swiat-azja-tajfun-2026-07-11-1202",
+      "section": "Świat",
+      "title": "Azja Wschodnia szykuje się na tajfun Bavi",
+      "lead": "BBC łączy sztorm z osuwiskami na Filipinach.",
+      "whatHappened": "BBC pisze, że Azja Wschodnia przygotowuje się na niszczący tajfun Bavi, a osuwiska na Filipinach już zabiły 15 osób.",
+      "keyFacts": [
+        "Storm ma uderzyć w rejony Japonii, Tajwanu i wschodnich Chin.",
+        "Skala zagrożenia obejmuje silny wiatr, deszcz i zakłócenia transportu."
+      ],
+      "reactions": [
+        "To jeden z najbardziej operacyjnych tematów pogodowych poza Polską.",
+        "W regionie trzeba liczyć się z kolejnymi ewakuacjami i odwołaniami."
+      ],
+      "whyItMatters": "Tajfun Bavi może szybko przejść z tematu pogodowego do kryzysu transportowego i humanitarnego.",
+      "context": "BBC traktuje go jako jeden z kluczowych punktów światowego feedu pogodowego.",
+      "watchNext": [
+        "Sprawdzić, gdzie dokładnie wejdzie na ląd i jak silny pozostanie.",
+        "Obserwować bilans ofiar i ewakuacji na Filipinach oraz w Tajwanie."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: East Asia braces for destructive typhoon as landslides kill 15 in Philippines",
+          "url": "https://www.bbc.co.uk/news/articles/c04y6wr03gxo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "tajfun",
+        "Azja",
+        "pogoda",
+        "Filipiny"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-bezpieczenstwo-ebola-drc-2026-07-11-1202",
+      "section": "Bezpieczeństwo",
+      "title": "Amerykanin w DR Konga z dodatnim wynikiem na ebolę",
+      "lead": "CNN dorzuca nowy, wysokoryzykowny sygnał zdrowotny.",
+      "whatHappened": "CNN podał, że obywatel USA pracujący w Demokratycznej Republice Konga uzyskał dodatni wynik na ebolę Bundibugyo. WHO utrzymuje aktywny obraz ogniska epidemii.",
+      "keyFacts": [
+        "To sygnał z ogniska, które nadal jest pod ścisłą obserwacją WHO.",
+        "Typ Bundibugyo podbija wagę tematu w regionie i poza nim."
+      ],
+      "reactions": [
+        "To jeden z tych tematów, które mogą szybko zmienić priorytety w światowym feedzie zdrowotnym.",
+        "Każde potwierdzenie nowych przypadków będzie ważne dla oceny skali ogniska."
+      ],
+      "whyItMatters": "Ebola nadal wymaga szybkiej reakcji, bo skala lokalna może łatwo przekształcić się w szerszy problem zdrowia publicznego.",
+      "context": "W tym slocie temat wraca z poziomu ogólnego ostrzeżenia do świeżego, indywidualnego przypadku.",
+      "watchNext": [
+        "Sprawdzić kolejne komunikaty WHO i lokalnych służb zdrowia.",
+        "Obserwować, czy CNN poda więcej szczegółów o łańcuchu kontaktów."
+      ],
+      "sources": [
+        {
+          "title": "CNN World: US citizen working in DR Congo tests positive for Ebola",
+          "url": "https://edition.cnn.com/2026/07/11/africa/us-citizen-tests-positive-ebola-bundibugyo-drc-hnk-intl"
+        },
+        {
+          "title": "WHO: Ebola outbreak - DRC 2026",
+          "url": "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"
+        }
+      ],
+      "tags": [
+        "Ebola",
+        "DR Konga",
+        "WHO",
+        "zdrowie"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-technologia-meta-ai-2026-07-11-1202",
+      "section": "Technologia",
+      "title": "Meta wycofuje funkcję obrazową AI",
+      "lead": "BBC opisuje odwrót po krytyce dotyczącej zgody i prywatności.",
+      "whatHappened": "BBC podało, że Meta wycofała nową funkcję obrazową AI po fali krytyki. Spór dotyczył zgody użytkowników i ryzyk związanych z wykorzystywaniem publicznych kont Instagramu.",
+      "keyFacts": [
+        "Reakcja przyszła po kilku dniach publicznego backlashu.",
+        "Temat łączy prywatność, generatywną AI i kontrolę nad własnym wizerunkiem."
+      ],
+      "reactions": [
+        "To kolejny sygnał, że produktowe roll-outy AI są coraz mocniej oceniane przez pryzmat zgody i bezpieczeństwa.",
+        "Meta kolejny raz cofa funkcję po szybkim wzroście krytyki."
+      ],
+      "whyItMatters": "To ważny sygnał dla regulacji i dla wszystkich platform, które próbują używać publicznych danych do generatywnej AI.",
+      "context": "W świecie technologii to jedna z tych historii, które szybko przechodzą z testu produktu do debaty o standardach.",
+      "watchNext": [
+        "Sprawdzić, czy Meta opisze dokładniej zakres wycofania funkcji.",
+        "Obserwować reakcje regulatorów i organizacji praw cyfrowych."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Meta pulls new AI image feature after days of backlash",
+          "url": "https://www.bbc.co.uk/news/articles/c2dy6e8klw0o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Meta",
+        "AI",
+        "privacy",
+        "technologia"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "sw-bezpieczenstwo-zaporoze-2026-07-11-1202",
+      "section": "Bezpieczeństwo",
+      "title": "Rosja celuje w szkoły i autobusy w Zaporożu",
+      "lead": "BBC podkreśla pogarszające się bezpieczeństwo w mieście przy froncie.",
+      "whatHappened": "BBC opisuje Zaporoże jako gęsto zaludnione miasto przy linii frontu, gdzie sytuacja bezpieczeństwa się pogarsza, a rosyjskie ataki mają uderzać w szkoły, biura i autobusy.",
+      "keyFacts": [
+        "Temat łączy bezpieczeństwo cywilów z utrzymującą się presją militarną.",
+        "To jedna z bardziej operacyjnych stron wojny w Ukrainie."
+      ],
+      "reactions": [
+        "To może zwiększyć presję na kolejne komunikaty o ochronie ludności cywilnej.",
+        "BBC stawia tu wyraźnie na lokalny, humanitarny punkt widzenia."
+      ],
+      "whyItMatters": "Ataki na obiekty cywilne i komunikację miejską podnoszą stawkę wojny poza frontem.",
+      "context": "To nie jest tylko wojskowy wątek, ale bezpośredni test dla bezpieczeństwa ludności.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się nowe dane o ofiarach i infrastrukturze.",
+        "Obserwować, czy region dostanie kolejne ostrzeżenia lub ewakuacje."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Russia trains sights on schools, offices and buses in busy Ukrainian city",
+          "url": "https://www.bbc.co.uk/news/articles/c3dyyln23v8o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Zaporoże",
+        "wojna",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-gospodarka-mexico-ice-2026-07-11-1202",
+      "section": "Gospodarka",
+      "title": "Meksyk zapowiada skargi po zgonach związanych z ICE",
+      "lead": "CNN przenosi temat na poziom rządowy.",
+      "whatHappened": "CNN podał, że Meksyk zamierza złożyć skargi w USA w sprawie śmierci 17 Meksykanów powiązanych z działaniami ICE.",
+      "keyFacts": [
+        "To już nie jest tylko pojedynczy incydent, ale sprawa dyplomatyczna.",
+        "Temat łączy migrację, egzekwowanie prawa i relacje dwustronne."
+      ],
+      "reactions": [
+        "To może wywołać kolejne napięcia w relacjach USA-Meksyk.",
+        "Wątek jest ważny także dla innych krajów regionu obserwujących politykę migracyjną USA."
+      ],
+      "whyItMatters": "Rządowa skarga zmienia ciężar sprawy z medialnego na polityczno-prawny.",
+      "context": "CNN pokazuje, że skutki działań ICE zaczynają wychodzić poza samą amerykańską debatę wewnętrzną.",
+      "watchNext": [
+        "Sprawdzić, jak zareaguje Departament Stanu i DHS.",
+        "Obserwować, czy Meksyk ujawni listę żądanych działań."
+      ],
+      "sources": [
+        {
+          "title": "CNN World: Mexico to file complaints in US over ICE-related deaths of 17 Mexicans",
+          "url": "https://edition.cnn.com/2026/07/09/americas/mexico-immigrant-deaths-us-ice-intl-latam"
+        }
+      ],
+      "tags": [
+        "Meksyk",
+        "ICE",
+        "USA",
+        "migracja"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
