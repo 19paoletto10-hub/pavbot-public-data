@@ -88,6 +88,13 @@ Hormuz, Spain fires, Typhoon Bavi and the NYT subpoena story. The economic
 and tech layer now adds the US housing law and China's first controlled
 rocket recovery.
 
+The 2026-07-11 21:01 slot tightened the domestic feed around Kaczyński's
+attack on police, the CBZC Ursynów assault and the joint Wołyń commemoration
+by Kosiniak-Kamysz, Nawrocki and Tusk. The world mix stayed dominated by
+Hormuz, fresh U.S.-Iran strikes, Spain's wildfire, Typhoon Bavi and the
+Russian shadow-fleet campaign, while the economy and tech cards kept the U.S.
+housing law and China's reusable-rocket milestone in view.
+
 ## Data Shape
 
 The native iOS feed expects:
