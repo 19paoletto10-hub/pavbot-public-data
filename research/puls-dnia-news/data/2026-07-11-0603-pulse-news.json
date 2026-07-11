@@ -1,0 +1,541 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-11",
+  "runTime": "06:03",
+  "status": "Material update",
+  "headline": "Ursynów, PAŻP i Iran dominują poranny slot",
+  "summary": "Poranny przegląd przesuwa feed ku twardym krajowym sprawom: atak na policjantów, nielegalne leki, tytoń, PAŻP i poznański incydent; na świecie największy ciężar mają Iran i Hormuz, NATO, pożary w Hiszpanii, Ryanair oraz spór Apple kontra OpenAI.",
+  "checkedSources": [
+    {
+      "title": "TVN24: Wiadomości z kraju i ze świata",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24: Wiadomości z kraju",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24: Wiadomości ze świata",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24: Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24: Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "TVN24: Warszawa",
+      "url": "https://tvn24.pl/tvnwarszawa"
+    },
+    {
+      "title": "BBC News World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "IMGW: Prognoza pogody na tydzień 06.07 – 12.07.2026",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-06-07-12-07-2026/"
+    },
+    {
+      "title": "CBZC: Aktualności",
+      "url": "https://cbzc.policja.gov.pl/bzc/aktualnosci"
+    },
+    {
+      "title": "CBŚP: Aktualności",
+      "url": "https://cbsp.policja.pl/cbs/aktualnosci"
+    },
+    {
+      "title": "gov.pl Poznań: zarzuty po incydencie antyukraińskim",
+      "url": "https://www.gov.pl/web/po-poznan/zarzuty-dotyczace-pomowienia-o-prowadzenie-dzialalnosci-mieszajacej-strukture-etniczna"
+    },
+    {
+      "title": "NATO: NATO Summit 2026",
+      "url": "https://www.nato.int/en/news-and-events/events/event-programmes/2026/07/nato-summit-2026"
+    },
+    {
+      "title": "NATO: Relations with Ukraine",
+      "url": "https://www.nato.int/en/what-we-do/partnerships-and-cooperation/relations-with-ukraine"
+    },
+    {
+      "title": "White House: 2026 NATO Summit",
+      "url": "https://www.whitehouse.gov/past-events/"
+    },
+    {
+      "title": "State Department: Joint statement on the US and GCC",
+      "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/06/joint-statement-following-the-ministerial-meeting-of-the-united-states-and-the-gulf-cooperation-council-gcc"
+    },
+    {
+      "title": "GOV.UK: Wildfire in Los Gallardos, Almeria",
+      "url": "https://www.gov.uk/foreign-travel-advice/spain"
+    },
+    {
+      "title": "AP News: US demands Iran publicly state that Strait of Hormuz is open",
+      "url": "https://apnews.com/article/4bf4fdd1f4d782ff08f60d152909faee"
+    },
+    {
+      "title": "AP News: Apple files lawsuit accusing ChatGPT maker OpenAI of stealing trade secrets",
+      "url": "https://apnews.com/article/6fff8833f5889d86406b89a02dd8fb16"
+    }
+  ],
+  "items": [
+    {
+      "id": "pl-alerty-imgw-burze-2026-07-11-0603",
+      "section": "Alerty",
+      "title": "IMGW utrzymuje burze i grad w prognozie",
+      "lead": "Pogoda nadal może szybko utrudniać ruch i plany dnia.",
+      "whatHappened": "IMGW wciąż wskazuje na opady, lokalne burze i możliwy grad w części kraju, więc temat pogody pozostaje operacyjny.",
+      "keyFacts": [
+        "Prognoza obejmuje przelotne opady i ryzyko lokalnych wyładowań.",
+        "W części regionów nadal możliwa jest silniejsza konwekcja."
+      ],
+      "reactions": [
+        "To temat dla kierowców, organizatorów wydarzeń i służb lokalnych.",
+        "Najbliższe godziny mogą przynieść szybkie korekty komunikatów."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na bezpieczeństwo i logistykę dnia.",
+      "context": "Po kilku dniach z niestabilną aurą pogoda nadal wraca jako temat pierwszej potrzeby.",
+      "watchNext": [
+        "Sprawdzić kolejny komunikat IMGW i lokalne ostrzeżenia.",
+        "Obserwować, czy RCB rozszerzy lub zawęzi zakres alertów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Może padać grad. Ostrzeżenia IMGW przed silnym deszczem z burzami na 10.07",
+          "url": "https://tvn24.pl/polska/moze-padac-grad-ostrzezenia-imgw-przed-silnym-deszczem-z-burzami-na-10-07-st9134639"
+        },
+        {
+          "title": "IMGW: Prognoza pogody na tydzień 06.07 – 12.07.2026",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-06-07-12-07-2026/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "IMGW",
+        "burze",
+        "grad"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-bezpieczenstwo-ursynow-policja-2026-07-11-0603",
+      "section": "Bezpieczeństwo",
+      "title": "Atak na policjantów na Ursynowie",
+      "lead": "CBZC zatrzymało napastnika po ataku kastetem przy wejściu do siedziby biura.",
+      "whatHappened": "TVN24 i CBZC opisali poranny atak na policjanta CBZC. Napastnik użył kastetu, a funkcjonariusz odniósł obrażenia i został zbadany przez medyków.",
+      "keyFacts": [
+        "Sprawcę zatrzymano po krótkim pościgu.",
+        "CBZC podało, że użyto dwóch kastetów."
+      ],
+      "reactions": [
+        "To mocny sygnał bezpieczeństwa publicznego z Warszawy.",
+        "Sprawa może jeszcze wygenerować kolejne komunikaty służb."
+      ],
+      "whyItMatters": "Atak na funkcjonariusza podnosi rangę lokalnego incydentu do poziomu sprawy bezpieczeństwa.",
+      "context": "Ursynów pozostaje w tym slocie jednym z najtwardszych krajowych leadów.",
+      "watchNext": [
+        "Sprawdzić, czy policja poda motyw i pełny stan zdrowia funkcjonariusza.",
+        "Obserwować, czy prokuratura doprecyzuje zarzuty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Atak na policjantów na Ursynowie",
+          "url": "https://tvn24.pl/tvnwarszawa/ursynow/atak-na-policjantow-na-ursynowie-st9137305"
+        },
+        {
+          "title": "CBZC: Atak na policjanta CBZC - sprawca zatrzymany!",
+          "url": "https://cbzc.policja.gov.pl/bzc/aktualnosci/989%2CAtak-na-policjanta-CBZC-sprawca-zatrzymany.html"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "policja",
+        "CBZC",
+        "atak"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-polska-nielegalne-leki-2026-07-11-0603",
+      "section": "Polska",
+      "title": "Nielegalne leki sprzedawano w sieci",
+      "lead": "CBZC zatrzymało 12 osób w sprawie fałszywych farmaceutyków.",
+      "whatHappened": "Śledczy rozbili grupę, która miała reklamować i sprzedawać w internecie nielegalne leki oraz środki farmaceutyczne bez prawa do obrotu.",
+      "keyFacts": [
+        "Zatrzymano 12 osób w wieku od 25 do 50 lat.",
+        "Sprawa obejmuje sieciowe kanały sprzedaży i reklamę fałszywych leków."
+      ],
+      "reactions": [
+        "To temat łączący zdrowie publiczne i cyberprzestępczość.",
+        "Możliwe są kolejne działania operacyjne i zabezpieczenia."
+      ],
+      "whyItMatters": "Nielegalny obrót lekami może bezpośrednio szkodzić pacjentom.",
+      "context": "Feed wraca do tematów, które mają realny wpływ na zdrowie i bezpieczeństwo konsumenckie.",
+      "watchNext": [
+        "Sprawdzić, czy służby ujawnią pełną listę zabezpieczonych substancji.",
+        "Obserwować, czy pojawią się kolejne zatrzymania lub zarzuty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nielegalne leki reklamowali i sprzedawali w sieci",
+          "url": "https://tvn24.pl/polska/nielegalne-leki-reklamowali-i-sprzedawali-w-sieci-st9137472"
+        },
+        {
+          "title": "CBZC / Policja: Policjanci CBZC rozbili grupę produkującą i handlującą w sieci sfałszowanymi farmaceutykami",
+          "url": "https://cbzc.policja.gov.pl/bzc/aktualnosci/987%2CPOLICJANCI-CBZC-ROZBILI-GRUPE-PRODUKUJACA-I-HANDLUJACA-W-SIECI-SFALSZOWANYMI-FAR.html"
+        }
+      ],
+      "tags": [
+        "leki",
+        "internet",
+        "CBZC",
+        "zdrowie"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-gospodarka-pazp-pfizer-2026-07-11-0603",
+      "section": "Gospodarka",
+      "title": "PAŻP czeka na pomoc po sporze z Pfizerem",
+      "lead": "Rząd zapowiada wsparcie po zajęciu wierzytelności agencji.",
+      "whatHappened": "TVN24 podał, że Polska Agencja Żeglugi Powietrznej ma dostać wsparcie po zajęciu wierzytelności w tle sporu sądowego dotyczącego Pfizera.",
+      "keyFacts": [
+        "Sprawa dotyczy realnej płynności finansowej instytucji.",
+        "To jeden z ważniejszych gospodarczo-instytucjonalnych tematów dnia."
+      ],
+      "reactions": [
+        "Temat może przejść w decyzje budżetowe albo prawne.",
+        "To także sygnał dla rynku lotniczego i administracji."
+      ],
+      "whyItMatters": "PAŻP jest krytyczną instytucją dla ruchu lotniczego i bezpieczeństwa operacyjnego.",
+      "context": "W tym slocie gospodarka pojawia się przez pryzmat sporu prawnego i skutków dla państwowej infrastruktury.",
+      "watchNext": [
+        "Sprawdzić, czy rząd poda mechanizm i skalę wsparcia.",
+        "Obserwować, czy spór z Pfizerem wywoła kolejne reakcje instytucji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: \"Sprawa jest dość paskudna\". Donald Tusk zapowiada pomoc dla PAŻP po zajęciu pieniędzy w związku z konfliktem z Pfizerem",
+          "url": "https://tvn24.pl/biznes/z-kraju/sprawa-jest-dosc-paskudna-donald-tusk-zapowiada-pomoc-dla-pazp-po-zajeciu-pieniedzy-w-zwiazku-z-konfliktem-z-pfizerem-st9137320"
+        }
+      ],
+      "tags": [
+        "PAŻP",
+        "Pfizer",
+        "gospodarka",
+        "lotnictwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-polska-tyton-mlawa-2026-07-11-0603",
+      "section": "Polska",
+      "title": "Nielegalna fabryka tytoniu pod Mławą",
+      "lead": "Służby przejęły linię produkcyjną i zatrzymały pięć osób.",
+      "whatHappened": "CBŚP i służba celno-skarbowa zlikwidowały nielegalną fabrykę wyrobów tytoniowych. Na miejscu zabezpieczono kompletną linię produkcyjną oraz ogromny zapas surowca.",
+      "keyFacts": [
+        "Zatrzymano pięciu mężczyzn.",
+        "Zabezpieczono ponad milion papierosów oraz blisko dwie tony tytoniu i suszu."
+      ],
+      "reactions": [
+        "To mocny cios w szarą strefę i przestępczość skarbową.",
+        "Tego typu sprawy zwykle uruchamiają dalsze wyliczanie strat państwa."
+      ],
+      "whyItMatters": "Nielegalny tytoń to jednocześnie problem fiskalny, kryminalny i zdrowotny.",
+      "context": "Po Warszawie kolejny krajowy temat dotyczy przestępczości gospodarczej na dużą skalę.",
+      "watchNext": [
+        "Sprawdzić, czy CBŚP poda szacunek strat Skarbu Państwa.",
+        "Obserwować, czy pojawią się kolejne zatrzymania lub areszty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nielegalna fabryka tytoniu zlikwidowana w powiecie mławskim",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/mlawa-nielegalna-fabryka-tytoniu-zlikwidowana-pieciu-zatrzymanych-na-goracym-uczynku-st9137554"
+        },
+        {
+          "title": "CBŚP: Nielegalna fabryka wyrobów tytoniowych zlikwidowana na Mazowszu",
+          "url": "https://cbsp.policja.pl/cbs/aktualnosci/279093%2CNielegalna-fabryka-wyrobow-tytoniowych-zlikwidowana-na-Mazowszu-Piec-osob-tymcza.html"
+        }
+      ],
+      "tags": [
+        "tytoń",
+        "Mława",
+        "szara strefa",
+        "CBŚP"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-polityka-poznan-ukraina-2026-07-11-0603",
+      "section": "Polityka",
+      "title": "Poznańskie zarzuty po incydencie antyukraińskim",
+      "lead": "Prokuratura postawiła zarzuty po wejściu do biura pomagającego cudzoziemcom.",
+      "whatHappened": "Dwaj mężczyźni usłyszeli zarzuty po incydencie w Poznaniu wymierzonym w biuro prowadzone przez Ukrainkę. Sprawa weszła w tryb prokuratorski po zgłoszeniu i analizie nagrań.",
+      "keyFacts": [
+        "Zarzuty dotyczą pomówienia i działań wywołujących napięcie etniczne.",
+        "Jeden z uczestników miał wcześniej problemy z ABW."
+      ],
+      "reactions": [
+        "To temat, który może szybko wrócić jako spór polityczny o język wobec Ukraińców.",
+        "Sprawa ma potencjał do dalszych reakcji rządu i opozycji."
+      ],
+      "whyItMatters": "To jeden z najczytelniejszych politycznych sygnałów o narastaniu napięć wokół Ukrainy w Polsce.",
+      "context": "Poznań utrzymuje się w centrum krótkiego, ale głośnego konfliktu o granice publicznej agresji i dezinformacji.",
+      "watchNext": [
+        "Sprawdzić, czy prokuratura doprecyzuje kwalifikację czynu.",
+        "Obserwować, czy pojawią się reakcje polityków krajowych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pytali o Banderę, chcieli bezprawnie wejść do biura",
+          "url": "https://tvn24.pl/poznan/poznan-zarzuty-dla-mezczyzn-ktorzy-chcieli-skontrolowac-biuro-prowadzone-przez-ukrainke-st9134760"
+        },
+        {
+          "title": "gov.pl Poznań: Zarzuty dotyczące pomówienia o prowadzenie działalności mieszającej strukturę etniczną",
+          "url": "https://www.gov.pl/web/po-poznan/zarzuty-dotyczace-pomowienia-o-prowadzenie-dzialalnosci-mieszajacej-strukture-etniczna"
+        }
+      ],
+      "tags": [
+        "Poznań",
+        "Ukraina",
+        "prokuratura",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-iran-ceasefire-2026-07-11-0603",
+      "section": "Świat",
+      "title": "Trump wraca do presji na Iran",
+      "lead": "Biały Dom i media pokazują trwającą presję na Teheran po deklaracji o zawieszeniu broni.",
+      "whatHappened": "Trump mówi, że Iran chce rozmów, ale równocześnie utrzymuje narrację o końcu rozejmu. To podtrzymuje napięcie wokół konfliktu i kanałów dyplomatycznych.",
+      "keyFacts": [
+        "AP opisuje nacisk USA po kolejnych rundach militarnej presji.",
+        "W oficjalnych materiałach USA wciąż widać twardą linię wobec Iranu."
+      ],
+      "reactions": [
+        "To jeden z głównych światowych driverów ryzyka politycznego i rynkowego.",
+        "Każdy ruch w tej sprawie może przełożyć się na ceny energii i nastroje giełdowe."
+      ],
+      "whyItMatters": "Iran pozostaje jednym z najważniejszych punktów zapalnych w globalnym newsflow.",
+      "context": "Ten slot nie pokazuje wygaszenia napięcia, tylko jego dalsze zarządzanie przez Waszyngton i sojuszników.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się nowe wypowiedzi Trumpa lub Departamentu Stanu.",
+        "Obserwować, czy temat przejdzie z retoryki w kolejne działania."
+      ],
+      "sources": [
+        {
+          "title": "AP News: US demands Iran publicly state that Strait of Hormuz is open",
+          "url": "https://apnews.com/article/4bf4fdd1f4d782ff08f60d152909faee"
+        },
+        {
+          "title": "TVN24: Iran chce podpisać porozumienie - Donald Trump",
+          "url": "https://tvn24.pl/swiat/amerykanskie-uderzenia-na-iran-donald-trump-iran-chce-podpisac-porozumienie-st9134637"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Trump",
+        "dyplomacja",
+        "ryzyko"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-hormuz-open-2026-07-11-0603",
+      "section": "Świat",
+      "title": "USA chcą gwarancji otwarcia Ormuzu",
+      "lead": "Waszyngton naciska na publiczne potwierdzenie bezpieczeństwa żeglugi.",
+      "whatHappened": "AP podała, że USA domagają się od Iranu publicznego potwierdzenia, że cieśnina Ormuz pozostaje otwarta dla żeglugi. To podbija stawkę wokół bezpieczeństwa transportu ropy i gazu.",
+      "keyFacts": [
+        "Ormuz jest kluczową trasą dla globalnego handlu energią.",
+        "Departament Stanu i partnerzy regionalni nadal podkreślają swobodę żeglugi."
+      ],
+      "reactions": [
+        "To bezpośrednio podnosi ryzyko dla rynków energii.",
+        "Na tym etapie każdy komunikat o żegludze ma znaczenie polityczne i finansowe."
+      ],
+      "whyItMatters": "Cieśnina Ormuz to jeden z najważniejszych punktów wrażliwych dla światowej gospodarki.",
+      "context": "Ten wątek łączy bezpieczeństwo morskie, dyplomację i ceny energii.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się kolejne oficjalne komunikaty USA lub GCC.",
+        "Obserwować, czy rynek ropy zareaguje na nowe wypowiedzi."
+      ],
+      "sources": [
+        {
+          "title": "AP News: US demands Iran publicly state that Strait of Hormuz is open",
+          "url": "https://apnews.com/article/4bf4fdd1f4d782ff08f60d152909faee"
+        },
+        {
+          "title": "State Department: Joint statement following the ministerial meeting of the United States and the Gulf Cooperation Council",
+          "url": "https://www.state.gov/releases/office-of-the-spokesperson/2026/06/joint-statement-following-the-ministerial-meeting-of-the-united-states-and-the-gulf-cooperation-council-gcc"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Ormuz",
+        "ropa",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-nato-ukraina-2026-07-11-0603",
+      "section": "Świat",
+      "title": "NATO domyka szczyt z mocnym sygnałem dla Ukrainy",
+      "lead": "Sojusz utrzymuje 5-procentową ścieżkę wydatków i dalsze wsparcie dla Kijowa.",
+      "whatHappened": "Oficjalne materiały NATO potwierdzają zobowiązanie do zwiększania wydatków obronnych oraz dalsze wsparcie dla Ukrainy po szczycie w Ankarze.",
+      "keyFacts": [
+        "NATO utrzymuje długą ścieżkę dojścia do 5 proc. PKB na obronność.",
+        "W dokumentach sojuszu nadal widoczne jest wsparcie dla Ukrainy."
+      ],
+      "reactions": [
+        "To ważny sygnał dla Europy Środkowej i rynku obronnego.",
+        "Szczyt pokazuje, że mimo napięć sojusz nadal trzyma wspólną linię."
+      ],
+      "whyItMatters": "To jedna z najważniejszych decyzji strategicznych w światowym newsflow tego slotu.",
+      "context": "NATO pozostaje główną ramą dla bezpieczeństwa europejskiego i wsparcia Ukrainy.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się krajowe komentarze do ustaleń szczytu.",
+        "Obserwować, czy inwestorzy wojskowi i energetyczni zareagują na komunikaty."
+      ],
+      "sources": [
+        {
+          "title": "NATO: NATO Summit 2026",
+          "url": "https://www.nato.int/en/news-and-events/events/event-programmes/2026/07/nato-summit-2026"
+        },
+        {
+          "title": "NATO: Relations with Ukraine",
+          "url": "https://www.nato.int/en/what-we-do/partnerships-and-cooperation/relations-with-ukraine"
+        }
+      ],
+      "tags": [
+        "NATO",
+        "Ukraina",
+        "obrona",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-hiszpania-pozar-2026-07-11-0603",
+      "section": "Świat",
+      "title": "Pożar w Hiszpanii staje się dużą katastrofą",
+      "lead": "Almería weszła do światowego feedu przez śmiertelny pożar i ewakuacje.",
+      "whatHappened": "AP i brytyjskie ostrzeżenia podróżne pokazują skalę pożaru w prowincji Almería. Sytuacja pozostaje dynamiczna, a liczba ofiar i zaginionych jest wysoka.",
+      "keyFacts": [
+        "W mediach pojawiają się doniesienia o co najmniej kilkunastu ofiarach.",
+        "Władze nadal utrzymują ostrzeżenia i zalecają ostrożność."
+      ],
+      "reactions": [
+        "To jeden z najmocniejszych tematów pogodowo-klimatycznych w Europie.",
+        "Kolejne raporty mogą szybko zmienić skalę tragedii."
+      ],
+      "whyItMatters": "Pokazuje, jak szybko ekstremalna pogoda może przerodzić się w kryzys humanitarny.",
+      "context": "Pożar wpisuje się w szerszy europejski problem fal upałów i pożarów.",
+      "watchNext": [
+        "Sprawdzić, czy hiszpańskie służby opublikują nowszy bilans ofiar.",
+        "Obserwować, czy temat wróci w BBC/CNN jako lead światowy."
+      ],
+      "sources": [
+        {
+          "title": "AP News: Wildfire devastates an expat community in southern Spain",
+          "url": "https://apnews.com/article/760ecfff1316d56837888de4ab9efa21"
+        },
+        {
+          "title": "GOV.UK: Spain travel advice",
+          "url": "https://www.gov.uk/foreign-travel-advice/spain"
+        }
+      ],
+      "tags": [
+        "Hiszpania",
+        "pożar",
+        "klimat",
+        "ewakuacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-ryanair-window-2026-07-11-0603",
+      "section": "Bezpieczeństwo",
+      "title": "Ryanair po dekompresji kabiny wraca na radar",
+      "lead": "Relacje medialne opisują pasażera częściowo wysysanego z samolotu po awarii okna.",
+      "whatHappened": "WSJ i People opisują incydent z lotu Ryanaira z Grecji do Niemiec, w którym doszło do dekompresji kabiny i poważnego zagrożenia dla pasażera siedzącego przy oknie.",
+      "keyFacts": [
+        "Samolot musiał wrócić do Grecji po awaryjnym zdarzeniu.",
+        "Awarie kabinowe i bezpieczeństwo pasuje do kategorii wysokiego ryzyka."
+      ],
+      "reactions": [
+        "To najgłośniejszy incydent lotniczy tego slotu.",
+        "Śledztwo może pójść w stronę technicznej awarii albo uderzenia odłamków."
+      ],
+      "whyItMatters": "To zdarzenie ma bezpośrednie znaczenie dla bezpieczeństwa lotniczego i zaufania pasażerów.",
+      "context": "Na ten moment materiał opiera się na relacjach medialnych i ogólnych informacjach bezpieczeństwa, nie na pełnym komunikacie technicznym.",
+      "watchNext": [
+        "Sprawdzić oficjalny komunikat linii lub władz lotniczych.",
+        "Obserwować, czy pojawi się raport o przyczynie dekompresji."
+      ],
+      "sources": [
+        {
+          "title": "WSJ: Boeing 737 cabin depressurizes after engine issue, injuring passenger",
+          "url": "https://www.wsj.com/business/airlines/boeing-737-makes-emergency-landing-after-broken-window-injures-passenger-fa602ea1"
+        },
+        {
+          "title": "People: Man partially sucked out of plane after window dislodged",
+          "url": "https://people.com/man-partially-sucked-out-of-plane-after-window-dislodged-during-flight-reports-12015964"
+        }
+      ],
+      "tags": [
+        "Ryanair",
+        "lotnictwo",
+        "bezpieczeństwo",
+        "awaria"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-apple-openai-2026-07-11-0603",
+      "section": "Technologia",
+      "title": "Apple pozywa OpenAI o tajemnice handlowe",
+      "lead": "Nowy spór uderza w hardware AI i relacje największych graczy.",
+      "whatHappened": "AP podało, że Apple złożył pozew przeciw OpenAI, zarzucając firmie i byłym pracownikom wyciek tajemnic handlowych związanych z projektami sprzętowymi.",
+      "keyFacts": [
+        "Pozew został złożony w federalnym sądzie w Kalifornii.",
+        "Spór dotyczy rosnącej rywalizacji w sprzęcie i AI."
+      ],
+      "reactions": [
+        "To może otworzyć nową linię konfliktu między Apple a OpenAI.",
+        "Dla rynku technologicznego to sygnał, że wyścig AI przechodzi w fazę prawną."
+      ],
+      "whyItMatters": "To jedna z najważniejszych tegorocznych historii o rywalizacji w AI i hardware.",
+      "context": "Technologia w tym slocie nie jest już tylko produktem czy modelem, ale także sporem o własność intelektualną.",
+      "watchNext": [
+        "Sprawdzić treść pozwu i odpowiedź OpenAI.",
+        "Obserwować, czy sprawa przełoży się na notowania i narrację wokół AI hardware."
+      ],
+      "sources": [
+        {
+          "title": "AP News: Apple files lawsuit accusing ChatGPT maker OpenAI of stealing trade secrets",
+          "url": "https://apnews.com/article/6fff8833f5889d86406b89a02dd8fb16"
+        },
+        {
+          "title": "Courthouse News: Apple sues OpenAI over trade secret theft",
+          "url": "https://www.courthousenews.com/articles/apple-sues-openai-over-trade-secret-theft"
+        }
+      ],
+      "tags": [
+        "Apple",
+        "OpenAI",
+        "AI",
+        "prawo"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
