@@ -65,6 +65,12 @@ illegal tobacco factory, Czarzasty and Ukraine's EU path, Trump's Iran
 warnings, Spanish wildfires, the East Asia typhoon, Ryanair's window failure,
 Meta's DSA trouble and China's reusable rocket milestone.
 
+The 2026-07-11 09:04 slot moved the domestic mix toward Kaczyński, Wołyń,
+IMGW storm alerts and a Lubelszczyzna funnel cloud, while the world feed now
+leans harder into Hormuz negotiations, Russian shipping disruptions, Ukraine's
+attacks on Russian energy infrastructure, WHO's bigger-Ebola warning, the CNN
+case in DRC, the Spanish wildfire and Meta's AI rollback.
+
 ## Data Shape
 
 The native iOS feed expects:

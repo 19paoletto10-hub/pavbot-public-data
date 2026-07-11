@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-11",
+  "runTime": "09:04",
+  "status": "Material update",
+  "headline": "Kaczyński, Wołyń i Hormuz dominują poranek",
+  "summary": "Polska dostaje dziś miks sporu politycznego, Wołynia, alertu IMGW i lejka kondensacyjnego, a świat kręci się wokół Hormuz, rosyjskiej żeglugi, eboli, pożarów w Hiszpanii i cofnięcia nowej funkcji obrazowej przez Metę.",
+  "checkedSources": [
+    {
+      "title": "TVN24: Wiadomości z kraju i ze świata",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24: Najważniejsze RSS",
+      "url": "https://tvn24.pl/najwazniejsze.xml"
+    },
+    {
+      "title": "TVN24: Wiadomości z kraju",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24: Wiadomości ze świata",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24: Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24: Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC News World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "IMGW: Prognoza pogody na tydzień 06.07 – 12.07.2026",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-06-07-12-07-2026/"
+    },
+    {
+      "title": "WHO: Ebola outbreak - DRC 2026",
+      "url": "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"
+    },
+    {
+      "title": "GOV.UK: Spain travel advice",
+      "url": "https://www.gov.uk/foreign-travel-advice/spain"
+    }
+  ],
+  "items": [
+    {
+      "id": "pl-alerty-imgw-burze-2026-07-11-0904",
+      "section": "Alerty",
+      "title": "IMGW utrzymuje sobotnie burze i grad",
+      "lead": "Pogoda nadal może szybko utrudniać ruch i plany dnia.",
+      "whatHappened": "IMGW i TVN24 utrzymują ostrzeżenia przed burzami, lokalnym gradem i porywami wiatru do 60 km/h, więc alert pogodowy pozostaje operacyjny.",
+      "keyFacts": [
+        "Ostrzeżenia mają obowiązywać w sobotę od południa do wieczora.",
+        "W części kraju możliwe są intensywne opady, wiatr i lokalny grad."
+      ],
+      "reactions": [
+        "To bezpośredni temat dla kierowców i organizatorów wydarzeń.",
+        "Kolejny komunikat IMGW może szybko zmienić skalę ryzyka."
+      ],
+      "whyItMatters": "To jeden z niewielu tematów, który może od razu wpływać na bezpieczeństwo i logistykę dnia.",
+      "context": "Po kilku dniach niestabilnej pogody alert nadal zasługuje na wysoki priorytet w aplikacji.",
+      "watchNext": [
+        "Sprawdzić kolejny komunikat IMGW i lokalne ostrzeżenia RCB.",
+        "Obserwować, czy alert zostanie rozszerzony na kolejne regiony."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Sobota z burzami. IMGW ostrzega",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/burze-ostrzezenia-imgw-sobota-11-07-tu-spodziewane-sa-wyladowania-st9137764"
+        },
+        {
+          "title": "IMGW: Prognoza pogody na tydzień 06.07 – 12.07.2026",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-06-07-12-07-2026/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "IMGW",
+        "burze",
+        "grad"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-polityka-burza-kaczynski-2026-07-11-0904",
+      "section": "Polityka",
+      "title": "Burza po słowach Kaczyńskiego",
+      "lead": "TVN24 łączy polityczny spór z incydentem w Warszawie.",
+      "whatHappened": "TVN24 w porannym przeglądzie zestawia komentarz Jarosława Kaczyńskiego z napaścią na policjantów w Warszawie i z nowymi wątkami o ukraińskich atakach na rosyjskie rafinerie.",
+      "keyFacts": [
+        "Materiał jest częścią porannego, wielowątkowego przeglądu TVN24.",
+        "Wątki łączą politykę, bezpieczeństwo publiczne i wojnę energetyczną."
+      ],
+      "reactions": [
+        "To sygnał, że krajowy feed przesuwa się z prostych newsów operacyjnych do sporu politycznego.",
+        "Temat może wracać w kolejnych wydaniach serwisów TVN24."
+      ],
+      "whyItMatters": "Spór wokół Kaczyńskiego nadal napędza krajową agendę i wpływa na kolejność leadów.",
+      "context": "W tym slocie Kaczyński wraca jako polityczny punkt ciężkości, ale już nie jako jedyny dominujący wątek.",
+      "watchNext": [
+        "Sprawdzić, czy TVN24 rozwinie ten wątek w osobny materiał.",
+        "Obserwować, czy reakcje partii przesuną temat dalej w ciągu dnia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Burza po słowach Kaczyńskiego, napaść na policjantów, rosyjskie ...",
+          "url": "https://tvn24.pl/polska/szesc-rzeczy-ktore-warto-wiedziec-w-sobote-11-lipca-najwazniejsze-informacje-st9137755"
+        }
+      ],
+      "tags": [
+        "Kaczyński",
+        "polityka",
+        "Warszawa",
+        "TVN24"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-polska-wolyn-kosiniak-2026-07-11-0904",
+      "section": "Polska",
+      "title": "Kosiniak-Kamysz jedzie na Wołyń",
+      "lead": "Szef MON ma oddać hołd ofiarom Krwawej Niedzieli.",
+      "whatHappened": "Władysław Kosiniak-Kamysz zapowiedział udział w uroczystościach w 83. rocznicę Krwawej Niedzieli i przypomniał o upamiętnieniu ofiar zbrodni wołyńskiej.",
+      "keyFacts": [
+        "To rocznicowy temat o wysokiej wrażliwości historycznej i politycznej.",
+        "Wątek dotyczy jednocześnie pamięci, dyplomacji i relacji polsko-ukraińskich."
+      ],
+      "reactions": [
+        "To może wywołać kolejne komentarze po obu stronach granicy.",
+        "Temat ma potencjał, by wrócić do czołówki krajowych newsów."
+      ],
+      "whyItMatters": "Wołyń pozostaje jednym z najcięższych punktów w polsko-ukraińskiej agendzie publicznej.",
+      "context": "W aktualnym slocie temat ma charakter bardziej symboliczny niż operacyjny, ale nadal jest politycznie gorący.",
+      "watchNext": [
+        "Sprawdzić przebieg uroczystości i ewentualne reakcje po stronie Ukrainy.",
+        "Obserwować, czy ministerstwo wyda dodatkowy komunikat po wizycie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Władysław Kosiniak-Kamysz na Wołyniu",
+          "url": "https://tvn24.pl/polska/ukraina-szef-mon-wladyslaw-kosiniak-kamysz-na-wolyniu-odda-hold-ofiarom-zbrodni-wolynskiej-st9137743"
+        }
+      ],
+      "tags": [
+        "Wołyń",
+        "MON",
+        "Ukraina",
+        "Polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-alerty-lubel-lej-kondensacyjny-2026-07-11-0904",
+      "section": "Alerty",
+      "title": "Lej kondensacyjny nad Lubelszczyzną",
+      "lead": "Groźnie wyglądające zjawisko było widoczne w regionie.",
+      "whatHappened": "TVN24 opisał i pokazał lej kondensacyjny widoczny nad Lubelszczyzną. To zalążek trąby powietrznej, więc materiał dobrze pasuje do porannego bloku ostrzeżeń pogodowych.",
+      "keyFacts": [
+        "Zjawisko zostało uchwycone na zdjęciach przez mieszkańców regionu.",
+        "Lej kondensacyjny nie zawsze schodzi do ziemi, ale wymaga uwagi przy burzach."
+      ],
+      "reactions": [
+        "To wzmacnia ostrożność wobec całego weekendowego pakietu pogodowego.",
+        "W praktyce jest to bardziej sygnał operacyjny niż samodzielny kryzys."
+      ],
+      "whyItMatters": "W połączeniu z alertem IMGW temat daje czytelny sygnał o niestabilnej pogodzie.",
+      "context": "Ten typ zjawiska zwykle podbija zainteresowanie, gdy region i tak jest już objęty ostrzeżeniami.",
+      "watchNext": [
+        "Sprawdzić, czy IMGW nie zaostrzy komunikatów w tym regionie.",
+        "Obserwować, czy pojawią się kolejne nagrania z podobnymi zjawiskami."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Lej kondensacyjny zawirował nad Lubelszczyzną",
+          "url": "https://tvn24.pl/tvnmeteo/polska/lej-kondensacyjny-na-lubelszczyznie-zalazek-traby-powietrznej-nad-polska-st9137464"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "Lubelszczyzna",
+        "burze",
+        "alert"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "sw-gospodarka-rosja-zegluga-don-2026-07-11-0904",
+      "section": "Gospodarka",
+      "title": "Rosja wstrzymuje żeglugę na Donie i Azowie",
+      "lead": "Ataki Ukrainy zaczynają przekładać się na ruch statków.",
+      "whatHappened": "TVN24 podał, że Rosja zawiesiła żeglugę na Kanale Don i Morzu Azowskim po ukraińskich atakach, co uderza w transport, logistykę i przepływ surowców.",
+      "keyFacts": [
+        "Decyzja dotyczy kluczowej osi transportowej w regionie.",
+        "Temat łączy bezpieczeństwo militarne z rynkiem energii i towarów."
+      ],
+      "reactions": [
+        "Ruch statków może być teraz kolejnym wskaźnikiem presji na rosyjską gospodarkę.",
+        "To wątek, który może wrócić przy kolejnych doniesieniach o portach i terminalach."
+      ],
+      "whyItMatters": "Przerwy w żegludze mają bezpośrednie skutki dla handlu i energetyki w regionie.",
+      "context": "To jeden z najczytelniejszych przykładów, jak wojna przekłada się na gospodarkę morską.",
+      "watchNext": [
+        "Sprawdzić, czy Rosja poda termin wznowienia ruchu.",
+        "Obserwować, czy pojawią się kolejne zakłócenia w portach i terminalach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ruch statków wstrzymany. Rosja reaguje na ataki Ukrainy",
+          "url": "https://tvn24.pl/biznes/ze-swiata/rosja-zawiesza-zegluge-na-kanale-don-morze-azowskie-po-atakach-ukrainy-st9137695"
+        }
+      ],
+      "tags": [
+        "Rosja",
+        "żegluga",
+        "Ukraina",
+        "energia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-bezpieczenstwo-ukraina-rosyjskie-statki-2026-07-11-0904",
+      "section": "Bezpieczeństwo",
+      "title": "Ukraina uderza w rosyjskie statki i terminale",
+      "lead": "Nowy atak podbija stawkę wojny morskiej i energetycznej.",
+      "whatHappened": "TVN24 opisał ukraińskie ataki, po których płonęły rafineria i terminal naftowy, a uszkodzone zostały także rosyjskie statki.",
+      "keyFacts": [
+        "Wątek dotyczy jednocześnie floty, rafinerii i infrastruktury terminalowej.",
+        "To kolejny sygnał, że konflikt przenosi się na logistykę i energię."
+      ],
+      "reactions": [
+        "Rynek będzie patrzył na każdy kolejny raport o portach i paliwach.",
+        "To temat, który może generować dalsze reakcje wojskowe i dyplomatyczne."
+      ],
+      "whyItMatters": "Ataki na infrastrukturę morską i paliwową mają szersze skutki niż sam front.",
+      "context": "W tym slocie Ukraina i Rosja weszły do feedu jako jeden z głównych światowych motorów napięcia.",
+      "watchNext": [
+        "Sprawdzić, czy Moskwa poda pełną ocenę szkód.",
+        "Obserwować, czy pojawią się kolejne potwierdzenia zdjęciowe lub satelitarne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ukraińcy zaatakowali kilkanaście rosyjskich statków",
+          "url": "https://tvn24.pl/swiat/ukraincy-zaatakowali-kilkanascie-rosyjskich-statkow-plonela-rafineria-i-terminal-naftowy-st9137704"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "flota",
+        "terminal"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-swiat-who-ebola-2026-07-11-0904",
+      "section": "Świat",
+      "title": "WHO ostrzega, że ebola może być większa niż liczby",
+      "lead": "Oficjalne dane mogą nie oddawać pełnej skali ogniska.",
+      "whatHappened": "WHO i TVN24 wskazują, że skala epidemii eboli w Demokratycznej Republice Konga może być większa niż pokazują oficjalne statystyki, co zwiększa wagę aktualnego monitoringu zdrowotnego.",
+      "keyFacts": [
+        "Chodzi o Bundibugyo Ebola, czyli wariant z aktywnego ogniska w regionie.",
+        "WHO utrzymuje publiczny obraz sytuacji i ostrzega przed niedoszacowaniem."
+      ],
+      "reactions": [
+        "To sygnał dla systemów zdrowia publicznego i podróżnych monitorów ryzyka.",
+        "Wątek może szybko przejść z mediów do komunikatów sanitarnych."
+      ],
+      "whyItMatters": "Niedoszacowanie ogniska eboli oznacza wyższe ryzyko dla regionu i służb medycznych.",
+      "context": "CNN dokłada do tego bieżący przypadek w DRC, co wzmacnia temat jako aktualny, a nie tylko historyczny.",
+      "watchNext": [
+        "Sprawdzić kolejne komunikaty WHO o skali i zasięgu ogniska.",
+        "Obserwować, czy pojawią się dodatkowe przypadki importowane poza DR Kongiem."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: WHO: skala epidemii eboli może być znacznie większa niż oficjalne dane",
+          "url": "https://tvn24.pl/swiat/epidemia-eboli-who-skala-moze-byc-znacznie-wieksza-niz-oficjalne-dane-st9137742"
+        },
+        {
+          "title": "WHO: Ebola outbreak - DRC 2026",
+          "url": "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"
+        }
+      ],
+      "tags": [
+        "ebola",
+        "WHO",
+        "zdrowie",
+        "Afryka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-swiat-cnn-ebola-drc-2026-07-11-0904",
+      "section": "Świat",
+      "title": "CNN podaje nowy przypadek eboli w DR Kongu",
+      "lead": "Amerykański pracownik w DRC uzyskał dodatni wynik.",
+      "whatHappened": "CNN napisało, że amerykański pracownik w Demokratycznej Republice Konga testował dodatnio na ebolę Bundibugyo. W połączeniu z mapą WHO to wzmacnia obraz aktywnego i wrażliwego ogniska.",
+      "keyFacts": [
+        "Chodzi o epidemię Bundibugyo Ebola w DRC.",
+        "WHO utrzymuje osobną stronę sytuacyjną dla tego ogniska."
+      ],
+      "reactions": [
+        "To może uruchomić kolejne ostrzeżenia sanitarne i śledzenie kontaktów.",
+        "Temat jest ważny również dla międzynarodowego ruchu humanitarnego."
+      ],
+      "whyItMatters": "Pojedynczy przypadek u pracownika w regionie pokazuje, że ryzyko nie jest lokalnie zamknięte.",
+      "context": "To najświeższy sygnał z CNN w obszarze zdrowia publicznego i dobrze uzupełnia materiał WHO.",
+      "watchNext": [
+        "Sprawdzić, czy WHO poda szczegóły o źródle zakażenia.",
+        "Obserwować, czy CNN albo WHO potwierdzą kolejne przypadki poza DRC."
+      ],
+      "sources": [
+        {
+          "title": "CNN: US citizen working in DR Congo tests positive for Ebola",
+          "url": "https://edition.cnn.com/2026/07/11/africa/us-citizen-tests-positive-ebola-bundibugyo-drc-hnk-intl"
+        },
+        {
+          "title": "WHO: Ebola outbreak - DRC 2026",
+          "url": "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"
+        }
+      ],
+      "tags": [
+        "ebola",
+        "CNN",
+        "DR Konga",
+        "zdrowie"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-gospodarka-hormuz-bbc-2026-07-11-0904",
+      "section": "Gospodarka",
+      "title": "USA chcą gwarancji dla żeglugi przez Ormuz",
+      "lead": "Rozmowy wokół cieśniny znowu podbijają ryzyko dla ropy i transportu.",
+      "whatHappened": "BBC podaje, że Stany Zjednoczone chcą, aby Iran publicznie zadeklarował, że nie będzie atakował statków w cieśninie Ormuz. To bezpośrednio łączy dyplomację z rynkiem surowców i żeglugą.",
+      "keyFacts": [
+        "BBC opisuje sprawę jako rozmowy prowadzone w momencie napięcia wokół przepływu statków.",
+        "W centrum pozostaje bezpieczeństwo żeglugi i ryzyko dla łańcuchów dostaw."
+      ],
+      "reactions": [
+        "Rynek ropy i frachtu będzie reagował na każdy kolejny komunikat.",
+        "To też test dla tego, czy dyplomacja może ograniczyć eskalację."
+      ],
+      "whyItMatters": "Ormuz pozostaje jednym z najważniejszych punktów wpływu na ceny energii i globalny handel.",
+      "context": "Temat wraca po serii ostrych sygnałów z poprzednich slotów, ale tym razem bardziej w trybie negocjacyjnym niż czysto wojennym.",
+      "watchNext": [
+        "Sprawdzić, czy Iran odpowie publiczną deklaracją.",
+        "Obserwować, jak rynek ropy zareaguje na przebieg rozmów."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US wants Iran to pledge to stop shooting at ships in Strait of Hormuz",
+          "url": "https://www.bbc.co.uk/news/articles/crelyq79x71o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Hormuz",
+        "ropa",
+        "żegluga",
+        "USA"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-swiat-cnn-hormuz-2026-07-11-0904",
+      "section": "Świat",
+      "title": "CNN widzi rozmowy w Omanie wokół Hormuz",
+      "lead": "Irański minister jest w Omanie, gdy ruch statków zwalnia.",
+      "whatHappened": "CNN relacjonuje, że minister spraw zagranicznych Iranu przebywa w Omanie, a ruch statków przez Ormuz spowalnia. To kolejny sygnał, że napięcie wokół cieśniny przeradza się w konkretne rozmowy.",
+      "keyFacts": [
+        "CNN opiera się na swoim live update z 10 lipca.",
+        "Wątek jest bezpośrednio sprzężony z bezpieczeństwem szlaków morskich."
+      ],
+      "reactions": [
+        "To może uspokoić rynek tylko wtedy, gdy pojawią się twarde deklaracje.",
+        "Bez konkretu rozmowy mogą zostać odebrane jako kolejny etap przeciągania liny."
+      ],
+      "whyItMatters": "Ruch statków przez Hormuz przekłada się na energię, ubezpieczenia i koszty handlu.",
+      "context": "To bieżące uzupełnienie tematu BBC i lepszy sygnał, że Ormuz jest teraz realnym punktem negocjacyjnym.",
+      "watchNext": [
+        "Sprawdzić, czy CNN zaktualizuje live story o wynik rozmów.",
+        "Obserwować, czy pojawią się potwierdzenia z Omanu lub Teheranu."
+      ],
+      "sources": [
+        {
+          "title": "CNN: July 10, 2026 — Mediators work to de-escalate US-Iran tensions and revive talks",
+          "url": "https://edition.cnn.com/2026/07/10/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "Hormuz",
+        "Iran",
+        "CNN",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-swiat-hiszpania-pozar-2026-07-11-0904",
+      "section": "Alerty",
+      "title": "Hiszpania walczy z jednym z najgorszych pożarów",
+      "lead": "BBC mówi o co najmniej 12 ofiarach i kolejnych zaginionych.",
+      "whatHappened": "BBC i brytyjskie travel advice potwierdzają, że pożar w rejonie Los Gallardos w Andaluzji stał się jednym z najpoważniejszych tegorocznych epizodów pożarowych w Hiszpanii.",
+      "keyFacts": [
+        "BBC podaje co najmniej 12 ofiar i kolejne osoby zaginione.",
+        "GOV.UK wprost ostrzega przed pożarem i zaleca stosowanie się do lokalnych służb."
+      ],
+      "reactions": [
+        "To mocny sygnał dla turystów i służb ratowniczych.",
+        "Temat może dalej rosnąć wraz z kolejnymi komunikatami o ewakuacjach."
+      ],
+      "whyItMatters": "To jeden z najbardziej dotkliwych letnich alertów w Europie i ważny temat dla podróżnych.",
+      "context": "W poprzednich slotach pożary już były obecne, ale dzisiejsza skala ofiar podnosi ich rangę.",
+      "watchNext": [
+        "Sprawdzić kolejne raporty o ewakuacjach i liczbie ofiar.",
+        "Obserwować, czy GOV.UK lub lokalne służby zaostrzą ostrzeżenia."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Spain battles to contain one of its deadliest wildfires as at least 12 killed",
+          "url": "https://www.bbc.co.uk/news/articles/c1wyv383j2xo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "GOV.UK: Spain travel advice",
+          "url": "https://www.gov.uk/foreign-travel-advice/spain"
+        }
+      ],
+      "tags": [
+        "Hiszpania",
+        "pożar",
+        "alert",
+        "turystyka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-technologia-meta-ai-2026-07-11-0904",
+      "section": "Technologia",
+      "title": "Meta wycofuje nową funkcję obrazową AI",
+      "lead": "BBC opisuje wycofanie funkcji po fali krytyki.",
+      "whatHappened": "BBC podało, że Meta wycofała nową funkcję obrazową AI po dniach negatywnej reakcji użytkowników i komentatorów.",
+      "keyFacts": [
+        "Wątek dotyczy produktu, a nie tylko wizerunkowego sporu.",
+        "To sygnał, że Meta nadal testuje granice odbioru nowych funkcji AI."
+      ],
+      "reactions": [
+        "To pokazuje, że szybkie wdrażanie funkcji AI nadal niesie ryzyko backlashu.",
+        "Temat może wpływać na dalsze decyzje produktowe Meta i konkurencji."
+      ],
+      "whyItMatters": "Takie cofnięcie funkcji mówi sporo o tym, jak firmy uczą się na reakcjach użytkowników do AI.",
+      "context": "To jedyny dziś naprawdę mocny tech lead, więc dobrze uzupełnia feed poza geopolityką i pogodą.",
+      "watchNext": [
+        "Sprawdzić, czy Meta wyda bardziej szczegółowe wyjaśnienie.",
+        "Obserwować, czy podobne firmy zmienią własne plany wdrożeniowe."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Meta pulls new AI image feature after days of backlash",
+          "url": "https://www.bbc.co.uk/news/articles/c2dy6e8klw0o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Meta (@Meta)",
+          "url": "https://x.com/Meta?lang=en"
+        }
+      ],
+      "tags": [
+        "Meta",
+        "AI",
+        "technologia",
+        "produkty"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
