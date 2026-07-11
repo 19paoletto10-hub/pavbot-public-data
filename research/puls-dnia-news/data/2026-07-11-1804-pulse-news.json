@@ -1,0 +1,399 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-11",
+  "runTime": "18:04",
+  "status": "Material update",
+  "headline": "Burze nad Polską, Wołyń i presja wokół Hormuz",
+  "summary": "Wieczorny puls dnia przesuwa się ku burzom i napięciom politycznym w Polsce, a w świecie dominuje Hormuz, pożary w Hiszpanii, tajfun Bavi oraz nowe sygnały z USA, mieszkalnictwa i chińskiego space-tech.",
+  "checkedSources": [
+    {"title": "TVN24: Wiadomości z kraju i ze świata", "url": "https://tvn24.pl/"},
+    {"title": "TVN24: Najnowsze wiadomości", "url": "https://tvn24.pl/najnowsze"},
+    {"title": "TVN24: Wiadomości z kraju", "url": "https://tvn24.pl/polska"},
+    {"title": "TVN24: Wiadomości ze świata", "url": "https://tvn24.pl/swiat"},
+    {"title": "TVN24: Biznes", "url": "https://tvn24.pl/biznes"},
+    {"title": "TVN24: Meteo", "url": "https://tvn24.pl/tvnmeteo"},
+    {"title": "BBC News World RSS", "url": "https://feeds.bbci.co.uk/news/world/rss.xml"},
+    {"title": "CNN World", "url": "https://edition.cnn.com/world"},
+    {"title": "IMGW prognoza tygodniowa", "url": "https://imgw.pl/prognoza-pogody-na-tydzien-06-07-12-07-2026/"},
+    {"title": "WHO Ebola outbreak - DRC 2026", "url": "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"},
+    {"title": "GOV.UK Spain travel advice", "url": "https://www.gov.uk/foreign-travel-advice/spain"},
+    {"title": "House Financial Services Committee", "url": "https://financialservices.house.gov/news/documentsingle.aspx?DocumentID=411189"},
+    {"title": "Xinhua rocket recovery report", "url": "https://www.xinhuanet.com/english/20260710/d8e179b93294408dacb7d1d689bdd733/c.html"},
+    {"title": "State Council China typhoon response", "url": "https://english.www.gov.cn/news/202607/11/content_WS6a51e001c6d00ca5f9a0c21f.html"}
+  ],
+  "items": [
+    {
+      "id": "alerts-storms-2026-07-11-1804",
+      "section": "Alerty",
+      "title": "Burze nad Polską",
+      "lead": "Po południu grzmi w części kraju, a IMGW utrzymuje ostrzeżenia.",
+      "whatHappened": "TVN24 pokazuje aktywną strefę burzową nad Polską. Miejscami występuje grad, silny wiatr i intensywny deszcz.",
+      "keyFacts": [
+        "IMGW utrzymuje ostrzeżenia pierwszego stopnia w kilku województwach.",
+        "Radar TVN Meteo pokazuje wędrujące wyładowania nad częścią kraju."
+      ],
+      "reactions": [
+        "Synoptycy proszą o śledzenie komunikatów i radarów.",
+        "Lokalne aktywności plenerowe i dojazdy mogą się opóźniać."
+      ],
+      "whyItMatters": "Burze mogą szybko zmieniać warunki na drogach i w miastach, a także powodować punktowe awarie.",
+      "context": "Front atmosferyczny utrzymuje niestabilną pogodę nad Polską po serii wcześniejszych alertów.",
+      "watchNext": [
+        "Następna aktualizacja IMGW i lokalnych ostrzeżeń RCB.",
+        "Ewentualne raporty o zalaniach, powalonych drzewach i przerwach w dostawach prądu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Burze. Ostrzeżenia IMGW - sobota 11.07. Tu spodziewane są wyładowania",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/burze-ostrzezenia-imgw-sobota-11-07-tu-spodziewane-sa-wyladowania-st9137764"
+        },
+        {
+          "title": "IMGW: Prognoza pogody na tydzień 06.07 – 12.07.2026",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-06-07-12-07-2026/"
+        }
+      ],
+      "tags": ["pogoda", "burze", "IMGW", "alert"],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-kaczynski-gwardia-2026-07-11-1804",
+      "section": "Polityka",
+      "title": "Kaczyński o \"gwardii obywatelskiej\"",
+      "lead": "Po miesięcznicy smoleńskiej prezes PiS ponownie zaostrzył język wobec policji.",
+      "whatHappened": "TVN24 opisuje reakcje na słowa Jarosława Kaczyńskiego, który nazwał policję \"bojówką partyjną\" i mówił o własnej \"gwardii obywatelskiej\".",
+      "keyFacts": [
+        "W studiu TVN24 politycy KO komentują wypowiedź jako oderwaną od rzeczywistości.",
+        "Spór dotyczy już nie tylko miesięcznicy, ale też relacji PiS z instytucjami państwa."
+      ],
+      "reactions": [
+        "Patryk Jaskulski ocenił, że prezes PiS nie ma szacunku do najważniejszych organów państwa.",
+        "Temat może dalej podbijać napięcie wokół policji i demonstracji pamięci smoleńskiej."
+      ],
+      "whyItMatters": "Tego typu język podkręca polaryzację i może wpływać na odbiór służb publicznych.",
+      "context": "To kolejny etap wieloletniego sporu wokół miesięcznicy smoleńskiej i polityki pamięci.",
+      "watchNext": [
+        "Czy PiS odetnie się od tej retoryki, czy ją wzmocni.",
+        "Czy policja lub rząd zareagują publicznie na kolejne wystąpienia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Kaczyński o \"gwardii obywatelskiej\". Jaskulski",
+          "url": "https://tvn24.pl/plus/programy/bezkitu/kaczynski-o-gwardii-obywatelskiej-politycy-komentuja-slowa-prezesa-pis-podczas-miesiecznicy-smolenskiej-vc9137364"
+        }
+      ],
+      "tags": ["polityka", "PiS", "Kaczyński", "policja"],
+      "priority": "high"
+    },
+    {
+      "id": "polska-kosiniak-wolyn-2026-07-11-1804",
+      "section": "Polska",
+      "title": "Kosiniak-Kamysz na Wołyniu",
+      "lead": "Szef MON jedzie oddać hołd ofiarom jako przedstawiciel państwa polskiego.",
+      "whatHappened": "Władysław Kosiniak-Kamysz zapowiedział udział w uroczystościach wołyńskich i podkreślił państwowy charakter swojej obecności.",
+      "keyFacts": [
+        "TVN24 łączy tę wypowiedź z obchodami 83. rocznicy zbrodni wołyńskiej.",
+        "Temat pozostaje ważny dla relacji polsko-ukraińskich i krajowej polityki pamięci."
+      ],
+      "reactions": [
+        "Wątek ma charakter oficjalny, bez bezpośredniego konfliktu dyplomatycznego.",
+        "Słowa ministra wzmacniają przekaz o pamięci państwowej, nie wyłącznie partyjnej."
+      ],
+      "whyItMatters": "Wołyń nadal ustawia część debaty o pamięci historycznej i wsparciu dla Ukrainy.",
+      "context": "Rocznica rzezi wołyńskiej jest co roku jednym z najbardziej wrażliwych momentów w polskiej polityce wschodniej.",
+      "watchNext": [
+        "Jak przebiegną uroczystości i czy pojawią się wspólne polsko-ukraińskie akcenty.",
+        "Czy MON lub MSZ opublikują dodatkowe komunikaty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Kosiniak-Kamysz: przybywam na Wołyń jako przedstawiciel państwa polskiego",
+          "url": "https://tvn24.pl/polska/ukraina-szef-mon-wladyslaw-kosiniak-kamysz-na-wolyniu-odda-hold-ofiarom-zbrodni-wolynskiej-st9137743"
+        }
+      ],
+      "tags": ["Polska", "Wołyń", "MON", "pamięć"],
+      "priority": "high"
+    },
+    {
+      "id": "polska-nawrocki-wolyn-2026-07-11-1804",
+      "section": "Polska",
+      "title": "Nawrocki o pamięci Wołynia",
+      "lead": "Prezydent podkreślił, że pamięć o ofiarach nie może zniknąć z debaty.",
+      "whatHappened": "Karol Nawrocki w Radrużu powiedział, że nie zgadzamy się na zapomnienie ofiar rzezi wołyńskiej i przypomniał także o sprawiedliwych Ukraińcach.",
+      "keyFacts": [
+        "Wystąpienie padło podczas 83. rocznicy rzezi wołyńskiej.",
+        "Nawrocki wskazał, że pamięć o wydarzeniach powinna zostać utrzymana w przestrzeni publicznej."
+      ],
+      "reactions": [
+        "Zbigniew Gluza komentował przemówienie w TVN24 jako ważny sygnał pamięci historycznej.",
+        "Wątek wzmacnia rocznicową oś debaty polsko-ukraińskiej."
+      ],
+      "whyItMatters": "Takie wystąpienia wpływają na ton rozmów o historii i relacjach Warszawa-Kijów.",
+      "context": "Wołyń pozostaje jednym z najbardziej obciążonych emocjonalnie tematów w polskiej polityce pamięci.",
+      "watchNext": [
+        "Czy prezydent i rząd skoordynują kolejne komunikaty rocznicowe.",
+        "Jak zareagują strona ukraińska i media po obu stronach granicy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Karol Nawrocki: nie zgadzamy się na to, aby zapomnieć",
+          "url": "https://tvn24.pl/polska/rocznica-rzezi-wolynskiej-karol-nawrocki-w-radruzu-nie-zgadzamy-sie-na-to-aby-zapomniec-st9138223"
+        }
+      ],
+      "tags": ["Polska", "Wołyń", "prezydent", "historia"],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-lublin-siekiera-2026-07-11-1804",
+      "section": "Bezpieczeństwo",
+      "title": "Mężczyzna z siekierą ruszył na policjantów",
+      "lead": "W Lublinie 38-latek po groźbach wobec matki zabarykadował się i zaatakował policję.",
+      "whatHappened": "Po zgłoszeniu przemocy domowej mężczyzna zabarykadował się w mieszkaniu, a potem ruszył na interweniujących policjantów z siekierą.",
+      "keyFacts": [
+        "Do zdarzenia doszło przy ulicy Mełgiewskiej w Lublinie.",
+        "Na miejscu działały jednostki kontrterrorystyczne i policja."
+      ],
+      "reactions": [
+        "Sprawa wygląda na eskalację przemocy domowej do poziomu bezpośredniego zagrożenia dla funkcjonariuszy.",
+        "Lokalne służby zabezpieczały miejsce zdarzenia i prowadzą czynności wyjaśniające."
+      ],
+      "whyItMatters": "To silny sygnał ryzyka dla służb i kolejny przykład, jak szybka eskalacja domowych konfliktów staje się sprawą bezpieczeństwa publicznego.",
+      "context": "TVN24 opisuje ten incydent jako osobny, bieżący materiał z Lublina.",
+      "watchNext": [
+        "Komunikaty policji o stanie postępowania.",
+        "Ewentualne informacje o zarzutach i decyzjach sądu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Groził matce śmiercią, potem się zabarykadował. Z siekierą ruszył na policjantów",
+          "url": "https://tvn24.pl/lublin/lublin-38-latek-grozil-matce-z-siekiera-zabarykadowal-sie-w-mieszkaniu-interweniowali-kontrterrorysci-st9137964"
+        }
+      ],
+      "tags": ["bezpieczeństwo", "policja", "Lublin", "przemoc"],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-kaczynski-bosak-2026-07-11-1804",
+      "section": "Polityka",
+      "title": "Kaczyński planuje koalicję z Bosakiem?",
+      "lead": "TVN24 opisuje doniesienia o próbie zbudowania szerszego prawicowego bloku.",
+      "whatHappened": "Radio ZET podało, że Jarosław Kaczyński ma chcieć wciągnąć Krzysztofa Bosaka do szerokiej prawicowej koalicji. Bosak te doniesienia zaprzeczył.",
+      "keyFacts": [
+        "Eksperci w TVN24 uznają, że taki ruch mógłby zaszkodzić Konfederacji.",
+        "Wątek pokazuje, że PiS szuka nowych sojuszy po prawej stronie sceny."
+      ],
+      "reactions": [
+        "Magdalena Kicińska oceniła, że wyborcy Bosaka nie muszą chcieć współpracy z PiS.",
+        "Jacek Kucharczyk mówił, że publiczne potwierdzenie koalicji mogłoby zaszkodzić obu stronom."
+      ],
+      "whyItMatters": "Układ sił po prawej stronie może zmienić strategie kampanijne i koalicyjne na kolejne miesiące.",
+      "context": "To kolejny sygnał, że PiS rozgląda się za szerszym blokiem niż własny obóz.",
+      "watchNext": [
+        "Czy Bosak i inni liderzy Konfederacji odpowiedzą publicznie.",
+        "Czy temat pojawi się w kolejnych komentarzach PiS i TVN24+."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Kaczyński planuje koalicję z Bosakiem? Tak jest",
+          "url": "https://tvn24.pl/plus/programy/tak-jest/jaroslaw-kaczynski-planuje-koalicje-z-krzysztofem-bosakiem-eksperci-komentuja-vc9137349"
+        }
+      ],
+      "tags": ["polityka", "PiS", "Konfederacja", "koalicja"],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-hormuz-2026-07-11-1804",
+      "section": "Świat",
+      "title": "USA chcą gwarancji dla żeglugi w Hormuz",
+      "lead": "Waszyngton naciska na Iran po incydencie z atakiem na statki w cieśninie.",
+      "whatHappened": "BBC i CNN opisują rozmowy i presję USA po sygnałach, że Iran ma zadeklarować brak ataków na statki przepływające przez Hormuz. Wątek przenosi się przez Oman.",
+      "keyFacts": [
+        "BBC pisze o żądaniu, by Iran przestał strzelać do jednostek w cieśninie.",
+        "CNN prowadzi ten temat jako live news o wojnie i napięciu USA-Iran."
+      ],
+      "reactions": [
+        "Dyplomacja i odstraszanie idą równolegle, bez jasnego finału.",
+        "Rynki energii i żegluga przez Zatokę Perską pozostają wrażliwe."
+      ],
+      "whyItMatters": "Hormuz jest jednym z najważniejszych punktów światowej logistyki energii i każda eskalacja ma globalny efekt cenowy.",
+      "context": "To kontynuacja szerokiego kryzysu wokół Iranu i swobody żeglugi po wcześniejszych starciach.",
+      "watchNext": [
+        "Czy po rozmowach w Omanie pojawi się wspólny komunikat.",
+        "Czy flotylla lub ubezpieczyciele zareagują na nowe ryzyko."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US wants Iran to pledge to stop shooting at ships in Strait of Hormuz",
+          "url": "https://www.bbc.co.uk/news/articles/crelyq79x71o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN World live news: Iran war / Trump",
+          "url": "https://edition.cnn.com/2026/07/11/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": ["świat", "Iran", "Hormuz", "żegluga"],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-hiszpania-pozar-2026-07-11-1804",
+      "section": "Świat",
+      "title": "Hiszpania walczy z jednym z najgroźniejszych pożarów",
+      "lead": "BBC podaje co najmniej 12 ofiar, a kolejne osoby są zaginione.",
+      "whatHappened": "Pożar w Hiszpanii pozostaje jednym z najcięższych tego lata. BBC pisze o ofiarach i zaginionych, a brytyjskie ostrzeżenia podróżne przypominają, że sytuacja może się zmieniać bardzo szybko.",
+      "keyFacts": [
+        "BBC wskazuje co najmniej 12 zabitych i 23 zaginione osoby.",
+        "GOV.UK wprost zaleca stosowanie się do lokalnych służb i unikanie strefy pożaru."
+      ],
+      "reactions": [
+        "W turystyce i transporcie rośnie znaczenie lokalnych decyzji o ewakuacji i zamknięciach dróg.",
+        "Sytuacja wpisuje się w szerszy letni wzrost ryzyka pożarowego w Europie."
+      ],
+      "whyItMatters": "Pożary oznaczają zagrożenie dla ludzi, ruchu turystycznego i infrastruktury w popularnym regionie wakacyjnym.",
+      "context": "To kolejny sygnał, że letnie fale upałów coraz częściej przekładają się na kryzysy bezpieczeństwa.",
+      "watchNext": [
+        "Aktualizacje lokalnych władz Andaluzji.",
+        "Ewentualna zmiana ostrzeżeń dla podróżnych i ubezpieczycieli."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Spain battles to contain one of its deadliest wildfires as at least 12 killed",
+          "url": "https://www.bbc.co.uk/news/articles/c1wyv383j2xo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "GOV.UK: Spain travel advice",
+          "url": "https://www.gov.uk/foreign-travel-advice/spain"
+        }
+      ],
+      "tags": ["świat", "Hiszpania", "pożar", "bezpieczeństwo"],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-typhoon-bavi-2026-07-11-1804",
+      "section": "Świat",
+      "title": "Chiny szykują się na tajfun Bavi",
+      "lead": "Bavi zbliża się do wschodnich Chin, a ewakuacje idą w setki tysięcy osób.",
+      "whatHappened": "BBC i oficjalne źródła chińskie opisują podnoszenie gotowości w Zhejiang i okolicach. Tajfun ma wejść na ląd w rejonie wybrzeża i przynieść silny wiatr oraz ulewne deszcze.",
+      "keyFacts": [
+        "BBC pisało o ewakuacji setek tysięcy ludzi z wschodniego Zhejiang.",
+        "Xinhua i State Council potwierdzają podwyższone poziomy reagowania i akcję prewencyjną."
+      ],
+      "reactions": [
+        "Lokalne władze zamykają lub ograniczają część ruchu i zabezpieczają strefy nadmorskie.",
+        "Chińskie służby przerzucają akcent z ostrzeżeń na aktywną ochronę ludności i infrastruktury."
+      ],
+      "whyItMatters": "Silny tajfun w jednym z głównych regionów przemysłowych i portowych może uderzyć w logistykę i bezpieczeństwo mieszkańców.",
+      "context": "To druga fala zagrożenia pogodowego w Chinach w bardzo krótkim odstępie czasu.",
+      "watchNext": [
+        "Miejsce i godzina lądowania Bavi.",
+        "Skala deszczu, podtopień i ewentualnych przerw w transporcie."
+      ],
+      "sources": [
+        {
+          "title": "BBC: China braced for second typhoon in a week as Bavi approaches landfall",
+          "url": "https://www.bbc.co.uk/news/articles/cdxd3wkp2rzo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Xinhua: China ramps up disaster prevention efforts as Typhoon Bavi nears east coast",
+          "url": "https://www.xinhuanet.com/english/20260711/c49a5f2b4a864ce6b9d3ec7437a4e7c0/c.html"
+        },
+        {
+          "title": "State Council: China raises emergency response for Typhoon Bavi",
+          "url": "https://english.www.gov.cn/news/202607/11/content_WS6a51e001c6d00ca5f9a0c21f.html"
+        }
+      ],
+      "tags": ["świat", "Chiny", "tajfun", "alert"],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-nyt-subpoena-2026-07-11-1804",
+      "section": "Świat",
+      "title": "Administracja Trumpa wzywa dziennikarzy NYT",
+      "lead": "Po materiałach o Air Force One pojawiły się wezwania sądowe wobec reporterów.",
+      "whatHappened": "BBC opisuje, że dziennikarze New York Times otrzymali legal summons po publikacjach o rzekomych problemach bezpieczeństwa związanych z nowym samolotem prezydenckim.",
+      "keyFacts": [
+        "Temat dotyczy raportowania o Air Force One i dostępie do informacji o bezpieczeństwie.",
+        "Wezwania sądowe wywołują pytania o granice nacisku na redakcje."
+      ],
+      "reactions": [
+        "Sprawa budzi obawy o wolność prasy i możliwy efekt mrożący.",
+        "Jeśli konflikt się zaostrzy, może trafić na ścieżkę sądową i polityczną."
+      ],
+      "whyItMatters": "To ważny test dla relacji między administracją a niezależnymi mediami w USA.",
+      "context": "Wątek wpisuje się w szersze napięcia wokół bezpieczeństwa lotu prezydenckiego i kontroli narracji.",
+      "watchNext": [
+        "Odpowiedź New York Times.",
+        "Czy administracja opublikuje kolejne uzasadnienia lub dokumenty."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Trump administration subpoenas New York Times journalists over Air Force One reporting",
+          "url": "https://www.bbc.co.uk/news/articles/cpd3g8q51g7o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": ["świat", "USA", "media", "Trump"],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-housing-law-2026-07-11-1804",
+      "section": "Gospodarka",
+      "title": "Ustawa mieszkaniowa w USA weszła w życie",
+      "lead": "Kongres uruchomił pakiet, który ma zwiększać podaż mieszkań i obniżać koszty.",
+      "whatHappened": "House Financial Services Committee ogłosił, że 21st Century ROAD to Housing Act stał się prawem. Pakiet ma poprawiać finansowanie mieszkalnictwa i zwiększać dostępność lokali.",
+      "keyFacts": [
+        "Komunikat mówi o szerokim, bipartisanowym pakiecie mieszkaniowym.",
+        "Celem jest większa podaż mieszkań, niższe koszty kredytu i najmu."
+      ],
+      "reactions": [
+        "Komisja finansowa Izby Reprezentantów przedstawia ustawę jako przełomowy kompromis.",
+        "Rynek mieszkaniowy w USA dostaje nowy punkt odniesienia dla polityki cen i podaży."
+      ],
+      "whyItMatters": "Mieszkalnictwo pozostaje jednym z największych problemów kosztowych w USA, więc każda zmiana prawa ma szeroki efekt gospodarczy.",
+      "context": "To jedna z większych federalnych interwencji mieszkaniowych ostatnich miesięcy.",
+      "watchNext": [
+        "Czy Biały Dom i Kongres opublikują dalsze szczegóły wdrożenia.",
+        "Jak rynek kredytowy i branża deweloperska ocenią nowe przepisy."
+      ],
+      "sources": [
+        {
+          "title": "House Financial Services Committee: 21st Century ROAD to Housing Act Becomes Law",
+          "url": "https://financialservices.house.gov/news/documentsingle.aspx?DocumentID=411189"
+        }
+      ],
+      "tags": ["gospodarka", "mieszkalnictwo", "USA", "prawo"],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-china-rocket-2026-07-11-1804",
+      "section": "Technologia",
+      "title": "Chiny osiągnęły przełom w odzysku rakiet",
+      "lead": "Long March-10B zaliczył pierwszy kontrolowany odzysk pierwszego stopnia.",
+      "whatHappened": "Xinhua podała, że Chiny osiągnęły pierwszy sukces w kontrolowanym odzysku pierwszego stopnia rakiety nośnej. CNN opisała to jako przełom w technologii rakiet wielokrotnego użytku.",
+      "keyFacts": [
+        "To pierwszy kontrolowany odzysk pierwszego stopnia w chińskim programie tego typu.",
+        "Misja Long March-10B zakończyła się też wyniesieniem ładunku na docelową orbitę."
+      ],
+      "reactions": [
+        "Sygnał wzmacnia wyścig technologiczny z USA w segmencie reusability.",
+        "Przełom może skrócić drogę Chin do tańszych i częstszych startów."
+      ],
+      "whyItMatters": "Rakiety wielokrotnego użytku są kluczowe dla obniżania kosztów lotów kosmicznych i zwiększania tempa misji.",
+      "context": "To kolejny etap szybkiego rozwoju chińskiego sektora kosmicznego i komercyjnych startów.",
+      "watchNext": [
+        "Czy pojawią się oficjalne dane o dalszych testach i harmonogramie wdrożeń.",
+        "Jak na test zareagują konkurenci w USA i prywatni operatorzy satelitarni."
+      ],
+      "sources": [
+        {
+          "title": "Xinhua: China achieves first-ever controlled rocket recovery in Long March-10B maiden flight",
+          "url": "https://www.xinhuanet.com/english/20260710/d8e179b93294408dacb7d1d689bdd733/c.html"
+        },
+        {
+          "title": "CNN: China reports reusable rocket breakthrough as it vies to catch up with the US",
+          "url": "https://edition.cnn.com/2026/07/10/china/china-reusable-rockets-test-breakthrough-intl-hnk"
+        }
+      ],
+      "tags": ["technologia", "Chiny", "rakiety", "space"],
+      "priority": "medium"
+    }
+  ]
+}

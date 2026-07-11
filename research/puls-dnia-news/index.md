@@ -81,6 +81,13 @@ Wołyń, Kaczyński and the Lubelszczyzna funnel cloud, while the world feed
 shifted from generic Hormuz tension to explicit Oman diplomacy, kept Spain,
 Ebola and Bavi high, and added fresh CNN material on Ukraine and Mexico.
 
+The 2026-07-11 18:04 slot moved the domestic mix toward active storms,
+Kaczyński's "gwardia obywatelska", Wołyń, the Lublin axe incident and the
+Kaczyński-Bosak coalition signal, while the world feed stayed anchored in
+Hormuz, Spain fires, Typhoon Bavi and the NYT subpoena story. The economic
+and tech layer now adds the US housing law and China's first controlled
+rocket recovery.
+
 ## Data Shape
 
 The native iOS feed expects:
