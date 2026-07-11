@@ -1,8 +1,12 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-10
+Last updated: 2026-07-11
 
 ## Current Understanding
+
+Poranny run z 2026-07-11 przesuwa temat z samego rollout'u modeli do trzech nowych frontów: Apple pozywa OpenAI o tajemnice handlowe związane z hardware, OpenAI publikuje preprint przypisujący GPT-5.6 Sol Ultra dowód cycle double cover, a Microsoft i FL Studio pokazują, że AI wchodzi już w sam proces bezpieczeństwa i kreatywny workflow. To ważne, bo sygnał przestaje być wyłącznie "kto ma lepszy model" i coraz częściej staje się "kto kontroluje IP, weryfikację i operacyjną integrację".
+
+Równolegle Meta dostaje podwójne ciśnienie: z jednej strony buduje 1GW AI data center w Albercie, z drugiej Komisja Europejska zarzuca Facebookowi i Instagramowi addictive design pod DSA. SK Hynix potwierdza memory supercycle na Wall Street, a Product Hunt i Hacker News nadal wyglądają na agent-native, nie tylko model-native. To razem sugeruje, że najbliższe tygodnie będą bardziej o infrastrukturze, regulacjach i dowodzeniu wartości niż o kolejnym pojedynczym demo.
 
 Po wieczornym refreshu z 2026-07-10 główna nowa oś przesuwa się z samego release'u modeli do warstwy pracy, głosu i monetyzacji: OpenAI łączy ChatGPT Work, GPT-Live, Codex i desktop browser w jeden surface operacyjny, Meta otwiera public preview Meta Model API dla Muse Spark 1.1, Anthropic dokłada reflection i publiczne hard questions do Claude UX, a Deutsche Telekom pokazuje AI-native telco bez nowej aplikacji.
 
@@ -156,9 +160,15 @@ transparentność środowiskową AI.
   szum?
 - Jak zastąpić bezpośredni sygnał z Reddita, jeśli publiczny fetch Reddita
   regularnie nie działa bez logowania?
+- Jak odróżniać model-assisted math claims od rzeczywiście zweryfikowanych przełomów, zanim pojawi się peer review?
 
 ## Watch Items
 
+- Apple vs OpenAI hardware litigation: pozew dotyczy nie tylko pracowników, ale także przyszłego hardware stacku OpenAI; monitoruj complaint, odpowiedź firmy i timing device launch.
+- OpenAI math claim verification: GPT-5.6 Sol Ultra preprint o cycle double cover wymaga niezależnej weryfikacji i jasności, ile w tym było ludzkiej kuracji.
+- Meta design and infrastructure split: Alberta data center i zarzuty DSA pokazują, że Meta jest jednocześnie infra story i regulatory story.
+- Windows AI security pipeline: MDASH i wyższa liczba poprawek mogą zmienić patch cadence u enterprise.
+- Creative agent tools: FL Studio i Product Hunt pokazują, że assistant-engineer UX wchodzi do pro software poza tekstem i kodem.
 - Consumer privacy defaults: Google Search Services History and saved media
   make AI training opt-out part of the core product flow; monitor backlash,
   legal scrutiny and whether other platforms copy the pattern.
@@ -169,8 +179,8 @@ transparentność środowiskową AI.
   ransomware; watch for repeat incidents, defensive guidance and CISA-style
   follow-ups.
 - Memory supercycle: SK Hynix's U.S. listing is a concrete test of whether AI
-  memory demand remains hot; watch pricing, demand and whether the cycle
-  broadens beyond a few hyperscalers.
+  memory demand remains hot; the strong debut confirms appetite, so watch
+  pricing, demand and whether the cycle broadens beyond a few hyperscalers.
 - AI transparency in ads: Google is now labeling AI-generated ads in a visible
   consumer UI; watch whether other ad platforms copy the disclosure pattern.
 - AI climate externalities: Microsoft's latest sustainability report gives a
@@ -457,6 +467,7 @@ transparentność środowiskową AI.
 
 ## Recent Reports
 
+- [2026-07-11](runs/2026-07-11.md)
 - [2026-06-27](runs/2026-06-27.md)
 - [2026-06-26](runs/2026-06-26.md)
 - [2026-06-25](runs/2026-06-25.md)

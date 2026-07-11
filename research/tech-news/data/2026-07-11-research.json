@@ -1,0 +1,359 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-11",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run przesuwa środek ciężkości z samego rollout'u GPT-5.6 do trzech nowych frontów: Apple pozywa OpenAI o tajemnice handlowe związane z hardware, OpenAI publikuje preprint przypisujący GPT-5.6 Sol Ultra dowód cycle double cover, a społeczność na Hacker News już reaguje sceptycznie na ilość prompt scaffolding i potrzebę niezależnej weryfikacji. To ważny sygnał, bo pokazuje, że frontier AI coraz częściej wychodzi poza kategorię \"kolejny model\" i wchodzi w spór o IP, naukę oraz dowodzenie wartości poza benchmarkami.",
+    "Równolegle Meta dostaje podwójne ciśnienie: z jednej strony buduje 1GW AI-optimized data center w Albercie, z drugiej Komisja Europejska zarzuca Facebookowi i Instagramowi addictive design pod DSA. Microsoft z kolei opisuje patchowanie Windows jako wyścig z AI-powered discovery, SK Hynix potwierdza memory supercycle na Wall Street, a FL Studio 2026 pokazuje, że agentic UX wchodzi do muzycznego workflow. Product Hunt i HN nadal wyglądają bardzo \"agent-native\", nie tylko model-native."
+  ],
+  "summaryBullets": [
+    "Regulacje: Apple pozywa OpenAI o tajemnice handlowe związane z hardware",
+    "AI: OpenAI twierdzi, że GPT-5.6 Sol Ultra znalazł dowód cycle double cover",
+    "Infrastruktura: Meta buduje pierwszy kanadyjski AI data center"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-11-0-apple-pozywa-openai-o-tajemnice-handlowe-zwiazane-z-hardware-e34367f03e",
+      "section": "Regulacje",
+      "title": "Apple pozywa OpenAI o tajemnice handlowe związane z hardware",
+      "standfirst": "Apple złożyło pozew przeciw OpenAI, io Products i dwóm byłym pracownikom Apple, twierdząc, że wykorzystano tajemnice handlowe związane z hardware AI.",
+      "whatHappened": "Pozew w Kalifornii zarzuca OpenAI zachęcanie rekrutowanych pracowników Apple do dzielenia się poufnymi informacjami, a jeden z byłych inżynierów miał wykorzystywać błąd uwierzytelniania i pobierać pliki z sieci Apple.",
+      "whyItMatters": "To zamienia relację partnerstwa w spór o własność intelektualną i może skomplikować hardware ambitions OpenAI zanim pierwszy device trafi na rynek.",
+      "deeperAnalysis": [
+        "Apple nie atakuje tu wyłącznie dwóch osób, tylko samą narrację o budowie nowej kategorii urządzeń AI. W skardze pojawia się teza, że hardware OpenAI i io Products miał korzystać z wiedzy o supplierach, prototypach i projektach Apple, czyli z dokładnie tego typu przewag, które w consumer hardware decydują o przewadze czasowej i jakości wykonania.",
+        "W praktyce to sprawdza, jak płynna może być migracja talentu między incumbent hardware firmą a frontier labem, który chce wejść w fizyczny produkt. Jeżeli sprawa przejdzie przez wstępne ruchy procesowe, będzie to mieć znaczenie nie tylko dla OpenAI, ale też dla tego, jak przyszłe rekrutacje, interviewi i NDA będą wyglądały w całym segmencie AI hardware."
+      ],
+      "contextPoints": [
+        "Co się stało: Apple oskarżyło OpenAI o trade secret misappropriation i breach of contract.",
+        "Dlaczego ważne: Spór dotyczy nie tylko pracowników, ale przyszłego device stacku OpenAI.",
+        "Na co patrzeć dalej: odpowiedź OpenAI, dalszy bieg pozwu i to, czy consumer hardware timeline zostanie opóźniony."
+      ],
+      "sources": [
+        {
+          "title": "AP News",
+          "url": "https://apnews.com/article/6fff8833f5889d86406b89a02dd8fb16"
+        },
+        {
+          "title": "Complaint PDF mirror",
+          "url": "https://daringfireball.net/misc/2026/06/Apple_Inc._v._Chang_Liu_et_al.pdf"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Apple",
+        "OpenAI",
+        "lawsuit",
+        "hardware",
+        "trade secrets"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-11-1-openai-twierdzi-ze-gpt-5-6-sol-ultra-znalazl-dowod-cycle-double-cover-87ab64cfee",
+      "section": "AI",
+      "title": "OpenAI twierdzi, że GPT-5.6 Sol Ultra znalazł dowód cycle double cover",
+      "standfirst": "OpenAI opublikowało preprint przypisany GPT-5.6 Sol Ultra, który twierdzi, że rozwiązuje cycle double cover conjecture.",
+      "whatHappened": "Trzystronicowy PDF na CDN OpenAI opisuje dowód hipotezy o pokryciu każdej krawędzi dwukrotnie przez cykle w każdym skończonym mostowym grafie, a HN od razu zaczęło dyskusję o prompt scaffolding i weryfikacji.",
+      "whyItMatters": "Jeśli claim się obroni, będzie to mocny sygnał, że frontier models wchodzą w formal math research; jeśli nie, pokaże, jak duża część breakthrough zależy od ludzkiej kuracji i sposobu promptowania.",
+      "deeperAnalysis": [
+        "Najciekawsze jest to, że OpenAI nie pokazuje już tylko modelu odpowiadającego na pytania, ale model pracujący jak narzędzie do researchu matematycznego. Sama publikacja promptu i preprintu sugeruje workflow, w którym model ma wykonywać długie, strukturalne zadanie, a nie jedynie generować krótką odpowiedź.",
+        "Ale społeczna reakcja od razu stawia granicę między claimem a verified result. HN komentuje nie tylko samą tezę, lecz także to, ile w tym jest ręcznej instrukcji i ile naprawdę wynika z modelu. To ważny sygnał dla całej branży: przy frontier AI coraz częściej liczy się nie tylko to, czy model coś wygenerował, ale kto i jak to zweryfikował."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI opublikowało preprint przypisany GPT-5.6 Sol Ultra.",
+        "Dlaczego ważne: To test, czy modele mogą przechodzić z benchmarków do formalnej matematyki.",
+        "Na co patrzeć dalej: niezależna weryfikacja, komentarze matematyków i ewentualne doprecyzowanie roli człowieka w proof pipeline."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI PDF",
+          "url": "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf"
+        },
+        {
+          "title": "Hacker News thread",
+          "url": "https://news.ycombinator.com/item?id=48863490"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "GPT-5.6",
+        "mathematics",
+        "proof",
+        "cycle double cover"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-11-2-meta-buduje-pierwszy-kanadyjski-ai-data-center-19d11e4d45",
+      "section": "Infrastruktura",
+      "title": "Meta buduje pierwszy kanadyjski AI data center",
+      "standfirst": "Meta ogłosiła budowę 1GW AI-optimized data center w Albercie, swojego pierwszego w Kanadzie i największego poza USA.",
+      "whatHappened": "Firma mówi o inwestycji przekraczającej 13 mld CAD, o tysiącach miejsc pracy i o własnych inwestycjach w infrastrukturę lokalną; AP dodaje, że projekt będzie wspierany przez gazową elektrownię i chłodzenie closed-loop.",
+      "whyItMatters": "To pokazuje, że AI buildout wchodzi w fazę regionalnej polityki energii, wody i gruntu, a nie tylko abstrakcyjnego capex.",
+      "deeperAnalysis": [
+        "Meta próbuje opisać ten projekt jako inwestycję w core products i AI innovations, ale dla rynku ważniejsze jest to, co dzieje się pod spodem: gdzie znajdzie się moc, jak będzie chłodzone 1GW mocy obliczeniowej i jakie koszty społeczne ponosi otoczenie. Alberta tworzy wprost framework do przyciągania hyperscale compute, co może stać się wzorcem dla innych regionów.",
+        "To także kolejny dowód, że AI infra nie jest już wyłącznie amerykańskim lub kalifornijskim tematem. Gdy duży vendor stawia taką inwestycję poza USA, w praktyce eksportuje nie tylko compute, ale też presję na grid, permitting i lokalną politykę środowiskową. Ten wątek dobrze łączy się z zeszłodniowym sygnałem o emisjach Microsoftu."
+      ],
+      "contextPoints": [
+        "Co się stało: Meta ogłosiła budowę 1GW AI-optimized data center w Sturgeon County.",
+        "Dlaczego ważne: To materialny test, jak hyperscalerzy rozwiązują energię i chłodzenie dla AI.",
+        "Na co patrzeć dalej: harmonogram, lokalna infrastruktura, wpływ na grid i reakcja społeczna."
+      ],
+      "sources": [
+        {
+          "title": "Meta newsroom",
+          "url": "https://about.fb.com/news/2026/07/breaking-ground-on-metas-first-data-center-in-canada/"
+        },
+        {
+          "title": "AP News",
+          "url": "https://apnews.com/article/meta-ai-data-center-canada-922a7d15ab730ec53b934269fc00a0fa"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Meta",
+        "data center",
+        "Canada",
+        "Alberta",
+        "AI infrastructure"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-11-3-ue-zarzuca-meta-addictive-design-w-facebooku-i-instagramie-de479c4f48",
+      "section": "Regulacje",
+      "title": "UE zarzuca Meta addictive design w Facebooku i Instagramie",
+      "standfirst": "Komisja Europejska twierdzi, że Facebook i Instagram naruszają DSA przez addictive design, w tym autoplay i infinite scroll.",
+      "whatHappened": "AP opisuje preliminary findings, według których kontrole dla nastolatków są zbyt łatwe do obejścia, a Meta może zostać obciążona karą do 6% globalnych przychodów.",
+      "whyItMatters": "To przenosi regulacje z poziomu moderacji treści do poziomu domyślnych decyzji produktowych i może wymusić zmianę podstawowego mechanizmu zaangażowania.",
+      "deeperAnalysis": [
+        "To ważny precedens, bo atak nie idzie na pojedynczy post czy moderacyjny fail, tylko na samą architekturę interfejsu. Infinite scroll i autoplay są fundamentem engagement business model; jeśli regulator wymusi ich ograniczenie albo wyłączenie by default, będzie to dotykać nie tylko Meta, ale całej klasy aplikacji społecznościowych.",
+        "Na poziomie politycznym to też sygnał, że DSA coraz bardziej działa jak narzędzie do wymuszania produktów safer by default, a nie tylko jako rama do walki z treściami nielegalnymi. W połączeniu z amerykańskimi pozwami o szkody dla młodych użytkowników pokazuje to, że social platforms wchodzą w okres skumulowanej presji prawnej po obu stronach Atlantyku."
+      ],
+      "contextPoints": [
+        "Co się stało: Komisja Europejska opublikowała preliminary findings wobec Meta.",
+        "Dlaczego ważne: Regulacja uderza w design i defaulty, czyli w core growth mechanics platformy.",
+        "Na co patrzeć dalej: odpowiedź Meta, ostateczna decyzja Komisji i ewentualne zmiany produktu."
+      ],
+      "sources": [
+        {
+          "title": "AP News",
+          "url": "https://apnews.com/article/facebook-instagram-eu-regulators-teens-addictive-b2f0ffd5ffc90721cacef7937e5909d2"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Meta",
+        "EU",
+        "DSA",
+        "addictive design",
+        "Instagram",
+        "Facebook"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-11-4-microsoft-przenosi-patchowanie-windows-do-ery-ai-6cde5a9a5e",
+      "section": "Cyber",
+      "title": "Microsoft przenosi patchowanie Windows do ery AI",
+      "standfirst": "Microsoft pisze wprost, że AI przyspiesza odkrywanie podatności i że Windows security releases będą zawierać więcej poprawek.",
+      "whatHappened": "Windows blog opisuje MDASH, dedykowaną infrastrukturę skanowania i osobne etapy walidacji, a The Verge tłumaczy, że Microsoft będzie używać AI mocniej w procesie security updates.",
+      "whyItMatters": "To sygnał, że AI staje się elementem samego procesu obrony, a nie tylko narzędziem do generowania kodu czy treści.",
+      "deeperAnalysis": [
+        "Najbardziej istotny jest tu nie sam branding AI, ale przyznanie, że tempo odkrywania luk wzrosło na tyle, iż patch cadence musi się zmienić. Microsoft opisuje już nie pojedyncze skany, ale cały pipeline: skanowanie, multi-model debate, proof pipeline i dopiero potem trafienie do engineeringu. To jest de facto industrializacja defensywnego użycia modeli.",
+        "Z perspektywy użytkowników i enterprise to oznacza, że security update process będzie bardziej zmienny i prawdopodobnie bardziej intensywny. Firma mocno podkreśla też, że człowiek ma pozostawać w pętli, ale sam fakt wprowadzania agentic harnesses do Windows sugeruje, że obrona zaczyna gonić atak nie tylko poprzez lepsze narzędzia, lecz przez szybszy rytm pracy."
+      ],
+      "contextPoints": [
+        "Co się stało: Microsoft opisał własny AI-driven vulnerability management pipeline.",
+        "Dlaczego ważne: Aktualizacje bezpieczeństwa mogą stać się częstsze i bardziej złożone operacyjnie.",
+        "Na co patrzeć dalej: liczba poprawek w kolejnych release'ach, niezależna walidacja i reakcja enterprise."
+      ],
+      "sources": [
+        {
+          "title": "Windows blog",
+          "url": "https://blogs.windows.com/windowsexperience/2026/07/09/evolving-windows-vulnerability-management-to-meet-the-speed-of-ai-powered-discovery/"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/tech/963307/microsoft-patch-tuesday-ai-security-updates"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Microsoft",
+        "Windows",
+        "security",
+        "vulnerabilities",
+        "AI",
+        "patching"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-11-5-sk-hynix-debiutuje-w-usa-i-potwierdza-glod-na-pamiec-ai-8654b0ff9d",
+      "section": "Infrastruktura",
+      "title": "SK Hynix debiutuje w USA i potwierdza głód na pamięć AI",
+      "standfirst": "SK Hynix zadebiutował na Wall Street z ofertą o wartości 26,5 mld USD, a ADR-y urosły na starcie o około 13%.",
+      "whatHappened": "AP opisuje największą w historii ofertę amerykańską firmy spoza USA i podkreśla, że inwestorzy wyceniają dziś memory chips jako kluczowy zasób dla AI.",
+      "whyItMatters": "To kolejny twardy sygnał, że HBM i DRAM są osobną warstwą AI supercycle, nie tylko pobocznym komponentem GPU story.",
+      "deeperAnalysis": [
+        "Ten debiut jest ważny dlatego, że przypina metrykę rynku do czegoś bardzo konkretnego: pamięć wysokiej przepustowości i łańcuch dostaw HBM przestają być abstrakcyjnym bottleneckiem, a stają się publicznie wycenianą kategorią inwestycyjną. Jeśli urządzenia i data center mają rosnąć dalej, pamięć będzie równie strategiczna jak chipy logiczne.",
+        "To dobrze domyka też wcześniejszy wątek o kosztach AI. Gdy memory suppliers zaczynają debiutować z takim impetem, widać że inwestorzy nadal wierzą w długą falę popytu. Jednocześnie rośnie ryzyko bubble-like volatility, więc ten temat warto śledzić nie tylko jako biznes, ale jako wskaźnik oczekiwań wobec całego AI stacku."
+      ],
+      "contextPoints": [
+        "Co się stało: SK Hynix wszedł na Nasdaq z rekordową ofertą i mocnym startem notowań.",
+        "Dlaczego ważne: Memory i HBM potwierdzają się jako kluczowy surowiec dla AI.",
+        "Na co patrzeć dalej: cena HBM, kolejne inwestycje capacity i reakcja Micron/Samsung."
+      ],
+      "sources": [
+        {
+          "title": "AP News",
+          "url": "https://apnews.com/article/73f13a85ae00e30bad0540281bbe44f3"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "SK Hynix",
+        "memory",
+        "HBM",
+        "IPO",
+        "AI infrastructure"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-11-6-fl-studio-2026-zamienia-gophera-w-asystenta-produkcji-muzycznej-afedf099f5",
+      "section": "Produkty",
+      "title": "FL Studio 2026 zamienia Gophera w asystenta produkcji muzycznej",
+      "standfirst": "FL Studio 2026 zamienia Gophera z chatowego help desku w assistant engineer, który potrafi wykonać część działań produkcyjnych.",
+      "whatHappened": "Image-Line dodaje przebudowany FLEX, cloud backups i nowe akcje Gophera, a The Verge zwraca uwagę, że asystent potrafi już budować beaty i efekty, choć nadal ma wyraźne ograniczenia.",
+      "whyItMatters": "To sygnał, że agentic UX wychodzi z tekstu i kodu do profesjonalnych narzędzi kreatywnych, gdzie liczy się nie tylko automatyzacja, ale też zaufanie i prywatność sesji.",
+      "deeperAnalysis": [
+        "Najciekawsze jest to, że FL Studio nie sprzedaje Gophera jako magicznego \"AI zrobi wszystko\", tylko jako narzędzie, które wykonuje wąskie, powtarzalne kroki w produkcji muzyki. To bardzo typowy wzorzec dla nowej fali agentów: użytkownik nadal trzyma kierownicę, ale deleguje konkretne zadania, które zabierają czas i energię.",
+        "Ważna jest też deklaracja o prywatności: cloud storage ma być private, encrypted i niewykorzystywany do trenowania AI. W creative software to ma znaczenie większe niż w wielu innych klasach produktów, bo użytkownicy są bardzo wrażliwi na wyciek sesji, sampli i projektów. Jeśli ten wzorzec się przyjmie, podobne \"assistant engineer\" funkcje mogą szybko trafić do innych DAW i narzędzi produkcyjnych."
+      ],
+      "contextPoints": [
+        "Co się stało: FL Studio 2026 dodało Gophera jako działającego asystenta w workflow muzycznym.",
+        "Dlaczego ważne: Agentic AI przechodzi do narzędzi pro audio, nie tylko do pisania i kodowania.",
+        "Na co patrzeć dalej: adopcja wśród producentów, reakcje na privacy defaults i copycaty w innych DAW."
+      ],
+      "sources": [
+        {
+          "title": "Image-Line",
+          "url": "https://www.image-line.com/fl-studio/release/2026"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/tech/963052/fl-studio-2026-music-daw-ai-chatbot"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "FL Studio",
+        "Gopher",
+        "music software",
+        "creative tools",
+        "AI"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Apple kontra OpenAI o hardware",
+      "rationale": "Pozew zamienia partnerstwo w spór o IP i przyszły device stack OpenAI.",
+      "sourcesLabel": "AP News, complaint PDF"
+    },
+    {
+      "priority": "High",
+      "title": "GPT-5.6 i dowód cycle double cover",
+      "rationale": "OpenAI wchodzi z modeli do formal math research i public verification.",
+      "sourcesLabel": "OpenAI PDF, Hacker News"
+    },
+    {
+      "priority": "High",
+      "title": "Meta buduje 1GW w Albercie",
+      "rationale": "AI infra wchodzi w lokalną politykę energii, wody i gridu.",
+      "sourcesLabel": "Meta newsroom, AP News"
+    },
+    {
+      "priority": "High",
+      "title": "UE uderza w addictive design Meta",
+      "rationale": "Regulacje zaczynają wymuszać zmiany domyślnych interfejsów, nie tylko moderacji.",
+      "sourcesLabel": "AP News"
+    },
+    {
+      "priority": "High",
+      "title": "Windows patching przyspiesza przez AI",
+      "rationale": "Microsoft opisuje bezpieczeństwo jako pipeline, który musi gonić AI discovery.",
+      "sourcesLabel": "Microsoft Windows blog, The Verge"
+    },
+    {
+      "priority": "High",
+      "title": "SK Hynix debiutuje w USA",
+      "rationale": "Memory i HBM stają się osobną kategorią inwestycyjną w AI boomie.",
+      "sourcesLabel": "AP News"
+    },
+    {
+      "priority": "Medium",
+      "title": "FL Studio Gopher jako assistant engineer",
+      "rationale": "Agentic UX wychodzi z tekstu i kodu do profesjonalnej produkcji muzyki.",
+      "sourcesLabel": "Image-Line, The Verge"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "AP News: Apple files lawsuit accusing ChatGPT maker OpenAI of stealing trade secrets",
+      "url": "https://apnews.com/article/6fff8833f5889d86406b89a02dd8fb16"
+    },
+    {
+      "title": "Complaint PDF mirror: Apple Inc. v. Chang Liu et al.",
+      "url": "https://daringfireball.net/misc/2026/06/Apple_Inc._v._Chang_Liu_et_al.pdf"
+    },
+    {
+      "title": "OpenAI PDF: a proof of the cycle double cover conjecture",
+      "url": "https://cdn.openai.com/pdf/04d1d1e4-bc75-476a-97cf-49055cd98d31/cdc_proof.pdf"
+    },
+    {
+      "title": "Hacker News thread: GPT-5.6 Sol Ultra produces proof of the Cycle Double Cover Conjecture",
+      "url": "https://news.ycombinator.com/item?id=48863490"
+    },
+    {
+      "title": "Meta newsroom: Breaking Ground on Meta first Data Center in Canada",
+      "url": "https://about.fb.com/news/2026/07/breaking-ground-on-metas-first-data-center-in-canada/"
+    },
+    {
+      "title": "AP News: Meta plans billions for first AI data center in Canada, largest outside US",
+      "url": "https://apnews.com/article/meta-ai-data-center-canada-922a7d15ab730ec53b934269fc00a0fa"
+    },
+    {
+      "title": "AP News: EU accuses Meta of addictive Facebook and Instagram design",
+      "url": "https://apnews.com/article/facebook-instagram-eu-regulators-teens-addictive-b2f0ffd5ffc90721cacef7937e5909d2"
+    },
+    {
+      "title": "Microsoft Windows blog: Evolving Windows vulnerability management to meet the speed of AI-powered discovery",
+      "url": "https://blogs.windows.com/windowsexperience/2026/07/09/evolving-windows-vulnerability-management-to-meet-the-speed-of-ai-powered-discovery/"
+    },
+    {
+      "title": "The Verge: Microsoft patch Tuesdays are about to get bigger",
+      "url": "https://www.theverge.com/tech/963307/microsoft-patch-tuesday-ai-security-updates"
+    },
+    {
+      "title": "AP News: SK Hynix rises nearly 13% in debut on Wall Street as demand for memory chips soars amid AI frenzy",
+      "url": "https://apnews.com/article/73f13a85ae00e30bad0540281bbe44f3"
+    },
+    {
+      "title": "Image-Line: What is new in FL Studio 2026",
+      "url": "https://www.image-line.com/fl-studio/release/2026"
+    },
+    {
+      "title": "The Verge: FL Studio 2026 turns its AI chatbot into your assistant engineer",
+      "url": "https://www.theverge.com/tech/963052/fl-studio-2026-music-daw-ai-chatbot"
+    },
+    {
+      "title": "Product Hunt home",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/"
+    }
+  ]
+}

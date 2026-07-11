@@ -18,6 +18,11 @@
 | High | Track Claude Cowork cross-device adoption | Mobile/web sessions may become the default agent UX | Watch enterprise limits, approvals and handoff behavior | Open |
 | High | Track Discord moderation false positives | The ban bug shows brittleness in AI safety stacks | Watch root-cause fix, appeal flow and recurrence risk | Open |
 | High | Track Forterra battlefield autonomy | Ukraine deployment gives rare public proof of ground autonomy at scale | Watch new mission data, procurement and safety lessons | Open |
+| High | Track Apple vs OpenAI hardware lawsuit | Apple is attacking OpenAI's hardware ambitions with trade secret claims | Watch complaint, OpenAI response and device timeline | Open |
+| High | Track OpenAI math-proof verification | GPT-5.6 Sol Ultra's cycle double cover claim needs independent validation | Watch mathematician response, peer review and prompt transparency | Open |
+| High | Track Meta Alberta AI data center | The Alberta buildout turns AI infra into a grid, water and local policy story | Watch power, cooling, permits and local reaction | Open |
+| High | Track EU Meta addictive design enforcement | DSA findings could force changes to infinite scroll and autoplay defaults | Watch Meta response, fines and product changes | Open |
+| High | Track Windows AI security pipeline | Microsoft is using AI to discover more vulnerabilities and ship more fixes | Watch actual patch volume and external validation | Open |
 | Medium | Track UN AI for Good Commission output | Geneva meeting will show whether global AI governance has concrete follow-through | Watch commissioner statements and published follow-ups | Open |
 | High | Track EU Chat Control revival | Procedural maneuver kept message-scanning on the table despite MEP opposition | Watch final text, encryption exemptions and national implementation | Open |
 | High | Review first three generated podcasts | Confirms pacing, topic selection, MP3 generation, and Polish narration quality | Listen to each MP3 and record notes | Open |
@@ -57,7 +62,6 @@
 | High | Track AI memory and storage bottleneck | Micron's record Q3 FY2026 and Anthropic supply/design agreement make HBM, DRAM and SSD supply a separate AI infrastructure storyline | Watch Micron/Anthropic execution, HBM4 supply, pricing, customer agreements and impact on token economics | Open |
 | High | Track Microsoft AI reorg and layoffs | The 4,800-role cut plus Frontier Company ties AI spend directly to org redesign | Watch further cuts, Xbox restructuring, Copilot pricing and employee response | Open |
 | High | Track JADEPUFFER defense guidance | The first documented agentic ransomware case needs concrete mitigation guidance | Recheck Sysdig/CISA recommendations and follow-up threat reports | Open |
-| High | Track SK Hynix U.S. listing | The ADR sale is a concrete test of AI memory demand and market appetite | Watch pricing, investor demand and post-listing trading around July 10 | Open |
 | Medium | Track Google Search privacy backlash | Search Services History and saved media make AI training opt-out a mainstream product issue | Watch user reaction, legal scrutiny and any UI or policy changes | Open |
 | Medium | Track agent search and observability stack | Vercel, AnySearch, Typeahead and Octolens show agents moving into real productized workflows | Watch Product Hunt traction, enterprise adoption and follow-on launches | Open |
 | Medium | Track Reddit AI moderation metrics | Reddit's spam and fake-vote reductions give a rare concrete moderation benchmark | Watch whether the gains persist and whether other platforms publish similar data | Open |
@@ -278,6 +282,10 @@
   `brief.pdf`, and `podcast.mp3`; final MP3 used Piper and measured about 7:42
   by `ffprobe`. PDF brief was rendered in the mobile 390 x 844 pt format and
   visually checked from PNG renders.
+- 2026-07-11: Daily research run added Apple/OpenAI litigation, the OpenAI
+  math-proof claim, Meta Alberta infra plus DSA pressure, Microsoft AI
+  patching, SK Hynix's strong U.S. debut and FL Studio's agentic workflow
+  update; moved the SK Hynix listing watch item to Done.
 
 ## Done
 
@@ -286,3 +294,4 @@
 | 2026-06-18 | Add PDF brief output | Generated `pdfs/2026-06-18-tech-news.pdf` and updated the research automation prompt to create PDFs in future runs |
 | 2026-06-20 | Review first three tech research reports | Reports for 2026-06-17, 2026-06-18 and 2026-06-19 have review notes and provided enough source quality to continue the daily workflow |
 | 2026-06-21 | Recheck Product Hunt timing | Homepage was useful on 2026-06-19, 2026-06-20 and 2026-06-21; use homepage/current sections instead of the weak daily archive path |
+| 2026-07-11 | Track SK Hynix U.S. listing | ADRs debuted up about 13%; keep the memory-supercycle follow-through in the separate bottleneck watch item |
