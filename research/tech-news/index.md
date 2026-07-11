@@ -4,13 +4,13 @@ Last updated: 2026-07-11
 
 ## Current Understanding
 
-Poranny run z 2026-07-11 przesuwa temat z samego rollout'u modeli do trzech nowych frontów: Apple pozywa OpenAI o tajemnice handlowe związane z hardware, OpenAI publikuje preprint przypisujący GPT-5.6 Sol Ultra dowód cycle double cover, a Microsoft i FL Studio pokazują, że AI wchodzi już w sam proces bezpieczeństwa i kreatywny workflow. To ważne, bo sygnał przestaje być wyłącznie "kto ma lepszy model" i coraz częściej staje się "kto kontroluje IP, weryfikację i operacyjną integrację".
+Wieczorny refresh z 2026-07-11 przesuwa temat z konfliktów o modele i IP do korekty domyślnych ustawień, provenance i friction w dystrybucji. Meta wyłącza Muse Image po backlashu prywatności, TikTok wzmacnia detekcję AI spam i wchodzi do C2PA, a Cloudflare Drop oraz Effects SDK pokazują, że rynek nadal premiuje narzędzia, które obniżają koszt publikacji i obróbki mediów. To ważne, bo sygnał zaczyna mówić mniej o tym, kto ma najmocniejszy model, a bardziej o tym, kto kontroluje consent, onboarding i koszt operacyjny całego stacku.
 
-Równolegle Meta dostaje podwójne ciśnienie: z jednej strony buduje 1GW AI data center w Albercie, z drugiej Komisja Europejska zarzuca Facebookowi i Instagramowi addictive design pod DSA. SK Hynix potwierdza memory supercycle na Wall Street, a Product Hunt i Hacker News nadal wyglądają na agent-native, nie tylko model-native. To razem sugeruje, że najbliższe tygodnie będą bardziej o infrastrukturze, regulacjach i dowodzeniu wartości niż o kolejnym pojedynczym demo.
+Równolegle Meta nie zwalnia na infrastrukturze: firma utrzymuje budowę 1GW AI data center w Albercie i teraz dochodzi do tego raportowany plan wejścia z chipem Iris do produkcji we wrześniu. To spina jedną narrację o AI jako pełnym łańcuchu od produktu, przez opt-out i moderację, aż po własny silikon, energię i chłodzenie.
 
-Po wieczornym refreshu z 2026-07-10 główna nowa oś przesuwa się z samego release'u modeli do warstwy pracy, głosu i monetyzacji: OpenAI łączy ChatGPT Work, GPT-Live, Codex i desktop browser w jeden surface operacyjny, Meta otwiera public preview Meta Model API dla Muse Spark 1.1, Anthropic dokłada reflection i publiczne hard questions do Claude UX, a Deutsche Telekom pokazuje AI-native telco bez nowej aplikacji.
+Poranny run z 2026-07-11 nadal pozostaje ważnym tłem: Apple pozywa OpenAI o tajemnice handlowe związane z hardware, OpenAI publikuje preprint przypisujący GPT-5.6 Sol Ultra dowód cycle double cover, a Microsoft i FL Studio pokazują, że AI wchodzi już w sam proces bezpieczeństwa i kreatywny workflow. To ważne, bo sygnał przestaje być wyłącznie "kto ma lepszy model" i coraz częściej staje się "kto kontroluje IP, weryfikację i operacyjną integrację".
 
-Community signal pozostaje agentowy, ale jest już wyraźnie bardziej praktyczny i trochę bardziej zmęczony niż w poprzednich dniach. Product Hunt premiuje PlugThis, Sim, Scarlett, ConnectMachine 2.0 i GPT-5.6, a Hacker News częściej pyta o koszt, lokalne uruchamianie modeli i sens coding agents niż o sam hype wokół frontier modeli.
+Community signal pozostaje agentowy, ale dziś bardziej niż hype premiuje praktyczne, kontrolowane produkty. Product Hunt wynosi na szczyt Cloudflare Drop i Effects SDK, a Hacker News znowu łączy AI z kosztami, prywatnością i pytaniem o to, czy rollout jest naprawdę gotowy do szerokiego użycia.
 
 Ten temat służy do codziennego porannego researchu globalnych nowinek
 technologicznych i AI oraz do przygotowania materiału wejściowego dla
