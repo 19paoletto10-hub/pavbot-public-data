@@ -119,6 +119,12 @@ w fazę żądań gwarancji dla Ormuz i ostrzeżeń Trumpa po pogrzebie Alego
 Chameneiego. Dodatkowym wątkiem jest sankcyjna presja na rosyjską ropę przed
 unijnym terminem 15 lipca oraz krajowy spór o miesięcznicę smoleńską i język
 wobec policji.
+Po wieczornym runie 11 lipca obchody Wołynia zostały już przeprowadzone w
+Radrużu i Ołyce, AP podało nowe liczby ofiar po rosyjskich atakach oraz
+szerszy ślad ukraińskich uderzeń na Morzu Azowskim, a RCB wróciło do
+ostrzeżeń burzowych przy utrzymującej się suszy hydrologicznej. Najbliższy
+twardy termin pozostaje teraz 15 lipca dla unijnego pakietu sankcji na rosyjską
+ropę, a USA-Iran nadal nie ma przełomu.
 
 ## Stable Facts
 
@@ -222,6 +228,7 @@ wobec policji.
 ## Recent Reports
 
 - [2026-07-11](runs/2026-07-11.md)
+- [2026-07-11-1933](runs/2026-07-11-1933.md)
 - [2026-07-10](runs/2026-07-10.md)
 - [2026-07-10-1933](runs/2026-07-10-1933.md)
 - [2026-07-09-1933](runs/2026-07-09-1933.md)
