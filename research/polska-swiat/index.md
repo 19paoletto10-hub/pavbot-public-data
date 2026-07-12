@@ -134,6 +134,10 @@ Kijowem, a uderzenia na rosyjskie jednostki na Morzu Azowskim idą w dziesiątki
 W Polsce Wołyń przechodzi w follow-up polityki pamięci, CBZC w follow-up
 zarzutów przygotowania zabójstw funkcjonariuszy, a Kłodzko w temat
 instytucjonalnej ochrony dzieci.
+Po popołudniowym sygnale AP o śmierci Lindsaya Grahama dołącza nowy follow-up
+amerykański: jego brak może zmienić ton debat o Ukrainie, NATO i sankcjach
+wobec Rosji, bo był jednym z najważniejszych republikańskich głosów w tych
+sprawach.
 
 ## Stable Facts
 
@@ -248,6 +252,7 @@ instytucjonalnej ochrony dzieci.
 
 ## Recent Reports
 
+- [2026-07-12-1933](runs/2026-07-12-1933.md)
 - [2026-07-12](runs/2026-07-12.md)
 - [2026-07-11](runs/2026-07-11.md)
 - [2026-07-11-1933](runs/2026-07-11-1933.md)
