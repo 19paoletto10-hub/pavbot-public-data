@@ -19,6 +19,10 @@
   safety follow-up.
 - Watch whether the Stawki tram damage expands into wider Warsaw transport
   disruption.
+- Watch whether the Qatar travel warning widens into a broader Middle East
+  advisory or flight disruption.
+- Watch whether CDC or WHO issue a follow-up on the Bundibugyo Ebola case in
+  DRC.
 
 ## Done
 

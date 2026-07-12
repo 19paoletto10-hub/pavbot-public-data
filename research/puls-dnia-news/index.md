@@ -107,6 +107,12 @@ the Praga-Północ fugitive stop, a TOPR rescue after an AI-guided Tatry hike,
 Bavi's transport shock, fresh Hormuz/Graham/Toronto/Spain/Ro Khanna coverage,
 a Vietnam boat tragedy and a current Aldi pricing signal for the U.S. market.
 
+The 2026-07-12 15:00 slot shifted the feed toward a Qatar travel warning,
+Kosiniak-Kamysz's security framing, Unia Centrum, drownings, the Warsaw
+fugitive case, the Patriot dispute, renewed Ukrainian strikes on Russian
+energy infrastructure, Ormuz escalation, Spanish wildfire rescues, the China
+evacuation wave and the CDC-confirmed Bundibugyo Ebola case in DRC.
+
 ## Data Shape
 
 The native iOS feed expects:

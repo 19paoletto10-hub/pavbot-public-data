@@ -1,0 +1,511 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-12",
+  "runTime": "15:00",
+  "status": "Material update",
+  "headline": "Puls 15:00: Katar, Ukraina i nowe alerty z BBC/CNN",
+  "summary": "Popołudniowy slot przesunął feed ku ostrzeżeniu MSZ o Katarze, polityce i bezpieczeństwu w Polsce, rosyjskiemu kryzysowi paliwowemu oraz nowym światowym alertom wokół Iranu, Hiszpanii, Chin i DRC.",
+  "checkedSources": [
+    {
+      "title": "TVN24: Wiadomości z kraju i ze świata",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24: Wiadomości z kraju",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24: Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24: Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "TVN24: Świat",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "Gov.pl: Komunikat Ambasady RP w Dosze",
+      "url": "https://www.gov.pl/web/katar/komunikat-ambasady-rp-w-dosze--sytuacja-bezpieczenstwa-i-ograniczenia-w-ruchu-lotniczym---aktualizacja-01032026"
+    },
+    {
+      "title": "CDC: Ebola outbreak in DRC and Uganda",
+      "url": "https://www.cdc.gov/media/releases/2026/cdc-ebola-outbreak-in-democratic-republic-of-congo-and-uganda.html"
+    },
+    {
+      "title": "AP: Ukrainian attacks on Russia kill 1 as Kyiv continues to target oil tankers and refineries",
+      "url": "https://apnews.com/article/f0bab8086a84705db07c74b3b1b99c49"
+    },
+    {
+      "title": "AP: US attacks Iran over ship being hit in Strait of Hormuz; Tehran responds by hitting Arab states",
+      "url": "https://apnews.com/article/0764d17c09370a8c5cf1e8197a8878ab"
+    },
+    {
+      "title": "AP: Wildfire devastates an expat community in southern Spain, killing at least 12 with 23 missing",
+      "url": "https://apnews.com/article/760ecfff1316d56837888de4ab9efa21"
+    },
+    {
+      "title": "AP: Typhoon Bavi weakens but still brings strong winds and rain to China",
+      "url": "https://apnews.com/article/27518e742d51de72fdd13f1a33c858af"
+    }
+  ],
+  "items": [
+    {
+      "id": "polska-katar-ostrzezenie-2026-07-12-1500",
+      "section": "Polska",
+      "title": "MSZ ostrzega przed podróżami do Kataru",
+      "lead": "Polskie służby utrzymują najwyższą ostrożność po eskalacji na Bliskim Wschodzie.",
+      "whatHappened": "TVN24 podało, że polska ambasada ostrzega przed podróżami do Kataru, a oficjalny komunikat gov.pl nadal odradza wyjazdy, także tranzytowe.",
+      "keyFacts": [
+        "Komunikat obejmuje również tranzyt przez Katar.",
+        "Gov.pl przypomina o rejestracji w systemie Odyseusz.",
+        "Powodem jest pogorszenie sytuacji bezpieczeństwa w regionie."
+      ],
+      "reactions": [
+        "Podróżni muszą sprawdzać status lotów i przesiadek.",
+        "Placówka dyplomatyczna utrzymuje podwyższony poziom ostrzeżeń."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na podróże służbowe, rodzinne i lotnicze połączenia przez Zatokę.",
+      "context": "Ostrzeżenie wpisuje się w szerszą regionalną eskalację wokół Iranu i Cieśniny Ormuz.",
+      "watchNext": [
+        "Czy MSZ rozszerzy komunikat na szerszy region.",
+        "Czy linie lotnicze ogłoszą kolejne zmiany tras."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: \"Odradzamy wszelkie podróże\". Ostrzeżenie polskiej ambasady",
+          "url": "https://tvn24.pl/biznes/ze-swiata/odradzamy-wszelkie-podroze-ostrzezenie-polskiej-ambasady-st9139101"
+        },
+        {
+          "title": "Gov.pl: Komunikat Ambasady RP w Dosze",
+          "url": "https://www.gov.pl/web/katar/komunikat-ambasady-rp-w-dosze--sytuacja-bezpieczenstwa-i-ograniczenia-w-ruchu-lotniczym---aktualizacja-01032026"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Katar",
+        "MSZ",
+        "podróże"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-kosiniak-zagrozenie-2026-07-12-1500",
+      "section": "Polityka",
+      "title": "Kosiniak-Kamysz mówi o narastającym zagrożeniu",
+      "lead": "Szef MON wzmacnia przekaz o odstraszaniu i gotowości państwa.",
+      "whatHappened": "TVN24 opisało wystąpienie Władysława Kosiniaka-Kamysza, który mówił o narastającym zagrożeniu i potrzebie siły, która ma odstraszać przeciwnika.",
+      "keyFacts": [
+        "Przekaz MON koncentruje się na sile odstraszania.",
+        "Wypowiedź wpisuje się w debatę o bezpieczeństwie państwa.",
+        "Ton komunikatu jest wyraźnie bardziej operacyjny niż partyjny."
+      ],
+      "reactions": [
+        "Temat może być podchwycony w sporach o obronność.",
+        "Dalsze wypowiedzi MON mogą doprecyzować praktyczne działania."
+      ],
+      "whyItMatters": "To sygnał, jak rząd komunikuje bezpieczeństwo publiczne w okresie podwyższonego napięcia.",
+      "context": "Polityka obronna pozostaje sklejona z regionalnymi napięciami oraz dyskusją o wsparciu dla Ukrainy.",
+      "watchNext": [
+        "Czy MON poda konkretne decyzje lub ćwiczenia.",
+        "Czy dojdzie do reakcji opozycji lub prezydenta."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Władysław Kosiniak-Kamysz o narastającym zagrożeniu",
+          "url": "https://tvn24.pl/polska/szef-mon-wladyslaw-kosiniak-kamysz-o-narastajacym-zagrozeniu-wojny-nie-bedzie-jak-bedziemy-silni-st9139036"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "MON",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "polityka-unia-centrum-2026-07-12-1500",
+      "section": "Polityka",
+      "title": "Unia Centrum ogłasza start nowej partii",
+      "lead": "Na scenie politycznej pojawia się kolejny centrowy projekt z ambicją parlamentarną.",
+      "whatHappened": "TVN24 podało, że powstaje nowe środowisko polityczne pod szyldem Unia Centrum, które ma mieć silną reprezentację w polskim parlamencie.",
+      "keyFacts": [
+        "Projekt jest przedstawiany jako nowe środowisko polityczne.",
+        "Ambicja wejścia do parlamentu jest wprost komunikowana.",
+        "To kolejny sygnał przetasowań po stronie centrum sceny politycznej."
+      ],
+      "reactions": [
+        "Układ sił wśród ugrupowań może się dodatkowo rozproszyć.",
+        "Program i nazwiska założycieli będą kluczowe dla oceny znaczenia projektu."
+      ],
+      "whyItMatters": "Nowa partia może odebrać uwagę i elektorat obecnym ugrupowaniom centrowym.",
+      "context": "W polskiej polityce regularnie wracają próby budowy nowych środowisk wokół centrum i antykonfliktowego przekazu.",
+      "watchNext": [
+        "Czy pojawi się formalna rejestracja partii.",
+        "Czy projekt ogłosi liderów i pierwszy program."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Unia Centrum. Powstanie nowa partia polityczna",
+          "url": "https://tvn24.pl/polska/unia-centrum-powstaje-nowa-partia-polityczna-st9139257"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "partie",
+        "centrum"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "alerty-utoniecia-2026-07-12-1500",
+      "section": "Alerty",
+      "title": "Kolejne utonięcia podbijają letni bilans",
+      "lead": "Służby przypominają o ryzyku nad wodą w środku sezonu.",
+      "whatHappened": "TVN24 Meteo podało, że w sobotę utonęły w Polsce dwie osoby, a od początku czerwca policja odnotowała 79 ofiar utonięć.",
+      "keyFacts": [
+        "Sobotni bilans obejmuje dwie ofiary.",
+        "Od początku czerwca liczba ofiar sięga 79.",
+        "Służby apelują o ostrożność przy kąpielach i rekreacji."
+      ],
+      "reactions": [
+        "Ratownicy i policja ponownie podnoszą temat podstawowych zasad bezpieczeństwa.",
+        "Temat pozostaje sezonowo wrażliwy przy upałach i większym ruchu nad wodą."
+      ],
+      "whyItMatters": "To bezpośredni alert bezpieczeństwa publicznego w okresie wakacyjnym.",
+      "context": "Letnie temperatury zwykle zwiększają ruch nad akwenami i liczbę ryzykownych zachowań.",
+      "watchNext": [
+        "Czy służby podadzą kolejne ostrzeżenia pogodowe.",
+        "Czy pojawią się statystyki o kolejnych interwencjach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo: Kolejne utonięcia. Służby apelują",
+          "url": "https://tvn24.pl/tvnmeteo/polska/kolejne-utoniecia-sluzby-apeluja-st9139015"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "woda",
+        "bezpieczeństwo",
+        "lato"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "polska-warszawa-poszukiwany-2026-07-12-1500",
+      "section": "Polska",
+      "title": "Mężczyzna próbował uciec strażnikom",
+      "lead": "Na Pradze-Północ sytuacja zakończyła się przyznaniem do poszukiwań.",
+      "whatHappened": "TVN24 Warszawa opisało incydent, w którym mężczyzna najpierw próbował uciec strażnikom, a później sam przyznał, że jest poszukiwany.",
+      "keyFacts": [
+        "Incydent miał miejsce na Pradze-Północ.",
+        "Mężczyzna najpierw próbował ucieczki, a potem potwierdził, że jest poszukiwany.",
+        "Sprawa ma wymiar porządkowy i operacyjny."
+      ],
+      "reactions": [
+        "Służby miejskie przekazały sprawę dalej zgodnie z procedurą.",
+        "To kolejny lokalny sygnał o bieżących działaniach porządkowych w Warszawie."
+      ],
+      "whyItMatters": "To pokazuje bieżące obciążenie służb i poziom drobnych zdarzeń ulicznych w stolicy.",
+      "context": "Warszawski feed w tym slocie pozostaje czuły na pojedyncze incydenty porządkowe i policyjne.",
+      "watchNext": [
+        "Czy pojawią się informacje o zarzutach lub zatrzymaniu.",
+        "Czy inne dzielnice zgłoszą podobne interwencje."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Warszawa: Próbował uciec strażnikom, później sam przyznał, że jest poszukiwany",
+          "url": "https://tvn24.pl/tvnwarszawa/praga-polnoc/warszawa-najpierw-uciekal-pozniej-sam-przyznal-sie-ze-jest-poszukiwany-st9139027"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Warszawa",
+        "bezpieczeństwo",
+        "straż"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "polityka-patrioty-spor-2026-07-12-1500",
+      "section": "Polityka",
+      "title": "Spór o Patrioty znów podnosi temperaturę",
+      "lead": "Prezydencka uwaga o braku informacji trafia w newralgiczny temat obronności.",
+      "whatHappened": "TVN24 opisało spór o przekazanie pocisków Patriot; w materiale pojawia się teza, że Karol Nawrocki nie był informowany o decyzji.",
+      "keyFacts": [
+        "Spór dotyczy przekazania uzbrojenia przeciwlotniczego.",
+        "Temat wywołuje napięcie między instytucjami państwa.",
+        "W tle pozostaje wsparcie dla Ukrainy i koordynacja bezpieczeństwa."
+      ],
+      "reactions": [
+        "To może wywołać kolejną wymianę komentarzy między Pałacem Prezydenckim a rządem.",
+        "Dalsze wyjaśnienia MON będą kluczowe dla oceny procesu decyzyjnego."
+      ],
+      "whyItMatters": "Koordynacja w sprawach obronnych wpływa na wiarygodność państwa i wsparcie dla Ukrainy.",
+      "context": "Spór wpisuje się w szerszą debatę o podziale kompetencji w polityce bezpieczeństwa.",
+      "watchNext": [
+        "Czy MON lub KPRM wyjaśnią tryb decyzji.",
+        "Czy temat rozwinie się w szerszy spór polityczny."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Spór o przekazanie pocisków Patriot",
+          "url": "https://tvn24.pl/polska/spor-o-przekazanie-pociskow-patriot-karol-nawrocki-nie-byl-informowany-st9139092"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "obrona",
+        "Ukraina",
+        "prezydent"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-ukraina-rafineria-tankowce-2026-07-12-1500",
+      "section": "Świat",
+      "title": "Ukraina uderza w rosyjską rafinerię i tankowce",
+      "lead": "Kolejny atak na infrastrukturę paliwową podbija koszt wojny dla Rosji.",
+      "whatHappened": "TVN24 Biznes podało, że Ukraina zaatakowała rafinerię i tankowce; AP opisuje równoległe uderzenie w obiekty w Rosji i wpływ na paliwowy kryzys.",
+      "keyFacts": [
+        "W materiale pojawia się rafineria w Syzraniu i transport w rejonie Morza Azowskiego.",
+        "AP opisuje ofiary i szkody w rosyjskim regionie Samary.",
+        "Ataki na infrastrukturę paliwową wzmacniają presję na rosyjskie dostawy."
+      ],
+      "reactions": [
+        "Rosja odpowiada rosnącą presją militarną na Ukrainę.",
+        "Rynek paliw w regionie pozostaje podatny na wahania."
+      ],
+      "whyItMatters": "To sygnał dalszej eskalacji wojny ekonomicznej wokół energii i logistyki.",
+      "context": "Ukraina od miesięcy uderza w rosyjskie rafinerie, a skutki coraz mocniej widać w zaopatrzeniu i cenach paliw.",
+      "watchNext": [
+        "Czy Rosja poda oficjalny bilans strat.",
+        "Czy pojawią się nowe ograniczenia paliwowe."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Atak Ukrainy na rafinerię i tankowce",
+          "url": "https://tvn24.pl/biznes/ze-swiata/atak-ukrainy-na-rafinerie-i-tankowce-st9138929"
+        },
+        {
+          "title": "AP: Ukrainian attacks on Russia kill 1 as Kyiv continues to target oil tankers and refineries",
+          "url": "https://apnews.com/article/f0bab8086a84705db07c74b3b1b99c49"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Ukraina",
+        "Rosja",
+        "energia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-rosja-kryzys-paliwowy-2026-07-12-1500",
+      "section": "Gospodarka",
+      "title": "Rosyjski kryzys paliwowy się pogłębia",
+      "lead": "W Rosji coraz więcej osób i instytucji jest wciąganych do łatania braków paliwa.",
+      "whatHappened": "TVN24 opisało, że nauczyciele i urzędnicy są wysyłani na stacje, co pokazuje jak głęboko sięga kryzys paliwowy po atakach na rafinerie.",
+      "keyFacts": [
+        "Kryzys przekłada się na codzienną obsługę stacji paliw.",
+        "Braki mają związek z atakami na infrastrukturę rafineryjną.",
+        "Temat ma już nie tylko wymiar militarny, ale też gospodarczy."
+      ],
+      "reactions": [
+        "Rosyjskie władze próbują łagodzić skutki braków organizacyjnie.",
+        "Kierowcy i lokalne społeczności odczuwają kolejki oraz ograniczenia."
+      ],
+      "whyItMatters": "To wskaźnik narastającej presji ekonomicznej na Rosję i potencjalnych zakłóceń regionalnych.",
+      "context": "Połączenie ataków na rafinerie i ograniczeń transportowych zaczyna przypominać trwały problem podaży, nie jednorazowe zakłócenie.",
+      "watchNext": [
+        "Czy Rosja przyzna się do dalszych ograniczeń sprzedaży.",
+        "Czy inne regiony wprowadzą racjonowanie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Nadzwyczajne środki w Rosji",
+          "url": "https://tvn24.pl/biznes/ze-swiata/nadzwyczajne-srodki-w-rosji-nauczyciele-i-urzednicy-wysylani-na-stacje-st9138895"
+        },
+        {
+          "title": "AP: Ukrainian drone attacks on oil refineries plunge Russia into a summer fuel crisis",
+          "url": "https://apnews.com/article/russia-ukraine-war-fuel-crisis-gas-ec7e67f94ead8bf3ba064c785c2a8871"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Rosja",
+        "paliwo",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-ormuz-uderzenia-2026-07-12-1500",
+      "section": "Świat",
+      "title": "Nowe uderzenia USA i zamknięta Cieśnina Ormuz",
+      "lead": "BBC i AP opisują kolejny skok napięcia wokół kluczowego szlaku ropy.",
+      "whatHappened": "BBC informuje o nowych uderzeniach USA, a AP podaje, że Iran reaguje zamknięciem Cieśniny Ormuz i dalszymi atakami w regionie.",
+      "keyFacts": [
+        "Cieśnina Ormuz pozostaje centralnym punktem sporu.",
+        "W grę wchodzą szlaki ropy i gazu o globalnym znaczeniu.",
+        "AP opisuje także skutki dla państw arabskich i żeglugę w regionie."
+      ],
+      "reactions": [
+        "Rynki energii reagują na ryzyko zakłóceń transportu.",
+        "Dyplomacja regionalna próbuje utrzymać kanały rozmów."
+      ],
+      "whyItMatters": "Każde zamknięcie lub ograniczenie ruchu przez Ormuz może szybko przełożyć się na ceny paliw i globalny handel.",
+      "context": "To jeden z najbardziej wrażliwych punktów geopolitycznych na świecie, a każde nowe starcie podnosi ryzyko szerszej eskalacji.",
+      "watchNext": [
+        "Czy pojawią się kolejne komunikaty o żegludze.",
+        "Czy ropa i gaz zareagują kolejnym skokiem cen."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US launches fresh strikes as Iran closes Strait of Hormuz",
+          "url": "https://www.bbc.co.uk/news/articles/cj9gkpp0dkeo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "AP: US attacks Iran over ship being hit in Strait of Hormuz; Tehran responds by hitting Arab states",
+          "url": "https://apnews.com/article/0764d17c09370a8c5cf1e8197a8878ab"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Iran",
+        "Ormuz",
+        "energia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-hiszpania-pozar-ratunek-2026-07-12-1500",
+      "section": "Świat",
+      "title": "Hiszpańskie pożary znów przynoszą dramatyczne akcje ratunkowe",
+      "lead": "BBC opisuje ciężko poparzoną brytyjską parę, a AP potwierdza skalę tragedii pożarów.",
+      "whatHappened": "BBC podało, że ciężko poparzeni Brytyjczycy zostali uratowani z wąwozu podczas pożarów w Hiszpanii, a AP opisuje co najmniej 12 ofiar śmiertelnych i kolejne osoby zaginione.",
+      "keyFacts": [
+        "Pożary obejmują regiony z dużą liczbą turystów i rezydentów zagranicznych.",
+        "Ewakuacje i akcje ratunkowe trwają przy trudnym terenie i upale.",
+        "AP wskazuje, że ofiar jest co najmniej dwanaście."
+      ],
+      "reactions": [
+        "Hiszpańskie służby kontynuują działania gaśnicze i poszukiwawcze.",
+        "Brytyjskie służby konsularne wspierają poszkodowanych obywateli."
+      ],
+      "whyItMatters": "To kolejny sygnał, że europejskie fale upałów przekładają się na śmiertelne pożary i ryzyko dla podróżnych.",
+      "context": "Lato w południowej Europie ponownie pokazuje, że ekstremalne temperatury szybko zamieniają się w kryzys bezpieczeństwa.",
+      "watchNext": [
+        "Czy pojawią się kolejne informacje o zaginionych.",
+        "Czy rząd Hiszpanii rozszerzy ewakuacje."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Badly burned British couple rescued from ravine during Spain wildfires, reports say",
+          "url": "https://www.bbc.co.uk/news/articles/cx2x7441762o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "AP: Wildfire devastates an expat community in southern Spain, killing at least 12 with 23 missing",
+          "url": "https://apnews.com/article/760ecfff1316d56837888de4ab9efa21"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Hiszpania",
+        "pożary",
+        "alert"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-bavi-ewakuacja-2026-07-12-1500",
+      "section": "Świat",
+      "title": "Bavi zmusza Chiny do ewakuacji milionów",
+      "lead": "Tajfun podbija ryzyko transportowe i pogodowe w największych chińskich aglomeracjach.",
+      "whatHappened": "BBC informuje o ewakuacji niemal dwóch milionów osób, a AP opisuje, że Bavi osłabił się po wejściu na ląd, ale nadal przynosi silny wiatr i deszcz.",
+      "keyFacts": [
+        "Ewakuacje objęły kilka prowincji i wielkie miasta.",
+        "Ruch lotniczy i komunikacja kolejowa są mocno zakłócone.",
+        "Skala ewakuacji pokazuje, jak szeroko rozlewa się wpływ tajfunu."
+      ],
+      "reactions": [
+        "Lokalne władze utrzymują tryb nadzwyczajny i ostrzegają przed ulewami.",
+        "Mieszkańcy i podróżni mierzą się z opóźnieniami oraz odwołaniami."
+      ],
+      "whyItMatters": "To duży pogodowy i logistyczny szok dla regionu kluczowego dla globalnych łańcuchów dostaw.",
+      "context": "Bavi wpisuje się w serię ekstremalnych zjawisk pogodowych, które destabilizują transport i bezpieczeństwo publiczne w Azji.",
+      "watchNext": [
+        "Czy pojawią się kolejne ewakuacje w głębi lądu.",
+        "Czy porty i lotniska zaczną podawać pełne bilanse strat."
+      ],
+      "sources": [
+        {
+          "title": "BBC: China evacuates nearly two million people as powerful typhoon makes landfall",
+          "url": "https://www.bbc.co.uk/news/articles/cdxd3wkp2rzo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "AP: Typhoon Bavi weakens but still brings strong winds and rain to China",
+          "url": "https://apnews.com/article/27518e742d51de72fdd13f1a33c858af"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Chiny",
+        "tajfun",
+        "transport"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-ebola-drc-2026-07-12-1500",
+      "section": "Świat",
+      "title": "CDC potwierdza przypadek Bundibugyo Ebola u obywatela USA w DRC",
+      "lead": "To podbija wagę trwającego ogniska choroby w Afryce Środkowej.",
+      "whatHappened": "CNN opisuje, że obywatel USA pracujący dla organizacji humanitarnej w Demokratycznej Republice Konga uzyskał dodatni wynik na Bundibugyo virus, a CDC potwierdza tę informację w oficjalnym komunikacie.",
+      "keyFacts": [
+        "Chory pracował dla organizacji humanitarnej w DRC.",
+        "CDC koordynuje kontakt tracing i ocenę ryzyka.",
+        "Agencja podkreśla, że ogólne ryzyko dla amerykańskiej opinii publicznej pozostaje niskie."
+      ],
+      "reactions": [
+        "CDC współpracuje z organizacją pracodawcy i władzami DRC.",
+        "Temat może uruchomić kolejne komunikaty zdrowotne i podróżne."
+      ],
+      "whyItMatters": "To ważny sygnał zdrowia publicznego, który może wpłynąć na monitoring podróży i komunikaty międzynarodowe.",
+      "context": "Bundibugyo Ebola pozostaje częścią aktywnego ogniska w DRC i Ugandzie, co utrzymuje presję na służby zdrowia w regionie.",
+      "watchNext": [
+        "Czy CDC i WHO rozszerzą komunikaty dla podróżnych.",
+        "Czy pojawią się dalsze dane o kontaktach i izolacji."
+      ],
+      "sources": [
+        {
+          "title": "CNN: US citizen tests positive for Ebola in DRC",
+          "url": "https://edition.cnn.com/2026/07/11/africa/us-citizen-tests-positive-ebola-bundibugyo-drc-hnk-intl"
+        },
+        {
+          "title": "CDC: Statement on Ebola outbreak in the Democratic Republic of the Congo and Uganda",
+          "url": "https://www.cdc.gov/media/releases/2026/cdc-ebola-outbreak-in-democratic-republic-of-congo-and-uganda.html"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "zdrowie",
+        "Ebola",
+        "DRC"
+      ],
+      "priority": "high"
+    }
+  ]
+}
