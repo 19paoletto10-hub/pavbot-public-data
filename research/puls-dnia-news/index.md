@@ -119,6 +119,12 @@ rosyjski kryzys paliwowy, kolejne uderzenia wokół Ormuzu, Toronto, Bavi,
 Wietnam, hiszpańskie pożary, DRC Ebola oraz nowe ryzyka regulacyjne wokół
 OpenAI i Meta.
 
+The 2026-07-12 21:04 slot shifted the feed toward Unia Centrum, military
+training in north-eastern Poland, the Stawki tram disruption, Okopowa
+archeology, a Korea heat alarm, BBC coverage of Polish memory politics and
+Lindsey Graham's death, Nigeria's hostage rescue, West Bank security stories,
+China's export clampdown and Meta's EU regulatory pressure.
+
 ## Data Shape
 
 The native iOS feed expects:

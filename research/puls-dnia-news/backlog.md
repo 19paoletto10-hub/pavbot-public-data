@@ -23,6 +23,8 @@
   advisory or flight disruption.
 - Watch whether CDC or WHO issue a follow-up on the Bundibugyo Ebola case in
   DRC.
+- Watch whether the Korea Południowa heat alarm turns into broader official
+  alerts in Europe or Poland.
 
 ## Done
 
