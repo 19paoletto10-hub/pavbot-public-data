@@ -1,8 +1,10 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-11
+Last updated: 2026-07-12
 
 ## Current Understanding
+
+Wieczorny refresh z 2026-07-12 przesuwa temat z samego modelowego rollout na governance, edge control i distributed inference. OpenAI traci szefa safety w momencie przyspieszenia GPT-5.6, Cloudflare i Patreon ustawiają twardszą politykę wobec crawlerów, a HN i Product Hunt pokazują rosnące zainteresowanie mesh inference oraz lekkimi agentami. Równolegle publiczny rynek zaczyna pytać, czy AI capex nie rośnie szybciej niż realna monetyzacja, a protesty w San Francisco przypominają, że frontier AI ma już wymiar społeczny i polityczny.
 
 Wieczorny refresh z 2026-07-11 przesuwa temat z konfliktów o modele i IP do korekty domyślnych ustawień, provenance i friction w dystrybucji. Meta wyłącza Muse Image po backlashu prywatności, TikTok wzmacnia detekcję AI spam i wchodzi do C2PA, a Cloudflare Drop oraz Effects SDK pokazują, że rynek nadal premiuje narzędzia, które obniżają koszt publikacji i obróbki mediów. To ważne, bo sygnał zaczyna mówić mniej o tym, kto ma najmocniejszy model, a bardziej o tym, kto kontroluje consent, onboarding i koszt operacyjny całego stacku.
 
@@ -467,6 +469,8 @@ transparentność środowiskową AI.
 
 ## Recent Reports
 
+- [2026-07-12-1933](runs/2026-07-12-1933.md)
+- [2026-07-12](runs/2026-07-12.md)
 - [2026-07-11](runs/2026-07-11.md)
 - [2026-06-27](runs/2026-06-27.md)
 - [2026-06-26](runs/2026-06-26.md)

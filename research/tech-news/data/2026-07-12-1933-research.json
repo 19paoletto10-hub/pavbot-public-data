@@ -1,0 +1,278 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-12",
+  "runTime": "19:33",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny refresh przesuwa temat z samego modelowego rolloutu na kontrolę całego stacku: OpenAI traci kolejnego kluczowego lidera safety, creator economy odpowiada na AI crawling przez twardszą politykę na krawędzi sieci, a społeczność developerów coraz wyraźniej patrzy na rozproszone inference i małe, samodzielnie składane agenty. Równolegle rynek publiczny zaczyna pytać, czy AI capex nie rośnie szybciej niż realna monetyzacja, a protesty w San Francisco przypominają, że front AI ma już wymiar społeczny i polityczny.",
+    "To jest inny sygnał niż poranny run z 2026-07-12. Wtedy dominowały routing modeli przez Singapur, GPT-5.6 w Copilot, rodzinne use casey, GhostLock i Lyzr. Wieczorem ciężar przesuwa się na governance, edge control, compute topology i publiczne koszty rozwijanego stacku."
+  ],
+  "summaryBullets": [
+    "Regulacje: OpenAI traci szefa safety w trakcie przyspieszenia GPT-5.6",
+    "Regulacje: Patreon i Cloudflare zamykają crawlery AI na poziomie sieci",
+    "Infrastruktura: Mesh LLM pokazuje peer-to-peer inference"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-12-1933-0-openai-traci-szefa-safety-w-trakcie-przyspieszenia-gpt-5-6-821dea0648",
+      "section": "Regulacje",
+      "title": "OpenAI traci szefa safety w trakcie przyspieszenia GPT-5.6",
+      "standfirst": "Johannes Heidecke odchodzi z OpenAI właśnie wtedy, gdy GPT-5.6 trafia szerzej do produktów i wywołuje kolejne pytania o bezpieczeństwo. Wired i The Verge opisują to jako kolejny etap rotacji kadrowej w firmie, która jednocześnie przyspiesza z releaseami.",
+      "whatHappened": "OpenAI traci lidera odpowiedzialnego za safety systems.",
+      "whyItMatters": "To sygnał, że w miarę skracania cykli modelowych rośnie presja na zespół bezpieczeństwa i na sposób, w jaki firma składa governance z product delivery.",
+      "deeperAnalysis": [
+        "Najciekawsze w tej historii jest nie samo odejście, tylko moment. Jeśli safety leadership zmienia się równolegle z szerokim rolloutem GPT-5.6, to nie jest zwykła rotacja HR, tylko sygnał napięcia między szybkością shippingu a kontrolą ryzyka.",
+        "W praktyce oznacza to, że model governance przestaje być osobnym, stabilnym filarem, a zaczyna być częścią ciągle przeprojektowywanego organization chart. To ważne dla enterprise buyers, regulatorów i partnerów, bo dostępność modelu nie mówi jeszcze nic o tym, jak firma utrzymuje safety review, incident response i odpowiedzialność za misalignment."
+      ],
+      "contextPoints": [
+        "Co się stało: Wired i The Verge opisują odejście Johannesa Heidecke z rosnącymi zmianami w OpenAI.",
+        "Dlaczego ważne: Bezpieczeństwo modelu staje się problemem organizacyjnym, nie tylko technicznym.",
+        "Na co patrzeć dalej: kolejne rotacje w safety/research, zmiany w politykach launchowych i realne skutki dla GPT-5.6."
+      ],
+      "sources": [
+        {
+          "title": "Wired",
+          "url": "https://www.wired.com/story/openai-head-of-safety-leaving"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/964489/openais-head-of-safety-is-out"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "safety",
+        "governance",
+        "GPT-5.6",
+        "organization",
+        "AI risk"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-12-1933-1-patreon-i-cloudflare-zamykaja-crawlery-ai-na-poziomie-sieci-0d076fd316",
+      "section": "Regulacje",
+      "title": "Patreon i Cloudflare zamykają crawlery AI na poziomie sieci",
+      "standfirst": "Patreon mówi wprost, że blokuje znane crawlery treningowe, a Cloudflare rozbudowuje politykę rozdzielającą search, training i agent use. To jest już nie tylko dyskusja o etycznym skanowaniu internetu, ale o konkretnej architekturze egzekwowania zgody.",
+      "whatHappened": "Creator platforms i infrastruktura sieciowa zaczęły współpracować, żeby odciąć trening od discovery.",
+      "whyItMatters": "Jeśli ten wzorzec się utrzyma, kontrola nad użyciem treści przesunie się z pojedynczego labela na politykę brzegową i warstwę rozliczeń.",
+      "deeperAnalysis": [
+        "To jest dobry przykład, jak AI policy przestaje być abstrakcją. Cloudflare nie proponuje jednego uniwersalnego zakazu, tylko rozdziela różne klasy botów, a Patreon pokazuje implementację w realnym produkcie creators-first. To zmienia debatę z \"czy wolno crawlować\" na \"w jakim celu i na jakich warunkach\".",
+        "Warto też zauważyć, że ten ruch nie jest anty-internetowy. W komunikatach obu firm przewija się pro-discovery framing: search ma działać, ale trening i agent use mają podlegać wyraźniejszej kontroli oraz, w części modeli, płatnościom. To mocny sygnał dla publisherów, mediów i platform z dużą zawartością własną."
+      ],
+      "contextPoints": [
+        "Co się stało: Patreon wdrożył blokadę crawlerów AI, a Cloudflare opisał nowy model kontroli trafficu.",
+        "Dlaczego ważne: Prawa twórców i publisherów przesuwają się do warstwy infrastruktury.",
+        "Na co patrzeć dalej: czy inni creator-first vendorzy pójdą tą samą drogą i jak AI companies zareagują na podział search/training."
+      ],
+      "sources": [
+        {
+          "title": "Cloudflare",
+          "url": "https://www.cloudflare.com/press/press-releases/2026/cloudflare-allows-the-agentic-internet-to-flourish-with-a-simple-philosophy-your-content-your-rules/"
+        },
+        {
+          "title": "404 Media",
+          "url": "https://www.404media.co/patreon-cloudflare-partnership-ai-crawlers/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Cloudflare",
+        "Patreon",
+        "crawlers",
+        "creators",
+        "consent",
+        "provenance"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-12-1933-2-mesh-llm-pokazuje-peer-to-peer-inference-422fb5b080",
+      "section": "Infrastruktura",
+      "title": "Mesh LLM pokazuje peer-to-peer inference",
+      "standfirst": "Mesh LLM używa iroh, żeby spiąć laptopy, GPU rigi, mini PC i serwery w jeden OpenAI-compatible endpoint. W praktyce to próba zamiany rozproszonego, prywatnego sprzętu w własny mały compute cloud.",
+      "whatHappened": "P2P mesh dla inference wszedł dziś do głównego obiegu developerów i HN.",
+      "whyItMatters": "To alternatywa dla tezy, że jedyną sensowną odpowiedzią na rosnący popyt AI jest większy hyperscaler i droższe data center.",
+      "deeperAnalysis": [
+        "Najmocniejszy detal tej historii to operacyjność. Mesh LLM nie opowiada o abstrakcyjnym federowanym AI, tylko o bardzo konkretnym przepływie: połącz urządzenia, pobierz model od peera, wystaw endpoint i zacznij obsługiwać requesty lokalnie lub przez mesh.",
+        "To ma znaczenie strategiczne, bo pokazuje, że rynek nie musi iść wyłącznie w stronę centralizacji compute. Dla części zespołów, laboratoriów i niezależnych developerów taki mesh może być tańszy, bardziej prywatny i bardziej odporny na vendor lock-in. HN reaguje na to mocno, co sugeruje, że społeczność szuka dokładnie takich praktycznych alternatyw."
+      ],
+      "contextPoints": [
+        "Co się stało: Oficjalny blog i HN opisują mesh inference oparty o iroh.",
+        "Dlaczego ważne: Peer-to-peer compute staje się realnym, a nie tylko niszowym, kierunkiem dla AI infra.",
+        "Na co patrzeć dalej: throughput, stabilność, bezpieczeństwo modeli i to, czy mesh da się sprzedać poza early adopters."
+      ],
+      "sources": [
+        {
+          "title": "iroh",
+          "url": "https://www.iroh.computer/blog/mesh-llm"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=48876505"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "iroh",
+        "Mesh LLM",
+        "inference",
+        "distributed computing",
+        "open source",
+        "agents"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-12-1933-3-ai-capex-staje-sie-testem-monetyzacji-d094f0ea20",
+      "section": "Infrastruktura",
+      "title": "AI capex staje się testem monetyzacji",
+      "standfirst": "Barron’s i MarketWatch opisują dziś rosnące nakłady na AI jako kluczowy temat dla rynku. Kapitał płynie w data center, memory i hardware, ale pytanie brzmi już nie tylko \"kto buduje\", tylko \"kto na tym realnie zarabia\".",
+      "whatHappened": "Rynek zaczyna traktować AI spending jako główny test dla Earnings Season.",
+      "whyItMatters": "Jeśli zwroty z AI nie dogonią kosztów infrastruktury, narracja o wzroście może szybko zamienić się w narrację o presji marż i długim payback period.",
+      "deeperAnalysis": [
+        "W tej historii widać zmianę tonu. Jeszcze niedawno raporty o AI spending były czytane jak dowód dominacji rynku. Dziś te same liczby brzmią jak pytanie o dyscyplinę finansową: czy hyperscalerzy, memory vendors i chipmakerzy potrafią przełożyć spend na trwały cash flow.",
+        "To także dobry kontrast dla rozmowy o distributed inference. Z jednej strony wielkie firmy inwestują w coraz większą infrastrukturę, z drugiej pojawiają się narzędzia, które próbują rozmieścić compute bliżej użytkowników i mniejszych zespołów. Te dwie ścieżki mogą współistnieć, ale rynek będzie je porównywał pod kątem kosztu, elastyczności i czasu do zwrotu."
+      ],
+      "contextPoints": [
+        "Co się stało: Barron’s i MarketWatch podbiły temat AI capex jako głównego stresu dla rynku.",
+        "Dlaczego ważne: Model biznesowy AI przechodzi z hypeu do twardszego testu ekonomicznego.",
+        "Na co patrzeć dalej: earningsy, guidance capex, memory supply i marże cloud/hardware."
+      ],
+      "sources": [
+        {
+          "title": "Barron’s",
+          "url": "https://www.barrons.com/articles/amazon-alphabet-big-tech-stocks-earnings-ai-2c8774f5"
+        },
+        {
+          "title": "MarketWatch",
+          "url": "https://www.marketwatch.com/story/the-stock-market-rally-now-hinges-more-on-ai-than-oil-1292260a"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI spending",
+        "capex",
+        "earnings",
+        "memory",
+        "data centers",
+        "Big Tech"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-12-1933-4-protest-w-san-francisco-podbija-spoleczna-krytyke-frontier-ai-14e0d063d5",
+      "section": "Regulacje",
+      "title": "Protest w San Francisco podbija społeczną krytykę frontier AI",
+      "standfirst": "Około 200 protestujących przeszło przez San Francisco, wzywając OpenAI, Anthropic i Google DeepMind do spowolnienia wyścigu o coraz mocniejsze modele. To już nie jest niszowy hałas, tylko lokalna presja wokół energii, pracy i bezpieczeństwa.",
+      "whatHappened": "Aktywiści i część lokalnej społeczności publicznie zaatakowali tempo rozwoju frontier AI.",
+      "whyItMatters": "Nawet jeśli protest nie zmienia od razu polityk firm, wzmacnia argumenty regulatorów, lokalnych rad i przeciwników data center.",
+      "deeperAnalysis": [
+        "Warto patrzeć na ten wątek nie jako ciekawostkę, ale jako sygnał polityczny. Gdy protesty zaczynają łączyć job loss, environmental harm, rising rent i bezpieczeństwo modeli, AI przestaje być tylko produktem cyfrowym, a staje się lokalnym konfliktem o zasoby i władzę.",
+        "To dobrze koresponduje z dzisiejszymi historiami o capexie i crawlerach. Jeśli koszty infrastruktury, energii i zawłaszczenia treści będą dalej rosnąć, firmy nie tylko będą musiały inwestować więcej, ale też tłumaczyć się coraz szerszej publiczności."
+      ],
+      "contextPoints": [
+        "Co się stało: San Francisco Chronicle opisał marsz przeciw OpenAI, Anthropic i Google DeepMind.",
+        "Dlaczego ważne: Publiczny backlash wokół frontier AI jest już lokalnie zorganizowany.",
+        "Na co patrzeć dalej: czy protesty łączą się z formalnymi restrykcjami w miastach i stanach."
+      ],
+      "sources": [
+        {
+          "title": "San Francisco Chronicle",
+          "url": "https://www.sfchronicle.com/tech/article/san-francisco-ai-protest-22340835.php"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "OpenAI",
+        "Anthropic",
+        "Google DeepMind",
+        "protest",
+        "regulation",
+        "public pressure"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "OpenAI traci szefa safety",
+      "rationale": "Pokazuje napięcie między szybszym shippingiem a bezpieczeństwem w najgorętszej firmie AI.",
+      "sourcesLabel": "Wired, The Verge"
+    },
+    {
+      "priority": "High",
+      "title": "Patreon i Cloudflare blokują AI crawlery",
+      "rationale": "Creator economy zaczyna egzekwować zgodę i kompensację na poziomie sieci.",
+      "sourcesLabel": "Cloudflare, 404 Media"
+    },
+    {
+      "priority": "High",
+      "title": "Mesh LLM i rozproszone inference",
+      "rationale": "P2P compute może stać się realną alternatywą dla hyperscalerów i własnych data center.",
+      "sourcesLabel": "iroh, Hacker News"
+    },
+    {
+      "priority": "High",
+      "title": "AI capex pod testem earnings",
+      "rationale": "Rynek pyta już nie tylko kto buduje, ale kto naprawdę zarabia na AI.",
+      "sourcesLabel": "Barron’s, MarketWatch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Protest przeciw frontier AI w SF",
+      "rationale": "Backlash wokół energii, pracy i bezpieczeństwa staje się lokalnym ruchem politycznym.",
+      "sourcesLabel": "San Francisco Chronicle"
+    },
+    {
+      "priority": "Medium",
+      "title": "Agent in 100 lines of Lisp",
+      "rationale": "HN nadal premiuje małe, samodzielne harnessy i dynamiczne agenty.",
+      "sourcesLabel": "The Beach, Hacker News"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Wired: OpenAI’s safety chief leaves company",
+      "url": "https://www.wired.com/story/openai-head-of-safety-leaving"
+    },
+    {
+      "title": "The Verge: OpenAI’s safety chief out",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/964489/openais-head-of-safety-is-out"
+    },
+    {
+      "title": "Cloudflare: Cloudflare Allows the Agentic Internet to Flourish with a Simple Philosophy: Your Content, Your Rules",
+      "url": "https://www.cloudflare.com/press/press-releases/2026/cloudflare-allows-the-agentic-internet-to-flourish-with-a-simple-philosophy-your-content-your-rules/"
+    },
+    {
+      "title": "404 Media: Patreon blocks crawlers from stealing creators’ work for AI training",
+      "url": "https://www.404media.co/patreon-cloudflare-partnership-ai-crawlers/"
+    },
+    {
+      "title": "iroh: Mesh LLM: distributed AI computing on iroh",
+      "url": "https://www.iroh.computer/blog/mesh-llm"
+    },
+    {
+      "title": "Hacker News: Mesh LLM: distributed AI computing on iroh",
+      "url": "https://news.ycombinator.com/item?id=48876505"
+    },
+    {
+      "title": "Barron’s: Big Tech AI spending and earnings",
+      "url": "https://www.barrons.com/articles/amazon-alphabet-big-tech-stocks-earnings-ai-2c8774f5"
+    },
+    {
+      "title": "MarketWatch: The stock-market rally now hinges more on AI than oil",
+      "url": "https://www.marketwatch.com/story/the-stock-market-rally-now-hinges-more-on-ai-than-oil-1292260a"
+    },
+    {
+      "title": "SF Chronicle: Stop the AI race protest",
+      "url": "https://www.sfchronicle.com/tech/article/san-francisco-ai-protest-22340835.php"
+    },
+    {
+      "title": "Product Hunt: Best of Product Hunt | July 12, 2026",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/7/12"
+    },
+    {
+      "title": "Hacker News: 2026-07-12 front page",
+      "url": "https://news.ycombinator.com/front?day=2026-07-12"
+    }
+  ]
+}

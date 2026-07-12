@@ -4,6 +4,10 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track OpenAI safety churn | Safety leadership is moving while GPT-5.6 ships; watch whether launch policy changes | Watch new departures, safety org structure, GPT-5.6 safeguards and public response | Open |
+| High | Track creator crawler controls | Cloudflare and Patreon are moving search/training/agent control to the edge | Watch rollout breadth, compensation models, publisher adoption and AI company response | Open |
+| Medium | Track peer-to-peer inference meshes | Mesh LLM is a concrete distributed-inference alternative worth tracking | Watch throughput, reliability, security and adoption outside HN | Open |
+| High | Track AI capex stress test | Public markets are now asking whether AI spend turns into revenue | Watch earnings, capex guidance, memory constraints and margin commentary | Open |
 | High | Track ChatGPT Work and GPT-Live rollout | OpenAI is merging voice, desktop, browser and scheduled tasks into one surface | Watch rollout breadth, security controls and Atlas migration | Open |
 | Medium | Track Meta Model API monetization | Muse Spark 1.1 now has a public developer API preview and pricing pressure may reset AI API economics | Watch pricing, partner adoption and enterprise use cases | Open |
 | Medium | Track Anthropic reflection UX | Claude reflection and hard questions push trust into the product UI | Watch beta retention, privacy framing and enterprise reception | Open |
