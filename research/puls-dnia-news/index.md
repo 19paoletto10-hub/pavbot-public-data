@@ -95,6 +95,13 @@ Hormuz, fresh U.S.-Iran strikes, Spain's wildfire, Typhoon Bavi and the
 Russian shadow-fleet campaign, while the economy and tech cards kept the U.S.
 housing law and China's reusable-rocket milestone in view.
 
+The 2026-07-12 09:06 slot shifted the domestic mix toward Wołyń memory
+politics, the Ursynów CBZC arrest, the PIP reform and the Chopin C3 scanner
+rollout, while keeping IMGW burze in the alert lane. The world feed moved to
+fresh BBC/AP material on Hormuz, the NYT subpoenas, Toronto, Typhoon Bavi,
+Spain's wildfire and Ro Khanna in the West Bank, while the economic layer
+returned to China's export controls on critical rare earth inputs.
+
 ## Data Shape
 
 The native iOS feed expects:

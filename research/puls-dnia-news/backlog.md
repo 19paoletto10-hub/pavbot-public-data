@@ -11,6 +11,10 @@
 - `CNN World RSS` continues to fail intermittently; prefer
   `edition.cnn.com/world` discovery plus primary confirmations until the feed
   recovers.
+- Watch whether the Chopin C3 scanner rollout gets a follow-up from the airport
+  or queue-time reporting in the next few slots.
+- Watch whether China export-control coverage picks up a fresh EU or industry
+  response that would justify a separate card.
 
 ## Done
 
