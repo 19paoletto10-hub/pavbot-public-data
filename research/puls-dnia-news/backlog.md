@@ -15,6 +15,10 @@
   or queue-time reporting in the next few slots.
 - Watch whether China export-control coverage picks up a fresh EU or industry
   response that would justify a separate card.
+- Watch whether the AI-guided Tatry rescue gets a broader TOPR or tourism-
+  safety follow-up.
+- Watch whether the Stawki tram damage expands into wider Warsaw transport
+  disruption.
 
 ## Done
 

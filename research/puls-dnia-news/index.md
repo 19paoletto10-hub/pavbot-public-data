@@ -102,6 +102,11 @@ fresh BBC/AP material on Hormuz, the NYT subpoenas, Toronto, Typhoon Bavi,
 Spain's wildfire and Ro Khanna in the West Bank, while the economic layer
 returned to China's export controls on critical rare earth inputs.
 
+The 2026-07-12 12:01 slot moved the pulse toward Warsaw transport disruption,
+the Praga-Północ fugitive stop, a TOPR rescue after an AI-guided Tatry hike,
+Bavi's transport shock, fresh Hormuz/Graham/Toronto/Spain/Ro Khanna coverage,
+a Vietnam boat tragedy and a current Aldi pricing signal for the U.S. market.
+
 ## Data Shape
 
 The native iOS feed expects:
