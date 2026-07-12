@@ -1,0 +1,493 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-12",
+  "runTime": "06:01",
+  "status": "Material update",
+  "headline": "Poranny puls dnia: bezpieczeństwo, wojna i AI",
+  "summary": "Poranny slot przyniósł nowe incydenty w Polsce, świeże bilanse z Ukrainy, Wenezueli i Bangladeszu oraz mocne sygnały z rynku AI i półprzewodników.",
+  "checkedSources": [
+    {
+      "title": "TVN24: Wiadomości z kraju i ze świata",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24: Wiadomości z kraju",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24: Wiadomości ze świata",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24: Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24: Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "CBZC: Atak na policjanta CBZC - sprawca zatrzymany",
+      "url": "https://cbzc.policja.gov.pl/"
+    },
+    {
+      "title": "TVN Meteo: Gdzie jest burza? Sobota 11.07",
+      "url": "https://tvn24.pl/tvnmeteo/prognoza/gdzie-jest-burza-sobota-11-07-mapa-i-radar-burz-na-zywo-st9138224"
+    },
+    {
+      "title": "IMGW: Synoptyczna prognoza pogody od 10.07.2026 do 12.07.2026 r.",
+      "url": "https://imgw.pl/synoptyczna-prognoza-pogody-od-10.07.2026-do-12.07.2026-r/"
+    },
+    {
+      "title": "AP: US has no 'dead man's switch' to attack Iran if it kills Trump",
+      "url": "https://apnews.com/article/9f2fd9085fac9a0d67629ee9424d1fa4"
+    },
+    {
+      "title": "AP: Russian attacks kill 6 and wound 29 as Ukrainian forces target oil tankers",
+      "url": "https://apnews.com/article/578044d589f94cc985b699ffcf301297"
+    },
+    {
+      "title": "Guardian: Venezuela quake death toll passes 4,300",
+      "url": "https://www.theguardian.com/world/2026/jul/11/venezuela-quake-deaths-passes-4000-recovery-effort"
+    },
+    {
+      "title": "Reuters via Internazionale: Floods in Bangladesh kill 44, leave over a million stranded",
+      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/07/11/floods-in-bangladesh-kill-44-leave-over-a-million-stranded"
+    },
+    {
+      "title": "Samsung Global Newsroom: Earnings guidance for second quarter 2026",
+      "url": "https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-second-quarter-2026"
+    },
+    {
+      "title": "TVN24 Biznes: Apple pozywa OpenAI",
+      "url": "https://tvn24.pl/biznes/tech/na-kazdym-szczeblu-apple-pozywa-openai-st9137919"
+    },
+    {
+      "title": "OpenAI: Introducing GPT-Live",
+      "url": "https://openai.com/index/introducing-gpt-live/"
+    }
+  ],
+  "items": [
+    {
+      "id": "bezpieczenstwo-cbzc-ursynow-2026-07-12-0601",
+      "section": "Bezpieczeństwo",
+      "title": "Atak na policjanta CBZC",
+      "lead": "Napastnik zaatakował funkcjonariusza przy wejściu do CBZC i został zatrzymany.",
+      "whatHappened": "CBZC podało, że 29-latek zaatakował policjanta przy wejściu do siedziby biura. Według komunikatu i relacji TVN24 mężczyzna miał dwa kastety, a sprawą zajęły się służby i prokuratura.",
+      "keyFacts": [
+        "Atak miał miejsce rano 10 lipca, a komunikat CBZC opublikowano 11 lipca.",
+        "Napastnik był uzbrojony w dwa kastety."
+      ],
+      "reactions": [
+        "CBZC opisało zdarzenie jako atak na funkcjonariusza podczas wejścia do pracy.",
+        "Incydent podbija uwagę wokół bezpieczeństwa policji i służb cyberprzestępczości."
+      ],
+      "whyItMatters": "To bezpośredni atak na funkcjonariusza państwa i sygnał ryzyka dla służb.",
+      "context": "Sprawa trafiła do obiegu medialnego równolegle z innymi napięciami wokół CBZC i policji.",
+      "watchNext": [
+        "Czy prokuratura poda zarzuty i wniosek o areszt.",
+        "Czy CBZC opublikuje kolejne szczegóły."
+      ],
+      "sources": [
+        {
+          "title": "CBZC: Atak na policjanta CBZC - sprawca zatrzymany",
+          "url": "https://cbzc.policja.gov.pl/"
+        },
+        {
+          "title": "TVN24 Warszawa: Atak na policjantów na Ursynowie",
+          "url": "https://tvn24.pl/tvnwarszawa/ursynow/atak-na-policjantow-na-ursynowie-st9138720"
+        }
+      ],
+      "tags": [
+        "bezpieczeństwo",
+        "policja",
+        "CBZC",
+        "Warszawa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-helikopter-trzebiatow-2026-07-12-0601",
+      "section": "Polska",
+      "title": "Helikopter zahaczył o linię w Trzebiatowie",
+      "lead": "Maszyna uszkodziła linię wysokiego napięcia, doszło do pożaru, ale nikt nie został ranny.",
+      "whatHappened": "TVN24 podało, że helikopter zahaczył o linię wysokiego napięcia w Trzebiatowie. Strażacy informowali o pożarze, a na miejscu zabezpieczano teren i sprawdzano szkody.",
+      "keyFacts": [
+        "Nie było poszkodowanych.",
+        "Skutek to uszkodzona linia i pożar nieużytku."
+      ],
+      "reactions": [
+        "Służby ratownicze i energetyczne pracowały na miejscu.",
+        "Zdarzenie wywołało lokalne utrudnienia."
+      ],
+      "whyItMatters": "To potencjalnie groźny incydent techniczny z ryzykiem dla ruchu i infrastruktury.",
+      "context": "Materiał pochodzi z lokalnej redakcji TVN24 Szczecin i relacji Kontakt24.",
+      "watchNext": [
+        "Czy pojawi się oficjalny raport o przyczynie.",
+        "Czy będą dalsze utrudnienia w ruchu i zasilaniu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Szczecin: Helikopter zahaczył o trakcję w Trzebiatowie",
+          "url": "https://tvn24.pl/szczecin/trzebiatow-helikopter-zahaczyl-o-trakcje-st9138645"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Trzebiatów",
+        "wypadek",
+        "infrastruktura"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-burze-polska-2026-07-12-0601",
+      "section": "Alerty",
+      "title": "Burze utrzymują się nad Polską",
+      "lead": "IMGW i TVN Meteo nadal pokazują burze, opady i porywy wiatru.",
+      "whatHappened": "Aktualne mapy TVN Meteo oraz synoptyczna prognoza IMGW utrzymują niestabilny obraz pogody nad częścią kraju. Wskazywane są burze, opady i silniejsze porywy wiatru.",
+      "keyFacts": [
+        "TVN Meteo pisze o wyładowaniach pod wieczór.",
+        "IMGW utrzymuje prognozę burz i miejscami silniejszych porywów do 12 lipca."
+      ],
+      "reactions": [
+        "To zwiększa ryzyko lokalnych szkód i utrudnień.",
+        "Służby mogą wydawać kolejne ostrzeżenia krótkoterminowe."
+      ],
+      "whyItMatters": "Burze wpływają na bezpieczeństwo, transport i działania plenerowe.",
+      "context": "To kontynuacja niestabilnego letniego układu pogodowego.",
+      "watchNext": [
+        "Czy IMGW rozszerzy lub podniesie stopień alertu.",
+        "Czy pojawią się meldunki o zalaniach, drzewach i przerwach w dostawach."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo: Gdzie jest burza? Sobota 11.07",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/gdzie-jest-burza-sobota-11-07-mapa-i-radar-burz-na-zywo-st9138224"
+        },
+        {
+          "title": "IMGW: Synoptyczna prognoza pogody od 10.07.2026 do 12.07.2026 r.",
+          "url": "https://imgw.pl/synoptyczna-prognoza-pogody-od-10.07.2026-do-12.07.2026-r/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "burze",
+        "IMGW",
+        "alert"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-awaria-pociagu-450-pasazerow-2026-07-12-0601",
+      "section": "Polska",
+      "title": "Awaria pociągu i przesiadka 450 pasażerów",
+      "lead": "PKP Intercity musiało przeorganizować podróż setek pasażerów po awarii składu.",
+      "whatHappened": "TVN24 podało, że pociąg PKP Intercity Neptun uległ awarii i 450 pasażerów musiało przesiąść się do innego składu. To kolejny przykład operacyjnego problemu na kolei.",
+      "keyFacts": [
+        "Wydarzenie miało miejsce 11 lipca.",
+        "Chodziło o duży skład dalekobieżny."
+      ],
+      "reactions": [
+        "Pasażerowie zostali przeorganizowani na miejscu.",
+        "Taki incydent zwykle wywołuje pytania o niezawodność taboru."
+      ],
+      "whyItMatters": "Awaria transportu dalekobieżnego natychmiast przekłada się na opóźnienia i koszty dla podróżnych.",
+      "context": "Kolej wraca często w newsach przez awarie i modernizacje infrastruktury.",
+      "watchNext": [
+        "Czy PKP Intercity poda przyczynę awarii.",
+        "Czy pojawią się odszkodowania lub korekty rozkładu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Kraków: Awaria pociągu i przesiadka 450 pasażerów",
+          "url": "https://tvn24.pl/krakow/krakow-awaria-pociagu-pkp-intercity-neptun-i-przesiadka-450-pasazerow-st9138617"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "kolej",
+        "PKP Intercity",
+        "transport"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "polityka-wolyn-zelenski-2026-07-12-0601",
+      "section": "Polityka",
+      "title": "Wołyń znów w centrum polityki pamięci",
+      "lead": "Zełenski powiedział, że potrzebna jest pełna prawda o ofiarach zbrodni wołyńskiej.",
+      "whatHappened": "TVN24 opisało wypowiedź Wołodymyra Zełenskiego po rocznicy, z komentarzem Nawrockiego, że nie udało się rozwiązać kwestii historycznych. Temat znów wszedł do głównego nurtu polsko-ukraińskiej debaty.",
+      "keyFacts": [
+        "Artykuł został opublikowany 11 lipca wieczorem.",
+        "Wypowiedź dotyczy pełnej prawdy i pamięci o ofiarach."
+      ],
+      "reactions": [
+        "W Polsce temat pozostaje wrażliwy politycznie.",
+        "Każde takie wystąpienie może wpływać na relacje z Ukrainą."
+      ],
+      "whyItMatters": "Wołyń nadal kształtuje ton rozmów o pamięci historycznej i dyplomacji.",
+      "context": "To element corocznego sporu o pamięć i nazewnictwo zbrodni.",
+      "watchNext": [
+        "Czy Kijów i Warszawa wydadzą dodatkowe komentarze.",
+        "Czy rocznicowy ton przełoży się na kolejne wystąpienia obu stron."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wołodymyr Zełenski o ofiarach zbrodni wołyńskiej",
+          "url": "https://tvn24.pl/swiat/spor-o-zbrodnie-wolynska-wolodymyr-zelenski-potrzebna-jest-pelna-prawda-st9138750"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Wołyń",
+        "Ukraina",
+        "pamięć"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-trump-iran-dead-switch-2026-07-12-0601",
+      "section": "Świat",
+      "title": "Trump mówi o odpowiedzi na Iran",
+      "lead": "Trump sugeruje, że pozostawił rozkaz uderzenia na Iran, gdyby Teheran go zabił.",
+      "whatHappened": "AP wyjaśnia, że Biały Dom nie ma mechanizmu automatycznego odwetu, a decyzję po ewentualnej śmierci Trumpa podjąłby JD Vance. Tekst wiąże to z nową falą gróźb i presją wokół Iranu.",
+      "keyFacts": [
+        "AP podkreśla, że dead man's switch nie istnieje w tej formie.",
+        "Vance przejąłby władzę i decyzję o ewentualnym odwecie."
+      ],
+      "reactions": [
+        "To podnosi temperaturę konfliktu i sygnalizuje gotowość do eskalacji.",
+        "Dla rynków energii to kolejny czynnik ryzyka."
+      ],
+      "whyItMatters": "To jedna z najmocniejszych wypowiedzi eskalacyjnych w obecnym kryzysie USA-Iran.",
+      "context": "Wypowiedź pojawiła się równolegle z napięciem wokół Hormuz i ataków na statki.",
+      "watchNext": [
+        "Czy Biały Dom zdystansuje się od tej retoryki.",
+        "Czy Iran odpowie nową deklaracją lub działaniem."
+      ],
+      "sources": [
+        {
+          "title": "AP: US has no 'dead man's switch' to attack Iran if it kills Trump",
+          "url": "https://apnews.com/article/9f2fd9085fac9a0d67629ee9424d1fa4"
+        }
+      ],
+      "tags": [
+        "świat",
+        "Iran",
+        "USA",
+        "Trump"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-ukraina-rosja-tankowce-2026-07-12-0601",
+      "section": "Świat",
+      "title": "Rosja i Ukraina znów wymieniają ciosy",
+      "lead": "Nowe ataki zabiły cywilów w Ukrainie, a Kijów uderza w rosyjską logistykę paliwową.",
+      "whatHappened": "AP opisuje rosyjskie ostrzały, które zabiły sześć osób, oraz ukraińskie ataki na tankowce i infrastrukturę energetyczną. Wojna dronowa coraz mocniej dotyka zaplecza paliwowego obu stron.",
+      "keyFacts": [
+        "W atakach zginęli cywile, w tym dziecko.",
+        "Ukraińskie uderzenia objęły tankowce i obiekty paliwowe na Morzu Azowskim."
+      ],
+      "reactions": [
+        "Rosja odpowiada dalszymi ostrzałami na miasta.",
+        "Ukraińska strategia uderza w logistykę, nie tylko w front."
+      ],
+      "whyItMatters": "To podnosi koszty wojny i może wpływać na bezpieczeństwo energetyczne regionu.",
+      "context": "Wojna coraz wyraźniej przesuwa się w stronę infrastruktury krytycznej i transportu paliw.",
+      "watchNext": [
+        "Czy pojawią się nowe bilanse ofiar.",
+        "Czy Rosja rozszerzy odwet na kolejne miasta lub obiekty."
+      ],
+      "sources": [
+        {
+          "title": "AP: Russian attacks kill 6 and wound 29 as Ukrainian forces target oil tankers",
+          "url": "https://apnews.com/article/578044d589f94cc985b699ffcf301297"
+        }
+      ],
+      "tags": [
+        "świat",
+        "Ukraina",
+        "Rosja",
+        "energia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-wenezuela-trzesienie-2026-07-12-0601",
+      "section": "Świat",
+      "title": "Wenezuela liczy już ponad 4,3 tysiąca ofiar",
+      "lead": "Po trzęsieniu ziemi bilans rośnie, a ONZ apeluje o pilną pomoc.",
+      "whatHappened": "Guardian, powołując się na dane władz, podaje 4 333 zabitych i 16 740 rannych po dwóch trzęsieniach z 24 czerwca. ONZ uruchomiła apel pomocowy dla ponad miliona osób.",
+      "keyFacts": [
+        "Wstrząsy miały magnitudy 7,2 i 7,5.",
+        "ONZ szacuje szkody na około 37 mld dolarów."
+      ],
+      "reactions": [
+        "Skala katastrofy przeciąża lokalną pomoc i infrastrukturę.",
+        "Międzynarodowa pomoc staje się kluczowa dla odbudowy."
+      ],
+      "whyItMatters": "To jeden z największych kryzysów humanitarnych w Ameryce Południowej tego roku.",
+      "context": "Akcja ratunkowa przechodzi w fazę długiego wsparcia, nie tylko pierwszej reakcji.",
+      "watchNext": [
+        "Czy liczba ofiar dalej wzrośnie.",
+        "Czy UN i rządy zwiększą finansowanie pomocy."
+      ],
+      "sources": [
+        {
+          "title": "Guardian: Venezuela quake death toll passes 4,300",
+          "url": "https://www.theguardian.com/world/2026/jul/11/venezuela-quake-deaths-passes-4000-recovery-effort"
+        }
+      ],
+      "tags": [
+        "świat",
+        "Wenezuela",
+        "katastrofa",
+        "ONZ"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-bangladesz-monsun-2026-07-12-0601",
+      "section": "Świat",
+      "title": "Monsun uderza w Bangladesz",
+      "lead": "Ulewy i osuwiska zabiły 44 osoby i odcięły od świata ponad milion mieszkańców.",
+      "whatHappened": "Reuters informuje, że w południowo-wschodnim Bangladeszu monsunowe ulewy wywołały powodzie i osuwiska. Służby walczą o dostarczenie pomocy do odciętych miejscowości.",
+      "keyFacts": [
+        "Ofiar śmiertelnych jest co najmniej 44.",
+        "Ponad milion osób pozostaje odciętych lub dotkniętych skutkami powodzi."
+      ],
+      "reactions": [
+        "Władze kierują pomoc i ewakuacje do najbardziej zagrożonych rejonów.",
+        "Ryzyko kolejnych osuwisk nadal pozostaje wysokie."
+      ],
+      "whyItMatters": "To jeden z najpoważniejszych obecnych kryzysów pogodowych w Azji Południowej.",
+      "context": "Monsun w połączeniu z górzystym terenem i obozami dla uchodźców zwiększa skalę zagrożenia.",
+      "watchNext": [
+        "Czy bilans ofiar wzrośnie.",
+        "Czy pogoda utrudni dalsze akcje ratownicze."
+      ],
+      "sources": [
+        {
+          "title": "Reuters via Internazionale: Floods in Bangladesh kill 44, leave over a million stranded",
+          "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/07/11/floods-in-bangladesh-kill-44-leave-over-a-million-stranded"
+        }
+      ],
+      "tags": [
+        "świat",
+        "Bangladesz",
+        "monsun",
+        "powodzie"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-samsung-guidance-q2-2026-07-12-0601",
+      "section": "Gospodarka",
+      "title": "Samsung sygnalizuje mocny kwartał",
+      "lead": "Gigant z Korei oczekuje 19-krotnego skoku zysku operacyjnego za drugi kwartał.",
+      "whatHappened": "Samsung opublikował guidance na drugi kwartał 2026 r. z szacowaną sprzedażą około 171 bln wonów i zyskiem operacyjnym około 89,4 bln wonów. To sygnał bardzo mocnego popytu, zwłaszcza w obszarze układów dla AI.",
+      "keyFacts": [
+        "Oficjalny komunikat pochodzi z 7 lipca.",
+        "Guidance wskazuje na rekordowo mocny wynik operacyjny."
+      ],
+      "reactions": [
+        "Rynek odczytuje to jako kolejny dowód siły popytu na pamięć i chipy dla AI.",
+        "To wspiera narrację o mocnym cyklu półprzewodników."
+      ],
+      "whyItMatters": "Samsung to jeden z kluczowych barometrów kondycji półprzewodników i popytu na AI.",
+      "context": "Guidance pojawia się przed pełnym raportem kwartalnym i zwykle wpływa na oczekiwania rynku.",
+      "watchNext": [
+        "Czy wynik potwierdzi się w pełnym raporcie.",
+        "Czy spółka skoryguje prognozy marż i nakładów."
+      ],
+      "sources": [
+        {
+          "title": "Samsung Global Newsroom: Earnings guidance for second quarter 2026",
+          "url": "https://news.samsung.com/global/samsung-electronics-announces-earnings-guidance-for-second-quarter-2026"
+        }
+      ],
+      "tags": [
+        "gospodarka",
+        "Samsung",
+        "półprzewodniki",
+        "AI"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "technologia-apple-pozywa-openai-2026-07-12-0601",
+      "section": "Technologia",
+      "title": "Apple pozywa OpenAI",
+      "lead": "Apple zarzuca OpenAI wykorzystywanie tajemnic handlowych przy rekrutacji i hardware.",
+      "whatHappened": "TVN24 i AP opisują pozew Apple przeciw OpenAI. W centrum są zarzuty wobec Tang Tana i procedur związanych z odejściem pracowników Apple do OpenAI.",
+      "keyFacts": [
+        "Apple twierdzi, że pracownicy mieli ujawniać poufne informacje.",
+        "Spór dotyczy także przygotowań do sprzętowego wejścia OpenAI."
+      ],
+      "reactions": [
+        "OpenAI odrzuca zarzuty i zapowiada obronę.",
+        "Spór może utrudnić relację między dwiema firmami, które wcześniej współpracowały."
+      ],
+      "whyItMatters": "To jedna z najważniejszych tegorocznych bitew o IP w sektorze AI i hardware.",
+      "context": "Temat wpisuje się w szerszy wyścig Big Tech o sprzęt, modele i dane.",
+      "watchNext": [
+        "Czy sąd dopuści szybkie zabezpieczenia lub injunction.",
+        "Czy OpenAI opublikuje szczegółową odpowiedź na pozew."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Apple pozywa OpenAI",
+          "url": "https://tvn24.pl/biznes/tech/na-kazdym-szczeblu-apple-pozywa-openai-st9137919"
+        },
+        {
+          "title": "AP: Apple files lawsuit accusing ChatGPT maker OpenAI of stealing trade secrets",
+          "url": "https://apnews.com/article/6fff8833f5889d86406b89a02dd8fb16"
+        }
+      ],
+      "tags": [
+        "technologia",
+        "Apple",
+        "OpenAI",
+        "prawo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "technologia-openai-gpt-live-2026-07-12-0601",
+      "section": "Technologia",
+      "title": "OpenAI uruchamia GPT-Live",
+      "lead": "Nowe modele głosowe mają sprawić, że rozmowa z ChatGPT będzie bardziej naturalna.",
+      "whatHappened": "OpenAI poinformowało o starcie GPT-Live, nowej generacji modeli głosowych zasilających ChatGPT Voice. Firma podkreśla bardziej naturalną rozmowę i płynniejsze interakcje.",
+      "keyFacts": [
+        "Ogłoszenie pojawiło się 8 lipca 2026.",
+        "To część bieżącej odświeżki ekosystemu ChatGPT."
+      ],
+      "reactions": [
+        "OpenAI pozycjonuje to jako krok w stronę bardziej konwersacyjnej AI.",
+        "Zmiana wzmacnia presję na konkurentów w obszarze voice AI."
+      ],
+      "whyItMatters": "Głos staje się ważnym interfejsem konsumenckim i może przesunąć oczekiwania wobec asystentów AI.",
+      "context": "To równoległy sygnał do sporu Apple-OpenAI: jedna firma walczy o IP, druga przyspiesza produkt.",
+      "watchNext": [
+        "Czy GPT-Live trafi szerzej do kolejnych rynków i planów.",
+        "Czy konkurenci odpowiedzą porównywalną aktualizacją voice."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: Introducing GPT-Live",
+          "url": "https://openai.com/index/introducing-gpt-live/"
+        }
+      ],
+      "tags": [
+        "technologia",
+        "OpenAI",
+        "ChatGPT",
+        "voice AI"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
