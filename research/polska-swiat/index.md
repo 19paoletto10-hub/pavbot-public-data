@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-11
+Last updated: 2026-07-12
 
 ## Current Understanding
 
@@ -125,6 +125,15 @@ szerszy ślad ukraińskich uderzeń na Morzu Azowskim, a RCB wróciło do
 ostrzeżeń burzowych przy utrzymującej się suszy hydrologicznej. Najbliższy
 twardy termin pozostaje teraz 15 lipca dla unijnego pakietu sankcji na rosyjską
 ropę, a USA-Iran nadal nie ma przełomu.
+Po porannym runie 12 lipca główny ciężar przesuwa się na Ormuz: AP opisuje
+dużą odpowiedź USA po ataku na cypryjski kontenerowiec M/V GFS Galaxy,
+obejmującą około 140 celów w Iranie, a Iran deklaruje zamknięcie cieśniny do
+odwołania. Ukraina dokłada nowy poziom ryzyka wewnętrznego: Zełenski zapowiada
+odpowiedzialność za magazyn broni w obszarze cywilnym po eksplozjach pod
+Kijowem, a uderzenia na rosyjskie jednostki na Morzu Azowskim idą w dziesiątki.
+W Polsce Wołyń przechodzi w follow-up polityki pamięci, CBZC w follow-up
+zarzutów przygotowania zabójstw funkcjonariuszy, a Kłodzko w temat
+instytucjonalnej ochrony dzieci.
 
 ## Stable Facts
 
@@ -224,9 +233,22 @@ ropę, a USA-Iran nadal nie ma przełomu.
   bezpieczeństwa międzynarodowego.
 - RCB/hydrologia: jeżeli ostrzeżenia wygasają, w kolejnych raportach wspominać
   tylko suszę ogólnokrajową albo nowe alerty o szerokim zasięgu.
+- Ormuz po 12 lipca śledzić przed każdym audio: odróżniać potwierdzone fakty
+  AP/UKMTO/CENTCOM od irańskiej deklaracji zamknięcia cieśniny i od realnej
+  zdolności blokowania żeglugi.
+- Ukraiński wątek magazynu broni pod Kijowem opisywać jako osobny problem
+  odpowiedzialności państwa w czasie wojny, bez zdejmowania odpowiedzialności z
+  Rosji za atak.
+- CBZC: zarzuty przygotowania zabójstw funkcjonariuszy traktować procesowo i
+  wracać do oficjalnych komunikatów prokuratury, sądu lub biura.
+- Kłodzko prowadzić wyłącznie jako temat ochrony dzieci i przepływu informacji
+  między instytucjami; unikać szczegółów przestępstw i danych identyfikujących.
+- Wołyń/Mur Pamięci monitorować pod kątem formalnej decyzji o lokalizacji,
+  finansowaniu, projekcie i reakcji strony ukraińskiej.
 
 ## Recent Reports
 
+- [2026-07-12](runs/2026-07-12.md)
 - [2026-07-11](runs/2026-07-11.md)
 - [2026-07-11-1933](runs/2026-07-11-1933.md)
 - [2026-07-10](runs/2026-07-10.md)

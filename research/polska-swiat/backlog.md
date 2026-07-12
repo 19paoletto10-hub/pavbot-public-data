@@ -22,6 +22,11 @@
 | High | Track Hormuz guarantee demand and Trump-Iran threats | U.S. demands safe/open strait and Trump threatened retaliation after funeral calls against him | Check AP, CENTCOM, State Department, Iranian and Gulf statements | Open |
 | Medium | Track Russian oil sanctions and EU price-cap deadline | EU faces 15 July cap revision while a U.S. sanctions bill against buyers of Russian energy advances politically | Watch Euronews, Consilium, AP and Guardian for decisions | Open |
 | Medium | Monitor Smoleńsk monthly public-order escalation | Kaczyński/Tusk/police clash can fuel domestic polarization but should not dominate the security agenda | Use direct sources and avoid overamplifying insults | Open |
+| High | Track Hormuz closure and 12 July U.S. strike wave | AP reports that the U.S. hit about 140 Iranian targets after the M/V GFS Galaxy incident, while Iran says the strait is closed until further notice | Check AP, UKMTO, CENTCOM, Oman and Gulf state statements before podcast or evening update | Open |
+| High | Track Ukraine warehouse accountability and Azov vessel strikes | Zelenskyy announced accountability for weapons storage near homes while Ukraine expands maritime and fuel-logistics strikes | Watch Guardian, AP, Ukrainian official statements and Russian claims without merging casualty counts from different timestamps | Open |
+| Medium | Track Wołyń Mur Pamięci follow-up | Tusk announced a Warsaw memorial and PAP noted a political dispute over search and exhumation credit | Watch KPRM, Prezydent RP, MKiDN, IPN and Ukrainian reaction | Open |
+| Medium | Track CBZC attack charges | Court arrested a 29-year-old suspect and prosecutors allege preparation of murders of CBZC leadership and officers | Watch prosecutor, court and official CBZC/Police updates; avoid treating allegations as conviction | Open |
+| Medium | Track Kłodzko child-protection institutional response | TVN reports prosecutor explanations on why family court was not notified in a case involving children | Watch official prosecutor, RPD, family-court and social-services responses; avoid graphic detail | Open |
 
 ## Review Notes
 
@@ -135,6 +140,11 @@
 - 2026-07-11 evening: Wołyń moved from preview to completed state with
   confirmed KPRP and MON readouts; the active follow-up is now reaction
   tracking rather than event coverage.
+- 2026-07-12: Sunday morning research run created a material update. Strongest
+  sources were AP for Ormuz and USA-Iran, The Guardian/AP for Ukraine, TVN24/PAP
+  and Prezydent RP for Wołyń, TVN24/WP/CBZC for the CBZC case, and TVN24 for
+  Kłodzko. Podcast should lead with Ormuz and Ukraine, keep CBZC language
+  process-based, and keep Kłodzko factual, institutional and non-graphic.
 
 ## Done
 
