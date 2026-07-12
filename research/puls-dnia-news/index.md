@@ -113,6 +113,12 @@ fugitive case, the Patriot dispute, renewed Ukrainian strikes on Russian
 energy infrastructure, Ormuz escalation, Spanish wildfire rescues, the China
 evacuation wave and the CDC-confirmed Bundibugyo Ebola case in DRC.
 
+The 2026-07-12 18:01 slot moved the feed toward fresh Wołyń coverage and
+polsko-ukraińska dyplomacja, deszczowy radar i prognozę ocieplenia dla Polski,
+rosyjski kryzys paliwowy, kolejne uderzenia wokół Ormuzu, Toronto, Bavi,
+Wietnam, hiszpańskie pożary, DRC Ebola oraz nowe ryzyka regulacyjne wokół
+OpenAI i Meta.
+
 ## Data Shape
 
 The native iOS feed expects:

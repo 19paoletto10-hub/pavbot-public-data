@@ -1,0 +1,541 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-12",
+  "runTime": "18:01",
+  "status": "Material update",
+  "headline": "Puls 18:01: Wołyń, Ormuz i nowe alerty pogodowe",
+  "summary": "Nowy slot przynosi świeże krajowe karty o Wołyniu i dyplomacji, bieżące alerty pogodowe oraz nowe światowe sygnały z Ormuzu, Toronto, DRC, Bavi, Wietnamu, Hiszpanii i rynku AI.",
+  "checkedSources": [
+    {
+      "title": "TVN24: Wiadomości z kraju i ze świata",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24: Wiadomości z kraju",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24: Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24: Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "TVN24: Świat",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "CDC: Ebola outbreak current situation",
+      "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
+    },
+    {
+      "title": "WHO: Ebola outbreak - DRC 2026",
+      "url": "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"
+    }
+  ],
+  "items": [
+    {
+      "id": "polska-wolyn-zelenski-2026-07-12-1801",
+      "section": "Polska",
+      "title": "Zełenski o Wołyniu: potrzebna pełna prawda",
+      "lead": "Ukraiński prezydent wraca do pamięci o ofiarach i wspólnego upamiętnienia.",
+      "whatHappened": "TVN24 napisało, że Wołodymyr Zełenski podkreślił potrzebę pełnej prawdy o zbrodni wołyńskiej i przypomniał wspólne oddanie hołdu cywilnym ofiarom.",
+      "keyFacts": [
+        "Wątek dotyczy polityki pamięci i relacji polsko-ukraińskich.",
+        "TVN24 opisuje wypowiedź jako sygnał podtrzymania dialogu historycznego."
+      ],
+      "reactions": [
+        "Temat pozostaje wrażliwy dla obu stron i łatwo wraca do debaty publicznej.",
+        "Kolejne komunikaty po stronie Warszawy i Kijowa będą ważne dla tonu rozmowy."
+      ],
+      "whyItMatters": "Wołyń nadal jest jednym z najtrudniejszych punktów w relacjach Polski i Ukrainy.",
+      "context": "Każda rocznica i każdy wspólny sygnał są tu czytane politycznie, nie tylko historycznie.",
+      "watchNext": [
+        "Czy polski rząd lub prezydent odpowiedzą na tę wypowiedź.",
+        "Czy temat przełoży się na kolejne ruchy wokół ekshumacji i upamiętnienia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wołodymyr Zełenski o Wołyniu",
+          "url": "https://tvn24.pl/swiat/spor-o-zbrodnie-wolynska-wolodymyr-zelenski-potrzebna-jest-pelna-prawda-st9138750"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Wołyń",
+        "Ukraina",
+        "pamięć"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-sybiha-sikorski-2026-07-12-1801",
+      "section": "Polityka",
+      "title": "Sybiha po spotkaniu z Sikorskim",
+      "lead": "Kijów mówi o otwartym dialogu mimo napięć wokół pamięci i bezpieczeństwa.",
+      "whatHappened": "TVN24 podało, że Andrij Sybiha po rozmowie z Radosławem Sikorskim mówił o otwartości na szczery dialog, a także o ekshumacjach i współpracy wojskowej.",
+      "keyFacts": [
+        "Rozmowa dotyczyła relacji MSZ Polski i Ukrainy.",
+        "W komunikacie pojawiły się ekshumacje i współpraca wojskowa."
+      ],
+      "reactions": [
+        "To sygnał, że kanał dyplomatyczny działa mimo napięć publicznych.",
+        "Znaczenie będą miały kolejne, już konkretne ustalenia."
+      ],
+      "whyItMatters": "Relacja Polski i Ukrainy pozostaje kluczowa dla bezpieczeństwa regionu.",
+      "context": "Po serii sporów historycznych każda wypowiedź szefów dyplomacji ma podwójny ciężar.",
+      "watchNext": [
+        "Czy MSZ poda dodatkowe szczegóły po spotkaniu.",
+        "Czy pojawią się kolejne sygnały o współpracy wojskowej lub ekshumacjach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Andrij Sybiha po spotkaniu z Radosławem Sikorskim",
+          "url": "https://tvn24.pl/polska/andrij-sybiha-zabral-glos-po-spotkaniu-z-radoslawem-sikorskim-o-czym-rozmawiali-szefowie-msz-polski-i-ukrainy-st9127319"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "MSZ",
+        "Ukraina",
+        "dyplomacja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "alerty-deszczowa-niedziela-radar-opadow-2026-07-12-1801",
+      "section": "Alerty",
+      "title": "Deszczowa niedziela. Mapa i radar opadów",
+      "lead": "Przez Polskę przechodzą opady, a lokalnie także burze.",
+      "whatHappened": "TVN Meteo opublikowało aktualny radar opadów i opisało, jak deszcz wędruje przez kraj w niedzielę 12 lipca.",
+      "keyFacts": [
+        "Materiał TVN Meteo jest z 12.07.2026 07:20.",
+        "Prognoza wskazuje na przelotne opady i lokalne burze."
+      ],
+      "reactions": [
+        "To sygnał dla kierowców, organizatorów wydarzeń i służb miejskich.",
+        "Przy dynamicznej aurze sytuacja może zmieniać się z godziny na godzinę."
+      ],
+      "whyItMatters": "Bieżący radar opadów pomaga szybko ocenić ryzyko dla ruchu i aktywności na zewnątrz.",
+      "context": "Po serii chłodniejszych dni taki układ pogodowy może w praktyce utrudniać weekendowe plany.",
+      "watchNext": [
+        "Czy IMGW podniesie poziom ostrzeżeń.",
+        "Czy opady przesuną się na większe miasta w centrum kraju."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo: Deszczowa niedziela. Mapa i radar opadów",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/radar-opadow-gdzie-pada-i-bedzie-padac-st9137171"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "pogoda",
+        "deszcz",
+        "IMGW"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "alerty-pogoda-16-dni-upal-2026-07-12-1801",
+      "section": "Alerty",
+      "title": "Pogoda na 16 dni: cieplej, gorąco, upał",
+      "lead": "Po chłodniejszym lipcu pogoda wyraźnie zmienia kierunek.",
+      "whatHappened": "TVN Meteo pisze, że do Polski wracają suchsze i cieplejsze masy powietrza, a pod koniec tygodnia możliwy jest upał do 32 stopni na południu kraju.",
+      "keyFacts": [
+        "Artykuł opublikowano 12.07.2026 o 12:39.",
+        "Ocieplenie ma być wyraźniejsze od połowy tygodnia."
+      ],
+      "reactions": [
+        "To może zmienić poziom ryzyka pogodowego i popyt na alerty meteo.",
+        "W praktyce wzrośnie znaczenie lokalnych prognoz i nawodnienia."
+      ],
+      "whyItMatters": "Zmiana pogody z deszczu na upał zwykle szybko przekłada się na bezpieczeństwo i planowanie dnia.",
+      "context": "TVN Meteo opisuje wyjście z nietypowo chłodnego okresu i wejście w cieplejszy, bardziej suchy wzorzec.",
+      "watchNext": [
+        "Czy prognoza zamieni się w oficjalny alert upałowy.",
+        "Czy na południu kraju pojawi się realne zagrożenie dla imprez plenerowych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo: Pogoda na 16 dni: cieplej, gorąco, upał",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/pogoda-na-16-dni-dlugoterminowa-prognoza-na-lipiec-cieplej-goraco-upal-autorska-prognoza-tomasza-wasilewskiego-st9139095"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "upał",
+        "prognoza",
+        "Polska"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-rosja-stacje-nauczyciele-2026-07-12-1801",
+      "section": "Gospodarka",
+      "title": "Rosja wysyła nauczycieli i urzędników na stacje",
+      "lead": "Kryzys paliwowy w Rosji schodzi do poziomu codziennej obsługi kolejek.",
+      "whatHappened": "TVN24 Biznes podało, że rosyjskie władze kierują nauczycieli i urzędników do pracy na stacjach benzynowych, by ograniczyć chaos związany z brakami paliwa.",
+      "keyFacts": [
+        "Materiał wskazuje na niedobory po ukraińskich atakach na infrastrukturę paliwową.",
+        "Opis dotyczy Kraju Krasnodarskiego i organizacji pracy przy dystrybutorach."
+      ],
+      "reactions": [
+        "To mocny sygnał, że problem przestał być tylko polityczny, a stał się operacyjny.",
+        "Presja na dostawy paliw może jeszcze wpływać na ceny i logistykę."
+      ],
+      "whyItMatters": "Jeśli problem się utrzyma, będzie to kolejny koszt wojny dla rosyjskiej gospodarki i konsumentów.",
+      "context": "To nie jest jednorazowa anegdota, tylko objaw głębszych braków i konieczności improwizacji.",
+      "watchNext": [
+        "Czy Rosja wprowadzi kolejne ograniczenia albo racjonowanie paliwa.",
+        "Czy pojawi się oficjalna reakcja rynku lub władz regionalnych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Nadzwyczajne środki w Rosji",
+          "url": "https://tvn24.pl/biznes/ze-swiata/nadzwyczajne-srodki-w-rosji-nauczyciele-i-urzadnicy-wysylani-na-stacje-st9138895"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Rosja",
+        "paliwo",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-rafineria-tankowce-2026-07-12-1801",
+      "section": "Gospodarka",
+      "title": "Ukraina atakuje rafinerię i tankowce",
+      "lead": "Uderzenia w rosyjską infrastrukturę paliwową nadal podbijają presję na dostawy.",
+      "whatHappened": "TVN24 Biznes opisało nocny atak na rafinerię w Syzraniu oraz tankowce, który wpisuje się w szerszą kampanię uderzeń w rosyjską logistykę paliwową.",
+      "keyFacts": [
+        "Materiał odnosi się do ataku z nocy z 11 na 12 lipca.",
+        "Celem były rafineria i jednostki transportowe powiązane z paliwami."
+      ],
+      "reactions": [
+        "To może pogłębiać napięcie na rynku paliw i w logistyce eksportowej.",
+        "Rynek będzie patrzył na kolejne reakcje Moskwy i dane o niedoborach."
+      ],
+      "whyItMatters": "Ataki na rafinerie i transport paliw mają bezpośredni wpływ na zdolność Rosji do utrzymania podaży.",
+      "context": "To rozwinięcie tej samej wojny infrastrukturalnej, ale z nowym, świeżym materiałem źródłowym.",
+      "watchNext": [
+        "Czy pojawi się kolejny potwierdzony atak na infrastrukturę energetyczną.",
+        "Czy rosyjskie władze odpowiedzą dodatkowymi ograniczeniami."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Atak Ukrainy na rafinerię i tankowce",
+          "url": "https://tvn24.pl/biznes/ze-swiata/atak-ukrainy-na-rafinerie-i-tankowce-st9138929"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Rosja",
+        "Ukraina",
+        "paliwa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-ormuz-iran-usa-2026-07-12-1801",
+      "section": "Bezpieczeństwo",
+      "title": "USA i Iran wymieniają kolejne ciosy wokół Ormuzu",
+      "lead": "Kryzys na szlaku morskim znów się zaostrza.",
+      "whatHappened": "BBC i CNN opisują świeżą wymianę uderzeń między USA i Iranem oraz napięcie wokół Cieśniny Ormuz, którą Waszyngton nadal przedstawia jako otwartą.",
+      "keyFacts": [
+        "BBC opublikowało najnowszą aktualizację z 12.07.2026.",
+        "CNN prowadzi bieżący live update o wymianie ciosów."
+      ],
+      "reactions": [
+        "Ryzyko dla żeglugi, ubezpieczeń i cen energii pozostaje wysokie.",
+        "Każda kolejna odpowiedź może szybko zmienić skalę zagrożenia."
+      ],
+      "whyItMatters": "Ormuz to wąskie gardło dla globalnego handlu energią, więc lokalna eskalacja ma od razu efekt światowy.",
+      "context": "To nie jest już abstrakcyjne napięcie, tylko aktywna, wielodniowa wymiana ataków i komunikatów.",
+      "watchNext": [
+        "Czy pojawią się formalne ograniczenia dla żeglugi.",
+        "Czy linie lotnicze i firmy energetyczne zaktualizują swoje procedury."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US insists Strait of Hormuz is open as it exchanges strikes with Iran",
+          "url": "https://www.bbc.co.uk/news/articles/cj9gkpp0dkeo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: US and Iran exchange more strikes as tensions boil over in the Strait of Hormuz",
+          "url": "https://edition.cnn.com/2026/07/12/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Iran",
+        "USA",
+        "Ormuz"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-ebola-drc-cdc-2026-07-12-1801",
+      "section": "Bezpieczeństwo",
+      "title": "CDC potwierdza Ebola u Amerykanina w DRC",
+      "lead": "To świeży sygnał zdrowotnego ryzyka z ogniska Bundibugyo Ebola.",
+      "whatHappened": "CNN podało, że obywatel USA pracujący w Demokratycznej Republice Konga uzyskał dodatni wynik na Ebola. CDC i WHO prowadzą bieżące strony o outbreaku Bundibugyo Ebola w DRC i Ugandzie.",
+      "keyFacts": [
+        "CDC opisuje aktywne ognisko choroby w DRC i Ugandzie.",
+        "WHO monitoruje sytuację jako trwający outbreak wymagający koordynacji."
+      ],
+      "reactions": [
+        "To nie jest sygnał paniki, ale wymaga śledzenia oficjalnych komunikatów zdrowotnych.",
+        "Wątek może wrócić, jeśli pojawią się nowe kontakty lub zmiana oceny ryzyka."
+      ],
+      "whyItMatters": "Ebola pozostaje wysokostawkowym sygnałem public health, nawet jeśli ryzyko dla szerokiej populacji jest oceniane jako niskie.",
+      "context": "To temat dla służb zdrowia i podróżnych, a nie zwykła ciekawostka newsowa.",
+      "watchNext": [
+        "Czy CDC lub WHO opublikują nową aktualizację sytuacyjną.",
+        "Czy pojawią się dalsze restrykcje dla podróży z regionu."
+      ],
+      "sources": [
+        {
+          "title": "CNN: US citizen working in DR Congo tests positive for Ebola",
+          "url": "https://edition.cnn.com/2026/07/11/africa/us-citizen-tests-positive-ebola-bundibugyo-drc-hnk-intl"
+        },
+        {
+          "title": "CDC: Ebola outbreak current situation",
+          "url": "https://www.cdc.gov/ebola/situation-summary/index.html"
+        },
+        {
+          "title": "WHO: Ebola outbreak - DRC 2026",
+          "url": "https://www.who.int/emergencies/situations/ebola-outbreak---drc-2026"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Ebola",
+        "CDC",
+        "WHO"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-toronto-strzelanina-2026-07-12-1801",
+      "section": "Świat",
+      "title": "2 zabitych w strzelaninie w Toronto",
+      "lead": "Festiwal uliczny w Kanadzie zakończył się kolejną tragedią z użyciem broni.",
+      "whatHappened": "BBC i CNN opisują strzelaninę podczas największego latynoamerykańskiego festiwalu ulicznego w Toronto, w której zginęły dwie osoby.",
+      "keyFacts": [
+        "BBC podało materiał z 12.07.2026 o 03:56 GMT.",
+        "CNN potwierdza, że chodzi o festiwal uliczny w Toronto."
+      ],
+      "reactions": [
+        "To natychmiast uruchamia pytania o bezpieczeństwo imprez masowych.",
+        "Kanadyjskie służby będą pod presją, by szybko ustalić motyw i sprawcę."
+      ],
+      "whyItMatters": "Strzelanina w dużym mieście i na publicznej imprezie zawsze podnosi temat ochrony uczestników wydarzeń.",
+      "context": "To jedna z najświeższych kart globalnych z tegorocznego weekendu.",
+      "watchNext": [
+        "Czy policja poda motyw i sprawcę.",
+        "Czy miasto ogłosi dodatkowe środki bezpieczeństwa dla imprez plenerowych."
+      ],
+      "sources": [
+        {
+          "title": "BBC: 2 killed in mass shooting at Canada's largest Latin street festival in Toronto, police say",
+          "url": "https://www.bbc.co.uk/news/articles/ce3e66e1x3go?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: 2 killed in mass shooting at Canada’s largest Latin street festival in Toronto, police say",
+          "url": "https://edition.cnn.com/2026/07/11/world/toronto-shooting-sat-intl"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Toronto",
+        "bezpieczeństwo",
+        "strzelanina"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-chiny-ewakuacje-bavi-2026-07-12-1801",
+      "section": "Świat",
+      "title": "Chiny ewakuują prawie dwa miliony ludzi przed Bavi",
+      "lead": "Tajfun uderza w ląd i skala ewakuacji jest ogromna.",
+      "whatHappened": "BBC podaje, że Chiny ewakuowały blisko dwa miliony osób, gdy tajfun Bavi dotarł do lądu i zaczął generować silny wiatr oraz opady.",
+      "keyFacts": [
+        "To jeden z największych ruchów ewakuacyjnych w tym zestawie wiadomości.",
+        "Główne ryzyko dotyczy transportu, prądu i lokalnej infrastruktury."
+      ],
+      "reactions": [
+        "W praktyce oznacza to presję na władze lokalne i systemy ewakuacyjne.",
+        "Tajfun może szybko zmieniać swoją trajektorię i skalę zniszczeń."
+      ],
+      "whyItMatters": "Tak duża ewakuacja pokazuje, jak silny jest wpływ pogody na bezpieczeństwo publiczne w regionie.",
+      "context": "BBC publikuje to jako aktualny sygnał z Azji, nie archiwalną historię pogodową.",
+      "watchNext": [
+        "Czy pojawią się dane o zniszczeniach i zakłóceniach transportowych.",
+        "Czy alerty obejmą kolejne prowincje."
+      ],
+      "sources": [
+        {
+          "title": "BBC: China evacuates nearly two million people as powerful typhoon makes landfall",
+          "url": "https://www.bbc.co.uk/news/articles/cdxd3wkp2rzo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Chiny",
+        "tajfun",
+        "ewakuacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-wietnam-lodz-turysci-2026-07-12-1801",
+      "section": "Świat",
+      "title": "Łódź turystyczna wywróciła się u wybrzeży Wietnamu",
+      "lead": "Katastrofa morska w rejonie Phu Quoc skończyła się wieloma ofiarami.",
+      "whatHappened": "CNN podało, że jednostka przewożąca turystów przewróciła się u wybrzeży wietnamskiej wyspy Phu Quoc, zabijając 15 osób.",
+      "keyFacts": [
+        "To jedna z najpoważniejszych świeżych katastrof transportowych w Azji.",
+        "Wiadomość dotyczy rejsu turystycznego, nie transportu towarowego."
+      ],
+      "reactions": [
+        "Służby będą musiały wyjaśnić stan techniczny łodzi i warunki pogodowe.",
+        "Region turystyczny może szybko wprowadzić dodatkowe kontrole bezpieczeństwa."
+      ],
+      "whyItMatters": "Takie zdarzenia bezpośrednio wpływają na bezpieczeństwo podróży i lokalną gospodarkę turystyczną.",
+      "context": "CNN umieściło ten materiał w bieżących światowych kartach dnia.",
+      "watchNext": [
+        "Czy władze podadzą przyczynę wywrócenia jednostki.",
+        "Czy pojawią się dane o ocalałych i akcji ratunkowej."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Boat carrying tourists capsizes off Vietnam's Phu Quoc island, killing 15",
+          "url": "https://edition.cnn.com/2026/07/11/asia/tourist-boat-capsizes-vietnam-intl"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Wietnam",
+        "katastrofa",
+        "turystyka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-hiszpania-pozar-ratunek-2026-07-12-1801",
+      "section": "Świat",
+      "title": "Hiszpańskie pożary wymusiły dramatyczną ewakuację",
+      "lead": "W ogniu i dymie znów ucierpieli ludzie próbujący uciec z zagrożonego terenu.",
+      "whatHappened": "BBC podało, że ciężko poparzona brytyjska para została uratowana z wąwozu podczas pożarów w Hiszpanii, które nadal wymuszają akcje ratunkowe.",
+      "keyFacts": [
+        "To świeży materiał BBC z 12.07.2026.",
+        "Sytuacja pokazuje, że pożary nadal stanowią realne zagrożenie dla mieszkańców i turystów."
+      ],
+      "reactions": [
+        "Hiszpańskie służby i ratownicy pozostają pod presją kolejnych interwencji.",
+        "Turystyczne regiony mogą liczyć na dalsze utrudnienia i ostrzeżenia."
+      ],
+      "whyItMatters": "Pożary w Europie Południowej są już nie tylko historią klimatyczną, ale też bieżącym problemem bezpieczeństwa.",
+      "context": "To aktualizacja tej samej fali pożarów, ale z nową, bardzo konkretną akcją ratunkową.",
+      "watchNext": [
+        "Czy pożary rozszerzą się na kolejne regiony.",
+        "Czy pojawią się dalsze ewakuacje turystów i mieszkańców."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Badly burned British couple rescued from ravine during Spain wildfires, reports say",
+          "url": "https://www.bbc.co.uk/news/articles/cx2x7441762o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "Hiszpania",
+        "pożary",
+        "ratunek"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-apple-openai-pozew-2026-07-12-1801",
+      "section": "Technologia",
+      "title": "Apple oskarża OpenAI o wykorzystanie tajemnic handlowych",
+      "lead": "Nowy spór prawny dotyczy przyszłych gadżetów AI.",
+      "whatHappened": "CNN podało, że Apple złożyło pozew, w którym zarzuca OpenAI użycie skradzionych tajemnic handlowych do przygotowania nadchodzących urządzeń AI.",
+      "keyFacts": [
+        "To kolejny spór o to, kto kontroluje przyszłą warstwę sprzętu i oprogramowania AI.",
+        "Sprawa może dotyczyć nie tylko produktów, ale też wyceny technologii i partnerstw."
+      ],
+      "reactions": [
+        "Rynek będzie czytał to jako sygnał, że konkurencja o warstwę urządzeń AI się zaostrza.",
+        "Jeśli spór się rozwinie, może wpłynąć na współpracę między dużymi platformami."
+      ],
+      "whyItMatters": "To nie jest tylko proces o IP, ale potencjalnie spór o kierunek całego rynku AI consumer hardware.",
+      "context": "CNN traktuje to jako istotny news technologiczny, a nie niszową ciekawostkę prawną.",
+      "watchNext": [
+        "Czy OpenAI odpowie publicznie na zarzuty.",
+        "Czy sprawa wpłynie na harmonogram nowych produktów AI."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Apple accuses OpenAI of using stolen trade secrets to create its upcoming AI gadgets in new lawsuit",
+          "url": "https://edition.cnn.com/2026/07/10/tech/apple-openai-devices-lawsuit"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "Apple",
+        "OpenAI",
+        "pozew"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-meta-eu-design-2026-07-12-1801",
+      "section": "Technologia",
+      "title": "Meta i Instagram pod presją prawa UE",
+      "lead": "Komisja Europejska widzi ryzyko w uzależniającym designie platform.",
+      "whatHappened": "CNN podało, że Facebook i Instagram mogą naruszać europejskie prawo przez swój uzależniający design, co zwiększa presję regulacyjną na Meta.",
+      "keyFacts": [
+        "Materiał dotyczy oceny Komisji Europejskiej.",
+        "Sprawa łączy produkty konsumenckie, design i zgodność z prawem UE."
+      ],
+      "reactions": [
+        "To może zwiększyć presję na projektowanie feedów i mechanik rekomendacji.",
+        "Firmy platformowe zwykle reagują na takie sygnały ostrożnie, bo stawką są duże kary i ograniczenia."
+      ],
+      "whyItMatters": "Dla użytkowników oznacza to możliwy wpływ na sposób działania najpopularniejszych aplikacji społecznościowych.",
+      "context": "W praktyce to kolejny przykład, że Europa reguluje nie tylko treść, ale też mechanikę zaangażowania.",
+      "watchNext": [
+        "Czy Komisja opublikuje bardziej formalne ustalenia.",
+        "Czy Meta zapowie zmiany w interfejsie lub algorytmach."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Facebook and Instagram’s addictive design may violate European law, EU Commission finds",
+          "url": "https://edition.cnn.com/2026/07/10/tech/meta-eu-addictive-design"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "Meta",
+        "UE",
+        "regulacje"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
