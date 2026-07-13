@@ -142,6 +142,14 @@ and stronger Ormuz pressure. The tech layer now carries both EU child-safety
 regulation and a Meta AI rollback, and IMGW keeps the near-term weather alert
 surface active.
 
+The 2026-07-13 18:01 slot adds a fresh Polish transport disruption at Aleje
+Jerozolimskie, sustained burzowy pressure from IMGW and RCB, and another
+procedural turn in the Ziobro ENA story. On the world side it widens into the
+Paris coalition meeting, the UK IRGC clampdown, the Bangkok bar fire, the UK
+counter-terror arrests, the suspected Fontainebleau arson and the Gibraltar
+border deal, while the economy and tech layers keep Ormuz, SpaceX and the
+Musk-Altman feud in view.
+
 ## Data Shape
 
 The native iOS feed expects:

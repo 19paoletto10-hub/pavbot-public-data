@@ -1,0 +1,567 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-13",
+  "runTime": "18:01",
+  "status": "Material update",
+  "headline": "Nowy slot 18:01: kolej, burze, Ziobro i Ormuz",
+  "summary": "Slot 18:01 dokłada świeże utrudnienia kolejowe i alerty burzowe w Polsce, nowy ruch wokół Ziobry oraz silny pakiet światowy wokół IRGC, Bangkoku, Gibraltaru i pożaru pod Paryżem. W biznesie i technologii wracają Ormuz, SpaceX oraz spór Musk-Altman.",
+  "checkedSources": [
+    {
+      "title": "TVN24 najnowsze wiadomości",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Świat",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 TVN Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC News UK RSS",
+      "url": "https://feeds.bbci.co.uk/news/uk/rss.xml"
+    },
+    {
+      "title": "BBC News World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC News Business RSS",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml"
+    },
+    {
+      "title": "CNN transcripts 2026-07-13",
+      "url": "https://transcripts.cnn.com/show/ctw/date/2026-07-13/segment/01"
+    },
+    {
+      "title": "IMGW prognoza tygodniowa 13.07-19.07.2026",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-13-07-19-07-2026/"
+    },
+    {
+      "title": "GOV.UK proscribed terrorist groups",
+      "url": "https://www.gov.uk/government/publications/proscribed-terror-groups-or-organisations--2/proscribed-terrorist-groups-or-organisations-accessible-version"
+    },
+    {
+      "title": "Met Office heatwave notice",
+      "url": "https://www.metoffice.gov.uk/about-us/news-and-media/media-centre/weather-and-climate-news/2026/heatwave-continues-as-uk-records-unprecedented-run-of-35c-days"
+    },
+    {
+      "title": "Consilium Gibraltar deal",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/04/01/eu-uk-relations-member-states-greenlight-eu-uk-deal-on-gibraltar/"
+    },
+    {
+      "title": "AP Bangkok fire",
+      "url": "https://apnews.com/article/thailand-bangkok-fire-pub-0869e3d356d4be11c5633f9ceb3dc329"
+    }
+  ],
+  "items": [
+    {
+      "id": "polska-awaria-pociagu-aleje-jerozolimskie-2026-07-13-1801",
+      "section": "Polska",
+      "title": "Awaria pociągu przy Alejach Jerozolimskich",
+      "lead": "Kolej mazowiecka utknęła przy warszawskiej stacji i wywołała utrudnienia.",
+      "whatHappened": "W pobliżu stacji Warszawa Aleje Jerozolimskie doszło do awarii pociągu Kolei Mazowieckich. TVN24 podało, że zdarzenie wywołało utrudnienia w ruchu i opóźnienia dla pasażerów.",
+      "keyFacts": [
+        "Zdarzenie dotyczy ruchu podmiejskiego w Warszawie.",
+        "Na razie mowa o utrudnieniach, a nie o większym incydencie bezpieczeństwa."
+      ],
+      "reactions": [
+        "Przewoźnik i pasażerowie muszą liczyć się z opóźnieniami.",
+        "To kolejny przykład podatności stołecznego węzła na pojedynczą awarię."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na dojazdy i może szybko rozlać się na cały podmiejski układ komunikacyjny.",
+      "context": "Warszawski odcinek kolejowy regularnie reaguje na drobne awarie większymi zatorami w godzinach szczytu.",
+      "watchNext": [
+        "Sprawdzić, czy przewoźnik poda czas usunięcia awarii.",
+        "Śledzić, czy utrudnienia rozlewają się na kolejne linie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Awaria pociągu przy stacji Aleje Jerozolimskie. Utrudnienia na kolei",
+          "url": "https://tvn24.pl/tvnwarszawa/komunikacja/warszawa-awaria-pociagu-kolei-mazowieckich-utrudnienia-na-kolei-st9140945?source=rss"
+        },
+        {
+          "title": "TVN24: Polska",
+          "url": "https://tvn24.pl/polska"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "kolej",
+        "transport"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-imgw-rcb-burze-2026-07-13-1801",
+      "section": "Alerty",
+      "title": "IMGW i RCB ostrzegają przed burzami",
+      "lead": "Nad Polską przechodzą nawałnice z gradem, ulewami i ryzykiem podtopień.",
+      "whatHappened": "TVN24 Meteo opisuje linię burz nad Polską, a alert RCB objął sześć województw. IMGW utrzymuje pomarańczowe ostrzeżenia i prognozuje dalsze opady, lokalny grad oraz możliwy późniejszy powrót upału.",
+      "keyFacts": [
+        "Alert dotyczy kilku regionów jednocześnie.",
+        "Ryzyko obejmuje podtopienia, silny wiatr i grad."
+      ],
+      "reactions": [
+        "Służby ostrzegają przed gwałtownym rozwojem zjawisk.",
+        "Mieszkańcy powinni ograniczyć aktywność na zewnątrz w czasie burz."
+      ],
+      "whyItMatters": "To najbardziej bezpośredni, krótkoterminowy alert dla odbiorców w Polsce.",
+      "context": "W poprzednich slotach pogodowe ostrzeżenia były już aktywne; ten run utrzymuje je w centrum feedu.",
+      "watchNext": [
+        "Sprawdzić, czy IMGW podniesie poziom ostrzeżeń.",
+        "Obserwować, czy RCB rozszerzy zasięg alertu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Gdzie jest burza? Linie nawałnic nad Polską. Może padać duży grad",
+          "url": "https://tvn24.pl/tvnmeteo/polska/gdzie-jest-burza-burze-w-polsce-w-poniedzialek-13-07-mapa-i-radar-burz-na-zywo-st9140920?source=rss"
+        },
+        {
+          "title": "TVN24: Alert RCB dla sześciu województw",
+          "url": "https://tvn24.pl/tvnmeteo/polska/alert-rcb-w-poniedzialek-13-07-burze-intensywne-opady-deszczu-mozliwe-podtopienia-st9140872?source=rss"
+        },
+        {
+          "title": "IMGW prognoza tygodniowa 13.07-19.07.2026",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-13-07-19-07-2026/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "IMGW",
+        "RCB"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-ziobro-ena-2026-07-13-1801",
+      "section": "Polityka",
+      "title": "Prokuratura zostawia otwartą drogę do nowego ENA dla Ziobry",
+      "lead": "Po pisemnym uzasadnieniu możliwy jest kolejny wniosek o ekstradycję.",
+      "whatHappened": "Prokuratura Krajowa podała, że po zapoznaniu się z pisemnym uzasadnieniem postanowienia zdecyduje, czy ponownie wystąpić z wnioskiem o europejski nakaz aresztowania wobec Zbigniewa Ziobry.",
+      "keyFacts": [
+        "Sprawa dotyczy dalszego biegu postępowania, nie finalnej decyzji.",
+        "Kluczowe ma być uzasadnienie sądu."
+      ],
+      "reactions": [
+        "Prokuratura nie zamyka tematu.",
+        "Obrona i komentatorzy mogą reagować dopiero po publikacji uzasadnienia."
+      ],
+      "whyItMatters": "To może przesunąć sprawę z fazy polityczno-medialnej do kolejnego formalnego kroku prawnego.",
+      "context": "W poprzednim slocie temat Ziobry już był obecny, ale teraz pojawia się nowa, bardziej konkretna procedura.",
+      "watchNext": [
+        "Śledzić publikację pisemnego uzasadnienia.",
+        "Sprawdzić, czy prokuratura złoży nowy wniosek."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Prokuratura nie wyklucza ponownego wniosku o ENA dla Zbigniewa Ziobry",
+          "url": "https://tvn24.pl/polska/moze-byc-kolejny-wniosek-o-ena-dla-zbigniewa-ziobry-prokuratura-krajowa-tego-nie-wyklucza-st9140948?source=rss"
+        },
+        {
+          "title": "TVN24: Polska",
+          "url": "https://tvn24.pl/polska"
+        }
+      ],
+      "tags": [
+        "Ziobro",
+        "ENA",
+        "prokuratura"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-lebork-72-latek-ciezarowka-2026-07-13-1801",
+      "section": "Polska",
+      "title": "72-latek zginął pod ciężarówką w Lęborku",
+      "lead": "Wypadek na ulicy Krzywoustego zakończył się śmiercią pieszego.",
+      "whatHappened": "W Lęborku 72-letni mężczyzna zginął pod kołami ciężarówki około 13:30. TVN24 podało, że do zdarzenia doszło na ulicy Krzywoustego.",
+      "keyFacts": [
+        "To śmiertelny wypadek drogowy w bieżącym slocie.",
+        "Na ten moment nie ma wstępnych informacji o szerszych utrudnieniach."
+      ],
+      "reactions": [
+        "Służby zabezpieczyły miejsce zdarzenia.",
+        "Sprawa wymaga ustalenia przebiegu manewrów i widoczności."
+      ],
+      "whyItMatters": "To twardy sygnał bezpieczeństwa drogowego i lokalnego ryzyka dla pieszych.",
+      "context": "Takie zdarzenia zwykle prowadzą do krótkich, ale ważnych komunikatów policji i prokuratury.",
+      "watchNext": [
+        "Śledzić policyjny komunikat o przyczynach.",
+        "Sprawdzić, czy pojawią się utrudnienia w ruchu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: 72-latek zginął pod kołami ciężarówki",
+          "url": "https://tvn24.pl/trojmiasto/lebork-72-latek-zginal-pod-kolami-ciezarowki-st9140957?source=rss"
+        }
+      ],
+      "tags": [
+        "Lębork",
+        "wypadek",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-tusk-koalicja-chetnych-paryz-2026-07-13-1801",
+      "section": "Świat",
+      "title": "Tusk w Paryżu na spotkaniu koalicji chętnych",
+      "lead": "Sojusznicy Ukrainy rozmawiają o dalszym wsparciu i celach rozmów.",
+      "whatHappened": "W Paryżu zebrała się koalicja państw wspierających Ukrainę. W spotkaniu uczestniczył premier Donald Tusk, a szef MSZ Francji mówił o trzech celach rozmów.",
+      "keyFacts": [
+        "Spotkanie dotyczy wsparcia Ukrainy.",
+        "Paryż pozostaje ważnym miejscem koordynacji europejskiej polityki wobec wojny."
+      ],
+      "reactions": [
+        "Francuski resort dyplomacji ramuje rozmowy w konkretnych celach.",
+        "Warszawa pozostaje aktywnym uczestnikiem tej grupy."
+      ],
+      "whyItMatters": "To sygnał ciągłej koordynacji sojuszniczej wobec wojny i bezpieczeństwa Europy.",
+      "context": "Temat łączy politykę zagraniczną, bezpieczeństwo i długofalowe wsparcie dla Kijowa.",
+      "watchNext": [
+        "Sprawdzić, czy uczestnicy opublikują wspólne oświadczenie.",
+        "Śledzić, czy padną nowe deklaracje wsparcia militarnego lub finansowego."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Spotkanie koalicji chętnych w Paryżu. Z udziałem Donalda Tuska",
+          "url": "https://tvn24.pl/swiat/spotkanie-koalicji-chetnych-w-paryzu-z-udzialem-premiera-donalda-tuska-st9140951?source=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Francja",
+        "Tusk"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-irgc-wielka-brytania-2026-07-13-1801",
+      "section": "Świat",
+      "title": "Wielka Brytania zakazuje wsparcia dla IRGC",
+      "lead": "Londyn zaostrza podejście wobec irańskiej Gwardii Rewolucyjnej.",
+      "whatHappened": "BBC podało, że brytyjski Home Office wykorzysta nowe uprawnienia do zakazania wsparcia dla IRGC. GOV.UK utrzymuje tę organizację na liście podmiotów proskrybowanych w ramach ustawy o terroryzmie.",
+      "keyFacts": [
+        "IRGC pozostaje w brytyjskim reżimie kontrterrorystycznym.",
+        "BBC łączy tę decyzję z groźbami i zastraszaniem na brytyjskiej ziemi."
+      ],
+      "reactions": [
+        "Shabana Mahmood przedstawia ruch jako odpowiedź bezpieczeństwa.",
+        "Sprawa może podbić napięcie Londyn-Teheran."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na relacje brytyjsko-irańskie i na politykę kontrterrorystyczną.",
+      "context": "Wcześniejsze sloty już budowały presję wokół Iranu, więc ten wątek pozostaje centralny.",
+      "watchNext": [
+        "Śledzić reakcję Iranu i brytyjskie uzasadnienie prawne.",
+        "Sprawdzić, czy pojawią się nowe środki wykonawcze."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: UK bans support for Iran's Islamic Revolutionary Guard Corps",
+          "url": "https://www.bbc.co.uk/news/articles/cz0jkj7e87go?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "GOV.UK: Proscribed terrorist groups or organisations",
+          "url": "https://www.gov.uk/government/publications/proscribed-terror-groups-or-organisations--2/proscribed-terrorist-groups-or-organisations-accessible-version"
+        }
+      ],
+      "tags": [
+        "IRGC",
+        "Wielka Brytania",
+        "terroryzm"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-bangkok-pozar-baru-2026-07-13-1801",
+      "section": "Świat",
+      "title": "Bangkok: pożar baru zabił co najmniej 28 osób",
+      "lead": "Ogień odciął drogę ucieczki w zatłoczonym lokalu.",
+      "whatHappened": "BBC i AP opisują pożar baru w Bangkoku, w którym zginęło co najmniej 28 osób, a kolejne 25 było ciężko rannych. Wstępne relacje mówią o błyskawicznym rozprzestrzenianiu się dymu i możliwych problemach z wyjściami ewakuacyjnymi.",
+      "keyFacts": [
+        "Liczby ofiar wciąż mogą się jeszcze zmieniać.",
+        "Śledczy sprawdzają przebieg ewakuacji i bezpieczeństwo lokalu."
+      ],
+      "reactions": [
+        "Premier Tajlandii odwiedził miejsce zdarzenia.",
+        "Śledztwo koncentruje się na przyczynach i ewentualnych zaniedbaniach."
+      ],
+      "whyItMatters": "To duża tragedia publiczna i kolejny test dla standardów bezpieczeństwa lokali rozrywkowych.",
+      "context": "W regionie takie pożary zwykle wywołują pytania o drogi ewakuacji, materiały wykończeniowe i nadzór.",
+      "watchNext": [
+        "Sprawdzić kolejne komunikaty o bilansie ofiar.",
+        "Śledzić ustalenia policji i straży pożarnej."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Bangkok bar fire",
+          "url": "https://www.bbc.co.uk/news/articles/c24yev53q06o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "AP News: Fire breaks out at a pub in Bangkok, killing at least 27 people",
+          "url": "https://apnews.com/article/thailand-bangkok-fire-pub-0869e3d356d4be11c5633f9ceb3dc329"
+        }
+      ],
+      "tags": [
+        "Bangkok",
+        "pożar",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-aresztowania-grozba-wydarzenie-islamskie-2026-07-13-1801",
+      "section": "Świat",
+      "title": "W Wielkiej Brytanii zatrzymano 12 osób po groźbie wobec wydarzenia islamskiego",
+      "lead": "Policja mówi o akcji, która mogła uratować życie.",
+      "whatHappened": "BBC podało, że zatrzymano 12 osób w związku z groźbą wobec wydarzenia islamskiego. Home Secretary powiedziała, że reakcja policji prawdopodobnie zapobiegła ofiarom.",
+      "keyFacts": [
+        "Sprawa jest prowadzona jako temat kontrterrorystyczny.",
+        "Śledztwo obejmuje przygotowanie i zamiar potencjalnego ataku."
+      ],
+      "reactions": [
+        "Władze pokazują tę sprawę jako argument za sprawniejszym działaniem służb.",
+        "To może wzmocnić debatę o bezpieczeństwie zgromadzeń publicznych."
+      ],
+      "whyItMatters": "To bezpośredni sygnał o realnym ryzyku terrorystycznym w Europie Zachodniej.",
+      "context": "W połączeniu z IRGC wątek bezpieczeństwa w UK jest teraz wyjątkowo gorący.",
+      "watchNext": [
+        "Śledzić, czy prokuratura postawi zarzuty.",
+        "Sprawdzić, czy służby ujawnią więcej o charakterze groźby."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Twelve arrested over threat to Islamic event",
+          "url": "https://www.bbc.co.uk/news/articles/cvgl20x1ggpo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Wielka Brytania",
+        "terroryzm",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-pozar-fontainebleau-podparyzem-2026-07-13-1801",
+      "section": "Świat",
+      "title": "Pożar pod Paryżem mógł być podłożony",
+      "lead": "Francuscy śledczy badają możliwy akt podpalenia w lesie Fontainebleau.",
+      "whatHappened": "BBC i AP opisują ogromny pożar lasu Fontainebleau na południe od Paryża. Francuski minister zasugerował, że ogień mógł zostać wzniecony celowo, a służby musiały użyć samolotów gaśniczych i ewakuować część obszaru.",
+      "keyFacts": [
+        "Pożar miał dużą skalę i wymagał intensywnej akcji gaśniczej.",
+        "Sprawdzany jest wariant podpalenia."
+      ],
+      "reactions": [
+        "Francuski rząd traktuje sprawę jako potencjalny akt sabotażu lub przestępstwa.",
+        "To kolejny europejski przykład pożarów nasilanych przez pogodę i ludzką aktywność."
+      ],
+      "whyItMatters": "To łączy bezpieczeństwo publiczne z ryzykiem sabotażu i coraz trudniejszym sezonem pożarowym.",
+      "context": "Wcześniejsze sloty już miały hiszpańskie pożary, więc Europa Południowa i Francja pozostają w wysokim ryzyku.",
+      "watchNext": [
+        "Śledzić, czy śledczy potwierdzą podpalenie.",
+        "Sprawdzić, czy pożar wpływa na ruch kolejowy i drogowy."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Wildfire raging south of Paris could have been set deliberately, says minister",
+          "url": "https://www.bbc.co.uk/news/articles/clye4z168edo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "AP News: Fire in Fontainebleau forest near Paris triggers evacuations",
+          "url": "https://apnews.com/article/9231f354a12af0d1fd40aff4f759240b"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "pożary",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-jezydzi-wyrok-niemcy-2026-07-13-1801",
+      "section": "Świat",
+      "title": "Niemiecki sąd skazał parę za zniewolenie jezydzkich dziewcząt",
+      "lead": "Wyrok dotyczy zbrodni Państwa Islamskiego wobec jezydzkich ofiar.",
+      "whatHappened": "BBC podało, że niemiecki sąd skazał iracką parę za zniewalanie jezydzkich dziewcząt. Sprawa dotyczyła członków Państwa Islamskiego i przemocy wobec mniejszości religijnej.",
+      "keyFacts": [
+        "To wyrok karny w sprawie zbrodni wojennych i niewolnictwa.",
+        "Ofiarami były jezydzkie dziewczęta uprowadzone przez ISIS."
+      ],
+      "reactions": [
+        "Wyrok wpisuje się w długie rozliczenia zbrodni ISIS.",
+        "To ważny sygnał dla ofiar i śledczych od lat dokumentujących te przestępstwa."
+      ],
+      "whyItMatters": "To przypomnienie, że zbrodnie ISIS nadal trafiają przed europejskie sądy.",
+      "context": "Choć temat jest mniej gorący niż pożary czy IRGC, ma duże znaczenie dla praw człowieka i prawa międzynarodowego.",
+      "watchNext": [
+        "Sprawdzić, czy strona obrony złoży apelację.",
+        "Śledzić, czy pojawią się kolejne wyroki związane z ISIS."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: German court convicts Iraqi couple of enslaving Yazidi girls",
+          "url": "https://www.bbc.co.uk/news/articles/cg53rp4e2j4o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "ISIS",
+        "jezydzi",
+        "prawo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-gibraltar-border-controls-2026-07-13-1801",
+      "section": "Świat",
+      "title": "Gibraltar ma wejść w nową erę bez kontroli granicznych",
+      "lead": "Od 15 lipca ruszyć ma nowe porozumienie UE i Wielkiej Brytanii.",
+      "whatHappened": "BBC Business podało, że zniesienie 118-letnich kontroli na granicy z Hiszpanią otwiera nowy rozdział dla Gibraltaru. Oficjalny komunikat Rady UE wskazuje 15 lipca 2026 jako termin provisional application porozumienia.",
+      "keyFacts": [
+        "Porozumienie ma usunąć fizyczne bariery na granicy.",
+        "To krok o znaczeniu gospodarczym i politycznym."
+      ],
+      "reactions": [
+        "Gibraltar i UE przedstawiają deal jako impuls dla regionu.",
+        "Hiszpania i UK dostają praktyczny test po brexicie."
+      ],
+      "whyItMatters": "To może zmienić codzienne życie mieszkańców i ruch gospodarczy między Hiszpanią a Gibraltarem.",
+      "context": "To jeden z nielicznych nowych, pozytywnych sygnałów integracyjnych w europejskiej polityce po brexicie.",
+      "watchNext": [
+        "Sprawdzić komunikaty wdrożeniowe z 15 lipca.",
+        "Obserwować, czy pojawią się kwestie techniczne przy wdrożeniu granicy."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: New era for Gibraltar with removal of 118-year-old border controls with Spain",
+          "url": "https://www.bbc.co.uk/news/articles/cwydz60j3eno?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Consilium: EU-UK relations, Gibraltar deal",
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/04/01/eu-uk-relations-member-states-greenlight-eu-uk-deal-on-gibraltar/"
+        }
+      ],
+      "tags": [
+        "Gibraltar",
+        "UE",
+        "handel"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-ormuz-trump-2026-07-13-1801",
+      "section": "Gospodarka",
+      "title": "Trump podbija napięcie wokół cieśniny Ormuz",
+      "lead": "Zapowiedź opłat w cieśninie zwiększa presję na rynek ropy i żeglugę.",
+      "whatHappened": "TVN24 Biznes opisało słowa Donalda Trumpa o pobieraniu opłat w cieśninie Ormuz. W połączeniu z wcześniejszą eskalacją wokół Iranu temat utrzymuje ryzyko dla rynku energii i transportu morskiego.",
+      "keyFacts": [
+        "To wątek ściśle powiązany z bezpieczeństwem energetycznym.",
+        "Ormuz pozostaje jednym z najwrażliwszych punktów światowej żeglugi."
+      ],
+      "reactions": [
+        "Rynki nadal reagują na każdy sygnał z Iranu i Waszyngtonu.",
+        "Odbiorcy energii muszą liczyć się z dodatkowymi skokami cen."
+      ],
+      "whyItMatters": "Każda nowa deklaracja wokół Ormuzu szybko przekłada się na ropę, ubezpieczenia i fracht.",
+      "context": "To kontynuacja tematu, który już w poprzednim slocie był jednym z głównych driverów feedu.",
+      "watchNext": [
+        "Śledzić reakcję rynku ropy.",
+        "Sprawdzać, czy pojawią się konkretne decyzje, a nie tylko retoryka."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Trump będzie pobierać opłaty w cieśninie Ormuz",
+          "url": "https://tvn24.pl/biznes/ze-swiata/trump-bedziemy-pobierac-oplaty-w-ciesninie-ormuz-st9140912?source=rss"
+        },
+        {
+          "title": "TVN24: Trwoga w Ormuzie. Tak źle nie było od tygodni",
+          "url": "https://tvn24.pl/biznes/ze-swiata/trwoga-w-ormuzie-tak-zle-nie-bylo-od-tygodni-st9140441?source=rss"
+        }
+      ],
+      "tags": [
+        "Ormuz",
+        "ropa",
+        "rynki"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-spacex-ipo-2026-07-13-1801",
+      "section": "Gospodarka",
+      "title": "Debiut SpaceX traci impet po miesiącu",
+      "lead": "BBC pyta, czy historyczne wejście na rynek nie wyczerpało pierwszego efektu.",
+      "whatHappened": "BBC Business analizuje, czy giełdowy debiut SpaceX nadal rozpędza wycenę i zainteresowanie inwestorów. Materiał sugeruje, że po rekordowym wejściu na rynek część entuzjazmu wyparowała.",
+      "keyFacts": [
+        "Temat dotyczy nastrojów wokół spółek prywatnych wchodzących na giełdę.",
+        "To bardziej sygnał rynkowy niż twarda nowina operacyjna."
+      ],
+      "reactions": [
+        "Inwestorzy zaczynają testować, czy hype przechodzi w fundamenty.",
+        "Porównanie z innymi debiutami może być dla rynku bardziej pouczające niż sam headline."
+      ],
+      "whyItMatters": "To wskaźnik nastroju na rynku technologii i wycen wzrostowych.",
+      "context": "SpaceX pozostaje marką o ogromnym znaczeniu dla ekosystemu AI, satelitów i kosmosu.",
+      "watchNext": [
+        "Śledzić, czy pojawią się kolejne wyniki lub ruchy inwestorów.",
+        "Sprawdzić, czy inni gracze kosmiczni pójdą podobną drogą."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: The SpaceX IPO made history. One month on has it lost momentum?",
+          "url": "https://www.bbc.co.uk/news/articles/c3wyj6e4210o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "SpaceX",
+        "giełda",
+        "technologia"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-musk-altman-openai-2026-07-13-1801",
+      "section": "Technologia",
+      "title": "Musk i Altman znów ścierają się o OpenAI",
+      "lead": "Spór o kierunek i reputację firmy wraca do głównego nurtu technologii.",
+      "whatHappened": "TVN24 Biznes opisało kolejne uszczypliwości Elona Muska wobec Sama Altmana i odpowiedź szefa OpenAI. To kolejny sygnał, że spór wokół OpenAI i strategii AI wciąż ma silny ciężar medialny.",
+      "keyFacts": [
+        "Spór dotyczy przywództwa, misji i kontroli nad kierunkiem rozwoju AI.",
+        "Wątek ma także wymiar prawny i reputacyjny."
+      ],
+      "reactions": [
+        "Musk dalej wykorzystuje publiczną presję.",
+        "OpenAI odpowiada politycznie i wizerunkowo, a nie tylko produktowo."
+      ],
+      "whyItMatters": "To wpływa na postrzeganie całego rynku AI i ryzyka regulacyjnego wokół największych graczy.",
+      "context": "W poprzednich slotach technologia była już obecna przez Meta i UE; ten temat utrzymuje presję wokół AI.",
+      "watchNext": [
+        "Śledzić, czy spór przełoży się na nowe działania prawne.",
+        "Sprawdzać, czy obie strony ogłoszą kolejne produkty lub zmiany strategiczne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Elon znów ma obsesję",
+          "url": "https://tvn24.pl/biznes/tech/musk-szydzi-z-altmana-szef-openai-odpowiada-st9140149?source=rss"
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "Musk",
+        "AI"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
