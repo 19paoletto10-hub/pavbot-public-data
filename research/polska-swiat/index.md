@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-12
+Last updated: 2026-07-13
 
 ## Current Understanding
 
@@ -138,6 +138,15 @@ Po popołudniowym sygnale AP o śmierci Lindsaya Grahama dołącza nowy follow-u
 amerykański: jego brak może zmienić ton debat o Ukrainie, NATO i sankcjach
 wobec Rosji, bo był jednym z najważniejszych republikańskich głosów w tych
 sprawach.
+Po porannym runie 13 lipca centrum ciężkości zostaje przy Ormuzie, ale z nową
+fazą: AP opisuje poniedziałkowy spór USA-Iran o kontrolę nad cieśniną, kolejne
+amerykańskie uderzenia w cele irańskie, alerty w Bahrajnie i Kuwejcie oraz
+reakcję rynku ropy. Ukraina weszła jednocześnie w przebudowę rządu po odejściu
+Julii Swyrydenko, z priorytetami obejmującymi Patriot, europejski projekt
+antyrakietowy, UE oraz relacje z Polską i Węgrami. Polski poranny kontekst to
+agenda Tuska: centrum ESA w Warszawie i paryska Koalicja Chętnych, plus
+planowe ćwiczenia wojskowe na północnym wschodzie z apelem o higienę
+informacyjną.
 
 ## Stable Facts
 
@@ -249,9 +258,23 @@ sprawach.
   między instytucjami; unikać szczegółów przestępstw i danych identyfikujących.
 - Wołyń/Mur Pamięci monitorować pod kątem formalnej decyzji o lokalizacji,
   finansowaniu, projekcie i reakcji strony ukraińskiej.
+- Po 13 lipca Ormuz śledzić w dwóch warstwach: realna przepustowość żeglugi i
+  bezpieczeństwo statków osobno od deklaracji politycznych USA/Iran; osobno
+  monitorować wpływ na ropę i rynek.
+- Ukraińską rekonstrukcję rządu prowadzić jako temat skuteczności polityki
+  zagranicznej i obronnej, szczególnie Patriot, europejski projekt
+  antyrakietowy oraz relacje z Polską i Węgrami.
+- KPRM/ESA: po wydarzeniu 10:30 sprawdzić, czy ogłoszono lokalizację, mandat i
+  finansowanie centrum ESA, bo poranny raport zawiera zapowiedź.
+- Koalicja Chętnych w Paryżu: po spotkaniu 17:00 sprawdzić komunikat KPRM,
+  Pałacu Elizejskiego, Guardiana lub AP o gwarancjach bezpieczeństwa, obronie
+  przeciwbalistycznej i shadow fleet.
+- Ćwiczenia wojskowe DORSZ omawiać bez szczegółów lokalizacji i ruchu wojsk;
+  powtarzać apel o niepublikowanie zdjęć i nagrań sprzętu.
 
 ## Recent Reports
 
+- [2026-07-13](runs/2026-07-13.md)
 - [2026-07-12-1933](runs/2026-07-12-1933.md)
 - [2026-07-12](runs/2026-07-12.md)
 - [2026-07-11](runs/2026-07-11.md)

@@ -28,6 +28,13 @@
 | Medium | Track Graham death fallout | Graham was one of the clearest U.S. voices for Ukraine, NATO and sanctions on Russia; his death may shift Senate messaging | Watch AP, Senate, White House, Zelenskyy and NATO reactions plus successor steps | Open |
 | Medium | Track CBZC attack charges | Court arrested a 29-year-old suspect and prosecutors allege preparation of murders of CBZC leadership and officers | Watch prosecutor, court and official CBZC/Police updates; avoid treating allegations as conviction | Open |
 | Medium | Track Kłodzko child-protection institutional response | TVN reports prosecutor explanations on why family court was not notified in a case involving children | Watch official prosecutor, RPD, family-court and social-services responses; avoid graphic detail | Open |
+| High | Track 13 July Hormuz control dispute and market shock | AP says U.S. and Iran both claim control; U.S. hit dozens of targets Monday; Brent and WTI rose nearly 5 percent | Check AP, UKMTO, CENTCOM, Gulf state statements and oil-market updates before podcast or evening update | Open |
+| High | Track Ukraine government reshuffle and foreign-policy priorities | Svyrydenko stepped down; Zelenskyy ties reshuffle to Patriot license, European antimissile project, EU, Poland/Hungary and partners | Watch AP, Guardian, President of Ukraine, Verkhovna Rada and Polish/KPRM reactions | Open |
+| High | Track Coalition of the Willing Paris meeting | KPRM says Tusk attends 13 July talks on ceasefire or peace scenario and guarantees for Ukraine | Check KPRM, Elysee, Guardian and AP after 17:00 | Open |
+| Medium | Track ESA centre announcement in Poland | KPRM says ESA DG and Polish officials will announce seat of ESA centre in Poland, first outside founding states | Check post-event KPRM/ESA release for location, mandate, funding and timeline | Open |
+| Medium | Track DORSZ northeast training information hygiene | Training 13-14 July includes appeal not to publish troop or equipment movements | Keep coverage generic; no location or routing detail; monitor MON/DORSZ updates | Open |
+| Medium | Track Bangkok pub fire investigation | AP reports at least 27 dead, 63 hospitalized and 22 critical; evacuation exits and materials are under investigation | Watch AP and Thai authorities for casualty updates and safety findings | Open |
+| Medium | Track Unia Centrum political consolidation | Hennig-Kloska announced a new party merging Centrum Polska and UED, with a September convention | Watch registration, parliamentary club size, coalition impact and program convention | Open |
 
 ## Review Notes
 
@@ -146,6 +153,12 @@
   and Prezydent RP for Wołyń, TVN24/WP/CBZC for the CBZC case, and TVN24 for
   Kłodzko. Podcast should lead with Ormuz and Ukraine, keep CBZC language
   process-based, and keep Kłodzko factual, institutional and non-graphic.
+- 2026-07-13: Monday morning research created a material update. Strongest
+  sources were AP for Ormuz, oil markets, Graham and Ukraine; Guardian for
+  Ukraine and the Paris coalition; KPRM for Polish official agenda; TVN24 for
+  DORSZ, Unia Centrum and Polish-language Ukraine follow-up; AP for the Bangkok
+  fire. Podcast should lead Ormuz, then Ukraine/Paris and Graham, with Polish
+  ESA/DORSZ as shorter domestic blocks.
 
 ## Done
 
