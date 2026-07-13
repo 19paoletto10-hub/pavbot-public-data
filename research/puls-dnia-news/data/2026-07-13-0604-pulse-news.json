@@ -1,0 +1,499 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-13",
+  "runTime": "06:04",
+  "status": "Material update",
+  "headline": "Unia Centrum, Bangkok i alert IMGW",
+  "summary": "Nowy slot łączy świeżą politykę krajową, pożar w Bangkoku, kolejne uderzenia USA na Iran, alert IMGW, Gibraltar, Hiszpanię i dwa mocne sygnały z rynku AI.",
+  "checkedSources": [
+    {
+      "title": "TVN24: Wiadomości z kraju i ze świata",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24: Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24: Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24: TVN Warszawa",
+      "url": "https://tvn24.pl/tvnwarszawa"
+    },
+    {
+      "title": "TVN24: TVN Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC Business RSS",
+      "url": "https://feeds.bbci.co.uk/news/business/rss.xml"
+    },
+    {
+      "title": "BBC Technology RSS",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "CNN Tech",
+      "url": "https://edition.cnn.com/tech"
+    },
+    {
+      "title": "IMGW",
+      "url": "https://imgw.pl/"
+    }
+  ],
+  "items": [
+    {
+      "id": "polityka-unia-centrum-2026-07-13-0604",
+      "section": "Polityka",
+      "title": "Unia Centrum startuje",
+      "lead": "Paulina Hennig-Kloska ogłosiła nowy projekt polityczny z reprezentacją parlamentarną.",
+      "whatHappened": "TVN24 podało, że powstaje nowe środowisko polityczne pod nazwą Unia Centrum, które ma łączyć dwa obozy i budować własne zaplecze.",
+      "keyFacts": [
+        "Ogłoszenie padło 13.07.2026.",
+        "Projekt firmuje Paulina Hennig-Kloska.",
+        "Nowa nazwa ma zastąpić dotychczasowe rozproszone środowiska."
+      ],
+      "reactions": [
+        "To sygnał porządkowania centrum sceny politycznej.",
+        "Nowa marka może przyciągnąć uwagę przed kolejną rundą układania koalicji."
+      ],
+      "whyItMatters": "Zmiana może wpłynąć na rynek centrowych koalicji i język debaty publicznej.",
+      "context": "Ruch łączy dwa środowiska i próbuje zbudować własną tożsamość wobec większych bloków politycznych.",
+      "watchNext": [
+        "Czy pojawi się pełny skład i program.",
+        "Jak zareagują KO, PSL i Polska 2050."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Unia Centrum. Powstanie nowa partia polityczna",
+          "url": "https://tvn24.pl/polska/unia-centrum-powstaje-nowa-partia-polityczna-st9139257"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Polityka",
+        "Unia Centrum",
+        "Hennig-Kloska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-rydzyk-invitro-2026-07-13-0604",
+      "section": "Polska",
+      "title": "Rydzyk o in vitro",
+      "lead": "W TVN24 pojawiły się ostre komentarze po jego wypowiedziach na Jasnej Górze.",
+      "whatHappened": "TVN24 opisało słowa ojca Tadeusza Rydzyka o in vitro i osobach LGBT, które padły na Jasnej Górze i wywołały szybką reakcję redakcji.",
+      "keyFacts": [
+        "Sprawa dotyczy wystąpienia z 13.07.2026.",
+        "Komentarze skupiły się na języku uznanym za krzywdzący.",
+        "Temat dotyczy in vitro i osób LGBT."
+      ],
+      "reactions": [
+        "W TVN24 padły oceny, że to język krzywdzący i odczłowieczający.",
+        "Sprawa natychmiast weszła do bieżącego sporu światopoglądowego."
+      ],
+      "whyItMatters": "Temat dotyka sporów o prawa reprodukcyjne i retorykę Kościoła.",
+      "context": "Wystąpienie wpisało się w długotrwały konflikt wokół in vitro i praw osób LGBT.",
+      "watchNext": [
+        "Czy pojawią się reakcje hierarchii kościelnej.",
+        "Czy temat wejdzie do debaty sejmowej."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Rydzyk o in vitro na Jasnej Górze",
+          "url": "https://tvn24.pl/polska/ojciec-tadeusz-rydzyk-o-in-vitro-na-jasnej-gorze-komentarze-st9139639"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "społeczeństwo",
+        "in-vitro",
+        "Kościół"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-szwolezerowie-2026-07-13-0604",
+      "section": "Polska",
+      "title": "Szwoleżerów pod ochroną",
+      "lead": "Mieszkańcy chcą ochrony osiedla przed nową zabudową.",
+      "whatHappened": "TVN Warszawa opisało wniosek o wpisanie zespołu urbanistycznego Osiedla Szwoleżerów do wojewódzkiej ewidencji zabytków.",
+      "keyFacts": [
+        "Chodzi o osiedle z lat 70.",
+        "Wniosek złożyło Miasto Jest Nasze.",
+        "Zastrzeżenia dotyczą zmian planistycznych w Warszawie."
+      ],
+      "reactions": [
+        "To klasyczny spór między ochroną dziedzictwa a presją inwestycyjną.",
+        "Decyzja konserwatora będzie miała szerszy efekt dla okolicy."
+      ],
+      "whyItMatters": "Status zabytkowy może ograniczyć zabudowę i zmienić lokalny plan zagospodarowania.",
+      "context": "Osiedle jest traktowane jako przykład późnomodernistycznej tkanki miejskiej.",
+      "watchNext": [
+        "Czy konserwator podejmie decyzję w tym tygodniu.",
+        "Jak na wniosek zareaguje miasto."
+      ],
+      "sources": [
+        {
+          "title": "TVN Warszawa: Osiedle Szwoleżerów przed zabudową",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-chca-uchronic-osiedle-szwolezerow-przed-zabudowa-wniosek-do-konserwatora-st9138166"
+        }
+      ],
+      "tags": [
+        "Polska",
+        "Warszawa",
+        "urbanistyka",
+        "zabytki"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-bangkok-pozar-bar-2026-07-13-0604",
+      "section": "Świat",
+      "title": "Pożar w barze w Bangkoku",
+      "lead": "W pożarze zginęło co najmniej 27 osób, a część rannych jest w stanie krytycznym.",
+      "whatHappened": "BBC i TVN24 podały, że ogień wybuchł w lokalu w dzielnicy Chatuchak i ludzie uciekali przez płomienie.",
+      "keyFacts": [
+        "Lokalne władze potwierdziły 27 ofiar śmiertelnych.",
+        "Wiele osób trafiło do szpitala w stanie krytycznym.",
+        "Służby badają przyczynę pożaru."
+      ],
+      "reactions": [
+        "Wydarzenie wywołuje pytania o bezpieczeństwo przeciwpożarowe lokali.",
+        "W pierwszym odruchu dominuje bilans ofiar, nie polityka."
+      ],
+      "whyItMatters": "To jedna z najmocniejszych świeżych katastrof miejskich w Azji i duży sygnał bezpieczeństwa publicznego.",
+      "context": "Skala zdarzenia może przełożyć się na kontrolę przepisów i ewakuacji w podobnych obiektach.",
+      "watchNext": [
+        "Czy pojawi się oficjalna przyczyna pożaru.",
+        "Czy wzrośnie bilans poszkodowanych."
+      ],
+      "sources": [
+        {
+          "title": "BBC: At least 27 killed, eight critically injured in Bangkok bar fire",
+          "url": "https://www.bbc.co.uk/news/articles/c24yev53q06o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "TVN24: Pożar w pubie w Bangkoku",
+          "url": "https://tvn24.pl/swiat/tajlandia-w-pubie-wybuchl-pozar-zginelo-blisko-30-osob-st9139640"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "bezpieczeństwo",
+        "Tajlandia",
+        "pożar"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-usa-iran-2026-07-13-0604",
+      "section": "Bezpieczeństwo",
+      "title": "USA wznowiły ataki na Iran",
+      "lead": "Amerykańskie uderzenia objęły systemy obrony powietrznej, radary i zasoby rakietowe.",
+      "whatHappened": "TVN24 i BBC opisują kolejną noc intensywnych ataków USA na irańskie cele oraz eskalację wokół cieśniny Ormuz.",
+      "keyFacts": [
+        "Dowództwo USA wskazało infrastrukturę wojskową Iranu.",
+        "Teheran oskarżył Waszyngton o złamanie wysiłków dyplomatycznych.",
+        "Spór dotyczy także bezpieczeństwa żeglugi w Ormuz."
+      ],
+      "reactions": [
+        "Rynek i dyplomacja reagują na ryzyko szerszej eskalacji.",
+        "Temat wraca do poziomu kryzysu regionalnego, a nie tylko pojedynczego incydentu."
+      ],
+      "whyItMatters": "Konflikt może od razu odbić się na bezpieczeństwie transportu morskiego i cenach energii.",
+      "context": "To rozwinięcie nocnych starć i presji na utrzymanie szlaku w Ormuz.",
+      "watchNext": [
+        "Czy USA i sojusznicy potwierdzą dalsze operacje.",
+        "Czy pojawi się odpowiedź Iranu poza retoryką."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: USA wznowiły ataki na Iran",
+          "url": "https://tvn24.pl/swiat/usa-wznowily-ataki-na-iran-kolejna-niespokojna-noc-na-bliskim-wschodzie-st9139661"
+        },
+        {
+          "title": "BBC: US insists Strait of Hormuz is open as it exchanges strikes with Iran",
+          "url": "https://www.bbc.co.uk/news/articles/cj9gkpp0dkeo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Świat",
+        "Iran",
+        "USA",
+        "Ormuz"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-imgw-burze-upal-2026-07-13-0604",
+      "section": "Alerty",
+      "title": "IMGW ostrzega przed burzami i upałem",
+      "lead": "Na początku tygodnia mogą wrócić burze, a później także fale gorąca.",
+      "whatHappened": "TVN Meteo podaje prognozę zagrożeń IMGW, a oficjalna mapa ostrzeżeń potwierdza bieżący monitoring sytuacji.",
+      "keyFacts": [
+        "Prognoza dotyczy kolejnych dni.",
+        "W części regionów możliwe są burze.",
+        "IMGW sygnalizuje też wzrost temperatur."
+      ],
+      "reactions": [
+        "To bezpośredni sygnał dla podróży, eventów plenerowych i służb.",
+        "Alert może szybko przejść w formalne ostrzeżenia dla powiatów."
+      ],
+      "whyItMatters": "Dla iOS to najważniejszy lokalny alert operacyjny na najbliższe godziny.",
+      "context": "Latem takie przejście z prognozy na ostrzeżenie zwykle następuje szybko.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się stopnie ostrzeżeń IMGW.",
+        "Śledzić komunikaty lokalnych służb i transportu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo: Prognoza zagrożeń IMGW",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/prognoza-zagrozen-imgw-burze-upal-tu-kolejne-dni-moga-byc-niebezpieczne-st9139605"
+        },
+        {
+          "title": "IMGW",
+          "url": "https://imgw.pl/"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "Polska",
+        "IMGW",
+        "burze",
+        "upał"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-ue-sankcje-rosja-2026-07-13-0604",
+      "section": "Polityka",
+      "title": "UE szykuje nowe sankcje na Rosję",
+      "lead": "Ministrowie mają wrócić do pakietu sankcji związanego z ukraińskimi cywilami.",
+      "whatHappened": "TVN24 podało, że unijni ministrowie spraw zagranicznych mają nałożyć nowe sankcje na Rosję w związku z przetrzymywaniem ukraińskich cywilów i jeńców wojennych.",
+      "keyFacts": [
+        "Inicjatywa ma trafić pod obrady ministrów spraw zagranicznych.",
+        "Powodem są działania wobec ukraińskich cywilów i jeńców.",
+        "Rada UE ma procedować pakiet w najbliższym cyklu."
+      ],
+      "reactions": [
+        "To sygnał dalszego zaostrzania presji na Rosję.",
+        "Temat jest mocno polityczny, ale oparty na prawach humanitarnych."
+      ],
+      "whyItMatters": "Nowe sankcje mogą uderzyć w rosyjskie interesy i ustawić kolejny punkt sporu UE-Rosja.",
+      "context": "Sprawa wpisuje się w szerszą politykę izolacji Moskwy po kolejnych wojennych eskalacjach.",
+      "watchNext": [
+        "Czy Rada UE potwierdzi pakiet formalnie.",
+        "Czy pojawią się reakcje Moskwy i Kijowa."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: UE szykuje nowe sankcje na Rosję",
+          "url": "https://tvn24.pl/swiat/unia-europejska-szykuje-nowe-sankcje-na-rosje-w-zwiazku-z-wiezieniem-ukrainskich-cywilow-st9139565"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Świat",
+        "UE",
+        "Rosja",
+        "Ukraina"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "bezpieczenstwo-sumy-nagranie-2026-07-13-0604",
+      "section": "Bezpieczeństwo",
+      "title": "Atak na Sumy pokazany na nagraniu",
+      "lead": "Monitoring z kawiarni pokazuje moment rosyjskiego ataku i reakcję ludzi na wybuch.",
+      "whatHappened": "TVN24 opisało nagranie z Sum, na którym widać bombardowanie KAB i ofiary śmiertelne oraz rannych.",
+      "keyFacts": [
+        "W sobotnim ataku zginęło pięć osób.",
+        "Rannych zostało 30 osób.",
+        "Nagranie pochodzi z monitoringu kawiarni Piccolino."
+      ],
+      "reactions": [
+        "Materiał wzmacnia obraz wojny jako ciągłego zagrożenia dla ludności cywilnej.",
+        "Takie nagrania zwykle szybko zwiększają zasięg i presję medialną."
+      ],
+      "whyItMatters": "To bezpośredni dowód na skalę ryzyka dla miast zaplecza frontu.",
+      "context": "Sumy od dawna pozostają pod presją ostrzałów i ataków dronowo-rakietowych.",
+      "watchNext": [
+        "Czy pojawią się oficjalne komunikaty Ukrainy.",
+        "Czy materiał wywoła reakcje dyplomatyczne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Atak na Sumy - nagranie z monitoringu",
+          "url": "https://tvn24.pl/swiat/ukraina-atak-na-sumy-nagranie-z-monitoringu-st9139511"
+        }
+      ],
+      "tags": [
+        "Bezpieczeństwo",
+        "Świat",
+        "Ukraina",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-gibraltar-granica-2026-07-13-0604",
+      "section": "Gospodarka",
+      "title": "Gibraltar otwiera granicę",
+      "lead": "Zniesienie wieloletnich kontroli ma przynieść terytorium wyraźny impuls gospodarczy.",
+      "whatHappened": "BBC Business podaje, że swobodniejszy przepływ między Gibraltarem a Hiszpanią ma wspierać lokalną gospodarkę i codzienne dojazdy.",
+      "keyFacts": [
+        "Kontrole graniczne mają zniknąć po 118 latach.",
+        "Zmiana dotyczy relacji UK-Gibraltar-Hiszpania.",
+        "BBC opisuje potencjalny efekt dla handlu i dojazdów."
+      ],
+      "reactions": [
+        "Rynek lokalny może zyskać na turystyce i usługach.",
+        "To także politycznie wrażliwy gest po stronie Londynu i Madrytu."
+      ],
+      "whyItMatters": "Swobodniejszy ruch może poprawić płynność handlu, pracy i transportu w regionie.",
+      "context": "To jedna z największych zmian praktycznych dla Gibraltaru od pokoleń.",
+      "watchNext": [
+        "Czy pojawią się szczegóły wdrożenia.",
+        "Jak zareagują firmy i dojeżdżający pracownicy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: New era for Gibraltar with removal of 118-year-old border controls with Spain",
+          "url": "https://www.bbc.co.uk/news/articles/cwydz60j3eno?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Gospodarka",
+        "Świat",
+        "Gibraltar",
+        "Hiszpania",
+        "handel"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-hiszpania-pozar-2026-07-13-0604",
+      "section": "Świat",
+      "title": "Hiszpania po tragicznym pożarze",
+      "lead": "BBC opisuje powrót poszkodowanych do wioski zniszczonej przez ogień.",
+      "whatHappened": "BBC podało, że w pożarze w prowincji Almeria zginęło co najmniej 13 osób, w tym pięć osób prawdopodobnie z Wielkiej Brytanii.",
+      "keyFacts": [
+        "Pożar dotyczył prowincji Almeria.",
+        "BBC wskazuje co najmniej 13 ofiar śmiertelnych.",
+        "W materiale są też osoby, które wracają do zniszczonej wioski."
+      ],
+      "reactions": [
+        "To kolejny dowód, że pożary w regionie mają już wymiar humanitarny.",
+        "Tym razem ważniejsza jest skala strat niż sam ogień."
+      ],
+      "whyItMatters": "Temat łączy bezpieczeństwo, turystykę i skutki zmian klimatu.",
+      "context": "Hiszpania i szerzej południowa Europa zmagają się z kolejną falą ekstremów pogodowych.",
+      "watchNext": [
+        "Czy służby podadzą nowe dane o ewakuacji.",
+        "Czy pożar przekształci się w większą debatę o ochronie przeciwpożarowej."
+      ],
+      "sources": [
+        {
+          "title": "BBC: British couple return to village at heart of deadly Spanish wildfire",
+          "url": "https://www.bbc.co.uk/news/articles/cx24e09x79no?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Świat",
+        "pożary",
+        "Hiszpania",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-apple-openai-2026-07-13-0604",
+      "section": "Technologia",
+      "title": "Apple pozywa OpenAI",
+      "lead": "Pozew w Kalifornii zarzuca OpenAI kradzież tajemnic handlowych związanych z hardware'em.",
+      "whatHappened": "TVN24 Biznes i BBC Tech opisują sprawę, w której Apple kieruje zarzuty przeciw OpenAI, a firma Sama Altmana odpiera je publicznie.",
+      "keyFacts": [
+        "Sprawa trafiła do sądu w Północnej Kalifornii.",
+        "Apple twierdzi, że chodzi o tajemnice handlowe.",
+        "OpenAI odrzuca zarzuty."
+      ],
+      "reactions": [
+        "To kolejny sygnał, że spór o AI przenosi się do sądu.",
+        "Rynek będzie patrzył na to jak na test granic konkurencji w AI i hardware."
+      ],
+      "whyItMatters": "Pozew może wpłynąć na relacje największych firm AI i na tempo produktowych premier.",
+      "context": "Spór dotyczy nie tylko modeli AI, ale też tego, kto kontroluje sprzęt i dane użytkowników.",
+      "watchNext": [
+        "Czy pojawi się formalna odpowiedź sądu.",
+        "Czy inne firmy zaczną komentować standardy ochrony tajemnic."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Apple pozywa OpenAI",
+          "url": "https://tvn24.pl/biznes/tech/na-kazdym-szczeblu-apple-pozywa-openai-st9137919"
+        },
+        {
+          "title": "BBC: Apple sues OpenAI, its employees claiming theft of trade secrets",
+          "url": "https://www.bbc.co.uk/news/articles/cy8w379e091o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "AI",
+        "Apple",
+        "OpenAI",
+        "prawo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "technologia-meta-ai-obraz-2026-07-13-0604",
+      "section": "Technologia",
+      "title": "Meta wycofuje funkcję obrazową AI",
+      "lead": "Po fali krytyki Meta wyłączyła funkcję pozwalającą przerabiać treści z Instagrama.",
+      "whatHappened": "BBC Tech podało, że nowa funkcja AI do modyfikowania obrazów wywołała szybki backlash i została wycofana po kilku dniach.",
+      "keyFacts": [
+        "Funkcja dotyczyła treści z Instagrama.",
+        "Meta reaguje na krytykę użytkowników i obserwatorów rynku.",
+        "Sprawa łączy się z wcześniejszymi sporami o design Facebooka i Instagrama."
+      ],
+      "reactions": [
+        "To jeden z najszybszych publicznych zwrotów produktu AI w tym tygodniu.",
+        "Presja regulacyjna i wizerunkowa najwyraźniej zaczęła działać."
+      ],
+      "whyItMatters": "Meta może teraz ostrożniej wprowadzać kolejne funkcje generatywne.",
+      "context": "Równolegle BBC opisuje też nacisk UE na features Facebooka i Instagrama.",
+      "watchNext": [
+        "Czy Meta przywróci funkcję w zmienionej formie.",
+        "Czy regulatorzy UE wykorzystają sprawę w dalszych postępowaniach."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Meta pulls new AI image feature after days of backlash",
+          "url": "https://www.bbc.co.uk/news/articles/c2dy6e8klw0o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "Meta",
+        "AI",
+        "Instagram",
+        "UE"
+      ],
+      "priority": "high"
+    }
+  ]
+}

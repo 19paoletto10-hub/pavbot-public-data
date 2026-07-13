@@ -8,9 +8,15 @@
   needs real thumbnails. Do not add scraped images without licensing review.
 - Monitor whether BBC/CNN discovery regularly needs fallback confirmations from
   official sources because of access limits in the current runtime.
-- `CNN World RSS` continues to fail intermittently; prefer
-  `edition.cnn.com/world` discovery plus primary confirmations until the feed
-  recovers.
+- `CNN World RSS` still looks stale in this slot; prefer TVN24/BBC discovery
+  plus primary confirmations until the feed or page starts surfacing current
+  2026 items again.
+- Watch whether the Bangkok bar fire gets a formal casualty update or safety
+  review from Thai authorities.
+- Watch whether the IMGW storm-and-heat forecast turns into a formal regional
+  warning for Poland.
+- Watch whether the Apple/OpenAI lawsuit and Meta AI rollback produce official
+  filings or product changes in the next slot.
 - Watch whether the Chopin C3 scanner rollout gets a follow-up from the airport
   or queue-time reporting in the next few slots.
 - Watch whether China export-control coverage picks up a fresh EU or industry
