@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-10-0609",
+  "status": "no_material_change",
+  "generatedAt": "2026-07-10T04:09:00+00:00",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-10T06:09:13+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Safari Apple Events and DOM review worked for this run.",
+      "No Reddit social actions were performed.",
+      "Current public winner bundle remained 2026-07-10-0008."
+    ]
+  },
+  "currentPublicBundle": "2026-07-10-0008",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-10-0609-reddit-radar.json",
+  "newCandidates": [
+    {
+      "subreddit": "r/memes",
+      "title": "Ah shi here we go again",
+      "url": "https://www.reddit.com/r/memes/comments/1us05ww/ah_shi_here_we_go_again/",
+      "scoreLabel": "17.1K",
+      "decision": "weaker_than_active_memes_card"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "webDevDream",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1urn7sk/webdevdream/",
+      "scoreLabel": "9.9K",
+      "decision": "same_dev_cluster_weaker_than_active_http_card"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "myDayHasCome",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1urm3i6/mydayhascome/",
+      "scoreLabel": "5.0K",
+      "decision": "secondary_dev_candidate_still_weaker_than_active_http_card"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "I’m allergic to latex and I’m looking for a latex-free Micheal Meyers mask. Thought I found one until I fully read the description.",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1us3co4/im_allergic_to_latex_and_im_looking_for_a/",
+      "scoreLabel": "11.6K",
+      "decision": "more_vent_than_active_mildlyinfuriating_card"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Only 37 Pods",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1us9xni/only_37_pods/",
+      "scoreLabel": "3.2K",
+      "decision": "light_single_candidate_but_not_full_bundle_upgrade"
+    },
+    {
+      "subreddit": "r/facepalm",
+      "title": "Even my fortune cookie has ads now?!",
+      "url": "https://www.reddit.com/r/facepalm/comments/1urvjgq/even_my_fortune_cookie_has_ads_now/",
+      "scoreLabel": "1.5K",
+      "decision": "not_better_than_active_facepalm_card"
+    },
+    {
+      "subreddit": "r/AskReddit",
+      "title": "What’s the most addictive video game you’ve ever played?",
+      "url": "https://www.reddit.com/r/AskReddit/comments/1us1ufr/whats_the_most_addictive_video_game_youve_ever/",
+      "scoreLabel": "4.8K",
+      "decision": "broader_prompt_weaker_than_active_askreddit_card"
+    }
+  ]
+}

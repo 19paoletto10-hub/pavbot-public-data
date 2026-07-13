@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-10-0008",
+  "status": "no_material_change",
+  "generatedAt": "2026-07-09T22:08:00+00:00",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-10T00:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Safari Apple Events and DOM access worked for this run.",
+      "Computer Use returned the current Safari window state before DOM review.",
+      "No Reddit social actions were performed.",
+      "Current public winner bundle remained 2026-07-09-1808."
+    ]
+  },
+  "currentPublicBundle": "2026-07-09-1808",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-10-0008-reddit-radar.json",
+  "newCandidates": [
+    {
+      "subreddit": "r/memes",
+      "title": "Ah shi here we go again",
+      "url": "https://www.reddit.com/r/memes/comments/1us05ww/ah_shi_here_we_go_again/?sort=top",
+      "scoreLabel": "7.9K",
+      "decision": "fresh_but_comment_payoff_is_too_thin_to_replace_active_meme_card"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "webDevDream",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1urn7sk/webdevdream/?sort=top",
+      "scoreLabel": "8.1K",
+      "decision": "fresh_dev_candidate_but_comments_slide_into_real_cold_call_gripes"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "\"Room\" for rent in downtown Vancouver",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1urwatf/room_for_rent_in_downtown_vancouver/?sort=top",
+      "scoreLabel": "37.3K",
+      "decision": "strong_but_too_bleak_and_housing_scam_coded_for_the_active_playful_slot"
+    },
+    {
+      "subreddit": "r/facepalm",
+      "title": "I wish my boss would just put \"Jack on leave\"",
+      "url": "https://www.reddit.com/r/facepalm/comments/1uox0lj/i_wish_my_boss_would_just_put_jack_on_leave/?sort=top",
+      "scoreLabel": "36.4K",
+      "decision": "active_facepalm_card_still_best"
+    },
+    {
+      "subreddit": "r/AskReddit",
+      "title": "What’s the most addictive video game you’ve ever played?",
+      "url": "https://www.reddit.com/r/AskReddit/comments/1us1ufr/whats_the_most_addictive_video_game_youve_ever/?sort=top",
+      "scoreLabel": "1.4K",
+      "decision": "generic_gaming_prompt_is_too_small_to_replace_active_askreddit_card"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-12-0008",
+  "status": "no_material_change",
+  "generatedAt": "2026-07-11T22:08:48+00:00",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-12T00:08:48+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Safari Apple Events drove the listing sweep on old.reddit.com hot listings.",
+      "Shortlist post and comment review stayed read-only on old.reddit.com in the same logged-in Safari session.",
+      "No Reddit social actions were performed.",
+      "origin/main already exposed bundle 2026-07-11-1808 before this run.",
+      "Current public winner bundle remained 2026-07-10-1209."
+    ]
+  },
+  "currentPublicBundle": "2026-07-11-1808",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-12-0008-reddit-radar.json",
+  "newCandidates": [
+    {
+      "subreddit": "r/memes",
+      "title": "Now I have Free time",
+      "url": "https://www.reddit.com/r/memes/comments/1utggp6/now_i_have_free_time/",
+      "scoreLabel": "16.2K",
+      "decision": "strong_single_burnout_roast_but_comment_layer_stays_narrower_than_active_memes_winner"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Please god please",
+      "url": "https://www.reddit.com/r/memes/comments/1ut6hoz/please_god_please/",
+      "scoreLabel": "18.4K",
+      "decision": "big_thread_but_comments_shift_into_world_cup_bracket_talk_more_than_compact_humor"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "itChangedTheTests",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1utbf2u/itchangedthetests/",
+      "scoreLabel": "5.6K",
+      "decision": "good_three_line_dev_roast_but_still_narrower_than_active_http_status_bundle_card"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "programmerMetronome",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1utflz5/programmermetronome/",
+      "scoreLabel": "3.9K",
+      "decision": "same_dev_stress_cluster_with_shorter_comment_payoff_than_itchangedthetests"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Speechless",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uttah7/speechless/",
+      "scoreLabel": "12.6K",
+      "decision": "thread_turns_into_dating_cringe_and_troll_profile_discourse_not_clean_public_humor"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Accidentally bought a white pepper mill and a black salt mill.",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1utmoae/accidentally_bought_a_white_pepper_mill_and_a/",
+      "scoreLabel": "9.6K",
+      "decision": "light_color_swap_gag_but_not_strong_enough_to_upgrade_full_bundle"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "The cruise line left a box of our passports in an empty unlocked room",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1ute4dr/the_cruise_line_left_a_box_of_our_passports_in_an/",
+      "scoreLabel": "35.4K",
+      "decision": "high_engagement_but_more_procedural_chaos_and_travel_alarm_than_light_absurd_humor"
+    },
+    {
+      "subreddit": "r/facepalm",
+      "title": "I wish my boss would just put \"Jack on leave\"",
+      "url": "https://www.reddit.com/r/facepalm/comments/1uox0lj/i_wish_my_boss_would_just_put_jack_on_leave/",
+      "scoreLabel": "37.4K",
+      "decision": "active_facepalm_winner_still_beats_tonights_challengers_on_clarity_and_comment_cleanliness"
+    },
+    {
+      "subreddit": "r/AskReddit",
+      "title": "To all men,What is the hardest lesson a woman has ever taught you?",
+      "url": "https://www.reddit.com/r/AskReddit/comments/1utlllh/to_all_menwhat_is_the_hardest_lesson_a_woman_has/",
+      "scoreLabel": "1.7K",
+      "decision": "high_comment_volume_but_relationship_story_thread_not_tight_humor"
+    },
+    {
+      "subreddit": "r/AskReddit",
+      "title": "What is the most immediate way a celebrity completely ruined their own reputation in a single interview?",
+      "url": "https://www.reddit.com/r/AskReddit/comments/1utn2wa/what_is_the_most_immediate_way_a_celebrity/",
+      "scoreLabel": "1.3K",
+      "decision": "broad_recollection_thread_not_compact_loophole_or_punchline_humor"
+    }
+  ]
+}

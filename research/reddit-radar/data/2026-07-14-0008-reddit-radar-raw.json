@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-14-0008",
+  "status": "material_update",
+  "generatedAt": "2026-07-13T22:08:28+00:00",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-14T00:08:28+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Computer Use and read-only Safari were used for the live midnight listing sweep on old.reddit.com hot listings.",
+      "A pre-shortlist filter removed every Reddit post URL that appeared in runs 2026-07-13-1214 and 2026-07-13-0008.",
+      "Shortlist post and comment review stayed read-only on old.reddit.com and public Reddit post pages in the same Safari-driven workflow.",
+      "At least four safe fresh cards survived the filter and read-only review, so the topic contract still prefers a new public bundle over keeping the older winner set.",
+      "No Reddit social actions were performed.",
+      "origin/main already exposed bundle 2026-07-13-1214 before this run.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-13-1214",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-14-0008-reddit-radar.json",
+  "excludedRecentRunUrls": [
+    "https://www.reddit.com/r/memes/comments/1uuod8b/as_a_brit_its_weird_being_hated_less_in_a_sport",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uuzjt5/jobsecurity",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uv0xcq/the_food_you_order_the_food_you_receive",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uuxl0u/it_didnt_fit",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uux23g/weve_been_allotted_a_whole_20_minutes_at_end_of",
+    "https://www.reddit.com/r/memes/comments/1uurfo3/we_spent_250_million_dollars_on_this",
+    "https://www.reddit.com/r/memes/comments/1uul7v2/germanys_falloff_needs_to_be_studied",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uujrl6/downfallofstackoverflow",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uud9z8/saygoodbyetoram",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uulzlm/barnes_and_noble_place_a_sticky_antitheft_device",
+    "https://www.reddit.com/r/memes/comments/1uuim0g/thank_you_microsoft"
+  ],
+  "newCandidates": [
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "theUsual",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uvbbwm/theusual/",
+      "scoreLabel": "4.1K",
+      "decision": "selected_for_fresh_bundle_as_clean_entry_level_buzz_lightyear_roast"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "whatIfIToldYouThis",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uv3tsh/whatifitoldyouthis/",
+      "scoreLabel": "1.9K",
+      "decision": "selected_for_fresh_bundle_as_compact_c_language_joke_with_comment_escalation"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "People “waiting in line” at goodwill…",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uvhm03/people_waiting_in_line_at_goodwill/",
+      "scoreLabel": "7.8K",
+      "decision": "selected_for_fresh_bundle_as_clear_queue_absurdity_with_literal_trash_payoff"
+    },
+    {
+      "subreddit": "r/facepalm",
+      "title": "Using the dishwasher the first time. I didn't know. No one told me this",
+      "url": "https://www.reddit.com/r/facepalm/comments/1uvkgvo/using_the_dishwasher_the_first_time_i_didnt_know/",
+      "scoreLabel": "8.8K",
+      "decision": "selected_for_fresh_bundle_as_safe_household_facepalm_with_free_soup_comment_layer"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Finders keepers, I guess…",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uvk29i/finders_keepers_i_guess/",
+      "scoreLabel": "4.5K",
+      "decision": "reviewed_but_left_out_because_comment_layer_leans_more_into_real_theft_and_scam_handling_than_light_public_digest_payoff"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "chatIsThisOneUnique",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uvmnpk/chatisthisoneunique/",
+      "scoreLabel": "780",
+      "decision": "reviewed_but_left_out_because_the_post_was_removed_before_final_publish_review"
+    }
+  ]
+}

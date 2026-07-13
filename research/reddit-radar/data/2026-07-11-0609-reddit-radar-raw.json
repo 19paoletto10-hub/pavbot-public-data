@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-11-0609",
+  "status": "no_material_change",
+  "generatedAt": "2026-07-11T04:09:00+00:00",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-11T06:09:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Safari Apple Events drove the listing sweep on www.reddit.com.",
+      "Shortlist post and comment review used read-only old.reddit.com pages in the same Safari session for cleaner HTML comment extraction.",
+      "No Reddit social actions were performed.",
+      "origin/main already exposed bundle 2026-07-11-0008 before this run.",
+      "Current public winner bundle remained 2026-07-10-1209."
+    ]
+  },
+  "currentPublicBundle": "2026-07-10-1209",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-11-0609-reddit-radar.json",
+  "newCandidates": [
+    {
+      "subreddit": "r/memes",
+      "title": "UNLIMITED POWAHH!",
+      "url": "https://www.reddit.com/r/memes/comments/1ut1cg0/unlimited_powahh/",
+      "scoreLabel": "3.3K",
+      "decision": "fresh_palpatine_joke_has_too_little_scale_and_comment_depth_to_displace_active_memes_card"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "I hate this",
+      "url": "https://www.reddit.com/r/memes/comments/1uskjoe/i_hate_this/",
+      "scoreLabel": "19.9K",
+      "decision": "still_lands_as_sponsored_screenshot_one_liner_with_thin_comment_followthrough"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "comeOnJustBurstAlready",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1usrc2p/comeonjustburstalready/",
+      "scoreLabel": "8.1K",
+      "decision": "ai_agents_discourse_remains_heavier_than_active_dev_card"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "webDevDream",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1urn7sk/webdevdream/",
+      "scoreLabel": "12.9K",
+      "decision": "solid_sales_roast_but_same_cluster_and_weaker_payoff_than_active_http_card"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "pleaseApprove",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1usmb70/pleaseapprove/",
+      "scoreLabel": "2.0K",
+      "decision": "few_good_lines_but_smaller_and_more_stressful_than_active_dev_card"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "I'm 18...",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1ut092m/im_18/",
+      "scoreLabel": "28.6K",
+      "decision": "big_scale_but_turns_into_grey_hair_support_thread_more_than_clean_humor_card"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Got a ticket for going 56 in a 55…",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uss651/got_a_ticket_for_going_56_in_a_55/",
+      "scoreLabel": "37.6K",
+      "decision": "still_strongest_single_challenger_but_legal_advice_thread_does_not_create_full_bundle_upgrade"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "One of the kids left the lizards heat lamp on top of the fireplace, which is wood.",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1usyymu/one_of_the_kids_left_the_lizards_heat_lamp_on_top/",
+      "scoreLabel": "16.6K",
+      "decision": "repair_tips_and_ramen_gags_are_fun_but_not_stronger_than_active_book_card"
+    },
+    {
+      "subreddit": "r/facepalm",
+      "title": "Even my fortune cookie has ads now?!",
+      "url": "https://www.reddit.com/r/facepalm/comments/1urvjgq/even_my_fortune_cookie_has_ads_now/",
+      "scoreLabel": "3.0K",
+      "decision": "boring_dystopia_pun_remains_lighter_than_politics_but_weaker_than_active_facepalm_card"
+    },
+    {
+      "subreddit": "r/AskReddit",
+      "title": "What's something older generations got right that we've quietly stopped doing, to our own detriment?",
+      "url": "https://www.reddit.com/r/AskReddit/comments/1ut0rde/whats_something_older_generations_got_right_that/",
+      "scoreLabel": "3.2K",
+      "decision": "strong_engagement_but_community_nostalgia_thread_not_tight_humor"
+    },
+    {
+      "subreddit": "r/AskReddit",
+      "title": "What’s a billion-dollar industry that mostly survives because people don’t realize there’s a better alternative?",
+      "url": "https://www.reddit.com/r/AskReddit/comments/1usjjo5/whats_a_billiondollar_industry_that_mostly/",
+      "scoreLabel": "3.4K",
+      "decision": "still_more_recommendation_discourse_than_compact_joke_thread"
+    }
+  ]
+}
