@@ -11,10 +11,14 @@
 - `CNN World RSS` still looks stale in this slot; prefer TVN24/BBC discovery
   plus primary confirmations until the feed or page starts surfacing current
   2026 items again.
+- Watch whether the Krotoszyn and Sulmierzyce boil-water advisory is lifted or
+  widened.
+- Watch whether the Ziobro ENA decision gets a written justification or
+  appeal.
 - Watch whether the Bangkok bar fire gets a formal casualty update or safety
   review from Thai authorities.
-- Watch whether the IMGW storm-and-heat forecast turns into a formal regional
-  warning for Poland.
+- Watch whether IMGW escalates the current storm-and-heat alerts to wider
+  regional warnings.
 - Watch whether the Apple/OpenAI lawsuit and Meta AI rollback produce official
   filings or product changes in the next slot.
 - Watch whether the Chopin C3 scanner rollout gets a follow-up from the airport
@@ -27,6 +31,7 @@
   disruption.
 - Watch whether the Qatar travel warning widens into a broader Middle East
   advisory or flight disruption.
+- Watch whether French investigators confirm arson in the Fontainebleau fire.
 - Watch whether CDC or WHO issue a follow-up on the Bundibugyo Ebola case in
   DRC.
 - Watch whether the Korea Południowa heat alarm turns into broader official

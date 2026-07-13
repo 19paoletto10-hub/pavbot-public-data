@@ -134,6 +134,14 @@ deadly wildfire, and ongoing Iran/Hormuz escalation, while market and tech
 items now include SK hynix on Nasdaq, Meta AI privacy backlash and refreshed
 IMGW storm/heat alerts.
 
+The 2026-07-13 15:01 slot moves the pulse deeper into operational safety:
+the Częstochowa collapse, Sulmierzyce water advisory and Owińska banner now
+anchor the Polish side, while the world feed leans on IRGC restrictions,
+Bangkok's fatal bar fire, the Fontainebleau wildfire, the Ukraine reshuffle
+and stronger Ormuz pressure. The tech layer now carries both EU child-safety
+regulation and a Meta AI rollback, and IMGW keeps the near-term weather alert
+surface active.
+
 ## Data Shape
 
 The native iOS feed expects:

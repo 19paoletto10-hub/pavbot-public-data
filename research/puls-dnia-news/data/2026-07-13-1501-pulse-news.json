@@ -1,0 +1,685 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-13",
+  "runTime": "15:01",
+  "status": "Material update",
+  "headline": "Burze, Ormuz i lokalne incydenty dominują puls dnia",
+  "summary": "Nowy slot przesuwa feed w stronę bieżących incydentów w Polsce, geopolityki wokół Iranu i Ormuzu, ostrzeżeń IMGW oraz regulacji cyfrowych w UE i sporów o prywatność Meta AI.",
+  "checkedSources": [
+    {
+      "title": "TVN24: Zawalił się budynek. Strażacy przeszukiwali rumowisko",
+      "url": "https://tvn24.pl/katowice/zawalil-sie-budynek-w-czestochowie-14-zastepow-strazy-przeszukiwalo-rumowisko-st9139762"
+    },
+    {
+      "title": "TVN24: Krotoszyn, Sulmierzyce. Problemy z wodą, wykryto bakterię e-coli",
+      "url": "https://tvn24.pl/poznan/krotoszyn-sulmierzyce-problemy-z-woda-wykryto-bakterie-e-coli-st9140132"
+    },
+    {
+      "title": "Powiat Krotoszyn: Ważne komunikaty Sanepidu",
+      "url": "https://www.powiat-krotoszyn.pl/aktualnosc-1854-wazne_komunikaty_sanepidu_woda_z.html"
+    },
+    {
+      "title": "TVN24: Antyukraiński baner w środku wsi. Sprawdzają, kto go zawiesił",
+      "url": "https://tvn24.pl/poznan/owinska-antyukrainski-baner-w-srodku-wsi-st9140715"
+    },
+    {
+      "title": "TVN24: Wniosek o wydanie ENA wobec Zbigniewa Ziobry. Jest decyzja sądu",
+      "url": "https://tvn24.pl/polska/wniosek-o-wydanie-ena-wobec-zbigniewa-ziobry-jest-decyzja-sadu-st9140719"
+    },
+    {
+      "title": "TVN24: Katarzyna Kotula o słowach biskupa Wiesława Szlachetki i Tadeusza Rydzyka",
+      "url": "https://tvn24.pl/polska/katarzyna-kotula-o-slowach-biskupa-wieslawa-szlachetki-i-tadeusza-rydzyka-na-temat-in-vitro-to-jest-absurd-st9139735"
+    },
+    {
+      "title": "TVN24: Ojciec Tadeusz Rydzyk o in vitro na Jasnej Górze",
+      "url": "https://tvn24.pl/polska/ojciec-tadeusz-rydzyk-o-in-vitro-na-jasnej-gorze-komentarze-st9139639"
+    },
+    {
+      "title": "BBC News: UK bans support for Iran's Islamic Revolutionary Guard Corps",
+      "url": "https://www.bbc.co.uk/news/articles/cz0jkj7e87go?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "GOV.UK: Proscribed terrorist groups or organisations",
+      "url": "https://www.gov.uk/government/publications/proscribed-terror-groups-or-organisations--2/proscribed-terrorist-groups-or-organisations-accessible-version"
+    },
+    {
+      "title": "BBC News: At least 28 killed, 25 critically injured after fire engulfs Bangkok bar",
+      "url": "https://www.bbc.co.uk/news/articles/c24yev53q06o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "Bangkok Post: Dozens killed, scores injured in Bangkok's deadly pub fire",
+      "url": "https://www.bangkokpost.com/video/thailand/3285274/dozens-killed-scores-injured-in-bangkoks-deadly-pub-fire"
+    },
+    {
+      "title": "BBC News: Wildfire raging south of Paris could have been set deliberately, says minister",
+      "url": "https://www.bbc.co.uk/news/articles/clye4z168edo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "AP News: Fire in Fontainebleau forest near Paris triggers evacuations",
+      "url": "https://apnews.com/article/9231f354a12af0d1fd40aff4f759240b"
+    },
+    {
+      "title": "TVN24: Zmiany w ukraińskim rządzie, nowa partia i apel wojska",
+      "url": "https://tvn24.pl/swiat/piec-rzeczy-ktore-warto-wiedziec-w-poniedzialek-13-lipca-najwazniejsze-informacje-st9139681"
+    },
+    {
+      "title": "AP News: Ukraine's prime minister steps down as Zelenskyy announces government reshuffle",
+      "url": "https://apnews.com/article/f0bab8086a84705db07c74b3b1b99c49"
+    },
+    {
+      "title": "CENTCOM: CENTCOM Completes Another Wave of Strikes Against Iran",
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4541002/centcom-completes-another-wave-of-strikes-against-iran/"
+    },
+    {
+      "title": "CNN transcripts: Connect the World, July 10 2026",
+      "url": "https://transcripts.cnn.com/show/ctw/date/2026-07-10/segment/01"
+    },
+    {
+      "title": "TVN24 Biznes: Skok cen na rynku ropy. Reakcja na wieści z Iranu",
+      "url": "https://tvn24.pl/biznes/ze-swiata/ceny-ropy-naftowej-13-lipca-2026-roku-rynek-reaguje-na-ataki-usa-i-iranu-st9139760"
+    },
+    {
+      "title": "CNN transcripts: Quest Means Business, July 10 2026",
+      "url": "https://transcripts.cnn.com/show/qmb/date/2026-07-10/segment/01"
+    },
+    {
+      "title": "Nasdaq: Global Innovation Meets Global Capital: SK hynix Lists on Nasdaq",
+      "url": "https://www.nasdaq.com/newsroom/global-innovation-meets-global-capital-sk-hynix-lists-on-nasdaq"
+    },
+    {
+      "title": "TVN24: Zakaz mediów społecznościowych dla dzieci w UE. Projekt już po wakacjach",
+      "url": "https://tvn24.pl/biznes/ze-swiata/zakaz-mediow-spolecznosciowych-dla-dzieci-w-unii-europejskiej-ursula-von-der-leyen-potrzebuja-czasu-w-prawdziwym-swiecie-st9140141"
+    },
+    {
+      "title": "European Commission: Statement by the President with the Co-Chairs of the Special Panel on child safety online",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1590"
+    },
+    {
+      "title": "Meta Newsroom: Introducing Muse Image: Image Generation Built for Your World",
+      "url": "https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/"
+    },
+    {
+      "title": "CNN transcripts: Backlash over Meta's A.I. Muse Spark",
+      "url": "https://transcripts.cnn.com/show/ist/date/2026-07-10/segment/01"
+    },
+    {
+      "title": "IMGW: Prognoza pogody na tydzień 13.07 – 19.07.2026",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-13-07-19-07-2026/"
+    },
+    {
+      "title": "TVN24: Burze i silny deszcz. W mocy nawet pomarańczowe ostrzeżenia IMGW",
+      "url": "https://tvn24.pl/tvnmeteo/prognoza/burze-ostrzezenia-imgw-poniedzialek-13-07-alarmy-maja-nawet-drugi-stopien-st9139702"
+    },
+    {
+      "title": "CNN transcripts: Firefighters Battle One of Spain's Deadliest Wildfires on Record",
+      "url": "https://transcripts.cnn.com/show/ist/date/2026-07-10/segment/01"
+    },
+    {
+      "title": "BBC News: Spain battles to contain one of its deadliest wildfires as at least 12 killed",
+      "url": "https://www.bbc.co.uk/news/articles/c1wyv383j2xo?at_medium=RSS&at_campaign=rss"
+    }
+  ],
+  "items": [
+    {
+      "id": "polska-czestochowa-budynek-2026-07-13-1501",
+      "section": "Polska",
+      "title": "Zawalenie budynku w Częstochowie",
+      "lead": "Strażacy przeszukiwali gruzowisko przy liceum.",
+      "whatHappened": "W niedzielę wieczorem w Częstochowie zawaliła się część budynku przy al. Kościuszki. Na miejscu działało 14 zastępów straży pożarnej, które zabezpieczały teren i sprawdzały rumowisko.",
+      "keyFacts": [
+        "Zdarzenie dotyczyło obiektu przy I LO.",
+        "Na miejscu pracowały służby ratownicze i zabezpieczające."
+      ],
+      "reactions": [
+        "Służby potraktowały to jako akcję ratowniczo-zabezpieczającą.",
+        "Przyczyna zdarzenia nie została jeszcze podana."
+      ],
+      "whyItMatters": "To sygnał lokalnego ryzyka budowlanego i potrzeby szybkiej oceny konstrukcji.",
+      "context": "Na ten moment brak oficjalnego bilansu ofiar i przyczyny.",
+      "watchNext": [
+        "Śledzić komunikat straży pożarnej lub nadzoru budowlanego."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zawalił się budynek. Strażacy przeszukiwali rumowisko",
+          "url": "https://tvn24.pl/katowice/zawalil-sie-budynek-w-czestochowie-14-zastepow-strazy-przeszukiwalo-rumowisko-st9139762"
+        }
+      ],
+      "tags": [
+        "Częstochowa",
+        "budownictwo",
+        "ratownictwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-woda-sulmierzyce-2026-07-13-1501",
+      "section": "Polska",
+      "title": "Komunikat sanepidu o wodzie w Sulmierzycach",
+      "lead": "Wodę trzeba przegotować przed spożyciem.",
+      "whatHappened": "Sanepid w Krotoszynie wydał komunikat o pogorszeniu jakości wody w strefie zaopatrzenia Sulmierzyce. Na stronie powiatu i gminy potwierdzono obecność bakterii grupy coli i obowiązek przegotowania wody.",
+      "keyFacts": [
+        "Dotyczy to mieszkańców Sulmierzyc i części gminy.",
+        "Komunikat obowiązuje do kolejnego odwołania."
+      ],
+      "reactions": [
+        "Samorząd opublikował ostrzeżenie dla mieszkańców.",
+        "Ograniczenie dotyczy bezpośrednio codziennego użycia wody."
+      ],
+      "whyItMatters": "To lokalny problem sanitarny i logistyczny.",
+      "context": "W komunikatach mowa o coli i parametrach jakości, nie o szerszym kryzysie.",
+      "watchNext": [
+        "Sprawdzić, kiedy sanepid odwoła nakaz gotowania wody."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Krotoszyn, Sulmierzyce. Problemy z wodą, wykryto bakterię e-coli",
+          "url": "https://tvn24.pl/poznan/krotoszyn-sulmierzyce-problemy-z-woda-wykryto-bakterie-e-coli-st9140132"
+        },
+        {
+          "title": "Powiat Krotoszyn: Ważne komunikaty Sanepidu",
+          "url": "https://www.powiat-krotoszyn.pl/aktualnosc-1854-wazne_komunikaty_sanepidu_woda_z.html"
+        }
+      ],
+      "tags": [
+        "Krotoszyn",
+        "sanepid",
+        "woda"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-owinska-baner-2026-07-13-1501",
+      "section": "Polska",
+      "title": "Antyukraiński baner w Owińskach",
+      "lead": "Policja ustala autora baneru.",
+      "whatHappened": "W Owińskach ktoś zawiesił antyukraiński baner w środku wsi. TVN24 podał, że policja sprawdza, kto go powiesił i w jakich okolicznościach.",
+      "keyFacts": [
+        "Baner pojawił się w przestrzeni publicznej.",
+        "Sprawa jest wyjaśniana przez policję."
+      ],
+      "reactions": [
+        "Wątek antyukraiński wrócił do lokalnej debaty publicznej.",
+        "Na razie brak informacji o zatrzymaniu."
+      ],
+      "whyItMatters": "To kolejny sygnał napięć społecznych wokół Ukrainy i migrantów.",
+      "context": "Sprawy tego typu zwykle wymagają najpierw ustalenia autora materiału i ewentualnej kwalifikacji prawnej.",
+      "watchNext": [
+        "Sprawdzić, czy policja ujawni sprawcę lub zarzuty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Antyukraiński baner w środku wsi. Sprawdzają, kto go zawiesił",
+          "url": "https://tvn24.pl/poznan/owinska-antyukrainski-baner-w-srodku-wsi-st9140715"
+        }
+      ],
+      "tags": [
+        "Owińska",
+        "mowa_nienawiści",
+        "Polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-ziobro-ena-2026-07-13-1501",
+      "section": "Polityka",
+      "title": "Sąd wydał decyzję w sprawie ENA Ziobry",
+      "lead": "To kolejny etap sprawy byłego ministra.",
+      "whatHappened": "TVN24 podał 13 lipca po 14:34, że sąd rozstrzygnął wniosek o wydanie europejskiego nakazu aresztowania wobec Zbigniewa Ziobry.",
+      "keyFacts": [
+        "Sprawa dotyczy współpracy międzynarodowej i postępowania karnego.",
+        "W depeszy nie podano pełnego uzasadnienia."
+      ],
+      "reactions": [
+        "Temat może wrócić w politycznej i prawnej debacie.",
+        "Obrona lub prokuratura mogą opublikować dalsze stanowiska."
+      ],
+      "whyItMatters": "To wpływa na tempo i ciężar jednej z najgłośniejszych spraw prawnych w polskiej polityce.",
+      "context": "Ziobro od miesięcy pozostaje w centrum sporów prawnych i politycznych.",
+      "watchNext": [
+        "Sprawdzić pełne uzasadnienie i ewentualną apelację."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wniosek o wydanie ENA wobec Zbigniewa Ziobry. Jest decyzja sądu",
+          "url": "https://tvn24.pl/polska/wniosek-o-wydanie-ena-wobec-zbigniewa-ziobry-jest-decyzja-sadu-st9140719"
+        }
+      ],
+      "tags": [
+        "Ziobro",
+        "ENA",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-in-vitro-2026-07-13-1501",
+      "section": "Polityka",
+      "title": "Spór o in vitro po kazaniu na Jasnej Górze",
+      "lead": "Kotula zaostrzyła ton wobec duchownych.",
+      "whatHappened": "Po kazaniu biskupa Wiesława Szlachetki na Jasnej Górze i komentarzach Tadeusza Rydzyka Katarzyna Kotula nazwała wypowiedzi o in vitro absurdalnymi i zażądała przeprosin.",
+      "keyFacts": [
+        "Spór dotyczy oceny procedury in vitro.",
+        "Temat łączy Kościół, zdrowie i politykę."
+      ],
+      "reactions": [
+        "Kotula publicznie skrytykowała duchownych.",
+        "Debata ma duży ładunek emocjonalny."
+      ],
+      "whyItMatters": "To jeden z najbardziej wrażliwych społecznie sporów zdrowotno-światopoglądowych.",
+      "context": "Rządowy program in vitro pozostaje elementem polityki zdrowotnej.",
+      "watchNext": [
+        "Obserwować, czy pojawią się odpowiedzi diecezji lub redemptorystów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Katarzyna Kotula o słowach biskupa Wiesława Szlachetki i Tadeusza Rydzyka",
+          "url": "https://tvn24.pl/polska/katarzyna-kotula-o-slowach-biskupa-wieslawa-szlachetki-i-tadeusza-rydzyka-na-temat-in-vitro-to-jest-absurd-st9139735"
+        },
+        {
+          "title": "TVN24: Ojciec Tadeusz Rydzyk o in vitro na Jasnej Górze",
+          "url": "https://tvn24.pl/polska/ojciec-tadeusz-rydzyk-o-in-vitro-na-jasnej-gorze-komentarze-st9139639"
+        }
+      ],
+      "tags": [
+        "in_vitro",
+        "Kościół",
+        "polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-irgc-2026-07-13-1501",
+      "section": "Świat",
+      "title": "Wielka Brytania zaostrza podejście do IRGC",
+      "lead": "BBC opisuje nowy kurs wobec irańskiej Gwardii Rewolucyjnej.",
+      "whatHappened": "BBC podało, że Wielka Brytania zakazuje wspierania IRGC. Rządowe dokumenty GOV.UK nadal opisują proskrypcję organizacji terrorystycznych i kryteria zakazu.",
+      "keyFacts": [
+        "To krok w obszarze prawa antyterrorystycznego.",
+        "IRGC pozostaje kluczowym elementem napięć wokół Iranu."
+      ],
+      "reactions": [
+        "Sprawa prawdopodobnie przełoży się na kolejne reakcje dyplomatyczne.",
+        "Brytyjskie służby i politycy wzmacniają przekaz o bezpieczeństwie."
+      ],
+      "whyItMatters": "To sygnał dalszego uszczelniania polityki bezpieczeństwa wobec Iranu.",
+      "context": "Temat pojawia się równolegle z nową falą uderzeń na irańskie cele.",
+      "watchNext": [
+        "Sprawdzić, czy Home Office publikuje formalny komunikat."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: UK bans support for Iran's Islamic Revolutionary Guard Corps",
+          "url": "https://www.bbc.co.uk/news/articles/cz0jkj7e87go?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "GOV.UK: Proscribed terrorist groups or organisations",
+          "url": "https://www.gov.uk/government/publications/proscribed-terror-groups-or-organisations--2/proscribed-terrorist-groups-or-organisations-accessible-version"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "bezpieczeństwo",
+        "Wielka_Brytania"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-bangkok-pozar-2026-07-13-1501",
+      "section": "Świat",
+      "title": "Pożar baru w Bangkoku",
+      "lead": "Ofiar jest co najmniej 27.",
+      "whatHappened": "BBC i Bangkok Post opisują pożar pubu w Bangkoku. Dzisiejsze publikacje mówią o co najmniej 27 zabitych i dziesiątkach rannych, a służby wyjaśniają przyczynę ognia.",
+      "keyFacts": [
+        "To jedna z najtragiczniejszych katastrof pożarowych w regionie.",
+        "Przyczyna pożaru nie jest jeszcze ostatecznie ustalona."
+      ],
+      "reactions": [
+        "Akcja ratunkowa trwała przez wiele godzin.",
+        "Media cytują świadków i lokalne władze."
+      ],
+      "whyItMatters": "To duży wstrząs bezpieczeństwa publicznego i potencjalne pytania o standardy lokalu.",
+      "context": "Pożar wpisuje się w okres wysokiego ryzyka pożarowego i upałów w regionie.",
+      "watchNext": [
+        "Śledzić oficjalny bilans ofiar i wyniki dochodzenia."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: At least 28 killed, 25 critically injured after fire engulfs Bangkok bar",
+          "url": "https://www.bbc.co.uk/news/articles/c24yev53q06o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Bangkok Post: Dozens killed, scores injured in Bangkok's deadly pub fire",
+          "url": "https://www.bangkokpost.com/video/thailand/3285274/dozens-killed-scores-injured-in-bangkoks-deadly-pub-fire"
+        }
+      ],
+      "tags": [
+        "Bangkok",
+        "pożar",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-paris-pozar-2026-07-13-1501",
+      "section": "Świat",
+      "title": "Pożar pod Paryżem wywołał ewakuacje",
+      "lead": "Fontainebleau znów znalazło się na mapie pożarów.",
+      "whatHappened": "BBC i AP opisują pożar w lesie Fontainebleau na południe od Paryża. Ogień doprowadził do ewakuacji i utrudnień w ruchu, a służby sprawdzają, czy nie był podłożony celowo.",
+      "keyFacts": [
+        "W akcji uczestniczyły setki strażaków i samoloty gaśnicze.",
+        "Pożar objął duży obszar leśny."
+      ],
+      "reactions": [
+        "Francuskie władze prowadzą ocenę przyczyny.",
+        "Media łączą temat z falą upałów i suszy."
+      ],
+      "whyItMatters": "To kolejny sygnał nasilającego się ryzyka pożarowego w Europie Zachodniej.",
+      "context": "W całej Europie Zachodniej rośnie ryzyko pożarów i przerw w transporcie.",
+      "watchNext": [
+        "Sprawdzić, czy śledczy potwierdzą wersję o podpaleniu."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Wildfire raging south of Paris could have been set deliberately, says minister",
+          "url": "https://www.bbc.co.uk/news/articles/clye4z168edo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "AP News: Fire in Fontainebleau forest near Paris triggers evacuations",
+          "url": "https://apnews.com/article/9231f354a12af0d1fd40aff4f759240b"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "pożary",
+        "Europa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-ukraina-rzad-2026-07-13-1501",
+      "section": "Świat",
+      "title": "Zełenski zapowiada rekonstrukcję rządu",
+      "lead": "Swyrydenko ma ustąpić, a gabinet czeka przetasowanie.",
+      "whatHappened": "TVN24 podał, że Wołodymyr Zełenski zapowiedział duże zmiany w ukraińskim rządzie, w tym dymisję Julii Swyrydenko. AP opisała to jako szerszą rekonstrukcję w Kijowie.",
+      "keyFacts": [
+        "Zmiana dotyczy samego centrum władzy.",
+        "Decyzja może wpłynąć na priorytety rządu w czasie wojny."
+      ],
+      "reactions": [
+        "Prezydent sygnalizuje nową strategię polityczną.",
+        "Temat jest szeroko komentowany w mediach międzynarodowych."
+      ],
+      "whyItMatters": "To może przestawić układ sił w ukraińskiej administracji.",
+      "context": "Rekonstrukcja pojawia się równolegle z kolejnymi atakami Rosji i rozmowami o wsparciu Zachodu.",
+      "watchNext": [
+        "Sprawdzić nazwiska nowych ministrów i zakres zmian."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zmiany w ukraińskim rządzie, nowa partia i apel wojska",
+          "url": "https://tvn24.pl/swiat/piec-rzeczy-ktore-warto-wiedziec-w-poniedzialek-13-lipca-najwazniejsze-informacje-st9139681"
+        },
+        {
+          "title": "AP News: Ukraine's prime minister steps down as Zelenskyy announces government reshuffle",
+          "url": "https://apnews.com/article/f0bab8086a84705db07c74b3b1b99c49"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "rząd",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-iran-ormuz-2026-07-13-1501",
+      "section": "Bezpieczeństwo",
+      "title": "Nowe uderzenia USA na Iran",
+      "lead": "Ormuz pozostaje pod presją, a ropa reaguje wzrostem.",
+      "whatHappened": "CENTCOM poinformował o kolejnej fali uderzeń na irańskie cele wojskowe, w tym obronę przeciwlotniczą, radary i środki przeciwokrętowe. CNN i TVN24 opisują równoległy wzrost napięcia wokół cieśniny Ormuz i rynku ropy.",
+      "keyFacts": [
+        "Celem były zdolności militarne Iranu i ochrona żeglugi.",
+        "Rynek surowców zareagował wyraźnym wzrostem cen ropy."
+      ],
+      "reactions": [
+        "CNN relacjonował, że pauzy w atakach miały dać przestrzeń dla dyplomacji.",
+        "TVN24 opisuje nerwową reakcję inwestorów."
+      ],
+      "whyItMatters": "To ryzyko dla globalnej żeglugi, energii i stabilności regionu.",
+      "context": "Ormuz to kluczowy korytarz dla transportu ropy i gazu.",
+      "watchNext": [
+        "Monitorować komunikaty CENTCOM i ruch tankowców."
+      ],
+      "sources": [
+        {
+          "title": "CENTCOM: CENTCOM Completes Another Wave of Strikes Against Iran",
+          "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4541002/centcom-completes-another-wave-of-strikes-against-iran/"
+        },
+        {
+          "title": "CNN transcripts: Connect the World, July 10 2026",
+          "url": "https://transcripts.cnn.com/show/ctw/date/2026-07-10/segment/01"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Ormuz",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-hiszpania-pozar-2026-07-13-1501",
+      "section": "Bezpieczeństwo",
+      "title": "Hiszpańskie pożary wciąż zabijają i niszczą",
+      "lead": "CNN i BBC opisują jeden z najgroźniejszych pożarów sezonu.",
+      "whatHappened": "CNN i BBC relacjonują śmiertelny pożar w południowej Hiszpanii, z co najmniej 12 ofiarami i dużą skalą zniszczeń. Materiały pokazują, że to jeden z najpoważniejszych pożarów w regionie Andaluzji.",
+      "keyFacts": [
+        "Wiatr i upał utrudniały akcję gaśniczą.",
+        "Lokalne służby prowadziły ewakuacje i identyfikację ofiar."
+      ],
+      "reactions": [
+        "CNN podkreśla wagę katastrofy dla sezonu pożarowego.",
+        "BBC łączy temat z szeroką falą upałów w Europie."
+      ],
+      "whyItMatters": "To kolejny dowód na to, że ekstremalna pogoda przekłada się na realne straty ludzkie.",
+      "context": "W całej Europie Zachodniej rośnie ryzyko pożarów i przerw w transporcie.",
+      "watchNext": [
+        "Sprawdzić, czy lokalne władze podają nowy bilans ofiar."
+      ],
+      "sources": [
+        {
+          "title": "CNN transcripts: Firefighters Battle One of Spain's Deadliest Wildfires on Record",
+          "url": "https://transcripts.cnn.com/show/ist/date/2026-07-10/segment/01"
+        },
+        {
+          "title": "BBC News: Spain battles to contain one of its deadliest wildfires as at least 12 killed",
+          "url": "https://www.bbc.co.uk/news/articles/c1wyv383j2xo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Hiszpania",
+        "pożary",
+        "Europa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-ropa-2026-07-13-1501",
+      "section": "Gospodarka",
+      "title": "Ropa drożeje po wznowieniu starć USA-Iran",
+      "lead": "Rynek znów wycenił ryzyko Bliskiego Wschodu.",
+      "whatHappened": "TVN24 Biznes podało, że notowania ropy 13 lipca wyraźnie rosną po doniesieniach o wznowieniu starć między Iranem a Stanami Zjednoczonymi. Inwestorzy zakładają, że rozejm pozostaje kruchy.",
+      "keyFacts": [
+        "Wzrost cen był bezpośrednią reakcją na geopolitykę.",
+        "Rynek paliw wciąż obserwuje Ormuz."
+      ],
+      "reactions": [
+        "Handel surowcami wrócił do trybu risk-on i risk-off.",
+        "Kolejne komunikaty z regionu mogą wywołać dalsze skoki."
+      ],
+      "whyItMatters": "To może przełożyć się na ceny paliw i inflację.",
+      "context": "Ten ruch cen współgra z komunikatami CENTCOM i napięciem wokół żeglugi.",
+      "watchNext": [
+        "Śledzić kolejne sesje ropy i komentarze analityków."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Skok cen na rynku ropy. Reakcja na wieści z Iranu",
+          "url": "https://tvn24.pl/biznes/ze-swiata/ceny-ropy-naftowej-13-lipca-2026-roku-rynek-reaguje-na-ataki-usa-i-iranu-st9139760"
+        }
+      ],
+      "tags": [
+        "ropa",
+        "inflacja",
+        "rynek"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-sk-hynix-nasdaq-2026-07-13-1501",
+      "section": "Gospodarka",
+      "title": "SK hynix debiutuje na Nasdaq",
+      "lead": "Półprzewodniki znów przyciągnęły uwagę rynku.",
+      "whatHappened": "CNN i Nasdaq opisują wejście SK hynix na Nasdaq. Debiut wpisuje się w silny popyt na pamięci i komponenty potrzebne dla AI.",
+      "keyFacts": [
+        "To ważny sygnał dla rynku chipów i pamięci.",
+        "Nasdaq opublikował własną notę o debiucie spółki."
+      ],
+      "reactions": [
+        "Rynek odczytuje to jako potwierdzenie siły segmentu pamięci.",
+        "Spółki związane z AI nadal korzystają z zainteresowania inwestorów."
+      ],
+      "whyItMatters": "To pokazuje, że kapitał nadal premiuje infrastrukturę AI i pamięć.",
+      "context": "Debiut pojawia się w szerokim tle technologicznego ożywienia.",
+      "watchNext": [
+        "Sprawdzić pierwsze reakcje po notowaniu i komentarze spółki."
+      ],
+      "sources": [
+        {
+          "title": "CNN transcripts: Quest Means Business, July 10 2026",
+          "url": "https://transcripts.cnn.com/show/qmb/date/2026-07-10/segment/01"
+        },
+        {
+          "title": "Nasdaq: Global Innovation Meets Global Capital: SK hynix Lists on Nasdaq",
+          "url": "https://www.nasdaq.com/newsroom/global-innovation-meets-global-capital-sk-hynix-lists-on-nasdaq"
+        }
+      ],
+      "tags": [
+        "SK_hynix",
+        "Nasdaq",
+        "AI"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-social-media-children-2026-07-13-1501",
+      "section": "Technologia",
+      "title": "KE szykuje ostrzejsze reguły dla dzieci online",
+      "lead": "Bruksela przesuwa debatę z opinii do projektu.",
+      "whatHappened": "TVN24 podał, że Komisja Europejska przygotowuje projekt ograniczeń dostępu dzieci do platform społecznościowych. Dokumenty Komisji i panel ds. bezpieczeństwa dzieci online wskazują na rekomendacje dotyczące wieku i weryfikacji wieku.",
+      "keyFacts": [
+        "To element polityki ochrony młodych użytkowników.",
+        "Debata dotyczy minimalnego wieku i age verification."
+      ],
+      "reactions": [
+        "Komisja wzmacnia presję regulacyjną na platformy.",
+        "Temat będzie politycznie wrażliwy w całej UE."
+      ],
+      "whyItMatters": "To może zmienić dostęp dzieci do social mediów i sposób potwierdzania wieku.",
+      "context": "Nie chodzi jeszcze o pełny zakaz, ale o krok w stronę zaostrzenia zasad.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się formalny projekt lub harmonogram."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zakaz mediów społecznościowych dla dzieci w UE. Projekt już po wakacjach",
+          "url": "https://tvn24.pl/biznes/ze-swiata/zakaz-mediow-spolecznosciowych-dla-dzieci-w-unii-europejskiej-ursula-von-der-leyen-potrzebuja-czasu-w-prawdziwym-swiecie-st9140141"
+        },
+        {
+          "title": "European Commission: Statement by the President with the Co-Chairs of the Special Panel on child safety online",
+          "url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1590"
+        }
+      ],
+      "tags": [
+        "UE",
+        "social_media",
+        "regulacje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-meta-ai-2026-07-13-1501",
+      "section": "Technologia",
+      "title": "Meta wycofuje sporną funkcję AI",
+      "lead": "Firma złagodziła funkcję po krytyce użytkowników.",
+      "whatHappened": "Meta w newsroomie opisała Muse Image i dodała aktualizację, że funkcja pozwalająca wskazywać publiczne konta Instagrama do generowania obrazów nie jest już dostępna. CNN relacjonował backlash wobec Muse Spark i pokrewnych narzędzi AI.",
+      "keyFacts": [
+        "To formalny rollback po krytyce.",
+        "Sprawa dotyczy publicznych treści i zgody użytkowników."
+      ],
+      "reactions": [
+        "Meta przyznała, że funkcja nie trafiła w oczekiwania użytkowników.",
+        "Debata o prywatności publicznych treści wróciła do centrum."
+      ],
+      "whyItMatters": "To ważny sygnał dla polityki prywatności i zaufania do narzędzi generatywnych.",
+      "context": "W tle trwa spór o to, jak platformy korzystają z publicznych materiałów do AI.",
+      "watchNext": [
+        "Sprawdzić, czy Meta zapowie nowy opt-out lub inne ustawienia."
+      ],
+      "sources": [
+        {
+          "title": "Meta Newsroom: Introducing Muse Image: Image Generation Built for Your World",
+          "url": "https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/"
+        },
+        {
+          "title": "CNN transcripts: Backlash over Meta's A.I. Muse Spark",
+          "url": "https://transcripts.cnn.com/show/ist/date/2026-07-10/segment/01"
+        }
+      ],
+      "tags": [
+        "Meta",
+        "AI",
+        "prywatność"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "alerty-imgw-burze-upal-2026-07-13-1501",
+      "section": "Alerty",
+      "title": "IMGW utrzymuje burze i późniejszy upał",
+      "lead": "Alerty pogodowe zostają z Polską na cały dzień.",
+      "whatHappened": "IMGW w prognozie tygodniowej na 13-19 lipca zapowiada napływ ciepłej masy powietrza, burze z ulewnym deszczem i ryzyko podtopień. TVN24 publikuje ostrzeżenia pierwszego i drugiego stopnia dla części kraju.",
+      "keyFacts": [
+        "W wielu regionach obowiązują alerty burzowe.",
+        "Od czwartku prognozowany jest powrót upału."
+      ],
+      "reactions": [
+        "Synoptycy nie wykluczają podniesienia ostrzeżeń.",
+        "Mieszkańcy powinni uważać przy podróżach i aktywności na zewnątrz."
+      ],
+      "whyItMatters": "To bezpośredni alert bezpieczeństwa dla Polski w najbliższych dniach.",
+      "context": "Prognoza jest spójna z wcześniejszym sygnałem o powrocie ciepła po weekendzie.",
+      "watchNext": [
+        "Sprawdzać aktualizacje IMGW i komunikaty regionalne."
+      ],
+      "sources": [
+        {
+          "title": "IMGW: Prognoza pogody na tydzień 13.07 – 19.07.2026",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-13-07-19-07-2026/"
+        },
+        {
+          "title": "TVN24: Burze i silny deszcz. W mocy nawet pomarańczowe ostrzeżenia IMGW",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/burze-ostrzezenia-imgw-poniedzialek-13-07-alarmy-maja-nawet-drugi-stopien-st9139702"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "burze",
+        "upał"
+      ],
+      "priority": "high"
+    }
+  ]
+}
