@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-13-1214",
+  "status": "material_update",
+  "generatedAt": "2026-07-13T10:14:06+00:00",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-13T12:08:12+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Safari Apple Events drove the listing sweep on old.reddit.com hot listings.",
+      "A pre-shortlist filter removed every Reddit post URL that appeared in runs 2026-07-13-0008 and 2026-07-12-1804.",
+      "Shortlist post and top-comment review stayed read-only on old.reddit.com in the same logged-in Safari session.",
+      "At least five safe fresh cards survived the filter and read-only review, so the topic contract still prefers a new public bundle over keeping the older winner set.",
+      "No Reddit social actions were performed.",
+      "origin/main already exposed bundle 2026-07-13-0008 before this run.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-13-0008",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-13-1214-reddit-radar.json",
+  "excludedRecentRunUrls": [
+    "https://www.reddit.com/r/AskReddit/comments/1utgkqu/whats_a_movie_that_was_well_liked_when_it_was",
+    "https://www.reddit.com/r/AskReddit/comments/1utlllh/to_all_menwhat_is_the_hardest_lesson_a_woman_has",
+    "https://www.reddit.com/r/AskReddit/comments/1utn2wa/what_is_the_most_immediate_way_a_celebrity",
+    "https://www.reddit.com/r/AskReddit/comments/1utu7ra/it_support_and_tech_workers_of_reddit_is_the",
+    "https://www.reddit.com/r/AskReddit/comments/1utz6ki/what_single_word_commonly_said_in_your_country",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1utbf2u/itchangedthetests",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1utflz5/programmermetronome",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1utoh5y/butmyvibeswereinvolved",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uu5u31/itusedany",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uu8fx7/loopmedaddy",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uu941c/donttouchifitworks",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uucu27/heissafe",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uud8gu/regex",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uud9z8/saygoodbyetoram",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uugcii/imissthatlife",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uujrl6/downfallofstackoverflow",
+    "https://www.reddit.com/r/facepalm/comments/1uox0lj/i_wish_my_boss_would_just_put_jack_on_leave",
+    "https://www.reddit.com/r/facepalm/comments/1urw25c/so_bought_a_projector_screen_for_my_daughters",
+    "https://www.reddit.com/r/memes/comments/1ut6hoz/please_god_please",
+    "https://www.reddit.com/r/memes/comments/1utggp6/now_i_have_free_time",
+    "https://www.reddit.com/r/memes/comments/1utvhwc/muchas_gracias",
+    "https://www.reddit.com/r/memes/comments/1utydzr/it_be_like_that_sometimes",
+    "https://www.reddit.com/r/memes/comments/1uu0oj0/norway_is_out_of_the_world_cup",
+    "https://www.reddit.com/r/memes/comments/1uu4071/absolutely_cooked_chat_gg",
+    "https://www.reddit.com/r/memes/comments/1uu6dgs/theyve_had_the_easiest_path_to_the_semifinals",
+    "https://www.reddit.com/r/memes/comments/1uubixb/bro_summoned_bosnia_in_one_attempt",
+    "https://www.reddit.com/r/memes/comments/1uuc2z3/thank_you_haaland",
+    "https://www.reddit.com/r/memes/comments/1uug9z6/no_material_costs_no_shipping_and_handling_no",
+    "https://www.reddit.com/r/memes/comments/1uuim0g/thank_you_microsoft",
+    "https://www.reddit.com/r/memes/comments/1uul7v2/germanys_falloff_needs_to_be_studied",
+    "https://www.reddit.com/r/memes/comments/1uurfo3/we_spent_250_million_dollars_on_this",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1ute4dr/the_cruise_line_left_a_box_of_our_passports_in_an",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1utmoae/accidentally_bought_a_white_pepper_mill_and_a",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uttah7/speechless",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1utxb4w/the_garlic_bread_my_friend_was_served_at_a",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1utzp9a/landscapers_came_by_today_to_trim_my_privacy",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uu2x7u/should_have_started_from_999_not_000",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uubdmb/your_sunset_is_brought_to_you_by_pepsi",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uubu3f/one_of_my_favorite_youtuber_cgp_grey_rephrased",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uufsb1/plane_is_empty_and_someone_chose_to_sit_right",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uuiuhp/ive_already_told_my_grandma_not_to_wrap_food_in",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uulzlm/barnes_and_noble_place_a_sticky_antitheft_device",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uuorvl/or_you_could_just_tell_me_the_price_instead_of"
+  ],
+  "newCandidates": [
+    {
+      "subreddit": "r/memes",
+      "title": "As a Brit, it's weird being hated less in a sport for once",
+      "url": "https://www.reddit.com/r/memes/comments/1uuod8b/as_a_brit_its_weird_being_hated_less_in_a_sport",
+      "scoreLabel": "4.8K",
+      "decision": "selected_for_fresh_bundle_as_clear_enemy_of_my_enemy_sports_roast"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "jobSecurity",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uuzjt5/jobsecurity",
+      "scoreLabel": "1.1K",
+      "decision": "selected_for_fresh_bundle_as_clean_bugs_pay_my_mortgage_dev_card"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "The food you order, the food you receive.",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uv0xcq/the_food_you_order_the_food_you_receive",
+      "scoreLabel": "5.7K",
+      "decision": "selected_for_fresh_bundle_as_best_ai_menu_slop_consumer_card_of_the_slot"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "It didn’t fit",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uuxl0u/it_didnt_fit",
+      "scoreLabel": "9.5K",
+      "decision": "selected_for_fresh_bundle_as_compact_lego_frustration_with_readable_comment_layer"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "We’ve been allotted a whole 20 minutes at end of shift to count each individual necklace by hand",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uux23g/weve_been_allotted_a_whole_20_minutes_at_end_of",
+      "scoreLabel": "7.0K",
+      "decision": "selected_for_fresh_bundle_as_worker_absurdity_card_with_strong_guess_then_count_payoff"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "In order to not raise menu prices, we are raising prices",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uuvys8/in_order_to_not_raise_menu_prices_we_are_raising",
+      "scoreLabel": "4.3K",
+      "decision": "reviewed_but_left_out_because_comment_layer_stays_more_in_menu_meta_than_clean_front_bundle_payoff"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Bye Bye Switzerland",
+      "url": "https://www.reddit.com/r/memes/comments/1uuz2uk/bye_bye_switzerland",
+      "scoreLabel": "19.3K",
+      "decision": "reviewed_but_left_out_because_the_joke_depends_too_much_on_image_context_after_filtering"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Nature is healing",
+      "url": "https://www.reddit.com/r/memes/comments/1uuptuj/nature_is_healing",
+      "scoreLabel": "12.1K",
+      "decision": "reviewed_but_left_out_because_comments_drift_from_clean_payoff_into_generic_ai_discourse"
+    }
+  ]
+}
