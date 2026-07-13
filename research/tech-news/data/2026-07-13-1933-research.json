@@ -1,0 +1,292 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-13",
+  "runTime": "19:33",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny run przesuwa temat z samego rollout i governance frontier modeli na trzy bardziej konkretne osie: cenę, geopolitykę dostępu i operacyjne bezpieczeństwo. FT pokazuje, że firmy aktywnie przechodzą do tańszych chińskich modeli, a równolegle opisuje, jak OpenAI i Google nadal dostarczają modele przez pośrednie struktury do podmiotów powiązanych z czarną listą. To oznacza, że rynek AI coraz wyraźniej dzieli się na warstwę kosztu, warstwę eksportowej kontroli i warstwę regionalnego arbitrażu dostępu.",
+    "Równocześnie Meta Iris zbliża się do produkcji we wrześniu 2026, LAPD wycofuje kontrakt z Flock, a nowe prace o memory poisoning pokazują, że pamięć agentów jest już pełnoprawnym attack surface. Google Search nadal rośnie mimo boomu na narzędzia AI, a HN i Product Hunt nagradzają sandboxing, lokalne wykonanie i monetyzację agentów. Sygnał dnia jest więc mniej o kolejnym modelu, a bardziej o tym, kto kontroluje koszt, dostęp, izolację i rozliczenie."
+  ],
+  "summaryBullets": [
+    "AI: Chińskie modele AI obniżają koszt wejścia",
+    "Regulacje: OpenAI i Google obchodzą czarną listę przez Singapur",
+    "Infrastruktura: Meta Iris przechodzi z planu do produkcji"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-13-1933-0-chinskie-modele-ai-obnizaja-koszt-wejscia-84329ed5ff",
+      "section": "AI",
+      "title": "Chińskie modele AI obniżają koszt wejścia",
+      "standfirst": "FT opisuje, że firmy takie jak DoorDash, Siemens, Airbnb i Lindy sięgają po chińskie modele, bo są wyraźnie tańsze i łatwiejsze do uruchamiania we własnej infrastrukturze. To nie jest już niszowy eksperyment, tylko realna presja na kosztową stronę rynku AI.",
+      "whatHappened": "Firmy zaczynają arbitrażować koszt między modelami z USA i Chin.",
+      "whyItMatters": "Pokazuje, że przewaga frontier AI coraz częściej zależy od ceny, kontroli i self-hostingu, a nie tylko od surowej jakości modelu.",
+      "deeperAnalysis": [
+        "Chińskie modele przestały być tylko ciekawostką benchmarkową. FT opisuje, że w praktyce coraz więcej firm porównuje je z amerykańskimi labami pod kątem kosztu tokena, opcji self-hostingu i możliwości trzymania własnych danych bliżej infrastruktury. To zmienia rozmowę z \"który model jest najlepszy\" na \"który model jest wystarczająco dobry i opłacalny operacyjnie\".",
+        "Ważne jest też to, że ten ruch nie dzieje się wyłącznie w startupach. Jeśli większe firmy produktowe zaczynają używać tańszych modeli z Chin, oznacza to, że rynek AI wchodzi w fazę prawdziwego zakupowego porównywania dostawców, a nie tylko brandowego wyścigu. To może obniżyć presję cenową na amerykańskie API i przyspieszyć talk o sovereign AI.",
+        "W tle rośnie znaczenie open-weight stacków, prywatnej infrastruktury i lokalnej kontroli. To pasuje do szerszej zmiany widocznej również w HN i Product Hunt: developerzy chcą agentów, które można uruchomić bliżej własnego środowiska, a nie tylko konsumować z jednego centralnego endpointu."
+      ],
+      "contextPoints": [
+        "Co się stało: FT opisuje adopcję DeepSeek, Z.ai i Moonshot AI przez firmy szukające niższych kosztów.",
+        "Dlaczego ważne: Cena i self-hosting stają się centralnym kryterium wyboru modeli.",
+        "Na co patrzeć dalej: czy ta adopcja pozostanie taktyczna, czy zamieni się w trwałe przesunięcie budżetów."
+      ],
+      "sources": [
+        {
+          "title": "FT",
+          "url": "https://www.ft.com/content/9c8ff45b-7c20-4c2e-93c9-c52339ffdcee"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "DeepSeek",
+        "Z.ai",
+        "Moonshot AI",
+        "self-hosting",
+        "pricing",
+        "enterprise"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-13-1933-1-openai-i-google-obchodza-czarna-liste-przez-singapur-138d5b0329",
+      "section": "Regulacje",
+      "title": "OpenAI i Google obchodzą czarną listę przez Singapur",
+      "standfirst": "FT pokazuje, że OpenAI i Google sprzedawały modele do spółek zależnych Alibaba, Baidu i Tencent poprzez struktury w Singapurze. Legalne kanały okazały się jednocześnie na tyle miękkie, że wywołały pytania o skuteczność export controls.",
+      "whatHappened": "Dostęp do modeli został utrzymany przez pośrednie jurysdykcje i lokalne spółki.",
+      "whyItMatters": "To dowód, że regulacja frontier AI nie kończy się na liście zakazanych krajów, tylko na konkretnym egzekwowaniu geo-fencing i tożsamości klienta.",
+      "deeperAnalysis": [
+        "Ten materiał jest ważny nie dlatego, że pokazuje jeden przypadek sprzedaży, ale dlatego, że ujawnia strukturę rynku. Jeśli duże modele da się kupić legalnie przez pośredników, to klasyczne export control przypominają bardziej system zarządzania ryzykiem niż twardą blokadę. To zwiększa znaczenie KYC, monitoringu użycia i geograficznych ograniczeń po stronie dostawcy.",
+        "W praktyce taka porowatość ma dwa skutki. Po pierwsze, podbija polityczną presję na twardsze przepisy i bardziej precyzyjne reguły sprzedaży AI. Po drugie, wzmacnia argument za lokalnymi i suwerennymi modelami, bo firmy oraz rządy widzą, że zależność od jednego amerykańskiego dostawcy nie daje pełnej kontroli nad dostępem.",
+        "To także dobry kontrapunkt do dzisiejszego rynku cost-driven AI. Firmy chcą niższych kosztów i większej elastyczności, ale im bardziej model staje się strategiczny, tym bardziej dostawca, jurysdykcja i compliance zaczynają być częścią produktu."
+      ],
+      "contextPoints": [
+        "Co się stało: FT opisuje sprzedaż modeli do spółek zależnych chińskich gigantów przez Singapur.",
+        "Dlaczego ważne: AI access staje się problemem eksportu, nie tylko produktu.",
+        "Na co patrzeć dalej: czy OpenAI, Google i regulatorzy zaostrzą geo enforcement."
+      ],
+      "sources": [
+        {
+          "title": "FT",
+          "url": "https://www.ft.com/content/5d6aafa1-5d47-4585-aa95-6ec06a6cd20f"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "Google",
+        "China",
+        "export controls",
+        "Singapore",
+        "compliance"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-13-1933-2-meta-iris-przechodzi-z-planu-do-produkcji-8eba3f50f1",
+      "section": "Infrastruktura",
+      "title": "Meta Iris przechodzi z planu do produkcji",
+      "standfirst": "TechCrunch, cytując Reuters, podaje że Meta planuje produkcję pierwszej wersji chipa Iris we wrześniu 2026. To już nie jest ogólny sygnał o custom silicon, tylko konkretna data startu.",
+      "whatHappened": "Meta ustawia in-house chip na harmonogram produkcyjny.",
+      "whyItMatters": "Zmienia się skala rozmowy o AI infra - nie tylko modele i data center, ale także własny krzem i tempo jego wdrażania.",
+      "deeperAnalysis": [
+        "Najważniejsze w tym sygnale jest to, że Meta próbuje ograniczyć zależność od GPU nie poprzez deklarację, ale poprzez własny chip pipeline. W praktyce to oznacza walkę o kontrolę nad inference economics, a nie tylko o marketingową narrację o \"AI company\". Przy obecnych napięciach supply chain i cenach pamięci oraz akceleratorów, taki ruch ma znaczenie strategiczne.",
+        "To również potwierdza, że duzi hyperscalerzy nie ufają już wyłącznie zewnętrznym vendorom. Jeśli Meta rzeczywiście dowiezie produkcję na wrzesień 2026, będzie to kolejny dowód, że własny silicon staje się standardową reakcją na presję kosztową i ograniczenia podaży.",
+        "Sama historia dobrze łączy się z dzisiejszym wątkiem tanich modeli i kosztu. Firmy szukają oszczędności nie tylko w warstwie API, ale też niżej, w sprzęcie i łańcuchu dostaw."
+      ],
+      "contextPoints": [
+        "Co się stało: Reuters/TechCrunch opisują plan produkcji chipa Iris we wrześniu 2026.",
+        "Dlaczego ważne: własny silicon staje się częścią normalnej strategii AI.",
+        "Na co patrzeć dalej: czy Meta utrzyma termin i czy chip faktycznie zmieni miks GPU."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Meta",
+        "Iris",
+        "chips",
+        "Broadcom",
+        "TSMC",
+        "inference"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-13-1933-3-lapd-wycofuje-flock-z-miasta-d1aa90a3ff",
+      "section": "Regulacje",
+      "title": "LAPD wycofuje Flock z miasta",
+      "standfirst": "LAPD kończy kontrakt z Flock Safety, powołując się na poważne obawy o wolności obywatelskie i prywatność. To wyraźny sygnał, że publiczny opór wobec masowej analizy tablic rejestracyjnych nie jest już tylko teoretyczny.",
+      "whatHappened": "Jeden z największych klientów Flock zrywa relację.",
+      "whyItMatters": "Surveillance tech zaczyna dostawać realny backlash na poziomie kontraktów i lokalnej polityki.",
+      "deeperAnalysis": [
+        "Ta historia jest ważna, bo łączy dwie rzeczy, które zwykle pojawiają się oddzielnie: policyjny use case i społeczną reakcję na infrastrukturę monitoringu. Jeśli duże miasto zaczyna wycofywać się z Flock, oznacza to, że narracja o bezpieczeństwie nie wystarcza już do obrony takiej technologii bez dodatkowych gwarancji prawnych i politycznych.",
+        "To także sygnał dla innych vendorów surveillance i public safety AI. W miastach o dużej widoczności publicznej kontrakty mogą stać się kruche, jeśli nie ma jasnych reguł dotyczących retencji danych, dostępu federalnego i przetwarzania informacji o obywatelach. Dla producentów to ryzyko reputacyjne, nie tylko sprzedażowe.",
+        "Ten wątek dobrze uzupełnia dzisiejszy report o ekonomii i bezpieczeństwie AI. Tak jak firmy szukają tańszych modeli i lepszej kontroli dostępu, tak społeczności lokalne zaczynają domagać się kontroli nad tym, kto zbiera i przechowuje dane o ruchu i zachowaniu ludzi."
+      ],
+      "contextPoints": [
+        "Co się stało: LAPD kończy umowę z Flock Safety.",
+        "Dlaczego ważne: publiczny backlash wobec surveillance infra staje się kontraktowym faktem.",
+        "Na co patrzeć dalej: czy inne miasta pójdą tą samą drogą i jakie warunki postawią vendorom."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/13/lapd-lets-contract-with-surveillance-giant-flock-expire-citing-serious-concerns-over-civil-liberties-and-privacy/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Flock",
+        "surveillance",
+        "LAPD",
+        "privacy",
+        "civil liberties",
+        "public backlash"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-13-1933-4-pamiec-agentow-staje-sie-atakowalna-1737df00c0",
+      "section": "Cyber",
+      "title": "Pamięć agentów staje się atakowalna",
+      "standfirst": "Nowy preprint o GhostWriter pokazuje, że długoterminowa pamięć agentów może zostać zatru­ta przez ukryty payload. Autorzy raportują bardzo wysoką skuteczność ataku i proponują własną warstwę obrony.",
+      "whatHappened": "Badacze opisują memory poisoning jako praktyczny wektor ataku na agentów.",
+      "whyItMatters": "Pamięć, która ma zwiększać użyteczność agentów, może jednocześnie stać się ich najbardziej wrażliwą częścią.",
+      "deeperAnalysis": [
+        "To ważny sygnał, bo wiele produktów i roadmap AI dziś zakłada, że długoterminowa pamięć rozwiąże problem kontekstu i personalizacji. Ten paper mówi wprost: jeżeli pamięć nie ma własnego governance, to łatwo staje się kanałem trwałego wpływu na przyszłe decyzje agenta.",
+        "Jeszcze mocniejsze jest to, że atak nie musi być skomplikowany na poziomie użytkownika. Jeśli wystarczy faza injection i późniejsza activation, to bezpieczeństwo agentów nie może polegać wyłącznie na prompt guards albo jednorazowym skanowaniu wejścia. Potrzebne są polityki zapisu, filtrowania i pochodzenia danych pamięci.",
+        "W połączeniu z dzisiejszym community signal z HN i Product Hunt to bardzo praktyczna lekcja: im szybciej rynek wpycha agent memory do produktów, tym szybciej trzeba myśleć o defensywie jako o warstwie pierwszorzędnej, a nie dodatku po launchu."
+      ],
+      "contextPoints": [
+        "Co się stało: arXiv opisuje GhostWriter, atak na długoterminową pamięć agentów.",
+        "Dlaczego ważne: memory governance staje się warunkiem bezpiecznego agent UX.",
+        "Na co patrzeć dalej: czy vendorzy wdrożą pamięć z kontrolą pochodzenia i zapisów."
+      ],
+      "sources": [
+        {
+          "title": "arXiv",
+          "url": "https://arxiv.org/abs/2607.06595"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "agents",
+        "memory poisoning",
+        "security",
+        "arXiv",
+        "long-term memory",
+        "governance"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-13-1933-5-hn-i-product-hunt-nagradzaja-lokalne-agenty-f4e58a37a5",
+      "section": "Produkty",
+      "title": "HN i Product Hunt nagradzają lokalne agenty",
+      "standfirst": "HN promuje SpeechAnalyzer, Clawk, Flock i GhostLock, a Product Hunt wynosi AgentKey, Osaurus, AI Media Buyer, Loomal i UnitPay. Wspólny mianownik to lokalne wykonanie, izolacja i proste rails do monetyzacji.",
+      "whatHappened": "Community signal przesuwa się w stronę narzędzi do uruchamiania, ochrony i rozliczania agentów.",
+      "whyItMatters": "To pokazuje, że rynek nie chce już tylko kolejnych czatów, ale praktycznych primitive'ów do pracy z modelami.",
+      "deeperAnalysis": [
+        "HN i Product Hunt rzadko tak dobrze się pokrywają tematycznie jak dziś. Po jednej stronie widać SpeechAnalyzer i Clawk, czyli lokalne speech-to-text oraz disposable Linux VM dla agentów. Po drugiej AgentKey, Osaurus, Loomal i UnitPay, czyli marketplace danych, lokalne agenty, monetyzację MCP i billing/value-proving dla AI produktów.",
+        "To ważne, bo sygnalizuje zmianę oczekiwań developerów. Zamiast pytać wyłącznie o capability modelu, społeczność pyta, jak agent ma działać bezpiecznie, jak ma być izolowany, skąd brać dane i jak go rozliczać. W tym sensie rynek infrastruktury AI przesuwa się z demo do operacyjnego tooling stacku.",
+        "Ten sygnał dobrze spina się z dzisiejszymi newsami o tanich modelach i memory security. Gdy modele stają się commodity, wartość przesuwa się do warstw wokół nich: sandbox, routing, billing, provenance i persistence."
+      ],
+      "contextPoints": [
+        "Co się stało: HN i Product Hunt promują agent-first narzędzia i monetization tooling.",
+        "Dlaczego ważne: praktyczne primitive'y stają się ważniejsze niż pojedynczy model.",
+        "Na co patrzeć dalej: czy ta fala przełoży się na adopcję enterprise i realne przychody."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/"
+        },
+        {
+          "title": "Product Hunt leaderboard daily 2026-07-13",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/7/13"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Hacker News",
+        "Product Hunt",
+        "agents",
+        "sandbox",
+        "monetization",
+        "local-first"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Chińskie modele wygrywają ceną",
+      "rationale": "Pokazuje, że rynek AI wchodzi w realny cost arbitrage i self-hosting.",
+      "sourcesLabel": "FT, OpenRouter kontekst rynkowy"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI i Google przez Singapur",
+      "rationale": "Export controls i geo-fencing okazują się porowate w praktyce.",
+      "sourcesLabel": "FT"
+    },
+    {
+      "priority": "High",
+      "title": "Meta Iris idzie do produkcji",
+      "rationale": "Custom silicon przestaje być wizją i staje się harmonogramem.",
+      "sourcesLabel": "TechCrunch, Reuters"
+    },
+    {
+      "priority": "High",
+      "title": "Memory poisoning agentów",
+      "rationale": "Długoterminowa pamięć staje się nowym wektorem ataku.",
+      "sourcesLabel": "arXiv"
+    },
+    {
+      "priority": "Medium",
+      "title": "LAPD zrywa z Flock",
+      "rationale": "Surveillance tech dostaje realny backlash na poziomie kontraktów.",
+      "sourcesLabel": "TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN i Product Hunt premiują local-first",
+      "rationale": "Społeczność mówi, że przyszłość to sandboxing, billing i execution.",
+      "sourcesLabel": "Hacker News, Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "FT: Companies turn to Chinese AI models to cut costs",
+      "url": "https://www.ft.com/content/9c8ff45b-7c20-4c2e-93c9-c52339ffdcee"
+    },
+    {
+      "title": "FT: OpenAI and Google sell AI models to blacklisted China groups",
+      "url": "https://www.ft.com/content/5d6aafa1-5d47-4585-aa95-6ec06a6cd20f"
+    },
+    {
+      "title": "TechCrunch: LAPD lets contract with surveillance giant Flock expire",
+      "url": "https://techcrunch.com/2026/07/13/lapd-lets-contract-with-surveillance-giant-flock-expire-citing-serious-concerns-over-civil-liberties-and-privacy/"
+    },
+    {
+      "title": "TechCrunch: Meta’s new AI chips will begin production in September",
+      "url": "https://techcrunch.com/2026/07/09/metas-new-ai-chips-will-begin-production-in-september/"
+    },
+    {
+      "title": "arXiv: When Agents Remember Too Much: Memory Poisoning Attacks on Large Language Model Agents",
+      "url": "https://arxiv.org/abs/2607.06595"
+    },
+    {
+      "title": "Barron’s: Google Traffic Grows Even as AI Rivals Explode",
+      "url": "https://www.barrons.com/articles/google-traffic-grows-even-as-ai-rivals-explode-e146d551"
+    },
+    {
+      "title": "Hacker News home",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "Product Hunt leaderboard daily 2026-07-13",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/7/13"
+    }
+  ]
+}

@@ -4,6 +4,10 @@ Last updated: 2026-07-13
 
 ## Current Understanding
 
+Wieczorny refresh z 2026-07-13 dokłada dwa nowe wektory do już znanej osi governance: firmy zaczynają jawnie przechodzić do tańszych chińskich modeli, a FT pokazuje, że OpenAI i Google nadal sprzedają modele przez pośrednie struktury do podmiotów powiązanych z czarną listą. To zamienia AI w opowieść o arbitrażu kosztu, geopolityce dostępu i porowatych export controls, a nie tylko o samym rolloutcie frontier modeli.
+
+Równolegle Reuters przez TechCrunch daje już konkretny termin produkcji dla chipa Meta Iris we wrześniu 2026, LAPD wycofuje Flock z powodu prywatności i wolności obywatelskich, a nowe prace o memory poisoning pokazują, że pamięć agentów jest pełnym attack surface. HN i Product Hunt są zgodne z tym przesunięciem: promują sandboxing, local-first execution i monetization rails zamiast samego modelowego hype'u.
+
 Dzisiejszy refresh dokłada do tematu warstwę agentycznego internetu i settlementu: Cloudflare ogłasza Monetization Gateway, mówi o ponad połowie ruchu w internecie jako nieludzkim i próbuje zamienić crawl control w płatny market na requesty, API i MCP tools. OpenAI równolegle przechodzi z limited preview do szerokiej dostępności GPT-5.6 z trusted access dla cyber i biologii, a Meta otwiera publiczny Meta Model API dla Muse Spark 1.1. Razem oznacza to, że frontier AI coraz mniej przypomina pojedyncze premiery modeli, a coraz bardziej infrastrukturę z kontrolowanym dostępem, płatnością i polityką użycia.
 
 Wieczorny refresh z 2026-07-12 przesuwa temat z samego modelowego rollout na governance, edge control i distributed inference. OpenAI traci szefa safety w momencie przyspieszenia GPT-5.6, Cloudflare i Patreon ustawiają twardszą politykę wobec crawlerów, a HN i Product Hunt pokazują rosnące zainteresowanie mesh inference oraz lekkimi agentami. Równolegle publiczny rynek zaczyna pytać, czy AI capex nie rośnie szybciej niż realna monetyzacja, a protesty w San Francisco przypominają, że frontier AI ma już wymiar społeczny i polityczny.

@@ -5,6 +5,10 @@
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
 | High | Track OpenAI safety churn | Safety leadership is moving while GPT-5.6 ships; watch whether launch policy changes | Watch new departures, safety org structure, GPT-5.6 safeguards and public response | Open |
+| High | Track Chinese AI model arbitrage | FT shows companies are switching to cheaper Chinese models for cost and self-hosting; this may reset enterprise pricing pressure | Watch adoption beyond early adopters, token pricing gaps and self-hosting patterns | Open |
+| High | Track export-control leakage via Singapore | OpenAI and Google serving blacklisted China-linked groups through Singapore shows the gap between policy and enforcement | Watch policy tightening, blocked accounts and compliance language | Open |
+| High | Track agent memory poisoning defenses | New papers show memory stores are a real attack surface before memory becomes default in products | Watch vendor mitigations, memory provenance controls and research follow-ups | Open |
+| Medium | Track Flock backlash | LAPD exiting Flock is a concrete pushback on license-plate surveillance and data retention | Watch more city exits, contract clauses and privacy commentary | Open |
 | High | Track creator crawler controls | Cloudflare and Patreon are moving search/training/agent control to the edge, and Cloudflare is now adding explicit monetization rails | Watch rollout breadth, compensation models, x402 adoption, publisher adoption and AI company response | Open |
 | Medium | Track peer-to-peer inference meshes | Mesh LLM is a concrete distributed-inference alternative worth tracking | Watch throughput, reliability, security and adoption outside HN | Open |
 | High | Track AI capex stress test | Public markets are now asking whether AI spend turns into revenue | Watch earnings, capex guidance, memory constraints and margin commentary | Open |
