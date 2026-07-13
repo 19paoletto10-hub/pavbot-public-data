@@ -147,6 +147,11 @@ antyrakietowy, UE oraz relacje z Polską i Węgrami. Polski poranny kontekst to
 agenda Tuska: centrum ESA w Warszawie i paryska Koalicja Chętnych, plus
 planowe ćwiczenia wojskowe na północnym wschodzie z apelem o higienę
 informacyjną.
+Po wieczornym runie 13 lipca Ormuz przeszedł z samego sporu o kontrolę w
+jawny amerykański plan blokady i opłaty tranzytowej, Paryż ogłosił zintegrowaną
+koalicję antybalistyczną z Ukrainą i dziesięcioma państwami europejskimi, a
+KPRM potwierdziło centrum ESA w Warszawie. Bangkok podniósł bilans ofiar, ale
+wieczorem pozostał krótszym follow-upem niż osie bezpieczeństwa i dyplomacji.
 
 ## Stable Facts
 
