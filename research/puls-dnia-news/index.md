@@ -150,6 +150,13 @@ counter-terror arrests, the suspected Fontainebleau arson and the Gibraltar
 border deal, while the economy and tech layers keep Ormuz, SpaceX and the
 Musk-Altman feud in view.
 
+The 2026-07-13 21:01 slot adds a fresh domestic abuse case in Bielsko-Biała,
+keeps the Aleje Jerozolimskie disruption and weather/water alerts active, and
+pushes the polityka line toward Ziobro, the death of Lindsey Graham and the
+Gibraltar provisional-application date. The world feed now leans harder into
+IRGC, Bangkok, Spanish and French fires, Ormuz, the SK Hynix AI selloff and
+Apple's lawsuit against OpenAI.
+
 ## Data Shape
 
 The native iOS feed expects:

@@ -19,8 +19,14 @@
   review from Thai authorities.
 - Watch whether IMGW escalates the current storm-and-heat alerts to wider
   regional warnings.
+- Watch whether the Bielsko-Biała bus abuse case gets formal charges or a
+  municipal clarification.
+- Watch whether the SK Hynix AI selloff spreads to other semiconductors or
+  turns into a broader correction.
 - Watch whether the Apple/OpenAI lawsuit and Meta AI rollback produce official
   filings or product changes in the next slot.
+- Watch whether the Lindsey Graham vacancy produces a clear Senate replacement
+  timeline and new Ukraine messaging from Republicans.
 - Watch whether the Chopin C3 scanner rollout gets a follow-up from the airport
   or queue-time reporting in the next few slots.
 - Watch whether China export-control coverage picks up a fresh EU or industry
