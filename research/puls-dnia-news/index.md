@@ -125,6 +125,15 @@ archeology, a Korea heat alarm, BBC coverage of Polish memory politics and
 Lindsey Graham's death, Nigeria's hostage rescue, West Bank security stories,
 China's export clampdown and Meta's EU regulatory pressure.
 
+The 2026-07-13 12:01 slot moved the feed toward fresher domestic safety and
+infrastructure signals: ESA chose Warsaw for the new centre, TVN24 reported
+an anti-Ukrainian abuse case in a bus and a building collapse in Częstochowa,
+and the political layer shifted to a fresh in vitro clash. The world mix
+broadened to Trump's housing-bill veto threat, the Ukraine reshuffle, Spain's
+deadly wildfire, and ongoing Iran/Hormuz escalation, while market and tech
+items now include SK hynix on Nasdaq, Meta AI privacy backlash and refreshed
+IMGW storm/heat alerts.
+
 ## Data Shape
 
 The native iOS feed expects:

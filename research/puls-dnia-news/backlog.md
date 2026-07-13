@@ -31,6 +31,12 @@
   DRC.
 - Watch whether the Korea Południowa heat alarm turns into broader official
   alerts in Europe or Poland.
+- Watch whether ESA publishes a formal funding, staffing or launch timetable
+  for the Warsaw centre.
+- Watch whether police in the Bielsko-Biała bus-abuse case file charges or
+  issue a formal clarification.
+- Watch whether the Częstochowa collapse gets a casualty or cause update from
+  rescuers or the building inspectorate.
 
 ## Done
 
