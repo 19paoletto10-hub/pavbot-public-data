@@ -2,6 +2,9 @@
 
 ## Open
 
+- Watch whether CBA or prokuratura publishes a formal note on Maciej Świrski.
+- Watch whether IMGW or RCB escalates or lifts the 14.07 storm alerts.
+- Watch whether Volkswagen confirms the scale and regional split of planned cuts.
 - Watch whether the Polish Tatra fatality gets a fuller Slovak rescue report or official identification.
 - After the manifest bootstrap, confirm the iOS app shows at least six pairs of
   cards from the newest `pulseNewsData`.

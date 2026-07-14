@@ -8,6 +8,14 @@ exists, it falls back to the older `aktualne-wydarzenia-mobile` magazine data.
 The public manifest now exposes timestamped `pulseNewsData` artifacts for this
 topic, so the primary feed path is active when refresh succeeds.
 
+The 2026-07-14 12:02 slot pivots away from the earlier Wyszków / Iran frame
+and into a broader alert-and-institution cluster: IMGW and RCB keep weather
+warnings live, TVN24 leads with Maciej Świrski's CBA detention and Donald
+Tusk's conditional stance on an anti-ballistic coalition without Poland, and
+BBC refreshes Bangkok, Hungary, Sudan, Spain, Trump / IRS and Volkswagen
+coverage. CNN remained checked, but the direct crawl was unstable in this slot,
+so no new CNN-only lead displaced the existing Iran watch.
+
 The live run contract is now active with timestamped Markdown and
 `pulse-news.json` outputs using one shared Europe/Warsaw run stamp. Material
 items are discovered from TVN24, BBC and CNN, then confirmed with official or
