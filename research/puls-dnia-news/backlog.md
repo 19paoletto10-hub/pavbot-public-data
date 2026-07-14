@@ -3,7 +3,7 @@
 ## Open
 
 - Watch whether CBA or prokuratura publishes a formal note on Maciej Świrski.
-- Watch whether IMGW or RCB escalates or lifts the 14.07 storm alerts.
+- Watch whether the Jelenia Góra and Małopolska downpour widens into flood or outage alerts.
 - Watch whether Volkswagen confirms the scale and regional split of planned cuts.
 - Watch whether the Polish Tatra fatality gets a fuller Slovak rescue report or official identification.
 - After the manifest bootstrap, confirm the iOS app shows at least six pairs of
@@ -21,10 +21,10 @@
   appeal.
 - Watch whether the Bangkok bar fire gets a formal casualty update or safety
   review from Thai authorities.
-- Watch whether IMGW escalates the current storm-and-heat alerts to wider
-  regional warnings.
-- Watch whether the Bielsko-Biała bus abuse case gets formal charges or a
-  municipal clarification.
+- Watch whether Wrocław police publish a clarification or footage on the knife
+  incident at the bus stop.
+- Watch whether the Bielsko-Biała bus abuse case gets a prosecutor decision on
+  preventive measures or a municipal clarification.
 - Watch whether the SK Hynix AI selloff spreads to other semiconductors or
   turns into a broader correction.
 - Watch whether the Apple/OpenAI lawsuit and Meta AI rollback produce official
@@ -61,6 +61,13 @@
   follow-through in the next slot.
 - Watch whether Wyszków services publish a formal rescue note or health update
   after the Bug incident.
+- Watch whether the Warszawa Zachodnia attack on the Belarusian swimmer gets a
+  formal police note or victim update.
+- Watch whether the bank phishing campaign gets a fresh KNF or bank warning.
+- Watch whether Hungary publishes an implementation timeline or legal challenge
+  to the constitutional amendment.
+- Watch whether the Paris coalition produces concrete Polish industrial
+  commitments in the next slot.
 - Watch whether the Russian-account report gets a named platform, state or
   security response in the next slot.
 - Watch whether Bangkok authorities publish a full safety review after the bar

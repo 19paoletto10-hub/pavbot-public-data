@@ -8,6 +8,14 @@ exists, it falls back to the older `aktualne-wydarzenia-mobile` magazine data.
 The public manifest now exposes timestamped `pulseNewsData` artifacts for this
 topic, so the primary feed path is active when refresh succeeds.
 
+The 2026-07-14 15:00 slot broadens the feed into a denser safety-and-security
+cluster: Jelenia Góra and Małopolska move from alert to damage, Wyszków gets a
+rescue update on the Bug, Bielsko-Biała reaches the zarzut stage, Wrocław and
+Warszawa Zachodnia add fresh urban safety incidents, and the bank phishing
+alert brings cyber-risk back into the daily pulse. The political layer tightens
+around Czarnek, Kaczyński and Tusk, while the world feed expands to Paryż,
+Bangkok, Spain, Graham and Hungary.
+
 The 2026-07-14 12:02 slot pivots away from the earlier Wyszków / Iran frame
 and into a broader alert-and-institution cluster: IMGW and RCB keep weather
 warnings live, TVN24 leads with Maciej Świrski's CBA detention and Donald
