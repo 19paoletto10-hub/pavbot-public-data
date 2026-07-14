@@ -157,6 +157,14 @@ Gibraltar provisional-application date. The world feed now leans harder into
 IRGC, Bangkok, Spanish and French fires, Ormuz, the SK Hynix AI selloff and
 Apple's lawsuit against OpenAI.
 
+The 2026-07-14 06:01 slot shifts the pulse toward a new Polish fatality in
+the Slovak Tatra mountains, another sharp escalation around Iran and Ormuz,
+continued IMGW storm and heat warnings, and a still-active Bóbr restriction
+in Dolny Śląsk. The polityka layer now carries the Coalition of the Willing
+follow-up from Paris and the Lindsey Graham succession story, while BBC keeps
+the Bangkok, Spain, Hungary and Paris fire / politics mix live and TVN24
+adds the EU child-safety tech-regulation angle.
+
 ## Data Shape
 
 The native iOS feed expects:

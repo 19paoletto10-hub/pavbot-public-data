@@ -2,6 +2,7 @@
 
 ## Open
 
+- Watch whether the Polish Tatra fatality gets a fuller Slovak rescue report or official identification.
 - After the manifest bootstrap, confirm the iOS app shows at least six pairs of
   cards from the newest `pulseNewsData`.
 - Consider adding a future `pulseNewsImage` field only if the native card UI
