@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-14-1208",
+  "status": "material_update",
+  "generatedAt": "2026-07-14T10:18:28+00:00",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-14T12:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Computer Use preflight was attempted conceptually, but this run completed through read-only Safari Apple Events/DOM in the logged-in local Safari session.",
+      "A pre-shortlist filter removed every Reddit post URL path that appeared in runs 2026-07-14-0008 and 2026-07-13-1214, so old.reddit and www.reddit variants did not bypass freshness filtering.",
+      "Shortlist review stayed read-only on old.reddit.com post pages with top comments in the same Safari-driven workflow.",
+      "No Reddit social actions were performed.",
+      "At least four safe fresh cards survived the filter and manual review, so the topic contract prefers a new public bundle over keeping 2026-07-13-1214 unchanged.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-13-1214",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-14-1208-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-14-1208-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-14-1208-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uvbbwm/theusual",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uv3tsh/whatifitoldyouthis",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uvhm03/people_waiting_in_line_at_goodwill",
+    "https://www.reddit.com/r/facepalm/comments/1uvkgvo/using_the_dishwasher_the_first_time_i_didnt_know",
+    "https://www.reddit.com/r/memes/comments/1uuod8b/as_a_brit_its_weird_being_hated_less_in_a_sport",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uuzjt5/jobsecurity",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uv0xcq/the_food_you_order_the_food_you_receive",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uuxl0u/it_didnt_fit",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uux23g/weve_been_allotted_a_whole_20_minutes_at_end_of"
+  ],
+  "newCandidates": [
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "youCanJustStopUsingJava",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uvez3w/youcanjuststopusingjava/",
+      "scoreLabel": "5.8K",
+      "decision": "selected_for_fresh_bundle_as_clean_functional_roast_with_monad_comment_escalation"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "downfallOFStackOverflow",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uujrl6/downfallofstackoverflow/",
+      "scoreLabel": "9.0K",
+      "decision": "selected_for_fresh_bundle_as_safe_meta_dev_roast_about_manuals_llms_and_post_stack_overflow_confusion"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "This car has been blocking 8 parking spots in our garage for 2 days now.",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uvlxlr/this_car_has_been_blocking_8_parking_spots_in_our/",
+      "scoreLabel": "5.2K",
+      "decision": "selected_for_fresh_bundle_as_clear_public_safe_absurdity_that_comments_treat_like_a_tiny_duck_sized_intruder"
+    },
+    {
+      "subreddit": "r/facepalm",
+      "title": "Even my fortune cookie has ads now?!",
+      "url": "https://www.reddit.com/r/facepalm/comments/1urvjgq/even_my_fortune_cookie_has_ads_now/",
+      "scoreLabel": "3.9K",
+      "decision": "selected_for_fresh_bundle_as_compact_public_safe_dystopia_joke_with_confucius_comment_payoff"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Linda Cardellini's Velma is the best",
+      "url": "https://www.reddit.com/r/memes/comments/1uvphrj/linda_cardellinis_velma_is_the_best/",
+      "scoreLabel": "11.7K",
+      "decision": "reviewed_but_left_out_because_the_top_comment_layer_turns_overtly_sexualized_and_is_weaker_for_a_public_safe_digest"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "He was a good man.",
+      "url": "https://www.reddit.com/r/memes/comments/1uvkwk4/he_was_a_good_man/",
+      "scoreLabel": "10.0K",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_is_mourning_a_real_death_and_not_a_light_humor_payoff"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "The train is NOT your home. Please keep you feet under the table.",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uvt8vq/the_train_is_not_your_home_please_keep_you_feet/",
+      "scoreLabel": "8.1K",
+      "decision": "reviewed_but_left_out_because_top_comments_slide_into_gross_body_detail_more_than_clean_public_digest_humor"
+    },
+    {
+      "subreddit": "r/facepalm",
+      "title": "kind of curious how he plans to elaborate",
+      "url": "https://www.reddit.com/r/facepalm/comments/1uvx6s9/kind_of_curious_how_he_plans_to_elaborate/",
+      "scoreLabel": "9.9K",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_turns_into_child_abuse_and sexuality discourse instead of light humor"
+    }
+  ]
+}
