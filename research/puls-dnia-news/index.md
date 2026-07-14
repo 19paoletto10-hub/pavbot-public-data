@@ -2,6 +2,10 @@
 
 ## Current State
 
+The 2026-07-14 21:03 slot shifts the feed into a fresh procedural burst: Cezary J. leaves the prokuratura while Świrski remains in motion, Ziobro gets a new ICE step, Żurek pushes three immunities and the Czarnek/Ukraina fight gets another sharp response from the minister of digitalization. On the safety side, the Ursus wall crack and a new Wrocław fire-truck collision keep local risk active, while IMGW and RCB hold the storm alerts open.
+
+The world and business block is now more infrastructure-heavy: Emiraty push a Hormuz bypass, Iran signals uninterrupted oil exports, the Biały Dom shifts on Russian sanctions, U.S. inflation re-heats rate pressure, Meta gets another AI-related lawsuit, Poland moves toward a gigafabryka AI, and VeloBank warns about layoffs.
+
 This topic powers the iOS `Dzisiaj -> Szybki puls dnia` carousel. The app first
 looks for the newest `pulseNewsData` artifact in the public manifest. If none
 exists, it falls back to the older `aktualne-wydarzenia-mobile` magazine data.

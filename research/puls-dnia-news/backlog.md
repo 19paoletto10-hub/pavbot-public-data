@@ -2,6 +2,11 @@
 
 ## Open
 
+- Watch whether the evening prokuratura note on Cezary J. and Świrski adds charges or only procedural status.
+- Watch whether the IMGW/RCB alerts expand into outages or new structural damage after 21:00.
+- Watch whether VeloBank publishes a formal layoff plan or the unions respond.
+- Watch whether the gigafabryka AI decision gets a timeline, partner list or extra financing detail in the next slot.
+
 - Watch whether CBA or prokuratura publishes a formal note on Maciej Świrski.
 - Watch whether the Świrski detention turns into a formal charge sheet or new
   procedural step.

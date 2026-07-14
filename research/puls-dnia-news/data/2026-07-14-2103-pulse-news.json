@@ -1,0 +1,687 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-14",
+  "runTime": "21:03",
+  "status": "Material update",
+  "headline": "21:03: Świrski, Ziobro, alerty i Ormuz",
+  "summary": "Nowy slot dokłada proceduralne ruchy wokół Świrskiego i Ziobry, aktywne burze nad Polską oraz mocny blok Ormuz-USA-Rosja, inflacji i AI.",
+  "checkedSources": [
+    {
+      "title": "TVN24: Wiadomości z kraju i ze świata",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24: Najnowsze wiadomości",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "TVN24 Biznes: Najnowsze wiadomości gospodarcze",
+      "url": "https://tvn24.pl/biznes/najnowsze"
+    },
+    {
+      "title": "TVN24: Wiadomości z kraju - Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Meteo: ostrzeżenia IMGW",
+      "url": "https://tvn24.pl/tvnmeteo/prognoza/bedzie-lalo-i-grzmialo-ostrzezenia-imgw-przed-burzami-na-14-07-st9139702"
+    },
+    {
+      "title": "Gov.pl / RCB: ALERT RCB - burze, silny wiatr i intensywne opady deszczu (14.07)",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-silny-wiatr-i-intensywne-opady-deszczu-1407"
+    },
+    {
+      "title": "TVN24: Cezary J. opuścił prokuraturę. Czynności z Maciejem Świrskim trwają",
+      "url": "https://tvn24.pl/polska/cezary-j-opuscil-prokurature-czynnosci-z-maciejem-swirskim-trwaja-st9142809"
+    },
+    {
+      "title": "TVN24: Jest wniosek do ICE w sprawie Zbigniewa Ziobry",
+      "url": "https://tvn24.pl/polska/zbigniew-ziobro-w-usa-jest-wniosek-do-ice-w-sprawie-polityka-pis-st9142612"
+    },
+    {
+      "title": "TVN24: Minister cyfryzacji o słowach Przemysława Czarnka",
+      "url": "https://tvn24.pl/polska/minister-cyfryzacji-o-slowach-przemyslawa-czarnka-narracja-ktora-doprowadzi-nas-do-wojny-z-rosja-st9142795"
+    },
+    {
+      "title": "BBC News",
+      "url": "https://www.bbc.com/news"
+    },
+    {
+      "title": "CNN transcripts",
+      "url": "https://transcripts.cnn.com/show/cnr"
+    }
+  ],
+  "items": [
+    {
+      "id": "polska-swirski-cesaryj-2026-07-14-2103",
+      "section": "Polska",
+      "title": "Cezary J. opuścił prokuraturę. Czynności z Maciejem Świrskim trwają",
+      "lead": "Śledczy wciąż pracują nad wątkiem PFN i byłego szefa KRRiT.",
+      "whatHappened": "TVN24 podało, że Cezary J. wyszedł z prokuratury, a czynności z Maciejem Świrskim nadal trwają. To przenosi sprawę z samego zatrzymania do kolejnego etapu śledczego.",
+      "keyFacts": [
+        "Świrski i Cezary J. zostali zatrzymani przez CBA 14 lipca.",
+        "Postępowanie prowadzi prokuratura w Rzeszowie.",
+        "Sprawa dotyczy finansowania kampanii medialnej PFN."
+      ],
+      "reactions": [
+        "PiS przedstawia to jako polityczną zemstę.",
+        "Obóz rządzący utrzymuje, że to zwykłe działania śledcze."
+      ],
+      "whyItMatters": "To wciąż jedna z najmocniejszych spraw rozliczeniowych dnia i potencjalne źródło kolejnych komunikatów.",
+      "context": "Świrski od miesięcy był jedną z najbardziej konfliktowych postaci w sporze o media i rozliczenia.",
+      "watchNext": [
+        "Czy prokuratura poda zarzuty albo dalszy status.",
+        "Czy CBA lub obrona ujawnią nowe szczegóły."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Cezary J. opuścił prokuraturę. Czynności z Maciejem Świrskim trwają",
+          "url": "https://tvn24.pl/polska/cezary-j-opuscil-prokurature-czynnosci-z-maciejem-swirskim-trwaja-st9142809"
+        }
+      ],
+      "tags": [
+        "Świrski",
+        "CBA",
+        "PFN",
+        "Polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-kaczynski-zatrzymania-2026-07-14-2103",
+      "section": "Polska",
+      "title": "Jarosław Kaczyński o zatrzymaniach. \"To kolejne akty zemsty\"",
+      "lead": "Prezes PiS wiąże zatrzymanie Świrskiego i ludzi PFN z polityczną odpłatą.",
+      "whatHappened": "Kaczyński ocenił, że zatrzymania są \"kolejnymi aktami zemsty\" obozu władzy i próbą przykrycia sprawy Ziobry. TVN24 trzyma ten wątek wysoko w krajowym feedzie.",
+      "keyFacts": [
+        "Wypowiedź pojawiła się po zatrzymaniach przez CBA.",
+        "PiS podbija narrację o politycznym tle sprawy.",
+        "Temat utrzymuje się na pierwszej linii dnia."
+      ],
+      "reactions": [
+        "Obóz rządzący kontruje, że to normalne działania śledcze.",
+        "Spór przenosi się z prokuratury do politycznej narracji."
+      ],
+      "whyItMatters": "Podkręca polityczny ciężar sprawy i zwiększa szansę na dalsze spory w Sejmie i mediach.",
+      "context": "Kaczyński regularnie reaguje na postępowania wobec ludzi z dawnego obozu władzy.",
+      "watchNext": [
+        "Czy PiS zorganizuje szerszą ofensywę komunikacyjną.",
+        "Czy pojawią się kolejne nazwiska powiązane z PFN."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Jarosław Kaczyński o zatrzymaniach. \"To kolejne akty zemsty\"",
+          "url": "https://tvn24.pl/polska/maciej-swirski-zatrzymany-przez-cba-jaroslaw-kaczynski-to-kolejne-akty-zemsty-ukladu-wladzy-donalda-tuska-st9142578"
+        }
+      ],
+      "tags": [
+        "Kaczyński",
+        "Świrski",
+        "PiS",
+        "Polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-ziobro-ice-2026-07-14-2103",
+      "section": "Polska",
+      "title": "Jest wniosek do ICE w sprawie Zbigniewa Ziobry",
+      "lead": "Żurek sygnalizuje kolejny krok w kierunku USA i statusu pobytu Ziobry.",
+      "whatHappened": "TVN24 podało, że w sprawie Zbigniewa Ziobry złożono wniosek do ICE. To nowy formalny etap równoległy do prac nad ekstradycją.",
+      "keyFacts": [
+        "Wniosek dotyczy polityka PiS przebywającego w USA.",
+        "Żurek mówi, że wniosek o ekstradycję jest gotowy lub na finiszu.",
+        "Sprawa łączy się z wcześniejszymi decyzjami proceduralnymi."
+      ],
+      "reactions": [
+        "Obóz rządzący prezentuje to jako uporządkowany proces prawny.",
+        "PiS przedstawia działania jako polityczny nacisk."
+      ],
+      "whyItMatters": "To najważniejszy polityczny i prawny wątek wokół Ziobry w tym slocie.",
+      "context": "Wcześniejsze komunikaty już przesuwały sprawę z poziomu komentarzy do formalnych dokumentów.",
+      "watchNext": [
+        "Czy ICE lub prokuratura potwierdzą kolejne kroki.",
+        "Czy pojawi się kalendarz decyzji sądowych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Jest wniosek do ICE w sprawie Zbigniewa Ziobry",
+          "url": "https://tvn24.pl/polska/zbigniew-ziobro-w-usa-jest-wniosek-do-ice-w-sprawie-polityka-pis-st9142612"
+        }
+      ],
+      "tags": [
+        "Ziobro",
+        "ICE",
+        "Ekstradycja",
+        "Polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-immunitety-trojga-poslow-2026-07-14-2103",
+      "section": "Polityka",
+      "title": "Są wnioski o uchylenie immunitetu trojgu posłom",
+      "lead": "Żurek przekazał nowy pakiet wniosków immunitetowych do Sejmu.",
+      "whatHappened": "Prokurator generalny przekazał wnioski o uchylenie immunitetu Katarzynie Ueberhan, Władysławowi Teofilowi Bartoszewskiemu i Tadeuszowi Chrzanowi. TVN24 podaje, że każda ze spraw dotyczy odrębnego zdarzenia.",
+      "keyFacts": [
+        "Wnioski trafiły do marszałka Czarzastego.",
+        "Prokuratura podkreśla, że to trzy różne postępowania.",
+        "Sprawa zwiększa presję na sejmową większość i komisje."
+      ],
+      "reactions": [
+        "Koalicja musi obsłużyć temat proceduralnie i politycznie.",
+        "Opozycja może wykorzystywać wnioski jako argument o selektywnym ściganiu."
+      ],
+      "whyItMatters": "To kolejny sygnał, że rozliczenia obejmują już szerszy pakiet postępowań.",
+      "context": "Żurek od kilku dni intensyfikuje komunikaty o immunitetach i ekstradycji.",
+      "watchNext": [
+        "Czy marszałek i komisje szybko uruchomią procedury.",
+        "Czy pojawią się nazwiska kolejnych posłów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Są wnioski o uchylenie immunitetu trojgu posłom",
+          "url": "https://tvn24.pl/polska/waldemar-zurek-przekazal-wnioski-o-uchylenie-immunitetu-katarzynie-ueberhan-wladyslawowi-teofilowi-bartoszewskiemu-i-tadeuszowi-chrzanowi-st9142335"
+        }
+      ],
+      "tags": [
+        "Immunitety",
+        "Żurek",
+        "Sejm",
+        "Polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-czarnek-rosja-2026-07-14-2103",
+      "section": "Polityka",
+      "title": "Minister cyfryzacji o słowach Przemysława Czarnka. \"Narracja, która doprowadzi nas do wojny z Rosją\"",
+      "lead": "Nowa riposta na wypowiedź Czarnka podbija spór o Ukrainę i rosyjską propagandę.",
+      "whatHappened": "Minister cyfryzacji ocenił, że słowa Czarnka wpisują się w narrację, która może prowadzić do konfliktu z Rosją. TVN24 pokazuje to jako świeżą eskalację sporu o Ukrainę i bezpieczeństwo.",
+      "keyFacts": [
+        "Wypowiedź jest bezpośrednią odpowiedzią na Czarnka.",
+        "Ton reakcji jest ostrzejszy niż zwykła polemika partyjna.",
+        "Wątek łączy się z wcześniejszą debatą o Ukrainie i Kremlu."
+      ],
+      "reactions": [
+        "Tusk i inni politycy koalicji podbijają ostrą kontrnarrację.",
+        "PiS może odpowiadać, że to próba zduszenia debaty o migracji i wojnie."
+      ],
+      "whyItMatters": "To temat, który może dłużej żyć w politycznym obiegu niż pojedynczy news.",
+      "context": "W poprzednim slocie ten konflikt już wybuchł, a teraz dostał świeże polityczne doładowanie.",
+      "watchNext": [
+        "Czy PiS odpowie zbiorczo czy pojedynczymi wypowiedziami.",
+        "Czy temat przejdzie do wystąpień w Sejmie lub mediach publicznych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Minister cyfryzacji o słowach Przemysława Czarnka. \"Narracja, która doprowadzi nas do wojny z Rosją\"",
+          "url": "https://tvn24.pl/polska/minister-cyfryzacji-o-slowach-przemyslawa-czarnka-narracja-ktora-doprowadzi-nas-do-wojny-z-rosja-st9142795"
+        }
+      ],
+      "tags": [
+        "Czarnek",
+        "Ukraina",
+        "Rosja",
+        "Polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-ursus-blok-2026-07-14-2103",
+      "section": "Bezpieczeństwo",
+      "title": "Pęknięta ściana bloku i nocna ewakuacja 14 rodzin",
+      "lead": "Ursus znów pokazuje, że lokalne awarie budynków są realnym ryzykiem.",
+      "whatHappened": "W TVN Warszawa opisano pękniętą ścianę bloku i nocną ewakuację 14 rodzin. To już nie tylko sygnał ostrzegawczy, ale operacyjna interwencja służb i administracji.",
+      "keyFacts": [
+        "Ewakuacja objęła 14 rodzin.",
+        "Sprawa została ujawniona jeszcze tej nocy.",
+        "To problem stanu budynku, nie tylko pogody."
+      ],
+      "reactions": [
+        "Mieszkańcy muszą czekać na ocenę konstrukcyjną.",
+        "Administracja i służby mogą wydać kolejne komunikaty o bezpieczeństwie."
+      ],
+      "whyItMatters": "Łączy się z szerszym letnim wzorcem, w którym pogoda i infrastruktura zaczynają się przenikać.",
+      "context": "Warszawa była już w tym cyklu miejscem kilku lokalnych incydentów bezpieczeństwa.",
+      "watchNext": [
+        "Czy konstruktorzy potwierdzą skalę uszkodzeń.",
+        "Czy lokatorzy dostaną pozwolenie na powrót."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Warszawa: Pęknięta ściana bloku i nocna ewakuacja 14 rodzin",
+          "url": "https://tvn24.pl/tvnwarszawa/ursus/peknieta-sciana-bloku-i-nocna-ewakuacja-14-rodzin-st9141949"
+        }
+      ],
+      "tags": [
+        "Ursus",
+        "Ewakuacja",
+        "Budynek",
+        "Bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-wroclaw-woz-strazacki-2026-07-14-2103",
+      "section": "Bezpieczeństwo",
+      "title": "Zderzyła się z wozem strażackim",
+      "lead": "Kolejny miejski incydent pokazuje, że ruch służb pozostaje aktywny.",
+      "whatHappened": "TVN24 Wrocław podało, że auto zderzyło się z wozem strażackim w Polanicy-Zdroju. To nie jest największa historia dnia, ale dobrze pokazuje poziom bieżących zdarzeń lokalnych.",
+      "keyFacts": [
+        "Zdarzenie opisano tego samego dnia.",
+        "Sprawa wymaga doprecyzowania obrażeń i utrudnień.",
+        "Wpisuje się w aktywny lokalny front bezpieczeństwa."
+      ],
+      "reactions": [
+        "Służby będą ustalać winę i przebieg kolizji.",
+        "Mieszkańcy dostają kolejny sygnał o aktywnym ruchu służb."
+      ],
+      "whyItMatters": "Pomaga utrzymać w pulpicie bieżący stan lokalnych zdarzeń, gdy alerty pogodowe są nadal w mocy.",
+      "context": "Przy aktywnych burzach nawet drobne kolizje i interwencje mają większe znaczenie operacyjne.",
+      "watchNext": [
+        "Czy pojawi się komunikat o rannych lub blokadzie drogi.",
+        "Czy zdarzenie rozwinie się w większy problem komunikacyjny."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Wrocław: Zderzyła się z wozem strażackim",
+          "url": "https://tvn24.pl/wroclaw/polanica-zdroj-na-ulicy-zdrojowej-auto-zderzylo-sie-z-wozem-strazackim-st9142760"
+        }
+      ],
+      "tags": [
+        "Wrocław",
+        "Kolizja",
+        "Służby",
+        "Bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-imgw-czerwone-2026-07-14-2103",
+      "section": "Alerty",
+      "title": "Ostrzeżenia IMGW. W mocy kolejne czerwone alarmy",
+      "lead": "Najwyższy stopień ostrzeżeń utrzymuje ryzyko ulew i lokalnych podtopień.",
+      "whatHappened": "IMGW utrzymał czerwone alarmy przed burzami na 14 lipca, a TVN24 podkreśla możliwość ulew i gwałtownej pogody. To nadal aktywne zagrożenie, nie tylko prognoza.",
+      "keyFacts": [
+        "Obowiązują ostrzeżenia trzeciego stopnia w części kraju.",
+        "Ryzyko dotyczy ulew i silnych porywów wiatru.",
+        "RCB równolegle rozesłało alerty dla mieszkańców."
+      ],
+      "reactions": [
+        "Mieszkańcy powinni ograniczyć aktywność na otwartej przestrzeni.",
+        "Samorządy mogą przygotować służby na kolejne interwencje."
+      ],
+      "whyItMatters": "To główny nośnik ryzyka operacyjnego w polskim bloku tego slotu.",
+      "context": "W poprzednich slotach pogoda już wywoływała szkody i ewakuacje, więc alarmy są praktyczne, nie teoretyczne.",
+      "watchNext": [
+        "Czy alarmy będą przedłużone lub rozszerzone.",
+        "Czy pojawią się kolejne szkody rzeczowe."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo: Ostrzeżenia IMGW. W mocy kolejne czerwone alarmy",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/bedzie-lalo-i-grzmialo-ostrzezenia-imgw-przed-burzami-na-14-07-st9139702"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "Burze",
+        "Alerty",
+        "Meteo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-rcb-burze-2026-07-14-2103",
+      "section": "Alerty",
+      "title": "ALERT RCB - burze, silny wiatr i intensywne opady deszczu (14.07)",
+      "lead": "RCB ostrzega przed podtopieniami i przerwami w dostawie prądu.",
+      "whatHappened": "Rządowe Centrum Bezpieczeństwa wydało dziś ogólny alert o burzach, silnym wietrze i intensywnych opadach. Komunikat jest spójny z ostrzeżeniami IMGW i ma bezpośredni charakter operacyjny.",
+      "keyFacts": [
+        "Alert dotyczy 14 lipca.",
+        "Wskazuje możliwe podtopienia i przerwy w prądzie.",
+        "Ma zachęcać do ograniczenia aktywności na otwartej przestrzeni."
+      ],
+      "reactions": [
+        "Mieszkańcy dostają jasny sygnał, by uważać na pogodę.",
+        "Samorządy mogą przygotować służby na interwencje."
+      ],
+      "whyItMatters": "To najważniejsza oficjalna podkładka dla całego bloku pogodowego w tym slocie.",
+      "context": "Poprzednie raporty już potwierdziły szkody po burzach, więc alert nie jest abstrakcyjny.",
+      "watchNext": [
+        "Czy alert zostanie podniesiony lub rozszerzony.",
+        "Czy lokalne służby zgłoszą awarie prądu i zalania."
+      ],
+      "sources": [
+        {
+          "title": "Gov.pl / RCB: ALERT RCB - burze, silny wiatr i intensywne opady deszczu (14.07)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-silny-wiatr-i-intensywne-opady-deszczu-1407"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "Burze",
+        "Alert",
+        "Bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-emiraty-ormuz-2026-07-14-2103",
+      "section": "Świat",
+      "title": "Emiraty mają plan na ominięcie cieśniny Ormuz. Odpowiedzią ma być port w Fudżajrze",
+      "lead": "Nowy projekt infrastrukturalny pokazuje, że rynek szuka obejścia dla ryzyka w Ormuzie.",
+      "whatHappened": "TVN24 opisuje projekt DP World i ZEA, który ma dać alternatywną trasę dla łańcucha dostaw wokół cieśniny Ormuz. To bezpośrednia reakcja na wzrost ryzyka żeglugowego.",
+      "keyFacts": [
+        "Projekt dotyczy portu w Fudżajrze.",
+        "To odpowiedź na rosnące napięcia w regionie.",
+        "Temat już wpływa na rynek ropy i ubezpieczenia."
+      ],
+      "reactions": [
+        "Operatorzy logistyczni szukają odchyleń od trasy o najwyższym ryzyku.",
+        "Rynki energetyczne traktują to jako sygnał, że kryzys może się utrwalić."
+      ],
+      "whyItMatters": "To jeden z najlepszych wskaźników, że Ormuz przestał być abstrakcyjnym ryzykiem.",
+      "context": "W poprzednich slotach pojawiały się ataki, opłaty i blokady wokół tego samego punktu.",
+      "watchNext": [
+        "Czy projekt dostanie termin i finansowanie.",
+        "Czy inne państwa zgłoszą podobne obejścia szlaku."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Emiraty mają plan na ominięcie cieśniny Ormuz. Odpowiedzią ma być port w Fudżajrze",
+          "url": "https://tvn24.pl/biznes/ze-swiata/dubaj-zjednoczone-emiraty-arabskie-maja-nowy-plan-na-ominiecie-ciesniny-ormuz-dp-world-zapowiada-port-w-fudzajrze-st9141451"
+        }
+      ],
+      "tags": [
+        "Ormuz",
+        "ZEA",
+        "Logistyka",
+        "Świat"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-iran-niewzruszony-2026-07-14-2103",
+      "section": "Świat",
+      "title": "Iran niewzruszony. \"Nie będziemy mieli żadnych problemów w tym zakresie\"",
+      "lead": "Teheran sugeruje, że mimo presji USA eksport ropy ma iść dalej.",
+      "whatHappened": "TVN24 przywołało Reutersa i wypowiedź irańskiego ministra ropy, który zapewnia, że struktury eksportowe pozostają zachowane. To sygnał, że Iran nie zamierza odpuszczać.",
+      "keyFacts": [
+        "Komunikat dotyczy eksportu ropy.",
+        "Jest odpowiedzią na amerykańskie ograniczenia i napięcia w Ormuzie.",
+        "Rynek czyta to jako utrzymanie presji na ceny i żeglugę."
+      ],
+      "reactions": [
+        "Inwestorzy nadal wyceniają ryzyko podaży.",
+        "Waszyngton i sojusznicy dostają kolejny argument do monitoringu."
+      ],
+      "whyItMatters": "To bezpośrednie przełożenie geopolityki na energię i transport morski.",
+      "context": "Ten sam blok był już widoczny w poprzednich slotach, ale dziś dostał nowy, oficjalny sygnał z Teheranu.",
+      "watchNext": [
+        "Czy pojawią się zakłócenia w eksporcie lub rejsach.",
+        "Czy cena ropy zareaguje na kolejne wypowiedzi."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Iran niewzruszony. \"Nie będziemy mieli żadnych problemów w tym zakresie\"",
+          "url": "https://tvn24.pl/biznes/ze-swiata/iran-niewzruszony-nie-bedziemy-mieli-zadnych-problemow-w-tym-zakresie-st9141588"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Ropa",
+        "Ormuz",
+        "Świat"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-bialy-dom-rosja-2026-07-14-2103",
+      "section": "Świat",
+      "title": "Biały Dom zmienia zdanie w sprawie sankcji na Rosję",
+      "lead": "Waszyngton wysyła nowy sygnał o twardszej polityce wobec Moskwy.",
+      "whatHappened": "TVN24 opisuje zmianę stanowiska Białego Domu wobec sankcji na Rosję. To kolejny element łączenia wątku Ukrainy z amerykańską polityką gospodarczą i bezpieczeństwa.",
+      "keyFacts": [
+        "Artykuł jest z 14 lipca.",
+        "Dotyczy sankcji i polityki wobec Rosji.",
+        "Wpływa na europejskie oczekiwania wobec USA."
+      ],
+      "reactions": [
+        "Rynek czyta to w parze z wciąż żywym konfliktem na Bliskim Wschodzie.",
+        "Kijów i europejscy sojusznicy patrzą na to jako na test konsekwencji USA."
+      ],
+      "whyItMatters": "To ważny sygnał dla Ukrainy, energetyki i szerszej osi USA-Rosja.",
+      "context": "W tym samym cyklu TVN24 stale łączy wątki Rosja-Ukraina z rynkiem i NATO.",
+      "watchNext": [
+        "Czy pojawi się konkretna decyzja administracji.",
+        "Czy Kongres zareaguje własnym komunikatem."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Biały Dom zmienia zdanie w sprawie sankcji na Rosję",
+          "url": "https://tvn24.pl/biznes/ze-swiata/bialy-dom-zmienia-zdanie-w-sprawie-sankcji-na-rosje-st9141216"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Rosja",
+        "Sankcje",
+        "Świat"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-inflacja-usa-2026-07-14-2103",
+      "section": "Gospodarka",
+      "title": "Inflacja w USA zaskakuje. Widmo podwyżki stóp pozostaje",
+      "lead": "Silniejszy od oczekiwań odczyt utrzymuje presję na Fed i rynki.",
+      "whatHappened": "TVN24 podało, że czerwcowa inflacja w USA zaskoczyła w górę, przez co temat podwyżki stóp nie znika z agendy.",
+      "keyFacts": [
+        "Dane są z 14 lipca.",
+        "Rezerwa Federalna nadal jest pod presją rynków.",
+        "To wpływa na wycenę dolara, obligacji i akcji."
+      ],
+      "reactions": [
+        "Inwestorzy czekają na reakcję Fed i dalsze odczyty.",
+        "Polskie i europejskie rynki czytają USA jako główny sygnał bazowy."
+      ],
+      "whyItMatters": "To główny ekonomiczny kontrapunkt do geopolityki w tym slocie.",
+      "context": "W ostatnich slotach podobne sygnały rynkowe pojawiały się już przy wątku ropy.",
+      "watchNext": [
+        "Czy Fed zasugeruje bardziej jastrzębią ścieżkę.",
+        "Czy rynek obligacji zwiększy zmienność."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Inflacja w USA zaskakuje. Widmo podwyżki stóp pozostaje",
+          "url": "https://tvn24.pl/biznes/ze-swiata/usa-inflacja-za-czerwiec-2026-zaskakuje-rezerwa-federalna-moze-i-tak-podniesc-stopy-procentowe-st9142527"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Inflacja",
+        "Fed",
+        "Gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "technologia-meta-pozwem-2026-07-14-2103",
+      "section": "Technologia",
+      "title": "Meta z kolejnym pozwem. Sztuczna inteligencja miała typować pracowników do zwolnień",
+      "lead": "Kolejny pozew wzmacnia presję na Meta w obszarze AI i HR.",
+      "whatHappened": "TVN24 podaje, że wobec Meta pojawił się kolejny pozew dotyczący użycia AI do typowania pracowników do zwolnień. To łączy bezpieczeństwo danych, automatyzację i rynek pracy.",
+      "keyFacts": [
+        "Spór dotyczy algorytmu i zwolnień.",
+        "To wpisuje się w debatę o odpowiedzialnym użyciu AI.",
+        "Temat ma potencjał regulacyjny, nie tylko korporacyjny."
+      ],
+      "reactions": [
+        "Regulatorzy i prawnicy mogą zainteresować się modelem decyzyjnym Meta.",
+        "Rynek pracy czyta to jako sygnał, że AI w firmach podnosi ryzyko sporów."
+      ],
+      "whyItMatters": "To jeden z lepszych newsów o realnym, nie marketingowym wpływie AI na pracę.",
+      "context": "W tym samym slocie TVN24 mocno eksponuje też polską gigafabrykę AI.",
+      "watchNext": [
+        "Czy pojawi się oficjalna odpowiedź Meta.",
+        "Czy pozew przerodzi się w zmianę procedur."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Meta z kolejnym pozwem. Sztuczna inteligencja miała typować pracowników do zwolnień",
+          "url": "https://tvn24.pl/biznes/tech/meta-z-kolejnym-pozwem-sztuczna-inteligencja-miala-typowac-pracownikow-do-zwolnien-st9142551"
+        }
+      ],
+      "tags": [
+        "Meta",
+        "AI",
+        "Praca",
+        "Technologia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "technologia-gigafabryka-ai-2026-07-14-2103",
+      "section": "Technologia",
+      "title": "Polska inwestuje miliony. Powstanie gigafabryka AI",
+      "lead": "Rząd przyjął uchwałę o zabezpieczeniu ponad 400 mln zł na udział w projekcie gigafabryki AI.",
+      "whatHappened": "TVN24 podało, że rząd przyjął uchwałę w sprawie zagwarantowania ponad 400 mln zł na dostęp do gigafabryki sztucznej inteligencji. To jeden z najmocniejszych krajowych sygnałów technologiczno-przemysłowych dnia.",
+      "keyFacts": [
+        "Ogłoszenie jest z 14 lipca.",
+        "Wątek ma komponent budżetowy i strategiczny.",
+        "Spina politykę technologiczną z przemysłem i infrastrukturą obliczeniową."
+      ],
+      "reactions": [
+        "Rząd przedstawia to jako fundament rozwoju gospodarki.",
+        "Rynek i sektor tech będą patrzeć na szczegóły finansowania oraz lokalizacji."
+      ],
+      "whyItMatters": "To potencjalnie duży projekt dla polskiej konkurencyjności w AI.",
+      "context": "W tym samym slocie TVN24 łączy AI z rynkiem pracy i regulacjami.",
+      "watchNext": [
+        "Czy pojawi się harmonogram i partnerzy projektu.",
+        "Czy program dostanie dalsze finansowanie z UE lub sektora prywatnego."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Polska inwestuje miliony. Powstanie gigafabryka AI",
+          "url": "https://tvn24.pl/biznes/tech/gigafabryka-ai-w-polsce-coraz-blizej-jest-decyzja-rzadu-st9142482"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Polska",
+        "Inwestycje",
+        "Technologia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-velobank-zwolnienia-2026-07-14-2103",
+      "section": "Gospodarka",
+      "title": "Zwolnienia w dużym banku. Pracę stracą setki osób",
+      "lead": "VeloBank sygnalizuje szerokie redukcje, co dokłada presję do rynku pracy w finansach.",
+      "whatHappened": "TVN24 Biznes informuje o planowanych zwolnieniach w dużym banku. To sygnał, że sektor finansowy nadal restrukturyzuje koszty.",
+      "keyFacts": [
+        "Skala jest liczona w setkach osób.",
+        "To dotyczy bankowości, a nie jednorazowego incydentu.",
+        "Może pociągnąć reakcję związków lub regulatora pracy."
+      ],
+      "reactions": [
+        "Pracownicy i związki będą oczekiwać szczegółów.",
+        "Rynek ocenia to jako kolejny objaw presji kosztowej."
+      ],
+      "whyItMatters": "Łączy rynek pracy z kondycją sektora bankowego.",
+      "context": "Ten sam biznesowy blok dnia zawiera też AI, inflację USA i rynek ropy.",
+      "watchNext": [
+        "Czy bank poda harmonogram i kryteria cięć.",
+        "Czy pojawi się reakcja strony pracowniczej."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Zwolnienia w dużym banku. Pracę stracą setki osób",
+          "url": "https://tvn24.pl/biznes/z-kraju/zwolnienia-grupowe-w-velobanku-950-osob-moze-stracic-prace-w-ramach-zwolnien-grupowych-st9142443"
+        }
+      ],
+      "tags": [
+        "Bank",
+        "Zwolnienia",
+        "Praca",
+        "Gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-bank-phishing-2026-07-14-2103",
+      "section": "Bezpieczeństwo",
+      "title": "Oszuści podszywają się pod największy bank w Polsce",
+      "lead": "PKO BP ostrzega przed fałszywymi inwestycjami i podszywaniem się pod bank.",
+      "whatHappened": "TVN24 Biznes podaje, że cyberprzestępcy publikują reklamy fałszywych inwestycji i podszywają się pod bank. To aktualny alert, który ma bezpośredni wpływ na klientów.",
+      "keyFacts": [
+        "Chodzi o fałszywe reklamy i strony inwestycyjne.",
+        "Mechanizm ma wyłudzać dane lub pieniądze klientów.",
+        "Bank ostrzega przed klikaniem i podawaniem informacji."
+      ],
+      "reactions": [
+        "Klienci dostają praktyczne ostrzeżenie do natychmiastowego użycia.",
+        "Bank i być może KNF mogą dołożyć własny komunikat."
+      ],
+      "whyItMatters": "To realny, bieżący wektor strat finansowych dla szerokiej grupy odbiorców.",
+      "context": "W tym samym biznesowym bloku TVN24 są też rynek pracy, inflacja USA i regulacje tech.",
+      "watchNext": [
+        "Czy bank lub KNF wyda dodatkowy komunikat.",
+        "Czy oszuści zmienią kanały ataku."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Oszuści podszywają się pod największy bank w Polsce",
+          "url": "https://tvn24.pl/biznes/z-kraju/oszusci-podszywaja-sie-pod-najwiekszy-bank-w-polsce-st9141610"
+        }
+      ],
+      "tags": [
+        "Bank",
+        "Oszustwo",
+        "Cyber",
+        "Bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-autonomiczne-prawo-2026-07-14-2103",
+      "section": "Gospodarka",
+      "title": "W drogę bez kierowcy. Polska zmienia prawo",
+      "lead": "Rząd otwiera drogę do testów autonomicznych aut na polskich drogach.",
+      "whatHappened": "TVN24 Biznes podało, że Polska zmienia prawo dla aut bez kierowcy. To ważny krok regulacyjny dla transportu, testów i inwestycji tech.",
+      "keyFacts": [
+        "Zmiana dotyczy testów pojazdów autonomicznych.",
+        "Wątek jest powiązany z rozwojem polskiej infrastruktury tech.",
+        "Może zainteresować sektor motoryzacyjny i ubezpieczeniowy."
+      ],
+      "reactions": [
+        "Branża może odebrać to jako sygnał otwarcia regulacyjnego.",
+        "Krytycy będą pytać o bezpieczeństwo i nadzór."
+      ],
+      "whyItMatters": "To konkretna regulacja, nie tylko ogólna dyskusja o AI.",
+      "context": "W tym samym slocie Polska ogłasza także gigafabrykę AI.",
+      "watchNext": [
+        "Czy pojawią się zasady pilotażu i lokalizacje testów.",
+        "Czy branża motoryzacyjna zgłosi partnerstwo lub uwagi."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: W drogę bez kierowcy. Polska zmienia prawo",
+          "url": "https://tvn24.pl/biznes/moto/auta-autonomiczne-samochod-bez-kierowcy-polska-zmienia-prawo-kiedy-testy-st9137393"
+        }
+      ],
+      "tags": [
+        "Autonomiczne auta",
+        "Prawo",
+        "Polska",
+        "Technologia"
+      ],
+      "priority": "medium"
+    }
+  ]
+}

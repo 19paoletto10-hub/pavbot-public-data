@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-14T17:49:33.349020+00:00",
+  "generatedAt": "2026-07-14T19:14:53.161948+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -393,6 +393,17 @@
       "time": "00:08"
     },
     {
+      "id": "research/puls-dnia-news/runs/2026-07-14-2103.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-07-14-2103.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-14-2103.md",
+      "sizeBytes": 7101,
+      "date": "2026-07-14",
+      "time": "21:03"
+    },
+    {
       "id": "research/puls-dnia-news/runs/2026-07-14-1801.md",
       "type": "run",
       "topic": "puls-dnia-news",
@@ -446,6 +457,18 @@
       "sizeBytes": 4016,
       "date": "2026-07-14",
       "time": "06:01"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-14-2103-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-14-2103-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-14-2103-pulse-news.json",
+      "sizeBytes": 31352,
+      "date": "2026-07-14",
+      "time": "21:03",
+      "itemCount": 18
     },
     {
       "id": "research/puls-dnia-news/data/2026-07-14-1801-pulse-news.json",
@@ -11976,7 +11999,7 @@
       "title": "Puls Dnia News Index",
       "path": "research/puls-dnia-news/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/index.md",
-      "sizeBytes": 12669
+      "sizeBytes": 13443
     },
     {
       "id": "research/puls-dnia-news/backlog.md",
@@ -11985,7 +12008,7 @@
       "title": "Puls Dnia News Backlog",
       "path": "research/puls-dnia-news/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/backlog.md",
-      "sizeBytes": 4892
+      "sizeBytes": 5295
     },
     {
       "id": "research/polska-swiat/topic.md",
