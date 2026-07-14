@@ -3,6 +3,8 @@
 ## Open
 
 - Watch whether CBA or prokuratura publishes a formal note on Maciej Świrski.
+- Watch whether the Świrski detention turns into a formal charge sheet or new
+  procedural step.
 - Watch whether the Jelenia Góra and Małopolska downpour widens into flood or outage alerts.
 - Watch whether Volkswagen confirms the scale and regional split of planned cuts.
 - Watch whether the Polish Tatra fatality gets a fuller Slovak rescue report or official identification.
@@ -23,6 +25,8 @@
   review from Thai authorities.
 - Watch whether Wrocław police publish a clarification or footage on the knife
   incident at the bus stop.
+- Watch whether the Kowalewice fatal scooter crash gets a prosecutor update on
+  the conduct of the officers and road-safety implications.
 - Watch whether the Bielsko-Biała bus abuse case gets a prosecutor decision on
   preventive measures or a municipal clarification.
 - Watch whether the SK Hynix AI selloff spreads to other semiconductors or
@@ -48,8 +52,8 @@
   alerts in Europe or Poland.
 - Watch whether ESA publishes a formal funding, staffing or launch timetable
   for the Warsaw centre.
-- Watch whether police in the Bielsko-Biała bus-abuse case file charges or
-  issue a formal clarification.
+- Watch whether the Bielsko-Biała bus-abuse case moves on to preventive
+  measures or a municipal clarification.
 - Watch whether the Częstochowa collapse gets a casualty or cause update from
   rescuers or the building inspectorate.
 - Watch whether the Warsaw rail disruption at Aleje Jerozolimskie clears or
@@ -74,6 +78,8 @@
   fire death toll rose to 30.
 - Watch whether Toronto police identify suspects or motive after the festival
   shooting.
+- Bielsko-Biała bus-abuse case already reached the zarzut stage after the
+  monitoring review; keep it only if new procedural steps appear.
 
 ## Done
 

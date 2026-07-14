@@ -8,6 +8,14 @@ exists, it falls back to the older `aktualne-wydarzenia-mobile` magazine data.
 The public manifest now exposes timestamped `pulseNewsData` artifacts for this
 topic, so the primary feed path is active when refresh succeeds.
 
+The 2026-07-14 18:01 slot sharpens the feed around Świrski's CBA detention,
+Żurek's ICE/extradition push for Ziobro, new immunity motions for three MPs,
+fresh legal pressure on Obajtek and a heavier safety cluster in Wrocław,
+Kowalewice, Warszawa Zachodnia and Jelenia Góra. The world feed is now more
+operational: third-night U.S. strikes on Iran, a Hormuz policy reversal,
+Ukraine's ballistic-missile interception update, Bangkok's safety review and
+Graham-succession fallout.
+
 The 2026-07-14 15:00 slot broadens the feed into a denser safety-and-security
 cluster: Jelenia Góra and Małopolska move from alert to damage, Wyszków gets a
 rescue update on the Bug, Bielsko-Biała reaches the zarzut stage, Wrocław and

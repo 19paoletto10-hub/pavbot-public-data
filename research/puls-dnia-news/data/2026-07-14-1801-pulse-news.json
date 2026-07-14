@@ -1,0 +1,603 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-14",
+  "runTime": "18:01",
+  "status": "Material update",
+  "headline": "18:01: Świrski, Ziobro, alerty i Hormuz",
+  "summary": "Slot 18:01 dokłada do feedu legalno-policyjny blok w Polsce, nowe incydenty bezpieczeństwa i świeże aktualizacje z Hormuzu, Kijowa, Bangkoku oraz po Grahamie.",
+  "checkedSources": [
+    {
+      "title": "TVN24 homepage",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24: Maciej Świrski zatrzymany przez CBA",
+      "url": "https://tvn24.pl/polska/maciej-swirski-zatrzymany-przez-cba-st9141449"
+    },
+    {
+      "title": "TVN24: Ekstradycja Ziobry. Żurek: wniosek jest gotowy, ale czekamy",
+      "url": "https://tvn24.pl/polska/zbigniew-ziobro-i-pismo-do-ice-waldemar-zurek-mysle-ze-wystosujemy-w-tym-tygodniu-st9135526"
+    },
+    {
+      "title": "TVN24: Są wnioski o uchylenie immunitetu trojgu posłom",
+      "url": "https://tvn24.pl/polska/waldemar-zurek-przekazal-wnioski-o-uchylenie-immunitetu-katarzynie-ueberhan-wladyslawowi-teofilowi-bartoszewskiemu-i-tadeuszowi-chrzanowi-st9142335"
+    },
+    {
+      "title": "TVN24: Donald Tusk odpowiada Przemysławowi Czarnkowi w sprawie Ukrainy",
+      "url": "https://tvn24.pl/polska/donald-tusk-odpowiada-przemyslawowi-czarnkowi-w-sprawie-ukrainy-to-idiotyczne-slowa-st9141264"
+    },
+    {
+      "title": "TVN24: Orlen: złożyliśmy zawiadomienie do prokuratury w sprawie Obajtka",
+      "url": "https://tvn24.pl/biznes/z-kraju/orlen-zlozylismy-zawiadomienie-do-prokuratury-w-sprawie-obajtka-st9141869"
+    },
+    {
+      "title": "TVN24: \"Ludzie uciekali z przystanku. Zobaczyłem, że szaleje ten człowiek z nożem\"",
+      "url": "https://tvn24.pl/wroclaw/wroclaw-niebezpieczna-sytuacja-na-przystanku-autobusowym-mezczyzna-biegal-z-nozem-st9141636"
+    },
+    {
+      "title": "TVN24: Kierowca nieoznakowanego radiowozu śmiertelnie potrącił nastolatka jadącego na hulajnodze",
+      "url": "https://tvn24.pl/szczecin/kowalewice-nieoznakowany-radiowoz-potracil-hulajnoge-nie-zyje-nastolatek-st9142382"
+    },
+    {
+      "title": "TVN24: Białoruska pływaczka zaatakowana na Dworcu Zachodnim",
+      "url": "https://tvn24.pl/tvnwarszawa/ochota/warszawa-bialoruska-sportsmenka-aleksandra-hierasimieni-zaatakowana-na-dworcu-zachodnim-st9140873"
+    },
+    {
+      "title": "TVN24 Meteo: Wielka ulewa, zerwane dachy, ewakuacja harcerzy. Pogoda mocno się pogorszyła",
+      "url": "https://tvn24.pl/tvnmeteo/polska/wielka-ulewa-w-jeleniej-gorze-w-malopolsce-tez-leje-zdecia-i-filmy-st9141879"
+    },
+    {
+      "title": "TVN24 Biznes: Ceny rosną przez rozwój sztucznej inteligencji",
+      "url": "https://tvn24.pl/biznes/tech/ceny-rosna-przez-rozwoj-sztucznej-inteligencji-st9141415"
+    },
+    {
+      "title": "TVN24 Biznes: Błyskawiczna reakcja rynku na doniesienia z Bliskiego Wschodu",
+      "url": "https://tvn24.pl/biznes/rynki/blyskawiczna-reakcja-rynku-na-doniesienia-z-bliskiego-wschodu-st9141265"
+    },
+    {
+      "title": "AP: Trump backs away from plans to charge fees in the Strait of Hormuz as attacks intensify",
+      "url": "https://apnews.com/article/abd060c55feea216625689e57d8f76be"
+    },
+    {
+      "title": "AP: Ukraine downs 5 Russian ballistic missiles as Kyiv looks to boost its air defenses",
+      "url": "https://apnews.com/article/f38e07c64d4beba79ca145c3b4bb9510"
+    },
+    {
+      "title": "AP: Death toll from a Bangkok music bar fire rises to 30, dozens remain in hospital",
+      "url": "https://apnews.com/article/dd1d309ea2c1f91f9991ebf8d24e5e09"
+    },
+    {
+      "title": "AP: Darline Graham Nordone named to serve remainder of Lindsey Graham's Senate term",
+      "url": "https://apnews.com/article/cf4025419504dffcabb06c0087daf895"
+    },
+    {
+      "title": "BBC News video reference: People flee Bangkok bar as flames shoot from doorway",
+      "url": "https://www.facebook.com/bbcnews/videos/people-flee-bangkok-bar-as-flames-shoot-from-doorway/2099495217582010/"
+    },
+    {
+      "title": "CNN Newsroom transcripts",
+      "url": "https://transcripts.cnn.com/show/cnr"
+    },
+    {
+      "title": "IMGW-PIB",
+      "url": "https://imgw.pl/"
+    },
+    {
+      "title": "Rządowe Centrum Bezpieczeństwa",
+      "url": "https://www.gov.pl/web/rcb"
+    }
+  ],
+  "items": [
+    {
+      "id": "polska-swirski-cba-2026-07-14-1801",
+      "section": "Polska",
+      "title": "Maciej Świrski zatrzymany przez CBA",
+      "lead": "CBA zatrzymało byłego szefa KRRiT na polecenie prokuratury w Rzeszowie.",
+      "whatHappened": "TVN24 podało, że agenci CBA zatrzymali Macieja Świrskiego i Cezarego J. w sprawie finansowania kampanii medialnej „Sprawiedliwe sądy”.",
+      "keyFacts": [
+        "Zatrzymanie nastąpiło na polecenie prokuratora w Rzeszowie.",
+        "Sprawa dotyczy finansowania kampanii medialnej PFN.",
+        "Komunikat podał rzecznik ministra koordynatora służb."
+      ],
+      "reactions": [
+        "Sprawa szybko weszła na poziom polityczny i prokuratorski.",
+        "Możliwe są kolejne komunikaty CBA lub prokuratury jeszcze dziś."
+      ],
+      "whyItMatters": "To mocny sygnał w sporze o PFN, KRRiT i rozliczenia po poprzedniej władzy.",
+      "context": "Świrski od dawna był jedną z najbardziej konfliktowych postaci w obozie medialno-politycznym.",
+      "watchNext": [
+        "Czy prokuratura poda formalne zarzuty lub uzasadnienie zatrzymania.",
+        "Czy pojawią się komentarze PiS lub obrońców Świrskiego."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Maciej Świrski zatrzymany przez CBA",
+          "url": "https://tvn24.pl/polska/maciej-swirski-zatrzymany-przez-cba-st9141449"
+        }
+      ],
+      "tags": [
+        "CBA",
+        "PFN",
+        "KRRiT",
+        "Polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-ziobro-ice-2026-07-14-1801",
+      "section": "Polityka",
+      "title": "Żurek mówi, że wniosek do ICE w sprawie Ziobry jest gotowy",
+      "lead": "Prokuratura chce pytać amerykańskie służby o dokument podróży Ziobry.",
+      "whatHappened": "TVN24 podało, że Waldemar Żurek ma gotowy wniosek o ekstradycję oraz pismo do ICE. To przywraca temat Ziobry do fazy procedur międzynarodowych, a nie tylko politycznej debaty.",
+      "keyFacts": [
+        "Żurek mówi, że pismo do ICE ma zostać wysłane w tym tygodniu.",
+        "W tle pozostaje kwestia dokumentów węgierskich i statusu uchodźcy.",
+        "Wniosek ekstradycyjny ma już być przygotowany przez prokuraturę."
+      ],
+      "reactions": [
+        "Temat może wywołać kolejną falę komentarzy po obu stronach sporu.",
+        "Najważniejsza będzie odpowiedź amerykańskich i ewentualnie węgierskich instytucji."
+      ],
+      "whyItMatters": "To realny krok proceduralny, który może zmienić ciężar sprawy Ziobry.",
+      "context": "Wątek wraca w kolejnych slotach, ale teraz pojawia się jako konkretna operacja prawna.",
+      "watchNext": [
+        "Czy ICE lub inne amerykańskie służby odpowiedzą na pismo.",
+        "Czy prokuratura poda kolejny etap postępowania."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ekstradycja Ziobry. Żurek: wniosek jest gotowy, ale czekamy",
+          "url": "https://tvn24.pl/polska/zbigniew-ziobro-i-pismo-do-ice-waldemar-zurek-mysle-ze-wystosujemy-w-tym-tygodniu-st9135526"
+        }
+      ],
+      "tags": [
+        "Ziobro",
+        "ICE",
+        "ekstradycja",
+        "Polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-immunitety-trzech-poslow-2026-07-14-1801",
+      "section": "Polityka",
+      "title": "Żurek przekazał wnioski o uchylenie immunitetu trzem posłom",
+      "lead": "Na stole są wnioski wobec Katarzyny Ueberhan, Władysława Teofila Bartoszewskiego i Tadeusza Chrzana.",
+      "whatHappened": "TVN24 podało, że Waldemar Żurek przekazał wnioski o uchylenie immunitetu trzem posłom. To kolejny sygnał, że w Sejmie i prokuraturze kumulują się równolegle kilka drażliwych spraw.",
+      "keyFacts": [
+        "Wniosek dotyczy trzech nazwisk jednocześnie.",
+        "Sprawa ma teraz wejść w sejmową i proceduralną ścieżkę.",
+        "Materiał pojawił się dziś po południu."
+      ],
+      "reactions": [
+        "W Sejmie może to wywołać szybkie komentarze klubów.",
+        "Najbliższe godziny pokażą, czy wnioski będą procedowane priorytetowo."
+      ],
+      "whyItMatters": "To wpływa na dynamikę parlamentarną i może wywołać kolejną falę sporów politycznych.",
+      "context": "To osobny wątek od Ziobry, ale wpisuje się w szerszy rozliczeniowy ton dnia.",
+      "watchNext": [
+        "Czy pojawi się uzasadnienie wniosków.",
+        "Czy komisja sejmowa nada im dalszy bieg."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Są wnioski o uchylenie immunitetu trojgu posłom",
+          "url": "https://tvn24.pl/polska/waldemar-zurek-przekazal-wnioski-o-uchylenie-immunitetu-katarzynie-ueberhan-wladyslawowi-teofilowi-bartoszewskiemu-i-tadeuszowi-chrzanowi-st9142335"
+        }
+      ],
+      "tags": [
+        "immunitet",
+        "Sejm",
+        "prokuratura",
+        "Polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-czarnek-tusk-2026-07-14-1801",
+      "section": "Polityka",
+      "title": "Czarnek znów uruchomił spór o Ukrainę",
+      "lead": "Kaczyński zapowiada wyjaśnienia, a Tusk odpowiada ostro.",
+      "whatHappened": "Czarnek w TV Republika mówił o blokowaniu finansowania zbrojeń i odbudowy Ukrainy, co TVN24 opisało jako echo rosyjskiej narracji. Kaczyński zapowiedział wyjaśnienie sprawy przez kierownictwo, a Tusk nazwał te słowa idiotycznymi.",
+      "keyFacts": [
+        "Spór dotyczy pomocy dla Ukrainy i tonu politycznej komunikacji.",
+        "Wypowiedź Czarnka uruchomiła szybkie reakcje PiS i rządu.",
+        "To kolejny konflikt w tym samym, bardzo wrażliwym temacie."
+      ],
+      "reactions": [
+        "PiS próbuje ograniczać szkody wizerunkowe.",
+        "Rząd wykorzystuje sprawę do wzmocnienia własnej linii wobec Ukrainy."
+      ],
+      "whyItMatters": "To test, jak mocno antyukraińska narracja weszła do głównego nurtu sporu politycznego.",
+      "context": "Ten konflikt był już widoczny w poprzednich slotach i dziś wraca z nową intensywnością.",
+      "watchNext": [
+        "Czy Czarnek lub PiS doprecyzują stanowisko.",
+        "Czy temat dostanie kolejne komentarze od rządu lub partnerów koalicyjnych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Donald Tusk odpowiada Przemysławowi Czarnkowi w sprawie Ukrainy",
+          "url": "https://tvn24.pl/polska/donald-tusk-odpowiada-przemyslawowi-czarnkowi-w-sprawie-ukrainy-to-idiotyczne-slowa-st9141264"
+        },
+        {
+          "title": "TVN24: Kaczyński o wypowiedzi Czarnka",
+          "url": "https://tvn24.pl/polska/kaczynski-o-wypowiedzi-czarnka-zostanie-wyjasniona-przez-kierownictwo-st9142035"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "PiS",
+        "Tusk",
+        "Polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-orlen-obajtek-2026-07-14-1801",
+      "section": "Gospodarka",
+      "title": "Orlen składa zawiadomienie do prokuratury w sprawie Obajtka",
+      "lead": "Spór o wejście na teren Solino wszedł w fazę prokuratorską.",
+      "whatHappened": "Orlen poinformował, że złożył zawiadomienie do prokuratury po incydencie w IKS Solino w Inowrocławiu i szarpaninie z udziałem Daniela Obajtka. To utrzymuje sprawę na styku polityki, biznesu i prawa karnego.",
+      "keyFacts": [
+        "Artykuł został dziś zaktualizowany o 14:35.",
+        "W centrum jest spór o dostęp do terenu Solino.",
+        "Sprawa dotyczy byłego prezesa Orlenu."
+      ],
+      "reactions": [
+        "Incydent pozostaje mocno polityczny, bo dotyczy państwowego koncernu.",
+        "Prokuratura może teraz nadać sprawie bardziej formalny bieg."
+      ],
+      "whyItMatters": "To kolejny sygnał, że sprawy państwowych spółek nadal są nośne politycznie i prawnie.",
+      "context": "Obajtek od dawna pozostaje jednym z głównych punktów zapalnych w bieżącej debacie o Orlenie.",
+      "watchNext": [
+        "Czy prokuratura poda podstawę prawną zawiadomienia.",
+        "Czy sam Obajtek lub jego otoczenie odpowiedzą publicznie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Orlen: złożyliśmy zawiadomienie do prokuratury w sprawie Obajtka",
+          "url": "https://tvn24.pl/biznes/z-kraju/orlen-zlozylismy-zawiadomienie-do-prokuratury-w-sprawie-obajtka-st9141869"
+        }
+      ],
+      "tags": [
+        "Orlen",
+        "Obajtek",
+        "prokuratura",
+        "biznes"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "bezpieczenstwo-wroclaw-noz-2026-07-14-1801",
+      "section": "Bezpieczeństwo",
+      "title": "We Wrocławiu świadek mówi o mężczyźnie z nożem na przystanku",
+      "lead": "Relacja świadka mówi o panice, a policja komunikuje inną wersję.",
+      "whatHappened": "TVN24 opisało niebezpieczną sytuację na przystanku autobusowym we Wrocławiu. Według świadka ludzie uciekali, gdy mężczyzna miał biegać z nożem, ale policja zaznacza, że nikogo w tym miejscu nie było, więc sprawa wymaga dalszego wyjaśnienia.",
+      "keyFacts": [
+        "Artykuł opublikowano dziś o 12:19.",
+        "W relacji świadka pojawia się nóż i panika pasażerów.",
+        "Policja publicznie wskazuje na rozbieżność wersji."
+      ],
+      "reactions": [
+        "To przypadek, w którym relacja świadka i wersja służb mogą się jeszcze rozjeżdżać.",
+        "Dalsze komunikaty mogą szybko rozstrzygnąć, czy był to realny atak, czy fałszywy alarm."
+      ],
+      "whyItMatters": "To bezpośredni sygnał o bezpieczeństwie w przestrzeni publicznej i komunikacyjnej.",
+      "context": "Wrocław pojawia się dziś w feedzie jako jeden z najgorętszych punktów miejskiego bezpieczeństwa.",
+      "watchNext": [
+        "Czy policja poda oficjalne ustalenia.",
+        "Czy pojawi się nagranie lub dodatkowi świadkowie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: \"Ludzie uciekali z przystanku. Zobaczyłem, że szaleje ten człowiek z nożem\"",
+          "url": "https://tvn24.pl/wroclaw/wroclaw-niebezpieczna-sytuacja-na-przystanku-autobusowym-mezczyzna-biegal-z-nozem-st9141636"
+        }
+      ],
+      "tags": [
+        "Wrocław",
+        "nóż",
+        "policja",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-kowalewice-radiowoz-hulajnoga-2026-07-14-1801",
+      "section": "Bezpieczeństwo",
+      "title": "Kowalewice: radiowóz śmiertelnie potrącił 16-latka na hulajnodze",
+      "lead": "Policjanci jechali nieoznakowanym radiowozem i wracali z czynności.",
+      "whatHappened": "TVN24 podało, że 16-latek zginął po potrąceniu przez nieoznakowany radiowóz na drodze między Kowalewicami a Kowalewiczkami. Prokuratura potwierdza, że funkcjonariusze byli na służbie i wracali z czynności.",
+      "keyFacts": [
+        "Artykuł został dziś opublikowany o 14:49 i zaktualizowany o 15:34.",
+        "Kierowca radiowozu był trzeźwy.",
+        "Postępowanie prowadzone jest w kierunku wypadku ze skutkiem śmiertelnym."
+      ],
+      "reactions": [
+        "To jeden z najmocniejszych w kraju tematów bezpieczeństwa drogowego w tym slocie.",
+        "Prokuratura i policja muszą bardzo precyzyjnie odtworzyć przebieg zdarzenia."
+      ],
+      "whyItMatters": "To poważny wypadek z udziałem służb, który niemal na pewno dostanie dalsze formalne doprecyzowanie.",
+      "context": "Taki przypadek natychmiast podnosi oczekiwanie na pełny komunikat prokuratury i policji.",
+      "watchNext": [
+        "Czy prokuratura poda formalne ustalenia.",
+        "Czy policja wyjaśni, jak doszło do potrącenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Kierowca nieoznakowanego radiowozu śmiertelnie potrącił nastolatka jadącego na hulajnodze",
+          "url": "https://tvn24.pl/szczecin/kowalewice-nieoznakowany-radiowoz-potracil-hulajnoge-nie-zyje-nastolatek-st9142382"
+        }
+      ],
+      "tags": [
+        "Kowalewice",
+        "radiowóz",
+        "hulajnoga",
+        "wypadek"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-hierasimienia-dworzec-zachodni-2026-07-14-1801",
+      "section": "Bezpieczeństwo",
+      "title": "Na Dworcu Zachodnim zaatakowano białoruską pływaczkę",
+      "lead": "Sprawa dotyczy Alaksandry Hierasimieni i ataku w Warszawie.",
+      "whatHappened": "TVN24 opisało atak na białoruską medalistkę Alaksandrę Hierasimienię na Dworcu Zachodnim. To kolejny przykład incydentu w jednym z głównych stołecznych węzłów komunikacyjnych.",
+      "keyFacts": [
+        "Artykuł ma dzisiejszy timestamp 13:07.",
+        "Miejsce to Dworzec Zachodni w Warszawie.",
+        "Sprawa dotyczy znanej sportsmenki z Białorusi."
+      ],
+      "reactions": [
+        "W takich sprawach kluczowy bywa szybki komunikat policji lub poszkodowanej.",
+        "Temat wzmacnia dziś i tak już wysoki poziom miejskich incydentów bezpieczeństwa."
+      ],
+      "whyItMatters": "To sygnał ryzyka w przestrzeni publicznej i na dużym węźle transportowym.",
+      "context": "Ten wątek wraca w kolejnych slotach i nadal wygląda na otwarty.",
+      "watchNext": [
+        "Czy policja lub poszkodowana wydadzą bardziej szczegółowe oświadczenie.",
+        "Czy pojawią się informacje o sprawcy i motywie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Białoruska pływaczka zaatakowana na Dworcu Zachodnim",
+          "url": "https://tvn24.pl/tvnwarszawa/ochota/warszawa-bialoruska-sportsmenka-aleksandra-hierasimieni-zaatakowana-na-dworcu-zachodnim-st9140873"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "Ochota",
+        "atak",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-jelenia-gora-malopolska-ulewa-2026-07-14-1801",
+      "section": "Alerty",
+      "title": "Jelenia Góra i Małopolska po ulewie",
+      "lead": "Zerwane dachy, ewakuacja i podtopienia pokazują realną skalę burz.",
+      "whatHappened": "Nowy materiał TVN24 Meteo pokazuje skutki ulewy: zawalenie ściany i uszkodzenie dachu budynku produkcyjno-magazynowego w Jeleniej Górze, ewakuację 213 osób oraz lokalne szkody w Łomnicy i Wojanowie.",
+      "keyFacts": [
+        "Dolnośląski Urząd Wojewódzki raportuje 239 zgłoszeń po burzach.",
+        "W Jeleniej Górze ewakuowano 213 osób z obiektu.",
+        "W Łomnicy i Wojanowie doszło do uszkodzeń dróg i dachów."
+      ],
+      "reactions": [
+        "Służby zabezpieczają miejsca zdarzeń i pracują nad usuwaniem szkód.",
+        "IMGW/RCB pozostają najważniejszym źródłem decyzji o ewentualnym podniesieniu lub zdjęciu ostrzeżeń."
+      ],
+      "whyItMatters": "To już nie tylko prognoza, ale realny problem infrastrukturalny i ratowniczy.",
+      "context": "To najmocniejszy alert pogodowy w tym slocie i bezpośredni follow-up do wcześniejszych ostrzeżeń.",
+      "watchNext": [
+        "Czy IMGW i RCB rozszerzą albo zdejmą ostrzeżenia.",
+        "Czy pojawią się kolejne zgłoszenia o szkodach lub ewakuacjach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo: Wielka ulewa, zerwane dachy, ewakuacja harcerzy. Pogoda mocno się pogorszyła",
+          "url": "https://tvn24.pl/tvnmeteo/polska/wielka-ulewa-w-jeleniej-gorze-w-malopolsce-tez-leje-zdecia-i-filmy-st9141879"
+        },
+        {
+          "title": "IMGW-PIB",
+          "url": "https://imgw.pl/"
+        },
+        {
+          "title": "Rządowe Centrum Bezpieczeństwa",
+          "url": "https://www.gov.pl/web/rcb"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "RCB",
+        "ulewa",
+        "alert"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "technologia-ai-ceny-2026-07-14-1801",
+      "section": "Technologia",
+      "title": "AI podbija ceny chipów, pamięci i energii",
+      "lead": "Boom na centra danych zaczyna przechodzić w inflacyjną historię.",
+      "whatHappened": "TVN24 Biznes opisuje, że masowe inwestycje w centra danych obsługujące AI podnoszą koszty półprzewodników, pamięci i energii. Część tych kosztów już przechodzi na droższą elektronikę i może ciążyć na CPI do końca roku.",
+      "keyFacts": [
+        "Alphabet, Amazon, Meta i Microsoft mają zainwestować około 720 mld dolarów.",
+        "JPMorgan widzi nawet 400-procentowy wzrost cen niektórych pamięci.",
+        "Ekonomiści szacują wpływ na inflację bazową na około 0,5 pkt proc."
+      ],
+      "reactions": [
+        "To zmienia narrację z samego rozwoju AI na jego koszt makroekonomiczny.",
+        "Rynek elektroniki może jeszcze przez pewien czas podnosić ceny końcowe."
+      ],
+      "whyItMatters": "To już nie jest tylko temat technologiczny, ale realny czynnik cen i polityki pieniężnej.",
+      "context": "Ten materiał jest najbardziej „tech”, ale jego konsekwencje są wyraźnie gospodarcze.",
+      "watchNext": [
+        "Czy kolejne firmy potwierdzą podwyżki cen sprzętu.",
+        "Czy Fed lub rynek zaczną mocniej wyceniać presję inflacyjną z AI."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Ceny rosną przez rozwój sztucznej inteligencji",
+          "url": "https://tvn24.pl/biznes/tech/ceny-rosna-przez-rozwoj-sztucznej-inteligencji-st9141415"
+        }
+      ],
+      "tags": [
+        "AI",
+        "inflacja",
+        "chipy",
+        "technologia"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-iran-hormuz-2026-07-14-1801",
+      "section": "Świat",
+      "title": "USA uderzają w Iran trzecią noc z rzędu",
+      "lead": "Hormuz znów staje się centrum wojny, rynku i dyplomacji.",
+      "whatHappened": "AP i TVN24 Biznes opisują trzecią z rzędu noc amerykańskich ataków na Iran oraz zwrot Trumpa wokół opłat w cieśninie Hormuz. Zamiast 20-procentowej opłaty za przepływ pojawiają się inwestycje państw Zatoki, a rynek reaguje na to natychmiast.",
+      "keyFacts": [
+        "CENTCOM potwierdza kolejne uderzenia na Iran.",
+        "Hormuz pozostaje kluczową arterią światowego handlu energią.",
+        "TVN24 Biznes pokazuje szybką reakcję rynku na te doniesienia."
+      ],
+      "reactions": [
+        "Ceny energii i bezpieczeństwo żeglugi pozostają pod presją.",
+        "To jeden z głównych czynników ryzyka dla globalnego sentymentu."
+      ],
+      "whyItMatters": "To centralny globalny temat tego slotu i bezpośredni czynnik rynkowy.",
+      "context": "Ten konflikt od kilku dni dominuje światowe nagłówki i wciąż eskaluje.",
+      "watchNext": [
+        "Czy Iran odpowie kolejną retorsją.",
+        "Czy ropa i fracht zareagują dalszym skokiem."
+      ],
+      "sources": [
+        {
+          "title": "AP: Trump backs away from plans to charge fees in the Strait of Hormuz as attacks intensify",
+          "url": "https://apnews.com/article/abd060c55feea216625689e57d8f76be"
+        },
+        {
+          "title": "TVN24 Biznes: Błyskawiczna reakcja rynku na doniesienia z Bliskiego Wschodu",
+          "url": "https://tvn24.pl/biznes/rynki/blyskawiczna-reakcja-rynku-na-doniesienia-z-bliskiego-wschodu-st9141265"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Hormuz",
+        "ropa",
+        "geopolityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-ukraina-obrona-powietrzna-2026-07-14-1801",
+      "section": "Świat",
+      "title": "Ukraina strąca pięć rakiet balistycznych",
+      "lead": "Kijów znów został ostrzelany, ale obrona po raz pierwszy od dwóch tygodni przechwyciła rakiety balistyczne.",
+      "whatHappened": "AP podała, że ukraińskie lotnictwo przechwyciło pięć rosyjskich rakiet balistycznych, choć inne pociski i drony trafiły w magazyny i szkołę w Kijowie. Zełenski w Paryżu mówił też o nowej 10-państwowej koalicji na rzecz wspólnej tarczy obrony powietrznej.",
+      "keyFacts": [
+        "To pierwszy taki skuteczny przechwyt od prawie dwóch tygodni.",
+        "W ataku ucierpiały obiekty cywilne w Kijowie.",
+        "Paryż pozostaje ważnym miejscem dla koalicji obrony powietrznej."
+      ],
+      "reactions": [
+        "Ukraina nadal prosi o systemy Patriot i inne interceptory.",
+        "Europejskie planowanie obronne dostaje bardzo konkretne uzasadnienie."
+      ],
+      "whyItMatters": "To łączy front, obronę powietrzną i europejskie bezpieczeństwo w jednym obrazie.",
+      "context": "Ten wątek dobrze spina się z paryskim blokiem obronnym z TVN24.",
+      "watchNext": [
+        "Czy pojawią się nowe deklaracje sojuszników w sprawie obrony powietrznej.",
+        "Czy Rosja odpowie kolejnym uderzeniem."
+      ],
+      "sources": [
+        {
+          "title": "AP: Ukraine downs 5 Russian ballistic missiles as Kyiv looks to boost its air defenses",
+          "url": "https://apnews.com/article/f38e07c64d4beba79ca145c3b4bb9510"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Kijów",
+        "Patriot",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-bangkok-bar-fire-2026-07-14-1801",
+      "section": "Świat",
+      "title": "Bangkok zapowiada przegląd bezpieczeństwa po pożarze baru",
+      "lead": "Bilans wzrósł do 30 ofiar, a władze chcą sprawdzić podobne lokale.",
+      "whatHappened": "AP podała dziś, że pożar baru na północy Bangkoku pochłonął 30 ofiar, 24 osoby są w stanie krytycznym, a gubernator zarządził przegląd bezpieczeństwa podobnych miejsc. To przesuwa historię z samego bilansu ofiar w stronę odpowiedzialności i kontroli lokali.",
+      "keyFacts": [
+        "To najtragiczniejszy pożar baru w Bangkoku od 17 lat.",
+        "Władze mówią o city-wide safety review.",
+        "Podejrzenia dotyczą zamkniętych wyjść i łatwopalnego wystroju."
+      ],
+      "reactions": [
+        "Publiczny nacisk na inspekcje i sankcje będzie rósł.",
+        "To może szybko przejść w szerszą debatę o standardach bezpieczeństwa."
+      ],
+      "whyItMatters": "To najczystszy globalny sygnał bezpieczeństwa pożarowego w tym slocie.",
+      "context": "BBC surfaced a video reference o tym samym zdarzeniu, a AP daje dziś już wyraźny wątek kontrolny.",
+      "watchNext": [
+        "Czy władze zamkną kolejne lokale do kontroli.",
+        "Czy pojawi się formalny raport o przyczynach pożaru."
+      ],
+      "sources": [
+        {
+          "title": "AP: Death toll from a Bangkok music bar fire rises to 30, dozens remain in hospital",
+          "url": "https://apnews.com/article/dd1d309ea2c1f91f9991ebf8d24e5e09"
+        },
+        {
+          "title": "BBC News video reference: People flee Bangkok bar as flames shoot from doorway",
+          "url": "https://www.facebook.com/bbcnews/videos/people-flee-bangkok-bar-as-flames-shoot-from-doorway/2099495217582010/"
+        }
+      ],
+      "tags": [
+        "Bangkok",
+        "pożar",
+        "bezpieczeństwo",
+        "Świat"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-graham-senat-2026-07-14-1801",
+      "section": "Świat",
+      "title": "Siostra Grahama obejmuje tymczasowo jego mandat w Senacie",
+      "lead": "Po śmierci Lindsey'ego Grahama gubernator wskazał Darline Graham Nordone.",
+      "whatHappened": "AP podała, że Darline Graham Nordone została tymczasowo mianowana na miejsce swojego brata w Senacie USA. To domyka pierwszy etap sukcesji po zmarłym senatorze i utrzymuje temat wojny, Ukrainy i polityki zagranicznej w amerykańskim centrum uwagi.",
+      "keyFacts": [
+        "Nordone obejmuje mandat do czasu specjalnych wyborów.",
+        "Sprawa jest istotna także dla układu sił wokół Ukrainy i Rosji.",
+        "To kolejny materiał poświęcony konsekwencjom śmierci Grahama."
+      ],
+      "reactions": [
+        "W Senacie rusza realne porządkowanie miejsca po Grahamie.",
+        "Dla Kijowa to przypomnienie, że jeden mandat może mieć duże znaczenie w sprawach wojennych."
+      ],
+      "whyItMatters": "To ważna zmiana w amerykańskim układzie politycznym, zwłaszcza dla tematów zagranicznych.",
+      "context": "Graham był jednym z najbardziej aktywnych republikańskich zwolenników twardszej polityki wobec Rosji.",
+      "watchNext": [
+        "Czy pojawi się pełny kalendarz wyborów uzupełniających.",
+        "Czy senatorowie podtrzymają linię Grahama wobec Rosji i Ukrainy."
+      ],
+      "sources": [
+        {
+          "title": "AP: Darline Graham Nordone named to serve remainder of Lindsey Graham's Senate term",
+          "url": "https://apnews.com/article/cf4025419504dffcabb06c0087daf895"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Senat",
+        "Graham",
+        "polityka"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
