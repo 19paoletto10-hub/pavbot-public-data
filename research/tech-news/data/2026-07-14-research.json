@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-14",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run przesuwa ciężar z samego rollout modeli na fizyczną i operacyjną warstwę AI. Intel ogłasza 5 mld euro na Leixlip, Micron dokłada do amerykańskiego łańcucha dostaw pamięci kolejne 3 mld dolarów, a Markey zaczyna budować federalny framework dla szkód data center. To potwierdza, że najważniejszy koszt i największe ograniczenie AI nadal siedzą w fabach, energii, wodzie i lokalnym permittingu, a nie tylko w benchmarkach modeli.",
+    "Równolegle warstwa produktu robi się bardziej agentowa i bardziej kontekstowa: Waze wprowadza personalizację, tryb mniej gadatliwy i conversational reporting, Microsoft Intune przechodzi na agentic identity dla Vulnerability Remediation Agent, a PixVerse rozszerza się z video generation do interaktywnych światów. Nawet sygnał społecznościowy jest spójny z tym ruchem: Hacker News mówi o fatigue wobec AI-first kultury i prosi o flagi dla AI-generated articles, a Product Hunt pyta o pierwszą aplikację dla osobistego AI companiona. To już nie jest opowieść o pojedynczym modelu, tylko o tym, kto kontroluje integrację, zaufanie, koszty i zasady użycia."
+  ],
+  "summaryBullets": [
+    "Infrastruktura: Intel inwestuje 5 mld euro w Leixlip",
+    "Infrastruktura: Micron wzmacnia amerykański łańcuch dostaw pamięci",
+    "AI: PixVerse rozszerza Series C i wchodzi w interaktywne światy"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-14-0-intel-inwestuje-5-mld-euro-w-leixlip-7bb5f94657",
+      "section": "Infrastruktura",
+      "title": "Intel inwestuje 5 mld euro w Leixlip",
+      "standfirst": "Intel ogłosił 5 mld euro inwestycji w kampus Leixlip w Irlandii. Firma łączy ten ruch z popytem na AI i HPC oraz z rozbudową produkcji serwerowych procesorów Xeon.",
+      "whatHappened": "Intel zwiększa moce produkcyjne i R&D w Europie, koncentrując się na Leixlip.",
+      "whyItMatters": "To potwierdza, że AI nadal zależy od fabów, narzędzi i regionalnej suwerenności przemysłowej.",
+      "deeperAnalysis": [
+        "Intel nie sprzedaje tu tylko narracji o wzroście. Komunikat mówi wprost o zwiększaniu produkcji dla Xeon 6 i kolejnych generacji procesorów na procesie Intel 3, więc mówimy o warstwie compute, która podtrzymuje całe data center AI, a nie tylko o front-endowych modelach.",
+        "Ważny jest też europejski wymiar tej decyzji. Intel opisuje inwestycję jako wzmocnienie lokalnego łańcucha dostaw i miejsca Irlandii w globalnym ekosystemie półprzewodników, więc jest to jednocześnie historia o AI, przemyśle i polityce technologicznej UE."
+      ],
+      "contextPoints": [
+        "Co się stało: Intel zwiększa wydatki na kampus Leixlip i fabryki w Irlandii.",
+        "Dlaczego ważne: AI pozostaje zależna od fizycznej mocy produkcyjnej i długich terminów dostaw.",
+        "Na co patrzeć dalej: czy inwestycja przełoży się na realny wzrost podaży i nowe kontrakty."
+      ],
+      "sources": [
+        {
+          "title": "Intel newsroom",
+          "url": "https://newsroom.intel.com/intel-foundry/intel-invests-5-billion-euro-to-expand-manufacturing-in-europe"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Intel",
+        "Ireland",
+        "foundry",
+        "Xeon",
+        "AI",
+        "semiconductors"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-14-1-micron-wzmacnia-amerykanski-lancuch-dostaw-pamieci-c61ba80362",
+      "section": "Infrastruktura",
+      "title": "Micron wzmacnia amerykański łańcuch dostaw pamięci",
+      "standfirst": "Micron ogłosił do 3 mld dolarów inwestycji w amerykański ekosystem półprzewodników. Kluczowy element to 500 mln dolarów finansowania dla GlobalWafers i 10-letnia umowa dostaw wafers.",
+      "whatHappened": "Firma zabezpiecza dostawy krytycznych materiałów dla przyszłej produkcji pamięci.",
+      "whyItMatters": "Pamięć, wafers i materiał wejściowy stają się równie strategiczne jak same GPU.",
+      "deeperAnalysis": [
+        "Ta decyzja pokazuje, że AI capex nie kończy się na centrum danych. Żeby utrzymać tempo rozwoju modeli i infrastruktury, potrzebne są stabilne źródła raw wafers, pamięci i innych komponentów, które dziś potrafią ograniczać wzrost szybciej niż brak pomysłów produktowych.",
+        "Micron łączy to wprost z popytem na advanced memory i storage solutions napędzanym przez AI. To ważne, bo sugeruje, że rynek nadal nie wyszedł z fazy supply constraint, a firmy zaczynają brać na siebie część ryzyka inwestycyjnego po stronie upstream."
+      ],
+      "contextPoints": [
+        "Co się stało: Micron finansuje rozwój GlobalWafers i podpisuje długą umowę dostaw.",
+        "Dlaczego ważne: supply chain pamięci może przesądzać o skali AI wdrożeń.",
+        "Na co patrzeć dalej: czy inne firmy pójdą tą samą drogą i ile realnie powstanie nowych mocy."
+      ],
+      "sources": [
+        {
+          "title": "Micron investor relations",
+          "url": "https://investors.micron.com/news-releases/news-release-details/micron-announces-3-billion-strategic-investment-strengthen-us"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Micron",
+        "GlobalWafers",
+        "memory",
+        "DRAM",
+        "wafers",
+        "supply chain"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-14-2-pixverse-rozszerza-series-c-i-wchodzi-w-interaktywne-swiaty-21850c8201",
+      "section": "AI",
+      "title": "PixVerse rozszerza Series C i wchodzi w interaktywne światy",
+      "standfirst": "PixVerse zamknął Series C extension, podnosząc łączną wartość rundy do 439 mln dolarów, i ogłosił wejście z generowania wideo do interaktywnej rozrywki. TechCrunch podaje też, że wycena przekroczyła 2 mld dolarów.",
+      "whatHappened": "Video generation platform rośnie w kierunku real-time world model i gier.",
+      "whyItMatters": "To znak, że generatywne wideo przechodzi z pojedynczego outputu do bardziej trwałych, interaktywnych środowisk.",
+      "deeperAnalysis": [
+        "PixVerse nie mówi już wyłącznie o filmach generowanych z promptu. Firma opiera nowy etap rozwoju na R1, swoim real-time world modelu, i wprost opisuje przejście od outputów do światów, które można współtworzyć i zmieniać w czasie rzeczywistym.",
+        "To przesuwa kategorię z klasycznego creator tool do platformy, która może walczyć o uwagę użytkownika w grach, marketingu i entertainment. Jeśli ten kierunek się utrzyma, to rynek video-gen będzie mniej przypominał statyczne generowanie klipów, a bardziej warstwę interaktywnego świata do pracy i zabawy."
+      ],
+      "contextPoints": [
+        "Co się stało: PixVerse zamknął extension rundy i rozszerza platformę na interaktywne światy.",
+        "Dlaczego ważne: generowanie wideo zaczyna konkurować o czas użytkownika, nie tylko o jakość pojedynczej klatki.",
+        "Na co patrzeć dalej: czy model interaktywny znajdzie realny popyt poza marketingowym hype'em."
+      ],
+      "sources": [
+        {
+          "title": "PixVerse blog",
+          "url": "https://pixverse.ai/en/blog/pixverse-closes-series-c-extension-and-announces-expansion-into-interactive-entertainment"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "PixVerse",
+        "video generation",
+        "world models",
+        "funding",
+        "entertainment",
+        "creators"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-14-3-waze-staje-sie-bardziej-konfigurowalny-i-bardziej-gemini-6cae2991d1",
+      "section": "Produkty",
+      "title": "Waze staje się bardziej konfigurowalny i bardziej Gemini",
+      "standfirst": "Waze dodaje motorcycle mode, personalizowane trasy, tryb mniej gadatliwy oraz conversational reporting. Użytkownik ma dostać bardziej kontekstową nawigację bez utraty kontroli nad ustawieniami.",
+      "whatHappened": "Google rozbudowuje Waze o bardziej agentowe i rozmowne interakcje.",
+      "whyItMatters": "Konsumenckie AI coraz częściej wchodzi w codzienny UX przez preferencje, routing i asystowanie w locie.",
+      "deeperAnalysis": [
+        "Najciekawsze w tym komunikacie jest nie samo użycie Gemini, tylko sposób, w jaki Google wplata AI w konkretny problem użytkownika. Motorcycle mode, less chatty mode i personalizowane trasy pokazują, że firma buduje asystenta do jazdy, a nie kolejny ogólny czat.",
+        "Waza jest też dobrym testem, jak daleko można przesunąć automatyzację bez wywołania oporu. W komunikacie pojawia się jawny opt-out z personalizacji, więc produkt próbuje jednocześnie zwiększyć wygodę i utrzymać zaufanie. To będzie ważne także dla innych produktów Google Maps i search."
+      ],
+      "contextPoints": [
+        "Co się stało: Waze łączy nawigację, głos i Gemini w bardziej spersonalizowanym UX.",
+        "Dlaczego ważne: to przykład, jak AI staje się warstwą sterującą codziennym produktem konsumenckim.",
+        "Na co patrzeć dalej: czy podobne funkcje pojawią się szerzej w Google Maps i Android Auto."
+      ],
+      "sources": [
+        {
+          "title": "Waze Blog",
+          "url": "https://blog.google/waze/waze-updates-gemini-motorcycle-mode/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Waze",
+        "Gemini",
+        "Maps",
+        "navigation",
+        "personalization",
+        "consumer AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-14-4-markey-chce-krajowych-zasad-dla-szkod-data-center-33acb69e69",
+      "section": "Regulacje",
+      "title": "Markey chce krajowych zasad dla szkód data center",
+      "standfirst": "Senator Markey opublikował AI Accountability Agenda oraz draft prawa o szkodach data center. Pakiet łączy AI z energią, zanieczyszczeniem, zdrowiem publicznym i prawami pracowników.",
+      "whatHappened": "W Kongresie pojawia się bardziej konkretny język regulacji kosztów AI infrastruktury.",
+      "whyItMatters": "Debata przesuwa się z abstrakcyjnej AI safety na realne zewnętrzne koszty infrastruktury.",
+      "deeperAnalysis": [
+        "To ważny sygnał, bo pokazuje, że politycy zaczynają atakować pełny łańcuch wartości AI, nie tylko modele. Markey chce certyfikacji przed budową, finansowania infrastruktury sieciowej, ograniczania użycia diesla i wyższych standardów pracy, czyli dokładnie tych miejsc, gdzie publiczne koszty są dziś najbardziej namacalne.",
+        "Agenda Markeya jest też szersza niż same data centers. Łączy ochronę dzieci, bias algorytmiczny, nadzór pracowniczy i healthcare override, więc można ją czytać jako próbę ustawienia federalnego języka, który nada AI bardziej obowiązkowy charakter społeczny."
+      ],
+      "contextPoints": [
+        "Co się stało: Markey publikuje AI Accountability Agenda i draft dla data center harm.",
+        "Dlaczego ważne: federalny frame może stać się punktem odniesienia dla przyszłych debat i lokalnych przepisów.",
+        "Na co patrzeć dalej: czy agenda zyska co-sponsorów i przerodzi się w realne komitety lub hearings."
+      ],
+      "sources": [
+        {
+          "title": "Markey Senate AI Accountability Agenda",
+          "url": "https://www.markey.senate.gov/news/press-releases/senator-markey-releases-the-ai-accountability-agenda-taking-power-back-from-big-tech"
+        },
+        {
+          "title": "Markey Senate data center harm draft",
+          "url": "https://www.markey.senate.gov/news/press-releases/senator-markey-releases-discussion-draft-of-legislation-to-create-a-national-framework-to-address-data-center-harm"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Markey",
+        "data centers",
+        "regulation",
+        "energy",
+        "public health",
+        "AI accountability"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-14-5-microsoft-nadaje-agentom-w-intune-wlasna-tozsamosc-fa295ad062",
+      "section": "Cyber",
+      "title": "Microsoft nadaje agentom w Intune własną tożsamość",
+      "standfirst": "Vulnerability Remediation Agent w Intune przechodzi na Microsoft Entra agentic identity. Nowe instancje dostają tożsamość agenta automatycznie, a obsługa ludzkiej tożsamości kończy się po 90 dniach.",
+      "whatHappened": "Microsoft przenosi security automation na bardziej formalny model tożsamości dla agentów.",
+      "whyItMatters": "Agentic identity może stać się standardem dla enterprise AI i bezpieczeństwa operacyjnego.",
+      "deeperAnalysis": [
+        "To nie jest tylko kosmetyczna zmiana w Intune. Microsoft sygnalizuje, że agent nie powinien działać jako \"czyjś login\", tylko jako osobna tożsamość z delegowanymi uprawnieniami, readiness checkiem i jasnym cyklem życia. To znacznie bliższe temu, jak firmy zarządzają systemami niż ludzkim kontem.",
+        "SFI Progress Report wzmacnia ten obraz: Microsoft pisze tam wprost, że AI przyspiesza zarówno atak, jak i obronę, a nowe systemy bezpieczeństwa działają na większej automatyzacji i głębszym kontekście. W takim układzie agentic identity to nie dodatek, tylko konieczny warunek skalowania automatycznej remediacji."
+      ],
+      "contextPoints": [
+        "Co się stało: Intune rozszerza Vulnerability Remediation Agent o Entra agentic identity.",
+        "Dlaczego ważne: enterprise AI potrzebuje osobnych, audytowalnych tożsamości zamiast kont użytkowników.",
+        "Na co patrzeć dalej: czy Microsoft przeniesie ten model do innych agentów security i admin workflows."
+      ],
+      "sources": [
+        {
+          "title": "Microsoft Intune",
+          "url": "https://learn.microsoft.com/en-us/intune/whats-new/"
+        },
+        {
+          "title": "Microsoft Security Trust Center",
+          "url": "https://www.microsoft.com/en-us/trust-center/security/secure-future-initiative/sfi-progress-report-july-2026"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Microsoft",
+        "Intune",
+        "Security Copilot",
+        "agentic identity",
+        "vulnerability management",
+        "Entra"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-14-6-uber-wpycha-robotaxi-do-polityki-d-c-f6aa423db2",
+      "section": "Regulacje",
+      "title": "Uber wpycha robotaxi do polityki D.C.",
+      "standfirst": "TechCrunch opisuje lobbying Ubera wokół ustawy dla autonomicznych pojazdów w Waszyngtonie. To test dla szerszej strategii robotaxi i jednocześnie źródło konfliktu z Waymo.",
+      "whatHappened": "Uber próbuje kształtować reguły, które zdecydują o przyszłości robotaxi.",
+      "whyItMatters": "AV przestaje być tylko produktem i staje się walką o prawo do rynku.",
+      "deeperAnalysis": [
+        "Ten ruch pokazuje, że autonomiczne pojazdy weszły w fazę, w której najlepsza technologia nie wystarczy bez odpowiednich reguł gry. Jeśli Uber próbuje wpływać na projekt prawa w D.C., to walka o robotaxi odbywa się równolegle w lobby, legislacji i partnerstwach, a nie tylko w testach drogowych.",
+        "To także dobry sygnał dla obserwatorów rynku transportu. Gdy platforma, która zwykle kojarzy się z dystrybucją i popytem, zaczyna aktywnie kształtować reguły działania konkurencyjnej kategorii, oznacza to, że rynek wchodzi w fazę dużo bardziej polityczną niż wcześniej."
+      ],
+      "contextPoints": [
+        "Co się stało: Uber lobbuje wokół zasad dla AV w Waszyngtonie.",
+        "Dlaczego ważne: robotaxi staje się przedmiotem walki regulacyjnej, a nie tylko product-market fit.",
+        "Na co patrzeć dalej: czy Waymo i inni gracze zareagują własnym lobbyingiem lub poparciem dla innych przepisów."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/13/ubers-robotaxi-lobbying-effort-has-put-it-on-a-collision-course-with-waymo/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Uber",
+        "Waymo",
+        "robotaxi",
+        "lobbying",
+        "autonomous vehicles",
+        "regulation"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-14-7-hn-i-product-hunt-wola-praktyczne-ai-9a029154c5",
+      "section": "Produkty",
+      "title": "HN i Product Hunt wolą praktyczne AI",
+      "standfirst": "Hacker News pokazuje dziś zmęczenie hasłem AI-first i większą wrażliwość na provenance. Product Hunt z kolei pyta o pierwszą aplikację, którą użytkownik podłączyłby do osobistego AI companiona.",
+      "whatHappened": "Community signal przesuwa się z modelowego hype'u do integracji, zaufania i użyteczności.",
+      "whyItMatters": "To często najlepszy wczesny sygnał tego, jakie produkty faktycznie zyskają uwagę użytkowników.",
+      "deeperAnalysis": [
+        "Na Hacker News widać dwie ważne rzeczy naraz: część społeczności pyta, kto w ogóle chce jeszcze zostać w branży, a część chce prostych flag dla AI-generated articles. To nie jest tylko narzekanie, ale wyraźny sygnał, że provenance i jakość publikacji zaczynają mieć własną wartość.",
+        "Product Hunt pokazuje podobny kierunek przez pytanie o pierwszą aplikację dla AI companiona. To przesuwa uwagę z abstrakcyjnego \"który model jest najlepszy\" na konkretne \"z czym AI ma się łączyć\" - email, dokumenty, kalendarz czy narzędzia pracy. W praktyce rynek przechodzi z modeli do workflow plumbing."
+      ],
+      "contextPoints": [
+        "Co się stało: HN dyskutuje o fatigue i flagach dla AI content, a Product Hunt pyta o integracje dla AI companiona.",
+        "Dlaczego ważne: społeczność wyraźnie premiuje praktyczność, kontrolę i zaufanie.",
+        "Na co patrzeć dalej: czy to przełoży się na silniejszy popyt na personal AI, approval flows i provenance tooling."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News: Ask HN on quitting (July 2026)",
+          "url": "https://news.ycombinator.com/item?id=48760048"
+        },
+        {
+          "title": "Hacker News: Ask HN: Add flag for AI-generated articles",
+          "url": "https://news.ycombinator.com/item?id=48886741"
+        },
+        {
+          "title": "Product Hunt: personal AI companion integrations",
+          "url": "https://www.producthunt.com/p/sidekick-15/what-s-the-first-app-you-d-connect-to-a-personal-ai-companion"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Hacker News",
+        "Product Hunt",
+        "AI companions",
+        "provenance",
+        "workflow",
+        "community signal"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Intel inwestuje w Leixlip",
+      "rationale": "Pokazuje, że AI nadal jest przede wszystkim grą o faby, energię i europejską suwerenność przemysłową.",
+      "sourcesLabel": "Intel newsroom"
+    },
+    {
+      "priority": "High",
+      "title": "Micron zabezpiecza wafers",
+      "rationale": "Pamięć i materiały wejściowe pozostają krytycznym bottleneckiem dla AI.",
+      "sourcesLabel": "Micron investor relations"
+    },
+    {
+      "priority": "High",
+      "title": "PixVerse wchodzi w interaktywne światy",
+      "rationale": "Video generation przesuwa się z pojedynczych klipów do interaktywnych world models.",
+      "sourcesLabel": "PixVerse blog, TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Waze staje się bardziej rozmowny",
+      "rationale": "Konsumenckie AI wchodzi do codziennej nawigacji przez personalizację i voice UX.",
+      "sourcesLabel": "Waze Blog"
+    },
+    {
+      "priority": "High",
+      "title": "Markey atakuje szkody data center",
+      "rationale": "Regulacja przesuwa się z abstrakcyjnego AI safety do energii, zdrowia i infrastruktury.",
+      "sourcesLabel": "Markey Senate"
+    },
+    {
+      "priority": "High",
+      "title": "Microsoft nadaje agentom tożsamość",
+      "rationale": "Agentic identity może stać się standardem enterprise security i remediacji.",
+      "sourcesLabel": "Microsoft Intune, Microsoft Security"
+    },
+    {
+      "priority": "Medium",
+      "title": "Uber walczy o robotaxi w przepisach",
+      "rationale": "Autonomous vehicles coraz bardziej zależą od polityki i reguł rynku niż od samego demo.",
+      "sourcesLabel": "TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN i Product Hunt chcą praktycznej AI",
+      "rationale": "Społeczność premiuje provenance, integracje i workflow, a nie czysty hype.",
+      "sourcesLabel": "Hacker News, Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Intel newsroom: Intel Invests €5 Billion to Expand Manufacturing in Europe",
+      "url": "https://newsroom.intel.com/intel-foundry/intel-invests-5-billion-euro-to-expand-manufacturing-in-europe"
+    },
+    {
+      "title": "Micron investor relations: Micron Announces Up to $3 Billion Strategic Investment to Strengthen U.S. Semiconductor Ecosystem",
+      "url": "https://investors.micron.com/news-releases/news-release-details/micron-announces-3-billion-strategic-investment-strengthen-us"
+    },
+    {
+      "title": "PixVerse blog: PixVerse Closes Series C Extension, Bringing Total to USD 439 Million",
+      "url": "https://pixverse.ai/en/blog/pixverse-closes-series-c-extension-and-announces-expansion-into-interactive-entertainment"
+    },
+    {
+      "title": "TechCrunch: Video-generation startup PixVerse raises $439M, valuation soars past $2B",
+      "url": "https://techcrunch.com/2026/07/13/video-generation-startup-pixverse-raises-439m-valuation-soars-past-2b/"
+    },
+    {
+      "title": "Waze Blog: Waze rolls out new customization features and more Gemini updates",
+      "url": "https://blog.google/waze/waze-updates-gemini-motorcycle-mode/"
+    },
+    {
+      "title": "Senator Markey: AI Accountability Agenda and data center harm framework",
+      "url": "https://www.markey.senate.gov/news/press-releases/senator-markey-releases-the-ai-accountability-agenda-taking-power-back-from-big-tech"
+    },
+    {
+      "title": "Microsoft Intune updates",
+      "url": "https://learn.microsoft.com/en-us/intune/whats-new/"
+    },
+    {
+      "title": "Microsoft Security Trust Center: SFI Progress Report July 2026",
+      "url": "https://www.microsoft.com/en-us/trust-center/security/secure-future-initiative/sfi-progress-report-july-2026"
+    },
+    {
+      "title": "TechCrunch: Uber robotaxi lobbying vs Waymo",
+      "url": "https://techcrunch.com/2026/07/13/ubers-robotaxi-lobbying-effort-has-put-it-on-a-collision-course-with-waymo/"
+    },
+    {
+      "title": "Hacker News: Ask HN on quitting (July 2026)",
+      "url": "https://news.ycombinator.com/item?id=48760048"
+    },
+    {
+      "title": "Hacker News: Ask HN: Add flag for AI-generated articles",
+      "url": "https://news.ycombinator.com/item?id=48886741"
+    },
+    {
+      "title": "Product Hunt: personal AI companion integrations",
+      "url": "https://www.producthunt.com/p/sidekick-15/what-s-the-first-app-you-d-connect-to-a-personal-ai-companion"
+    }
+  ]
+}

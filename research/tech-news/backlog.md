@@ -132,9 +132,17 @@
 | High | Track Notion agent-email shift | Notion Mail shutdown is a concrete case of agents replacing a classic productivity UI | Watch user migration, enterprise/compliance issues, Gmail/Outlook connector reliability and whether other productivity apps follow | Open |
 | Medium | Track unconventional AI compute | Unconventional AI's Un-0 validates a simulated oscillator approach but not yet production hardware | Watch hardware prototype, independent benchmarks, energy measurements, model quality and open-source adoption | Open |
 | Medium | Track ML open-science breakthroughs | Vesuvius Challenge and TESS/TOI-791 are strong science-tech stories outside Big Tech | Watch peer review, reusable code/data, independent replication and Polish science coverage | Open |
+| High | Track AI infra capex conversion | Intel and Micron show AI capex still turning into fabs, wafers and memory commitments | Watch execution, capacity additions, pricing and downstream buyer commitments | Open |
+| High | Track data center harm regulation | Markey's framework connects AI to energy, water, labor and public-interest permitting | Watch co-sponsors, hearings, industry pushback and state copycats | Open |
+| High | Track agentic identity in security tools | Microsoft Intune now provisions non-human agent identities for remediation | Watch rollout to other Microsoft security surfaces and vendor copycats | Open |
+| Medium | Track interactive world-model products | PixVerse is moving from clip generation to persistent interactive worlds | Watch pricing, retention and competition from other video/world-model labs | Open |
+| Medium | Track Waze conversational navigation rollout | Waze's motorcycle mode and Gemini updates show consumer AI moving into navigation UX | Watch adoption, opt-out friction and Google Maps parity | Open |
+| Medium | Track robotaxi rulemaking battle | Uber's D.C. lobbying shows autonomous vehicles are becoming a legislative fight | Watch the bill, Waymo response and state-level copycats | Open |
+| Medium | Track provenance fatigue in tech communities | HN and Product Hunt are rewarding transparency and integrations over hype | Watch whether AI-generated article flags and companion integrations keep showing up | Open |
 
 ## Review Notes
 
+- 2026-07-14: Daily research run added Intel/Micron capex, Markey data-center legislation, Microsoft Intune agentic identity, PixVerse interactive worlds, Waze Gemini navigation, Uber robotaxi lobbying and a practical/provenance-heavy community signal.
 - 2026-06-17: Topic created for Polish daily technology research and podcast
   automation.
 - 2026-06-17: Manual research dry run created the first `tech-news` report and

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-14T04:12:47.068405+00:00",
+  "generatedAt": "2026-07-14T06:18:42.229952+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -137,6 +137,36 @@
     }
   ],
   "artifacts": [
+    {
+      "id": "research/tech-news/runs/2026-07-14.md",
+      "type": "run",
+      "topic": "tech-news",
+      "title": "Daily Research Report: tech-news",
+      "path": "research/tech-news/runs/2026-07-14.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-07-14.md",
+      "sizeBytes": 29011,
+      "date": "2026-07-14"
+    },
+    {
+      "id": "research/tech-news/data/2026-07-14-research.json",
+      "type": "researchData",
+      "topic": "tech-news",
+      "title": "Research data",
+      "path": "research/tech-news/data/2026-07-14-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-07-14-research.json",
+      "sizeBytes": 23423,
+      "date": "2026-07-14"
+    },
+    {
+      "id": "research/tech-news/pdfs/2026-07-14-tech-news.pdf",
+      "type": "pdf",
+      "topic": "tech-news",
+      "title": "2026-07-14-tech-news.pdf",
+      "path": "research/tech-news/pdfs/2026-07-14-tech-news.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-07-14-tech-news.pdf",
+      "sizeBytes": 113596,
+      "date": "2026-07-14"
+    },
     {
       "id": "research/reddit-radar/runs/2026-07-14-0008-reddit-radar.md",
       "type": "run",
@@ -11425,7 +11455,7 @@
       "title": "Topic Index: tech-news",
       "path": "research/tech-news/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/index.md",
-      "sizeBytes": 36158
+      "sizeBytes": 36808
     },
     {
       "id": "research/tech-news/backlog.md",
@@ -11434,7 +11464,7 @@
       "title": "Topic Backlog: tech-news",
       "path": "research/tech-news/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/backlog.md",
-      "sizeBytes": 45522
+      "sizeBytes": 47251
     },
     {
       "id": "research/puls-dnia-news/topic.md",

@@ -1,8 +1,10 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-13
+Last updated: 2026-07-14
 
 ## Current Understanding
+
+Poranny refresh z 2026-07-14 przesuwa temat z modeli na fizyczny łańcuch dostaw i product-level orchestration: Intel ogłasza 5 mld euro na Leixlip, Micron dokłada 3 mld dolarów do amerykańskich wafers i pamięci, a Markey zaczyna budować federalny frame dla szkód data center. Równolegle Waze, PixVerse i Microsoft Intune pokazują, że consumer i enterprise AI wchodzą w etap bardziej kontekstowych, konfigurowalnych i tożsamościowo kontrolowanych produktów. To potwierdza, że najważniejszy spór dnia dotyczy już nie tylko capability modeli, lecz kosztu energii, surowców, tożsamości agentów i tego, kto ustawia reguły rynku.
 
 Wieczorny refresh z 2026-07-13 dokłada dwa nowe wektory do już znanej osi governance: firmy zaczynają jawnie przechodzić do tańszych chińskich modeli, a FT pokazuje, że OpenAI i Google nadal sprzedają modele przez pośrednie struktury do podmiotów powiązanych z czarną listą. To zamienia AI w opowieść o arbitrażu kosztu, geopolityce dostępu i porowatych export controls, a nie tylko o samym rolloutcie frontier modeli.
 
