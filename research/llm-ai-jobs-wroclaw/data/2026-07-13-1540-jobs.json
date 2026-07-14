@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-07-13",
+  "runTime": "15:40",
+  "executiveSummary": "Dzisiejszy sweep wyraźnie przesunął filtr Wrocławia w stronę architektury AI, LLMOps, platform engineering i agentic systems. Najmocniejsze nowe sygnały to AI Architect, Principal AI Engineer, AI / LLMOps Engineer, GenAI & Cloud Solution Engineer, AI Engineer, LLM Engineer, AI Platform Engineer (GCP) i Senior AI Platform Engineer – ML Infrastructure and RAG Systems. Dodatkowo oficjalny AI Developer Experience Engineer w Sii potwierdza, że obok ról modelowych rośnie też warstwa AI-native developer tooling.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "AI Architect",
+      "company": "emagine Polska",
+      "location": "Wrocław +4 lokalizacje / remote",
+      "workMode": "Remote",
+      "compensation": "180 - 220 PLN/h B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM, AI, RAG, LangChain, LangGraph, projektowanie architektury rozwiązań",
+      "whyInteresting": "rola architektoniczna z bardzo konkretnym zakresem dla GenAI/LLM, full remote i odpowiedzialność za 100+ use case'ów",
+      "uncertainty": "karta jest board-first; główna strona oferty jest warszawska, ale Wrocław występuje jako jedna z lokalizacji biurowych",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/emagine-polska-ai-architect-warszawa-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Principal AI Engineer",
+      "company": "Link Group",
+      "location": "Wrocław +7 lokalizacji / remote",
+      "workMode": "Remote",
+      "compensation": "150 - 180 PLN/h B2B",
+      "seniority": "Principal",
+      "fitSummary": "Machine Learning, AWS, AI, Azure, Python, TDD",
+      "whyInteresting": "wysoka stawka, seniority i szeroki scope obejmujący praktyczne AI oraz platformowe dostarczanie rozwiązań",
+      "uncertainty": "karta jest board-first; primary page jest warszawska, choć Wrocław jest na liście office locations",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/link-group-principal-ai-engineer-warszawa-ai-32ec201a"
+      ],
+      "tags": [
+        "Python",
+        "AWS",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "AI / LLMOps Engineer",
+      "company": "Rossmann",
+      "location": "Wrocław +4 lokalizacje / remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "GenAI, LLM, LLMOps, CI/CD, Azure DevOps",
+      "whyInteresting": "to jeden z czytelniejszych sygnałów produkcyjnego LLMOps w tej rundzie, a nie tylko ogólne AI consulting",
+      "uncertainty": "direct page jest łódzki, więc Wrocław widać jako jedną z wielu opcji biurowych, nie jako jedyną lokalizację",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/rossmann-ai-llmops-engineer-lodz-ai"
+      ],
+      "tags": [
+        "LLM",
+        "GenAI",
+        "LLMOps",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "GenAI & Cloud Solution Engineer",
+      "company": "cloudatus",
+      "location": "Wrocław +4 lokalizacje / remote",
+      "workMode": "Remote",
+      "compensation": "16 000 - 26 000 PLN/mies. zależnie od kontraktu",
+      "seniority": "Nieokreślony",
+      "fitSummary": "AWS, Azure, C#, IaC, CI/CD, Python, Prompt Engineering",
+      "whyInteresting": "łączy cloud delivery z GenAI, a zakres jest bliższy wdrażaniu rozwiązań niż prezentacjom albo pre-sales",
+      "uncertainty": "direct page jest rzeszowska, więc Wrocław działa tu jako jedna z kilku publicznie podanych lokalizacji",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/cloudatus-genai-cloud-solution-engineer-rzeszow-ai-c2c31876"
+      ],
+      "tags": [
+        "GenAI",
+        "Python",
+        "AWS",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "AI Engineer",
+      "company": "KRUK S.A.",
+      "location": "Wrocław / hybrid",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LangChain, LangGraph, Databricks, API, GenAI",
+      "whyInteresting": "praktyczny, wdrożeniowy AI engineer w dużej firmie spoza typowego konsultingu, z wyraźnym stackiem agentic/LLM",
+      "uncertainty": "board-first karta; salary nie jest publiczne",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM",
+        "GenAI"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "LLM Engineer",
+      "company": "Callstack",
+      "location": "Wrocław +5 lokalizacji / remote",
+      "workMode": "Remote",
+      "compensation": "160 - 180 PLN/h B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "GenAI, RAG, LangChain, Python",
+      "whyInteresting": "bardzo czysty sygnał LLM Engineer z dobrym pay bandem i Wrocławiem w filtrze boarda",
+      "uncertainty": "board-first signal; warto sprawdzić, czy utrzyma się jako odrębna karta od szerszej rodziny Callstack AI",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI",
+        "Python"
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "AI Platform Engineer (GCP)",
+      "company": "Sii",
+      "location": "Wrocław +13 lokalizacji / remote",
+      "workMode": "Remote",
+      "compensation": "140 - 160 PLN/h B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "AI, Vertex AI, GCP, K8S, Helm, Python, distributed systems",
+      "whyInteresting": "najmocniejszy sygnał platformowo-infrastrukturalny w tej rundzie, z wyraźnym GCP/Vertex AI profilem",
+      "uncertainty": "board-first mirror; canonical employer page nie pojawiła się w tym sweepie",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "Python",
+        "GCP"
+      ]
+    },
+    {
+      "rank": 8,
+      "title": "Senior AI Platform Engineer – ML Infrastructure and RAG Systems",
+      "company": "Spyrosoft",
+      "location": "Wrocław +2 lokalizacje / remote",
+      "workMode": "Remote",
+      "compensation": "40 000 - 60 000 PLN/mies.",
+      "seniority": "Senior",
+      "fitSummary": "AWS, LLM Integration, Agentic AI Systems, vector databases, API Development, RAG systems, Kubernetes, Python",
+      "whyInteresting": "bardzo mocny sygnał production ML/LLM infra z wysokim widełkowym sufitem i czytelnym RAG/agentic scope",
+      "uncertainty": "board-first role; warto potwierdzić, czy pojawi się stabilny canonical employer page",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/spyrosoft-senior-ai-platform-engineer---ml-infrastructure-and-rag-systems-wroclaw-ai-1c0822ce"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM",
+        "Python",
+        "AWS"
+      ]
+    }
+  ],
+  "changes": [
+    "Board w Just Join IT urósł do 149 offers i dziś wyraźnie przesunął się w stronę architektury AI, LLMOps, platform i agentic systems, zamiast samych ogólnych kart AI Engineer.",
+    "Najmocniejszy nowy klaster tworzą dziś emagine, Link Group, Rossmann, cloudatus, KRUK, Callstack, Sii i Spyrosoft.",
+    "Oficjalny AI Developer Experience Engineer w Sii potwierdza, że obok kart modelowych rośnie też warstwa AI-native developer tooling wokół GitHub Copilot, Claude Code i MCP.",
+    "Dodatkowe boardowe role, które warto obserwować osobno, to AI Application Developer, Senior ML/Python Engineer, AI Engineer i AI Engineer – LLM / Agentic Systems, ale w tej rundzie nie przebiły się do top 8."
+  ],
+  "risks": [
+    "Część kart jest multi-city i Wrocław występuje tylko jako jedna z opcji office location, więc primary page może pokazywać inne miasto.",
+    "Board mirrors potrafią zmieniać tytuł, wynagrodzenie i lokalizację bez realnej zmiany po stronie pracodawcy.",
+    "Kilka nowych kart ma bardzo podobne scope'y LLM, RAG, agentic AI i platform, więc duplikacja po kolejnym przebiegu jest realnym ryzykiem."
+  ],
+  "recommendedActions": [
+    "Sprawdzić ponownie te same 8 kart w następnym przebiegu i odsiać te, które znikną albo zmienią salary / location / title.",
+    "Utrzymać AI Developer Experience Engineer w Sii jako canonical signal dla AI-native tooling i agentic developer workflow.",
+    "Jeśli cloudatus, Link Group, Rossmann albo Spyrosoft pokażą stabilne employer pages, przenieść je do stałej shortlisty źródeł."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Job offers AI/ML, Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "emagine Polska: AI Architect",
+      "url": "https://justjoin.it/job-offer/emagine-polska-ai-architect-warszawa-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Link Group: Principal AI Engineer",
+      "url": "https://justjoin.it/job-offer/link-group-principal-ai-engineer-warszawa-ai-32ec201a",
+      "status": "checked"
+    },
+    {
+      "title": "Rossmann: AI / LLMOps Engineer",
+      "url": "https://justjoin.it/job-offer/rossmann-ai-llmops-engineer-lodz-ai",
+      "status": "checked"
+    },
+    {
+      "title": "cloudatus: GenAI Cloud Solution Engineer",
+      "url": "https://justjoin.it/job-offer/cloudatus-genai-cloud-solution-engineer-rzeszow-ai-c2c31876",
+      "status": "checked"
+    },
+    {
+      "title": "Spyrosoft: Senior AI Platform Engineer – ML Infrastructure and RAG Systems",
+      "url": "https://justjoin.it/job-offer/spyrosoft-senior-ai-platform-engineer---ml-infrastructure-and-rag-systems-wroclaw-ai-1c0822ce",
+      "status": "checked"
+    },
+    {
+      "title": "Sii: AI Developer Experience Engineer (f/m/x)",
+      "url": "https://sii.pl/en/job-ads/id/37403/ai-developer-experience-engineer-fmx/",
+      "status": "checked"
+    }
+  ]
+}
