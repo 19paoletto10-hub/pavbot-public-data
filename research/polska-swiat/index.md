@@ -161,6 +161,12 @@ zimę, równolegle rozwijając projekt Freyja i koalicję antybalistyczną. Wąt
 UE rozszerza się o formalne otwarcie klastra 6 negocjacji akcesyjnych Ukrainy
 i Mołdawii, a krajowo centrum ESA w Warszawie zyskało szczegóły finansowe, zaś
 IMGW i RCB tworzą praktyczny alert burzowy.
+Po wieczornym sygnale 14 lipca Trump wycofał plan opłat za Ormuz, ale utrzymał
+blokadę i naloty, więc kryzys przesunął się z taryfy na realne wymuszanie
+żeglugi. Równolegle AP podało nocne zestrzelenie pięciu rosyjskich pocisków
+balistycznych nad Ukrainą, a Consilium formalnie otworzyło klaster 6 dla
+Ukrainy. Wątek paryski dostaje teraz bardziej konkretny kształt w koalicji
+antybalistycznej, lecz nadal bez szybkiego harmonogramu wdrożenia.
 
 ## Stable Facts
 
@@ -303,6 +309,8 @@ IMGW i RCB tworzą praktyczny alert burzowy.
 
 ## Recent Reports
 
+- [2026-07-14-1933](runs/2026-07-14-1933.md)
+- [2026-07-14](runs/2026-07-14.md)
 - [2026-07-13](runs/2026-07-13.md)
 - [2026-07-12-1933](runs/2026-07-12-1933.md)
 - [2026-07-12](runs/2026-07-12.md)
