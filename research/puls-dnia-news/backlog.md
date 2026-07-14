@@ -56,6 +56,14 @@
   implementation note or border advisory.
 - Watch whether Ormuz rhetoric turns into shipping disruption or oil-price
   follow-through in the next slot.
+- Watch whether Wyszków services publish a formal rescue note or health update
+  after the Bug incident.
+- Watch whether the Russian-account report gets a named platform, state or
+  security response in the next slot.
+- Watch whether Bangkok authorities publish a full safety review after the bar
+  fire death toll rose to 30.
+- Watch whether Toronto police identify suspects or motive after the festival
+  shooting.
 
 ## Done
 

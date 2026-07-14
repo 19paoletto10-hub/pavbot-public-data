@@ -165,6 +165,11 @@ follow-up from Paris and the Lindsey Graham succession story, while BBC keeps
 the Bangkok, Spain, Hungary and Paris fire / politics mix live and TVN24
 adds the EU child-safety tech-regulation angle.
 
+The 2026-07-14 09:02 slot replaces the Tatra-first framing with an urgent Bug
+rescue in Wyszków, a stronger disinformation block and fresh coalition
+sparring, while keeping the global pulse anchored in Iran-Ormuz, Bangkok,
+Hungary, Spain and Toronto.
+
 ## Data Shape
 
 The native iOS feed expects:

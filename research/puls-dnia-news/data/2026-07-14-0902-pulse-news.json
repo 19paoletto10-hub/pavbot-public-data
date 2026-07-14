@@ -1,0 +1,547 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-14",
+  "runTime": "09:02",
+  "status": "Material update",
+  "headline": "09:02: Wyszków, Iran i burze prowadzą poranek",
+  "summary": "Nowy slot dokłada ratunek nad Bugiem, ostrzejsze sygnały wokół Iranu, świeże pożary i polityczne napięcia w Europie i Polsce, przy aktywnych alertach pogodowych.",
+  "checkedSources": [
+    {
+      "title": "TVN24 najnowsze wiadomości",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Świat",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 TVN Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC News World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world/index.html"
+    },
+    {
+      "title": "IMGW prognoza na tydzień 13.07 - 19.07.2026",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-13-07-19-07-2026/"
+    }
+  ],
+  "items": [
+    {
+      "id": "polska-bug-wyszkow-ratunek-dziewczynki-2026-07-14-0902",
+      "section": "Polska",
+      "title": "Ratownicy wyciągnęli dwie dziewczynki z Bugu",
+      "lead": "Wyszkowski poranny lead TVN24 dotyczy akcji ratunkowej po tym, jak dwie dziewczynki topiły się w Bugu.",
+      "whatHappened": "TVN24 podało, że w rejonie Wyszkowa doszło do niebezpiecznej sytuacji nad Bugiem, a szybka reakcja strażaków i lokalnych ratowników uratowała dwie dziewczynki.",
+      "keyFacts": [
+        "Do zdarzenia doszło nad Bugiem w rejonie Wyszkowa.",
+        "W akcji uczestniczyły służby ratunkowe.",
+        "Materiał TVN24 podkreślał sprawną reakcję jednego z ratowników."
+      ],
+      "reactions": [
+        "Sprawa natychmiast weszła do porannego serwisu TVN24.",
+        "Lokalny przekaz skupia się teraz na stanie dziewczynek i pełnym opisie akcji."
+      ],
+      "whyItMatters": "To bezpośredni sygnał bezpieczeństwa publicznego i temat, który może szybko przejść w formalny raport służb.",
+      "context": "To świeższy krajowy lead niż wczorajsze alerty i dlatego podnosi rangę porannego miksu.",
+      "watchNext": [
+        "Czy pojawi się pełny raport straży lub policji.",
+        "Czy służby podały stan zdrowia dziewczynek."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: W Bugu topiły się dwie dziewczynki. \"Naszemu koledze gratulujemy bohaterskiej postawy\"",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/wyszkow-w-bugu-topily-sie-dwie-dziewczynki-na-pomoc-ruszyla-straz-pozarna-st9141154?source=rss"
+        }
+      ],
+      "tags": [
+        "Wyszków",
+        "Bug",
+        "ratunek",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-ursynow-status-quo-ko-burmistrz-2026-07-14-0902",
+      "section": "Polska",
+      "title": "Ursynów bez zmiany układu",
+      "lead": "TVN24 opisuje, że radni KO utrzymali wsparcie dla burmistrza i nie doszło do politycznego przełomu.",
+      "whatHappened": "W nowym materiale o Ursynowie radni Koalicji Obywatelskiej stanęli po stronie burmistrza, co utrzymało dotychczasowy układ sił w dzielnicy.",
+      "keyFacts": [
+        "Spór toczy się lokalnie, ale ma znaczenie dla warszawskiej polityki samorządowej.",
+        "Radni KO nie zdecydowali się na zmianę kursu.",
+        "TVN24 opisało to jako status quo, a nie nowy przewrót."
+      ],
+      "reactions": [
+        "Obóz burmistrza dostał publiczne wsparcie.",
+        "Przeciwnicy będą musieli szukać kolejnej okazji do nacisku."
+      ],
+      "whyItMatters": "Warszawskie lokalne układy często są wskaźnikiem szerszych napięć koalicyjnych i kadrowych.",
+      "context": "To świeży miejski wątek z porannego feedu TVN24, dobrze uzupełniający cięższe tematy krajowe.",
+      "watchNext": [
+        "Czy pojawi się formalne oświadczenie radnych.",
+        "Czy w dzielnicy wróci temat rekonstrukcji układu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Na Ursynowie status quo. Radni KO murem za burmistrzem",
+          "url": "https://tvn24.pl/tvnwarszawa/ursynow/na-ursynowie-status-quo-radni-ko-murem-za-burmistrzem-st9141222?source=rss"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "Ursynów",
+        "samorząd",
+        "KO"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "alerty-imgw-burze-silny-deszcz-2026-07-14-0902",
+      "section": "Alerty",
+      "title": "IMGW utrzymuje burze i silny deszcz",
+      "lead": "Ostrzeżenia pogodowe obejmują już 10 województw i nadal mogą się rozszerzać.",
+      "whatHappened": "TVN24 Meteo opisuje alerty IMGW przed burzami, silnym deszczem i lokalnym gradem, a w części kraju utrzymuje się ryzyko gwałtownych zjawisk konwekcyjnych.",
+      "keyFacts": [
+        "Ostrzeżenia obejmują 10 województw.",
+        "Ryzyko dotyczy m.in. intensywnych opadów i silnych porywów wiatru.",
+        "IMGW utrzymuje stan podwyższonej czujności dla transportu i wydarzeń plenerowych."
+      ],
+      "reactions": [
+        "TVN24 Meteo nadal pokazuje radar i mapy zjawisk.",
+        "W praktyce oznacza to gotowość na kolejne zmiany komunikatów."
+      ],
+      "whyItMatters": "To bezpośredni wpływ na bezpieczeństwo, transport i lokalne podtopienia.",
+      "context": "Po serii niestabilnych slotów alert pogodowy nadal jest jednym z najbardziej praktycznych sygnałów dla użytkownika iOS.",
+      "watchNext": [
+        "Czy IMGW podniesie stopień ostrzeżeń.",
+        "Czy RCB wyśle dodatkowy alert SMS."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo: Burze i silny deszcz. Alarmy w 10 województwach",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/burze-i-silny-deszcz-ostrzezenia-imgw-wtorek-14-07-alarmy-maja-nawet-drugi-stopien-st9139702?source=rss"
+        },
+        {
+          "title": "IMGW: Prognoza pogody na tydzień 13.07 – 19.07.2026",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-13-07-19-07-2026/"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "burze",
+        "deszcz",
+        "alert"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-rosyjskie-konta-podzialy-2026-07-14-0902",
+      "section": "Polityka",
+      "title": "Rosyjskie konta podbijają polsko-ukraińskie podziały",
+      "lead": "TVN24 opublikowało materiał o sieci narracji, które mają rozszczelniać relacje polsko-ukraińskie.",
+      "whatHappened": "W nowym raporcie TVN24 wskazuje, że rosyjskie konta aktywnie wzmacniają przekazy dzielące Polaków i Ukraińców oraz że zidentyfikowano pięć głównych narracji.",
+      "keyFacts": [
+        "Materiał opiera się na raporcie ujawnionym przez TVN24.",
+        "W centrum są mechanizmy dezinformacji, a nie pojedynczy incydent.",
+        "Temat bezpośrednio dotyka debaty publicznej i bezpieczeństwa informacyjnego."
+      ],
+      "reactions": [
+        "To jeden z najmocniejszych porannych sygnałów o rosyjskiej aktywności informacyjnej.",
+        "Taki materiał zwykle wywołuje szybkie reakcje w polityce i mediach."
+      ],
+      "whyItMatters": "Dezinformacja wokół relacji polsko-ukraińskich może wpływać na nastroje społeczne i politykę bezpieczeństwa.",
+      "context": "Ten wątek dobrze łączy się z innymi porannymi materiałami TVN24 o napięciach politycznych i komentarzach wokół Ukrainy.",
+      "watchNext": [
+        "Czy pojawią się komentarze rządu lub służb.",
+        "Czy platformy oznaczą lub ograniczą wskazane narracje."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Tak rosyjskie konta grają na polsko-ukraińskie podziały. Ujawniamy raport i pięć głównych narracji",
+          "url": "https://tvn24.pl/polska/tak-rosyjskie-konta-graja-na-polsko-ukrainskie-podzialy-ujawniamy-raport-i-piec-glownych-narracji-st9141202?source=rss"
+        }
+      ],
+      "tags": [
+        "dezinformacja",
+        "Rosja",
+        "Ukraina",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-hennig-kloska-pelczynska-nalecz-spor-2026-07-14-0902",
+      "section": "Polityka",
+      "title": "Hennig-Kloska i Pełczyńska-Nałęcz pogłębiają spór w koalicji",
+      "lead": "TVN24 wraca do napięcia między ministerką klimatu a polityczką Polski 2050.",
+      "whatHappened": "W materiale TVN24 Paulina Hennig-Kloska mówi, że Katarzyna Pełczyńska-Nałęcz dawno wypisała się z koalicji, co podkreśla utrzymane napięcia wewnątrz obozu rządzącego.",
+      "keyFacts": [
+        "Spór dotyczy relacji wewnątrz koalicji, a nie tylko pojedynczej ustawy.",
+        "TVN24 przedstawia go jako realny problem komunikacyjny.",
+        "To kolejny sygnał, że polityczne tarcia nie wygasły."
+      ],
+      "reactions": [
+        "Obóz rządzący nadal musi zarządzać własnymi napięciami.",
+        "Taki komentarz zwykle wywołuje odpowiedź drugiej strony."
+      ],
+      "whyItMatters": "Koalicyjne tarcia mogą wpływać na tempo decyzji i stabilność przekazu rządu.",
+      "context": "W porannym feedzie to jeden z głównych sygnałów o polityce krajowej poza samorządem Warszawy.",
+      "watchNext": [
+        "Czy pojawi się odpowiedź Pełczyńskiej-Nałęcz.",
+        "Czy spór przełoży się na kolejne publiczne wypowiedzi liderów koalicji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Paulina Hennig-Kloska: Katarzyna Pełczyńska-Nałęcz dawno wypisała się z koalicji",
+          "url": "https://tvn24.pl/polska/paulina-hennig-kloska-katarzyna-pelczynska-nalecz-dawno-wypisala-sie-z-koalicji-st9141237?source=rss"
+        }
+      ],
+      "tags": [
+        "koalicja",
+        "Polska 2050",
+        "minister",
+        "spór"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-czarnek-proputinowska-narracja-2026-07-14-0902",
+      "section": "Polityka",
+      "title": "Czarnek wzmacnia proputinowską narrację",
+      "lead": "TVN24 opisuje kolejną odsłonę sporów o rosyjskie i białoruskie przekazy w polskiej polityce.",
+      "whatHappened": "Materiał TVN24 pokazuje Przemysława Czarnka jako polityka powielającego przekaz określany przez redakcję jako proputinowski, rosyjski i białoruski.",
+      "keyFacts": [
+        "Temat łączy politykę krajową z dezinformacją i bezpieczeństwem informacyjnym.",
+        "TVN24 opisuje go jako problem komunikacyjny w PiS.",
+        "To jeden z bardziej konfrontacyjnych porannych tekstów."
+      ],
+      "reactions": [
+        "Taki materiał zwykle uruchamia szybkie spory między partiami.",
+        "W praktyce to sygnał o dalszym zaostrzeniu dyskusji wokół wojny informacyjnej."
+      ],
+      "whyItMatters": "Przekaz o Rosji i Ukrainie w polskiej polityce może kształtować debatę o bezpieczeństwie i relacjach zagranicznych.",
+      "context": "To element szerszego pakietu TVN24 o dezinformacji i napięciach wokół Ukrainy.",
+      "watchNext": [
+        "Czy PiS odpowie oficjalnym komentarzem.",
+        "Czy materiał uruchomi kolejne medialne spory o rosyjskie wpływy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Przemysław Czarnek i proputinowska narracja. Tak wiceprezes PiS powiela rosyjski i białoruski przekaz",
+          "url": "https://tvn24.pl/polska/przemyslaw-czarnek-i-proputinowska-narracja-tak-wiceprezes-pis-powiela-rosyjska-i-bialoruska-dezinformacje-st9141200?source=rss"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Rosja",
+        "dezinformacja",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-iran-przekorny-glos-2026-07-14-0902",
+      "section": "Świat",
+      "title": "Przekorny głos z Iranu wobec amerykańskich uderzeń",
+      "lead": "TVN24 Biznes publikuje nowy komentarz z Iranu w trakcie eskalacji wokół USA i Ormuzu.",
+      "whatHappened": "W porannym materiale TVN24 pojawia się irański głos komentujący amerykańskie uderzenia i nadający im przekorną, prowokacyjną interpretację.",
+      "keyFacts": [
+        "To świeży sygnał z irańskiego otoczenia informacyjnego.",
+        "Wątek jest powiązany z rosnącym napięciem na linii USA-Iran.",
+        "Materiał wpisuje się w główny globalny temat poranka."
+      ],
+      "reactions": [
+        "Komentarze z Iranu pozostają ważnym wskaźnikiem kierunku eskalacji.",
+        "Takie głosy zwykle podbijają zainteresowanie rynków i mediów."
+      ],
+      "whyItMatters": "Każdy nowy sygnał z Iranu może wpływać na ocenę ryzyka wokół cieśniny Ormuz i bezpieczeństwa żeglugi.",
+      "context": "To krótki, ale ważny most między krajowym feedem TVN24 a ciężkim blokiem BBC/CNN.",
+      "watchNext": [
+        "Czy Iran odpowie oficjalnym komunikatem.",
+        "Czy komentarz przeniesie się na ceny ropy lub fracht."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Przekorny głos z Iranu. \"Amerykański prezydent ma absolutną rację\"",
+          "url": "https://tvn24.pl/biznes/ze-swiata/przekorny-glos-z-iranu-amerykanski-prezydent-ma-absolutna-racje-st9141240?source=rss"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "Ormuz",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-usa-iran-trzecia-noc-strikes-2026-07-14-0902",
+      "section": "Świat",
+      "title": "USA trzecią nocą uderzają w Iran",
+      "lead": "CNN prowadzi poranny live update o dalszych uderzeniach i blokadzie morskiej.",
+      "whatHappened": "CNN na stronie world pokazuje lead o trzeciej nocy amerykańskich uderzeń na Iran oraz o ponownym wprowadzeniu blokady morskiej przez Donalda Trumpa.",
+      "keyFacts": [
+        "To jeden z najgorętszych globalnych tematów poranka.",
+        "CNN aktualizuje ten wątek w trybie live.",
+        "Konflikt bezpośrednio dotyczy bezpieczeństwa żeglugi."
+      ],
+      "reactions": [
+        "Rynki i media będą śledzić każdą kolejną zmianę.",
+        "Wątek łączy się z dyskusją o Ormuzie i cenach energii."
+      ],
+      "whyItMatters": "Nasilenie działań wokół Iranu może szybko przełożyć się na fracht, ropę i ryzyko regionalne.",
+      "context": "To najbardziej operacyjny światowy lead w tym slocie i naturalny punkt odniesienia dla całego feedu.",
+      "watchNext": [
+        "Czy pojawi się oficjalne potwierdzenie skutków blokady.",
+        "Czy CNN poda nowe informacje o tankowcach w Ormuzie."
+      ],
+      "sources": [
+        {
+          "title": "CNN: US launches third night of strikes on Iran as Trump reimposes naval blockade",
+          "url": "https://edition.cnn.com/2026/07/14/world/live-news/iran-war-trump"
+        },
+        {
+          "title": "CNN: World",
+          "url": "https://edition.cnn.com/world/index.html"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "Ormuz",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-bangkok-pozar-baru-2026-07-14-0902",
+      "section": "Świat",
+      "title": "Bilans pożaru baru w Bangkoku rośnie do 30",
+      "lead": "BBC podniosło liczbę ofiar po tragicznym pożarze i bada zaniedbania bezpieczeństwa.",
+      "whatHappened": "BBC podało, że liczba ofiar śmiertelnych po pożarze baru w Bangkoku wzrosła do 30, a policja bada, czy doszło do zaniedbań bezpieczeństwa.",
+      "keyFacts": [
+        "Bilans ofiar wzrósł względem wcześniejszych doniesień.",
+        "Śledczy sprawdzają procedury bezpieczeństwa.",
+        "To jeden z głównych tragicznych tematów BBC World RSS."
+      ],
+      "reactions": [
+        "Władze lokalne będą pod presją, by pokazać pełny raport.",
+        "Każda kolejna aktualizacja bilansu będzie mocno obserwowana."
+      ],
+      "whyItMatters": "Nowy bilans i dochodzenie mogą zmienić ocenę bezpieczeństwa lokali rozrywkowych w Bangkoku.",
+      "context": "To mocny, human-risk wątek w międzynarodowym feedzie obok Iranu i pożarów w Europie.",
+      "watchNext": [
+        "Czy śledczy wskażą konkretną przyczynę pożaru.",
+        "Czy władze opublikują formalny raport bezpieczeństwa."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Death toll from Bangkok bar fire rises to 30 as police probe safety lapses",
+          "url": "https://www.bbc.co.uk/news/articles/clyxyzlp9p2o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Bangkok",
+        "pożar",
+        "bezpieczeństwo",
+        "BBC"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-wegry-prezydent-2026-07-14-0902",
+      "section": "Świat",
+      "title": "Węgierski parlament głosuje za odwołaniem prezydenta",
+      "lead": "BBC podaje kolejny polityczny zwrot w Budapeszcie.",
+      "whatHappened": "BBC informuje, że węgierski parlament zagłosował za usunięciem prezydenta z urzędu, co otwiera kolejny etap kryzysu politycznego.",
+      "keyFacts": [
+        "To formalny ruch parlamentarny, a nie zwykły komentarz.",
+        "Sprawa może wejść w procedurę prawną i konstytucyjną.",
+        "BBC traktuje to jako ważny europejski temat dnia."
+      ],
+      "reactions": [
+        "Budapeszt wchodzi w kolejny etap politycznej niepewności.",
+        "Partnerzy europejscy będą obserwować skutki decyzji."
+      ],
+      "whyItMatters": "Zmiana na szczycie państwa może przełożyć się na relacje z UE i krajową stabilność polityczną.",
+      "context": "To jeden z tych tematów, które w world feedzie utrzymują wysoki poziom politycznego napięcia w Europie.",
+      "watchNext": [
+        "Czy pojawi się oficjalne uzasadnienie decyzji.",
+        "Czy prezydent złoży odwołanie lub publiczną odpowiedź."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Hungary parliament votes to remove president from office",
+          "url": "https://www.bbc.co.uk/news/articles/cp8r002gdevo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Węgry",
+        "parlament",
+        "prezydent",
+        "UE"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-hiszpania-pozar-2026-07-14-0902",
+      "section": "Świat",
+      "title": "Brytyjczyk opisuje ucieczkę z pożaru w Hiszpanii",
+      "lead": "BBC wraca do europejskiej fali pożarów i pokazuje osobisty koszt tragedii.",
+      "whatHappened": "W nowym materiale BBC Brytyjczyk opowiada, jak przeżył pożar w Hiszpanii, podczas gdy jego żona i znajomi zginęli, próbując uciekać do bezpieczeństwa.",
+      "keyFacts": [
+        "To relacja świadka, a nie tylko bilans strat.",
+        "Wątek pokazuje, jak groźna była ewakuacja.",
+        "Pożary w Hiszpanii nadal pozostają istotnym europejskim tematem."
+      ],
+      "reactions": [
+        "BBC podkreśla dramatyczny ludzki wymiar pożarów.",
+        "Relacja może zwiększyć uwagę na ewakuacji i prewencji."
+      ],
+      "whyItMatters": "Pożary lasów i terenów zabudowanych nadal są jednym z głównych sezonowych ryzyk w Europie.",
+      "context": "To jeden z bardziej emocjonalnych materiałów w tym slocie i dobry kontrapunkt dla wątków stricte politycznych.",
+      "watchNext": [
+        "Czy hiszpańskie władze opublikują kolejny bilans.",
+        "Czy pojawi się raport o przyczynie pożaru."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Briton tells of surviving Spain wildfire in car as wife and friends died trying to run to safety",
+          "url": "https://www.bbc.co.uk/news/articles/cp9ld3p324jo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Hiszpania",
+        "pożar",
+        "BBC",
+        "ewakuacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-toronto-strzelanina-2026-07-14-0902",
+      "section": "Świat",
+      "title": "Toronto po strzelaninie na festiwalu latynoskim",
+      "lead": "CNN utrzymuje w world feedzie informację o śmiertelnej strzelaninie w Kanadzie.",
+      "whatHappened": "CNN podaje, że w Toronto zginęły dwie osoby podczas strzelaniny na największym latynoskim festiwalu ulicznym w Kanadzie, a policja prowadzi czynności wyjaśniające.",
+      "keyFacts": [
+        "To jeden z najbardziej widocznych kanadyjskich tematów bezpieczeństwa w tym slocie.",
+        "Śledztwo dotyczy wydarzenia publicznego o dużej frekwencji.",
+        "CNN daje tej sprawie osobny, widoczny zapis na stronie world."
+      ],
+      "reactions": [
+        "Lokalne służby będą musiały szybko zbudować pełny obraz zdarzenia.",
+        "Temat może wrócić, jeśli pojawi się motyw lub sprawca."
+      ],
+      "whyItMatters": "Publiczna strzelanina w dużym mieście natychmiast podbija temat bezpieczeństwa i kontroli broni.",
+      "context": "To ważny dodatkowy world item, który rozszerza globalny feed poza sam Iran i Europę.",
+      "watchNext": [
+        "Czy policja poda identyfikację podejrzanych.",
+        "Czy pojawi się oficjalny bilans rannych i ofiar."
+      ],
+      "sources": [
+        {
+          "title": "CNN: 2 killed in mass shooting at Canada’s largest Latin street festival in Toronto, police say",
+          "url": "https://edition.cnn.com/2026/07/11/world/toronto-shooting-sat-intl"
+        },
+        {
+          "title": "CNN: World",
+          "url": "https://edition.cnn.com/world/index.html"
+        }
+      ],
+      "tags": [
+        "Toronto",
+        "strzelanina",
+        "Kanada",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-l4-piec-tygodni-2026-07-14-0902",
+      "section": "Gospodarka",
+      "title": "Średnio pięć tygodni na L4",
+      "lead": "TVN24 Biznes publikuje nowy sygnał o długim czasie zwolnień lekarskich w Polsce.",
+      "whatHappened": "W nowym materiale TVN24 pada informacja, że średnio jedno L4 trwa około pięciu tygodni, co redakcja opisuje jako ustawienie Polski bliżej jednego z europejskich biegunów.",
+      "keyFacts": [
+        "To temat o rynku pracy i kosztach absencji chorobowej.",
+        "Materiał dotyczy skali, a nie pojedynczego przypadku.",
+        "Wpisuje się w poranne wejście TVN24 Biznes."
+      ],
+      "reactions": [
+        "Taki sygnał zwykle uruchamia dyskusję o systemie i zachętach.",
+        "Pracodawcy i analitycy będą patrzeć na dalsze dane."
+      ],
+      "whyItMatters": "Długość absencji chorobowej wpływa na organizację pracy, koszty firm i debatę o zdrowiu publicznym.",
+      "context": "To lżejszy, ale nadal istotny gospodarczo punkt wśród porannych wiadomości.",
+      "watchNext": [
+        "Czy pojawi się pełne źródło statystyczne w materiale.",
+        "Czy dyskusja przełoży się na komentarze resortu lub ZUS."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Średnio pięć tygodni na L4. Polska bliżej drugiego bieguna",
+          "url": "https://tvn24.pl/biznes/ze-swiata/srednio-piec-tygodni-na-l4-polska-blizej-drugiego-bieguna-st9141221?source=rss"
+        }
+      ],
+      "tags": [
+        "rynek pracy",
+        "L4",
+        "TVN24 Biznes",
+        "gospodarka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-trump-ugoda-irs-uniewazniona-2026-07-14-0902",
+      "section": "Gospodarka",
+      "title": "Sąd unieważnił ugodę Trumpa z IRS",
+      "lead": "TVN24 Biznes wraca do sprawy finansowo-podatkowej byłego prezydenta USA.",
+      "whatHappened": "W materiale TVN24 sąd unieważnił ugodę Donalda Trumpa z IRS dotyczącą immunitetu od audytów podatkowych, co przywraca presję prawną wokół jego rozliczeń.",
+      "keyFacts": [
+        "To decyzja sądowa, a nie komentarz polityczny.",
+        "Sprawa dotyczy pieniędzy, podatków i immunitetu przed audytem.",
+        "TVN24 przenosi ją do porannego bloku biznesowo-światowego."
+      ],
+      "reactions": [
+        "Trump może wrócić do tematu w komunikacji publicznej.",
+        "To kolejny punkt napięcia między polityką a finansami."
+      ],
+      "whyItMatters": "Procesy podatkowe Trumpa nadal wpływają na amerykańską debatę publiczną i ocenę ryzyka prawnego.",
+      "context": "To drugi gospodarczy sygnał w tym slocie i dobry kontrapunkt dla politycznych sporów w Polsce.",
+      "watchNext": [
+        "Czy pojawi się reakcja zespołu Trumpa.",
+        "Czy sprawa otworzy nowe odwołanie lub apelację."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Sąd: Trump manipulował procesem",
+          "url": "https://tvn24.pl/biznes/ze-swiata/sad-trump-manipulowal-procesem-st9141227?source=rss"
+        }
+      ],
+      "tags": [
+        "Trump",
+        "IRS",
+        "sąd",
+        "USA"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
