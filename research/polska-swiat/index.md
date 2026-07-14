@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-13
+Last updated: 2026-07-14
 
 ## Current Understanding
 
@@ -152,6 +152,15 @@ jawny amerykański plan blokady i opłaty tranzytowej, Paryż ogłosił zintegro
 koalicję antybalistyczną z Ukrainą i dziesięcioma państwami europejskimi, a
 KPRM potwierdziło centrum ESA w Warszawie. Bangkok podniósł bilans ofiar, ale
 wieczorem pozostał krótszym follow-upem niż osie bezpieczeństwa i dyplomacji.
+Po porannym runie 14 lipca Ormuz pozostaje głównym tematem, ale z nową
+eskalacją: AP i Euronews opisują trzecią noc uderzeń USA w Iran, irańskie
+ataki na tankowce powiązane z ZEA i Bahrajn oraz prawno-gospodarczy spór o
+opłatę tranzytową przez cieśninę. Ukraina i Europa przechodzą z deklaracji
+Paryża do konkretnej luki zimowej: Zełenski prosi o 300 pocisków Patriot na
+zimę, równolegle rozwijając projekt Freyja i koalicję antybalistyczną. Wątek
+UE rozszerza się o formalne otwarcie klastra 6 negocjacji akcesyjnych Ukrainy
+i Mołdawii, a krajowo centrum ESA w Warszawie zyskało szczegóły finansowe, zaś
+IMGW i RCB tworzą praktyczny alert burzowy.
 
 ## Stable Facts
 
@@ -218,6 +227,21 @@ wieczorem pozostał krótszym follow-upem niż osie bezpieczeństwa i dyplomacji
 - Po 8 lipca wrócić do szczegółów porozumienia PAC-3: lokalizacja, udział
   polskich firm, harmonogram, zakres transferu technologii i relacja do
   zapasów dla Ukrainy.
+- Ormuz po 14 lipca: śledzić, czy opłata 20 procent i blokada są egzekwowane
+  wobec statków, czy pozostają deklaracją polityczną; osobno monitorować
+  reakcję IMO, UKMTO i ubezpieczycieli.
+- Freyja/Patriot: oddzielać europejski projekt antybalistyczny od
+  natychmiastowej potrzeby 300 pocisków Patriot na zimę; śledzić, czy pojawią
+  się realne dostawy i finansowanie.
+- UE-akcesja: po otwarciu klastra 6 dla Ukrainy i Mołdawii monitorować, czy
+  kolejne klastry pozostają blokowane politycznie oraz czy Polska komunikuje
+  własne stanowisko.
+- ESA Warszawa: po zapowiedzi funduszu PFR/BGK do 500 mln zł śledzić
+  instrumenty finansowe, miasta w sieci kosmicznej i harmonogram pierwszego
+  polskiego statku serwisowego.
+- IMGW/RCB: wątek pogodowy włączać tylko jako praktyczny segment, gdy
+  ostrzeżenia obejmują duży obszar albo ryzyko podtopień; w razie alertu nie
+  spekulować poza komunikatami służb.
 - Po 8 lipca sprawdzić, czy amerykańska licencja dla Ukrainy na produkcję
   Patriotów przełoży się na kontrakt, zakład i harmonogram wdrożenia.
 - Wątek wojskowej współpracy kosmicznej Polska-USA śledzić jako część

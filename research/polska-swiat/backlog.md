@@ -35,6 +35,12 @@
 | Medium | Track DORSZ northeast training information hygiene | Training 13-14 July includes appeal not to publish troop or equipment movements | Keep coverage generic; no location or routing detail; monitor MON/DORSZ updates | Open |
 | Medium | Track Bangkok pub fire investigation | AP reports at least 27 dead, 63 hospitalized and 22 critical; evacuation exits and materials are under investigation | Watch AP and Thai authorities for casualty updates and safety findings | Open |
 | Medium | Track Unia Centrum political consolidation | Hennig-Kloska announced a new party merging Centrum Polska and UED, with a September convention | Watch registration, parliamentary club size, coalition impact and program convention | Open |
+| High | Track 14 July Hormuz strike/tanker escalation | U.S. hit Iranian coastal and military sites for third straight night, Iran attacked UAE-linked tankers and Bahrain, and the 20% toll plan challenges freedom-of-navigation norms | Check AP, UKMTO, IMO, CENTCOM, Gulf state statements, oil and insurance-market responses before podcast/evening update | Open |
+| High | Track Freyja/Patriot winter gap | Zelenskyy wants 100 Patriot interceptors per month for winter while the European Freyja and anti-ballistic project remains on a longer development horizon | Watch Guardian/AP, Elysee, Ukraine, NATO, U.S. and European financing/delivery announcements | Open |
+| Medium | Track Ukraine and Moldova cluster 6 accession | Consilium says 14 July conferences open cluster 6 on external relations and foreign/security/defence policy | Check Consilium post-meeting notes, Polish MFA/KPRM reaction and whether remaining clusters are blocked | Open |
+| Medium | Track ESA financing package | TVN/KPRM detail PFR/BGK fund up to PLN 500m, doubled spending and first Polish spacecraft ambitions | Watch KPRM, ESA, MF/MRiT, PFR, BGK for instruments, eligibility, timeline and city network | Open |
+| Medium | Track July 14 storm and flood-risk alerts | IMGW/TVN report broad first/second-degree warnings, RCB keeps 13/14 alert for downpours/storms and possible flooding | Monitor IMGW/RCB/PSP for updated warnings and actual damage; use only official instructions in audio | Open |
+| Medium | Track Graham replacement and Russia-sanctions continuity | Darline Graham Nordone appointed temporarily, special election calendar starts soon, Senate sanctions leadership remains uncertain | Watch AP/Senate/White House/Kyiv for Russia sanctions bill and committee ownership | Open |
 
 ## Review Notes
 
@@ -159,6 +165,12 @@
   DORSZ, Unia Centrum and Polish-language Ukraine follow-up; AP for the Bangkok
   fire. Podcast should lead Ormuz, then Ukraine/Paris and Graham, with Polish
   ESA/DORSZ as shorter domestic blocks.
+- 2026-07-14: Tuesday morning research created a material update. Strongest
+  sources were AP/Euronews for Ormuz, Guardian/AP for Freyja and the
+  anti-ballistic coalition, Consilium/Euronews for Ukraine-Moldova accession
+  cluster, KPRM/TVN24 for ESA Warsaw, and TVN Meteo/IMGW/RCB for Polish weather
+  alerts. Podcast should lead Ormuz and Ukraine air defense, then use
+  accession, ESA and weather as shorter Polish-European blocks.
 
 ## Done
 
