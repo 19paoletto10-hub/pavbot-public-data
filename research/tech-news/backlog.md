@@ -4,6 +4,11 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track open-weight traffic share | Vercel says open-weight models are already 29% of AI Gateway traffic; this could redefine routing and cost strategy | Watch whether the share persists, whether other gateways report similar splits and how pricing changes affect mix | Open |
+| Medium | Track Spotify Talk to Spotify rollout | Spotify's conversational audio assistant is a concrete consumer AI beta with clear cross-device implications | Watch geographic expansion, retention and whether it becomes a stable discovery primitive | Open |
+| High | Track Meta consent rollback | Meta's removal of public-Instagram reference reuse shows how quickly AI features can hit a privacy wall | Watch opt-in redesigns, policy changes and whether other platforms copy the rollback | Open |
+| Medium | Track Claude India pricing | Anthropic's rupee pricing points to regional monetization and payment rails becoming strategic | Watch UPI support, conversion lift and pricing parity versus the U.S. | Open |
+| Medium | Track OpenAI family product surface | OpenAI is formalizing families and caregivers as a distinct product axis, not just a feature request | Watch whether the PM role turns into dedicated family UX, safety controls and packaging | Open |
 | High | Track OpenAI safety churn | Safety leadership is moving while GPT-5.6 ships; watch whether launch policy changes | Watch new departures, safety org structure, GPT-5.6 safeguards and public response | Open |
 | High | Track Chinese AI model arbitrage | FT shows companies are switching to cheaper Chinese models for cost and self-hosting; this may reset enterprise pricing pressure | Watch adoption beyond early adopters, token pricing gaps and self-hosting patterns | Open |
 | High | Track export-control leakage via Singapore | OpenAI and Google serving blacklisted China-linked groups through Singapore shows the gap between policy and enforcement | Watch policy tightening, blocked accounts and compliance language | Open |
@@ -142,6 +147,7 @@
 
 ## Review Notes
 
+- 2026-07-14: Wieczorny refresh dodał open-weight traffic share na Vercel, Spotify Talk to Spotify beta, rollback Meta Muse Image przy publicznych zdjęciach z Instagrama, Google AI ads disclosure, Anthropic rupee pricing w Indiach, OpenAI Families PM oraz mocniejszy community signal z Product Hunt i HN.
 - 2026-07-14: Daily research run added Intel/Micron capex, Markey data-center legislation, Microsoft Intune agentic identity, PixVerse interactive worlds, Waze Gemini navigation, Uber robotaxi lobbying and a practical/provenance-heavy community signal.
 - 2026-06-17: Topic created for Polish daily technology research and podcast
   automation.

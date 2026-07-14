@@ -4,6 +4,8 @@ Last updated: 2026-07-14
 
 ## Current Understanding
 
+Wieczorny refresh z 2026-07-14 dołącza do już znanej osi infrastruktury i governance warstwę dystrybucji oraz konsumenckiego UX: Vercel pokazuje, że open-weight modele odpowiadają już za 29% ruchu przez AI Gateway, Spotify uruchamia beta "Talk to Spotify", Meta cofa kontrowersyjne użycie publicznych zdjęć z Instagrama, Google dodaje AI disclosure do reklam, Anthropic lokalizuje ceny Claude w Indiach, a OpenAI zaczyna projektować ChatGPT pod rodziny. To sugeruje, że rynek wchodzi w etap, w którym cena, consent, household use case i routing są równie ważne jak capability modeli.
+
 Poranny refresh z 2026-07-14 przesuwa temat z modeli na fizyczny łańcuch dostaw i product-level orchestration: Intel ogłasza 5 mld euro na Leixlip, Micron dokłada 3 mld dolarów do amerykańskich wafers i pamięci, a Markey zaczyna budować federalny frame dla szkód data center. Równolegle Waze, PixVerse i Microsoft Intune pokazują, że consumer i enterprise AI wchodzą w etap bardziej kontekstowych, konfigurowalnych i tożsamościowo kontrolowanych produktów. To potwierdza, że najważniejszy spór dnia dotyczy już nie tylko capability modeli, lecz kosztu energii, surowców, tożsamości agentów i tego, kto ustawia reguły rynku.
 
 Wieczorny refresh z 2026-07-13 dokłada dwa nowe wektory do już znanej osi governance: firmy zaczynają jawnie przechodzić do tańszych chińskich modeli, a FT pokazuje, że OpenAI i Google nadal sprzedają modele przez pośrednie struktury do podmiotów powiązanych z czarną listą. To zamienia AI w opowieść o arbitrażu kosztu, geopolityce dostępu i porowatych export controls, a nie tylko o samym rolloutcie frontier modeli.
@@ -176,6 +178,11 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- Open-weight model traffic share: Vercel's 29% signal may generalize to other gateways; watch whether the split persists and whether price flattening accelerates routing to cheaper models.
+- Spotify Talk to Spotify rollout: watch whether the beta expands beyond the initial U.S., Ireland and Sweden launch markets and whether it becomes a durable discovery primitive.
+- Meta consent rollback: watch for an opt-in replacement or further restrictions on AI features that reuse public social content.
+- Claude India pricing: watch for UPI support, local tax handling and whether price localization lifts conversion in a price-sensitive market.
+- OpenAI family product strategy: watch whether the Families PM role turns into a standalone household product line with safety and accessibility features.
 - Apple vs OpenAI hardware litigation: pozew dotyczy nie tylko pracowników, ale także przyszłego hardware stacku OpenAI; monitoruj complaint, odpowiedź firmy i timing device launch.
 - OpenAI math claim verification: GPT-5.6 Sol Ultra preprint o cycle double cover wymaga niezależnej weryfikacji i jasności, ile w tym było ludzkiej kuracji.
 - Meta design and infrastructure split: Alberta data center i zarzuty DSA pokazują, że Meta jest jednocześnie infra story i regulatory story.

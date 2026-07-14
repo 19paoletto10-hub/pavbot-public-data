@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-14T17:44:11.939557+00:00",
+  "generatedAt": "2026-07-14T17:46:45.187900+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -148,6 +148,17 @@
       "date": "2026-07-14"
     },
     {
+      "id": "research/tech-news/runs/2026-07-14-1933.md",
+      "type": "run",
+      "topic": "tech-news",
+      "title": "Daily Research Report: tech-news",
+      "path": "research/tech-news/runs/2026-07-14-1933.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/runs/2026-07-14-1933.md",
+      "sizeBytes": 22126,
+      "date": "2026-07-14",
+      "time": "19:33"
+    },
+    {
       "id": "research/tech-news/data/2026-07-14-research.json",
       "type": "researchData",
       "topic": "tech-news",
@@ -156,6 +167,17 @@
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-07-14-research.json",
       "sizeBytes": 23423,
       "date": "2026-07-14"
+    },
+    {
+      "id": "research/tech-news/data/2026-07-14-1933-research.json",
+      "type": "researchData",
+      "topic": "tech-news",
+      "title": "Research data",
+      "path": "research/tech-news/data/2026-07-14-1933-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/data/2026-07-14-1933-research.json",
+      "sizeBytes": 19800,
+      "date": "2026-07-14",
+      "time": "19:33"
     },
     {
       "id": "research/tech-news/podcasts/2026-07-14/sources.md",
@@ -256,6 +278,17 @@
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-07-14-tech-news.pdf",
       "sizeBytes": 113596,
       "date": "2026-07-14"
+    },
+    {
+      "id": "research/tech-news/pdfs/2026-07-14-1933-tech-news.pdf",
+      "type": "pdf",
+      "topic": "tech-news",
+      "title": "2026-07-14-1933-tech-news.pdf",
+      "path": "research/tech-news/pdfs/2026-07-14-1933-tech-news.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/pdfs/2026-07-14-1933-tech-news.pdf",
+      "sizeBytes": 100522,
+      "date": "2026-07-14",
+      "time": "19:33"
     },
     {
       "id": "research/reddit-radar/runs/2026-07-14-1808-reddit-radar.md",
@@ -11916,7 +11949,7 @@
       "title": "Topic Index: tech-news",
       "path": "research/tech-news/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/index.md",
-      "sizeBytes": 36808
+      "sizeBytes": 38207
     },
     {
       "id": "research/tech-news/backlog.md",
@@ -11925,7 +11958,7 @@
       "title": "Topic Backlog: tech-news",
       "path": "research/tech-news/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/tech-news/backlog.md",
-      "sizeBytes": 47251
+      "sizeBytes": 48807
     },
     {
       "id": "research/puls-dnia-news/topic.md",

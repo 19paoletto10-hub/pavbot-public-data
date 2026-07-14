@@ -1,0 +1,352 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-14",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny run przesuwa ciężar jeszcze mocniej z frontier-model hype’u na praktyczny rynek wdrożeń. Vercel pokazuje, że open-weight modele odpowiadają już za 29% ruchu przez AI Gateway, a TechCrunch opisuje to jako sygnał, że realna walka coraz mniej toczy się o samą granicę capability, a coraz bardziej o routing, koszt i to, co faktycznie trafia do produkcji. To dobrze spina się z resztą dnia: Spotify otwiera rozmowny interfejs do muzyki i podcastów, OpenAI zaczyna projektować AI pod rodziny i opiekunów, a Anthropic lokalizuje ceny Claude dla Indii. W praktyce rynek przesuwa się z modelu jako produktu do AI jako warstwy codziennego dostępu i dystrybucji.",
+    "Drugi wyraźny sygnał to korekta granic zgody i przejrzystości. Meta wycofuje funkcję, która pozwalała odwoływać się do publicznych zdjęć z Instagrama w generacji obrazów, a Google dokręca disclosure dla reklam tworzonych lub modyfikowanych przez AI. W obu przypadkach widać, że tempo wdrożeń zaczyna być ograniczane nie tylko przez możliwości modelu, ale też przez backlash użytkowników, politykę platform i rosnący koszt zaufania."
+  ],
+  "summaryBullets": [
+    "Infrastruktura: Open-weight modele przejmują coraz większy ruch produkcyjny",
+    "Produkty: Spotify zamienia odtwarzacz w rozmownego asystenta audio",
+    "Produkty: Meta wycofuje kontrowersyjne użycie publicznych zdjęć z Instagrama"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-14-1933-0-open-weight-modele-przejmuja-coraz-wiekszy-ruch-produkcyjny-ff8cb977a9",
+      "section": "Infrastruktura",
+      "title": "Open-weight modele przejmują coraz większy ruch produkcyjny",
+      "standfirst": "Vercel pokazuje, że open-weight modele odpowiadają już za 29% ruchu przez AI Gateway. TechCrunch opisuje to jako sygnał, że wyścig AI przesuwa się z frontiera do ekonomii produkcji.",
+      "whatHappened": "Ruch produkcyjny coraz częściej idzie do tańszych, konfigurowalnych modeli zamiast do najdroższych frontier systemów.",
+      "whyItMatters": "To może zmienić sposób, w jaki firmy projektują routing, budżety i architekturę AI.",
+      "deeperAnalysis": [
+        "Vercel nie mówi już tylko o modelach, ale o ruchu, kosztach i tym, co faktycznie przechodzi przez produkcję. Jeśli open-weighty odpowiadają za niemal jedną trzecią trafficu, to znaczenie ma już nie tylko capability, ale też cena, kompatybilność z routingiem i przewidywalność zachowania.",
+        "To ważne, bo wzmacnia tezę o rozwarstwieniu rynku. Frontier modele nadal mogą wygrywać w high-stakes tasks, ale volume i część regularnych zadań przesuwają się do tańszych modeli, które łatwiej routować, cache’ować i dostosowywać."
+      ],
+      "contextPoints": [
+        "Co się stało: Vercel widzi 29% volume dla open-weight modeli.",
+        "Dlaczego ważne: koszt i routing stają się równie ważne jak benchmarki.",
+        "Na co patrzeć dalej: czy inne gatewaye i chmury pokażą podobny split."
+      ],
+      "sources": [
+        {
+          "title": "Vercel AI Gateway",
+          "url": "https://vercel.com/ai-gateway"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/14/the-real-ai-race-may-no-longer-be-at-the-frontier-open-models-hugging-face/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "open-weight",
+        "Vercel",
+        "OpenRouter",
+        "routing",
+        "inference",
+        "cost"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-14-1933-1-spotify-zamienia-odtwarzacz-w-rozmownego-asystenta-audio-93d71a82d1",
+      "section": "Produkty",
+      "title": "Spotify zamienia odtwarzacz w rozmownego asystenta audio",
+      "standfirst": "Spotify Premium users in the U.S., Ireland and Sweden can now talk to the app in beta to choose music and audio, inspect listening history and go deeper into podcasts or audiobooks. TechCrunch opisuje to jako ChatGPT-like music assistant.",
+      "whatHappened": "Spotify dodaje rozmowną warstwę do discovery i playbacku.",
+      "whyItMatters": "To kolejny sygnał, że AI wchodzi do mainstreamowych produktów przez kontrolę wyboru, a nie przez sam model.",
+      "deeperAnalysis": [
+        "Najciekawsze jest to, że Spotify nie buduje ogólnego czatu, tylko interfejs do bardzo konkretnego zadania: co puścić dalej, czego posłuchać i jak wrócić do własnej historii słuchania. To dużo bardziej praktyczne niż kolejny uniwersalny asystent.",
+        "Jeśli ten format zadziała, to muzyka, podcasty i audiobooki staną się kolejnym obszarem, w którym AI będzie pełnić rolę sterownika, a nie dodatku. Dla Spotify to również sposób na zwiększenie czasu spędzanego w aplikacji bez konieczności wychodzenia do zewnętrznego chatbota."
+      ],
+      "contextPoints": [
+        "Co się stało: Spotify uruchamia beta \"Talk to Spotify\".",
+        "Dlaczego ważne: audio discovery staje się rozmową, nie tylko menu.",
+        "Na co patrzeć dalej: czy feature wyjdzie poza trzy rynki startowe."
+      ],
+      "sources": [
+        {
+          "title": "Spotify newsroom",
+          "url": "https://newsroom.spotify.com/2026-07-14/talk-to-spotify-announcement-beta/"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/14/spotify-expands-its-ai-push-with-a-chatgpt-like-music-assistant/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Spotify",
+        "audio",
+        "music assistant",
+        "podcasts",
+        "consumer AI",
+        "beta"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-14-1933-2-meta-wycofuje-kontrowersyjne-uzycie-publicznych-zdjec-z-instagrama-8a91be7c1f",
+      "section": "Produkty",
+      "title": "Meta wycofuje kontrowersyjne użycie publicznych zdjęć z Instagrama",
+      "standfirst": "Meta potwierdza, że funkcja pozwalająca odwoływać się do publicznych kont Instagrama przy generowaniu obrazów została wycofana po krytyce. Muse Image nadal ma być kreatywnym narzędziem w Meta AI.",
+      "whatHappened": "Firma cofnie najbardziej kontrowersyjną część nowej funkcji po reakcji użytkowników.",
+      "whyItMatters": "To pokazuje, że consent i odbiór społeczny mogą wymuszać szybki rollback nawet przy dużych platformach.",
+      "deeperAnalysis": [
+        "Meta próbowała poszerzyć granice kreatywnego użycia publicznych treści, ale backlash był na tyle szybki, że firma musiała cofnąć funkcję. To dobry przykład, jak krótka jest dziś ścieżka od launchu do korekty, gdy produkt zahacza o prywatność i wizerunek.",
+        "W praktyce oznacza to, że sama dostępność danych publicznych nie wystarcza już jako argument produktowy. Jeśli użytkownik ma poczucie, że jego content staje się feedstockiem bez jasnego opt-in, koszt reputacyjny potrafi przewyższyć korzyść z kolejnej funkcji AI."
+      ],
+      "contextPoints": [
+        "Co się stało: Meta usuwa możliwość referowania publicznych zdjęć z Instagrama w nowym flow.",
+        "Dlaczego ważne: konsens i kontrola użytkownika stają się krytycznym ograniczeniem AI product design.",
+        "Na co patrzeć dalej: czy Meta wróci z wersją stricte opt-in."
+      ],
+      "sources": [
+        {
+          "title": "Meta newsroom",
+          "url": "https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/10/meta-removes-controversial-ai-feature-on-instagram-after-backlash/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Meta",
+        "Instagram",
+        "privacy",
+        "consent",
+        "image generation",
+        "backlash"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-14-1933-3-google-dokreca-transparentnosc-reklam-tworzonych-przez-ai-82dae4bf22",
+      "section": "Regulacje",
+      "title": "Google dokręca transparentność reklam tworzonych przez AI",
+      "standfirst": "Google dodaje panel \"How this ad was made\" do My Ad Center w Search, YouTube i Discover. Reklamodawcy dostają nowy sposób oznaczania materiałów tworzonych lub modyfikowanych przez AI.",
+      "whatHappened": "AI disclosure w reklamach staje się częścią standardowego consumer UI.",
+      "whyItMatters": "To jeden z bardziej konkretnych przykładów, jak platformy zaczynają egzekwować przejrzystość bez czekania na pełną regulację państwową.",
+      "deeperAnalysis": [
+        "Google nie zatrzymuje użycia generatywnego AI w reklamie, tylko dodaje widoczny mechanizm ujawniania. To ważne rozróżnienie: platforma nie blokuje narzędzia, ale ustanawia warunki zaufania i informacji.",
+        "Ten ruch może stać się wzorcem dla innych systemów reklamowych i marketplace’ów treści. Jeśli disclosure zacznie być standardem interfejsowym, platformy będą musiały zarządzać nie tylko skutecznością reklam, ale także ich pochodzeniem."
+      ],
+      "contextPoints": [
+        "Co się stało: Google rozszerza AI disclosure na Search, YouTube i Discover.",
+        "Dlaczego ważne: transparentność staje się funkcją produktu, nie tylko wymogiem compliance.",
+        "Na co patrzeć dalej: czy label trafi też do innych powierzchni reklamowych."
+      ],
+      "sources": [
+        {
+          "title": "Google Ads & Commerce blog",
+          "url": "https://blog.google/products/ads-commerce/google-ads-ai-transparency-labels/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Google",
+        "ads",
+        "transparency",
+        "disclosure",
+        "AI-generated content",
+        "policy"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-14-1933-4-anthropic-lokalizuje-ceny-claude-w-indiach-bf5c4325ab",
+      "section": "AI",
+      "title": "Anthropic lokalizuje ceny Claude w Indiach",
+      "standfirst": "Anthropic zaczyna pokazywać ceny Claude w rupiach dla części użytkowników w Indiach. TechCrunch pisze, że rynek ten odpowiada już za 5.8% globalnego użycia Claude i jest drugim po USA.",
+      "whatHappened": "Firma dopasowuje cenę do rynku price-sensitive, ale jeszcze bez pełnego wsparcia UPI.",
+      "whyItMatters": "To pokazuje, że lokalizacja cen i płatności staje się kluczowa dla wzrostu AI poza USA.",
+      "deeperAnalysis": [
+        "To nie jest tylko kosmetyczna zmiana billingowa. Jeśli Anthropic musi lokalizować ceny, to znaczy, że sama marka i sama jakość modelu nie wystarczą, żeby zamienić usage w płacących klientów na rynku o dużej wrażliwości cenowej.",
+        "Jednocześnie brak UPI sugeruje, że infrastruktura płatnicza i wygoda zakupu nadal ograniczają adopcję. Dla innych dostawców AI to jasny sygnał, że ekspansja regionalna będzie wymagała zarówno lokalnych cenników, jak i lokalnych raili płatności."
+      ],
+      "contextPoints": [
+        "Co się stało: Claude pokazuje ceny w rupiach dla części użytkowników w Indiach.",
+        "Dlaczego ważne: rynek AI dojrzewa do regionalnego pricingu i lokalnych payment rails.",
+        "Na co patrzeć dalej: czy Anthropic dołoży UPI i szerszy rollout."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Anthropic",
+        "Claude",
+        "India",
+        "pricing",
+        "localization",
+        "enterprise"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-14-1933-5-openai-projektuje-chatgpt-pod-rodziny-i-opiekunow-3a84f70ce2",
+      "section": "Produkty",
+      "title": "OpenAI projektuje ChatGPT pod rodziny i opiekunów",
+      "standfirst": "OpenAI szuka product managera dla obszaru Families, a opis roli mówi o produktach dla rodzin, opiekunów i starszych użytkowników. TechCrunch łączy to z rosnącym udziałem starszych grup wiekowych wśród użytkowników ChatGPT.",
+      "whatHappened": "Firma zaczyna formalizować household use case jako osobny kierunek produktowy.",
+      "whyItMatters": "To sugeruje, że ChatGPT przestaje być tylko narzędziem indywidualnej produktywności.",
+      "deeperAnalysis": [
+        "Rola PM dla Families jest mocnym sygnałem strategicznym, bo dotyczy nie jednej funkcji, ale całego sposobu projektowania doświadczenia. Jeśli OpenAI naprawdę buduje produkty dla rodzin i opiekunów, to pojawia się cały zestaw nowych wymogów: prostsze flow, trust, safety, dostępność i wieloużytkownikowość.",
+        "To też zgodne z tym, co widać w danych o użytkownikach. Jeżeli starsze grupy zaczynają rosnąć, to kolejny etap konkurencji może dotyczyć już nie tylko power userów i developerów, ale codziennych domowych scenariuszy."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI publikuje ofertę pracy dla PM Families.",
+        "Dlaczego ważne: household AI staje się osobnym produktem, nie dodatkiem.",
+        "Na co patrzeć dalej: czy pojawią się produkty, polityki bezpieczeństwa i pricing pod rodziny."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI careers",
+          "url": "https://openai.com/careers/product-manager-families-san-francisco/"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "families",
+        "caregivers",
+        "older adults",
+        "consumer AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-14-1933-6-product-hunt-i-hn-premiuja-praktyczna-ai-82dcd35a2b",
+      "section": "Produkty",
+      "title": "Product Hunt i HN premiują praktyczną AI",
+      "standfirst": "Product Hunt na dzisiejszej liście promuje narzędzia do pracy, automatyzacji i agentów, a HN w Ask HN pokazuje budowanie AI search assistantów i autonomicznych agentów. Sygnał społeczności jest dziś wyraźnie operacyjny.",
+      "whatHappened": "Społeczność premiuje workflow plumbing bardziej niż ogólny hype modelowy.",
+      "whyItMatters": "To często pierwszy dobry sygnał, gdzie AI naprawdę zbiera uwagę użytkowników.",
+      "deeperAnalysis": [
+        "Na Product Hunt widać produkty, które rozwiązują konkretne zadania: biznesowe operacje, reklamy, e-commerce, agent cards, edycję plików i dźwięk. To bardziej katalog narzędzi niż teatr demo. Taki układ zwykle lepiej pokazuje, gdzie rynek faktycznie szuka użyteczności.",
+        "Hacker News daje podobną odpowiedź w bardziej technicznej formie: ludzie budują search assistanty, agentów i narzędzia do realnych workflow. To wspiera tezę, że dalszy wzrost AI będzie napędzany przez integracje, koszt i kontrolę, a nie tylko przez nowe benchmarki."
+      ],
+      "contextPoints": [
+        "Co się stało: PH i HN promują praktyczne AI tools.",
+        "Dlaczego ważne: community signal jest zgodny z przesunięciem rynku do workflow.",
+        "Na co patrzeć dalej: czy to przełoży się na trwałą adopcję, a nie tylko launch-day attention."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/7/14"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=48884984"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Product Hunt",
+        "Hacker News",
+        "agents",
+        "workflow",
+        "vibe coding",
+        "community signal"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Open-weighty wygrywają volume",
+      "rationale": "Pokazuje, że AI rynek przesuwa się do kosztu, routingu i produkcyjnej ekonomii modeli.",
+      "sourcesLabel": "Vercel AI Gateway, TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Spotify jako rozmowny odtwarzacz",
+      "rationale": "Konsumenckie AI wchodzi do mainstreamowego audio UX przez prostą, codzienną potrzebę.",
+      "sourcesLabel": "Spotify newsroom, TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Meta cofa granice consent",
+      "rationale": "Rollback pokazuje, że backlash użytkowników potrafi szybko korygować AI launch.",
+      "sourcesLabel": "Meta newsroom, TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Google robi AI ads transparentne",
+      "rationale": "Disclosure w reklamach może stać się wzorcem dla platformowych polityk przejrzystości.",
+      "sourcesLabel": "Google Ads & Commerce blog"
+    },
+    {
+      "priority": "Medium",
+      "title": "Claude po rupii",
+      "rationale": "Lokalizacja cen pokazuje, że regional pricing i płatności są dziś częścią strategii AI.",
+      "sourcesLabel": "TechCrunch, Anthropic pricing docs"
+    },
+    {
+      "priority": "Medium",
+      "title": "ChatGPT dla rodzin",
+      "rationale": "OpenAI zaczyna projektować household AI, a nie tylko indywidualną produktywność.",
+      "sourcesLabel": "OpenAI careers, TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN i Product Hunt chcą narzędzi, nie buzzwordów",
+      "rationale": "Community signal premiuje workflow, integracje i agentów zamiast samego hype'u.",
+      "sourcesLabel": "Product Hunt, Hacker News"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Vercel AI Gateway",
+      "url": "https://vercel.com/ai-gateway"
+    },
+    {
+      "title": "TechCrunch: The real AI race may no longer be at the frontier",
+      "url": "https://techcrunch.com/2026/07/14/the-real-ai-race-may-no-longer-be-at-the-frontier-open-models-hugging-face/"
+    },
+    {
+      "title": "Spotify newsroom: Just Say the Word: A More Personal Way to Ask, Discover, and Listen",
+      "url": "https://newsroom.spotify.com/2026-07-14/talk-to-spotify-announcement-beta/"
+    },
+    {
+      "title": "TechCrunch: Spotify expands its AI push with a ChatGPT-like music assistant",
+      "url": "https://techcrunch.com/2026/07/14/spotify-expands-its-ai-push-with-a-chatgpt-like-music-assistant/"
+    },
+    {
+      "title": "Meta newsroom: Introducing Muse Image: Image Generation Built for Your World",
+      "url": "https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/"
+    },
+    {
+      "title": "Google Ads & Commerce blog: Expanding AI transparency in ads",
+      "url": "https://blog.google/products/ads-commerce/google-ads-ai-transparency-labels/"
+    },
+    {
+      "title": "TechCrunch: Anthropic starts localizing Claude pricing for India",
+      "url": "https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/"
+    },
+    {
+      "title": "OpenAI careers: Product Manager, Families",
+      "url": "https://openai.com/careers/product-manager-families-san-francisco/"
+    },
+    {
+      "title": "TechCrunch: OpenAI bets on families as ChatGPT goes deeper into households",
+      "url": "https://techcrunch.com/2026/07/11/openai-bets-on-families-as-chatgpt-goes-deeper-into-households/"
+    },
+    {
+      "title": "Product Hunt: Best of Product Hunt for July 14, 2026",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/7/14"
+    },
+    {
+      "title": "Hacker News: Ask HN: What Are You Working On? (July 2026)",
+      "url": "https://news.ycombinator.com/item?id=48884984"
+    }
+  ]
+}
