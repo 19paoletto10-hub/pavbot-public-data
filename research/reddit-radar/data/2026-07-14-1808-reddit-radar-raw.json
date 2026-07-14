@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-14-1808",
+  "status": "material_update",
+  "generatedAt": "2026-07-14T16:42:00+00:00",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-14T18:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Read-only Safari and old.reddit.com hot listings powered the live 18:08 sweep in the logged-in local Safari session.",
+      "A pre-shortlist filter removed every Reddit post URL path that appeared in runs 2026-07-14-1208 and 2026-07-14-0008, so old.reddit and www.reddit variants could not bypass freshness filtering.",
+      "Shortlist review stayed read-only on old.reddit.com post pages with top comments in the same Safari-driven workflow.",
+      "Several high-score facepalm and AskReddit threads were left out before deep review because the live evening cluster skewed political, culture-war, medical, or too broad for a clean public-safe humor digest.",
+      "A few mildlyinfuriating candidates looked strong on the listing, but read-only Safari did not return stable visible top comments for them, so they were not promoted past the quality gate.",
+      "No Reddit social actions were performed.",
+      "At least five safe fresh cards survived the filter and manual review, so the topic contract prefers a new public bundle over keeping 2026-07-14-1208 unchanged.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-14-1208",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-14-1808-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-14-1808-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-14-1808-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uvez3w/youcanjuststopusingjava/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uujrl6/downfallofstackoverflow/",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uvlxlr/this_car_has_been_blocking_8_parking_spots_in_our/",
+    "https://www.reddit.com/r/facepalm/comments/1urvjgq/even_my_fortune_cookie_has_ads_now/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uvbbwm/theusual/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uv3tsh/whatifitoldyouthis/",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uvhm03/people_waiting_in_line_at_goodwill/",
+    "https://www.reddit.com/r/facepalm/comments/1uvkgvo/using_the_dishwasher_the_first_time_i_didnt_know/"
+  ],
+  "newCandidates": [
+    {
+      "subreddit": "r/memes",
+      "title": "Every Monday morning",
+      "url": "https://www.reddit.com/r/memes/comments/1uw7pwg/every_monday_morning/",
+      "scoreLabel": "10.0K",
+      "decision": "selected_for_fresh_bundle_as_clean_monday_stamina_roast_with_safe_comment_escalation"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Hate it when thisHappens...",
+      "url": "https://www.reddit.com/r/memes/comments/1uw2x60/hate_it_when_thishappens/",
+      "scoreLabel": "4.3K",
+      "decision": "selected_for_fresh_bundle_as_light_meta_meme_about_pov_misuse_and_fourth_wall_jokes"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "requirementAmnesia",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uw82sn/requirementamnesia/",
+      "scoreLabel": "2.7K",
+      "decision": "selected_for_fresh_bundle_as_safe_corporate_dev_roast_about_reversing_requirements_in_writing"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "tarCreateZeeFile",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uw3w0r/tarcreatezeefile/",
+      "scoreLabel": "4.2K",
+      "decision": "selected_for_fresh_bundle_as_memorable_linux_german_accent_gag_with_clean_comment_payoff"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "“No sour cream pls :)”",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uw0jyl/no_sour_cream_pls/",
+      "scoreLabel": "4.2K",
+      "decision": "selected_for_fresh_bundle_as_compact_order_fail_absurdity_with_clear_public_safe_comment_layer"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "signOfStroke",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uw7n9g/signofstroke/",
+      "scoreLabel": "4.8K",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_quickly_turns_into_penis_and_greek_slang_jokes_weaker_for_public_safe_digest"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Where do I find a beach in Berlin?",
+      "url": "https://www.reddit.com/r/memes/comments/1uw5b6y/where_do_i_find_a_beach_in_berlin/",
+      "scoreLabel": "3.4K",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_is_more_heatwave_culture_snark_than_clean_short_payoff"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Bought a patch I can’t use as a patch",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uw7zhw/bought_a_patch_i_cant_use_as_a_patch/",
+      "scoreLabel": "8.5K",
+      "decision": "review_attempted_but_left_out_because_read_only_safari_did_not_return_stable_visible_top_comments_for_safe_manual_extraction"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "My son got a happy meal from mcdonalds today.",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uw2j53/my_son_got_a_happy_meal_from_mcdonalds_today/",
+      "scoreLabel": "14.7K",
+      "decision": "review_attempted_but_left_out_because_read_only_safari_did_not_return_stable_visible_top_comments_for_safe_manual_extraction"
+    }
+  ]
+}
