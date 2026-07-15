@@ -1,0 +1,378 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-15",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny run dokłada do dzisiejszej osi AI dwa nowe wymiary: lokalizację rynku i kontrolę infrastruktury. Apple Intelligence dostaje zgodę na wejście do Chin z udziałem Baidu i Alibaba, a Reuters równolegle opisuje, że Apple rozgląda się za przejęciami firm chipowych, bo własne serwery AI nie dowożą oczekiwanej wydajności. To ważne, bo pokazuje, że consumer AI nie jest już tylko wyścigiem modeli, ale także walką o krajowe regulacje, partnerów lokalnych i własny krzem.",
+    "Drugi sygnał jest bardziej operacyjny. OpenAI poprawia ChatGPT jako narzędzie pracy przez większy limit custom instructions i mocniejsze przeszukiwanie chatów, projektów i plików. Jednocześnie Anthropic i Blackstone wzmacniają tezę, że prawdziwy rynek może leżeć w implementation business, Vint Cerf promuje identyfikację agentów w otwartym internecie, Microsoft publikuje rekordowy Patch Tuesday z pomocą AI, a Emergent pokazuje, że AI coding nadal przyciąga duży kapitał. Dzisiejszy wspólny mianownik to nie capability, tylko wdrożenie, identyfikacja, bezpieczeństwo i dystrybucja."
+  ],
+  "summaryBullets": [
+    "Produkty: Apple Intelligence wchodzi do Chin przez lokalnych partnerów",
+    "Infrastruktura: Apple rozgląda się za chipowymi przejęciami",
+    "Produkty: ChatGPT staje się bardziej konfigurowalny i przeszukiwalny"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-15-1933-0-apple-intelligence-wchodzi-do-chin-przez-lokalnych-partnerow-fd19410694",
+      "section": "Produkty",
+      "title": "Apple Intelligence wchodzi do Chin przez lokalnych partnerów",
+      "standfirst": "Reuters podaje, że chiński regulator zarejestrował Apple Intelligence do użycia na iPhone'ach w Chinach. Według relacji Apple ma korzystać z modeli Baidu i Alibaba, a Alibaba potwierdziła integrację Qwen z systemami Apple na rynku chińskim.",
+      "whatHappened": "Apple dostało zielone światło na rollout Apple Intelligence w Chinach.",
+      "whyItMatters": "To pokazuje, że globalny consumer AI stack będzie coraz częściej rozdzielany według jurysdykcji, partnerów i lokalnych modeli.",
+      "deeperAnalysis": [
+        "Najważniejsze jest to, że Apple nie próbuje już sprzedawać jednego uniwersalnego AI experience wszędzie. W Chinach musi pracować przez lokalny ekosystem modeli i przez krajowy proces rejestracji usług generatywnych, co samo w sobie jest sygnałem o tym, jak mocno AI staje się regulowanym elementem produktu.",
+        "Reuters nie podaje jeszcze daty startu, ale sam fakt rejestracji pokazuje, że Apple chce utrzymać konkurencyjność w jednym z najważniejszych rynków iPhone'a. To nie jest tylko feature story. To jest historia o tym, jak duży produkt konsumencki składa się z wielu lokalnych wersji AI, a nie jednego globalnego modelu.",
+        "W praktyce ten ruch może stać się wzorem dla innych globalnych platform. Jeśli AI ma działać w krajach z własnymi wymaganiami dotyczącymi danych, treści i modeli, to przewaga będzie należeć do firm, które potrafią łączyć centralny produkt z lokalnymi partnerstwami i lokalną zgodnością."
+      ],
+      "contextPoints": [
+        "Co się stało: Apple Intelligence zostało zarejestrowane do użycia w Chinach.",
+        "Dlaczego ważne: lokalne modele i lokalny compliance stają się częścią produktu.",
+        "Na co patrzeć dalej: oficjalna data rollout'u i zakres funkcji z Baidu/Alibaba."
+      ],
+      "sources": [
+        {
+          "title": "Reuters via WHBL",
+          "url": "https://whbl.com/2026/07/15/apple-intelligence-ai-service-registered-with-chinas-cyberspace-regulator/"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/15/apple-intelligence-approved-for-launch-in-china-with-alibabas-qwen-ai/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Apple",
+        "China",
+        "Apple Intelligence",
+        "Baidu",
+        "Alibaba",
+        "localization"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-15-1933-1-apple-rozglada-sie-za-chipowymi-przejeciami-a86a40599d",
+      "section": "Infrastruktura",
+      "title": "Apple rozgląda się za chipowymi przejęciami",
+      "standfirst": "Reuters pisze, że Apple rozmawia o przejęciu firm chipowych, by wzmocnić serwerowe procesory dla AI. The Information twierdzi, że in-house serwery AI Apple działają dziś na M2 Ultra, a chip Baltra został opóźniony.",
+      "whatHappened": "Apple szuka szybszej drogi do mocniejszego AI compute.",
+      "whyItMatters": "To sygnał, że nawet Apple może potrzebować M&A, żeby nadrobić backend AI.",
+      "deeperAnalysis": [
+        "Ta historia dobrze pokazuje, że spór o AI nie kończy się na modelach ani na warstwie aplikacji. Jeśli Apple rozważa zakupy firm chipowych, to znaczy, że problem leży głębiej, w serwerach, wydajności i harmonogramach własnego krzemu. W praktyce chodzi o to, czy Apple potrafi zbudować wystarczająco mocne zaplecze dla własnych usług AI.",
+        "Warto zauważyć, że Reuters łączy ten wątek z wcześniejszym ruchem Apple na Broadcom. To sugeruje strategię dwutorową: krótkoterminowo kupować i zabezpieczać dostawy, a średnioterminowo próbować przejąć więcej kontroli nad własnym compute stackiem. Taki model jest drogi, ale przy obecnej presji na AI infra może być dla Apple konieczny.",
+        "Dla rynku to ważny sygnał, bo potwierdza, że AI hardware i AI servers stają się tak samo strategiczne jak same modele. Kto nie ma wydajnego backendu, ten zaczyna przegrywać nie tylko koszt, ale i tempo produktu."
+      ],
+      "contextPoints": [
+        "Co się stało: Apple sonduje buyouty chipowych startupów.",
+        "Dlaczego ważne: compute staje się ograniczeniem dla własnego AI.",
+        "Na co patrzeć dalej: czy pojawi się formalny deal albo publiczny partner chipowy."
+      ],
+      "sources": [
+        {
+          "title": "Reuters via Investing.com",
+          "url": "https://www.investing.com/news/stock-market-news/apple-chasing-ai-chip-company-deals-the-information-reports-4793882"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Apple",
+        "chips",
+        "AI servers",
+        "M2 Ultra",
+        "Baltra",
+        "Broadcom"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-15-1933-2-chatgpt-staje-sie-bardziej-konfigurowalny-i-przeszukiwalny-4efe7af91c",
+      "section": "Produkty",
+      "title": "ChatGPT staje się bardziej konfigurowalny i przeszukiwalny",
+      "standfirst": "OpenAI zwiększa limit custom instructions do 5,000 znaków i rozszerza wyszukiwanie na czaty, projekty, obrazy oraz dokumenty w ChatGPT. Funkcja działa na web, iOS i Androidzie.",
+      "whatHappened": "ChatGPT dostaje mocniejszą personalizację i lepszy retrieval własnych materiałów.",
+      "whyItMatters": "To wzmacnia ChatGPT jako środowisko pracy i pamięci, a nie tylko jako interfejs rozmowy.",
+      "deeperAnalysis": [
+        "To nie jest spektakularny launch, ale jest bardzo wymowny. Dłuższe custom instructions pozwalają lepiej ustawić ton, styl i zasady pracy, a search across chats/projects/files przesuwa ChatGPT bliżej roli osobistego systemu operacyjnego dla wiedzy użytkownika.",
+        "W kontekście dzisiejszego rynku to ważne, bo OpenAI nie tylko zwiększa capability modeli, ale też dokręca ergonomię użycia. Tego typu zmiany zwykle nie robią największego szumu, ale często najbardziej wpływają na retencję i realne przywiązanie do platformy.",
+        "Jeżeli ten kierunek będzie kontynuowany, ChatGPT będzie coraz mniej wyglądał jak pojedynczy produkt i coraz bardziej jak warstwa robocza nad całym prywatnym archiwum użytkownika. To ma konsekwencje dla prywatności, organizacji pracy i konkurencji z narzędziami typu search-plus-notes."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI zwiększa custom instructions i search scope.",
+        "Dlaczego ważne: ChatGPT staje się bardziej użytecznym narzędziem roboczym.",
+        "Na co patrzeć dalej: czy te same zmiany przełożą się na lepszy workflow w enterprise."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI Help Center",
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "OpenAI",
+        "ChatGPT",
+        "release notes",
+        "custom instructions",
+        "search",
+        "workspace"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-15-1933-3-anthropic-i-blackstone-stawiaja-na-wdrozenia-zamiast-samych-modeli-cba1dadd5b",
+      "section": "AI",
+      "title": "Anthropic i Blackstone stawiają na wdrożenia zamiast samych modeli",
+      "standfirst": "TechCrunch opisuje Ode, joint venture Anthropic z Blackstone, Hellman & Friedman i Goldman Sachs, jako zakład na to, że największy biznes AI może leżeć w implementacji, a nie tylko w samych modelach.",
+      "whatHappened": "Frontier laby budują osobne biznesy do wdrażania AI u klientów.",
+      "whyItMatters": "To zmienia konkurencję z wyścigu capability na wyścig o deployment, change management i usługi.",
+      "deeperAnalysis": [
+        "Ten sygnał jest mocny, bo pokazuje zmianę definicji sukcesu. Przez długi czas narracja AI koncentrowała się na tym, kto ma lepszy model. Teraz coraz więcej dużych graczy mówi wprost, że prawdziwa wartość powstaje w chwili, gdy ktoś umie ten model wprowadzić do firmy, opisać jego zastosowania, zbudować guardrails i dopilnować wdrożenia.",
+        "TechCrunch przypomina, że Ode wyrasta z połączenia finansowego kapitału z praktyką deploymnetu, a sama logika przypomina Palantir-style forward-deployed engineering. To ważne, bo w praktyce oznacza przesunięcie marży z API do usług wdrożeniowych, audytu i integracji. Nie każdy klient chce albo potrafi kupić surowy model.",
+        "To także dobry kontrapunkt do dzisiejszych startupowych i produktowych newsów. Coraz wyraźniej widać, że rynek AI dzieli się na trzy warstwy: model, integrację i operacje. Najbardziej trwałe pieniądze mogą być właśnie w tej drugiej warstwie."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic i Blackstone rozwijają Ode jako business deployment.",
+        "Dlaczego ważne: enterprise AI przesuwa się w stronę usług wdrożeniowych.",
+        "Na co patrzeć dalej: czy podobne struktury budują inni dostawcy modeli."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "Blackstone",
+        "enterprise",
+        "implementation",
+        "deployment",
+        "services"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-15-1933-4-cerf-i-dnsid-probuja-nadac-agentom-tozsamosc-05025aac3c",
+      "section": "Regulacje",
+      "title": "Cerf i DNSid próbują nadać agentom tożsamość",
+      "standfirst": "Vint Cerf dołącza do Innovation Labs, które chce stworzyć otwartą architekturę tożsamości dla agentów AI. Projekt DNSid łączy identyfikację agenta z nazwą domeny i kryptograficznym dowodem rejestracji.",
+      "whatHappened": "Powstaje nowa próba zbudowania standardu identyfikacji agentów na otwartym internecie.",
+      "whyItMatters": "Bez tożsamości trudno będzie zrobić audyt, odpowiedzialność i politykę dostępu dla autonomicznych agentów.",
+      "deeperAnalysis": [
+        "To jest jeden z najmniej spektakularnych, ale potencjalnie najważniejszych wątków dnia. Gdy agenty przestają być tylko wewnętrznym elementem produktu i zaczynają działać między usługami, pojawia się klasyczny problem internetu: kto to jest, skąd ma uprawnienia i kto odpowiada za jego działanie.",
+        "Innovation Labs próbuje rozwiązać ten problem przez powiązanie agenta z istniejącą domeną i przez zapis jego rejestracji w sposób możliwy do weryfikacji. Jeśli taki standard zyska poparcie hyperscalerów, może stać się elementem infrastruktury równie fundamentalnym jak DNS czy OAuth.",
+        "Dla rynku oznacza to, że era agentów będzie wymagała nie tylko lepszych modeli, ale też lepszej identyfikacji i audytu. W przeciwnym razie otwarty internet będzie miał bardzo duży problem z zaufaniem do maszyn działających w naszym imieniu."
+      ],
+      "contextPoints": [
+        "Co się stało: Cerf wspiera projekt DNSid dla agentów.",
+        "Dlaczego ważne: identyfikacja może stać się warunkiem bezpiecznego użycia agentów.",
+        "Na co patrzeć dalej: czy projekt trafi do standardów i publicznych pilotów."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/15/vint-cerf-is-working-on-a-plan-to-unleash-ai-agents-on-the-open-internet/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Vint Cerf",
+        "DNSid",
+        "agents",
+        "identity",
+        "standards",
+        "accountability"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-15-1933-5-microsoft-pokazuje-ze-ai-juz-zasila-bezpieczenstwo-31e73eef6a",
+      "section": "Cyber",
+      "title": "Microsoft pokazuje, że AI już zasila bezpieczeństwo",
+      "standfirst": "Krebs on Security pisze o rekordowym lipcowym Patch Tuesday Microsoftu: co najmniej 570 podatności, prawie 60 krytycznych i trzy zero-daye. Microsoft wiąże wzrost liczby wykrytych błędów z narzędziami AI.",
+      "whatHappened": "Microsoft łata rekordową liczbę dziur, a AI pomaga wykrywać kolejne.",
+      "whyItMatters": "To pokazuje, że AI nie tylko generuje nowe produkty, ale też zwiększa tempo wykrywania i naprawy podatności.",
+      "deeperAnalysis": [
+        "To dobra historia dla czytelników, bo nie jest abstrakcyjnym \"AI made security better\" claim. Mamy konkretną liczbę, konkretny miesiąc i konkretne zero-daye. Microsoft pokazuje tutaj, że AI staje się częścią obrony, ale równocześnie skala problemu nie maleje.",
+        "Z perspektywy operacyjnej ważne jest, że Patch Tuesday rośnie. Jeśli kolejne wydania będą miały podobne lub większe wolumeny, to administratorzy, product security teams i vendorzy będą musieli traktować AI-assisted vulnerability discovery jako nową normalność, a nie ciekawostkę.",
+        "To także mocny punkt odniesienia do wątków o agentach i prompt injection. Im więcej automatyzacji i AI w systemach, tym większa potrzeba szybkich, audytowalnych patchy oraz lepszej higieny bezpieczeństwa."
+      ],
+      "contextPoints": [
+        "Co się stało: Microsoft publikuje rekordowy zbiór poprawek.",
+        "Dlaczego ważne: AI przyspiesza zarówno atak, jak i defensywę.",
+        "Na co patrzeć dalej: czy tempo i wolumen patchy utrzymają się w kolejnych miesiącach."
+      ],
+      "sources": [
+        {
+          "title": "Krebs on Security",
+          "url": "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Microsoft",
+        "Patch Tuesday",
+        "security",
+        "vulnerabilities",
+        "AI",
+        "zero-days"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-15-1933-6-emergent-pokazuje-ze-ai-coding-dalej-skaluje-kapital-6a7cf52abd",
+      "section": "AI",
+      "title": "Emergent pokazuje, że AI coding dalej skaluje kapitał",
+      "standfirst": "TechCrunch podaje, że indyjski AI coding startup Emergent zebrał $130M w Series C przy wycenie $1.5B. Firma twierdzi też, że ma $120M annual run-rate revenue i ponad 200,000 płacących klientów.",
+      "whatHappened": "AI coding startup z Indii wszedł na wycenę jednorożca.",
+      "whyItMatters": "To kolejny dowód, że coding assistants i automation dla builderów nadal przyciągają duży kapitał.",
+      "deeperAnalysis": [
+        "Emergent jest dobrym sygnałem, bo łączy kilka ważnych rzeczy naraz: szybką eskalację wyceny, globalny rynek i konkretny use case, który da się sprzedać przedsiębiorcom oraz mniejszym firmom. To już nie jest zabawka do promptów, tylko obietnica \"engineering team in a box\".",
+        "To także interesujące w kontekście geograficznym. Indie coraz częściej pojawiają się jako osobny rynek i hub dla AI coding, zamiast tylko jako zaplecze inżynierskie dla amerykańskich firm. Tego typu ruch zwykle oznacza, że segment ma już własną dynamikę adopcji, nie tylko importuje trend z Doliny.",
+        "Warto śledzić ten sektor, bo kodowanie wspomagane AI nadal jest jednym z najlepszych benchmarków realnej wartości produktu. Jeśli klienci płacą, to dlatego, że oszczędzają czas, a nie dlatego, że demo wygląda dobrze."
+      ],
+      "contextPoints": [
+        "Co się stało: Emergent zamyka dużą rundę przy wycenie $1.5B.",
+        "Dlaczego ważne: AI coding nadal skaluje przychody i inwestycje.",
+        "Na co patrzeć dalej: adopcja poza Indiami i porównanie z Cursor/Replit/Lovable."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/15/indian-ai-coding-startup-emergent-becomes-a-unicorn-just-over-a-year-after-launch/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Emergent",
+        "AI coding",
+        "startup",
+        "India",
+        "funding",
+        "unicorn"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-15-1933-7-product-hunt-i-hn-dalej-premiuja-praktyczne-workflow-728fd976f8",
+      "section": "Produkty",
+      "title": "Product Hunt i HN dalej premiują praktyczne workflow",
+      "standfirst": "Product Hunt dziś promuje głównie narzędzia agentowe i automatyzacyjne, a Hacker News front page miesza prompt injection, Tailscale SSH i rekordowy Microsoft Patch Tuesday. To mocny sygnał, że community ciągle nagradza użyteczność i bezpieczeństwo.",
+      "whatHappened": "Publiczne społeczności techniczne dalej wybierają praktyczne narzędzia, nie sam modelowy hype.",
+      "whyItMatters": "To pomaga odróżnić produkty, które mają realne traction, od tych, które tylko dobrze wyglądają na slajdzie.",
+      "deeperAnalysis": [
+        "Product Hunt dzisiaj nie promuje ogólnych chatbotów. Na górze widać narzędzia do video, workspace dla ludzi i agentów, automatyzację stacku, debiuty oparte o Claude Skills, a także produkty do dokumentów i meeting capture. To bardzo konsekwentny sygnał, że publiczny rynek lubi konkretne workflow.",
+        "Hacker News z kolei pokazuje stronę ryzyka: prompt injection, SSH access, security updates i publiczny ból związany z agentami oraz dużą powierzchnią ataku. To dobry kontrapunkt dla Product Hunt, bo razem tworzą obraz rynku, w którym użytkownicy chcą agentów, ale jednocześnie mocno patrzą na koszty, bezpieczeństwo i nadużycia.",
+        "Jeżeli ta kombinacja utrzyma się przez kolejne dni, będzie to mocny argument, żeby w podcastach i indexie dalej faworyzować narzędzia praktyczne, infrastrukturalne i security-first."
+      ],
+      "contextPoints": [
+        "Co się stało: PH i HN wybierają agentowe i security-heavy tematy.",
+        "Dlaczego ważne: community signal pomaga filtrować realne produkty.",
+        "Na co patrzeć dalej: czy ten wzorzec utrzyma się przez kilka kolejnych dni."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/"
+        },
+        {
+          "title": "Hacker News front page for 2026-07-15",
+          "url": "https://news.ycombinator.com/front?day=2026-07-15"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Product Hunt",
+        "Hacker News",
+        "agents",
+        "workflow",
+        "security",
+        "community signal"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Apple Intelligence w Chinach",
+      "rationale": "Apple wchodzi do Chin z lokalnymi modelami i bez daty startu, więc temat łączy produkt, regulacje i partnerów lokalnych.",
+      "sourcesLabel": "Reuters via WHBL; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Apple szuka chipowych przejęć",
+      "rationale": "Pokazuje, że Apple ma problem z własnym AI compute i może szukać skrótu przez M&A zamiast tylko dostawców.",
+      "sourcesLabel": "Reuters via Investing.com"
+    },
+    {
+      "priority": "High",
+      "title": "ChatGPT staje się bardziej roboczy",
+      "rationale": "Większy limit custom instructions i lepsze search across chats/projects/files wzmacniają ChatGPT jako środowisko pracy.",
+      "sourcesLabel": "OpenAI Help Center"
+    },
+    {
+      "priority": "High",
+      "title": "Anthropic i Blackstone stawiają na wdrożenia",
+      "rationale": "To jeden z najlepszych sygnałów, że wartość AI przesuwa się z modeli do implementation services.",
+      "sourcesLabel": "TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Cerf i tożsamość agentów",
+      "rationale": "DNSid może stać się podstawą rozliczalności agentów na otwartym internecie.",
+      "sourcesLabel": "TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Microsoft patchuje rekordowo dużo dziur",
+      "rationale": "570 podatności i AI-assisted discovery robią z Patch Tuesday dobry wskaźnik stanu obrony i ryzyka.",
+      "sourcesLabel": "Krebs on Security"
+    },
+    {
+      "priority": "Medium",
+      "title": "Emergent jako sygnał boomu na AI coding",
+      "rationale": "Unicorn z Indii pokazuje, że coding AI wciąż przyciąga kapitał i użytkowników.",
+      "sourcesLabel": "TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Product Hunt i HN premiują praktyczne agenty",
+      "rationale": "Community signal jest dziś konsekwentnie agentowy i security-first, co pomaga odsiać szum od realnych narzędzi.",
+      "sourcesLabel": "Product Hunt; Hacker News"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Reuters via WHBL: Apple Intelligence AI service registered with Chinese cyberspace regulator",
+      "url": "https://whbl.com/2026/07/15/apple-intelligence-ai-service-registered-with-chinas-cyberspace-regulator/"
+    },
+    {
+      "title": "Reuters via Investing.com: Apple chasing AI chip company deals, The Information reports",
+      "url": "https://www.investing.com/news/stock-market-news/apple-chasing-ai-chip-company-deals-the-information-reports-4793882"
+    },
+    {
+      "title": "OpenAI Help Center: ChatGPT — Release Notes",
+      "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+    },
+    {
+      "title": "TechCrunch: Anthropic, Blackstone bet the next trillion-dollar AI business is implementation, not models",
+      "url": "https://techcrunch.com/2026/07/15/anthropic-blackstone-bet-the-next-trillion-dollar-ai-business-is-implementation-not-models/"
+    },
+    {
+      "title": "TechCrunch: Vint Cerf is working on a plan to unleash AI agents on the open internet",
+      "url": "https://techcrunch.com/2026/07/15/vint-cerf-is-working-on-a-plan-to-unleash-ai-agents-on-the-open-internet/"
+    },
+    {
+      "title": "Krebs on Security: Microsoft Patches a Record 570 Security Flaws",
+      "url": "https://krebsonsecurity.com/2026/07/microsoft-patches-a-record-570-security-flaws/"
+    },
+    {
+      "title": "TechCrunch: Indian AI coding startup Emergent becomes a unicorn with $130M Series C",
+      "url": "https://techcrunch.com/2026/07/15/indian-ai-coding-startup-emergent-becomes-a-unicorn-just-over-a-year-after-launch/"
+    },
+    {
+      "title": "Product Hunt home",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Hacker News front page for 2026-07-15",
+      "url": "https://news.ycombinator.com/front?day=2026-07-15"
+    }
+  ]
+}
