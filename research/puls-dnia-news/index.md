@@ -2,6 +2,15 @@
 
 ## Current State
 
+The 2026-07-15 06:01 slot opens with fresh procedural and safety updates:
+Świrski and Cezary J. are still moving through the prokuratura track, Tusk is
+calling the KO club together, the TK dispute escalates into a police scene,
+Ursus and Kowalewice add concrete local risk, and RCB / IMGW keep storms live.
+The world block stays dominated by Iran and Hormuz, but CNN now adds the Maine
+ICE shooting and a French wildfire / heat-wave block, while the economy and
+tech side adds the gigafabryka AI decision and the new autonomous-vehicle test
+rules.
+
 The 2026-07-14 21:03 slot shifts the feed into a fresh procedural burst: Cezary J. leaves the prokuratura while Świrski remains in motion, Ziobro gets a new ICE step, Żurek pushes three immunities and the Czarnek/Ukraina fight gets another sharp response from the minister of digitalization. On the safety side, the Ursus wall crack and a new Wrocław fire-truck collision keep local risk active, while IMGW and RCB hold the storm alerts open.
 
 The world and business block is now more infrastructure-heavy: Emiraty push a Hormuz bypass, Iran signals uninterrupted oil exports, the Biały Dom shifts on Russian sanctions, U.S. inflation re-heats rate pressure, Meta gets another AI-related lawsuit, Poland moves toward a gigafabryka AI, and VeloBank warns about layoffs.

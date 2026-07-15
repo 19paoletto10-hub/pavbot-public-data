@@ -2,6 +2,10 @@
 
 ## Open
 
+- Watch whether the KO club meeting turns into a disciplinary reset or just a short briefing.
+- Watch whether the TK exclusion gets a written explanation or a legal challenge.
+- Watch whether Kowalewice gets a formal investigative note on bodycams, duty status and cause.
+- Watch whether the French wildfire / European heat block widens into travel or evacuation disruption.
 - Watch whether the evening prokuratura note on Cezary J. and Świrski adds charges or only procedural status.
 - Watch whether the IMGW/RCB alerts expand into outages or new structural damage after 21:00.
 - Watch whether VeloBank publishes a formal layoff plan or the unions respond.
