@@ -4,6 +4,8 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Komponent Obrony Pogranicza rollout | MON created a new border-defense component that may change how `Tarcza Wschód` is staffed and managed | Watch MON, SG and WOT for staffing, training and equipment follow-up | Open |
+| High | Track EU-Ukraine Defence Industrial Partnership implementation | The Drone Deal is now launched; the next question is financing, participants and Polish industrial spillover | Watch EC, AP, Ukrainian official channels and Polish industry reactions for concrete project details | Open |
 | High | Review first three generated news podcasts | Confirms pacing, neutrality, MP3 generation, and Polish narration quality | Listen to each MP3 and record notes | Open |
 | Medium | Tune public source list | Repeated good sources should become explicit topic guidance | Prefer official institutions plus Onet/PAP, Guardian, Euronews and public AP/Reuters mirrors; consider topic.md refinement after weekend sample | Open |
 | High | Track Patriot/interceptor decisions for Ukraine | Russian ballistic strikes still make air-defence supply the operational center of the summit story, even after the counter-drone package | Check AP, NATO, White House, KPRM/MON and Ukrainian official channels for concrete interceptor, licensing or production decisions | Open |

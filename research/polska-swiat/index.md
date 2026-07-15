@@ -178,6 +178,16 @@ udziałem wojsk brytyjskich i francuskich, przy równoczesnym braku nowych
 donacji sprzętu dla Ukrainy. Wątek ukraiński łączy się dziś z problemem
 amerykańskich zapasów Patriot/THAAD/Tomahawk, a UE domyka formalne otwarcie
 klastra 6 dla Ukrainy i Mołdawii.
+Po wieczornym runie 15 lipca ciężar przesunął się jeszcze bardziej ku
+bezpieczeństwu i przemysłowi obronnemu. MON formalnie utworzył Komponent
+Obrony Pogranicza w WOT, oparty o cztery wysunięte brygady, które mają
+zarządzać `Tarczą Wschód`, współpracować ze Strażą Graniczną i szkolić się w
+obsłudze dronów oraz antydronów. Równolegle Komisja Europejska i Ukraina
+uruchomiły partnerstwo przemysłowe obronne oraz `Drone Deal`, co przesuwa
+rozmowę z transferu sprzętu na współprodukcję dronów, technologii
+antydronowych i w dłuższym horyzoncie elementów antybalistycznych. Ormuz
+pozostaje głównym punktem światowego ryzyka, ale wieczorny obraz to już
+kontynuacja presji, a nie nowy zwrot jakościowy względem poranka.
 
 ## Stable Facts
 
@@ -331,6 +341,10 @@ klastra 6 dla Ukrainy i Mołdawii.
   przeciwbalistycznej i shadow fleet.
 - Ćwiczenia wojskowe DORSZ omawiać bez szczegółów lokalizacji i ruchu wojsk;
   powtarzać apel o niepublikowanie zdjęć i nagrań sprzętu.
+- MON Komponent Obrony Pogranicza: śledzić pierwsze decyzje organizacyjne,
+  szkoleniowe i sprzętowe, ale bez wchodzenia w szczegóły operacyjne.
+- UE-Ukraina Drone Deal: sprawdzić pierwsze wyjaśnienia o finansowaniu,
+  uczestnikach i powiązaniu z europejską bazą przemysłową.
 
 ## Recent Reports
 
