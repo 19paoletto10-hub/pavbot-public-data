@@ -2,6 +2,11 @@
 
 ## Open
 
+- Watch whether prokuratura publishes the promised communication on Świrski and the full zarzut for Cezary J.
+- Watch whether Trump's threat against Iranian civilian infrastructure turns into an official policy statement or a follow-up strike.
+- Watch whether the A2 crash near Koło clears quickly or turns into a longer traffic disruption.
+- Watch whether the tanker casualties and Gulf interceptions produce a fresh official maritime note from the UAE or Bahrain.
+- Watch whether the Kuba blackout widens into a broader regional energy or water crisis.
 - Watch whether the KO club meeting turns into a disciplinary reset or just a short briefing.
 - Watch whether the TK exclusion gets a written explanation or a legal challenge.
 - Watch whether Kowalewice gets a formal investigative note on bodycams, duty status and cause.

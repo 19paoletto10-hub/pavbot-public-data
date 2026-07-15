@@ -2,6 +2,8 @@
 
 ## Current State
 
+The 2026-07-15 09:06 slot adds a sharper procedural note on Świrski and Cezary J., a fresh Sikorski security comment, an A2 crash near Koło, a more specific RCB/IMGW storm alert, and a harder world block around renewed U.S. strikes on Iran, tankers hit in the Gulf, Trump's infrastructure threat, Cuba's blackout, AI memory pricing and the Ukraine-EU talks in Brussels.
+
 The 2026-07-15 06:01 slot opens with fresh procedural and safety updates:
 Świrski and Cezary J. are still moving through the prokuratura track, Tusk is
 calling the KO club together, the TK dispute escalates into a police scene,
