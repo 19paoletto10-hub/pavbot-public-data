@@ -2,6 +2,8 @@
 
 ## Current State
 
+The 2026-07-15 18:01 slot shifts the feed toward a Baltic interception, a wider RCB storm alert, a public-safety arrest after online threats, an AI-backed cyberdefense project and a stronger car-market print. The world block remains dominated by Iran / Ormuz, but BBC and CNN now add fresher shipping, Ukraine and China updates that keep the external pressure high.
+
 The 2026-07-15 15:01 slot shifts the feed toward fresh domestic enforcement and safety items: Kaczyński's new Senate alliance, fresh RARS arrests, the Owińska anti-Ukrainian banner charges, the Pałac Prezydencki incident, the Kraków near-miss on the tracks and the Stoszowice child-death case. The alert block stays active with hail risk, while the world block turns back to Iran / Ormuz through BBC and CNN, adds China's weaker growth print, and keeps Black Sea shipping in view.
 
 The 2026-07-15 12:02 slot hardens the domestic feed around formal zarzuty for Świrski, Kaczyński's retaliation framing, Sikorski's security comment, the A2 crash near Koło, a live RCB/IMGW storm alert and a sharper CPI read at 2.5% y/y. The world block gets a fresh official layer from CENTCOM's new strikes and blockade reset, BBC's report on Trump's Hormuz fee reversal and fresh explosions near Iranian port cities, CNN's warning that civilian infrastructure could be next, and the Council of the EU's new Ukraine accession / protection decisions in Brussels.

@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-15",
+  "runTime": "18:01",
+  "status": "Material update",
+  "headline": "Bałtyk, burze i Ormuz: nowy slot dokłada bezpieczeństwo i rynek",
+  "summary": "Po 15:01 feed przesuwa się w stronę nowych sygnałów bezpieczeństwa, pogody i rynku: przechwycenia rosyjskich maszyn nad Bałtykiem, rozszerzonego alertu RCB, zatrzymania po groźbach wobec przedszkolaków oraz świeżych leadów BBC i CNN o Iranie, Ukrainie i Chinach.",
+  "items": [
+    {
+      "id": "polska-baltyk-przechwycenie",
+      "section": "Polityka",
+      "title": "Rosyjskie samoloty przechwycone nad Bałtykiem",
+      "lead": "MON potwierdziło kolejne poderwanie pary dyżurnej.",
+      "whatHappened": "TVN24 podało, że polskie samoloty z Malborka przechwyciły nad Bałtykiem parę rosyjskich Su-30SM2 z Królewca. Minister obrony Władysław Kosiniak-Kamysz podkreślił, że rosyjskie maszyny nie zbliżyły się do polskiej przestrzeni powietrznej.",
+      "keyFacts": [
+        "Chodzi o parę rosyjskich Su-30SM2 z Królewca.",
+        "Do przechwycenia doszło nad Bałtykiem.",
+        "Gov.pl cytuje MON, że to kolejne takie działanie polskiego lotnictwa."
+      ],
+      "reactions": [
+        "MON traktuje to jako sygnał utrzymującej się rosyjskiej aktywności nad Bałtykiem.",
+        "W tle pozostaje gotowość NATO i misja Air Policing."
+      ],
+      "whyItMatters": "To bezpośredni wskaźnik napięcia bezpieczeństwa na północnej flance Polski.",
+      "context": "To nowy krajowy sygnał po południu, świeższy niż poranny pakiet o Świrskim i RARS.",
+      "watchNext": [
+        "Sprawdzić, czy MON lub NATO poda dodatkowy komentarz.",
+        "Śledzić, czy pojawią się dalsze przechwycenia lub ćwiczenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Rosyjskie samoloty przechwycone nad Bałtykiem",
+          "url": "https://tvn24.pl/polska/rosyjskie-samoloty-przechwycone-nad-baltykiem-st9144102"
+        },
+        {
+          "title": "gov.pl: Rząd porządkuje rynek najmu krótkoterminowego",
+          "url": "https://www.gov.pl/web/premier/rzad-porzadkuje-rynek-najmu-krotkoterminowego-wieksza-ochrona-turystow-i-mieszkancow"
+        }
+      ],
+      "tags": [
+        "Bałtyk",
+        "Rosja",
+        "MON",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-rcb-kolejne-regiony",
+      "section": "Alerty",
+      "title": "Alert RCB rozszerza się na kolejne regiony",
+      "lead": "SMS ostrzega przed burzami i przerwami w prądzie.",
+      "whatHappened": "RCB rozesłało alert do kolejnych województw, a TVN24 wskazuje na mazowieckie i lubelskie. Komunikat ostrzega przed burzami, silnym wiatrem, intensywnymi opadami i możliwymi przerwami w dostawie prądu.",
+      "keyFacts": [
+        "Alert dotyczy kolejnych regionów kraju.",
+        "Wiadomość mówi o burzach, silnym wietrze i intensywnych opadach.",
+        "RCB ostrzega także przed przerwami w dostawie prądu."
+      ],
+      "reactions": [
+        "To już nie tylko ostrzeżenie, ale realny sygnał operacyjny dla mieszkańców i służb.",
+        "Zasięg alertu sugeruje, że front pogodowy wciąż się przemieszcza."
+      ],
+      "whyItMatters": "To najpraktyczniejszy temat dnia dla mieszkańców objętych zjawiskami.",
+      "context": "To aktualizacja wcześniejszego burzowego bloku, ale z szerszym zasięgiem niż rano.",
+      "watchNext": [
+        "Sprawdzić lokalne awarie i podtopienia.",
+        "Obserwować, czy alert obejmie kolejne powiaty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Alert RCB w kolejnych regionach",
+          "url": "https://tvn24.pl/tvnmeteo/polska/alert-rcb-w-kolejnych-powiatach-st9142984"
+        },
+        {
+          "title": "gov.pl/RCB: Alert RCB - burze, silny wiatr i intensywne opady deszczu (15.07)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-silny-wiatr-i-intensywne-opady-deszczu-1507"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "burze",
+        "wiatr",
+        "prąd"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-grozenie-przedszkolaki",
+      "section": "Polityka",
+      "title": "Groźby wobec przedszkolaków skończyły się zatrzymaniem",
+      "lead": "CBZC zatrzymało 29-latka po internetowych groźbach.",
+      "whatHappened": "TVN24 podało, że policjanci z CBZC zatrzymali 29-latka, który w sieci deklarował zamiar zabójstwa przedszkolaków i zamieścił ankietę. W materiale pojawia się też informacja, że o pomoc poproszono FBI.",
+      "keyFacts": [
+        "Sprawa dotyczy groźby zamachu na dzieci.",
+        "Zatrzymano 29-letniego mężczyznę.",
+        "Wątek miał wymiar międzynarodowy, bo proszono o pomoc FBI."
+      ],
+      "reactions": [
+        "To jeden z najmocniejszych sygnałów bezpieczeństwa publicznego w dzisiejszym krajowym feedzie.",
+        "Tego typu sprawy zwykle kończą się dalszymi czynnościami procesowymi."
+      ],
+      "whyItMatters": "Bezpośrednio dotyczy ochrony dzieci i szybko może przejść w sprawę karną o dużej wadze.",
+      "context": "To świeży temat z aktualizacji TVN24 około 16:54.",
+      "watchNext": [
+        "Czekać na komunikat prokuratury lub CBZC.",
+        "Sprawdzić, czy pojawią się zarzuty i środek zapobiegawczy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Groził w internecie, że zabije przedszkolaki. Akcja służb",
+          "url": "https://tvn24.pl/poznan/poznan-policjanci-z-cbzb-zatrzymali-29-latka-ktory-planowal-zabojstwo-przedszkolakow-st9143041"
+        }
+      ],
+      "tags": [
+        "CBZC",
+        "FBI",
+        "bezpieczeństwo",
+        "policja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-auta-odbicie",
+      "section": "Gospodarka",
+      "title": "Rynek aut mocno odbija",
+      "lead": "TVN24 pokazuje najwyższy wynik roku.",
+      "whatHappened": "TVN24 opisuje wyraźne odbicie na rynku aut i wskazuje, że to najwyższy wynik w tym roku. Materiał sugeruje poprawę nastrojów i wyższy popyt po wcześniejszym osłabieniu rynku.",
+      "keyFacts": [
+        "To świeży materiał biznesowy z 15 lipca.",
+        "TVN24 mówi o najwyższym wyniku w tym roku.",
+        "Wzrost dotyczy rynku samochodowego i sprzedaży."
+      ],
+      "reactions": [
+        "To może być sygnał poprawy skłonności do zakupów w gospodarce.",
+        "Wynik może wspierać dealerów i powiązane branże."
+      ],
+      "whyItMatters": "Rynek aut jest dobrym, szybko czytelnym wskaźnikiem nastrojów konsumenckich.",
+      "context": "To jeden z nielicznych pozytywnych krajowych sygnałów w tym slocie.",
+      "watchNext": [
+        "Sprawdzić, czy TVN24 poda liczby i podział na segmenty.",
+        "Obserwować, czy trend utrzyma się w kolejnych raportach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wyraźne odbicie na rynku aut. Najwyższy wynik w tym roku",
+          "url": "https://tvn24.pl/biznes/moto/sprzedaz-samochodow-mocne-odbicie-na-rynku-aut-najwyzszy-wynik-w-tym-roku-raport-otomoto-st9144112"
+        }
+      ],
+      "tags": [
+        "motoryzacja",
+        "sprzedaż",
+        "konsumpcja",
+        "biznes"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-ai-obrona-hakerzy",
+      "section": "Technologia",
+      "title": "USA szykują AI-obronę przed hakerami",
+      "lead": "Biały Dom uruchamia projekt Gold Eagle.",
+      "whatHappened": "TVN24 podaje, że administracja USA przygotowuje nową obronę przed hakerami, a kluczową rolę ma odegrać AI. Materiał wskazuje na projekt Gold Eagle i na to, że firmy mają przekazywać modele do oceny.",
+      "keyFacts": [
+        "To nowa amerykańska inicjatywa cyberbezpieczeństwa.",
+        "W centrum ma być wykorzystanie modeli AI.",
+        "TVN24 sugeruje, że Biały Dom nie ujawnia jeszcze pełnych szczegółów."
+      ],
+      "reactions": [
+        "To kolejny sygnał, że cyberobrona staje się polem bezpośredniej polityki państwa.",
+        "Temat może zainteresować także branżę AI i dostawców bezpieczeństwa."
+      ],
+      "whyItMatters": "Łączy bezpieczeństwo cyfrowe z regulacją i testowaniem modeli AI.",
+      "context": "To świeży techniczny temat z krajowego biznes/tech bloku TVN24.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się oficjalny brief Białego Domu.",
+        "Śledzić, które firmy lub modele wejdą do oceny."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: USA szykują nową obronę przed hakerami. Kluczową rolę odegra AI",
+          "url": "https://tvn24.pl/biznes/tech/bialy-dom-bierze-sie-za-luki-w-zabezpieczeniach-rusza-projekt-gold-eagle-st9144081"
+        }
+      ],
+      "tags": [
+        "AI",
+        "cyberbezpieczeństwo",
+        "USA",
+        "technologia"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-emerytury-prognoza",
+      "section": "Gospodarka",
+      "title": "Emerytury mogą wzrosnąć wyraźniej",
+      "lead": "Nowa prognoza podbija oczekiwania waloryzacyjne.",
+      "whatHappened": "TVN24 opisało nową prognozę waloryzacji emerytur. Materiał wskazuje, że wyższa od oczekiwań inflacja w 2026 roku może przełożyć się na korzystniejsze podwyżki świadczeń w 2027 roku.",
+      "keyFacts": [
+        "To prognoza, a nie finalna decyzja.",
+        "Kluczowym czynnikiem jest inflacja w 2026 roku.",
+        "Materiał dotyczy przyszłorocznej waloryzacji świadczeń."
+      ],
+      "reactions": [
+        "To ważny sygnał dla seniorów i dla budżetowego planowania gospodarstw domowych.",
+        "Wrażliwość na inflację sprawia, że temat może wracać przy kolejnych danych makro."
+      ],
+      "whyItMatters": "Waloryzacja emerytur wpływa na realny dochód milionów osób.",
+      "context": "To krajowy temat gospodarczy, który TVN24 mocno eksponuje w bieżącym slocie.",
+      "watchNext": [
+        "Sprawdzić kolejne dane inflacyjne i płacowe.",
+        "Obserwować, czy rząd skomentuje prognozę waloryzacji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Tak mogą wzrosnąć emerytury. Nowa prognoza",
+          "url": "https://tvn24.pl/biznes/dla-seniora/waloryzacja-emerytur-2027-tabela-st9144080"
+        }
+      ],
+      "tags": [
+        "emerytury",
+        "inflacja",
+        "waloryzacja",
+        "gospodarka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-iran-trade-routes",
+      "section": "Świat",
+      "title": "Iran grozi blokadą kolejnych szlaków handlowych",
+      "lead": "BBC znów podbija ryzyko wokół Ormuzu.",
+      "whatHappened": "BBC pisze, że Iran grozi blokadą kolejnych szlaków handlowych po nowych amerykańskich strikes. W centrum pozostaje Ormuz i bezpieczeństwo przepływu surowców oraz towarów.",
+      "keyFacts": [
+        "BBC łączy groźbę z nowymi strikes USA.",
+        "Wątek dotyczy szlaków handlowych i żeglugi.",
+        "Ormuz pozostaje głównym punktem napięcia."
+      ],
+      "reactions": [
+        "Każde kolejne oświadczenie może poruszyć rynek ropy i ubezpieczeń morskich.",
+        "To też sygnał dla armatorów i państw regionu."
+      ],
+      "whyItMatters": "To bezpośredni potencjalny impuls dla cen energii i globalnego handlu.",
+      "context": "To najświeższy world lead z BBC RSS z 15 lipca.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się formalny komunikat morski lub wojskowy.",
+        "Obserwować natychmiastową reakcję rynku ropy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Iran threatens to block more trade routes as US launches fresh strikes",
+          "url": "https://www.bbc.co.uk/news/articles/c9323zgq6wvo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Ormuz",
+        "ropa",
+        "handel"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-hormuz-toll",
+      "section": "Świat",
+      "title": "Trump wycofuje się z tollu na Ormuz",
+      "lead": "BBC widzi trudniejszą drogę do wygaszenia wojny.",
+      "whatHappened": "BBC opisuje nagły zwrot Donalda Trumpa ws. planowanego tollu dla ruchu przez Ormuz. W interpretacji redakcji to sygnał, że wygaszanie konfliktu z Iranem staje się dla Waszyngtonu trudniejsze.",
+      "keyFacts": [
+        "Chodzi o planowany toll na przepływ przez Ormuz.",
+        "Trump wycofał się z wcześniejszego pomysłu.",
+        "BBC przedstawia to jako element szerszego kryzysu politycznego."
+      ],
+      "reactions": [
+        "Rynek może odczytać to jako dowód chaosu decyzyjnego.",
+        "Sprawa wzmacnia wrażenie, że konflikt wciąż eskaluje."
+      ],
+      "whyItMatters": "Każdy zwrot wokół Ormuzu przekłada się na energię, logistykę i politykę USA.",
+      "context": "To drugi mocny materiał BBC o Iranie, aktualny w tym samym slocie.",
+      "watchNext": [
+        "Śledzić, czy pojawi się nowy plan ochrony żeglugi.",
+        "Obserwować komentarze Gulf states i armatorów."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Trump retreat over Hormuz tolls suggests he is struggling to end Iran war",
+          "url": "https://www.bbc.co.uk/news/articles/crele3r8j19o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Trump",
+        "Iran",
+        "Ormuz",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-ukraina-morze-czarne-tankowce",
+      "section": "Świat",
+      "title": "Rosyjskie ataki zabijają osiem osób, a Ukraina uderza w tankowce",
+      "lead": "BBC opisuje kolejną morską wymianę ciosów.",
+      "whatHappened": "BBC podało, że rosyjskie ataki zabiły osiem osób, a Ukraina uderzyła w tankowce na Morzu Czarnym. To utrzymuje presję na szlaki morskie i bezpieczeństwo regionu Morza Czarnego.",
+      "keyFacts": [
+        "BBC łączy ofiary po stronie ukraińskiej z uderzeniami na tankowce.",
+        "Wątek dotyczy Morza Czarnego.",
+        "To kolejna eskalacja w wojnie rosyjsko-ukraińskiej."
+      ],
+      "reactions": [
+        "Ruch może podbić napięcie wokół ubezpieczeń i transportu morskiego.",
+        "Pokazuje, że wojna dalej przenika gospodarkę i żeglugę."
+      ],
+      "whyItMatters": "Bezpieczeństwo Morza Czarnego wpływa na eksport, energię i regionalną stabilność.",
+      "context": "To świeży world update z BBC World RSS.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się oficjalny bilans ofiar i szkód.",
+        "Obserwować reakcję Ukrainy i Rosji na morzu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Russian attacks kill eight as Ukraine hits Black Sea oil tankers",
+          "url": "https://www.bbc.co.uk/news/articles/c8929jv8kdzo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "Morze Czarne",
+        "żegluga"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-usa-wysylka-statkow",
+      "section": "Świat",
+      "title": "USA przekierowały dwa statki handlowe",
+      "lead": "CNN pokazuje praktyczne skutki blokady.",
+      "whatHappened": "CNN podało w live updates, że amerykańskie wojsko przekierowało dwa statki handlowe po wznowieniu blokady. To twardy, operacyjny sygnał, że spór wokół żeglugi już wpływa na ruch morski.",
+      "keyFacts": [
+        "CNN opisuje dwa przekierowane statki.",
+        "Temat jest częścią live updates o wojnie Iran-USA.",
+        "Wątek dotyczy bieżącej blokady i ochrony żeglugi."
+      ],
+      "reactions": [
+        "To bardziej namacalny dowód niż sama retoryka o Ormuzie.",
+        "Armatorzy mogą traktować to jako sygnał wzmożonego ryzyka."
+      ],
+      "whyItMatters": "Przekierowania statków to bezpośredni koszt wojny dla handlu światowego.",
+      "context": "To najświeższy live-update CNN z 15 lipca.",
+      "watchNext": [
+        "Sprawdzić, czy liczba przekierowań rośnie.",
+        "Obserwować, czy pojawią się komunikaty marin/insurance."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Live Updates - Iran war",
+          "url": "https://www.cnn.com/2026/07/15/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "USA",
+        "żegluga",
+        "Iran",
+        "CNN"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-rosja-ukraina-woda",
+      "section": "Świat",
+      "title": "Ukraina odcina Rosję od ważnej drogi wodnej",
+      "lead": "CNN pisze o kryzysie w stylu Ormuzu nad Morzem Azowskim.",
+      "whatHappened": "CNN opisuje sytuację, w której Ukraina wymusza shutdown kluczowej drogi wodnej, a redakcja porównuje to do kryzysu wokół Ormuzu. To pokazuje, że wojna przenosi się także na infrastrukturę morską i logistyczną Rosji.",
+      "keyFacts": [
+        "Temat dotyczy wojny Rosja-Ukraina.",
+        "CNN używa porównania do kryzysu Ormuzu.",
+        "W centrum jest ważny szlak wodny i jego zamknięcie."
+      ],
+      "reactions": [
+        "To oznacza dalszą presję na rosyjską logistykę.",
+        "Porównanie do Ormuzu pokazuje skalę wpływu na handel i transport."
+      ],
+      "whyItMatters": "Zmiany w tej trasie wpływają na logistykę wojskową i eksportową Rosji.",
+      "context": "To jedna z głównych analiz CNN na stronie głównej.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się dokładniejszy opis skutków dla żeglugi.",
+        "Obserwować reakcję Moskwy i Ukrainy."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Russia-Ukraine war",
+          "url": "https://www.cnn.com/2026/07/15/world/russia-ukraine-sea-of-azov-intl"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "Morze Azowskie",
+        "CNN"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-chiny-wzrost",
+      "section": "Gospodarka",
+      "title": "Chiński wzrost hamuje poniżej celu",
+      "lead": "BBC pokazuje słabszy popyt i presję z wojny Iran-USA.",
+      "whatHappened": "BBC podało, że chińska gospodarka wyhamowała i nie trafiła w cel wzrostu. Redakcja wskazuje na słabszy popyt krajowy, a także wpływ wojny Iran-USA na ceny ropy.",
+      "keyFacts": [
+        "Wzrost okazał się słabszy od celu.",
+        "BBC wskazuje na słabszy popyt wewnętrzny.",
+        "Wojna na Bliskim Wschodzie dokłada presję kosztową przez ropę."
+      ],
+      "reactions": [
+        "To może pogłębiać ostrożność na rynkach.",
+        "Słabsze Chiny oznaczają też mieszany sygnał dla globalnego popytu."
+      ],
+      "whyItMatters": "Chiny pozostają jednym z głównych motorów globalnego wzrostu i handlu.",
+      "context": "To kolejny światowy materiał z BBC World RSS z 15 lipca.",
+      "watchNext": [
+        "Obserwować reakcję giełd i surowców.",
+        "Sprawdzić, czy pojawią się kolejne dane o eksporcie i konsumpcji."
+      ],
+      "sources": [
+        {
+          "title": "BBC: China economic growth falls sharply, missing target",
+          "url": "https://www.bbc.co.uk/news/articles/cd959x4edy8o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Chiny",
+        "PKB",
+        "gospodarka",
+        "BBC"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 homepage",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 meteo/home alert",
+      "url": "https://tvn24.pl/tvnmeteo/polska/alert-rcb-w-kolejnych-powiatach-st9142984"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN homepage",
+      "url": "https://www.cnn.com"
+    },
+    {
+      "title": "gov.pl RCB",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-silny-wiatr-i-intensywne-opady-deszczu-1507"
+    },
+    {
+      "title": "gov.pl MON",
+      "url": "https://www.gov.pl/web/premier/rzad-porzadkuje-rynek-najmu-krotkoterminowego-wieksza-ochrona-turystow-i-mieszkancow"
+    }
+  ]
+}

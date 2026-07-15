@@ -2,6 +2,9 @@
 
 ## Open
 
+- Watch whether MON or NATO add a follow-up on the Baltic interception and any posture change.
+- Watch whether the widened RCB alert turns into outages, local damage or a new warning region.
+- Watch whether the White House Gold Eagle project gets a formal brief or vendor list.
 - Watch whether RARS arrests get a written prokuratura note with names and charges.
 - Watch whether the Kraków near-miss gets a rail-operator or regulator report.
 - Watch whether the Pałac Prezydencki incident gets a police clarification.
