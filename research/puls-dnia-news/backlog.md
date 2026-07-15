@@ -2,6 +2,12 @@
 
 ## Open
 
+- Watch whether RARS arrests get a written prokuratura note with names and charges.
+- Watch whether the Kraków near-miss gets a rail-operator or regulator report.
+- Watch whether the Pałac Prezydencki incident gets a police clarification.
+- Watch whether the Stoszowice case gets a prosecutor or veterinary clarification.
+- Watch whether the Iran / Hormuz escalation triggers a fresh maritime advisory or oil-price follow-through.
+- Watch whether the current hail-risk alert produces local damage or power interruptions.
 - Watch whether prokuratura issues a written follow-up after today's zarzuty for Świrski.
 - Watch whether Trump's threat against Iranian civilian infrastructure turns into an official policy statement or a follow-up strike.
 - Watch whether the A2 crash near Koło clears quickly or turns into a longer traffic disruption.
