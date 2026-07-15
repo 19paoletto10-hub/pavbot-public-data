@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-16-0008",
+  "status": "material_update",
+  "generatedAt": "2026-07-15T22:19:43.396515+00:00",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-16T00:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Computer Use reported the macOS lock-screen blocker, so the live review completed through read-only Safari Apple Events/DOM on old.reddit.com in the logged-in local Safari session.",
+      "A pre-shortlist filter removed every Reddit post URL path that appeared in runs 2026-07-15-0008 and 2026-07-14-1808, so old.reddit and www.reddit variants could not bypass freshness filtering.",
+      "Shortlist post and top-comment review stayed read-only on old.reddit.com in the same Safari-driven workflow.",
+      "The five cleanest fresh survivors were whenWeWillSeeSubscriptionForMarkdownFiles, everythingIsAString, the Heathrow AirPods thread, the online-tip negative-number gag, and the bar-table meet-cute.",
+      "Most fresh memes still clustered around Argentina/England/World Cup discourse, while facepalm and AskReddit skewed political, culture-war, or too diffuse for a compact public-safe payoff.",
+      "At least five safe fresh cards survived the filter and read-only review, so the topic contract still prefers a new public bundle over keeping the older winner set.",
+      "No Reddit social actions were performed.",
+      "origin/main already exposed bundle 2026-07-14-1808 before this run.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-14-1808",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-16-0008-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-16-0008-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-16-0008-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uw3w0r/tarcreatezeefile",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uw82sn/requirementamnesia",
+    "https://www.reddit.com/r/memes/comments/1uw2x60/hate_it_when_thishappens",
+    "https://www.reddit.com/r/memes/comments/1uw7pwg/every_monday_morning",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uw0jyl/no_sour_cream_pls"
+  ],
+  "newCandidates": [
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "whenWeWillSeeSubscriptionForMarkdownFiles",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uxdf1f/whenwewillseesubscriptionformarkdownfiles/",
+      "scoreLabel": "1.3K",
+      "decision": "selected_for_new_bundle_clean_dev_oneliner_with_short_comment_payoff"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "everythingIsAString",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1ux0lp1/everythingisastring/",
+      "scoreLabel": "1.3K",
+      "decision": "selected_for_new_bundle_broad_frontend_logic_joke_with_strong_comment_layer"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Watching a Heathrow (UK) baggage handler vibe to ABBA on my wife's stolen AirPods",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1ux91kr/watching_a_heathrow_uk_baggage_handler_vibe_to/",
+      "scoreLabel": "4.9K",
+      "decision": "selected_for_new_bundle_clear_everyday_absurd_with_readable_revenge_comments"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Why would I tip for an online clothing order?",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1ux5e2m/why_would_i_tip_for_an_online_clothing_order/",
+      "scoreLabel": "3.8K",
+      "decision": "selected_for_new_bundle_compact_dark_pattern_joke_with_negative_tip_comment_payoff"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Felt lucky when I found a table to watch the game..",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uxfdsl/felt_lucky_when_i_found_a_table_to_watch_the_game/",
+      "scoreLabel": "1.5K",
+      "decision": "selected_for_new_bundle_comment_layer_turns_minor_annoyance_into_hallmark_meet_cute"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Now the Cape Verde vs Spain 0-0 is even more immortalized",
+      "url": "https://www.reddit.com/r/memes/comments/1ux53f0/now_the_cape_verde_vs_spain_00_is_even_more/",
+      "scoreLabel": "28.0K",
+      "decision": "listing_winner_but_comment_layer_stays_inside_argentina_hate_and_world_cup_discourse_too_narrow_for_public_bundle"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Hardest working team in football.",
+      "url": "https://www.reddit.com/r/memes/comments/1ux3rcb/hardest_working_team_in_football/",
+      "scoreLabel": "11.3K",
+      "decision": "rejected_because_comments_turn_into_player-profile_and_sports_talk_not_clean_punchline"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "whenPolyglotProgrammingGoesHorriblyWrong",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1ux60aq/whenpolyglotprogramminggoeshorriblywrong/",
+      "scoreLabel": "1.4K",
+      "decision": "fun_visual_but_comment_layer_admires_editing_craft_more_than_it_delivers_extra_humor"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "cccPlusPlus",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1ux125y/cccplusplus/",
+      "scoreLabel": "2.1K",
+      "decision": "clean_and_safe_but_lost_tiebreak_on_bundle_variety_against_milder_consumer_cards"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "This Organ was $37,000. Now it's essentially worthless.",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1ux7hcb/this_organ_was_37000_now_its_essentially_worthless/",
+      "scoreLabel": "31.5K",
+      "decision": "high_engagement_but_comment_layer_moves_into_tax_writeoff_and_church_donation_discourse_more_practical_than_funny"
+    }
+  ]
+}

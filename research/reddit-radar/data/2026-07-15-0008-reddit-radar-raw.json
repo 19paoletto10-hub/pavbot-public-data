@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-15-0008",
+  "status": "no_material_change",
+  "generatedAt": "2026-07-14T22:11:00+00:00",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-15T00:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Read-only Safari and old.reddit.com hot listings powered the live 00:08 sweep in the logged-in local Safari session.",
+      "A pre-shortlist filter removed every Reddit post URL path that appeared in runs 2026-07-14-1808 and 2026-07-14-1208, so old.reddit and www.reddit variants could not bypass freshness filtering.",
+      "Shortlist review stayed read-only on old.reddit.com post pages with top comments in the same Safari-driven workflow.",
+      "The cleanest fresh challengers were tryEveryPasswordTwice and the spaghetti-sandwich mix-up, but the midnight cluster did not leave four fresh cards that were simultaneously light, public-safe, and stronger than the active bundle as a whole.",
+      "Several visible candidates were left out because they drifted into pregnancy ambiguity, BBC or toe-tag innuendo, teacher-death / miscarriage stories, pricing or retail ranting, or broad AskReddit list discourse.",
+      "No Reddit social actions were performed.",
+      "origin/main already exposed bundle 2026-07-14-1808 before this run.",
+      "Current public winner bundle remained 2026-07-14-1808.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-14-1808",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-15-0008-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-15-0008-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-15-0008-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://www.reddit.com/r/memes/comments/1uw7pwg/every_monday_morning/",
+    "https://www.reddit.com/r/memes/comments/1uw2x60/hate_it_when_thishappens/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uw82sn/requirementamnesia/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uw3w0r/tarcreatezeefile/",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uw0jyl/no_sour_cream_pls/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uvez3w/youcanjuststopusingjava/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uujrl6/downfallofstackoverflow/",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uvlxlr/this_car_has_been_blocking_8_parking_spots_in_our/",
+    "https://www.reddit.com/r/facepalm/comments/1urvjgq/even_my_fortune_cookie_has_ads_now/"
+  ],
+  "newCandidates": [
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "tryEveryPasswordTwice",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uwe1ol/tryeverypasswordtwice/",
+      "scoreLabel": "1.1K",
+      "decision": "clean_dev_joke_but_not_enough_to_anchor_a_full_refresh_bundle"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "timeSaver",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uw0nh7/timesaver/",
+      "scoreLabel": "6.3K",
+      "decision": "starts_funny_but_comment_layer_turns_into_api_security_and_vendor_rant_discourse"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Bought ham and cheese sandwiches from the grocery store and every sandwich is stuffed with spaghetti",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uwcneh/bought_ham_and_cheese_sandwiches_from_the_grocery/",
+      "scoreLabel": "15.8K",
+      "decision": "usable_everyday_absurd_but_comment_layer_stays_on_store_worker_sabotage_theory_weaker_than_active_food_fail_card"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Bought a patch I can’t use as a patch",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uw7smc/bought_a_patch_i_cant_use_as_a_patch/",
+      "scoreLabel": "31.0K",
+      "decision": "starts_light_but_comment_layer_drifts_into_patch_police_then_toe_tag_and_hospice_jokes_weaker_for_public_safe_digest"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "My girlfriend texted me to say she won't be on time for dinner.",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uwflp2/my_girlfriend_texted_me_to_say_she_wont_be_on/",
+      "scoreLabel": "53.8K",
+      "decision": "high_engagement_but_entire_payoff_depends_on_pregnancy_ambiguity_not_clean_public_safe_humor"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "My son got a happy meal from mcdonalds today.",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uw3qgl/my_son_got_a_happy_meal_from_mcdonalds_today/",
+      "scoreLabel": "34.8K",
+      "decision": "comment_layer_turns_into_fast_food_price_and_margin_rant_not_compact_humor_payoff"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Retail lockdown: why bother selling it?",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uwg17l/retail_lockdown_why_bother_selling_it/",
+      "scoreLabel": "10.8K",
+      "decision": "thoughtful_retail_discourse_but_too_broad_and_logistics_heavy_for_humor_digest"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Worse than FBI, CIA, DVD, BBC and ISS combined",
+      "url": "https://www.reddit.com/r/memes/comments/1uwbqyg/worse_than_fbi_cia_dvd_bbc_and_iss_combined/",
+      "scoreLabel": "14.8K",
+      "decision": "listing_winner_but_comment_layer_moves_too_fast_into_bbc_innuendo_for_public_safe_bundle"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Kids are ruthless",
+      "url": "https://www.reddit.com/r/memes/comments/1uwi1qa/kids_are_ruthless/",
+      "scoreLabel": "3.0K",
+      "decision": "reviewed_but_left_out_because_top_comments_turn_into_miscarriage_and_teacher_death_stories"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Starting to wonder what I actually look like",
+      "url": "https://www.reddit.com/r/memes/comments/1uw2ic4/starting_to_wonder_what_i_actually_look_like/",
+      "scoreLabel": "4.4K",
+      "decision": "more_camera_distortion_and_self_image_discussion_than_clean_short_humor_payoff"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Following the game is gonna be tough",
+      "url": "https://www.reddit.com/r/memes/comments/1uwhoqf/following_the_game_is_gonna_be_tough/",
+      "scoreLabel": "8.0K",
+      "decision": "comment_layer_drifts_into_sexualized_and_policy_discourse_not_light_public_safe_humor"
+    },
+    {
+      "subreddit": "r/AskReddit",
+      "title": "What’s the most overhyped food in America that everyone pretends is amazing?",
+      "url": "https://www.reddit.com/r/AskReddit/comments/1uwbxoz/whats_the_most_overhyped_food_in_america_that/",
+      "scoreLabel": "10.6K",
+      "decision": "engaging_but_diffuse_food_list_thread_not_a_tight_loophole_or_single_payoff_card"
+    },
+    {
+      "subreddit": "r/AskReddit",
+      "title": "Which actor is genuinely terrible at acting?",
+      "url": "https://www.reddit.com/r/AskReddit/comments/1uw12rn/which_actor_is_genuinely_terrible_at_acting/",
+      "scoreLabel": "12.8K",
+      "decision": "reviewed_but_left_out_because_thread_slides_into_celebrity_abuse_crime_discourse_far_too_heavy_for_public_humor_digest"
+    }
+  ]
+}
