@@ -1,8 +1,12 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-14
+Last updated: 2026-07-15
 
 ## Current Understanding
+
+Poranny refresh z 2026-07-15 przesuwa temat z modeli na systemowe interfejsy: Apple otwiera publiczną betę iOS 27 z Siri AI, a Google dokłada browseable Images i generowanie obrazów bezpośrednio do Search. To oznacza, że consumer AI coraz bardziej staje się domyślną warstwą produktu, a nie osobnym chatbotem.
+
+Ten sam dzień mocniej ustawia też dwa inne wektory: prawo i kapitał. Google dostaje nowy pozew o Gemini, OpenAI musi odpierać zarzuty Apple i jednocześnie bronić ścieżki sprzętowej, a AI drug discovery przyciąga kolejne duże rundy. Na tym tle Anthropic buduje zaufanie przez edukację i Kanadę, a Product Hunt i Hacker News nadal premiują praktyczne narzędzia operacyjne zamiast benchmarkowego szumu.
 
 Wieczorny refresh z 2026-07-14 dołącza do już znanej osi infrastruktury i governance warstwę dystrybucji oraz konsumenckiego UX: Vercel pokazuje, że open-weight modele odpowiadają już za 29% ruchu przez AI Gateway, Spotify uruchamia beta "Talk to Spotify", Meta cofa kontrowersyjne użycie publicznych zdjęć z Instagrama, Google dodaje AI disclosure do reklam, Anthropic lokalizuje ceny Claude w Indiach, a OpenAI zaczyna projektować ChatGPT pod rodziny. To sugeruje, że rynek wchodzi w etap, w którym cena, consent, household use case i routing są równie ważne jak capability modeli.
 

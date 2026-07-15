@@ -4,6 +4,13 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Siri AI public beta rollout | Apple's iOS 27 beta makes Siri AI a system-level consumer AI test, not just a feature demo | Watch rollout breadth, on-device context, regional gating and stability on the public beta | Open |
+| High | Track Google visual Search rollout | Google is pushing Images/Search from discovery to generation, which could reprice visual search | Watch whether browseable Images and AI Overviews expand beyond US/English and whether collections stick | Open |
+| High | Track AI copyright escalation | Google publisher suits and OpenAI sanction motions show training-data licensing is a durable battleground | Watch complaints, discovery fights, settlement pressure and any licensing shifts | Open |
+| High | Track frontier AI governance pressure | Hassabis's watchdog proposal plus the economists' open letter turn AI control and job impact into one policy story | Watch whether proposals turn into institutions, hearings or legislative language | Open |
+| Medium | Track Anthropic education and Canada expansion | Claude for Teachers and Canadian funding show Anthropic building trust through sector and region-specific moves | Watch school adoption, partner announcements and privacy response | Open |
+| Medium | Track AI drug discovery capital cluster | Chai Discovery and Miles Wang point to a capital-intensive science AI submarket with real venture momentum | Watch official round announcements, pharma partnerships and validation data | Open |
+| Medium | Track Product Hunt and HN practical AI signal | Community attention keeps clustering around tools and workflows rather than model hype | Watch whether the same product classes keep recurring across days | Open |
 | High | Track open-weight traffic share | Vercel says open-weight models are already 29% of AI Gateway traffic; this could redefine routing and cost strategy | Watch whether the share persists, whether other gateways report similar splits and how pricing changes affect mix | Open |
 | Medium | Track Spotify Talk to Spotify rollout | Spotify's conversational audio assistant is a concrete consumer AI beta with clear cross-device implications | Watch geographic expansion, retention and whether it becomes a stable discovery primitive | Open |
 | High | Track Meta consent rollback | Meta's removal of public-Instagram reference reuse shows how quickly AI features can hit a privacy wall | Watch opt-in redesigns, policy changes and whether other platforms copy the rollback | Open |
@@ -35,7 +42,7 @@
 | High | Track Claude Cowork cross-device adoption | Mobile/web sessions may become the default agent UX | Watch enterprise limits, approvals and handoff behavior | Open |
 | High | Track Discord moderation false positives | The ban bug shows brittleness in AI safety stacks | Watch root-cause fix, appeal flow and recurrence risk | Open |
 | High | Track Forterra battlefield autonomy | Ukraine deployment gives rare public proof of ground autonomy at scale | Watch new mission data, procurement and safety lessons | Open |
-| High | Track Apple vs OpenAI hardware lawsuit | Apple is attacking OpenAI's hardware ambitions with trade secret claims | Watch complaint, OpenAI response and device timeline | Open |
+| High | Track Apple vs OpenAI hardware lawsuit | Apple is attacking OpenAI's hardware ambitions while Reuters says the first device may be a moving screenless speaker | Watch complaint, OpenAI response, device form factor and launch timeline | Open |
 | High | Track OpenAI math-proof verification | GPT-5.6 Sol Ultra's cycle double cover claim needs independent validation | Watch mathematician response, peer review and prompt transparency | Open |
 | High | Track Meta Alberta AI data center | The Alberta buildout turns AI infra into a grid, water and local policy story | Watch power, cooling, permits and local reaction | Open |
 | High | Track EU Meta addictive design enforcement | DSA findings could force changes to infinite scroll and autoplay defaults | Watch Meta response, fines and product changes | Open |
@@ -82,7 +89,7 @@
 | Medium | Track Google Search privacy backlash | Search Services History and saved media make AI training opt-out a mainstream product issue | Watch user reaction, legal scrutiny and any UI or policy changes | Open |
 | Medium | Track agent search and observability stack | Vercel, AnySearch, Typeahead and Octolens show agents moving into real productized workflows | Watch Product Hunt traction, enterprise adoption and follow-on launches | Open |
 | Medium | Track Reddit AI moderation metrics | Reddit's spam and fake-vote reductions give a rare concrete moderation benchmark | Watch whether the gains persist and whether other platforms publish similar data | Open |
-| Medium | Track Siri voice customization rollout | Apple's Siri controls show voice UX becoming a differentiator in consumer AI | Watch whether the beta features survive to stable release and broader regions | Open |
+| Medium | Track Siri voice customization rollout | Siri's voice UX and the public beta together show Apple trying to make assistant behavior feel native to the system | Watch whether the beta features survive to stable release and broader regions | Open |
 | High | Track AI memory spillover to consumer hardware | Apple price increases tie AI data-center demand for memory/storage to Mac, iPad and device pricing | Recheck official Apple pricing, retailer lag, supplier commentary, Polish consumer coverage and whether other OEMs follow | Open |
 | Medium | Track autonomous AI R&D labs | Mirendil's $200M seed round suggests investors are funding systems that automate AI research loops, not only end-user agents | Watch first product/model release, technical evals, NVIDIA role, safety framing and competing labs | Open |
 | Medium | Track public AI chip economics | Cerebras' first public earnings reaction shows margin pressure, data-center capacity and customer concentration can matter as much as AI compute demand | Watch Cerebras follow-up filings, OpenAI/AWS capacity obligations, margin guidance, and comparable Nvidia/AMD/Broadcom signals | Open |
