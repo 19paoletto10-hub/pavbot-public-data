@@ -41,6 +41,12 @@
 | Medium | Track ESA financing package | TVN/KPRM detail PFR/BGK fund up to PLN 500m, doubled spending and first Polish spacecraft ambitions | Watch KPRM, ESA, MF/MRiT, PFR, BGK for instruments, eligibility, timeline and city network | Open |
 | Medium | Track July 14 storm and flood-risk alerts | IMGW/TVN report broad first/second-degree warnings, RCB keeps 13/14 alert for downpours/storms and possible flooding | Monitor IMGW/RCB/PSP for updated warnings and actual damage; use only official instructions in audio | Open |
 | Medium | Track Graham replacement and Russia-sanctions continuity | Darline Graham Nordone appointed temporarily, special election calendar starts soon, Senate sanctions leadership remains uncertain | Watch AP/Senate/White House/Kyiv for Russia sanctions bill and committee ownership | Open |
+| High | Track 15 July regional energy escalation | IRGC threatened to halt all Middle East oil/gas exports after U.S. reimposed blockade; U.S. strikes wounded 260+ and Iran attacked Bahrain/Kuwait/Jordan | Check AP, CENTCOM, UKMTO, IMO, Gulf state statements, oil prices, shipping and insurance before podcast/evening update | Open |
+| High | Track Coalition of the Willing exercises in Poland | KPRM says first exercises with British and French troops will be held in Poland in autumn, while no new Polish equipment donations are planned now | Watch KPRM, MON, UK/France readouts; keep location and routing generic and avoid operational details | Open |
+| High | Track U.S. stockpile strain and Ukraine air-defense gap | AP says Iran war reduced U.S. Tomahawk/Patriot/THAAD stocks and replenishment may take at least three years, while Ukraine needs air defense before winter | Watch AP, Pentagon/DoD, NATO, Ukraine and industry statements for production and delivery decisions | Open |
+| Medium | Track Yemen spillover risk | AP says Houthi-Saudi exchange around Sanaa/Abha airports is the most significant confrontation in years and is linked to Iran-war tensions | Monitor AP, UN, Saudi/Yemen/Houthi channels and Red Sea shipping advisories | Open |
+| Medium | Track 15 July RCB alert | RCB warns of storms, strong wind, heavy rain and possible power outages on 15 July | Check RCB/IMGW/PSP updates and use only official safety advice | Open |
+| Medium | Track Bangkok fire accountability | AP raised death toll to 32 and families are seeking compensation while exits/cause remain under investigation | Watch AP and Thai authorities for investigation, compensation and critical patient updates | Open |
 
 ## Review Notes
 
@@ -171,6 +177,12 @@
   cluster, KPRM/TVN24 for ESA Warsaw, and TVN Meteo/IMGW/RCB for Polish weather
   alerts. Podcast should lead Ormuz and Ukraine air defense, then use
   accession, ESA and weather as shorter Polish-European blocks.
+- 2026-07-15: Wednesday morning research created a material update. Strongest
+  sources were AP for Ormuz/Yemen/Ukraine/U.S. stockpiles/Bangkok, KPRM for
+  Polish Coalition of the Willing exercises, Consilium for EU accession cluster
+  6, and RCB for the national weather alert. Podcast should lead Ormuz, then
+  Poland as Coalition exercise host and Ukraine/stockpile constraints, with
+  Yemen, EU enlargement and weather as shorter blocks.
 
 ## Done
 

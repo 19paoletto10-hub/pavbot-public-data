@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-14
+Last updated: 2026-07-15
 
 ## Current Understanding
 
@@ -167,6 +167,17 @@ blokadę i naloty, więc kryzys przesunął się z taryfy na realne wymuszanie
 balistycznych nad Ukrainą, a Consilium formalnie otworzyło klaster 6 dla
 Ukrainy. Wątek paryski dostaje teraz bardziej konkretny kształt w koalicji
 antybalistycznej, lecz nadal bez szybkiego harmonogramu wdrożenia.
+Po porannym runie 15 lipca Ormuz przeszedł z samej blokady i nalotów w groźbę
+systemową: AP podaje, że Straż Rewolucyjna zagroziła zatrzymaniem eksportu
+energii z całego Bliskiego Wschodu, a USA prowadzą siedmiogodzinne uderzenia i
+utrzymują dużą obecność morską. Kryzys zaczyna wyraźniej rozlewać się
+regionalnie przez Jemen, gdzie rozejm Huti-Arabia Saudyjska jest testowany po
+wymianie uderzeń wokół lotnisk w Sanie i Abha. Najważniejszy polski konkret to
+KPRM: pierwsze ćwiczenia Koalicji Chętnych mają odbyć się jesienią w Polsce z
+udziałem wojsk brytyjskich i francuskich, przy równoczesnym braku nowych
+donacji sprzętu dla Ukrainy. Wątek ukraiński łączy się dziś z problemem
+amerykańskich zapasów Patriot/THAAD/Tomahawk, a UE domyka formalne otwarcie
+klastra 6 dla Ukrainy i Mołdawii.
 
 ## Stable Facts
 
@@ -236,6 +247,20 @@ antybalistycznej, lecz nadal bez szybkiego harmonogramu wdrożenia.
 - Ormuz po 14 lipca: śledzić, czy opłata 20 procent i blokada są egzekwowane
   wobec statków, czy pozostają deklaracją polityczną; osobno monitorować
   reakcję IMO, UKMTO i ubezpieczycieli.
+- Ormuz po 15 lipca: traktować groźbę zatrzymania eksportu energii z całego
+  regionu jako najwyższy sygnał ryzyka, ale oddzielać deklaracje IRGC od realnej
+  przepustowości statków, cen ropy i komunikatów armatorów.
+- Koalicja Chętnych w Polsce: śledzić datę, lokalizację ogólną, uczestników i
+  zakres jesiennych ćwiczeń, bez publikowania operacyjnych szczegółów ruchu
+  wojsk.
+- Braki amerykańskich zapasów: łączyć wątek Patriot/THAAD/Tomahawk z Ukrainą,
+  Iranem i potencjalnym konfliktem w Azji, ale nie wyciągać wniosków o
+  gotowości bojowej bez źródeł instytucjonalnych.
+- Jemen/Huti: monitorować, czy poniedziałkowa wymiana ataków pozostaje
+  incydentem lotniskowym, czy wraca ryzyko ataków na Morzu Czerwonym i szlaki
+  handlowe.
+- RCB 15 lipca: w audio podawać wyłącznie praktyczne zalecenia służb, bez
+  szczegółowych prognoz wykraczających poza komunikaty RCB/IMGW.
 - Freyja/Patriot: oddzielać europejski projekt antybalistyczny od
   natychmiastowej potrzeby 300 pocisków Patriot na zimę; śledzić, czy pojawią
   się realne dostawy i finansowanie.
