@@ -2,7 +2,7 @@
 
 ## Open
 
-- Watch whether prokuratura publishes the promised communication on Świrski and the full zarzut for Cezary J.
+- Watch whether prokuratura issues a written follow-up after today's zarzuty for Świrski.
 - Watch whether Trump's threat against Iranian civilian infrastructure turns into an official policy statement or a follow-up strike.
 - Watch whether the A2 crash near Koło clears quickly or turns into a longer traffic disruption.
 - Watch whether the tanker casualties and Gulf interceptions produce a fresh official maritime note from the UAE or Bahrain.
@@ -16,9 +16,6 @@
 - Watch whether VeloBank publishes a formal layoff plan or the unions respond.
 - Watch whether the gigafabryka AI decision gets a timeline, partner list or extra financing detail in the next slot.
 
-- Watch whether CBA or prokuratura publishes a formal note on Maciej Świrski.
-- Watch whether the Świrski detention turns into a formal charge sheet or new
-  procedural step.
 - Watch whether the Jelenia Góra and Małopolska downpour widens into flood or outage alerts.
 - Watch whether Volkswagen confirms the scale and regional split of planned cuts.
 - Watch whether the Polish Tatra fatality gets a fuller Slovak rescue report or official identification.
@@ -101,3 +98,4 @@
   Europe/Warsaw cadence context.
 - Public manifest now exposes `puls-dnia-news` artifacts as `pulseNewsData`,
   so the bootstrap blocker is resolved.
+- Świrski's case advanced to zarzuty; only a written prokuratura follow-up remains open.
