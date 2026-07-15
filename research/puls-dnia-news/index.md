@@ -2,6 +2,12 @@
 
 ## Current State
 
+The 2026-07-15 21:05 slot shifts the feed from the afternoon Bałtyk/RCB
+cluster into late-day weather, transport and fuel pressure: orange alerts
+stay active, a station-paliw incident freezes road and rail traffic, PiS
+keeps generating internal signals, and the world block adds CNN's Iran,
+ICE, China and AI threads plus BBC's Black Sea and French policy updates.
+
 The 2026-07-15 18:01 slot shifts the feed toward a Baltic interception, a wider RCB storm alert, a public-safety arrest after online threats, an AI-backed cyberdefense project and a stronger car-market print. The world block remains dominated by Iran / Ormuz, but BBC and CNN now add fresher shipping, Ukraine and China updates that keep the external pressure high.
 
 The 2026-07-15 15:01 slot shifts the feed toward fresh domestic enforcement and safety items: Kaczyński's new Senate alliance, fresh RARS arrests, the Owińska anti-Ukrainian banner charges, the Pałac Prezydencki incident, the Kraków near-miss on the tracks and the Stoszowice child-death case. The alert block stays active with hail risk, while the world block turns back to Iran / Ormuz through BBC and CNN, adds China's weaker growth print, and keeps Black Sea shipping in view.

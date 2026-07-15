@@ -2,6 +2,12 @@
 
 ## Open
 
+- Watch whether the station-paliw incident gets a cause note, hazardous-material clarification or a full traffic update.
+- Watch whether the orange weather alerts turn into outages, local damage or a new warning region after 21:00.
+- Watch whether PiS turns the latest alliance / gesture cycle into a formal statement or disciplinary move.
+- Watch whether the Iran / Ormuz escalation triggers a fresh maritime advisory or oil-price follow-through.
+- Watch whether ICE's body-camera pledge becomes an official DHS directive after the two fatal incidents.
+- Watch whether the Chinese AI-companion rules trigger more platform removals or a formal response from Beijing.
 - Watch whether MON or NATO add a follow-up on the Baltic interception and any posture change.
 - Watch whether the widened RCB alert turns into outages, local damage or a new warning region.
 - Watch whether the White House Gold Eagle project gets a formal brief or vendor list.
