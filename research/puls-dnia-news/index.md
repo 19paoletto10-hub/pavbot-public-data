@@ -2,6 +2,8 @@
 
 ## Current State
 
+The 2026-07-16 21:02 slot snaps the feed back into a sharper core: PiS discipline, Morawiecki's counterattack, RARS procedure, Żabka's market move, Sony's packaging backlash and IMGW heat on the Polish side, then Poland-linked sabotage, Iran / Hormuz, Ukraine protests, Genoa sentencing and the Myanmar boats story abroad.
+
 The 2026-07-16 18:01 slot widens the feed into a more fragmented mix:
 PiS and Morawiecki escalate their public dispute, Tusk keeps KO tightly
 clustered, IMGW alerts stay live, and local safety keeps surfacing through

@@ -2,6 +2,12 @@
 
 ## Open
 
+- Watch whether PiS turns the ultimatum into actual exclusions or departures before the next slot.
+- Watch whether the Morawiecki counterattack gets a formal party response or a new escalation.
+- Watch whether the Poland-linked sabotage case gets a written note from Polish services or prosecutors.
+- Watch whether the Iran / Hormuz escalation triggers a maritime advisory or oil-price follow-through.
+- Watch whether the Ukraine protest wave turns into a reversal, reshuffle or Western reaction.
+- Watch whether the Myanmar boat disappearance gets an official rescue tally or casualty count.
 - Watch whether PiS turns the Morawiecki ultimatum into actual personnel decisions.
 - Watch whether the KO club meeting produces a formal message or policy shift.
 - Watch whether the RARS list-zelazny case gets a new prokuratura note or appeal.
