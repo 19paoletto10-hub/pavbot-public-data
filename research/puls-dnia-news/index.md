@@ -2,6 +2,8 @@
 
 ## Current State
 
+The 2026-07-16 09:01 slot shifts the feed toward a sharper domestic politics block: Tusk mobilizes the KO club, PiS issues a seven-day ultimatum for stowarzyszenia, Morawiecki and Kaczyński keep the internal line hot, while Swarzędz and UW keep the safety block active. Abroad, Gibraltar's border regime enters force, Europe forms an anti-ballistic coalition, and BBC/CNN plus CENTCOM keep Iran/Hormuz under active escalation.
+
 The 2026-07-15 21:05 slot shifts the feed from the afternoon Bałtyk/RCB
 cluster into late-day weather, transport and fuel pressure: orange alerts
 stay active, a station-paliw incident freezes road and rail traffic, PiS

@@ -4,7 +4,6 @@
 
 - Watch whether the station-paliw incident gets a cause note, hazardous-material clarification or a full traffic update.
 - Watch whether the orange weather alerts turn into outages, local damage or a new warning region after 21:00.
-- Watch whether PiS turns the latest alliance / gesture cycle into a formal statement or disciplinary move.
 - Watch whether the Iran / Ormuz escalation triggers a fresh maritime advisory or oil-price follow-through.
 - Watch whether ICE's body-camera pledge becomes an official DHS directive after the two fatal incidents.
 - Watch whether the Chinese AI-companion rules trigger more platform removals or a formal response from Beijing.
@@ -85,8 +84,6 @@
 - Watch whether the Warsaw rail disruption at Aleje Jerozolimskie clears or
   expands into wider commuter delays.
 - Watch whether IMGW and RCB escalate or lift the 13.07 storm alerts.
-- Watch whether Gibraltar's 15 July provisional application gets a separate
-  implementation note or border advisory.
 - Watch whether Ormuz rhetoric turns into shipping disruption or oil-price
   follow-through in the next slot.
 - Watch whether Wyszków services publish a formal rescue note or health update
@@ -114,3 +111,5 @@
 - Public manifest now exposes `puls-dnia-news` artifacts as `pulseNewsData`,
   so the bootstrap blocker is resolved.
 - Świrski's case advanced to zarzuty; only a written prokuratura follow-up remains open.
+- PiS's stowarzyszenia dispute has already become a formal ultimatum; the next check is only for actual exclusions or withdrawals.
+- Gibraltar's provisional application now has a published implementation follow-up, so the next check is only for travel or customs clarifications.
