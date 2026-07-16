@@ -201,6 +201,15 @@ Ukraine Facility dla branż dual-use i obronnych. Krajowo doszły dwa procesowe
 wątki odpowiedzialności za publiczne pieniądze: CBA/PFN i RARS/BGK, oraz
 wrażliwy społecznie follow-up przemocy i retoryki wokół relacji
 polsko-ukraińskich.
+Po wieczornym runie 16 lipca ciężar przesunął się z samego Ormuzu na Kijów,
+Londyn i polski blok hybrydowy: AP opisuje protesty po odsunięciu popularnego
+ukraińskiego ministra obrony i szerszą rekonstrukcję rządu, GOV.UK oraz
+President of Ukraine potwierdzają pożegnalną wizytę Keira Starmera w Kijowie
+z pakietem 300 mln euro i ścieżką dostawy 16 samolotów ze Szwecją, a
+Prokuratura Krajowa poinformowała o akcie oskarżenia przeciwko Illii K. za
+działania dywersyjne na rzecz obcego wywiadu. AP dołożyło też ostrzeżenie
+Polski, Litwy i Łotwy o możliwych rosyjskich prowokacjach hybrydowych wobec
+infrastruktury krytycznej.
 
 ## Stable Facts
 
