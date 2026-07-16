@@ -1,8 +1,12 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-15
+Last updated: 2026-07-16
 
 ## Current Understanding
+
+Dzisiejszy refresh mocno przesuwa temat z product UI na public trust i infrastrukturę. Common Sense ocenia Google Search AI jako niebezpieczne dla dzieci, Anthropic i OpenAI rozgrywają regulacje stan po stanie, OpenAI stafferzy finansują kontr-PAC, a Australia zamienia AI w problem standardów energetycznych i wodnych.
+
+Równolegle rynek wchodzi w fazę twardszej weryfikacji: Anthropic przyspiesza IPO, Product Hunt promuje red-pen workflows, a Hacker News pyta, czy ręczne pisanie kodu nadal ma sens. Wspólny mianownik to mniej hype'u o modelu, więcej kontroli, kosztów wdrożenia i dowodów działania.
 
 Wieczorny refresh z 2026-07-15 dokłada do dzisiejszej osi consumer AI wyraźną regionalizację i warstwę infrastruktury: Apple Intelligence dostaje zgodę na rollout w Chinach z udziałem Baidu i Alibaba, a Reuters opisuje też, że Apple rozgląda się za chipowymi przejęciami, bo własne serwery AI nie dowożą oczekiwanej wydajności. Równolegle OpenAI poprawia ChatGPT jako narzędzie pracy przez większy limit custom instructions i mocniejsze przeszukiwanie chatów, projektów oraz plików. To przesuwa temat z samych modeli na lokalne partnerstwa, backend compute i pamięć roboczą użytkownika.
 
@@ -184,8 +188,17 @@ transparentność środowiskową AI.
   regularnie nie działa bez logowania?
 - Jak odróżniać model-assisted math claims od rzeczywiście zweryfikowanych przełomów, zanim pojawi się peer review?
 
+## Review Notes
+
+- 2026-07-16: Dzisiejszy run przesunął środek ciężkości z UI i rolloutów na public trust, state policy, PAC tension oraz AI infrastructure w power/water stack.
+
 ## Watch Items
 
+- Google Search child-safety backlash: Common Sense's "Unacceptable Risk" call may push Google to change defaults, age gating or opt-out controls.
+- Anthropic/OpenAI state lobbying split: watch California, New York, Illinois and Massachusetts bill language to see whether the state-by-state policy divide hardens.
+- OpenAI political PAC split: employee support for Guardrails Alliance may keep widening the gap between internal policy views and public advocacy.
+- Australia AI standards: watch whether the promised framework turns into draft rules for energy, water and data-center obligations.
+- Anthropic IPO roadshow: the bank-meeting stage makes timing, valuation whispers and OpenAI reaction worth tracking closely.
 - Open-weight model traffic share: Vercel's 29% signal may generalize to other gateways; watch whether the split persists and whether price flattening accelerates routing to cheaper models.
 - Spotify Talk to Spotify rollout: watch whether the beta expands beyond the initial U.S., Ireland and Sweden launch markets and whether it becomes a durable discovery primitive.
 - Meta consent rollback: watch for an opt-in replacement or further restrictions on AI features that reuse public social content.

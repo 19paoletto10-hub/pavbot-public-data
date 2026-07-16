@@ -1,0 +1,373 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-16",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run przesuwa temat z produktowych premier AI do twardej polityki bezpieczeństwa, lobbingu i infrastruktury. Najmocniejszy nowy sygnał to Google Search: Common Sense Media ocenia AI Overview i AI Mode jako „Unacceptable Risk” dla dzieci, a dyskusja natychmiast przechodzi z pytania o wygodę do pytania o możliwość wyłączenia, ochronę młodszych użytkowników i odpowiedzialność platformy.",
+    "Równolegle AI governance staje się realną walką o tekst ustaw. Anthropic naciska na ostrzejsze przepisy stanowe, OpenAI broni „reverse federalism”, a OpenAI stafferzy zaczynają finansować kontr-PAC, który ma równoważyć pro-industry spending. Australia dokłada do tego model infrastrukturalny: krajowe standardy AI, obowiązki dla data center i twarde warunki dot. energii oraz wody.",
+    "Po stronie rynku i społeczności widać, że kapitał i builderzy nadal idą w stronę agentów, ale z większym naciskiem na weryfikację. Anthropic przyspiesza ścieżkę do IPO, Product Hunt promuje narzędzia dla workflow i agentów, a Hacker News jednocześnie zachwyca się automatyzacją i boi się utraty zrozumienia systemu. To dobry sygnał, że kolejny etap AI będzie mniej o samym modelu, a bardziej o kontroli, dowodach i kosztach wdrożenia."
+  ],
+  "summaryBullets": [
+    "Regulacje: Google Search: sygnał „Unacceptable Risk” dla dzieci",
+    "Regulacje: Anthropic i OpenAI rozgrywają AI politykę przez stany",
+    "Regulacje: OpenAI stafferzy finansują kontr-PAC"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-16-0-google-search-sygnal-unacceptable-risk-dla-dzieci-89c0002741",
+      "section": "Regulacje",
+      "title": "Google Search: sygnał „Unacceptable Risk” dla dzieci",
+      "standfirst": "Common Sense Media dało Google Search AI Overview i AI Mode najniższą ocenę „Unacceptable Risk”. Organizacja twierdzi, że wbudowanych odpowiedzi nie da się wyłączyć i że testy wykazały poważne błędy przy kryzysach psychicznych oraz deepfake'ach.",
+      "whatHappened": "Common Sense Media opublikowało nową ocenę bezpieczeństwa Google Search.",
+      "whyItMatters": "To przenosi rozmowę z wygody AI search na obowiązek realnej ochrony dzieci i nastolatków.",
+      "deeperAnalysis": [
+        "Google ma tu problem architektury produktu, nie tylko modelu. Gdy AI Overview i AI Mode siedzą na górze standardowego Search, a użytkownik nie może ich wyłączyć, każda zła odpowiedź staje się domyślną częścią infrastruktury informacyjnej.",
+        "Najmocniejszy sygnał z raportu dotyczy sytuacji kryzysowych. Common Sense opisuje błędy przy samobójstwie, psychozie, zaburzeniach odżywiania i instrukcjach deepfake. To nie są zwykłe halucynacje, tylko sytuacje, w których zły model może realnie pogorszyć stan użytkownika.",
+        "Google na swojej stronie public policy mówi o guardrails i age assurance, ale ten raport pokazuje, że deklaracje bezpieczeństwa nie rozwiązują jeszcze problemu w produkcie domyślnym. Jeśli Google nie pokaże realnego wyłączenia albo wyraźnych limitów, temat szybko przejdzie z NGO do regulatorów i szkół."
+      ],
+      "contextPoints": [
+        "Co się stało: Common Sense Media oceniło AI Search na „Unacceptable Risk”.",
+        "Dlaczego ważne: domyślny AI search staje się kwestią bezpieczeństwa dzieci.",
+        "Na co patrzeć dalej: reakcja Google, opcje wyłączenia i polityka dla szkół."
+      ],
+      "sources": [
+        {
+          "title": "Common Sense Media",
+          "url": "https://www.commonsensemedia.org/articles/google-ai-overview-cant-turn-it-off"
+        },
+        {
+          "title": "Common Sense Media Institute",
+          "url": "https://institute.commonsensemedia.org/risk-assessments/google-search"
+        },
+        {
+          "title": "Google Public Policy",
+          "url": "https://publicpolicy.google/kids-and-families/"
+        },
+        {
+          "title": "Axios",
+          "url": "https://www.axios.com/2026/07/15/googles-ai-search-common-sense-child-safety"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Search",
+        "AI Overview",
+        "AI Mode",
+        "child safety",
+        "media literacy"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-16-1-anthropic-i-openai-rozgrywaja-ai-polityke-przez-stany-d2bc2732b5",
+      "section": "Regulacje",
+      "title": "Anthropic i OpenAI rozgrywają AI politykę przez stany",
+      "standfirst": "Business Insider opisuje, że Anthropic stawia na ostrzejsze przepisy stanowe, a OpenAI promuje „reverse federalism”. To oznacza, że statehouse'y stają się dziś głównym polem bitwy o frontier AI.",
+      "whatHappened": "Anthropic publicznie wspiera mocniejsze przepisy stanowe, a OpenAI chce harmonizować reguły od dołu do góry.",
+      "whyItMatters": "AI governance przestaje być ogólnym hasłem i staje się konkretną strategią lobbingową.",
+      "deeperAnalysis": [
+        "Anthropic nie mówi już tylko o bezpieczeństwie w abstrakcie. Firma wskazuje Kalifornię, Nowy Jork, Illinois i Massachusetts jako miejsca, gdzie da się podnieść poprzeczkę od transparency do realnych obowiązków, a nie tylko self-reportingu.",
+        "OpenAI odpowiada inną logiką: lepiej zbudować powtarzalny framework stan po stanie niż czekać na Kongres. To spór o to, czy standard ma wyznaczać safety-first laboratory, czy harmonizacja rynku i prostszy compliance.",
+        "W tle Anthropic rozwija własny policy stack w formie Advanced AI Framework i Responsible Scaling Policy, które dają rządowi i niezależnym ewaluatorom większy wpływ. To sprawia, że firma buduje reputację przez twarde reguły, nawet jeśli spowalniają one rollout."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic wspiera ostrzejsze ustawy, OpenAI broni reverse federalism.",
+        "Dlaczego ważne: stany stają się laboratorium dla federalnych reguł AI.",
+        "Na co patrzeć dalej: które stany przepiszą tekst jako wzorzec i czy inni lobbyści to skopiują."
+      ],
+      "sources": [
+        {
+          "title": "Business Insider",
+          "url": "https://www.businessinsider.com/anthropic-openai-ai-safety-laws-state-lobbying-2026-7"
+        },
+        {
+          "title": "Anthropic policy",
+          "url": "https://www.anthropic.com/policy"
+        },
+        {
+          "title": "Anthropic Policy on the AI Exponential",
+          "url": "https://www.anthropic.com/policy-on-the-ai-exponential"
+        },
+        {
+          "title": "Anthropic Responsible Scaling Policy",
+          "url": "https://www.anthropic.com/responsible-scaling-policy"
+        },
+        {
+          "title": "OpenAI policy and political advocacy",
+          "url": "https://openai.com/index/our-views-on-ai-policy-and-political-advocacy/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "OpenAI",
+        "state regulation",
+        "California",
+        "Massachusetts",
+        "policy"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-16-2-openai-stafferzy-finansuja-kontr-pac-2e6ba706e3",
+      "section": "Regulacje",
+      "title": "OpenAI stafferzy finansują kontr-PAC",
+      "standfirst": "WIRED opisuje, że pracownicy OpenAI wpłacili ponad 215 tysięcy dolarów do Guardrails Alliance, czyli kontrapunktu dla pro-AI super PAC wspieranego przez Grega Brockmana. To rzadko spotykany, jawny sygnał sporu o to, kto ma mówić w imieniu branży.",
+      "whatHappened": "Część załogi OpenAI finansuje grupę naciskową na ostrzejsze reguły dla frontier AI.",
+      "whyItMatters": "polityka AI wchodzi do wnętrza firmy i zaczyna dzielić pracowników od kierownictwa.",
+      "deeperAnalysis": [
+        "To już nie jest tylko debata o bezpieczeństwie modeli. Pieniądze pracowników idą do politycznego wehikułu, który ma przeciwważyć ogromne finansowanie pro-industry PAC. W praktyce to pokazuje, że regulacja frontier AI stała się elementem tożsamości zawodowej.",
+        "OpenAI w swoim własnym wpisie podkreśla, że pracownicy mogą uczestniczyć w polityce wyłącznie prywatnie, a żaden zewnętrzny podmiot nie mówi w imieniu firmy. Taki komunikat porządkuje formalności, ale nie usuwa reputacyjnego efektu, bo media i politycy i tak będą czytać te ruchy przez pryzmat marki OpenAI.",
+        "Jeśli ten trend się utrzyma, AI policy będzie wyglądać coraz bardziej jak klasyczna bitwa PAC-ów, tylko z modelami, bezpieczeństwem i odpowiedzialnością za deployment jako stawką."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI staffers donated more than $215k to Guardrails Alliance.",
+        "Dlaczego ważne: spór o AI regulation wszedł do polityki pieniężnej.",
+        "Na co patrzeć dalej: kolejne filingi FEC i odpowiedź OpenAI na zarzut „astroturfingu”."
+      ],
+      "sources": [
+        {
+          "title": "WIRED",
+          "url": "https://www.wired.com/story/openai-employees-donations-guardrails-alliance-leading-the-future/"
+        },
+        {
+          "title": "OpenAI policy and political advocacy",
+          "url": "https://openai.com/index/our-views-on-ai-policy-and-political-advocacy/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "PAC",
+        "political advocacy",
+        "Guardrails Alliance",
+        "Leading the Future",
+        "policy"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-16-3-australia-robi-z-ai-polityke-infrastruktury-d69f032dd2",
+      "section": "Infrastruktura",
+      "title": "Australia robi z AI politykę infrastruktury",
+      "standfirst": "Anthony Albanese zapowiedział narodowe standardy AI i obowiązki dla kolejnej generacji dużych data center. Rząd chce, by centra danych brały na siebie koszty mocy, przyłączeń i wody.",
+      "whatHappened": "Australia łączy standardy AI z energo-wodnymi warunkami dla data center.",
+      "whyItMatters": "AI staje się tu problemem sieci, wody i pozwoleń, a nie tylko software'u.",
+      "deeperAnalysis": [
+        "To jedna z najbardziej konkretnych wypowiedzi o AI i infrastrukturze, jakie dziś padły z poziomu rządu. Canberra mówi wprost o obowiązku underwriting new power supply, pokryciu grid connection i minimizacji water use. To jest praktyczny model regulacji, nie ogólnik.",
+        "Najciekawsze jest to, że Australia chce złączyć rozproszone kompetencje w jeden framework. Taki ruch usuwa klasyczny problem, w którym każdy resort lub stan negocjuje osobno, a inwestorzy dostają patchwork. Tu państwo próbuje wyznaczyć jeden standard dla energii, wody i compliance.",
+        "Jeżeli ten model się przyjmie, data center nie będą już oceniane tylko pod kątem lokalizacji i ceny prądu. Będą oceniane jak infrastruktura publiczna z mierzalnym wpływem na rachunki, sieć i zasoby wodne."
+      ],
+      "contextPoints": [
+        "Co się stało: Australia ma ustalić jednolite standardy AI i data-center obligations.",
+        "Dlaczego ważne: rząd łączy AI z power, water i approvals.",
+        "Na co patrzeć dalej: projekt tekstu, konsultacje branżowe i reakcje operatorów."
+      ],
+      "sources": [
+        {
+          "title": "Prime Minister of Australia",
+          "url": "https://www.pm.gov.au/media/ai-australias-interests-0"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Australia",
+        "AI standards",
+        "data centers",
+        "power",
+        "water",
+        "regulation"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-16-4-anthropic-przyspiesza-marsz-do-ipo-5a6c76df3e",
+      "section": "AI",
+      "title": "Anthropic przyspiesza marsz do IPO",
+      "standfirst": "Anthropic ma już confidential S-1, a IBD/Bloomberg pisze, że banki organizują spotkania inwestorskie w najbliższych tygodniach. To przesuwa IPO z kategorii „kiedyś” do realnego ruchu rynkowego.",
+      "whatHappened": "Anthropic wchodzi w fazę roadshow przygotowań do publicznego debiutu.",
+      "whyItMatters": "public market testuje dziś nie tylko revenue, ale też governance i koszty compute.",
+      "deeperAnalysis": [
+        "Przejście od tajnego filing'u do spotkań z inwestorami zwykle znaczy, że spółka testuje appetite rynku, a nie tylko spełnia formalność. Dla Anthropic to ważne, bo rynek będzie pytał o marże, pricing, capacity i to, czy bezpieczeństwo jest przewagą, czy kosztem.",
+        "Moment jest istotny, bo OpenAI też stoi blisko własnego IPO, a jednocześnie obie firmy działają pod rosnącą presją regulacyjną. Publiczny debiut Anthropica byłby więc nie tylko finansowym benchmarkiem, ale i politycznym sygnałem o tym, jaki model labu rynek nagradza.",
+        "Anthropic już teraz buduje bardziej formalny profil governance niż większość konkurentów. Im bardziej debiut zbliża się do realnego okna, tym trudniej będzie oddzielić story o bezpieczeństwie od story o wycenie."
+      ],
+      "contextPoints": [
+        "Co się stało: confidential S-1 plus reported investor meetings.",
+        "Dlaczego ważne: to pierwszy z wielkich AI labów, który może przejść z prywatnego boomu do publicznego testu.",
+        "Na co patrzeć dalej: roadshow, valuation whispers i reakcja OpenAI."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic confidential S-1",
+          "url": "https://www.anthropic.com/news/confidential-draft-s1-sec"
+        },
+        {
+          "title": "IBD",
+          "url": "https://www.investors.com/news/technology/anthropic-ipo-open-ai-stocks/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "IPO",
+        "valuation",
+        "S-1",
+        "public markets",
+        "Claude"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-16-5-agenty-dostaja-red-pen-a-hn-chce-dowodow-bd0cbed233",
+      "section": "Produkty",
+      "title": "Agenty dostają red pen, a HN chce dowodów",
+      "standfirst": "Product Hunt promuje dziś V2Fun, Velo 3.0 i Campusa, a newsletter mówi o „red pen” dla AI i o agentach z własnym „biurem”. HN jednocześnie pyta, czy nadal ma sens pisać kod ręcznie.",
+      "whatHappened": "społeczność premiuje agentowe workflow, ale wymaga kontroli i weryfikacji.",
+      "whyItMatters": "to mocny sygnał, że rynek chce agentów, które można audytować, a nie tylko podziwiać.",
+      "deeperAnalysis": [
+        "Product Hunt dziś nie nagradza samego „AI everywhere”. Nagradza narzędzia, które zmniejszają tarcie w realnym workflow: tracked changes dla modeli, przestrzeń do pracy z agentami i 3D pipeline z telefonu. To są już narzędzia produkcyjne, nie demo.",
+        "Hacker News dokłada kontrast. Wątek o automatyzacji bez zrozumienia i pytania o pisanie kodu ręcznie pokazują, że community ma dość czarnej skrzynki, jeśli nie da się łatwo sprawdzić, co właściwie zrobiła. To odróżnia użyteczną automatyzację od AI slop.",
+        "W efekcie najlepsze produkty AI dziś wyglądają jak systemy z red pen, evidence i accept/reject, a nie jak „zrób to za mnie i ufaj mi”. To bardzo dobry trop do podcastu, bo łączy narzędzia, kulturę pracy i rosnące koszty jakości."
+      ],
+      "contextPoints": [
+        "Co się stało: Product Hunt top launches and newsletter plus HN debate.",
+        "Dlaczego ważne: users want control surfaces, not opaque autonomy.",
+        "Na co patrzeć dalej: czy edit-review i evidence-first patterns staną się domyślnym UX."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt homepage",
+          "url": "https://www.producthunt.com/"
+        },
+        {
+          "title": "Product Hunt newsletter",
+          "url": "https://www.producthunt.com/newsletters/archive/52731-lights-camera-algorithm"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/item?id=48882554"
+        },
+        {
+          "title": "Hacker News Ask HN",
+          "url": "https://news.ycombinator.com/item?id=48922717"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Product Hunt",
+        "Hacker News",
+        "agents",
+        "workflow",
+        "verification",
+        "developer tools"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Google Search i dzieci",
+      "rationale": "Common Sense ocenia AI Search jako „Unacceptable Risk”, więc to już nie jest tylko UX, ale safety story.",
+      "sourcesLabel": "Common Sense Media, Axios"
+    },
+    {
+      "priority": "High",
+      "title": "Anthropic i OpenAI o reguły stanowe",
+      "rationale": "Anthropic pushes stronger state AI laws while OpenAI wants reverse federalism; the statehouse is now the main battleground.",
+      "sourcesLabel": "Business Insider, Anthropic, OpenAI"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI stafferzy kontra własny PAC",
+      "rationale": "Employees funding Guardrails Alliance show internal friction around AI politics and public advocacy.",
+      "sourcesLabel": "WIRED, OpenAI"
+    },
+    {
+      "priority": "High",
+      "title": "Australia robi z AI infrastrukturę",
+      "rationale": "The speech ties AI to power, water, and national standards, which could become a model for other countries.",
+      "sourcesLabel": "Prime Minister of Australia"
+    },
+    {
+      "priority": "High",
+      "title": "Anthropic przyspiesza IPO",
+      "rationale": "Roadshow timing is now moving from speculation to active market preparation.",
+      "sourcesLabel": "Anthropic, IBD"
+    },
+    {
+      "priority": "Medium",
+      "title": "Agenty z red penem",
+      "rationale": "Product Hunt and HN suggest builders want verifiable agent workflows, not black-box automation.",
+      "sourcesLabel": "Product Hunt, Hacker News"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Common Sense Media: Google’s AI Search is failing kids — and parents can’t turn it off",
+      "url": "https://www.commonsensemedia.org/articles/google-ai-overview-cant-turn-it-off"
+    },
+    {
+      "title": "Common Sense Media Institute: Google Search AI Overview and AI Mode",
+      "url": "https://institute.commonsensemedia.org/risk-assessments/google-search"
+    },
+    {
+      "title": "Google Public Policy: Kids and Families",
+      "url": "https://publicpolicy.google/kids-and-families/"
+    },
+    {
+      "title": "Axios: Google’s AI search fails child-safety tests",
+      "url": "https://www.axios.com/2026/07/15/googles-ai-search-common-sense-child-safety"
+    },
+    {
+      "title": "Business Insider: Anthropic state-by-state AI rules",
+      "url": "https://www.businessinsider.com/anthropic-openai-ai-safety-laws-state-lobbying-2026-7"
+    },
+    {
+      "title": "Anthropic: AI policy",
+      "url": "https://www.anthropic.com/policy"
+    },
+    {
+      "title": "Anthropic: Policy on the AI Exponential",
+      "url": "https://www.anthropic.com/policy-on-the-ai-exponential"
+    },
+    {
+      "title": "Anthropic: Responsible Scaling Policy",
+      "url": "https://www.anthropic.com/responsible-scaling-policy"
+    },
+    {
+      "title": "OpenAI: Our views on AI policy and political advocacy",
+      "url": "https://openai.com/index/our-views-on-ai-policy-and-political-advocacy/"
+    },
+    {
+      "title": "WIRED: OpenAI Staffers Are Funding a Rival Super PAC to Take on Their Boss",
+      "url": "https://www.wired.com/story/openai-employees-donations-guardrails-alliance-leading-the-future/"
+    },
+    {
+      "title": "Prime Minister of Australia: AI in national interests",
+      "url": "https://www.pm.gov.au/media/ai-australias-interests-0"
+    },
+    {
+      "title": "Anthropic: confidentially submits draft S-1 to the SEC",
+      "url": "https://www.anthropic.com/news/confidential-draft-s1-sec"
+    },
+    {
+      "title": "IBD: Anthropic IPO roadshow",
+      "url": "https://www.investors.com/news/technology/anthropic-ipo-open-ai-stocks/"
+    },
+    {
+      "title": "Product Hunt homepage",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Product Hunt newsletter: Lights, camera, algorithm",
+      "url": "https://www.producthunt.com/newsletters/archive/52731-lights-camera-algorithm"
+    },
+    {
+      "title": "Hacker News: Automation Without Understanding",
+      "url": "https://news.ycombinator.com/item?id=48882554"
+    },
+    {
+      "title": "Hacker News: Ask HN: Does it still make sense to write code by hand?",
+      "url": "https://news.ycombinator.com/item?id=48922717"
+    }
+  ]
+}
