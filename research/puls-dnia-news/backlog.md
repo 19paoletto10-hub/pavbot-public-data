@@ -3,7 +3,6 @@
 ## Open
 
 - Watch whether the Turkey fire gets a formal casualty or evacuation tally and a Poland-facing travel note.
-- Watch whether the Morawiecki-Kaczyński dispute turns into a formal party decision rather than a rhetorical clash.
 - Watch whether the station-paliw incident gets a cause note, hazardous-material clarification or a full traffic update.
 - Watch whether the orange weather alerts turn into outages, local damage or a new warning region after 21:00.
 - Watch whether the Iran / Ormuz escalation triggers a fresh maritime advisory or oil-price follow-through.
@@ -46,8 +45,6 @@
   2026 items again.
 - Watch whether the Krotoszyn and Sulmierzyce boil-water advisory is lifted or
   widened.
-- Watch whether the Ziobro ENA decision gets a written justification or
-  appeal.
 - Watch whether the Bangkok bar fire gets a formal casualty update or safety
   review from Thai authorities.
 - Watch whether Wrocław police publish a clarification or footage on the knife
@@ -113,5 +110,8 @@
 - Public manifest now exposes `puls-dnia-news` artifacts as `pulseNewsData`,
   so the bootstrap blocker is resolved.
 - Świrski's case advanced to zarzuty; only a written prokuratura follow-up remains open.
-- PiS's stowarzyszenia dispute has already become a formal ultimatum; the next check is only for actual exclusions or withdrawals.
+- PiS's stowarzyszenia dispute has already become a formal decision; the next
+  check is only for actual exclusions or withdrawals.
+- Ziobro's ENA now has a written justification; the next check is only for an
+  appeal or renewed motion.
 - Gibraltar's provisional application now has a published implementation follow-up, so the next check is only for travel or customs clarifications.

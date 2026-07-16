@@ -2,6 +2,15 @@
 
 ## Current State
 
+The 2026-07-16 15:01 slot adds a more formal legal and procedural layer:
+Ziobro gets a written ENA justification, PiS hardens its line on
+stowarzyszenia, new local legal and road-safety incidents land in Kielce and
+on the S6, and the consumer-cost block shifts toward record credits, fuel and
+airline prices. Abroad, Ukraine's reshuffle moves from nomination to approval
+while protests continue, Starmer backs Kyiv with an official visit, and
+Iran / Hormuz stays the main global escalation point with CENTCOM, BBC and
+CNN all still treating it as live.
+
 The 2026-07-16 12:01 slot pushes the feed toward a more operational mix: a
 road incident with LPR in Huta Dąbrowa, storm damage still echoing through
 Poland, a sharper Morawiecki-Kaczyński split narrative, Zełenski's Ukraine
