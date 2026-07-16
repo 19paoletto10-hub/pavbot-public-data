@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-16-1809",
+  "status": "material_update",
+  "generatedAt": "2026-07-16T16:23:02Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-16T18:09:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Live 18:09 review completed through read-only Safari Apple Events/DOM on old.reddit.com in the local Safari session.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-16-1208 and 2026-07-16-0609; both were blocker audits with no shortlisted Reddit URLs, so the effective URL blocklist for this slot was empty.",
+      "Because the two previous runs were blockers, this slot cross-checked the live shortlist directly against the current public bundle 2026-07-16-0008 to avoid a stale copy-forward.",
+      "Shortlist post and top-comment review stayed read-only on old.reddit.com pages with ?sort=top in the same Safari-driven workflow.",
+      "The five cleanest fresh survivors were the plastic-throne kids-chair meme, the ASAP procrastination gag, the candlelit production-bug meme, the lightning-struck hay bale, and the spiderweb AirPod photo.",
+      "High-score facepalm threads skewed political or newsy, the HOA meme turned more ranty than light, and the first-class AskReddit thread was readable but too broad for a compact five-card public-safe bundle.",
+      "At least five safe fresh cards survived the live review, so the reddit-radar contract prefers a new public bundle over keeping the older 2026-07-16-0008 winner unchanged.",
+      "No Reddit social actions were performed.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-16-0008",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-16-1809-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-16-1809-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-16-1809-selected-safari-review.json",
+  "excludedRecentRunUrls": [],
+  "newCandidates": [
+    {
+      "subreddit": "r/memes",
+      "title": "No one ever taught us to do this. It’s just programmed into human DNA at birth.",
+      "url": "https://www.reddit.com/r/memes/comments/1uy0002/no_one_ever_taught_us_to_do_this_its_just/",
+      "scoreLabel": "4.3K",
+      "decision": "selected_for_new_bundle_universal_childhood_throne_joke_with_light_comment_layer"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "My brain whenever someone says ASAP.",
+      "url": "https://www.reddit.com/r/memes/comments/1uxsqxh/my_brain_whenever_someone_says_asap/",
+      "scoreLabel": "3.2K",
+      "decision": "selected_for_new_bundle_compact_office_procrastination_gag_with_clean_comment_payoff"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "candlelitDinnerIsNeedEmailBug",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uxwr2i/candlelitdinnerisneedemailbug/",
+      "scoreLabel": "6.7K",
+      "decision": "selected_for_new_bundle_high-signal_dev_incident_meme_with_readable_ops_comments"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Woke up to find hay bale struck by lightning after brief storm…neighbor called to say bale was smoking",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uy1v63/woke_up_to_find_hay_bale_struck_by_lightning/",
+      "scoreLabel": "10.0K",
+      "decision": "selected_for_new_bundle_real-world_absurdity_with_fast_safe_pun_layer"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Where I found my headphone after falling asleep with it in",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uy1cds/where_i_found_my_headphone_after_falling_asleep/",
+      "scoreLabel": "5.4K",
+      "decision": "selected_for_new_bundle_strong_visual_absurdity_with_cabin-and-spiderweb_comment_payoff"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Why buy a property if someone else is gonna own it",
+      "url": "https://www.reddit.com/r/memes/comments/1uxqlwl/why_buy_a_property_if_someone_else_is_gonna_own_it/",
+      "scoreLabel": "29.8K",
+      "decision": "reviewed_but_left_out_because_comment_layer_turns_into_real_HOA_rant_and_sunflower_fines_more_than_compact_humor"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "literallyFullOfBugs",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uxylr1/literallyfullofbugs/",
+      "scoreLabel": "1.1K",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_is_too_thin_and_self-aware_even_for_programmerhumor"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "codexIsVeryIntelligent",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uxsmz4/codexisveryintelligent/",
+      "scoreLabel": "1.3K",
+      "decision": "reviewed_but_left_out_because_the_comments_turn_into_model-vs-model_tooling_discourse_instead_of_light_public-safe_payoff"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Family heirloom not what it seems",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uy4h8w/family_heirloom_not_what_it_seems/",
+      "scoreLabel": "new",
+      "decision": "reviewed_but_left_out_because_the_joke_quickly_turns_into_lead-paint_and_novelty-glass_safety_discourse"
+    },
+    {
+      "subreddit": "r/AskReddit",
+      "title": "What’s a “rich people thing” you experienced once and immediately understood why rich people love it?",
+      "url": "https://www.reddit.com/r/AskReddit/comments/1uxmjpi/whats_a_rich_people_thing_you_experienced_once/",
+      "scoreLabel": "5.7K",
+      "decision": "reviewed_but_left_out_because_the_first-class_story_is_funny_but_too_broad_and_anecdotal_for_a_tight_five-card_bundle"
+    }
+  ]
+}
