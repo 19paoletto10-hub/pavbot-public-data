@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-07-16",
+  "runTime": "15:41",
+  "executiveSummary": "Dzisiejszy sweep potwierdza dalsze przesunięcie rynku Wrocław + remote Polska w stronę ról bardziej produkcyjnych niż eksperymentalnych. Najmocniejszy nowy klaster tworzą dziś Intellias, Andersen, Tooploox, Cloudfide, Spyrosoft i ITDS. Wspólny mianownik to AI platform architecture, agentic tooling, Copilot Studio, AI security i deployment/operability, a nie ogólne \"AI engineer\" bez konkretnego wdrożeniowego scope'u. To jest materialna zmiana względem 2026-07-13, bo doszło kilka nowych publicznych ofert oraz jedno wyraźne odświeżenie publicznego sygnału ITDS. W dzisiejszej rundzie nie widać istotnego driftu salary na już śledzonych rolach; zmiana dotyczy przede wszystkim jakości i typu nowych ofert.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Principal AI Architect",
+      "company": "Intellias",
+      "location": "Wrocław +3 locations / remote; board mirror pokazuje Wrocław, a oficjalna strona Intellias opisuje szerszy remote scope dla Poland/Ukraine.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Principal",
+      "fitSummary": "enterprise AI/ML architecture, LLM-powered solutions, AI agents, RAG, platform design.",
+      "whyInteresting": "to mocna rola architektoniczna z hands-on ownership od researchu po production deployment, czyli bliżej budowy systemów niż czystego konsultingu.",
+      "uncertainty": "board-first lead; oficjalna strona Intellias nie jest Wrocław-specific, więc lokalizacja Wrocław pochodzi z mirrora.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/intellias-principal-ai-architect-wroclaw-ai",
+        "https://career.intellias.com/vacancy/ai-architect-30163/"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "AI Platform Architect",
+      "company": "Andersen",
+      "location": "Wrocław / remote.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "MLOps/DevOps, healthcare AI ops, IaC, Terraform, Azure, Docker, Kubernetes, CI/CD.",
+      "whyInteresting": "czysta platformowa rola dla AI ops, z wyraźnym target-state architecture i infra ownership.",
+      "uncertainty": "board mirror pozostaje głównym publicznym źródłem; brak pełnej salary disclosure.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/andersen-ai-platform-architect-wroclaw-ai"
+      ],
+      "tags": [
+        "MLOps",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "AI Product Engineer (Tooling)",
+      "company": "Tooploox",
+      "location": "Wrocław Tęczowa 7 / remote.",
+      "workMode": "Remote",
+      "compensation": "20 000 - 35 000 PLN net/month B2B; 18 000 - 31 500 PLN gross/month permanent.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "coding agents, LLM APIs, RAG, MCP, plugins, context engineering, internal developer tooling.",
+      "whyInteresting": "to mocny AI-dev-tooling / agentic engineering sygnał, a nie zwykła integracja LLM.",
+      "uncertainty": "board-first role; canonical employer page for this opening was not surfaced, so the board card is the live source.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/tooploox-ai-product-engineer-tooling--wroclaw-ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "AI Engineer",
+      "company": "Cloudfide",
+      "location": "Wrocław +4 locations / remote.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "GenAI agent skills, LangChain/LangGraph, Databricks, API integrations, MLOps, cloud-native data platforms.",
+      "whyInteresting": "praktyczny mix AI + data platform + automation, z naciskiem na budowanie reusable agentic workflows.",
+      "uncertainty": "current public signal is a board card; careers hub is generic and not role-specific.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/cloudfide-spolka-z-ograniczona-odpowiedzialnoscia-ai-engineer-wroclaw-ai",
+        "https://cloudfide.com/careers"
+      ],
+      "tags": [
+        "Agentic AI",
+        "GenAI",
+        "MLOps"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "AI Automation Engineer (Microsoft Copilot Studio)",
+      "company": "Spyrosoft",
+      "location": "Wrocław plac Nowy Targ 28 / remote.",
+      "workMode": "Remote",
+      "compensation": "110 - 150 PLN net/h B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Copilot Studio, Power Automate, Power Platform, Microsoft 365/Dynamics 365, Azure AI Foundry/OpenAI.",
+      "whyInteresting": "konkretny, hands-on automation role around Microsoft ecosystem, with explicit AI-powered workflow delivery.",
+      "uncertainty": "board-first role; public signal looks solid, but no separate canonical employer page surfaced.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/spyrosoft-ai-automation-engineer-microsoft-copilot-studio--wroclaw-ai"
+      ],
+      "tags": [
+        "Azure"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Senior Product Security Engineer - AI & LLM",
+      "company": "ITDS",
+      "location": "Centrum, Wrocław / on-site.",
+      "workMode": "Wrocław",
+      "compensation": "30 000 - 50 000 PLN gross/month permanent.",
+      "seniority": "Senior",
+      "fitSummary": "AI security, LLM-powered tools, AI agents, secure deployment, infrastructure protection.",
+      "whyInteresting": "security plus AI/LLM is a high-signal adjacent cluster, and the listing resurfaced today, which suggests it remains actively recruitable.",
+      "uncertainty": "public status is still board-driven; worth rechecking on the next sweep for drift or disappearance.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/itds-senior-product-security-engineer---ai-llm-wroclaw-ai"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodały się nowe aktywne role w Wrocławiu lub remote Poland z Intellias, Andersen, Tooploox, Cloudfide, Spyrosoft i ITDS.",
+    "Najmocniejszy delta signal to przesunięcie w stronę AI platform, AI tooling, Copilot Studio i AI security, a nie samych ogólnych kart AI Engineer.",
+    "W porównaniu z 2026-07-13 nie widać istotnego driftu salary na już śledzonych rolach; zmiana jest głównie po stronie nowych publicznych ofert i jednego odświeżonego sygnału ITDS.",
+    "Sii pozostaje silnym, ale w tej rundzie niezmienionym sygnałem platformowym; Addepto, ALTIMI i Rossmann też pozostają istotne, ale nie zaszła na nich materialna zmiana."
+  ],
+  "risks": [
+    "Board mirrors nadal potrafią różnić się od oficjalnych stron w zakresie lokalizacji lub lifecycle, szczególnie przy Intellias, Cloudfide i Spyrosoft.",
+    "Część nowych ról nie ma jeszcze stabilnego canonical employer page, więc kolejne rundy mogą zmienić sposób ich źródłowania.",
+    "W tej rundzie pojawiło się kilka bliskich semantycznie ról wokół platform, tooling i agentic automation, więc deduplikacja po kolejnym przebiegu pozostaje ważna."
+  ],
+  "recommendedActions": [
+    "Utrzymać na następny run nowy shortlist source set: Intellias, Andersen, Tooploox, Cloudfide, Spyrosoft i ITDS.",
+    "Sprawdzić, czy Cloudfide i Tooploox pokażą bardziej kanoniczne employer pages niż obecne board mirrors.",
+    "Zobaczyć, czy ITDS nadal utrzymuje dzisiejszy on-site security signal, a Sii utrzymuje Wrocław w roli GenAI & Cloud."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Wrocław AI/ML offers",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Intellias: Principal AI Architect",
+      "url": "https://justjoin.it/job-offer/intellias-principal-ai-architect-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Andersen: AI Platform Architect",
+      "url": "https://justjoin.it/job-offer/andersen-ai-platform-architect-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Sii: AI Engineer – GenAI & Cloud",
+      "url": "https://sii.pl/en/job-ads/id/37069/ai-engineer-genai-cloud-f-m-x/",
+      "status": "checked"
+    },
+    {
+      "title": "Tooploox: AI Product Engineer (Tooling)",
+      "url": "https://justjoin.it/job-offer/tooploox-ai-product-engineer-tooling--wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Cloudfide: AI Engineer",
+      "url": "https://justjoin.it/job-offer/cloudfide-spolka-z-ograniczona-odpowiedzialnoscia-ai-engineer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Spyrosoft: AI Automation Engineer (Microsoft Copilot Studio)",
+      "url": "https://justjoin.it/job-offer/spyrosoft-ai-automation-engineer-microsoft-copilot-studio--wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "ITDS: Senior Product Security Engineer - AI & LLM",
+      "url": "https://justjoin.it/job-offer/itds-senior-product-security-engineer---ai-llm-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Addepto: AI Solution Architect",
+      "url": "https://addepto.com/career/ai-solution-architect/",
+      "status": "checked"
+    },
+    {
+      "title": "ALTIMI careers",
+      "url": "https://altimi.com/career",
+      "status": "checked"
+    }
+  ]
+}
