@@ -4,6 +4,12 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Ormuz blockade enforcement and MT Belma | AP and Polsat report U.S. forces struck and disabled Curacao-flagged MT Belma after warnings while expanding strikes into northern Iran; Iran retaliated at Bahrain, Jordan and Kuwait | Check AP, CENTCOM, UKMTO, IMO, tanker tracking, oil prices and Gulf state statements before podcast or evening update | Open |
+| High | Track U.S. 95B Iran-war package | House GOP unveiled a 95B dollar budget plan with 60B for Armed Services, 13B for Intelligence, 12B for Agriculture and 10B for election administration, with no offsets | Watch House Budget Committee, White House, AP and deficit reactions; connect to Patriot, THAAD and Tomahawk stockpile strain | Open |
+| Medium | Track Lebanon-Israel pilot zones | AP says U.S.-mediated Rome talks produced structure and guidelines for pilot zones where Israel would hand control to the Lebanese army, but Hezbollah rejects disarmament | Watch State Department, Lebanon, Israel, UNIFIL and Hezbollah reactions for implementation versus diplomatic theater | Open |
+| High | Track Ukraine Facility/BGK defence-finance angle | EC says Ukraine Facility Pillar II financing for dual-use and defence companies includes programmes delivered through BGK, adding a Polish financial channel to the Drone Deal | Watch EC, BGK, Polish ministries and defence industry for instruments, calls and Polish company participation | Open |
+| Medium | Track PFN/RARS public-money investigations | CBA detained former PFN board members and PAP reported RARS/BGK Foundation detentions; both are process-stage public-money cases | Use CBA, PAP and prosecutor sources; separate allegations, charges, measures and court outcomes | Open |
+| Medium | Track Poland-Ukraine community tension after violent incidents | WP reports the Bytów fatal beating, ambassador reaction and Czarzasty comments on anti-Ukrainian attacks; topic can be exploited by polarizing narratives | Follow police, prosecutor, embassy and mainstream reports; avoid collective blame and check disinformation angle | Open |
 | High | Track Komponent Obrony Pogranicza rollout | MON created a new border-defense component that may change how `Tarcza Wschód` is staffed and managed | Watch MON, SG and WOT for staffing, training and equipment follow-up | Open |
 | High | Track EU-Ukraine Defence Industrial Partnership implementation | The Drone Deal is now launched; the next question is financing, participants and Polish industrial spillover | Watch EC, AP, Ukrainian official channels and Polish industry reactions for concrete project details | Open |
 | High | Review first three generated news podcasts | Confirms pacing, neutrality, MP3 generation, and Polish narration quality | Listen to each MP3 and record notes | Open |
@@ -185,6 +191,14 @@
   6, and RCB for the national weather alert. Podcast should lead Ormuz, then
   Poland as Coalition exercise host and Ukraine/stockpile constraints, with
   Yemen, EU enlargement and weather as shorter blocks.
+- 2026-07-16: Thursday morning research created a material update. Strongest
+  sources were AP and Polsat for Ormuz/Belma and market effects, AP for U.S.
+  war funding and Lebanon-Israel pilot zones, EC/AP for EU-Ukraine defence
+  industry financing with BGK, CBA/PAP for PFN/RARS investigations, and WP for
+  the sensitive Poland-Ukraine social tension thread. Podcast should lead
+  Ormuz, then the U.S. war-funding package and EU-Ukraine/BGK defence-finance
+  angle, with Lebanon, CBA cases and social tensions as shorter, carefully
+  caveated blocks.
 
 ## Done
 

@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-15
+Last updated: 2026-07-16
 
 ## Current Understanding
 
@@ -188,6 +188,19 @@ rozmowę z transferu sprzętu na współprodukcję dronów, technologii
 antydronowych i w dłuższym horyzoncie elementów antybalistycznych. Ormuz
 pozostaje głównym punktem światowego ryzyka, ale wieczorny obraz to już
 kontynuacja presji, a nie nowy zwrot jakościowy względem poranka.
+Po porannym runie 16 lipca Ormuz wszedł w fazę egzekwowania blokady: AP i
+Polsat opisują rozszerzenie amerykańskich uderzeń na północ Iranu, pierwsze
+trafienie w tankowiec MT Belma próbujący według USA złamać blokadę oraz
+irański odwet na Bahrajn, Jordanię i Kuwejt. W USA wojna przechodzi w budżet i
+kampanię: Republikanie pokazali pakiet 95 mld USD na wojnę z Iranem, zapasy,
+rolnictwo i reguły wyborcze. Regionalnie pojawia się równoległy, kruchy kanał
+deeskalacyjny Liban-Izrael przez strefy pilotażowe w południowym Libanie.
+Europejski wątek obronny dostał polski szczegół finansowy, bo Komisja
+Europejska wskazała BGK jako jedną z instytucji w programach finansowania
+Ukraine Facility dla branż dual-use i obronnych. Krajowo doszły dwa procesowe
+wątki odpowiedzialności za publiczne pieniądze: CBA/PFN i RARS/BGK, oraz
+wrażliwy społecznie follow-up przemocy i retoryki wokół relacji
+polsko-ukraińskich.
 
 ## Stable Facts
 
@@ -260,6 +273,23 @@ kontynuacja presji, a nie nowy zwrot jakościowy względem poranka.
 - Ormuz po 15 lipca: traktować groźbę zatrzymania eksportu energii z całego
   regionu jako najwyższy sygnał ryzyka, ale oddzielać deklaracje IRGC od realnej
   przepustowości statków, cen ropy i komunikatów armatorów.
+- Ormuz/Belma od 16 lipca: traktować egzekwowanie blokady wobec konkretnych
+  statków jako nowy poziom ryzyka; oddzielać komunikaty wojskowe i relacje AP od
+  statusu żeglugi w UKMTO, IMO i danych armatorów.
+- Pakiet 95 mld USD w USA: monitorować, czy republikańska rezolucja budżetowa
+  przechodzi przez komisję, co realnie trafia do Armed Services i Intelligence
+  oraz czy finansowanie wojny z Iranem wpływa na zasoby dla Ukrainy.
+- Liban-Izrael: strefy pilotażowe traktować jako kruchy kanał dyplomatyczny;
+  sprawdzać, czy jest realne wycofanie, stanowisko armii libańskiej i reakcja
+  Hezbollah.
+- Ukraine Facility/BGK: sprawdzić, czy polski BGK komunikuje własne instrumenty
+  dla firm dual-use i obronnych oraz czy pojawia się lista naborów albo
+  projektów z udziałem polskich podmiotów.
+- PFN/RARS: wątki CBA prowadzić procesowo, odróżniając zatrzymania, zarzuty,
+  środki zapobiegawcze i akty oskarżenia od rozstrzygnięć sądowych.
+- Przemoc i relacje polsko-ukraińskie: omawiać konkretne sprawy karne bez
+  zbiorowej odpowiedzialności; pilnować, by nie wzmacniać narracji
+  dezinformacyjnych wokół Ukraińców w Polsce.
 - Koalicja Chętnych w Polsce: śledzić datę, lokalizację ogólną, uczestników i
   zakres jesiennych ćwiczeń, bez publikowania operacyjnych szczegółów ruchu
   wojsk.
@@ -348,6 +378,7 @@ kontynuacja presji, a nie nowy zwrot jakościowy względem poranka.
 
 ## Recent Reports
 
+- [2026-07-16](runs/2026-07-16.md)
 - [2026-07-14-1933](runs/2026-07-14-1933.md)
 - [2026-07-14](runs/2026-07-14.md)
 - [2026-07-13](runs/2026-07-13.md)
