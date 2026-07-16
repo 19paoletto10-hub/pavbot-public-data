@@ -2,6 +2,8 @@
 
 ## Open
 
+- Watch whether the Turkey fire gets a formal casualty or evacuation tally and a Poland-facing travel note.
+- Watch whether the Morawiecki-Kaczyński dispute turns into a formal party decision rather than a rhetorical clash.
 - Watch whether the station-paliw incident gets a cause note, hazardous-material clarification or a full traffic update.
 - Watch whether the orange weather alerts turn into outages, local damage or a new warning region after 21:00.
 - Watch whether the Iran / Ormuz escalation triggers a fresh maritime advisory or oil-price follow-through.

@@ -2,6 +2,13 @@
 
 ## Current State
 
+The 2026-07-16 12:01 slot pushes the feed toward a more operational mix: a
+road incident with LPR in Huta Dąbrowa, storm damage still echoing through
+Poland, a sharper Morawiecki-Kaczyński split narrative, Zełenski's Ukraine
+reshuffle signal, a rising budget deficit, mObywatel for parents, Turkish fire
+evacuations, IMGW alerts, and fresh Iran / Hormuz plus heat / wildfire
+pressure from BBC, CNN, Canada and Norway.
+
 The 2026-07-16 09:01 slot shifts the feed toward a sharper domestic politics block: Tusk mobilizes the KO club, PiS issues a seven-day ultimatum for stowarzyszenia, Morawiecki and Kaczyński keep the internal line hot, while Swarzędz and UW keep the safety block active. Abroad, Gibraltar's border regime enters force, Europe forms an anti-ballistic coalition, and BBC/CNN plus CENTCOM keep Iran/Hormuz under active escalation.
 
 The 2026-07-15 21:05 slot shifts the feed from the afternoon Bałtyk/RCB
