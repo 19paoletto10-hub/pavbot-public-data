@@ -1,0 +1,517 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-16",
+  "runTime": "06:01",
+  "status": "Material update",
+  "headline": "Poranek z alertami, Hermesa i świeżym blokiem Iran–Francja–Chiny",
+  "summary": "Poranny slot przesuwa feed w stronę ostrzeżeń pogodowych, interwencji po nawałnicach, wątku Hermesa, reakcji Morawieckiego na uchwałę PiS, droższych paliw i nowego alertu GIS. W świecie dominują Iran, Francja, Chiny i Morze Czarne, a White House dokłada Gold Eagle.",
+  "items": [
+    {
+      "id": "alerty-imgw-upal-burze",
+      "section": "Alerty",
+      "title": "IMGW utrzymuje upał i burze. Ostrzeżenia sięgają drugiego stopnia",
+      "lead": "Poranek nadal jest pogodowo ryzykowny.",
+      "whatHappened": "TVN Meteo i IMGW pokazują, że w kraju utrzymują się ostrzeżenia na upał i burze, a w prognozach wracają gwałtowne opady, grad i silny wiatr. To oznacza, że pogoda nadal może wpływać na transport, przerwy w dostawach i lokalne szkody.",
+      "keyFacts": [
+        "IMGW utrzymuje ostrzeżenia w wielu regionach kraju.",
+        "Ryzyko łączy upał z burzami, gradem i silnym wiatrem.",
+        "To nadal jeden z głównych czynników operacyjnych dla porannego feedu."
+      ],
+      "reactions": [
+        "Służby i zarządcy infrastruktury muszą liczyć się z kolejnymi interwencjami.",
+        "Mieszkańcy powinni traktować alert jako praktyczne ograniczenie planów na dzień."
+      ],
+      "whyItMatters": "Takie ostrzeżenia szybko przekładają się na bezpieczeństwo i logistykę codziennych dojazdów.",
+      "context": "To najważniejszy alertowy motyw na start dnia, zgodny z porannym profilem tej automatyzacji.",
+      "watchNext": [
+        "Sprawdzić, czy IMGW podniesie lub wycofa ostrzeżenia.",
+        "Obserwować, czy pojawią się kolejne szkody albo nowe regiony alertów."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo - Ostrzeżenia IMGW",
+          "url": "https://tvn24.pl/tvnmeteo/polska/ostrzezenia-imgw-upal-i-burze-ostrzezenia-nawet-drugiego-stopnia-st9142923"
+        },
+        {
+          "title": "IMGW raport 131",
+          "url": "https://imgw.pl/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-131/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "IMGW",
+        "burze",
+        "upał"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-wroclaw-interwencje-po-nawalnicach",
+      "section": "Bezpieczeństwo",
+      "title": "Wrocław i Dolny Śląsk po nawałnicach. Strażacy mają setki interwencji",
+      "lead": "Pogoda już tworzy realne szkody.",
+      "whatHappened": "TVN Meteo podało, że na Dolnym Śląsku i we Wrocławiu strażacy wykonali setki interwencji po nawałnicach. To pokazuje, że ostrzeżenia nie są już tylko prognozą, ale przechodzą w operacyjne skutki w terenie.",
+      "keyFacts": [
+        "Interwencji było już setki, nie pojedyncze przypadki.",
+        "Najmocniej wybrzmiewa Wrocław i okolice Dolnego Śląska.",
+        "To kontynuacja alertowego dnia, ale z już widocznym skutkiem."
+      ],
+      "reactions": [
+        "Dla mieszkańców ważne będzie tempo usuwania szkód i przywracania przejezdności.",
+        "Służby mogą być przez kilka godzin nadal obciążone kolejnymi zgłoszeniami."
+      ],
+      "whyItMatters": "Interwencje po burzach zwykle oznaczają wtórne utrudnienia w ruchu, energii i infrastrukturze miejskiej.",
+      "context": "Ten temat dobrze tłumaczy, dlaczego alerty pogodowe rano są w tym slocie tak wysoko.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się pełniejszy bilans szkód.",
+        "Obserwować, czy Wrocław dostanie kolejne komunikaty miejskie."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo - Dolny Śląsk, Wrocław",
+          "url": "https://tvn24.pl/tvnmeteo/polska/dolny-slask-wroclaw-setki-interwencji-strazakow-problemy-po-nawalnicach-st9143025"
+        }
+      ],
+      "tags": [
+        "Wrocław",
+        "nawałnice",
+        "straż pożarna",
+        "szkody"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-hermes-ostrowski-zarzuty",
+      "section": "Polska",
+      "title": "Hermes i prokurator Ostrowski. TVN24 pisze o nieoficjalnych zarzutach",
+      "lead": "Wątek proceduralny wchodzi w nową fazę.",
+      "whatHappened": "TVN24 podało nieoficjalnie, że w sprawie systemu Hermes mogą pojawić się zarzuty karne wobec prokuratora Michała Ostrowskiego. To mocny sygnał procesowy, ale na razie bez oficjalnego potwierdzenia w samym materiale.",
+      "keyFacts": [
+        "Temat dotyczy systemu Hermes i prokuratora Michała Ostrowskiego.",
+        "Nagłówek mówi o zarzutach karnych, ale w trybie nieoficjalnym.",
+        "To jeden z najmocniejszych krajowych leadów poranka."
+      ],
+      "reactions": [
+        "Jeśli zarzuty zostaną potwierdzone, sprawa szybko wejdzie na wyższy poziom polityczny i instytucjonalny.",
+        "Na tym etapie kluczowe jest odróżnienie przecieku od formalnego komunikatu."
+      ],
+      "whyItMatters": "Wątek Hermesa jest istotny dla oceny odpowiedzialności instytucjonalnej i relacji między polityką a prokuraturą.",
+      "context": "To świeży poranny materiał TVN24 z działu Polska, niepowtarzający wprost wczorajszego układu newsów.",
+      "watchNext": [
+        "Czekać na oficjalny komunikat prokuratury lub potwierdzenie zarzutów.",
+        "Sprawdzić, czy temat rozwinie się w kolejne procesowe szczegóły."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Polska",
+          "url": "https://tvn24.pl/polska/faktura-ws-systemu-hermes-ukryta-przed-nik-nieoficjalnie-zarzuty-karne-dla-prokuratora-michala-ostrowskiego-st9144477"
+        }
+      ],
+      "tags": [
+        "Hermes",
+        "prokuratura",
+        "Polska",
+        "Ostrowski"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-morawiecki-pis-stowarzyszenia",
+      "section": "Polityka",
+      "title": "Morawiecki reaguje na uchwałę PiS w sprawie stowarzyszeń",
+      "lead": "PiS znów pokazuje napięcia wokół własnych decyzji.",
+      "whatHappened": "TVN24 opublikowało materiał o reakcji Mateusza Morawieckiego na uchwałę PiS w sprawie stowarzyszeń. To kolejny sygnał, że partia utrzymuje nerwową dynamikę wokół własnego przekazu i zaplecza.",
+      "keyFacts": [
+        "Temat jest bezpośrednio związany z uchwałą PiS.",
+        "W centrum stoi reakcja Mateusza Morawieckiego.",
+        "To bardziej sygnał polityczny niż twarda zmiana legislacyjna."
+      ],
+      "reactions": [
+        "Komentarz Morawieckiego może zostać wykorzystany do dalszego ustawiania wewnętrznej hierarchii w partii.",
+        "Ruch natychmiast pracuje także w komentarzu medialnym, nie tylko w samej treści uchwały."
+      ],
+      "whyItMatters": "Każdy nowy sygnał z PiS wpływa na to, jak rynek polityczny czyta układ sił po prawej stronie sceny.",
+      "context": "To najbardziej czytelny poranny komentarz polityczny z TVN24 w tym slocie.",
+      "watchNext": [
+        "Obserwować, czy pojawi się kolejna odpowiedź ze strony PiS.",
+        "Sprawdzić, czy temat przejdzie w szerszy spór o stowarzyszenia i koalicje."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Polska",
+          "url": "https://tvn24.pl/polska/mateusz-morawiecki-reaguje-na-uchwale-pis-w-sprawie-stowarzyszen-st9144432"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Morawiecki",
+        "polityka",
+        "stowarzyszenia"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-paliwa-20-groszy",
+      "section": "Gospodarka",
+      "title": "Ceny paliw w Polsce rosną nawet o 20 groszy w tydzień",
+      "lead": "Tankowanie znów idzie wyraźnie w górę.",
+      "whatHappened": "TVN24 Biznes podało, że ceny paliw na stacjach w Polsce wzrosły miejscami nawet o 20 groszy w tydzień. To prosty i natychmiast odczuwalny sygnał kosztowy dla kierowców oraz firm transportowych.",
+      "keyFacts": [
+        "Skala wzrostu sięga nawet 20 groszy w tydzień.",
+        "To bezpośrednio wpływa na koszt transportu i codziennych zakupów.",
+        "Temat jest widoczny w krajowym feedzie jako świeży gospodarczy impuls."
+      ],
+      "reactions": [
+        "Kierowcy zareagują na to bez dodatkowej interpretacji.",
+        "Dla firm przewozowych to kolejny koszt, który może przenieść się dalej w łańcuchu cen."
+      ],
+      "whyItMatters": "Paliwo szybko wpływa na ceny usług i na ogólne odczucie presji inflacyjnej.",
+      "context": "To jeden z najmocniejszych porannych tematów ekonomicznych, który łatwo przełoży się na codzienny odbiór rynku.",
+      "watchNext": [
+        "Sprawdzić, czy TVN24 poda przyczynę wzrostu cen.",
+        "Obserwować, czy presja utrzyma się w kolejnych dniach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes - ceny paliw",
+          "url": "https://tvn24.pl/biznes/moto/ceny-paliw-na-stacjach-w-polsce-wzrost-nawet-o-20-groszy-w-tydzien-st9144364"
+        }
+      ],
+      "tags": [
+        "paliwo",
+        "inflacja",
+        "transport",
+        "ceny"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-gis-lody-proteinowe",
+      "section": "Gospodarka",
+      "title": "GIS wycofuje partie lodów proteinowych Dubai Style Chocolate",
+      "lead": "Alert żywnościowy z możliwym alergenem.",
+      "whatHappened": "Główny Inspektorat Sanitarny ostrzega przed czterema partiami lodów proteinowych Dubai Style Chocolate 500 ml. Powodem jest możliwa obecność niezadeklarowanego alergenu, czyli orzechów nerkowca.",
+      "keyFacts": [
+        "Ostrzeżenie dotyczy czterech partii produktu.",
+        "Problemem jest możliwa obecność orzechów nerkowca.",
+        "To oficjalny alert żywnościowy, a nie tylko medialny sygnał."
+      ],
+      "reactions": [
+        "Dla osób z alergią na orzechy to istotny natychmiastowy sygnał bezpieczeństwa.",
+        "Sieci handlowe i konsumenci muszą reagować szybciej niż przy zwykłym newsie konsumenckim."
+      ],
+      "whyItMatters": "Takie wycofania mają bezpośredni wpływ na bezpieczeństwo zdrowotne i zaufanie do łańcucha dostaw.",
+      "context": "To nowy, dobrze potwierdzony alert z oficjalnego kanału GIS.",
+      "watchNext": [
+        "Sprawdzić, czy GIS dopisze kolejne partie albo doprecyzuje dystrybucję.",
+        "Obserwować, czy sieć handlowa wyda własny komunikat dla klientów."
+      ],
+      "sources": [
+        {
+          "title": "GIS ostrzeżenia",
+          "url": "https://www.gov.pl/web/gis/ostrzezenia"
+        },
+        {
+          "title": "GIS publiczne ostrzeżenie o lodach proteinowych",
+          "url": "https://www.gov.pl/web/gis/ostrzezenie-publiczne-dotyczace-zywnosci-wycofanie-4-partii-lodow-proteinowych-dubai-style-chocolate-500-ml-z-uwagi-na-mozliwa-obecnosc-niezadeklarowanego-alergenu--orzechow-nerkowca"
+        }
+      ],
+      "tags": [
+        "GIS",
+        "żywność",
+        "alergen",
+        "wycofanie"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-otomoto-sprzedaz-aut",
+      "section": "Gospodarka",
+      "title": "Sprzedaż samochodów odbija. Rynek aut ma najlepszy wynik w roku",
+      "lead": "Rynek aut łapie wyraźniejsze odbicie.",
+      "whatHappened": "TVN24 Biznes podało, że sprzedaż samochodów mocno odbiła, a raport Otomoto pokazuje najwyższy wynik rynku aut w tym roku. To sygnał, że popyt motoryzacyjny wraca szybciej niż w poprzednich tygodniach.",
+      "keyFacts": [
+        "Raport wskazuje na najlepszy wynik w tym roku.",
+        "Temat dotyczy szerokiego rynku aut, nie tylko jednego producenta.",
+        "To pozytywny odczyt dla konsumpcji dóbr trwałych."
+      ],
+      "reactions": [
+        "Dealerzy i platformy ogłoszeniowe mogą odczytać to jako mocniejszy popyt w kanale sprzedaży.",
+        "Lepszy odczyt rynku aut zwykle poprawia też nastroje w gospodarce realnej."
+      ],
+      "whyItMatters": "Rynek motoryzacyjny to ważny barometr wydatków gospodarstw domowych i leasingu.",
+      "context": "To dobry kontrapunkt dla droższych paliw: konsumpcja aut odbija, ale koszty eksploatacji rosną.",
+      "watchNext": [
+        "Sprawdzić, czy Otomoto poda pełniejszy podział na segmenty.",
+        "Obserwować, czy mocny wynik przełoży się na kolejne miesiące."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes - sprzedaż samochodów",
+          "url": "https://tvn24.pl/biznes/moto/sprzedaz-samochodow-mocne-odbicie-na-rynku-aut-najwyzszy-wynik-w-tym-roku-raport-otomoto-st9144112"
+        }
+      ],
+      "tags": [
+        "auta",
+        "Otomoto",
+        "sprzedaż",
+        "rynek"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "technologia-white-house-gold-eagle",
+      "section": "Technologia",
+      "title": "Biały Dom uruchamia projekt Gold Eagle",
+      "lead": "Nowy federalny hub do łatania luk cyberbezpieczeństwa.",
+      "whatHappened": "Biały Dom uruchamia projekt Gold Eagle, opisany jako clearinghouse do szybszej koordynacji wykrywania i łatania podatności cyberbezpieczeństwa. Oficjalny komunikat wskazuje, że inicjatywa ma działać na styku administracji, branży AI i operatorów infrastruktury krytycznej.",
+      "keyFacts": [
+        "Gold Eagle ma koordynować łatanie luk bezpieczeństwa.",
+        "Projekt działa w obszarze AI i infrastruktury krytycznej.",
+        "To oficjalnie ogłoszona federalna inicjatywa."
+      ],
+      "reactions": [
+        "Branża cyber i AI potraktuje to jako ważny sygnał kierunku polityki federalnej.",
+        "Może to przyspieszyć standaryzację reakcji na podatności w sektorze publicznym i prywatnym."
+      ],
+      "whyItMatters": "Takie inicjatywy wpływają na bezpieczeństwo systemów, na których opiera się infrastruktura i usługi publiczne.",
+      "context": "To technologiczny odpowiednik alertu bezpieczeństwa: mniej o produkcie, bardziej o całym ekosystemie.",
+      "watchNext": [
+        "Sprawdzić, czy projekt dostanie harmonogram i partnerów wdrożeniowych.",
+        "Obserwować, czy pojawią się reakcje ze strony firm cyberbezpieczeństwa."
+      ],
+      "sources": [
+        {
+          "title": "White House Gold Eagle initiative",
+          "url": "https://www.whitehouse.gov/releases/2026/07/white-house-launches-gold-eagle-initiative-for-unprecedented-cybersecurity-vulnerability-coordination/"
+        },
+        {
+          "title": "TVN24 Biznes - projekt Gold Eagle",
+          "url": "https://tvn24.pl/biznes/tech/bialy-dom-bierze-sie-za-luki-w-zabezpieczeniach-rusza-projekt-gold-eagle-st9144081"
+        }
+      ],
+      "tags": [
+        "AI",
+        "cyberbezpieczeństwo",
+        "Biały Dom",
+        "Gold Eagle"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-iran-usa-dalsza-eskalacja",
+      "section": "Świat",
+      "title": "USA rozważają dalszą eskalację wobec Iranu",
+      "lead": "Iran wraca na szczyt globalnego ryzyka.",
+      "whatHappened": "CNN podało, że Donald Trump rozważa dalsze opcje rozszerzenia operacji wojskowych przeciw Iranowi, a oficjalne komunikaty U.S. Department of War mówią o nowej fali ofensywnych uderzeń na cele w Iranie. To utrzymuje presję wokół cieśniny Ormuz i szlaków handlowych.",
+      "keyFacts": [
+        "CNN opisuje rozważane dalsze opcje wojskowe.",
+        "Oficjalny komunikat wojskowy potwierdza nową falę uderzeń.",
+        "Temat bezpośrednio łączy bezpieczeństwo z handlem morskim."
+      ],
+      "reactions": [
+        "Rynek ropy i żegluga będą reagować na każdą kolejną zapowiedź eskalacji.",
+        "To nadal nie jest sygnał deeskalacji, tylko podtrzymania presji."
+      ],
+      "whyItMatters": "Iran i Ormuz pozostają jednym z najważniejszych punktów zapalnych dla energii, frachtu i bezpieczeństwa globalnego.",
+      "context": "To najcięższy geopolityczny blok poranka i bezpośrednia kontynuacja wczorajszej linii napięcia.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się nowy komunikat morski lub wojskowy.",
+        "Obserwować, czy ropa i stawki frachtowe zareagują natychmiast."
+      ],
+      "sources": [
+        {
+          "title": "CNN Iran article",
+          "url": "https://edition.cnn.com/2026/07/15/politics/trump-iran-military-options"
+        },
+        {
+          "title": "U.S. Department of War Iran tag",
+          "url": "https://www.defense.gov/News/Tag/47531/iran/"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Ormuz",
+        "wojna",
+        "żegluga"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-francja-assisted-dying-law",
+      "section": "Świat",
+      "title": "Francja przyjmuje ustawę o wspomaganym umieraniu",
+      "lead": "Po latach debaty parlament domyka temat.",
+      "whatHappened": "CNN i Assemblée nationale potwierdzają, że francuscy posłowie przyjęli ustawę o wspomaganym umieraniu po latach sporów. Projekt dopuszcza tę możliwość tylko dla dorosłych pacjentów terminalnych i przy bardzo rygorystycznych kryteriach.",
+      "keyFacts": [
+        "Ustawa została przyjęta po wieloletniej debacie.",
+        "Przepisy mają działać przy bardzo ostrych warunkach dostępu.",
+        "To jeden z ważniejszych europejskich sporów bioetycznych tego miesiąca."
+      ],
+      "reactions": [
+        "Decyzja z pewnością uruchomi kolejne spory polityczne, religijne i medyczne.",
+        "Francja ustawia nowy punkt odniesienia dla europejskiej debaty o końcu życia."
+      ],
+      "whyItMatters": "To zmiana, która może wpływać na debatę ustawodawczą i etyczną także poza Francją.",
+      "context": "W tym slocie to najważniejszy europejski temat poza wojną w Ukrainie i napięciem na Bliskim Wschodzie.",
+      "watchNext": [
+        "Sprawdzić, jak przebiegną dalsze etapy legislacyjne i wdrożenie.",
+        "Obserwować reakcje organizacji medycznych i kościelnych."
+      ],
+      "sources": [
+        {
+          "title": "CNN France article",
+          "url": "https://edition.cnn.com/2026/07/15/europe/france-national-assembly-approves-assisted-dying-bill-intl"
+        },
+        {
+          "title": "Assemblée nationale dossier Fin de vie",
+          "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fin_de_vie_17e"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "bioetyka",
+        "parlament",
+        "prawo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-chiny-lepszy-wizerunek-niz-usa",
+      "section": "Świat",
+      "title": "Pew: w wielu krajach Chiny są dziś oceniane lepiej niż USA",
+      "lead": "Globalny obraz supermocarstw się odwraca.",
+      "whatHappened": "Pew Research pokazuje, że w wielu krajach Chiny są obecnie postrzegane korzystniej niż Stany Zjednoczone. BBC opisuje ten wynik jako zmianę w globalnym układzie sympatii, a sam raport wskazuje na wzrost pozytywnych ocen Chin przy pogarszającym się obrazie USA.",
+      "keyFacts": [
+        "Pew publikuje nowy globalny przegląd opinii publicznej.",
+        "W wielu krajach pozytywna ocena Chin przewyższa ocenę USA.",
+        "To nie jest pojedynczy news, tylko szerszy trend wizerunkowy."
+      ],
+      "reactions": [
+        "Taki wynik jest korzystny propagandowo dla Pekinu.",
+        "Dla Waszyngtonu to sygnał, że wojna narracyjna nie idzie po jego myśli."
+      ],
+      "whyItMatters": "Wizerunek supermocarstw wpływa na dyplomację, handel i gotowość innych państw do współpracy.",
+      "context": "To bardziej strategiczny niż chwilowy news, ale dobrze wyjaśnia zmianę tonu w globalnym feedzie.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się szersze reakcje dyplomatyczne.",
+        "Obserwować, czy Pekin wykorzysta raport w komunikacji zewnętrznej."
+      ],
+      "sources": [
+        {
+          "title": "Pew Research China views",
+          "url": "https://www.pewresearch.org/global/2026/07/15/views-of-china-and-xi-are-improving-globally/"
+        },
+        {
+          "title": "BBC News RSS",
+          "url": "https://feeds.bbci.co.uk/news/rss.xml"
+        }
+      ],
+      "tags": [
+        "Chiny",
+        "USA",
+        "Pew",
+        "opinia publiczna"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-ukraina-black-sea-tankers",
+      "section": "Świat",
+      "title": "Rosyjskie ataki zabijają 14 osób, a Ukraina uderza w tankowce na Morzu Czarnym",
+      "lead": "Wojna znów idzie w stronę szlaków morskich.",
+      "whatHappened": "BBC podało, że rosyjskie ataki zabiły 14 osób, a Ukraina uderzyła w tankowce na Morzu Czarnym. To kolejny sygnał, że konflikt coraz mocniej dotyka żeglugi i infrastruktury logistycznej poza samą linią frontu.",
+      "keyFacts": [
+        "BBC raportuje 14 ofiar po rosyjskich atakach.",
+        "Ukraina uderzyła w tankowce na Morzu Czarnym.",
+        "To bezpośrednio uderza w bezpieczeństwo transportu morskiego."
+      ],
+      "reactions": [
+        "Stawki ubezpieczenia i ryzyko żeglugowe mogą wzrosnąć natychmiast.",
+        "To kolejny dowód, że wojna przesuwa się w stronę logistyki i energii."
+      ],
+      "whyItMatters": "Morze Czarne pozostaje kluczowe dla eksportu, energii i regionalnej stabilności bezpieczeństwa.",
+      "context": "To jeden z najmocniejszych światowych leadów BBC w tym slocie i ważny kontrapunkt dla Iranu.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się dokładniejszy bilans szkód i ofiar.",
+        "Obserwować, czy strony konfliktu zareagują na uderzenia w tankowce."
+      ],
+      "sources": [
+        {
+          "title": "BBC World RSS",
+          "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        },
+        {
+          "title": "BBC article on Russia and Black Sea tankers",
+          "url": "https://www.bbc.co.uk/news/articles/c8929jv8kdzo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "Morze Czarne",
+        "żegluga"
+      ],
+      "priority": "high"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 homepage",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes/najnowsze"
+    },
+    {
+      "title": "TVN24 Meteo Polska",
+      "url": "https://tvn24.pl/tvnmeteo/polska"
+    },
+    {
+      "title": "IMGW raport 131",
+      "url": "https://imgw.pl/aktualna-i-prognozowana-sytuacja-meteorologiczna-i-hydrologiczna-raport-nr-131/"
+    },
+    {
+      "title": "GIS ostrzeżenia",
+      "url": "https://www.gov.pl/web/gis/ostrzezenia"
+    },
+    {
+      "title": "White House Gold Eagle initiative",
+      "url": "https://www.whitehouse.gov/releases/2026/07/white-house-launches-gold-eagle-initiative-for-unprecedented-cybersecurity-vulnerability-coordination/"
+    },
+    {
+      "title": "CNN Trump Iran military options",
+      "url": "https://edition.cnn.com/2026/07/15/politics/trump-iran-military-options"
+    },
+    {
+      "title": "U.S. Department of War Iran tag",
+      "url": "https://www.defense.gov/News/Tag/47531/iran/"
+    },
+    {
+      "title": "CNN France assisted dying bill",
+      "url": "https://edition.cnn.com/2026/07/15/europe/france-national-assembly-approves-assisted-dying-bill-intl"
+    },
+    {
+      "title": "Assemblée nationale Fin de vie dossier",
+      "url": "https://www.assemblee-nationale.fr/dyn/17/dossiers/fin_de_vie_17e"
+    },
+    {
+      "title": "Pew Research China views",
+      "url": "https://www.pewresearch.org/global/2026/07/15/views-of-china-and-xi-are-improving-globally/"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    }
+  ]
+}
