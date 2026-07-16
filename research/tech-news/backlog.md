@@ -4,6 +4,10 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Google DMA interoperability on Android/Search | Binding EU specs now force broader access to Android features and Search data | Watch compliance timeline, rival assistant uptake and privacy carve-outs | Open |
+| High | Track Claude 1Password agent login | 1Password for Claude is a concrete security pattern for browser agents | Watch Mac rollout, enterprise controls and any extension to payments/identity | Open |
+| High | Track Kimi K3 adoption and benchmarks | Official Kimi K3 release plus HN interest makes Moonshot a real frontier competitor | Watch independent benchmarks, pricing and API/app uptake | Open |
+| Medium | Track OnePlus Western retreat | OnePlus says it will end new product rollouts in Europe and North America | Watch support timelines, ColorOS transition and regional portfolio changes | Open |
 | High | Track Siri AI public beta rollout | Apple's iOS 27 beta makes Siri AI a system-level consumer AI test, not just a feature demo | Watch rollout breadth, on-device context, regional gating and stability on the public beta | Open |
 | High | Track Google visual Search rollout | Google is pushing Images/Search from discovery to generation, which could reprice visual search | Watch whether browseable Images and AI Overviews expand beyond US/English and whether collections stick | Open |
 | High | Track AI copyright escalation | Google publisher suits and OpenAI sanction motions show training-data licensing is a durable battleground | Watch complaints, discovery fights, settlement pressure and any licensing shifts | Open |

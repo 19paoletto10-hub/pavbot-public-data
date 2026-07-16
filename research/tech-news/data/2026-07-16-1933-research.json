@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-16",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny refresh przesuwa temat z ogólnego lobbingu AI do formalnej interoperacyjności, agent security i regionalizacji produktów. Najmocniejszy sygnał to decyzja Komisji Europejskiej wobec Google: Android i Search mają otworzyć się szerzej na rywali, co przenosi spór o AI z poziomu modelu na poziom dostępu do systemu operacyjnego i danych wyszukiwania.",
+    "Równolegle frontier AI zbliża się do wspólnego języka regulacyjnego. OpenAI publikuje reverse federalism, Anthropic od miesięcy naciska na twardsze testy i audyty, a Axios opisuje, że Hassabis, Altman i Amodei mówią dziś w praktyce o bardzo podobnym szkielecie nadzoru. To nie jest jeszcze prawo, ale jest to już wyraźna polityczna konwergencja największych graczy.",
+    "Po stronie produktów widać dwa ważne ruchy. Moonshot uruchamia Kimi K3 i od razu trafia na szczyt Hacker News, a Claude z 1Password pokazuje bardziej dojrzały wzorzec agentic login bez ujawniania sekretów modelowi. Jednocześnie OnePlus zawęża geograficznie biznes, Microsoft otwiera Comic Chat jako open source, a Product Hunt i HN dalej premiują workflow, które da się sprawdzić i kontrolować."
+  ],
+  "summaryBullets": [
+    "Regulacje: Google i DMA: Android oraz Search mają się otworzyć na rywali",
+    "Regulacje: Frontier AI regulatorzy zaczynają mówić jednym głosem",
+    "AI: Kimi K3 wchodzi do wyścigu frontier modeli"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-16-1933-0-google-i-dma-android-oraz-search-maja-sie-otworzyc-na-rywali-2184dff77c",
+      "section": "Regulacje",
+      "title": "Google i DMA: Android oraz Search mają się otworzyć na rywali",
+      "standfirst": "Komisja Europejska wydała binding measures wobec Google: konkurenci mają dostać lepszy dostęp do funkcji Androida oraz do danych Search. To formalny krok od sporów o AI do przepisów o interoperacyjności platform.",
+      "whatHappened": "UE wymusza większy dostęp rywali do Androida i danych wyszukiwania.",
+      "whyItMatters": "AI i search przestają być tylko produktami, a stają się regulowaną infrastrukturą dostępu.",
+      "deeperAnalysis": [
+        "To jest dużo mocniejszy sygnał niż zwykła krytyka produktu. Jeśli rywalizujące AI assistants mają dostać bardziej równy dostęp do funkcji Androida, to oznacza, że przewaga Google nie będzie już opierać się wyłącznie na jakości modelu, ale na architekturze dostępu do systemu.",
+        "Najciekawsza jest warstwa Search. Komisja nie mówi jedynie o wynikach wyszukiwania, ale o danych, które Google zbiera na skalę, której nie mają konkurenci. W praktyce chodzi o to, czy AI search i klasyczny search zaczną podlegać tym samym regułom dostępu, a to może zmienić układ sił w całym ekosystemie asystentów.",
+        "To także sygnał dla Apple, Perplexity, OpenAI i Anthropic. Jeżeli UE uzna, że rywale mają prawo do bardziej równych interfejsów na Androidzie, to rynek będzie się przesuwał w stronę \"AI jako warstwa wymienna\", a nie \"AI jako zamknięty domyślny element producenta\"."
+      ],
+      "contextPoints": [
+        "Co się stało: Komisja wydała binding specifications dla Google.",
+        "Dlaczego ważne: interoperacyjność staje się wymogiem, nie opcją.",
+        "Na co patrzeć dalej: techniczny harmonogram zgodności i zakres wyjątków bezpieczeństwa."
+      ],
+      "sources": [
+        {
+          "title": "European Commission guidance",
+          "url": "https://www.pubaffairsbruxelles.eu/eu-institution-news/commission-provides-guidance-to-google-for-ai-interoperability-on-android-and-sharing-of-google-search-data-under-the-digital-markets-act/"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/policy/966438/eu-google-android-ai-interoperability-search-data-dma"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "EU",
+        "DMA",
+        "Android",
+        "Search",
+        "interoperability"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-16-1933-1-frontier-ai-regulatorzy-zaczynaja-mowic-jednym-glosem-bc14f475a0",
+      "section": "Regulacje",
+      "title": "Frontier AI regulatorzy zaczynają mówić jednym głosem",
+      "standfirst": "OpenAI publikuje reverse federalism, Anthropic od miesięcy proponuje twardsze testy i audyty, a Axios opisuje zaskakującą konwergencję Altmana, Hassabisa i Amodei. Trzy największe nazwiska branży mówią dziś o bardzo podobnym szkielecie nadzoru.",
+      "whatHappened": "Najwięksi gracze frontier AI zbliżają swoje propozycje regulacyjne.",
+      "whyItMatters": "To może przyspieszyć legislację, ale też zabetonować reguły pod największych graczy.",
+      "deeperAnalysis": [
+        "Najmocniejsza zmiana z dzisiejszego dnia nie dotyczy modelu, tylko języka politycznego. Kiedy konkurencyjni CEO zaczynają używać podobnych pojęć: independent testing, one governing system, safety audits, national standard, to znaczy, że debata wchodzi w fazę instytucjonalną.",
+        "OpenAI publicznie broni reverse federalism, czyli ścieżki, w której stany tworzą wspólny baseline, a federalny standard spina to w jeden system. Anthropic z kolei wprost chce mocniejszych testów i możliwości blokowania deploymentów. Axios dodaje do tego obraz, w którym Hassabis, Altman i Amodei różnią się w detalach, ale nie w kierunku.",
+        "Najważniejszy efekt uboczny to ryzyko regulatory capture. Taki model regulacji zwykle najlepiej obsługują duzi gracze z prawnikami, safety teamami i relacjami z władzami. Dla startupów i open source oznacza to wyższy próg wejścia, nawet jeśli intencją jest bezpieczeństwo."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI i Anthropic publikują zbieżne ramy, Axios opisuje konwergencję trzech CEO.",
+        "Dlaczego ważne: frontier AI przestaje być \"Wild West\" w narracji największych firm.",
+        "Na co patrzeć dalej: czy statehouse'y i White House przełożą to na konkretne przepisy."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action/"
+        },
+        {
+          "title": "Axios",
+          "url": "https://www.axios.com/2026/07/16/ai-regulations-openai-anthropic-google"
+        },
+        {
+          "title": "Anthropic / Dario Amodei",
+          "url": "https://darioamodei.com/post/policy-on-the-ai-exponential"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "Anthropic",
+        "Google DeepMind",
+        "regulation",
+        "reverse federalism",
+        "audits"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-16-1933-2-kimi-k3-wchodzi-do-wyscigu-frontier-modeli-15f2490c53",
+      "section": "AI",
+      "title": "Kimi K3 wchodzi do wyścigu frontier modeli",
+      "standfirst": "Moonshot oficjalnie oznaczył Kimi K3 jako model już wydany, z 1M token context i multimodalnością. HN wynosi go dziś na pierwsze miejsce, więc launch ma zarówno produktowy, jak i community signal.",
+      "whatHappened": "Kimi K3 został oficjalnie uruchomiony i od razu wywołał duże zainteresowanie.",
+      "whyItMatters": "To kolejny dowód, że chińscy gracze nadal naciskają na frontier competition, zwłaszcza w kodowaniu i długim kontekście.",
+      "deeperAnalysis": [
+        "Kimi K3 jest ważny nie tylko dlatego, że ma duże parametry i duży kontekst. Ważniejsze jest to, że Moonshot pozycjonuje go jako model do coding agentów, knowledge work i long-horizon tasks. To dokładnie tam, gdzie dziś rynek szuka przewagi, a nie wyłącznie w benchmarkowej demonstracji.",
+        "Oficjalne docs są mocne: 1M token context, multimodalność i status flagowego modelu. To wystarcza, żeby uznać launch za realny, a nie za leak czy teaser. W połączeniu z wysokim miejscem na Hacker News daje to sygnał, że społeczność builderów natychmiast testuje nowego gracza.",
+        "Dla zachodnich firm to też przypomnienie, że frontier AI nie jest zamkniętym wyścigiem kilku amerykańskich labów. Globalne modele nadal mogą szybciej przechodzić od zapowiedzi do użycia, zwłaszcza gdy są budowane pod developer workflows."
+      ],
+      "contextPoints": [
+        "Co się stało: Moonshot publikuje Kimi K3 jako model gotowy do użycia.",
+        "Dlaczego ważne: chiński frontier model wchodzi w bezpośrednią konkurencję z zachodnimi flagowcami.",
+        "Na co patrzeć dalej: niezależne benchmarki, pricing i adopcja przez agent tools."
+      ],
+      "sources": [
+        {
+          "title": "Kimi API docs",
+          "url": "https://platform.kimi.com/docs/overview"
+        },
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Kimi",
+        "Moonshot",
+        "Kimi K3",
+        "open model",
+        "China",
+        "coding agents"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-16-1933-3-claude-dostaje-bezpieczne-logowanie-przez-1password-ba8b9fb599",
+      "section": "Produkty",
+      "title": "Claude dostaje bezpieczne logowanie przez 1Password",
+      "standfirst": "1Password pozwala Claude sign in to websites without exposing passwords lub one-time codes modelowi. To jeden z bardziej dojrzałych wzorców bezpiecznej delegacji dla agentów przeglądarkowych.",
+      "whatHappened": "Claude może korzystać z 1Password do logowania w zadaniach browserowych.",
+      "whyItMatters": "Pokazuje, że agentic workflows mogą działać bez wkładania sekretów do context window.",
+      "deeperAnalysis": [
+        "To jest bardzo praktyczny krok do przodu w agent security. Zamiast przekazywać login i hasło do modelu, 1Password weryfikuje prośbę, user zatwierdza ją biometrią, a wpisywanie danych odbywa się poza widokiem modelu. Taki układ zmniejsza ryzyko wycieku i daje jasną kontrolę nad zakresem dostępu.",
+        "Anthropic dopina do tego własny Claude in Chrome, gdzie dostępne są workflow recordings, scheduled tasks i tab management. W połączeniu z 1Password dostajemy wzorzec agenta, który może działać, ale pozostaje ograniczony przez zatwierdzone uprawnienia i wyraźne granice.",
+        "To ważne także dlatego, że dużo dzisiejszych produktów AI próbuje robić \"browser automation\" bez dobrego modelu zaufania. 1Password pokazuje, jak może wyglądać rozsądna warstwa pośrednia: delegacja bez ujawniania sekretów, z wyraźnym approve/deny i bez pokusy, by model przechowywał za dużo."
+      ],
+      "contextPoints": [
+        "Co się stało: 1Password for Claude włącza delegated login.",
+        "Dlaczego ważne: agent może działać bez dostępu do haseł wprost.",
+        "Na co patrzeć dalej: czy support dla payment i identity pojawi się później."
+      ],
+      "sources": [
+        {
+          "title": "1Password Support",
+          "url": "https://support.1password.com/1password-claude/"
+        },
+        {
+          "title": "Anthropic Help Center",
+          "url": "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Claude",
+        "1Password",
+        "agentic autofill",
+        "browser agent",
+        "security",
+        "macOS"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-16-1933-4-oneplus-wycofuje-nowe-produkty-z-zachodu-44523619c4",
+      "section": "Produkty",
+      "title": "OnePlus wycofuje nowe produkty z Zachodu",
+      "standfirst": "OnePlus opublikował notice of business adjustment, w którym mówi o zakończeniu nowych rolloutów w Europie i Ameryce Północnej. To mocny sygnał konsolidacji rynku telefonów poza Apple i Samsungiem.",
+      "whatHappened": "OnePlus zamyka nową ofertę produktową w dwóch dużych regionach.",
+      "whyItMatters": "Pokazuje, jak trudno utrzymać globalną dystrybucję sprzętu bez silnego carrier stack i lokalnego momentum.",
+      "deeperAnalysis": [
+        "To nie jest AI story w ścisłym sensie, ale jest ważne dla szerszego rynku technologii konsumenckich. OnePlus przez lata był jednym z bardziej rozpoznawalnych challengerów w smartfonach, a teraz sam przyznaje, że nie będzie dalej wypuszczał nowych produktów w Europie i Ameryce Północnej.",
+        "Taki ruch zwykle oznacza nie tylko problemy sprzedażowe, ale także koszt wsparcia, dystrybucji i regionalnej strategii software. Jeśli firma zaczyna upraszczać geografię, to znaczy, że opłacalność wieloregionowego modelu przestaje się spinać.",
+        "W praktyce to także ostrzeżenie dla innych hardware challengerów: w consumer tech sama dobra specyfikacja nie wystarcza. Potrzebujesz kanałów sprzedaży, wsparcia i spójnej historii produktowej, a to w 2026 roku robi się coraz trudniejsze."
+      ],
+      "contextPoints": [
+        "Co się stało: OnePlus ogłasza koniec nowych rolloutów w Europie i Ameryce Północnej.",
+        "Dlaczego ważne: globalny rynek telefonów się zawęża.",
+        "Na co patrzeć dalej: support dla istniejących urządzeń i regionalne portfolio Oppo/OnePlus."
+      ],
+      "sources": [
+        {
+          "title": "OnePlus",
+          "url": "https://www.oneplus.com/us/farewell"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/tech/966404/oneplus-officially-gives-up-on-the-us-and-europe"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "OnePlus",
+        "smartphone",
+        "Europe",
+        "North America",
+        "ColorOS",
+        "market retreat"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Google musi otworzyć Android i Search",
+      "rationale": "To dziś najlepszy przykład, że AI governance wchodzi w poziom systemu operacyjnego, a nie tylko modelu.",
+      "sourcesLabel": "European Commission guidance; The Verge"
+    },
+    {
+      "priority": "High",
+      "title": "Frontier AI regulatorzy zaczynają mówić jednym głosem",
+      "rationale": "OpenAI, Anthropic i Google DeepMind mówią zaskakująco podobnym językiem o testach, audytach i standardach.",
+      "sourcesLabel": "OpenAI; Axios; Anthropic / Dario Amodei"
+    },
+    {
+      "priority": "High",
+      "title": "Kimi K3 jako chińska odpowiedź na frontier models",
+      "rationale": "Oficjalny launch i wysoki ranking na HN pokazują, że konkurencja modeli dalej jest globalna.",
+      "sourcesLabel": "Kimi API docs; Hacker News"
+    },
+    {
+      "priority": "High",
+      "title": "Claude + 1Password jako wzorzec dla agentów",
+      "rationale": "Delegowane logowanie bez ujawniania sekretów to praktyczny krok w stronę bezpieczniejszych agentów.",
+      "sourcesLabel": "1Password Support; Anthropic Help Center"
+    },
+    {
+      "priority": "High",
+      "title": "OnePlus wychodzi z Europy i Ameryki Północnej",
+      "rationale": "To dobry sygnał o konsolidacji consumer hardware i kosztach regionalnej dystrybucji.",
+      "sourcesLabel": "OnePlus; The Verge"
+    },
+    {
+      "priority": "Medium",
+      "title": "Red pen dla agentów wygrywa z autopilotem",
+      "rationale": "Product Hunt i HN dalej premiują workflow, które da się sprawdzić, a nie tylko podziwiać.",
+      "sourcesLabel": "Product Hunt; Hacker News"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "European Commission guidance to Google for AI interoperability on Android and Search data",
+      "url": "https://www.pubaffairsbruxelles.eu/eu-institution-news/commission-provides-guidance-to-google-for-ai-interoperability-on-android-and-sharing-of-google-search-data-under-the-digital-markets-act/"
+    },
+    {
+      "title": "The Verge: Google ordered to open Android and Search to rivals in Europe",
+      "url": "https://www.theverge.com/policy/966438/eu-google-android-ai-interoperability-search-data-dma"
+    },
+    {
+      "title": "Axios: AI godfathers converge on regulations",
+      "url": "https://www.axios.com/2026/07/16/ai-regulations-openai-anthropic-google"
+    },
+    {
+      "title": "OpenAI: The US is advancing AI safety through state and federal action",
+      "url": "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action/"
+    },
+    {
+      "title": "Anthropic: Policy on the AI Exponential",
+      "url": "https://darioamodei.com/post/policy-on-the-ai-exponential"
+    },
+    {
+      "title": "Kimi API docs: Kimi K3 officially released",
+      "url": "https://platform.kimi.com/docs/overview"
+    },
+    {
+      "title": "1Password Support: Use 1Password to sign in to websites with Claude",
+      "url": "https://support.1password.com/1password-claude/"
+    },
+    {
+      "title": "Anthropic Help Center: Get started with Claude in Chrome",
+      "url": "https://support.claude.com/en/articles/12012173-get-started-with-claude-in-chrome"
+    },
+    {
+      "title": "OnePlus: Notice of Business Adjustment",
+      "url": "https://www.oneplus.com/us/farewell"
+    },
+    {
+      "title": "The Verge: OnePlus officially gives up on the US and Europe",
+      "url": "https://www.theverge.com/tech/966404/oneplus-officially-gives-up-on-the-us-and-europe"
+    },
+    {
+      "title": "Microsoft Open Source: Microsoft Comic Chat is now open source",
+      "url": "https://opensource.microsoft.com/blog/2026/07/16/microsoft-comic-chat-is-now-open-source/"
+    },
+    {
+      "title": "Product Hunt leaderboard for July 16, 2026",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/7/16"
+    },
+    {
+      "title": "Product Hunt newsletters",
+      "url": "https://www.producthunt.com/newsletters"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/"
+    }
+  ]
+}

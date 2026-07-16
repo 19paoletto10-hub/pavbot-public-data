@@ -4,6 +4,12 @@ Last updated: 2026-07-16
 
 ## Current Understanding
 
+Wieczorny refresh z 2026-07-16 przesuwa temat z ogólnego lobbingu AI do formalnej interoperacyjności, agent security i regionalizacji produktów. Komisja Europejska wydaje binding specs dla Google, więc Android i Search zaczynają być traktowane jak infrastruktura dostępu, a nie tylko zamknięty produkt.
+
+Równolegle frontier AI zbliża się do wspólnego języka nadzoru. OpenAI publikuje reverse federalism, Anthropic od miesięcy naciska na twardsze testy i audyty, a Axios opisuje, że Hassabis, Altman i Amodei mówią dziś w praktyce o bardzo podobnym szkielecie regulacyjnym.
+
+Po stronie produktów widać dwa ważne ruchy. Moonshot uruchamia Kimi K3 i od razu trafia na szczyt Hacker News, a Claude z 1Password pokazuje bardziej dojrzały wzorzec agentic login bez ujawniania sekretów modelowi. Jednocześnie OnePlus zawęża geograficznie biznes, Microsoft otwiera Comic Chat jako open source, a Product Hunt i HN dalej premiują workflow, które da się sprawdzić i kontrolować.
+
 Dzisiejszy refresh mocno przesuwa temat z product UI na public trust i infrastrukturę. Common Sense ocenia Google Search AI jako niebezpieczne dla dzieci, Anthropic i OpenAI rozgrywają regulacje stan po stanie, OpenAI stafferzy finansują kontr-PAC, a Australia zamienia AI w problem standardów energetycznych i wodnych.
 
 Równolegle rynek wchodzi w fazę twardszej weryfikacji: Anthropic przyspiesza IPO, Product Hunt promuje red-pen workflows, a Hacker News pyta, czy ręczne pisanie kodu nadal ma sens. Wspólny mianownik to mniej hype'u o modelu, więcej kontroli, kosztów wdrożenia i dowodów działania.
@@ -190,6 +196,7 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-16: Wieczorny refresh dodał binding DMA measures wobec Google, oficjalny launch Kimi K3, bezpieczne logowanie Claude przez 1Password, Microsoft Comic Chat open source i OnePlus business adjustment dla Europy oraz Ameryki Północnej.
 - 2026-07-16: Dzisiejszy run przesunął środek ciężkości z UI i rolloutów na public trust, state policy, PAC tension oraz AI infrastructure w power/water stack.
 
 ## Watch Items
