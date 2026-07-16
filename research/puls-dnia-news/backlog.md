@@ -2,6 +2,18 @@
 
 ## Open
 
+- Watch whether PiS turns the Morawiecki ultimatum into actual personnel decisions.
+- Watch whether the KO club meeting produces a formal message or policy shift.
+- Watch whether the RARS list-zelazny case gets a new prokuratura note or appeal.
+- Watch whether the Ursus facade incident turns into an inspection report or evacuation.
+- Watch whether the current IMGW heat and storm alerts expand into outages or local damage.
+- Watch whether the Balice "bomba w zegarku" incident gets a formal security clarification.
+- Watch whether the UK steel nationalization gets a timetable, financing detail or union response.
+- Watch whether the Ukraine protest wave turns into a reversal, reshuffle or Western reaction.
+- Watch whether the Hormuz blockade turns into a formal maritime advisory or oil-price follow-through.
+- Watch whether the Genoa bridge sentencing triggers appeals or compensation detail.
+- Watch whether the Myanmar boat disappearances get an official rescue tally.
+
 - Watch whether the Turkey fire gets a formal casualty or evacuation tally and a Poland-facing travel note.
 - Watch whether the station-paliw incident gets a cause note, hazardous-material clarification or a full traffic update.
 - Watch whether the orange weather alerts turn into outages, local damage or a new warning region after 21:00.

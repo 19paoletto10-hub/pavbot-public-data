@@ -2,6 +2,13 @@
 
 ## Current State
 
+The 2026-07-16 18:01 slot widens the feed into a more fragmented mix:
+PiS and Morawiecki escalate their public dispute, Tusk keeps KO tightly
+clustered, IMGW alerts stay live, and local safety keeps surfacing through
+Ursus, RARS and the harcerska-sprawność case. Abroad, Ukraine's protests,
+Ormuz's blockade logic, British Steel's nationalization, Genoa sentencing and
+the Myanmar boat disappearances add a new spread of world pressure.
+
 The 2026-07-16 15:01 slot adds a more formal legal and procedural layer:
 Ziobro gets a written ENA justification, PiS hardens its line on
 stowarzyszenia, new local legal and road-safety incidents land in Kielce and
