@@ -385,6 +385,16 @@ infrastruktury krytycznej.
 - UE-Ukraina Drone Deal: sprawdzić pierwsze wyjaśnienia o finansowaniu,
   uczestnikach i powiązaniu z europejską bazą przemysłową.
 
+Po wieczornym runie 17 lipca Ormuz wszedł w fazę egzekwowanej blokady:
+AP i AP video opisują nocne uderzenia USA w irańską infrastrukturę,
+boarding M/T Wen Yao i redyrekcję statków handlowych, a UKMTO i MarineTraffic
+pokazują spadek ruchu oraz rosnące ryzyko dla żeglugi. W Ukrainie utrzymuje
+się polityczna niestabilność po rekonstrukcji rządu i w trybie tymczasowym
+pracuje kierownictwo obrony, a brytyjski pakiet 300 mln euro dla 16 samolotów
+pozostaje najbardziej konkretnym potwierdzonym elementem wsparcia z ostatniej
+doby. Krajowo najświeższy sygnał to alerty RCB przed burzami i możliwymi
+przerwami w dostawie prądu.
+
 ## Recent Reports
 
 - [2026-07-16](runs/2026-07-16.md)
