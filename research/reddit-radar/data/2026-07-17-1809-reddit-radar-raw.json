@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-17-1809",
+  "status": "material_update",
+  "generatedAt": "2026-07-17T16:21:08Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-17T18:09:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Live 18:09 review completed through read-only Safari Computer Use on old.reddit.com in the local Safari session.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-17-1208 and 2026-07-17-0610. The 1208 run contributed no shortlisted URLs; the 0610 run contributed a four-URL blocklist.",
+      "Before selecting replacements, the run verified that the currently published public bundle on origin/main is 2026-07-17-0610, so the active remote state matched the previous successful morning slot.",
+      "Shortlist post and top-comment review stayed read-only on exact old.reddit post pages, with the final opened tab URL treated as the source of truth whenever accessibility element indices shifted during navigation.",
+      "The cleanest fresh survivors were When the interviewer asks about your 5-year plan, beLikeJohn, areWeSeeingAPatternHere, and geeksBad.",
+      "doomVotes was readable but too election-adjacent for a public-safe humor bundle, while mildlyinfuriating candidates stayed more ranty than funny.",
+      "At least four safe fresh cards survived the live review, so the reddit-radar contract prefers a new public bundle over copying forward 2026-07-17-0610 unchanged.",
+      "No Reddit social actions were performed.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-17-0610",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-17-1809-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-17-1809-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-17-1809-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://www.reddit.com/r/memes/comments/1uyb8h3/by_definition_this_must_contain_everything_in_the/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uyd129/theonlymachineiamtrulycomfortablewith/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uyhzr7/nobrainnopain/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uy6fp8/efficianttokenmaxxing/"
+  ],
+  "newCandidates": [
+    {
+      "subreddit": "r/memes",
+      "title": "When the interviewer asks about your 5-year plan",
+      "url": "https://www.reddit.com/r/memes/comments/1uz14q5/when_the_interviewer_asks_about_your_5year_plan/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_clean_office_honesty_joke_with_safe_comment_payoff"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "beLikeJohn",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uz2sn5/belikejohn/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_ai_office_roast_with_strong_comment_layer"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "areWeSeeingAPatternHere",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uz401n/areweseeingapatternhere/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_compact_http_pattern_gag_with_readable_comment_escalation"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "geeksBad",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyuv9p/geeksbad/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_light_ai_trust_roast_that_stays_public_safe"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "doomVotes",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uylnm4/doomvotes/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_turns_election_adjacent"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "theOnlyMachineIamTrulyComfortableWith",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyd129/theonlymachineiamtrulycomfortablewith/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_17_0610"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "noBrainNoPain",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyhzr7/nobrainnopain/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_17_0610"
+    }
+  ]
+}
