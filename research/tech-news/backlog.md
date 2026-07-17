@@ -4,6 +4,10 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Google AI Search monetization | Ask Advisor and new ad formats tie Search, Ads and Marketing Platform together | Watch rollout breadth, advertiser reaction and whether AI Search becomes a durable revenue surface | Open |
+| High | Track Zoox heavy-smoke recall | NHTSA recall turns emergency-scene perception into a formal AV safety issue | Watch the software remedy, follow-up incidents and regulator response | Open |
+| High | Track inference-chip financing | General Compute's loan suggests inference chips are becoming financeable assets | Watch whether other lenders and AI clouds copy the structure | Open |
+| Medium | Track Netflix genAI disclosure | Netflix's 300-title disclosure normalizes AI in post-production | Watch whether other streamers publish similar numbers or new disclosure norms | Open |
 | High | Track Google DMA interoperability on Android/Search | Binding EU specs now force broader access to Android features and Search data | Watch compliance timeline, rival assistant uptake and privacy carve-outs | Open |
 | High | Track Claude 1Password agent login | 1Password for Claude is a concrete security pattern for browser agents | Watch Mac rollout, enterprise controls and any extension to payments/identity | Open |
 | High | Track Kimi K3 adoption and benchmarks | Official Kimi K3 release plus HN interest makes Moonshot a real frontier competitor | Watch independent benchmarks, pricing and API/app uptake | Open |
@@ -169,6 +173,7 @@
 
 ## Review Notes
 
+- 2026-07-17: Wieczorny refresh dodał Google Marketing Live AI Search ads i Ask Advisor, recall Zoox po heavy smoke, finansowanie inference przez General Compute, disclosure Netflix o około 300 tytułach z genAI oraz bieżący community signal z Product Hunt i HN.
 - 2026-07-14: Wieczorny refresh dodał open-weight traffic share na Vercel, Spotify Talk to Spotify beta, rollback Meta Muse Image przy publicznych zdjęciach z Instagrama, Google AI ads disclosure, Anthropic rupee pricing w Indiach, OpenAI Families PM oraz mocniejszy community signal z Product Hunt i HN.
 - 2026-07-14: Daily research run added Intel/Micron capex, Markey data-center legislation, Microsoft Intune agentic identity, PixVerse interactive worlds, Waze Gemini navigation, Uber robotaxi lobbying and a practical/provenance-heavy community signal.
 - 2026-06-17: Topic created for Polish daily technology research and podcast

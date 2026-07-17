@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-17",
+  "runTime": "19:33",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny refresh przesuwa temat z samego rozszerzania AI UX do monetyzacji, bezpieczeństwa i infrastruktury. Google Marketing Live zamienia AI Search w bardziej bezpośrednią warstwę reklamową i agentic commerce przez nowe formaty reklam oraz Ask Advisor, czyli Gemini-powered agenta dla Ads, Analytics, Merchant Center i Marketing Platform. To już nie jest tylko odpowiedź w wyszukiwarce, ale pełniejsza warstwa wykonania i sprzedaży.",
+    "Równolegle rynek zaczyna finansować tańsze inference jako osobną klasę aktywów. General Compute dostał $400M loan od Upper90, a TechCrunch wskazuje, że to może być pierwszy taki przypadek, w którym inference-specific chips służą jako collateral. To ważny sygnał, bo pokazuje, że token economics i model hosting schodzą z poziomu abstrakcyjnego trendu do języka kredytu, zabezpieczeń i bilansu.",
+    "Najbardziej namacalny kontrsygnał pochodzi z autonomicznych pojazdów. Zoox wydał software recall po tym, jak robotaxi źle poradziło sobie z gęstym dymem przy scenie pożaru, a NHTSA zarejestrowała to jako oficjalny recall report dla floty 105 pojazdów. W praktyce oznacza to, że robotaxi są już oceniane przez pryzmat edge-case safety, nie tylko demo i geofencingu.",
+    "W streamingu AI też wychodzi z eksperymentu do produkcji. Netflix podaje, że około 300 tytułów użyło generative AI, głównie w post-produkcji, a spółka mówi o szybszym i tańszym dowożeniu scen, które wcześniej mogłyby w ogóle nie powstać. Na poziomie community signal Product Hunt i Hacker News nadal premiują shared memory, private inference i control-first workflow, a nie autopilotowy hype."
+  ],
+  "summaryBullets": [
+    "Produkty: Google zamienia AI Search w warstwę reklamową",
+    "Regulacje: Zoox pokazuje granice robotaxi",
+    "Infrastruktura: Inference chips stają się finansowalne"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-17-1933-0-google-zamienia-ai-search-w-warstwe-reklamowa-f2557ad820",
+      "section": "Produkty",
+      "title": "Google zamienia AI Search w warstwę reklamową",
+      "standfirst": "Google Marketing Live ogłosił nowe formaty reklam dla AI Search oraz Ask Advisor, czyli agenta Gemini działającego przez Google Ads, Analytics, Merchant Center i Google Marketing Platform. Firma opisuje to jako sposób na połączenie szybszych decyzji zakupowych z bezpośrednią ścieżką do finalnego zakupu.",
+      "whatHappened": "Google rozbudowuje AI Search o bardziej bezpośredni model monetyzacji i narzędzia dla marketerów.",
+      "whyItMatters": "Search zaczyna wyglądać jak agentic commerce layer, a nie tylko warstwa odpowiedzi.",
+      "deeperAnalysis": [
+        "To ważne, bo Google nie tylko dodaje kolejną funkcję AI do Search. Firma wyraźnie projektuje ścieżkę, w której rozmowa, rekomendacja, reklama i zakup są częścią jednego przepływu. W praktyce może to oznaczać większą część wartości przechwytywaną wewnątrz Google zamiast w zewnętrznych sklepach i wyszukiwarkach produktów.",
+        "Ask Advisor jest równie istotny jak same formaty reklam. Łączy Ads, Analytics, Merchant Center i Marketing Platform, więc marketer przestaje skakać między oddzielnymi narzędziami, a zaczyna pracować z warstwą, która ma pomagać w decyzjach i egzekucji. To jest bardzo silny sygnał, że Google chce zamknąć pętlę od intencji użytkownika do konwersji.",
+        "Ten ruch może też przeorganizować rynek narzędzi marketingowych. Jeśli conversational commerce stanie się domyślną ścieżką, to advertiserzy będą optymalizować nie tylko kampanie, ale też język i strukturę odpowiedzi w AI Search. Wtedy walka przeniesie się z klasycznego SEO do nowego interfejsu między reklamą a asystentem."
+      ],
+      "contextPoints": [
+        "Co się stało: Google ogłosił nowe reklamy dla AI Search i Ask Advisor.",
+        "Dlaczego ważne: Search staje się bezpośrednią warstwą sprzedaży i orkiestracji.",
+        "Na co patrzeć dalej: rollout geograficzny, reakcje reklamodawców i integracje z kolejnymi kategoriami zakupowymi."
+      ],
+      "sources": [
+        {
+          "title": "Google Marketing Live 2026: News and announcements",
+          "url": "https://blog.google/products/ads-commerce/google-marketing-live-2026-collection/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Search",
+        "Ads",
+        "Ask Advisor",
+        "AI Search",
+        "commerce"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-17-1933-1-zoox-pokazuje-granice-robotaxi-e6d3271ad5",
+      "section": "Regulacje",
+      "title": "Zoox pokazuje granice robotaxi",
+      "standfirst": "Zoox wydał software recall po tym, jak robotaxi nie poradziło sobie z gęstym dymem na aktywnej scenie pożaru. Oficjalny raport NHTSA obejmuje flotę 105 pojazdów i opisuje aktualizację software'u jako remediację.",
+      "whatHappened": "Robotaxi Zoox weszło w oficjalny proces recall po edge-case safety failure.",
+      "whyItMatters": "Autonomia jest już oceniana przez pryzmat reakcji na scenariusze kryzysowe, a nie tylko przez brak kolizji w standardowych warunkach.",
+      "deeperAnalysis": [
+        "Ten incydent pokazuje, że robotaxi są już rozliczane jak dojrzały system bezpieczeństwa, a nie tylko eksperymentalny produkt. NHTSA opisuje konkretną sytuację: nieobsługiwany pojazd napotkał dym przy aktywnej scenie pożaru, wykonał awaryjne manewry i dopiero potem Zoox dołożył update oraz proceduralne obejście.",
+        "Najważniejsze jest to, że recall nie dotyczy abstrakcyjnego algorytmu, tylko realnej floty na publicznych drogach. To oznacza, że problemy perception and behavior w trudnych warunkach mogą natychmiast przełożyć się na formalne procesy bezpieczeństwa, a więc na koszty, tempo wdrożeń i zaufanie regulatorów.",
+        "W szerszym ujęciu takie przypadki będą definiować, czy robotaxi zostaną przyjęte jako infrastruktura miejska. Jeśli firmy będą w stanie szybko aktualizować software i pokazywać dowody skuteczności w trudnych scenariuszach, zyskają przewagę. Jeśli nie, każde kolejne zdarzenie będzie wzmacniać argument za ostrzejszym nadzorem."
+      ],
+      "contextPoints": [
+        "Co się stało: Zoox zgłosił recall po incydencie z dymem przy scenie pożaru.",
+        "Dlaczego ważne: robotaxi przechodzą do formalnego reżimu bezpieczeństwa.",
+        "Na co patrzeć dalej: zakres zmian software'u, kolejne edge-case'y i reakcja regulatorów miejskich."
+      ],
+      "sources": [
+        {
+          "title": "NHTSA Part 573 Safety Recall Report 26E044",
+          "url": "https://static.nhtsa.gov/odi/rcl/2026/RCLRPT-26E044-2993.pdf"
+        },
+        {
+          "title": "TechCrunch: Zoox issues software recall after a robotaxi got confused by heavy smoke",
+          "url": "https://techcrunch.com/2026/07/17/zoox-issues-software-recall-after-a-robotaxi-got-confused-by-heavy-smoke/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Zoox",
+        "robotaxi",
+        "NHTSA",
+        "recall",
+        "safety",
+        "smoke"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-17-1933-2-inference-chips-staja-sie-finansowalne-7d1123abc5",
+      "section": "Infrastruktura",
+      "title": "Inference chips stają się finansowalne",
+      "standfirst": "General Compute, startup od AI inference cloud, dostał $400M loan od Upper90. TechCrunch sugeruje, że to może być pierwszy przypadek, w którym inference-specific chips służą jako collateral.",
+      "whatHappened": "Rynek zaczął finansować tańszą inferencję jako osobny biznes infrastrukturalny.",
+      "whyItMatters": "To sygnał, że ekonomia inference wychodzi z poziomu narracji o tokenach i wchodzi w język kredytu, zabezpieczeń i aktywów.",
+      "deeperAnalysis": [
+        "Ta historia jest ważna, bo pokazuje, że nie tylko modele, ale też hardware i financing stack zaczynają dojrzewać jako osobne klasy rynku. Jeśli bank lub lender akceptuje inference chips jako collateral, to znaczy, że branża uznaje te aktywa za w miarę mierzalne, przewidywalne i zbywalne.",
+        "W praktyce może to przyspieszyć rozwój firm, które budują tańszy compute dla open-source modeli albo dla produkcyjnych workloadów nie wymagających frontier LLM. Taki kapitał zwykle płynie tam, gdzie jest już powtarzalny popyt, a nie tylko obietnica przyszłych benchmarków.",
+        "To też ważny sygnał kosztowy dla całego rynku AI. Jeśli tania inferencja staje się finansowalna i zabezpieczalna, presja na ceny tokenów, model hosting i marże frontier labs może wzrosnąć. Dla użytkowników końcowych oznacza to większą dostępność, a dla dostawców modeli - większą presję na ekonomię unit economics."
+      ],
+      "contextPoints": [
+        "Co się stało: General Compute otrzymał $400M loan od Upper90.",
+        "Dlaczego ważne: inference infrastruktura staje się finansowalnym aktywem.",
+        "Na co patrzeć dalej: czy inne fundusze i lenderzy zaczną kopiować strukturę."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: Why the first GPU financiers are turning to inference chips in a $400 million deal",
+          "url": "https://techcrunch.com/2026/07/17/why-the-first-gpu-financiers-are-turning-to-inference-chips-in-a-400-million-deal/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "General Compute",
+        "inference",
+        "chips",
+        "loan",
+        "collateral",
+        "AI cloud"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-17-1933-3-netflix-normalizuje-genai-w-post-produkcji-ea3c619863",
+      "section": "Produkty",
+      "title": "Netflix normalizuje genAI w post-produkcji",
+      "standfirst": "Netflix podał, że około 300 tytułów na platformie użyło generative AI, głównie w post-produkcji. The Verge doprecyzowuje, że AI pomogło przy złożonych sekwencjach, crowd scenes i worldbuilding shots, a część materiału powstała dwa razy szybciej i przy niższym koszcie.",
+      "whatHappened": "GenAI stało się częścią produkcyjnej rutyny dużej platformy streamingowej.",
+      "whyItMatters": "To sygnał, że AI przechodzi z etapu demonstracji do przemysłowego pipeline'u treści.",
+      "deeperAnalysis": [
+        "Netflix nie opisuje AI jako futurystycznego dodatku, tylko jako narzędzie do dowożenia scen, które inaczej mogłyby zostać wycięte z powodu kosztu lub czasu. To bardzo praktyczne podejście: nie chodzi o zastąpienie całej produkcji, tylko o wypełnianie luk tam, gdzie tradycyjny pipeline jest za drogi lub za wolny.",
+        "W tym samym czasie spółka dalej rozbudowuje ad revenue i eksperymentuje z nowymi formatami treści, więc AI staje się częścią szerszej strategii monetyzacji i katalogu. To ważne, bo pokazuje, jak szybko generative AI może przejść od „kontrowersyjnej technologii” do „narzędzia optymalizującego koszty” w dużym media stacku.",
+        "W praktyce taki poziom adopcji prawdopodobnie przyspieszy też wymagania disclosure. Jeśli coraz więcej studiów będzie mówić, że AI użyto w post-produkcji, odbiorcy i regulatorzy zaczną pytać o zakres automatyzacji, prawa do głosów i obrazu oraz o wpływ na pracę twórców."
+      ],
+      "contextPoints": [
+        "Co się stało: Netflix ujawnił użycie genAI w około 300 tytułach.",
+        "Dlaczego ważne: generative AI wchodzi do mainstreamowego pipeline'u treści.",
+        "Na co patrzeć dalej: disclosure practices, reakcje branży i zmiany w produkcji."
+      ],
+      "sources": [
+        {
+          "title": "Netflix shareholder letter Q2 2026",
+          "url": "https://ir.netflix.net/files/doc_financials/2026/q2/FINAL-Q2-26-Shareholder-Letter.pdf"
+        },
+        {
+          "title": "The Verge: Netflix says around 300 titles used generative AI",
+          "url": "https://www.theverge.com/streaming/966633/netflix-ai-titles-q2-2026-earnings"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Netflix",
+        "generative AI",
+        "streaming",
+        "post-production",
+        "content",
+        "ads"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-17-1933-4-product-hunt-i-hn-chca-kontroli-nie-autopilota-911558a6f7",
+      "section": "Produkty",
+      "title": "Product Hunt i HN chcą kontroli, nie autopilota",
+      "standfirst": "Product Hunt leaderboard z 2026-07-17 promuje Unabyss for Claude, Zro private inference for coding agents, Albato AI i Basedash Suggestions. Hacker News front page tego samego dnia trzyma Kimi K3, NotebookLM/Gemini Notebook i OnePlus.",
+      "whatHappened": "Community signal nadal wybiera narzędzia z pamięcią, prywatnym inference i kontrolą workflow.",
+      "whyItMatters": "Builderzy akceptują AI, ale nagradzają tylko produkty, które da się sprawdzić, odtworzyć i skorygować.",
+      "deeperAnalysis": [
+        "To jest ważny sygnał, bo pokazuje różnicę między hype'em a realnym popytem. Unabyss for Claude obiecuje shared memory across apps and LLMs, Zro sprzedaje private inference for coding agents, a Basedash Suggestions idzie w kierunku analityki z własnymi podpowiedziami. To są produkty, które rozwiązują konkretne problemy w pracy, a nie tylko demonstrują możliwości modelu.",
+        "HN potwierdza ten sam wzór: Kimi K3 przyciąga uwagę jako nowy frontier model, NotebookLM rebrands into Gemini Notebook, a OnePlus halts operations w USA i Europie. Wspólny mianownik nie brzmi „najmocniejszy model”, tylko „jaki system naprawdę działa, pamięta i daje się kontrolować”.",
+        "Ten sygnał społecznościowy jest ważny także dla planowania podcastu. Jeśli publiczność techniczna coraz mocniej premiuje shared memory, private inference i workflow control, to warto wybierać tematy, które pokazują produktyzację i reviewability, a nie tylko demo-day capability."
+      ],
+      "contextPoints": [
+        "Co się stało: Product Hunt i Hacker News promują narzędzia praktyczne i kontrolowalne.",
+        "Dlaczego ważne: community signal wskazuje, że rynek chce AI w workflow, nie autopilota bez nadzoru.",
+        "Na co patrzeć dalej: czy kolejne launchy będą nadal skupiać się na memory, inference i review."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt: Best of July 17, 2026",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/7/17"
+        },
+        {
+          "title": "Hacker News front page",
+          "url": "https://news.ycombinator.com/front"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Product Hunt",
+        "Hacker News",
+        "memory",
+        "inference",
+        "workflow",
+        "Claude"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Google zamienia AI Search w warstwę reklamową",
+      "rationale": "Nowe formaty reklam i Ask Advisor pokazują, że Search, Ads i commerce sklejają się w jeden produktowy stack.",
+      "sourcesLabel": "Google Marketing Live 2026"
+    },
+    {
+      "priority": "High",
+      "title": "Zoox pokazuje granice robotaxi",
+      "rationale": "Oficjalny recall po incydencie z dymem przenosi autonomię z demo do twardej oceny edge-case safety.",
+      "sourcesLabel": "NHTSA; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Inference chips stają się finansowalne",
+      "rationale": "$400M loan pod inferencję sugeruje, że rynek zaczyna wyceniać i finansować tańszy AI compute jak osobną klasę aktywów.",
+      "sourcesLabel": "TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Netflix normalizuje genAI w post-produkcji",
+      "rationale": "Około 300 tytułów używających AI to sygnał, że generative AI wchodzi do mainstreamu produkcji treści.",
+      "sourcesLabel": "Netflix; The Verge"
+    },
+    {
+      "priority": "Medium",
+      "title": "Product Hunt i HN chcą kontroli, nie autopilota",
+      "rationale": "Shared memory, private inference i control-first tools nadal wygrywają z czystym hype'em modeli.",
+      "sourcesLabel": "Product Hunt; Hacker News"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Google Marketing Live 2026: News and announcements",
+      "url": "https://blog.google/products/ads-commerce/google-marketing-live-2026-collection/"
+    },
+    {
+      "title": "NHTSA Part 573 Safety Recall Report 26E044",
+      "url": "https://static.nhtsa.gov/odi/rcl/2026/RCLRPT-26E044-2993.pdf"
+    },
+    {
+      "title": "TechCrunch: Zoox issues software recall after a robotaxi got confused by heavy smoke",
+      "url": "https://techcrunch.com/2026/07/17/zoox-issues-software-recall-after-a-robotaxi-got-confused-by-heavy-smoke/"
+    },
+    {
+      "title": "TechCrunch: Why the first GPU financiers are turning to inference chips in a $400 million deal",
+      "url": "https://techcrunch.com/2026/07/17/why-the-first-gpu-financiers-are-turning-to-inference-chips-in-a-400-million-deal/"
+    },
+    {
+      "title": "Netflix shareholder letter Q2 2026",
+      "url": "https://ir.netflix.net/files/doc_financials/2026/q2/FINAL-Q2-26-Shareholder-Letter.pdf"
+    },
+    {
+      "title": "The Verge: Netflix says around 300 titles used generative AI",
+      "url": "https://www.theverge.com/streaming/966633/netflix-ai-titles-q2-2026-earnings"
+    },
+    {
+      "title": "Product Hunt: Best of July 17, 2026",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/7/17"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/front"
+    }
+  ]
+}

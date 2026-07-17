@@ -4,6 +4,8 @@ Last updated: 2026-07-17
 
 ## Current Understanding
 
+Wieczorny refresh z 2026-07-17 przesuwa temat z samej rozbudowy AI UX do monetyzacji, bezpieczeństwa i infrastruktury. Google Marketing Live zamienia AI Search w bardziej bezpośrednią warstwę reklamową i agentic commerce przez nowe formaty reklam oraz Ask Advisor, General Compute bierze $400M loan pod inference chips collateral, Zoox robi software recall po heavy smoke emergency-scene edge case, a Netflix podaje, że około 300 tytułów użyło genAI w post-produkcji. Wspólny mianownik to przejście od capability do kosztu, kontroli i produkcyjnej odpowiedzialności.
+
 Poranny refresh z 2026-07-17 przesuwa temat z samych modeli na produkty, które zamieniają AI w działanie i produkcję treści. Google łączy Search z aplikacjami i Vids z avatarami, Roblox Build przenosi prompt-to-game na mobile, Uber składa ofertę na Delivery Hero, Coca-Cola zatrzymuje fairlife po ransomware, a San Francisco dokręca śrubę Waymo. Wspólny mianownik to mniej demo, więcej interfejsów, dystrybucji, bezpieczeństwa i regulatorów.
 
 Community signal nadal premiuje workflowy, które da się sprawdzić i kontrolować. Product Hunt i Hacker News bardziej nagradzają agentów z red penem, integracje i użyteczne kontrolki niż czysty modelowy hype.
@@ -200,6 +202,7 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-17: Wieczorny refresh dodał Google Marketing Live AI Search ads i Ask Advisor, recall Zoox po heavy smoke, finansowanie inference przez General Compute, disclosure Netflix o około 300 tytułach z genAI oraz bieżący community signal z Product Hunt i HN.
 - 2026-07-17: Poranny refresh dodał Google Search connected apps i Vids, Roblox Build, ofertę Ubera na Delivery Hero, ransomware w fairlife i ostrzejsze zasady dla Waymo w San Francisco.
 - 2026-07-17: Community signal przesunął się w stronę workflowów z red penem i kontrolą na Product Hunt oraz bardziej praktycznych agentów na Hacker News.
 - 2026-07-16: Wieczorny refresh dodał binding DMA measures wobec Google, oficjalny launch Kimi K3, bezpieczne logowanie Claude przez 1Password, Microsoft Comic Chat open source i OnePlus business adjustment dla Europy oraz Ameryki Północnej.
@@ -207,6 +210,10 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- Google AI Search monetization: watch whether new ad formats and Ask Advisor expand beyond the initial Marketing Live framing and whether advertisers treat conversational commerce as a core workflow.
+- Zoox heavy-smoke recall: watch the software remedy, any follow-up incidents and whether emergency-scene perception becomes a formal AV benchmark.
+- Inference-chip financing: watch whether other lenders copy General Compute's collateral structure and whether inference clouds become a recognized asset class.
+- Netflix genAI disclosure: watch whether other streamers and studios disclose similar production usage or standardize AI credits and attribution.
 - Google connected-app rollout: watch whether Search/Workspace linking expands beyond the initial U.S. set and whether Vids avatars stay tightly gated.
 - Roblox Build creator controls: watch the July 28 test, moderation, age gating and creator uptake on mobile.
 - Uber/Delivery Hero consolidation: watch antitrust reaction, shareholder response and integration assumptions in the acquisition offer.
