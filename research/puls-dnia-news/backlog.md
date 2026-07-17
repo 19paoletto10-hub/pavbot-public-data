@@ -2,6 +2,12 @@
 
 ## Open
 
+- Watch whether RCB power-cut warnings turn into real outages or broader infrastructure notes before the next slot.
+- Watch whether Tatry get a formal TOPR or TPN follow-up after the surge of accidents in better weather.
+- Watch whether the Wisłostrada motorcycle crash becomes a longer traffic disruption or another official police note.
+- Watch whether the Iran strikes, Ukraine protests or Canada smoke alerts get another material update within the day.
+- Watch whether the China AI conference or British Steel reaction gets a sharper policy or market follow-up.
+
 - Watch whether PiS turns the seven-day ultimatum into actual exclusions or resignations before the next slot.
 - Watch whether the 18-year-old sabotage case gets a written prokuratura note or appeal.
 - Watch whether the Baltic interception gets a formal MON or NATO follow-up.

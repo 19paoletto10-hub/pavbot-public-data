@@ -1,0 +1,519 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-17",
+  "runTime": "09:01",
+  "status": "material_update",
+  "headline": "PiS, RCB i Iran w porannym slocie",
+  "summary": "Poranny slot 09:01 przesuwa feed na lokalne ryzyka pogodowo-transportowe w Polsce oraz mocniejszy blok globalny: Iran, Ukraina, Rohingya, Kanada i chińskie AI. PiS wchodzi w bardziej publiczny spór wewnętrzny, a Domański dokłada polityczno-budżetowy nacisk na koszt wet prezydenta.",
+  "checkedSources": [
+    {
+      "title": "TVN24 home",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    }
+  ],
+  "items": [
+    {
+      "id": "polityka-pis-spor-2026-07-17-0901",
+      "section": "Polityka",
+      "title": "PiS spór wyłazi na wierzch",
+      "lead": "Wewnętrzny spór w partii wchodzi w publiczne rozliczenia.",
+      "whatHappened": "TVN24 rano pokazuje PiS w fazie otwartego konfliktu, a komentarz o \"wyciąganiu brudów\" sugeruje, że spór nie jest już tylko kulisowy.",
+      "keyFacts": [
+        "To jeden z dwóch głównych tematów politycznych poranka 17 lipca 2026.",
+        "Narracja przesuwa się z dyscypliny partyjnej na wzajemne rozliczenia."
+      ],
+      "reactions": [
+        "Każda kolejna wypowiedź może podbijać konflikt.",
+        "To zwiększa presję na oficjalne stanowisko władz partii."
+      ],
+      "whyItMatters": "Publiczny spór może szybko przejść w decyzje kadrowe lub kolejne odejścia.",
+      "context": "To kontynuacja sekwencji z poprzednich slotów, ale dziś język jest bardziej frontalny.",
+      "watchNext": [
+        "Czy pojawi się formalna decyzja władz partii.",
+        "Czy ktoś publicznie ogłosi odejście lub wykluczenie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Co dalej z PiS? \"Powoli zaczyna się wyciąganie brudów\"",
+          "url": "https://tvn24.pl/polska/spor-w-pis-andrzej-domanski-zaczyna-sie-wyciaganie-brudow-st9146216"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Polityka",
+        "Partie"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-weta-prezydenta-2026-07-17-0901",
+      "section": "Polityka",
+      "title": "Weta prezydenta mają cenę",
+      "lead": "Domański wycenia koszt wet na miliardy złotych.",
+      "whatHappened": "Minister finansów powiedział, że jedno weto prezydenta może kosztować 5-6 mld zł i uderzać w potencjał gospodarki.",
+      "keyFacts": [
+        "TVN24 opisał tę wypowiedź w porannym slocie 17 lipca.",
+        "Temat łączy spór o ustawę z bezpośrednim kosztem budżetowym."
+      ],
+      "reactions": [
+        "To podnosi stawkę sporu między rządem a Pałacem Prezydenckim.",
+        "Dyskusja schodzi z symboli na wycenę skutków."
+      ],
+      "whyItMatters": "To może wpływać na kolejne wetowania i język kampanii ustawowej.",
+      "context": "To element porannego bloku polityczno-gospodarczego zamiast czysto rynkowej historii.",
+      "watchNext": [
+        "Czy pojawi się odpowiedź Pałacu Prezydenckiego.",
+        "Czy rząd zacznie łączyć tę wycenę z kolejnymi projektami ustaw."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ile kosztują weta prezydenta? \"Osłabiają cały potencjał polskiej gospodarki\"",
+          "url": "https://tvn24.pl/biznes/z-kraju/andrzej-domanski-w-jeden-na-jeden-ile-kosztuja-weta-prezydenta-oslabiaja-caly-potencjal-polskiej-gospodarki-st9146215"
+        }
+      ],
+      "tags": [
+        "Polityka",
+        "Budżet",
+        "Prezydent"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "polska-alert-rcb-prad-2026-07-17-0901",
+      "section": "Polska",
+      "title": "RCB ostrzega o przerwach w prądzie",
+      "lead": "Alert pogodowy może uderzyć w zasilanie i infrastrukturę.",
+      "whatHappened": "TVN24 podaje poranny alert RCB o możliwych przerwach w dostawie prądu, a komunikaty RCB i obraz pogody wskazują na ryzyko z burzami i silnym wiatrem.",
+      "keyFacts": [
+        "Alert dotyczy 17-18 lipca 2026.",
+        "Rządowe komunikaty o alertach są publicznie dostępne na gov.pl."
+      ],
+      "reactions": [
+        "To sygnał do monitorowania lokalnych awarii, a nie tylko samej prognozy.",
+        "Ryzyko dotyczy też transportu i usług publicznych."
+      ],
+      "whyItMatters": "Jeśli ostrzeżenie się rozwinie, pojawią się realne przerwy w dostawach i lokalne utrudnienia.",
+      "context": "To jeden z najmocniejszych operacyjnych tematów poranka.",
+      "watchNext": [
+        "Czy pojawią się pierwsze zgłoszenia awarii.",
+        "Czy alert zostanie rozszerzony na kolejne regiony."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Alert RCB. \"Możliwe przerwy w dostawie prądu\"",
+          "url": "https://tvn24.pl/tvnmeteo/polska/alert-rcb-piatek-i-sobota-17-18-07-mozliwe-przerwy-w-dostawie-pradu-st9146287"
+        },
+        {
+          "title": "RCB komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "Alerty",
+        "RCB",
+        "Pogoda"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-tatry-wypadki-2026-07-17-0901",
+      "section": "Polska",
+      "title": "Tatry znów dają o sobie znać",
+      "lead": "Po poprawie pogody rośnie liczba groźnych wypadków.",
+      "whatHappened": "TVN24 opisuje serię groźnych zdarzeń w Tatrach po poprawie pogody, a TPN pokazuje, że ruch turystyczny i bieżące warunki są dziś realnym czynnikiem ryzyka.",
+      "keyFacts": [
+        "Komunikat turystyczny i prognoza TPN są dziś aktywne.",
+        "Sama poprawa pogody nie oznacza bezpiecznych warunków na szlakach."
+      ],
+      "reactions": [
+        "To podbija potrzebę bieżącej kontroli szlaków i komunikatów.",
+        "Dla turystów to sygnał, żeby nie traktować poprawy pogody jako zielonego światła."
+      ],
+      "whyItMatters": "W górach drobna zmiana pogody i obciążenia szlaków szybko przekłada się na akcje ratunkowe.",
+      "context": "To typowy letni temat bezpieczeństwa publicznego w Polsce.",
+      "watchNext": [
+        "Czy TOPR lub TPN opublikuje dokładniejszy komunikat.",
+        "Czy pojawią się kolejne ograniczenia lub zamknięcia szlaków."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Groźne wypadki w Tatrach po poprawie pogody",
+          "url": "https://tvn24.pl/tvnmeteo/polska/tatry-grozne-wypadki-po-poprawie-pogody-st9146233"
+        },
+        {
+          "title": "TPN komunikat turystyczny",
+          "url": "https://tpn.gov.pl/komunikat-turystyczny"
+        },
+        {
+          "title": "TPN pogoda",
+          "url": "https://tpn.gov.pl/pogoda"
+        }
+      ],
+      "tags": [
+        "Tatry",
+        "Bezpieczeństwo",
+        "Turystyka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-wislostrada-motocyklista-2026-07-17-0901",
+      "section": "Polska",
+      "title": "Zderzenie na Wisłostradzie blokuje ruch",
+      "lead": "Poranny wypadek spowalnia warszawski dojazd.",
+      "whatHappened": "TVN24 Warszawa informuje o zderzeniu z motocyklistą i korku na Wisłostradzie w porannym szczycie.",
+      "keyFacts": [
+        "To szybki, miejski temat o natychmiastowym wpływie na ruch.",
+        "Nie ma tu wielkiej polityki, ale jest realny koszt dla kierowców."
+      ],
+      "reactions": [
+        "Ruch w stolicy dostaje kolejny poranny zator.",
+        "Taki typ zdarzenia zwykle szybko przenosi się na aplikacje nawigacyjne."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na logistykę i dojazdy w Warszawie.",
+      "context": "Temat dobrze pasuje do lokalnego bloku porannego.",
+      "watchNext": [
+        "Czy policja albo miasto poda czas usunięcia skutków.",
+        "Czy korek przejdzie w szerszą blokadę arterii."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zderzenie z motocyklistą i korek na Wisłostradzie w porannym szczycie",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-korek-na-wislostradzie-po-zderzeniu-z-motocyklista-st9146235"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "Ruch",
+        "Wypadki"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-zabka-7eleven-2026-07-17-0901",
+      "section": "Gospodarka",
+      "title": "Żabka reaguje na 7-Eleven",
+      "lead": "Rynek czyta sygnał z Japonii jako ważny dla polskiej grupy.",
+      "whatHappened": "TVN24 pisze, że akcje Żabki mocno rosną po informacji, iż właściciel 7-Eleven chce nabyć udziały polskiej grupy.",
+      "keyFacts": [
+        "Wzrost kursu to reakcja rynku na możliwy ruch kapitałowy.",
+        "Temat łączy inwestorów zagranicznych z polskim detalem."
+      ],
+      "reactions": [
+        "Rynek wycenia szansę na większe zainteresowanie aktywem.",
+        "To może szybko przenieść się na komentarze analityków."
+      ],
+      "whyItMatters": "Każdy taki sygnał potrafi zmienić oczekiwania wobec wyceny i struktury akcjonariatu.",
+      "context": "W porannym miksie to najmocniejszy krajowy news rynkowy.",
+      "watchNext": [
+        "Czy pojawi się formalny komunikat spółki.",
+        "Czy wzrost na giełdzie utrzyma się po otwarciu sesji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Żabka na celowniku Japonii. Mocna reakcja rynku",
+          "url": "https://tvn24.pl/biznes/z-kraju/zabka-akcje-mocno-w-gore-media-wlasciciel-7-eleven-chce-nabyc-udzialy-polskiej-grupy-st9145026"
+        }
+      ],
+      "tags": [
+        "Giełda",
+        "Żabka",
+        "M&A"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "technologia-sony-pudelek-2026-07-17-0901",
+      "section": "Technologia",
+      "title": "Sony psuje plastikowy rytuał",
+      "lead": "Gracze protestują przeciwko odejściu od pudełek.",
+      "whatHappened": "TVN24 opisuje falę oburzonych klientów po decyzji Sony o sprzedaży gier bez pudełek, co wielu odbiera jako symboliczny koniec pewnej epoki w PlayStation.",
+      "keyFacts": [
+        "Temat łączy produkt, nawyk zakupowy i emocje społeczności graczy.",
+        "To bardziej reakcja kulturowa niż czysta zmiana techniczna."
+      ],
+      "reactions": [
+        "Fani widzą w tym utratę kolekcjonerskiego standardu.",
+        "Dla Sony to test, jak daleko można przesuwać cyfryzację oferty."
+      ],
+      "whyItMatters": "To sygnał, jak duże marki mogą zderzać optymalizację kosztów z lojalnością użytkowników.",
+      "context": "W porannym slocie to technologia z wyraźnym komponentem konsumenckim.",
+      "watchNext": [
+        "Czy Sony wyjaśni zmianę w szerszej polityce produktów.",
+        "Czy pojawi się podobna reakcja w innych dużych markach gier."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Tysiące oburzonych klientów. \"Symboliczny koniec ery\"",
+          "url": "https://tvn24.pl/biznes/tech/sony-playstation-gry-bez-pudelek-tysiace-oburzonych-klientow-symboliczny-koniec-ery-st9143962"
+        }
+      ],
+      "tags": [
+        "Technologia",
+        "Gaming",
+        "Sony"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-chiny-ai-2026-07-17-0901",
+      "section": "Technologia",
+      "title": "Chiny grają kartą AI",
+      "lead": "CNN pokazuje technologię jako element sporu USA-Chiny.",
+      "whatHappened": "CNN łączy zarzuty Trumpa o kradzież danych wyborczych z przekazem Xi o odpowiedzialnym przywództwie technologicznym w Pekinie, więc AI staje się narzędziem geopolityki.",
+      "keyFacts": [
+        "Artykuł CNN to analiza, nie prosty news agencyjny.",
+        "Wątek łączy bezpieczeństwo danych, narrację państwową i konkurencję technologiczną."
+      ],
+      "reactions": [
+        "To podbija napięcie między Waszyngtonem a Pekinem.",
+        "AI wraca jako temat strategiczny, nie tylko produktowy."
+      ],
+      "whyItMatters": "Pokazuje, że rynek AI coraz mocniej zależy od polityki i bezpieczeństwa danych.",
+      "context": "To jeden z najsilniejszych technologicznych leadów poranka.",
+      "watchNext": [
+        "Czy pojawi się odpowiedź Pekinu na zarzuty Trumpa.",
+        "Czy konferencja AI dostanie szerszy międzynarodowy rezonans."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Analysis on China AI conference",
+          "url": "https://www.cnn.com/2026/07/17/china/china-ai-conference-analysis-intl-hnk"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Chiny",
+        "USA"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "bezpieczenstwo-iran-uderzenia-2026-07-17-0901",
+      "section": "Bezpieczeństwo",
+      "title": "USA znów uderzają w Iran",
+      "lead": "CNN i BBC utrzymują w ruchu eskalację wokół Iranu.",
+      "whatHappened": "BBC pisze, że USA przeprowadziły kolejne uderzenia, a Iran mówi o trafionej infrastrukturze cywilnej; CNN pokazuje konflikt jako wciąż nierozładowany.",
+      "keyFacts": [
+        "To kolejny dzień eskalacji w tym samym wątku.",
+        "W tle nadal pozostaje napięcie wokół cieśniny Hormuz."
+      ],
+      "reactions": [
+        "To utrzymuje poziom ryzyka dla żeglugi i rynków energii.",
+        "Narracja z fazy incydentu przechodzi w trwały konflikt."
+      ],
+      "whyItMatters": "Iran pozostaje jednym z głównych globalnych punktów zapalnych dnia.",
+      "context": "Ten wątek już wcześniej dominował, ale dziś dalej nie traci temperatury.",
+      "watchNext": [
+        "Czy pojawi się oficjalna odpowiedź wojskowa lub dyplomatyczna.",
+        "Czy rynek energii zareaguje na kolejną falę uderzeń."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US launches new strikes as Iran says civilian infrastructure hit",
+          "url": "https://www.bbc.co.uk/news/articles/c151gdjwd10o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Live updates on Iran war",
+          "url": "https://www.cnn.com/2026/07/17/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Bezpieczeństwo",
+        "USA"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-ukraina-protesty-2026-07-17-0901",
+      "section": "Świat",
+      "title": "Kijów pod presją po dymisji ministra",
+      "lead": "CNN opisuje protesty mimo postępów na froncie.",
+      "whatHappened": "CNN podaje, że odwołanie popularnego ministra obrony wywołało protesty w Kijowie i rzadki publiczny spór o prowadzenie wojny.",
+      "keyFacts": [
+        "To nie jest tylko personalna zmiana, ale sygnał napięcia politycznego.",
+        "Temat łączy front, morale i relacje cywilno-wojskowe."
+      ],
+      "reactions": [
+        "Takie rozdarcie może osłabić komunikację władz.",
+        "Dla zachodnich partnerów to dodatkowy sygnał, że sytuacja pozostaje krucha."
+      ],
+      "whyItMatters": "Stabilność polityczna Ukrainy jest częścią szerszego obrazu bezpieczeństwa w Europie.",
+      "context": "CNN traktuje to jako ważny sygnał obok bieżących działań wojennych.",
+      "watchNext": [
+        "Czy protesty przejdą w formalną reakcję rządu.",
+        "Czy pojawią się kolejne zmiany w resorcie obrony."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Zelensky faces protests over ousting of Ukraine’s defense minister despite military gains",
+          "url": "https://www.cnn.com/2026/07/16/europe/russia-ukraine-attack-keir-starmer-visit-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Wojna",
+        "Europa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-rohingya-znikneli-2026-07-17-0901",
+      "section": "Świat",
+      "title": "Zniknęli Rohingya na morzu",
+      "lead": "BBC opisuje zagadkowe zaginięcie ponad 500 osób.",
+      "whatHappened": "BBC podaje, że dwa statki z około 530 Rohingya zniknęły po wypłynięciu z Myanmaru pod koniec czerwca.",
+      "keyFacts": [
+        "To jeden z bardziej dramatycznych wątków humanitarnych dnia.",
+        "Liczba zaginionych jest na tyle duża, że temat pozostaje w ruchu."
+      ],
+      "reactions": [
+        "Sprawa może szybko przejść w bilans ofiar albo akcję poszukiwawczą.",
+        "To też przypomnienie o presji migracyjnej w regionie."
+      ],
+      "whyItMatters": "Skala zaginięcia może oznaczać dużą tragedię humanitarną.",
+      "context": "BBC utrzymuje temat w światowym obiegu od poranka.",
+      "watchNext": [
+        "Czy pojawi się oficjalny bilans ocalałych.",
+        "Czy służby potwierdzą trasę i los obu łodzi."
+      ],
+      "sources": [
+        {
+          "title": "BBC: More than 500 Rohingya vanish at sea - what happened?",
+          "url": "https://www.bbc.co.uk/news/articles/cr59n096mrmo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Rohingya",
+        "Migracja",
+        "Humanitarne"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "alerty-kanada-dym-2026-07-17-0901",
+      "section": "Alerty",
+      "title": "Dym z Kanady psuje powietrze",
+      "lead": "Pożary w Kanadzie uruchamiają alerty w USA.",
+      "whatHappened": "BBC podaje, że dym z ponad 800 pożarów w Kanadzie przykrywa duże miasta i wywołuje alerty jakości powietrza w Stanach Zjednoczonych.",
+      "keyFacts": [
+        "Skala pożarów nadal jest bardzo duża.",
+        "Skutek wychodzi poza Kanadę i wpływa na większy region."
+      ],
+      "reactions": [
+        "To już nie jest lokalny pożar, tylko transgraniczny problem zdrowotny.",
+        "Temat może wejść do informacji o podróżach i pracy zewnętrznej."
+      ],
+      "whyItMatters": "Pogarszające się powietrze szybko przekłada się na zdrowie i logistykę.",
+      "context": "W alertach to jeden z najmocniejszych tematów globalnych.",
+      "watchNext": [
+        "Czy alerty rozszerzą się na kolejne miasta.",
+        "Czy pojawią się utrudnienia w lotach lub szkołach."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Canada fires prompt US air quality alerts as smoke blankets major cities",
+          "url": "https://www.bbc.co.uk/news/articles/c0m7n427xd8o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Pożary",
+        "Kanada",
+        "Alerty"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-british-steel-2026-07-17-0901",
+      "section": "Świat",
+      "title": "Pekin krytykuje nacjonalizację British Steel",
+      "lead": "BBC pokazuje spór handlowy i polityczny wokół stali.",
+      "whatHappened": "BBC pisze, że Chiny atakują decyzję o przejęciu British Steel przez rząd Wielkiej Brytanii jako ruch w sprawie \"vital national capability\".",
+      "keyFacts": [
+        "Spór wychodzi poza jedną spółkę i zahacza o strategię państwową.",
+        "To kolejny element szerszego napięcia handlowego z Chinami."
+      ],
+      "reactions": [
+        "Temat może trafić do debaty o bezpieczeństwie przemysłowym.",
+        "Pekin i Londyn znów rozjeżdżają się w języku o kontroli strategicznych aktywów."
+      ],
+      "whyItMatters": "To sygnał, że przemysł ciężki wraca do logiki bezpieczeństwa narodowego.",
+      "context": "W światowym bloku BBC to ważny europejski temat gospodarczo-polityczny.",
+      "watchNext": [
+        "Czy pojawi się odpowiedź brytyjskiego rządu.",
+        "Czy spór przełoży się na dalsze działania wobec innych aktywów strategicznych."
+      ],
+      "sources": [
+        {
+          "title": "BBC: China hits out at British Steel nationalisation",
+          "url": "https://www.bbc.co.uk/news/articles/cjd4kvxpd3do?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Stal",
+        "Chiny",
+        "Wielka Brytania"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "alerty-imgw-upaly-burze-2026-07-17-0901",
+      "section": "Alerty",
+      "title": "IMGW trzyma upały i burze",
+      "lead": "Pogoda nadal wymaga bieżącego monitoringu.",
+      "whatHappened": "TVN24 Meteo utrzymuje alerty drugiego stopnia na upały i burze, a TPN pokazuje podobnie wymagające warunki w rejonie Tatr.",
+      "keyFacts": [
+        "To realny czynnik ryzyka dla podróży i turystyki.",
+        "Aktualna pogoda jest spójna z porannym alertem RCB."
+      ],
+      "reactions": [
+        "Na tym etapie pogoda jest już pełnoprawnym elementem news-flow, nie tylko dodatkiem.",
+        "Kolejny slot może przynieść skutki w ruchu, awariach albo wyjazdach."
+      ],
+      "whyItMatters": "Długie, aktywne alerty zwykle szybko przekładają się na lokalne szkody.",
+      "context": "To najbardziej stabilny powtarzalny blok w porannym slocie.",
+      "watchNext": [
+        "Czy IMGW zmieni stopień ostrzeżeń.",
+        "Czy TPN/TOPR odnotują dodatkowe incydenty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Upały i burze. Są alerty drugiego stopnia",
+          "url": "https://tvn24.pl/tvnmeteo/polska/upal-i-burze-ostrzezenia-imgw-piatek-17-07-st9142923"
+        },
+        {
+          "title": "IMGW mapy dynamiczne",
+          "url": "https://meteo.imgw.pl/dyn/"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "Pogoda",
+        "Alerty"
+      ],
+      "priority": "high"
+    }
+  ]
+}
