@@ -1,5 +1,13 @@
 # Puls Dnia News Index
 
+The 2026-07-17 21:03 slot przesuwa feed z samej prognozy do konkretu:
+front z Niemiec daje już szkody w Polsce, Tusk reaguje na zapowiedź
+Zełenskiego w sprawie Wołynia, a PiS znów pokazuje wewnętrzną koordynację
+przez spotkanie Kaczyński-Morawiecki. Za granicą CNN i BBC dokładają kolejny
+etap wojny USA-Iran, piractwo koło Jemenu, znikające łodzie Rohingya,
+trzęsienie u wybrzeży Meksyku i tragedię autobusową w Ugandzie, a rynek i
+tech przerzucają uwagę na Apple oraz łagodniejsze tempo cięć emisji w UE.
+
 The 2026-07-17 18:02 slot przesuwa feed w stronę bardziej operacyjnego miksu: PiS dokręca dyscyplinę wokół stowarzyszeń, Warszawa zamienia atak na białoruską pływaczkę w sprawę z zarzutami, policja pokazuje rosnącą serię ataków na Ukraińców, a rynek pracy dostaje sygnał o zwolnieniach kurierów. W alertach widać twardy blok na noc 17/18 lipca, a za granicą dominuje Iran, Hormuz, kanadyjski dym, chińska gra o AI i światowy stres na rynku chipów.
 
 The 2026-07-17 15:02 slot przesuwa feed w stronę twardszej polityki krajowej,

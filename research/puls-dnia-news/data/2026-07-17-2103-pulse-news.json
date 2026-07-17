@@ -1,0 +1,489 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-17",
+  "runTime": "21:03",
+  "status": "Material update",
+  "headline": "Burze, Wołyń i PiS; w świecie Iran, piraci i trzęsienie",
+  "summary": "Slot 21:03 przesuwa puls z samego alertu pogodowego do konkretnych skutków: front z Niemiec zaczyna dawać szkody, Tusk reaguje na ruch Zełenskiego w sprawie Wołynia, a PiS znów pokazuje wewnętrzną koordynację przez spotkanie Kaczyński-Morawiecki. Za granicą bieżące źródła dokładają świeży etap wojny USA-Iran, piractwo koło Jemenu, znikające łodzie Rohingya, trzęsienie u wybrzeży Meksyku i wypadek autobusowy w Ugandzie, a rynek i tech przechodzą przez zmianę lidera wyceny Apple oraz ulgę klimatyczną w UE.",
+  "checkedSources": [
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "Gov.pl RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "IMGW mapy dynamiczne",
+      "url": "https://meteo.imgw.pl/dyn/"
+    }
+  ],
+  "items": [
+    {
+      "id": "alerty-rcb-burze-2026-07-17-2103",
+      "section": "Alerty",
+      "title": "RCB ostrzega przed burzami",
+      "lead": "Burze z gradem i silny wiatr mają przejść przez noc 17/18 lipca.",
+      "whatHappened": "RCB utrzymuje alert na noc 17/18 lipca: burze z gradem, silny wiatr i możliwe przerwy w dostawie prądu. Komunikat jest już praktycznym ostrzeżeniem, a nie tylko ogólną prognozą.",
+      "keyFacts": [
+        "Alert dotyczy nocy 17/18 lipca.",
+        "Wprost wskazane są możliwe przerwy w dostawie prądu.",
+        "Zalecenie obejmuje zabezpieczenie przedmiotów, które może porwać wiatr."
+      ],
+      "reactions": [
+        "Możliwe są lokalne awarie i interwencje służb.",
+        "Kolejny slot może pokazać, czy front przełożył się na szkody lub transportowe utrudnienia."
+      ],
+      "whyItMatters": "To bezpośredni sygnał bezpieczeństwa dla mieszkańców i transportu w kilku regionach kraju.",
+      "context": "To rozwinięcie wcześniejszych ostrzeżeń pogodowych, ale z konkretnym oknem czasowym i ryzykiem przerw w zasilaniu.",
+      "watchNext": [
+        "Sprawdzić, czy RCB rozszerzy lub zaktualizuje komunikat po przejściu frontu.",
+        "Sprawdzić, czy pojawią się raporty o awariach, połamanych drzewach lub blokadach dróg."
+      ],
+      "sources": [
+        {
+          "title": "Gov.pl RCB komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        },
+        {
+          "title": "Alert RCB - burze (17.07)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-1707"
+        },
+        {
+          "title": "IMGW mapy dynamiczne",
+          "url": "https://meteo.imgw.pl/dyn/"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "burze",
+        "wiatr",
+        "prąd"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-front-z-niemiec-2026-07-17-2103",
+      "section": "Polska",
+      "title": "Front z Niemiec wchodzi do Polski",
+      "lead": "TVN24 Meteo pokazuje szkody i szybkie pogorszenie warunków.",
+      "whatHappened": "Front burzowy z Niemiec zaczyna przynosić szkody także po polskiej stronie. TVN24 opisuje połamane gałęzie, zalane piwnice i uszkodzenia zabudowy, a w Niemczech front był już powiązany z poważnymi zniszczeniami i jedną ofiarą śmiertelną.",
+      "keyFacts": [
+        "To nie jest już wyłącznie prognoza, ale front z realnymi skutkami.",
+        "Opis obejmuje zarówno szkody w Niemczech, jak i pierwsze polskie interwencje.",
+        "Warunki sprzyjają dalszym lokalnym awariom."
+      ],
+      "reactions": [
+        "Służby mogą mieć więcej pracy w kolejnych godzinach.",
+        "Jeśli front utrzyma intensywność, mogą dojść nowe komunikaty o drogach i energetyce."
+      ],
+      "whyItMatters": "Daje to iOS-owi mocniejszy alert niż sama prognoza, bo już widać skutki w terenie.",
+      "context": "To bliższa, bardziej operacyjna wersja wcześniejszego bloku pogodowego z 17 lipca.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się lokalne komunikaty o awariach lub zamknięciach dróg.",
+        "Sprawdzić, czy front przeniesie się dalej na wschód lub południe."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo: front z Niemiec",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/nawalnice-w-niemczech-burzowy-front-zabil-jedna-osobe-zbliza-sie-do-polski-st9147126"
+        },
+        {
+          "title": "TVN24 Meteo: szkody po burzach",
+          "url": "https://tvn24.pl/tvnmeteo/polska/burze-w-polsce-zalamanie-pogody-zerwana-czesc-dachu-polamane-drzewa-zalane-piwnice-st9147394"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "burze",
+        "szkody",
+        "Polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-tusk-zelenski-wolyn-2026-07-17-2103",
+      "section": "Polska",
+      "title": "Tusk reaguje na decyzję Zełenskiego",
+      "lead": "Warszawa odpowiada na ruch Kijowa w sprawie Wołynia.",
+      "whatHappened": "TVN24 podaje, że Wołodymyr Zełenski zapowiedział otwarcie archiwów dotyczących Wołynia, a Donald Tusk zareagował z ostrożnym optymizmem. Premier podkreślił potrzebę poważnego dialogu i relacji opartych na wzajemnym szacunku.",
+      "keyFacts": [
+        "Zełenski zapowiada otwarcie archiwów związanych z Wołyniem.",
+        "Tusk publicznie komentuje to jako potencjalny krok w stronę dialogu.",
+        "Wątek dotyczy pamięci historycznej i relacji polsko-ukraińskich."
+      ],
+      "reactions": [
+        "To może złagodzić albo zaostrzyć debatę, zależnie od dalszych reakcji obu stron.",
+        "Na razie to sygnał polityczny, nie gotowa procedura dyplomatyczna."
+      ],
+      "whyItMatters": "Wołyń nadal jest jednym z najbardziej wrażliwych tematów w relacji Warszawa-Kijów.",
+      "context": "To świeża odsłona sporu pamięci historycznej, już z konkretną deklaracją ukraińskiego prezydenta.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się wspólny komunikat po stronie rządowej.",
+        "Sprawdzić, czy temat przejdzie w działania archiwalne albo legislacyjne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Tusk reaguje na decyzję Zełenskiego",
+          "url": "https://tvn24.pl/polska/donald-tusk-reaguje-na-decyzje-wolodymyra-zelenskiego-w-sprawie-wolynia-jestesmy-gotowi-do-powaznego-dialogu-st9147595"
+        },
+        {
+          "title": "TVN24: Pięć punktów Zełenskiego po spotkaniu",
+          "url": "https://tvn24.pl/swiat/wolodymyr-zelenski-archiwa-dotyczace-wolynia-zostana-otwarte-st9147520"
+        }
+      ],
+      "tags": [
+        "Wołyń",
+        "Tusk",
+        "Zełenski",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-pis-kaczynski-morawiecki-2026-07-17-2103",
+      "section": "Polityka",
+      "title": "Kaczyński spotyka się z Morawieckim",
+      "lead": "PiS wraca do wewnętrznej koordynacji przez list i spotkanie.",
+      "whatHappened": "TVN24 opisuje spotkanie Jarosława Kaczyńskiego z Mateuszem Morawieckim oraz list 45 polityków PiS do prezesa partii. To kolejny sygnał, że wewnętrzny spór ma już nie tylko medialny, ale też organizacyjny wymiar.",
+      "keyFacts": [
+        "Spotkanie odbyło się w siedzibie PiS przy Nowogrodzkiej.",
+        "W grę wchodzi koordynacja stanowisk i dyscyplina partyjna.",
+        "List 45 polityków sugeruje szersze zaplecze niż pojedynczy spór personalny."
+      ],
+      "reactions": [
+        "Na razie nie widać finałowych decyzji kadrowych.",
+        "Temat może się przełożyć na kolejne publiczne wypowiedzi i możliwe rozstrzygnięcia w partii."
+      ],
+      "whyItMatters": "Wewnętrzna dynamika PiS wpływa na to, jak partia komunikuje konflikty i decyzje na poziomie krajowym.",
+      "context": "To kolejny etap już długo rozgrywanego napięcia między skrzydłami partii.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się wykluczenia, wycofania lub oficjalne stanowisko partii.",
+        "Sprawdzić, czy list 45 polityków zyska szerszy publiczny kontekst."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: spotkanie Kaczyńskiego z Morawieckim",
+          "url": "https://tvn24.pl/polska/spotkanie-kaczynskiego-z-morawieckim-i-list-politykow-pis-do-prezesa-partii-st9147440"
+        },
+        {
+          "title": "TVN24: Morawiecki pisze o intrygantach",
+          "url": "https://tvn24.pl/polska/mateusz-morawiecki-pisze-o-intrygantach-komentarze-politykow-pis-st9146298"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Kaczyński",
+        "Morawiecki",
+        "partia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-trump-chiny-wybory-2026-07-17-2103",
+      "section": "Polityka",
+      "title": "Trump oskarża Chiny o ingerencję w wybory",
+      "lead": "BBC wraca do kampanijnego sporu o bezpieczeństwo głosowania w USA.",
+      "whatHappened": "BBC podaje, że Donald Trump ponownie oskarża Chiny o ingerencję w wybory 2020 i podnosi kwestię bezpieczeństwa głosowania przed midterms. Pekin odrzuca te zarzuty, a demokraci traktują je jako próbę podważania wyniku następnych wyborów.",
+      "keyFacts": [
+        "Wątek dotyczy wyborów 2020, ale jest używany w bieżącej kampanii.",
+        "Spór łączy politykę krajową USA z relacją USA-Chiny.",
+        "Chiny oficjalnie odrzucają oskarżenia."
+      ],
+      "reactions": [
+        "To podnosi temperaturę sporu przed wyborami połówkowymi.",
+        "Jeśli dojdą reakcje regulatorów lub stanów, temat może wejść w fazę proceduralną."
+      ],
+      "whyItMatters": "To nie tylko kolejny spór polityczny, ale też sygnał o tym, jak USA przygotowują debatę o integralności wyborów.",
+      "context": "BBC ustawia to jako element szerszego starcia USA-Chiny, a nie jednorazową wypowiedź.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się odpowiedź chińskich dyplomatów lub Białego Domu.",
+        "Sprawdzić, czy temat przejdzie w działania stanowe lub sądowe."
+      ],
+      "sources": [
+        {
+          "title": "BBC World RSS",
+          "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Chiny",
+        "wybory",
+        "polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "bezpieczenstwo-iran-usa-ataki-2026-07-17-2103",
+      "section": "Bezpieczeństwo",
+      "title": "Iran i USA dalej rozszerzają ataki",
+      "lead": "CNN i BBC pokazują, że konflikt nie zwalnia.",
+      "whatHappened": "CNN opisuje kolejne rozszerzenie starć między USA i Iranem bez oznak deeskalacji, a BBC dodaje, że Waszyngton zaprzecza irańskim twierdzeniom o trafieniu infrastruktury cywilnej. To oznacza kolejny dzień ostrej wymiany narracji i uderzeń.",
+      "keyFacts": [
+        "Konflikt pozostaje aktywny i nie wygląda na wygaszany.",
+        "Pojawia się spór o to, co zostało trafione w ostatnich uderzeniach.",
+        "BBC i CNN pokazują ten sam konflikt z nieco innym akcentem."
+      ],
+      "reactions": [
+        "Ryzyko dla żeglugi i rynku energii pozostaje wysokie.",
+        "Jeśli pojawi się oficjalny komunikat morski, temat może wejść na kolejny poziom."
+      ],
+      "whyItMatters": "To nadal jeden z głównych globalnych czynników ryzyka dla bezpieczeństwa i energii.",
+      "context": "To aktualizacja wcześniejszego bloku irano-ormuzyjskiego, ale z nowym akcentem na dalszą eskalację i spór o skutki uderzeń.",
+      "watchNext": [
+        "Sprawdzić, czy UKMTO lub inne źródła morskie potwierdzą nowe incydenty.",
+        "Sprawdzić, czy ropa lub transport morski zareagują na kolejną rundę starć."
+      ],
+      "sources": [
+        {
+          "title": "CNN World",
+          "url": "https://www.cnn.com/2026/07/17/world/live-news/iran-war-trump"
+        },
+        {
+          "title": "BBC World RSS",
+          "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "bezpieczeństwo",
+        "Ormuz"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-yemen-tanker-piraci-2026-07-17-2103",
+      "section": "Bezpieczeństwo",
+      "title": "Piraci porywają kolejny tankowiec u Jemenu",
+      "lead": "BBC opisuje drugi taki incydent w trzy miesiące.",
+      "whatHappened": "BBC podaje, że u wybrzeży Jemenu zniknął drugi tankowiec w ciągu trzech miesięcy, najpewniej po ataku somalijskich piratów. To kolejny sygnał, że bezpieczeństwo żeglugi w regionie znowu się pogarsza.",
+      "keyFacts": [
+        "To już drugi taki przypadek w krótkim czasie.",
+        "Podejrzenie pada na somalijskich piratów.",
+        "Incydent wzmacnia ryzyko dla tras handlowych w rejonie Jemenu."
+      ],
+      "reactions": [
+        "Armatorzy i ubezpieczyciele mogą podnieść ostrożność na tym szlaku.",
+        "Jeśli pojawi się potwierdzenie z morskich centrów bezpieczeństwa, temat może wrócić w mocniejszej formie."
+      ],
+      "whyItMatters": "Takie incydenty szybko przekładają się na koszty żeglugi, ubezpieczenia i bezpieczeństwo łańcuchów dostaw.",
+      "context": "To osobny wątek od Iranu, ale razem zwiększa globalne napięcie na kluczowych szlakach morskich.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się komunikat armatora albo centrum morsko-bezpieczeństwowego.",
+        "Sprawdzić, czy incydent odbije się na cenach frachtu lub zabezpieczeniach tras."
+      ],
+      "sources": [
+        {
+          "title": "BBC World RSS",
+          "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        }
+      ],
+      "tags": [
+        "żegluga",
+        "piraci",
+        "Jemen",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-rohingya-znikneli-2026-07-17-2103",
+      "section": "Świat",
+      "title": "Ponad 500 Rohingjów znika na morzu",
+      "lead": "BBC opisuje dwie łodzie, które przepadły po wypłynięciu z Mjanmy.",
+      "whatHappened": "BBC informuje, że po wypłynięciu z Mjanmy zniknęły dwie łodzie z około 530 Rohingjami. To kolejny dramat na szlaku migracyjnym, w którym los pasażerów pozostaje nieznany.",
+      "keyFacts": [
+        "Zniknęły dwie jednostki z łączną liczbą około 530 osób.",
+        "Łodzie wypłynęły 29 czerwca.",
+        "Sprawa pozostaje bez pełnego bilansu ofiar lub ocalałych."
+      ],
+      "reactions": [
+        "Organizacje humanitarne mogą naciskać na nowe poszukiwania.",
+        "Jeśli pojawi się potwierdzony bilans, temat wejdzie w mocniejszą fazę."
+      ],
+      "whyItMatters": "To duży kryzys humanitarny i kolejny przykład ryzyka na trasach migracyjnych w Azji.",
+      "context": "To jeden z najmocniejszych światowych tematów humanitarnych w bieżącym feedzie.",
+      "watchNext": [
+        "Sprawdzić, czy UNHCR lub inne agencje podadzą bilans ocalałych.",
+        "Sprawdzić, czy służby morskie ogłoszą nową akcję poszukiwawczą."
+      ],
+      "sources": [
+        {
+          "title": "BBC World RSS",
+          "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        },
+        {
+          "title": "CNN World",
+          "url": "https://www.cnn.com/world"
+        }
+      ],
+      "tags": [
+        "Rohingya",
+        "migracja",
+        "Mjanma",
+        "humanitarne"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-meksyk-trzesienie-2026-07-17-2103",
+      "section": "Świat",
+      "title": "Trzęsienie 7,3 uderza w wybrzeże Meksyku",
+      "lead": "BBC podaje, że pojawiło się też ostrzeżenie tsunami.",
+      "whatHappened": "BBC informuje o trzęsieniu ziemi o magnitudzie 7,3 u wybrzeży Meksyku. Amerykańskie centrum ostrzegania przed tsunami wydało alert, a w regionie odnotowano już fale i wstrząsy odczuwalne także poza samym epicentrum.",
+      "keyFacts": [
+        "Magnituda wynosiła 7,3.",
+        "Wydano ostrzeżenie tsunami.",
+        "Wstrząsy były odczuwalne również w sąsiednich krajach."
+      ],
+      "reactions": [
+        "Najważniejsze są teraz oceny szkód i ewentualne dodatkowe fale.",
+        "Jeśli pojawią się raporty o ofiarach lub zniszczeniach, temat szybko urośnie."
+      ],
+      "whyItMatters": "To poważny geofizyczny alert dla regionu Pacyfiku i potencjalnie szerzej dla wybrzeży Ameryki Środkowej.",
+      "context": "To świeży, dobrze ugruntowany temat z międzynarodowego obiegu newsowego.",
+      "watchNext": [
+        "Sprawdzić, czy centrum tsunami obniży lub utrzyma alert.",
+        "Sprawdzić, czy Meksyk poda pierwsze oficjalne bilanse szkód."
+      ],
+      "sources": [
+        {
+          "title": "BBC World RSS",
+          "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        }
+      ],
+      "tags": [
+        "Meksyk",
+        "trzęsienie ziemi",
+        "tsunami",
+        "katastrofy"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-uganda-autokar-2026-07-17-2103",
+      "section": "Świat",
+      "title": "Uganda zawiesza szkolne wyjazdy po wypadku autobusu",
+      "lead": "BBC opisuje jedną z najgorszych szkolnych tragedii drogowych w kraju.",
+      "whatHappened": "BBC podaje, że po wypadku autobusu, w którym zginęło 20 uczniów, Uganda zawiesza szkolne wyjazdy. To reakcja na jeden z najtragiczniejszych wypadków drogowych z udziałem dzieci w kraju.",
+      "keyFacts": [
+        "W wypadku zginęło 20 uczniów.",
+        "Decyzja obejmuje zawieszenie szkolnych wyjazdów.",
+        "BBC opisuje to jako jeden z najcięższych takich wypadków w kraju."
+      ],
+      "reactions": [
+        "Można oczekiwać dalszych decyzji administracyjnych i policyjnych.",
+        "Jeśli pojawi się raport o przyczynach, temat przejdzie do szerszej debaty o bezpieczeństwie drogowym."
+      ],
+      "whyItMatters": "To bezpośredni sygnał bezpieczeństwa i polityki publicznej po tragicznym wypadku.",
+      "context": "To nowy, świeży temat w światowym feedzie BBC.",
+      "watchNext": [
+        "Sprawdzić, czy śledztwo poda przyczynę wypadku.",
+        "Sprawdzić, czy decyzja o zawieszeniu wyjazdów zostanie rozszerzona."
+      ],
+      "sources": [
+        {
+          "title": "BBC World RSS",
+          "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        }
+      ],
+      "tags": [
+        "Uganda",
+        "wypadek",
+        "dzieci",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-eu-emisje-firmy-2026-07-17-2103",
+      "section": "Gospodarka",
+      "title": "UE chce spowolnić cięcia emisji dla firm",
+      "lead": "BBC opisuje projekt, który daje biznesowi więcej czasu.",
+      "whatHappened": "BBC podaje, że Komisja Europejska proponuje wolniejsze tempo redukcji emisji dla firm. W praktyce chodzi o złagodzenie harmonogramu tak, by przedsiębiorstwa miały więcej czasu na dostosowanie się.",
+      "keyFacts": [
+        "To propozycja regulacyjna, nie jeszcze obowiązujące prawo.",
+        "Cel to więcej czasu dla firm na redukcję emisji.",
+        "Zmiana może ograniczyć krótkoterminową presję kosztową."
+      ],
+      "reactions": [
+        "Firmy mogą przyjąć to jako ulgę, a ekolodzy jako osłabienie tempa zmian.",
+        "W kolejnych dniach ważne będą reakcje państw członkowskich."
+      ],
+      "whyItMatters": "Regulacje klimatyczne bezpośrednio wpływają na koszty i planowanie inwestycji w całej UE.",
+      "context": "To polityka gospodarczo-klimatyczna, która może odbić się na wielu branżach.",
+      "watchNext": [
+        "Sprawdzić, czy państwa członkowskie poprą propozycję.",
+        "Sprawdzić, czy branże zareagują oficjalnie."
+      ],
+      "sources": [
+        {
+          "title": "BBC World RSS",
+          "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        }
+      ],
+      "tags": [
+        "UE",
+        "emisje",
+        "biznes",
+        "regulacje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-apple-najcenniejsza-firma-2026-07-17-2103",
+      "section": "Gospodarka",
+      "title": "Apple przejmuje fotel najcenniejszej firmy świata",
+      "lead": "TVN24 pokazuje zmianę lidera na szczycie rynku.",
+      "whatHappened": "TVN24 Biznes opisuje, że Apple wraca na pozycję najcenniejszej firmy świata, a wycena zbliża się do granicy 5 bilionów dolarów. Nvidia traci pozycję lidera, a rynek ponownie koncentruje się na największych spółkach technologicznych.",
+      "keyFacts": [
+        "Apple wraca na szczyt globalnej wyceny.",
+        "W grę wchodzi granica 5 bilionów dolarów.",
+        "Nvidia traci pierwsze miejsce."
+      ],
+      "reactions": [
+        "Rynek technologii może traktować to jako sygnał względnej siły Apple.",
+        "Jeśli wycena utrzyma się po sesji, temat może wrócić w kolejnych godzinach."
+      ],
+      "whyItMatters": "To ważny sygnał o nastrojach inwestorów wobec największych firm tech i AI.",
+      "context": "To świeża zmiana na szczycie rynku, a nie tylko kolejna wzmianka o dużej spółce.",
+      "watchNext": [
+        "Sprawdzić, czy Apple utrzyma pozycję do zamknięcia sesji.",
+        "Sprawdzić, czy Nvidia albo inni gracze reagują w notowaniach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Najdroższa firma świata. Zmiana na szczycie",
+          "url": "https://tvn24.pl/biznes/tech/najdrozsza-firma-swiata-zmiana-na-szczycie-st9147397"
+        }
+      ],
+      "tags": [
+        "Apple",
+        "Nvidia",
+        "technologia",
+        "rynek"
+      ],
+      "priority": "medium"
+    }
+  ]
+}

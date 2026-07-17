@@ -2,6 +2,7 @@
 
 ## Open
 
+- Watch whether the Volhynia archive opening turns into a formal bilateral or parliamentary step.
 - Watch whether Seven & i formalizes the Żabka investment or keeps talks exploratory.
 - Watch whether the PAŻP objection in Brussels leads to any short-term financing relief.
 - Watch whether the veto on the status-of-nearest-person bill triggers an override attempt or a substitute draft.
@@ -140,6 +141,7 @@
 - Bielsko-Biała bus-abuse case already reached the zarzut stage after the
   monitoring review; keep it only if new procedural steps appear.
 - The status-of-nearest-person bill is no longer pending after the presidential veto; keep only reaction or override attempts.
+- The broad RCB storm warning has now produced concrete wind damage reports; keep only outage/transport escalation open.
 
 ## Done
 
