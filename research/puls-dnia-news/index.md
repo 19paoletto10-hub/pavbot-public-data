@@ -1,5 +1,13 @@
 # Puls Dnia News Index
 
+The 2026-07-17 15:02 slot przesuwa feed w stronę twardszej polityki krajowej,
+alertów pogodowych i świeżych sygnałów rynkowych. PiS utrzymuje ultimatum
+wobec członków partii w stowarzyszeniach, Domański liczy koszt wet prezydenta,
+a policja i warszawski wymiar bezpieczeństwa trzymają w obiegu ataki na
+Ukraińców oraz sprawę białoruskiej pływaczki. Za granicą BBC i CNN nadal
+utrzymują Iran, Rohingya, Kanadę i British Steel w aktywnym obiegu, a w tle
+pojawiają się platformy społecznościowe i treści AI.
+
 The 2026-07-17 12:03 slot tightens the feed around the formal veto on the
 status-of-nearest-person bill, Domański's cost-of-veto attack, RCB/IMGW storm
 warnings and two Warszawa safety stories (Wisłostrada and the Belarusian

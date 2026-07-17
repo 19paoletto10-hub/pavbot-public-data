@@ -2,6 +2,8 @@
 
 ## Open
 
+- Watch whether Seven & i formalizes the Żabka investment or keeps talks exploratory.
+- Watch whether the PAŻP objection in Brussels leads to any short-term financing relief.
 - Watch whether the veto on the status-of-nearest-person bill triggers an override attempt or a substitute draft.
 - Watch whether the RCB and IMGW alert turns into outages, fallen trees or broader transport disruption before evening.
 - Watch whether the Canada smoke plume widens into new air-quality, travel or school alerts.
