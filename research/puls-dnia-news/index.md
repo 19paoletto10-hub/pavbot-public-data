@@ -1,5 +1,7 @@
 # Puls Dnia News Index
 
+The 2026-07-17 18:02 slot przesuwa feed w stronę bardziej operacyjnego miksu: PiS dokręca dyscyplinę wokół stowarzyszeń, Warszawa zamienia atak na białoruską pływaczkę w sprawę z zarzutami, policja pokazuje rosnącą serię ataków na Ukraińców, a rynek pracy dostaje sygnał o zwolnieniach kurierów. W alertach widać twardy blok na noc 17/18 lipca, a za granicą dominuje Iran, Hormuz, kanadyjski dym, chińska gra o AI i światowy stres na rynku chipów.
+
 The 2026-07-17 15:02 slot przesuwa feed w stronę twardszej polityki krajowej,
 alertów pogodowych i świeżych sygnałów rynkowych. PiS utrzymuje ultimatum
 wobec członków partii w stowarzyszeniach, Domański liczy koszt wet prezydenta,
