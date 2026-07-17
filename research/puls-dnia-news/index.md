@@ -1,5 +1,11 @@
 # Puls Dnia News Index
 
+The 2026-07-17 12:03 slot tightens the feed around the formal veto on the
+status-of-nearest-person bill, Domański's cost-of-veto attack, RCB/IMGW storm
+warnings and two Warszawa safety stories (Wisłostrada and the Belarusian
+swimmer), while abroad BBC/CNN keep Iran, Rohingya, Canada, British Steel and
+Chinese AI active.
+
 The 2026-07-17 09:01 slot przesuwa feed na bardziej operacyjny miks: PiS wchodzi w publiczny spór, Domański uderza w koszt wet prezydenta, RCB ostrzega o przerwach w dostawie prądu, a Tatry, Wisłostrada i alerty IMGW zostają w krajowym rdzeniu. Za granicą BBC i CNN trzymają Iran, Ukrainę, Rohingya, Kanadę i chińskie AI w aktywnym obiegu.
 
 The 2026-07-17 06:01 slot przesuwa feed na bardziej operacyjny miks: PiS i Morawiecki wchodzą w jawny spór, Tusk mobilizuje klub KO, a bezpieczeństwo domykają dywersja na rzecz obcego wywiadu i przechwycenie rosyjskich samolotów nad Bałtykiem. W gospodarce widać Domańskiego, Żabkę i TikToka, a alerty trzymają Kanadę i IMGW. Za granicą BBC i CNN utrzymują Iran, Ukrainę, polski wątek sabotażu, Rohingya i Genuę w wysokiej temperaturze.

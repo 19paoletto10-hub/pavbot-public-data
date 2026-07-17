@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-17",
+  "runTime": "12:03",
+  "status": "Material update",
+  "headline": "Burze, weto i Iran trzymają poranny puls",
+  "summary": "Feed utrzymuje operacyjny charakter: w Polsce dominują alerty pogodowe, weto prezydenta i dwa warszawskie incydenty bezpieczeństwa, a za granicą nadal najmocniej pracują Iran, Rohingya, Kanada, British Steel i chińskie AI.",
+  "checkedSources": [
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 Warszawa",
+      "url": "https://tvn24.pl/tvnwarszawa"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "Gov.pl RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "IMGW mapy dynamiczne",
+      "url": "https://meteo.imgw.pl/dyn/"
+    }
+  ],
+  "items": [
+    {
+      "id": "polityka-pis-spor-2026-07-17-1203",
+      "section": "Polityka",
+      "title": "PiS wchodzi w jawny spór",
+      "lead": "Konflikt w partii wychodzi z kulis na pierwszy plan.",
+      "whatHappened": "TVN24 pokazuje, że wewnętrzny konflikt w PiS przestaje być tylko niedopowiedzeniem. Publiczny język o wzajemnych pretensjach i wyciąganiu brudów przenosi spór do otwartej fazy.",
+      "keyFacts": [
+        "Materiał TVN24 jest świeży na 17 lipca rano.",
+        "Spór nie wygląda już na czysto medialny.",
+        "To nadal narracja, a nie formalna decyzja kadrowa."
+      ],
+      "reactions": [
+        "Każda kolejna wypowiedź może zwiększać presję na kierownictwo partii.",
+        "Na tym etapie nie widać jeszcze końcowego rozstrzygnięcia."
+      ],
+      "whyItMatters": "Publiczny spór może szybko przejść w dymisje, wykluczenia albo nowe alianse.",
+      "context": "To rozwinięcie napięcia widocznego już w poprzednim slocie, ale dziś język jest ostrzejszy i bardziej bezpośredni.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się formalny komunikat władz PiS.",
+        "Sprawdzić, czy któryś z polityków publicznie ogłosi odejście lub wykluczenie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Co dalej z PiS?",
+          "url": "https://tvn24.pl/polska/spor-w-pis-andrzej-domanski-zaczyna-sie-wyciaganie-brudow-st9146216"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Polityka",
+        "Partie"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-domanski-veto-2026-07-17-1203",
+      "section": "Gospodarka",
+      "title": "Domański liczy koszt wet",
+      "lead": "Minister wycenił polityczny konflikt na miliardy.",
+      "whatHappened": "TVN24 Biznes cytuje Andrzeja Domańskiego, który mówi, że weta prezydenta osłabiają potencjał gospodarki i mogą kosztować 5-6 mld zł w tym i przyszłym roku.",
+      "keyFacts": [
+        "W wypowiedzi pada kwota 5-6 mld zł.",
+        "Temat łączy politykę z kosztami fiskalnymi.",
+        "Źródłem jest poranny materiał TVN24 Biznes."
+      ],
+      "reactions": [
+        "To podnosi temperaturę sporu między rządem a Pałacem Prezydenckim.",
+        "Brak jeszcze oficjalnej kontrwyceny z dokumentu źródłowego."
+      ],
+      "whyItMatters": "Debata o kosztach wet może wejść do szerszej rozmowy o budżecie i tempie legislacji.",
+      "context": "To drugi filar porannego bloku polityczno-gospodarczego obok sporu w PiS.",
+      "watchNext": [
+        "Sprawdzić, czy resort poda metodologię wyliczenia.",
+        "Sprawdzić, czy prezydent lub jego otoczenie odpowie liczbowo."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Domański o wetach prezydenta",
+          "url": "https://tvn24.pl/biznes/z-kraju/andrzej-domanski-w-jeden-na-jeden-ile-kosztuja-weta-prezydenta-oslabiaja-caly-potencjal-polskiej-gospodarki-st9146215"
+        }
+      ],
+      "tags": [
+        "Budżet",
+        "Polityka",
+        "Gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-veto-osoba-najblizsza-2026-07-17-1203",
+      "section": "Polityka",
+      "title": "Prezydent wetuje ustawę",
+      "lead": "Ustawa o statusie osoby najbliższej nie przeszła.",
+      "whatHappened": "Prezydent odmówił podpisania ustawy o statusie osoby najbliższej w związku i umowie o wspólnym pożyciu. To zamyka poranne oczekiwanie na decyzję i otwiera nową rundę reakcji politycznych.",
+      "keyFacts": [
+        "TVN24 podał decyzję 17 lipca rano.",
+        "To konkretny weto, nie tylko sygnał polityczny.",
+        "Spór dotyczy zarówno spraw społecznych, jak i kompetencji prezydenta."
+      ],
+      "reactions": [
+        "Katarzyna Kotula odpowiada, że zmiana społeczna nie zostanie zatrzymana.",
+        "Na razie nie ma jeszcze formalnej próby odrzucenia weta."
+      ],
+      "whyItMatters": "To może stać się testem dla większości sejmowej i nowych układów wokół praw obywatelskich.",
+      "context": "W backlogu był to temat oczekujący na decyzję; dziś jest już faktem politycznym.",
+      "watchNext": [
+        "Sprawdzić, czy koalicja spróbuje obejść lub odrzucić weto.",
+        "Sprawdzić, czy pojawi się alternatywny projekt ustawy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Prezydent zdecydował w sprawie ustawy",
+          "url": "https://tvn24.pl/polska/prezydent-karol-nawrocki-zdecydowal-w-sprawie-ustawy-o-statusie-osobie-najblizszej-st9146295"
+        },
+        {
+          "title": "TVN24: komentarz Kotuli",
+          "url": "https://tvn24.pl/polska/karol-nawrocki-zawetowal-ustawe-o-osobie-najblizszej-katarzyna-kotula-nie-zatrzyma-zmiany-spolecznej-st9146321"
+        }
+      ],
+      "tags": [
+        "Sejm",
+        "Prezydent",
+        "Weto"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-rcb-imgw-2026-07-17-1203",
+      "section": "Alerty",
+      "title": "RCB ostrzega przed burzami",
+      "lead": "Możliwe przerwy w prądzie i silny wiatr.",
+      "whatHappened": "RCB utrzymuje alert burzowy na 17/18 lipca. TVN24 i IMGW pokazują, że upał i burze pozostają aktywnym ryzykiem operacyjnym dla ruchu, sieci energetycznej i lokalnych szkód.",
+      "keyFacts": [
+        "RCB wprost ostrzega o możliwych przerwach w dostawie prądu.",
+        "IMGW trzyma ostrzeżenia na upał i burze.",
+        "To realne ryzyko, a nie tylko tło pogodowe."
+      ],
+      "reactions": [
+        "Na razie brak nowych raportów o poważnych stratach.",
+        "Ryzyko może się nasilić wraz z popołudniowymi komórkami burzowymi."
+      ],
+      "whyItMatters": "Alert może przejść w awarie, szkody lokalne i kolejny blok komunikatów kryzysowych.",
+      "context": "To kontynuacja porannego ostrzeżenia, ale dziś ma też wsparcie w lokalnych ruchach i miejskich utrudnieniach.",
+      "watchNext": [
+        "Śledzić komunikaty RCB i IMGW do wieczora.",
+        "Sprawdzić, czy pojawią się pierwsze awarie lub zwalone drzewa."
+      ],
+      "sources": [
+        {
+          "title": "RCB komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        },
+        {
+          "title": "TVN24 Meteo: IMGW",
+          "url": "https://tvn24.pl/tvnmeteo/polska/upal-i-burze-ostrzezenia-imgw-piatek-17-07-st9142923"
+        },
+        {
+          "title": "IMGW mapy dynamiczne",
+          "url": "https://meteo.imgw.pl/dyn/"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "IMGW",
+        "Pogoda"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-wislostrada-2026-07-17-1203",
+      "section": "Bezpieczeństwo",
+      "title": "Wisłostrada stoi po zderzeniu",
+      "lead": "Poranny korek utrudnił dojazd do centrum.",
+      "whatHappened": "Na Wisłostradzie w kierunku centrum po zderzeniu auta osobowego z motocyklistą utworzył się duży korek. To już nie tylko pojedyncze zdarzenie, ale też realny efekt transportowy.",
+      "keyFacts": [
+        "Zdarzenie dotyczyło porannego szczytu.",
+        "Korek był widoczny w kierunku centrum.",
+        "Źródło ma charakter miejski i bieżący."
+      ],
+      "reactions": [
+        "Brak informacji o szerszym paraliżu miasta.",
+        "To przede wszystkim lokalny sygnał dla kierowców."
+      ],
+      "whyItMatters": "Dla iOS to materiał na krótką kartę transportową z bezpośrednim wpływem na ruch.",
+      "context": "Ten wątek już pojawiał się w porannym przeglądzie i teraz ma twardsze potwierdzenie jako bieżące utrudnienie.",
+      "watchNext": [
+        "Sprawdzić, czy korek szybko zniknie.",
+        "Sprawdzić, czy pojawi się policyjny follow-up."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wisłostrada",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-korek-na-wislostradzie-po-zderzeniu-z-motocyklista-st9146235"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "Transport",
+        "Wypadek"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "bezpieczenstwo-bialoruska-plywaczka-2026-07-17-1203",
+      "section": "Bezpieczeństwo",
+      "title": "Zarzuty po ataku na pływaczkę",
+      "lead": "Policja stawia zarzuty i kieruje sprawę do aresztu.",
+      "whatHappened": "TVN24 podał zarzuty i areszt po atakach na białoruską pływaczkę i drugą osobę na Dworcu Zachodnim. Sprawa weszła w formalny etap karny.",
+      "keyFacts": [
+        "Ataki miały miejsce 10 i 11 lipca.",
+        "Źródło wymienia dwie pokrzywdzone osoby.",
+        "Sprawa jest już na etapie zarzutów i aresztu."
+      ],
+      "reactions": [
+        "Policja traktuje sprawę jako formalne postępowanie.",
+        "Brak jeszcze szerszej reakcji instytucjonalnej."
+      ],
+      "whyItMatters": "To mocny sygnał o przemocy w przestrzeni transportowej i o wejściu sprawy w tryb procesowy.",
+      "context": "Ten temat był obserwowany w backlogu; teraz ma już twardy status procesowy.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się kolejne zarzuty.",
+        "Sprawdzić, czy dworzec lub organizator wydadzą komentarz."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: atak na białoruską pływaczkę",
+          "url": "https://tvn24.pl/tvnwarszawa/ochota/warszawa-zarzuty-i-areszt-za-atak-na-bialoruska-plywaczke-st9146323"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "Bezpieczeństwo",
+        "Prokuratura"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "bezpieczenstwo-ursynow-2026-07-17-1203",
+      "section": "Bezpieczeństwo",
+      "title": "Śmierć po kradzieży na chodniku",
+      "lead": "Mężczyzna był nieprzytomny, został okradziony i zmarł.",
+      "whatHappened": "TVN24 podał, że policjanci z Ursynowa zatrzymali dwie osoby podejrzane o wykorzystanie bezbronności 55-latka leżącego na chodniku. Materiał wiąże zdarzenie z jego późniejszą śmiercią.",
+      "keyFacts": [
+        "Źródło mówi o dwóch zatrzymanych osobach.",
+        "Poszkodowany leżał nieprzytomny na chodniku.",
+        "Sprawa ma ciężki, potencjalnie karny wymiar."
+      ],
+      "reactions": [
+        "Na razie brak pełnej kwalifikacji prawnej w źródle.",
+        "To nadal świeży materiał policyjny."
+      ],
+      "whyItMatters": "To mocny lokalny sygnał bezpieczeństwa publicznego i kandydat na krótką kartę alarmową.",
+      "context": "To bardziej konkretne i cięższe potwierdzenie niż wcześniejszy ogólny sygnał o przemocy miejskiej.",
+      "watchNext": [
+        "Sprawdzić, czy policja poda kwalifikację prawną.",
+        "Sprawdzić, czy pojawi się komunikat medyczny lub prokuratorski."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ursynów",
+          "url": "https://tvn24.pl/tvnwarszawa/ursynow/warszawa-lezal-na-chodniku-okradli-go-i-nie-wezwali-pomocy-mezczyzna-zmarl-st9146283"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "Przestępczość",
+        "Bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-iran-2026-07-17-1203",
+      "section": "Świat",
+      "title": "USA uderzają ponownie w Iran",
+      "lead": "BBC pisze o nowych atakach i trafionej infrastrukturze.",
+      "whatHappened": "BBC World opisało nowe uderzenia USA na Iran i przekaz Teheranu o trafionej infrastrukturze cywilnej. W tym samym ruchu pojawia się także przejęcie statku w Cieśninie Ormuz.",
+      "keyFacts": [
+        "BBC opublikowało materiał 17 lipca rano.",
+        "Wątek obejmuje wojnę, żeglugę i infrastrukturę cywilną.",
+        "To jeden z najgorętszych tematów globalnych w tym slocie."
+      ],
+      "reactions": [
+        "Konflikt nie wygląda na wygaszony.",
+        "To może wywołać reakcje rynkowe i żeglugowe."
+      ],
+      "whyItMatters": "Iran pozostaje głównym punktem zapalnym i może odbić się na energii oraz bezpieczeństwie morskich szlaków.",
+      "context": "Wątek Iran/Ormuz nie znika z feedu, tylko dalej eskaluje.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się formalny komunikat morski.",
+        "Sprawdzić, czy ceny energii lub transportu zareagują."
+      ],
+      "sources": [
+        {
+          "title": "BBC Iran",
+          "url": "https://www.bbc.co.uk/news/articles/c151gdjwd10o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN Iran live",
+          "url": "https://www.cnn.com/2026/07/17/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "Bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-rohingya-2026-07-17-1203",
+      "section": "Świat",
+      "title": "Ponad 500 Rohingya zaginęło",
+      "lead": "Dwie łodzie z Myanmaru zniknęły po wypłynięciu.",
+      "whatHappened": "BBC pisze o dwóch łodziach z około 530 Rohingya, które zniknęły po wypłynięciu z Myanmaru 29 czerwca. To wraca do wątku migracji i kryzysu humanitarnego.",
+      "keyFacts": [
+        "BBC podaje szacunek około 530 osób na pokładach.",
+        "Łodzie zniknęły po wypłynięciu 29 czerwca.",
+        "Nie ma jeszcze pełnego bilansu ratunkowego."
+      ],
+      "reactions": [
+        "Brak potwierdzonej liczby ocalałych w otwartych materiałach.",
+        "Temat pozostaje niepewny i potencjalnie ciężki."
+      ],
+      "whyItMatters": "To duży kryzys humanitarny z możliwie wysoką liczbą ofiar i słabą przejrzystością informacji.",
+      "context": "W poprzednim slocie Rohingya też się pojawiało, ale dziś BBC daje nowszy i konkretniejszy punkt odniesienia.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się oficjalny bilans ratunkowy.",
+        "Sprawdzić, czy UNHCR lub władze wydadzą komunikat."
+      ],
+      "sources": [
+        {
+          "title": "BBC Rohingya",
+          "url": "https://www.bbc.co.uk/news/articles/cr59n096mrmo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Rohingya",
+        "Migracja",
+        "Humanitarne"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-kanada-pozary-2026-07-17-1203",
+      "section": "Świat",
+      "title": "Kanadyjskie pożary rozszerzają alerty",
+      "lead": "Dym z setek pożarów sięga kolejnych dużych miast.",
+      "whatHappened": "BBC podaje, że dym z ponad 800 pożarów w Kanadzie rozlewa się nad Toronto, Nowym Jorkiem i częścią północno-wschodnich stanów USA. To tworzy realny problem zdrowotny i transportowy.",
+      "keyFacts": [
+        "Źródło mówi o ponad 800 pożarach.",
+        "Alerty jakości powietrza objęły duże miasta w USA.",
+        "Dym ma zasięg międzystanowy i transgraniczny."
+      ],
+      "reactions": [
+        "Władze lokalne ostrzegają przed aktywnością na zewnątrz.",
+        "Ryzyko może dotknąć lotów i wydarzeń masowych."
+      ],
+      "whyItMatters": "To jeden z niewielu globalnych tematów, który bezpośrednio wpływa na zdrowie i podróże.",
+      "context": "To nadal mocny temat po stronie BBC i dobry kandydat na kartę alertowo-zdrowotną.",
+      "watchNext": [
+        "Sprawdzić, czy alerty rozszerzą się na kolejne miasta.",
+        "Sprawdzić, czy dojdą ograniczenia lotnicze lub szkolne."
+      ],
+      "sources": [
+        {
+          "title": "BBC Kanada",
+          "url": "https://www.bbc.co.uk/news/articles/c0m7n427xd8o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Kanada",
+        "Pożary",
+        "Jakość powietrza"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-british-steel-2026-07-17-1203",
+      "section": "Gospodarka",
+      "title": "BBC: Pekin krytykuje British Steel",
+      "lead": "Chińska strona ostro reaguje na nacjonalizację.",
+      "whatHappened": "BBC opisało krytykę Chin wobec nacjonalizacji British Steel. Brytyjski rząd przedstawia ruch jako ochronę strategicznej zdolności przemysłowej, a Pekin odpowiada ostrzej.",
+      "keyFacts": [
+        "BBC opublikowało materiał 17 lipca rano.",
+        "W tle jest kwestia strategicznej produkcji stali.",
+        "To wpisuje się w szerszy spór o bezpieczeństwo gospodarcze."
+      ],
+      "reactions": [
+        "Chińska strona krytykuje decyzję otwarcie.",
+        "Rząd UK broni ruchu jako ochrony krajowej zdolności."
+      ],
+      "whyItMatters": "To dobry sygnał o rosnącym znaczeniu bezpieczeństwa przemysłowego i napięć gospodarczych z Chinami.",
+      "context": "Materiał BBC dobrze uzupełnia wątek geopolityki technologiczno-przemysłowej z tej zmiany.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się reakcja kompensacyjna lub handlowa.",
+        "Sprawdzić, czy sprawa przejdzie na poziom dyplomatyczny."
+      ],
+      "sources": [
+        {
+          "title": "BBC British Steel",
+          "url": "https://www.bbc.co.uk/news/articles/cjd4kvxpd3do?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "UK",
+        "Chiny",
+        "Stal"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-china-ai-2026-07-17-1203",
+      "section": "Technologia",
+      "title": "Xi sprzedaje Chiny jako lidera AI",
+      "lead": "CNN opisuje narrację Pekinu o odpowiedzialnym AI.",
+      "whatHappened": "CNN opisało wystąpienie Xi Jinpinga na tle zarzutów Donalda Trumpa o kradzież danych wyborczych. Przekaz Pekinu jest prosty: Chiny chcą pokazać się jako odpowiedzialny lider technologiczny.",
+      "keyFacts": [
+        "Materiał CNN jest świeży na 17 lipca.",
+        "Wątek łączy AI, geopolitykę i spór USA-Chiny.",
+        "To technologia osadzona w konflikcie politycznym."
+      ],
+      "reactions": [
+        "Zachód nadal patrzy na Chiny przez pryzmat bezpieczeństwa i kontroli danych.",
+        "CNN pokazuje, że narracja Pekinu idzie w przeciwną stronę."
+      ],
+      "whyItMatters": "To ważne dla obserwacji regulacji AI, łańcuchów dostaw i rywalizacji o standardy technologiczne.",
+      "context": "To najmocniejszy czysto techowy sygnał w tym slocie, choć z wyraźnym politycznym podtekstem.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się nowe ogłoszenia regulacyjne lub handlowe.",
+        "Sprawdzić, czy rynek AI zareaguje na konferencję."
+      ],
+      "sources": [
+        {
+          "title": "CNN China AI",
+          "url": "https://www.cnn.com/2026/07/17/china/china-ai-conference-analysis-intl-hnk"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Chiny",
+        "CNN"
+      ],
+      "priority": "medium"
+    }
+  ]
+}

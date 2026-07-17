@@ -2,6 +2,11 @@
 
 ## Open
 
+- Watch whether the veto on the status-of-nearest-person bill triggers an override attempt or a substitute draft.
+- Watch whether the RCB and IMGW alert turns into outages, fallen trees or broader transport disruption before evening.
+- Watch whether the Canada smoke plume widens into new air-quality, travel or school alerts.
+- Watch whether the Iran / Ormuz escalation produces a maritime note or fuel-price follow-through.
+
 - Watch whether RCB power-cut warnings turn into real outages or broader infrastructure notes before the next slot.
 - Watch whether Tatry get a formal TOPR or TPN follow-up after the surge of accidents in better weather.
 - Watch whether the Wisłostrada motorcycle crash becomes a longer traffic disruption or another official police note.
@@ -132,6 +137,7 @@
   shooting.
 - Bielsko-Biała bus-abuse case already reached the zarzut stage after the
   monitoring review; keep it only if new procedural steps appear.
+- The status-of-nearest-person bill is no longer pending after the presidential veto; keep only reaction or override attempts.
 
 ## Done
 
