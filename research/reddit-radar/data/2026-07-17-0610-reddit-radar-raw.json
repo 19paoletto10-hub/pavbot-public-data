@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-17-0610",
+  "status": "material_update",
+  "generatedAt": "2026-07-17T04:27:46Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-17T06:10:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Live 06:10 review completed through read-only Safari Computer Use on old.reddit.com in the local Safari session.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-16-1809 and 2026-07-16-1208. The 1809 run contributed a five-URL blocklist; the 1208 run was blocked and contributed no shortlisted URLs.",
+      "Before selecting replacements, the run verified that the currently published public bundle on origin/main is 2026-07-16-1809, so the active remote state matched the previous successful evening slot.",
+      "Shortlist post and top-comment review stayed read-only on exact old.reddit post pages, with Safari screenshots used where accessibility text did not expose the visible comment layer reliably.",
+      "The cleanest fresh survivors were the not-milk universe meme, theOnlyMachineIamTrulyComfortableWith, noBrainNoPain, and efficiantTokenmaxxing.",
+      "High-engagement candidates from r/memes and r/mildlyinfuriating repeatedly turned into biology talk, legality/rant talk, or public-unsafe sexual humor, which kept this slot at the minimum four-card threshold.",
+      "At least four safe fresh cards survived the live review, so the reddit-radar contract prefers a new public bundle over copying forward 2026-07-16-1809 unchanged.",
+      "No Reddit social actions were performed.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-16-1809",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-17-0610-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-17-0610-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-17-0610-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://www.reddit.com/r/memes/comments/1uy0002/no_one_ever_taught_us_to_do_this_its_just/",
+    "https://www.reddit.com/r/memes/comments/1uxsqxh/my_brain_whenever_someone_says_asap/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uxwr2i/candlelitdinnerisneedemailbug/",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uy1v63/woke_up_to_find_hay_bale_struck_by_lightning/",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uy1cds/where_i_found_my_headphone_after_falling_asleep/"
+  ],
+  "newCandidates": [
+    {
+      "subreddit": "r/memes",
+      "title": "By definition, this must contain everything in the universe",
+      "url": "https://www.reddit.com/r/memes/comments/1uyb8h3/by_definition_this_must_contain_everything_in_the/",
+      "scoreLabel": "1.2K",
+      "decision": "selected_for_new_bundle_clean_universal_absurdity_with_light_comment_payoff"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "theOnlyMachineIamTrulyComfortableWith",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyd129/theonlymachineiamtrulycomfortablewith/",
+      "scoreLabel": "2.3K",
+      "decision": "selected_for_new_bundle_simple_dev_absurdity_with_readable_comment_layer"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "noBrainNoPain",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyhzr7/nobrainnopain/",
+      "scoreLabel": "137",
+      "decision": "selected_for_new_bundle_small_but_clean_localhost_joke_with_strong_top_comments"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "efficiantTokenmaxxing",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uy6fp8/efficianttokenmaxxing/",
+      "scoreLabel": "908",
+      "decision": "selected_for_new_bundle_fresh_agentic_meta_joke_that_stays_public-safe"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "This God guy must be really bad at engineering.",
+      "url": "https://www.reddit.com/r/memes/comments/1uy43de/this_god_guy_must_be_really_bad_at_engineering/",
+      "scoreLabel": "377 comments",
+      "decision": "reviewed_but_left_out_because_comment_layer_turns_into_biology_and_aging_discourse"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "What EVEN is the point of these lights???",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uydb4y/what_even_is_the_point_of_these_lights/",
+      "scoreLabel": "1.5K comments",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_is_more_ranty_and_legalistic_than_funny"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "A foolproof tactic to use on the ladies. 100% guaranteed success.",
+      "url": "https://www.reddit.com/r/memes/comments/1uygysd/a_foolproof_tactic_to_use_on_the_ladies_100/",
+      "scoreLabel": "31 comments",
+      "decision": "reviewed_but_left_out_because_the_core_joke_is_not_public-safe_for_the_digest"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "This bag was supposed to be 1kg of icing sugar and it wasn’t even 700g",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uyf7q0/this_bag_was_supposed_to_be_1kg_of_icing_sugar/",
+      "scoreLabel": "541 comments",
+      "decision": "reviewed_but_left_out_because_read-only_safari_did_not_produce_a_stable_top-comment_extract"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "programmersEvolution",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyh2wv/programmersevolution/",
+      "scoreLabel": "13 comments",
+      "decision": "reviewed_but_left_out_because_the_meta_openai_tooling_comment_layer_was_weaker_than_the_four_selected_cards"
+    }
+  ]
+}
