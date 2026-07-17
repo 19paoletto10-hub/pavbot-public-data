@@ -1,8 +1,12 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-16
+Last updated: 2026-07-17
 
 ## Current Understanding
+
+Poranny refresh z 2026-07-17 przesuwa temat z samych modeli na produkty, które zamieniają AI w działanie i produkcję treści. Google łączy Search z aplikacjami i Vids z avatarami, Roblox Build przenosi prompt-to-game na mobile, Uber składa ofertę na Delivery Hero, Coca-Cola zatrzymuje fairlife po ransomware, a San Francisco dokręca śrubę Waymo. Wspólny mianownik to mniej demo, więcej interfejsów, dystrybucji, bezpieczeństwa i regulatorów.
+
+Community signal nadal premiuje workflowy, które da się sprawdzić i kontrolować. Product Hunt i Hacker News bardziej nagradzają agentów z red penem, integracje i użyteczne kontrolki niż czysty modelowy hype.
 
 Wieczorny refresh z 2026-07-16 przesuwa temat z ogólnego lobbingu AI do formalnej interoperacyjności, agent security i regionalizacji produktów. Komisja Europejska wydaje binding specs dla Google, więc Android i Search zaczynają być traktowane jak infrastruktura dostępu, a nie tylko zamknięty produkt.
 
@@ -196,11 +200,18 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-17: Poranny refresh dodał Google Search connected apps i Vids, Roblox Build, ofertę Ubera na Delivery Hero, ransomware w fairlife i ostrzejsze zasady dla Waymo w San Francisco.
+- 2026-07-17: Community signal przesunął się w stronę workflowów z red penem i kontrolą na Product Hunt oraz bardziej praktycznych agentów na Hacker News.
 - 2026-07-16: Wieczorny refresh dodał binding DMA measures wobec Google, oficjalny launch Kimi K3, bezpieczne logowanie Claude przez 1Password, Microsoft Comic Chat open source i OnePlus business adjustment dla Europy oraz Ameryki Północnej.
 - 2026-07-16: Dzisiejszy run przesunął środek ciężkości z UI i rolloutów na public trust, state policy, PAC tension oraz AI infrastructure w power/water stack.
 
 ## Watch Items
 
+- Google connected-app rollout: watch whether Search/Workspace linking expands beyond the initial U.S. set and whether Vids avatars stay tightly gated.
+- Roblox Build creator controls: watch the July 28 test, moderation, age gating and creator uptake on mobile.
+- Uber/Delivery Hero consolidation: watch antitrust reaction, shareholder response and integration assumptions in the acquisition offer.
+- fairlife ransomware spillover: watch plant recovery, supply-chain disclosure and whether other dairy sites are affected.
+- Waymo/SF rule tightening: watch California regulators, local rule changes and whether other cities copy the pressure campaign.
 - Google Search child-safety backlash: Common Sense's "Unacceptable Risk" call may push Google to change defaults, age gating or opt-out controls.
 - Anthropic/OpenAI state lobbying split: watch California, New York, Illinois and Massachusetts bill language to see whether the state-by-state policy divide hardens.
 - OpenAI political PAC split: employee support for Guardrails Alliance may keep widening the gap between internal policy views and public advocacy.

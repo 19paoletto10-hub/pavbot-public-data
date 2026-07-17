@@ -1,0 +1,377 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-17",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run przesuwa temat z samego governance AI w stronę produktu i operacyjnego wdrożenia. Google w tym samym ruchu rozciąga AI Mode na zewnętrzne aplikacje oraz wzmacnia Vids o Gemini Omni i personal avatars, czyli zamienia Search i Workspace w jedną warstwę akcji i generacji. To nie jest już tylko „chat z AI”, ale coraz bardziej domyślny interfejs do robienia rzeczy.",
+    "Równolegle mainstreamowe aplikacje tworzenia i commerce idą w ten sam kierunek. Roblox wprowadza Build, czyli prompt-to-game bezpośrednio w aplikacji mobilnej, a Uber próbuje zamknąć Delivery Hero w jedną globalną sieć 99 rynków. To pokazuje, że AI i platformy cyfrowe nie tylko poprawiają UX, ale też przebudowują granice produktu, dystrybucji i własności rynku.",
+    "Najbardziej twarde konsekwencje pojawiają się jednak po stronie ryzyka operacyjnego. Coca-Cola potwierdza ransomware w fairlife i wstrzymanie produkcji, a San Francisco zaczyna dokręcać śrubę Waymo po gridlocku z 4 lipca. Community signal z Product Hunt i Hacker News jest spójny z tym samym kierunkiem: wygrywają agentowe workflow, ale tylko tam, gdzie użytkownik widzi kontrolę, red pen i możliwość korekty."
+  ],
+  "summaryBullets": [
+    "Produkty: Google łączy Search z aplikacjami i Vids z AI",
+    "Produkty: Roblox Build przenosi prompt-to-game na telefon",
+    "Infrastruktura: Uber chce połączyć Delivery Hero w jedną sieć"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-17-0-google-laczy-search-z-aplikacjami-i-vids-z-ai-c730f31e92",
+      "section": "Produkty",
+      "title": "Google łączy Search z aplikacjami i Vids z AI",
+      "standfirst": "Google ogłosił, że AI Mode w Search zaczyna łączyć się z aplikacjami takimi jak Instacart, Canva i YouTube Music. Równolegle Google Vids dostał Gemini Omni i personal avatars, czyli generowanie i edycję wideo przez prompt oraz cyfrową twarz i głos użytkownika.",
+      "whatHappened": "Google rozszerzył AI Mode o connected apps i odświeżył Google Vids o generację oraz awatary.",
+      "whyItMatters": "Search i Workspace przestają być tylko interfejsem do znajdowania informacji, a coraz bardziej stają się warstwą wykonywania zadań i tworzenia treści.",
+      "deeperAnalysis": [
+        "Google robi tu dwa ruchy naraz, ale oba prowadzą do tego samego celu. AI Mode ma zatrzymać użytkownika w Search dłużej, a nie tylko podać odpowiedź, bo teraz może bezpośrednio połączyć się z usługami, których ludzie używają na co dzień. To jest krok od „odpowiedzi na pytanie” do „wykonania małego zadania”.",
+        "Vids idzie w tym samym kierunku na warstwie kreacji. Gemini Omni pozwala generować i edytować materiał wideo z promptu, a personal avatars przesuwają barierę wejścia jeszcze niżej, bo użytkownik może stworzyć film bez kamery i bez klasycznego setupu nagraniowego.",
+        "Najważniejsze jest to, że Google dokłada też warstwę zaufania przez watermarki i ograniczenia regionalne. To sygnał, że firma widzi nie tylko potencjał kreatywny, ale też ryzyko deepfake'ów, nadużyć i utraty kontroli nad treścią."
+      ],
+      "contextPoints": [
+        "Co się stało: Search dostał connected apps, a Vids dostał generację i awatary.",
+        "Dlaczego ważne: Google skleja search, task execution i content creation w jedną powierzchnię produktu.",
+        "Na co patrzeć dalej: rollout poza USA, nowe integracje partnerów i zakres dostępności personal avatars."
+      ],
+      "sources": [
+        {
+          "title": "Google: Connect more of your apps to Search",
+          "url": "https://blog.google/products-and-platforms/products/search/connected-apps/"
+        },
+        {
+          "title": "Google: Create, edit and star in videos with two Google Vids updates",
+          "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/"
+        },
+        {
+          "title": "TechCrunch: Google's AI Mode now lets you link and interact with select apps",
+          "url": "https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/"
+        },
+        {
+          "title": "TechCrunch: Google Vids now lets you star in your own AI videos",
+          "url": "https://techcrunch.com/2026/07/16/google-vids-now-lets-you-star-in-your-own-ai-videos/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Search",
+        "AI Mode",
+        "Vids",
+        "Gemini Omni",
+        "personal avatars"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-17-1-roblox-build-przenosi-prompt-to-game-na-telefon-7655f2bc92",
+      "section": "Produkty",
+      "title": "Roblox Build przenosi prompt-to-game na telefon",
+      "standfirst": "Roblox ogłosił Build, nową mobilną zakładkę, która zamienia tekstowy prompt w bazowy prototyp gry. Firma zapowiada też testy nowych agentic tools od 28 lipca i łączy Build z Roblox Studio.",
+      "whatHappened": "Roblox uruchamia mobilny interfejs do tworzenia gier z pomocą AI.",
+      "whyItMatters": "Masowa platforma tworzenia treści zaczyna obniżać próg wejścia z poziomu narzędzi dla profesjonalistów do zwykłego telefonu.",
+      "deeperAnalysis": [
+        "To jest ważne nie tylko jako kolejny launch AI, ale jako zmiana sposobu wejścia do całej platformy. Roblox mówi wprost, że Build ma pozwolić ludziom zacząć od prostego promptu, a potem przejść do iteracji, playtestu i publikacji. To przyspiesza ścieżkę od pomysłu do gry.",
+        "Równolegle firma broni się przed zarzutem, że platforma zaleje się AI slopem. W komunikacie pada twarde stwierdzenie, że ich discovery systems promują doświadczenia z długoterminowym retention, a nie byle co wygenerowane przez model. To pokazuje, że skala AI creation wymusza od platformy nie tylko narzędzie do tworzenia, ale też nowe reguły selekcji.",
+        "Najciekawsze będzie to, czy Build zostanie tylko ciekawostką, czy stanie się faktycznym wejściem nowych twórców do ekosystemu. Jeżeli zacznie działać, Roblox może skrócić dystans między konsumpcją a produkcją w jednym z największych cyfrowych ekosystemów dla młodszych użytkowników."
+      ],
+      "contextPoints": [
+        "Co się stało: Build pozwala tworzyć bazowe gry z promptu w aplikacji mobilnej.",
+        "Dlaczego ważne: platforma game creation wchodzi do masowego, codziennego użycia.",
+        "Na co patrzeć dalej: testy od 28 lipca, reakcja twórców i skuteczność kontroli jakości."
+      ],
+      "sources": [
+        {
+          "title": "Roblox newsroom: Build Without Limits on Roblox",
+          "url": "https://about.roblox.com/newsroom/2026/07/build-without-limits-on-roblox"
+        },
+        {
+          "title": "Roblox IR: Roblox Introduces Build: A New Way to Create on the Platform",
+          "url": "https://ir.roblox.com/news/news-details/2026/Roblox-Introduces-Build-A-New-Way-to-Create-on-the-Platform/default.aspx"
+        },
+        {
+          "title": "TechCrunch: Roblox launches an AI-powered game-creation feature in its mobile app",
+          "url": "https://techcrunch.com/2026/07/16/roblox-launches-an-ai-powered-game-creation-feature-in-its-mobile-app/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Roblox",
+        "Build",
+        "mobile",
+        "game creation",
+        "AI tools",
+        "Studio"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-17-2-uber-chce-polaczyc-delivery-hero-w-jedna-siec-9e5f9a0f6b",
+      "section": "Infrastruktura",
+      "title": "Uber chce połączyć Delivery Hero w jedną sieć",
+      "standfirst": "Uber złożył ofertę przejęcia Delivery Hero za 41.50 euro za akcję, co implikuje wycenę około 14.8 mld dolarów. Po zamknięciu transakcji platforma miałaby działać na 99 rynkach, a 14 rynków overlapowych przejąłby SSW Partners.",
+      "whatHappened": "Uber ogłosił business combination agreement z Delivery Hero.",
+      "whyItMatters": "To duża konsolidacja globalnej infrastruktury dostaw, quick commerce i lokalnych brandów, z potencjalnym ryzykiem regulacyjnym.",
+      "deeperAnalysis": [
+        "Ten ruch nie jest tylko o jedzeniu. Uber i Delivery Hero budują w praktyce wielowarstwową sieć logistyczną obejmującą dostawy, quick commerce i usługi lokalne. Skala 99 rynków oznacza, że mowa o platformie infrastrukturalnej, nie o pojedynczej aplikacji.",
+        "Z punktu widzenia rynku ważne jest też to, że Delivery Hero ma zachować część działalności poza Uberem, bo 14 rynków przejdzie do SSW Partners. To pokazuje, że transakcja jest projektowana nie tylko pod wzrost, ale też pod usunięcie części nakładania się biznesów tam, gdzie konkurencja byłaby najbardziej oczywista.",
+        "Jeżeli transakcja przejdzie, regulatorzy mogą potraktować ją jako kolejny test tego, jak daleko można konsolidować rynek delivery bez ponownego otwierania sporów o konkurencję, dane kurierów i warunki lokalne dla merchantów."
+      ],
+      "contextPoints": [
+        "Co się stało: Uber złożył ofertę przejęcia Delivery Hero.",
+        "Dlaczego ważne: dostawy i quick commerce stają się coraz bardziej skoncentrowaną infrastrukturą rynkową.",
+        "Na co patrzeć dalej: reakcja regulatorów, warunki integracji i inwestycje w Niemczech."
+      ],
+      "sources": [
+        {
+          "title": "Uber IR: Uber Announces Acquisition Offer for Delivery Hero",
+          "url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Announces-Acquisition-Offer-for-Delivery-Hero/default.aspx"
+        },
+        {
+          "title": "Delivery Hero: Delivery Hero and Uber to Join Forces to Deliver More for Customers, Vendors and Riders",
+          "url": "https://www.deliveryhero.com/newsroom/delivery-hero-and-uber-to-join-forces-to-deliver-more-for-customers-vendors-and-riders/"
+        },
+        {
+          "title": "TechCrunch: Uber’s $14.8B Delivery Hero deal would nearly double its global footprint",
+          "url": "https://techcrunch.com/2026/07/16/ubers-14-8b-delivery-hero-deal-would-nearly-double-its-global-footprint/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Uber",
+        "Delivery Hero",
+        "acquisitions",
+        "food delivery",
+        "quick commerce",
+        "markets"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-17-3-coca-cola-wstrzymuje-produkcje-fairlife-po-ransomware-1df1dae90e",
+      "section": "Cyber",
+      "title": "Coca-Cola wstrzymuje produkcję fairlife po ransomware",
+      "standfirst": "Coca-Cola potwierdziła, że fairlife padło ofiarą ransomware i że produkcja w USA została tymczasowo wstrzymana. Firma twierdzi, że jakość i bezpieczeństwo produktu nie zostały naruszone, ale skala incydentu nadal jest badana.",
+      "whatHappened": "Ransomware zatrzymało część produkcji fairlife.",
+      "whyItMatters": "To pokazuje, że cyberatak może zablokować fizyczny łańcuch dostaw w dużej markowej sieci FMCG, a nie tylko wyciek danych.",
+      "deeperAnalysis": [
+        "Najważniejsze w tej historii jest to, że atak nie skończył się na biurku IT. Coca-Cola mówi wprost o wpływie na production-related systems i o tym, że U.S. production operations są tymczasowo zawieszone. To oznacza realny wpływ operacyjny, a nie tylko incydent zgodności.",
+        "Firma na razie nie podaje pełnej skali szkody ani przyczyny wejścia napastników do środowiska. To normalne na tym etapie, ale dla odbiorców ważny jest inny wniosek: ransomware nadal działa jak narzędzie wywierania presji na produkty i przychody, a nie tylko na dane.",
+        "W szerszym ujęciu to kolejny dowód, że supply-chain security w 2026 roku obejmuje także marki konsumenckie, linie produkcyjne i third-party systems. Im większa automatyzacja operacji, tym bardziej cyber staje się problemem ciągłości biznesu."
+      ],
+      "contextPoints": [
+        "Co się stało: fairlife zostało zaatakowane ransomware, a produkcja w USA stanęła.",
+        "Dlaczego ważne: cyberatak przełożył się na fizyczną produkcję i dostępność produktu.",
+        "Na co patrzeć dalej: czas przywrócenia, ewentualna atrybucja i wpływ na sieć dostaw."
+      ],
+      "sources": [
+        {
+          "title": "The Coca-Cola Company: Technology Disruption Involving fairlife Operations",
+          "url": "https://investors.coca-colacompany.com/news-events/press-releases/detail/1166/the-coca-cola-company-announces-technology-disruption-involving-fairlife-operations"
+        },
+        {
+          "title": "Coca-Cola 8-K filing",
+          "url": "https://investors.coca-colacompany.com/filings-reports/all-sec-filings/content/0001628280-26-048466/ko-20260716.htm"
+        },
+        {
+          "title": "TechCrunch: Coca-Cola suspended production at its Fairlife dairy after a ransomware attack",
+          "url": "https://techcrunch.com/2026/07/16/coca-cola-suspended-production-at-its-fairlife-dairy-after-a-ransomware-attack/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Coca-Cola",
+        "fairlife",
+        "ransomware",
+        "supply chain",
+        "production",
+        "incident response"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-17-4-sf-dokreca-srube-waymo-871fc2dd6b",
+      "section": "Regulacje",
+      "title": "SF dokręca śrubę Waymo",
+      "standfirst": "Po gridlocku z 4 lipca Daniel Lurie poprosił stanowych regulatorów o mocniejsze zasady dla robotaxi. W liście pojawiają się konkretne oczekiwania: real-time data sharing, szybkie usuwanie immobile vehicles z jezdni i dowód, że system radzi sobie z dużym napływem ludzi oraz ruchem.",
+      "whatHappened": "San Francisco chce twardszych reguł dla Waymo po incydentach z ruchem ulicznym.",
+      "whyItMatters": "Robotaxi wchodzą w fazę polityki miejskiej i stanowej, gdzie o wartości produktu decyduje już nie tylko autonomia, ale też zachowanie w sytuacjach kryzysowych.",
+      "deeperAnalysis": [
+        "To, co jeszcze niedawno było demonstrowane jako futurystyczny transport, dziś staje się tematem procedur miejskich. TechCrunch opisuje, że Lurie chce czterech core operational capabilities, a CBS San Francisco podaje, że nacisk idzie na zaostrzenie regulacji po niedawnych disrupts.",
+        "W praktyce spór nie dotyczy tylko Waymo. Chodzi o standard dla każdej firmy, która chce wjechać robotaxi do gęstego miasta z turystycznymi wydarzeniami, blackoutami i dużą zmiennością ruchu. Jeżeli przepisy w San Francisco się zaostrzą, będą bardzo łatwe do skopiowania w innych miastach.",
+        "To też dobry sygnał, że temat autonomous vehicles wchodzi w fazę dojrzałą. Gdy miasta zaczynają wymagać live telemetry, rerouting i ewakuacji pojazdów z jezdni, technologiczny sukces przestaje wystarczać bez operacyjnej odporności."
+      ],
+      "contextPoints": [
+        "Co się stało: miasto i stan chcą twardszych zasad po kilku głośnych incydentach Waymo.",
+        "Dlaczego ważne: robotaxi stają się sprawą bezpieczeństwa ruchu i reakcji kryzysowej.",
+        "Na co patrzeć dalej: finalny tekst wymagań, reakcja Waymo i ewentualne kopie przepisów w innych miastach."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: San Francisco mayor pushes for tougher rules after the Waymo traffic fiasco",
+          "url": "https://techcrunch.com/2026/07/16/san-francisco-mayor-pushes-for-tougher-rules-after-the-waymo-traffic-fiasco/"
+        },
+        {
+          "title": "CBS San Francisco: San Francisco mayor urges state to tighten robotaxi regulations after recent Waymo disruptions",
+          "url": "https://www.cbsnews.com/sanfrancisco/news/san-francisco-robotaxi-regulations-waymo-disruptions/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Waymo",
+        "robotaxi",
+        "San Francisco",
+        "California",
+        "regulation",
+        "traffic"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-17-5-product-hunt-i-hn-chca-agentow-z-red-penem-1649636d3d",
+      "section": "Produkty",
+      "title": "Product Hunt i HN chcą agentów z red penem",
+      "standfirst": "Product Hunt newsletter i homepage pokazują dziś launch day z Vercel Day, a w opisie dnia pada wprost motyw „AI finally learns to use a red pen”. Hacker News dorzuca Kimi K3, Gemini Notebook i wątki o tym, czy nadal ma sens pisać kod ręcznie.",
+      "whatHappened": "Społeczność premiuje narzędzia agentowe, ale wymaga kontroli i weryfikacji.",
+      "whyItMatters": "To mocny sygnał, że rynek chce automatyzacji, którą da się audytować, a nie czarnej skrzynki.",
+      "deeperAnalysis": [
+        "Product Hunt nie nagradza dziś samego hasła „AI wszędzie”. Nagrodzone launchy są sklejone z konkretnymi workflow: prywatnym inference dla coding agents, agentami do sprzedaży, feedback layer dla budowanych produktów i automatyzacją bez tarcia. To są narzędzia, które mają wejść do codziennej pracy, nie tylko zrobić demo.",
+        "Newsletter Product Hunt podbija ten sam wniosek prostym językiem: red pen, office for agents, i browser-based creation. To język narzędzi, które trzeba sprawdzać, poprawiać i zatwierdzać, a nie tylko odpalać. HN dopełnia obraz: Kimi K3, Gemini Notebook i klasyczne dyskusje o ręcznym pisaniu kodu pokazują, że builders nadal chcą mocy, ale nie chcą oddawać kontroli.",
+        "W efekcie najlepszy produkt AI dnia wygląda jak system z możliwością review, nie jak autopilot. To dobry trop do podcastu, bo łączy kulturę produktów, oczekiwania użytkowników i rosnące znaczenie provenance oraz verification."
+      ],
+      "contextPoints": [
+        "Co się stało: Product Hunt i HN promują agentowe workflow, red pen i weryfikowalne narzędzia.",
+        "Dlaczego ważne: publiczna społeczność builderów akceptuje AI, ale tylko z kontrolą i feedback loop.",
+        "Na co patrzeć dalej: czy takie launchy utrzymają się poza dniem promocyjnym i czy rynek nie przesyci się agentami bez jakości."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt homepage",
+          "url": "https://www.producthunt.com/"
+        },
+        {
+          "title": "Product Hunt newsletters",
+          "url": "https://www.producthunt.com/newsletters"
+        },
+        {
+          "title": "Hacker News front page",
+          "url": "https://news.ycombinator.com/front"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Product Hunt",
+        "Hacker News",
+        "agents",
+        "workflow",
+        "verification",
+        "developer tools"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Google łączy Search z aplikacjami i Vids z AI",
+      "rationale": "Search staje się warstwą działania, a Vids warstwą generacji, więc Google scala dwa kluczowe powierzchnie produktu.",
+      "sourcesLabel": "Google; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Roblox Build przenosi prompt-to-game na telefon",
+      "rationale": "Masowa platforma kreacji gier obniża próg wejścia i testuje, czy AI creation da się skalować bez zalewu slopem.",
+      "sourcesLabel": "Roblox; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Uber chce połączyć Delivery Hero w jedną sieć",
+      "rationale": "To duży test konsolidacji dostaw i quick commerce w 99 rynkach, z jasnym ryzykiem regulacyjnym.",
+      "sourcesLabel": "Uber; Delivery Hero; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Fairlife pokazuje koszt ransomware w FMCG",
+      "rationale": "Wstrzymanie produkcji w konsumenckim łańcuchu dostaw pokazuje, że cyber jest już problemem operacyjnym, nie abstrakcyjnym.",
+      "sourcesLabel": "Coca-Cola; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "SF dokręca śrubę Waymo",
+      "rationale": "Robotaxi wchodzą w fazę miejskiej polityki, a nie tylko technologicznej demonstracji.",
+      "sourcesLabel": "TechCrunch; CBS San Francisco"
+    },
+    {
+      "priority": "Medium",
+      "title": "Product Hunt i HN chcą agentów z red penem",
+      "rationale": "Community nadal premiuje agentowe workflow, ale tylko tam, gdzie widać kontrolę, dowody i możliwość korekty.",
+      "sourcesLabel": "Product Hunt; Hacker News"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Google: Connect more of your apps to Search",
+      "url": "https://blog.google/products-and-platforms/products/search/connected-apps/"
+    },
+    {
+      "title": "Google: Create, edit and star in videos with two Google Vids updates",
+      "url": "https://blog.google/products-and-platforms/products/workspace/gemini-omni-personal-avatars/"
+    },
+    {
+      "title": "TechCrunch: Google's AI Mode now lets you link and interact with select apps",
+      "url": "https://techcrunch.com/2026/07/16/googles-ai-mode-now-lets-you-link-and-interact-with-select-apps/"
+    },
+    {
+      "title": "TechCrunch: Google Vids now lets you star in your own AI videos",
+      "url": "https://techcrunch.com/2026/07/16/google-vids-now-lets-you-star-in-your-own-ai-videos/"
+    },
+    {
+      "title": "Roblox: Build Without Limits on Roblox",
+      "url": "https://about.roblox.com/newsroom/2026/07/build-without-limits-on-roblox"
+    },
+    {
+      "title": "Roblox IR: Roblox Introduces Build: A New Way to Create on the Platform",
+      "url": "https://ir.roblox.com/news/news-details/2026/Roblox-Introduces-Build-A-New-Way-to-Create-on-the-Platform/default.aspx"
+    },
+    {
+      "title": "TechCrunch: Roblox launches an AI-powered game-creation feature in its mobile app",
+      "url": "https://techcrunch.com/2026/07/16/roblox-launches-an-ai-powered-game-creation-feature-in-its-mobile-app/"
+    },
+    {
+      "title": "Uber IR: Uber Announces Acquisition Offer for Delivery Hero",
+      "url": "https://investor.uber.com/news-events/news/press-release-details/2026/Uber-Announces-Acquisition-Offer-for-Delivery-Hero/default.aspx"
+    },
+    {
+      "title": "Delivery Hero: Delivery Hero and Uber to Join Forces to Deliver More for Customers, Vendors and Riders",
+      "url": "https://www.deliveryhero.com/newsroom/delivery-hero-and-uber-to-join-forces-to-deliver-more-for-customers-vendors-and-riders/"
+    },
+    {
+      "title": "TechCrunch: Uber’s $14.8B Delivery Hero deal would nearly double its global footprint",
+      "url": "https://techcrunch.com/2026/07/16/ubers-14-8b-delivery-hero-deal-would-nearly-double-its-global-footprint/"
+    },
+    {
+      "title": "The Coca-Cola Company: Technology Disruption Involving fairlife Operations",
+      "url": "https://investors.coca-colacompany.com/news-events/press-releases/detail/1166/the-coca-cola-company-announces-technology-disruption-involving-fairlife-operations"
+    },
+    {
+      "title": "Coca-Cola 8-K filing",
+      "url": "https://investors.coca-colacompany.com/filings-reports/all-sec-filings/content/0001628280-26-048466/ko-20260716.htm"
+    },
+    {
+      "title": "TechCrunch: Coca-Cola suspended production at its Fairlife dairy after a ransomware attack",
+      "url": "https://techcrunch.com/2026/07/16/coca-cola-suspended-production-at-its-fairlife-dairy-after-a-ransomware-attack/"
+    },
+    {
+      "title": "TechCrunch: San Francisco mayor pushes for tougher rules after the Waymo traffic fiasco",
+      "url": "https://techcrunch.com/2026/07/16/san-francisco-mayor-pushes-for-tougher-rules-after-the-waymo-traffic-fiasco/"
+    },
+    {
+      "title": "CBS San Francisco: San Francisco mayor urges state to tighten robotaxi regulations after recent Waymo disruptions",
+      "url": "https://www.cbsnews.com/sanfrancisco/news/san-francisco-robotaxi-regulations-waymo-disruptions/"
+    },
+    {
+      "title": "Product Hunt homepage",
+      "url": "https://www.producthunt.com/"
+    },
+    {
+      "title": "Product Hunt newsletters",
+      "url": "https://www.producthunt.com/newsletters"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/front"
+    }
+  ]
+}
