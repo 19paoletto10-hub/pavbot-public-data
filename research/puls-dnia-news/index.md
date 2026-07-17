@@ -1,5 +1,7 @@
 # Puls Dnia News Index
 
+The 2026-07-17 06:01 slot przesuwa feed na bardziej operacyjny miks: PiS i Morawiecki wchodzą w jawny spór, Tusk mobilizuje klub KO, a bezpieczeństwo domykają dywersja na rzecz obcego wywiadu i przechwycenie rosyjskich samolotów nad Bałtykiem. W gospodarce widać Domańskiego, Żabkę i TikToka, a alerty trzymają Kanadę i IMGW. Za granicą BBC i CNN utrzymują Iran, Ukrainę, polski wątek sabotażu, Rohingya i Genuę w wysokiej temperaturze.
+
 ## Current State
 
 The 2026-07-16 21:02 slot snaps the feed back into a sharper core: PiS discipline, Morawiecki's counterattack, RARS procedure, Żabka's market move, Sony's packaging backlash and IMGW heat on the Polish side, then Poland-linked sabotage, Iran / Hormuz, Ukraine protests, Genoa sentencing and the Myanmar boats story abroad.

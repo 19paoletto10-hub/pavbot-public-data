@@ -2,6 +2,12 @@
 
 ## Open
 
+- Watch whether PiS turns the seven-day ultimatum into actual exclusions or resignations before the next slot.
+- Watch whether the 18-year-old sabotage case gets a written prokuratura note or appeal.
+- Watch whether the Baltic interception gets a formal MON or NATO follow-up.
+- Watch whether Iran / Ormuz or the Canadian fires expand into shipping, air-quality or local disruption alerts.
+- Watch whether the TikTok probe produces a formal regulatory response or platform changes.
+
 - Watch whether PiS turns the ultimatum into actual exclusions or departures before the next slot.
 - Watch whether the Morawiecki counterattack gets a formal party response or a new escalation.
 - Watch whether the Poland-linked sabotage case gets a written note from Polish services or prosecutors.
