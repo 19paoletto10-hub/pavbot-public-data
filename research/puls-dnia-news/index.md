@@ -38,6 +38,8 @@ The 2026-07-17 06:01 slot przesuwa feed na bardziej operacyjny miks: PiS i Moraw
 
 ## Current State
 
+The 2026-07-18 09:02 slot turns the feed from warning into impact: RCB and TVN24 Meteo now show actual storm damage and camp evacuation in Poland, Kaczyński is tightening the line inside PiS, and TVN24 Biznes adds fresh market friction through the złoty, fuel prices, Google regulation and Sony's format retreat. Abroad, BBC and CNN keep Iran / Hormuz high, while the latest world mix adds Mexico quake confirmation, Yemen piracy risk and a new Canada climate-trade flashpoint.
+
 The 2026-07-16 21:02 slot snaps the feed back into a sharper core: PiS discipline, Morawiecki's counterattack, RARS procedure, Żabka's market move, Sony's packaging backlash and IMGW heat on the Polish side, then Poland-linked sabotage, Iran / Hormuz, Ukraine protests, Genoa sentencing and the Myanmar boats story abroad.
 
 The 2026-07-16 18:01 slot widens the feed into a more fragmented mix:

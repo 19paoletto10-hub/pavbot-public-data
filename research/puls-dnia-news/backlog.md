@@ -2,6 +2,9 @@
 
 ## Open
 
+- Watch whether the 18/07 morning storm line turns into power cuts, road closures or additional evacuation reports before noon.
+- Watch whether the latest Iran / Ormuz night produces a fresh CENTCOM note, maritime advisory or oil-price follow-through.
+
 - Watch whether the 18/07 storm window turns into outages, transport blocks or fallen trees before noon.
 - Watch whether IPN publishes a fuller follow-up after the Ostrówki exhumation find.
 - Watch whether the Iran / Ormuz escalation produces another maritime or fuel-price note before the next slot.

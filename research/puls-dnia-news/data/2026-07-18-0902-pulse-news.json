@@ -1,0 +1,508 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-18",
+  "runTime": "09:02",
+  "status": "Material update",
+  "headline": "Burze, PiS i Iran znów prowadzą poranek",
+  "summary": "Poranny slot przesuwa feed z samego alertu w konkret: burze już dają szkody w Polsce, PiS zaostrza własny spór o lojalność, a świat dokłada siódmą noc uderzeń USA w Iran oraz kolejne sygnały ryzyka w żegludze, klimacie i rynku.",
+  "checkedSources": [
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "Gov.pl RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "Gov.pl RCB alert - burze (17.07)",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-1707"
+    },
+    {
+      "title": "IMGW mapy dynamiczne",
+      "url": "https://meteo.imgw.pl/dyn/"
+    },
+    {
+      "title": "U.S. Central Command Media",
+      "url": "https://www.centcom.mil/MEDIA/"
+    },
+    {
+      "title": "U.S. Geological Survey Earthquake Hazards Program",
+      "url": "https://www.usgs.gov/programs/earthquake-hazards"
+    },
+    {
+      "title": "UKMTO recent incidents",
+      "url": "https://www.ukmto.org/recent-incidents"
+    },
+    {
+      "title": "AP: Tanker boarded by armed group off Yemen, says British military",
+      "url": "https://apnews.com/article/2d055cb4b17184e4d3637d96a2ce7256"
+    }
+  ],
+  "items": [
+    {
+      "id": "alerty-burze-2026-07-18-0902",
+      "section": "Alerty",
+      "title": "RCB i IMGW trzymają burze w grze",
+      "lead": "Poranny front nadal grozi gradem, silnym wiatrem i przerwami w zasilaniu.",
+      "whatHappened": "RCB utrzymuje ostrzeżenie na 17/18 lipca, a TVN24 Meteo pokazuje już skutki przejścia frontu: zalane drogi, połamane drzewa, ewakuację harcerzy i miejscowe szkody.",
+      "keyFacts": [
+        "Alert obejmuje noc 17/18 lipca i poranek 18 lipca.",
+        "RCB wprost ostrzega przed możliwymi przerwami w dostawie prądu.",
+        "TVN24 opisuje szkody po wichurze i działania strażaków."
+      ],
+      "reactions": [
+        "Lokalne służby i mieszkańcy muszą liczyć się z dalszymi interwencjami.",
+        "Następny slot pokaże, czy pojawią się kolejne raporty o awariach i blokadach dróg."
+      ],
+      "whyItMatters": "To bezpośredni sygnał bezpieczeństwa dla ruchu, infrastruktury i mieszkańców kilku regionów kraju.",
+      "context": "To już nie sama prognoza, tylko operacyjny alert z widocznymi skutkami w terenie.",
+      "watchNext": [
+        "Sprawdzić, czy RCB lub IMGW podniosą, utrzymają albo wycofają ostrzeżenia.",
+        "Sprawdzić, czy pojawią się raporty o przerwach w zasilaniu, utrudnieniach transportowych i dalszych szkodach."
+      ],
+      "sources": [
+        {
+          "title": "Gov.pl RCB alert - burze (17.07)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-1707"
+        },
+        {
+          "title": "IMGW mapy dynamiczne",
+          "url": "https://meteo.imgw.pl/dyn/"
+        },
+        {
+          "title": "TVN24 Meteo: Wichura przeszła przez obóz harcerski",
+          "url": "https://tvn24.pl/tvnmeteo/polska/burze-w-polsce-zalamanie-pogody-zerwana-czesc-dachu-polamane-drzewa-zalane-piwnice-ewakuacja-harcerzy-st9147394"
+        },
+        {
+          "title": "TVN24 Meteo: Alarmy IMGW w 14 województwach",
+          "url": "https://tvn24.pl/tvnmeteo/polska/burze-sobota-18-07-gdzie-sie-dzis-pojawia-ostrzezenia-imgw-przed-burzami-st9142923"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "IMGW",
+        "burze",
+        "wiatr"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-pis-lojalnosc-2026-07-18-0902",
+      "section": "Polityka",
+      "title": "Kaczyński zaostrza linię wobec własnego obozu",
+      "lead": "PiS znów pokazuje, że spór o lojalność nie jest zamknięty.",
+      "whatHappened": "TVN24 opisuje narastający konflikt w PiS, a Jarosław Kaczyński publicznie naciska na elementarną lojalność. To sygnał, że spór wewnętrzny wciąż się nie domknął.",
+      "keyFacts": [
+        "Materiał TVN24 pokazuje narastający konflikt.",
+        "Kaczyński stawia lojalność jako warunek utrzymania dyscypliny.",
+        "Na ten moment to spór polityczny, nie formalna decyzja personalna."
+      ],
+      "reactions": [
+        "W kolejnych godzinach można wypatrywać dyscyplinowania członków partii albo komentarza Morawieckiego i innych polityków.",
+        "Zewnętrznie konflikt nie zmienia rządu, ale wpływa na koordynację opozycji."
+      ],
+      "whyItMatters": "To sygnał o spójności największej partii opozycyjnej i o tym, czy spór przejdzie w decyzje kadrowe.",
+      "context": "Temat wraca falami od kilku dni, ale dzisiejsze wejście jest ostrzejsze i bardziej dyscyplinarne.",
+      "watchNext": [
+        "Sprawdzić, czy PiS wyda formalny komunikat, zawieszenie lub nową linię wobec członków zaangażowanych w spór.",
+        "Sprawdzić, czy pojawi się odpowiedź Morawieckiego, Tuska albo innych liderów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Polska: Kaczyński chce \"elementarnej lojalności\". A konflikt narasta",
+          "url": "https://tvn24.pl/polska/narastajacy-konflikt-w-pis-komentarze-politykow-st9147726"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Kaczyński",
+        "polityka",
+        "spór"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-cybermail-2026-07-18-0902",
+      "section": "Polska",
+      "title": "Wojsko zgłasza atak socjotechniczny",
+      "lead": "Służbowa skrzynka jednego z żołnierzy została zaatakowana.",
+      "whatHappened": "TVN24 opisuje incydent jako działanie socjotechniczne wymierzone w służbową skrzynkę żołnierza. W tej chwili najważniejszy jest sam fakt naruszenia, a nie pełen wektor ataku.",
+      "keyFacts": [
+        "Atak dotyczy służbowej skrzynki pocztowej.",
+        "TVN24 używa wprost określenia działanie socjotechniczne.",
+        "Na razie brak pełnej, publicznej technicznej analizy skutków."
+      ],
+      "reactions": [
+        "To podnosi ryzyko phishingu i credential theft w strukturach publicznych.",
+        "W następnym slocie warto sprawdzić, czy pojawi się komunikat MON lub wojsk cyberobrony."
+      ],
+      "whyItMatters": "Tego typu incydenty mogą prowadzić do wycieku danych, podszywania się i dalszych prób penetracji systemów.",
+      "context": "To dokładnie ten typ alertu, który zwykle zaczyna się od pojedynczej skrzynki, a kończy na procedurach bezpieczeństwa.",
+      "watchNext": [
+        "Sprawdzić, czy MON albo Wojska Obrony Cyberprzestrzeni publikują doprecyzowanie.",
+        "Sprawdzić, czy pojawią się dalsze ostrzeżenia dla pracowników państwowych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Polska: \"Działanie socjotechniczne\". Włamano się na skrzynkę służbową żołnierza",
+          "url": "https://tvn24.pl/polska/wojska-obrony-cyberprzestrzeni-sluzbowa-skrzynka-jednego-z-zolnierzy-zostala-zaatakowana-st9147710"
+        }
+      ],
+      "tags": [
+        "cyberbezpieczeństwo",
+        "wojsko",
+        "phishing"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "bezpieczenstwo-torun-ladunek-2026-07-18-0902",
+      "section": "Polska",
+      "title": "Kierowca z niebezpiecznym ładunkiem zatrzymany",
+      "lead": "W Toruniu policja zatrzymała kierowcę z podejrzanym transportem i wieloma dokumentami.",
+      "whatHappened": "TVN24 podaje, że kierowca uciekał i został zatrzymany po pościgu. W pojeździe był niebezpieczny ładunek oraz dokumenty wystawione na różne nazwiska.",
+      "keyFacts": [
+        "Sprawa dotyczyła pościgu i zatrzymania.",
+        "Ładunek opisano jako niebezpieczny.",
+        "Policja znalazła dokumenty na różne nazwiska."
+      ],
+      "reactions": [
+        "To może przejść w wątek prokuratorski lub celny, jeśli potwierdzi się charakter ładunku.",
+        "W krótkim terminie najważniejsze jest zabezpieczenie miejsca i wyjaśnienie pochodzenia transportu."
+      ],
+      "whyItMatters": "To łączy ryzyko drogowe, kryminalne i materiałowe, więc może szybko zyskać ciężar śledczy.",
+      "context": "To jeden z tych lokalnych epizodów, które potrafią stać się szerszą sprawą proceduralną.",
+      "watchNext": [
+        "Sprawdzić, czy policja poda rodzaj ładunku i podstawę zatrzymania.",
+        "Sprawdzić, czy prokuratura wszczyna dodatkowe czynności."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Kujawsko-Pomorskie: Niebezpieczny ładunek, dokumenty na różne nazwiska. Kierowca zatrzymany",
+          "url": "https://tvn24.pl/kujawsko-pomorskie/torun-kujawsko-pomorskie-poscig-za-ciezarowka-z-toksynami-kierowca-uciekl-do-lasu-zostal-zatrzymany-st9147321"
+        }
+      ],
+      "tags": [
+        "policja",
+        "Toruń",
+        "transport",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-zloty-2026-07-18-0902",
+      "section": "Gospodarka",
+      "title": "Złoty wykonuje ruch niewidziany od 2024",
+      "lead": "TVN24 Biznes zwraca uwagę na nietypowe zachowanie złotego.",
+      "whatHappened": "Materiał sugeruje, że kurs złotego wszedł w poziom albo układ niewidziany od 2024 roku. To nie jest jeszcze systemowy wstrząs, ale wyraźny sygnał obserwacyjny dla rynku i firm rozliczających import.",
+      "keyFacts": [
+        "TVN24 Biznes mówi o ruchu niewidzianym od 2024 roku.",
+        "Temat dotyczy kursu walutowego, więc wpływa na import, eksport i ceny.",
+        "Sam materiał nie oznacza jeszcze trwałego trendu, ale wskazuje na świeżą zmianę."
+      ],
+      "reactions": [
+        "Importerzy i eksporterzy mogą korygować zabezpieczenia kursowe.",
+        "Następny slot powinien sprawdzić, czy ruch się utrwala."
+      ],
+      "whyItMatters": "Kurs walutowy szybko przekłada się na marże, ceny towarów i nastroje rynku.",
+      "context": "To raczej sygnał rynkowy niż nagłówkowy kryzys, ale w Pulsie Dnia ma znaczenie.",
+      "watchNext": [
+        "Sprawdzić, czy pojawiają się komentarze NBP, banków lub analityków.",
+        "Sprawdzić, czy ruch złotego ma ciąg dalszy w kolejnych notowaniach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Co się dzieje ze złotym? Tego nie było od 2024 roku",
+          "url": "https://tvn24.pl/biznes/z-kraju/co-sie-dzieje-ze-zlotym-tego-nie-bylo-od-2024-roku-st9147311"
+        }
+      ],
+      "tags": [
+        "złoty",
+        "FX",
+        "rynek",
+        "gospodarka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-paliwa-2026-07-18-0902",
+      "section": "Gospodarka",
+      "title": "Stacje paliw czekają większe zmiany",
+      "lead": "TVN24 Biznes sygnalizuje ruch cenowy na paliwach.",
+      "whatHappened": "Artykuł wskazuje na zmiany rzędu ponad 50 groszy na litrze, co oznacza realne przestawienie kierunku na stacjach. To ważny sygnał dla kierowców i logistyki.",
+      "keyFacts": [
+        "Skala zmian ma być odczuwalna dla klienta detalicznego.",
+        "Taki ruch szybko wpływa na koszty transportu i inflacyjne oczekiwania.",
+        "Na razie to jeszcze sygnał z rynku, nie oficjalna decyzja regulacyjna."
+      ],
+      "reactions": [
+        "Kierowcy i firmy transportowe mogą wcześniej tankować lub przeliczać koszty.",
+        "W następnych slotach warto sprawdzać, czy to lokalny skok czy szersza zmiana trendu."
+      ],
+      "whyItMatters": "Paliwa są jednym z najszybszych kanałów przenoszenia napięć rynkowych do codziennych wydatków.",
+      "context": "To dobry wskaźnik nastroju gospodarczego nawet wtedy, gdy nie ma jeszcze pełnego raportu makro.",
+      "watchNext": [
+        "Sprawdzić, czy stacje i analitycy potwierdzają skalę korekty.",
+        "Sprawdzić, czy pojawi się powiązanie z kursem ropy lub marżami rafineryjnymi."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Ponad 50 groszy na litrze. To będą spore zmiany na stacjach",
+          "url": "https://tvn24.pl/biznes/moto/ponad-50-groszy-na-litrze-to-beda-spore-zmiany-na-stacjach-st9147228"
+        }
+      ],
+      "tags": [
+        "paliwa",
+        "transport",
+        "inflacja",
+        "stacje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-google-wydawcy-2026-07-18-0902",
+      "section": "Technologia",
+      "title": "Google może zapłacić wydawcom pół miliarda",
+      "lead": "Spór o treści i wynagrodzenie wchodzi w decyzję urzędu.",
+      "whatHappened": "TVN24 Biznes opisuje sprawę, w której Google może zapłacić wydawcom około pół miliarda, ale ostateczny kierunek zależy od państwowego urzędu. To kolejny sygnał, że regulacja platform pozostaje żywa.",
+      "keyFacts": [
+        "Stawką jest znacząca kwota i model rozliczeń z wydawcami.",
+        "Decyzja ma charakter regulacyjno-antymonopolowy.",
+        "Sprawa dotyczy ekosystemu treści, nie jednego produktu."
+      ],
+      "reactions": [
+        "Wydawcy zyskują argument, platforma ryzykuje koszt i precedens.",
+        "W kolejnych godzinach warto sprawdzić, czy urząd lub strony sporu zabierają głos."
+      ],
+      "whyItMatters": "To może wpłynąć na model finansowania mediów i koszty działania dużych platform.",
+      "context": "W tle trwa szerszy spór o to, kto płaci za treści w wyszukiwarkach i agregatorach.",
+      "watchNext": [
+        "Sprawdzić, czy urząd publikuje decyzję lub harmonogram postępowania.",
+        "Sprawdzić reakcję wydawców i Google."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Google zapłaci pół miliarda wydawcom? Państwowy urząd zdecyduje",
+          "url": "https://tvn24.pl/biznes/tech/google-zaplaci-pol-miliarda-wydawcom-panstwowy-urzad-zdecyduje-st9147279"
+        }
+      ],
+      "tags": [
+        "Google",
+        "media",
+        "regulacja",
+        "tech"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-sony-plyty-2026-07-18-0902",
+      "section": "Technologia",
+      "title": "Sony wycofuje płyty, rynek przechodzi dalej",
+      "lead": "Kolejny symbol fizycznych nośników znika z obiegu.",
+      "whatHappened": "TVN24 Biznes opisuje wycofanie płyt przez dużego producenta i traktuje to jako koniec pewnej ery. To nie jest drobna zmiana logistyczna, tylko dalszy odwrót od fizycznej dystrybucji treści.",
+      "keyFacts": [
+        "Temat dotyczy sprzętu i dystrybucji treści.",
+        "Producent wycofuje płyty z oferty lub produkcji.",
+        "To wzmacnia trend przejścia do cyfrowej konsumpcji."
+      ],
+      "reactions": [
+        "Dla części odbiorców to zamknięcie starego modelu, dla rynku po prostu dalsza digitalizacja.",
+        "Warto sprawdzić, czy są skutki dla cen, dostępności lub rynku wtórnego."
+      ],
+      "whyItMatters": "Zmiana pokazuje, jak szybko znika fizyczny format, nawet w dużych markach.",
+      "context": "To bardziej trend konsumencki niż jednorazowy news, ale ma znaczenie dla kategorii tech.",
+      "watchNext": [
+        "Sprawdzić, czy producent podaje terminy i skalę wycofania.",
+        "Sprawdzić, czy pojawia się reakcja dystrybutorów lub sklepów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Gigant wycofuje płyty. \"Koniec pewnej ery\"",
+          "url": "https://tvn24.pl/biznes/tech/sony-playstation-gry-bez-pudelek-tysiace-oburzonych-klientow-symboliczny-koniec-ery-st9143962"
+        }
+      ],
+      "tags": [
+        "Sony",
+        "PlayStation",
+        "media",
+        "technologia"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "swiat-iran-strikes-2026-07-18-0902",
+      "section": "Świat",
+      "title": "USA uderzają w Iran siódmą noc z rzędu",
+      "lead": "Konflikt wokół Iranu i Ormuzu wciąż nie zwalnia.",
+      "whatHappened": "BBC podaje, że amerykańskie ataki na Iran trwają już siódmą kolejną noc. CENTCOM w publicznych komunikatach potwierdza kolejne uderzenia z 16 lipca i wcześniejsze fale strikes.",
+      "keyFacts": [
+        "BBC mówi wprost o siódmej nocy uderzeń.",
+        "CENTCOM ma publiczne komunikaty o kolejnych falach ataków.",
+        "BBC łączy to z eksplozjami w rejonie cieśniny Ormuz."
+      ],
+      "reactions": [
+        "Rynek energii i żegluga dalej reagują na ryzyko eskalacji.",
+        "Każdy kolejny dzień zwiększa znaczenie tematów morskich i cen paliw."
+      ],
+      "whyItMatters": "To jeden z głównych światowych motorów ryzyka dla energii, transportu i polityki bezpieczeństwa.",
+      "context": "W poprzednim slocie temat też był aktywny, ale dziś ma wyraźnie świeższą, nocną kontynuację.",
+      "watchNext": [
+        "Sprawdzić, czy CENTCOM publikuje nowy komunikat lub zmianę celu operacji.",
+        "Sprawdzić, czy pojawi się reakcja Iranu, państw Zatoki lub rynków ropy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US strikes hit Iran for seventh consecutive night",
+          "url": "https://www.bbc.co.uk/news/articles/cy748n8zx8ro?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "U.S. Central Command Media",
+          "url": "https://www.centcom.mil/MEDIA/"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Ormuz",
+        "USA",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-meksyk-trzesienie-2026-07-18-0902",
+      "section": "Świat",
+      "title": "Silne trzęsienie u wybrzeży Meksyku",
+      "lead": "USGS potwierdza magnitudę 7,3 przy Puerto Madero.",
+      "whatHappened": "BBC opisuje trzęsienie z 17 lipca, a USGS pokazuje je jako zdarzenie 7,3 w odległości 58 km na południowy zachód od Puerto Madero. To ważny punkt kontrolny dla regionu i alertów tsunami.",
+      "keyFacts": [
+        "Magnituda 7,3.",
+        "Epicentrum 58 km WSW od Puerto Madero.",
+        "USGS klasyfikuje zdarzenie z poziomem pager yellow i bardzo silnym odczuciem drgań."
+      ],
+      "reactions": [
+        "W grze pozostają możliwe ostrzeżenia lokalne, szkody i kontrola infrastruktury.",
+        "Na teraz ważniejsze są oceny skutków niż sam wstrząs."
+      ],
+      "whyItMatters": "Takie zdarzenie może uruchamiać krótkoterminowe alerty tsunami i lokalne zakłócenia transportu.",
+      "context": "To nie jest już tylko nagłówek BBC, lecz zdarzenie z twardym potwierdzeniem USGS.",
+      "watchNext": [
+        "Sprawdzić, czy meksykańskie służby i USGS publikują dane o stratach lub falach.",
+        "Sprawdzić, czy pojawiają się ostrzeżenia dla wybrzeża Pacyfiku."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Magnitude 7.3 earthquake quake strikes off Mexico coast",
+          "url": "https://www.bbc.co.uk/news/articles/cwyjv3815yxo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "USGS Earthquake Hazards Program",
+          "url": "https://www.usgs.gov/programs/earthquake-hazards"
+        }
+      ],
+      "tags": [
+        "Mexico",
+        "USGS",
+        "trzęsienie ziemi",
+        "alert"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-yemen-piracy-2026-07-18-0902",
+      "section": "Świat",
+      "title": "Piraci znów uderzają u wybrzeży Jemenu",
+      "lead": "Kolejny tanker został przejęty w newralgicznym szlaku morskim.",
+      "whatHappened": "BBC podaje, że drugi tanker w ciągu trzech miesięcy padł ofiarą porwania u wybrzeży Jemenu przez podejrzanych o piractwo Somalijczyków. To kolejny sygnał pogorszenia bezpieczeństwa żeglugi w regionie.",
+      "keyFacts": [
+        "Incydent dotyczy tankowca i szlaku przy Zatoce Adeńskiej.",
+        "BBC opisuje sprawców jako suspected Somali pirates.",
+        "To kolejny podobny incydent w relatywnie krótkim czasie."
+      ],
+      "reactions": [
+        "Armatorzy i ubezpieczyciele mogą podnosić ocenę ryzyka.",
+        "Następny slot powinien sprawdzić oficjalny komunikat morski albo dalsze losy jednostki."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na bezpieczeństwo handlu morskiego i ceny frachtu.",
+      "context": "W połączeniu z Iranem i Ormuzem wzmacnia to presję na cały region transportu energii.",
+      "watchNext": [
+        "Sprawdzić, czy UKMTO lub inne władze morskie publikują oficjalny komunikat.",
+        "Sprawdzić, czy pojawia się informacja o załodze i trasie jednostki."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Second tanker in three months hijacked off Yemen by suspected Somali pirates",
+          "url": "https://www.bbc.co.uk/news/articles/c7vg6dml34vo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "AP: Tanker boarded by armed group off Yemen, says British military",
+          "url": "https://apnews.com/article/2d055cb4b17184e4d3637d96a2ce7256"
+        },
+        {
+          "title": "UKMTO recent incidents",
+          "url": "https://www.ukmto.org/recent-incidents"
+        }
+      ],
+      "tags": [
+        "piractwo",
+        "Jemen",
+        "żegluga",
+        "Ormuz"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-kanada-cła-pożary-2026-07-18-0902",
+      "section": "Świat",
+      "title": "Kanada w ogniu, Trump grozi cłami",
+      "lead": "Dym z pożarów znów wchodzi w politykę handlową USA.",
+      "whatHappened": "BBC pisze, że Donald Trump zagroził nowymi cłami na Kanadę z powodu pożarów, które niosą brudne powietrze do amerykańskich miast. To miesza klimat, zdrowie publiczne i handel w jednym ruchu.",
+      "keyFacts": [
+        "Spór dotyczy pożarów i dymu przekraczającego granicę.",
+        "Trump używa argumentu o jakości powietrza i odpowiedzialności politycznej.",
+        "To sygnał, że klimat wraca jako temat handlowy."
+      ],
+      "reactions": [
+        "Ottawa może odpowiedzieć politycznie lub technicznie.",
+        "Dla rynków to raczej sygnał retoryczny niż natychmiastowy ruch taryfowy, ale warto go śledzić."
+      ],
+      "whyItMatters": "To łączy klimat, zdrowie i handel w jednym amerykańsko-kanadyjskim sporze.",
+      "context": "To nowy światowy temat z BBC, odrębny od irańskiego bloku i ważny dla północnoamerykańskich łańcuchów dostaw.",
+      "watchNext": [
+        "Sprawdzić reakcję Kanady i Białego Domu.",
+        "Sprawdzić, czy pojawia się jakiś formalny ruch taryfowy albo tylko polityczna zapowiedź."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Trump threatens new Canada tariffs over fires sending 'filthy' air into US cities",
+          "url": "https://www.bbc.co.uk/news/articles/cwyq93j34lgo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Kanada",
+        "cła",
+        "pożary",
+        "klimat"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
