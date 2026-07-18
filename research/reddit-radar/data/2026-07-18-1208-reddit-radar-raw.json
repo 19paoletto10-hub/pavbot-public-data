@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-18-1208",
+  "status": "material_update",
+  "generatedAt": "2026-07-18T10:15:18Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-18T12:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Live 12:08 review completed through read-only Safari Computer Use on old.reddit.com in the local Safari session.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-18-0608 and 2026-07-17-1809. Both runs contributed four-URL blocklists, so the filter excluded eight URLs total before shortlist review.",
+      "Before selecting replacements, the run verified that the currently published public bundle on origin/main is still 2026-06-28-0028, so the remote topic is significantly behind the newer local saved runs.",
+      "Shortlist post and top-comment review stayed read-only on the exact Reddit post pages matching the titles surfaced by the live Safari listing sweep.",
+      "The cleanest fresh survivors were Gmail when you log in into another device, thisOneIsMine, programmingRizz, and unstoppableSlopMeetsImmovableCodeReview.",
+      "removedFromTheMeeting turned into product-grievance ranting, whenYouNeedASeniorDeveloperButYouRealiseYouAreOne felt weaker than the final four, awsAlarmsAreStrongerThanCoffee repeated the earlier cloud-bill panic lane, and Finally a good reason drifted into smoke and political discourse.",
+      "At least four safe fresh cards survived the live review, so the reddit-radar contract prefers a new public bundle over keeping the older remote 2026-06-28-0028 state or copying the unpublished 2026-07-18-0608 local bundle forward.",
+      "No Reddit social actions were performed.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-06-28-0028",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-18-1208-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-18-1208-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-18-1208-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://www.reddit.com/r/memes/comments/1uz6ka3/no_one_should_have_fun/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uyymqs/luke/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uzhh1c/itsabsolutelyclean/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uz12o3/aaaaagodhelpme/",
+    "https://www.reddit.com/r/memes/comments/1uz14q5/when_the_interviewer_asks_about_your_5year_plan/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uz2sn5/belikejohn/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uz401n/areweseeingapatternhere/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uyuv9p/geeksbad/"
+  ],
+  "newCandidates": [
+    {
+      "subreddit": "r/memes",
+      "title": "Gmail when you log in into another device",
+      "url": "https://www.reddit.com/r/memes/comments/1uzijb1/gmail_when_you_log_in_into_another_device/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_broad_login_panic_joke_with_safe_comment_payoff"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "thisOneIsMine",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyx4kp/thisoneismine/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_uuid_collision_gag_with_strong_comment_escalation"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "programmingRizz",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyrfnc/programmingrizz/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_light_c_flirt_wordplay_with_consistent_comment_layer"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "unstoppableSlopMeetsImmovableCodeReview",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyvhk7/unstoppableslopmeetsimmovablecodereview/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_ai_review_roast_with_clean_public_safe_escalation"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "removedFromTheMeeting",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uzlokz/removedfromthemeeting/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_turns_into_teams_and_outlook_grievance_ranting"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "whenYouNeedASeniorDeveloperButYouRealiseYouAreOne",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyr7ch/whenyouneedaseniordeveloperbutyourealiseyouareone/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_it_is_more_relatable_than_sharp_against_a_stronger_final_four"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "awsAlarmsAreStrongerThanCoffee",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyx5dn/awsalarmsarestrongerthancoffee/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_it_repeats_the_cloud_bill_panic_lane_from_the_0608_slot"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Finally a good reason",
+      "url": "https://www.reddit.com/r/memes/comments/1uzk3aj/finally_a_good_reason/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_drifts_into_smoke_discourse_climate_and_politics"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "no one should have fun",
+      "url": "https://www.reddit.com/r/memes/comments/1uz6ka3/no_one_should_have_fun/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_18_0608"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "luke",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyymqs/luke/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_18_0608"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "itsAbsolutelyClean",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uzhh1c/itsabsolutelyclean/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_18_0608"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "aaaaaGodHelpMe",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uz12o3/aaaaagodhelpme/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_18_0608"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "When the interviewer asks about your 5-year plan",
+      "url": "https://www.reddit.com/r/memes/comments/1uz14q5/when_the_interviewer_asks_about_your_5year_plan/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_17_1809"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "beLikeJohn",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uz2sn5/belikejohn/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_17_1809"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "areWeSeeingAPatternHere",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uz401n/areweseeingapatternhere/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_17_1809"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "geeksBad",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyuv9p/geeksbad/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_17_1809"
+    }
+  ]
+}
