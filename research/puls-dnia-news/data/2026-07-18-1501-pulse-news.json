@@ -1,0 +1,525 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-18",
+  "runTime": "15:01",
+  "status": "Material update",
+  "headline": "PiS, alerty i Iran nadal nadają ton",
+  "summary": "Po południu krajowy feed przesuwa się z samego alertu w formalne konsekwencje polityczne i bezpieczeństwa: PiS daje członkom stowarzyszeń tydzień, Morawiecki i Tusk odpowiadają, a TVN24 doprecyzowuje dwa świeże incydenty drogowo-paliwowe. Świat nadal kręci się wokół Iranu, ale BBC/CNN dokładują Ukrainę, Kanadę, Indie, Meksyk i żeglugę koło Jemenu.",
+  "checkedSources": [
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "Gov.pl RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "Gov.pl Alert RCB - burze z gradem i silny wiatr (18.07)",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb--burze-z-gradem-i-silny-wiatr-1807"
+    },
+    {
+      "title": "IMGW mapy dynamiczne",
+      "url": "https://meteo.imgw.pl/dyn/"
+    },
+    {
+      "title": "U.S. Central Command Media",
+      "url": "https://www.centcom.mil/MEDIA/"
+    },
+    {
+      "title": "USGS Earthquake Hazards Program",
+      "url": "https://www.usgs.gov/programs/earthquake-hazards"
+    },
+    {
+      "title": "UKMTO recent incidents",
+      "url": "https://www.ukmto.org/recent-incidents"
+    },
+    {
+      "title": "UKMTO",
+      "url": "https://www.ukmto.org/"
+    }
+  ],
+  "items": [
+    {
+      "id": "polityka-pis-ultimatum-2026-07-18-1501",
+      "section": "Polityka",
+      "title": "PiS daje członkom stowarzyszeń siedem dni",
+      "lead": "Ugrupowanie przechodzi z ostrzeżenia do formalnego ultimatum.",
+      "whatHappened": "TVN24 podało, że członkowie PiS mają siedem dni na wycofanie się z działalności w stowarzyszeniach takich jak Rozwój Plus. To już konkretna uchwała, a nie tylko medialny spór.",
+      "keyFacts": [
+        "Dotyczy członkostwa w stowarzyszeniach powiązanych z partią.",
+        "Termin na decyzję wynosi siedem dni.",
+        "Temat wszedł w oficjalny tryb partyjny."
+      ],
+      "reactions": [
+        "Po stronie komentujących pojawił się też Donald Tusk.",
+        "Sprawa może doprowadzić do dalszych napięć wewnątrz PiS."
+      ],
+      "whyItMatters": "To sygnał, że spór o lojalność w PiS przekracza poziom medialny.",
+      "context": "W poprzednim slocie wątek był opisywany jako list do Kaczyńskiego; dziś jest twardsza decyzja organizacyjna.",
+      "watchNext": [
+        "Sprawdzić, kto faktycznie wycofa się ze stowarzyszeń.",
+        "Sprawdzić, czy PiS poda kolejne kroki dyscyplinarne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Polska: Ultimatum dla członków PiS. Mają tydzień na wycofanie się z działalności w stowarzyszeniach",
+          "url": "https://tvn24.pl/polska/ultimatum-dla-czlonkow-pis-maja-tydzien-na-wycofanie-sie-z-dzialalnosci-w-stowarzyszeniach-st9144255"
+        },
+        {
+          "title": "TVN24 Polska: Mateusz Morawiecki reaguje na uchwałę PiS w sprawie stowarzyszeń",
+          "url": "https://tvn24.pl/polska/mateusz-morawiecki-reaguje-na-uchwale-pis-w-sprawie-stowarzyszen-st9144432"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Kaczyński",
+        "Morawiecki",
+        "Tusk"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-morawiecki-uchwala-2026-07-18-1501",
+      "section": "Polityka",
+      "title": "Morawiecki odpowiada na uchwałę PiS",
+      "lead": "Były premier broni stowarzyszeń i nie wygasza sporu.",
+      "whatHappened": "TVN24 pokazało reakcję Mateusza Morawieckiego na uchwałę PiS w sprawie stowarzyszeń. Wypowiedź pokazuje, że konflikt w partii nie wygasa po decyzji prezesa.",
+      "keyFacts": [
+        "Reakcja padła po publikacji uchwały.",
+        "W tle pozostaje spór o Rozwój Plus.",
+        "Temat żyje zarówno w mediach, jak i na poziomie partyjnym."
+      ],
+      "reactions": [
+        "Przemysław Czarnek i inni politycy też komentują sprawę.",
+        "Sprawa może się przełożyć na osobiste decyzje działaczy."
+      ],
+      "whyItMatters": "To pokazuje, że rozłamowy potencjał pozostaje realny.",
+      "context": "Ten sam konflikt zyskał dziś nową warstwę reakcji i komentarzy.",
+      "watchNext": [
+        "Sprawdzić, czy Morawiecki odpowie własnym wpisem lub konferencją.",
+        "Sprawdzić, czy pojawi się formalna odpowiedź władz PiS."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Polska: Mateusz Morawiecki reaguje na uchwałę PiS w sprawie stowarzyszeń",
+          "url": "https://tvn24.pl/polska/mateusz-morawiecki-reaguje-na-uchwale-pis-w-sprawie-stowarzyszen-st9144432"
+        }
+      ],
+      "tags": [
+        "Morawiecki",
+        "PiS",
+        "stowarzyszenia",
+        "konflikt"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-wolyn-ekshumacja-2026-07-18-1501",
+      "section": "Polityka",
+      "title": "Na Wołyniu odnaleziono szczątki jednej osoby",
+      "lead": "Ekshumacje na Wołyniu przynoszą kolejne materialne potwierdzenie prac.",
+      "whatHappened": "TVN24 podało, że podczas prac ekshumacyjnych na terenie dawnej wsi Ostrówki odnaleziono szczątki jednej osoby. To kolejny konkretny wynik długo prowadzonego procesu.",
+      "keyFacts": [
+        "Znalezisko pochodzi z prac IPN.",
+        "Dotyczy terenu dawnego Ostrówek.",
+        "To wrażliwy temat polsko-ukraiński."
+      ],
+      "reactions": [
+        "Temat może szybko wejść do debaty publicznej i dyplomatycznej.",
+        "W tle są oczekiwania na kolejne etapy prac."
+      ],
+      "whyItMatters": "Każde potwierdzone znalezisko wzmacnia znaczenie polityczne i pamięciowe sporu.",
+      "context": "W poprzednich slotach Wołyń był głównie zapowiedzią; teraz mamy namacalne potwierdzenie prac.",
+      "watchNext": [
+        "Sprawdzić, czy IPN poda szczegóły identyfikacyjne i harmonogram dalszych prac.",
+        "Sprawdzić reakcję strony ukraińskiej."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Polska: Prace ekshumacyjne na Wołyniu. W Ostrówkach odnaleziono szczątki jednej osoby",
+          "url": "https://tvn24.pl/polska/prace-ekshumacyjne-na-wolyniu-ipn-odnaleziono-szczatki-jednej-osoby-w-ostrowkach-st9144510"
+        }
+      ],
+      "tags": [
+        "Wołyń",
+        "IPN",
+        "Ukraina",
+        "pamięć historyczna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-swarzedz-stacja-paliw-2026-07-18-1501",
+      "section": "Bezpieczeństwo",
+      "title": "Swarzędz: policja zamknęła stację i drogę",
+      "lead": "Po akcji na stacji paliw służby wyjaśniają, co było w aucie.",
+      "whatHappened": "TVN24 opisuje zakończenie akcji na stacji paliw w Swarzędzu. Policja otworzyła drogę i przywróciła ruch, po czym doprecyzowała, że w samochodzie zabezpieczono nietypowe urządzenie elektryczne.",
+      "keyFacts": [
+        "Zamknięto stację, fragment drogi i odcinek kolejowy.",
+        "Mieszkańców ewakuowano z okolicznych budynków.",
+        "Służby zabezpieczyły element, który nie był standardową częścią pojazdu."
+      ],
+      "reactions": [
+        "To raczej sprawa wyjaśniania niż długiej blokady.",
+        "Policja i lokalne służby mogą jeszcze opublikować pełniejszy opis."
+      ],
+      "whyItMatters": "To świeży operacyjny incydent z wpływem na ruch drogowy i kolejowy.",
+      "context": "To nowy lokalny wątek, którego nie było w poprzednim slocie.",
+      "watchNext": [
+        "Sprawdzić, czy policja ujawni przyczynę interwencji.",
+        "Sprawdzić, czy pojawią się informacje o ładunku lub zagrożeniu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Sytuacja na stacji paliw \"opanowana\". Policja o tym, co było w aucie",
+          "url": "https://tvn24.pl/poznan/swarzedz-koniec-akcji-na-stacji-paliw-policja-otwiera-droge-ruszyly-pociagi-st9144289"
+        }
+      ],
+      "tags": [
+        "Swarzędz",
+        "policja",
+        "droga",
+        "kolej"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-warszawa-autobus-2026-07-18-1501",
+      "section": "Bezpieczeństwo",
+      "title": "Warszawski autobus ma nowe fakty",
+      "lead": "TVN24 doprecyzowuje skalę wypadku i możliwą awarię.",
+      "whatHappened": "Nowe materiały TVN24 o wypadku autobusu w Warszawie pokazują już szczegóły liczby poszkodowanych, odholowania pojazdu i możliwej awarii hamulców. Sprawa przeszła z nagrania do konkretnego opisu przyczyn i skutków.",
+      "keyFacts": [
+        "Poszkodowanych było kilka osób, część trafiła do szpitala.",
+        "Autobus wyciągnięto z przejścia podziemnego.",
+        "Kierowca mówi o problemie z hamowaniem."
+      ],
+      "reactions": [
+        "Zarządca transportu i służby muszą domknąć wyjaśnienie przyczyn.",
+        "Sprawa pozostaje istotna dla bezpieczeństwa miejskiego."
+      ],
+      "whyItMatters": "To nie tylko incydent, ale potencjalny problem techniczny i nadzór nad przewozami.",
+      "context": "W poprzednich godzinach ten wątek był już obecny, ale dziś ma więcej twardych szczegółów.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się raport techniczny lub decyzja przewoźnika.",
+        "Sprawdzić, czy policja poda ostateczną kwalifikację zdarzenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wypadek autobusu w Warszawie, odtajnienie donacji dla Ukrainy, Brazylia odpada z mundialu",
+          "url": "https://tvn24.pl/polska/wypadek-autobusu-w-warszawie-odtajnienie-donacji-dla-ukrainy-brazylia-odpada-z-mundialu-st9129591"
+        },
+        {
+          "title": "TVN24: Autobus wyciągnięty z przejścia podziemnego w Warszawie. Są ranni",
+          "url": "https://tvn24.pl/tvnwarszawa/ochota/warszawa-autobus-wjechal-w-przejscie-podziemne-w-okolicach-dworca-zachodniego-sa-ranni-st9129454"
+        },
+        {
+          "title": "TVN24: Staranował sygnalizator, uderzył w tramwaj. Jest nagranie",
+          "url": "https://tvn24.pl/tvnwarszawa/ochota/wypadek-autobusu-w-warszawie-staranowal-sygnalizator-uderzyl-w-tramwaj-jest-nagranie-st9129855"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "autobus",
+        "transport",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-burze-grad-wiatr-2026-07-18-1501",
+      "section": "Alerty",
+      "title": "RCB utrzymuje alert na burze z gradem",
+      "lead": "W ciągu dnia nadal grożą wiatr, grad i przerwy w zasilaniu.",
+      "whatHappened": "RCB wydało dziś alert na burze z gradem i silny wiatr, a TVN24 Meteo nadal pokazuje aktywny blok ostrzeżeń. Oficjalny komunikat mówi też o możliwych przerwach w dostawie prądu.",
+      "keyFacts": [
+        "Alert obowiązuje 18 lipca.",
+        "Wskazane ryzyka to grad, wiatr i przerwy w zasilaniu.",
+        "IMGW nadal pokazuje aktywną sytuację pogodową."
+      ],
+      "reactions": [
+        "To bezpośrednie ryzyko dla transportu i infrastruktury.",
+        "W praktyce trzeba obserwować nowe szkody lokalne."
+      ],
+      "whyItMatters": "To nadal najważniejszy krajowy czynnik operacyjny dnia.",
+      "context": "W porannym slocie alert już był obecny; teraz mamy precyzyjny komunikat na 18.07 i dalszą aktywność frontu.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się awarie prądu lub blokady dróg.",
+        "Sprawdzić, czy IMGW obniży albo rozszerzy alerty."
+      ],
+      "sources": [
+        {
+          "title": "Gov.pl: Alert RCB - burze z gradem i silny wiatr (18.07)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb--burze-z-gradem-i-silny-wiatr-1807"
+        },
+        {
+          "title": "Gov.pl: Komunikaty RCB",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        },
+        {
+          "title": "TVN24 Meteo",
+          "url": "https://tvn24.pl/tvnmeteo"
+        },
+        {
+          "title": "IMGW mapy dynamiczne",
+          "url": "https://meteo.imgw.pl/dyn/"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "IMGW",
+        "burze",
+        "alert"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-iran-eskalacja-2026-07-18-1501",
+      "section": "Świat",
+      "title": "Iran: siódma noc amerykańskich ataków",
+      "lead": "CNN i BBC mówią o dalszej eskalacji, a CENTCOM potwierdza nowe uderzenia.",
+      "whatHappened": "BBC podaje, że USA uderzyły w Iran siódmą noc z rzędu. CNN pisze o nowych atakach na instalacje odsalania wody, a CENTCOM publikuje kolejne komunikaty o uderzeniach w irańskie cele wojskowe.",
+      "keyFacts": [
+        "Konflikt nadal nie wygasa.",
+        "CNN opisuje eskalację także na poziomie infrastruktury cywilnej.",
+        "Oficjalne komunikaty CENTCOM potwierdzają aktywne działania USA."
+      ],
+      "reactions": [
+        "Rynek energii i żegluga pozostają wrażliwe.",
+        "Iranowskie hardlinery ostrzegają przed przewrotem."
+      ],
+      "whyItMatters": "To nadal największe ryzyko geopolityczne w światowym feedzie.",
+      "context": "W poprzednim slocie Iran już dominował; teraz wchodzi nowy opis eskalacji i uderzeń na infrastrukturę.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się kolejne oficjalne komunikaty CENTCOM albo wzmianki o ropie.",
+        "Sprawdzić, czy BBC/CNN zaczną mówić o przerwach w żegludze lub energii."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US strikes hit Iran for seventh consecutive night",
+          "url": "https://www.bbc.co.uk/news/articles/cy748n8zx8ro?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Live updates: US-Iran conflict escalates further with strikes on desalination plants",
+          "url": "https://www.cnn.com/2026/07/18/world/live-news/iran-war-trump"
+        },
+        {
+          "title": "U.S. Central Command: Public Releases",
+          "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "CENTCOM",
+        "Hormuz"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-ukraina-magazyny-2026-07-18-1501",
+      "section": "Świat",
+      "title": "Ukraina uderza w rosyjskie magazyny",
+      "lead": "BBC i CNN opisują nowe straty po ukraińskich atakach w głąb Rosji.",
+      "whatHappened": "BBC pisze o uderzeniach w rosyjskie magazyny logistyczne, a CNN o ośmiu zabitych w najkrwawszych ukraińskich atakach w Rosji od dwóch lat. W tym samym bloku CNN pokazuje też napięcie wokół dymisji ukraińskiego ministra obrony.",
+      "keyFacts": [
+        "Ataki dotykają zaplecza logistycznego.",
+        "CNN podaje liczbę ośmiu ofiar.",
+        "W Ukrainie trwa polityczny spór o ministra obrony."
+      ],
+      "reactions": [
+        "To podbija napięcie zarówno wojenne, jak i polityczne.",
+        "BBC podaje także głosy ukraińskich żołnierzy oburzonych zmianami kadrowymi."
+      ],
+      "whyItMatters": "To pokazuje, że wojna nadal eskaluje także poza linią frontu.",
+      "context": "W poprzednich slotach wojna była obecna, ale dziś mocniej widać uderzenia w rosyjskie zaplecze.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się oficjalny bilans strat po obu stronach.",
+        "Sprawdzić, czy polityczny spór w Kijowie zmieni się w formalną decyzję."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Russian online retail warehouses hit by deadly Ukrainian strikes",
+          "url": "https://www.bbc.co.uk/news/articles/clyxlm877p2o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Warehouse workers among 8 dead in deadliest Ukrainian attacks inside Russia for two years",
+          "url": "https://www.cnn.com/2026/07/18/europe/eight-killed-in-ukrainian-drone-attacks-on-russian-warehouses"
+        },
+        {
+          "title": "CNN: Zelensky faces protests over ousting of Ukraine’s defense minister despite military gains",
+          "url": "https://www.cnn.com/2026/07/16/europe/russia-ukraine-attack-keir-starmer-visit-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "wojna",
+        "CNN"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-kanada-pozary-2026-07-18-1501",
+      "section": "Świat",
+      "title": "Kanada i pożary wracają do nagłówków",
+      "lead": "BBC łączy dym z pożarów z groźbą nowych taryf Trumpa.",
+      "whatHappened": "BBC pisze, że Trump grozi nowymi taryfami wobec Kanady w związku z pożarami, których dym dociera do amerykańskich miast. To miesza klimat, handel i politykę w jednym wątku.",
+      "keyFacts": [
+        "Wątek dotyczy pożarów i jakości powietrza.",
+        "Trump grozi reakcją taryfową.",
+        "Sprawa ma wymiar transgraniczny."
+      ],
+      "reactions": [
+        "Może to uruchomić odpowiedź Ottawy.",
+        "Temat ma potencjał do dalszego sporu handlowego."
+      ],
+      "whyItMatters": "To nie jest tylko pogoda, ale możliwy konflikt handlowy i zdrowotny.",
+      "context": "Ten temat nie dominował poprzedniego slota tak mocno, więc stanowi nowy world-side update.",
+      "watchNext": [
+        "Sprawdzić, czy Kanada odpowie oficjalnie.",
+        "Sprawdzić, czy pojawią się ostrzeżenia o jakości powietrza lub ewakuacjach."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Trump threatens new Canada tariffs over fires sending 'filthy' air into US cities",
+          "url": "https://www.bbc.co.uk/news/articles/cwyq93j34lgo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Kanada",
+        "pożary",
+        "handel",
+        "Trump"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-indie-rakieta-2026-07-18-1501",
+      "section": "Technologia",
+      "title": "Indie wystrzeliły pierwszy komercyjny start rakiety",
+      "lead": "BBC podaje, że prywatny sektor kosmiczny w Indiach wchodzi na orbitę.",
+      "whatHappened": "BBC opisuje start startupu, który wyniósł pierwszy komercyjny rakietowy ładunek z Indii na orbitę. To ważny sygnał dla komercjalizacji lokalnego sektora kosmicznego.",
+      "keyFacts": [
+        "To pierwszy komercyjny start tego typu z Indii.",
+        "Wątek dotyczy usług orbitalnych.",
+        "To news bardziej publiczny niż branżowy."
+      ],
+      "reactions": [
+        "Może wzmocnić indyjskie ambicje w sektorze space-tech.",
+        "To także sygnał dla inwestorów i klientów wyniesienia ładunków."
+      ],
+      "whyItMatters": "To świeży, pozytywny sygnał technologiczny w globalnym feedzie.",
+      "context": "W poprzednim slocie technologia była bardziej regulacyjna; teraz dochodzi twardy industrialny milestone.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się dane o ładunku i operatorze misji.",
+        "Sprawdzić, czy konkurencyjne programy komercyjne odpowiadają na ten start."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Space start-up launches India’s first commercial rocket designed for orbit",
+          "url": "https://www.bbc.co.uk/news/articles/clyekv7rld3o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Indie",
+        "space",
+        "rakieta",
+        "technologia"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-meksyk-trzesienie-2026-07-18-1501",
+      "section": "Świat",
+      "title": "USGS potwierdza trzęsienie M7.3 przy Meksyku",
+      "lead": "Meksykańskie trzęsienie jest już oficjalnie w danych USGS.",
+      "whatHappened": "USGS pokazuje silne trzęsienie 7.3 o 2026-07-17 14:48 UTC przy wybrzeżu Meksyku, około 58 km od Puerto Madero. To potwierdza skalę zdarzenia, które BBC i inne media już opisywały.",
+      "keyFacts": [
+        "Magnituda wyniosła 7.3.",
+        "Epicentrum było przy wybrzeżu Chiapas.",
+        "USGS nadal utrzymuje to jako istotne zdarzenie."
+      ],
+      "reactions": [
+        "Na razie główne pytanie dotyczy szkód i ewentualnych wstrząsów wtórnych.",
+        "Brak twardych sygnałów o dużych stratach w chwili raportu."
+      ],
+      "whyItMatters": "To duże regionalne ryzyko dla ludności i infrastruktury sejsmicznej.",
+      "context": "CNN podawał tę historię w world feedzie, a USGS daje oficjalne potwierdzenie parametrów.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się kolejne aftershocki albo raporty o zniszczeniach.",
+        "Sprawdzić, czy Meksyk i Gwatemala opublikują bilans szkód."
+      ],
+      "sources": [
+        {
+          "title": "USGS Earthquake Hazards Program",
+          "url": "https://www.usgs.gov/programs/earthquake-hazards"
+        }
+      ],
+      "tags": [
+        "Meksyk",
+        "USGS",
+        "trzęsienie ziemi",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "bezpieczenstwo-ukmto-aden-2026-07-18-1501",
+      "section": "Bezpieczeństwo",
+      "title": "UKMTO notuje incydent morski koło Adenu",
+      "lead": "Ryzyko dla żeglugi na południe od Jemenu nadal się utrzymuje.",
+      "whatHappened": "UKMTO na swojej stronie i w recent incidents nadal pokazuje nowe zgłoszenia, a na stronie głównej opisuje tankowiec trafiony nieznanym pociskiem około 50 mil morskich na południe od Adenu. To kolejny sygnał, że szlak morski wokół Jemenu pozostaje ryzykowny.",
+      "keyFacts": [
+        "Incydent dotyczy tankowca i rejonu Adenu.",
+        "UKMTO nadal publikuje świeże zgłoszenia.",
+        "To ryzyko dla żeglugi handlowej."
+      ],
+      "reactions": [
+        "Armatorzy muszą liczyć się z dodatkowymi procedurami bezpieczeństwa.",
+        "Wątek może się połączyć z szerszą eskalacją na Morzu Czerwonym."
+      ],
+      "whyItMatters": "To bezpośredni sygnał dla transportu morskiego i cen frachtu.",
+      "context": "Ten wątek dobrze uzupełnia Iran, bo pokazuje, że ryzyko morskie nie ogranicza się do cieśniny Ormuz.",
+      "watchNext": [
+        "Sprawdzić, czy UKMTO poda pełny raport o uszkodzeniach.",
+        "Sprawdzić, czy pojawi się reakcja operatora statku albo floty wojskowej."
+      ],
+      "sources": [
+        {
+          "title": "UKMTO recent incidents",
+          "url": "https://www.ukmto.org/recent-incidents"
+        },
+        {
+          "title": "UKMTO",
+          "url": "https://www.ukmto.org/"
+        }
+      ],
+      "tags": [
+        "UKMTO",
+        "Jemen",
+        "żegluga",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
