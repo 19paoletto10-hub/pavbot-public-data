@@ -1,0 +1,533 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-18",
+  "runTime": "06:01",
+  "status": "Material update",
+  "headline": "Poranny mix: burze, Wołyń i kolejne uderzenia USA w Iran",
+  "summary": "RCB i IMGW nadal trzymają alert burzowy, IPN potwierdza kolejny etap ekshumacji w Ostrówkach, a BBC/CNN dokładają Iran, Meksyk i Jemen. W kraju dochodzą Tusk, Katowice, Swarzędz, Szpital Południowy i regulacje dla autonomicznych aut oraz social mediów.",
+  "checkedSources": [
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "Gov.pl RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "IMGW mapy dynamiczne",
+      "url": "https://meteo.imgw.pl/dyn/"
+    },
+    {
+      "title": "IPN komunikaty",
+      "url": "https://ipn.gov.pl/pl/dla-mediow/komunikaty/245401,Jutro-zakonczy-sie-pierwszy-tydzien-prac-ekshumacyjnych-w-Ostrowkach-i-Woli-Ostr.html"
+    },
+    {
+      "title": "USGS Earthquake Hazards Program",
+      "url": "https://www.usgs.gov/programs/earthquake-hazards"
+    },
+    {
+      "title": "U.S. Central Command Media",
+      "url": "https://www.centcom.mil/MEDIA/"
+    }
+  ],
+  "items": [
+    {
+      "id": "alerty-burze-2026-07-18-0601",
+      "section": "Alerty",
+      "title": "RCB ostrzega przed burzami",
+      "lead": "Burze z gradem i silny wiatr nadal są w grze nad ranem.",
+      "whatHappened": "RCB utrzymuje komunikat na noc 17/18 lipca, a IMGW nadal pokazuje aktywne warunki do gwałtownej pogody. To już praktyczny alert operacyjny, nie tylko prognoza.",
+      "keyFacts": [
+        "Komunikat dotyczy nocy 17/18 lipca i wczesnego poranka 18 lipca.",
+        "RCB wprost ostrzega przed możliwymi przerwami w dostawie prądu.",
+        "Zalecenie obejmuje zabezpieczenie rzeczy, które może porwać wiatr."
+      ],
+      "reactions": [
+        "Najbardziej narażone są awarie lokalne, połamane drzewa i utrudnienia transportowe.",
+        "Następny slot pokaże, czy ostrzeżenie przełożyło się na szkody albo kolejne komunikaty."
+      ],
+      "whyItMatters": "To bezpośredni sygnał bezpieczeństwa dla mieszkańców i transportu w kilku regionach kraju.",
+      "context": "To rozwinięcie wcześniejszych ostrzeżeń pogodowych, ale z konkretnym oknem czasowym i ryzykiem przerw w zasilaniu.",
+      "watchNext": [
+        "Sprawdzić, czy RCB rozszerzy lub zaktualizuje komunikat po przejściu frontu.",
+        "Sprawdzić, czy pojawią się raporty o awariach, połamanych drzewach lub blokadach dróg."
+      ],
+      "sources": [
+        {
+          "title": "Gov.pl RCB komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        },
+        {
+          "title": "Alert RCB - burze (17.07)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-1707"
+        },
+        {
+          "title": "IMGW mapy dynamiczne",
+          "url": "https://meteo.imgw.pl/dyn/"
+        },
+        {
+          "title": "Nawałnice przeszły nad Polską. Setki interwencji strażaków",
+          "url": "https://tvn24.pl/tvnmeteo/polska/dolny-slask-wroclaw-setki-interwencji-strazakow-problemy-po-nawalnicach-st9143025"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "burze",
+        "wiatr",
+        "prąd"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-burze-szkody-2026-07-18-0601",
+      "section": "Polska",
+      "title": "Nawałnice już dały szkody",
+      "lead": "Racibórz i Dolny Śląsk nadal pokazują skutki burz.",
+      "whatHappened": "TVN24 Meteo opisuje szkody po gwałtownych burzach: zalane drogi, uszkodzone dachy, podtopienia i setki interwencji strażaków. To jest tło dla porannego alertu RCB, który wciąż pozostaje aktywny.",
+      "keyFacts": [
+        "W Raciborzu strażacy dostali ponad 150 zgłoszeń.",
+        "W materiałach TVN24 pojawiają się zalane odcinki dróg i szkody w zabudowie.",
+        "To nie jest już sama prognoza, tylko zapis konkretnych skutków pogodowych."
+      ],
+      "reactions": [
+        "Służby mogą jeszcze wracać do pojedynczych interwencji.",
+        "Jeżeli rano dojdą nowe szkody, temat szybko przejdzie do bloków transportowych i energetycznych."
+      ],
+      "whyItMatters": "Pokazuje, że pogodowy alert ma już realny koszt operacyjny dla lokalnych społeczności.",
+      "context": "To naturalne rozwinięcie nocnego ostrzeżenia RCB i IMGW, ale z konkretnymi skutkami terenowymi.",
+      "watchNext": [
+        "Sprawdzić, czy dojdą kolejne raporty z powiatów objętych burzami.",
+        "Sprawdzić, czy pojawią się nowe informacje o przerwach w dostawie prądu lub blokadach dróg."
+      ],
+      "sources": [
+        {
+          "title": "Nawałnice przeszły nad Polską. Setki interwencji strażaków",
+          "url": "https://tvn24.pl/tvnmeteo/polska/dolny-slask-wroclaw-setki-interwencji-strazakow-problemy-po-nawalnicach-st9143025"
+        },
+        {
+          "title": "Gov.pl RCB komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "burze",
+        "straż pożarna",
+        "szkody"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-tusk-parlamentarzysci-2026-07-18-0601",
+      "section": "Polityka",
+      "title": "Tusk spotkał się z parlamentarzystami",
+      "lead": "Premier mówi o mobilizacji klubu KO.",
+      "whatHappened": "Donald Tusk spotkał się z parlamentarzystami i przekazał, że obóz rządzący ma się mobilizować. To świeży krajowy sygnał po nocnym obiegu politycznych komentarzy.",
+      "keyFacts": [
+        "TVN24 opisuje spotkanie jako politycznie istotny sygnał dla KO.",
+        "To kolejny etap po wczorajszych sporach i komentarzach wokół rządu.",
+        "Wątek pozostaje żywy, bo dotyczy bieżącej koordynacji większości."
+      ],
+      "reactions": [
+        "Jeśli pojawi się oficjalny komunikat, temat może wejść wyżej do porannej agendy.",
+        "Brak reakcji po stronie opozycji byłby sam w sobie informacją o tempie sporu."
+      ],
+      "whyItMatters": "Pokazuje, jak rząd i klub KO ustawiają się po serii głośnych napięć politycznych.",
+      "context": "Wcześniejsze sloty już trzymały KO i PiS w wysokiej temperaturze; ten wpis dokłada nową, konkretną sekwencję działań.",
+      "watchNext": [
+        "Sprawdzić, czy po spotkaniu pojawi się formalny komunikat lub lista decyzji.",
+        "Sprawdzić, czy opozycja odpowie własnym przekazem lub kontratakiem."
+      ],
+      "sources": [
+        {
+          "title": "Donald Tusk spotkał się z parlamentarzystami. \"Mobilizujemy się\"",
+          "url": "https://tvn24.pl/polska/spotkanie-klubu-ko-z-premierem-donaldem-tuskiem-na-miejscu-waldemar-zurek-i-jolanta-sobieranska-grenda-st9144386"
+        },
+        {
+          "title": "TVN24 Polska",
+          "url": "https://tvn24.pl/polska"
+        }
+      ],
+      "tags": [
+        "KO",
+        "Tusk",
+        "polityka",
+        "Sejm"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-wolyn-ipn-2026-07-18-0601",
+      "section": "Polska",
+      "title": "IPN potwierdza nowe szczątki na Wołyniu",
+      "lead": "W Ostrówkach odnaleziono szczątki jednej osoby.",
+      "whatHappened": "IPN potwierdził odkrycie szczątków jednej osoby podczas ekshumacji w Ostrówkach na Wołyniu. Instytut zapowiada dalsze prace do 7 sierpnia 2026 r. i bieżące komunikaty o postępie badań.",
+      "keyFacts": [
+        "Znalezisko dotyczy pojedynczej mogiły w lesie przy cmentarzu w Ostrówkach.",
+        "Prace ekshumacyjne na miejscu trwają dalej.",
+        "IPN zapowiada publiczne informowanie o przebiegu badań."
+      ],
+      "reactions": [
+        "Temat może wrócić jako kolejny krok w relacjach polsko-ukraińskich.",
+        "Jeśli pojawi się reakcja rządowa, będzie to ważny sygnał dla agendy Wołynia."
+      ],
+      "whyItMatters": "To konkretny, wrażliwy historycznie sygnał, który może przejść w dyplomację albo w kolejne komunikaty instytucjonalne.",
+      "context": "Wcześniejsze sloty traktowały Wołyń głównie jako temat polityczny. Teraz doszedł twardy fakt z prac terenowych IPN.",
+      "watchNext": [
+        "Sprawdzić, czy IPN opublikuje kolejne wyniki ekshumacji.",
+        "Sprawdzić, czy pojawi się reakcja polska lub ukraińska na nowy etap prac."
+      ],
+      "sources": [
+        {
+          "title": "IPN: komunikat o pracach w Ostrówkach i Woli Ostrowieckiej",
+          "url": "https://ipn.gov.pl/pl/dla-mediow/komunikaty/245401,Jutro-zakonczy-sie-pierwszy-tydzien-prac-ekshumacyjnych-w-Ostrowkach-i-Woli-Ostr.html"
+        },
+        {
+          "title": "TVN24",
+          "url": "https://tvn24.pl/"
+        }
+      ],
+      "tags": [
+        "Wołyń",
+        "IPN",
+        "ekshumacje",
+        "historia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-katowice-napad-2026-07-18-0601",
+      "section": "Bezpieczeństwo",
+      "title": "Brutalny atak po zwróceniu uwagi",
+      "lead": "W Katowicach TVN24 utrzymuje w obiegu brutalny napad.",
+      "whatHappened": "Serwis TVN24 opisuje napad, w którym użyto pałek, maczet i noży po zwróceniu komuś uwagi. To typowy poranny sygnał o rosnącym ryzyku agresji ulicznej i potrzebie policyjnej reakcji.",
+      "keyFacts": [
+        "Temat pojawia się na stronie Katowic i w krajowej nawigacji TVN24.",
+        "Opis mówi o przemocy z użyciem niebezpiecznych narzędzi.",
+        "Sprawa ma lokalny, ale wyraźnie bezpieczeństwowy charakter."
+      ],
+      "reactions": [
+        "Możliwy jest dalszy rozwój policyjny lub prokuratorski.",
+        "Jeśli pojawi się identyfikacja sprawców, temat może szybko urosnąć."
+      ],
+      "whyItMatters": "To nie jest zwykły incydent uliczny, tylko twardy sygnał o przemocy i eskalacji.",
+      "context": "W poprzednich slotach podobne historie już przebijały się do głównego feedu, więc warto śledzić, czy ten wątek dostanie formalny follow-up.",
+      "watchNext": [
+        "Sprawdzić, czy policja poda więcej szczegółów o sprawcach i ofierze.",
+        "Sprawdzić, czy pojawi się komunikat prokuratury lub zarzuty."
+      ],
+      "sources": [
+        {
+          "title": "Wiadomości Katowice - najnowsze wiadomości z Katowic - TVN24",
+          "url": "https://tvn24.pl/katowice"
+        },
+        {
+          "title": "Wiadomości z kraju - str. 7",
+          "url": "https://tvn24.pl/polska/s-7"
+        }
+      ],
+      "tags": [
+        "Katowice",
+        "przemoc",
+        "policja",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-swarzedz-stacja-paliw-2026-07-18-0601",
+      "section": "Bezpieczeństwo",
+      "title": "Policja opanowała akcję na stacji paliw",
+      "lead": "W Swarzędzu sytuację na stacji paliw opisano jako opanowaną.",
+      "whatHappened": "Policja zamknęła drogę i tory przy stacji paliw, a potem opisała sytuację jako opanowaną. To sygnał, że na miejscu było realne ryzyko dla ruchu i otoczenia.",
+      "keyFacts": [
+        "Wcześniej wyłączono z ruchu fragment drogi i ruch kolejowy.",
+        "Mieszkańców okolicznych budynków ewakuowano.",
+        "To był lokalny incydent, ale z wyraźnym wpływem na transport."
+      ],
+      "reactions": [
+        "Następny krok to zwykle doprecyzowanie, co było w aucie i czy były zarzuty.",
+        "Jeśli pojawi się przyczyna, temat może przejść do szerszego bezpieczeństwa transportu."
+      ],
+      "whyItMatters": "Łączy bezpieczeństwo publiczne z ruchem drogowym i kolejowym, więc ma natychmiastowy wpływ operacyjny.",
+      "context": "Wątek już miał fazę blokady terenu; poranny status 'opanowana' sugeruje przejście w tryb wyjaśniania.",
+      "watchNext": [
+        "Sprawdzić, czy policja ujawni co było w aucie.",
+        "Sprawdzić, czy PKP lub samorząd podadzą informacje o przywróceniu pełnego ruchu."
+      ],
+      "sources": [
+        {
+          "title": "Sytuacja na stacji paliw \"opanowana\". Policja o tym, co było w aucie",
+          "url": "https://tvn24.pl/poznan/swarzedz-koniec-akcji-na-stacji-paliw-policja-otwiera-droge-ruszyly-pociagi-st9144289"
+        },
+        {
+          "title": "TVN24 Poznań",
+          "url": "https://tvn24.pl/poznan"
+        }
+      ],
+      "tags": [
+        "Poznań",
+        "Swarzędz",
+        "policja",
+        "transport"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-nik-szpital-poludniowy-2026-07-18-0601",
+      "section": "Gospodarka",
+      "title": "NIK wraca do Szpitala Południowego",
+      "lead": "Kontrola NIK wraca na warszawski szpital.",
+      "whatHappened": "TVN24 publikuje kolejny materiał o raporcie NIK dotyczącym Szpitala Południowego, a TVN Warszawa pokazuje polityczną reakcję Rafała Trzaskowskiego. Temat pozostaje w grze jako kontrola publicznej instytucji i zarazem spór samorządowy.",
+      "keyFacts": [
+        "NIK przeprowadziła kontrolę i wróciła z raportem.",
+        "Wątek natychmiast podjęła też warszawska redakcja TVN24.",
+        "Sprawa ma znaczenie zarówno finansowe, jak i organizacyjne."
+      ],
+      "reactions": [
+        "Możliwa jest dalsza reakcja samorządu lub dodatkowe wyjaśnienia szpitala.",
+        "Jeśli raport trafi do szerszego obiegu, może wrócić do krajowej polityki zdrowotnej."
+      ],
+      "whyItMatters": "Dotyczy publicznej ochrony zdrowia i nadzoru nad wydatkowaniem środków.",
+      "context": "To nie jest nowy typ problemu, ale bieżąca kontrola i reakcja wokół niego nadal mają wartość informacyjną.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się pełny opis wniosków z raportu.",
+        "Sprawdzić, czy szpital lub miasto podadzą własny komentarz."
+      ],
+      "sources": [
+        {
+          "title": "NIK skontrolowała Szpital Południowy. Mamy raport",
+          "url": "https://tvn24.pl/polska/raport-najwyzszej-izby-kontroli-w-sprawie-warszawskiego-szpitala-poludniowego-co-w-nim-jest-st9142913"
+        },
+        {
+          "title": "Rafał Trzaskowski o raporcie NIK",
+          "url": "https://tvn24.pl/tvnwarszawa/ursynow/rafal-trzaskowski-o-raporcie-nik-w-sprawie-szpitala-poludniowego-st9144443"
+        }
+      ],
+      "tags": [
+        "NIK",
+        "szpital",
+        "Warszawa",
+        "samorząd"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-autonomiczne-auta-prawo-2026-07-18-0601",
+      "section": "Gospodarka",
+      "title": "Polska otwiera testy aut autonomicznych",
+      "lead": "Prawo ma ułatwić testy samochodów bez kierowcy.",
+      "whatHappened": "TVN24 Biznes opisuje zmianę prawa, która ma otworzyć drogę do testów aut autonomicznych w Polsce. To ważny sygnał regulacyjny dla rynku motoryzacji i technologii transportu.",
+      "keyFacts": [
+        "To wątek stricte regulacyjny, a nie jeszcze wdrożenie masowe.",
+        "Materiał wskazuje na możliwy start testów w Polsce.",
+        "Temat łączy motoryzację, infrastrukturę i nowe prawo."
+      ],
+      "reactions": [
+        "Przemysł i operatorzy testowi mogą zacząć liczyć na jaśniejsze zasady.",
+        "Jeśli dojdą dodatkowe szczegóły, pojawi się też pytanie o bezpieczeństwo i odpowiedzialność."
+      ],
+      "whyItMatters": "Regulacje dla pojazdów autonomicznych to długoterminowy sygnał dla transportu i innowacji.",
+      "context": "W gospodarczym feedzie to jeden z wyraźniejszych tematów przyszłościowych, który ma już konkretne przełożenie na prawo.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się terminy testów lub lista dopuszczonych podmiotów.",
+        "Sprawdzić, czy regulator poda warunki bezpieczeństwa i nadzoru."
+      ],
+      "sources": [
+        {
+          "title": "W drogę bez kierowcy. Polska zmienia prawo",
+          "url": "https://tvn24.pl/biznes/moto/auta-autonomiczne-samochod-bez-kierowcy-polska-zmienia-prawo-kiedy-testy-st9137393"
+        },
+        {
+          "title": "Wiadomości motoryzacyjne | TVN24 Biznes",
+          "url": "https://tvn24.pl/biznes/moto"
+        }
+      ],
+      "tags": [
+        "autonomiczne auta",
+        "prawo",
+        "motoryzacja",
+        "regulacje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-social-media-uk-2026-07-18-0601",
+      "section": "Technologia",
+      "title": "Brytyjskie limity dla social mediów",
+      "lead": "TVN24 Biznes pokazuje zaostrzenie zasad w Wielkiej Brytanii.",
+      "whatHappened": "W sekcji technologicznej TVN24 Biznes pojawia się nowy wątek o brytyjskich ograniczeniach dla social mediów z nocnym limitem. To wpisuje się w szerszy europejski trend twardniejszej regulacji platform.",
+      "keyFacts": [
+        "Nagłówek pojawia się na stronie technologicznej TVN24 Biznes.",
+        "Wątek dotyczy bezpośrednio social mediów i reguł korzystania z nich.",
+        "To kolejny sygnał presji regulacyjnej na platformy."
+      ],
+      "reactions": [
+        "Jeśli temat przejdzie w pełny projekt, możliwe będą dalsze reakcje branży.",
+        "Warto sprawdzić, czy pojawi się odpowiedź platform albo komunikat rządu UK."
+      ],
+      "whyItMatters": "Regulacje social mediów wpływają na zachowanie platform, użytkowników i reklamodawców.",
+      "context": "To nie jest pojedynczy europejski epizod, tylko element szerszej fali ograniczeń dla platform cyfrowych.",
+      "watchNext": [
+        "Sprawdzić, czy TVN24 Biznes poda pełną wersję materiału.",
+        "Sprawdzić, czy brytyjskie władze lub platformy odniosą się do ograniczeń."
+      ],
+      "sources": [
+        {
+          "title": "Nowe technologie | TVN24 Biznes",
+          "url": "https://tvn24.pl/biznes/tech"
+        },
+        {
+          "title": "Media społecznościowe - najnowsze informacje w TVN24",
+          "url": "https://tvn24.pl/tagi/media-spolecznosciowe"
+        },
+        {
+          "title": "Tech - informacje o AI, premiery i nowości technologiczne - TVN24",
+          "url": "https://tvn24.pl/technologia"
+        }
+      ],
+      "tags": [
+        "social media",
+        "Wielka Brytania",
+        "technologia",
+        "regulacje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-iran-usa-2026-07-18-0601",
+      "section": "Świat",
+      "title": "USA uderzają w Iran kolejny dzień",
+      "lead": "BBC i CNN trzymają Iran na pierwszym planie.",
+      "whatHappened": "BBC podaje, że amerykańskie uderzenia na Iran trwają już kolejną noc z rzędu, a CNN opisuje to jako kolejny etap eskalacji bez wyraźnej deeskalacji. CENTCOM publikuje kolejne komunikaty o nowych uderzeniach.",
+      "keyFacts": [
+        "BBC mówi o siódmej z rzędu nocy uderzeń.",
+        "CNN utrzymuje live coverage konfliktu wokół Iranu.",
+        "CENTCOM na bieżąco publikuje komunikaty o kolejnych akcjach."
+      ],
+      "reactions": [
+        "To może przekładać się na żeglugę, ceny ropy i dalsze napięcie wokół Ormuzu.",
+        "Jeśli pojawi się oficjalna odpowiedź Iranu, temat może wejść na wyższy poziom alarmu."
+      ],
+      "whyItMatters": "To nadal najważniejszy geopolityczny motor napięcia w światowym feedzie.",
+      "context": "W poprzednich slotach Iran już dominował, ale teraz dochodzi kolejna noc uderzeń i mocniejszy sygnał ciągłości.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się komunikat o ruchu morskim lub cenach ropy.",
+        "Sprawdzić, czy CNN lub CENTCOM podadzą kolejną aktualizację przed południem."
+      ],
+      "sources": [
+        {
+          "title": "BBC World RSS",
+          "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        },
+        {
+          "title": "CNN World",
+          "url": "https://www.cnn.com/world"
+        },
+        {
+          "title": "U.S. Central Command Media",
+          "url": "https://www.centcom.mil/MEDIA/"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Ormuz",
+        "USA",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-meksyk-trzesienie-2026-07-18-0601",
+      "section": "Świat",
+      "title": "Meksykańskie trzęsienie potwierdzone przez USGS",
+      "lead": "Trzęsienie 7,3 uderzyło u wybrzeży Meksyku.",
+      "whatHappened": "BBC opisuje silne trzęsienie u wybrzeży Meksyku, które było odczuwalne także w Gwatemali i Salwadorze. USGS potwierdza zdarzenie w rejonie Puerto Madero i daje mu status ważnego zdarzenia sejsmicznego.",
+      "keyFacts": [
+        "Magnituda wyniosła 7,3.",
+        "Zdarzenie było odczuwalne w kilku krajach regionu.",
+        "USGS prowadzi zdarzenie w oficjalnej bazie trzęsień ziemi."
+      ],
+      "reactions": [
+        "W kolejnych godzinach mogą pojawić się informacje o zniszczeniach lub ostrzeżeniach pogodowo-sejsmicznych.",
+        "Jeśli dojdą ofiary albo szkody, temat może szybko wejść do głównych wiadomości dnia."
+      ],
+      "whyItMatters": "To jeden z największych świeżych sygnałów katastroficznych w światowym obiegu informacji.",
+      "context": "CNN i BBC utrzymują region Ameryki Łacińskiej w obiegu, a sejsmologia nadaje temu historię stricte bezpieczeństwową.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się lokalne raporty o szkodach.",
+        "Sprawdzić, czy służby nie podniosą poziomu alertu tsunami lub ewakuacji."
+      ],
+      "sources": [
+        {
+          "title": "BBC World RSS",
+          "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        },
+        {
+          "title": "USGS Earthquake Hazards Program",
+          "url": "https://www.usgs.gov/programs/earthquake-hazards"
+        }
+      ],
+      "tags": [
+        "Meksyk",
+        "trzęsienie ziemi",
+        "USGS",
+        "świat"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-yemen-tanker-2026-07-18-0601",
+      "section": "Świat",
+      "title": "Piraci porywają tankowiec u Jemenu",
+      "lead": "BBC opisuje kolejny porwany tankowiec.",
+      "whatHappened": "BBC podaje, że u wybrzeży Jemenu porwany został kolejny tankowiec, a za incydent odpowiadają podejrzani somalijscy piraci. To wzmacnia ryzyko dla żeglugi i ubezpieczeń na tym szlaku.",
+      "keyFacts": [
+        "To drugi taki incydent w ciągu trzech miesięcy.",
+        "Sprawa dotyczy ważnego szlaku żeglugowego u Jemenu.",
+        "BBC opisuje incydent jako element szerszego wzrostu ryzyka morskiego."
+      ],
+      "reactions": [
+        "Branża morska może reagować wyższymi stawkami i większą ostrożnością.",
+        "Jeśli pojawi się raport ze strony służb morskich, temat może urosnąć do alertu handlowego."
+      ],
+      "whyItMatters": "To bezpośrednie ryzyko dla żeglugi i cen transportu w regionie Morza Czerwonego i Oceanu Indyjskiego.",
+      "context": "Wczesny poranek w światowym feedzie dalej mocno wskazuje na bezpieczeństwo morskie, nie tylko na samą wojnę w Iranie.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się oficjalny komunikat o lokalizacji lub ładunku jednostki.",
+        "Sprawdzić, czy wzrośnie presja na ubezpieczycieli i armatorów."
+      ],
+      "sources": [
+        {
+          "title": "BBC World RSS",
+          "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+        }
+      ],
+      "tags": [
+        "Jemen",
+        "piractwo",
+        "żegluga",
+        "świat"
+      ],
+      "priority": "high"
+    }
+  ]
+}

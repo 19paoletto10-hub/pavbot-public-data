@@ -1,5 +1,13 @@
 # Puls Dnia News Index
 
+The 2026-07-18 06:01 slot keeps the feed in an early-morning operational mix:
+RCB and IMGW still hold the storm alert, TVN24 pushes fresh domestic safety
+and procedural pieces, IPN confirms another Ostrówki exhumation find, and
+BBC/CNN shift the world block to another Iran strike night, Mexico's quake and
+the Yemen tanker hijacking. The slot also keeps the economy/tech lane active
+with autonomous-vehicle rules, UK social-media restrictions and fuel-price
+pressure.
+
 The 2026-07-17 21:03 slot przesuwa feed z samej prognozy do konkretu:
 front z Niemiec daje już szkody w Polsce, Tusk reaguje na zapowiedź
 Zełenskiego w sprawie Wołynia, a PiS znów pokazuje wewnętrzną koordynację

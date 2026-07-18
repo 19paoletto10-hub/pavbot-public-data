@@ -2,6 +2,9 @@
 
 ## Open
 
+- Watch whether the 18/07 storm window turns into outages, transport blocks or fallen trees before noon.
+- Watch whether IPN publishes a fuller follow-up after the Ostrówki exhumation find.
+- Watch whether the Iran / Ormuz escalation produces another maritime or fuel-price note before the next slot.
 - Watch whether the Volhynia archive opening turns into a formal bilateral or parliamentary step.
 - Watch whether Seven & i formalizes the Żabka investment or keeps talks exploratory.
 - Watch whether the PAŻP objection in Brussels leads to any short-term financing relief.
