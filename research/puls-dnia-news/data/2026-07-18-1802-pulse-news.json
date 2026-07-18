@@ -1,0 +1,579 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-18",
+  "runTime": "18:02",
+  "status": "Material update",
+  "headline": "Burze, polityka i światowe pożary",
+  "summary": "Slot 18:02 przesuwa krajowy feed z samego ostrzeżenia w realne szkody i kolejne incydenty bezpieczeństwa, a w polityce dokłada Wołyń, Nawrockiego i dalej żywy konflikt w PiS. Za granicą dominują pożar w Norwegii, osuwisko w Chinach, protest w Wenecji, presja na Kanadę i logistyczny wątek Ormuzu.",
+  "checkedSources": [
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "TVN24 Świat",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "Gov.pl RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "Gov.pl RCB portal",
+      "url": "https://www.gov.pl/web/rcb"
+    },
+    {
+      "title": "IMGW mapy dynamiczne",
+      "url": "https://meteo.imgw.pl/dyn/"
+    },
+    {
+      "title": "U.S. Central Command Public Releases",
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/"
+    },
+    {
+      "title": "USGS Earthquake Hazards Program",
+      "url": "https://www.usgs.gov/programs/earthquake-hazards"
+    },
+    {
+      "title": "UKMTO recent incidents",
+      "url": "https://www.ukmto.org/recent-incidents"
+    },
+    {
+      "title": "UKMTO",
+      "url": "https://www.ukmto.org/"
+    }
+  ],
+  "items": [
+    {
+      "id": "alerty-rcb-burze-2026-07-18-1802",
+      "section": "Alerty",
+      "title": "RCB utrzymuje alert na burze z gradem",
+      "lead": "W szerokiej części kraju nadal grożą wiatr, grad i przerwy w zasilaniu.",
+      "whatHappened": "RCB utrzymuje dziś alert na burze z gradem i silny wiatr. TVN24 Meteo nadal pokazuje aktywny blok ostrzeżeń, więc zagrożenie nie wygasło wraz z porannym slotem.",
+      "keyFacts": [
+        "Alert dotyczy 18 lipca.",
+        "Oficjalny komunikat mówi o gradzie, silnym wietrze i możliwych przerwach w dostawie prądu.",
+        "IMGW nadal pokazuje aktywne ostrzeżenia pogodowe."
+      ],
+      "reactions": [
+        "To bezpośredni sygnał operacyjny dla transportu, energetyki i służb lokalnych.",
+        "W praktyce trzeba dalej monitorować szkody i wyłączenia prądu."
+      ],
+      "whyItMatters": "To nadal główny czynnik ryzyka dla bezpieczeństwa i infrastruktury w wielu regionach.",
+      "context": "W poprzednim slocie alert był już aktywny, ale bez pełnego obrazu szkód.",
+      "watchNext": [
+        "Sprawdzić, czy RCB albo IMGW zmienią zasięg ostrzeżeń.",
+        "Sprawdzić, czy pojawią się kolejne informacje o przerwach w zasilaniu."
+      ],
+      "sources": [
+        {
+          "title": "Gov.pl: Alert RCB - burze z gradem i silny wiatr (18.07)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb--burze-z-gradem-i-silny-wiatr-1807"
+        },
+        {
+          "title": "Gov.pl: Rządowe Centrum Bezpieczeństwa",
+          "url": "https://www.gov.pl/web/rcb"
+        },
+        {
+          "title": "TVN24 Meteo",
+          "url": "https://tvn24.pl/tvnmeteo"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "burze",
+        "grad",
+        "wiatr"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-skutki-burz-2026-07-18-1802",
+      "section": "Alerty",
+      "title": "Burze dają już pierwsze szkody",
+      "lead": "Ściana deszczu i zalane ulice przeszły z prognozy do faktu.",
+      "whatHappened": "TVN24 opisuje już konkretne skutki sobotnich burz: ścianę deszczu, ulice zamieniające się w potoki i pierwsze lokalne szkody. To zmienia obraz z samego ostrzeżenia w realny incident weather.",
+      "keyFacts": [
+        "Pojawiły się lokalne podtopienia i utrudnienia na drogach.",
+        "W niektórych miejscach pojawił się grad.",
+        "Temat jest już raportowany jako skutki burz, a nie tylko prognoza."
+      ],
+      "reactions": [
+        "To zwiększa szansę na kolejne raporty o szkodach z regionów.",
+        "Służby mogą jeszcze podać bilans interwencji."
+      ],
+      "whyItMatters": "Po przejściu z alertu do szkód rośnie znaczenie dla transportu i energii.",
+      "context": "Poranny slot miał tylko ostrzeżenie; teraz widać już materialne skutki pogody.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się bilans straży pożarnej.",
+        "Sprawdzić, czy lokalne samorządy zamkną kolejne odcinki dróg."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo: Burze w Polsce. Ściana deszczu i ulice jak potoki",
+          "url": "https://tvn24.pl/tvnmeteo/polska/burze-w-polsce-sciana-deszczu-i-ulice-jak-potoki-skutki-sobotnich-burz-st9148223"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "podtopienia",
+        "grad",
+        "burze"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-malopolska-derailment-2026-07-18-1802",
+      "section": "Bezpieczeństwo",
+      "title": "Małopolska: pociąg wypadł z torów",
+      "lead": "Wagonami w rzece zajmują się nadal służby.",
+      "whatHappened": "W Małopolsce nadal trwa operacyjny wątek wykolejonego pociągu, którego wagony znalazły się w rzece. Służby podnoszą wagony i domykają działania na miejscu zdarzenia.",
+      "keyFacts": [
+        "Zdarzenie dotyczy linii kolejowej w rejonie Piwnicznej-Zdroju.",
+        "Na miejscu pracują służby techniczne i ratownicze.",
+        "Sprawa wpływa na lokalny ruch kolejowy."
+      ],
+      "reactions": [
+        "To już nie tylko jednorazowy news, ale nadal aktywna operacja.",
+        "Kolej może jeszcze opublikować pełniejszy komunikat o przyczynie i skutkach."
+      ],
+      "whyItMatters": "Incydent ma wpływ na ruch kolejowy i bezpieczeństwo infrastruktury.",
+      "context": "W porannym raporcie ten temat był już otwarty; teraz pozostaje w obiegu jako bieżąca operacja.",
+      "watchNext": [
+        "Sprawdzić komunikat PKP PLK lub przewoźnika.",
+        "Sprawdzić, czy policja poda przyczynę wykolejenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Kraków: Małopolska. Wykoleił się pociąg, wagony w rzece",
+          "url": "https://tvn24.pl/krakow/malopolska-wykoleil-sie-pociag-wagony-w-rzece-trwa-akcja-sluzb-st9147424"
+        }
+      ],
+      "tags": [
+        "kolej",
+        "Małopolska",
+        "wykolejenie",
+        "służby"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "bezpieczenstwo-nowa-gora-2026-07-18-1802",
+      "section": "Bezpieczeństwo",
+      "title": "Nowa Góra: cztery osoby w szpitalu",
+      "lead": "Po zjechaniu z ronda samochód uderzył w ogrodzenie.",
+      "whatHappened": "W Nowej Górze na DK10 auto zjechało z ronda i uderzyło w ogrodzenie. Cztery osoby trafiły do szpitala, w tym dwoje dzieci.",
+      "keyFacts": [
+        "Zdarzenie miało miejsce na DK10.",
+        "Do szpitala trafiły cztery osoby.",
+        "Wśród poszkodowanych jest dwoje dzieci."
+      ],
+      "reactions": [
+        "To jeden z dwóch świeżych krajowych incydentów drogowych w tym slocie.",
+        "Sprawa może mieć dalszy ciąg po publikacji ustaleń policji."
+      ],
+      "whyItMatters": "To bieżący sygnał ryzyka na drogach, z udziałem dzieci.",
+      "context": "Wpisuje się w dzisiejszy bezpiecznościowy blok obok Małopolski i burz.",
+      "watchNext": [
+        "Sprawdzić ustalenia policji o przyczynie zjazdu z ronda.",
+        "Sprawdzić, czy pojawi się raport o stanie poszkodowanych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Warszawa: Zjechał z ronda i uderzył w ogrodzenie. Cztery osoby w szpitalu",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/nowa-gora-dk10-wypadek-na-krajowej-10-cztery-osoby-w-szpitalu-w-tym-dwoje-dzieci-st9148009"
+        }
+      ],
+      "tags": [
+        "wypadek",
+        "DK10",
+        "dzieci",
+        "policja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-pis-konflikt-2026-07-18-1802",
+      "section": "Polityka",
+      "title": "PiS nadal żyje własnym konfliktem",
+      "lead": "Komentarze polityków pokazują, że spór nie wygasa.",
+      "whatHappened": "TVN24 opisuje narastający konflikt w PiS jako już formalny spór polityczny. W obiegu pozostają komentarze wokół Kaczyńskiego, Morawieckiego i kierownictwa partii.",
+      "keyFacts": [
+        "Spór jest już opisywany jako narastający i publiczny.",
+        "W tle pozostają komentarze polityków i reakcje wewnątrz partii.",
+        "Temat nadal generuje silną polaryzację medialną."
+      ],
+      "reactions": [
+        "To jeden z głównych krajowych tematów politycznych dnia.",
+        "Może prowadzić do kolejnych oświadczeń lub dyscyplinowania działaczy."
+      ],
+      "whyItMatters": "PiS wciąż dominuje w krajowej polityce jako źródło napięć i reakcji.",
+      "context": "W południowym slocie spór był już szerzej opisany; teraz pozostaje aktywny i widoczny.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się formalna odpowiedź władz partii.",
+        "Sprawdzić, czy któryś z polityków zmieni ton lub przejdzie do działań organizacyjnych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Polska: Narastający konflikt w PiS. Komentarze polityków",
+          "url": "https://tvn24.pl/polska/narastajacy-konflikt-w-pis-komentarze-politykow-st9147726"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Kaczyński",
+        "Morawiecki",
+        "komentarze"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-nawrocki-referendum-2026-07-18-1802",
+      "section": "Polityka",
+      "title": "Nawrocki wraca z referendum klimatycznym",
+      "lead": "Prezydent chce ponownie skierować wniosek do Senatu.",
+      "whatHappened": "Karol Nawrocki zapowiedział ponowne skierowanie do Senatu wniosku o referendum w sprawie polityki klimatycznej Unii Europejskiej. To kolejny mocny sygnał polityczny z pałacu prezydenckiego.",
+      "keyFacts": [
+        "Wniosek dotyczy polityki klimatycznej UE.",
+        "Prezydent mówi o ponownym skierowaniu sprawy do Senatu.",
+        "Temat łączy politykę krajową z unijną agendą."
+      ],
+      "reactions": [
+        "Sprawa może uruchomić debatę o kompetencjach i kosztach polityki klimatycznej.",
+        "To wyraźny sygnał, że prezydent chce budować własny polityczny temat dnia."
+      ],
+      "whyItMatters": "To potencjalny konflikt między krajową polityką a klimatyczną agendą UE.",
+      "context": "W tym samym slocie polityka nie kręci się już tylko wokół PiS, ale także wokół prezydenta.",
+      "watchNext": [
+        "Sprawdzić, czy Senat odpowie formalnie na wniosek.",
+        "Sprawdzić, czy rząd albo ugrupowania koalicyjne zareagują na inicjatywę."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Polska: Karol Nawrocki ponownie skieruje do Senatu wniosek o referendum",
+          "url": "https://tvn24.pl/polska/prezydent-karol-nawrocki-ponownie-skieruje-do-senatu-wniosek-o-referendum-st9148174"
+        }
+      ],
+      "tags": [
+        "Nawrocki",
+        "referendum",
+        "UE",
+        "klimat"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-wolyn-archiwa-2026-07-18-1802",
+      "section": "Polska",
+      "title": "Zełenski otwiera archiwa o Wołyniu",
+      "lead": "Wątek pamięci historycznej wraca w konkretnym, oficjalnym wymiarze.",
+      "whatHappened": "Wołodymyr Zełenski zapowiedział otwarcie wszystkich archiwów służb specjalnych Ukrainy dotyczących Wołynia. To wzmacnia polityczny i historyczny ciężar tematu w relacji Warszawa-Kijów.",
+      "keyFacts": [
+        "Zapowiedź dotyczy archiwów służb specjalnych Ukrainy.",
+        "Temat łączy się z pamięcią o Wołyniu i ekshumacjami.",
+        "W materiale TVN24 pojawia się też list do Kaczyńskiego."
+      ],
+      "reactions": [
+        "To może wywołać kolejne reakcje w Polsce i na Ukrainie.",
+        "Temat jest wrażliwy dyplomatycznie i pamięciowo."
+      ],
+      "whyItMatters": "Wołyń pozostaje jednym z najbardziej obciążonych tematów polsko-უკraińskiej debaty.",
+      "context": "W porannym slocie mieliśmy już ekshumacje; teraz dochodzi kolejna warstwa instytucjonalna.",
+      "watchNext": [
+        "Sprawdzić, czy Ukraina poda harmonogram i zakres otwieranych archiwów.",
+        "Sprawdzić reakcję polskich władz i IPN."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Polska: Zełenski otwiera archiwa, list do Kaczyńskiego, wykolejony pociąg",
+          "url": "https://tvn24.pl/polska/szesc-rzeczy-ktore-warto-wiedziec-w-sobote-18-lipca-najwazniejsze-informacje-st9147751"
+        },
+        {
+          "title": "TVN24 Polska: Prace ekshumacyjne na Wołyniu",
+          "url": "https://tvn24.pl/polska/prace-ekshumacyjne-na-wolyniu-ipn-odnaleziono-szczatki-jednej-osoby-w-ostrowkach-st9144510"
+        }
+      ],
+      "tags": [
+        "Wołyń",
+        "Ukraina",
+        "archiwa",
+        "pamięć"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-system-kaucyjny-2026-07-18-1802",
+      "section": "Gospodarka",
+      "title": "System kaucyjny generuje skargi",
+      "lead": "Zwrot opakowań zaczyna dawać więcej tarcia niż oczekiwano.",
+      "whatHappened": "TVN24 Biznes pisze o rosnącej liczbie skarg na system kaucyjny przy zwrocie opakowań. Temat wchodzi już w fazę codziennych problemów użytkowników, a nie tylko wdrożenia regulacyjnego.",
+      "keyFacts": [
+        "Skargi dotyczą zwrotu opakowań.",
+        "Temat jest opisywany jako rosnący problem konsumencki.",
+        "Wątek ma potencjał na kolejne korekty po stronie handlu."
+      ],
+      "reactions": [
+        "To może uruchomić nacisk klientów i sieci handlowych na doprecyzowanie zasad.",
+        "Do tematu mogą wrócić regulatorzy i branża."
+      ],
+      "whyItMatters": "System kaucyjny ma wpływ na codzienne zakupy i koszty operacyjne sklepów.",
+      "context": "To jeden z dzisiejszych nowych krajowych tematów gospodarczych, obok monitoringu i paliw.",
+      "watchNext": [
+        "Sprawdzić, czy branża wyda wyjaśnienia lub prośbę o korekty.",
+        "Sprawdzić, czy pojawią się wytyczne regulatora lub handlu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Dziesiątki skarg na system kaucyjny",
+          "url": "https://tvn24.pl/biznes/z-kraju/system-kaucyjny-w-polsce-rosnie-liczba-skarg-na-zwrot-opakowan-st9147853"
+        }
+      ],
+      "tags": [
+        "system kaucyjny",
+        "handel",
+        "kaucja",
+        "konsumenci"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-monitoring-uodo-2026-07-18-1802",
+      "section": "Gospodarka",
+      "title": "UODO nakłada pierwszą taką karę",
+      "lead": "Prywatny monitoring przy domu kończy się wysoką grzywną.",
+      "whatHappened": "UODO nałożył karę za kamerę skierowaną na sąsiada. TVN24 opisuje to jako pierwszą taką grzywnę, a sankcja przekroczyła 25 tysięcy złotych.",
+      "keyFacts": [
+        "Sprawa dotyczy prywatnego monitoringu przy domu.",
+        "Kara wyniosła ponad 25 tysięcy złotych.",
+        "To precedensowy sygnał dla właścicieli kamer."
+      ],
+      "reactions": [
+        "To może ostudzić agresywne korzystanie z kamer na posesjach.",
+        "Temat ma też wymiar sąsiedzki i prawny."
+      ],
+      "whyItMatters": "To ważny sygnał dla ochrony danych i prywatności w przestrzeni lokalnej.",
+      "context": "Obok systemu kaucyjnego to dziś drugi krajowy wątek regulacyjny w gospodarce.",
+      "watchNext": [
+        "Sprawdzić, czy UODO opublikuje pełne uzasadnienie kary.",
+        "Sprawdzić, czy pojawią się kolejne podobne decyzje."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Pierwsza taka grzywna za prywatny monitoring",
+          "url": "https://tvn24.pl/biznes/z-kraju/monitoring-przy-domu-kosztowal-wlasciciela-ponad-25-tysiecy-zlotych-urzad-ochrony-danych-osobowych-uodo-nalozyl-kare-za-kamere-na-sasiada-st9148106"
+        }
+      ],
+      "tags": [
+        "UODO",
+        "monitoring",
+        "prywatność",
+        "kara"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "technologia-ai-governance-2026-07-18-1802",
+      "section": "Technologia",
+      "title": "AI przechodzi w tryb kontroli",
+      "lead": "W techu mniej hype'u, więcej bezpieczeństwa i governance.",
+      "whatHappened": "Na stronie TVN24 Biznes tech wciąż mocno wybrzmiewa temat modeli AI, bezpieczeństwa i regulacji. Materiał o modelu wykrywającym groźne luki i pracującym dla rządu USA pokazuje, że rozmowa przesuwa się w stronę kontroli i ryzyka, nie tylko nowych funkcji.",
+      "keyFacts": [
+        "Wątek dotyczy bezpieczeństwa modeli AI.",
+        "Na stronie tech wciąż wysoko widać tematy OpenAI i modeli granicznych.",
+        "Narracja przesuwa się z produktywności w stronę nadzoru i ryzyk."
+      ],
+      "reactions": [
+        "To dobry sygnał, że technologia trafia do ram polityki publicznej.",
+        "W praktyce temat może wrócić jako regulacja albo decyzja rządu."
+      ],
+      "whyItMatters": "Dla czytelników iOS to ważny sygnał, że AI staje się tematem bezpieczeństwa publicznego.",
+      "context": "To nie jest pojedynczy incydent, tylko szerzej widoczny kierunek na bieżącej stronie tech.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się nowy materiał o regulacji lub bezpieczeństwie AI.",
+        "Sprawdzić, czy któryś z modeli AI trafi do osobnego krajowego lub światowego materiału."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Nowe technologie",
+          "url": "https://tvn24.pl/biznes/tech"
+        },
+        {
+          "title": "TVN24 Biznes: OpenAI zmienia strategię. Rozszerzony dostęp do narzędzi AI",
+          "url": "https://tvn24.pl/biznes/tech/openai-zmienia-strategie-rozszerzony-dostep-do-narzedzi-ai-st9023530"
+        }
+      ],
+      "tags": [
+        "AI",
+        "OpenAI",
+        "bezpieczeństwo",
+        "regulacje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-oslo-pozar-2026-07-18-1802",
+      "section": "Świat",
+      "title": "Oslo: pożar strawił ponad 100 mieszkań",
+      "lead": "W Drammen ogień przekształcił osiedle w pogorzelisko.",
+      "whatHappened": "W Drammen na południu Norwegii wybuchł pożar osiedla mieszkaniowego. TVN24 podaje, że spłonęło ponad 100 mieszkań, a dowódca akcji gaśniczej nazwał sytuację katastrofą.",
+      "keyFacts": [
+        "Pożar objął osiedle w Drammen niedaleko Oslo.",
+        "Zniszczonych zostało ponad 100 mieszkań.",
+        "To jeden z najmocniejszych światowych materiałów dnia."
+      ],
+      "reactions": [
+        "Skala zniszczeń może szybko wygenerować lokalny bilans strat i ewakuacji.",
+        "Wątek wpisuje się w szerszy europejski blok upałów i pożarów."
+      ],
+      "whyItMatters": "To twardy sygnał o skali pożarów i odporności zabudowy na ekstremalne warunki.",
+      "context": "W world blocku to dziś jeden z najbardziej jednoznacznych, nagłych newsów.",
+      "watchNext": [
+        "Sprawdzić bilans poszkodowanych i ewakuowanych.",
+        "Sprawdzić, czy pojawi się przyczyna pożaru."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Świat: Pożar osiedla pod Oslo. Spłonęło ponad 100 mieszkań",
+          "url": "https://tvn24.pl/swiat/norwegia-pozar-strawil-ponad-100-mieszkan-w-drammen-niedaleko-oslo-st9147742"
+        }
+      ],
+      "tags": [
+        "Norwegia",
+        "pożar",
+        "ewakuacja",
+        "Oslo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-chiny-osuwisko-2026-07-18-1802",
+      "section": "Świat",
+      "title": "Chiny: osuwisko zabiło osiem osób",
+      "lead": "Ewakuacja nie zatrzymała tragedii w środkowych Chinach.",
+      "whatHappened": "W środkowych Chinach zeszło osuwisko, które zabiło osiem osób i zostawiło kolejne osoby zaginione. Mieszkańcy byli ewakuowani prewencyjnie, ale żywioł i tak uderzył w domy.",
+      "keyFacts": [
+        "Ofiar śmiertelnych jest osiem.",
+        "Kolejne osoby są zaginione.",
+        "Osuwisko zeszło na domy w trakcie ewakuacji."
+      ],
+      "reactions": [
+        "To podnosi znaczenie ostrzeżeń pogodowo-geologicznych w regionie.",
+        "Skala poszukiwań może jeszcze zmienić bilans ofiar."
+      ],
+      "whyItMatters": "To jeden z najtwardszych światowych newsów dnia pod względem ofiar.",
+      "context": "W world bloku jest to najpoważniejszy materiał humanitarny obok pożaru w Norwegii.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się aktualizacja bilansu ofiar.",
+        "Sprawdzić, czy władze podadzą przyczynę osuwiska."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Świat: Chiny. Trwała ewakuacja, zeszło osuwisko. Nie żyje osiem osób",
+          "url": "https://tvn24.pl/swiat/osuwisko-w-chinach-ziemia-i-glazy-zeszly-zboczem-nie-zyje-osiem-osob-st9147888"
+        }
+      ],
+      "tags": [
+        "Chiny",
+        "osuwisko",
+        "ewakuacja",
+        "katastrofa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-kanada-podwyzka-cel-2026-07-18-1802",
+      "section": "Świat",
+      "title": "Kanada wraca do sporu o cła",
+      "lead": "Pożary lasów znowu przeradzają się w konflikt handlowy.",
+      "whatHappened": "TVN24 podaje, że pożary lasów w Kanadzie znów uruchamiają presję polityczną w USA. Donald Trump zapowiada podwyższenie ceł, wiążąc temat z dymem docierającym do amerykańskich miast.",
+      "keyFacts": [
+        "Tematem są pożary lasów i dym w USA.",
+        "Trump zapowiada podwyższenie ceł.",
+        "Wątek miesza klimat, handel i politykę."
+      ],
+      "reactions": [
+        "To klasyczny przykład, jak kryzys środowiskowy przechodzi w konflikt handlowy.",
+        "Może to wrócić w formie nowych reakcji rynkowych i dyplomatycznych."
+      ],
+      "whyItMatters": "Kanadyjski dym zaczyna mieć bezpośrednie skutki polityczne i gospodarcze.",
+      "context": "To jeden z mocniejszych światowych follow-upów dnia obok Chin i Norwegii.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się reakcja Ottawy.",
+        "Sprawdzić, czy rynek paliw lub handlu zareaguje na zapowiedź ceł."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Świat: Pożary lasów w Kanadzie. Trump zapowiada podwyższenie ceł",
+          "url": "https://tvn24.pl/swiat/pozary-lasow-w-kanadzie-dym-dociera-do-usa-trump-zapowiada-podwyzszenie-cel-st9147763"
+        }
+      ],
+      "tags": [
+        "Kanada",
+        "Trump",
+        "cła",
+        "pożary"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-ormuz-alternatywa-2026-07-18-1802",
+      "section": "Świat",
+      "title": "Ormuz przestaje być jedynym szlakiem",
+      "lead": "Irak i zachodni koncerny budują alternatywę dla cieśniny.",
+      "whatHappened": "TVN24 Biznes opisuje nową trasę dla irackiej ropy, która ma sprawić, że cieśnina Ormuz stanie się drugorzędna. To ważny sygnał logistyczny w regionie, który nadal pozostaje podatny na napięcia.",
+      "keyFacts": [
+        "Temat dotyczy irackiej ropy i zachodnich koncernów.",
+        "Celem jest alternatywa dla cieśniny Ormuz.",
+        "Wątek ma bezpośredni wymiar energetyczny."
+      ],
+      "reactions": [
+        "To bardziej strategiczna zmiana niż jednorazowy news.",
+        "Może osłabić część ryzyka związanego z żeglugą i surowcami."
+      ],
+      "whyItMatters": "Ormuz pozostaje kluczowy dla energii, więc każda alternatywa ma znaczenie rynkowe.",
+      "context": "W poprzednich slotach Ormuz był czystym konfliktem; dziś dochodzi próba obejścia cieśniny.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się szczegóły inwestycji i harmonogram.",
+        "Sprawdzić, czy rynek ropy i żeglugi zareaguje na projekt."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Nowa trasa dla irackiej ropy",
+          "url": "https://tvn24.pl/biznes/ze-swiata/irak-podpisal-umowy-naftowe-z-zachodnimi-koncernami-powstanie-alternatywa-dla-ciesniny-ormuz-st9147901"
+        },
+        {
+          "title": "CENTCOM Public Releases",
+          "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/"
+        },
+        {
+          "title": "UKMTO",
+          "url": "https://www.ukmto.org/"
+        }
+      ],
+      "tags": [
+        "Ormuz",
+        "ropa",
+        "Irak",
+        "energia"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
