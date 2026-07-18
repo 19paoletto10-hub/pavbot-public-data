@@ -1,0 +1,513 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-18",
+  "runTime": "12:05",
+  "status": "Material update",
+  "headline": "Burze, PiS i Iran nadal nadają ton",
+  "summary": "Krajowy blok przechodzi z samego alertu w operacyjne skutki: wykolejenie pociągu, list do Kaczyńskiego, ruch wokół Wołynia i bankowe prace serwisowe. Świat pozostaje pod presją Iranu, a BBC i CNN dokładują Kanadę, Ukrainę, Jemen i indyjski start kosmiczny.",
+  "checkedSources": [
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "Gov.pl RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "Gov.pl RCB alert - burze (17.07)",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-1707"
+    },
+    {
+      "title": "IMGW mapy dynamiczne",
+      "url": "https://meteo.imgw.pl/dyn/"
+    },
+    {
+      "title": "U.S. Central Command Media",
+      "url": "https://www.centcom.mil/MEDIA/"
+    },
+    {
+      "title": "USGS Earthquake Hazards Program",
+      "url": "https://www.usgs.gov/programs/earthquake-hazards"
+    },
+    {
+      "title": "UKMTO recent incidents",
+      "url": "https://www.ukmto.org/recent-incidents"
+    }
+  ],
+  "items": [
+    {
+      "id": "alerty-burze-2026-07-18-1205",
+      "section": "Alerty",
+      "title": "Burze nadal trzymają kraj w gotowości",
+      "lead": "RCB i IMGW nadal ostrzegają przed wiatrem i gradem.",
+      "whatHappened": "Poranny front nie zszedł z mapy: RCB utrzymuje alert, IMGW pokazuje aktywne strefy burzowe, a TVN24 ostrzega przed możliwością szkód i przerw w zasilaniu.",
+      "keyFacts": [
+        "Alert obowiązuje rano 18 lipca.",
+        "Ryzyko obejmuje wiatr, grad i lokalne opady.",
+        "Służby nadal liczą się z interwencjami."
+      ],
+      "reactions": [
+        "Mieszkańcy i kierowcy muszą trzymać plan awaryjny.",
+        "Kolejny slot pokaże, czy alert się utrzyma lub zdejmie."
+      ],
+      "whyItMatters": "To bezpośrednie ryzyko dla transportu, energii i bezpieczeństwa mieszkańców.",
+      "context": "W poprzednim slocie burze już dawały szkody; teraz nadal są aktywne, ale bez nowego przełomu.",
+      "watchNext": [
+        "Sprawdzić komunikat RCB i IMGW po południu.",
+        "Sprawdzić, czy pojawią się raporty o awariach albo blokadach dróg."
+      ],
+      "sources": [
+        {
+          "title": "Gov.pl RCB komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        },
+        {
+          "title": "Gov.pl RCB alert - burze (17.07)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-1707"
+        },
+        {
+          "title": "IMGW mapy dynamiczne",
+          "url": "https://meteo.imgw.pl/dyn/"
+        },
+        {
+          "title": "TVN24 Meteo: Alert RCB. \"Zabezpiecz rzeczy, które może porwać wiatr\"",
+          "url": "https://tvn24.pl/tvnmeteo/polska/alert-rcb-w-sobote-18-07-zabezpiecz-rzeczy-ktore-moze-porwac-wiatr-st9147792"
+        }
+      ],
+      "tags": [
+        "burze",
+        "RCB",
+        "IMGW",
+        "alerty"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polska-wykolejenie-pociagu-malopolska-2026-07-18-1205",
+      "section": "Polska",
+      "title": "Wykolejenie pociągu w Małopolsce blokuje ruch",
+      "lead": "Część wagonów wpadła do rzeki, służby pracują na miejscu.",
+      "whatHappened": "TVN24 podało, że towarowy skład wykoleił się na pograniczu Łomnicy-Zdroju i Wierchomli Wielkiej. Na miejscu działały służby, a ruch trzeba było częściowo zastąpić komunikacją.",
+      "keyFacts": [
+        "Zdarzenie dotyczy linii 96.",
+        "Część wagonów wpadła do Popradu.",
+        "Uruchomiono komunikację zastępczą."
+      ],
+      "reactions": [
+        "Sprawa może szybko stać się tematem PKP PLK i UTK.",
+        "Na razie najważniejsze są utrudnienia i bezpieczeństwo torowiska."
+      ],
+      "whyItMatters": "To realna przerwa w lokalnym transporcie i potencjalny problem infrastrukturalny.",
+      "context": "To nowy krajowy wątek, którego nie było w porannym runie.",
+      "watchNext": [
+        "Sprawdzić oficjalny komentarz PKP PLK lub UTK.",
+        "Sprawdzić czas przywrócenia ruchu i przyczynę wykolejenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Kraków: Małopolska. Wykoleił się pociąg, wagony w rzece. Trwa akcja służb",
+          "url": "https://tvn24.pl/krakow/malopolska-wykoleil-sie-pociag-wagony-w-rzece-trwa-akcja-sluzb-st9147424"
+        },
+        {
+          "title": "TVN24 Polska: Zełenski otwiera archiwa, list do Kaczyńskiego, wykolejony pociąg",
+          "url": "https://tvn24.pl/polska/szesc-rzeczy-ktore-warto-wiedziec-w-sobote-18-lipca-najwazniejsze-informacje-st9147751"
+        }
+      ],
+      "tags": [
+        "kolej",
+        "Małopolska",
+        "infrastruktura",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-pis-list-kaczynski-2026-07-18-1205",
+      "section": "Polityka",
+      "title": "PiS dostało list do Kaczyńskiego",
+      "lead": "45 nazwisk podbija napięcie wokół Morawieckiego i Rozwój Plus.",
+      "whatHappened": "TVN24 podało, że parlamentarzyści PiS związani ze Stowarzyszeniem Rozwój Plus wysłali list do Jarosława Kaczyńskiego. W tle jest spór o dyscyplinę partyjną i reakcje wokół Mateusza Morawieckiego.",
+      "keyFacts": [
+        "Pod listem jest 45 nazwisk.",
+        "Sprawa wiąże się z Morawieckim i Rozwój Plus.",
+        "To już formalny sygnał, nie tylko medialny komentarz."
+      ],
+      "reactions": [
+        "W najbliższym slocie warto czekać na odpowiedź partii.",
+        "Temat może przejść w działania dyscyplinarne."
+      ],
+      "whyItMatters": "Pokazuje skalę napięcia w głównym obozie opozycyjnym.",
+      "context": "Wczoraj konflikt był opisywany ogólnie; dziś dostał konkretny dokument.",
+      "watchNext": [
+        "Sprawdzić, czy PiS odpowie komunikatem lub decyzją personalną.",
+        "Sprawdzić, czy Morawiecki publicznie skomentuje list."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Polska: Parlamentarzyści PiS piszą do Jarosława Kaczyńskiego. Pod listem 45 nazwisk",
+          "url": "https://tvn24.pl/polska/parlamentarzysci-pis-pisza-do-jaroslawa-kaczynskiego-pod-listem-45-nazwisk-st9147440"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Kaczyński",
+        "Morawiecki",
+        "list"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "polityka-zelenski-archiwa-wolyn-2026-07-18-1205",
+      "section": "Polityka",
+      "title": "Zełenski otwiera archiwa o Wołyniu",
+      "lead": "Kijów sygnalizuje ruch w wrażliwym polsko-ukraińskim temacie.",
+      "whatHappened": "Dzisiejsze podsumowanie TVN24 podaje, że Wołodymyr Zełenski zapowiedział otwarcie archiwów służb specjalnych Ukrainy dotyczących Wołynia.",
+      "keyFacts": [
+        "Dotyczy to archiwów związanych z Wołyniem.",
+        "To sygnał polityczny, nie tylko historyczny.",
+        "Temat ma znaczenie dla relacji z Polską."
+      ],
+      "reactions": [
+        "W tle można wypatrywać odpowiedzi polskich władz albo parlamentarzystów.",
+        "To może wejść w parlamentarny lub bilateralny tryb."
+      ],
+      "whyItMatters": "Wołyń pozostaje jednym z najbardziej wrażliwych punktów w relacjach polsko-ukraińskich.",
+      "context": "W poprzednich dniach temat wracał jako komentarz, a dziś pojawia się konkretny ruch ze strony Zełenskiego.",
+      "watchNext": [
+        "Sprawdzić, czy padają szczegóły zakresu i terminu otwarcia archiwów.",
+        "Sprawdzić, czy pojawi się reakcja Warszawy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Polska: Zełenski otwiera archiwa, list do Kaczyńskiego, wykolejony pociąg",
+          "url": "https://tvn24.pl/polska/szesc-rzeczy-ktore-warto-wiedziec-w-sobote-18-lipca-najwazniejsze-informacje-st9147751"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Wołyń",
+        "dyplomacja",
+        "Polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gospodarka-banki-maintenance-2026-07-18-1205",
+      "section": "Gospodarka",
+      "title": "Banki planują prace techniczne",
+      "lead": "ING i część innych banków wyłączają moduły i serwisy.",
+      "whatHappened": "TVN24 Biznes podaje, że w sobotę 18 lipca i w nocy 18/19 lipca część usług bankowych będzie niedostępna z powodu prac technicznych. W centrum uwagi jest ING, ale komunikat dotyczy kilku banków.",
+      "keyFacts": [
+        "Okno obejmuje sobotę i noc z 18 na 19 lipca.",
+        "Mogą być wyłączone aplikacje lub moduły maklerskie.",
+        "To planowa przerwa serwisowa, nie awaria."
+      ],
+      "reactions": [
+        "Klienci muszą wcześniej zrobić przelewy i operacje.",
+        "Zwykle po takich oknach pojawiają się krótkie komunikaty o zakończeniu prac."
+      ],
+      "whyItMatters": "To bezpośredni wpływ na dostęp do pieniędzy i operacji inwestycyjnych.",
+      "context": "To typowy operacyjny news dnia, ale wciąż ważny dla użytkowników iOS w Polsce.",
+      "watchNext": [
+        "Sprawdzić, czy banki przedłużą okno lub zgłoszą dodatkowe ograniczenia.",
+        "Sprawdzić, czy pojawią się skargi klientów na dostępność aplikacji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Serwis i aplikacja \"będą niedostępne\". Komunikat największego banku",
+          "url": "https://tvn24.pl/biznes/z-kraju/prace-techniczne-w-bankach-18-19-lipca-2026-komunikaty-pko-bp-erste-ing-banku-slaskiego-i-mbanku-st9147313"
+        }
+      ],
+      "tags": [
+        "banki",
+        "ING",
+        "prace techniczne",
+        "finanse"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-system-kaucyjny-skargi-2026-07-18-1205",
+      "section": "Gospodarka",
+      "title": "System kaucyjny zbiera skargi",
+      "lead": "Zwrot opakowań nadal sprawia kłopoty klientom i sklepom.",
+      "whatHappened": "TVN24 Biznes pisze o dziesiątkach skarg na system kaucyjny, głównie w sprawie zwrotu opakowań. To sygnał, że wdrożenie nadal generuje tarcie operacyjne.",
+      "keyFacts": [
+        "Skargi dotyczą zwrotu opakowań.",
+        "Problem jest powtarzalny, nie jednostkowy.",
+        "Temat dotyczy codziennych zakupów i sklepów."
+      ],
+      "reactions": [
+        "Resort może wrócić do wyjaśnień lub korekt.",
+        "Handel będzie naciskał na uproszczenia."
+      ],
+      "whyItMatters": "To szeroko odczuwalna zmiana w zwykłych zakupach.",
+      "context": "W poprzednich tygodniach temat był już na rynku, ale dziś wchodzi w fazę skarg i praktycznych problemów.",
+      "watchNext": [
+        "Sprawdzić, czy resort klimatu zapowie korekty.",
+        "Sprawdzić, czy sieci handlowe publikują dodatkowe instrukcje."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Dziesiątki skarg na system kaucyjny",
+          "url": "https://tvn24.pl/biznes/z-kraju/system-kaucyjny-w-polsce-rosnie-liczba-skarg-na-zwrot-opakowan-st9147853"
+        }
+      ],
+      "tags": [
+        "system kaucyjny",
+        "handel",
+        "odpady",
+        "konsument"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "gospodarka-kurierzy-zwolnienia-2026-07-18-1205",
+      "section": "Gospodarka",
+      "title": "Firma kurierska zapowiada zwolnienia",
+      "lead": "Resort reaguje, a spółka tłumaczy ruch transformacją.",
+      "whatHappened": "TVN24 Biznes opisuje plan zwolnień w firmie kurierskiej i reakcję resortu. Spółka tłumaczy decyzję zmianą operacyjną, a nie nowymi przepisami.",
+      "keyFacts": [
+        "Temat dotyczy kurierów.",
+        "Resort już poprosił o wyjaśnienia.",
+        "Firma odsuwa winę od regulacji."
+      ],
+      "reactions": [
+        "To może uruchomić spór o model pracy i outsourcing.",
+        "W następnym slocie warto sprawdzić, czy pojawi się skala zwolnień."
+      ],
+      "whyItMatters": "To sygnał dla rynku pracy i logistyki ostatniej mili.",
+      "context": "W krajowym bloku gospodarczym temat jest bardziej społeczny niż rynkowy.",
+      "watchNext": [
+        "Sprawdzić, czy firma poda harmonogram i liczbę etatów.",
+        "Sprawdzić, czy ministerstwo ograniczy się do komentarza czy podejmie działania."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Planują zwolnić wszystkich kurierów. Resort reaguje, firma wyjaśnia",
+          "url": "https://tvn24.pl/biznes/z-kraju/planuja-zwolnic-wszystkich-kurierow-resort-reaguje-firma-wyjasnia-st9146694"
+        }
+      ],
+      "tags": [
+        "kurierzy",
+        "praca",
+        "logistyka",
+        "zwolnienia"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "swiat-iran-strikes-7th-night-2026-07-18-1205",
+      "section": "Świat",
+      "title": "USA uderzają w Iran siódmą noc z rzędu",
+      "lead": "Iran pozostaje głównym punktem światowego ryzyka.",
+      "whatHappened": "BBC podaje kolejną noc ataków USA na Iran, a CNN pokazuje żywy konflikt wokół celów i negocjacji. W centrum są też obiekty odsalania wody i pytanie o trwałość rozejmu.",
+      "keyFacts": [
+        "To siódma kolejna noc uderzeń.",
+        "CNN mówi o eskalacji wokół zakładów odsalania.",
+        "Teheran jest pod presją także wewnętrzną."
+      ],
+      "reactions": [
+        "Rynek energii i żegluga nadal będą reagować.",
+        "Najbliższy slot może przynieść kolejny komunikat CENTCOM lub reakcję Iranu."
+      ],
+      "whyItMatters": "To nadal największe globalne ryzyko geopolityczne w tym pulsu.",
+      "context": "Wczorajsze wpisy już pokazywały Iran jako rdzeń świata; dziś napięcie nie słabnie.",
+      "watchNext": [
+        "Sprawdzić nowe komunikaty CENTCOM.",
+        "Sprawdzić, czy pojawi się ślad w cenach ropy albo w komunikatach morskich."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US strikes hit Iran for seventh consecutive night",
+          "url": "https://www.bbc.co.uk/news/articles/cy748n8zx8ro?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Live updates: Iran war news; US-Iran conflict escalates further with strikes on desalination plants",
+          "url": "https://www.cnn.com/2026/07/18/world/live-news/iran-war-trump"
+        },
+        {
+          "title": "U.S. Central Command Media",
+          "url": "https://www.centcom.mil/MEDIA/"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "bezpieczeństwo",
+        "Ormuz"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-canada-wildfires-tariffs-2026-07-18-1205",
+      "section": "Świat",
+      "title": "Pożary w Kanadzie wypychają całe społeczności",
+      "lead": "BBC i CNN łączą pożary z presją polityczną i zdrowotną.",
+      "whatHappened": "BBC pisze o nowych pożarach i dymie kierującym się na USA, a CNN podaje, że całe społeczności rdzenne muszą uciekać. W tle Trump grozi nowymi cłami wobec Kanady.",
+      "keyFacts": [
+        "Ewakuacja dotyczy społeczności rdzennej.",
+        "Dym ma wpływ na miasta w USA.",
+        "Wątek wszedł też w spór handlowy."
+      ],
+      "reactions": [
+        "To może przejść w dalsze ostrzeżenia środowiskowe.",
+        "W polityce pojawia się dodatkowy konflikt handlowy."
+      ],
+      "whyItMatters": "To jednocześnie kryzys klimatyczny, humanitarny i polityczny.",
+      "context": "To jedna z najczytelniejszych nowych światowych historii tego slotu.",
+      "watchNext": [
+        "Sprawdzić, czy Kanada lub USA ogłoszą dodatkowe alerty zdrowotne.",
+        "Sprawdzić, czy groźby celne przybiorą formalną formę."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Trump threatens new Canada tariffs over fires sending \"filthy\" air into US cities",
+          "url": "https://www.bbc.co.uk/news/articles/cwyq93j34lgo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Canada wildfires: An entire Indigenous community forced to flee",
+          "url": "https://www.cnn.com/2026/07/18/americas/canada-wildfire-destroys-collins-latam-intl"
+        }
+      ],
+      "tags": [
+        "Kanada",
+        "pożary",
+        "cła",
+        "klimat"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "swiat-ukraine-defence-minister-outrage-2026-07-18-1205",
+      "section": "Świat",
+      "title": "Ukraińscy żołnierze krytykują dymisję ministra",
+      "lead": "Wojskowi mówią o silnym napięciu wokół decyzji w Kijowie.",
+      "whatHappened": "BBC podaje, że część żołnierzy jest oburzona odwołaniem ministra obrony, a CNN opisuje protesty wokół ruchu Zełenskiego. To łączy presję frontową z polityką wewnętrzną.",
+      "keyFacts": [
+        "Temat dotyczy obrony i morale.",
+        "CNN mówi o protestach w Kijowie.",
+        "Sprawa jest bezpośrednio związana z wojną z Rosją."
+      ],
+      "reactions": [
+        "W Kijowie może pojawić się dalsza krytyka lub korekta składu rządu.",
+        "Zachodni partnerzy będą patrzeć na stabilność polityczną."
+      ],
+      "whyItMatters": "To ważne dla spójności ukraińskiego kierownictwa w czasie wojny.",
+      "context": "Temat pasuje do szerszego bloku wojny i bezpieczeństwa w Europie.",
+      "watchNext": [
+        "Sprawdzić, czy Zełenski odpowie publicznie.",
+        "Sprawdzić, czy armia albo parlament wydadzą komunikat."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Many Ukrainian soldiers outraged over removal of defence minister, troops tell BBC",
+          "url": "https://www.bbc.co.uk/news/articles/cvg8w4dpjkwo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: Zelensky faces protests over ousting of Ukraine’s defense minister despite military gains",
+          "url": "https://www.cnn.com/2026/07/16/europe/russia-ukraine-attack-keir-starmer-visit-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "obrona",
+        "protesty",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "technologia-india-commercial-rocket-2026-07-18-1205",
+      "section": "Technologia",
+      "title": "Indie wysyłają pierwszy komercyjny rakietowy lot",
+      "lead": "Start pokazuje, że prywatny sektor kosmiczny w Indiach dalej przyspiesza.",
+      "whatHappened": "BBC informuje, że start-up w Indiach wyniósł na orbitę pierwszy komercyjny rakietowy system zaprojektowany do lotu orbitalnego. To ważny sygnał dla prywatnego sektora kosmicznego.",
+      "keyFacts": [
+        "To pierwszy komercyjny start tego typu w Indiach.",
+        "Dotyczy orbity, nie tylko testu suborbitalnego.",
+        "Sektor prywatny bierze większą część ciężaru innowacji."
+      ],
+      "reactions": [
+        "To może zwiększyć uwagę inwestorów i regulatorów.",
+        "Wersja CNN o Chinach pokazuje, że region nadal konkuruje w technologiach strategicznych."
+      ],
+      "whyItMatters": "To jedna z nielicznych dziś technologicznych historii z realnym skutkiem rynkowym.",
+      "context": "W pulsu dnia technologia jest tu bardziej przemysłowa niż konsumencka.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się potwierdzenie po starcie od agencji kosmicznej.",
+        "Sprawdzić, czy inne kraje regionu odpowiadają podobnymi projektami."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Space start-up launches India’s first commercial rocket designed for orbit",
+          "url": "https://www.bbc.co.uk/news/articles/clyekv7rld3o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Indie",
+        "kosmos",
+        "technologia",
+        "start-up"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "bezpieczenstwo-yemen-tanker-hijack-2026-07-18-1205",
+      "section": "Bezpieczeństwo",
+      "title": "Podejrzani piraci znów biorą tankowiec u Jemenu",
+      "lead": "UKMTO i BBC znów pokazują ryzyko u wybrzeży Jemenu.",
+      "whatHappened": "BBC podaje, że drugi tankowiec w trzy miesiące został uprowadzony u wybrzeży Jemenu przez podejrzanych somalijskich piratów. UKMTO utrzymuje świeży ślad incydentów morskich.",
+      "keyFacts": [
+        "To drugi taki incydent w trzy miesiące.",
+        "Sprawa dotyczy tankowca i żeglugi handlowej.",
+        "Ryzyko morskie nie ogranicza się już tylko do Iranu."
+      ],
+      "reactions": [
+        "Armatorzy i służby morskie mogą podnieść czujność.",
+        "To kolejny czynnik wspierający napięcia na rynku energii."
+      ],
+      "whyItMatters": "To bezpośrednie ryzyko dla transportu i cen paliw.",
+      "context": "Ten wątek dobrze łączy się z irańskim konfliktem i szerszym blokiem bezpieczeństwa morskiego.",
+      "watchNext": [
+        "Sprawdzić nowy komunikat UKMTO.",
+        "Sprawdzić, czy pojawi się oficjalne potwierdzenie z państw regionu lub armatora."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Second tanker in three months hijacked off Yemen by suspected Somali pirates",
+          "url": "https://www.bbc.co.uk/news/articles/c7vg6dml34vo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "UKMTO recent incidents",
+          "url": "https://www.ukmto.org/recent-incidents"
+        }
+      ],
+      "tags": [
+        "Jemen",
+        "żegluga",
+        "piractwo",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    }
+  ]
+}

@@ -2,6 +2,10 @@
 
 ## Open
 
+- Watch whether the Małopolska derailment gets a PKP PLK, UTK or police note on cause and service impact.
+- Watch whether the bank maintenance window triggers extra customer issues or a longer outage notice.
+- Watch whether the system kaucyjny complaints become a formal tweak proposal or retailer guidance update.
+
 - Watch whether the 18/07 morning storm line turns into power cuts, road closures or additional evacuation reports before noon.
 - Watch whether the latest Iran / Ormuz night produces a fresh CENTCOM note, maritime advisory or oil-price follow-through.
 
