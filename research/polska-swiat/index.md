@@ -395,6 +395,15 @@ pozostaje najbardziej konkretnym potwierdzonym elementem wsparcia z ostatniej
 doby. Krajowo najświeższy sygnał to alerty RCB przed burzami i możliwymi
 przerwami w dostawie prądu.
 
+Po porannym runie 18 lipca Ormuz wszedł w siódmą z rzędu noc uderzeń
+potwierdzoną już przez CENTCOM, a AP opisuje równoległą wymianę ataków i nowe
+ostrzeżenie Teheranu. Ukraina nadal działa z pełniącym obowiązki ministrem
+obrony, bo formalne zatwierdzenie przez parlament może się opóźnić, a Francja
+i Niemcy doprecyzowały współpracę jądrową i przeciwrakietową jako element
+szerszej europejskiej architektury bezpieczeństwa. Krajowo najświeższy
+sygnał to akt oskarżenia ABW wobec 18-letniego obywatela Ukrainy działającego
+na rzecz rosyjskich służb oraz alert RCB o burzach z gradem i silnym wiatrem.
+
 ## Recent Reports
 
 - [2026-07-16](runs/2026-07-16.md)
