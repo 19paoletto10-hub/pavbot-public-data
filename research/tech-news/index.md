@@ -4,6 +4,8 @@ Last updated: 2026-07-18
 
 ## Current Understanding
 
+Wieczorny refresh z 2026-07-18 przesuwa temat jeszcze niżej w stacku: Etched podbija wycenę inference chips do poziomu $20 mld, SpaceX rozmawia z Pentagonem o compute dla AI, DOJ luzuje dawny zakaz TikToka na urządzeniach służbowych po qualified divestiture, Vertu sprzedaje luksusowy telefon jako executive AI agent, a Agility otwiera Fremont hub obok Tesli. IBM dopełnia obraz, pokazując że przesunięcie wydatków enterprise w stronę AI infra już uderza w legacy software i marże. Wspólny mianownik to finansjalizacja compute, public-sector procurement i physical AI readiness.
+
 Poranny refresh z 2026-07-18 przesuwa temat jeszcze dalej od samego modelowego rollout do fizycznych control surfaces, prawa i kosztów konsumenckich. OpenAI łączy Codex Micro z GPT-Live w jeden bardziej namacalny workflow dla agentów, Apple zaostrza spór z OpenAI przez listy do byłych pracowników, Databricks pokazuje, że kapitał wciąż płynie do AI infra przy narracji cost control, a San Francisco, Indie i Kaiser zamieniają AI w kwestie egzekwowania, komponentowych cen i workplace surveillance. Wspólny mianownik to odejście od demo modelu do kontroli, odpowiedzialności i granic zgody.
 
 Wieczorny refresh z 2026-07-17 przesuwa temat z samej rozbudowy AI UX do monetyzacji, bezpieczeństwa i infrastruktury. Google Marketing Live zamienia AI Search w bardziej bezpośrednią warstwę reklamową i agentic commerce przez nowe formaty reklam oraz Ask Advisor, General Compute bierze $400M loan pod inference chips collateral, Zoox robi software recall po heavy smoke emergency-scene edge case, a Netflix podaje, że około 300 tytułów użyło genAI w post-produkcji. Wspólny mianownik to przejście od capability do kosztu, kontroli i produkcyjnej odpowiedzialności.
@@ -204,6 +206,7 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-18: Wieczorny refresh dodał Etched $20B valuation, SpaceX/Pentagon compute, DOJ TikTok reversal, Vertu Alphafold, Agility Fremont hub i IBM AI capex squeeze; wspólny sygnał przesunął się w stronę compute commercialization i physical AI readiness.
 - 2026-07-18: Dzisiejszy refresh dodał Codex Micro, GPT-Live, Apple/OpenAI escalation, Databricks $188B, SF nudify enforcement, India memory crunch i Kaiser workplace surveillance; wspólny sygnał pozostał control-first.
 - 2026-07-17: Wieczorny refresh dodał Google Marketing Live AI Search ads i Ask Advisor, recall Zoox po heavy smoke, finansowanie inference przez General Compute, disclosure Netflix o około 300 tytułach z genAI oraz bieżący community signal z Product Hunt i HN.
 - 2026-07-17: Poranny refresh dodał Google Search connected apps i Vids, Roblox Build, ofertę Ubera na Delivery Hero, ransomware w fairlife i ostrzejsze zasady dla Waymo w San Francisco.

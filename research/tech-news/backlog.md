@@ -4,6 +4,11 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Etched valuation jump | $20B talks show inference chips are still getting rewarded like frontier infra | Watch whether the round closes and whether customer orders convert into production revenue | Open |
+| High | Track SpaceX Pentagon compute deal | Defense procurement may become a new commercial AI compute channel | Watch contract scope, security approvals and reactions from cloud competitors | Open |
+| Medium | Track TikTok federal-device reversal | DOJ opinion shows a qualified divestiture can unwind an earlier device ban | Watch agency adoption, rollout consistency and any broader policy copycats | Open |
+| Medium | Track Vertu executive AI phone | Luxury mobile with Hermes Agent is a new premium agent-hardware niche | Watch retail interest, enterprise positioning and software stability | Open |
+| High | Track Agility Fremont physical AI hub | Agility's Bay Area hub and S-4 path make humanoids more bankable and operational | Watch the merger timeline, headcount ramp and revenue deployment updates | Open |
 | High | Track Google AI Search monetization | Ask Advisor and new ad formats tie Search, Ads and Marketing Platform together | Watch rollout breadth, advertiser reaction and whether AI Search becomes a durable revenue surface | Open |
 | High | Track Zoox heavy-smoke recall | NHTSA recall turns emergency-scene perception into a formal AV safety issue | Watch the software remedy, follow-up incidents and regulator response | Open |
 | High | Track inference-chip financing | General Compute's loan suggests inference chips are becoming financeable assets | Watch whether other lenders and AI clouds copy the structure | Open |

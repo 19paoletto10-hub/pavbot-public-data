@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-18",
+  "runTime": "19:37",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny run przesuwa temat jeszcze niżej w stacku: z modelowych premier do wyceny compute, publicznych zamówień i fizycznych interfejsów pracy. Etched podnosi stawkę w inference chips do poziomu $20 mld, SpaceX rozmawia z Pentagonem o dostawie mocy obliczeniowej, a IBM pokazuje, że przesunięcie wydatków w stronę AI infrastruktury już uderza w legacy software i marże. To razem wzmacnia obraz rynku, w którym compute jest finansowym aktywem, a nie tylko kosztem chmury.",
+    "Równolegle publiczna dystrybucja i sprzęt zaczynają być równie ważne jak sam model. DOJ uznaje, że po qualified divestiture federalni pracownicy mogą znowu pobierać TikToka na urządzenia służbowe, Vertu sprzedaje luksusowy telefon jako executive AI agent, a Agility Robotics otwiera Fremont hub i szykuje się do wejścia na rynek publiczny. Wspólny mianownik to kontrola, ownership i operacyjna gotowość, a nie sam marketing wokół AI.",
+    "Community signal pozostaje control-first. Hacker News nadal premiuje Apple/OpenAI, Kaiser nurses, open source AI i pytania o human-in-the-loop, a Product Hunt promuje AI coworkerów, shared memory i narzędzia do współedycji z agentem. Builderzy chcą AI, ale tylko tam, gdzie da się ją obserwować, ograniczać i poprawiać."
+  ],
+  "summaryBullets": [
+    "Infrastruktura: Etched podnosi stawkę w inference chips",
+    "Infrastruktura: SpaceX wchodzi do Pentagon compute",
+    "Infrastruktura: IBM pokazuje koszt AI capex dla legacy software"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-18-1937-0-etched-podnosi-stawke-w-inference-chips-b5e9bba1a8",
+      "section": "Infrastruktura",
+      "title": "Etched podnosi stawkę w inference chips",
+      "standfirst": "WSJ podaje, że Etched rozmawia o rundzie przy wycenie około $20 mld. To duży skok względem wcześniejszego sygnału o $1 mld contract orders i $5 mld wyceny z czerwca.",
+      "whatHappened": "Rynek znów podnosi cenę za wyspecjalizowany inference hardware.",
+      "whyItMatters": "To potwierdza, że tańszy compute nie jest już niszowym eksperymentem, tylko jednym z najgorętszych aktywów AI.",
+      "deeperAnalysis": [
+        "Etched nie jest klasycznym \"chip startupem\" sprzedającym wizję za przyszłe benchmarki. Firma już wcześniej komunikowała $1 mld zamówień kontraktowych i opisywała swoje systemy jako frontier inference clusters, czyli pełne zestawy do szybkiego uruchamiania modeli. Dzisiejszy sygnał do $20 mld pokazuje, że inwestorzy kupują tę historię jako realny biznes, nie tylko opcję.",
+        "Ważne jest też to, że Etched adresuje najbardziej wrażliwą ekonomicznie część stacku AI. Inference to koszt operacyjny, który rośnie wraz z użyciem produktu, więc każde obniżenie ceny i zużycia energii ma bezpośredni wpływ na marże. Jeśli rynek wycenia takie firmy coraz wyżej, to oznacza, że pressure na model-hosting i GPU-only approach będzie tylko rosło.",
+        "To także sygnał dla całego ekosystemu semiconductor. Przy takiej wycenie coraz trudniej traktować inference ASIC jako poboczny eksperyment. To staje się osobną kategorią infrastruktury, z własnym financing story, customer demand i porównaniem do hyperscalerów."
+      ],
+      "contextPoints": [
+        "Co się stało: Etched jest w rozmowach o rundzie przy wycenie około $20 mld.",
+        "Dlaczego ważne: inference chips stają się jednym z najcenniejszych segmentów AI infra.",
+        "Na co patrzeć dalej: czy runda domknie się i czy inni producenci chipów dostaną podobne wyceny."
+      ],
+      "sources": [
+        {
+          "title": "WSJ: AI chip startup Etched is in talks for $20 billion valuation",
+          "url": "https://www.wsj.com/tech/ai/ai-chip-startup-etched-is-in-talks-for-20-billion-valuation-caf1787d"
+        },
+        {
+          "title": "TechCrunch: Nvidia competitor Etched hits $5B valuation, $1B in sales for AI chip",
+          "url": "https://techcrunch.com/2026/06/30/nvidia-competitor-etched-hits-5b-valuation-1b-in-sales-for-ai-chip/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Etched",
+        "inference",
+        "chips",
+        "valuation",
+        "AI infrastructure",
+        "fundraising"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-18-1937-1-spacex-wchodzi-do-pentagon-compute-52c13bfbaa",
+      "section": "Infrastruktura",
+      "title": "SpaceX wchodzi do Pentagon compute",
+      "standfirst": "Reuters i WSJ opisują rozmowy SpaceX z Pentagonem o dostawie data-center capacity dla AI workloads. Potencjalna umowa byłaby warta miliardy dolarów i rozszerzałaby rolę SpaceX poza rakiety, satelity i Starlink.",
+      "whatHappened": "SpaceX negocjuje możliwy kontrakt na dostawę mocy obliczeniowej dla amerykańskiego resortu obrony.",
+      "whyItMatters": "Defense procurement może stać się nowym, dużym kanałem sprzedaży compute obok hyperscalerów i neoclouds.",
+      "deeperAnalysis": [
+        "To ważne, bo pokazuje, że AI compute zaczyna wchodzić w klasyczną infrastrukturę państwową. Pentagon szuka zdolności do uruchamiania modeli na dużą skalę, a SpaceX proponuje nie tylko transport kosmiczny, ale też dostęp do data-center capacity. To już nie jest wyłącznie biznes transportowy.",
+        "Jeśli ten kierunek się utrzyma, SpaceX może stać się czymś w rodzaju strategicznego operatora infrastruktury obliczeniowej dla sektora obronnego. To naturalnie ustawia firmę bliżej Google, Amazon, Microsoft i Oracle, ale z własnym profilem kosztowym i politycznym. W dodatku taki model sprzedaży jest atrakcyjny tam, gdzie liczy się szybki dostęp do capacity, a nie tylko public cloud abstraction.",
+        "Dla rynku AI to kolejny sygnał, że compute jest coraz bardziej kontraktowany jak energia albo łączność. Kto ma zasób i zaufanie regulatora, ten może sprzedawać mocy obliczeniowej nie tylko startupom, ale też państwu."
+      ],
+      "contextPoints": [
+        "Co się stało: SpaceX rozmawia z Pentagonem o dostawie data-center capacity dla AI.",
+        "Dlaczego ważne: obronność staje się dużym klientem dla commercial compute.",
+        "Na co patrzeć dalej: finalny zakres kontraktu, security approvals i reakcja konkurentów."
+      ],
+      "sources": [
+        {
+          "title": "Reuters via Investing: Musk’s SpaceX in talks to supply the Pentagon with computing power",
+          "url": "https://m.investing.com/news/stock-market-news/musks-spacex-in-talks-to-provide-computing-power-to-the-pentagon-wsj-reports-4799007?ampMode=1"
+        },
+        {
+          "title": "WSJ: SpaceX in Talks to Provide Computing Power for Pentagon AI Push",
+          "url": "https://www.wsj.com/tech/ai/spacex-in-talks-to-provide-computing-power-for-pentagons-ai-push-15e752e4"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "SpaceX",
+        "Pentagon",
+        "DoD",
+        "AI compute",
+        "data center",
+        "defense"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-18-1937-2-ibm-pokazuje-koszt-ai-capex-dla-legacy-software-e55aad3d13",
+      "section": "Infrastruktura",
+      "title": "IBM pokazuje koszt AI capex dla legacy software",
+      "standfirst": "Dzisiejsze komentarze rynkowe dalej podkreślają, że IBM potknął się na shiftcie wydatków enterprise w stronę AI infrastructure i memory-heavy capex. WSJ opisuje firmę jako klasyczny przykład spóźnienia na nowy cykl.",
+      "whatHappened": "IBM staje się jednym z najbardziej czytelnych sygnałów, że AI boom zmienia budżety klientów.",
+      "whyItMatters": "To nie tylko problem jednej spółki, ale wskaźnik, że tradycyjne software i consulting dostają presję od sprzętu, pamięci i data center.",
+      "deeperAnalysis": [
+        "IBM jest tutaj użyteczny jako wskaźnik zmiany budżetowej. Gdy klienci wybierają serwery, storage i memory zamiast klasycznych software upgrades, oznacza to, że AI infrastructure zaczyna konkurować o ten sam portfel wydatków, który wcześniej zasilał legacy vendorów. To dokładnie ten typ przesunięcia, który zwykle widać dopiero po kwartale lub dwóch.",
+        "Ważne jest też to, że IBM nie jest startupem ani modnym neocloudem. Jeśli nawet taka firma ma problem z dopasowaniem się do AI cycle, to sygnał dla rynku software jest bardzo twardy. Nie chodzi już o to, czy AI pomaga, tylko o to, kto zostaje sfinansowany, gdy enterprise przesuwa capex na infrastrukturę i pamięć.",
+        "Ten case łączy się z dzisiejszym Etched i SpaceX. Wszystkie trzy historie opisują ten sam ruch: compute staje się strategicznym zasobem, a firmy, które nie kontrolują jego dostępu albo nie potrafią na nim zarabiać, dostają w kość."
+      ],
+      "contextPoints": [
+        "Co się stało: IBM dalej znajduje się pod presją po słabszym Q2 i gwałtownej wyprzedaży akcji.",
+        "Dlaczego ważne: AI capex już wpływa na legacy software budgets.",
+        "Na co patrzeć dalej: czy słabość IBM rozleje się szerzej na enterprise software i consulting."
+      ],
+      "sources": [
+        {
+          "title": "WSJ: IBM CEO Arvind Krishna Has Nowhere to Hide From AI",
+          "url": "https://www.wsj.com/tech/ibm-ceo-arvind-krishna-has-nowhere-to-hide-from-ai-c9ff290f"
+        },
+        {
+          "title": "AP: IBM stock tumbles as preliminary 2Q results come in below Wall Street expectations",
+          "url": "https://apnews.com/article/2f28030dd13c572ad21a512da77d96cd"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "IBM",
+        "capex",
+        "software",
+        "AI infrastructure",
+        "earnings",
+        "memory"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-18-1937-3-doj-odwraca-ban-tiktoka-na-urzadzeniach-sluzbowych-f56f31ae5d",
+      "section": "Regulacje",
+      "title": "DOJ odwraca ban TikToka na urządzeniach służbowych",
+      "standfirst": "OLC Departamentu Sprawiedliwości uznało, że TikTok USDS po qualified divestiture nie podpada już pod federalny zakaz na urządzeniach rządowych. DOJ wprost stwierdza, że agencje mogą pozwolić pracownikom na pobieranie aplikacji zgodnie z local workplace policy.",
+      "whatHappened": "Jedna formalna opinia prawna otwiera drogę do powrotu TikToka na służbowe telefony federalne.",
+      "whyItMatters": "To przykład, jak ownership i governance structure mogą zmienić status platformy bezpieczeństwa w sektorze publicznym.",
+      "deeperAnalysis": [
+        "Ten dokument jest ciekawy, bo pokazuje, że zakaz nie jest wieczny ani absolutny. Po qualified divestiture DOJ interpretuje aplikację jako oddzieloną od dawnych ownership risks, a więc dopuszczalną na urządzeniach federalnych przy odpowiednich politykach. To daje bardzo konkretny precedens dla platform, które próbują odzyskać zaufanie regulatora poprzez zmianę struktury własności.",
+        "W praktyce oznacza to, że bezpieczeństwo aplikacji nie jest oceniane tylko na podstawie interfejsu, ale także na podstawie kontroli nad algorytmem, danymi i corporate governance. To ważne nie tylko dla TikToka, ale też dla innych aplikacji społecznościowych, które mogą stać się politycznie wrażliwe.",
+        "Warto patrzeć, czy agencje zaczną wdrażać to jednolicie. Jeżeli nie, opinia OLC może zostać bardziej symbolem niż realną zmianą praktyki."
+      ],
+      "contextPoints": [
+        "Co się stało: DOJ ogłosił, że TikTok USDS nie jest już objęty zakazem z 2022 roku.",
+        "Dlaczego ważne: ownership change zmienia status produktu w sektorze publicznym.",
+        "Na co patrzeć dalej: agency discretion, wdrożenie i dalsza polityka wokół TikToka."
+      ],
+      "sources": [
+        {
+          "title": "Justice Department OLC memo",
+          "url": "https://www.justice.gov/olc/media/1453136/dl?inline="
+        },
+        {
+          "title": "TechCrunch: Federal employees can download TikTok on their work phones again",
+          "url": "https://techcrunch.com/2026/07/18/federal-employees-can-download-tiktok-on-their-work-phones-again/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "TikTok",
+        "DOJ",
+        "government devices",
+        "divestiture",
+        "policy",
+        "security"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-18-1937-4-vertu-robi-z-telefonu-luksusowy-agent-executive-e11db1d7e6",
+      "section": "Produkty",
+      "title": "Vertu robi z telefonu luksusowy agent executive",
+      "standfirst": "Vertu promuje Alphafold jako luksusowy AI phone dla executives. Urządzenie startuje od $6,880 i stawia Hermesa jako agentowy interfejs do dokumentów, harmonogramów i business workflows.",
+      "whatHappened": "Luxury handset został opakowany jako osobisty command center dla menedżerów.",
+      "whyItMatters": "AI wchodzi do premium mobile jako produkt zaufania, statusu i pracy, a nie tylko jako kolejny chat.",
+      "deeperAnalysis": [
+        "Vertu sprzedaje tu nie tylko telefon, ale też status, prywatność i obietnicę oszczędności czasu. Hermes Agent ma wykonywać wieloetapowe workflowy, analizować pliki i pomagać w codziennej organizacji pracy. To bardzo wyraźny sygnał, że AI phone nie musi być masowym consumer gadgetem. Może być produktem premium dla konkretnej klasy użytkowników.",
+        "TechCrunch zwraca uwagę, że w praktyce Alphafold zachowuje się nierówno, a jego autonomia bywa bardziej ryzykowna niż pomocna. To ważne, bo pokazuje rozdźwięk między agentową narracją a realnym użyciem. Właśnie taki rozdźwięk decyduje zwykle o tym, czy nowa kategoria urządzeń przetrwa pierwszą falę zainteresowania.",
+        "Jeśli jednak Vertu trafi w potrzebę executive workflow, może to wyznaczyć niszę dla podobnych produktów: premium mobile, secure data handling, concierge-style agents i enterprise-friendly privacy story. To inny rynek niż masowe smartfony z dopisaną funkcją AI."
+      ],
+      "contextPoints": [
+        "Co się stało: Vertu pozycjonuje Alphafold jako luksusowy AI phone z Hermes Agent.",
+        "Dlaczego ważne: agentowe mobile może wejść przez premium, nie przez masowy rynek.",
+        "Na co patrzeć dalej: adopcja wśród executive buyers i stabilność Hermes Agent."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: Vertu wants executives to pay $6,880 for an AI agent",
+          "url": "https://techcrunch.com/2026/07/17/vertu-wants-executives-to-pay-6880-for-an-ai-agent-heres-how-it-actually-performs/"
+        },
+        {
+          "title": "VERTU official: Alphafold luxury AI phone",
+          "url": "https://vertu.com/news/vertu-alphafold-enters-the-global-spotlight-as-a-new-luxury-ai-phone"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Vertu",
+        "Alphafold",
+        "Hermes Agent",
+        "luxury phone",
+        "executive AI",
+        "mobile"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-18-1937-5-agility-przenosi-humanoidy-do-fremont-853bbfcb30",
+      "section": "Produkty",
+      "title": "Agility przenosi humanoidy do Fremont",
+      "standfirst": "Agility Robotics otwiera 60,000-square-foot facility w Fremont, niedaleko miejsca, gdzie Tesla ma produkować Optimusa. Firma mówi, że hub ma przyspieszyć rozwój physical AI i wspierać Digit w customer environments.",
+      "whatHappened": "Humanoid robotics dostał nowy Bay Area hub i wyraźny sygnał public-market readiness.",
+      "whyItMatters": "Physical AI przechodzi od pilotażu do operacyjnego zaplecza i kapitałowego story z prawdziwymi klientami.",
+      "deeperAnalysis": [
+        "Agility jest ciekawa, bo nie opowiada tylko o futurystycznym robocie. Firma mówi o realnych wdrożeniach u klientów, o łańcuchu supply chain i o miejscu, gdzie można trenować, testować i rozwinąć zachowanie robotów w żywych środowiskach. Fremont hub wzmacnia to jako operacyjny model, a nie laboratoryjny pokaz.",
+        "To także ważny sygnał konkurencyjny wobec Tesli. Jeśli Agile ma już revenue-generating deployments, a jednocześnie buduje własne zaplecze rozwoju obok fabryki Optimusa, to rynek humanoidów wchodzi w etap porównań między realnymi wdrożeniami, a nie samymi zapowiedziami. Do tego dochodzi public-market trajectory przez merger z Churchill Capital Corp XI.",
+        "W praktyce oznacza to, że physical AI staje się bankowalny, mierzalny i publicznie porównywalny. To zupełnie inny poziom dojrzałości niż jeszcze kilka kwartałów temu."
+      ],
+      "contextPoints": [
+        "Co się stało: Agility otwiera Fremont facility i przyspiesza rozwój Digit.",
+        "Dlaczego ważne: humanoid robotics przechodzi z demo do operacyjnej i publicznej skali.",
+        "Na co patrzeć dalej: S-4, liczba wdrożeń i tempo kolejnych partnerstw."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: Agility Robotics plants its flag in Tesla's backyard",
+          "url": "https://techcrunch.com/2026/07/17/agility-robotics-plants-its-flag-in-teslas-backyard/"
+        },
+        {
+          "title": "Agility Robotics official announcement",
+          "url": "https://www.agilityrobotics.com/content/agility-opens-new-fremont-facility-to-accelerate-physical-ai-development"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Agility Robotics",
+        "Digit",
+        "Fremont",
+        "physical AI",
+        "humanoids",
+        "public markets"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Etched podbija wycenę inference chips",
+      "rationale": "$20 mld wokół firmy od inference pokazuje, że rynek nadal płaci za tańszy, wyspecjalizowany compute.",
+      "sourcesLabel": "WSJ; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "SpaceX wchodzi do Pentagon compute",
+      "rationale": "Defense procurement może stać się nowym kanałem sprzedaży AI capacity poza hyperscalerami.",
+      "sourcesLabel": "Reuters via Investing; WSJ"
+    },
+    {
+      "priority": "High",
+      "title": "IBM pokazuje koszt AI capex dla legacy software",
+      "rationale": "Spadek IBM pokazuje, jak AI infra już przesuwa budżety enterprise i karze spóźnione strategie.",
+      "sourcesLabel": "WSJ; AP"
+    },
+    {
+      "priority": "Medium",
+      "title": "TikTok wraca na służbowe telefony federalne",
+      "rationale": "DOJ opinion pokazuje, że ownership structure może odwrócić wcześniejsze zakazy dostępu.",
+      "sourcesLabel": "DOJ OLC memo; TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Vertu sprzedaje telefon jako executive AI agent",
+      "rationale": "Luxury hardware z Hermes Agent pokazuje, jak AI wchodzi w premium mobile workflows.",
+      "sourcesLabel": "TechCrunch; Vertu"
+    },
+    {
+      "priority": "Medium",
+      "title": "Agility przenosi humanoidy do public-market readiness",
+      "rationale": "Fremont hub i S-4 pokazują, że physical AI przechodzi z pilota do skali i finansowania.",
+      "sourcesLabel": "TechCrunch; Agility Robotics"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "WSJ: AI chip startup Etched is in talks for $20 billion valuation",
+      "url": "https://www.wsj.com/tech/ai/ai-chip-startup-etched-is-in-talks-for-20-billion-valuation-caf1787d"
+    },
+    {
+      "title": "Reuters/WSJ via Investing: SpaceX in talks to supply Pentagon with computing power",
+      "url": "https://m.investing.com/news/stock-market-news/musks-spacex-in-talks-to-provide-computing-power-to-the-pentagon-wsj-reports-4799007?ampMode=1"
+    },
+    {
+      "title": "Justice Department OLC memo on TikTok USDS joint venture",
+      "url": "https://www.justice.gov/olc/media/1453136/dl?inline="
+    },
+    {
+      "title": "TechCrunch: Vertu wants executives to pay $6,880 for an AI agent",
+      "url": "https://techcrunch.com/2026/07/17/vertu-wants-executives-to-pay-6880-for-an-ai-agent-heres-how-it-actually-performs/"
+    },
+    {
+      "title": "VERTU official: Alphafold luxury AI phone",
+      "url": "https://vertu.com/news/vertu-alphafold-enters-the-global-spotlight-as-a-new-luxury-ai-phone"
+    },
+    {
+      "title": "TechCrunch: Agility Robotics opens Fremont facility",
+      "url": "https://techcrunch.com/2026/07/17/agility-robotics-plants-its-flag-in-teslas-backyard/"
+    },
+    {
+      "title": "Agility Robotics official announcement",
+      "url": "https://www.agilityrobotics.com/content/agility-opens-new-fremont-facility-to-accelerate-physical-ai-development"
+    },
+    {
+      "title": "WSJ: IBM CEO Arvind Krishna Has Nowhere to Hide From AI",
+      "url": "https://www.wsj.com/tech/ibm-ceo-arvind-krishna-has-nowhere-to-hide-from-ai-c9ff290f"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/front"
+    },
+    {
+      "title": "Product Hunt homepage",
+      "url": "https://www.producthunt.com/"
+    }
+  ]
+}
