@@ -7,6 +7,7 @@
 | High | Track Google AI Search monetization | Ask Advisor and new ad formats tie Search, Ads and Marketing Platform together | Watch rollout breadth, advertiser reaction and whether AI Search becomes a durable revenue surface | Open |
 | High | Track Zoox heavy-smoke recall | NHTSA recall turns emergency-scene perception into a formal AV safety issue | Watch the software remedy, follow-up incidents and regulator response | Open |
 | High | Track inference-chip financing | General Compute's loan suggests inference chips are becoming financeable assets | Watch whether other lenders and AI clouds copy the structure | Open |
+| High | Track Codex Micro control surfaces | OpenAI's $230 Codex keyboard makes tactile agent control a concrete product category | Watch restock, copycats, pricing and whether control surfaces become part of Codex defaults | Open |
 | Medium | Track Netflix genAI disclosure | Netflix's 300-title disclosure normalizes AI in post-production | Watch whether other streamers publish similar numbers or new disclosure norms | Open |
 | High | Track Google DMA interoperability on Android/Search | Binding EU specs now force broader access to Android features and Search data | Watch compliance timeline, rival assistant uptake and privacy carve-outs | Open |
 | High | Track Claude 1Password agent login | 1Password for Claude is a concrete security pattern for browser agents | Watch Mac rollout, enterprise controls and any extension to payments/identity | Open |
@@ -39,9 +40,11 @@
 | High | Track agent memory poisoning defenses | New papers show memory stores are a real attack surface before memory becomes default in products | Watch vendor mitigations, memory provenance controls and research follow-ups | Open |
 | Medium | Track fairlife ransomware spillover | Coca-Cola's fairlife shutdown shows ransomware can stop consumer food production, not just data systems | Watch recovery timing, supplier impact and any broader disclosure | Open |
 | Medium | Track Flock backlash | LAPD exiting Flock is a concrete pushback on license-plate surveillance and data retention | Watch more city exits, contract clauses and privacy commentary | Open |
+| High | Track SF nudify app-store enforcement | San Francisco's removals show app stores and payment rails can be used as abuse-enforcement levers | Watch broader removals, payment blocking and whether other cities copy the tactic | Open |
+| Medium | Track healthcare workplace surveillance backlash | Kaiser nurses show monitoring in healthcare is a labor and patient-care issue | Watch union reaction, similar deployments and public commentary | Open |
 | High | Track creator crawler controls | Cloudflare and Patreon are moving search/training/agent control to the edge, and Cloudflare is now adding explicit monetization rails | Watch rollout breadth, compensation models, x402 adoption, publisher adoption and AI company response | Open |
 | Medium | Track peer-to-peer inference meshes | Mesh LLM is a concrete distributed-inference alternative worth tracking | Watch throughput, reliability, security and adoption outside HN | Open |
-| High | Track AI capex stress test | Public markets are now asking whether AI spend turns into revenue | Watch earnings, capex guidance, memory constraints and margin commentary | Open |
+| High | Track AI capex stress test | Public markets are asking whether AI spend turns into revenue, and Databricks' $188B valuation shows capital still rewards AI infra when the governance story is credible | Watch earnings, capex guidance, Databricks round close, memory constraints and margin commentary | Open |
 | High | Track ChatGPT Work and GPT-Live rollout | OpenAI is merging voice, desktop, browser and scheduled tasks into one surface | Watch rollout breadth, security controls and Atlas migration | Open |
 | Medium | Track Meta Model API monetization | Muse Spark 1.1 now has a public developer API preview and pricing pressure may reset AI API economics | Watch pricing, partner adoption and enterprise use cases | Open |
 | Medium | Track Anthropic reflection UX | Claude reflection and hard questions push trust into the product UI | Watch beta retention, privacy framing and enterprise reception | Open |
@@ -60,7 +63,7 @@
 | High | Track Claude Cowork cross-device adoption | Mobile/web sessions may become the default agent UX | Watch enterprise limits, approvals and handoff behavior | Open |
 | High | Track Discord moderation false positives | The ban bug shows brittleness in AI safety stacks | Watch root-cause fix, appeal flow and recurrence risk | Open |
 | High | Track Forterra battlefield autonomy | Ukraine deployment gives rare public proof of ground autonomy at scale | Watch new mission data, procurement and safety lessons | Open |
-| High | Track Apple vs OpenAI hardware lawsuit | Apple is attacking OpenAI's hardware ambitions while Reuters says the first device may be a moving screenless speaker | Watch complaint, OpenAI response, device form factor and launch timeline | Open |
+| High | Track Apple vs OpenAI hardware lawsuit | Apple is escalating pressure on OpenAI's hardware ambitions with legal letters to former employees, while Reuters says the first device may be a moving screenless speaker | Watch complaint, legal letters, OpenAI response, device form factor and launch timeline | Open |
 | High | Track OpenAI math-proof verification | GPT-5.6 Sol Ultra's cycle double cover claim needs independent validation | Watch mathematician response, peer review and prompt transparency | Open |
 | High | Track Meta Alberta AI data center | The Alberta buildout turns AI infra into a grid, water and local policy story | Watch power, cooling, permits and local reaction | Open |
 | High | Track EU Meta addictive design enforcement | DSA findings could force changes to infinite scroll and autoplay defaults | Watch Meta response, fines and product changes | Open |
@@ -108,7 +111,7 @@
 | Medium | Track agent search and observability stack | Vercel, AnySearch, Typeahead and Octolens show agents moving into real productized workflows | Watch Product Hunt traction, enterprise adoption and follow-on launches | Open |
 | Medium | Track Reddit AI moderation metrics | Reddit's spam and fake-vote reductions give a rare concrete moderation benchmark | Watch whether the gains persist and whether other platforms publish similar data | Open |
 | Medium | Track Siri voice customization rollout | Siri's voice UX and the public beta together show Apple trying to make assistant behavior feel native to the system | Watch whether the beta features survive to stable release and broader regions | Open |
-| High | Track AI memory spillover to consumer hardware | Apple price increases tie AI data-center demand for memory/storage to Mac, iPad and device pricing | Recheck official Apple pricing, retailer lag, supplier commentary, Polish consumer coverage and whether other OEMs follow | Open |
+| High | Track AI memory spillover to consumer hardware | Apple price increases and India's smartphone decline show AI data-center demand for memory/storage spilling into consumer devices | Recheck official Apple pricing, India handset pricing, retailer lag, supplier commentary and whether other OEMs follow | Open |
 | Medium | Track autonomous AI R&D labs | Mirendil's $200M seed round suggests investors are funding systems that automate AI research loops, not only end-user agents | Watch first product/model release, technical evals, NVIDIA role, safety framing and competing labs | Open |
 | Medium | Track public AI chip economics | Cerebras' first public earnings reaction shows margin pressure, data-center capacity and customer concentration can matter as much as AI compute demand | Watch Cerebras follow-up filings, OpenAI/AWS capacity obligations, margin guidance, and comparable Nvidia/AMD/Broadcom signals | Open |
 | High | Track humanoid robotics commercialization | Agility's planned SPAC and NVIDIA Halos turn physical AI into a public-market, safety-stack and warehouse deployment story | Watch SEC review, shareholder approval, Digit v5 milestones, customer deployments, Halos certification language and Tesla/Boston Dynamics/Figure responses | Open |
@@ -173,6 +176,7 @@
 
 ## Review Notes
 
+- 2026-07-18: Daily run added Codex Micro, SF nudify enforcement, healthcare workplace surveillance backlash, Databricks capital signal and a sharper memory spillover story for India and consumer hardware.
 - 2026-07-17: Wieczorny refresh dodał Google Marketing Live AI Search ads i Ask Advisor, recall Zoox po heavy smoke, finansowanie inference przez General Compute, disclosure Netflix o około 300 tytułach z genAI oraz bieżący community signal z Product Hunt i HN.
 - 2026-07-14: Wieczorny refresh dodał open-weight traffic share na Vercel, Spotify Talk to Spotify beta, rollback Meta Muse Image przy publicznych zdjęciach z Instagrama, Google AI ads disclosure, Anthropic rupee pricing w Indiach, OpenAI Families PM oraz mocniejszy community signal z Product Hunt i HN.
 - 2026-07-14: Daily research run added Intel/Micron capex, Markey data-center legislation, Microsoft Intune agentic identity, PixVerse interactive worlds, Waze Gemini navigation, Uber robotaxi lobbying and a practical/provenance-heavy community signal.

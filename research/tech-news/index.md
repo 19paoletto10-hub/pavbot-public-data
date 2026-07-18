@@ -1,8 +1,10 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-17
+Last updated: 2026-07-18
 
 ## Current Understanding
+
+Poranny refresh z 2026-07-18 przesuwa temat jeszcze dalej od samego modelowego rollout do fizycznych control surfaces, prawa i kosztów konsumenckich. OpenAI łączy Codex Micro z GPT-Live w jeden bardziej namacalny workflow dla agentów, Apple zaostrza spór z OpenAI przez listy do byłych pracowników, Databricks pokazuje, że kapitał wciąż płynie do AI infra przy narracji cost control, a San Francisco, Indie i Kaiser zamieniają AI w kwestie egzekwowania, komponentowych cen i workplace surveillance. Wspólny mianownik to odejście od demo modelu do kontroli, odpowiedzialności i granic zgody.
 
 Wieczorny refresh z 2026-07-17 przesuwa temat z samej rozbudowy AI UX do monetyzacji, bezpieczeństwa i infrastruktury. Google Marketing Live zamienia AI Search w bardziej bezpośrednią warstwę reklamową i agentic commerce przez nowe formaty reklam oraz Ask Advisor, General Compute bierze $400M loan pod inference chips collateral, Zoox robi software recall po heavy smoke emergency-scene edge case, a Netflix podaje, że około 300 tytułów użyło genAI w post-produkcji. Wspólny mianownik to przejście od capability do kosztu, kontroli i produkcyjnej odpowiedzialności.
 
@@ -202,6 +204,7 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-18: Dzisiejszy refresh dodał Codex Micro, GPT-Live, Apple/OpenAI escalation, Databricks $188B, SF nudify enforcement, India memory crunch i Kaiser workplace surveillance; wspólny sygnał pozostał control-first.
 - 2026-07-17: Wieczorny refresh dodał Google Marketing Live AI Search ads i Ask Advisor, recall Zoox po heavy smoke, finansowanie inference przez General Compute, disclosure Netflix o około 300 tytułach z genAI oraz bieżący community signal z Product Hunt i HN.
 - 2026-07-17: Poranny refresh dodał Google Search connected apps i Vids, Roblox Build, ofertę Ubera na Delivery Hero, ransomware w fairlife i ostrzejsze zasady dla Waymo w San Francisco.
 - 2026-07-17: Community signal przesunął się w stronę workflowów z red penem i kontrolą na Product Hunt oraz bardziej praktycznych agentów na Hacker News.
@@ -210,6 +213,11 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- OpenAI tactile control surfaces: Codex Micro may become a reusable agent workflow pattern or stay a novelty; watch restock, copycats and whether the keyboard becomes part of Codex defaults.
+- San Francisco app-store enforcement: nudify app removals show app stores and payment rails as enforcement points; watch whether other cities or states copy the tactic.
+- AI memory spillover to consumer hardware: India's smartphone decline suggests DRAM/HBM prices are now reaching low- and mid-tier devices; watch OEM pricing and refurbished demand.
+- Healthcare workplace surveillance backlash: Kaiser nurses show monitoring in healthcare is a labor and patient-care issue, not just an IT policy issue; watch union reaction and similar complaints elsewhere.
+- Databricks capital appetite: $188B valuation is a fresh test of whether enterprise AI infra still gets rewarded for governance-heavy stories; watch whether the round closes and how rivals react.
 - Google AI Search monetization: watch whether new ad formats and Ask Advisor expand beyond the initial Marketing Live framing and whether advertisers treat conversational commerce as a core workflow.
 - Zoox heavy-smoke recall: watch the software remedy, any follow-up incidents and whether emergency-scene perception becomes a formal AV benchmark.
 - Inference-chip financing: watch whether other lenders copy General Compute's collateral structure and whether inference clouds become a recognized asset class.

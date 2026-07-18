@@ -1,0 +1,396 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-18",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run przesuwa temat z samego „AI w produkcie” do twardszej warstwy kontroli, kosztu i odpowiedzialności. OpenAI pokazuje dwie równoległe ścieżki: Codex Micro przenosi agentic work do sprzętowych kontrolek, a GPT-Live zamienia voice w ciągły interfejs do dłuższych zadań. To już nie jest tylko chatbot albo demo modelu, ale coraz bardziej zestaw narzędzi, które mają siedzieć obok użytkownika i reagować w trakcie pracy.",
+    "Po stronie rynku i regulacji widać ten sam zwrot. Databricks przyciąga kapitał przy wycenie $188 mld i wprost mówi o „valuemaxxing”, nie tylko o kosztach tokenów; San Francisco naciska na Apple i Google w sprawie nudify apps; a Apple zaostrza spór z OpenAI, wysyłając listy do byłych pracowników. Równolegle Indie pokazują, że AI memory crunch zaczyna podnosić ceny telefonów, więc koszt AI wychodzi poza data center i trafia do zwykłych konsumentów.",
+    "Community signal pozostaje wyraźnie control-first. Hacker News premiuje historię o Apple i OpenAI, krytykę workplace surveillance w Kaiser oraz Kimi K3 i open-source AI, a Product Hunt dziś wynosi na wierzch shared memory, private inference, AI agents i narzędzia do kontroli workflow. Wspólny mianownik: builderzy chcą AI, ale tylko wtedy, gdy da się ją monitorować, ograniczać i odtworzyć."
+  ],
+  "summaryBullets": [
+    "Produkty: Codex Micro przenosi agentów do sprzętu",
+    "Regulacje: Apple zaostrza spór z OpenAI",
+    "Infrastruktura: Databricks pokazuje, że AI kapitał wraca"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-18-0-codex-micro-przenosi-agentow-do-sprzetu-464e2f0cfd",
+      "section": "Produkty",
+      "title": "Codex Micro przenosi agentów do sprzętu",
+      "standfirst": "OpenAI sprzedaje Codex Micro jako limitowany, $230 kontroler dla pracy z agentami. Urządzenie ma live RGB statusy, joystick, pokrętło do ustawiania poziomu „brainpower” i skróty do najczęstszych akcji w Codexie.",
+      "whatHappened": "OpenAI uruchomiło Codex Micro we współpracy z Work Louder.",
+      "whyItMatters": "Agentowe workflow wychodzi z czystego software’u i dostaje fizyczną warstwę kontroli, co może zmienić oczekiwania użytkowników wobec pracy z AI.",
+      "deeperAnalysis": [
+        "OpenAI opisuje Codex Micro jak „command center for agentic work”, a to już nie jest zwykły marketingowy slogan. W praktyce urządzenie próbuje rozwiązać problem, który wraca w każdej wersji narzędzi agentowych: użytkownik chce widzieć, co model robi, i szybko interweniować bez szukania przycisków w kilku oknach.",
+        "Najciekawsze jest tu połączenie ergonomii z sygnałem biznesowym. OpenAI nie sprzedaje tylko modelu, lecz próbkę całego workflow, w którym agent ma status, akcje i tempo pracy widoczne na fizycznym sprzęcie. To bardzo bliskie temu, co widzimy w innych launchach z ostatnich dni: builderzy chcą AI, ale tylko wtedy, gdy może ją zatrzymać, przełączyć albo zdebugować.",
+        "Jeśli ten format się przyjmie, kolejny etap konkurencji nie będzie dotyczył tylko jakości modeli, ale także tego, kto lepiej zaprojektuje kontrolę nad agentami. To może otworzyć osobny rynek na akcesoria, skróty, hardware i „control surfaces” dla pracy z AI."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI wystawiło limitowany Codex Micro z Work Louder.",
+        "Dlaczego ważne: agentic work dostaje fizyczne, kontrolowalne UI.",
+        "Na co patrzeć dalej: czy sprzęt wróci do sprzedaży, czy inni dostawcy skopiują ten format i czy Codex Micro stanie się wzorcem dla agent hardware."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI Supply Co. x Work Louder",
+          "url": "https://openai.com/supply/co-lab/work-louder/"
+        },
+        {
+          "title": "TechCrunch: Amid hardware legal battle, OpenAI releases a $230 keyboard for Codex",
+          "url": "https://techcrunch.com/2026/07/15/amid-hardware-legal-battle-openai-releases-a-230-keyboard-for-codex/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "Codex",
+        "hardware",
+        "agents",
+        "keyboard",
+        "workflow"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-18-1-apple-zaostrza-spor-z-openai-150f1eeb9d",
+      "section": "Regulacje",
+      "title": "Apple zaostrza spór z OpenAI",
+      "standfirst": "Financial Times podaje, że Apple wysłało osobiste listy do około 40 byłych pracowników, którzy dziś pracują w OpenAI. To eskalacja sporu o trade secrets i hardware, który już wcześniej wchodził na teren IPO i planów produktowych OpenAI.",
+      "whatHappened": "Apple zwiększyło presję prawną wobec ludzi z własnego dawnego zaplecza, którzy przeszli do OpenAI.",
+      "whyItMatters": "Ten ruch zamienia spór o pojedynczy pozew w dłuższy konflikt o talent, hardware i przyszłą wycenę OpenAI.",
+      "deeperAnalysis": [
+        "Najważniejszy sygnał nie dotyczy samego faktu, że Apple pozwało OpenAI. Prawdziwie nowa rzecz to próba rozszerzenia sporu na osoby i dokumenty, co sugeruje, że Apple chce budować presję dowodową i procesową wokół własnych obaw o transfer know-how.",
+        "To ma znaczenie, bo OpenAI nie jest już wyłącznie software’owym labem. Firma ma ambicję wejścia w hardware i coraz bardziej przypomina pełny stack produktowy, który musi bronić się jednocześnie na rynku, w sądzie i w narracji inwestorskiej. Jeśli ten spór urośnie, może to wpłynąć na timing urządzeń, partnerstw i ewentualnego IPO.",
+        "W tym sensie legal letters nie są poboczną ciekawostką, tylko sygnałem, że Apple traktuje OpenAI jak bezpośredniego rywala na poziomie sprzętu i talentu. To jeden z tych konfliktów, które zwykle zaczynają się od trade secrets, a kończą jako szersza walka o rynek, ekosystem i narrację zaufania."
+      ],
+      "contextPoints": [
+        "Co się stało: Apple wysłało listy do około 40 byłych pracowników, dziś zatrudnionych w OpenAI.",
+        "Dlaczego ważne: spór obejmuje już nie tylko pozew, ale też talent, hardware i potencjalne IPO.",
+        "Na co patrzeć dalej: czy pojawią się kolejne pisma, formalne odpowiedzi OpenAI i czy konflikt wpłynie na tempo sprzętowych planów firmy."
+      ],
+      "sources": [
+        {
+          "title": "Financial Times: Apple targets dozens of OpenAI employees with legal letters",
+          "url": "https://www.ft.com/content/1b8c9d52-88a9-426b-ba47-f1811f859166"
+        },
+        {
+          "title": "TechCrunch: How Apple’s big lawsuit could disrupt OpenAI’s IPO plans",
+          "url": "https://techcrunch.com/video/how-apples-big-lawsuit-could-disrupt-openais-ipo-plans/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Apple",
+        "OpenAI",
+        "litigation",
+        "hardware",
+        "IPO",
+        "trade secrets"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-18-2-databricks-pokazuje-ze-ai-kapital-wraca-74b408636d",
+      "section": "Infrastruktura",
+      "title": "Databricks pokazuje, że AI kapitał wraca",
+      "standfirst": "Databricks ogłosił strategic funding przy wycenie 188 miliardów dolarów. Firma podkreśla, że nowy kapitał ma iść w Unity AI Gateway, Genie i Lakebase, czyli narzędzia do kontroli kosztów, orkiestracji i budowania AI apps.",
+      "whatHappened": "Databricks podpisał term sheet pod dużą rundę i wywindował własną wycenę.",
+      "whyItMatters": "To sygnał, że enterprise AI infra nadal przyciąga bardzo duży kapitał, mimo coraz głośniejszych pytań o ROI i unit economics.",
+      "deeperAnalysis": [
+        "Databricks nie sprzedaje tej rundy jako zwykłego wzrostu wyceny. Firma opowiada historię o tym, że klienci nie chcą już „burnować” najdroższych tokenów na wszystko, tylko liczyć wynik na dolar wydany. To bardzo ważne, bo pokazuje zmianę języka w segmencie enterprise AI: z benchmarków i demo do rozliczalności oraz governance.",
+        "W praktyce Databricks stawia na trzy warstwy, które dobrze opisują obecny rynek. Unity AI Gateway ma pomagać sterować wyborem modeli i kosztami, Genie ma zamieniać dane biznesowe w odpowiedzi i akcje, a Lakebase celuje w agent-ready database stack. To brzmi jak próba zbudowania własnego systemu operacyjnego dla firmy, nie tylko kolejnej warstwy analytics.",
+        "Ta runda jest też ważna jako kontrargument wobec narracji, że AI money wyschły. Wręcz przeciwnie: pieniądze nadal płyną, ale coraz częściej idą do firm, które potrafią pokazać cost control, governance i enterprise integration, a nie tylko „najmocniejszy model”."
+      ],
+      "contextPoints": [
+        "Co się stało: Databricks ogłosił strategic funding przy wycenie 188 mld dolarów.",
+        "Dlaczego ważne: kapitał wciąż płynie do AI infra, ale pod warunkiem, że firma pokazuje koszt i kontrolę.",
+        "Na co patrzeć dalej: czy runda domknie się bez zmian, jak rynek zareaguje na valuation i czy inne data/AI platformy zaczną kopiować ten język."
+      ],
+      "sources": [
+        {
+          "title": "Databricks press release",
+          "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-raising-strategic-round-funding-188-billion-valuation"
+        },
+        {
+          "title": "TechCrunch: Databricks hits $188B valuation, extending its run as AI’s favorite second act",
+          "url": "https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Databricks",
+        "funding",
+        "valuation",
+        "AI infrastructure",
+        "Unity AI Gateway",
+        "Genie"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-18-3-san-francisco-uderza-w-nudify-apps-930544a109",
+      "section": "Regulacje",
+      "title": "San Francisco uderza w nudify apps",
+      "standfirst": "San Francisco wysłało do Apple i Google cease-and-desist letters w sprawie 13 nudify apps. TechCrunch podaje, że Apple usunęło trzy aplikacje, a Google zawiesiło wskazane apki i ograniczyło powiązane frazy wyszukiwania.",
+      "whatHappened": "Miasto naciska na sklepy z aplikacjami, żeby odcięły płatności i dystrybucję narzędzi do non-consensual deepfake imagery.",
+      "whyItMatters": "App store i payment rails stają się realnym frontem egzekwowania ochrony przed AI abuse, a nie tylko miejscem deklaracji polityki bezpieczeństwa.",
+      "deeperAnalysis": [
+        "To jest ważne, bo pokazuje, że platformy nie mogą już ukrywać się za ogólnymi zasadami moderacji. Miasto i dziennikarze wskazują konkretne aplikacje, konkretne płatności i konkretne dochody z narzędzi, które służą do generowania krzywdzących obrazów bez zgody.",
+        "W tym sporze widać też zmianę retoryki. To nie jest debata o abstrakcyjnym „AI safety”, tylko o tym, kto faktycznie finansuje i dystrybuuje abuse tools. Jeśli Apple i Google będą musiały usuwać takie aplikacje szybciej i bardziej systemowo, presja przeniesie się na review process, search ranking, payment processing i developer accounts.",
+        "To ważny sygnał dla podcastu, bo dotyka jednocześnie prywatności, deepfake abuse, odpowiedzialności platform i lokalnego egzekwowania prawa. W praktyce app store staje się kolejną instytucją regulacyjną, nawet jeśli formalnie nią nie jest."
+      ],
+      "contextPoints": [
+        "Co się stało: San Francisco zażądało usunięcia 13 nudify apps z App Store i Google Play.",
+        "Dlaczego ważne: platformy są zmuszane do aktywnego egzekwowania ochrony przed non-consensual AI imagery.",
+        "Na co patrzeć dalej: czy Apple i Google usuną kolejne aplikacje, czy pojawią się dalsze kroki prawne i czy inne miasta pójdą tym tropem."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: Apple and Google ordered to purge ‘nudify’ apps from App Stores",
+          "url": "https://techcrunch.com/2026/07/17/apple-and-google-ordered-to-purge-nudify-apps-from-app-stores/"
+        },
+        {
+          "title": "Wired: San Francisco Demands Apple and Google Delete AI ‘Nudify’ Apps From App Stores",
+          "url": "https://www.wired.com/story/san-francisco-demands-apple-and-google-delete-ai-nudify-apps-from-app-stores/"
+        },
+        {
+          "title": "Reuters Connect: San Francisco Demands Apple, Google Remove AI ‘Nudify’ Apps",
+          "url": "https://www.reutersconnect.com/item/uncaptioned-san-francisco-demands-apple-google-remove-ai-nudify-apps/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX09XQ1ZNQzQ0MjE0My1WSURFTw"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Apple",
+        "Google",
+        "nudify",
+        "deepfakes",
+        "app stores",
+        "San Francisco"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-18-4-indie-pokazuja-koszt-memory-crunchu-2027a5c73f",
+      "section": "Infrastruktura",
+      "title": "Indie pokazują koszt memory crunchu",
+      "standfirst": "Counterpoint Research podaje, że indyjski rynek smartfonów spadł o 10% r/r w Q2 2026, co jest największym czerwcowym spadkiem od sześciu lat. TechCrunch łączy to wprost z rosnącymi cenami pamięci i wyższymi cenami handsetów.",
+      "whatHappened": "AI memory demand przestał być tylko problemem data center i zaczął ciąć wolumen sprzedaży telefonów.",
+      "whyItMatters": "To jeden z pierwszych czytelnych sygnałów, że koszt HBM i DRAM ma wpływ na zwykłą elektronikę konsumencką, szczególnie na rynkach wrażliwych cenowo.",
+      "deeperAnalysis": [
+        "Indie są tu dobrym testem, bo rynek jest duży, czuły na cenę i bardzo szybko reaguje na podwyżki. Jeśli pamięć drożeje, producenci telefonów muszą albo podnosić ceny, albo ciąć specyfikację, albo spychają konsumentów do segmentu refurbished. W każdym z tych scenariuszy AI boom zaczyna zmieniać codzienny rynek elektroniki.",
+        "Ważne jest też to, że to nie jest już tylko opowieść o data center czy GPU. Gdy pamięć jest droga, cały łańcuch od producenta chipów po sklep z telefonami dostaje zupełnie inny kosztorys. To może zacząć wpływać nie tylko na smartfony, ale też na inne urządzenia, które konkurują o te same komponenty.",
+        "Z punktu widzenia czytelnika to jedno z najbardziej namacalnych przypomnień, że AI infrastructure ma fizyczną cenę. Ostateczny rachunek nie trafia wyłącznie do hyperscalera, ale też do telefonu w ręce klienta."
+      ],
+      "contextPoints": [
+        "Co się stało: Counterpoint odnotował 10% spadek shipmentów smartfonów w Indiach w Q2 2026.",
+        "Dlaczego ważne: AI memory demand zaczyna wpływać na ceny konsumenckich urządzeń.",
+        "Na co patrzeć dalej: czy producenci będą dalej podnosić ceny, czy rynek refurbished urośnie i czy podobny wzorzec pojawi się w innych krajach."
+      ],
+      "sources": [
+        {
+          "title": "Counterpoint Research",
+          "url": "https://counterpointresearch.com/en/insights/india-smartphone-shipments-fall-10-percent-yoy-june-quarter"
+        },
+        {
+          "title": "TechCrunch: AI-driven memory crunch jolts India’s smartphone market",
+          "url": "https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "India",
+        "smartphones",
+        "memory",
+        "semiconductors",
+        "Counterpoint",
+        "consumer electronics"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-18-5-gpt-live-robi-z-voice-ciagly-interfejs-d9f0c6a758",
+      "section": "Produkty",
+      "title": "GPT-Live robi z voice ciągły interfejs",
+      "standfirst": "OpenAI uruchomiło GPT-Live i GPT-Live mini jako nową generację voice models dla ChatGPT Voice. Modele działają w full-duplex, delegują trudniejsze zadania do GPT-5.5 i mają osobny system card z monitoringiem safety.",
+      "whatHappened": "Voice w ChatGPT dostał własną architekturę, rollout globalny i osobny safety stack.",
+      "whyItMatters": "To przesuwa voice z prostego turn-based dialogu do ciągłej, agentowej interakcji, która może obsługiwać dłuższe zadania w tle.",
+      "deeperAnalysis": [
+        "OpenAI nie sprzedaje tu po prostu „lepszej rozmowy”. GPT-Live ma utrzymywać płynność rozmowy, reagować w czasie rzeczywistym i jednocześnie odpalać cięższe zadania na modelu zaplecza. To oznacza, że voice staje się warstwą orkiestracji, a nie tylko wejściem i wyjściem audio.",
+        "Najważniejsza zmiana dotyczy też bezpieczeństwa. System card opisuje ciągłe sprawdzanie wejść i wyjść oraz możliwość przełączania lub przerywania odpowiedzi w razie ryzyka. To ważne, bo voice jako medium jest bardziej podatny na nadużycia, social engineering i emocjonalne przywiązanie niż zwykły chat.",
+        "W praktyce GPT-Live pokazuje, że OpenAI buduje osobny, bardzo codzienny interfejs do pracy z AI. Jeśli ten format się przyjmie, voice może stać się jednym z głównych sposobów delegowania prostych i średnio złożonych zadań, zwłaszcza na telefonie i w ruchu."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI uruchomiło GPT-Live-1 i GPT-Live-1 mini z full-duplex voice i delegowaniem do GPT-5.5.",
+        "Dlaczego ważne: voice przestaje być tylko dodatkiem i staje się ciągłym interfejsem agentowym.",
+        "Na co patrzeć dalej: czy rollout będzie stabilny, jak szybko pojawi się API i czy bezpieczeństwo voice wytrzyma realne użycie."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: Introducing GPT-Live",
+          "url": "https://openai.com/index/introducing-gpt-live/"
+        },
+        {
+          "title": "OpenAI Deployment Safety Hub: GPT-Live System Card",
+          "url": "https://deploymentsafety.openai.com/gpt-live"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "GPT-Live",
+        "voice",
+        "ChatGPT",
+        "agents",
+        "safety"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-18-6-kaiser-nurses-pokazuja-backlash-wobec-ai-surveillance-9e73d82b69",
+      "section": "Regulacje",
+      "title": "Kaiser nurses pokazują backlash wobec AI surveillance",
+      "standfirst": "Local News Matters i CalMatters opisują protest Kaiser nurses przeciwko AI i workplace surveillance, które mają pogarszać pracę i opiekę nad pacjentami. Hacker News podbił tę historię bardzo wysoko, co pokazuje, że temat ma mocny rezonans w społeczności technicznej.",
+      "whatHappened": "AI monitoring i algorytmy oceny pracy stają się punktem zapalnym w ochronie zdrowia.",
+      "whyItMatters": "To sygnał, że backlash wobec AI nie dotyczy już tylko modelowych błędów, ale też algorytmicznego zarządzania ludźmi w krytycznych usługach.",
+      "deeperAnalysis": [
+        "To jest ciekawy kontrapunkt do wszystkich launchy o productivity i agentach. Tutaj AI nie jest „pomocą”, tylko częścią systemu kontroli pracy, a osoby na pierwszej linii mówią, że wpływa to na morale, jakość i czas poświęcany pacjentom. Taki case jest trudny do zignorowania, bo dotyczy sektora, w którym błąd ma koszt społeczny, a nie tylko reputacyjny.",
+        "HN wyniósł ten temat wysoko, bo społeczność techniczna bardzo dobrze wyczuwa różnicę między AI jako narzędziem a AI jako narzędziem nadzoru. W tle jest większe pytanie: czy firmy wdrażają AI dla jakości, czy głównie dla speed-upu i kosztów. W przypadku healthcare odpowiedź na to pytanie ma już bezpośredni wymiar etyczny.",
+        "Ten wątek dobrze nadaje się do podcastu, bo łączy workplace surveillance, zdrowie publiczne i zaufanie do systemów AI. To też jeden z niewielu tematów dnia, który nie opowiada o kolejnym modelu, tylko o tym, co się dzieje, gdy AI zaczyna regulować ludzi zamiast tylko im odpowiadać."
+      ],
+      "contextPoints": [
+        "Co się stało: Kaiser nurses protestują przeciw AI grading i workplace monitoring.",
+        "Dlaczego ważne: backlash wobec AI w pracy nabiera realnego wymiaru społecznego i zawodowego.",
+        "Na co patrzeć dalej: czy pojawią się kolejne opisy podobnych systemów, reakcje związków i zmiany w politykach monitoringu."
+      ],
+      "sources": [
+        {
+          "title": "Local News Matters",
+          "url": "https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/"
+        },
+        {
+          "title": "Fast Company",
+          "url": "https://www.fastcompany.com/91571569/kaiser-nurses-say-ai-is-changing-their-jobs-for-the-worse"
+        },
+        {
+          "title": "Hacker News item",
+          "url": "https://news.ycombinator.com/item?id=48952880"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "AI",
+        "workplace surveillance",
+        "healthcare",
+        "labor",
+        "nurses",
+        "HN"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "OpenAI dokłada sprzęt do agentów",
+      "rationale": "Codex Micro zamienia agentic work w tactile workflow i pokazuje, że AI tools przechodzą z aplikacji do fizycznych kontrolek.",
+      "sourcesLabel": "OpenAI; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Apple zaostrza spór z OpenAI",
+      "rationale": "Listy do byłych pracowników zamieniają konflikt o trade secrets w realne ryzyko dla hardware i IPO.",
+      "sourcesLabel": "FT; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Databricks i pieniądze wracają do AI infra",
+      "rationale": "Wycena $188 mld i narracja „valuemaxxing” pokazują, że enterprise AI nadal przyciąga ogromny kapitał.",
+      "sourcesLabel": "Databricks; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "GPT-Live robi z voice ciągły interfejs",
+      "rationale": "Full-duplex voice i delegowanie zadań do GPT-5.5 przesuwają voice mode z dialogu do dłuższego asystowania.",
+      "sourcesLabel": "OpenAI"
+    },
+    {
+      "priority": "High",
+      "title": "San Francisco walczy z nudify apps",
+      "rationale": "App store i payment rails stają się frontem walki z non-consensual deepfake abuse.",
+      "sourcesLabel": "TechCrunch; Wired"
+    },
+    {
+      "priority": "Medium",
+      "title": "Indie pokazują koszt memory crunchu",
+      "rationale": "10% spadku shipmentów smartfonów pokazuje, że AI memory demand już wpływa na ceny konsumenckich urządzeń.",
+      "sourcesLabel": "Counterpoint; TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Kaiser nurses pokazują backlash wobec AI surveillance",
+      "rationale": "HN bardzo mocno podbił temat workplace monitoring, więc to dobry sygnał dla podcastu o kosztach AI w pracy.",
+      "sourcesLabel": "Local News Matters; Hacker News"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI: Introducing GPT-Live",
+      "url": "https://openai.com/index/introducing-gpt-live/"
+    },
+    {
+      "title": "OpenAI Deployment Safety Hub: GPT-Live System Card",
+      "url": "https://deploymentsafety.openai.com/gpt-live"
+    },
+    {
+      "title": "OpenAI Supply Co. x Work Louder: Codex Micro",
+      "url": "https://openai.com/supply/co-lab/work-louder/"
+    },
+    {
+      "title": "TechCrunch: Amid hardware legal battle, OpenAI releases a $230 keyboard for Codex",
+      "url": "https://techcrunch.com/2026/07/15/amid-hardware-legal-battle-openai-releases-a-230-keyboard-for-codex/"
+    },
+    {
+      "title": "Financial Times: Apple targets dozens of OpenAI employees with legal letters",
+      "url": "https://www.ft.com/content/1b8c9d52-88a9-426b-ba47-f1811f859166"
+    },
+    {
+      "title": "TechCrunch: How Apple’s big lawsuit could disrupt OpenAI’s IPO plans",
+      "url": "https://techcrunch.com/video/how-apples-big-lawsuit-could-disrupt-openais-ipo-plans/"
+    },
+    {
+      "title": "Databricks press release: Databricks is Raising a Strategic Round of Funding at a $188 Billion Valuation",
+      "url": "https://www.databricks.com/company/newsroom/press-releases/databricks-raising-strategic-round-funding-188-billion-valuation"
+    },
+    {
+      "title": "TechCrunch: Databricks hits $188B valuation, extending its run as AI’s favorite second act",
+      "url": "https://techcrunch.com/2026/07/17/databricks-hits-188b-valuation-extending-its-run-as-ais-favorite-second-act/"
+    },
+    {
+      "title": "TechCrunch: Apple and Google ordered to purge ‘nudify’ apps from App Stores",
+      "url": "https://techcrunch.com/2026/07/17/apple-and-google-ordered-to-purge-nudify-apps-from-app-stores/"
+    },
+    {
+      "title": "Wired: San Francisco Demands Apple and Google Delete AI ‘Nudify’ Apps From App Stores",
+      "url": "https://www.wired.com/story/san-francisco-demands-apple-and-google-delete-ai-nudify-apps-from-app-stores/"
+    },
+    {
+      "title": "Reuters Connect: San Francisco Demands Apple, Google Remove AI ‘Nudify’ Apps",
+      "url": "https://www.reutersconnect.com/item/uncaptioned-san-francisco-demands-apple-google-remove-ai-nudify-apps/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX09XQ1ZNQzQ0MjE0My1WSURFTw"
+    },
+    {
+      "title": "Counterpoint Research: India Smartphone Shipments Fall 10% YoY in Biggest June Quarter Decline in Six Years",
+      "url": "https://counterpointresearch.com/en/insights/india-smartphone-shipments-fall-10-percent-yoy-june-quarter"
+    },
+    {
+      "title": "TechCrunch: AI-driven memory crunch jolts India’s smartphone market",
+      "url": "https://techcrunch.com/2026/07/17/ai-driven-memory-crunch-jolts-indias-smartphone-market/"
+    },
+    {
+      "title": "Local News Matters: Kaiser nurses say AI, workplace surveillance are making their jobs, care worse",
+      "url": "https://localnewsmatters.org/2026/07/15/kaiser-nurses-say-ai-workplace-surveillance-are-making-their-jobs-and-patient-care-worse/"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/front"
+    },
+    {
+      "title": "Product Hunt homepage",
+      "url": "https://www.producthunt.com/"
+    }
+  ]
+}
