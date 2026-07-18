@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-18-1808",
+  "status": "material_update",
+  "generatedAt": "2026-07-18T16:15:05Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-18T18:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Live 18:08 review completed through read-only Safari Computer Use on old.reddit.com in the local Safari session.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-18-1208 and 2026-07-18-0608. Both runs contributed four-URL blocklists, so the filter excluded eight URLs total before shortlist review.",
+      "Before selecting replacements, the run verified that the currently published public bundle on origin/main is already 2026-07-18-1208, so the remote topic is current and this slot is a normal rotation rather than a recovery publish.",
+      "Shortlist post and top-comment review stayed read-only on exact old.reddit post pages matching the titles surfaced by the live Safari listing sweep.",
+      "The cleanest fresh survivors were I'm gonna watch it the way Nolan intended., Marx would use MY distro!, areWeSeeingAPatternHere, What I ordered for vs. what I received, and When life gives you lemons….",
+      "Are we kidding? drifted into AI and copyright discourse, gitGud drifted into AI and SaaS debate, the strongest AskReddit candidate leaned too hard into drug and crime-cleanup jokes, and the weaker meme or resume candidates did not have a sharp enough comment payoff.",
+      "Several high-score facepalm and AskReddit threads were left out before deep review because the live evening cluster skewed political, medical, criminal, or too broad for a clean public-safe humor digest.",
+      "At least five safe fresh cards survived the live review, so the reddit-radar contract prefers a new public bundle over keeping the visible 2026-07-18-1208 bundle unchanged.",
+      "No Reddit social actions were performed.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-18-1208",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-18-1808-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-18-1808-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-18-1808-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://www.reddit.com/r/memes/comments/1uzijb1/gmail_when_you_log_in_into_another_device/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uyx4kp/thisoneismine/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uyrfnc/programmingrizz/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uyvhk7/unstoppableslopmeetsimmovablecodereview/",
+    "https://www.reddit.com/r/memes/comments/1uz6ka3/no_one_should_have_fun/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uyymqs/luke/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uzhh1c/itsabsolutelyclean/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uz12o3/aaaaagodhelpme/"
+  ],
+  "newCandidates": [
+    {
+      "subreddit": "r/memes",
+      "title": "I'm gonna watch it the way Nolan intended.",
+      "url": "https://www.reddit.com/r/memes/comments/1uzwhmn/im_gonna_watch_it_the_way_nolan_intended/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_because_the_comment_layer_escalates_format_purism_into_clean_universal_viewing_absurd"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Marx would use MY distro!",
+      "url": "https://www.reddit.com/r/memes/comments/1uztcve/marx_would_use_my_distro/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_because_the_linux_and_ideology_puns_stayed_playful_and_never_became_a_real_flamewar"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "areWeSeeingAPatternHere",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uz401n/areweseeingapatternhere/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_because_the_http_prefix_match_joke_has_the_cleanest_dev_comment_payoff_of_the_evening"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "What I ordered for vs. what I received",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uzvdtg/what_i_ordered_for_vs_what_i_received/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_because_the_delivery_fail_stays_light_and_the_comments_turn_it_into_compact_food_disaster_comedy"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "When life gives you lemons…",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uznlwz/when_life_gives_you_lemons/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_because_the_comment_layer_flips_the_complaint_into_collective_lemon_envy"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Memes on Doctor appointments",
+      "url": "https://www.reddit.com/r/memes/comments/1uzoiz8/memes_on_doctor_appointments/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_joke_is_safe_yet_too_thin_against_the_selected_five"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Are we kidding?",
+      "url": "https://www.reddit.com/r/memes/comments/1uzb4qk/are_we_kidding/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_drifts_into_ai_copyright_dystopia_and_disney_discourse"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "gitGud",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uzwz8i/gitgud/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_turns_into_a_longer_ai_and_saas_argument"
+    },
+    {
+      "subreddit": "r/AskReddit",
+      "title": "What’s a completely legal item you can buy that becomes incredibly suspicious if you buy 40 of them at 3:00 AM?",
+      "url": "https://www.reddit.com/r/AskReddit/comments/1uzjm2f/whats_a_completely_legal_item_you_can_buy_that/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_top_comments_skew_into_drugs_bleach_garbage_bags_and_crime_cleanup_jokes"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "i remember the frustration",
+      "url": "https://www.reddit.com/r/memes/comments/1uzxp3q/i_remember_the_frustration/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_turns_into_blind_repair_advice_more_than_a_clean_punchline"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "everySoftwareEngineerResume",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uzr4dy/everysoftwareengineerresume/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_is_too_thin_and_low_energy_for_a_public_bundle"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "thisOneIsMine",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyx4kp/thisoneismine/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_18_1208"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "unstoppableSlopMeetsImmovableCodeReview",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyvhk7/unstoppableslopmeetsimmovablecodereview/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_18_1208"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "itsAbsolutelyClean",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uzhh1c/itsabsolutelyclean/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_18_0608"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "luke",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyymqs/luke/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_18_0608"
+    }
+  ]
+}
