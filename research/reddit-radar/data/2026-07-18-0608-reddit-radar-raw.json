@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-18-0608",
+  "status": "material_update",
+  "generatedAt": "2026-07-18T04:20:17Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-18T06:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Live 06:08 review completed through read-only Safari Computer Use on old.reddit.com in the local Safari session.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-17-1809 and 2026-07-17-1208. The 1208 run contributed no shortlisted URLs; the 1809 run contributed a four-URL blocklist.",
+      "Before selecting replacements, the run verified that the currently published public bundle on origin/main is 2026-07-17-1809, so the active remote state matched the previous successful evening slot.",
+      "Shortlist post and top-comment review stayed read-only on exact old.reddit post pages, with the final opened tab URL treated as the source of truth whenever accessibility element indices shifted during navigation.",
+      "The cleanest fresh survivors were no one should have fun, luke, itsAbsolutelyClean, and aaaaaGodHelpMe.",
+      "Are we kidding? drifted into AI copyright discourse, the Sicily candle post drifted crude, and the flour packaging post stayed more explanatory than funny.",
+      "At least four safe fresh cards survived the live review, so the reddit-radar contract prefers a new public bundle over copying forward 2026-07-17-1809 unchanged.",
+      "No Reddit social actions were performed.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-17-1809",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-18-0608-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-18-0608-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-18-0608-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://www.reddit.com/r/memes/comments/1uz14q5/when_the_interviewer_asks_about_your_5year_plan/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uz2sn5/belikejohn/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uz401n/areweseeingapatternhere/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uyuv9p/geeksbad/"
+  ],
+  "newCandidates": [
+    {
+      "subreddit": "r/memes",
+      "title": "no one should have fun",
+      "url": "https://www.reddit.com/r/memes/comments/1uz6ka3/no_one_should_have_fun/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_broad_petty_sabotage_joke_with_safe_comment_payoff"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "luke",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyymqs/luke/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_clear_vibe_coding_roast_with_strong_comment_layer"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "itsAbsolutelyClean",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uzhh1c/itsabsolutelyclean/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_clean_ui_nostalgia_joke_with_consistent_comment_escalation"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "aaaaaGodHelpMe",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uz12o3/aaaaagodhelpme/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_cloud_bill_panic_roast_that_stays_public_safe"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Are we kidding?",
+      "url": "https://www.reddit.com/r/memes/comments/1uzb4qk/are_we_kidding/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_turns_into_ai_copyright_discourse"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "It's too hot in Sicily. Even the candles gave up.",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uzbre0/its_too_hot_in_sicily_even_the_candles_gave_up/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_visible_top_comments_turn_crude"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "How have we, as a society, not come up with a better way to package flour?",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1uzfazo/how_have_we_as_a_society_not_come_up_with_a/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_is_more_explanatory_than_funny"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "When the interviewer asks about your 5-year plan",
+      "url": "https://www.reddit.com/r/memes/comments/1uz14q5/when_the_interviewer_asks_about_your_5year_plan/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_17_1809"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "beLikeJohn",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uz2sn5/belikejohn/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_17_1809"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "areWeSeeingAPatternHere",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uz401n/areweseeingapatternhere/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_17_1809"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "geeksBad",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uyuv9p/geeksbad/",
+      "scoreLabel": "filtered",
+      "decision": "excluded_by_freshness_filter_because_it_appeared_in_2026_07_17_1809"
+    }
+  ]
+}
