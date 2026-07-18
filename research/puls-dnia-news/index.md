@@ -1,5 +1,12 @@
 # Puls Dnia News Index
 
+The 2026-07-18 21:01 slot turns the Polish side from warning into mixed impact:
+Babimost shows real storm damage, a camper trailer burns on the S7, and a road
+tree accident kills a 19-year-old. In politics, Petru tries a low-tax pitch
+toward Konfederacja voters, while abroad the Iran/Jordan escalation now has
+dead and missing U.S. troops, Hungary moves toward a presidential exit, Canada
+tariffs get tied to wildfire smoke, and CNN adds a China/AI framing.
+
 The 2026-07-18 06:01 slot keeps the feed in an early-morning operational mix:
 RCB and IMGW still hold the storm alert, TVN24 pushes fresh domestic safety
 and procedural pieces, IPN confirms another Ostrówki exhumation find, and

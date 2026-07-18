@@ -2,6 +2,10 @@
 
 ## Open
 
+- Watch whether Babimost damage and the S7 camper fire get PSP, police or road-closure follow-up.
+- Watch whether the Petru pitch turns into a broader center-right economic line or stays a one-off interview.
+- Watch whether the tree fatality near Toruń gets a fuller cause note and any road-hazard warning.
+
 - Watch whether the Małopolska derailment gets a PKP PLK, UTK or police note on cause and service impact.
 - Watch whether the bank maintenance window triggers extra customer issues or a longer outage notice.
 - Watch whether the system kaucyjny complaints become a formal tweak proposal or retailer guidance update.

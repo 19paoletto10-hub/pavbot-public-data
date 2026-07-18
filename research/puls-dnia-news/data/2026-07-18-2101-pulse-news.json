@@ -1,0 +1,459 @@
+{
+  "schemaVersion": 1,
+  "runDate": "2026-07-18",
+  "runTime": "21:01",
+  "status": "Material update",
+  "headline": "Burze przechodzą w szkody, a świat blokuje się wokół Iranu i Jordanii",
+  "summary": "Wieczorny slot przesuwa krajowy feed z samego alertu w widoczne skutki: Babimost pokazuje szkody po burzy, na S7 spłonęła przyczepa, a w Toruniu doszło do śmiertelnego wypadku z drzewem na drodze. Za granicą najcięższy blok to Iran i Jordania z zabitymi oraz zaginionym amerykańskim żołnierzem, a CNN dokłada jeszcze Chiny i AI.",
+  "items": [
+    {
+      "id": "alert-burzowa-sobota",
+      "section": "Alerty",
+      "title": "Chmury grozy. Burzowa sobota w Polsce",
+      "lead": "Burzowy front wciąż przechodzi przez kraj i wieczorem daje wyraźny obraz zagrożenia.",
+      "whatHappened": "TVN24 pokazuje wał szkwałowy nad Dobieszynem jako sygnał nadchodzących burz. Wieczorny slot potwierdza, że alert pogodowy nadal jest żywy i nie ogranicza się do prognozy.",
+      "keyFacts": [
+        "Publikacja TVN24: 18 lipca, 20:58 CEST.",
+        "Wał szkwałowy / chmura szelfowa pojawiła się nad Dobieszynem.",
+        "RCB i IMGW nadal utrzymują burzowe ostrzeżenia."
+      ],
+      "reactions": [
+        "RCB przypomina o zabezpieczeniu luźnych rzeczy i możliwych przerwach w dostawie prądu.",
+        "IMGW utrzymuje ostrzeżenia dla szerokiej części kraju."
+      ],
+      "whyItMatters": "To główny risk-frame dla całego slotu i sygnał, że wieczór może przynieść kolejne szkody lub blokady.",
+      "context": "To już nie jest tylko ostrzeżenie pogodowe; wcześniejsze szkody z innych miejsc pokazują, że front przechodzi w realne skutki.",
+      "watchNext": [
+        "Obserwuj, czy pojawią się przerwy w zasilaniu, nowe zamknięcia dróg albo kolejne komunikaty RCB i IMGW."
+      ],
+      "sources": [
+        {
+          "title": "Chmury grozy. Burzowa sobota w Polsce",
+          "url": "https://tvn24.pl/tvnmeteo/polska/burze-w-polsce-w-sobote-18-07-chmury-grozy-burzowa-sobota-w-polsce-st9148638"
+        },
+        {
+          "title": "www.gov.pl",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        },
+        {
+          "title": "www.gov.pl",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb--burze-z-gradem-i-silny-wiatr-1807"
+        },
+        {
+          "title": "meteo.imgw.pl",
+          "url": "https://meteo.imgw.pl/dyn/"
+        }
+      ],
+      "tags": [
+        "burze",
+        "IMGW",
+        "RCB",
+        "alerty",
+        "pogoda"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "babimost-slad-burzy",
+      "section": "Bezpieczeństwo",
+      "title": "Nawałnica pozostawiła ślad na ziemi. Zobacz nagrania",
+      "lead": "Babimost pokazuje już konkretne szkody po superkomórce burzowej.",
+      "whatHappened": "Superkomórka burzowa przeszła przez Babimost z nawalnym deszczem i bardzo silnym wiatrem. Nagrania pokazują skalę zniszczeń po przejściu frontu.",
+      "keyFacts": [
+        "Publikacja TVN24: 18 lipca, 19:18 CEST.",
+        "Zjawisku towarzyszył bardzo silny wiatr i intensywny deszcz.",
+        "Wideo pokazuje wyraźne szkody w zabudowie i otoczeniu."
+      ],
+      "reactions": [
+        "TVN24 opisuje szkody jako efekt przejścia superkomórki burzowej.",
+        "Na ten moment brak osobnego oficjalnego bilansu strat."
+      ],
+      "whyItMatters": "To potwierdza, że burzowy alert przeszedł w lokalne zniszczenia, a nie tylko w ostrzeżenie modelowe.",
+      "context": "Ta historia wzmacnia cały krajowy blok pogodowy i zwiększa ryzyko kolejnych raportów o szkodach.",
+      "watchNext": [
+        "Szukaj kolejnych komunikatów PSP, samorządów i operatorów sieci o stratach oraz awariach."
+      ],
+      "sources": [
+        {
+          "title": "Nawałnica pozostawiła ślad na ziemi. Zobacz nagrania",
+          "url": "https://tvn24.pl/tvnmeteo/polska/nawalnica-pozostawila-slad-na-ziemi-zobacz-nagrania-st9148590"
+        }
+      ],
+      "tags": [
+        "burze",
+        "zniszczenia",
+        "Babimost",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "s7-przyczepa-kempingowa",
+      "section": "Bezpieczeństwo",
+      "title": "Samozapłon i pożar przyczepy kempingowej na S7. Nagranie",
+      "lead": "Na ważnej trasie wakacyjnej spłonęła przyczepa kempingowa.",
+      "whatHappened": "Na S7 w okolicach Nidzicy doszło do samozapłonu przyczepy kempingowej. Policja podaje, że nikt nie ucierpiał, ale zdarzenie miało miejsce na ruchliwej trasie w kierunku Warszawy.",
+      "keyFacts": [
+        "Publikacja TVN24: 18 lipca, 20:18 CEST.",
+        "Miejsce zdarzenia: S7 w okolicach Nidzicy.",
+        "Policja informuje, że nikt nie został ranny."
+      ],
+      "reactions": [
+        "Policja w Nidzicy potwierdziła samozapłon i brak poszkodowanych."
+      ],
+      "whyItMatters": "Nawet bez ofiar to potencjalny problem dla ruchu wakacyjnego na jednym z głównych korytarzy krajowych.",
+      "context": "To osobny incydent od burz, ale razem z nimi dokłada się do dnia pełnego ryzyk transportowych.",
+      "watchNext": [
+        "Obserwuj, czy pojawi się oficjalna przyczyna pożaru i czy trasa była dłużej utrudniona."
+      ],
+      "sources": [
+        {
+          "title": "Samozapłon i pożar przyczepy kempingowej na S7. Nagranie",
+          "url": "https://tvn24.pl/olsztyn/samozaplon-i-pozar-przyczepy-kempingowej-na-s7-nagranie-st9148631"
+        }
+      ],
+      "tags": [
+        "S7",
+        "pożar",
+        "transport",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "petru-konfederacja",
+      "section": "Polityka",
+      "title": "Ryszard Petru chce przejąć wyborców Konfederacji",
+      "lead": "Petru wraca do politycznej gry z niskopodatkowym przekazem.",
+      "whatHappened": "W TVN24 Petru mówił, że chce budować szerszy ruch wolnościowy i jasno akcentował brak nowych podatków. To bezpośredni ruch pod wyborców Konfederacji.",
+      "keyFacts": [
+        "Publikacja TVN24: 18 lipca, 20:35 CEST.",
+        "Petru wskazał na hasło „żadnych nowych podatków”.",
+        "Występ padł w programie „Fakty po Faktach”."
+      ],
+      "reactions": [
+        "TVN24 przedstawił to jako próbę przechwycenia elektoratu Konfederacji."
+      ],
+      "whyItMatters": "To sygnał, że po prawej stronie i w centrum nadal trwa walka o podatkowo-wolnościową agendę.",
+      "context": "Nie jest to jeszcze szeroki trend, ale daje świeży element do krajowego bloku politycznego poza PiS i Wołyniem.",
+      "watchNext": [
+        "Sprawdź, czy Petru zamieni to w realny projekt polityczny, czy zostanie przy medialnym komunikacie."
+      ],
+      "sources": [
+        {
+          "title": "Ryszard Petru chce przejąć wyborców Konfederacji",
+          "url": "https://tvn24.pl/polska/ryszard-petru-chce-przejac-wyborcow-konfederacji-zadnych-nowych-podatkow-to-jest-bardzo-wazne-st9148629"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "Konfederacja",
+        "Petru",
+        "podatki"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "drzewo-torun-tragedia",
+      "section": "Bezpieczeństwo",
+      "title": "Drzewo na jezdni doprowadziło do tragedii. Nie żyje 19-latka",
+      "lead": "Powalone drzewo na drodze skończyło się śmiertelnym wypadkiem pod Toruniem.",
+      "whatHappened": "Policja opisuje nocny wypadek w Brzozie, gdzie samochód uderzył w leżące na jezdni drzewo. W wyniku zdarzenia zginęła 19-letnia pasażerka.",
+      "keyFacts": [
+        "Wypadek wydarzył się około 03:30 18 lipca.",
+        "Miejsce: Brzoza w powiecie toruńskim.",
+        "Ofiarą śmiertelną była 19-letnia pasażerka."
+      ],
+      "reactions": [
+        "Toruńska policja i straż pożarna pokazały zdjęcia miejsca zdarzenia."
+      ],
+      "whyItMatters": "To konkretny, śmiertelny dowód na to, że burzowy front już przekłada się na zagrożenie drogowe.",
+      "context": "Ten przypadek dobrze domyka krajowy obraz dnia: alert, szkody i realne ryzyko na drogach.",
+      "watchNext": [
+        "Sprawdź, czy policja poda więcej o przyczynie i czy drogi w regionie mają dodatkowe utrudnienia."
+      ],
+      "sources": [
+        {
+          "title": "Drzewo na jezdni doprowadziło do tragedii. Nie żyje 19-latka",
+          "url": "https://tvn24.pl/kujawsko-pomorskie/torun-drzewo-na-jezdni-doprowadzilo-do-tragedii-nie-zyje-19-latka-st9148556"
+        }
+      ],
+      "tags": [
+        "wypadek",
+        "drogi",
+        "Toruń",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "us-troops-jordan-iran",
+      "section": "Świat",
+      "title": "Two US troops killed and one missing after Iranian attack in Jordan",
+      "lead": "Iran-US escalation przynosi już ofiary wśród amerykańskich żołnierzy.",
+      "whatHappened": "BBC podaje, że dwóch amerykańskich żołnierzy zginęło, a jeden jest zaginiony po irańskim ataku w Jordanii. To przesuwa kryzys z poziomu ostrzeżeń w bezpośrednią stratę ludzką.",
+      "keyFacts": [
+        "BBC opublikowało materiał 18 lipca o 18:41 GMT.",
+        "Jordan poinformowała, że przechwyciła 10 irańskich rakiet nad swoim terytorium.",
+        "CENTCOM wydał własne oświadczenie o poległych i zaginionym."
+      ],
+      "reactions": [
+        "CENTCOM potwierdził komunikat o poległych i zaginionym żołnierzu."
+      ],
+      "whyItMatters": "To najcięższy i najbardziej operacyjny globalny sygnał w tym slocie, z potencjałem na kolejne działania odwetowe.",
+      "context": "Spina się z całym tygodniowym blokiem Iran / Hormuz i może szybko odbić się na żegludze, cenach paliw i decyzjach politycznych.",
+      "watchNext": [
+        "Obserwuj kolejne oświadczenia CENTCOM i amerykańskiej administracji oraz wszelkie sygnały o ruchach morskich."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Two US troops killed and one missing after Iranian attack in Jordan",
+          "url": "https://www.bbc.co.uk/news/articles/cn8nynv8ze8o"
+        },
+        {
+          "title": "CENTCOM statement on recently fallen, missing U.S. service members",
+          "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4549635/centcom-statement-on-recently-fallen-missing-us-service-members/"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Jordania",
+        "CENTCOM",
+        "bezpieczeństwo",
+        "eskalacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "wegry-prezydent-dymisja",
+      "section": "Świat",
+      "title": "Hungary's president agrees to stand down after parliament backs removal",
+      "lead": "W Budapeszcie rusza formalny ruch do zmiany głowy państwa.",
+      "whatHappened": "BBC podaje, że Tamás Sulyok zgodził się ustąpić po tym, jak parlament poparł jego odwołanie. W praktyce oznacza to wejście w ścieżkę sukcesji politycznej.",
+      "keyFacts": [
+        "BBC opublikowało materiał 18 lipca o 17:33 GMT.",
+        "Sulyok jest opisywany jako lojalista Orbána.",
+        "Parlament wcześniej poparł jego usunięcie."
+      ],
+      "reactions": [
+        "BBC opisuje ten ruch jako znaczący polityczny zwrot, nie rutynową zmianę."
+      ],
+      "whyItMatters": "To może mieć wpływ na stabilność instytucjonalną Węgier i ich relację z UE.",
+      "context": "W samym środku dnia pełnego bezpieczeństwa i wojny to ważny, ale bardziej systemowy sygnał z Europy.",
+      "watchNext": [
+        "Obserwuj termin formalnego odejścia i pierwsze reakcje Brukseli."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Hungary's president agrees to stand down after parliament backs removal",
+          "url": "https://www.bbc.co.uk/news/articles/cpd7q7eev7po"
+        }
+      ],
+      "tags": [
+        "Węgry",
+        "polityka",
+        "Europa",
+        "instytucje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "kanada-cla-pozary",
+      "section": "Gospodarka",
+      "title": "Trump threatens new Canada tariffs over fires sending filthy air into US cities",
+      "lead": "Pożary stają się bezpośrednim pretekstem do kolejnej wojny celnej.",
+      "whatHappened": "BBC pisze, że Trump grozi nowymi cłami na Kanadę, łącząc je z pożarami i złą jakością powietrza w amerykańskich miastach. Mark Carney odpowiada, że oba kraje mają wspólną odpowiedzialność klimatyczną.",
+      "keyFacts": [
+        "BBC opublikowało materiał 18 lipca o 17:29 GMT.",
+        "Dym z pożarów pogarsza jakość powietrza po stronie USA.",
+        "Groźba ceł łączy klimat z polityką handlową."
+      ],
+      "reactions": [
+        "Mark Carney podkreślił wspólną odpowiedzialność za walkę ze zmianą klimatu."
+      ],
+      "whyItMatters": "To sygnał, że klimat i handel znów splatają się w jednym konflikcie polityczno-ekonomicznym.",
+      "context": "To najlepszy gospodarczy sygnał w świecie z tego slotu i może szybko dostać ciąg dalszy w polityce handlowej.",
+      "watchNext": [
+        "Sprawdź, czy padnie formalny komunikat handlowy albo odpowiedź Ottawy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Trump threatens new Canada tariffs over fires sending filthy air into US cities",
+          "url": "https://www.bbc.co.uk/news/articles/cwyq93j34lgo"
+        }
+      ],
+      "tags": [
+        "Kanada",
+        "cła",
+        "pożary",
+        "gospodarka",
+        "klimat"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "wenecja-protest-yacht",
+      "section": "Świat",
+      "title": "Venice protesters clash with police as Trump envoy’s mega yacht arrives",
+      "lead": "Wenecja dostaje protestowy obrazek wokół luksusowego jachtu i polityki USA.",
+      "whatHappened": "CNN opisuje protesty i starcia z policją po przybyciu megajachtu wysłannika Trumpa do Wenecji. Historia łączy politykę, luksus i lokalne napięcia społeczne.",
+      "keyFacts": [
+        "CNN opublikowało materiał 18 lipca o 14:56 UTC.",
+        "Protest dotyczył zarówno symboliki politycznej, jak i luksusowego stylu przyjazdu.",
+        "Policja została wciągnięta w utrzymanie porządku."
+      ],
+      "reactions": [
+        "Protestujący przedstawiali jacht jako oderwany od lokalnych realiów."
+      ],
+      "whyItMatters": "To story, które może żyć w mediach społecznościowych i podtrzymywać europejskie napięcia wokół USA.",
+      "context": "Nie jest to twardy kryzys, ale dobrze pokazuje, jak mocno wątek USA nadal przebija się do europejskiego newsroomu.",
+      "watchNext": [
+        "Obserwuj, czy pojawią się obrażenia, oficjalna reakcja policji albo szerszy lokalny backlash."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Venice protesters clash with police as Trump envoy’s mega yacht arrives",
+          "url": "https://www.cnn.com/2026/07/18/europe/protests-venice-italy-us-envoy-yacht-intl"
+        }
+      ],
+      "tags": [
+        "Wenecja",
+        "protesty",
+        "USA",
+        "Europa"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "spahn-rezygnacja",
+      "section": "Polityka",
+      "title": "Senior Merz ally Spahn resigns after coming under pressure in Germany over surrogate baby",
+      "lead": "Niemiecka chadecja dostaje kolejną wewnętrzną ranę wizerunkową.",
+      "whatHappened": "CNN podaje, że Jens Spahn zrezygnował po presji związanej z kontrowersją wokół surogacji. To zamienia osobisty spór w partyjny problem CDU/CSU.",
+      "keyFacts": [
+        "CNN opublikowało materiał 18 lipca o 12:57 UTC.",
+        "Spahn jest opisywany jako ważny sojusznik Merza.",
+        "Spór dotyczy surogacji i reakcji na nią w Niemczech."
+      ],
+      "reactions": [
+        "Presja w CDU/CSU wygląda na wystarczająco silną, by wymusić odejście."
+      ],
+      "whyItMatters": "To może wpływać na przekaz niemieckiej prawicy i szerzej na europejskie centrum.",
+      "context": "Nie jest to najtwardsza historia dnia, ale dobrze pokazuje, że polityczny blok europejski też ma własne wewnętrzne tarcia.",
+      "watchNext": [
+        "Obserwuj, czy CDU/CSU wyda szersze wyjaśnienie i czy pojawi się dalszy fallout."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Senior Merz ally Spahn resigns after coming under pressure in Germany over surrogate baby",
+          "url": "https://www.cnn.com/2026/07/18/europe/spahn-resignation-germany-surrogate-intl"
+        }
+      ],
+      "tags": [
+        "Niemcy",
+        "CDU",
+        "rezygnacja",
+        "polityka"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "ukraina-ataki-rosja-magazyny",
+      "section": "Bezpieczeństwo",
+      "title": "Warehouse workers among 8 dead in deadliest Ukrainian attacks inside Russia for two years",
+      "lead": "Wojna dronów znowu przebija się przez rosyjską logistykę.",
+      "whatHappened": "CNN opisuje ataki dronowe Ukrainy na magazyny wewnątrz Rosji, w których zginęło osiem osób. To jeden z najkrwawszych takich epizodów od dwóch lat.",
+      "keyFacts": [
+        "CNN opublikowało materiał 18 lipca o 10:01 UTC.",
+        "Ofiarami byli także pracownicy magazynów.",
+        "CNN nazywa te ataki najśmiertelniejszymi w Rosji od dwóch lat."
+      ],
+      "reactions": [
+        "Artykuł przedstawia to jako nową fazę wojny dronowej."
+      ],
+      "whyItMatters": "To zwiększa ryzyko odwetu i pokazuje, że konflikt coraz mocniej uderza w zaplecze logistyczne.",
+      "context": "W połączeniu z Iranem/Jordanem buduje to wieczorny blok bezpieczeństwa o bardzo wysokiej temperaturze.",
+      "watchNext": [
+        "Obserwuj, czy Moskwa lub Kijów potwierdzą szczegóły i czy pojawią się kolejne uderzenia odwetowe."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Warehouse workers among 8 dead in deadliest Ukrainian attacks inside Russia for two years",
+          "url": "https://www.cnn.com/2026/07/18/europe/eight-killed-in-ukrainian-drone-attacks-on-russian-warehouses"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "drony",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "chiny-ai-voter-data",
+      "section": "Technologia",
+      "title": "Analysis: As Trump accuses China of stealing voter data, Xi pitches Beijing as a responsible tech leader",
+      "lead": "CNN trzyma w obiegu techniczny spór o dane, AI i chińską pozycję.",
+      "whatHappened": "CNN opisuje, jak Xi próbuje pozycjonować Pekin jako odpowiedzialnego lidera technologicznego, podczas gdy Trump oskarża Chiny o kradzież danych wyborczych. To łączy technologię z polityką i bezpieczeństwem danych.",
+      "keyFacts": [
+        "CNN opublikowało analizę 17 lipca.",
+        "Wątek dotyczy danych wyborczych i szerzej AI / technologii.",
+        "Artykuł jest osadzony w chińskim kontekście politycznym."
+      ],
+      "reactions": [
+        "CNN zestawia oskarżenia Trumpa z komunikacyjną strategią Xi."
+      ],
+      "whyItMatters": "To utrzymuje technologię w paśmie publicznego news cycle jako sprawę geopolityczną, nie tylko produktową.",
+      "context": "To najmocniejszy tech-story w dzisiejszym CNN World feed i dobrze domyka zakres topicu.",
+      "watchNext": [
+        "Obserwuj, czy pojawi się amerykańska albo chińska odpowiedź regulacyjna."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Analysis of China tech leadership and voter data claims",
+          "url": "https://www.cnn.com/2026/07/17/china/china-ai-conference-analysis-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Chiny",
+        "AI",
+        "technologia",
+        "dane",
+        "geopolityka"
+      ],
+      "priority": "low"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 latest feed",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "RCB communications",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "RCB storm alert",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb--burze-z-gradem-i-silny-wiatr-1807"
+    },
+    {
+      "title": "IMGW dynamic map",
+      "url": "https://meteo.imgw.pl/dyn/"
+    },
+    {
+      "title": "CENTCOM statement",
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4549635/centcom-statement-on-recently-fallen-missing-us-service-members/"
+    }
+  ],
+  "topic": "puls-dnia-news"
+}
