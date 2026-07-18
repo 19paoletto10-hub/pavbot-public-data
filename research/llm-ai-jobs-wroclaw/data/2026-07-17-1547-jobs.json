@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-07-17",
+  "runTime": "15:47",
+  "executiveSummary": "Dzisiejszy sweep przesunął shortlistę jeszcze mocniej w stronę MCP, agentic platform, LLM evaluation i AI testing. Najmocniejsze nowe sygnały to Intellias, Itransition, EPAM, Spyrosoft, Addepto i Accenture. W porównaniu z wczorajszym stanem rynek wygląda bardziej produkcyjnie: mniej ogólnych kart AI, więcej ról z jasnym backendowym, platformowym albo ewaluacyjnym zakresem. Materialna zmiana dotyczy też DataArt: ten sam klaster rolek z Wrocławia i remote Polski nadal żyje, ale publiczny mirror teraz pokazuje krótszy tytuł i jawne widełki w CHF. To nadal jest jedna z mocniejszych ofert architektonicznych, tylko z innym publicznym opakowaniem niż w poprzednim przebiegu.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Python MCP Engineer",
+      "company": "Intellias",
+      "location": "Wrocław +1 lokalizacja / remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "MCP, enterprise AI, cloud platform services, Python, async backend, observability, AWS",
+      "whyInteresting": "bardzo precyzyjna rola pod integrację agentów z systemami enterprise; MCP jest dziś jednym z najmocniejszych sygnałów w całym koszyku.",
+      "uncertainty": "publiczny sygnał jest board-first; dla tej dokładnej roli nie wyszła kanoniczna strona pracodawcy.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/intellias-python-mcp-engineer-wroclaw-python"
+      ],
+      "tags": [
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Agentic Platform Architect",
+      "company": "Itransition",
+      "location": "Wrocław +1 lokalizacja / remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "agentic AI platform, architecture standards, secure governance, scalable AI capabilities",
+      "whyInteresting": "to mocny sygnał platformowy na poziomie architektury, z naciskiem na governance i skalowanie agentów w organizacji.",
+      "uncertainty": "karta jest publiczna, ale nadal board-first.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/itransition-agentic-platform-architect-wroclaw-architecture"
+      ],
+      "tags": [
+        "Agentic AI"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "AI Agent Middle/Senior Developer",
+      "company": "Itransition",
+      "location": "Wrocław +1 lokalizacja / remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Senior",
+      "fitSummary": "Python, agentic ecosystems, embeddings, vector search, prompt/context engineering, RAG, CRAG, GraphRAG, LangChain, LangGraph, CrewAI, testing",
+      "whyInteresting": "jedna z najczystszych hands-on ról agentic w tej rundzie, z wyraźnym naciskiem na produkcję, testy i weryfikację agentów.",
+      "uncertainty": "board-first, bez osobnej strony employer page dla tej dokładnej roli.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/itransition-ai-agent-middle-senior-developer-wroclaw-ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "Python"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Lead AI Testing Engineer",
+      "company": "EPAM",
+      "location": "Wrocław / remote within Poland",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Lead",
+      "fitSummary": "LLM evaluation, knowledge graphs, ontologies, RAG, pytest, Azure DevOps, QA automation",
+      "whyInteresting": "rzadki i mocny sygnał wokół ewaluacji AI i testowania systemów LLM, a nie tylko ich budowania.",
+      "uncertainty": "Wrocław pochodzi z publicznej karty boardowej; oficjalna strona potwierdza scope i pracę zdalną w Polsce.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/epam-systems-lead-ai-testing-engineer-wroclaw-testing",
+        "https://careers.epam.com/en/vacancy/lead-ai-testing-engineer-bltetpm9a7cbz81xjp3_en"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Senior AI Engineer (Python)",
+      "company": "Spyrosoft",
+      "location": "Wrocław +2 lokalizacje / remote",
+      "workMode": "Remote",
+      "compensation": "25,54 - 34,83 EUR net/h B2B",
+      "seniority": "Senior",
+      "fitSummary": "LLM evaluation and observability, RAG, AI agents, LangChain, LangGraph, LlamaIndex, FastAPI, Kubernetes",
+      "whyInteresting": "hands-on production AI engineering z ewaluacją i observability, czyli dokładnie ten rodzaj roli, który zwykle kończy się wdrożeniem.",
+      "uncertainty": "board-first sygnał; dla tej dokładnej roli nie wyszła stabilna kanoniczna strona employer.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/spyrosoft-senior-ai-engineer-python--wroclaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Senior AI Engineer (LLMs, Python)",
+      "company": "Addepto",
+      "location": "Wrocław +4 lokalizacje / remote",
+      "workMode": "Remote",
+      "compensation": "4 485,83 - 5 851,08 EUR/month B2B",
+      "seniority": "Senior",
+      "fitSummary": "LLM, cloud, backend, AI, Docker, Python, generative AI, data science",
+      "whyInteresting": "nowa, mocna rola z jasnym salary bandem i wyraźnym naciskiem na backendowe wdrożenia LLM.",
+      "uncertainty": "publiczny sygnał jest board-first; oficjalna karta dla tego exact tytułu nie była dziś potrzebna do potwierdzenia.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/addepto-senior-ai-engineer-llms-python--wroclaw-ai-3469cc5b"
+      ],
+      "tags": [
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "GenAI Architect (AI&Data)",
+      "company": "Accenture",
+      "location": "Multiple locations / Wrocław +3 / hybrid",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "autonomous agentic ecosystems, enterprise AI strategy, governance, model choice, security/compliance, MCP, connectors",
+      "whyInteresting": "to duża, enterprise'owa rola architektoniczna z agentic AI i integracją biznesowych systemów na pierwszym planie.",
+      "uncertainty": "oficjalna strona jest multi-location; Wrocław widać w publicznym mirrora boardowym.",
+      "sourceURLs": [
+        "https://www.accenture.com/pl-pl/careers/jobdetails?id=R00318996_en&title=Principal+Agentic+Architecture+%26+Enterprise+AI+Expert+%28AI%26Data%29",
+        "https://justjoin.it/job-offer/accenture-principal-agentic-architecture-enterprise-ai-expert-ai-data--wroclaw-architecture"
+      ],
+      "tags": [
+        "Agentic AI",
+        "GenAI"
+      ]
+    },
+    {
+      "rank": 8,
+      "title": "AI Solutions Architect",
+      "company": "DataArt",
+      "location": "Wrocław +4 lokalizacje / remote",
+      "workMode": "Remote",
+      "compensation": "6 361,73 - 7 740,10 CHF net/month B2B lub 5 301,44 - 6 361,73 CHF gross/month permanent",
+      "seniority": "Nieokreślony",
+      "fitSummary": "AI/ML, RAG, knowledge graphs, semantic search, agent workflows, retrieval evaluation, Vertex AI, Gemini",
+      "whyInteresting": "publiczny mirror podniósł widoczność oferty dzięki jawnemu salary bandowi i skróconemu, aktualnemu tytułowi.",
+      "uncertainty": "canonical employer page nadal używa starszego opisu SLA00066, więc publiczny board pozostaje głównym źródłem tytułu i widełek.",
+      "sourceURLs": [
+        "https://www.dataart.team/vacancies/sla00066",
+        "https://justjoin.it/job-offer/dataart-ai-solutions-architect-wroclaw-ai-0426c92c"
+      ],
+      "tags": [
+        "RAG"
+      ]
+    }
+  ],
+  "changes": [
+    "Dodały się nowe aktywne role wokół MCP, agentic platform i AI evaluation: Intellias, Itransition i EPAM.",
+    "Pojawiły się nowe hands-on role LLM/AI: Spyrosoft Senior AI Engineer (Python) i Addepto Senior AI Engineer (LLMs, Python).",
+    "Accenture dołożył czytelny sygnał agentic architecture w modelu GenAI Architect (AI&Data).",
+    "DataArt ten sam klaster ofert pokazał teraz z nowym publicznym tytułem i widełkami w CHF na board mirrorze.",
+    "Publiczne wyszukiwarki nadal pokazują część wygasłych kart, więc trzeba odfiltrowywać expired leady zanim trafią do shortlisty."
+  ],
+  "risks": [
+    "Board mirrors nadal potrafią różnić się od stron pracodawców w tytule, widełkach i lokalizacji.",
+    "Wiele ról jest multi-location, więc Wrocław bywa tylko jedną z kilku publicznych opcji.",
+    "Publiczne wyniki wyszukiwania potrafią utrzymywać wygasłe ogłoszenia, dlatego status trzeba weryfikować przy każdym przebiegu."
+  ],
+  "recommendedActions": [
+    "W następnym przebiegu sprawdzić, czy Intellias, Itransition, EPAM, Spyrosoft i Addepto pozostają aktywne.",
+    "Utrzymać obserwację DataArt pod kątem kolejnego driftu tytułu albo widełek.",
+    "Jeśli Accenture utrzyma ten klaster, rozważyć przeniesienie go do stałej shortlisty źródeł."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Job offers AI/ML, Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: Job offers Architecture, Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/architecture",
+      "status": "checked"
+    },
+    {
+      "title": "Intellias: Python MCP Engineer",
+      "url": "https://justjoin.it/job-offer/intellias-python-mcp-engineer-wroclaw-python",
+      "status": "checked"
+    },
+    {
+      "title": "Itransition: Agentic Platform Architect",
+      "url": "https://justjoin.it/job-offer/itransition-agentic-platform-architect-wroclaw-architecture",
+      "status": "checked"
+    },
+    {
+      "title": "Itransition: AI Agent Middle/Senior Developer",
+      "url": "https://justjoin.it/job-offer/itransition-ai-agent-middle-senior-developer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM: Lead AI Testing Engineer",
+      "url": "https://justjoin.it/job-offer/epam-systems-lead-ai-testing-engineer-wroclaw-testing",
+      "status": "checked"
+    },
+    {
+      "title": "EPAM Careers: Lead AI Testing Engineer",
+      "url": "https://careers.epam.com/en/vacancy/lead-ai-testing-engineer-bltetpm9a7cbz81xjp3_en",
+      "status": "checked"
+    },
+    {
+      "title": "Spyrosoft: Senior AI Engineer (Python)",
+      "url": "https://justjoin.it/job-offer/spyrosoft-senior-ai-engineer-python--wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Addepto: Senior AI Engineer (LLMs, Python)",
+      "url": "https://justjoin.it/job-offer/addepto-senior-ai-engineer-llms-python--wroclaw-ai-3469cc5b",
+      "status": "checked"
+    },
+    {
+      "title": "Accenture: GenAI Architect (AI&Data)",
+      "url": "https://www.accenture.com/pl-pl/careers/jobdetails?id=R00318996_en&title=Principal+Agentic+Architecture+%26+Enterprise+AI+Expert+%28AI%26Data%29",
+      "status": "checked"
+    },
+    {
+      "title": "Accenture: GenAI Architect (AI&Data) mirror",
+      "url": "https://justjoin.it/job-offer/accenture-principal-agentic-architecture-enterprise-ai-expert-ai-data--wroclaw-architecture",
+      "status": "checked"
+    },
+    {
+      "title": "DataArt: Senior AI Solutions Architect with LLM and RAG",
+      "url": "https://www.dataart.team/vacancies/sla00066",
+      "status": "checked"
+    },
+    {
+      "title": "DataArt: AI Solutions Architect mirror",
+      "url": "https://justjoin.it/job-offer/dataart-ai-solutions-architect-wroclaw-ai-0426c92c",
+      "status": "checked"
+    }
+  ]
+}

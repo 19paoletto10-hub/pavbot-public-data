@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-07-18",
+  "runTime": "15:44",
+  "executiveSummary": "Dzisiejsza runda dołożyła nowy, wyraźnie produkcyjny klaster w Spyrosoft: Forward Deployed Engineer (OpenAI), AI Architect (with Python), Senior AI Engineer (with Python) i Senior Fullstack Engineer (Java & React & AI). To jest mocny sygnał, że AI wchodzi tam w pełny delivery stack, od OpenAI i MCP po architekturę, RAG i AI-assisted engineering, a nie tylko w warstwę eksperymentalną. Równolegle Tooploox Senior AI Engineer pokazał materialny drift: publiczny mirror na No Fluff Jobs podniósł widełki i doprecyzował Wrocław, Tęczowa 7 oraz model Hybrid +1, podczas gdy oficjalna strona nadal pokazuje szerszy opis remote Poland i niższy band. W tej rundzie nie widać podobnie mocnego nowego sygnału z Accenture, Cloudfide ani wcześniejszych board-first klastrów.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Forward Deployed Engineer (OpenAI)",
+      "company": "Spyrosoft",
+      "location": "Poland (PL), fully remote; publiczny agregator pokazuje też Zdalnie +1.",
+      "workMode": "Remote",
+      "compensation": "18 480 - 25 200 PLN na publicznym boardzie.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "OpenAI APIs, Python, REST API, produkcyjne aplikacje AI, delivery u klienta.",
+      "whyInteresting": "to najczystszy sygnał typu forward deployed w tym przebiegu, czyli rola łącząca klienta, implementację i uruchamianie rozwiązań produkcyjnych.",
+      "uncertainty": "publiczny board pokazuje szczegóły salary, ale oficjalna lista Spyrosoft jest bardziej ogólna i nie rozpisuje pełnego opisu na stronie listy.",
+      "sourceURLs": [
+        "https://careers.spyro-soft.com/jobs",
+        "https://nofluffjobs.com/pl/openai"
+      ],
+      "tags": [
+        "Python"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "AI Architect (with Python)",
+      "company": "Spyrosoft",
+      "location": "Poland (PL), fully remote.",
+      "workMode": "Remote",
+      "compensation": "140 - 190 PLN/h B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "architektura GenAI i ML, RAG, vector databases, integracje API, governance, bezpieczeństwo, AI Agents i LLMOps jako mocne nice-to-have.",
+      "whyInteresting": "bardzo mocny sygnał architektoniczny z realnym kodowaniem w Pythonie, a nie tylko governance deckami.",
+      "uncertainty": "brak Wrocław-only scope; to szeroki remote Poland listing.",
+      "sourceURLs": [
+        "https://careers.spyro-soft.com/jobs/8044089-ai-architect-with-python"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI",
+        "LLMOps",
+        "Python"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior AI Engineer (with Python)",
+      "company": "Spyrosoft",
+      "location": "Poland (PL), fully remote.",
+      "workMode": "Remote",
+      "compensation": "110 - 150 PLN/h B2B.",
+      "seniority": "Senior",
+      "fitSummary": "produkcyjne aplikacje AI, integracje LLM, RAG, vector databases, testy automatyczne dla AI, AI Agents, LLM evaluation i observability.",
+      "whyInteresting": "to bardzo czysty hands-on AI engineering signal, z naciskiem na wdrażanie i utrzymanie systemów, a nie tylko prototypy.",
+      "uncertainty": "szeroki remote Poland scope, bez osobnego Wrocław-only potwierdzenia.",
+      "sourceURLs": [
+        "https://careers.spyro-soft.com/jobs/8044186-senior-ai-engineer-with-python"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Senior Fullstack Engineer (Java & React & AI)",
+      "company": "Spyrosoft",
+      "location": "Poland (PL), fully remote; publiczny mirror pokazuje też Wrocław, plac Nowy Targ 28.",
+      "workMode": "Remote",
+      "compensation": "120 PLN/h B2B.",
+      "seniority": "Senior",
+      "fitSummary": "Java, React, MCP, AI Integration Services, GitHub Copilot, Microsoft Copilot, CI/CD i AI-assisted development.",
+      "whyInteresting": "AI wchodzi tu do mainstreamowego fullstack delivery, a MCP jest wprost częścią stacku, nie dodatkiem marketingowym.",
+      "uncertainty": "oficjalna strona jest remote Poland, a Wrocław pochodzi z publicznego board mirror.",
+      "sourceURLs": [
+        "https://careers.spyro-soft.com/jobs/8065116-senior-fullstack-engineer-java-react-ai",
+        "https://justjoin.it/job-offer/spyrosoft-senior-fullstack-engineer-java-react-ai--wroclaw-java"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 5,
+      "title": "AI Consultant (GenAI)",
+      "company": "Spyrosoft",
+      "location": "Poland (PL), fully remote; publiczny mirror pokazuje Wrocław.",
+      "workMode": "Remote",
+      "compensation": "110 - 150 PLN/h B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "discovery workshops, solution design, AI readiness, high-value AI use cases, pre-sales i techniczne roadmapy.",
+      "whyInteresting": "mniej hands-on niż pozostałe role, ale pokazuje, że Spyrosoft rozbudowuje cały AI funnel, od architektury po konsulting.",
+      "uncertainty": "to rola bardziej advisory niż delivery, więc ma niższy priorytet niż pozostałe wpisy w tej rundzie.",
+      "sourceURLs": [
+        "https://careers.spyro-soft.com/jobs/8044619-ai-consultant-genai",
+        "https://justjoin.it/job-offer/spyrosoft-ai-consultant-wroclaw-ai-fbfe1860"
+      ],
+      "tags": [
+        "GenAI"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Senior AI Engineer",
+      "company": "Tooploox",
+      "location": "Wrocław, Tęczowa 7, Hybrid +1 na publicznym boardzie; oficjalna strona nadal pokazuje Poland (PL), Fully Remote.",
+      "workMode": "Remote",
+      "compensation": "publiczny mirror pokazuje 22 000 - 28 000 PLN + VAT (B2B); oficjalna strona nadal pokazuje 15 000 - 26 000 PLN B2B albo 13 000 - 23 000 PLN UoP.",
+      "seniority": "Senior",
+      "fitSummary": "Python, LLM orchestration, RAG, vector databases, monitoring i evaluation, MCP, lokalne LLM-y, GraphRAG, production-grade AI agents.",
+      "whyInteresting": "to materialny drift istniejącej oferty, zarówno po stronie salary, jak i work-mode wording; mirror jest dziś bardziej konkretne niż starsza oficjalna karta.",
+      "uncertainty": "to prawdopodobnie ten sam otwarty kierunek, ale publiczne źródła rozjeżdżają się w bandzie i modelu pracy.",
+      "sourceURLs": [
+        "https://tooploox.com/careers",
+        "https://nofluffjobs.com/sk/job/senior-ai-engineer-tooploox-wroclaw-3"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    }
+  ],
+  "changes": [
+    "Do shortlisty doszedł nowy, mocny klaster Spyrosoft wokół OpenAI, MCP, RAG, AI architecture i AI-assisted fullstack.",
+    "Tooploox Senior AI Engineer przesunął się w publicznym mirrorze do wyższych widełek i bardziej precyzyjnego Wrocław/hybrid wording.",
+    "W tej rundzie nie pojawił się równie mocny nowy sygnał z Accenture, Cloudfide, Sii ani wcześniejszych klastrów board-first."
+  ],
+  "risks": [
+    "Board mirrors nadal potrafią różnić się od oficjalnych stron w zakresie salary, remote policy i lokalizacji.",
+    "Część ról jest remote Poland, więc Wrocław bywa tylko jednym z publicznych punktów odniesienia.",
+    "Role o nazwach consultant i forward deployed mogą szybko zmienić zakres albo zostać zduplikowane na kolejnych mirrorach."
+  ],
+  "recommendedActions": [
+    "Następny run powinien sprawdzić, czy cały klaster Spyrosoft nadal jest aktywny i czy któryś z jego elementów dostaje kanoniczną stronę z Wrocławiem.",
+    "Utrzymać równoległe monitorowanie oficjalnej strony Tooploox i publicznego board mirroru, bo salary/work-mode wording już się rozjeżdża.",
+    "Bez zmian w automatyzacji lub repo-level config."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Job offers AI/ML, Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Spyrosoft: Jobs",
+      "url": "https://careers.spyro-soft.com/jobs",
+      "status": "checked"
+    },
+    {
+      "title": "Spyrosoft: AI Architect (with Python)",
+      "url": "https://careers.spyro-soft.com/jobs/8044089-ai-architect-with-python",
+      "status": "checked"
+    },
+    {
+      "title": "Spyrosoft: Senior AI Engineer (with Python)",
+      "url": "https://careers.spyro-soft.com/jobs/8044186-senior-ai-engineer-with-python",
+      "status": "checked"
+    },
+    {
+      "title": "Spyrosoft: Senior Fullstack Engineer (Java & React & AI)",
+      "url": "https://careers.spyro-soft.com/jobs/8065116-senior-fullstack-engineer-java-react-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Spyrosoft: AI Consultant (GenAI)",
+      "url": "https://careers.spyro-soft.com/jobs/8044619-ai-consultant-genai",
+      "status": "checked"
+    },
+    {
+      "title": "No Fluff Jobs: OpenAI role search",
+      "url": "https://nofluffjobs.com/pl/openai",
+      "status": "checked"
+    },
+    {
+      "title": "No Fluff Jobs: Senior AI Engineer - Tooploox",
+      "url": "https://nofluffjobs.com/sk/job/senior-ai-engineer-tooploox-wroclaw-3",
+      "status": "checked"
+    },
+    {
+      "title": "Tooploox careers",
+      "url": "https://tooploox.com/careers",
+      "status": "checked"
+    }
+  ]
+}

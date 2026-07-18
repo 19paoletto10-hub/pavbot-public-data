@@ -1,19 +1,25 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-07-16 15:41 CEST
+Last updated: 2026-07-18 15:44 CEST
 
 ## Current Understanding
 
-Runda z `2026-07-16 15:41 CEST` dołożyła nowy klaster wokół `Intellias`,
-`Andersen`, `Tooploox`, `Cloudfide`, `Spyrosoft` i odświeżonego `ITDS`.
-Mix jeszcze mocniej przesunął się w stronę `AI platform`, `agentic tooling`,
-`Copilot Studio` i `AI security`, a starsze sygnały platformowe z `Sii`,
-`Addepto`, `Holisticon Connect`, `EY`, `EPAM`, `Rossmann` i `ALTIMI` nadal
-warto obserwować.
+Runda z `2026-07-18 15:44 CEST` dołożyła nowy, wyraźnie produkcyjny klaster
+w `Spyrosoft`: `Forward Deployed Engineer (OpenAI)`, `AI Architect (with
+Python)`, `Senior AI Engineer (with Python)`, `Senior Fullstack Engineer (Java
+& React & AI)` i `AI Consultant (GenAI)`. Równolegle `Tooploox Senior AI
+Engineer` podbił publiczny band i doprecyzował `Wrocław, Tęczowa 7` oraz
+`Hybrid +1` w mirrze, mimo że oficjalna strona nadal pokazuje szersze
+`remote Poland`.
+
+Mix jeszcze mocniej przesunął się w stronę `OpenAI`, `MCP`, `AI architecture`,
+`RAG` i produkcyjnego delivery, a starsze sygnały platformowe z `Sii`,
+`Addepto`, `Holisticon Connect`, `EY`, `EPAM`, `Rossmann`, `ALTIMI`,
+`Accenture` i `Cloudfide` nadal warto obserwować.
 
 Dzisiejszy rynek jest już wyraźnie bardziej produkcyjny niż poprzednia
 board-first fala, a rola `AI Engineer` coraz częściej jest opakowana w
-konkretny platformowy lub toolingowy scope.
+konkretny platformowy, delivery lub toolingowy scope.
 
 ## Stable Facts
 
@@ -44,6 +50,11 @@ only when something meaningful changes.
 | tooploox-ai-product-engineer-tooling-wroclaw-remote | Tooploox | AI Product Engineer (Tooling) | Wrocław / remote | 2026-07-16-1541 | 2026-07-16-1541 | Open | Initial capture: 20 000-35 000 PLN net/month B2B or 18 000-31 500 PLN gross/month permanent; Wrocław Tęczowa 7; coding agents, MCP, plugins, LLM APIs, RAG and internal tooling. | [Just Join IT](https://justjoin.it/job-offer/tooploox-ai-product-engineer-tooling--wroclaw-ai) |
 | cloudfide-ai-engineer-wroclaw-remote | Cloudfide | AI Engineer | Wrocław + remote | 2026-07-16-1541 | 2026-07-16-1541 | Open | Initial capture: board-first Wrocław role; GenAI agent skills, LangChain/LangGraph, Databricks and API integration; salary not public. | [Just Join IT](https://justjoin.it/job-offer/cloudfide-spolka-z-ograniczona-odpowiedzialnoscia-ai-engineer-wroclaw-ai) |
 | spyrosoft-ai-automation-engineer-microsoft-copilot-studio-wroclaw | Spyrosoft | AI Automation Engineer (Microsoft Copilot Studio) | Wrocław / remote | 2026-07-16-1541 | 2026-07-16-1541 | Open | Initial capture: 110-150 PLN/h B2B; Wrocław plac Nowy Targ 28; Copilot Studio, Power Automate, Power Platform, Microsoft 365/Dynamics 365 and Azure AI Foundry/OpenAI. | [Just Join IT](https://justjoin.it/job-offer/spyrosoft-ai-automation-engineer-microsoft-copilot-studio--wroclaw-ai) |
+| spyrosoft-forward-deployed-engineer-openai-poland-remote | Spyrosoft | Forward Deployed Engineer (OpenAI) | Poland / remote | 2026-07-18-1544 | 2026-07-18-1544 | Open | Initial capture: public Spyrosoft jobs list plus No Fluff Jobs search; `18 480-25 200 PLN`; `OpenAI APIs`, `Python`, `REST API` and production AI delivery. | [Spyrosoft jobs](https://careers.spyro-soft.com/jobs) / [No Fluff Jobs](https://nofluffjobs.com/pl/openai) |
+| spyrosoft-ai-architect-with-python-poland-remote | Spyrosoft | AI Architect (with Python) | Poland / remote | 2026-07-18-1544 | 2026-07-18-1544 | Open | Initial capture: fully remote Poland; `140-190 PLN/h` B2B; GenAI architecture, `RAG`, vector databases, integrations, governance and `AI Agents`. | [Spyrosoft](https://careers.spyro-soft.com/jobs/8044089-ai-architect-with-python) |
+| spyrosoft-senior-ai-engineer-with-python-poland-remote | Spyrosoft | Senior AI Engineer (with Python) | Poland / remote | 2026-07-18-1544 | 2026-07-18-1544 | Open | Initial capture: fully remote Poland; `110-150 PLN/h` B2B; production AI apps, LLM integrations, `RAG`, vector databases, testing and observability. | [Spyrosoft](https://careers.spyro-soft.com/jobs/8044186-senior-ai-engineer-with-python) |
+| spyrosoft-senior-fullstack-engineer-java-react-ai-poland-remote | Spyrosoft | Senior Fullstack Engineer (Java & React & AI) | Poland / remote | 2026-07-18-1544 | 2026-07-18-1544 | Open | Initial capture: fully remote Poland; `120 PLN/h` B2B; `Java`, `React`, `MCP`, `AI Integration Services`, GitHub Copilot and AI-assisted delivery. | [Spyrosoft](https://careers.spyro-soft.com/jobs/8065116-senior-fullstack-engineer-java-react-ai) / [Just Join IT mirror](https://justjoin.it/job-offer/spyrosoft-senior-fullstack-engineer-java-react-ai--wroclaw-java) |
+| spyrosoft-ai-consultant-genai-poland-remote | Spyrosoft | AI Consultant (GenAI) | Poland / remote | 2026-07-18-1544 | 2026-07-18-1544 | Open | Initial capture: fully remote Poland; `110-150 PLN/h` B2B; discovery workshops, solution design, AI readiness and advisory delivery around GenAI use cases. | [Spyrosoft](https://careers.spyro-soft.com/jobs/8044619-ai-consultant-genai) / [Just Join IT mirror](https://justjoin.it/job-offer/spyrosoft-ai-consultant-wroclaw-ai-fbfe1860) |
 | justjoin-people-more-ai-engineer-llm-engineer-wroclaw-remote | People More P.S.A. | AI Engineer / LLM Engineer (AI-First \| TypeScript) | Wroclaw + remote | 2026-06-18-0142 | 2026-06-25-1741 | Open | Initial capture: 38-52 USD net/h B2B; agentic systems, RAG, multi-agent architectures. 2026-06-18-1741: current public listing shows 140-190 PLN net/h B2B. 2026-06-19-0141: current public listing shows 33-45 EUR net/h B2B. 2026-06-20-0141: current public listing again shows 140-190 PLN net/h B2B. 2026-06-20-0630: current public listing shows 30-41 CHF net/h B2B. 2026-06-20-2152: current public listing shows 33-45 EUR net/h B2B. 2026-06-22-0141: current public listing shows 30-41 CHF net/h B2B. 2026-06-25-1741: current public Wrocław card again shows `140-190 PLN net/h B2B`, `Remote`, `5 day left (until 30.06.2026)` and still highlights practical `MCP` experience. | [Just Join IT](https://justjoin.it/job-offer/people-more-p-s-a--ai-engineer-llm-engineer-ai-first-typescript--wroclaw-ai-215fee79) |
 | pracuj-kyotu-ai-ml-llm-engineer-wroclaw-remote | KYOTU Technology sp. z o.o. | AI / ML / LLM Engineer | Wroclaw / remote Poland | 2026-06-18-0142 | 2026-06-21-0141 | Expired | Initial capture: 130-180 PLN net/h + VAT; LLM, GenAI, RAG, LLM pipelines, agentic AI. 2026-06-18-1741: direct listing clarifies this is a talent pool for upcoming projects, not necessarily a single immediate requisition. 2026-06-21-0141: public Pracuj.pl page now shows `offer expired 2 months ago` and `Pracodawca zakończył zbieranie zgłoszeń na tę ofertę`. | [Pracuj.pl](https://www.pracuj.pl/praca/ai-ml-llm-engineer-wroclaw-wybrzeze-stanislawa-wyspianskiego-39a%2Coferta%2C1004744984) |
 | addepto-ai-engineer-wroclaw-remote | Addepto | AI Engineer | Wroclaw + remote | 2026-06-18-0142 | 2026-06-18-0142 | Open | Initial capture: official career page; 12 600-19 320 PLN B2B mid, 19 320-25 200 PLN B2B senior; LLM/GenAI/Python/FastAPI. | [Addepto](https://addepto.com/career/ai-engineer/) |
@@ -65,7 +76,7 @@ only when something meaningful changes.
 | nofluffjobs-deepsense-applied-ai-engineer-remote-poland | deepsense.ai | Applied AI Engineer | Remote Poland | 2026-06-23-0140 | 2026-06-23-0140 | Open | Initial capture: public employer-posted No Fluff Jobs role; `15 000-24 000 PLN + VAT / miesiąc B2B`; `Fully remote`; production LLM applications, agents, integrations, RAG, evaluations and client-facing delivery. Official `deepsense.ai careers` hub does not currently expose a matching public role page. | [No Fluff Jobs](https://nofluffjobs.com/job/applied-ai-engineer-deepsense-ai-warsaw) / [deepsense.ai careers](https://deepsense.ai/careers/) |
 | addepto-data-scientist-ml-engineer-wroclaw-remote | Addepto | Data Scientist / ML Engineer | Wroclaw + remote Poland | 2026-06-20-0141 | 2026-06-20-0141 | Open | Initial capture: official role; 12 600-19 320 PLN B2B mid, 19 320-25 200 PLN B2B senior, 19 320-28 560 PLN B2B lead/principal; LLMs, AI agents, semantic search, prompt engineering, multimodal embeddings and RAG. | [Addepto](https://addepto.com/career/data-scientist-ml-engineer/) |
 | trans-eu-ai-engineer-poland-hybrid | Trans.eu Group | AI Engineer | Poland hybrid | 2026-06-20-0141 | 2026-06-20-0141 | Open | Initial capture: official role; Mid, UoP or B2B; proprietary LLMs, autonomous agents, RAG, fine-tuning/distillation, Python, PyTorch, Transformers, LangChain, MLflow, Snowflake and AWS/Azure/GCP. | [Trans.eu](https://joinus.trans.eu/en/job-openings/ai-engineer/) |
-| tooploox-senior-ai-engineer-wroclaw-warsaw-remote | Tooploox | Senior AI Engineer | Wroclaw / Warsaw / remote | 2026-06-20-0141 | 2026-06-20-0141 | Open | Initial capture: official careers page lists 15 000-26 000 PLN B2B or 13 000-23 000 PLN UoP; public page allows fully remote, hybrid or office in Wroclaw/Warsaw, but does not expose a detailed technical stack. | [Tooploox careers](https://tooploox.com/careers) |
+| tooploox-senior-ai-engineer-wroclaw-warsaw-remote | Tooploox | Senior AI Engineer | Wroclaw / Warsaw / remote | 2026-06-20-0141 | 2026-07-18-1544 | Open | 2026-07-18-1544: public No Fluff Jobs mirror now shows `22 000-28 000 PLN + VAT (B2B)`, `Wrocław, Tęczowa 7` and `Hybrid +1`, while the official careers page still shows `15 000-26 000 PLN B2B` or `13 000-23 000 PLN UoP` and broader remote Poland wording. | [Tooploox careers](https://tooploox.com/careers) / [No Fluff Jobs](https://nofluffjobs.com/sk/job/senior-ai-engineer-tooploox-wroclaw-3) |
 | capgemini-ai-lead-wroclaw | Capgemini | Lead AI | Wroclaw hybrid | 2026-06-20-0630 | 2026-06-20-0630 | Open | Initial capture: official role; Wroclaw-only listing; production ML, Generative AI, agent architectures, LLM architectures, CI/CD, MLOps, model evaluation and observability; salary not public. | [Capgemini](https://careers.capgemini.com/job/Wroc%C5%82aw-Lead-AI/1367500733/) |
 | capgemini-genai-engineer-banking-financial-industry-multiple-locations | Capgemini Invent | GenAI Engineer in Banking/Financial industry | Wroclaw + multiple Poland locations | 2026-06-20-0630 | 2026-06-20-0630 | Open | Initial capture: official role; LLM-based workflows, Agentic AI components, end-to-end testing, data pipelines for training, inference and agent execution; salary not public. | [Capgemini](https://careers.capgemini.com/job/Warszawa-GenAI-Engineer-in-BankingFinancial-industry/1271924401/) |
 | addepto-ai-engineer-gcp-wroclaw-remote | Addepto | AI Engineer (GCP) | Wroclaw + remote | 2026-06-20-0630 | 2026-06-20-0630 | Open | Initial capture: official role; 12 600-19 320 PLN B2B mid and 19 320-25 200 PLN B2B senior; LLM token usage analytics, forecasting, anomaly detection, GenAI, GCP, Python and FastAPI. | [Addepto](https://addepto.com/career/ai-engineer-gcp/) |
@@ -248,6 +259,7 @@ only when something meaningful changes.
 
 ## Recent Reports
 
+- [2026-07-18-1544](runs/2026-07-18-1544.md)
 - [2026-07-16-1541](runs/2026-07-16-1541.md)
 - [2026-07-13-1540](runs/2026-07-13-1540.md)
 - [2026-07-11-1541](runs/2026-07-11-1541.md)
@@ -278,6 +290,8 @@ only when something meaningful changes.
 
 ## Review Notes
 
+- 2026-07-18: Spyrosoft opened a new fully remote Poland cluster around OpenAI, AI architecture, AI engineering and AI-assisted fullstack delivery; keep the official jobs hub and board mirrors paired because the family is broad and likely to drift by title or salary band.
+- 2026-07-18: `Tooploox Senior AI Engineer` now has a stronger public board mirror with higher salary and `Wrocław, Tęczowa 7 / Hybrid +1` wording, while the official careers page still shows the broader remote Poland framing.
 - 2026-07-16: The new run added Intellias, Andersen, Tooploox, Cloudfide, Spyrosoft and a refreshed ITDS security signal, while Sii stayed active but did not add a new Wrocław-specific card.
 - 2026-07-13: New board-heavy cluster centered on emagine, Link Group, Rossmann, cloudatus, KRUK, Callstack, Sii and Spyrosoft pushed the mix toward AI architecture, LLMOps, platform engineering and agentic systems; Sii also confirmed the tooling side with an official AI Developer Experience Engineer page.
 - 2026-07-10: nowy sweep dołożył `ITDS Senior Java Developer – AI and Financial Technology`, `Link Group Principal AI Engineer`, `Netguru AI Engineer` oraz świeży board burst z `Tenarai`, `Upvanta` i `Entrada AI`; `CKSource / Tiugo` pokazał dalszy drift tytułu i waluty, a `Holisticon` science lead przeszedł w `Offer expired`.
