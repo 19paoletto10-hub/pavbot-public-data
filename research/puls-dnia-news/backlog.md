@@ -2,6 +2,10 @@
 
 ## Open
 
+- Watch whether the Iran-US strike exchange produces a new CENTCOM, maritime or airspace note before noon.
+- Watch whether the Kijów missile barrage gets a casualty or damage tally from Ukrainian officials.
+- Watch whether the RCB alert turns into actual outages or transport disruption.
+
 - Watch whether MSZ warnings turn into concrete flight changes or route cuts.
 - Watch whether the new EU border system produces visible queue complaints or rollout details.
 - Watch whether the Iran/Jordan escalation produces another CENTCOM or maritime update before the next slot.

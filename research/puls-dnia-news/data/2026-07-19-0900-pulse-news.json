@@ -1,0 +1,491 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-19",
+  "runTime": "09:00",
+  "status": "Material update",
+  "headline": "Alert RCB i aktywna wymiana ognia Iran-USA",
+  "summary": "Poranny slot 09:00 przesuwa feed z ostrzeżeń na konkret: w Polsce dochodzi blokada w TK i nowy alert RCB o możliwych przerwach w dostawie prądu, a na drogach pojawia się obywatelskie zatrzymanie pijanego kierowcy. Za granicą wojna Iran-USA wchodzi w aktywną wymianę uderzeń, Rosja uderza w Kijów, Ukraina bije w rosyjską logistykę, a CNN i BBC dorzucają Węgry, Kubę, Meksyk, Chiny, Indie i Laos.",
+  "items": [
+    {
+      "id": "tk-zablokowane-orzekanie",
+      "section": "Polska",
+      "title": "TK blokuje orzekanie czterech sędziów",
+      "lead": "Spór o Trybunał wchodzi w otwarty konflikt ustrojowy.",
+      "whatHappened": "TVN24 opisuje, że czterech prawidłowo wybranych sędziów nie dopuszczono do orzekania, a Andrzej Zoll wprost mówi o jawnym łamaniu konstytucji.",
+      "keyFacts": [
+        "Publikacja TVN24: 19 lipca, 06:20 CEST.",
+        "Spór dotyczy czterech prawidłowo wybranych sędziów.",
+        "Zoll skrytykował także działania prezydenta."
+      ],
+      "reactions": [
+        "To już nie jest proceduralny niuans, tylko otwarty spór o legalność działań TK i prezydenta."
+      ],
+      "whyItMatters": "To podbija krajowy konflikt instytucjonalny i może wywołać kolejne reakcje polityczne.",
+      "context": "To nowy element porannego miksu po wczorajszej przewadze alertów pogodowych i spraw zagranicznych.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się reakcje KPRP, TK albo dalsze kroki prawne."
+      ],
+      "sources": [
+        {
+          "title": "Sędziowie TK niedopuszczeni do orzekania",
+          "url": "https://tvn24.pl/polska/spor-o-trybunal-konstytucyjny-sedziowie-niedopuszczeni-do-orzekania-prof-andrzej-zoll-to-swiadome-dzialanie-prezydenta-st9148668?source=rss"
+        }
+      ],
+      "tags": [
+        "TK",
+        "konstytucja",
+        "prezydent",
+        "Polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "rcb-przerwy-prad",
+      "section": "Polska",
+      "title": "Alert RCB o możliwych przerwach w prądzie",
+      "lead": "Burze z gradem i silnym wiatrem wracają do kilku województw.",
+      "whatHappened": "RCB wysłało SMS-owe ostrzeżenie przed burzami z gradem i silnym wiatrem. Komunikat mówi wprost o możliwych przerwach w dostawie prądu.",
+      "keyFacts": [
+        "Publikacja TVN24: 19 lipca, 06:16 CEST.",
+        "Ostrzeżenie dotyczy kilku województw.",
+        "RCB wskazuje ryzyko przerw w dostawie prądu."
+      ],
+      "reactions": [
+        "To przesuwa pogodę z samej prognozy do konkretnego ryzyka infrastrukturalnego."
+      ],
+      "whyItMatters": "To może szybko przełożyć się na lokalne awarie, utrudnienia w ruchu i kolejne komunikaty służb.",
+      "context": "To poranne rozwinięcie wczorajszego alertu pogodowego; tym razem komunikat jest już bardziej operacyjny.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się realne wyłączenia prądu lub szkody po burzach."
+      ],
+      "sources": [
+        {
+          "title": "Alert RCB. Możliwe przerwy w dostawie prądu",
+          "url": "https://tvn24.pl/tvnmeteo/polska/alert-rcb-w-niedziele-19-07-burze-z-gradem-i-silny-wiatr-mozliwe-przerwy-w-dostawie-pradu-st9148742?source=rss"
+        }
+      ],
+      "tags": [
+        "burze",
+        "RCB",
+        "prąd",
+        "alert"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "a1-pijany-kierowca",
+      "section": "Bezpieczeństwo",
+      "title": "Pijany kierowca zatrzymany obywatelsko na A1",
+      "lead": "Częstochowa daje kolejny sygnał drogowego ryzyka.",
+      "whatHappened": "TVN24 podało, że inni kierujący zatrzymali kompletnie pijanego kierowcę na A1 koło Częstochowy. Mężczyzna uderzył w ciężarówkę, miał 2,7 promila i dwa zakazy prowadzenia.",
+      "keyFacts": [
+        "Publikacja TVN24: 19 lipca, 04:39 CEST.",
+        "Zatrzymanie miało charakter obywatelski.",
+        "W akcji uczestniczyła ekipa TVN24."
+      ],
+      "reactions": [
+        "To przykład, że realne zagrożenie zostało wyłapane przez innych uczestników ruchu, zanim doszło do większego wypadku."
+      ],
+      "whyItMatters": "To temat z pogranicza bezpieczeństwa, policji i ruchu drogowego, a nie tylko lokalnego incydentu.",
+      "context": "W porannym obiegu łączy się z innymi ostrzeżeniami o ryzyku na drogach i przy silnym wietrze.",
+      "watchNext": [
+        "Sprawdź, czy policja poda dalsze zarzuty albo stanowisko o zakazach prowadzenia."
+      ],
+      "sources": [
+        {
+          "title": "Obywatelskie zatrzymanie pijanego kierowcy",
+          "url": "https://tvn24.pl/katowice/czestochowa-obywatelskie-zatrzymanie-pijanego-kierowcy-na-autostradzie-a1-interweniowala-ekipa-tvn24-st9148694?source=rss"
+        }
+      ],
+      "tags": [
+        "drogi",
+        "policja",
+        "alkohol",
+        "A1"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "usa-iran-wymiana-uderzen",
+      "section": "Świat",
+      "title": "USA i Iran wymieniają uderzenia po śmierci żołnierzy w Jordanii",
+      "lead": "Konflikt wchodzi w kolejny, bardziej bezpośredni etap.",
+      "whatHappened": "BBC pisze, że USA uderzyły w irańskie cele przez ósmą noc z rzędu, a Iran twierdzi, że odpalił drony na amerykańskie wojska w Kuwejcie. W tle nadal są ofiary z Jordanii.",
+      "keyFacts": [
+        "BBC published 19 July 2026 at 05:10 GMT.",
+        "W Jordanii zginęło dwóch amerykańskich żołnierzy.",
+        "Iran odpowiada dronami wobec wojsk USA w Kuwejcie."
+      ],
+      "reactions": [
+        "BBC opisuje serię jako otwartą wymianę ataków bez widocznej deeskalacji."
+      ],
+      "whyItMatters": "To już nie tylko napięcie, ale aktywna kampania wojskowa z ryzykiem dla regionu i rynków energii.",
+      "context": "To najważniejszy międzynarodowy wątek poranka i punkt odniesienia dla kolejnych komunikatów.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się nowy komunikat USA, Iranu lub ostrzeżenia lotnicze i morskie."
+      ],
+      "sources": [
+        {
+          "title": "US and Iran exchange strikes after two US soldiers killed in Jordan",
+          "url": "https://www.bbc.co.uk/news/articles/cgk417jp83po?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "Jordania",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "cnn-iran-live-updates",
+      "section": "Świat",
+      "title": "CNN: eksplozje podczas ósmej nocy uderzeń USA na Iran",
+      "lead": "Live feed potwierdza, że konflikt nie słabnie.",
+      "whatHappened": "CNN prowadzi na żywo aktualizacje o eksplozjach słyszanych podczas kolejnej nocy amerykańskich uderzeń na Iran. Redakcja wprost pisze, że nie widać oznak deeskalacji.",
+      "keyFacts": [
+        "CNN published 19 July 2026 at 04:23 UTC.",
+        "Uderzenia trwają ósmej nocy z rzędu.",
+        "Live feed relacjonuje dalsze rozprzestrzenianie się walk w regionie."
+      ],
+      "reactions": [
+        "To wzmacnia wniosek, że kryzys wszedł w tryb operacyjny, nie tylko retoryczny."
+      ],
+      "whyItMatters": "To kolejny sygnał, że eskalacja obejmuje już stałą sekwencję ataków i kontrataków.",
+      "context": "To uzupełnia poranny obraz obok doniesień BBC o stratach w Jordanii.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się nowy komunikat USA, Iranu albo regionalnych służb bezpieczeństwa."
+      ],
+      "sources": [
+        {
+          "title": "Live updates: Explosions heard as US strikes Iran for eighth night in a row",
+          "url": "https://www.cnn.com/2026/07/19/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "CNN",
+        "live"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "rosja-rakiety-kijow",
+      "section": "Świat",
+      "title": "Rosja wystrzeliła kilkadziesiąt rakiet na Kijów",
+      "lead": "Poranny atak na stolicę Ukrainy trwał mniej niż godzinę.",
+      "whatHappened": "TVN24 opisuje rosyjski atak rakietowy na Kijów, w którym w niecałą godzinę wystrzelono kilkadziesiąt rakiet. To kolejny sygnał intensyfikacji wojny powietrznej.",
+      "keyFacts": [
+        "Publikacja TVN24: 19 lipca, 05:07 CEST.",
+        "Atak trwał mniej niż godzinę.",
+        "Celem był Kijów."
+      ],
+      "reactions": [
+        "Nagłówek pokazuje, że rosyjska presja na ukraińską stolicę pozostaje bardzo wysoka."
+      ],
+      "whyItMatters": "To ważny europejski kontrapunkt dla bliskowschodniej eskalacji.",
+      "context": "To jedna z najmocniejszych porannych wiadomości bezpieczeństwa z Europy.",
+      "watchNext": [
+        "Sprawdź, czy Ukraina poda bilans ofiar i szkód albo czy pojawi się ostrzeżenie obrony przeciwlotniczej."
+      ],
+      "sources": [
+        {
+          "title": "Rosja wystrzeliła kilkadziesiąt rakiet na Kijów",
+          "url": "https://tvn24.pl/swiat/najpotezniejszy-atak-balistyczny-na-kijow-rosja-wystrzelila-kilkadziesiat-rakiet-st9148705?source=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "Kijów",
+        "rakiety"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "ukraina-logistyka-rosja",
+      "section": "Świat",
+      "title": "Ukraina uderza w rosyjskie magazyny logistyczne",
+      "lead": "Wojna uderza w zaplecze handlowo-logistyczne Rosji.",
+      "whatHappened": "BBC podaje, że drony trafiły w obiekty Wildberries pod Moskwą i w Tambowie. Ukraina opisuje je jako duże centra logistyczne obsługujące komponenty objęte sankcjami.",
+      "keyFacts": [
+        "BBC published 18 July 2026 at 13:06 GMT.",
+        "Celem były obiekty Wildberries pod Moskwą i w Tambowie.",
+        "Władze Ukrainy łączą je z logistyką sankcjonowanych komponentów."
+      ],
+      "reactions": [
+        "To kolejny sygnał, że Ukraina uderza także w zaplecze gospodarcze, nie tylko wojskowe."
+      ],
+      "whyItMatters": "To może wpływać na rosyjskie łańcuchy dostaw i skalę eskalacji powietrznej.",
+      "context": "W połączeniu z nocnym atakiem na Kijów pokazuje dwustronne zaostrzenie wojny dronowo-rakietowej.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się rosyjski bilans szkód albo odpowiedź propagandowa."
+      ],
+      "sources": [
+        {
+          "title": "Russian online retail warehouses hit by deadly Ukrainian strikes",
+          "url": "https://www.bbc.co.uk/news/articles/clyxlm877p2o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "drony",
+        "logistyka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "wegry-prezydent-ustepuje",
+      "section": "Świat",
+      "title": "Węgierski prezydent zgadza się ustąpić",
+      "lead": "Parlament wymusza zmianę na szczycie państwa.",
+      "whatHappened": "BBC pisze, że Tamás Sulyok zgodził się zakończyć kadencję po tym, jak parlament poparł jego odwołanie. W tle jest nacisk nowego rządu i spór o rządy prawa.",
+      "keyFacts": [
+        "BBC published 18 July 2026 at 19:34 GMT.",
+        "Sulyok jest postrzegany jako lojalista Orbána.",
+        "Parlament uruchomił zmianę kończącą jego kadencję."
+      ],
+      "reactions": [
+        "Spór jest już na poziomie ustrojowym, nie tylko partyjnym."
+      ],
+      "whyItMatters": "To ważna zmiana polityczna w UE i kolejny test dla węgierskich instytucji.",
+      "context": "Ten temat łączy się z szerszym europejskim blokiem politycznym i praworządnościowym.",
+      "watchNext": [
+        "Sprawdź, kiedy parlament wybierze następcę i czy pojawi się skarga prawna."
+      ],
+      "sources": [
+        {
+          "title": "Hungary's president agrees to stand down after parliament backs removal",
+          "url": "https://www.bbc.co.uk/news/articles/cpd7q7eev7po?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Węgry",
+        "prezydent",
+        "parlament",
+        "UE"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "kuba-opozycjonista-usa",
+      "section": "Świat",
+      "title": "Kubański opozycjonista przybywa do USA po uwolnieniu",
+      "lead": "CNN opisuje kolejny ruch w kubańskim wątku praw człowieka.",
+      "whatHappened": "Prominent Cuban dissident and performance artist Luis Manuel Otero Alcántara arrived in Miami after release from Cuban detention, according to his supporters and US Secretary of State Marco Rubio.",
+      "keyFacts": [
+        "CNN published 17 July 2026 at 21:18 UTC.",
+        "Otero Alcántara arrived in Miami.",
+        "Informację potwierdzają jego zwolennicy i Marco Rubio."
+      ],
+      "reactions": [
+        "To łączy politykę kubańską z amerykańską dyplomacją i środowiskiem emigracyjnym."
+      ],
+      "whyItMatters": "To mocny sygnał o dalszym napięciu wokół praw człowieka i opozycji na Kubie.",
+      "context": "To nowy kubański wątek po stronie personalnej, nie infrastrukturalnej.",
+      "watchNext": [
+        "Sprawdź, czy Havana albo Waszyngton wydadzą dalszy komentarz."
+      ],
+      "sources": [
+        {
+          "title": "Luis Manuel Otero Alcantara: Prominent Cuban dissident arrives in US after release",
+          "url": "https://www.cnn.com/2026/07/17/americas/cuba-activist-exile-us-latam-intl"
+        }
+      ],
+      "tags": [
+        "Kuba",
+        "opozycja",
+        "USA",
+        "prawa człowieka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "meksyk-trzesienie",
+      "section": "Świat",
+      "title": "Trzęsienie ziemi w Meksyku odczuwalne w Gwatemali i Salwadorze",
+      "lead": "Sejsmiczny wstrząs objął większy region.",
+      "whatHappened": "CNN podaje, że silne trzęsienie w południowym Meksyku było odczuwalne w Gwatemali i Salwadorze. USGS podało wstępną magnitudę 7,3.",
+      "keyFacts": [
+        "CNN published 17 July 2026 at 15:33 UTC.",
+        "Wstępna magnituda wynosiła 7,3.",
+        "Wstrząsy odczuto także w sąsiednich krajach."
+      ],
+      "reactions": [
+        "To nagły regionalny alert, nie tylko lokalna meksykańska wiadomość."
+      ],
+      "whyItMatters": "To istotny sygnał bezpieczeństwa publicznego i potencjalnych szkód infrastrukturalnych w regionie.",
+      "context": "To ważny świeży wątek bezpieczeństwa publicznego w Ameryce Łacińskiej.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się pełny bilans szkód lub ofiar."
+      ],
+      "sources": [
+        {
+          "title": "Mexico earthquake shakes Guatemala and El Salvador",
+          "url": "https://www.cnn.com/2026/07/17/americas/mexico-earthquake-chiapas-intl-latam"
+        }
+      ],
+      "tags": [
+        "trzęsienie ziemi",
+        "Meksyk",
+        "Gwatemala",
+        "Salwador"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "kuba-blackout",
+      "section": "Świat",
+      "title": "Kuba po kolejnych blackoutach dochodzi do granicy wytrzymałości",
+      "lead": "Wyspa znów pogrąża się w ciemności i niepewności.",
+      "whatHappened": "CNN pisze, że kubańska sieć energetyczna po raz trzeci w tym miesiącu zawiodła, zostawiając prawie 10 milionów ludzi bez prądu. Redakcja opisuje narastające zmęczenie społeczne i gospodarcze.",
+      "keyFacts": [
+        "CNN published 15 July 2026 at 17:13 UTC.",
+        "Awaria była trzecia w tym miesiącu.",
+        "Bez prądu zostało prawie 10 milionów mieszkańców."
+      ],
+      "reactions": [
+        "CNN opisuje rosnącą frustrację i lęk o przyszłość."
+      ],
+      "whyItMatters": "To kolejny sygnał, że kryzys energetyczny na Kubie wchodzi w stan chroniczny.",
+      "context": "To kolejny kubański temat, ale tym razem z perspektywy infrastruktury i życia codziennego.",
+      "watchNext": [
+        "Sprawdź, czy dojdą kolejne komunikaty o sieci energetycznej lub imporcie paliw."
+      ],
+      "sources": [
+        {
+          "title": "Analysis: Rocked by string of blackouts, Cubans’ ability to endure reaches a limit",
+          "url": "https://www.cnn.com/2026/07/15/americas/cuba-power-blackout-impact-latam-intl"
+        }
+      ],
+      "tags": [
+        "Kuba",
+        "prąd",
+        "energia",
+        "kryzys"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "china-ai-data",
+      "section": "Technologia",
+      "title": "Trump i Xi znów zderzają się wokół danych i AI",
+      "lead": "CNN pokazuje polityczny spór o technologię i wiarygodność.",
+      "whatHappened": "CNN analizuje, że Trump oskarża Chiny o kradzież danych wyborczych, a Xi przedstawia Pekin jako odpowiedzialnego lidera technologicznego. To bardziej polityka i narracja niż produktowy news.",
+      "keyFacts": [
+        "CNN published 17 July 2026 at 04:48 UTC.",
+        "Spór dotyczy danych wyborczych i wizerunku technologicznym Chin.",
+        "Materiał ma formę analizy, ale bazuje na realnym konflikcie narracji USA-Chiny."
+      ],
+      "reactions": [
+        "To kolejny sygnał, że AI i dane wyborcze są już pełnoprawnym tematem geopolitycznym."
+      ],
+      "whyItMatters": "To pokazuje, jak technologia coraz mocniej miesza się z bezpieczeństwem i polityką.",
+      "context": "To dobrane jako technologia szeroko rozumiana, bo publiczny cykl newsowy łączy AI z bezpieczeństwem i polityką.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się odpowiedź Białego Domu albo Pekinu."
+      ],
+      "sources": [
+        {
+          "title": "Analysis: As Trump accuses China of stealing voter data, Xi pitches Beijing as a responsible tech leader",
+          "url": "https://www.cnn.com/2026/07/17/china/china-ai-conference-analysis-intl-hnk"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Chiny",
+        "USA",
+        "technologia"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "indie-start-orbitalny",
+      "section": "Świat",
+      "title": "Indie uruchamiają pierwszy komercyjny start orbitalny",
+      "lead": "Nowy prywatny krok w azjatyckim wyścigu kosmicznym.",
+      "whatHappened": "BBC podaje, że startup wystartował z pierwszą indyjską komercyjną rakietą zaprojektowaną do wejścia na orbitę. To ważny sygnał dla lokalnego sektora kosmicznego.",
+      "keyFacts": [
+        "BBC published 18 July 2026 at 07:05 GMT.",
+        "To pierwszy komercyjny start tego typu z Indii.",
+        "Projekt dotyczy wejścia na orbitę."
+      ],
+      "reactions": [
+        "To pokazuje, że komercyjny kosmos w Azji nadal przyspiesza."
+      ],
+      "whyItMatters": "To jeden z niewielu bardziej pozytywnych sygnałów technologicznych w obecnym miksie newsowym.",
+      "context": "To jedyny wyraźnie pozytywny technologiczny akcent w obecnym miksie.",
+      "watchNext": [
+        "Sprawdź, czy start zakończył się pełnym sukcesem orbitalnym i jakie będą dalsze kontrakty."
+      ],
+      "sources": [
+        {
+          "title": "India launches first commercial rocket designed for orbit",
+          "url": "https://www.bbc.co.uk/news/articles/clyekv7rld3o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Indie",
+        "kosmos",
+        "startup",
+        "technologia"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "laos-metanol",
+      "section": "Świat",
+      "title": "Laos nie ustala jeszcze przyczyny zgonów po metanolu",
+      "lead": "Turystyczny incydent zmienia się w szerszy alert zdrowotny.",
+      "whatHappened": "BBC pisze, że władze Laosu nie potrafią jeszcze ustalić przyczyny zgonów turystów wiązanych z metanolem. To zostawia otwarte pytania o bezpieczeństwo i źródło skażenia.",
+      "keyFacts": [
+        "BBC published 18 July 2026 at 11:10 GMT.",
+        "Przyczyna zgonów nie została jeszcze ustalona.",
+        "Wątek dotyczy zatrucia metanolem wśród turystów."
+      ],
+      "reactions": [
+        "Brak szybkiego wyjaśnienia zwiększa presję na branżę turystyczną i służby sanitarne."
+      ],
+      "whyItMatters": "To mniejszy, ale wciąż aktualny wątek bezpieczeństwa publicznego.",
+      "context": "To mniejszy, ale nadal bieżący alert zdrowotny i turystyczny.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się oficjalny bilans i źródło skażenia."
+      ],
+      "sources": [
+        {
+          "title": "Laos says it can't determine cause of tourist deaths linked to methanol",
+          "url": "https://www.bbc.co.uk/news/articles/cdx8rj99endo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Laos",
+        "metanol",
+        "turystyka",
+        "zdrowie"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 latest feed",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "Live updates: Explosions heard as US strikes Iran for eighth night in a row",
+      "url": "https://www.cnn.com/2026/07/19/world/live-news/iran-war-trump"
+    }
+  ]
+}

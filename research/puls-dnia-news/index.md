@@ -1,5 +1,7 @@
 # Puls Dnia News Index
 
+The 2026-07-19 09:00 slot turns the feed from warning into incident: TK blocks four judges, RCB sends a concrete outage warning, and an A1 drunk-driver stop lands in the Polish block, while BBC/CNN move Iran-USA into active exchanges of strikes, Russia keeps pounding Kyiv, Ukraine hits Russian logistics, and the world mix broadens to Hungary, Cuba, Mexico, China, India and Laos.
+
 The 2026-07-19 06:02 slot cools the Polish side and adds a fresh foreign-policy/security bundle: MSZ renews its highest-level Middle East warnings, TVN24 expects a colder week, while BBC/CNN push the Iran/Jordan escalation, Tate arrest, Russia's cash shift, border-system delays, German and US political/tech items.
 
 The 2026-07-18 21:01 slot turns the Polish side from warning into mixed impact:
