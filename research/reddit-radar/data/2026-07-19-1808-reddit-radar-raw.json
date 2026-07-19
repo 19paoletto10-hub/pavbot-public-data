@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-19-1808",
+  "status": "material_update",
+  "generatedAt": "2026-07-19T16:15:54Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-19T18:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Live 18:08 review completed through read-only Safari Apple Events and old.reddit.com post pages in the local Safari session.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-19-1209 and 2026-07-18-1808, so the noon bundle and yesterday evening winners could not roll forward into this slot.",
+      "Before selecting replacements, the run verified that origin/main already serves 2026-07-19-1209 for reddit-radar, so the remote topic was current and this slot was a normal rotation rather than a recovery publish.",
+      "The evening cluster was materially weaker than the noon bundle, but four safe fresh cards still survived the live review.",
+      "Read-only finalist review stayed on exact old.reddit post pages for currently, aShortHorrorStory, Winner Mentality, A true mystery, gitGud, iJustDespiseTheSyntax, and Always somehow the slowest part..",
+      "gitGud drifted into longer AI and hackathon discourse rather than a compact public-safe humor payoff.",
+      "iJustDespiseTheSyntax and lastOneISwear did not survive the public-safe filter because the visible comment layer tilted vulgar or meta-annoyed.",
+      "At least four safe fresh cards survived the live review, so the reddit-radar contract prefers a new public bundle over keeping the visible 2026-07-19-1209 bundle unchanged.",
+      "No Reddit social actions were performed.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-19-1209",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-19-1808-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-19-1808-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-19-1808-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1v0jt1o/therealconcern/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1v03q5j/worksforme/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uzlokz/removedfromthemeeting/",
+    "https://www.reddit.com/r/memes/comments/1v0iq9l/so_much_for_the_lawsuit/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1v02gqt/whateverhappenedtoopenslawp/",
+    "https://www.reddit.com/r/memes/comments/1uzwhmn/im_gonna_watch_it_the_way_nolan_intended/",
+    "https://www.reddit.com/r/memes/comments/1uztcve/marx_would_use_my_distro/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uz401n/areweseeingapatternhere/",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uzvdtg/what_i_ordered_for_vs_what_i_received/",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1uznlwz/when_life_gives_you_lemons/",
+    "https://www.reddit.com/r/memes/comments/1uzb4qk/are_we_kidding/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uzwz8i/gitgud/",
+    "https://www.reddit.com/r/AskReddit/comments/1uzjm2f/whats_a_completely_legal_item_you_can_buy_that/"
+  ],
+  "newCandidates": [
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "currently",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1v0nxg6/currently/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_because_the_ai_budget_visual_gets_a_clean_slop_and_developer_furnace_comment_payoff"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "aShortHorrorStory",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1v0l97l/ashorthorrorstory/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_because_the_rewrite_joke_stays_compact_and_the_comments_push_it_into_release_notes_and_legacy_db_horror"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Winner Mentality",
+      "url": "https://www.reddit.com/r/memes/comments/1v0icxl/winner_mentality/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_because_the_self_own_is_broad_and_the_comment_layer_keeps_the_zero_financial_return_punchline_clean"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "A true mystery",
+      "url": "https://www.reddit.com/r/memes/comments/1v0s0nb/a_true_mystery/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_because_the_landlord_absurdity_stays_relatable_and_public_safe_even_if_it_is_the_weakest_survivor"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "gitGud",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1uzwz8i/gitgud/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_drifts_into_longer_ai_hackathon_and_business_moat_discourse"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "iJustDespiseTheSyntax",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1v0pjlf/ijustdespisethesyntax/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_visible_comment_layer_turns_vulgar_faster_than_it_turns_funny"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Always somehow the slowest part..",
+      "url": "https://www.reddit.com/r/memes/comments/1v0no6j/always_somehow_the_slowest_part/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_comments_explain_the_download_bar_more_than_they_make_it_funnier"
+    }
+  ]
+}
