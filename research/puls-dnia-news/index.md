@@ -1,5 +1,7 @@
 # Puls Dnia News Index
 
+The 2026-07-19 06:02 slot cools the Polish side and adds a fresh foreign-policy/security bundle: MSZ renews its highest-level Middle East warnings, TVN24 expects a colder week, while BBC/CNN push the Iran/Jordan escalation, Tate arrest, Russia's cash shift, border-system delays, German and US political/tech items.
+
 The 2026-07-18 21:01 slot turns the Polish side from warning into mixed impact:
 Babimost shows real storm damage, a camper trailer burns on the S7, and a road
 tree accident kills a 19-year-old. In politics, Petru tries a low-tax pitch

@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 1,
+  "runDate": "2026-07-19",
+  "runTime": "06:02",
+  "status": "Material update",
+  "headline": "Polska chłodnieje, a Iran-USA dalej napędza światowe ryzyko",
+  "summary": "Poranny slot przesuwa feed z nocnej eskalacji Iran-USA do szerszego porządku dnia: w Polsce wchodzi chłodniejsze powietrze i nowe ostrzeżenia MSZ o Bliskim Wschodzie, a za granicą ciągną się skutki ataków na amerykańskich żołnierzy, kolejne zatrzymanie Andrew Tate'a, presja na rosyjską gospodarkę, opóźnienia na granicach UE oraz świeże ruchy wokół polityki, bezpieczeństwa i AI.",
+  "items": [
+    {
+      "id": "idzie-chlod",
+      "section": "Alerty",
+      "title": "Idzie chłód. Pogoda na pięć dni",
+      "lead": "Po burzach nadchodzi wyraźnie chłodniejszy tydzień.",
+      "whatHappened": "TVN24 prognozuje napływ chłodnego arktycznego powietrza, które ma obniżyć temperatury miejscami do około 16 stopni. Wciąż mają też wracać opady i burze.",
+      "keyFacts": [
+        "Publikacja TVN24: 18 lipca, 13:51 CEST.",
+        "Zapowiadany jest napływ arktycznego powietrza.",
+        "Maksima w części kraju mogą spaść do około 16 stopni."
+      ],
+      "reactions": [
+        "Brak oddzielnego komunikatu instytucji, to przede wszystkim prognoza pogodowa."
+      ],
+      "whyItMatters": "To sygnał, że po dniach burz i szkód sytuacja przechodzi w chłodniejszy, ale nadal niestabilny układ.",
+      "context": "Ten temat domyka aktywny dziś blok pogodowy po wczorajszych alertach i stratach.",
+      "watchNext": [
+        "Sprawdź, czy IMGW albo RCB podniosą lub zmienią alerty na poniedziałek."
+      ],
+      "sources": [
+        {
+          "title": "Idzie chłód. Pogoda na pięć dni",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/pogoda-na-5-dni-pogoda-w-polsce-nastana-chlodne-dni-st9148458"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "alerty",
+        "IMGW",
+        "burze"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "msz-bliski-wschod",
+      "section": "Polska",
+      "title": "Rzecznik MSZ: potraktujcie nasze ostrzeżenia z najwyższą powagą",
+      "lead": "MSZ ostrzega przed Bliskim Wschodem i możliwymi przerwami w ruchu lotniczym.",
+      "whatHappened": "Resort przypomina o ostrzeżeniach najwyższego stopnia dla większości krajów Bliskiego Wschodu. W komunikacie pada wprost, że możliwe są czasowe zamknięcia przestrzeni powietrznej i nagłe wstrzymania lotów.",
+      "keyFacts": [
+        "Publikacja TVN24: 18 lipca, 13:07 CEST.",
+        "MSZ ostrzega przed możliwymi zamknięciami przestrzeni powietrznej.",
+        "Komunikat dotyczy większości krajów Bliskiego Wschodu."
+      ],
+      "reactions": [
+        "To oficjalny sygnał dyplomatyczno-podróżny, nie tylko komentarz medialny."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na Polaków planujących podróże i może szybko przełożyć się na zmiany tras albo odwołania lotów.",
+      "context": "Wpisuje się w szerszą eskalację Iran-USA i napięcie nad kluczowymi trasami w regionie.",
+      "watchNext": [
+        "Obserwuj, czy MSZ doda konkretne ograniczenia dla przewoźników lub biur podróży."
+      ],
+      "sources": [
+        {
+          "title": "Rzecznik MSZ: potraktujcie nasze ostrzeżenia z najwyższą powagą",
+          "url": "https://tvn24.pl/biznes/turystyka/podroz-na-bliski-wschod-ostrzezenia-msz-potraktujcie-nasze-ostrzezenia-z-najwyzsza-powaga-st9148456"
+        }
+      ],
+      "tags": [
+        "MSZ",
+        "Bliski Wschód",
+        "podróże",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "iran-zawiesza-porozumienie",
+      "section": "Świat",
+      "title": "Iran zawiesił wykonywanie porozumienia pokojowego z USA",
+      "lead": "Teheran zrywa tempo wygaszania konfliktu i wraca do ostrego tonu.",
+      "whatHappened": "TVN24 podaje, że Iran zawiesił wykonywanie porozumienia pokojowego z USA. W materiale pojawia się też twarda retoryka najwyższego przywódcy i zapowiedź odpowiedzi wobec Waszyngtonu.",
+      "keyFacts": [
+        "Publikacja TVN24: 18 lipca, 19:54 CEST.",
+        "Porozumienie zostało zawieszone po świeżej eskalacji.",
+        "Iran przekazał groźbę bardzo ostrych konsekwencji wobec USA."
+      ],
+      "reactions": [
+        "To sygnał, że kanał deeskalacji jest dziś słabszy niż rano."
+      ],
+      "whyItMatters": "To utrzymuje Iran w centrum globalnego ryzyka wojskowego, energetycznego i transportowego.",
+      "context": "Ten wątek łączy się z kolejnymi doniesieniami o atakach na amerykańskie siły i ostrzeżeniach o Cieśninie Ormuz.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się odpowiedź USA, Jordanii albo kolejny komunikat o ruchach wojskowych."
+      ],
+      "sources": [
+        {
+          "title": "Iran zawiesił wykonywanie porozumienia pokojowego z USA. Głos zabrał najwyższy przywódca",
+          "url": "https://tvn24.pl/swiat/bliski-wschod-iran-zawiesil-wykonywanie-porozumienia-pokojowego-z-usa-glos-zabral-modztaba-chamenei-st9148660"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "Bliski Wschód",
+        "eskalacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "us-troops-jordan",
+      "section": "Bezpieczeństwo",
+      "title": "Two US troops killed and one missing after Iranian attack in Jordan",
+      "lead": "Escalation already has fatalities in the US military.",
+      "whatHappened": "BBC reports that two US soldiers were killed and one is missing after an Iranian attack in Jordan. CENTCOM separately confirmed the casualties and the missing service member.",
+      "keyFacts": [
+        "BBC published the report on 19 July 2026 at 00:18 GMT.",
+        "CENTCOM confirmed fallen and missing service members.",
+        "The attack is part of the wider Iran-US strike cycle."
+      ],
+      "reactions": [
+        "CENTCOM issued a public statement on the losses."
+      ],
+      "whyItMatters": "It turns a regional crisis into a direct military casualty event for the US.",
+      "context": "This is the sharpest security story in the overnight cycle and will shape the next set of U.S. responses.",
+      "watchNext": [
+        "Follow any CENTCOM or White House response and any new maritime or air-defense advisories."
+      ],
+      "sources": [
+        {
+          "title": "Two US troops killed and one missing after Iranian attack in Jordan",
+          "url": "https://www.bbc.co.uk/news/articles/cn8nynv8ze8o"
+        },
+        {
+          "title": "CENTCOM statement on recently fallen, missing U.S. service members",
+          "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4549635/centcom-statement-on-recently-fallen-missing-us-service-members/"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Jordania",
+        "USA",
+        "wojsko"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "tate-arrest",
+      "section": "Świat",
+      "title": "Andrew Tate and Tristan Tate arrested in US after more UK charges laid",
+      "lead": "The Tate case jumps from UK charges to a US arrest.",
+      "whatHappened": "BBC says Andrew Tate and Tristan Tate were arrested in the United States after more charges were laid against them in the UK. The Crown Prosecution Service has requested extradition, while their lawyer denies wrongdoing.",
+      "keyFacts": [
+        "BBC published the report on 19 July 2026 at 02:17 GMT.",
+        "UK prosecutors have requested extradition.",
+        "The brothers' lawyer says they are innocent."
+      ],
+      "reactions": [
+        "The legal track now spans both the UK and the US."
+      ],
+      "whyItMatters": "The case remains politically noisy and cross-border, which increases the odds of more legal and media fallout.",
+      "context": "It is separate from the Iran block but still part of the overnight international news cycle.",
+      "watchNext": [
+        "Watch for a court timetable, extradition steps or any formal UK comment."
+      ],
+      "sources": [
+        {
+          "title": "Andrew Tate and Tristan Tate arrested in US after more UK charges laid",
+          "url": "https://www.bbc.co.uk/news/articles/cwymly9yd33o"
+        }
+      ],
+      "tags": [
+        "Andrew Tate",
+        "UK",
+        "USA",
+        "legal"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "rosja-cash-economy",
+      "section": "Gospodarka",
+      "title": "Russians turn to cash putting more strain on slowing wartime economy",
+      "lead": "Cash use and internet shutdowns are adding stress to Russia's war economy.",
+      "whatHappened": "BBC says Russians are moving back to cash as mobile internet shutdowns spread and more businesses try to dodge tax. The piece frames this as another pressure point after more than four years of war.",
+      "keyFacts": [
+        "BBC published the report at 23:59 GMT on 18 July.",
+        "Mobile internet shutdowns are part of the pressure.",
+        "Businesses are seeking ways to reduce tax exposure."
+      ],
+      "reactions": [
+        "The story frames the shift as a symptom of deeper wartime strain."
+      ],
+      "whyItMatters": "It signals that the economic cost of the war is showing up in everyday payment behavior and business compliance.",
+      "context": "This is a useful early indicator for broader Russian consumer and tax stress.",
+      "watchNext": [
+        "Watch for banking, payment or tax-collection changes if the cash shift deepens."
+      ],
+      "sources": [
+        {
+          "title": "Russians turn to cash putting more strain on slowing wartime economy",
+          "url": "https://www.bbc.co.uk/news/articles/cglj255jk8ko"
+        }
+      ],
+      "tags": [
+        "Rosja",
+        "gospodarka",
+        "cash",
+        "wojna"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "eu-border-delays",
+      "section": "Gospodarka",
+      "title": "New EU border system tripling time at passport control",
+      "lead": "Europe travel queues may get noticeably longer.",
+      "whatHappened": "BBC quotes an airport boss warning that the new EU border system could triple passport-control time. Ryanair also warned passengers to expect longer waits this summer.",
+      "keyFacts": [
+        "BBC published the report at 01:47 GMT on 19 July.",
+        "Passport control time could triple, according to the airport boss.",
+        "Ryanair warned of extended waits for travelers to Europe."
+      ],
+      "reactions": [
+        "Airlines are already telling passengers to plan for delays."
+      ],
+      "whyItMatters": "The operational effect is immediate: more queue time, higher miss-connection risk and a worse summer travel experience.",
+      "context": "This is a practical consumer story rather than a headline policy fight.",
+      "watchNext": [
+        "Watch for specific airport rollout dates and whether Polish travelers see the same delays."
+      ],
+      "sources": [
+        {
+          "title": "New EU system tripling time to get through border, airport boss says",
+          "url": "https://www.bbc.co.uk/news/articles/ckg5gg6n9x3o"
+        }
+      ],
+      "tags": [
+        "UE",
+        "granice",
+        "lotniska",
+        "podróże"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "canada-tariffs-fires",
+      "section": "Gospodarka",
+      "title": "Trump threatens new Canada tariffs over fires",
+      "lead": "Wildfire smoke is turning into a trade threat.",
+      "whatHappened": "BBC says Trump threatened new tariffs on Canada, linking the move to fires that are sending dirty air into US cities. Canadian officials pushed back by stressing shared responsibility for climate change.",
+      "keyFacts": [
+        "BBC published the report at 17:29 GMT on 18 July.",
+        "The air-quality issue is being used as tariff rhetoric.",
+        "Canadian officials rejected the framing as one-sided."
+      ],
+      "reactions": [
+        "Canadian leader Mark Carney said both countries share responsibility for climate action."
+      ],
+      "whyItMatters": "It blends climate, trade and domestic air-quality politics into one dispute.",
+      "context": "This is a strong example of how weather and trade can collide in the current US news cycle.",
+      "watchNext": [
+        "Watch for any formal trade notice or a Canadian counter-response."
+      ],
+      "sources": [
+        {
+          "title": "Trump threatens new Canada tariffs over fires sending 'filthy' air into US cities",
+          "url": "https://www.bbc.co.uk/news/articles/cwyq93j34lgo"
+        }
+      ],
+      "tags": [
+        "Kanada",
+        "cła",
+        "smog",
+        "klimat"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "spahn-resigns",
+      "section": "Polityka",
+      "title": "Senior Merz ally Spahn resigns over surrogacy pressure",
+      "lead": "German coalition politics picks up another internal crisis.",
+      "whatHappened": "CNN and TVN24 report that Jens Spahn resigned after pressure over a surrogate-baby controversy. The story became a test of party discipline rather than a narrow personal issue.",
+      "keyFacts": [
+        "CNN page is current on 18 July 2026.",
+        "TVN24 says Merz had previously called for the resignation.",
+        "The controversy centers on Spahn's use of a surrogate."
+      ],
+      "reactions": [
+        "The resignation removes one flashpoint but leaves the coalition exposed."
+      ],
+      "whyItMatters": "A senior CDU/CSU figure stepping down can still ripple through German coalition management.",
+      "context": "The issue is moral and political at the same time, which makes the fallout bigger than a standard personnel story.",
+      "watchNext": [
+        "Watch for who replaces him and whether Merz tries to contain the damage quickly."
+      ],
+      "sources": [
+        {
+          "title": "Senior Merz ally Spahn resigns after coming under pressure in Germany over surrogate baby",
+          "url": "https://www.cnn.com/2026/07/18/europe/spahn-resignation-germany-surrogate-intl"
+        },
+        {
+          "title": "Jens Spahn, szef klubu CDU/CSU w parlamencie podał się do dymisji. Chodzi o usługi surogatki",
+          "url": "https://tvn24.pl/swiat/niemcy-jens-spahn-szef-klubu-cdu-csu-w-parlamencie-podal-sie-do-dymisji-chodzi-o-uslugi-surogatki-st9148497"
+        }
+      ],
+      "tags": [
+        "Niemcy",
+        "Merz",
+        "dymisja",
+        "polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "ukraine-strikes-russia-warehouses",
+      "section": "Bezpieczeństwo",
+      "title": "Warehouse workers among 8 dead in Ukrainian attacks inside Russia",
+      "lead": "The war keeps crossing deeper into Russian logistics.",
+      "whatHappened": "CNN says Ukrainian drone strikes hit Russian warehouse facilities, killing eight people. The report says the warehouses were important logistics sites and the attack is among the deadliest inside Russia in two years.",
+      "keyFacts": [
+        "CNN published the report on 18 July 2026.",
+        "Eight people were killed.",
+        "The targets were described as major logistics facilities."
+      ],
+      "reactions": [
+        "CNN frames the strikes as part of a more aggressive cross-border phase."
+      ],
+      "whyItMatters": "It shows the war is still producing direct casualties inside Russia and can affect supply lines well beyond the front.",
+      "context": "This sits alongside other overnight Iran and security headlines as part of a broader escalation theme.",
+      "watchNext": [
+        "Watch for a Russian military or regional government response and any damage assessment."
+      ],
+      "sources": [
+        {
+          "title": "Warehouse workers among 8 dead in deadliest Ukrainian attacks inside Russia for two years",
+          "url": "https://www.cnn.com/2026/07/18/europe/eight-killed-in-ukrainian-drone-attacks-on-russian-warehouses"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "drony",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "white-house-ai-clearinghouse",
+      "section": "Technologia",
+      "title": "White House launches AI cybersecurity clearinghouse",
+      "lead": "Washington is trying to organize AI security work in one place.",
+      "whatHappened": "CNN reports that the White House launched an AI cybersecurity clearinghouse. The move is framed as an attempt to centralize resources around AI-related cyber risk and response.",
+      "keyFacts": [
+        "CNN published the report on 14 July 2026.",
+        "The initiative is tied to cybersecurity coordination.",
+        "It is part of the wider AI-policy push in Washington."
+      ],
+      "reactions": [
+        "The story points to more formal federal coordination around AI security."
+      ],
+      "whyItMatters": "This is a concrete policy sign that AI is moving deeper into state-level security infrastructure.",
+      "context": "It is a useful counterweight to the hard-security headlines: not all current tech news is product-focused.",
+      "watchNext": [
+        "Watch for agency participation, funding detail or any follow-up from NIST/CISA."
+      ],
+      "sources": [
+        {
+          "title": "White House launches AI cybersecurity clearinghouse",
+          "url": "https://www.cnn.com/2026/07/14/tech/ai-cybersecurity-clearing-house-white-house"
+        }
+      ],
+      "tags": [
+        "AI",
+        "cyberbezpieczeństwo",
+        "USA",
+        "polityka"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "hormuz-red-line",
+      "section": "Bezpieczeństwo",
+      "title": "Iran warns Strait of Hormuz is an unbreakable red line",
+      "lead": "The oil and shipping chokepoint stays central to the crisis.",
+      "whatHappened": "CNN says Iran warned that the Strait of Hormuz is an unbreakable red line as the US expands strikes. The message keeps the shipping route in the direct path of the conflict.",
+      "keyFacts": [
+        "CNN video page dates to 16 July 2026.",
+        "The warning is linked to expanding US strikes.",
+        "The Strait of Hormuz remains the key global shipping chokepoint in the story."
+      ],
+      "reactions": [
+        "CNN's tracker and explainer content show the channel expects continued attention to shipping impacts."
+      ],
+      "whyItMatters": "Any move around Hormuz can immediately affect oil, freight and insurance markets.",
+      "context": "This is the same escalation arc as the Jordan casualties and the overnight US strike coverage.",
+      "watchNext": [
+        "Watch for maritime advisories, tanker rerouting or price reaction in energy markets."
+      ],
+      "sources": [
+        {
+          "title": "Iran warns Strait of Hormuz is an 'unbreakable red line' as US expands strikes",
+          "url": "https://www.cnn.com/2026/07/16/world/video/cncpm-iran-strait-of-hormuz-red-line-strikes"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Hormuz",
+        "ropa",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 latest feed",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "CENTCOM statement",
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4549635/centcom-statement-on-recently-fallen-missing-us-service-members/"
+    }
+  ],
+  "topic": "puls-dnia-news"
+}

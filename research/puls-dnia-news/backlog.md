@@ -2,6 +2,10 @@
 
 ## Open
 
+- Watch whether MSZ warnings turn into concrete flight changes or route cuts.
+- Watch whether the new EU border system produces visible queue complaints or rollout details.
+- Watch whether the Iran/Jordan escalation produces another CENTCOM or maritime update before the next slot.
+
 - Watch whether Babimost damage and the S7 camper fire get PSP, police or road-closure follow-up.
 - Watch whether the Petru pitch turns into a broader center-right economic line or stays a one-off interview.
 - Watch whether the tree fatality near Toruń gets a fuller cause note and any road-hazard warning.
