@@ -2,8 +2,9 @@
 
 ## Open
 
-- Watch whether the Meta/Facebook/Instagram outage fully clears or returns in another wave.
+- Watch whether the current storm window turns into outages, road closures or broader transport disruption.
 - Watch whether the S8 rollover or the Tatry repairs turn into longer traffic disruption.
+- Watch whether bank maintenance triggers any late customer issues after the morning windows close.
 
 - Watch whether the Iran-US strike exchange produces a new CENTCOM, maritime or airspace note before noon.
 - Watch whether the Kijów missile barrage gets a casualty or damage tally from Ukrainian officials.
@@ -170,6 +171,8 @@
 
 ## Done
 
+- The Meta/Facebook/Instagram outage is opanowana; keep it only if a second wave appears.
+- The planned bank service windows ran this morning; keep them only if customer issues continue.
 - The Iran-US strike exchange now has a fresh CENTCOM note and CNN live coverage; keep only maritime or airspace spillover open.
 - The Kijów missile barrage now has an official casualty tally from Ukrainian sources; keep only a higher casualty or damage update open.
 - Production automation exists for `Pavbot Puls Dnia 3h` with the intended

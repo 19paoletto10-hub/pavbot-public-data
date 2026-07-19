@@ -1,0 +1,573 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-19",
+  "runTime": "15:01",
+  "status": "Material update",
+  "headline": "Burze, awarie i zagraniczne eskalacje",
+  "summary": "Po południu Polska dalej stoi w trybie alertu, ale feed przesuwa się z samego ostrzeżenia do konkretnych skutków: burze nadal wiszą nad krajem, Meta już wraca do normy, banki mają planowe prace techniczne, a TVN24 dorzuca dachowanie na S8, areszt po potrąceniu rowerzystki z dziećmi, zarzut po ataku na radnego i remonty szlaków w Tatrach. Za granicą obraz pozostaje ciężki: CENTCOM potwierdza kolejną noc uderzeń na Iran, Ukraina raportuje ofiarę po rosyjskim ataku na Kijów, CPS dokłada zarzuty Tate'om, UE dalej wdraża EES, a BBC utrzymuje w obiegu węgierskie przesilenie polityczne.",
+  "checkedSources": [
+    {
+      "title": "TVN24 latest feed",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "gov.pl RCB alert",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb--burze-z-gradem-i-silny-wiatr-1907"
+    },
+    {
+      "title": "IMGW forecast",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-13-07-19-07-2026/"
+    },
+    {
+      "title": "TVN24 Meta outage",
+      "url": "https://tvn24.pl/biznes/tech/awaria-facebooka-i-instagrama-w-niedziele-19-07-2026-twoje-konto-jest-tymczasowo-niedostepne-st9148838"
+    },
+    {
+      "title": "Meta Status",
+      "url": "https://metastatus.com/facebook-login"
+    },
+    {
+      "title": "TVN24 bank maintenance",
+      "url": "https://tvn24.pl/biznes/z-kraju/prace-techniczne-w-bankach-18-19-lipca-2026-komunikaty-pko-bp-erste-ing-banku-slaskiego-i-mbanku-st9147313"
+    },
+    {
+      "title": "PKO BP planowane prace techniczne",
+      "url": "https://www.pkobp.pl/aktualnosci/bankowosc-elektroniczna/19-lipca-planowane-prace-techniczne"
+    },
+    {
+      "title": "mBank aktualności",
+      "url": "https://www.mbank.pl/kompakt-finanse/aktualnosci/"
+    },
+    {
+      "title": "TVN24 S8 rollover",
+      "url": "https://tvn24.pl/tvnwarszawa/zoliborz/warszawa-zderzenie-na-s8-auto-dachowalo-utrudnienia-st9148776"
+    },
+    {
+      "title": "TVN24 Huta-Dąbrowa arrest",
+      "url": "https://tvn24.pl/lublin/huta-dabrowa-potracila-rowerzystke-z-dwojka-dzieci-trafila-do-aresztu-st9148868"
+    },
+    {
+      "title": "TVN24 councillor attack",
+      "url": "https://tvn24.pl/krakow/zdynia-nozownik-z-zarzutem-po-ataku-na-radnego-podczas-lemkowskiej-watry-st9148872"
+    },
+    {
+      "title": "TVN24 Tatry repairs",
+      "url": "https://tvn24.pl/krakow/tatry-remont-popularnych-szlakow-utrudnienia-st9148832"
+    },
+    {
+      "title": "TPN komunikat",
+      "url": "https://www.tpn.pl/zwiedzaj"
+    },
+    {
+      "title": "CENTCOM public release",
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4549643/us-completes-8th-consecutive-night-of-strikes-against-iran/"
+    },
+    {
+      "title": "Ukrinform Kyiv attack",
+      "url": "https://www.ukrinform.net/rubric-ato/4145734-russian-ballistic-missile-attack-on-kyiv-kills-one-injures-seven.html"
+    },
+    {
+      "title": "CPS Tate release",
+      "url": "https://www.cps.gov.uk/national-news/news/cps-decides-prosecute-tate-brothers-additional-sexual-offences"
+    },
+    {
+      "title": "EU Entry/Exit System",
+      "url": "https://home-affairs.ec.europa.eu/news/entryexit-system-ees-fully-operational-2026-04-10_en"
+    },
+    {
+      "title": "BBC Hungary",
+      "url": "https://www.bbc.co.uk/news/articles/cpd7q7eev7po?at_medium=RSS&at_campaign=rss"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-07-19-1501-alerty-burze-rcb-imgw",
+      "section": "Alerty",
+      "title": "RCB i IMGW trzymają burze w grze",
+      "lead": "Alert o burzach z gradem i silnym wiatrem nadal obowiązuje.",
+      "whatHappened": "RCB rozesłało alert o burzach z gradem i silnym wietrze z ryzykiem przerw w dostawie prądu. IMGW prognozuje burze, lokalny grad i porywy do około 70-80 km/h, a TVN24 pokazuje aktywne komórki burzowe w wielu województwach.",
+      "keyFacts": [
+        "Alert RCB został wysłany 19 lipca 2026 r.",
+        "IMGW przewiduje porywy wiatru do około 70-80 km/h w zasięgu burz.",
+        "TVN24 pokazuje wyładowania i opady w wielu regionach kraju."
+      ],
+      "reactions": [
+        "RCB zaleca zabezpieczenie luźnych przedmiotów.",
+        "Służby i kierowcy muszą liczyć się z lokalnymi utrudnieniami.",
+        "Ryzyko może się przełożyć na awarie zasilania i opóźnienia."
+      ],
+      "whyItMatters": "To najbardziej bezpośredni dzienny sygnał operacyjny dla Polski.",
+      "context": "To kontynuacja porannego i południowego bloku pogodowego, ale teraz z widoczną aktywnością burzową.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się przerwy w dostawie prądu.",
+        "Sprawdzić, czy IMGW lub RCB rozszerzą komunikat regionalnie."
+      ],
+      "sources": [
+        {
+          "title": "gov.pl RCB alert",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb--burze-z-gradem-i-silny-wiatr-1907"
+        },
+        {
+          "title": "IMGW forecast",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-13-07-19-07-2026/"
+        },
+        {
+          "title": "TVN24 storm radar",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/gdzie-jest-burza-burze-w-polsce-w-niedziele-19-07-mapa-i-radar-burz-na-zywo-st9148869"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "RCB",
+        "IMGW",
+        "alerty"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-1501-tech-meta-awaria-opanowana",
+      "section": "Technologia",
+      "title": "Meta po awarii wraca do normy",
+      "lead": "Problemy z Facebookiem i Instagramem są już w odwrocie.",
+      "whatHappened": "TVN24 opisuje awarię Facebooka i Instagrama jako opanowaną, a oficjalne statusy Meta dla Facebook Login i Messenger API for Instagram pokazują brak znanych problemów.",
+      "keyFacts": [
+        "Pierwsze zgłoszenia pojawiły się po 9:00.",
+        "Statusy Meta pokazują brak znanych problemów.",
+        "Run interpretuje awarię jako fazę wygaszania, nie nowy kryzys."
+      ],
+      "reactions": [
+        "Użytkownicy odzyskują dostęp stopniowo.",
+        "W ciągu dnia nie widać kolejnej eskalacji globalnej.",
+        "Warto tylko monitorować, czy nie wróci druga fala."
+      ],
+      "whyItMatters": "To jeden z nielicznych technologicznych tematów o dużym zasięgu publicznym.",
+      "context": "To już nie jest główna oś dnia, ale pozostaje aktualnym sygnałem dla dużej części użytkowników Meta.",
+      "watchNext": [
+        "Sprawdzić, czy Downdetector pokaże kolejną falę zgłoszeń.",
+        "Sprawdzić, czy Meta opublikuje notę poawaryjną."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meta outage",
+          "url": "https://tvn24.pl/biznes/tech/awaria-facebooka-i-instagrama-w-niedziele-19-07-2026-twoje-konto-jest-tymczasowo-niedostepne-st9148838"
+        },
+        {
+          "title": "Meta Status",
+          "url": "https://metastatus.com/facebook-login"
+        },
+        {
+          "title": "Meta Status",
+          "url": "https://metastatus.com/ig-messenger"
+        }
+      ],
+      "tags": [
+        "tech",
+        "Meta",
+        "Facebook",
+        "Instagram"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-19-1501-gospodarka-banki-prace-techniczne",
+      "section": "Gospodarka",
+      "title": "Banki mają planowane prace techniczne",
+      "lead": "PKO BP, mBank i inni ostrzegli o weekendowych przerwach.",
+      "whatHappened": "TVN24 zebrał komunikaty kilku banków o planowanych pracach serwisowych 19 lipca. PKO BP zapowiedział przerwę w nocy 00:01-06:00, mBank podał okno 2:30-11:00 dla wybranych usług, a oficjalne strony banków pokazują własne statusy i komunikaty o dostępności.",
+      "keyFacts": [
+        "To planowe prace, nie awaria systemowa.",
+        "Zakres dotyczył głównie bankowości internetowej i mobilnej.",
+        "Część okien kończyła się już przed południem."
+      ],
+      "reactions": [
+        "Klienci muszą sprawdzać własne banki przed przelewami.",
+        "Nie wygląda to na ogólnokrajowy problem finansowy.",
+        "Temat nadaje się do monitorowania tylko przy skargach klientów."
+      ],
+      "whyItMatters": "To praktyczny temat dla użytkowników i jednocześnie łagodny sygnał operacyjny w finansach.",
+      "context": "Taki temat wchodzi do pulsu głównie wtedy, gdy może realnie odciąć dostęp do usług w godzinach porannych.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się skargi na logowanie lub BLIK.",
+        "Sprawdzić, czy banki wydłużą zakres utrudnień."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 bank maintenance",
+          "url": "https://tvn24.pl/biznes/z-kraju/prace-techniczne-w-bankach-18-19-lipca-2026-komunikaty-pko-bp-erste-ing-banku-slaskiego-i-mbanku-st9147313"
+        },
+        {
+          "title": "PKO BP planowane prace techniczne",
+          "url": "https://www.pkobp.pl/aktualnosci/bankowosc-elektroniczna/19-lipca-planowane-prace-techniczne"
+        },
+        {
+          "title": "mBank aktualności",
+          "url": "https://www.mbank.pl/kompakt-finanse/aktualnosci/"
+        },
+        {
+          "title": "ING przerwy serwisowe",
+          "url": "https://www.ing.pl/aktualnosci/przerwy-serwisowe-niedostepnosci"
+        }
+      ],
+      "tags": [
+        "banki",
+        "finanse",
+        "serwis",
+        "przerwy"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-19-1501-bezpieczenstwo-s8-dachowanie",
+      "section": "Bezpieczeństwo",
+      "title": "Dachowanie na S8",
+      "lead": "Na trasie S8 w Warszawie doszło do dachowania i utrudnień.",
+      "whatHappened": "Na S8 zderzyły się dwa pojazdy, a osobówka dachowała. TVN24 podał, że ruch w kierunku Białołęki był utrudniony, a dwoje dzieci trafiło do szpitala.",
+      "keyFacts": [
+        "Zdarzenie miało miejsce 19 lipca 2026 r.",
+        "Utrudnienia dotyczyły kierunku Białołęki.",
+        "W wypadku ucierpiały też dzieci."
+      ],
+      "reactions": [
+        "To kolejny sygnał, że warszawski ruch wciąż jest podatny na nagłe blokady.",
+        "Służby usuwały skutki zdarzenia na bieżąco.",
+        "Temat ma wysoki priorytet dla kierowców w stolicy."
+      ],
+      "whyItMatters": "Łączy bezpieczeństwo z ruchem miejskim i może szybko wpływać na dojazdy.",
+      "context": "To lokalny incydent, ale w pulsu dnia liczy się jego natychmiastowy wpływ na ruch.",
+      "watchNext": [
+        "Sprawdzić, czy korek szybko zniknie.",
+        "Sprawdzić, czy policja poda przyczynę zderzenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 S8 rollover",
+          "url": "https://tvn24.pl/tvnwarszawa/zoliborz/warszawa-zderzenie-na-s8-auto-dachowalo-utrudnienia-st9148776"
+        }
+      ],
+      "tags": [
+        "wypadek",
+        "Warszawa",
+        "drogi",
+        "S8"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-1501-bezpieczenstwo-huta-dabrowa-areszt",
+      "section": "Bezpieczeństwo",
+      "title": "Areszt po potrąceniu rowerzystki",
+      "lead": "27-latka została aresztowana po potrąceniu rowerzystki z dwójką dzieci.",
+      "whatHappened": "W Hucie-Dąbrowie sąd zastosował trzymiesięczny areszt wobec kierującej, która wjechała w rowerzystkę wiezącą dwójkę małych dzieci. TVN24 podał, że obrażenia były bardzo poważne.",
+      "keyFacts": [
+        "Sąd zdecydował o areszcie na trzy miesiące.",
+        "W zdarzeniu uczestniczyła rowerzystka z dwójką małych dzieci.",
+        "Sprawa ma wymiar karny i bezpieczeństwa drogowego."
+      ],
+      "reactions": [
+        "To ciężki lokalny wypadek z jasnym skutkiem procesowym.",
+        "Ruch służb pokazuje, że sprawa weszła w fazę sądową.",
+        "Temat trzeba obserwować pod kątem stanu poszkodowanych."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych krajowych sygnałów bezpieczeństwa w tym slocie.",
+      "context": "Zdarzenie jest ważniejsze niż zwykła kolizja, bo od razu weszło do aresztu i ciężkich obrażeń.",
+      "watchNext": [
+        "Sprawdzić stan poszkodowanych i ewentualne dalsze zarzuty.",
+        "Sprawdzić, czy policja poda więcej szczegółów o przyczynach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Huta-Dąbrowa arrest",
+          "url": "https://tvn24.pl/lublin/huta-dabrowa-potracila-rowerzystke-z-dwojka-dzieci-trafila-do-aresztu-st9148868"
+        }
+      ],
+      "tags": [
+        "wypadek",
+        "areszt",
+        "Lublin",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-1501-polityka-nozownik-radny",
+      "section": "Polityka",
+      "title": "Nożownik z zarzutem po ataku na radnego",
+      "lead": "Po Lemkowskiej Watrze pojawił się zarzut uszkodzenia ciała.",
+      "whatHappened": "TVN24 podał, że 46-latek usłyszał zarzut po ataku nożem na radnego powiatu gorlickiego podczas Lemkowskiej Watry. To przenosi incydent z poziomu wydarzenia lokalnego do etapu karnego.",
+      "keyFacts": [
+        "Zarzut dotyczy uszkodzenia ciała radnego.",
+        "Sprawa ma związek z wydarzeniem publicznym.",
+        "To już etap formalnego postępowania."
+      ],
+      "reactions": [
+        "Samorząd i organizatorzy dostają jasny sygnał bezpieczeństwa.",
+        "Służby weszły w etap zarzutów, nie tylko interwencji.",
+        "Wątek może wrócić, jeśli pojawią się kolejne zarzuty."
+      ],
+      "whyItMatters": "To jedyny dziś lokalny temat polityczny, bo dotyczy wybranego samorządowca.",
+      "context": "W połączeniu z innymi incydentami pokazuje, że bezpieczeństwo publicznych wydarzeń pozostaje napięte.",
+      "watchNext": [
+        "Sprawdzić, czy prokuratura poda szerszy opis motywu.",
+        "Sprawdzić, czy radny lub organizatorzy opublikują reakcję."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 councillor attack",
+          "url": "https://tvn24.pl/krakow/zdynia-nozownik-z-zarzutem-po-ataku-na-radnego-podczas-lemkowskiej-watry-st9148872"
+        }
+      ],
+      "tags": [
+        "polityka lokalna",
+        "zarzuty",
+        "samorząd",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-19-1501-bezpieczenstwo-tatry-remonty",
+      "section": "Bezpieczeństwo",
+      "title": "Remonty szlaków w Tatrach",
+      "lead": "Rysy i Zawrat wchodzą w etap remontów i wymiany łańcuchów.",
+      "whatHappened": "TPN i TVN24 potwierdzają prace remontowe na popularnych szlakach w Tatrach. Trasy pozostają otwarte, ale możliwe są okresowe wstrzymania ruchu i trzeba uważać na odcinkach objętych pracami.",
+      "keyFacts": [
+        "Prace dotyczą m.in. tras na Rysy i Zawrat.",
+        "Szlaki pozostają otwarte z ograniczeniami.",
+        "To wpływa na bezpieczeństwo i czas przejścia."
+      ],
+      "reactions": [
+        "Turyści muszą brać pod uwagę postoje i zwolnienia ruchu.",
+        "To nie jest zamknięcie całych tras, tylko ograniczenie operacyjne.",
+        "Temat może się wydłużyć, jeśli pogoda się pogorszy."
+      ],
+      "whyItMatters": "To ważny sygnał dla weekendowego ruchu turystycznego.",
+      "context": "Po wcześniejszych górskich incydentach taki komunikat ma już wymiar operacyjny, nie tylko informacyjny.",
+      "watchNext": [
+        "Sprawdzić, czy TPN rozszerzy zakres robót.",
+        "Sprawdzić, czy burze nie wymuszą dodatkowych zamknięć."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Tatry repairs",
+          "url": "https://tvn24.pl/krakow/tatry-remont-popularnych-szlakow-utrudnienia-st9148832"
+        },
+        {
+          "title": "TPN komunikat",
+          "url": "https://www.tpn.pl/zwiedzaj"
+        }
+      ],
+      "tags": [
+        "Tatry",
+        "turystyka",
+        "szlaki",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-19-1501-swiat-iran-centcom",
+      "section": "Świat",
+      "title": "USA kontynuują uderzenia na Iran",
+      "lead": "CENTCOM potwierdza ósmą z rzędu noc uderzeń.",
+      "whatHappened": "CENTCOM poinformował o kolejnym nocnym pakiecie uderzeń na Iran 18 lipca. To utrzymuje konflikt USA-Iran w fazie ciągłej kampanii wojskowej, a nie pojedynczego incydentu.",
+      "keyFacts": [
+        "CENTCOM opisał 8. kolejną noc strike'ów.",
+        "Uderzenia mają charakter precyzyjny na cele wojskowe.",
+        "CNN nadal prowadzi live coverage konfliktu."
+      ],
+      "reactions": [
+        "Konflikt pozostaje aktywny i może dalej wpływać na szlaki morskie.",
+        "To najważniejszy globalny motor napięcia w tym slocie.",
+        "Brak sygnału szybkiej deeskalacji."
+      ],
+      "whyItMatters": "To główny światowy temat bezpieczeństwa i energii.",
+      "context": "To kontynuacja długiego ciągu eskalacji, ale z nowym oficjalnym potwierdzeniem z CENTCOM.",
+      "watchNext": [
+        "Sprawdzić, czy dojdzie do kolejnych komunikatów CENTCOM.",
+        "Sprawdzić, czy pojawią się nowe ostrzeżenia morskie lub lotnicze."
+      ],
+      "sources": [
+        {
+          "title": "CENTCOM public release",
+          "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4549643/us-completes-8th-consecutive-night-of-strikes-against-iran/"
+        },
+        {
+          "title": "CNN live Iran coverage",
+          "url": "https://www.cnn.com/2026/07/19/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "CENTCOM",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-1501-swiat-kijow-atak-balistyczny",
+      "section": "Świat",
+      "title": "Rosja znów uderzyła w Kijów",
+      "lead": "Po ataku balistycznym są ofiara śmiertelna i ranni.",
+      "whatHappened": "Ukrinform podał, że rosyjski atak balistyczny na Kijów zabił jedną osobę i ranił siedem innych osób. BBC i CNN opisują to jako jeden z większych ataków rakietowych na stolicę.",
+      "keyFacts": [
+        "Bilans na ten moment to 1 zabity i 7 rannych.",
+        "Atak wywołał pożary i zniszczenia.",
+        "To kolejne potwierdzenie intensyfikacji rosyjskich uderzeń."
+      ],
+      "reactions": [
+        "Kijów dalej potrzebuje obrony przeciwlotniczej i wsparcia.",
+        "Ukrainie grożą kolejne szkody infrastrukturalne.",
+        "Wątek pozostaje świeży i może się jeszcze zmienić."
+      ],
+      "whyItMatters": "To jeden z najważniejszych europejskich sygnałów wojennych dnia.",
+      "context": "Połączenie oficjalnego bilansu i zachodnich relacji daje tu wysoki poziom pewności.",
+      "watchNext": [
+        "Sprawdzić, czy Ukraina podniesie bilans ofiar.",
+        "Sprawdzić, czy Rosja i Ukraina ogłoszą kolejne uderzenia odwetowe."
+      ],
+      "sources": [
+        {
+          "title": "Ukrinform Kyiv attack",
+          "url": "https://www.ukrinform.net/rubric-ato/4145734-russian-ballistic-missile-attack-on-kyiv-kills-one-injures-seven.html"
+        },
+        {
+          "title": "BBC Kyiv coverage",
+          "url": "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN Kyiv coverage",
+          "url": "https://www.cnn.com/2026/07/19/europe/russia-ukraine-ballistic-missiles-intl-hnk"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Kijów",
+        "wojna",
+        "Rosja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-1501-swiat-tate-zarzuty",
+      "section": "Świat",
+      "title": "Tate'owie z dodatkowymi zarzutami",
+      "lead": "CPS dodała nowe zarzuty seksualne wobec Andrew i Tristana Tate.",
+      "whatHappened": "CPS ogłosiła dodatkowe zarzuty przeciw braciom Tate, a BBC opisało też ich zatrzymanie w USA i wątek ekstradycyjny. Sprawa z fazy medialnej wchodzi w kolejny formalny etap.",
+      "keyFacts": [
+        "CPS potwierdziła nowe zarzuty wobec obu braci.",
+        "W tle pozostaje wątek ekstradycji i postępowania w USA.",
+        "BBC podało, że chodzi o dodatkowe czyny wobec kolejnych pokrzywdzonych."
+      ],
+      "reactions": [
+        "To ruch o wysokiej wadze prawnej, nie tylko medialnej.",
+        "Sprawa będzie dalej żyła w UK i USA.",
+        "Wątek może wpływać na dalsze decyzje ekstradycyjne."
+      ],
+      "whyItMatters": "To jedna z najgłośniejszych spraw karnych w światowym obiegu informacji.",
+      "context": "W pulsu dnia wpisuje się jako połączenie prawa, opinii publicznej i transatlantyckiej procedury.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się kolejne sądowe terminy.",
+        "Sprawdzić, czy amerykańskie służby i obrona wydadzą nowe oświadczenia."
+      ],
+      "sources": [
+        {
+          "title": "CPS Tate release",
+          "url": "https://www.cps.gov.uk/national-news/news/cps-decides-prosecute-tate-brothers-additional-sexual-offences"
+        },
+        {
+          "title": "BBC Tate coverage",
+          "url": "https://www.bbc.co.uk/news/articles/cwymly9yd33o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Tate",
+        "CPS",
+        "ekstradycja",
+        "prawo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-1501-swiat-ees-granice",
+      "section": "Świat",
+      "title": "UE ostrzega przed dłuższą kontrolą graniczną",
+      "lead": "Nowy system EES może wydłużyć odprawę paszportową.",
+      "whatHappened": "Komunikaty UE o Entry/Exit System potwierdzają, że system jest już operacyjny, a BBC ostrzega przed dłuższą odprawą przy niektórych przejściach. W tym slocie temat wraca jako praktyczny sygnał dla podróżnych.",
+      "keyFacts": [
+        "EES działa jako system cyfrowej rejestracji granic.",
+        "Unijne źródła mówią o pełnej operacyjności od 10 kwietnia 2026 r.",
+        "BBC opisało ryzyko dłuższej odprawy paszportowej."
+      ],
+      "reactions": [
+        "To może uderzać w podróżnych spoza UE.",
+        "Temat ma znaczenie dla lotnisk i przejść granicznych.",
+        "Na razie chodzi o systemowy efekt wdrożenia, nie o kryzys."
+      ],
+      "whyItMatters": "To ważna zmiana w praktyce podróży do Europy.",
+      "context": "W przeciwieństwie do nagłych incydentów to strukturalna zmiana, którą warto mieć w pulsu.",
+      "watchNext": [
+        "Sprawdzić, czy lotniska potwierdzą dłuższe kolejki.",
+        "Sprawdzić, czy pojawią się lokalne problemy wdrożeniowe."
+      ],
+      "sources": [
+        {
+          "title": "EU Entry/Exit System",
+          "url": "https://home-affairs.ec.europa.eu/news/entryexit-system-ees-fully-operational-2026-04-10_en"
+        },
+        {
+          "title": "EU Council entry/exit system",
+          "url": "https://www.consilium.europa.eu/en/policies/entryexit-system/"
+        },
+        {
+          "title": "BBC EES coverage",
+          "url": "https://www.bbc.co.uk/news/articles/ckg5gg6n9x3o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "UE",
+        "granice",
+        "podróże",
+        "EES"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-19-1501-polityka-wegry-prezydent",
+      "section": "Polityka",
+      "title": "Węgierski prezydent zgadza się odejść",
+      "lead": "Parlament i prezydent domknęli polityczne przesilenie.",
+      "whatHappened": "BBC podało, że prezydent Węgier zgodził się ustąpić po poparciu jego odwołania przez parlament. To zamyka kilkuetapowy kryzys polityczny i daje nowy punkt startowy dla zmiany na najwyższym szczeblu.",
+      "keyFacts": [
+        "Parlament poparł odwołanie.",
+        "Prezydent zgodził się odejść.",
+        "To ważny sygnał polityczny w regionie."
+      ],
+      "reactions": [
+        "Węgry wchodzą w fazę następstwa po decyzji parlamentu.",
+        "To temat bardziej polityczny niż proceduralny.",
+        "Brak jeszcze pełnej listy następnych kroków."
+      ],
+      "whyItMatters": "To istotny sygnał polityczny dla regionu i Unii Europejskiej.",
+      "context": "To nie jest incydent chwilowy, tylko finalizacja przesilenia, które już wcześniej było w obiegu.",
+      "watchNext": [
+        "Sprawdzić, kto przejmie obowiązki i na jak długo.",
+        "Sprawdzić, czy pojawi się oficjalny kalendarz sukcesji."
+      ],
+      "sources": [
+        {
+          "title": "BBC Hungary",
+          "url": "https://www.bbc.co.uk/news/articles/cpd7q7eev7po?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Węgry",
+        "prezydent",
+        "polityka",
+        "UE"
+      ],
+      "priority": "medium"
+    }
+  ]
+}

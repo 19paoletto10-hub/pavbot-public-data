@@ -1,5 +1,13 @@
 # Puls Dnia News Index
 
+The 2026-07-19 15:01 slot keeps Poland under a live storm alert, but the
+domestic feed shifts from warning into execution: RCB/IMGW still push burze
+and power-cut risk, Meta outage is opanowana, bank maintenance is visible, and
+TVN24 adds a S8 rollover, Huta-Dąbrowa arrest, Lemko Watra charges and Tatry
+repair work. Abroad, CENTCOM confirms the 8th night of strikes on Iran,
+Ukrinform reports the latest Kijów missile toll, CPS widens the Tate case, the
+EES problem stays live, and BBC keeps the Hungarian political exit in play.
+
 The 2026-07-19 12:02 slot keeps Poland in alert-and-incident mode: RCB's
 hail-and-wind warning is still live, Meta/Facebook/Instagram looks to be
 recovering, and TVN24 adds a S8 rollover, a cyclist arrest, a councillor-
