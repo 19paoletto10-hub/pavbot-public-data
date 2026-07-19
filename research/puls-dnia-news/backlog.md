@@ -2,6 +2,9 @@
 
 ## Open
 
+- Watch whether the Meta/Facebook/Instagram outage fully clears or returns in another wave.
+- Watch whether the S8 rollover or the Tatry repairs turn into longer traffic disruption.
+
 - Watch whether the Iran-US strike exchange produces a new CENTCOM, maritime or airspace note before noon.
 - Watch whether the Kijów missile barrage gets a casualty or damage tally from Ukrainian officials.
 - Watch whether the RCB alert turns into actual outages or transport disruption.
@@ -167,6 +170,8 @@
 
 ## Done
 
+- The Iran-US strike exchange now has a fresh CENTCOM note and CNN live coverage; keep only maritime or airspace spillover open.
+- The Kijów missile barrage now has an official casualty tally from Ukrainian sources; keep only a higher casualty or damage update open.
 - Production automation exists for `Pavbot Puls Dnia 3h` with the intended
   Europe/Warsaw cadence context.
 - Public manifest now exposes `puls-dnia-news` artifacts as `pulseNewsData`,

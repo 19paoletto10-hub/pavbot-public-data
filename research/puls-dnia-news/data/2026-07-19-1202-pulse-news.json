@@ -1,0 +1,485 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-19",
+  "runTime": "12:02",
+  "status": "Material update",
+  "headline": "Alerty pogodowe, awaria Meta i nowa eskalacja wojny USA-Iran",
+  "summary": "Południowy slot łączy alert RCB, techniczny zanik Meta i serię krajowych incydentów z potwierdzoną eskalacją wojny USA-Iran, nowym atakiem na Kijów oraz dodatkowymi tematami polityczno-prawnymi z Europy i świata.",
+  "items": [
+    {
+      "id": "rcb-burze-silny-wiatr",
+      "section": "Alerty",
+      "title": "RCB ostrzega przed burzami i możliwymi przerwami w prądzie",
+      "lead": "Alert pogodowy zostaje w trybie operacyjnym.",
+      "whatHappened": "Rządowe Centrum Bezpieczeństwa ostrzega przed burzami z gradem i silnym wiatrem. Komunikat wprost wskazuje na możliwe przerwy w dostawie prądu.",
+      "keyFacts": [
+        "Komunikat RCB z 19 lipca 2026.",
+        "IMGW prognozuje burze i porywy wiatru do około 60 km/h.",
+        "Alert dotyczy kilku województw."
+      ],
+      "reactions": [
+        "To już nie jest sama prognoza, tylko komunikat o realnym ryzyku infrastrukturalnym."
+      ],
+      "whyItMatters": "Może przełożyć się na lokalne awarie, utrudnienia w ruchu i kolejne ostrzeżenia służb.",
+      "context": "Ten alert rozwija poranny wątek pogodowy z wcześniejszego slotu.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się realne wyłączenia prądu lub szkody po burzach."
+      ],
+      "sources": [
+        {
+          "title": "Alert RCB - burze z gradem i silny wiatr",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb--burze-z-gradem-i-silny-wiatr-1907"
+        },
+        {
+          "title": "Prognoza pogody na tydzień 13.07–19.07.2026",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-13-07-19-07-2026/"
+        },
+        {
+          "title": "Alert RCB. Możliwe przerwy w dostawie prądu",
+          "url": "https://tvn24.pl/tvnmeteo/polska/alert-rcb-w-niedziele-19-07-burze-z-gradem-i-silny-wiatr-mozliwe-przerwy-w-dostawie-pradu-st9148742?source=rss"
+        }
+      ],
+      "tags": [
+        "burze",
+        "RCB",
+        "prąd",
+        "alert"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "meta-awaria-wraca-dostep",
+      "section": "Technologia",
+      "title": "Meta wraca po awarii Facebooka i Instagrama",
+      "lead": "Użytkownicy odzyskują dostęp po porannym blackoutcie.",
+      "whatHappened": "TVN24 podaje, że Facebook i Instagram zaczęły odzyskiwać dostęp po awarii. CNN równolegle opisuje szeroko zgłaszane zakłócenia w dostępie do kont.",
+      "keyFacts": [
+        "TVN24 opisuje stopniowy powrót dostępu.",
+        "CNN cytuje internetowe watchdogi zgłaszające zakłócenia na Facebooku i Instagramie.",
+        "Awaria dotyczyła głównie logowania i odświeżania usług."
+      ],
+      "reactions": [
+        "Wątek wygląda na wygaszający się, ale nadal warto sprawdzić, czy nie wróci falą."
+      ],
+      "whyItMatters": "To szybki sygnał o odporności platformy używanej przez miliony osób i firm.",
+      "context": "To jedyny wyraźny tech-incydent w polskim obiegu porannego feedu.",
+      "watchNext": [
+        "Sprawdź, czy Meta albo status watchdogów potwierdzą pełne rozwiązanie problemu."
+      ],
+      "sources": [
+        {
+          "title": "Awaria popularnych serwisów społecznościowych. Użytkownicy odzyskują dostęp",
+          "url": "https://tvn24.pl/biznes/tech/awaria-facebooka-i-instagrama-w-niedziele-19-07-2026-twoje-konto-jest-tymczasowo-niedostepne-st9148838?source=rss"
+        },
+        {
+          "title": "Facebook and Instagram users reporting some outages, say internet watchdogs",
+          "url": "https://www.cnn.com/2026/07/19/world/facebook-instagram-outages-intl"
+        }
+      ],
+      "tags": [
+        "Meta",
+        "Facebook",
+        "Instagram",
+        "awaria"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "s8-dachowanie-utrudnienia",
+      "section": "Polska",
+      "title": "Dachowanie auta na S8",
+      "lead": "Na trasie pojawiły się utrudnienia po kolejnym wypadku drogowym.",
+      "whatHappened": "TVN24 podał, że auto dachowało na trasie S8. Zdarzenie wymagało zabezpieczenia miejsca i przełożyło się na ruch drogowy.",
+      "keyFacts": [
+        "Zdarzenie dotyczyło odcinka S8 w Warszawie.",
+        "Artykuł TVN24 z 19 lipca 2026.",
+        "Ruch był chwilowo utrudniony."
+      ],
+      "reactions": [
+        "To wpisuje się w poranny blok bezpieczeństwa drogowego obok alertu pogodowego."
+      ],
+      "whyItMatters": "Nawet lokalne dachowanie na głównej trasie szybko wpływa na przepustowość i czas dojazdu.",
+      "context": "To kolejny sygnał, że przy aktualnej pogodzie i natężeniu ruchu ryzyko drogowe rośnie.",
+      "watchNext": [
+        "Sprawdź, czy policja lub zarządca drogi poda dalsze utrudnienia."
+      ],
+      "sources": [
+        {
+          "title": "Auto dachowało na trasie S8",
+          "url": "https://tvn24.pl/tvnwarszawa/zoliborz/warszawa-zderzenie-na-s8-auto-dachowalo-utrudnienia-st9148776?source=rss"
+        }
+      ],
+      "tags": [
+        "S8",
+        "wypadek",
+        "Warszawa",
+        "ruch"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "rowerzystka-dzieci-areszt",
+      "section": "Polska",
+      "title": "Areszt dla kierującej po potrąceniu rowerzystki z dziećmi",
+      "lead": "Sprawa z Huty Dąbrowy trafiła do trybu karnego.",
+      "whatHappened": "TVN24 podał, że 27-latka potrąciła rowerzystkę jadącą z dwójką dzieci i trafiła do aresztu na trzy miesiące.",
+      "keyFacts": [
+        "Artykuł TVN24 z 19 lipca 2026.",
+        "Poszkodowana jechała z dwójką dzieci.",
+        "Sąd zastosował trzymiesięczny areszt."
+      ],
+      "reactions": [
+        "To już nie tylko wypadek, ale też formalna decyzja procesowa."
+      ],
+      "whyItMatters": "Wątek łączy bezpieczeństwo drogowe, ochronę dzieci i dalsze postępowanie karne.",
+      "context": "To jeden z mocniejszych krajowych sygnałów bezpieczeństwa w dzisiejszym slotie.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się informacja o stanie poszkodowanych albo kwalifikacji czynu."
+      ],
+      "sources": [
+        {
+          "title": "Trzymiesięczny areszt dla 27-latki, która potrąciła rowerzystkę z dwójką dzieci",
+          "url": "https://tvn24.pl/lublin/huta-dabrowa-potracila-rowerzystke-z-dwojka-dzieci-trafila-do-aresztu-st9148868?source=rss"
+        }
+      ],
+      "tags": [
+        "wypadek",
+        "dzieci",
+        "areszt",
+        "drogi"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "nozownik-radny-zarzuty",
+      "section": "Polska",
+      "title": "Zarzuty po ataku na radnego",
+      "lead": "Lokalny incydent przerodził się w postępowanie karne.",
+      "whatHappened": "TVN24 opisał nożownika, który usłyszał zarzuty po ataku na radnego podczas Lemkowskiej Watry. Samorządowiec opublikował nagranie ze zdarzenia.",
+      "keyFacts": [
+        "Artykuł TVN24 z 19 lipca 2026.",
+        "Sprawa dotyczy ataku podczas imprezy publicznej.",
+        "Podejrzany usłyszał zarzuty."
+      ],
+      "reactions": [
+        "To podnosi sprawę z poziomu lokalnego incydentu do formalnej reakcji organów ścigania."
+      ],
+      "whyItMatters": "To ważny sygnał dla bezpieczeństwa wydarzeń publicznych i lokalnej debaty politycznej.",
+      "context": "W dzisiejszym krajowym miksie przemoc i bezpieczeństwo wciąż wypychają miękkie tematy.",
+      "watchNext": [
+        "Sprawdź, czy prokuratura poda kwalifikację czynu albo dalsze środki zapobiegawcze."
+      ],
+      "sources": [
+        {
+          "title": "Nożownik z zarzutem po ataku na radnego",
+          "url": "https://tvn24.pl/krakow/zdynia-nozownik-z-zarzutem-po-ataku-na-radnego-podczas-lemkowskiej-watry-st9148872?source=rss"
+        }
+      ],
+      "tags": [
+        "radny",
+        "atak",
+        "zarzuty",
+        "Kraków"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "tatry-utrudnienia-szlaki",
+      "section": "Polska",
+      "title": "Utrudnienia na szlakach w Tatrach",
+      "lead": "Remonty i wymiana łańcuchów wpływają na ruch w górach.",
+      "whatHappened": "TVN24 informuje o utrudnieniach na popularnych szlakach w Tatrach. Powodem są prace naprawcze i wymiana łańcuchów.",
+      "keyFacts": [
+        "Artykuł TVN24 z 19 lipca 2026.",
+        "Utrudnienia dotyczą popularnych szlaków.",
+        "Powód to prace techniczne, nie pojedynczy wypadek."
+      ],
+      "reactions": [
+        "To mniejszy temat niż alert burzowy, ale nadal ważny dla weekendowego ruchu turystycznego."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na bezpieczeństwo i planowanie wejść w górach.",
+      "context": "W połączeniu z burzami i wiatrem to kolejny sygnał ostrożności dla osób w terenie.",
+      "watchNext": [
+        "Sprawdź, czy TOPR lub TPN podadzą dodatkowe ostrzeżenia."
+      ],
+      "sources": [
+        {
+          "title": "Utrudnienia w Tatrach",
+          "url": "https://tvn24.pl/krakow/tatry-remont-popularnych-szlakow-utrudnienia-st9148832?source=rss"
+        }
+      ],
+      "tags": [
+        "Tatry",
+        "szlaki",
+        "turystyka",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "us-iran-kolejne-uderzenia",
+      "section": "Świat",
+      "title": "USA znów uderzają w Iran",
+      "lead": "Konflikt przechodzi w kolejną falę ostrzałów.",
+      "whatHappened": "CNN opisuje świeże uderzenia w Iran po zapowiedzi, że USA będą go szybko karać za śmierć amerykańskich żołnierzy. CENTCOM potwierdza kolejną noc nalotów.",
+      "keyFacts": [
+        "CNN publikuje live coverage z 19 lipca 2026.",
+        "CENTCOM pokazuje ósmą kolejną noc ataków na Iran.",
+        "W grze pozostają cele przy Zatoce Perskiej i okolice Cieśniny Ormuz."
+      ],
+      "reactions": [
+        "To już nie jest wymiana retoryki, tylko ciągła kampania militarna."
+      ],
+      "whyItMatters": "Może szybko uruchomić kolejne ostrzeżenia morskie, lotnicze i energetyczne.",
+      "context": "To najważniejszy globalny wątek bezpieczeństwa w porannym i południowym obiegu.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się nowy komunikat CENTCOM, ostrzeżenie żeglugowe albo reakcja państw Zatoki."
+      ],
+      "sources": [
+        {
+          "title": "Fresh strikes hit Iran after US vow to 'swiftly punish' Tehran for service members' deaths",
+          "url": "https://www.cnn.com/2026/07/19/world/live-news/iran-war-trump"
+        },
+        {
+          "title": "US and Iran exchange strikes after two US soldiers killed in Jordan",
+          "url": "https://www.bbc.co.uk/news/articles/cgk417jp83po?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "U.S. Central Command homepage",
+          "url": "https://www.centcom.mil/"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "CENTCOM",
+        "Ormuz"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "kijow-nowy-atak-rakietowy",
+      "section": "Świat",
+      "title": "Kijów po kolejnym dużym ataku rakietowym",
+      "lead": "Ukraińskie źródła potwierdzają ofiary i zniszczenia.",
+      "whatHappened": "BBC i CNN opisują jeden z największych rosyjskich ataków balistycznych na Kijów w tej wojnie. Oficjalne źródła Ukrainy podają, że zginęła jedna osoba, a siedem zostało rannych.",
+      "keyFacts": [
+        "CNN mówi o jednym z największych ataków balistycznych na Kijów.",
+        "Oficjalne źródła Ukrainy podają bilans 1 zabity i 7 rannych.",
+        "Atak wywołał pożary i szkody w mieście."
+      ],
+      "reactions": [
+        "To przesuwa temat z samego ostrzeżenia do potwierdzonego skutku bojowego."
+      ],
+      "whyItMatters": "Kijów znów jest głównym celem rosyjskich uderzeń, co ma znaczenie dla bezpieczeństwa i dyplomacji.",
+      "context": "To rozwija poranny wątek wojny i potwierdza, że eskalacja nie słabnie.",
+      "watchNext": [
+        "Sprawdź, czy Ukraina poda nowy bilans szkód lub czy pojawi się odpowiedź wojskowa."
+      ],
+      "sources": [
+        {
+          "title": "Russia launches major ballistic missile attack on Kyiv",
+          "url": "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Russia unleashes one of biggest ballistic missile attacks of the Ukraine war, Kyiv says",
+          "url": "https://www.cnn.com/2026/07/19/europe/russia-ukraine-ballistic-missiles-intl-hnk"
+        },
+        {
+          "title": "Russian ballistic missile attack on Kyiv kills one, injures seven",
+          "url": "https://www.ukrinform.net/"
+        },
+        {
+          "title": "Official web site of the President of Ukraine",
+          "url": "https://www.president.gov.ua/en"
+        }
+      ],
+      "tags": [
+        "Kijów",
+        "Ukraina",
+        "Rosja",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "tate-nowe-zarzuty-cps",
+      "section": "Świat",
+      "title": "Nowe zarzuty wobec braci Tate",
+      "lead": "Brytyjskie śledztwo wchodzi w fazę formalnych oskarżeń.",
+      "whatHappened": "BBC podaje, że Andrew i Tristan Tate zostali zatrzymani w USA, a CPS poinformowała o dodatkowych zarzutach seksualnych w Wielkiej Brytanii.",
+      "keyFacts": [
+        "CPS mówi o kolejnych 59 zarzutach łącznie.",
+        "Sprawa obejmuje m.in. gwałt, napaść i handel ludźmi.",
+        "Pojawił się też wniosek o ekstradycję."
+      ],
+      "reactions": [
+        "To już nie jest medialna spekulacja, tylko twardy etap postępowania karnego."
+      ],
+      "whyItMatters": "To jedna z najgłośniejszych spraw karnych w brytyjskim obiegu informacyjnym i ma znaczenie międzynarodowe.",
+      "context": "W porannym feedzie to jeden z głównych tematów o ciężarze polityczno-prawnym.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się harmonogram ekstradycji lub pierwsze stanowisko obrony."
+      ],
+      "sources": [
+        {
+          "title": "Tate brothers arrested in US as further UK charges take total to 59",
+          "url": "https://www.bbc.co.uk/news/articles/cwymly9yd33o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CPS decides to prosecute Tate brothers with additional sexual offences",
+          "url": "https://www.cps.gov.uk/national-news/news/cps-decides-prosecute-tate-brothers-additional-sexual-offences"
+        }
+      ],
+      "tags": [
+        "Tate",
+        "CPS",
+        "zarzuty",
+        "ekstradycja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "ue-border-system-queue",
+      "section": "Świat",
+      "title": "Nowy system graniczny UE spowalnia odprawy",
+      "lead": "Lotniska ostrzegają przed dłuższym czekaniem przy paszportach.",
+      "whatHappened": "BBC pisze, że nowy unijny system graniczny może potroić czas odprawy paszportowej. Ostrzeżenie pochodzi od szefa lotniska.",
+      "keyFacts": [
+        "Problem dotyczy odpraw na granicy i lotnisk.",
+        "BBC cytuje szefa lotniska, który mówi o potrojeniu czasu.",
+        "To temat operacyjny, nie tylko polityczny."
+      ],
+      "reactions": [
+        "To może szybko przełożyć się na kolejki i skargi pasażerów."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na mobilność, podróże i logistykę w UE.",
+      "context": "To jeden z tematów, który może uderzyć też w pasażerów z Polski.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się konkretne komunikaty lotnisk lub przewoźników."
+      ],
+      "sources": [
+        {
+          "title": "New EU border system tripling time at passport control, airport boss says",
+          "url": "https://www.bbc.co.uk/news/articles/ckg5gg6n9x3o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "UE",
+        "granica",
+        "lotniska",
+        "podróże"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "guyana-ferry-sinks",
+      "section": "Świat",
+      "title": "Prom z 116 osobami tonie u wybrzeży Gujany",
+      "lead": "W rejonie Karaibów doszło do nagłego wypadku na wodzie.",
+      "whatHappened": "BBC podaje, że prom z 116 pasażerami zatonął u wybrzeży Gujany. Władze informują o zdarzeniu, ale bilans sytuacji może się jeszcze zmieniać.",
+      "keyFacts": [
+        "BBC opublikowało tę wiadomość 19 lipca 2026.",
+        "Na pokładzie było 116 osób.",
+        "Źródłem są władze lokalne."
+      ],
+      "reactions": [
+        "Na tym etapie to bardziej operacyjny niż polityczny temat, ale potencjalnie z dużym bilansem."
+      ],
+      "whyItMatters": "To ważny sygnał bezpieczeństwa transportu wodnego i możliwego kryzysu ratunkowego.",
+      "context": "BBC wrzuciło ten temat do porannego światowego miksu obok Europy i Bliskiego Wschodu.",
+      "watchNext": [
+        "Sprawdź, czy służby podadzą liczbę uratowanych i ofiar."
+      ],
+      "sources": [
+        {
+          "title": "Ferry carrying 116 passengers sinks off Guyana coast, authorities say",
+          "url": "https://www.bbc.co.uk/news/articles/cm2gm99nrm7o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Gujana",
+        "prom",
+        "ratownictwo",
+        "karaiby"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "wegry-prezydent-ustepuje",
+      "section": "Świat",
+      "title": "Węgierski prezydent ma ustąpić",
+      "lead": "Parlament przesunął sprawę z polityki do realnej zmiany władzy.",
+      "whatHappened": "BBC podaje, że prezydent Węgier zgodził się odejść po tym, jak parlament poparł jego odwołanie.",
+      "keyFacts": [
+        "BBC opublikowało materiał 19 lipca 2026.",
+        "Decyzja wynika z głosowania parlamentu.",
+        "To sygnał poważnego przesilenia politycznego."
+      ],
+      "reactions": [
+        "To jeden z mocniejszych europejskich sygnałów politycznych w dzisiejszym feedzie."
+      ],
+      "whyItMatters": "Zmienia układ polityczny w kraju UE i może mieć dalsze konsekwencje instytucjonalne.",
+      "context": "W BBC to dziś jeden z bardziej jednoznacznych tematów politycznych obok granicy i wojny.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się harmonogram odejścia i następca."
+      ],
+      "sources": [
+        {
+          "title": "Hungary's president agrees to stand down after parliament backs removal",
+          "url": "https://www.bbc.co.uk/news/articles/cpd7q7eev7po?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Węgry",
+        "prezydent",
+        "parlament",
+        "UE"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 latest feed",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "gov.pl RCB alert",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb--burze-z-gradem-i-silny-wiatr-1907"
+    },
+    {
+      "title": "IMGW forecast",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-13-07-19-07-2026/"
+    },
+    {
+      "title": "CENTCOM homepage",
+      "url": "https://www.centcom.mil/"
+    },
+    {
+      "title": "CPS news release",
+      "url": "https://www.cps.gov.uk/national-news/news/cps-decides-prosecute-tate-brothers-additional-sexual-offences"
+    },
+    {
+      "title": "President of Ukraine",
+      "url": "https://www.president.gov.ua/en"
+    },
+    {
+      "title": "Ukrinform",
+      "url": "https://www.ukrinform.net/"
+    }
+  ]
+}

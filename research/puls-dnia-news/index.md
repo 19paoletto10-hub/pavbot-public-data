@@ -1,5 +1,14 @@
 # Puls Dnia News Index
 
+The 2026-07-19 12:02 slot keeps Poland in alert-and-incident mode: RCB's
+hail-and-wind warning is still live, Meta/Facebook/Instagram looks to be
+recovering, and TVN24 adds a S8 rollover, a cyclist arrest, a councillor-
+attack charge and Tatry trail disruptions. Abroad, BBC/CNN harden the
+Iran-US exchange into fresh strikes, Ukraine gets a new official casualty
+tally after the Kyiv missile attack, and the world block broadens to Tate
+charges, the EU border system, Guyana ferry sinking and Hungary's political
+exit.
+
 The 2026-07-19 09:00 slot turns the feed from warning into incident: TK blocks four judges, RCB sends a concrete outage warning, and an A1 drunk-driver stop lands in the Polish block, while BBC/CNN move Iran-USA into active exchanges of strikes, Russia keeps pounding Kyiv, Ukraine hits Russian logistics, and the world mix broadens to Hungary, Cuba, Mexico, China, India and Laos.
 
 The 2026-07-19 06:02 slot cools the Polish side and adds a fresh foreign-policy/security bundle: MSZ renews its highest-level Middle East warnings, TVN24 expects a colder week, while BBC/CNN push the Iran/Jordan escalation, Tate arrest, Russia's cash shift, border-system delays, German and US political/tech items.
