@@ -1,0 +1,176 @@
+{
+  "id": "humor-2026-07-19-1209",
+  "title": "<RR> Reddit Radar",
+  "summary": "Material update: południowy refresh z trzema devowymi roastami i jedną szeroką kartą o patencie, Dota i starych mechanikach.",
+  "generatedAt": "2026-07-19T10:32:00Z",
+  "displayTime": "12:09",
+  "nextRefreshAt": "2026-07-19T14:09:00+02:00",
+  "refreshIntervalHours": 2,
+  "items": [
+    {
+      "id": "https-www-reddit-com-r-programmerhumor-comments-1v0jt1o-therealconcern",
+      "title": "theRealConcern",
+      "caption": "Najcelniejszy żart slotu sprowadza poważny outage do pytania, czy można dopieścić ekran błędu. Sam obrazek jest już mocny, ale komentarze natychmiast przesuwają absurd w stronę failoverów, zapasowych chmurek i korporacyjnego `oopsie woopsie` UX.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://www.reddit.com/r/ProgrammerHumor/comments/1v0jt1o/therealconcern/",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "dev",
+        "aws",
+        "outage"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "whyFunny": "Humor działa, bo każdy techniczny czytelnik rozpoznaje moment, gdy cały system płonie, a ktoś z boku proponuje polishing czegoś kompletnie pobocznego.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment robi przewrotną obronę PM-a: jeśli error page pojawia się często, to ładniejszy ekran błędu faktycznie może mieć sens.",
+          "originalBody": "'Ey. If the error page is a common occurrence, then making it pretty is a smart move.",
+          "explanation": "Puenta wygrywa, bo odwraca intuicję mema i jeszcze mocniej kompromituje system.",
+          "score": null
+        },
+        {
+          "id": "comment-2",
+          "summary": "Najbardziej techniczny highlight skręca żart w realny failover: trzymać lekki error page na innej chmurze i przełączać ruch awaryjnie.",
+          "originalBody": "You can host a lean error page on a different cloud for this. Just gotta make sure you can get a load balancer or dns switch",
+          "explanation": "To działa, bo zamiast gasić absurd, komentarz traktuje go jak normalny architecture review.",
+          "score": null
+        },
+        {
+          "id": "comment-3",
+          "summary": "Najlżejsza riposta domyka całość gotowym copy do katastrofy: `oopsie woopsie looks like our widdle site did a no-no`.",
+          "originalBody": "Just make it say \"oopsie woopsie looks like our widdle site did a no-no\" and I will be too enraged to complain to customer support or even remember why I needed your product anyway.",
+          "explanation": "Komentarz jest śmieszny, bo pcha infantylne UX copy dokładnie tam, gdzie użytkownik jest najbardziej wkurzony.",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "https-www-reddit-com-r-programmerhumor-comments-1v03q5j-worksforme",
+      "title": "worksForMe",
+      "caption": "Najczystszy game-devowy roast dnia: skoro silnik nie umie pływać, wystarczy postawić znak `PLEASE DO NOT SWIM` i uznać sprawę za zamkniętą. Komentarze konsekwentnie rozciągają ten bugfix w kolejne piętra absurdu.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://www.reddit.com/r/ProgrammerHumor/comments/1v03q5j/worksforme/",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "dev",
+        "gamedev",
+        "bugs"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "whyFunny": "Żart działa, bo streszcza klasyczne `ship it` myślenie: zamiast robić brakującą funkcję, projektuje się znak ostrzegawczy i ogłasza sukces.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment reaguje najbardziej naturalnie: po takim znaku człowiek natychmiast ma ochotę wejść do wody.",
+          "originalBody": "I'd immediately try to swim",
+          "explanation": "To ustawia cały wątek, bo pokazuje, że gracze potraktują zakaz jak side quest.",
+          "score": null
+        },
+        {
+          "id": "comment-2",
+          "summary": "Najlepszy lore expansion opisuje efekt końcowy: T-pose na dnie basenu i nieskończony fall damage.",
+          "originalBody": "And that’s how you end up T-posing on the bottom of the pool while taking infinite fall damage.",
+          "explanation": "Puenta jest mocna, bo bardzo konkretnie wizualizuje najbardziej żenujący możliwy bug outcome.",
+          "score": null
+        },
+        {
+          "id": "comment-3",
+          "summary": "Najlepszy programistyczny suchar domyka temat jednym wierszem: `// TODO: Implement swimming animation`.",
+          "originalBody": "// TODO: Implement swimming animation",
+          "explanation": "To działa, bo wszystko, co śmieszne w obrazku, kondensuje do jednego wiarygodnego komentarza w kodzie.",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "https-www-reddit-com-r-programmerhumor-comments-1uzlokz-removedfromthemeeting",
+      "title": "removedFromTheMeeting",
+      "caption": "Ta karta działa prawie jak grupowa sesja terapeutyczna dla ludzi zmęczonych Teams i Outlookiem. Sam mem jest prosty, ale comment layer natychmiast wchodzi w konkretny ból: logowanie widmo, złe konto, niekończące się decyzje i produkt, który zawsze ma jeszcze jeden zły twist.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://www.reddit.com/r/ProgrammerHumor/comments/1uzlokz/removedfromthemeeting/",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "dev",
+        "teams",
+        "outlook"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "whyFunny": "Humor działa, bo thread trafia w bardzo wspólne, bardzo nielubiane doświadczenie i pozwala wszystkim dorzucić jeszcze jeden realny bug albo upokorzenie.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment streszcza codzienny ból najkrócej: Teams i Outlook wylogowują dokładnie wtedy, gdy naprawdę trzeba z nich skorzystać.",
+          "originalBody": "Man I hate teams and outlook soo much for logging me out every time you try to access the site",
+          "explanation": "To trafia, bo jest zbyt znajome, żeby nie zabolało i nie rozśmieszyło jednocześnie.",
+          "score": null
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight dodaje najbardziej realistyczny detal: jedno złe konto i kolejne dziesięć minut życia znika bezpowrotnie.",
+          "originalBody": "And if you pick the wrong account once, enjoy the next 10 minutes",
+          "explanation": "Puenta działa, bo robi z drobnej decyzji mini-horror biurowy, który każdy kojarzy.",
+          "score": null
+        },
+        {
+          "id": "comment-3",
+          "summary": "Najmocniejsza riposta rozwija temat fałszywego login state i bezużytecznego `remember my decision for 30 days`.",
+          "originalBody": "Not just that, but team’s online will pretend I am logged in right until I try to access a chat or shared folders, and then it will harass me to log in.\n\nWhat the fuck is the point of pretending to be logged in?!\n\nAnd the “remember my decision for 30 days” toggle never works.",
+          "explanation": "Komentarz wygrywa, bo brzmi jak bug report pisany już po utracie resztek cierpliwości.",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "https-www-reddit-com-r-memes-comments-1v0iq9l-so_much_for_the_lawsuit",
+      "title": "So much for the lawsuit",
+      "caption": "Jedyna szeroka karta tego slotu łączy dwa osobne nurty komentarzowe: ludzie śmieją się z tego, że Dota ciągle trzyma się w topce mimo nienawiści własnych graczy, a potem płynnie przechodzą do roastu patentów i wielkich firm, które latami siedzą na mechanice, po czym nagle budzą się oburzone.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://www.reddit.com/r/memes/comments/1v0iq9l/so_much_for_the_lawsuit/",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "memy",
+        "gry",
+        "internet"
+      ],
+      "categoryLabel": "memes",
+      "postText": null,
+      "whyFunny": "Karta działa, bo zbiera bardzo internetowy rodzaj frustracji: wszyscy twierdzą, że dana rzecz jest okropna, po czym i tak dalej w niej siedzą albo dalej o niej debatują.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment od razu łapie sedno uzależnienia od złej gry: `Dota, you’re still up there? Well done..,`.",
+          "originalBody": "Dota, you’re still up there? Well done..,",
+          "explanation": "To otwiera żart od strony gracza, który niby gardzi, ale jednak obserwuje z podziwem przetrwanie tytułu.",
+          "score": null
+        },
+        {
+          "id": "comment-2",
+          "summary": "Najlepsza autorefleksja tego wątku nazywa problem po imieniu: `Sunken cost fallacy`.",
+          "originalBody": "Sunken cost fallacy",
+          "explanation": "Jedno krótkie hasło kompresuje cały mechanizm, przez który ludzie wracają do gry, którą rzekomo nienawidzą.",
+          "score": null
+        },
+        {
+          "id": "comment-3",
+          "summary": "Najmocniejszy patentowy roast sprowadza sprawę do prostego oskarżenia: firma siedziała na mechanice przez lata, a teraz dopiero się obudziła.",
+          "originalBody": "Nintendo had plenty of opportunities to give the people what they wanted but wouldn't and got mad when someone else did.",
+          "explanation": "To domyka kartę, bo zmienia pojedynczy mem w bardzo czytelny internetowy resentful punchline.",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "source": "Codex Safari Reddit radar"
+}
