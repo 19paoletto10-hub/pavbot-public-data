@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-19-2008",
+  "status": "material_update",
+  "generatedAt": "2026-07-19T18:31:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-19T20:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Live 20:08 review completed through read-only Safari Apple Events/DOM on old.reddit.com in the local Safari session after a successful Safari Computer Use preflight.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-19-1808 and 2026-07-19-1209, so the evening AI-budget bundle and the noon four-pack could not roll forward into this slot.",
+      "Before selecting replacements, the run verified that origin/main already serves 2026-07-19-1808 for reddit-radar, so the remote topic was current and this slot was a normal rotation rather than a recovery publish.",
+      "The cleanest fresh survivors at 20:08 came from ProgrammerHumor plus two snack-adjacent mildlyinfuriating threads; live sports memes from r/memes were plentiful but too repetitive or too argument-prone to carry the public bundle.",
+      "At least five safe fresh cards survived the live review, so the reddit-radar contract still prefers a new public bundle over keeping the visible 2026-07-19-1808 bundle unchanged.",
+      "No Reddit social actions were performed.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-19-1808",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-19-2008-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-19-2008-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-19-2008-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1uzlokz/removedfromthemeeting",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v03q5j/worksforme",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v0jt1o/therealconcern",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v0l97l/ashorthorrorstory",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v0nxg6/currently",
+    "https://old.reddit.com/r/memes/comments/1v0icxl/winner_mentality",
+    "https://old.reddit.com/r/memes/comments/1v0iq9l/so_much_for_the_lawsuit",
+    "https://old.reddit.com/r/memes/comments/1v0s0nb/a_true_mystery",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1uzlokz/removedfromthemeeting",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1v03q5j/worksforme",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1v0jt1o/therealconcern",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1v0l97l/ashorthorrorstory",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1v0nxg6/currently",
+    "https://www.reddit.com/r/memes/comments/1v0icxl/winner_mentality",
+    "https://www.reddit.com/r/memes/comments/1v0iq9l/so_much_for_the_lawsuit",
+    "https://www.reddit.com/r/memes/comments/1v0s0nb/a_true_mystery"
+  ],
+  "newCandidates": [
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "sideProject",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1v0whzc/sideproject/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_because_the_claude_bill_escalation_stays_compact_current_and_public_safe"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "theNewbieAskingForHelpOnX",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1v0ypen/thenewbieaskingforhelponx/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_because_the_beginner_pain_joke_keeps_a_clean_wayland_and_programming_qa_comment_payoff"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "whatIfIToldYouThisPartTwo",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1v0yx2c/whatifitoldyouthisparttwo/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_because_the_music_nerd_well_actuallys_stay_compact_and_harmless"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Pack of candy is more than 50% most hated flavor.",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1v0sqkf/pack_of_candy_is_more_than_50_most_hated_flavor/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_because_the_comment_layer_turns_a_bad_candy_ratio_into_a_clean_ancient_necco_roast"
+    },
+    {
+      "subreddit": "r/mildlyinfuriating",
+      "title": "Opened this bag of chips to discover this flavor stone inside ://",
+      "url": "https://www.reddit.com/r/mildlyinfuriating/comments/1v0jy3w/opened_this_bag_of_chips_to_discover_this_flavor/",
+      "scoreLabel": "live Safari review",
+      "decision": "selected_for_new_bundle_because_the_comment_layer_reframes_the_flavor_clump_as_a_blessing_and_cooking_loot"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "fullStackMeansDoubleThePain",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1v0xvrb/fullstackmeansdoublethepain/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_turns_into_burnout_and_org_design_discourse"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "thisOneIsDifferentICanFeelIt",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1v0ukk3/thisoneisdifferenticanfeelit/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_comment_layer_turns_into_market_structure_discourse"
+    },
+    {
+      "subreddit": "r/ProgrammerHumor",
+      "title": "spolierPhaseTwoNeverGetsBudget",
+      "url": "https://www.reddit.com/r/ProgrammerHumor/comments/1v0ohr2/spolierphasetwonevergetsbudget/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_visual_and_comments_skew_cruder_than_the_selected_bundle"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "Meanwhile Argentinas be stressing",
+      "url": "https://www.reddit.com/r/memes/comments/1v11ivi/meanwhile_argentinas_be_stressing/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_sports_cluster_got_repetitive_even_when_individual_comments_were_safe"
+    },
+    {
+      "subreddit": "r/memes",
+      "title": "The entire match summarized",
+      "url": "https://www.reddit.com/r/memes/comments/1v12dun/the_entire_match_summarized/",
+      "scoreLabel": "live Safari review",
+      "decision": "reviewed_but_left_out_because_the_visible_comment_layer_tilted_hostile"
+    }
+  ]
+}
