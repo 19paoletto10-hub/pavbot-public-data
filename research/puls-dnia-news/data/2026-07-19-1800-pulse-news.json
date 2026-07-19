@@ -1,0 +1,617 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-19",
+  "runTime": "18:00",
+  "status": "Material update",
+  "headline": "Burze, Wołyń i nowe fronty",
+  "summary": "Wieczorny slot przesuwa feed z samego alertu pogodowego do szerszego miksu polityki, bezpieczeństwa i świata: burze nadal są live, ale nowe materialne rzeczy to Wołyń, PiS, przechwycenie rosyjskich samolotów nad Bałtykiem, Gibraltar, flota cieni, Kijów, Tate, paliwa i AI.",
+  "checkedSources": [
+    {
+      "title": "TVN24 latest feed",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24 home page",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "gov.pl RCB communications",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "gov.pl RCB alert",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb--burze-z-gradem-i-silny-wiatr-1907"
+    },
+    {
+      "title": "IMGW forecast",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-13-07-19-07-2026/"
+    },
+    {
+      "title": "TVN24 Meteo long-term forecast",
+      "url": "https://tvn24.pl/tvnmeteo/prognoza/pogoda-dlugoterminowa-imgw-na-lato-i-jesien-prognoza-na-koniec-lata-st9143927"
+    },
+    {
+      "title": "IPN exhumation update",
+      "url": "https://ipn.gov.pl/pl/dla-mediow/komunikaty/245401%2CJutro-zakonczy-sie-pierwszy-tydzien-prac-ekshumacyjnych-w-Ostrowkach-i-Woli-Ostr.html"
+    },
+    {
+      "title": "IPN start of works",
+      "url": "https://ipn.gov.pl/pl/dla-mediow/komunikaty/245236%2CRozpoczecie-prac-ekshumacyjnych-w-Ostrowkach-i-Woli-Ostrowieckiej.html"
+    },
+    {
+      "title": "gov.pl premier communications",
+      "url": "https://www.gov.pl/web/premier/komunikaty-cir"
+    },
+    {
+      "title": "TVN24 PiS ultimatum",
+      "url": "https://tvn24.pl/polska/ultimatum-dla-czlonkow-pis-maja-tydzien-na-wycofanie-sie-z-dzialalnosci-w-stowarzyszeniach-st9144255"
+    },
+    {
+      "title": "TVN24 Morawiecki reaction",
+      "url": "https://tvn24.pl/polska/mateusz-morawiecki-reaguje-na-uchwale-pis-w-sprawie-stowarzyszen-st9144432"
+    },
+    {
+      "title": "TVN24 Baltic interception",
+      "url": "https://tvn24.pl/polska/rosyjskie-samoloty-przechwycone-nad-baltykiem-st9144102"
+    },
+    {
+      "title": "TVN24 Gibraltar",
+      "url": "https://tvn24.pl/swiat/gibraltar-weszla-w-zycie-umowa-o-przeplywie-osob-miedzy-gibraltarem-a-hiszpania-st9143655"
+    },
+    {
+      "title": "GOV.UK Gibraltar treaty",
+      "url": "https://www.gov.uk/government/news/uk-finalises-historic-treaty-with-eu-to-secure-economic-future-of-gibraltar"
+    },
+    {
+      "title": "Council of the EU Gibraltar",
+      "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/04/01/eu-uk-relations-member-states-greenlight-eu-uk-deal-on-gibraltar/"
+    },
+    {
+      "title": "TVN24 shadow fleet",
+      "url": "https://tvn24.pl/swiat/wojna-w-ukrainie-ukrainskie-drony-uderzyly-w-20-statkow-z-floty-cieni-st9142994"
+    },
+    {
+      "title": "Ukrinform shadow fleet",
+      "url": "https://www.ukrinform.net/rubric-ato/4145809-ssu-drones-strike-russian-shadow-tanker-three-oil-depots-in-stavropol-region.html"
+    },
+    {
+      "title": "Ukrinform Kyiv attack",
+      "url": "https://www.ukrinform.net/rubric-ato/4145734-russian-ballistic-missile-attack-on-kyiv-kills-one-injures-seven.html"
+    },
+    {
+      "title": "AP Kyiv attack",
+      "url": "https://apnews.com/article/ddea9c0a10367fc84b3cb563896102e3"
+    },
+    {
+      "title": "BBC Breaking Tate",
+      "url": "https://x.com/BBCBreaking/status/2078650259572429216"
+    },
+    {
+      "title": "CNN Tate",
+      "url": "https://x.com/CNN/status/2078633702888747181"
+    },
+    {
+      "title": "CPS Tate release",
+      "url": "https://www.cps.gov.uk/national-news/news/cps-decides-prosecute-tate-brothers-additional-sexual-offences"
+    },
+    {
+      "title": "TVN24 fuel prices",
+      "url": "https://tvn24.pl/biznes/moto/ceny-paliw-na-stacjach-w-polsce-wzrost-nawet-o-20-groszy-w-tydzien-st9144364"
+    },
+    {
+      "title": "TVN24 Biały Dom tag",
+      "url": "https://tvn24.pl/tagi/bialy-dom"
+    },
+    {
+      "title": "TVN24 AI tag",
+      "url": "https://tvn24.pl/tagi/ai"
+    },
+    {
+      "title": "White House AI action",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-07-19-1800-alerty-burze-rcb-imgw",
+      "section": "Alerty",
+      "title": "RCB i IMGW trzymają burze w grze",
+      "lead": "Alert o burzach z gradem i silnym wiatrem nadal obowiązuje.",
+      "whatHappened": "RCB utrzymuje ostrzeżenia o burzach z gradem i silnym wiatrem, a IMGW nadal wskazuje ryzyko lokalnego gradu, bardzo silnych porywów i punktowych przerw w dostawie prądu.",
+      "keyFacts": [
+        "19 lipca obowiązują ostrzeżenia 1. i 2. stopnia.",
+        "W części kraju porywy mogą dochodzić do 85-100 km/h.",
+        "RCB ostrzega też przed możliwymi przerwami w dostawie prądu."
+      ],
+      "reactions": [
+        "Służby i kierowcy muszą liczyć się z lokalnymi utrudnieniami.",
+        "To nadal najpilniejszy temat operacyjny dla Polski.",
+        "Ryzyko szkód rośnie tam, gdzie komórki burzowe przechodzą najintensywniej."
+      ],
+      "whyItMatters": "To nadal bezpośredni sygnał dla bezpieczeństwa, transportu i sieci energetycznej.",
+      "context": "Poranny alert nie wygasł, więc wieczorny slot nadal czyta pogodę jako temat operacyjny, a nie tylko prognozę.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się realne przerwy w dostawie prądu.",
+        "Sprawdzić, czy IMGW lub RCB rozszerzą komunikat regionalnie."
+      ],
+      "sources": [
+        {
+          "title": "gov.pl RCB communications",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        },
+        {
+          "title": "gov.pl RCB alert",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb--burze-z-gradem-i-silny-wiatr-1907"
+        },
+        {
+          "title": "IMGW forecast",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-13-07-19-07-2026/"
+        },
+        {
+          "title": "TVN24 storm radar",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/gdzie-jest-burza-burze-w-polsce-w-niedziele-19-07-mapa-i-radar-burz-na-zywo-st9148869"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "RCB",
+        "IMGW",
+        "alerty"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-1800-alerty-imgw-jesien-prognoza",
+      "section": "Alerty",
+      "title": "IMGW widzi ciepły koniec lata",
+      "lead": "Eksperymentalna prognoza sugeruje ciepły sierpień i mokry listopad.",
+      "whatHappened": "TVN24 opisuje eksperymentalną prognozę IMGW na sierpień-listopad: sierpień ma być cieplejszy niż norma, wrzesień ciepły, październik blisko normy, a listopad wyraźnie mokrzejszy.",
+      "keyFacts": [
+        "Prognoza dotyczy miesięcy od sierpnia do listopada.",
+        "To prognoza eksperymentalna, a nie pewnik.",
+        "Listopad wypada jako najbardziej mokry miesiąc w zestawieniu."
+      ],
+      "reactions": [
+        "To sygnał raczej do planowania niż do natychmiastowej reakcji.",
+        "Dla mediów pogodowych to materiał na dalsze obserwacje.",
+        "Nie zmienia bieżącego alertu burzowego."
+      ],
+      "whyItMatters": "Pomaga odróżnić dzisiejsze burze od szerszego trendu pogodowego na końcówkę lata.",
+      "context": "To osobny, dłuższy horyzont niż dzisiejsze ostrzeżenie RCB.",
+      "watchNext": [
+        "Sprawdzić, czy IMGW zaktualizuje prognozę w kolejnych dniach.",
+        "Sprawdzić, czy TVN24 Meteo opisze to jako realny trend czy tylko orientację."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo long-term forecast",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/pogoda-dlugoterminowa-imgw-na-lato-i-jesien-prognoza-na-koniec-lata-st9143927"
+        },
+        {
+          "title": "IMGW forecast",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-13-07-19-07-2026/"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "IMGW",
+        "lato",
+        "jesień"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-19-1800-polska-wolyn-ekshumacje",
+      "section": "Polska",
+      "title": "Wołyń: ekshumacje weszły w drugi tydzień",
+      "lead": "IPN potwierdza dalsze prace w Ostrówkach i Woli Ostrowieckiej.",
+      "whatHappened": "IPN i Ukrinform potwierdzają, że ekshumacje na Wołyniu trwają dalej, a po pierwszym tygodniu prac odnaleziono szczątki jednej osoby w pojedynczej mogile.",
+      "keyFacts": [
+        "Prace rozpoczęły się 13 lipca 2026 r.",
+        "IPN zapowiada dalsze działania do 7 sierpnia.",
+        "Odnaleziono szczątki jednej osoby."
+      ],
+      "reactions": [
+        "To ważny sygnał dla pamięci historycznej i relacji polsko-ukraińskich.",
+        "Temat pozostaje wrażliwy politycznie.",
+        "Każdy kolejny komunikat IPN może zmieniać skalę znalezisk."
+      ],
+      "whyItMatters": "To jeden z nielicznych tematów łączących historię, dyplomację i bieżącą politykę.",
+      "context": "Nowa faza prac ma już formalną zgodę władz Ukrainy i jest publicznie monitorowana.",
+      "watchNext": [
+        "Sprawdzić, czy IPN poda kolejne znaleziska.",
+        "Sprawdzić, czy pojawi się reakcja po ukraińskiej stronie."
+      ],
+      "sources": [
+        {
+          "title": "IPN exhumation update",
+          "url": "https://ipn.gov.pl/pl/dla-mediow/komunikaty/245401%2CJutro-zakonczy-sie-pierwszy-tydzien-prac-ekshumacyjnych-w-Ostrowkach-i-Woli-Ostr.html"
+        },
+        {
+          "title": "IPN start of works",
+          "url": "https://ipn.gov.pl/pl/dla-mediow/komunikaty/245236%2CRozpoczecie-prac-ekshumacyjnych-w-Ostrowkach-i-Woli-Ostrowieckiej.html"
+        },
+        {
+          "title": "Ukrinform Volyn exhumation",
+          "url": "https://www.ukrinform.net/rubric-society/4144210-exhumation-begins-at-former-villages-of-ostrivky-and-volia-ostrovetska-in-volyn.html"
+        }
+      ],
+      "tags": [
+        "Wołyń",
+        "IPN",
+        "Ukraina",
+        "historia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-1800-polityka-pis-ultimatum-stowarzyszenia",
+      "section": "Polityka",
+      "title": "PiS daje członkom stowarzyszeń siedem dni",
+      "lead": "Partia każe wycofać się z organizacji o charakterze politycznym.",
+      "whatHappened": "TVN24 podaje, że PiS przyjęło uchwałę zakazującą członkom udziału w stowarzyszeniach, fundacjach i innych organizacjach o charakterze politycznym. Termin na wyjście to siedem dni, a konsekwencją ma być wykluczenie z partii.",
+      "keyFacts": [
+        "Uchwała dotyczy m.in. Rozwój Plus i Po Pierwsze Polska.",
+        "Termin biegnie od 16 lipca.",
+        "PiS zapowiada formalne oświadczenia od parlamentarzystów."
+      ],
+      "reactions": [
+        "To kolejny etap porządkowania własnego obozu przez Kaczyńskiego.",
+        "Uchwała może wywołać kolejne napięcia wewnętrzne.",
+        "Temat nadal jest bardziej polityczny niż prawny."
+      ],
+      "whyItMatters": "To test jedności PiS i potencjalny sygnał dalszych przetasowań w partii.",
+      "context": "Sprawa pojawiła się już wcześniej, ale w tym slocie pozostaje jednym z głównych politycznych wątków dnia.",
+      "watchNext": [
+        "Sprawdzić, czy ktoś faktycznie odejdzie ze stowarzyszeń.",
+        "Sprawdzić, czy PiS zacznie egzekwować wykluczenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 PiS ultimatum",
+          "url": "https://tvn24.pl/polska/ultimatum-dla-czlonkow-pis-maja-tydzien-na-wycofanie-sie-z-dzialalnosci-w-stowarzyszeniach-st9144255"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "partyjna dyscyplina",
+        "polityka",
+        "stowarzyszenia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-1800-polityka-morawiecki-tusk-reakcja",
+      "section": "Polityka",
+      "title": "Morawiecki odpowiada, Tusk żartuje",
+      "lead": "Spór o stowarzyszenia PiS wszedł w publiczną wymianę ciosów.",
+      "whatHappened": "Morawiecki napisał po uchwale PiS, że jego stowarzyszenie ma nadal budować 'Wielką Polskę', a Donald Tusk skwitował sprawę wpisem 'Grillujesz, Mateusz'.",
+      "keyFacts": [
+        "Morawiecki nie był na posiedzeniu władz PiS.",
+        "Tusk zareagował już po godzinie 22.",
+        "TVN24 pokazuje też komentarze Sasina i Bocheńskiego."
+      ],
+      "reactions": [
+        "To wzmacnia obraz wewnętrznego konfliktu w PiS.",
+        "Obie strony używają komunikacji publicznej zamiast zamkniętych ustaleń.",
+        "W praktyce temat staje się też memiczny."
+      ],
+      "whyItMatters": "Nadaje ton kolejnej rundzie sporu wewnątrz prawicy i wokół Kaczyńskiego.",
+      "context": "To rozwinięcie tej samej uchwały, ale z wyraźnym publicznym komentarzem obu stron.",
+      "watchNext": [
+        "Sprawdzić, czy dojdzie do formalnych decyzji o rozwiązaniu stowarzyszeń.",
+        "Sprawdzić, czy PiS odpowie nowym komunikatem."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Morawiecki reaction",
+          "url": "https://tvn24.pl/polska/mateusz-morawiecki-reaguje-na-uchwale-pis-w-sprawie-stowarzyszen-st9144432"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Morawiecki",
+        "Tusk",
+        "konflikt"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-19-1800-bezpieczenstwo-baltyk-przechwycenie",
+      "section": "Bezpieczeństwo",
+      "title": "Polskie myśliwce przechwytują Rosjan nad Bałtykiem",
+      "lead": "MON potwierdza kolejną interwencję dyżurnych samolotów.",
+      "whatHappened": "Władysław Kosiniak-Kamysz przekazał, że para dyżurna polskich samolotów z Malborka przechwyciła nad Bałtykiem rosyjskie Su-30SM2 z Królewca, które prowadziły obserwację.",
+      "keyFacts": [
+        "Rosyjskie maszyny nie zbliżyły się do polskiej przestrzeni powietrznej.",
+        "To drugi podobny incydent w krótkim odstępie.",
+        "MON mówi o agresywnej obserwacji ćwiczeń obrony powietrznej."
+      ],
+      "reactions": [
+        "To kolejny sygnał presji na wschodnią flankę NATO.",
+        "Incydent podnosi znaczenie stałego dyżuru lotniczego.",
+        "Bezpośredniego naruszenia granicy nie było."
+      ],
+      "whyItMatters": "To bieżący test gotowości polskiej obrony powietrznej i sygnał wobec Rosji.",
+      "context": "To już nie abstrakcyjny alert, tylko realna reakcja wojskowa na obserwację w rejonie Bałtyku.",
+      "watchNext": [
+        "Sprawdzić, czy MON lub NATO opublikują kolejny formalny komunikat.",
+        "Sprawdzić, czy incydent wpłynie na ćwiczenia lub dyżury lotnicze."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Baltic interception",
+          "url": "https://tvn24.pl/polska/rosyjskie-samoloty-przechwycone-nad-baltykiem-st9144102"
+        },
+        {
+          "title": "gov.pl premier communications",
+          "url": "https://www.gov.pl/web/premier/komunikaty-cir"
+        }
+      ],
+      "tags": [
+        "bezpieczeństwo",
+        "MON",
+        "Bałtyk",
+        "Rosja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-1800-swiat-gibraltar-umowa",
+      "section": "Świat",
+      "title": "Gibraltar otwiera nowy rozdział granicy",
+      "lead": "Wchodzi w życie umowa o przepływie osób z Hiszpanią.",
+      "whatHappened": "TVN24 i rządy UK/EU potwierdzają wejście w życie umowy, która ma usunąć fizyczne bariery na granicy Hiszpanii z Gibraltarem i uprościć przepływ osób oraz towarów.",
+      "keyFacts": [
+        "Umowa została uzgodniona wcześniej w 2026 r.",
+        "W praktyce dotyczy ruchu osób i towarów.",
+        "UK i UE opisują ją jako element stabilizacji regionu."
+      ],
+      "reactions": [
+        "To duża zmiana dla codziennych dojazdów i turystyki.",
+        "Rynek i logistyka mogą zyskać na mniejszym tarciu granicznym.",
+        "Szczegóły wdrożenia będą jeszcze doprecyzowywane."
+      ],
+      "whyItMatters": "To jedna z niewielu dziś pozytywnych, konkretnych decyzji europejskich.",
+      "context": "TVN24 przedstawia to jako historyczne wydarzenie na południu Europy, a Londyn i Bruksela mówią o certyfikowanej fazie wejścia w życie.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się pierwsze dane o ruchu na granicy.",
+        "Sprawdzić, czy będzie formalny komentarz dotyczący kontroli portu i lotniska."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Gibraltar",
+          "url": "https://tvn24.pl/swiat/gibraltar-weszla-w-zycie-umowa-o-przeplywie-osob-miedzy-gibraltarem-a-hiszpania-st9143655"
+        },
+        {
+          "title": "GOV.UK Gibraltar treaty",
+          "url": "https://www.gov.uk/government/news/uk-finalises-historic-treaty-with-eu-to-secure-economic-future-of-gibraltar"
+        },
+        {
+          "title": "Council of the EU Gibraltar",
+          "url": "https://www.consilium.europa.eu/en/press/press-releases/2026/04/01/eu-uk-relations-member-states-greenlight-eu-uk-deal-on-gibraltar/"
+        }
+      ],
+      "tags": [
+        "Gibraltar",
+        "UE",
+        "Wielka Brytania",
+        "granica"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-19-1800-swiat-flota-cieni-uderzenia",
+      "section": "Świat",
+      "title": "Ukraińskie drony uderzyły w flotę cieni",
+      "lead": "Kijów znów uderza w rosyjską logistykę morską.",
+      "whatHappened": "TVN24 podaje, że ukraińskie drony trafiły 20 statków rosyjskiej floty cieni na Morzu Czarnym, w tym tankowce. Ukrinform opisuje równoległe uderzenia w tankowiec i infrastrukturę paliwową w Rosji.",
+      "keyFacts": [
+        "Atak dotyczył Morza Czarnego.",
+        "W grę wchodzą również obiekty paliwowe w Rosji.",
+        "To kolejny etap wojny infrastrukturalnej."
+      ],
+      "reactions": [
+        "To zwiększa presję na rosyjski eksport i logistykę.",
+        "Rynki energii mogą reagować nerwowo.",
+        "To sygnał, że Ukraina utrzymuje presję poza frontem."
+      ],
+      "whyItMatters": "To ma znaczenie dla bezpieczeństwa morskiego i cen surowców.",
+      "context": "Ten wątek łączy bezpieczeństwo, gospodarkę i wojnę informacyjną.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się kolejne morskie lub paliwowe skutki.",
+        "Sprawdzić, czy rosyjska strona poda własną wersję strat."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 shadow fleet",
+          "url": "https://tvn24.pl/swiat/wojna-w-ukrainie-ukrainskie-drony-uderzyly-w-20-statkow-z-floty-cieni-st9142994"
+        },
+        {
+          "title": "Ukrinform shadow fleet",
+          "url": "https://www.ukrinform.net/rubric-ato/4145809-ssu-drones-strike-russian-shadow-tanker-three-oil-depots-in-stavropol-region.html"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Morze Czarne",
+        "flota cieni",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-1800-swiat-kijow-atak",
+      "section": "Świat",
+      "title": "Rosyjski atak na Kijów ma ofiary",
+      "lead": "Ukrinform potwierdza jedną ofiarę i siedem rannych.",
+      "whatHappened": "Po nocnym ataku balistycznym na Kijów zginęła jedna osoba, a siedem kolejnych zostało rannych. Źródła ukraińskie mówią o pożarach i zniszczeniach w kilku dzielnicach stolicy.",
+      "keyFacts": [
+        "To świeży bilans po nocnym ataku.",
+        "Atak był częścią szerszego ostrzału Ukrainy.",
+        "Bilans może jeszcze wzrosnąć po kolejnych komunikatach."
+      ],
+      "reactions": [
+        "To podtrzymuje wysoką intensywność rosyjskich ataków na stolicę.",
+        "Ukraina będzie jeszcze raportować skutki w ciągu dnia.",
+        "Temat pozostaje jednym z głównych wątków wojny."
+      ],
+      "whyItMatters": "To najnowszy twardy bilans eskalacji wojny w Ukrainie.",
+      "context": "TVN24, BBC i CNN traktują ten atak jako jeden z największych ostatnich ostrzałów Kijowa.",
+      "watchNext": [
+        "Sprawdzić, czy oficjalny bilans ofiar wzrośnie.",
+        "Sprawdzić, czy Ukraina poda nowe informacje o obronie przeciwlotniczej."
+      ],
+      "sources": [
+        {
+          "title": "Ukrinform Kyiv attack",
+          "url": "https://www.ukrinform.net/rubric-ato/4145734-russian-ballistic-missile-attack-on-kyiv-kills-one-injures-seven.html"
+        },
+        {
+          "title": "Ukrinform aftermath",
+          "url": "https://www.ukrinform.net/rubric-ato/4145737-ukraines-ses-reveals-aftermath-of-russian-attack-on-kyiv.html"
+        },
+        {
+          "title": "AP Kyiv attack",
+          "url": "https://apnews.com/article/ddea9c0a10367fc84b3cb563896102e3"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Kijów",
+        "wojna",
+        "atak"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-1800-swiat-tate-arrest",
+      "section": "Świat",
+      "title": "Tate bracia zostali zatrzymani w USA",
+      "lead": "BBC Breaking i CNN potwierdzają zatrzymanie w Miami.",
+      "whatHappened": "BBC Breaking i CNN podały, że Andrew i Tristan Tate zostali zatrzymani w Miami na wniosek ekstradycyjny z Wielkiej Brytanii po nowych zarzutach. CPS wcześniej ogłosiła dodatkowe zarzuty seksualne wobec obu braci.",
+      "keyFacts": [
+        "Zatrzymanie nastąpiło 19 lipca.",
+        "W tle są nowe brytyjskie zarzuty.",
+        "Sprawa ma także wymiar ekstradycyjny."
+      ],
+      "reactions": [
+        "To kolejny zwrot w wieloletniej sprawie.",
+        "Wątek będzie dalej rozgrywany w USA, UK i Rumunii.",
+        "Temat ma wysoki potencjał medialny."
+      ],
+      "whyItMatters": "To jeden z najgłośniejszych dziś tematów globalnych i prawnych.",
+      "context": "To ten sam pakiet wydarzeń, który media globalne i oficjalne komunikaty zestawiają z dodatkowymi zarzutami w UK.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się formalny wniosek ekstradycyjny.",
+        "Sprawdzić, czy sąd poda termin pierwszego posiedzenia."
+      ],
+      "sources": [
+        {
+          "title": "BBC Breaking Tate",
+          "url": "https://x.com/BBCBreaking/status/2078650259572429216"
+        },
+        {
+          "title": "CNN Tate",
+          "url": "https://x.com/CNN/status/2078633702888747181"
+        },
+        {
+          "title": "CPS Tate release",
+          "url": "https://www.cps.gov.uk/national-news/news/cps-decides-prosecute-tate-brothers-additional-sexual-offences"
+        },
+        {
+          "title": "AP Tate charges",
+          "url": "https://apnews.com/article/0e0cb09047b75ce10ae210c86092c287"
+        }
+      ],
+      "tags": [
+        "Tate",
+        "ekstradycja",
+        "Wielka Brytania",
+        "USA"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-1800-gospodarka-paliwa",
+      "section": "Gospodarka",
+      "title": "Paliwo znowu drożeje",
+      "lead": "TVN24 mówi o wzroście cen nawet o 20 groszy w tydzień.",
+      "whatHappened": "TVN24 Biznes podaje, że średnie ceny paliw na stacjach w Polsce wzrosły nawet o 20 groszy tydzień do tygodnia. Artykuł łączy to z drożejącą ropą i napięciem wokół Iranu.",
+      "keyFacts": [
+        "Najmocniej drożeje paliwo na wielu stacjach w kraju.",
+        "Na wzrost wpływa globalna ropa.",
+        "Najwyższe średnie ceny są m.in. na Mazowszu."
+      ],
+      "reactions": [
+        "Kierowcy zobaczą różnicę przy kolejnych tankowaniach.",
+        "To temat bardziej kosztowy niż strukturalny.",
+        "Rynek paliw znów reaguje na geopolitykę."
+      ],
+      "whyItMatters": "To bezpośrednio przekłada się na koszty transportu i nastroje konsumentów.",
+      "context": "To jeden z tych sygnałów, które szybko wychodzą poza sam sektor paliwowy.",
+      "watchNext": [
+        "Sprawdzić, czy kolejne stacje skorygują cenniki.",
+        "Sprawdzić, czy w tle pojawi się dalsza reakcja na Iran."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 fuel prices",
+          "url": "https://tvn24.pl/biznes/moto/ceny-paliw-na-stacjach-w-polsce-wzrost-nawet-o-20-groszy-w-tydzien-st9144364"
+        }
+      ],
+      "tags": [
+        "paliwa",
+        "ropa",
+        "inflacja",
+        "gospodarka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-19-1800-technologia-bialy-dom-ai",
+      "section": "Technologia",
+      "title": "Biały Dom stawia na AI w cyberbezpieczeństwie",
+      "lead": "TVN24 widzi nowy projekt przeciw hakerom.",
+      "whatHappened": "TVN24 pisze o projekcie Białego Domu wykorzystującym AI do walki z hakerami. Biały Dom ma już oficjalny dokument o promowaniu zaawansowanej innowacji i bezpieczeństwa AI.",
+      "keyFacts": [
+        "To nadal polityka bezpieczeństwa, nie tylko tech news.",
+        "White House opisał AI jako element ochrony kraju.",
+        "TVN24 podaje, że projekt jest specjalny i ukierunkowany na cyberzagrożenia."
+      ],
+      "reactions": [
+        "To wpisuje się w szerszy zwrot USA ku AI security.",
+        "Temat może wracać jako regulacja albo zamówienie publiczne.",
+        "W tle jest też wyścig z Chinami."
+      ],
+      "whyItMatters": "To sygnał, że AI staje się elementem infrastruktury bezpieczeństwa państwa.",
+      "context": "O tożsamości projektu TVN24 pisze w kontekście cyberbezpieczeństwa i walki z hakerami, a Biały Dom ma już własny dokument ramowy.",
+      "watchNext": [
+        "Sprawdzić, czy projekt dostanie budżet lub harmonogram.",
+        "Sprawdzić, czy pojawi się reakcja branży cyber."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biały Dom tag",
+          "url": "https://tvn24.pl/tagi/bialy-dom"
+        },
+        {
+          "title": "TVN24 AI tag",
+          "url": "https://tvn24.pl/tagi/ai"
+        },
+        {
+          "title": "White House AI action",
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/"
+        }
+      ],
+      "tags": [
+        "AI",
+        "cyberbezpieczeństwo",
+        "Biały Dom",
+        "technologia"
+      ],
+      "priority": "medium"
+    }
+  ]
+}

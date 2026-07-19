@@ -2,6 +2,12 @@
 
 ## Open
 
+- Watch whether the 19/07 storm alert turns into outages or transport disruption before the evening window closes.
+- Watch whether the Baltic interception gets a formal MON or NATO note.
+- Watch whether the Gibraltar deal changes border flows or queue times quickly.
+- Watch whether the Tate arrest yields an extradition motion or court date.
+- Watch whether the Kyiv casualty tally or shadow-fleet strike details change after official follow-up.
+
 - Watch whether the current storm window turns into outages, road closures or broader transport disruption.
 - Watch whether the S8 rollover or the Tatry repairs turn into longer traffic disruption.
 - Watch whether bank maintenance triggers any late customer issues after the morning windows close.

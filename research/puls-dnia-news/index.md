@@ -1,5 +1,12 @@
 # Puls Dnia News Index
 
+The 2026-07-19 18:00 slot moves the feed from morning storm handling into a
+more political and security-heavy mix: RCB/IMGW still hold the burze alert,
+but the new material is Wołyń exhumations, PiS's seven-day ultimatum,
+Morawiecki/Tusk comments, a Baltic interception, Gibraltar's border deal,
+shadow-fleet strikes, the Kyiv casualty update, Tate arrests, rising fuel
+prices and the White House AI cyber project.
+
 The 2026-07-19 15:01 slot keeps Poland under a live storm alert, but the
 domestic feed shifts from warning into execution: RCB/IMGW still push burze
 and power-cut risk, Meta outage is opanowana, bank maintenance is visible, and
