@@ -1,0 +1,322 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-19",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run przesuwa temat z samego „AI w produkcie” do trzech twardszych warstw: działania, rozliczania i dostępu. Google zamienia Search w warstwę akcji przez connected apps, a jednocześnie Komisja Europejska wymusza interoperacyjność AI na Androidzie i dostęp do danych Search, więc produkt i regulacja zaczynają działać na tej samej osi. To już nie jest tylko kwestia lepszego chatbota, ale tego, kto kontroluje dystrybucję zadań i danych.",
+    "Druga oś to koszt i limitowanie. Gemini jest teraz rozliczane po wymaganiach obliczeniowych, nie po liczbie promptów, a Google wprost pokazuje użytkownikom limity i kredyty AI. W tym samym czasie Anthropic lokalizuje ceny Claude w Indiach, więc billing, waluta i payment rails stają się równie ważne jak sam model. To wyraźny sygnał, że rynek AI przechodzi z etapu demo do etapu utility-style monetization.",
+    "Trzecia oś to kontrola nad dostępem i odpowiedzialnością. Moonshot wypuszcza Kimi K3 jako open-weight kontrapunkt dla frontier labs z USA, Patreon i Cloudflare zaczynają aktywnie blokować scraping przez AI boty, a The Verge pokazuje, że AI staje się osobnym rynkiem dla policji i public safety. Wspólny mianownik dnia to nie capability sama w sobie, tylko pytanie: kto może używać, kto płaci i kto ponosi koszt uboczny.",
+    "Community signal pozostaje spójny z tą zmianą. Hacker News promuje Kimi K3, GPT-5.6 proof, kontrolę nad Claude Code i pytania o to, co robią agenci w tle, a Product Hunt wynosi na wierzch AI coworkerów, co-editing i narzędzia do bardziej kontrolowalnych workflowów. To nadal nie jest rynek czystego modelowego hype’u."
+  ],
+  "summaryBullets": [
+    "Regulacje: Google zamienia Search w warstwę akcji",
+    "Infrastruktura: Gemini liczy użycie po compute",
+    "AI: Kimi K3 podbija open-weight front"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-19-0-google-zamienia-search-w-warstwe-akcji-05878d886f",
+      "section": "Regulacje",
+      "title": "Google zamienia Search w warstwę akcji",
+      "standfirst": "Google uruchomił connected apps w AI Mode, dzięki czemu Search może pracować z Instacart, Canva i YouTube Music bez opuszczania wyników. Tego samego dnia Komisja Europejska wydała wiążące specyfikacje pod DMA, które mają otworzyć Android i dane Search dla konkurencyjnych AI usług.",
+      "whatHappened": "Search zaczyna działać jak warstwa wykonywania zadań, a nie tylko odpowiedzi.",
+      "whyItMatters": "To łączy dystrybucję, integracje i regulację w jednym punkcie, który może zdefiniować rynek asystentów AI.",
+      "deeperAnalysis": [
+        "Google coraz mniej traktuje Search jako miejsce, w którym kończy się użytkowa praca. W connected apps chodzi o to, by wynik wyszukiwania mógł od razu przejść w akcję: dodać produkty do koszyka, wygenerować projekt, zapisać playlistę. To naturalny ruch dla firmy, która chce, by AI była kolejną warstwą interakcji z jej własnym ekosystemem.",
+        "Równolegle Komisja Europejska robi coś odwrotnego: ogranicza przewagę wynikającą z zamkniętego dostępu. Binding specs pod DMA mówią wprost o równym dostępie do funkcji Androida i o tym, że AI chatbots mogą dostać anonimizowane dane Search. To jest praktyczna próba zrobienia z interoperacyjności reguły, a nie wyjątku.",
+        "W efekcie Google musi jednocześnie budować mocniejszy, bardziej użyteczny własny interfejs i tłumaczyć, dlaczego ten sam interfejs nie powinien być ekskluzywny. To dobry sygnał, że wyścig o AI assistants coraz bardziej przesuwa się z modeli na dystrybucję i kontrolę przepływu pracy."
+      ],
+      "contextPoints": [
+        "Co się stało: Google dodał connected apps do AI Mode, a UE wydała binding specs dla Android/Search.",
+        "Dlaczego ważne: Search staje się action surface, a interoperacyjność staje się wymogiem rynku.",
+        "Na co patrzeć dalej: czy Google rozszerzy listę partnerów i jak szybko wdroży DMA w praktyce."
+      ],
+      "sources": [
+        {
+          "title": "Google blog",
+          "url": "https://blog.google/products-and-platforms/products/search/connected-apps/"
+        },
+        {
+          "title": "European Commission",
+          "url": "https://digital-markets-act.ec.europa.eu/commission-provides-guidance-google-ai-interoperability-android-and-sharing-google-search-data-under-2026-07-16_en"
+        },
+        {
+          "title": "Google blog Europe",
+          "url": "https://blog.google/company-news/inside-google/around-the-globe/google-europe/the-dma-should-not-undercut-security-privacy-for-europeans/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "AI Mode",
+        "Search",
+        "DMA",
+        "Android",
+        "connected apps"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-19-1-gemini-liczy-uzycie-po-compute-6962560dab",
+      "section": "Infrastruktura",
+      "title": "Gemini liczy użycie po compute",
+      "standfirst": "WIRED opisuje, że Google przestał liczyć Gemini po liczbie promptów i zaczął po wymaganiach obliczeniowych. Google One Help potwierdza osobne limity dla produktów oraz możliwość kupowania AI credits do Flow i Antigravity.",
+      "whatHappened": "Google zmienił billing i limity Gemini na model zależny od kosztu compute.",
+      "whyItMatters": "To jeden z najbardziej czytelnych sygnałów, że consumer AI staje się usługą utility-style z meteringiem.",
+      "deeperAnalysis": [
+        "Zmiana jest ważna nie dlatego, że użytkownicy dostaną mniej promptów. Ważna jest dlatego, że Google formalizuje nowy język ekonomiczny: nie liczy się tylko liczba zapytań, ale ich rzeczywisty koszt obliczeniowy. To samo dotyczy długości promptu, wybranego modelu i złożoności zadania.",
+        "Z perspektywy produktu to ruch w stronę większej elastyczności, ale też większej nieprzejrzystości. Użytkownik traci prostą regułę typu „X obrazów dziennie” i zamiast tego widzi limity, reset co pięć godzin i osobne kredyty. Z perspektywy biznesu to lepszy sposób na sterowanie kosztami oraz upsell do wyższych planów.",
+        "W praktyce to kolejny krok do tego, by AI przestała wyglądać jak czat i zaczęła wyglądać jak infrastruktura. Jeżeli billing staje się dynamiczny, to produkt, finanse i retention zaczynają się składać w jeden system."
+      ],
+      "contextPoints": [
+        "Co się stało: Gemini jest teraz metered po compute, a Google udostępnia usage limits i AI credits.",
+        "Dlaczego ważne: billing AI staje się bardziej podobny do utility niż do zwykłego subskrypcyjnego SaaS.",
+        "Na co patrzeć dalej: czy limity zmienią się ponownie i jak szybko Google uprości wyjaśnianie kredytów użytkownikom."
+      ],
+      "sources": [
+        {
+          "title": "WIRED",
+          "url": "https://www.wired.com/story/how-googles-new-gemini-rates-work-and-how-to-track-your-usage/"
+        },
+        {
+          "title": "Google One Help",
+          "url": "https://support.google.com/googleone/answer/16476811?co=GENIE.Platform%3DAndroid&hl=en"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Gemini",
+        "pricing",
+        "usage limits",
+        "credits",
+        "Flow"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-19-2-kimi-k3-podbija-open-weight-front-3c952dfeb6",
+      "section": "AI",
+      "title": "Kimi K3 podbija open-weight front",
+      "standfirst": "Moonshot zaprezentował Kimi K3 jako model 2.8T z 1-milionowym kontekstem i deklaracją, że to pierwszy open 3T-class model. Pełne weights mają pojawić się 27 lipca, a Hacker News już wywindował temat wysoko.",
+      "whatHappened": "Kimi K3 stał się kolejnym dużym open-weight kontrapunktem dla amerykańskich frontier labs.",
+      "whyItMatters": "To wzmacnia presję na ceny, dostępność i benchmarki po obu stronach rynku, nie tylko na samą jakość modelu.",
+      "deeperAnalysis": [
+        "Moonshot nie próbuje sprzedawać Kimi K3 jako małej ciekawostki. Firma mówi o największym otwartym modelu w klasie 3T, o architekturze opartej na MoE i o 1-milionowym oknie kontekstowym. Nawet jeśli część claims wymaga niezależnej weryfikacji, sam rozmiar i pozycjonowanie modelu są już rynkowym komunikatem.",
+        "To też ważny kontrapunkt wobec closed-model narrative. W momencie, gdy część rynku skupia się na droższych subskrypcjach i twardszym meteringu, chiński open-weight release przypomina, że konkurencja może iść także w stronę większej dostępności i niższego kosztu wejścia. HN zareagował na to bardzo szybko, co tylko potwierdza znaczenie launchu.",
+        "Największy znak zapytania dotyczy nie samego ogłoszenia, tylko dalszego życia modelu: czy weights rzeczywiście pojawią się 27 lipca, jak wypadną niezależne benchmarki i czy developerzy potraktują Kimi K3 jako realną alternatywę, a nie tylko benchmarkowy szok."
+      ],
+      "contextPoints": [
+        "Co się stało: Moonshot uruchomił Kimi K3 i zapowiedział pełne weights na 27 lipca.",
+        "Dlaczego ważne: open-weight konkurencja z Chin nadal przesuwa granice skali i ceny.",
+        "Na co patrzeć dalej: niezależne benchmarki, ceny API i adopcja przez developerów."
+      ],
+      "sources": [
+        {
+          "title": "Moonshot blog",
+          "url": "https://www.kimi.com/blog/kimi-k3"
+        },
+        {
+          "title": "Hacker News front page",
+          "url": "https://news.ycombinator.com/front"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Kimi",
+        "Moonshot",
+        "open weights",
+        "China",
+        "benchmarks",
+        "reasoning"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-19-3-patreon-i-cloudflare-zamykaja-ai-scrapowanie-fe60ea1900",
+      "section": "Regulacje",
+      "title": "Patreon i Cloudflare zamykają AI scrapowanie",
+      "standfirst": "Patreon przestaje tylko prosić AI boty, żeby nie scrapowały treści, i zaczyna je aktywnie blokować wraz z Cloudflare. To kolejny krok od otwartego crawlowania do permissioned access i płatnych relacji z twórcami.",
+      "whatHappened": "Creator platformy zaczynają kontrolować, kto może pobierać ich dane do trainingu.",
+      "whyItMatters": "To może przestawić całe oczekiwania wobec dostępu do treści w sieci i przyspieszyć paywalling danych treningowych.",
+      "deeperAnalysis": [
+        "Patreon nie działa tutaj samotnie. Zmiana wpisuje się w szerszy ruch, w którym publisherzy, platformy i infrastruktura sieciowa zaczynają odróżniać zwykłe crawlowanie od użycia do trenowania modeli. To ważne, bo dotyczy nie tylko praw autorskich, ale także komercyjnego modelu dostępu do danych.",
+        "Cloudflare od miesięcy buduje narzędzia i polityki, które mają rozróżniać search od training i dawać witrynom większą kontrolę nad tym, kto pobiera ich treści. Patreon dokłada do tego perspektywę twórców, którzy chcą decydować, czy ich praca zasila modele, czy tylko relację z własną publicznością.",
+        "Jeśli ten kierunek się utrzyma, AI data access będzie coraz mniej wyglądał jak nieskończony internet, a coraz bardziej jak rynek licencji, gate’ów i egzekwowanych reguł. To może mieć większy wpływ na dostępność danych niż pojedyncze pozwy."
+      ],
+      "contextPoints": [
+        "Co się stało: Patreon zaczął blokować AI bots przy wsparciu Cloudflare.",
+        "Dlaczego ważne: web crawl control przesuwa się z prośby do egzekwowania i monetyzacji.",
+        "Na co patrzeć dalej: czy inne creator platformy zaczną robić to samo i czy pojawią się nowe modele płatnego dostępu."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/17/patreon-stops-asking-ai-bots-not-to-scrape-and-starts-blocking-them/"
+        },
+        {
+          "title": "TechCrunch: Cloudflare policy context",
+          "url": "https://techcrunch.com/2026/07/01/cloudflares-new-policy-pushes-ai-companies-to-pay-for-publishers-content/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Patreon",
+        "Cloudflare",
+        "scraping",
+        "crawlers",
+        "creators",
+        "rights"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-19-4-ai-staje-sie-os-em-policji-3de8208599",
+      "section": "Regulacje",
+      "title": "AI staje się OS-em policji",
+      "standfirst": "The Verge opisuje rynek AI dla policji, gdzie sprzedaje się facial-recognition cameras, ALPR, body cams, chatbots do 911, gunshot detection, drony i AI report-writing tools. To nie jest już nisza, tylko rosnąca warstwa public-safety stacku.",
+      "whatHappened": "Police-tech vendorzy opakowują AI jako nowy operating system dla bezpieczeństwa publicznego.",
+      "whyItMatters": "To przenosi debatę o AI z wygody użytkownika do due process, nadzoru i państwowej infrastruktury decyzji.",
+      "deeperAnalysis": [
+        "Najbardziej znaczący element tego rynku to nie sama lista produktów, tylko sposób, w jaki sprzedaje się je instytucjom. Logika brzmi: odciążamy ludzi od papierologii i łączymy dane w jednym centrum decyzyjnym. W praktyce oznacza to jednak więcej automatyzacji przy momentach, które mają bezpośrednie konsekwencje prawne.",
+        "The Verge pokazuje też, że stary eksperyment z predictive policing nie rozwiązał problemów z biasem i przejrzystością. Teraz rynek próbuje wrócić do podobnej obietnicy, tylko z lepszym UX, większą liczbą źródeł danych i mocniejszym marketingiem „AI-powered decision assist”.",
+        "To ważny sygnał dla podcastu, bo dotyka public safety, surveillance economics i pytania o to, czy nowy stack nie wzmacnia tych samych błędów pod inną nazwą. Jeśli AI ma stać się standardem w policji, to właśnie tu najbardziej widać koszt społeczny."
+      ],
+      "contextPoints": [
+        "Co się stało: AI report-writing, RTCCs i surveillance tools są już częścią sprzedaży police-tech.",
+        "Dlaczego ważne: AI wchodzi do public safety jako infrastruktura decyzji, nie tylko narzędzie produktywności.",
+        "Na co patrzeć dalej: procurement, due-process backlash i czy vendorzy będą musieli pokazać mocniejsze gwarancje."
+      ],
+      "sources": [
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/965066/ai-police-cops"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "police",
+        "surveillance",
+        "AI",
+        "Axon",
+        "Motorola",
+        "RTCC"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-19-5-claude-lokalizuje-ceny-w-indiach-ea16be8ab5",
+      "section": "Produkty",
+      "title": "Claude lokalizuje ceny w Indiach",
+      "standfirst": "Anthropic lokalizuje ceny Claude w Indiach, pokazując Pro, Max i Team w rupiach i doliczając lokalne podatki. TechCrunch pisze, że India to już drugi rynek firmy po USA, ale UPI nadal nie jest dostępne.",
+      "whatHappened": "Anthropic regionalizuje billing i ceny dla dużego rynku wzrostowego.",
+      "whyItMatters": "AI competition wchodzi na poziom lokalnej waluty, podatków i payment rails, nie tylko jakości modelu.",
+      "deeperAnalysis": [
+        "W praktyce to sygnał, że regional pricing staje się równie strategiczny jak sama premiera modelu. Jeśli produkt ma działać w Indiach, musi mieć nie tylko odpowiedni model, ale też sensowny billing, lokalne podatki i wygodne metody płatności. To dokładnie ten typ szczegółu, który decyduje o realnej adopcji.",
+        "Anthropic wycenia Claude Pro, Max i Team inaczej niż w USA, a to pokazuje, że globalny AI market nie jest już jednym cennikiem z Doliny Krzemowej. Lokalna cena i lokalne oczekiwania wobec płatności zaczynają wyznaczać, kto może skalować się szybciej i w jakim segmencie.",
+        "Jeśli firma domknie to UPI i dopracuje billing mobile, India może stać się jedną z najlepszych gier testowych dla tego, jak modele AI monetyzują się poza Stanami. Dla podcastu to dobry wątek o tym, że AI coraz bardziej przypomina globalny produkt konsumencki, a nie tylko amerykański lab."
+      ],
+      "contextPoints": [
+        "Co się stało: Claude dostał rupee pricing w Indiach.",
+        "Dlaczego ważne: regionalizacja cen staje się częścią walki o adopcję i przychód.",
+        "Na co patrzeć dalej: UPI, konwersję na płatne plany i porównanie z OpenAI oraz Google."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Anthropic",
+        "Claude",
+        "India",
+        "pricing",
+        "rupee",
+        "subscriptions"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Google zamienia Search w warstwę akcji, a UE wymusza interoperacyjność",
+      "rationale": "Search staje się miejscem wykonania zadań, a regulacja wycina przewagę polegającą na zamkniętym dostępie do Androida i danych.",
+      "sourcesLabel": "Google blog; European Commission; Google blog Europe"
+    },
+    {
+      "priority": "High",
+      "title": "Gemini liczy użycie po compute",
+      "rationale": "Google wprost pokazuje, że AI staje się usługą z meteringiem, limitami i kredytami zamiast nieograniczonego chatbota.",
+      "sourcesLabel": "WIRED; Google One Help"
+    },
+    {
+      "priority": "High",
+      "title": "Kimi K3 podbija open-weight front",
+      "rationale": "Moonshot pokazuje, że chińskie open-weight modele nadal naciskają na cenę, dostępność i benchmarki frontier labs.",
+      "sourcesLabel": "Moonshot; Hacker News"
+    },
+    {
+      "priority": "High",
+      "title": "Patreon i Cloudflare zamykają AI scrapowanie",
+      "rationale": "Creator platforms zaczynają aktywnie blokować bots, co może zmienić zasady dostępu do danych treningowych.",
+      "sourcesLabel": "TechCrunch; Cloudflare policy context"
+    },
+    {
+      "priority": "Medium",
+      "title": "AI staje się OS-em policji",
+      "rationale": "Public safety stack zaczyna obejmować report-writing, RTCCs i rozpoznawanie, co podnosi stawkę dla due process i prywatności.",
+      "sourcesLabel": "The Verge"
+    },
+    {
+      "priority": "Medium",
+      "title": "Anthropic lokalizuje Claude w Indiach",
+      "rationale": "Lokalna waluta, podatki i payment rails stają się częścią walki o wzrost na rynkach poza USA.",
+      "sourcesLabel": "TechCrunch"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Google: Connect more of your apps to Search",
+      "url": "https://blog.google/products-and-platforms/products/search/connected-apps/"
+    },
+    {
+      "title": "European Commission: Commission provides guidance to Google for AI interoperability on Android and sharing of Google Search data under the Digital Markets Act",
+      "url": "https://digital-markets-act.ec.europa.eu/commission-provides-guidance-google-ai-interoperability-android-and-sharing-google-search-data-under-2026-07-16_en"
+    },
+    {
+      "title": "Google: The DMA should not undercut security and privacy for Europeans",
+      "url": "https://blog.google/company-news/inside-google/around-the-globe/google-europe/the-dma-should-not-undercut-security-privacy-for-europeans/"
+    },
+    {
+      "title": "WIRED: How Google’s New Gemini Rates Work and How to Track Your Usage",
+      "url": "https://www.wired.com/story/how-googles-new-gemini-rates-work-and-how-to-track-your-usage/"
+    },
+    {
+      "title": "Google One Help: Get a Google AI Pro membership",
+      "url": "https://support.google.com/googleone/answer/16476811?co=GENIE.Platform%3DAndroid&hl=en"
+    },
+    {
+      "title": "Moonshot: Kimi K3 Tech Blog: Open Frontier Intelligence",
+      "url": "https://www.kimi.com/blog/kimi-k3"
+    },
+    {
+      "title": "TechCrunch: Anthropic starts localizing Claude pricing for India, its biggest market after the US",
+      "url": "https://techcrunch.com/2026/07/13/anthropic-starts-localizing-claude-pricing-for-india-its-biggest-market-after-the-us/"
+    },
+    {
+      "title": "TechCrunch: Patreon stops asking AI bots not to scrape — and starts blocking them",
+      "url": "https://techcrunch.com/2026/07/17/patreon-stops-asking-ai-bots-not-to-scrape-and-starts-blocking-them/"
+    },
+    {
+      "title": "The Verge: Computer cops: Inside the big business of selling AI to the police",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/965066/ai-police-cops"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/front"
+    },
+    {
+      "title": "Product Hunt homepage",
+      "url": "https://www.producthunt.com/"
+    }
+  ]
+}
