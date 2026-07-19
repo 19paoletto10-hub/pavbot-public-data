@@ -413,6 +413,14 @@ uchodźców z Ukrainy, odpowiedź BBN na zapowiedź otwarcia archiwów wołyńsk
 oraz prezydencka zapowiedź ponowienia wniosku o referendum klimatyczne. Węgry
 dołączają jako średni priorytet regionalny po podpisie prezydenta Sulyoka pod
 poprawką kończącą jego mandat.
+Po wieczornym runie 19 lipca obraz stał się jeszcze mocniejszy: AP i CENTCOM
+potwierdzają ósmą kolejną noc nalotów na Iran, a wieczorne depesze AP dodają
+aktywację obrony w Jordanii i ostrzeżenia dla państw Zatoki. Kijów też przeszedł
+z porannego minimum do późniejszego bilansu co najmniej sześciu zabitych, a
+adres prezydenta Ukrainy jeszcze wyraźniej stawia w centrum lukę Patriot i
+potrzebę europejskiej zdolności antybalistycznej. Po stronie polskiej nic nie
+przebiło tych dwóch bloków poza utrzymanym alertem RCB o burzach i silnym
+wietrze.
 
 ## Recent Reports
 
