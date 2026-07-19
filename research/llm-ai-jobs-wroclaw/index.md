@@ -1,6 +1,6 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-07-18 15:44 CEST
+Last updated: 2026-07-19 17:40 CEST
 
 ## Current Understanding
 
@@ -12,8 +12,12 @@ Engineer` podbił publiczny band i doprecyzował `Wrocław, Tęczowa 7` oraz
 `Hybrid +1` w mirrze, mimo że oficjalna strona nadal pokazuje szersze
 `remote Poland`.
 
+Runda z `2026-07-19 17:40 CEST` dołożyła nowy board-first klaster wokół
+`Antal`, `ITDS` i `Cloudfide`: `Inżynier Machine learning/MLOPS middle/senior`,
+`Senior/Principal AI Systems Engineer` oraz `Data Engineer with AI Focus`.
+
 Mix jeszcze mocniej przesunął się w stronę `OpenAI`, `MCP`, `AI architecture`,
-`RAG` i produkcyjnego delivery, a starsze sygnały platformowe z `Sii`,
+`RAG`, `MLOps` i produkcyjnego delivery, a starsze sygnały platformowe z `Sii`,
 `Addepto`, `Holisticon Connect`, `EY`, `EPAM`, `Rossmann`, `ALTIMI`,
 `Accenture` i `Cloudfide` nadal warto obserwować.
 
@@ -179,6 +183,9 @@ only when something meaningful changes.
 | holisticon-connect-machine-learning-infrastructure-engineer-wroclaw | Holisticon Connect | Machine Learning Infrastructure Engineer | Wrocław / remote | 2026-07-07-1732 | 2026-07-07-1732 | Open | Initial capture: `28 560 - 31 920 PLN netto / miesiąc B2B` or `23 000 - 25 000 PLN brutto / miesiąc UoP`; `Fabryczna 6, Wrocław`; production ML infrastructure with PyTorch, GCP, BigQuery, Snowflake and Python. | [Just Join IT](https://justjoin.it/job-offer/holisticon-connect-machine-learning-infrastructure-engineer-wroclaw-ai) |
 | dataart-ai-developer-wroclaw | DataArt | AI Developer | Wrocław / remote | 2026-07-07-1732 | 2026-07-07-1732 | Open | Initial capture: `23 000 - 26 000 PLN netto / miesiąc B2B` or `19 000 - 21 000 PLN brutto / miesiąc UoP`; `plac Grunwaldzki 23, Wrocław`; explicit LLM/RAG production development. | [Just Join IT](https://justjoin.it/job-offer/dataart-ai-developer-wroclaw-ai) |
 | callstack-senior-ai-system-engineer-wroclaw | Callstack | Senior AI System Engineer | Wrocław / remote | 2026-07-07-1732 | 2026-07-07-1732 | Open | Initial capture: fully remote with Wrocław office; LLM & multi-agent architectures, RAG pipelines, AI governance, Python and TypeScript; salary not public. | [Just Join IT](https://justjoin.it/job-offer/callstack-senior-ai-system-engineer-wroclaw-ai-d121a189) |
+| itds-senior-principal-ai-systems-engineer-wroclaw-office | ITDS Polska Sp. z o.o. | Senior/Principal AI Systems Engineer | Wrocław / office | 2026-07-19-1740 | 2026-07-19-1740 | Open | Initial capture: current Just Join IT board card; `25 000 - 65 000 PLN/month`; production AI systems with `Python`, `FastAPI`, `TypeScript`, `Next.js`, `React`, `PostgreSQL`, `LangGraph`, `LangChain`, `LlamaIndex` and `AWS/GCP/Azure`. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
+| antal-inzynier-machine-learning-mlops-middle-senior-wroclaw-remote | Antal Sp. z o.o. | Inżynier Machine learning/MLOPS middle/senior | Wrocław / remote | 2026-07-19-1740 | 2026-07-19-1740 | Open | Initial capture: current Just Join IT board card; `100 - 170 PLN/h`; `Python`, `PyTorch`, `LLM`, `transformers`, `NLP`, `Apache Airflow`, `Google Cloud Dataflow`, `MLOps` and `GenAI`. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
+| cloudfide-data-engineer-with-ai-focus-wroclaw-remote | Cloudfide | Data Engineer with AI Focus | Wrocław +4 / remote | 2026-07-19-1740 | 2026-07-19-1740 | Open | Initial capture: new public board card; junior role with `Azure`, `Databricks`, `LangGraph`, `LangChain`, `GenAI` and `Python`; useful as an adjacent cluster signal even though seniority is lower than the other new leads. | [Just Join IT: Data Engineer with AI Focus](https://justjoin.it/job-offer/cloudfide-spolka-z-ograniczona-odpowiedzialnoscia-data-engineer-with-ai-focus-wroclaw-data) |
 
 ## Open Questions
 
@@ -296,6 +303,7 @@ only when something meaningful changes.
 - 2026-07-13: New board-heavy cluster centered on emagine, Link Group, Rossmann, cloudatus, KRUK, Callstack, Sii and Spyrosoft pushed the mix toward AI architecture, LLMOps, platform engineering and agentic systems; Sii also confirmed the tooling side with an official AI Developer Experience Engineer page.
 - 2026-07-10: nowy sweep dołożył `ITDS Senior Java Developer – AI and Financial Technology`, `Link Group Principal AI Engineer`, `Netguru AI Engineer` oraz świeży board burst z `Tenarai`, `Upvanta` i `Entrada AI`; `CKSource / Tiugo` pokazał dalszy drift tytułu i waluty, a `Holisticon` science lead przeszedł w `Offer expired`.
 - 2026-07-11: poranny sweep poszerzył board-first klaster o `Capgemini Senior Agentic AI Developer`, `Link Group Principal Site Reliability Engineer (AI Platform Architecture)`, `Tenarai AI Platform Engineer (GCP)`, `Upvanta AI Agent Developer` / `NVIDIA Edge AI`, `Vazco AI Technical Lead`, `Grid Dynamics Staff ML Engineer`, `Holisticon Connect ML Engineer`, `Sii AI Engineer – GenAI & Cloud` oraz dwa nowe boardowe sygnały EPAM.
+- 2026-07-19: current board sweep added a fresh Antal/ITDS/Cloudfide cluster around MLOps, AI systems and AI-focused data engineering, while the broader board kept rotating production-heavy roles.
 - 2026-06-27: wieczorna runda dodała `ITDS Production Support Engineer – AI & LLM`, oficjalny `Axabee Senior AI Engineer`, board-first `4soft AI Product Engineer`, direct-employer `ITEAMLY Applied AI Engineer` oraz nowy infra sygnał `IN4GE Cloud Platform & Infrastructure Engineer (GenAI / CX AI)`.
 - 2026-06-27: `ITDS` dodał aktywny wrocławski sygnał `Kubernetes & Cloud Infrastructure Engineer – AI Platform`, a wcześniejszy `Senior AI Technical Lead` wygasł; `IN4GE` wygląda teraz na powtarzalne źródło remote-Poland dla ról agentic / GenAI, a `ACAISOFT` rozszerzył się o jawne role `Site Reliability Engineer` i `Infra Software Engineer`.
 - 2026-07-07: poranna runda dołożyła nowy klaster wokół `ITDS Senior Product Security Engineer – AI & LLM`, `SQUAD Applied Scientist (LLM)`, `Holisticon Connect Machine Learning Infrastructure Engineer`, `DataArt AI Developer` i `Callstack Senior AI System Engineer`; shortlista przesunęła się mocniej w stronę AI security, applied science i AI systems / infra.

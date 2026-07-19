@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-07-19",
+  "runTime": "17:40",
+  "executiveSummary": "Dzisiejszy sweep dołożył nowy, sensowny klaster wokół Wrocławia i remote Poland: Antal wystawił Inżynier Machine learning/MLOPS middle/senior, a ITDS pokazał Senior/Principal AI Systems Engineer z mocnym stackiem produktowo-platformowym. Dodatkowo Cloudfide dorzucił świeży, niżej-senioralny Data Engineer with AI Focus, co potwierdza, że board nadal rotuje produkcyjne role wokół GenAI, MLOps i AI systems.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Inżynier Machine learning/MLOPS middle/senior",
+      "company": "Antal",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "100 - 170 PLN/h",
+      "seniority": "Senior",
+      "fitSummary": "Python, PyTorch, LLM, transformers, NLP, Apache Airflow, Google Cloud Dataflow, MLOps i GenAI",
+      "whyInteresting": "to mocny hands-on sygnał łączący ML ops, klasyczny modelowy stack i GenAI, bez schodzenia do czysto konsultingowej roli.",
+      "uncertainty": "tylko board-first, więc tytuł i widoczność mogą jeszcze drifować.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "LLM",
+        "GenAI",
+        "MLOps",
+        "Python"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior/Principal AI Systems Engineer",
+      "company": "ITDS",
+      "location": "Wrocław / office",
+      "workMode": "Wrocław",
+      "compensation": "25 000 - 65 000 PLN/month",
+      "seniority": "Principal",
+      "fitSummary": "Python, FastAPI, TypeScript, Next.js, React, PostgreSQL, LangGraph, LangChain, LlamaIndex oraz AWS/GCP/Azure",
+      "whyInteresting": "wygląda na pełny, produkcyjny AI systems role z szerokim stackiem aplikacyjnym i platformowym, a nie tylko wąskim eksperymentem LLM.",
+      "uncertainty": "na razie tylko board-first, więc trzeba sprawdzić, czy nie pojawi się bardziej kanoniczny employer detail page.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "LLM",
+        "Python",
+        "AWS",
+        "Azure",
+        "GCP"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Data Engineer with AI Focus",
+      "company": "Cloudfide",
+      "location": "Wrocław +4 / remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Azure, Databricks, LangGraph, LangChain, GenAI i Python",
+      "whyInteresting": "niższy seniority signal, ale wyraźnie wzmacnia wcześniej widoczny Cloudfide AI/GenAI cluster i pokazuje, że firma rotuje też role data/AI bridge.",
+      "uncertainty": "juniorowy profil może szybciej zmienić nazwę albo zakres.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/cloudfide-spolka-z-ograniczona-odpowiedzialnoscia-data-engineer-with-ai-focus-wroclaw-data"
+      ],
+      "tags": [
+        "GenAI",
+        "Python",
+        "Azure"
+      ]
+    }
+  ],
+  "changes": [
+    "Pojawił się nowy, bardziej systemowy klaster na boardzie wokół Antal i ITDS, z wyraźnym naciskiem na MLOps, AI systems i produkcyjne wdrożenia.",
+    "Cloudfide rozszerzył widoczny publiczny zestaw ofert o rolę Data Engineer with AI Focus, co wzmacnia jego wcześniejszy AI/GenAI sygnał.",
+    "Nie zanotowałem dziś nowego kanonicznego employer page dla tych ofert; current signal remains board-first."
+  ],
+  "risks": [
+    "Board mirrors nadal mogą różnić się od canonical employer pages w zakresie title, remote policy i salary.",
+    "Część nowych ofert jest tylko board-first, więc mogą szybko zniknąć albo zostać przemianowane.",
+    "Cloudfide i ITDS wyglądają na rozwijające się klastry, ale bez stabilnego first-party detail page dedup będzie wymagał ostrożności."
+  ],
+  "recommendedActions": [
+    "Low-risk action applied: update topic index with the new Antal, ITDS and Cloudfide leads.",
+    "Low-risk action applied: refresh topic backlog with the new board-cluster watch item.",
+    "Next run should re-check whether these three cards remain public and whether any canonical employer pages appear."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Job offers AI/ML, Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT: Data Engineer with AI Focus - Cloudfide",
+      "url": "https://justjoin.it/job-offer/cloudfide-spolka-z-ograniczona-odpowiedzialnoscia-data-engineer-with-ai-focus-wroclaw-data",
+      "status": "checked"
+    }
+  ]
+}
