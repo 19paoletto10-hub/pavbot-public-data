@@ -2,6 +2,10 @@
 
 ## Open
 
+- Watch whether the 19/07 storm damage turns into real outages or broader transport shutdowns after 21:00.
+- Watch whether the Poznań and Toruń cases produce written police or prosecutor follow-ups.
+- Watch whether Spain, Hungary, Canada or Tate get another material update before the night slot.
+
 - Watch whether the 19/07 storm alert turns into outages or transport disruption before the evening window closes.
 - Watch whether the Baltic interception gets a formal MON or NATO note.
 - Watch whether the Gibraltar deal changes border flows or queue times quickly.

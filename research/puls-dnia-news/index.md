@@ -1,5 +1,7 @@
 # Puls Dnia News Index
 
+The 2026-07-19 21:01 slot turns the feed from alert-only mode into confirmed storm damage and local incidents: PSP passes 1500 interventions, Meta's outage is already easing, A6 and A4 still bite traffic, Kaczyński tries to cool PiS, Poznań and Toruń add security heat, and the world mix shifts to Spain fires, Hungary's presidency reset, Canadian smoke politics and the Tate arrest.
+
 The 2026-07-19 18:00 slot moves the feed from morning storm handling into a
 more political and security-heavy mix: RCB/IMGW still hold the burze alert,
 but the new material is Wołyń exhumations, PiS's seven-day ultimatum,

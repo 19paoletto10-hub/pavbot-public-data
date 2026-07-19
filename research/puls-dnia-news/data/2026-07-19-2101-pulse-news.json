@@ -1,0 +1,556 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-19",
+  "runTime": "21:01",
+  "status": "Material update",
+  "headline": "Burzowy wieczór i gorące tematy świata",
+  "summary": "Wieczorny slot przesuwa feed z samego alertu pogodowego na realne skutki burz w Polsce, kilka lokalnych incydentów drogowych i bezpieczeństwa oraz nowy światowy miks wokół pożarów, Węgier, Kanady i zatrzymania Tate'ów.",
+  "checkedSources": [
+    {
+      "title": "TVN24 latest feed",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24 home page",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 storm impact",
+      "url": "https://tvn24.pl/tvnmeteo/polska/burze-w-polsce-interwencje-strazakow-zalania-w-czesci-kraju-st9149394?source=rss"
+    },
+    {
+      "title": "RCB alert",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb--burze-z-gradem-i-silny-wiatr-1907"
+    },
+    {
+      "title": "IMGW forecast",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-13-07-19-07-2026/"
+    },
+    {
+      "title": "TVN24 social media outage",
+      "url": "https://tvn24.pl/biznes/tech/awaria-facebooka-i-instagrama-w-niedziele-19-07-2026-twoje-konto-jest-tymczasowo-niedostepne-st9148838"
+    },
+    {
+      "title": "TVN24 A6 traffic jam",
+      "url": "https://tvn24.pl/szczecin/zachodniopomorskie-gigantyczny-korek-na-autostradzie-st9149348"
+    },
+    {
+      "title": "TVN24 A4 fire",
+      "url": "https://tvn24.pl/krakow/pozar-samochodu-na-autostradzie-a4-za-krakowem-malopolskie-st9149325?source=rss"
+    },
+    {
+      "title": "TVN24 PiS statement",
+      "url": "https://tvn24.pl/polska/bedzie-rozlam-w-pis-prezes-prezes-jaroslaw-kaczynski-apeluje-do-czlonkow-st9149467"
+    },
+    {
+      "title": "TVN24 Poznań assault",
+      "url": "https://tvn24.pl/poznan/poznan-wstawil-sie-za-nastolatkiem-z-ukrainy-zostal-pobity-sprawcow-szuka-policja-st9149423?source=rss"
+    },
+    {
+      "title": "TVN24 Toruń pursuit",
+      "url": "https://tvn24.pl/kujawsko-pomorskie/torun-po-poscigu-za-ciezarowka-ze-zracymi-substancjami-kierowca-uslyszal-zarzuty-st9149129?source=rss"
+    },
+    {
+      "title": "TVN24 housing prices",
+      "url": "https://tvn24.pl/biznes/nieruchomosci/ceny-mieszkan-z-rynku-wtornego-spadly-w-warszawie-stolica-wyroznia-sie-na-tle-innych-miast-st9149360"
+    },
+    {
+      "title": "TVN24 Spain fires",
+      "url": "https://tvn24.pl/tvnmeteo/swiat/hiszpania-pozary-wydano-nakaz-ewakuacji-st9149516?source=rss"
+    },
+    {
+      "title": "Reuters Connect Guadalajara wildfire",
+      "url": "https://www.reutersconnect.com/item/guadalajara-wildfire-forces-evacuation-of-another-town/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX09XRUZWQzcwMDE1OTc2NDQwMDE"
+    },
+    {
+      "title": "AP Hungary president story",
+      "url": "https://apnews.com/article/b720492c8e007468e6a97519f8809394"
+    },
+    {
+      "title": "AP Canada smoke and tariffs",
+      "url": "https://apnews.com/article/21b616e6fef1af907abef4aba6f5dfb4"
+    },
+    {
+      "title": "BBC Breaking Tate",
+      "url": "https://x.com/BBCBreaking/status/2078650259572429216"
+    },
+    {
+      "title": "CNN Tate",
+      "url": "https://x.com/CNN/status/2078633702888747181"
+    },
+    {
+      "title": "CPS Tate release",
+      "url": "https://www.cps.gov.uk/national-news/news/cps-decides-prosecute-tate-brothers-additional-sexual-offences"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-07-19-2101-alerty-burze-i-szkody",
+      "section": "Alerty",
+      "title": "Burze przynoszą już szkody i setki interwencji",
+      "lead": "Alert pogodowy zamienił się w realne szkody i ryzyko przerw w dostawie prądu.",
+      "whatHappened": "Burze przechodzące przez Polskę wywołały ponad 1500 interwencji PSP, zalane ulice, garaże i uszkodzone dachy. RCB i IMGW nadal utrzymują ostrzeżenia, więc wieczór pozostaje operacyjny, a nie tylko prognozowy.",
+      "keyFacts": [
+        "PSP podała ponad 1500 zgłoszeń do godz. 20.",
+        "Najwięcej interwencji było w Małopolsce, na Śląsku i w Lubelskiem.",
+        "RCB ostrzega nadal przed możliwymi przerwami w dostawie prądu."
+      ],
+      "reactions": [
+        "Strażacy i służby lokalne muszą dalej usuwać skutki przejścia frontu.",
+        "Kierowcy i mieszkańcy pozostają w strefie ryzyka nagłych szkód.",
+        "To wciąż najpilniejszy temat operacyjny dla kraju."
+      ],
+      "whyItMatters": "To już nie jest wyłącznie alert pogodowy, ale bezpośredni problem dla bezpieczeństwa, sieci energetycznej i transportu.",
+      "context": "Poranny i południowy slot pokazywały głównie ostrzeżenie. Wieczorem widać, że front rzeczywiście uderzył w teren.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się kolejne przerwy w dostawie prądu.",
+        "Sprawdzić, czy IMGW lub RCB rozszerzą albo złagodzą komunikat."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 storm impact",
+          "url": "https://tvn24.pl/tvnmeteo/polska/burze-w-polsce-interwencje-strazakow-zalania-w-czesci-kraju-st9149394?source=rss"
+        },
+        {
+          "title": "RCB alert",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb--burze-z-gradem-i-silny-wiatr-1907"
+        },
+        {
+          "title": "IMGW forecast",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-13-07-19-07-2026/"
+        }
+      ],
+      "tags": [
+        "burze",
+        "RCB",
+        "IMGW",
+        "PSP"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-2101-polska-awaria-meta-opanowana",
+      "section": "Polska",
+      "title": "Awaria Facebooka i Instagrama wygasa",
+      "lead": "Rano platformy Meta były chwilowo niedostępne, ale problem został opanowany.",
+      "whatHappened": "Użytkownicy zgłaszali problemy z Facebookiem i Instagramem od rana, a część osób widziała komunikat o tymczasowej niedostępności konta. Po godzinie 11 dostęp zaczął wracać, a po południu liczba zgłoszeń spadła prawie do zera.",
+      "keyFacts": [
+        "Pierwsze zgłoszenia pojawiły się po 9:00.",
+        "Po 11:00 część użytkowników odzyskała dostęp.",
+        "Po 12:00 liczba zgłoszeń spadła do minimum."
+      ],
+      "reactions": [
+        "Dla użytkowników oznaczało to krótki, ale szeroki problem z dostępem.",
+        "Dla rynku to kolejny przykład wrażliwości dużych platform społecznościowych.",
+        "Na razie nie widać w tym szerszego incydentu infrastrukturalnego."
+      ],
+      "whyItMatters": "To ważne, bo obejmuje dwa największe serwisy społecznościowe i wpływa na komunikację masową w ciągu dnia.",
+      "context": "W poprzednim slocie otwarty był jeszcze sam problem z dostępem. Teraz widać już jego wygaszanie.",
+      "watchNext": [
+        "Sprawdzić, czy Meta poda przyczynę awarii.",
+        "Sprawdzić, czy nie pojawi się druga fala zgłoszeń."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 social media outage",
+          "url": "https://tvn24.pl/biznes/tech/awaria-facebooka-i-instagrama-w-niedziele-19-07-2026-twoje-konto-jest-tymczasowo-niedostepne-st9148838"
+        }
+      ],
+      "tags": [
+        "tech",
+        "Meta",
+        "awaria"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-19-2101-polska-a6-korek",
+      "section": "Polska",
+      "title": "Weekendowy powrót nad morze korkuje A6",
+      "lead": "Korek na A6 zmalał, ale ruch wciąż jest spowolniony.",
+      "whatHappened": "GDDKiA informowała o ogromnym zatorze na A6 między Szczecinem a Rzęśnicą. Po południu sytuacja zaczęła się poprawiać, lecz weekendowy powrót znad morza nadal tworzy długie spowolnienia także na innych odcinkach regionu.",
+      "keyFacts": [
+        "Zator początkowo sięgał około 10 kilometrów.",
+        "Po godzinie 15 korek zmalał do około 5,5 kilometra.",
+        "Dodatkowe spowolnienia występowały też na S3."
+      ],
+      "reactions": [
+        "Kierowcy muszą liczyć się z wolniejszym powrotem z północnego wybrzeża.",
+        "Drogowcy opisują sytuację jako poprawiającą się, ale nadal trudną.",
+        "To typowy letni problem operacyjny, który może wrócić wieczorem."
+      ],
+      "whyItMatters": "Weekendowy ruch nad morze potrafi szybko przełożyć się na realny czas podróży i lokalne zatory w całym regionie.",
+      "context": "To nie jest jednorazowa kolizja, tylko mieszanka zdarzenia drogowego i dużego natężenia ruchu.",
+      "watchNext": [
+        "Sprawdzić, czy korek całkiem zniknie przed nocą.",
+        "Sprawdzić, czy A6 lub S3 nie wrócą do roli głównej trasy zatorowej."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 A6 traffic jam",
+          "url": "https://tvn24.pl/szczecin/zachodniopomorskie-gigantyczny-korek-na-autostradzie-st9149348"
+        },
+        {
+          "title": "GDDKiA road map",
+          "url": "https://drogi.gddkia.gov.pl/informacje-drogowe/lista-utrudnien"
+        }
+      ],
+      "tags": [
+        "drogi",
+        "A6",
+        "GDDKiA"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-19-2101-polska-a4-pozar",
+      "section": "Polska",
+      "title": "Pożar auta blokuje A4 za Krakowem",
+      "lead": "Jezdnia w stronę Rzeszowa została zablokowana po pożarze samochodu.",
+      "whatHappened": "Na autostradzie A4 za Krakowem auto stanęło w płomieniach w rejonie Brzezia. Akcja gaśnicza wymusiła całkowite zamknięcie jezdni w stronę Rzeszowa.",
+      "keyFacts": [
+        "Miejsce zdarzenia to odcinek koło Brzezia w powiecie wielickim.",
+        "Jezdnia w kierunku Rzeszowa była całkowicie zablokowana.",
+        "Zdarzenie zostało nagrane i szybko podchwycone przez TVN24."
+      ],
+      "reactions": [
+        "Kierowcy w regionie musieli szukać objazdów.",
+        "To kolejny sygnał, że letnie weekendy kumulują różne typy utrudnień.",
+        "Służby drogowe i straż muszą reagować równolegle do innych burzowych zgłoszeń."
+      ],
+      "whyItMatters": "Jedna blokada na autostradzie potrafi szybko rozlać się na całą sieć dojazdową wokół Krakowa.",
+      "context": "W tym samym dniu różne odcinki kraju dostały już równolegle pogodowe i drogowe obciążenie.",
+      "watchNext": [
+        "Sprawdzić, jak szybko droga zostanie odblokowana.",
+        "Sprawdzić, czy GDDKiA poda dalszy wpływ na ruch."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 A4 fire",
+          "url": "https://tvn24.pl/krakow/pozar-samochodu-na-autostradzie-a4-za-krakowem-malopolskie-st9149325?source=rss"
+        },
+        {
+          "title": "GDDKiA road map",
+          "url": "https://drogi.gddkia.gov.pl/"
+        }
+      ],
+      "tags": [
+        "drogi",
+        "A4",
+        "pożar"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-19-2101-polityka-pis-spor",
+      "section": "Polityka",
+      "title": "Kaczyński studzi spór w PiS",
+      "lead": "Prezes PiS publicznie prosi o oddech i zimną wodę.",
+      "whatHappened": "Jarosław Kaczyński potwierdził utrzymanie zakazu udziału w stowarzyszeniach, ale jednocześnie zaapelował do członków partii o uspokojenie emocji. To próba zatrzymania wewnętrznego sporu, który w mediach społecznościowych już się rozkręcił.",
+      "keyFacts": [
+        "Zakaz z poprzedniego dnia nadal obowiązuje.",
+        "Kaczyński mówi wprost, że partyjni oponenci zacierają ręce.",
+        "Spór został przeniesiony z poziomu uchwały na poziom publicznej dyscypliny."
+      ],
+      "reactions": [
+        "To sygnał, że kierownictwo partii chce ograniczyć szkody wizerunkowe.",
+        "Wypowiedź pokazuje, że konflikt nie wygasł, tylko został tymczasowo schłodzony.",
+        "Temat pozostaje istotny dla układu sił na prawej stronie sceny politycznej."
+      ],
+      "whyItMatters": "PiS nadal generuje własny wewnętrzny news cycle i może to wpływać na kolejne ruchy personalne.",
+      "context": "Poranny i popołudniowy sloty pokazywały już sam konflikt. Wieczorem widać próbę jego przyhamowania, nie rozwiązania.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się kolejne publiczne reakcje z obozu PiS.",
+        "Sprawdzić, czy zakaz przełoży się na realne wycofania lub dymisje."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 PiS statement",
+          "url": "https://tvn24.pl/polska/bedzie-rozlam-w-pis-prezes-prezes-jaroslaw-kaczynski-apeluje-do-czlonkow-st9149467"
+        },
+        {
+          "title": "TVN24 PiS ultimatum",
+          "url": "https://tvn24.pl/polska/ultimatum-dla-czlonkow-pis-maja-tydzien-na-wycofanie-sie-z-dzialalnosci-w-stowarzyszeniach-st9144255"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "polityka",
+        "partie"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-2101-bezpieczenstwo-poznan-ukrainski-nastolatek",
+      "section": "Bezpieczeństwo",
+      "title": "Poznański atak po obronie nastolatka z Ukrainy",
+      "lead": "Policja szuka napastników po pobiciu 60-latka w tramwaju.",
+      "whatHappened": "Według relacji TVN24 60-latek stanął w obronie nastolatka z Ukrainy, który miał być zaczepiany. Został kilkukrotnie uderzony w twarz i ma problemy z pamięcią, a policja prowadzi poszukiwania sprawców.",
+      "keyFacts": [
+        "Zdarzenie miało miejsce w Poznaniu i zaczęło się w tramwaju.",
+        "Ofiara to 60-letni mężczyzna, który zareagował na zaczepki wobec nastolatka.",
+        "Policja publikuje sprawę jako aktywne poszukiwanie sprawców."
+      ],
+      "reactions": [
+        "To nie tylko bójka, ale też sygnał napięć wokół przemocy i obrony słabszych.",
+        "Sprawa szybko wyszła poza lokalny incydent dzięki relacji świadka i mediów.",
+        "Może wymagać dalszych komunikatów policyjnych, jeśli dojdzie do zatrzymań."
+      ],
+      "whyItMatters": "Wątek łączy przemoc uliczną z szerszym społeczno-etnicznym napięciem i dlatego jest bardziej niż tylko lokalnym incydentem.",
+      "context": "To jeden z tych krajowych newsów, które szybko przechodzą z poziomu zdarzenia w poziom szerszej debaty o bezpieczeństwie.",
+      "watchNext": [
+        "Sprawdzić, czy policja poda zatrzymania lub identyfikację sprawców.",
+        "Sprawdzić, czy pojawi się nagranie albo dodatkowy opis przebiegu zdarzenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Poznań assault",
+          "url": "https://tvn24.pl/poznan/poznan-wstawil-sie-za-nastolatkiem-z-ukrainy-zostal-pobity-sprawcow-szuka-policja-st9149423?source=rss"
+        }
+      ],
+      "tags": [
+        "bezpieczeństwo",
+        "Poznań",
+        "Ukraina"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-2101-bezpieczenstwo-torun-ciezarowka",
+      "section": "Bezpieczeństwo",
+      "title": "Ciężarówka ze żrącymi substancjami kończy w areszcie",
+      "lead": "Kierowca pościgu usłyszał zarzuty i trafił do aresztu.",
+      "whatHappened": "24-latek uciekający ciężarówką niedaleko Torunia staranował dwa radiowozy, a potem porzucił pojazd. Prokuratura przedstawiła mu zarzuty, a sąd zgodził się na trzymiesięczny areszt.",
+      "keyFacts": [
+        "W pojeździe były zabezpieczone zbiorniki z substancją chemiczną.",
+        "Zarzuty obejmują niezatrzymanie się do kontroli i czynną napaść na funkcjonariuszy.",
+        "Prokuratura dołożyła później kolejny zarzut związany z 4CMC."
+      ],
+      "reactions": [
+        "Policja i prokuratura traktują sprawę jako poważny incydent bezpieczeństwa.",
+        "Samochód i ładunek chemiczny zwiększały ryzyko dla funkcjonariuszy i otoczenia.",
+        "To materiał, który może jeszcze wrócić w kolejnych komunikatach śledczych."
+      ],
+      "whyItMatters": "To nie jest zwykły pościg drogowy, tylko potencjalnie groźny incydent z materiałem chemicznym i napaścią na policję.",
+      "context": "Wieczorny slot podbija krajową oś bezpieczeństwa, bo obok burz pojawiają się też sprawy kryminalne i transportowe.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się pełna kwalifikacja zarzutów i opinia biegłych.",
+        "Sprawdzić, czy policja ujawni więcej o zabezpieczonej substancji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Toruń pursuit",
+          "url": "https://tvn24.pl/kujawsko-pomorskie/torun-po-poscigu-za-ciezarowka-ze-zracymi-substancjami-kierowca-uslyszal-zarzuty-st9149129?source=rss"
+        }
+      ],
+      "tags": [
+        "bezpieczeństwo",
+        "Toruń",
+        "policja",
+        "chemia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-2101-gospodarka-warszawa-mieszkania",
+      "section": "Gospodarka",
+      "title": "Warszawa tanieje na rynku wtórnym",
+      "lead": "PIE widzi spadek cen mieszkań w stolicy i poprawę dostępności kredytu.",
+      "whatHappened": "Polski Instytut Ekonomiczny podał, że w pierwszym kwartale 2026 roku ceny mieszkań z drugiej ręki w Warszawie spadły o 1,7 proc. rok do roku. W sześciu największych miastach poza stolicą ceny lekko wzrosły, a jednocześnie poprawiła się dostępność kredytów.",
+      "keyFacts": [
+        "Warszawa była jedynym dużym miastem ze spadkiem cen na rynku wtórnym.",
+        "Średnia cena metra kwadratowego w stolicy to około 16,4 tys. zł.",
+        "Różnica cenowa między Warszawą a resztą największych miast nadal jest wyraźna, ale maleje."
+      ],
+      "reactions": [
+        "To sygnał, że rynek mieszkaniowy w stolicy zaczyna się luzować.",
+        "Poprawa zdolności kredytowej może wzmacniać popyt w kolejnych kwartałach.",
+        "Dla innych dużych miast to raczej stabilizacja niż szok cenowy."
+      ],
+      "whyItMatters": "To jedna z nielicznych świeżych informacji gospodarczych w tym slocie i dobra kontra do dominujących tematów bezpieczeństwa.",
+      "context": "W odróżnieniu od alertów i incydentów drogowych to dane bardziej strukturalne niż operacyjne.",
+      "watchNext": [
+        "Sprawdzić kolejne dane PIE i reakcje rynku na niższe ceny w Warszawie.",
+        "Sprawdzić, czy poprawa kredytu odbije się na sprzedaży w III kwartale."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 housing prices",
+          "url": "https://tvn24.pl/biznes/nieruchomosci/ceny-mieszkan-z-rynku-wtornego-spadly-w-warszawie-stolica-wyroznia-sie-na-tle-innych-miast-st9149360"
+        }
+      ],
+      "tags": [
+        "gospodarka",
+        "mieszkania",
+        "Warszawa",
+        "PIE"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-19-2101-swiat-hiszpania-pozary-ewakuacja",
+      "section": "Świat",
+      "title": "Hiszpania ewakuuje mieszkańców z powodu pożarów",
+      "lead": "Pożary w kilku regionach wymuszają ewakuacje i duże siły gaśnicze.",
+      "whatHappened": "W Kastylii-La Manchy strażacy walczą z pożarem, a w Aragonii dogaszają kolejny front ognia. W obu regionach pojawiły się ewakuacje, a akcja trwa przy wsparciu setek strażaków i śmigłowców.",
+      "keyFacts": [
+        "W Kastylii-La Manchy w akcji bierze udział ponad 200 strażaków.",
+        "W Aragonii ogień strawił około 15 tysięcy hektarów lasów.",
+        "Pożary są wzmacniane przez upał, wiatr i brak opadów."
+      ],
+      "reactions": [
+        "Hiszpańskie służby muszą równolegle gasić kilka ognisk pożaru.",
+        "Temat wpisuje się w szerszy europejski sezon pożarowy.",
+        "W mediach wraca też klimat jako czynnik wzmacniający skalę szkód."
+      ],
+      "whyItMatters": "To duży europejski alert pogodowo-środowiskowy z realnymi ewakuacjami i ryzykiem dalszego rozszerzania się pożarów.",
+      "context": "Ten temat wchodzi do feedu razem z polskimi burzami, więc wieczór ma wyraźnie pogodowy charakter także poza krajem.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się szerszy bilans ewakuacji i szkód.",
+        "Sprawdzić, czy służby nie rozszerzą strefy zagrożenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Spain fires",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/hiszpania-pozary-wydano-nakaz-ewakuacji-st9149516?source=rss"
+        },
+        {
+          "title": "Reuters Connect Guadalajara wildfire",
+          "url": "https://www.reutersconnect.com/item/guadalajara-wildfire-forces-evacuation-of-another-town/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX09XRUZWQzcwMDE1OTc2NDQwMDE"
+        }
+      ],
+      "tags": [
+        "świat",
+        "Hiszpania",
+        "pożary",
+        "ewakuacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-19-2101-swiat-wegry-prezydent-odchodzi",
+      "section": "Świat",
+      "title": "Węgry żegnają prezydenta Sulyoka",
+      "lead": "AP podaje, że podpisana ustawa kończy jego kadencję.",
+      "whatHappened": "Prezydent Węgier Tamás Sulyok podpisał ustawę, która kończy jego kadencję. To efekt politycznego starcia wokół zmian ustrojowych i kolejny sygnał, że Budapeszt przechodzi przez głęboki reset instytucjonalny.",
+      "keyFacts": [
+        "Sulyok ma odejść po wejściu w życie podpisanej ustawy.",
+        "Nowy układ sił węgierskiej polityki wyraźnie przyspiesza przebudowę instytucji.",
+        "Sprawa jest obserwowana jako element szerszego sporu o demokrację i rządy prawa."
+      ],
+      "reactions": [
+        "To istotna zmiana ustrojowa, nie tylko personalna.",
+        "Spór pokazuje, jak mocno węgierska polityka wciąż kręci się wokół dziedzictwa Orbána.",
+        "Może pojawić się więcej reakcji z Brukseli i regionalnych stolic."
+      ],
+      "whyItMatters": "Zmiana głowy państwa jest w tym przypadku częścią szerszego przewrotu politycznego, a nie zwykłą rotacją urzędu.",
+      "context": "TVN24 wrzuciło ten temat do wieczornego zestawu jako jeden z głównych światowych punktów dnia.",
+      "watchNext": [
+        "Sprawdzić, kto obejmie funkcję tymczasowo i kiedy ruszy wybór następcy.",
+        "Sprawdzić, czy pojawi się reakcja Komisji Europejskiej lub sądu konstytucyjnego."
+      ],
+      "sources": [
+        {
+          "title": "AP Hungary president story",
+          "url": "https://apnews.com/article/b720492c8e007468e6a97519f8809394"
+        },
+        {
+          "title": "TVN24 Sunday digest",
+          "url": "https://tvn24.pl/polska/piec-rzeczy-ktore-warto-wiedziec-w-niedziele-19-lipca-najwazniejsze-informacje-st9148698"
+        }
+      ],
+      "tags": [
+        "świat",
+        "Węgry",
+        "polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-19-2101-swiat-kanada-smoke-trump",
+      "section": "Świat",
+      "title": "Trump grozi Kanadzie cłami za dym z pożarów",
+      "lead": "Dym z kanadyjskich pożarów znów wchodzi do amerykańskiej polityki.",
+      "whatHappened": "Trump napisał, że Kanada powinna liczyć się z wyższymi cłami przez dym z pożarów lasów, który pogarsza jakość powietrza w USA. Sprawa łączy kryzys klimatyczny z konfliktem handlowym i szybko przeszła z poziomu środowiska na poziom polityki.",
+      "keyFacts": [
+        "Pożary w Kanadzie wpływają na jakość powietrza w części USA.",
+        "Trump używa dymu jako argumentu w sporze taryfowym.",
+        "Kanadyjskie i amerykańskie władze komentują sprawę w kategoriach wspólnej odpowiedzialności i kosztów."
+      ],
+      "reactions": [
+        "To eskaluje i tak już napięte relacje handlowe między USA i Kanadą.",
+        "Temat ma także wymiar zdrowotny, bo dotyczy jakości powietrza.",
+        "Może wywołać kolejne odpowiedzi z Ottawy i stanów przygranicznych."
+      ],
+      "whyItMatters": "To rzadki przypadek, gdy pożary lasów natychmiast przekładają się na handel i politykę między państwami.",
+      "context": "Ten wątek wszedł do wieczornego digestu TVN24 jako jedna z głównych światowych historii dnia.",
+      "watchNext": [
+        "Sprawdzić, czy Kanada odpowie oficjalnie na groźbę ceł.",
+        "Sprawdzić, czy dym wywoła nowe alerty jakości powietrza w USA."
+      ],
+      "sources": [
+        {
+          "title": "AP Canada smoke and tariffs",
+          "url": "https://apnews.com/article/21b616e6fef1af907abef4aba6f5dfb4"
+        },
+        {
+          "title": "TVN24 Sunday digest",
+          "url": "https://tvn24.pl/polska/piec-rzeczy-ktore-warto-wiedziec-w-niedziele-19-lipca-najwazniejsze-informacje-st9148698"
+        }
+      ],
+      "tags": [
+        "świat",
+        "Kanada",
+        "USA",
+        "handel"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-19-2101-swiat-tate-arrest",
+      "section": "Świat",
+      "title": "Tate brothers arrested w Miami",
+      "lead": "BBC Breaking, CNN i CPS potwierdzają zatrzymanie Andrew i Tristana Tate'ów.",
+      "whatHappened": "Andrew i Tristan Tate zostali zatrzymani w Miami na wniosek o ekstradycję z Wielkiej Brytanii. BBC Breaking i CNN podały ten sam rdzeń informacji, a brytyjska CPS potwierdziła nowe zarzuty seksualne, które stoją za sprawą.",
+      "keyFacts": [
+        "Zatrzymanie miało miejsce w Miami.",
+        "Wątek dotyczy nowych zarzutów w Wielkiej Brytanii.",
+        "CPS potwierdza dodatkowe przestępstwa seksualne w akcie oskarżenia."
+      ],
+      "reactions": [
+        "To jeden z najgłośniejszych światowych newsów dnia w social mediach i telewizji informacyjnej.",
+        "Sprawa jest rozpięta między Wielką Brytanią, USA i wcześniejszymi postępowaniami w Rumunii.",
+        "Możliwe są kolejne kroki ekstradycyjne i procesowe."
+      ],
+      "whyItMatters": "To news o szerokim zasięgu, z dużą siłą medialną i potencjałem do dalszych formalnych kroków prawnych.",
+      "context": "BBC i CNN zostały użyte tu jako check odkrywczy, a potwierdzenie prawne daje CPS.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się oficjalny harmonogram ekstradycji.",
+        "Sprawdzić, czy amerykańskie służby ujawnią więcej szczegółów o podstawie zatrzymania."
+      ],
+      "sources": [
+        {
+          "title": "BBC Breaking Tate",
+          "url": "https://x.com/BBCBreaking/status/2078650259572429216"
+        },
+        {
+          "title": "CNN Tate",
+          "url": "https://x.com/CNN/status/2078633702888747181"
+        },
+        {
+          "title": "CPS Tate release",
+          "url": "https://www.cps.gov.uk/national-news/news/cps-decides-prosecute-tate-brothers-additional-sexual-offences"
+        }
+      ],
+      "tags": [
+        "świat",
+        "Tate",
+        "BBC",
+        "CNN",
+        "prawo"
+      ],
+      "priority": "high"
+    }
+  ]
+}
