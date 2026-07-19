@@ -4,6 +4,8 @@ Last updated: 2026-07-19
 
 ## Current Understanding
 
+Wieczorny refresh z 2026-07-19 przesuwa temat z billingu i action surfaces do publicznej infrastruktury AI oraz lokalnego oporu wobec jej kosztów. Current AI, Bhashini i AIKosh pokazują, że public-interest stack dla AI ma już konkretne urządzenia offline, granty i publiczne źródła danych, a protesty przeciw data centers i moratorium w Nowym Jorku dowodzą, że energia, woda i lokalna zgoda stały się częścią core story. Równolegle D.C. robotaxi rules oraz spór o Guardrails Alliance w OpenAI pokazują, że governance wchodzi w etap miejskich przepisów, PAC-ów i wewnętrznych pęknięć.
+
 Poranny refresh z 2026-07-19 przesuwa temat z modelowego wyścigu do action surfaces, billingu i access control. Google łączy Instacart, Canva i YouTube Music z AI Mode w Search, Komisja Europejska wymusza interoperacyjność AI na Androidzie i w dostępie do danych Search, Gemini przechodzi na compute-based metering, Kimi K3 daje open-weight kontrapunkt, a Patreon/Cloudflare oraz police-tech pokazują, że dostęp do danych i automatyzacja pracy publicznej stają się równie ważne jak sama capability. W tym samym ruchu Anthropic regionalizuje ceny Claude w Indiach, więc regional pricing i payment rails też wchodzą do głównego nurtu.
 
 Wieczorny refresh z 2026-07-18 przesuwa temat jeszcze niżej w stacku: Etched podbija wycenę inference chips do poziomu $20 mld, SpaceX rozmawia z Pentagonem o compute dla AI, DOJ luzuje dawny zakaz TikToka na urządzeniach służbowych po qualified divestiture, Vertu sprzedaje luksusowy telefon jako executive AI agent, a Agility otwiera Fremont hub obok Tesli. IBM dopełnia obraz, pokazując że przesunięcie wydatków enterprise w stronę AI infra już uderza w legacy software i marże. Wspólny mianownik to finansjalizacja compute, public-sector procurement i physical AI readiness.
@@ -208,6 +210,7 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-19: Wieczorny refresh dodał Current AI/Bhashini/AIKosh jako public-interest AI stack, nowojorskie moratorium i protesty przeciw data centers, spór Uber-Waymo o reguły robotaxi w D.C. oraz nacisk Guardrails Alliance w OpenAI.
 - 2026-07-19: Run przesunął temat na connected apps w Google Search, DMA interoperability, compute-based Gemini metering, Kimi K3, Claude India pricing oraz access control wokół crawlerów i public safety AI.
 - 2026-07-18: Wieczorny refresh dodał Etched $20B valuation, SpaceX/Pentagon compute, DOJ TikTok reversal, Vertu Alphafold, Agility Fremont hub i IBM AI capex squeeze; wspólny sygnał przesunął się w stronę compute commercialization i physical AI readiness.
 - 2026-07-18: Dzisiejszy refresh dodał Codex Micro, GPT-Live, Apple/OpenAI escalation, Databricks $188B, SF nudify enforcement, India memory crunch i Kaiser workplace surveillance; wspólny sygnał pozostał control-first.

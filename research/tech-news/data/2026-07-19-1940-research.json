@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-19",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny refresh przesuwa temat z billingu i action surfaces do publicznej infrastruktury AI. Current AI, Bhashini i AIKosh pokazują, że public-interest stack dla AI ma już konkretne urządzenia offline, hackathony i publiczne źródła danych, a nie tylko deklaracje o inkluzywności. To ważny kontrapunkt dla prywatnych, zamkniętych laboratoriów, bo zmienia pytanie z „kto ma najlepszy model” na „kto kontroluje dostęp, język i dane”.",
+    "Druga oś to backlash wobec infrastruktury. Nowy Jork wprowadza moratorium na nowe hyperscale data centers, a protesty Humans First rozciągają opór przeciw AI data centers na ponad 100 lokalizacji w USA. To sugeruje, że AI infra staje się politycznym problemem energii, wody i lokalnej zgody, nie tylko kolejnym segmentem capexu.",
+    "Trzecia oś to governance i walka o reguły rynku. Uber i Waymo spierają się o model dopuszczenia robotaxi w Waszyngtonie, a OpenAI znowu wraca do osi bezpieczeństwo kontra polityka przez donacje staffers do Guardrails Alliance i dalszy churn w safety leadership. Community signal pozostaje control-first: HN nadal premiuje dowody działania, narzędzia do obserwacji agentów i praktyczne security, a Product Hunt promuje bardziej narzędzia i infrastrukturę niż czysty chatbot hype."
+  ],
+  "summaryBullets": [
+    "AI: Current AI buduje publiczny stos AI",
+    "Regulacje: Nowy Jork i protesty uderzają w data center boom",
+    "Regulacje: Robotaxi rules stają się miejskim polem walki"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-19-1940-0-current-ai-buduje-publiczny-stos-ai-fdd014210d",
+      "section": "AI",
+      "title": "Current AI buduje publiczny stos AI",
+      "standfirst": "TechCrunch opisuje dziś Current AI jako nonprofit, który chce zbudować publiczny, otwarty stos AI. Oficjalne strony Current AI, PIB i AI Kosh pokazują już konkretne elementy: lokalny handheld device, publiczne źródła danych i open-source challenge dla wielojęzycznego AI.",
+      "whatHappened": "Current AI łączy granty, urządzenia offline i publiczne partnerstwa w jeden stack dla AI dostępnej lokalnie.",
+      "whyItMatters": "To może stworzyć realną publiczną alternatywę dla closed labs w obszarach języka, dostępu i własności danych.",
+      "deeperAnalysis": [
+        "Current AI przestaje wyglądać jak abstrakcyjna inicjatywa „for good”, a zaczyna przypominać polityczno-techniczny projekt infrastrukturalny. TechCrunch opisuje organizację jako nonprofit budujący publiczny internet AI, a sama organizacja mówi o public-private partnership, grantach i własnych building blocks dla otwartego stacku. To ważne, bo przesuwa dyskusję z etyki deklaratywnej do konkretnej architektury dostępu.",
+        "Najmocniejszy element tego obrazu to połączenie z Indiami. PIB i Current AI pokazują handheld, privacy-preserving device działający lokalnie, bez stałego internetu, a AI Kosh dokłada publiczne dane i synthetic tokens dla języków indyjskich. W połączeniu z Bhashini i VYOMA challenge powstaje coś więcej niż kolejna demonstracja: pojawia się publiczna ścieżka rozwoju AI, która jest dostosowana do wielojęzyczności i słabej łączności.",
+        "To może być ważne także dlatego, że publiczne AI zwykle przegrywało z prywatnym nie przez brak idei, tylko przez brak kompletnego stacku. Jeśli tutaj uda się domknąć dane, hardware, funding i community build-out, dostaniemy model, który można porównać z Big Tech nie tylko moralnie, ale też operacyjnie."
+      ],
+      "contextPoints": [
+        "Co się stało: Current AI, Bhashini i AI Kosh pokazują publiczny i open-source'owy kierunek dla AI w Indiach.",
+        "Dlaczego ważne: public-interest stack może zmienić język, dostęp i własność danych w AI.",
+        "Na co patrzeć dalej: VYOMA outcomes, nowe granty i to, czy handheld/device przejdzie z demo do realnego wdrożenia."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/"
+        },
+        {
+          "title": "Current AI Build",
+          "url": "https://www.currentai.org/build"
+        },
+        {
+          "title": "PIB",
+          "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2231127&lang=1&reg=3"
+        },
+        {
+          "title": "AI Kosh",
+          "url": "https://aikosh.indiaai.gov.in/home/use-cases/details/building_the_open_training_foundation_for_indic_ai.html"
+        },
+        {
+          "title": "Bhashini VYOMA Challenge",
+          "url": "https://bhashini.gov.in/sahyogi/hackathon/open-handheld-ai"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Current AI",
+        "Bhashini",
+        "AIKosh",
+        "India",
+        "open source",
+        "multilingual AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-19-1940-1-nowy-jork-i-protesty-uderzaja-w-data-center-boom-0600e75129",
+      "section": "Regulacje",
+      "title": "Nowy Jork i protesty uderzają w data center boom",
+      "standfirst": "Governor Kathy Hochul podpisała EO 62, które pauzuje wydawanie pozwoleń dla nowych hyperscale data centers w Nowym Jorku. Business Insider opisuje równolegle ogólnokrajowe protesty przeciw AI data centers, organizowane przez Humans First w ponad 100 lokalizacjach.",
+      "whatHappened": "Data centers weszły w etap formalnego ograniczania i ulicznego sprzeciwu.",
+      "whyItMatters": "AI infrastructure przestaje być tylko capexem i staje się lokalnym problemem energii, wody oraz społecznej zgody.",
+      "deeperAnalysis": [
+        "Nowy Jork nie zatrzymał się na symbolicznym komentarzu. EO 62 mówi wprost o rosnącym popycie na compute, dużych potrzebach energetycznych i wodnych oraz o ryzyku, że koszty sieciowe zostaną przerzucone na zwykłych mieszkańców. To ważne, bo daje polityczne uzasadnienie dla moratorium i ustawia data center development jako temat interesu publicznego.",
+        "W tym samym czasie protesty Humans First pokazują, że opór nie jest już tylko w gabinetach legislacyjnych. Business Insider opisuje demonstracje w ponad 100 miejscach i wskazuje konkretne lokalne konflikty, jak Kenilworth w New Jersey, gdzie mieszkańcy sprzeciwiają się projektowi o wartości 1.8 miliarda dolarów. To dowód, że społeczna legitymacja dla nowych data centers staje się wąskim gardłem, nie detalem PR.",
+        "W praktyce ten temat spina rachunek za energię, klimat, permit process i politykę lokalną. Jeśli kolejne stany albo miasta pójdą za Nowym Jorkiem, to rynek AI będzie musiał liczyć nie tylko koszt GPU i pamięci, ale też koszt społecznego i regulacyjnego otoczenia infrastruktury."
+      ],
+      "contextPoints": [
+        "Co się stało: Nowy Jork wstrzymał nowe hyperscale data centers, a protesty przeciw AI data centers objęły ponad 100 lokalizacji.",
+        "Dlaczego ważne: infrastruktura AI staje się sporem o koszty publiczne, a nie tylko prywatny capex.",
+        "Na co patrzeć dalej: kolejne stany, reakcje utility companies i to, czy developerzy zaczną proponować inne modele rozmieszczenia compute."
+      ],
+      "sources": [
+        {
+          "title": "Governor Hochul EO 62",
+          "url": "https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops"
+        },
+        {
+          "title": "Business Insider",
+          "url": "https://www.businessinsider.com/anti-ai-data-center-nationwide-protest-photos-2026-7"
+        },
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/c1e05b74208a6c570eec7c658ac8f187"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "data centers",
+        "New York",
+        "energy",
+        "water",
+        "regulation",
+        "protests"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-19-1940-2-robotaxi-rules-staja-sie-miejskim-polem-walki-a1cf94b235",
+      "section": "Regulacje",
+      "title": "Robotaxi rules stają się miejskim polem walki",
+      "standfirst": "TechCrunch Mobility opisuje spór o robotaxi rules w Waszyngtonie, gdzie Uber i Waymo są już po przeciwnych stronach projektu. Uber chce hybrydowego modelu opartego o ride-hailing, a Waymo i inni gracze chcą reguł, które nie rozmyją ekonomii autonomicznych flot.",
+      "whatHappened": "Lokalna legislacja stała się testem dla biznesowego modelu robotaxi.",
+      "whyItMatters": "Kto ustali reguły miasta, ten ustali też labor economics i to, gdzie trafia marża z AV.",
+      "deeperAnalysis": [
+        "W tym sporze nie chodzi już o to, czy robotaxi są technicznie możliwe. Chodzi o to, jak mają być osadzone w istniejących sieciach transportowych, kto ma odpowiadać za dostępność i jakie koszty poniesie kierowca, pasażer oraz platforma. Uber argumentuje, że bez hybrydowego modelu powstanie de facto monopol dla Waymo, ale z perspektywy AV to właśnie ten argument mówi, że wartościowy rynek dopiero się formuje.",
+        "TechCrunch podkreśla, że na przesłuchaniu byli też przedstawiciele Lyft, Tesli, grup osób z niepełnosprawnościami, organizacji bezpieczeństwa i związków zawodowych. To oznacza, że D.C. staje się laboratorium nie tylko dla technologii, ale też dla polityki miejskiego dostępu i pracy. Axios dodaje, że Waymo mogłoby zatrudnić setki osób, jeśli legalizacja przejdzie, co pokazuje skalę stawki.",
+        "Ten wątek jest ważny także dla innych miast. Jeśli Waszyngton wypracuje model, który da się kopiować, może stać się wzorem dla kolejnych jurysdykcji. Jeśli nie, robotaxi pozostaną w ciągłej wojnie o lokalne wyjątki i negocjacje z każdym kolejnym council i burmistrzem."
+      ],
+      "contextPoints": [
+        "Co się stało: Uber i Waymo weszły w otwarty spór o reguły dla AV w D.C.",
+        "Dlaczego ważne: miejskie przepisy zaczną definiować model biznesowy robotaxi i koszty pracy.",
+        "Na co patrzeć dalej: poprawki do billu, wynik hearingu i to, czy inne miasta skopiują podobny framework."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch Mobility",
+          "url": "https://techcrunch.com/2026/07/19/techcrunch-mobility-the-battle-over-robotaxi-rules/"
+        },
+        {
+          "title": "Axios Local DC",
+          "url": "https://www.axios.com/local/washington-dc/2026/07/13/waymo-robotaxis-dc-jobs-council-vote"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Uber",
+        "Waymo",
+        "robotaxi",
+        "Washington DC",
+        "mobility",
+        "regulation"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-19-1940-3-openai-safety-staje-sie-polityka-wewnetrzna-64ff067d4d",
+      "section": "Regulacje",
+      "title": "OpenAI safety staje się polityką wewnętrzną",
+      "standfirst": "Wired podaje, że obecni i byli pracownicy OpenAI finansują Guardrails Alliance, super PAC opowiadający się za twardszą regulacją AI. The Verge dorzuca kolejny element układanki: z firmy odchodzi kolejny szef bezpieczeństwa.",
+      "whatHappened": "Safety w OpenAI przestało być wyłącznie funkcją organizacyjną i weszło do polityki.",
+      "whyItMatters": "Wewnętrzne pęknięcia wokół governance mogą wpływać na launch policy, lobbying i publiczne zaufanie do frontier AI.",
+      "deeperAnalysis": [
+        "Guardrails Alliance nie jest dużym ruchem finansowo w porównaniu z networkiem wspieranym przez Grega Brockmana, ale jest sygnałem istotnym jakościowo. Pokazuje, że część ludzi pracujących nad bezpieczeństwem AI woli naciskać na bardziej restrykcyjne zasady niż na deregulacyjną narrację własnego pracodawcy. To już nie jest tylko spór o priorytety badawcze.",
+        "W tym samym czasie The Verge opisuje kolejny transfer i odejście w safety stacku OpenAI. Gdy takie zmiany nakładają się na równoległe rollouty modeli i rosnącą presję regulacyjną, użytkownik z zewnątrz zaczyna widzieć firmę mniej jako spójny lab, a bardziej jako organizację, która balansuje między produktem, ryzykiem i polityką.",
+        "To ważne dla całego rynku, bo OpenAI jest często benchmarkiem nie tylko technicznym, ale też narracyjnym. Jeśli tam bezpieczeństwo staje się wewnętrzną polityką i zewnętrznym lobbyingiem jednocześnie, inne laboratoria będą musiały zdecydować, czy iść tą samą ścieżką, czy budować inną reputację wokół governance."
+      ],
+      "contextPoints": [
+        "Co się stało: część pracowników OpenAI wspiera Guardrails Alliance, a z firmy odchodzi kolejny lider safety.",
+        "Dlaczego ważne: frontier AI staje się sporem o politykę, a nie tylko o inżynierię.",
+        "Na co patrzeć dalej: kolejne filingi PAC, odpowiedź OpenAI i ewentualne zmiany w model launch governance."
+      ],
+      "sources": [
+        {
+          "title": "Wired",
+          "url": "https://www.wired.com/story/openai-employees-donations-guardrails-alliance-leading-the-future/"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/964489/openais-head-of-safety-is-out"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "safety",
+        "PAC",
+        "Guardrails Alliance",
+        "regulation",
+        "governance"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Publiczny stack AI w Indiach kontra prywatne laby",
+      "rationale": "Current AI, Bhashini i AIKosh pokazują, że AI może być budowane jako infrastruktura publiczna, a nie tylko jako produkt dużej korporacji.",
+      "sourcesLabel": "TechCrunch; Current AI; PIB; AI Kosh"
+    },
+    {
+      "priority": "High",
+      "title": "Data center boom zderza się z protestami i moratorium",
+      "rationale": "AI infra staje się lokalnym problemem energii, wody i zgody społecznej, co może spowolnić lub przestawić inwestycje.",
+      "sourcesLabel": "Governor Hochul EO 62; Business Insider; AP"
+    },
+    {
+      "priority": "High",
+      "title": "Robotaxi rules w D.C. stają się starciem Uber-Waymo",
+      "rationale": "Kto ustali reguły miasta, ten ustali ekonomię AV i to, czy robotaxi wejdą przez ride-hailing czy osobną warstwę dostępu.",
+      "sourcesLabel": "TechCrunch Mobility; Axios Local DC"
+    },
+    {
+      "priority": "Medium",
+      "title": "OpenAI safety staje się polityką wewnętrzną",
+      "rationale": "Donacje staffers do Guardrails Alliance i kolejny odjazd lidera safety pokazują, że spór o frontier AI wchodzi do firmy od środka.",
+      "sourcesLabel": "Wired; The Verge"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN i Product Hunt nadal premiują kontrolę zamiast hype'u",
+      "rationale": "Community signal wskazuje, że użytkownicy dalej szukają narzędzi do obserwacji, kontroli i praktycznego użycia agentów.",
+      "sourcesLabel": "Hacker News; Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TechCrunch: Nonprofit Current AI is racing to build the World Wide Web of AI, free for all",
+      "url": "https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/"
+    },
+    {
+      "title": "Current AI: Build",
+      "url": "https://www.currentai.org/build"
+    },
+    {
+      "title": "PIB: Multilingual Open-Source AI Prototype Demonstrated at Bharat Mandapam",
+      "url": "https://www.pib.gov.in/PressReleasePage.aspx?PRID=2231127&lang=1&reg=3"
+    },
+    {
+      "title": "AI Kosh: Large-Scale Multilingual Training Datasets for Large Language ...",
+      "url": "https://aikosh.indiaai.gov.in/home/use-cases/details/building_the_open_training_foundation_for_indic_ai.html"
+    },
+    {
+      "title": "New York Executive Order 62",
+      "url": "https://www.governor.ny.gov/executive-order/no-62-establishing-temporary-moratorium-data-centers-new-york-while-state-develops"
+    },
+    {
+      "title": "Business Insider: Anti-AI data center protesters rally across the US",
+      "url": "https://www.businessinsider.com/anti-ai-data-center-nationwide-protest-photos-2026-7"
+    },
+    {
+      "title": "TechCrunch: TechCrunch Mobility: The battle over robotaxi rules",
+      "url": "https://techcrunch.com/2026/07/19/techcrunch-mobility-the-battle-over-robotaxi-rules/"
+    },
+    {
+      "title": "Axios Local DC: Waymo hiring plan for D.C. robotaxis",
+      "url": "https://www.axios.com/local/washington-dc/2026/07/13/waymo-robotaxis-dc-jobs-council-vote"
+    },
+    {
+      "title": "Wired: OpenAI staffers fund rival super PAC",
+      "url": "https://www.wired.com/story/openai-employees-donations-guardrails-alliance-leading-the-future/"
+    },
+    {
+      "title": "The Verge: OpenAI safety chief exits",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/964489/openais-head-of-safety-is-out"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/front"
+    },
+    {
+      "title": "Product Hunt homepage",
+      "url": "https://www.producthunt.com/"
+    }
+  ]
+}
