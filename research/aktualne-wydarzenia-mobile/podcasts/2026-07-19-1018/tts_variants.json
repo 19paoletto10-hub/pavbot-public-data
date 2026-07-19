@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-07-19T08:44:13.452540+00:00",
+  "language": "pl",
+  "language_detection": "local-polish-heuristic",
+  "speed": 1.03,
+  "variants": [
+    {
+      "id": "female-piper",
+      "engine": "piper",
+      "voice": "pl_PL-gosia-medium",
+      "model": "rhasspy/piper-voices:pl_PL-gosia-medium",
+      "status": "ok",
+      "duration_seconds": 179.339955,
+      "output_file": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-19-1018/audio/female-piper/podcast.mp3",
+      "render_json": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-19-1018/audio/female-piper/render.json",
+      "error": null
+    },
+    {
+      "id": "male-xtts",
+      "engine": "xtts",
+      "voice": "Andrew Chipper",
+      "model": "coqui/XTTS-v2",
+      "status": "ok",
+      "duration_seconds": 250.739909,
+      "output_file": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-19-1018/audio/male-xtts/podcast.mp3",
+      "render_json": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-19-1018/audio/male-xtts/render.json",
+      "error": null
+    }
+  ]
+}
