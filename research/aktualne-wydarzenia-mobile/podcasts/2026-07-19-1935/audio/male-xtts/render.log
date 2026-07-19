@@ -1,0 +1,86 @@
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/utils/generic.py:311: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/xtts_manager.py:5: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  self.speakers = torch.load(speaker_file_path)
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/utils/io.py:54: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  return torch.load(f, map_location=map_location, **kwargs)
+ > Using model: xtts
+ > Text splitted to sentences.
+['Dzień dobry.', 'Niedziela, dziewiętnastego lipca dwa tysiące dwudziestego szóstego roku, wydanie wieczorne.', 'Polska kończy dzień bardziej operacyjnie niż politycznie.', 'Rządowe Centrum Bezpieczeństwa utrzymuje do późnego wieczora szeroki pas ostrzeżeń burzowych, a susza hydrologiczna nadal obejmuje cały kraj.', 'Innymi słowy, jesteśmy w tym bardzo polskim trybie, w którym jedni patrzą, czy nie zaleje piwnicy, a drudzy patrzą, czy w rzece w ogóle jeszcze jest z czego robić rzekę.', 'Krótko: parasol i czujność nadal wygrywają z romantyczną wizją letniego spaceru.', 'To ważne, bo wieczorny raport RCB nie pokazuje nowego alarmu, tylko potwierdza, że poranny temat nie zgasł.', 'Ostrzeżenia drugiego stopnia dla burz trzymają kilka województw do godziny dwudziestej drugiej, ostrzeżenia pierwszego stopnia schodzą maksymalnie do północy, a do tego w tle nadal działa susza hydrologiczna.', 'Czyli Polska kończy dzień nie w klimacie wielkiego politycznego zwrotu, tylko raczej w rytmie: sprawdź telefon, zabezpiecz balkon i miej naładowany powerbank.', 'Mało poetyckie, ale bardzo praktyczne.', 'W polityce krajowej nadal pracuje pakiet prezydenckich podpisów i wet, tylko bez nowego wieczornego domknięcia.', 'Karol Nawrocki podpisał dziewięć ustaw i zawetował dwie, w tym ustawę o statusie osoby najbliższej, ale dziś nie pojawił się drugi akt w postaci wyraźnej odpowiedzi Sejmu albo rządu.', 'To nie znaczy, że temat umarł.', 'To znaczy tylko, że wszedł w swój ulubiony polski tryb: procedura cicho idzie dalej, a wszyscy udają, że nic się nie dzieje aż do chwili, gdy znowu zacznie się dziać bardzo dużo.', 'Drugi krajowy wątek, który warto trzymać wysoko, to rosyjska hybryda.', 'Sprawa osiemnastoletniego Ukraińca oskarżonego w Polsce o sabotaż i działania na rzecz rosyjskiego wywiadu nadal jest politycznie ważna, nawet bez nowego komunikatu z Warszawy.', 'Chodzi nie tylko o same zarzuty, ale o to, że takie operacje próbują wbijać klin dokładnie tam, gdzie relacje polsko-ukraińskie są najbardziej wrażliwe.', 'Rosja od dawna lubi pracować na pęknięciach, a nie tylko na froncie.', 'Niestety to jeden z tych obszarów, gdzie nawet bardzo lokalna prowokacja potrafi mieć nieproporcjonalnie duży efekt polityczny.', 'Za granicą dzień wyraźnie stwardniał.', 'Poranny obraz rosyjskiego ataku na Ukrainę był po prostu zbyt lekki wobec wieczornego bilansu.', 'Associated Press podaje, że dzisiejsze uderzenia na Kijów i inne miasta zabiły co najmniej sześć osób.', 'Ataki objęły nie tylko stolicę, ale też Charków, Chersoń i Sumy.', 'Rosja użyła czterdziestu jeden rakiet i stu dwudziestu pięciu dronów, a skala zniszczeń objęła budynki mieszkalne, obiekty przemysłowe i infrastrukturę miejską.', 'To już nie jest tylko kolejny wpis do kroniki wojennej.', 'To sygnał, że presja na ukraińską obronę powietrzną znów rośnie mocniej, niż wyglądało rano.', 'Równolegle Ukraina nadal bije w rosyjskie zaplecze.', 'Dzisiejsze uderzenia objęły składy paliw w Kraju Stawropolskim, a także dwa tankowce w terminalu CPC pod Noworosyjskiem, co zatrzymało załadunek ropy.', 'To ważne, bo pokazuje zmianę skali myślenia o wojnie.', 'Coraz mniej chodzi tylko o sam front, a coraz bardziej o logistykę, paliwo, tankowce i przepływ towarów.', 'Mówiąc brutalnie: wojna coraz częściej pyta nie tylko kto strzela, ale kto jeszcze dowiezie paliwo do następnego strzału.', 'Na Bliskim Wschodzie też zrobiło się ciężej niż rano.', 'Stany Zjednoczone przeprowadziły nowe naloty na cele irańskiego Korpusu Strażników Rewolucji po zabiciu amerykańskich żołnierzy w Jordanii.', 'Iran odpowiedział pociskami wystrzelonymi w stronę Jordanii, a w Kuwejcie znów ucierpiała infrastruktura związana z energią i odsalaniem wody.', 'To już nie jest tylko napięcie wokół Ormuzu, tylko kolejna runda bezpośredniego odwetu.', 'Geopolityka, jak zwykle, uwielbia wąskie gardła, a cieśnina Ormuz pozostaje jednym z jej ulubionych hobby.', 'I właśnie dlatego ten temat trzeba czytać szerzej niż tylko przez wojsko.', 'Gdy konflikt zaczyna dotykać żeglugi, energii i infrastruktury cywilnej, skutki bardzo szybko wychodzą poza region.', 'Najpierw robi się nerwowo na mapie, potem drożej robi się na rachunku za transport, a na końcu wszyscy pytają, jak to się stało tak nagle.', 'Odpowiedź zwykle brzmi: to wcale nie było nagle, tylko długo wyglądało na coś odległego.', 'W technologii i obronności dziś mniej dzieje się na poziomie nowych produktów, a bardziej na poziomie ustawiania reguł.', 'Xi Jinping zapowiedział utworzenie Światowej Organizacji Współpracy w dziedzinie Sztucznej Inteligencji i znów mówi o sprawiedliwym globalnym zarządzaniu AI.', 'To nie jest tylko konferencyjny ozdobnik.', 'To próba zbudowania języka wpływu, partnerstw i standardów wokół sztucznej inteligencji.', 'Kto ustawia reguły rozmowy, ten często zyskuje więcej niż ten, kto tylko szybciej pokazuje nową wersję modelu.', 'Po europejskiej stronie nadal więcej jest ram niż wykonania.', 'EU-Ukraine Drone Alliance i program AGILE pozostają ważne, ale wciąż czekają na ten moment, w którym komunikat zamieni się w publiczne liczby, zamówienia i terminy.', 'Konferencja bywa efektowna, ale nadal nie jest fabryką.', 'A dla Polski i regionu prawdziwy przełom zacznie się dopiero wtedy, gdy obok dobrego zdania pojawi się jeszcze dobra produkcja.', 'Najkrótszy sens tego wieczoru jest więc taki: w Polsce nadal pogoda i woda, w polityce stan zawieszenia z ryzykiem powrotu, w Ukrainie cięższy bilans i mocniejsza wojna logistyczna, na Bliskim Wschodzie kolejna runda odwetu, a w technologii dalsza walka o zasady i wykonanie.', 'Dzień kończy się więc nie jednym wielkim finałem, tylko kilkoma równoległymi napięciami.', 'I niestety żadne z nich nie wygląda dziś na temat, który sam grzecznie pójdzie spać.']
+Traceback (most recent call last):
+  File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 105, in <module>
+    main()
+  File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 96, in main
+    tts.tts_to_file(**kwargs)
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/api.py", line 334, in tts_to_file
+    wav = self.tts(
+          ^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/api.py", line 276, in tts
+    wav = self.synthesizer.tts(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/utils/synthesizer.py", line 386, in tts
+    outputs = self.tts_model.synthesize(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/models/xtts.py", line 412, in synthesize
+    return self.inference(text, language, gpt_cond_latent, speaker_embedding, **settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/models/xtts.py", line 541, in inference
+    gpt_codes = self.gpt.generate(
+                ^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/gpt.py", line 590, in generate
+    gen = self.gpt_inference.generate(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/generation/utils.py", line 1648, in generate
+    return self.sample(
+           ^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/generation/utils.py", line 2730, in sample
+    outputs = self(
+              ^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/gpt_inference.py", line 97, in forward
+    transformer_outputs = self.transformer(
+                          ^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 900, in forward
+    outputs = block(
+              ^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 390, in forward
+    attn_outputs = self.attn(
+                   ^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 331, in forward
+    attn_output, attn_weights = self._attn(query, key, value, attention_mask, head_mask)
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 218, in _attn
+    attn_output = torch.matmul(attn_weights, value)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
