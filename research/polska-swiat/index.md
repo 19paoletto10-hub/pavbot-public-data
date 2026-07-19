@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-16
+Last updated: 2026-07-19
 
 ## Current Understanding
 
@@ -404,8 +404,19 @@ szerszej europejskiej architektury bezpieczeństwa. Krajowo najświeższy
 sygnał to akt oskarżenia ABW wobec 18-letniego obywatela Ukrainy działającego
 na rzecz rosyjskich służb oraz alert RCB o burzach z gradem i silnym wiatrem.
 
+Po porannym runie 19 lipca główny ciężar przeszedł na dwie równoległe
+eskalacje: Ormuz ma już ósmą z rzędu noc uderzeń USA w Iran oraz potwierdzone
+przez CENTCOM ofiary amerykańskie po ataku w Jordanii, a Ukraina dostała duży
+nocny atak balistyczny na Kijów i równoległe własne uderzenia w rosyjską
+logistykę. W Polsce najważniejsze tło to jakościowy zwrot CBOS w sprawie
+uchodźców z Ukrainy, odpowiedź BBN na zapowiedź otwarcia archiwów wołyńskich
+oraz prezydencka zapowiedź ponowienia wniosku o referendum klimatyczne. Węgry
+dołączają jako średni priorytet regionalny po podpisie prezydenta Sulyoka pod
+poprawką kończącą jego mandat.
+
 ## Recent Reports
 
+- [2026-07-19](runs/2026-07-19.md)
 - [2026-07-16](runs/2026-07-16.md)
 - [2026-07-14-1933](runs/2026-07-14-1933.md)
 - [2026-07-14](runs/2026-07-14.md)

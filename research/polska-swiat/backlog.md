@@ -4,6 +4,14 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track 19 July Ormuz eighth-night and Jordan-casualty escalation | CENTCOM confirms the eighth consecutive night of strikes against Iran and separately confirms two U.S. service members killed, one missing and four medically evacuated after Iranian attacks in Jordan | Check AP, CENTCOM, UKMTO, Gulf state statements, UAE/Saudi/Kuwait reactions, oil prices and shipping advisories before podcast/evening update | Open |
+| High | Track 19 July Kyiv ballistic attack and Patriot gap | AP confirms at least one dead and eight injured after an overnight ballistic attack on Kyiv while Guardian/Polsat report about 40 ballistic missiles and renewed attention to Patriot shortages | Watch AP, Kyiv authorities, President of Ukraine, Air Force updates and U.S./European Patriot licensing or delivery details | Open |
+| High | Track Ukraine long-range strikes on Russian logistics | AP reports Ukrainian drone attacks on warehouses, fuel and logistics sites in Russia, with Russian authorities reporting nine killed and over 80 wounded | Separate Russian casualty claims from Ukrainian target claims; monitor AP, Guardian, Ukraine General Staff and Russian regional statements | Open |
+| High | Track CBOS refugee-opinion shift and Poland-Ukraine tension | CBOS now shows 52% against and 42% for accepting refugees from war-affected Ukraine, the first such reversal in its measurement history | Watch CBOS follow-ups, government policy, local-government burden, Ukrainian embassy reactions and disinformation narratives | Open |
+| Medium | Track Wołyń archives and exhumation follow-through | BBN says Zelenskyy's decision to open SBU/SWR archives and issue more exhumation permits is a step toward historical truth, but implementation remains unverified | Watch KPRP, BBN, IPN, Ukrainian official channels and actual archive/exhumation procedures | Open |
+| Medium | Track renewed climate referendum request | Polsat reports Nawrocki will again send the Senate a referendum request on EU climate policy, while KPRP keeps the ETS/Green Deal cost argument | Watch Senate calendar, KPRP, government response, EC ETS proposals and whether the question text changes | Open |
+| Medium | Track Hungary Sulyok transition and Magyar reforms | AP and Euronews report that Sulyok signed a constitutional amendment ending his mandate, shifting duties to the parliament speaker until a successor is chosen | Watch AP, Euronews, Hungarian parliament, EU reactions and implications for Ukraine/Russia policy | Open |
+| Medium | Track 19 July RCB alert | RCB issued a fresh 19 July alert for storms, hail, strong wind and possible power outages while hydrological drought remains active | Check RCB, IMGW and PSP updates before podcast; use only official safety instructions | Open |
 | High | Track Ormuz blockade enforcement and M/T Wen Yao boarding | AP now reports U.S. Marines boarded M/T Wen Yao, redirections of commercial vessels, bridge and port strikes in Iran, and retaliatory hits on Kuwait, Qatar, Bahrain and Jordan | Check AP, CENTCOM, UKMTO, IMO, tanker tracking, oil prices and Gulf state statements before podcast or evening update | Open |
 | High | Track U.S. 95B Iran-war package | House GOP unveiled a 95B dollar budget plan with 60B for Armed Services, 13B for Intelligence, 12B for Agriculture and 10B for election administration, with no offsets | Watch House Budget Committee, White House, AP and deficit reactions; connect to Patriot, THAAD and Tomahawk stockpile strain | Open |
 | Medium | Track Lebanon-Israel pilot zones | AP says U.S.-mediated Rome talks produced structure and guidelines for pilot zones where Israel would hand control to the Lebanese army, but Hezbollah rejects disarmament | Watch State Department, Lebanon, Israel, UNIFIL and Hezbollah reactions for implementation versus diplomatic theater | Open |
@@ -200,6 +208,14 @@
   Ormuz, then the U.S. war-funding package and EU-Ukraine/BGK defence-finance
   angle, with Lebanon, CBA cases and social tensions as shorter, carefully
   caveated blocks.
+- 2026-07-19: Sunday morning research created a material update. Strongest
+  sources were AP and CENTCOM for Ormuz/Jordan, AP/Guardian/Polsat for the
+  Kyiv ballistic attack and Ukrainian long-range strikes, CBOS for the refugee
+  opinion shift, Polsat/PAP for Wołyń/BBN, Polsat/KPRP for the climate
+  referendum follow-up, AP/Euronews for Hungary, and RCB for weather. Podcast
+  should lead Ormuz, then Kyiv/Patriot and Ukraine logistics strikes, with
+  CBOS and Wołyń handled carefully as social and historical policy, not as
+  inflammatory shorthand.
 
 ## Done
 
