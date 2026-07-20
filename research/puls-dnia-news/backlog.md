@@ -2,6 +2,10 @@
 
 ## Open
 
+- Watch whether the Warsaw metro disruption clears or expands into a longer evening delay.
+- Watch whether Burnham names a first cabinet or policy package after taking office.
+- Watch whether the Spain fire or Poland storms turn into outages, evacuations or transport blocks.
+- Watch whether the Iran and Black Sea items get a fresh official maritime or military follow-up.
 - Watch whether Chojna and the Iwona Cygan case get formal police or prosecutor follow-up.
 - Watch whether the health ministry package turns into published draft text and early union reaction.
 - Watch whether AliExpress or the Commission publish the full DSA response and implementation detail.

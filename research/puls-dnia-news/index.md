@@ -99,6 +99,11 @@ The 2026-07-17 06:01 slot przesuwa feed na bardziej operacyjny miks: PiS i Moraw
 
 ## Current State
 
+The 2026-07-20 18:01 slot moves the feed into an operational evening mix:
+Warsaw metro disruption, Burnham and the British cabinet reset, courier
+pressure, Spain fire, Poland storm alerts, and a wider world block around
+Iran, the Black Sea and Guyana.
+
 The 2026-07-20 15:01 slot sharpens the feed around crime, process and policy:
 Chojna, A2, Nazara, Iwona Cygan, health reform, AliExpress, storms and a
 fresh UK/BBC world reset led by Burnham.
