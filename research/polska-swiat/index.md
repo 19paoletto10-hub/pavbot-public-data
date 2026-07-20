@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-19
+Last updated: 2026-07-20
 
 ## Current Understanding
 
@@ -422,8 +422,20 @@ potrzebę europejskiej zdolności antybalistycznej. Po stronie polskiej nic nie
 przebiło tych dwóch bloków poza utrzymanym alertem RCB o burzach i silnym
 wietrze.
 
+Po porannym runie 20 lipca Ormuz przeszedł w dziewiątą kolejną noc uderzeń
+USA-Iran, z potwierdzeniem CENTCOM, nowymi stratami amerykańskimi i efektem
+rynkowym w postaci Brent powyżej 90 dolarów według AP. Ukraina ma dwa równoległe
+bloki: kontynuację presji balistycznej na Kijów i lukę Patriot oraz atak na
+statek Golden Leo z ładunkiem zboża w rejonie Odessy, który przenosi ciężar na
+bezpieczeństwo Morza Czarnego. W Polsce najważniejsze poranne konkrety to start
+zmian w programie Czyste Powietrze, skutki niedzielnych burz i lokalny alert RCB
+o ćwiczeniach syren w powiecie oświęcimskim, a społecznie także pikiety przeciw
+konfliktowaniu Polaków i Ukraińców.
+
 ## Recent Reports
 
+- [2026-07-20](runs/2026-07-20.md)
+- [2026-07-19-1933](runs/2026-07-19-1933.md)
 - [2026-07-19](runs/2026-07-19.md)
 - [2026-07-16](runs/2026-07-16.md)
 - [2026-07-14-1933](runs/2026-07-14-1933.md)

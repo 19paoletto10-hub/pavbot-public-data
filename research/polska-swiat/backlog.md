@@ -4,6 +4,11 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track 20 July Ormuz ninth-night and energy spillover | AP and CENTCOM now describe a ninth consecutive U.S. strike wave, additional U.S. losses and Brent above 90 dollars as Iran targets Gulf states | Check AP, CENTCOM, UKMTO, IMO, Gulf statements, oil/shipping updates and whether U.S. Congress or allies react before podcast/evening update | Open |
+| High | Track Golden Leo and Black Sea grain-route risk | Guardian and Polsat report a Russian strike on the grain vessel Golden Leo near Odesa with changing casualty counts | Watch Ukraine Navy, Guardian/AP/Reuters mirrors, shipping authorities, Turkey/flag-state reactions and updated casualty figures; keep timestamps explicit | Open |
+| High | Track Kyiv ballistic gap and Ukraine army-decision pressure | President of Ukraine ties the Kyiv attack to daily air-defense missile needs while Polsat reports protests around Fedorov/Syrskyi | Monitor President of Ukraine, Verkhovna Rada, AP/Guardian and partner announcements for Patriot deliveries, confirmation of defense leadership and protest evolution | Open |
+| Medium | Track Czyste Powietrze 20 July implementation | NFOŚiGW changes now apply: ownership exceptions, 10% selected termomodernization limits, 180-day prefinancing settlement and heating-source restrictions after 2026 | Watch NFOŚiGW, WFOŚiGW, gminy-operatorzy, BI/Onet and beneficiary problems during the first implementation week | Open |
+| Medium | Track Poland-Ukraine civic tension and anti-disinformation response | Polsat reports Warsaw and Wrocław pickets against dividing Poles and Ukrainians after a period of worsening sentiment and incidents | Watch CBOS follow-ups, embassy/government reactions, local incidents and credible disinformation monitoring; avoid collective blame | Open |
 | High | Track 19 July Ormuz eighth-night and Jordan-casualty escalation | CENTCOM confirms the eighth consecutive night of strikes against Iran, and AP's later update adds Jordanian intercepts plus spillover warnings for Gulf states and Israel | Check AP, CENTCOM, UKMTO, Gulf state statements, UAE/Saudi/Kuwait reactions, oil prices and shipping advisories before podcast/evening update | Open |
 | High | Track 19 July Kyiv ballistic attack and Patriot gap | AP's later update raises the Kyiv attack toll to at least six killed across Kyiv and other cities while the President of Ukraine again stresses the Patriot shortage | Watch AP, Kyiv authorities, President of Ukraine, Air Force updates and U.S./European Patriot licensing or delivery details | Open |
 | High | Track Ukraine long-range strikes on Russian logistics | AP reports Ukrainian drone attacks on warehouses, fuel and logistics sites in Russia, with Russian authorities reporting nine killed and over 80 wounded | Separate Russian casualty claims from Ukrainian target claims; monitor AP, Guardian, Ukraine General Staff and Russian regional statements | Open |
@@ -11,7 +16,7 @@
 | Medium | Track Wołyń archives and exhumation follow-through | BBN says Zelenskyy's decision to open SBU/SWR archives and issue more exhumation permits is a step toward historical truth, but implementation remains unverified | Watch KPRP, BBN, IPN, Ukrainian official channels and actual archive/exhumation procedures | Open |
 | Medium | Track renewed climate referendum request | Polsat reports Nawrocki will again send the Senate a referendum request on EU climate policy, while KPRP keeps the ETS/Green Deal cost argument | Watch Senate calendar, KPRP, government response, EC ETS proposals and whether the question text changes | Open |
 | Medium | Track Hungary Sulyok transition and Magyar reforms | AP and Euronews report that Sulyok signed a constitutional amendment ending his mandate, shifting duties to the parliament speaker until a successor is chosen | Watch AP, Euronews, Hungarian parliament, EU reactions and implications for Ukraine/Russia policy | Open |
-| Medium | Track 19 July RCB alert | RCB issued a fresh 19 July alert for storms, hail, strong wind and possible power outages while hydrological drought remains active | Check RCB, IMGW and PSP updates before podcast; use only official safety instructions | Open |
+| Medium | Track 19 July RCB alert | RCB issued a fresh 19 July alert for storms, hail, strong wind and possible power outages while hydrological drought remains active | Checked 20 July: follow-up shifted to storm-intervention balance and separate Chełmek siren exercise alert | Closed 2026-07-20 |
 | High | Track Ormuz blockade enforcement and M/T Wen Yao boarding | AP now reports U.S. Marines boarded M/T Wen Yao, redirections of commercial vessels, bridge and port strikes in Iran, and retaliatory hits on Kuwait, Qatar, Bahrain and Jordan | Check AP, CENTCOM, UKMTO, IMO, tanker tracking, oil prices and Gulf state statements before podcast or evening update | Open |
 | High | Track U.S. 95B Iran-war package | House GOP unveiled a 95B dollar budget plan with 60B for Armed Services, 13B for Intelligence, 12B for Agriculture and 10B for election administration, with no offsets | Watch House Budget Committee, White House, AP and deficit reactions; connect to Patriot, THAAD and Tomahawk stockpile strain | Open |
 | Medium | Track Lebanon-Israel pilot zones | AP says U.S.-mediated Rome talks produced structure and guidelines for pilot zones where Israel would hand control to the Lebanese army, but Hezbollah rejects disarmament | Watch State Department, Lebanon, Israel, UNIFIL and Hezbollah reactions for implementation versus diplomatic theater | Open |
@@ -216,11 +221,19 @@
   should lead Ormuz, then Kyiv/Patriot and Ukraine logistics strikes, with
   CBOS and Wołyń handled carefully as social and historical policy, not as
   inflammatory shorthand.
+- 2026-07-20: Monday morning research created a material update. Strongest
+  sources were AP and CENTCOM for the ninth USA-Iran strike wave and energy
+  spillover, Guardian/Polsat/President of Ukraine for Golden Leo, Kijów and the
+  Patriot gap, NFOŚiGW/BI for Czyste Powietrze, Polsat/RCB for weather and
+  siren alerts, and Polsat/CBOS for Polish-Ukrainian social tension. Podcast
+  should lead Ormuz, then Golden Leo and Kyiv/Patriot, with Czyste Powietrze,
+  weather/RCB and Poland-Ukraine civic tension as shorter, practical blocks.
 
 ## Done
 
 | Date | Item | Outcome |
 | --- | --- | --- |
+| 2026-07-20 | Track 19 July RCB alert | Alert burzowy z 19 lipca został sprawdzony następnego dnia; nowy follow-up to skutki burz i odrębny lokalny alert ćwiczebny RCB w powiecie oświęcimskim. |
 | 2026-07-11 | Track Wołyń anniversary diplomacy | Obchody w Radrużu i Ołyce odbyły się; dalszy follow-up to reakcje polityczne i dyplomatyczne. |
 | 2026-06-20 | Review first three Polska/świat reports | Three scheduled reports were produced on 2026-06-18, 2026-06-19 and 2026-06-20. Source quality is acceptable when official institutions remain primary and dynamic news pages are treated as secondary signals. |
 | 2026-07-08 | Verify post-Ankara outcomes | Final NATO declaration is published and the immediate outcome check is complete; follow-up now moved into PAC-3 and Patriot implementation items. |
