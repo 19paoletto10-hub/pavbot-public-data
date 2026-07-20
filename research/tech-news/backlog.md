@@ -4,6 +4,12 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track WordPress 7.0.2 exploitation | Forced updates are already racing against active attacks on freshly patched sites | Watch exploit reports, patch adoption and whether other CMS vendors copy the response | Open |
+| High | Track YouTube GenAI disclosure rules | Realistic AI content now needs disclosure inside the creator workflow and viewer UI | Watch rollout details, enforcement and whether other platforms copy the label pattern | Open |
+| Medium | Track Adobe Project Indigo AI Playground | Capture-time generative editing could become a mobile camera pattern, not just an editor feature | Watch rollout breadth, opt-out handling and whether Adobe expands the experiment | Open |
+| High | Track CuspAI materials foundry | AI-for-science capital is moving into chip and energy materials discovery at serious scale | Watch partner execution, Singapore expansion and any technical proof points | Open |
+| High | Track Neo agentic endpoint security | Agents with user-level privileges create a new endpoint control problem | Watch product rollout, Windows integration and whether incumbents respond | Open |
+| High | Track Craneware healthcare breach | Vendor compromise in billing software can cascade across hospitals and pharmacies | Watch breach scope, customer impact and whether regulators intervene | Open |
 | High | Track Etched valuation jump | $20B talks show inference chips are still getting rewarded like frontier infra | Watch whether the round closes and whether customer orders convert into production revenue | Open |
 | High | Track SpaceX Pentagon compute deal | Defense procurement may become a new commercial AI compute channel | Watch contract scope, security approvals and reactions from cloud competitors | Open |
 | Medium | Track TikTok federal-device reversal | DOJ opinion shows a qualified divestiture can unwind an earlier device ban | Watch agency adoption, rollout consistency and any broader policy copycats | Open |

@@ -1,0 +1,345 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-20",
+  "runTime": "19:33",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny run przesuwa temat z samego wzrostu capability do warstwy kontroli, disclosure i attack surface. YouTube i WordPress pokazują, że platform policy oraz patching bezpieczeństwa stały się codziennym product eventem, a nie tylko tłem dla większych modeli. W praktyce oznacza to, że zaufanie do treści i odporność infrastruktury są dziś równie ważne jak sama jakość modeli.",
+    "Drugi sygnał to AI wchłaniające się w realne workflowy użytkownika. Adobe Project Indigo dokłada AI Playground bezpośrednio do aplikacji aparatu, a Neo buduje security pod świat, w którym agenci mają takie same uprawnienia jak użytkownik. To dobrze pokazuje, że kolejna fala produktów AI będzie rozliczana nie tylko z „fajności”, lecz z tego, czy da się ją bezpiecznie i przewidywalnie ograniczyć.",
+    "Trzeci sygnał to kapitał nadal płynący do infrastruktury AI, ale już bardziej selektywnie. CuspAI dostaje ogromny strzał na materials discovery i partnerstwa przemysłowe, Infinity zbiera seed/Series A na inference, a Etched wciąż testuje granice wyceny w chipach. Równolegle Craneware przypomina, że vendor concentration w healthcare nadal zamienia pojedynczy incydent w szeroki problem systemowy."
+  ],
+  "summaryBullets": [
+    "Cyber: WordPress 7.0.2 i aktywne exploitacje",
+    "Regulacje: YouTube zaostrza zasady dla AI slop",
+    "Produkty: Adobe Project Indigo wychodzi poza aparat"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-20-1933-0-wordpress-7-0-2-i-aktywne-exploitacje-9de50eb915",
+      "section": "Cyber",
+      "title": "WordPress 7.0.2 i aktywne exploitacje",
+      "standfirst": "WordPress 7.0.2 usuwa jedną krytyczną i jedną wysokiej wagi lukę, a WordPress.org uruchomił forced auto-updates dla podatnych wersji. TechCrunch dodaje, że świeżo załatane błędy są już wykorzystywane w atakach.",
+      "whatHappened": "WordPress wydał pilną łatkę bezpieczeństwa, a ataki na podatne instalacje już trwają.",
+      "whyItMatters": "To zamienia zwykły patch w internet-wide security event dla ogromnej części CMS-owego ekosystemu.",
+      "deeperAnalysis": [
+        "Najważniejsza jest tu kombinacja skali i tempa. WordPress nadal napędza bardzo dużą część internetu, więc nawet jeden poważny security release ma efekt daleko poza samym projektem open source. Forced auto-updates zmniejszają ryzyko, ale nie rozwiązują problemu natychmiast, bo ekosystem pluginów i hostingów reaguje w różnym tempie.",
+        "Drugi wymiar to przewidywalność ataków. Gdy aktywne exploitation pojawia się niemal równocześnie z publicznym patch release, operatorzy przestają mieć komfort „poczekamy do weekendu”. To dobry sygnał na podcast, bo pokazuje, jak szybko bezpieczeństwo infrastruktury webowej zmienia się w operacyjny wyścig."
+      ],
+      "contextPoints": [
+        "WordPress.org rekomenduje natychmiastową aktualizację.",
+        "TechCrunch opisuje aktywne wykorzystanie świeżo załatanych błędów.",
+        "W praktyce to problem całego łańcucha: CMS, pluginy, hosting i maintenance."
+      ],
+      "sources": [
+        {
+          "title": "WordPress News",
+          "url": "https://wordpress.org/news/2026/07/wordpress-7-0-2-release/"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/20/hackers-are-exploiting-recently-patched-wordpress-bugs-putting-millions-of-websites-at-risk/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "WordPress",
+        "security",
+        "exploit",
+        "patching",
+        "CMS",
+        "web"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-20-1933-1-youtube-zaostrza-zasady-dla-ai-slop-b992731e14",
+      "section": "Regulacje",
+      "title": "YouTube zaostrza zasady dla AI slop",
+      "standfirst": "YouTube Help wymaga ujawniania realistycznych treści generowanych lub istotnie modyfikowanych przez AI, a TechCrunch opisuje zaostrzenie polityki wokół „AI slop” i materiałów niepokojących.",
+      "whatHappened": "YouTube przesuwa disclosure i moderację GenAI do codziennego doświadczenia twórców i widzów.",
+      "whyItMatters": "To może stać się praktycznym wzorcem dla innych platform, które chcą ograniczyć synthetic media bez blokowania całej kategorii treści.",
+      "deeperAnalysis": [
+        "Ta zmiana jest ważna dlatego, że platforma nie ogranicza się do ogólnego „mamy politykę”. Ujawnianie AI trafia wprost do procesu uploadu, a oznaczenia pojawiają się w interfejsie widza. To zmienia disclosure z dokumentu compliance w element produktu.",
+        "Jeśli ten model się utrzyma, twórcy będą musieli projektować workflow z myślą o tym, czy materiał jest realistyczny, czy tylko stylistycznie wsparty przez AI. To przesuwa ciężar debaty z pytania „czy można używać AI?” na pytanie „kiedy trzeba to oznaczyć i jak platforma to egzekwuje?”."
+      ],
+      "contextPoints": [
+        "YouTube rozróżnia realistyczne i nierealistyczne treści oraz minor edits.",
+        "Ujawnianie obejmuje też materiały, które przedstawiają realne osoby lub zdarzenia w sposób zmodyfikowany przez AI.",
+        "To pasuje do szerszego trendu disclosure i synthetic media labels w platformach konsumenckich."
+      ],
+      "sources": [
+        {
+          "title": "YouTube Help",
+          "url": "https://support.google.com/youtube/answer/14328491?co=GENIE.Platform%3DAndroid&hl=en"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "YouTube",
+        "AI disclosure",
+        "synthetic media",
+        "moderation",
+        "creator economy",
+        "labels"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-20-1933-2-adobe-project-indigo-wychodzi-poza-aparat-af2bf02f89",
+      "section": "Produkty",
+      "title": "Adobe Project Indigo wychodzi poza aparat",
+      "standfirst": "Adobe Research dodało do Project Indigo eksperymentalny AI Playground z funkcjami usuwania obiektów, zmiany głębi ostrości, stylów fotograficznych, oceny zdjęć i własnych promptów. Eksperyment jest darmowy, bez logowania i dostępny tylko dla małej części użytkowników.",
+      "whatHappened": "Adobe zaczyna wbudowywać generatywne edytowanie bezpośrednio w capture-time mobile photography.",
+      "whyItMatters": "To pokazuje, że AI przestaje być osobnym edytorem, a staje się częścią samego aktu fotografowania.",
+      "deeperAnalysis": [
+        "Najciekawsze jest to, że Adobe nie traktuje AI jako końcówki workflow, tylko jako element momentu uchwycenia sceny. Taki układ ma inną psychologię użycia niż klasyczny post-processing: użytkownik nadal myśli o zdjęciu, które robi, a nie o obrazie, który edytuje później.",
+        "Ograniczony rollout i brak sign-in wskazują, że firma testuje zarówno użyteczność, jak i akceptację dla generatywnych funkcji w aplikacji aparatu. Jeśli ludzie uznają ten model za naturalny, podobne funkcje mogą szybko pojawić się w innych aplikacjach fotograficznych i w domyślnych kamerach OEM."
+      ],
+      "contextPoints": [
+        "Project Indigo zaczynał jako eksperymentalna aplikacja z naciskiem na natural look i wysoką jakość zdjęć.",
+        "AI Playground dodaje critique i prompt-based editing w miejscu, gdzie użytkownik jeszcze stoi przy scenie.",
+        "To potencjalny wzorzec dla mobile AI UX poza czystym chatem."
+      ],
+      "sources": [
+        {
+          "title": "Adobe Research",
+          "url": "https://research.adobe.com/articles/playground/playground.html"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Adobe",
+        "photography",
+        "iOS",
+        "generative AI",
+        "image editing",
+        "mobile"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-20-1933-3-cuspai-i-ai-materials-foundry-a23772427b",
+      "section": "Infrastruktura",
+      "title": "CuspAI i AI Materials Foundry",
+      "standfirst": "CuspAI zamknęło rundę 450 mln dolarów przy wycenie 2,6 mld dolarów i uruchomiło AI Materials Foundry z ponad 48 partnerami. W grze są Nvidia, Meta i Hyundai, a celem jest przyspieszenie odkrywania nowych materiałów.",
+      "whatHappened": "Kapitał płynie do AI-for-science, które może zmienić supply chain chipów i energii.",
+      "whyItMatters": "Jeśli ten model zadziała, materiały discovery stanie się nowym strategicznym frontem AI, obok modeli, chmury i chipów.",
+      "deeperAnalysis": [
+        "Ten ruch jest ważny, bo pokazuje, że AI nie kończy się na software. CuspAI celuje w bardzo konkretny, przemysłowy problem: jak odkrywać materiały szybciej i taniej, szczególnie tam, gdzie dzisiaj ograniczeniem są rzadkie metale i długi cykl badań. To uderza bezpośrednio w semiconductors, batteries i energy systems.",
+        "Z perspektywy geopolitycznej to też interesujące, bo wątek łączy prywatny kapitał z publicznym interesem i sovereign AI. Jeżeli AI ma przyspieszać realne odkrycia naukowe, to rynek zaczyna wyceniać nie tylko modele, ale też przewagę w danych, laboratoriach i partnerstwach przemysłowych."
+      ],
+      "contextPoints": [
+        "Guardian podaje udział Bezos Expedition i UK sovereign AI fund.",
+        "CuspAI mówi o ekspansji do Singapuru, Cambridge, Amsterdamu, Berlina, Tokio i USA.",
+        "Foundry ma skupiać technologię dla chipmakerów i energetyki."
+      ],
+      "sources": [
+        {
+          "title": "The Guardian",
+          "url": "https://www.theguardian.com/technology/2026/jul/20/jeff-bezos-uk-government-invest-in-2bn-british-startup-cuspai"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "CuspAI",
+        "materials science",
+        "semiconductors",
+        "sovereign AI",
+        "energy",
+        "chips"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-20-1933-4-neo-buduje-security-dla-agentow-d3ef924746",
+      "section": "Cyber",
+      "title": "Neo buduje security dla agentów",
+      "standfirst": "a16z pisze, że endpoint security wchodzi w trzecią generację, bo AI agenci działają już z uprawnieniami użytkownika na urządzeniu. WSJ podaje, że Neo wyszło ze stealth z rundą 100 mln dolarów, celując dokładnie w ten problem.",
+      "whatHappened": "Security stack zaczyna być przebudowywany pod agentic software control.",
+      "whyItMatters": "Gdy agenci wykonują akcje „w imieniu użytkownika”, stare założenia EDR, DLP i Zero Trust przestają wystarczać.",
+      "deeperAnalysis": [
+        "W tym wątku najważniejsze jest to, że security przestaje chronić wyłącznie przed malware i zaczyna rozróżniać, czy akcję wykonał człowiek, czy agent. To wymaga nowego modelu atrybucji, nowych guardrails i prawdopodobnie nowych zasad audytu zdarzeń na endpointach.",
+        "Neo jest tu sygnałem, że rynek widzi już szczelinę w istniejących narzędziach. Jeśli Copilot-like i browser-based agents staną się defaultem enterprise desktopów, to kontrola dostępu i egzekwowanie polityk będą musiały działać w czasie wykonania, a nie tylko przy instalacji lub logowaniu."
+      ],
+      "contextPoints": [
+        "a16z opisuje zmianę z antivirus/EDR do agentic software control.",
+        "WSJ podaje rundę 100 mln dolarów i inwestorów z klasy blue-chip.",
+        "W tle jest coraz więcej firm, które budują security layer specifically for agents."
+      ],
+      "sources": [
+        {
+          "title": "a16z",
+          "url": "https://a16z.com/announcement/investing-in-neo/"
+        },
+        {
+          "title": "WSJ",
+          "url": "https://www.wsj.com/pro/cybersecurity/neo-raises-100-million-from-stealth-as-investors-back-battle-tested-cyber-execs-07e2780e"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Neo",
+        "endpoint security",
+        "agents",
+        "Windows",
+        "EDR",
+        "data access"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-20-1933-5-etched-jako-test-dla-wycen-chipow-inference-848d6d483e",
+      "section": "Infrastruktura",
+      "title": "Etched jako test dla wycen chipów inference",
+      "standfirst": "WSJ podaje, że Etched jest w rozmowach o wycenie około 20 mld dolarów w rundzie prowadzonej przez Jane Street. To kolejny dowód, że rynek nadal wycenia inference chips jak frontier infrastructure.",
+      "whatHappened": "AI chip startup próbuje przeskoczyć do wyceny, która jeszcze rok temu wyglądałaby absurdalnie.",
+      "whyItMatters": "To mówi więcej o appetytcie kapitału niż o realnym dojrzeniu produktu.",
+      "deeperAnalysis": [
+        "Wycena Etched działa tu jak barometr rynku. Nie chodzi tylko o jedną spółkę, ale o to, czy inwestorzy nadal wierzą, że specjalizowany silicon da wyraźną przewagę kosztową nad ogólną infrastrukturą GPU. Jeżeli tak, to kapitał dalej będzie płynąć do każdej firmy obiecującej lepszy inference economics.",
+        "Jednocześnie takie liczby przypominają, że rynek ma jeszcze mało twardych danych o produkcyjnej monetizacji tych startupów. Z perspektywy podcastu to dobry temat, bo łączy technologię z finansami i pokazuje, jak szybko AI infrastructure zamienia się w rynek wyceniania narracji."
+      ],
+      "contextPoints": [
+        "Etched jest pozycjonowany jako konkurent dla Nvidia w chipach AI.",
+        "Jane Street prowadzi nową rundę.",
+        "To dobra soczewka do rozmowy o tym, czy inference hardware nadal ma „narrative premium”."
+      ],
+      "sources": [
+        {
+          "title": "WSJ",
+          "url": "https://www.wsj.com/tech/ai/ai-chip-startup-etched-is-in-talks-for-20-billion-valuation-caf1787d"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Etched",
+        "chips",
+        "inference",
+        "valuation",
+        "Jane Street",
+        "Nvidia"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-20-1933-6-craneware-pokazuje-ryzyko-vendor-breach-w-healthcare-b77a912063",
+      "section": "Cyber",
+      "title": "Craneware pokazuje ryzyko vendor breach w healthcare",
+      "standfirst": "TechCrunch podaje, że Craneware padło ofiarą cyberataku z wyciekiem „significant volume” danych klientów, pracowników i partnerów. To ważne, bo software firmy obsługuje tysiące szpitali, klinik i aptek w USA.",
+      "whatHappened": "Atak na dostawcę billing software uderzył w krytyczny fragment łańcucha healthcare IT.",
+      "whyItMatters": "Vendor breach może skalać się na cały sektor, nawet jeśli celem nie był sam szpital.",
+      "deeperAnalysis": [
+        "To klasyczny przykład tego, jak zmienił się wektor ryzyka w opiece zdrowotnej. Zamiast ataku na pojedynczą placówkę, mamy kompromitację dostawcy, który widzi duży fragment transakcji, rozliczeń i danych operacyjnych. To sprawia, że nawet jeden incydent może mieć szerokie skutki wtórne.",
+        "Wersja operacyjna tej historii jest podobna do wcześniejszych healthcare breaches, ale kontekst jest szerszy, bo rynek korzysta z bardzo skoncentrowanego zestawu vendorów. To dobry temat do podcastu, bo pokazuje, że bezpieczeństwo medyczne to nie tylko szpitalne firewalle, lecz także solidność firm, które „siedzą pod spodem”."
+      ],
+      "contextPoints": [
+        "Craneware poinformowało o wycieku danych i trwającym śledztwie.",
+        "Firma obsługuje billing i accounting software dla dużej liczby podmiotów w USA.",
+        "To kolejny sygnał, że health-tech supply chain pozostaje miękkim celem."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/20/hackers-stole-significant-amount-of-data-from-tech-firm-relied-on-by-thousands-of-us-hospitals-and-pharmacies/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Craneware",
+        "healthcare",
+        "data breach",
+        "hospitals",
+        "billing software",
+        "ransomware"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "WordPress 7.0.2 i aktywne exploitacje",
+      "rationale": "To natychmiastowy, masowy problem bezpieczeństwa dla milionów stron.",
+      "sourcesLabel": "WordPress News; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "YouTube zaostrza zasady dla AI slop",
+      "rationale": "Disclosure i moderacja wchodzą do codziennego workflow twórców.",
+      "sourcesLabel": "YouTube Help; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Neo i endpoint security dla agentów",
+      "rationale": "Agenci z uprawnieniami użytkownika wymuszają nową generację security stacku.",
+      "sourcesLabel": "a16z; WSJ"
+    },
+    {
+      "priority": "High",
+      "title": "CuspAI i AI Materials Foundry",
+      "rationale": "AI wchodzi w materiały, chipy i energię, czyli w realną infrastrukturę przemysłu.",
+      "sourcesLabel": "The Guardian"
+    },
+    {
+      "priority": "High",
+      "title": "Etched jako test dla wycen chipów inference",
+      "rationale": "Wycenę $20B trudno ignorować, nawet jeśli revenue story nadal jest niejasne.",
+      "sourcesLabel": "WSJ"
+    },
+    {
+      "priority": "Medium",
+      "title": "Adobe Project Indigo jako AI w aparacie",
+      "rationale": "Capture-time AI może zmienić oczekiwania wobec mobilnej fotografii.",
+      "sourcesLabel": "Adobe Research"
+    },
+    {
+      "priority": "Medium",
+      "title": "Craneware i ryzyko vendor breach w healthcare",
+      "rationale": "Łańcuch dostaw health-tech nadal jest podatny na incydenty o dużym zasięgu.",
+      "sourcesLabel": "TechCrunch"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Adobe Research: An AI playground for the Project Indigo camera app",
+      "url": "https://research.adobe.com/articles/playground/playground.html"
+    },
+    {
+      "title": "YouTube Help: Disclosing use of GenAI content",
+      "url": "https://support.google.com/youtube/answer/14328491?co=GENIE.Platform%3DAndroid&hl=en"
+    },
+    {
+      "title": "TechCrunch: YouTube clarifies policies around AI slop and upsetting videos",
+      "url": "https://techcrunch.com/2026/07/20/youtube-clarifies-policies-around-ai-slop-and-upsetting-videos/"
+    },
+    {
+      "title": "WordPress News: WordPress 7.0.2 Release",
+      "url": "https://wordpress.org/news/2026/07/wordpress-7-0-2-release/"
+    },
+    {
+      "title": "TechCrunch: Hackers are exploiting recently patched WordPress bugs, putting millions of websites at risk",
+      "url": "https://techcrunch.com/2026/07/20/hackers-are-exploiting-recently-patched-wordpress-bugs-putting-millions-of-websites-at-risk/"
+    },
+    {
+      "title": "a16z: Investing in Neo",
+      "url": "https://a16z.com/announcement/investing-in-neo/"
+    },
+    {
+      "title": "WSJ: Neo Raises $100 Million From Stealth as Investors Back Battle-Tested Cyber Execs",
+      "url": "https://www.wsj.com/pro/cybersecurity/neo-raises-100-million-from-stealth-as-investors-back-battle-tested-cyber-execs-07e2780e"
+    },
+    {
+      "title": "Guardian: Jeff Bezos and UK government invest in £2bn British startup CuspAI",
+      "url": "https://www.theguardian.com/technology/2026/jul/20/jeff-bezos-uk-government-invest-in-2bn-british-startup-cuspai"
+    },
+    {
+      "title": "TechCrunch: Inference startup Infinity raises $15M from Touring Capital, OpenAI and Anthropic researchers",
+      "url": "https://techcrunch.com/2026/07/20/inference-startup-infinity-raises-15m-from-touring-capital-openai-and-athropic-researchers/"
+    },
+    {
+      "title": "WSJ: AI Chip Startup Etched Is in Talks for $20 Billion Valuation",
+      "url": "https://www.wsj.com/tech/ai/ai-chip-startup-etched-is-in-talks-for-20-billion-valuation-caf1787d"
+    },
+    {
+      "title": "TechCrunch: Hackers stole significant amount of data from tech firm relied on by thousands of US hospitals and pharmacies",
+      "url": "https://techcrunch.com/2026/07/20/hackers-stole-significant-amount-of-data-from-tech-firm-relied-on-by-thousands-of-us-hospitals-and-pharmacies/"
+    }
+  ]
+}
