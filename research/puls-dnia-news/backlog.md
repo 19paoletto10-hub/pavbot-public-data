@@ -2,6 +2,11 @@
 
 ## Open
 
+- Watch whether the 20/07 weather breakdown turns into new outages, road closures or PSP interventions later this morning.
+- Watch whether Gibraltar changes produce the first flow or queue reports once the new regime settles.
+- Watch whether the BPA deadline triggers retailer, packaging or compliance follow-up today.
+- Watch whether UW, zoo or NIK publish formal clarification or next-step statements.
+
 - Watch whether the 19/07 storm damage turns into real outages or broader transport shutdowns after 21:00.
 - Watch whether the Poznań and Toruń cases produce written police or prosecutor follow-ups.
 - Watch whether Spain, Hungary, Canada or Tate get another material update before the night slot.

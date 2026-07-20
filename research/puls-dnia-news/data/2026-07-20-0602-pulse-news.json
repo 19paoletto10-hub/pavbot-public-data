@@ -1,0 +1,627 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-20",
+  "runTime": "06:02",
+  "status": "Material update",
+  "headline": "Poranek pod znakiem pogody, PiS i nowych europejskich zmian",
+  "summary": "Poranny slot z 20.07 przesuwa feed z wczorajszych skutków burz na nową mieszankę: pogorszenie pogody, polityczne spięcia wokół PiS, Tuska i Czarnka, follow-upy instytucjonalne w Warszawie oraz kilka światowych tematów z Gibraltarem, BPA i wątkiem rosyjsko-chińskim.",
+  "checkedSources": [
+    {
+      "title": "TVN24 latest feed",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24 home page",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "BBC Breaking X",
+      "url": "https://x.com/BBCBreaking"
+    },
+    {
+      "title": "CNN X",
+      "url": "https://x.com/CNN"
+    },
+    {
+      "title": "TVN24 Tusk",
+      "url": "https://tvn24.pl/swiat/koalicja-obrony-przeciwbalistycznej-bez-polski-donald-tusk-przystapimy-jesli-bedzie-oferta-ze-strony-firm-st9141406"
+    },
+    {
+      "title": "TVN24 PiS ultimatum",
+      "url": "https://tvn24.pl/polska/ultimatum-dla-czlonkow-pis-maja-tydzien-na-wycofanie-sie-z-dzialalnosci-w-stowarzyszeniach-st9144255"
+    },
+    {
+      "title": "TVN24 Czarnek anti-Ukrainian narratives",
+      "url": "https://tvn24.pl/polska/przemyslaw-czarnek-uderza-w-ukraine-milosz-motyka-smutna-ale-konsekwentna-polityka-st9143039"
+    },
+    {
+      "title": "TVN24 Czarnek follow-up",
+      "url": "https://tvn24.pl/polska/atak-w-bielsku-bialej-przemyslaw-czarnek-i-grzegorz-braun-buduja-antyukrainskie-nastroje-w-polsce-st9143210"
+    },
+    {
+      "title": "TVN24 NIK Szpital Południowy",
+      "url": "https://tvn24.pl/polska/raport-najwyzszej-izby-kontroli-w-sprawie-warszawskiego-szpitala-poludniowego-co-w-nim-jest-st9142913"
+    },
+    {
+      "title": "TVN24 UW suspension",
+      "url": "https://tvn24.pl/polska/warszawa-uniwersytet-warszawski-zawiesil-jednego-z-profesorow-powazny-sygnal-od-studentki-st9104188"
+    },
+    {
+      "title": "TVN24 Kraków hulajnoga",
+      "url": "https://tvn24.pl/krakow/krakow-samochod-i-hulajnoga-zderzyly-sie-na-florianskiej-nagranie-st9143460"
+    },
+    {
+      "title": "TVN24 zoo incident",
+      "url": "https://tvn24.pl/tvnwarszawa/praga-polnoc/zwiedzajacy-rzucal-czyms-w-goryla-w-warszawskim-zoo-musieli-zamknac-wybieg-st9143970"
+    },
+    {
+      "title": "TVN24 weather outlook",
+      "url": "https://tvn24.pl/tvnmeteo/prognoza/pogoda-na-5-dni-ochlodzenie-w-polsce-czeka-nas-zalamanie-pogody-st9143925"
+    },
+    {
+      "title": "IMGW",
+      "url": "https://imgw.pl/"
+    },
+    {
+      "title": "RCB report",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "TVN24 Gibraltar",
+      "url": "https://tvn24.pl/swiat/bez-kontroli-na-granicy-hiszpanii-z-gibraltarem-podpisano-umowe-ws-swobodnego-przeplywu-osob-i-towarow-st9144563"
+    },
+    {
+      "title": "GOV.UK Gibraltar",
+      "url": "https://www.gov.uk/government/news/agreement-protects-sovereignty-and-economic-security-of-gibraltar"
+    },
+    {
+      "title": "EU Gibraltar",
+      "url": "https://futurium.ec.europa.eu/en/border-focal-point-network/news/gibraltar-spain-border-changes-aim-improve-conditions-cross-border-workers"
+    },
+    {
+      "title": "CNN Monaco X",
+      "url": "https://x.com/CNN/status/2074449794534158420"
+    },
+    {
+      "title": "TVN24 beach body",
+      "url": "https://tvn24.pl/swiat/niemcy-znalezli-cialo-na-plazy-policja-to-polak-ktory-wypadl-z-promu-st9143148"
+    },
+    {
+      "title": "TVN24 BPA",
+      "url": "https://tvn24.pl/biznes/ze-swiata/20-lipca-2026-zmiany-w-sklepach-unia-europejska-wprowadza-zakaz-dotyczacy-bpa-bisfenolu-a-st9130229"
+    },
+    {
+      "title": "EFSA bisphenol",
+      "url": "https://www.efsa.europa.eu/en/topics/topic/bisphenol"
+    },
+    {
+      "title": "EUR-Lex BPA regulation",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/3190/2026-02-23/eng"
+    },
+    {
+      "title": "TVN24 emerytury 2027",
+      "url": "https://tvn24.pl/biznes/dla-seniora/waloryzacja-emerytur-2027-tabela-st9144080"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-07-20-0602-tusk-wyobraznia",
+      "section": "Polityka",
+      "title": "Tusk wraca do koalicji obronnej",
+      "lead": "Premier mówi, że powinien był mieć więcej wyobraźni.",
+      "whatHappened": "Donald Tusk komentuje koalicję obrony przeciwbalistycznej bez Polski i przyznaje, że wcześniej powinien był lepiej przewidzieć przebieg rozmów. W praktyce to kolejny sygnał, że temat bezpieczeństwa powietrznego wraca do obiegu politycznego.",
+      "keyFacts": [
+        "Wątek dotyczy współpracy bez udziału Polski w pierwszej fazie.",
+        "Tusk używa samokorekty, zamiast eskalować spór.",
+        "Sprawa jest częścią szerszej debaty o europejskich gwarancjach bezpieczeństwa."
+      ],
+      "reactions": [
+        "Słowa premiera porządkują narrację po wcześniejszym sporze.",
+        "Temat może wrócić, jeśli pojawi się formalna oferta współpracy dla Polski.",
+        "To sygnał do obserwowania nie tylko w polityce, ale też w obronności."
+      ],
+      "whyItMatters": "Bezpieczeństwo przeciwrakietowe i współpraca z Francją oraz Wielką Brytanią to temat o realnych skutkach strategicznych, nie tylko medialnych.",
+      "context": "Wczorajszy feed był mocniej operacyjny i pogodowy; ten wątek przesuwa uwagę z lokalnych szkód na politykę bezpieczeństwa.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się formalna odpowiedź MON albo MSZ.",
+        "Sprawdzić, czy temat wyjdzie poza komentarz i przejdzie do konkretów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Tusk",
+          "url": "https://tvn24.pl/swiat/koalicja-obrony-przeciwbalistycznej-bez-polski-donald-tusk-przystapimy-jesli-bedzie-oferta-ze-strony-firm-st9141406"
+        }
+      ],
+      "tags": [
+        "Tusk",
+        "obrona",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-20-0602-pis-ultimatum",
+      "section": "Polityka",
+      "title": "PiS utrzymuje ultimatum dla swoich ludzi",
+      "lead": "Partia domyka dyscyplinę wokół zakazu działalności w stowarzyszeniach.",
+      "whatHappened": "PiS przyjęło uchwałę, która daje członkom tydzień na wycofanie się z aktywności w stowarzyszeniach i organizacjach o charakterze politycznym. W praktyce to już nie tylko komunikat, ale twardy test lojalności.",
+      "keyFacts": [
+        "Termin wyznaczono na tydzień od ogłoszenia uchwały.",
+        "Spór dotyczy aktywności poza partyjną strukturą.",
+        "TVN24 opisuje to jako ruch, który ma uporządkować wewnętrzny front."
+      ],
+      "reactions": [
+        "To zwiększa presję na lokalnych działaczy i polityków zaplecza PiS.",
+        "Temat może szybko przejść w nazwiska, jeśli pojawią się odmowy.",
+        "Kierownictwo partii pokazuje, że chce egzekwować decyzję, a nie tylko ją ogłaszać."
+      ],
+      "whyItMatters": "Takie uchwały wpływają na układ sił w partii i na to, kto ma w niej realny wpływ po stronie terenowej.",
+      "context": "To kontynuacja napięć, które już wcześniej były widoczne w partyjnych komentarzach i mediach społecznościowych.",
+      "watchNext": [
+        "Sprawdzić, czy padną pierwsze nazwiska objęte presją.",
+        "Sprawdzić, czy pojawi się reakcja polityków, których uchwała dotyczy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 PiS ultimatum",
+          "url": "https://tvn24.pl/polska/ultimatum-dla-czlonkow-pis-maja-tydzien-na-wycofanie-sie-z-dzialalnosci-w-stowarzyszeniach-st9144255"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "ultimatum",
+        "partia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-20-0602-czarnek-antyukrainskie-narracje",
+      "section": "Polityka",
+      "title": "Czarnek i antyukraińskie narracje",
+      "lead": "TVN24 łączy wypowiedzi Czarnka z raportem o pięciu narracjach.",
+      "whatHappened": "Redakcja TVN24 zestawia wypowiedzi Przemysława Czarnka z raportem o pięciu głównych antyukraińskich narracjach. To utrzymuje w obiegu temat podsycania emocji wokół Ukrainy i przenoszenia sporu do polityki krajowej.",
+      "keyFacts": [
+        "Wątki są prowadzone równolegle przez dwa materiały TVN24.",
+        "Raport pokazuje mechanizm narracyjny, nie tylko pojedynczy komentarz.",
+        "Temat ma charakter polityczny i bezpieczeństwa informacyjnego."
+      ],
+      "reactions": [
+        "Spór może dalej polaryzować prawą stronę sceny politycznej.",
+        "To także sygnał dla obserwacji dezinformacji i antyukraińskich przekazów.",
+        "Materiał wygląda na próbę domknięcia szerszej tezy, nie tylko jednego incydentu."
+      ],
+      "whyItMatters": "Antyukraińskie narracje wpływają na klimat polityczny, bezpieczeństwo społeczne i podatność na dezinformację.",
+      "context": "W poprzednich slotach wątek Ukrainy był obecny głównie przez Wołyń i bezpieczeństwo. Tu przesuwa się w stronę komunikacyjnej wojny narracji.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się formalna reakcja obozu Czarnka.",
+        "Sprawdzić, czy temat przełoży się na kolejne komentarze polityków."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Czarnek comment",
+          "url": "https://tvn24.pl/polska/przemyslaw-czarnek-uderza-w-ukraine-milosz-motyka-smutna-ale-konsekwentna-polityka-st9143039"
+        },
+        {
+          "title": "TVN24 anti-Ukrainian report follow-up",
+          "url": "https://tvn24.pl/polska/atak-w-bielsku-bialej-przemyslaw-czarnek-i-grzegorz-braun-buduja-antyukrainskie-nastroje-w-polsce-st9143210"
+        }
+      ],
+      "tags": [
+        "Czarnek",
+        "Ukraina",
+        "dezinformacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-20-0602-nik-szpital-poludniowy",
+      "section": "Polska",
+      "title": "NIK publikuje raport o Szpitalu Południowym",
+      "lead": "Warszawski szpital wraca do obiegu po kontroli NIK.",
+      "whatHappened": "Najwyższa Izba Kontroli opublikowała raport o Szpitalu Południowym, a TVN24 podkreśla wątki związane z pracą personelu, SOR i organizacją centrum chirurgii kręgosłupa. To już materiał o nadzorze i jakości zarządzania, a nie o pojedynczym incydencie.",
+      "keyFacts": [
+        "Raport dotyczy warszawskiego Szpitala Południowego.",
+        "TVN24 wskazuje na przepracowanie medyków i organizację SOR.",
+        "Temat dotyka też lokalnej polityki zdrowotnej w stolicy."
+      ],
+      "reactions": [
+        "Dla miasta to potencjalnie niewygodny temat do wyjaśnienia.",
+        "Dla pacjentów ważne są standardy pracy i przepływów w szpitalu.",
+        "Prawdopodobne są komentarze samorządu i kierownictwa placówki."
+      ],
+      "whyItMatters": "Raport NIK może przełożyć się na organizację pracy, finansowanie i odpowiedzialność zarządczą.",
+      "context": "To nie jest nowy konflikt, tylko kolejny etap kontroli i publicznego rozliczania dużej miejskiej placówki.",
+      "watchNext": [
+        "Sprawdzić reakcję miasta i dyrekcji szpitala.",
+        "Sprawdzić, czy pojawią się dodatkowe wyjaśnienia NIK."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 NIK report",
+          "url": "https://tvn24.pl/polska/raport-najwyzszej-izby-kontroli-w-sprawie-warszawskiego-szpitala-poludniowego-co-w-nim-jest-st9142913"
+        }
+      ],
+      "tags": [
+        "NIK",
+        "szpital",
+        "Warszawa"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-20-0602-uw-zawieszenie-profesora",
+      "section": "Polska",
+      "title": "UW zawiesza profesora po zgłoszeniu studentki",
+      "lead": "Sprawa trafiła do uczelni i prokuratury.",
+      "whatHappened": "Uniwersytet Warszawski zawiesił jednego z profesorów po tym, jak studentka zgłosiła sprawę władzom uczelni, a później także prokuraturze. To już oficjalny krok instytucjonalny, nie tylko medialny sygnał.",
+      "keyFacts": [
+        "Źródłem był sygnał złożony przez studentkę.",
+        "Sprawa wróciła na uczelnię po ponownym spotkaniu z profesorem.",
+        "Uczelnia podjęła zawieszenie jako środek ostrożności."
+      ],
+      "reactions": [
+        "To zwiększa presję na pełne wyjaśnienie sprawy.",
+        "Uczelnia sygnalizuje, że nie chce czekać na finał postępowania karnego.",
+        "Wrażliwy charakter sprawy może generować dalsze komentarze środowiskowe."
+      ],
+      "whyItMatters": "To przykład sytuacji, w której reakcja uczelni i prokuratury ma bezpośredni wpływ na bezpieczeństwo i zaufanie do instytucji.",
+      "context": "W miejskim i akademickim obiegu to jedna z tych spraw, które szybko przechodzą z plotki do formalnego postępowania.",
+      "watchNext": [
+        "Sprawdzić, czy uczelnia wyda szerszy komunikat.",
+        "Sprawdzić, czy prokuratura poda etap postępowania."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 UW suspension",
+          "url": "https://tvn24.pl/polska/warszawa-uniwersytet-warszawski-zawiesil-jednego-z-profesorow-powazny-sygnal-od-studentki-st9104188"
+        }
+      ],
+      "tags": [
+        "UW",
+        "uczelnia",
+        "prokuratura"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-20-0602-krakow-hulajnoga",
+      "section": "Bezpieczeństwo",
+      "title": "Hulajnoga wyjeżdża przed auto w Krakowie",
+      "lead": "Nagranie pokazuje bliski wypadek na Floriańskiej.",
+      "whatHappened": "W centrum Krakowa hulajnoga elektryczna wyjechała wprost przed nadjeżdżające auto. TVN24 opisuje zdarzenie jako nagły i groźny manewr, który mógł skończyć się dużo poważniej.",
+      "keyFacts": [
+        "Zdarzenie miało miejsce na Floriańskiej.",
+        "Materiał został nagrany i szybko podchwycony przez redakcję.",
+        "To typowy przykład ryzyka związanego z ruchem mikromobilności w centrum miasta."
+      ],
+      "reactions": [
+        "Kierowcy i piesi dostają kolejny sygnał o potrzebie większej ostrożności.",
+        "Miejski ruch staje się bardziej nieprzewidywalny przy mieszaniu aut i hulajnóg.",
+        "Takie nagrania zwykle wzmacniają dyskusję o zasadach korzystania z hulajnóg."
+      ],
+      "whyItMatters": "Jedno takie zdarzenie może skończyć się ciężkim urazem i natychmiastowym zamknięciem ulicy.",
+      "context": "To lokalny materiał bezpieczeństwa, ale dobrze pasuje do letniego miksu ulicznego ryzyka i miejskiej mikromobilności.",
+      "watchNext": [
+        "Sprawdzić, czy policja poda szczegóły zdarzenia.",
+        "Sprawdzić, czy pojawi się lokalny komentarz o bezpieczeństwie hulajnóg."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Kraków hulajnoga",
+          "url": "https://tvn24.pl/krakow/krakow-samochod-i-hulajnoga-zderzyly-sie-na-florianskiej-nagranie-st9143460"
+        }
+      ],
+      "tags": [
+        "Kraków",
+        "hulajnoga",
+        "wypadek"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-20-0602-zoo-goryl",
+      "section": "Bezpieczeństwo",
+      "title": "Warszawskie zoo zamyka wybieg goryli",
+      "lead": "Po incydencie z odwiedzającymi wybieg został zamknięty.",
+      "whatHappened": "Warszawskie zoo zamknęło wybieg goryli po tym, jak odwiedzający rzucał przedmiotami w goryla i próbował go dokarmiać. Obiekt apeluje o przestrzeganie zasad i nieprowokowanie zwierząt.",
+      "keyFacts": [
+        "Incydent dotyczył goryla Aziziego.",
+        "Pracownicy zoo wskazali na rzucanie przedmiotami i dokarmianie.",
+        "Wybieg zamknięto tymczasowo z powodów bezpieczeństwa."
+      ],
+      "reactions": [
+        "Zoo domaga się większej odpowiedzialności od odwiedzających.",
+        "Sprawa może wrócić jako przykład łamania zasad w obiektach publicznych.",
+        "Dla opiekunów zwierząt to dodatkowa interwencja i stres dla stada."
+      ],
+      "whyItMatters": "To nie tylko kwestia wizerunkowa, ale realne zagrożenie dla zwierząt i ludzi.",
+      "context": "W letnim ruchu turystycznym podobne incydenty potrafią szybko rozlewać się na media społecznościowe i wywoływać reakcję instytucji.",
+      "watchNext": [
+        "Sprawdzić, czy zoo poda czas ponownego otwarcia wybiegu.",
+        "Sprawdzić, czy pojawi się reakcja policji lub straży miejskiej."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 zoo incident",
+          "url": "https://tvn24.pl/tvnwarszawa/praga-polnoc/zwiedzajacy-rzucal-czyms-w-goryla-w-warszawskim-zoo-musieli-zamknac-wybieg-st9143970"
+        }
+      ],
+      "tags": [
+        "zoo",
+        "Warszawa",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-20-0602-pogoda-zalamanie",
+      "section": "Alerty",
+      "title": "IMGW ostrzega przed załamaniem pogody",
+      "lead": "Po spokojniejszym początku tygodnia wracają deszcz i burze.",
+      "whatHappened": "TVN Meteo sygnalizuje załamanie pogody, a oficjalne dane IMGW i RCB nadal wskazują na ryzyko burz, wiatru i przelotnych opadów. To oznacza, że po wczorajszym epizodzie alertowym temat nie znika, tylko zmienia formę.",
+      "keyFacts": [
+        "IMGW publikuje prognozę tygodniową dla 17–23.07.",
+        "RCB utrzymuje raporty o burzach, wietrze i opadach.",
+        "W praktyce chodzi o ryzyko kolejnych lokalnych szkód i opóźnień."
+      ],
+      "reactions": [
+        "Służby i kierowcy nadal powinni trzymać się trybu podwyższonej ostrożności.",
+        "To może szybko przejść w nowe interwencje PSP, jeśli front się wzmocni.",
+        "Najbardziej wrażliwe będą lokalne drogi, infrastruktura i przerwy w dostawie prądu."
+      ],
+      "whyItMatters": "Po burzowej niedzieli prognoza decyduje o tym, czy rano mamy tylko ostrzeżenie, czy już kolejny problem operacyjny.",
+      "context": "To ciąg dalszy pogodowego cyklu z 19.07, ale w nowym, porannym oknie i z mocniejszym naciskiem na prognozę niż na szkody.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się nowe alerty RCB lub IMGW.",
+        "Sprawdzić, czy front przejdzie w interwencje PSP albo utrudnienia drogowe."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 weather outlook",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/pogoda-na-5-dni-ochlodzenie-w-polsce-czeka-nas-zalamanie-pogody-st9143925"
+        },
+        {
+          "title": "IMGW home",
+          "url": "https://imgw.pl/"
+        },
+        {
+          "title": "RCB daily report",
+          "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "burze",
+        "IMGW"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-20-0602-gibraltar-granica",
+      "section": "Świat",
+      "title": "Gibraltar przechodzi w nowy reżim graniczny",
+      "lead": "UK i UE kończą lądowe kontrole na granicy z Hiszpanią.",
+      "whatHappened": "TVN24 opisuje porozumienie o Gibraltaru jako start nowego rozdziału dla przepływu ludzi i towarów. Oficjalne komunikaty UK i UE potwierdzają fluid border, przy czym kontrola przechodzi na port i lotnisko, a sama lądowa granica ma być bez tradycyjnych kontroli.",
+      "keyFacts": [
+        "Porozumienie zostało ogłoszone jako przełom po latach rozmów.",
+        "UK podkreśla ochronę suwerenności i ekonomii Gibraltaru.",
+        "UE opisuje zmianę jako poprawę warunków dla pracowników transgranicznych."
+      ],
+      "reactions": [
+        "To może przełożyć się na ruch turystyczny i dojazdy pracowników.",
+        "Sprawa ma też wymiar polityczny, bo dotyka postbrexitowych relacji UK-EU.",
+        "Potencjalnie wróci temat bezpieczeństwa i kontroli na lotnisku oraz w porcie."
+      ],
+      "whyItMatters": "Zmiana na granicy Gibraltaru to praktyczny przykład porozumienia, które może poprawić przepływ ludzi i towarów w Europie.",
+      "context": "To jeden z nowych europejskich wątków, które nie były jeszcze w centrum wczorajszego wieczornego feedu.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się pierwsze sygnały o zmianach w ruchu granicznym.",
+        "Sprawdzić, czy UK albo Hiszpania podadzą więcej szczegółów wdrożeniowych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Gibraltar",
+          "url": "https://tvn24.pl/swiat/bez-kontroli-na-granicy-hiszpanii-z-gibraltarem-podpisano-umowe-ws-swobodnego-przeplywu-osob-i-towarow-st9144563"
+        },
+        {
+          "title": "GOV.UK Gibraltar",
+          "url": "https://www.gov.uk/government/news/agreement-protects-sovereignty-and-economic-security-of-gibraltar"
+        },
+        {
+          "title": "EU Gibraltar",
+          "url": "https://futurium.ec.europa.eu/en/border-focal-point-network/news/gibraltar-spain-border-changes-aim-improve-conditions-cross-border-workers"
+        }
+      ],
+      "tags": [
+        "Gibraltar",
+        "UE",
+        "granica"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-20-0602-cnn-monaco",
+      "section": "Świat",
+      "title": "CNN wraca do wątku zamachu w Monako",
+      "lead": "Podejrzana w ukraińskim wątku sprawy została znaleziona martwa.",
+      "whatHappened": "CNN opisuje śmierć kobiety podejrzanej o udział w sprawie związanej z próbą zamachu w Monako, a śledczy wskazują też na ślad ukraiński. To utrzymuje temat bezpieczeństwa i powiązań transgranicznych w obiegu międzynarodowym.",
+      "keyFacts": [
+        "Wątek łączy Monako z Ukrainą i czynnościami śledczymi.",
+        "Sprawa ma wyraźny komponent bezpieczeństwa i kryminalny.",
+        "CNN traktuje ją jako aktualny materiał ogólnoświatowy."
+      ],
+      "reactions": [
+        "To może wywołać dalsze pytania o sprawność międzynarodowych działań operacyjnych.",
+        "Temat ma potencjał do kolejnych newsów śledczych.",
+        "Jest to jeden z nielicznych świeższych materiałów CNN widocznych w tym oknie."
+      ],
+      "whyItMatters": "Tego typu sprawy pokazują, jak szybko pojedynczy wątek kryminalny staje się tematem międzynarodowego bezpieczeństwa.",
+      "context": "CNN pojawia się tu jako discovery check i jednocześnie źródło świata poza bieżącą polityką europejską.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się formalne informacje śledczych z Monako lub Ukrainy.",
+        "Sprawdzić, czy CNN poda więcej nazwisk lub tła operacyjnego."
+      ],
+      "sources": [
+        {
+          "title": "CNN Monaco X",
+          "url": "https://x.com/CNN/status/2074449794534158420"
+        }
+      ],
+      "tags": [
+        "CNN",
+        "Monako",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-20-0602-uznam-polak-prom",
+      "section": "Świat",
+      "title": "Polak znaleziony na plaży po wypadnięciu z promu",
+      "lead": "Niemiecka policja wiąże ciało z wypadkiem z promu.",
+      "whatHappened": "Na plaży w Niemczech znaleziono ciało mężczyzny, a policja podała, że to Polak, który wypadł z promu. To zamyka tragiczną, transgraniczną sprawę z elementem transportowym.",
+      "keyFacts": [
+        "Miejsce zdarzenia to niemiecka strona granicy przy Uznamie.",
+        "Policja wskazała na związek z wypadnięciem z promu.",
+        "To temat łączący bezpieczeństwo na wodzie i mobilność transgraniczną."
+      ],
+      "reactions": [
+        "Sprawa może doczekać się dalszych wyjaśnień służb i armatora.",
+        "To kolejny materiał z kategorii tragic safety news, nie polityki.",
+        "Może wrócić w kontekście procedur bezpieczeństwa na promach."
+      ],
+      "whyItMatters": "Takie przypadki zwykle wywołują pytania o procedury bezpieczeństwa i nadzór podczas podróży morskiej.",
+      "context": "W regionie Morza Bałtyckiego i przy granicy niemieckiej to ważny, choć pojedynczy, materiał z elementem transgranicznym.",
+      "watchNext": [
+        "Sprawdzić, czy policja lub operator promu podadzą więcej szczegółów.",
+        "Sprawdzić, czy temat pojawi się w polskich mediach lokalnych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 beach body",
+          "url": "https://tvn24.pl/swiat/niemcy-znalezli-cialo-na-plazy-policja-to-polak-ktory-wypadl-z-promu-st9143148"
+        }
+      ],
+      "tags": [
+        "Niemcy",
+        "prom",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-20-0602-rosja-chinska-firma",
+      "section": "Świat",
+      "title": "Rosyjski wątek trafia do chińskiej firmy",
+      "lead": "TVN24 przypomina o ministrze z rosyjskimi kontaktami i nowej pracy.",
+      "whatHappened": "W światowym obiegu TVN24 przypomina historię ministra, który przekazywał informacje Rosji, a teraz ma pracować dla chińskiej firmy. To krótki, ale istotny wątek z obszaru wpływów, bezpieczeństwa i relacji z Chinami.",
+      "keyFacts": [
+        "Materiał trzyma razem rosyjski i chiński trop.",
+        "Wątek ma charakter bezpieczeństwa i wpływów politycznych.",
+        "To jeden z tych tematów, które mogą wracać po kolejnych wyjaśnieniach."
+      ],
+      "reactions": [
+        "Taki temat zwykle pobudza dalsze pytania o lojalność i wpływy.",
+        "Może wrócić w komentarzach o polityce Węgier i relacjach z Moskwą oraz Pekinem.",
+        "To materiał raczej z kategorii tła niż jednorazowego newsa."
+      ],
+      "whyItMatters": "Wątki rosyjsko-chińskie są dziś ważne nie tylko politycznie, ale też z punktu widzenia bezpieczeństwa informacji.",
+      "context": "TVN24 już wcześniej wykorzystywał ten trop w swoim world bundle; teraz wraca on jako aktualny element poranka.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się nowe oficjalne wyjaśnienia wokół tej historii.",
+        "Sprawdzić, czy temat trafi do większych stacji międzynarodowych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Siergiej Ławrow tag",
+          "url": "https://tvn24.pl/tagi/siergiej-lawrow"
+        }
+      ],
+      "tags": [
+        "Rosja",
+        "Chiny",
+        "wpływy"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-20-0602-bpa-zakaz",
+      "section": "Gospodarka",
+      "title": "UE kończy okres przejściowy dla BPA",
+      "lead": "Od dziś część opakowań z bisfenolem A nie może trafiać na rynek.",
+      "whatHappened": "TVN24 przypomina, że 20.07 kończy się okres przejściowy dla części opakowań i materiałów zawierających BPA. Oficjalne źródła UE i EFSA potwierdzają, że od tego momentu standardy wchodzą w nową fazę wdrożenia.",
+      "keyFacts": [
+        "Chodzi o materiały do kontaktu z żywnością.",
+        "Okres przejściowy dla części produktów kończy się dziś, 20 lipca 2026.",
+        "To bezpośrednio dotyczy producentów, importerów i detalistów."
+      ],
+      "reactions": [
+        "Firmy muszą pilnować zgodności materiałowej i etykietowania.",
+        "Konsumenci mogą zauważyć zmiany w opakowaniach i asortymencie.",
+        "To także temat dla kontroli zgodności i łańcucha dostaw."
+      ],
+      "whyItMatters": "To regulacja, która ma realny wpływ na koszty, opakowania i dostępność produktów na półkach.",
+      "context": "W odróżnieniu od wielu komentarzy politycznych to twarda zmiana regulacyjna z konkretną datą wejścia w życie.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się komunikaty branżowe lub handlowe.",
+        "Sprawdzić, czy detalici sygnalizują zmiany w opakowaniach i stanach magazynowych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 BPA",
+          "url": "https://tvn24.pl/biznes/ze-swiata/20-lipca-2026-zmiany-w-sklepach-unia-europejska-wprowadza-zakaz-dotyczacy-bpa-bisfenolu-a-st9130229"
+        },
+        {
+          "title": "EFSA bisphenol",
+          "url": "https://www.efsa.europa.eu/en/topics/topic/bisphenol"
+        },
+        {
+          "title": "EUR-Lex BPA regulation",
+          "url": "https://eur-lex.europa.eu/eli/reg/2024/3190/2026-02-23/eng"
+        }
+      ],
+      "tags": [
+        "BPA",
+        "UE",
+        "regulacje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-20-0602-emerytury-2027",
+      "section": "Gospodarka",
+      "title": "TVN24 porządkuje waloryzację emerytur 2027",
+      "lead": "Serwis pokazuje konkretne wzrosty świadczeń.",
+      "whatHappened": "TVN24 opublikował tabelę waloryzacji emerytur 2027, czyli prosty przegląd tego, jak miałyby wyglądać wzrosty różnych świadczeń. To materiał czysto użytkowy, ale istotny dla szerokiej grupy odbiorców.",
+      "keyFacts": [
+        "Materiał podaje kwoty dla różnych poziomów świadczeń.",
+        "To wątek bardziej praktyczny niż polityczny.",
+        "Temat zwykle szybko krąży wśród seniorów i rodzin."
+      ],
+      "reactions": [
+        "Czytelnicy będą go traktować jako punkt odniesienia do planowania budżetu.",
+        "Temat może wrócić przy każdej zmianie wskaźników i projekcji rządu.",
+        "To raczej danych niż komentarz, więc ma wysoką użyteczność informacyjną."
+      ],
+      "whyItMatters": "Dla wielu gospodarstw domowych nawet niewielka zmiana świadczenia jest ważna operacyjnie.",
+      "context": "To dobry poranny materiał objaśniający, który nie wymaga dodatkowego interpretowania przez redakcję.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się kolejne warianty lub korekty tabeli.",
+        "Sprawdzić, czy rządowy komunikat będzie spójny z wyliczeniami TVN24."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 emerytury 2027",
+          "url": "https://tvn24.pl/biznes/dla-seniora/waloryzacja-emerytur-2027-tabela-st9144080"
+        }
+      ],
+      "tags": [
+        "emerytury",
+        "senior",
+        "budżet"
+      ],
+      "priority": "low"
+    }
+  ]
+}
