@@ -2,6 +2,10 @@
 
 ## Open
 
+- Watch whether the Warsaw metro disruption clears or becomes a longer commuter delay.
+- Watch whether the gas price spike and Ryanair warning trigger a fresh market or airline follow-up.
+- Watch whether Timpson's resignation becomes a wider UK cabinet move.
+- Watch whether the Guyana ferry rescue tally or the Iran / Ukraine casualty notes change again before evening.
 - Watch whether the Wołomin pursuit turns into a formal police or prosecutor note.
 - Watch whether the PiS loyalty test produces actual names, exits or a public rebuttal.
 - Watch whether the Iran / Ormuz tension pushes into another maritime, oil or official security note.

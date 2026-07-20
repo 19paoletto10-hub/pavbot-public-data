@@ -1,5 +1,12 @@
 # Puls Dnia News Index
 
+The 2026-07-20 12:03 slot shifts the feed into a more operational midday mix:
+Warsaw metro closes three stations after a stroller falls on the tracks, a
+fatal motorcycle crash lands near Mińsk Mazowiecki, Żywiec WOPR turns wind
+into a real rescue operation, PiS keeps its Konfederacja pressure campaign,
+gas pushes above 60 euro/MWh, and BBC/CNN add Iran, Ukraine, Tate, Guyana,
+UK cabinet and Trump-market follow-up.
+
 The 2026-07-20 09:02 slot pushes the feed into a more operational morning mix:
 Wołomin adds a concrete police chase, PiS turns discipline into a loyalty test,
 the Polish AI sector gets a scale signal, and Iran drives both oil prices and
