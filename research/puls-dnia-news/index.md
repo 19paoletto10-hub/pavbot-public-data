@@ -1,5 +1,11 @@
 # Puls Dnia News Index
 
+The 2026-07-20 15:01 slot moves the feed from metro/gas into crime,
+procedural justice and health reform: Chojna body, drunk A2 driver, Nazara
+adjournment, Iwona Cygan, Ryanair window incident, PiS pressure, AliExpress
+fine, storm radar, and a fresh UK/BBC world block led by Burnham, Ukraine
+recruitment and the Black Sea ship attack.
+
 The 2026-07-20 12:03 slot shifts the feed into a more operational midday mix:
 Warsaw metro closes three stations after a stroller falls on the tracks, a
 fatal motorcycle crash lands near Mińsk Mazowiecki, Żywiec WOPR turns wind
@@ -92,6 +98,10 @@ The 2026-07-17 09:01 slot przesuwa feed na bardziej operacyjny miks: PiS wchodzi
 The 2026-07-17 06:01 slot przesuwa feed na bardziej operacyjny miks: PiS i Morawiecki wchodzą w jawny spór, Tusk mobilizuje klub KO, a bezpieczeństwo domykają dywersja na rzecz obcego wywiadu i przechwycenie rosyjskich samolotów nad Bałtykiem. W gospodarce widać Domańskiego, Żabkę i TikToka, a alerty trzymają Kanadę i IMGW. Za granicą BBC i CNN utrzymują Iran, Ukrainę, polski wątek sabotażu, Rohingya i Genuę w wysokiej temperaturze.
 
 ## Current State
+
+The 2026-07-20 15:01 slot sharpens the feed around crime, process and policy:
+Chojna, A2, Nazara, Iwona Cygan, health reform, AliExpress, storms and a
+fresh UK/BBC world reset led by Burnham.
 
 The 2026-07-18 12:05 slot adds a more operational mix: the storm line is still live, Małopolska has a freight derailment with replacement service, PiS is now at the level of a signed letter to Kaczyński, and Zełenski is moving on Wołyń archives. The economy lane shifts into bank maintenance, system kaucyjny complaints and courier layoffs, while the world block stays Iran-led but adds Canada wildfires, Ukraine minister backlash, Yemen piracy risk and India's first commercial rocket.
 

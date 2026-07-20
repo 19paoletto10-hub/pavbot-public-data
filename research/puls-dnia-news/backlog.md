@@ -2,9 +2,12 @@
 
 ## Open
 
+- Watch whether Chojna and the Iwona Cygan case get formal police or prosecutor follow-up.
+- Watch whether the health ministry package turns into published draft text and early union reaction.
+- Watch whether AliExpress or the Commission publish the full DSA response and implementation detail.
+- Watch whether Burnham's cabinet line-up and the Black Sea follow-up add a new world lead in the next slot.
 - Watch whether the Warsaw metro disruption clears or becomes a longer commuter delay.
 - Watch whether the gas price spike and Ryanair warning trigger a fresh market or airline follow-up.
-- Watch whether Timpson's resignation becomes a wider UK cabinet move.
 - Watch whether the Guyana ferry rescue tally or the Iran / Ukraine casualty notes change again before evening.
 - Watch whether the Wołomin pursuit turns into a formal police or prosecutor note.
 - Watch whether the PiS loyalty test produces actual names, exits or a public rebuttal.
@@ -209,3 +212,4 @@
 - Ziobro's ENA now has a written justification; the next check is only for an
   appeal or renewed motion.
 - Gibraltar's provisional application now has a published implementation follow-up, so the next check is only for travel or customs clarifications.
+- Timpson's resignation already fed into a broader UK cabinet reset; keep it only if another minister resigns.
