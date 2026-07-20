@@ -2,6 +2,11 @@
 
 ## Open
 
+- Watch whether the Wołomin pursuit turns into a formal police or prosecutor note.
+- Watch whether the PiS loyalty test produces actual names, exits or a public rebuttal.
+- Watch whether the Iran / Ormuz tension pushes into another maritime, oil or official security note.
+- Watch whether the IMGW burze block turns into outages, fallen trees or PSP interventions after noon.
+
 - Watch whether the 20/07 weather breakdown turns into new outages, road closures or PSP interventions later this morning.
 - Watch whether Gibraltar changes produce the first flow or queue reports once the new regime settles.
 - Watch whether the BPA deadline triggers retailer, packaging or compliance follow-up today.

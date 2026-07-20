@@ -1,0 +1,509 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-20",
+  "runTime": "09:02",
+  "status": "Material update",
+  "headline": "Wołomin, PiS i Iran przesuwają poranny puls",
+  "summary": "Poranny slot z 20.07 09:02 przesuwa feed z samego tła pogodowego i komentarzy politycznych w bardziej operacyjny miks: lokalny pościg w Wołominie, test lojalności w PiS, wzrost firm AI w Polsce, reakcja rynku ropy na Iran oraz świeże wojenne i bezpieczeństwa wątki z BBC i CNN.",
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS latest",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN X",
+      "url": "https://x.com/CNN"
+    },
+    {
+      "title": "TVN24 Wołomin",
+      "url": "https://tvn24.pl/tvnwarszawa/okolice/wolomin-zaczal-uciekac-i-wjechal-w-radiowoz-mial-zakaz-prowadzenia-pojazdow-st9149702?source=rss"
+    },
+    {
+      "title": "TVN24 PiS test lojalności",
+      "url": "https://tvn24.pl/polska/spor-w-pis-mateusz-morawiecki-moze-stac-sie-trzecia-sila-w-sejmie-st9149617?source=rss"
+    },
+    {
+      "title": "TVN24 AI firms",
+      "url": "https://tvn24.pl/biznes/tech/polski-sektor-ai-rosnie-w-sile-kazdego-dnia-powstaja-34-firmy-zwiazane-ze-sztuczna-inteligencja-st9149685?source=rss"
+    },
+    {
+      "title": "TVN24 oil prices Iran",
+      "url": "https://tvn24.pl/biznes/ze-swiata/ceny-ropy-naftowej-20-lipca-2026-rynki-gwaltownie-reaguja-na-sygnaly-z-iranu-st9149658?source=rss"
+    },
+    {
+      "title": "TVN24 weather anomaly",
+      "url": "https://tvn24.pl/tvnmeteo/prognoza/ochlodzenie-anomalia-temperatury-nad-polska-10-stopni-chlodniej-niz-zwykle-st9149657?source=rss"
+    },
+    {
+      "title": "TVN24 IMGW warnings",
+      "url": "https://tvn24.pl/tvnmeteo/prognoza/ostrzezenia-imgw-burze-w-polsce-w-poniedzialek-20-07-tu-moze-silnie-padac-st9149652?source=rss"
+    },
+    {
+      "title": "IMGW",
+      "url": "https://imgw.pl/"
+    },
+    {
+      "title": "TVN24 Iran oil and strikes",
+      "url": "https://tvn24.pl/biznes/ze-swiata/iran-usa-dziewiata-noc-nalotow-eksplozje-w-ciesninie-ormuz-donald-trump-zostalo-im-bardzo-niewiele-st9149626?source=rss"
+    },
+    {
+      "title": "BBC Iran strikes",
+      "url": "https://www.bbc.co.uk/news/articles/cly52xzjd3qo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "CNN Iran rebuild imagery",
+      "url": "https://x.com/CNN/status/2076000710429192578"
+    },
+    {
+      "title": "BBC Ukraine attack",
+      "url": "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC Tate brothers",
+      "url": "https://www.bbc.co.uk/news/articles/cwymly9yd33o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "BBC Guyana ferry",
+      "url": "https://www.bbc.co.uk/news/articles/cm2gm99nrm7o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+      "title": "TVN24 Norway fire",
+      "url": "https://tvn24.pl/biznes/ze-swiata/norwegia-ogromny-pozar-w-drammen-widok-pogorzeliska-jest-wstrzasajacy-st9149576?source=rss"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-07-20-0902-wolomin-radiowoz",
+      "section": "Polska",
+      "title": "Wołomin: pościg kończy się uderzeniem w radiowóz",
+      "lead": "19-latek z zakazem prowadzenia próbował uciec przed policją.",
+      "whatHappened": "TVN24 podaje, że policjanci chcieli zatrzymać samochód, który mógł prowadzić 19-letni mieszkaniec gminy Jadów objęty prawomocnym zakazem prowadzenia pojazdów. Kierowca gwałtownie cofnął i wjechał w radiowóz, po czym próbował uciekać.",
+      "keyFacts": [
+        "Sprawa dotyczy samochodu jadącego mimo sądowego zakazu.",
+        "Policja używała sygnałów i poleciła kierowcy zatrzymać się.",
+        "To świeży, lokalny incydent z kategorii bezpieczeństwa drogowego."
+      ],
+      "reactions": [
+        "Sprawa może szybko przejść w komunikat o zatrzymaniu i zarzutach.",
+        "To kolejny poranny materiał, który przesuwa feed z komentowania do konkretnego incydentu.",
+        "Incydent może wrócić jako przykład problemu z egzekwowaniem zakazów prowadzenia."
+      ],
+      "whyItMatters": "Takie zdarzenia wpływają na bezpieczeństwo ruchu i pokazują, czy zakazy są realnie egzekwowane.",
+      "context": "Po wczorajszym dominującym tle burzowym poranek zaczyna się od konkretnego zdarzenia policyjnego zamiast samego alertu.",
+      "watchNext": [
+        "Sprawdzić, czy policja poda zarzuty albo informację o zatrzymaniu.",
+        "Sprawdzić, czy pojawi się szkic dalszych czynności wobec kierowcy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Wołomin",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/wolomin-zaczal-uciekac-i-wjechal-w-radiowoz-mial-zakaz-prowadzenia-pojazdow-st9149702?source=rss"
+        }
+      ],
+      "tags": [
+        "Wołomin",
+        "policja",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-20-0902-pis-lojalnosc",
+      "section": "Polityka",
+      "title": "PiS robi z dyscypliny test lojalności",
+      "lead": "Morawiecki może stać się osobnym biegunem w Sejmie.",
+      "whatHappened": "TVN24 opisuje spór w PiS jako sprawdzian lojalności wobec partyjnej linii. W tle pojawia się teza, że Mateusz Morawiecki może zyskać polityczną autonomię i stać się trzecią siłą w Sejmie, jeśli napięcia się pogłębią.",
+      "keyFacts": [
+        "Chodzi o obowiązek wycofania się z działalności w stowarzyszeniach.",
+        "Narracja przesuwa się z ogólnego sporu w stronę dyscypliny personalnej.",
+        "W centrum pozostaje pytanie, czy partia utrzyma jednolity front."
+      ],
+      "reactions": [
+        "Temat może szybko przejść w nazwiska, jeśli pojawią się odmowy.",
+        "Morawiecki w takiej ramie przestaje być tylko komentatorem wewnętrznego sporu.",
+        "To utrzymuje PiS jako główny polityczny generator napięcia w krajowym feedzie."
+      ],
+      "whyItMatters": "Spory o lojalność i strukturę wpływają na realny układ sił w partii i w Sejmie.",
+      "context": "To kontynuacja wcześniejszej linii napięć w PiS, ale z mocniejszym akcentem na osobiste konsekwencje.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się pierwsze nazwiska objęte presją.",
+        "Sprawdzić, czy ktoś publicznie odmówi podporządkowania się uchwale."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 PiS test lojalności",
+          "url": "https://tvn24.pl/polska/spor-w-pis-mateusz-morawiecki-moze-stac-sie-trzecia-sila-w-sejmie-st9149617?source=rss"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Morawiecki",
+        "dyscyplina"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-20-0902-ai-firmy",
+      "section": "Technologia",
+      "title": "Polski sektor AI rośnie w liczbę firm",
+      "lead": "W Polsce przybywa średnio 34 firm AI dziennie.",
+      "whatHappened": "TVN24 opisuje rosnący segment firm powiązanych ze sztuczną inteligencją i podaje tempo 34 nowych podmiotów dziennie. Materiał pokazuje, że AI nie jest już niszowym dodatkiem, tylko wyraźnym fragmentem rynku IT.",
+      "keyFacts": [
+        "Artykuł liczy nowe podmioty związane z AI na polskim rynku.",
+        "W tle jest szerszy wzrost sektora IT i usług automatyzacyjnych.",
+        "Materiał pokazuje także dużą rolę jednoosobowych działalności gospodarczych."
+      ],
+      "reactions": [
+        "To sygnał, że rynek AI w Polsce ma już własną skalę i dynamikę.",
+        "Może to wspierać narrację o wzroście popytu na narzędzia automatyzacji.",
+        "Temat dobrze pasuje do porannego bloku gospodarka plus technologia."
+      ],
+      "whyItMatters": "Tempo powstawania nowych firm pokazuje, czy AI w Polsce przechodzi z fazy eksperymentu do trwałej specjalizacji rynku.",
+      "context": "To świeższy temat gospodarczo-technologiczny niż wczorajsze komentarze o dużych platformach i regulatorach.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się dane o inwestycjach albo zatrudnieniu w tym segmencie.",
+        "Sprawdzić, czy temat pociągnie za sobą kolejny materiał o rynku pracy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 AI firms",
+          "url": "https://tvn24.pl/biznes/tech/polski-sektor-ai-rosnie-w-sile-kazdego-dnia-powstaja-34-firmy-zwiazane-ze-sztuczna-inteligencja-st9149685?source=rss"
+        }
+      ],
+      "tags": [
+        "AI",
+        "startupy",
+        "rynek"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-20-0902-ropa-iran",
+      "section": "Gospodarka",
+      "title": "Ropa reaguje na sygnały z Iranu",
+      "lead": "Rynek paliw znów czyta geopolitykę.",
+      "whatHappened": "TVN24 pisze, że ceny ropy rosną po zaostrzeniu działań zbrojnych w regionie Zatoki Perskiej. Artykuł łączy ruch cen z dziewiątą nocą nalotów USA na Iran i z napięciem wokół cieśniny Ormuz.",
+      "keyFacts": [
+        "Zmiana cen jest opisana jako reakcja na sygnały z regionu.",
+        "W tle są naloty USA i ryzyko dla żeglugi przez Ormuz.",
+        "To bezpośrednio przekłada się na paliwa i oczekiwania rynku."
+      ],
+      "reactions": [
+        "Jeśli napięcie się utrzyma, ruch cen może przejść w trwały trend.",
+        "Rynek paliw reaguje szybciej niż polityka, więc wpływ może być odczuwalny wcześniej niż komunikaty dyplomatyczne.",
+        "To już nie tylko temat wojskowy, ale też cenowy."
+      ],
+      "whyItMatters": "Ropa szybko przenosi konflikt z poziomu militarnego na koszty transportu, energii i cen w gospodarce.",
+      "context": "Ten wątek dopina poranny blok Iran plus gospodarka po wczorajszych ogólnych ostrzeżeniach o napięciach na rynku.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się dodatkowy komunikat o żegludze lub cenach paliw.",
+        "Sprawdzić, czy ruch cen przełoży się na kolejne rynkowe komentarze."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 oil prices Iran",
+          "url": "https://tvn24.pl/biznes/ze-swiata/ceny-ropy-naftowej-20-lipca-2026-rynki-gwaltownie-reaguja-na-sygnaly-z-iranu-st9149658?source=rss"
+        }
+      ],
+      "tags": [
+        "ropa",
+        "Iran",
+        "rynek"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-20-0902-temp-anomalia",
+      "section": "Alerty",
+      "title": "Nad Polską robi się wyraźnie chłodniej",
+      "lead": "TVN24 mówi o anomalii do 10 stopni poniżej normy.",
+      "whatHappened": "Serwis TVN24 opisuje silne ochłodzenie nad Polską i podaje, że temperatura może być nawet o 10 stopni niższa od typowej dla tej pory roku. To przesuwa poranny focus z samego ryzyka burzowego na rzeczywiste odczuwalne wychłodzenie.",
+      "keyFacts": [
+        "To już nie tylko prognoza frontu, ale konkretna anomalia temperatury.",
+        "Ochłodzenie obejmuje znaczną część kraju.",
+        "Materiał łączy spadek temperatury z obecnym układem niżowym."
+      ],
+      "reactions": [
+        "Taka zmiana zwykle wywołuje większe zainteresowanie niż samo ostrzeżenie ogólne.",
+        "Może to zmniejszyć ryzyko upałów, ale nie kończy ryzyka burzowego.",
+        "Najbardziej użyteczne będzie sprawdzenie, gdzie spadek przełoży się na lokalne skutki."
+      ],
+      "whyItMatters": "Wyraźna anomalia temperatury wpływa na codzienne zachowania, prognozy i część decyzji operacyjnych w terenie.",
+      "context": "W porównaniu z poprzednim slotem pogoda wygląda mniej jak ogólny alert, a bardziej jak realna, odczuwalna zmiana warunków.",
+      "watchNext": [
+        "Sprawdzić, czy ochłodzenie po południu przejdzie w nowe alerty pogodowe.",
+        "Sprawdzić, czy pojawią się zgłoszenia o silnym wietrze albo lokalnych szkodach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 weather anomaly",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/ochlodzenie-anomalia-temperatury-nad-polska-10-stopni-chlodniej-niz-zwykle-st9149657?source=rss"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "temperatura",
+        "alert"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-20-0902-imgw-burze",
+      "section": "Alerty",
+      "title": "IMGW nadal trzyma burze na Pomorzu Zachodnim",
+      "lead": "Żółte ostrzeżenia obejmują wiatr, deszcz i grad.",
+      "whatHappened": "IMGW utrzymuje ostrzeżenia dla województwa zachodniopomorskiego. TVN24 podaje, że prognozowane są burze z opadami do około 15 litrów na metr kwadratowy, lokalnie do 30 l/mkw., porywami do 70 km/h i możliwym gradem.",
+      "keyFacts": [
+        "Ostrzeżenia mają obowiązywać w godzinach 12-19.",
+        "Najmocniejszy sygnał dotyczy północno-zachodniej Polski.",
+        "To oficjalny alert, a nie tylko redakcyjna prognoza."
+      ],
+      "reactions": [
+        "Jeśli burze się rozwiną, pierwsze skutki będą raczej lokalne niż ogólnokrajowe.",
+        "Ten alert może jeszcze przejść w zgłoszenia o zalaniach albo powalonych drzewach.",
+        "Na tym etapie najważniejsza jest obserwacja, czy ostrzeżenia nie zostaną rozszerzone."
+      ],
+      "whyItMatters": "Oficjalny alert IMGW to pierwszy twardy wskaźnik, że pogoda może znów przejść z prognozy w zdarzenia terenowe.",
+      "context": "To kontynuacja pogodowego wątku z poprzedniego slotu, ale z bardziej konkretnego poziomu ostrzeżeń regionalnych.",
+      "watchNext": [
+        "Sprawdzić, czy po 12:00 pojawią się interwencje PSP lub zgłoszenia o szkodach.",
+        "Sprawdzić, czy RCB dołoży kolejne komunikaty."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 IMGW warnings",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/ostrzezenia-imgw-burze-w-polsce-w-poniedzialek-20-07-tu-moze-silnie-padac-st9149652?source=rss"
+        },
+        {
+          "title": "IMGW",
+          "url": "https://imgw.pl/"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "burze",
+        "Pomorze Zachodnie"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-20-0902-iran-naloty",
+      "section": "Świat",
+      "title": "USA prowadzą dziewiątą noc nalotów na Iran",
+      "lead": "Trump mówi o atakach w hołdzie dla poległych żołnierzy.",
+      "whatHappened": "BBC podaje, że Centcom rozpoczął nową falę nalotów na Iran dziewiątą noc z rzędu, a Donald Trump mówi, że uderzenia były wymierzone w Iran w hołdzie dla trzech amerykańskich żołnierzy zabitych w ostatnich dniach. W tle pojawiają się też eksplozje i napięcie w cieśninie Ormuz.",
+      "keyFacts": [
+        "BBC mówi o dziewiątej kolejnej nocy działań USA.",
+        "Trump łączy ataki z wcześniejszymi stratami po stronie USA.",
+        "Sprawa nadal dotyczy bezpieczeństwa żeglugi w Ormuz."
+      ],
+      "reactions": [
+        "To utrzymuje Iran jako główny globalny punkt zapalny poranka.",
+        "Temat ma bezpośredni potencjał wpływu na rynki energii i transport morski.",
+        "BBC pokazuje, że konflikt nie schodzi z pierwszych stron."
+      ],
+      "whyItMatters": "Kontynuacja nalotów i ryzyko dla Ormuz mogą przełożyć się na bezpieczeństwo morskie i ceny energii poza samym konfliktem.",
+      "context": "Ten wątek dominuje światowy blok podobnie jak w poprzednich slotach, ale teraz pojawia się z jeszcze mocniejszym akcentem na ciągłość działań.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się kolejny komunikat CENTCOM albo UKMTO.",
+        "Sprawdzić, czy konflikt przejdzie w nowe decyzje dotyczące żeglugi."
+      ],
+      "sources": [
+        {
+          "title": "BBC Iran strikes",
+          "url": "https://www.bbc.co.uk/news/articles/cly52xzjd3qo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "Ormuz"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-20-0902-iran-odbudowa-cnn",
+      "section": "Świat",
+      "title": "CNN widzi sygnały odbudowy irańskich instalacji",
+      "lead": "Nowe zdjęcia satelitarne sugerują ruch przy obiektach nuklearnych.",
+      "whatHappened": "CNN podaje, że przeanalizowane zdjęcia satelitarne pokazują oznaki, iż Iran może próbować odbudowywać swoje instalacje nuklearne. To nie jest jeszcze oficjalne potwierdzenie zamiaru, ale kolejny sygnał eskalacji i odbudowy zdolności.",
+      "keyFacts": [
+        "Materiał opiera się na analizie satelitarnej CNN.",
+        "Dotyczy obiektów nuklearnych, więc ma duży ciężar bezpieczeństwa.",
+        "To osobny wątek od samych nalotów i od ruchu cen ropy."
+      ],
+      "reactions": [
+        "Jeśli zostanie potwierdzony, temat może wejść do oficjalnej dyplomacji i kontroli międzynarodowej.",
+        "To wzmacnia obraz Iranu jako głównego punktu napięcia na dziś.",
+        "W praktyce zwiększa też wagę kolejnych komunikatów o żegludze i sankcjach."
+      ],
+      "whyItMatters": "Odbudowa infrastruktury nuklearnej oznacza potencjalnie dłuższy cykl napięcia niż pojedyncza wymiana uderzeń.",
+      "context": "CNN dokłada do wojennego bloku nie tylko relację z frontu, ale też sygnał o możliwej odbudowie strategicznej infrastruktury.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się formalna reakcja USA albo IAEA.",
+        "Sprawdzić, czy inni dostawcy obrazów satelitarnych potwierdzą ten kierunek."
+      ],
+      "sources": [
+        {
+          "title": "CNN Iran rebuild imagery",
+          "url": "https://x.com/CNN/status/2076000710429192578"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "nuklearne",
+        "CNN"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-20-0902-ukraina-rakiety",
+      "section": "Świat",
+      "title": "Rosja uderza rakietami i dronami w ukraińskie miasta",
+      "lead": "BBC podaje co najmniej osiem ofiar śmiertelnych.",
+      "whatHappened": "BBC opisuje rosyjski atak rakietowo-dronowy na kilka ukraińskich miast. Według materiału zginęło co najmniej osiem osób, a dziesiątki zostały ranne; wśród najbardziej dotkniętych miejsc są Charków, Kijów, Zaporoże i Sumy.",
+      "keyFacts": [
+        "Atak objął kilka miast jednocześnie.",
+        "BBC podaje liczbę co najmniej ośmiu zabitych.",
+        "Wątek pozostaje żywy niezależnie od konfliktu Iran-USA."
+      ],
+      "reactions": [
+        "To utrzymuje Ukrainę wysoko w światowym bloku porannym.",
+        "Skala strat może uruchomić kolejne oficjalne komunikaty ukraińskie.",
+        "Temat pokazuje, że wojna w Ukrainie pozostaje w aktywnej fazie także w tle innych kryzysów."
+      ],
+      "whyItMatters": "Duży, wielomiejscowy atak ma znaczenie humanitarne i polityczne oraz wpływa na dalsze wsparcie dla Ukrainy.",
+      "context": "Po poprzednich slotach z kasą wojenną ten materiał daje już konkretny poranny obraz skali uderzenia.",
+      "watchNext": [
+        "Sprawdzić, czy ukraińskie władze podadzą dokładniejszy bilans.",
+        "Sprawdzić, czy pojawi się reakcja Zachodu albo kolejne uderzenia."
+      ],
+      "sources": [
+        {
+          "title": "BBC Ukraine attack",
+          "url": "https://www.bbc.co.uk/news/articles/c2el7xpnzrpo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-20-0902-tate-areszt",
+      "section": "Świat",
+      "title": "Bracia Tate aresztowani w USA",
+      "lead": "Brytyjskie zarzuty urosły już do 59.",
+      "whatHappened": "BBC podaje, że Andrew i Tristan Tate zostali aresztowani w USA po kolejnych brytyjskich zarzutach, które podniosły łączną liczbę do 59. Materiał pokazuje, że sprawa nie jest już tylko medialnym konfliktem, ale ma twardy, międzynarodowy wymiar prawny.",
+      "keyFacts": [
+        "Aresztowanie nastąpiło w Stanach Zjednoczonych.",
+        "Brytyjskie służby zwiększyły pulę zarzutów.",
+        "BBC wskazuje też na wniosek o ekstradycję."
+      ],
+      "reactions": [
+        "To może szybko przejść w kolejne kroki sądowe i proceduralne.",
+        "Sprawa ma duży potencjał medialny, ale też wyraźny ciężar prawny.",
+        "Może wrócić jako temat USA-UK, a nie tylko internetowych kontrowersji."
+      ],
+      "whyItMatters": "Międzynarodowe zarzuty i aresztowanie podnoszą sprawę z poziomu skandalu do poziomu formalnego postępowania.",
+      "context": "W porannym bloku to jeden z mocniejszych materiałów z obszaru bezpieczeństwa i prawa w świecie zachodnim.",
+      "watchNext": [
+        "Sprawdzić, czy padnie decyzja o ekstradycji albo termin posiedzenia.",
+        "Sprawdzić, czy brytyjskie władze opublikują dodatkowe szczegóły."
+      ],
+      "sources": [
+        {
+          "title": "BBC Tate brothers",
+          "url": "https://www.bbc.co.uk/news/articles/cwymly9yd33o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Tate",
+        "ekstradycja",
+        "UK"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-20-0902-guyana-prom",
+      "section": "Świat",
+      "title": "Prom u wybrzeży Gujany tonie z 133 osobami",
+      "lead": "BBC mówi o pasażerach i załodze na pokładzie.",
+      "whatHappened": "BBC informuje o zatonięciu promu, na którym znajdowało się 133 pasażerów i członków załogi. To świeży incydent transportowo-ratowniczy z potencjalnym dalszym bilansem poszukiwawczo-ratunkowym.",
+      "keyFacts": [
+        "Na pokładzie było 133 osób łącznie z załogą.",
+        "Zdarzenie dotyczy wybrzeża Gujany.",
+        "Na tym etapie najważniejszy jest bilans ratunkowy, nie polityka."
+      ],
+      "reactions": [
+        "To może przejść w oficjalny komunikat o liczbie uratowanych albo ofiar.",
+        "Jeśli pojawi się bilans, temat zyska wyższą materialność.",
+        "Na razie to mocny, ale nadal wczesny news operacyjny."
+      ],
+      "whyItMatters": "Duży wypadek transportowy szybko staje się sprawą humanitarną i logistyczną, zwłaszcza jeśli pojawią się ofiary lub zaginieni.",
+      "context": "To jeden z bardziej klasycznych newsów zagranicznych w porannym koszyku BBC: wypadek z możliwym rozwojem ratowniczym.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się bilans uratowanych i zaginionych.",
+        "Sprawdzić, czy lokalne władze podadzą przyczynę zatonięcia."
+      ],
+      "sources": [
+        {
+          "title": "BBC Guyana ferry",
+          "url": "https://www.bbc.co.uk/news/articles/cm2gm99nrm7o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Gujana",
+        "prom",
+        "wypadek"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-20-0902-norwegia-pozar",
+      "section": "Świat",
+      "title": "W Drammen płonie ogromny pożar",
+      "lead": "Policja zabezpieczyła prawdopodobne miejsce zapłonu.",
+      "whatHappened": "TVN24 opisuje duży pożar w norweskim Drammen i podaje, że policja zabezpieczyła prawdopodobne miejsce wybuchu ognia. Według lokalnych służb rozważany jest wypadek albo samozapłon, a zdjęcia pogorzeliska wyglądają bardzo ciężko.",
+      "keyFacts": [
+        "To świeży pożar o dużej skali wizualnej i operacyjnej.",
+        "Policja już zabezpieczyła miejsce potencjalnego zapłonu.",
+        "Na ten moment nie ma sygnału, że to musiała być przyczyna inna niż wypadek lub samozapłon."
+      ],
+      "reactions": [
+        "Jeśli potwierdzi się przyczyna, temat zostanie szybko domknięty jako incydent techniczny albo losowy.",
+        "Może jeszcze dojść do komunikatu o szkodach i ewakuacji.",
+        "To raczej europejski incydent bezpieczeństwa niż główny temat polityczny."
+      ],
+      "whyItMatters": "Duży pożar w mieście może szybko wejść w obszar ewakuacji, śledztwa i strat infrastrukturalnych.",
+      "context": "To samodzielny europejski incydent, który dobrze uzupełnia cięższy blok Iran-Ukraina w światowym koszyku.",
+      "watchNext": [
+        "Sprawdzić, czy policja i straż podadzą przyczynę albo bilans szkód.",
+        "Sprawdzić, czy pojawi się informacja o ewakuacji lub ofiarach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Norway fire",
+          "url": "https://tvn24.pl/biznes/ze-swiata/norwegia-ogromny-pozar-w-drammen-widok-pogorzeliska-jest-wstrzasajacy-st9149576?source=rss"
+        }
+      ],
+      "tags": [
+        "Norwegia",
+        "pożar",
+        "Drammen"
+      ],
+      "priority": "medium"
+    }
+  ]
+}
