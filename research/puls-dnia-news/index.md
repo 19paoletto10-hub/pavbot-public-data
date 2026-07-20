@@ -1,5 +1,11 @@
 # Puls Dnia News Index
 
+The 2026-07-20 21:01 slot shifts the feed from metro-only operational mode
+into storm damage, a sharper domestic legal-political cluster around the veto
+and TK, and a deeper UK cabinet reset. Abroad, the run adds a fresh Iran/
+Black Sea/Red Sea security layer, a Ryanair fuel-cost warning and a small
+AI-branded corporate signal from CNN.
+
 The 2026-07-20 15:01 slot moves the feed from metro/gas into crime,
 procedural justice and health reform: Chojna body, drunk A2 driver, Nazara
 adjournment, Iwona Cygan, Ryanair window incident, PiS pressure, AliExpress

@@ -2,7 +2,10 @@
 
 ## Open
 
-- Watch whether the Warsaw metro disruption clears or expands into a longer evening delay.
+- Watch whether the storm damage in Szczecin, Bemowo and Świętokrzyskie turns into PSP, utility or transport disruption.
+- Watch whether Kotula's plan B or Święczkowski's letter produces a written follow-up.
+- Watch whether Burnham's cabinet line-up and first fiscal signals become concrete.
+- Watch whether Iran, Morze Czarne and Red Sea produce a new maritime or casualty note.
 - Watch whether Burnham names a first cabinet or policy package after taking office.
 - Watch whether the Spain fire or Poland storms turn into outages, evacuations or transport blocks.
 - Watch whether the Iran and Black Sea items get a fresh official maritime or military follow-up.
@@ -206,6 +209,7 @@
 - The planned bank service windows ran this morning; keep them only if customer issues continue.
 - The Iran-US strike exchange now has a fresh CENTCOM note and CNN live coverage; keep only maritime or airspace spillover open.
 - The Kijów missile barrage now has an official casualty tally from Ukrainian sources; keep only a higher casualty or damage update open.
+- The Warsaw metro disruption cleared after 19:00; keep it only if another stoppage appears.
 - Production automation exists for `Pavbot Puls Dnia 3h` with the intended
   Europe/Warsaw cadence context.
 - Public manifest now exposes `puls-dnia-news` artifacts as `pulseNewsData`,
