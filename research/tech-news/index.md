@@ -1,8 +1,10 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-19
+Last updated: 2026-07-20
 
 ## Current Understanding
+
+Poranny run z 2026-07-20 przesuwa temat z billing/interoperability do physical AI, hardware politics i trust surfaces. NVIDIA w Japonii opisuje AI jako element infrastruktury przemysłowej, OpenAI łączy Codex Micro z bardziej fizycznym control surface, ale jednocześnie GitHub release notes skorygowały Codex context windows do 272k tokenów. Apple dokręca spór o hardware i trade secrets, Current AI/Bhashini pokazują public-interest AI stack w Indiach, Google wprowadza AI transparency labels, Kimi K3 utrzymuje presję open-weight, a robotaxi i Netflix dopisują warstwę safety oraz media M&A.
 
 Wieczorny refresh z 2026-07-19 przesuwa temat z billingu i action surfaces do publicznej infrastruktury AI oraz lokalnego oporu wobec jej kosztów. Current AI, Bhashini i AIKosh pokazują, że public-interest stack dla AI ma już konkretne urządzenia offline, granty i publiczne źródła danych, a protesty przeciw data centers i moratorium w Nowym Jorku dowodzą, że energia, woda i lokalna zgoda stały się częścią core story. Równolegle D.C. robotaxi rules oraz spór o Guardrails Alliance w OpenAI pokazują, że governance wchodzi w etap miejskich przepisów, PAC-ów i wewnętrznych pęknięć.
 
@@ -210,6 +212,7 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-20: Dzisiejszy run dodał NVIDIA/Japan physical AI, Apple vs OpenAI legal escalation, Codex Micro + 272k context, public AI stack w Indiach, Google AI ad transparency labels, Kimi K3, robotaxi safety i Netflix genAI M&A disclosure.
 - 2026-07-19: Wieczorny refresh dodał Current AI/Bhashini/AIKosh jako public-interest AI stack, nowojorskie moratorium i protesty przeciw data centers, spór Uber-Waymo o reguły robotaxi w D.C. oraz nacisk Guardrails Alliance w OpenAI.
 - 2026-07-19: Run przesunął temat na connected apps w Google Search, DMA interoperability, compute-based Gemini metering, Kimi K3, Claude India pricing oraz access control wokół crawlerów i public safety AI.
 - 2026-07-18: Wieczorny refresh dodał Etched $20B valuation, SpaceX/Pentagon compute, DOJ TikTok reversal, Vertu Alphafold, Agility Fremont hub i IBM AI capex squeeze; wspólny sygnał przesunął się w stronę compute commercialization i physical AI readiness.

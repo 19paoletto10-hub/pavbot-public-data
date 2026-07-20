@@ -1,0 +1,369 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-20",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run przesuwa temat z samego „AI w produkcie” do fizycznych control surfaces, industrial policy i twardszego governance. NVIDIA opisuje Japonię jako miejsce, gdzie physical AI, robotics, digital twins i agentowe sieci stają się elementem strategii przemysłowej, a nie tylko pojedynczym demo. To ważne, bo sygnał wychodzi poza laboratoria i wchodzi w warstwę państwa, fabryk i łańcuchów dostaw.",
+    "Druga oś to napięcie między sprzętem a prawem. OpenAI pokazuje Codex Micro jako fizyczny interfejs do pracy z agentem, ale jednocześnie GitHub release notes podają skorygowane okno kontekstu 272,000 tokenów. W tym samym czasie Apple eskaluje spór o tajemnice handlowe, wysyłając legal letters do byłych pracowników OpenAI. Efekt jest czytelny: kontrola nad AI coraz częściej oznacza kontrolę nad formą urządzenia, zakresem pamięci roboczej i granicami własności intelektualnej.",
+    "Trzecia oś to zaufanie i publiczny dostęp. Current AI i Bhashini pokazują, że public-interest AI stack może mieć offline handheld, wspólne dane i wsparcie rządowe, a Google zaczyna oznaczać reklamy tworzone przez AI w widocznym consumer UI. Kimi K3 przypomina, że open-weight presja nadal przyspiesza, robotaxi wchodzą w etap reguł i safety review, a Netflix ujawnia koszt akwizycji narzędzi genAI w post-produkcji. To już nie jest dyskusja o samym modelu, tylko o tym, kto może go używać, jak jest rozliczany i kto bierze odpowiedzialność za skutki uboczne."
+  ],
+  "summaryBullets": [
+    "Infrastruktura: Japonia jako laboratorium physical AI",
+    "Produkty: Apple przykręca śrubę OpenAI hardware",
+    "Produkty: Codex staje się fizyczny, ale pamięć robocza maleje"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-20-0-japonia-jako-laboratorium-physical-ai-fd12ebf5f3",
+      "section": "Infrastruktura",
+      "title": "Japonia jako laboratorium physical AI",
+      "standfirst": "NVIDIA opisuje Japonię jako miejsce, w którym physical AI, robotyka, digital twins i AI-native networking łączą się w jeden ekosystem przemysłowy. To sygnał, że AI zaczyna być opisywana językiem fabryk, pracowników i łańcucha dostaw.",
+      "whatHappened": "NVIDIA przesuwa rozmowę o AI z modeli na industrial policy.",
+      "whyItMatters": "To daje nowy wzorzec dla krajów, które chcą traktować AI jako element infrastruktury gospodarki, a nie tylko software upgrade.",
+      "deeperAnalysis": [
+        "W tej historii najważniejsze nie jest samo wystąpienie Jensaena Huanga, tylko zestaw partnerów i zastosowań. Obok robotyki pojawiają się digital twins, multimodal foundation models i sieci wspierające agentów, czyli warstwy potrzebne do wdrożeń w produkcji, logistyce i serwisie.",
+        "To zmienia kategorię całej dyskusji. Physical AI przestaje być futurystycznym dodatkiem do chatbotów i staje się sposobem organizowania pracy, energii i obliczeń. Jeśli ten kierunek się utrzyma, Japonia może stać się jednym z najlepszych case studies tego, jak AI wchodzi do realnej gospodarki."
+      ],
+      "contextPoints": [
+        "NVIDIA wiąże physical AI z przemysłem, a nie tylko z demonstracjami laboratoriów.",
+        "Wątek dotyczy też supply chain, worker shortage i AI-native networking.",
+        "To dobry kontrapunkt wobec czysto software'owych newsów z wczorajszego runu."
+      ],
+      "sources": [
+        {
+          "title": "NVIDIA",
+          "url": "https://blogs.nvidia.com/blog/japan-ecosystem-2026/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "NVIDIA",
+        "Japonia",
+        "physical AI",
+        "robotics",
+        "digital twins",
+        "supply chain"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-20-1-apple-przykreca-srube-openai-hardware-d9b0090120",
+      "section": "Produkty",
+      "title": "Apple przykręca śrubę OpenAI hardware",
+      "standfirst": "Apple wysyła legal letters do byłych pracowników teraz w OpenAI, dokładając presję do już otwartego sporu o tajemnice handlowe. To nie jest już tylko spór o narrację, ale o materiał dowodowy i przyszły product pipeline.",
+      "whatHappened": "Apple intensyfikuje spór wokół hardware OpenAI.",
+      "whyItMatters": "Hardware race zaczyna być ograniczany przez prawo i compliance, a nie tylko przez design i kapitał.",
+      "deeperAnalysis": [
+        "W praktyce Apple próbuje udokumentować własną wersję historii: że część wiedzy potrzebnej do budowy nowego urządzenia mogła trafić do OpenAI wraz z byłymi pracownikami. To dobrze pokazuje, że hardware AI nie jest już czystą grą o form factor, ale także o ochronę IP i kontroli nad ludźmi, którzy przechodzą między firmami.",
+        "To ważne również dlatego, że wokół OpenAI narasta jednocześnie oczekiwanie na pierwszy consumer device i pytanie, czy startup w ogóle może zbudować sprzęt bez długiego łańcucha zależności. Apple nie musi wygrać sprawy, żeby spowolnić przeciwnika. Wystarczy, że zwiększy koszt prawny i komunikacyjny całego projektu."
+      ],
+      "contextPoints": [
+        "FT pisze o około 40 byłych pracownikach OpenAI objętych legal letters.",
+        "9to5Mac opisuje, że listy są częścią szerszej batalii po pozwie o trade secrets.",
+        "W tle zostaje pytanie o form factor i termin premiery pierwszego urządzenia."
+      ],
+      "sources": [
+        {
+          "title": "FT",
+          "url": "https://www.ft.com/content/1b8c9d52-88a9-426b-ba47-f1811f859166"
+        },
+        {
+          "title": "9to5Mac",
+          "url": "https://9to5mac.com/2026/07/17/apple-sends-legal-letters-to-former-employees-now-at-openai/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Apple",
+        "OpenAI",
+        "hardware",
+        "legal",
+        "trade secrets",
+        "Jony Ive"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-20-2-codex-staje-sie-fizyczny-ale-pamiec-robocza-maleje-ac3bb7ef32",
+      "section": "Produkty",
+      "title": "Codex staje się fizyczny, ale pamięć robocza maleje",
+      "standfirst": "OpenAI pokazał Codex Micro jako fizyczny interfejs z tactile controls i live RGB feedback, a GitHub release notes mówią o context windows skorygowanych do 272,000 tokenów. To dobry symbol tego, że control surface się materializuje, ale runtime window robi się węższe.",
+      "whatHappened": "OpenAI łączy namacalny workflow z twardszym limitem kontekstu.",
+      "whyItMatters": "Produkt agentowy coraz bardziej wymaga zarówno lepszego sterowania, jak i lepszego budżetowania pamięci.",
+      "deeperAnalysis": [
+        "Codex Micro jest ciekawy nie dlatego, że to kolejny gadżet. Jest ciekawy, bo pokazuje, że agentowe narzędzia chcą wejść do codziennej pracy przez gest, przycisk i sygnał świetlny, a nie wyłącznie przez chatbox. To może być wygodne dla użytkowników, którzy chcą mniej klikania i bardziej bezpośredniego feedbacku.",
+        "Jednocześnie GitHub release notes o 272,000-token context window przypominają, że produkty AI nie rosną w nieskończoność. Dla użytkownika oznacza to bardziej świadome zarządzanie pamięcią roboczą, a dla operatora - bardziej agresywne planowanie promptów, zadań i kompakcji. Dla rynku to sygnał, że „więcej agentów” nie musi oznaczać „więcej swobody”."
+      ],
+      "contextPoints": [
+        "Codex Micro daje fizyczną formę sterowania pracą z agentem.",
+        "GitHub release notes pokazują, że context windows są elementem product policy, nie tylko specyfikacji modelu.",
+        "To dobry temat o tym, jak UX, runtime limits i billing składają się w jeden produkt."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/supply/co-lab/work-louder/"
+        },
+        {
+          "title": "GitHub",
+          "url": "https://github.com/openai/codex/releases"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "Codex",
+        "hardware",
+        "context window",
+        "agent UX",
+        "GitHub"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-20-3-publiczny-stack-ai-w-indiach-nabiera-ksztaltu-bba5eb0875",
+      "section": "Regulacje",
+      "title": "Publiczny stack AI w Indiach nabiera kształtu",
+      "standfirst": "Current AI i Bhashini pokazują, że public-interest AI stack może mieć ręczny, offline sprzęt, wspólne dane i finansowanie od instytucji publicznych. To już nie abstrakcyjna idea sovereign AI, tylko konkretna ścieżka wdrożenia.",
+      "whatHappened": "Indie testują AI jako element publicznej infrastruktury.",
+      "whyItMatters": "To może stać się alternatywnym modelem wobec czysto komercyjnych platform, zwłaszcza w wielojęzycznych i słabiej skomunikowanych obszarach.",
+      "deeperAnalysis": [
+        "Najważniejszy element tego wątku to połączenie lokalności i dostępności. Offline handheld Suno Sutra oraz wielojęzyczne modele oznaczają, że AI ma działać także tam, gdzie łącze jest słabe, a potrzeba komunikacji bardzo wysoka. To jakościowo inny model niż zachodnie produkty projektowane głównie pod subskrypcję i cloud-first use.",
+        "Jeśli ten stack się utrzyma, Indie mogą pokazać, jak łączyć granty, publiczne dane i realny produkt w jednym ekosystemie. To ważne nie tylko dla rynku lokalnego, ale także dla krajów, które szukają sposobu na sovereign AI bez budowania wszystkiego od zera."
+      ],
+      "contextPoints": [
+        "Current AI pokazuje prototype page dla public-interest AI.",
+        "Bhashini uruchamia challenge wokół open handheld AI.",
+        "TechCrunch opisuje ten ruch jako budowę sieci AI-for-all, nie tylko pojedynczego produktu."
+      ],
+      "sources": [
+        {
+          "title": "Current AI prototype",
+          "url": "https://www.currentai.org/prototype"
+        },
+        {
+          "title": "Bhashini",
+          "url": "https://bhashini.gov.in/sahyogi/hackathon/open-handheld-ai"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Current AI",
+        "Bhashini",
+        "India",
+        "public interest AI",
+        "offline device",
+        "multilingual"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-20-4-kimi-k3-zwieksza-presje-open-weight-b32ed8af49",
+      "section": "AI",
+      "title": "Kimi K3 zwiększa presję open-weight",
+      "standfirst": "Moonshot wypuścił Kimi K3 jako 2.8T model z 1M-token context window i obietnicą pełnych weights 27 lipca. To kolejny dowód, że open-weight wyścig wciąż nie zwalnia.",
+      "whatHappened": "Kimi K3 podnosi poprzeczkę dla otwartych modeli frontier-class.",
+      "whyItMatters": "Presja na ceny, dostępność i benchmarki nie znika, nawet gdy closed-model labs podkręcają billing i access controls.",
+      "deeperAnalysis": [
+        "Kimi K3 jest ważny przede wszystkim jako sygnał rynkowy. Moonshot pokazuje, że skala, dostępność i szybkość publikacji nadal mogą być konkurencyjnym argumentem wobec modeli zamkniętych. Nawet jeśli część claims będzie wymagała późniejszej weryfikacji, launch już teraz zmienia rozmowę o tym, kto ma prawo nazywać się frontier.",
+        "To też dobrze kontrastuje z dzisiejszymi ruchami w stronę większej kontroli. Gdy jedni zamykają billing i rozliczają większe jednostki compute, drudzy dokładają kolejne otwarte weights i mocny kontekst. Dla developerów to sygnał, że wybór między zamkniętym i otwartym staje się nie tylko techniczny, ale też ekonomiczny."
+      ],
+      "contextPoints": [
+        "Kimi K3 ma 1M-token context window i małe opóźnienie do publikacji pełnych weights.",
+        "HN już potraktował temat jako realny sygnał, a nie tylko branding.",
+        "To dobra kontra do rosnącego billing discipline w produktach USA."
+      ],
+      "sources": [
+        {
+          "title": "Moonshot",
+          "url": "https://www.kimi.com/blog/kimi-k3"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Kimi",
+        "Moonshot",
+        "open weights",
+        "benchmark",
+        "context window",
+        "China"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-20-5-google-oznacza-reklamy-tworzone-przez-ai-98d40f8eb6",
+      "section": "Regulacje",
+      "title": "Google oznacza reklamy tworzone przez AI",
+      "standfirst": "Google zaczyna pokazywać użytkownikom, jak reklama została stworzona, jeśli użyto w niej generatywnej AI. To ma znaczenie, bo disclosure trafia do consumer UI, a nie tylko do policy bloga.",
+      "whatHappened": "Reklamy AI dostają widoczny label w ekosystemie Google.",
+      "whyItMatters": "Transparentność generatywnych treści zaczyna być częścią produktu, a nie tylko regulacyjnego komentarza.",
+      "deeperAnalysis": [
+        "Google przenosi dyskusję o AI disclosure do miejsca, gdzie użytkownik naprawdę widzi reklamę. To ważna zmiana, bo label nie jest już tylko dokumentem compliance, ale elementem doświadczenia użytkownika. W praktyce może to wpłynąć na zaufanie do reklam i na sposób, w jaki marketerzy podchodzą do generatywnych narzędzi.",
+        "To także sygnał dla całego rynku, że coraz mniej wystarczy powiedzieć „AI was used”. Trzeba jeszcze pokazać, jak i gdzie. Jeżeli ten wzorzec się utrzyma, disclosure może wejść do standardu product UX w innych mediach, nie tylko w reklamach."
+      ],
+      "contextPoints": [
+        "Label pojawia się w My Ad Center i w publicznych powierzchniach Google.",
+        "To kolejny krok po wcześniejszych disclosure story w reklamach i generatywnych produktach Google.",
+        "Wątek dobrze łączy się z debatą o zaufaniu do reklam i synthetic media."
+      ],
+      "sources": [
+        {
+          "title": "Google",
+          "url": "https://blog.google/products/ads-commerce/google-ads-ai-transparency-labels/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Google",
+        "ads",
+        "transparency",
+        "disclosure",
+        "My Ad Center",
+        "YouTube"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-20-6-robotaxi-wchodza-w-etap-regul-i-incydentow-f0f0516cab",
+      "section": "Regulacje",
+      "title": "Robotaxi wchodzą w etap reguł i incydentów",
+      "standfirst": "San Francisco chce ostrzejszych zasad dla robotaxi po kolejnym incydencie z Waymo, a federalne organy bezpieczeństwa dalej prowadzą investigation wokół edge cases i emergency scenes. To oznacza, że AV governance robi się lokalne, polityczne i bardzo konkretne.",
+      "whatHappened": "Autonomiczne taksówki są już przedmiotem publicznego sporu o bezpieczeństwo.",
+      "whyItMatters": "Rynek przestaje dyskutować o demonstracji technologii, a zaczyna o regułach działania w mieście.",
+      "deeperAnalysis": [
+        "Ta historia jest ważna, bo pokazuje zmianę tonu. Robotaxi przestają być opowieścią o przyszłości transportu, a zaczynają być zwykłym miejskim problemem operacyjnym: co się dzieje, gdy pojazd blokuje ruch, jak radzi sobie w scenerii kryzysowej i kto ponosi odpowiedzialność za edge cases. To jest dokładnie ten etap, na którym regulacja staje się częścią produktu.",
+        "NTSB i NHTSA robią z tego temat formalny, a nie medialny. Dla operatorów AV oznacza to bardziej rygorystyczny feedback loop, a dla miast - rosnące oczekiwanie, że technologia będzie zachowywać się przewidywalnie w sytuacjach, które dla człowieka są banalne, ale dla systemu nadal trudne."
+      ],
+      "contextPoints": [
+        "SF mayor naciska na twardsze AV rules po problemach z Waymo.",
+        "NTSB i NHTSA utrzymują investigation wokół safety incidents i emergency-scene behavior.",
+        "To dobry sygnał, że robotaxi wchodzą do głównego nurtu governance, a nie tylko do demo loop."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/19/techcrunch-mobility-the-battle-over-robotaxi-rules/"
+        },
+        {
+          "title": "NTSB",
+          "url": "https://www.ntsb.gov/investigations/Pages/HWY26FH014.aspx"
+        },
+        {
+          "title": "NHTSA",
+          "url": "https://static.nhtsa.gov/odi/rcl/2026/RCLRPT-26E044-2993.pdf"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "robotaxi",
+        "Waymo",
+        "NTSB",
+        "NHTSA",
+        "SF",
+        "safety"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Japonia robi z physical AI politykę przemysłową",
+      "rationale": "NVIDIA pokazuje, że robotics, digital twins i sieci dla agentów stają się elementem krajowej strategii, a nie tylko laboratorium.",
+      "sourcesLabel": "NVIDIA"
+    },
+    {
+      "priority": "High",
+      "title": "Apple przykręca śrubę OpenAI hardware",
+      "rationale": "Legal letters do byłych pracowników podnoszą stawkę w sporze o hardware, trade secrets i przyszły form factor urządzenia.",
+      "sourcesLabel": "FT; 9to5Mac"
+    },
+    {
+      "priority": "High",
+      "title": "Codex staje się fizyczny, ale pamięć robocza maleje",
+      "rationale": "Codex Micro i 272k context window razem mówią, że agent UX idzie w stronę bardziej namacalnego sterowania przy twardszych limitach.",
+      "sourcesLabel": "OpenAI; GitHub"
+    },
+    {
+      "priority": "High",
+      "title": "Publiczny stack AI w Indiach nabiera kształtu",
+      "rationale": "Current AI, Bhashini i offline handheld pokazują, że AI może być budowane jako public utility, nie tylko komercyjny SaaS.",
+      "sourcesLabel": "Current AI; Bhashini; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Kimi K3 zwiększa presję open-weight",
+      "rationale": "Moonshot dokłada kolejny duży open model do wyścigu o cenę, dostęp i benchmarki.",
+      "sourcesLabel": "Moonshot"
+    },
+    {
+      "priority": "Medium",
+      "title": "Google oznacza reklamy tworzone przez AI",
+      "rationale": "Transparency labels w reklamach mogą stać się nowym standardem disclosure i trust UI.",
+      "sourcesLabel": "Google"
+    },
+    {
+      "priority": "Medium",
+      "title": "Robotaxi rules wchodzą w fazę bezpieczeństwa publicznego",
+      "rationale": "Incydenty z Waymo i formalne dochodzenia NTSB/NHTSA pokazują, że AV governance staje się lokalnym konfliktem.",
+      "sourcesLabel": "TechCrunch; NTSB; NHTSA"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "NVIDIA: What to watch for after Jensen Huang’s Japan visit",
+      "url": "https://blogs.nvidia.com/blog/japan-ecosystem-2026/"
+    },
+    {
+      "title": "OpenAI: Codex Micro x Work Louder",
+      "url": "https://openai.com/supply/co-lab/work-louder/"
+    },
+    {
+      "title": "GitHub: openai/codex releases",
+      "url": "https://github.com/openai/codex/releases"
+    },
+    {
+      "title": "Current AI prototype",
+      "url": "https://www.currentai.org/prototype"
+    },
+    {
+      "title": "Bhashini: open handheld AI challenge",
+      "url": "https://bhashini.gov.in/sahyogi/hackathon/open-handheld-ai"
+    },
+    {
+      "title": "Moonshot: Kimi K3",
+      "url": "https://www.kimi.com/blog/kimi-k3"
+    },
+    {
+      "title": "Google: AI transparency labels for ads",
+      "url": "https://blog.google/products/ads-commerce/google-ads-ai-transparency-labels/"
+    },
+    {
+      "title": "TechCrunch: Current AI is racing to build the world-wide web of AI-for-all",
+      "url": "https://techcrunch.com/2026/07/19/nonprofit-current-ai-is-racing-to-build-the-world-wide-web-of-ai-free-for-all/"
+    },
+    {
+      "title": "TechCrunch: The battle over robotaxi rules",
+      "url": "https://techcrunch.com/2026/07/19/techcrunch-mobility-the-battle-over-robotaxi-rules/"
+    },
+    {
+      "title": "NTSB: HWY26FH014",
+      "url": "https://www.ntsb.gov/investigations/Pages/HWY26FH014.aspx"
+    },
+    {
+      "title": "NHTSA: Zoox emergency-scene recall PDF",
+      "url": "https://static.nhtsa.gov/odi/rcl/2026/RCLRPT-26E044-2993.pdf"
+    },
+    {
+      "title": "FT: Apple targets dozens of OpenAI employees with legal letters",
+      "url": "https://www.ft.com/content/1b8c9d52-88a9-426b-ba47-f1811f859166"
+    },
+    {
+      "title": "9to5Mac: Apple sends legal letters to former employees now at OpenAI",
+      "url": "https://9to5mac.com/2026/07/17/apple-sends-legal-letters-to-former-employees-now-at-openai/"
+    },
+    {
+      "title": "TechCrunch: Netflix paid $587M for Ben Affleck AI filmmaking startup",
+      "url": "https://techcrunch.com/2026/07/19/netflix-paid-587m-for-ben-afflecks-ai-filmmaking-startup/"
+    }
+  ]
+}
