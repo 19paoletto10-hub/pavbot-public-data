@@ -210,6 +210,18 @@ Prokuratura Krajowa poinformowała o akcie oskarżenia przeciwko Illii K. za
 działania dywersyjne na rzecz obcego wywiadu. AP dołożyło też ostrzeżenie
 Polski, Litwy i Łotwy o możliwych rosyjskich prowokacjach hybrydowych wobec
 infrastruktury krytycznej.
+Po porannym runie 20 lipca temat wszedł w fazę nowego spilloveru regionalnego:
+AP opisuje dziewiątą noc uderzeń USA na Iran i retorsje wobec Kuwejtu oraz
+Bahrajnu, CENTCOM potwierdza systematyczne niszczenie irańskich zdolności do
+kontroli nad żeglugą, a Huti ogłosili natychmiastowe embargo na saudyjską
+żeglugę przez Bab al-Mandab. Równolegle w Ukrainie walka o szlaki morskie i
+zaplecze weszła w kolejny poziom: Guardian potwierdza śmierć sześciu osób na
+Golden Leo, AP opisuje ukraiński nalot około 400 dronów na Moskwę, a Guardian
+live dodaje atak na obiekt w Odessie i sygnał ostrzegawczy o Polsce oraz
+państwach bałtyckich jako potencjalnych celach dalszej eskalacji. Polska
+pozostaje więc bardziej w roli wschodnioflankowego obserwatora niż strony
+nowego krajowego komunikatu, ale wątek bezpieczeństwa regionu jest dziś
+wyraźnie mocniejszy niż rano.
 
 ## Stable Facts
 

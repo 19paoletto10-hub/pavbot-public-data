@@ -4,6 +4,7 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Bab al-Mandab spillover from Houthi Saudi embargo | Houthi announced an immediate maritime embargo on Saudi shipping, expanding the regional energy and shipping crisis beyond Ormuz | Watch AP, Saudi statements, UKMTO, IMO and insurers for whether the threat becomes operational and how shippers respond | Open |
 | High | Track 20 July Ormuz ninth-night and energy spillover | AP and CENTCOM now describe a ninth consecutive U.S. strike wave, additional U.S. losses and Brent above 90 dollars as Iran targets Gulf states | Check AP, CENTCOM, UKMTO, IMO, Gulf statements, oil/shipping updates and whether U.S. Congress or allies react before podcast/evening update | Open |
 | High | Track Golden Leo and Black Sea grain-route risk | Guardian and Polsat report a Russian strike on the grain vessel Golden Leo near Odesa with changing casualty counts | Watch Ukraine Navy, Guardian/AP/Reuters mirrors, shipping authorities, Turkey/flag-state reactions and updated casualty figures; keep timestamps explicit | Open |
 | High | Track Kyiv ballistic gap and Ukraine army-decision pressure | President of Ukraine ties the Kyiv attack to daily air-defense missile needs while Polsat reports protests around Fedorov/Syrskyi | Monitor President of Ukraine, Verkhovna Rada, AP/Guardian and partner announcements for Patriot deliveries, confirmation of defense leadership and protest evolution | Open |
