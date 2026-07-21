@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-21-2210",
+  "status": "material_update",
+  "generatedAt": "2026-07-21T20:10:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-21T22:10:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Live 22:10 review completed through read-only Safari Apple Events and exact old.reddit.com post pages in the local Safari session.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-21-1215 and 2026-07-21-0609, so the visible noon bundle and morning winners could not roll forward into this slot.",
+      "Before selecting replacements, the run verified that origin/main already serves 2026-07-21-1215 for reddit-radar, so the remote topic was current and this slot was a normal rotation rather than a recovery publish.",
+      "The live late-evening field was thinner than the noon five-pack, but four safe fresh cards still survived the final Safari comment review.",
+      "Read-only finalist review stayed on exact old.reddit post pages for sqlWorkout, whoIsJson, Godcomplex, Totally winning, downloadingMalwareFromLocalMachines, evilIllusion, So many choices, towels-resort, and the empty-chairs waiting-room post.",
+      "r/facepalm and most of r/AskReddit were discarded early because the visible cluster leaned political, tragic, or too discussion-heavy instead of compact public-safe humor.",
+      "At least four safe fresh cards survived the live review, so the reddit-radar contract still prefers a new public bundle over keeping the visible 2026-07-21-1215 bundle unchanged.",
+      "No Reddit social actions were performed.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-21-1215",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-21-2210-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-21-2210-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-21-2210-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1v1t5d0/the_state_of_this_sub/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v1t0rr/pleaseno10xers/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v21owc/content_creators_holding_lavalier_aka_lapel_mics/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v1r0cc/told_12_year_old_to_close_the_deep_freeze_tight/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v24vgd/typical_day_on_facebook_marketplace/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v26bfq/notverysecure/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v246zo/lesssortsmoreshorts/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v27p6i/epic_comment/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v28hd8/the_package_said_18_to_20_minutes_at_450f_this_is/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v20u9f/coyote_stalking_me_at_work_adorable_but_concerning/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "title": "sqlWorkout",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v2rcr6/sqlworkout/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "8.0k hot"
+    },
+    {
+      "title": "whoIsJson",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v2jfpj/whoisjson/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "870 hot"
+    },
+    {
+      "title": "Godcomplex",
+      "url": "https://old.reddit.com/r/memes/comments/1v2d8n1/godcomplex/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "5.8k hot"
+    },
+    {
+      "title": "Totally winning",
+      "url": "https://old.reddit.com/r/memes/comments/1v2rhk4/totally_winning/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "5.6k hot"
+    },
+    {
+      "title": "downloadingMalwareFromLocalMachines",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v2d9fs/downloadingmalwarefromlocalmachines/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "6.0k hot"
+    },
+    {
+      "title": "evilIllusion",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v2cgiy/evilillusion/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "3.5k hot"
+    },
+    {
+      "title": "So many choices",
+      "url": "https://old.reddit.com/r/memes/comments/1v2kthz/so_many_choices/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "4.7k hot"
+    },
+    {
+      "title": "Took away towels from sunbeds at a resort and owners were furious",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v2t8hq/took_away_towels_from_sunbeds_at_a_resort_and/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "2.9k hot"
+    },
+    {
+      "title": "There’s lots of empty chairs in the waiting room and this guy decided to sit in front of me.",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v2gk2x/theres_lots_of_empty_chairs_in_the_waiting_room/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "16.5k hot"
+    }
+  ]
+}
