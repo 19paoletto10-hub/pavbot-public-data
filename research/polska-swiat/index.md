@@ -235,6 +235,15 @@ MON, finansami i służbami. Polski nowy konkret to zapowiedziane podpisanie
 umowy udziału w IRIS2, czyli wejście w europejską bezpieczną łączność
 satelitarną; światowy blok gospodarczy poszerza się o 50-procentowe taryfy USA
 na Kanadę z 30-dniowym oknem negocjacyjnym.
+Po wieczornym runie 21 lipca Polska przeszła z zapowiedzi do wykonania:
+MSWiA podpisało umowę IRIS2 i podało konkretną kwotę 2,8 mld zł / 656 mln
+euro, a MON wskazało Polskę jako miejsce centrum zarządzania projektem
+rozbudowy rurociągów paliwowych na wschód Europy. To przesuwa krajowy blok z
+samej odporności do namacalnej infrastruktury bezpieczeństwa. Równolegle
+Ormuz nie uspokoił się po południu, a AP nadal pokazuje dziesiątą noc uderzeń,
+atak na tankowiec i próbę podtrzymania mediacji przez Pakistan. W Ukrainie
+spór o Fedorowa i Syrskiego pozostaje żywy, a nowy materiał AP tylko wzmacnia
+tezę o kryzysie reform i dowodzenia pod presją wojny.
 
 ## Stable Facts
 
@@ -301,6 +310,11 @@ na Kanadę z 30-dniowym oknem negocjacyjnym.
 - Po 8 lipca wrócić do szczegółów porozumienia PAC-3: lokalizacja, udział
   polskich firm, harmonogram, zakres transferu technologii i relacja do
   zapasów dla Ukrainy.
+- IRIS2 po podpisie śledzić już jako wdrożenie: wykonawców, infrastrukturę
+  naziemną, harmonogram satelitów i ewentualny ślad przemysłowy w Polsce.
+- MON i projekt rurociągów paliwowych śledzić jako infrastrukturę krytyczną:
+  odróżniać decyzję o lokalizacji centrum zarządzania od realnej budowy
+  magistrali.
 - Ormuz po 14 lipca: śledzić, czy opłata 20 procent i blokada są egzekwowane
   wobec statków, czy pozostają deklaracją polityczną; osobno monitorować
   reakcję IMO, UKMTO i ubezpieczycieli.
