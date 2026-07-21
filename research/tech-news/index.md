@@ -1,8 +1,10 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-20
+Last updated: 2026-07-21
 
 ## Current Understanding
+
+Poranny run z 2026-07-21 przesuwa temat z hardware i surface control do chińskiej konkurencji open-weight, globalnego governance i bezpieczeństwa platform. Kimi K3 i Qwen3.8 sygnalizują realną presję na frontier AI, Moonshot chwilowo zatrzymuje nowe subskrypcje, Xi na WAICO promuje globalne reguły AI, CAISI zostaje bez stałego szefa, Apple i Google zdejmują nudify apps, OpenAI dokręca ochronę nastolatków, a Florida wchodzi w spór o koszty data center i ratepayer protection.
 
 Wieczorny run z 2026-07-20 dokłada warstwę platform governance, cyber i kapitałowego testu AI infra. WordPress 7.0.2 jest już aktywnie wykorzystywany przez atakujących, YouTube zaostrza disclosure dla realistycznych treści AI, Adobe wrzuca generatywne edytowanie do Project Indigo, a CuspAI, Neo, Infinity i Etched pokazują, że kapitał nadal płynie zarówno do AI-for-science, jak i do security for agents oraz inference chips. Craneware przypomina jednocześnie, że vendor breach w healthcare nadal ma szeroki efekt systemowy.
 
@@ -214,6 +216,7 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-21: Daily run added the Chinese open-weight sprint, Moonshot capacity pressure, Xi/WAICO governance, CAISI vacancy, nudify app-store enforcement, OpenAI teen safety and Florida ratepayer policy.
 - 2026-07-20: Wieczorny refresh dodał WordPress 7.0.2 active exploitation, YouTube AI disclosure, Adobe Project Indigo AI Playground, CuspAI materials foundry, Neo agentic endpoint security, Etched valuation test i Craneware healthcare breach.
 - 2026-07-20: Dzisiejszy run dodał NVIDIA/Japan physical AI, Apple vs OpenAI legal escalation, Codex Micro + 272k context, public AI stack w Indiach, Google AI ad transparency labels, Kimi K3, robotaxi safety i Netflix genAI M&A disclosure.
 - 2026-07-19: Wieczorny refresh dodał Current AI/Bhashini/AIKosh jako public-interest AI stack, nowojorskie moratorium i protesty przeciw data centers, spór Uber-Waymo o reguły robotaxi w D.C. oraz nacisk Guardrails Alliance w OpenAI.
@@ -228,6 +231,10 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- Kimi K3 and Qwen3.8 open-weight competition: watch whether independent benchmarks and pricing push Western labs into faster open releases.
+- Xi/WAICO governance push: watch whether the Shanghai forum turns into a durable policy vehicle rather than a one-off speech.
+- CAISI leadership gap: watch how quickly Commerce fills the role and whether the agency's remit changes.
+- OpenAI teen-safety rollout: watch whether parental controls and age prediction stay consistent across product surfaces.
 - OpenAI tactile control surfaces: Codex Micro may become a reusable agent workflow pattern or stay a novelty; watch restock, copycats and whether the keyboard becomes part of Codex defaults.
 - San Francisco app-store enforcement: nudify app removals show app stores and payment rails as enforcement points; watch whether other cities or states copy the tactic.
 - AI memory spillover to consumer hardware: India's smartphone decline suggests DRAM/HBM prices are now reaching low- and mid-tier devices; watch OEM pricing and refurbished demand.

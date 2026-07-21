@@ -4,6 +4,10 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Chinese open-weight sprint | Kimi K3 and Qwen3.8 show China pushing frontier AI through public weights and aggressive rollout | Watch independent benchmarks, pricing and whether western labs respond with faster open releases | Open |
+| High | Track Moonshot subscription pressure | Temporary signup pauses turn Kimi K3 demand into a concrete capacity signal | Watch whether the pause lasts, whether capacity expands and how Moonshot explains the bottleneck | Open |
+| High | Track Xi global AI governance push | WAICO gives China a platform to shape AI governance language and coalition-building | Watch follow-up documents, participating countries and UN-related language | Open |
+| High | Track CAISI leadership gap | CAISI losing its director leaves a key US AI safety office without stable leadership | Watch successor naming, mandate changes and Commerce Department guidance | Open |
 | High | Track WordPress 7.0.2 exploitation | Forced updates are already racing against active attacks on freshly patched sites | Watch exploit reports, patch adoption and whether other CMS vendors copy the response | Open |
 | High | Track YouTube GenAI disclosure rules | Realistic AI content now needs disclosure inside the creator workflow and viewer UI | Watch rollout details, enforcement and whether other platforms copy the label pattern | Open |
 | Medium | Track Adobe Project Indigo AI Playground | Capture-time generative editing could become a mobile camera pattern, not just an editor feature | Watch rollout breadth, opt-out handling and whether Adobe expands the experiment | Open |
