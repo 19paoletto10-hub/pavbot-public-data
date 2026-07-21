@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-20
+Last updated: 2026-07-21
 
 ## Current Understanding
 
@@ -222,6 +222,19 @@ państwach bałtyckich jako potencjalnych celach dalszej eskalacji. Polska
 pozostaje więc bardziej w roli wschodnioflankowego obserwatora niż strony
 nowego krajowego komunikatu, ale wątek bezpieczeństwa regionu jest dziś
 wyraźnie mocniejszy niż rano.
+Po porannym runie 21 lipca Ormuz wszedł w dziesiątą noc uderzeń i kolejny
+atak na tankowiec, a AP opisuje już nie tylko naloty, ale problem strategiczny:
+Iran nie odpuszcza kontroli nad cieśniną, żegluga pozostaje mocno ograniczona,
+a koszt konfliktu obejmuje 17 zabitych amerykańskich żołnierzy, prawie 100
+rannych od 7 lipca oraz ceny paliw w USA. Bab al-Mandab pozostaje drugim
+morskim punktem ryzyka po zapowiedzi embarga Huti wobec Arabii Saudyjskiej.
+Ukraina ma jednocześnie masowy komponent dalekiego zasięgu, z ponad 400
+dronami w stronę Moskwy, i kryzys dowodzenia wokół Syrskiego/Fedorowa, który
+Zełenski próbuje spiąć specjalną Stawką z dowódcami korpusów, przemysłem,
+MON, finansami i służbami. Polski nowy konkret to zapowiedziane podpisanie
+umowy udziału w IRIS2, czyli wejście w europejską bezpieczną łączność
+satelitarną; światowy blok gospodarczy poszerza się o 50-procentowe taryfy USA
+na Kanadę z 30-dniowym oknem negocjacyjnym.
 
 ## Stable Facts
 
@@ -446,6 +459,7 @@ konfliktowaniu Polaków i Ukraińców.
 
 ## Recent Reports
 
+- [2026-07-21](runs/2026-07-21.md)
 - [2026-07-20](runs/2026-07-20.md)
 - [2026-07-19-1933](runs/2026-07-19-1933.md)
 - [2026-07-19](runs/2026-07-19.md)

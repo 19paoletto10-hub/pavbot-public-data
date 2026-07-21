@@ -4,8 +4,12 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track 21 July Ormuz tenth-night and tanker attack | AP reports a 10th consecutive U.S. strike night, another tanker attacked near Oman, a crew abandonment, shipping through Hormuz largely stalled, Brent above 88 dollars and U.S. gasoline back at 4 dollars per gallon | Check AP, CENTCOM, UKMTO, IMO, Gulf statements, tanker status, crew status and whether the U.S. Dover transfer or congressional pressure changes the political line before podcast/evening update | Open |
+| High | Track Ukraine command crisis after Fedorov dismissal | Guardian says Syrskyi is widely expected to lose his job after protests, while the General Staff denies immediate dismissal and Zelenskyy convened a special Staff meeting with corps commanders and manufacturers | Watch President of Ukraine, General Staff, Verkhovna Rada, Guardian/AP and MoD Ukraine for any decree, replacement name, protest deadline and whether Fedorov-linked reforms continue | Open |
+| Medium | Track Poland IRIS2 signing outcome | MSWiA scheduled a 21 July 09:00 signing on Poland's participation in IRIS2 with Marcin Kierwiński and Andrius Kubilius; morning run has only pre-event information | Check MSWiA, EC, ESA/EUSPA and Polish industry after the ceremony for scope, financing, timeline, ground infrastructure and Polish contractor details | Open |
+| Medium | Track U.S.-Canada 50% tariff window | AP reports Trump announced 50% tariffs on most Canadian goods with a 30-day delay before entry into force | Watch White House, Canada, AP and market reactions for negotiations, retaliation and inflation/auto-sector impact | Open |
 | High | Track Bab al-Mandab spillover from Houthi Saudi embargo | Houthi announced an immediate maritime embargo on Saudi shipping, expanding the regional energy and shipping crisis beyond Ormuz | Watch AP, Saudi statements, UKMTO, IMO and insurers for whether the threat becomes operational and how shippers respond | Open |
-| High | Track 20 July Ormuz ninth-night and energy spillover | AP and CENTCOM now describe a ninth consecutive U.S. strike wave, additional U.S. losses and Brent above 90 dollars as Iran targets Gulf states | Check AP, CENTCOM, UKMTO, IMO, Gulf statements, oil/shipping updates and whether U.S. Congress or allies react before podcast/evening update | Open |
+| High | Track 20 July Ormuz ninth-night and energy spillover | AP and CENTCOM now describe a ninth consecutive U.S. strike wave, additional U.S. losses and Brent above 90 dollars as Iran targets Gulf states | Checked 21 July: superseded by 10th-night AP update, tanker abandonment and U.S. gasoline/war-casualty data | Superseded 2026-07-21 |
 | High | Track Golden Leo and Black Sea grain-route risk | Guardian and Polsat report a Russian strike on the grain vessel Golden Leo near Odesa with changing casualty counts | Watch Ukraine Navy, Guardian/AP/Reuters mirrors, shipping authorities, Turkey/flag-state reactions and updated casualty figures; keep timestamps explicit | Open |
 | High | Track Kyiv ballistic gap and Ukraine army-decision pressure | President of Ukraine ties the Kyiv attack to daily air-defense missile needs while Polsat reports protests around Fedorov/Syrskyi | Monitor President of Ukraine, Verkhovna Rada, AP/Guardian and partner announcements for Patriot deliveries, confirmation of defense leadership and protest evolution | Open |
 | Medium | Track Czyste Powietrze 20 July implementation | NFOŚiGW changes now apply: ownership exceptions, 10% selected termomodernization limits, 180-day prefinancing settlement and heating-source restrictions after 2026 | Watch NFOŚiGW, WFOŚiGW, gminy-operatorzy, BI/Onet and beneficiary problems during the first implementation week | Open |
@@ -229,11 +233,19 @@
   siren alerts, and Polsat/CBOS for Polish-Ukrainian social tension. Podcast
   should lead Ormuz, then Golden Leo and Kyiv/Patriot, with Czyste Powietrze,
   weather/RCB and Poland-Ukraine civic tension as shorter, practical blocks.
+- 2026-07-21: Tuesday morning research created a material update. Strongest
+  sources were AP for Ormuz, U.S. costs, Houthi/Bab al-Mandab, Ukraine and
+  tariffs; Guardian for the Ukraine briefing and Syrskyi/Fedorov crisis;
+  President of Ukraine for Staff/OSCE/Burnham readouts; and MSWiA/EC for IRIS2.
+  Podcast should lead Ormuz and Bab al-Mandab, then Ukraine's drone/ballistic
+  and command-crisis blocks, with IRIS2 and U.S.-Canada tariffs as shorter
+  policy/economy segments.
 
 ## Done
 
 | Date | Item | Outcome |
 | --- | --- | --- |
+| 2026-07-21 | Track 20 July Ormuz ninth-night and energy spillover | Superseded by 21 July AP update: 10th consecutive U.S. strike night, another tanker attack, crew abandonment, lower but still elevated Brent reference and U.S. gasoline back at 4 dollars per gallon. |
 | 2026-07-20 | Track 19 July RCB alert | Alert burzowy z 19 lipca został sprawdzony następnego dnia; nowy follow-up to skutki burz i odrębny lokalny alert ćwiczebny RCB w powiecie oświęcimskim. |
 | 2026-07-11 | Track Wołyń anniversary diplomacy | Obchody w Radrużu i Ołyce odbyły się; dalszy follow-up to reakcje polityczne i dyplomatyczne. |
 | 2026-06-20 | Review first three Polska/świat reports | Three scheduled reports were produced on 2026-06-18, 2026-06-19 and 2026-06-20. Source quality is acceptable when official institutions remain primary and dynamic news pages are treated as secondary signals. |
