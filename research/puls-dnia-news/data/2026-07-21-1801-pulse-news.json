@@ -1,0 +1,458 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-21",
+  "runTime": "18:01",
+  "status": "Material update",
+  "headline": "Warszawa, alerty pogodowe i nowa fala napięć w UK, Kanadzie oraz Iranie",
+  "summary": "Wieczorny slot przesuwa puls ku warszawskim incydentom, korkowi na A2, sporowi w PiS, najmu krótkoterminowemu i złotu NBP. Za granicą najmocniej ważą ulga VAT na prąd w UK, rosyjskie ćwiczenia morskie przy Wyspach, cła na Kanadę i kolejne uderzenia USA na Iran.",
+  "checkedSources": [
+    {
+      "title": "TVN24 latest RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World page",
+      "url": "https://edition.cnn.com/world"
+    },
+    {
+      "title": "NBP aktywa rezerwowe w czerwcu 2026",
+      "url": "https://nbp.pl/aktywa-rezerwowe-polski-w-czerwcu-2026-r/"
+    },
+    {
+      "title": "IMGW mapy dynamiczne",
+      "url": "https://meteo.imgw.pl/dyn/?osmet=true"
+    },
+    {
+      "title": "Policja.pl aktualności",
+      "url": "https://policja.pl/pol/aktualnosci"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-07-21-1801-warszawa-zakazy",
+      "section": "Polska",
+      "title": "Warszawa: kierowca z pięcioma zakazami aresztowany",
+      "lead": "Policja zatrzymała 48-latka, który mimo pięciu sądowych zakazów prowadził auto.",
+      "whatHappened": "W Warszawie policjanci zatrzymali 48-letniego mężczyznę prowadzącego samochód mimo pięciu sądowych zakazów. Pasażer dostał mandat, a kierowca trafił do aresztu.",
+      "keyFacts": [
+        "Mężczyzna miał pięć sądowych zakazów prowadzenia.",
+        "Policja zatrzymała go w Warszawie.",
+        "Pasażer dostał mandat."
+      ],
+      "reactions": [
+        "To mocny sygnał dla miejskiej egzekucji zakazów.",
+        "Może pojawić się kolejny krok procesowy."
+      ],
+      "whyItMatters": "To przykład uporczywego łamania zakazów i ryzyka na drogach.",
+      "context": "To jeden z najbardziej świeżych krajowych incydentów w feedzie TVN24.",
+      "watchNext": [
+        "Sprawdzić, czy prokuratura poda zarzuty.",
+        "Sprawdzić, czy sąd zastosuje dalsze środki."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Warszawa zakazy",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/warszawa-kierowal-autem-mimo-pieciu-sadowych-zakazow-pasazer-dostal-mandat-st9152674?source=rss"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "policja",
+        "zakaz prowadzenia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-21-1801-metro-plecak",
+      "section": "Polska",
+      "title": "Warszawa: plecak na torach metra",
+      "lead": "Jedna osoba została zatrzymana po incydencie na torach.",
+      "whatHappened": "Na torach metra w Warszawie ktoś wrzucił plecak, a policja zatrzymała jedną osobę. TVN24 nie podaje jeszcze pełnego skutku dla ruchu, ale zdarzenie traktowano jako incydent bezpieczeństwa.",
+      "keyFacts": [
+        "Plecak trafił na tory metra.",
+        "Policja zatrzymała jedną osobę.",
+        "Nie ma jeszcze pełnego bilansu skutków w ruchu."
+      ],
+      "reactions": [
+        "To sygnał o wrażliwości stołecznej infrastruktury.",
+        "Może pojawić się wyjaśnienie operatora metra."
+      ],
+      "whyItMatters": "Takie incydenty mogą szybko przełożyć się na opóźnienia i niepokój pasażerów.",
+      "context": "To świeży warszawski wątek obok innych miejskich incydentów.",
+      "watchNext": [
+        "Sprawdzić komunikat Metro Warszawskie lub policji.",
+        "Sprawdzić, czy ruch został ograniczony."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 tory metra",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-bagaz-na-torach-metra-policjanci-zatrzymali-jedna-osobe-st9152685?source=rss"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "metro",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1801-a2-korek",
+      "section": "Polska",
+      "title": "A2: zderzenie i kilkunastokilometrowy korek",
+      "lead": "Na autostradzie tworzy się długi zator.",
+      "whatHappened": "Na A2 w rejonie Wiskitek doszło do zderzenia, po którym korek urósł do kilkunastu kilometrów. W tym slocie to ważny transportowy sygnał, bo pokazuje, że ruch po południu nadal był kruchy.",
+      "keyFacts": [
+        "Do zdarzenia doszło na A2.",
+        "Korek miał kilkanaście kilometrów.",
+        "Problem dotyczył ruchu w rejonie Wiskitek."
+      ],
+      "reactions": [
+        "To potencjalny impuls dla dalszych utrudnień.",
+        "Kierowcy mogą liczyć się z opóźnieniami w wieczornym szczycie."
+      ],
+      "whyItMatters": "To bezpośredni wpływ na przepustowość głównej trasy i lokalny ruch.",
+      "context": "To naturalne przedłużenie dziennego bloku miejskich i drogowych incydentów.",
+      "watchNext": [
+        "Sprawdzić, czy korek się rozładuje.",
+        "Sprawdzić, czy służby zgłoszą skutki uboczne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 A2 korek",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/wiskitki-zderzenie-na-a2-korek-st9152567?source=rss"
+        }
+      ],
+      "tags": [
+        "A2",
+        "korek",
+        "transport"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1801-pis-stowarzyszenia",
+      "section": "Polityka",
+      "title": "PiS znów pod presją przez spór o stowarzyszenia",
+      "lead": "Posłowie mówią o intrydze i napięciach w partii.",
+      "whatHappened": "TVN24 opisuje napięcia wokół sprawy stowarzyszeń w PiS; w przekazie pojawia się teza o działaniach wąskiej grupy i o politycznej intrydze. To kolejny sygnał wewnętrznego tarcia w obozie opozycyjnym.",
+      "keyFacts": [
+        "Tematem są napięcia wokół stowarzyszeń w PiS.",
+        "Posłowie mówią o intrydze i wąskiej grupie.",
+        "Nie ma jeszcze pełnego formalnego rozstrzygnięcia."
+      ],
+      "reactions": [
+        "To może wywołać kolejne publiczne komentarze.",
+        "Możliwa jest szybka reakcja partyjna."
+      ],
+      "whyItMatters": "Wewnętrzny konflikt może przesunąć uwagę z programu na spory organizacyjne.",
+      "context": "To polityczny wątek obecny już w porannym feedzie, ale teraz z nową formą komentarza.",
+      "watchNext": [
+        "Sprawdzić, czy PiS poda oficjalne stanowisko.",
+        "Sprawdzić, czy pojawią się nazwiska lub decyzje."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 PiS stowarzyszenia",
+          "url": "https://tvn24.pl/polska/napiecia-w-sprawie-stowarzyszen-w-pis-komentarze-politykow-st9152126?source=rss"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "polityka",
+        "spór"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1801-lodz-najem",
+      "section": "Gospodarka",
+      "title": "Najem krótkoterminowy w Polsce rośnie",
+      "lead": "Łódź staje się jednym z punktów odniesienia.",
+      "whatHappened": "TVN24 podaje, że rynek najmu krótkoterminowego w Polsce rośnie, a Łódź zwraca szczególną uwagę. To sygnał o przesuwaniu się popytu i podaży w turystyce miejskiej oraz mieszkaniowym mikrorynku.",
+      "keyFacts": [
+        "Rynek najmu krótkoterminowego rośnie.",
+        "Łódź jest wskazana jako ważny przykład.",
+        "Temat łączy turystykę i mieszkalnictwo."
+      ],
+      "reactions": [
+        "To może zwiększać presję na lokalne regulacje.",
+        "Możliwe są komentarze branży hotelowej i samorządów."
+      ],
+      "whyItMatters": "To wpływa na ceny, dostępność mieszkań i model wykorzystania zasobu mieszkaniowego.",
+      "context": "To świeży gospodarczy temat w krajowym feedzie TVN24.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się dane o skali wzrostu.",
+        "Sprawdzić, czy miasta zaproponują regulacje."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 najem krótkoterminowy",
+          "url": "https://tvn24.pl/biznes/nieruchomosci/najem-krotkoterminowy-w-polsce-rosnie-lodz-zwraca-uwage-st9152669?source=rss"
+        }
+      ],
+      "tags": [
+        "najem",
+        "mieszkania",
+        "Łódź"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1801-nbp-zloto",
+      "section": "Gospodarka",
+      "title": "NBP zwiększył zasoby złota",
+      "lead": "Bank centralny kupił ponad 18 ton kruszcu.",
+      "whatHappened": "Narodowy Bank Polski w czerwcu zwiększył rezerwy złota o ponad 18 ton, do 632,4 tony na koniec miesiąca. To kolejny czytelny sygnał aktywnej polityki rezerwowej banku centralnego.",
+      "keyFacts": [
+        "NBP zwiększył zasoby złota o ponad 18 ton.",
+        "Na koniec czerwca miał 632,4 tony.",
+        "Dane potwierdza oficjalny komunikat NBP."
+      ],
+      "reactions": [
+        "Rynek może odczytywać to jako wzmacnianie bufora rezerw.",
+        "Temat zwykle przyciąga komentarze o strategii NBP."
+      ],
+      "whyItMatters": "Poziom i struktura rezerw wpływają na ocenę odporności bilansu państwa.",
+      "context": "To jeden z najmocniejszych twardych sygnałów gospodarczych w tym slocie.",
+      "watchNext": [
+        "Sprawdzić, czy NBP poda komentarz o strategii zakupów.",
+        "Sprawdzić, czy analitycy odniosą się do skali rezerw."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 NBP złoto",
+          "url": "https://tvn24.pl/biznes/z-kraju/zloto-w-nbp-bank-centralny-zwieksza-zasoby-nowe-dane-za-czerwiec-2026-st9152460?source=rss"
+        },
+        {
+          "title": "NBP aktywa rezerwowe w czerwcu 2026",
+          "url": "https://nbp.pl/aktywa-rezerwowe-polski-w-czerwcu-2026-r/"
+        }
+      ],
+      "tags": [
+        "NBP",
+        "złoto",
+        "rezerwy"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1801-starlink-umowa",
+      "section": "Technologia",
+      "title": "Polska podpisała umowę o europejskiej odpowiedzi na Starlink",
+      "lead": "To nowy sygnał z rynku łączności satelitarnej.",
+      "whatHappened": "TVN24 informuje, że Polska podpisała umowę dotyczącą europejskiej odpowiedzi na Starlink. W praktyce chodzi o wzmocnienie europejskiej infrastruktury łączności i ograniczenie zależności od jednego dostawcy.",
+      "keyFacts": [
+        "Polska podpisała umowę.",
+        "Temat dotyczy europejskiej alternatywy dla Starlink.",
+        "Wątek ma znaczenie dla łączności i bezpieczeństwa."
+      ],
+      "reactions": [
+        "To może wywołać komentarze o suwerenności cyfrowej.",
+        "Możliwe są szczegóły wdrożeniowe z resortu."
+      ],
+      "whyItMatters": "Łączność satelitarna jest elementem infrastruktury krytycznej i obronnej.",
+      "context": "To jedyny wyraźny techniczny temat w krajowym feedzie.",
+      "watchNext": [
+        "Sprawdzić, jaki resort odpowiada za wdrożenie.",
+        "Sprawdzić, czy padną szczegóły finansowania i harmonogramu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Starlink umowa",
+          "url": "https://tvn24.pl/biznes/z-kraju/europejska-odpowiedz-na-starlink-polska-podpisala-umowe-st9152592?source=rss"
+        }
+      ],
+      "tags": [
+        "Starlink",
+        "satelity",
+        "łączność"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1801-imgw-burze",
+      "section": "Alerty",
+      "title": "IMGW ostrzega przed burzami i silniejszym wiatrem",
+      "lead": "Pogoda nadal może psuć wieczorny ruch.",
+      "whatHappened": "TVN24 Meteo pokazuje aktywny blok burzowy i ostrzeżenia IMGW. W tym samym pakiecie pojawia się napływ gorącego zwrotnikowego powietrza, więc sytuacja pogodowa pozostaje dynamiczna.",
+      "keyFacts": [
+        "IMGW utrzymuje ostrzeżenia.",
+        "TVN24 Meteo pokazuje burze i silniejszy wiatr.",
+        "Do Polski napływa gorące zwrotnikowe powietrze."
+      ],
+      "reactions": [
+        "To może oznaczać lokalne utrudnienia transportowe.",
+        "Wysoka temperatura i burze zwiększają ryzyko awarii."
+      ],
+      "whyItMatters": "Ten typ aury zwykle szybko przekłada się na komunikację, ruch i bezpieczeństwo mieszkańców.",
+      "context": "To naturalna kontynuacja wcześniejszych pogodowych slotów, ale z nowym naciskiem na wieczorne ryzyko.",
+      "watchNext": [
+        "Sprawdzić, czy IMGW podniesie poziom ostrzeżeń.",
+        "Sprawdzić, czy pojawią się zgłoszenia o zniszczeniach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 burze i IMGW",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/burze-dzis-ostrzezenia-imgw-we-wtorek-21-07-st9151267?source=rss"
+        },
+        {
+          "title": "IMGW mapy dynamiczne",
+          "url": "https://meteo.imgw.pl/dyn/?osmet=true"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "burze",
+        "pogoda"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-21-1801-uk-vat-prad",
+      "section": "Świat",
+      "title": "W Wielkiej Brytanii VAT na prąd ma spaść",
+      "lead": "Rząd zapowiada ulgę na rachunkach za energię.",
+      "whatHappened": "BBC podaje, że od października VAT ma zostać obniżony z rachunków za prąd w gospodarstwach domowych. To ważny sygnał polityki kosztów życia i osłony konsumentów.",
+      "keyFacts": [
+        "VAT na prąd ma spaść od października.",
+        "Zmiana dotyczy rachunków gospodarstw domowych.",
+        "BBC opisuje to jako ruch w polityce kosztów życia."
+      ],
+      "reactions": [
+        "To może przynieść natychmiastowy efekt komunikacyjny.",
+        "Pojawią się pytania o finansowanie i skutek fiskalny."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na rachunki domowe i debatę o kosztach życia.",
+      "context": "To obok Burnhama kolejny mocny brytyjski sygnał w feedzie.",
+      "watchNext": [
+        "Sprawdzić, czy HM Treasury opublikuje pełne szczegóły.",
+        "Sprawdzić, jak zareagują firmy energetyczne."
+      ],
+      "sources": [
+        {
+          "title": "BBC VAT na prąd",
+          "url": "https://www.bbc.co.uk/news/articles/cjwxll8jyz8o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Wielka Brytania",
+        "energia",
+        "VAT"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1801-cnn-russian-warship",
+      "section": "Bezpieczeństwo",
+      "title": "Rosyjski okręt ćwiczył ostrzał u wybrzeży Wielkiej Brytanii",
+      "lead": "CNN opisuje pokaz siły na Morzu Północnym.",
+      "whatHappened": "CNN informuje, że rosyjski okręt przeprowadził ćwiczenia ogniowe u wybrzeży Plymouth. To wpisuje się w szerszy obraz presji bezpieczeństwa wokół UK i morskich szlaków w regionie.",
+      "keyFacts": [
+        "Ćwiczenia odbyły się u wybrzeży Plymouth.",
+        "Materiał pochodzi z CNN World page.",
+        "Wątek ma wymiar wojskowy i morski."
+      ],
+      "reactions": [
+        "To może przyciągnąć komentarze Londynu i NATO.",
+        "Możliwa jest dalsza medialna eskalacja o zabezpieczeniu szlaków."
+      ],
+      "whyItMatters": "To sygnał napięcia militarnego blisko brytyjskiej infrastruktury morskiej.",
+      "context": "To świeży security-item z CNN, którego nie było w poprzednim slocie.",
+      "watchNext": [
+        "Sprawdzić, czy brytyjskie wojsko wyda komentarz.",
+        "Sprawdzić, czy NATO odniesie się do ćwiczeń."
+      ],
+      "sources": [
+        {
+          "title": "CNN Russian warship live-fire",
+          "url": "https://edition.cnn.com/2026/07/21/uk/russian-vessel-live-fire-uk-coast-intl"
+        }
+      ],
+      "tags": [
+        "Rosja",
+        "Wielka Brytania",
+        "morze"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-21-1801-kanada-cla",
+      "section": "Świat",
+      "title": "Trump podnosi cła na Kanadę do 50 procent",
+      "lead": "Ottawa zapowiada intensyfikację rozmów handlowych.",
+      "whatHappened": "BBC World podaje, że Donald Trump nałożył 50-procentowe cła na Kanadę, a Mark Carney zapowiada intensyfikację rozmów handlowych. To kolejna eskalacja w relacjach północnoamerykańskich partnerów.",
+      "keyFacts": [
+        "Cła wynoszą 50 procent.",
+        "Carney deklaruje intensyfikację rozmów.",
+        "BBC opisuje to jako dużą eskalację napięcia handlowego."
+      ],
+      "reactions": [
+        "Rynek może czytać to jako presję na łańcuchy dostaw.",
+        "Możliwe są natychmiastowe reakcje sektorowe."
+      ],
+      "whyItMatters": "To wpływa na handel, ceny i klimat dla firm po obu stronach granicy.",
+      "context": "To najważniejszy handlowy temat w bieżącym bloku światowym.",
+      "watchNext": [
+        "Sprawdzić, czy Kanada ogłosi kontrreakcję.",
+        "Sprawdzić, czy USA doprecyzują zakres taryf."
+      ],
+      "sources": [
+        {
+          "title": "BBC World Canada tariffs",
+          "url": "https://www.bbc.co.uk/news/articles/cg4dzq3x3e1o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Kanada",
+        "cła",
+        "handel"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-21-1801-iran-uderzenia",
+      "section": "Świat",
+      "title": "USA ponownie uderzają w Iran",
+      "lead": "Trump ostrzega przed dalszym odwetem.",
+      "whatHappened": "BBC opisuje świeże amerykańskie uderzenia na Iran i wskazuje, że Teheran twierdzi, iż zaatakował też dwa statki w cieśninie Ormuz oraz cele w Bahrajnie i Jordanii. To utrzymuje konflikt w stanie wysokiego napięcia.",
+      "keyFacts": [
+        "USA przeprowadziły świeże uderzenia.",
+        "Iran mówi o atakach na statki i cele regionalne.",
+        "Cieśnina Ormuz pozostaje kluczowym punktem ryzyka."
+      ],
+      "reactions": [
+        "To może podbijać ryzyko dla żeglugi i energii.",
+        "Napięcie może szybko wywołać kolejne komunikaty wojskowe."
+      ],
+      "whyItMatters": "To jeden z głównych globalnych czynników ryzyka dla rynków i bezpieczeństwa regionu.",
+      "context": "To najważniejszy geopolityczny temat w bieżącym slocie i naturalny kontynuator wcześniejszego napięcia na Bliskim Wschodzie.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się komunikat CENTCOM lub Pentagonu.",
+        "Sprawdzić, czy rynek energii zareaguje na eskalację."
+      ],
+      "sources": [
+        {
+          "title": "BBC World Iran strikes",
+          "url": "https://www.bbc.co.uk/news/articles/cx25wg2x26do?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "Ormuz",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    }
+  ]
+}

@@ -2,6 +2,12 @@
 
 ## Open
 
+- Watch whether the Warsaw driver with five bans gets formal charges or longer detention.
+- Watch whether Metro Warszawskie or police issue a follow-up on the bag on tracks.
+- Watch whether the A2 collision turns into longer transport disruption or injury reporting.
+- Watch whether IMGW warnings escalate into outages, fallen trees or transport blocks.
+- Watch whether Canada tariffs, UK electricity VAT changes or Iran strikes get the next official follow-up.
+
 - Watch whether the Białystok search gets a Child Alert or another police update before the next slot.
 - Watch whether the Łódź pedestrian strike gets a police or hospital follow-up.
 - Watch whether the Legnica case turns into formal charges or a clearer prosecutor note.

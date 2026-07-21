@@ -1,5 +1,7 @@
 # Puls Dnia News Index
 
+The 2026-07-21 18:01 slot przesuwa feed ku warszawskim incydentom, korkowi na A2, sporowi w PiS, najmu krótkoterminowemu i złotu NBP. Za granicą najmocniej ważą ulga VAT na prąd w UK, rosyjskie ćwiczenia morskie przy Wyspach, cła na Kanadę i kolejne uderzenia USA na Iran.
+
 The 2026-07-21 15:01 slot turns the pulse toward a missing-child alert in Białystok, a pedestrian strike in Łódź, a Legnica hate-crime probe, a CBŚP debt-gang bust, NBP gold growth, and a weather turn back toward storms and tropical air. Abroad, the feed leans on Manchester's No 10 North staffing move, Thames Water restrictions, fresh US strikes on Iran, Lebanese troop deployment, Canada tariffs, and Meta outage reports.
 
 The 2026-07-21 12:02 slot moves the pulse away from the early metro and weather lead into a denser domestic block: a fatal Białka Tatrzańska crash, a drunk-driving arrest in Gdynia, a BIK scoring change, a Łódź medical-program denial, and two fresh transport/security incidents in Warsaw and Wejherowo. Abroad, the feed now leans on India, Lebanon, Burnham, Thames Water, French youth-social-media policy, and Middle East travel risk.
