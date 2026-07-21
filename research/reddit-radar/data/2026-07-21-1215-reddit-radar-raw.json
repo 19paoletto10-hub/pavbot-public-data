@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-21-1215",
+  "status": "material_update",
+  "generatedAt": "2026-07-21T10:24:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-21T12:15:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Live 12:15 review completed through read-only Safari Apple Events and exact old.reddit.com post pages in the local Safari session.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-21-0609 and 2026-07-20-1809, so the visible morning bundle could not roll forward into this slot.",
+      "Before selecting replacements, the run verified that origin/main already serves 2026-07-21-0609 for reddit-radar, so the remote topic was current and this slot was a normal rotation rather than a recovery publish.",
+      "The cleanest fresh survivors at 12:15 came from two ProgrammerHumor cards, one compact memes comment-payoff card, and two everyday mildlyinfuriating self-owns.",
+      "r/facepalm and most of r/AskReddit were discarded early because the live cluster skewed World Cup, politics, or heavier discussion rather than compact public-safe punchlines.",
+      "At least five safe fresh cards survived the live review, so the reddit-radar contract prefers a new public bundle over keeping the visible 2026-07-21-0609 bundle unchanged.",
+      "No Reddit social actions were performed.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-21-0609",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-21-1215-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-21-1215-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-21-1215-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1v1t5d0/the_state_of_this_sub/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v1t0rr/pleaseno10xers/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v21owc/content_creators_holding_lavalier_aka_lapel_mics/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v1r0cc/told_12_year_old_to_close_the_deep_freeze_tight/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v24vgd/typical_day_on_facebook_marketplace/?sort=top",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1v1jcjw/canyoububblesort/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1v1lv7e/fullstackdeveloper/",
+    "https://www.reddit.com/r/ProgrammerHumor/comments/1v1hhrl/thishithomealittletoohard/",
+    "https://www.reddit.com/r/mildlyinfuriating/comments/1v1ixod/every_night_my_mattress_slides_away_from_the_wall/",
+    "https://www.reddit.com/r/facepalm/comments/1v1bx2f/i_tried_to_make_my_first_quick_cheese_wrap/"
+  ],
+  "newCandidates": [
+    {
+      "title": "notVerySecure",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v26bfq/notverysecure/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "10.8k hot"
+    },
+    {
+      "title": "lessSortsMoreShorts",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v246zo/lesssortsmoreshorts/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "2.2k hot"
+    },
+    {
+      "title": "Epic comment",
+      "url": "https://old.reddit.com/r/memes/comments/1v27p6i/epic_comment/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "2.4k hot"
+    },
+    {
+      "title": "The package said 18 to 20 minutes at 450°F. This is 10 minutes at 400°F.",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v28hd8/the_package_said_18_to_20_minutes_at_450f_this_is/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "scoreLabel": "2.3k hot"
+    },
+    {
+      "title": "Coyote stalking me at work (adorable but concerning)",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v20u9f/coyote_stalking_me_at_work_adorable_but_concerning/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "scoreLabel": "22.4k hot"
+    },
+    {
+      "title": "Every time",
+      "url": "https://old.reddit.com/r/memes/comments/1v24igc/every_time/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "11.1k hot"
+    },
+    {
+      "title": "The illusion of a black dress.",
+      "url": "https://old.reddit.com/r/memes/comments/1v290d0/the_illusion_of_a_black_dress/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "1.6k hot"
+    },
+    {
+      "title": "Our cute furry next door neighbor who isn't invited.",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v24ljn/our_cute_furry_next_door_neighbor_who_isnt_invited/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "3.2k hot"
+    },
+    {
+      "title": "My birthday present to myself was using an extra July paycheck to make a big final push on my student loans. In the time it took my payment to process my loans accrued $0.37.",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v28k18/my_birthday_present_to_myself_was_using_an_extra/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "4.8k hot"
+    }
+  ]
+}

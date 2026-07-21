@@ -1,0 +1,217 @@
+{
+  "id": "humor-2026-07-21-1215",
+  "title": "<RR> Reddit Radar",
+  "summary": "Material update: slot 12:15 rotuje na pięć świeżych kart o localhostowym self-ownie, bubble sorcie, pasożycie po Taco Bell, spalonym Totino's i biurowym kojocie.",
+  "generatedAt": "2026-07-21T10:24:00Z",
+  "displayTime": "12:15",
+  "nextRefreshAt": "2026-07-21T14:15:00+02:00",
+  "refreshIntervalHours": 2,
+  "items": [
+    {
+      "id": "old-reddit-com-r-programmerhumor-comments-1v26bfq-notverysecure",
+      "title": "notVerySecure",
+      "caption": "Najmocniejsza dev karta południa bierze klasyczny cringe demo przez `localhost` i zostawia comment layerowi tylko jedno zadanie: dołożyć jeszcze bardziej zawstydzające przykłady wysyłania linków, które działają wyłącznie u autora.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1v26bfq/notverysecure/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "dev",
+        "localhost",
+        "demo"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "whyFunny": "Humor działa, bo to uniwersalny błąd programisty pokazany bez żadnej technicznej nadbudowy: jeśli wysyłasz komuś `localhost`, kompromitacja sama pisze żart.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment natychmiast ucina temat do jednej suchej riposty: to tylko localhost, więc po co panika.",
+          "originalBody": "It's localhost, relax.",
+          "explanation": "To wygrywa, bo całkowicie ignoruje katastrofę i przez to jeszcze mocniej ją podkreśla.",
+          "score": null
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight dorzuca jeszcze lepszy self-own: ktoś naprawdę próbował pokazać projekt, wysyłając `http://localhost:8000`.",
+          "originalBody": "Someone once tried to show me a project by sending me: http://localhost:8000",
+          "explanation": "Komentarz działa, bo potwierdza, że mem nie jest abstrakcją, tylko powtarzalnym branżowym grzechem.",
+          "score": null
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzecia riposta domyka ton żartu reakcją security engineera, który właśnie wyczuł zakłócenie w Mocy.",
+          "originalBody": "Security engineer just felt a disturbance in the Force.",
+          "explanation": "To rozszerza żart bez zmiany rejestru: nadal jest krótko, branżowo i szeroko czytelnie.",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-programmerhumor-comments-1v246zo-lesssortsmoreshorts",
+      "title": "lessSortsMoreShorts",
+      "caption": "Druga dev karta zaczyna od prostego bubble-sort roastu, ale comment layer szybko dorabia do tego nerdowski mini-esej o Z-bufferze i prawie-posortowanych listach, więc żart zostaje jednocześnie głupi i zbyt technicznie dokładny.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1v246zo/lesssortsmoreshorts/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "dev",
+        "algorithms",
+        "nerd"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "whyFunny": "Karta działa, bo bierze bardzo stary algorytmiczny stereotyp i pozwala komentarzom zamienić go w perfekcyjnie bezużyteczną, ale zabawną debatę ekspertów.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment ustawia prostą zasadę świata: bubble sort wolno tolerować tylko wtedy, gdy właśnie uczysz bubble sorta.",
+          "originalBody": "The only time bubble sort is acceptable is when you're trying to teach bubble sort",
+          "explanation": "To wygrywa, bo sprowadza całą rozmowę o algorytmie do jednej brutalnie praktycznej puenty.",
+          "score": null
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight przewiduje nieuniknioną reakcję: zaraz wjedzie game-engine programmer z wyjątkiem od reguły.",
+          "originalBody": "Inb4 game engine programmers say something about Z-buffer",
+          "explanation": "Komentarz działa, bo żartuje nie tylko z algorytmu, ale też z typu ludzi, którzy zawsze muszą go bronić.",
+          "score": null
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzecia riposta robi dokładnie to, co zapowiedziano: odpala mini-wykład o niemal posortowanych listach i rendering engine.",
+          "originalBody": "Not really. It's a top performer if you know your list is nearly sorted...",
+          "explanation": "Puenta działa, bo sama nadgorliwość technicznego sprostowania jest częścią żartu.",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-memes-comments-1v27p6i-epic-comment",
+      "title": "Epic comment",
+      "caption": "Ta meme karta wygrywa nie samym obrazkiem, tylko jednym idealnie krótkim dopowiedzeniem: skoro nawet pasożyt pyta, co mu właśnie podano po Taco Bell, to znaczy, że poziom katastrofy został czytelnie skalibrowany.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://old.reddit.com/r/memes/comments/1v27p6i/epic_comment/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "memes",
+        "food",
+        "one-liner"
+      ],
+      "categoryLabel": "memes",
+      "postText": null,
+      "whyFunny": "Humor działa, bo komentarze nie rozwlekają pomysłu, tylko dokładają dwa szybkie one-linery, które natychmiast podbijają absurd sytuacji.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment zostaje przy najprostszej możliwej reakcji: z taką logiką trudno polemizować.",
+          "originalBody": "Cant argue with that logic",
+          "explanation": "To wygrywa, bo daje memowi suchą pieczątkę akceptacji zamiast tłumaczenia dowcipu.",
+          "score": null
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight kradnie cały thread pasożytem, który sam pyta, czym go właśnie nakarmiono.",
+          "originalBody": "The parasite: Bro, what did you just feed us?",
+          "explanation": "Komentarz działa, bo przesuwa perspektywę o jeden krok dalej i od razu robi sytuację śmieszniejszą.",
+          "score": null
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzecia riposta domyka kartę najczytelniej: jeśli nawet pasożyt ucieka od Taco Bell, to standard został ustawiony wyjątkowo nisko.",
+          "originalBody": "Even the parasite noping out of Taco Bell",
+          "explanation": "To zamienia zwykły food roast w krótką, szeroko zrozumiałą puentę.",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-mildlyinfuriating-comments-1v28hd8-the-package-said-18-to-20-minutes-at-450f-this-is",
+      "title": "The package said 18 to 20 minutes at 450°F. This is 10 minutes at 400°F.",
+      "caption": "Najczystsza everyday karta slotu bierze spalony Totino's self-own i pozwala top comments zrobić z tego mini-śledztwo, które kończy się jednym słowem: pomyliłeś conventional z convection.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://old.reddit.com/r/mildlyinfuriating/comments/1v28hd8/the_package_said_18_to_20_minutes_at_450f_this_is/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "food",
+        "home",
+        "self-own"
+      ],
+      "categoryLabel": "memes",
+      "postText": null,
+      "whyFunny": "Karta działa, bo nie potrzebuje złośliwego roastu: komentarze same spokojnie wykrywają instrukcyjną pomyłkę i przez to całość brzmi jak bardzo przewidywalna, bardzo zabawna katastrofa.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment praktycznie od ręki rozwiązuje zagadkę: na pudełku chodziło o conventional oven, nie convection oven.",
+          "originalBody": "I think the word was CONVENTIONAL oven, not CONVECTION oven.",
+          "explanation": "To wygrywa, bo całą katastrofę sprowadza do jednej bardzo ludzkiej pomyłki w czytaniu instrukcji.",
+          "score": null
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight tylko wzmacnia diagnozę: nikt nie widział mrożonej pizzy, która serio każe tyle w piecu konwekcyjnym.",
+          "originalBody": "I've never seen frozen pizza instructions for a convection oven.",
+          "explanation": "Komentarz działa, bo przez zwykłą rzeczowość robi sytuację jeszcze bardziej oczywistą i śmieszną.",
+          "score": null
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzecia riposta domyka wątek jednym przesadnie prostym wnioskiem: 20 minut w 450 stopniach to byłaby wieczność dla każdej takiej pizzy.",
+          "originalBody": "20 min at 450 would be an eternity for any frozen pizza",
+          "explanation": "To zostawia temat w lekkim, domowym tonie zamiast ciągnąć go w prawdziwy rant.",
+          "score": null
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-mildlyinfuriating-comments-1v20u9f-coyote-stalking-me-at-work-adorable-but-concerning",
+      "title": "Coyote stalking me at work (adorable but concerning)",
+      "caption": "Piąta karta dodaje do slotu trochę dzikiej energii: niby to tylko coyote outside the office, ale comment layer natychmiast zmienia go w podejrzanie oswojonego kumpla, którego ktoś ewidentnie już dokarmia i który bardzo chce cię gdzieś odprowadzić.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://old.reddit.com/r/mildlyinfuriating/comments/1v20u9f/coyote_stalking_me_at_work_adorable_but_concerning/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "animals",
+        "office",
+        "weird"
+      ],
+      "categoryLabel": "memes",
+      "postText": null,
+      "whyFunny": "Humor działa, bo komentarze utrzymują balans między 'to słodkie' a 'to bardzo zły znak', dzięki czemu powstaje lekko niepokojąca, ale nadal public-safe puenta.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment od razu wskazuje najbardziej redditową diagnozę świata: ktoś na pewno go dokarmia.",
+          "originalBody": "Is someone feeding it?",
+          "explanation": "To wygrywa, bo jednym pytaniem tłumaczy zarówno odwagę zwierzaka, jak i absurd całej sytuacji.",
+          "score": null
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight dopina to bez subtelności: tak, ktoś go karmi i dlatego zachowuje się jak pies gotowy do zabawy.",
+          "originalBody": "Dude wants to play lol someone is for damn sure feeding",
+          "explanation": "Komentarz działa, bo miesza słodycz z lekkim zaniepokojeniem bez skręcania w ciężki alarmizm.",
+          "score": null
+        },
+        {
+          "id": "comment-3",
+          "summary": "Najkrótsza puenta całego wątku traktuje kojota jak typa, który po prostu chce cię odciągnąć na bok na sekundę.",
+          "originalBody": "let me talk to you over here for a second",
+          "explanation": "To działa, bo antropomorfizuje zwierzaka dokładnie o jeden krok za daleko i właśnie dlatego jest śmieszne.",
+          "score": null
+        }
+      ]
+    }
+  ],
+  "source": "Codex Safari Reddit radar"
+}
