@@ -4,6 +4,10 @@ Last updated: 2026-07-21
 
 ## Current Understanding
 
+Wieczorny refresh z 2026-07-21 dodaje do porannej osi jeszcze trzy praktyczne warstwy: koszt prawny danych treningowych, mierzenie wartości AI w firmach oraz physical AI dla infrastruktury energetycznej. Anthropic settlement daje realną cenę za źle pozyskane książki treningowe, OpenAI próbuje zastąpić tokeny metryką useful work per dollar, a Gritt pokazuje, że roboty do budowy solarów i jobsite'ów stają się osobną klasą inwestycji.
+
+Równolegle Google wraca do tematu własnego krzemu dla Gemini, a The Verge i AP przypominają, że data center i GPU zaczynają być oceniane przez rachunki za prąd, wodę i lokalną zgodę. To przesuwa temat z samego wyścigu modeli na trzy pytania operacyjne: kto płaci za marginalny koszt AI, kto umie go mierzyć i kto buduje fizyczną warstwę wdrożenia.
+
 Poranny run z 2026-07-21 przesuwa temat z hardware i surface control do chińskiej konkurencji open-weight, globalnego governance i bezpieczeństwa platform. Kimi K3 i Qwen3.8 sygnalizują realną presję na frontier AI, Moonshot chwilowo zatrzymuje nowe subskrypcje, Xi na WAICO promuje globalne reguły AI, CAISI zostaje bez stałego szefa, Apple i Google zdejmują nudify apps, OpenAI dokręca ochronę nastolatków, a Florida wchodzi w spór o koszty data center i ratepayer protection.
 
 Wieczorny run z 2026-07-20 dokłada warstwę platform governance, cyber i kapitałowego testu AI infra. WordPress 7.0.2 jest już aktywnie wykorzystywany przez atakujących, YouTube zaostrza disclosure dla realistycznych treści AI, Adobe wrzuca generatywne edytowanie do Project Indigo, a CuspAI, Neo, Infinity i Etched pokazują, że kapitał nadal płynie zarówno do AI-for-science, jak i do security for agents oraz inference chips. Craneware przypomina jednocześnie, że vendor breach w healthcare nadal ma szeroki efekt systemowy.
@@ -216,6 +220,7 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-21: Wieczorny refresh dodał Anthropic settlement, OpenAI scorecard, Gritt i Google Frozen v2; główny temat przesuwa się z samego frontier model race na liability, ROI i physical AI.
 - 2026-07-21: Daily run added the Chinese open-weight sprint, Moonshot capacity pressure, Xi/WAICO governance, CAISI vacancy, nudify app-store enforcement, OpenAI teen safety and Florida ratepayer policy.
 - 2026-07-20: Wieczorny refresh dodał WordPress 7.0.2 active exploitation, YouTube AI disclosure, Adobe Project Indigo AI Playground, CuspAI materials foundry, Neo agentic endpoint security, Etched valuation test i Craneware healthcare breach.
 - 2026-07-20: Dzisiejszy run dodał NVIDIA/Japan physical AI, Apple vs OpenAI legal escalation, Codex Micro + 272k context, public AI stack w Indiach, Google AI ad transparency labels, Kimi K3, robotaxi safety i Netflix genAI M&A disclosure.

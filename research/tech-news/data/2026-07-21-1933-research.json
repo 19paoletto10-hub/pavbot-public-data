@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-21",
+  "runTime": "19:33",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny run dodaje trzy nowe osie, których poranny raport jeszcze nie miał w centrum: konkretną cenę prawną za dane treningowe, fizyczne AI w budowie infrastruktury oraz próbę zdefiniowania, jak w ogóle mierzyć wartość AI w firmach. Anthropic settlement zamienia spór o copyright w twardy koszt, OpenAI przenosi dyskusję z tokenów na „useful work per dollar”, a Gritt pokazuje, że robotics już nie są wyłącznie demo dla laboratoriów, tylko narzędzie do stawiania elektrowni i innych jobsite'ów.",
+    "Równolegle Google wraca do wojny o compute przez własny chip dla Gemini, a The Verge wraz z AP przypominają, że data center i GPU stają się lokalnym problemem energii, wody i polityki publicznej. To przesuwa temat z samego wyścigu modeli na trzy praktyczne pytania: kto płaci, kto mierzy wartość i kto buduje fizyczną warstwę wdrożenia."
+  ],
+  "summaryBullets": [
+    "Regulacje: Anthropic settlement ustawia cenę za dane treningowe",
+    "AI: OpenAI chce liczyć AI przez wartość, nie tokeny",
+    "Infrastruktura: Gritt przenosi physical AI do budowy energii"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-21-1933-0-anthropic-settlement-ustawia-cene-za-dane-treningowe-6f4ad289a8",
+      "section": "Regulacje",
+      "title": "Anthropic settlement ustawia cenę za dane treningowe",
+      "standfirst": "Sąd zatwierdził ugodę Anthropic za książki użyte do trenowania Claude, zamieniając abstrakcyjny spór o dane w bardzo konkretny koszt.",
+      "whatHappened": "Federalny sąd w San Francisco zaakceptował ugodę wartą 1.5 mld dolarów, która ma wynagrodzić autorów i wydawców za wykorzystanie pirackich kopii książek w treningu modeli Anthropic.",
+      "whyItMatters": "To natychmiast tworzy punkt odniesienia dla innych sporów o training data i podnosi koszt ryzyka prawnego dla kolejnych laboratoriów.",
+      "deeperAnalysis": [
+        "To ważne nie tylko przez samą kwotę, ale przez to, że ugoda zaczyna działać jak rynkowa wycena ryzyka. Od tego momentu firmy AI nie mogą już traktować pozyskania materiałów treningowych jako problemu wyłącznie technicznego lub etycznego.",
+        "W praktyce ta sprawa może przesunąć negocjacje licencyjne z pozycji „czy w ogóle płacić” do „ile płacić i za jaki zakres użycia”. Jeśli dojdą kolejne settlementy, modeli ekonomicznych dla frontier AI nie da się już oddzielić od polityki copyright."
+      ],
+      "contextPoints": [
+        "Co się stało: sąd zatwierdził ugodę Anthropic.",
+        "Dlaczego ważne: training data dostało realną cenę i precedens.",
+        "Na co patrzeć dalej: odwołania, dalsze pozwy i reakcja innych laboratoriów."
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/74b140444023898aeba8579b6e9f0d63"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "copyright",
+        "settlement",
+        "training data",
+        "litigation"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-21-1933-1-openai-chce-liczyc-ai-przez-wartosc-nie-tokeny-90a3483fef",
+      "section": "AI",
+      "title": "OpenAI chce liczyć AI przez wartość, nie tokeny",
+      "standfirst": "OpenAI próbuje przestawić rozmowę z kosztu modeli na wartość biznesową, jaką te modele generują.",
+      "whatHappened": "Firma opublikowała scorecard dla „AI age”, promując metrykę useful intelligence per dollar i pytania o użyteczną pracę, koszt zadania oraz skuteczność.",
+      "whyItMatters": "To sygnał, że rynek enterprise może zacząć mierzyć AI nie przez tokeny, lecz przez wynik operacyjny i zwrot z wydatków.",
+      "deeperAnalysis": [
+        "To jest również ruch obronny. Jeśli klienci zaczynają ciąć budżety albo wybierać tańsze modele, OpenAI ma interes w tym, żeby rozmowę przesunąć na efekt końcowy, a nie na surowy koszt wejścia.",
+        "Jeśli podobny język przyjmą inni dostawcy, CFO przestaną porównywać tylko ceny modeli, a zaczną patrzeć na produktywność, ryzyko błędu i skalowalność wdrożeń. Wtedy AI stanie się bliżej klasycznego software procurement niż eksperymentu z chatbotem."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI opisał scorecard i metrykę wartości.",
+        "Dlaczego ważne: enterprise buying może przejść z cen per token na outcome-based evaluation.",
+        "Na co patrzeć dalej: czy klienci i konkurenci zaczną używać podobnych wskaźników."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/a-scorecard-for-the-ai-age/"
+        },
+        {
+          "title": "Axios",
+          "url": "https://www.axios.com/2026/07/17/openai-ai-costs-roi-metrics"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "CFO",
+        "ROI",
+        "enterprise",
+        "metrics"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-21-1933-2-gritt-przenosi-physical-ai-do-budowy-energii-b2aabdf8ec",
+      "section": "Infrastruktura",
+      "title": "Gritt przenosi physical AI do budowy energii",
+      "standfirst": "Gritt wchodzi z stealth jako startup budujący roboty do stawiania farm solarnych i innych trudnych jobsite'ów.",
+      "whatHappened": "Firma zebrała około 32 mln dolarów i publicznie opisała roboty oraz system AI jako narzędzie do budowania infrastruktury „w najtrudniejszych miejscach”.",
+      "whyItMatters": "To przesuwa physical AI z sfery demonstracyjnej do realnej pracy na placach budowy, gdzie liczą się czas, koszt i brak rąk do pracy.",
+      "deeperAnalysis": [
+        "Solar construction to dobry test dla tej kategorii, bo łączy presję kosztową z dużą skalą popytu. Jeśli roboty rzeczywiście przyspieszą deployment, physical AI przestanie być tylko przyszłością humanoidów i zacznie wyglądać jak konkretny instrument realizacji infrastruktury.",
+        "To też łączy się z szerszym trendem, w którym AI nie jest już wyłącznie cyfrowym produktem. Coraz częściej staje się warstwą, która usprawnia budowę, logistykę i energetykę, czyli dokładnie tam, gdzie brakuje pracy i gdzie każda godzina opóźnienia kosztuje."
+      ],
+      "contextPoints": [
+        "Co się stało: Gritt wyszło ze stealth z finansowaniem i produktem.",
+        "Dlaczego ważne: physical AI zaczyna mieć własną kategorię zastosowań poza laboratorium.",
+        "Na co patrzeć dalej: wdrożenia produkcyjne, partnerzy energetyczni i proof of reliability."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/21/gritt-exits-stealth-with-34-million-for-robots-to-build-solar-plants-then-everything-else/"
+        },
+        {
+          "title": "Gritt",
+          "url": "https://www.gritt.ai/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "robotics",
+        "physical AI",
+        "solar",
+        "construction",
+        "infrastructure"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-21-1933-3-google-szykuje-wlasny-chip-dla-gemini-ecfb247342",
+      "section": "Infrastruktura",
+      "title": "Google szykuje własny chip dla Gemini",
+      "standfirst": "Google ma pracować nad Frozen v2, czyli chipem, który ma sprawić, że Gemini będzie działać dużo efektywniej.",
+      "whatHappened": "TechCrunch opisał raport o nowym chipie Google'a, a Barron's zauważa, że inwestorzy pamięci już czytają tę zmianę jako ruch wpływający na cały łańcuch dostaw.",
+      "whyItMatters": "Jeśli ten kierunek się potwierdzi, custom silicon znów stanie się bezpośrednią dźwignią kosztów AI i konkurencją dla Nvidii.",
+      "deeperAnalysis": [
+        "To nie jest tylko historia o sprzęcie. Dla hyperscalera własny chip oznacza większą kontrolę nad marżą, dostępnością compute i architekturą całego stacku Gemini.",
+        "W szerszym sensie takie ruchy pokazują, że next wave konkurencji w AI nie musi już rozstrzygać się wyłącznie na poziomie modeli. Różnice będą coraz częściej tworzone przez efektywność inferencji, pamięć, zasilanie i wszystko to, co dzieje się pod spodem produktu."
+      ],
+      "contextPoints": [
+        "Co się stało: Google ma pracować nad bardziej efektywnym chipem dla Gemini.",
+        "Dlaczego ważne: custom silicon wpływa na koszty, dostępność i pozycję Nvidii.",
+        "Na co patrzeć dalej: oficjalna reakcja Google i wpływ na popyt na pamięci."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/"
+        },
+        {
+          "title": "Barron's",
+          "url": "https://www.barrons.com/articles/micron-stock-price-google-earnings-5c384a21"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Gemini",
+        "chips",
+        "inference",
+        "Nvidia"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-21-1933-4-gpu-i-data-center-wchodza-do-polityki-publicznej-499aa601ef",
+      "section": "Regulacje",
+      "title": "GPU i data center wchodzą do polityki publicznej",
+      "standfirst": "The Verge i AP pokazują, że koszty środowiskowe AI infra stają się mainstreamowym tematem politycznym.",
+      "whatHappened": "The Verge opublikował dziś szeroki materiał o wpływie GPU i data center na energię, wodę i społeczności lokalne, a AP opisał federalny bill z Florydy, który ma chronić ratepayerów przed przerzucaniem kosztów AI infra.",
+      "whyItMatters": "Buildout AI zaczyna być oceniany nie tylko przez inwestorów i techników, ale też przez regulacje, utility i lokalne społeczności.",
+      "deeperAnalysis": [
+        "To domyka spór, który przez długi czas był przedstawiany jako czysto technologiczny. W praktyce koszt AI coraz częściej przybiera formę rachunków za prąd, zużycia wody, emisji i konfliktów o pozwolenia.",
+        "Jeśli ten nacisk będzie rósł, firmy AI będą musiały bronić nie tylko modelowych benchmarków, ale też prawa do budowy infrastruktury. To może spowolnić niektóre projekty, wymusić przejrzystość i przyspieszyć lokalne moratoria."
+      ],
+      "contextPoints": [
+        "Co się stało: opublikowano feature o śladzie GPU i bill o kosztach data center.",
+        "Dlaczego ważne: AI infra staje się problemem publicznej polityki i utility regulation.",
+        "Na co patrzeć dalej: kolejne lokalne zakazy, negocjacje z utilities i reakcje Big Tech."
+      ],
+      "sources": [
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/cs/features/937356/ai-data-center-gpu-environmental-impact"
+        },
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/c8b93e8ca7e0b47bad7411b6d05717e0"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "data centers",
+        "GPUs",
+        "water",
+        "energy",
+        "public policy"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Anthropic settlement ustawia cenę za dane treningowe",
+      "rationale": "To pierwszy tak duży, publicznie wyceniony koszt błędów w pozyskiwaniu książek do treningu modeli",
+      "sourcesLabel": "AP; The Verge"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI chce liczyć AI przez wartość, nie tokeny",
+      "rationale": "„Useful intelligence per dollar” może zmienić sposób, w jaki CFO oceniają narzędzia AI",
+      "sourcesLabel": "OpenAI; Axios"
+    },
+    {
+      "priority": "High",
+      "title": "Gritt przenosi physical AI do budowy energii",
+      "rationale": "Roboty do farm solarnych pokazują, że AI zaczyna rozwiązywać problem pracy fizycznej i infrastruktury",
+      "sourcesLabel": "TechCrunch; Gritt"
+    },
+    {
+      "priority": "High",
+      "title": "Google szykuje własny chip dla Gemini",
+      "rationale": "Frozen v2 może poprawić marginesy, zmienić zależność od Nvidii i przestawić rynek pamięci",
+      "sourcesLabel": "TechCrunch; Barron's"
+    },
+    {
+      "priority": "High",
+      "title": "GPU i data center wchodzą do polityki publicznej",
+      "rationale": "Koszt energii i wody staje się politycznym ograniczeniem dla rozbudowy AI infra",
+      "sourcesLabel": "The Verge; AP"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "AP: Anthropic $1.5B settlement approved",
+      "url": "https://apnews.com/article/74b140444023898aeba8579b6e9f0d63"
+    },
+    {
+      "title": "The Verge: Anthropic settlement approved",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/968724/anthropic-authors-settlement-ai-copyright-approved"
+    },
+    {
+      "title": "OpenAI: A scorecard for the AI age",
+      "url": "https://openai.com/index/a-scorecard-for-the-ai-age/"
+    },
+    {
+      "title": "Axios: OpenAI CFO on AI ROI metrics",
+      "url": "https://www.axios.com/2026/07/17/openai-ai-costs-roi-metrics"
+    },
+    {
+      "title": "TechCrunch: Gritt exits stealth",
+      "url": "https://techcrunch.com/2026/07/21/gritt-exits-stealth-with-34-million-for-robots-to-build-solar-plants-then-everything-else/"
+    },
+    {
+      "title": "Gritt official site",
+      "url": "https://www.gritt.ai/"
+    },
+    {
+      "title": "TechCrunch: Google Frozen v2 chip report",
+      "url": "https://techcrunch.com/2026/07/20/google-is-working-on-a-new-ai-chip-designed-to-make-gemini-more-efficient/"
+    },
+    {
+      "title": "Barrons: Google chip and memory market reaction",
+      "url": "https://www.barrons.com/articles/micron-stock-price-google-earnings-5c384a21"
+    },
+    {
+      "title": "The Verge: GPU environmental impact feature",
+      "url": "https://www.theverge.com/cs/features/937356/ai-data-center-gpu-environmental-impact"
+    },
+    {
+      "title": "AP: Florida AI data center bill",
+      "url": "https://apnews.com/article/c8b93e8ca7e0b47bad7411b6d05717e0"
+    }
+  ]
+}

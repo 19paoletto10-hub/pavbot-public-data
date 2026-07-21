@@ -4,6 +4,13 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Anthropic copyright settlement fallout | The $1.5B approval makes training-data liability concrete and may reset licensing negotiations | Watch appeals, payout mechanics and whether other labs follow with settlements | Open |
+| High | Track OpenAI AI-age scorecard adoption | OpenAI is trying to shift enterprise AI buying toward outcome-based metrics | Watch CFO/enterprise uptake, competitor language and whether buyers adopt useful-work-per-dollar framing | Open |
+| High | Track Google Frozen v2 chip roadmap | Reported Gemini chip work could change inference economics and pressure Nvidia | Watch official confirmation, TPU roadmap hints and memory-market reaction | Open |
+| High | Track Gritt physical AI deployments | Solar-farm construction robots show infrastructure AI moving from demo to field work | Watch pilot sites, partner announcements and whether the company expands beyond solar | Open |
+
+| Priority | Item | Reason | Next Step | Status |
+| --- | --- | --- | --- | --- |
 | High | Track Chinese open-weight sprint | Kimi K3 and Qwen3.8 show China pushing frontier AI through public weights and aggressive rollout | Watch independent benchmarks, pricing and whether western labs respond with faster open releases | Open |
 | High | Track Moonshot subscription pressure | Temporary signup pauses turn Kimi K3 demand into a concrete capacity signal | Watch whether the pause lasts, whether capacity expands and how Moonshot explains the bottleneck | Open |
 | High | Track Xi global AI governance push | WAICO gives China a platform to shape AI governance language and coalition-building | Watch follow-up documents, participating countries and UN-related language | Open |
