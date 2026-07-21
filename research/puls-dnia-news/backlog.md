@@ -2,6 +2,13 @@
 
 ## Open
 
+- Watch whether the Białystok search gets a Child Alert or another police update before the next slot.
+- Watch whether the Łódź pedestrian strike gets a police or hospital follow-up.
+- Watch whether the Legnica case turns into formal charges or a clearer prosecutor note.
+- Watch whether IMGW upgrades the weather block into transport, outage or hail disruption.
+- Watch whether the Iran, Canada or Meta stories get a fresh official confirmation before the evening slot.
+- Watch whether Thames Water or the Manchester No 10 North plan gets a formal policy or service update.
+
 - Watch whether the Białka Tatrzańska crash gets a police or prosecutor follow-up before the next slot.
 - Watch whether the Gdynia drunk-driving stop produces formal charges or a court date.
 - Watch whether BIK or the banks publish a plain-language note on the new scoring model.
