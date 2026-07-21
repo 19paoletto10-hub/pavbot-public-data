@@ -2,6 +2,10 @@
 
 ## Open
 
+- Watch whether PiS turns the new sondażowy spadek and Braun talk into a formal response or personnel move.
+- Watch whether the 50 procent cła na Kanadę trigger a fast Ottawa or sector response.
+- Watch whether the fresh Iran strikes produce another CENTCOM or maritime update before noon.
+- Watch whether IMGW warnings turn into outages, fallen trees or PSP interventions.
 - Watch whether the storm damage in Szczecin, Bemowo and Świętokrzyskie turns into PSP, utility or transport disruption.
 - Watch whether Kotula's plan B or Święczkowski's letter produces a written follow-up.
 - Watch whether Burnham's cabinet line-up and first fiscal signals become concrete.
