@@ -1,5 +1,7 @@
 # Puls Dnia News Index
 
+The 2026-07-21 21:04 slot pivots the feed toward the retirement-age debate, Sikorski's warning about Russian provocations, and a stubborn PiS conflict thread. Abroad, the lead moves to Burnham's first cabinet move on living costs, Ukraine's army-chief row, Lebanon's pilot-zone troop deployment, France's under-15 social-media ban, and a Russian live-fire exercise off the UK coast.
+
 The 2026-07-21 18:01 slot przesuwa feed ku warszawskim incydentom, korkowi na A2, sporowi w PiS, najmu krótkoterminowemu i złotu NBP. Za granicą najmocniej ważą ulga VAT na prąd w UK, rosyjskie ćwiczenia morskie przy Wyspach, cła na Kanadę i kolejne uderzenia USA na Iran.
 
 The 2026-07-21 15:01 slot turns the pulse toward a missing-child alert in Białystok, a pedestrian strike in Łódź, a Legnica hate-crime probe, a CBŚP debt-gang bust, NBP gold growth, and a weather turn back toward storms and tropical air. Abroad, the feed leans on Manchester's No 10 North staffing move, Thames Water restrictions, fresh US strikes on Iran, Lebanese troop deployment, Canada tariffs, and Meta outage reports.

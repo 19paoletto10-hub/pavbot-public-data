@@ -2,6 +2,10 @@
 
 ## Open
 
+- Watch whether the retirement-age debate turns into a formal government or parliamentary response.
+- Watch whether Sikorski's warning about Russian provocations gets an official MSZ or MON clarification.
+- Watch whether France's under-15 social-media ban gets a legislative timetable or platform reaction.
+
 - Watch whether the Warsaw driver with five bans gets formal charges or longer detention.
 - Watch whether Metro Warszawskie or police issue a follow-up on the bag on tracks.
 - Watch whether the A2 collision turns into longer transport disruption or injury reporting.
