@@ -1,0 +1,525 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-21",
+  "runTime": "12:02",
+  "status": "Material update",
+  "headline": "Nowe incydenty krajowe, ruchy w gospodarce i świeże sygnały bezpieczeństwa",
+  "summary": "Nowy slot przesuwa feed ku świeżym incydentom krajowym, zmianom w BIK i kolejnym sygnałom bezpieczeństwa. Za granicą dochodzą India i Liban, a w gospodarce i technologii widać nowe ruchy wokół Burnhama, Thames Water i francuskiego zakazu social mediów dla dzieci.",
+  "checkedSources": [
+    {
+      "title": "TVN24 latest RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN homepage",
+      "url": "https://www.cnn.com/"
+    },
+    {
+      "title": "CNN World page",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "BIK ocena punktowa",
+      "url": "https://www.bik.pl/ocena-punktowa-bik"
+    },
+    {
+      "title": "IMGW dynamic map",
+      "url": "https://meteo.imgw.pl/dyn/?osmet=true"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-07-21-1202-bialka-dziecko",
+      "section": "Polska",
+      "title": "Dziecko zginęło w Białce Tatrzańskiej",
+      "lead": "W wypadku zginęło 10-letnie dziecko.",
+      "whatHappened": "W Białce Tatrzańskiej samochód wypadł z drogi i uderzył w ogrodzenie. W aucie było jeszcze troje dzieci i kierująca; policja bada okoliczności zdarzenia.",
+      "keyFacts": [
+        "Zginęło 10-letnie dziecko.",
+        "Troje pozostałych dzieci i kierująca nie odniosło poważniejszych obrażeń.",
+        "Okoliczności zdarzenia wyjaśnia policja."
+      ],
+      "reactions": [
+        "To jeden z cięższych wakacyjnych sygnałów drogowych z południa kraju.",
+        "Możliwy jest szybki follow-up ze strony policji lub prokuratury."
+      ],
+      "whyItMatters": "To natychmiast przenosi uwagę na bezpieczeństwo rodzinnych wyjazdów i stan dróg w sezonie wakacyjnym.",
+      "context": "To świeży lokalny incydent, który wyprzedza wcześniejszy poranny blok meteo i metra w krajowym leadzie.",
+      "watchNext": [
+        "Sprawdzić komunikat policji o przyczynach wypadku.",
+        "Sprawdzić, czy pojawią się informacje o stanie kierującej i dzieci."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Białka Tatrzańska wypadek",
+          "url": "https://tvn24.pl/krakow/bialka-tatrzanska-smiertelny-wypadek-nie-zyje-dziecko-st9151755?source=rss"
+        }
+      ],
+      "tags": [
+        "Białka Tatrzańska",
+        "wypadek",
+        "bezpieczeństwo drogowe"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-21-1202-gdynia-71-latek",
+      "section": "Polska",
+      "title": "Pijany 71-latek zatrzymany w Gdyni",
+      "lead": "Kierowca miał 1,8 promila alkoholu.",
+      "whatHappened": "Na jednej z ulic w Gdyni policja zatrzymała 71-latka, który prowadził samochód z 1,8 promila alkoholu. TVN24 pokazuje też nagranie, na którym kobieta próbuje go bronić podczas interwencji.",
+      "keyFacts": [
+        "Kierowca miał 1,8 promila alkoholu.",
+        "Interwencja policji została nagrana i trafiła do sieci.",
+        "Kobieta próbowała przeszkadzać w zatrzymaniu."
+      ],
+      "reactions": [
+        "To mocny lokalny przykład ryzyka związanego z jazdą po alkoholu.",
+        "Możliwe są dalsze czynności policji po zatrzymaniu."
+      ],
+      "whyItMatters": "Materiał podbija temat nietrzeźwych kierowców i reakcji świadków w sytuacjach interwencji.",
+      "context": "To nowy miejski incydent z bloku krajowego, niezależny od porannego wątku metra.",
+      "watchNext": [
+        "Sprawdzić, czy policja poda zarzuty i dalszy stan kierowcy.",
+        "Sprawdzić, czy pojawi się decyzja o odebraniu prawa jazdy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Gdynia pijany 71-latek",
+          "url": "https://tvn24.pl/trojmiasto/gdynia-71-latek-jechal-pijany-stawial-opor-przy-zatrzymaniu-nagranie-st9151460?source=rss"
+        }
+      ],
+      "tags": [
+        "Gdynia",
+        "policja",
+        "alkohol"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-21-1202-bik-scoring",
+      "section": "Polska",
+      "title": "BIK zmienia scoring kredytowy",
+      "lead": "System przestaje karać za porównywanie ofert kredytowych.",
+      "whatHappened": "Biuro Informacji Kredytowej wprowadziło zmianę w systemie oceny punktowej. Samo sprawdzanie wielu ofert kredytowych nie będzie już obniżało wyniku, a BIK zmienia też algorytm wyliczania punktów.",
+      "keyFacts": [
+        "Zmienia się algorytm oceny punktowej BIK.",
+        "Samo sprawdzanie wielu ofert kredytowych nie będzie karane.",
+        "BIK publikuje własne objaśnienia nowego modelu scoringowego."
+      ],
+      "reactions": [
+        "To ważna zmiana dla osób porównujących oferty i dla banków.",
+        "Rynek może jeszcze doprecyzować, jak wdrożenie wpłynie na decyzje kredytowe."
+      ],
+      "whyItMatters": "To wpływa na sposób porównywania ofert i na to, jak klienci rozumieją własną zdolność kredytową.",
+      "context": "To jeden z najważniejszych technicznych ruchów w krajowym bloku gospodarczym tego slotu.",
+      "watchNext": [
+        "Sprawdzić, czy banki opublikują własne wyjaśnienia wdrożenia.",
+        "Sprawdzić, czy BIK poda więcej przykładów nowych zasad."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 BIK scoring",
+          "url": "https://tvn24.pl/biznes/pieniadze/ocena-kredytowa-bik-nowe-zasady-jak-zmienil-sie-system-oceny-punktowej-st9151405?source=rss"
+        },
+        {
+          "title": "BIK ocena punktowa",
+          "url": "https://www.bik.pl/ocena-punktowa-bik"
+        }
+      ],
+      "tags": [
+        "BIK",
+        "kredyt",
+        "banki"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1202-lodz-programy-lekowe",
+      "section": "Polska",
+      "title": "Łódź zaprzecza wstrzymaniu programów lekowych",
+      "lead": "Szpital odrzuca doniesienia o wstrzymaniu przyjęć.",
+      "whatHappened": "CSK UMED w Łodzi zaprzecza, by wstrzymał przyjmowanie nowych pacjentów do programów lekowych, w tym onkologicznych. Placówka wydała oświadczenie po publikacji prasowej opisującej przypadki kierowania chorych do innych ośrodków.",
+      "keyFacts": [
+        "Szpital zaprzecza wstrzymaniu przyjęć.",
+        "Spór dotyczy również programów onkologicznych.",
+        "Punktem wyjścia była publikacja prasowa i reakcja placówki."
+      ],
+      "reactions": [
+        "To temat wrażliwy społecznie i medycznie.",
+        "Możliwe są kolejne wyjaśnienia ze strony szpitala lub resortu."
+      ],
+      "whyItMatters": "Dotyczy dostępu do leczenia i wiarygodności informacji o obciążeniu publicznej ochrony zdrowia.",
+      "context": "To nowy krajowy temat zdrowotny, który wszedł do feedu po porannym bloku infrastrukturalnym.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się doprecyzowanie liczby pacjentów i zakresu programów.",
+        "Sprawdzić, czy ministerstwo zdrowia zabierze głos."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 CSK UMED Łódź",
+          "url": "https://tvn24.pl/zdrowie/szpital-w-lodzi-wstrzymal-przyjecia-do-programow-lekowych-csk-umed-zaprzecza-st9151641?source=rss"
+        }
+      ],
+      "tags": [
+        "Łódź",
+        "ochrona zdrowia",
+        "programy lekowe"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1202-most-lazienkowski",
+      "section": "Polska",
+      "title": "Kolizja z autobusem na Moście Łazienkowskim",
+      "lead": "Dwa auta uderzyły w autobus miejski.",
+      "whatHappened": "Na Moście Łazienkowskim, na wysokości Wisłostrady, dwa auta osobowe zderzyły się z autobusem miejskim. Nie ma osób poszkodowanych, ale występują utrudnienia w kierunku Ochoty.",
+      "keyFacts": [
+        "W kolizji brały udział dwa auta osobowe i autobus miejski.",
+        "Nie ma poszkodowanych.",
+        "Kierowcy muszą liczyć się z utrudnieniami na trasie."
+      ],
+      "reactions": [
+        "To świeży sygnał zakłóceń w ruchu na jednym z kluczowych mostów Warszawy.",
+        "Może pojawić się aktualizacja od służb miejskich lub policji."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na dojazdy przez śródmiejską część Warszawy.",
+      "context": "To nowy transportowy incydent w stolicy, niezależny od wcześniejszego porannego alertu metra.",
+      "watchNext": [
+        "Sprawdzić, czy policja poda czas przywrócenia pełnego ruchu.",
+        "Sprawdzić, czy ZTM lub policja zmienią komunikat o utrudnieniach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Most Łazienkowski kolizja",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-kolizja-z-autobusem-miejskim-na-moscie-lazienkowskim-st9151723?source=rss"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "transport",
+        "kolizja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1202-wejherowo-peron",
+      "section": "Polska",
+      "title": "Bójka na peronie w Wejherowie",
+      "lead": "Konduktor złożył zawiadomienie.",
+      "whatHappened": "Policja wyjaśnia okoliczności bójki na peronie w Wejherowie. Konduktor złożył zawiadomienie, twierdząc, że pasażer naruszył jego nietykalność osobistą; w sieci krąży nagranie z interwencji pracownika kolei.",
+      "keyFacts": [
+        "Sprawą zajmuje się policja.",
+        "Konduktor złożył zawiadomienie.",
+        "Wideo z interwencji trafiło do sieci."
+      ],
+      "reactions": [
+        "To kolejny lokalny sygnał napięcia na styku transportu i bezpieczeństwa publicznego.",
+        "Możliwy jest szybki follow-up od kolei lub służb."
+      ],
+      "whyItMatters": "To może przełożyć się na dalsze działania prawne i komunikaty operatora kolejowego.",
+      "context": "To nowy, drobniejszy, ale medialny epizod z trójmiejskiego bloku krajowego.",
+      "watchNext": [
+        "Sprawdzić, czy policja poda kwalifikację czynu.",
+        "Sprawdzić, czy przewoźnik wyda własny komunikat."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Wejherowo peron bójka",
+          "url": "https://tvn24.pl/trojmiasto/bojka-na-peronie-w-wejherowie-konduktor-zlozyl-zawiadomienie-st9151463?source=rss"
+        }
+      ],
+      "tags": [
+        "Wejherowo",
+        "kolej",
+        "policja"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "2026-07-21-1202-indie-cockroach",
+      "section": "Świat",
+      "title": "Protest Partii Karaluchów w Indiach eskaluje",
+      "lead": "Policja użyła pałek i gazu łzawiącego.",
+      "whatHappened": "W Delhi policja starła się z Partią Karaluchów. TVN24 podaje, że zatrzymano założyciela ruchu, a BBC opisuje większą liczbę rannych wśród demonstrantów i funkcjonariuszy.",
+      "keyFacts": [
+        "Założyciel ruchu został zatrzymany.",
+        "Policja użyła pałek i gazu łzawiącego.",
+        "BBC podaje dziesiątki rannych po obu stronach."
+      ],
+      "reactions": [
+        "To z lokalnego protestu przechodzi w poważniejszy porządkowy problem.",
+        "Możliwa jest kolejna oficjalna ocena skali starć."
+      ],
+      "whyItMatters": "To zwiększa ciężar porządkowy w jednym z bardziej nieoczywistych światowych tematów tego slotu.",
+      "context": "To świeży światowy materiał z BBC i TVN24, który nie był dominujący w poprzednim raporcie.",
+      "watchNext": [
+        "Sprawdzić, czy władze podadzą bilans rannych i zarzuty.",
+        "Sprawdzić, czy ruch opublikuje kolejne oświadczenie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Partia Karaluchów",
+          "url": "https://tvn24.pl/swiat/indie-policja-starla-sie-z-partia-karaluchow-zatrzymano-zalozyciela-ruchu-st9151256?source=rss"
+        },
+        {
+          "title": "BBC India cockroach protest",
+          "url": "https://www.bbc.co.uk/news/articles/c98v349r9lro?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Indie",
+        "protest",
+        "porządek publiczny"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1202-liban-strefa-pilotazowa",
+      "section": "Świat",
+      "title": "Liban przygotowuje strefę pilotażową",
+      "lead": "Wojsko ma wejść po izraelskim wycofaniu.",
+      "whatHappened": "BBC podaje, że po wycofaniu izraelskich wojsk z małego fragmentu Libanu libańska armia ma rozmieścić się w tak zwanej strefie pilotażowej. To efekt pośredniczonego przez USA porozumienia.",
+      "keyFacts": [
+        "Ruch ma objąć niewielki fragment kraju.",
+        "Pośrednikiem porozumienia są Stany Zjednoczone.",
+        "To kolejny delikatny krok po konflikcie z Hezbollahem."
+      ],
+      "reactions": [
+        "To ważny test dla kruchego bezpieczeństwa na południu Libanu.",
+        "Możliwy jest kolejny komentarz wojskowy albo dyplomatyczny."
+      ],
+      "whyItMatters": "To sygnał, że napięcie izraelsko-libańskie wciąż wpływa na ruchy wojsk i dyplomacji.",
+      "context": "To nowy światowy temat poza dominującym wcześniej blokiem Iran-Kanada.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się oficjalne potwierdzenie zakresu wycofania.",
+        "Sprawdzić, czy Hezbollah lub Izrael odpowiedzą komunikatem."
+      ],
+      "sources": [
+        {
+          "title": "BBC Lebanon deployment",
+          "url": "https://www.bbc.co.uk/news/articles/cy8mynlmn55o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Liban",
+        "Izrael",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1202-bosak-pis",
+      "section": "Polityka",
+      "title": "Bosak apeluje do PiS",
+      "lead": "Konfederacja mówi: rozejdźcie się albo skończcie spór.",
+      "whatHappened": "Krzysztof Bosak wezwał PiS do przerwania wewnętrznej awantury. Jego zdaniem przeciągający się konflikt ośmiesza prawicę i nie służy nikomu.",
+      "keyFacts": [
+        "Bosak mówi, że PiS powinien rozstrzygnąć konflikt.",
+        "Wypowiedź uderza w wizerunek partii na prawicy.",
+        "To kolejny głos zewnętrznej presji na PiS."
+      ],
+      "reactions": [
+        "To podbija napięcie wokół sporu w obozie prawicy.",
+        "Możliwa jest odpowiedź kolejnych polityków PiS."
+      ],
+      "whyItMatters": "To wzmacnia przekaz, że spór w PiS staje się problemem wykraczającym poza samą partię.",
+      "context": "To świeży polityczny komentarz, który dokładnie zastępuje starszy poranny ton o PiS.",
+      "watchNext": [
+        "Sprawdzić, czy PiS odpowie publicznie.",
+        "Sprawdzić, czy do sporu dołączą kolejne nazwiska z prawicy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Bosak do PiS",
+          "url": "https://tvn24.pl/polska/konflikt-w-pis-krzysztof-bosak-apeluje-do-politykow-pis-jesli-sie-macie-rozejsc-to-sie-rozejdzcie-st9151619?source=rss"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Konfederacja",
+        "polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1202-burnham-money",
+      "section": "Gospodarka",
+      "title": "Burnham testuje próg podatkowy",
+      "lead": "Rząd chce sprawdzić, ile można zarobić bez podatku.",
+      "whatHappened": "BBC opisuje, że nowy rząd Andy'ego Burnhama chce przyjrzeć się progowi dochodu wolnemu od podatku, ale sam premier przyznaje, że zmiana będzie trudna. Temat od razu łączy się z pytaniem o domowe budżety.",
+      "keyFacts": [
+        "Wątek dotyczy podatku dochodowego i domowych budżetów.",
+        "Premier przyznaje, że zmiana byłaby trudna.",
+        "To jeden z pierwszych testów komunikacyjnych nowego rządu."
+      ],
+      "reactions": [
+        "To sygnalizuje szybkie wejście polityki fiskalnej do debaty publicznej.",
+        "Rynek i wyborcy będą oczekiwać większej konkretności."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na to, jak gospodarstwa domowe odczytają pierwsze decyzje nowej władzy.",
+      "context": "To nowy ekonomiczny wątek, który nie był jeszcze głównym akcentem porannego slotu.",
+      "watchNext": [
+        "Sprawdzić, czy rząd poda harmonogram lub próg docelowy.",
+        "Sprawdzić, czy pojawi się reakcja opozycji albo środowisk fiskalnych."
+      ],
+      "sources": [
+        {
+          "title": "BBC Burnham and your money",
+          "url": "https://www.bbc.co.uk/news/articles/cp9ezldrkkgo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Wielka Brytania",
+        "podatki",
+        "budżet"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1202-thames-water",
+      "section": "Gospodarka",
+      "title": "Lenders próbują uratować Thames Water",
+      "lead": "Pojawia się pomysł „golden share”.",
+      "whatHappened": "BBC podaje, że lenderzy Thames Water proponują mechanizm 'golden share', aby zatrzymać przejęcie firmy przez rząd Burnhama. To kolejny ruch w długim sporze o przyszłość spółki wodnej.",
+      "keyFacts": [
+        "Pomysł ma zablokować nacjonalizację lub przejęcie przez państwo.",
+        "To dotyczy jednej z największych brytyjskich spółek infrastrukturalnych.",
+        "Sprawa pozostaje ściśle związana z polityką nowego rządu."
+      ],
+      "reactions": [
+        "To może być jedna z najgłośniejszych spraw infrastrukturalnych w UK.",
+        "Rynek będzie patrzył na każdy nowy sygnał o strukturze własności."
+      ],
+      "whyItMatters": "To może przełożyć się na ceny, inwestycje i przyszły model zarządzania infrastrukturą wodną.",
+      "context": "To nowy gospodarczy follow-up, który dobrze pasuje do szerokiego brytyjskiego bloku BBC.",
+      "watchNext": [
+        "Sprawdzić, czy rząd Burnhama zaakceptuje taki mechanizm.",
+        "Sprawdzić, czy Ofwat lub inni regulatorzy zabiorą głos."
+      ],
+      "sources": [
+        {
+          "title": "BBC Thames Water golden share",
+          "url": "https://www.bbc.co.uk/news/articles/clyv43x372wo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Thames Water",
+        "infrastruktura",
+        "regulacje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1202-francja-social-media",
+      "section": "Technologia",
+      "title": "Francja przyspiesza zakaz social mediów dla dzieci",
+      "lead": "Komisja chce ograniczyć dostęp poniżej 15 lat.",
+      "whatHappened": "Francuska komisja parlamentarna uzgodniła projekt ustawy zakazującej korzystania z mediów społecznościowych osobom poniżej 15. roku życia. To kolejny krok w europejskiej debacie o ochronie dzieci w sieci.",
+      "keyFacts": [
+        "Projekt dotyczy osób poniżej 15 lat.",
+        "Został uzgodniony przez komisję parlamentarną.",
+        "To ruch w debacie o bezpieczeństwie dzieci online."
+      ],
+      "reactions": [
+        "To może uruchomić reakcje platform i regulatorów poza Francją.",
+        "Temat łatwo przełoży się na szerszą debatę unijną."
+      ],
+      "whyItMatters": "To wpływa na politykę platform społecznościowych i europejskie standardy ochrony nieletnich.",
+      "context": "To nowy techniczny i regulacyjny temat z TVN24, który nie był w centrum poprzedniego slotu.",
+      "watchNext": [
+        "Sprawdzić, czy projekt dostanie harmonogram w parlamencie.",
+        "Sprawdzić, czy pojawi się reakcja Komisji Europejskiej lub platform."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Francja zakaz dla dzieci",
+          "url": "https://tvn24.pl/biznes/tech/zakaz-dla-dzieci-francja-robi-kolejny-krok-st9151581?source=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "social media",
+        "dzieci"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-1202-mon-prowokacja",
+      "section": "Bezpieczeństwo",
+      "title": "MON ostrzega przed rosyjską prowokacją",
+      "lead": "Kosiniak-Kamysz mówi o dronach z Ukrainy.",
+      "whatHappened": "Szef MON Władysław Kosiniak-Kamysz ostrzegł po posiedzeniu rządowego komitetu bezpieczeństwa przed możliwą rosyjską prowokacją z użyciem ukraińskich dronów. Wypowiedź podbija wątek bezpieczeństwa państwa i komunikacji kryzysowej.",
+      "keyFacts": [
+        "Komunikat padł po posiedzeniu rządowego komitetu bezpieczeństwa.",
+        "Chodzi o możliwą rosyjską prowokację.",
+        "W centrum jest ryzyko użycia ukraińskich dronów."
+      ],
+      "reactions": [
+        "To wzmacnia ostrożny ton rządu wobec ryzyk hybrydowych.",
+        "Możliwy jest kolejny komunikat służb lub MON."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na ocenę ryzyka dla Polski i na oczekiwania wobec służb.",
+      "context": "To nowy bezpieczeństwowy sygnał z krajowego bloku, mocniejszy niż poranne komentarze o PiS.",
+      "watchNext": [
+        "Sprawdzić, czy MON poda więcej szczegółów o potencjalnej prowokacji.",
+        "Sprawdzić, czy pojawi się reakcja RCB lub służb sojuszniczych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 MON ostrzega",
+          "url": "https://tvn24.pl/polska/wojna-w-ukrainie-wladyslaw-kosiniak-kamysz-ostrzega-przed-rosyjskimi-prowokacjami-z-uzyciem-ukrainskich-dronow-st9151564?source=rss"
+        }
+      ],
+      "tags": [
+        "MON",
+        "bezpieczeństwo",
+        "Ukraina"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-21-1202-dubaj-loty",
+      "section": "Alerty",
+      "title": "Air France wstrzymuje loty do Dubaju",
+      "lead": "Przewoźnik ogranicza operacje na Bliskim Wschodzie.",
+      "whatHappened": "Air France zawiesiło na najbliższe dni operacje do i z Dubaju oraz Rijadu. TVN24 podaje też, że polskie MSZ stanowczo odradza podróże w region Bliskiego Wschodu.",
+      "keyFacts": [
+        "Zawieszenie dotyczy Dubaju i Rijadu.",
+        "Decyzja obejmuje najbliższe dni.",
+        "MSZ odradza podróże do regionu."
+      ],
+      "reactions": [
+        "To realny alert dla podróżnych i biur podróży.",
+        "Możliwe są kolejne ograniczenia lub korekty rozkładu."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na ruch pasażerski i poczucie bezpieczeństwa w regionie.",
+      "context": "To nowy alert podróżny, który uzupełnia bezpieczeństwowy ton całego slotu.",
+      "watchNext": [
+        "Sprawdzić, czy inni przewoźnicy dołączą do zawieszeń.",
+        "Sprawdzić, czy MSZ rozszerzy komunikat na kolejne kierunki."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Dubaj loty",
+          "url": "https://tvn24.pl/swiat/dubaj-kolejna-linia-lotnicza-odwoluje-loty-stan-na-21-lipca-st9151382?source=rss"
+        }
+      ],
+      "tags": [
+        "Dubaj",
+        "loty",
+        "alert"
+      ],
+      "priority": "high"
+    }
+  ]
+}

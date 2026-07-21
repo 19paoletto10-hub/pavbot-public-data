@@ -2,6 +2,15 @@
 
 ## Open
 
+- Watch whether the Białka Tatrzańska crash gets a police or prosecutor follow-up before the next slot.
+- Watch whether the Gdynia drunk-driving stop produces formal charges or a court date.
+- Watch whether BIK or the banks publish a plain-language note on the new scoring model.
+- Watch whether the Łazienkowska collision or Wejherowo brawl gets operator or police follow-up.
+- Watch whether the Burnham tax-threshold discussion or Thames Water golden-share idea turns into a formal policy line.
+- Watch whether the French under-15 social-media ban becomes a concrete legislative timetable or EU reaction.
+- Watch whether the Middle East travel warning widens beyond Dubai and Riyadh.
+- Watch whether the India and Lebanon items get a sharper official follow-up in the next slot.
+
 - Watch whether the Młociny pipe injury gets a ZTM or Metro Warszawskie follow-up before the next slot.
 - Watch whether the morning rain spiral and IMGW warnings turn into outages, fallen trees or transport disruption.
 - Watch whether the Iran strike update triggers a maritime, oil or casualty note before noon.
