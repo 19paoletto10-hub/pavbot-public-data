@@ -1,0 +1,481 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-21",
+  "runTime": "09:01",
+  "status": "Material update",
+  "headline": "Poranny puls: metro, PiS i Iran",
+  "summary": "Nowy slot dodaje warszawskie metro, ćwiczenia alarmowe, komentarz Siemoniaka o PiS i kolejną falę uderzeń USA w Iran. W tle są też Gujana, gabinet Burnhama, brytyjskie finanse, drożyzna i internetowe egzekwowanie prawa.",
+  "items": [
+    {
+      "id": "2026-07-21-0901-metro-rura",
+      "section": "Polska",
+      "title": "Rura z rusztowania raniła pasażerkę",
+      "lead": "W metrze Młociny rura spadła z rusztowania i uderzyła pasażerkę.",
+      "whatHappened": "TVN24 podaje, że w poniedziałek rano na stacji Młociny interweniowały służby po tym, jak fragment rury z rusztowania uderzył pasażerkę w ramię. Kobieta trafiła do szpitala, a ruch pociągów nie został zakłócony.",
+      "keyFacts": [
+        "Zdarzenie dotyczy stacji Młociny w Warszawie.",
+        "Pasażerka została zabrana do szpitala.",
+        "TVN24 nie opisuje zakłóceń w kursowaniu pociągów."
+      ],
+      "reactions": [
+        "To natychmiastowy lokalny sygnał bezpieczeństwa z warszawskiego transportu.",
+        "Operator może jeszcze podać techniczny follow-up lub komunikat o zabezpieczeniu strefy."
+      ],
+      "whyItMatters": "To nowy, konkretny sygnał ryzyka infrastrukturalnego w warszawskim metrze.",
+      "context": "To świeży poranny incydent z głównego transportowego węzła Warszawy i nowy lead w krajowym bloku.",
+      "watchNext": [
+        "Sprawdzić, czy Metro Warszawskie lub ZTM wyda dodatkowy komunikat.",
+        "Sprawdzić, czy pojawi się informacja o przywróceniu lub zabezpieczeniu strefy prac."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 metro pipe injury",
+          "url": "https://tvn24.pl/tvnwarszawa/bielany/warszawa-z-rusztowania-w-metrze-spadla-rura-i-uderzyla-pasazerke-st9151344?source=rss"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "metro",
+        "transport",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-21-0901-pis-siemoniak",
+      "section": "Polityka",
+      "title": "Siemoniak mówi o zmierzchu Kaczyńskiego",
+      "lead": "Minister koordynator służb specjalnych łączy spór w PiS z erozją pozycji lidera partii.",
+      "whatHappened": "W TVN24 Tomasz Siemoniak powiedział, że w PiS widać \"zmierzch\" pozycji Jarosława Kaczyńskiego. Wypowiedź pada na tle trwającego konfliktu wewnętrznego i słabszych notowań partii.",
+      "keyFacts": [
+        "Siemoniak komentuje spór wewnątrz PiS.",
+        "Wypowiedź dotyczy pozycji i autorytetu Jarosława Kaczyńskiego.",
+        "Komentarz wpisuje się w poranny układ polityczny po wcześniejszym wątku sondażowym."
+      ],
+      "reactions": [
+        "To podbija wewnętrzną presję na PiS i jego przekaz o jedności.",
+        "Partia może odpowiedzieć kontrnarracją o dyscyplinie i wyniku wyborczym."
+      ],
+      "whyItMatters": "To kolejny sygnał, że polityczny ciężar PiS przesuwa się z wyniku na spór o przywództwo.",
+      "context": "To nowy poranny follow-up do wcześniejszego raportu o spadkach sondażowych partii.",
+      "watchNext": [
+        "Sprawdzić, czy PiS odpowie oficjalnie na komentarz Siemoniaka.",
+        "Sprawdzić, czy pojawi się kolejny polityczny komentarz o Kaczyńskim."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Siemoniak on PiS",
+          "url": "https://tvn24.pl/polska/konflikt-w-pis-tomasz-siemoniak-to-zmierzch-jaroslawa-kaczynskiego-w-polskiej-polityce-st9151319?source=rss"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Kaczyński",
+        "Siemoniak",
+        "sondaże"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-21-0901-alarm-syreny",
+      "section": "Alerty",
+      "title": "W Polsce zawyją syreny",
+      "lead": "RCB zapowiada ogólnokrajowe ćwiczenia systemu alarmowania.",
+      "whatHappened": "Rządowe Centrum Bezpieczeństwa poinformowało o wtorkowych ćwiczeniach systemu alarmowania w całym kraju. Syreny mają się włączyć w ramach testu, a mieszkańcy mają zachować spokój.",
+      "keyFacts": [
+        "Ćwiczenia są planowe, a nie reakcyjne.",
+        "Syreny mają zabrzmieć w całym kraju.",
+        "RCB apeluje o spokój i niepodejmowanie działań alarmowych."
+      ],
+      "reactions": [
+        "Część osób może pomylić test z realnym ostrzeżeniem.",
+        "Warto śledzić lokalne komunikaty o dokładnych godzinach i obszarach testu."
+      ],
+      "whyItMatters": "To ważne, bo testy systemu alarmowania łatwo pomylić z realnym zagrożeniem.",
+      "context": "To krajowy alert operacyjny, który łączy się z porannym blokiem pogodowym.",
+      "watchNext": [
+        "Sprawdzić, czy samorządy podadzą dokładne godziny uruchomienia syren.",
+        "Sprawdzić, czy test wywoła dodatkowe komunikaty RCB albo wojewodów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 alarm exercises",
+          "url": "https://tvn24.pl/polska/cwiczenia-systemu-alarmowania-w-polsce-zawyja-syreny-st9151266?source=rss"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "syreny",
+        "alert",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-0901-deszcz-spirala",
+      "section": "Alerty",
+      "title": "Deszczowa spirala nad Polską",
+      "lead": "Radar pokazuje szeroką strefę opadów i silniejszego wiatru nad krajem.",
+      "whatHappened": "TVN24 opisuje szeroką strefę kłębiących się chmur i opadów nad Polską. Lokalnie sumy opadów mogą dojść do 20 litrów na metr kwadratowy, a w ciągu dnia ma też mocniej wiać.",
+      "keyFacts": [
+        "Układ opadów obejmuje wiele regionów kraju.",
+        "Lokalnie możliwe są sumy do 20 l/m².",
+        "Wiatr ma się nasilać w ciągu dnia."
+      ],
+      "reactions": [
+        "To może oznaczać gorsze warunki drogowe i lokalne utrudnienia.",
+        "Sytuacja pogodowa może się szybko zmieniać w kolejnych godzinach."
+      ],
+      "whyItMatters": "To już nie tylko mapa, ale aktywny układ pogodowy z potencjałem na utrudnienia.",
+      "context": "To główny poranny blok pogodowy, który uzupełnia ostrzeżenia IMGW.",
+      "watchNext": [
+        "Sprawdzić, czy opady przechodzą w ostrzeżenia o lokalnych szkodach.",
+        "Sprawdzić, czy radar pokaże przesunięcie strefy opadów w stronę popołudnia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 rain spiral",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/deszcz-w-polsce-we-wtorek-21-07-deszczowa-spirala-nad-krajem-radar-i-mapa-opadow-st9151300?source=rss"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "deszcz",
+        "wiatr",
+        "IMGW"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-21-0901-imgw-burze",
+      "section": "Alerty",
+      "title": "IMGW ostrzega przed burzami i wiatrem",
+      "lead": "W części kraju mają pojawić się burze i silny wiatr.",
+      "whatHappened": "IMGW wydał ostrzeżenia meteorologiczne na wtorek. TVN24 podaje, że w części Polski spodziewane są burze i lokalnie silny wiatr.",
+      "keyFacts": [
+        "Ostrzeżenia są aktywne na wtorek.",
+        "Zjawiska mogą być lokalnie gwałtowne.",
+        "To oficjalny sygnał ostrzegawczy dla mieszkańców i służb."
+      ],
+      "reactions": [
+        "Przy takim układzie łatwo o powalone drzewa i zakłócenia komunikacji.",
+        "W kolejnych godzinach można oczekiwać lokalnych komunikatów operacyjnych."
+      ],
+      "whyItMatters": "To bezpośredni sygnał ryzyka pogodowego, który może przejść w szkody albo opóźnienia.",
+      "context": "To poranny alert, który domyka krajowy blok pogodowy i bezpieczeństwa.",
+      "watchNext": [
+        "Sprawdzić, czy IMGW zaktualizuje poziom ostrzeżeń.",
+        "Sprawdzić, czy PSP lub samorządy potwierdzą skutki burz."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 IMGW warnings",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/ostrzezenia-imgw-we-wtorek-21-07-burze-silny-wiatr-st9151267?source=rss"
+        },
+        {
+          "title": "IMGW dynamic map",
+          "url": "https://meteo.imgw.pl/dyn/?osmet=true"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "burze",
+        "wiatr",
+        "pogoda"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-21-0901-ohio-tonacy",
+      "section": "Świat",
+      "title": "Pięć osób zginęło, pomagając tonącemu",
+      "lead": "Próba ratowania pływaka w Ohio skończyła się kolejną tragedią.",
+      "whatHappened": "TVN24 podaje, że w rzece Scioto w stanie Ohio zginęło pięć osób, gdy przyszły z pomocą tonącemu pływakowi.",
+      "keyFacts": [
+        "Miejsce: rzeka Scioto w stanie Ohio.",
+        "Bilans: pięć ofiar.",
+        "Do tragedii doszło podczas akcji ratunkowej."
+      ],
+      "reactions": [
+        "Lokalne służby będą wyjaśniać przebieg zdarzenia.",
+        "Taki wypadek zwykle uruchamia dalsze ustalenia ratownicze."
+      ],
+      "whyItMatters": "To wyjątkowo ciężki wypadek z jednej z najczęściej powtarzanych scen kryzysowych: spontanicznej pomocy.",
+      "context": "To nowy światowy lead z porannego feedu TVN24.",
+      "watchNext": [
+        "Sprawdzić, czy policja poda więcej szczegółów o przebiegu akcji.",
+        "Sprawdzić, czy pojawi się oficjalny bilans ofiar i poszkodowanych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Ohio tragedy",
+          "url": "https://tvn24.pl/swiat/usa-tragedia-w-stanie-ohio-rzucili-sie-na-pomoc-tonacemu-zginelo-piec-osob-st9151304?source=rss"
+        }
+      ],
+      "tags": [
+        "USA",
+        "wypadek",
+        "ratownictwo",
+        "Ohio"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-0901-iran-strikes",
+      "section": "Bezpieczeństwo",
+      "title": "USA uderzają ponownie w Iran",
+      "lead": "CENTCOM potwierdza kolejną falę uderzeń, a BBC mówi o groźbie odwetu.",
+      "whatHappened": "BBC podaje, że USA przeprowadziły świeże uderzenia na Iran, a Donald Trump ostrzegł przed odwetem za śmierć amerykańskich żołnierzy. Oficjalny komunikat CENTCOM mówi, że celem było osłabienie zdolności Iranu do ataków na żeglugę w cieśninie Ormuz.",
+      "keyFacts": [
+        "CENTCOM mówi o kolejnej rundzie strikes z 20 lipca 2026.",
+        "Celem była zdolność Iranu do ataków na statki w Ormuz.",
+        "Komunikat podkreśla też utrzymanie żeglugi handlowej w tym korytarzu."
+      ],
+      "reactions": [
+        "To utrzymuje presję na rynki energii i żeglugę.",
+        "Może wywołać kolejny komunikat morski, militarny albo cenowy."
+      ],
+      "whyItMatters": "To najważniejszy bezpośredni sygnał ryzyka bezpieczeństwa w globalnym obiegu newsów.",
+      "context": "To nowy poranny update w trwającym konflikcie USA-Iran, ważny także dla rynku ropy.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się kolejny official maritime advisory.",
+        "Sprawdzić, czy rynek ropy lub gazu zareaguje na komunikat w kolejnych godzinach."
+      ],
+      "sources": [
+        {
+          "title": "BBC fresh strikes on Iran",
+          "url": "https://www.bbc.co.uk/news/articles/cx25wg2x26do?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CENTCOM release",
+          "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4550818/us-finishes-latest-strikes-against-iran/"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Ormuz",
+        "CENTCOM",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-21-0901-guyana-prom",
+      "section": "Świat",
+      "title": "Prom u wybrzeży Gujany przewrócił się",
+      "lead": "Ratownicy szukają zaginionych po katastrofie pasażerskiego promu.",
+      "whatHappened": "BBC podaje, że co najmniej 27 osób zginęło, a 83 uznano za zaginione po wywróceniu się promu u wybrzeży Gujany. Premier wyspy mówi o wszczęciu śledztwa i nadziei, że część osób zostanie odnaleziona żywa.",
+      "keyFacts": [
+        "Bilans jest nadal w ruchu.",
+        "Trwa śledztwo i akcja poszukiwawcza.",
+        "To jeden z najcięższych wątków porannego bloku BBC."
+      ],
+      "reactions": [
+        "Bilans może jeszcze wzrosnąć albo zostać doprecyzowany.",
+        "Służby będą szukały odpowiedzi na przyczynę katastrofy."
+      ],
+      "whyItMatters": "To duża katastrofa morska, która może jeszcze wygenerować nowe bilanse i oficjalne komunikaty.",
+      "context": "To kolejny światowy temat z wysokim potencjałem dalszych aktualizacji.",
+      "watchNext": [
+        "Sprawdzić, czy służby opublikują nowy bilans ofiar lub uratowanych.",
+        "Sprawdzić, czy śledztwo wskaże przyczynę wywrócenia promu."
+      ],
+      "sources": [
+        {
+          "title": "BBC Guyana ferry",
+          "url": "https://www.bbc.co.uk/news/articles/cm2gm99nrm7o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Gujana",
+        "prom",
+        "katastrofa",
+        "ratownictwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-21-0901-burnham-gabinet",
+      "section": "Polityka",
+      "title": "Burnham układa gabinet",
+      "lead": "BBC pokazuje, kto wchodzi do rządu nowego brytyjskiego premiera.",
+      "whatHappened": "BBC publikuje przegląd tego, którzy posłowie Labour dostali stanowiska w gabinecie Andy'ego Burnhama. To porządkuje pierwszy etap jego rządów po wejściu do Downing Street.",
+      "keyFacts": [
+        "Andy Burnham jest nowym brytyjskim premierem.",
+        "BBC analizuje skład gabinetu.",
+        "To świeży etap po dymisji Starmera."
+      ],
+      "reactions": [
+        "Skład rządu będzie oceniany pod kątem równowagi frakcji i lojalności.",
+        "Pierwsze decyzje Burnhama pomogą ocenić kierunek zmian."
+      ],
+      "whyItMatters": "To sygnał, jak szybko nowy premier chce przełożyć zmianę lidera na realny układ władzy.",
+      "context": "To nowy UK-reset, który w tym cyklu pozostaje jednym z głównych world/polityka threadów.",
+      "watchNext": [
+        "Sprawdzić pierwsze deklaracje programowe i fiskalne.",
+        "Sprawdzić, czy pojawią się kolejne nominacje lub dymisje."
+      ],
+      "sources": [
+        {
+          "title": "BBC Burnham cabinet",
+          "url": "https://www.bbc.co.uk/news/articles/ckg4we9g58do?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Wielka Brytania",
+        "Burnham",
+        "gabinet",
+        "polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-0901-uk-borrowing",
+      "section": "Gospodarka",
+      "title": "Brytyjskie zadłużenie spadło w czerwcu",
+      "lead": "ONS podał lepszy od oczekiwań odczyt, choć dług publiczny nadal jest wysoki.",
+      "whatHappened": "BBC opisuje spadek zadłużenia państwa w czerwcu, a ONS opublikował dziś poranny bulletin public sector finances. Odczyt jest lepszy niż oczekiwania, ale poziom długu pozostaje wysoki.",
+      "keyFacts": [
+        "To oficjalny czerwcowy odczyt ONS.",
+        "BBC wiąże to z lepszymi finansami publicznymi.",
+        "Dług publiczny pozostaje pod presją."
+      ],
+      "reactions": [
+        "Rynek będzie śledził, czy to początek stabilizacji, czy tylko jeden lepszy miesiąc.",
+        "W dyskusji fiskalnej to ważny punkt odniesienia dla rządu Burnhama."
+      ],
+      "whyItMatters": "To twardy, oficjalny sygnał o stanie brytyjskich finansów publicznych w dniu nowego resetu politycznego.",
+      "context": "To ekonomiczna kotwica dla brytyjskiego bloku politycznego z tego slotu.",
+      "watchNext": [
+        "Sprawdzić, czy ONS lub ministerstwo doprecyzują kolejne kroki fiskalne.",
+        "Sprawdzić, czy rynek obligacji zareaguje na poranny odczyt."
+      ],
+      "sources": [
+        {
+          "title": "BBC UK government borrowing falls",
+          "url": "https://www.bbc.co.uk/news/articles/cx2vd3qgjy9o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "ONS Public sector finances June 2026",
+          "url": "https://www.ons.gov.uk/releases/publicsectorfinancesukjune2026"
+        }
+      ],
+      "tags": [
+        "Wielka Brytania",
+        "ONS",
+        "zadłużenie",
+        "fiskalna"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-21-0901-alkohol-malpki",
+      "section": "Gospodarka",
+      "title": "Branża alkoholowa stawia na małe butelki",
+      "lead": "Droższe życie zmienia zachowanie amerykańskich konsumentów alkoholu.",
+      "whatHappened": "TVN24 podaje, że w USA konsumenci coraz częściej wybierają mniejsze butelki zamiast rezygnować z droższych trunków premium. Duże firmy, takie jak Pernod Ricard i Bacardi, rozszerzają ofertę miniaturowych formatów.",
+      "keyFacts": [
+        "To reakcja na presję cenową.",
+        "Trend dotyczy segmentu premium.",
+        "Duże marki już zmieniają opakowania i ofertę."
+      ],
+      "reactions": [
+        "Firmy próbują utrzymać wolumen sprzedaży mimo drożyzny.",
+        "To może być sygnał szerszej elastyczności popytu."
+      ],
+      "whyItMatters": "To praktyczny przykład, jak inflacja i presja na konsumenta zmieniają produkt i marżę.",
+      "context": "To bardziej miękki, ale świeży gospodarczy sygnał z porannego feedu.",
+      "watchNext": [
+        "Sprawdzić, czy trend miniaturowych formatów rozleje się na inne kategorie.",
+        "Sprawdzić, czy branża poda szacunek wpływu na marże i sprzedaż."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 alcohol mini bottles",
+          "url": "https://tvn24.pl/biznes/handel/malpki-drozyzna-zmienia-nawyki-branza-alkoholowa-stawia-na-male-butelki-st9151325?source=rss"
+        }
+      ],
+      "tags": [
+        "USA",
+        "alkohol",
+        "drożyzna",
+        "handel"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "2026-07-21-0901-piracki-streaming",
+      "section": "Technologia",
+      "title": "USA zamknęły tysiące stron z pirackim streamingiem",
+      "lead": "Władze uderzyły w serwisy nielegalnie transmitujące mecze.",
+      "whatHappened": "Departament Sprawiedliwości USA poinformował o zamknięciu ponad dwóch tysięcy stron internetowych za nielegalne transmitowanie meczów mistrzostw świata. TVN24 opisuje to jako operację \"Czerwona Kartka\".",
+      "keyFacts": [
+        "Ponad dwa tysiące stron zostało zamkniętych.",
+        "Sprawa dotyczy pirackich transmisji meczów.",
+        "To akcja Departamentu Sprawiedliwości USA."
+      ],
+      "reactions": [
+        "Prawa transmisyjne i egzekwowanie licencji pozostają gorącym tematem internetu.",
+        "Operatorzy pirackich serwisów mogą próbować odtworzyć infrastrukturę."
+      ],
+      "whyItMatters": "To świeży przykład egzekwowania prawa w sieci i nacisku na platformy streamingowe.",
+      "context": "To jedyny w tym slocie wyraźny lead z obszaru internetu i platform.",
+      "watchNext": [
+        "Sprawdzić, czy DOJ poda kolejne dane o skali akcji.",
+        "Sprawdzić, czy rights-holderzy albo platformy zareagują publicznie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 illegal streaming sites",
+          "url": "https://tvn24.pl/swiat/usa-operacja-czerwona-kartka-wladze-zamknely-ponad-dwa-tysiace-stron-nielegalnie-transmitujacych-mecze-mistrzostw-swiata-st9151262?source=rss"
+        }
+      ],
+      "tags": [
+        "internet",
+        "piractwo",
+        "streaming",
+        "USA"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 latest RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN transcripts index",
+      "url": "https://transcripts.cnn.com/show/acd"
+    },
+    {
+      "title": "CNN Newsroom transcript index",
+      "url": "https://transcripts.cnn.com/show/cnr"
+    },
+    {
+      "title": "CNN This Morning transcript index",
+      "url": "https://transcripts.cnn.com/show/ctmo"
+    },
+    {
+      "title": "ONS Public sector finances June 2026",
+      "url": "https://www.ons.gov.uk/releases/publicsectorfinancesukjune2026"
+    },
+    {
+      "title": "CENTCOM public releases",
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/"
+    },
+    {
+      "title": "IMGW dynamic map",
+      "url": "https://meteo.imgw.pl/dyn/?osmet=true"
+    }
+  ]
+}
