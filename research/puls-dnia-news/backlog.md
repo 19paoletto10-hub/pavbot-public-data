@@ -7,6 +7,10 @@
 - Watch whether the AI labeling rules get an implementation date or platform reaction.
 - Watch whether the ZSK rail plan gets budget, route or timetable detail.
 - Watch whether Argentina's snow evacuations widen or clear.
+- Watch whether Burnham's prisoner-release review turns into a concrete policy change.
+- Watch whether OpenAI or a regulator publishes a formal response to the rogue cyber-attack claim.
+- Watch whether the Ohio tornado produces damage or casualty reports.
+- Watch whether Daniel Siad's death gets a prosecutor follow-up or more Epstein-file detail.
 
 - Watch whether Obajtek's departure triggers more PiS exits or a formal disciplinary response.
 - Watch whether the retirement-age debate turns into a formal government or parliamentary response.
@@ -31,7 +35,6 @@
 - Watch whether BIK or the banks publish a plain-language note on the new scoring model.
 - Watch whether the Łazienkowska collision or Wejherowo brawl gets operator or police follow-up.
 - Watch whether the Burnham tax-threshold discussion or Thames Water golden-share idea turns into a formal policy line.
-- Watch whether the French under-15 social-media ban becomes a concrete legislative timetable or EU reaction.
 - Watch whether the Middle East travel warning widens beyond Dubai and Riyadh.
 - Watch whether the India and Lebanon items get a sharper official follow-up in the next slot.
 

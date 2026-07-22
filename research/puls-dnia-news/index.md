@@ -1,6 +1,6 @@
 # Puls Dnia News Index
 
-The 2026-07-22 12:02 slot broadens the pulse into a mixed domestic lead: PiS keeps pressure on Morawiecki's stowarzyszenie, Legnica moves to zarzuty and Tusk pushes a high-speed rail promise that reaches every powiat. Abroad the feed adds renewed Wildberries strikes, Zelensky's military shake-up, pressure from India's street protests, the Pickaxe Mountain escalation, Burnham's cabinet reset, the Nottingham manslaughter probe, a temporary inflation warning, tighter AI labelling and Argentine snow evacuations.
+The 2026-07-22 15:05 slot shifts the pulse toward new domestic signals on the Russian border and fuel prices, plus another Ukrainian command change. Abroad the feed adds Burnham's prisoner-release review, Southern Water charges, OpenAI's rogue cyberattack claim, renewed US strikes on Iran, India's protest pressure, France's under-15 social-media law, Nottingham's manslaughter probe, Wildberries, Daniel Siad and an Ohio tornado.
 
 The 2026-07-22 09:01 slot moves the pulse away from the morning PiS/emerytury axis and into a harder mix of security, AI regulation and foreign escalation. In Poland the lead now sits on MON warnings about Russian provocations, AI-manipulation labeling, Warsaw memory events and a fresh local police follow-up, while abroad the feed is driven by Spain's wildfires, Bologna protests, Wildberries fires, Burnham's cabinet reshuffle, renewed US strikes on Iran, the growing cost of the Iran war, France's under-15 social-media ban and a Russian live-fire exercise off the UK coast.
 
