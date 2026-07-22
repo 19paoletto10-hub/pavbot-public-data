@@ -2,6 +2,7 @@
 
 ## Open
 
+- Watch whether Obajtek's departure triggers more PiS exits or a formal disciplinary response.
 - Watch whether the retirement-age debate turns into a formal government or parliamentary response.
 - Watch whether Sikorski's warning about Russian provocations gets an official MSZ or MON clarification.
 - Watch whether France's under-15 social-media ban gets a legislative timetable or platform reaction.

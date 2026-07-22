@@ -1,5 +1,7 @@
 # Puls Dnia News Index
 
+The 2026-07-22 06:04 slot shifts the feed toward a harder morning mix of PiS conflict, the Obajtek departure from Morawiecki's association, the retirement-age debate, Sikorski's warning about Russian provocations and Trump tariff pressure. Abroad, Burnham's tax-allowance retreat, renewed U.S. strikes on Iran, Zelensky's army shake-up, Lebanese troop deployment, France's under-15 social-media ban and renewed oil pressure around Hormuz dominate the lead.
+
 The 2026-07-21 21:04 slot pivots the feed toward the retirement-age debate, Sikorski's warning about Russian provocations, and a stubborn PiS conflict thread. Abroad, the lead moves to Burnham's first cabinet move on living costs, Ukraine's army-chief row, Lebanon's pilot-zone troop deployment, France's under-15 social-media ban, and a Russian live-fire exercise off the UK coast.
 
 The 2026-07-21 18:01 slot przesuwa feed ku warszawskim incydentom, korkowi na A2, sporowi w PiS, najmu krótkoterminowemu i złotu NBP. Za granicą najmocniej ważą ulga VAT na prąd w UK, rosyjskie ćwiczenia morskie przy Wyspach, cła na Kanadę i kolejne uderzenia USA na Iran.
