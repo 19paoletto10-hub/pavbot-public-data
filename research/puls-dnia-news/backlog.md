@@ -238,6 +238,10 @@
 
 ## Done
 
+- Ostrzeżenie MON o rosyjskich prowokacjach jest już potwierdzone w świeżym TVN24 slocie; dalej śledź tylko konkretne incydenty albo formalne doprecyzowanie.
+- Francuski zakaz social mediów dla <15 lat przeszedł z zapowiedzi do uchwalonej ustawy; dalej śledź tylko wdrożenie, spór konstytucyjny albo reakcję platform.
+- Uderzenia USA na Iran mają już świeży follow-up i nowy kosztowy wątek; dalej śledź tylko kolejną eskalację wojskową lub budżetową.
+
 - Burnham's cabinet line-up is now visible; keep only the policy and spending follow-up open.
 - The Meta/Facebook/Instagram outage is opanowana; keep it only if a second wave appears.
 - The planned bank service windows ran this morning; keep them only if customer issues continue.

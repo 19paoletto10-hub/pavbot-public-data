@@ -1,5 +1,7 @@
 # Puls Dnia News Index
 
+The 2026-07-22 09:01 slot moves the pulse away from the morning PiS/emerytury axis and into a harder mix of security, AI regulation and foreign escalation. In Poland the lead now sits on MON warnings about Russian provocations, AI-manipulation labeling, Warsaw memory events and a fresh local police follow-up, while abroad the feed is driven by Spain's wildfires, Bologna protests, Wildberries fires, Burnham's cabinet reshuffle, renewed US strikes on Iran, the growing cost of the Iran war, France's under-15 social-media ban and a Russian live-fire exercise off the UK coast.
+
 The 2026-07-22 06:04 slot shifts the feed toward a harder morning mix of PiS conflict, the Obajtek departure from Morawiecki's association, the retirement-age debate, Sikorski's warning about Russian provocations and Trump tariff pressure. Abroad, Burnham's tax-allowance retreat, renewed U.S. strikes on Iran, Zelensky's army shake-up, Lebanese troop deployment, France's under-15 social-media ban and renewed oil pressure around Hormuz dominate the lead.
 
 The 2026-07-21 21:04 slot pivots the feed toward the retirement-age debate, Sikorski's warning about Russian provocations, and a stubborn PiS conflict thread. Abroad, the lead moves to Burnham's first cabinet move on living costs, Ukraine's army-chief row, Lebanon's pilot-zone troop deployment, France's under-15 social-media ban, and a Russian live-fire exercise off the UK coast.

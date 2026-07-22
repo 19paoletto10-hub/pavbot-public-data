@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-22",
+  "runTime": "09:01",
+  "status": "Material update",
+  "headline": "Feed przesuwa się ku bezpieczeństwu, AI i zagranicznym eskalacjom.",
+  "summary": "Slot 09:01 pokazuje materialny zwrot z porannej osi PiS i emerytur ku bezpieczeństwu, regulacjom technologicznym i zagranicznym follow-upom. W Polsce rosną ostrzeżenia MON, zmiany wokół AI i wątki pamięci miejskiej, a za granicą prowadzą pożary, protesty, Wildberries, ruch Burnhama, Iran i francuski zakaz social mediów dla dzieci.",
+  "checkedSources": [
+    {
+      "title": "TVN24 latest RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-07-22-0901-mon-rusja",
+      "section": "Świat",
+      "title": "Szef MON ostrzega przed rosyjskimi prowokacjami",
+      "lead": "Warszawa podbija ton ostrzeżenia wobec Moskwy.",
+      "whatHappened": "TVN24 podał, że Władysław Kosiniak-Kamysz uznał rosyjskie prowokacje za bardzo realne. To już nie ogólna ostrożność, ale bezpośredni sygnał o możliwym teście odporności państwa.",
+      "keyFacts": [
+        "Wypowiedź padła w TVN24.",
+        "Wątek łączy Rosję z ryzykiem prowokacji wobec Polski.",
+        "To obecnie jeden z głównych sygnałów bezpieczeństwa w krajowym feedzie."
+      ],
+      "reactions": [
+        "Możliwa jest odpowiedź MON albo MSZ.",
+        "Temat może zostać podchwycony przez inne redakcje i komentatorów bezpieczeństwa."
+      ],
+      "whyItMatters": "To sygnał, że wątek rosyjskiej presji wchodzi w bardziej operacyjny i mniej abstrakcyjny rejestr.",
+      "context": "W poprzednim slocie podobny temat prowadził Sikorski. Dzisiejsza wersja jest mocniejsza i bardziej jednoznaczna.",
+      "watchNext": [
+        "Sprawdzić, czy MON wyda pisemne doprecyzowanie.",
+        "Sprawdzić, czy pojawi się nowy incydent lub ćwiczenie po stronie rosyjskiej."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: MON o rosyjskich prowokacjach",
+          "url": "https://tvn24.pl/polska/szef-mon-wladyslaw-kosiniak-kamysz-prowokacje-ze-strony-rosji-sa-bardzo-realne-st9153134?source=rss"
+        },
+        {
+          "title": "AP: Baltics and Poland warn Russia could launch limited military or hybrid provocation",
+          "url": "https://apnews.com/article/fb3d17fac66f23568cd3cd27264a4c75"
+        }
+      ],
+      "tags": [
+        "Rosja",
+        "MON",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-22-0901-ai-manipulacja",
+      "section": "Technologia",
+      "title": "Nowe zasady dla materiałów manipulowanych przez AI",
+      "lead": "TVN24 zapowiada koniec ukrywania przeróbek.",
+      "whatHappened": "TVN24 pisze, że obrazy i filmy tworzone z pomocą AI mają być wkrótce wyraźniej oznaczane. To regulacyjny ruch wokół treści syntetycznych, nie tylko techniczna ciekawostka.",
+      "keyFacts": [
+        "Zmiana dotyczy obrazów i filmów tworzonych z pomocą AI.",
+        "Redakcja zapowiada wejście zmian za kilkanaście dni.",
+        "Temat łączy się z oznaczaniem treści syntetycznych, nie z jedną platformą."
+      ],
+      "reactions": [
+        "Możliwa jest reakcja branży mediów i twórców.",
+        "Warto sprawdzić, czy pojawi się katalog wyłączeń lub sankcji."
+      ],
+      "whyItMatters": "To może wpłynąć na sposób publikowania materiałów wizualnych w mediach i social mediach.",
+      "context": "To jeden z najczytelniejszych technologiczno-regulacyjnych tematów w porannym feedzie.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się oficjalny tekst zmian.",
+        "Sprawdzić, czy branża skomentuje koszty wdrożenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: zmiany dla materiałów AI",
+          "url": "https://tvn24.pl/biznes/tech/koniec-z-ukrywaniem-manipulacji-ai-wazne-zmiany-wejda-w-zycie-st9152766?source=rss"
+        }
+      ],
+      "tags": [
+        "AI",
+        "regulacje",
+        "media"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-22-0901-marsz-pamieci-warszawa",
+      "section": "Polska",
+      "title": "Warszawa upamiętni kobiety getta",
+      "lead": "Marsz Pamięci wraca na ulice stolicy.",
+      "whatHappened": "TVN24 zapowiada Marsz Pamięci poświęcony kobietom getta warszawskiego. To ważny krajowy i miejski wątek pamięci historycznej, obecny w porannym feedzie obok polityki i bezpieczeństwa.",
+      "keyFacts": [
+        "Marsz wyruszy z Umschlagplatzu.",
+        "Temat łączy rocznicę z miejskim ruchem pamięci.",
+        "To świeży krajowy materiał z porannego feedu."
+      ],
+      "reactions": [
+        "Możliwe są lokalne utrudnienia lub wzmożone zabezpieczenia.",
+        "Temat może podtrzymać szerszą debatę historyczną i edukacyjną."
+      ],
+      "whyItMatters": "To ważny element publicznej pamięci i lokalnego kalendarza Warszawy.",
+      "context": "Obok polityki i bezpieczeństwa feed nadal trzyma też historyczne i społeczne wątki miejskie.",
+      "watchNext": [
+        "Sprawdzić przebieg marszu i ewentualne utrudnienia.",
+        "Sprawdzić, czy organizatorzy opublikują szerszy program."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Warszawa: Marsz Pamięci",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-rocznica-wielkiej-akcji-likwidacyjnej-marsz-pamieci-wyruszy-z-umschlagplatzu-st9153122?source=rss"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "pamięć",
+        "społeczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-22-0901-legionowo-poszukiwany",
+      "section": "Polska",
+      "title": "Poszukiwany ukrywał się w zamkniętym pokoju",
+      "lead": "Legionowski wątek kryminalny kończy się zatrzymaniem.",
+      "whatHappened": "TVN24 opisał mężczyznę poszukiwanego listami gończymi, który ukrywał się w zamkniętym pokoju na piętrze. To krótki, ale materialny lokalny follow-up z obszaru policji i poszukiwań.",
+      "keyFacts": [
+        "Mężczyzna był poszukiwany listami gończymi.",
+        "Ukrywał się w zamkniętym pokoju.",
+        "Sprawa dotyczy Legionowa i okolic."
+      ],
+      "reactions": [
+        "Możliwy jest komunikat policji o zatrzymaniu lub zarzutach.",
+        "Wątek może zejść z feedu, jeśli nie pojawi się dalszy etap."
+      ],
+      "whyItMatters": "To pokazuje bieżącą aktywność policji i lokalny wymiar bezpieczeństwa.",
+      "context": "To mniej poważny temat niż MON czy Iran, ale dobrze domyka krajowy miks porannego slota.",
+      "watchNext": [
+        "Sprawdzić, czy policja poda dodatkowe szczegóły.",
+        "Sprawdzić, czy pojawią się zarzuty albo opis zabezpieczenia mieszkania."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Warszawa: poszukiwany ukrywał się w pokoju",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/legionowo-byl-poszukiwany-listami-gonczymi-ukrywal-sie-w-zamknietym-pokoju-na-pietrze-st9152958?source=rss"
+        }
+      ],
+      "tags": [
+        "policja",
+        "Legionowo",
+        "crime"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-22-0901-hiszpania-pozar",
+      "section": "Alerty",
+      "title": "Pożary lasów w Hiszpanii wymagają wsparcia wojska",
+      "lead": "Europa ma kolejny poważny alert pożarowy.",
+      "whatHappened": "TVN24 podaje, że w Hiszpanii płoną lasy, a strażakom pomagają żołnierze. To materialny alert środowiskowo-ratowniczy z dużą skalą pożaru.",
+      "keyFacts": [
+        "Spłonęły już dziesiątki tysięcy hektarów.",
+        "Do działań dołączono wojsko.",
+        "To sygnał eskalacji pożarowej, nie zwykły lokalny pożar."
+      ],
+      "reactions": [
+        "Możliwe są nowe ewakuacje lub ograniczenia dostępu.",
+        "Warto śledzić, czy pożary rozleją się na kolejne regiony."
+      ],
+      "whyItMatters": "Pożary tej skali wpływają na bezpieczeństwo, transport i zasoby ratownicze.",
+      "context": "To jeden z mocniejszych alertów w porannym feedzie, dobrze nadający się na kartę ostrzegawczą.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się ewakuacje lub zamknięcia dróg.",
+        "Sprawdzić, czy pożary rozleją się na kolejne regiony."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo: pożary lasów w Hiszpanii",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/plona-lasy-w-hiszpanii-strazakom-pomagaja-zolnierze-st9153117?source=rss"
+        }
+      ],
+      "tags": [
+        "Hiszpania",
+        "pożary",
+        "alert"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-22-0901-bolonia-protesty",
+      "section": "Świat",
+      "title": "We Włoszech po śmiertelnej interwencji policji wybuchają protesty",
+      "lead": "Bologna znów wchodzi do europejskiego feedu.",
+      "whatHappened": "TVN24 opisuje gwałtowne protesty po śmiertelnej interwencji policji w Bolonii. Materiał pokazuje, że lokalny incydent przerodził się w szerszy konflikt społeczny.",
+      "keyFacts": [
+        "Sprawa dotyczy Bolonii i reakcji po interwencji policji.",
+        "Pojawiły się gwałtowne protesty.",
+        "Ton materiału sugeruje eskalację, nie pojedynczy incydent."
+      ],
+      "reactions": [
+        "Możliwy jest dalszy policyjny lub prokuratorski follow-up.",
+        "Wątek praw człowieka i policji może wejść do szerszej debaty publicznej."
+      ],
+      "whyItMatters": "To sygnał napięcia społecznego i ryzyka dalszych demonstracji.",
+      "context": "To nowy, wyraźny światowy lead z TVN24, nieobecny w poprzednim slocie.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się oficjalne stanowisko władz lokalnych.",
+        "Sprawdzić, czy liczba rannych lub zatrzymanych wzrośnie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: gwałtowne protesty we Włoszech",
+          "url": "https://tvn24.pl/swiat/wlochy-gwaltowne-protesty-po-smiertelnej-interwencji-policji-w-bolonii-st9153102?source=rss"
+        }
+      ],
+      "tags": [
+        "Włochy",
+        "protesty",
+        "policja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-22-0901-wildberries-pozar",
+      "section": "Bezpieczeństwo",
+      "title": "Ukraiński atak wywołał pożary w centrach Wildberries",
+      "lead": "Rosyjskie zaplecze logistyczne znów płonie.",
+      "whatHappened": "TVN24 donosi o ataku ukraińskich dronów na dwa centra logistyczne Wildberries, po którym wybuchły ogromne pożary. To ważny bezpieczeństwowo-logistyczny follow-up z wojny rosyjsko-ukraińskiej.",
+      "keyFacts": [
+        "Atak dotyczył dwóch centrów logistycznych.",
+        "Redakcja opisuje duże pożary.",
+        "To materiał o realnym wpływie na zaplecze logistyczne Rosji."
+      ],
+      "reactions": [
+        "Możliwa jest rosyjska odpowiedź lub komunikat o stratach.",
+        "Temat może przejść do kolejnego etapu informacji wojskowej."
+      ],
+      "whyItMatters": "Uszkodzenie logistyki wpływa na zaopatrzenie, przemysł i zdolność wojenną.",
+      "context": "To świeższy i bardziej materialny obraz wojny niż same deklaracje polityczne.",
+      "watchNext": [
+        "Sprawdzić, czy rosyjskie władze podadzą skalę strat.",
+        "Sprawdzić, czy pojawi się nowy materiał o skutkach dla transportu i dostaw."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: pożary po ataku na Wildberries",
+          "url": "https://tvn24.pl/swiat/wielkie-pozary-w-rosji-po-ukrainskim-ataku-plona-centra-logistyczne-wildberries-st9153137?source=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-22-0901-burnham-sarwar",
+      "section": "Świat",
+      "title": "Burnham dobiera kolejnych ministrów",
+      "lead": "Nowy brytyjski gabinet szybko się układa.",
+      "whatHappened": "BBC podaje, że do rządu Burnhama dołącza Sarwar, wcześniej krytyczny wobec Starmera. To twardy follow-up kadrowy po wczorajszych sygnałach o pierwszych ruchach nowego premiera.",
+      "keyFacts": [
+        "To świeży materiał BBC.",
+        "Sarwar był wcześniej jednym z krytyków Starmera.",
+        "Wątek dotyczy nowego układu sił w brytyjskiej Labour."
+      ],
+      "reactions": [
+        "Możliwa jest reakcja partyjnych komentatorów i rynków politycznych.",
+        "Warto śledzić kolejne nominacje w gabinecie Burnhama."
+      ],
+      "whyItMatters": "Nowy układ kadrowy pokaże, czy Burnham buduje stabilną większość i własny styl rządzenia.",
+      "context": "W poprzednim slocie Burnham pojawiał się głównie przez korektę podatkową. Teraz feed daje już twardy follow-up personalny.",
+      "watchNext": [
+        "Sprawdzić, czy Burnham ogłosi kolejne nominacje.",
+        "Sprawdzić, czy opozycja zareaguje na skład gabinetu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Sarwar joins Burnham government",
+          "url": "https://www.bbc.co.uk/news/articles/cx2rv14em3jo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Wielka Brytania",
+        "gabinet",
+        "polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-22-0901-live-fire-uk",
+      "section": "Bezpieczeństwo",
+      "title": "Rosyjski okręt ćwiczy ogniowo u wybrzeży UK",
+      "lead": "CNN pokazuje kolejny morski sygnał napięcia.",
+      "whatHappened": "CNN World pokazuje rosyjski okręt prowadzący live-fire exercise przy brytyjskim wybrzeżu. W połączeniu z polskim ostrzeżeniem MON daje to spójny obraz rosnącej presji rosyjskiej wokół NATO.",
+      "keyFacts": [
+        "CNN wskazuje na live-fire exercise.",
+        "Ćwiczenia odbyły się przy wybrzeżu UK.",
+        "To nowy materiał z CNN World page."
+      ],
+      "reactions": [
+        "Możliwa jest odpowiedź brytyjskich lub NATO-owskich władz.",
+        "Temat może podbić debatę o rosyjskich prowokacjach morskich."
+      ],
+      "whyItMatters": "To kolejny sygnał testowania granic bezpieczeństwa wokół NATO.",
+      "context": "W połączeniu z polskimi ostrzeżeniami MON daje to spójny obraz rosnącej presji rosyjskiej.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się brytyjskie lub NATO-owskie doprecyzowanie.",
+        "Sprawdzić, czy media podadzą dodatkowe szczegóły o trasie okrętu."
+      ],
+      "sources": [
+        {
+          "title": "CNN World: Russian vessel live-fire UK coast",
+          "url": "https://edition.cnn.com/2026/07/21/uk/russian-vessel-live-fire-uk-coast-intl"
+        },
+        {
+          "title": "The Guardian: Russian warship carries out live-fire exercise off UK coast",
+          "url": "https://www.theguardian.com/uk-news/2026/jul/21/russian-warship-carries-out-live-fire-exercise-uk-coast-neustrashimy-plymouth"
+        }
+      ],
+      "tags": [
+        "Rosja",
+        "Wielka Brytania",
+        "NATO"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-22-0901-iran-uderzenia",
+      "section": "Bezpieczeństwo",
+      "title": "USA wznawiają uderzenia na Iran",
+      "lead": "Wojna na Iranie znów przyspiesza.",
+      "whatHappened": "BBC opisuje wznowienie amerykańskich uderzeń na Iran i groźbę ataku na podziemny obiekt nuklearny. To już eskalacja militarna, a nie tylko napięcie dyplomatyczne.",
+      "keyFacts": [
+        "BBC mówi o kolejnej fali uderzeń.",
+        "Trump grozi atakiem na podziemny obiekt nuklearny.",
+        "Ataki trwają seriami dzień po dniu."
+      ],
+      "reactions": [
+        "Możliwa jest kolejna odpowiedź Iranu.",
+        "Temat może podbić ceny surowców i ryzyko na szlakach żeglugowych."
+      ],
+      "whyItMatters": "To bezpośrednia eskalacja militarna z potencjalnymi skutkami dla regionu i rynków.",
+      "context": "To nie jest już czysta retoryka, ale realne działania wojskowe.",
+      "watchNext": [
+        "Sprawdzić, czy Iran odpowie nową salwą lub komunikatem.",
+        "Sprawdzić, czy wzrośnie presja na szlaki żeglugowe i ceny ropy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US renews strikes on Iran",
+          "url": "https://www.bbc.co.uk/news/articles/cdrv0p37k8jo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Iran",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-22-0901-iran-koszt-wojny",
+      "section": "Gospodarka",
+      "title": "Koszt wojny z Iranem rośnie do 37,5 mld dolarów",
+      "lead": "Pentagon prosi o kolejne miliardy.",
+      "whatHappened": "BBC podaje, że wojna z Iranem kosztowała już 37,5 mld dolarów, a Pentagon szuka kolejnych środków. To łączy bezpieczeństwo z bezpośrednim obciążeniem budżetowym USA.",
+      "keyFacts": [
+        "Kwota padła w przesłuchaniu Hegsetha.",
+        "Pentagon szuka kolejnych miliardów.",
+        "Wątek ma już wymiar fiskalny i polityczny."
+      ],
+      "reactions": [
+        "Możliwa jest krytyka w Kongresie.",
+        "Temat może wrócić przy kolejnych głosowaniach budżetowych."
+      ],
+      "whyItMatters": "Koszt wojny przekłada się na budżet, politykę i długotrwałe obciążenie finansów USA.",
+      "context": "To naturalny follow-up do środowych doniesień o nowych uderzeniach na Iran.",
+      "watchNext": [
+        "Sprawdzić, czy Kongres poprze wniosek o dodatkowe środki.",
+        "Sprawdzić, czy pojawią się kolejne liczby o stratach i kosztach."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Iran war has cost US $37.5bn so far",
+          "url": "https://www.bbc.co.uk/news/articles/c70gek2kqyno?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "AP: Hegseth estimates Iran war has cost $37.5B so far",
+          "url": "https://apnews.com/article/08d075c3d9cd01653b99149a8dd51adb"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Iran",
+        "budżet"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-22-0901-francja-social-media",
+      "section": "Technologia",
+      "title": "Francja przyjmuje ustawę zakazującą social mediów <15",
+      "lead": "To już nie zapowiedź, tylko uchwalona zmiana.",
+      "whatHappened": "BBC i CNN potwierdzają, że Francja przyjęła ustawę zakazującą social mediów dzieciom poniżej 15 lat. To materialny skok względem wczorajszego poziomu dyskusji.",
+      "keyFacts": [
+        "BBC World mówi o wejściu weryfikacji wieku od stycznia.",
+        "CNN podaje, że Francja jest pierwszym krajem UE z takim zakazem.",
+        "Wątek dotyczy platform, wieku i weryfikacji kont."
+      ],
+      "reactions": [
+        "Możliwa jest reakcja platform i prawników konstytucyjnych.",
+        "Temat może uruchomić podobne pomysły w innych krajach UE."
+      ],
+      "whyItMatters": "To wyznacza nowy punkt odniesienia dla regulacji platform i ochrony małoletnich.",
+      "context": "W poprzednim slocie temat był jeszcze opisywany jako mocny sygnał z CNN. Teraz mamy już parlamentarny krok naprzód.",
+      "watchNext": [
+        "Sprawdzić, kiedy zacznie się wdrożenie przepisów.",
+        "Sprawdzić, czy platformy i regulatorzy zgłoszą problemy z weryfikacją wieku."
+      ],
+      "sources": [
+        {
+          "title": "BBC: France passes law banning under-15s from social media",
+          "url": "https://www.bbc.co.uk/news/articles/cq56l9p4y93o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN: France becomes the first EU country to ban social media for children",
+          "url": "https://edition.cnn.com/2026/07/21/world/france-becomes-the-first-eu-country-to-ban-social-media-for-children"
+        },
+        {
+          "title": "AP: French lawmakers approve a sweeping social media ban for children under 15",
+          "url": "https://apnews.com/article/94abd981ccea85138af314cfb1ea62cf"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "social media",
+        "regulacje"
+      ],
+      "priority": "high"
+    }
+  ]
+}
