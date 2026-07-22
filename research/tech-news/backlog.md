@@ -14,6 +14,11 @@
 | High | Track OpenAI AI-age scorecard adoption | OpenAI is trying to shift enterprise AI buying toward outcome-based metrics | Watch CFO/enterprise uptake, competitor language and whether buyers adopt useful-work-per-dollar framing | Open |
 | High | Track Google Frozen v2 chip roadmap | Reported Gemini chip work could change inference economics and pressure Nvidia | Watch official confirmation, TPU roadmap hints and memory-market reaction | Open |
 | High | Track Gritt physical AI deployments | Solar-farm construction robots show infrastructure AI moving from demo to field work | Watch pilot sites, partner announcements and whether the company expands beyond solar | Open |
+| High | Track OpenAI Camellia and capex | Project Camellia and a $750B cloud-spend plan make AI infrastructure a core strategic story | Watch community response, permit strategy and local power negotiations | Open |
+| High | Track AI provenance tools | Meta Content Seal and Substack Scan for AI text could normalize authenticity tooling across platforms | Watch interoperability, false positives and creator/user response | Open |
+| High | Track Suno breach fallout | A late-disclosed breach at an AI music service shows consumer AI data risk is already material | Watch user notices, security remediation and any further disclosure | Open |
+| High | Track Glow endpoint security | Glow suggests AI agents and dev tools are creating a new endpoint security category | Watch first customers, feature scope and incumbent response | Open |
+| Medium | Track Arcee open-weight narrative | Arcee's pushback on banning Chinese models may shape enterprise and policy framing | Watch model-agnostic adoption and regulatory rhetoric | Open |
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |

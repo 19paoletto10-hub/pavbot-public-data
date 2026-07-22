@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-22",
+  "runTime": "19:33",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny run przesuwa dzisiejszą oś z samego ryzyka modelowego i regulatorów na koszty wdrożenia oraz warstwę zaufania wokół treści generowanych przez AI. OpenAI nie tylko podnosi stawkę na infrastrukturę, ale oficjalnie buduje własny gigantyczny projekt data-center w Georgii, a WSJ opisuje już planowane wydatki cloudowe rzędu 750 mld USD do 2030 roku.",
+    "Równolegle rośnie rynek narzędzi do wykrywania i znakowania AI treści. Meta próbuje domknąć własny system Content Seal, ale The Verge pokazuje jego ograniczenia i zależność od osobnej strony do detekcji, a Substack uruchamia Scan for AI text na bazie Pangram. To sygnał, że platformy zaczynają walczyć nie tylko o generowanie, ale też o autentyczność i anty-slop controls.",
+    "Security i open-weight politics też się przesuwają. Suno ma ujawniony dopiero teraz breach obejmujący ponad 55 mln adresów e-mail, Glow wchodzi z endpoint security dla ery agentów, a Arcee odrzuca narrację, że chińskie open-weight modele są z natury niebezpieczne. Razem to wzmacnia obraz rynku, w którym infrastruktura, tożsamość treści i bezpieczeństwo są równie ważne jak capability modeli."
+  ],
+  "summaryBullets": [
+    "Infrastruktura: OpenAI zwiększa stawkę na infrastrukturę",
+    "Regulacje: Meta testuje własny system wykrywania AI treści",
+    "Produkty: Substack wprowadza detektor AI tekstu"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-22-1933-0-openai-zwieksza-stawke-na-infrastrukture-7e843ed64f",
+      "section": "Infrastruktura",
+      "title": "OpenAI zwiększa stawkę na infrastrukturę",
+      "standfirst": "OpenAI oficjalnie buduje Project Camellia w Georgii i jednocześnie WSJ raportuje skok planowanych wydatków cloudowych do 750 mld USD do 2030 roku.",
+      "whatHappened": "OpenAI ogłosił projekt data-center w Effingham County i nowy kontrakt na 3,2 GW mocy, a równolegle media opisują gwałtowną eskalację planowanego capexu.",
+      "whyItMatters": "To pokazuje, że wyścig AI coraz bardziej rozgrywa się na poziomie energii, ziemi, permitów i finansowania infrastruktury.",
+      "deeperAnalysis": [
+        "• OpenAI próbuje połączyć narrację wzrostu z lokalnym messagingiem o rachunkach za prąd i wodzie, ale sama skala projektu ustawia nowy punkt odniesienia dla całej branży.",
+        "• WSJ-owy poziom wydatków sugeruje, że OpenAI traktuje compute jako strategiczny zasób, który trzeba kontraktować z dużym wyprzedzeniem.",
+        "• W praktyce tempo rozwoju AI może teraz zależeć bardziej od grid capacity niż od benchmarków, a nie od kolejnego model release'u."
+      ],
+      "contextPoints": [
+        "Co się stało: nowy duży projekt data-center i wyższy capex plan.",
+        "Dlaczego ważne: AI infra przechodzi z fazy „wydatku” do fazy „systemu energetycznego”.",
+        "Na co patrzeć dalej: reakcja regulatorów, utilities i lokalnych społeczności."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community/"
+        },
+        {
+          "title": "WSJ",
+          "url": "https://www.wsj.com/tech/openais-planned-cloud-spending-hits-750-billion-as-computing-efforts-ramp-up-6ac3f58a"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "data centers",
+        "cloud spend",
+        "Georgia",
+        "electricity",
+        "capex"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-22-1933-1-meta-testuje-wlasny-system-wykrywania-ai-tresci-34221abf14",
+      "section": "Regulacje",
+      "title": "Meta testuje własny system wykrywania AI treści",
+      "standfirst": "Meta próbuje zbudować własny system Content Seal dla Muse Image, ale zewnętrzna krytyka wskazuje na ograniczenia zasięgu, użyteczności i integracji.",
+      "whatHappened": "The Verge opisał nowy system watermarkingu Meta oraz jego słabe strony, w tym osobny tool do wykrywania, rate limiting i ograniczony zasięg do najnowszych generowanych obrazów.",
+      "whyItMatters": "To sygnał, że provenance i AI detection stają się konkurencyjną warstwą produktu, a nie tylko dodatkiem do modelu.",
+      "deeperAnalysis": [
+        "• Meta ma wyraźny problem: chce być jednocześnie producentem treści generowanej przez AI i strażnikiem jej autentyczności.",
+        "• Ograniczenia opisywane przez The Verge pokazują, że sama obecność watermarku nie rozwiązuje problemu dystrybucji, edycji i zgodności między platformami.",
+        "• To ważne także dla rynku reklamowego i mediów, bo rośnie presja na jednoznaczne oznaczanie tego, co jest syntetyczne, a co nie."
+      ],
+      "contextPoints": [
+        "Co się stało: Meta wypycha Content Seal dla Muse Image.",
+        "Dlaczego ważne: standardy provenance stają się produktem i przewagą konkurencyjną.",
+        "Na co patrzeć dalej: integracja z innymi platformami, wsparcie dla wideo i relacja z C2PA/SynthID."
+      ],
+      "sources": [
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid"
+        },
+        {
+          "title": "Meta Newsroom",
+          "url": "https://about.fb.com/news/2026/07/introducing-muse-image-meta-ai/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Meta",
+        "Content Seal",
+        "provenance",
+        "watermarking",
+        "AI detection",
+        "SynthID"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-22-1933-2-substack-wprowadza-detektor-ai-tekstu-8bf913479e",
+      "section": "Produkty",
+      "title": "Substack wprowadza detektor AI tekstu",
+      "standfirst": "Substack uruchomił Scan for AI text, który ocenia, czy wpisy i notatki są w całości lub częściowo generowane przez AI.",
+      "whatHappened": "Platforma dodała nową funkcję opartą o Pangram dla treści opublikowanych od 21 lipca 2026.",
+      "whyItMatters": "To kolejny sygnał, że platformy próbują sprzedać czytelnikom i twórcom transparentność jako odpowiedź na AI slop.",
+      "deeperAnalysis": [
+        "• Substack nie zakazuje AI, tylko wprowadza narzędzie do rozpoznawania i opisywania jej użycia.",
+        "• Nowy detektor może wpłynąć na to, jak newslettery i notesy będą pozycjonowane wobec czytelników.",
+        "• W praktyce to także test rynku na „human-authored” jako cechę premium."
+      ],
+      "contextPoints": [
+        "Co się stało: Scan for AI text startuje na Substack.",
+        "Dlaczego ważne: transparentność treści staje się featurem produktowym.",
+        "Na co patrzeć dalej: false positive rate, adopcja autorów i reakcja odbiorców."
+      ],
+      "sources": [
+        {
+          "title": "Substack Help",
+          "url": "https://support.substack.com/hc/en-us/articles/50891130623508-How-can-I-detect-AI-on-Substack"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Substack",
+        "Pangram",
+        "AI detector",
+        "newsletters",
+        "transparency",
+        "slop"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-22-1933-3-suno-breach-pokazuje-ryzyko-uslug-ai-370b925f42",
+      "section": "Cyber",
+      "title": "Suno breach pokazuje ryzyko usług AI",
+      "standfirst": "Have I Been Pwned ujawniło naruszenie danych Suno z listopada 2025 roku, które obejmuje ponad 55 mln adresów e-mail i część danych zakupowych.",
+      "whatHappened": "Incydent wyszedł na jaw dopiero teraz, kiedy HIBP dodało go do bazy i opisało zakres danych.",
+      "whyItMatters": "AI services mają już typowy dla dużych platform problem bezpieczeństwa danych użytkowników, nie tylko problem model quality.",
+      "deeperAnalysis": [
+        "• Suno jest tu ważne nie dlatego, że to kolejny breach, tylko dlatego, że dotyczy narzędzia AI, które zdobyło szeroką popularność w konsumenckiej kreatywności.",
+        "• Taki typ wycieku zmienia rozmowę o adoption, bo użytkownik pyta nie tylko o jakość generacji, ale też o dane, adresy i historię zakupów.",
+        "• Im szybciej rośnie warstwa usług, tym szybciej rośnie powierzchnia ataku i wartość wykradzionych danych."
+      ],
+      "contextPoints": [
+        "Co się stało: historyczny breach Suno został publicznie ujawniony.",
+        "Dlaczego ważne: consumer AI ma już klasyczne problemy bezpieczeństwa i prywatności.",
+        "Na co patrzeć dalej: reakcja Suno, notyfikacje użytkowników i dalsze ślady wycieku."
+      ],
+      "sources": [
+        {
+          "title": "Have I Been Pwned",
+          "url": "https://haveibeenpwned.com/Breach/Suno"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/22/if-you-pay-a-hackers-ransom-chances-are-that-theyll-come-back-for-more/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Suno",
+        "breach",
+        "privacy",
+        "AI music",
+        "data leak",
+        "HIBP"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-22-1933-4-glow-buduje-endpoint-security-dla-ery-agentow-0bab126a78",
+      "section": "Cyber",
+      "title": "Glow buduje endpoint security dla ery agentów",
+      "standfirst": "Glow wyszedł z ukrycia z wyceną 1,2 mld USD i 180 mln USD finansowania, celując w nowe ryzyka endpointowe tworzone przez AI agentów i narzędzia developerskie.",
+      "whatHappened": "Startup założony przez byłych liderów Meta i Snowflake chce blokować ryzykowne software i agent tooling jeszcze przed wejściem do firmy.",
+      "whyItMatters": "To sygnał, że enterprise security zaczyna się przeprojektowywać pod aktywne, półautonomiczne narzędzia.",
+      "deeperAnalysis": [
+        "• Endpoint security historycznie skupiało się na wykrywaniu malware i reakcji po fakcie.",
+        "• Glow próbuje przesunąć to wcześniej, do warstwy dopuszczenia narzędzia, agenta lub aplikacji do środowiska pracy.",
+        "• Jeśli ten model się przyjmie, security vendorowie będą musieli przejść z klasycznego EDR do polityk dla agentów, prompt surfaces i workflow automation."
+      ],
+      "contextPoints": [
+        "Co się stało: Glow publicznie wystartował jako unicorn.",
+        "Dlaczego ważne: agentic work tworzy nową kategorię enterprise security.",
+        "Na co patrzeć dalej: produktowe szczegóły, partnerzy i pierwsze wdrożenia."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/22/glow-emerges-from-stealth-at-1-2b-valuation-to-challenge-endpoint-security-in-the-ai-era/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Glow",
+        "endpoint security",
+        "AI agents",
+        "enterprise security",
+        "stealth",
+        "startup"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-22-1933-5-arcee-odpiera-teze-o-niebezpiecznych-chinskich-modelach-04ea32ab5a",
+      "section": "AI",
+      "title": "Arcee odpiera tezę o „niebezpiecznych” chińskich modelach",
+      "standfirst": "Arcee mówi, że chińskie open-weight modele nie są z natury bardziej niebezpieczne niż inny open source, a ryzyko trzeba adresować przez testy i model-agnostic deployment.",
+      "whatHappened": "TechCrunch cytuje CTO Lucas Atkinsa, który broni podejścia opartego na bezpieczeństwie wdrożenia, a nie na prostym zakazie modeli z Chin.",
+      "whyItMatters": "To dobry kontrapunkt do rosnącej polityzacji open-weight i pokazuje, że enterprise kupuje głównie cenę, elastyczność i kontrolę.",
+      "deeperAnalysis": [
+        "• Debata o chińskich modelach zaczyna się rozjeżdżać między polityką a praktyką wdrożeniową.",
+        "• Arcee opowiada tę historię z perspektywy rynku, gdzie ważniejsze od flagi pochodzenia jest to, czy model przeszedł security testing, bias review i post-training dla konkretnego użycia.",
+        "• To pomaga zrozumieć, dlaczego open-weight nadal zyskuje, bo łatwiej wpina się w procesy kontroli, które duże organizacje już mają."
+      ],
+      "contextPoints": [
+        "Co się stało: Arcee publicznie sprzeciwia się narracji o zakazie chińskich open-weightów.",
+        "Dlaczego ważne: spór o modele jest równocześnie sporem o koszty i kontrolę.",
+        "Na co patrzeć dalej: dalsze reakcje labs, regulatorów i enterprise buyerów."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/22/arcee-a-us-open-source-ai-lab-says-chinese-models-are-not-inherently-dangerous/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Arcee",
+        "open-weight",
+        "China models",
+        "enterprise AI",
+        "policy",
+        "benchmarking"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "OpenAI podbija capex i buduje Camellia",
+      "rationale": "Pokazuje, że AI staje się projektem infrastrukturalnym w skali regionu, nie tylko chmury",
+      "sourcesLabel": "OpenAI; WSJ"
+    },
+    {
+      "priority": "High",
+      "title": "Meta i Substack walczą o wykrywanie AI treści",
+      "rationale": "Platformy zaczynają sprzedawać zaufanie, a nie tylko generację",
+      "sourcesLabel": "The Verge; Substack Help; Meta Newsroom"
+    },
+    {
+      "priority": "High",
+      "title": "Suno breach ujawnia skalę ryzyka usług AI",
+      "rationale": "Popularne aplikacje AI też są celem kradzieży danych, nie tylko modeli",
+      "sourcesLabel": "Have I Been Pwned; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Glow buduje security dla ery agentów",
+      "rationale": "Endpoint security zaczyna się przebudowywać pod AI narzędzia i agentów",
+      "sourcesLabel": "TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Arcee kontra narracja o „niebezpiecznych” modelach z Chin",
+      "rationale": "Debata o open-weight modelach przestaje być tylko polityczna, a staje się rynkowa",
+      "sourcesLabel": "TechCrunch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Meta Content Seal jako test nowego standardu provenance",
+      "rationale": "Weryfikacja AI contentu staje się produktem, ale też polem walki o standardy",
+      "sourcesLabel": "The Verge; Meta Newsroom"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI: Building AI infrastructure with the Effingham County community",
+      "url": "https://openai.com/index/building-ai-infrastructure-with-the-effingham-county-community/"
+    },
+    {
+      "title": "WSJ: OpenAI cloud spending hits $750 billion as computing efforts ramp up",
+      "url": "https://www.wsj.com/tech/openais-planned-cloud-spending-hits-750-billion-as-computing-efforts-ramp-up-6ac3f58a"
+    },
+    {
+      "title": "The Verge: Meta made its own AI detection system. It should have just used Google’s",
+      "url": "https://www.theverge.com/tech/968680/meta-ai-detection-labeling-content-seal-watermarks-synthid"
+    },
+    {
+      "title": "Substack Help: How can I detect AI on Substack?",
+      "url": "https://support.substack.com/hc/en-us/articles/50891130623508-How-can-I-detect-AI-on-Substack"
+    },
+    {
+      "title": "TechCrunch: Glow emerges from stealth at $1.2B valuation to challenge endpoint security in the AI era",
+      "url": "https://techcrunch.com/2026/07/22/glow-emerges-from-stealth-at-1-2b-valuation-to-challenge-endpoint-security-in-the-ai-era/"
+    },
+    {
+      "title": "TechCrunch: Arcee, a US open source AI lab, says Chinese models are not inherently dangerous",
+      "url": "https://techcrunch.com/2026/07/22/arcee-a-us-open-source-ai-lab-says-chinese-models-are-not-inherently-dangerous/"
+    },
+    {
+      "title": "Have I Been Pwned: Suno Data Breach",
+      "url": "https://haveibeenpwned.com/Breach/Suno"
+    },
+    {
+      "title": "TechCrunch: AI music generator Suno breach affects 55M users, per Have I Been Pwned",
+      "url": "https://techcrunch.com/2026/07/21/ai-music-generator-suno-breach-affects-55m-users-per-have-i-been-pwned/"
+    },
+    {
+      "title": "AP AI hub",
+      "url": "https://apnews.com/hub/artificial-intelligence"
+    }
+  ]
+}
