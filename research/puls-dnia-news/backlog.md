@@ -2,6 +2,11 @@
 
 ## Open
 
+- Watch whether the Chorzów fire produces casualties, cause detail or transport closures.
+- Watch whether the Dziwnów rescue gets an official marine safety or medical follow-up.
+- Watch whether the France fires widen or trigger more evacuations and road blocks.
+- Watch whether the Trump/Ormuz threat produces an official maritime or diplomatic response.
+- Watch whether OpenAI or a regulator publishes a formal response to the cyberattack claim.
 - Watch whether IMGW warnings turn into outages, fallen trees or transport blocks.
 - Watch whether the fuel-price spike prompts a formal government or market response.
 - Watch whether the short-term-rental bill gets a timetable, budget note or amendment.

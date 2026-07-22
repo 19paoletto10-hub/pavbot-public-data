@@ -1,4 +1,4 @@
-The 2026-07-22 18:07 slot przesuwa feed w stronę alertów burzowych, paliw, najmu krótkoterminowego i kontroli Pyszne.pl w Polsce, a za granicą dokłada saudyjski program nuklearny, ruch tankowców po groźbie Huti, groźby Trumpa wobec Iranu, śledztwo w Nottingham, limit 2 funtów na bilety autobusowe i presję AI na rynek pracy.
+The 2026-07-22 21:02 slot przesuwa feed w stronę PiS, pożarów i akcji ratowniczych w Polsce, a za granicą dokłada francuskie pożary, saudyjski program nuklearny, napięcie przy Ormuz, kolejne uderzenie w Wildberries i publiczny sygnał o cyberataku przypisywanym AI OpenAI.
 
 # Puls Dnia News Index
 
