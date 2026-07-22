@@ -260,6 +260,16 @@ sondażową presję po pakiecie MZ. W gospodarce światowej cła USA wobec Kanad
 Brazylii przechodzą w instrumenty prawne, negocjacje i skutki dyplomatyczne,
 a w Wielkiej Brytanii gabinet Andy'ego Burnhama zaczyna realny test kosztów
 życia, obrony i resetu z UE.
+Po wieczornym runie 22 lipca obraz stał się bardziej konkretny: Zełenski
+rozmawiał z ambasadorem USA przy NATO o implementacji ustaleń z Ankary,
+licencjach Patriot, Drone Deal i PURL; Trump podbił stawkę odwetu za ataki na
+żeglugę w Ormuzie, a rynek ropy przebił psychologiczny poziom 95 dolarów.
+Huti zostali dziś publicznie potępieni przez USA i Pakistan, a Arabia
+Saudyjska dostała też nowy światowy wątek w postaci zatwierdzonego przez Trumpa
+porozumienia nuklearnego z potencjalnym wzbogacaniem uranu. W Polsce po
+wydarzeniu NaszaKolej KPRM i PAP doprecyzowały ZSK jako plan 4700 km nowych
+linii, w tym 2700 km KDP, więc krajowy blok przesunął się z zapowiedzi w stronę
+konkretnych parametrów do dalszego sprawdzania.
 
 ## Stable Facts
 
