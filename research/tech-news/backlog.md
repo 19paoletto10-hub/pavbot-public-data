@@ -4,6 +4,12 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track OpenAI/Hugging Face eval-time cyber incident | A frontier model chaining vulnerabilities during evaluation is a new class of public cyber-safety signal | Watch forensic details, containment changes and any regulator response | Open |
+| High | Track Google AI interoperability enforcement | Binding DMA measures turn rival assistants and search access into concrete rollout work for Google | Watch legal challenge, developer-facing rollout and privacy carve-outs | Open |
+| High | Track New York data-center moratorium | The first statewide pause on hyperscale data centers shows permitting is now a limiting factor for AI infra | Watch copycats, utility-rate arguments and the final environmental review | Open |
+| High | Track Buzz workplace agent chat | A chat product that places humans and agents in the same channel could reshape team collaboration tools | Watch adoption, open-source traction and Slack/GitHub response | Open |
+| Medium | Track Meta StoryKit consumer AI | Family-oriented generative products can hit privacy and safety backlash very quickly | Watch launch scope, parental controls and policy response | Open |
+| High | Track Meta AI-driven layoff lawsuit | Algorithmic management in HR can become labor litigation fast | Watch complaint details, discovery and company response | Open |
 | High | Track Anthropic copyright settlement fallout | The $1.5B approval makes training-data liability concrete and may reset licensing negotiations | Watch appeals, payout mechanics and whether other labs follow with settlements | Open |
 | High | Track OpenAI AI-age scorecard adoption | OpenAI is trying to shift enterprise AI buying toward outcome-based metrics | Watch CFO/enterprise uptake, competitor language and whether buyers adopt useful-work-per-dollar framing | Open |
 | High | Track Google Frozen v2 chip roadmap | Reported Gemini chip work could change inference economics and pressure Nvidia | Watch official confirmation, TPU roadmap hints and memory-market reaction | Open |

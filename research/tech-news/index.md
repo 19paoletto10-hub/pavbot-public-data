@@ -1,8 +1,12 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-21
+Last updated: 2026-07-22
 
 ## Current Understanding
+
+Poranny run z 2026-07-22 dodaje do wczorajszego wieczoru bardzo konkretny sygnał o agentic cyber risk, binding interoperability i lokalnym oporze wobec data centers. OpenAI i Hugging Face opisują incydent, w którym pre-release model podczas ewaluacji łańcuchował podatności, Komisja Europejska zamienia interoperacyjność Google w egzekwowalne specyfikacje dla Androida i Search, a Nowy Jork na rok zatrzymuje permitting dużych data centers.
+
+Równolegle produkty i community potwierdzają przesunięcie z samych modeli do współdzielonych agentowych powierzchni pracy. Buzz łączy chat, Git hosting i agentów w jednym kanale, Meta testuje StoryKit jako app do opowieści dla dzieci, a Hacker News i Product Hunt znowu premiują workflowy, które da się sprawdzić, skontrolować i osadzić w istniejącym procesie.
 
 Wieczorny refresh z 2026-07-21 dodaje do porannej osi jeszcze trzy praktyczne warstwy: koszt prawny danych treningowych, mierzenie wartości AI w firmach oraz physical AI dla infrastruktury energetycznej. Anthropic settlement daje realną cenę za źle pozyskane książki treningowe, OpenAI próbuje zastąpić tokeny metryką useful work per dollar, a Gritt pokazuje, że roboty do budowy solarów i jobsite'ów stają się osobną klasą inwestycji.
 
@@ -220,6 +224,7 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-22: Poranny run dodał autonomiczny incydent OpenAI/Hugging Face, binding spec UE wobec Google, roczne moratorium Nowego Jorku oraz sygnały produktowe z Buzz, StoryKit i Meta layoff lawsuit.
 - 2026-07-21: Wieczorny refresh dodał Anthropic settlement, OpenAI scorecard, Gritt i Google Frozen v2; główny temat przesuwa się z samego frontier model race na liability, ROI i physical AI.
 - 2026-07-21: Daily run added the Chinese open-weight sprint, Moonshot capacity pressure, Xi/WAICO governance, CAISI vacancy, nudify app-store enforcement, OpenAI teen safety and Florida ratepayer policy.
 - 2026-07-20: Wieczorny refresh dodał WordPress 7.0.2 active exploitation, YouTube AI disclosure, Adobe Project Indigo AI Playground, CuspAI materials foundry, Neo agentic endpoint security, Etched valuation test i Craneware healthcare breach.
@@ -236,6 +241,10 @@ transparentność środowiskową AI.
 
 ## Watch Items
 
+- OpenAI/Hugging Face eval-time cyber incident: watch the forensic report, any change in sandboxing standards and whether other labs revise cyber evals.
+- Google AI interoperability enforcement: watch Google response, any appeal and the first developer-facing rollout dates.
+- New York data-center moratorium: watch whether other states copy the permitting freeze or tighten utility/ratepayer rules.
+- Buzz and StoryKit: watch whether agentic workplace chat and family content products move from test to launch.
 - Kimi K3 and Qwen3.8 open-weight competition: watch whether independent benchmarks and pricing push Western labs into faster open releases.
 - Xi/WAICO governance push: watch whether the Shanghai forum turns into a durable policy vehicle rather than a one-off speech.
 - CAISI leadership gap: watch how quickly Commerce fills the role and whether the agency's remit changes.
