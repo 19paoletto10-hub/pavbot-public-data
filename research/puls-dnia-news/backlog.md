@@ -2,6 +2,16 @@
 
 ## Open
 
+- Watch whether IMGW warnings turn into outages, fallen trees or transport blocks.
+- Watch whether the fuel-price spike prompts a formal government or market response.
+- Watch whether the short-term-rental bill gets a timetable, budget note or amendment.
+- Watch whether ZUS and PIP publish a formal note on the Pyszne.pl controls.
+- Watch whether the Saudi nuclear-program announcement gets an official U.S., Israeli or Saudi follow-up.
+- Watch whether tanker diversions after the Houthi threat widen into a broader shipping advisory.
+- Watch whether the Iran/Ormuz threat produces another official maritime, oil or casualty update.
+- Watch whether the Nottingham manslaughter probe yields a report or trust response.
+- Watch whether BBC's AI jobs piece gets a sector breakdown or labor-policy reaction.
+
 - Watch whether Pickaxe Mountain becomes the explicit US or Iranian target in the next official statement.
 - Watch whether India's protest wave gets a formal government, police or opposition response.
 - Watch whether the AI labeling rules get an implementation date or platform reaction.

@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-22",
+  "runTime": "18:07",
+  "status": "Material update",
+  "headline": "Wieczorny slot dokłada alerty burzowe, drogie paliwo i nowe follow-upy o bezpieczeństwie oraz AI",
+  "summary": "Nowy puls przesuwa się w stronę burz, kosztów życia i regulacji w Polsce, a za granicą dokłada UK policy, nottinghamskie śledztwo, rynek pracy pod presją AI, saudyjski program nuklearny, ruch tankowców po groźbie Huti i świeże groźby wobec Iranu.",
+  "items": [
+    {
+      "id": "imgw-burze-1807",
+      "section": "Alerty",
+      "title": "IMGW wydał kolejne alarmy przed burzami",
+      "lead": "Synoptycy ostrzegają przed kolejną falą burz nad Polską.",
+      "whatHappened": "Instytut Meteorologii i Gospodarki Wodnej wydał kolejne żółte alarmy meteorologiczne. TVN24 wskazuje na burze, możliwy grad i lokalnie bardzo intensywne opady.",
+      "keyFacts": [
+        "IMGW utrzymał lub rozszerzył ostrzeżenia pogodowe.",
+        "W materiale pojawia się ryzyko gradu i mocniejszych opadów.",
+        "To kolejny wieczorny check pogodowy w tym tygodniu."
+      ],
+      "reactions": [
+        "Mieszkańcy i samorządy powinni liczyć się z lokalnymi utrudnieniami.",
+        "Służby mogą reagować na nowe szkody po burzach."
+      ],
+      "whyItMatters": "Burze mogą szybko przełożyć się na transport, zasilanie i lokalne interwencje służb.",
+      "context": "Wcześniejsze sloty już miały pogodowe ostrzeżenia, ale obecny feed znów podbija ich wagę.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się raporty o szkodach, zalaniach lub przerwach w dostawach prądu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: IMGW wydał kolejne alarmy przed burzami",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/burze-mozliwy-grad-ostrzezenia-imgw-nawet-kilkadziesiat-litrow-deszczu-st9151267?source=rss"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "imgw",
+        "alerty",
+        "polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "benzyna-2022",
+      "section": "Polska",
+      "title": "Benzyna najdroższa od 2022 roku",
+      "lead": "Ceny paliw znów podchodzą pod poziomy niewidziane od niemal czterech lat.",
+      "whatHappened": "Według analizy e-petrol.pl benzyna 95-oktanowa osiągnęła najwyższy poziom od niemal czterech lat. TVN24 podaje też, że w ostatnim tygodniu ceny paliw rosły nawet o kilkadziesiąt groszy za litr.",
+      "keyFacts": [
+        "Najmocniej rosła cena oleju napędowego.",
+        "Analiza wiąże wzrost z ostatnimi podwyżkami na stacjach.",
+        "To kolejny kosztowy sygnał dla gospodarstw domowych i transportu."
+      ],
+      "reactions": [
+        "Kierowcy odczują wzrost niemal natychmiast.",
+        "Rynek będzie obserwował, czy trend przełoży się na szerszą inflację."
+      ],
+      "whyItMatters": "Paliwo wpływa na koszty życia, logistyki i presję inflacyjną.",
+      "context": "W poprzednich slotach paliwo też było w tle, ale teraz TVN24 nadaje temu mocniejszy, cenowy nagłówek.",
+      "watchNext": [
+        "Sprawdzić kolejne widełki cenowe i ewentualną reakcję rządu lub branży."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Benzyna najdroższa od 2022 roku",
+          "url": "https://tvn24.pl/biznes/moto/ceny-paliw-na-stacjach-w-polsce-koniec-programu-cpn-benzyna-najdrozsza-od-2022-roku-st9154521?source=rss"
+        }
+      ],
+      "tags": [
+        "paliwa",
+        "inflacja",
+        "koszty-zycia",
+        "polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "najem-krotkoterminowy",
+      "section": "Polska",
+      "title": "Najem krótkoterminowy w Polsce pod lupą",
+      "lead": "Debata TVN24 wraca do projektu ustawy o najmie krótkoterminowym.",
+      "whatHappened": "W TVN24+ eksperci i goście dyskutowali o projekcie regulacji najmu krótkoterminowego. W materiale pojawia się argument, że potrzebne są bardziej cywilizowane zasady i mocniejszy nadzór nad rynkiem.",
+      "keyFacts": [
+        "Temat dotyczy projektu ustawy o najmie krótkoterminowym.",
+        "Dyskusja koncentruje się na skutkach dla mieszkańców i rynku turystycznego.",
+        "W debacie pada postulat ostrzejszej, bardziej egzekwowalnej regulacji."
+      ],
+      "reactions": [
+        "Strona regulacyjna zyskuje argument, że obecne zasady są zbyt słabe.",
+        "Właściciele lokali będą bronić elastyczności i przychodów z wynajmu."
+      ],
+      "whyItMatters": "To jedna z tych regulacji, które mogą bezpośrednio zmienić rynek mieszkaniowy w dużych miastach.",
+      "context": "To nowy krajowy wątek, odrębny od wcześniejszych sporów partyjnych i granicznych.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się harmonogram prac sejmowych albo konkretne poprawki."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Najem krótkoterminowy w Polsce. \"Potrzebujemy brukselskiego bata\"",
+          "url": "https://tvn24.pl/biznes/z-kraju/najem-krotkoterminowy-w-polsce-debata-tvn24-z-udzialem-jana-spiewaka-i-jana-szyszko-jakie-zagrozenia-niesie-najem-st9154400?source=rss"
+        }
+      ],
+      "tags": [
+        "najem",
+        "mieszkania",
+        "regulacje",
+        "polska"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pyszne-kurierzy",
+      "section": "Gospodarka",
+      "title": "ZUS i PIP kontrolują Pyszne.pl po zapowiedzi zwolnień",
+      "lead": "Kontrole startują po planowanych zwolnieniach całej grupy kurierów.",
+      "whatHappened": "Ministerstwo Rodziny, Pracy i Polityki Społecznej poinformowało, że ZUS i Państwowa Inspekcja Pracy rozpoczynają kontrole w Pyszne.pl. Powodem są planowane zwolnienia wszystkich kurierów w spółce.",
+      "keyFacts": [
+        "Sprawa dotyczy całej floty kurierów Pyszne.pl.",
+        "Do działania wchodzą dwa organy nadzoru: ZUS i PIP.",
+        "Temat ma wymiar zarówno pracowniczy, jak i regulacyjny."
+      ],
+      "reactions": [
+        "To może wywołać szerszą debatę o modelu pracy w delivery.",
+        "Firma będzie musiała odpowiedzieć na presję instytucjonalną."
+      ],
+      "whyItMatters": "To ważny test dla rynku pracy platformowej i stosowania nadzoru wobec dużych aplikacji dostawczych.",
+      "context": "W obecnym slocie to jeden z najmocniejszych krajowych sygnałów gospodarczo-pracowniczych.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się komunikaty firmy, ZUS albo PIP o wynikach kontroli."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zwolnienia kurierów pod lupą. ZUS i PIP wszczynają kontrole w Pyszne.pl",
+          "url": "https://tvn24.pl/biznes/z-kraju/zwolnienia-kurierow-pod-lupa-zus-i-pip-wszczynaja-kontrole-w-pyszne-pl-st9154425?source=rss"
+        }
+      ],
+      "tags": [
+        "praca",
+        "platformy",
+        "zus",
+        "pip"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "kusmirek-slowacja",
+      "section": "Polska",
+      "title": "Tragiczny finał poszukiwań warszawskiego poety",
+      "lead": "Piotr Kuśmirek zginął w wypadku na Słowacji, a tożsamość potwierdziły badania DNA.",
+      "whatHappened": "Policja potwierdziła, że poszukiwany od ponad roku Piotr Kuśmirek zginął w wypadku na Słowacji. Tożsamość potwierdzono dzięki badaniom genetycznym, a ostatni kontakt z rodziną miał miejsce w marcu ubiegłego roku.",
+      "keyFacts": [
+        "Poszukiwania trwały ponad rok.",
+        "Tożsamość ustalono po badaniach genetycznych.",
+        "To zamyka długi i trudny wątek z Warszawy."
+      ],
+      "reactions": [
+        "Rodzina dostała wreszcie potwierdzenie losu zaginionego.",
+        "Sprawa może teraz przejść do formalnego domknięcia przez słowackie służby."
+      ],
+      "whyItMatters": "To ważne domknięcie długo nierozwiązanego zaginięcia, a nie tylko kolejny lokalny news.",
+      "context": "Materiał jest nowy względem wcześniejszych slotów i ma wyraźny ludzki ciężar.",
+      "watchNext": [
+        "Sprawdzić, czy służby na Słowacji podadzą więcej o przyczynie wypadku."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Tragiczny finał poszukiwań warszawskiego poety",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/zginal-w-wypadku-na-slowacji-tragiczny-final-poszukiwan-poety-piotra-kusmirka-st9154360?source=rss"
+        }
+      ],
+      "tags": [
+        "warszawa",
+        "slovakia",
+        "zaginiecie",
+        "polska"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "kwota-wolna-kamysz",
+      "section": "Polityka",
+      "title": "Kosiniak-Kamysz: wyższa kwota wolna będzie realizowana",
+      "lead": "Wicepremier potwierdza, że rząd chce dowieźć obietnicę podatkową.",
+      "whatHappened": "Władysław Kosiniak-Kamysz powiedział w TVN24, że podniesienie kwoty wolnej od podatku będzie realizacją obietnicy wyborczej. W materiale przypomniano, że chodziło o wzrost z 30 tys. do 60 tys. zł.",
+      "keyFacts": [
+        "To nadal zapowiedź polityczna, a nie gotowa ustawa.",
+        "Temat wraca jako ważny punkt obietnic koalicji.",
+        "Bez szczegółów budżetowych trudno ocenić tempo wdrożenia."
+      ],
+      "reactions": [
+        "Rynek i opinia publiczna będą pytać o źródła finansowania.",
+        "To może stać się jednym z testów wiarygodności rządu."
+      ],
+      "whyItMatters": "Kwota wolna wpływa na portfele gospodarstw domowych i na konstrukcję budżetu państwa.",
+      "context": "To aktualny, ale jeszcze nie przesądzony politycznie i fiskalnie sygnał.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się data, projekt ustawy albo wyliczenie kosztów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Kosiniak-Kamysz o wyższej kwocie wolnej od podatku: będzie",
+          "url": "https://tvn24.pl/biznes/z-kraju/kwota-wolna-od-podatku-wladyslaw-kosiniak-kamysz-bedzie-realizacja-obietnicy-o-podniesieniu-kwoty-wolnej-st9154311?source=rss"
+        }
+      ],
+      "tags": [
+        "podatki",
+        "rząd",
+        "obietnice",
+        "polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "bus-fare-cap",
+      "section": "Gospodarka",
+      "title": "W Anglii większość biletów autobusowych ma kosztować maksymalnie 2 funty",
+      "lead": "Brytyjski rząd zapowiada ulgę kosztów życia od stycznia.",
+      "whatHappened": "BBC podało, że większość biletów autobusowych w Anglii ma zostać objęta limitem 2 funtów od stycznia. Rząd przedstawia to jako wsparcie dla kosztów życia i oddech dla pasażerów.",
+      "keyFacts": [
+        "Limit ma wejść w życie od stycznia.",
+        "Ma obejmować większość taryf autobusowych.",
+        "Rząd łączy decyzję z presją kosztów życia."
+      ],
+      "reactions": [
+        "Pasażerowie skorzystają, jeśli taryfa rzeczywiście zostanie utrzymana.",
+        "Przewoźnicy będą oceniać wpływ na przychody."
+      ],
+      "whyItMatters": "To konkretna, zrozumiała interwencja w koszty życia i transport publiczny.",
+      "context": "BBC News pokazuje tu bardziej praktyczny, domowy wymiar polityki gospodarczej.",
+      "watchNext": [
+        "Sprawdzić, czy przewoźnicy lub resort finansów doprecyzują szczegóły programu."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Most bus fares in England to be capped at £2 from January",
+          "url": "https://www.bbc.co.uk/news/articles/cz64l78n5vpo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "uk",
+        "transport",
+        "ceny",
+        "gospodarka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "nottingham-manslaughter",
+      "section": "Bezpieczeństwo",
+      "title": "NHS trust z Nottingham pod śledztwem manslaughter",
+      "lead": "Śledczy sprawdzają, jak leczono Valdo Calocane przed zabójstwami z 2023 roku.",
+      "whatHappened": "BBC podało, że trust szpitalny z Nottingham trafia pod śledztwo manslaughter. Chodzi o opiekę nad Valdo Calocane przed tym, jak zabił trzy osoby w 2023 roku.",
+      "keyFacts": [
+        "Śledztwo dotyczy odpowiedzialności instytucjonalnej.",
+        "Sprawa sięga zabójstw z 2023 roku.",
+        "To kolejny etap publicznego rozliczania opieki i bezpieczeństwa."
+      ],
+      "reactions": [
+        "Instytucja będzie pod presją wyjaśnień i audytu.",
+        "Temat może odbić się na standardach oceny ryzyka pacjentów."
+      ],
+      "whyItMatters": "To materiał o bezpieczeństwie publicznym i odpowiedzialności systemu, nie tylko o pojedynczej sprawie.",
+      "context": "Nowy BBC News item wchodzi do slotu jako mocny follow-up instytucjonalny.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się formalne wnioski, raport lub reakcja NHS."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Nottingham attacks NHS trust faces manslaughter probe",
+          "url": "https://www.bbc.co.uk/news/articles/cp8engx2xyeo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "nottingham",
+        "nhs",
+        "manslaughter",
+        "bezpieczenstwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "ai-jobs",
+      "section": "Technologia",
+      "title": "BBC pokazuje, które role są najbardziej narażone na AI",
+      "lead": "Nowy materiał zamienia debatę o AI w konkretne ryzyko dla rynku pracy.",
+      "whatHappened": "BBC opublikowało analizę i wykresy pokazujące, które zawody są najbardziej narażone na zastąpienie lub zmianę przez sztuczną inteligencję. Materiał podkreśla, że skala ekspozycji różni się między rolami.",
+      "keyFacts": [
+        "To materiał oparty na danych i wykresach, nie tylko opinii.",
+        "BBC wskazuje, że nie wszystkie role są tak samo zagrożone.",
+        "Temat łączy technologię z rynkiem pracy."
+      ],
+      "reactions": [
+        "Firmy i pracownicy dostają kolejną mapę ryzyka automatyzacji.",
+        "Debata o szkoleniach i przebranżowieniu może się nasilić."
+      ],
+      "whyItMatters": "To prosty, publicznie zrozumiały sygnał, gdzie AI może najszybciej zmienić rynek pracy.",
+      "context": "W tym slocie technologia wraca jako praktyczny temat gospodarczy, a nie wyłącznie incydent bezpieczeństwa.",
+      "watchNext": [
+        "Sprawdzić, czy BBC opublikuje pełniejsze zestawienie branż lub komentarze ekspertów."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Will your job be replaced by AI? Here are the roles most affected",
+          "url": "https://www.bbc.co.uk/news/articles/cn7nllr4vd6o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "ai",
+        "praca",
+        "automatyzacja",
+        "technologia"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "saudi-nuclear-program",
+      "section": "Świat",
+      "title": "USA mają ogłosić układ o saudyjskim programie nuklearnym",
+      "lead": "Porozumienie może spełnić długoletnią saudyjską ambicję, ale wzbudza napięcia.",
+      "whatHappened": "BBC World podało, że USA mają ogłosić układ pozwalający Arabii Saudyjskiej na program nuklearny. Według materiału porozumienie mogłoby wywołać zastrzeżenia w Izraelu i wśród części amerykańskich ustawodawców.",
+      "keyFacts": [
+        "To ważny ruch w dyplomacji nuklearnej.",
+        "Saudyjska ambicja ma charakter długoterminowy.",
+        "Możliwy jest natychmiastowy opór polityczny po obu stronach Atlantyku."
+      ],
+      "reactions": [
+        "Izrael i część Kongresu USA mogą reagować sceptycznie.",
+        "Region może odczytać układ jako zmianę równowagi strategicznej."
+      ],
+      "whyItMatters": "To potencjalnie duży ruch geopolityczny, wpływający na bezpieczeństwo Bliskiego Wschodu.",
+      "context": "To świeży, mocny temat z BBC World i jeden z głównych światowych sygnałów tego slotu.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się oficjalny komunikat Białego Domu lub reakcja izraelska."
+      ],
+      "sources": [
+        {
+          "title": "BBC World: US to announce deal allowing Saudi Arabia a nuclear programme",
+          "url": "https://www.bbc.co.uk/news/articles/cj03r59z73po?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "saudia",
+        "nuclear",
+        "dyplomacja",
+        "swiat"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "houthi-tankers",
+      "section": "Bezpieczeństwo",
+      "title": "Tankowce zawracają po groźbie Huti",
+      "lead": "Śledzenie ruchu statków pokazuje szybki odwrót jednostek związanych z saudyjskimi portami.",
+      "whatHappened": "BBC podało, że tankowce wykonują nagłe zwroty po groźbie Huti wobec żeglugi. Dane ship-tracking pokazują, że statki zmieniały kurs, gdy wcześniej płynęły do saudyjskich portów lub z nich.",
+      "keyFacts": [
+        "Zmiana kursu nastąpiła po świeżym ostrzeżeniu Huti.",
+        "Dotyczy to jednostek powiązanych z saudyjskimi portami.",
+        "To natychmiastowy sygnał dla żeglugi i ubezpieczycieli."
+      ],
+      "reactions": [
+        "Armatorzy i spedytorzy będą wyceniać ryzyko wyżej.",
+        "Rynki mogą reagować na każdy sygnał eskalacji w regionie."
+      ],
+      "whyItMatters": "To bezpośredni wskaźnik, że napięcia wokół Morza Czerwonego i Zatoki Perskiej wpływają na realny ruch towarów.",
+      "context": "To jeden z najmocniejszych bezpieczeństwowych follow-upów w obecnym feedzie.",
+      "watchNext": [
+        "Sprawdzić, czy ubezpieczyciele, armatorzy lub marynarka potwierdzą szerszy wpływ."
+      ],
+      "sources": [
+        {
+          "title": "BBC World: Tankers make sharp U-turns after Houthi shipping threat",
+          "url": "https://www.bbc.co.uk/news/articles/cn0n127lpzgo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "huti",
+        "zegluga",
+        "morze-czerwone",
+        "bezpieczenstwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "iran-hormuz-threat",
+      "section": "Świat",
+      "title": "Trump grozi uderzeniem w irańskie mosty i elektrownie",
+      "lead": "Stawka wokół cieśniny Ormuz znów rośnie po kolejnym ostrym sygnale z USA.",
+      "whatHappened": "BBC World podało, że Donald Trump zapowiada odpowiedź USA na każdy atak na statek w cieśninie Ormuz. W materiałach pojawia się też groźba uderzenia w irańską infrastrukturę, w tym mosty i elektrownie.",
+      "keyFacts": [
+        "W centrum pozostaje cieśnina Ormuz i bezpieczeństwo żeglugi.",
+        "Groźba dotyczy infrastruktury krytycznej w Iranie.",
+        "To kolejny sygnał, że konflikt może wejść w etap gospodarczo-morski."
+      ],
+      "reactions": [
+        "Rynki i armatorzy będą śledzić każdy nowy komunikat z Waszyngtonu i Teheranu.",
+        "Regionalni sojusznicy USA mogą wzmocnić czujność."
+      ],
+      "whyItMatters": "Ormuz pozostaje jednym z najbardziej wrażliwych punktów dla ropy, żeglugi i szerszej eskalacji regionalnej.",
+      "context": "To mocniejsza, bardziej konkretna wersja irańskiego wątku niż poranne ogólniki o eskalacji.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się oficjalna odpowiedź Iranu albo sygnał z rynków ropy."
+      ],
+      "sources": [
+        {
+          "title": "BBC World: Trump threatens to target Iran's bridges and power plants if Hormuz attacks persist",
+          "url": "https://www.bbc.co.uk/news/articles/cdrv0p37k8jo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "iran",
+        "ormuz",
+        "usa",
+        "bezpieczenstwo"
+      ],
+      "priority": "high"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 latest RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    }
+  ]
+}

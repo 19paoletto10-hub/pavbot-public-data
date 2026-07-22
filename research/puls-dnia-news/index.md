@@ -1,3 +1,5 @@
+The 2026-07-22 18:07 slot przesuwa feed w stronę alertów burzowych, paliw, najmu krótkoterminowego i kontroli Pyszne.pl w Polsce, a za granicą dokłada saudyjski program nuklearny, ruch tankowców po groźbie Huti, groźby Trumpa wobec Iranu, śledztwo w Nottingham, limit 2 funtów na bilety autobusowe i presję AI na rynek pracy.
+
 # Puls Dnia News Index
 
 The 2026-07-22 15:05 slot shifts the pulse toward new domestic signals on the Russian border and fuel prices, plus another Ukrainian command change. Abroad the feed adds Burnham's prisoner-release review, Southern Water charges, OpenAI's rogue cyberattack claim, renewed US strikes on Iran, India's protest pressure, France's under-15 social-media law, Nottingham's manslaughter probe, Wildberries, Daniel Siad and an Ohio tornado.
