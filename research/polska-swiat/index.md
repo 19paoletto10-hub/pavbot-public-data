@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-21
+Last updated: 2026-07-22
 
 ## Current Understanding
 
@@ -244,6 +244,22 @@ Ormuz nie uspokoił się po południu, a AP nadal pokazuje dziesiątą noc uderz
 atak na tankowiec i próbę podtrzymania mediacji przez Pakistan. W Ukrainie
 spór o Fedorowa i Syrskiego pozostaje żywy, a nowy materiał AP tylko wzmacnia
 tezę o kryzysie reform i dowodzenia pod presją wojny.
+Po porannym runie 22 lipca Ukraina przeszła z kryzysu spekulacyjnego do
+formalnej decyzji: Zełenski odwołał Ołeksandra Syrskiego i wskazał Mychajła
+Drapatego jako nowego głównodowodzącego, więc dalszy monitoring powinien
+dotyczyć wdrożenia reform dowodzenia, dronów, obrony powietrznej i mobilizacji.
+Ormuz wszedł w jedenastą noc uderzeń USA, a Rubio na forum ASEAN przeniósł
+temat w ramę globalnego precedensu dla wolności żeglugi; równolegle AP podała
+koszt wojny 37,5 mld dolarów oraz 18 zabitych amerykańskich wojskowych.
+Bab al-Mandab pozostaje drugim morskim ryzykiem po deklaracji Huti o
+przekierowaniu sześciu statków, bez niezależnego potwierdzenia. W Polsce
+poranny blok jest bardziej zapowiedziowy: KPRM ustawia program NaszaKolej jako
+dzisiejszy temat infrastrukturalny, RCB nie ma nowego ogólnokrajowego alertu,
+ale przypomina stopnie alarmowe do 31 sierpnia, a polityka zdrowotna dostaje
+sondażową presję po pakiecie MZ. W gospodarce światowej cła USA wobec Kanady i
+Brazylii przechodzą w instrumenty prawne, negocjacje i skutki dyplomatyczne,
+a w Wielkiej Brytanii gabinet Andy'ego Burnhama zaczyna realny test kosztów
+życia, obrony i resetu z UE.
 
 ## Stable Facts
 
@@ -473,6 +489,7 @@ konfliktowaniu Polaków i Ukraińców.
 
 ## Recent Reports
 
+- [2026-07-22](runs/2026-07-22.md)
 - [2026-07-21](runs/2026-07-21.md)
 - [2026-07-20](runs/2026-07-20.md)
 - [2026-07-19-1933](runs/2026-07-19-1933.md)
