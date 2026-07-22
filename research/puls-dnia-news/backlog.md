@@ -2,6 +2,12 @@
 
 ## Open
 
+- Watch whether Pickaxe Mountain becomes the explicit US or Iranian target in the next official statement.
+- Watch whether India's protest wave gets a formal government, police or opposition response.
+- Watch whether the AI labeling rules get an implementation date or platform reaction.
+- Watch whether the ZSK rail plan gets budget, route or timetable detail.
+- Watch whether Argentina's snow evacuations widen or clear.
+
 - Watch whether Obajtek's departure triggers more PiS exits or a formal disciplinary response.
 - Watch whether the retirement-age debate turns into a formal government or parliamentary response.
 - Watch whether Sikorski's warning about Russian provocations gets an official MSZ or MON clarification.
