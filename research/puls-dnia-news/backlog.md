@@ -2,6 +2,10 @@
 
 ## Open
 
+- Watch whether the Targówek fire gets a PSP cause note, casualty update or traffic impact.
+- Watch whether the burze band turns into flooding, hail or outage reports after the next hours.
+- Watch whether the Saudi nuclear deal gets a formal U.S., Saudi or Israeli clarification.
+- Watch whether the OpenAI security story gets a company or regulator response.
 - Watch whether the PiS-Morawiecki meeting produces a formal statement or another leak.
 - Watch whether the RPO decision triggers a fresh nomination or legal response.
 - Watch whether the Szczecin flooding turns into wider transport disruption after the next rain.

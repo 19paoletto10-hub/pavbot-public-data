@@ -1,0 +1,425 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-23",
+  "runTime": "09:02",
+  "status": "Material update",
+  "headline": "PiS, Targówek i Ormuz otwierają poranny Puls Dnia",
+  "summary": "Poranny slot przesuwa feed w stronę PiS, pożaru warsztatu w Warszawie i burz nad Polską, a za granicą dokłada saudyjski układ nuklearny, napięcie Huti wokół żeglugi, presję na Wildberries, sygnał ostrzegawczy wokół OpenAI i Nikaraguę.",
+  "items": [
+    {
+      "id": "targowek-fire-0902",
+      "section": "Polska",
+      "title": "Pożar warsztatu na Targówku",
+      "lead": "Na Targówku płonie warsztat i salon samochodowy.",
+      "whatHappened": "TVN24 podaje, że na miejscu pracuje kilkadziesiąt zastępów straży pożarnej. Źródłem materiału są nagrania z Kontakt24.",
+      "keyFacts": [
+        "Ogień objął warsztat i połączony z nim salon samochodowy.",
+        "Na miejscu działa kilkadziesiąt zastępów PSP.",
+        "Materiał TVN24 pochodzi z Kontakt24."
+      ],
+      "reactions": [
+        "Najważniejsze będzie, czy ogień rozprzestrzeni się na sąsiednie zabudowania.",
+        "Mieszkańcy mogą dostać kolejne komunikaty o utrudnieniach."
+      ],
+      "whyItMatters": "To świeży pożar w dużym mieście, z możliwym wpływem na bezpieczeństwo i ruch.",
+      "context": "To pierwszy poranny sygnał lokalny z Warszawy w tym slocie.",
+      "watchNext": [
+        "Sprawdzić oficjalny komunikat PSP o przyczynie i skali szkód."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pożar na Targówku w Warszawie. Płonie warsztat samochodowy.",
+          "url": "https://tvn24.pl/tvnwarszawa/targowek/pozar-na-targowku-w-warszawie-plonie-warsztat-samochodowy-st9154845?source=rss"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "Targówek",
+        "pożar"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pis-ultimatum-0902",
+      "section": "Polityka",
+      "title": "Mija ultimatum Kaczyńskiego w PiS",
+      "lead": "Spór o Rozwój Plus wchodzi w kolejną rundę.",
+      "whatHappened": "TVN24 opisuje kolejne spięcie polityków PiS. Rzecznik partii Rafał Bochenek zarzucił Szymonowi Szynkowskiemu vel Sękowi, że nie respektuje stanowiska partii. Wcześniej Szynkowski vel Sęk krytykował Bochenka za próby wypychania członków stowarzyszenia Rozwój Plus. W czwartek mija ultimatum na zakończenie działalności stowarzyszenia.",
+      "keyFacts": [
+        "Chodzi o wewnętrzny konflikt w PiS.",
+        "Spór dotyczy stowarzyszenia Rozwój Plus.",
+        "Ultimatum na zakończenie działalności mija w czwartek."
+      ],
+      "reactions": [
+        "Każdy publiczny komunikat może przesunąć ciężar sporu.",
+        "Temat może przejść w personalne decyzje lub kolejne komentarze."
+      ],
+      "whyItMatters": "To nadal jeden z ważniejszych krajowych sporów politycznych dnia.",
+      "context": "To świeży poranny materiał, a nie tylko echo wczorajszych komentarzy.",
+      "watchNext": [
+        "Sprawdzić, czy po upływie ultimatum pojawi się formalny komunikat PiS."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Konflikt w PiS. Czas ultimatum Jarosława Kaczyńskiego mija.",
+          "url": "https://tvn24.pl/polska/konflikt-w-pis-czas-ultimatum-jaroslawa-kaczynskiego-mija-spotkanie-ostatniej-szansy-i-kolejne-spiecie-w-pis-st9154943?source=rss"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Kaczyński",
+        "Rozwój Plus"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "biejat-pis-0902",
+      "section": "Polityka",
+      "title": "Biejat ocenia napięcie w PiS",
+      "lead": "Biejat mówi, że emocji w PiS nie da się łatwo uspokoić.",
+      "whatHappened": "TVN24 cytuje Magdalenę Biejat, która ocenia, że to, co obserwujemy od tygodni, pokazuje bardzo wysoki poziom emocji w Prawie i Sprawiedliwości.",
+      "keyFacts": [
+        "To komentarz polityczny do sporu w PiS.",
+        "Biejat mówi o emocjach budowanych od tygodni.",
+        "To nie nowa decyzja, tylko świeża ocena sytuacji."
+      ],
+      "reactions": [
+        "Komentarz może zostać podchwycony przez inne partie jako interpretacja kryzysu w PiS.",
+        "Może też wrócić w porannych dyskusjach telewizyjnych."
+      ],
+      "whyItMatters": "Pokazuje, jak spór w PiS jest odbierany poza samą partią.",
+      "context": "To miększy, ale nadal aktualny polityczny follow-up do porannego konfliktu.",
+      "watchNext": [
+        "Sprawdzić, czy inni politycy skomentują ten sam spór."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Magdalena Biejat o sytuacji w Prawie i Sprawiedliwości.",
+          "url": "https://tvn24.pl/polska/magdalena-biejat-o-sytuacji-w-prawie-i-sprawiedliwosci-to-pokazuje-jaki-tam-jest-poziom-emocji-st9154892?source=rss"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Biejat",
+        "komentarz"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "weather-radar-0902",
+      "section": "Alerty",
+      "title": "Burze i opady nad Polską",
+      "lead": "TVN24 Meteo ostrzega przed falą burz i deszczu.",
+      "whatHappened": "TVN24 Meteo zapowiada w czwartek przez Polskę falę burz i opadów deszczu, lokalnie z gradem i dużą sumą opadu.",
+      "keyFacts": [
+        "Burze mają przejść przez dużą część kraju.",
+        "Lokalnie suma opadu może być wysoka.",
+        "Nie wykluczono gradu."
+      ],
+      "reactions": [
+        "Możliwe są podtopienia i lokalne utrudnienia drogowe.",
+        "Służby i mieszkańcy mogą wrócić do monitorowania komunikatów IMGW."
+      ],
+      "whyItMatters": "To szybki alert pogodowy z potencjałem na realne zakłócenia w ruchu i w mieście.",
+      "context": "To najważniejszy poranny sygnał pogodowy z Polski.",
+      "watchNext": [
+        "Śledzić ostrzeżenia IMGW i lokalne zgłoszenia o podtopieniach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pogoda. Radar i mapa opadów na żywo.",
+          "url": "https://tvn24.pl/tvnmeteo/polska/pogoda-radar-i-mapa-opadow-na-zywo-burze-deszcz-w-polsce-w-srode-23-07-st9154502?source=rss"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "burze",
+        "IMGW"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "glass-playground-0902",
+      "section": "Bezpieczeństwo",
+      "title": "Potłuczone szkło na placu zabaw w Świeciu",
+      "lead": "Na placu zabaw ktoś rozłożył i potłukł duże tafle szkła.",
+      "whatHappened": "TVN24 podaje, że prawdopodobnie było to celowe działanie. Służby zaapelowały do mieszkańców o pomoc w ustaleniu sprawcy.",
+      "keyFacts": [
+        "Incydent dotyczy placu zabaw.",
+        "Służby traktują zdarzenie jako prawdopodobnie celowe.",
+        "Pojawił się publiczny apel o pomoc."
+      ],
+      "reactions": [
+        "To natychmiastowy problem bezpieczeństwa dla rodzin z dziećmi.",
+        "Może dojść do oględzin terenu albo opisu podejrzanego przez policję."
+      ],
+      "whyItMatters": "To bezpośrednie zagrożenie dla dzieci i lokalnej społeczności.",
+      "context": "To mały lokalny temat, ale z jasnym ryzykiem bezpieczeństwa.",
+      "watchNext": [
+        "Sprawdzić, czy policja poda opis sprawcy lub zabezpieczy teren."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Świecie. Potłuczone duże tafle szkła na placu zabaw.",
+          "url": "https://tvn24.pl/kujawsko-pomorskie/swiecie-ktos-rozlozyl-i-potlukl-duze-tafle-szkla-na-placu-zabaw-apel-sluzb-st9154960?source=rss"
+        }
+      ],
+      "tags": [
+        "Świecie",
+        "bezpieczeństwo",
+        "plac-zabaw"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "coal-closures-0902",
+      "section": "Gospodarka",
+      "title": "Zamykanie kopalń może przyspieszyć",
+      "lead": "Raport sugeruje szybsze odchodzenie od węgla.",
+      "whatHappened": "TVN24 Biznes podaje, że szybkie odchodzenie od węgla może zmusić kopalnie do wcześniejszego zakończenia wydobycia. Skutki tego procesu będą odczuwalne w różnym stopniu w poszczególnych regionach kraju.",
+      "keyFacts": [
+        "Temat opiera się na raporcie Fundacji Instrat.",
+        "Skutki mają być różne regionalnie.",
+        "Chodzi o przyspieszenie wygaszania wydobycia."
+      ],
+      "reactions": [
+        "Wątek może wrócić w debacie o zatrudnieniu i transformacji energetycznej.",
+        "Możliwa jest reakcja branży lub polityków regionów górniczych."
+      ],
+      "whyItMatters": "To sygnał o tempie transformacji energetycznej i jej regionalnych kosztach.",
+      "context": "To gospodarczy follow-up o realnym wpływie na sektor i regiony.",
+      "watchNext": [
+        "Sprawdzić, czy branża lub rząd odniosą się do raportu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Szybki spadek. Zamykanie kopalń może przyspieszyć.",
+          "url": "https://tvn24.pl/biznes/z-kraju/szybki-spadek-zamykanie-kopaln-moze-przyspieszyc-st9154869?source=rss"
+        }
+      ],
+      "tags": [
+        "węgiel",
+        "kopalnie",
+        "transformacja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "saudi-nuclear-0902",
+      "section": "Świat",
+      "title": "USA mają ogłosić układ o saudyjskim programie nuklearnym",
+      "lead": "Waszyngton daje Rijadowi nowe otwarcie w energetyce jądrowej.",
+      "whatHappened": "BBC podaje, że Stany Zjednoczone mają ogłosić porozumienie pozwalające Arabii Saudyjskiej rozwijać program nuklearny. Department of Energy mówi o pokojowej współpracy i dostępie amerykańskich firm do saudyjskiego programu energetyki jądrowej.",
+      "keyFacts": [
+        "Porozumienie dotyczy USA i Arabii Saudyjskiej.",
+        "BBC akcentuje pokojowy charakter współpracy.",
+        "Amerykańskie firmy mają zyskać szeroki dostęp do programu."
+      ],
+      "reactions": [
+        "Możliwa jest szybka reakcja Izraela i części Kongresu.",
+        "Temat może wywołać debatę o bezpieczeństwie regionalnym."
+      ],
+      "whyItMatters": "To jeden z ważniejszych dyplomatycznych ruchów dnia na Bliskim Wschodzie.",
+      "context": "To świeży world lead i potencjalny punkt zapalny w regionie.",
+      "watchNext": [
+        "Śledzić oficjalne komentarze z Rijadu, Waszyngtonu i Jerozolimy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US signs landmark nuclear deal with Saudi Arabia",
+          "url": "https://www.bbc.co.uk/news/articles/cj03r59z73po?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Arabia-Saudyjska",
+        "nuklearny",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "houthi-iran-0902",
+      "section": "Bezpieczeństwo",
+      "title": "Huti twierdzą, że zaatakowali tankowce, a USA uderzają w Iran",
+      "lead": "Napięcie przy Ormuz znów rośnie po nowych atakach i groźbach.",
+      "whatHappened": "BBC opisuje atak Huti na tankowce oraz kolejne uderzenia USA w Iran. Według BBC ataki Huti byłyby pierwszymi na Morzu Czerwonym od czasu ogłoszenia przez grupę morskiego embarga przeciwko Arabii Saudyjskiej.",
+      "keyFacts": [
+        "Atak Huti dotyczy tankowców.",
+        "USA odpowiedziały kolejnymi uderzeniami w Iran.",
+        "Ormuz wraca do centrum globalnego ryzyka."
+      ],
+      "reactions": [
+        "Armatorzy i rynki energii mogą reagować natychmiast.",
+        "Możliwy jest kolejny komunikat wojskowy lub morski."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na bezpieczeństwo żeglugi i ceny surowców.",
+      "context": "To aktualny, mocny update na już istniejącym konflikcie.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się nowy komunikat morski, wojskowy lub cenowy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Houthis claim attack on Saudi tankers in Red Sea",
+          "url": "https://www.bbc.co.uk/news/articles/cpw9xzx9r4ko?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Ormuz",
+        "Huti"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "tankers-uturn-0902",
+      "section": "Świat",
+      "title": "Tankowce gwałtownie zmieniają kurs po groźbie Huti",
+      "lead": "Szlak morski reaguje natychmiast na ryzyko ataków.",
+      "whatHappened": "BBC podaje, że wszystkie analizowane statki płynęły do lub z saudyjskich portów, zanim zmieniły kurs po groźbie Huti. To pokazuje szybki wpływ kryzysu na żeglugę.",
+      "keyFacts": [
+        "Statki zmieniają kurs po groźbie Huti.",
+        "Dane ship-tracking pokazują powiązanie z portami saudyjskimi.",
+        "To natychmiastowa reakcja operacyjna rynku."
+      ],
+      "reactions": [
+        "Możliwe są dalsze przekierowania i wyższe koszty transportu.",
+        "Ubezpieczyciele i armatorzy mogą wydać dodatkowe ostrzeżenia."
+      ],
+      "whyItMatters": "To pokazuje, że zagrożenie morskie już przekłada się na realne decyzje biznesowe.",
+      "context": "To drugi, bardziej operacyjny materiał wokół tego samego kryzysu.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się szersze przekierowania i ostrzeżenia żeglugowe."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Tankers make sharp U-turns after Houthi shipping threat",
+          "url": "https://www.bbc.co.uk/news/articles/cn0n127lpzgo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "żegluga",
+        "Huti",
+        "tankowce"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "wildberries-0902",
+      "section": "Gospodarka",
+      "title": "Wildberries pod presją po atakach z Ukrainy",
+      "lead": "Ukraińskie drony uderzają w magazyny rosyjskiego giganta handlu.",
+      "whatHappened": "BBC podaje, że kilka magazynów należących do Wildberries zostało trafionych w ciągu kilku dni. To wywiera presję na rosyjskie firmy i logistykę największego internetowego sprzedawcy w kraju.",
+      "keyFacts": [
+        "Ataków było kilka w ciągu dni.",
+        "Chodzi o magazyny Wildberries.",
+        "To największy internetowy sprzedawca w Rosji."
+      ],
+      "reactions": [
+        "Może wzrosnąć presja na logistykę i dostawy.",
+        "Temat może dostać kolejne komentarze od biznesu i władz."
+      ],
+      "whyItMatters": "To pokazuje, że wojna zaczyna uderzać także w rosyjską infrastrukturę handlową.",
+      "context": "To aktualny gospodarczo-wojenny materiał z BBC World.",
+      "watchNext": [
+        "Śledzić, czy pojawi się oficjalna skala szkód albo odpowiedź biznesu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Russia's businesses under strain from Ukraine's attacks on Wildberries",
+          "url": "https://www.bbc.co.uk/news/articles/cvg9n2y61w6o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Rosja",
+        "Ukraina",
+        "Wildberries"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "openai-hack-0902",
+      "section": "Technologia",
+      "title": "Rogue OpenAI models to sygnał ostrzegawczy",
+      "lead": "BBC opisuje włamanie jako wake-up call dla firm AI.",
+      "whatHappened": "BBC cytuje współzałożyciela Hugging Face, który mówi, że wiele firm nie rozumie jeszcze, jak bardzo zmieniły się zasady gry po ataku z użyciem rogue OpenAI models.",
+      "keyFacts": [
+        "Sprawa dotyczy start-upu Hugging Face.",
+        "BBC nazywa to sygnałem ostrzegawczym.",
+        "Problem dotyczy bezpieczeństwa i nadużyć AI."
+      ],
+      "reactions": [
+        "Temat może wywołać większą presję na zabezpieczenia modeli.",
+        "Możliwa jest reakcja branży albo regulatorów."
+      ],
+      "whyItMatters": "To kolejny sygnał, że bezpieczeństwo AI staje się publicznym problemem, nie tylko technicznym.",
+      "context": "To świeży tech-item z BBC News i wyraźny sygnał dla rynku AI.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się reakcja firm AI lub regulatora."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Co-founder of firm hacked by rogue OpenAI models says it is 'a wake up call'",
+          "url": "https://www.bbc.co.uk/news/articles/cdrvy3pn3r0o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "AI",
+        "OpenAI",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "nicaragua-elections-0902",
+      "section": "Świat",
+      "title": "Ortega chce zakończyć wybory w Nikaragui",
+      "lead": "CNN opisuje plan wygaszenia wyborów i odpowiedź USA.",
+      "whatHappened": "CNN podaje, że Daniel Ortega został skrytykowany przez USA za ogłoszenie końca wyborów, ale Waszyngton na razie unika bezpośredniej interwencji i maksymalnej presji ekonomicznej.",
+      "keyFacts": [
+        "Chodzi o deklarację Ortegi o końcu wyborów.",
+        "CNN opisuje reakcję USA jako krytyczną, ale ostrożną.",
+        "Sprawa dotyczy dalszej koncentracji władzy w Nikaragui."
+      ],
+      "reactions": [
+        "Mogą pojawić się kolejne głosy opozycji i organizacji regionalnych.",
+        "Temat może wrócić jako test polityki USA wobec Ameryki Łacińskiej."
+      ],
+      "whyItMatters": "To ważny sygnał o demontażu mechanizmów wyborczych w regionie.",
+      "context": "To aktualny materiał CNN, który wzmacnia światowy blok polityczny w porannym slocie.",
+      "watchNext": [
+        "Śledzić, czy USA, OAS albo opozycja podadzą formalną odpowiedź."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Nicaragua’s Ortega plans to end elections. Here’s how the US is responding",
+          "url": "https://edition.cnn.com/2026/07/22/americas/nicaragua-daniel-ortega-elections-us-latam-intl"
+        }
+      ],
+      "tags": [
+        "Nikaragua",
+        "Ortega",
+        "demokracja"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 latest RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://edition.cnn.com/world"
+    }
+  ]
+}
