@@ -1,0 +1,364 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-23",
+  "runTime": "19:33",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny run z 2026-07-23 przesuwa temat z samego kosztu i capexu do produktu, pomiaru adopcji i regulacyjnych ograniczników. OpenAI włącza do ChatGPT zdrowie, produkcyjny enterprise support, małe firmy i newsroomy; Google publikuje ATLAS o realnym użyciu AI; AMD i Anthropic spinają compute z kapitałem; a Kongres zaczyna mówić o formalnym kill switchu dla frontier systems.",
+    "To nie jest jedna historia o większym modelu. To zderzenie czterech surface'ów: konsumenckiego zdrowia, firmowego supportu, publicznego pomiaru pracy i federalnego nadzoru nad awariami AI. Wspólny mianownik jest prosty: AI wchodzi do wdrożeń, które mają budżet, odpowiedzialność i politykę dostępu.",
+    "Sygnał społeczności też się spina z tą zmianą. Hacker News i Product Hunt nadal premiują narzędzia praktyczne, kontrolowalne i użyteczne w pracy, a nie sam modelowy hype. To pasuje do dzisiejszego news flow lepiej niż deklaracje o „najmocniejszym modelu”."
+  ],
+  "summaryBullets": [
+    "AI: OpenAI włącza zdrowie do ChatGPT",
+    "Produkty: OpenAI sprzedaje agentów do produkcji enterprise",
+    "Produkty: OpenAI idzie do małych firm i newsroomów"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-23-1933-0-openai-wlacza-zdrowie-do-chatgpt-e22be5b8f4",
+      "section": "AI",
+      "title": "OpenAI włącza zdrowie do ChatGPT",
+      "standfirst": "OpenAI uruchomił Health in ChatGPT dla użytkowników w USA 18+, z możliwością bezpiecznego podłączenia Apple Health i wybranych rekordów medycznych. Firma podaje, że dane zdrowotne nie są używane do treningu modeli ani targetowania reklam.",
+      "whatHappened": "OpenAI uruchomił Health in ChatGPT i włączył je do głównego interfejsu ChatGPT.",
+      "whyItMatters": "To pierwszy wyraźny ruch, w którym model staje się warstwą interpretacji danych medycznych i codziennych decyzji zdrowotnych.",
+      "deeperAnalysis": [
+        "Health in ChatGPT nie jest zwykłym feature'em, tylko próbą zbudowania nowego powierzchniowego produktu wokół bardzo wrażliwych danych. OpenAI podaje, że użytkownik może połączyć Apple Health oraz wybrane rekordy medyczne, a potem pytać o wyniki badań, leki, aktywność czy sen w tym samym interfejsie, którego używa do zwykłych rozmów.",
+        "To ważne, bo zmienia nie tylko UX, ale też granicę odpowiedzialności. OpenAI wyraźnie dokłada warstwy privacy i permission prompts, a także mówi, że nie używa tych danych do treningu ani reklam. To jednak nie usuwa ryzyka błędów interpretacyjnych, nadmiernego zaufania i konfliktu z regulacjami zdrowotnymi.",
+        "Najistotniejsze jest więc przesunięcie z „czy model potrafi odpowiadać o zdrowiu” na „czy model może stać się pośrednikiem dla danych medycznych i nadal utrzymać zaufanie”. To już nie jest czysty chatbot, tylko produkt medyczno-informacyjny z wyższym progiem odpowiedzialności."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI uruchomił Health in ChatGPT dla użytkowników w USA 18+.",
+        "Dlaczego ważne: AI wchodzi w obszar danych medycznych, gdzie priorytetem jest prywatność i bezpieczeństwo, nie tylko trafność odpowiedzi.",
+        "Na co patrzeć dalej: zasięg rollout'u, reakcja lekarzy i regulatorów oraz to, czy Health stanie się centralnym produktem, czy niszowym dodatkiem."
+      ],
+      "sources": [
+        {
+          "title": "Launching Health in ChatGPT",
+          "url": "https://openai.com/index/health-in-chatgpt/"
+        },
+        {
+          "title": "OpenAI is making big claims as it rolls out ChatGPT Health to everyone",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970115/openai-chatgpt-health-launch-claims"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "health",
+        "ChatGPT",
+        "privacy",
+        "medical records",
+        "consumer AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-23-1933-1-openai-sprzedaje-agentow-do-produkcji-enterprise-837639c95b",
+      "section": "Produkty",
+      "title": "OpenAI sprzedaje agentów do produkcji enterprise",
+      "standfirst": "OpenAI przedstawił Presence jako produkt enterprise dla voice i chat agentów. Własny przykład firmy mówi o 75% inbound issue rozwiązywanych bez człowieka i o pętli ulepszania opartej na Codexie.",
+      "whatHappened": "OpenAI uruchomił Presence jako produkt do wdrażania agentów w workflowach produkcyjnych.",
+      "whyItMatters": "To sygnał, że agenci przestają być funkcją modelu, a stają się osobnym produktem wdrożeniowym z politykami i eskalacją.",
+      "deeperAnalysis": [
+        "Presence jest ważny, bo pokazuje zmianę w sposobie sprzedawania AI dla firm. Zamiast ogólnych obietnic o „copilotach” OpenAI opisuje konkretny job, konkretne reguły dostępu i konkretny mechanizm eskalacji, który ma działać w produkcji. To dużo bliżej klasycznego enterprise software niż modelowego demo.",
+        "Najmocniejszy sygnał to własny przykład firmy: channel support, który ma rozwiązywać większość inbound requests bez człowieka. Nawet jeśli to claim marketingowy, sama architektura produktu sugeruje, że OpenAI myśli o agentach jako o systemie, który musi być monitorowany, poprawiany i trzymany w ryzach po wdrożeniu.",
+        "Ta premiera dobrze pasuje do całej dzisiejszej osi. Health in ChatGPT obsługuje konsumenta, Presence obsługuje firmę, a SMB/newsroom program obsługuje konkretne branże. Razem wygląda to jak budowanie pełnego katalogu wdrożeniowego wokół modeli, a nie tylko kolejnej wersji czatu."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI uruchomił produkt enterprise do voice i chat agents.",
+        "Dlaczego ważne: Agentic AI przechodzi z eksperymentu do wdrożeń z polityką, permissions i eskalacją.",
+        "Na co patrzeć dalej: referencje klientów, integracje systemowe i czy Presence stanie się standardowym produktem wdrożeniowym."
+      ],
+      "sources": [
+        {
+          "title": "Introducing OpenAI Presence",
+          "url": "https://openai.com/index/introducing-openai-presence/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "Presence",
+        "enterprise",
+        "agents",
+        "customer support",
+        "Codex"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-23-1933-2-openai-idzie-do-malych-firm-i-newsroomow-c583604525",
+      "section": "Produkty",
+      "title": "OpenAI idzie do małych firm i newsroomów",
+      "standfirst": "OpenAI uruchomił program dla małych firm oraz opisał, jak redakcje używają jego narzędzi do researchu, weryfikacji i workflowów biznesowych. To kolejny krok w stronę branżowych, gotowych do wdrożenia powierzchni.",
+      "whatHappened": "OpenAI rozszerzył dystrybucję ChatGPT na SMB i media.",
+      "whyItMatters": "Pokazuje, że OpenAI sprzedaje AI już nie jako ogólną użyteczność, ale jako zestaw sektorowych workflowów.",
+      "deeperAnalysis": [
+        "Program dla small business jest ważny nie dlatego, że ma webinary, ale dlatego, że pokazuje model dystrybucji. OpenAI nie ogranicza się do api i samego ChatGPT; buduje pakiet edukacji, partnerów, gotowych guide'ów i integracji, żeby małe firmy mogły szybciej wejść w użycie produkcyjne.",
+        "Jeszcze ciekawszy jest newsroom angle. OpenAI wymienia konkretne redakcje i konkretne zastosowania: od przeglądania nocnych newsów, przez weryfikację materiałów, po przekształcanie artykułów w broadcast scripts. To oznacza, że produkt wchodzi w istniejące procesy redakcyjne, a nie tylko w ogólny „content generation”.",
+        "To jest ważne również dlatego, że media i SMB mają podobny problem: małe zespoły, wysoka presja czasu i potrzeba kontroli jakości. Jeśli OpenAI potrafi wejść tam z bezpiecznym, rozliczalnym workflowem, to będzie mieć mocny kanał dystrybucji poza samym consumer chat."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI otworzył program SMB i opisał newsroom use cases.",
+        "Dlaczego ważne: AI staje się gotowym narzędziem branżowym, a nie tylko uniwersalnym chatbotem.",
+        "Na co patrzeć dalej: partner uptake, faktyczne wdrożenia i reakcja redakcji na zależność od dostawcy AI."
+      ],
+      "sources": [
+        {
+          "title": "Introducing the ChatGPT for small business program",
+          "url": "https://openai.com/index/introducing-chatgpt-small-business-program/"
+        },
+        {
+          "title": "How news organizations are using AI to advance their vital missions",
+          "url": "https://openai.com/index/how-news-organizations-are-using-ai/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "OpenAI",
+        "SMB",
+        "newsroom",
+        "ChatGPT Work",
+        "journalism",
+        "workflows"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-23-1933-3-amd-i-anthropic-spinaja-compute-z-kapitalem-5c86284e55",
+      "section": "Infrastruktura",
+      "title": "AMD i Anthropic spinają compute z kapitałem",
+      "standfirst": "AMD i Anthropic ogłosili partnerstwo na poziomie do 2 GW GPU MI450, z pierwszym gigawatem planowanym na pierwszą połowę 2027 roku. AMD deklaruje też inwestycję kapitałową do 5 mld USD i wspólne użycie Claude do optymalizacji własnego stacku.",
+      "whatHappened": "AMD i Anthropic sformalizowały wieloletni kontrakt compute-plus-equity.",
+      "whyItMatters": "To jeden z najmocniejszych sygnałów, że infrastruktura AI staje się finansowana jak ciężki przemysł, a nie jak zwykły cloud spend.",
+      "deeperAnalysis": [
+        "Najważniejsze w tym ogłoszeniu jest to, że wartości nie podaje się już w samych chipach, tylko w gigawatach i miliardach dolarów kapitału. To język utility-scale, który bardziej przypomina energetykę i centra danych niż klasyczną sprzedaż półprzewodników.",
+        "AMD nie tylko sprzedaje hardware, ale też buduje z Anthropic wspólną warstwę engineeringową. Używanie Claude do optymalizacji ROCm i własnych workflowów AMD sugeruje, że partnerstwa AI zaczynają obejmować zarówno stronę popytową, jak i produktowo-inżynierską. To może być ważny wzorzec dla innych vendorów walczących z dominacją Nvidii.",
+        "Z perspektywy rynku to też sygnał, że compute financing wchodzi w etap, w którym producent chipów może wspierać klienta kapitałem, żeby zabezpieczyć przyszłą sprzedaż. To przesuwa całe pytanie z „kto ma najlepszy model” do „kto potrafi sfinansować i dostarczyć infrastrukturę wystarczającą do jego działania”."
+      ],
+      "contextPoints": [
+        "Co się stało: AMD i Anthropic ogłosili kontrakt do 2 GW i inwestycję do 5 mld USD.",
+        "Dlaczego ważne: GPU supply, lease financing i software stack zaczynają być jednym pakietem biznesowym.",
+        "Na co patrzeć dalej: milestone'y, deployment H1 2027 i czy inne labs skopiują taki model finansowania."
+      ],
+      "sources": [
+        {
+          "title": "AMD and Anthropic Announce Strategic Partnership to Deploy Up to 2 Gigawatts of AMD Instinct MI450 Series GPUs",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus"
+        },
+        {
+          "title": "AMD Advancing AI 2026",
+          "url": "https://www.amd.com/en/corporate/events/advancing-ai.html"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AMD",
+        "Anthropic",
+        "compute",
+        "MI450",
+        "Helios",
+        "financing"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-23-1933-4-google-probuje-zmierzyc-realne-uzycie-ai-c31603d0fc",
+      "section": "AI",
+      "title": "Google próbuje zmierzyć realne użycie AI",
+      "standfirst": "Google uruchomił ATLAS v1.0, bazujący na 15 mln zanonimizowanych interakcji z Gemini App, AI Mode i Gemini API. Firma twierdzi, że zasięg obejmuje ponad 1 mld miesięcznych użytkowników i tysiące zawodów oraz zadań.",
+      "whatHappened": "Google opublikował nowy publiczny model pomiaru użycia AI w pracy i codziennych zadaniach.",
+      "whyItMatters": "To rzadki przypadek, kiedy duży dostawca próbuje opisać nie tylko model, ale też ekonomię faktycznego użycia.",
+      "deeperAnalysis": [
+        "ATLAS jest ważny, bo przenosi dyskusję z poziomu capability na poziom obserwacji zachowań. Google nie mówi tylko o tym, co model potrafi, ale o tym, jak ludzie faktycznie używają AI w pracy i poza nią, i robi to na bardzo dużej próbie.",
+        "Najciekawszy wniosek z samego opisu jest taki, że AI w pracy jest szeroko rozpowszechnione, ale nadal używane selektywnie. To pasuje do obserwacji z wcześniejszych dni, że firmy najpierw szukają wsparcia w ideacji, researchu i codziennych decyzjach, a dopiero później przechodzą do pełnej automatyzacji.",
+        "ATLAS może stać się ważny nie tylko dla Google. Jeśli metodologia się utrzyma, to będzie jeden z nielicznych publicznych punktów odniesienia dla debaty o wpływie AI na rynek pracy, produktywność i politykę publiczną. To oznacza, że Google próbuje wejść w rolę nie tylko dostawcy AI, ale też producenta referencyjnych danych o tym rynku."
+      ],
+      "contextPoints": [
+        "Co się stało: Google opublikował ATLAS v1.0 o użyciu AI w pracy i codziennym życiu.",
+        "Dlaczego ważne: Pomiar adopcji może zacząć kształtować politykę, produkt i narrację o rynku pracy.",
+        "Na co patrzeć dalej: metodologia, zewnętrzna weryfikacja i czy ATLAS stanie się regularnie aktualizowanym benchmarkiem ekonomicznym."
+      ],
+      "sources": [
+        {
+          "title": "Understanding the AI economy",
+          "url": "https://blog.google/innovation-and-ai/technology/research/understanding-the-ai-economy/"
+        },
+        {
+          "title": "Apply now for the Google for Startups Gemini Startup Forum",
+          "url": "https://blog.google/company-news/outreach-and-initiatives/entrepreneurs/gemini-startup-forum-winter-2026/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "ATLAS",
+        "AI economy",
+        "labor",
+        "adoption",
+        "measurement"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-23-1933-5-kongres-chce-federalnego-kill-switcha-dla-ai-4120117e81",
+      "section": "Regulacje",
+      "title": "Kongres chce federalnego kill switcha dla AI",
+      "standfirst": "Reuters opisał projekt AI Kill Switch Act, który dawałby DHS możliwość nakazania spowolnienia lub zatrzymania systemów AI w sytuacjach utraty kontroli. Artykuł łączy inicjatywę z incydentem OpenAI/Hugging Face.",
+      "whatHappened": "W USA pojawił się projekt ustawy wprost przewidujący techniczny i prawny kill switch dla frontier AI.",
+      "whyItMatters": "To zmienia safety z miękkiej debaty w potencjalny obowiązek zgodności i raportowania incydentów.",
+      "deeperAnalysis": [
+        "Ta propozycja jest ważna nie dlatego, że od razu wejdzie w życie, ale dlatego, że ustawia nowy język regulacyjny. Po raz pierwszy bezpieczeństwo frontier AI jest opisane nie tylko przez audyty i wytyczne, ale przez możliwość administracyjnego zatrzymania systemu.",
+        "To ma też konsekwencje produktowe. Jeśli takie projekty zaczną zyskiwać poparcie, laboratoria będą musiały projektować systemy z myślą o zewnętrznym wyłączeniu, raporcie incydentów i zachowaniu śladów forensycznych. W praktyce to oznacza większy nacisk na controllability, observability i recovery, nie tylko na capability.",
+        "W kontekście dzisiejszych newsów o OpenAI Health, Presence i GPT-5.6 jest to szczególnie istotne, bo te same firmy budują produkty głębiej w społeczną i biznesową infrastrukturę. Im bardziej AI wchodzi do zdrowia, supportu i pracy, tym większa szansa, że regulator zacznie pytać nie tylko „czy działa”, ale też „jak to zatrzymać”."
+      ],
+      "contextPoints": [
+        "Co się stało: Kongresowy projekt przewiduje DHS-level control nad systemami AI w sytuacjach krytycznych.",
+        "Dlaczego ważne: Safety staje się formalnym wymogiem operacyjnym, a nie tylko deklaracją firmy.",
+        "Na co patrzeć dalej: treść bill text, scope, komisje i reakcja firm AI na obowiązek kill switcha."
+      ],
+      "sources": [
+        {
+          "title": "AI 'kill switch' bill floated by US House lawmakers",
+          "url": "https://ca.finance.yahoo.com/news/ai-kill-switch-bill-floated-133849585.html"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "regulation",
+        "kill switch",
+        "AI safety",
+        "DHS",
+        "incident reporting",
+        "OpenAI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-23-1933-6-anthropic-zamienia-ekonomie-ai-w-osobny-produkt-badawczy-f1a8f01503",
+      "section": "Produkty",
+      "title": "Anthropic zamienia ekonomię AI w osobny produkt badawczy",
+      "standfirst": "Anthropic opublikował agendę Economic Futures Research Fund i uruchomił Economic Index connector, który ma pozwolić każdemu eksplorować realne dane o AI i pracy. Fundusz ma 200 mln USD.",
+      "whatHappened": "Anthropic zbudował osobny produkt i fundusz wokół pomiaru ekonomicznych skutków AI.",
+      "whyItMatters": "To rzadki przykład, kiedy lab AI próbuje zinstytucjonalizować własny pomiar wpływu na rynek pracy i politykę.",
+      "deeperAnalysis": [
+        "Anthropic nie tylko mówi o ryzykach i badaniach, ale zamienia je w produkt. Economic Index connector ma być narzędziem do eksploracji realnych danych o AI i pracy, a Economic Futures Research Fund ma finansować zewnętrzne badania nad skutkami gospodarczymi wdrożeń AI.",
+        "To przesunięcie jest strategiczne. Zamiast czekać, aż ktoś z zewnątrz zbuduje narrację o wpływie AI na pracę, Anthropic chce uczestniczyć w tworzeniu danych, na których potem będą opierać się debaty publiczne i akademickie. To daje firmie zarówno wiarygodność, jak i wpływ na ramy dyskusji.",
+        "W połączeniu z dzisiejszym kill switch bill i sporem o Moonshot pokazuje to, że laboratoria AI już walczą nie tylko o capability i revenue, ale też o to, kto definiuje skutki społeczne AI. To osobny front produktu, polityki i reputacji."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic uruchomił Economic Index connector i fundusz 200 mln USD.",
+        "Dlaczego ważne: Pomiar wpływu AI na pracę i gospodarkę staje się samodzielnym produktem i narzędziem policy.",
+        "Na co patrzeć dalej: korzystanie z connectora, granty, publikacje i to, czy inni dostawcy skopiują ten model."
+      ],
+      "sources": [
+        {
+          "title": "A research agenda for the Economic Futures Research Fund",
+          "url": "https://www.anthropic.com/news/economic-futures-research-fund-agenda"
+        },
+        {
+          "title": "The Anthropic Economic Index connector",
+          "url": "https://www.anthropic.com/news/anthropic-economic-index-connector"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Anthropic",
+        "Economic Futures Fund",
+        "Economic Index",
+        "labor",
+        "research",
+        "policy"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Health in ChatGPT zamienia zdrowie w surface produktowy",
+      "rationale": "OpenAI przenosi AI z ogólnego czatu do obszaru danych medycznych, gdzie liczą się zgody, prywatność i zaufanie.",
+      "sourcesLabel": "OpenAI; The Verge"
+    },
+    {
+      "priority": "High",
+      "title": "Presence robi z agentów produkt enterprise",
+      "rationale": "75% automatyzacji inbound supportu sugeruje, że agentowe workflowy są już produktem wdrożeniowym, nie tylko demo.",
+      "sourcesLabel": "OpenAI Presence"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI idzie do SMB i newsroomów",
+      "rationale": "Program dla małych firm i case'y mediów pokazują, że dystrybucja AI przebiega przez branżowe workflowy.",
+      "sourcesLabel": "OpenAI SMB; OpenAI news organizations"
+    },
+    {
+      "priority": "High",
+      "title": "AMD i Anthropic wiążą compute z kapitałem",
+      "rationale": "2 GW i 5 mld USD zamieniają infrastrukturę AI w wieloletni kontrakt finansowy i strategiczny.",
+      "sourcesLabel": "AMD IR; Reuters/rynkowe omówienia"
+    },
+    {
+      "priority": "High",
+      "title": "Google ATLAS próbuje policzyć realne użycie AI",
+      "rationale": "Google wchodzi w pomiar adopcji AI na dużej skali, co może wpłynąć na produkt, politykę i rynek pracy.",
+      "sourcesLabel": "Google Blog"
+    },
+    {
+      "priority": "High",
+      "title": "Kongres chce federalnego kill switcha dla AI",
+      "rationale": "Propozycja ustawy po incydencie OpenAI/Hugging Face pokazuje, że safety wchodzi w tryb legislacyjny.",
+      "sourcesLabel": "Reuters; WSJ; The Verge"
+    },
+    {
+      "priority": "Medium",
+      "title": "Anthropic zamienia ekonomię AI w osobny produkt badawczy",
+      "rationale": "Economic Futures Fund i Economic Index connector robią z impact measurement oddzielny front.",
+      "sourcesLabel": "Anthropic"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI News: Launching Health in ChatGPT",
+      "url": "https://openai.com/index/health-in-chatgpt/"
+    },
+    {
+      "title": "OpenAI News: Introducing OpenAI Presence",
+      "url": "https://openai.com/index/introducing-openai-presence/"
+    },
+    {
+      "title": "OpenAI News: Introducing the ChatGPT for small business program",
+      "url": "https://openai.com/index/introducing-chatgpt-small-business-program/"
+    },
+    {
+      "title": "OpenAI News: How news organizations are using AI to advance their vital missions",
+      "url": "https://openai.com/index/how-news-organizations-are-using-ai/"
+    },
+    {
+      "title": "AMD IR: AMD and Anthropic Announce Strategic Partnership to Deploy Up to 2 Gigawatts of AMD Instinct MI450 Series GPUs",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus"
+    },
+    {
+      "title": "Google Blog: Understanding the AI economy",
+      "url": "https://blog.google/innovation-and-ai/technology/research/understanding-the-ai-economy/"
+    },
+    {
+      "title": "Google Blog: Apply now for the Google for Startups Gemini Startup Forum",
+      "url": "https://blog.google/company-news/outreach-and-initiatives/entrepreneurs/gemini-startup-forum-winter-2026/"
+    },
+    {
+      "title": "Anthropic: A research agenda for the Economic Futures Research Fund",
+      "url": "https://www.anthropic.com/news/economic-futures-research-fund-agenda"
+    },
+    {
+      "title": "Anthropic: The Anthropic Economic Index connector",
+      "url": "https://www.anthropic.com/news/anthropic-economic-index-connector"
+    },
+    {
+      "title": "Reuters: AI 'kill switch' bill floated by US House lawmakers",
+      "url": "https://ca.finance.yahoo.com/news/ai-kill-switch-bill-floated-133849585.html"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/front"
+    },
+    {
+      "title": "Product Hunt homepage",
+      "url": "https://www.producthunt.com/"
+    }
+  ]
+}

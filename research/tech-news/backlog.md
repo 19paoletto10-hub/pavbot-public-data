@@ -4,6 +4,12 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track OpenAI Health rollout | Medical-record access inside ChatGPT turns consumer health into a regulated AI surface | Watch U.S. expansion, privacy defaults and clinician response | Open |
+| High | Track OpenAI Presence deployment | Enterprise voice/chat agents with a Codex improvement loop may become the new support default | Watch customer wins, escalation controls and workflow-specific rollout | Open |
+| High | Track OpenAI SMB and newsroom programs | Sector-specific programs show OpenAI moving from generic chat to packaged workflow distribution | Watch partner uptake, paid conversions and editorial backlash | Open |
+| High | Track AMD-Anthropic compute financing | The 2 GW / $5B deal may set a repeatable model for financing AI infrastructure | Watch milestones, leasing structure and Helios adoption | Open |
+| High | Track Google ATLAS methodology | A large public AI-usage dataset could become a policy and product benchmark if it holds up | Watch outside validation, methodology notes and follow-up releases | Open |
+| High | Track AI Kill Switch Act | Federal emergency shutdown powers would make frontier safety a formal compliance regime | Watch bill text, committee movement and industry response | Open |
 | High | Track Google Gemini efficiency rollout | Gemini 3.6 Flash, Copilot distribution and Android migration show Google moving AI toward cost control and ecosystem stickiness | Watch Copilot defaults, pricing and enterprise uptake | Open |
 | High | Track OpenAI infrastructure buildout | The 750B spend plan and Project Camellia turn OpenAI into a utility-scale infra story | Watch permitting, financing and community response | Open |
 | High | Track monday.com AI Work Platform restructuring | The 20% workforce cut is a concrete SaaS example of AI-first org redesign | Watch churn, customer reaction and peer copycats | Open |
@@ -23,6 +29,7 @@
 | High | Track Suno breach fallout | A late-disclosed breach at an AI music service shows consumer AI data risk is already material | Watch user notices, security remediation and any further disclosure | Open |
 | High | Track Glow endpoint security | Glow suggests AI agents and dev tools are creating a new endpoint security category | Watch first customers, feature scope and incumbent response | Open |
 | Medium | Track Arcee open-weight narrative | Arcee's pushback on banning Chinese models may shape enterprise and policy framing | Watch model-agnostic adoption and regulatory rhetoric | Open |
+| Medium | Track Anthropic Economic Index adoption | The connector and research fund make AI/work measurement a product and policy surface | Watch researcher uptake, grant announcements and external references | Open |
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
