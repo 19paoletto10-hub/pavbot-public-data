@@ -1,3 +1,5 @@
+The 2026-07-23 06:01 slot shifts the pulse toward PiS/RPO institutional moves and a flooded street in Szczecin, while abroad the feed is driven by the Saudi nuclear deal, Iran/Houthi escalation, Ukraine's military shake-up, Italy's wildfire story, the Pan Am wreck find, the Guyana ferry recovery and Nicaragua's election plan.
+
 The 2026-07-22 21:02 slot przesuwa feed w stronę PiS, pożarów i akcji ratowniczych w Polsce, a za granicą dokłada francuskie pożary, saudyjski program nuklearny, napięcie przy Ormuz, kolejne uderzenie w Wildberries i publiczny sygnał o cyberataku przypisywanym AI OpenAI.
 
 # Puls Dnia News Index

@@ -2,6 +2,11 @@
 
 ## Open
 
+- Watch whether the PiS-Morawiecki meeting produces a formal statement or another leak.
+- Watch whether the RPO decision triggers a fresh nomination or legal response.
+- Watch whether the Szczecin flooding turns into wider transport disruption after the next rain.
+- Watch whether the Guyana ferry sinking gets a full casualty tally or cause note.
+- Watch whether Nicaragua's election changes trigger a formal US, OAS or opposition response.
 - Watch whether the Chorzów fire produces casualties, cause detail or transport closures.
 - Watch whether the Dziwnów rescue gets an official marine safety or medical follow-up.
 - Watch whether the France fires widen or trigger more evacuations and road blocks.
