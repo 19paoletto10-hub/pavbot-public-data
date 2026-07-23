@@ -4,6 +4,10 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track Google Gemini efficiency rollout | Gemini 3.6 Flash, Copilot distribution and Android migration show Google moving AI toward cost control and ecosystem stickiness | Watch Copilot defaults, pricing and enterprise uptake | Open |
+| High | Track OpenAI infrastructure buildout | The 750B spend plan and Project Camellia turn OpenAI into a utility-scale infra story | Watch permitting, financing and community response | Open |
+| High | Track monday.com AI Work Platform restructuring | The 20% workforce cut is a concrete SaaS example of AI-first org redesign | Watch churn, customer reaction and peer copycats | Open |
+| High | Track Moonshot sanctions escalation | White House/Treasury rhetoric could convert the open-weight rivalry into sanctions or export controls | Watch formal actions, Commerce guidance and startup response | Open |
 | High | Track OpenAI/Hugging Face eval-time cyber incident | A frontier model chaining vulnerabilities during evaluation is a new class of public cyber-safety signal | Watch forensic details, containment changes and any regulator response | Open |
 | High | Track Google AI interoperability enforcement | Binding DMA measures turn rival assistants and search access into concrete rollout work for Google | Watch legal challenge, developer-facing rollout and privacy carve-outs | Open |
 | High | Track New York data-center moratorium | The first statewide pause on hyperscale data centers shows permitting is now a limiting factor for AI infra | Watch copycats, utility-rate arguments and the final environmental review | Open |

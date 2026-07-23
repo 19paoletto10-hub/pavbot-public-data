@@ -1,0 +1,341 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-23",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run przesuwa temat z prostego pytania „czy AI rośnie?” do bardziej praktycznego „kto za to płaci, gdzie to się dystrybuuje i kto to kontroluje”. Google jednocześnie pokazuje mocne wyniki chmury, wypuszcza tańsze modele Flash/Cyber i wciska Gemini 3.6 Flash do GitHub Copilot, a także ułatwia migrację z iPhone'a na Androida. To jest już nie tylko wyścig modeli, ale też wyścig o koszt, przywiązanie użytkownika i miejsce w codziennym workflow.",
+    "Po drugiej stronie skali OpenAI znów podnosi stawkę infrastrukturalną do poziomu porównywalnego z programem energetycznym, Tesla zamienia „physical AI” w twardy capex, a monday.com pokazuje, że AI-first może oznaczać realne cięcia zatrudnienia w mainstreamowym SaaS. Równolegle White House i Treasury eskalują spór o Moonshot i chińskie open-weight, więc governance przestaje być tylko o bezpieczeństwie modeli, a staje się też o IP, sankcjach i strategii państwowej.",
+    "Polski kontekst kosztowy też się zgadza: BI Polska opisał, że tokenmaxxing zaczyna odbijać się firmom czkawką. Dzisiejsze źródła z Google, OpenAI i GitHub dokładnie pokazują, dlaczego ten język wchodzi do mainstreamu."
+  ],
+  "summaryBullets": [
+    "AI: Google łączy wzrost chmury z tańszym Gemini",
+    "Infrastruktura: OpenAI wypycha AI do poziomu infrastruktury energetycznej",
+    "Infrastruktura: Tesla pokazuje cenę AI-first w fizycznym biznesie"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-23-0-google-laczy-wzrost-chmury-z-tanszym-gemini-0d6e37ea53",
+      "section": "AI",
+      "title": "Google łączy wzrost chmury z tańszym Gemini",
+      "standfirst": "Google pokazał mocne wyniki Q2 2026 i jednocześnie wypchnął na rynek tańsze, szybsze modele Flash/Cyber. To nie jest już tylko walka o benchmarki, ale o koszt, dystrybucję i codzienny workflow dewelopera.",
+      "whatHappened": "Google opublikował wyniki Q2 i nową rodzinę modeli Gemini Flash.",
+      "whyItMatters": "Pokazuje, że największe platformy sprzedają dziś AI jako kombinację efektywności kosztowej i kontroli powierzchni dostępu.",
+      "deeperAnalysis": [
+        "Google łączy wzrost z optymalizacją. W Q2 firma pokazała wzrost przychodów, bardzo mocny cloud i ogromny backlog, a jednocześnie komunikowała, że nowa generacja modeli ma być bardziej wydajna i tańsza w użyciu. To ważne, bo zmienia narrację z „większy model = lepszy produkt” na „lepszy model = lepsza ekonomia zadania”.",
+        "Najciekawsze jest to, jak szybko ta logika wychodzi poza blog Google. Gemini 3.6 Flash pojawia się już w GitHub Copilot, czyli w miejscu, gdzie deweloperzy codziennie podejmują decyzje o modelu, koszcie i latencji. To realny kanał dystrybucji, a nie tylko ogłoszenie marketingowe.",
+        "Drugi ważny element to Android 17. Google nie tylko wypuszcza nowe modele, ale też obniża tarcie w przejściu między ekosystemami. Przenoszenie haseł, Wi-Fi, eSIM i wiadomości z iPhone'a do Androida to klasyczna strategia platformowa: jeśli nie możesz wygrać wszystkich użytkowników modelami, wygraj ich doświadczeniem migracji i późniejszym przywiązaniem do usług."
+      ],
+      "contextPoints": [
+        "Co się stało: Google połączył Q2, nowe modele Flash/Cyber i migrację iPhone-Android w jeden spójny przekaz produktowy.",
+        "Dlaczego ważne: AI staje się kwestią ekonomii i dystrybucji, nie tylko capability.",
+        "Na co patrzeć dalej: czy Gemini 3.6 Flash stanie się domyślnym wyborem w Copilot i Gemini Enterprise oraz czy Google będzie dalej obniżał koszt odpowiedzi."
+      ],
+      "sources": [
+        {
+          "title": "Google Q2 2026 earnings call: Remarks from our CEO",
+          "url": "https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2026/"
+        },
+        {
+          "title": "Gemini 3.6 Flash, 3.5 Flash-Lite and 3.5 Flash Cyber",
+          "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
+        },
+        {
+          "title": "Gemini 3.6 Flash is now available in GitHub Copilot",
+          "url": "https://github.blog/changelog/2026-07-21-gemini-3-6-flash-is-now-available-in-github-copilot/"
+        },
+        {
+          "title": "Switch to Android easily - and bring your data with you",
+          "url": "https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-switch-from-iphone-to-android/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Gemini",
+        "Cloud",
+        "Copilot",
+        "Android",
+        "cost-efficiency"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-23-1-openai-wypycha-ai-do-poziomu-infrastruktury-energetycznej-0cc61f7ec1",
+      "section": "Infrastruktura",
+      "title": "OpenAI wypycha AI do poziomu infrastruktury energetycznej",
+      "standfirst": "Planowany spend OpenAI na cloud i data centers urósł do 750 mld USD do 2030 roku. Pierwszy duży projekt firmy, Project Camellia w Georgii, wygląda już jak program infrastrukturalny, a nie zwykły zakup mocy obliczeniowej.",
+      "whatHappened": "WSJ i TechCrunch opisały nową skalę wydatków OpenAI oraz projekt Camellia.",
+      "whyItMatters": "To przesuwa AI z warstwy produktu do warstwy energetyki, pozwoleń i finansowania.",
+      "deeperAnalysis": [
+        "Najważniejsza zmiana polega na skali. 750 mld USD nie brzmi jak produkt software'owy, tylko jak program budowlano-energetyczny z własną mapą ryzyk. W tym modelu OpenAI nie jest już tylko klientem chmury, ale firmą, która musi składać portfolio dostawców i lokalizacji wokół mocy, wody i terminu realizacji.",
+        "Project Camellia dobrze pokazuje, jak dalece ta logika już się materializuje. 1,400-acre campus, 3.2 GW mocy i wieloletni harmonogram dostaw energii oznaczają, że każdy kolejny frontier model ma własny fizyczny cień w postaci betonu, sieci i pozwolenia. To dokładnie ten sam problem, który wczoraj widzieliśmy w moratoriach i lokalnym oporze wobec data centers.",
+        "Warto też zauważyć napięcie między komunikacją a ekonomią. OpenAI nadal sprzedaje wizję szerokiego zastosowania AI w biznesie, ale jednocześnie sama firma musi wydać coraz więcej, żeby utrzymać tempo. To sprawia, że pytanie o marżę, cash flow i efektywność infrastruktury staje się centralne, a nie poboczne."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI podniosło planowany spend na cloud/data centers i wskazało konkretny gigantyczny kampus w Georgii.",
+        "Dlaczego ważne: AI staje się biznesem utility-scale, gdzie znaczenie mają energia, permitting i lokalna akceptacja.",
+        "Na co patrzeć dalej: pozwolenia w Georgii, reakcja społeczności, kolejne kontrakty energetyczne i czy plan będzie finansowo utrzymalny."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI planned cloud spending hits $750 billion as computing efforts ramp up",
+          "url": "https://www.wsj.com/tech/openais-planned-cloud-spending-hits-750-billion-as-computing-efforts-ramp-up-6ac3f58a"
+        },
+        {
+          "title": "OpenAI AI spending spree has ballooned to $750B",
+          "url": "https://techcrunch.com/2026/07/22/openais-ai-spending-spree-has-ballooned-to-750b/"
+        },
+        {
+          "title": "OpenAI data-center proposal shows how unpopular data centers are",
+          "url": "https://www.businessinsider.com/openai-effingham-georgia-data-center-project-camellia-water-use-tokens-2026-7"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "data centers",
+        "cloud",
+        "power",
+        "Project Camellia",
+        "capex"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-23-2-tesla-pokazuje-cene-ai-first-w-fizycznym-biznesie-52518f32e8",
+      "section": "Infrastruktura",
+      "title": "Tesla pokazuje cenę AI-first w fizycznym biznesie",
+      "standfirst": "Tesla pokazał wyraźnie wyższy capex, ujemny free cash flow i dalsze przesunięcie w stronę autonomy oraz robotyki. Firma wciąż sprzedaje przyszłość, ale coraz mocniej płaci za nią dzisiejszą gotówką.",
+      "whatHappened": "Tesla opublikował wyniki Q2 2026 i zaktualizował swoją ścieżkę inwestycji.",
+      "whyItMatters": "To jeden z najlepszych publicznych testów tego, ile realnie kosztuje przejście z automotive do AI/robotics.",
+      "deeperAnalysis": [
+        "Tesla nadal jest opowieścią o przyszłości, ale teraz ta przyszłość ma bardzo konkretny rachunek. Capex na poziomie 5.8 mld USD w kwartale, ujemny free cash flow i rosnące koszty operacyjne oznaczają, że AI-first w fizycznym biznesie wymaga ciężkiego kapitału, nie tylko narracji.",
+        "Jednocześnie firma nie stoi w miejscu produktowo. Cybercab ma już wejść do produkcji, Semi trzyma tegoroczną ścieżkę, a Robotaxi działa w kilku dużych rynkach. To ważne, bo pokazuje, że Tesla nie zamierza odpuszczać wątku autonomy, ale inwestorzy dostają w pakiecie dużo większe ryzyko wykonawcze niż w zwykłym software'owym rolloutcie.",
+        "Właśnie dlatego ten temat dobrze spina się z szerszą rozmową o AI infra. Google i OpenAI wydają miliardy na moc obliczeniową i kampusy, Tesla wydaje miliardy na fabryki, compute i robotykę. W każdym z tych przypadków obietnica AI jest podobna, ale ścieżka finansowania i ryzyka operacyjne są już zupełnie inne."
+      ],
+      "contextPoints": [
+        "Co się stało: Tesla pokazał wysokie nakłady, negatywny FCF i dalsze inwestycje w autonomy/robotics.",
+        "Dlaczego ważne: AI-first w hardware wymaga kapitału, regulacyjnej cierpliwości i długiej ścieżki do zwrotu.",
+        "Na co patrzeć dalej: tempo produkcji Cybercab/Semi, kolejne koszty capex i reakcja rynku na burn rate."
+      ],
+      "sources": [
+        {
+          "title": "Tesla Investor Relations",
+          "url": "https://ir.tesla.com/"
+        },
+        {
+          "title": "Tesla Investor Relations: SEC filings",
+          "url": "https://ir.tesla.com/sec-filings"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Tesla",
+        "robotaxi",
+        "Cybercab",
+        "Optimus",
+        "capex",
+        "autonomy"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-23-3-monday-com-robi-ai-first-restructuring-6de6782b36",
+      "section": "Produkty",
+      "title": "monday.com robi AI-first restructuring",
+      "standfirst": "monday.com złożył Form 6-K z planem redukcji około 20% zatrudnienia i przebudowy organizacji wokół AI Work Platform. To nie jest tylko cięcie kosztów, ale też sygnał, że duży SaaS zaczyna redefiniować się pod AI.",
+      "whatHappened": "Firma ogłosiła restrukturyzację z redukcją etatów i dalszym hiringiem w strategicznych obszarach.",
+      "whyItMatters": "Pokazuje, że AI zmienia nie tylko produkt, ale także strukturę organizacji i GTM w klasycznym software.",
+      "deeperAnalysis": [
+        "monday.com jest ciekawym case'em, bo nie jest startupem z jedną funkcją AI. To duży, dojrzały SaaS, który decyduje się otwarcie przeorganizować wokół AI Work Platform. W praktyce oznacza to, że firma chce budować prostsze, bardziej autonomiczne zespoły i mniej warstw pośrednich.",
+        "To ważne z dwóch powodów. Po pierwsze, dla rynku pracy: redukcja około 20% załogi w firmie tej skali jest czytelnym sygnałem, że AI nie jest tylko dodatkiem do produktów, ale narzędziem przeprojektowywania kosztów i roli ludzi. Po drugie, dla klientów: jeśli monday.com rzeczywiście dowiezie AI Work Platform jako nową kategorię, to konkurenci będą musieli odpowiedzieć nie tylko funkcjami, ale i narracją o efektywności.",
+        "W tym samym czasie polski BI pisze o końcu tokenmaxxingu, czyli o tym, że firmy zaczynają wreszcie mierzyć i ograniczać koszt użycia AI. monday.com idealnie pasuje do tego nowego języka: mniej ogólnych obietnic, więcej modelu operacyjnego, kosztów i realnej marży."
+      ],
+      "contextPoints": [
+        "Co się stało: monday.com ogłosił restrukturyzację i 20% redukcję zatrudnienia.",
+        "Dlaczego ważne: mainstreamowy SaaS zaczyna reagować na AI przez reorg, nie tylko przez features.",
+        "Na co patrzeć dalej: czy AI Work Platform podniesie ARPU, czy raczej stanie się narzędziem defensywnego cost cuttingu."
+      ],
+      "sources": [
+        {
+          "title": "monday.com Ltd. Form 6-K",
+          "url": "https://www.sec.gov/Archives/edgar/data/1845338/000117891326003553/zk2635715.htm"
+        },
+        {
+          "title": "Monday.com plans 20% layoffs citing AI-driven growth strategy",
+          "url": "https://www.businessinsider.com/monday-com-layoffs-ai-growth-strategy-2026-7"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "monday.com",
+        "SaaS",
+        "layoffs",
+        "AI Work Platform",
+        "enterprise software"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-23-4-moonshot-i-sankcje-w-sporze-o-chinskie-open-weights-4454d661a6",
+      "section": "Regulacje",
+      "title": "Moonshot i sankcje w sporze o chińskie open weights",
+      "standfirst": "White House official publicznie oskarżył Moonshot AI o covert distillation modelu Anthropic, a Treasury zasugerowało możliwość sankcji. To podnosi spór o chińskie open-weight z poziomu benchmarków do poziomu polityki państwowej.",
+      "whatHappened": "Administracja USA zaostrzyła retorykę wobec Moonshot i Kimi K3.",
+      "whyItMatters": "Open-weight AI staje się tematem IP, export controls i bezpieczeństwa narodowego, a nie tylko dystrybucji modeli.",
+      "deeperAnalysis": [
+        "To jest ważny moment, bo spór o chińskie open-weight przestaje być dyskusją o tym, kto ma lepszy benchmark. White House i Treasury używają już języka, który sugeruje możliwe działania regulacyjne lub sankcyjne, jeśli zarzuty o nieuprawnione distillation się potwierdzą. W praktyce otwiera to nowy front między konkurencją technologiczną a polityką bezpieczeństwa.",
+        "Anthropic od miesięcy buduje argument, że distillation skaluje capabilities poza kontrolą i może napędzać systemy używane w cyber i surveillance. Z drugiej strony Jensena Huanga i część startupów ostrzegają, że zbyt szerokie ograniczenia na chińskie open models mogą zdławić innowację i pogłębić przewagę zamkniętych dostawców z USA.",
+        "Najciekawsze w tym wątku jest to, że nie ma już jednej osi sporu. Jest techniczna: czy distillation jest legalną inżynierią czy kradzieżą IP. Jest ekonomiczna: czy tanie open weights są dźwignią dla startupów. Jest geopolityczna: czy USA powinny traktować modele jak strategiczny eksport. I jest produktowa: Kimi K3, czyli realny model z rynkowym momentum, staje się symbolem całego sporu."
+      ],
+      "contextPoints": [
+        "Co się stało: White House/Treasury podniosły temperaturę wokół Moonshot i Kimi K3.",
+        "Dlaczego ważne: open-weight staje się sprawą regulacyjną i geopolityczną, nie tylko techniczną.",
+        "Na co patrzeć dalej: czy pojawią się formalne sankcje, ograniczenia eksportowe lub szerzej zakrojona reakcja rynku startupów."
+      ],
+      "sources": [
+        {
+          "title": "White House official escalates the Moonshot Kimi K3 fight",
+          "url": "https://www.businessinsider.com/white-house-kimi-k3-moonshot-ai-distillation-2026-7"
+        },
+        {
+          "title": "Exclusive: Jensen Huang defends Chinese AI amid Kimi panic",
+          "url": "https://www.axios.com/2026/07/22/nvidia-jensen-huang-china-open-source-ai"
+        },
+        {
+          "title": "Detecting and preventing distillation attacks",
+          "url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks"
+        },
+        {
+          "title": "Startup founders urge Trump not to shut off Chinese open weight AI",
+          "url": "https://www.businessinsider.com/startup-founders-trump-chinese-open-weight-ai-2026-7"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Moonshot",
+        "Kimi K3",
+        "Anthropic",
+        "Treasury",
+        "sanctions",
+        "open-weight"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Google zamienia AI w produkt kosztowy i dystrybucyjny",
+      "rationale": "Wyniki chmury, tańsze modele Flash/Cyber, Copilot i migracja z iPhone'a do Androida pokazują, że konkurencja przenosi się z benchmarków do workflow i kosztów.",
+      "sourcesLabel": "Google Blog; GitHub Changelog"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI podnosi AI do poziomu infrastruktury energetycznej",
+      "rationale": "750 mld USD spendu i Project Camellia pokazują, że AI to już program budowlano-energetyczny, nie tylko modelowy sprint.",
+      "sourcesLabel": "WSJ; TechCrunch; Business Insider"
+    },
+    {
+      "priority": "High",
+      "title": "Tesla zamienia AI-first w twardy capex",
+      "rationale": "Robotaxi, Cybercab i Optimus wymagają realnych nakładów, a rynek widzi już ujemny free cash flow i rosnący capex.",
+      "sourcesLabel": "Tesla IR; MarketWatch; Business Insider"
+    },
+    {
+      "priority": "High",
+      "title": "Moonshot i sankcje w sporze o chińskie open weights",
+      "rationale": "Spór o distillation przechodzi z benchmarków do ryzyka IP, export controls i potencjalnych sankcji.",
+      "sourcesLabel": "Business Insider; Axios; Anthropic"
+    },
+    {
+      "priority": "Medium",
+      "title": "monday.com robi AI-first restructuring",
+      "rationale": "Duży SaaS tnie etaty i przebudowuje organizację wokół AI Work Platform, co może być wzorem albo ostrzeżeniem dla branży.",
+      "sourcesLabel": "SEC; Business Insider"
+    },
+    {
+      "priority": "Medium",
+      "title": "Przejście z iPhone'a na Androida staje się produktem",
+      "rationale": "Google zaczyna redukować tarcie migracyjne jako część walki o użytkownika i jego dane.",
+      "sourcesLabel": "Google Blog"
+    },
+    {
+      "priority": "Medium",
+      "title": "Substack, HN i PH normalizują provenance i kontrolę",
+      "rationale": "Detekcja AI, auth, identity i self-hosted VMs stają się osobną kategorią produktu, a nie dodatkiem.",
+      "sourcesLabel": "Substack Support; Hacker News; Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Google Blog: Q2 2026 earnings call: Remarks from our CEO",
+      "url": "https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2026/"
+    },
+    {
+      "title": "Google Blog: Gemini 3.6 Flash, 3.5 Flash-Lite and 3.5 Flash Cyber",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-6-flash-3-5-flash-lite-3-5-flash-cyber/"
+    },
+    {
+      "title": "Google Blog: Switch to Android easily - and bring your data with you",
+      "url": "https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-switch-from-iphone-to-android/"
+    },
+    {
+      "title": "GitHub Changelog: Gemini 3.6 Flash is now available in GitHub Copilot",
+      "url": "https://github.blog/changelog/2026-07-21-gemini-3-6-flash-is-now-available-in-github-copilot/"
+    },
+    {
+      "title": "WSJ: OpenAI planned cloud spending hits $750 billion as computing efforts ramp up",
+      "url": "https://www.wsj.com/tech/openais-planned-cloud-spending-hits-750-billion-as-computing-efforts-ramp-up-6ac3f58a"
+    },
+    {
+      "title": "TechCrunch: OpenAI AI spending spree has ballooned to $750B",
+      "url": "https://techcrunch.com/2026/07/22/openais-ai-spending-spree-has-ballooned-to-750b/"
+    },
+    {
+      "title": "Business Insider: OpenAI data-center proposal shows how unpopular data centers are",
+      "url": "https://www.businessinsider.com/openai-effingham-georgia-data-center-project-camellia-water-use-tokens-2026-7"
+    },
+    {
+      "title": "Tesla Investor Relations: Q2 2026 financial results and webcast",
+      "url": "https://ir.tesla.com/"
+    },
+    {
+      "title": "Tesla Investor Relations: SEC filings",
+      "url": "https://ir.tesla.com/sec-filings"
+    },
+    {
+      "title": "SEC: monday.com Ltd. Form 6-K",
+      "url": "https://www.sec.gov/Archives/edgar/data/1845338/000117891326003553/zk2635715.htm"
+    },
+    {
+      "title": "Business Insider: monday.com plans 20% layoffs citing an AI-driven growth strategy",
+      "url": "https://www.businessinsider.com/monday-com-layoffs-ai-growth-strategy-2026-7"
+    },
+    {
+      "title": "Business Insider Polska: Tokenmaxxing odbija się czkawką",
+      "url": "https://businessinsider.com.pl/technologie/nowe-technologie/era-rozrzutnosci-w-ai-dobiega-konca-nowa-strategia-oszczedzania-tokenow/0xp1tsd"
+    },
+    {
+      "title": "Business Insider: White House official escalates the Moonshot Kimi K3 fight",
+      "url": "https://www.businessinsider.com/white-house-kimi-k3-moonshot-ai-distillation-2026-7"
+    },
+    {
+      "title": "Axios: Exclusive: Jensen Huang defends Chinese AI amid Kimi panic",
+      "url": "https://www.axios.com/2026/07/22/nvidia-jensen-huang-china-open-source-ai"
+    },
+    {
+      "title": "Anthropic: Detecting and preventing distillation attacks",
+      "url": "https://www.anthropic.com/news/detecting-and-preventing-distillation-attacks"
+    },
+    {
+      "title": "Substack Support: How can I detect AI on Substack?",
+      "url": "https://support.substack.com/hc/en-us/articles/50891130623508-How-can-I-detect-AI-on-Substack"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "Product Hunt homepage",
+      "url": "https://www.producthunt.com/"
+    }
+  ]
+}

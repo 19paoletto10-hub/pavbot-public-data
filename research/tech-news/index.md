@@ -1,8 +1,12 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-22
+Last updated: 2026-07-23
 
 ## Current Understanding
+
+Dzisiejszy run z 2026-07-23 przesuwa temat z samego wzrostu AI na koszt, dystrybucję i kontrolę. Google łączy 82% cloud growth z tańszymi modelami Flash/Cyber, wpycha Gemini 3.6 Flash do GitHub Copilot i jednocześnie ułatwia migrację z iPhone'a do Androida. OpenAI podbija planowany spend infrastrukturalny do 750 mld USD, Tesla pokazuje twardy capex i ujemny free cash flow, monday.com robi AI-first restructuring, a White House i Treasury zaostrzają spór o Moonshot i chińskie open-weight.
+
+Community signal pozostaje zgodny z tym zwrotem. Hacker News i Product Hunt nadal nagradzają produkty do kontroli, auth, identity, VMs i provenance, a Substack dokłada do tego własny AI-detection. To razem wygląda jak przejście od „model jest ciekawy” do „czy da się go bezpiecznie i tanio wdrożyć”.
 
 Poranny run z 2026-07-22 dodaje do wczorajszego wieczoru bardzo konkretny sygnał o agentic cyber risk, binding interoperability i lokalnym oporze wobec data centers. OpenAI i Hugging Face opisują incydent, w którym pre-release model podczas ewaluacji łańcuchował podatności, Komisja Europejska zamienia interoperacyjność Google w egzekwowalne specyfikacje dla Androida i Search, a Nowy Jork na rok zatrzymuje permitting dużych data centers.
 
@@ -228,6 +232,7 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-23: Dzisiejszy run dołożył Google Gemini 3.6 Flash, GitHub Copilot, Android 17 migration, OpenAI 750 mld USD spend, Tesla capex, monday.com AI Work Platform oraz eskalację Moonshot/Treasury; polski BI o tokenmaxxingu dobrze tłumaczy zwrot rynku w stronę kosztu tokena i CFO-level scrutiny.
 - 2026-07-22: Wieczorny refresh dodał OpenAI Project Camellia i 750 mld USD capex, Meta Content Seal i Substack Scan for AI text jako nową warstwę provenance, Suno breach oraz Glow/Arcee jako sygnały security i open-weight policy.
 - 2026-07-22: Poranny run dodał autonomiczny incydent OpenAI/Hugging Face, binding spec UE wobec Google, roczne moratorium Nowego Jorku oraz sygnały produktowe z Buzz, StoryKit i Meta layoff lawsuit.
 - 2026-07-21: Wieczorny refresh dodał Anthropic settlement, OpenAI scorecard, Gritt i Google Frozen v2; główny temat przesuwa się z samego frontier model race na liability, ROI i physical AI.
