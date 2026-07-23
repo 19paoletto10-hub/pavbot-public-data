@@ -2,6 +2,13 @@
 
 ## Open
 
+- Watch whether Google answers the 890 million euro DMA fine with an appeal or a compliance note.
+- Watch whether OpenAI and Hugging Face publish fuller findings after the model-evaluation incident.
+- Watch whether Rubio-Lavrov produces a more explicit Ukraine readout or another diplomatic step.
+- Watch whether Huti attacks trigger a maritime advisory, casualty update or insurance response.
+- Watch whether the Saudi nuclear deal gets a formal Saudi, Israeli or Congressional reaction.
+- Watch whether Berlin's AfD lead turns into a sharper coalition or polling shift.
+
 - Watch whether Tramwaje Warszawskie publishes a firm reopening date for Aleje Jerozolimskie and the Most Poniatowskiego viaduct.
 - Watch whether the A1 road-rage case gets a detention ruling or a prosecutor comment.
 - Watch whether the Woś compulsion request gets a Sejm timetable or response.

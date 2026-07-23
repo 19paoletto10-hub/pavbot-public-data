@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-23T17:48:46.498745+00:00",
+  "generatedAt": "2026-07-23T19:24:16.910587+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -306,6 +306,17 @@
       "time": "06:08"
     },
     {
+      "id": "research/puls-dnia-news/runs/2026-07-23-2114.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-07-23-2114.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-23-2114.md",
+      "sizeBytes": 6150,
+      "date": "2026-07-23",
+      "time": "21:14"
+    },
+    {
       "id": "research/puls-dnia-news/runs/2026-07-23-1801.md",
       "type": "run",
       "topic": "puls-dnia-news",
@@ -359,6 +370,18 @@
       "sizeBytes": 4506,
       "date": "2026-07-23",
       "time": "06:01"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-23-2114-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-23-2114-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-23-2114-pulse-news.json",
+      "sizeBytes": 20752,
+      "date": "2026-07-23",
+      "time": "21:14",
+      "itemCount": 12
     },
     {
       "id": "research/puls-dnia-news/data/2026-07-23-1801-pulse-news.json",
@@ -16339,7 +16362,7 @@
       "title": "The 2026-07-23 12:01 slot przesuwa feed w stronę aktu oskarżenia wobec Macierewicza, nowego spięcia w PiS, spadku czerwcowego bezrobocia, lotniczego incydentu LOT i aktywnego bloku burzowego nad Polską. Za granicą lead tworzą pożary we Francji, indyjski protest głodowy, presja taryfowa na Kanadę, koszty AI u Google, follow-up wokół Wildberries i brytyjska debata podatkowa wokół Andy'ego Burnhama.",
       "path": "research/puls-dnia-news/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/index.md",
-      "sizeBytes": 6131
+      "sizeBytes": 6465
     },
     {
       "id": "research/puls-dnia-news/backlog.md",
@@ -16348,7 +16371,7 @@
       "title": "Puls Dnia News Backlog",
       "path": "research/puls-dnia-news/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/backlog.md",
-      "sizeBytes": 24303
+      "sizeBytes": 24876
     },
     {
       "id": "research/polska-swiat/topic.md",
