@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-23-0608",
+  "status": "material_update",
+  "generatedAt": "2026-07-23T04:08:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-23T06:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Live 06:08 review completed through the logged-in local Safari session on old.reddit.com with Apple Events and DOM extraction, not by direct HTTP scraping.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-22-2208 and 2026-07-22-1808, so those finalists and listing survivors could not roll forward into this slot.",
+      "Before selecting replacements, the run verified that origin/main still serves 2026-07-21-2210 for reddit-radar, so the remote topic was current and this slot was a normal rotation rather than a recovery publish.",
+      "Fresh read-only Safari listings yielded enough new meme, dev, and mildlyinfuriating candidates to reach the contract threshold even without help from facepalm or AskReddit.",
+      "Read-only finalist review stayed on exact old.reddit post pages for Here we go, The pins and prickles will follow, Looking at you, Antimalware Service Executable, Such a terrible feeling, justAskItAndItGetsSoMuchFun, corporateCharacterDevelopment, readingChangelogs, dog-groomer chaos, plastic-film containers, and the QR-code driving post.",
+      "r/facepalm and most of r/AskReddit were discarded early because the visible cluster leaned political, legal, medical, tragic, or too discussion-heavy instead of compact public-safe humor.",
+      "At least five safe fresh cards survived the live review, so the reddit-radar contract prefers a new public bundle over keeping the visible 2026-07-21-2210 bundle unchanged.",
+      "No Reddit social actions were performed.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-21-2210",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-23-0608-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-23-0608-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-23-0608-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1v375f6/the_letter_r_has_4_strawberries/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v340hf/thelifeandtimesofthejvm/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v3fbpb/im_stuck_in_an_elevator_before_a_job_interview/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v36j92/hippity_hoppity/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v3hesq/debuggingforprofessionals/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v3blya/made_hundreds_of_wristbands_for_a_conference_that/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v39jbw/an_apple_a_day_keeps_the_bank_account_away/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v3sqnf/developersoneceozero/",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v3kani/gityeet/"
+  ],
+  "newCandidates": [
+    {
+      "title": "Here we go",
+      "url": "https://old.reddit.com/r/memes/comments/1v3i52r/here_we_go/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "12.6k hot"
+    },
+    {
+      "title": "Looking at you, Antimalware Service Executable",
+      "url": "https://old.reddit.com/r/memes/comments/1v3mkv5/looking_at_you_antimalware_service_executable/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "3.1k hot"
+    },
+    {
+      "title": "readingChangelogs",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v3m2rk/readingchangelogs/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "499 hot"
+    },
+    {
+      "title": "My mom forgot to tell me the dog groomer was coming 2 days after I started prepping the bathroom walls to be repainted..",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v3qffq/my_mom_forgot_to_tell_me_the_dog_groomer_was/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "scoreLabel": "5.1k hot"
+    },
+    {
+      "title": "Don’t be on your phone while you drive, but scan our QR code! [OC]",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v3wbeb/dont_be_on_your_phone_while_you_drive_but_scan/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "scoreLabel": "998 hot"
+    },
+    {
+      "title": "The pins and prickles will follow",
+      "url": "https://old.reddit.com/r/memes/comments/1v3qpna/the_pins_and_prickles_will_follow/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "2.9k hot"
+    },
+    {
+      "title": "Such a terrible feeling 🫠",
+      "url": "https://old.reddit.com/r/memes/comments/1v3vajq/such_a_terrible_feeling/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "1.2k hot"
+    },
+    {
+      "title": "justAskItAndItGetsSoMuchFun",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v3zcrx/justaskitanditgetssomuchfun/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "508 hot"
+    },
+    {
+      "title": "corporateCharacterDevelopment",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v3ouxn/corporatecharacterdevelopment/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "901 hot"
+    },
+    {
+      "title": "When people don't remove the plastic film from containers with lids",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v3v4qe/when_people_dont_remove_the_plastic_film_from/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "2.4k hot"
+    }
+  ]
+}
