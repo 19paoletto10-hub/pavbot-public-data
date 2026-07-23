@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-23T22:15:36.532406+00:00",
+  "generatedAt": "2026-07-23T22:33:01.590368+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -466,6 +466,16 @@
       "itemCount": 12
     },
     {
+      "id": "research/polska-swiat/runs/2026-07-23.md",
+      "type": "run",
+      "topic": "polska-swiat",
+      "title": "Daily Research Report: polska-swiat",
+      "path": "research/polska-swiat/runs/2026-07-23.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-07-23.md",
+      "sizeBytes": 19939,
+      "date": "2026-07-23"
+    },
+    {
       "id": "research/polska-swiat/runs/2026-07-23-1933.md",
       "type": "run",
       "topic": "polska-swiat",
@@ -475,6 +485,16 @@
       "sizeBytes": 18638,
       "date": "2026-07-23",
       "time": "19:33"
+    },
+    {
+      "id": "research/polska-swiat/data/2026-07-23-research.json",
+      "type": "researchData",
+      "topic": "polska-swiat",
+      "title": "Research data",
+      "path": "research/polska-swiat/data/2026-07-23-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-07-23-research.json",
+      "sizeBytes": 15405,
+      "date": "2026-07-23"
     },
     {
       "id": "research/polska-swiat/data/2026-07-23-1933-research.json",
@@ -545,6 +565,16 @@
       "path": "research/polska-swiat/podcasts/2026-07-23/podcast.mp3",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-23/podcast.mp3",
       "sizeBytes": 2973528,
+      "date": "2026-07-23"
+    },
+    {
+      "id": "research/polska-swiat/pdfs/2026-07-23-polska-swiat.pdf",
+      "type": "pdf",
+      "topic": "polska-swiat",
+      "title": "2026-07-23-polska-swiat.pdf",
+      "path": "research/polska-swiat/pdfs/2026-07-23-polska-swiat.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-07-23-polska-swiat.pdf",
+      "sizeBytes": 95176,
       "date": "2026-07-23"
     },
     {
