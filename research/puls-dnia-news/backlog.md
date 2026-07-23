@@ -2,6 +2,10 @@
 
 ## Open
 
+- Watch whether the Macierewicz indictment gets a formal SKW, defense or court follow-up.
+- Watch whether PiS responds to Piotr Mueller's public naming of Kurski, Sasin and Jaki.
+- Watch whether the LOT diversion from Mallorca to Warsaw gets an airline or airport update.
+- Watch whether the IMGW storm band turns into outages, hail, flooding or transport blocks.
 - Watch whether the Targówek fire gets a PSP cause note, casualty update or traffic impact.
 - Watch whether the burze band turns into flooding, hail or outage reports after the next hours.
 - Watch whether the Saudi nuclear deal gets a formal U.S., Saudi or Israeli clarification.

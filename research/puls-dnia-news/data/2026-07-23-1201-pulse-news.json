@@ -1,0 +1,433 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-23",
+  "runTime": "12:01",
+  "status": "Material update",
+  "headline": "Macierewicz, PiS i burze prowadzą południowy Puls Dnia",
+  "summary": "Południowy slot przesuwa feed w stronę aktu oskarżenia wobec Macierewicza, nowego spięcia w PiS, czerwcowego spadku bezrobocia i aktywnego bloku burzowego nad Polską. Za granicą lead tworzą pożary we Francji, indyjski protest głodowy, presja taryfowa na Kanadę, koszty AI u Google, follow-up wokół Wildberries i brytyjska debata podatkowa.",
+  "items": [
+    {
+      "id": "macierewicz-indictment-1201",
+      "section": "Polityka",
+      "title": "Akt oskarżenia wobec Antoniego Macierewicza",
+      "lead": "Prokuratura kieruje sprawę do sądu.",
+      "whatHappened": "Prokuratura Regionalna w Warszawie skierowała akt oskarżenia wobec Antoniego Macierewicza za znieważenie kierownictwa Służb Kontrwywiadu Wojskowego.",
+      "keyFacts": [
+        "Sprawa dotyczy znieważenia kierownictwa SKW.",
+        "Akt oskarżenia trafił do sądu.",
+        "To nowy etap sporu prawno-politycznego."
+      ],
+      "reactions": [
+        "Sprawa może wywołać kolejne komentarze w PiS i wokół obrony.",
+        "Możliwa jest odpowiedź oskarżonego lub jego prawników."
+      ],
+      "whyItMatters": "To jedno z najmocniejszych krajowych zdarzeń polityczno-prawnych dnia.",
+      "context": "To świeży materiał z porannego feedu TVN24 i wyraźny sygnał dla bloku politycznego.",
+      "watchNext": [
+        "Śledzić, czy pojawi się stanowisko SKW, obrony lub samego Macierewicza."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Jest akt oskarżenia wobec Antoniego Macierewicza. Chodzi o znieważenie",
+          "url": "https://tvn24.pl/polska/jest-akt-oskarzenia-wobec-antoniego-macierewicza-chodzi-o-zniewazenie-st9155330?source=rss"
+        }
+      ],
+      "tags": [
+        "Macierewicz",
+        "SKW",
+        "prokuratura"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pis-intrygants-1201",
+      "section": "Polityka",
+      "title": "Nowe spięcie w PiS po stronie Morawieckiego",
+      "lead": "Piotr Mueller wskazuje nazwiska intrygantów.",
+      "whatHappened": "TVN24 cytuje europosła PiS i członka stowarzyszenia Rozwój Plus Piotra Muellera, który wymienił Jacka Kurskiego, Jacka Sasina i Patryka Jakiego jako grupę najważniejszych \"intrygantów\" w partii.",
+      "keyFacts": [
+        "Spór dotyczy wewnętrznego układu sił w PiS.",
+        "Wypowiedź Muellera pojawia się w otwartym konflikcie o Rozwój Plus.",
+        "Nazwiska padają publicznie, więc spór może się jeszcze zaostrzyć."
+      ],
+      "reactions": [
+        "To może wymusić odpowiedź kierownictwa lub wskazanych polityków.",
+        "Wątek ma potencjał na kolejną rundę medialną jeszcze dziś."
+      ],
+      "whyItMatters": "PiS nadal generuje jeden z głównych krajowych strumieni politycznego szumu.",
+      "context": "To świeży follow-up do porannego konfliktu, ale z nowymi nazwiskami i ostrzejszym językiem.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się formalna odpowiedź klubu lub władz partii."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Człowiek Mateusza Morawieckiego o \"intrygantach\" w PiS. Podał nazwiska",
+          "url": "https://tvn24.pl/polska/konflikt-w-pis-czlowiek-mateusza-morawieckiego-i-czlonek-stowarzyszenia-rozwoj-plus-podal-nazwiska-intrygantow-st9155160?source=rss"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Morawiecki",
+        "konflikt"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gus-unemployment-1201",
+      "section": "Gospodarka",
+      "title": "GUS obniżył czerwcowe bezrobocie",
+      "lead": "Stopa bezrobocia spadła do 5,8 procent.",
+      "whatHappened": "GUS podał, że stopa bezrobocia w Polsce spadła w czerwcu do 5,8 procent z 5,9 procent miesiąc wcześniej. Dane są zgodne z wcześniejszym szacunkiem resortu rodziny, pracy i polityki społecznej.",
+      "keyFacts": [
+        "Czerwcowy odczyt to 5,8 procent.",
+        "Majowy odczyt wynosił 5,9 procent.",
+        "Dane zgadzają się z wcześniejszym szacunkiem ministerstwa."
+      ],
+      "reactions": [
+        "Rynek pracy pozostaje stabilny, bez gwałtownego odchylenia.",
+        "Temat może wrócić przy kolejnych danych o zatrudnieniu i płacach."
+      ],
+      "whyItMatters": "To jeden z najświeższych krajowych odczytów makro na dziś.",
+      "context": "To twarda liczba, która porządkuje poranny blok gospodarczy.",
+      "watchNext": [
+        "Śledzić, czy resort pracy poda szerszy komentarz lub regionalny rozkład."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: GUS podał stopę bezrobocia. Tyle wyniosła w czerwcu",
+          "url": "https://tvn24.pl/biznes/z-kraju/bezrobocie-w-polsce-gus-podal-najnowsze-dane-st9155166?source=rss"
+        }
+      ],
+      "tags": [
+        "GUS",
+        "bezrobocie",
+        "rynek-pracy"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "lot-mallorca-diversion-1201",
+      "section": "Bezpieczeństwo",
+      "title": "LOT przerwał lot z Majorki",
+      "lead": "Załoga poprosiła o asystę medyczną w Mediolanie.",
+      "whatHappened": "Samolot PLL LOT lecący z Majorki do Warszawy wylądował w nocy w Mediolanie, ponieważ zasłabł jeden z członków załogi. Kapitan poprosił służby lotniska o pomoc medyczną.",
+      "keyFacts": [
+        "Lot został przerwany i przekierowany do Mediolanu.",
+        "Problem dotyczył stanu zdrowia członka załogi.",
+        "Nie chodzi o incydent techniczny, tylko medyczny."
+      ],
+      "reactions": [
+        "Możliwy jest późniejszy komunikat LOT o dalszym przebiegu lotu.",
+        "Pasażerowie mogą dostać organizacyjne informacje o kontynuacji podróży."
+      ],
+      "whyItMatters": "To realny incydent transportowy z potencjalnym wpływem na pasażerów i siatkę lotów.",
+      "context": "To nowy poranny sygnał z segmentu transportowego, inny niż wczorajsze pożary i burze.",
+      "watchNext": [
+        "Śledzić, czy LOT lub lotnisko podadzą oficjalny follow-up."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Przerwany lot z Majorki do Warszawy. Zasłabł członek załogi",
+          "url": "https://tvn24.pl/tvnwarszawa/wlochy/warszawa-przerwany-lot-z-majorki-do-warszawy-zaslabl-czlonek-zalogi-st9155211?source=rss"
+        }
+      ],
+      "tags": [
+        "LOT",
+        "lotnictwo",
+        "Mediolan"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "germany-border-east-shield-1201",
+      "section": "Bezpieczeństwo",
+      "title": "Bundeswehra pomaga przy Tarczy Wschód",
+      "lead": "Niemieccy żołnierze wzmacniają granicę z Rosją.",
+      "whatHappened": "Kilkudziesięciu żołnierzy Bundeswehry pomaga przy tworzeniu Tarczy Wschód na granicy z Obwodem Królewieckim. Premier publicznie skomentował współpracę.",
+      "keyFacts": [
+        "Współpraca dotyczy granicy z Obwodem Królewieckim.",
+        "W działaniach uczestniczą niemieccy żołnierze.",
+        "Premier publicznie skomentował sprawę."
+      ],
+      "reactions": [
+        "Temat może wywołać reakcję po prawej stronie sceny politycznej.",
+        "Możliwe są kolejne komentarze MON lub premiera."
+      ],
+      "whyItMatters": "To ważny sygnał o praktycznej współpracy obronnej przy wschodniej granicy.",
+      "context": "To jeden z ciekawszych tematów bezpieczeństwa w krajowym feedzie tej godziny.",
+      "watchNext": [
+        "Śledzić, czy MON poda więcej szczegółów o skali i zadaniach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Niemieccy żołnierze pomagają wzmacniać granicę z Rosją. \"Takie rzeczy możliwe tylko za Tuska\"",
+          "url": "https://tvn24.pl/olsztyn/bemowo-pieski-niemieccy-zolnierza-pomagaja-wzmacniac-granice-z-rosja-st9155105?source=rss"
+        }
+      ],
+      "tags": [
+        "Bundeswehra",
+        "Tarcza-Wschód",
+        "granica"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "imgw-burze-1201",
+      "section": "Alerty",
+      "title": "IMGW ostrzega przed burzami i ulewami",
+      "lead": "Duża część kraju jest w żółtym ostrzeżeniu.",
+      "whatHappened": "IMGW ostrzega przed burzami oraz ulewami, a TVN24 Meteo pokazuje pierwsze wyładowania i aktywną strefę opadów. Na mapie Polski znaczna część kraju została zaznaczona na żółto.",
+      "keyFacts": [
+        "Ostrzeżenie obejmuje znaczną część kraju.",
+        "TVN24 Meteo pokazuje pierwsze wyładowania.",
+        "Ryzyko dotyczy deszczu, burz i lokalnych utrudnień."
+      ],
+      "reactions": [
+        "Możliwe są podtopienia, grad i opóźnienia w ruchu.",
+        "Warto śledzić lokalne komunikaty IMGW i RCB."
+      ],
+      "whyItMatters": "To jedyny krajowy alert z potencjałem na szybkie skutki operacyjne w wielu regionach.",
+      "context": "To kontynuacja burzowego wątku, ale już z widocznymi wyładowaniami i aktywną strefą opadów.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się podtopienia, grad albo blokady ruchu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: IMGW ostrzega przed burzami i ulewami",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/ostrzezenia-imgw-przed-silnymi-burzami-i-deszczem-st9151267?source=rss"
+        },
+        {
+          "title": "IMGW: Prognoza pogody na tydzień 17–23.07.2026",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-17-23-07-2026/"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "burze",
+        "ulewy"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "france-fires-1201",
+      "section": "Świat",
+      "title": "Pożary we Francji ewakuują tysiące",
+      "lead": "BBC podaje około 12 tysięcy ewakuowanych.",
+      "whatHappened": "BBC informuje, że około 12 tysięcy osób ewakuowano z powodu pożarów we Francji, a w Europie zginął trzeci strażak walczący z pożarami.",
+      "keyFacts": [
+        "Ewakuacje sięgają około 12 tysięcy osób.",
+        "BBC wskazuje na kolejną ofiarę śmiertelną wśród strażaków.",
+        "To część szerszej fali pożarów w Europie."
+      ],
+      "reactions": [
+        "Temat może uruchomić kolejne komunikaty władz lokalnych i służb.",
+        "Możliwe są dalsze zamknięcia dróg lub ewakuacje."
+      ],
+      "whyItMatters": "To poważny europejski kryzys pogodowo-pożarowy z bezpośrednim skutkiem dla ludności.",
+      "context": "To świeży światowy lead, który wszedł do feedu po nocnym cyklu.",
+      "watchNext": [
+        "Śledzić, czy ewakuacje obejmą kolejne miejscowości lub regiony."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Around 12,000 people evacuated in France fires",
+          "url": "https://www.bbc.co.uk/news/articles/cy4kmr82n44o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "pożary",
+        "ewakuacje"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "india-hunger-strike-1201",
+      "section": "Świat",
+      "title": "Indyjski aktywista nadal na głodówce",
+      "lead": "Sonam Wangchuk schudł 11 kilogramów.",
+      "whatHappened": "BBC opisuje, że Sonam Wangchuk pozostaje centralną postacią protestu w Delhi po 26 dniach strajku i utracie 11 kilogramów.",
+      "keyFacts": [
+        "Protest trwa od 26 dni.",
+        "Wangchuk schudł 11 kilogramów.",
+        "Sprawa łączy protest społeczny i presję polityczną."
+      ],
+      "reactions": [
+        "Temat może pociągnąć za sobą reakcję rządu Indii lub policji.",
+        "Możliwa jest eskalacja protestu lub głos opozycji."
+      ],
+      "whyItMatters": "To mocny sygnał napięcia społecznego w Indiach, z potencjałem na szerszą reakcję polityczną.",
+      "context": "To nowy BBC world lead, który nadaje południowemu slotowi bardziej polityczny ton.",
+      "watchNext": [
+        "Śledzić, czy pojawi się formalna reakcja władz lub nowych uczestników protestu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: 'I am still alive': Indian activist on hunger strike for 26 days loses 11kg",
+          "url": "https://www.bbc.co.uk/news/articles/ce34n7kqr5ko?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Indie",
+        "protest",
+        "głodówka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "wildberries-strain-1201",
+      "section": "Świat",
+      "title": "Wildberries znów pod presją",
+      "lead": "Ukraińskie ataki uderzają w rosyjską logistykę.",
+      "whatHappened": "BBC podaje, że rosyjskie biznesy odczuwają presję po ukraińskich atakach na magazyny Wildberries, największego rosyjskiego sprzedawcę internetowego.",
+      "keyFacts": [
+        "Ataki trafiły w kilka magazynów w krótkim czasie.",
+        "Wildberries to największy rosyjski retailer online.",
+        "Skutki wykraczają poza sam pożar, bo wpływają na logistykę."
+      ],
+      "reactions": [
+        "Możliwa jest reakcja firmy lub rosyjskich władz.",
+        "Wątek może wrócić jako kolejny koszt wojny dla zaplecza gospodarczego."
+      ],
+      "whyItMatters": "To świeży follow-up do wątku, który już wcześniej przesuwał region bezpieczeństwa i biznesu.",
+      "context": "To nie jest nowy temat z niczego, tylko mocniejsza, bardziej biznesowa odsłona już znanego konfliktu.",
+      "watchNext": [
+        "Śledzić, czy pojawi się oficjalny bilans strat lub odpowiedź firmy."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Russia's businesses under strain from Ukraine's attacks on Wildberries",
+          "url": "https://www.bbc.co.uk/news/articles/cvg9n2y61w6o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Wildberries",
+        "Rosja",
+        "Ukraina"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "canada-dairy-crosshairs-1201",
+      "section": "Gospodarka",
+      "title": "Kanadyjski sektor mleczarski pod presją Trumpa",
+      "lead": "Dairy trafia do sporu handlowego.",
+      "whatHappened": "BBC pisze, że kanadyjski sektor mleczarski znalazł się w centrum taryfowej presji Donalda Trumpa, który wskazał go jako jeden z głównych sporów handlowych.",
+      "keyFacts": [
+        "Temat dotyczy taryf i handlu między USA a Kanadą.",
+        "BBC wskazuje sektor mleczarski jako ważny punkt sporu.",
+        "To część szerszej presji celnej ze strony Trumpa."
+      ],
+      "reactions": [
+        "Ottawa i branża mogą szybko odpowiedzieć.",
+        "Temat może przejść w szerszą debatę o handlu transgranicznym."
+      ],
+      "whyItMatters": "To kolejny sygnał, że handlowy front USA-Kanada pozostaje aktywny.",
+      "context": "To świeży ekonomiczny world item, który dobrze równoważy blok bezpieczeństwa i pożarów.",
+      "watchNext": [
+        "Śledzić, czy Ottawa lub branża mleczarska wydadzą formalny komentarz."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Canada's 'powerful' dairy sector is in Trump's trade crosshairs",
+          "url": "https://www.bbc.co.uk/news/articles/ce8kvm84lxmo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Kanada",
+        "cła",
+        "mleczarstwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "google-ai-costs-1201",
+      "section": "Technologia",
+      "title": "Google spala gotówkę na AI",
+      "lead": "Koszty sztucznej inteligencji rosną gwałtownie.",
+      "whatHappened": "BBC opisuje, że Google spala gotówkę na rosnących kosztach AI, a wcześniej sygnalizowało wydatki sięgające 190 miliardów dolarów.",
+      "keyFacts": [
+        "BBC pokazuje presję kosztową wokół AI w Google.",
+        "Wcześniejsze sygnały mówiły o wydatkach do 190 mld dolarów.",
+        "Temat łączy technologię, inwestycje i marże."
+      ],
+      "reactions": [
+        "Rynek może zareagować na presję kosztową big techu.",
+        "To może wrócić w debacie o zwrocie z inwestycji AI."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych tech/economy sygnałów dnia i dobry kontrapunkt dla OpenAI z poprzedniego slotu.",
+      "context": "To nowy BBC tech lead, ważny dla rynku i szerokiej debaty o kosztach AI.",
+      "watchNext": [
+        "Śledzić, czy Google poda dodatkowy komentarz lub rynek zareaguje."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Google burning through cash with spiralling AI costs",
+          "url": "https://www.bbc.co.uk/news/articles/c235n47g8g8o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Google",
+        "AI",
+        "koszty"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "burnham-millionaires-tax-1201",
+      "section": "Świat",
+      "title": "Brytyjscy milionerzy proszą Burnhama o wyższe podatki",
+      "lead": "Nowy premier dostaje fiskalny sygnał od bogatych.",
+      "whatHappened": "BBC podaje, że Gary Lineker i Brian Eno podpisali list do Andy'ego Burnhama, w którym piszą, że mogą pozwolić sobie na wyższe podatki.",
+      "keyFacts": [
+        "List dotyczy propozycji wyższych podatków dla najbogatszych.",
+        "Sygnatariuszami są znane publicznie postacie.",
+        "To element nowej debaty fiskalnej w UK."
+      ],
+      "reactions": [
+        "Wątek może wejść do szerszej rozmowy o podatkach i wydatkach publicznych.",
+        "Możliwa jest reakcja rządu lub przeciwników wyższych danin."
+      ],
+      "whyItMatters": "To polityczny sygnał z UK, który może podpalić debatę o redystrybucji i budżecie.",
+      "context": "To świeży BBC world item, który domyka europejsko-ekonomiczny blok politycznym akcentem.",
+      "watchNext": [
+        "Śledzić, czy Burnham odniesie się do listu lub czy pojawi się kolejny komentarz publiczny."
+      ],
+      "sources": [
+        {
+          "title": "BBC: UK millionaires ask Andy Burnham to tax them more",
+          "url": "https://www.bbc.co.uk/news/articles/cvgjp79m42go?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "UK",
+        "podatki",
+        "Burnham"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 latest RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "IMGW weekly forecast",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-17-23-07-2026/"
+    }
+  ]
+}

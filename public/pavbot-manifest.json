@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-23T09:08:47.923029+00:00",
+  "generatedAt": "2026-07-23T10:11:27.611582+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -262,6 +262,17 @@
       "time": "06:08"
     },
     {
+      "id": "research/puls-dnia-news/runs/2026-07-23-1201.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-07-23-1201.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-07-23-1201.md",
+      "sizeBytes": 5528,
+      "date": "2026-07-23",
+      "time": "12:01"
+    },
+    {
       "id": "research/puls-dnia-news/runs/2026-07-23-0902.md",
       "type": "run",
       "topic": "puls-dnia-news",
@@ -282,6 +293,18 @@
       "sizeBytes": 4506,
       "date": "2026-07-23",
       "time": "06:01"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-07-23-1201-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-07-23-1201-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-07-23-1201-pulse-news.json",
+      "sizeBytes": 18972,
+      "date": "2026-07-23",
+      "time": "12:01",
+      "itemCount": 12
     },
     {
       "id": "research/puls-dnia-news/data/2026-07-23-0902-pulse-news.json",
@@ -16190,10 +16213,10 @@
       "id": "research/puls-dnia-news/index.md",
       "type": "index",
       "topic": "puls-dnia-news",
-      "title": "Puls Dnia News Index",
+      "title": "The 2026-07-23 12:01 slot przesuwa feed w stronę aktu oskarżenia wobec Macierewicza, nowego spięcia w PiS, spadku czerwcowego bezrobocia, lotniczego incydentu LOT i aktywnego bloku burzowego nad Polską. Za granicą lead tworzą pożary we Francji, indyjski protest głodowy, presja taryfowa na Kanadę, koszty AI u Google, follow-up wokół Wildberries i brytyjska debata podatkowa wokół Andy'ego Burnhama.",
       "path": "research/puls-dnia-news/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/index.md",
-      "sizeBytes": 4945
+      "sizeBytes": 5361
     },
     {
       "id": "research/puls-dnia-news/backlog.md",
@@ -16202,7 +16225,7 @@
       "title": "Puls Dnia News Backlog",
       "path": "research/puls-dnia-news/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/backlog.md",
-      "sizeBytes": 23100
+      "sizeBytes": 23464
     },
     {
       "id": "research/polska-swiat/topic.md",
