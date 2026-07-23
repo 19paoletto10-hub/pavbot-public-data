@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-23",
+  "runTime": "18:01",
+  "status": "Material update",
+  "headline": "Transport, burze i ropa powyżej 100 dolarów",
+  "summary": "Slot 18:01 przesuwa Puls Dnia z wątku Google/Powiśla/Mejzy/Targówka na transport, ruch drogowy i burze w Polsce, a za granicą wzmacnia blok ropowy i bezpieczeństwa wokół Iranu, Red Sea i saudyjskiego programu nuklearnego.",
+  "items": [
+    {
+      "id": "tramwaje-aleje-1801",
+      "section": "Polska",
+      "title": "Tramwaje wrócą na Aleje Jerozolimskie",
+      "lead": "Powrót będzie tylko częściowy.",
+      "whatHappened": "Na początku sierpnia tramwaje wrócą na Aleje Jerozolimskie od strony Ochoty do centrum, ale dłużej potrwają prace na wiadukcie Mostu Poniatowskiego.",
+      "keyFacts": [
+        "Powrót ruchu tramwajowego zacznie się na początku sierpnia.",
+        "Trasa wróci tylko częściowo.",
+        "Most Poniatowskiego pozostaje dłużej w remoncie."
+      ],
+      "reactions": [
+        "Pasażerowie i kierowcy muszą liczyć się z etapowym przywracaniem ruchu.",
+        "Temat może przynieść kolejne komunikaty organizacyjne od Tramwajów Warszawskich."
+      ],
+      "whyItMatters": "To ważny komunikat operacyjny dla Warszawy i kluczowego korytarza tramwajowego.",
+      "context": "To nowy lokalny lead z realnym wpływem na dojazdy i organizację ruchu.",
+      "watchNext": [
+        "Śledzić, czy Tramwaje Warszawskie poda pełny harmonogram otwarcia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Tramwaje wrócą na Aleje Jerozolimskie. Na razie tylko częściowo",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-na-poczatku-sierpnia-tramwaje-wroca-na-aleje-jerozolimskie-st9156247?source=rss"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "tramwaje",
+        "transport"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "oil-100-1801",
+      "section": "Gospodarka",
+      "title": "Ropa Brent przebiła 100 dolarów",
+      "lead": "Rynek reaguje na eskalację na Bliskim Wschodzie.",
+      "whatHappened": "BBC podaje, że cena Brent wzrosła o ponad 6 procent i przekroczyła 100 dolarów za baryłkę po kolejnym zaostrzeniu wojny na Bliskim Wschodzie.",
+      "keyFacts": [
+        "Brent wzrósł o ponad 6 procent.",
+        "To pierwszy poziom powyżej 100 dolarów od maja.",
+        "BBC łączy ruch z dalszą eskalacją regionalną."
+      ],
+      "reactions": [
+        "Rynek energii może dalej reagować na kolejne newsy z regionu.",
+        "Wątek może przejść w nowe ostrzeżenia dla transportu morskiego."
+      ],
+      "whyItMatters": "To bezpośredni sygnał przenoszenia się konfliktu na ceny energii i inflację.",
+      "context": "To obecny globalny lead, który spina geopolitykę z rynkiem surowców.",
+      "watchNext": [
+        "Śledzić, czy ropa utrzyma się powyżej 100 dolarów i czy pojawi się nowy komunikat o żegludze."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Oil prices hit $100 for the first time since May",
+          "url": "https://www.bbc.co.uk/news/articles/cx2djnzrqk2o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN World",
+          "url": "https://www.cnn.com/world"
+        }
+      ],
+      "tags": [
+        "ropa",
+        "Bliski-Wschod",
+        "energia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "a1-pirat-1801",
+      "section": "Polska",
+      "title": "Pirat drogowy z A1 usłyszał zarzuty",
+      "lead": "Prokuratura wnioskuje o areszt.",
+      "whatHappened": "Policjanci ponownie zatrzymali 36-latka, który pod wpływem alkoholu jechał autostradą A1 i po obywatelskim ujęciu został wypuszczony przez prokuratorkę; teraz usłyszał zarzuty, a prokuratura chce aresztu.",
+      "keyFacts": [
+        "Mężczyzna wrócił do sprawy po ponownym zatrzymaniu.",
+        "Chodzi o jazdę po alkoholu na A1.",
+        "Prokuratura złożyła wniosek o areszt."
+      ],
+      "reactions": [
+        "Możliwa jest szybka decyzja sądu w sprawie tymczasowego aresztu.",
+        "Sprawa może wrócić w kontekście bezpieczeństwa drogowego i błędów proceduralnych."
+      ],
+      "whyItMatters": "To głośny wątek drogowy z potencjałem na dalszy procesowy follow-up.",
+      "context": "To nowy krajowy temat bezpieczeństwa i wymiaru sprawiedliwości.",
+      "watchNext": [
+        "Śledzić, czy sąd uwzględni wniosek o areszt."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pirat drogowy z A1 z zarzutami, jest wniosek o areszt",
+          "url": "https://tvn24.pl/katowice/pirat-drogowy-z-a1-z-zarzutami-jest-wniosek-o-areszt-st9155056?source=rss"
+        }
+      ],
+      "tags": [
+        "A1",
+        "droga",
+        "prokuratura"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "saudi-israel-nuclear-1801",
+      "section": "Geopolityka",
+      "title": "USA i Arabia Saudyjska wiążą deal nuklearny z Izraelem",
+      "lead": "Trump stawia warunek Abraham Accords.",
+      "whatHappened": "BBC podaje, że Trump powiedział, iż saudyjski program energetyki jądrowej ma sens tylko wtedy, gdy Rijad uzna Izrael i dołączy do Abraham Accords.",
+      "keyFacts": [
+        "Wątek dotyczy pokojowej współpracy nuklearnej.",
+        "Warunkiem staje się uznanie Izraela.",
+        "To otwiera nowy spór dyplomatyczny w regionie."
+      ],
+      "reactions": [
+        "Możliwa jest reakcja saudyjska, izraelska i irańska.",
+        "Temat może wrócić w dyskusji o bezpieczeństwie regionu."
+      ],
+      "whyItMatters": "To znaczący ruch strategiczny, który może zmienić regionalną układankę bezpieczeństwa.",
+      "context": "To jeden z najmocniejszych światowych leadów BBC w tej godzinie.",
+      "watchNext": [
+        "Śledzić, czy pojawi się pełniejsza umowa albo oficjalna reakcja Rijadu."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Saudis must recognise Israel for nuclear deal, says Trump",
+          "url": "https://www.bbc.co.uk/news/articles/cwye71yq8wwo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Arabia-Saudyjska",
+        "Izrael",
+        "nuklearne"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "wos-zatrzymanie-1801",
+      "section": "Polityka",
+      "title": "Wniosek o zatrzymanie Michała Wosia trafił do Sejmu",
+      "lead": "Marszałek ma teraz ruch po stronie procedury.",
+      "whatHappened": "Prokurator generalny przekazał marszałkowi Sejmu wniosek o zgodę na zatrzymanie i przymusowe doprowadzenie posła PiS Michała Wosia do prokuratury.",
+      "keyFacts": [
+        "Wniosek dotyczy zatrzymania i doprowadzenia.",
+        "Sprawa trafiła do marszałka Sejmu.",
+        "To nowy element polityczno-prokuratorskiego sporu."
+      ],
+      "reactions": [
+        "Możliwa jest sejmowa reakcja proceduralna.",
+        "Sam poseł lub klub mogą odpowiedzieć publicznie."
+      ],
+      "whyItMatters": "To świeży sygnał prawno-polityczny, który może szybko wejść do obiegu sejmowego.",
+      "context": "To nowy krajowy follow-up, który wykracza poza sam wniosek o immunitet.",
+      "watchNext": [
+        "Śledzić, czy Sejm nada sprawie termin albo czy padnie komentarz Wosia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wniosek o zgodę na zatrzymanie i doprowadzenie Michała Wosia do prokuratury",
+          "url": "https://tvn24.pl/polska/wniosek-o-zgode-na-zatrzymanie-i-doprowadzenie-michala-wosia-do-prokuratury-st9155617?source=rss"
+        }
+      ],
+      "tags": [
+        "Sejm",
+        "PiS",
+        "prokuratura"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "france-wildfires-1801",
+      "section": "Świat",
+      "title": "Francja ewakuuje 20 tysięcy osób przez pożary",
+      "lead": "Gorące i suche warunki podkręcają skalę kryzysu.",
+      "whatHappened": "BBC informuje, że około 20 tysięcy osób ewakuowano z powodu pożarów we francuskim Gironde, a większość ewakuowanych to turyści z kempingów wokół Arcachon Bay.",
+      "keyFacts": [
+        "Ewakuacje objęły około 20 tysięcy osób.",
+        "Najmocniej dotknięty jest departament Gironde.",
+        "Wśród ewakuowanych jest wielu turystów."
+      ],
+      "reactions": [
+        "Możliwe są kolejne zamknięcia dróg i nowych obszarów ewakuacji.",
+        "Temat może wywołać dalsze komunikaty władz lokalnych."
+      ],
+      "whyItMatters": "To duży europejski kryzys pożarowy z bezpośrednim skutkiem dla ludności i ruchu.",
+      "context": "To trwały światowy lead, który dalej trzyma się wysoko w feedzie BBC.",
+      "watchNext": [
+        "Śledzić, czy ewakuacje obejmą kolejne miejscowości albo resorty."
+      ],
+      "sources": [
+        {
+          "title": "BBC: France evacuates 20,000 as wildfires spread in south-west",
+          "url": "https://www.bbc.co.uk/news/articles/cy4kmr82n44o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "pożary",
+        "ewakuacje"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "stacja-paliw-1801",
+      "section": "Polska",
+      "title": "Po odmowie sprzedaży alkoholu zdemolował stację paliw",
+      "lead": "43-latkowi grozi do pięciu lat więzienia.",
+      "whatHappened": "Mężczyzna przyszedł pijany na stację benzynową, nie dostał alkoholu, wrócił po godzinie i zaczął przewracać regały; teraz grozi mu nawet pięć lat więzienia.",
+      "keyFacts": [
+        "Incydent zaczął się od odmowy sprzedaży alkoholu.",
+        "Mężczyzna wrócił po godzinie i demolował stację.",
+        "Sprawa ma już wymiar karny."
+      ],
+      "reactions": [
+        "Możliwe są zarzuty i dalsze ustalenia policji.",
+        "Temat może wrócić jako lokalny sygnał przemocy i alkoholu."
+      ],
+      "whyItMatters": "To nowy lokalny incydent porządkowy z jasnym skutkiem prawnym.",
+      "context": "To świeży materiał z TVN24, który dobrze pasuje do bloku bezpieczeństwa.",
+      "watchNext": [
+        "Śledzić, czy policja poda więcej o zarzutach i szkodach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nie sprzedali mu alkoholu, wrócił i zdemolował stację paliw",
+          "url": "https://tvn24.pl/poznan/nowe-skalmierzyce-nie-sprzedali-mu-alkoholu-wrocil-i-zdemolowal-stacje-paliw-st9156194?source=rss"
+        }
+      ],
+      "tags": [
+        "stacja-paliw",
+        "alkohol",
+        "policja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "houthis-tanker-1801",
+      "section": "Bezpieczeństwo",
+      "title": "Huti twierdzą, że zaatakowali tankowiec na Morzu Czerwonym",
+      "lead": "BBC łączy to z kolejnymi uderzeniami USA na Iran.",
+      "whatHappened": "BBC World opisuje, że Huti twierdzą, iż zaatakowali tankowce na Morzu Czerwonym, a równolegle USA wykonują kolejne uderzenia na Iran.",
+      "keyFacts": [
+        "Wątek dotyczy żeglugi na Morzu Czerwonym.",
+        "Huti powołują się na własny komunikat o ataku.",
+        "Eskalacja łączy się z kolejnymi uderzeniami USA na Iran."
+      ],
+      "reactions": [
+        "Możliwa jest reakcja armatorów i rządów regionu.",
+        "Temat może przejść w formalne komunikaty o ryzyku dla żeglugi."
+      ],
+      "whyItMatters": "To silny sygnał eskalacji w jednym z najważniejszych korytarzy handlowych świata.",
+      "context": "To trwały bezpieczeństwowy blok BBC World, który nadal siedzi wysoko w feedzie.",
+      "watchNext": [
+        "Śledzić, czy pojawi się oficjalny komunikat o ryzyku dla żeglugi."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Yemen's Houthis attack Saudi tanker as US launches more Iran strikes",
+          "url": "https://www.bbc.co.uk/news/articles/cpw9xzx9r4ko?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Huti",
+        "Morze-Czerwone",
+        "Iran"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "lomazy-smierc-1801",
+      "section": "Polska",
+      "title": "Kierująca uderzyła w drzewo i zmarła w szpitalu",
+      "lead": "Tragiczny wypadek w Łomazach.",
+      "whatHappened": "31-latka kierująca Audi uderzyła w drzewo i wypadła z samochodu, a potem zmarła w szpitalu po wypadku w Łomazach na Lubelszczyźnie.",
+      "keyFacts": [
+        "Do wypadku doszło w Łomazach.",
+        "Kierująca wypadła z auta po uderzeniu w drzewo.",
+        "Kobieta zmarła w szpitalu."
+      ],
+      "reactions": [
+        "Możliwy jest dalszy policyjny lub prokuratorski follow-up.",
+        "Wątek może wrócić jako lokalny sygnał bezpieczeństwa drogowego."
+      ],
+      "whyItMatters": "To świeży, tragiczny wypadek z potencjałem na dalsze ustalenia służb.",
+      "context": "To nowy krajowy news z kategorii bezpieczeństwa i transportu.",
+      "watchNext": [
+        "Śledzić, czy policja poda więcej o przyczynach i okolicznościach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Uderzyła w drzewo i wypadła z auta. Zmarła w szpitalu",
+          "url": "https://tvn24.pl/lublin/lomazy-tragiczny-wypadek-w-lomazach-31-latka-zmarla-po-uderzeniu-w-drzewo-st9156234?source=rss"
+        }
+      ],
+      "tags": [
+        "wypadek",
+        "Lubelszczyzna",
+        "droga"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "india-hunger-strike-1801",
+      "section": "Świat",
+      "title": "Indyjski aktywista po 26 dniach głodówki stracił 11 kg",
+      "lead": "W Delhi trwa protest wokół reform i polityki.",
+      "whatHappened": "BBC opisuje Sonama Wangchuka jako twarz protestu w Delhi i podaje, że po 26 dniach głodówki stracił 11 kilogramów.",
+      "keyFacts": [
+        "Protest toczy się w Delhi.",
+        "Aktywista prowadzi głodówkę od 26 dni.",
+        "Strata masy ciała sięga 11 kilogramów."
+      ],
+      "reactions": [
+        "Sprawa może uruchomić szerszą reakcję władz albo opozycji.",
+        "Wątek może wrócić jako symbol protestu społecznego w Indiach."
+      ],
+      "whyItMatters": "To silny sygnał napięcia społecznego, który może rozlać się szerzej niż sam protest.",
+      "context": "To świeży world item, który wzmacnia blok społeczny w BBC World.",
+      "watchNext": [
+        "Śledzić, czy protest przyniesie oficjalną reakcję władz."
+      ],
+      "sources": [
+        {
+          "title": "BBC: 'I am still alive': Indian activist on hunger strike for 26 days loses 11kg",
+          "url": "https://www.bbc.co.uk/news/articles/ce34n7kqr5ko?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Indie",
+        "protest",
+        "spoleczenstwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "burze-1801",
+      "section": "Alerty",
+      "title": "Burze grzmią w wielu miejscach kraju",
+      "lead": "Opady i wiatr nadal są operacyjnym ryzykiem.",
+      "whatHappened": "TVN24 Meteo pokazuje aktywną strefę burz z opadami deszczu i silnymi porywami wiatru, a IMGW utrzymuje alertową narrację dla części kraju.",
+      "keyFacts": [
+        "W czwartek 23.07 grzmi w wielu rejonach kraju.",
+        "Wyładowaniom towarzyszą opady i silne porywy wiatru.",
+        "Alert pogodowy pozostaje istotny dla ruchu i infrastruktury."
+      ],
+      "reactions": [
+        "Możliwe są podtopienia, grad i opóźnienia w ruchu.",
+        "Warto śledzić lokalne komunikaty IMGW i RCB."
+      ],
+      "whyItMatters": "To jedyny krajowy alert z potencjałem na szybkie skutki operacyjne w wielu regionach.",
+      "context": "To ciąg dalszy burzowego wątku, ale już z widoczną aktywnością opadów i wiatru.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się podtopienia, grad albo blokady ruchu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Gdzie jest burza? Grzmi w wielu miejscach kraju",
+          "url": "https://tvn24.pl/tvnmeteo/polska/gdzie-jest-burza-burze-w-polsce-czwartek-23-07-grzmi-w-wielu-miejscach-kraju-st9155084?source=rss"
+        },
+        {
+          "title": "IMGW: Prognoza pogody na tydzień 17-23.07.2026",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-17-23-07-2026/"
+        }
+      ],
+      "tags": [
+        "burze",
+        "IMGW",
+        "pogoda"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "canada-dairy-1801",
+      "section": "Gospodarka",
+      "title": "Kanadyjski nabiał trafia w cła Trumpa",
+      "lead": "BBC podnosi spór o system kwot i subsydiów.",
+      "whatHappened": "BBC World pisze, że kanadyjski system zarządzania dostawami nabiału znalazł się pod ostrzałem Trumpa jako jeden z głównych punktów sporu przy nowych cłach.",
+      "keyFacts": [
+        "Spór dotyczy kanadyjskiego sektora mleczarskiego.",
+        "Trump używa go jako jednego z argumentów taryfowych.",
+        "BBC opisuje to jako ważny punkt handlowego konfliktu."
+      ],
+      "reactions": [
+        "Możliwa jest reakcja Ottawy i branży rolnej.",
+        "Temat może wrócić jako element szerszej wojny handlowej USA-Kanada."
+      ],
+      "whyItMatters": "To kolejny sygnał, że handel i cła wracają do centrum światowego ryzyka gospodarczego.",
+      "context": "To nowy world item, który domyka gospodarczy blok w BBC World.",
+      "watchNext": [
+        "Śledzić, czy Kanada albo branża mleczarska odpowiedzą oficjalnie."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Canada's 'powerful' dairy sector is in Trump's trade crosshairs",
+          "url": "https://www.bbc.co.uk/news/articles/ce8kvm84lxmo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Kanada",
+        "handel",
+        "cła"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 latest RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "IMGW weekly forecast",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-17-23-07-2026/"
+    }
+  ]
+}

@@ -2,6 +2,11 @@
 
 ## Open
 
+- Watch whether Tramwaje Warszawskie publishes a firm reopening date for Aleje Jerozolimskie and the Most Poniatowskiego viaduct.
+- Watch whether the A1 road-rage case gets a detention ruling or a prosecutor comment.
+- Watch whether the Woś compulsion request gets a Sejm timetable or response.
+- Watch whether the station-paliw vandalism gets a charge or restitution note.
+
 - Watch whether Google responds to the 890 million euro DMA fine with an appeal or compliance note.
 - Watch whether the Powiśle knife case gets a prosecutor, hospital or court follow-up.
 - Watch whether Mejza's immunity request gets a Sejm timetable or a response from the MP.
