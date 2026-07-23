@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-22
+Last updated: 2026-07-23
 
 ## Current Understanding
 
@@ -270,6 +270,15 @@ porozumienia nuklearnego z potencjalnym wzbogacaniem uranu. W Polsce po
 wydarzeniu NaszaKolej KPRM i PAP doprecyzowały ZSK jako plan 4700 km nowych
 linii, w tym 2700 km KDP, więc krajowy blok przesunął się z zapowiedzi w stronę
 konkretnych parametrów do dalszego sprawdzania.
+Po wieczornym runie 23 lipca akcent przesuwa się dalej: Ukraina wchodzi w etap
+wdrożeniowy po resetcie dowództwa, ale równolegle bije w rosyjskie zaplecze
+gospodarcze. Na poziomie europejskim najmocniejsze nowe bloki to 21. pakiet
+sankcji UE przeciw Rosji oraz kara Komisji dla Google za DMA, a na Bliskim
+Wschodzie Huti przeszli od gróźb do ataku na saudyjskie tankowce, podczas gdy
+producenci ropy przyspieszają obejścia Ormuzu. W kraju najczytelniejszy nowy
+sygnał to alert RCB/IMGW o burzach i silnym wietrze; NaszaKolej i zdrowie
+pozostają w follow-upie, ale dziś nie dostały porównywalnie mocnego twardego
+komunikatu.
 
 ## Stable Facts
 
