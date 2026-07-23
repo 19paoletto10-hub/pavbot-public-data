@@ -2,6 +2,11 @@
 
 ## Open
 
+- Watch whether Google responds to the 890 million euro DMA fine with an appeal or compliance note.
+- Watch whether the Powiśle knife case gets a prosecutor, hospital or court follow-up.
+- Watch whether Mejza's immunity request gets a Sejm timetable or a response from the MP.
+- Watch whether the Jelenia Góra ordnance case gets a police or sapper cause note.
+- Watch whether the Manchester phone-failure report triggers a police oversight or inquiry response.
 - Watch whether the Macierewicz indictment gets a formal SKW, defense or court follow-up.
 - Watch whether PiS responds to Piotr Mueller's public naming of Kurski, Sasin and Jaki.
 - Watch whether the LOT diversion from Mallorca to Warsaw gets an airline or airport update.

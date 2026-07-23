@@ -1,0 +1,441 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-23",
+  "runTime": "15:02",
+  "status": "Material update",
+  "headline": "KE uderza w Google, a krajowy feed przejmują Powiśle i Targówek",
+  "summary": "Południowy slot przesuwa Puls Dnia w stronę decyzji KE wobec Google, ataku nożem na Powiślu, wniosku o immunitet Mejzy i skutków pożaru salonu na Targówku. Za granicą lead tworzą pożary we Francji, błąd policji w Manchesterze, umowa nuklearna USA-Arabia Saudyjska, presja Huti na Morzu Czerwonym i nowy CNN blok o Iranie oraz cenach ropy.",
+  "items": [
+    {
+      "id": "google-fine-1502",
+      "section": "Gospodarka",
+      "title": "KE nałożyła na Google karę 890 mln euro",
+      "lead": "Bruksela uderza w naruszenia DMA.",
+      "whatHappened": "Komisja Europejska nałożyła na Google karę 890 mln euro za faworyzowanie własnych usług w Google Search i ograniczanie kierowania użytkowników do alternatywnych kanałów zakupu w Google Play.",
+      "keyFacts": [
+        "Kara wynosi 890 mln euro.",
+        "KE wskazuje na self-preferencing w Google Search.",
+        "Drugi wątek dotyczy ograniczania steeringu w Google Play."
+      ],
+      "reactions": [
+        "Google może odwołać się od decyzji.",
+        "Temat podkręca debatę o egzekwowaniu DMA."
+      ],
+      "whyItMatters": "To jedna z najmocniejszych decyzji regulacyjnych dnia w technologii i konkurencji.",
+      "context": "To nowy, oficjalnie potwierdzony sygnał z europejskiej polityki cyfrowej.",
+      "watchNext": [
+        "Śledzić reakcję Google i ewentualną zapowiedź odwołania."
+      ],
+      "sources": [
+        {
+          "title": "European Commission: Commission fines Google €890 million for breaches of the Digital Markets Act",
+          "url": "https://digital-strategy.ec.europa.eu/en/news/commission-fines-google-eu890-million-breaches-digital-markets-act"
+        },
+        {
+          "title": "TVN24: Blisko 900 milionów euro kary dla Google",
+          "url": "https://tvn24.pl/biznes/tech/ai-napedza-zyski-google-a-polska-zapowiada-nowy-podatek-st9155044?source=rss"
+        }
+      ],
+      "tags": [
+        "Google",
+        "DMA",
+        "KE"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "powisle-stabbing-1502",
+      "section": "Bezpieczeństwo",
+      "title": "Na Powiślu trzy zarzuty po ataku nożem",
+      "lead": "Podejrzany trafił do aresztu tymczasowego.",
+      "whatHappened": "TVN24 podaje, że mężczyzna podejrzany o atak ostrym narzędziem na Powiślu usłyszał trzy zarzuty i został tymczasowo aresztowany na trzy miesiące.",
+      "keyFacts": [
+        "Sprawa dotyczy ataku na znajomego ostrym narzędziem.",
+        "Podejrzany usłyszał trzy zarzuty.",
+        "Sąd zastosował tymczasowy areszt."
+      ],
+      "reactions": [
+        "Możliwa jest dalsza reakcja prokuratury albo obrony.",
+        "Incydent może wrócić w policyjnym i lokalnym serwisie Warszawy."
+      ],
+      "whyItMatters": "To świeży, poważny sygnał bezpieczeństwa z centrum Warszawy.",
+      "context": "To jeden z najmocniejszych krajowych newsów operacyjnych po południu.",
+      "watchNext": [
+        "Śledzić, czy pojawi się doprecyzowanie motywu, stanu ofiary lub statusu śledztwa."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Atak nożem w bloku na Powiślu. Podejrzany usłyszał trzy zarzuty",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-atak-nozownika-na-powislu-podejrzany-uslyszal-trzy-zarzuty-st9155862?source=rss"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "Powiśle",
+        "prokuratura"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "targowek-fire-aftermath-1502",
+      "section": "Bezpieczeństwo",
+      "title": "Pożar salonu na Targówku zostawił ruinę",
+      "lead": "Budynek po remoncie został mocno zniszczony.",
+      "whatHappened": "Poranny pożar salonu i warsztatu samochodowego na Targówku niemal całkowicie zniszczył budynek. TVN24 pokazuje skutki akcji gaśniczej i skalę szkód.",
+      "keyFacts": [
+        "Pożar objął salon i warsztat samochodowy.",
+        "Obiekt był rozbudowany i remontowany kilka miesięcy temu.",
+        "W materiałach z miejsca zdarzenia widać rozległe zniszczenia."
+      ],
+      "reactions": [
+        "Możliwy jest dalszy komunikat PSP o przyczynie pożaru.",
+        "Wątek może wrócić jako temat lokalnej komunikacji i szkód."
+      ],
+      "whyItMatters": "To duży pożar w Warszawie z widocznym skutkiem materialnym i potencjalnym wpływem operacyjnym.",
+      "context": "To ważny follow-up do porannego pożaru, już z obrazem szkód po ugaszeniu.",
+      "watchNext": [
+        "Śledzić, czy PSP poda przyczynę, ustalenia o ofiarach lub wpływ na ruch."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Dopiero co go rozbudowali. Pożar zmienił salon samochodowy w ruinę",
+          "url": "https://tvn24.pl/tvnwarszawa/targowek/warszawa-pozar-salonu-samochodowego-na-brodnie-tak-wyglada-budynek-po-pozarze-st9155487?source=rss"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "Targówek",
+        "pożar"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "mejza-immunity-1502",
+      "section": "Polityka",
+      "title": "Prokurator chce uchylenia immunitetu Mejzy",
+      "lead": "Wniosek trafił do Sejmu.",
+      "whatHappened": "Do Sejmu wpłynął wniosek prokuratora generalnego Waldemara Żurka o uchylenie immunitetu posła Łukasza Mejzy.",
+      "keyFacts": [
+        "Wniosek złożyła Prokuratura Krajowa.",
+        "Sprawa dotyczy immunitetu poselskiego.",
+        "To nowy wątek w krajowej polityce i wymiarze sprawiedliwości."
+      ],
+      "reactions": [
+        "Możliwa jest reakcja samego posła lub klubu.",
+        "Temat może trafić do dalszego obiegu sejmowego."
+      ],
+      "whyItMatters": "To świeży sygnał prawno-polityczny z potencjałem na dalszy konflikt.",
+      "context": "To nowy krajowy temat dnia, który może szybko wywołać polityczny follow-up.",
+      "watchNext": [
+        "Śledzić, czy Sejm nada sprawie kalendarz i czy pojawi się komentarz Mejzy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wniosek o uchylenie immunitetu Łukasza Mejzy",
+          "url": "https://tvn24.pl/polska/wniosek-o-uchylenie-immunitetu-lukasza-mejzy-st9155850?source=rss"
+        }
+      ],
+      "tags": [
+        "Mejza",
+        "immunitet",
+        "Sejm"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "jelenia-gora-ordnance-1502",
+      "section": "Bezpieczeństwo",
+      "title": "Niewybuchy pod galerią w Jeleniej Górze",
+      "lead": "Jednego zatrzymano, drugiego wciąż szukają.",
+      "whatHappened": "Policjanci zatrzymali jednego z dwóch mężczyzn, którzy podrzucili dwa niewybuchy w pobliże galerii handlowej w Jeleniej Górze. Drugiego wciąż poszukują.",
+      "keyFacts": [
+        "Sprawa dotyczy dwóch niewybuchów.",
+        "Jednego z podejrzanych zatrzymano.",
+        "Monitoring zarejestrował całe zdarzenie."
+      ],
+      "reactions": [
+        "Możliwa jest dalsza reakcja policji lub saperów.",
+        "Wątek może dostać bardziej formalny charakter po identyfikacji drugiej osoby."
+      ],
+      "whyItMatters": "To nietypowy, ale potencjalnie poważny incydent bezpieczeństwa w pobliżu galerii handlowej.",
+      "context": "To świeży policyjny materiał, który pasuje do bloku bezpieczeństwa i porządku publicznego.",
+      "watchNext": [
+        "Śledzić, czy drugi podejrzany zostanie zatrzymany albo czy padnie opis motywu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Niewybuchy przed galerią handlową. Zatrzymali mężczyznę, drugiego szukają",
+          "url": "https://tvn24.pl/wroclaw/jelenia-gora-dwaj-mezczyzni-podrzucili-niewybuchy-pod-galerie-handlowa-st9155558?source=rss"
+        }
+      ],
+      "tags": [
+        "Jelenia-Gora",
+        "policja",
+        "niewybuchy"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "storm-band-1502",
+      "section": "Alerty",
+      "title": "Burze i silny wiatr nadal aktywne",
+      "lead": "Część kraju ma deszcz, wyładowania i porywy wiatru.",
+      "whatHappened": "TVN24 Meteo pokazuje aktywną strefę burz z opadami, wyładowaniami i silnymi porywami wiatru, a IMGW utrzymuje alertową narrację dla części kraju.",
+      "keyFacts": [
+        "W części kraju widać aktywną strefę opadów i wyładowań.",
+        "Ryzyko obejmuje deszcz, wiatr i lokalne utrudnienia.",
+        "Alert pogodowy pozostaje operacyjnie istotny dla ruchu i infrastruktury."
+      ],
+      "reactions": [
+        "Możliwe są podtopienia, grad i opóźnienia w ruchu.",
+        "Warto śledzić lokalne komunikaty IMGW i RCB."
+      ],
+      "whyItMatters": "To jedyny krajowy alert z potencjałem na szybkie skutki operacyjne w wielu regionach.",
+      "context": "To kontynuacja burzowego wątku, ale już z widoczną aktywnością opadów i wiatru.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się podtopienia, grad albo blokady ruchu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Gdzie jest burza? Mocno pada i silnie wieje",
+          "url": "https://tvn24.pl/tvnmeteo/polska/gdzie-jest-burza-mocno-pada-i-silnie-wieje-st9155084?source=rss"
+        },
+        {
+          "title": "IMGW: Prognoza pogody na tydzień 17-23.07.2026",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-17-23-07-2026/"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "burze",
+        "ulewy"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "france-fires-1502",
+      "section": "Świat",
+      "title": "Francja ewakuuje 20 tysięcy osób przez pożary",
+      "lead": "BBC podaje skalę ewakuacji w Gironde.",
+      "whatHappened": "BBC informuje, że około 20 tysięcy osób ewakuowano z powodu pożarów we francuskim departamencie Gironde, a ogień objął już ponad 2400 hektarów.",
+      "keyFacts": [
+        "Ewakuacje sięgają około 20 tysięcy osób.",
+        "Pożar objął ponad 2400 hektarów.",
+        "Wiatr utrudnia akcję gaśniczą."
+      ],
+      "reactions": [
+        "Temat może uruchomić kolejne komunikaty władz lokalnych i służb.",
+        "Możliwe są dalsze zamknięcia dróg lub ewakuacje."
+      ],
+      "whyItMatters": "To poważny europejski kryzys pogodowo-pożarowy z bezpośrednim skutkiem dla ludności.",
+      "context": "To świeży światowy lead, który wszedł do feedu po południu.",
+      "watchNext": [
+        "Śledzić, czy ewakuacje obejmą kolejne miejscowości lub regiony."
+      ],
+      "sources": [
+        {
+          "title": "BBC: France evacuates 20,000 as wildfires spread in south-west",
+          "url": "https://www.bbc.co.uk/news/articles/cy4kmr82n44o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "pożary",
+        "ewakuacje"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "manchester-phones-1502",
+      "section": "Świat",
+      "title": "BBC: policja nie sprawdziła telefonów napastnika z Manchesteru",
+      "lead": "Nowe przeprosiny po zamachu i aresztach.",
+      "whatHappened": "Greater Manchester Police przeprosiła, bo urządzeń Jihada Al-Shamie'go nie sprawdzono przed atakiem, mimo że był wcześniej dwukrotnie zatrzymany.",
+      "keyFacts": [
+        "BBC opisuje błąd po wcześniejszych zatrzymaniach podejrzanego.",
+        "Policja przyznała, że telefony nie zostały przejrzane na czas.",
+        "Sprawa podbija pytania o proceduralne zaniedbania."
+      ],
+      "reactions": [
+        "Możliwa jest polityczna i nadzorcza reakcja na działania policji.",
+        "Temat może wrócić przy kolejnych ujawnieniach o zamachu."
+      ],
+      "whyItMatters": "To mocny sygnał o potencjalnych błędach proceduralnych w sprawie o dużym ciężarze bezpieczeństwa.",
+      "context": "To nowy, wyraźny world lead z BBC, który podnosi też temat odpowiedzialności służb.",
+      "watchNext": [
+        "Śledzić, czy pojawi się raport, dodatkowe przeprosiny lub reakcja polityczna."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Police failed to check Manchester synagogue attacker's phones despite arresting him twice",
+          "url": "https://www.bbc.co.uk/news/articles/c3d3507ng37o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Manchester",
+        "policja",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "saudi-nuclear-deal-1502",
+      "section": "Geopolityka",
+      "title": "USA podpisują przełomową umowę nuklearną z Arabią Saudyjską",
+      "lead": "Waszyngton otwiera drogę amerykańskim firmom.",
+      "whatHappened": "BBC podaje, że amerykański Departament Energii mówi o pokojowej współpracy, która ma dać amerykańskim firmom szeroki dostęp do saudyjskiego programu energii jądrowej.",
+      "keyFacts": [
+        "To oficjalnie komunikowany układ o pokojowej współpracy nuklearnej.",
+        "BBC wskazuje na dostęp firm z USA do saudyjskiego programu.",
+        "To ważny element szerszej układanki USA-Bliski Wschód."
+      ],
+      "reactions": [
+        "Możliwa jest reakcja Izraela, Iranu lub saudyjskich partnerów regionalnych.",
+        "Wątek może wrócić jako część debaty o bezpieczeństwie energetycznym."
+      ],
+      "whyItMatters": "To znaczący ruch strategiczny w regionie, który może mieć skutki dyplomatyczne i energetyczne.",
+      "context": "To jeden z najmocniejszych world leadów w BBC, łączący politykę i bezpieczeństwo energetyczne.",
+      "watchNext": [
+        "Śledzić, czy pojawi się pełna umowa albo reakcja izraelska i saudyjska."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US signs landmark nuclear deal with Saudi Arabia",
+          "url": "https://www.bbc.co.uk/news/articles/cj03r59z73po?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Arabia-Saudyjska",
+        "USA",
+        "nuklearne"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "houthi-tankers-1502",
+      "section": "Bezpieczeństwo",
+      "title": "Huti twierdzą, że zaatakowali tankowce na Morzu Czerwonym",
+      "lead": "BBC łączy to z kolejnymi uderzeniami USA na Iran.",
+      "whatHappened": "BBC opisuje, że Huti twierdzą, iż zaatakowali tankowce na Morzu Czerwonym, a równolegle USA wykonują kolejne uderzenia na Iran.",
+      "keyFacts": [
+        "To pierwszy taki atak od czasu ogłoszenia morskiego embarga.",
+        "Wątek bezpośrednio wiąże się z Red Sea security.",
+        "Kolejne uderzenia USA wzmacniają napięcie regionalne."
+      ],
+      "reactions": [
+        "Możliwa jest reakcja armatorów, flot handlowych i rządów regionu.",
+        "Temat może przejść w komunikaty o ryzyku dla żeglugi."
+      ],
+      "whyItMatters": "To silny sygnał eskalacji w jednym z najważniejszych korytarzy handlowych świata.",
+      "context": "To obecny bezpieczeństwowy wątek z BBC, który spina Red Sea, Iran i transport morski.",
+      "watchNext": [
+        "Śledzić, czy pojawi się oficjalny komunikat o ryzyku dla żeglugi lub dodatkowe uderzenia."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Houthis claim attack on oil tankers as US launches more strikes on Iran",
+          "url": "https://www.bbc.co.uk/news/articles/cpw9xzx9r4ko?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Huti",
+        "Morze-Czerwone",
+        "Iran"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "burnham-tax-1502",
+      "section": "Świat",
+      "title": "Brytyjscy milionerzy proszą Burnhama o wyższe podatki",
+      "lead": "Gary Lineker i Brian Eno podpisali list.",
+      "whatHappened": "BBC podaje, że grupa brytyjskich milionerów, w tym Gary Lineker i Brian Eno, napisała do Andy'ego Burnhama, że mogą pozwolić sobie na wyższe podatki.",
+      "keyFacts": [
+        "List dotyczy wyższych podatków dla najbogatszych.",
+        "Sygnatariusze są dobrze rozpoznawalnymi nazwiskami publicznymi.",
+        "To element nowej debaty fiskalnej w UK."
+      ],
+      "reactions": [
+        "Wątek może wejść do szerszej rozmowy o podatkach i wydatkach publicznych.",
+        "Możliwa jest reakcja rządu lub przeciwników wyższych danin."
+      ],
+      "whyItMatters": "To polityczny sygnał z UK, który może podpalić debatę o redystrybucji i budżecie.",
+      "context": "To świeży BBC world item, który domyka europejsko-ekonomiczny blok politycznym akcentem.",
+      "watchNext": [
+        "Śledzić, czy Burnham odniesie się do listu albo czy pojawi się kolejny komentarz publiczny."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Gary Lineker among millionaires asking Andy Burnham to tax them more",
+          "url": "https://www.bbc.co.uk/news/articles/cvgjp79m42go?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "UK",
+        "podatki",
+        "Burnham"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "cnn-iran-red-sea-1502",
+      "section": "Świat",
+      "title": "CNN: ceny ropy rosną wraz z presją na Morzu Czerwonym",
+      "lead": "Rynek obserwuje nowy punkt zapalny wokół Iranu.",
+      "whatHappened": "CNN w live update pisze, że ropa zbliża się do 100 dolarów, a ataki na Morzu Czerwonym tworzą nowy punkt napięcia w konflikcie z Iranem.",
+      "keyFacts": [
+        "CNN łączy napięcie w regionie z rynkiem ropy.",
+        "Wątek dotyczy żeglugi i bezpieczeństwa korytarzy handlowych.",
+        "To aktualny blok live, a nie starsza analiza."
+      ],
+      "reactions": [
+        "Możliwa jest reakcja armatorów, rynku energii i dyplomacji.",
+        "Wątek może wzmocnić narrację o skutkach gospodarczych eskalacji."
+      ],
+      "whyItMatters": "To bieżący sygnał, że konflikt Iran-Red Sea przechodzi w presję cenową i transportową.",
+      "context": "To aktualny CNN world lead, który wzmacnia regionalny blok bezpieczeństwa i gospodarki.",
+      "watchNext": [
+        "Śledzić, czy pojawi się dalszy wzrost cen ropy albo kolejny komunikat o ryzyku dla żeglugi."
+      ],
+      "sources": [
+        {
+          "title": "CNN World live update: Oil nears $100 as Red Sea attacks threaten new chokepoint in Iran conflict",
+          "url": "https://www.cnn.com/2026/07/23/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "CNN",
+        "ropa",
+        "Morze-Czerwone"
+      ],
+      "priority": "high"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 latest RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "European Commission press release on Google DMA fine",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-fines-google-eu890-million-breaches-digital-markets-act"
+    },
+    {
+      "title": "IMGW weekly forecast",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-17-23-07-2026/"
+    }
+  ]
+}

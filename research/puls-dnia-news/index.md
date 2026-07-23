@@ -1,3 +1,5 @@
+The 2026-07-23 15:02 slot przesuwa feed w stronę decyzji KE wobec Google, ataku nożem na Powiślu, wniosku o immunitet Mejzy, pożaru salonu na Targówku i niewybuchów w Jeleniej Górze. Za granicą lead tworzą pożary we Francji, błąd policji w Manchesterze, saudyjska umowa nuklearna USA, presja Huti na Morzu Czerwonym oraz aktualny CNN blok o Iranie i ropie.
+
 # The 2026-07-23 12:01 slot przesuwa feed w stronę aktu oskarżenia wobec Macierewicza, nowego spięcia w PiS, spadku czerwcowego bezrobocia, lotniczego incydentu LOT i aktywnego bloku burzowego nad Polską. Za granicą lead tworzą pożary we Francji, indyjski protest głodowy, presja taryfowa na Kanadę, koszty AI u Google, follow-up wokół Wildberries i brytyjska debata podatkowa wokół Andy'ego Burnhama.
 
 The 2026-07-23 09:02 slot przesuwa feed w stronę PiS, pożaru warsztatu na Targówku i aktywnego alertu burzowego w Polsce, a za granicą dokłada saudyjski układ nuklearny USA, napięcie Huti przy żegludze, presję na Wildberries, sygnał ostrzegawczy wokół OpenAI i nikaraguański plan wygaszania wyborów.
