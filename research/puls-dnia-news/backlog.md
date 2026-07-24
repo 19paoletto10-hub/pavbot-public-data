@@ -2,6 +2,14 @@
 
 ## Open
 
+## 2026-07-24 09:04
+
+- Watch whether PiS issues a formal reply after Piotr Müller sharpened the split narrative.
+- Watch whether the storm alert turns into outages, flooding or transport blocks during the morning window.
+- Watch whether Trump’s tariff package triggers a first official retaliation or clarification from partners.
+- Watch whether OpenAI, Hugging Face or lawmakers publish more technical or legislative detail after the incident.
+- Watch whether Houthi attacks push insurers, shippers or regional governments into a fresh maritime warning.
+
 ## 2026-07-24 06:01
 
 - Watch whether PiS issues a formal split, disciplinary or coalition-style statement after the Kaczyński-Morawiecki dead end.
