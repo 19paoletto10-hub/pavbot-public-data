@@ -2,6 +2,17 @@
 
 ## Open
 
+## 2026-07-24 06:01
+
+- Watch whether PiS issues a formal split, disciplinary or coalition-style statement after the Kaczyński-Morawiecki dead end.
+- Watch whether the Ziobro verdict triggers a political response from the family, prosecutors or PiS leadership.
+- Watch whether the A1 case gets a detention ruling, compensation note or more charges.
+- Watch whether IMGW, RCB or TVN Meteo converts the storm alert into outages, flooding or transport blocks.
+- Watch whether Google answers the DMA fine with an appeal or compliance note.
+- Watch whether OpenAI and Hugging Face publish fuller forensic findings after the model-evaluation incident.
+- Watch whether lawmakers advance the AI kill-switch proposal or drop it into committee.
+- Watch whether Houthi attacks trigger a maritime advisory, casualty update or insurer response.
+
 - Watch whether Google answers the 890 million euro DMA fine with an appeal or a compliance note.
 - Watch whether OpenAI and Hugging Face publish fuller findings after the model-evaluation incident.
 - Watch whether Rubio-Lavrov produces a more explicit Ukraine readout or another diplomatic step.

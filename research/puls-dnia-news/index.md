@@ -1,10 +1,14 @@
+# Puls Dnia News Index
+
+The 2026-07-24 06:01 slot przesuwa Puls Dnia ku krajowemu pakietowi PiS, wyrokowi w sprawie Ziobry, wnioskowi aresztowemu z A1 i alertom burzowym, a za granicą dokłada cła USA, pożary we Francji, protesty w Indiach, ukraiński spór o ministerstwo obrony, Rubio-Lavrov, saudyjską umowę nuklearną, karę DMA dla Google, incydent OpenAI, nacisk na AI kill switch oraz Huti i ropę powyżej 100 dolarów.
+
 The 2026-07-23 21:14 slot przesuwa feed ku świeżym incydentom krajowym, ostrzeżeniom pogodowym i ostrzejszemu rozłamowi w PiS, a za granicą dokłada Google DMA fine, incydent bezpieczeństwa OpenAI, Rubio-Lavrowa, Huti na Morzu Czerwonym, saudyjski deal nuklearny, berliński wzrost AfD i zmianę dowództwa wojskowego Ukrainy.
 
 The 2026-07-23 18:01 slot przesuwa feed ku częściowemu powrotowi tramwajów na Aleje Jerozolimskie, nowemu wnioskowi aresztowemu w sprawie A1, wnioskowi o Michała Wosia i aktywnym burzom w Polsce, a za granicą dokłada ropę powyżej 100 dolarów, saudyjski deal nuklearny warunkowany uznaniem Izraela, ewakuacje we Francji, Huti/Red Sea, indyjski protest głodowy i kanadyjski spór o nabiał.
 
 The 2026-07-23 15:02 slot przesuwa feed w stronę decyzji KE wobec Google, ataku nożem na Powiślu, wniosku o immunitet Mejzy, pożaru salonu na Targówku i niewybuchów w Jeleniej Górze. Za granicą lead tworzą pożary we Francji, błąd policji w Manchesterze, saudyjska umowa nuklearna USA, presja Huti na Morzu Czerwonym oraz aktualny CNN blok o Iranie i ropie.
 
-# The 2026-07-23 12:01 slot przesuwa feed w stronę aktu oskarżenia wobec Macierewicza, nowego spięcia w PiS, spadku czerwcowego bezrobocia, lotniczego incydentu LOT i aktywnego bloku burzowego nad Polską. Za granicą lead tworzą pożary we Francji, indyjski protest głodowy, presja taryfowa na Kanadę, koszty AI u Google, follow-up wokół Wildberries i brytyjska debata podatkowa wokół Andy'ego Burnhama.
+The 2026-07-23 12:01 slot przesuwa feed w stronę aktu oskarżenia wobec Macierewicza, nowego spięcia w PiS, spadku czerwcowego bezrobocia, lotniczego incydentu LOT i aktywnego bloku burzowego nad Polską. Za granicą lead tworzą pożary we Francji, indyjski protest głodowy, presja taryfowa na Kanadę, koszty AI u Google, follow-up wokół Wildberries i brytyjska debata podatkowa wokół Andy'ego Burnhama.
 
 The 2026-07-23 09:02 slot przesuwa feed w stronę PiS, pożaru warsztatu na Targówku i aktywnego alertu burzowego w Polsce, a za granicą dokłada saudyjski układ nuklearny USA, napięcie Huti przy żegludze, presję na Wildberries, sygnał ostrzegawczy wokół OpenAI i nikaraguański plan wygaszania wyborów.
 
