@@ -1,8 +1,10 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-23
+Last updated: 2026-07-24
 
 ## Current Understanding
+
+Poranny run z 2026-07-24 przesuwa temat z samego modelowego rollout do kontrolowanych surface'ów, recoverability i regulacyjnej egzekucji. OpenAI włącza Health do ChatGPT dla uprawnionych dorosłych w USA, Anthropic rozszerza voice mode na Opus i Sonnet z connectorami, Runway dokłada Media Router, a Google łączy selfie-video sign-in z mocniejszym naciskiem po karze DMA. Równolegle Kongres wnosi AI Kill Switch Act, Biały Dom rozszerza Ratepayer Protection Pledge, a Hacker News i Product Hunt nadal premiują narzędzia do kontroli, auth i provenance zamiast czystego hype'u o modelach.
 
 Wieczorny run z 2026-07-23 przesuwa temat z samego kosztu i capexu do produktu, pomiaru adopcji i regulacyjnych ograniczników. OpenAI włącza do ChatGPT zdrowie, enterprise support, małe firmy i newsroomy; Google publikuje ATLAS o realnym użyciu AI; AMD i Anthropic spinają compute z kapitałem; a Kongres zaczyna mówić o formalnym kill switchu dla frontier systems. To sugeruje, że kolejny etap rynku to nie tylko większe modele, ale publicznie zarządzane surface'y, dane i ograniczniki.
 
@@ -234,6 +236,7 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-24: Daily run added OpenAI Health live rollout, Anthropic voice mode, Runway Media Router, Google selfie-video sign-in, a new DMA enforcement signal and the AI Kill Switch / ratepayer policy thread.
 - 2026-07-23: Wieczorny run dodał OpenAI Health, Presence, SMB/newsroom rollout, AMD–Anthropic 2 GW, Google ATLAS, Anthropic Economic Index connector i federalny AI kill-switch bill; główny sygnał przesuwa się w stronę produkcyjnych surface'ów i regulowanej adopcji.
 - 2026-07-23: Dzisiejszy run dołożył Google Gemini 3.6 Flash, GitHub Copilot, Android 17 migration, OpenAI 750 mld USD spend, Tesla capex, monday.com AI Work Platform oraz eskalację Moonshot/Treasury; polski BI o tokenmaxxingu dobrze tłumaczy zwrot rynku w stronę kosztu tokena i CFO-level scrutiny.
 - 2026-07-22: Wieczorny refresh dodał OpenAI Project Camellia i 750 mld USD capex, Meta Content Seal i Substack Scan for AI text jako nową warstwę provenance, Suno breach oraz Glow/Arcee jako sygnały security i open-weight policy.
