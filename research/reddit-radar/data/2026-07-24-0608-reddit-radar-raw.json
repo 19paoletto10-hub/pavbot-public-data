@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-24-0608",
+  "status": "material_update",
+  "generatedAt": "2026-07-24T04:08:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-24T06:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Live 06:08 review completed through read-only Safari Apple Events and exact old.reddit.com post pages in the local Safari session.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-23-2208 and 2026-07-23-1808, so last night’s verified finalists and winners could not roll forward into this slot.",
+      "Before selecting replacements, the run verified that origin/main already serves 2026-07-23-0608 for reddit-radar, so the remote topic was current and this slot was a normal morning rotation rather than a recovery publish.",
+      "Read-only finalist review stayed on exact old.reddit post pages for Idk man it's too early for me to accept my fate, Do people just hate fun, The roof rack, it calls to them, She really thought I had game, progRammersWritingcomments, warningsAreNotMyProblem, theBrainKnows, eraseDiskOnWakeUp, Asked my librarian husband why our library doesn't have video games. People ruin everything., I went into the shower and my sister made her hair like this…, Trying to ask someone what they do for work while online dating, and that's fucked up.",
+      "r/facepalm and most of r/AskReddit were discarded early because the visible cluster leaned political, heavy, or too discussion-first instead of compact public-safe humor.",
+      "At least five safe fresh cards survived the live review, so the reddit-radar contract prefers a new public bundle over keeping the visible 2026-07-23-0608 bundle unchanged.",
+      "Some high-ranking meme challengers were removed by moderators during review, so they were excluded from the production bundle even when the listing looked strong.",
+      "No Reddit social actions were performed.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-23-0608",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-24-0608-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-24-0608-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-24-0608-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1v4kgum/we_shouldnt_have_to_censor_names/",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v4egmh/dog_ate_96gb_crucial_ram_kit_this_is_the_aftermath/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v45azn/corporate_meme/?sort=top",
+    "https://old.reddit.com/r/AskReddit/comments/1v4eqg4/what_joke_might_take_people_a_few_seconds_to_get/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v4eip6/sadly_many_of_them/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v4elrk/those_eyes/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v4fflt/spinedeprecatedatversion30/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v4aq0g/justonemoremodelbro/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v48e8n/fensterosbymicrosoft/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v4evjj/seller_keeps_92_of_the_total_value_as_restocking/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v4bw70/my_friend_says_reading_is_pointless_because_he/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v4fb8f/my_work_installed_new_cameras_over_our_desks/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v4kgum/we_shouldnt_have_to_censor_names/"
+  ],
+  "newCandidates": [
+    {
+      "title": "Do people just hate fun",
+      "url": "https://old.reddit.com/r/memes/comments/1v4q5j6/do_people_just_hate_fun/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "7.1k hot"
+    },
+    {
+      "title": "progRammersWritingcomments",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v4hy5m/programmerswritingcomments/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "2.0k hot"
+    },
+    {
+      "title": "theBrainKnows",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v4ke16/thebrainknows/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "1.3k hot"
+    },
+    {
+      "title": "I went into the shower and my sister made her hair like this…",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v4qxl2/i_went_into_the_shower_and_my_sister_made_her/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "scoreLabel": "2.0k hot"
+    },
+    {
+      "title": "Trying to ask someone what they do for work while online dating",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v4w7rd/trying_to_ask_someone_what_they_do_for_work_while/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "scoreLabel": "2.5k hot"
+    },
+    {
+      "title": "Idk man it's too early for me to accept my fate",
+      "url": "https://old.reddit.com/r/memes/comments/1v4nzzg/idk_man_its_too_early_for_me_to_accept_my_fate/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "12.0k hot"
+    },
+    {
+      "title": "The roof rack, it calls to them",
+      "url": "https://old.reddit.com/r/memes/comments/1v4iige/the_roof_rack_it_calls_to_them/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "4.7k hot"
+    },
+    {
+      "title": "warningsAreNotMyProblem",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v4kb0n/warningsarenotmyproblem/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "705 hot"
+    },
+    {
+      "title": "Asked my librarian husband why our library doesn't have video games. People ruin everything.",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v4mgfv/asked_my_librarian_husband_why_our_library_doesnt/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "12.2k hot"
+    },
+    {
+      "title": "She really thought I had game",
+      "url": "https://old.reddit.com/r/memes/comments/1v4hspe/she_really_thought_i_had_game/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "3.3k hot"
+    },
+    {
+      "title": "that's fucked up",
+      "url": "https://old.reddit.com/r/memes/comments/1v4uoi8/thats_fucked_up/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "2.2k hot"
+    }
+  ]
+}
