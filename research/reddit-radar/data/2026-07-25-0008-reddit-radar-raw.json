@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-25-0008",
+  "status": "material_update",
+  "generatedAt": "2026-07-24T22:08:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-25T00:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Computer Use preflight confirmed that the local Safari session was available before the live review.",
+      "Live 00:08 review completed through read-only Safari Apple Events and exact old.reddit.com post pages in the local Safari session.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-24-0608 and 2026-07-23-2208, so the visible morning bundle and late-night challenger could not roll forward into this slot.",
+      "Before selecting replacements, the run verified that origin/main already serves 2026-07-24-0608 for reddit-radar, so the remote topic was current and this slot was a normal rotation rather than a recovery publish.",
+      "Read-only finalist review stayed on exact old.reddit post pages for Cannot unsee it now, When HR starts the meeting with Thanks for joining, anyone with me, It's a self fulfilling prophecy at this point, inheritedTechDebt, broWhyMadYouMadeItMITLicensed, soundsLegit, sheSaidOrMeOrTheRubberDuck, Delivery guy substituted bubbles for bubble wrap, Walked out to my shower this morning, Woman who came through my line today doesn't understand how tax works, Creepy Amazon chatbot, Happened to me recently, The lettter A, Lowkey it's not a cat's fault we getting robbed, neverTrustAI, oNItBoss, Neighbours had a gender reveal in their garden and now my garden is covered in blue plastic, and Wolfgangs steakhouse, the most expensive in my city, can't cook a steak.",
+      "r/facepalm and most of r/AskReddit were discarded early because the visible cluster leaned political, heavy, or too discussion-first instead of compact public-safe humor.",
+      "At least five safe fresh cards survived the live review, so the reddit-radar contract prefers a new public bundle over keeping the visible 2026-07-24-0608 bundle unchanged.",
+      "No Reddit social actions were performed.",
+      "Expected topic-local automation-prompt.md is still absent, so this run followed topic.md plus the existing reddit-radar artifact contract."
+    ]
+  },
+  "currentPublicBundle": "2026-07-24-0608",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-25-0008-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-25-0008-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-25-0008-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1v4kgum/we_shouldnt_have_to_censor_names/",
+    "https://old.reddit.com/r/memes/comments/1v4q5j6/do_people_just_hate_fun/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v4hy5m/programmerswritingcomments/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v4ke16/thebrainknows/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v4qxl2/i_went_into_the_shower_and_my_sister_made_her/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v4w7rd/trying_to_ask_someone_what_they_do_for_work_while/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v4iige/the_roof_rack_it_calls_to_them/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v4hspe/she_really_thought_i_had_game/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v4uoi8/thats_fucked_up/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v4kb0n/warningsarenotmyproblem/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v4mgfv/asked_my_librarian_husband_why_our_library_doesnt/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "title": "When HR starts the meeting with Thanks for joining",
+      "url": "https://old.reddit.com/r/memes/comments/1v6iifb/when_hr_starts_the_meeting_with_thanks_for_joining/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "2.0k hot"
+    },
+    {
+      "title": "inheritedTechDebt",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v6ahq9/inheritedtechdebt/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "3.2k hot"
+    },
+    {
+      "title": "soundsLegit",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v65b84/soundslegit/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "2.1k hot"
+    },
+    {
+      "title": "oNItBoss",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v6eky7/onitboss/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "392 hot"
+    },
+    {
+      "title": "Wolfgangs steakhouse, the most expensive in my city, can't cook a steak",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v6b8xa/wolfgangs_steakhouse_the_most_expensive_in_my/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "scoreLabel": "24.5k hot"
+    },
+    {
+      "title": "Cannot unsee it now",
+      "url": "https://old.reddit.com/r/memes/comments/1v65vml/cannot_unsee_it_now/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "16.7k hot"
+    },
+    {
+      "title": "anyone with me",
+      "url": "https://old.reddit.com/r/memes/comments/1v615hy/%C3%A6ny%C3%B8ne_with_me/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "5.3k hot"
+    },
+    {
+      "title": "It's a self fulfilling prophecy at this point",
+      "url": "https://old.reddit.com/r/memes/comments/1v61wi1/its_a_self_fufilling_propehcy_at_this_point/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "2.5k hot"
+    },
+    {
+      "title": "broWhyMadYouMadeItMITLicensed",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v6b6lh/browhymadyoumadeitmitlicensed/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "1.8k hot"
+    },
+    {
+      "title": "sheSaidOrMeOrTheRubberDuck",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v5wiha/shesaidormeortherubberduck/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "4.3k hot"
+    },
+    {
+      "title": "Walked out to my shower this morning",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v67ttf/walked_out_to_my_shower_this_morning/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "5.6k hot"
+    },
+    {
+      "title": "Woman who came through my line today doesn't understand how tax works",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v6j1lf/woman_who_came_through_my_line_today_doesnt/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "fresh hot"
+    }
+  ]
+}
