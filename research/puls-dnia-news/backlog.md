@@ -2,6 +2,14 @@
 
 ## Open
 
+## 2026-07-26 06:02
+
+- Watch whether PiS issues a formal split, disciplinary or coalition-style statement after the latest escalation.
+- Watch whether IMGW or RCB convert the weekend forecast into outages, flooding or transport blocks.
+- Watch whether the Berlin attack gets a confirmed suspect, motive or casualty update.
+- Watch whether trading partners answer the new U.S. tariff round with retaliation or formal clarification.
+- Watch whether OpenAI, Hugging Face or the Commission publish a further technical follow-up.
+
 ## 2026-07-24 09:04
 
 - Watch whether PiS issues a formal reply after Piotr Müller sharpened the split narrative.

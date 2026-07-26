@@ -1,5 +1,9 @@
 # Puls Dnia News Index
 
+The 2026-07-26 06:02 slot adds a sharper weekend weather-risk block with possible second-degree IMGW alerts, keeps PiS conflict at the top with a fresh escalation in TVN24, and widens the foreign feed toward Berlin, French and Spanish wildfires, India, Kyiv, Houthi shipping risk, U.S. tariffs, OpenAI/Hugging Face, Google DMA and the U.S.-Saudi nuclear deal.
+
+# Puls Dnia News Index
+
 The 2026-07-24 09:04 slot keeps Puls Dnia anchored in the PiS split, Piotr Müller’s sharper public comment, the Ziobro verdict, the A1 arrest request and the live storm alert, while abroad it adds Trump’s new tariff round, French wildfire evacuations, Indian exam protests, Ukraine’s defence-minister dispute, Rubio-Lavrov, the Saudi nuclear deal, the Google DMA fine, the OpenAI security incident, the AI kill-switch push and the oil-price shock.
 
 The 2026-07-24 06:01 slot przesuwa Puls Dnia ku krajowemu pakietowi PiS, wyrokowi w sprawie Ziobry, wnioskowi aresztowemu z A1 i alertom burzowym, a za granicą dokłada cła USA, pożary we Francji, protesty w Indiach, ukraiński spór o ministerstwo obrony, Rubio-Lavrov, saudyjską umowę nuklearną, karę DMA dla Google, incydent OpenAI, nacisk na AI kill switch oraz Huti i ropę powyżej 100 dolarów.
