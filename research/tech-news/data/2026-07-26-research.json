@@ -1,0 +1,350 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-26",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy scan pokazuje, że frontier AI przesuwa się z samego „kto ma lepszy model” do „kto ma tańszy, łatwiej wdrażalny i lepiej finansowany model”. Anthropic wypuszcza Claude Opus 5 jako model blisko Fable 5, ale za połowę ceny, AMD zamienia compute w wieloletni pakiet kapitałowo-infrastrukturalny z Anthropic i OpenAI, a szeroka koalicja firm z Microsoftem, NVIDIA, Google i OpenAI podpisuje list broniący open weights jako warunku konkurencji i suwerenności.",
+    "Równolegle rośnie presja z dwóch stron dystrybucji. Google twierdzi, że AI Overviews ma 2,5 mld miesięcznych użytkowników, AI Mode przekracza 1 mld, ale jednocześnie daje właścicielom stron nowy opt-out w Search Console, bo wydawcy coraz częściej rozważają odcięcie dostępu. Po stronie infrastruktury AP opisuje ostrzejsze regulacje dla wody w Virginii, Reuters/Tom's Hardware pokazują protesty w 42 stanach, a WSJ i AP opisują politykę, która próbuje przerzucić koszty prądu i sieci na operatorów data center.",
+    "Community signal jest spójny z tym zwrotem. Hacker News premiuje Opus 5 i open-weight AI, a Product Hunt robi dziś OpenAI Day wokół produktów budowanych na GPT-5.6."
+  ],
+  "summaryBullets": [
+    "AI: Claude Opus 5 podbija koszt i jakość",
+    "Infrastruktura: AMD wiąże Anthropic i OpenAI z Helios",
+    "Regulacje: Open-weight koalicja idzie do Waszyngtonu"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-26-0-claude-opus-5-podbija-koszt-i-jakosc-d7c13321c1",
+      "section": "AI",
+      "title": "Claude Opus 5 podbija koszt i jakość",
+      "standfirst": "Anthropic wypuściło Claude Opus 5 24 lipca 2026. Firma mówi, że model zbliża się do Claude Fable 5, kosztuje o połowę mniej i jest nowym SOTA w coding i knowledge work.",
+      "whatHappened": "Opus 5 trafił do oferty jako najnowszy model Anthropic.",
+      "whyItMatters": "To zmienia punkt odniesienia w wyścigu frontier i podbija presję na cenę per task, nie tylko benchmark.",
+      "deeperAnalysis": [
+        "Opus 5 jest ważny nie dlatego, że jest kolejnym „lepszym modelem”, ale dlatego, że Anthropic pozycjonuje go jako tańszy sposób na prawie top-tier capability. Taka oferta trafia bezpośrednio w środowisko, w którym CFO i product teams zaczęli patrzeć na koszt zadania, a nie na samą jakość odpowiedzi.",
+        "W praktyce to wzmacnia trend z ostatnich tygodni: firmy chcą modelu, który da się wpiąć w długie workflowy, a nie tylko do demo. Jeśli Opus 5 potwierdzi się w produkcji, może przyspieszyć wymianę drogich modeli na hybrydę \"najlepszy model do trudnego kroku, tańszy do reszty\"."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic uruchomiło Opus 5 24 lipca 2026.",
+        "Dlaczego ważne: koszt i jakość zaczynają być ważniejsze niż sama marka modelu.",
+        "Na co patrzeć dalej: adopcja, effort controls, bezpieczeństwo i odpowiedź OpenAI albo Google."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic",
+          "url": "https://www.anthropic.com/news/claude-opus-5"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/24/anthropic-launches-opus-5/"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/970105/claude-opus-5-announced-anthropic-ai-model-release"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "Claude",
+        "pricing",
+        "coding",
+        "agents"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-26-1-amd-wiaze-anthropic-i-openai-z-helios-33beed21c0",
+      "section": "Infrastruktura",
+      "title": "AMD wiąże Anthropic i OpenAI z Helios",
+      "standfirst": "AMD ogłosiło 22 lipca 2026 partnerstwo z Anthropic: do 2 GW GPU MI450 w Helios, z pierwszym gigawatem w 2027 roku i inwestycją kapitałową do 5 mld USD. Dwa dni później AMD doprecyzowało, że OpenAI też ma uruchamiać Helios od Q4 2026.",
+      "whatHappened": "AMD zbudowało pakiet compute + equity + software collaboration wokół Anthropic, a OpenAI pojawiło się jako kolejny klient Helios.",
+      "whyItMatters": "AI infra przestaje być tylko zakupem GPU, a zaczyna przypominać finansowany, wieloletni kontrakt na moc obliczeniową i wspólną optymalizację stacku.",
+      "deeperAnalysis": [
+        "Ten deal jest ważny, bo spina trzy warstwy naraz: chipy, kapitał i integrację software'ową. AMD nie tylko sprzedaje hardware, ale też finansuje klienta i prosi go o pomoc w optymalizacji własnego ekosystemu ROCm.",
+        "To sygnał, że na rynku compute popyt jest na tyle wysoki, iż producenci chipów muszą oferować nie tylko jednostki, ale i kredyt, engineering support oraz ścieżkę wdrożenia. Dla całej branży oznacza to dalszą finansjalizację AI infra i większą presję na dostawców bez własnej skali kapitałowej."
+      ],
+      "contextPoints": [
+        "Co się stało: AMD i Anthropic ogłosiły 2 GW Helios oraz inwestycję do 5 mld USD.",
+        "Dlaczego ważne: compute staje się instrumentem finansowym i strategicznym.",
+        "Na co patrzeć dalej: milestones, leasing, wdrożenia OpenAI i ewentualne kolejne partnerstwa."
+      ],
+      "sources": [
+        {
+          "title": "AMD press release",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus"
+        },
+        {
+          "title": "AMD AAI 2026",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era"
+        },
+        {
+          "title": "AMD Helios",
+          "url": "https://www.amd.com/en/products/rackscale-solutions/helios.html"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AMD",
+        "Anthropic",
+        "OpenAI",
+        "Helios",
+        "GPUs",
+        "infrastructure"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-26-2-open-weight-koalicja-idzie-do-waszyngtonu-1447da0453",
+      "section": "Regulacje",
+      "title": "Open-weight koalicja idzie do Waszyngtonu",
+      "standfirst": "Microsoft, NVIDIA, Meta, OpenAI, Google i dziesiątki innych firm podpisały list \"Open Weights and American AI Leadership\" z 24 lipca 2026. Dokument broni open weights jako warunku konkurencji, bezpieczeństwa i suwerenności.",
+      "whatHappened": "powstał szeroki front firm i fundacji przeciw \"premature restrictions\" na modele, które można pobrać i uruchomić lokalnie.",
+      "whyItMatters": "To jest jedna z niewielu kwestii, w której tyle konkurujących firm mówi dziś jednym głosem o kierunku polityki AI.",
+      "deeperAnalysis": [
+        "List jest istotny, bo nie prosi tylko o łagodniejsze regulacje. On próbuje ustawić definicję tego, co w AI ma być uznane za zdrowy ekosystem: szeroki dostęp, możliwość inspekcji, lokalne uruchamianie i konkurencja na warstwie aplikacji oraz chipów.",
+        "W tym samym czasie AP pokazuje, że chińskie open-weight modele zyskują użytkowników w USA, a to sprawia, że polityka nie jest już abstrakcyjna. Spór o open weights to teraz także spór o to, czy amerykański rynek ma odpowiadać cenzurą, czy własnym, konkurencyjnym ekosystemem."
+      ],
+      "contextPoints": [
+        "Co się stało: opublikowano list z bardzo szeroką listą sygnatariuszy.",
+        "Dlaczego ważne: definicja \"AI leadership\" przesuwa się z jednego modelu na cały ekosystem.",
+        "Na co patrzeć dalej: czy list przełoży się na konkretne regulacje albo tylko na lobbying."
+      ],
+      "sources": [
+        {
+          "title": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/"
+        },
+        {
+          "title": "NVIDIA PDF",
+          "url": "https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf"
+        },
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/china-ai-model-us-kimi-deepseek-a00bf637866fcd4d81f4fde28c9862ce"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "open-weight",
+        "policy",
+        "Microsoft",
+        "NVIDIA",
+        "OpenAI",
+        "Google"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-26-3-chinskie-modele-wchodza-do-amerykanskiego-workflow-adeb73a73d",
+      "section": "AI",
+      "title": "Chińskie modele wchodzą do amerykańskiego workflow",
+      "standfirst": "AP opisuje, że amerykańscy użytkownicy i firmy zaczynają sięgać po Moonshot Kimi K3 i Z.ai GLM-5.2, bo są tańsze i \"good enough\" do codziennych zadań. Kimi po premierze musiał nawet chwilowo wstrzymać nowe subskrypcje.",
+      "whatHappened": "chińskie modele przestały być tylko ciekawostką benchmarkową, a zaczęły realnie przejmować część codziennego użycia.",
+      "whyItMatters": "To mocny dowód, że koszt i dostępność stają się równie ważne jak absolutna jakość, szczególnie w agentic workflow.",
+      "deeperAnalysis": [
+        "To nie jest już opowieść o egzotycznym modelu z Chin. AP pokazuje konkretny wzorzec adopcji: CTO w Mozilli, firmy z USA i rozwijający się ekosystem użytkowników traktują te modele jako narzędzie do pracy, bo ich efektywność kosztowa jest trudna do zignorowania.",
+        "Jeśli ten trend się utrzyma, zachodnie firmy będą musiały równolegle bronić własnych modeli, dostosowywać ceny i budować routing między modelami. W praktyce może to przyspieszyć przejście od \"jeden vendor do wszystkiego\" do wielomodelowej polityki użycia."
+      ],
+      "contextPoints": [
+        "Co się stało: AP opisuje rosnącą adopcję chińskich modeli w USA.",
+        "Dlaczego ważne: model economics i open weights zaczynają przesuwać realną adopcję.",
+        "Na co patrzeć dalej: ceny tokenów, przychody OpenAI i Anthropic oraz ewentualne sankcje."
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/china-ai-model-us-kimi-deepseek-a00bf637866fcd4d81f4fde28c9862ce"
+        },
+        {
+          "title": "FT",
+          "url": "https://www.ft.com/content/9c8ff45b-7c20-4c2e-93c9-c52339ffdcee?syn-25a6b1a6=1"
+        },
+        {
+          "title": "The Times",
+          "url": "https://www.thetimes.com/comment/columnists/article/china-ai-deepseek-anthropic-us-sp36r6dxl"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "China",
+        "open-weight",
+        "Kimi K3",
+        "GLM-5.2",
+        "cost",
+        "agents"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-26-4-google-oddaje-czesc-kontroli-ale-wydawcy-twardnieja-4ea5a3d0a2",
+      "section": "Produkty",
+      "title": "Google oddaje część kontroli, ale wydawcy twardnieją",
+      "standfirst": "Google twierdzi, że AI Overviews ma już ponad 2,5 mld MAU, a AI Mode przekroczył 1 mld użytkowników miesięcznie. Jednocześnie wprowadza w Search Console toggle dla właścicieli stron, ale WSJ pisze, że Reddit, Reuters, Politico i inni rozważają odcięcie Google od treści.",
+      "whatHappened": "Google testuje narzędzia kontroli dla wydawców, a wydawcy rozważają twardszą obronę ruchu.",
+      "whyItMatters": "To sygnał, że relacja Google-web wchodzi w fazę jawnego konfliktu o dystrybucję i wartościowy ruch.",
+      "deeperAnalysis": [
+        "Google próbuje pokazać, że generatywne Search nadal prowadzi użytkowników do źródeł, ale samo wprowadzenie toggla opt-out mówi, że presja regulatorów i wydawców działa. Jeśli wydawcy zaczną masowo korzystać z wyłączenia, Google będzie musiał dowodzić, że AI summaries nadal generują wartosciowy traffic.",
+        "WSJ sugeruje, że nie chodzi już o abstrakcyjny spór o \"AI w searchu\", tylko o bardzo konkretne decyzje biznesowe po stronie mediów. To może stać się jednym z najważniejszych testów tego, czy open web w ogóle utrzyma się jako kanał dystrybucji w erze answer engines."
+      ],
+      "contextPoints": [
+        "Co się stało: Google dodało opt-out w Search Console, wydawcy rozważają odcięcie dostępu.",
+        "Dlaczego ważne: dystrybucja treści i ruch do wydawców stają się negocjowalne.",
+        "Na co patrzeć dalej: realne użycie toggla, reakcje Reuters i Reddit oraz dane o ruchu."
+      ],
+      "sources": [
+        {
+          "title": "Google",
+          "url": "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/"
+        },
+        {
+          "title": "WSJ",
+          "url": "https://www.wsj.com/business/media/google-search-publishers-ai-content-0fb06e41"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Search",
+        "publishers",
+        "AI Overviews",
+        "AI Mode",
+        "web"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-26-5-data-center-backlash-staje-sie-polityka-uzytecznosci-340b45f24d",
+      "section": "Infrastruktura",
+      "title": "Data center backlash staje się polityką użyteczności",
+      "standfirst": "AP opisuje, że Virginia publikuje długo wstrzymany raport o groundwater, który rekomenduje ostrzejsze reguły dla ogromnych poborów wody. Równolegle protesty przeciw data center odbyły się w 142 lokalizacjach w 42 stanach, a WSJ pisze o rozszerzeniu pledge, który ma przerzucać koszty sieci i energii na operatorów.",
+      "whatHappened": "backlash wobec AI infra wyszedł poza pojedyncze moratoria i stał się problemem regulacyjnym, wyborczym i utility-scale.",
+      "whyItMatters": "To może realnie ograniczyć tempo budowy centrów danych i podbić koszt ekspansji AI.",
+      "deeperAnalysis": [
+        "Najważniejsze jest to, że infrastruktura AI nie jest już tylko inżynierskim problemem. Woda, energia, hałas i lokalna zgoda stały się politycznym kosztem rozbudowy compute, a dokument z Virginii pokazuje, że ten koszt może mieć twarde konsekwencje dla nowych inwestycji.",
+        "Jeśli dołożymy do tego publiczne protesty oraz pledge o ochronie rachunków odbiorców, widać nowy zestaw ograniczeń. Od teraz każda duża ekspansja AI musi liczyć się nie tylko z dostępnością GPU, ale też z permittingiem, taryfami i społecznie akceptowalnym modelem zasilania."
+      ],
+      "contextPoints": [
+        "Co się stało: Virginia ostrzega przed spadkiem dostępności wody; protesty objęły 42 stany.",
+        "Dlaczego ważne: AI infra wchodzi w obszar public utility policy.",
+        "Na co patrzeć dalej: kolejne moratoria, rate-case, lokalne referenda i reakcje firm."
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/data-centers-virginia-groundwater-gov-spanberger-study-564e5d3c2520190bbfa5c7dbd0c6409f"
+        },
+        {
+          "title": "Tom's Hardware",
+          "url": "https://www.tomshardware.com/tech-industry/policy/142-ai-data-center-protests-staged-in-42-states-as-public-opposition-increases-organizers-brand-unaccountable-buildouts-as-an-unacceptable-infringement-on-our-liberty"
+        },
+        {
+          "title": "WSJ",
+          "url": "https://www.wsj.com/politics/policy/trump-pledge-to-limit-ai-driven-electric-bill-increases-attracts-big-utilities-ae408981"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "data centers",
+        "power",
+        "water",
+        "protests",
+        "regulation",
+        "AI"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Claude Opus 5 zrywa z logiką najdroższego modelu",
+      "rationale": "Opus 5 daje prawie frontierową jakość za połowę ceny, więc naciska na całe modelowe pricingi.",
+      "sourcesLabel": "Anthropic; TechCrunch; The Verge"
+    },
+    {
+      "priority": "High",
+      "title": "AMD wiąże Anthropic i OpenAI z Helios",
+      "rationale": "2 GW compute i inwestycja do 5 mld USD pokazują, że AI infra staje się finansowanym kontraktem strategicznym.",
+      "sourcesLabel": "AMD; The Verge; WSJ"
+    },
+    {
+      "priority": "High",
+      "title": "Open-weight koalicja idzie do Waszyngtonu",
+      "rationale": "Tak szeroki front firm rzadko mówi jednym głosem o polityce AI.",
+      "sourcesLabel": "Microsoft; NVIDIA; AP"
+    },
+    {
+      "priority": "High",
+      "title": "Chińskie modele wchodzą do amerykańskiego workflow",
+      "rationale": "AP pokazuje realnych użytkowników i firmy, które wybierają Kimi K3 i GLM-5.2 dla kosztu i szybkości.",
+      "sourcesLabel": "AP; FT; The Times"
+    },
+    {
+      "priority": "High",
+      "title": "Google oddaje część kontroli, ale wydawcy twardnieją",
+      "rationale": "To może zdecydować o tym, czy open web dalej dostarcza ruch w erze answer engines.",
+      "sourcesLabel": "Google; WSJ"
+    },
+    {
+      "priority": "High",
+      "title": "Data center backlash staje się polityką użyteczności",
+      "rationale": "Woda, energia i permitting zaczynają ograniczać tempo ekspansji AI infra.",
+      "sourcesLabel": "AP; WSJ; Tom's Hardware"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Anthropic: Introducing Claude Opus 5",
+      "url": "https://www.anthropic.com/news/claude-opus-5"
+    },
+    {
+      "title": "AMD: AMD and Anthropic announce strategic partnership to deploy up to 2 gigawatts of AMD Instinct MI450 Series GPUs",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1292/amd-and-anthropic-announce-strategic-partnership-to-deploy-up-to-2-gigawatts-of-amd-instinct-mi450-series-gpus"
+    },
+    {
+      "title": "AMD: AAI 2026: AMD Delivers Full-Stack Compute for the Agentic AI Era",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1294/aai-2026-amd-delivers-full-stack-compute-for-the-agentic-ai-era"
+    },
+    {
+      "title": "Microsoft: Open Weights and American AI Leadership",
+      "url": "https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/"
+    },
+    {
+      "title": "NVIDIA PDF: Open Weights and American AI Leadership",
+      "url": "https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf"
+    },
+    {
+      "title": "AP: Cheaper, open and intelligent: Chinese AI models gain ground, as they make inroads in the US",
+      "url": "https://apnews.com/article/china-ai-model-us-kimi-deepseek-a00bf637866fcd4d81f4fde28c9862ce"
+    },
+    {
+      "title": "Google: New opportunities, control and insights for website owners",
+      "url": "https://blog.google/products-and-platforms/products/search/new-controls-website-owners/"
+    },
+    {
+      "title": "Google: Alphabet earnings call Q2 2026 remarks",
+      "url": "https://blog.google/company-news/inside-google/message-ceo/alphabet-earnings-q2-2026/"
+    },
+    {
+      "title": "WSJ: Google Search Was a Lifeline for Publishers. Now They’re Thinking of Cutting it Off.",
+      "url": "https://www.wsj.com/business/media/google-search-publishers-ai-content-0fb06e41"
+    },
+    {
+      "title": "AP: Virginia study on groundwater, data centers calls for tighter water regulations",
+      "url": "https://apnews.com/article/data-centers-virginia-groundwater-gov-spanberger-study-564e5d3c2520190bbfa5c7dbd0c6409f"
+    },
+    {
+      "title": "WSJ: Utilities Join Trump Pledge to Limit AI-Driven Increases in Electricity Bills",
+      "url": "https://www.wsj.com/politics/policy/trump-pledge-to-limit-ai-driven-electric-bill-increases-attracts-big-utilities-ae408981"
+    },
+    {
+      "title": "Tom's Hardware: 142 AI data center protests staged in 42 states",
+      "url": "https://www.tomshardware.com/tech-industry/policy/142-ai-data-center-protests-staged-in-42-states-as-public-opposition-increases-organizers-brand-unaccountable-buildouts-as-an-unacceptable-infringement-on-our-liberty"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/front"
+    },
+    {
+      "title": "Product Hunt OpenAI Day",
+      "url": "https://www.producthunt.com/contests/openai-day-july-26"
+    }
+  ]
+}

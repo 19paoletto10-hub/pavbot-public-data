@@ -1,8 +1,12 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-24
+Last updated: 2026-07-26
 
 ## Current Understanding
+
+Poranny run z 2026-07-26 dokłada do osi kosztu i kontroli nowy, bardzo konkretny sygnał: Anthropic wypuszcza Claude Opus 5 jako model blisko Fable 5, ale za połowę ceny; AMD spina Anthropic i OpenAI z Helios jako pakietem compute + kapitał + engineering; a szeroka koalicja firm z Microsoftem, NVIDIA, Google i OpenAI broni open weights jako warunku konkurencji i suwerenności. Równolegle AP pokazuje, że chińskie modele są już używane w USA z powodów kosztowych, Google daje wydawcom nowy opt-out w Search Console, a backlash wobec data centers wchodzi w fazę protestów, wody i utility bills.
+
+Community signal dziś potwierdza to przesunięcie. Hacker News premiuje Opus 5 i open-weight AI, a Product Hunt robi OpenAI Day wokół produktów budowanych na GPT-5.6, więc społeczność techniczna nadal nagradza kontrolę, routing i koszt zamiast czystego modelowego hype'u.
 
 Poranny run z 2026-07-24 przesuwa temat z samego modelowego rollout do kontrolowanych surface'ów, recoverability i regulacyjnej egzekucji. OpenAI włącza Health do ChatGPT dla uprawnionych dorosłych w USA, Anthropic rozszerza voice mode na Opus i Sonnet z connectorami, Runway dokłada Media Router, a Google łączy selfie-video sign-in z mocniejszym naciskiem po karze DMA. Równolegle Kongres wnosi AI Kill Switch Act, Biały Dom rozszerza Ratepayer Protection Pledge, a Hacker News i Product Hunt nadal premiują narzędzia do kontroli, auth i provenance zamiast czystego hype'u o modelach.
 
@@ -236,6 +240,8 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-26: Daily run dodał Claude Opus 5, AMD-Anthropic/OpenAI Helios, broad open-weight coalition, chińskie modele wchodzące do amerykańskiego workflow, Google Search Console opt-out i wyraźny backlash wobec data centers; główny sygnał przesuwa się z rolloutów na koszt, kapitał i dostęp.
+- 2026-07-26: HN promuje Opus 5 i open-weight AI, a Product Hunt robi OpenAI Day wokół GPT-5.6, co potwierdza, że community nadal premiuje control surfaces i routing.
 - 2026-07-24: Daily run added OpenAI Health live rollout, Anthropic voice mode, Runway Media Router, Google selfie-video sign-in, a new DMA enforcement signal and the AI Kill Switch / ratepayer policy thread.
 - 2026-07-23: Wieczorny run dodał OpenAI Health, Presence, SMB/newsroom rollout, AMD–Anthropic 2 GW, Google ATLAS, Anthropic Economic Index connector i federalny AI kill-switch bill; główny sygnał przesuwa się w stronę produkcyjnych surface'ów i regulowanej adopcji.
 - 2026-07-23: Dzisiejszy run dołożył Google Gemini 3.6 Flash, GitHub Copilot, Android 17 migration, OpenAI 750 mld USD spend, Tesla capex, monday.com AI Work Platform oraz eskalację Moonshot/Treasury; polski BI o tokenmaxxingu dobrze tłumaczy zwrot rynku w stronę kosztu tokena i CFO-level scrutiny.
