@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-07-20",
+  "runTime": "15:41",
+  "executiveSummary": "Dzisiejszy sweep nie dołożył kolejnego systemowego klastra wokół Antal, ITDS czy Cloudfide, ale mocno poszerzył warstwę AI-native software engineering i computer vision. Najmocniejsze nowe sygnały to Sigmoidal, Surveily, Primotly i Deviniti: role są bardziej produkcyjne niż eksperymentalne, a w kilku przypadkach pojawia się też publiczna stawka i jasny podział między canonical employer page a board mirror.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "(AI) Software Engineer 3.0",
+      "company": "Sigmoidal",
+      "location": "Wrocław office + remote-first Poland",
+      "workMode": "Remote",
+      "compensation": "30 000 - 36 000 PLN/mies. B2B na careers; board mirror pokazuje 7 878,98 - 9 454,77 USD net/mies. B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Claude, MCP, Python, FastAPI, AWS, Docker, SQL, REST API; RAG jako nice-to-have",
+      "whyInteresting": "to jeden z najmocniejszych dziś sygnałów AI-native delivery, z wyraźnym naciskiem na zamianę prototypów w systemy produkcyjne i na praktyczne użycie MCP oraz Claude Code",
+      "uncertainty": "careers page i board mirror różnią się walutą oraz lokalizacją; za kanoniczne uznaję stronę Sigmoidal",
+      "sourceURLs": [
+        "https://sigmoidal.io/careers",
+        "https://justjoin.it/job-offer/sigmoidal--ai-software-engineer-3-0-wroclaw-ai-aff496ad"
+      ],
+      "tags": [
+        "RAG",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Mid Machine Learning Engineer · AI / Computer Vision | WROCŁAW",
+      "company": "Surveily",
+      "location": "Ślężna 104, Wrocław; hybrid 4 onsite / 1 remote",
+      "workMode": "Remote",
+      "compensation": "7 000 - 12 000 PLN B2B na careers; board mirror pokazuje 3 963,43 - 5 813,03 USD net/mies. B2B",
+      "seniority": "Mid",
+      "fitSummary": "computer vision, pełny ML lifecycle, Python, PyTorch, MLOps, evaluation, deployment i production tooling",
+      "whyInteresting": "to praktyczna, end-to-end rola ML/CV z produkcyjnym scope, a nie tylko ogólne AI branding",
+      "uncertainty": "careers hub mówi szerzej o Machine Learning Engineer, a board zawęża rolę do computer vision; rozjazd między walutą i opisem warto sprawdzić następną rundą",
+      "sourceURLs": [
+        "https://surveily.com/pl/career",
+        "https://justjoin.it/job-offer/surveily-mid-machine-learning-engineer-surveily-ai-wroclaw-wroclaw-ai"
+      ],
+      "tags": [
+        "MLOps",
+        "Python"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior AI Engineer (Python, GenAI, GCP)",
+      "company": "Primotly",
+      "location": "Warszawa +4 locations; remote",
+      "workMode": "Remote",
+      "compensation": "185-230 PLN/h B2B",
+      "seniority": "Senior",
+      "fitSummary": "production-grade GenAI na GCP, multi-agent systems, Agentic RAG, multimodal AI, AI-powered SaaS, LangGraph/LLM frameworks i Python",
+      "whyInteresting": "bardzo mocny hands-on scope na produkcyjnym GenAI, z wyraźnym oczekiwaniem na architekturę, deployment i operowanie systemami, a nie tylko prototypy",
+      "uncertainty": "to nie jest Wrocław-specific rola, ale dobrze wpisuje się w remote Poland scope; na ten moment źródłem pozostaje board detail",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/primotly-senior-ai-engineer-python-genai-gcp--warszawa-ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM",
+        "GenAI",
+        "Python",
+        "GCP"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "AI Engineer",
+      "company": "Deviniti",
+      "location": "Wrocław HQ; praca zdalna",
+      "workMode": "Remote",
+      "compensation": "120-137 zł/h netto + VAT B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Python 3.10+, FastAPI, LLM/GenAI, LangChain/LlamaIndex, Azure OpenAI/Bedrock/OpenAI API, PostgreSQL, Docker, Kubernetes/OpenShift, AWS/Azure i CI/CD",
+      "whyInteresting": "to czysty canonical employer page z publiczną stawką i dojrzałym enterprise GenAI scope, więc nadaje się do powtarzalnego monitoringu",
+      "uncertainty": "brak istotnej; opis jest spójny i wystawiony bezpośrednio przez pracodawcę",
+      "sourceURLs": [
+        "https://deviniti.com/pl/praca-w-it/"
+      ],
+      "tags": [
+        "LLM",
+        "GenAI",
+        "Python",
+        "AWS",
+        "Azure"
+      ]
+    }
+  ],
+  "changes": [
+    "Rynek przesunął się dziś z kolejnego systemowo-platformowego bursta w stronę AI-native software engineering, computer vision i produkcyjnego GenAI delivery.",
+    "Sigmoidal i Surveily dodały dwa bardzo czytelne sygnały z własnych stron karier, a ich board mirror nadal warto traktować jako pomocnicze.",
+    "Primotly rozszerzył remote Poland warstwę o mocny GenAI/GCP role, a Deviniti potwierdził, że canonical employer pages z publiczną stawką nadal są najbardziej wartościowe do monitoringu.",
+    "Sii AI Engineer – GenAI & Cloud pozostaje tracked i dziś nie wykazał materialnej zmiany, więc nie dublowałem go w nowej liście."
+  ],
+  "risks": [
+    "Board mirrors nadal potrafią rozjeżdżać się z canonical pages w zakresie waluty, location i remote policy, szczególnie przy Sigmoidal i Surveily.",
+    "Primotly jest wyraźnie remote Poland, a nie stricte Wrocław, więc nie należy go mylić z lokalnym sygnałem miejskim.",
+    "Zmiany w tym segmencie są szybkie; nowa lista może się przetasować już w kolejnym sweepie."
+  ],
+  "recommendedActions": [
+    "Na następnym przebiegu sprawdzić, czy Sigmoidal, Surveily, Primotly i Deviniti pozostają publicznie widoczne.",
+    "Nie powielać dziś tracked Sii/ITDS/Antal/Cloudfide, dopóki nie pojawi się materialna zmiana.",
+    "Jeśli pojawią się nowe canonical employer pages dla board-first leadów, dopisać je od razu do short listy źródeł."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT: Job offers AI/ML, Wrocław",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Sigmoidal careers",
+      "url": "https://sigmoidal.io/careers",
+      "status": "checked"
+    },
+    {
+      "title": "Surveily careers",
+      "url": "https://surveily.com/pl/career",
+      "status": "checked"
+    },
+    {
+      "title": "Deviniti jobs",
+      "url": "https://deviniti.com/pl/praca-w-it/",
+      "status": "checked"
+    },
+    {
+      "title": "Sii AI jobs hub",
+      "url": "https://sii.pl/en/job-ads/all/all/AI/",
+      "status": "checked"
+    }
+  ]
+}

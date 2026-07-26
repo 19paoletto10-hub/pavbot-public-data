@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-07-23",
+  "runTime": "15:42",
+  "executiveSummary": "Dzisiejsza runda przyniosła materialny update: na wrocławskim boardzie pojawił się nowy, bardziej agentic i production-ML klaster wokół deepsense, Itransition, EPAM, cloudatus, SQUAD, Scalo i Capgemini. Najmocniejsze sygnały to deepsense Senior Machine Learning Engineer (LLMs) z wygasaniem dziś, Itransition AI Agent Middle/Senior Developer z jawnie wrocławskim adresem, EPAM Chief Forward Deployed Engineer z naciskiem na agentic systems plus evals i observability oraz Scalo Senior Java Developer z praktyką AI z publiczną stawką i produkcyjnym LLM scope.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior Machine Learning Engineer (LLMs)",
+      "company": "deepsense.ai",
+      "location": "Praca zdalna; Wrocław jako jedna z lokalizacji",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Senior",
+      "fitSummary": "Python, machine learning, Docker, Kubernetes, GenAI, LLM, cloud platform, Azure, Azure ML, SQL, PyTorch, TensorFlow",
+      "whyInteresting": "bardzo mocny production ML/LLM scope i najpilniejszy sygnał dnia, bo oferta wygasa dziś.",
+      "uncertainty": "board/canonical drift w lokalizacjach; salary niepubliczne.",
+      "sourceURLs": [
+        "https://nofluffjobs.com/pl/job/senior-machine-learning-engineer-llms-deepsense-ai-remote"
+      ],
+      "tags": [
+        "LLM",
+        "GenAI",
+        "Python",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "AI Agent Middle/Senior Developer",
+      "company": "Itransition",
+      "location": "Wrocław +1; remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Senior",
+      "fitSummary": "Python, RAG, GraphRAG, LangChain, LangGraph, CrewAI, agentic tools",
+      "whyInteresting": "świeży wrocławski sygnał agentic z naciskiem na RAG/GraphRAG i wieloagentowe workflows.",
+      "uncertainty": "board-only; salary not public.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/itransition-ai-agent-middle-senior-developer-wroclaw-ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Chief Forward Deployed Engineer",
+      "company": "EPAM Systems",
+      "location": "Wrocław / remote Poland",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM harness, agentic systems, evals, observability, feedback loops",
+      "whyInteresting": "builder role z realnym produkcyjnym AI scope, a nie czysto presalesowym.",
+      "uncertainty": "board mirror vs potential canonical drift; trzeba potwierdzić, jak długo karta pozostanie aktywna.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/epam-systems-chief-forward-deployed-engineer-wroclaw-ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "GenAI Solution Architect",
+      "company": "cloudatus",
+      "location": "Wrocław +4 / remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Azure AI Foundry, AWS Bedrock, AI agents, secure cloud architecture",
+      "whyInteresting": "łączy GenAI delivery z architekturą i agentami, więc dobrze pasuje do produkcyjnego AI platform work.",
+      "uncertainty": "board-first; salary not public.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/cloudatus-genai-solution-architect-wroclaw-ai-71efce86"
+      ],
+      "tags": [
+        "GenAI",
+        "AWS",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Applied Scientist (LLM)",
+      "company": "SQUAD",
+      "location": "Wrocław +1 / hybrid",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM, applied science, hybrid delivery",
+      "whyInteresting": "rzadki, stricte applied-science sygnał z jasnym LLM focus i wrocławską lokalizacją.",
+      "uncertainty": "board-only i bez jawnego salary, więc trzeba pilnować trwałości karty.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/squad-applied-scientist-llm--wroclaw-ai"
+      ],
+      "tags": [
+        "LLM",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Senior Java Developer z praktyką AI",
+      "company": "SCALO",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "25 000 - 26 999 PLN net/month B2B",
+      "seniority": "Senior",
+      "fitSummary": "Java, Spring AI, LangChain4j, LLM API, embeddings, vector databases, AI-SDLC, MCP",
+      "whyInteresting": "explicit production LLM delivery z publiczną stawką i realnym wrocławskim office anchor.",
+      "uncertainty": "część oferty ma charakter doradczo-enablementowy, ale scope pozostaje hands-on.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/scalo-senior-java-developer-z-praktyka-ai-wroclaw-java"
+      ],
+      "tags": [
+        "LLM",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "Senior Lead Engineer (AI)",
+      "company": "Capgemini Polska",
+      "location": "Wrocław +7 / hybrid",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Senior",
+      "fitSummary": "Machine Learning, LLM, TypeScript, AI, React, JavaScript, Python, RAG",
+      "whyInteresting": "szeroki full-stack/ML lead signal z wyraźnym LLM i RAG depth oraz realnym wrocławskim location set.",
+      "uncertainty": "board-first title i brak publicznej stawki; warto monitorować, czy pojawi się kanoniczny employer detail page.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/capgemini-polska-senior-lead-engineer-ai--wroclaw-ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python",
+        "AWS"
+      ]
+    }
+  ],
+  "changes": [
+    "Wrocławski board wrócił z nowym, bardziej agentic i production-ML burstem, tym razem wokół deepsense, Itransition, EPAM, cloudatus, SQUAD, Scalo i Capgemini.",
+    "Najmocniejszy nowy sygnał to deepsense Senior Machine Learning Engineer (LLMs) z wygasaniem dziś, więc to karta o wysokiej wartości i wysokim ryzyku utraty.",
+    "Scalo dołożyło czytelny, publicznie wyceniony Java + AI role z produkcyjnym LLM scope i wrocławskim office anchor.",
+    "Board-first karty z EPAM, cloudatus, SQUAD i Capgemini nadal wymagają canonical check, ale fit do tematu jest wyraźnie wyższy niż przy ogólnych data/BI rolach."
+  ],
+  "risks": [
+    "Część dzisiejszych kart jest board-first, więc lokalizacja, status i salary mogą się szybko zmienić albo zniknąć przy kolejnym crawl.",
+    "deepsense wygasa dziś, więc to najwyższy priorytet do ponownego sprawdzenia w następnym przebiegu.",
+    "Lead/consulting role, takie jak Senior Lead Engineer (AI) i Chief Forward Deployed Engineer, są wartościowe tylko wtedy, gdy dalej pokazują wyraźny hands-on engineering scope."
+  ],
+  "recommendedActions": [
+    "Re-check deepsense, Itransition, EPAM, cloudatus, SQUAD, Scalo i Capgemini w następnym przebiegu, szczególnie expiry i canonical drift.",
+    "Utrzymaj board-first karty poza aktywną shortlistą, dopóki nie pojawi się stabilny employer detail page albo publiczna, spójna mirror karta.",
+    "Nie eskaluj niczego poza topic folderem; dzisiejsza zmiana wygląda na typowy update raportu i indeksu, nie na zmianę automatyzacji."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT Wrocław AI board",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Senior Machine Learning Engineer (LLMs) - deepsense.ai",
+      "url": "https://nofluffjobs.com/pl/job/senior-machine-learning-engineer-llms-deepsense-ai-remote",
+      "status": "checked"
+    },
+    {
+      "title": "AI Agent Middle/Senior Developer - Itransition",
+      "url": "https://justjoin.it/job-offer/itransition-ai-agent-middle-senior-developer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Chief Forward Deployed Engineer - EPAM Systems",
+      "url": "https://justjoin.it/job-offer/epam-systems-chief-forward-deployed-engineer-wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "GenAI Solution Architect - cloudatus",
+      "url": "https://justjoin.it/job-offer/cloudatus-genai-solution-architect-wroclaw-ai-71efce86",
+      "status": "checked"
+    },
+    {
+      "title": "Applied Scientist (LLM) - SQUAD",
+      "url": "https://justjoin.it/job-offer/squad-applied-scientist-llm--wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Senior Java Developer z praktyką AI - SCALO",
+      "url": "https://justjoin.it/job-offer/scalo-senior-java-developer-z-praktyka-ai-wroclaw-java",
+      "status": "checked"
+    },
+    {
+      "title": "Senior Lead Engineer (AI) - Capgemini Polska",
+      "url": "https://justjoin.it/job-offer/capgemini-polska-senior-lead-engineer-ai--wroclaw-ai",
+      "status": "checked"
+    }
+  ]
+}

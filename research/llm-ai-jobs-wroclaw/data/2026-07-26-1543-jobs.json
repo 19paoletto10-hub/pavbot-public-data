@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-07-26",
+  "runTime": "15:43",
+  "executiveSummary": "Today’s sweep added a fresh, more salary-bearing cluster around Addepto, EPAM, Sii, Spyrosoft, Link Group and Simon-Kucher. The strongest signal is Addepto’s canonical Data Scientist / ML Engineer page with Wrocław plus remote and public B2B bands, followed by a new Wrocław AI/ML Engineer at Spyrosoft, a remote Principal AI Engineer at Link Group, and a remote Senior AI Engineer at Simon-Kucher. The Wrocław board also added new EPAM and Sii cards focused on MLOps and agentic automation.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Data Scientist / ML Engineer",
+      "company": "Addepto",
+      "location": "Wrocław + remote",
+      "workMode": "Remote",
+      "compensation": "Mid 12 600-19 320 PLN B2B; Senior 19 320-25 200 PLN B2B; Lead/Principal 19 320-28 560 PLN B2B",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM, GenAI, RAG, Python, MLOps, semantic search, AI agents, consulting",
+      "whyInteresting": "canonical employer page with public bands and a broad production AI scope that is easy to re-check.",
+      "uncertainty": "board mirror can still split the family across multiple titles.",
+      "sourceURLs": [
+        "https://addepto.com/career/data-scientist-ml-engineer/",
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "GenAI",
+        "MLOps",
+        "Python"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "AI/ML Engineer",
+      "company": "Spyrosoft",
+      "location": "Wrocław / hybrid",
+      "workMode": "Hybrid",
+      "compensation": "18 480-25 200 PLN B2B or 110-150 PLN/h",
+      "seniority": "Nieokreślony",
+      "fitSummary": "AI/ML, Python, data science",
+      "whyInteresting": "public salary, Wrocław anchor and a clean employer-board match.",
+      "uncertainty": "the same employer still rotates other remote AI roles quickly.",
+      "sourceURLs": [
+        "https://nofluffjobs.com/job/ai-ml-engineer-spyrosoft-wroclaw",
+        "https://careers.spyro-soft.com/jobs"
+      ],
+      "tags": [
+        "Python"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Principal AI Engineer",
+      "company": "Link Group",
+      "location": "Remote",
+      "workMode": "Remote",
+      "compensation": "25 200-30 240 PLN B2B or 150-180 PLN/h",
+      "seniority": "Principal",
+      "fitSummary": "AI, system integration, cloud platform, AWS, Azure, Python, TDD, MLOps",
+      "whyInteresting": "strong remote production-AI signal with public compensation.",
+      "uncertainty": "board-to-board role families can drift or rename quickly.",
+      "sourceURLs": [
+        "https://nofluffjobs.com/job/principal-ai-engineer-link-group-remote-3"
+      ],
+      "tags": [
+        "MLOps",
+        "Python",
+        "AWS",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Senior AI Engineer",
+      "company": "Simon-Kucher",
+      "location": "Remote",
+      "workMode": "Remote",
+      "compensation": "23 000-26 000 PLN",
+      "seniority": "Senior",
+      "fitSummary": "production-grade internal AI apps, evaluation, observability, deployment",
+      "whyInteresting": "hands-on internal AI platform scope rather than a generic consulting role.",
+      "uncertainty": "remote role may change wording or expire without much notice.",
+      "sourceURLs": [
+        "https://nofluffjobs.com/job/senior-ai-engineer-simon-kucher-core-business-services-remote"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 5,
+      "title": "Senior MLOps Engineer with ML/AI",
+      "company": "EPAM Systems",
+      "location": "Wrocław / hybrid",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Senior",
+      "fitSummary": "AI/ML infrastructure, Azure DevOps, PowerShell, Terraform, SQL",
+      "whyInteresting": "adds an MLOps-heavy Wrocław card to the current board burst.",
+      "uncertainty": "board-first and location wording can drift.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "MLOps",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Senior Agentic Automation Engineer",
+      "company": "Sii",
+      "location": "Wrocław + remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Senior",
+      "fitSummary": "multi-agent systems, RAG, vector stores, embeddings, semantic search, OpenTelemetry, gRPC, Python",
+      "whyInteresting": "strong agentic-automation signal with Wrocław presence and deep workflow tooling scope.",
+      "uncertainty": "board-first; status and salary can change quickly.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "Python"
+      ]
+    }
+  ],
+  "changes": [
+    "The previous report was mostly a board-first production-ML burst; today’s run adds a more salary-bearing cluster with better canonical coverage.",
+    "Addepto is now the cleanest repeatable signal in the topic because the official page keeps public pay bands and a Wrocław/remote scope while the board shows the related roles.",
+    "EPAM and Sii added new Wrocław board cards, but those remain more mirror-driven than the direct employer pages.",
+    "Remote Poland expanded with two stronger public pay signals: Link Group and Simon-Kucher."
+  ],
+  "risks": [
+    "EPAM and Sii remain board-first here, so location wording and status can still drift quickly.",
+    "Remote roles at Link Group and Simon-Kucher are strong signals, but they can still rename, expire, or change pay without much warning.",
+    "Addepto now looks stable, but the board mirror may continue to split the family across multiple titles."
+  ],
+  "recommendedActions": [
+    "Low-risk action applied: wrote the dated report, updated the topic index, and added a new backlog item for the July 26 cluster.",
+    "Next run should re-check Addepto, EPAM, Sii, Spyrosoft, Link Group, and Simon-Kucher for expiry, salary drift, and canonical URL changes.",
+    "Needs user input: none."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT Wrocław AI board",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Addepto careers - Data Scientist / ML Engineer",
+      "url": "https://addepto.com/career/data-scientist-ml-engineer/",
+      "status": "checked"
+    },
+    {
+      "title": "Spyrosoft jobs",
+      "url": "https://careers.spyro-soft.com/jobs",
+      "status": "checked"
+    },
+    {
+      "title": "AI/ML Engineer - Spyrosoft - No Fluff Jobs",
+      "url": "https://nofluffjobs.com/job/ai-ml-engineer-spyrosoft-wroclaw",
+      "status": "checked"
+    },
+    {
+      "title": "Principal AI Engineer - Link Group - No Fluff Jobs",
+      "url": "https://nofluffjobs.com/job/principal-ai-engineer-link-group-remote-3",
+      "status": "checked"
+    },
+    {
+      "title": "Senior AI Engineer - Simon-Kucher - No Fluff Jobs",
+      "url": "https://nofluffjobs.com/job/senior-ai-engineer-simon-kucher-core-business-services-remote",
+      "status": "checked"
+    }
+  ]
+}

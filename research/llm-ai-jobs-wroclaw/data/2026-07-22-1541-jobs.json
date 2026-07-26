@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-07-22",
+  "runTime": "15:41",
+  "executiveSummary": "Dzisiejszy sweep dołożył nowy board-first tail wokół Addepto, Svitla i ALTIMI. Najmocniejsze sygnały to Addepto Senior Data Scientist / ML Engineer z publiczną stawką w EUR, Svitla Senior Python + GenAI/ ML Engineer z LangGraph i AWS Bedrock oraz board-first Graph Engineer (AI&Data) w ALTIMI; jednocześnie kilka kart na boardzie nadal wymaga canonical check, bo część hitów jest już expired albo ma rozjazd lokalizacji.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior Data Scientist / ML Engineer",
+      "company": "Addepto",
+      "location": "Wrocław board mirror / remote Poland; canonical page shows Katowice +4 locations",
+      "workMode": "Remote",
+      "compensation": "4 485,83 - 5 851,08 EUR net/month B2B",
+      "seniority": "Senior",
+      "fitSummary": "Machine Learning, AWS, LLM, Cloud, AI, Python, Generative AI, Data Science",
+      "whyInteresting": "nowy, produkcyjny senior lead z publiczną stawką i szerokim LLM/ML scope, a nie ogólny data role.",
+      "uncertainty": "board mirror i canonical page różnią się lokalizacją; trzeba pilnować, czy Wrocław pozostaje oficjalnie wspieranym hubem.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/addepto-senior-data-scientist-ml-engineer-katowice-ai-18e6ca00",
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "LLM",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior Python + GenAI/ ML Engineer",
+      "company": "Svitla Systems",
+      "location": "Wrocław jako jedna z lokalizacji; remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Senior",
+      "fitSummary": "LangChain, LangGraph, Claude API via AWS Bedrock, Python, REST API, scikit-learn, PyTorch",
+      "whyInteresting": "łączy migrację do LangGraph z lekkim ML trainingiem i integracją agentów, więc jest bardziej produkcyjny niż pokazowy.",
+      "uncertainty": "kanoniczna strona mówi o Europie i wielu lokalizacjach; Wrocław pochodzi z publicznego job boardu oraz listy office locations.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/svitla-systems-senior-python-genai-ml-engineer-krakow-ai",
+        "https://svitla.com/career/job/python-engineer-with-genai-and-ml-1779954264"
+      ],
+      "tags": [
+        "GenAI",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Graph Engineer (AI&Data)",
+      "company": "ALTIMI",
+      "location": "Wrocław +3 / remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Python, SQL, graphs, semantic technologies, GenAI",
+      "whyInteresting": "to nowy, graph-centric AI role; dobrze pasuje do knowledge graphs, semantic retrieval i AI architectures.",
+      "uncertainty": "na razie potwierdzone tylko przez board; nie znalazłem kanonicznego detail page.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai",
+        "https://altimi.com/career"
+      ],
+      "tags": [
+        "GenAI",
+        "Python"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Senior AI Engineer (f/m/x)",
+      "company": "Addepto",
+      "location": "Wrocław + remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek",
+      "seniority": "Senior",
+      "fitSummary": "LLM, Agentic AI, CI/CD, vector databases, RAG, Azure/GCP, Kubernetes, Python",
+      "whyInteresting": "to najbliższa dzisiejszemu production-AI clusterowi rola, ale z jeszcze wyraźniejszym naciskiem na agentic AI i platform delivery.",
+      "uncertainty": "na ten moment widoczna tylko jako board-first karta; nie udało się potwierdzić dedykowanej strony pracodawcy.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM",
+        "Python",
+        "Azure",
+        "GCP"
+      ]
+    }
+  ],
+  "changes": [
+    "Board-first signal widened again, this time around Addepto, Svitla and ALTIMI rather than the Capgemini/EY/Pathway wave from yesterday.",
+    "Addepto now shows both a senior data-science lead and a separate senior AI engineer board card, while the senior data-science role has a public EUR salary.",
+    "Svitla stays interesting because the canonical page is Europe-remote, while Wrocław appears both on the board and in the office-location list.",
+    "DataArt and other board mirrors still show that expired cards can linger, so the shortlist should stay canonical-first."
+  ],
+  "risks": [
+    "Board mirrors can show expired cards or stale location labels; do not add them to the tracked shortlist unless the employer page confirms availability.",
+    "Svitla's canonical location scope is broader than Poland; treat Wrocław as a board/office-location signal, not a guaranteed onsite role.",
+    "Addepto board mirrors can still diverge from the exact detail page on location framing, so use canonical pages when they exist."
+  ],
+  "recommendedActions": [
+    "Re-check Addepto, Svitla and ALTIMI next run.",
+    "Add canonical employer pages if ALTIMI or Addepto expose them.",
+    "Keep expired DataArt board cards out of active tracking."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT Wrocław AI board",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Senior Data Scientist / ML Engineer - Addepto",
+      "url": "https://justjoin.it/job-offer/addepto-senior-data-scientist-ml-engineer-katowice-ai-18e6ca00",
+      "status": "checked"
+    },
+    {
+      "title": "Senior Python + GenAI/ ML Engineer - Svitla Systems",
+      "url": "https://justjoin.it/job-offer/svitla-systems-senior-python-genai-ml-engineer-krakow-ai",
+      "status": "checked"
+    },
+    {
+      "title": "Svitla Systems Python Engineer with GenAI and ML",
+      "url": "https://svitla.com/career/job/python-engineer-with-genai-and-ml-1779954264",
+      "status": "checked"
+    },
+    {
+      "title": "ALTIMI careers",
+      "url": "https://altimi.com/career",
+      "status": "checked"
+    }
+  ]
+}
