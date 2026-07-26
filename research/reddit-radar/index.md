@@ -4,10 +4,12 @@
 
 - Topic operates as a read-only Reddit humor radar built from live Safari review
   on public `old.reddit.com` listings and exact post pages.
-- Current active public bundle remains
-  `research/reddit-radar/data/2026-07-26-0609-reddit-radar.json`.
-- Latest audits on Sunday, July 26, 2026 at 12:08 CEST and 18:08 CEST both
-  ended as `No material change`, so the 06:09 bundle still stands.
+- Current active public bundle is now
+  `research/reddit-radar/data/2026-07-26-2208-reddit-radar.json`.
+- Sunday, July 26, 2026 12:08 CEST and 18:08 CEST both ended as
+  `No material change`, but the 22:08 CEST Safari audit found five fresh,
+  comment-verified survivors and rotated the public bundle away from the older
+  06:09 set.
 
 ## Selection Rules
 
@@ -27,6 +29,8 @@
   without turning into rant, politics, meta-discussion, or legal/support talk.
 - Thin one-liner threads can still be useful as single cards, but they do not
   justify rotation without three similarly clean companions.
+- A thinner fifth card is acceptable when the first four survivors are clearly
+  fresh, public-safe, and the slot would otherwise meet the rotation contract.
 - Image-heavy or GIF-heavy comment sections that collapse into reaction images
   or fragmented references are weak candidates for the public digest.
 

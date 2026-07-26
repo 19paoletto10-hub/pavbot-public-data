@@ -1,0 +1,152 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-26-2208",
+  "status": "material_update",
+  "generatedAt": "2026-07-26T20:08:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-26T22:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on old.reddit.com using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-26-1208 and 2026-07-26-1808, so none of the URLs already surfaced there could roll forward into this slot.",
+      "Final read-only Safari review stayed on exact old.reddit post pages for the strongest fresh late-evening challengers across memes, ProgrammerHumor, mildlyinfuriating, and one facepalm fallback.",
+      "r/facepalm and r/AskReddit were discarded early because the visible cluster leaned political, heavy, sexualized, or too discussion-first instead of compact public-safe humor.",
+      "At least five safe fresh cards survived the live review, so the reddit-radar contract prefers a new public bundle over keeping the visible 2026-07-26-0609 bundle unchanged.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "currentPublicBundle": "2026-07-26-0609",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-26-2208-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-26-2208-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-26-2208-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v6ykxz/becauseyourefusedtolearnsleepsettings/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v6xk2u/yessiritsadistillationattack/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v6rcgx/i_hate_when_subtitles_do_this_tell_me_what_theyre/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v6tbzp/the_only_gas_available_within_100_miles_of/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v6xz9d/bought_some_old_games_from_my_teenage_days_but/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v6s5b6/hikers_playing_music_on_bluetooth_as_though_they/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v6rpn4/bought_this_area_rug_for_under_our_bed_herniated/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v6nqa2/how_did_he_get_himself_in_this_situation/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v6xw63/absolutely_right/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v71ax5/one_wrenchkey_to_rule_them_all/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v6w3r4/is_it_worth_it/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v6uafr/its_over/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v6spa0/ture/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v76zeb/justpressmergetoprod/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v75z7x/mycoworkerisalsome/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v70230/imax_front_row_seats_should_not_exist_do_not_book/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v740fx/uber_driver_sped_off_before_letting_me_get_my/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v76nl8/some_artist_covering_an_emergency_hotline_number/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v6yxtn/lets_give_our_game_a_4_character_minimum_to_name/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "title": "POV story games",
+      "url": "https://old.reddit.com/r/memes/comments/1v77nwy/pov_story_games/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "4.6k hot"
+    },
+    {
+      "title": "noGitRevertAvailable",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v79lak/nogitrevertavailable/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "3.0k hot"
+    },
+    {
+      "title": "businessLogic",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v7dhwf/businesslogic/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "856 hot"
+    },
+    {
+      "title": "Have a wedding to attend in 2 hours.",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v744li/have_a_wedding_to_attend_in_2_hours/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "scoreLabel": "2.9k hot"
+    },
+    {
+      "title": "My parents think the logo on my Quake III shirt is a demonic symbol",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v784bl/my_parents_think_the_logo_on_my_quake_iii_shirt/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "scoreLabel": "1.4k hot"
+    },
+    {
+      "title": "Vip seats🔥🔥",
+      "url": "https://old.reddit.com/r/memes/comments/1v7d5of/vip_seats/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "8.1k hot"
+    },
+    {
+      "title": "Damm bro 😔🥀",
+      "url": "https://old.reddit.com/r/memes/comments/1v7dwte/damm_bro/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "6.7k hot"
+    },
+    {
+      "title": "The problem is choice",
+      "url": "https://old.reddit.com/r/memes/comments/1v705o0/the_problem_is_choice/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "3.7k hot"
+    },
+    {
+      "title": "I am afraid to use a calculator",
+      "url": "https://old.reddit.com/r/memes/comments/1v71hep/i_am_afraid_to_use_a_calculator/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "2.8k hot"
+    },
+    {
+      "title": "refactorCode",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v78up9/refactorcode/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "4.3k hot"
+    },
+    {
+      "title": "youHavenoRealPower",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v78vzp/youhavenorealpower/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "228 hot"
+    },
+    {
+      "title": "Needed to use the hospital restroom and opened the door to find a wall.",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v7b1zj/needed_to_use_the_hospital_restroom_and_opened/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "11.0k hot"
+    },
+    {
+      "title": "Single malt scotch spends 3 decades aging in a barrel so you can squeze a lime wedge into it.",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v756a7/single_malt_scotch_spends_3_decades_aging_in_a/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "4.8k hot"
+    },
+    {
+      "title": "A store I found in my city",
+      "url": "https://old.reddit.com/r/facepalm/comments/1v7d62r/a_store_i_found_in_my_city/?sort=top",
+      "subreddit": "r/facepalm",
+      "decision": "rejected",
+      "scoreLabel": "652 hot"
+    }
+  ]
+}

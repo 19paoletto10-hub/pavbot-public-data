@@ -1,0 +1,217 @@
+{
+  "id": "humor-2026-07-26-2208",
+  "title": "<RR> Reddit Radar",
+  "summary": "Material update: slot 22:08 rotuje na piec swiezych kart o quest-markerach w story games, bugach bez git revertu, absurdach specyfikacji, golarce bez ostrza i Quakeowym logo podejrzanym o demony.",
+  "generatedAt": "2026-07-26T20:08:00Z",
+  "displayTime": "22:08",
+  "nextRefreshAt": "2026-07-27T00:08:00+02:00",
+  "refreshIntervalHours": 2,
+  "items": [
+    {
+      "id": "old-reddit-com-r-memes-comments-1v77nwy-pov-story-games",
+      "title": "POV story games",
+      "caption": "Najmocniejsza memowa karta slotu bierze prosty roast na gry fabularne z quest markerami i pozwala comments zamienic go w jeden czysty bit o tym, ze prawdziwy realizm zaczyna sie dopiero wtedy, gdy ktos drze sie na ciebie po rosyjsku po drodze do znacznika.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://old.reddit.com/r/memes/comments/1v77nwy/pov_story_games/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "memes",
+        "gaming",
+        "quest-marker"
+      ],
+      "categoryLabel": "memes",
+      "postText": null,
+      "whyFunny": "Humor dziala, bo komentarze nie rozpraszaja tematu, tylko jeszcze bardziej doprecyzowuja jeden rozpoznawalny gamingowy trop.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment wybiera najmocniejszy kontrast: quest marker nigdy nie drze sie na ciebie po rosyjsku.",
+          "explanation": "To wygrywa, bo natychmiast podmienia ogolny roast na bardzo konkretny, pamietny detal.",
+          "score": null,
+          "originalBody": "All I am saying is that a quest maker has never never yelled at me in russian."
+        },
+        {
+          "id": "comment-2",
+          "summary": "Druga riposta broni Metro: tam nadal masz znacznik, tylko dodatkowo obrywasz po drodze rosyjskim krzykiem.",
+          "explanation": "Komentarz dziala, bo nie obala zartu, tylko podnosi go o poziom bardziej immersyjnej wersji.",
+          "score": null,
+          "originalBody": "You should play Metro"
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzeci highlight domyka karte okrzykiem do Artyoma i robi z calego tematu gotowy voice line.",
+          "explanation": "To zamyka karte w czystym, rozpoznawalnym cytacie growym bez dalszego rozjezdzania watku.",
+          "score": null,
+          "originalBody": "ARTYOM, COME ON ARTYOM, MOVE IT ARTYOM!!"
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-programmerhumor-comments-1v79lak-nogitrevertavailable",
+      "title": "noGitRevertAvailable",
+      "caption": "Najmocniejsza karta devowa slotu bierze zestawienie lotnictwa z software'em i pozwala comment layerowi zrobic z tego mini-teatr bug triage: po katastrofie i tak ktos zapyta, czy da sie to jeszcze raz odtworzyc z wlaczonym debug loggingiem.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1v79lak/nogitrevertavailable/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "dev",
+        "git",
+        "debugging"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "whyFunny": "Karta dziala, bo nawet nietechniczny czytelnik rozumie absurd prosby o reprodukcje po wielkiej awarii.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment streszcza cala roznice brutalnie prosto: lotnictwo robi postmortem, software zamyka ticket jako `cannot reproduce`.",
+          "explanation": "To jest najmocniejsza, najszersza puenta w calym watku.",
+          "score": null,
+          "originalBody": "Aviation gets post-incident investigations. We get, \"Can't reproduce, closing ticket.\""
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight dopytuje juz tylko proceduralnie: mozecie sprobowac rozbic samolot jeszcze raz z wlaczonym debug loggingiem?",
+          "explanation": "Komentarz dziala, bo bierze formalny jezyk supportu i przenosi go w absurdalny kontekst.",
+          "score": null,
+          "originalBody": "Can you try crashing again with debug logging enabled?"
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzecia riposta dorzuca fuzz test z roznymi pasazerami, jakby to byl zwykly eksperyment QA.",
+          "explanation": "To utrzymuje ten sam rytm i nie wypycha watku w niszowa technicznosc.",
+          "score": null,
+          "originalBody": "Can you do a fuzz test to test as many different passenger combinations as possible?"
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-programmerhumor-comments-1v7dhwf-businesslogic",
+      "title": "businessLogic",
+      "caption": "Druga karta devowa buduje z prostego zadania maly dramat specyfikacji, w ktorym klient, pluraly i liczby walcza o to, jaka odpowiedz jest jednoczesnie oczywista i z definicji zla.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1v7dhwf/businesslogic/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "dev",
+        "requirements",
+        "office"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "whyFunny": "Humor dziala, bo kazdy, kto kiedys dotykal specyfikacji, rozpoznaje logike klienta, ktory zawsze chcial opcji C.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment pokazuje cala ukryta groze zadania: te same cyfry potrafia nagle dawac cztery rozne odpowiedzi.",
+          "explanation": "To wygrywa, bo obnazaja absurd niejednoznacznego polecenia bez zadnego dodatkowego kontekstu.",
+          "score": null,
+          "originalBody": "Two zeros two fours => B Two zeros two four => C Two zero two fours => D Two zero two four => A"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight stawia kropke nad i: klient oczywiscie mial na mysli opcje C i juz skarzy sie do twojego szefa.",
+          "explanation": "Komentarz dziala, bo przesuwa problem z logiki do rozpoznawalnej biurowej rzeczywistosci.",
+          "score": null,
+          "originalBody": "The customer meant option C. And now they are complaining to your boss because you obviously didn't read the specification"
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzecia riposta dopisuje najbrutalniejszy final: nawet przy jednym rachunku klient i tak uzna, ze powinno wyjsc 3.5 cyfry.",
+          "explanation": "To domyka karte bardzo czytelnym absurdem proceduralnym.",
+          "score": null,
+          "originalBody": "while their internal calculations suggest only 3.5 digits were used"
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-mildlyinfuriating-comments-1v744li-have-a-wedding-to-attend-in-2-hours",
+      "title": "Have a wedding to attend in 2 hours.",
+      "caption": "Najszersza everyday karta slotu robi z trefnej golarki parodie reklamy premium: comments zgodnie sprzedaja system `No Blade`, ktory niczego nie goli, ale przynajmniej gwarantuje brak podraznien i stuprocentowy spokoj producenta.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://old.reddit.com/r/mildlyinfuriating/comments/1v744li/have_a_wedding_to_attend_in_2_hours/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "shopping",
+        "wedding",
+        "product-fail"
+      ],
+      "categoryLabel": "memes",
+      "postText": null,
+      "whyFunny": "Karta dziala, bo comments nie schodza w prawdziwy konsumencki rant, tylko od razu robia z awarii jeden prosty infomercial gag.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment od razu nadaje produktowi nowa marke: `NoneBlade`.",
+          "explanation": "To jest idealny krotki punchline i najmocniejszy hak calej karty.",
+          "score": null,
+          "originalBody": "NoneBlade"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight rozwija reklame: dzieki rewolucyjnemu systemowi bez ostrza nawet nie poczujesz, ze sie golisz.",
+          "explanation": "Komentarz dziala, bo sprzedaje ewidentna wade jak funkcje premium.",
+          "score": null,
+          "originalBody": "With the revolutionary No Blade system, it will feel like you're not even shaving at all."
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzecia riposta dokreca marketing do konca: zadnych zaciec ani podraznien, bo nic w ogole nie tnie.",
+          "explanation": "To zamyka karte logicznie i dalej trzyma ten sam czysty bit.",
+          "score": null,
+          "originalBody": "Completely eliminates razor burn and skin irritation! No more nicks and cuts!"
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-mildlyinfuriating-comments-1v784bl-my-parents-think-the-logo-on-my-quake-iii-shirt-is-a-demonic-symbol",
+      "title": "My parents think the logo on my Quake III shirt is a demonic symbol",
+      "caption": "Ostatnia karta jest najciensza, ale public-safe: rodzice widza demoniczny znak, a comments sprowadzaja caly spor do pytania, czy w `Quake III` w ogole byly demony, czy tylko znajomi gorsi od demonow.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://old.reddit.com/r/mildlyinfuriating/comments/1v784bl/my_parents_think_the_logo_on_my_quake_iii_shirt/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "gaming",
+        "family",
+        "misunderstanding"
+      ],
+      "categoryLabel": "memes",
+      "postText": null,
+      "whyFunny": "Humor dziala, bo watek zostaje przy lekkim, zrozumialym nieporozumieniu zamiast eskalowac w culture-war albo religijny spor.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment zgrywa zdziwienie: czy ta gra nie jest przypadkiem wlasnie o demonach?",
+          "explanation": "To otwiera karte prostym pytaniem, ktore od razu ustawia zart.",
+          "score": null,
+          "originalBody": "Is the game not about demons?"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight prostuje lore i przy okazji robi z niego lepsza puente: w `Quake III` nie ma demonow, to po prostu arena shooter.",
+          "explanation": "Komentarz dziala, bo zderza rodzinny alarm z kompletnie niegrozna rzeczywistoscia.",
+          "score": null,
+          "originalBody": "Not Quake III, since it's 100% a multiplayer arena shooter."
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzecia riposta domyka temat najlepszym twistem: moze prawdziwe demony to znajomi poznani po drodze.",
+          "explanation": "To zostawia karte w lekkim, memicznym tonie bez zboczenia w ciezsze rejony.",
+          "score": null,
+          "originalBody": "Maybe the real demons are the friends we made along the way?"
+        }
+      ]
+    }
+  ],
+  "source": "Codex Safari Reddit radar"
+}
