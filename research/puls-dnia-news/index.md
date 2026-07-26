@@ -1,5 +1,7 @@
 # Puls Dnia News Index
 
+The 2026-07-26 12:01 slot shifts Puls Dnia toward a more operational mix: a fresh PiS comment from Waldemar Buda, active IMGW/RCB heat-and-storm alerts, a Berlin suspect-identification update, renewed Kyiv and France escalation, and a new OpenAI/Hugging Face follow-up, while CNN still lags on 24 July.
+
 The 2026-07-26 06:02 slot adds a sharper weekend weather-risk block with possible second-degree IMGW alerts, keeps PiS conflict at the top with a fresh escalation in TVN24, and widens the foreign feed toward Berlin, French and Spanish wildfires, India, Kyiv, Houthi shipping risk, U.S. tariffs, OpenAI/Hugging Face, Google DMA and the U.S.-Saudi nuclear deal.
 
 # Puls Dnia News Index

@@ -2,6 +2,14 @@
 
 ## Open
 
+## 2026-07-26 12:01
+
+- Watch whether IMGW upgrades the weekend alert into outages, flooding or transport blocks.
+- Watch whether Berlin police release a fuller suspect or casualty update after the manhunt.
+- Watch whether France adds another evacuation wave or road closure around the fires.
+- Watch whether OpenAI and Hugging Face publish a fuller technical follow-up to the agent incident.
+- Watch whether PiS answers Waldemar Buda's comment with a formal reply.
+
 ## 2026-07-26 06:02
 
 - Watch whether PiS issues a formal split, disciplinary or coalition-style statement after the latest escalation.
