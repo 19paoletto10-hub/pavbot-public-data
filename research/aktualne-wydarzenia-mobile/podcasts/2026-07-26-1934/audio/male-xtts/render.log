@@ -1,0 +1,92 @@
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/jieba/_compat.py:18: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+  import pkg_resources
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/utils/generic.py:311: FutureWarning: `torch.utils._pytree._register_pytree_node` is deprecated. Please use `torch.utils._pytree.register_pytree_node` instead.
+  torch.utils._pytree._register_pytree_node(
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/xtts_manager.py:5: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  self.speakers = torch.load(speaker_file_path)
+/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/utils/io.py:54: UserWarning: Environment variable TORCH_FORCE_NO_WEIGHTS_ONLY_LOAD detected, since the`weights_only` argument was not explicitly passed to `torch.load`, forcing weights_only=False.
+  return torch.load(f, map_location=map_location, **kwargs)
+ > Using model: xtts
+ > Text splitted to sentences.
+['Dobry wieczór.', 'To jest wieczorny brief o aktualnych wydarzeniach z Polski i świata.', 'Wieczór nie przynosi uspokojenia.', 'Przynosi raczej doprecyzowanie tego, że dzisiejszy dzień w Europie stoi pod znakiem bezpieczeństwa.', 'W Berlinie atak przy Pride jest już prowadzony jako sprawa islamistycznego terroryzmu.', 'Jedna osoba nie żyje, rannych jest dwadzieścia dziewięć, a podejrzany nadal jest poszukiwany.', 'To już nie jest tylko tragiczny incydent z weekendu.', 'To jest temat o europejskiej skali, bo uderza jednocześnie w bezpieczeństwo imprez masowych i w poczucie, że takie miasta jak Berlin mają być przestrzenią swobody, a nie sceną polowania.', 'Drugi wielki obraz dnia to ogień.', 'We Francji i Hiszpanii pożary nadal trzymają ewakuacje ponad ćwierci miliona ludzi.', 'W regionie Gironde spłonęły dziesiątki tysięcy hektarów i setki domów, a Bordeaux pozostaje pod presją.', 'Klimat znów zachowuje się jak product manager, który wypuścił kryzys na produkcję bez planu rollbacku.', 'Tyle że tutaj nikt nie przywróci poprzedniej wersji jednym kliknięciem.', 'W Polsce nie było dziś jednego politycznego wybuchu, ale za to utrzymał się bardzo praktyczny zestaw zagrożeń.', 'RCB trzyma ostrzeżenia przed upałem, suszą hydrologiczną i dodatkowo prognozuje burze, w tym silniejsze na północnym wschodzie.', 'Jeśli ktoś liczył, że lato odda dziś zmianę spokojniejszemu dyżurowi, to niestety grafik nadal jest pełen.', 'Równolegle nie znika sprawa oskarżonego o działania na rzecz rosyjskiego wywiadu i próbę podsycania napięć między Polską a Ukrainą.', 'To ważne przypomnienie, że bezpieczeństwo wewnętrzne nie kończy się na pogodzie.', 'W polityce krajowej największy ciężar nadal ma wewnętrzny spór w PiS.', 'Nie ma dziś nowego formalnego rozstrzygnięcia, ale konflikt o kierunek partii nie znika.', 'Z kolei wniosek prezydenta o referendum klimatyczne pozostaje w obiegu, tylko bez nowego ruchu proceduralnego.', 'Czyli polityka dziś bardziej buzuje pod powierzchnią, niż daje nowy spektakularny zwrot.', 'Za granicą najmocniejszy nowy sygnał bezpieczeństwa przyszedł z Rumunii.', 'Rumuńskie F szesnaście zestrzeliły trzeci podejrzany rosyjski dron w trzy dni nad wodami terytorialnymi kraju.', 'To już nie wygląda jak przypadkowy odprysk wojny, tylko jak regularny test czujności państwa NATO.', 'Do tego Iran nadal podnosi temperaturę po incydencie na Morzu Kaspijskim i wzywa ukraińskiego dyplomatę, więc w tle cały czas miesza się wojna, energia i dyplomacja.', 'W technologii robi się mniej efektownie, ale bardziej konkretnie.', 'Komisja Europejska ma już pełny pakiet przed drugim sierpnia: wytyczne do artykułu pięćdziesiątego AI Act, pytania i odpowiedzi oraz dobrowolny code of practice dla oznaczania treści generowanych przez AI.', 'Innymi słowy, kończy się etap "zobaczymy później", a zaczyna etap "pokaż etykietę, proces i zgodność".', 'Dla dostawców AI to może mniej romantyczne niż keynote, ale za to dużo bliższe rzeczywistości regulatora.', 'Podsumowanie na wieczór jest proste.', 'Dzisiejszy newsflow nie układa się w jeden wielki headline.', 'Układa się w serię alarmów, które podchodzą coraz bliżej codziennego życia: od ulic Berlina, przez lasy pod Bordeaux, po granice Rumunii i ostrzeżenia hydrologiczne w Polsce.', 'Jeśli poranek był ostrzeżeniem, to wieczór jest już dopisaniem szczegółów do instrukcji awaryjnej.', 'Do usłyszenia w następnym wydaniu.']
+Traceback (most recent call last):
+  File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 105, in <module>
+    main()
+  File "/Users/promaczek/Documents/CODEX-Pavbot/.agents/scripts/podcast/render_xtts.py", line 96, in main
+    tts.tts_to_file(**kwargs)
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/api.py", line 334, in tts_to_file
+    wav = self.tts(
+          ^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/api.py", line 276, in tts
+    wav = self.synthesizer.tts(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/utils/synthesizer.py", line 386, in tts
+    outputs = self.tts_model.synthesize(
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/models/xtts.py", line 412, in synthesize
+    return self.inference(text, language, gpt_cond_latent, speaker_embedding, **settings)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/models/xtts.py", line 541, in inference
+    gpt_codes = self.gpt.generate(
+                ^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/gpt.py", line 590, in generate
+    gen = self.gpt_inference.generate(
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/utils/_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/generation/utils.py", line 1648, in generate
+    return self.sample(
+           ^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/generation/utils.py", line 2730, in sample
+    outputs = self(
+              ^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/TTS/tts/layers/xtts/gpt_inference.py", line 97, in forward
+    transformer_outputs = self.transformer(
+                          ^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 900, in forward
+    outputs = block(
+              ^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 427, in forward
+    feed_forward_hidden_states = self.mlp(hidden_states)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/models/gpt2/modeling_gpt2.py", line 356, in forward
+    hidden_states = self.c_proj(hidden_states)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1778, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/torch/nn/modules/module.py", line 1789, in _call_impl
+    return forward_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/promaczek/.cache/pavbot/venvs/xtts/lib/python3.11/site-packages/transformers/pytorch_utils.py", line 106, in forward
+    x = torch.addmm(self.bias, x.view(-1, x.size(-1)), self.weight)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
