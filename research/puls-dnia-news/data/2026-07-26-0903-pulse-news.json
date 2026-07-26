@@ -1,0 +1,529 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-26",
+  "runTime": "09:03",
+  "status": "material_update",
+  "headline": "Berlin, IMGW i światowe follow-upy utrzymują wysokie ryzyko",
+  "summary": "Poranny slot z 26 lipca łączy krajowy spór w PiS i ostrzeżenia IMGW z nową falą światowych wydarzeń: Berlin, pożary w Europie, Indie, Ukraina, Iran, cła USA i incydent OpenAI/Hugging Face.",
+  "checkedSources": [
+    {
+      "title": "TVN24 home",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 najnowsze",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Świat",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 TVN Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN Connect the World",
+      "url": "https://transcripts.cnn.com/show/ctw"
+    },
+    {
+      "title": "IMGW aktualności",
+      "url": "https://imgw.pl/aktualnosci/"
+    },
+    {
+      "title": "RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "Berlin.de news",
+      "url": "https://www.berlin.de/en/news/10533742-5559700-van-drives-into-crowd-CSD-canceled.en.html"
+    },
+    {
+      "title": "OpenAI security incident",
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+    },
+    {
+      "title": "Hugging Face security disclosure",
+      "url": "https://huggingface.co/blog/security-incident-july-2026"
+    },
+    {
+      "title": "European Commission press corner",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1670"
+    },
+    {
+      "title": "AP News",
+      "url": "https://apnews.com/"
+    }
+  ],
+  "items": [
+    {
+      "id": "pl-pis-split-2026-07-26-0903",
+      "section": "Polityka",
+      "title": "PiS nadal nie wychodzi z rozłamu",
+      "lead": "Poranny feed nadal ustawiają wzajemne ataki frakcji Kaczyńskiego i Morawieckiego.",
+      "whatHappened": "TVN24 rano prowadził relację o rozłamie po fiasku rozmów Jarosława Kaczyńskiego z Mateuszem Morawieckim. W przekazie z 26 lipca nie widać sygnału wygaszenia sporu; przeciwnie, materiały redakcji pokazują dalsze ostre komentarze obu obozów.",
+      "keyFacts": [
+        "Wątkiem bazowym pozostaje konflikt po rozmowach Kaczyński-Morawiecki.",
+        "TVN24 nadal ustawia ten temat wysoko w krajowej agendzie."
+      ],
+      "reactions": [
+        "Każda nowa wypowiedź może szybko przestawić polską część feedu.",
+        "Brak formalnego komunikatu utrudnia ocenę, czy spór kończy się decyzją organizacyjną."
+      ],
+      "whyItMatters": "Spór wewnątrz największej partii opozycyjnej wpływa na cały krajowy blok polityczny i na kolejność kolejnych newsów.",
+      "context": "W poprzednim slocie rozłam był już dominującym tematem; teraz pozostaje aktywny bez przełomu.",
+      "watchNext": [
+        "Czy PiS wyda formalne oświadczenie.",
+        "Czy pojawi się ruch personalny albo dyscyplinarny."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Rozłam w PiS. Dworczyk: wyrazem lojalności nie są kartki, ale działania",
+          "url": "https://tvn24.pl/polska/co-dalej-z-pis-oswiadczenie-jaroslawa-kaczynskiego-komentarze-relacja-st9156566"
+        },
+        {
+          "title": "TVN24: Rozpad PiS? Fiasko rozmów Jarosława Kaczyńskiego i Mateusza Morawieckiego",
+          "url": "https://tvn24.pl/polska/rozpad-pis-fiasko-rozmow-jaroslawa-kaczynskiego-i-mateusza-morawieckiego-relacja-st9155290"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Kaczyński",
+        "Morawiecki",
+        "Polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-imgw-alert-2026-07-26-0903",
+      "section": "Polska",
+      "title": "IMGW ostrzega przed upałem i burzami",
+      "lead": "Weekendowy blok pogodowy wchodzi w najbardziej operacyjne okno dnia.",
+      "whatHappened": "TVN Meteo opisuje prognozę zagrożeń IMGW na 26-27 lipca oraz osobny komunikat o upale. W wielu regionach kraju możliwe są burze, a synoptycy wskazują nawet na ostrzeżenia drugiego stopnia. Okno upału ma obowiązywać w niedzielę między 12 a 19.",
+      "keyFacts": [
+        "Na południowym zachodzie temperatura może dojść do 32 st. C.",
+        "Prognoza obejmuje burze, silny deszcz i lokalne porywy wiatru."
+      ],
+      "reactions": [
+        "Największe ryzyko to podtopienia, grad i zakłócenia transportu.",
+        "To najbardziej praktyczny sygnał dla odbiorców planujących wyjazdy i plener."
+      ],
+      "whyItMatters": "Alert pogodowy bezpośrednio wpływa na bezpieczeństwo podróży, wydarzeń plenerowych i lokalnych służb.",
+      "context": "To dokładniejsze ostrzeżenie niż poranne, bardziej ogólne sygnały z poprzedniego slota.",
+      "watchNext": [
+        "Czy IMGW i RCB podniosą poziom alertów.",
+        "Czy pojawią się zgłoszenia o podtopieniach lub przerwach w ruchu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Meteo: Prognoza zagrożeń IMGW",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/burze-i-upal-prognoza-zagrozen-imgw-na-niedziele-i-poniedzialek-26-27-07-st9158121"
+        },
+        {
+          "title": "TVN24 Meteo: Ostrzeżenia IMGW przed upałem - niedziela 26.07",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/ostrzezenia-imgw-przed-upalem-niedziela-26-07-st9158847"
+        },
+        {
+          "title": "IMGW: Aktualności",
+          "url": "https://imgw.pl/aktualnosci/"
+        },
+        {
+          "title": "RCB: Komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "burze",
+        "upał",
+        "alerty"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-berlin-attack-2026-07-26-0903",
+      "section": "Świat",
+      "title": "Berlin po ataku w tłumie na paradzie Pride",
+      "lead": "Śmiertelny wjazd furgonetki utrzymał Berlin wysoko w bloku bezpieczeństwa Europy.",
+      "whatHappened": "TVN24 podał, że w centrum Berlina furgonetka wjechała w uczestników parady LGBT. Co najmniej jedna osoba zginęła, kilkanaście zostało rannych, a miasto odwołało wydarzenie; berliński komunikat potwierdził zakończenie CSD i policyjne działania wyjaśniające.",
+      "keyFacts": [
+        "Berlin.de potwierdziło odwołanie CSD po incydencie.",
+        "TVN24 podaje co najmniej 16 rannych."
+      ],
+      "reactions": [
+        "Sprawa może jeszcze zmienić się po kolejnych komunikatach policji.",
+        "To jeden z najmocniejszych europejskich sygnałów bezpieczeństwa tego weekendu."
+      ],
+      "whyItMatters": "Incydent w dużej europejskiej stolicy natychmiast wpływa na ocenę ryzyka i ochrony wydarzeń masowych.",
+      "context": "To rozwinięcie porannego sygnału z poprzedniego slotu, ale z lepszym potwierdzeniem liczby ofiar.",
+      "watchNext": [
+        "Czy policja poda motyw lub status podejrzanego.",
+        "Czy bilans rannych lub ofiar jeszcze się zmieni."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Samochód wjechał w uczestników parady LGBT w Berlinie",
+          "url": "https://tvn24.pl/swiat/niemcy-samochod-wjechal-w-uczestnikow-parady-lgbt-w-berlinie-jedna-osoba-nie-zyje-ranni-st9159145"
+        },
+        {
+          "title": "Berlin.de: Van Drives Into Crowd: CSD Canceled",
+          "url": "https://www.berlin.de/en/news/10533742-5559700-van-drives-into-crowd-CSD-canceled.en.html"
+        }
+      ],
+      "tags": [
+        "Berlin",
+        "bezpieczeństwo",
+        "Niemcy",
+        "Pride"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-wildfires-fr-sp-2026-07-26-0903",
+      "section": "Świat",
+      "title": "Francja i Hiszpania ewakuują setki tysięcy ludzi",
+      "lead": "Pożary w Europie Południowej wchodzą w fazę masowych ewakuacji.",
+      "whatHappened": "BBC World RSS prowadzi dziś temat pożarów we Francji i Hiszpanii, a AP opisuje ponad 250-270 tys. ewakuowanych oraz wsparcie wojskowe i europejskie. Sytuacja pozostaje dynamiczna, bo ogień nadal wymusza kolejne przesunięcia ludności i zamknięcia.",
+      "keyFacts": [
+        "Francja i Hiszpania używają dużych sił ratowniczych oraz wsparcia wojskowego.",
+        "To jeden z największych letnich kryzysów pożarowych w Europie."
+      ],
+      "reactions": [
+        "W krótkim terminie ważne będą kolejne ewakuacje i zamknięcia dróg.",
+        "To też sygnał, że europejska fala upałów ma bardzo realny koszt społeczny."
+      ],
+      "whyItMatters": "Pożary tej skali wpływają na zdrowie publiczne, transport, turystykę i reakcję władz w całej UE.",
+      "context": "To kontynuacja letniego bloku ekstremalnej pogody i pożarów, który od kilku slotów pozostaje w czołówce feedu.",
+      "watchNext": [
+        "Czy pojawią się kolejne ewakuacje i ofiary.",
+        "Czy UE lub państwa sąsiednie zwiększą wsparcie lotnicze i logistyczne."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: More than 300,000 flee wildfires in France and Spain",
+          "url": "https://www.bbc.co.uk/news/articles/cd7le0d53y2o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "AP News: France and Spain battle wildfires as more than 250,000 people are forced to flee homes",
+          "url": "https://apnews.com/article/93678a31ff53fc46564b6dfd9934eae1"
+        }
+      ],
+      "tags": [
+        "pożary",
+        "Francja",
+        "Hiszpania",
+        "Europa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-india-protest-2026-07-26-0903",
+      "section": "Świat",
+      "title": "Indyjski protest studencki kończy się dymisją ministra",
+      "lead": "Długie protesty wokół przecieków egzaminacyjnych doprowadziły do politycznego ustępstwa.",
+      "whatHappened": "BBC World RSS informuje, że protest \"Cockroach\" został zakończony po dymisji ministra edukacji. Rząd zaakceptował postulaty ruchu, co zamyka jeden z najgłośniejszych spornych tematów społecznych w Indiach tego lata.",
+      "keyFacts": [
+        "To rzadki przypadek, gdy masowy protest wymusza dymisję ministra.",
+        "BBC opisuje ruch jako zwycięstwo demonstrantów i sygnał politycznego ustępstwa."
+      ],
+      "reactions": [
+        "Opozycja i organizatorzy mogą teraz naciskać na kolejne reformy.",
+        "Ważne będzie, czy protest przełoży się na trwałe zmiany systemowe."
+      ],
+      "whyItMatters": "Takie ustępstwo pokazuje skalę presji społecznej i podatność rządu na kryzysy wokół edukacji i młodzieży.",
+      "context": "To zamknięcie jednego z głównych światowych wątków społecznych obecnych w RSS BBC od wczoraj.",
+      "watchNext": [
+        "Czy rząd ogłosi dodatkowe reformy egzaminacyjne.",
+        "Czy protesty pozostaną lokalnym sukcesem, czy wejdą na szerszą scenę polityczną."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: India's \"cockroach\" protest called off after education minister quits",
+          "url": "https://www.bbc.co.uk/news/articles/cdx828gj5xko?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "AP News: India's education minister resigns in victory for Cockroach youth movement protests",
+          "url": "https://apnews.com/article/56d69c289589f057c0e72cde0c3d75d3"
+        }
+      ],
+      "tags": [
+        "Indie",
+        "protesty",
+        "edukacja",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-houthis-saudi-2026-07-26-0903",
+      "section": "Świat",
+      "title": "Huti twierdzą, że trafili Arabię Saudyjską",
+      "lead": "Morze Czerwone i Zatoka nadal pozostają strefą ryzyka.",
+      "whatHappened": "BBC World RSS podaje, że wspierani przez Iran Huti ogłosili atak rakietowy na Arabię Saudyjską. Na tym etapie to ich własna deklaracja, ale sama informacja utrzymuje wysokie napięcie wokół żeglugi, ubezpieczeń i regionalnego bezpieczeństwa.",
+      "keyFacts": [
+        "Na razie jest to komunikat strony Huti, a nie pełne potwierdzenie skutków po stronie saudyjskiej.",
+        "Temat wpisuje się w szerszy wzrost ryzyka na szlakach morskich."
+      ],
+      "reactions": [
+        "Każde takie ogłoszenie może szybko przełożyć się na ostrzeżenia żeglugowe i ubezpieczeniowe.",
+        "To jeden z najważniejszych bliskowschodnich follow-upów bieżącego slotu."
+      ],
+      "whyItMatters": "Napięcie wokół Morza Czerwonego i Zatoki wpływa na logistykę, ceny energii i bezpieczeństwo regionu.",
+      "context": "To kontynuacja ryzyka morskiego, które od kilku dni przesuwa się między Iranem, Jemenem i Saudi.",
+      "watchNext": [
+        "Czy Rijad lub koalicja morska wyda odpowiedź.",
+        "Czy pojawi się ostrzeżenie dotyczące żeglugi lub ubezpieczeń."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Iran-backed Houthis claim missile attack on Saudi Arabia",
+          "url": "https://www.bbc.co.uk/news/articles/cj9d27v70j1o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Huti",
+        "Arabia Saudyjska",
+        "Morze Czerwone",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-kyiv-drone-exhibition-2026-07-26-0903",
+      "section": "Świat",
+      "title": "Rosyjski atak pod Kijowem zabija 10 osób",
+      "lead": "Kolejny ciężki atak przyciąga uwagę do skali strat w Ukrainie.",
+      "whatHappened": "BBC World RSS opisuje rosyjski atak na wystawę dronów pod Kijowem, w którym zginęło 10 osób. Materiał pokazuje, że wojna wciąż produkuje ciężkie ofiary także poza samą linią frontu.",
+      "keyFacts": [
+        "Bilans ofiar to co najmniej 10 zabitych.",
+        "Atak dotknął wydarzenie związane z dronami, a więc także symboliczny element wojny technologicznej."
+      ],
+      "reactions": [
+        "Ważne będzie, czy Ukraina poda dalszy bilans i typ użytej amunicji.",
+        "To wzmacnia presję na sojuszników w sprawie obrony przeciwlotniczej."
+      ],
+      "whyItMatters": "Każdy taki atak zmienia ocenę skali wojny i wpływa na debatę o wsparciu dla Ukrainy.",
+      "context": "To kolejny z wielu utrzymujących się wątków wojennych w bieżącym światowym feedzie.",
+      "watchNext": [
+        "Czy pojawi się oficjalny ukraiński bilans strat.",
+        "Czy atak wywoła nowy komentarz sojuszników lub ONZ."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Ten killed in Russian attack on drone exhibition near Kyiv",
+          "url": "https://www.bbc.co.uk/news/articles/cj637zd1k1ko?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "wojna",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-zelensky-crisis-2026-07-26-0903",
+      "section": "Świat",
+      "title": "Zełenski łagodzi kryzys po zmianie ministra obrony",
+      "lead": "Ukraiński rząd nadal pracuje w cieniu kadrowego zamieszania.",
+      "whatHappened": "BBC World RSS pokazuje, że Zełenski próbuje uporządkować skutki odwołania ministra obrony i przelicza polityczny koszt tej decyzji. To już nie pojedyncza dymisja, ale szerszy test spójności rządu.",
+      "keyFacts": [
+        "Wątek dotyczy nie tylko osoby ministra, ale całej równowagi w rządzie.",
+        "BBC opisuje próbę naprawy kryzysu po zmianie w resorcie."
+      ],
+      "reactions": [
+        "Następnym krokiem mogą być dalsze nominacje lub korekty w sztabie.",
+        "To ważne także dla oceny stabilności ukraińskiego zaplecza wojskowego."
+      ],
+      "whyItMatters": "Kadrowe turbulencje w resorcie obrony w czasie wojny mają bezpośredni wpływ na wiarygodność i tempo decyzji.",
+      "context": "To naturalny follow-up po poprzednich slotach, w których Ukraina była jednym z głównych tematów świata.",
+      "watchNext": [
+        "Czy Kijów ogłosi formalne obsadzenie resortu.",
+        "Czy pojawi się mocniejsza reakcja opozycji lub armii."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Zelensky tries to fix crisis over removal of defence minister and counts the cost",
+          "url": "https://www.bbc.co.uk/news/articles/c1d1gz3n99ro?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "rząd",
+        "Zełenski",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gosp-iran-oil-2026-07-26-0903",
+      "section": "Gospodarka",
+      "title": "Trump znów podbija ryzyko wokół Iranu i ropy",
+      "lead": "Rynek energii dalej reaguje na sygnały eskalacji z Waszyngtonu.",
+      "whatHappened": "CNN w transkrypcie Connect the World z 24 lipca opisał, że Iran miał odrzucić nową propozycję rozejmu USA przekazaną przez Irak, a Trump rozważał \"massive attack\". TVN24 Biznes równolegle opisywał reakcję rynku ropy na słowa Trumpa i poziom niepewności wokół rozmów.",
+      "keyFacts": [
+        "CNN wskazuje na brak przełomu w rozmowach o rozejmie.",
+        "TVN24 Biznes pisał o reakcji ropy na retorykę Trumpa."
+      ],
+      "reactions": [
+        "Największa zmienność zwykle pojawia się przy każdym sygnale dalszej eskalacji.",
+        "To temat, który wprost łączy geopolitykę z cenami energii."
+      ],
+      "whyItMatters": "Blok Iran-ropa nadal szybko przekłada się na rynki surowcowe i decyzje polityczne.",
+      "context": "To jeden z najdłużej żyjących wątków globalnych tego miesiąca, nadal obecny w CNN i TVN24 Biznes.",
+      "watchNext": [
+        "Czy pojawi się nowy komunikat w sprawie negocjacji z Iranem.",
+        "Czy ropa znowu wystrzeli po kolejnej wypowiedzi Trumpa."
+      ],
+      "sources": [
+        {
+          "title": "CNN Connect the World: Iran Said to Have Rejected New U.S. Ceasefire Deal Offered via Iraq",
+          "url": "https://transcripts.cnn.com/show/ctw/date/2026-07-24/segment/02"
+        },
+        {
+          "title": "TVN24 Biznes: Nie wycofujemy się teraz. Ropa reaguje na słowa Trumpa",
+          "url": "https://tvn24.pl/biznes/rynki/ceny-ropy-naftowej-22-lipca-2026-zmiana-na-rynku-po-slowach-prezydenta-usa-donalda-trumpa-st9153209"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Trump",
+        "ropa",
+        "rynek"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gosp-eu-tech-fines-2026-07-26-0903",
+      "section": "Gospodarka",
+      "title": "Trump grozi śledztwem za kary UE dla firm tech",
+      "lead": "Spór o regulację Big Tech znów wychodzi na poziom polityki handlowej.",
+      "whatHappened": "BBC World RSS podaje, że Trump zapowiada zbadanie UE po karach nakładanych na amerykańskie firmy technologiczne. W tle pozostaje presja Brukseli na egzekwowanie zasad rynku cyfrowego, więc temat łączy politykę, prawo i handel.",
+      "keyFacts": [
+        "Temat wyrósł z europejnych kar wobec amerykańskich firm technologicznych.",
+        "Spór ma jednocześnie wymiar regulacyjny i handlowy."
+      ],
+      "reactions": [
+        "To może wywołać kolejne komentarze z Białego Domu i Brukseli.",
+        "Jeśli spór się zaostrzy, może uderzyć w szerzej rozumianą relację USA-UE."
+      ],
+      "whyItMatters": "Regulacje Big Tech i odwet polityczny mają bezpośredni wpływ na handel i klimat dla firm technologicznych.",
+      "context": "To świeży follow-up do europejskich kar i szerszego konfliktu o cyfrowe reguły gry.",
+      "watchNext": [
+        "Czy Biały Dom poda szczegóły planowanego postępowania.",
+        "Czy Komisja Europejska odpowie formalnym komunikatem."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Trump vows to investigate EU over fining of US tech companies",
+          "url": "https://www.bbc.co.uk/news/articles/cvgjenp4680o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "European Commission: Commission fines Google €890 million for breaches of the Digital Markets Act",
+          "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1670"
+        }
+      ],
+      "tags": [
+        "UE",
+        "Big Tech",
+        "handel",
+        "regulacje"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "gosp-us-tariffs-2026-07-26-0903",
+      "section": "Gospodarka",
+      "title": "USA nakładają nową falę ceł na dziesiątki państw",
+      "lead": "Globalny handel znów dostaje bezpośredni cios z Waszyngtonu.",
+      "whatHappened": "BBC World RSS informuje o nowej fali ceł USA obejmującej wiele państw. AP opisuje to jako kolejne szerokie podbicie stawek i sygnał, że partnerzy handlowi muszą liczyć się z nową rundą odpowiedzi.",
+      "keyFacts": [
+        "BBC mówi o cłach na dziesiątki państw.",
+        "AP wiąże ruch z szerszą strategią presji handlowej Białego Domu."
+      ],
+      "reactions": [
+        "Prawdopodobna jest odpowiedź partnerów handlowych albo przynajmniej formalne komentarze.",
+        "Temat może szybko przejść z poziomu handlu do poziomu politycznego."
+      ],
+      "whyItMatters": "Nowe cła wpływają na łańcuchy dostaw, ceny i relacje gospodarcze USA z resztą świata.",
+      "context": "To kontynuacja handlowej linii, która w poprzednich slotach już mocno przebijała się przez feed.",
+      "watchNext": [
+        "Czy któryś partner ogłosi retorsje lub negocjacje.",
+        "Czy rynki znowu zaczną wyceniać wyższą zmienność handlową."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: US hits dozens of countries with new wave of tariffs",
+          "url": "https://www.bbc.co.uk/news/articles/cvgj61j6l08o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "AP News: Trump imposes double-digit tariffs on dozens of countries",
+          "url": "https://apnews.com/article/4ea091eeee3fa1bfbe55af3f482e6bc1"
+        }
+      ],
+      "tags": [
+        "cła",
+        "USA",
+        "handel",
+        "gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "tech-openai-hf-2026-07-26-0903",
+      "section": "Technologia",
+      "title": "OpenAI i Hugging Face doprecyzowują incydent bezpieczeństwa",
+      "lead": "Sprawa eval-hackingu przechodzi z fazy sensacji w fazę wyjaśnień.",
+      "whatHappened": "OpenAI i Hugging Face potwierdziły incydent bezpieczeństwa podczas ewaluacji modeli. Firmy opisały, że chodziło o eksperyment bezpieczeństwa, który ujawnił luki w izolacji i monitoringu, a temat utrzymał się w szerszej debacie o ryzyku autonomicznych agentów.",
+      "keyFacts": [
+        "Obie firmy opisały sprawę jako incydent związany z testem bezpieczeństwa.",
+        "W centrum pozostają izolacja, monitoring i zachowanie agentów AI podczas ewaluacji."
+      ],
+      "reactions": [
+        "To może przyspieszyć pytania o standardy testowania modeli i agentów.",
+        "W praktyce rynek patrzy teraz na to jako na sygnał ryzyka operacyjnego, nie tylko PR-owego."
+      ],
+      "whyItMatters": "Incydent jest ważny dla całej branży AI, bo pokazuje, jak łatwo test bezpieczeństwa może ujawnić realne luki operacyjne.",
+      "context": "To kontynuacja tematu, który w poprzednich slotach już przeszedł z sensacji do fazy technicznego rozliczania.",
+      "watchNext": [
+        "Czy OpenAI lub Hugging Face opublikują pełniejszy raport post mortem.",
+        "Czy regulatorzy albo partnerzy branżowi zareagują na wniosek o ostrzejsze standardy."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: OpenAI and Hugging Face partner to address security incident during model evaluation",
+          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+        },
+        {
+          "title": "Hugging Face: Security incident disclosure - July 2026",
+          "url": "https://huggingface.co/blog/security-incident-july-2026"
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "Hugging Face",
+        "AI",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    }
+  ]
+}
