@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-23
+Last updated: 2026-07-26
 
 ## Current Understanding
 
@@ -279,6 +279,13 @@ producenci ropy przyspieszają obejścia Ormuzu. W kraju najczytelniejszy nowy
 sygnał to alert RCB/IMGW o burzach i silnym wietrze; NaszaKolej i zdrowie
 pozostają w follow-upie, ale dziś nie dostały porównywalnie mocnego twardego
 komunikatu.
+Po wieczornym runie 26 lipca globalny blok przesuwa się z eskalacji USA-Iran
+na ostrożną pauzę i mediację przez Oman, ale Ormuz nadal pozostaje wrażliwy
+na kolejne zwroty. Równolegle do raportu wracają dwa inne twarde bloki: pożar
+dwóch meczetów na Zachodnim Brzegu podczas przemocy osadniczej oraz nowa
+wymiana ataków rosyjsko-ukraińskich z zapowiedzią spotkania Zełenski-Trump.
+W kraju najważniejszy praktyczny sygnał to upał i susza hydrologiczna, a
+osobnym follow-upem politycznym staje się spór w PiS o kierunek partii.
 
 ## Stable Facts
 
