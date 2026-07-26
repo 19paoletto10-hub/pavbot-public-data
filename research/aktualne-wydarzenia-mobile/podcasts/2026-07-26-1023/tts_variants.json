@@ -1,0 +1,30 @@
+{
+  "created_at": "2026-07-26T08:42:44.995308+00:00",
+  "language": "pl",
+  "language_detection": "local-polish-heuristic",
+  "speed": 1.03,
+  "variants": [
+    {
+      "id": "female-piper",
+      "engine": "piper",
+      "voice": "pl_PL-gosia-medium",
+      "model": "rhasspy/piper-voices:pl_PL-gosia-medium",
+      "status": "ok",
+      "duration_seconds": 138.38966,
+      "output_file": "/Users/promaczek/Documents/CODEX-Pavbot/research/aktualne-wydarzenia-mobile/podcasts/2026-07-26-1023/audio/female-piper/podcast.mp3",
+      "render_json": "/Users/promaczek/Documents/CODEX-Pavbot/research/aktualne-wydarzenia-mobile/podcasts/2026-07-26-1023/audio/female-piper/render.json",
+      "error": null
+    },
+    {
+      "id": "male-xtts",
+      "engine": "xtts",
+      "voice": "Andrew Chipper",
+      "model": "coqui/XTTS-v2",
+      "status": "ok",
+      "duration_seconds": 209.990159,
+      "output_file": "/Users/promaczek/Documents/CODEX-Pavbot/research/aktualne-wydarzenia-mobile/podcasts/2026-07-26-1023/audio/male-xtts/podcast.mp3",
+      "render_json": "/Users/promaczek/Documents/CODEX-Pavbot/research/aktualne-wydarzenia-mobile/podcasts/2026-07-26-1023/audio/male-xtts/render.json",
+      "error": null
+    }
+  ]
+}
