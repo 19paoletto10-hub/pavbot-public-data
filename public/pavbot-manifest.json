@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-26T07:14:46.035146+00:00",
+  "generatedAt": "2026-07-26T08:05:37.984003+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -306,6 +306,106 @@
       "date": "2026-07-26",
       "time": "06:02",
       "itemCount": 16
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-26/sources.md",
+      "type": "podcastSources",
+      "topic": "polska-swiat",
+      "title": "Źródła użyte w scenariuszu",
+      "path": "research/polska-swiat/podcasts/2026-07-26/sources.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-26/sources.md",
+      "sizeBytes": 3279,
+      "date": "2026-07-26"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-26/script.md",
+      "type": "podcastScript",
+      "topic": "polska-swiat",
+      "title": "Podcast 26 lipca 2026",
+      "path": "research/polska-swiat/podcasts/2026-07-26/script.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-26/script.md",
+      "sizeBytes": 8462,
+      "date": "2026-07-26"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-26/render.json",
+      "type": "podcastRender",
+      "topic": "polska-swiat",
+      "title": "render.json",
+      "path": "research/polska-swiat/podcasts/2026-07-26/render.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-26/render.json",
+      "sizeBytes": 281,
+      "date": "2026-07-26"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-26/draft.md",
+      "type": "podcastDraft",
+      "topic": "polska-swiat",
+      "title": "Podcast 26 lipca 2026",
+      "path": "research/polska-swiat/podcasts/2026-07-26/draft.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-26/draft.md",
+      "sizeBytes": 4775,
+      "date": "2026-07-26"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-26/brief.pdf",
+      "type": "podcastBriefPdf",
+      "topic": "polska-swiat",
+      "title": "Podcast brief PDF",
+      "path": "research/polska-swiat/podcasts/2026-07-26/brief.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-26/brief.pdf",
+      "sizeBytes": 77548,
+      "date": "2026-07-26"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-26/podcast.mp3",
+      "type": "podcastAudio",
+      "topic": "polska-swiat",
+      "title": "Podcast audio",
+      "path": "research/polska-swiat/podcasts/2026-07-26/podcast.mp3",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-26/podcast.mp3",
+      "sizeBytes": 3796236,
+      "date": "2026-07-26"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-26/brief_pages/page-4.png",
+      "type": "podcastArtifact",
+      "topic": "polska-swiat",
+      "title": "page-4.png",
+      "path": "research/polska-swiat/podcasts/2026-07-26/brief_pages/page-4.png",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-26/brief_pages/page-4.png",
+      "sizeBytes": 72846,
+      "date": "2026-07-26"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-26/brief_pages/page-3.png",
+      "type": "podcastArtifact",
+      "topic": "polska-swiat",
+      "title": "page-3.png",
+      "path": "research/polska-swiat/podcasts/2026-07-26/brief_pages/page-3.png",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-26/brief_pages/page-3.png",
+      "sizeBytes": 377235,
+      "date": "2026-07-26"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-26/brief_pages/page-2.png",
+      "type": "podcastArtifact",
+      "topic": "polska-swiat",
+      "title": "page-2.png",
+      "path": "research/polska-swiat/podcasts/2026-07-26/brief_pages/page-2.png",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-26/brief_pages/page-2.png",
+      "sizeBytes": 205881,
+      "date": "2026-07-26"
+    },
+    {
+      "id": "research/polska-swiat/podcasts/2026-07-26/brief_pages/page-1.png",
+      "type": "podcastArtifact",
+      "topic": "polska-swiat",
+      "title": "page-1.png",
+      "path": "research/polska-swiat/podcasts/2026-07-26/brief_pages/page-1.png",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/podcasts/2026-07-26/brief_pages/page-1.png",
+      "sizeBytes": 314809,
+      "date": "2026-07-26"
     },
     {
       "id": "research/reddit-radar/runs/2026-07-25-0008-reddit-radar.md",
