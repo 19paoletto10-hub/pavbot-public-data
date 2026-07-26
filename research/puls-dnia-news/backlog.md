@@ -2,6 +2,15 @@
 
 ## Open
 
+## 2026-07-26 18:00
+
+- Watch whether PiS issues a formal reply after the Kurski-Morawiecki escalation.
+- Watch whether IMGW or RCB upgrade the alert into outages, flooding or transport blocks.
+- Watch whether Berlin police release a fuller suspect or casualty update after the manhunt.
+- Watch whether France or Spain add another evacuation wave or road closure around the fires.
+- Watch whether Kijów gets a fuller casualty, damage or air-defense follow-up.
+- Watch whether OpenAI and Hugging Face publish a fuller technical follow-up to the agent incident.
+
 ## 2026-07-26 12:01
 
 - Watch whether IMGW upgrades the weekend alert into outages, flooding or transport blocks.
