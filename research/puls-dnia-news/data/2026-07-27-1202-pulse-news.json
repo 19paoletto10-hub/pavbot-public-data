@@ -1,0 +1,457 @@
+{
+  "topic": "puls-dnia-news",
+  "schemaVersion": 1,
+  "runDate": "2026-07-27",
+  "runTime": "12:02",
+  "status": "Material update",
+  "headline": "12:02: Ziobro, AI i lokalne incydenty",
+  "summary": "Południowy slot przesuwa Puls Dnia z porannego miksu alertów w stronę mocniejszych wątków prawno-politycznych, technologicznych i bezpieczeństwa publicznego. Najmocniej wybijają się Ziobro, Zondacrypto, Nvidia/OpenAI, pożary we Francji oraz lokalne incydenty drogowe i pożarowe, a CNN nadal zatrzymuje się na 24 lipca.",
+  "checkedSources": [
+    {
+      "title": "TVN24 najnowsze",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN Connect the World",
+      "url": "https://transcripts.cnn.com/show/ctw"
+    },
+    {
+      "title": "RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "IMGW-PIB CMM Portal letni",
+      "url": "https://cmm.imgw.pl/?page_id=27337"
+    }
+  ],
+  "items": [
+    {
+      "id": "pl-ziobro-2026-07-27-1202",
+      "section": "Polityka",
+      "title": "Ziobro: wniosek o ekstradycję do USA",
+      "lead": "TVN24 podaje nieoficjalnie, że do USA skierowano wniosek o ekstradycję Zbigniewa Ziobry.",
+      "whatHappened": "PAP, na którą powołuje się TVN24, informuje o wniosku ekstradycyjnym wobec byłego ministra sprawiedliwości przebywającego w Stanach Zjednoczonych.",
+      "keyFacts": [
+        "Źródłem informacji jest TVN24, które cytuje PAP i źródła bliskie śledztwu.",
+        "Wątek dotyczy byłego ministra sprawiedliwości Zbigniewa Ziobry.",
+        "To kolejna odsłona sporu prawno-politycznego wokół byłego szefa MS."
+      ],
+      "reactions": [
+        "PiS może zostać zmuszone do szybkiego komentarza.",
+        "Jeśli wniosek się potwierdzi, sprawa przejdzie do formalnej ścieżki prawnej."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych polityczno-prawnych sygnałów dnia.",
+      "context": "Ziobro od miesięcy pozostaje w centrum sporów o odpowiedzialność i rozliczenia władzy.",
+      "watchNext": [
+        "Czy pojawi się oficjalne potwierdzenie z prokuratury lub MSZ.",
+        "Czy sam Ziobro lub PiS odpowiedzą publicznie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ekstradycja Zbigniewa Ziobry. Nieoficjalnie: jest wniosek do USA",
+          "url": "https://tvn24.pl/polska/ekstradycja-zbigniewa-ziobry-nieoficjalnie-jest-wniosek-do-usa-st9160450?source=rss"
+        }
+      ],
+      "tags": [
+        "Ziobro",
+        "ekstradycja",
+        "PiS",
+        "prokuratura"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-francja-pozary-2026-07-27-1202",
+      "section": "Świat",
+      "title": "Pożary we Francji nadal poza kontrolą",
+      "lead": "W Żyrondzie strażacy po piątej nocy wciąż nie opanowali ognia.",
+      "whatHappened": "TVN24 opisuje rozległe pożary w departamencie Żyrondy, około 15 kilometrów od Bordeaux, gdzie ogień nadal trawi ogromny obszar.",
+      "keyFacts": [
+        "Pożary objęły już setki tysięcy hektarów ziemi.",
+        "Sytuacja została ustabilizowana, ale ognia nie opanowano.",
+        "Akcja gaśnicza trwa w pobliżu dużego obszaru metropolitalnego Bordeaux."
+      ],
+      "reactions": [
+        "Kolejne miejscowości mogą potrzebować zabezpieczenia albo ewakuacji.",
+        "Władze lokalne mogą rozszerzać ograniczenia ruchu i dostępu do terenów leśnych."
+      ],
+      "whyItMatters": "To duży europejski pożar z realnym wpływem na bezpieczeństwo, transport i zdrowie publiczne.",
+      "context": "Letni sezon pożarowy w Europie ponownie wchodzi w fazę wysokiego ryzyka.",
+      "watchNext": [
+        "Czy francuskie służby ogłoszą kolejne ewakuacje lub zamknięcia dróg.",
+        "Czy pojawi się aktualizacja o tempie opanowania frontu ognia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pożary we Francji. \"Nadal nie mamy kontroli nad ogniem\"",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/francja-gigantyczne-pozary-nadal-nie-mamy-kontroli-nad-ogniem-st9160456?source=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "pożary",
+        "Bordeaux",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "tech-nvidia-openai-2026-07-27-1202",
+      "section": "Technologia",
+      "title": "Nvidia i OpenAI planują megaprojekt w Ohio",
+      "lead": "Według WSJ Nvidia rozmawia o wsparciu ogromnego centrum danych dla OpenAI.",
+      "whatHappened": "TVN24 podaje, że rozmowy dotyczą finansowych gwarancji dla budowy wielkiego centrum danych w Ohio.",
+      "keyFacts": [
+        "Źródłem doniesienia jest Wall Street Journal, cytowany przez TVN24.",
+        "Projekt ma dotyczyć infrastruktury dla OpenAI.",
+        "Skala inwestycji może sięgać setek miliardów dolarów w szerszym łańcuchu wydatków."
+      ],
+      "reactions": [
+        "Rynek AI może odczytać to jako sygnał dalszego wzrostu nakładów na infrastrukturę.",
+        "Temat wzmacnia presję na energię, chipy i dostępność mocy obliczeniowej."
+      ],
+      "whyItMatters": "To pokazuje, że wyścig AI przenosi się z modeli na centra danych, energię i kapitał.",
+      "context": "Ohio staje się kolejnym punktem na mapie dużych inwestycji infrastrukturalnych AI w USA.",
+      "watchNext": [
+        "Czy Nvidia lub OpenAI potwierdzą zakres projektu.",
+        "Czy pojawią się szczegóły o finansowaniu i terminach budowy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nvidia i OpenAI szykują megaprojekt. W grze setki miliardów dolarów",
+          "url": "https://tvn24.pl/biznes/tech/openai-z-ambitnym-projektem-nvidia-moze-wesprzec-budowe-centrum-danych-st9160323?source=rss"
+        }
+      ],
+      "tags": [
+        "Nvidia",
+        "OpenAI",
+        "AI",
+        "centrum danych"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-wroclaw-pobicie-2026-07-27-1202",
+      "section": "Bezpieczeństwo",
+      "title": "We Wrocławiu pobito parę i uciekli sprawcy",
+      "lead": "Policja szuka sprawców brutalnej napaści z niedzieli.",
+      "whatHappened": "TVN24 podaje, że napastnicy najpierw zaatakowali mężczyznę, a potem także jego partnerkę, gdy próbowała mu pomóc.",
+      "keyFacts": [
+        "Do zdarzenia doszło we Wrocławiu.",
+        "Policja przesłuchuje poszkodowanych.",
+        "Sprawcy uciekli z miejsca ataku."
+      ],
+      "reactions": [
+        "Mieszkańcy będą oczekiwać szybkiej identyfikacji napastników.",
+        "Sprawa wzmacnia uwagę na bezpieczeństwo uliczne i reakcję patroli."
+      ],
+      "whyItMatters": "To świeży lokalny sygnał bezpieczeństwa z potencjalnym ryzykiem dalszych aktów przemocy.",
+      "context": "Wrocław wraca w krajowym miksie newsowym jako miejsce brutalnego incydentu ulicznego.",
+      "watchNext": [
+        "Czy policja poda rysopisy lub zatrzyma podejrzanych.",
+        "Czy pojawi się uzupełnienie o stanie poszkodowanych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pobili parę i uciekli. Policja szuka sprawców",
+          "url": "https://tvn24.pl/wroclaw/wroclaw-pobili-pare-i-uciekli-policja-szuka-sprawcow-st9160422?source=rss"
+        }
+      ],
+      "tags": [
+        "Wrocław",
+        "policja",
+        "pobicie",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "alerty-smieciarka-spalarnia-2026-07-27-1202",
+      "section": "Alerty",
+      "title": "Pożar śmieciarki w nowej spalarni odpadów",
+      "lead": "Na terenie MPO zapaliła się śmieciarka, ale ogień nie rozprzestrzenił się dalej.",
+      "whatHappened": "TVN24 informuje o pożarze pojazdu w jednym z budynków zakładu i szybkim opanowaniu sytuacji przez strażaków.",
+      "keyFacts": [
+        "Nikt nie ucierpiał.",
+        "Pojazd znajdował się w budynku zakładu.",
+        "Strażacy zatrzymali rozwój ognia przed zajęciem wnętrza hali."
+      ],
+      "reactions": [
+        "Miasto może sprawdzać zabezpieczenia przeciwpożarowe instalacji.",
+        "To lokalny alert operacyjny dla Warszawy i Targówka."
+      ],
+      "whyItMatters": "Incydent w infrastrukturze odpadowej może mieć znaczenie dla bezpieczeństwa obiektu i ruchu miejskiego.",
+      "context": "Nowe instalacje komunalne są szczególnie wrażliwe na awarie i pożary w pierwszej fazie pracy.",
+      "watchNext": [
+        "Czy MPO lub PSP poda przyczynę zapłonu i ocenę szkód.",
+        "Czy pojawią się ograniczenia pracy instalacji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pożar śmieciarki w nowej spalarni odpadów",
+          "url": "https://tvn24.pl/tvnwarszawa/targowek/warszawa-pozar-smieciarki-w-nowej-spalarni-odpadow-st9160341?source=rss"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "pożar",
+        "MPO",
+        "alert"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "biz-zondacrypto-2026-07-27-1202",
+      "section": "Gospodarka",
+      "title": "Prokuratura publikuje nowe szczegóły afery Zondacrypto",
+      "lead": "Katowicka prokuratura ujawnia kolejne elementy śledztwa dotyczącego giełdy kryptowalut.",
+      "whatHappened": "TVN24 podaje, że postępowanie obejmuje podejrzenia oszustw i prania pieniędzy, a śledczy zabezpieczyli m.in. 4 mln euro na francuskim koncie.",
+      "keyFacts": [
+        "Prokuratura analizuje korespondencję pracowników platformy.",
+        "W grę wchodzą podejrzenia oszustw na dużą skalę.",
+        "Śledztwo ma wymiar transgraniczny."
+      ],
+      "reactions": [
+        "Inwestorzy i użytkownicy platform krypto będą czekać na dalsze wyjaśnienia.",
+        "To może być jeden z większych polskich wątków regulacyjnych w krypto."
+      ],
+      "whyItMatters": "Sprawa łączy ryzyko finansowe, compliance i potencjalne skutki dla rynku krypto w Polsce.",
+      "context": "Po serii spraw o nadużycia rynek kryptowalut pozostaje pod presją śledczą.",
+      "watchNext": [
+        "Czy prokuratura poda kolejne zarzuty, blokady lub zabezpieczenia.",
+        "Czy pojawią się odpowiedzi ze strony Zondacrypto."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Afera Zondacrypto. Jest nowy komunikat prokuratury",
+          "url": "https://tvn24.pl/biznes/z-kraju/gielda-zondacrypto-i-pranie-pieniedzy-jest-nowa-decyzja-prokuratury-st9160416?source=rss"
+        }
+      ],
+      "tags": [
+        "Zondacrypto",
+        "prokuratura",
+        "krypto",
+        "finanse"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-s2-ucieczka-2026-07-27-1202",
+      "section": "Bezpieczeństwo",
+      "title": "Dachowanie po zderzeniu na S2 i ucieczka kierowcy",
+      "lead": "Na Południowej Obwodnicy Warszawy samochód dachował po zderzeniu z busem.",
+      "whatHappened": "TVN24 podaje, że kierowca osobówki oddalił się z miejsca zdarzenia, a ruch w kierunku Konotopy był mocno utrudniony.",
+      "keyFacts": [
+        "Do zdarzenia doszło w Opaczy-Kolonii.",
+        "Policja odnotowała utrudnienia na jezdni w kierunku węzła Konotopa.",
+        "Jeden z kierowców uciekł po kolizji."
+      ],
+      "reactions": [
+        "Kierowcy muszą liczyć się z korkami i objazdami.",
+        "Policja może szybko szukać sprawcy i świadków."
+      ],
+      "whyItMatters": "To kolejny niebezpieczny incydent drogowy w warszawskim węźle komunikacyjnym.",
+      "context": "S2 i obwodnice stolicy są szczególnie wrażliwe na nawet krótkie blokady.",
+      "watchNext": [
+        "Czy policja poda status poszukiwań kierowcy.",
+        "Czy ruch wróci do normy bez dalszych utrudnień."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Dachowanie po zderzeniu z busem na S2. Jeden z kierowców uciekł",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/opacz-kolonia-osobowka-dachowala-po-zderzeniu-z-busem-na-s2-jej-kierowca-oddalil-sie-st9160351?source=rss"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "S2",
+        "wypadek",
+        "policja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pl-promile-row-2026-07-27-1202",
+      "section": "Bezpieczeństwo",
+      "title": "Dwaj kierowcy z ponad 3 promilami w rowie",
+      "lead": "W Łódzkiem policja zatrzymała dwóch mężczyzn po skrajnie niebezpiecznej jeździe.",
+      "whatHappened": "TVN24 opisuje, że jeden kierowca się przewrócił, a drugi wpadł do rowu; obaj mieli ponad 3 promile.",
+      "keyFacts": [
+        "Sprawa dotyczy Skierniewic i Radomska.",
+        "Obaj mężczyźni byli skrajnie nietrzeźwi.",
+        "Zdarzenie pokazuje wysokie ryzyko na drogach lokalnych."
+      ],
+      "reactions": [
+        "Policja może skierować sprawę do dalszych czynności karnych.",
+        "Temat podbija debatę o pijanych kierowcach i kontroli drogowej."
+      ],
+      "whyItMatters": "To bezpośrednie zagrożenie dla innych uczestników ruchu.",
+      "context": "Latem lokalne drogi częściej pokazują ryzyko związane z alkoholem i brawurą.",
+      "watchNext": [
+        "Czy policja poda więcej o zarzutach i stanie kierowców.",
+        "Czy pojawią się informacje o zatrzymaniu prawa jazdy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Jeden się przewrócił, drugi wpadł do rowu. Obaj mieli ponad 3 promile",
+          "url": "https://tvn24.pl/lodz/skierniewice-radomsko-jeden-sie-przewrocil-drugi-wpadl-do-rowu-obaj-mieli-powyzej-3-promili-st9160360?source=rss"
+        }
+      ],
+      "tags": [
+        "Łódzkie",
+        "alkohol",
+        "drogi",
+        "policja"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "sw-mamdani-2026-07-27-1202",
+      "section": "Polityka",
+      "title": "Netanyahu atakuje Mamdaniego po groźbie aresztu",
+      "lead": "BBC podaje, że Netanyahu oskarża burmistrza Nowego Jorku o podsycanie nienawiści.",
+      "whatHappened": "BBC opisuje, że Mamdani wycofał wcześniejszą groźbę i przyznał, iż nie ma podstaw prawnych do aresztowania Netanjahu na podstawie nakazu ICC.",
+      "keyFacts": [
+        "Spór łączy politykę miejską Nowego Jorku z międzynarodowym nakazem ICC.",
+        "Mamdani wycofał wcześniej swoją groźbę.",
+        "BBC opisuje reakcję Netanjahu jako atak polityczny."
+      ],
+      "reactions": [
+        "Sprawa może wrócić w kampanii i w debacie o ICC.",
+        "Nowy Jork staje się areną sporu o Izrael i prawo międzynarodowe."
+      ],
+      "whyItMatters": "To szybki sygnał, że konflikt izraelsko-palestyński wchodzi też w amerykański spór polityczny.",
+      "context": "Nowy Jork i kwestia ICC stały się kolejnym frontem narracyjnym wokół wojny w regionie.",
+      "watchNext": [
+        "Czy pojawi się odpowiedź biura Mamdaniego lub władz miasta.",
+        "Czy temat przejdzie do kolejnej rundy komentarzy w USA."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Netanyahu accuses NYC Mayor Mamdani of 'fomenting hate' after arrest threat",
+          "url": "https://www.bbc.co.uk/news/articles/c5yegvd9ddeo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Netanyahu",
+        "Mamdani",
+        "Nowy Jork",
+        "ICC"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-iran-talks-2026-07-27-1202",
+      "section": "Świat",
+      "title": "USA wstrzymały ataki na Iran, by dać miejsce rozmowom",
+      "lead": "BBC podaje, że po prawie dwóch tygodniach wymiany ciosów obie strony nie atakowały przez dwie noce.",
+      "whatHappened": "Amerykański ambasador mówi BBC, że pauza ma pomóc rozmowom o trwałym zakończeniu wojny.",
+      "keyFacts": [
+        "BBC łączy przerwę w atakach z dyplomatycznym oknem negocjacyjnym.",
+        "Chodzi o konflikt USA-Iran z ryzykiem dalszej eskalacji.",
+        "To pierwszy sygnał możliwego oddechu po serii odwetów."
+      ],
+      "reactions": [
+        "Rynki energii i bezpieczeństwa będą śledzić, czy pauza się utrzyma.",
+        "Każdy nowy atak może natychmiast zamknąć kanał rozmów."
+      ],
+      "whyItMatters": "To potencjalny punkt zwrotny w jednym z najgroźniejszych światowych konfliktów tygodnia.",
+      "context": "BBC relacjonuje ten spór od czasu wzajemnych uderzeń i nacisku na rozejm.",
+      "watchNext": [
+        "Czy pojawi się oficjalny komunikat USA lub Iranu o rozmowach.",
+        "Czy pauza potrwa dłużej niż jedną noc."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Trump paused attacks on Iran to make space for talks, US ambassador says",
+          "url": "https://www.bbc.co.uk/news/articles/c5y45kdkynpo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "dyplomacja",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-seattle-2026-07-27-1202",
+      "section": "Świat",
+      "title": "Trzy osoby nie żyją po strzelaninie w Seattle",
+      "lead": "BBC podaje, że w ataku przy Space Needle zginęły trzy osoby.",
+      "whatHappened": "Do strzelaniny doszło podczas festiwalu food trucków; kilka osób, w tym dwuletni chłopiec, zostało rannych, a podejrzany jest w rękach policji.",
+      "keyFacts": [
+        "Zdarzenie miało miejsce przy Space Needle w Seattle.",
+        "BBC podaje też o rannych, w tym o dwuletnim chłopcu.",
+        "Podejrzany został zatrzymany."
+      ],
+      "reactions": [
+        "Miasto będzie potrzebować szybkiego wyjaśnienia motywu.",
+        "Sprawa podbije debatę o bezpieczeństwie publicznych imprez w USA."
+      ],
+      "whyItMatters": "To ciężki, bieżący incydent masowy z natychmiastowym skutkiem społecznym.",
+      "context": "Stany Zjednoczone znów mierzą się z przemocą na dużym, otwartym wydarzeniu publicznym.",
+      "watchNext": [
+        "Czy policja poda motyw i pełny bilans rannych.",
+        "Czy władze miasta ogłoszą dodatkowe zabezpieczenia."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Three dead in shooting at food festival near Seattle's Space Needle",
+          "url": "https://www.bbc.co.uk/news/articles/c78gjyx4q2yo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Seattle",
+        "strzelanina",
+        "USA",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sw-westbank-2026-07-27-1202",
+      "section": "Świat",
+      "title": "Osadnicy podpalają meczety, auta i pola na Zachodnim Brzegu",
+      "lead": "BBC podaje kolejne doniesienia o atakach po śmiertelnym starciu sprzed dwóch dni.",
+      "whatHappened": "W palestyńskich relacjach pojawiają się informacje o podpaleniach meczetów, samochodów i ziemi rolnej przez osadników.",
+      "keyFacts": [
+        "BBC łączy to z wcześniejszym starciem w pobliżu wioski Tal.",
+        "W tym starciu zginęło czterech Palestyńczyków i dwóch Izraelczyków.",
+        "Sprawa pokazuje dalszą eskalację lokalnej przemocy."
+      ],
+      "reactions": [
+        "Potencjalne są kolejne komentarze władz izraelskich i palestyńskich.",
+        "Ryzyko dalszych odwetów pozostaje wysokie."
+      ],
+      "whyItMatters": "To ważny wskaźnik eskalacji przemocy i napięcia społecznego na okupowanych terenach.",
+      "context": "Zachodni Brzeg pozostaje jednym z najbardziej zapalnych miejsc w regionie.",
+      "watchNext": [
+        "Czy pojawi się oficjalna reakcja wojska, policji albo ONZ.",
+        "Czy lokalne starcia rozleją się na kolejne miejscowości."
+      ],
+      "sources": [
+        {
+          "title": "BBC World: Israeli settlers set fire to mosques, cars and farm land in West Bank, Palestinians say",
+          "url": "https://www.bbc.co.uk/news/articles/cjrv77gl4deo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Zachodni Brzeg",
+        "Izrael",
+        "Palestyna",
+        "przemoc"
+      ],
+      "priority": "high"
+    }
+  ]
+}

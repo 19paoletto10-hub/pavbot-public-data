@@ -2,6 +2,15 @@
 
 ## Open
 
+## 2026-07-27 12:02
+
+- Watch whether the Ziobro extradition request gets an official confirmation or denial.
+- Watch whether France adds new evacuation, road closure or containment updates.
+- Watch whether Nvidia or OpenAI confirm any part of the Ohio data-center plan.
+- Watch whether police in Wrocław and on S2 publish identification or arrest follow-ups.
+- Watch whether the Zondacrypto probe produces new charges, freezes or asset notes.
+- Watch whether Seattle or West Bank officials publish a clearer casualty or motive update.
+
 ## 2026-07-27 09:01
 
 - Watch whether IMGW lub RCB podniosą ostrzeżenia albo potwierdzą szkody po burzach.
