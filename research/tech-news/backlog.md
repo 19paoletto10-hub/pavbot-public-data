@@ -4,6 +4,9 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track OpenAI task crossover evidence | The Work at the Frontier report gives a rare quantitative signal that AI is already shifting tasks across occupational boundaries | Watch independent replication, enterprise implications and policy response | Open |
+| High | Track open-weight AI policy alliance | The open letter plus Open Secure AI Alliance turn open weights into a live policy and security alignment | Watch sign-on growth, official policy language and whether labs keep coordinating or diverging | Open |
+| High | Track enterprise Claude rollout in regulated industries | Cognizant's client examples show Claude moving from pilot to production in manufacturing, life sciences and insurance | Watch case studies, measurable ROI and sector-specific constraints | Open |
 | High | Track OpenAI Health rollout | Medical-record access inside ChatGPT now live for eligible U.S. adults turns consumer health into a regulated AI surface | Watch U.S. expansion, privacy defaults and clinician response | Open |
 | High | Track OpenAI Presence deployment | Enterprise voice/chat agents with a Codex improvement loop may become the new support default | Watch customer wins, escalation controls and workflow-specific rollout | Open |
 | High | Track OpenAI SMB and newsroom programs | Sector-specific programs show OpenAI moving from generic chat to packaged workflow distribution | Watch partner uptake, paid conversions and editorial backlash | Open |

@@ -4,6 +4,8 @@ Last updated: 2026-07-27
 
 ## Current Understanding
 
+Wieczorny run z 2026-07-27 dodaje do osi cost/control trzeci wektor: openness i task crossover. OpenAI publikuje Work at the Frontier i pokazuje, że 43.5% occupation-specific AI use wychodzi poza granice zawodu; NVIDIA uruchamia Open Secure AI Alliance z szeroką koalicją firm; a open-weight letter z 24 lipca stał się już pełnoprawnym sygnałem polityczno-branżowym. Cognizant i Anthropic pokazują zaś, że warstwa usługowa już wdraża Claude w regulated industries, a HN na dziś premiuje Kimi-K3, open-weight AI i tooling security, więc społeczność nadal faworyzuje otwarte modele, defensywę i praktyczne instrumenty pracy.
+
 Poranny run z 2026-07-27 dokłada do osi cost/control trzecią warstwę: project finance i politykę. Reuters/WSJ opisują, że Nvidia rozważa backstop rzędu 250 mld USD dla OpenAI przy 10 GW projekcie w Ohio, więc AI infra coraz bardziej wygląda jak megaprojekt energetyczno-finansowy. Równolegle Issue One i Business Insider pokazują, że lobbying i PAC-i stały się pełnoprawnym budżetem AI: Meta, Alphabet, Microsoft, Nvidia, OpenAI i Anthropic płacą za setki lobbyistów i finansują różne strony walki o regulacje.
 
 Po stronie produktu Meta AI przechodzi z czatu do orchestration: planowanie, email, kalendarz, slajdy i daily briefings. Samsung i Google robią z Gemini element inteligentnych okularów i wearables, więc front AI przenosi się z modelowych premier na to, gdzie model działa w codziennym życiu.

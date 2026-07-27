@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-27",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny run z 2026-07-27 dodaje do dzisiejszej osi kosztu i kontroli trzeci wektor: otwarte modele, bezpieczeństwo agentów i realne przesuwanie granic pracy. OpenAI publikuje badanie o task crossover, NVIDIA uruchamia Open Secure AI Alliance, a open-weight letter z 24 lipca stał się już pełnoprawnym sygnałem polityczno-branżowym. Równolegle Cognizant i Anthropic pokazują, że Claude wchodzi do produkcyjnej obsługi klientów w regulated industries, więc rynek coraz mniej przypomina walkę samych modeli, a coraz bardziej walkę o to, kto otwiera, zabezpiecza i wdraża AI w procesach pracy."
+  ],
+  "summaryBullets": [
+    "AI: OpenAI pokazuje, że AI rozmywa granice zawodów",
+    "Cyber: NVIDIA buduje otwarty stack bezpieczeństwa dla AI",
+    "Regulacje: Open weights stają się linią polityki"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-27-1936-0-openai-pokazuje-ze-ai-rozmywa-granice-zawodow-3ec95efd5d",
+      "section": "AI",
+      "title": "OpenAI pokazuje, że AI rozmywa granice zawodów",
+      "standfirst": "OpenAI opublikowało raport Work at the Frontier, w którym na próbie ponad 800 tys. wiadomości widać, że 16,8% wiadomości związanych z pracą i 43,5% wiadomości specyficznych dla zawodu dotyczy zadań historycznie przypisanych do innego zawodu.",
+      "whatHappened": "OpenAI opisało task crossover, czyli użycie AI do zadań spoza tradycyjnych granic roli.",
+      "whyItMatters": "To jedna z najmocniejszych publicznych prób ilościowego pokazania, że AI zmienia nie tylko tempo pracy, ale też to, kto wykonuje dane zadania.",
+      "deeperAnalysis": [
+        "Raport jest ważny, bo wyciąga dyskusję o AI i pracy poza ogólne deklaracje o produktywności. OpenAI nie mówi już tylko o automatyzacji pojedynczych czynności, ale o przesuwaniu zadań między zawodami.",
+        "Wyniki sugerują, że AI najłatwiej rozlewa się tam, gdzie jedna rola tradycyjnie czekała na inną. To zmienia strukturę małych zespołów, ścieżki eskalacji i sposób, w jaki firmy projektują procesy.",
+        "Najciekawsze dla podcastu jest to, że raport sam w sobie nie brzmi jak marketing produktu. To raczej wczesny, liczbowy opis reorganizacji pracy, który może stać się argumentem w sporach o szkolenia, hiring i wdrażanie AI w firmach."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI opisało task crossover w analizie pracy z ChatGPT.",
+        "Dlaczego ważne: publiczna metryka pokazuje, że AI zmienia podział obowiązków między zawodami.",
+        "Na co patrzeć dalej: niezależna replikacja, reakcja firm i czy podobne analizy pokażą się u innych dostawców."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/"
+        },
+        {
+          "title": "Work at the Frontier PDF",
+          "url": "https://cdn.openai.com/pdf/work-at-the-frontier-report.pdf"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "work",
+        "labor",
+        "productivity",
+        "roles",
+        "research"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-27-1936-1-nvidia-buduje-otwarty-stack-bezpieczenstwa-dla-ai-d72792120c",
+      "section": "Cyber",
+      "title": "NVIDIA buduje otwarty stack bezpieczeństwa dla AI",
+      "standfirst": "NVIDIA ogłosiła Open Secure AI Alliance, czyli koalicję firm cloud, security, enterprise software i open source, która ma tworzyć oraz współdzielić otwarte narzędzia do bezpieczeństwa AI.",
+      "whatHappened": "NVIDIA i partnerzy uruchomili nową alliance wokół AI safety i cyber obrony.",
+      "whyItMatters": "To przesuwa open source AI z poziomu sporu o ideologię do poziomu praktycznej infrastruktury obronnej dla agentów i defenders.",
+      "deeperAnalysis": [
+        "Oficjalny tekst NVIDIA mocno akcentuje, że bezpieczeństwo agentów nie zależy wyłącznie od zamknięcia wag, ale od całego stacku: tożsamości, uprawnień, harnessów, logów i ewaluacji. To ważne przesunięcie, bo opisuje AI security jako systemowy problem integracji, a nie tylko modelową właściwość.",
+        "Reuters podaje też kontekst incydentu Hugging Face, po którym temat defensywnego open AI dostał większą wagę. W takim ujęciu otwarte modele są nie tyle ryzykiem do wyeliminowania, ile narzędziem, które defenderzy muszą mieć pod własną kontrolą, żeby szybko reagować na ataki.",
+        "To może być mocny materiał radiowy, bo łączy cyber, geopolitykę i praktyczne bezpieczeństwo. Wspólny mianownik brzmi: jeśli AI ma działać w krytycznych systemach, to obrona też musi być otwarta, audytowalna i lokalnie uruchamialna."
+      ],
+      "contextPoints": [
+        "Co się stało: NVIDIA ogłosiła Open Secure AI Alliance z szeroką koalicją partnerów.",
+        "Dlaczego ważne: open tools dla cyberobrony stają się elementem infrastruktury AI.",
+        "Na co patrzeć dalej: konkretne narzędzia, benchmarki i czy alliance przełoży się na realne wdrożenia."
+      ],
+      "sources": [
+        {
+          "title": "NVIDIA Blog",
+          "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/"
+        },
+        {
+          "title": "Reuters via Investing",
+          "url": "https://m.investing.com/news/stock-market-news/nvidia-forms-industry-alliance-for-open-ai-security-after-hugging-face-hack-4813376?ampMode=1"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Nvidia",
+        "cybersecurity",
+        "open source",
+        "agents",
+        "Linux Foundation",
+        "safety"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-27-1936-2-open-weights-staja-sie-linia-polityki-8c1ea91144",
+      "section": "Regulacje",
+      "title": "Open weights stają się linią polityki",
+      "standfirst": "List „Open Weights and American AI Leadership” z 24 lipca 2026 r. stał się dziś centralnym punktem debaty o open-weight AI.",
+      "whatHappened": "Branża i środowiska open source wystąpiły wspólnie przeciw „premature restrictions” na open models.",
+      "whyItMatters": "Spór o AI coraz wyraźniej dotyczy tego, czy konkurencja i bezpieczeństwo mają iść przez zamknięcie, czy przez szeroki dostęp do wag i narzędzi.",
+      "deeperAnalysis": [
+        "Dokument jest ważny, bo pokazuje, że open weights przestały być niszą open-source. Stały się argumentem strategicznym w rozmowie o amerykańskiej konkurencyjności, bezpieczeństwie i suwerenności technologicznej.",
+        "Najmocniejszy fragment to logika, że obrona potrzebuje modeli podobnej klasy do ataku. W tym sensie open weights mają być nie tylko tańsze i bardziej elastyczne, ale też bardziej użyteczne dla cyberdefenderów, laboratoriów i instytucji publicznych.",
+        "Warto też zauważyć, że list nie jest po prostu kontrą do closed models. Jego teza brzmi bardziej pragmatycznie: ograniczać trzeba nadużycia i kradzież modelową, ale nie całe techniczne podejście do budowania i adaptacji modeli. To bardzo praktyczna linia sporu na kolejne miesiące."
+      ],
+      "contextPoints": [
+        "Co się stało: szeroka koalicja podpisała open-weight letter.",
+        "Dlaczego ważne: open weights weszły do głównego nurtu polityki AI.",
+        "Na co patrzeć dalej: czy pojawią się konkretne propozycje regulacyjne lub procurementowe."
+      ],
+      "sources": [
+        {
+          "title": "NVIDIA PDF",
+          "url": "https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "open weights",
+        "policy",
+        "Washington",
+        "Google",
+        "OpenAI",
+        "Meta"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-27-1936-3-claude-wchodzi-do-enterprise-delivery-3419229422",
+      "section": "AI",
+      "title": "Claude wchodzi do enterprise delivery",
+      "standfirst": "Anthropic i Cognizant rozszerzyły partnerstwo, aby wdrażać Claude u klientów enterprise, w tym w manufacturing, life sciences i insurance.",
+      "whatHappened": "Cognizant stał się szerszym kanałem dystrybucji Claude do dużych klientów.",
+      "whyItMatters": "To pokazuje, że integratorzy usług i konsultanci stają się warstwą, która zamienia capability modelu w produkcyjny proces biznesowy.",
+      "deeperAnalysis": [
+        "To nie jest już wyłącznie historia o nowym modelu. Jest to przede wszystkim historia o tym, kto umie spiąć model z procesem, zgodnością, integracją i mierzalnym wynikiem biznesowym.",
+        "Cognizant podaje konkretne przykłady: portal customer experience zbudowany w sześć miesięcy oraz deployment, który skrócił review kontraktów nawet o 40 procent i zwiększył accuracy ekstrakcji powyżej 88 procent. Nawet jeśli są to liczby vendor-reported, pokazują, że rynek usług chce sprzedawać rezultat, a nie samą demonstrację modelu.",
+        "To dobry podcastowy materiał o „drugiej warstwie” AI. Najbardziej praktyczna przewaga może dziś leżeć nie w posiadaniu najlepszego modelu, tylko w posiadaniu najlepszych partnerów wdrożeniowych i najkrótszej drogi do produkcyjnego użycia."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic i Cognizant rozszerzyły partnerstwo dla enterprise klientów.",
+        "Dlaczego ważne: konsulting i system integrators stają się kanałem skalowania AI.",
+        "Na co patrzeć dalej: kolejne case studies, named customers i realny ROI."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic",
+          "url": "https://www.anthropic.com/news/cognizant-anthropic"
+        },
+        {
+          "title": "Cognizant",
+          "url": "https://news.cognizant.com/2026-07-27-Cognizant-and-Anthropic-expand-partnership-to-embed-Claude-in-Cognizants-industry-platforms%2C-helping-clients-close-the-gap-between-AI-promise-and-business-outcomes"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Anthropic",
+        "Cognizant",
+        "enterprise",
+        "regulated industries",
+        "consulting"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-27-1936-4-hn-i-ph-dzis-premiuja-otwarte-modele-i-narzedzia-pracy-e9d013cd5e",
+      "section": "Community",
+      "title": "HN i PH dziś premiują otwarte modele i narzędzia pracy",
+      "standfirst": "Hacker News dziś wynosi na szczyt Kimi-K3 Technical Report, Kimi-K3 on HuggingFace i AI companies spend record sums on Washington lobbying, a Product Hunt pokazuje launch board pełen agentów i workflow tools.",
+      "whatHappened": "Community signal przesunął się w stronę open-weight, security i praktycznych narzędzi.",
+      "whyItMatters": "To dobry wskaźnik, że uwaga technicznej społeczności idzie w stronę otwartych modeli, defensywy i wdrażalnych workflowów.",
+      "deeperAnalysis": [
+        "Ten sygnał nie jest tak silny jak raporty pierwotne, ale jest użyteczny jako kontekst doboru tematów. HN i PH często dobrze pokazują, gdzie techniczna publiczność widzi realną wartość, a nie tylko marketing.",
+        "Na HN widać dziś wyraźne zainteresowanie open-weight konkurencją i cyber obroną. To spójne z polityczną debatą o open models oraz z nowym alliance NVIDIA.",
+        "Product Hunt natomiast pokazuje, że launchy AI nadal najłatwiej przebijają się wtedy, gdy rozwiązują konkretne workflowy: ads, raporty, research, agent login, publikację i narzędzia dla zespołów. To dobry kontrapunkt dla modelowych headline'ów."
+      ],
+      "contextPoints": [
+        "Co się stało: HN i PH dziś premiują open-weight, security i workflow tools.",
+        "Dlaczego ważne: community signal jest zgodny z główną osią raportu.",
+        "Na co patrzeć dalej: czy open-weight hype przełoży się na trwalsze adopcje."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/"
+        },
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Hacker News",
+        "Product Hunt",
+        "Kimi K3",
+        "agents",
+        "tools",
+        "workflow"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "OpenAI pokazuje realne task crossover",
+      "rationale": "Raport z 800 tys. wiadomości daje dziś jedną z najmocniejszych publicznych metryk na to, że AI rozmywa granice zawodów.",
+      "sourcesLabel": "OpenAI; Work at the Frontier PDF"
+    },
+    {
+      "priority": "High",
+      "title": "NVIDIA buduje otwarty stack bezpieczeństwa dla AI",
+      "rationale": "Open Secure AI Alliance przenosi open models z debaty ideologicznej do infrastruktury obronnej dla agentów.",
+      "sourcesLabel": "NVIDIA Blog; Reuters"
+    },
+    {
+      "priority": "High",
+      "title": "Open weights stają się linią polityki",
+      "rationale": "List „Open Weights and American AI Leadership” pokazuje, że otwarte modele stały się elementem wojny o regulacje i konkurencję.",
+      "sourcesLabel": "NVIDIA PDF"
+    },
+    {
+      "priority": "High",
+      "title": "Claude wchodzi do enterprise delivery",
+      "rationale": "Cognizant i Anthropic pokazują, że integratorzy usług stają się kanałem produkcyjnego wdrażania frontier modeli.",
+      "sourcesLabel": "Anthropic; Cognizant"
+    },
+    {
+      "priority": "Medium",
+      "title": "Hacker News dziś wybiera open-weight i security",
+      "rationale": "Community signal wzmacnia tezę, że techniczna uwaga przesuwa się z benchmarków na defensywę i kontrolę.",
+      "sourcesLabel": "Hacker News"
+    },
+    {
+      "priority": "Medium",
+      "title": "Product Hunt nadal kocha workflow tools",
+      "rationale": "Launch board pokazuje, że rynek produktów AI dalej nagradza praktyczne automatyzacje, a nie sam modelowy hype.",
+      "sourcesLabel": "Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI: How AI is expanding what people do at work",
+      "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/"
+    },
+    {
+      "title": "OpenAI Work at the Frontier report PDF",
+      "url": "https://cdn.openai.com/pdf/work-at-the-frontier-report.pdf"
+    },
+    {
+      "title": "NVIDIA Blog: Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security",
+      "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/"
+    },
+    {
+      "title": "Reuters via Investing: Nvidia forms industry alliance for open AI security after Hugging Face hack",
+      "url": "https://m.investing.com/news/stock-market-news/nvidia-forms-industry-alliance-for-open-ai-security-after-hugging-face-hack-4813376?ampMode=1"
+    },
+    {
+      "title": "NVIDIA PDF: Open Weights and American AI Leadership",
+      "url": "https://images.nvidia.com/pdf/Open-Weights-and-American-AI-Leadership.pdf"
+    },
+    {
+      "title": "Anthropic: Cognizant and Anthropic expand their partnership to bring Claude to enterprise clients",
+      "url": "https://www.anthropic.com/news/cognizant-anthropic"
+    },
+    {
+      "title": "Cognizant press release: Cognizant and Anthropic expand Claude partnership",
+      "url": "https://news.cognizant.com/2026-07-27-Cognizant-and-Anthropic-expand-partnership-to-embed-Claude-in-Cognizants-industry-platforms%2C-helping-clients-close-the-gap-between-AI-promise-and-business-outcomes"
+    },
+    {
+      "title": "Hacker News homepage",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "Product Hunt homepage",
+      "url": "https://www.producthunt.com/"
+    }
+  ]
+}
