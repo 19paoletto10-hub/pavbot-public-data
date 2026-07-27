@@ -296,6 +296,14 @@ o atak na komercyjną jednostkę, a Kijów mówi o uderzeniach w logistykę
 wojskową z udziałem Iranu. W Polsce poranny konkret to zapowiedź KPRM dotycząca
 mostu w Głuchołazach, a RCB utrzymuje suszę hydrologiczną po wygaśnięciu alertu
 upałowego.
+Po wieczornym runie 27 lipca Głuchołazy przesunęły się z zapowiedzi do
+realizacji: nowy most został oficjalnie otwarty i częściowo udostępniony
+ruchem, a pełne otwarcie ma nastąpić w listopadzie. Równolegle AP opisuje
+postęp mediatorów w rozmowach USA-Iran i utrzymaną pauzę w atakach, a Kijów
+oraz Londyn potwierdzają pierwszy kontakt Zełenski-Burnham w Portsmouth,
+skupiony na wspólnej produkcji obronnej. Na Zachodnim Brzegu dochodzi do
+kolejnej eskalacji: AP opisuje podpalenie dwóch meczetów po fali przemocy
+osadniczej.
 
 ## Stable Facts
 
@@ -525,6 +533,7 @@ konfliktowaniu Polaków i Ukraińców.
 
 ## Recent Reports
 
+- [2026-07-27-1933](runs/2026-07-27-1933.md)
 - [2026-07-27](runs/2026-07-27.md)
 - [2026-07-26](runs/2026-07-26.md)
 - [2026-07-23-1933](runs/2026-07-23-1933.md)
