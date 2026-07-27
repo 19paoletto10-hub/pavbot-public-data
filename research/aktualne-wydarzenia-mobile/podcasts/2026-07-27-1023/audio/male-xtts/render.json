@@ -1,0 +1,20 @@
+{
+  "created_at": "2026-07-27T08:43:33.479462+00:00",
+  "engine_requested": "xtts",
+  "engine_used": "xtts",
+  "model": "coqui/XTTS-v2",
+  "fallback_chain": [],
+  "duration_seconds": 249.647937,
+  "word_count": 389,
+  "voice": "Andrew Chipper",
+  "rate": 170,
+  "voice_sample_path": null,
+  "variant_id": "male-xtts",
+  "language": "pl",
+  "speed": 1.03,
+  "speed_filter": "atempo=1.03",
+  "original_duration_seconds": 257.160272,
+  "status": "ok",
+  "raw_output_file": null,
+  "output_file": "research/aktualne-wydarzenia-mobile/podcasts/2026-07-27-1023/audio/male-xtts/podcast.mp3"
+}
