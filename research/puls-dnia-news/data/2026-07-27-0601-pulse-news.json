@@ -1,0 +1,493 @@
+{
+  "topic": "puls-dnia-news",
+  "schemaVersion": 1,
+  "runDate": "2026-07-27",
+  "runTime": "06:01",
+  "status": "Material update",
+  "headline": "06:01: UNESCO, Iran i Bordeaux prowadzą slot",
+  "summary": "Poranny slot przesuwa Puls Dnia ku nowemu krajowemu sygnałowi z UNESCO, lokalnej ewakuacji w Redzie i kolejnemu zaostrzeniu sporu Kurski-Morawiecki, a w świecie do przodu wychodzą Iran, Bordeaux, Ukraina, BBC-owe spory polityczne i świeży alert pogodowy z Wielkiej Brytanii.",
+  "checkedSources": [
+    {
+      "title": "TVN24 najnowsze",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Świat",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 TVN Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN Connect the World",
+      "url": "https://transcripts.cnn.com/show/ctw"
+    },
+    {
+      "title": "UNESCO World Heritage Committee documents",
+      "url": "https://whc.unesco.org/en/sessions/48COM/documents/"
+    },
+    {
+      "title": "Iran MFA",
+      "url": "https://en.mfa.gov.ir/portal/newsview/791876"
+    },
+    {
+      "title": "Berlin.de news",
+      "url": "https://www.berlin.de/en/news/"
+    },
+    {
+      "title": "IMGW",
+      "url": "https://imgw.pl/"
+    },
+    {
+      "title": "RCB raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    }
+  ],
+  "items": [
+    {
+      "id": "pl-gdynia-unesco-2026-07-27-0601",
+      "section": "Polska",
+      "title": "Centrum Gdyni trafia na listę UNESCO",
+      "lead": "Modernistyczne Centrum Gdyni zostało wpisane na Listę Światowego Dziedzictwa UNESCO.",
+      "whatHappened": "TVN24 podało, że wpis zapadł podczas 48. sesji komitetu w Busanie. W dokumentach UNESCO dla sesji widnieje Gdynia Modernist City Centre, Poland.",
+      "keyFacts": [
+        "To nowy prestiżowy wpis dla Polski.",
+        "Decyzja zapadła podczas 48. sesji Komitetu Światowego Dziedzictwa w Busanie.",
+        "UNESCO publikuje już dokumentację sesji z nazwą Gdynia Modernist City Centre."
+      ],
+      "reactions": [
+        "Miasto może szybko wykorzystać ten wpis promocyjnie.",
+        "Należy oczekiwać oficjalnych komunikatów miejskich i rządowych."
+      ],
+      "whyItMatters": "To mocny krajowy news o znaczeniu wizerunkowym, turystycznym i konserwatorskim.",
+      "context": "UNESCO obraduje w Busanie od 19 do 29 lipca 2026 i rozpatruje nowe nominacje z wielu państw.",
+      "watchNext": [
+        "Czy Gdynia i MKiDN opublikują dodatkowe szczegóły wpisu.",
+        "Czy pojawią się kolejne polskie akcenty z tej sesji UNESCO."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Centrum Gdyni na liście UNESCO",
+          "url": "https://tvn24.pl/trojmiasto/centrum-gdyni-na-liscie-unesco-st9160055?source=rss"
+        },
+        {
+          "title": "UNESCO World Heritage Committee documents",
+          "url": "https://whc.unesco.org/en/sessions/48COM/documents/"
+        }
+      ],
+      "tags": [
+        "Gdynia",
+        "UNESCO",
+        "pomorskie",
+        "dziedzictwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-reda-aquapark-chlor-2026-07-27-0601",
+      "section": "Polska",
+      "title": "Ewakuacja ponad 400 osób z aquaparku w Redzie",
+      "lead": "Z aquaparku w Redzie ewakuowano ponad 400 osób po wydzielaniu chloru.",
+      "whatHappened": "Według TVN24 przyczyną była pomyłka technika, po której zaczęło się wydzielać niebezpieczne stężenie chloru. Straż pożarna potwierdziła ewakuację gości i pracowników.",
+      "keyFacts": [
+        "Ewakuowano ponad 400 osób.",
+        "Powodem było wydzielanie chloru po pomyłce technika.",
+        "Zdarzenie objęło zarówno gości, jak i personel obiektu."
+      ],
+      "reactions": [
+        "Obiekt opublikował komunikat.",
+        "Służby będą ustalać dokładny przebieg zdarzenia."
+      ],
+      "whyItMatters": "To bezpośredni sygnał bezpieczeństwa dla miejsca publicznego i lokalnej infrastruktury.",
+      "context": "To nowy krajowy news z Trójmiasta i jeden z najmocniejszych sygnałów operacyjnych tego poranka.",
+      "watchNext": [
+        "Czy obiekt wznowi pracę po przewietrzeniu i kontroli.",
+        "Czy pojawi się informacja o osobach poszkodowanych lub zamknięciu części atrakcji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Kilkaset osób ewakuowanych z aquaparku",
+          "url": "https://tvn24.pl/trojmiasto/reda-wyciek-substancji-w-aquaparku-ewakuowano-ponad-400-osob-st9160013?source=rss"
+        }
+      ],
+      "tags": [
+        "Reda",
+        "aquapark",
+        "chlor",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-pis-kurski-kaczynski-2026-07-27-0601",
+      "section": "Polityka",
+      "title": "Kaczyński chce uciszyć medialny spór o Kurskiego",
+      "lead": "TVN24 podało, że Jarosław Kaczyński ma być bardzo niezadowolony ze słów Jacka Kurskiego.",
+      "whatHappened": "Według dziennikarzy TVN24 prezes PiS chce rozmowy z Kurskim i ma rozważać zakaz wypowiedzi medialnych po nowych atakach na Mateusza Morawieckiego.",
+      "keyFacts": [
+        "To kolejna odsłona sporu Kurski-Morawiecki.",
+        "Wątek znów idzie przez kanały TVN24.",
+        "Sprawa pozostaje publiczna i niezamknięta."
+      ],
+      "reactions": [
+        "Partia może próbować wygasić konflikt.",
+        "Media będą śledzić, czy padnie formalna reakcja PiS."
+      ],
+      "whyItMatters": "To jeden z głównych krajowych tematów politycznych, bo pokazuje trwały rozłam w obozie PiS.",
+      "context": "To nowa, bardziej konkretna odsłona wcześniejszego konfliktu, który utrzymuje się od poprzednich slotów.",
+      "watchNext": [
+        "Czy PiS opublikuje oficjalny komentarz.",
+        "Czy Kurski odpowie publicznie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Jarosław Kaczyński bardzo niezadowolony ze słów Jacka Kurskiego",
+          "url": "https://tvn24.pl/polska/ma-byc-zakaz-dla-jacka-kurskiego-jaroslaw-kaczynski-bardzo-niezadowolony-z-jego-slow-st9160005?source=rss"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Kurski",
+        "Kaczyński",
+        "Morawiecki"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-iran-ukraine-caspian-vessel-2026-07-27-0601",
+      "section": "Świat",
+      "title": "Iran oskarża Ukrainę o atak na statek na Morzu Kaspijskim",
+      "lead": "Irańskie MSZ oskarżyło Ukrainę o atak na komercyjny statek i grozi odpowiedzią.",
+      "whatHappened": "TVN24 poinformowało o irańskich oskarżeniach, a ministerstwo spraw zagranicznych Iranu opublikowało ostrą notę, w której określa atak jako akt agresji i mówi o ofierze śmiertelnej.",
+      "keyFacts": [
+        "Iran twierdzi, że zginął jeden marynarz, a drugi został ranny.",
+        "Teheran nazwał zdarzenie aktem agresji.",
+        "W oficjalnym komunikacie Iran ostrzega przed odpowiedzią."
+      ],
+      "reactions": [
+        "Spór może szybko wejść na poziom dyplomatyczny i bezpieczeństwa morskiego.",
+        "Ukraina może odpowiedzieć własnym komunikatem lub zaprzeczeniem."
+      ],
+      "whyItMatters": "To nowy sygnał potencjalnej eskalacji poza bezpośredni front wojny rosyjsko-ukraińskiej.",
+      "context": "To jedna z najmocniejszych dzisiejszych zagranicznych nowości z feedu TVN24.",
+      "watchNext": [
+        "Czy Ukraina odniesie się do irańskich oskarżeń.",
+        "Czy pojawią się dodatkowe szczegóły o statku i miejscu ataku."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Iran grozi Ukrainie. Oskarżenia o \"akt agresji\"",
+          "url": "https://tvn24.pl/swiat/iran-grozi-ukrainie-oskarzenia-o-akt-agresji-st9160045?source=rss"
+        },
+        {
+          "title": "Iran MFA statement",
+          "url": "https://en.mfa.gov.ir/portal/newsview/791876"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Ukraina",
+        "Kaspijskie",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-laura-loomer-kyiv-2026-07-27-0601",
+      "section": "Świat",
+      "title": "Laura Loomer przeprasza w Kijowie za prorosyjskie poglądy",
+      "lead": "Bliska sojuszniczka Trumpa pojechała do Kijowa i publicznie zmieniła ton.",
+      "whatHappened": "TVN24 opisało wizytę Laury Loomer w Ukrainie. W Kijowie spotkała się z Wołodymyrem Zełenskim i przeprosiła za wcześniejsze prorosyjskie poglądy.",
+      "keyFacts": [
+        "To nietypowy zwrot wśród postaci środowiska MAGA.",
+        "Wizyta obejmowała symboliczny gest w ruinach kijowskiego McDonalda.",
+        "Temat ma wyraźny wymiar polityczno-medialny."
+      ],
+      "reactions": [
+        "Sprawa może wywołać komentarze w amerykańskiej polityce.",
+        "Ukraińska strona może użyć tego jako sygnału wizerunkowego."
+      ],
+      "whyItMatters": "To sygnał o przesunięciach narracji wokół wojny w Ukrainie i otoczenia Trumpa.",
+      "context": "Temat jest bardziej miękki, ale pokazuje, jak wojna w Ukrainie nadal przebija się do amerykańskiej polityki.",
+      "watchNext": [
+        "Czy pojawią się reakcje ze strony Trumpa lub jego otoczenia.",
+        "Czy Loomer opowie szerzej o swojej zmianie stanowiska."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Laura Loomer w Ukrainie",
+          "url": "https://tvn24.pl/swiat/laura-loomer-w-ukrainie-bliska-sojuszniczka-donalda-trumpa-przeprasza-za-prorosyjskie-poglady-kim-jest-st9156644?source=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "MAGA",
+        "Trump",
+        "media"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-bordeaux-wildfires-macron-2026-07-27-0601",
+      "section": "Świat",
+      "title": "Macron zwołuje kryzysowe posiedzenie przez pożary pod Bordeaux",
+      "lead": "Francja reaguje, gdy pożary zbliżają się do Bordeaux, a fala upałów wraca.",
+      "whatHappened": "BBC podaje, że pożary są około 15 kilometrów od Bordeaux. Prezydent Emmanuel Macron zwołał kryzysowe spotkanie, a miasto na razie nie planuje ewakuacji.",
+      "keyFacts": [
+        "Ogień nadal zagraża regionowi Bordeaux.",
+        "Rząd Francji wchodzi w tryb kryzysowy.",
+        "BBC łączy pożary z kolejną falą upałów."
+      ],
+      "reactions": [
+        "Władze mogą w każdej chwili zmienić decyzję o ewakuacji.",
+        "Pożary pozostają jednym z głównych europejskich tematów pogodowych."
+      ],
+      "whyItMatters": "To ważny europejski kryzys pogodowy z ryzykiem dla mieszkańców, infrastruktury i turystyki.",
+      "context": "To nowa, bardziej polityczna odsłona wcześniejszego wątku o pożarach we Francji.",
+      "watchNext": [
+        "Czy Bordeaux zmieni plan i ogłosi ewakuacje.",
+        "Czy służby podadzą nowy bilans spalonych terenów."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Macron calls crisis meeting as wildfires threaten Bordeaux and heatwave looms",
+          "url": "https://www.bbc.co.uk/news/articles/c2350zlyy1yo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "Bordeaux",
+        "pożary",
+        "upał"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-ukraine-support-zelensky-2026-07-27-0601",
+      "section": "Świat",
+      "title": "Brytyjski premier podtrzymuje wsparcie dla Ukrainy",
+      "lead": "BBC podaje, że Zełenski ma być pierwszym zagranicznym gościem nowego premiera.",
+      "whatHappened": "W rozmowach z BBC nowy brytyjski premier zadeklarował kontynuację wsparcia dla Ukrainy przed wizytą Wołodymyra Zełenskiego.",
+      "keyFacts": [
+        "Zełenski będzie pierwszym międzynarodowym gościem nowego premiera.",
+        "Wątek podtrzymuje brytyjską linię wsparcia dla Kijowa.",
+        "To jeden z głównych politycznych tematów BBC w tym slocie."
+      ],
+      "reactions": [
+        "Wizyta może przynieść nowe deklaracje wojskowe lub finansowe.",
+        "Londyn będzie mierzyć, jak mocno wiązać się dalej z Ukrainą."
+      ],
+      "whyItMatters": "To sygnał ciągłości w zachodnim wsparciu dla Ukrainy i ważna zapowiedź dyplomatyczna.",
+      "context": "Wiadomość pojawia się obok innych świeżych bloków z BBC dotyczących wojny i polityki globalnej.",
+      "watchNext": [
+        "Jakie konkretnie deklaracje padną podczas wizyty Zełenskiego.",
+        "Czy pojawią się szczegóły pakietu wsparcia."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: PM pledges continued support for Ukraine ahead of Zelensky visit",
+          "url": "https://www.bbc.co.uk/news/articles/cy8me5vyjg2o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Wielka Brytania",
+        "Ukraina",
+        "dyplomacja",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "econ-badenoch-tax-rises-2026-07-27-0601",
+      "section": "Gospodarka",
+      "title": "Badenoch naciska na brak podwyżek podatków",
+      "lead": "Liderka konserwatystów chce, by premier wykluczył podwyżki podatków przy reformie opieki społecznej.",
+      "whatHappened": "BBC podało, że Kemi Badenoch napisała do premiera, wzywając go do wykluczenia podwyżek podatków przy finansowaniu reformy opieki społecznej.",
+      "keyFacts": [
+        "Spór dotyczy sposobu finansowania opieki społecznej.",
+        "Konserwatyści proponują współpracę z rządem.",
+        "Wątek ma wyraźny wymiar fiskalny."
+      ],
+      "reactions": [
+        "Rząd może odpowiedzieć własną propozycją finansowania.",
+        "Debata może wejść w szerszy spór o podatki i wydatki publiczne."
+      ],
+      "whyItMatters": "To aktualny sygnał z gospodarczo-politycznej debaty w Wielkiej Brytanii.",
+      "context": "BBC zestawia go dziś obok wątków wojennych i pogodowych, ale to osobny blok fiskalny.",
+      "watchNext": [
+        "Czy premier odrzuci prośbę.",
+        "Czy konserwatyści zaproponują alternatywne finansowanie reformy."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Badenoch says PM must rule out tax rises to fund social care reform",
+          "url": "https://www.bbc.co.uk/news/articles/c0jlzqe9z9vo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Wielka Brytania",
+        "podatki",
+        "opieka społeczna",
+        "budżet"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "alert-uk-parched-regions-2026-07-27-0601",
+      "section": "Alerty",
+      "title": "Najbardziej suche regiony Wielkiej Brytanii czekają na deszcz",
+      "lead": "BBC ostrzega, że część kraju znowu nie dostanie opadów przed kolejną falą upałów.",
+      "whatHappened": "BBC Weather opisuje, że najbardziej suche regiony Wielkiej Brytanii mijają się z deszczem przed następną falą upałów. To podtrzymuje presję na zasoby wodne i lokalne plany zarządzania kryzysem.",
+      "keyFacts": [
+        "Problem dotyczy długotrwałej suszy i niskich opadów.",
+        "Wzorzec pogodowy znów sprzyja upałom.",
+        "Wątek ma znaczenie dla rolnictwa i zużycia wody."
+      ],
+      "reactions": [
+        "Lokalne władze mogą zaostrzać komunikaty oszczędzania wody.",
+        "Sytuacja pogodowa w UK pozostaje niestabilna."
+      ],
+      "whyItMatters": "To ważny alert pogodowy, bo łączy suszę z kolejną falą upałów.",
+      "context": "To nowy alertowy akcent z BBC, inny niż francuskie pożary, ale równie klimatologiczny.",
+      "watchNext": [
+        "Czy pojawią się nowe ostrzeżenia pogodowe.",
+        "Czy wzrosną ograniczenia dotyczące zużycia wody."
+      ],
+      "sources": [
+        {
+          "title": "BBC Weather: UK's most parched regions miss chance for rain ahead of next heatwave",
+          "url": "https://www.bbc.co.uk/weather/articles/c9w08gkvvjdo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Wielka Brytania",
+        "susza",
+        "upał",
+        "alert"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "pol-trump-iran-talks-2026-07-27-0601",
+      "section": "Polityka",
+      "title": "Trump miał wstrzymać ataki na Iran dla rozmów",
+      "lead": "BBC podaje, że ostatnie noce minęły bez nowych ataków USA i Iranu.",
+      "whatHappened": "Według BBC amerykański ambasador powiedział, że Trump wstrzymał ataki na Iran, by zrobić miejsce na rozmowy. W tle pozostaje ryzyko przerwania dyplomatycznego okna.",
+      "keyFacts": [
+        "Ostatnie dwie noce minęły bez nowych uderzeń.",
+        "Wątek dotyczy kanału negocjacyjnego, nie tylko działań wojennych.",
+        "BBC łączy to z próbą trwałego zakończenia wojny."
+      ],
+      "reactions": [
+        "Strona amerykańska może próbować odnowić rozmowy.",
+        "Iran może potraktować pauzę jako sygnał do dalszych żądań."
+      ],
+      "whyItMatters": "To istotny globalny sygnał o tempie deeskalacji wokół Iranu.",
+      "context": "Ten temat domyka dzisiejszy blok BBC o Iranie obok pożarów, Ukrainy i polityki brytyjskiej.",
+      "watchNext": [
+        "Czy dojdzie do wznowienia negocjacji.",
+        "Czy obie strony utrzymają pauzę wojskową."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Trump paused attacks on Iran to make space for talks, US ambassador says",
+          "url": "https://www.bbc.co.uk/news/articles/c5y45kdkynpo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "dyplomacja",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-mamdani-netanyahu-hate-2026-07-27-0601",
+      "section": "Świat",
+      "title": "Netanyahu atakuje burmistrza Nowego Jorku",
+      "lead": "BBC opisuje ostrą wymianę po groźbie aresztowania Netanjahu.",
+      "whatHappened": "BBC podało, że Benjamin Netanjahu oskarżył nowojorskiego burmistrza Zohrana Mamdaniego o podsycanie nienawiści po jego groźbie aresztowania izraelskiego premiera.",
+      "keyFacts": [
+        "Mamdani wycofał się z wcześniejszej groźby.",
+        "Spór dotyczy kompetencji miasta wobec nakazu ICC.",
+        "To czysto polityczny, medialny konflikt."
+      ],
+      "reactions": [
+        "Sprawa może wrócić w kampanii i w komentarzach społecznościowych.",
+        "Izrael i zwolennicy Mamdaniego mogą eskalować wymianę opinii."
+      ],
+      "whyItMatters": "To głośny sygnał globalnego sporu wokół Izraela i polityki miejskiej w USA.",
+      "context": "BBC trzyma ten temat obok wojny i europejskich kryzysów, co pokazuje jego medialny ciężar.",
+      "watchNext": [
+        "Czy Mamdani odpowie publicznie.",
+        "Czy temat przejdzie do lokalnej kampanii w Nowym Jorku."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Netanyahu accuses NYC Mayor Mamdani of 'fomenting hate' after arrest threat",
+          "url": "https://www.bbc.co.uk/news/articles/c5yegvd9ddeo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Izrael",
+        "Nowy Jork",
+        "polityka",
+        "ICC"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "sec-derby-car-crash-baby-2026-07-27-0601",
+      "section": "Bezpieczeństwo",
+      "title": "W Derby zginęły cztery osoby, w tym niemowlę",
+      "lead": "BBC opisuje śmiertelny wypadek samochodowy po uderzeniu w drzewa.",
+      "whatHappened": "BBC podało, że w Derby samochód wjechał w drzewa. Zginęły cztery osoby, w tym dziecko, a kierowca został aresztowany.",
+      "keyFacts": [
+        "To najpoważniejszy świeży wypadek z brytyjskiego feedu.",
+        "Wśród ofiar było niemowlę.",
+        "Kierowca trafił w ręce policji."
+      ],
+      "reactions": [
+        "Policja będzie ustalać, czy był to błąd, brawura czy inne okoliczności.",
+        "To ważny sygnał bezpieczeństwa drogowego."
+      ],
+      "whyItMatters": "To pilny sygnał bezpieczeństwa publicznego i lokalnego kryzysu rodzinnego.",
+      "context": "To świeży temat z brytyjskiego feedu, który nie dubluje wczorajszych pozycji.",
+      "watchNext": [
+        "Czy policja poda przyczynę wypadku.",
+        "Czy pojawią się nazwiska lub wiek ofiar."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Four people including baby die after car crash",
+          "url": "https://www.bbc.co.uk/news/articles/c9805pkkkejo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "UK",
+        "wypadek",
+        "bezpieczeństwo",
+        "policja"
+      ],
+      "priority": "high"
+    }
+  ]
+}
