@@ -1,0 +1,176 @@
+{
+  "id": "humor-2026-07-27-0607",
+  "title": "<RR> Reddit Radar",
+  "summary": "Material update: slot 06:07 rotuje na cztery swieze karty o literalnym no shitposting, refactorCode, inherited tech debt i niebieskim avatarze Minecrafta.",
+  "generatedAt": "2026-07-27T04:07:00Z",
+  "displayTime": "06:07",
+  "nextRefreshAt": "2026-07-27T08:07:00+02:00",
+  "refreshIntervalHours": 2,
+  "items": [
+    {
+      "id": "old-reddit-com-r-memes-comments-1v74n88-no-shitposting",
+      "title": "No shitposting",
+      "caption": "Najprostsza karta poranka bierze community rule o zakazie shitpostingu i pozwala comments zagrac go skrajnie literalnie: kanal o memach brzmi tak powaznie, jakby babcia wlasnie odkryla internet i zaczela moderowac Discorda.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://old.reddit.com/r/memes/comments/1v74n88/no_shitposting/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "memes",
+        "community",
+        "literalism"
+      ],
+      "categoryLabel": "memes",
+      "postText": null,
+      "whyFunny": "Humor dziala, bo cala karta opiera sie na jednym bardzo czytelnym nieporozumieniu i nie potrzebuje dodatkowego kontekstu.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment od razu odpala przesadzony alarm: `literally 1984`.",
+          "explanation": "To jest najkrotsza i najmocniejsza puenta w watku.",
+          "score": null,
+          "originalBody": "literally 1984"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight dopowiada, ze ktos potraktowal nazwe kanalu zdecydowanie zbyt doslownie.",
+          "explanation": "Komentarz utrzymuje dokladnie ten sam bit bez rozpraszania go meta-dyskusja.",
+          "score": null,
+          "originalBody": "Bro took the name of the channel way too literally"
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzecia riposta zamienia sytuacje w obrazek babci uczacej sie internetu.",
+          "explanation": "To daje karcie lekki i szeroko zrozumialy final.",
+          "score": null,
+          "originalBody": "Grandma still learning the internet"
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-programmerhumor-comments-1v78up9-refactorcode",
+      "title": "refactorCode",
+      "caption": "Najmocniejsza karta devowa poranka bierze kod wygladajacy jak smietnik i pozwala comments nazwac to pelnoprawdnym paradygmatem: garbage oriented programming, w ktorym worki na smieci sa po prostu dobrze odizolowanymi mikroserwisami.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1v78up9/refactorcode/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "dev",
+        "refactor",
+        "microservices"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "whyFunny": "Karta dziala, bo komentarze nie uciekaja w narzekanie na coding style, tylko buduja jeden spojny absurdalny model architektury.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment nazywa wszystko wprost: `garbage oriented programming`.",
+          "explanation": "To jest najmocniejszy i najbardziej przenosny cytat z calego watku.",
+          "score": null,
+          "originalBody": "garbage oriented programming"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Druga riposta robi z tego natychmiast rozpoznawalny skrot: GOP, za ktory mozna stanac.",
+          "explanation": "Komentarz dziala, bo traktuje absurd jak pelnoprawny nurt programowania.",
+          "score": null,
+          "originalBody": "Now that’s a GOP I could get behind"
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzeci highlight domyka bit: worki na smieci to po prostu mikroserwisy, wciaz smieciowe, ale odseparowane.",
+          "explanation": "To unosi cala karte ponad jednorazowy one-liner.",
+          "score": null,
+          "originalBody": "Trash bags are microservices. Garbage, but ... contained garbage."
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-programmerhumor-comments-1v6ahq9-inheritedtechdebt",
+      "title": "inheritedTechDebt",
+      "caption": "Druga karta devowa zamienia odziedziczony tech debt w konkurs na najbardziej absurdalne IDE: Word, Excel, PowerPoint, a potem juz tylko Conway's Game of Life i punchcard vibes, jakby backlog sam domagal sie archeologii.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1v6ahq9/inheritedtechdebt/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "dev",
+        "tech-debt",
+        "office"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "whyFunny": "Humor dziala, bo kazdy kolejny komentarz podnosi absurd tylko o jeden czytelny krok i nie potrzebuje glebokiego insiderskiego kontekstu.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment proponuje porzucic Worda i pisac w Excelu albo PowerPoincie, bo tam jest nawet wciecie.",
+          "explanation": "To od razu ustawia ton calej karty.",
+          "score": null,
+          "originalBody": "Why stop at word? Use Excel or PowerPoint as the IDE. Excel even comes with built-in indentation."
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight idzie jeszcze dalej i wskazuje Minesweeper jako najlepsze IDE, niczym punchcard revival.",
+          "explanation": "Komentarz dziala, bo podnosi absurd bez zmiany tematu.",
+          "score": null,
+          "originalBody": "Best IDE is Minesweeper. Program like punchcard"
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzecia riposta domyka spirale: prawdziwi programisci uzywaja Conway's Game of Life jako IDE.",
+          "explanation": "To zostawia karte w bardzo czystym, memicznym finalu.",
+          "score": null,
+          "originalBody": "Real programmers use Conway's Game of Life as an IDE."
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-memes-comments-1v7junx-why-is-the-minecraft-social-media-pfp-blue-now",
+      "title": "why is the minecraft social media pfp blue now",
+      "caption": "Najciensza, ale nadal bezpieczna karta poranka bierze nagle niebieski avatar Minecrafta i pozwala comments uruchomic przewidywalna maszyne teaserow: internet nie wie, czemu jest niebiesko, ale juz potrafi zrobic z tego trzy tygodnie teorii i shortsow.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://old.reddit.com/r/memes/comments/1v7junx/why_is_the_minecraft_social_media_pfp_blue_now/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": null,
+      "tags": [
+        "memes",
+        "gaming",
+        "social-media"
+      ],
+      "categoryLabel": "memes",
+      "postText": null,
+      "whyFunny": "Karta dziala, bo komentarze zostaja przy jednym lekkim i bardzo wspolczesnym internetowym odruchu: nadinterpretacji najmniejszej zmiany avatara.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment przyznaje sie do klasycznego internetu: nikt by nie zauwazyl, gdyby inni nie zaczeli pytac.",
+          "explanation": "To jest najszersza i najlatwiejsza do zrozumienia puenta calego watku.",
+          "score": null,
+          "originalBody": "I didn't even notice until people started asking why it was blue 💀"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight robi z koloru reklame: to ten sam produkt, tylko po innym procesie chemicznym.",
+          "explanation": "Komentarz dziala, bo przerzuca problem z gamingu w absurdalny jezyk opakowan i chemii.",
+          "score": null,
+          "originalBody": "It's the same product, just a different chemical process 🗣️"
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzecia riposta przewiduje juz cala ekonomie kontentu: shortsowi twórcy beda z tego doic teaser przez trzy tygodnie.",
+          "explanation": "To domyka karte najbardziej wspolczesnym i meta-internetowym akcentem.",
+          "score": null,
+          "originalBody": "Let's see the Minecraft shorts creators interpret this as a teaser for a new creeper and then milk it for three weeks"
+        }
+      ]
+    }
+  ],
+  "source": "Codex Safari Reddit radar"
+}

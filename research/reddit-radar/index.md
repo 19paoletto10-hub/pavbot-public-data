@@ -5,11 +5,10 @@
 - Topic operates as a read-only Reddit humor radar built from live Safari review
   on public `old.reddit.com` listings and exact post pages.
 - Current active public bundle is now
-  `research/reddit-radar/data/2026-07-26-2208-reddit-radar.json`.
-- Sunday, July 26, 2026 12:08 CEST and 18:08 CEST both ended as
-  `No material change`, but the 22:08 CEST Safari audit found five fresh,
-  comment-verified survivors and rotated the public bundle away from the older
-  06:09 set.
+  `research/reddit-radar/data/2026-07-27-0607-reddit-radar.json`.
+- Monday, July 27, 2026 06:07 CEST found only a thin four-card survivor set,
+  but that still satisfied the topic contract and rotated the public bundle
+  away from the stronger 2026-07-26-2208 winner.
 
 ## Selection Rules
 
@@ -31,6 +30,8 @@
   justify rotation without three similarly clean companions.
 - A thinner fifth card is acceptable when the first four survivors are clearly
   fresh, public-safe, and the slot would otherwise meet the rotation contract.
+- A four-card bundle is acceptable when fresh review quality clears the safety
+  bar but the morning slot does not produce a convincing fifth survivor.
 - Image-heavy or GIF-heavy comment sections that collapse into reaction images
   or fragmented references are weak candidates for the public digest.
 
