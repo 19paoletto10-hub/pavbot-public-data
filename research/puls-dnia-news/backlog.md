@@ -2,6 +2,14 @@
 
 ## Open
 
+## 2026-07-27 21:02
+
+- Watch whether police in Wrocław identify or detain the attackers after the assault on the Ukrainian couple.
+- Watch whether the Ziobro extradition request gets an official confirmation or denial.
+- Watch whether RCB or IMGW escalate the storm alert into outages, flooding or transport blocks.
+- Watch whether BBC adds fuller casualty or suspect updates for Seattle and the European fires.
+- Watch whether CNN publishes a fresher Iran-off-ramp segment or more oil-market detail.
+
 ## 2026-07-27 18:02
 
 - Watch whether police in Wrocław identify or detain the attackers after the assault on the Ukrainian couple.

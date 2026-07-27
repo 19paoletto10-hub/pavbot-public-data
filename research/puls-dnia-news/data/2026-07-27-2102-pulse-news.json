@@ -1,0 +1,481 @@
+{
+  "topic": "puls-dnia-news",
+  "schemaVersion": 1,
+  "runDate": "2026-07-27",
+  "runTime": "21:02",
+  "status": "Material update",
+  "headline": "21:02: Wrocław, PiS, alerty i irańsko-amerykański węzeł",
+  "summary": "Slot 21:02 przesuwa Puls Dnia w stronę Wrocławia, rozłamu w PiS, ekstradycji Ziobry i alertów pogodowych, a za granicą utrzymuje pożary w Europie, Seattle, wsparcie dla Ukrainy, Jodrell Bank, chińskie AI i irański węzeł z CNN. CNN nadal stoi na materiałach z 24 lipca.",
+  "checkedSources": [
+    {
+      "title": "TVN24 najnowsze",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN Connect the World",
+      "url": "https://transcripts.cnn.com/show/ctw"
+    },
+    {
+      "title": "RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "IMGW prognoza tygodniowa",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-27-07-02-08-2026/"
+    }
+  ],
+  "items": [
+    {
+      "id": "pl-wroclaw-atak-2026-07-27-2102",
+      "section": "Polska",
+      "title": "Pobili parę z Ukrainy i uciekli",
+      "lead": "Policja szuka sprawców brutalnej napaści we Wrocławiu.",
+      "whatHappened": "TVN24 podaje, że 26 lipca około 18:30 przy ul. Okulickiego doszło do brutalnego pobicia pary z Ukrainy. Sprawcy uciekli, a policja prowadzi poszukiwania.",
+      "keyFacts": [
+        "Zdarzenie miało miejsce przy ul. Okulickiego.",
+        "Poszkodowani to para z Ukrainy.",
+        "Sprawcy po ataku uciekli."
+      ],
+      "reactions": [
+        "Śledczy będą szukać nagrań i świadków.",
+        "Temat może szybko wejść do lokalnej debaty publicznej."
+      ],
+      "whyItMatters": "To świeży incydent przemocy z potencjalnym wątkiem społecznym i bezpieczeństwa publicznego.",
+      "context": "W poprzednim slocie dominowały inne krajowe leady; teraz wrocławski incydent wchodzi wyżej do feedu.",
+      "watchNext": [
+        "Czy policja poda identyfikację lub zatrzymanie sprawców.",
+        "Czy pojawi się informacja o stanie poszkodowanych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pobili parę z Ukrainy i uciekli. Policja szuka sprawców",
+          "url": "https://tvn24.pl/wroclaw/wroclaw-pobili-pare-i-uciekli-policja-szuka-sprawcow-st9160422"
+        }
+      ],
+      "tags": [
+        "Wrocław",
+        "policja",
+        "bezpieczeństwo",
+        "Polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-pis-czarnek-kurski-2026-07-27-2102",
+      "section": "Polityka",
+      "title": "Czarnek o Kurskim: żenujący spektakl",
+      "lead": "Spór w PiS znów wychodzi na pierwszy plan.",
+      "whatHappened": "TVN24 relacjonuje, że Przemysław Czarnek skomentował konflikt po wywiadzie Jacka Kurskiego, nazywając go \"żenującym spektaklem\".",
+      "keyFacts": [
+        "Materiał dotyczy konfliktu w środowisku PiS.",
+        "Wątek łączy Kurskiego, Morawieckiego i komentarze partyjne.",
+        "Artykuł jest z 27 lipca."
+      ],
+      "reactions": [
+        "PiS może odpowiedzieć kolejnym komentarzem lub dyscypliną przekazu.",
+        "Temat ma potencjał na dalsze polityczne echo."
+      ],
+      "whyItMatters": "To utrzymuje PiS jako główną oś krajowej polityki dnia.",
+      "context": "To mocniejsza, bardziej personalna odsłona sporu, który już przewijał się w poprzednich slotach.",
+      "watchNext": [
+        "Czy PiS odpowie formalnie.",
+        "Czy spór przełoży się na nowe personalne ruchy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Czarnek pytany o Kurskiego. Mówi o \"żenującym spektaklu\"",
+          "url": "https://tvn24.pl/polska/rozlam-w-pis-przemyslaw-czarnek-komentuje-oskarzenia-jacka-kurskiego-wobec-mateusza-morawieckiego-st9160171"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Czarnek",
+        "Morawiecki",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-ziobro-ekstradycja-2026-07-27-2102",
+      "section": "Polityka",
+      "title": "Wniosek o ekstradycję Ziobry gotowy",
+      "lead": "Sprawa Ziobry przechodzi w formalną fazę.",
+      "whatHappened": "TVN24 podaje, że wniosek o ekstradycję Zbigniewa Ziobry z USA jest gotowy; Donald Tusk zbywa pytanie o termin, a w tle pozostaje list gończy.",
+      "keyFacts": [
+        "Wniosek przygotowano po stronie prokuratury.",
+        "Sprawa dotyczy byłego ministra sprawiedliwości.",
+        "Tusk nie wskazał daty."
+      ],
+      "reactions": [
+        "Możliwy szybki komentarz obozu Ziobry i PiS.",
+        "Temat może wejść na tor dyplomatyczny i procesowy."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych wątków prawno-politycznych dnia.",
+      "context": "To nowy impuls wobec wcześniejszego sporu PiS i odrębny temat w krajowej polityce.",
+      "watchNext": [
+        "Czy ministerstwo potwierdzi wysłanie wniosku.",
+        "Czy pojawi się reakcja samego Ziobry."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Kiedy ekstradycja Zbigniewa Ziobry?",
+          "url": "https://tvn24.pl/polska/kiedy-ekstradycja-zbigniewa-ziobry-tusk-to-pytanie-do-innego-donalda-st9160610"
+        }
+      ],
+      "tags": [
+        "Ziobro",
+        "ekstradycja",
+        "prokuratura",
+        "Polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alerty-burze-upaly-2026-07-27-2102",
+      "section": "Alerty",
+      "title": "RCB ostrzega przed burzami i wiatrem",
+      "lead": "Burze, silny wiatr i intensywne opady są dziś realnym ryzykiem.",
+      "whatHappened": "RCB wydało alert z 27 lipca o burzach, silnym wietrze i intensywnych opadach, z ryzykiem podtopień i przerw w dostawie prądu. IMGW prognozuje chłodniejszy, wilgotny i wietrzny początek tygodnia oraz burze miejscami z opadami do 30-40 mm.",
+      "keyFacts": [
+        "RCB radzi unikać otwartych przestrzeni.",
+        "IMGW widzi burze zwłaszcza we wschodniej połowie kraju.",
+        "Od środy ma wrócić letnia aura i temperatury ponad 30°C."
+      ],
+      "reactions": [
+        "Możliwe lokalne interwencje PSP i zgłoszenia energetyczne.",
+        "Komunikacyjnie temat powinien pozostać aktywny do wieczora."
+      ],
+      "whyItMatters": "To bezpośredni sygnał ryzyka dla transportu, prądu i bezpieczeństwa.",
+      "context": "To kontynuacja pogodowej linii z poprzednich slotów, ale w nowym wydaniu na start tygodnia.",
+      "watchNext": [
+        "Czy pojawią się podtopienia lub wyłączenia prądu.",
+        "Czy IMGW lub RCB zaktualizują alert."
+      ],
+      "sources": [
+        {
+          "title": "RCB komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        },
+        {
+          "title": "IMGW: Prognoza pogody na tydzień 27.07 - 02.08.2026",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-27-07-02-08-2026/"
+        }
+      ],
+      "tags": [
+        "RCB",
+        "IMGW",
+        "burze",
+        "alert"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "econ-ropa-spadek-2026-07-27-2102",
+      "section": "Gospodarka",
+      "title": "Ropa tanieje po pauzie w atakach USA i Iranu",
+      "lead": "Rynek reaguje spadkiem na sygnał deeskalacji na Bliskim Wschodzie.",
+      "whatHappened": "BBC podaje, że ropa spada ponad 9 proc. po tym, jak USA i Iran wstrzymały ataki na drugi z rzędu dzień, co daje negocjacjom więcej przestrzeni.",
+      "keyFacts": [
+        "Brent spadł poniżej 88 dolarów za baryłkę.",
+        "Wcześniej ropa wracała ponad 100 dolarów.",
+        "Rynek nadal boi się nawrotu eskalacji."
+      ],
+      "reactions": [
+        "Spadek może się odwrócić po kolejnym komunikacie.",
+        "Ceny paliw w krajach importujących nadal zależą od kolejnych sygnałów."
+      ],
+      "whyItMatters": "To natychmiast przenosi geopolitykę na ceny paliw i transportu.",
+      "context": "Wcześniejsze sloty śledziły wahania ropy; teraz mamy wyraźny zwrot w dół.",
+      "watchNext": [
+        "Czy ropa utrzyma spadek.",
+        "Czy rynki uznają pauzę za trwałą."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Oil price dives as US and Iran pause attacks",
+          "url": "https://www.bbc.co.uk/news/articles/clyj834jn5lo"
+        },
+        {
+          "title": "The Star: Oil price dives as US and Iran pause attacks",
+          "url": "https://www.the-star.co.ke/news/world/2026-07-27-oil-price-dives-as-us-and-iran-pause-attacks"
+        }
+      ],
+      "tags": [
+        "ropa",
+        "Iran",
+        "USA",
+        "rynek"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-pozar-europa-2026-07-27-2102",
+      "section": "Świat",
+      "title": "Europa walczy z rozległymi pożarami",
+      "lead": "BBC pokazuje skalę pożarów we Francji i Hiszpanii.",
+      "whatHappened": "BBC opisuje mapy pożarów i działania służb. Ogień w pobliżu Bordeaux objął ponad 420 km2 w mniej niż cztery dni, a region Madrytu mierzy się z jednymi z najgorszych pożarów w historii.",
+      "keyFacts": [
+        "Pożar pod Bordeaux objął ponad 420 km2.",
+        "Region Madrytu mierzy się z wyjątkowo ciężką sytuacją.",
+        "BBC pokazuje też metody gaszenia i skalę ewakuacji."
+      ],
+      "reactions": [
+        "Władze mogą rozszerzać strefy ewakuacji.",
+        "Możliwe kolejne komunikaty o ograniczeniach ruchu."
+      ],
+      "whyItMatters": "To jeden z najcięższych europejskich sygnałów pogodowo-środowiskowych dnia.",
+      "context": "W poprzednim slocie pożary już były w centrum uwagi; teraz BBC dopowiada ich skalę.",
+      "watchNext": [
+        "Czy pojawią się kolejne ewakuacje.",
+        "Czy front ognia przesunie się na nowe obszary."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Devastating European wildfires in maps - and how they're being tackled",
+          "url": "https://www.bbc.co.uk/news/articles/cj638jx0l53o"
+        }
+      ],
+      "tags": [
+        "pożary",
+        "Europa",
+        "Francja",
+        "Hiszpania"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "sec-seattle-shooting-2026-07-27-2102",
+      "section": "Bezpieczeństwo",
+      "title": "Trzy ofiary strzelaniny przy Space Needle",
+      "lead": "Seattle liczy ofiary po strzelaninie na festiwalu jedzenia.",
+      "whatHappened": "BBC US & Canada podaje, że przy Space Needle zginęły trzy osoby, kilka zostało rannych, jeden podejrzany jest w areszcie, a drugi pozostaje na wolności.",
+      "keyFacts": [
+        "Strzelanina wydarzyła się na imprezie plenerowej.",
+        "Policja mówi o dwóch strzelających osobach.",
+        "Śledczy nadal szukają drugiego podejrzanego."
+      ],
+      "reactions": [
+        "Władze Seattle mogą szybko podać motyw.",
+        "Sprawa może uruchomić kolejne pytania o bezpieczeństwo imprez masowych."
+      ],
+      "whyItMatters": "To świeży, głośny incydent z natychmiastową liczbą ofiar.",
+      "context": "W poprzednim slocie Seattle już było widoczne; teraz jest doprecyzowanie bilansu i statusu podejrzanych.",
+      "watchNext": [
+        "Czy policja zatrzyma drugiego podejrzanego.",
+        "Czy pojawi się oficjalny bilans rannych."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Three dead and several injured in shooting at food festival near Seattle's Space Needle",
+          "url": "https://www.bbc.co.uk/news/articles/c78gjyx4q2yo"
+        },
+        {
+          "title": "NetDania / BBC US & Canada",
+          "url": "https://m.netdania.com/news/Three%20dead%20and%20several%20injured%20in%20shooting%20at%20food%20festival%20near%20Seattle%27s%20Space%20Needle/BBC%20US%20%26%20Canada/BBCUS_Canada/rssnews/%252Fnews%252Farticles%252Fc78gjyx4q2yo%40BBCUS_Canada%7B%22Syms%22%3A%5B%5D%7D/1785134291"
+        }
+      ],
+      "tags": [
+        "Seattle",
+        "strzelanina",
+        "USA",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-zelensky-burnham-2026-07-27-2102",
+      "section": "Świat",
+      "title": "Zelensky u Burnhama z czytelnym sygnałem wsparcia",
+      "lead": "Nowy brytyjski premier przyjmuje Zełenskiego jako pierwszego zagranicznego gościa.",
+      "whatHappened": "BBC podaje, że Andy Burnham powiedział, iż wizyta Wołodymyra Zełenskiego miała wysłać bardzo jasny sygnał o wsparciu dla Ukrainy. W tle jest też transfer technologii obronnych i dalsza pomoc dla Kijowa.",
+      "keyFacts": [
+        "Zełenski był pierwszym zagranicznym gościem nowego premiera.",
+        "W tle jest wsparcie dla ukraińskich zdolności obronnych.",
+        "Burnham zapowiedział dalszą pomoc."
+      ],
+      "reactions": [
+        "Londyn może ogłosić kolejne zobowiązania.",
+        "Kijów będzie pilnował ciągłości tej linii."
+      ],
+      "whyItMatters": "To ważny sygnał polityczny dla Ukrainy w momencie zmiany władzy w Londynie.",
+      "context": "Ten temat odświeża brytyjsko-ukraiński wątek, który pojawiał się już w poprzednich slotach.",
+      "watchNext": [
+        "Czy padną kolejne zobowiązania finansowe lub wojskowe.",
+        "Czy Burnham ogłosi wizytę w Kijowie."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Zelensky visit sends clear message of support for Ukraine, Burnham says",
+          "url": "https://www.bbc.co.uk/news/articles/cy8me5vyjg2o"
+        },
+        {
+          "title": "Ukraine Today / BBC link mirror",
+          "url": "https://ukrainetoday.org/zelensky-visit-sends-clear-message-of-support-for-ukraine-burnham-says/"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Wielka Brytania",
+        "dyplomacja",
+        "wojna"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-jodrell-bank-2026-07-27-2102",
+      "section": "Technologia",
+      "title": "Jodrell Bank pod presją cięć naukowych",
+      "lead": "BBC pisze o możliwym zamknięciu ikonowego teleskopu.",
+      "whatHappened": "BBC podaje, że teleskop Lovella w Jodrell Bank może zostać zamknięty po utracie finansowania; astronomowie ostrzegają, że to uderzy w brytyjską naukę.",
+      "keyFacts": [
+        "Chodzi o jedną z ikon brytyjskiej astronomii.",
+        "BBC mówi o utracie finansowania.",
+        "Zagrożone jest szkolenie kolejnego pokolenia."
+      ],
+      "reactions": [
+        "Środowisko naukowe może rozpocząć obronę projektu.",
+        "Rząd może dostać presję na znalezienie finansowania."
+      ],
+      "whyItMatters": "To ważny sygnał o kondycji publicznego finansowania nauki i infrastruktury badawczej.",
+      "context": "W poprzednich slotach tech news były zdominowane przez AI; teraz pojawia się mocny wątek science funding.",
+      "watchNext": [
+        "Czy pojawi się plan ratunkowy.",
+        "Czy finansowanie zostanie odnowione."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: UK's iconic Jodrell Bank telescope faces axe in science cuts",
+          "url": "https://www.bbc.co.uk/news/articles/c5y6r9rdxygo"
+        },
+        {
+          "title": "Reddit mirror with BBC link",
+          "url": "https://www.reddit.com/r/space/comments/1v7z3rp/uks_iconic_jodrell_bank_telescope_faces_axe_in/"
+        }
+      ],
+      "tags": [
+        "science",
+        "astronomia",
+        "Wielka Brytania",
+        "technologia"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-ai-chiny-2026-07-27-2102",
+      "section": "Technologia",
+      "title": "Chińskie modele AI pod lupą USA",
+      "lead": "TVN24 opisuje groźbę sankcji wobec chińskich modeli open-weight.",
+      "whatHappened": "TVN24 podaje, że chińskie modele coraz skuteczniej konkurują z rozwiązaniami amerykańskich firm, a USA rozważają sankcje w związku z obawami o destylację i transfer technologii.",
+      "keyFacts": [
+        "Temat dotyczy modeli open-weight.",
+        "W tle są obawy o konkurencję z OpenAI i Anthropic.",
+        "Sprawa może wrócić do rozmów USA-Chiny o AI."
+      ],
+      "reactions": [
+        "Rynek AI może odebrać to jako sygnał większej regulacji.",
+        "Firmy mogą reagować komunikatami o zgodności i bezpieczeństwie."
+      ],
+      "whyItMatters": "To pokazuje, że AI pozostaje polem geopolitycznej rywalizacji.",
+      "context": "Wątki AI już wcześniej były w feedzie; ten dodaje ryzyko sankcji i konkurencję z Chin.",
+      "watchNext": [
+        "Czy Waszyngton ogłosi konkretne restrykcje.",
+        "Czy Chiny odpowiedzą własnym komunikatem."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Chińskie modele AI pod lupą USA. Padła groźba sankcji",
+          "url": "https://tvn24.pl/biznes/tech/wojna-o-sztuczna-inteligencje-usa-biora-pod-lupe-chinskie-modele-groza-sankcjami-st9153589"
+        }
+      ],
+      "tags": [
+        "AI",
+        "USA",
+        "Chiny",
+        "technologia"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-victor-jara-2026-07-27-2102",
+      "section": "Świat",
+      "title": "Chile zatrzymuje uciekiniera po sprawie Víctora Jary",
+      "lead": "BBC domyka głośny historyczny wątek z czasów Pinocheta.",
+      "whatHappened": "BBC informuje, że Chile zatrzymało uciekiniera skazanego za zabójstwo pieśniarza Víctora Jary; to zamyka głośny historyczno-prawny wątek.",
+      "keyFacts": [
+        "Sprawa sięga czasów Pinocheta.",
+        "Dotyczy skazanego za morderstwo Víctora Jary.",
+        "Ujęcie ma silny wymiar symboliczny."
+      ],
+      "reactions": [
+        "Możliwa jest reakcja organizacji praw człowieka.",
+        "Temat może wrócić w chilijskiej debacie o rozliczeniach z przeszłością."
+      ],
+      "whyItMatters": "To ważny moment dla pamięci historycznej i wymiaru sprawiedliwości.",
+      "context": "To bardziej tło światowe niż lead kryzysowy, ale dobrze domyka blok BBC.",
+      "watchNext": [
+        "Czy pojawi się sądowy lub ekstradycyjny follow-up.",
+        "Czy Chile poda więcej szczegółów o zatrzymaniu."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Chile captures fugitive convicted of singer Victor Jara's murder under Pinochet",
+          "url": "https://www.bbc.co.uk/news/articles/c3w0xwj8vzyo"
+        },
+        {
+          "title": "News South Africa / BBC mirror",
+          "url": "https://news.co.za/world/"
+        }
+      ],
+      "tags": [
+        "Chile",
+        "prawa człowieka",
+        "świat",
+        "BBC"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "sec-cnn-iran-2026-07-27-2102",
+      "section": "Bezpieczeństwo",
+      "title": "CNN: Iran odrzuca rozejm, Trump grozi większym uderzeniem",
+      "lead": "CNN z 24 lipca nadal trzyma irańsko-amerykański off-ramp i ryzyko eskalacji.",
+      "whatHappened": "CNN w segmencie z 24 lipca mówi o odrzuceniu nowej oferty rozejmu przez Iran, o tym że Trump rozważał \"massive attack\", a obok łączył też ropę, pożar we Francji i strzelaninę w Georgii.",
+      "keyFacts": [
+        "To materiał z 24 lipca.",
+        "Segment łączy Iran, ropę i kilka równoległych kryzysów.",
+        "CNN nadal nie ma nowszego wydania z tego pasma."
+      ],
+      "reactions": [
+        "Wątek może wrócić po kolejnym komunikacie z Waszyngtonu lub Teheranu.",
+        "Rynek ropy i bezpieczeństwo morskie pozostają wrażliwe."
+      ],
+      "whyItMatters": "To największy zagraniczny węzeł geopolityczny, który nadal wpływa na ceny energii.",
+      "context": "CNN nie nadąża z nowym materiałem, ale ten segment pozostaje użyteczny jako punkt odniesienia dla eskalacji.",
+      "watchNext": [
+        "Czy pojawi się nowy komunikat o rozejmie.",
+        "Czy rynek ropy zareaguje na kolejne ruchy USA lub Iranu."
+      ],
+      "sources": [
+        {
+          "title": "CNN Connect the World transcript",
+          "url": "https://transcripts.cnn.com/show/ctw"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "CNN",
+        "eskalacja"
+      ],
+      "priority": "high"
+    }
+  ]
+}

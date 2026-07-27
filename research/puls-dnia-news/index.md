@@ -1,3 +1,5 @@
+The 2026-07-27 21:02 slot przesuwa Puls Dnia w stronę Wrocławia, rozłamu w PiS, ekstradycji Ziobry i alertów pogodowych, a za granicą utrzymuje pożary w Europie, Seattle, wsparcie dla Ukrainy, Jodrell Bank, chińskie AI i irański węzeł z CNN. CNN nadal stoi na materiałach z 24 lipca.
+
 The 2026-07-27 18:02 slot przesuwa Puls Dnia z porannego miksu PiS i infrastruktury w stronę świeższych leadów o napaści we Wrocławiu, sporze o fundusze pozabudżetowe, szwedzkiej agencji wywiadu, europejskich pożarach, cenach ropy, Berlinie, Seattle oraz dwóch krajowych alertach pogodowych. CNN nadal zatrzymuje się na materiałach z 24 lipca.
 
 The 2026-07-27 15:01 slot przesuwa Puls Dnia w stronę burzowych alertów, dalszych ruchów w PiS, wątku infrastrukturalnego z Głuchołaz, technicznych testów autonomicznych ciężarówek i świeżych zagranicznych leadów z Chin, Francji, Wielkiej Brytanii i Seattle. CNN nadal zatrzymuje się na materiałach z 24 lipca.
