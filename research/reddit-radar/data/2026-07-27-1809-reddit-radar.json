@@ -1,0 +1,223 @@
+{
+  "id": "humor-2026-07-27-1809",
+  "title": "<RR> Reddit Radar",
+  "summary": "Material update: slot 18:09 rotuje na szesc swiezych kart o generycznych komentarzach, smoke tescie migracji, zegnajacym DELETE, braku git revertu oraz dwoch everyday absurdach ze shambles i Umbrella Corp.",
+  "generatedAt": "2026-07-27T16:09:00Z",
+  "displayTime": "18:09",
+  "nextRefreshAt": "2026-07-27T20:09:00+02:00",
+  "refreshIntervalHours": 2,
+  "items": [
+    {
+      "id": "old-reddit-com-r-memes-comments-1v7y659-theres-one-on-every-vid",
+      "title": "There's one on every vid",
+      "caption": "Wieczorny opener bierze zjawisko komentarza, ktory bardziej dba o edycje i lajki niz o sama mysl. Comments nie szukaja glebi, tylko dokladaja kolejne rozpoznawalne frazy o byciu slawnym za nic.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://old.reddit.com/r/memes/comments/1v7y659/theres_one_on_every_vid/?sort=top",
+      "imageURL": null,
+      "score": 2460,
+      "comments": 74,
+      "tags": [
+        "memes",
+        "internet",
+        "comments"
+      ],
+      "categoryLabel": "memes",
+      "postText": null,
+      "whyFunny": "Humor dziala, bo wszyscy natychmiast rozpoznaja ten sam irytujaco-generyczny typ komentarza i watek konsekwentnie go parodiuje.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment skleja caly stereotyp engagementowego komentarza w jeden blok tekstu.",
+          "explanation": "To ustawia cala karte bez potrzeby dodatkowego kontekstu.",
+          "score": 199,
+          "originalBody": "(Original cool comment) Edit: Wow, thanks for all the likes, everyone! Who's still reading this in 2026? What you egg? A Redditor of culture I see Cool comment Edit: Mom I m famous 😭 Slightly controversial, but still popular opinion Edit: Oh no, what have I started r/subredditname I got 4.2k likes on a comment \"cites 1:1 a quote from video\" 💀 gets 105,203 likes I always dislike them Frl people who thanks people for liking their comment is so cringe"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight wyciaga najbardziej znany refren o czytaniu komentarza w 2026 roku.",
+          "explanation": "To trzyma karte przy jednym czytelnym bicie internetowej autoparodii.",
+          "score": 88,
+          "originalBody": "Who's still reading this in 2026? What you egg? A Redditor of culture I see"
+        },
+        {
+          "id": "comment-3",
+          "summary": "Trzecia riposta sprowadza wszystko do czystego komentarskiego cringe-u.",
+          "explanation": "Dzieki temu karta zamyka sie jednym szerokim, lekkim roastem.",
+          "score": 26,
+          "originalBody": "Cool comment Edit: Mom I m famous 😭 Slightly controversial, but still popular opinion Edit: Oh no, what have I started r/subredditname I got 4.2k likes on a comment"
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-programmerhumor-comments-1v7w4j4-migrationinprogress",
+      "title": "migrationInProgress",
+      "caption": "Najczystsza karta devowa slotu bierze doslowny dym z migracji i pozwala comments rozegrac go jako zbyt literalny smoke test. Watek nie odplywa w flame, tylko spokojnie dopala ten sam obrazek.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1v7w4j4/migrationinprogress/?sort=top",
+      "imageURL": null,
+      "score": 11652,
+      "comments": 47,
+      "tags": [
+        "dev",
+        "migration",
+        "smoke-test"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "whyFunny": "To dziala, bo watek bierze techniczny termin \"smoke test\" i zamienia go w absurd, ktory kazdy czyta natychmiast.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment od razu nazywa cala scene zbyt doslownym smoke testem.",
+          "explanation": "To jest najkrotszy i najmocniejszy payoff calego posta.",
+          "score": 186,
+          "originalBody": "The smoke is just the legacy infrastructure leaving the building. no, this is just a \"smoke test\" Looks like it passed the smoke test a little too literally."
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight dopowiada, ze data center tylko przechodzi do lepszego miejsca.",
+          "explanation": "Komentarz utrzymuje ten sam czysty bit bez uciekania w niszowy zargon.",
+          "score": 79,
+          "originalBody": "does it hurt the data center? don't worry, it'll be in a better place Does it hurt the data? DONT WORRY. IT WILL BE IN A BETTER PLACE. Unironically right if stolen data If? You're crazy, it has no feelings, and the cloud is much better. The data center is getting moved to a farm upstate."
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-programmerhumor-comments-1v80umk-queryofdoom",
+      "title": "queryOfDoom",
+      "caption": "Ten watek bierze groznie wygladajace DELETE i przerabia je na nadmiernie czula ceremonie pozegnania uzytkownika. Im bardziej comments rozbudowuja countdown, tym zabawniej robi sie cala katastrofa.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1v80umk/queryofdoom/?sort=top",
+      "imageURL": null,
+      "score": 2253,
+      "comments": 187,
+      "tags": [
+        "dev",
+        "database",
+        "sql"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "whyFunny": "Humor bierze bardzo techniczny setup, ale payoff jest prosty: query zachowuje sie jak dramatyczny mistrz ceremonii przed detonacja.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment nazywa query tylko zbyt uprzejmym przed zabiciem calej tabeli.",
+          "explanation": "To ustawia ton calej karty w jednym zdaniu.",
+          "score": 1890,
+          "originalBody": "The query isn't slow. It's just waiting for everyone else to finish saying goodbye to that user. Wholesome query comforting the user before executing it with a hydrogen bomb The query even gives them a countdown before becoming a statistic. You mean it's waiting for everyone else to curse out that user since he's the one to blame for everyone else's misery and demise. The logs will remember them more kindly than the developers will."
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight dopowiada, ze to juz nie delete, tylko countdown do statystyki.",
+          "explanation": "To podbija absurd bez zmiany tonu.",
+          "score": 430,
+          "originalBody": "Wholesome query comforting the user before executing it with a hydrogen bomb The query even gives them a countdown before becoming a statistic."
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-programmerhumor-comments-1v79lak-nogitrevertavailable",
+      "title": "noGitRevertAvailable",
+      "caption": "Najciemniejsza, ale nadal czysta karta slotu zamienia brak rollbacku w lotniczy incident review. Comments trzymaja sie jednego dosc ostrego, ale technicznie bardzo czytelnego riffu o debugowaniu katastrofy.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1v79lak/nogitrevertavailable/?sort=top",
+      "imageURL": null,
+      "score": 5533,
+      "comments": 215,
+      "tags": [
+        "dev",
+        "rollback",
+        "incident"
+      ],
+      "categoryLabel": "dev",
+      "postText": null,
+      "whyFunny": "To dziala, bo przenosi normalny software postmortem jeden poziom za daleko, ale nadal zostaje w rozpoznawalnym jezyku testow i debugowania.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment od razu porownuje software postmortem z badaniem katastrofy lotniczej.",
+          "explanation": "To jest glowna os zartu i reszta watku tylko ja doprecyzowuje.",
+          "score": 1954,
+          "originalBody": "Aviation gets post-incident investigations. We get, \"Can't reproduce, closing ticket.\" Imagine airlines trying to reproduce the error Can you try crashing again with debug logging enabled? We've crashed both with and without cargo, so the load is not the issue."
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight podkreśla absurd prosby o ponowna katastrofe z debug loggingiem.",
+          "explanation": "Dzieki temu karta zostaje przy jednym, bardzo przenosnym pay-offie.",
+          "score": 724,
+          "originalBody": "Imagine airlines trying to reproduce the error Can you try crashing again with debug logging enabled? We've crashed both with and without cargo, so the load is not the issue. Can you do a fuzz test to test as many different passenger combinations as possible?"
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-mildlyinfuriating-comments-1v81pht-my-wife-said-that-the-house-is-in-shambles",
+      "title": "My wife said that the house is in shambles and she'll be cleaning all day. This is what our house looks like in shambles.",
+      "caption": "Everyday karta wieczoru bierze bardzo niewinny obrazek i pozwala comments eskalowac tylko slowo \"shambles\". Zamiast zwyklego narzekania dostajemy niemal festiwal kontrolowanego balaganu.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://old.reddit.com/r/mildlyinfuriating/comments/1v81pht/my_wife_said_that_the_house_is_in_shambles_and/?sort=top",
+      "imageURL": null,
+      "score": 14600,
+      "comments": 6760,
+      "tags": [
+        "everyday",
+        "household",
+        "wordplay"
+      ],
+      "categoryLabel": "everyday",
+      "postText": null,
+      "whyFunny": "Humor jest bardzo prosty i szeroki: wszyscy od razu rozumieja, ze czyjes \"shambles\" jest dla reszty ludzi stanem idealnym.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment od razu prosi o takie same \"shambles\" we wlasnym domu.",
+          "explanation": "To najszybciej ustawia, gdzie lezy cala puenta.",
+          "score": 14600,
+          "originalBody": "Can she come put my house in shambles? Hahaha then she can pass by mine too. I have a 12 passenger van, can she bring her whole family to just put all our houses in shambles. You get a shambles! And you get a shambles! EVERYONE GETS A SHAMBLES! SHAMBLING!!! Every day I’m shambling! 🎵🎶 The study of Shambology"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight rozwija to juz w zbiorowy festiwal shamblingu.",
+          "explanation": "Komentarz nie psuje tonu i trzyma lekki absurd do konca.",
+          "score": 1551,
+          "originalBody": "Hahaha then she can pass by mine too. I have a 12 passenger van, can she bring her whole family to just put all our houses in shambles. You get a shambles! And you get a shambles! EVERYONE GETS A SHAMBLES! SHAMBLING!!! Every day I’m shambling! 🎵🎶 The study of Shambology"
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-mildlyinfuriating-comments-1v812ri-30-years-company-gift",
+      "title": "I work already 30 years by that company and that’s a gift I got for my work anniversary",
+      "caption": "Finalowa karta codziennego absurdu zamienia marny upominek w entrance do Umbrella Corporation. Comments od razu ida w czysty popkulturowy roast zamiast w zwykly korpo-rant.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://old.reddit.com/r/mildlyinfuriating/comments/1v812ri/i_work_already_30_years_by_that_company_and_thats/?sort=top",
+      "imageURL": null,
+      "score": 665,
+      "comments": 80,
+      "tags": [
+        "everyday",
+        "work",
+        "pop-culture"
+      ],
+      "categoryLabel": "everyday",
+      "postText": "Yeah…candy",
+      "whyFunny": "Karta dziala, bo visible comments od razu rozpoznaja logo i buduja jeden czytelny Resident Evil riff zamiast rozchodzic sie w zwykly workplace vent.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment pyta wprost, czy to rocznica w Umbrella Corporation.",
+          "explanation": "To przerabia slaby prezent na natychmiastowy popkulturowy payoff.",
+          "score": 805,
+          "originalBody": "Do you work for Resident Evil developers lol"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight rozwija zart o benefitach i T-virusie.",
+          "explanation": "To utrzymuje karte przy jednym lekkim, rozpoznawalnym motywie.",
+          "score": 538,
+          "originalBody": "You’ve worked for the Umbrella Corporation for 30 years? You monster. How do you live with yourself? Have you seen the benefits package though!? What do they offer? If it's good i might sign up Eternal life ... kinda ... Their umbrella insurance coverage options are to die for! They have a great health plan package. Something about a T Virus"
+        }
+      ]
+    }
+  ],
+  "source": "Codex Safari Reddit radar"
+}

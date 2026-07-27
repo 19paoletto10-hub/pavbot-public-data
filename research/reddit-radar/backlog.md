@@ -8,6 +8,10 @@
 
 ## Review Notes
 
+- 2026-07-27: 22:08 CEST material update found that `origin/main` still exposed
+  `2026-07-27-0607` and did not yet contain the local `2026-07-27-1809`
+  bundle before publish, so remote verification remains mandatory even after a
+  successful local research pass.
 - 2026-07-22: Added a single actionable follow-up after the 22:08 CEST audit confirmed the missing topic-local workflow prompt.
 - 2026-07-23: 06:08 CEST material update succeeded through the logged-in Safari session, but `automation-prompt.md` and `index.md` are still missing topic-local contract files.
 - 2026-07-25: 00:08 CEST material update succeeded through read-only Safari / Computer Use, but `automation-prompt.md` and `index.md` are still missing topic-local contract files.

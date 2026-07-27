@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-27-1809",
+  "status": "material_update",
+  "generatedAt": "2026-07-27T16:09:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-27T18:09:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on old.reddit.com using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-27-0607 and 2026-07-27-1209, so none of the URLs already surfaced there could roll forward into this slot.",
+      "Before selecting replacements, the run verified that origin/main already serves 2026-07-27-0607 for reddit-radar, so the remote topic was current and this slot was a normal evening rotation rather than a recovery publish.",
+      "Final read-only Safari review stayed on exact old.reddit post pages for the strongest fresh evening challengers from r/memes, r/ProgrammerHumor and mildlyinfuriating, while facepalm and AskReddit were discarded at listing level because the live cluster stayed too political, too broad, or too discussion-first.",
+      "Six safe fresh cards survived the live review, so the reddit-radar contract prefers a new public bundle over keeping the visible 2026-07-27-0607 bundle unchanged.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "currentPublicBundle": "2026-07-27-0607",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-27-1809-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-27-1809-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-27-1809-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1v74n88/no_shitposting/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v7junx/why_is_the_minecraft_social_media_pfp_blue_now/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v7ta9p/stop_please_stop/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v7uz7j/why_is_this_so_true/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v6ahq9/inheritedtechdebt/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v78up9/refactorcode/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v7stvr/claudejustgivemetheanswer/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v7uf76/itsneverjustasmallchange/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v7l85f/i_despise_when_this_happens_makes_me_wonder_what/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v7q2r1/came_home_to_this_on_my_fridge_from_my_roommate/?sort=top",
+    "https://old.reddit.com/r/AskReddit/comments/1v7hjw8/whats_the_best_i_like_my_coffee_like_i_like_my/?sort=top",
+    "https://old.reddit.com/r/AskReddit/comments/1v7o7i3/whats_a_product_where_the_cheap_knockoff_version/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "title": "There's one on every vid",
+      "url": "https://old.reddit.com/r/memes/comments/1v7y659/theres_one_on_every_vid/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "2.5k hot"
+    },
+    {
+      "title": "migrationInProgress",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v7w4j4/migrationinprogress/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "11.6k hot"
+    },
+    {
+      "title": "queryOfDoom",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v80umk/queryofdoom/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "2.3k hot"
+    },
+    {
+      "title": "noGitRevertAvailable",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v79lak/nogitrevertavailable/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "5.5k hot"
+    },
+    {
+      "title": "My wife said that the house is in shambles and she'll be cleaning all day. This is what our house looks like in shambles.",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v81pht/my_wife_said_that_the_house_is_in_shambles_and/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "scoreLabel": "14.6k hot"
+    },
+    {
+      "title": "I work already 30 years by that company and that’s a gift I got for my work anniversary",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v812ri/i_work_already_30_years_by_that_company_and_thats/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "scoreLabel": "665 hot"
+    },
+    {
+      "title": "At least they told us the truth",
+      "url": "https://old.reddit.com/r/memes/comments/1v7w4vn/at_least_they_told_us_the_truth/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "522 hot"
+    },
+    {
+      "title": "In case you think you are working under pressure",
+      "url": "https://old.reddit.com/r/memes/comments/1v81b9g/in_case_you_think_you_are_working_under_pressure/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "237 hot"
+    },
+    {
+      "title": "getStarted",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v7wqez/getstarted/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "2.0k hot"
+    },
+    {
+      "title": "This restaurant expects customers to eat dessert straight off the table",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v7wskh/this_restaurant_expects_customers_to_eat_dessert/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "910 hot"
+    }
+  ]
+}

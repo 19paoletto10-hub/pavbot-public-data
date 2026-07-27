@@ -5,10 +5,22 @@
 - Topic operates as a read-only Reddit humor radar built from live Safari review
   on public `old.reddit.com` listings and exact post pages.
 - Current active public bundle is now
-  `research/reddit-radar/data/2026-07-27-0607-reddit-radar.json`.
+  `research/reddit-radar/data/2026-07-27-2208-reddit-radar.json`.
+- Monday, July 27, 2026 22:08 CEST found five fresh, public-safe survivors
+  after filtering `2026-07-27-1209` and `2026-07-27-1809`, so the topic
+  rotated again to a lighter late-night set led by two fresh meme cards, two
+  gentler dev cards, and one packaging-annoyance everyday card.
+- The same 22:08 CEST audit also found that `origin/main` still exposed the
+  older `2026-07-27-0607` public bundle and did not yet contain the local
+  `2026-07-27-1809` material update before publication, so this slot doubled
+  as a remote-state catch-up.
+- Monday, July 27, 2026 18:09 CEST found six fresh, public-safe survivors
+  after filtering `2026-07-27-0607` and `2026-07-27-1209`, so the topic
+  rotated away from the thin morning bundle to a fuller evening set led by
+  comment-culture meta humor, three dev cards, and two everyday absurd cards.
 - Monday, July 27, 2026 12:09 CEST live Safari audit did not clear the
   four-card threshold after filtering `2026-07-27-0607` and `2026-07-26-2208`,
-  so the active public bundle remains `2026-07-27-0607`.
+  so that midday slot kept the active public bundle at `2026-07-27-0607`.
 - Monday, July 27, 2026 06:07 CEST found only a thin four-card survivor set,
   but that still satisfied the topic contract and rotated the public bundle
   away from the stronger 2026-07-26-2208 winner.
@@ -29,6 +41,9 @@
 
 - Strong survivors usually keep one dominant joke in the first visible comments
   without turning into rant, politics, meta-discussion, or legal/support talk.
+- A lighter bundle is still publishable when it clears four fresh survivors
+  after the two-run freshness filter; this topic values rotation over sitting
+  on an older, stronger winner bundle.
 - Thin one-liner threads can still be useful as single cards, but they do not
   justify rotation without three similarly clean companions.
 - A thinner fifth card is acceptable when the first four survivors are clearly
@@ -44,6 +59,9 @@
   this topic. Computer Use has been intermittently flaky in prior runs, so lack
   of a stable Computer Use preflight is not by itself a blocker when Safari
   review works read-only.
+- Always verify `origin/main` itself before notifying downstream systems; local
+  material updates can exist without becoming public if a publish step is
+  missed or delayed.
 - No Reddit social actions are ever allowed.
 - Production notifier dispatch must stay behind successful `origin/main`
   verification and only happens for material updates.

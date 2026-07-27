@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-27-2208",
+  "status": "material_update",
+  "generatedAt": "2026-07-27T20:08:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-27T22:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on old.reddit.com using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-27-1209 and 2026-07-27-1809, so none of the URLs already surfaced there could roll forward into this slot.",
+      "Before selecting replacements, the run verified that origin/main still serves 2026-07-27-0607 for reddit-radar and does not yet contain the local 2026-07-27-1809 bundle, so the remote topic was behind at run start.",
+      "Final read-only Safari review stayed on exact old.reddit post pages for the strongest fresh late-evening challengers from r/memes, r/ProgrammerHumor, and mildlyinfuriating, while facepalm and AskReddit were discarded at listing level because the live cluster stayed too political, too broad, or too discussion-first.",
+      "Five safe fresh cards survived the live review, so the reddit-radar contract prefers a new public bundle over keeping the visible 2026-07-27-0607 payload unchanged.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "currentPublicBundle": "2026-07-27-0607",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-27-2208-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-27-2208-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-27-2208-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1v7uz7j/why_is_this_so_true/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v7ta9p/stop_please_stop/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v7uf76/itsneverjustasmallchange/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v7stvr/claudejustgivemetheanswer/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v7l85f/i_despise_when_this_happens_makes_me_wonder_what/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v7q2r1/came_home_to_this_on_my_fridge_from_my_roommate/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v7y659/theres_one_on_every_vid/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v7w4j4/migrationinprogress/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v80umk/queryofdoom/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v79lak/nogitrevertavailable/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v81pht/my_wife_said_that_the_house_is_in_shambles_and/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v812ri/i_work_already_30_years_by_that_company_and_thats/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "title": "hating autotype at this point",
+      "url": "https://old.reddit.com/r/memes/comments/1v84q64/hating_autotype_at_this_point/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "3.3k hot"
+    },
+    {
+      "title": "We can blame everything brotha",
+      "url": "https://old.reddit.com/r/memes/comments/1v833d3/we_can_blame_everything_brotha/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "1.7k hot"
+    },
+    {
+      "title": "windows",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v88xdt/windows/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "1.2k hot"
+    },
+    {
+      "title": "soldTheLaptop",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v7z56t/soldthelaptop/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "2.2k hot"
+    },
+    {
+      "title": "They made the shower gel bottles slimmer and taller and now they don't fit my cupboard anymore",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v8cch5/they_made_the_shower_gel_bottles_slimmer_and/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "scoreLabel": "hot listing, exact score hidden in old.reddit DOM"
+    },
+    {
+      "title": "Save of the century",
+      "url": "https://old.reddit.com/r/memes/comments/1v87md7/save_of_the_century/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "10.4k hot"
+    },
+    {
+      "title": "Constantinople sounds way cooler tbh",
+      "url": "https://old.reddit.com/r/memes/comments/1v8bkoi/constantinople_sounds_way_cooler_tbh/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "944 hot"
+    },
+    {
+      "title": "entityReleased",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v86zit/entityreleased/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "1.8k hot"
+    },
+    {
+      "title": "Getting disconnected in a SINGLE PLAYER GAME before almost beating the boss",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v8a2ga/getting_disconnected_in_a_single_player_game/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "5.8k hot"
+    }
+  ]
+}
