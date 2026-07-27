@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-27T10:13:02.442605+00:00",
+  "generatedAt": "2026-07-27T10:16:43.417584+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -258,6 +258,17 @@
       "date": "2026-07-27"
     },
     {
+      "id": "research/reddit-radar/runs/2026-07-27-1209-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Daily Research Report: Reddit Radar",
+      "path": "research/reddit-radar/runs/2026-07-27-1209-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-07-27-1209-reddit-radar.md",
+      "sizeBytes": 10198,
+      "date": "2026-07-27",
+      "time": "12:09"
+    },
+    {
       "id": "research/reddit-radar/runs/2026-07-27-0607-reddit-radar.md",
       "type": "run",
       "topic": "reddit-radar",
@@ -279,6 +290,17 @@
       "date": "2026-07-27",
       "time": "06:07",
       "itemCount": 4
+    },
+    {
+      "id": "research/reddit-radar/pdfs/2026-07-27-1209-reddit-radar.pdf",
+      "type": "pdf",
+      "topic": "reddit-radar",
+      "title": "2026-07-27-1209-reddit-radar.pdf",
+      "path": "research/reddit-radar/pdfs/2026-07-27-1209-reddit-radar.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/pdfs/2026-07-27-1209-reddit-radar.pdf",
+      "sizeBytes": 82421,
+      "date": "2026-07-27",
+      "time": "12:09"
     },
     {
       "id": "research/reddit-radar/pdfs/2026-07-27-0607-reddit-radar.pdf",
@@ -17544,7 +17566,7 @@
       "title": "Topic Index: reddit-radar",
       "path": "research/reddit-radar/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/index.md",
-      "sizeBytes": 2320
+      "sizeBytes": 2527
     },
     {
       "id": "research/reddit-radar/backlog.md",

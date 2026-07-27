@@ -6,6 +6,9 @@
   on public `old.reddit.com` listings and exact post pages.
 - Current active public bundle is now
   `research/reddit-radar/data/2026-07-27-0607-reddit-radar.json`.
+- Monday, July 27, 2026 12:09 CEST live Safari audit did not clear the
+  four-card threshold after filtering `2026-07-27-0607` and `2026-07-26-2208`,
+  so the active public bundle remains `2026-07-27-0607`.
 - Monday, July 27, 2026 06:07 CEST found only a thin four-card survivor set,
   but that still satisfied the topic contract and rotated the public bundle
   away from the stronger 2026-07-26-2208 winner.
