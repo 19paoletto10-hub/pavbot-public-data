@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-26
+Last updated: 2026-07-27
 
 ## Current Understanding
 
@@ -286,6 +286,16 @@ dwóch meczetów na Zachodnim Brzegu podczas przemocy osadniczej oraz nowa
 wymiana ataków rosyjsko-ukraińskich z zapowiedzią spotkania Zełenski-Trump.
 W kraju najważniejszy praktyczny sygnał to upał i susza hydrologiczna, a
 osobnym follow-upem politycznym staje się spór w PiS o kierunek partii.
+Po porannym runie 27 lipca ciężar przesunął się z samej pauzy USA-Iran na
+szerszą mapę spilloveru: Rumunia zestrzeliła trzeci podejrzany rosyjski dron w
+trzy dni, więc wschodnia flanka NATO wraca jako temat pierwszej kolejności.
+Ukraina ma równolegle ataki na miasta, zatonięcie Golden Leo oraz medialny
+sygnał o rozmowach z USA nad rozejmem powietrznym przed spotkaniem
+Zełenski-Trump. Nowym ryzykiem jest też Morze Kaspijskie: Iran oskarża Ukrainę
+o atak na komercyjną jednostkę, a Kijów mówi o uderzeniach w logistykę
+wojskową z udziałem Iranu. W Polsce poranny konkret to zapowiedź KPRM dotycząca
+mostu w Głuchołazach, a RCB utrzymuje suszę hydrologiczną po wygaśnięciu alertu
+upałowego.
 
 ## Stable Facts
 
@@ -515,6 +525,11 @@ konfliktowaniu Polaków i Ukraińców.
 
 ## Recent Reports
 
+- [2026-07-27](runs/2026-07-27.md)
+- [2026-07-26](runs/2026-07-26.md)
+- [2026-07-23-1933](runs/2026-07-23-1933.md)
+- [2026-07-23](runs/2026-07-23.md)
+- [2026-07-22-1939](runs/2026-07-22-1939.md)
 - [2026-07-22](runs/2026-07-22.md)
 - [2026-07-21](runs/2026-07-21.md)
 - [2026-07-20](runs/2026-07-20.md)
