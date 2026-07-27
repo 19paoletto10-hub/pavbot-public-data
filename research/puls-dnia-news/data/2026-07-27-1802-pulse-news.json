@@ -1,0 +1,469 @@
+{
+  "topic": "puls-dnia-news",
+  "schemaVersion": 1,
+  "runDate": "2026-07-27",
+  "runTime": "18:02",
+  "status": "Material update",
+  "headline": "18:02: Wrocław, fundusze i zagraniczne leady",
+  "summary": "Slot 18:02 przesuwa Puls Dnia z porannego miksu PiS i infrastruktury w stronę świeższych leadów o napaści we Wrocławiu, sporze o fundusze pozabudżetowe, szwedzkiej agencji wywiadu, europejskich pożarach, cenach ropy, Berlinie, Seattle oraz dwóch krajowych alertach pogodowych. CNN nadal zatrzymuje się na materiałach z 24 lipca.",
+  "checkedSources": [
+    {
+      "title": "TVN24 najnowsze",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN Connect the World",
+      "url": "https://transcripts.cnn.com/show/ctw"
+    },
+    {
+      "title": "RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "IMGW-PIB CMM Portal letni",
+      "url": "https://cmm.imgw.pl/?page_id=27337"
+    }
+  ],
+  "items": [
+    {
+      "id": "pl-wroclaw-atak-2026-07-27-1802",
+      "section": "Polska",
+      "title": "Pobili parę z Ukrainy i uciekli. Policja szuka sprawców",
+      "lead": "TVN24 opisuje atak na parę z Ukrainy we Wrocławiu i trwające poszukiwania sprawców.",
+      "whatHappened": "Materiał wskazuje na nocny atak na parę z Ukrainy we Wrocławiu. Policja nadal szuka osób, które miały uciec po napaści.",
+      "keyFacts": [
+        "Ofiarą była para z Ukrainy.",
+        "Sprawcy po ataku uciekli.",
+        "Policja prowadzi poszukiwania."
+      ],
+      "reactions": [
+        "Śledczy mogą szybko szukać nagrań i świadków.",
+        "Sprawa może wywołać reakcję lokalnych władz i organizacji wspierających cudzoziemców."
+      ],
+      "whyItMatters": "To świeży wrocławski incydent przemocy o potencjalnie szerokim odbiorze społecznym.",
+      "context": "W poprzednich slotach dominowały inne typy krajowych leadów, więc ten wątek wchodzi do feedu jako nowy sygnał bezpieczeństwa publicznego.",
+      "watchNext": [
+        "Czy policja poda identyfikację lub zatrzymanie sprawców.",
+        "Czy pojawi się informacja o stanie poszkodowanych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pobili parę z Ukrainy i uciekli. Policja szuka sprawców",
+          "url": "https://tvn24.pl/wroclaw/wroclaw-pobili-pare-i-uciekli-policja-szuka-sprawcow-st9160422?source=rss"
+        }
+      ],
+      "tags": [
+        "Wrocław",
+        "bezpieczeństwo",
+        "policja",
+        "Polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pol-fundusze-pozabudzetowe-2026-07-27-1802",
+      "section": "Polityka",
+      "title": "Spór o fundusze pozabudżetowe",
+      "lead": "Konkret24 opisuje polityczny spór o to, czy fundusze pozabudżetowe są liczone spójnie.",
+      "whatHappened": "Materiał zestawia wzajemne zarzuty wokół funduszy pozabudżetowych i pokazuje, że spór nadal żyje w debacie publicznej.",
+      "keyFacts": [
+        "Temat dotyczy sposobu liczenia funduszy pozabudżetowych.",
+        "W sporze pojawiają się przeciwstawne tezy o zmianach i ich braku.",
+        "Artykuł ma charakter fakt-checkowy."
+      ],
+      "reactions": [
+        "Strony sporu mogą próbować doprecyzować swoje wyliczenia.",
+        "Temat może wrócić w kolejnych wypowiedziach politycznych."
+      ],
+      "whyItMatters": "To bieżący spór o finanse publiczne i wiarygodność politycznych narracji.",
+      "context": "Tego typu materiały zwykle karmią krótkie cykle debat i szybko wracają w komentarzach politycznych.",
+      "watchNext": [
+        "Czy pojawi się formalna odpowiedź na fakt-check.",
+        "Czy spór przełoży się na kolejne publiczne wyliczenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Spór o fundusze pozabudżetowe. \"Nic nie zmieniliście\" czy \"wszystkie są liczone\"",
+          "url": "https://konkret24.tvn24.pl/polska/spor-o-fundusze-pozabudzetowe-nic-nie-zmieniliscie-czy-wszystkie-sa-liczone-st9160696?source=rss"
+        }
+      ],
+      "tags": [
+        "fundusze",
+        "finanse publiczne",
+        "polityka",
+        "fact-check"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-szwecja-agencja-wywiadu-2026-07-27-1802",
+      "section": "Świat",
+      "title": "Szwecja utworzy nową cywilną agencję wywiadu",
+      "lead": "TVN24 opisuje szwedzką odpowiedź na błędną ocenę rosyjskiego zagrożenia sprzed inwazji.",
+      "whatHappened": "Szwecja ma budować nową cywilną agencję wywiadu po tym, jak służby w 2022 roku nie doszacowały ryzyka rosyjskiego ataku na Ukrainę.",
+      "keyFacts": [
+        "Temat dotyczy reformy szwedzkiego wywiadu cywilnego.",
+        "Impulsem jest ocena służb sprzed rosyjskiej inwazji.",
+        "Materiał łączy bezpieczeństwo państwa z lekcjami z wojny w Ukrainie."
+      ],
+      "reactions": [
+        "Szwecja może teraz mocniej akcentować analizę zagrożeń hybrydowych.",
+        "Temat ma potencjał do dalszych komentarzy o gotowości państw NATO."
+      ],
+      "whyItMatters": "To sygnał, że europejskie państwa nadal przebudowują aparaty bezpieczeństwa po rosyjskiej inwazji.",
+      "context": "W tle jest szersza debata o jakości analiz wywiadowczych przed 2022 rokiem.",
+      "watchNext": [
+        "Czy rząd poda zakres mandatu nowej agencji.",
+        "Czy pojawi się harmonogram wdrożenia reformy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Utworzą nową agencję wywiadu. Przed inwazją Rosji na Ukrainę nie doszacowali zagrożenia",
+          "url": "https://tvn24.pl/swiat/szwecja-stworzy-nowa-agencje-wywiadu-w-2022-roku-sluzby-ocenily-ze-wladimir-putin-nie-zaatakuje-ukrainy-st9161299?source=rss"
+        }
+      ],
+      "tags": [
+        "Szwecja",
+        "wywiad",
+        "bezpieczeństwo",
+        "Europa"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-european-wildfires-2026-07-27-1802",
+      "section": "Świat",
+      "title": "Mapa europejskich pożarów i sposoby gaszenia ognia",
+      "lead": "BBC pokazuje, jak szeroko rozlały się pożary w Europie i jak są gaszone.",
+      "whatHappened": "Materiał BBC pokazuje rozległe pożary w Europie, w tym okolice Bordeaux i region Madrytu, oraz działania służb gaśniczych.",
+      "keyFacts": [
+        "Pożar w pobliżu Bordeaux objął ponad 420 km2 w mniej niż cztery dni.",
+        "Region Madrytu mierzy się z jednymi z najpoważniejszych pożarów w swojej historii.",
+        "BBC łączy skalę zdarzeń z mapami i metodami gaszenia."
+      ],
+      "reactions": [
+        "Władze lokalne mogą dalej rozszerzać strefy interwencji.",
+        "Temat prawdopodobnie utrzyma presję na transport i turystykę."
+      ],
+      "whyItMatters": "To jeden z głównych europejskich sygnałów pogodowo-środowiskowych dnia.",
+      "context": "W poprzednich slotach pojawiały się już pożary we Francji i Hiszpanii; teraz BBC dopowiada skalę i sposób reakcji służb.",
+      "watchNext": [
+        "Czy pojawią się kolejne ewakuacje lub zamknięcia dróg.",
+        "Czy ogień przesunie się na nowe obszary."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Devastating European wildfires in maps - and how they're being tackled",
+          "url": "https://www.bbc.co.uk/news/articles/cj638jx0l53o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "pożary",
+        "Europa",
+        "alerty",
+        "środowisko"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "econ-ropa-us-iran-2026-07-27-1802",
+      "section": "Gospodarka",
+      "title": "Ropa tanieje po pauzie w atakach USA i Iranu",
+      "lead": "BBC wiąże spadek cen ropy z chwilowym wyhamowaniem eskalacji na Bliskim Wschodzie.",
+      "whatHappened": "Rynek ropy reaguje na komunikat o pauzie w atakach USA i Iranu, a BBC opisuje spadek notowań jako efekt tej przerwy.",
+      "keyFacts": [
+        "BBC podaje, że ataki zostały wstrzymane, by dać rozmowom przestrzeń.",
+        "Cena ropy spada po serii wcześniejszych wzrostów.",
+        "Temat pozostaje zależny od dalszych ruchów dyplomatycznych i wojskowych."
+      ],
+      "reactions": [
+        "Rynek może szybko odwrócić kierunek po kolejnym komunikacie z regionu.",
+        "Przewoźnicy i odbiorcy energii będą pilnie obserwować kolejne notowania."
+      ],
+      "whyItMatters": "To bezpośredni kanał przełożenia geopolityki na koszty paliw i transportu.",
+      "context": "Wcześniejsze sloty też śledziły ten wątek, ale obecny materiał dodaje świeży sygnał o pauzie w eskalacji.",
+      "watchNext": [
+        "Czy pojawi się nowy komunikat z Waszyngtonu lub Teheranu.",
+        "Czy ropa utrzyma spadek po otwarciu kolejnych sesji."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Oil price dives as US and Iran pause attacks",
+          "url": "https://www.bbc.co.uk/news/articles/clyj834jn5lo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "ropa",
+        "USA",
+        "Iran",
+        "rynek"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-berlin-pride-attack-2026-07-27-1802",
+      "section": "Świat",
+      "title": "Pride w Berlinie po ataku: pytania wciąż pozostają",
+      "lead": "BBC opisuje nowe pytania wokół ataku na berliński Pride i przeszłości podejrzanego.",
+      "whatHappened": "BBC podaje, że po ataku na Berlin Pride nadal pozostają pytania o to, dlaczego podejrzany nie był wcześniej w więzieniu.",
+      "keyFacts": [
+        "BBC akcentuje pytania o wcześniejsze decyzje wymiaru sprawiedliwości.",
+        "Temat łączy przemoc, bezpieczeństwo imprez masowych i politykę karną.",
+        "Wątek ma już szerszy społeczny i polityczny rezonans."
+      ],
+      "reactions": [
+        "Berlin może zostać zmuszony do doprecyzowania działań policji i prokuratury.",
+        "Sprawa może wywołać debatę o nadzorze nad sprawcami przemocy."
+      ],
+      "whyItMatters": "To mocny europejski sygnał bezpieczeństwa publicznego z potencjałem do dalszych reakcji politycznych.",
+      "context": "Wcześniejszy slot już sygnalizował ten atak; teraz BBC dodaje szerszy kontekst i nowe pytania o przeszłość podejrzanego.",
+      "watchNext": [
+        "Czy policja poda nowe informacje o podejrzanym.",
+        "Czy pojawi się reakcja władz Berlina lub prokuratury."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Anger, shock and grief - questions remain in the wake of the Berlin Pride attack",
+          "url": "https://www.bbc.co.uk/news/articles/cy9wv74qje9o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Berlin",
+        "bezpieczeństwo",
+        "Pride",
+        "Europa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-seattle-shooting-2026-07-27-1802",
+      "section": "Świat",
+      "title": "Trzy ofiary strzelaniny przy Space Needle w Seattle",
+      "lead": "BBC podaje nowe szczegóły o strzelaninie na festiwalu jedzenia w Seattle.",
+      "whatHappened": "BBC informuje o trzech ofiarach śmiertelnych i kilku rannych po strzelaninie przy Space Needle. Jeden podejrzany jest w areszcie, drugi pozostaje na wolności.",
+      "keyFacts": [
+        "Strzelanina wydarzyła się przy festiwalu jedzenia.",
+        "Trzy osoby zginęły, a kilka zostało rannych.",
+        "Policja mówi o dwóch strzelających osobach."
+      ],
+      "reactions": [
+        "Władze Seattle mogą szybko doprecyzować motyw i stan poszkodowanych.",
+        "Sprawa może uruchomić dodatkowe pytania o bezpieczeństwo imprez masowych."
+      ],
+      "whyItMatters": "To świeży amerykański incydent bezpieczeństwa z wyraźnym bilansem ofiar.",
+      "context": "W poprzednim slocie było już o tym zdarzeniu, ale teraz BBC dopowiada status podejrzanych.",
+      "watchNext": [
+        "Czy policja zatrzyma drugiego sprawcę.",
+        "Czy pojawi się oficjalna aktualizacja o ofiarach i motywie."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Three dead and several injured in shooting at food festival near Seattle's Space Needle",
+          "url": "https://www.bbc.co.uk/news/articles/c78gjyx4q2yo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Seattle",
+        "strzelanina",
+        "bezpieczeństwo",
+        "USA"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-zelensky-burnham-2026-07-27-1802",
+      "section": "Świat",
+      "title": "Zełenski odwiedza Burnhama i wzmacnia sygnał wsparcia dla Ukrainy",
+      "lead": "BBC opisuje pierwszą wizytę zagraniczną nowego brytyjskiego premiera.",
+      "whatHappened": "Według BBC prezydent Ukrainy był pierwszym zagranicznym gościem nowego brytyjskiego premiera, a Burnham wykorzystał spotkanie do podkreślenia wsparcia dla Kijowa.",
+      "keyFacts": [
+        "Zełenski był pierwszym zagranicznym gościem nowego premiera.",
+        "Burnham mówi o czytelnym sygnale wsparcia dla Ukrainy.",
+        "Temat łączy politykę brytyjską z wojną w Ukrainie."
+      ],
+      "reactions": [
+        "Londyn może jeszcze mocniej akcentować swoją linię wobec Kijowa.",
+        "Temat może wejść do szerszej debaty o wsparciu Zachodu dla Ukrainy."
+      ],
+      "whyItMatters": "To ważny sygnał dyplomatyczny w jednym z kluczowych europejskich kanałów wsparcia Ukrainy.",
+      "context": "BBC osadza tę wizytę jako pierwszy międzynarodowy gest po zmianie brytyjskiego premiera.",
+      "watchNext": [
+        "Czy pojawi się wspólne oświadczenie obu stron.",
+        "Czy Londyn ogłosi nowe elementy wsparcia dla Ukrainy."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Zelensky visit sends clear message of support for Ukraine, Burnham says",
+          "url": "https://www.bbc.co.uk/news/articles/cy8me5vyjg2o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Wielka Brytania",
+        "dyplomacja",
+        "polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "tech-jodrell-bank-cuts-2026-07-27-1802",
+      "section": "Technologia",
+      "title": "Jodrell Bank pod presją cięć naukowych",
+      "lead": "BBC ostrzega, że ikonowy radioteleskop może ucierpieć w cięciach budżetowych.",
+      "whatHappened": "BBC podaje, że Jodrell Bank może zostać objęty cięciami w ramach szerszych ograniczeń dla nauki, a astronomowie ostrzegają przed stratą dla brytyjskiej nauki.",
+      "keyFacts": [
+        "Temat dotyczy ograniczeń finansowania nauki w Wielkiej Brytanii.",
+        "Jodrell Bank to jedna z najbardziej rozpoznawalnych ikon brytyjskiej astronomii.",
+        "Krytycy twierdzą, że cięcia uderzą w szkolenie kolejnego pokolenia."
+      ],
+      "reactions": [
+        "Środowisko naukowe będzie naciskać na zachowanie finansowania.",
+        "Rząd może być zmuszony doprecyzować skalę oszczędności."
+      ],
+      "whyItMatters": "To sygnał, że cięcia publiczne mogą zacząć uderzać w prestiżową infrastrukturę naukową.",
+      "context": "Wątek jest bardziej naukowo-techniczny niż polityczny, ale nadal ważny dla publicznej debaty o inwestycjach.",
+      "watchNext": [
+        "Czy pojawi się plan osłonowy dla obserwatorium.",
+        "Czy rząd zareaguje na ostrzeżenia astronomów."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: UK's iconic Jodrell Bank telescope faces axe in science cuts",
+          "url": "https://www.bbc.co.uk/news/articles/c5y6r9rdxygo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "nauka",
+        "technologia",
+        "Wielka Brytania",
+        "budżet"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "world-chile-victor-jara-2026-07-27-1802",
+      "section": "Świat",
+      "title": "Chile ujmuje uciekiniera skazanego za zabójstwo Víctora Jary",
+      "lead": "BBC opisuje zatrzymanie jednego z ludzi skazanych za mord po zamachu stanu.",
+      "whatHappened": "BBC informuje o ujęciu Nelsona Haase, skazanego za udział w porwaniu i zabójstwie folkkowego artysty Víctora Jary po zamachu stanu w 1973 roku.",
+      "keyFacts": [
+        "Chodzi o sprawę z czasów dyktatury Pinocheta.",
+        "Nelson Haase został ujęty po latach w ukryciu.",
+        "Wątek ma wymiar historyczny i prawny."
+      ],
+      "reactions": [
+        "Sprawa może wywołać kolejne komentarze o odpowiedzialności za zbrodnie dyktatury.",
+        "W Chile temat zwykle wraca przy okazji historycznych rozliczeń."
+      ],
+      "whyItMatters": "To materialny historyczny news o długim ogonie prawnym i symbolicznym.",
+      "context": "W tej chwili to bardziej twarde domknięcie starej sprawy niż nowy konflikt, ale nadal ma znaczenie dla światowego feedu.",
+      "watchNext": [
+        "Czy chilijskie władze podadzą dalsze szczegóły zatrzymania.",
+        "Czy pojawią się reakcje rodzin ofiar i organizacji praw człowieka."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Chile captures fugitive convicted of singer Victor Jara's murder under Pinochet",
+          "url": "https://www.bbc.co.uk/news/articles/c3w0xwj8vzyo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Chile",
+        "historia",
+        "prawa człowieka",
+        "świat"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "alert-burze-2026-07-27-1802",
+      "section": "Alerty",
+      "title": "Burze, silny wiatr i intensywne opady nad Polską",
+      "lead": "RCB i TVN24 utrzymują ostrzeżenie przed burzami i ryzykiem podtopień.",
+      "whatHappened": "RCB utrzymuje dzisiejszy alert przed burzami, silnym wiatrem i intensywnymi opadami, a TVN24 pokazuje radar burzowy dla Polski.",
+      "keyFacts": [
+        "Alert obowiązuje 27.07.",
+        "W komunikacie pojawia się ryzyko podtopień i przerw w dostawie prądu.",
+        "TVN24 wskazuje miejsca, gdzie burze i opady są obecnie najbardziej aktywne."
+      ],
+      "reactions": [
+        "Lokalne służby mogą przejść w tryb zwiększonej gotowości.",
+        "Mieszkańcy powinni zabezpieczyć rzeczy narażone na wiatr i deszcz."
+      ],
+      "whyItMatters": "To bezpośredni alert operacyjny dla transportu, energii i bezpieczeństwa mieszkańców.",
+      "context": "To kontynuacja burzowego wątku z wcześniejszych slotów, ale nadal z realnym ryzykiem szybkiej eskalacji.",
+      "watchNext": [
+        "Czy pojawią się zgłoszenia o podtopieniach lub wyłączeniach prądu.",
+        "Czy RCB lub IMGW rozszerzą obszar ostrzeżeń."
+      ],
+      "sources": [
+        {
+          "title": "RCB: Alert RCB - burze (27.07)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-2707"
+        },
+        {
+          "title": "RCB komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        },
+        {
+          "title": "TVN24: Gdzie jest burza? Tu błyska się i mocniej pada",
+          "url": "https://tvn24.pl/tvnmeteo/pogoda/gdzie-jest-burza-burze-w-polsce-poniedzialek-27-07-radar-opadow-i-mapa-burz-na-zywo-st9160586?source=rss"
+        }
+      ],
+      "tags": [
+        "burze",
+        "RCB",
+        "IMGW",
+        "pogoda"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "alert-upaly-2026-07-27-1802",
+      "section": "Alerty",
+      "title": "Kolejna fala upałów na horyzoncie",
+      "lead": "TVN24 ostrzega przed nowym uderzeniem gorąca w najbliższych dniach.",
+      "whatHappened": "TVN24 opisuje powrót wysokich temperatur nad Polskę po okresie burzowej aktywności.",
+      "keyFacts": [
+        "W kolejnych dniach aura ma się ocieplić.",
+        "Materiał mówi o kolejnej fali skwaru.",
+        "Temat jest istotny dla zdrowia, energii i planowania dnia."
+      ],
+      "reactions": [
+        "Możliwe są dalsze ostrzeżenia pogodowe lub zdrowotne.",
+        "Samorządy i służby mogą przygotowywać komunikaty dla mieszkańców."
+      ],
+      "whyItMatters": "To drugi ważny krajowy sygnał pogodowy obok burz, z wpływem na codzienną logistykę i bezpieczeństwo.",
+      "context": "Wątek pokazuje, że po burzach może wrócić jeszcze silniejszy blok gorąca.",
+      "watchNext": [
+        "Czy IMGW wyda oficjalne ostrzeżenia upałowe.",
+        "Czy w kolejnych godzinach pojawią się lokalne skutki pogodowe."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Upały w Polsce. Kolejna fala skwaru na horyzoncie. Jak gorąco będzie?",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/pogoda-na-5-dni-upaly-w-polsce-kolejna-fala-skwaru-na-horyzoncie-st9161088?source=rss"
+        },
+        {
+          "title": "IMGW-PIB CMM Portal letni",
+          "url": "https://cmm.imgw.pl/?page_id=27337"
+        }
+      ],
+      "tags": [
+        "upały",
+        "pogoda",
+        "IMGW",
+        "alerty"
+      ],
+      "priority": "high"
+    }
+  ]
+}

@@ -2,6 +2,14 @@
 
 ## Open
 
+## 2026-07-27 18:02
+
+- Watch whether police in Wrocław identify or detain the attackers after the assault on the Ukrainian couple.
+- Watch whether the extra-budgetary funds dispute gets a formal political response or correction.
+- Watch whether IMGW or RCB escalate the storm and heat warnings into outages, flooding or transport blocks.
+- Watch whether Berlin Pride and Seattle officials publish a fuller casualty or suspect update.
+- Watch whether Sweden publishes the mandate and timetable for the new civil intelligence agency.
+
 ## 2026-07-27 12:02
 
 - Watch whether the Ziobro extradition request gets an official confirmation or denial.
