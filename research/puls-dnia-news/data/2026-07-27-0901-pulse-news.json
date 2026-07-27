@@ -1,0 +1,501 @@
+{
+  "topic": "puls-dnia-news",
+  "schemaVersion": 1,
+  "runDate": "2026-07-27",
+  "runTime": "09:01",
+  "status": "Material update",
+  "headline": "09:01: krajowe spięcia, burze i europejskie alerty",
+  "summary": "Poranny slot przesuwa Puls Dnia w stronę krajowych tematów operacyjnych: paliw, PiS, Warszawy i burzowego alertu IMGW. Za granicą najmocniej ważą Berlin, hiszpańskie pożary, kubański blackout, brytyjski NHS, Indie i Zachodni Brzeg, a CNN nadal nie wychodzi poza 24 lipca.",
+  "checkedSources": [
+    {
+      "title": "TVN24 najnowsze",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Świat",
+      "url": "https://tvn24.pl/swiat"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 TVN Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN Connect the World",
+      "url": "https://transcripts.cnn.com/show/ctw"
+    },
+    {
+      "title": "Berlin.de news",
+      "url": "https://www.berlin.de/en/news/10533742-5559700-van-drives-into-crowd-CSD-canceled.en.html"
+    },
+    {
+      "title": "IMGW-PIB CMM Portal letni",
+      "url": "https://cmm.imgw.pl/?page_id=27337"
+    },
+    {
+      "title": "IMGW-PIB portal letni",
+      "url": "https://modele.imgw.pl/?page_id=27337"
+    },
+    {
+      "title": "RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "RCB mapa strony",
+      "url": "https://www.gov.pl/web/rcb/mapa-strony?show-bip=true"
+    },
+    {
+      "title": "RCB raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    }
+  ],
+  "items": [
+    {
+      "id": "pl-paliwa-2026-07-27-0901",
+      "section": "Gospodarka",
+      "title": "Tomczyk potwierdza realizację programu tańszych paliw",
+      "lead": "Cezary Tomczyk zapowiada, że program \"Ceny Paliwa Niżej\" ma być realizowany.",
+      "whatHappened": "TVN24 cytuje Tomczyka, który mówi, że weto pokazuje nowe podejście, a sam program ma zostać wdrożony.",
+      "keyFacts": [
+        "Program ma zostać zrealizowany mimo politycznego sporu.",
+        "Wypowiedź padła w porannym polityczno-ekonomicznym wejściu TVN24.",
+        "Temat łączy ceny paliw z bieżącą walką o narrację rządu."
+      ],
+      "reactions": [
+        "To sygnał, że obóz rządowy chce utrzymać temat kosztów życia.",
+        "Opozycja może to wykorzystać jako kolejną obietnicę bez pełnych szczegółów."
+      ],
+      "whyItMatters": "Paliwa szybko przekładają się na koszty transportu i nastroje konsumentów.",
+      "context": "Latem każdy sygnał o cenach paliw mocno wpływa na ruch drogowy i debatę o inflacji.",
+      "watchNext": [
+        "Czy rząd poda harmonogram i finansowanie programu.",
+        "Czy pojawi się reakcja prezydenta lub opozycji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Tomczyk: program Ceny Paliwa Niżej będzie realizowany",
+          "url": "https://tvn24.pl/biznes/z-kraju/cezary-tomczyk-program-ceny-paliwa-nizej-bedzie-realizowany-st9160173?source=rss"
+        }
+      ],
+      "tags": [
+        "paliwa",
+        "gospodarka",
+        "rząd",
+        "ceny"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-alerty-imgw-2026-07-27-0901",
+      "section": "Świat",
+      "title": "IMGW ostrzega przed burzowym poniedziałkiem",
+      "lead": "Na 27 lipca obowiązują ostrzeżenia IMGW drugiego stopnia.",
+      "whatHappened": "TVN24 pisze o burzowym poniedziałku z ostrzeżeniami drugiego stopnia, a oficjalne strony IMGW i RCB pokazują aktywne prognozy burzowe i alerty na 27-28 lipca.",
+      "keyFacts": [
+        "To najwyraźniejszy krajowy alert poranny.",
+        "Ryzyko obejmuje silny deszcz, wiatr i lokalne zakłócenia.",
+        "RCB publikuje też komunikaty o intensywnych opadach i burzach na przełomie 27-28 lipca."
+      ],
+      "reactions": [
+        "Możliwe są opóźnienia kolei, komunikacji miejskiej i lokalne podtopienia.",
+        "Służby i samorządy mogą w ciągu dnia podnieść gotowość."
+      ],
+      "whyItMatters": "To najważniejszy operacyjny sygnał dla ruchu, infrastruktury i planów dnia.",
+      "context": "Po serii upałów prognozy konwekcyjne IMGW sygnalizują bardziej niestabilny dzień.",
+      "watchNext": [
+        "Czy IMGW podniesie stopień albo rozszerzy obszar ostrzeżeń.",
+        "Czy pojawią się raporty o zalaniach, wiatrołomach lub przerwach w dostawach prądu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Burzowy poniedziałek. Są ostrzeżenia IMGW drugiego stopnia",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/burze-w-polsce-ostrzezenia-imgw-w-poniedzialek-27-07-tutaj-bedzie-groznie-st9158847?source=rss"
+        },
+        {
+          "title": "IMGW-PIB CMM Portal letni",
+          "url": "https://cmm.imgw.pl/?page_id=27337"
+        },
+        {
+          "title": "RCB mapa strony",
+          "url": "https://www.gov.pl/web/rcb/mapa-strony?show-bip=true"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "RCB",
+        "burze",
+        "alerty"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-warszawa-stawki-2026-07-27-0901",
+      "section": "Polska",
+      "title": "Awaryjny remont po płycie z torowiska na Stawkach",
+      "lead": "Na ulicy Stawki odpadła betonowa płyta, więc tramwaje wstrzymano awaryjnie.",
+      "whatHappened": "Tramwajarze rozpoczęli naprawę torowiska w ulicy Stawki po kolejnej awarii w tym miejscu.",
+      "keyFacts": [
+        "Ruch został zatrzymany awaryjnie.",
+        "Problem dotyczy torowiska w centrum Warszawy.",
+        "To kolejny podobny incydent na tym odcinku."
+      ],
+      "reactions": [
+        "Pasażerowie muszą liczyć się z objazdami i opóźnieniami.",
+        "Incydent może zwiększyć presję na wyjaśnienie stanu infrastruktury."
+      ],
+      "whyItMatters": "To bezpośredni problem komunikacyjny w porannym szczycie.",
+      "context": "Warszawa regularnie wraca do tematu awarii tramwajowych i stanu torowisk w centrum.",
+      "watchNext": [
+        "Czy pojawi się termin pełnego przywrócenia ruchu.",
+        "Czy ZTM lub Tramwaje Warszawskie poda przyczynę awarii."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Z torowiska odpadła betonowa płyta. Awaryjne wstrzymanie ruchu",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-z-torowiska-odpadla-betonowa-plyta-awaryjne-wstrzymanie-ruchu-st9160075?source=rss"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "tramwaje",
+        "transport",
+        "awaria"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-nawrocki-pis-2026-07-27-0901",
+      "section": "Polityka",
+      "title": "Nawrocki wkracza do gry w sporze PiS",
+      "lead": "TVN24 sugeruje, że sierpniowe spotkanie Karola Nawrockiego w Juracie może wymykać się Jarosławowi Kaczyńskiemu spod kontroli.",
+      "whatHappened": "Artykuł opisuje planowane spotkanie w Juracie jako nowy element w partyjnym sporze wokół PiS.",
+      "keyFacts": [
+        "Wątek dotyczy relacji między prezesem PiS a prezydentem Nawrockim.",
+        "TVN24 widzi w tym kolejny sygnał napięcia wewnątrz obozu.",
+        "Temat jest powiązany z wcześniejszymi konfliktami Kurski-Morawiecki."
+      ],
+      "reactions": [
+        "Obóz PiS może próbować zminimalizować znaczenie spotkania.",
+        "Każda publiczna wypowiedź Nawrockiego może teraz być odczytywana politycznie."
+      ],
+      "whyItMatters": "To ważny wskaźnik, kto realnie ustawia narrację w obozie prawicy.",
+      "context": "Partia od kilku dni żyje kolejnymi odsłonami konfliktu i testem lojalności.",
+      "watchNext": [
+        "Czy PiS wyda formalny komentarz.",
+        "Czy spotkanie w Juracie zostanie ograniczone lub doprecyzowane."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Karol Nawrocki wkracza do gry",
+          "url": "https://tvn24.pl/polska/karol-nawrocki-wkracza-do-gry-wymyka-sie-to-prezesowi-spod-kontroli-st9160037?source=rss"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Nawrocki",
+        "Kaczyński",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-pis-rozlam-2026-07-27-0901",
+      "section": "Polityka",
+      "title": "Wiceszef MON potwierdza rozłam w PiS",
+      "lead": "Wiceszef MON mówi, że wcześniejsze plotki o rozłamie okazały się prawdą.",
+      "whatHappened": "TVN24 opisuje wypowiedź, która wzmacnia obraz realnego pęknięcia w PiS i nie jest już tylko korytarzową spekulacją.",
+      "keyFacts": [
+        "To kolejny publiczny sygnał wewnętrznego konfliktu.",
+        "Wypowiedź pochodzi z obozu rządowego, więc ma większy ciężar niż medialna plotka.",
+        "Napięcie może szybko przejść w dyscyplinę partyjną albo kolejne przecieki."
+      ],
+      "reactions": [
+        "PiS może zostać zmuszony do szybkiej odpowiedzi.",
+        "Rynek komentatorski dostaje kolejny materiał do rozpisywania frakcji."
+      ],
+      "whyItMatters": "Spór w PiS wpływa na układ sił na prawicy i na stabilność koalicji narracyjnej.",
+      "context": "To kontynuacja długiego pasa konfliktów wokół Kaczyńskiego, Morawieckiego i Kurskiego.",
+      "watchNext": [
+        "Czy pojawi się formalne stanowisko PiS.",
+        "Czy dojdzie do nowych nazwisk lub decyzji personalnych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Rozłam w PiS",
+          "url": "https://tvn24.pl/polska/rozlam-w-pis-wiceszef-mon-wszystko-o-czym-plotkowalismy-wczesniej-okazalo-sie-prawda-st9160092?source=rss"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "MON",
+        "rozłam",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "pl-a1-rower-2026-07-27-0901",
+      "section": "Bezpieczeństwo",
+      "title": "Rowerzysta wjechał na autostradę A1",
+      "lead": "Policja zatrzymała 39-latka jadącego rowerem autostradą A1 pod Piotrkowem Trybunalskim.",
+      "whatHappened": "TVN24 podaje, że mężczyzna został zatrzymany, a policja tłumaczy zdarzenie nieznajomością topografii.",
+      "keyFacts": [
+        "To nietypowe i niebezpieczne zdarzenie na drodze szybkiego ruchu.",
+        "Sprawa dotyczy obcokrajowca.",
+        "Policja musiała zareagować natychmiast ze względu na bezpieczeństwo."
+      ],
+      "reactions": [
+        "Incydent może skończyć się mandatem lub innym postępowaniem.",
+        "Ruch drogowy mógł być chwilowo zagrożony."
+      ],
+      "whyItMatters": "To prosty, ale istotny sygnał bezpieczeństwa drogowego.",
+      "context": "Autostrady nie są miejscem na błędy nawigacyjne, bo ryzyko jest natychmiastowe.",
+      "watchNext": [
+        "Czy policja poda sankcje.",
+        "Czy pojawi się dokładniejszy opis manewru i odcinka A1."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Rowerem po autostradzie A1",
+          "url": "https://tvn24.pl/lodz/piotrkow-trybunalski-rowerem-po-autostradzie-a1-nieznajomosc-topografii-st9160181?source=rss"
+        }
+      ],
+      "tags": [
+        "A1",
+        "policja",
+        "bezpieczeństwo",
+        "drogi"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-hiszpania-pozar-2026-07-27-0901",
+      "section": "Świat",
+      "title": "Hiszpańskie pożary zlewają się w jeden front",
+      "lead": "TVN24 podaje, że ogień w prowincji Ávila połączył się w jeden wielki front.",
+      "whatHappened": "Pożary w Hiszpanii przybrały skalę utrudniającą akcję gaśniczą, a front ogniowy stał się większym problemem operacyjnym.",
+      "keyFacts": [
+        "To świeży europejski wątek alertowy.",
+        "Pożary obejmują kilka ognisk i trudniejszy teren.",
+        "Służby gaśnicze muszą działać szerzej niż przy pojedynczym pożarze."
+      ],
+      "reactions": [
+        "Możliwe są ewakuacje i zamknięcia dróg.",
+        "Wysoka temperatura może pogorszyć sytuację w kolejnych godzinach."
+      ],
+      "whyItMatters": "To jeden z najważniejszych zagranicznych risk headlines slotu.",
+      "context": "Europa nadal pracuje w cieniu upałów i pożarów lasów.",
+      "watchNext": [
+        "Czy lokalne władze zarządzą nowe ewakuacje.",
+        "Czy służby potwierdzą dodatkowe szkody lub ofiary."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pożary w Hiszpanii połączyły się w jeden wielki front",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/pozary-w-hiszpanii-polaczyly-sie-w-jeden-wielki-front-st9160094?source=rss"
+        }
+      ],
+      "tags": [
+        "Hiszpania",
+        "pożary",
+        "alerty",
+        "Europa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-kuba-blackout-2026-07-27-0901",
+      "section": "Alerty",
+      "title": "Kuba znów wpada w blackout",
+      "lead": "Kolejna awaria zasilania wywołała protesty i potwierdza głęboki kryzys energetyczny.",
+      "whatHappened": "TVN24 opisuje już szósty blackout w tym roku, a brak prądu znów uruchomił protesty społeczne.",
+      "keyFacts": [
+        "To powtarzalny problem, nie jednorazowy incydent.",
+        "Blackout ma też wymiar polityczny i społeczny.",
+        "Sytuacja obciąża infrastrukturę i wizerunek władz."
+      ],
+      "reactions": [
+        "Rosną napięcia społeczne.",
+        "Każdy kolejny blackout zwiększa presję na szybkie przywrócenie zasilania."
+      ],
+      "whyItMatters": "Kubańska energetyka znowu wchodzi w strefę kryzysu społecznego.",
+      "context": "Powtarzalne wyłączenia prądu często uruchamiają więcej niż tylko lokalne problemy techniczne.",
+      "watchNext": [
+        "Czy rząd poda harmonogram napraw.",
+        "Czy protesty rozszerzą się na kolejne miasta."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Kolejny blackout w kraju. Brak prądu wywołał protesty",
+          "url": "https://tvn24.pl/biznes/ze-swiata/kuba-to-juz-szosty-blackout-w-tym-roku-brak-pradu-wywolal-protesty-st9160085?source=rss"
+        }
+      ],
+      "tags": [
+        "Kuba",
+        "blackout",
+        "energia",
+        "protesty"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "world-berlin-2026-07-27-0901",
+      "section": "Bezpieczeństwo",
+      "title": "Berliński podejrzany zginął podczas operacji policji",
+      "lead": "BBC i Berlin.de potwierdzają śmierć Abdul Ballouta po ataku przy CSD.",
+      "whatHappened": "BBC podało, że mężczyzna został postrzelony i zginął po rzuceniu się na funkcjonariuszy z nożem, a Berlin.de potwierdza, że podejrzany nie żyje po operacji policji.",
+      "keyFacts": [
+        "To zamknięcie głośnego wątku bezpieczeństwa w Berlinie.",
+        "Oficjalna strona miasta potwierdza śmierć podejrzanego.",
+        "Wcześniejszy atak dotyczył fringes of CSD / Christopher Street Day."
+      ],
+      "reactions": [
+        "Sprawa przechodzi z fazy pościgu do fazy analizy motywu.",
+        "Lokalne służby mogą wydać dodatkowe szczegóły operacyjne."
+      ],
+      "whyItMatters": "To duży europejski sygnał bezpieczeństwa i jednocześnie domknięcie aktywnego manhuntu.",
+      "context": "Berlin pozostaje w centrum uwagi po ataku rammingowym i późniejszej operacji policji.",
+      "watchNext": [
+        "Czy policja ujawni motyw i tło sprawcy.",
+        "Czy pojawią się szczegóły dotyczące wcześniejszego ataku na CSD."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Berlin Pride attack suspect shot and killed during police operation",
+          "url": "https://www.bbc.co.uk/news/articles/c62eg899l99o?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Berlin.de: Attack on the CSD: Suspected perpetrator dead",
+          "url": "https://www.berlin.de/en/news/10533742-5559700-van-drives-into-crowd-CSD-canceled.en.html"
+        }
+      ],
+      "tags": [
+        "Berlin",
+        "bezpieczeństwo",
+        "CSD",
+        "policja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-nhs-2026-07-27-0901",
+      "section": "Polityka",
+      "title": "Brytyjski premier ostrzega przed krachem NHS",
+      "lead": "BBC opisuje, że bez reformy opieki społecznej NHS może się załamać.",
+      "whatHappened": "Premier mówi BBC, że nie chce opuszczać urzędu bez \"substantial change\" w systemie opieki społecznej.",
+      "keyFacts": [
+        "To bardzo mocny sygnał z brytyjskiej polityki wewnętrznej.",
+        "Problem łączy zdrowie publiczne, opiekę społeczną i budżet.",
+        "BBC traktuje to jako jeden z głównych tematów dnia."
+      ],
+      "reactions": [
+        "Opozycja i środowiska zdrowotne mogą domagać się konkretnego planu.",
+        "Kwestia szybko przełoży się na debatę o podatkach i wydatkach."
+      ],
+      "whyItMatters": "NHS ma dużą wagę polityczną i społeczną, a reforma będzie kosztowna.",
+      "context": "To kolejny test dla nowego brytyjskiego rządu i jego wiarygodności.",
+      "watchNext": [
+        "Czy pojawi się szczegółowy projekt reformy.",
+        "Czy pojawi się opór ze strony części Partii Pracy lub związków."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: NHS 'will collapse' without social care reform, PM tells BBC",
+          "url": "https://www.bbc.co.uk/news/articles/cn0n5xpzlz2o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "NHS",
+        "UK",
+        "zdrowie",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-indie-protesty-2026-07-27-0901",
+      "section": "Polityka",
+      "title": "Indyjskie protesty Gen Z wymuszają dymisję ministra",
+      "lead": "BBC opisuje, jak młodzieżowy protest doprowadził do odejścia ministra i nowego pytania o dalszy ciąg.",
+      "whatHappened": "Po zakończeniu protestu przeciwko korupcji i złej polityce edukacyjnej minister odszedł, a BBC pyta, co dalej.",
+      "keyFacts": [
+        "To jeden z najbardziej widocznych młodzieżowych ruchów ostatnich tygodni.",
+        "Dymisja ministra pokazuje realny efekt presji ulicy.",
+        "Temat nadal może eskalować politycznie."
+      ],
+      "reactions": [
+        "Rząd może próbować zaproponować ustępstwa.",
+        "Aktywiści mogą uznać to za zachętę do dalszej mobilizacji."
+      ],
+      "whyItMatters": "To sygnał, że młoda mobilizacja potrafi wymuszać zmiany w Azji Południowej.",
+      "context": "BBC opisuje to jako ważny test dla rządu Narendry Modiego.",
+      "watchNext": [
+        "Czy pojawią się kolejne dymisje lub ustępstwa.",
+        "Czy protesty przeniosą się na inne miasta lub uczelnie."
+      ],
+      "sources": [
+        {
+          "title": "BBC World: India's 'cockroach' protest called off after education minister quits",
+          "url": "https://www.bbc.co.uk/news/articles/cdx828gj5xko?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Indie",
+        "protesty",
+        "młodzież",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "world-west-bank-2026-07-27-0901",
+      "section": "Bezpieczeństwo",
+      "title": "Osadnicy podpalają meczety, auta i pola na Zachodnim Brzegu",
+      "lead": "BBC opisuje nową falę ataków po śmiertelnym starciu dwóch dni wcześniej.",
+      "whatHappened": "Według BBC osadnicy podpalili meczety, samochody i pola uprawne, a wcześniej w starciu zginęło czterech Palestyńczyków i dwóch Izraelczyków.",
+      "keyFacts": [
+        "To eskalacja przemocy w już napiętym regionie.",
+        "Ataki mają wymiar religijny, majątkowy i polityczny.",
+        "Wątek może szybko wejść na poziom oficjalnych reakcji międzynarodowych."
+      ],
+      "reactions": [
+        "Pojawi się presja na izraelskie służby i rząd.",
+        "Palestyńska strona może domagać się ochrony i śledztwa."
+      ],
+      "whyItMatters": "To jeden z najbardziej ryzykownych bezpieczeństwowych wątków zewnętrznych tego slotu.",
+      "context": "West Bank od dawna jest miejscem cyklicznych eskalacji między osadnikami i Palestyńczykami.",
+      "watchNext": [
+        "Czy pojawi się oficjalna reakcja izraelska.",
+        "Czy liczba zniszczeń lub ofiar wzrośnie."
+      ],
+      "sources": [
+        {
+          "title": "BBC World: Israeli settlers set fire to mosques, cars and farm land in West Bank, Palestinians say",
+          "url": "https://www.bbc.co.uk/news/articles/cjrv77gl4deo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Zachodni Brzeg",
+        "Izrael",
+        "Palestyna",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    }
+  ]
+}

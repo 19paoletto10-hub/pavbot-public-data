@@ -1,3 +1,5 @@
+The 2026-07-27 09:01 slot przesuwa Puls Dnia w bardziej operacyjny miks krajowy: paliwa, rozłam w PiS, awarię tramwajową w Warszawie i burzowe ostrzeżenia IMGW. Za granicą rosną Berlin, hiszpańskie pożary, kubański blackout, brytyjski NHS, indyjskie protesty i Zachodni Brzeg, a CNN nadal nie wychodzi poza 24 lipca.
+
 The 2026-07-26 18:00 slot przesuwa Puls Dnia w stronę ostrzejszego miksu krajowego i europejskiego: nowa eskalacja Kurski-Morawiecki, świeże zdarzenia drogowo-graniczne w Polsce, utrzymane alerty IMGW/RCB oraz dalsze europejskie i wojenne leady z Berlina, Zachodniego Brzegu, Francji, Hiszpanii i Kijowa. CNN nadal nie wychodzi poza 24 lipca, więc pozostaje tylko punktem odniesienia.
 
 # Puls Dnia News Index

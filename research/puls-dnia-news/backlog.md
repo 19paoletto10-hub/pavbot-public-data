@@ -2,6 +2,14 @@
 
 ## Open
 
+## 2026-07-27 09:01
+
+- Watch whether IMGW lub RCB podniosą ostrzeżenia albo potwierdzą szkody po burzach.
+- Watch whether PiS odpowie formalnie na komentarze o rozłamie i Nawrockim.
+- Watch whether tramwaje na Stawkach wrócą do ruchu bez kolejnej awarii infrastruktury.
+- Watch whether Berlin.de lub policja opublikują motyw i pełniejsze tło operacji.
+- Watch whether Hiszpania, Kuba, NHS, Indie lub Zachodni Brzeg dostaną kolejne oficjalne komunikaty.
+
 ## 2026-07-26 18:00
 
 - Watch whether PiS issues a formal reply after the Kurski-Morawiecki escalation.
