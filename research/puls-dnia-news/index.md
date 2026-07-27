@@ -1,3 +1,5 @@
+The 2026-07-27 15:01 slot przesuwa Puls Dnia w stronę burzowych alertów, dalszych ruchów w PiS, wątku infrastrukturalnego z Głuchołaz, technicznych testów autonomicznych ciężarówek i świeżych zagranicznych leadów z Chin, Francji, Wielkiej Brytanii i Seattle. CNN nadal zatrzymuje się na materiałach z 24 lipca.
+
 The 2026-07-27 12:02 slot przesuwa Puls Dnia z porannego miksu alertów w stronę mocniejszego pakietu prawno-politycznego, technicznego i bezpieczeństwa publicznego. Najmocniej wybijają się Ziobro, Zondacrypto, Nvidia/OpenAI, lokalne incydenty we Wrocławiu i na S2 oraz świeże światowe sygnały z Francji, Iranu, Seattle i Zachodniego Brzegu. CNN nadal zatrzymuje się na 24 lipca.
 
 The 2026-07-27 09:01 slot przesuwa Puls Dnia w bardziej operacyjny miks krajowy: paliwa, rozłam w PiS, awarię tramwajową w Warszawie i burzowe ostrzeżenia IMGW. Za granicą rosną Berlin, hiszpańskie pożary, kubański blackout, brytyjski NHS, indyjskie protesty i Zachodni Brzeg, a CNN nadal nie wychodzi poza 24 lipca.
