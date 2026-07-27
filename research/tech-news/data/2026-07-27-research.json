@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-27",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Poranny run z 2026-07-27 przesuwa główną oś z samego wyścigu modeli na projekt finance, lobbying i action surfaces. Reuters/WSJ raportuje, że Nvidia rozważa backstop na poziomie 250 mld USD dla OpenAI przy 10 GW projekcie data center w Ohio, więc compute coraz bardziej wygląda jak megaprojekt energetyczno-finansowy, a nie zwykły zakup GPU.",
+    "Równolegle Issue One i Business Insider pokazują, że AI polityka weszła w pełny budżet: Meta, Alphabet, Microsoft, Nvidia, OpenAI i Anthropic płacą za setki lobbyistów, a super PAC-i i midterm spending rosną do dziesiątek milionów dolarów. Po stronie produktu Meta AI przechodzi z czatu do wykonywania zadań, a Samsung i Google pchają Gemini do okularów i innych wearables.",
+    "Community signal nadal premiuje agentów i praktyczne workflowy. Product Hunt jest znowu pełen AI-agentów i narzędzi do pracy, a Hacker News skupia się bardziej na infrastrukturze, bezpieczeństwie i systemach niż na samym modelowym hype."
+  ],
+  "summaryBullets": [
+    "Infrastruktura: Nvidia może stać się bankiem OpenAI",
+    "Regulacje: AI lobby wchodzi do pełnego budżetu",
+    "AI: Meta AI przechodzi w tryb działania"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-27-0-nvidia-moze-stac-sie-bankiem-openai-4059ff752c",
+      "section": "Infrastruktura",
+      "title": "Nvidia może stać się bankiem OpenAI",
+      "standfirst": "Reuters podaje, że Nvidia rozważa backstop rzędu 250 mld USD dla OpenAI przy projekcie data center o mocy 10 GW w Ohio. To jeden z najmocniejszych sygnałów, że AI infra staje się projektem finansowym, a nie tylko zakupem GPU.",
+      "whatHappened": "Pojawił się report o możliwym wsparciu finansowym Nvidii dla projektu OpenAI.",
+      "whyItMatters": "Jeśli taki układ się potwierdzi, rynek compute zacznie przypominać połączenie energetyki, leasingu i venture-finance.",
+      "deeperAnalysis": [
+        "To nie jest już zwykła historia o tym, że firma kupuje więcej chipów. Gdy dostawca sprzętu zaczyna rozważać rolę gwaranta finansowego, zmienia się cała logika rynku: dostawca kapitału, dostawca sprzętu i klient stają się częścią jednej struktury ryzyka.",
+        "Skala projektu też ma znaczenie. 10 GW i koszt powyżej setek miliardów dolarów oznaczają, że nawet największe firmy AI nie mogą już polegać wyłącznie na klasycznym capexie albo zwykłym leasingu serwerowni. Potrzebne są partnerstwa, tanie finansowanie, dostęp do mocy i polityczna akceptacja.",
+        "Najważniejsze pytanie na kolejne dni brzmi więc nie \"czy OpenAI buduje więcej compute\", tylko \"jakiego typu instrumentem finansowym staje się AI infrastructure\". To może mieć konsekwencje dla całej branży, jeśli inni gracze zaczną kopiować ten model."
+      ],
+      "contextPoints": [
+        "Co się stało: Reuters opisał rozmowy o backstopie na 250 mld USD dla projektu OpenAI.",
+        "Dlaczego ważne: compute zaczyna wyglądać jak megaprojekt infrastrukturalny i finansowy.",
+        "Na co patrzeć dalej: oficjalna umowa, struktura leasingu, lokalizacja i partnerzy power/land."
+      ],
+      "sources": [
+        {
+          "title": "Reuters via Investing",
+          "url": "https://www.investing.com/news/stock-market-news/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-wsj-reports-4812926"
+        },
+        {
+          "title": "WSJ",
+          "url": "https://www.wsj.com/tech/ai/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-3dd6eae3"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Nvidia",
+        "OpenAI",
+        "data center",
+        "financing",
+        "Ohio",
+        "compute"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-27-1-ai-lobby-wchodzi-do-pelnego-budzetu-73ec16d39b",
+      "section": "Regulacje",
+      "title": "AI lobby wchodzi do pełnego budżetu",
+      "standfirst": "Issue One policzył, że sześć największych firm tech i AI zatrudniło w Q2 2026 324 lobbyistów. Business Insider dorzuca obraz wojny midtermowej, gdzie OpenAI, Anthropic, Meta i ich sprzymierzeńcy finansują przeciwne sieci polityczne.",
+      "whatHappened": "AI companies przeszły z miękkiego policy talking point do twardych, kwartalnych wydatków politycznych.",
+      "whyItMatters": "To pokazuje, że przyszłość regulacji AI jest już współfinansowana przez samych graczy rynku.",
+      "deeperAnalysis": [
+        "Issue One daje tu bardzo konkretne liczby, które trudno zignorować. Nie mówimy o symbolicznych spotkaniach z regulatorami, tylko o setkach lobbyistów i milionowych budżetach, które konkurują o definicję \"safe\", \"open\" i \"competitive\" AI.",
+        "Business Insider dodaje do tego warstwę wyborczą. Gdy OpenAI President Greg Brockman wspiera pro-AI network, a Anthropic finansuje przeciwny blok promujący ostrzejsze guardrails, AI policy staje się elementem walki o sam skład Kongresu. To już nie jest side quest dla company affairs.",
+        "Dla podcastu to dobry temat, bo łączy w sobie technologię, pieniądze i władzę. Warto go opowiadać nie jako abstrakcyjne \"big tech lobbying\", tylko jako nowy koszt wejścia do AI marketu."
+      ],
+      "contextPoints": [
+        "Co się stało: Issue One opisał kwartalne filings i liczbę lobbyistów.",
+        "Dlaczego ważne: polityka AI jest już pełnoprawną kategorią budżetową.",
+        "Na co patrzeć dalej: kolejne filings, PAC spending, konkretne projekty ustaw i state-level backlash."
+      ],
+      "sources": [
+        {
+          "title": "Issue One",
+          "url": "https://issueone.org/press/big-tech-spends-millions-to-buy-influence-in-washington-in-first-half-of-2026/"
+        },
+        {
+          "title": "Business Insider",
+          "url": "https://www.businessinsider.com/ai-midterm-elections-spending-super-pacs-greg-brockman-anthropic-2026-7"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "lobbying",
+        "Washington",
+        "PACs",
+        "AI policy",
+        "OpenAI",
+        "Anthropic"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-27-2-meta-ai-przechodzi-w-tryb-dzialania-46d24a1a6c",
+      "section": "AI",
+      "title": "Meta AI przechodzi w tryb działania",
+      "standfirst": "Meta oficjalnie mówi, że Meta AI może planować, łączyć się z kalendarzem i pocztą, tworzyć slajdy oraz realizować zadania w imieniu użytkownika. To wyraźny krok od czatu do warstwy orchestration.",
+      "whatHappened": "Meta opisała nowe możliwości swojego asystenta opartego o Muse Spark 1.1.",
+      "whyItMatters": "To pokazuje, że Meta chce konkurować nie tylko modelem, ale codziennym workflow i kontekstem użytkownika.",
+      "deeperAnalysis": [
+        "Najważniejsza zmiana nie dotyczy samej jakości odpowiedzi, tylko charakteru produktu. Meta nie sprzedaje już \"asystenta do pytań\", lecz system, który ma przejmować kolejne kroki: brief, plan, follow-up, research i prostą prezentację wyniku.",
+        "To ma znaczenie strategiczne, bo Meta ma ogromny dostęp do codziennego kontekstu przez swoje aplikacje i komunikację. Jeśli assistant rzeczywiście będzie umiał działać w tej warstwie, firma może wejść w obszar osobistego task management bez budowania osobnego desktopowego ekosystemu.",
+        "Jednocześnie to podnosi poziom ryzyka. Im więcej zadań model wykonuje sam, tym ważniejsze stają się permissions, visibility, data boundaries i błędy w follow-through. Dokładnie tam będzie rozstrzygać się, czy taki produkt jest tylko demo, czy naprawdę użytecznym narzędziem."
+      ],
+      "contextPoints": [
+        "Co się stało: Meta opisała nowe funkcje Meta AI oparte o Muse Spark 1.1.",
+        "Dlaczego ważne: asystenci przechodzą z rozmowy do realnej pracy wykonywanej w tle.",
+        "Na co patrzeć dalej: zakres rollout, integracje, kontrola dostępu i reakcja użytkowników."
+      ],
+      "sources": [
+        {
+          "title": "Meta Newsroom",
+          "url": "https://about.fb.com/news/2026/07/meta-ai-muse-spark-doesnt-just-think-it-acts/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Meta",
+        "Muse Spark 1.1",
+        "agents",
+        "calendar",
+        "email",
+        "slides"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-27-3-gemini-wchodzi-do-okularow-c9a66f2e77",
+      "section": "Produkty",
+      "title": "Gemini wchodzi do okularów",
+      "standfirst": "Samsung i Google oficjalnie pokazują inteligentne eyewear z Gemini, kamerą, gestami z zegarka i baterią do 9 godzin plus 7 dodatkowych ładowań z etui. Wearables stają się kolejną frontową powierzchnią dla AI.",
+      "whatHappened": "Obie firmy pokazały nową kategorię okularów z głęboką integracją Gemini.",
+      "whyItMatters": "To przesuwa agentic AI z telefonu na twarz i do codziennego ruchu użytkownika.",
+      "deeperAnalysis": [
+        "Samsung robi tu coś więcej niż kolejny gadżet. Dzięki współpracy z Google i partnerami modowymi firma próbuje sprawić, żeby smart glasses nie wyglądały jak demo z laboratorium, tylko jak produkt, który da się faktycznie nosić poza prezentacją.",
+        "Ważne są też parametry praktyczne: bateria, kamera, gesty z Wear OS watch i możliwość użycia Gemini bez sięgania po telefon. To sugeruje, że wearables mogą stać się kolejną naturalną powierzchnią dla AI, podobnie jak wcześniej chat i wyszukiwarka.",
+        "Największe pytanie dotyczy prywatności i akceptacji społecznej. Jeśli użytkownicy uznają kamerę w okularach za zbyt inwazyjną, produkt zostanie niszowy. Jeśli jednak uda się przełamać ten opór, Samsung i Google otwierają nowy front konkurencji z Meta."
+      ],
+      "contextPoints": [
+        "Co się stało: Samsung i Google oficjalnie zaprezentowały inteligentne eyewear.",
+        "Dlaczego ważne: AI wchodzi do wearables, a nie tylko do telefonów i czatów.",
+        "Na co patrzeć dalej: fall launch, pricing, privacy defaults i reakcja rynku na konkurencję z Meta Ray-Ban."
+      ],
+      "sources": [
+        {
+          "title": "Samsung Newsroom",
+          "url": "https://news.samsung.com/global/samsung-brings-galaxy-ecosystem-into-everyday-eyewear"
+        },
+        {
+          "title": "Google Blog",
+          "url": "https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Samsung",
+        "Google",
+        "Gemini",
+        "smart glasses",
+        "wearables",
+        "privacy"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Nvidia może stać się bankiem OpenAI",
+      "rationale": "Raportowany backstop za 250 mld USD zmienia compute w finansowany megaprojekt i podbija znaczenie Ohio jako lokalizacji AI infra.",
+      "sourcesLabel": "Reuters; WSJ"
+    },
+    {
+      "priority": "High",
+      "title": "AI lobby wchodzi do pełnego budżetu",
+      "rationale": "Issue One i BI pokazują, że lobby, PAC-i i midterms stały się jednym z głównych pól walki o przyszłość AI.",
+      "sourcesLabel": "Issue One; Business Insider"
+    },
+    {
+      "priority": "High",
+      "title": "Meta AI przechodzi w tryb działania",
+      "rationale": "Assistant, który planuje, czyta kalendarz i tworzy slajdy, to już nie czat, tylko warstwa pracy.",
+      "sourcesLabel": "Meta Newsroom"
+    },
+    {
+      "priority": "High",
+      "title": "Gemini wchodzi do okularów",
+      "rationale": "Samsung i Google przesuwają AI z telefonu na twarz, co otwiera nową kategorię konsumencką i nową falę pytań o prywatność.",
+      "sourcesLabel": "Samsung Newsroom; Google Blog"
+    },
+    {
+      "priority": "Medium",
+      "title": "Product Hunt nadal kocha agentów",
+      "rationale": "Top launches są znowu agentowe, więc popyt na workflow automation nie słabnie.",
+      "sourcesLabel": "Product Hunt"
+    },
+    {
+      "priority": "Medium",
+      "title": "Hacker News wybiera plumbing zamiast hype'u",
+      "rationale": "Front page jest bardziej o systemach, security i narzędziach niż o frontier model launchach.",
+      "sourcesLabel": "Hacker News"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Reuters via Investing: Nvidia in talks with OpenAI to guarantee $250 billion financing for data center, WSJ reports",
+      "url": "https://www.investing.com/news/stock-market-news/nvidia-in-talks-with-openai-to-guarantee-250-billion-financing-for-data-center-wsj-reports-4812926"
+    },
+    {
+      "title": "Issue One: Big Tech Spends Millions to Buy Influence in Washington in First Half of 2026",
+      "url": "https://issueone.org/press/big-tech-spends-millions-to-buy-influence-in-washington-in-first-half-of-2026/"
+    },
+    {
+      "title": "Business Insider: The AI Industry Has Already Spent $65 Million Ahead of the Midterms",
+      "url": "https://www.businessinsider.com/ai-midterm-elections-spending-super-pacs-greg-brockman-anthropic-2026-7"
+    },
+    {
+      "title": "Meta Newsroom: Meta AI Doesn’t Just Think, It Acts",
+      "url": "https://about.fb.com/news/2026/07/meta-ai-muse-spark-doesnt-just-think-it-acts/"
+    },
+    {
+      "title": "Samsung Newsroom: Samsung Brings Galaxy Ecosystem Into Everyday Eyewear",
+      "url": "https://news.samsung.com/global/samsung-brings-galaxy-ecosystem-into-everyday-eyewear"
+    },
+    {
+      "title": "Google Blog: Galaxy Unpacked: Gemini and Samsung are better together",
+      "url": "https://blog.google/products-and-platforms/platforms/android/galaxy-unpacked-2026/"
+    },
+    {
+      "title": "Hacker News homepage",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "Product Hunt homepage",
+      "url": "https://www.producthunt.com/"
+    }
+  ]
+}

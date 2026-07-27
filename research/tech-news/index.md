@@ -1,8 +1,18 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-26
+Last updated: 2026-07-27
 
 ## Current Understanding
+
+Poranny run z 2026-07-27 dokłada do osi cost/control trzecią warstwę: project finance i politykę. Reuters/WSJ opisują, że Nvidia rozważa backstop rzędu 250 mld USD dla OpenAI przy 10 GW projekcie w Ohio, więc AI infra coraz bardziej wygląda jak megaprojekt energetyczno-finansowy. Równolegle Issue One i Business Insider pokazują, że lobbying i PAC-i stały się pełnoprawnym budżetem AI: Meta, Alphabet, Microsoft, Nvidia, OpenAI i Anthropic płacą za setki lobbyistów i finansują różne strony walki o regulacje.
+
+Po stronie produktu Meta AI przechodzi z czatu do orchestration: planowanie, email, kalendarz, slajdy i daily briefings. Samsung i Google robią z Gemini element inteligentnych okularów i wearables, więc front AI przenosi się z modelowych premier na to, gdzie model działa w codziennym życiu.
+
+Community signal nadal premiuje agentów i praktyczne workflowy. Product Hunt jest znowu pełen launchy o automatyzacji, a Hacker News bardziej nagradza plumbing, security i developer tooling niż frontier model hype.
+
+Wieczorny run z 2026-07-26 dodaje dwa ważne doprecyzowania do porannej osi. OpenAI i Hugging Face opublikowały wspólny opis autonomicznego incydentu podczas ewaluacji modeli, więc agentic cyber risk przestał być wyłącznie teoretycznym warningiem. Z kolei oficjalna strona Anthropic pokazuje, że Opus 5 ma tę samą cenę katalogową co Opus 4.8, ale wyraźnie lepszą efektywność tokenową i niższą latencję, więc właściwą osią konkurencji staje się koszt pracy modelu, a nie sam list price.
+
+Równolegle Biały Dom i AP przesuwają backlash wobec data center z poziomu protestów do bardziej formalnej polityki kosztów sieci i rachunków za prąd. To wzmacnia wcześniejszy sygnał, że AI infra staje się public utility policy, a nie tylko zakupem GPU.
 
 Poranny run z 2026-07-26 dokłada do osi kosztu i kontroli nowy, bardzo konkretny sygnał: Anthropic wypuszcza Claude Opus 5 jako model blisko Fable 5, ale za połowę ceny; AMD spina Anthropic i OpenAI z Helios jako pakietem compute + kapitał + engineering; a szeroka koalicja firm z Microsoftem, NVIDIA, Google i OpenAI broni open weights jako warunku konkurencji i suwerenności. Równolegle AP pokazuje, że chińskie modele są już używane w USA z powodów kosztowych, Google daje wydawcom nowy opt-out w Search Console, a backlash wobec data centers wchodzi w fazę protestów, wody i utility bills.
 
@@ -240,6 +250,9 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-27: Reuters/WSJ reportowany backstop Nvidii dla OpenAI, rekordowe wydatki lobbyingowe i PAC-owe oraz rollout Meta AI/Samsung wearable przesuwają temat z samego modelowego release na finance, policy i action surfaces.
+- 2026-07-26: Wieczorny run dodał oficjalny postmortem OpenAI/Hugging Face, korektę ekonomii Opus 5 (ta sama cena katalogowa, lepsza efektywność) oraz twardszy sygnał, że data-center backlash przechodzi do formalnych kosztów i billi.
+- 2026-07-26: The Vergecast wzmacnia Google Zero jako trwały konflikt z wydawcami, nie jednorazowy nagłówek.
 - 2026-07-26: Daily run dodał Claude Opus 5, AMD-Anthropic/OpenAI Helios, broad open-weight coalition, chińskie modele wchodzące do amerykańskiego workflow, Google Search Console opt-out i wyraźny backlash wobec data centers; główny sygnał przesuwa się z rolloutów na koszt, kapitał i dostęp.
 - 2026-07-26: HN promuje Opus 5 i open-weight AI, a Product Hunt robi OpenAI Day wokół GPT-5.6, co potwierdza, że community nadal premiuje control surfaces i routing.
 - 2026-07-24: Daily run added OpenAI Health live rollout, Anthropic voice mode, Runway Media Router, Google selfie-video sign-in, a new DMA enforcement signal and the AI Kill Switch / ratepayer policy thread.
