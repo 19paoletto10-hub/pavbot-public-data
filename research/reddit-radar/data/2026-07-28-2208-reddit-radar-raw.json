@@ -1,0 +1,136 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-28-2208",
+  "status": "material_update",
+  "generatedAt": "2026-07-28T20:08:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-28T22:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on old.reddit.com using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-28-1808 and 2026-07-28-1207, so none of the post URLs that appeared there could roll forward into this slot.",
+      "Before selecting replacements, the run verified that origin/main already serves 2026-07-28-1207 for reddit-radar together with the active public manifest, so the remote topic was current at run start.",
+      "Final read-only Safari review stayed on exact old.reddit post pages for the strongest fresh late-evening challengers from r/memes and r/ProgrammerHumor, while mildlyinfuriating, facepalm, and AskReddit mostly stayed too ranty, too practical, too political, or too discussion-first.",
+      "Exactly four safe fresh cards survived the live review, so the reddit-radar contract still prefers a new public bundle over keeping the older 2026-07-28-1207 payload unchanged.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "currentPublicBundle": "2026-07-28-1207",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-28-2208-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-28-2208-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-28-2208-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v8zdud/imprettysureitstemplateerrors/?sort=top",
+    "https://old.reddit.com/r/facepalm/comments/1v1bx2f/i_tried_to_make_my_first_quick_cheese_wrap/?sort=top",
+    "https://old.reddit.com/r/facepalm/comments/1v7d62r/a_store_i_found_in_my_city/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v8tm5k/no_i_dont_think_i_will_renew/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v8u69y/its_like_waking_up_from_a_dream/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v8wiw0/it_takes_fkin_forever/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v8xq3i/just_found_another_multipurpose_tool/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v8z0e5/just_let_the_fisherman_live/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v91nfe/i_thought_they_went_extinct_thousands_of_years_ago/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v91zxc/good_fridge/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v8td4v/ok_i_get_it_now_these_eggs_did_not_want_to_be/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v8to1j/i_paid_1_for_the_premiumapp_no_updates_for_years/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v8vqi8/won_100_cash_prize_got_shampoo_bottles_instead/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v8vt20/these_are_the_only_new_businesses_i_ever_see/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v8z8qz/i_paid_almost_40_for_this_meal_at_the_airport/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v90cge/ordered_a_new_toilet_and_the_forklift_delivery/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v91cb9/my_husbands_eyelashes/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v92atf/jeep_melted/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v8jv21/jspoetry/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v8qs9q/atleastudpisfaster/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v8sjjg/myforeheadhascommithistory/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v8jxoi/enjoy_my_handcrafted_meme/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v8qqx5/l%C3%A9_master_chef/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v8r24v/appreciation/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v8rqfe/you_are_the_meme/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v8rx0a/new_design_proposal/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v8t0r5/it_sucks_so_much/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v8kqo5/i_forgot_to_put_sunscreen_on_the_top_of_my_feet/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v8n55j/god_i_hate_this_app_sometimes/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v8p43s/roommate_airs_out_all_his_sports_gear_in_our/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v8pmxw/stupid_rules_at_a_creamery_almost_ruined_my_day/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "title": "Mmm sour candy",
+      "url": "https://old.reddit.com/r/memes/comments/1v96ter/mmm_sour_candy/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "3.5k hot"
+    },
+    {
+      "title": "you know ur grandma didn't hear a single thing you said when she gives you this look",
+      "url": "https://old.reddit.com/r/memes/comments/1v963cn/you_know_ur_grandma_didnt_hear_a_single_thing_you/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "1.0k hot"
+    },
+    {
+      "title": "foundThebug",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v93xqr/foundthebug/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "2.3k hot"
+    },
+    {
+      "title": "this is so accurate",
+      "url": "https://old.reddit.com/r/memes/comments/1v99nf1/this_is_so_accurate/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "388 hot"
+    },
+    {
+      "title": "Every decade has its own \"fake detector\"",
+      "url": "https://old.reddit.com/r/memes/comments/1v8xncr/every_decade_has_its_own_fake_detector/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "865 hot"
+    },
+    {
+      "title": "Why I stopped talking about my feelings",
+      "url": "https://old.reddit.com/r/memes/comments/1v8zohr/why_i_stopped_talking_about_my_feelings/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "677 hot"
+    },
+    {
+      "title": "understandableDecisionWhenYouThinkAboutIt",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v992p8/understandabledecisionwhenyouthinkaboutit/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "231 hot"
+    },
+    {
+      "title": "zeroTickets",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v99ohg/zerotickets/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "186 hot"
+    },
+    {
+      "title": "There is a National Park System site that you cannot go to, so I can’t fill the stamp square in my passport book",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v9849n/there_is_a_national_park_system_site_that_you/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "909 hot"
+    },
+    {
+      "title": "Boss sends us photos and details of her vacations via Teams. Mind you, half the people she sends this to can't afford to go on a vacation.",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v9aisy/boss_sends_us_photos_and_details_of_her_vacations/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "new hot"
+    }
+  ]
+}

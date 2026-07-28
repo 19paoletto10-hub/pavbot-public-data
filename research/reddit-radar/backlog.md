@@ -8,6 +8,9 @@
 
 ## Review Notes
 
+- 2026-07-28: 22:08 CEST material update again started from a current
+  `origin/main` state, so the late-evening slot remained a standard rotation
+  rather than a remote catch-up publish.
 - 2026-07-28: 12:07 CEST material update again started from a current
   `origin/main` state, so the noon slot remained a standard rotation rather
   than a remote catch-up publish.

@@ -5,6 +5,16 @@
 - Topic operates as a read-only Reddit humor radar built from live Safari review
   on public `old.reddit.com` listings and exact post pages.
 - Current active public bundle is now
+  `research/reddit-radar/data/2026-07-28-2208-reddit-radar.json`.
+- Tuesday, July 28, 2026 22:08 CEST found exactly four fresh, public-safe
+  survivors again after filtering `2026-07-28-1808` and `2026-07-28-1207`, so
+  the topic still rotated at the minimum contract threshold into a late-evening
+  set led by sour-candy disappointment plus three compact riffs about grandma's
+  selective hearing, a literal bug on screen, and fridge-refresh hunger logic.
+- The same 22:08 CEST audit also confirmed that origin/main already exposed the
+  latest `2026-07-28-1207` public bundle before publication, so this slot is a
+  normal fresh rotation and not a remote-state recovery publish.
+- Current active public bundle is now
   `research/reddit-radar/data/2026-07-28-1207-reddit-radar.json`.
 - Tuesday, July 28, 2026 12:07 CEST found exactly four fresh, public-safe
   survivors again after filtering `2026-07-27-2208` and `2026-07-28-0608`, so
@@ -58,6 +68,9 @@
 
 - Strong survivors usually keep one dominant joke in the first visible comments
   without turning into rant, politics, meta-discussion, or legal/support talk.
+- A minimal four-card refresh is still acceptable late in the day when
+  freshness survives the two-run filter and the remaining cards stay clearly
+  portable, even if one or two closers are thinner than the stronger anchors.
 - A lighter bundle is still publishable when it clears four fresh survivors
   after the two-run freshness filter; this topic values rotation over sitting
   on an older, stronger winner bundle.
