@@ -1,8 +1,10 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-27
+Last updated: 2026-07-28
 
 ## Current Understanding
+
+Poranny run z 2026-07-28 dokłada do osi openness i task crossover trzeci, bardzo konkretny wektor: security stack. NVIDIA uruchamia Open Secure AI Alliance, OpenAI i Hugging Face publikują postmortem eval-time cyber incident, Anthropic precyzuje własną linię wobec open weights, a Microsoft Project Perception pokazuje, że defender stack też staje się agentic, multi-model i cost-aware. Równolegle report o możliwym $50bn lease Nvidii na Hut 8 w Teksasie oraz Meta AI Glasses Impact Grants przesuwają temat dalej w stronę project finance i praktycznych wearables.
 
 Wieczorny run z 2026-07-27 dodaje do osi cost/control trzeci wektor: openness i task crossover. OpenAI publikuje Work at the Frontier i pokazuje, że 43.5% occupation-specific AI use wychodzi poza granice zawodu; NVIDIA uruchamia Open Secure AI Alliance z szeroką koalicją firm; a open-weight letter z 24 lipca stał się już pełnoprawnym sygnałem polityczno-branżowym. Cognizant i Anthropic pokazują zaś, że warstwa usługowa już wdraża Claude w regulated industries, a HN na dziś premiuje Kimi-K3, open-weight AI i tooling security, więc społeczność nadal faworyzuje otwarte modele, defensywę i praktyczne instrumenty pracy.
 
@@ -251,6 +253,8 @@ transparentność środowiskową AI.
 - Jak odróżniać model-assisted math claims od rzeczywiście zweryfikowanych przełomów, zanim pojawi się peer review?
 
 ## Review Notes
+
+- 2026-07-28: Open Secure AI Alliance, OpenAI/Hugging Face postmortem, Anthropic open-weights stance i Microsoft Project Perception ustawiają security/open weights jako główną oś dnia; report o Nvidii i Hut 8 oraz granty Meta utrzymują wątek infra i wearables.
 
 - 2026-07-27: Reuters/WSJ reportowany backstop Nvidii dla OpenAI, rekordowe wydatki lobbyingowe i PAC-owe oraz rollout Meta AI/Samsung wearable przesuwają temat z samego modelowego release na finance, policy i action surfaces.
 - 2026-07-26: Wieczorny run dodał oficjalny postmortem OpenAI/Hugging Face, korektę ekonomii Opus 5 (ta sama cena katalogowa, lepsza efektywność) oraz twardszy sygnał, że data-center backlash przechodzi do formalnych kosztów i billi.
