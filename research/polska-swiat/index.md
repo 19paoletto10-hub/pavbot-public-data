@@ -17,6 +17,14 @@ jest decyzja Prezydenta RP o odebraniu Wołodymyrowi Zełenskiemu Orderu Orła
 Białego, a stałym źródłowym rdzeniem pozostają oficjalne komunikaty Prezydenta
 RP, Consilium, MON, KPRM i Sejmu, uzupełniane przez Onet/PAP, Guardian,
 Euronews i publiczne przedruki AP/Reuters.
+Po wieczornym runie 28 lipca ten rdzeń przesunął się z zapowiedzi do
+wykonania: oficjalny readout Kijowa potwierdza spotkanie Zełenski-Trump i
+rozmowę o licencjach na produkcję interceptorów Patriot oraz o ożywieniu
+procesu dyplomatycznego, AP opisuje równoległe spotkanie Trump-Netanyahu o
+Iranie, Libanie i Abraham Accords, a w kraju ślubowanie Patyry w TK zostało
+już przyjęte przez prezydenta. Równolegle Rumunia przeszła od ostrzeżeń do
+zestrzeliwania dronów i wydalenia rosyjskiego dyplomaty, co wzmacnia oś
+wschodniej flanki NATO jako miejsca aktywnej obrony, a nie tylko komunikatów.
 Po weekendowym runie 21 czerwca temat orderowy wszedł w fazę reakcji
 ukraińskich polityków i byłych prezydentów, a główny temat międzynarodowy
 przesunął się na rozmowy USA-Iran w Szwajcarii, spór o Cieśninę Ormuz i
