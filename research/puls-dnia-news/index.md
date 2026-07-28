@@ -1,3 +1,5 @@
+The 2026-07-28 18:01 slot przesuwa Puls Dnia z wcześniejszego bloku Wrocław/PiS/BLIK/Google na nowy pakiet krajowych i zagranicznych leadów: PiS wraca do wojny o ceny paliw, rząd naciska na najem krótkoterminowy, a światowy blok dokładują Visa, Boeing, USA-Ukraina, zatrzymanie Polaka w Chorwacji, kontrole celne w Wietnamie, rynek ropy, Seattle, ONZ, briefing OpenAI i pożary w Europie. CNN po raz pierwszy odświeża blok na 28 lipca, więc mamy realne nowe wejście względem 15:01.
+
 The 2026-07-28 15:01 slot przesuwa Puls Dnia z etapu szukania sprawców do pierwszych zarzutów we Wrocławiu, utrzymuje rozłam w PiS przy wieczornym spotkaniu Morawieckiego i dokłada świeży blok krajowych leadów o paliwach, BLIK i Google. BBC wzmacnia światowy pakiet o ONZ, Seattle, Hiszpanię, Claude, Ukrainę i Kanał La Manche, a CNN nadal kończy się na materiałach z 27 lipca.
 
 The 2026-07-28 12:02 slot przesuwa Puls Dnia w stronę krajowego miksu PiS, podatku cyfrowego, paliw i AI, a za granicą dokłada świeży blok o ONZ, Iranie, Seattle, Toronto i pożarach w Europie. Alert burzowy nadal trwa.

@@ -1,0 +1,457 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-28",
+  "runTime": "18:01",
+  "status": "Material update",
+  "headline": "18:01: paliwa, najem i nowy blok BBC/CNN",
+  "summary": "Slot 18:01 przesuwa Puls Dnia z wcześniejszego bloku Wrocław/PiS/BLIK/Google na nowy pakiet krajowych i zagranicznych leadów: PiS wraca do wojny o ceny paliw, rząd naciska na najem krótkoterminowy, a światowy blok dokładują Visa, Boeing, USA-Ukraina, zatrzymanie Polaka w Chorwacji, kontrole celne w Wietnamie, rynek ropy, Seattle, ONZ i briefing OpenAI w Waszyngtonie. Alertowy węzeł pozostaje po stronie pożarów w Europie.",
+  "checkedSources": [
+    {
+      "title": "TVN24 homepage",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN transcripts index",
+      "url": "https://transcripts.cnn.com/show/cnr"
+    },
+    {
+      "title": "RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo/pogoda"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-07-28-1801-01",
+      "section": "Świat",
+      "title": "PiS podbija spór o ceny paliw",
+      "lead": "Na konferencji o paliwach w PiS znów robi się głośno.",
+      "whatHappened": "TVN24 opisuje konferencję PiS, na której wiceprezes partii apeluje o obniżkę VAT i akcyzy na paliwa, a w tle dochodzi do ostrego politycznego przepychanki o to, kto odpowiada za ceny na stacjach.",
+      "keyFacts": [
+        "Temat dotyczy cen paliw i podatków po stronie państwa.",
+        "Spór ma już wyraźny wymiar kampanijno-polityczny.",
+        "W przekazie pojawia się bezpośredni atak na rząd i jego decyzje."
+      ],
+      "reactions": [
+        "Możliwa jest szybka odpowiedź rządu albo dalsze przerzucanie winy między obozami.",
+        "Branża paliwowa może zostać wciągnięta w polityczny spór o marże i podatki."
+      ],
+      "whyItMatters": "To krajowy lead, który łączy koszty życia z nową odsłoną sporu politycznego.",
+      "context": "W poprzednim slocie paliwa były już tłem sporu o windfall tax; teraz PiS sam dokłada do tego publiczną konfrontację.",
+      "watchNext": [
+        "Śledź, czy PiS lub rząd opublikują formalny komentarz po konferencji.",
+        "Sprawdzaj, czy temat przejdzie w projekt legislacyjny albo kalkulacje cen na stacjach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Awantura na konferencji PiS o ceny paliw",
+          "url": "https://tvn24.pl/biznes/z-kraju/ceny-paliw-w-polsce-awantura-na-konferencji-prawa-i-sprawiedliwosci-wcislo-czarnek-wychodzi-i-klamie-st9161917"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "paliwa",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-1801-02",
+      "section": "Gospodarka",
+      "title": "Tusk naciska na najem krótkoterminowy",
+      "lead": "Premier chce twardszych zasad dla mieszkań wynajmowanych turystom.",
+      "whatHappened": "TVN24 Biznes podaje, że Donald Tusk zwrócił się do ministrów o przygotowanie rozwiązań dotyczących najmu krótkoterminowego, tak by ograniczyć jego skutki dla lokatorów i rynku mieszkań.",
+      "keyFacts": [
+        "Temat dotyczy mieszkań wynajmowanych turystom.",
+        "Rząd ma szukać regulacji, które uporządkują rynek.",
+        "W tle jest presja na dostępność mieszkań i prawa lokatorów."
+      ],
+      "reactions": [
+        "Samorządy i branża najmu mogą odpowiedzieć krytyką albo propozycjami łagodniejszych zasad.",
+        "Jeśli projekt ruszy, szybko wróci też wątek wpływu na czynsze i turystykę."
+      ],
+      "whyItMatters": "To realny krajowy temat mieszkaniowy, który może przełożyć się na przepisy i rynek najmu.",
+      "context": "To nowy krajowy lead po południu, odrębny od wcześniejszych wątków o PiS i paliwach.",
+      "watchNext": [
+        "Śledź, czy resorty pokażą projekt lub choćby harmonogram prac.",
+        "Sprawdzaj, czy samorządy i właściciele mieszkań zareagują publicznie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Premier: nie oszukujmy się",
+          "url": "https://tvn24.pl/biznes/nieruchomosci/premier-nie-oszukujmy-sie-st9162302"
+        }
+      ],
+      "tags": [
+        "mieszkania",
+        "najem",
+        "rząd"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-1801-03",
+      "section": "Gospodarka",
+      "title": "Visa zapowiada cięcia",
+      "lead": "Globalny gigant płatniczy planuje redukcję zatrudnienia o 7 procent.",
+      "whatHappened": "TVN24 cytuje Bloomberga, według którego Visa zamierza zwolnić około 2600 osób. Spółka ma szukać oszczędności i uproszczenia struktury.",
+      "keyFacts": [
+        "Cięcia mają objąć około 7 procent zatrudnienia.",
+        "Szacowany zakres to około 2600 etatów.",
+        "To sygnał presji kosztowej w globalnym sektorze płatności."
+      ],
+      "reactions": [
+        "Rynek będzie patrzył na to jako na test kondycji branży fintech i płatności.",
+        "Inwestorzy mogą pytać, czy to jednorazowa restrukturyzacja, czy początek szerszej fali cięć."
+      ],
+      "whyItMatters": "To ważny sygnał z rynku płatności, który może odbić się na całym fintechowym łańcuchu dostaw i usług.",
+      "context": "To nowy, świeży globalny temat z TVN24 Biznes po południu.",
+      "watchNext": [
+        "Śledź, czy Visa poda plan oszczędności i terminy redukcji.",
+        "Sprawdzaj, czy konkurenci płatniczy odpowiedzą podobnymi ruchami."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Visa zapowiada cięcia",
+          "url": "https://tvn24.pl/biznes/ze-swiata/visa-zwolnienia-grupowe-lider-rynku-platnosci-zapowiada-redukcje-tysiecy-etatow-st9162811"
+        }
+      ],
+      "tags": [
+        "Visa",
+        "fintech",
+        "zwolnienia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-1801-04",
+      "section": "Świat",
+      "title": "FAA każe sprawdzić fotele w Boeingach 737 MAX",
+      "lead": "Amerykański regulator nakazuje inspekcje po sygnałach o źle zamontowanych siedzeniach.",
+      "whatHappened": "TVN24 opisuje nowy problem Boeinga: FAA uważa, że w setkach samolotów 737 MAX fotele mogą wymagać kontroli i ewentualnych poprawek montażowych.",
+      "keyFacts": [
+        "Chodzi o setki maszyn 737 MAX.",
+        "Problem dotyczy bezpieczeństwa kabiny i jakości montażu.",
+        "To kolejny cios dla reputacji Boeinga."
+      ],
+      "reactions": [
+        "Linie lotnicze mogą dostać dodatkowe koszty i przestoje techniczne.",
+        "Regulator będzie oczekiwał szybkiej reakcji producenta."
+      ],
+      "whyItMatters": "Każda kolejna wada techniczna wzmacnia presję na Boeinga i rynek lotniczy.",
+      "context": "To świeży globalny temat z sekcji gospodarczo-technicznej, ale z twardym komponentem bezpieczeństwa.",
+      "watchNext": [
+        "Śledź, czy FAA poda zakres inspekcji i termin wykonania prac.",
+        "Sprawdzaj, czy Boeing odpowie procedurą serwisową albo komunikatem o źródle problemu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Boeing - ryzyko źle zamontowanych foteli",
+          "url": "https://tvn24.pl/biznes/ze-swiata/nowe-problemy-boeinga-ryzyko-zle-zamontowanych-foteli-st9161830"
+        }
+      ],
+      "tags": [
+        "Boeing",
+        "FAA",
+        "lotnictwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-1801-05",
+      "section": "Polityka",
+      "title": "Trump ma spotkać się z Zełenskim",
+      "lead": "W Białym Domu szykuje się ważne spotkanie USA-Ukraina.",
+      "whatHappened": "TVN24 zapowiada, że Donald Trump i Wołodymyr Zełenski mają spotkać się w Białym Domu w najbliższych godzinach, a temat ma dotyczyć dalszej wojny i wsparcia dla Kijowa.",
+      "keyFacts": [
+        "Spotkanie ma odbyć się w Waszyngtonie.",
+        "W centrum pozostaje wsparcie dla Ukrainy.",
+        "Kalendarz rozmów obejmuje też szerszy pakiet geopolityczny."
+      ],
+      "reactions": [
+        "Rynek i sojusznicy będą szukać sygnału, czy Waszyngton zmieni ton wobec Kijowa.",
+        "To potencjalnie ważne dla obrony powietrznej i dalszej pomocy wojskowej."
+      ],
+      "whyItMatters": "To jeden z najważniejszych światowych punktów dnia dla bezpieczeństwa europejskiego.",
+      "context": "CNN też podbija temat rozmów Trumpa z liderami Ukrainy i Izraela w tej samej dobie.",
+      "watchNext": [
+        "Śledź komunikat z Białego Domu po spotkaniu.",
+        "Sprawdzaj, czy pojawią się konkretne deklaracje o pomocy dla Ukrainy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: USA. Donald Trump i Wołodymyr Zełenski - spotkanie w Białym Domu",
+          "url": "https://tvn24.pl/swiat/usa-donald-trump-i-wolodymyr-zelenski-spotkanie-w-bialym-domu-st9162830"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Ukraina",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-1801-06",
+      "section": "Bezpieczeństwo",
+      "title": "Polak zatrzymany na chorwackiej plaży",
+      "lead": "Chorwacka policja zatrzymała 61-latka podejrzanego o fotografowanie dzieci.",
+      "whatHappened": "TVN24 informuje o obywatelskim zatrzymaniu Polaka na plaży w Chorwacji. Mężczyzna ma być podejrzewany o fotografowanie nagich dzieci.",
+      "keyFacts": [
+        "Zatrzymany ma 61 lat i jest obywatelem Polski.",
+        "Sprawę przejęła chorwacka policja.",
+        "Temat ma wyraźny wymiar bezpieczeństwa i ochrony małoletnich."
+      ],
+      "reactions": [
+        "Możliwe są dalsze czynności policji i lokalnej prokuratury.",
+        "Sprawa może szybko uderzyć w medialny i konsularny obieg informacji."
+      ],
+      "whyItMatters": "To poważny temat bezpieczeństwa publicznego i ochrony dzieci, z potencjalnym dalszym ciągiem prawnym.",
+      "context": "To nowy zagraniczny lead z polskim bohaterem, niewystępujący w poprzednim slocie.",
+      "watchNext": [
+        "Śledź, czy chorwacka policja poda więcej szczegółów o zarzutach.",
+        "Sprawdzaj, czy pojawi się komunikat konsularny lub prokuratorski."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Obywatelskie zatrzymanie Polaka na chorwackiej plaży",
+          "url": "https://tvn24.pl/swiat/chorwacja-obywatelskie-zatrzymanie-polaka-na-plazy-61-latek-mial-fotografowac-dzieci-st9162634"
+        }
+      ],
+      "tags": [
+        "Chorwacja",
+        "Polak",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-1801-07",
+      "section": "Gospodarka",
+      "title": "USA wchodzą do fabryk w Wietnamie",
+      "lead": "Amerykańscy celnicy prowadzą kontrole w zakładach powiązanych z Chinami.",
+      "whatHappened": "TVN24 Biznes opisuje niezapowiedziane naloty i kontrole w wietnamskich fabrykach powiązanych z chińskim łańcuchem dostaw. Bloomberg wiąże to z twardszą polityką handlową USA.",
+      "keyFacts": [
+        "Kontrole dotyczą fabryk powiązanych z Chinami.",
+        "Temat dotyczy łańcuchów dostaw i ceł.",
+        "Sprawa ma potencjalny wpływ na handel w Azji i USA."
+      ],
+      "reactions": [
+        "Chińskie i wietnamskie firmy mogą dostać sygnał ostrzegawczy.",
+        "Rynki będą patrzeć na możliwą eskalację kontroli celnych."
+      ],
+      "whyItMatters": "To ważny sygnał o twardszym egzekwowaniu polityki handlowej USA wobec azjatyckich łańcuchów produkcji.",
+      "context": "To świeży, dziś publikowany globalny materiał gospodarczy z TVN24.",
+      "watchNext": [
+        "Śledź, czy pojawi się oficjalny komentarz USA, Wietnamu lub Chin.",
+        "Sprawdzaj, czy kontrole przełożą się na decyzje handlowe lub celne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Amerykańscy celnicy przeprowadzili naloty na fabryki w Wietnamie",
+          "url": "https://tvn24.pl/biznes/ze-swiata/wietnam-widmo-nowych-cel-usa-celnicy-przeprowadzili-naloty-na-fabryki-st9161772"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Wietnam",
+        "cła"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-1801-08",
+      "section": "Gospodarka",
+      "title": "Ropa tanieje po deeskalacji napięć",
+      "lead": "Rynek paliw reaguje na uspokojenie sytuacji geopolitycznej.",
+      "whatHappened": "CNN podaje, że ceny ropy spadły, bo inwestorzy odczytują ostatnią deeskalację jako powód do schłodzenia obaw o podaż i transport.",
+      "keyFacts": [
+        "CNN wiąże spadek cen z deeskalacją napięć.",
+        "To bezpośredni sygnał z rynku energii.",
+        "Temat łączy geopolitykę z kosztami paliw i transportu."
+      ],
+      "reactions": [
+        "Kierowcy i firmy transportowe będą patrzeć na tempo dalszego spadku.",
+        "Rynek może szybko odwrócić ten ruch, jeśli napięcia wrócą."
+      ],
+      "whyItMatters": "Cena ropy natychmiast wpływa na paliwa, logistykę i nastroje na rynkach.",
+      "context": "To świeży CNN materiał z 28 lipca, który aktualizuje tło po wcześniejszych obawach o skok cen.",
+      "watchNext": [
+        "Śledź, czy spadek ropy utrzyma się na kolejnych sesjach.",
+        "Sprawdzaj, czy komentarze rynku potwierdzą trwałość deeskalacji."
+      ],
+      "sources": [
+        {
+          "title": "CNN transcripts segment 20",
+          "url": "https://transcripts.cnn.com/show/cnr/date/2026-07-28/segment/20"
+        }
+      ],
+      "tags": [
+        "ropa",
+        "rynek",
+        "geopolityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-1801-09",
+      "section": "Bezpieczeństwo",
+      "title": "Seattle po strzelaninie nadal liczy skutki",
+      "lead": "BBC opisuje hołd dla ofiar strzelaniny na festiwalu jedzenia.",
+      "whatHappened": "BBC relacjonuje aktualizację po strzelaninie podczas Bite of Seattle i opisuje pamięć o ofiarach oraz ciąg dalszy śledztwa.",
+      "keyFacts": [
+        "To wciąż jedna z najgłośniejszych spraw kryminalnych dnia w USA.",
+        "BBC skupia się na ofiarach i reakcji lokalnej społeczności.",
+        "Sprawa pozostaje otwarta pod kątem ustaleń policyjnych."
+      ],
+      "reactions": [
+        "Lokalne władze i policja mogą jeszcze podać kolejne szczegóły o podejrzanych.",
+        "Temat utrzymuje presję na debatę o przemocy z użyciem broni."
+      ],
+      "whyItMatters": "To mocny bezpieczeństwowy temat globalny, który wciąż generuje nowe publikacje i reakcje.",
+      "context": "W poprzednim slocie Seattle już było widoczne, ale teraz BBC wraca do sprawy z nowym materiałem z 28 lipca.",
+      "watchNext": [
+        "Śledź, czy policja poda pełniejszy bilans rannych i podejrzanych.",
+        "Sprawdzaj, czy pojawią się kolejne oficjalne komentarze miasta Seattle."
+      ],
+      "sources": [
+        {
+          "title": "BBC: A lover of life - Seattle pays tribute to food festival shooting victims",
+          "url": "https://www.bbc.co.uk/news/articles/cvgv7m5z4n0o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Seattle",
+        "strzelanina",
+        "USA"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-1801-10",
+      "section": "Polityka",
+      "title": "USA wychodzą z posiedzenia ONZ",
+      "lead": "Wystąpienie Francji w RB ONZ kończy się demonstracyjnym wyjściem Amerykanów.",
+      "whatHappened": "BBC opisuje walkout przedstawicieli USA podczas posiedzenia Rady Bezpieczeństwa ONZ w trakcie wystąpienia Francji. To kolejny sygnał napięcia transatlantyckiego.",
+      "keyFacts": [
+        "Incydent miał miejsce podczas posiedzenia RB ONZ.",
+        "BBC łączy go z krytyką USA przez Francję.",
+        "To kolejny spór dyplomatyczny na linii Waszyngton-Paryż."
+      ],
+      "reactions": [
+        "Możliwa jest szybka odpowiedź dyplomatyczna obu stron.",
+        "Temat może wrócić w komentarzach o relacjach USA-Europa."
+      ],
+      "whyItMatters": "To dobry wskaźnik temperatury w relacjach USA z europejskimi sojusznikami.",
+      "context": "BBC dziś odświeża również europejskie pożary i inne napięcia międzynarodowe, więc to część szerszego bloku geopolitycznego.",
+      "watchNext": [
+        "Śledź, czy ONZ lub ambasady wydadzą dodatkowe komentarze.",
+        "Sprawdzaj, czy Francja i USA doprecyzują spór publicznie."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US walks out of UN Security Council meeting during France's remarks",
+          "url": "https://www.bbc.co.uk/news/articles/c87nj3w9gxjo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "ONZ",
+        "USA",
+        "Francja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-1801-11",
+      "section": "Technologia",
+      "title": "OpenAI i Nvidia briefują polityków",
+      "lead": "W Waszyngtonie rośnie presja na bezpieczeństwo agentów AI.",
+      "whatHappened": "CNN podaje, że Sam Altman i Jensen Huang mają spotkać się z senatorem Markiem Warnerem, by omówić dalsze kroki wokół ryzyka związanego z agentami AI i nadzoru nad takimi systemami.",
+      "keyFacts": [
+        "Temat dotyczy agentów AI i bezpieczeństwa modeli.",
+        "W grę wchodzą rozmowy z politykami w Waszyngtonie.",
+        "To sygnał, że regulacja AI wchodzi w kolejny etap."
+      ],
+      "reactions": [
+        "Branża AI może dostać kolejną falę pytań o audyt i kontrolę.",
+        "Politycy mogą próbować przełożyć temat na projekt regulacyjny."
+      ],
+      "whyItMatters": "To jeden z wyraźniejszych znaków, że agentowa AI staje się tematem bezpieczeństwa publicznego i regulacji.",
+      "context": "W poprzednim slocie podobny wątek był już obecny z TVN24; teraz CNN daje świeży, 28 lipca potwierdzony follow-up.",
+      "watchNext": [
+        "Śledź, czy po briefingu pojawi się publiczne stanowisko senatora Warnera.",
+        "Sprawdzaj, czy firmy AI wypuszczą dodatkowe wyjaśnienia o kontroli agentów."
+      ],
+      "sources": [
+        {
+          "title": "CNN transcripts segment 19",
+          "url": "https://transcripts.cnn.com/show/cnr/date/2026-07-28/segment/19"
+        }
+      ],
+      "tags": [
+        "AI",
+        "OpenAI",
+        "Nvidia"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-1801-12",
+      "section": "Alerty",
+      "title": "Pożary w Europie nadal eskalują",
+      "lead": "Francja i Hiszpania utrzymują ewakuacje przy fali upałów i pożarów.",
+      "whatHappened": "BBC i CNN pokazują, że pożary we Francji i Hiszpanii nadal generują masowe ewakuacje, a temperatury i susza podtrzymują zagrożenie dla służb i mieszkańców.",
+      "keyFacts": [
+        "BBC opisuje nowe ewakuacje i presję na służby.",
+        "CNN wskazuje na setki tysięcy ewakuowanych w regionie.",
+        "Ryzyko pożarowe pozostaje wysokie przy kolejnej fali upałów."
+      ],
+      "reactions": [
+        "Władze będą musiały utrzymywać zasoby gaśnicze i logistyczne.",
+        "Każde pogorszenie pogody może od razu zwiększyć ryzyko nowych ewakuacji."
+      ],
+      "whyItMatters": "To najważniejszy alertowy temat zagraniczny w tym slocie, z bezpośrednim wpływem na bezpieczeństwo i mobilność ludzi.",
+      "context": "Wcześniejsze sloty też miały pożary w Europie, ale nowy pakiet BBC/CNN potwierdza, że zagrożenie nadal nie wygasło.",
+      "watchNext": [
+        "Śledź, czy BBC lub CNN podadzą nowy bilans ewakuacji i zniszczeń.",
+        "Sprawdzaj, czy pojawią się dodatkowe zamknięcia dróg lub miejscowości."
+      ],
+      "sources": [
+        {
+          "title": "BBC: 'It's a hell of a situation': Spain grapples with destructive wildfires",
+          "url": "https://www.bbc.co.uk/news/articles/c235m71mrreo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "BBC: Gironde wildfires pick up as French region braces for new 40C heatwave",
+          "url": "https://www.bbc.co.uk/news/articles/c5yd8gly1ydo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN transcripts segment 20",
+          "url": "https://transcripts.cnn.com/show/cnr/date/2026-07-28/segment/20"
+        }
+      ],
+      "tags": [
+        "pożary",
+        "Europa",
+        "alert"
+      ],
+      "priority": "high"
+    }
+  ]
+}

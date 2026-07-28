@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+## 2026-07-28 18:01
+
+- Watch whether PiS odpowie formalnie na awanturę o ceny paliw albo czy temat przejdzie w projekt legislacyjny.
+- Watch whether rząd poda harmonogram zmian w najmie krótkoterminowym lub czy pojawi się sprzeciw samorządów.
+- Watch whether Visa i Boeing potwierdzą zakres cięć oraz inspekcji przed kolejnym slotem.
+- Watch whether Trump-Zełenski, ONZ lub OpenAI dostarczą dziś dodatkowych komunikatów.
+- Watch whether Seattle gets a fuller casualty or suspect update from BBC/local officials.
+- Watch whether France and Spain add another evacuation or road-closure update around the fires.
+
 ## 2026-07-28 15:01
 
 - Resolved: first charges were filed in Wrocław; next watch is the second detainee, the remaining suspect and preventive measures.
