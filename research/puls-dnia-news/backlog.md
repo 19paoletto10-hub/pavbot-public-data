@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+## 2026-07-28 09:02
+
+- Watch whether the Wrocław case turns into formal charges or a prosecutor note.
+- Watch whether PiS announces the Morawiecki decision and whether a new club is actually formed.
+- Watch whether the digital tax draft lands in July and gets a first formal reaction from the U.S. or big tech.
+- Watch whether Seattle gets a fuller casualty or suspect update from CNN or local officials.
+- Watch whether RCB or IMGW translate the storm alert into outages, flooding or transport blocks.
+- Watch whether Bordeaux, Iran or Toronto get a fresh official follow-up before noon.
+
 ## Open
 
 ## 2026-07-28 06:01

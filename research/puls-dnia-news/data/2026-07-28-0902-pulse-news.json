@@ -1,0 +1,581 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-28",
+  "runTime": "09:02",
+  "status": "Material update",
+  "headline": "Wrocław, PiS i cyfrowy podatek podbijają poranny Puls Dnia",
+  "summary": "Nowy slot przesuwa feed do zatrzymań we Wrocławiu, decyzji PiS o Morawieckim i projektu podatku cyfrowego, a za granicą dominuje Seattle, Iran, pożary w Europie, J&J, Burnham i ryzyka AI. Alert RCB pozostaje aktywny.",
+  "items": [
+    {
+      "id": "2026-07-28-0902-01",
+      "section": "Polska",
+      "title": "Wrocław: zatrzymano podejrzanych o pobicie Ukraińców",
+      "lead": "Policja zatrzymała dwóch mężczyzn podejrzewanych o brutalny atak na parę z Ukrainy.",
+      "whatHappened": "TVN24 podał, że po niedzielnym pobiciu we Wrocławiu zatrzymano dwóch notowanych mężczyzn, a materiał doprecyzował ich profil.",
+      "keyFacts": [
+        "Zatrzymano dwóch podejrzanych.",
+        "Sprawa dotyczy pobicia pary z Ukrainy.",
+        "TVN24 opisał zatrzymanych jako osoby notowane."
+      ],
+      "reactions": [
+        "Sprawa szybko stała się jednym z głównych krajowych tematów bezpieczeństwa.",
+        "Na razie brak oficjalnego komunikatu o zarzutach."
+      ],
+      "whyItMatters": "To sygnał przejścia od poszukiwań do etapu formalnego postępowania.",
+      "context": "W poprzednim slocie temat był już obecny, ale bez takiego doprecyzowania profilu zatrzymanych.",
+      "watchNext": [
+        "Czekaj na zarzuty i kwalifikację czynu.",
+        "Sprawdzaj, czy policja poda motyw i liczbę zatrzymanych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wrocław. Wyborcza: zatrzymani w sprawie pobicia pary Ukraińców to gangster i pseudokibic",
+          "url": "https://tvn24.pl/wroclaw/wroclaw-wyborcza-zatrzymani-w-sprawie-pobicia-pary-ukraincow-to-gangster-i-pseudokibic-st9161574?source=rss"
+        }
+      ],
+      "tags": [
+        "wroclaw",
+        "policja",
+        "ukraina"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0902-02",
+      "section": "Polska",
+      "title": "Berlin: śledztwo po śmierci Polki",
+      "lead": "Prokuratura Krajowa wszczęła śledztwo po ataku w Berlinie.",
+      "whatHappened": "TVN24 podał, że po ataku w Berlinie, w którym zginęła Polka, sprawą zajęła się Prokuratura Krajowa.",
+      "keyFacts": [
+        "Ofiara była obywatelką Polski.",
+        "Sprawa ma już formalny polski wątek prokuratorski."
+      ],
+      "reactions": [
+        "To wzmacnia potrzebę współpracy polsko-niemieckiej.",
+        "Na razie brak nowych szczegółów od niemieckiej policji."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych krajowych leadów bezpieczeństwa z wątkiem międzynarodowym.",
+      "context": "W 06:01 temat był już obecny, ale teraz wchodzi w fazę śledczą.",
+      "watchNext": [
+        "Monitoruj komunikaty policji w Berlinie.",
+        "Sprawdzaj, czy polska prokuratura poda kolejne ustalenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Polka zabita w ataku w Berlinie. Prokuratura Krajowa wszczęła śledztwo",
+          "url": "https://tvn24.pl/polska/polka-zabita-w-ataku-w-berlinie-prokuratura-krajowa-wszczela-sledztwo-st9161397?source=rss"
+        }
+      ],
+      "tags": [
+        "berlin",
+        "prokuratura",
+        "bezpieczenstwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0902-03",
+      "section": "Polityka",
+      "title": "Morawiecki pod decyzją PiS",
+      "lead": "PiS ma dziś rozstrzygnąć sprawę wykluczenia Morawieckiego i jego stronników.",
+      "whatHappened": "TVN24 podał, że Komitet Polityczny PiS ma dziś podjąć decyzję o wykluczeniu Mateusza Morawieckiego i jego zaplecza, a sam Morawiecki zapowiada nowy klub.",
+      "keyFacts": [
+        "Decyzja ma zapaść na forum Komitetu Politycznego.",
+        "Morawiecki zapowiada nowy klub, jeśli jego ludzie zostaną usunięci."
+      ],
+      "reactions": [
+        "To najbardziej operacyjny etap sporu o kierownictwo w partii.",
+        "Na razie to zapowiedź, a nie ogłoszony werdykt."
+      ],
+      "whyItMatters": "Może przełożyć konflikt na realne przetasowania parlamentarne i organizacyjne.",
+      "context": "To nowy, mocniejszy krok względem wczorajszego narracyjnego sporu.",
+      "watchNext": [
+        "Śledź, czy PiS ogłosi formalną decyzję.",
+        "Sprawdzaj, czy pojawi się nowy klub lub kolejna fala wykluczeń."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Kolejna decyzja w sprawie Mateusza Morawieckiego. Co się wydarzy w PiS",
+          "url": "https://tvn24.pl/polska/kolejna-decyzja-w-sprawie-mateusza-morawieckiego-co-sie-wydarzy-w-pis-st9161593?source=rss"
+        }
+      ],
+      "tags": [
+        "pis",
+        "morawiecki",
+        "rozlam"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0902-04",
+      "section": "Polityka",
+      "title": "Rozłam w PiS sięga regionów",
+      "lead": "TVN24 opisuje, że spór w partii zaczyna ciążyć też strukturą lokalnym.",
+      "whatHappened": "Materiał TVN24 pokazuje, że konflikt wokół rozłamu w PiS nie kończy się na Warszawie i może przełożyć się na regionalne układy.",
+      "keyFacts": [
+        "Lokalni politycy próbują ustawić się wobec dwóch obozów.",
+        "Konflikt nabiera wymiaru organizacyjnego, a nie tylko medialnego."
+      ],
+      "reactions": [
+        "Regionalny wymiar sporu zwiększa jego polityczny koszt.",
+        "Brak jednej spójnej linii partyjnej."
+      ],
+      "whyItMatters": "To sygnał, że rozłam zaczyna mieć skutki strukturalne.",
+      "context": "W poprzednich slotach był to głównie komentarz, dziś temat ma bardziej praktyczny wymiar.",
+      "watchNext": [
+        "Monitoruj, czy regiony zaczną formalnie deklarować stronę sporu.",
+        "Sprawdzaj, czy pojawi się odpowiedź centrali PiS."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wpływ rozłamu w PiS na struktury regionalne. Komentarze polityków",
+          "url": "https://tvn24.pl/krakow/wplyw-rozlamu-w-pis-na-struktury-regionalne-komentarze-politykow-st9161572?source=rss"
+        }
+      ],
+      "tags": [
+        "pis",
+        "regiony",
+        "polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-0902-05",
+      "section": "Gospodarka",
+      "title": "Podatek cyfrowy coraz bliżej",
+      "lead": "Rząd potwierdza lipcowy termin projektu ustawy o podatku cyfrowym.",
+      "whatHappened": "Krzysztof Gawkowski powiedział w TVN24, że projekt ustawy o podatku cyfrowym ma pojawić się jeszcze w lipcu, po czym ruszą konsultacje międzyresortowe.",
+      "keyFacts": [
+        "Rząd nie wycofuje się z prac nad podatkiem.",
+        "Gawkowski odwołuje się do praktyki innych państw europejskich."
+      ],
+      "reactions": [
+        "To otwiera nowy konflikt z dużymi firmami cyfrowymi i potencjalnie z USA.",
+        "Pytanie o projekt ustawy wchodzi w fazę formalną."
+      ],
+      "whyItMatters": "To ważny sygnał dla rynku, relacji transatlantyckich i polityki technologicznej.",
+      "context": "To nowy krajowy materiał, nieobecny w 06:01 slocie.",
+      "watchNext": [
+        "Śledź, czy projekt faktycznie trafi do konsultacji w lipcu.",
+        "Sprawdzaj pierwsze reakcje branży i partnerów zagranicznych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Podatek cyfrowy w Polsce. Projekt ustawy do końca lipca. Gawkowski: przed nami teraz konsultacje międzyrządowe",
+          "url": "https://tvn24.pl/biznes/z-kraju/podatek-cyfrowy-w-polsce-projekt-ustawy-do-konca-lipca-gawkowski-przed-nami-teraz-konsultacje-miedzyrzadowe-st9161630?source=rss"
+        }
+      ],
+      "tags": [
+        "podatek-cyfrowy",
+        "big-tech",
+        "usa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0902-06",
+      "section": "Bezpieczeństwo",
+      "title": "DK62: śmiertelne zderzenie z ciężarówką",
+      "lead": "Na DK62 w Pustych Łąkach kierowca zginął po czołowym zderzeniu z ciężarówką.",
+      "whatHappened": "TVN24 podał, że osobowa Honda zderzyła się czołowo z ciężarówką, a kierowca zginął na miejscu; droga została zablokowana na czas działań służb.",
+      "keyFacts": [
+        "Wypadek wydarzył się na DK62 w Pustych Łąkach.",
+        "Policja potwierdziła ofiarę śmiertelną.",
+        "Droga była zamknięta podczas działań służb."
+      ],
+      "reactions": [
+        "Sprawa może generować dłuższe utrudnienia w ruchu lokalnym.",
+        "Na razie brak szerszego komunikatu o przyczynie."
+      ],
+      "whyItMatters": "To bezpośredni sygnał bezpieczeństwa i mobilności dla regionu.",
+      "context": "To świeży lead z samego rana, nieobecny w poprzednim slocie.",
+      "watchNext": [
+        "Czekaj na ustalenia policji o przyczynie wypadku.",
+        "Sprawdzaj, czy pojawią się informacje o długości utrudnień."
+      ],
+      "sources": [
+        {
+          "title": "TVN Warszawa: Czołowo zderzył się z ciężarówką, kierowca nie przeżył",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/dk-62-puste-laki-czolowo-zderzyl-sie-z-ciezarowka-nie-przezyl-utrudnienia-st9161668?source=rss"
+        }
+      ],
+      "tags": [
+        "wypadek",
+        "dk62",
+        "policja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0902-07",
+      "section": "Bezpieczeństwo",
+      "title": "Seattle: śmiertelne strzelanie na festiwalu",
+      "lead": "CNN opisuje śmiertelne strzelanie na festiwalu kulinarnym w Seattle.",
+      "whatHappened": "CNN This Morning i CNN Newsroom podają, że w Seattle doszło do strzelania na letnim festiwalu jedzenia, a w szerszym bloku bezpieczeństwa pojawia się też aktualizacja Pentagonu o 600+ rannych i 18 zabitych.",
+      "keyFacts": [
+        "W Seattle zginęły co najmniej trzy osoby.",
+        "Kilka kolejnych osób zostało rannych.",
+        "CNN łączy ten blok z wojną w Iranie i europejskimi pożarami."
+      ],
+      "reactions": [
+        "To jeden z najmocniejszych amerykańskich newsów poranka.",
+        "W USA rośnie też tło o kosztach wojny i bezpieczeństwie publicznym."
+      ],
+      "whyItMatters": "To wpływa na debatę o bezpieczeństwie publicznym i polityce USA.",
+      "context": "CNN odświeżył ten wątek w najnowszych transcriptach z 27 lipca.",
+      "watchNext": [
+        "Śledź ostateczny bilans ofiar i stan podejrzanego.",
+        "Sprawdzaj, czy lokalne władze podadzą motyw i tło zdarzenia."
+      ],
+      "sources": [
+        {
+          "title": "CNN This Morning transcripts",
+          "url": "https://transcripts.cnn.com/show/ctmo"
+        },
+        {
+          "title": "CNN Newsroom transcripts",
+          "url": "https://transcripts.cnn.com/show/cnr"
+        }
+      ],
+      "tags": [
+        "seattle",
+        "strzelanina",
+        "usa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0902-08",
+      "section": "Świat",
+      "title": "Europa: pożary dochodzą do Bordeaux",
+      "lead": "BBC ostrzega, że pożar zbliża się do Bordeaux i służby szykują kolejne ewakuacje.",
+      "whatHappened": "BBC relacjonuje, że front pożaru zbliża się do Bordeaux, a Francja i Hiszpania nadal walczą z bardzo trudnymi do opanowania pożarami.",
+      "keyFacts": [
+        "Pożary we Francji i Hiszpanii pozostają szerokie i trudne do opanowania.",
+        "BBC opisuje skalę ewakuacji i ryzyko kolejnej fali upałów."
+      ],
+      "reactions": [
+        "Lokalne władze przygotowują kolejne ograniczenia ruchu i wsparcie ewakuacyjne.",
+        "Pożary pozostają jednym z głównych tematów europejskich mediów."
+      ],
+      "whyItMatters": "To nadal jeden z największych kryzysów pogodowo-zdrowotnych w Europie.",
+      "context": "Ten blok utrzymuje się od poprzednich slotów, ale BBC dziś go odświeżyło i doprecyzowało skalę.",
+      "watchNext": [
+        "Sprawdzaj, czy Bordeaux dostanie formalną ewakuację.",
+        "Monitoruj, czy UE poda nowe wsparcie lotnicze lub logistyczne."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Wildfire now nine miles from French city of Bordeaux",
+          "url": "https://www.bbc.co.uk/news/articles/ckg34128nvpo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "BBC News: Devastating European wildfires in maps",
+          "url": "https://www.bbc.co.uk/news/articles/cj638jx0l53o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "francja",
+        "hiszpania",
+        "pozary"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0902-09",
+      "section": "Świat",
+      "title": "Iran: Trump mówi o rozmowach",
+      "lead": "BBC relacjonuje sygnał o rozmowach podczas pauzy w atakach na Iran.",
+      "whatHappened": "BBC podaje, że Trump mówi o rozmowach z Iranem w przerwie w atakach, a Teheran zaprzecza bezpośrednim negocjacjom.",
+      "keyFacts": [
+        "Wątek dyplomatyczny wraca w trakcie pauzy w uderzeniach.",
+        "Iran nie potwierdza bezpośrednich rozmów.",
+        "CNN wciąż trzyma ten konflikt jako tło bezpieczeństwa."
+      ],
+      "reactions": [
+        "Rynek i sojusznicy będą czytać każdy sygnał deeskalacji.",
+        "Brak potwierdzenia po stronie irańskiej osłabia tezę o przełomie."
+      ],
+      "whyItMatters": "To może przesądzić o kierunku dalszej eskalacji albo rozmów.",
+      "context": "Wątek był już obecny w 06:01, ale nadal nie schodzi z radaru.",
+      "watchNext": [
+        "Śledź, czy pojawi się oficjalne potwierdzenie rozmów.",
+        "Monitoruj, czy CNN poda świeższy bilans uderzeń i ofiar."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Trump says Iran war talks taking place during lull in strikes",
+          "url": "https://www.bbc.co.uk/news/articles/c62xn4vzmnpo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "iran",
+        "usa",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0902-10",
+      "section": "Gospodarka",
+      "title": "J&J oferuje ugodę 5,5 mld dolarów",
+      "lead": "BBC podaje, że Johnson & Johnson chce zamknąć wieloletni spór o talk.",
+      "whatHappened": "BBC informuje, że Johnson & Johnson oferuje do 5,5 mld dolarów ugody w sporze o produkty talkowe i zarzuty dotyczące raka.",
+      "keyFacts": [
+        "Spór ciągnie się latami i obejmuje tysiące roszczeń.",
+        "Ugoda ma zamknąć wieloletnią batalię prawną."
+      ],
+      "reactions": [
+        "To ważny sygnał dla rynku farmaceutycznego i prawników procesowych.",
+        "BBC przedstawia to jako próbę domknięcia długiego sporu."
+      ],
+      "whyItMatters": "To jedna z największych bieżących historii korporacyjno-prawnych w USA.",
+      "context": "Nowy materiał z BBC RSS, świeższy niż poranny polski blok.",
+      "watchNext": [
+        "Sprawdzaj, czy ugoda uzyska wymaganą akceptację roszczących.",
+        "Monitoruj reakcję rynku i kolejne kroki prawne."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Johnson & Johnson offers to pay $5.5bn to settle baby powder lawsuits",
+          "url": "https://www.bbc.co.uk/news/articles/clyqnz52rp6o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "jj",
+        "farmacja",
+        "ugoda"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-0902-11",
+      "section": "Gospodarka",
+      "title": "Burnham łączy szkołę z pracą",
+      "lead": "BBC opisuje plan, by od 14. roku życia mocniej łączyć naukę z lokalnym rynkiem pracy.",
+      "whatHappened": "BBC podaje, że rząd chce oferować uczniom od 14. roku życia przedmioty techniczne powiązane z lokalnymi miejscami pracy, w tym AI i manufacturing.",
+      "keyFacts": [
+        "Plan ma skrócić drogę między szkołą a pracą.",
+        "W centrum są lokalne potrzeby rynku i kompetencje techniczne."
+      ],
+      "reactions": [
+        "To duża zmiana akcentu w brytyjskiej polityce edukacyjnej.",
+        "Dyskusja dotyczy też balansu między edukacją akademicką a zawodową."
+      ],
+      "whyItMatters": "To może wpłynąć na rynek pracy, szkolnictwo i politykę społeczną w UK.",
+      "context": "To świeży public-policy materiał z BBC, który dobrze pasuje do sekcji gospodarczej.",
+      "watchNext": [
+        "Śledź, czy rząd poda szczegóły wdrożenia.",
+        "Monitoruj, czy pojawi się reakcja szkół i pracodawców."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Schools to offer technical subjects to pupils from age 14, Burnham says",
+          "url": "https://www.bbc.co.uk/news/articles/cj4k2djd5qpo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "uk",
+        "edukacja",
+        "rynek-pracy"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-0902-12",
+      "section": "Technologia",
+      "title": "Chiny: deepfake'i utrudniają komunikację kryzysową",
+      "lead": "BBC ostrzega, że fałszywe filmy AI zakłócają informacje podczas katastrof naturalnych.",
+      "whatHappened": "BBC podaje, że po burzach i powodziach w Chinach w mediach społecznościowych pojawiają się fałszywe filmy AI, które utrudniają komunikację kryzysową.",
+      "keyFacts": [
+        "Deepfake'i zalewają media społecznościowe po klęskach żywiołowych.",
+        "Problem dotyczy wiarygodności informacji w sytuacji kryzysowej."
+      ],
+      "reactions": [
+        "To mocny przykład praktycznego ryzyka generatywnej AI.",
+        "BBC pokazuje, że problem nie jest tylko teoretyczny."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na bezpieczeństwo informacyjne i reakcje kryzysowe.",
+      "context": "Ten materiał łączy technologię z bezpieczeństwem publicznym.",
+      "watchNext": [
+        "Śledź, czy chińskie władze wprowadzą dodatkowe reguły lub blokady.",
+        "Monitoruj, czy inne redakcje podadzą podobne przypadki z regionu."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: China's new challenge as natural disasters strike - fake AI videos",
+          "url": "https://www.bbc.co.uk/news/articles/cx27mjvxgg1o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "ai",
+        "deepfake",
+        "chiny"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-0902-13",
+      "section": "Bezpieczeństwo",
+      "title": "Toronto: ostrzelano konsulat USA",
+      "lead": "BBC podaje, że konsulat USA w Toronto został ostrzelany po raz drugi w tym roku.",
+      "whatHappened": "BBC informuje o kolejnym ostrzelaniu konsulatu USA w Toronto, co oznacza drugi taki incydent w 2026 roku.",
+      "keyFacts": [
+        "To drugi taki incydent w tym roku.",
+        "Sprawa dotyczy placówki dyplomatycznej USA w Kanadzie."
+      ],
+      "reactions": [
+        "Taki incydent zwykle uruchamia dodatkowe procedury ochronne.",
+        "Na razie brak pełnego oficjalnego wyjaśnienia motywu."
+      ],
+      "whyItMatters": "To sygnał napięcia wokół ochrony placówek dyplomatycznych.",
+      "context": "To nowy bezpiecznikowy sygnał z zagranicy w porannym slocie.",
+      "watchNext": [
+        "Śledź, czy policja poda motyw i sprawcę.",
+        "Monitoruj, czy USA lub Kanada ogłoszą dodatkowe zabezpieczenia."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Shots fired at US consulate in Toronto for a second time this year",
+          "url": "https://www.bbc.co.uk/news/articles/ckgvnw44rz9o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "kanada",
+        "dyplomacja",
+        "bezpieczenstwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-0902-14",
+      "section": "Świat",
+      "title": "Ekwador: wojna narkotykowa trwa",
+      "lead": "BBC pokazuje policję walczącą z gangami, bronią i korupcją.",
+      "whatHappened": "BBC opisuje front walki z przestępczością zorganizowaną w Ekwadorze jako ciągły konflikt policji z gangami, bronią i korupcją.",
+      "keyFacts": [
+        "Przestępczość zorganizowana uderza w państwo i policję.",
+        "BBC pokazuje problem jako połączenie przemocy i korupcji."
+      ],
+      "reactions": [
+        "To ważny kontekst dla bezpieczeństwa Ameryki Łacińskiej.",
+        "Sprawa ma wymiar długoterminowy, nie jednorazowy."
+      ],
+      "whyItMatters": "To pokazuje, że kryzys narkotykowy w Ekwadorze pozostaje bardzo aktywny.",
+      "context": "To świeży materiał z BBC RSS i dobry kontrapunkt dla europejskich i amerykańskich newsów.",
+      "watchNext": [
+        "Monitoruj, czy pojawi się większa ofensywa rządu lub służb.",
+        "Śledź, czy BBC poda twarde liczby dotyczące przemocy i aresztowań."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: On the front line of Ecuador's drugs war, police fight gangs, guns and corruption",
+          "url": "https://www.bbc.co.uk/news/articles/cdx7n1r54nno?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "ekwador",
+        "gangi",
+        "bezpieczenstwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-0902-15",
+      "section": "Alerty",
+      "title": "RCB ostrzega przed burzami",
+      "lead": "Alert obejmuje burze, silny wiatr, ulewny deszcz i lokalny grad.",
+      "whatHappened": "RCB rozesłało alert na 28/29 lipca o burzach, silnym wietrze, ulewnym deszczu i lokalnie gradzie.",
+      "keyFacts": [
+        "Alert obejmuje kilka regionów Polski.",
+        "Największe ryzyko to burze, wiatr i intensywny deszcz."
+      ],
+      "reactions": [
+        "To nadal aktywny sygnał operacyjny dla podróży i energii.",
+        "Brak jeszcze wiadomości o szerszych skutkach w terenie."
+      ],
+      "whyItMatters": "Może wpłynąć na transport, lokalne zalania i awarie.",
+      "context": "Alert utrzymuje się z poprzedniego slota i pozostaje ważny.",
+      "watchNext": [
+        "Śledź aktualizacje RCB i lokalnych służb.",
+        "Sprawdzaj, czy pojawią się podtopienia, szkody lub przerwy w dostawie prądu."
+      ],
+      "sources": [
+        {
+          "title": "RCB: Alert RCB (28/29.07) – burze, silny wiatr i ulewny deszcz",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb-282907--burze-silny-wiatr-i-ulewny-deszcz"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "rcb",
+        "burze"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0902-16",
+      "section": "Alerty",
+      "title": "IMGW utrzymuje burzowy tydzień",
+      "lead": "Prognoza tygodniowa nadal pokazuje opady, burze i porywisty wiatr.",
+      "whatHappened": "IMGW utrzymuje w prognozie tygodniowej przelotne opady, burze i porywisty wiatr w całym kraju.",
+      "keyFacts": [
+        "Tydzień 24-30 lipca pozostaje pogodowo niestabilny.",
+        "W tle wciąż wracają epizody upału i burz."
+      ],
+      "reactions": [
+        "To potwierdza, że alert RCB nie jest jednorazowym wyjątkiem.",
+        "Daje to podstawę do ostrożności w planowaniu dnia."
+      ],
+      "whyItMatters": "To tło dla ewentualnych lokalnych utrudnień i ostrzeżeń służb.",
+      "context": "To nadal aktualne wsparcie dla alertu RCB.",
+      "watchNext": [
+        "Monitoruj, czy prognoza przełoży się na kolejne ostrzeżenia.",
+        "Sprawdzaj, czy upał lub burze przesuną się na nowe regiony."
+      ],
+      "sources": [
+        {
+          "title": "IMGW: Prognoza pogody na tydzień 24-30.07.2026",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-24-30-07-2026/"
+        }
+      ],
+      "tags": [
+        "imgw",
+        "prognoza",
+        "burze"
+      ],
+      "priority": "high"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS: Najnowsze wiadomości",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN This Morning / transcripts",
+      "url": "https://transcripts.cnn.com/show/ctmo"
+    },
+    {
+      "title": "CNN Newsroom / transcripts",
+      "url": "https://transcripts.cnn.com/show/cnr"
+    },
+    {
+      "title": "RCB alert: burze 28/29.07",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb-282907--burze-silny-wiatr-i-ulewny-deszcz"
+    },
+    {
+      "title": "IMGW prognoza tygodniowa 24-30.07.2026",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-24-30-07-2026/"
+    }
+  ]
+}
