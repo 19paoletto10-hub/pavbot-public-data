@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-27
+Last updated: 2026-07-28
 
 ## Current Understanding
 
@@ -304,6 +304,15 @@ oraz Londyn potwierdzają pierwszy kontakt Zełenski-Burnham w Portsmouth,
 skupiony na wspólnej produkcji obronnej. Na Zachodnim Brzegu dochodzi do
 kolejnej eskalacji: AP opisuje podpalenie dwóch meczetów po fali przemocy
 osadniczej.
+Po porannym runie 28 lipca główny ciężar przesunął się na dzisiejszą wizytę
+Zełenskiego u Trumpa, z osobnym wątkiem senackich sankcji po Grahamie oraz
+problemem opóźnionego wydatkowania części pomocy USA dla Ukrainy. Wschodnia
+flanka NATO pozostaje wysoko po serii zestrzeleń podejrzanych rosyjskich dronów
+przez Rumunię, a polski komponent obronny dostał konkretny komunikat MON o
+liście intencyjnym NITRO-CHEM i BAE Systems. USA-Iran jest obecnie kruchą
+deeskalacją z utrzymaną blokadą Ormuzu, krajowo wraca wątek TK/SN po zapowiedzi
+ślubowania prof. Sławomira Patyry, a społecznym follow-upem jest potwierdzony
+polski wymiar zamachu w Berlinie.
 
 ## Stable Facts
 
@@ -533,6 +542,7 @@ konfliktowaniu Polaków i Ukraińców.
 
 ## Recent Reports
 
+- [2026-07-28](runs/2026-07-28.md)
 - [2026-07-27-1933](runs/2026-07-27-1933.md)
 - [2026-07-27](runs/2026-07-27.md)
 - [2026-07-26](runs/2026-07-26.md)
