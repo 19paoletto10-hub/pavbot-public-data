@@ -2,6 +2,14 @@
 
 ## Open
 
+## 2026-07-28 06:01
+
+- Resolved: police detained suspects in Wrocław after the assault on the Ukrainian couple; next watch is the charge sheet and prosecutor note.
+- Watch whether the Berlin probe gets a fuller German or Polish official update on motive and suspect status.
+- Watch whether RCB or IMGW translate the storm alert into outages, flooding or transport blocks during the day.
+- Watch whether Trump-Iran talks get direct confirmation or slide back into escalation.
+- Watch whether Bordeaux or the wider Europe fire block gets another evacuation or road-closure update.
+
 ## 2026-07-27 21:02
 
 - Watch whether police in Wrocław identify or detain the attackers after the assault on the Ukrainian couple.

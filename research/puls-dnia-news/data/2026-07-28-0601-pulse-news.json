@@ -1,0 +1,573 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-28",
+  "runTime": "06:01",
+  "status": "Material update",
+  "headline": "Wrocław, Berlin i alerty pogodowe dominują poranny Puls Dnia",
+  "summary": "Nowy slot przesuwa feed z etapu poszukiwań do zatrzymań we Wrocławiu, dokłada śledztwo po ataku w Berlinie oraz wzmacnia blok alertów pogodowych na 28/29 lipca. BBC odświeża pożary w Europie, rozmowy o Iranie i temat szkoła-praca w UK, a CNN pozostaje tylko tłem z 27 lipca.",
+  "items": [
+    {
+      "id": "2026-07-28-0601-01",
+      "section": "Polska",
+      "title": "Wrocław: zatrzymano podejrzanych o pobicie Ukraińców",
+      "lead": "Policja zatrzymała mężczyzn podejrzewanych o atak na parę z Ukrainy.",
+      "whatHappened": "TVN24 podał, że po sobotnim pobiciu we Wrocławiu doszło do zatrzymań. Wcześniej policja szukała sprawców.",
+      "keyFacts": [
+        "Zdarzenie dotyczyło pary z Ukrainy.",
+        "Zatrzymania zamykają etap samego poszukiwania sprawców."
+      ],
+      "reactions": [
+        "Sprawa wywołała szybkie zainteresowanie medialne i społeczne.",
+        "Teraz ciężar przesuwa się na kwalifikację czynu i zarzuty."
+      ],
+      "whyItMatters": "To przejście z fazy bezpieczeństwa publicznego do fazy postępowania karnego.",
+      "context": "Wczorajszy slot opisywał ten sam wątek jako trwające poszukiwanie sprawców.",
+      "watchNext": [
+        "Czekaj na komunikat policji o liczbie zatrzymanych i zarzutach.",
+        "Sprawdzaj, czy prokuratura poda motyw i kwalifikację prawną."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wrocław. Mężczyźni podejrzewani o pobicie Ukraińców zatrzymani",
+          "url": "https://tvn24.pl/wroclaw/wroclaw-mezczyzni-podejrzewani-o-pobicie-ukraincow-zatrzymani-st9161482?source=rss"
+        }
+      ],
+      "tags": [
+        "wroclaw",
+        "policja",
+        "ukraina"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0601-02",
+      "section": "Polska",
+      "title": "Berlin: śledztwo po śmierci Polki",
+      "lead": "Prokuratura Krajowa wszczęła śledztwo po ataku w Berlinie.",
+      "whatHappened": "TVN24 podaje, że po ataku w Berlinie, w którym zginęła Polka, sprawą zajęła się Prokuratura Krajowa.",
+      "keyFacts": [
+        "Ofiarą była Polka.",
+        "Sprawa ma już formalny polski wątek prokuratorski."
+      ],
+      "reactions": [
+        "To potencjalnie otwiera kanał współpracy polsko-niemieckiej.",
+        "Na razie brak szerszej oficjalnej reakcji w materiale."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych krajowych leadów bezpieczeństwa, bo dotyczy polskiej ofiary za granicą.",
+      "context": "Wczoraj temat był już obecny, ale bez tak wyraźnego sygnału o śledztwie.",
+      "watchNext": [
+        "Monitoruj ustalenia niemieckiej policji.",
+        "Sprawdzaj, czy polska prokuratura poda kolejne szczegóły."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Polka zabita w ataku w Berlinie. Prokuratura Krajowa wszczęła śledztwo",
+          "url": "https://tvn24.pl/polska/polka-zabita-w-ataku-w-berlinie-prokuratura-krajowa-wszczela-sledztwo-st9161397?source=rss"
+        }
+      ],
+      "tags": [
+        "berlin",
+        "prokuratura",
+        "bezpieczenstwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0601-03",
+      "section": "Polska",
+      "title": "Poczobut planuje wizytę w USA",
+      "lead": "Andrzej Poczobut zapowiada podróż do Stanów Zjednoczonych.",
+      "whatHappened": "TVN24 informuje, że Poczobut planuje wyjazd do USA na przełomie września i października po zaproszeniu środowisk polskich.",
+      "keyFacts": [
+        "Planowana jest wizyta na przełomie września i października.",
+        "W programie mają się znaleźć spotkania z Polonią i władzami USA."
+      ],
+      "reactions": [
+        "To sygnał, że temat Poczobuta pozostaje aktywny politycznie.",
+        "Brak w materiale nowych reakcji instytucjonalnych."
+      ],
+      "whyItMatters": "Wątek łączy polską politykę pamięci, dyplomację i sprawy białoruskie.",
+      "context": "To świeży lead z porannego feedu TVN24.",
+      "watchNext": [
+        "Sprawdzaj potwierdzenie terminu i harmonogramu wizyty.",
+        "Monitoruj reakcje środowisk polonijnych i dyplomatycznych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Poczobut planuje odwiedzić USA",
+          "url": "https://tvn24.pl/polska/poczobut-planuje-odwiedzic-usa-z-niecierpliwoscia-oczekujemy-andrzeja-padla-tez-data-st9161530?source=rss"
+        }
+      ],
+      "tags": [
+        "poczobut",
+        "usa",
+        "dyplomacja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-0601-04",
+      "section": "Polska",
+      "title": "Kuczmierowski chce uchylenia ENA",
+      "lead": "Adwokat byłego szefa RARS złożył wniosek o uchylenie europejskiego nakazu aresztowania.",
+      "whatHappened": "TVN24 pisze, że pełnomocnik Michała Kuczmierowskiego przesłał do sądu wniosek o uchylenie ENA i powołał się na sprawę Ziobry.",
+      "keyFacts": [
+        "Wniosek trafił do sądu w Warszawie.",
+        "Argumentacja odwołuje się do głośnej sprawy Zbigniewa Ziobry."
+      ],
+      "reactions": [
+        "Sprawa może wywołać kolejną falę porównań między różnymi postępowaniami ekstradycyjnymi.",
+        "Na razie to ruch procesowy, nie decyzja sądu."
+      ],
+      "whyItMatters": "To ważny sygnał dla szerszej debaty o spójności traktowania podobnych spraw karno-ekstradycyjnych.",
+      "context": "Wcześniejsze sloty już śledziły temat Ziobry; teraz dochodzi kolejny powiązany wniosek.",
+      "watchNext": [
+        "Czekaj na reakcję sądu i prokuratury.",
+        "Sprawdzaj, czy pojawi się formalny komentarz stron."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Adwokat Kuczmierowskiego przesłał do sądu wniosek o uchylenie ENA",
+          "url": "https://tvn24.pl/polska/adwokat-bylego-szefa-rars-michala-kuczmierowskiego-przeslal-do-sadu-wniosek-o-uchylenie-ena-st9161533?source=rss"
+        }
+      ],
+      "tags": [
+        "rars",
+        "ena",
+        "ziobro"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-0601-05",
+      "section": "Polityka",
+      "title": "PiS po rozłamie traci spójność lokalną",
+      "lead": "Socjolog analizuje, jak lokalni politycy PiS mogą reagować na rozłam.",
+      "whatHappened": "TVN24 publikuje analizę Jarosława Flisa o tym, jak rozłam wpływa na zachowanie lokalnych struktur partii.",
+      "keyFacts": [
+        "Temat nie dotyczy już tylko centrali, ale także szczebla lokalnego.",
+        "Wątek ma konsekwencje dla lojalności i dyscypliny partyjnej."
+      ],
+      "reactions": [
+        "Narracja o rozłamie staje się coraz bardziej osadzona w konkretnych strukturach.",
+        "To nadal komentarz analityczny, nie formalna decyzja partii."
+      ],
+      "whyItMatters": "Jeśli lokalni działacze zaczną się dystansować, konflikt może wejść w fazę organizacyjnego osłabienia PiS.",
+      "context": "Wczorajsze sloty opisywały już napięcia wokół Kurskiego i Morawieckiego.",
+      "watchNext": [
+        "Sprawdzaj, czy pojawią się formalne odpowiedzi partii.",
+        "Monitoruj, czy lokalni politycy zaczną przechodzić do nowych frakcji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Jak zachowają się lokalni politycy PiS? Socjolog o rozłamie",
+          "url": "https://tvn24.pl/polska/jaroslaw-flis-o-lokalnych-politykach-pis-i-sondazach-po-rozlamie-st9161357?source=rss"
+        }
+      ],
+      "tags": [
+        "pis",
+        "rozlam",
+        "analiza"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-0601-06",
+      "section": "Polityka",
+      "title": "PiS: kolejna rysa po komentarzach o Kurskim i Morawieckim",
+      "lead": "Krzysztof Szczucki mówi, że to, co się wydarzyło, obciąża PiS.",
+      "whatHappened": "TVN24 relacjonuje komentarz Człowieka Morawieckiego po wywiadzie Jacka Kurskiego, który ponownie podbija konflikt wewnątrz partii.",
+      "keyFacts": [
+        "Spór dotyczy relacji między obozem Morawieckiego i resztą partii.",
+        "Wypowiedź wzmacnia narrację o odpowiedzialności PiS za chaos."
+      ],
+      "reactions": [
+        "To kolejny publiczny sygnał pogłębiający podział.",
+        "Brak w materiale finalnej odpowiedzi kierownictwa partii."
+      ],
+      "whyItMatters": "To potwierdza, że rozłam PiS nie jest już jednorazowym incydentem, tylko trwałą osią konfliktu.",
+      "context": "Ten sam konflikt przewija się przez poprzednie sloty, ale dziś dostaje świeżą, ostrzejszą ramę.",
+      "watchNext": [
+        "Śledź, czy Kaczyński albo rzecznicy partii odpowiedzą oficjalnie.",
+        "Sprawdzaj, czy konflikt zacznie się przekładać na lokalne listy i głosowania."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Człowiek Morawieckiego o Kurskim i PiS",
+          "url": "https://tvn24.pl/polska/krzysztof-szczucki-komentuje-wywiad-jacka-kurskiego-nie-wierze-ze-poszedl-tam-sam-to-co-sie-wydarzylo-obciaza-pis-st9161468?source=rss"
+        }
+      ],
+      "tags": [
+        "pis",
+        "kurski",
+        "morawiecki"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-0601-07",
+      "section": "Świat",
+      "title": "Ogień podchodzi pod Bordeaux",
+      "lead": "BBC ostrzega, że pożar jest już blisko miasta.",
+      "whatHappened": "BBC podaje, że ogień znajduje się około dziewięciu mil od Bordeaux, a lokalne władze szykują się na kolejne ewakuacje.",
+      "keyFacts": [
+        "Mer ostrzega przed możliwymi kolejnymi ewakuacjami.",
+        "Sytuację określa się jako katastrofalną."
+      ],
+      "reactions": [
+        "Służby i samorządy utrzymują stan wysokiej gotowości.",
+        "Mieszkańcy dostają przygotowanie do ewakuacji zamiast uspokajających sygnałów."
+      ],
+      "whyItMatters": "To bieżący, operacyjny obraz kryzysu pożarowego w Europie Zachodniej.",
+      "context": "W poprzednich slotach pożary były już ważnym tematem, ale teraz wchodzą w bardziej precyzyjną fazę zagrożenia dla Bordeaux.",
+      "watchNext": [
+        "Sprawdzaj decyzje o ewakuacji.",
+        "Monitoruj, czy pożar zbliży się do zabudowań lub dróg."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Wildfire now nine miles from French city of Bordeaux, mayor warns",
+          "url": "https://www.bbc.co.uk/news/articles/ckg34128nvpo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "pozary",
+        "francja",
+        "ewakuacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0601-08",
+      "section": "Świat",
+      "title": "Pożary w Europie wciąż bez pełnej kontroli",
+      "lead": "BBC pokazuje skalę pożarów we Francji i Hiszpanii.",
+      "whatHappened": "BBC publikuje mapy i opisuje, że pożar pod Bordeaux spalił już ogromny obszar, a region Madrytu zmaga się z jednymi z najgorszych pożarów w historii.",
+      "keyFacts": [
+        "W grę wchodzą duże obszary spalonych terenów.",
+        "Hiszpania i Francja walczą równolegle z wieloma frontami ognia."
+      ],
+      "reactions": [
+        "To wzmacnia presję na służby ratownicze i lokalne władze.",
+        "Tło klimatyczne jest już częścią politycznego i publicznego odbioru."
+      ],
+      "whyItMatters": "To nie jest lokalny incydent, tylko szerszy europejski kryzys pogodowo-pożarowy.",
+      "context": "To rozwinięcie wątku, który wczoraj był już obecny, ale dziś dostaje bardziej konkretną mapę szkód.",
+      "watchNext": [
+        "Sprawdzaj kolejne ewakuacje i zamknięcia dróg.",
+        "Śledź, czy pojawią się ostrzeżenia dla podróżnych."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Devastating European wildfires in maps - and how they're being tackled",
+          "url": "https://www.bbc.co.uk/news/articles/cj638jx0l53o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "pozary",
+        "hiszpania",
+        "francja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0601-09",
+      "section": "Świat",
+      "title": "Trump mówi o rozmowach z Iranem podczas przerwy w atakach",
+      "lead": "BBC relacjonuje sygnał o możliwym oknie dyplomatycznym.",
+      "whatHappened": "Według BBC Donald Trump twierdzi, że rozmowy o wojnie z Iranem trwają w czasie przerwy w atakach, a Teheran zaprzecza bezpośrednim negocjacjom.",
+      "keyFacts": [
+        "Trump sugeruje możliwość porozumienia.",
+        "Iran publicznie zaprzecza, że prowadzi bezpośrednie rozmowy."
+      ],
+      "reactions": [
+        "To wciąż kruchy sygnał, nie twarde potwierdzenie dyplomacji.",
+        "Każdy kolejny komunikat może wpłynąć na rynek ropy i bezpieczeństwo morskie."
+      ],
+      "whyItMatters": "To kluczowy wskaźnik, czy ryzyko eskalacji w Zatoce się obniża, czy tylko chwilowo pauzuje.",
+      "context": "CNN z 27 lipca nadal trzyma ten sam węzeł jako dominujący temat świata.",
+      "watchNext": [
+        "Czekaj na potwierdzenie rozmów po stronie USA lub Iranu.",
+        "Monitoruj, czy przerwa w atakach utrzyma się dłużej niż kilka godzin."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Trump says Iran war talks taking place during lull in strikes",
+          "url": "https://www.bbc.co.uk/news/articles/c62xn4vzmnpo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "CNN transcripts: CNN This Morning / context from 27 July",
+          "url": "https://transcripts.cnn.com/show/ctmo"
+        }
+      ],
+      "tags": [
+        "iran",
+        "usa",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0601-10",
+      "section": "Bezpieczeństwo",
+      "title": "Pentagon przegląda obecność sił USA w Europie",
+      "lead": "W Waszyngtonie ruszył przegląd amerykańskiej obecności wojskowej w Europie.",
+      "whatHappened": "TVN24 podaje, że Elbridge Colby poinformował o rozpoczęciu przeglądu, a Pete Hegseth sygnalizował ten kierunek na spotkaniu NATO w Brukseli.",
+      "keyFacts": [
+        "To oficjalny przegląd struktury obecności sił USA w Europie.",
+        "Wątek był już sygnalizowany na forum NATO."
+      ],
+      "reactions": [
+        "Sojusznicy będą czytać to jako test trwałości amerykańskich gwarancji.",
+        "Na razie brak informacji o konkretnych przesunięciach wojsk."
+      ],
+      "whyItMatters": "To może wpłynąć na europejską architekturę bezpieczeństwa i planowanie NATO.",
+      "context": "To nowy wątek porannego feedu TVN24 i jeden z mocniejszych leadów bezpieczeństwa.",
+      "watchNext": [
+        "Śledź, czy pojawią się deklaracje o cięciach, rotacjach lub utrzymaniu stanu obecnego.",
+        "Monitoruj reakcje NATO i rządów europejskich."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pentagon rozpoczął przegląd obecności sił zbrojnych w Europie",
+          "url": "https://tvn24.pl/swiat/pentagon-rozpoczelismy-przeglad-obecnosci-sil-zbrojnych-w-europie-st9161575?source=rss"
+        }
+      ],
+      "tags": [
+        "pentagon",
+        "nato",
+        "europa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0601-11",
+      "section": "Bezpieczeństwo",
+      "title": "Rosja podnosi koszty i zaostrza przepisy dla cudzoziemców",
+      "lead": "Moskwa wprowadza nowe bariery administracyjne dla obcokrajowców.",
+      "whatHappened": "TVN24 opisuje nowe rosyjskie przepisy i wyższe opłaty, które mogą sięgać wielokrotności dotychczasowych stawek.",
+      "keyFacts": [
+        "Zmiana dotyczy formalności związanych z cudzoziemcami.",
+        "Koszty mogą być znacząco wyższe niż wcześniej."
+      ],
+      "reactions": [
+        "To kolejny sygnał zaostrzania polityki migracyjnej i kontroli.",
+        "W praktyce utrudni ruch osób i część aktywności gospodarczej."
+      ],
+      "whyItMatters": "To ważne dla Polaków i innych cudzoziemców działających lub podróżujących do Rosji.",
+      "context": "W feedzie TVN24 to jeden z bardziej wyrazistych wątków międzynarodowych z kategorii bezpieczeństwa i ruchu granicznego.",
+      "watchNext": [
+        "Sprawdzaj datę wejścia przepisów w życie.",
+        "Monitoruj, czy pojawią się wyjątki albo odpowiedź innych państw."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Rosja wprowadza nowe przepisy dla cudzoziemców",
+          "url": "https://tvn24.pl/biznes/ze-swiata/nawet-12-razy-wiecej-rosja-wprowadza-nowe-przepisy-dla-cudzoziemcow-st9161434?source=rss"
+        }
+      ],
+      "tags": [
+        "rosja",
+        "migracja",
+        "granice"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-0601-12",
+      "section": "Gospodarka",
+      "title": "J&J oferuje ugodę do 5,5 mld dolarów",
+      "lead": "Gigant farmaceutyczny chce zamknąć wieloletni spór o talk.",
+      "whatHappened": "BBC informuje, że Johnson & Johnson zaoferował do 5,5 mld dolarów ugody w sporach dotyczących talku i domniemanych skutków zdrowotnych.",
+      "keyFacts": [
+        "To propozycja ugodowa, a nie jeszcze finalne rozstrzygnięcie.",
+        "Spór trwa od lat i dotyczy dużej liczby roszczeń."
+      ],
+      "reactions": [
+        "Rynek odczyta to jako próbę zamknięcia wieloletniego ryzyka prawnego.",
+        "Poszkodowani i sądy nadal muszą zaakceptować warunki."
+      ],
+      "whyItMatters": "To duży temat korporacyjny o skali finansowej, wizerunkowej i prawnej.",
+      "context": "BBC wrzuca ten materiał wysoko w porannym RSS, więc traktujemy go jako świeży biznesowy lead.",
+      "watchNext": [
+        "Śledź reakcję powodów i sądu.",
+        "Sprawdzaj, czy J&J podaje dalsze warunki finansowania ugody."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Johnson & Johnson offers up to $5.5bn to settle baby powder lawsuits",
+          "url": "https://www.bbc.co.uk/news/articles/clyqnz52rp6o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "biznes",
+        "prawo",
+        "j&j"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-0601-13",
+      "section": "Gospodarka",
+      "title": "Burnham łączy szkołę z lokalnym rynkiem pracy",
+      "lead": "BBC opisuje plan mocniejszego powiązania edukacji z zatrudnieniem.",
+      "whatHappened": "BBC podaje, że Burnham chce, aby uczniowie w Anglii dostawali czytelniejszą ścieżkę do pracy, z naciskiem na AI i manufacturing.",
+      "keyFacts": [
+        "Temat łączy szkolnictwo, rynek pracy i kwalifikacje.",
+        "Wskazane są branże techniczne i przemysłowe."
+      ],
+      "reactions": [
+        "To sygnał, że debatę o edukacji próbuje się mocniej spiąć z gospodarką.",
+        "W tle stoi pytanie o realne potrzeby pracodawców."
+      ],
+      "whyItMatters": "To ważny sygnał dla rynku pracy i przyszłych kompetencji, szczególnie w technologiach i produkcji.",
+      "context": "To jeden z nowszych leadów BBC z samego rana, jeszcze nieobecny w poprzednim polskim slocie.",
+      "watchNext": [
+        "Czekaj na szczegóły programowe i budżetowe.",
+        "Monitoruj reakcje pracodawców i szkół."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Burnham says pupils in England need clearer pathway into work",
+          "url": "https://www.bbc.co.uk/news/articles/cj4k2djd5qpo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "rynek-pracy",
+        "edukacja",
+        "uk"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "2026-07-28-0601-14",
+      "section": "Technologia",
+      "title": "Chiny: fałszywe filmy AI utrudniają komunikację kryzysową",
+      "lead": "BBC ostrzega przed deepfake'ami w czasie katastrof naturalnych.",
+      "whatHappened": "BBC opisuje nowy problem z fałszywymi filmami generowanymi przez AI, które pojawiają się przy katastrofach naturalnych w Chinach i mieszają odbiór informacji.",
+      "keyFacts": [
+        "Problem dotyczy komunikacji kryzysowej i dezinformacji.",
+        "W tle są naturalne katastrofy i szybkie szerzenie się fałszywych nagrań."
+      ],
+      "reactions": [
+        "To bezpośredni test dla moderacji platform i wiarygodności mediów.",
+        "Wzmaga potrzebę potwierdzania informacji źródłowych."
+      ],
+      "whyItMatters": "To jeden z bardziej praktycznych przykładów, jak AI zaczyna psuć obieg informacji w realnych kryzysach.",
+      "context": "W środku silnego cyklu newsowego AI nie jest tu abstrakcyjnym tematem, tylko narzędziem generującym chaos informacyjny.",
+      "watchNext": [
+        "Sprawdzaj reakcje platform i władz lokalnych.",
+        "Monitoruj, czy BBC poda techniczne szczegóły fałszywych materiałów."
+      ],
+      "sources": [
+        {
+          "title": "BBC: China's new challenge as natural disasters strike - fake AI videos",
+          "url": "https://www.bbc.co.uk/news/articles/cx27mjvxgg1o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "ai",
+        "dezinformacja",
+        "chiny"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-0601-15",
+      "section": "Alerty",
+      "title": "RCB ostrzega przed burzami w nocy 28/29 lipca",
+      "lead": "Alert obejmuje burze, silny wiatr i ulewny deszcz.",
+      "whatHappened": "RCB wysłało alert na 28/29 lipca, a komunikat wskazuje na burze, silny wiatr, ulewny deszcz i lokalnie grad. Ostrzeżenie rozszerzono również na Podkarpacie.",
+      "keyFacts": [
+        "W grę wchodzą podtopienia, grad i przerwy w dostawie prądu.",
+        "Prognozowane porywy mogą sięgać 100 km/h."
+      ],
+      "reactions": [
+        "To już nie ogólna prognoza, tylko aktywny alert bezpieczeństwa.",
+        "Mieszkańcy dostali instrukcje zabezpieczenia luźnych przedmiotów i aut."
+      ],
+      "whyItMatters": "To bezpośredni sygnał operacyjny dla ruchu, energetyki i lokalnych służb.",
+      "context": "Wczorajszy alert był ostrzeżeniem ogólnym; ten slot pokazuje jego aktualizację i rozszerzenie.",
+      "watchNext": [
+        "Sprawdzaj lokalne zgłoszenia o zalaniach i przerwach w prądzie.",
+        "Śledź, czy alert zostanie podniesiony lub przedłużony."
+      ],
+      "sources": [
+        {
+          "title": "RCB: Alert RCB (28/29.07) – burze, silny wiatr i ulewny deszcz",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb-282907--burze-silny-wiatr-i-ulewny-deszcz"
+        },
+        {
+          "title": "RCB: Komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "alerty",
+        "burze",
+        "rcb"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-0601-16",
+      "section": "Alerty",
+      "title": "IMGW utrzymuje burzowy tydzień w prognozie",
+      "lead": "Tydzień ma przynieść opady, burze i porywisty wiatr.",
+      "whatHappened": "IMGW w prognozie tygodniowej zapowiada przelotne opady, burze i porywy wiatru w wielu regionach kraju, z lokalnym gradem i silniejszym wiatrem w czasie burz.",
+      "keyFacts": [
+        "Poniedziałek zaczyna się ochłodzeniem.",
+        "Burze mają wracać w kolejnych dniach w różnych częściach kraju."
+      ],
+      "reactions": [
+        "To utrzymuje alert pogodowy jako temat całego dnia, nie tylko jednego komunikatu.",
+        "Ryzyko dotyczy zarówno transportu, jak i energetyki."
+      ],
+      "whyItMatters": "Prognoza IMGW potwierdza, że zjawiska burzowe mogą się przeciągnąć poza jeden poranny slot.",
+      "context": "To uzupełnienie alertu RCB i ważne tło dla planowania dnia w kraju.",
+      "watchNext": [
+        "Śledź aktualizacje IMGW i lokalne ostrzeżenia.",
+        "Monitoruj, czy pojawią się szkody w transporcie lub energetyce."
+      ],
+      "sources": [
+        {
+          "title": "IMGW: Prognoza pogody na tydzień 24-30.07.2026",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-24-30-07-2026/"
+        }
+      ],
+      "tags": [
+        "imgw",
+        "pogoda",
+        "burze"
+      ],
+      "priority": "high"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 RSS: Najnowsze wiadomości",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN This Morning / transcripts",
+      "url": "https://transcripts.cnn.com/show/ctmo"
+    },
+    {
+      "title": "RCB alert: burze 28/29.07",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb-282907--burze-silny-wiatr-i-ulewny-deszcz"
+    },
+    {
+      "title": "IMGW prognoza tygodniowa 24-30.07.2026",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-24-30-07-2026/"
+    }
+  ]
+}

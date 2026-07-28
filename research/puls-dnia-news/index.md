@@ -10,6 +10,8 @@ The 2026-07-27 09:01 slot przesuwa Puls Dnia w bardziej operacyjny miks krajowy:
 
 The 2026-07-26 18:00 slot przesuwa Puls Dnia w stronę ostrzejszego miksu krajowego i europejskiego: nowa eskalacja Kurski-Morawiecki, świeże zdarzenia drogowo-graniczne w Polsce, utrzymane alerty IMGW/RCB oraz dalsze europejskie i wojenne leady z Berlina, Zachodniego Brzegu, Francji, Hiszpanii i Kijowa. CNN nadal nie wychodzi poza 24 lipca, więc pozostaje tylko punktem odniesienia.
 
+The 2026-07-28 06:01 slot przesuwa Puls Dnia z etapu poszukiwań do zatrzymań we Wrocławiu, dokłada śledztwo po ataku w Berlinie i wzmacnia alert pogodowy na 28/29 lipca. BBC odświeża pożary w Europie, Iran i szkoła-praca w UK, a CNN nadal daje tylko tło z 27 lipca.
+
 # Puls Dnia News Index
 
 The 2026-07-26 12:01 slot shifts Puls Dnia toward a more operational mix: a fresh PiS comment from Waldemar Buda, active IMGW/RCB heat-and-storm alerts, a Berlin suspect-identification update, renewed Kyiv and France escalation, and a new OpenAI/Hugging Face follow-up, while CNN still lags on 24 July.
