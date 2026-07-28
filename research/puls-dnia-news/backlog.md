@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+## 2026-07-28 12:02
+
+- Watch whether PiS formalizes the Morawiecki decision and whether a new club appears.
+- Watch whether the digital tax draft and the fuel-price debate trigger a formal government or market response.
+- Watch whether the AI-agent story gets a direct statement from the companies involved or regulators.
+- Watch whether Seattle or Toronto gets a police/prosecutor casualty or suspect update.
+- Watch whether RCB/IMGW warnings translate into outages, flooding or transport blocks.
+- Watch whether the UN row, Iran lull or European fires get a fresher official follow-up before the next slot.
+
 ## 2026-07-28 09:02
 
 - Watch whether the Wrocław case turns into formal charges or a prosecutor note.
