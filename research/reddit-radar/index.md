@@ -5,7 +5,16 @@
 - Topic operates as a read-only Reddit humor radar built from live Safari review
   on public `old.reddit.com` listings and exact post pages.
 - Current active public bundle is now
-  `research/reddit-radar/data/2026-07-28-0608-reddit-radar.json`.
+  `research/reddit-radar/data/2026-07-28-1207-reddit-radar.json`.
+- Tuesday, July 28, 2026 12:07 CEST found exactly four fresh, public-safe
+  survivors again after filtering `2026-07-27-2208` and `2026-07-28-0608`, so
+  the topic still rotated at the minimum contract threshold into a thinner noon
+  set led by attached-cap EU groaning plus three compact dev/everyday riffs
+  about UDP delivery, production-incidents-as-age, and instant-chef ego after
+  adding an egg.
+- The same 12:07 CEST audit also confirmed that origin/main already exposed the
+  latest `2026-07-28-0608` public bundle before publication, so this slot is a
+  normal fresh rotation and not a remote-state recovery publish.
 - Tuesday, July 28, 2026 06:08 CEST found exactly four fresh, public-safe
   survivors after filtering `2026-07-27-1809` and `2026-07-27-2208`, so the
   topic still rotated at the minimum contract threshold into a thinner morning

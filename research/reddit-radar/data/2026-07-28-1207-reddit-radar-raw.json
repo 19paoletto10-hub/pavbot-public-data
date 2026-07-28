@@ -1,0 +1,153 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-28-1207",
+  "status": "material_update",
+  "generatedAt": "2026-07-28T10:07:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-28T12:07:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on old.reddit.com using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-28-0608 and 2026-07-27-2208, so none of the post URLs that appeared there could roll forward into this slot.",
+      "Before selecting replacements, the run verified that origin/main already serves 2026-07-28-0608 for reddit-radar together with the active public manifest, so the remote topic was current at run start.",
+      "Final read-only Safari review stayed on exact old.reddit post pages for the strongest fresh noon challengers from r/memes, r/ProgrammerHumor, and mildlyinfuriating, while facepalm and AskReddit were discarded at listing level because the live cluster stayed too political, too broad, or too discussion-first.",
+      "Exactly four safe fresh cards survived the live review, so the reddit-radar contract still prefers a new public bundle over keeping the older 2026-07-28-0608 payload unchanged.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "currentPublicBundle": "2026-07-28-0608",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-28-1207-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-28-1207-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-28-1207-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1r4jnof/just_a_friendly_reminder/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v7uz7j/why_is_this_so_true/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v7w4vn/at_least_they_told_us_the_truth/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v7y659/theres_one_on_every_vid/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v817ud/said_einstein/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v833d3/we_can_blame_everything_brotha/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v84q64/hating_autotype_at_this_point/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v87md7/save_of_the_century/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v87opc/this_is_so_accurate/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v8m3o0/veins_are_nice_tho_on_men_and_women/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v7stvr/claudejustgivemetheanswer/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v7w4j4/migrationinprogress/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v7xuqx/whenrustcdevelopersrunoutoferrormessages/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v7z56t/soldthelaptop/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v80tti/rulesfortheebutnotforme/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v80umk/queryofdoom/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v88xdt/windows/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v8age6/notyourdamnproblem/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v8atgy/clickingthererunbuttoniseasier/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v8hjbd/graphicsprogrammingbelike/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v8k1yu/usecavemangrunttosavetoken/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v89n17/i_finally_bought_a_gaming_pc_set_it_up_to_work/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v8a2ga/getting_disconnected_in_a_single_player_game/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v8cch5/they_made_the_shower_gel_bottles_slimmer_and/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v8cwph/loaned_my_car_to_a_family_member_so_they_could/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v8cxav/there_is_no_way_to_grab_my_burger/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v8fnte/im_colourblind_and_spent_the_last_6_weeks/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "title": "New design proposal",
+      "url": "https://old.reddit.com/r/memes/comments/1v8rx0a/new_design_proposal/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "6.3k hot"
+    },
+    {
+      "title": "atLeastUDPIsFaster",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v8qs9q/atleastudpisfaster/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "1.5k hot"
+    },
+    {
+      "title": "myForeheadHasCommitHistory",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v8sjjg/myforeheadhascommithistory/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "297 hot"
+    },
+    {
+      "title": "Lé master chef",
+      "url": "https://old.reddit.com/r/memes/comments/1v8qqx5/l%C3%A9_master_chef/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "scoreLabel": "452 hot"
+    },
+    {
+      "title": "It sucks so much...",
+      "url": "https://old.reddit.com/r/memes/comments/1v8t0r5/it_sucks_so_much/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "869 hot"
+    },
+    {
+      "title": "Appreciation",
+      "url": "https://old.reddit.com/r/memes/comments/1v8r24v/appreciation/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "607 hot"
+    },
+    {
+      "title": "You are the meme.",
+      "url": "https://old.reddit.com/r/memes/comments/1v8rqfe/you_are_the_meme/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "301 hot"
+    },
+    {
+      "title": "Enjoy my handcrafted meme ;)",
+      "url": "https://old.reddit.com/r/memes/comments/1v8jxoi/enjoy_my_handcrafted_meme/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "867 hot"
+    },
+    {
+      "title": "jsPoetry",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v8jv21/jspoetry/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "135 hot"
+    },
+    {
+      "title": "Stupid rules at a creamery almost ruined my day",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v8pmxw/stupid_rules_at_a_creamery_almost_ruined_my_day/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "4.8k hot"
+    },
+    {
+      "title": "God I hate this app sometimes.",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v8n55j/god_i_hate_this_app_sometimes/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "3.8k hot"
+    },
+    {
+      "title": "I forgot to put sunscreen on the top of my feet",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v8kqo5/i_forgot_to_put_sunscreen_on_the_top_of_my_feet/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "2.0k hot"
+    },
+    {
+      "title": "Roommate airs out all his sports gear in our shared room",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v8p43s/roommate_airs_out_all_his_sports_gear_in_our/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "829 hot"
+    }
+  ]
+}
