@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-28-0608",
+  "status": "material_update",
+  "generatedAt": "2026-07-28T04:08:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-28T06:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on old.reddit.com using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-27-2208 and 2026-07-27-1809, so none of their selected URLs could roll forward into this slot.",
+      "Before selecting replacements, the run verified that origin/main already serves 2026-07-27-2208 for reddit-radar, so the remote topic was current at run start.",
+      "Final read-only Safari review stayed on exact old.reddit post pages for the strongest fresh morning challengers from r/memes, r/ProgrammerHumor, and mildlyinfuriating, while facepalm and AskReddit were discarded at listing level because the live cluster stayed too political, too broad, or too discussion-first.",
+      "Exactly four safe fresh cards survived the live review, so the reddit-radar contract still prefers a new public bundle over keeping the older 2026-07-27-2208 payload unchanged.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "currentPublicBundle": "2026-07-27-2208",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-28-0608-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-28-0608-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-28-0608-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1v84q64/hating_autotype_at_this_point/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v833d3/we_can_blame_everything_brotha/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v88xdt/windows/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v7z56t/soldthelaptop/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v8cch5/they_made_the_shower_gel_bottles_slimmer_and/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v7y659/theres_one_on_every_vid/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v7w4j4/migrationinprogress/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v80umk/queryofdoom/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v79lak/nogitrevertavailable/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v81pht/my_wife_said_that_the_house_is_in_shambles_and/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v812ri/i_work_already_30_years_by_that_company_and_thats/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "title": "clickingTheReRunButtonIsEasier",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v8atgy/clickingthererunbuttoniseasier/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "scoreLabel": "316 hot"
+    },
+    {
+      "title": "Loaned my car to a family member so they could run errands while I was at work…",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v8cwph/loaned_my_car_to_a_family_member_so_they_could/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "scoreLabel": "8.3k hot"
+    },
+    {
+      "title": "I'm colourblind and spent the last 6 weeks thinking my hair is purple... Apparently it's not",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v8fnte/im_colourblind_and_spent_the_last_6_weeks/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "scoreLabel": "2.6k hot"
+    },
+    {
+      "title": "I finally bought a gaming PC, set it up to work and the final step was to put the glass back in the case...",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v89n17/i_finally_bought_a_gaming_pc_set_it_up_to_work/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "scoreLabel": "4.4k hot"
+    },
+    {
+      "title": "Just a friendly reminder...",
+      "url": "https://old.reddit.com/r/memes/comments/1r4jnof/just_a_friendly_reminder/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "893 hot"
+    },
+    {
+      "title": "Veins are nice tho on men and women",
+      "url": "https://old.reddit.com/r/memes/comments/1v8m3o0/veins_are_nice_tho_on_men_and_women/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "live score hidden"
+    },
+    {
+      "title": "This is so accurate",
+      "url": "https://old.reddit.com/r/memes/comments/1v87opc/this_is_so_accurate/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "1.6k hot"
+    },
+    {
+      "title": "At least they told us the truth",
+      "url": "https://old.reddit.com/r/memes/comments/1v7w4vn/at_least_they_told_us_the_truth/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "2.9k hot"
+    },
+    {
+      "title": "Said Einstein",
+      "url": "https://old.reddit.com/r/memes/comments/1v817ud/said_einstein/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "scoreLabel": "1.3k hot"
+    },
+    {
+      "title": "graphicsProgrammingBeLike",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v8hjbd/graphicsprogrammingbelike/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "691 hot"
+    },
+    {
+      "title": "useCavemanGruntToSaveToken",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v8k1yu/usecavemangrunttosavetoken/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "481 hot"
+    },
+    {
+      "title": "rulesForTheeButNotForMe",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v80tti/rulesfortheebutnotforme/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "1.4k hot"
+    },
+    {
+      "title": "claudeJustGiveMeTheAnswer",
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v7stvr/claudejustgivemetheanswer/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "scoreLabel": "2.0k hot"
+    },
+    {
+      "title": "There is no way to grab my burger",
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v8cxav/there_is_no_way_to_grab_my_burger/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "scoreLabel": "7.7k hot"
+    }
+  ]
+}

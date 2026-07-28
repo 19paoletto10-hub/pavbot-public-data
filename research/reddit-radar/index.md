@@ -5,7 +5,15 @@
 - Topic operates as a read-only Reddit humor radar built from live Safari review
   on public `old.reddit.com` listings and exact post pages.
 - Current active public bundle is now
-  `research/reddit-radar/data/2026-07-27-2208-reddit-radar.json`.
+  `research/reddit-radar/data/2026-07-28-0608-reddit-radar.json`.
+- Tuesday, July 28, 2026 06:08 CEST found exactly four fresh, public-safe
+  survivors after filtering `2026-07-27-1809` and `2026-07-27-2208`, so the
+  topic still rotated at the minimum contract threshold into a thinner morning
+  set led by one flaky-pipeline dev card plus three everyday self-owns about a
+  damaged car seat, a mistaken hair color, and a shattered PC side panel.
+- The same 06:08 CEST audit also confirmed that origin/main already exposed the
+  latest `2026-07-27-2208` public bundle before publication, so this slot is a
+  normal fresh rotation and not a remote-state recovery publish.
 - Monday, July 27, 2026 22:08 CEST found five fresh, public-safe survivors
   after filtering `2026-07-27-1209` and `2026-07-27-1809`, so the topic
   rotated again to a lighter late-night set led by two fresh meme cards, two
