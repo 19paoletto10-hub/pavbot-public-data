@@ -1,0 +1,449 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-28",
+  "runTime": "15:01",
+  "status": "Material update",
+  "headline": "15:01: Wrocław, PiS i nowe leady BBC",
+  "summary": "Slot 15:01 przesuwa Puls Dnia z etapu szukania sprawców do pierwszych zarzutów we Wrocławiu, utrzymuje rozłam w PiS przy wieczornym spotkaniu Morawieckiego i dokłada świeży blok krajowych leadów o paliwach, BLIK i Google. BBC wzmacnia światowy pakiet o ONZ, Seattle, Hiszpanię, Claude, Ukrainę i Kanał La Manche, a CNN nadal kończy się na materiałach z 27 lipca.",
+  "checkedSources": [
+    {
+      "title": "TVN24 homepage",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN transcripts index",
+      "url": "https://transcripts.cnn.com/show/cnr"
+    },
+    {
+      "title": "RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "IMGW prognoza tygodniowa",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-24-30-07-2026/"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-07-28-1501-01",
+      "section": "Polska",
+      "title": "Pierwsze zarzuty po ataku we Wrocławiu",
+      "lead": "Prokuratura postawiła pierwszemu zatrzymanemu zarzuty po brutalnym ataku na parę z Ukrainy.",
+      "whatHappened": "TVN24 podaje, że zatrzymany usłyszał zarzuty pobicia, przemocy i znieważenia na tle narodowościowym po ataku we Wrocławiu.",
+      "keyFacts": [
+        "Zarzuty dotyczą przemocy i znieważenia na tle narodowościowym.",
+        "Sprawa dotyczy ataku na parę z Ukrainy.",
+        "To już etap procesowy, a nie tylko poszukiwanie sprawców."
+      ],
+      "reactions": [
+        "Sprawa może szybko wejść w kolejną fazę z decyzją o środkach zapobiegawczych.",
+        "Wciąż pozostaje pytanie o status drugiego zatrzymanego i ewentualnego trzeciego sprawcy."
+      ],
+      "whyItMatters": "To mocny sygnał bezpieczeństwa publicznego i test dla reakcji prokuratury.",
+      "context": "W poprzednich slotach dominowało samo poszukiwanie sprawców; teraz wchodzą już formalne zarzuty.",
+      "watchNext": [
+        "Śledź decyzję prokuratury po przesłuchaniu drugiego zatrzymanego.",
+        "Sprawdzaj, czy policja poda kolejne szczegóły o pozostałym sprawcy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Pobicie i znieważenie na tle narodowościowym. Są pierwsze zarzuty po ataku we Wrocławiu",
+          "url": "https://tvn24.pl/wroclaw/pobicie-i-zniewazenie-na-tle-narodowosciowym-sa-pierwsze-zarzuty-po-ataku-we-wroclawiu-st9162255"
+        }
+      ],
+      "tags": [
+        "Wrocław",
+        "prokuratura",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-1501-02",
+      "section": "Polityka",
+      "title": "Morawiecki o wieczornym spotkaniu",
+      "lead": "Były premier mówi o rozmowach po decyzjach kierownictwa PiS.",
+      "whatHappened": "TVN24 relacjonuje, że Mateusz Morawiecki planuje wieczorne spotkanie po decyzjach kierownictwa partii i liczy się z dalszym ruchem organizacyjnym.",
+      "keyFacts": [
+        "Spotkanie ma odbyć się wieczorem.",
+        "Temat jest bezpośrednio związany z decyzjami PiS.",
+        "W tle pozostaje pytanie o nowy klub."
+      ],
+      "reactions": [
+        "PiS może jeszcze sformalizować podział albo go opóźnić.",
+        "Sprawa ma potencjał na kolejne komentarze i personalne ruchy."
+      ],
+      "whyItMatters": "To utrzymuje rozłam w PiS jako główny krajowy wątek polityczny dnia.",
+      "context": "Rano był już sygnał decyzji, a teraz temat przeszedł do kolejnego kroku po stronie Morawieckiego.",
+      "watchNext": [
+        "Śledź, czy po spotkaniu pojawi się formalny komunikat.",
+        "Sprawdzaj, czy padnie deklaracja o nowym klubie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Rozpad PiS. Mateusz Morawiecki o wieczornym spotkaniu",
+          "url": "https://tvn24.pl/polska/rozpad-pis-mateusz-morawiecki-o-wieczornym-spotkaniu-st9162127"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Morawiecki",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-1501-03",
+      "section": "Gospodarka",
+      "title": "Tusk wiąże decyzję Nawrockiego z cenami paliw",
+      "lead": "Premier twierdzi, że zablokowanie podatku od nadzwyczajnych zysków uderza w kierowców.",
+      "whatHappened": "TVN24 cytuje Donalda Tuska, który mówi, że decyzja Karola Nawrockiego ws. ustawy o nadzwyczajnych zyskach koncernów paliwowych przełoży się na wyższe ceny paliw i mniejsze wsparcie dla kierowców.",
+      "keyFacts": [
+        "Spór dotyczy podatku od nadzwyczajnych zysków.",
+        "Tusk mówi o czterech miliardach złotych mniej na ulgę dla kierowców.",
+        "Temat łączy politykę z rynkiem paliw."
+      ],
+      "reactions": [
+        "To może podgrzać spór między rządem i prezydentem.",
+        "Branża paliwowa może szybko odpowiedzieć na tak postawiony zarzut."
+      ],
+      "whyItMatters": "To bezpośredni krajowy konflikt o paliwa, podatki i koszty życia.",
+      "context": "W porannym slocie paliwa były już sygnałem politycznym, ale teraz wchodzi wyraźniejszy konflikt na linii rząd-prezydent.",
+      "watchNext": [
+        "Śledź reakcję Kancelarii Prezydenta i PiS.",
+        "Sprawdzaj, czy pojawi się nowy komunikat o cenach paliw."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Podatek od nadzwyczajnych zysków. Donald Tusk o decyzji Karola Nawrockiego",
+          "url": "https://tvn24.pl/biznes/z-kraju/podatek-od-nadzwyczajnych-zyskow-donald-tusk-o-decyzji-karola-nawrockiego-to-jest-cios-wymierzony-we-wszystkich-polskich-kierowcow-st9162213"
+        }
+      ],
+      "tags": [
+        "paliwa",
+        "prezydent",
+        "gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-1501-04",
+      "section": "Gospodarka",
+      "title": "BLIK: prezes składa rezygnację",
+      "lead": "Dariusz Mazurkiewicz odchodzi ze stanowiska prezesa zarządu BLIK.",
+      "whatHappened": "TVN24 Biznes podaje, że Dariusz Mazurkiewicz złożył rezygnację i mówi o rozpoczęciu nowego etapu zawodowego.",
+      "keyFacts": [
+        "Zmiana dotyczy kluczowego operatora płatności mobilnych.",
+        "Spółka komunikuje kontynuację i dobrą przyszłość BLIK.",
+        "To decyzja personalna o znaczeniu rynkowym."
+      ],
+      "reactions": [
+        "Rynek może oczekiwać sygnału o następcy i ciągłości strategii.",
+        "Temat może wrócić wraz z oficjalnym komunikatem spółki."
+      ],
+      "whyItMatters": "BLIK jest jedną z bardziej masowych usług finansowych w Polsce, więc zmiana zarządu jest istotna operacyjnie.",
+      "context": "To nowy lead z TVN24 Biznes, który pojawił się po 12:02.",
+      "watchNext": [
+        "Śledź nazwisko następcy i harmonogram przejęcia obowiązków.",
+        "Sprawdzaj, czy spółka wskaże powód odejścia bardziej szczegółowo."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Blik. Prezes zarządu Dariusz Mazurkiewicz składa rezygnację",
+          "url": "https://tvn24.pl/biznes/z-kraju/blik-prezes-zarzadu-dariusz-mazurkiewicz-sklada-rezygnacje-st9162336"
+        }
+      ],
+      "tags": [
+        "BLIK",
+        "finanse",
+        "zarząd"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-1501-05",
+      "section": "Technologia",
+      "title": "Google może zapłacić miliardy",
+      "lead": "Nowa fala pozwów w Europie może dobić do 10 mld dolarów roszczeń.",
+      "whatHappened": "TVN24 Biznes opisuje, że po decyzjach wokół DMA wyspecjalizowane wyszukiwarki i inni konkurenci mogą domagać się od Google miliardowych odszkodowań.",
+      "keyFacts": [
+        "Roszczenia mogą sięgnąć łącznie około 10 mld dolarów.",
+        "Spór opiera się o DMA i wcześniejsze praktyki Google.",
+        "Google odrzuca zarzuty i podważa zasadność pozwów."
+      ],
+      "reactions": [
+        "To może uruchomić kolejną falę sporów sądowych w Europie.",
+        "Ryzyko kosztów i precedensów dla big tech pozostaje wysokie."
+      ],
+      "whyItMatters": "To ważny sygnał dla rynku reklam, wyszukiwania i egzekwowania prawa cyfrowego w UE.",
+      "context": "To jeden z najmocniejszych nowych leadów z TVN24 Biznes po południu.",
+      "watchNext": [
+        "Śledź, czy pojawią się kolejne pozwy lub komentarz regulatorów.",
+        "Sprawdzaj, czy Google zareaguje bardziej konkretnie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Google może zapłacić miliardy",
+          "url": "https://tvn24.pl/biznes/tech/google-moze-zaplacic-miliardy-wywola-to-nowa-fale-postepowan-sadowych-st9162152"
+        }
+      ],
+      "tags": [
+        "Google",
+        "DMA",
+        "prawo cyfrowe"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-1501-06",
+      "section": "Technologia",
+      "title": "Szefowie gigantów spotykają się w Waszyngtonie",
+      "lead": "Po sporze o agenta AI pojawia się presja na liderów big tech i nowe pomysły regulacyjne.",
+      "whatHappened": "TVN24 Biznes opisuje spotkanie szefów dużych firm w Waszyngtonie po incydencie z agentem AI oraz propozycję przepisów określanych jako AI Kill Switch Act.",
+      "keyFacts": [
+        "Temat dotyczy bezpieczeństwa i kontroli nad agentami AI.",
+        "W tle jest regulacyjna presja ze strony amerykańskich polityków.",
+        "W grę wchodzą audyty i możliwość odcinania systemów."
+      ],
+      "reactions": [
+        "To może szybko przejść w debatę kongresową i branżową.",
+        "Firmy AI będą musiały bronić swoich procedur bezpieczeństwa."
+      ],
+      "whyItMatters": "To mocny sygnał, że agentowa AI wchodzi do głównego nurtu polityki bezpieczeństwa.",
+      "context": "To świeży techniczny lead, który po południu wzmacnia krajowy blok biznesowo-technologiczny.",
+      "watchNext": [
+        "Śledź, czy firmy wyjaśnią sam incydent i zakres ryzyka.",
+        "Sprawdzaj, czy projekt ustawy zyska dalsze wsparcie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Stracili kontrolę nad agentem AI. Szefowie gigantów mają spotkanie w Waszyngtonie",
+          "url": "https://tvn24.pl/biznes/tech/stracili-kontrole-nad-agentem-ai-szefowie-gigantow-maja-spotkanie-w-waszyngtonie-st9161890"
+        }
+      ],
+      "tags": [
+        "AI",
+        "regulacje",
+        "big tech"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-1501-07",
+      "section": "Technologia",
+      "title": "Rozmowy z Claude były publicznie dostępne",
+      "lead": "BBC opisuje wyciek widoczności części rozmów użytkowników z Anthropic Claude.",
+      "whatHappened": "BBC podaje, że setki rozmów z Claude były publicznie dostępne online, co podbija temat prywatności i ustawień udostępniania.",
+      "keyFacts": [
+        "BBC mówi o setkach rozmów.",
+        "Sprawa dotyczy publicznego dostępu do czatów.",
+        "Temat łączy prywatność z domyślnymi ustawieniami platformy."
+      ],
+      "reactions": [
+        "To może wywołać reakcję użytkowników i regulatorów.",
+        "Anthropic może zostać zmuszony do wyjaśnienia konfiguracji udostępniania."
+      ],
+      "whyItMatters": "To praktyczny test bezpieczeństwa danych w narzędziach generatywnej AI.",
+      "context": "To nowy światowy lead z BBC News RSS, świeższy niż poranny blok o Claude z poprzednich slotów.",
+      "watchNext": [
+        "Śledź, czy Anthropic opublikuje wyjaśnienie.",
+        "Sprawdzaj, czy pojawi się reakcja regulatorów ds. prywatności."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Some people’s chats with Claude AI found to be publicly available online",
+          "url": "https://www.bbc.co.uk/news/articles/cly5qgjk5ywo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Claude",
+        "Anthropic",
+        "prywatność"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-1501-08",
+      "section": "Świat",
+      "title": "USA wychodzi z posiedzenia ONZ podczas wystąpienia Francji",
+      "lead": "BBC relacjonuje dyplomatyczny zgrzyt na forum Rady Bezpieczeństwa ONZ.",
+      "whatHappened": "Amerykańska delegacja opuściła posiedzenie RB ONZ w trakcie wystąpienia Francji po sporze o głosowanie dotyczące praw człowieka.",
+      "keyFacts": [
+        "Spór dotyczył mandatu wysokiego komisarza ONZ ds. praw człowieka.",
+        "USA wyszło z sali podczas wystąpienia Francji.",
+        "Konflikt dołożył napięcia do relacji transatlantyckich."
+      ],
+      "reactions": [
+        "Temat może wrócić przy kolejnych debatach w ONZ.",
+        "Francja i USA mogą jeszcze wymienić komentarze dyplomatyczne."
+      ],
+      "whyItMatters": "To sygnał, że spory USA z sojusznikami nadal wychodzą publicznie na forum ONZ.",
+      "context": "To świeży światowy lead z BBC World RSS, którego nie było w poprzednim slocie.",
+      "watchNext": [
+        "Śledź oficjalne komentarze USA i Francji.",
+        "Sprawdzaj, czy sprawa wróci na kolejnym posiedzeniu ONZ."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US walks out of UN Security Council meeting during France's remarks",
+          "url": "https://www.bbc.co.uk/news/articles/c87nj3w9gxjo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "ONZ",
+        "USA",
+        "Francja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-1501-09",
+      "section": "Świat",
+      "title": "Seattle oddaje hołd ofiarom strzelaniny",
+      "lead": "BBC pokazuje reakcję rodzin i mieszkańców po ataku na festiwalu jedzenia.",
+      "whatHappened": "BBC relacjonuje hołd dla trzech osób zabitych w strzelaninie podczas festiwalu jedzenia w Seattle i pokazuje dalsze skutki ataku.",
+      "keyFacts": [
+        "W ataku zginęły trzy osoby.",
+        "Rodziny i mieszkańcy organizują upamiętnienie ofiar.",
+        "Sprawa nadal ma wymiar bezpieczeństwa publicznego."
+      ],
+      "reactions": [
+        "Władze Seattle mogą jeszcze doprecyzować stan postępowania.",
+        "Temat utrzyma presję na bezpieczeństwo imprez masowych."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych amerykańskich newsów bezpieczeństwa w tym checku.",
+      "context": "To świeższa odsłona wątku Seattle niż wcześniejsze surowe bilanse ofiar.",
+      "watchNext": [
+        "Śledź, czy policja poda motyw i pełny status podejrzanych.",
+        "Sprawdzaj, czy pojawią się dalsze komunikaty o rannych."
+      ],
+      "sources": [
+        {
+          "title": "BBC: A lover of life - Seattle pays tribute to food festival shooting victims",
+          "url": "https://www.bbc.co.uk/news/articles/cvgv7m5z4n0o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Seattle",
+        "strzelanina",
+        "USA"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-1501-10",
+      "section": "Świat",
+      "title": "Hiszpania walczy z niszczącymi pożarami",
+      "lead": "BBC opisuje nowe uderzenie upałów i trudną walkę z pożarami w regionie Madrytu.",
+      "whatHappened": "BBC podaje, że Hiszpania mierzy się z niszczącymi pożarami, a trzy ogniska w regionie Madrytu budzą szczególne obawy przed kolejną falą upałów.",
+      "keyFacts": [
+        "Pożary nadal są trudne do opanowania.",
+        "Nowa fala upałów ma pogorszyć warunki od środy.",
+        "Region Madrytu jest szczególnie narażony."
+      ],
+      "reactions": [
+        "Lokalne władze mogą jeszcze rozszerzyć ograniczenia lub ewakuacje.",
+        "Temat pozostaje jednym z głównych europejskich ryzyk pogodowych dnia."
+      ],
+      "whyItMatters": "To ważny europejski sygnał o skali pożarów i wpływie pogody na bezpieczeństwo.",
+      "context": "W poprzednich slotach temat był już obecny, ale teraz BBC wzmacnia go nowym reportem i świeżym opisem sytuacji.",
+      "watchNext": [
+        "Śledź nowe decyzje o ewakuacji lub zamknięciach dróg.",
+        "Sprawdzaj, czy fala upałów zmieni bilans pożarów."
+      ],
+      "sources": [
+        {
+          "title": "BBC: 'It's a hell of a situation': Spain grapples with devastating wildfires",
+          "url": "https://www.bbc.co.uk/news/articles/c235m71mrreo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Hiszpania",
+        "pożary",
+        "upał"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-1501-11",
+      "section": "Świat",
+      "title": "Zełenski ma naciskać Trumpa o obronę powietrzną",
+      "lead": "BBC zapowiada rozmowę o wsparciu dla Kijowa podczas wizyty w Waszyngtonie.",
+      "whatHappened": "BBC podaje, że Zełenski chce w Waszyngtonie dopiąć amerykańskie wsparcie dla obrony przeciwrakietowej i mocniej zabezpieczyć Kijów po rosyjskiej eskalacji.",
+      "keyFacts": [
+        "Temat dotyczy obrony powietrznej Ukrainy.",
+        "W grze są konkretne zobowiązania USA.",
+        "Wątek jest powiązany z eskalacją rosyjskich ataków."
+      ],
+      "reactions": [
+        "Wizyta może przynieść nowe deklaracje lub tylko polityczny sygnał.",
+        "Sprawa pozostaje jednym z ważniejszych tematów wojny i amerykańskiej polityki zagranicznej."
+      ],
+      "whyItMatters": "To bezpośredni sygnał o wsparciu dla Ukrainy i o tym, jak USA układają swoją postawę wobec wojny.",
+      "context": "To świeży lead z BBC World RSS, który dodaje do slotu bardziej operacyjny blok ukraiński.",
+      "watchNext": [
+        "Śledź komunikaty po rozmowach w Waszyngtonie.",
+        "Sprawdzaj, czy padną liczby dotyczące systemów obrony powietrznej."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Zelensky to press Trump on air defences while in Washington",
+          "url": "https://www.bbc.co.uk/news/articles/c9v4g7e047zo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Trump",
+        "obrona powietrzna"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-1501-12",
+      "section": "Świat",
+      "title": "Francuski patrolowiec strzela w Kanale podczas wywiadu BBC",
+      "lead": "BBC opisuje incydent morski, który dzieje się na oczach dziennikarza podczas rozmowy na żywo.",
+      "whatHappened": "BBC relacjonuje, że francuski patrolowiec miał oddać 17 strzałów w Kanale, gdy Chris Philp udzielał wywiadu dla BBC.",
+      "keyFacts": [
+        "Incydent był widoczny podczas wywiadu BBC.",
+        "BBC wiąże go z napięciami wokół kanału i migracji.",
+        "To świeży europejski temat bezpieczeństwa i granic."
+      ],
+      "reactions": [
+        "Sprawa może szybko uruchomić komentarze polityczne we Francji i w Wielkiej Brytanii.",
+        "BBC może w kolejnych godzinach doprecyzować tło i przebieg zdarzenia."
+      ],
+      "whyItMatters": "To nowy, wyrazisty europejski lead bezpieczeństwa, który może szybko urosnąć politycznie.",
+      "context": "To najświeższy z nowych leadów BBC w tym checku i dobry zamiennik dla słabszych, starszych powrotów.",
+      "watchNext": [
+        "Śledź oficjalne komentarze francuskie i brytyjskie.",
+        "Sprawdzaj, czy BBC poda więcej szczegółów o użyciu broni."
+      ],
+      "sources": [
+        {
+          "title": "BBC: French patrol boat appears to fire gunshots in Channel during MP's BBC interview",
+          "url": "https://www.bbc.co.uk/news/articles/cy4ker2y1mko?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "Kanał",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    }
+  ]
+}

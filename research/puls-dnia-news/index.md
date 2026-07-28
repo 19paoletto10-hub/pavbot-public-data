@@ -1,3 +1,5 @@
+The 2026-07-28 15:01 slot przesuwa Puls Dnia z etapu szukania sprawców do pierwszych zarzutów we Wrocławiu, utrzymuje rozłam w PiS przy wieczornym spotkaniu Morawieckiego i dokłada świeży blok krajowych leadów o paliwach, BLIK i Google. BBC wzmacnia światowy pakiet o ONZ, Seattle, Hiszpanię, Claude, Ukrainę i Kanał La Manche, a CNN nadal kończy się na materiałach z 27 lipca.
+
 The 2026-07-28 12:02 slot przesuwa Puls Dnia w stronę krajowego miksu PiS, podatku cyfrowego, paliw i AI, a za granicą dokłada świeży blok o ONZ, Iranie, Seattle, Toronto i pożarach w Europie. Alert burzowy nadal trwa.
 
 The 2026-07-27 21:02 slot przesuwa Puls Dnia w stronę Wrocławia, rozłamu w PiS, ekstradycji Ziobry i alertów pogodowych, a za granicą utrzymuje pożary w Europie, Seattle, wsparcie dla Ukrainy, Jodrell Bank, chińskie AI i irański węzeł z CNN. CNN nadal stoi na materiałach z 24 lipca.

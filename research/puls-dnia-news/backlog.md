@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+## 2026-07-28 15:01
+
+- Resolved: first charges were filed in Wrocław; next watch is the second detainee, the remaining suspect and preventive measures.
+- Watch whether PiS formalizes Morawiecki's status after the evening meeting.
+- Watch whether the fuel-tax fight or the digital tax triggers a formal government, market or foreign response.
+- Watch whether Google, regulators or competitors widen the DMA lawsuit wave.
+- Watch whether Seattle, Spain or the Channel incident gets a clearer official follow-up before the next slot.
+- Watch whether RCB or IMGW turn the storm risk into outages or an all-clear.
+
 ## 2026-07-28 12:02
 
 - Watch whether PiS formalizes the Morawiecki decision and whether a new club appears.
