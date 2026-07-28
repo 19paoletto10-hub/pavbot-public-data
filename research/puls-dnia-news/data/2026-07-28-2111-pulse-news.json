@@ -1,0 +1,469 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-28",
+  "runTime": "21:11",
+  "status": "Material update",
+  "headline": "21:11: nowe BBC i TVN Meteo, krajowe podatki i alert upałowy",
+  "summary": "Slot 21:11 dodaje lżejszy, ale nadal materialny wieczorny update: TVN24 podbija drugi próg PIT, TVN Meteo dokłada śmiertelny wypadek w Tatrach i powrót alertów upałowych, BBC wzmacnia blok o francuskich pożarach, ONZ, Seattle, brytyjskich benefitach i sporze UEFA-FIFA, a CNN trzyma na tapecie Trumpa, Zełenskiego, Boeinga, Japonię i briefing OpenAI.",
+  "items": [
+    {
+      "id": "2026-07-28-2111-01",
+      "section": "Polityka",
+      "title": "Drugi próg PIT wraca do krajowej debaty",
+      "lead": "TVN24 Biznes nadal eksponuje problem drugiego progu podatkowego i rosnącej liczby podatników w wyższej stawce.",
+      "whatHappened": "Na TVN24 Biznes widoczny jest materiał o drugim progu podatkowym. W przekazie pojawia się teza, że system nie nadąża za zmianami gospodarczymi, a limit obejmuje już miliony osób.",
+      "keyFacts": [
+        "Drugi próg PIT pozostaje szerokim problemem fiskalnym.",
+        "Temat wraca jako bieżący krajowy lead.",
+        "Oś sporu dotyczy relacji podatków do wzrostu płac."
+      ],
+      "reactions": [
+        "Resort finansów może zostać dociśnięty do komentarza o progach podatkowych.",
+        "Temat łatwo przejdzie w kalkulacje polityczne wokół dochodów klasy średniej."
+      ],
+      "whyItMatters": "To jeden z najbardziej czytelnych tematów kosztu życia i podatków.",
+      "context": "To nowy krajowy teaser odróżniający ten slot od 18:01.",
+      "watchNext": [
+        "Sprawdzaj, czy pojawi się formalny komentarz rządu albo ekspertów.",
+        "Śledź, czy temat przejdzie w projekt legislacyjny lub nową wypowiedź polityków."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: Podniesienie drugiego progu podatkowego. Zaplanowano rozmowy",
+          "url": "https://tvn24.pl/biznes/z-kraju/drugi-prog-podatkowy-w-polsce-pelczynska-nalecz-spotka-sie-z-domanskim-w-poniedzialek-st9135005"
+        }
+      ],
+      "tags": [
+        "PIT",
+        "podatki",
+        "gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-2111-02",
+      "section": "Polska",
+      "title": "Turysta zmarł w drodze na Rysy",
+      "lead": "TVN Meteo opisuje śmiertelny przypadek w Tatrach podczas wejścia na Rysy.",
+      "whatHappened": "W RSS TVN Meteo pojawił się materiał o zagranicznym turyście, który zmarł podczas wspinaczki na Rysy. TOPR podał zatrzymanie krążenia i bezskuteczną reanimację.",
+      "keyFacts": [
+        "Do zdarzenia doszło podczas wejścia na Rysy.",
+        "Mężczyzna był turystą z zagranicy.",
+        "Ratownicy nie zdołali przywrócić funkcji życiowych."
+      ],
+      "reactions": [
+        "Sprawa może uruchomić kolejne ostrzeżenia o ryzyku na szlakach.",
+        "Możliwy jest dalszy komentarz TOPR o warunkach i przygotowaniu turystów."
+      ],
+      "whyItMatters": "To bieżący krajowy wątek bezpieczeństwa i ratownictwa górskiego.",
+      "context": "Nowy, świeży artykuł z TVN Meteo, nieobecny w poprzednim slocie.",
+      "watchNext": [
+        "Śledź komunikat TOPR i ewentualne przypomnienia o warunkach na szlakach.",
+        "Sprawdzaj, czy pojawią się statystyki lub ostrzeżenia dla turystów w Tatrach."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo: Turysta zmarł w drodze na Rysy",
+          "url": "https://tvn24.pl/tvnmeteo/polska/tatry-zagraniczny-turysta-zmarl-w-drodze-na-rysy-st9162895?source=rss"
+        }
+      ],
+      "tags": [
+        "Tatry",
+        "TOPR",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-2111-03",
+      "section": "Alerty",
+      "title": "IMGW zapowiada alarmy przy powrocie upałów",
+      "lead": "TVN Meteo ostrzega, że fala upałów może wrócić do poziomu alarmów najwyższego stopnia.",
+      "whatHappened": "W RSS TVN Meteo pojawił się materiał o powrocie ekstremalnych upałów i możliwości wydania alarmów. Drugi tekst doprecyzowuje, że temperatura w części kraju może sięgnąć 37 stopni Celsjusza.",
+      "keyFacts": [
+        "IMGW sygnalizuje wysokie temperatury w części kraju.",
+        "W prognozach pada poziom do 37 stopni Celsjusza.",
+        "Tekst mówi wprost o możliwych alarmach najwyższego stopnia."
+      ],
+      "reactions": [
+        "Ryzyko dotyczy zdrowia, transportu i lokalnych przeciążeń sieci.",
+        "Samorządy i służby mogą wrócić do komunikatów o nawodnieniu i ograniczaniu ekspozycji na słońce."
+      ],
+      "whyItMatters": "To najistotniejszy dzisiejszy krajowy sygnał pogodowy.",
+      "context": "Alert utrzymuje się niezależnie od bieżącego feedu politycznego.",
+      "watchNext": [
+        "Śledź aktualizacje IMGW i ewentualne komunikaty RCB.",
+        "Sprawdzaj, czy pojawią się utrudnienia w transporcie lub lokalne awarie zasilania."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo: Powrót ekstremalnych upałów. Gdzie pojawią się alarmy",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/upal-i-burze-w-polsce-prognoza-imgw-tutaj-bedzie-groznie-st9158847?source=rss"
+        },
+        {
+          "title": "TVN Meteo: Żar będzie lał się z nieba. Jak długo potrwa fala upałów",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/upal-w-polsce-pogoda-zar-bedzie-lal-sie-z-nieba-jak-dlugo-potrwa-fala-upalow-st9162642?source=rss"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "upał",
+        "alert"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-2111-04",
+      "section": "Świat",
+      "title": "Francja znów zaostrza walkę z pożarami",
+      "lead": "BBC ostrzega, że nowe 40-stopniowe fale ciepła komplikują gaszenie pożarów na południowym zachodzie Francji.",
+      "whatHappened": "BBC News podaje, że pożary w południowo-zachodniej Francji znów się nasilają, a region szykuje się na kolejną falę 40-stopniowych upałów.",
+      "keyFacts": [
+        "BBC pisze o pogorszeniu warunków dla strażaków.",
+        "Nowa fala ciepła ma sięgnąć 40 stopni Celsjusza.",
+        "Giorondę i okolice znów obciąża ryzyko dalszych ewakuacji."
+      ],
+      "reactions": [
+        "Służby mogą publikować kolejne ostrzeżenia i zamknięcia dróg.",
+        "To podbija presję na lokalne władze i ochronę ludności."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych europejskich alertów dnia.",
+      "context": "Ten sam pożarowy węzeł pozostaje istotny także w TVN Meteo.",
+      "watchNext": [
+        "Śledź, czy Francja poda nowe liczby ewakuowanych.",
+        "Sprawdzaj, czy pojawią się kolejne zamknięcia dróg lub szkół."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Wildfires in south-west France flare up as region braces for new 40C heatwave",
+          "url": "https://www.bbc.co.uk/news/articles/c5yd8gly1ydo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "pożary",
+        "upał"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-2111-05",
+      "section": "Świat",
+      "title": "USA wychodzą z posiedzenia Rady Bezpieczeństwa ONZ",
+      "lead": "BBC opisuje wyjście amerykańskiej delegacji podczas wystąpienia Francji.",
+      "whatHappened": "BBC relacjonuje, że USA opuściły posiedzenie Rady Bezpieczeństwa ONZ w trakcie wystąpienia Francji. Tłem był wcześniejszy spór o głosowanie w sprawie przedłużenia mandatu wysokiego komisarza ONZ ds. praw człowieka.",
+      "keyFacts": [
+        "Chodzi o forum Rady Bezpieczeństwa ONZ.",
+        "Spór dotyczy tonu relacji USA z europejskimi partnerami.",
+        "BBC łączy incydent z wcześniejszym głosowaniem w ONZ."
+      ],
+      "reactions": [
+        "Francja i USA mogą doprecyzować stanowiska w kolejnych oświadczeniach.",
+        "To sygnał napięcia dyplomatycznego, który może wrócić w kolejnych sesjach ONZ."
+      ],
+      "whyItMatters": "To ważny sygnał tarcia dyplomatycznego między USA i Europą.",
+      "context": "W tym slocie BBC podbija także inne globalne wątki bezpieczeństwa.",
+      "watchNext": [
+        "Śledź, czy MSZ USA lub Francji wyda komentarz.",
+        "Sprawdzaj, czy pojawi się dalszy ciąg sporu w ONZ."
+      ],
+      "sources": [
+        {
+          "title": "BBC: US walks out of UN Security Council meeting during France's remarks",
+          "url": "https://www.bbc.co.uk/news/articles/c87nj3w9gxjo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "ONZ",
+        "USA",
+        "Francja",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-2111-06",
+      "section": "Bezpieczeństwo",
+      "title": "Seattle oddaje hołd ofiarom strzelaniny",
+      "lead": "BBC relacjonuje upamiętnienie ofiar strzelaniny na festiwalu jedzenia.",
+      "whatHappened": "BBC pisze o uroczystościach pamięci po strzelaninie na festiwalu jedzenia w Seattle. Rodziny i mieszkańcy oddawali hołd trzem zabitym osobom.",
+      "keyFacts": [
+        "W zdarzeniu zginęły trzy osoby.",
+        "Uroczystości mają charakter lokalnego upamiętnienia.",
+        "Temat nadal żyje w amerykańskiej debacie o bezpieczeństwie publicznym."
+      ],
+      "reactions": [
+        "Lokalne władze mogą publikować kolejne szczegóły śledztwa.",
+        "Społeczność będzie dalej szukać odpowiedzi o motywie i zabezpieczeniu wydarzeń masowych."
+      ],
+      "whyItMatters": "To świeży amerykański temat bezpieczeństwa publicznego.",
+      "context": "BBC utrzymuje Seattle w swoim bieżącym bloku informacyjnym.",
+      "watchNext": [
+        "Śledź, czy policja poda motyw i pełniejszy bilans.",
+        "Sprawdzaj, czy pojawi się komunikat władz miasta o bezpieczeństwie imprez masowych."
+      ],
+      "sources": [
+        {
+          "title": "BBC: A lover of life - Seattle pays tribute to food festival shooting victims",
+          "url": "https://www.bbc.co.uk/news/articles/cvgv7m5z4n0o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Seattle",
+        "strzelanina",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-2111-07",
+      "section": "Gospodarka",
+      "title": "Brytyjskie benefity mają zmienić zachęty do praktyk",
+      "lead": "BBC opisuje propozycję wsparcia dla rodziców, którzy mają zniechęcać dzieci do apprenticeship.",
+      "whatHappened": "BBC News informuje o propozycji sięgającej nawet 4,5 tys. funtów dla części rodziców korzystających z benefitów, jeśli dziecko zacznie praktykę zawodową. Materiał pokazuje, jak rząd próbuje zmienić bodźce na rynku pracy.",
+      "keyFacts": [
+        "Kwota wsparcia może sięgnąć 4,5 tys. funtów.",
+        "Mechanizm dotyczy praktyk zawodowych.",
+        "Cel ma charakter aktywizacji rynku pracy i edukacji."
+      ],
+      "reactions": [
+        "Opozycja i komentatorzy mogą spierać się o skuteczność zachęty.",
+        "Temat może wrócić jako część szerszej reformy świadczeń i szkoleń."
+      ],
+      "whyItMatters": "To sygnał polityki rynku pracy i kosztów świadczeń.",
+      "context": "BBC dorzuca w tym slocie kilka mniej geopolitycznych, ale nadal aktualnych tematów gospodarczych.",
+      "watchNext": [
+        "Śledź, czy rząd poda harmonogram wdrożenia.",
+        "Sprawdzaj, czy pojawi się reakcja związków lub organizacji pracodawców."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Some parents on benefits to get up to £4,500 for child starting apprenticeship",
+          "url": "https://www.bbc.co.uk/news/articles/cwy4v6e9d2go?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Wielka Brytania",
+        "rynek pracy",
+        "benefity"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-2111-08",
+      "section": "Bezpieczeństwo",
+      "title": "Francuska marynarka strzela podczas wywiadu BBC",
+      "lead": "BBC opisuje ćwiczenia z ostrą amunicją w trakcie rozmowy na żywo.",
+      "whatHappened": "BBC relacjonuje sytuację, w której francuski okręt wykonał ćwiczenia strzeleckie, gdy Chris Philp udzielał wywiadu. Według materiału padło 17 strzałów.",
+      "keyFacts": [
+        "BBC mówi o 17 strzałach oddanych podczas rozmowy.",
+        "Wystąpienie dotyczyło francuskiej jednostki marynarki.",
+        "Materiał zwraca uwagę na bezpieczeństwo i ryzyko nieplanowanego kontaktu medialnego z ćwiczeniami wojskowymi."
+      ],
+      "reactions": [
+        "Sprawa może wywołać komentarze brytyjskiej opozycji i francuskich władz.",
+        "Możliwa jest dyskusja o informowaniu mediów o ćwiczeniach wojskowych."
+      ],
+      "whyItMatters": "To nietypowy, ale realny temat bezpieczeństwa i wojskowej komunikacji.",
+      "context": "BBC utrzymuje we francuskim bloku równolegle temat pożarów i upałów.",
+      "watchNext": [
+        "Śledź, czy Francja lub brytyjscy politycy to skomentują.",
+        "Sprawdzaj, czy BBC poda szerszy kontekst ćwiczeń."
+      ],
+      "sources": [
+        {
+          "title": "BBC: French Navy carries out 'shooting drill' during MP's BBC interview",
+          "url": "https://www.bbc.co.uk/news/articles/cy4ker2y1mko?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "marynarka",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-28-2111-09",
+      "section": "Świat",
+      "title": "UEFA uderza w plan Infantino",
+      "lead": "BBC opisuje ostrą reakcję UEFA na pomysł prywatnego kapitału w rozgrywkach FIFA.",
+      "whatHappened": "BBC Sport podaje, że UEFA zareagowała wściekle na propozycję Gianniego Infantina dotyczącą prywatnych inwestycji w jego rozgrywki, w tym w Mistrzostwa Świata.",
+      "keyFacts": [
+        "Chodzi o finansowanie i własność praw w futbolu.",
+        "Spór dotyczy również Mistrzostw Świata.",
+        "UEFA publicznie odpowiada na ruch FIFA."
+      ],
+      "reactions": [
+        "FIFA może być zmuszona do doprecyzowania planu.",
+        "Temat może przerodzić się w szerszy spór o komercjalizację piłki."
+      ],
+      "whyItMatters": "To sygnał konfliktu w globalnym zarządzaniu sportem i pieniędzmi.",
+      "context": "To jeden z mniej geopolitycznych, ale nadal istotnych światowych sygnałów w bieżącym feedzie BBC.",
+      "watchNext": [
+        "Śledź, czy FIFA odpowie oficjalnie.",
+        "Sprawdzaj, czy UEFA rozwinie argumenty o inwestorach i prawach."
+      ],
+      "sources": [
+        {
+          "title": "BBC: Uefa reacts with fury to Infantino World Cup plan",
+          "url": "https://www.bbc.co.uk/sport/football/articles/c8xng9894z0o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "UEFA",
+        "FIFA",
+        "sport",
+        "biznes"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "2026-07-28-2111-10",
+      "section": "Świat",
+      "title": "Trump, Zełenski i Boeing w jednym bloku CNN",
+      "lead": "CNN łączy rozmowy w Białym Domu z mail voting i nową kontrolą foteli w 737 MAX.",
+      "whatHappened": "CNN News Central i CNN This Morning mówią o planowanych spotkaniach Donalda Trumpa z Wołodymyrem Zełenskim i Benjaminem Netanjahu, prośbie do Sądu Najwyższego o ograniczenie głosowania korespondencyjnego oraz nakazie sprawdzenia foteli w setkach Boeingów 737 MAX.",
+      "keyFacts": [
+        "Trump ma spotkać się z Zełenskim i Netanjahu w Waszyngtonie.",
+        "CNN opisuje również ruch Trumpa wobec mail voting.",
+        "FAA nakazuje kontrolę foteli w setkach Boeingów 737 MAX."
+      ],
+      "reactions": [
+        "Sojusznicy i rynek będą szukać sygnału z Białego Domu po spotkaniach.",
+        "Linie lotnicze i Boeing mogą dostać kolejne koszty operacyjne i wizerunkowe."
+      ],
+      "whyItMatters": "To jeden blok łączący bezpieczeństwo lotnicze i geopolitykę USA.",
+      "context": "CNN wciąż buduje poranny pakiet na tej samej osi, którą widać też w BBC.",
+      "watchNext": [
+        "Śledź komunikaty po spotkaniach w Białym Domu.",
+        "Sprawdzaj, czy FAA poda harmonogram kontroli i odpowiedź Boeinga."
+      ],
+      "sources": [
+        {
+          "title": "CNN.com - Transcripts",
+          "url": "https://transcripts.cnn.com/date/2026-07-28"
+        },
+        {
+          "title": "CNN News Central segment 01",
+          "url": "https://transcripts.cnn.com/show/cnc/date/2026-07-28/segment/01"
+        },
+        {
+          "title": "CNN This Morning segment 02",
+          "url": "https://transcripts.cnn.com/show/ctmo/date/2026-07-28/segment/02"
+        }
+      ],
+      "tags": [
+        "USA",
+        "Ukraina",
+        "Boeing",
+        "wybory"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-2111-11",
+      "section": "Świat",
+      "title": "Japonia po trzęsieniu ziemi szuka zaginionych",
+      "lead": "TVN Meteo opisuje eksplozję i działania ratunkowe po trzęsieniu ziemi w Japonii.",
+      "whatHappened": "W RSS TVN Meteo pojawił się materiał o trzęsieniu ziemi w Japonii i eksplozji w centrum handlowym, po której trwa akcja poszukiwawcza i pojawiają się informacje o ofiarach śmiertelnych.",
+      "keyFacts": [
+        "Trzęsienie ziemi dotknęło południową Japonię.",
+        "Po wstrząsach doszło do eksplozji w centrum handlowym.",
+        "Na miejscu trwa akcja poszukiwawcza i ratownicza."
+      ],
+      "reactions": [
+        "Lokalne służby mogą aktualizować bilans ofiar i zniszczeń.",
+        "Temat może wrócić w kolejnych serwisach jako większy kryzys bezpieczeństwa."
+      ],
+      "whyItMatters": "To świeży międzynarodowy temat bezpieczeństwa i katastrofy naturalnej.",
+      "context": "To osobny, bardziej szczegółowy sygnał niż krótka wzmianka w CNN.",
+      "watchNext": [
+        "Śledź dalszy bilans ofiar i skalę zniszczeń.",
+        "Sprawdzaj, czy pojawią się ostrzeżenia sejsmologiczne lub logistyczne."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo: Trzęsienie ziemi w Japonii. Szukają zaginionych po wybuchu. Są informacje o ofiarach śmiertelnych",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/trzesienie-ziemi-w-japonii-eksplozja-w-centrum-handlowym-po-trzesieniu-ziemi-media-zginelo-wiele-osob-st9162436?source=rss"
+        }
+      ],
+      "tags": [
+        "Japonia",
+        "trzęsienie ziemi",
+        "katastrofa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-28-2111-12",
+      "section": "Technologia",
+      "title": "OpenAI i Nvidia briefują polityków o agentach AI",
+      "lead": "CNN opisuje briefingi Sama Altmana i Jensa Huanha w Waszyngtonie wokół ryzyk agentów AI.",
+      "whatHappened": "CNN Newsroom podaje, że Sam Altman i Jensen Huang mają informować amerykańskich polityków o ryzykach związanych z agentami AI, a wcześniejszy blok CNN mówi o rozmowach Altmana z urzędnikami Białego Domu na temat polityki AI.",
+      "keyFacts": [
+        "Temat dotyczy ryzyka agentów AI i polityki publicznej.",
+        "W Waszyngtonie pojawiają się liderzy OpenAI i Nvidii.",
+        "CNN wiąże briefing z urzędnikami i ustawodawcami."
+      ],
+      "reactions": [
+        "To może uruchomić nowe pytania o regulacje i odpowiedzialność systemów AI.",
+        "Politycy mogą wrócić do tematu bezpieczeństwa modeli i agentów."
+      ],
+      "whyItMatters": "To najważniejszy techniczny sygnał dnia w globalnym feedzie.",
+      "context": "CNN od rana łączy AI z bezpieczeństwem publicznym i polityką USA.",
+      "watchNext": [
+        "Śledź, czy briefingi przejdą w konkretne propozycje regulacyjne.",
+        "Sprawdzaj, czy OpenAI lub Nvidia doprecyzują przekaz po spotkaniach."
+      ],
+      "sources": [
+        {
+          "title": "CNN Newsroom segment 19",
+          "url": "https://transcripts.cnn.com/show/cnr/date/2026-07-28/segment/19"
+        },
+        {
+          "title": "CNN News Central segment 04",
+          "url": "https://transcripts.cnn.com/show/cnc/date/2026-07-28/segment/04"
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "Nvidia",
+        "AI",
+        "polityka"
+      ],
+      "priority": "high"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 homepage",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN Meteo RSS",
+      "url": "https://tvn24.pl/tvnmeteo/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN transcripts index",
+      "url": "https://transcripts.cnn.com/date/2026-07-28"
+    },
+    {
+      "title": "RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    }
+  ]
+}

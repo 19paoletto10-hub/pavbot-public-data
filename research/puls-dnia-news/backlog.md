@@ -1,5 +1,12 @@
 # Puls Dnia News Backlog
 
+## 2026-07-28 21:11
+
+- Watch whether IMGW i RCB przekują alerty upałowe w komunikaty operacyjne albo przerwy w transporcie.
+- Watch whether France adds another evacuation, road closure or firefighting update around the heatwave.
+- Watch whether the Trump-Zełenski-Netanyahu block yields concrete aid, security or Boeing/FAA follow-up.
+- Watch whether OpenAI i Nvidia doprecyzują briefing o agentach AI po spotkaniach w Waszyngtonie.
+
 ## 2026-07-28 18:01
 
 - Watch whether PiS odpowie formalnie na awanturę o ceny paliw albo czy temat przejdzie w projekt legislacyjny.
