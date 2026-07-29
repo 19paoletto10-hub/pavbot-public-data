@@ -2,6 +2,17 @@
 
 ## Current State
 
+- Current active public bundle should rotate to
+  `research/reddit-radar/data/2026-07-29-1808-reddit-radar.json` after this
+  evening publish.
+- Wednesday, July 29, 2026 18:08 CEST found six fresh, public-safe survivors
+  after filtering `2026-07-29-0608` and `2026-07-29-1207`, so the topic again
+  clears the contract threshold with a lighter evening set led by two social
+  awkwardness meme cards, two clean dev overthinking cards, and two food
+  self-own closers.
+- The same 18:08 CEST audit confirmed that `origin/main` already exposed the
+  `2026-07-29-1207` public bundle before publication, so this slot is a normal
+  fresh rotation and not a remote catch-up publish.
 - Current active public bundle is now
   `research/reddit-radar/data/2026-07-29-1207-reddit-radar.json`.
 - Wednesday, July 29, 2026 12:07 CEST found five fresh, public-safe survivors

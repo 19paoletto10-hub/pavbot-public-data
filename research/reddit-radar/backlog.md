@@ -8,6 +8,9 @@
 
 ## Review Notes
 
+- 2026-07-29: 18:08 CEST material update again started from a current
+  `origin/main` state, so the evening slot remained a standard rotation rather
+  than a remote catch-up publish.
 - 2026-07-29: 12:07 CEST material update started from a stale `origin/main`
   state that still exposed `2026-07-28-2208`, so remote verification remains
   mandatory and this publish should also catch up the missing `2026-07-29-0608`

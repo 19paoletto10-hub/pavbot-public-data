@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-29-1808",
+  "status": "material_update",
+  "generatedAt": "2026-07-29T16:08:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-29T18:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on exact old.reddit.com listings and exact post pages using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two latest saved automation runs 2026-07-29-0608 and 2026-07-29-1207, so none of the post URLs that appeared there could roll forward into this slot.",
+      "Verified before publication planning that origin/main already exposed the 2026-07-29-1207 reddit-radar bundle and manifest, so this slot starts from a current remote topic state.",
+      "Fresh evening review again cleared the contract threshold with six new public-safe survivors led by two social-awkward meme cards, two clean dev cards, and two food-absurd everyday closers.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "currentPublicBundle": "2026-07-29-1207",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-29-1808-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-29-1808-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-29-1808-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9hsg4/guessandcheckdrivendevelopment/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9oz7k/ifinallyfoundoneinthewild/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9p25k/packetloss/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v93vyp/its_only_fair/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9djs3/when_you_boldly_speak_your_mind_the_surprise/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9g0hx/texting_with_my_14yo_requires_nextlevel/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9hq93/influencers_once_they_hit_500k_followers/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9jna7/me_responding_to_people_in_ten_seconds_after_they/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9ko2q/circle_k_ai_selfcheckout_machine_hallucinated/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9p8fh/satisfying_moment/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9g0hx/texting_with_my_14yo_requires_nextlevel/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9ko2q/circle_k_ai_selfcheckout_machine_hallucinated/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1v9v4ic/seriously_who_are_these_peoplem/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "The visible comments stay on one social-anxiety joke about being expected to remember someone you absolutely do not remember."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1v9tjsp/we_are_just_better/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "The thread turns into long hair-transplant argument and clinic advice."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1v9u2h8/bet_the_cameraman_was_trying_to_keep_a_straight/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "The visible joke is short, but comments drift into religion and medicine talk almost immediately."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1v9roor/when_you_say_goodbye_to_someone_and_you_both/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "Visible comments keep the same single awkwardness bit about saying goodbye too early and then being trapped walking together."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1v9v5aa/anon_tries_science/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "The page fragments into unrelated bits and random references instead of one dominant payoff."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v9s068/dinnerwithaprogrammerisneversimple/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "The thread stays on one clean overengineering joke about turning a salt request into parameter-passing theory."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v9kokx/redactoverflow/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "not_reviewed",
+      "reason": "Fresh candidate stayed below the final review cut."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v9thq8/excusemoihow0ldisclaudec0de/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "Visible comments keep the joke on absurdly multiplied experience measured in AI years and parallel agents."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v9rnny/waittillitsfriday/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "There are funny replies, but the thread also leans into repost and meta sourcing talk."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v9y3w1/providingninetyninepointninepercentprotection/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "The joke is readable, but the page is too directly framed around AI-safety-slop discourse."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v9usj1/i_canceled_my_hp_instant_ink_subscription_and_now/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "The comment layer immediately becomes printer recommendations and toner logistics."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v9wiog/this_was_a_stew_my_brother_appears_to_have_ate/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "reason": "Top comments all react to the same upside-down stew logic and immediately treat it as a bizarre food self-own."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v9qcqe/pancake_which_they_apparently_had_no_sugar_so_we/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "reason": "The page lands on one simple culinary disaster: replacing sugar with salt as if they were interchangeable."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v9tx35/my_works_split_recycling_bin_is_just_one_bin/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "Comments drift into Simpsons and streaming aspect-ratio discourse instead of the recycling-bin joke."
+    }
+  ]
+}
