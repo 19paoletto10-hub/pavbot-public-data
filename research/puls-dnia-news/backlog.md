@@ -1,5 +1,13 @@
 # Puls Dnia News Backlog
 
+## 2026-07-29 21:07
+
+- Watch whether Thursday's Kaczyński-Morawiecki meeting ends in a signed declaration or a split.
+- Watch whether the RPO vote triggers any procedural challenge from PiS.
+- Watch whether the UK, Spain or France weather alerts turn into new evacuation or closure orders.
+- Watch whether the UN walkout gets a second diplomatic response from Washington or Paris.
+- Watch whether the AI exposure coverage turns into a labor-market or regulatory reaction.
+
 ## 2026-07-29 12:01
 
 - Watch whether PiS publishes a formal club list or additional disciplinary responses.

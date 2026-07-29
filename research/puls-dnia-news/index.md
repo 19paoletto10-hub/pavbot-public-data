@@ -8,6 +8,11 @@ exists, it falls back to the older `aktualne-wydarzenia-mobile` magazine data.
 The public manifest now exposes timestamped `pulseNewsData` artifacts for this
 topic, so the primary feed path is active when refresh succeeds.
 
+The 2026-07-29 21:07 slot domyka wieczór formalnym spotkaniem Kaczyński-
+Morawiecki po terminie ultimatum, potwierdza wybór Sylwii Gregorczyk-Abram na
+RPO i dokłada świeże, bieżące ryzyka z ONZ, Wielkiej Brytanii, Hiszpanii oraz
+rynku pracy pod wpływem AI.
+
 The 2026-07-29 12:01 slot przesuwa Puls Dnia z porannego rozłamu PiS do
 bardziej formalnej fazy: nowy klub Morawieckiego, lista członków, spotkanie
 Tuska z Zełenskim, paliwa i ranking zaufania zostają w kraju, a za granicą
