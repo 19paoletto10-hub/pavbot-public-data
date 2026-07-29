@@ -2,8 +2,29 @@
 
 ## Current State
 
+- Current active public bundle is now
+  `research/reddit-radar/data/2026-07-29-1207-reddit-radar.json`.
+- Wednesday, July 29, 2026 12:07 CEST found five fresh, public-safe survivors
+  after filtering `2026-07-29-0608` and `2026-07-28-2208`, so the topic again
+  clears the contract threshold with a new midday set led by one forced-restart
+  work meme, one instant-reply texting self-own, two compact dev cards about
+  packet loss and impossible React experience, and one absurd `8.5`-billion
+  self-checkout donation closer.
+- The same 12:07 CEST audit found that `origin/main` still exposed the older
+  `2026-07-28-2208` public bundle and did not yet contain the already-saved
+  local `2026-07-29-0608` material update before publication, so this slot
+  doubles as a remote-state catch-up.
 - Topic operates as a read-only Reddit humor radar built from live Safari review
   on public `old.reddit.com` listings and exact post pages.
+- Wednesday, July 29, 2026 06:08 CEST found five fresh, public-safe survivors
+  after filtering `2026-07-28-1808` and `2026-07-28-2208`, so the topic again
+  clears the contract threshold with a broader mainstream set led by
+  internet-downvote bravery, influencer veneers, split-the-bill Messi face,
+  one `EXPLAIN` panic-button dev card, and a text-message cipher from
+  `r/mildlyinfuriating`.
+- The same 06:08 CEST audit confirmed that `origin/main` already exposed the
+  latest `2026-07-28-2208` public bundle before publication, so this slot is a
+  normal fresh rotation and not a remote-state recovery publish.
 - Current active public bundle is now
   `research/reddit-radar/data/2026-07-28-2208-reddit-radar.json`.
 - Tuesday, July 28, 2026 22:08 CEST found exactly four fresh, public-safe

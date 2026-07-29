@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-29-1207",
+  "status": "material_update",
+  "generatedAt": "2026-07-29T10:07:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-29T12:07:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on old.reddit.com using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two previous saved automation runs 2026-07-29-0608 and 2026-07-28-2208, so none of the post URLs that appeared there could roll forward into this slot.",
+      "Before selecting replacements, the run verified that origin/main still served 2026-07-28-2208 for reddit-radar and did not yet expose the already-saved local 2026-07-29-0608 bundle, so the remote topic was stale at run start.",
+      "Final read-only Safari review found five fresh public-safe survivors led by two broad meme cards, two light dev cards, and one absurd self-checkout closer.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "currentPublicBundle": "2026-07-28-2208",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-29-1207-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-29-1207-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-29-1207-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/AskReddit/comments/1v8pwzo/zookeepers_of_reddit_which_animal_is_way_more_fun/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v93xqr/foundthebug/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v992p8/understandabledecisionwhenyouthinkaboutit/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v99ohg/zerotickets/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9acor/thestateofbughunting/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9cg17/typescriptissolved/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9hsg4/guessandcheckdrivendevelopment/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v8xncr/every_decade_has_its_own_fake_detector/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v8zohr/why_i_stopped_talking_about_my_feelings/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v907uu/we_aint_moving_out_with_this_one/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v93vyp/its_only_fair/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v963cn/you_know_ur_grandma_didnt_hear_a_single_thing_you/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v96ter/mmm_sour_candy/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v99nf1/this_is_so_accurate/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9a5oq/i_know_from_where_nolan_was_inspired_but_i_cant/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9awsa/why_i_hate_most_anime/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9djs3/when_you_boldly_speak_your_mind_the_surprise/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9dock/great_return_on_investment/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9hq93/influencers_once_they_hit_500k_followers/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v918t6/every_potato_in_a_5_pound_bag_looked_like_this/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9849n/there_is_a_national_park_system_site_that_you/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9aisy/boss_sends_us_photos_and_details_of_her_vacations/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9atsb/i_submitted_a_picture_of_my_cat_for_a_calendar/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9g0hx/texting_with_my_14yo_requires_nextlevel/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1v9p8fh/satisfying_moment/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "Compact force-restart joke that stayed on one clean Spider-Man-style payoff."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1v9jna7/me_responding_to_people_in_ten_seconds_after_they/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "Portable texting self-own with light comments and no resentment spiral."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v9p25k/packetloss/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "Small but clean packet-loss pun with a readable dev payoff."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v9oz7k/ifinallyfoundoneinthewild/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "Absurd years-of-experience math turns into a clean react-vampire joke."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v9ko2q/circle_k_ai_selfcheckout_machine_hallucinated/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "reason": "Immediate billion-dollar donation absurdity with lightweight broke-joke comments."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1v9pcwa/life_of_a_modd/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "Moderator grievance overwhelmed the joke."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1v9iaur/when_the_cashier_asks_if_i_want_to_round_up_and/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "Donation and thrift-store trust discourse overtook the punchline."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1v9pyu2/wait_till_they_find_out_how_sometimes_you_scrach/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "Too explain-first and nostalgia-heavy."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v9mjlo/artificialintelligence/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "The page turned into direct AI argument."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v9r248/planningtobecomefarmerafterlayoffsthensawthis/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "Layoff and replacement anxiety overtook the joke."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v9puxa/sqldevs/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "Too thin and repost-adjacent."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v9kokx/redactoverflow/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "Meta-slop conversation displaced a single clean payoff."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v9k3qi/coworker_ive_never_spoken_to_sent_passive/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "Funny but too long and workplace-specific."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v9kqom/this_is_what_happens_when_i_drink_beer_now/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "Image replies and PCP jokes made it too fragmented."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v9k41w/whatever_this_is/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "Belly-button weirdness made it less clean."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v9md2s/i_always_thought_its_just_an_urban_legend_and/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "Too gross-out and complaint-first."
+    }
+  ]
+}

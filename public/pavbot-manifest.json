@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-07-29T10:09:28.619081+00:00",
+  "generatedAt": "2026-07-29T10:18:56.514877+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -137,6 +137,63 @@
     }
   ],
   "artifacts": [
+    {
+      "id": "research/reddit-radar/runs/2026-07-29-1207-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Daily Research Report: Reddit Radar",
+      "path": "research/reddit-radar/runs/2026-07-29-1207-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-07-29-1207-reddit-radar.md",
+      "sizeBytes": 11472,
+      "date": "2026-07-29",
+      "time": "12:07"
+    },
+    {
+      "id": "research/reddit-radar/runs/2026-07-29-0608-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Daily Research Report: Reddit Radar",
+      "path": "research/reddit-radar/runs/2026-07-29-0608-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-07-29-0608-reddit-radar.md",
+      "sizeBytes": 9187,
+      "date": "2026-07-29",
+      "time": "06:08"
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-29-1207-reddit-radar.json",
+      "type": "redditRadarData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar data",
+      "path": "research/reddit-radar/data/2026-07-29-1207-reddit-radar.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-29-1207-reddit-radar.json",
+      "sizeBytes": 10224,
+      "date": "2026-07-29",
+      "time": "12:07",
+      "itemCount": 5
+    },
+    {
+      "id": "research/reddit-radar/data/2026-07-29-0608-reddit-radar.json",
+      "type": "redditRadarData",
+      "topic": "reddit-radar",
+      "title": "Reddit Radar data",
+      "path": "research/reddit-radar/data/2026-07-29-0608-reddit-radar.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/data/2026-07-29-0608-reddit-radar.json",
+      "sizeBytes": 9671,
+      "date": "2026-07-29",
+      "time": "06:08",
+      "itemCount": 5
+    },
+    {
+      "id": "research/reddit-radar/pdfs/2026-07-29-1207-reddit-radar.pdf",
+      "type": "pdf",
+      "topic": "reddit-radar",
+      "title": "2026-07-29-1207-reddit-radar.pdf",
+      "path": "research/reddit-radar/pdfs/2026-07-29-1207-reddit-radar.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/pdfs/2026-07-29-1207-reddit-radar.pdf",
+      "sizeBytes": 86887,
+      "date": "2026-07-29",
+      "time": "12:07"
+    },
     {
       "id": "research/puls-dnia-news/runs/2026-07-29-1201.md",
       "type": "run",
@@ -18343,7 +18400,7 @@
       "title": "Topic Index: reddit-radar",
       "path": "research/reddit-radar/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/index.md",
-      "sizeBytes": 5934
+      "sizeBytes": 7343
     },
     {
       "id": "research/reddit-radar/backlog.md",
@@ -18352,7 +18409,7 @@
       "title": "Topic Backlog: reddit-radar",
       "path": "research/reddit-radar/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/backlog.md",
-      "sizeBytes": 1701
+      "sizeBytes": 2127
     },
     {
       "id": "research/puls-dnia-news/topic.md",
