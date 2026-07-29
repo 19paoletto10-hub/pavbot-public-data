@@ -1,0 +1,543 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-07-29",
+  "runTime": "06:01",
+  "status": "Material update",
+  "headline": "06:01: krajowe podatki, upały i geopolityka",
+  "summary": "Poranny slot 06:01 przesuwa Puls Dnia z nocnego pakietu podatki/Tatry/upały w szerszy miks krajowych decyzji fiskalnych i organizacyjnych oraz świeżych sygnałów zagranicznych. TVN24 Biznes podbija kwotę wolną, promocję Polski, kryteria rad nadzorczych, fundusz innowacji, Visa i AI; TVN Meteo dokłada upały, Rysy i Japonię; BBC przynosi Iran-USA, Francję, Burnhama, Seattle i zakaz chińskich robotów; CNN utrzymuje Trumpa, Zełenskiego, Netanjahu, Boeinga i briefing OpenAI jako bieżący kontekst.",
+  "items": [
+    {
+      "id": "2026-07-29-0601-01",
+      "section": "Polska",
+      "title": "Wyższa kwota wolna wraca do debaty",
+      "lead": "TVN24 Biznes znów podbija koszt podniesienia kwoty wolnej i drugiego progu PIT.",
+      "whatHappened": "Na stronie biznesowej widoczny jest materiał o nowych wyliczeniach Ministerstwa Finansów. Temat wraca jako bieżący koszt fiskalny i polityczny.",
+      "keyFacts": [
+        "Dotyczy kwoty wolnej i drugiego progu PIT.",
+        "TVN24 opisuje nowe wyliczenia kosztu dla budżetu.",
+        "To wraca do porannej debaty o podatkach i dochodach."
+      ],
+      "reactions": [
+        "Temat może wymusić komentarz resortu finansów i opozycji.",
+        "Sprzyja kalkulacjom o kosztach życia i klasie średniej."
+      ],
+      "whyItMatters": "To czytelny koszt budżetowy i temat wyborczy.",
+      "context": "Jeden z głównych krajowych leadów poranka.",
+      "watchNext": [
+        "Sprawdzaj komentarz MF i reakcję partii.",
+        "Patrz, czy temat przełoży się na projekt lub korektę komunikacji."
+      ],
+      "sources": [
+        {
+          "title": "Wyższa kwota wolna od podatku. Policzono, ile to będzie kosztować",
+          "url": "https://tvn24.pl/biznes/z-kraju/kwota-wolna-od-podatku-ministerstwo-finansow-przedstawilo-nowe-wyliczenia-jaki-koszt-podniesienia-kwoty-wolnej-i-drugiego-progu-podatkowego-st9163081"
+        }
+      ],
+      "tags": [
+        "PIT",
+        "podatki",
+        "budżet",
+        "gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0601-02",
+      "section": "Polityka",
+      "title": "Nowy pełnomocnik ma promować Polskę",
+      "lead": "Rząd przyjął rozporządzenie o nowej funkcji do spraw promocji Polski.",
+      "whatHappened": "TVN24 Biznes opisuje projekt koordynujący działania promocyjne państwa.",
+      "keyFacts": [
+        "Rząd formalizuje nową funkcję.",
+        "Temat dotyczy promocji kraju i koordynacji przekazu.",
+        "Wpisuje się w szerszą agendę wizerunkową."
+      ],
+      "reactions": [
+        "Samorządy i branża turystyczna mogą pytać o zakres kompetencji.",
+        "Pojawi się pytanie o koszty i skuteczność."
+      ],
+      "whyItMatters": "Promocja kraju wpływa na turystykę i inwestycje.",
+      "context": "Nowy krajowy lead z poranka.",
+      "watchNext": [
+        "Sprawdzaj zakres kompetencji pełnomocnika.",
+        "Patrz, czy pojawi się reakcja resortów lub samorządów."
+      ],
+      "sources": [
+        {
+          "title": "Nowy pomysł na promocję Polski. Jest projekt",
+          "url": "https://tvn24.pl/biznes/z-kraju/nowy-pomysl-na-promocje-polski-rzad-przyjal-rozporzadzenie-ustanawiajacego-nowego-pelnomocnika-do-spraw-promocji-st9163036"
+        }
+      ],
+      "tags": [
+        "promocja Polski",
+        "rząd",
+        "wizerunek",
+        "polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-29-0601-03",
+      "section": "Gospodarka",
+      "title": "Rząd zaostrza kryteria dla rad nadzorczych",
+      "lead": "Spółki Skarbu Państwa dostają ostrzejsze wymagania dla kandydatów do rad nadzorczych.",
+      "whatHappened": "TVN24 Biznes opisuje nowe kryteria obsady nadzoru w państwowych spółkach.",
+      "keyFacts": [
+        "Zmiana dotyczy spółek Skarbu Państwa.",
+        "Nowe kryteria mają zawęzić dostęp do rad nadzorczych.",
+        "To sygnał porządkowania ładu korporacyjnego."
+      ],
+      "reactions": [
+        "Będzie wpływać na rekrutacje i nominacje.",
+        "Może wywołać spór o upolitycznienie lub profesjonalizację."
+      ],
+      "whyItMatters": "To praktyczna zmiana w nadzorze nad państwowym majątkiem.",
+      "context": "Pokazuje, że obok podatków poranny blok ma też wymiar instytucjonalny.",
+      "watchNext": [
+        "Sprawdzaj listy nowych kandydatów i komentarze spółek.",
+        "Patrz, czy pojawi się doprecyzowanie kryteriów w praktyce."
+      ],
+      "sources": [
+        {
+          "title": "Państwo zaostrza kryteria. Nowe wymogi dla rad nadzorczych",
+          "url": "https://tvn24.pl/biznes/z-kraju/trudniej-o-posade-w-spolkach-skarbu-panstwa-rzad-zaostrza-kryteria-st9162942"
+        }
+      ],
+      "tags": [
+        "spółki Skarbu Państwa",
+        "nadzór",
+        "gospodarka",
+        "ład korporacyjny"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-29-0601-04",
+      "section": "Gospodarka",
+      "title": "Innowacje krytyczne dostają miliardy",
+      "lead": "Resort pokazuje liczby dla funduszu wsparcia technologii krytycznych i polskich innowacji.",
+      "whatHappened": "TVN24 Biznes opisuje nowy strumień pieniędzy na technologie krytyczne i krajowe innowacje.",
+      "keyFacts": [
+        "Pieniądze mają iść na technologie krytyczne.",
+        "Resort pokazuje już konkretne liczby.",
+        "Temat łączy przemysł, badania i politykę gospodarczą."
+      ],
+      "reactions": [
+        "Firmy technologiczne i startupy będą szukać szczegółów naboru.",
+        "Rynek będzie patrzył na tempo uruchamiania środków."
+      ],
+      "whyItMatters": "To bezpośredni sygnał inwestycyjny dla sektora.",
+      "context": "To jeden z najmocniejszych gospodarczych leadów poranka.",
+      "watchNext": [
+        "Sprawdzaj zasady naboru i harmonogram.",
+        "Patrz, czy pojawi się reakcja branży lub mediów gospodarczych."
+      ],
+      "sources": [
+        {
+          "title": "Miliardy na polskie innowacje. Resort pokazuje liczby",
+          "url": "https://tvn24.pl/biznes/z-kraju/fundusz-wsparcia-technologii-krytycznych-miliardy-na-polskie-innowacje-resort-pokazuje-liczby-st9162844"
+        }
+      ],
+      "tags": [
+        "innowacje",
+        "fundusze",
+        "technologie krytyczne",
+        "gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0601-05",
+      "section": "Alerty",
+      "title": "Fala upałów wraca nad Polskę",
+      "lead": "TVN Meteo ostrzega przed temperaturami powyżej 30 stopni i możliwymi alertami najwyższego stopnia.",
+      "whatHappened": "RSS TVN Meteo zapowiada wzrost temperatur i dłuższy epizod gorąca. To poranny sygnał ostrzegawczy dla zdrowia, transportu i energetyki.",
+      "keyFacts": [
+        "Temperatury mają wyraźnie przekroczyć 30 stopni.",
+        "Utrzymywać się mają wysokie wartości przez kilka dni.",
+        "Alert może szybko przejść w komunikaty operacyjne."
+      ],
+      "reactions": [
+        "RCB i IMGW mogą podbić alerty lub wydać rekomendacje.",
+        "Służby i operatorzy transportu mogą reagować na obciążenie temperaturą."
+      ],
+      "whyItMatters": "To realny wpływ na zdrowie, transport i rachunki za energię.",
+      "context": "Po wczorajszym wieczornym sygnale temat staje się porannym priorytetem.",
+      "watchNext": [
+        "Śledź kolejne komunikaty IMGW i RCB.",
+        "Patrz, czy pojawią się ograniczenia w ruchu lub w transporcie."
+      ],
+      "sources": [
+        {
+          "title": "Żar będzie lał się z nieba. Jak długo potrwa fala upałów",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/upal-w-polsce-pogoda-zar-bedzie-lal-sie-z-nieba-jak-dlugo-potrwa-fala-upalow-st9162642?source=rss"
+        }
+      ],
+      "tags": [
+        "upały",
+        "IMGW",
+        "RCB",
+        "alert"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0601-06",
+      "section": "Bezpieczeństwo",
+      "title": "Turysta zmarł w drodze na Rysy",
+      "lead": "TOPR nie zdołał uratować zagranicznego turysty po zatrzymaniu krążenia na szlaku.",
+      "whatHappened": "TVN Meteo opisuje śmierć turysty na Rysach mimo reanimacji prowadzonej przez ratowników.",
+      "keyFacts": [
+        "Do zdarzenia doszło na szlaku w Tatrach.",
+        "Ratownicy podjęli reanimację, ale życia nie udało się uratować.",
+        "To kolejny tatrzański sygnał bezpieczeństwa z tego poranka."
+      ],
+      "reactions": [
+        "To przypomnienie o ryzyku na wysokogórskich szlakach.",
+        "Może skłonić do kolejnych apeli o przygotowanie i sprzęt."
+      ],
+      "whyItMatters": "To realny wypadek z obszaru bezpieczeństwa publicznego i turystyki górskiej.",
+      "context": "Temat łączy się z falą upałów i ruchem turystycznym w górach.",
+      "watchNext": [
+        "Sprawdzaj ewentualne komunikaty TOPR lub TPN.",
+        "Patrz, czy pojawią się ostrzeżenia dotyczące szlaków."
+      ],
+      "sources": [
+        {
+          "title": "Turysta zmarł w drodze na Rysy",
+          "url": "https://tvn24.pl/tvnmeteo/polska/tatry-zagraniczny-turysta-zmarl-w-drodze-na-rysy-st9162895?source=rss"
+        }
+      ],
+      "tags": [
+        "Tatry",
+        "TOPR",
+        "bezpieczeństwo",
+        "turystyka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0601-07",
+      "section": "Świat",
+      "title": "USA i Iran wymieniają uderzenia",
+      "lead": "BBC podaje, że Central Command przechwyciło kolejne rakiety, a kruchy zastój w walce się załamał.",
+      "whatHappened": "BBC opisuje kolejne uderzenia między Iranem a USA i koniec krótkiej pauzy w walkach.",
+      "keyFacts": [
+        "BBC mówi o wymianie uderzeń i przerwaniu krótkiego lullu.",
+        "CENTCOM przechwyciło kolejne rakiety.",
+        "To sygnał dalszej eskalacji w regionie."
+      ],
+      "reactions": [
+        "Możliwe są kolejne komunikaty wojskowe lub dyplomatyczne.",
+        "Rynek będzie pilnie patrzył na ryzyko regionalne i energetyczne."
+      ],
+      "whyItMatters": "To jedno z najważniejszych globalnych zagrożeń dla bezpieczeństwa i rynków.",
+      "context": "BBC wrzuca ten temat dziś bardzo wysoko w feedzie.",
+      "watchNext": [
+        "Sprawdzaj, czy pojawi się oficjalny briefing USA lub Iranu.",
+        "Patrz, czy to wpłynie na ropę, transport lub zamknięcia przestrzeni."
+      ],
+      "sources": [
+        {
+          "title": "Iran and US trade strikes, shattering brief lull in fighting",
+          "url": "https://www.bbc.co.uk/news/articles/c70g6y24d76o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "USA",
+        "bezpieczeństwo",
+        "geopolityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0601-08",
+      "section": "Świat",
+      "title": "Pożary we Francji znów się zaostrzają",
+      "lead": "BBC i TVN Meteo opisują wznowienie pożarów w południowo-zachodniej Francji przy nowej fali 40-stopniowego upału.",
+      "whatHappened": "Pożary wracają na pierwsze strony, a strażacy pracują przy coraz wyższych temperaturach i napiętym bilansie strat.",
+      "keyFacts": [
+        "BBC widzi nowe zaognienie pożarów.",
+        "W regionie spodziewana jest fala 40 stopni Celsjusza.",
+        "Ryzyko dotyczy ewakuacji, dróg i pracy straży pożarnej."
+      ],
+      "reactions": [
+        "Możliwe są kolejne ewakuacje i zamknięcia dróg.",
+        "Lokalne władze mogą rozszerzyć ograniczenia w regionie."
+      ],
+      "whyItMatters": "To bezpośredni test odporności służb na ekstremalną pogodę.",
+      "context": "Wczorajszy pożarowy blok dostaje dziś nową temperaturę.",
+      "watchNext": [
+        "Śledź komunikaty prefektur i straży pożarnej.",
+        "Patrz, czy upał przełoży się na kolejne ewakuacje."
+      ],
+      "sources": [
+        {
+          "title": "Wildfires in south-west France flare up as region braces for new 40C heatwave",
+          "url": "https://www.bbc.co.uk/news/articles/c5yd8gly1ydo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "Smok ziejący ogniem zawisnął na francuskim niebie",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/pozary-we-francji-smok-ziejacy-ogniem-zawisnal-na-francuskim-niebie-st9162928?source=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "pożary",
+        "upał",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0601-09",
+      "section": "Świat",
+      "title": "Japonia liczy skutki trzęsienia ziemi",
+      "lead": "TVN Meteo i BBC pokazują nocną akcję ratunkową po wstrząsach na Kiusiu.",
+      "whatHappened": "Materiały wskazują na trzęsienie ziemi o magnitudzie 6,8, szkody i szukanie zaginionych po nocnych wstrząsach.",
+      "keyFacts": [
+        "Wstrząsy dotknęły prefekturę Kumamoto.",
+        "Trwała nocna akcja poszukiwawczo-ratunkowa.",
+        "Zgłaszane są szkody i informacje o ofiarach."
+      ],
+      "reactions": [
+        "Władze mogą aktualizować bilans strat i zagrożeń wtórnych.",
+        "Mieszkańcy i firmy w regionie będą czekać na kolejne komunikaty."
+      ],
+      "whyItMatters": "To duży incydent sejsmiczny z potencjalnymi skutkami wtórnymi.",
+      "context": "To dziś jeden z głównych światowych obrazków z feedu TVN Meteo.",
+      "watchNext": [
+        "Sprawdzaj bilans ofiar i zniszczeń.",
+        "Patrz, czy pojawią się aftershocks lub dodatkowe ostrzeżenia."
+      ],
+      "sources": [
+        {
+          "title": "Trzęsienie ziemi w Japonii. Nocna akcja ratunkowa. \"Nie możemy się z nikim skontaktować\"",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/trzesienie-ziemi-w-japonii-w-telefonach-zaczal-buczec-alarm-pociag-sie-zatrzymal-st9161781?source=rss"
+        },
+        {
+          "title": "Watch: The moment quake hit Japan",
+          "url": "https://www.bbc.co.uk/news/videos/cvg7v55gxnqo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Japonia",
+        "trzęsienie ziemi",
+        "ratownictwo",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0601-10",
+      "section": "Polityka",
+      "title": "Burnham zaprasza do rozmów o opiece",
+      "lead": "BBC opisuje próbę ponadpartyjnego porozumienia o social care i finansowaniu opieki społecznej.",
+      "whatHappened": "Brytyjski premier wciąga opozycję do rozmów o kosztach i reformie opieki społecznej.",
+      "keyFacts": [
+        "Temat dotyczy social care i kosztów systemu.",
+        "BBC opisuje rozmowy między partiami.",
+        "W grę wchodzi finansowanie długoterminowe."
+      ],
+      "reactions": [
+        "Opozycja będzie testować warunki kompromisu.",
+        "Think tanki i eksperci będą liczyć skutki dla budżetu."
+      ],
+      "whyItMatters": "To ważny test polityki społecznej i finansów publicznych w UK.",
+      "context": "To świeży brytyjski lead w porannym feedzie BBC.",
+      "watchNext": [
+        "Sprawdzaj, czy pojawi się wspólne stanowisko partii.",
+        "Patrz, czy rozmowy przełożą się na konkretny harmonogram."
+      ],
+      "sources": [
+        {
+          "title": "Burnham invites Tories and Lib Dems to social care talks",
+          "url": "https://www.bbc.co.uk/news/articles/c1k1vgx08gko?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "UK",
+        "polityka",
+        "opieka społeczna",
+        "budżet"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-29-0601-11",
+      "section": "Bezpieczeństwo",
+      "title": "Seattle upamiętnia ofiary strzelaniny",
+      "lead": "BBC relacjonuje hołd dla ofiar ataku na festiwalu jedzenia i pytania o bezpieczeństwo dużych imprez.",
+      "whatHappened": "Miasto oddaje hołd ofiarom strzelaniny, a śledczy analizują skutki zdarzenia i zabezpieczenie wydarzeń masowych.",
+      "keyFacts": [
+        "BBC opisuje upamiętnienie ofiar.",
+        "To następstwo strzelaniny na festiwalu jedzenia.",
+        "Bezpieczeństwo imprez masowych staje się głównym wątkiem."
+      ],
+      "reactions": [
+        "Władze mogą wrócić do dyskusji o zabezpieczeniach.",
+        "Organizatorzy innych imprez będą śledzić zalecenia policji."
+      ],
+      "whyItMatters": "To publiczne bezpieczeństwo w dużym mieście i przy wydarzeniach masowych.",
+      "context": "Seattle zostaje dziś w BBC wyraźnym symbolem lokalnej traumy.",
+      "watchNext": [
+        "Sprawdzaj, czy pojawi się kolejny bilans lub zarzuty.",
+        "Patrz, czy służby wydadzą nowe zalecenia dla imprez."
+      ],
+      "sources": [
+        {
+          "title": "A lover of life - Seattle pays tribute to food festival shooting victims",
+          "url": "https://www.bbc.co.uk/news/articles/cvgv7m5z4n0o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Seattle",
+        "strzelanina",
+        "bezpieczeństwo",
+        "USA"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-29-0601-12",
+      "section": "Technologia",
+      "title": "USA zakazują nowych chińskich humanoidalnych robotów",
+      "lead": "BBC opisuje ograniczenia wprowadzane przez administrację Trumpa w wyścigu o robotykę i AI.",
+      "whatHappened": "Amerykańskie władze dokręcają śrubę w segmencie humanoidalnych i zwierzęcych robotów.",
+      "keyFacts": [
+        "Zakaz dotyczy nowych chińskich humanoidalnych robotów.",
+        "BBC łączy to z rywalizacją USA-Chiny w AI i robotyce.",
+        "To kolejny sygnał technologicznej selektywnej blokady."
+      ],
+      "reactions": [
+        "Rynek robotyki może zobaczyć dalsze ograniczenia eksportowe.",
+        "Chiny i firmy technologiczne mogą odpowiedzieć retorycznie lub regulacyjnie."
+      ],
+      "whyItMatters": "To bezpośredni sygnał napięcia technologiczno-handlowego.",
+      "context": "BBC wrzuca ten temat bardzo wysoko w poranny feed.",
+      "watchNext": [
+        "Sprawdzaj reakcję firm i administracji USA.",
+        "Patrz, czy pojawią się szczegóły regulacyjne lub handlowe."
+      ],
+      "sources": [
+        {
+          "title": "Trump administration bans new Chinese humanoid robots",
+          "url": "https://www.bbc.co.uk/news/articles/cp9e2ex3ekyo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "robotyka",
+        "Chiny",
+        "USA",
+        "AI"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-29-0601-13",
+      "section": "Technologia",
+      "title": "Szefowie AI lecą do Waszyngtonu",
+      "lead": "TVN24 i CNN opisują briefing o agentach AI oraz spotkania z amerykańską administracją.",
+      "whatHappened": "Sam Altman i inni szefowie firm AI mają rozmawiać o ryzykach agentów, wycenach i regulacji w Waszyngtonie.",
+      "keyFacts": [
+        "Wątek dotyczy agentów AI i ich ryzyka.",
+        "TVN24 łączy temat z wycenami giełdowymi i oczekiwaniami rynku.",
+        "CNN podaje, że Altman ma briefować urzędników i ustawodawców."
+      ],
+      "reactions": [
+        "Regulatorzy mogą zaostrzyć kontrolę nad agentami AI.",
+        "Inwestorzy będą patrzeć, czy narracja o bańce AI się utrzyma."
+      ],
+      "whyItMatters": "To sygnał o bezpieczeństwie i wycenach w AI.",
+      "context": "To jeden z tematów, które CNN i TVN24 trzymają wspólnie w obiegu.",
+      "watchNext": [
+        "Sprawdzaj, czy pojawi się oficjalny briefing lub komentarz firm.",
+        "Patrz, czy regulatorzy zasygnalizują nowe wymagania."
+      ],
+      "sources": [
+        {
+          "title": "Stracili kontrolę nad agentem AI. Szefowie gigantów mają spotkanie w Waszyngtonie",
+          "url": "https://tvn24.pl/biznes/tech/stracili-kontrole-nad-agentem-ai-szefowie-gigantow-maja-spotkanie-w-waszyngtonie-st9161890"
+        },
+        {
+          "title": "OpenAI CEO, Sam Altman to Brief Trump Officials, Lawmakers",
+          "url": "https://transcripts.cnn.com/show/cnr/date/2026-07-28/segment/19"
+        }
+      ],
+      "tags": [
+        "AI",
+        "OpenAI",
+        "regulacje",
+        "gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0601-14",
+      "section": "Gospodarka",
+      "title": "Visa zapowiada redukcję tysięcy etatów",
+      "lead": "TVN24 Biznes wrzuca kolejny sygnał z rynku płatności o kosztach restrukturyzacji.",
+      "whatHappened": "Visa ogłasza cięcia etatów, co podkreśla presję kosztową w globalnym fintechu.",
+      "keyFacts": [
+        "Skala cięć idzie w tysiące etatów.",
+        "To kolejny mocny sygnał z rynku płatności.",
+        "Temat dotyczy kosztów i restrukturyzacji globalnej firmy."
+      ],
+      "reactions": [
+        "Rynek będzie patrzył na koszty i tempo wdrożenia cięć.",
+        "Konkurenci i partnerzy mogą komentować wpływ na branżę."
+      ],
+      "whyItMatters": "To ważny sygnał o presji kosztowej w fintechu.",
+      "context": "To lżejszy niż Boeing, ale nadal materialny sygnał globalnego biznesu.",
+      "watchNext": [
+        "Sprawdzaj, czy Visa poda zakres i harmonogram redukcji.",
+        "Patrz, czy inni gracze płatności pójdą podobną drogą."
+      ],
+      "sources": [
+        {
+          "title": "Redukcja tysięcy etatów. Visa zapowiada cięcia",
+          "url": "https://tvn24.pl/biznes/ze-swiata/visa-zwolnienia-grupowe-lider-rynku-platnosci-zapowiada-redukcje-tysiecy-etatow-st9162811"
+        }
+      ],
+      "tags": [
+        "Visa",
+        "fintech",
+        "zwolnienia",
+        "gospodarka"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24 homepage",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN Meteo RSS",
+      "url": "https://tvn24.pl/tvnmeteo/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN transcripts index",
+      "url": "https://transcripts.cnn.com/date/2026-07-28"
+    },
+    {
+      "title": "RCB komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    }
+  ]
+}

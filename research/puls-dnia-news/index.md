@@ -1,79 +1,72 @@
-The 2026-07-28 21:11 slot przesuwa Puls Dnia z cięższego pakietu 18:01 w stronę wieczornego miksu podatków, Tatr i upałów w Polsce, a za granicą dokładuje BBC z Francją, ONZ, Seattle, benefitami i UEFA-FIFA oraz CNN z Trumpem, Boeingiem, Japonią i briefingiem OpenAI. TVN Meteo wnosi dwa nowe krajowe sygnały pogodowo-ratownicze, więc slot pozostaje materialny mimo braku nowego wielkiego krajowego kryzysu.
-
-The 2026-07-28 18:01 slot przesuwa Puls Dnia z wcześniejszego bloku Wrocław/PiS/BLIK/Google na nowy pakiet krajowych i zagranicznych leadów: PiS wraca do wojny o ceny paliw, rząd naciska na najem krótkoterminowy, a światowy blok dokładują Visa, Boeing, USA-Ukraina, zatrzymanie Polaka w Chorwacji, kontrole celne w Wietnamie, rynek ropy, Seattle, ONZ, briefing OpenAI i pożary w Europie. CNN po raz pierwszy odświeża blok na 28 lipca, więc mamy realne nowe wejście względem 15:01.
-
-The 2026-07-28 15:01 slot przesuwa Puls Dnia z etapu szukania sprawców do pierwszych zarzutów we Wrocławiu, utrzymuje rozłam w PiS przy wieczornym spotkaniu Morawieckiego i dokłada świeży blok krajowych leadów o paliwach, BLIK i Google. BBC wzmacnia światowy pakiet o ONZ, Seattle, Hiszpanię, Claude, Ukrainę i Kanał La Manche, a CNN nadal kończy się na materiałach z 27 lipca.
-
-The 2026-07-28 12:02 slot przesuwa Puls Dnia w stronę krajowego miksu PiS, podatku cyfrowego, paliw i AI, a za granicą dokłada świeży blok o ONZ, Iranie, Seattle, Toronto i pożarach w Europie. Alert burzowy nadal trwa.
-
-The 2026-07-27 21:02 slot przesuwa Puls Dnia w stronę Wrocławia, rozłamu w PiS, ekstradycji Ziobry i alertów pogodowych, a za granicą utrzymuje pożary w Europie, Seattle, wsparcie dla Ukrainy, Jodrell Bank, chińskie AI i irański węzeł z CNN. CNN nadal stoi na materiałach z 24 lipca.
-
-The 2026-07-27 18:02 slot przesuwa Puls Dnia z porannego miksu PiS i infrastruktury w stronę świeższych leadów o napaści we Wrocławiu, sporze o fundusze pozabudżetowe, szwedzkiej agencji wywiadu, europejskich pożarach, cenach ropy, Berlinie, Seattle oraz dwóch krajowych alertach pogodowych. CNN nadal zatrzymuje się na materiałach z 24 lipca.
-
-The 2026-07-27 15:01 slot przesuwa Puls Dnia w stronę burzowych alertów, dalszych ruchów w PiS, wątku infrastrukturalnego z Głuchołaz, technicznych testów autonomicznych ciężarówek i świeżych zagranicznych leadów z Chin, Francji, Wielkiej Brytanii i Seattle. CNN nadal zatrzymuje się na materiałach z 24 lipca.
-
-The 2026-07-27 12:02 slot przesuwa Puls Dnia z porannego miksu alertów w stronę mocniejszego pakietu prawno-politycznego, technicznego i bezpieczeństwa publicznego. Najmocniej wybijają się Ziobro, Zondacrypto, Nvidia/OpenAI, lokalne incydenty we Wrocławiu i na S2 oraz świeże światowe sygnały z Francji, Iranu, Seattle i Zachodniego Brzegu. CNN nadal zatrzymuje się na 24 lipca.
-
-The 2026-07-27 09:01 slot przesuwa Puls Dnia w bardziej operacyjny miks krajowy: paliwa, rozłam w PiS, awarię tramwajową w Warszawie i burzowe ostrzeżenia IMGW. Za granicą rosną Berlin, hiszpańskie pożary, kubański blackout, brytyjski NHS, indyjskie protesty i Zachodni Brzeg, a CNN nadal nie wychodzi poza 24 lipca.
-
-The 2026-07-26 18:00 slot przesuwa Puls Dnia w stronę ostrzejszego miksu krajowego i europejskiego: nowa eskalacja Kurski-Morawiecki, świeże zdarzenia drogowo-graniczne w Polsce, utrzymane alerty IMGW/RCB oraz dalsze europejskie i wojenne leady z Berlina, Zachodniego Brzegu, Francji, Hiszpanii i Kijowa. CNN nadal nie wychodzi poza 24 lipca, więc pozostaje tylko punktem odniesienia.
-
-The 2026-07-28 09:02 slot przesuwa Puls Dnia w stronę nowych krajowych decyzji wokół PiS i podatku cyfrowego, a także twardego wypadku na DK62. Za granicą CNN i BBC podbijają Seattle, Iran, europejskie pożary, ugodę J&J, brytyjską reformę szkolną i ryzyka AI, a alert burzowy pozostaje aktywny.
-
-The 2026-07-28 06:01 slot przesuwa Puls Dnia z etapu poszukiwań do zatrzymań we Wrocławiu, dokłada śledztwo po ataku w Berlinie i wzmacnia alert pogodowy na 28/29 lipca. BBC odświeża pożary w Europie, Iran i szkoła-praca w UK, a CNN nadal daje tylko tło z 27 lipca.
-
 # Puls Dnia News Index
 
-The 2026-07-26 12:01 slot shifts Puls Dnia toward a more operational mix: a fresh PiS comment from Waldemar Buda, active IMGW/RCB heat-and-storm alerts, a Berlin suspect-identification update, renewed Kyiv and France escalation, and a new OpenAI/Hugging Face follow-up, while CNN still lags on 24 July.
+## Current State
 
-The 2026-07-26 06:02 slot adds a sharper weekend weather-risk block with possible second-degree IMGW alerts, keeps PiS conflict at the top with a fresh escalation in TVN24, and widens the foreign feed toward Berlin, French and Spanish wildfires, India, Kyiv, Houthi shipping risk, U.S. tariffs, OpenAI/Hugging Face, Google DMA and the U.S.-Saudi nuclear deal.
+This topic powers the iOS `Dzisiaj -> Szybki puls dnia` carousel. The app first
+looks for the newest `pulseNewsData` artifact in the public manifest. If none
+exists, it falls back to the older `aktualne-wydarzenia-mobile` magazine data.
+The public manifest now exposes timestamped `pulseNewsData` artifacts for this
+topic, so the primary feed path is active when refresh succeeds.
 
-# Puls Dnia News Index
+The 2026-07-29 12:01 slot przesuwa Puls Dnia z porannego rozłamu PiS do
+bardziej formalnej fazy: nowy klub Morawieckiego, lista członków, spotkanie
+Tuska z Zełenskim, paliwa i ranking zaufania zostają w kraju, a za granicą
+ciężar przechodzą Irak, Portugalia, Francja, Japonia, chińskie roboty, OpenAI
+i Durov.
 
-The 2026-07-24 09:04 slot keeps Puls Dnia anchored in the PiS split, Piotr Müller’s sharper public comment, the Ziobro verdict, the A1 arrest request and the live storm alert, while abroad it adds Trump’s new tariff round, French wildfire evacuations, Indian exam protests, Ukraine’s defence-minister dispute, Rubio-Lavrov, the Saudi nuclear deal, the Google DMA fine, the OpenAI security incident, the AI kill-switch push and the oil-price shock.
+The 2026-07-29 09:01 slot przesuwa Puls Dnia z porannego pakietu fiskalno-
+instytucjonalnego w bardziej operacyjny miks: PiS, Warszawa, prokurator, upały
+i burze zostają w kraju, a za granicą wchodzą greckie pożary, francuskie ognie,
+japońskie trzęsienie ziemi, chińskie roboty i AI-policy CNN.
 
-The 2026-07-24 06:01 slot przesuwa Puls Dnia ku krajowemu pakietowi PiS, wyrokowi w sprawie Ziobry, wnioskowi aresztowemu z A1 i alertom burzowym, a za granicą dokłada cła USA, pożary we Francji, protesty w Indiach, ukraiński spór o ministerstwo obrony, Rubio-Lavrov, saudyjską umowę nuklearną, karę DMA dla Google, incydent OpenAI, nacisk na AI kill switch oraz Huti i ropę powyżej 100 dolarów.
+The live run contract is now active with timestamped Markdown and
+`pulse-news.json` outputs using one shared Europe/Warsaw run stamp. Material
+items are discovered from TVN24, BBC and CNN, then confirmed with official or
+primary public sources when the claim is safety-, market- or policy-relevant.
+The 21:05 slot on 2026-07-07 added late-evening items on wind alerts, an
+evacuation in Krynica Morska, Ziobro extradition, Toyota's Texas expansion,
+Le Pen, NATO, Farage, Hungary's state TV reset, Gaza and China.
 
-The 2026-07-23 21:14 slot przesuwa feed ku świeżym incydentom krajowym, ostrzeżeniom pogodowym i ostrzejszemu rozłamowi w PiS, a za granicą dokłada Google DMA fine, incydent bezpieczeństwa OpenAI, Rubio-Lavrowa, Huti na Morzu Czerwonym, saudyjski deal nuklearny, berliński wzrost AfD i zmianę dowództwa wojskowego Ukrainy.
+The 2026-07-08 12:01 slot shifted the domestic mix toward very strong wind in
+the north, healthcare reform signals, a BBN reaction to Budanow and a custody
+death, while the international feed stayed anchored in Iran-US escalation,
+NATO procurement, Le Pen, Farage, Russian fuel shortages, Kyiv strikes, China
+and Monaco.
 
-The 2026-07-23 18:01 slot przesuwa feed ku częściowemu powrotowi tramwajów na Aleje Jerozolimskie, nowemu wnioskowi aresztowemu w sprawie A1, wnioskowi o Michała Wosia i aktywnym burzom w Polsce, a za granicą dokłada ropę powyżej 100 dolarów, saudyjski deal nuklearny warunkowany uznaniem Izraela, ewakuacje we Francji, Huti/Red Sea, indyjski protest głodowy i kanadyjski spór o nabiał.
+The 2026-07-08 15:02 slot hardened the domestic feed around an active wind
+alert, a sharp cold snap, unchanged rates, health-system recommendations,
+BBN comments on Budanow and a worsening unemployment trend. The world feed
+stayed centered on Iran-US escalation, NATO procurement, Le Pen, Russian fuel
+shortages and China weather, while also adding a telecom outage in Australia.
 
-The 2026-07-23 15:02 slot przesuwa feed w stronę decyzji KE wobec Google, ataku nożem na Powiślu, wniosku o immunitet Mejzy, pożaru salonu na Targówku i niewybuchów w Jeleniej Górze. Za granicą lead tworzą pożary we Francji, błąd policji w Manchesterze, saudyjska umowa nuklearna USA, presja Huti na Morzu Czerwonym oraz aktualny CNN blok o Iranie i ropie.
+The 2026-07-08 18:03 slot added fresh domestic items on renewed storm
+pressure, evacuated harcerze, new scanners at Chopin, PIP reform and AI
+dezinformation, while the world feed strengthened around Iran, Ukraine/NATO,
+Le Pen, Russian fuel shortages, Telstra and severe weather in China.
 
-The 2026-07-23 12:01 slot przesuwa feed w stronę aktu oskarżenia wobec Macierewicza, nowego spięcia w PiS, spadku czerwcowego bezrobocia, lotniczego incydentu LOT i aktywnego bloku burzowego nad Polską. Za granicą lead tworzą pożary we Francji, indyjski protest głodowy, presja taryfowa na Kanadę, koszty AI u Google, follow-up wokół Wildberries i brytyjska debata podatkowa wokół Andy'ego Burnhama.
+## Data Shape
 
-The 2026-07-23 09:02 slot przesuwa feed w stronę PiS, pożaru warsztatu na Targówku i aktywnego alertu burzowego w Polsce, a za granicą dokłada saudyjski układ nuklearny USA, napięcie Huti przy żegludze, presję na Wildberries, sygnał ostrzegawczy wokół OpenAI i nikaraguański plan wygaszania wyborów.
+The native iOS feed expects:
 
-The 2026-07-23 06:01 slot shifts the pulse toward PiS/RPO institutional moves and a flooded street in Szczecin, while abroad the feed is driven by the Saudi nuclear deal, Iran/Houthi escalation, Ukraine's military shake-up, Italy's wildfire story, the Pan Am wreck find, the Guyana ferry recovery and Nicaragua's election plan.
+- one digest headline and summary;
+- at least 12 news items;
+- an even number of items;
+- sections such as `Polska`, `Świat`, `Polityka`, `Bezpieczeństwo`,
+  `Gospodarka`, `Technologia`, `Alerty`;
+- source links for every item;
+- analysis fields: `whatHappened`, `keyFacts`, `reactions`, `whyItMatters`,
+  `context`, `watchNext`.
 
-The 2026-07-22 21:02 slot przesuwa feed w stronę PiS, pożarów i akcji ratowniczych w Polsce, a za granicą dokłada francuskie pożary, saudyjski program nuklearny, napięcie przy Ormuz, kolejne uderzenie w Wildberries i publiczny sygnał o cyberataku przypisywanym AI OpenAI.
+## iOS Surface
 
-# Puls Dnia News Index
+The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card
+opens a detail view with facts, reactions, context, why it matters, watch-next
+items and sources.
 
-The 2026-07-22 15:05 slot shifts the pulse toward new domestic signals on the Russian border and fuel prices, plus another Ukrainian command change. Abroad the feed adds Burnham's prisoner-release review, Southern Water charges, OpenAI's rogue cyberattack claim, renewed US strikes on Iran, India's protest pressure, France's under-15 social-media law, Nottingham's manslaughter probe, Wildberries, Daniel Siad and an Ohio tornado.
+## Editorial Notes
 
-The 2026-07-22 09:01 slot moves the pulse away from the morning PiS/emerytury axis and into a harder mix of security, AI regulation and foreign escalation. In Poland the lead now sits on MON warnings about Russian provocations, AI-manipulation labeling, Warsaw memory events and a fresh local police follow-up, while abroad the feed is driven by Spain's wildfires, Bologna protests, Wildberries fires, Burnham's cabinet reshuffle, renewed US strikes on Iran, the growing cost of the Iran war, France's under-15 social-media ban and a Russian live-fire exercise off the UK coast.
-
-The 2026-07-22 06:04 slot shifts the feed toward a harder morning mix of PiS conflict, the Obajtek departure from Morawiecki's association, the retirement-age debate, Sikorski's warning about Russian provocations and Trump tariff pressure. Abroad, Burnham's tax-allowance retreat, renewed U.S. strikes on Iran, Zelensky's army shake-up, Lebanese troop deployment, France's under-15 social-media ban and renewed oil pressure around Hormuz dominate the lead.
-
-The 2026-07-21 21:04 slot pivots the feed toward the retirement-age debate, Sikorski's warning about Russian provocations, and a stubborn PiS conflict thread. Abroad, the lead moves to Burnham's first cabinet move on living costs, Ukraine's army-chief row, Lebanon's pilot-zone troop deployment, France's under-15 social-media ban, and a Russian live-fire exercise off the UK coast.
-
-The 2026-07-21 18:01 slot przesuwa feed ku warszawskim incydentom, korkowi na A2, sporowi w PiS, najmu krótkoterminowemu i złotu NBP. Za granicą najmocniej ważą ulga VAT na prąd w UK, rosyjskie ćwiczenia morskie przy Wyspach, cła na Kanadę i kolejne uderzenia USA na Iran.
-
-The 2026-07-21 15:01 slot turns the pulse toward a missing-child alert in Białystok, a pedestrian strike in Łódź, a Legnica hate-crime probe, a CBŚP debt-gang bust, NBP gold growth, and a weather turn back toward storms and tropical air. Abroad, the feed leans on Manchester's No 10 North staffing move, Thames Water restrictions, fresh US strikes on Iran, Lebanese troop deployment, Canada tariffs, and Meta outage reports.
-
-The 2026-07-21 12:02 slot moves the pulse away from the early metro and weather lead into a denser domestic block: a fatal Białka Tatrzańska crash, a drunk-driving arrest in Gdynia, a BIK scoring change, a Łódź medical-program denial, and two fresh transport/security incidents in Warsaw and Wejherowo. Abroad, the feed now leans on India, Lebanon, Burnham, Thames Water, French youth-social-media policy, and Middle East travel risk.
-
-The 2026-07-21 09:01 slot adds a fresh Młociny metro injury, Siemoniak's hard-edged PiS comment, alarm drills and heavier rain/IMGW warnings in Poland. Abroad, the lead shifts to fresh U.S. strikes on Iran, the Guyana ferry disaster, Burnham's cabinet, and the new ONS borrowing print.
-
-The 2026-07-21 06:01 slot shifts the feed into a morning mix dominated by PiS
-polling friction, a fresh U.S.-Canada tariff escalation, renewed Iran and
-maritime security pressure, and a live-but-secondary weather alert block in
-Poland. The UK reset stays active through Burnham, while TVN24 adds a chip
-manufacturing bonus signal and a sugar-supply warning.
-
-The 2026-07-20 21:01 slot shifts the feed from metro-only operational mode
-into storm damage, a sharper domestic legal-political cluster around the veto
-and TK, and a deeper UK cabinet reset. Abroad, the run adds a fresh Iran/
-Black Sea/Red Sea security layer, a Ryanair fuel-cost warning and a small
-AI-branded corporate signal from CNN.
+- Keep at least 12 items and an even count so the app renders exact card pairs.
+- Keep at least two `Polska` or `Polityka` items and at least two `Świat`
+  items to protect the home feed balance.
+- Prefer operational alerts, public-safety events, geopolitics and major
+  economy moves over softer feature content.

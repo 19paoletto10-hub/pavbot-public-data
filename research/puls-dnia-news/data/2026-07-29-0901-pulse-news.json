@@ -1,0 +1,555 @@
+{
+  "topic": "puls-dnia-news",
+  "schemaVersion": 1,
+  "runDate": "2026-07-29",
+  "runTime": "09:01",
+  "status": "Material update",
+  "headline": "09:01: PiS, upały, AI i pożary w nowym miksie",
+  "summary": "Poranny slot 09:01 przesuwa Puls Dnia z fiskalno-administracyjnego miksu 06:01 w bardziej operacyjny układ: krajowe spory, warszawskie utrudnienia, alertowy wątek pogody oraz mocniejszy światowy blok o pożarach, trzęsieniu ziemi, robotach i AI.",
+  "checkedSources": [
+    {
+      "title": "TVN24 najnowsze",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 TVN Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN transcripts 2026-07-28",
+      "url": "https://transcripts.cnn.com/date/2026-07-28"
+    },
+    {
+      "title": "USGS Earthquake Hazards Program",
+      "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgb9"
+    },
+    {
+      "title": "IMGW-PIB",
+      "url": "https://imgw.pl/"
+    },
+    {
+      "title": "Rządowe Centrum Bezpieczeństwa komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-07-29-0901-01",
+      "section": "Polska",
+      "title": "Mueller: w piątek wyrzucono mnie z PiS",
+      "lead": "TVN24 relacjonuje nowy zwrot w konflikcie wokół ludzi Morawieckiego i władz partii.",
+      "whatHappened": "Na stronie TVN24 pojawia się świeża relacja o rozłamie w PiS. Wypowiedź Muellera staje się jednym z najmocniejszych porannych sygnałów politycznych.",
+      "keyFacts": [
+        "Temat dotyczy kolejnego etapu sporu w PiS.",
+        "Źródłem jest bieżąca relacja TVN24 z porannego slotu.",
+        "Wątek łączy się z decyzjami i reakcjami wokół ludzi Morawieckiego."
+      ],
+      "reactions": [
+        "Można oczekiwać kolejnych komentarzy z obu stron sporu.",
+        "Opozycja prawdopodobnie wykorzysta chaos jako polityczny kontrast."
+      ],
+      "whyItMatters": "To sygnał dalszej destabilizacji jednej z głównych partii opozycyjnych.",
+      "context": "Po 06:01 temat administracyjny wraca teraz jako bardziej ostry, partyjny konflikt.",
+      "watchNext": [
+        "Sprawdzaj, czy pojawi się oficjalne stanowisko władz PiS.",
+        "Patrz, czy ludzie Morawieckiego odpowiedzą własnym komunikatem."
+      ],
+      "sources": [
+        {
+          "title": "Mueller: ja uznaję, że w piątek wyrzucono mnie z PiS",
+          "url": "https://tvn24.pl/polska/rozlam-w-pis-zaskakujacy-zwrot-co-dalej-z-mateuszem-morawieckim-i-jego-ludzmi-relacja-na-zywo-st9163263"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "polityka",
+        "rozłam",
+        "Morawiecki"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0901-02",
+      "section": "Polska",
+      "title": "Niemal 400 budynków bez ciepłej wody w Warszawie",
+      "lead": "Remonty sieci ciepłowniczej wyłączają z dostaw kilka tysięcy mieszkańców trzech dzielnic.",
+      "whatHappened": "TVN24 Warszawa opisuje planowe prace na sieci, które odcinają ciepłą wodę w niemal 400 budynkach. To poranny problem infrastrukturalny, nie tylko lokalna ciekawostka.",
+      "keyFacts": [
+        "Utrudnienia dotyczą Mokotowa i dwóch innych dzielnic.",
+        "Skala obejmuje niemal 400 budynków.",
+        "Temat dotyczy miejskiej infrastruktury i komfortu mieszkańców."
+      ],
+      "reactions": [
+        "Mieszkańcy będą szukać potwierdzeń czasowych i objazdów w komunikacji miejskiej.",
+        "Miasto może doprecyzować harmonogram prac i przywracania dostaw."
+      ],
+      "whyItMatters": "To natychmiastowy wpływ na codzienne funkcjonowanie dużej części stolicy.",
+      "context": "W połączeniu z upałem i burzami takie prace zwiększają wrażliwość na awarie i zakłócenia.",
+      "watchNext": [
+        "Sprawdzaj miejskie komunikaty o czasie zakończenia robót.",
+        "Patrz, czy skala wyłączeń nie zostanie rozszerzona."
+      ],
+      "sources": [
+        {
+          "title": "Niemal 400 budynków straci dostęp do ciepłej wody. Remonty w trzech dzielnicach",
+          "url": "https://tvn24.pl/tvnwarszawa/mokotow/warszawa-remonty-sieci-cieplowniczej-w-trzech-dzielnicach-niemal-400-budynkow-bez-cieplej-wody-st9163304"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "infrastruktura",
+        "ciepła woda",
+        "remonty"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-29-0901-03",
+      "section": "Bezpieczeństwo",
+      "title": "Prokurator pobity po obronie atakowanej pary",
+      "lead": "W Radomiu interwencja prokuratora kończy się brutalnym pobiciem.",
+      "whatHappened": "TVN24 Warszawa opisuje atak na prokuratora, który stanął w obronie atakowanej pary. To poranny sygnał z obszaru bezpieczeństwa publicznego i przemocy ulicznej.",
+      "keyFacts": [
+        "Do zdarzenia doszło po interwencji w obronie pokrzywdzonych.",
+        "Sprawa ma wymiar karny i instytucjonalny.",
+        "Źródłem jest lokalny materiał TVN24."
+      ],
+      "reactions": [
+        "Możliwe będą dalsze czynności policji i prokuratury.",
+        "Temat może uruchomić debatę o bezpieczeństwie interweniujących osób."
+      ],
+      "whyItMatters": "To realny incydent bezpieczeństwa i test działania służb w sytuacji przemocy.",
+      "context": "W porannym układzie ten temat wzmacnia krajowy blok bezpieczeństwa obok pogody.",
+      "watchNext": [
+        "Sprawdzaj komunikaty policji i prokuratury.",
+        "Patrz, czy pojawią się informacje o zatrzymaniach lub zarzutach."
+      ],
+      "sources": [
+        {
+          "title": "Prokurator stanął w obronie zaatakowanej pary, został brutalnie pobity",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/radom-prokurator-zostal-pobity-po-tym-jak-wstawil-sie-w-obronie-zaatakowanej-pary-st9163053"
+        }
+      ],
+      "tags": [
+        "bezpieczeństwo",
+        "Radom",
+        "prokurator",
+        "przemoc"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0901-04",
+      "section": "Alerty",
+      "title": "IMGW i TVN Meteo podbijają ryzyko upału i burz",
+      "lead": "Prognoza przechodzi w sygnał możliwych czerwonych alarmów i lokalnych utrudnień.",
+      "whatHappened": "TVN Meteo ostrzega przed upałem i burzami, a materiał wskazuje na możliwe czerwone alarmy IMGW. To najważniejszy operacyjny wątek pogodowy poranka.",
+      "keyFacts": [
+        "Chodzi o wysokie temperatury i burzową niestabilność.",
+        "Ryzyko może szybko przejść w ostrzeżenia operacyjne.",
+        "Temat jest ważny dla zdrowia, transportu i energetyki."
+      ],
+      "reactions": [
+        "IMGW i RCB mogą eskalować komunikaty.",
+        "Służby oraz operatorzy transportu mogą wprowadzać doraźne środki ostrożności."
+      ],
+      "whyItMatters": "To bezpośrednie ryzyko zakłóceń dnia w wielu regionach kraju.",
+      "context": "Poranny slot zamienia pogodę w jeden z głównych sygnałów operacyjnych.",
+      "watchNext": [
+        "Sprawdzaj kolejne mapy IMGW i komunikaty RCB.",
+        "Patrz, czy pojawią się opóźnienia, podtopienia lub lokalne zamknięcia."
+      ],
+      "sources": [
+        {
+          "title": "Ekstremalny upał i burze. Możliwe nawet czerwone alarmy",
+          "url": "https://tvn24.pl/tvnmeteo/polska/ekstremalny-upal-i-burze-mozliwe-nawet-czerwone-alarmy-prognoza-zagrozen-imgw-na-najblizsze-dni-gdzie-pojawia-sie-alarmy-st9163262"
+        },
+        {
+          "title": "IMGW-PIB",
+          "url": "https://imgw.pl/"
+        },
+        {
+          "title": "Komunikaty - Rządowe Centrum Bezpieczeństwa",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "upały",
+        "burze",
+        "IMGW",
+        "RCB"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0901-05",
+      "section": "Gospodarka",
+      "title": "Wyższa kwota wolna ma konkretny koszt",
+      "lead": "MF pokazuje nowe wyliczenia dla kwoty wolnej i drugiego progu PIT.",
+      "whatHappened": "TVN24 Biznes stawia koszt podniesienia kwoty wolnej z powrotem w centrum porannej dyskusji o podatkach. Temat ma wyraźny budżetowy i polityczny ciężar.",
+      "keyFacts": [
+        "Temat dotyczy kwoty wolnej od podatku i drugiego progu PIT.",
+        "Źródłem są nowe wyliczenia Ministerstwa Finansów opisane przez TVN24.",
+        "Sprawa ma bezpośredni wpływ na debatę o dochodach i wydatkach budżetu."
+      ],
+      "reactions": [
+        "Resort finansów może musieć doprecyzować harmonogram lub skalę zmian.",
+        "Opozycja i eksperci podatkowi będą komentować realny koszt propozycji."
+      ],
+      "whyItMatters": "To jeden z najbardziej czytelnych kosztów fiskalnych w porannym pakiecie.",
+      "context": "Ten wątek był już w 06:01, ale nadal pozostaje jednym z głównych krajowych leadów.",
+      "watchNext": [
+        "Sprawdzaj dalsze komentarze MF i reakcję polityków.",
+        "Patrz, czy pojawią się nowe scenariusze wdrożenia."
+      ],
+      "sources": [
+        {
+          "title": "Wyższa kwota wolna od podatku. Policzono, ile to będzie kosztować",
+          "url": "https://tvn24.pl/biznes/z-kraju/kwota-wolna-od-podatku-ministerstwo-finansow-przedstawilo-nowe-wyliczenia-jaki-koszt-podniesienia-kwoty-wolnej-i-drugiego-progu-podatkowego-st9163081"
+        }
+      ],
+      "tags": [
+        "podatki",
+        "PIT",
+        "budżet",
+        "MF"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0901-06",
+      "section": "Polityka",
+      "title": "Rząd powołuje pełnomocnika do promocji Polski",
+      "lead": "TVN24 opisuje nową funkcję koordynacyjną dla promocji kraju.",
+      "whatHappened": "Na biznesowej stronie TVN24 pojawia się projekt rozporządzenia o nowym pełnomocniku do spraw promocji Polski. To kolejny sygnał, że rząd porządkuje warstwę wizerunkową państwa.",
+      "keyFacts": [
+        "Temat dotyczy państwowej promocji kraju.",
+        "Chodzi o formalizację nowej funkcji koordynacyjnej.",
+        "Zmiana łączy politykę, wizerunek i gospodarkę."
+      ],
+      "reactions": [
+        "Możliwe będą pytania o kompetencje i koszty nowej funkcji.",
+        "Samorządy i branża turystyczna mogą chcieć doprecyzowania zakresu."
+      ],
+      "whyItMatters": "Promocja kraju wpływa na inwestycje, turystykę i spójność przekazu państwa.",
+      "context": "To wątek obecny już w 06:01, ale nadal pozostaje świeży i instytucjonalnie ważny.",
+      "watchNext": [
+        "Sprawdzaj treść rozporządzenia i zakres obowiązków pełnomocnika.",
+        "Patrz, czy pojawi się reakcja resortów lub samorządów."
+      ],
+      "sources": [
+        {
+          "title": "Nowy pomysł na promocję Polski. Jest projekt",
+          "url": "https://tvn24.pl/biznes/z-kraju/nowy-pomysl-na-promocje-polski-rzad-przyjal-rozporzadzenie-ustanawiajacego-nowego-pelnomocnika-do-spraw-promocji-st9163036"
+        }
+      ],
+      "tags": [
+        "promocja Polski",
+        "rząd",
+        "wizerunek",
+        "polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-29-0901-07",
+      "section": "Gospodarka",
+      "title": "Państwo zaostrza kryteria rad nadzorczych",
+      "lead": "Spółki Skarbu Państwa dostają ostrzejsze wymagania dla kandydatów do nadzoru.",
+      "whatHappened": "TVN24 Biznes opisuje nowe zasady obsady rad nadzorczych w spółkach państwowych. To sygnał porządkowania ładu korporacyjnego w sektorze publicznym.",
+      "keyFacts": [
+        "Zmiana dotyczy spółek Skarbu Państwa.",
+        "Nowe kryteria mają zawęzić dostęp do rad nadzorczych.",
+        "Temat wpływa na nominacje i rekrutacje w sektorze państwowym."
+      ],
+      "reactions": [
+        "Spółki będą doprecyzowywać procesy nominacyjne.",
+        "Pojawią się pytania o profesjonalizację i upolitycznienie nadzoru."
+      ],
+      "whyItMatters": "To praktyczna zmiana w zarządzaniu państwowym majątkiem.",
+      "context": "To element szerszego porannego pakietu instytucjonalnego.",
+      "watchNext": [
+        "Sprawdzaj opublikowane kryteria i terminy wejścia w życie.",
+        "Patrz, czy pojawią się pierwsze nowe nominacje lub odwołania."
+      ],
+      "sources": [
+        {
+          "title": "Państwo zaostrza kryteria. Nowe wymogi dla rad nadzorczych",
+          "url": "https://tvn24.pl/biznes/z-kraju/trudniej-o-posade-w-spolkach-skarbu-panstwa-rzad-zaostrza-kryteria-st9162942"
+        }
+      ],
+      "tags": [
+        "spółki Skarbu Państwa",
+        "nadzór",
+        "ład korporacyjny",
+        "gospodarka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-29-0901-08",
+      "section": "Gospodarka",
+      "title": "Azjatyckie giełdy spadają przez obawy o AI",
+      "lead": "TVN24 Biznes pokazuje słabszy start sesji w Azji i presję na spółki technologiczne.",
+      "whatHappened": "Na rynku wraca nerwowość wokół wycen spółek AI. TVN24 opisuje wyraźne spadki kluczowych indeksów azjatyckich.",
+      "keyFacts": [
+        "Spadki dotyczą szerokiego rynku w Azji.",
+        "Źródłem obaw są wyceny i tempo wzrostu firm AI.",
+        "Temat łączy technologię z nastrojami inwestorów."
+      ],
+      "reactions": [
+        "Inwestorzy będą szukać potwierdzenia, czy to korekta, czy początek większej wyprzedaży.",
+        "Spółki technologiczne mogą znów komentować swoje perspektywy."
+      ],
+      "whyItMatters": "To ważny sygnał rynkowy dla globalnego sektora technologicznego.",
+      "context": "W porannym układzie temat domyka łączenie gospodarki z technologią.",
+      "watchNext": [
+        "Sprawdzaj, czy spadki obejmą również Europę i USA.",
+        "Patrz, czy pojawią się komentarze analityków o bańce AI."
+      ],
+      "sources": [
+        {
+          "title": "Duże spadki na giełdach w Azji. Niepewność co do AI",
+          "url": "https://tvn24.pl/biznes/rynki/indeksy-w-azji-w-dol-inwestorzy-obawiaja-sie-o-spolki-ai-st9163341"
+        }
+      ],
+      "tags": [
+        "giełdy",
+        "AI",
+        "Azja",
+        "inwestorzy"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0901-09",
+      "section": "Świat",
+      "title": "Pożar na greckiej wyspie wymusza ewakuacje",
+      "lead": "TVN24 Meteo opisuje ewakuację mieszkańców po kolejnym pożarze na wyspie.",
+      "whatHappened": "Na greckiej wyspie wybucha pożar i służby uruchamiają ewakuację. To świeży europejski alert pożarowy, ważny także dla turystów.",
+      "keyFacts": [
+        "Źródłem jest materiał TVN24 Meteo o pożarze i ewakuacji.",
+        "Sprawa dotyczy mieszkańców i ruchu turystycznego.",
+        "To kolejny sygnał zagrożenia pożarowego w regionie Morza Śródziemnego."
+      ],
+      "reactions": [
+        "Możliwe są kolejne ewakuacje lub zamknięcia dróg.",
+        "Turyści i przewoźnicy będą śledzić bieżące komunikaty lokalnych służb."
+      ],
+      "whyItMatters": "Pożary na wyspach szybko uderzają w bezpieczeństwo mieszkańców i turystykę.",
+      "context": "Temat dobrze łączy się z europejską falą upałów i pożarów widoczną także w BBC.",
+      "watchNext": [
+        "Sprawdzaj aktualizacje lokalnych służb i komunikatów dla turystów.",
+        "Patrz, czy pożar rozszerzy strefę ewakuacji."
+      ],
+      "sources": [
+        {
+          "title": "Pożar na greckiej wyspie. Ewakuują mieszkańców",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/pozar-na-greckiej-wyspie-ewakuuja-mieszkancow-st9163345"
+        }
+      ],
+      "tags": [
+        "Grecja",
+        "pożar",
+        "ewakuacja",
+        "turystyka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0901-10",
+      "section": "Świat",
+      "title": "Francja znów walczy z pożarami przy 40 stopniach",
+      "lead": "BBC pisze o ponownym zaostrzeniu pożarów na południowym zachodzie kraju.",
+      "whatHappened": "BBC opisuje powrót pożarów we Francji w momencie, gdy region przygotowuje się na kolejną falę 40-stopniowego upału. To jeden z najmocniejszych europejskich sygnałów pogodowo-bezpieczeństwowych.",
+      "keyFacts": [
+        "BBC wskazuje na ponowne zaostrzenie pożarów.",
+        "Sytuacja zbiega się z bardzo wysokimi temperaturami.",
+        "To ryzyko dla ewakuacji, infrastruktury i zdrowia mieszkańców."
+      ],
+      "reactions": [
+        "Lokalne władze mogą podawać nowe liczby ewakuowanych i zamknięć.",
+        "Służby będą mierzyć się z dalszym rozprzestrzenianiem ognia."
+      ],
+      "whyItMatters": "To realne zagrożenie bezpieczeństwa i kolejny europejski wątek klimatyczny.",
+      "context": "Ten temat wspiera poranne ostrzeżenia o upale i pokazuje szerszy regionalny wzór.",
+      "watchNext": [
+        "Sprawdzaj komunikaty o ewakuacjach i zamknięciach dróg.",
+        "Patrz, czy Francja poprosi o dodatkową pomoc lotniczą lub europejską."
+      ],
+      "sources": [
+        {
+          "title": "Wildfires in south-west France flare up as region braces for new 40C heatwave",
+          "url": "https://www.bbc.co.uk/news/articles/c5yd8gly1ydo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "pożary",
+        "upał",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0901-11",
+      "section": "Świat",
+      "title": "Japonia ściga się z czasem po trzęsieniu ziemi",
+      "lead": "BBC i USGS pokazują skalę akcji ratunkowej po wstrząsie w Japonii.",
+      "whatHappened": "BBC opisuje akcję ratunkową po trzęsieniu ziemi, a USGS potwierdza wstrząs M 6,8 koło Uto. To jeden z najpoważniejszych dzisiejszych sygnałów bezpieczeństwa międzynarodowego.",
+      "keyFacts": [
+        "USGS potwierdza magnitudę 6,8 i lokalizację koło Uto.",
+        "BBC pisze o ludziach uwięzionych pod gruzami i wyścigu z czasem.",
+        "Temat ma wymiar ratunkowy i infrastrukturalny."
+      ],
+      "reactions": [
+        "Możliwe będą dalsze aktualizacje o rannych i zniszczeniach.",
+        "Służby mogą uruchomić kolejne komunikaty o bezpieczeństwie i możliwych wstrząsach wtórnych."
+      ],
+      "whyItMatters": "To kluczowy globalny temat bezpieczeństwa z natychmiastowym skutkiem humanitarnym.",
+      "context": "Ten wątek łączy się z wcześniejszym nocnym i porannym japońskim sygnałem w TVN Meteo.",
+      "watchNext": [
+        "Sprawdzaj oficjalne komunikaty USGS i JMA.",
+        "Patrz, czy służby potwierdzą nowe liczby ofiar lub poszkodowanych."
+      ],
+      "sources": [
+        {
+          "title": "Japan in a race against time to rescue people trapped beneath rubble after quake",
+          "url": "https://www.bbc.co.uk/news/videos/c3r0pg0dgrgo?at_medium=RSS&at_campaign=rss"
+        },
+        {
+          "title": "M 6.8 - 5 km E of Uto, Japan - Earthquake Hazards Program",
+          "url": "https://earthquake.usgs.gov/earthquakes/eventpage/us6000tgb9"
+        }
+      ],
+      "tags": [
+        "Japonia",
+        "trzęsienie ziemi",
+        "USGS",
+        "ratownictwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-0901-12",
+      "section": "Technologia",
+      "title": "USA blokują nowe chińskie humanoidalne roboty",
+      "lead": "BBC opisuje kolejny ruch Waszyngtonu w sporze technologicznym z Chinami.",
+      "whatHappened": "BBC podaje, że administracja USA blokuje nowe chińskie humanoidalne roboty. To znak, że technologia, bezpieczeństwo i handel coraz mocniej się przenikają.",
+      "keyFacts": [
+        "Temat dotyczy chińskich humanoidalnych robotów.",
+        "BBC przedstawia to jako decyzję administracji USA.",
+        "Sprawa mieści się na styku technologii i bezpieczeństwa narodowego."
+      ],
+      "reactions": [
+        "Chińskie firmy mogą odpowiadać komentarzem lub skargą handlową.",
+        "Rynek robotyki może odczytać to jako sygnał dalszych barier regulacyjnych."
+      ],
+      "whyItMatters": "To kolejny sygnał zaostrzenia globalnego sporu o zaawansowaną automatykę i AI.",
+      "context": "Wpisuje się to w szerszy poranny temat AI, który dziś przewija się także przez giełdy i CNN.",
+      "watchNext": [
+        "Sprawdzaj, czy pojawi się oficjalny komunikat USA lub reakcja Pekinu.",
+        "Patrz, czy spór obejmie też inne klasy robotów lub komponenty."
+      ],
+      "sources": [
+        {
+          "title": "Trump administration bans new Chinese humanoid robots",
+          "url": "https://www.bbc.co.uk/news/articles/cp9e2ex3ekyo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "roboty",
+        "Chiny",
+        "USA",
+        "regulacje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-29-0901-13",
+      "section": "Technologia",
+      "title": "Altman spotyka się z urzędnikami Białego Domu ws. AI",
+      "lead": "CNN pokazuje, że AI nadal jest tematem rządowych briefingów w Waszyngtonie.",
+      "whatHappened": "W transkrypcji CNN z 28 lipca pojawia się segment o spotkaniu Sama Altmana z urzędnikami Białego Domu w sprawie AI. To wyraźny sygnał, że temat pozostaje polityczny, nie tylko biznesowy.",
+      "keyFacts": [
+        "Źródłem jest transkrypt CNN z 28 lipca.",
+        "Spotkanie dotyczy polityki wobec AI.",
+        "Wątek pokazuje ciągłość zainteresowania Białego Domu sztuczną inteligencją."
+      ],
+      "reactions": [
+        "Możliwe będą kolejne komentarze administracji lub firm technologicznych.",
+        "Rynek będzie szukał wskazówek regulacyjnych i inwestycyjnych."
+      ],
+      "whyItMatters": "To bezpośredni sygnał, że AI jest już przedmiotem polityki państwa.",
+      "context": "W połączeniu z azjatyckimi spadkami daje to pełny obraz napięcia wokół AI.",
+      "watchNext": [
+        "Sprawdzaj, czy Biały Dom wyda dalszy komunikat.",
+        "Patrz, czy firmy AI otrzymają nowe wytyczne lub ograniczenia."
+      ],
+      "sources": [
+        {
+          "title": "Altman Meets with White House Officials on A.I. Policy",
+          "url": "https://transcripts.cnn.com/show/cnc/date/2026-07-28/segment/04"
+        }
+      ],
+      "tags": [
+        "AI",
+        "Waszyngton",
+        "CNN",
+        "regulacje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-29-0901-14",
+      "section": "Świat",
+      "title": "Arabia Saudyjska dołącza do uderzeń USA na bojówkę wspieraną przez Iran",
+      "lead": "BBC utrzymuje w obiegu twardszy blok o bezpieczeństwie na Bliskim Wschodzie.",
+      "whatHappened": "BBC opisuje wspólne uderzenia USA i Arabii Saudyjskiej przeciw bojówce wspieranej przez Iran. To kolejny sygnał regionalnego napięcia i ryzyka dalszej eskalacji.",
+      "keyFacts": [
+        "Temat dotyczy wspólnej akcji USA i Arabii Saudyjskiej.",
+        "Odnosi się do grupy wspieranej przez Iran.",
+        "Ma bezpośredni wymiar bezpieczeństwa regionalnego."
+      ],
+      "reactions": [
+        "Możliwe będą kolejne komunikaty wojskowe lub dyplomatyczne.",
+        "Rynek energetyczny będzie śledził wpływ na stabilność regionu."
+      ],
+      "whyItMatters": "To ważny sygnał dla bezpieczeństwa, transportu morskiego i cen energii.",
+      "context": "Temat podtrzymuje nocno-poranne napięcie geopolityczne widoczne też w CNN.",
+      "watchNext": [
+        "Sprawdzaj oficjalne komunikaty USA i państw regionu.",
+        "Patrz, czy temat przeniesie się na rynek ropy i frachtu."
+      ],
+      "sources": [
+        {
+          "title": "Saudi Arabia joins US in strikes on Iran-backed militia",
+          "url": "https://www.bbc.co.uk/news/articles/c70g6y24d76o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Arabia Saudyjska",
+        "USA",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    }
+  ]
+}
