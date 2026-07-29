@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-28
+Last updated: 2026-07-29
 
 ## Current Understanding
 
@@ -25,6 +25,22 @@ Iranie, Libanie i Abraham Accords, a w kraju ślubowanie Patyry w TK zostało
 już przyjęte przez prezydenta. Równolegle Rumunia przeszła od ostrzeżeń do
 zestrzeliwania dronów i wydalenia rosyjskiego dyplomaty, co wzmacnia oś
 wschodniej flanki NATO jako miejsca aktywnej obrony, a nie tylko komunikatów.
+Po porannym runie 29 lipca centrum ciężkości przesunęło się z readoutów do
+testu wykonania: Senat USA zrobił proceduralny krok w sprawie dużej ustawy
+sankcyjnej wobec Rosji przy obecności Zełenskiego na Kapitolu, a krucha pauza
+USA-Iran pękła po irańskim ataku rakietowym, przechwyceniach USA i wspólnych
+uderzeniach USA-Arabia Saudyjska w Iraku. Ukraina rozszerza nacisk na rosyjskie
+zaplecze gospodarcze przez Wildberries i wątek VTB. W kraju główne osie to
+start posiedzenia Sejmu 29-31 lipca, spór po orzeczeniu TK o transkrypcji
+zagranicznych aktów małżeństw jednopłciowych, decyzje rządu dotyczące cyfrowych
+archiwów, PESEL w polisach, paliw i najmu krótkoterminowego oraz przedłużony
+spór w PiS wokół frakcji Mateusza Morawieckiego.
+Po wieczornym runie 29 lipca główna korekta jest światowa, nie krajowa:
+AP podnosi bilans trzęsienia ziemi na Kiusiu do co najmniej 18 ofiar i opisuje
+dalsze zakłócenia prądu, wody oraz transportu, a pożary we Francji i Hiszpanii
+wchodzą w większą fazę ewakuacji i ryzyka ponownego rozgorzenia. Krajowy obraz
+nie przyniósł nowego materialnego przełomu względem poranka, więc oś Sejm/TK/
+KPRM/PiS pozostaje w tym samym zestawie obserwacji.
 Po weekendowym runie 21 czerwca temat orderowy wszedł w fazę reakcji
 ukraińskich polityków i byłych prezydentów, a główny temat międzynarodowy
 przesunął się na rozmowy USA-Iran w Szwajcarii, spór o Cieśninę Ormuz i
