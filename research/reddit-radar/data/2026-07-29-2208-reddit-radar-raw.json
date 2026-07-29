@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-29-2208",
+  "status": "material_update",
+  "generatedAt": "2026-07-29T20:08:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-29T22:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on exact old.reddit.com listings and exact post pages using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two latest saved automation runs 2026-07-29-1207 and 2026-07-29-1808, so none of the post URLs selected there could roll forward into this slot.",
+      "Verified before publication planning that origin/main already exposed the 2026-07-29-1808 reddit-radar bundle and manifest, so this slot starts from a current remote topic state.",
+      "Fresh late-evening review cleared the contract threshold with five new public-safe survivors led by two everyday workplace-and-wardrobe cards and three clean dev/meta closers.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "currentPublicBundle": "2026-07-29-1808",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-29-2208-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-29-2208-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-29-2208-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1v9p8fh/satisfying_moment/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9jna7/me_responding_to_people_in_ten_seconds_after_they/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9p25k/packetloss/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9oz7k/ifinallyfoundoneinthewild/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9ko2q/circle_k_ai_selfcheckout_machine_hallucinated/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9v4ic/seriously_who_are_these_peoplem/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9roor/when_you_say_goodbye_to_someone_and_you_both/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9s068/dinnerwithaprogrammerisneversimple/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9thq8/excusemoihow0ldisclaudec0de/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9wiog/this_was_a_stew_my_brother_appears_to_have_ate/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9qcqe/pancake_which_they_apparently_had_no_sugar_so_we/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v9k3qi/coworker_ive_never_spoken_to_sent_passive?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "reason": "Visible comments stay on the single cupcake grievance bit and immediately escalate it into shared office absurdity."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1v9yho5/my_sweatpants_strings_are_just_sewn_on_for?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "reason": "The page keeps one simple annoyance joke about decorative drawstrings that do not actually hold the pants up."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1va2h6r/airconditioner?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "Top comments keep the same narrow CSS-direction joke about left, right, and negative margin logic."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v9kokx/redactoverflow?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "The comment layer stays on the classic 'never mind, I figured it out' pain point and keeps riffing on the same Stack Overflow frustration."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1va2wq4/igot99problems?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "Visible comments keep the joke on AI producing tech debt that looks suspiciously human."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1va1vwa/got_a_used_tv_from_a_friend?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "The visible comments turn the page into explicit bodily-fluid jokes almost immediately."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1va6bgm/why_the_fuck_is_there_ai_in_my_washing_machine?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "Comments collapse into generic AI buzzword discourse and product complaint repetition."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1va3683/this_ai_poster_behind_the_bar_my_friend_works_at?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "The thread becomes a long real-manager rant rather than one compact joke."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1va2uw5/im_just_happy_to_be_here?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "Top comments quickly center the page on gun jokes and patriotic reaction bits."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1va0j1b/common_trope?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "The comment layer drifts into gender grievance and long culture-war framing."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1va05kf/oncekingnowpawn?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "Funny opener aside, the thread expands into extended Stack Overflow versus GitHub discussion."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1v9t3by/noheapallstack?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "The page slides from the joke into actual Unicode and normalization correctness debate."
+    }
+  ]
+}

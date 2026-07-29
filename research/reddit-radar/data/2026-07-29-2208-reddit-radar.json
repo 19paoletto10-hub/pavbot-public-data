@@ -1,0 +1,182 @@
+{
+  "id": "humor-2026-07-29-2208",
+  "title": "<RR> Reddit Radar",
+  "summary": "Material update: slot 22:08 rotuje radar na pięć świeżych kart o cupcake'owej dramie w pracy, ozdobnych troczkach bez funkcji, CSS-owym klimatyzatorze, Stack Overflow bez rozwiązania i AI, które wygląda jak kolejne źródło starego tech debt.",
+  "generatedAt": "2026-07-29T20:08:00Z",
+  "displayTime": "22:08",
+  "nextRefreshAt": "2026-07-30T00:08:00+02:00",
+  "refreshIntervalHours": 2,
+  "items": [
+    {
+      "id": "old-reddit-com-r-mildlyinfuriating-comments-1v9k3qi-cupcake-grievance",
+      "title": "Coworker I’ve never spoken to sent passive aggressive messages in the company chat because I didn’t give her a cupcake….",
+      "caption": "Najmocniejsza everyday karta slotu bierze drobny biurowy absurd i natychmiast dmucha go do rozmiaru pełnej sprawy kadrowej: ktoś, z kim nigdy nie rozmawiałeś, publicznie rozlicza cię z braku cupcake'a. Komentarze utrzymują ten sam jeden żart i robią z niego office sitcom zamiast prawdziwego konfliktu.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://old.reddit.com/r/mildlyinfuriating/comments/1v9k3qi/coworker_ive_never_spoken_to_sent_passive?sort=top",
+      "imageURL": null,
+      "score": 16200,
+      "comments": 1205,
+      "tags": [
+        "everyday",
+        "work",
+        "social"
+      ],
+      "categoryLabel": "everyday",
+      "postText": "Biurowy chat zamienia się w pasywno-agresywną aferę o cupcake'a, którego nawet nie obiecałeś.",
+      "whyFunny": "To działa, bo skala reakcji jest kompletnie nieproporcjonalna do stawki, a wszyscy natychmiast rozumieją ten typ drobnego workplace chaosu.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment żartuje, że on też nie dostał cupcake'a i wreszcie wypada to głośno powiedzieć.",
+          "explanation": "To od razu przerabia pojedynczy incydent w wspólny office bit.",
+          "score": 15100,
+          "originalBody": "I wasn't going to bring this up but I didn't get a cupcake either"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight dopisuje kolejne osoby do fikcyjnej listy pokrzywdzonych.",
+          "explanation": "Komentarze zostają przy lekkiej eskalacji zamiast prawdziwej kłótni.",
+          "score": 5683,
+          "originalBody": "Same with me. Ugh, it's like we're invisible 🙄"
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-mildlyinfuriating-comments-1v9yho5-fake-drawstrings",
+      "title": "My sweatpants’ strings are just sewn on for decoration😭",
+      "caption": "Druga everyday karta robi z bardzo małej zdrady konsumenckiej coś zaskakująco czytelnego: spodnie udają, że mają troczki, ale te są tylko dekoracją. Wystarcza to na prosty, szeroki payoff o ubraniu, które wizualnie obiecuje funkcję, a potem odmawia współpracy.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://old.reddit.com/r/mildlyinfuriating/comments/1v9yho5/my_sweatpants_strings_are_just_sewn_on_for?sort=top",
+      "imageURL": null,
+      "score": 2038,
+      "comments": 71,
+      "tags": [
+        "everyday",
+        "wardrobe",
+        "annoyance"
+      ],
+      "categoryLabel": "everyday",
+      "postText": "Troczki w dresach wyglądają legalnie, ale zostały przyszyte wyłącznie dla estetyki.",
+      "whyFunny": "Humor siedzi w tej mini-zdradzie projektu: dokładnie ten element, który ma ratować sytuację, okazuje się atrapą.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment nie może zdecydować, czy to lepsze czy gorsze od sztucznych kieszeni.",
+          "explanation": "Jedno porównanie od razu ustawia kartę w znanej kategorii ubraniowych oszustw.",
+          "score": 626,
+          "originalBody": "I can't decide if this is better or worse than fake pockets"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight przypadkiem tworzy nowy pseudo-zespół o nazwie wynikającej z literówki.",
+          "explanation": "Komentarze pozostają lekkie i absurdalne zamiast przechodzić w rant o modzie.",
+          "score": 91,
+          "originalBody": "Ass Strinkga would be a good band name"
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-programmerhumor-comments-1va2h6r-css-airconditioner",
+      "title": "airConditioner",
+      "caption": "Pierwsza devowa karta slotu bierze prosty obrazek i od razu przerabia go na rozmowę o CSS-ie: czy to naprawdę `margin-left`, czy raczej `margin-right`, a może jeszcze coś ujemnego? Żart jest wąski, ale czysty, bo topowe komentarze nie uciekają nigdzie dalej niż w ten sam układ współrzędnych.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1va2h6r/airconditioner?sort=top",
+      "imageURL": null,
+      "score": 1480,
+      "comments": 25,
+      "tags": [
+        "dev",
+        "css",
+        "wordplay"
+      ],
+      "categoryLabel": "dev",
+      "postText": "Klimatyzator staje się nagle dyskusją o tym, który margin naprawdę przesuwa element tam, gdzie go widać.",
+      "whyFunny": "To działa, bo bierze banalny układ na ścianie i natychmiast mapuje go na bardzo programistyczny odruch poprawiania nazewnictwa.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment wbija szpilę, że na obrazku to bardziej `margin-right` niż `margin-left`.",
+          "explanation": "To zamyka cały żart w jednej krótkiej korekcie kierunku.",
+          "score": 51,
+          "originalBody": "But it’s margin-right in the picture"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight ratuje sytuację stwierdzeniem, że wszystko zależy od punktu widzenia samej klimy.",
+          "explanation": "Jedna linia utrzymuje lekki ton bez zejścia w cięższy frontendowy wykład.",
+          "score": 21,
+          "originalBody": "it's from the ac's point of view"
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-programmerhumor-comments-1v9kokx-never-mind-figured-it-out",
+      "title": "redactOverflow",
+      "caption": "Drugi closer devowy trafia w bardzo szerokie doświadczenie: znajdujesz idealnie podobny problem w sieci, a finałem wątku jest wyłącznie lakoniczne „never mind, I figured it out”. Komentarze zostają przy tym jednym bólu i dzięki temu karta jest czytelna nawet bez mocnego kontekstu konkretnego języka.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1v9kokx/redactoverflow?sort=top",
+      "imageURL": null,
+      "score": 4912,
+      "comments": 162,
+      "tags": [
+        "dev",
+        "meta",
+        "stackoverflow"
+      ],
+      "categoryLabel": "dev",
+      "postText": "Najgorszy możliwy finał internetowego debugowania: autor pisze tylko, że już sobie poradził, i znika.",
+      "whyFunny": "Humor bierze się tu z idealnie znanego poczucia nadziei, które w ostatniej sekundzie zamienia się w pusty ślad po rozwiązaniu.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment wskazuje dokładnie ten klasyczny moment: „Never mind, I figured it out” bez żadnego dopisku.",
+          "explanation": "To jest cały żart i cały ból tej karty w jednym zdaniu.",
+          "score": 915,
+          "originalBody": "Even better if they comment \"Never mind, I figured it out\" with no further explanation."
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight zauważa, że taki wpis przynajmniej sugeruje, że rozwiązanie w ogóle istnieje.",
+          "explanation": "Komentarze utrzymują ten sam suchy, programistyczny fatalizm.",
+          "score": 282,
+          "originalBody": "At least that indicates a solution might exist."
+        }
+      ]
+    },
+    {
+      "id": "old-reddit-com-r-programmerhumor-comments-1va2wq4-ai-tech-debt",
+      "title": "iGot99Problems",
+      "caption": "Ostatnia karta slotu domyka devowy ton przez prosty roast: AI-generated code ma generować przyszłość, a tymczasem wygląda jak kolejne źródło starego, dobrze znanego tech debt. Topowe komentarze trzymają się jednego kierunku i dzięki temu karta nie zamienia się w ciężką debatę o modelach.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1va2wq4/igot99problems?sort=top",
+      "imageURL": null,
+      "score": 499,
+      "comments": 41,
+      "tags": [
+        "dev",
+        "ai",
+        "tech-debt"
+      ],
+      "categoryLabel": "dev",
+      "postText": "Kod od AI wygląda jak nowoczesne opakowanie dla bardzo starego problemu: długu technologicznego.",
+      "whyFunny": "To działa, bo niby mówimy o nowym narzędziu, a punchline brzmi jak stary, dobrze znany raport z legacy codebase.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment zauważa, że ktoś po prostu zapomniał dopisać do promptu zakazu tworzenia tech debt.",
+          "explanation": "To streszcza całą kartę jako drobny, bardzo czytelny roast na oczekiwania wobec AI.",
+          "score": 51,
+          "originalBody": "Someone forgot to add \"I don't want any tech debt\" in their prompt."
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight przypomina, że AI trenowało się przecież na ludzkim legacy code.",
+          "explanation": "Jedna linia zamyka żart bez wejścia w cięższą wojnę ideologiczną.",
+          "score": 25,
+          "originalBody": "What do you think the AI was trained on?"
+        }
+      ]
+    }
+  ],
+  "source": "Codex Safari Reddit radar"
+}
