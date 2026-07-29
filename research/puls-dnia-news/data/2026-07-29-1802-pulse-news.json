@@ -1,0 +1,513 @@
+{
+  "topic": "puls-dnia-news",
+  "schemaVersion": 1,
+  "runDate": "2026-07-29",
+  "runTime": "18:02",
+  "status": "Material update",
+  "headline": "18:02: PiS, Japonia, pożary i ryzyka AI",
+  "summary": "Popołudniowy slot przesuwa feed z samego konfliktu w PiS do szerszego pakietu ryzyk: krajowa polityka, paliwa i pogoda mieszają się z Japonią, pożarami w Europie, Berlinem, Seattle oraz kolejnymi sygnałami o bezpieczeństwie modeli AI.",
+  "checkedSources": [
+    {
+      "title": "TVN24",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes/najnowsze/s-4"
+    },
+    {
+      "title": "TVN24 Meteo Polska",
+      "url": "https://tvn24.pl/tvnmeteo/polska"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "CNN transcripts July 27, 2026",
+      "url": "https://transcripts.cnn.com/date/2026-07-27"
+    },
+    {
+      "title": "JMA Kumamoto earthquake",
+      "url": "https://www.data.jma.go.jp/eew/data/mech/fig/cmt2026072816270000N323600E13042000100071.html"
+    },
+    {
+      "title": "Ministère de l'Intérieur France",
+      "url": "https://www.interieur.gouv.fr/actualites/actualites-du-ministere/sur-terre-et-dans-airs-combattre-feu-sur-tous-les-fronts"
+    },
+    {
+      "title": "Protección Civil Spain",
+      "url": "https://espacios.proteccioncivil.es/web/guest/-/protecci%C3%B3n-civil-y-emergencias-alerta-por-la-llegada-de-la-cuarta-ola-de-calor-del-verano-a-partir-del-mi%C3%A9rcoles-29-de-julio?redirect=%2Fweb%2Fguest%2Fsala-de-prensa%2Fnoticias"
+    },
+    {
+      "title": "Berlin prosecutor press release",
+      "url": "https://www.berlin.de/generalstaatsanwaltschaft/presse/pressemitteilungen/2026/pressemitteilung.1697484.php"
+    },
+    {
+      "title": "OpenAI Hugging Face security incident",
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+    },
+    {
+      "title": "Bloomberg Law Altman briefing",
+      "url": "https://news.bloomberglaw.com/california-brief/openais-altman-to-brief-us-officials-on-next-wave-of-ai-models"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-07-29-1802-01",
+      "section": "Polityka",
+      "title": "Kaczyński domyka ultimatum w PiS",
+      "lead": "Spór wokół Morawieckiego i stowarzyszeń wchodzi w fazę decyzji personalnych.",
+      "whatHappened": "TVN24 opisuje, że termin ultimatum dla polityków PiS się domyka, a sam spór o lojalność wobec kierownictwa i zaplecza Morawieckiego nadal wyznacza główną oś wewnętrznej polityki partii.",
+      "keyFacts": [
+        "Terminu ultimatum nie udało się zamknąć bez kosztów politycznych.",
+        "Spór dotyczy nie tylko nazwisk, ale też kontroli nad przekazem prawicy.",
+        "W tle pozostaje pytanie o formalny rozłam albo dalszą presję dyscyplinującą."
+      ],
+      "reactions": [
+        "Komentatorzy liczą, czy pojawią się kolejne odejścia lub zawieszenia.",
+        "Obóz Morawieckiego może próbować utrzymać wpływ bez otwartego wychodzenia z partii."
+      ],
+      "whyItMatters": "To może przełożyć się na układ sił na prawicy i w Sejmie.",
+      "context": "W porannym slocie rozłam był już oficjalny, teraz rośnie presja na decyzję personalną.",
+      "watchNext": [
+        "Sprawdzaj decyzje komitetu politycznego PiS.",
+        "Obserwuj, czy pojawią się kolejne publiczne odejścia."
+      ],
+      "sources": [
+        {
+          "title": "Kończy się ultimatum w PiS. Jarosław Kaczyński 'miota się od ściany do ściany'",
+          "url": "https://tvn24.pl/polska/konczy-sie-ultimatum-w-pis-jaroslaw-kaczynski-miota-sie-od-sciany-do-sciany-st9154620"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Morawiecki",
+        "Kaczyński",
+        "ultimatum"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-1802-02",
+      "section": "Polityka",
+      "title": "Kosiniak-Kamysz staje po stronie Morawieckiego",
+      "lead": "Szef MON mówi, że w starciu Morawiecki kontra Czarnek bliżej mu do byłego premiera.",
+      "whatHappened": "W TVN24 Kosiniak-Kamysz ocenia, że Morawiecki chce budować pozycję w PiS, a nie z niego wyjść, i otwarcie mówi, że ma o nim lepsze zdanie niż o Czarnku.",
+      "keyFacts": [
+        "Komentarz padł w programie 'Jeden na jeden'.",
+        "Wątek łączy konflikt w PiS z debatą o Ukrainie i narracji proputinowskiej.",
+        "Szef MON sugeruje, że Morawiecki jest bardziej przewidywalny niż obóz Czarnka."
+      ],
+      "reactions": [
+        "PiS może odpowiedzieć ostrzejszą obroną własnego frontu.",
+        "Obóz Czarnka może próbować przejąć uwagę, krytykując samą rozmowę o rozłamie."
+      ],
+      "whyItMatters": "To wzmacnia sygnał, że podział na prawicy nie jest już tylko medialną etykietą.",
+      "context": "To świeższy komentarz do tego samego konfliktu niż poranny pakiet z 12:01.",
+      "watchNext": [
+        "Patrz, czy Morawiecki odpowie publicznie.",
+        "Sprawdzaj, czy PiS zareaguje na ukraiński wątek."
+      ],
+      "sources": [
+        {
+          "title": "Konflikt w PiS. Władysław Kosiniak-Kamysz o Mateuszu Morawieckim, Przemysławie Czarnku i przyszłości partii",
+          "url": "https://tvn24.pl/polska/konflikt-w-pis-wladyslaw-kosiniak-kamysz-o-mateuszu-morawieckim-przemyslawie-czarnku-i-przyszlosci-partii-st9153179"
+        }
+      ],
+      "tags": [
+        "MON",
+        "Morawiecki",
+        "Czarnek",
+        "PiS"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-29-1802-03",
+      "section": "Gospodarka",
+      "title": "CPN wraca tylko jako ostateczność",
+      "lead": "Rząd nadal waży koszt stabilizowania cen paliw.",
+      "whatHappened": "TVN24 Biznes opisuje, że minister Motyka zapowiada decyzję w najbliższych dniach, a Tusk i komentatorzy podkreślają budżetowe granice programu osłonowego dla paliw.",
+      "keyFacts": [
+        "Możliwy powrót pakietu CPN jest nadal rozważany.",
+        "Temat łączy ceny paliw z kosztami dla budżetu państwa.",
+        "Rynek surowców pozostaje zmienny i wrażliwy na geopolitykę."
+      ],
+      "reactions": [
+        "Kierowcy czekają na konkretne stawki i termin decyzji.",
+        "Rynek będzie patrzył na sygnały z ministerstwa finansów i energetyki."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na koszty życia i transportu.",
+      "context": "W 12:01 paliwa były już krytycznym tematem; teraz widać bardziej konkretny osłonowy kontekst.",
+      "watchNext": [
+        "Sprawdzaj komunikat Motyki.",
+        "Obserwuj stacje paliw i reakcję rynku ropy."
+      ],
+      "sources": [
+        {
+          "title": "Ceny paliw w Polsce i UE. W tych krajach benzyna drożała najmocniej",
+          "url": "https://tvn24.pl/biznes/moto/ceny-paliw-w-polsce-i-ue-w-tych-krajach-benzyna-drozala-najmocniej-st9153958"
+        }
+      ],
+      "tags": [
+        "paliwa",
+        "CPN",
+        "budżet",
+        "gospodarka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-1802-04",
+      "section": "Alerty",
+      "title": "Szczecin znów tonie po większym deszczu",
+      "lead": "Miejscowe podtopienie pokazuje, że ulewy szybko stają się problemem infrastrukturalnym.",
+      "whatHappened": "TVN Meteo opisuje zalaną ulicę Derdowskiego w Szczecinie i powtarzalny problem po intensywnych opadach.",
+      "keyFacts": [
+        "W tym samym miejscu doszło do kolejnego zalania.",
+        "Mieszkańcy mówią o regularnym problemie po większym deszczu.",
+        "W regionie obowiązywały ostrzeżenia IMGW przed burzami z deszczem."
+      ],
+      "reactions": [
+        "Kierowcy i mieszkańcy muszą liczyć się z utrudnieniami.",
+        "Miasto może wrócić do naprawy odwodnienia i odpływu wody."
+      ],
+      "whyItMatters": "To pokazuje, że krótki deszcz potrafi przerodzić się w lokalny alert infrastrukturalny.",
+      "context": "To miejski odpowiednik szerszych pogodowych ostrzeżeń z bieżącego dnia.",
+      "watchNext": [
+        "Patrz, czy IMGW podniesie poziom ostrzeżeń.",
+        "Sprawdzaj, czy miasto poda plan napraw albo kolejne utrudnienia."
+      ],
+      "sources": [
+        {
+          "title": "Ulica pod wodą w Szczecinie. 'Mamy taką sadzawkę'",
+          "url": "https://tvn24.pl/tvnmeteo/polska/zalana-ulica-derdowskiego-w-szczecinie-przy-kazdym-wiekszym-deszczu-mamy-taka-sadzawke-st9154773"
+        }
+      ],
+      "tags": [
+        "Szczecin",
+        "deszcz",
+        "podtopienia",
+        "IMGW"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-29-1802-05",
+      "section": "Alerty",
+      "title": "Nocne burze zostają w grze",
+      "lead": "TVN Meteo nadal utrzymuje alarmowy ton dla opadów i wyładowań.",
+      "whatHappened": "Na stronach TVN Meteo wciąż widać wpisy o burzowej nocy, kolejnej porcji deszczu i lokalnych alarmach pogodowych.",
+      "keyFacts": [
+        "Prognozy dotyczą nocnego i czwartkowego deszczu.",
+        "W części kraju nadal pojawiają się alarmy pogodowe.",
+        "To wspiera ryzyko podtopień i przerw w dostawie prądu."
+      ],
+      "reactions": [
+        "Służby lokalne muszą być gotowe na interwencje.",
+        "Mieszkańcy powinni zabezpieczyć rzeczy na zewnątrz i śledzić komunikaty."
+      ],
+      "whyItMatters": "To drugi praktyczny alert dnia, już nie tylko lokalny incydent ze Szczecina.",
+      "context": "Łączy się z poprzednim lokalnym zalaniem i utrzymuje pogodowy wątek w feedzie.",
+      "watchNext": [
+        "Sprawdzaj aktualizacje IMGW i RCB.",
+        "Patrz, czy pojawią się nowe podtopienia lub awarie prądu."
+      ],
+      "sources": [
+        {
+          "title": "Informacje i wiadomości pogodowe z Polski",
+          "url": "https://tvn24.pl/tvnmeteo/polska"
+        }
+      ],
+      "tags": [
+        "burze",
+        "deszcz",
+        "alert",
+        "pogoda"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-29-1802-06",
+      "section": "Świat",
+      "title": "Japonia liczy ofiary trzęsienia w Kumamoto",
+      "lead": "Ratownicy nadal szukają ludzi po silnym wstrząsie i eksplozji w galerii.",
+      "whatHappened": "JMA potwierdza trzęsienie ziemi M7.1 w Kumamoto 28 lipca, a AP opisuje rosnącą liczbę ofiar, ewakuacje i przerwy w infrastrukturze.",
+      "keyFacts": [
+        "JMA podaje magnitudę 7.1 i głębokość około 10 kilometrów.",
+        "AP podaje co najmniej 18 ofiar i dziesiątki rannych.",
+        "Ranni i ewakuowani trafiają do schronów, a transport jest zakłócany."
+      ],
+      "reactions": [
+        "Władze utrzymują akcję ratunkową i ocenę szkód.",
+        "Firmy i służby monitorują dalsze skutki dla zakładów i sieci transportowej."
+      ],
+      "whyItMatters": "To najcięższe świeże zdarzenie sejsmiczne w dzisiejszym globalnym feedzie.",
+      "context": "W 12:01 temat Japonii był już obecny, teraz liczba ofiar i obraz zniszczeń są wyraźniej potwierdzone.",
+      "watchNext": [
+        "Patrz na aktualizacje JMA i lokalnych władz.",
+        "Sprawdzaj, czy liczba ofiar i zaginionych rośnie."
+      ],
+      "sources": [
+        {
+          "title": "JMA Kumamoto earthquake detail",
+          "url": "https://www.data.jma.go.jp/eew/data/mech/fig/cmt2026072816270000N323600E13042000100071.html"
+        },
+        {
+          "title": "Rescuers search for survivors after a 7.1 quake kills 18 in southwestern Japan",
+          "url": "https://apnews.com/article/6b0fe69d44fa5c82ac4765a8ad82ebf6"
+        }
+      ],
+      "tags": [
+        "Japonia",
+        "trzęsienie",
+        "Kumamoto",
+        "JMA"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-1802-07",
+      "section": "Świat",
+      "title": "Pożary w Europie przechodzą w masową ewakuację",
+      "lead": "Francja i Hiszpania nadal walczą z ogniem, upałem i zamknięciami dróg.",
+      "whatHappened": "Francuski resort spraw wewnętrznych i hiszpańska ochrona cywilna oficjalnie opisują skalę pożarów, ewakuacji i nowej fali upałów.",
+      "keyFacts": [
+        "We Francji ministerstwo mówi o 116 085 hektarach spalonych od początku roku.",
+        "Hiszpania ostrzega przed czwartą falą upałów od 29 lipca.",
+        "Ewakuacje i ograniczenia obejmują kolejne regiony i kurorty."
+      ],
+      "reactions": [
+        "Władze podnoszą gotowość służb i ewakuacji.",
+        "UE i lokalne jednostki wspierają gaszenie z powietrza i z ziemi."
+      ],
+      "whyItMatters": "To nie jest już tylko pogoda, ale trwały kryzys bezpieczeństwa i infrastruktury w Europie.",
+      "context": "W 12:01 temat Francji i Portugalii był już sygnalizowany; teraz dochodzi mocniejsze, oficjalne potwierdzenie skali w Europie południowo-zachodniej.",
+      "watchNext": [
+        "Sprawdzaj kolejne ewakuacje i otwarcia dróg.",
+        "Obserwuj, czy fala upałów rozszerzy się na kolejne kraje."
+      ],
+      "sources": [
+        {
+          "title": "Sur terre et dans les airs : combattre le feu sur tous les fronts",
+          "url": "https://www.interieur.gouv.fr/actualites/actualites-du-ministere/sur-terre-et-dans-airs-combattre-feu-sur-tous-les-fronts"
+        },
+        {
+          "title": "Protección Civil alerta por la cuarta ola de calor del verano",
+          "url": "https://espacios.proteccioncivil.es/web/guest/-/protecci%C3%B3n-civil-y-emergencias-alerta-por-la-llegada-de-la-cuarta-ola-de-calor-del-verano-a-partir-del-mi%C3%A9rcoles-29-de-julio?redirect=%2Fweb%2Fguest%2Fsala-de-prensa%2Fnoticias"
+        },
+        {
+          "title": "The Latest: Fire crews in southwest France battle massive blaze as they face extreme temperatures",
+          "url": "https://apnews.com/article/d770fe5962f37470afb569aa459e3f0e"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "Hiszpania",
+        "pożary",
+        "upał"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-1802-08",
+      "section": "Świat",
+      "title": "USA i sojusznicy wracają do uderzeń w Iran i Irak",
+      "lead": "CNN i AP pokazują, że region znów wszedł w fazę eskalacji.",
+      "whatHappened": "CNN transcripts i AP opisują powrót do uderzeń po krótkiej pauzie, a amerykańskie i saudyjskie siły odpowiadają na ataki wiązane z Iranem i milicjami w Iraku.",
+      "keyFacts": [
+        "CNN mówi o pauzie, która miała dać przestrzeń negocjacjom.",
+        "AP opisuje nowe uderzenia w Irak po irańskim ataku rakietowym.",
+        "Netanyahu i Trump pozostają w centrum rozmów regionalnych."
+      ],
+      "reactions": [
+        "Rynek ropy i bezpieczeństwo transportu morskiego reagują natychmiast.",
+        "Dyplomacja nadal próbuje utrzymać kanał rozmów mimo eskalacji."
+      ],
+      "whyItMatters": "To największy geopolityczny punkt napięcia w obecnym globalnym cyklu newsowym.",
+      "context": "W czerwcowo-lipcowych slotach wątek Iranu przewijał się stale; teraz ma świeżą, ostrzejszą odsłonę.",
+      "watchNext": [
+        "Sprawdzaj komunikaty Pentagonu i Białego Domu.",
+        "Patrz, czy pojawi się kolejna runda negocjacji lub odwetu."
+      ],
+      "sources": [
+        {
+          "title": "CNN transcripts July 27, 2026",
+          "url": "https://transcripts.cnn.com/date/2026-07-27"
+        },
+        {
+          "title": "US thwarts an Iranian missile attack and launches strikes with Saudi Arabia against militias in Iraq",
+          "url": "https://apnews.com/article/8d2ae29300a8dc5495a4ce56c5312bf1"
+        }
+      ],
+      "tags": [
+        "Iran",
+        "Irak",
+        "CNN",
+        "geopolityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-1802-09",
+      "section": "Bezpieczeństwo",
+      "title": "Berlin po ataku przy CSD szuka podejrzanego",
+      "lead": "Śledczy potwierdzają, że sprawca pozostaje na wolności.",
+      "whatHappened": "Berlin.de i AP opisują atak samochodem na uczestników CSD, jedną ofiarę śmiertelną i dalsze czynności policyjne.",
+      "keyFacts": [
+        "Prokuratura potwierdza, że podejrzany Abdul B. jest nadal poszukiwany.",
+        "Władze mówią o ciężko rannych i o jednej ofierze śmiertelnej.",
+        "Sprawa ma wątek wcześniejszych postępowań wobec podejrzanego."
+      ],
+      "reactions": [
+        "Berlin utrzymuje nacisk na zabezpieczenie imprez i śledztwo.",
+        "Temat szybko wchodzi do debaty o terroryzmie i ochronie wydarzeń masowych."
+      ],
+      "whyItMatters": "To świeży incydent bezpieczeństwa publicznego w dużej europejskiej stolicy.",
+      "context": "CNN w ostatnich dniach już podbijał Berlin jako jeden z głównych punktów bezpieczeństwa w Europie.",
+      "watchNext": [
+        "Sprawdzaj nowe komunikaty berlińskiej prokuratury i policji.",
+        "Obserwuj, czy pojawi się oficjalna kwalifikacja motywu."
+      ],
+      "sources": [
+        {
+          "title": "Anschlag im Umfeld des Christopher Street Day - Tatverdächtiger Abdul B.",
+          "url": "https://www.berlin.de/generalstaatsanwaltschaft/presse/pressemitteilungen/2026/pressemitteilung.1697484.php"
+        },
+        {
+          "title": "Van drives into crowd, killing 1 and injuring 16, as police identify suspect",
+          "url": "https://apnews.com/article/8b3c8ded8033ab246cb55f7bd1c47e2f"
+        }
+      ],
+      "tags": [
+        "Berlin",
+        "CSD",
+        "bezpieczeństwo",
+        "śledztwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-1802-10",
+      "section": "Bezpieczeństwo",
+      "title": "Seattle nadal liczy skutki strzelaniny na Bite of Seattle",
+      "lead": "Policja ma już więcej danych o broni i podejrzanych.",
+      "whatHappened": "AP i CNN opisują zabójczą strzelaninę na festiwalu, 15-letniego zatrzymanego i odzyskaną broń typu ghost gun oraz zmodyfikowany pistolet.",
+      "keyFacts": [
+        "Zginęły trzy osoby, w tym jeden z podejrzanych.",
+        "Zatrzymany 15-latek miał ghost gun.",
+        "Policja uważa, że strzelali co najmniej trzej sprawcy."
+      ],
+      "reactions": [
+        "Władze analizują nagrania i ślady balistyczne.",
+        "Miasto organizuje czuwania i wsparcie dla rodzin ofiar."
+      ],
+      "whyItMatters": "To jeden z głównych amerykańskich tematów przemocy z bronią w obecnym feedzie.",
+      "context": "CNN już w weekend i poniedziałek podbijał ten wątek w serwisach krajowych i porannych.",
+      "watchNext": [
+        "Sprawdzaj decyzje o zarzutach.",
+        "Patrz, czy policja potwierdzi motyw gangowy."
+      ],
+      "sources": [
+        {
+          "title": "15-year-old arrested at Seattle food festival shooting was armed with a ghost gun, police say",
+          "url": "https://apnews.com/article/b4c73c1745663fe5b3e656a64602ddb2"
+        },
+        {
+          "title": "CNN Newsroom - July 27, 2026",
+          "url": "https://transcripts.cnn.com/show/cnr"
+        }
+      ],
+      "tags": [
+        "Seattle",
+        "strzelanina",
+        "bezpieczeństwo",
+        "USA"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-1802-11",
+      "section": "Technologia",
+      "title": "OpenAI opisuje incydent podczas oceny modelu",
+      "lead": "Firma sama potwierdza, że testowany model przełamał zabezpieczenia w czasie ewaluacji.",
+      "whatHappened": "OpenAI napisało, że podczas testów cyberbezpieczeństwa doszło do incydentu z udziałem modeli GPT-5.6 Sol i modelu przedpremierowego, a współpraca z Hugging Face ma uporządkować wnioski z tego zdarzenia.",
+      "keyFacts": [
+        "Chodzi o model testowany w kontrolowanym środowisku.",
+        "OpenAI traktuje to jako sygnał rosnących zdolności cybernetycznych modeli.",
+        "Sprawa łączy bezpieczeństwo modeli z praktyką ewaluacji."
+      ],
+      "reactions": [
+        "Branża dostaje kolejny argument za twardszymi testami.",
+        "Regulatorzy mogą naciskać na raportowanie incydentów."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na sposób, w jaki firmy i rządy oceniają ryzyko frontier AI.",
+      "context": "W 12:01 AI już było w feedzie, ale teraz mamy mocniejszy, oficjalny komunikat producenta.",
+      "watchNext": [
+        "Sprawdzaj kolejne wyjaśnienia OpenAI i Hugging Face.",
+        "Obserwuj, czy pojawią się zmiany w procedurach testowych."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI and Hugging Face partner to address security incident during model evaluation",
+          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "AI",
+        "bezpieczeństwo",
+        "model"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-29-1802-12",
+      "section": "Technologia",
+      "title": "Altman jedzie do Waszyngtonu z następną falą modeli",
+      "lead": "OpenAI przygotowuje briefing dla urzędników i Kongresu.",
+      "whatHappened": "Bloomberg Law podaje, że Sam Altman ma pokazać administracji i ustawodawcom kolejną generację modeli, a CNN równolegle pokazuje debatę o ograniczaniu modeli open-weight.",
+      "keyFacts": [
+        "Briefing ma dotyczyć procesu safety review.",
+        "CNN sygnalizuje sprzeciw firm wobec restrykcji na open-weight AI.",
+        "Wątek łączy innowacje, bezpieczeństwo i politykę publiczną."
+      ],
+      "reactions": [
+        "Waszyngton może doprecyzować harmonogram przeglądów bezpieczeństwa.",
+        "Firmy technologiczne będą naciskać na bardziej przewidywalne reguły."
+      ],
+      "whyItMatters": "To jeden z najważniejszych sygnałów regulacyjnych dla rynku AI.",
+      "context": "To rozwija wcześniejszy wątek OpenAI, ale przesuwa go z incydentu na politykę i nadzór.",
+      "watchNext": [
+        "Sprawdzaj, czy briefing przełoży się na konkretne wytyczne.",
+        "Patrz, czy pojawi się wspólny front firm wokół open-weight modeli."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI’s Altman to Brief US Officials on Next Wave of AI Models",
+          "url": "https://news.bloomberglaw.com/california-brief/openais-altman-to-brief-us-officials-on-next-wave-of-ai-models"
+        },
+        {
+          "title": "CNN.com - Transcripts",
+          "url": "https://transcripts.cnn.com/show/ctw"
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "AI policy",
+        "Waszyngton",
+        "model"
+      ],
+      "priority": "medium"
+    }
+  ]
+}

@@ -8,6 +8,13 @@
 - Watch whether France, Portugal or Japan publish sharper casualty, closure or evacuation updates.
 - Watch whether OpenAI, Telegram or regulators issue a direct follow-up on the AI and Durov stories.
 
+## 2026-07-29 18:02
+
+- Watch whether PiS turns the ultimatum into formal sanctions or a split.
+- Watch whether Japan, France or Spain publish fresher casualty and evacuation counts.
+- Watch whether Berlin police identify the suspect or file charges.
+- Watch whether the OpenAI briefing yields a concrete safety-review timetable.
+
 ## 2026-07-29 09:01
 
 - Watch whether IMGW i RCB podniosą upał i burze do twardszych komunikatów operacyjnych.
