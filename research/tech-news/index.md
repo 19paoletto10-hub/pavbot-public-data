@@ -1,8 +1,12 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-28
+Last updated: 2026-07-29
 
 ## Current Understanding
+
+Wieczorny run z 2026-07-29 przesuwa temat z samego governance do warstwy produktu i infrastruktury. Anthropic robi z Claude voice mode bardziej pracowy surface z wyborem modelu i connectorami do aplikacji, AMD dalej buduje Helios jako rack-scale szkielet dla agentic AI z Microsoftem i Anthropic jako widocznymi partnerami ekosystemu, a świeże fronty TechCrunch, HN i Product Hunt nadal nagradzają agent security, AI detection i workflow tooling. To wzmacnia obraz rynku, w którym frontowy model jest już tylko częścią szerszego stacku dystrybucji, kontroli i compute.
+
+Poranny run z 2026-07-29 dokłada do osi governance i pracy trzy sygnały. 1,178 pracowników frontier AI w statement *Pacing the Frontier* prosi o międzynarodowe mechanizmy pacingu automatyzacji badań AI, Microsoft i Anthropic ustawiają open weights jako konkretny spór o politykę, a OpenAI dorzuca zarówno liczbowy task crossover, jak i field report o scientific computing. Seagate pokazuje z kolei, że cloud data center demand przekłada się na trwały popyt na mass-capacity storage, a HN i Product Hunt nadal premiują security, evals i agent tooling.
 
 Wieczorny run z 2026-07-28 przesuwa temat z samego modelowego rollout do twardych ograniczeń kapitału i energii. Apple uruchamia Apple Upgrade jako leasing sprzętu w USA, Meta i BlackRock ogłaszają 14 mld USD venture na 1 GW data center w El Paso, Recursive Superintelligence podpisuje z AWS umowę compute za 410 mln USD, a PJM sygnalizuje przyszłe curtailmenty dla dużych data center. To wzmacnia wcześniejszą oś infra finance, ale dokładnie pokazuje też, że consumer hardware, hyperscaler compute i grid policy zaczynają się składać w jeden rynek.
 
@@ -256,6 +260,7 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-29: Pacing the Frontier, OpenAI task crossover/scientific computing i Seagate FY26 results przesuwają temat w stronę governance, reorganizacji pracy i storage demand; HN/PH nadal premiują control-first tooling.
 - 2026-07-28 evening: Apple Upgrade, Meta/BlackRock El Paso, Recursive/AWS compute deal i PJM curtailment dodały do osi finansowanie urządzeń, infra finance i grid constraints.
 - 2026-07-28: Open Secure AI Alliance, OpenAI/Hugging Face postmortem, Anthropic open-weights stance i Microsoft Project Perception ustawiają security/open weights jako główną oś dnia; report o Nvidii i Hut 8 oraz granty Meta utrzymują wątek infra i wearables.
 

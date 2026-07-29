@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-29",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Najmocniejszy sygnał dnia nie dotyczy nowego modelu, tylko governance i reorganizacji pracy. 1,178 pracowników frontier AI proszą amerykański rząd o wsparcie międzynarodowych mechanizmów, które pozwolą świadomie spowalniać automatyzację badań AI. Równolegle Microsoft i Anthropic ustawiają open weights jako realny spór polityczny, a nie slogan marketingowy.",
+    "Druga oś to to, że OpenAI zaczyna mierzyć efekt AI na poziomie ról i zadań, a nie tylko ogólnej adopcji. Work at the Frontier daje twardą liczbę task crossover, a nowy field report o scientific computing pokazuje, że agenci już modernizują i utrzymują software badawczy. To mocniejszy sygnał niż kolejny benchmark.",
+    "Trzecia oś to downstream infra i community signal. Seagate pokazuje, że cloud data center i AI podbijają popyt na mass-capacity storage, a Hacker News i Product Hunt nadal premiują security, evals, agent tooling i workflow plumbing zamiast czystego hype'u o modelach."
+  ],
+  "summaryBullets": [
+    "Regulacje: Pacing the Frontier staje się publicznym wezwaniem do tempa dla AI",
+    "Regulacje: Open weights stają się oficjalną osią sporu politycznego",
+    "AI: OpenAI pokazuje, że AI już miesza role zawodowe"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-29-0-pacing-the-frontier-staje-sie-publicznym-wezwaniem-do-tempa-dla-ai-4837941b19",
+      "section": "Regulacje",
+      "title": "Pacing the Frontier staje się publicznym wezwaniem do tempa dla AI",
+      "standfirst": "1,178 pracowników frontier AI podpisało statement Pacing the Frontier. Wzywają oni amerykański rząd do wsparcia międzynarodowych narzędzi, które pozwolą świadomie pace'ować rozwój zautomatyzowanego AI research.",
+      "whatHappened": "Pracownicy z kilku czołowych laboratoriów poprosili o mechanizmy koordynacji dla frontu AI.",
+      "whyItMatters": "To rzadki sygnał, że presja na spowolnienie i kontrolę nie pochodzi już tylko z zewnątrz branży.",
+      "deeperAnalysis": [
+        "Statement jest ważny nie dlatego, że mówi \"AI należy spowolnić\", tylko dlatego, że przenosi debatę na poziom koordynacji. Sygnatariusze przyznają, że laboratoria i państwa są pod presją konkurencji, więc same nie chcą i nie potrafią łatwo hamować tempa. W praktyce to prośba o mechanizmy, które pozwolą kupić czas na testy, zabezpieczenia i nadzór.",
+        "Skład podpisów jest tu istotny. Gdy takie wezwanie wspierają osoby z OpenAI, Anthropic, Google DeepMind, Meta i Thinking Machines, sygnał przestaje być niszowy. To także zbiega się z wcześniejszymi incydentami wokół eval-time cyber risk i z rosnącą obawą, że autonomiczne poprawianie modeli może przyspieszyć capability szybciej niż instytucje zdążą to opisać.",
+        "Jeśli statement dostanie ciąg dalszy w postaci konkretnego draftu, hearingu albo nowej normy testów, może stać się jednym z punktów odniesienia dla polityki frontier AI w drugiej połowie roku."
+      ],
+      "contextPoints": [
+        "Co się stało: 1,178 frontier AI employees wystąpiło o mechanizmy pacingu.",
+        "Dlaczego ważne: presja na koordynację wychodzi od wewnętrznych uczestników rynku.",
+        "Na co patrzeć dalej: reakcja Białego Domu, signatory growth i nowe model-specific safeguards."
+      ],
+      "sources": [
+        {
+          "title": "Pacing the Frontier",
+          "url": "https://www.pacingthefrontier.com/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "frontier AI",
+        "governance",
+        "employee letter",
+        "automated AI",
+        "policy"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-29-1-open-weights-staja-sie-oficjalna-osia-sporu-politycznego-ca12dcbcba",
+      "section": "Regulacje",
+      "title": "Open weights stają się oficjalną osią sporu politycznego",
+      "standfirst": "Microsoft opublikował Open Weights and American AI Leadership 24 lipca. Anthropic odpowiedziało 27 lipca własnym postem, w którym odrzuca szeroki zakaz open weights, ale chce twardych działań na chipach, distillation i safety testing.",
+      "whatHappened": "Microsoft i Anthropic ustawiają dwa różne warianty polityki wobec open weights.",
+      "whyItMatters": "Spór przechodzi z poziomu haseł do poziomu konkretnych chokepoints.",
+      "deeperAnalysis": [
+        "Microsoft opisuje open weights jako narzędzie konkurencji, kontroli użytkownika i szerszej dyfuzji AI w gospodarce. Anthropic zgadza się, że open weights mogą być użyteczne, ale uważa, że nie wolno zakładać, iż sama otwartość poprawia bezpieczeństwo. Zamiast ogólnego zakazu albo pełnej liberalizacji firma proponuje politykę opartą na chipach, dużych kampaniach distillation i obowiązkowych testach przed release.",
+        "To jest istotne, bo obie strony nie debatują już o abstrakcyjnym \"otwarty vs zamknięty\". Debatują o tym, gdzie państwo może realnie ingerować: w dostęp do compute, w transfery, w bezpieczeństwo modeli i w to, jak klasyfikować techniki uczenia się z innych modeli. Taki język łatwo przenosi się do draftów ustaw i do enterprise procurement.",
+        "W praktyce ten spór prawdopodobnie ułoży rynek w dwa obozy. Jeden będzie promował szeroką dystrybucję i self-hosting, drugi będzie naciskał na większe bramkowanie frontier capability. Dla podcastu to ważny temat, bo tłumaczy, czemu open weights są dziś jednocześnie tematem biznesowym, politycznym i bezpieczeństwa."
+      ],
+      "contextPoints": [
+        "Co się stało: Microsoft opublikował letter o open weights, a Anthropic odpowiedziało własną linią.",
+        "Dlaczego ważne: open weights są już formalnym sporem o politykę i kontrolę rynku.",
+        "Na co patrzeć dalej: czy język o chipach, distillation i safety testing wejdzie do draftów regulacyjnych."
+      ],
+      "sources": [
+        {
+          "title": "Microsoft",
+          "url": "https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/"
+        },
+        {
+          "title": "Anthropic",
+          "url": "https://www.anthropic.com/news/position-open-weights-models"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "open weights",
+        "Microsoft",
+        "Anthropic",
+        "distillation",
+        "chips",
+        "safety testing"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-29-2-openai-pokazuje-ze-ai-juz-miesza-role-zawodowe-9cae49066c",
+      "section": "AI",
+      "title": "OpenAI pokazuje, że AI już miesza role zawodowe",
+      "standfirst": "OpenAI's Work at the Frontier PDF says 16,8% wszystkich wiadomości związanych z pracą i 43,5% wiadomości specyficznych dla zawodu crossuje granice zawodowe. W mniejszych workspace'ach task crossover jest wyraźniejszy.",
+      "whatHappened": "OpenAI opublikowało quantitative signal, że użytkownicy używają AI do zadań spoza tradycyjnych ról.",
+      "whyItMatters": "To jeden z rzadkich twardych wskaźników, że AI zmienia nie tylko tempo pracy, ale też podział pracy.",
+      "deeperAnalysis": [
+        "Raport bazuje na ponad 800 tys. wiadomości i mapuje je do aktywności z ONET. Najważniejsze nie jest samo to, że AI pomaga pisać maile czy streszczać dokumenty, tylko że pozwala pracownikom samodzielnie wykonywać zadania historycznie kojarzone z inną specjalizacją. Marketing, engineering i finance rozlewają się na inne role, szczególnie tam, gdzie małe zespoły nie mają łatwego dostępu do wyspecjalizowanej pomocy.",
+        "Ta liczba ma znaczenie dla firm, które budują szkolenia, role i procesy. Jeśli coraz więcej pracowników używa modeli do rzeczy spoza własnego job description, to organizacja musi zdecydować, co delegować dalej, co standaryzować, a co kontrolować. To już nie jest tylko story o automatyzacji, ale o zmianie granic zawodu.",
+        "W praktyce report wzmacnia też wcześniejszy argument, że AI nie musi najpierw \"zabrać pracy\", żeby zmienić rynek pracy. Wystarczy, że przesuwa granice kompetencji i powoduje, że role się reorganizują. To ważny materiał dla podcastu, bo jest jednocześnie liczbowy i intuicyjny."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI opublikowało raport o task crossover.",
+        "Dlaczego ważne: daje liczbowy sygnał o zmianie podziału zadań między rolami.",
+        "Na co patrzeć dalej: niezależna replikacja i enterprise adoption."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI PDF",
+          "url": "https://cdn.openai.com/pdf/work-at-the-frontier-report.pdf"
+        },
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "task crossover",
+        "labor",
+        "ONET",
+        "AI adoption",
+        "work"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-29-3-openai-przenosi-agentow-do-naukowego-back-office-613de26ca1",
+      "section": "AI",
+      "title": "OpenAI przenosi agentów do naukowego back-office",
+      "standfirst": "OpenAI opublikowało 28 lipca field report o scientific computing w erze agentic AI. Osiem projektów, głównie w life sciences, pokazuje użycie Codex i Claude Code do modernizacji, migracji i utrzymania research software'u.",
+      "whatHappened": "Agenci zaczynają obsługiwać nie tylko chat, ale też długotrwałe utrzymanie naukowego software'u.",
+      "whyItMatters": "To jeden z pierwszych czytelnych sygnałów, że coding agents wchodzą do realnej pracy badawczej i maintenance'owej.",
+      "deeperAnalysis": [
+        "W reportcie powtarza się ten sam wzorzec: agenci dobrze radzą sobie z jasno określonymi zadaniami, ale człowiek musi wyznaczyć acceptance criteria, sprawdzić poprawność i zadbać o długoterminową stewardship. To ważne, bo pokazuje prawdziwy podział pracy w agentowym software development. Model nie zastępuje eksperta, tylko obniża koszt implementacji i skraca drogę od pomysłu do działającego prototypu.",
+        "Projects opisywane przez OpenAI obejmują od modernizacji bibliotek genomowych po przebudowy GPU-native i duże migracje językowe. To nie są efekciarskie demo, tylko często nudne, ale kosztowne problemy: build systemy, testy, packaging, wydajność i utrzymanie. Właśnie dlatego report jest tak wartościowy - pokazuje, gdzie agenci naprawdę zaczynają zwracać czas.",
+        "Jeśli ten wzorzec się utrzyma, scientific computing może być jednym z pierwszych obszarów, w których coding agents dadzą trwały, mierzalny efekt. To także dobra przeciwwaga dla narracji, że AI w pracy to wyłącznie generowanie tekstu."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI opublikowało report o agent-assisted scientific computing.",
+        "Dlaczego ważne: agenci wchodzą w maintenance, migration i verification w research software.",
+        "Na co patrzeć dalej: czy te case studies przełożą się na kolejnych użytkowników poza life sciences."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/scientific-computing-agentic-ai/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "OpenAI",
+        "scientific computing",
+        "Codex",
+        "life sciences",
+        "software maintenance",
+        "research"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-29-4-seagate-wynikami-potwierdza-popyt-na-mass-capacity-storage-fb87100d76",
+      "section": "Infrastruktura",
+      "title": "Seagate wynikami potwierdza popyt na mass-capacity storage",
+      "standfirst": "Seagate podało FY2026 results z revenue 12,2 mld USD i record free cash flow 3,1 mld USD. CEO wprost wskazuje na robust cloud data center demand i durable long-term demand for mass capacity storage napędzany przez AI.",
+      "whatHappened": "Producent storage pokazał silny rok i guidance na kolejny kwartał powyżej 4 mld USD przy dalszym wzroście.",
+      "whyItMatters": "AI buildout to nie tylko GPU i power. To także bardzo konkretne, rosnące zapotrzebowanie na storage.",
+      "deeperAnalysis": [
+        "Seagate jest dobrym przypomnieniem, że infrastruktura AI ma kilka wąskich gardeł jednocześnie. Dyskusja publiczna zwykle koncentruje się na compute i energii, ale masowa generacja danych, retention i archiwizacja w cloud data centers tworzą własny rynek. Firma mówi wprost, że popyt na mass capacity storage jest trwały, a nie jednorazowy.",
+        "Wyniki za FY2026 są mocne: 34% wzrost annual revenue, rekordowy free cash flow i guidance na FQ1 FY2027 na 4,1 mld USD. To nie wygląda jak przypadkowy bump. To wygląda jak vendor, który korzysta z dłuższego cyklu inwestycji w data centers i z potrzeby przechowywania coraz większych wolumenów danych.",
+        "Wersja podcastowa tego tematu jest prosta: jeśli AI ma dalej rosnąć, to rynek potrzebuje nie tylko obliczeń, ale też bardzo dużych magazynów danych. Seagate pokazuje, że ten segment już teraz przekłada się na realne przychody."
+      ],
+      "contextPoints": [
+        "Co się stało: Seagate opublikowało mocne FY2026 results i guidance na Q1 FY2027.",
+        "Dlaczego ważne: storage staje się bezpośrednim beneficjentem AI infra cycle.",
+        "Na co patrzeć dalej: czy inne firmy storage potwierdzą podobny popyt w kolejnych kwartałach."
+      ],
+      "sources": [
+        {
+          "title": "Seagate",
+          "url": "https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results/default.aspx"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Seagate",
+        "storage",
+        "cloud data centers",
+        "AI capex",
+        "HAMR",
+        "mass capacity"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-29-5-hn-i-product-hunt-premiuja-agentowe-narzedzia-i-bezpieczenstwo-7847218533",
+      "section": "Produkty",
+      "title": "HN i Product Hunt premiują agentowe narzędzia i bezpieczeństwo",
+      "standfirst": "Hacker News dziś pokazuje między innymi Codex Security, Kimi K3 Architecture Overview, Discovering Cryptographic Weaknesses with Claude i LearnVector. Product Hunt otwiera dzień launchami skupionymi na AI agents, evals, voice agents, MCP billing i workflow automation.",
+      "whatHappened": "Community signal z obu głównych powierzchni wciąż skupia się na praktycznych narzędziach.",
+      "whyItMatters": "To dobry, codzienny wskaźnik tego, gdzie techniczna uwaga faktycznie się przesuwa.",
+      "deeperAnalysis": [
+        "Hacker News premiuje dziś security, open weights i praktyczne narzędzia pracy. Z kolei Product Hunt jest pełen produktów wokół agentów, voice, evals, site builders, security scan, MCP billing i company brain. To nie jest sygnał o jednym zwycięzcy, tylko o kierunku uwagi: mniej abstrakcyjnego modelowego hype'u, więcej tooling, automation i kontroli.",
+        "Warto zwrócić uwagę, że te launchy nie są już wyłącznie \"AI chatboty\". Wiele z nich dotyczy ewaluacji agentów, operacyjnej integracji, weryfikacji, voice workflows albo infrastruktury billingowej dla MCP. To wskazuje na dojrzewanie stacku, a nie tylko na kolejną falę demo.",
+        "Ten sygnał dobrze wspiera resztę dzisiejszego reportu: gdy HN i PH nagradzają security, agents i plumbing, to znaczy, że rynek techniczny nadal szuka realnych narzędzi do wdrożenia, a nie samego efektu wow."
+      ],
+      "contextPoints": [
+        "Co się stało: HN i Product Hunt dziś promują agentowe i security-heavy produkty.",
+        "Dlaczego ważne: community feedback pomaga ocenić, jakie kategorie mają traction.",
+        "Na co patrzeć dalej: czy ten control-first pattern utrzyma się przez kolejne dni."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/"
+        },
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Hacker News",
+        "Product Hunt",
+        "agents",
+        "security",
+        "workflow automation",
+        "developer tools"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Pacing the Frontier przenosi governance do środka branży",
+      "rationale": "1,178 pracowników frontier AI proszą o mechanizmy, które pozwolą świadomie pace'ować automatyzację badań AI.",
+      "sourcesLabel": "Pacing the Frontier"
+    },
+    {
+      "priority": "High",
+      "title": "Open weights stają się osią sporu politycznego",
+      "rationale": "Microsoft i Anthropic opisują dwa różne modele polityki wobec open weights, distillation i safety testing.",
+      "sourcesLabel": "Microsoft; Anthropic"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI pokazuje twardą liczbę task crossover",
+      "rationale": "Work at the Frontier daje rzadki quantitative signal, że AI już miesza role zawodowe.",
+      "sourcesLabel": "OpenAI PDF; OpenAI"
+    },
+    {
+      "priority": "High",
+      "title": "Scientific computing staje się pierwszym spokojnym use case'em agentów",
+      "rationale": "OpenAI pokazuje, że coding agents wchodzą w maintenance i stewardship naukowego software'u.",
+      "sourcesLabel": "OpenAI"
+    },
+    {
+      "priority": "High",
+      "title": "Seagate potwierdza, że AI potrzebuje też storage",
+      "rationale": "Wyniki Seagate pokazują, że cloud data centers i AI budują trwały popyt na mass-capacity storage.",
+      "sourcesLabel": "Seagate"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN i Product Hunt nadal nagradzają control-first tooling",
+      "rationale": "Community signal mówi, że uwaga techniczna przesuwa się w stronę security, evals i workflow automation.",
+      "sourcesLabel": "Hacker News; Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Pacing the Frontier",
+      "url": "https://www.pacingthefrontier.com/"
+    },
+    {
+      "title": "Microsoft: Open Weights and American AI Leadership",
+      "url": "https://www.microsoft.com/en-us/corporate-responsibility/topics/open-weight/"
+    },
+    {
+      "title": "Anthropic: Our position on open-weights models",
+      "url": "https://www.anthropic.com/news/position-open-weights-models"
+    },
+    {
+      "title": "OpenAI: How AI is expanding what people do at work",
+      "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/"
+    },
+    {
+      "title": "OpenAI PDF: Work at the Frontier",
+      "url": "https://cdn.openai.com/pdf/work-at-the-frontier-report.pdf"
+    },
+    {
+      "title": "OpenAI: Scientific computing in the age of agentic AI",
+      "url": "https://openai.com/index/scientific-computing-agentic-ai/"
+    },
+    {
+      "title": "Seagate: Seagate Technology Reports Fiscal Fourth Quarter and Fiscal Year 2026 Financial Results",
+      "url": "https://investors.seagate.com/news/news-details/2026/Seagate-Technology-Reports-Fiscal-Fourth-Quarter-and-Fiscal-Year-2026-Financial-Results/default.aspx"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "Product Hunt home page",
+      "url": "https://www.producthunt.com/"
+    }
+  ]
+}

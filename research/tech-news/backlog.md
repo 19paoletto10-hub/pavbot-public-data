@@ -4,15 +4,16 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
-| High | Track OpenAI task crossover evidence | The Work at the Frontier report gives a rare quantitative signal that AI is already shifting tasks across occupational boundaries | Watch independent replication, enterprise implications and policy response | Open |
+| High | Track frontier AI pacing statement | 1,178 frontier AI employees asked the U.S. government to support international coordination to pace automated AI development | Watch policy pickup, signatory growth and lab response | Open |
+| High | Track OpenAI task crossover evidence | Work at the Frontier and the scientific-computing field report give rare quantitative and case-study signals that AI is already shifting tasks across occupational boundaries | Watch independent replication, enterprise implications, scientific software adoption and policy response | Open |
 | High | Track open-weight AI policy alliance | The open letter, Open Secure AI Alliance and Anthropic's stance turn open weights into a live policy and security alignment | Watch concrete tools, policy language and whether labs keep coordinating or diverging | Open |
 | High | Track enterprise Claude rollout in regulated industries | Cognizant's client examples show Claude moving from pilot to production in manufacturing, life sciences and insurance | Watch case studies, measurable ROI and sector-specific constraints | Open |
 | High | Track OpenAI Health rollout | Medical-record access inside ChatGPT now live for eligible U.S. adults turns consumer health into a regulated AI surface | Watch U.S. expansion, privacy defaults and clinician response | Open |
 | High | Track OpenAI Presence deployment | Enterprise voice/chat agents with a Codex improvement loop may become the new support default | Watch customer wins, escalation controls and workflow-specific rollout | Open |
 | High | Track OpenAI SMB and newsroom programs | Sector-specific programs show OpenAI moving from generic chat to packaged workflow distribution | Watch partner uptake, paid conversions and editorial backlash | Open |
-| High | Track Claude voice-mode expansion | Voice mode on Opus and Sonnet with connectors pushes Claude toward a hands-free work surface | Watch access, latency, connector breadth and enterprise controls | Open |
+| High | Track Claude voice-mode expansion | Voice mode now lets users choose Opus, Sonnet and Haiku, defaults to the last text model and connects to Gmail, Calendar, Slack, Canva and Notion | Watch rollout scope, connector breadth, enterprise controls and free-tier limits | Open |
 | High | Track Claude Opus 5 launch | Opus 5 resets Anthropic's top tier with the same sticker price but better task-level efficiency and may force rival routing moves | Watch adoption, effort controls, safety posture and competitor response | Open |
-| High | Track AMD-Anthropic compute financing | The 2 GW / $5B deal may set a repeatable model for financing AI infrastructure | Watch milestones, leasing structure and Helios adoption | Open |
+| High | Track AMD-Anthropic compute financing | Helios is becoming the visible rack-scale template for the 2 GW partnership and could set the standard if deployments land as planned | Watch deployments, customer mix, ORW adoption and whether Helios becomes the standard rack design | Open |
 | High | Track Google ATLAS methodology | A large public AI-usage dataset could become a policy and product benchmark if it holds up | Watch outside validation, methodology notes and follow-up releases | Open |
 | High | Track AI Kill Switch Act | Federal emergency shutdown powers would make frontier safety a formal compliance regime | Watch bill text, committee movement and industry response | Open |
 | High | Track Google Gemini efficiency rollout | Gemini 3.6 Flash, Copilot distribution and Android migration show Google moving AI toward cost control and ecosystem stickiness | Watch Copilot defaults, pricing and enterprise uptake | Open |
@@ -236,6 +237,7 @@
 
 ## Review Notes
 
+- 2026-07-29: Pacing the Frontier, OpenAI task crossover/scientific computing i Seagate FY26 results przesuwają temat w stronę governance, reorganizacji pracy i storage demand; HN/PH nadal premiują control-first tooling.
 - 2026-07-28: Open Secure AI Alliance, OpenAI/Hugging Face postmortem, Microsoft Project Perception i report o Nvidii/Hut 8 ustawiają security/open weights oraz infra finance jako główne watch items na kolejny run.
 - 2026-07-18: Daily run added Codex Micro, SF nudify enforcement, healthcare workplace surveillance backlash, Databricks capital signal and a sharper memory spillover story for India and consumer hardware.
 - 2026-07-17: Wieczorny refresh dodał Google Marketing Live AI Search ads i Ask Advisor, recall Zoox po heavy smoke, finansowanie inference przez General Compute, disclosure Netflix o około 300 tytułach z genAI oraz bieżący community signal z Product Hunt i HN.

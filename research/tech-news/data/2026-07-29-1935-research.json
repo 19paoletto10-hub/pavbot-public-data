@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-29",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny sygnał przesuwa temat z samego governance do warstwy produktu i infrastruktury. Anthropic robi z Claude voice mode bardziej pracowy surface z wyborem modelu i connectorami do aplikacji, a AMD dalej buduje Helios jako rack-scale szkielet dla agentic AI z Microsoftem i Anthropic jako widocznymi partnerami ekosystemu.",
+    "Drugą zmianą jest to, że rynek wokół agentów nie słabnie, tylko się packuje. Aktualny front TechCrunch pokazuje funding i M&A wokół agentów, AI detection i agent security, a Hacker News oraz Product Hunt nadal premiują security, low-footprint models i workflow tooling zamiast czystego frontier hype'u.",
+    "To razem wzmacnia dzisiejszą tezę, że AI news przestaje być wyłącznie o nowych modelach. Coraz częściej chodzi o interfejsy pracy, dystrybucję, kontrolę i o to, kto buduje cały stack wokół modeli."
+  ],
+  "summaryBullets": [
+    "Produkty: Claude voice mode staje się pracowym interfejsem",
+    "Infrastruktura: AMD Helios buduje rack-scale warstwę dla agentic AI",
+    "AI: Rynek finansuje agentów, detekcję i security"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-29-1935-0-claude-voice-mode-staje-sie-pracowym-interfejsem-7642b353c1",
+      "section": "Produkty",
+      "title": "Claude voice mode staje się pracowym interfejsem",
+      "standfirst": "Claude voice mode przechodzi z prostego voice chat w bardziej roboczy interfejs. Użytkownik może wybierać między Opus, Sonnet i Haiku, a voice mode łączy się z Gmail, Google Calendar, Slack, Canva i Notion.",
+      "whatHappened": "Anthropic rozbudowało voice mode tak, by obsługiwał więcej modeli i aplikacji roboczych.",
+      "whyItMatters": "To przesuwa Claude z ładnego demo w stronę warstwy pracy, która konkuruje z OpenAI nie tylko modelem, ale całym workflow.",
+      "deeperAnalysis": [
+        "Nowy układ voice mode jest ważny, bo model przestaje być tylko silnikiem odpowiedzi, a staje się interfejsem działania. W praktyce oznacza to, że użytkownik może wejść w rozmowę głosową i od razu przenieść się do zadań związanych z kalendarzem, mailem albo dokumentami.",
+        "To również zmienia punkt konkurencji z samych benchmarków na ergonomię pracy. Jeśli voice mode potrafi wykorzystać kontekst ostatniego czatu tekstowego i podpiąć aplikacje, to Anthropic sprzedaje już nie tylko odpowiedzi, ale krótszą drogę od intencji do wykonania zadania.",
+        "Dla podcastu ważne jest też to, że ruch Anthropic nie jest odosobniony. OpenAI aktualizuje swoje surface'y, a teraz Claude wyraźnie próbuje wygrać na operacyjności i integracjach, nie na samej głośności premiery modelu."
+      ],
+      "contextPoints": [
+        "Co się stało: Claude voice mode dostał wybór modelu i connector breadth.",
+        "Dlaczego ważne: voice staje się warstwą pracy, a nie tylko interfejsem rozmowy.",
+        "Na co patrzeć dalej: rollout dla większej liczby użytkowników, enterprise controls i limits w free tier."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch: Anthropic updates Claude voice mode with more capable models",
+          "url": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "Claude",
+        "voice mode",
+        "connectors",
+        "workplace",
+        "apps"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-29-1935-1-amd-helios-buduje-rack-scale-warstwe-dla-agentic-ai-89280c339a",
+      "section": "Infrastruktura",
+      "title": "AMD Helios buduje rack-scale warstwę dla agentic AI",
+      "standfirst": "AMD pozycjonuje Helios jako rack-scale platformę dla frontier AI i agentic AI. Oficjalny opis mówi o 72 GPU MI455X, 31 TB HBM4 i otwartych standardach, a newsroom AMD utrzymuje Helios w centrum tegorocznego AI stacku.",
+      "whatHappened": "AMD buduje nie tylko chipy, ale kompletne rack-scale środowisko obliczeniowe.",
+      "whyItMatters": "To pokazuje, że rynek compute przesuwa się od pojedynczych akceleratorów do całych systemów, które można wdrażać jak gotowy fundament infrastruktury.",
+      "deeperAnalysis": [
+        "Helios jest ważny dlatego, że konkurencja z Nvidią przestaje być wyłącznie sporem o GPU. AMD próbuje sprzedać komplet: compute, pamięć, networking, chłodzenie i standardy rackowe. To dokładnie ten poziom, na którym hyperscalers, sovereign AI buyers i duże labs kupują dziś przyszłą przepustowość.",
+        "Oficjalny materiał AMD pokazuje też, że firma myśli o Helios jak o platformie otwartego ekosystemu, a nie o jednorazowym produkcie. To ważne, bo w świecie drogich i długich wdrożeń liczy się nie tylko wydajność, ale też to, czy system da się serwisować, skalować i utrzymywać bez vendor lock-in.",
+        "W praktyce Helios jest kolejnym dowodem, że AI infra staje się projektowana jak przemysł ciężki. Jeśli partnerzy tacy jak Microsoft i Anthropic nadal będą traktować rack-scale jako domyślną jednostkę inwestycji, to największa rywalizacja przeniesie się z modeli na architekturę całych data center."
+      ],
+      "contextPoints": [
+        "Co się stało: AMD promuje Helios jako rack-scale AI stack.",
+        "Dlaczego ważne: infrastruktura AI przesuwa się z chip-level do system-level competition.",
+        "Na co patrzeć dalej: realne deploymenty, customer mix i to, czy Helios stanie się standardem wdrożeniowym."
+      ],
+      "sources": [
+        {
+          "title": "AMD Helios™",
+          "url": "https://www.amd.com/en/products/rackscale-solutions/helios.html"
+        },
+        {
+          "title": "AMD Newsroom",
+          "url": "https://newsroom.amd.com"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AMD",
+        "Helios",
+        "rack-scale",
+        "Microsoft",
+        "Anthropic",
+        "data center"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-29-1935-2-rynek-finansuje-agentow-detekcje-i-security-251728f9ba",
+      "section": "AI",
+      "title": "Rynek finansuje agentów, detekcję i security",
+      "standfirst": "Aktualna strona TechCrunch AI pokazuje świeżą aktywność wokół agentów, AI detection i agent security. Widać tam na przykład Hint, Encore AI, Pangram oraz Cyera z przejęciem Oasis Security.",
+      "whatHappened": "Najnowsze finansowania i przejęcia skupiają się na operacyjnych warstwach AI, nie na samych frontier modelach.",
+      "whyItMatters": "To sygnał, że kapitał idzie do narzędzi, które pomagają wdrażać, kontrolować i rozpoznawać AI, a nie tylko budować kolejne modele.",
+      "deeperAnalysis": [
+        "Ta klasa launchy jest ważna, bo pokazuje, jak szybko rynek dojrzewa po stronie infrastruktury pracy. Agent uczący się z rozmów z klientami, detektor AI contentu i security platform kupowana przez większego gracza to wszystkie warianty tej samej tezy: firmy chcą opanować użytkowanie AI, a nie tylko je demonstrować.",
+        "To także dobry kontrapunkt dla narracji, że rynek jest już nasycony. Zamiast tego widać specjalizację: jedni budują komunikacyjne surface'y, inni detekcję i trust layer, jeszcze inni konsolidują agent security. Dla czytelnika to sygnał, że dalej opłaca się śledzić category-level consolidation.",
+        "Jeśli ten wzorzec się utrzyma, podcastowy materiał będzie przesuwał się od \"kolejny model\" do \"jak zarządzamy ryzykiem, kosztami i przepływem pracy wokół modeli\". To dziś wygląda na bardziej trwałą oś niż sam premiera-frontier cycle."
+      ],
+      "contextPoints": [
+        "Co się stało: TechCrunch pokazuje funding i M&A wokół agentów, detekcji i security.",
+        "Dlaczego ważne: kapitał skupia się na warstwach operacyjnych AI.",
+        "Na co patrzeć dalej: czy te kategorie utrzymają tempo inwestycji i zaczną się konsolidować."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch AI category page",
+          "url": "https://techcrunch.com/category/artificial-intelligence/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "TechCrunch",
+        "agents",
+        "security",
+        "AI detection",
+        "funding",
+        "M&A"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-29-1935-3-hacker-news-nadal-nagradza-security-i-lekkie-modele-77d610e4e6",
+      "section": "Produkty",
+      "title": "Hacker News nadal nagradza security i lekkie modele",
+      "standfirst": "Hacker News front page pokazuje dziś Gemma 4 26B działającą w 2 GB RAM, opis intrusion wokół frontier-lab agentów, document-borne AI worms i token budgeting tooling. To kolejny dzień, w którym HN premiuje kontrolę i praktyczne użycie.",
+      "whatHappened": "Community signal nadal kieruje uwagę w stronę bezpieczeństwa, lokalności i realnych narzędzi pracy.",
+      "whyItMatters": "HN jest dobrym wskaźnikiem, gdzie techniczna publiczność uważa, że AI ma dziś realną wartość.",
+      "deeperAnalysis": [
+        "Najciekawsze w tym feedzie nie są pojedyncze tytuły, tylko ich wspólny kierunek. Widać apetyt na małe, uruchamialne lokalnie modele, na analizy intrusion i na narzędzia, które obniżają koszt budowania lub obrony systemów.",
+        "To jest spójne z wcześniejszymi dniami, ale dziś szczególnie mocno kontrastuje z głośnymi premierami modeli. HN nagradza rzeczy, które da się uruchomić, zrozumieć i kontrolować, a nie tylko pokazać na scenie.",
+        "Dla reportu oznacza to, że control-first narrative nie jest już przypadkiem z jednego dnia. To stabilny sygnał, który dobrze nadaje się do podcastu, bo pokazuje, gdzie techniczna publiczność lokuje swoją uwagę."
+      ],
+      "contextPoints": [
+        "Co się stało: front HN dalej premiuje security, local models i agent tooling.",
+        "Dlaczego ważne: community uwagę można traktować jako wczesny wskaźnik kategorii.",
+        "Na co patrzeć dalej: czy dominacja security i low-footprint AI utrzyma się przez kolejne dni."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Hacker News",
+        "Gemma",
+        "open source",
+        "security",
+        "agents",
+        "coding"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-29-1935-4-product-hunt-pokazuje-agentowy-stack-nie-ogolny-hype-848f55987f",
+      "section": "Produkty",
+      "title": "Product Hunt pokazuje agentowy stack, nie ogólny hype",
+      "standfirst": "Product Hunt na 29 lipca jest mocno agentowy. Na topie są Prelint, /mission for Claude Code, MemoryCustodian, Bo AI, Task Monki, Framer AI Agents, BlackFlare i AgentQuartz.",
+      "whatHappened": "Launch market nagradza narzędzia do pracy, automatyzacji i kontroli agentów.",
+      "whyItMatters": "To sygnał, że early adopters nadal płacą za plumbing, a nie za sam modelowy szum.",
+      "deeperAnalysis": [
+        "Najbardziej użyteczny wniosek z Product Hunt jest dziś prosty: rynek launchów nie kręci się wokół kolejnego czatu z AI, tylko wokół narzędzi, które pomagają projektować, uruchamiać i monitorować pracę agentów.",
+        "Widać też specjalizację w kilku kierunkach naraz: coding agents, voice dictation, memory, access control i marketing tooling. To wygląda jak normalizacja stacku, w którym AI staje się komponentem produktu, a nie samym produktem.",
+        "To jest dobry materiał dla podcastu, bo pokazuje różnicę między medialnym headline'em a faktycznym popytem builderów. Właśnie tu często widać, gdzie technologia naprawdę się utrwala."
+      ],
+      "contextPoints": [
+        "Co się stało: PH leaderboard jest zdominowany przez agentowe i workflowowe launchy.",
+        "Dlaczego ważne: launch-market preferuje produkty, które zmniejszają koszt pracy.",
+        "Na co patrzeć dalej: czy agent workflows utrzymają dominację w kolejnych dniach."
+      ],
+      "sources": [
+        {
+          "title": "Product Hunt July 29 leaderboard",
+          "url": "https://www.producthunt.com/leaderboard/daily/2026/7/29"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Product Hunt",
+        "agents",
+        "workflow automation",
+        "voice",
+        "coding agents"
+      ]
+    }
+  ],
+  "podcastTopics": [],
+  "checkedSources": [
+    {
+      "title": "Anthropic: Anthropic updates Claude voice mode with more capable models",
+      "url": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/"
+    },
+    {
+      "title": "AMD Helios™",
+      "url": "https://www.amd.com/en/products/rackscale-solutions/helios.html"
+    },
+    {
+      "title": "AMD Newsroom",
+      "url": "https://newsroom.amd.com"
+    },
+    {
+      "title": "TechCrunch AI category page",
+      "url": "https://techcrunch.com/category/artificial-intelligence/"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "Product Hunt daily leaderboard - July 29, 2026",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/7/29"
+    }
+  ]
+}
