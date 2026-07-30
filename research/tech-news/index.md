@@ -1,8 +1,10 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-29
+Last updated: 2026-07-30
 
 ## Current Understanding
+
+Poranny run z 2026-07-30 przesuwa temat z samego governance do konkretnych surfaces, które dowożą działanie i kontrolę. Meta AI zaczyna planować, łączyć się z pocztą i kalendarzem, generować slajdy i wykonywać zadania w imieniu użytkownika, Meta dokłada provenance i transparentność dla treści AI, Microsoft zamienia security w agentowy cyber stack, Cursor lokalizuje agentic coding dla Indii, a open-weight ledger rośnie do 109 podpisów. To wzmacnia obraz rynku, w którym model frontowy jest już tylko jednym z elementów szerszego systemu dystrybucji, compliance i operacji.
 
 Wieczorny run z 2026-07-29 przesuwa temat z samego governance do warstwy produktu i infrastruktury. Anthropic robi z Claude voice mode bardziej pracowy surface z wyborem modelu i connectorami do aplikacji, AMD dalej buduje Helios jako rack-scale szkielet dla agentic AI z Microsoftem i Anthropic jako widocznymi partnerami ekosystemu, a świeże fronty TechCrunch, HN i Product Hunt nadal nagradzają agent security, AI detection i workflow tooling. To wzmacnia obraz rynku, w którym frontowy model jest już tylko częścią szerszego stacku dystrybucji, kontroli i compute.
 
