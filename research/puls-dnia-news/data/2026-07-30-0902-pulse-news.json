@@ -1,0 +1,493 @@
+{
+  "topic": "puls-dnia-news",
+  "schemaVersion": 1,
+  "runDate": "2026-07-30",
+  "runTime": "09:02",
+  "status": "Material update",
+  "headline": "09:02: PiS, Bałtyk i światowe punkty zapalne",
+  "summary": "Poranny slot dokłada świeży miks: PiS i alert przy Bałtyku w kraju oraz Seattle, Berlin, pożary w Europie, ONZ, OpenAI i ukraińskie uderzenia za granicą.",
+  "checkedSources": [
+    {
+      "title": "TVN24 homepage",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Polska",
+      "url": "https://tvn24.pl/polska"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "BBC News RSS mirror",
+      "url": "https://www.kirklees.gov.uk/rss/default.aspx?url=http%3A%2F%2Fnewsrss.bbc.co.uk%2Frss%2Fnewsonline_uk_edition%2Ffront_page%2Frss.xml"
+    },
+    {
+      "title": "CNN transcripts July 27, 2026",
+      "url": "https://transcripts.cnn.com/date/2026-07-27"
+    },
+    {
+      "title": "CNN transcripts July 28, 2026",
+      "url": "https://transcripts.cnn.com/date/2026-07-28"
+    },
+    {
+      "title": "AP wildfires in France",
+      "url": "https://apnews.com/article/de0bfabe2249153afc0e16da2f7e02f3"
+    },
+    {
+      "title": "OpenAI security incident",
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+    },
+    {
+      "title": "Seattle Police Department blotter",
+      "url": "https://spdblotter.seattle.gov/2026/07/27/gun-violence-at-seattle-center-takes-three-lives/"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-07-30-0902-01",
+      "section": "Polityka",
+      "title": "PiS rozłam nie wygasa",
+      "lead": "Najnowsze analizy dalej liczą skutki sporu Kaczyński-Morawiecki.",
+      "whatHappened": "PAP i AP opisują nadal żywy konflikt o linię PiS, a FT wskazuje, że rozłam może rozbić prawicowy elektorat przed wyborami w 2027 r. To już nie jest jednorazowa awantura, tylko trwająca przebudowa obozu opozycji.",
+      "keyFacts": [
+        "PAP podaje, że ponad 30 posłów zostało objętych skutkami wewnętrznego sporu.",
+        "AP opisuje to jako największe napięcie w partii od utraty władzy w 2023 r.",
+        "FT widzi ryzyko dalszego rozdrobnienia prawicy przed wyborami."
+      ],
+      "reactions": [
+        "Centrala PiS może dalej dociskać dyscyplinę partyjną.",
+        "Strona Morawieckiego będzie próbowała pokazać rozłam jako nową, bardziej umiarkowaną ofertę."
+      ],
+      "whyItMatters": "To wpływa na układ sił na prawicy i na arytmetykę wyborczą przed 2027 r.",
+      "context": "Poranny feed z 06:01 odsunął PiS na bok, ale najnowsze wire’y znów stawiają spór w centrum krajowej polityki.",
+      "watchNext": [
+        "Sprawdzaj, czy PiS formalizuje kolejne decyzje kadrowe.",
+        "Patrz, czy Morawiecki dopowie, jak ma wyglądać jego zaplecze."
+      ],
+      "sources": [
+        {
+          "title": "PAP: Internal feud forces over 30 MPs out of Poland's main opposition PiS party",
+          "url": "https://www.pap.pl/en/news/internal-feud-forces-over-30-mps-out-polands-main-opposition-pis-party"
+        },
+        {
+          "title": "AP: Poland's biggest opposition party faces split over tensions about its direction",
+          "url": "https://apnews.com/article/90b93cba4f79bc50194c3251d2c23abf"
+        },
+        {
+          "title": "FT: Polish opposition rift hands Donald Tusk pre-election boost",
+          "url": "https://www.ft.com/content/cc27661a-9a6f-4e55-bfa3-64afd7107655"
+        }
+      ],
+      "tags": [
+        "PiS",
+        "Morawiecki",
+        "Kaczyński",
+        "wybory"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-30-0902-02",
+      "section": "Polska",
+      "title": "IMGW podbija wiatr nad Bałtykiem",
+      "lead": "Prognoza 72h pokazuje mocniejszy wiatr na wybrzeżu i akwenie.",
+      "whatHappened": "IMGW w prognozie 72h dla Bałtyku pokazuje wzrost wiatru 30 lipca, z porywami do 7 w skali B na części akwenu. To nie jest alarm ogólnokrajowy, ale konkretna operacyjna informacja dla żeglugi i ruchu przybrzeżnego.",
+      "keyFacts": [
+        "Prognoza obejmuje 29-31 lipca.",
+        "Na 30 lipca przewidywane są porywy do 7 B.",
+        "Źródło dotyczy bezpośrednio bezpieczeństwa na morzu."
+      ],
+      "reactions": [
+        "Służby i operatorzy nadmorscy mogą skorygować komunikaty dla żeglarzy i plażowiczów.",
+        "Ruch jednostek na Bałtyku powinien liczyć się z bardziej wymagającymi warunkami."
+      ],
+      "whyItMatters": "To praktyczny alert pogodowy dla transportu i bezpieczeństwa przy wybrzeżu.",
+      "context": "W poprzednim slocie pogoda była już ważna, ale teraz dokładamy bardziej operacyjny, morski wariant ryzyka.",
+      "watchNext": [
+        "Sprawdzaj, czy IMGW albo służby morskie podniosą poziom ostrzeżenia.",
+        "Patrz, czy pojawią się lokalne ograniczenia dla żeglugi."
+      ],
+      "sources": [
+        {
+          "title": "IMGW Bałtyk - Prognoza 72h",
+          "url": "https://baltyk.imgw.pl/index.php%3Fpage%3D24%26subpage%3D96%26data%3D119"
+        }
+      ],
+      "tags": [
+        "IMGW",
+        "Bałtyk",
+        "wiatr",
+        "alert"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-30-0902-03",
+      "section": "Bezpieczeństwo",
+      "title": "Seattle center shooting zabija trzy osoby",
+      "lead": "Policja w Seattle potwierdza trzy ofiary po strzelaninie na festiwalu.",
+      "whatHappened": "Seattle Police Department podała, że po strzelaninie podczas Bite of Seattle zginęły trzy osoby, cztery kolejne trafiły do szpitali, a śledczy szukają dalszych uczestników wymiany ognia. Funkcjonariusze byli na miejscu w kilka sekund, ale sprawa ma już ciężar dużego incydentu publicznego.",
+      "keyFacts": [
+        "Do strzelaniny doszło przy Seattle Center Armory podczas food festivalu.",
+        "SPD podaje siedem osób postrzelonych, w tym dziecko.",
+        "Jedna osoba została zatrzymana, ale śledztwo trwa."
+      ],
+      "reactions": [
+        "Służby utrzymują, że publiczne zagrożenie nie jest obecnie szerokie.",
+        "Miasto będzie mierzyć się z pytaniami o bezpieczeństwo imprez masowych."
+      ],
+      "whyItMatters": "To jedno z najmocniejszych zdarzeń bezpieczeństwa publicznego w amerykańskim obiegu newsowym.",
+      "context": "To świeży, oficjalny follow-up do porannych depesz CNN o strzelaninie w Seattle.",
+      "watchNext": [
+        "Sprawdzaj, czy policja poda motyw albo kolejne zatrzymania.",
+        "Patrz, czy pojawi się bilans medyczny rannych."
+      ],
+      "sources": [
+        {
+          "title": "Seattle Police Department - Gun Violence at Seattle Center Takes Three Lives",
+          "url": "https://spdblotter.seattle.gov/2026/07/27/gun-violence-at-seattle-center-takes-three-lives/"
+        }
+      ],
+      "tags": [
+        "Seattle",
+        "strzelanina",
+        "bezpieczeństwo",
+        "policja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-30-0902-04",
+      "section": "Bezpieczeństwo",
+      "title": "Berlin nadal szuka sprawcy ataku CSD",
+      "lead": "Berlińska prokuratura potwierdza, że Abdul B. pozostaje na wolności.",
+      "whatHappened": "Berlin.de utrzymuje, że po ataku w okolicy Christopher Street Day podejrzany Abdul B. nadal jest poszukiwany. Jedna kobieta zginęła, a kilka osób zostało ciężko rannych; śledztwo trwa i służby nie podają więcej szczegółów, by nie utrudniać operacji.",
+      "keyFacts": [
+        "Atak miał miejsce 25 lipca w rejonie Tiergarten.",
+        "Podejrzany miał użyć auta i noża.",
+        "Sprawa ma już oficjalny status aktywnego śledztwa z policyjnym pościgiem."
+      ],
+      "reactions": [
+        "Berlin utrzymuje wzmożone działania poszukiwawcze.",
+        "Ryzyko wokół dużych wydarzeń publicznych pozostaje podwyższone."
+      ],
+      "whyItMatters": "To nadal aktywny problem bezpieczeństwa publicznego w dużej europejskiej stolicy.",
+      "context": "Ten sam wątek pojawiał się wcześniej w CNN, ale teraz mamy twardszą, oficjalną aktualizację z Berlina.",
+      "watchNext": [
+        "Sprawdzaj, czy dojdzie do zatrzymania podejrzanego.",
+        "Patrz, czy prokuratura poda motyw lub nowe zarzuty."
+      ],
+      "sources": [
+        {
+          "title": "Berlin.de - Anschlag im Umfeld des Christopher Street Day - Tatverdächtiger Abdul B.",
+          "url": "https://www.berlin.de/generalstaatsanwaltschaft/presse/pressemitteilungen/2026/pressemitteilung.1697484.php"
+        }
+      ],
+      "tags": [
+        "Berlin",
+        "CSD",
+        "atak",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-30-0902-05",
+      "section": "Świat",
+      "title": "Francja i Hiszpania nadal walczą z pożarami",
+      "lead": "Nowe depesze pokazują, że południe Europy dalej jest w kryzysie.",
+      "whatHappened": "AP i Guardian opisują, że pożary we Francji i Hiszpanii wciąż trzymają region w trybie kryzysowym. W grze są kolejne ewakuacje, bardzo wysoka temperatura i ryzyko ponownego rozniecenia frontów przy zmianie wiatru.",
+      "keyFacts": [
+        "Mowa o setkach tysięcy ewakuowanych w obu krajach.",
+        "AP podaje, że we Francji działa kilka tysięcy strażaków i ponad 20 statków powietrznych.",
+        "Guardian opisuje dalszą ostrożność władz przed kolejnymi godzinami upału i wiatru."
+      ],
+      "reactions": [
+        "Służby utrzymują najwyższą gotowość operacyjną.",
+        "Każda zmiana pogody może przełożyć się na nowe nakazy ewakuacji."
+      ],
+      "whyItMatters": "To jedna z największych europejskich historii bezpieczeństwa i klimatu tego lata.",
+      "context": "W porównaniu z porannym slotem 06:01 mamy już nie sam opis pożarów, ale bardziej dojrzały obraz skali kryzysu.",
+      "watchNext": [
+        "Sprawdzaj nowe decyzje o ewakuacjach i zamknięciach dróg.",
+        "Patrz, czy pojawią się kolejne ofiary albo zmiana kierunku ognia."
+      ],
+      "sources": [
+        {
+          "title": "AP - Cooler weather and potential rain move into the French region torched by wildfires",
+          "url": "https://apnews.com/article/de0bfabe2249153afc0e16da2f7e02f3"
+        },
+        {
+          "title": "Guardian live - Spain faces 'complex' three days with risks of heatwave and strong winds reigniting some fires",
+          "url": "https://www.theguardian.com/world/live/2026/jul/29/france-spain-wildfires-heatwave-extreme-heat-europe-latest-news-updates"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "Hiszpania",
+        "pożary",
+        "ewakuacje"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-30-0902-06",
+      "section": "Świat",
+      "title": "USA wychodzą z posiedzenia ONZ",
+      "lead": "Dyplomaci USA opuścili posiedzenie RB ONZ po krytyce ze strony Francji.",
+      "whatHappened": "AP opisuje, że amerykańscy delegaci wyszli z posiedzenia Rady Bezpieczeństwa ONZ podczas wystąpienia Francji, po tym jak Paryż skrytykował rekord praw człowieka administracji Trumpa. Spór przeniósł się z komunikatów do bardzo widocznego gestu dyplomatycznego.",
+      "keyFacts": [
+        "Wydarzenie dotyczyło posiedzenia poświęconego Ukrainie.",
+        "Walkout nastąpił po krytyce amerykańskiej polityki praw człowieka.",
+        "W tle pozostaje spór o przedłużenie mandatu Volkerowi Türkowi."
+      ],
+      "reactions": [
+        "Taki gest pogłębia napięcie między USA a Francją.",
+        "Sprawa może wrócić w komunikatach misji przy ONZ."
+      ],
+      "whyItMatters": "To czytelny sygnał, że napięcie transatlantyckie przenosi się na forum ONZ.",
+      "context": "To świeższa, twardsza wersja wątku, który już wcześniej pojawiał się w news flow jako konflikt USA-Francja.",
+      "watchNext": [
+        "Obserwuj odpowiedź francuskiej misji i Departamentu Stanu.",
+        "Sprawdzaj, czy pojawi się kolejny spór o Ukrainę albo prawa człowieka."
+      ],
+      "sources": [
+        {
+          "title": "AP - US walks out on France at UN meeting to protest ally's criticism of America's human rights record",
+          "url": "https://apnews.com/article/bbca1f1381a40aa2870889fd8fa99442"
+        },
+        {
+          "title": "Guardian - US diplomats stage UN walkout after France criticizes human rights record under Trump",
+          "url": "https://www.theguardian.com/us-news/2026/jul/28/diplomats-un-walkout-france-human-rights-trump-record"
+        }
+      ],
+      "tags": [
+        "ONZ",
+        "USA",
+        "Francja",
+        "dyplomacja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-30-0902-07",
+      "section": "Technologia",
+      "title": "OpenAI opisuje precedensowy incydent",
+      "lead": "Firma sama przyznaje, że test modelu przeszła w tryb cyberincydentu.",
+      "whatHappened": "OpenAI opublikowało własny opis incydentu bezpieczeństwa podczas ewaluacji modeli. Firma pisze o kombinacji GPT-5.6 Sol i modelu pre-release, które w kontrolowanym teście wykazały zdolności cybernetyczne uznane za bezprecedensowe.",
+      "keyFacts": [
+        "Incydent dotyczył wewnętrznej ewaluacji cybercapabilities.",
+        "OpenAI prowadzi dalsze badanie razem z Hugging Face.",
+        "Sprawa dotyczy nie tylko produktu, ale też metod oceny modeli."
+      ],
+      "reactions": [
+        "Możliwe są dalsze zmiany w procedurach testowania modeli.",
+        "Temat prawdopodobnie trafi do debaty o bezpieczeństwie frontier AI."
+      ],
+      "whyItMatters": "To bezpośredni sygnał ryzyka z własnych testów jednej z najważniejszych firm AI.",
+      "context": "To oficjalny etap historii, którą CNN już wcześniej łączyło z polityką i reakcją regulatorów.",
+      "watchNext": [
+        "Patrz, czy OpenAI poda pełny raport końcowy.",
+        "Sprawdzaj, czy pojawią się kolejne ograniczenia dla model evaluation."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI - OpenAI and Hugging Face partner to address security incident during model evaluation",
+          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "AI safety",
+        "cybersecurity",
+        "Hugging Face"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-30-0902-08",
+      "section": "Technologia",
+      "title": "Altman jedzie do Waszyngtonu",
+      "lead": "CNN pisze o briefingach dla administracji i Kongresu po incydencie OpenAI.",
+      "whatHappened": "CNN podaje, że Sam Altman ma spotkać się z przedstawicielami administracji Trumpa i kongresmenami, żeby omówić najnowsze modele OpenAI i ich wpływ. To już nie jest wyłącznie temat produktu, tylko polityka publiczna i bezpieczeństwo państwa.",
+      "keyFacts": [
+        "Spotkania mają objąć administrację i Kapitol.",
+        "CNN łączy je z niedawnym incydentem testowego modelu.",
+        "W tle pojawia się presja na ramy bezpieczeństwa AI przed 1 sierpnia."
+      ],
+      "reactions": [
+        "Kongres może wrócić do pomysłu obowiązkowych audytów albo kill switcha.",
+        "Administracja będzie musiała pokazać, jak chce nadzorować kolejne modele."
+      ],
+      "whyItMatters": "To łączy technologię z regulacją i bezpieczeństwem narodowym.",
+      "context": "To osobna karta od samego incydentu: tutaj chodzi o reakcję polityczną i rynek regulacyjny.",
+      "watchNext": [
+        "Sprawdzaj, czy po briefingu pojawi się konkretny harmonogram działań.",
+        "Patrz, czy kongresmeni złożą projekt ograniczeń dla frontier AI."
+      ],
+      "sources": [
+        {
+          "title": "CNN transcripts - OpenAI CEO to Washington briefing",
+          "url": "https://transcripts.cnn.com/show/cnc/date/2026-07-27/segment/11"
+        },
+        {
+          "title": "CNN transcripts - OpenAI safety and policy briefing",
+          "url": "https://transcripts.cnn.com/show/cnr/date/2026-07-28/segment/20"
+        }
+      ],
+      "tags": [
+        "OpenAI",
+        "Kongres",
+        "regulacje",
+        "AI"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-30-0902-09",
+      "section": "Gospodarka",
+      "title": "Ukraina uderza w rosyjskie rafinerie",
+      "lead": "Po spotkaniu Zełenskiego z Trumpem Kijów bije w paliwowe zaplecze Rosji.",
+      "whatHappened": "AP podaje, że ukraińskie uderzenia trafiły rafinerie w Riazaniu i Permie, wywołując pożary. To nowy, bardziej materialny etap presji na rosyjską infrastrukturę paliwową i energetyczną.",
+      "keyFacts": [
+        "Celem były dwa duże zakłady rafineryjne.",
+        "Ataki nastąpiły po rozmowach Zełenskiego z Trumpem w Waszyngtonie.",
+        "W tle pozostają rozmowy o Patriotach i dalszym wsparciu dla Ukrainy."
+      ],
+      "reactions": [
+        "Rosja będzie prawdopodobnie odpowiadać narracją o obronie infrastruktury.",
+        "Sojusznicy Ukrainy mogą dostać kolejną rundę próśb o wsparcie."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na zdolność Rosji do finansowania i prowadzenia wojny.",
+      "context": "W porównaniu z wcześniejszymi slotami to mocniejszy, bardziej konkretny cios w rosyjską gospodarkę wojenną.",
+      "watchNext": [
+        "Sprawdzaj skalę zniszczeń i możliwe zakłócenia w produkcji paliw.",
+        "Obserwuj, czy pojawi się rosyjska odpowiedź militarna albo polityczna."
+      ],
+      "sources": [
+        {
+          "title": "AP - Ukraine says it hits 2 major Russian oil refineries hours after Zelenskyy's meeting with Trump",
+          "url": "https://apnews.com/article/4275c2280107aedba37df8704f226ce6"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "rafinerie",
+        "energia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-30-0902-10",
+      "section": "Gospodarka",
+      "title": "Wildberries staje się celem dronów",
+      "lead": "Ukraińska kampania uderza w rosyjską logistykę e-commerce.",
+      "whatHappened": "Reuters Connect pokazuje kolejne ataki na magazyny Wildberries, rosyjskiego giganta e-commerce. Wersja z 24 lipca mówi o pożarach i rannych, a z punktu widzenia gospodarki chodzi o logistykę, nie tylko o symboliczne trafienie.",
+      "keyFacts": [
+        "Celem były centra logistyczne w rejonie Petersburga i Leningradu.",
+        "Po atakach pojawiły się pożary i rannych.",
+        "To część szerszej kampanii przeciw infrastrukturze zaplecza."
+      ],
+      "reactions": [
+        "Rosyjski biznes będzie musiał liczyć się z ryzykiem force majeure.",
+        "Ukraina pokazuje, że może uderzać nie tylko w cele wojskowe, ale i w łańcuchy dostaw."
+      ],
+      "whyItMatters": "To pokazuje, jak wojna wchodzi w logistykę i handel, a nie tylko w front.",
+      "context": "To dobra karta do pary z rafineriami: razem pokazują presję na rosyjską gospodarkę.",
+      "watchNext": [
+        "Sprawdzaj, czy pojawią się kolejne ataki na logistykę.",
+        "Patrz, czy rosyjskie firmy zaczną publicznie liczyć straty."
+      ],
+      "sources": [
+        {
+          "title": "Reuters Connect - 3 injured as Ukraine strikes Russia's largest online retailer",
+          "url": "https://www.reutersconnect.com/item/3-injured-as-ukraine-strikes-russias-largest-online-retailer/dGFnOnJldXRlcnMuY29tLDIwMjY6bmV3c21sX09XQU5BQ0FBVklERU8yMDI2MDcyNDQyMDUyOTc3"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Wildberries",
+        "drony",
+        "logistyka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-30-0902-11",
+      "section": "Świat",
+      "title": "Połowa Anglii w suszy",
+      "lead": "FT opisuje suszę i kolejną falę upałów jako nową normalność dla części UK.",
+      "whatHappened": "Financial Times podaje, że połowa Anglii została objęta suszą po kolejnych falach upałów, a ograniczenia zużycia wody dotyczą milionów ludzi. To już nie jest tylko chwilowy dyskomfort pogodowy, ale realny problem zasobów i infrastruktury.",
+      "keyFacts": [
+        "Susza obejmuje duże części Anglii, w tym London i południowy wschód.",
+        "Kilka spółek wodnych wprowadziło ograniczenia.",
+        "Upał zaczyna wpływać na rolnictwo i zasoby wodne."
+      ],
+      "reactions": [
+        "Władze i firmy wodne będą musiały trzymać restrykcje przez kolejne tygodnie.",
+        "Temat może wejść do polityki, jeśli restrykcje zaczną się rozszerzać."
+      ],
+      "whyItMatters": "Susza łączy pogodę z kosztami życia, rolnictwem i usługami publicznymi.",
+      "context": "To naturalny dopisek do europejskiego bloku upałów, ale z silniejszym ekonomicznym ciężarem.",
+      "watchNext": [
+        "Sprawdzaj, czy kolejne regiony wprowadzą ograniczenia wody.",
+        "Patrz, czy pojawi się presja na rządowe wsparcie dla infrastruktury."
+      ],
+      "sources": [
+        {
+          "title": "FT: Half of England declared in drought after heatwaves",
+          "url": "https://www.ft.com/content/e185a6f7-afa6-4b9e-8d6e-278c47095a67"
+        }
+      ],
+      "tags": [
+        "Wielka Brytania",
+        "susza",
+        "upał",
+        "woda"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-30-0902-12",
+      "section": "Technologia",
+      "title": "Air France-KLM widzi zmianę popytu",
+      "lead": "Upały przesuwają podróżnych z południa na północ Europy.",
+      "whatHappened": "FT podaje, że Air France-KLM obserwuje wyraźne przesunięcie ruchu turystycznego w stronę północnej Europy, bo kolejne fale upałów zniechęcają do południowych kierunków. To już ekonomiczny efekt klimatu, a nie tylko pogoda.",
+      "keyFacts": [
+        "Firma mówi o wyraźnej zmianie preferencji podróżnych.",
+        "Równolegle jej wyniki są obciążone cenami paliwa.",
+        "Kapitał i siatka połączeń zaczynają reagować na klimat."
+      ],
+      "reactions": [
+        "Linie lotnicze mogą przestawiać planowanie siatki połączeń.",
+        "Turystyka na południu Europy będzie pod presją, jeśli fala upałów utrzyma się dłużej."
+      ],
+      "whyItMatters": "To pokazuje, że klimat bezpośrednio zmienia zachowanie konsumentów i wynik firm.",
+      "context": "Dobrze domyka dzisiejszy blok o pożarach i suszy, bo pokazuje już gospodarczy efekt tych samych zjawisk.",
+      "watchNext": [
+        "Sprawdzaj, czy inni przewoźnicy potwierdzą ten trend.",
+        "Patrz, czy linie ograniczą lub przełożą nowe połączenia."
+      ],
+      "sources": [
+        {
+          "title": "FT: Heatwaves pushing European holidaymakers north, says Air France-KLM",
+          "url": "https://www.ft.com/content/f0c63956-13dd-4bdb-88ce-bc69ac600785"
+        }
+      ],
+      "tags": [
+        "Air France-KLM",
+        "turystyka",
+        "upał",
+        "Europa"
+      ],
+      "priority": "medium"
+    }
+  ]
+}

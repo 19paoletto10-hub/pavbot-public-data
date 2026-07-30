@@ -13,6 +13,12 @@ transportu, upału, pożarów i ryzyk operacyjnych: metro w Warszawie kończy si
 wydaleniem z Polski, Chorzów ma duży pożar w centrum, a za granicą najgłośniej
 świecą Francja, Japonia, Wielka Brytania, ONZ, CNN-owy pakiet pożarowy i AI.
 
+The 2026-07-30 09:02 slot dokłada świeższy warstwowy miks: PiS nadal jest
+głównym krajowym konfliktem politycznym, IMGW podbija ryzyko przy Bałtyku, a za
+granicą dominują Seattle, Berlin, francusko-hiszpańskie pożary, spór USA-
+Francja w ONZ, ukraińskie uderzenia w rosyjską logistykę i rafinerie oraz
+rosnąca presja na politykę AI i rynek podróży.
+
 The 2026-07-29 21:07 slot domyka wieczór formalnym spotkaniem Kaczyński-
 Morawiecki po terminie ultimatum, potwierdza wybór Sylwii Gregorczyk-Abram na
 RPO i dokłada świeże, bieżące ryzyka z ONZ, Wielkiej Brytanii, Hiszpanii oraz

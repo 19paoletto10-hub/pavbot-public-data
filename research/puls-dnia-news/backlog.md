@@ -59,6 +59,15 @@
 - Watch whether the BBC UN row triggers a second diplomatic response.
 - Watch whether the AI incident becomes a vendor or regulator follow-up.
 
+## 2026-07-30 09:02
+
+- Watch whether PiS formalizes the split or tightens disciplinary moves.
+- Watch whether IMGW or coastal authorities upgrade the Baltic wind alert.
+- Watch whether Seattle and Berlin add suspect or arrest updates.
+- Watch whether France, Spain or the UN issue new operational or diplomatic follow-ups.
+- Watch whether OpenAI or U.S. lawmakers turn the briefing into a concrete policy timetable.
+- Watch whether Ukraine's refinery and logistics strikes trigger a Russian retaliation story.
+
 ## Done
 
 - Production automation exists for `Pavbot Puls Dnia 3h` with the intended
