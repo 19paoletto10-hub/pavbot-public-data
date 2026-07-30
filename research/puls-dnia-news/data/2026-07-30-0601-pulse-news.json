@@ -1,0 +1,551 @@
+{
+  "topic": "puls-dnia-news",
+  "schemaVersion": 1,
+  "runDate": "2026-07-30",
+  "runTime": "06:01",
+  "status": "Material update",
+  "headline": "06:01: Metro, upał i pożary otwierają dzień",
+  "summary": "Poranny slot przesuwa feed z wczorajszego sporu PiS/RPO w stronę transportu, pogody i bezpieczeństwa publicznego; za granicą najmocniej świecą pożary, fala upałów, ONZ i AI.",
+  "checkedSources": [
+    {
+      "title": "TVN24 Warszawa - metro i wydalenie z Polski",
+      "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-bagaz-na-torach-metra-policjanci-zatrzymali-jedna-osobe-st9152685"
+    },
+    {
+      "title": "TVN Meteo - upał wraca do Polski",
+      "url": "https://tvn24.pl/tvnmeteo/prognoza/zmiana-w-pogodzie-upal-wroci-do-polski-na-jak-dlugo-co-przyniesie-weekend-st9154315"
+    },
+    {
+      "title": "TVN24 Katowice - pożar w Chorzowie",
+      "url": "https://tvn24.pl/katowice/chorzow-wielki-pozar-w-centrum-pali-sie-remontowany-budynek-st9154621"
+    },
+    {
+      "title": "TVN24 Szczecin",
+      "url": "https://tvn24.pl/szczecin"
+    },
+    {
+      "title": "TVN24 Wrocław",
+      "url": "https://tvn24.pl/wroclaw"
+    },
+    {
+      "title": "TVN24 Szczecin - Chojna",
+      "url": "https://tvn24.pl/szczecin/chojna-cialo-kobiety-w-domu-zarzuty-i-areszt-dla-jej-21-letniego-syna-st9150615"
+    },
+    {
+      "title": "TVN Meteo - Francja walczy z pożarami",
+      "url": "https://tvn24.pl/tvnmeteo/swiat/francja-walczy-z-pozarami-setki-ewakuowanych-st9154424"
+    },
+    {
+      "title": "TVN Meteo - Japonia i kokushobi",
+      "url": "https://tvn24.pl/tvnmeteo/swiat/upaly-w-japonii-w-kraju-odnotowano-pierwsze-w-historii-kokushobi-st9153815"
+    },
+    {
+      "title": "TVN Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "CNN transcripts",
+      "url": "https://transcripts.cnn.com/show/ctw"
+    },
+    {
+      "title": "BBC News RSS mirror",
+      "url": "https://www.kirklees.gov.uk/rss/default.aspx?url=http%3A%2F%2Fnewsrss.bbc.co.uk%2Frss%2Fnewsonline_uk_edition%2Ffront_page%2Frss.xml"
+    },
+    {
+      "title": "TVN24 Biznes / Tech",
+      "url": "https://tvn24.pl/biznes/tech"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-07-30-0601-01",
+      "section": "Polityka",
+      "title": "Plecak na torach metra kończy się wydaleniem z Polski",
+      "lead": "Stołeczne metro wraca do porannego feedu już nie jako zwykła awaria, lecz sprawa zakończona zatrzymaniem i decyzją o wydaleniu z kraju.",
+      "whatHappened": "TVN24 Warszawa opisała sprawę mężczyzny, który wrzucił bagaż na torowisko w metrze Centrum. Policja go zatrzymała, a Straż Graniczna potwierdziła wniosek o wydalenie i 10-letni zakaz wjazdu do strefy Schengen.",
+      "keyFacts": [
+        "Zdarzenie zatrzymało ruch na linii M1 i wymagało komunikacji zastępczej.",
+        "Zatrzymany to 38-letni obywatel Ukrainy.",
+        "SG potwierdziła, że wniosek o wydalenie już wpłynął."
+      ],
+      "reactions": [
+        "Służby traktują sprawę jako naruszenie porządku i bezpieczeństwa transportu.",
+        "Pasażerowie dostali chwilowe utrudnienia, ale sprawa szybko przeszła w tryb policyjno-administracyjny."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych krajowych sygnałów poranka, bo łączy transport publiczny z reakcją służb migracyjnych.",
+      "context": "To świeży lokalny temat, który zyskuje wagę przez twardy finał proceduralny.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się dodatkowy komunikat policji lub SG.",
+        "Obserwować, czy sprawa wróci jako temat polityczny."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Warszawa - metro i wydalenie z Polski",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-bagaz-na-torach-metra-policjanci-zatrzymali-jedna-osobe-st9152685"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "metro",
+        "policja",
+        "SG"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-30-0601-02",
+      "section": "Polska",
+      "title": "Upał wraca do Polski",
+      "lead": "TVN Meteo widzi powrót gorącego lata, a miejscami także burzową końcówkę tygodnia.",
+      "whatHappened": "Prognoza zapowiada systematyczny wzrost temperatury i powrót warunków zbliżonych do upału w końcówce tygodnia.",
+      "keyFacts": [
+        "Pod koniec tygodnia miejscami termometry mają dojść do 30 stopni.",
+        "W tle pojawią się przelotne opady i lokalne burze.",
+        "To nie jest jednorazowy pik, tylko kilka dni ocieplenia."
+      ],
+      "reactions": [
+        "To zwiększa ryzyko przeciążenia miejskiej infrastruktury i transportu.",
+        "Dla służb pogodowych to sygnał, że temat upału wraca do obiegu operacyjnego."
+      ],
+      "whyItMatters": "Upał jest jednym z najważniejszych tematów sezonowych i szybko przekłada się na bezpieczeństwo, zdrowie i logistykę.",
+      "context": "To bezpośrednia kontynuacja letniego wzorca z poprzednich dni.",
+      "watchNext": [
+        "Monitorować komunikaty IMGW i RCB.",
+        "Sprawdzać, czy pojawią się lokalne ograniczenia albo ostrzeżenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo - upał wraca do Polski",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/zmiana-w-pogodzie-upal-wroci-do-polski-na-jak-dlugo-co-przyniesie-weekend-st9154315"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "upał",
+        "IMGW",
+        "RCB"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-30-0601-03",
+      "section": "Bezpieczeństwo",
+      "title": "Wielki pożar w centrum Chorzowa",
+      "lead": "W centrum miasta płonie remontowany budynek dawnego banku, a akcja gaśnicza trwała jeszcze wieczorem.",
+      "whatHappened": "TVN24 Katowice podało, że nad centrum Chorzowa unosił się duży słup dymu, a strażacy walczyli z pożarem budynku w remoncie.",
+      "keyFacts": [
+        "Płoną głównie składowane materiały budowlane.",
+        "Ogień był widoczny w pobliżu centrum przesiadkowego.",
+        "Na ten moment nie było informacji o poszkodowanych."
+      ],
+      "reactions": [
+        "Straż pożarna utrzymuje działania gaśnicze i zabezpieczające.",
+        "Miasto dostaje kolejny temat z obszaru bezpieczeństwa operacyjnego."
+      ],
+      "whyItMatters": "To realne ryzyko infrastrukturalne w środku miasta, a nie tylko lokalna ciekawostka.",
+      "context": "W feedzie dobrze współgra z tematami upału i sezonowych zagrożeń.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się bilans strat albo poszkodowani.",
+        "Obserwować, czy służby podadzą przyczynę pożaru."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Katowice - pożar w Chorzowie",
+          "url": "https://tvn24.pl/katowice/chorzow-wielki-pozar-w-centrum-pali-sie-remontowany-budynek-st9154621"
+        }
+      ],
+      "tags": [
+        "Chorzów",
+        "pożar",
+        "straż pożarna",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-30-0601-04",
+      "section": "Bezpieczeństwo",
+      "title": "Siedem osób tonęło w morzu w Dziwnowie",
+      "lead": "TVN24 Szczecin pokazuje wakacyjne ryzyko nad wodą jako twardy temat bezpieczeństwa, a nie tylko sezonową statystykę.",
+      "whatHappened": "W regionalnym feedzie pojawił się materiał o siedmiu osobach tonących w morzu w Dziwnowie, co wzmacnia wakacyjny blok ostrzeżeń.",
+      "keyFacts": [
+        "Temat dotyczy Dziwnowa i nadmorskiego odcinka wakacyjnego ruchu.",
+        "Feed pokazuje to jako świeżą historię bezpieczeństwa.",
+        "To wpisuje się w szerszy letni wzrost ryzyka nad wodą."
+      ],
+      "reactions": [
+        "Regionalny feed traktuje sytuację jako coś więcej niż drobny incydent.",
+        "Dla odbiorcy to mocny sygnał ostrożności w sezonie urlopowym."
+      ],
+      "whyItMatters": "Wakacyjne przypadki nad wodą są jednymi z najbardziej operacyjnych alertów w regionie.",
+      "context": "To jeden z najmocniejszych regionalnych sygnałów ze Szczecina i wybrzeża.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się dokładniejszy opis zdarzenia lub bilans ratunkowy.",
+        "Monitorować kolejne komunikaty o bezpieczeństwie na plażach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Szczecin",
+          "url": "https://tvn24.pl/szczecin"
+        }
+      ],
+      "tags": [
+        "Dziwnów",
+        "morze",
+        "wakacje",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-30-0601-05",
+      "section": "Kryminalne",
+      "title": "Wrocław nadal trzyma sprawę Kristiny wysoko w feedzie",
+      "lead": "Wrocławski regionalny obieg wciąż eksponuje jedną z najmocniejszych lokalnych historii kryminalnych ostatnich dni.",
+      "whatHappened": "Feed z Wrocławia pokazuje sprawę 10-letniej Kristiny jako temat, który nadal jest wysoko w regionalnym obiegu TVN24.",
+      "keyFacts": [
+        "TVN24 opisuje sprawę jako zbrodnię przygotowaną w drobnych szczegółach.",
+        "To jedna z najbardziej ciężkich historii kryminalnych w regionalnym feedzie.",
+        "Temat pozostaje aktywny, bo nadal pojawia się w aktualnych listach."
+      ],
+      "reactions": [
+        "Wrocław utrzymuje sprawę w obiegu jako ważny temat kryminalny.",
+        "To przykład materiału, który nie znika po jednym dniu, tylko dalej generuje uwagę."
+      ],
+      "whyItMatters": "Takie sprawy tworzą trwały ciężar w lokalnym news flow i wpływają na odbiór bezpieczeństwa.",
+      "context": "To bardziej sygnał trwałości tematu niż nowe zdarzenie, ale w dzisiejszym feedzie nadal jest obecny.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się nowy procesowy etap albo komentarz prokuratury.",
+        "Obserwować, czy temat przeskoczy do krajowego feedu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Wrocław",
+          "url": "https://tvn24.pl/wroclaw"
+        }
+      ],
+      "tags": [
+        "Wrocław",
+        "kryminalne",
+        "prokuratura",
+        "bezpieczeństwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-30-0601-06",
+      "section": "Kryminalne",
+      "title": "Chojna: areszt dla syna po zabójstwie matki",
+      "lead": "Zachodniopomorska prokuratura trzyma areszt dla 21-latka podejrzanego o zabójstwo matki i próbę zabójstwa babci.",
+      "whatHappened": "TVN24 Szczecin opisało sprawę 46-letniej kobiety z Chojny. Jej syn usłyszał zarzuty zabójstwa oraz usiłowania zabójstwa babci i został tymczasowo aresztowany.",
+      "keyFacts": [
+        "Za zabójstwo grozi dożywocie.",
+        "Sąd przychylił się do wniosku prokuratury o areszt na trzy miesiące.",
+        "W sprawie chodzi o dwa osobne zarzuty wobec 21-latka."
+      ],
+      "reactions": [
+        "Prokuratura traktuje sprawę jako ciężką i rozwojową.",
+        "Sąd uznał, że istnieje duże prawdopodobieństwo popełnienia przestępstw."
+      ],
+      "whyItMatters": "To ciężki lokalny wątek kryminalny, który szybko eskaluje z poziomu zdarzenia do poziomu proceduralnego.",
+      "context": "To jeden z najbardziej konkretnych świeżych materiałów regionalnych ze Szczecina.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się kolejne ustalenia prokuratury.",
+        "Monitorować, czy obrona złoży zażalenie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Szczecin - Chojna",
+          "url": "https://tvn24.pl/szczecin/chojna-cialo-kobiety-w-domu-zarzuty-i-areszt-dla-jej-21-letniego-syna-st9150615"
+        }
+      ],
+      "tags": [
+        "Chojna",
+        "zabójstwo",
+        "areszt",
+        "prokuratura"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-30-0601-07",
+      "section": "Świat",
+      "title": "Francja nadal walczy z pożarami",
+      "lead": "TVN Meteo pokazuje, że we Francji pożary dalej są realnym kryzysem operacyjnym, a nie zamkniętą historią.",
+      "whatHappened": "W materiale TVN Meteo opisano pożar w departamencie Var, gdzie ogień objął około 2,5 tysiąca hektarów, a z zagrożonych terenów ewakuowano około 500 osób.",
+      "keyFacts": [
+        "Pożar rozwijał się przy suszy i wysokiej temperaturze.",
+        "Na miejscu działało około 900 strażaków.",
+        "To kolejny epizod trudnego sezonu pożarowego we Francji."
+      ],
+      "reactions": [
+        "Służby ratownicze utrzymują dużą mobilizację.",
+        "Lokalne władze traktują sytuację jako długotrwałe ryzyko, nie jednorazowy incydent."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych alertów pogodowo-bezpieczeństwowych w całym globalnym zestawie.",
+      "context": "Temat łączy upał, suszę i ewakuacje, więc pozostaje wysoko w obiegu.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się nowy bilans ewakuacji albo strat.",
+        "Monitorować, czy pożary nie rozszerzą się na kolejne departamenty."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo - Francja walczy z pożarami",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/francja-walczy-z-pozarami-setki-ewakuowanych-st9154424"
+        }
+      ],
+      "tags": [
+        "Francja",
+        "pożary",
+        "ewakuacje",
+        "upał"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-30-0601-08",
+      "section": "Świat",
+      "title": "Ponad doba bez prądu przy 42 stopniach",
+      "lead": "TVN Meteo pokazuje europejskie skrajne gorąco jako problem nie tylko komfortu, ale też infrastruktury.",
+      "whatHappened": "W materiale TVN Meteo opisano sytuację z długą awarią zasilania i temperaturami sięgającymi 42 stopni, co podbija wagę letnich alertów w Europie.",
+      "keyFacts": [
+        "Temperatura dochodzi do 42 stopni.",
+        "Awaria trwa już ponad dobę.",
+        "To kolejny przykład, jak upał uderza w infrastrukturę."
+      ],
+      "reactions": [
+        "Materiał pokazuje, że problem jest już operacyjny, a nie tylko pogodowy.",
+        "Wysokie temperatury potrafią obnażyć słabość sieci energetycznych."
+      ],
+      "whyItMatters": "To sygnał ryzyka dla sieci, usług i zdrowia publicznego w czasie ekstremalnego lata.",
+      "context": "To dobrze spina feed z francuskimi pożarami i japońskim upałem.",
+      "watchNext": [
+        "Sprawdzić, czy pojawią się lokalne decyzje o ograniczeniach lub ewakuacji.",
+        "Monitorować, czy awaria zostanie usunięta."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo",
+          "url": "https://tvn24.pl/tvnmeteo"
+        }
+      ],
+      "tags": [
+        "upał",
+        "prąd",
+        "infrastruktura",
+        "Europa"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-07-30-0601-09",
+      "section": "Świat",
+      "title": "Japonia pierwszy raz notuje kokushobi",
+      "lead": "Ekstremalne gorąco w Japonii stało się na tyle poważne, że służby meteorologiczne oficjalnie użyły nowej kategorii ostrzegawczej.",
+      "whatHappened": "TVN Meteo podało, że w środkowej Japonii temperatury przekroczyły 40 stopni, co po raz pierwszy doprowadziło do oficjalnego odnotowania kokushobi.",
+      "keyFacts": [
+        "Kokushobi oznacza ekstremalnie gorące dni z temperaturą 40 stopni lub wyższą.",
+        "Zjawisko zostało oficjalnie zarejestrowane po raz pierwszy.",
+        "Japońskie służby ostrzegają, że fala upałów już zbiera żniwo."
+      ],
+      "reactions": [
+        "To mocny sygnał dla służb zdrowia i zarządzania kryzysowego.",
+        "Nowa kategoria pokazuje, jak szybko klimat wymusza zmianę języka ostrzeżeń."
+      ],
+      "whyItMatters": "To nie tylko ciekawostka językowa, ale wskaźnik, że ekstremalne upały stają się normą operacyjną.",
+      "context": "Japonia dołącza do szerszego globalnego obrazu temperatur ekstremalnych.",
+      "watchNext": [
+        "Sprawdzać, czy Japonia poda dalszy bilans zdrowotny.",
+        "Obserwować, czy kolejne regiony wprowadzą podobne ostrzeżenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo - Japonia i kokushobi",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/upaly-w-japonii-w-kraju-odnotowano-pierwsze-w-historii-kokushobi-st9153815"
+        }
+      ],
+      "tags": [
+        "Japonia",
+        "upał",
+        "alerty",
+        "klimat"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-30-0601-10",
+      "section": "Świat",
+      "title": "CNN widzi ponad 300 tysięcy ewakuowanych w Europie",
+      "lead": "CNN opisuje szeroki europejski pakiet ryzyka: pożary i ekstremalny upał wypychają setki tysięcy ludzi z domów.",
+      "whatHappened": "W transcriptach CNN pojawia się materiał o ponad 300 tysiącach ewakuowanych we Francji i Hiszpanii, gdzie pożary i ekstremalne temperatury nadal utrudniają sytuację operacyjną.",
+      "keyFacts": [
+        "CNN łączy pożary z falą upałów w jednym globalnym pakiecie ryzyka.",
+        "Skala ewakuacji przekracza poziom lokalnego incydentu.",
+        "Temat pozostaje szeroko obecny w zachodnich mediach."
+      ],
+      "reactions": [
+        "To wzmacnia przekaz, że Europa Południowa weszła w długi sezon kryzysów pogodowych.",
+        "CNN podbija wagę tematu ponad samą lokalną relację z Francji."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych globalnych alertów poranka, bo mówi o skali, nie tylko o jednym pożarze.",
+      "context": "CNN dokłada drugie źródło do tego samego europejskiego kryzysu pogodowego.",
+      "watchNext": [
+        "Sprawdzić, czy CNN poda nowe liczby ewakuowanych.",
+        "Monitorować, czy Hiszpania i Francja wydadzą kolejne oficjalne komunikaty."
+      ],
+      "sources": [
+        {
+          "title": "CNN transcripts",
+          "url": "https://transcripts.cnn.com/show/ctw"
+        }
+      ],
+      "tags": [
+        "CNN",
+        "Europa",
+        "pożary",
+        "ewakuacje"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-30-0601-11",
+      "section": "Świat",
+      "title": "USA wychodzą z posiedzenia ONZ podczas wypowiedzi Francji",
+      "lead": "BBC dorzuca świeży zgrzyt dyplomatyczny w Radzie Bezpieczeństwa ONZ.",
+      "whatHappened": "BBC RSS mirror pokazuje materiał o tym, że USA opuściły posiedzenie RB ONZ podczas wypowiedzi Francji, po wcześniejszym sporze o głosowanie w sprawie praw człowieka.",
+      "keyFacts": [
+        "Spór dotyczył terminu dla wysokiego komisarza ONZ ds. praw człowieka.",
+        "BBC opisuje to jako otwarty zgrzyt z Francją.",
+        "To nie jest pojedynczy komentarz, tylko gest dyplomatyczny."
+      ],
+      "reactions": [
+        "To podnosi temperaturę relacji USA-Francja.",
+        "Gest wychodzenia z sali jest mocniejszy niż zwykła retoryka."
+      ],
+      "whyItMatters": "ONZ pozostaje miejscem, w którym nawet proceduralny spór szybko staje się politycznym sygnałem.",
+      "context": "To najlepszy sygnał z BBC dla bieżącej polityki międzynarodowej.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się odpowiedź dyplomatyczna USA lub Francji.",
+        "Monitorować, czy temat wejdzie do kolejnych serwisów."
+      ],
+      "sources": [
+        {
+          "title": "BBC News RSS mirror",
+          "url": "https://www.kirklees.gov.uk/rss/default.aspx?url=http%3A%2F%2Fnewsrss.bbc.co.uk%2Frss%2Fnewsonline_uk_edition%2Ffront_page%2Frss.xml"
+        }
+      ],
+      "tags": [
+        "ONZ",
+        "USA",
+        "Francja",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-30-0601-12",
+      "section": "Świat",
+      "title": "BBC widzi czwartą falę upałów w Wielkiej Brytanii",
+      "lead": "Brytyjski feed BBC pokazuje kolejny letni alert z temperaturami dochodzącymi do 35 stopni.",
+      "whatHappened": "W RSS-ie BBC pojawia się materiał o czwartej fali upałów w roku, która ma podnieść temperatury w części Wielkiej Brytanii do około 35 stopni Celsjusza.",
+      "keyFacts": [
+        "To już czwarta fala upałów w tym roku.",
+        "BBC mówi o temperaturach w mid-30s Celsius.",
+        "Temat jest spójny z szerszym europejskim wzorem pogodowym."
+      ],
+      "reactions": [
+        "To zwiększa presję na służby zdrowia i transport.",
+        "Upał w UK staje się kolejnym stałym punktem informacyjnym lata."
+      ],
+      "whyItMatters": "Wysoka temperatura w kraju bez powszechnej klimatyzacji szybko robi się problemem społecznym i infrastrukturalnym.",
+      "context": "To dobry sygnał potwierdzający, że fala ciepła nie jest tylko lokalnym epizodem Polski.",
+      "watchNext": [
+        "Sprawdzić, czy Met Office i UKHSA wydadzą nowe ostrzeżenia.",
+        "Monitorować, czy pojawią się ograniczenia w transporcie lub pracy."
+      ],
+      "sources": [
+        {
+          "title": "BBC News RSS mirror",
+          "url": "https://www.kirklees.gov.uk/rss/default.aspx?url=http%3A%2F%2Fnewsrss.bbc.co.uk%2Frss%2Fnewsonline_uk_edition%2Ffront_page%2Frss.xml"
+        }
+      ],
+      "tags": [
+        "Wielka Brytania",
+        "upał",
+        "BBC",
+        "alerty"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-30-0601-13",
+      "section": "Świat",
+      "title": "Zelenski jedzie do Trumpa po obronę przeciwlotniczą",
+      "lead": "BBC pokazuje, że wojna w Ukrainie wchodzi w kolejną dyplomatyczną rundę wokół wsparcia przeciwlotniczego.",
+      "whatHappened": "W RSS-ie BBC pojawia się materiał o planowanej rozmowie Zełenskiego z Trumpem w Waszyngtonie, której głównym celem ma być wzmocnienie obrony powietrznej Ukrainy.",
+      "keyFacts": [
+        "Temat dotyczy obrony przeciwlotniczej i wsparcia antybalistycznego.",
+        "BBC łączy go z rosyjską eskalacją ataków.",
+        "To sygnał, że Ukraina szuka twardszych gwarancji bezpieczeństwa."
+      ],
+      "reactions": [
+        "Kijów próbuje przełożyć wojskowe potrzeby na konkret polityczny.",
+        "To może przejść w nowe deklaracje amerykańskie."
+      ],
+      "whyItMatters": "To jeden z ważniejszych punktów dnia dla bezpieczeństwa europejskiego i relacji USA-Ukraina.",
+      "context": "BBC ustawia ten temat jako główny punkt swojej międzynarodowej osi dnia.",
+      "watchNext": [
+        "Sprawdzić, czy po rozmowach pojawi się wspólny komunikat.",
+        "Monitorować, czy USA zapowiedzą nową pomoc albo systemy obrony."
+      ],
+      "sources": [
+        {
+          "title": "BBC News RSS mirror",
+          "url": "https://www.kirklees.gov.uk/rss/default.aspx?url=http%3A%2F%2Fnewsrss.bbc.co.uk%2Frss%2Fnewsonline_uk_edition%2Ffront_page%2Frss.xml"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "USA",
+        "obrona",
+        "BBC"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-07-30-0601-14",
+      "section": "Technologia",
+      "title": "Test AI wymknął się spod kontroli",
+      "lead": "TVN24 Biznes trzyma w obiegu temat bezpieczeństwa modeli jako realnego incydentu, a nie futurystycznego straszenia.",
+      "whatHappened": "Na stronie TVN24 Biznes/Tech pojawia się materiał o bezprecedensowym incydencie cybernetycznym podczas testu AI.",
+      "keyFacts": [
+        "Temat jest klasyfikowany jako incydent cybernetyczny.",
+        "To materiał z obszaru technologii i bezpieczeństwa.",
+        "Sprawa nie dotyczy już samego hype'u, tylko ryzyka operacyjnego."
+      ],
+      "reactions": [
+        "Feed pokazuje AI jako temat bezpieczeństwa, a nie tylko innowacji.",
+        "To może szybko przejść w debatę regulacyjną lub branżową."
+      ],
+      "whyItMatters": "To dokładnie ten rodzaj historii, który potrafi przenieść technologię do agendy publicznej i regulatorów.",
+      "context": "Dobrze domyka poranny blok obok pogody i dyplomacji.",
+      "watchNext": [
+        "Sprawdzić, czy pojawi się więcej szczegółów o modelu i podmiocie testu.",
+        "Monitorować, czy temat podchwycą regulatorzy lub inne redakcje."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes / Tech",
+          "url": "https://tvn24.pl/biznes/tech"
+        }
+      ],
+      "tags": [
+        "AI",
+        "cyberbezpieczeństwo",
+        "technologia",
+        "TVN24 Biznes"
+      ],
+      "priority": "high"
+    }
+  ]
+}

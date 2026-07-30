@@ -51,6 +51,14 @@
   `edition.cnn.com/world` discovery plus primary confirmations until the feed
   recovers.
 
+## 2026-07-30 06:01
+
+- Watch whether the metro incident gets a fuller police or Straż Graniczna readout.
+- Watch whether Chorzów, France or Japan issue new numbers, closures or evacuations.
+- Watch whether the UK heatwave or Spanish/European fire block turns into more alerts today.
+- Watch whether the BBC UN row triggers a second diplomatic response.
+- Watch whether the AI incident becomes a vendor or regulator follow-up.
+
 ## Done
 
 - Production automation exists for `Pavbot Puls Dnia 3h` with the intended

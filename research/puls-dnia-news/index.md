@@ -8,6 +8,11 @@ exists, it falls back to the older `aktualne-wydarzenia-mobile` magazine data.
 The public manifest now exposes timestamped `pulseNewsData` artifacts for this
 topic, so the primary feed path is active when refresh succeeds.
 
+The 2026-07-30 06:01 slot przesuwa feed z wczorajszego klastra PiS/RPO w stronę
+transportu, upału, pożarów i ryzyk operacyjnych: metro w Warszawie kończy się
+wydaleniem z Polski, Chorzów ma duży pożar w centrum, a za granicą najgłośniej
+świecą Francja, Japonia, Wielka Brytania, ONZ, CNN-owy pakiet pożarowy i AI.
+
 The 2026-07-29 21:07 slot domyka wieczór formalnym spotkaniem Kaczyński-
 Morawiecki po terminie ultimatum, potwierdza wybór Sylwii Gregorczyk-Abram na
 RPO i dokłada świeże, bieżące ryzyka z ONZ, Wielkiej Brytanii, Hiszpanii oraz
