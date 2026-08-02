@@ -1,0 +1,328 @@
+{
+  "schemaVersion": 1,
+  "topic": "aktualne-wydarzenia-mobile",
+  "runDate": "2026-08-02",
+  "runTime": "19:34",
+  "status": "Material update",
+  "headline": "Wieczorny obraz Polski nie zmienia porannego leadu: RCB nadal pokazuje jednocześnie burze, upał do 37 stopni i suszę hydrologiczną w całym kraju, a do tego 22 pożary lasów w ostatniej dobie.",
+  "leadParagraphs": [
+    "Wieczorny obraz Polski nie zmienia porannego leadu: RCB nadal pokazuje jednocześnie burze, upał do 37 stopni i suszę hydrologiczną w całym kraju, a do tego 22 pożary lasów w ostatniej dobie.",
+    "Polska odpowiedź na europejski sezon pożarowy nabiera bardziej operacyjnego charakteru, bo moduł GFFF Poland jest już prepozycjonowany w Hiszpanii od 1 do 30 sierpnia.",
+    "Największa zmiana od poranka jest za granicą: kryzys pożarowy nie tylko nie wygasa, ale wraca z nową siłą w Grecji i Prowansji, a w Ceucie po fali przejść granicznych zaczynają dominować napięcia polityczne i bilans ofiar rośnie do co najmniej 72 osób."
+  ],
+  "checkedSources": [
+    {
+      "title": "RCB: Raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "KG PSP: Prepozycjonowanie modułu GFFF Poland w Hiszpanii",
+      "url": "https://www.gov.pl/web/kgpsp/prepozycjonowanie-modulu-gfff-poland-w-hiszpanii--na-czym-polega-europejska-solidarnosc-w-praktyce"
+    },
+    {
+      "title": "Komisja Europejska: Guidelines on transparency obligations for providers and deployers of certain AI systems",
+      "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content"
+    },
+    {
+      "title": "Komisja Europejska: Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+    },
+    {
+      "title": "Ministerstwo Cyfryzacji: Ruszył przetarg na Gigafabryki AI",
+      "url": "https://www.gov.pl/web/cyfryzacja/ruszyl-przetarg-na-gigafabryki-ai--wazna-informacja-dla-przyszlych-konsorcjow"
+    },
+    {
+      "title": "AP: French firefighters struggle to contain Provence wildfire",
+      "url": "https://apnews.com/article/wildfires-france-greece-provence-firebreak-evacuation-726b55a6fe6c51de1fb086b437eb28de"
+    },
+    {
+      "title": "AP: Ceuta grapples with aftermath of border surge after most migrants leave the Spanish territory",
+      "url": "https://apnews.com/article/spain-ceuta-morocco-migration-border-vox-9960b15a7cf31a0592b09ac47a8eac3f"
+    },
+    {
+      "title": "AP: Russia hits Ukrainian capital in fresh attack, killing at least 9 and injuring 33",
+      "url": "https://apnews.com/article/eb62397d10bca2d6db4269a3bcfc9dc6"
+    }
+  ],
+  "sections": [
+    {
+      "id": "ogolne",
+      "title": "Ogólne",
+      "summary": "Wieczorne wydanie nie ma jednego wielkiego nagłówka. Ma raczej trzy równoległe osie ryzyka: krajową pogodę, europejskie pożary i coraz bardziej polityczny fallout po Ceucie, a obok tego pierwszy dzień twardego wejścia AI Act w tryb egzekwowania.",
+      "articles": [
+        {
+          "id": "ogolne-1-europa-nie-schodzi-z-trybu-pozarowego",
+          "section": "Ogólne",
+          "title": "Europa nie schodzi z trybu pożarowego",
+          "lead": "Kontynent nie zamknął sezonu pożarowego. Zmienił tylko jego mapę i cenę.",
+          "facts": [
+            "AP podaje, że pożar w Gironde pozostaje utrzymany w granicach, ale nadal się pali, a drugi duży front w Prowansji nie został jeszcze opanowany.",
+            "Ten sam materiał AP opisuje śmierć dwóch członków załogi po zderzeniu śmigłowców gaśniczych pod Atenami."
+          ],
+          "analysis": "Wątek pożarowy przeszedł z historii o ewakuacjach do historii o przeciążeniu całego systemu reagowania.",
+          "whyItMatters": "To sygnał, że Europa mierzy się nie tylko z ogniem, ale też z granicami własnych zasobów ratowniczych.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/wildfires-france-greece-provence-firebreak-evacuation-726b55a6fe6c51de1fb086b437eb28de"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Kontynent nie zamknął sezonu pożarowego. Zmienił tylko jego mapę i cenę. AP podaje, że pożar w Gironde pozostaje utrzymany w granicach, ale nadal się pali, a drugi duży front w Prowansji nie został jeszcze opanowany. Ten sam materiał AP opisuje śmierć dwóch członków załogi po zderzeniu śmigłowców gaśniczych pod Atenami. Wątek pożarowy przeszedł z historii o ewakuacjach do historii o przeciążeniu całego systemu reagowania. To sygnał, że Europa mierzy się nie tylko z ogniem, ale też z granicami własnych zasobów ratowniczych.",
+          "priority": "High"
+        },
+        {
+          "id": "ogolne-2-ai-act-wchodzi-z-daty-w-wykonanie",
+          "section": "Ogólne",
+          "title": "AI Act wchodzi z daty w wykonanie",
+          "lead": "Dziś skończył się komfort mówienia, że przepisy dopiero nadchodzą.",
+          "facts": [
+            "Komisja Europejska wskazuje, że od 2 sierpnia AI Office wraz z organami krajowymi zaczyna egzekwować przepisy AI Act.",
+            "Guidelines Komisji doprecyzowują obowiązki informowania o interakcji z AI, oznaczania treści generowanych lub modyfikowanych przez AI oraz disclosure dla deepfake'ów i wybranych publikacji o sprawach publicznych."
+          ],
+          "analysis": "W technologii ciężar dnia przesuwa się z tłumaczenia przepisów na pytanie, czy oznaczenia i komunikaty naprawdę są już widoczne dla użytkownika.",
+          "whyItMatters": "To pierwszy moment, w którym AI Act można oceniać po skutku w produkcie, a nie tylko po jakości unijnego PDF-a.",
+          "sources": [
+            {
+              "title": "Komisja Europejska",
+              "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+            },
+            {
+              "title": "Guidelines Komisji",
+              "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Dziś skończył się komfort mówienia, że przepisy dopiero nadchodzą. Komisja Europejska wskazuje, że od 2 sierpnia AI Office wraz z organami krajowymi zaczyna egzekwować przepisy AI Act. Guidelines Komisji doprecyzowują obowiązki informowania o interakcji z AI, oznaczania treści generowanych lub modyfikowanych przez AI oraz disclosure dla deepfake'ów i wybranych publikacji o sprawach publicznych. W technologii ciężar dnia przesuwa się z tłumaczenia przepisów na pytanie, czy oznaczenia i komunikaty naprawdę są już widoczne dla użytkownika. To pierwszy moment, w którym AI Act można oceniać po skutku w produkcie, a nie tylko po jakości unijnego PDF-a.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polska",
+      "title": "Polska",
+      "summary": "Krajowy obraz dnia pozostaje bardzo praktyczny. Największe publiczne ryzyka to pogoda, hydrologia i gotowość służb, a nie nowy konflikt partyjny.",
+      "articles": [
+        {
+          "id": "polska-1-burze-upa-i-susza-dalej-trzymaja-kraj",
+          "section": "Polska",
+          "title": "Burze, upał i susza dalej trzymają kraj",
+          "lead": "Polska nadal jedzie na trzech ostrzeżeniach naraz.",
+          "facts": [
+            "RCB pokazuje na 2 sierpnia burze w Małopolsce, upał do 37°C w części kraju i suszę hydrologiczną na terenie całej Polski.",
+            "Ten sam raport RCB wskazuje 22 pożary lasów w ostatniej dobie oraz jeden stan ostrzegawczy na rzekach bez przekroczeń alarmowych."
+          ],
+          "analysis": "To zestaw, który równocześnie uderza w bezpieczeństwo mieszkańców, energetykę lokalną i gotowość służb.",
+          "whyItMatters": "To właśnie takie tematy najczęściej zamieniają ogólny news w realny problem dla codziennego życia.",
+          "sources": [
+            {
+              "title": "RCB",
+              "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Polska nadal jedzie na trzech ostrzeżeniach naraz. RCB pokazuje na 2 sierpnia burze w Małopolsce, upał do 37°C w części kraju i suszę hydrologiczną na terenie całej Polski. Ten sam raport RCB wskazuje 22 pożary lasów w ostatniej dobie oraz jeden stan ostrzegawczy na rzekach bez przekroczeń alarmowych. To zestaw, który równocześnie uderza w bezpieczeństwo mieszkańców, energetykę lokalną i gotowość służb. To właśnie takie tematy najczęściej zamieniają ogólny news w realny problem dla codziennego życia.",
+          "priority": "High"
+        },
+        {
+          "id": "polska-2-polska-straz-pozarna-wesza-juz-w-europejski-etap-sezonu",
+          "section": "Polska",
+          "title": "Polska straż pożarna weszła już w europejski etap sezonu",
+          "lead": "To nie jest już wyłącznie obserwacja pożarów za granicą, tylko udział operacyjny.",
+          "facts": [
+            "KG PSP informuje, że od 1 do 30 sierpnia w Hiszpanii prepozycjonowany jest moduł GFFF Poland.",
+            "Ten sam komunikat KG PSP pokazuje ten ruch jako element europejskiej solidarności i wcześniejszego rozmieszczenia sił przed eskalacją zagrożeń."
+          ],
+          "analysis": "Polska przestaje być tylko odbiorcą informacji o pożarach w Europie i staje się elementem wspólnej odpowiedzi operacyjnej.",
+          "whyItMatters": "To podnosi wagę europejskiego sezonu pożarowego także z polskiej perspektywy bezpieczeństwa publicznego.",
+          "sources": [
+            {
+              "title": "KG PSP",
+              "url": "https://www.gov.pl/web/kgpsp/prepozycjonowanie-modulu-gfff-poland-w-hiszpanii--na-czym-polega-europejska-solidarnosc-w-praktyce"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "To nie jest już wyłącznie obserwacja pożarów za granicą, tylko udział operacyjny. KG PSP informuje, że od 1 do 30 sierpnia w Hiszpanii prepozycjonowany jest moduł GFFF Poland. Ten sam komunikat KG PSP pokazuje ten ruch jako element europejskiej solidarności i wcześniejszego rozmieszczenia sił przed eskalacją zagrożeń. Polska przestaje być tylko odbiorcą informacji o pożarach w Europie i staje się elementem wspólnej odpowiedzi operacyjnej. To podnosi wagę europejskiego sezonu pożarowego także z polskiej perspektywy bezpieczeństwa publicznego.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polityka",
+      "title": "Polityka",
+      "summary": "W polityce nie doszedł dziś nowy krajowy przełom porównywalny z lipcowym rozłamem PiS albo wcześniejszymi kryzysami bezpieczeństwa. Wieczorne wydanie musi więc filtrować wagę zamiast sztucznie pompować małe sygnały.",
+      "articles": [
+        {
+          "id": "polityka-1-ceuta-staje-sie-paliwem-dla-polityki",
+          "section": "Polityka",
+          "title": "Ceuta staje się paliwem dla polityki",
+          "lead": "Kryzys graniczny wchodzi już w otwartą walkę o narrację.",
+          "facts": [
+            "AP opisuje wizyty polityków skrajnej prawicy w Ceucie oraz kontrprotesty mieszkańców po masowym napływie migrantów.",
+            "Ten sam materiał AP pokazuje, że lokalny kryzys graniczny zamienił się w debatę o bezpieczeństwie, integracji i odpowiedzialności władz."
+          ],
+          "analysis": "To klasyczny moment, gdy dramat humanitarny zaczyna żyć drugim życiem jako konflikt polityczny.",
+          "whyItMatters": "Taki zwrot zwykle oznacza dłuższy ogon polityczny niż sam incydent graniczny.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/spain-ceuta-morocco-migration-border-vox-9960b15a7cf31a0592b09ac47a8eac3f"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Kryzys graniczny wchodzi już w otwartą walkę o narrację. AP opisuje wizyty polityków skrajnej prawicy w Ceucie oraz kontrprotesty mieszkańców po masowym napływie migrantów. Ten sam materiał AP pokazuje, że lokalny kryzys graniczny zamienił się w debatę o bezpieczeństwie, integracji i odpowiedzialności władz. To klasyczny moment, gdy dramat humanitarny zaczyna żyć drugim życiem jako konflikt polityczny. Taki zwrot zwykle oznacza dłuższy ogon polityczny niż sam incydent graniczny.",
+          "priority": "High"
+        },
+        {
+          "id": "polityka-2-co-sprawdzono-bez-przeomu",
+          "section": "Polityka",
+          "title": "Co sprawdzono bez przełomu",
+          "lead": "W polskiej polityce wieczorem nie pojawił się materiał, który uczciwie zasługiwałby na nowy lead.",
+          "facts": [
+            "Przegląd dzisiejszych źródeł krajowych nie przyniósł nowego dużego zwrotu partyjnego ani nowego pakietu decyzji o wadze porównywalnej z wcześniejszymi lipcowymi tematami.",
+            "Dzisiejszy ciężar informacji publicznej przesunął się wyraźnie w stronę bezpieczeństwa, pogody, pożarów i spraw międzynarodowych."
+          ],
+          "analysis": "W mobilnym briefie brak przełomu też jest informacją, jeśli pozwala nie mylić tła politycznego z realnym centrum dnia.",
+          "whyItMatters": "Taki filtr chroni brief przed sztucznym nadmuchiwaniem tematów, które dziś po prostu nie były najważniejsze.",
+          "sources": [
+            {
+              "title": "RCB: Raport dobowy",
+              "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "W polskiej polityce wieczorem nie pojawił się materiał, który uczciwie zasługiwałby na nowy lead. Przegląd dzisiejszych źródeł krajowych nie przyniósł nowego dużego zwrotu partyjnego ani nowego pakietu decyzji o wadze porównywalnej z wcześniejszymi lipcowymi tematami. Dzisiejszy ciężar informacji publicznej przesunął się wyraźnie w stronę bezpieczeństwa, pogody, pożarów i spraw międzynarodowych. W mobilnym briefie brak przełomu też jest informacją, jeśli pozwala nie mylić tła politycznego z realnym centrum dnia. Taki filtr chroni brief przed sztucznym nadmuchiwaniem tematów, które dziś po prostu nie były najważniejsze.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "sprawy-zagraniczne",
+      "title": "Sprawy zagraniczne",
+      "summary": "Zagranica wieczorem jest mocniejsza niż rano. Europa ma jednocześnie cięższy pożarowy bilans i bardziej polityczną Ceutę, a wojna Rosji przeciw Ukrainie dalej produkuje ofiary cywilne i presję na obronę powietrzną.",
+      "articles": [
+        {
+          "id": "sprawy-zagraniczne-1-pozary-w-grecji-i-francji-znow-podnosza-stawke",
+          "section": "Sprawy zagraniczne",
+          "title": "Pożary w Grecji i Francji znów podnoszą stawkę",
+          "lead": "Ten kryzys nie wygasa, tylko zmienia kształt i koszt.",
+          "facts": [
+            "AP podaje, że w Gironde pożar pozostaje utrzymany w granicach, ale dalej się pali, a w Prowansji ogień przestał się rozszerzać, choć nie został opanowany.",
+            "Ten sam materiał AP opisuje śmierć dwóch członków załogi po zderzeniu śmigłowców gaśniczych pod Atenami."
+          ],
+          "analysis": "Europa weszła w fazę, w której nawet częściowe opanowanie frontu nie oznacza spadku ryzyka ani kosztu operacji.",
+          "whyItMatters": "To pokazuje, że sezon pożarowy jest dziś kryzysem systemowym, a nie tylko serią lokalnych pożarów.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/wildfires-france-greece-provence-firebreak-evacuation-726b55a6fe6c51de1fb086b437eb28de"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Ten kryzys nie wygasa, tylko zmienia kształt i koszt. AP podaje, że w Gironde pożar pozostaje utrzymany w granicach, ale dalej się pali, a w Prowansji ogień przestał się rozszerzać, choć nie został opanowany. Ten sam materiał AP opisuje śmierć dwóch członków załogi po zderzeniu śmigłowców gaśniczych pod Atenami. Europa weszła w fazę, w której nawet częściowe opanowanie frontu nie oznacza spadku ryzyka ani kosztu operacji. To pokazuje, że sezon pożarowy jest dziś kryzysem systemowym, a nie tylko serią lokalnych pożarów.",
+          "priority": "High"
+        },
+        {
+          "id": "sprawy-zagraniczne-2-ceuta-z-kryzysu-granicznego-przechodzi-w-kryzys-spoeczny",
+          "section": "Sprawy zagraniczne",
+          "title": "Ceuta z kryzysu granicznego przechodzi w kryzys społeczny",
+          "lead": "Ruch ludzi słabnie, ale polityczne i społeczne skutki dopiero się rozkręcają.",
+          "facts": [
+            "AP podaje, że większość migrantów wróciła już do Maroka, ale bilans ofiar śmiertelnych wzrósł do co najmniej 72 osób.",
+            "Ten sam materiał AP opisuje kontrprotesty, wejście skrajnej prawicy do miasta i apel papieża o pokojowe rozwiązanie."
+          ],
+          "analysis": "Ceuta przesuwa się z historii o samej granicy do historii o polaryzacji i zarządzaniu skutkami.",
+          "whyItMatters": "To jeden z tych momentów, gdy lokalny kryzys błyskawicznie staje się europejskim testem politycznym.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/spain-ceuta-morocco-migration-border-vox-9960b15a7cf31a0592b09ac47a8eac3f"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Ruch ludzi słabnie, ale polityczne i społeczne skutki dopiero się rozkręcają. AP podaje, że większość migrantów wróciła już do Maroka, ale bilans ofiar śmiertelnych wzrósł do co najmniej 72 osób. Ten sam materiał AP opisuje kontrprotesty, wejście skrajnej prawicy do miasta i apel papieża o pokojowe rozwiązanie. Ceuta przesuwa się z historii o samej granicy do historii o polaryzacji i zarządzaniu skutkami. To jeden z tych momentów, gdy lokalny kryzys błyskawicznie staje się europejskim testem politycznym.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "technologia",
+      "title": "Technologia",
+      "summary": "W technologii dzień kręci się wokół egzekwowania przejrzystości AI i wokół obliczeniowej infrastruktury, która ma decydować o pozycji państw i firm w kolejnych latach.",
+      "articles": [
+        {
+          "id": "technologia-1-komisja-zaczyna-egzekwowac-art-50",
+          "section": "Technologia",
+          "title": "Komisja zaczyna egzekwować art. 50",
+          "lead": "Dziś przepisy przestają być miękką zapowiedzią.",
+          "facts": [
+            "Komisja Europejska wskazuje, że od 2 sierpnia AI Office i organy krajowe rozpoczynają egzekwowanie AI Act.",
+            "Guidelines Komisji precyzują obowiązki dotyczące oznaczania treści AI, informowania o interakcji z AI i disclosure przy deepfake'ach."
+          ],
+          "analysis": "To punkt przejścia z epoki compliance decków do epoki faktycznych interfejsów i praktyk publikacyjnych.",
+          "whyItMatters": "Użytkownik powinien od teraz częściej widzieć, kiedy rozmawia z AI albo ogląda treść wytworzoną przez model.",
+          "sources": [
+            {
+              "title": "Komisja Europejska",
+              "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+            },
+            {
+              "title": "Guidelines Komisji",
+              "url": "https://digital-strategy.ec.europa.eu/en/policies/guidelines-transparency-ai-generated-content"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Dziś przepisy przestają być miękką zapowiedzią. Komisja Europejska wskazuje, że od 2 sierpnia AI Office i organy krajowe rozpoczynają egzekwowanie AI Act. Guidelines Komisji precyzują obowiązki dotyczące oznaczania treści AI, informowania o interakcji z AI i disclosure przy deepfake'ach. To punkt przejścia z epoki compliance decków do epoki faktycznych interfejsów i praktyk publikacyjnych. Użytkownik powinien od teraz częściej widzieć, kiedy rozmawia z AI albo ogląda treść wytworzoną przez model.",
+          "priority": "High"
+        },
+        {
+          "id": "technologia-2-polska-wchodzi-w-faze-przetargowa-gigafabryk-ai",
+          "section": "Technologia",
+          "title": "Polska wchodzi w fazę przetargową Gigafabryk AI",
+          "lead": "Tu już nie chodzi o deklaracje ambicji, tylko o twardą infrastrukturę i terminy.",
+          "facts": [
+            "Ministerstwo Cyfryzacji podaje, że EuroHPC JU ogłosiło przetarg na projekty budowy europejskich Gigafabryk AI.",
+            "Ten sam komunikat Ministerstwa Cyfryzacji wskazuje termin składania ofert do 12 listopada 2026 roku."
+          ],
+          "analysis": "Polski wątek AI dojrzewa z poziomu politycznej opowieści do poziomu procedury, harmonogramu i walki o realną moc obliczeniową.",
+          "whyItMatters": "W europejskim wyścigu AI compute bywa dziś ważniejsze niż sama liczba konferencji o innowacji.",
+          "sources": [
+            {
+              "title": "Ministerstwo Cyfryzacji",
+              "url": "https://www.gov.pl/web/cyfryzacja/ruszyl-przetarg-na-gigafabryki-ai--wazna-informacja-dla-przyszlych-konsorcjow"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Tu już nie chodzi o deklaracje ambicji, tylko o twardą infrastrukturę i terminy. Ministerstwo Cyfryzacji podaje, że EuroHPC JU ogłosiło przetarg na projekty budowy europejskich Gigafabryk AI. Ten sam komunikat Ministerstwa Cyfryzacji wskazuje termin składania ofert do 12 listopada 2026 roku. Polski wątek AI dojrzewa z poziomu politycznej opowieści do poziomu procedury, harmonogramu i walki o realną moc obliczeniową. W europejskim wyścigu AI compute bywa dziś ważniejsze niż sama liczba konferencji o innowacji.",
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "audioArtifacts": [
+    {
+      "variant": "female-piper",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-02-1934/audio/female-piper/podcast.mp3"
+    }
+  ]
+}
