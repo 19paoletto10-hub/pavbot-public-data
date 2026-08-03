@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-08-01T10:14:57.706353+00:00",
+  "engine_requested": "auto",
+  "engine_used": "piper",
+  "model": "rhasspy/piper-voices:pl_PL-gosia-medium",
+  "fallback_chain": [
+    "xtts_failed"
+  ],
+  "duration_seconds": 499.287075,
+  "word_count": 1128,
+  "voice": "Zosia",
+  "rate": 170,
+  "voice_sample_path": null
+}

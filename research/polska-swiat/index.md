@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-07-29
+Last updated: 2026-08-02
 
 ## Current Understanding
 
@@ -41,6 +41,48 @@ dalsze zakłócenia prądu, wody oraz transportu, a pożary we Francji i Hiszpan
 wchodzą w większą fazę ewakuacji i ryzyka ponownego rozgorzenia. Krajowy obraz
 nie przyniósł nowego materialnego przełomu względem poranka, więc oś Sejm/TK/
 KPRM/PiS pozostaje w tym samym zestawie obserwacji.
+Po wieczornym runie 30 lipca główny ciężar bezpieczeństwa przesunął się
+bezpośrednio na Polskę: rosyjski pocisk wszedł w polską przestrzeń powietrzną
+i spadł w rejonie wiejskim, co uruchomiło reakcję NATO i zamieniło wschodnią
+flankę z tła w konkretny incydent operacyjny. Równolegle USA-Iran wróciły do
+wymiany uderzeń z Jordanią, Kuwejtem i Egiptem w zasięgu, Japonia podniosła
+bilans ofiar trzęsienia na Kiusiu do 25, a francuski pożar w Gironde zaczął
+przechodzić z masowych ewakuacji w fazę częściowego powrotu do domów, choć
+Europa nadal płonie.
+Po porannym runie 1 sierpnia główna oś wróciła do Ukrainy i obrony powietrznej:
+AP opisuje kolejny rosyjski atak na Kijów z co najmniej 9 zabitymi i 30 rannymi,
+a Guardian łączy go z zabiegami Zełenskiego o Patrioty oraz szersze użycie
+Starlinka. Bliski Wschód stał się jednocześnie dwutorowy: USA sygnalizują
+możliwe kolejne uderzenia na Iran, podczas gdy AP publikuje warunkowy plan
+rozbrojenia Hamasu i wycofania Izraela z Gazy. Krajowo 31 lipca Sejm zakończył
+pakiet głosowań z absolutorium, projektem migracyjnym i kontrolą operacyjną,
+a 1 sierpnia w Polsce dominują obchody 82. rocznicy Powstania Warszawskiego
+oraz alerty RCB dotyczące upału, burz, nawalnych opadów i suszy. Europejski
+follow-up obejmuje francuski megapożar oraz kryzys migracyjny w Ceucie z
+dziesiątkami ofiar.
+Po wieczornym runie 1 sierpnia główna oś pozostaje ta sama, ale dwa wątki
+zyskały większą ostrość: AP podnosi bilans Kijowa do 33 rannych i dopisuje
+ukraińskie uderzenia na rosyjskie rafinerie oraz kontenerowiec `Yanina`, a
+Ceuta przechodzi z samego kryzysu granicznego do reakcji materialnej, bo
+Hiszpania stawia morską barierę i 22 państwa UE naciskają na wspólne działanie.
+W praktyce oznacza to, że Kijów, Patrioty, Starlink i europejskie granice
+pozostają dziś mocniejszymi blokami niż poranne krajowe tło.
+Po porannym runie 2 sierpnia rdzeń tematu tworzą teraz trzy polskie osie i
+dwie światowe: rosyjski pocisk w polskiej przestrzeni powietrznej i reakcja
+NATO, rozłam w PiS wokół Development Plus, wniosek o ekstradycję Ziobry do
+USA, kolejny ciężki atak na Kijów z naciskiem na Patrioty i Starlink oraz
+Trumpowa próba wstrzymania uderzeń na Iran i domknięcia planu dla Gazy.
+Ceuta i cła zostały sprawdzone jako tło, ale nie weszły do finalnego odcinka.
+Po wieczornym runie 2 sierpnia światowy blok przesuwa się z eskalacji do
+warunkowej pauzy: Trump zapowiada wstrzymanie nowych uderzeń na Iran po
+osiągnięciu parametrów porozumienia, a AP doprecyzowuje, że projekt obejmuje
+otwarcie Cieśniny Ormuz, zakończenie blokady morskiej i powrót do rozmów, ale
+Izrael zgłasza poważne zastrzeżenia wobec planu rozbrojenia Hamasu, a w Gazie
+naloty nadal trwają. Ceuta wchodzi w fazę wyhamowania i sporu o odpowiedzialność,
+Grecja dołącza do europejskiego kryzysu pożarowego po śmiertelnym wypadku
+dwóch helikopterów gaśniczych pod Atenami, a w Polsce Prezydent RP podpisuje
+pięć ustaw i kieruje ustawę o podatku od nadzwyczajnych zysków paliwowych do TK.
+RCB utrzymuje upał, burze w Małopolsce i ogólnokrajową suszę hydrologiczną.
 Po weekendowym runie 21 czerwca temat orderowy wszedł w fazę reakcji
 ukraińskich polityków i byłych prezydentów, a główny temat międzynarodowy
 przesunął się na rozmowy USA-Iran w Szwajcarii, spór o Cieśninę Ormuz i
