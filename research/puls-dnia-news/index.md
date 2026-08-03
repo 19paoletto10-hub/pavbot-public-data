@@ -2,6 +2,10 @@
 
 ## Current State
 
+The 2026-08-03 09:02 slot keeps PiS at the center, but makes the dispute more concrete: Morawiecki fixes 15 October for Rozwój Plus, Czarnek hardens the anti-Ukrainian line, and Kaczyński only partly distances himself. The feed also gains a stronger market block through Żabka, strong U.S. earnings and the yen intervention, while AI Act enforcement, red heat warnings and the Wrocław knife attack keep domestic risk high.
+
+This slot feels more market-heavy and operational than 06:01 because finance now sits next to politics and alerts, and the world block adds Greece, Gaza, Ukraine and Peru alongside Iran.
+
 The 2026-08-03 06:01 slot pivots the feed toward a morning PiS pressure block
 with Morawiecki, Czarnek and the ongoing internal discipline fight, while a
 fresh Żabka bid lifts the economy layer and AI Act moves from announcement to

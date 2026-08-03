@@ -1,5 +1,15 @@
 # Puls Dnia News Backlog
 
+## 2026-08-03 09:02
+
+- Watch whether PiS turns Morawiecki's 15 October date into a formal party response.
+- Watch whether Kaczyński's partial distance from Czarnek softens or hardens in later reactions.
+- Watch whether first visible AI labels appear on Polish-language platforms under the new EU rules.
+- Watch whether IMGW or RCB broaden the heat warnings during the day.
+- Watch whether the yen intervention becomes a broader G7 or BoJ pattern.
+- Watch whether Iran talks on Monday and the Gaza dispute produce a formal readout.
+- Watch whether the Wrocław case gets a prosecutor or court update.
+
 ## 2026-08-03 06:01
 
 - Watch whether PiS converts Morawiecki's convention date into a formal counter-move from Kaczyński's camp.
