@@ -2,11 +2,72 @@
 
 ## Current State
 
+The 2026-08-03 06:01 slot pivots the feed toward a morning PiS pressure block
+with Morawiecki, Czarnek and the ongoing internal discipline fight, while a
+fresh Żabka bid lifts the economy layer and AI Act moves from announcement to
+enforcement. Poland also wakes up to renewed heat alarms and a Wrocław knife
+attack, while the world block concentrates on Iran, Greece, Gaza and Ukraine.
+
+This slot feels more political and market-facing than 2026-08-02 21:03
+because the domestic story is less about finance and more about party control,
+platform compliance and a live business bid.
+
+The 2026-08-02 21:03 slot shifts the feed from fiscal and platform stories into
+wewnętrzny spór PiS, twarde wdrażanie AI Act i wyraźnie ostrzejszy blok
+bezpieczeństwa: Moskwa, greckie pożary z ofiarami w ekipach gaśniczych, Gaza,
+Kijów, Iran oraz Kuba dominują w bloku światowym, a Polska nadal niesie upał i
+burze.
+
+This slot feels more security-heavy and less regulatory than 12:01 because the
+new EU AI rules and the live incident stream now lead the feed.
+
+The 2026-08-02 12:01 slot keeps the Polish side centered on kwota wolna, najem
+krótkoterminowy, Pyszne.pl, Białołękę and the weather block, but the world mix
+changes more visibly: western Europe’s wildfire pressure eases in part of the
+west while the operational risk shifts toward Greece, Gaza remains uncertain,
+Ukraine gets another deadly strike update, and AI-security plus tariffs stay in
+the foreground.
+
+This slot feels a little more internationally rebalanced than 09:02 because the
+fire story is no longer only about France and Spain; the risk has moved east.
+
+The 2026-08-02 09:02 slot keeps the Polish feed on kwota wolna and najem, but adds a stronger consumer/regulatory layer around Pyszne.pl, Białołęka transport analysis and the death of Stanisław Gomułka. The weather block remains active with heat returning and Szczecin flooding, while the world mix stays security-heavy with wildfires, Ceuta, Gaza, Ukraine, AI-security and tariff pressure.
+
+This slot feels less like a pure fiscal/infrastructure headline set than 06:05 and more like a practical operational follow-up across regulation, transport and alerts.
+
+The 2026-08-02 06:05 slot moves the feed away from the earlier metro/RPO cluster and into a more fiscal-regulatory pattern: kwota wolna, Zintegrowana Sieć Kolejowa, podatek cyfrowy and najem krótkoterminowy now sit near the top. The alert block is still active with the return of heat and repeated Szczecin flooding, while the world block now concentrates on French and Spanish wildfires, Ceuta, Gaza, Ukraine, tariffs and the Open Secure AI Alliance.
+
+This run makes the feed feel more policy-heavy in Poland and more trade/security-heavy abroad than the previous slot.
+
 This topic powers the iOS `Dzisiaj -> Szybki puls dnia` carousel. The app first
 looks for the newest `pulseNewsData` artifact in the public manifest. If none
 exists, it falls back to the older `aktualne-wydarzenia-mobile` magazine data.
 The public manifest now exposes timestamped `pulseNewsData` artifacts for this
 topic, so the primary feed path is active when refresh succeeds.
+
+The 2026-08-01 15:02 slot shifts the feed toward a Warsaw metro disruption,
+kwota wolna, RPO finalization and a stronger weather/transport block with
+flooding, storms and heat, while the world mix now leans harder on Europe
+wildfires, Ceuta, Gaza implementation risk and CNN's ongoing Ukraine/AI
+coverage.
+
+The 2026-08-01 11:53 slot moves the feed toward cyber/dezinformation, a busy
+air-defense night, storm and flood fallout, Europe wildfires, Ceuta migration
+pressure and a conditional Hamas disarmament plan. The country-level block is
+more operational than political now, with weather damage already visible in
+firefighter deployments and flooded streets.
+
+The 2026-07-31 18:05 slot shifts the live mix away from the prior PiS/RPO and
+Seattle/Berlin block toward Kaczyński and Tusk asset-declaration stories,
+Bodnar/Mraz tapes, a cyber/dezinformation item, a stronger weather alert, and
+fresh Warsaw transport and fire items. The world block stays security-heavy,
+but now leans more on Ukraine, Germany and UK public-order stories.
+
+The 2026-07-30 21:02 slot domyka dzień wyraźniejszym pakietem: PiS ma już
+termin spotkania Kaczyński-Morawiecki i kończące się ultimatum, Senat domyka
+RPO, kwota wolna wraca do gry, a w operacyjnym feedzie rosną burze, warszawskie
+metro, drogowa czołówka pod Ostrołęką, Seattle, Berlin, Francja, Hiszpania,
+Ukraina i OpenAI.
 
 The 2026-07-30 06:01 slot przesuwa feed z wczorajszego klastra PiS/RPO w stronę
 transportu, upału, pożarów i ryzyk operacyjnych: metro w Warszawie kończy się

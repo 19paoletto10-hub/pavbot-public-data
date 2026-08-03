@@ -1,0 +1,501 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-02",
+  "runTime": "09:02",
+  "status": "Istotna aktualizacja",
+  "headline": "Kwota wolna, najem i AI-security",
+  "summary": "Poranny slot przesuwa polski feed w stronę regulacji, kontroli platform i alertów pogodowych, a świat dalej kręci się wokół pożarów, Ceuty, Gazy, Ukrainy, ceł i bezpieczeństwa AI.",
+  "checkedSources": [
+    {
+      "title": "TVN24 homepage",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Biznes najnowsze",
+      "url": "https://tvn24.pl/biznes/najnowsze"
+    },
+    {
+      "title": "Kwota wolna od podatku - Kosiniak-Kamysz",
+      "url": "https://tvn24.pl/biznes/z-kraju/kwota-wolna-od-podatku-wladyslaw-kosiniak-kamysz-bedzie-realizacja-obietnicy-o-podniesieniu-kwoty-wolnej-st9154311"
+    },
+    {
+      "title": "Najem krótkoterminowy w Polsce",
+      "url": "https://tvn24.pl/biznes/z-kraju/najem-krotkoterminowy-w-polsce-debata-tvn24-z-udzialem-jana-spiewaka-i-jana-szyszko-jakie-zagrozenia-niesie-najem-st9154400"
+    },
+    {
+      "title": "TVN Warszawa",
+      "url": "https://tvn24.pl/tvnwarszawa"
+    },
+    {
+      "title": "TVN Meteo Polska",
+      "url": "https://tvn24.pl/tvnmeteo/polska"
+    },
+    {
+      "title": "Upał wróci do Polski",
+      "url": "https://tvn24.pl/tvnmeteo/prognoza/zmiana-w-pogodzie-upal-wroci-do-polski-na-jak-dlugo-co-przyniesie-weekend-st9154315"
+    },
+    {
+      "title": "Szczecin flood story",
+      "url": "https://tvn24.pl/tvnmeteo/polska/zalana-ulica-derdowskiego-w-szczecinie-przy-kazdym-wiekszym-deszczu-mamy-taka-sadzawke-st9154773"
+    },
+    {
+      "title": "BBC mirror wildfires",
+      "url": "https://bbc.bm/spain-france-battle-wildfires-as-intense-heat-grips-southern-europe"
+    },
+    {
+      "title": "AP - Ceuta border barrier",
+      "url": "https://apnews.com/article/d76c6dc9d2da828907a1c04e1d482bbe"
+    },
+    {
+      "title": "AP - Gaza disarmament deal",
+      "url": "https://apnews.com/article/7347ef0f3b745f22c12b67f786b70f0f"
+    },
+    {
+      "title": "AP - Ukraine refineries",
+      "url": "https://apnews.com/article/4275c2280107aedba37df8704f226ce6"
+    },
+    {
+      "title": "CNN AI safety alliance",
+      "url": "https://transcripts.cnn.com/show/cnc/date/2026-07-27/segment/06"
+    },
+    {
+      "title": "CNN tariffs transcript",
+      "url": "https://transcripts.cnn.com/show/cnr/date/2026-07-26/segment/03"
+    },
+    {
+      "title": "NVIDIA Blog",
+      "url": "https://www.nvidia.com/en-us/blog/"
+    },
+    {
+      "title": "CrowdStrike Blog",
+      "url": "https://www.crowdstrike.com/blog/"
+    },
+    {
+      "title": "TVN24 Biznes ze świata",
+      "url": "https://tvn24.pl/biznes/ze-swiata"
+    },
+    {
+      "title": "TVN24 Biznes tech",
+      "url": "https://tvn24.pl/biznes/tech"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-08-02-0902-01",
+      "section": "Polityka",
+      "title": "Kwota wolna znów wraca do gry",
+      "lead": "Kosiniak-Kamysz ponownie mówi, że obietnica podniesienia kwoty wolnej ma zostać zrealizowana.",
+      "whatHappened": "TVN24 Biznes wraca do tematu kwoty wolnej od podatku i pokazuje, że spór o koszt tej obietnicy nadal jest żywy.",
+      "keyFacts": [
+        "Wątek dotyczy podniesienia kwoty z 30 do 60 tys. zł.",
+        "To jedna z głównych obietnic wyborczych Koalicji Obywatelskiej."
+      ],
+      "reactions": [
+        "Dla finansów publicznych pojawia się pytanie o koszt i tempo wdrożenia.",
+        "Opozycja może naciskać na bardziej konkretne terminy."
+      ],
+      "whyItMatters": "Kwota wolna ma bezpośredni wpływ na portfele gospodarstw domowych i na budżet państwa.",
+      "context": "To polityczna obietnica, która regularnie wraca do krajowej debaty, gdy tylko rośnie presja fiskalna.",
+      "watchNext": [
+        "Sprawdź, czy rząd poda harmonogram lub źródła finansowania."
+      ],
+      "sources": [
+        {
+          "title": "Kwota wolna od podatku. Władysław Kosiniak-Kamysz: będzie realizacja obietnicy o podniesieniu kwoty wolnej",
+          "url": "https://tvn24.pl/biznes/z-kraju/kwota-wolna-od-podatku-wladyslaw-kosiniak-kamysz-bedzie-realizacja-obietnicy-o-podniesieniu-kwoty-wolnej-st9154311"
+        }
+      ],
+      "tags": [
+        "kwota wolna",
+        "podatki",
+        "budżet",
+        "rząd"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-02-0902-02",
+      "section": "Gospodarka",
+      "title": "Najem krótkoterminowy pod presją regulacji",
+      "lead": "Projekt rządowy ma potraktować najem do 30 dni jak usługę hotelarską.",
+      "whatHappened": "Debata TVN24 pokazuje, że spór o Airbnb i podobne platformy przeszedł z poziomu komentarzy do poziomu realnej regulacji.",
+      "keyFacts": [
+        "Celem zmian jest walka z szarą strefą i dostosowanie przepisów do prawa unijnego.",
+        "W projekcie wciąż sporny jest wpływ wspólnot mieszkaniowych na decyzje w budynkach."
+      ],
+      "reactions": [
+        "Mieszkańcy i aktywiści chcą twardszych zasad wobec uciążliwego najmu.",
+        "Branża turystyczna będzie naciskać na prostsze i mniej restrykcyjne reguły."
+      ],
+      "whyItMatters": "To bezpośrednio dotyka rynku mieszkań, turystyki miejskiej i lokalnych napięć sąsiedzkich.",
+      "context": "W wielu europejskich miastach podobne spory już przełożyły się na ostrzejsze przepisy.",
+      "watchNext": [
+        "Sprawdź, czy projekt dostanie dodatkowy mechanizm decyzji wspólnot mieszkaniowych."
+      ],
+      "sources": [
+        {
+          "title": "Najem krótkoterminowy w Polsce. \"Potrzebujemy brukselskiego bata\"",
+          "url": "https://tvn24.pl/biznes/z-kraju/najem-krotkoterminowy-w-polsce-debata-tvn24-z-udzialem-jana-spiewaka-i-jana-szyszko-jakie-zagrozenia-niesie-najem-st9154400"
+        }
+      ],
+      "tags": [
+        "Airbnb",
+        "najem krótkoterminowy",
+        "mieszkania",
+        "regulacje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-02-0902-03",
+      "section": "Gospodarka",
+      "title": "Kontrole w Pyszne.pl",
+      "lead": "TVN24 Biznes sygnalizuje start kontroli w Pyszne.pl i odpowiedź spółki.",
+      "whatHappened": "Bieżący feed przesuwa uwagę z samych platform na ich rozliczenia i zgodność z regułami.",
+      "keyFacts": [
+        "Wątkiem są kontrole dotyczące działalności platformy.",
+        "Spółka już odnosi się do publikacji."
+      ],
+      "reactions": [
+        "Sprawa może zwiększyć presję na branżę platformową.",
+        "Inspektorzy i regulatorzy mogą wykorzystać ten case jako punkt odniesienia."
+      ],
+      "whyItMatters": "To sygnał, że rynek platform usługowych coraz częściej wchodzi pod lupę regulacyjną i pracowniczą.",
+      "context": "Takie kontrole zwykle prowadzą do szerszej dyskusji o statusie kurierów, kosztach i przejrzystości.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się szczegółowy komunikat kontrolny lub reakcja branżowa."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes najnowsze",
+          "url": "https://tvn24.pl/biznes/najnowsze"
+        }
+      ],
+      "tags": [
+        "platformy",
+        "kontrole",
+        "praca",
+        "e-commerce"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-02-0902-04",
+      "section": "Polska",
+      "title": "Warszawska Białołęka szuka oddechu od korków",
+      "lead": "TVN Warszawa opisuje przetarg na analizę ruchu i brak alternatywnych połączeń.",
+      "whatHappened": "Temat transportu miejskiego wraca jako praktyczny problem infrastrukturalny, a nie tylko polityczna zapowiedź.",
+      "keyFacts": [
+        "Analiza ma odpowiedzieć na problem korków.",
+        "Celem jest też wskazanie alternatywnych połączeń dla mieszkańców."
+      ],
+      "reactions": [
+        "Mieszkańcy zyskają argumenty do naciskania na decyzje komunikacyjne.",
+        "Miasto może dostać plan etapów, a nie tylko ogólną diagnozę."
+      ],
+      "whyItMatters": "Białołęka pozostaje jednym z najbardziej odczuwalnych punktów przeciążenia w Warszawie.",
+      "context": "Korki i brak spójnych alternatyw komunikacyjnych wracają tam regularnie przy każdej dyskusji o urbanistyce.",
+      "watchNext": [
+        "Sprawdź, czy przetarg przełoży się na konkretne warianty tras lub inwestycji."
+      ],
+      "sources": [
+        {
+          "title": "TVN Warszawa",
+          "url": "https://tvn24.pl/tvnwarszawa"
+        }
+      ],
+      "tags": [
+        "Warszawa",
+        "Białołęka",
+        "transport",
+        "infrastruktura"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-02-0902-05",
+      "section": "Gospodarka",
+      "title": "Stanisław Gomułka nie żyje",
+      "lead": "TVN24 Biznes podaje informację o śmierci znanego ekonomisty.",
+      "whatHappened": "Current business feed zamieszcza nekrolog jednego z najbardziej rozpoznawalnych polskich ekonomistów.",
+      "keyFacts": [
+        "Gomułka przez lata był obecny w debacie o polityce gospodarczej.",
+        "Jego komentarze często wracały w sporach o reformy i budżet."
+      ],
+      "reactions": [
+        "Środowisko ekonomiczne straci ważny punkt odniesienia.",
+        "Pojawią się wspomnienia i oceny dorobku."
+      ],
+      "whyItMatters": "To ważna wiadomość dla publicznej debaty gospodarczej, nawet jeśli nie zmienia bieżącej polityki.",
+      "context": "Takie wiadomości zwykle otwierają serię wspomnień i tekstów podsumowujących dorobek.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się dłuższe wspomnienia lub komentarze środowiska."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes najnowsze",
+          "url": "https://tvn24.pl/biznes/najnowsze"
+        }
+      ],
+      "tags": [
+        "ekonomia",
+        "nekrolog",
+        "debata publiczna",
+        "Polska"
+      ],
+      "priority": "low"
+    },
+    {
+      "id": "2026-08-02-0902-06",
+      "section": "Alerty",
+      "title": "Upał wraca, a Szczecin znów zalewa",
+      "lead": "TVN Meteo podtrzymuje scenariusz gorącego powietrza i lokalnych podtopień.",
+      "whatHappened": "Prognoza znów kieruje uwagę na upał, a Szczecin wraca jako przykład ulicy zalanej po większym deszczu.",
+      "keyFacts": [
+        "Prognoza zakłada powrót upału.",
+        "Szczecin ponownie pojawia się jako przykład lokalnego podtopienia."
+      ],
+      "reactions": [
+        "Alerty pogodowe mogą szybko zmienić się w komunikaty operacyjne.",
+        "Mieszkańcy i samorządy muszą liczyć się z kolejnymi utrudnieniami."
+      ],
+      "whyItMatters": "To nie tylko prognoza, ale potencjalny problem dla transportu, zdrowia i lokalnej infrastruktury.",
+      "context": "Ten blok pogodowy wciąż ma charakter realnego ryzyka, a nie tylko sezonowego ostrzeżenia.",
+      "watchNext": [
+        "Monitoruj IMGW i lokalne komunikaty, czy pojawią się mocniejsze ostrzeżenia."
+      ],
+      "sources": [
+        {
+          "title": "TVN Meteo Polska",
+          "url": "https://tvn24.pl/tvnmeteo/polska"
+        },
+        {
+          "title": "Upał wróci do Polski. Na jak długo",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/zmiana-w-pogodzie-upal-wroci-do-polski-na-jak-dlugo-co-przyniesie-weekend-st9154315"
+        },
+        {
+          "title": "Zalana ulica Derdowskiego w Szczecinie",
+          "url": "https://tvn24.pl/tvnmeteo/polska/zalana-ulica-derdowskiego-w-szczecinie-przy-kazdym-wiekszym-deszczu-mamy-taka-sadzawke-st9154773"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "upał",
+        "burze",
+        "Szczecin"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-02-0902-07",
+      "section": "Świat",
+      "title": "Pożary w Hiszpanii i Francji nie odpuszczają",
+      "lead": "BBC mirror pokazuje, że południowa Europa nadal walczy z ogniem i upałem.",
+      "whatHappened": "Kryzys pożarowy pozostaje jednym z najcięższych europejskich tematów pogodowych.",
+      "keyFacts": [
+        "Pożary obejmują Hiszpanię i Francję.",
+        "Upał utrudnia gaszenie i zwiększa skalę zagrożenia."
+      ],
+      "reactions": [
+        "Służby muszą utrzymywać szerokie zasoby gaśnicze.",
+        "Lokalne władze mogą nadal zarządzać ewakuacjami i ograniczeniami."
+      ],
+      "whyItMatters": "To europejski kryzys klimatyczno-operacyjny, który może generować kolejne ofiary i straty materialne.",
+      "context": "Ten temat stale wraca w letnim cyklu zagrożeń na południu kontynentu.",
+      "watchNext": [
+        "Sprawdź, czy BBC lub lokalne służby podadzą nowe liczby ewakuacji i zniszczeń."
+      ],
+      "sources": [
+        {
+          "title": "BBC mirror - Spain, France battle wildfires as intense heat grips Southern Europe",
+          "url": "https://bbc.bm/spain-france-battle-wildfires-as-intense-heat-grips-southern-europe"
+        }
+      ],
+      "tags": [
+        "pożary",
+        "Hiszpania",
+        "Francja",
+        "upał"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-02-0902-08",
+      "section": "Bezpieczeństwo",
+      "title": "Ceuta znów pod presją granicy",
+      "lead": "AP opisuje kolejną twardą reakcję Hiszpanii na presję migracyjną przy granicy z Marokiem.",
+      "whatHappened": "Bariera morska i kolejne działania wokół Ceuty pokazują, że szlak migracyjny pozostaje gorącym punktem UE.",
+      "keyFacts": [
+        "Hiszpania wzmacnia granicę morską przy Ceucie.",
+        "AP wiąże sprawę z dramatycznym frontowym naporem i śmiertelnym finałem."
+      ],
+      "reactions": [
+        "Madrid może dalej zaostrzać środki graniczne.",
+        "UE będzie obserwować, czy problem rozszerzy się na inne przejścia."
+      ],
+      "whyItMatters": "Ceuta jest jednym z najbardziej napiętych punktów migracyjnych na styku UE i Afryki Północnej.",
+      "context": "Takie epizody często pchają debatę od humanitarnej do stricte bezpieczeństwa granicznego.",
+      "watchNext": [
+        "Obserwuj, czy pojawią się nowe liczby zatrzymań, ofiar lub oficjalnych reakcji UE."
+      ],
+      "sources": [
+        {
+          "title": "AP - Spain installs sea barrier on Ceuta's border with Morocco after frontier rush that killed 67",
+          "url": "https://apnews.com/article/d76c6dc9d2da828907a1c04e1d482bbe"
+        }
+      ],
+      "tags": [
+        "Ceuta",
+        "migracja",
+        "granica",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-02-0902-09",
+      "section": "Świat",
+      "title": "Gaza i plan rozbrojenia Hamasu",
+      "lead": "AP publikuje pełny tekst propozycji, która łączy rozbrojenie Hamasu z wyjściem Izraela z Gazy.",
+      "whatHappened": "Propozycja ma jasno określone warunki i pokazuje, że konflikt nadal pozostaje w fazie twardych negocjacji, a nie gotowego porozumienia.",
+      "keyFacts": [
+        "W planie pojawia się rozbrojenie Hamasu.",
+        "Tekst zawiera też warunki izraelskiego wyjścia z Gazy."
+      ],
+      "reactions": [
+        "Strony konfliktu będą ważyć, co jest politycznie możliwe do przyjęcia.",
+        "Na razie bardziej widać ostrożność niż przełom."
+      ],
+      "whyItMatters": "To kolejna próba przesunięcia rozmów z wojny do ram politycznego porozumienia.",
+      "context": "AP pokazuje, że szczegóły są teraz równie ważne jak sam sygnał dyplomatyczny.",
+      "watchNext": [
+        "Sprawdź, czy Hamas, Izrael albo mediatorzy podadzą formalną odpowiedź."
+      ],
+      "sources": [
+        {
+          "title": "AP - Read the full text of the deal for Hamas to disarm and Israel to leave Gaza",
+          "url": "https://apnews.com/article/7347ef0f3b745f22c12b67f786b70f0f"
+        }
+      ],
+      "tags": [
+        "Gaza",
+        "Hamas",
+        "Izrael",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-02-0902-10",
+      "section": "Bezpieczeństwo",
+      "title": "Ukraina uderza w rosyjskie rafinerie",
+      "lead": "AP opisuje ukraińskie uderzenia w dwa duże rosyjskie zakłady naftowe.",
+      "whatHappened": "Atak wpisuje się w stały wzór wojny infrastrukturalnej, w której rafinerie i logistyka pozostają celem.",
+      "keyFacts": [
+        "Uderzono w dwie rosyjskie rafinerie.",
+        "Informacja pojawia się po spotkaniu Zełenskiego z Trumpem."
+      ],
+      "reactions": [
+        "Rynek będzie obserwował możliwą odpowiedź Moskwy.",
+        "Energetyka i logistyka pozostają podatne na kolejne zakłócenia."
+      ],
+      "whyItMatters": "To wpływa na energię, eksport i ryzyko dalszej eskalacji.",
+      "context": "Tego typu ataki regularnie zmieniają krajobraz wojny i sygnalizują nowy etap presji na rosyjską infrastrukturę.",
+      "watchNext": [
+        "Obserwuj, czy pojawi się oficjalna rosyjska odpowiedź lub aktualizacja szkód."
+      ],
+      "sources": [
+        {
+          "title": "AP - Ukraine says it hits 2 major Russian oil refineries hours after Zelenskyy's meeting with Trump",
+          "url": "https://apnews.com/article/4275c2280107aedba37df8704f226ce6"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "Rosja",
+        "rafinerie",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-02-0902-11",
+      "section": "Technologia",
+      "title": "AI incydent buduje nowy sojusz bezpieczeństwa",
+      "lead": "CNN opisuje testowy incydent OpenAI, a branża odpowiada ruchem na rzecz bezpieczniejszego AI.",
+      "whatHappened": "Wokół testowego modelu pojawia się narracja o ryzyku cybernetycznym, a oficjalne komunikaty Nvidii i CrowdStrike wzmacniają wątek Open Secure AI Alliance.",
+      "keyFacts": [
+        "CNN opisuje incydent związany z testowym modelem OpenAI.",
+        "NVIDIA i CrowdStrike promują odpowiedź branżową wokół bezpieczeństwa AI."
+      ],
+      "reactions": [
+        "Firmy mogą naciskać na mocniejsze standardy kontroli modeli.",
+        "Regulatorzy mogą chcieć więcej szczegółów o incydencie i zabezpieczeniach."
+      ],
+      "whyItMatters": "To sygnał, że AI-security przechodzi z poziomu abstrakcyjnej debaty do twardej infrastruktury ryzyka.",
+      "context": "Ten wątek łączy bezpieczeństwo, zarządzanie modelami i presję na wspólne standardy branżowe.",
+      "watchNext": [
+        "Sprawdź, czy pojawi się formalny raport, standard albo komentarz regulatora."
+      ],
+      "sources": [
+        {
+          "title": "CNN.com - Transcripts: The AI safety alliance story",
+          "url": "https://transcripts.cnn.com/show/cnc/date/2026-07-27/segment/06"
+        },
+        {
+          "title": "NVIDIA Blog",
+          "url": "https://www.nvidia.com/en-us/blog/"
+        },
+        {
+          "title": "CrowdStrike Blog",
+          "url": "https://www.crowdstrike.com/blog/"
+        }
+      ],
+      "tags": [
+        "AI",
+        "bezpieczeństwo",
+        "OpenAI",
+        "cyber"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-02-0902-12",
+      "section": "Gospodarka",
+      "title": "Cła i platformy znów podnoszą napięcie handlowe",
+      "lead": "CNN i TVN24 Biznes pokazują, że presja celna i spór o Shein oraz Temu idą teraz równolegle.",
+      "whatHappened": "CNN mówi o szerokiej fali ceł na prawie cały import do USA, a TVN24 Biznes sygnalizuje francuską reakcję na Shein i Temu.",
+      "keyFacts": [
+        "CNN opisuje nową rundę ceł obejmującą wielu partnerów handlowych.",
+        "TVN24 Biznes podbija europejski wątek presji na platformy e-commerce."
+      ],
+      "reactions": [
+        "Pekin i inni partnerzy mogą odpowiedzieć własnymi środkami.",
+        "Rynki będą śledzić efekt cenowy i logistyczny."
+      ],
+      "whyItMatters": "To sygnał, że handel, e-commerce i polityka przemysłowa znów wchodzą w ostrą fazę sporu.",
+      "context": "Ten blok łączy europejską regulację platform z amerykańską polityką celną.",
+      "watchNext": [
+        "Monitoruj reakcję Chin, Komisji Europejskiej i największych platform."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes ze świata",
+          "url": "https://tvn24.pl/biznes/ze-swiata"
+        },
+        {
+          "title": "CNN.com - Transcripts: new tariffs on almost every U.S. import",
+          "url": "https://transcripts.cnn.com/show/cnr/date/2026-07-26/segment/03"
+        }
+      ],
+      "tags": [
+        "cła",
+        "handel",
+        "Shein",
+        "Temu"
+      ],
+      "priority": "high"
+    }
+  ]
+}

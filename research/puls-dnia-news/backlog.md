@@ -1,5 +1,67 @@
 # Puls Dnia News Backlog
 
+## 2026-08-03 06:01
+
+- Watch whether PiS converts Morawiecki's convention date into a formal counter-move from Kaczyński's camp.
+- Watch whether Czarnek's anti-Ukrainian line gets softened or repeated by other party figures.
+- Watch whether the Żabka bid turns into a concrete takeover timetable or shareholder response.
+- Watch whether first platform labels under AI Act appear visibly in Polish-language feeds.
+- Watch whether IMGW upgrades the heat block into stronger operational warnings by late morning.
+- Watch whether Iran talks, Gaza mediation or the Greece fire response produce a fresh official readout.
+
+## 2026-08-02 21:03
+
+- Watch whether PiS turns the Morawiecki and TVN24 studio episodes into formal party action.
+- Watch whether EU platforms and publishers start visibly labeling AI content under the new rules.
+- Watch whether Greece reports more evacuations or responder casualties after the helicopter collision.
+- Watch whether Tehran, Washington and Oman convert the Hormuz pause into a written deal.
+- Watch whether Kyiv gets another air-defense or U.S. support follow-up after the latest strike.
+
+## 2026-08-02 12:01
+
+- Watch whether Greek wildfire numbers or evacuations rise as the west cools off.
+- Watch whether Gaza gets a formal reply from Israel, Hamas or the mediators.
+- Watch whether Ukraine's latest attack turns into a new energy or air-defense follow-up.
+- Watch whether the Open Secure AI Alliance turns into concrete tooling or policy language.
+- Watch whether the White House tariff action triggers a fresh retaliation or market reaction.
+
+## 2026-08-02 09:02
+
+- Watch whether the kwota wolna discussion gets a concrete fiscal timetable or budget note.
+- Watch whether Pyszne.pl controls turn into a formal regulatory or labour follow-up.
+- Watch whether the Białołęka transport analysis produces a real procurement decision or city-hall response.
+- Watch whether IMGW or RCB upgrade the heat and flood block into stronger operational warnings.
+- Watch whether AP, CNN or the official blogs add a formal response on Ceuta, Gaza, Ukraine, AI-security or tariffs.
+
+## 2026-08-01 15:02
+
+- Watch whether the RPO decision gets a formal political response or a procedural objection.
+- Watch whether Warsaw metro issues expand into a broader transport or security follow-up.
+- Watch whether IMGW or RCB upgrade the heat and storm block into a stronger alert.
+- Watch whether AP, BBC or CNN publish sharper counts on wildfires, Ceuta, Gaza or Ukraine.
+
+## 2026-08-02 06:05
+
+- Watch whether the digital tax draft gets a publication date or coalition pushback.
+- Watch whether the short-term rental bill adds stronger community control or municipal vetoes.
+- Watch whether IMGW or RCB upgrade the heat and storm block into a broader alert.
+- Watch whether France wildfires, Ceuta, Gaza or Ukraine get fresh official counts or response notes.
+- Watch whether the Open Secure AI Alliance or the tariff story produces a regulator or market follow-up.
+
+## 2026-07-31 18:05
+
+- Watch whether the Bodnar/Mraz and cyber/dezinformation items trigger a formal statement or correction.
+- Watch whether IMGW or RCB upgrades the weather block into a stronger operational alert.
+- Watch whether Warsaw transport issues expand beyond the Wilanowska exit closure.
+- Watch whether the Ukraine, Germany or UK world items get a sharper official follow-up.
+
+## 2026-07-30 21:02
+
+- Watch whether PiS formalizes the Kaczyński-Morawiecki clash after Thursday's meeting.
+- Watch whether IMGW or RCB upgrades the storm and Baltic wind warnings overnight.
+- Watch whether Seattle, Berlin, France or Spain publish revised casualty and evacuation numbers.
+- Watch whether OpenAI, Congress or the White House turn the cyber incident into a concrete rule set.
+
 ## 2026-07-29 21:07
 
 - Watch whether Thursday's Kaczyński-Morawiecki meeting ends in a signed declaration or a split.
@@ -41,6 +103,10 @@
 
 ## Open
 
+- Watch whether the fake dispatch gets an official attribution or correction.
+- Watch whether IMGW or RCB upgrades the storm block into stronger warnings.
+- Watch whether Europe wildfires get new evacuation counts or fresh closures.
+- Watch whether Gaza, Ceuta or the U.S. water-security story gets a formal follow-up.
 - After the manifest bootstrap, confirm the iOS app shows at least six pairs of
   cards from the newest `pulseNewsData`.
 - Consider adding a future `pulseNewsImage` field only if the native card UI
