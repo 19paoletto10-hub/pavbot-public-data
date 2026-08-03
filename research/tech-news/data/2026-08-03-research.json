@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-08-03",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy obraz przesuwa temat z samej ekspansji funkcji AI do kontroli, rollbacków i kosztu zaufania. Google wycofuje eksperymentalne generowanie obrazów w Earth po sygnałach o nadużyciach, a Chrome opisuje już AI jako realną część security ops, nie tylko feature marketingowy.",
+    "Równolegle rynek frontier AI wchodzi w ostrzejszą konkurencję i ostrzejsze ramy governance. Qwen3.8-Max wzmacnia chiński nacisk na coding i cowork, a statement Pacing the Frontier zamienia abstrakcyjny lęk przed automatyzacją badań AI w publiczny apel o narzędzia spowalniające tempo rozwoju.",
+    "Na poziomie rynku i tooling widać dalsze zagęszczenie wokół identity, venture dry powder i agentowych surface'ów. Cyera kupuje Oasis Security, Index Ventures podnosi nowy kapitał, a Hacker News i Product Hunt nadal premiują control planes, browser agents i workflow tools zamiast czystych demo modeli."
+  ],
+  "summaryBullets": [
+    "Produkty: Google wycofuje AI z Google Earth",
+    "Cyber: Chrome przyspiesza patchowanie dzięki AI",
+    "AI: Qwen3.8-Max dokłada presję na frontier"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-08-03-0-google-wycofuje-ai-z-google-earth-5d967a078d",
+      "section": "Produkty",
+      "title": "Google wycofuje AI z Google Earth",
+      "standfirst": "Google uruchomiło generowanie obrazów w Earth i po jednym dniu wycofało funkcję po sygnałach o nadużyciach oraz naruszeniach polityk. Firma zapowiedziała mocniejsze guardrails przed ewentualnym powrotem feature'u.",
+      "whatHappened": "Google cofnęło eksperymentalne generowanie obrazów w Google Earth.",
+      "whyItMatters": "Earth jest powierzchnią wysokiego zaufania, więc nawet „kreatywne” funkcje AI mogą szybko podważyć wiarygodność produktu.",
+      "deeperAnalysis": [
+        "Google próbowało połączyć mapy satelitarne z generatywną edycją, ale to połączenie od początku było ryzykowne. W narzędziu geospatialnym obraz nie jest tylko obrazem: bywa dowodem, punktem odniesienia dla dziennikarza, materiałem dla analityka nieruchomości albo elementem pracy służb i organizacji humanitarnych.",
+        "Szybka reakcja pokazuje, że sam watermark nie rozwiązuje problemu. Jeśli produkt ma wysoki autorytet w oczach użytkownika, to trzeba oddzielić kreatywną warstwę od warstwy referencyjnej albo przynajmniej wyraźnie rozdzielić ich tryby użycia i widoczność.",
+        "To też ważny sygnał dla innych vendorów. Gdy generatywne narzędzia trafiają do produktów z „prawdziwym światem” w tle, standardem staje się nie tylko możliwość tworzenia, ale też możliwość ograniczenia szkody zanim feature zderzy się z publicznym zaufaniem."
+      ],
+      "contextPoints": [
+        "Co się stało: Google wycofało Nano Banana w Google Earth dzień po premierze.",
+        "Dlaczego ważne: high-trust surfaces wymagają mocniejszych reguł niż zwykłe edytory obrazów.",
+        "Na co patrzeć dalej: czy Google relaunchuje funkcję z twardszymi guardrails i innym UX oznaczania."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/31/google-nixes-its-earth-ai-feature-one-day-after-launch-amid-criticism-it-would-spread-misinformation/"
+        },
+        {
+          "title": "Google Blog",
+          "url": "https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Earth",
+        "zaufanie",
+        "misinformation"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-03-1-chrome-przyspiesza-patchowanie-dzieki-ai-2385a4487e",
+      "section": "Cyber",
+      "title": "Chrome przyspiesza patchowanie dzięki AI",
+      "standfirst": "Google podało, że AI pomogła naprawić 1,072 błędy w dwóch ostatnich wersjach Chrome, więcej niż w poprzednich 23 wydaniach łącznie. Firma testuje teraz dwa security release'y tygodniowo i dynamic patching.",
+      "whatHappened": "Chrome Security Team opisał AI jako część codziennego pipeline'u obrony.",
+      "whyItMatters": "Browser security staje się jednym z pierwszych miejsc, gdzie AI realnie skraca czas wykrycia i łatania luk.",
+      "deeperAnalysis": [
+        "To nie jest wyłącznie historia o „AI wykrywa bugi”. Najważniejsze jest to, że Google przenosi AI do procesu, który wcześniej był w dużej mierze ręczny: finding, triage, fix i release. Dzięki temu browser security zaczyna przypominać ciągłą, półautomatyczną linię produkcyjną.",
+        "Jeśli ten model się utrzyma, zmieni się nie tylko tempo łat, ale też oczekiwania użytkowników. Dwa security release'y tygodniowo i dynamic patching sugerują, że restart przeglądarki przestanie być naturalnym rytuałem bezpieczeństwa, a stanie się czymś, co system próbuje ukryć.",
+        "W szerszym ujęciu to ważny kontrapunkt dla poprzedniego dnia, w którym mówiło się głównie o ryzyku i enforcement. Tutaj AI jest już częścią defensywnej infrastruktury, więc skala ataku i skala obrony zaczynają rosnąć razem."
+      ],
+      "contextPoints": [
+        "Co się stało: Chrome wykorzystał AI do wykrycia i naprawy 1,072 luk.",
+        "Dlaczego ważne: defense operations stają się bardziej agentowe i bardziej ciągłe.",
+        "Na co patrzeć dalej: czy dwutygodniowy rytm security release'ów wejdzie do produkcji i czy inni browser vendorzy skopiują model."
+      ],
+      "sources": [
+        {
+          "title": "Google Security Blog",
+          "url": "https://blog.google/security/chrome-stronger-with-every-update/"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/30/google-says-it-fixed-more-chrome-bugs-in-june-than-over-the-past-two-years-thanks-to-ai/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Chrome",
+        "security",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-03-2-qwen3-8-max-doklada-presje-na-frontier-a98bf0d411",
+      "section": "AI",
+      "title": "Qwen3.8-Max dokłada presję na frontier",
+      "standfirst": "Oficjalny wpis Qwen mówi o modelu Qwen3.8-Max jako o nowym maksimum rodziny, z naciskiem na coding, cowork i długie zadania. Hacker News wynosi go na szczyt front page, więc społeczność techniczna traktuje go jako realny kontrpunkt dla zachodnich modeli frontier.",
+      "whatHappened": "Alibaba wypuściła Qwen3.8-Max jako swój najnowszy flagship.",
+      "whyItMatters": "chińskie laby utrzymują presję na price-performance i na tempo wydawania nowych modeli.",
+      "deeperAnalysis": [
+        "Najciekawsze w tym release'ie nie jest tylko to, że model jest duży. Ważniejsze jest to, że Qwen pozycjonuje go jako narzędzie do kodowania, pracy i długich sekwencji zadań, czyli dokładnie tam, gdzie frontier model może przejść z demo do codziennego workflow.",
+        "Jeżeli społeczność HN od razu wrzuca ten model na czoło front page, oznacza to, że rynek developerów nadal czyta chińskie modele nie jako ciekawostkę, ale jako bezpośredni sygnał konkurencyjny. To może wpływać na routing, benchmarki i na to, jak szybko zachodni vendorzy będą reagować ceną albo dodatkowymi możliwościami.",
+        "W praktyce Qwen3.8-Max to też przypomnienie, że globalny wyścig AI nie ma jednej osi. Jest model capability, jest koszt, jest dostępność, jest open-weight polityka i jest social proof. Ten release dotyka wszystkich czterech naraz."
+      ],
+      "contextPoints": [
+        "Co się stało: Qwen wydał Qwen3.8-Max.",
+        "Dlaczego ważne: wzmacnia presję na zachodnie modele i routing.",
+        "Na co patrzeć dalej: benchmarki, ceny, dostępność i reakcję OpenAI/Anthropic/Google."
+      ],
+      "sources": [
+        {
+          "title": "Qwen",
+          "url": "https://qwen.ai/blog?id=qwen3.8"
+        },
+        {
+          "title": "Hacker News front page",
+          "url": "https://news.ycombinator.com/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Qwen",
+        "Alibaba",
+        "China",
+        "coding",
+        "model"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-03-3-pacing-the-frontier-zamienia-governance-w-publiczny-postulat-daa6bda58b",
+      "section": "Regulacje",
+      "title": "Pacing the Frontier zamienia governance w publiczny postulat",
+      "standfirst": "Statement zebrało publiczną widoczność jako apel pracowników frontier AI do rządu USA o wsparcie międzynarodowych narzędzi, które pozwolą „deliberately pace” automatyzację AI. The Verge opisuje ten ruch jako ponad 1,100 sygnatariuszy z czołowych labów.",
+      "whatHappened": "Pracownicy frontier AI proszą o narzędzia do spowalniania automatyzacji badań AI.",
+      "whyItMatters": "governance przestaje być abstrakcyjną debatą i staje się publicznym żądaniem ludzi z wnętrza branży.",
+      "deeperAnalysis": [
+        "To ważne, bo różni się od klasycznego „call for caution”. Tutaj sygnatariusze nie mówią, że AI ma zostać zatrzymana, tylko że tempo powinno być sterowane narzędziami technicznymi i politycznymi, zanim automatyzacja badań wyjdzie poza ludzką zdolność kontroli.",
+        "Takie statementy mają znaczenie systemowe, bo dają politykom i regulatorom gotowy język do rozmowy o pace, monitoring tools i international coordination. W praktyce to próba zbudowania mostu między wewnętrznym safety consensus a zewnętrzną polityką publiczną.",
+        "Ruch pojawia się równolegle z incydentami eval-security i rosnącym naciskiem na frontier access control. To sugeruje, że governance nie jest już dodatkiem do produktu, tylko osobną warstwą operacyjną wokół modeli."
+      ],
+      "contextPoints": [
+        "Co się stało: pracownicy frontier labów podpisali publiczny apel do rządu USA.",
+        "Dlaczego ważne: to jeden z najmocniejszych dotąd sygnałów, że branża sama prosi o mechanizmy pace.",
+        "Na co patrzeć dalej: czy statement zyska dalsze podpisy i czy przełoży się na politykę lub standardy labów."
+      ],
+      "sources": [
+        {
+          "title": "Pacing the Frontier",
+          "url": "https://www.pacingthefrontier.com/"
+        },
+        {
+          "title": "The Verge",
+          "url": "https://www.theverge.com/ai-artificial-intelligence/972161/ai-leaders-us-government-openai-anthropic-google-meta"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "governance",
+        "frontier",
+        "policy"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-03-4-cyera-kupuje-oasis-security-0d9320c65a",
+      "section": "Cyber",
+      "title": "Cyera kupuje Oasis Security",
+      "standfirst": "Cyera podpisała list intencyjny na zakup Oasis Security za około 1 mld USD. Oasis specjalizuje się w non-human identities, czyli w uprawnieniach i zachowaniu agentów AI.",
+      "whatHappened": "Cyera wchodzi w akwizycję firmy zabezpieczającej tożsamości agentów.",
+      "whyItMatters": "identity dla agentów staje się osobną kategorią security z realną konsolidacją rynku.",
+      "deeperAnalysis": [
+        "Cyera od dawna pozycjonuje się jako platforma data security i AI security dla enterprise, więc zakup Oasis nie wygląda jak przypadkowy zwrot. Bardziej przypomina dobudowanie brakującej warstwy kontroli nad tym, kto lub co może działać na danych.",
+        "Oasis Security specjalizuje się w non-human identities, czyli właśnie tym, co staje się centralnym problemem w świecie agentów: nie tylko model ma dostęp do danych, ale też jego długotrwałe tożsamości, tokeny, scope'y i uprawnienia. To przesuwa security z klasycznego IAM w stronę agentic IAM.",
+        "Jeśli transakcja się domknie, może stać się wzorcem dla kolejnych graczy, którzy chcą sprzedać „jedną płaszczyznę” dla danych, dostępu i działań wykonywanych przez AI. To jest bardziej strukturalny sygnał niż kolejna rundka fundingowa."
+      ],
+      "contextPoints": [
+        "Co się stało: Cyera podpisała LOI na zakup Oasis Security.",
+        "Dlaczego ważne: non-human identity staje się osobnym podsektorem security.",
+        "Na co patrzeć dalej: closing dealu i kolejne akwizycje wokół agent security."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/28/cyera-agrees-to-acquire-oasis-security-for-1b-to-safeguard-proliferating-ai-agents/"
+        },
+        {
+          "title": "Cyera",
+          "url": "https://www.cyera.com/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Cyera",
+        "Oasis Security",
+        "identity",
+        "agent security"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-03-5-index-ventures-doklada-3-5-mld-usd-suchego-prochu-0b6d44a7e3",
+      "section": "Infrastruktura",
+      "title": "Index Ventures dokłada 3,5 mld USD suchego prochu",
+      "standfirst": "Index Ventures zamyka trzy fundusze o łącznym kapitale 3,5 mld USD: seed, venture i growth. Firma wprost mówi, że kolejne cykle będą napędzane przez AI i infrastrukturę.",
+      "whatHappened": "Index zwiększa ilość kapitału do rozlokowania po rynku.",
+      "whyItMatters": "venture money nadal płynie do AI security, infrastructure i application bets, nawet jeśli rynek jest bardziej selektywny.",
+      "deeperAnalysis": [
+        "Najważniejsze w tym newsie jest nie tylko to, że fundusze są duże. Równie ważne jest to, że Index rozdziela kapitał na seed, venture i growth, czyli zachowuje pełne pokrycie cyklu życia spółki w momencie, gdy AI nadal generuje nowe kategorie produktów.",
+        "To pokazuje, że rynek nie wszedł jeszcze w fazę „kapitału brak”. Raczej wszedł w fazę, w której dobry kapitał szuka konkretnych warstw: bezpieczeństwa, infrastruktury, danych, agentów i przepływów pracy, a nie ogólnego „AI wrappera”.",
+        "W tym sensie Index jest useful jako marker. Jeśli tak duży fund nadal zamyka nowy dry powder po dużych zwrotach z inwestycji, to znaczy, że temat AI pozostaje na tyle szeroki, by uzasadniać kolejne rundy w bardzo różnych podsekcjach rynku."
+      ],
+      "contextPoints": [
+        "Co się stało: Index ogłosił 3,5 mld USD kapitału w trzech funduszach.",
+        "Dlaczego ważne: kapitał wciąż zasila AI infra i security, nie tylko modele.",
+        "Na co patrzeć dalej: jakie spółki dostaną nowy kapitał i czy będzie go więcej w agent security."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/31/fresh-off-its-wiz-payout-index-ventures-raises-2b-across-three-funds/"
+        },
+        {
+          "title": "Index Ventures",
+          "url": "https://www.indexventures.com/perspectives/30-years-in-perfecting-our-craft/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Index Ventures",
+        "fundraising",
+        "AI",
+        "venture"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Google Earth cofa AI image generation",
+      "rationale": "High-trust products nie wybaczają generatorów, które zbyt łatwo tworzą fałszywy kontekst.",
+      "sourcesLabel": "TechCrunch; Google Blog"
+    },
+    {
+      "priority": "High",
+      "title": "Chrome zamienia AI w security ops",
+      "rationale": "AI przyspiesza defensywę i może skrócić okno podatności w przeglądarkach.",
+      "sourcesLabel": "Google Security Blog; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Qwen3.8-Max dokłada presję na frontier",
+      "rationale": "Chińska konkurencja dalej naciska na price-performance, coding i routing modeli.",
+      "sourcesLabel": "Qwen; Hacker News"
+    },
+    {
+      "priority": "High",
+      "title": "Pacing the Frontier przechodzi do polityki",
+      "rationale": "Branża sama prosi o narzędzia do spowalniania automatyzacji AI.",
+      "sourcesLabel": "Pacing the Frontier; The Verge"
+    },
+    {
+      "priority": "High",
+      "title": "Cyera i Oasis Security budują agentic identity market",
+      "rationale": "Gdy agenci dostają realne uprawnienia, identity staje się osobnym segmentem security.",
+      "sourcesLabel": "TechCrunch; Cyera"
+    },
+    {
+      "priority": "Medium",
+      "title": "Index Ventures zwiększa dry powder",
+      "rationale": "Kapitał nadal płynie do AI infra i security, więc rynek nie wyczerpał paliwa.",
+      "sourcesLabel": "TechCrunch; Index Ventures"
+    },
+    {
+      "priority": "Medium",
+      "title": "Product Hunt i HN premiują control surfaces",
+      "rationale": "Launch market nagradza browser agents, MCP i workflow tooling, nie tylko modele.",
+      "sourcesLabel": "Product Hunt; Hacker News"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TechCrunch: Google nixes its Earth AI feature one day after launch",
+      "url": "https://techcrunch.com/2026/07/31/google-nixes-its-earth-ai-feature-one-day-after-launch-amid-criticism-it-would-spread-misinformation/"
+    },
+    {
+      "title": "Google Blog: Nano Banana w Google Earth",
+      "url": "https://blog.google/products-and-platforms/products/earth/nano-banana-google-earth-image-generation/"
+    },
+    {
+      "title": "TechCrunch: Google says it fixed more Chrome bugs in June than over the past two years thanks to AI",
+      "url": "https://techcrunch.com/2026/07/30/google-says-it-fixed-more-chrome-bugs-in-june-than-over-the-past-two-years-thanks-to-ai/"
+    },
+    {
+      "title": "Google Security Blog: Chrome stronger with every update",
+      "url": "https://blog.google/security/chrome-stronger-with-every-update/"
+    },
+    {
+      "title": "Qwen: Qwen3.8-Max: A New Bar for Coding and Cowork",
+      "url": "https://qwen.ai/blog?id=qwen3.8"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "The Verge: AI leaders sign a statement asking the government to do something about automated AI",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/972161/ai-leaders-us-government-openai-anthropic-google-meta"
+    },
+    {
+      "title": "Pacing the Frontier statement",
+      "url": "https://www.pacingthefrontier.com/"
+    },
+    {
+      "title": "TechCrunch: Cyera agrees to acquire Oasis Security for $1B",
+      "url": "https://techcrunch.com/2026/07/28/cyera-agrees-to-acquire-oasis-security-for-1b-to-safeguard-proliferating-ai-agents/"
+    },
+    {
+      "title": "Cyera: AI Security Platform",
+      "url": "https://www.cyera.com/"
+    },
+    {
+      "title": "TechCrunch: Fresh off its Wiz payout, Index Ventures raises $2B across three funds",
+      "url": "https://techcrunch.com/2026/07/31/fresh-off-its-wiz-payout-index-ventures-raises-2b-across-three-funds/"
+    },
+    {
+      "title": "Index Ventures: 30 years in perfecting our craft",
+      "url": "https://www.indexventures.com/perspectives/30-years-in-perfecting-our-craft/"
+    },
+    {
+      "title": "Product Hunt leaderboard",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/8/3"
+    },
+    {
+      "title": "Product Hunt: Notte",
+      "url": "https://www.producthunt.com/posts/anything-api"
+    },
+    {
+      "title": "Product Hunt: PaneFlow",
+      "url": "https://www.producthunt.com/posts/1172777"
+    },
+    {
+      "title": "Product Hunt: SubSchool",
+      "url": "https://www.producthunt.com/posts/1201420"
+    },
+    {
+      "title": "Product Hunt: Fudge MCP",
+      "url": "https://www.producthunt.com/posts/fudge-chat"
+    }
+  ]
+}

@@ -1,0 +1,321 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-08-01",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny run przesuwa temat dalej w stronę infrastruktury, kontroli i obrony. AMD Helios pokazuje, że rywalizacja o AI nie kończy się na modelach ani nawet na pojedynczych GPU, tylko coraz bardziej na rack-scale systemach, otwartych standardach i kosztach wdrożenia. Równolegle Anthropic robi z Claude voice mode pełniejszy surface pracy, a nie tylko gadatliwy interfejs, bo dochodzą modele, web/desktop oraz połączenia z narzędziami.",
+    "Po stronie otoczenia regulacyjnego i operacyjnego presja rośnie w dwóch kierunkach. Nowy Jork wprowadza moratorium na nowe hyperscale data centers, a UE uruchamia od 2 sierpnia twarde uprawnienia egzekucyjne dla najbardziej zaawansowanych modeli. To wzmacnia wcześniejszy obraz, że AI staje się nie tylko problemem produktu, ale też energii, pozwoleń, compliance i odpowiedzialności za systemowe ryzyka.",
+    "W tle widać też reakcję rynku bezpieczeństwa. AegisAI zamyka finansowanie na obronę przed AI-driven spear phishing, a społeczności HN i Product Hunt nadal premiują narzędzia, które pokazują koszt, kontrolę i governed access. To dalej ta sama oś: wygrywają produkty, które redukują koszt pracy i ryzyko operacyjne, nie tylko demo capability."
+  ],
+  "summaryBullets": [
+    "Infrastruktura: AMD Helios: rack-scale sygnał przeciwko Nvidia",
+    "AI: Claude voice mode staje się powierzchnią pracy",
+    "Regulacje: Nowy Jork zatrzymuje nowe hyperscale data centers"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-08-01-1937-0-amd-helios-rack-scale-sygnal-przeciwko-nvidia-e261beccdf",
+      "section": "Infrastruktura",
+      "title": "AMD Helios: rack-scale sygnał przeciwko Nvidia",
+      "standfirst": "AMD pokazuje Helios jako rack-scale AI infrastructure dla frontier AI, inference i trainingu. System łączy MI455X, EPYC, ROCm i Pensando w otwartą architekturę o nacisku na performance per watt i cost per token.",
+      "whatHappened": "AMD wynosi Helios z poziomu zapowiedzi do pełnego press kitu i partner story.",
+      "whyItMatters": "To jeden z najczytelniejszych sygnałów, że rynek AI przechodzi od pojedynczych chipów do pełnych systemów i standardów wdrożeniowych.",
+      "deeperAnalysis": [
+        "Helios nie jest tylko kolejnym marketingowym slajdem o większym GPU. AMD opisuje go jako zintegrowany building block dla AI factories, czyli dokładnie ten poziom, na którym liczy się już nie sama moc obliczeniowa, ale także sieć, pamięć, software i łatwość wdrożenia.",
+        "W praktyce to oznacza, że konkurencja z Nvidią przesuwa się z benchmarków na architekturę całych szaf i klastrów. Jeśli AMD zdoła dowieźć skalowalność, partnerów i operacyjność na poziomie rack-scale, to łatwiej będzie sprzedawać nie tylko sprzęt, ale i całą narrację o otwartym ekosystemie.",
+        "To też dobry kontrapunkt dla dzisiejszych obaw o koszt AI. Helios jest pozycjonowany wprost przez performance per watt i cost per token, więc AMD próbuje przekonać rynek, że przewaga w AI będzie należeć do tych, którzy potrafią obniżać koszt produkcji inteligencji, a nie tylko wygrywać demo."
+      ],
+      "contextPoints": [
+        "Co się stało: AMD opisało Helios jako pełny rack-scale system AI.",
+        "Dlaczego ważne: infrastruktura AI przesuwa się z chipów do całych standardów wdrożeniowych.",
+        "Na co patrzeć dalej: pierwsze realne deploymenty partnerów i walidacja claims o TCO."
+      ],
+      "sources": [
+        {
+          "title": "AMD Newsroom",
+          "url": "https://newsroom.amd.com/press-kits/press-kit-helios-rackscale-solution/"
+        },
+        {
+          "title": "AMD Helios",
+          "url": "https://www.amd.com/en/products/rackscale-solutions/helios.html"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/23/amd-takes-on-nvidia-with-its-helios-ai-rack-scale-system/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AMD",
+        "Helios",
+        "rack-scale",
+        "GPUs",
+        "EPYC",
+        "networking"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-01-1937-1-claude-voice-mode-staje-sie-powierzchnia-pracy-2d7733327d",
+      "section": "AI",
+      "title": "Claude voice mode staje się powierzchnią pracy",
+      "standfirst": "Anthropic rozwija voice mode na web, desktop i mobile oraz podłącza do niego narzędzia pracy. Zamiast samej rozmowy dostajemy model switch, connected tools i bardziej operacyjny interfejs.",
+      "whatHappened": "Claude voice mode wchodzi w fazę pełniejszego workflow, nie tylko rozmowy.",
+      "whyItMatters": "To krok od chatbotu do asystenta, który realnie potrafi wykonywać pracę w narzędziach użytkownika.",
+      "deeperAnalysis": [
+        "Wczesne voice mode było wygodnym dodatkiem. Dzisiejsza wersja wygląda już bardziej jak wejście w codzienne operacje: użytkownik może mówić, przełączać się między tekstem a głosem i korzystać z Gmaila, Calendar, Docs czy Slacka bez wychodzenia z rozmowy.",
+        "To ważne, bo zmienia oczekiwania wobec asystenta. Nie chodzi już tylko o to, czy model dobrze rozumie prompt, ale czy potrafi utrzymać kontekst, sięgnąć do właściwego narzędzia i dokończyć zadanie w środowisku pracy. W takim układzie model picker i connected tools są równie ważne jak sam output głosowy.",
+        "Jeśli ten wzorzec się przyjmie, voice mode może stać się naturalnym interfejsem do krótszych zadań operacyjnych: sprawdzenia maila, briefingu przed spotkaniem, przygotowania draftu czy szybkiego podsumowania wątku. To dokładnie ten typ produktu, który rynek nagradza dziś bardziej niż same demo."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic rozszerzyło voice mode o web, desktop i podłączone narzędzia.",
+        "Dlaczego ważne: asystent wchodzi w codzienny workflow pracy.",
+        "Na co patrzeć dalej: enterprise controls, liczba connectorów i rzeczywista adopcja voice-first."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic Help Center",
+          "url": "https://support.claude.com/en/articles/11101966-use-voice-mode"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "Claude",
+        "voice mode",
+        "connectors",
+        "Gmail",
+        "Slack"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-01-1937-2-nowy-jork-zatrzymuje-nowe-hyperscale-data-centers-6176962493",
+      "section": "Regulacje",
+      "title": "Nowy Jork zatrzymuje nowe hyperscale data centers",
+      "standfirst": "Nowy Jork wprowadza pierwsze stanowe moratorium na nowe hyperscale data centers. Oficjalny komunikat mówi o ochronie ratepayers, sieci energetycznej, wody i lokalnych społeczności.",
+      "whatHappened": "Stan wstrzymuje nowe pozwolenia na duże centra danych na około rok.",
+      "whyItMatters": "AI infra przestaje być tylko biznesem chipów i chmury, a staje się sporem o energię, wodę i lokalną akceptację.",
+      "deeperAnalysis": [
+        "Ten ruch jest ważny nie dlatego, że New York nagle nie lubi data center. Jest ważny, bo pokazuje, że polityka zaczyna traktować ogromne instalacje AI jak infrastrukturę publiczną, a nie prywatny projekt IT. W takim modelu liczą się już nie tylko capex i landbank, ale także taryfy, permitting i lokalne koszty społeczne.",
+        "To bezpośrednio uderza w logikę \"buduj szybciej, pytaj później\". Jeśli inne stany albo kraje pójdą tą samą ścieżką, operatorzy będą musieli liczyć się z dłuższymi terminami, większą ilością konsultacji i kosztami zgodności środowiskowej. To z kolei może zmienić geografię inwestycji w AI.",
+        "Ten temat dobrze łączy się z dzisiejszymi danymi o AMD Helios i całej wojnie o TCO. Skoro infrastruktura AI ma być większa, głośniejsza i bardziej energochłonna, polityczna reakcja na poziomie stanowym staje się niemal nieunikniona."
+      ],
+      "contextPoints": [
+        "Co się stało: Nowy Jork ogłosił roczne moratorium na nowe hyperscale data centers.",
+        "Dlaczego ważne: AI data center stają się tematem ratepayer i grid policy.",
+        "Na co patrzeć dalej: jak stan zdefiniuje nowe standardy i czy inne jurysdykcje skopiują ten model."
+      ],
+      "sources": [
+        {
+          "title": "Empire State Development",
+          "url": "https://esd.ny.gov/esd-media-center/press-releases/first-statewide-moratorium-new-hyperscale-data-centers-launched"
+        },
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/14/new-york-state-halts-construction-of-all-new-data-centers/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "New York",
+        "data centers",
+        "moratorium",
+        "grid",
+        "water",
+        "AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-01-1937-3-ue-uruchamia-egzekwowanie-ai-act-dla-najmocniejszych-modeli-153ab3e81a",
+      "section": "Regulacje",
+      "title": "UE uruchamia egzekwowanie AI Act dla najmocniejszych modeli",
+      "standfirst": "Od 2 sierpnia 2026 AI Office może egzekwować obowiązki dla najbardziej zaawansowanych modeli. W grze są żądania informacji, access do ewaluacji modelu i kary do 3 procent globalnego obrotu.",
+      "whatHappened": "UE przechodzi z dialogu compliance do realnych uprawnień egzekucyjnych.",
+      "whyItMatters": "Frontier AI wchodzi w fazę formalnej odpowiedzialności regulacyjnej, nie tylko deklaracji bezpieczeństwa.",
+      "deeperAnalysis": [
+        "Najważniejsze w tej zmianie jest nie samo istnienie AI Act, tylko to, że od 2 sierpnia Komisja dostaje narzędzia, których wcześniej nie miała. Możliwość żądania informacji, dostępu do modelu na potrzeby ewaluacji oraz nakładania kar zmienia balans sił między platformami a regulatorem.",
+        "To prawdopodobnie wymusi więcej dokumentacji, więcej testów i więcej pracy nad wykazywaniem, że systemowe ryzyka są oceniane i ograniczane. Dla firm, które budują frontier models albo systemy na ich bazie, compliance przestaje być dodatkiem do launchu i zaczyna być warunkiem dostępu do rynku.",
+        "W połączeniu z nowojorskim moratorium obraz jest spójny: infrastruktura i modele są coraz mocniej osadzane w porządku publicznym. Rynek może nadal rosnąć, ale nie będzie już działał w próżni regulacyjnej."
+      ],
+      "contextPoints": [
+        "Co się stało: AI Office dostaje od 2 sierpnia narzędzia egzekwowania dla najpotężniejszych modeli.",
+        "Dlaczego ważne: frontier AI wchodzi w formalny reżim nadzoru i kar.",
+        "Na co patrzeć dalej: pierwsze wezwania do informacji i reakcje providerów."
+      ],
+      "sources": [
+        {
+          "title": "EU AI Act Service Desk",
+          "url": "https://ai-act-service-desk.ec.europa.eu/fr/node/999"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "EU",
+        "AI Act",
+        "compliance",
+        "enforcement",
+        "model evaluation",
+        "fines"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-01-1937-4-aegisai-pokazuje-jak-rynek-broni-sie-przed-ai-phishingiem-38952bbb75",
+      "section": "Cyber",
+      "title": "AegisAI pokazuje, jak rynek broni się przed AI phishingiem",
+      "standfirst": "AegisAI zebrało 36 mln USD w serii A i pozycjonuje produkt jako agentic defense against AI-driven spear phishing. Firma używa własnych agentów do analizy wiadomości, załączników i sygnałów kontekstowych.",
+      "whatHappened": "Startup bezpieczeństwa dostał świeże finansowanie i widoczny popyt na defensywę AI przeciwko AI.",
+      "whyItMatters": "To wyraźny sygnał, że ofensywa generatywna wymusza nową generację obrony inboxów i komunikacji.",
+      "deeperAnalysis": [
+        "AegisAI jest ciekawy, bo nie próbuje wygrać z phishingiem tylko regułkami typu if-then. Zamiast tego buduje własne agentowe analizy, które mają zachowywać się bardziej jak doświadczony człowiek niż jak klasyczny filtr.",
+        "To ważne, bo ataki generowane przez AI są już szybsze, bardziej spersonalizowane i trudniejsze do wykrycia przez stare heurystyki. Gdy to zestawić z rosnącą automatyzacją pracy, email staje się jednocześnie głównym kanałem produktywności i głównym kanałem nadużyć.",
+        "Jeśli AegisAI i podobne firmy dowiozą skuteczność, security stack będzie się coraz bardziej składał z agentów po obu stronach barykady. To może otworzyć kolejny rynek na integracje, policy enforcement i specjalizowane threat intel."
+      ],
+      "contextPoints": [
+        "Co się stało: AegisAI zamknęło rundę i sprzedaje AI-native email defense.",
+        "Dlaczego ważne: ataki phishingowe stają się zbyt szyte na miarę dla klasycznych filtrów.",
+        "Na co patrzeć dalej: adopcja enterprise, skuteczność na załącznikach i czy konkurenci skopiują model agentowy."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/"
+        },
+        {
+          "title": "AegisAI",
+          "url": "https://www.aegisai.ai/blog/accel-and-foundation-capital-lead-aegisai-13m-seed-fundraise"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AegisAI",
+        "phishing",
+        "email security",
+        "agents",
+        "security",
+        "startups"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-01-1937-5-hn-i-product-hunt-nagradzaja-kontrole-i-prywatnosc-befe7fca41",
+      "section": "AI",
+      "title": "HN i Product Hunt nagradzają kontrolę i prywatność",
+      "standfirst": "Dzisiejszy HN front page prowadzi Cursor cost transparency, ripgrep bug report i multiplayer agent harness, a Product Hunt AI agents board promuje privacy-first desktop copilots i governed access. To mocny sygnał, że społeczność nadal szuka narzędzi do pracy, a nie tylko modelowych pokazów.",
+      "whatHappened": "Community signal dalej premiuje workflow tooling i kontrolę nad kosztem.",
+      "whyItMatters": "To wczesny wskaźnik, w jakim kierunku użytkownicy techniczni chcą kupować i używać AI.",
+      "deeperAnalysis": [
+        "W praktyce oba feedy pokazują ten sam wzór: użytkownicy chcą widzieć koszt, mieć kontrolę i nie oddawać całego workflow bez nadzoru. Cursor, qm i Flint z HN oraz Viktor, Basedash, LangWatch czy Phantom z Product Hunt sugerują, że rynek premiuje teraz produkty oszczędzające czas, a nie tylko generujące imponujące demo.",
+        "To zbiega się z innymi sygnałami z tego dnia. Voice mode Claude, rack-scale Helios i obrona przed spear phishingiem pokazują, że AI coraz mniej przypomina pojedynczy chatbot, a coraz bardziej warstwę infrastrukturalną i operacyjną wokół realnej pracy.",
+        "Taki community signal nie jest dowodem adopcji samym w sobie, ale jest użyteczny jako wczesny filtr. Jeśli techniczni użytkownicy nagradzają koszt, prywatność i kontrolę, to jest spora szansa, że podobne cechy staną się standardem także w produktach enterprise."
+      ],
+      "contextPoints": [
+        "Co się stało: HN i Product Hunt promują narzędzia z naciskiem na cost transparency, privacy i governed access.",
+        "Dlaczego ważne: to sygnał, że rynek chce praktycznych workflowów, nie tylko modeli.",
+        "Na co patrzeć dalej: czy te launchy przełożą się na szerzej mierzalną adopcję."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News",
+          "url": "https://news.ycombinator.com/"
+        },
+        {
+          "title": "Product Hunt",
+          "url": "https://www.producthunt.com/categories/ai-agents?order=recent_launches"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Hacker News",
+        "Product Hunt",
+        "agents",
+        "privacy",
+        "workflow",
+        "cost transparency"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "AMD Helios jako odpowiedź na Nvidię",
+      "rationale": "Pokazuje, że AI infra rozgrywa się dziś na poziomie rack-scale i TCO.",
+      "sourcesLabel": "AMD Newsroom; AMD Helios; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "Claude voice mode jako powierzchnia pracy",
+      "rationale": "Voice + connectors zmieniają chatbot w narzędzie do realnych zadań.",
+      "sourcesLabel": "Anthropic Help Center; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "New York zatrzymuje nowe data centers",
+      "rationale": "Infrastruktura AI staje się sporem o sieć, wodę i lokalną zgodę.",
+      "sourcesLabel": "Empire State Development; TechCrunch"
+    },
+    {
+      "priority": "High",
+      "title": "UE zaczyna egzekwować AI Act",
+      "rationale": "Frontier models wchodzą w formalny reżim nadzoru i kar.",
+      "sourcesLabel": "EU AI Act Service Desk"
+    },
+    {
+      "priority": "High",
+      "title": "AegisAI i obrona przed spear phishingiem",
+      "rationale": "Ataki generowane przez AI wymuszają nową generację security.",
+      "sourcesLabel": "TechCrunch; AegisAI"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN i Product Hunt premiują kontrolę",
+      "rationale": "Community signal wciąż nagradza cost transparency i privacy-first tools.",
+      "sourcesLabel": "Hacker News; Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "AMD Newsroom: Press Kit: AMD Helios Rackscale Solution",
+      "url": "https://newsroom.amd.com/press-kits/press-kit-helios-rackscale-solution/"
+    },
+    {
+      "title": "AMD: AMD Helios rackscale solution",
+      "url": "https://www.amd.com/en/products/rackscale-solutions/helios.html"
+    },
+    {
+      "title": "Anthropic Help Center: Use voice mode",
+      "url": "https://support.claude.com/en/articles/11101966-use-voice-mode"
+    },
+    {
+      "title": "TechCrunch: Anthropic updates Claude voice mode with more capable models",
+      "url": "https://techcrunch.com/2026/07/23/anthropic-updates-claude-voice-mode-with-more-capable-models/"
+    },
+    {
+      "title": "Empire State Development: First Statewide Moratorium on New Hyperscale Data Centers Launched by Governor Kathy Hochul",
+      "url": "https://esd.ny.gov/esd-media-center/press-releases/first-statewide-moratorium-new-hyperscale-data-centers-launched"
+    },
+    {
+      "title": "EU AI Act Service Desk: enforcement powers for advanced models",
+      "url": "https://ai-act-service-desk.ec.europa.eu/fr/node/999"
+    },
+    {
+      "title": "TechCrunch: AegisAI raises $36M to stop AI-driven spear phishing",
+      "url": "https://techcrunch.com/2026/07/23/aegisai-founded-by-former-google-security-execs-lands-36m-to-stop-ai-driven-spear-phishing/"
+    },
+    {
+      "title": "AegisAI: $13M seed fundraise",
+      "url": "https://www.aegisai.ai/blog/accel-and-foundation-capital-lead-aegisai-13m-seed-fundraise"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "Product Hunt AI agents category",
+      "url": "https://www.producthunt.com/categories/ai-agents?order=recent_launches"
+    }
+  ]
+}

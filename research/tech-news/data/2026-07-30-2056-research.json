@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-07-30",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Wieczorny run przesuwa temat z samego „AI acts” do trzech bardziej konkretnych osi: kosztu per task, physical AI i topologii pracy w developer tools. OpenAI tnie ceny GPT-5.6 Luna i Terra, dodaje Fast mode dla Sol i wprost pozycjonuje model jako narzędzie do lepszego price-performance. To jest już nie tylko premiera modelu, ale korekta ekonomii użycia.",
+    "Równolegle Hacker News wynosi dziś na front page zarówno GPT-5.6, jak i Gemini Robotics 2 oraz stacked pull requests w GitHub Copilot app. Community signal jest więc spójny z oficjalnymi komunikatami: rynek nadal nagradza control surfaces, workflow ergonomics i embodied AI bardziej niż sam frontier hype. OpenAI dokłada do tego własne badanie task crossover, które pokazuje, że AI realnie miesza granice ról w pracy.",
+    "Najmocniejszy wniosek z wieczoru jest prosty: rynek AI zaczyna wygrywać tam, gdzie da się policzyć koszt, sprawdzić workflow i osadzić model w konkretnej akcji. To widać w pricingu OpenAI, w robotics stacku DeepMind i w GitHubowym przenoszeniu stacked PRs do Copilot app."
+  ],
+  "summaryBullets": [
+    "AI: OpenAI tnie koszt GPT-5.6 i przesuwa konkurencję na price-performance",
+    "Infrastruktura: Gemini Robotics 2 i whole-body AI wchodzą do głównego nurtu",
+    "Produkty: GitHub przenosi stacked PRs do Copilot app"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-07-30-2056-0-openai-tnie-koszt-gpt-5-6-i-przesuwa-konkurencje-na-price-performance-79d65b6855",
+      "section": "AI",
+      "title": "OpenAI tnie koszt GPT-5.6 i przesuwa konkurencję na price-performance",
+      "standfirst": "OpenAI obniża ceny GPT-5.6 Luna o 80% i Terra o 20%, a dla Sol wprowadza Fast mode z wyraźnie wyższą prędkością niż Standard processing. Firma opisuje to jako ruch na rzecz lepszego price-performance dla enterprise workloads.",
+      "whatHappened": "GPT-5.6 staje się tańszy i bardziej elastyczny operacyjnie.",
+      "whyItMatters": "To zmienia rozmowę z „kto ma najlepszy model” na „kto dowozi najlepszy koszt za efekt”.",
+      "deeperAnalysis": [
+        "OpenAI nie sprzedaje dziś samej sztuki modelowej. W komunikacie mocno akcentuje, że liczy się outcome per dollar, a nie tylko czysta jakość benchmarkowa. To ważne, bo pokazuje, że rynek frontier AI zaczyna być zarządzany jak portfel produktów o różnych profilach kosztu, szybkości i użyteczności.",
+        "Najciekawsze jest to, że OpenAI opisuje konkretne oszczędności na poziomie tasków i workflowów, a nie jedynie na poziomie tokenów. Luna ma być tania i wystarczająco mocna do pracy wysokiego wolumenu, Terra do codziennych zadań, a Sol z Fast mode do pracy, gdzie liczy się opóźnienie. To już jest architektura produktowa dla enterprise, nie tylko nowy model.",
+        "W praktyce taki ruch zwykle wywołuje dwa kolejne efekty. Po pierwsze, klienci zaczynają przenosić więcej wolumenu do tańszego modelu i zostawiać droższy wariant tylko dla trudnych przypadków. Po drugie, konkurenci muszą odpowiedzieć nie tylko capability, ale też ceną, quota i routingiem."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI obniża ceny GPT-5.6 Luna i Terra oraz dodaje Fast mode dla Sol.",
+        "Dlaczego ważne: price-performance staje się główną osią konkurencji.",
+        "Na co patrzeć dalej: adoption w ChatGPT Work, Codex i API oraz reakcja konkurentów."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI price-performance frontier",
+          "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "GPT-5.6",
+        "pricing",
+        "Codex",
+        "ChatGPT Work",
+        "efficiency"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-30-2056-1-gemini-robotics-2-i-whole-body-ai-wchodza-do-glownego-nurtu-5938baf316",
+      "section": "Infrastruktura",
+      "title": "Gemini Robotics 2 i whole-body AI wchodzą do głównego nurtu",
+      "standfirst": "Dzisiejszy Hacker News stawia Gemini Robotics 2 bardzo wysoko, a aktualny DeepMind stack pokazuje pełny kierunek w stronę embodied AI, on-device robotics i warstwy safety. To sygnał, że physical AI zaczyna być traktowane jak osobna kategoria produktu i infrastruktury.",
+      "whatHappened": "Whole-body robotics trafia na główny radar społeczności technicznej.",
+      "whyItMatters": "Roboty przestają wyglądać jak demonstracje i coraz bardziej jak kolejny obszar productization AI.",
+      "deeperAnalysis": [
+        "Hacker News nie promuje tu tylko ładnej robotycznej premiery. Promuje sygnał, że physical AI stało się wystarczająco konkretne, by zainteresować szeroką publiczność techniczną. To ważne, bo HN zwykle nie nagradza abstrakcyjnych deklaracji, tylko rzeczy, które da się wyobrazić jako realny workflow lub realny produkt.",
+        "Równolegle publiczny DeepMind stack pokazuje, że Google od dłuższego czasu buduje zestaw modeli i zabezpieczeń pod roboty różnych kształtów i zastosowań. To nie jest jednorazowy demo post, tylko konsekwentna warstwa od embodied reasoning po on-device execution i safety framework.",
+        "Jeśli ten kierunek przejdzie z researchu do partnerstw i wdrożeń, physical AI będzie coraz mniej wyglądać jak osobna, egzotyczna gałąź robotyki, a coraz bardziej jak nowe środowisko uruchomieniowe dla modeli. Wtedy główne pytania przesuną się z „czy robot potrafi wykonać task” na „jak jest bezpieczny, czy działa lokalnie i czy da się go certyfikować”."
+      ],
+      "contextPoints": [
+        "Co się stało: HN wynosi Gemini Robotics 2 wysoko, a DeepMind utrzymuje aktywny robotics stack.",
+        "Dlaczego ważne: physical AI staje się mainstreamowym sygnałem, nie niszową prezentacją.",
+        "Na co patrzeć dalej: oficjalny komunikat o wersji 2, partnerzy, on-device deployment i safety docs."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News front page",
+          "url": "https://news.ycombinator.com/"
+        },
+        {
+          "title": "Google DeepMind robotics",
+          "url": "https://deepmind.google/models/gemini-robotics/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google DeepMind",
+        "Gemini Robotics",
+        "robotics",
+        "whole-body intelligence",
+        "embodied AI",
+        "physical AI"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-30-2056-2-github-przenosi-stacked-prs-do-copilot-app-c1f6b8dfc5",
+      "section": "Produkty",
+      "title": "GitHub przenosi stacked PRs do Copilot app",
+      "standfirst": "GitHub publikuje dziś materiał o stacked sessions i stacked pull requests w GitHub Copilot app. Artykuł pokazuje, że review topology i kolejność zmian stają się częścią samego produktu AI dla deweloperów.",
+      "whatHappened": "GitHub zamienia zależne zmiany w formalny, opisany workflow Copilot app.",
+      "whyItMatters": "To przesuwa AI z roli pomocnika do roli organizatora procesu shipowania kodu.",
+      "deeperAnalysis": [
+        "Stacked PRs są ważne nie dlatego, że brzmią sprytnie, tylko dlatego, że rozwiązują stary problem współpracy przy dużych zmianach. Zamiast jednego wielkiego pull requestu z ryzykiem chaosu, dostajesz łańcuch mniejszych kroków, które da się reviewować, zatwierdzać i zamykać po kolei.",
+        "To dobrze pasuje do obecnego rynku AI coding. Coraz mniej chodzi o to, żeby model sam napisał cały feature, a coraz bardziej o to, żeby model umiał prowadzić zespół przez plan, iterację, zależności i review. W tym sensie GitHub pokazuje bardziej dojrzałą formę agentic coding niż sam prompt-to-code.",
+        "Jeśli ta funkcja się przyjmie, może w praktyce zmienić standard pracy nad dużymi refactorami i modernizacjami. Dla zespołów będzie to też test, czy Copilot staje się integralnym elementem procesu code review, a nie tylko dodatkiem do edytora."
+      ],
+      "contextPoints": [
+        "Co się stało: GitHub opisuje stacked sessions i stacked pull requests w Copilot app.",
+        "Dlaczego ważne: workflow review staje się częścią produktu AI.",
+        "Na co patrzeć dalej: adopcja w zespołach, integracja z repo workflow i copycaty."
+      ],
+      "sources": [
+        {
+          "title": "GitHub Blog",
+          "url": "https://github.blog/ai-and-ml/github-copilot/stacked-sessions-and-pull-requests-in-the-github-copilot-app/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "GitHub",
+        "Copilot",
+        "pull requests",
+        "stacked PRs",
+        "developer workflow",
+        "collaboration"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-30-2056-3-openai-pokazuje-ze-ai-rozchodzi-sie-poza-granice-rol-eaca4d1c02",
+      "section": "AI",
+      "title": "OpenAI pokazuje, że AI rozchodzi się poza granice ról",
+      "standfirst": "OpenAI publikuje nową analizę work crossover i pokazuje, że 43.5% wiadomości związanych z konkretną rolą wykracza poza jej granice. To ilościowy sygnał, że AI już miesza zakresy obowiązków między zawodami.",
+      "whatHappened": "OpenAI mierzy realne przesunięcie zadań między rolami.",
+      "whyItMatters": "Zmienia się nie tylko wydajność, ale też sama architektura pracy.",
+      "deeperAnalysis": [
+        "Najważniejsze w tym badaniu jest to, że OpenAI nie próbuje opisać przyszłości na podstawie abstrakcyjnych benchmarków. Firma patrzy na realne wiadomości użytkowników i pokazuje, że spora część pracy AI wychodzi poza klasyczne granice stanowisk. To dużo lepszy sygnał niż deklaracje o „productivity boost”.",
+        "W praktyce oznacza to, że AI staje się narzędziem do rozmywania podziałów między funkcjami. Customer experience zaczyna robić elementy analityki, marketing bierze na siebie techniczne troubleshooting, a małe firmy mogą wykonywać zadania, które wcześniej wymagały osobnych specjalistów. To jest już nie tylko automatyzacja, ale reorganizacja pracy.",
+        "To badanie dobrze domyka dzisiejszy obraz rynku, bo łączy się z pricingiem GPT-5.6 i z Copilotowym workflow GitHuba. Modele stają się tańsze, workflow bardziej kontrolowalne, a podział zadań coraz mniej sztywny. To właśnie ten miks będzie decydował o tym, które firmy przyspieszą, a które utkną w starych granicach ról."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI mierzy 43.5% task crossover poza granice roli.",
+        "Dlaczego ważne: AI zaczyna przestawiać sam podział pracy w organizacjach.",
+        "Na co patrzeć dalej: czy firmy użyją tego języka w procurement i HR."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI work crossover",
+          "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "OpenAI",
+        "work crossover",
+        "economic research",
+        "jobs",
+        "tasks",
+        "productivity"
+      ]
+    },
+    {
+      "id": "tech-news-2026-07-30-2056-4-hacker-news-premiuje-cost-performance-robotics-i-workflow-tooling-4bd4b643f3",
+      "section": "Produkty",
+      "title": "Hacker News premiuje cost/performance, robotics i workflow tooling",
+      "standfirst": "Dzisiejszy HN front page pokazuje GPT-5.6, Gemini Robotics 2 i stacked pull requests wśród najlepiej ocenianych wątków. To bardzo czytelny sygnał, że społeczność techniczna przesuwa uwagę na koszt, embodied AI i narzędzia do pracy.",
+      "whatHappened": "Community signal dziś układa się dokładnie wokół control surfaces.",
+      "whyItMatters": "To zwykle pierwszy publiczny wskaźnik, gdzie rynek szuka realnej użyteczności.",
+      "deeperAnalysis": [
+        "HN nie działa jak rynek adopcji, ale świetnie pokazuje, co w danym momencie przyciąga uwagę technicznych użytkowników. Dzisiaj na froncie są nie benchmarkowe fajerwerki, tylko cena, roboty i review workflow. To pasuje do wcześniejszych sygnałów o control-first AI i potwierdza, że hype sam z siebie już nie wystarcza.",
+        "Warto też zauważyć, że zestaw ten nie jest przypadkowy. GPT-5.6 mówi o ekonomii użycia, Gemini Robotics o physical AI, a stacked PRs o organizacji pracy dewelopera. Razem tworzą obraz rynku, w którym AI przechodzi z ogólnej obietnicy do konkretnych powierzchni działania.",
+        "Taki układ zwykle poprzedza kolejną falę produktów copycatowych. Gdy community skupia się na kosztach, robotyce i workflow, firmy zaczynają masowo kopiować właśnie te warstwy, a nie samą narrację o modelach."
+      ],
+      "contextPoints": [
+        "Co się stało: HN front page promuje GPT-5.6, Gemini Robotics 2 i GitHub stacked PRs.",
+        "Dlaczego ważne: uwaga społeczności przesuwa się na praktyczne control surfaces.",
+        "Na co patrzeć dalej: czy Product Hunt i inne community pokażą ten sam miks."
+      ],
+      "sources": [
+        {
+          "title": "Hacker News front page",
+          "url": "https://news.ycombinator.com/"
+        }
+      ],
+      "priority": "Medium",
+      "tags": [
+        "Hacker News",
+        "GPT-5.6",
+        "Gemini Robotics",
+        "GitHub",
+        "community signal",
+        "workflow"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "OpenAI tnie koszt GPT-5.6",
+      "rationale": "Cena, prędkość i quota rules zaczynają wyznaczać realną konkurencję modeli.",
+      "sourcesLabel": "OpenAI price-performance frontier"
+    },
+    {
+      "priority": "High",
+      "title": "Gemini Robotics 2 i physical AI",
+      "rationale": "Whole-body AI wychodzi z researchu i trafia do głównego nurtu technicznego.",
+      "sourcesLabel": "Hacker News; Google DeepMind robotics"
+    },
+    {
+      "priority": "High",
+      "title": "GitHub robi stacking częścią Copilot",
+      "rationale": "Review topology staje się produktem AI, nie tylko praktyką zespołową.",
+      "sourcesLabel": "GitHub Blog"
+    },
+    {
+      "priority": "High",
+      "title": "AI zaczyna mieszać role zawodowe",
+      "rationale": "OpenAI pokazuje ilościowo, że task crossover już się dzieje.",
+      "sourcesLabel": "OpenAI work crossover"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN premiuje control-first AI",
+      "rationale": "Community signal dziś wzmacnia cost/performance, robotics i workflow tooling.",
+      "sourcesLabel": "Hacker News"
+    },
+    {
+      "priority": "Medium",
+      "title": "Co to znaczy dla enterprise AI",
+      "rationale": "Mniej hype, więcej routing, workflow i pricing.",
+      "sourcesLabel": "OpenAI; GitHub; HN"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "OpenAI: Advancing the price-performance frontier with GPT-5.6",
+      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
+    },
+    {
+      "title": "OpenAI: How AI is expanding what people do at work",
+      "url": "https://openai.com/index/how-ai-is-expanding-what-people-do-at-work/"
+    },
+    {
+      "title": "Google DeepMind news",
+      "url": "https://deepmind.google/blog/"
+    },
+    {
+      "title": "Google DeepMind: Gemini Robotics",
+      "url": "https://deepmind.google/models/gemini-robotics/"
+    },
+    {
+      "title": "GitHub Blog: Stacked sessions and pull requests in the GitHub Copilot app",
+      "url": "https://github.blog/ai-and-ml/github-copilot/stacked-sessions-and-pull-requests-in-the-github-copilot-app/"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/"
+    }
+  ]
+}

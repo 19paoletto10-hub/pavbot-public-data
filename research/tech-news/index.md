@@ -1,8 +1,22 @@
 # Topic Index: tech-news
 
-Last updated: 2026-07-30
+Last updated: 2026-08-03
 
 ## Current Understanding
+
+Poranny run z 2026-08-03 dodaje nowy, wyraźny zwrot ku rollbackom i kontroli zaufania. Google cofa generowanie obrazów w Earth po sygnałach o nadużyciach, Chrome zamienia AI w część operacyjnego security ops z 1,072 naprawionymi błędami i pilotażem dwóch security release'ów tygodniowo, Qwen3.8-Max wzmacnia chińską presję na frontier, a Pacing the Frontier i Cyera/Oasis pokazują, że governance i non-human identity wchodzą już do głównego nurtu rynku.
+
+Kapitał i community signal idą w tym samym kierunku. Index Ventures dokłada 3,5 mld USD dry powder, Product Hunt nadal premiuje browser agents, MCP i workflow tooling, a Hacker News utrzymuje Qwen3.8-Max i kwestie governance/security wysoko na froncie. To razem wzmacnia obraz rynku, w którym wygrają kontrolowane surfaces, a nie tylko kolejne demo modeli.
+
+Wieczorny run z 2026-08-02 przesuwa temat z samego AI-capexu na platform consolidation, enforcement i eval-security: Google skleja AI Studio z Gemini oraz Spark z Chrome, Snap ogranicza czysto AI-generated wideo w Spotlight, UE zaczyna egzekwować AI Act i otwiera AI Gigafactories, DOE pcha Paducah w stronę 1.8 GW AI/HPC campus, a OpenAI i Anthropic publikują realne incydenty z testów. To wzmacnia tezę, że rynek przechodzi od model hype'u do kontroli surface'ów, oznaczeń treści i operacyjnego bezpieczeństwa.
+
+Wieczorny run z 2026-08-01 przesuwa temat dalej w stack: AMD Helios potwierdza, że wyścig AI coraz bardziej rozgrywa się na poziomie rack-scale systemów, otwartych standardów i kosztu wdrożenia; Anthropic zamienia Claude voice mode w pełniejszą powierzchnię pracy z modelem, web/desktop i connected tools; a New York i UE dokładają twardą warstwę permittingu oraz egzekwowania dla data centers i frontier models. HN i Product Hunt nadal premiują koszt, kontrolę i privacy-first workflowy, więc rynek nagradza narzędzia redukujące koszt pracy i ryzyko operacyjne, nie tylko demo capability.
+
+Poranny run z 2026-08-01 przesuwa temat z samych premier modeli do kosztu, pamięci, hardware i browser security. Apple raportuje mocny kwartał, ale guidance na kolejny okres słabnie przez supply constraints i droższą pamięć napędzaną popytem AI; Meta podbija capex floor i stawia na personal AI agents; Amazon zwiększa tech spend po mocnym AWS; a OpenAI mówi już o rodzinie urządzeń i pracy nad Gitem dla dużych repozytoriów. Chrome z kolei przechodzi na szybsze łatanie, bo AI przyspiesza wykrywanie błędów.
+
+Community signal nadal premiuje workflow tooling i security. HN dziś wynosi na front OpenAI Git, Chrome AI bug hunting i Flint, a Product Hunt AI agents pokazuje privacy-first desktop copilots, vertical workflow automation i governed access. To wzmacnia tezę, że rynek schodzi z model hype'u do narzędzi, które redukują koszt pracy, patchowania i review.
+
+Wieczorny run z 2026-07-30 dokłada do osi cost/control trzy świeże sygnały. OpenAI tnie ceny GPT-5.6 Luna o 80% i Terra o 20%, wprowadza Fast mode dla Sol i coraz wyraźniej pozycjonuje model jako price-performance engine dla enterprise workloads. Hacker News wynosi dziś wysoko Gemini Robotics 2, GPT-5.6 i stacked pull requests w GitHub Copilot app, więc community signal jest spójny: rynek nadal nagradza cost/performance, embodied AI i workflow ergonomics bardziej niż sam frontier hype.
 
 Poranny run z 2026-07-30 przesuwa temat z samego governance do konkretnych surfaces, które dowożą działanie i kontrolę. Meta AI zaczyna planować, łączyć się z pocztą i kalendarzem, generować slajdy i wykonywać zadania w imieniu użytkownika, Meta dokłada provenance i transparentność dla treści AI, Microsoft zamienia security w agentowy cyber stack, Cursor lokalizuje agentic coding dla Indii, a open-weight ledger rośnie do 109 podpisów. To wzmacnia obraz rynku, w którym model frontowy jest już tylko jednym z elementów szerszego systemu dystrybucji, compliance i operacji.
 
@@ -262,6 +276,7 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-07-30: OpenAI tnie ceny GPT-5.6 i dodaje Fast mode; HN promuje Gemini Robotics 2 i stacked PRs, więc wieczór domyka się wokół price/performance, physical AI i workflow topology.
 - 2026-07-29: Pacing the Frontier, OpenAI task crossover/scientific computing i Seagate FY26 results przesuwają temat w stronę governance, reorganizacji pracy i storage demand; HN/PH nadal premiują control-first tooling.
 - 2026-07-28 evening: Apple Upgrade, Meta/BlackRock El Paso, Recursive/AWS compute deal i PJM curtailment dodały do osi finansowanie urządzeń, infra finance i grid constraints.
 - 2026-07-28: Open Secure AI Alliance, OpenAI/Hugging Face postmortem, Anthropic open-weights stance i Microsoft Project Perception ustawiają security/open weights jako główną oś dnia; report o Nvidii i Hut 8 oraz granty Meta utrzymują wątek infra i wearables.
@@ -641,6 +656,7 @@ transparentność środowiskową AI.
 
 ## Recent Reports
 
+- [2026-08-03](runs/2026-08-03.md)
 - [2026-07-12-1933](runs/2026-07-12-1933.md)
 - [2026-07-12](runs/2026-07-12.md)
 - [2026-07-11](runs/2026-07-11.md)
