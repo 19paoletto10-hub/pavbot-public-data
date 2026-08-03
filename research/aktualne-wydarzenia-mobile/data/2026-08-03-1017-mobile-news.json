@@ -1,0 +1,340 @@
+{
+  "schemaVersion": 1,
+  "topic": "aktualne-wydarzenia-mobile",
+  "runDate": "2026-08-03",
+  "runTime": "10:17",
+  "status": "Material update",
+  "headline": "Polska nadal siedzi w układzie burze, upał i susza hydrologiczna, a rząd przedłuża wysoką gotowość bezpieczeństwa do końca sierpnia.",
+  "leadParagraphs": [
+    "Polska nadal siedzi w układzie burze, upał i susza hydrologiczna, a rząd przedłuża wysoką gotowość bezpieczeństwa do końca sierpnia.",
+    "W Europie pożary nie schodzą z afisza: ciężar przesuwa się na Grecję, a Francja nadal trzyma rozgrzane ogniska i nie domyka sezonu.",
+    "Za granicą do briefu dochodzą też Gaza i Moskwa, bo oba wątki podbijają napięcie bezpieczeństwa i dyplomacji."
+  ],
+  "checkedSources": [
+    {
+      "title": "RCB: Raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "RCB: Przedłużenie obowiązywania stopni alarmowych do 31 sierpnia 2026 r.",
+      "url": "https://www.gov.pl/web/rcb/przedluzenie-obowiazywania-stopni-alarmowych-do-31-sierpnia-2026-r"
+    },
+    {
+      "title": "IMGW-PIB: Prognoza pogody na tydzień 31.07-06.08.2026",
+      "url": "https://imgw.pl/prognoza-pogody-na-tydzien-31-07-06-08-2026/"
+    },
+    {
+      "title": "AP: Water-dropping aircraft take off to tackle major Greek wildfire",
+      "url": "https://apnews.com/article/greece-france-wildfires-helicopter-crash-evacuations-65e96b9346f28b32ac00cb7c27129bb4"
+    },
+    {
+      "title": "AP: Israel says it has serious concerns with Gaza deal",
+      "url": "https://apnews.com/article/gaza-trump-israel-hamas-palestinians-disarmament-deal-72b1493ca75bb9d4cf195f325d8dc425"
+    },
+    {
+      "title": "AP: Moscow mayor Sergei Sobyanin condemns deadly restaurant attack",
+      "url": "https://apnews.com/article/russia-moscow-restaurant-explosion-27c6ca232a189daa718a4d1596326a87"
+    },
+    {
+      "title": "Komisja Europejska: Commission starts enforcing AI Act rules and new transparency requirements on 2 August",
+      "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+    },
+    {
+      "title": "AP: EU begins crackdown on AI risks",
+      "url": "https://apnews.com/article/eu-ai-regulation-deepfakes-hacking-f4fcee1f9750e2b32cdf26ad73ee5ec2"
+    },
+    {
+      "title": "Ministerstwo Cyfryzacji: Ruszył przetarg na Gigafabryki AI",
+      "url": "https://www.gov.pl/web/cyfryzacja/ruszyl-przetarg-na-gigafabryki-ai--wazna-informacja-dla-przyszlych-konsorcjow"
+    }
+  ],
+  "sections": [
+    {
+      "id": "ogolne",
+      "title": "Ogólne",
+      "summary": "Dziś nie ma jednego wspólnego nagłówka dla całego świata. Najmocniej świecą pożary, Gaza i AI, czyli trzy różne fronty ryzyka, które razem pokazują raczej napięcie niż spokój.",
+      "articles": [
+        {
+          "id": "ogolne-1-europa-nadal-paci-cene-za-pozary",
+          "section": "Ogólne",
+          "title": "Europa nadal płaci cenę za pożary",
+          "lead": "Europejski sezon pożarowy nie znika. On po prostu przesuwa ciężar z jednego miejsca na drugie.",
+          "facts": [
+            "AP podaje, że pożar na zachód od Aten wymusił użycie pięciu samolotów gaśniczych i pięciu śmigłowców, a ponad tysiąc osób ewakuowano.",
+            "Ten sam materiał AP przypomina, że francuski megapożar w Gironde nadal ma gorące ogniska i angażuje niemal 3 tysiące strażaków."
+          ],
+          "analysis": "To już nie jest pojedynczy pożar sezonu, tylko fala, która jednocześnie testuje logistykę, ewakuacje i odporność służb.",
+          "whyItMatters": "Gdy ogień przechodzi z lokalnego incydentu w systemowe obciążenie, każdy kolejny dzień ma większy koszt niż poprzedni.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/greece-france-wildfires-helicopter-crash-evacuations-65e96b9346f28b32ac00cb7c27129bb4"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Europejski sezon pożarowy nie znika. On po prostu przesuwa ciężar z jednego miejsca na drugie. AP podaje, że pożar na zachód od Aten wymusił użycie pięciu samolotów gaśniczych i pięciu śmigłowców, a ponad tysiąc osób ewakuowano. Ten sam materiał AP przypomina, że francuski megapożar w Gironde nadal ma gorące ogniska i angażuje niemal 3 tysiące strażaków. To już nie jest pojedynczy pożar sezonu, tylko fala, która jednocześnie testuje logistykę, ewakuacje i odporność służb. Gdy ogień przechodzi z lokalnego incydentu w systemowe obciążenie, każdy kolejny dzień ma większy koszt niż poprzedni.",
+          "priority": "High"
+        },
+        {
+          "id": "ogolne-2-gaza-nadal-nie-ma-prostego-wyjscia",
+          "section": "Ogólne",
+          "title": "Gaza nadal nie ma prostego wyjścia",
+          "lead": "Plan rozbrojenia Hamasu brzmi jak kierunek, ale na razie nadal nie brzmi jak rozwiązanie.",
+          "facts": [
+            "AP pisze, że Izrael ma poważne zastrzeżenia do planu, a Hamas deklaruje gotowość do rozbrojenia, choć proces ma wiele warunków.",
+            "Ten sam materiał AP wskazuje, że izraelskie naloty nadal trwają i zabiły co najmniej 17 osób."
+          ],
+          "analysis": "To bardziej szkic końca wojny niż twardy punkt zwrotny, bo największy problem nadal leży w weryfikacji, harmonogramie i zaufaniu.",
+          "whyItMatters": "Bez realnego mechanizmu wykonania nawet mocne deklaracje mogą zostać tylko politycznym nagłówkiem.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/gaza-trump-israel-hamas-palestinians-disarmament-deal-72b1493ca75bb9d4cf195f325d8dc425"
+            }
+          ],
+          "tags": [
+            "Ogólne"
+          ],
+          "ttsText": "Plan rozbrojenia Hamasu brzmi jak kierunek, ale na razie nadal nie brzmi jak rozwiązanie. AP pisze, że Izrael ma poważne zastrzeżenia do planu, a Hamas deklaruje gotowość do rozbrojenia, choć proces ma wiele warunków. Ten sam materiał AP wskazuje, że izraelskie naloty nadal trwają i zabiły co najmniej 17 osób. To bardziej szkic końca wojny niż twardy punkt zwrotny, bo największy problem nadal leży w weryfikacji, harmonogramie i zaufaniu. Bez realnego mechanizmu wykonania nawet mocne deklaracje mogą zostać tylko politycznym nagłówkiem.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polska",
+      "title": "Polska",
+      "summary": "W kraju dzień dalej prowadzą pogoda i bezpieczeństwo. To nie jest czas na wielki partyjny zwrot, tylko na pilnowanie gotowości, wody i lokalnych skutków upału.",
+      "articles": [
+        {
+          "id": "polska-1-burze-upa-i-susza-nadal-sciskaja-kraj",
+          "section": "Polska",
+          "title": "Burze, upał i susza nadal ściskają kraj",
+          "lead": "Polska nadal żyje w trybie pogodowego przeciążenia.",
+          "facts": [
+            "RCB pokazuje burze w śląskim, małopolskim i podkarpackim oraz upał do 37°C w części południowo-wschodniej kraju.",
+            "Ten sam raport RCB utrzymuje suszę hydrologiczną w całym kraju i wskazuje 22 pożary lasów w ostatniej dobie."
+          ],
+          "analysis": "To pakiet ryzyka, który uderza równocześnie w służby, mieszkańców i lokalną infrastrukturę.",
+          "whyItMatters": "W praktyce to właśnie takie połączenie alertów najczęściej zamienia news w codzienny problem.",
+          "sources": [
+            {
+              "title": "RCB",
+              "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Polska nadal żyje w trybie pogodowego przeciążenia. RCB pokazuje burze w śląskim, małopolskim i podkarpackim oraz upał do 37°C w części południowo-wschodniej kraju. Ten sam raport RCB utrzymuje suszę hydrologiczną w całym kraju i wskazuje 22 pożary lasów w ostatniej dobie. To pakiet ryzyka, który uderza równocześnie w służby, mieszkańców i lokalną infrastrukturę. W praktyce to właśnie takie połączenie alertów najczęściej zamienia news w codzienny problem.",
+          "priority": "High"
+        },
+        {
+          "id": "polska-2-imgw-nie-obiecuje-szybkiej-ulgi",
+          "section": "Polska",
+          "title": "IMGW nie obiecuje szybkiej ulgi",
+          "lead": "Weekendowe opady nie wyglądają na lekarstwo na suszę.",
+          "facts": [
+            "IMGW-PIB ocenia, że burzowe opady mogą dawać lokalne wahania i wezbrania stanu wody.",
+            "Ten sam komunikat IMGW zaznacza, że te opady nie poprawią sytuacji hydrologicznej w kontekście suszy."
+          ],
+          "analysis": "To znaczy, że krótkie ulewy mogą dać szum na mapie, ale nie zdejmują kraju z dłuższego problemu z wodą.",
+          "whyItMatters": "Hydrologia nie lubi marketingowych skrótów, a mieszkańcy szybciej zauważają suszę niż prognozę.",
+          "sources": [
+            {
+              "title": "IMGW-PIB",
+              "url": "https://imgw.pl/prognoza-pogody-na-tydzien-31-07-06-08-2026/"
+            }
+          ],
+          "tags": [
+            "Polska"
+          ],
+          "ttsText": "Weekendowe opady nie wyglądają na lekarstwo na suszę. IMGW-PIB ocenia, że burzowe opady mogą dawać lokalne wahania i wezbrania stanu wody. Ten sam komunikat IMGW zaznacza, że te opady nie poprawią sytuacji hydrologicznej w kontekście suszy. To znaczy, że krótkie ulewy mogą dać szum na mapie, ale nie zdejmują kraju z dłuższego problemu z wodą. Hydrologia nie lubi marketingowych skrótów, a mieszkańcy szybciej zauważają suszę niż prognozę.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "polityka",
+      "title": "Polityka",
+      "summary": "W polityce krajowej nie pojawił się dziś nowy wielki spór. Najmocniejszy ruch ma charakter bezpieczeństwa i administracji, a nie partyjnego przełomu.",
+      "articles": [
+        {
+          "id": "polityka-1-rzad-trzyma-wysoki-rezim-gotowosci",
+          "section": "Polityka",
+          "title": "Rząd trzyma wysoki reżim gotowości",
+          "lead": "Najmocniejszy dzisiejszy sygnał polityczny ma formę zarządzenia, nie konferencji.",
+          "facts": [
+            "RCB informuje, że premier przedłużył obowiązywanie stopni alarmowych do 31 sierpnia.",
+            "Ten sam komunikat RCB utrzymuje stopień CHARLIE na liniach kolejowych oraz stopień BRAVO na terenie całego kraju."
+          ],
+          "analysis": "To polityka bezpieczeństwa rozumiana bardzo dosłownie, jako utrzymanie reżimu gotowości.",
+          "whyItMatters": "Takie decyzje nie zawsze robią hałas, ale realnie ustawiają sposób działania państwa.",
+          "sources": [
+            {
+              "title": "RCB",
+              "url": "https://www.gov.pl/web/rcb/przedluzenie-obowiazywania-stopni-alarmowych-do-31-sierpnia-2026-r"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "Najmocniejszy dzisiejszy sygnał polityczny ma formę zarządzenia, nie konferencji. RCB informuje, że premier przedłużył obowiązywanie stopni alarmowych do 31 sierpnia. Ten sam komunikat RCB utrzymuje stopień CHARLIE na liniach kolejowych oraz stopień BRAVO na terenie całego kraju. To polityka bezpieczeństwa rozumiana bardzo dosłownie, jako utrzymanie reżimu gotowości. Takie decyzje nie zawsze robią hałas, ale realnie ustawiają sposób działania państwa.",
+          "priority": "High"
+        },
+        {
+          "id": "polityka-2-brak-materialnej-zmiany-w-krajowym-sporze-partyjnym",
+          "section": "Polityka",
+          "title": "Brak materialnej zmiany w krajowym sporze partyjnym",
+          "lead": "W oficjalnym przeglądzie dnia nie pojawił się nowy polityczny zwrot, który przebiłby temat bezpieczeństwa.",
+          "facts": [
+            "RCB i IMGW-PIB nadal definiują krajowy rytm dnia przez pogodę, suszę i alerty.",
+            "RCB pokazuje, że publiczny ciężar nadal leży po stronie gotowości państwa, a nie nowego partyjnego konfliktu."
+          ],
+          "analysis": "To jest uczciwy brak materialnej zmiany, nie brak informacji. Brief nie powinien zamieniać tła w fałszywy przełom.",
+          "whyItMatters": "Dobra selekcja chroni raport przed sztucznym pompowaniem krajowej polityki.",
+          "sources": [
+            {
+              "title": "RCB",
+              "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+            },
+            {
+              "title": "IMGW-PIB",
+              "url": "https://imgw.pl/prognoza-pogody-na-tydzien-31-07-06-08-2026/"
+            },
+            {
+              "title": "RCB",
+              "url": "https://www.gov.pl/web/rcb/przedluzenie-obowiazywania-stopni-alarmowych-do-31-sierpnia-2026-r"
+            }
+          ],
+          "tags": [
+            "Polityka"
+          ],
+          "ttsText": "W oficjalnym przeglądzie dnia nie pojawił się nowy polityczny zwrot, który przebiłby temat bezpieczeństwa. RCB i IMGW-PIB nadal definiują krajowy rytm dnia przez pogodę, suszę i alerty. RCB pokazuje, że publiczny ciężar nadal leży po stronie gotowości państwa, a nie nowego partyjnego konfliktu. To jest uczciwy brak materialnej zmiany, nie brak informacji. Brief nie powinien zamieniać tła w fałszywy przełom. Dobra selekcja chroni raport przed sztucznym pompowaniem krajowej polityki.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "sprawy-zagraniczne",
+      "title": "Sprawy zagraniczne",
+      "summary": "Poza krajem są dziś dwa głośne punkty: Grecja i Moskwa. Oba przypominają, że bezpieczeństwo w Europie to bardzo konkretne zdarzenia, a nie abstrakcyjny temat.",
+      "articles": [
+        {
+          "id": "sprawy-zagraniczne-1-grecja-wchodzi-w-najtrudniejszy-odcinek-sezonu",
+          "section": "Sprawy zagraniczne",
+          "title": "Grecja wchodzi w najtrudniejszy odcinek sezonu",
+          "lead": "Pożar pod Atenami wymusza kolejne ruchy ratownicze, a temperatura nadal nie pomaga.",
+          "facts": [
+            "AP podaje, że do walki z ogniem ruszyło pięć samolotów gaśniczych i pięć śmigłowców.",
+            "Ten sam materiał AP mówi o ponad tysiącu ewakuowanych, w tym ponad 250 osobach zabranych drogą morską."
+          ],
+          "analysis": "To wygląda jak faza, w której nawet częściowe opanowanie frontu nie oznacza spadku ryzyka.",
+          "whyItMatters": "Kiedy pożar zaczyna kosztować także ratowników, cały sezon dostaje wyższą rangę polityczną i operacyjną.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/greece-france-wildfires-helicopter-crash-evacuations-65e96b9346f28b32ac00cb7c27129bb4"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Pożar pod Atenami wymusza kolejne ruchy ratownicze, a temperatura nadal nie pomaga. AP podaje, że do walki z ogniem ruszyło pięć samolotów gaśniczych i pięć śmigłowców. Ten sam materiał AP mówi o ponad tysiącu ewakuowanych, w tym ponad 250 osobach zabranych drogą morską. To wygląda jak faza, w której nawet częściowe opanowanie frontu nie oznacza spadku ryzyka. Kiedy pożar zaczyna kosztować także ratowników, cały sezon dostaje wyższą rangę polityczną i operacyjną.",
+          "priority": "High"
+        },
+        {
+          "id": "sprawy-zagraniczne-2-moskwa-ma-nowy-punkt-napiecia",
+          "section": "Sprawy zagraniczne",
+          "title": "Moskwa ma nowy punkt napięcia",
+          "lead": "Wybuch w restauracji w centrum Moskwy podbił ton rosyjskich służb i mediów.",
+          "facts": [
+            "AP relacjonuje, że atak zabił trzy osoby i ranił co najmniej 21.",
+            "Ten sam materiał AP podaje, że mer Moskwy nazwał zdarzenie brutalnym aktem terroru, a śledztwo trwa."
+          ],
+          "analysis": "Niezależnie od sprawcy, takie wydarzenie szybko wchodzi do szerszej gry o bezpieczeństwo i narrację.",
+          "whyItMatters": "Incydenty tego typu często mają dłuższy ogon polityczny niż sam wybuch.",
+          "sources": [
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/russia-moscow-restaurant-explosion-27c6ca232a189daa718a4d1596326a87"
+            }
+          ],
+          "tags": [
+            "Sprawy zagraniczne"
+          ],
+          "ttsText": "Wybuch w restauracji w centrum Moskwy podbił ton rosyjskich służb i mediów. AP relacjonuje, że atak zabił trzy osoby i ranił co najmniej 21. Ten sam materiał AP podaje, że mer Moskwy nazwał zdarzenie brutalnym aktem terroru, a śledztwo trwa. Niezależnie od sprawcy, takie wydarzenie szybko wchodzi do szerszej gry o bezpieczeństwo i narrację. Incydenty tego typu często mają dłuższy ogon polityczny niż sam wybuch.",
+          "priority": "High"
+        }
+      ]
+    },
+    {
+      "id": "technologia",
+      "title": "Technologia",
+      "summary": "Technologia dziś nie żyje wyłącznie zapowiedzią. Bruksela wzmacnia nadzór, a Polska wchodzi w przetarg o moc obliczeniową.",
+      "articles": [
+        {
+          "id": "technologia-1-bruksela-wzmacnia-egzekwowanie-ai-act",
+          "section": "Technologia",
+          "title": "Bruksela wzmacnia egzekwowanie AI Act",
+          "lead": "Komisja nie tylko zaczęła egzekwować przepisy, ale też buduje własny aparat nadzoru.",
+          "facts": [
+            "Komisja Europejska potwierdza, że od 2 sierpnia AI Office i krajowe organy zaczęły egzekwować przepisy AI Act.",
+            "AP opisuje nowy zespół w Brukseli, dodatkowych 38 pracowników oraz narzędzia whistleblower i compliance do zgłaszania naruszeń."
+          ],
+          "analysis": "To ważny krok, bo reguły przestają być tekstem w Dzienniku Urzędowym, a stają się praktyką nadzoru i odpowiedzialności.",
+          "whyItMatters": "Od teraz użytkownicy i firmy będą częściej rozliczani z tego, czy AI jest oznaczona jasno i uczciwie.",
+          "sources": [
+            {
+              "title": "Komisja Europejska",
+              "url": "https://digital-strategy.ec.europa.eu/en/news/commission-starts-enforcing-ai-act-rules-and-new-transparency-requirements-2-august"
+            },
+            {
+              "title": "AP",
+              "url": "https://apnews.com/article/eu-ai-regulation-deepfakes-hacking-f4fcee1f9750e2b32cdf26ad73ee5ec2"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Komisja nie tylko zaczęła egzekwować przepisy, ale też buduje własny aparat nadzoru. Komisja Europejska potwierdza, że od 2 sierpnia AI Office i krajowe organy zaczęły egzekwować przepisy AI Act. AP opisuje nowy zespół w Brukseli, dodatkowych 38 pracowników oraz narzędzia whistleblower i compliance do zgłaszania naruszeń. To ważny krok, bo reguły przestają być tekstem w Dzienniku Urzędowym, a stają się praktyką nadzoru i odpowiedzialności. Od teraz użytkownicy i firmy będą częściej rozliczani z tego, czy AI jest oznaczona jasno i uczciwie.",
+          "priority": "High"
+        },
+        {
+          "id": "technologia-2-gigafabryki-ai-przechodza-do-przetargu",
+          "section": "Technologia",
+          "title": "Gigafabryki AI przechodzą do przetargu",
+          "lead": "Polska i unijny ekosystem compute wchodzą na etap ofert, nie samych deklaracji.",
+          "facts": [
+            "Ministerstwo Cyfryzacji podaje, że EuroHPC JU otworzyło przetarg na Gigafabryki AI.",
+            "Ten sam komunikat MC wskazuje, że termin składania ofert upływa 12 listopada 2026 roku."
+          ],
+          "analysis": "To znak, że europejska gra o sztuczną inteligencję rozgrywa się nie tylko w modelach, ale też w mocy obliczeniowej i harmonogramach budowy.",
+          "whyItMatters": "W wyścigu AI compute bywa dziś ważniejsze niż kolejny marketingowy slajd o innowacji.",
+          "sources": [
+            {
+              "title": "Ministerstwo Cyfryzacji",
+              "url": "https://www.gov.pl/web/cyfryzacja/ruszyl-przetarg-na-gigafabryki-ai--wazna-informacja-dla-przyszlych-konsorcjow"
+            }
+          ],
+          "tags": [
+            "Technologia"
+          ],
+          "ttsText": "Polska i unijny ekosystem compute wchodzą na etap ofert, nie samych deklaracji. Ministerstwo Cyfryzacji podaje, że EuroHPC JU otworzyło przetarg na Gigafabryki AI. Ten sam komunikat MC wskazuje, że termin składania ofert upływa 12 listopada 2026 roku. To znak, że europejska gra o sztuczną inteligencję rozgrywa się nie tylko w modelach, ale też w mocy obliczeniowej i harmonogramach budowy. W wyścigu AI compute bywa dziś ważniejsze niż kolejny marketingowy slajd o innowacji.",
+          "priority": "High"
+        }
+      ]
+    }
+  ],
+  "audioArtifacts": [
+    {
+      "variant": "female-piper",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-03-1017/audio/female-piper/podcast.mp3"
+    },
+    {
+      "variant": "male-xtts",
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-03-1017/audio/male-xtts/podcast.mp3"
+    }
+  ]
+}
