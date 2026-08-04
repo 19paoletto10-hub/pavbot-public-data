@@ -1,5 +1,13 @@
 # Puls Dnia News Backlog
 
+## 2026-08-04 17:58
+
+- Watch whether PiS answers Kaczyński's attack on Morawiecki with anything formal.
+- Watch whether RCB or IMGW upgrade the current alert block into outages or transport disruption.
+- Watch whether the first visible AI Act labels appear on public Polish-language platforms.
+- Watch whether the U.S., Iran or Oman publish a clearer Hormuz readout.
+- Watch whether Washington wildfires or Wildberries strikes get updated casualty counts.
+
 ## 2026-08-03 09:02
 
 - Watch whether PiS turns Morawiecki's 15 October date into a formal party response.

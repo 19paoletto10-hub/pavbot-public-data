@@ -2,6 +2,10 @@
 
 ## Current State
 
+The 2026-08-04 17:58 slot sharpens the feed into three clear blocks: PiS now shows open personal conflict after Kaczyński attacks Morawiecki, Poland sits under simultaneous RCB and IMGW alerts, and tech moves from policy into enforcement with AI Act transparency rules plus a White House safety meeting for major AI firms. The world block shifts from the earlier morning mix to a fresh combination of Iran/Hormuz negotiations, Wildberries strikes, Gaza implementation risk and Washington State wildfires.
+
+This slot feels more operational than the 2026-08-03 morning runs because alerting, compliance and live conflict updates now sit above softer business or feature stories.
+
 The 2026-08-03 09:02 slot keeps PiS at the center, but makes the dispute more concrete: Morawiecki fixes 15 October for Rozwój Plus, Czarnek hardens the anti-Ukrainian line, and Kaczyński only partly distances himself. The feed also gains a stronger market block through Żabka, strong U.S. earnings and the yen intervention, while AI Act enforcement, red heat warnings and the Wrocław knife attack keep domestic risk high.
 
 This slot feels more market-heavy and operational than 06:01 because finance now sits next to politics and alerts, and the world block adds Greece, Gaza, Ukraine and Peru alongside Iran.
