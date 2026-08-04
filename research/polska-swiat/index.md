@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-08-02
+Last updated: 2026-08-04
 
 ## Current Understanding
 
@@ -83,6 +83,15 @@ Grecja dołącza do europejskiego kryzysu pożarowego po śmiertelnym wypadku
 dwóch helikopterów gaśniczych pod Atenami, a w Polsce Prezydent RP podpisuje
 pięć ustaw i kieruje ustawę o podatku od nadzwyczajnych zysków paliwowych do TK.
 RCB utrzymuje upał, burze w Małopolsce i ogólnokrajową suszę hydrologiczną.
+Po porannym runie 4 sierpnia krajowy blok przesunął się z samego śledzenia
+wdrożeń na nową porcję decyzji: KPRM przyjęła projekt ustawy o środkach
+ograniczających, projekt mediacji sądowej, projekt KRS i projekt środowiskowy,
+a Prezydent RP podpisał pięć kolejnych ustaw, kierując jedną do TK w trybie
+kontroli następczej. RCB nadal utrzymuje upał, burze i suszę hydrologiczną,
+więc blok pogodowy pozostaje operacyjny i wymaga sprawdzenia tuż przed emisją.
+Za granicą Ukraina dostała nowy ciężki sygnał z Zaporoża, Ormuz znów pojawia
+się w wiadomościach po trafieniu statku, Gaza nadal generuje ofiary, a Ateny i
+Ceuta pozostają w aktywnym follow-upie bez pełnej deeskalacji.
 Po weekendowym runie 21 czerwca temat orderowy wszedł w fazę reakcji
 ukraińskich polityków i byłych prezydentów, a główny temat międzynarodowy
 przesunął się na rozmowy USA-Iran w Szwajcarii, spór o Cieśninę Ormuz i
@@ -608,6 +617,10 @@ konfliktowaniu Polaków i Ukraińców.
 
 ## Recent Reports
 
+- [2026-08-04](runs/2026-08-04.md)
+- [2026-08-02](runs/2026-08-02.md)
+- [2026-08-01-1935](runs/2026-08-01-1935.md)
+- [2026-08-01](runs/2026-08-01.md)
 - [2026-07-28](runs/2026-07-28.md)
 - [2026-07-27-1933](runs/2026-07-27-1933.md)
 - [2026-07-27](runs/2026-07-27.md)

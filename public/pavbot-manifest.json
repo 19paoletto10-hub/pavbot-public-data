@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-08-03T08:46:23.133122+00:00",
+  "generatedAt": "2026-08-04T16:08:21.739639+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -137,6 +137,36 @@
     }
   ],
   "artifacts": [
+    {
+      "id": "research/polska-swiat/runs/2026-08-04.md",
+      "type": "run",
+      "topic": "polska-swiat",
+      "title": "Daily Research Report: polska-swiat",
+      "path": "research/polska-swiat/runs/2026-08-04.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/runs/2026-08-04.md",
+      "sizeBytes": 35498,
+      "date": "2026-08-04"
+    },
+    {
+      "id": "research/polska-swiat/data/2026-08-04-research.json",
+      "type": "researchData",
+      "topic": "polska-swiat",
+      "title": "Research data",
+      "path": "research/polska-swiat/data/2026-08-04-research.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/data/2026-08-04-research.json",
+      "sizeBytes": 27485,
+      "date": "2026-08-04"
+    },
+    {
+      "id": "research/polska-swiat/pdfs/2026-08-04-polska-swiat.pdf",
+      "type": "pdf",
+      "topic": "polska-swiat",
+      "title": "2026-08-04-polska-swiat.pdf",
+      "path": "research/polska-swiat/pdfs/2026-08-04-polska-swiat.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/pdfs/2026-08-04-polska-swiat.pdf",
+      "sizeBytes": 120111,
+      "date": "2026-08-04"
+    },
     {
       "id": "research/tech-news/runs/2026-08-03.md",
       "type": "run",
@@ -19985,7 +20015,7 @@
       "title": "Topic Index: polska-swiat",
       "path": "research/polska-swiat/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/index.md",
-      "sizeBytes": 44630
+      "sizeBytes": 45493
     },
     {
       "id": "research/polska-swiat/backlog.md",
@@ -19994,7 +20024,7 @@
       "title": "Topic Backlog: polska-swiat",
       "path": "research/polska-swiat/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/polska-swiat/backlog.md",
-      "sizeBytes": 52657
+      "sizeBytes": 55203
     },
     {
       "id": "research/llm-ai-jobs-wroclaw/topic.md",
