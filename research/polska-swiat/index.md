@@ -92,6 +92,14 @@ więc blok pogodowy pozostaje operacyjny i wymaga sprawdzenia tuż przed emisją
 Za granicą Ukraina dostała nowy ciężki sygnał z Zaporoża, Ormuz znów pojawia
 się w wiadomościach po trafieniu statku, Gaza nadal generuje ofiary, a Ateny i
 Ceuta pozostają w aktywnym follow-upie bez pełnej deeskalacji.
+Po wieczornym runie 4 sierpnia główny światowy zwrot przesunął się z samego
+trafienia statku do próby odblokowania cieśniny: AP opisuje postęp Iranu i
+Omanu przy porozumieniu o ponowne otwarcie Ormuzu, a amerykańscy urzędnicy
+mówią już o postępie, nie o finalnej umowie. Równolegle prezydent Ukrainy
+oficjalnie zapowiedział, że Rustem Umerow obejmie Służbę Wywiadu Zagranicznego,
+a cały blok wojenny nadal kręci się wokół Patrioty, FREYJA i długiego zasięgu
+dronów. W praktyce oznacza to, że dzisiejszy środek ciężkości przesunął się z
+incydentu do dyplomacji, wywiadu i odporności energetycznej.
 Po weekendowym runie 21 czerwca temat orderowy wszedł w fazę reakcji
 ukraińskich polityków i byłych prezydentów, a główny temat międzynarodowy
 przesunął się na rozmowy USA-Iran w Szwajcarii, spór o Cieśninę Ormuz i
@@ -617,6 +625,7 @@ konfliktowaniu Polaków i Ukraińców.
 
 ## Recent Reports
 
+- [2026-08-04-1937](runs/2026-08-04-1937.md)
 - [2026-08-04](runs/2026-08-04.md)
 - [2026-08-02](runs/2026-08-02.md)
 - [2026-08-01-1935](runs/2026-08-01-1935.md)
