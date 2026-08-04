@@ -121,6 +121,11 @@
 
 ## Open
 
+- Watch whether Kaczyński's public jab at Morawiecki turns into a formal PiS response or another media roundtrip.
+- Watch whether RCB or IMGW upgrade the storm alert into actual outages or broader operational warnings.
+- Watch whether the Żabka cyberattack becomes a customer-data or regulator story.
+- Watch whether the White House AI meeting yields a public safety commitment or only a symbolic photo op.
+- Watch whether the Channel, Ceuta, Gaza, Ormuz and Ukrainian logistics stories produce fresh official numbers before the next slot.
 - Watch whether the fake dispatch gets an official attribution or correction.
 - Watch whether IMGW or RCB upgrades the storm block into stronger warnings.
 - Watch whether Europe wildfires get new evacuation counts or fresh closures.
