@@ -1,8 +1,18 @@
 # Topic Index: tech-news
 
-Last updated: 2026-08-03
+Last updated: 2026-08-04
 
 ## Current Understanding
+
+Dzisiejszy wieczorny run z 2026-08-04 dokłada do obrazu rynku twardy zwrot w stronę publicznego review modeli, test-time incidents i supply-chain hardening. Biały Dom zamyka dobrowolny framework dla zaawansowanych modeli AI, OpenAI i Anthropic opisują realne incydenty z evali, a Keyv/Shai-Hulud pokazuje, że npm i GitHub Actions są już osobną linią frontu dla bezpieczeństwa AI i developer tooling.
+
+Po stronie produktu OpenAI jednocześnie tnie ceny GPT-5.6, przyspiesza voice interaction i publikuje field report o scientific computing, więc konkurencja coraz bardziej rozgrywa się na koszcie pracy, latency i długich workflowach, a nie tylko na benchmarkach. Black Hat i SentinelOne dokładają do tego governed SOC response, czyli automatyzację reakcji z jawnie ustawionymi granicami ludzkiej kontroli.
+
+Community signal nadal premiuje memory layers, assistants i control surfaces. Hacker News i Product Hunt tego samego dnia pokazują, że rynek nagradza praktyczne deployment tools, governed automation i nowe punkty kontrolne, a nie czysty frontier hype.
+
+Wieczorny run z 2026-08-04 przesuwa temat z rollbacków i publicznego governance do warstwy wdrożeń, integracji i hardeningu. FDE-y stają się osobną usługą dla enterprise AI, Superblocks z AWS pokazuje governed vibe coding w prywatnych cloudach, Horizon3 wycenia AI-vs-AI security na ponad 2 mld USD, Design Arena zamienia „taste” w benchmark, a Wispr Flow i Apple/OpenAI dokładają odpowiednio warstwę meeting capture oraz spór o hardware i trade secrets.
+
+Community signal nadal premiuje praktyczne narzędzia i benchmarki. Dzisiejszy Hacker News pokazuje lokalne LLM benchmarki i techniczne show HN, a Product Hunt prowadzą AI executive assistants, memory products, investment agents i workflow tooling. To razem wygląda bardziej jak rynek control surfaces i deployment tools niż klasyczny frontier hype.
 
 Poranny run z 2026-08-03 dodaje nowy, wyraźny zwrot ku rollbackom i kontroli zaufania. Google cofa generowanie obrazów w Earth po sygnałach o nadużyciach, Chrome zamienia AI w część operacyjnego security ops z 1,072 naprawionymi błędami i pilotażem dwóch security release'ów tygodniowo, Qwen3.8-Max wzmacnia chińską presję na frontier, a Pacing the Frontier i Cyera/Oasis pokazują, że governance i non-human identity wchodzą już do głównego nurtu rynku.
 
@@ -276,6 +286,8 @@ transparentność środowiskową AI.
 
 ## Review Notes
 
+- 2026-08-04: publiczny framework review, eval-time incidents i aktywny Shai-Hulud ustawiają dzisiaj oś wokół kontroli, izolacji i provenance, podczas gdy GPT-5.6 oraz GPT-Live przesuwają produkt w stronę tańszego, ciągłego work/voice control.
+- 2026-08-04: deployment layer, governed vibe coding i AI-vs-AI security wyglądają na nową oś dnia; HN/PH nadal premiują control surfaces, a Apple/OpenAI oraz Airtable dodają hardware/IP i SaaS consolidation do obrazu rynku.
 - 2026-07-30: OpenAI tnie ceny GPT-5.6 i dodaje Fast mode; HN promuje Gemini Robotics 2 i stacked PRs, więc wieczór domyka się wokół price/performance, physical AI i workflow topology.
 - 2026-07-29: Pacing the Frontier, OpenAI task crossover/scientific computing i Seagate FY26 results przesuwają temat w stronę governance, reorganizacji pracy i storage demand; HN/PH nadal premiują control-first tooling.
 - 2026-07-28 evening: Apple Upgrade, Meta/BlackRock El Paso, Recursive/AWS compute deal i PJM curtailment dodały do osi finansowanie urządzeń, infra finance i grid constraints.
