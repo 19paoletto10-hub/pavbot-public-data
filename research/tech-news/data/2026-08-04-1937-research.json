@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-08-04",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy późny run przesuwa obraz rynku z samej ekonomii modeli na pakowanie, dystrybucję i kontrolę dostępu. OpenAI dorzuca gotowe pluginy edukacyjne do ChatGPT Work i Codex, a w równoległym eseju spina ceny, full-stack infrastruktury i koszt udanego wyniku. Anthropic z kolei wzmacnia warstwę policy/government affairs, a Google Cloud zaczyna wystawiać Claude Opus 5 jako element własnej platformy agentowej.",
+    "Najważniejszy nowy sygnał bezpieczeństwa pochodzi z ADK: Pillar Security pokazuje praktyczny przypadek agent-to-agent escalation w repo Google, czyli klasę ataku, której nie da się dobrze opisać starym modelem prompt injection tylko na jednym agencie. W tle community signal nadal premiuje narzędzia operacyjne, open source i workflow control, więc dzisiejszy obraz jest spójny z wcześniejszym trendem: wygrywają powierzchnie sterujące, nie sam demo-hype."
+  ],
+  "summaryBullets": [
+    "Produkty: OpenAI wprowadza pluginy edukacyjne do ChatGPT Work i Codex",
+    "AI: OpenAI buduje \"abundant intelligence\"",
+    "Regulacje: Anthropic mianuje szefa ds. global affairs"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-08-04-1937-0-openai-wprowadza-pluginy-edukacyjne-do-chatgpt-work-i-codex-0464fd8215",
+      "section": "Produkty",
+      "title": "OpenAI wprowadza pluginy edukacyjne do ChatGPT Work i Codex",
+      "standfirst": "OpenAI publikuje trzy pluginy edukacyjne dla ChatGPT Work i Codex. Pakiety są kierowane osobno do uczniów, nauczycieli K–12 i wykładowców college'u oraz trafiają do środowisk zarządzanych przez instytucje.",
+      "whatHappened": "Firma zamienia ogólny interfejs czatu w gotowe, role-based workflowy dla edukacji.",
+      "whyItMatters": "To sygnał, że AI wchodzi do szkół i uczelni nie jako pojedynczy model, ale jako kontrolowany produkt z predefiniowanymi ścieżkami użycia.",
+      "deeperAnalysis": [
+        "OpenAI nie sprzedaje tu samego modelu, tylko zestaw zachowań, uprawnień i startowych workflowów. To ważne, bo instytucje edukacyjne zwykle nie chcą budować własnych promptów i polityk od zera, tylko chcą dostać bezpieczny pakiet, który da się wdrożyć z administracyjną kontrolą.",
+        "W praktyce ten ruch przesuwa konkurencję na poziom dystrybucji i governance. Jeśli rola nauczyciela, studenta i wykładowcy dostaje osobny surface, to model przestaje być uniwersalnym narzędziem, a staje się częścią zarządzanego produktu. To dokładnie ten typ packagingu, który może przyspieszyć adopcję w sektorach regulowanych i publicznych.",
+        "Warto też patrzeć na to jako na odpowiedź na większy problem rynku: organizacje chcą korzystać z agentów, ale nie chcą budować całego stosu kontroli, treści i integracji same. Edukacyjne pluginy są więc nie tylko featurem, ale też testem, czy OpenAI potrafi sprzedawać gotowe, zaufane doświadczenia zamiast surowej capability."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI dodało trzy pluginy dla uczniów, nauczycieli i wykładowców.",
+        "Dlaczego ważne: Edukacja jest dużym, instytucjonalnym rynkiem dla zarządzanej AI.",
+        "Na co patrzeć dalej: rollout poza USA, dodatkowe kontrole prywatności i polityki szkół."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/learn-teach-chatgpt-work-codex/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "ChatGPT Edu",
+        "Codex",
+        "edukacja",
+        "workflow"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-04-1937-1-openai-buduje-abundant-intelligence-3d62a6fa97",
+      "section": "AI",
+      "title": "OpenAI buduje \"abundant intelligence\"",
+      "standfirst": "Nowy esej OpenAI spina obniżki cen GPT-5.6 z narracją o pełnym stacku i \"abundant intelligence\". Firma twierdzi też, że agentic work through Codex odpowiada już za 99.8% tygodniowych output tokens.",
+      "whatHappened": "OpenAI ustawia koszt, jakość i czas wykonania jako wspólną metrykę produktu.",
+      "whyItMatters": "To sygnał, że rynek AI coraz bardziej kupuje koszt udanego wyniku, a nie sam benchmark modelu.",
+      "deeperAnalysis": [
+        "Najciekawsza zmiana nie dotyczy samego pricingu, tylko sposobu opisu wartości. OpenAI wprost przesuwa rozmowę z \"ile kosztuje token\" na \"ile kosztuje zrobiona praca\". To dużo bardziej enterprise'owy język, bo łączy retry cost, oversight i time-to-completion w jedną ekonomię decyzji.",
+        "Druga warstwa to infrastruktura. Firma nie mówi już wyłącznie o modelu, ale o cyklu: lepsze modele podnoszą adopcję, adopcja daje więcej danych o popycie, a to uzasadnia kolejne inwestycje w compute i produkty. Taki opis ma znaczenie, bo pokazuje, że OpenAI buduje strategiczną pętlę między produktami, pieniędzmi i capacity planning.",
+        "W praktyce to jest też zapowiedź szerszego rynku control plane dla AI. Jeśli jedno miejsce ma jednocześnie sterować kosztami, routingiem modeli, jakością i workflowami, to przewagę będzie miała firma, która najdokładniej połączy interfejs, infrastrukturę i governance."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI opisało full-stack strategię wokół tańszej, bardziej użytecznej inteligencji.",
+        "Dlaczego ważne: Zmienia to metrykę produktu z benchmarku na ekonomię wykonanej pracy.",
+        "Na co patrzeć dalej: wpływ na adopcję, quota pressure i konkurencję cenową."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/building-abundant-intelligence/"
+        },
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "GPT-5.6",
+        "Codex",
+        "koszty",
+        "infrastruktura"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-04-1937-2-anthropic-mianuje-szefa-ds-global-affairs-fdad56bcb1",
+      "section": "Regulacje",
+      "title": "Anthropic mianuje szefa ds. global affairs",
+      "standfirst": "Anthropic zatrudnia Mariano-Florentino \"Tino\" Cuéllara jako pierwszego Chief Global Affairs Officer. Nowa rola obejmuje policy, strategic international engagement i government relationships.",
+      "whatHappened": "Firma wzmacnia formalną warstwę relacji z państwami i regulatorami.",
+      "whyItMatters": "To sygnał, że front AI coraz bardziej przesuwa się z laboratorium do polityki publicznej i dyplomacji technologicznej.",
+      "deeperAnalysis": [
+        "W praktyce to nie jest zwykła rekrutacja menedżerska, tylko sygnał, że Anthropic traktuje regulacje jako trwałą część produktu i strategii. W momencie, gdy frontier modele wchodzą do rozmów o bezpieczeństwie, eksport controls i voluntary review, potrzebna jest nie tylko polityka bezpieczeństwa, ale też stała funkcja zarządzania tym dialogiem.",
+        "Tino Cuéllar ma profil, który łączy prawo, bezpieczeństwo narodowe i instytucje publiczne. To sugeruje, że Anthropic chce prowadzić rozmowę o AI nie tylko z regulatorami, ale też z szerszymi interesariuszami: od rządów po think tanki i partnerów międzynarodowych.",
+        "To się dobrze składa z dzisiejszymi tematami wokół White House review framework. Rynek coraz wyraźniej przechodzi do fazy, w której governance staje się kompetencją operacyjną i osobną linią biznesową, a nie dodatkiem do public relations."
+      ],
+      "contextPoints": [
+        "Co się stało: Anthropic powołało pierwszego Chief Global Affairs Officer.",
+        "Dlaczego ważne: Regulacje, eksport controls i government relations stają się częścią core strategy.",
+        "Na co patrzeć dalej: publiczne stanowiska firmy i konkretne inicjatywy policy."
+      ],
+      "sources": [
+        {
+          "title": "Anthropic",
+          "url": "https://www.anthropic.com/news/tino-cuellar"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "policy",
+        "regulacje",
+        "governance",
+        "bezpieczeństwo"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-04-1937-3-google-cloud-wystawia-claude-opus-5-na-agent-platform-365fa5fede",
+      "section": "Infrastruktura",
+      "title": "Google Cloud wystawia Claude Opus 5 na Agent Platform",
+      "standfirst": "Google Cloud informuje, że Claude Opus 5 jest już dostępny na Agent Platform. Model ma być zgodny z Zero Data Retention, a wysokiego ryzyka workflowy mają automatycznie wpadać z powrotem na Opus 4.8.",
+      "whatHappened": "Google rozprowadza model konkurencji jako element własnej platformy agentowej.",
+      "whyItMatters": "Dystrybucja modeli w chmurze staje się równie ważna jak sam model, bo to platforma kontroluje bezpieczeństwo i routing.",
+      "deeperAnalysis": [
+        "Ten ruch pokazuje, że rynek nie kończy się na \"który lab ma najlepszy model\". Coraz częściej liczy się to, kto potrafi osadzić model w bezpiecznym enterprise control plane, z politykami danych, fallbackami i jasnym modelem użycia. To dokładnie ten poziom, na którym dostawcy chmury mogą przejąć część wartości od samych labów.",
+        "Ważny jest też detal o fallbacku dla workflowów wysokiego ryzyka. To oznacza, że platforma nie tylko wystawia model, ale też podejmuje decyzje o tym, kiedy ograniczyć użycie mocniejszej wersji. Dla enterprise to wygodne, ale dla rynku modelowego oznacza przesunięcie władzy w stronę platformy.",
+        "W szerszym kontekście to wzmacnia obraz multi-model enterprise AI. Klient nie kupuje już jednego modelu, tylko zestaw opcji, ograniczeń i bezpieczeństwa. Jeśli Google utrzyma to podejście, może zyskać przewagę nie tyle jako autor modelu, ile jako operator miejsca, w którym modele faktycznie pracują."
+      ],
+      "contextPoints": [
+        "Co się stało: Claude Opus 5 trafił do Google Cloud Agent Platform.",
+        "Dlaczego ważne: Chmura staje się głównym kanałem dystrybucji frontier modeli.",
+        "Na co patrzeć dalej: adopcja przez klientów i czy fallback do Opus 4.8 zostanie utrzymany."
+      ],
+      "sources": [
+        {
+          "title": "Google Cloud",
+          "url": "https://cloud.google.com/blog/topics/inside-google-cloud/whats-new-google-cloud"
+        },
+        {
+          "title": "Anthropic newsroom",
+          "url": "https://www.anthropic.com/news"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google Cloud",
+        "Anthropic",
+        "Claude Opus 5",
+        "enterprise",
+        "ZDR"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-04-1937-4-google-adk-pokazuje-nowy-wektor-eskalacji-agentow-08036ab744",
+      "section": "Cyber",
+      "title": "Google ADK pokazuje nowy wektor eskalacji agentów",
+      "standfirst": "Pillar Security opisuje praktyczny przypadek agent-to-agent exploitation w repo google/adk-python. Publiczny, niżej uprzywilejowany agent mógł doprowadzić do uruchomienia workflowu maintainer-only.",
+      "whatHappened": "Wieloagentowy workflow otworzył drogę do eskalacji przez granice zaufania między agentami.",
+      "whyItMatters": "To nowa klasa ryzyka dla platform agentowych, bo stary model prompt injection nie opisuje dobrze ataku przez delegację i impersonację.",
+      "deeperAnalysis": [
+        "Najważniejszy wniosek z raportu Pillar Security jest prosty: jeśli publiczny agent może wpływać na prywatny, uprzywilejowany agent, to granice uprawnień przestają działać tak, jak zakładał pierwotny threat model. To już nie jest klasyczny atak na pojedynczy prompt, tylko problem architektury uprawnień między systemami automatycznymi.",
+        "Z perspektywy bezpieczeństwa to bardzo istotne, bo większość obecnych dyskusji o agentach nadal skupia się na jednej pętli: użytkownik, model, tool use. Tutaj pojawia się druga pętla, czyli agent A wywołuje agenta B z innym poziomem zaufania. Taki układ wymaga osobnych polityk, audytu i ograniczeń na trasie delegacji.",
+        "Jeżeli ten przypadek się potwierdzi i zacznie pojawiać w innych platformach, to bezpieczeństwo agentów będzie musiało obejmować nie tylko prompt hardening, ale też boundary design, identity scoping i kontrolę przekazywania zadań. To dokładnie ten typ problemu, który z czasem staje się kategorią produktową."
+      ],
+      "contextPoints": [
+        "Co się stało: ADK repo zostało opisane jako miejsce praktycznej eskalacji między agentami.",
+        "Dlaczego ważne: Wprowadza nową klasę ataku do projektowania systemów agentowych.",
+        "Na co patrzeć dalej: dodatkowe hardening notes, podobne przypadki w innych frameworkach i standardy bezpieczeństwa."
+      ],
+      "sources": [
+        {
+          "title": "Pillar Security",
+          "url": "https://www.pillar.security/blog/ill-just-call-you-agent-to-agent-privilege-boundary-failures-in-ci-cd-on-googles-adk-repository"
+        },
+        {
+          "title": "The Hacker News",
+          "url": "https://thehackernews.com/2026/08/google-deletes-3-adk-ai-workflows-after.html"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "ADK",
+        "prompt injection",
+        "supply chain",
+        "agent security"
+      ]
+    }
+  ],
+  "podcastTopics": [],
+  "checkedSources": [
+    {
+      "title": "OpenAI News",
+      "url": "https://openai.com/news/"
+    },
+    {
+      "title": "OpenAI: New ways to learn and teach with ChatGPT Work and Codex",
+      "url": "https://openai.com/index/learn-teach-chatgpt-work-codex/"
+    },
+    {
+      "title": "OpenAI: Building abundant intelligence",
+      "url": "https://openai.com/index/building-abundant-intelligence/"
+    },
+    {
+      "title": "Anthropic newsroom",
+      "url": "https://www.anthropic.com/news"
+    },
+    {
+      "title": "Anthropic: Mariano-Florentino (Tino) Cuéllar to join Anthropic as Chief Global Affairs Officer",
+      "url": "https://www.anthropic.com/news/tino-cuellar"
+    },
+    {
+      "title": "Google Cloud latest news and announcements",
+      "url": "https://cloud.google.com/blog/topics/inside-google-cloud/whats-new-google-cloud"
+    },
+    {
+      "title": "Pillar Security: ADK agent-to-agent privilege boundary failures",
+      "url": "https://www.pillar.security/blog/ill-just-call-you-agent-to-agent-privilege-boundary-failures-in-ci-cd-on-googles-adk-repository"
+    },
+    {
+      "title": "The Hacker News: Google Deletes 3 ADK AI Workflows After Malicious GitHub Issue Could Trigger Privileged Agent",
+      "url": "https://thehackernews.com/2026/08/google-deletes-3-adk-ai-workflows-after.html"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "Product Hunt leaderboard",
+      "url": "https://www.producthunt.com/leaderboard"
+    }
+  ]
+}

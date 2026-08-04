@@ -4,6 +4,9 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track OpenAI education plugins | OpenAI is packaging ChatGPT Work and Codex for teachers, students and faculty, which may turn education into a managed AI distribution channel | Watch rollout beyond ChatGPT Edu, district adoption and privacy/FERPA guardrails | Open |
+| High | Track Anthropic global affairs leadership | Anthropic's new policy chief suggests government relations are becoming a first-class function for frontier AI firms | Watch policy statements, regulatory meetings and public framing | Open |
+| High | Track ADK agent-to-agent escalation | Pillar's Google ADK finding shows agent boundary failures are a distinct security class, not just generic prompt injection | Watch Google hardening notes, similar reports and platform mitigations | Open |
 | High | Track White House AI safety framework | The voluntary review framework is now concrete, so the key question is how it changes launch processes for frontier models | Watch publication, trusted partner list and whether review becomes de facto mandatory | Open |
 | High | Track active Shai-Hulud npm worm | The Keyv compromise shows supply-chain hardening is now a live incident, not just a retrospective threat class | Watch package spread, maintainer remediations and GitHub/npm countermeasures | Open |
 | High | Track governed SOC response at Black Hat | SentinelOne's closed-loop response and NVIDIA's alliance suggest a new automation layer for security operations | Watch GA timing, first customers and competitor copycats | Open |
@@ -38,7 +41,7 @@
 | High | Track OpenAI Presence deployment | Enterprise voice/chat agents with a Codex improvement loop may become the new support default | Watch customer wins, escalation controls and workflow-specific rollout | Open |
 | High | Track OpenAI SMB and newsroom programs | Sector-specific programs show OpenAI moving from generic chat to packaged workflow distribution | Watch partner uptake, paid conversions and editorial backlash | Open |
 | High | Track Claude voice-mode expansion | Voice mode now spans web, desktop and mobile, can use connected tools and keeps the last text model as its default context | Watch rollout scope, connector breadth, enterprise controls and free-tier limits | Open |
-| High | Track Claude Opus 5 launch | Opus 5 resets Anthropic's top tier with the same sticker price but better task-level efficiency and may force rival routing moves | Watch adoption, effort controls, safety posture and competitor response | Open |
+| High | Track Claude Opus 5 launch | Opus 5 resets Anthropic's top tier and Google Cloud is now distributing it on Agent Platform, making platform routing more important than the model brand alone | Watch adoption, effort controls, safety posture and competitor response | Open |
 | High | Track AMD-Anthropic compute financing | Helios is becoming the visible rack-scale template for the 2 GW partnership and could set the standard if deployments land as planned | Watch deployments, customer mix, ORW adoption and whether Helios becomes the standard rack design | Open |
 | High | Track Google ATLAS methodology | A large public AI-usage dataset could become a policy and product benchmark if it holds up | Watch outside validation, methodology notes and follow-up releases | Open |
 | High | Track AI Kill Switch Act | Federal emergency shutdown powers would make frontier safety a formal compliance regime | Watch bill text, committee movement and industry response | Open |

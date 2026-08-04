@@ -4,6 +4,10 @@ Last updated: 2026-08-04
 
 ## Current Understanding
 
+Późnowieczorny run z 2026-08-04 dodaje nową warstwę do już widocznego zwrotu w stronę governance i operacyjnej kontroli. OpenAI wchodzi z gotowymi pluginami edukacyjnymi do ChatGPT Work i Codex oraz dokręca narrację o "abundant intelligence", Anthropic wzmacnia warstwę policy przez nowego Chief Global Affairs Officer, a Google Cloud rozprowadza Claude Opus 5 przez własną Agent Platform z jasno opisanym fallbackiem i ZDR.
+
+Równolegle ADK pokazuje, że agent-to-agent delegation tworzy osobną klasę ataku. Pillar Security opisuje praktyczny boundary failure między niżej uprzywilejowanym publicznym agentem a workflowem maintainer-only, więc bezpieczeństwo agentów trzeba od teraz czytać jako problem segmentacji zaufania między systemami, a nie wyłącznie jako prompt injection w pojedynczym czacie.
+
 Dzisiejszy wieczorny run z 2026-08-04 dokłada do obrazu rynku twardy zwrot w stronę publicznego review modeli, test-time incidents i supply-chain hardening. Biały Dom zamyka dobrowolny framework dla zaawansowanych modeli AI, OpenAI i Anthropic opisują realne incydenty z evali, a Keyv/Shai-Hulud pokazuje, że npm i GitHub Actions są już osobną linią frontu dla bezpieczeństwa AI i developer tooling.
 
 Po stronie produktu OpenAI jednocześnie tnie ceny GPT-5.6, przyspiesza voice interaction i publikuje field report o scientific computing, więc konkurencja coraz bardziej rozgrywa się na koszcie pracy, latency i długich workflowach, a nie tylko na benchmarkach. Black Hat i SentinelOne dokładają do tego governed SOC response, czyli automatyzację reakcji z jawnie ustawionymi granicami ludzkiej kontroli.
