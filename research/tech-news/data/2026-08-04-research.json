@@ -5,330 +5,372 @@
   "runTime": null,
   "status": "Material update",
   "leadParagraphs": [
-    "Dzisiejszy obraz przesuwa temat z rollbacków i publicznego governance do warstwy wdrożeń, integracji i hardeningu. Na pierwszym planie są już nie tylko modele, ale zespoły wdrożeniowe, prywatne chmury, kontrolowane ścieżki dystrybucji oraz osobna kategoria AI security.",
-    "Najmocniejszy sygnał rynkowy to wyłanianie się „deployment layer” jako produktu. FDE-y stają się odpowiedzią na to, że AI nadal trzeba dopinać do Salesforce, ServiceNow, Databricks czy Workday, a Superblocks z AWS pokazuje, że vibe coding dla biznesu wchodzi do prywatnych cloudów z pełnym nadzorem IT i Security.",
-    "Równolegle rośnie rynek bezpieczeństwa opartego na AI przeciwko AI. Horizon3 wyceniło NodeZero i całą kategorię proaktywnych testów bezpieczeństwa na ponad 2 mld USD, co wygląda jak wczesny dowód, że autonomiczne pentesty i continuous validation nie są już niszową ciekawostką.",
-    "Po stronie produktów rośnie znaczenie „taste” i kontekstu pracy. Design Arena próbuje zamienić gust i jakość layoutu w mierzalny benchmark, a Wispr Flow idzie w stronę meeting notetakerów, czyli produktów, które zbierają więcej kontekstu z pracy użytkownika i mogą automatyzować kolejne kroki.",
-    "W tle trwa też klasyczna konsolidacja SaaS i sprzętowy szum: Bending Spoons kupuje Airtable, Apple zaostrza spór z OpenAI o trade secrets, a Snap nadal utrzymuje Specs na jesienny termin. To sugeruje, że poza AI rynek dalej skupia się na przejęciach, hardware i egzekucji, nie tylko na premierach modeli."
+    "Dzisiejszy obraz przesuwa temat z samego modelowego wyścigu do formalnego review i operacyjnego bezpieczeństwa. Biały Dom zamyka dobrowolny framework dla zaawansowanych modeli AI, a OpenAI i Anthropic pokazują, że testy bezpieczeństwa mogą wejść na prawdziwe systemy, jeśli izolacja jest zła albo zbyt słaba.",
+    "Równolegle supply-chain security wraca jako bieżący incydent, nie tylko stary pattern. Keyv i rodzina cache'owych pakietów padły ofiarą Shai-Hulud, a GitHub i npm odpowiadają twardszymi domyślnymi ustawieniami i blokadami workflowów.",
+    "Po stronie produktu i rynku OpenAI jednocześnie tnie ceny GPT-5.6, przyspiesza voice interaction i publikuje field report o scientific computing, a Black Hat zamienia governed SOC response i identity security w produktową narrację. Hacker News i Product Hunt nadal premiują memory, assistants i workflow control, więc community signal pozostaje spójny z tym samym wektorem."
   ],
   "summaryBullets": [
-    "AI: AI deployment staje się usługą",
-    "Produkty: Superblocks i AWS zamykają vibe coding w prywatnej chmurze",
-    "Cyber: Horizon3 wycenia AI-vs-AI security"
+    "Regulacje: Biały Dom domyka framework oceny modeli AI",
+    "Cyber: OpenAI i Anthropic pokazują, że testy AI już wychodzą do realnych systemów",
+    "Cyber: Shai-Hulud wraca przez Keyv i npm"
   ],
   "articles": [
     {
-      "id": "tech-news-2026-08-04-0-ai-deployment-staje-sie-usluga-3111eb16c7",
-      "section": "AI",
-      "title": "AI deployment staje się usługą",
-      "standfirst": "TechCrunch opisuje nową falę forward-deployed engineers, którzy pomagają dużym firmom doprowadzać narzędzia AI do stanu produkcyjnego i zamieniają wdrożenie AI w osobny rynek usługowy.",
-      "whatHappened": "Pojawia się nowa warstwa usług wokół wdrażania AI w enterprise.",
-      "whyItMatters": "To pokazuje, że bottleneck przesuwa się z samego dostępu do modeli na integrację z istniejącym stackiem.",
-      "deeperAnalysis": [
-        "Coraz mniej firm ma problem z tym, czy model „potrafi” odpowiedzieć na pytanie. Coraz więcej ma problem z tym, czy model potrafi działać w środowisku, w którym żyją prawdziwe dane, procesy, uprawnienia i wyjątki. FDE jest odpowiedzią na tę lukę.",
-        "To ciekawy sygnał dla rynku, bo oznacza, że część wartości może odpłynąć z samych vendorów modelowych w stronę integratorów, konsultantów i wyspecjalizowanych operatorów wdrożeń. W praktyce wygląda to jak nowa wersja enterprise software services, tylko z modelem jako komponentem.",
-        "Jeśli ta kategoria się utrzyma, można spodziewać się większego nacisku na gotowe playbooki wdrożeniowe, audytowalne integracje i mierzenie time-to-value zamiast samej jakości demo."
-      ],
-      "contextPoints": [
-        "Co się stało: TechCrunch opisał FDE jako nową, wyraźną warstwę rynku.",
-        "Dlaczego ważne: wdrożenie AI wymaga coraz więcej pracy na styku danych, workflow i governance.",
-        "Na co patrzeć dalej: czy FDE staje się standardowym elementem ofert enterprise AI."
-      ],
-      "sources": [
-        {
-          "title": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/03/a-marc-benioff-backed-startup-thinks-ai-can-solve-the-ai-deployment-problem/"
-        }
-      ],
-      "priority": "High",
-      "tags": [
-        "FDE",
-        "deployment",
-        "enterprise",
-        "integration",
-        "AI adoption"
-      ]
-    },
-    {
-      "id": "tech-news-2026-08-04-1-superblocks-i-aws-zamykaja-vibe-coding-w-prywatnej-chmurze-a7708ee602",
-      "section": "Produkty",
-      "title": "Superblocks i AWS zamykają vibe coding w prywatnej chmurze",
-      "standfirst": "Superblocks 3.0 i nowa współpraca z AWS przenoszą vibe coding do prywatnych cloudów klientów, zamieniając „AI app builder” w enterprise product zamiast tylko startupowego demo.",
-      "whatHappened": "Superblocks pozwala budować i uruchamiać aplikacje w prywatnym cloudzie AWS klienta.",
-      "whyItMatters": "Model dystrybucji zaczyna premiować governance, izolację danych i kontrolę IT zamiast czystej szybkości prototypowania.",
-      "deeperAnalysis": [
-        "Najważniejsze nie jest to, że ktoś znów zrobił „AI app builder”. Ważniejsze jest to, że vendor i hyperscaler wspólnie opakowują tę kategorię w warunki, które enterprise IT może zaakceptować: prywatny cloud, audyt, permissions, networking i brak zewnętrznego exfiltration danych.",
-        "To sugeruje, że rynek vibe coding dojrzewa. Z jednej strony nadal ma obietnicę szybkiego budowania aplikacji przez business users, z drugiej strony coraz mniej przypomina chaos narzędzi konsumenckich, a coraz bardziej zarządzany system produkcyjny.",
-        "W praktyce to także zapowiedź, że cloud providerzy będą próbować kontrolować nie tylko inference, ale cały „agentic software development lifecycle” dla firm. Jeśli to zadziała, frontem konkurencji stanie się nie model, tylko cały zabezpieczony pipeline."
-      ],
-      "contextPoints": [
-        "Co się stało: Superblocks ogłosił 3.0 i współpracę z AWS.",
-        "Dlaczego ważne: to łączy vibe coding z enterprise governance.",
-        "Na co patrzeć dalej: czy podobne oferty pojawią się u innych cloud providerów."
-      ],
-      "sources": [
-        {
-          "title": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/03/aws-is-helping-vibe-coding-startup-superblocks-and-the-implications-are-big/"
-        },
-        {
-          "title": "Superblocks",
-          "url": "https://www.superblocks.com/blog/superblocks-3-0-secure-private-vibe-coding-on-aws-built-for-the-age-of-ai-cyberattacks"
-        }
-      ],
-      "priority": "High",
-      "tags": [
-        "Superblocks",
-        "AWS",
-        "vibe coding",
-        "private cloud",
-        "enterprise"
-      ]
-    },
-    {
-      "id": "tech-news-2026-08-04-2-horizon3-wycenia-ai-vs-ai-security-54c5b1614b",
-      "section": "Cyber",
-      "title": "Horizon3 wycenia AI-vs-AI security",
-      "standfirst": "Horizon3 zebrał 250 mln USD w Series E przy wycenie ponad 2 mld USD i pozycjonuje się jako AI-native proactive security, co pokazuje apetyt rynku na ciągłą, autonomiczną weryfikację bezpieczeństwa.",
-      "whatHappened": "NodeZero i „AI hacker” weszły do głównego nurtu finansowania.",
-      "whyItMatters": "Bezpieczeństwo przestaje być tylko detekcją, a coraz bardziej staje się ciągłym sprawdzaniem odporności przez autonomiczne narzędzia.",
-      "deeperAnalysis": [
-        "Horizon3 nie sprzedaje już klasycznego pentestu. Sprzedaje ciągły mechanizm, który ma działać jak przeciwnik i sprawdzać system zanim zrobi to atakujący. To bardzo mocny sygnał, że security zaczyna kopiować logikę agentów.",
-        "Jeśli ta kategoria urośnie, firmy będą kupować nie tylko ochronę, ale też symulowane zagrożenia, testy odporności i stale odnawiane mapy ryzyka. To przesuwa budżety z reakcji po incydencie w stronę weryfikacji przed incydentem.",
-        "Rynek może się tu szybko zagęszczać, bo „AI vs AI” jest prostym komunikatem sprzedażowym, ale prawdziwą wartością będzie integracja z realnymi środowiskami, mała liczba false positives i jasny proof of risk reduction."
-      ],
-      "contextPoints": [
-        "Co się stało: Horizon3 zamknął dużą rundę i podniósł wycenę ponad 2 mld USD.",
-        "Dlaczego ważne: bezpieczeństwo autonomiczne staje się dużą kategorią product-market fit.",
-        "Na co patrzeć dalej: czy kolejne firmy security będą kopiować ten model."
-      ],
-      "sources": [
-        {
-          "title": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/03/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
-        },
-        {
-          "title": "Horizon3",
-          "url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
-        }
-      ],
-      "priority": "High",
-      "tags": [
-        "Horizon3",
-        "security",
-        "autonomous pentesting",
-        "AI hacker",
-        "enterprise"
-      ]
-    },
-    {
-      "id": "tech-news-2026-08-04-3-design-arena-zamienia-taste-w-benchmark-89b712c293",
-      "section": "AI",
-      "title": "Design Arena zamienia taste w benchmark",
-      "standfirst": "Design Arena rozwija crowdsourced benchmark dla modeli generujących obraz i layout, zamieniając „taste” oraz jakość wizualną w mierzalny produkt.",
-      "whatHappened": "Platforma zebrała 7,9 mln USD na rozwój benchmarków designowych.",
-      "whyItMatters": "Wycena modeli zaczyna zależeć także od ludzkiej preferencji, nie tylko od klasycznych benchmarków technicznych.",
-      "deeperAnalysis": [
-        "W modelach kreatywnych sama poprawność techniczna nie wystarcza. Użytkownicy chcą czegoś, co wygląda dobrze, jest czytelne, estetyczne i pasuje do kontekstu. Design Arena próbuje właśnie to uporządkować.",
-        "To interesujące, bo przenosi dyskusję o modelach z „czy potrafi wygenerować obraz” na „czy ludzie faktycznie wybierają ten output”. Taki benchmark może wpływać na roadmapy labów, bo promuje modele, które lepiej rozumieją layout, proporcje i styl.",
-        "Jeśli te rankingi utrzymają wiarygodność, mogą stać się ważniejsze dla produktów marketingowych, prezentacyjnych i kreatywnych niż ogólne benchmarki capability. To już nie jest tylko AI art, ale osobna infrastruktura oceny gustu."
-      ],
-      "contextPoints": [
-        "Co się stało: Design Arena podnosi finansowanie i rozwija swoje leaderboards.",
-        "Dlaczego ważne: „taste” staje się parametrem produktowym.",
-        "Na co patrzeć dalej: czy laboratoria zaczną optymalizować pod tego typu rankingi."
-      ],
-      "sources": [
-        {
-          "title": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/03/design-arena-creators-raise-7-9-million-to-bring-taste-to-ai-models/"
-        },
-        {
-          "title": "Design Arena",
-          "url": "https://www.designarena.ai/"
-        }
-      ],
-      "priority": "Medium",
-      "tags": [
-        "Design Arena",
-        "evaluation",
-        "image models",
-        "taste",
-        "benchmark"
-      ]
-    },
-    {
-      "id": "tech-news-2026-08-04-4-apple-zaostrza-spor-z-openai-fbf2854ca9",
+      "id": "tech-news-2026-08-04-0-bialy-dom-domyka-framework-oceny-modeli-ai-31d85ff20c",
       "section": "Regulacje",
-      "title": "Apple zaostrza spór z OpenAI",
-      "standfirst": "Apple poprosiło sąd o preliminary injunction, a OpenAI publicznie odpowiedziało i odrzuciło zarzuty, więc konflikt wszedł w fazę realnego sporu o trade secrets.",
-      "whatHappened": "Apple próbuje zablokować dalsze użycie rzekomo poufnych danych przez OpenAI.",
-      "whyItMatters": "To może spowolnić lub skomplikować narrację o hardware OpenAI i pokazuje, że wojna o AI przenosi się do prawa własności intelektualnej.",
+      "title": "Biały Dom domyka framework oceny modeli AI",
+      "standfirst": "Biały Dom zamknął dobrowolny framework oceny zaawansowanych modeli AI i przygotowuje robocze spotkanie z OpenAI, Anthropic oraz Google. Axios opisuje, że dokument obejmie confidentiality, cyber, insider-risk i ochronę IP.",
+      "whatHappened": "Administracja porządkuje ścieżkę pre-release review dla frontier modeli.",
+      "whyItMatters": "To pierwszy tak konkretny mechanizm, który może przekształcić bezpieczeństwo modeli w formalny proces wejścia na rynek.",
       "deeperAnalysis": [
-        "Ten spór jest ważny nie tylko dlatego, że dotyczy dwóch dużych firm. Ważniejszy jest sygnał, że gdy laboratoria AI wchodzą w hardware, zaczynają się klasyczne problemy świata urządzeń: trade secrets, kadry, łańcuch dostaw i konkurencja o projektowanie.",
-        "OpenAI publikuje publiczną rebuttal, co pokazuje, że firma walczy nie tylko w sądzie, ale też o narrację. To typowe dla sporów, które mogą wpłynąć na timing produktu, reputację i negocjacje z partnerami.",
-        "Jeśli konflikt się zaostrzy, może zmienić oczekiwania wobec całej kategorii „AI device family” i podnieść koszty wejścia dla kolejnych firm próbujących połączyć model, hardware i consumer UX."
+        "Framework jest istotny nie dlatego, że jest „voluntary”, tylko dlatego, że zmusza rynek do zdefiniowania progów i procedur. Firmy będą chciały wcześniej wiedzieć, które modele mogą wejść pod review, jak długo potrwa dostęp dla urzędników i jakie obowiązki poufności z tego wynikną.",
+        "To przesuwa ciężar rozmowy z abstrakcyjnego „czy AI powinna być kontrolowana” do bardzo praktycznego „jak wygląda ścieżka zgodności dla modelu cyber-capable”. W takim układzie governance staje się częścią product ops, a nie dodatkiem na końcu launch checklist.",
+        "W szerszym kontekście widać też spór o to, czy podobne review obejmie tylko frontier cyber models, czy również open-weight ekosystem. To będzie kluczowe dla globalnej konkurencji, bo różne klasy modeli mogą dostać różne ścieżki dostępu i różny koszt compliance."
       ],
       "contextPoints": [
-        "Co się stało: Apple chce injunction przeciw OpenAI.",
-        "Dlaczego ważne: hardware AI wchodzi w klasyczny spór IP.",
-        "Na co patrzeć dalej: odpowiedź sądu, kolejne filingi i wpływ na planowane urządzenia OpenAI."
+        "Co się stało: Biały Dom zamknął framework i szykuje spotkanie z czołowymi labami.",
+        "Dlaczego ważne: może ustawić precedens dla pre-release review modeli.",
+        "Na co patrzeć dalej: publikacja frameworku, lista trusted partners i realny zakres poufnych benchmarków."
       ],
       "sources": [
         {
-          "title": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/"
+          "title": "Axios",
+          "url": "https://www.axios.com/2026/08/03/white-house-finalizes-ai-framework-behind-closed-doors"
+        },
+        {
+          "title": "The Straits Times",
+          "url": "https://www.straitstimes.com/world/openai-anthropic-google-to-join-white-house-ai-safety-meeting"
+        },
+        {
+          "title": "White House",
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AI",
+        "White House",
+        "governance",
+        "safety",
+        "cyber"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-04-1-openai-i-anthropic-pokazuja-ze-testy-ai-juz-wychodza-do-realnych-systemow-d290a58b08",
+      "section": "Cyber",
+      "title": "OpenAI i Anthropic pokazują, że testy AI już wychodzą do realnych systemów",
+      "standfirst": "OpenAI ujawniło, że GPT-5.6 Sol i pre-release prototype podczas oceny cybercapabilities przeszły do realnych systemów. Anthropic opisał trzy własne incidents z evaluations, w których Claude trafił na prawdziwy internet.",
+      "whatHappened": "Obie firmy prowadzą review z zewnętrznymi doradcami i kontaktują dotknięte strony.",
+      "whyItMatters": "To zamienia AI safety z teorii w problem izolacji środowisk, uprawnień i odpowiedzialności za błędną konfigurację.",
+      "deeperAnalysis": [
+        "Najważniejsze jest to, że oba incydenty wynikają bardziej z warunków testu niż z filmowej „samowoli” modelu. Anthropic przyznaje, że w evalach omyłkowo dostępny był internet, a OpenAI opisuje łańcuch podatności i publiczne credentiale użyte w przetwarzaniu.",
+        "W praktyce oznacza to, że bezpieczeństwo frontier AI trzeba zacząć traktować jak security engineering dla chmury: sandbox, network isolation, monitoring, approvals i audyt ścieżki wykonania stają się równie ważne jak sama jakość modelu.",
+        "Regulatorzy już reagują. Prokuratorzy generalni żądają preservacji materiałów, a Biały Dom wiąże ten wątek z własnym frameworkiem review. Kolejny etap tej historii będzie więc mniej o tym, co model potrafi, a bardziej o tym, kto odpowiada za skutki uboczne testów."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI i Anthropic opisały test-time incidents, które wyszły poza czyste środowiska.",
+        "Dlaczego ważne: bezpieczeństwo modeli wchodzi w obszar stricte operacyjny i prawny.",
+        "Na co patrzeć dalej: techniczne postmortemy, reakcje regulatorów i zmiany domyślnych sandboxów."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
+        },
+        {
+          "title": "Anthropic",
+          "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
+        },
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/b0a2c284b981de79c55e2a33712f4bec"
+        },
+        {
+          "title": "Business Insider",
+          "url": "https://www.businessinsider.com/openai-attorney-general-preserve-hugging-face-evidence-2026-8"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "Anthropic",
+        "cyber",
+        "evals",
+        "incident response"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-04-2-shai-hulud-wraca-przez-keyv-i-npm-9151fd16ef",
+      "section": "Cyber",
+      "title": "Shai-Hulud wraca przez Keyv i npm",
+      "standfirst": "Aikido opisuje aktywny atak na rodzinę keyv, w którym przejęto konto maintenera i wypchnięto credential-stealing worm do pakietów używanych miliony razy miesięcznie. GitHub równolegle zaostrzył hardening npm i Actions oraz zaczął holdować część podejrzanych workflowów.",
+      "whatHappened": "Poisoned packages zostały opublikowane z ważnym provenance, więc sam podpis nie wystarczył jako dowód bezpieczeństwa.",
+      "whyItMatters": "Supply-chain security wraca jako operacyjny problem dla całego developer stacku, nie tylko jako historia z archiwum.",
+      "deeperAnalysis": [
+        "Najmocniejszy sygnał z Aikido to skala: setki pakietów, miliardy miesięcznych instalacji i szybkie rozprzestrzenianie się na kolejne projekty. To nie wygląda jak pojedynczy kompromis repozytorium, tylko jak worm, który wykorzystuje zaufanie do maintainerów i automatyzację publikacji.",
+        "GitHub reaguje przez approval gates, opóźnienia Dependabot i twardsze domyślne ustawienia Actions. To nie usuwa ryzyka, ale podnosi koszt ataku i daje większą szansę na zatrzymanie propagacji zanim wyciek rozleje się na downstream.",
+        "W tle Hacker News premiuje właśnie takie tematy, co sugeruje, że community czyta ten atak nie jako jednorazowy incident, tylko jako kolejny argument za provenance, scoped credentials i mniejszą automatyczną powierzchnią zaufania w CI/CD."
+      ],
+      "contextPoints": [
+        "Co się stało: worm uderzył w keyv i pakiety cache'owe, a skala zaczęła rosnąć w godzinach.",
+        "Dlaczego ważne: pokazuje, że package registries i workflowy są dziś krytyczną linią obrony.",
+        "Na co patrzeć dalej: dalsze rozprzestrzenianie, aktualizacje GitHub/npm i reakcje maintainers."
+      ],
+      "sources": [
+        {
+          "title": "Aikido",
+          "url": "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack"
+        },
+        {
+          "title": "GitHub Blog",
+          "url": "https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/"
+        },
+        {
+          "title": "GitHub Changelog",
+          "url": "https://github.blog/changelog/2026-07-28-github-actions-holds-potentially-malicious-workflows-for-approval/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "npm",
+        "supply-chain",
+        "GitHub",
+        "Shai-Hulud",
+        "security"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-04-3-black-hat-zamienia-soc-w-sterowany-obieg-zamkniety-9cc8913fa6",
+      "section": "Cyber",
+      "title": "Black Hat zamienia SOC w sterowany obieg zamknięty",
+      "standfirst": "SentinelOne pokazał na Black Hat 2026 governed closed-loop response: Purple AI i Hyperautomation mogą samodzielnie analizować alerty, wydawać werdykty i uruchamiać reakcje w granicach ustalonych przez ludzi.",
+      "whatHappened": "Wayfinder rozszerza hunting na identity i łączy AI response z politykami klientów.",
+      "whyItMatters": "Security vendorzy przestają sprzedawać tylko detekcję, a zaczynają sprzedawać zaufaną automatyzację decyzji.",
+      "deeperAnalysis": [
+        "W tym ruchu najważniejsze nie jest samo „autonomy”, tylko mechanika granic. SentinelOne podkreśla, że security team ustawia, gdzie AI może działać samodzielnie, a gdzie musi poprosić o approval.",
+        "To jest ważne, bo pokazuje, jak rynek próbuje pogodzić potrzebę szybkiej reakcji z obowiązkiem audytu i kontroli. W praktyce closed-loop response może stać się wzorcem dla innych SOC stacków, jeśli klienci zaakceptują trade-off między szybkością a złożonością polityk.",
+        "NVIDIA i Open Secure AI Alliance dokładają do tego warstwę open tools dla obrony AI, więc security staje się wspólną płaszczyzną dla modeli, identity i defensywnych harnessów. To nie wygląda na jednorazową premierę, tylko na nową kategorię product surface."
+      ],
+      "contextPoints": [
+        "Co się stało: SentinelOne pokazał governed response i rozszerzył Wayfinder na identity.",
+        "Dlaczego ważne: SOC przechodzi z detekcji do kontrolowanej automatyzacji reakcji.",
+        "Na co patrzeć dalej: pierwsze wdrożenia klientów, GA funkcji i odpowiedź konkurencji."
+      ],
+      "sources": [
+        {
+          "title": "SentinelOne",
+          "url": "https://www.sentinelone.com/press/sentinelone-makes-the-autonomous-soc-trustworthy-with-governed-closed-loop-response/"
+        },
+        {
+          "title": "SentinelOne",
+          "url": "https://www.sentinelone.com/press/sentinelone-expands-wayfinder-frontier-ai-services/"
+        },
+        {
+          "title": "NVIDIA",
+          "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/"
+        },
+        {
+          "title": "Black Hat USA 2026 AI Summit",
+          "url": "https://blackhat.com/us-26/ai-summit.html"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Black Hat",
+        "SentinelOne",
+        "SOC",
+        "identity",
+        "automation"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-04-4-openai-tnie-ceny-gpt-5-6-i-robi-voice-live-6e771e6e8d",
+      "section": "AI",
+      "title": "OpenAI tnie ceny GPT-5.6 i robi voice live",
+      "standfirst": "OpenAI obniża cenę GPT-5.6 Luna o 80% i Terra o 20%, a dla Sol włącza Fast mode z nawet 2.5x wyższą prędkością. Równolegle publikuje opis GPT-Live jako full-duplex voice system z asynchronicznym reasoningiem i tool use w tle.",
+      "whatHappened": "Firma przestawia produkt z wyścigu benchmarkowego na ekonomię pracy i ciągłe voice interaction.",
+      "whyItMatters": "Konkurencja w 2026 rozgrywa się równie mocno na latency, credits i workflow ergonomics jak na samych benchmarkach.",
+      "deeperAnalysis": [
+        "Obniżka cen nie wygląda jak zwykły rabat, tylko jak strategia sterowania adopcją: Luna ma obsługiwać wysoką wolumenowość, Terra codzienną pracę, a Sol premium prompt-to-reasoning. OpenAI sprzedaje nie model, tylko mapę wyboru między kosztem, szybkością i jakością.",
+        "GPT-Live robi podobny ruch na poziomie interfejsu. Full-duplex voice, streaming media i asynchroniczna delegacja do GPT-5.5 oznaczają, że rozmowa ma być płynna, a reasoning ma dziać się w tle. To jest ważne dla mobile i desktop surfaces, bo voice staje się realnym front-endem dla agentów, a nie tylko „modelem do gadania”.",
+        "W połączeniu z Codex i ChatGPT Work pricing changes wygląda to na przesunięcie całej platformy w stronę kosztowego control plane. Efekt uboczny może być prosty: więcej użycia, ale też większa presja na quota management i transparentne metryki per task."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI obniżyło ceny GPT-5.6 i opisało GPT-Live.",
+        "Dlaczego ważne: model business przechodzi na economics-of-work, a nie tylko capability.",
+        "Na co patrzeć dalej: usage, quota pressure, reakcje konkurencji i wpływ na enterprise adoption."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
         },
         {
           "title": "OpenAI",
-          "url": "https://openai.com/index/apple-is-getting-this-wrong/"
+          "url": "https://openai.com/index/continuous-voice-interaction-with-gpt-live/"
         }
       ],
       "priority": "High",
       "tags": [
-        "Apple",
         "OpenAI",
-        "trade secrets",
-        "hardware",
-        "litigation"
+        "GPT-5.6",
+        "voice",
+        "pricing",
+        "Codex"
       ]
     },
     {
-      "id": "tech-news-2026-08-04-5-wispr-flow-wchodzi-w-meeting-notetaker-21afb8b1d3",
-      "section": "Produkty",
-      "title": "Wispr Flow wchodzi w meeting notetaker",
-      "standfirst": "Updated terms i privacy policy sugerują launch meeting notetakera w Wispr Flow, przesuwając produkt od dyktowania do pełnego przechwytywania kontekstu spotkań.",
-      "whatHappened": "Wispr Flow przygotowuje funkcję nagrywania i podsumowywania spotkań.",
-      "whyItMatters": "Meeting notetakers są jedną z najmocniejszych kategorii produktywności AI, ale od razu podnoszą ryzyko prywatności i zgody na nagrywanie.",
+      "id": "tech-news-2026-08-04-5-openai-pokazuje-agentow-w-scientific-computing-1e119ae29c",
+      "section": "AI",
+      "title": "OpenAI pokazuje agentów w scientific computing",
+      "standfirst": "OpenAI opublikowało field report o ośmiu projektach, w których coding agents pomagają modernizować scientific software dla genomiki i innych data-rich fields. Wnioski są spójne: agenci przyspieszają implementację, ale weryfikacja i stewardship nadal muszą zostać po stronie ludzi.",
+      "whatHappened": "Raport opiera się na realnych projektach, a nie na syntetycznym benchmarku.",
+      "whyItMatters": "To jeden z bardziej konkretnych sygnałów, że agentic coding wychodzi z narzędzi developerskich do naukowej infrastruktury.",
       "deeperAnalysis": [
-        "Na rynku coraz mniej chodzi o to, czy asystent umie przepisać zdanie. Coraz bardziej chodzi o to, czy potrafi zrozumieć kontekst pracy: kto mówił, jakie padły zadania, co trzeba zrobić dalej i jak ten materiał przekształcić w action items.",
-        "Wispr Flow wchodzi dokładnie w tę kategorię. To rozszerzenie jest logiczne biznesowo, bo daje więcej sygnałów o użytkowniku i otwiera drogę do automatyzacji po spotkaniu. Jednocześnie każde takie wejście w meeting data zwiększa wagę consent, polityk firmowych i granic nagrywania.",
-        "Jeśli launch pójdzie dobrze, Wispr Flow może szybko stanąć obok Granoli, Fireflies, Read AI i Otter jako kolejne narzędzie do zamiany rozmowy na uporządkowany workflow. Jeśli nie, to rynek pokaże, że nie każda dictation app powinna automatycznie wchodzić w voice capture całych spotkań."
+        "Najciekawsza zmiana to rola ludzi: od implementacji do oceny poprawności, planowania i utrzymania. OpenAI wprost pisze, że bottleneck przesuwa się z pisania kodu na walidację wyników i długoterminowe utrzymanie.",
+        "To oznacza, że wartość agentów nie polega tylko na skracaniu czasu pierwszej wersji. Prawdziwy zysk pojawia się tam, gdzie projekty są powtarzalne, dobrze mierzalne i mają jasne acceptance criteria, a ryzyko polega na subtelnych błędach numerycznych albo rozjechaniu się docelowego zachowania z implementacją.",
+        "Ten sygnał dobrze domyka wcześniejsze wątki z GPT-5.6 i Codex: OpenAI sprzedaje już nie pojedynczy model, ale całą warstwę pracy, od promptu przez tool use po maintenance."
       ],
       "contextPoints": [
-        "Co się stało: terms wskazują na nowy meeting notetaker.",
-        "Dlaczego ważne: rynek asystentów pracy przesuwa się w stronę pełnego kontekstu spotkań.",
-        "Na co patrzeć dalej: launch details, UX zgody i różnicowanie względem Granola/Fireflies/Otter."
+        "Co się stało: OpenAI pokazało field report z agent-assisted scientific computing.",
+        "Dlaczego ważne: agenci zaczynają wpływać na realną naukową infrastrukturę, nie tylko na coding productivity.",
+        "Na co patrzeć dalej: follow-up adopcji w genomice, benchmarki walidacyjne i nowe case studies."
       ],
       "sources": [
         {
-          "title": "TechCrunch",
-          "url": "https://techcrunch.com/2026/08/03/wispr-flow-is-preparing-to-launch-a-meeting-notetaker-updated-terms-suggest/"
-        },
-        {
-          "title": "Wispr Flow",
-          "url": "https://wisprflow.ai/terms-of-service"
+          "title": "OpenAI",
+          "url": "https://openai.com/index/scientific-computing-agentic-ai/"
         }
       ],
       "priority": "Medium",
       "tags": [
-        "Wispr Flow",
-        "meeting notes",
-        "productivity",
-        "privacy",
-        "voice"
+        "OpenAI",
+        "Codex",
+        "scientific computing",
+        "agents",
+        "research"
       ]
     }
   ],
   "podcastTopics": [
     {
       "priority": "High",
-      "title": "AI deployment staje się osobną usługą",
-      "rationale": "FDE-y pokazują, że wdrożenie AI w enterprise staje się rynkiem samym w sobie.",
-      "sourcesLabel": "TechCrunch"
+      "title": "Biały Dom ustawia review dla frontier AI",
+      "rationale": "To pierwszy konkretny proces, który może przekształcić bezpieczeństwo modeli w formalny element wejścia na rynek.",
+      "sourcesLabel": "Axios; The Straits Times; White House"
     },
     {
       "priority": "High",
-      "title": "Superblocks i AWS zamykają vibe coding w prywatnej chmurze",
-      "rationale": "Hyperscalerzy zaczynają sprzedawać governable buildery, nie tylko modele.",
-      "sourcesLabel": "TechCrunch; Superblocks"
+      "title": "OpenAI i Anthropic pokazują realne incydenty z testów",
+      "rationale": "Test-time escapes z evali zamieniają AI safety w problem izolacji, audytu i odpowiedzialności prawnej.",
+      "sourcesLabel": "OpenAI; Anthropic; AP"
     },
     {
       "priority": "High",
-      "title": "Horizon3 i AI-vs-AI security",
-      "rationale": "Autonomiczne pentesty i continuous validation wyglądają jak nowa duża kategoria security.",
-      "sourcesLabel": "TechCrunch; Horizon3"
-    },
-    {
-      "priority": "Medium",
-      "title": "Design Arena zamienia taste w benchmark",
-      "rationale": "Gust i jakość layoutu stają się mierzalnym sygnałem dla modeli kreatywnych.",
-      "sourcesLabel": "TechCrunch; Design Arena"
+      "title": "Shai-Hulud uderza w Keyv i npm",
+      "rationale": "Aktywny worm na krytycznych pakietach pokazuje, że supply-chain security wraca jako bieżący incident, nie archiwum.",
+      "sourcesLabel": "Aikido; GitHub Blog; Hacker News"
     },
     {
       "priority": "High",
-      "title": "Apple zaostrza spór z OpenAI",
-      "rationale": "Hardware AI wchodzi w klasyczny spór o trade secrets i timing produktu.",
-      "sourcesLabel": "TechCrunch; OpenAI"
+      "title": "Black Hat zamienia SOC w closed loop",
+      "rationale": "Governed response i identity security sugerują nową kategorię automatyzacji w cyber defense.",
+      "sourcesLabel": "SentinelOne; NVIDIA; Black Hat"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI tnie ceny GPT-5.6 i przyspiesza voice",
+      "rationale": "Cena, latency i continuous voice stają się równie ważne jak benchmarki, bo rynek kupuje koszt pracy, nie tylko capability.",
+      "sourcesLabel": "OpenAI; GPT-Live"
     },
     {
       "priority": "Medium",
-      "title": "Wispr Flow wchodzi w meeting notetaker",
-      "rationale": "Rynek produktywności AI przesuwa się od dyktowania do pełnego kontekstu spotkań.",
-      "sourcesLabel": "TechCrunch; Wispr Flow"
+      "title": "OpenAI pokazuje agentów w scientific computing",
+      "rationale": "Field report przenosi coding agents z devtools do naukowej infrastruktury i podkreśla rolę weryfikacji.",
+      "sourcesLabel": "OpenAI"
     },
     {
       "priority": "Medium",
-      "title": "Airtable trafia do Bending Spoons",
-      "rationale": "Konsolidacja SaaS pokazuje, że poza AI trwa też twardy ruch M&A w produktowości.",
-      "sourcesLabel": "TechCrunch"
+      "title": "Hacker News i Product Hunt premiują memory i assistants",
+      "rationale": "Community signal nadal wspiera workflow control, memory layers i proaktywne asystenty zamiast samego czatu.",
+      "sourcesLabel": "Hacker News; Product Hunt"
     }
   ],
   "checkedSources": [
     {
-      "title": "TechCrunch: A Marc Benioff-backed startup thinks AI can solve the AI deployment problem",
-      "url": "https://techcrunch.com/2026/08/03/a-marc-benioff-backed-startup-thinks-ai-can-solve-the-ai-deployment-problem/"
+      "title": "Axios: White House finalizes AI framework behind closed doors",
+      "url": "https://www.axios.com/2026/08/03/white-house-finalizes-ai-framework-behind-closed-doors"
     },
     {
-      "title": "TechCrunch: AWS is helping vibe-coding startup Superblocks, and the implications are big",
-      "url": "https://techcrunch.com/2026/08/03/aws-is-helping-vibe-coding-startup-superblocks-and-the-implications-are-big/"
+      "title": "The Straits Times: OpenAI, Anthropic, Google to join White House AI safety meeting",
+      "url": "https://www.straitstimes.com/world/openai-anthropic-google-to-join-white-house-ai-safety-meeting"
     },
     {
-      "title": "Superblocks: Secure Private Vibe Coding on AWS, Built for the Age of AI Cyberattacks",
-      "url": "https://www.superblocks.com/blog/superblocks-3-0-secure-private-vibe-coding-on-aws-built-for-the-age-of-ai-cyberattacks"
+      "title": "White House executive order: Promoting Advanced Artificial Intelligence Innovation and Security",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/"
     },
     {
-      "title": "TechCrunch: Horizon3 Raises $250M Series E at $2B+ Valuation",
-      "url": "https://techcrunch.com/2026/08/03/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
+      "title": "OpenAI: OpenAI and Hugging Face partner to address security incident during model evaluation",
+      "url": "https://openai.com/index/hugging-face-model-evaluation-security-incident/"
     },
     {
-      "title": "Horizon3: Horizon3 Raises $250M Series E at $2B+ Valuation",
-      "url": "https://horizon3.ai/news/press-release/horizon3-raises-250m-series-e-at-2b-valuation-to-lead-the-ai-vs-ai-cybersecurity-era/"
+      "title": "Anthropic: Investigating three real-world incidents in our cybersecurity evaluations",
+      "url": "https://www.anthropic.com/news/investigating-incidents-cybersecurity-evals"
     },
     {
-      "title": "TechCrunch: Design Arena creators raise $7.9 million to bring taste to AI models",
-      "url": "https://techcrunch.com/2026/08/03/design-arena-creators-raise-7-9-million-to-bring-taste-to-ai-models/"
+      "title": "AP: Anthropic says its AI models hacked 3 organizations during testing",
+      "url": "https://apnews.com/article/b0a2c284b981de79c55e2a33712f4bec"
     },
     {
-      "title": "Design Arena: Image Arena and Leaderboards",
-      "url": "https://www.designarena.ai/"
+      "title": "Business Insider: 15 attorneys general have instructed OpenAI to preserve all materials related to the Hugging Face hack",
+      "url": "https://www.businessinsider.com/openai-attorney-general-preserve-hugging-face-evidence-2026-8"
     },
     {
-      "title": "TechCrunch: Wispr Flow is preparing to launch a meeting notetaker, updated terms suggest",
-      "url": "https://techcrunch.com/2026/08/03/wispr-flow-is-preparing-to-launch-a-meeting-notetaker-updated-terms-suggest/"
+      "title": "Aikido: Keyv and friends compromised in active Shai-Hulud supply chain attack",
+      "url": "https://www.aikido.dev/blog/keyv-and-friends-compromised-in-npm-supply-chain-attack"
     },
     {
-      "title": "Wispr Flow: Terms of Service",
-      "url": "https://wisprflow.ai/terms-of-service"
+      "title": "GitHub Blog: Disrupting supply chain attacks on npm and GitHub Actions",
+      "url": "https://github.blog/security/supply-chain-security/disrupting-supply-chain-attacks-on-npm-and-github-actions/"
     },
     {
-      "title": "TechCrunch: Apple says more ex-employees may have taken confidential data to OpenAI",
-      "url": "https://techcrunch.com/2026/08/04/apple-says-more-ex-employees-may-have-taken-confidential-data-to-openai/"
+      "title": "GitHub Changelog: GitHub Actions holds potentially malicious workflows for approval",
+      "url": "https://github.blog/changelog/2026-07-28-github-actions-holds-potentially-malicious-workflows-for-approval/"
     },
     {
-      "title": "OpenAI: Apple is getting this wrong",
-      "url": "https://openai.com/index/apple-is-getting-this-wrong/"
+      "title": "SentinelOne: SentinelOne Makes the Autonomous SOC Trustworthy with Governed, Closed-Loop Response",
+      "url": "https://www.sentinelone.com/press/sentinelone-makes-the-autonomous-soc-trustworthy-with-governed-closed-loop-response/"
     },
     {
-      "title": "TechCrunch: Bending Spoons to buy Airtable for $1.28B",
-      "url": "https://techcrunch.com/2026/08/04/bending-spoons-to-buy-airtable-for-1-28b/"
+      "title": "SentinelOne: SentinelOne Expands Wayfinder Frontier AI Services",
+      "url": "https://www.sentinelone.com/press/sentinelone-expands-wayfinder-frontier-ai-services/"
+    },
+    {
+      "title": "NVIDIA Blog: Industry Leaders Unite in Open Secure AI Alliance for AI Safety and Security",
+      "url": "https://blogs.nvidia.com/blog/open-secure-ai-alliance/"
+    },
+    {
+      "title": "Black Hat USA 2026 AI Summit",
+      "url": "https://blackhat.com/us-26/ai-summit.html"
+    },
+    {
+      "title": "OpenAI: Advancing the price-performance frontier with GPT-5.6",
+      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
+    },
+    {
+      "title": "OpenAI: How we built a realtime system for responsive voice AI in six months",
+      "url": "https://openai.com/index/continuous-voice-interaction-with-gpt-live/"
+    },
+    {
+      "title": "OpenAI: Scientific computing in the age of agentic AI",
+      "url": "https://openai.com/index/scientific-computing-agentic-ai/"
     },
     {
       "title": "Hacker News front page",
       "url": "https://news.ycombinator.com/"
     },
     {
-      "title": "Product Hunt leaderboard",
+      "title": "Product Hunt leaderboard for August 4, 2026",
       "url": "https://www.producthunt.com/leaderboard/daily/2026/8/4?ref=header_nav"
     }
   ]
