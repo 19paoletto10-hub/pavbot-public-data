@@ -1,0 +1,217 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-08-03",
+  "runTime": "15:44",
+  "executiveSummary": "Dzisiejszy sweep przyniósł wyraźny, bardziej produkcyjny burst wokół Addepto, ITDS, DataArt, EPAM, Sii i Spyrosoft. Najmocniejsze sygnały to nowy senior wariant Addepto, świeże role DataArt z Wrocławia i remote Poland, a także kolejne role z wyraźnym naciskiem na Azure, MCP, OpenAI, RAG, forward deployment i production delivery. Jednocześnie boardy coraz częściej przestawiają waluty między CHF i PLN, więc salary trzeba traktować jako chwilowy stan publicznego mirrora, a nie stabilny kontrakt.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Senior AI Engineer (LLMs, Python)",
+      "company": "Addepto",
+      "location": "Wrocław + 4 lokalizacje, remote.",
+      "workMode": "Remote",
+      "compensation": "4 151,45 - 5 414,93 CHF/month.",
+      "seniority": "Senior",
+      "fitSummary": "LLM, Cloud, Backend, Python, Generative AI, Data Science, Docker.",
+      "whyInteresting": "to wyraźny krok w górę względem wcześniejszego, bardziej juniorskiego AI Engineer; dodatkowo board przestawił walutę na CHF, co jest materialną zmianą względem poprzedniego runu.",
+      "uncertainty": "publiczny board i canonicalna strona Addepto nie układają się 1:1, więc trzeba traktować to jako osobną, wyżej pozycjonowaną publikację, a nie prostą zamianę starej oferty.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/addepto-senior-ai-engineer-llms-python--wroclaw-ai-23208086",
+        "https://addepto.com/career/ai-engineer/"
+      ],
+      "tags": [
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Senior AI Platform Engineer – ML Infrastructure and RAG Systems",
+      "company": "ITDS Polska Sp. z o.o.",
+      "location": "Wrocław, model office/on-site.",
+      "workMode": "Wrocław",
+      "compensation": "8 581,85 - 12 872,77 CHF/month.",
+      "seniority": "Senior",
+      "fitSummary": "RAG systems, LLM Integration, vector databases, System monitoring, Agentic AI Systems, Kubernetes, AWS, Python.",
+      "whyInteresting": "to nadal jeden z najmocniejszych platformowych sygnałów, a dzisiejsza publikacja zmienia walutę i poziom wyceny względem poprzedniego raportu.",
+      "uncertainty": "rola jest office-first, więc nie jest to szeroki remote Poland lead; salary może dalej driftować na boardzie.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "AI Production Support Engineer",
+      "company": "DataArt",
+      "location": "Wrocław + remote.",
+      "workMode": "Remote",
+      "compensation": "17 000 - 24 000 PLN/month zależnie od kontraktu.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "AI/ML ecosystem, SRE, Production Support, Azure, Python, Docker, Kubernetes, MLOps.",
+      "whyInteresting": "to rzadszy, operacyjny wariant pracy przy AI, bardziej o utrzymanie i stabilizację produkcyjnych systemów niż o sam development nowych modeli.",
+      "uncertainty": "board mirror przestawił się z poprzednich widełek w USD na PLN, więc warto dalej pilnować, czy to trwała zmiana czy chwilowy stan publicznego renderu.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/dataart-ai-production-support-engineer-wroclaw-ai"
+      ],
+      "tags": [
+        "MLOps",
+        "Python",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Senior Python Engineer with AI Exposure",
+      "company": "DataArt",
+      "location": "plac Grunwaldzki 23, Wrocław + 4 lokalizacje, remote.",
+      "workMode": "Remote",
+      "compensation": "5 420,64 - 6 721,60 CHF net/month B2B lub 4 444,93 - 5 529,05 CHF gross/month permanent.",
+      "seniority": "Senior",
+      "fitSummary": "AI and ML driven solutions, LLMs, data engineering, cloud platforms, productionizacja modeli.",
+      "whyInteresting": "to nowy, bardziej klasyczny engineering role z wyraźnym AI stackiem i solidnym salary; dobrze uzupełnia bardziej delivery-heavy sygnały z tej samej firmy.",
+      "uncertainty": "to board-first sygnał, więc trzeba jeszcze obserwować, czy publiczna treść pozostanie spójna z ewentualnym canonicalem.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/dataart-senior-python-engineer-with-ai-exposure-wroclaw-python"
+      ],
+      "tags": [
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Forward Deployed Engineer",
+      "company": "DataArt",
+      "location": "Wrocław + 4 lokalizacje, remote.",
+      "workMode": "Remote",
+      "compensation": "20 000 - 29 600 PLN/month zależnie od kontraktu.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLMs, Cloud Platforms, Claude Code, production delivery.",
+      "whyInteresting": "to jeden z najmocniejszych sygnałów forward-deployed po stronie DataArt i dobrze pokazuje przesunięcie rynku w stronę wdrażania AI do realnych workflowów.",
+      "uncertainty": "board title jest publiczny, ale ten segment ofert zwykle rotuje szybko, więc warto sprawdzić trwałość ogłoszenia przy następnym runie.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/dataart-forward-deployed-engineer-wroclaw-ai-fa0b0d2d"
+      ],
+      "tags": [
+        "LLM"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Senior AI Engineer with Azure",
+      "company": "EPAM Systems",
+      "location": "Wrocław + remote.",
+      "workMode": "Remote",
+      "compensation": "30,17 - 36,63 CHF/h.",
+      "seniority": "Senior",
+      "fitSummary": "AI Engineering, Multi-agent AI Systems, Microsoft Azure, Python, Agent Orchestration, Azure OpenAI Service, MCP, Azure DevOps, CI/CD.",
+      "whyInteresting": "oficjalna EPAM-owa treść bardzo jasno mówi o produkcyjnej stronie AI, evalach, guardrails i skali. To jeden z najmocniejszych sygnałów jakościowych w dzisiejszym runie.",
+      "uncertainty": "board mirror i official page mogą dalej rozjeżdżać się w szczegółach, więc warto śledzić zarówno widoczny publiczny band, jak i opis obowiązków.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai",
+        "https://careers.epam.com/en/vacancy/senior-ai-engineer-with-microsoft-azure-bltdzd6etpljudwdmjn_en"
+      ],
+      "tags": [
+        "Python",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "Forward Deployed Engineer (OpenAI)",
+      "company": "Sii Sp. z o.o.",
+      "location": "Wrocław + remote.",
+      "workMode": "Remote",
+      "compensation": "23,53 - 32,09 CHF/h.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "OpenAI APIs, Large Language Models, Python, REST APIs, Backend Services, Generative AI, Prompt Engineering, RAG, Azure OpenAI, Langchain.",
+      "whyInteresting": "to bardzo mocny, praktyczny sygnał na delivery i wdrażanie produkcyjnych systemów AI, a nie tylko prototypowanie.",
+      "uncertainty": "publiczny board pokazuje ten role family jako osobny, szybko rotujący sygnał, więc trzeba potwierdzać, czy nie zniknie albo nie zmieni nazwy przy kolejnym przebiegu.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "RAG",
+        "Python",
+        "Azure"
+      ]
+    },
+    {
+      "rank": 8,
+      "title": "Senior AI Engineer with Azure",
+      "company": "Spyrosoft",
+      "location": "Wrocław + 4 lokalizacje, remote.",
+      "workMode": "Remote",
+      "compensation": "30,17 - 36,63 CHF/h.",
+      "seniority": "Senior",
+      "fitSummary": "AI Engineering, Multi-agent AI Systems, Microsoft Azure, Python, Agent Orchestration, Azure OpenAI Service, MCP, Azure DevOps, CI/CD, integracje zewnętrzne.",
+      "whyInteresting": "Spyrosoft nadal przesuwa ofertę w stronę agentic delivery i produkcyjnej integracji z Azure, a publiczny band jest dziś bardziej czytelny niż w poprzednich snapshotach.",
+      "uncertainty": "to board-first sygnał, więc title i waluta mogą jeszcze driftować przed następnym runem.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "Python",
+        "Azure"
+      ]
+    }
+  ],
+  "changes": [
+    "W porównaniu z 2026-08-01 rynek przesunął się jeszcze mocniej w stronę produkcyjnych i forward-deployed ról, a nie tylko ogólnego AI Engineer.",
+    "Najbardziej materialna zmiana to Addepto: board pokazał Senior AI Engineer (LLMs, Python) i przestawił salary na CHF, podczas gdy canonical Addepto page nadal trzyma bazową rodzinę AI Engineer.",
+    "ITDS i DataArt przestawiły publiczne widełki i role na bardziej operacyjny, platformowy oraz delivery-heavy zestaw, z wyraźnym naciskiem na RAG, MLOps, support i forward deployment.",
+    "EPAM, Sii i Spyrosoft dziś wyraźnie akcentują Azure, OpenAI, MCP, multi-agent systems i productionization, co wzmacnia te firmy jako recurring sources.",
+    "ALTIMI także utrzymuje swój forward-deployment sygnał, ale publiczny opis jest dziś bardziej chaotyczny niż u najlepszych ofert z listy, więc na razie został poza top 8."
+  ],
+  "risks": [
+    "Board mirrors dalej zmieniają walutę, seniority i tytuły szybciej niż canonical employer pages, więc salary należy traktować jako chwilowy publiczny snapshot.",
+    "Część ofert jest wielolokalizacyjna lub hybrydowa, a część ma kilka równoległych publicznych mirrorów, które nie zawsze są spójne.",
+    "ALTIMI i niektóre role DataArt mają jeszcze zbyt dużo publicznego szumu w tytule lub modelu wynagrodzenia, żeby traktować je jako w pełni stabilne."
+  ],
+  "recommendedActions": [
+    "W następnym runie ponownie sprawdzić Addepto, ITDS i oba świeże role DataArt pod kątem expiry, salary drift i ewentualnych zmian canonical/board.",
+    "Kontynuować monitorowanie EPAM, Sii i Spyrosoft jako najmocniejszych recurring sources dla production AI, agentic systems i Azure/OpenAI delivery.",
+    "Zachować preferencję dla canonical employer pages, ale nie zgubić board-first leadów, jeśli są jedynym publicznym źródłem świeżego sygnału."
+  ],
+  "checkedSources": [
+    {
+      "title": "Job offers AI/ML, Wrocław - Just Join IT",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "AI Engineer - Join AI & Big Data Company - Addepto",
+      "url": "https://addepto.com/career/ai-engineer/",
+      "status": "checked"
+    },
+    {
+      "title": "Senior AI Engineer with Microsoft Azure - EPAM Careers",
+      "url": "https://careers.epam.com/en/vacancy/senior-ai-engineer-with-microsoft-azure-bltdzd6etpljudwdmjn_en",
+      "status": "checked"
+    },
+    {
+      "title": "Senior Python Engineer with AI Exposure - DataArt - Just Join IT",
+      "url": "https://justjoin.it/job-offer/dataart-senior-python-engineer-with-ai-exposure-wroclaw-python",
+      "status": "checked"
+    },
+    {
+      "title": "Forward Deployed Engineer - DataArt - Just Join IT",
+      "url": "https://justjoin.it/job-offer/dataart-forward-deployed-engineer-wroclaw-ai-fa0b0d2d",
+      "status": "checked"
+    },
+    {
+      "title": "AI Forward Deployment Engineer - ALTIMI - Just Join IT",
+      "url": "https://justjoin.it/job-offer/altimi-ai-forward-deployment-engineer-wroclaw-ai",
+      "status": "checked"
+    }
+  ]
+}
