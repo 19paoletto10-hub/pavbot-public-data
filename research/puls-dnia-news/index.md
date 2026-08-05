@@ -2,6 +2,33 @@
 
 ## Current State
 
-Slot z 2026-08-05 18:07 przesuwa feed z samej polityki do bardziej operacyjnego obrazu dnia: mObywatel ma falę zgłoszeń po terminie aktualizacji certyfikatów, paliwa biją rekordy, a upał i sztab kryzysowy wokół energii zaczynają składać się w jeden blok ryzyka. W polityce nadal wraca spór Kaczyński-Morawiecki, ale nie dominuje już samodzielnie całego raportu.
+Slot z 2026-08-05 21:06 utrzymuje przejście z czystej polityki do obrazu operacyjnego: mObywatel nadal generuje zgłoszenia, upał przechodzi w burze, a energia i paliwa pozostają głównym krajowym blokiem ryzyka. Polityka PiS nie zniknęła, ale nie dominuje już całego feedu.
 
-Za granicą BBC i CNN trzymają uwagę na bezpieczeństwie infrastruktury, Ukrainie, Iranie i Kanale La Manche. AI pozostaje osobnym wątkiem regulacyjno-politycznym, z naciskiem na przejrzystość i użycie w kampaniach wyborczych.
+Za granicą BBC i CNN nadal trzymają uwagę na Ukrainie, Niemczech, Iranie, globalnej energii i Kanale La Manche. AI pozostaje osobnym wątkiem regulacyjno-politycznym, teraz mocniej związanym z egzekwowaniem przejrzystości.
+
+## Data Shape
+
+The native iOS feed expects:
+
+- one digest headline and summary;
+- at least 12 news items;
+- an even number of items;
+- sections such as `Polska`, `Świat`, `Polityka`, `Bezpieczeństwo`,
+  `Gospodarka`, `Technologia`, `Alerty`;
+- source links for every item;
+- analysis fields: `whatHappened`, `keyFacts`, `reactions`, `whyItMatters`,
+  `context`, `watchNext`.
+
+## iOS Surface
+
+The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card
+opens a detail view with facts, reactions, context, why it matters, watch-next
+items and sources.
+
+## Editorial Notes
+
+- Keep at least 12 items and an even count so the app renders exact card pairs.
+- Keep at least two `Polska` or `Polityka` items and at least two `Świat`
+  items to protect the home feed balance.
+- Prefer operational alerts, public-safety events, geopolitics and major
+  economy moves over softer feature content.

@@ -1,5 +1,16 @@
 # Puls Dnia News Backlog
 
+# Puls Dnia News Backlog
+
+## 2026-08-05 21:06
+
+- Watch whether mObywatel publishes a status update, stabilizes logins, or extends the certificate deadline.
+- Watch whether IMGW, RCB, PSE or lokalni operatorzy turn the heat-and-storm block into outages or transport disruption.
+- Watch whether fuel record headlines turn into a concrete relief proposal or tax announcement.
+- Watch whether BBC follow-ups on Ukraine, Germany or Iran add official counts or new responses.
+- Watch whether the Channel rescue story gets updated casualty, survivor, or route details.
+- Watch whether first visible AI Act labels appear on Polish-language platforms.
+
 ## 2026-08-05 18:07
 
 - Watch whether mObywatel publishes a status update, stabilizes logins, or extends the certificate deadline.
