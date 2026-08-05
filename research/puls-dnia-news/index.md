@@ -2,8 +2,6 @@
 
 ## Current State
 
-The 2026-08-04 18:09 slot przesuwa feed w stronę bardziej operacyjnego ryzyka: Kaczyński ponownie eskaluje spór z Morawieckim, Nawrocki broni ułaskawienia Starucha, a alerty pogodowe zaczynają przekładać się na możliwe przerwy w dostawie prądu i lokalne pożary. Do tego dochodzi krajowy cyberincydent na Żabce, rozmowy AI w Białym Domu oraz energetyczny problem z niskim Dunajem. W świecie dominują migracja, Gaza, Ukraina, Ormuz, Francja i Kuba.
+Slot z 2026-08-05 18:07 przesuwa feed z samej polityki do bardziej operacyjnego obrazu dnia: mObywatel ma falę zgłoszeń po terminie aktualizacji certyfikatów, paliwa biją rekordy, a upał i sztab kryzysowy wokół energii zaczynają składać się w jeden blok ryzyka. W polityce nadal wraca spór Kaczyński-Morawiecki, ale nie dominuje już samodzielnie całego raportu.
 
-This slot feels less like a policy-and-AI morning than 2026-08-03 09:02 and more like a live risk map: domestic politics, weather, cyber and energy now sit closer together, while the world block is heavier on transport, migration and infrastructure than on geopolitics alone.
-
-The 2026-08-03 09:02 slot keeps PiS at the center, but makes the dispute more concrete: Morawiecki fixes 15 October for Rozwój Plus, Czarnek hardens the anti-Ukrainian line, and Kaczyński only partly distances himself. The feed also gains a stronger market block through Żabka, strong U.S. earnings and the yen intervention, while AI Act enforcement, red heat warnings and the Wrocław knife attack keep domestic risk high.
+Za granicą BBC i CNN trzymają uwagę na bezpieczeństwie infrastruktury, Ukrainie, Iranie i Kanale La Manche. AI pozostaje osobnym wątkiem regulacyjno-politycznym, z naciskiem na przejrzystość i użycie w kampaniach wyborczych.
