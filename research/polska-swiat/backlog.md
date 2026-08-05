@@ -4,6 +4,11 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track 5 August Kyiv ballistic barrage and Patriot gap | AP reports 17 killed and 44 wounded after a Russian ballistic, missile and drone attack on Kyiv and the region, while Ukraine again points to missing Patriot interceptors | Watch AP, President of Ukraine, NATO, White House, Pentagon, EU and air-defense manufacturers for casualty updates, interceptor decisions, sanctions on missile production and allied reaction | Open |
+| High | Track 5 August Leipzig/Halle drone explosive investigation | Saxony prosecutors and LKA took over a case involving a drone with an unknown explosive device at Leipzig/Halle cargo infrastructure and a second unidentified object colliding with a cargo plane | Watch Saxony prosecutor/LKA, German federal authorities, NATO, DHL, airport statements and reputable German/AP/Reuters mirrors; avoid assigning responsibility until official attribution appears | Open |
+| High | Track 5 August Hormuz final deal window | AP says Trump believes a Strait of Hormuz deal could come as early as Wednesday or Thursday, but attacks on shipping and disputes over routes, control and fees continue | Watch AP, White House, Oman, Iran MFA, UKMTO, CENTCOM, oil prices and shipping data for final terms, actual traffic normalization and any renewed attacks | Open |
+| Medium | Track 5 August Ceuta political and humanitarian aftermath | The Guardian describes Ceuta as a misinformation-driven border crisis with 72,000 crossings, at least 88 deaths and families still searching for missing relatives | Watch Spain, Morocco, EU institutions, NGOs, Guardian/AP/BBC and platform responses for missing-person data, minors, asylum handling and evidence about the social-media hoax | Open |
+| Medium | Track 5 August Polish KPRM and RCB follow-up | KPRM scheduled a 5 August prime-minister press conference while the 4 August sanctions package and current RCB alert stream remain active monitoring items rather than a new domestic breakthrough | Check KPRM post-event materials, RCL/Sejm for draft texts and RCB/IMGW direct alert pages before any audio or push notification | Open |
 | High | Track 4 August Polish sanctions and FIMI bill | KPRM says the government adopted a horizontal sanctions bill with national restrictive measures, FIMI as a new listing basis and criminal penalties up to 12 years in the most serious cases | Watch KPRM, MSZ, MSWiA, RCL and Sejm for draft text, list procedure, parliamentary timetable, business reaction and constitutional objections | Open |
 | High | Track 4 August Hormuz ship strike and USA-Iran talks dispute | AP now says Iran and Oman have made progress toward a deal to reopen the Strait of Hormuz, but U.S. officials still stop short of calling it final | Watch AP, UKMTO, Ambrey, Oman, Iran MFA, White House, CENTCOM and oil/shipping updates for final terms, responsibility claims and traffic normalization | Open |
 | High | Track 4 August Ukraine Zaporizhzhia and NATO horizon | AP reports eight Russian glide bombs on Zaporizhzhia and the President of Ukraine says Umerov will head the Foreign Intelligence Service, while Kyiv keeps pressing for Patriots, FREYJA and long-range drone pressure | Watch AP, President of Ukraine, NATO, ISW/AFP, White House and Pentagon for casualty updates, formal decree, Patriot decisions and allied reaction to the NATO comments | Open |
@@ -128,6 +133,12 @@
 
 ## Review Notes
 
+- 2026-08-05: Research created a material update. Strongest sources were AP for
+  Kyiv/Patriot and Ormuz, Saxony plus Guardian for Leipzig/Halle, Guardian for
+  Ceuta, President of Ukraine for the EU/air-defense frame, and KPRM/RCB for
+  Polish checked context. Podcast should lead Kyiv, then Leipzig/Halle, then
+  Ormuz; Polish KPRM and RCB remain follow-ups unless a direct new document or
+  alert page changes the facts.
 - 2026-06-17: Topic created for Polish daily Poland/world news research and
   podcast automation.
 - 2026-06-17: Manual research dry run created the first `polska-swiat` report

@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-08-04
+Last updated: 2026-08-05
 
 ## Current Understanding
 
@@ -100,6 +100,15 @@ oficjalnie zapowiedział, że Rustem Umerow obejmie Służbę Wywiadu Zagraniczn
 a cały blok wojenny nadal kręci się wokół Patrioty, FREYJA i długiego zasięgu
 dronów. W praktyce oznacza to, że dzisiejszy środek ciężkości przesunął się z
 incydentu do dyplomacji, wywiadu i odporności energetycznej.
+Po runie 5 sierpnia środek ciężkości przesunął się na trzy osie bezpieczeństwa:
+rosyjski atak rakietowo-dronowy na Kijów z bilansem 17 zabitych i 44 rannych
+oraz ostrym deficytem Patriotów, incydent z dronem i nieznanym ładunkiem
+wybuchowym na lotnisku Leipzig/Halle jako europejski test ochrony infrastruktury
+krytycznej i logistyki dla Ukrainy, oraz Ormuz, gdzie Trump mówi o możliwej
+umowie w najbliższym terminie, ale AP nadal opisuje spór o trasy, opłaty i
+kontrolę. Ceuta przechodzi w fazę politycznej eksploatacji dezinformacji i
+poszukiwań zaginionych, a polski blok krajowy pozostaje w obserwacji po pakiecie
+sankcyjno-deregulacyjnym z 4 sierpnia oraz po sprawdzeniu KPRM i RCB.
 Po weekendowym runie 21 czerwca temat orderowy wszedł w fazę reakcji
 ukraińskich polityków i byłych prezydentów, a główny temat międzynarodowy
 przesunął się na rozmowy USA-Iran w Szwajcarii, spór o Cieśninę Ormuz i
@@ -625,6 +634,7 @@ konfliktowaniu Polaków i Ukraińców.
 
 ## Recent Reports
 
+- [2026-08-05](runs/2026-08-05.md)
 - [2026-08-04-1937](runs/2026-08-04-1937.md)
 - [2026-08-04](runs/2026-08-04.md)
 - [2026-08-02](runs/2026-08-02.md)
