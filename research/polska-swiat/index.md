@@ -109,6 +109,13 @@ umowie w najbliższym terminie, ale AP nadal opisuje spór o trasy, opłaty i
 kontrolę. Ceuta przechodzi w fazę politycznej eksploatacji dezinformacji i
 poszukiwań zaginionych, a polski blok krajowy pozostaje w obserwacji po pakiecie
 sankcyjno-deregulacyjnym z 4 sierpnia oraz po sprawdzeniu KPRM i RCB.
+Po porannym runie 6 sierpnia krajowy blok przesunął się z monitoringu do
+formalnego etapu: KPRM opublikowała projekt ustawy o środkach ograniczających
+i oznaczyła go jako skierowany do Sejmu 6 sierpnia, a RCB wydało nowy alert
+06/07.08 o burzach, silnym wietrze i intensywnych opadach na szerokim pasie
+kraju. Za granicą AP dołożyło nową salwę na Kijów z kolejnym bilansem ofiar,
+osobny materiał o luce Patriotów i kolejny raport o Ormuzie jako finalnym
+drafcie porozumienia, nie jeszcze wdrożonej normalizacji żeglugi.
 Po weekendowym runie 21 czerwca temat orderowy wszedł w fazę reakcji
 ukraińskich polityków i byłych prezydentów, a główny temat międzynarodowy
 przesunął się na rozmowy USA-Iran w Szwajcarii, spór o Cieśninę Ormuz i
