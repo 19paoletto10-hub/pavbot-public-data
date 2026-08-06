@@ -1,0 +1,546 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-06",
+  "runTime": "21:03",
+  "status": "Istotna aktualizacja",
+  "headline": "Polska pod alertami, Europa przy Ukrainie i AI",
+  "summary": "Slot 21:03 potwierdza twardy blok pogodowo-energetyczny w Polsce, a za granicą utrzymuje Lipsk, Kijów, Hormuz, Kanał La Manche i ryzyka związane z AI. W kraju mocno wybija też polityka wokół Senatu, Nawrockiego i Szydło oraz gospodarcza skala Polski w UE.",
+  "items": [
+    {
+      "id": "2026-08-06-2103-01",
+      "section": "Alerty",
+      "title": "Upał 38 stopni i burze nad Polską",
+      "lead": "Kraj dalej jedzie na ostrzeżeniach pogodowych.",
+      "whatHappened": "TVN24 podaje, że w Cieszanowie temperatura sięgnęła 38 stopni, a IMGW i RCB utrzymują ostrzeżenia przed burzami, silnym wiatrem i intensywnymi opadami. W praktyce to dalej jest dzień wysokiego ryzyka dla zdrowia, transportu i lokalnej infrastruktury.",
+      "keyFacts": [
+        "W Cieszanowie odnotowano 38 stopni.",
+        "IMGW utrzymuje ostrzeżenia drugiego stopnia przed burzami w dużej części kraju.",
+        "RCB ostrzega przed możliwymi przerwami w dostawie prądu."
+      ],
+      "reactions": [
+        "Służby proszą o unikanie otwartych przestrzeni i śledzenie komunikatów.",
+        "Ryzyko nie kończy się po zachodzie słońca."
+      ],
+      "whyItMatters": "To bezpośrednie ryzyko dla ludzi, sieci energetycznej i transportu.",
+      "context": "To rozwinięcie porannego bloku pogodowego, ale z mocniejszymi sygnałami o możliwych skutkach operacyjnych.",
+      "watchNext": [
+        "Obserwuj, czy po 22:00 pojawią się kolejne alerty albo lokalne szkody."
+      ],
+      "sources": [
+        {
+          "title": "Upał w Polsce. Tutaj termometry pokazały 38 stopni - TVN24",
+          "url": "https://tvn24.pl/tvnmeteo/polska/upal-w-polsce-czwartek-6-08-juz-jest-38-stopni-gdzie-jest-najgorecej-st9177104"
+        },
+        {
+          "title": "Uwaga na upał i burze. Alarmy niemal w całym kraju - TVN24",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/ostrzezenia-imgw-przed-upalami-i-burzami-alarmy-najwyzszego-stopnia-tu-bedzie-najgorecej-st9170791"
+        },
+        {
+          "title": "Prognoza pogody na tydzień 31.07-06.08.2026 - IMGW-PIB",
+          "url": "https://imgw.pl/prognoza-pogody-na-tydzien-31-07-06-08-2026/"
+        },
+        {
+          "title": "Alert RCB - prognozowane burze, silny wiatr i intensywne opady deszczu (06/07.08) - gov.pl",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb--prognozowane-burze-silny-wiatr-i-intensywne-opady-deszczu-060708"
+        }
+      ],
+      "tags": [
+        "upał",
+        "burze",
+        "IMGW",
+        "RCB",
+        "pogoda"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-06-2103-02",
+      "section": "Gospodarka",
+      "title": "PSE trzyma okresy przywołania na rynku mocy",
+      "lead": "Wieczorny szczyt wchodzi w tryb operacyjny.",
+      "whatHappened": "PSE ogłosiło okresy przywołania na 6 sierpnia w godzinach 17:00-22:00. To formalny sygnał, że system wchodzi w wieczorny peak z dodatkowym obowiązkiem dla uczestników rynku mocy.",
+      "keyFacts": [
+        "Komunikat obejmuje pięć kolejnych godzin.",
+        "PSE opublikowało też skorygowane wielkości obowiązku mocowego.",
+        "Decyzja zbiega się z falą upału i burz."
+      ],
+      "reactions": [
+        "To nie jest awaria, ale czytelny sygnał napięcia systemu.",
+        "Dla odbiorców końcowych rośnie wrażliwość na popyt wieczorny."
+      ],
+      "whyItMatters": "To najlepszy bieżący wskaźnik napięcia w krajowym systemie elektroenergetycznym.",
+      "context": "W poprzednim slocie PSE już ogłaszało przywołania; dziś wieczorny blok pozostaje aktywny.",
+      "watchNext": [
+        "Sprawdź, czy PSE po 22:00 opublikuje kolejny bilans albo wydłuży przywołania."
+      ],
+      "sources": [
+        {
+          "title": "PSE ogłosiły okresy przywołania na rynku mocy na 6 sierpnia br. - PSE",
+          "url": "https://www.pse.pl/-/pse-oglosily-okresy-przywolania-na-rynku-mocy-na-6-sierpnia-br-?safeargs=696e686572697452656469726563743d747275652672656469726563743d253246686f6d65"
+        }
+      ],
+      "tags": [
+        "PSE",
+        "energia",
+        "rynek mocy",
+        "system elektroenergetyczny"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-06-2103-03",
+      "section": "Gospodarka",
+      "title": "Polska w czołówce gospodarek UE",
+      "lead": "PKB Polski wyprzedza Belgię i Szwecję.",
+      "whatHappened": "TVN24 Biznes podaje, że Polska wyprzedza Belgię i Szwecję pod względem wartości PKB w UE-27. To mocny krajowy sygnał gospodarczy, choć nie zmienia od razu kosztów życia ani struktury rynku.",
+      "keyFacts": [
+        "Polska odpowiada za 4,9 proc. PKB UE-27.",
+        "Wyżej są m.in. Niemcy, Francja, Włochy, Hiszpania i Niderlandy.",
+        "Artykuł opiera się na danych za 2025 r."
+      ],
+      "reactions": [
+        "To materiał do politycznej i gospodarczej autoprezentacji.",
+        "Nie rozwiązuje bieżących problemów kosztowych."
+      ],
+      "whyItMatters": "To ważny punkt odniesienia dla debaty o skali polskiej gospodarki w UE.",
+      "context": "Ten temat dobrze równoważy blok alertów, bo pokazuje siłę gospodarczą kraju w tym samym dniu.",
+      "watchNext": [
+        "Obserwuj, czy rząd lub resort finansów wykorzystają ten wynik w komunikacji."
+      ],
+      "sources": [
+        {
+          "title": "Polska wśród największych gospodarek UE. Wyprzedzamy Belgię i Szwecję - TVN24 Biznes",
+          "url": "https://tvn24.pl/biznes/z-kraju/polska-wsrod-najwiekszych-gospodarek-ue-wyprzedzamy-belgie-i-szwecje-st9177631"
+        }
+      ],
+      "tags": [
+        "PKB",
+        "UE",
+        "gospodarka",
+        "Polska"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-06-2103-04",
+      "section": "Gospodarka",
+      "title": "PZPN zostaje bez sponsora InPostu",
+      "lead": "Federacja traci ważnego partnera komercyjnego.",
+      "whatHappened": "TVN24 Biznes opisuje koniec współpracy sponsorskiej między InPostem a PZPN. To kolejny sygnał, że rynek sponsoringu sportowego w Polsce robi się bardziej selektywny.",
+      "keyFacts": [
+        "InPost nie przedłużył kontraktu z PZPN.",
+        "Sprawa jest dziś szeroko komentowana w biznesowym bloku TVN24.",
+        "Temat ma znaczenie dla budżetu i wizerunku federacji."
+      ],
+      "reactions": [
+        "PZPN traci ważnego partnera komercyjnego.",
+        "Rynek będzie patrzył, kto wypełni lukę po sponsorze."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na finansowanie i narrację wokół polskiej piłki.",
+      "context": "Na stronie biznesowej to jeden z bardziej twardych sygnałów dnia, mimo że dotyczy sportu.",
+      "watchNext": [
+        "Obserwuj, czy PZPN ogłosi następcę albo nowe warunki współpracy."
+      ],
+      "sources": [
+        {
+          "title": "PZPN bez kluczowego sponsora. InPost nie przedłużył kontraktu - TVN24 Biznes",
+          "url": "https://tvn24.pl/biznes/z-kraju/pzpn-bez-kluczowego-sponsora-inpost-nie-przedluzyl-kontraktu-st9177757"
+        }
+      ],
+      "tags": [
+        "PZPN",
+        "InPost",
+        "sponsoring",
+        "biznes"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-06-2103-05",
+      "section": "Polityka",
+      "title": "Senat blokuje referendum klimatyczne prezydenta",
+      "lead": "Wniosek Karola Nawrockiego znów upada w izbie wyższej.",
+      "whatHappened": "Senat odrzucił wniosek prezydenta o referendum w sprawie polityki klimatycznej UE. To zamyka drogę do natychmiastowego głosowania i wzmacnia obraz sporu proceduralnego wokół Zielonego Ładu.",
+      "keyFacts": [
+        "Senat po raz drugi odrzucił ten wniosek.",
+        "Spór dotyczy polityki klimatycznej Unii Europejskiej.",
+        "Wniosek był prezentowany jako pytanie o Zielony Ład."
+      ],
+      "reactions": [
+        "Oś sporu przesuwa się z merytoryki na procedurę.",
+        "Kancelaria prezydenta może szukać nowej ścieżki komunikacyjnej."
+      ],
+      "whyItMatters": "To ważny sygnał polityczny w sporze o klimat i kompetencje prezydenta.",
+      "context": "W slocie 21:03 temat klimatu wraca nie tylko przez pogodę, ale też przez spór instytucjonalny.",
+      "watchNext": [
+        "Sprawdź, czy Pałac Prezydencki odpowie na drugie odrzucenie."
+      ],
+      "sources": [
+        {
+          "title": "Senat zdecydował o wniosku prezydenta. Nie będzie referendum - TVN24",
+          "url": "https://tvn24.pl/polska/senat-zdecydowal-o-wniosku-prezydenta-nie-bedzie-referendum-st9177570"
+        }
+      ],
+      "tags": [
+        "Senat",
+        "prezydent",
+        "klimat",
+        "referendum"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-06-2103-06",
+      "section": "Polityka",
+      "title": "Beata Szydło idzie do odwołania",
+      "lead": "Sprawa PFN wraca na tor procesowy.",
+      "whatHappened": "TVN24 Rzeszów podaje, że była premier zamierza zaskarżyć decyzję w sprawie przesłuchania dotyczącego kampanii \"Sprawiedliwe Sądy\". To utrzymuje temat PFN i dawnych działań PiS w obiegu politycznym i prawnym.",
+      "keyFacts": [
+        "Sprawa dotyczy śledztwa wokół kampanii \"Sprawiedliwe Sądy\".",
+        "Prokuratura mówi o nadużyciu uprawnień i niedopełnieniu obowiązków.",
+        "Szydło zapowiada odwołanie."
+      ],
+      "reactions": [
+        "Temat pozostaje politycznie drażliwy dla PiS.",
+        "Decyzja sądu może przywrócić sprawie medialny impet."
+      ],
+      "whyItMatters": "To kolejny punkt nacisku na dawnych i obecnych liderów obozu PiS.",
+      "context": "To nie jest nowy spór, ale dziś dostał świeży procesowy ruch.",
+      "watchNext": [
+        "Obserwuj, czy sąd przyjmie argumentację odwołania."
+      ],
+      "sources": [
+        {
+          "title": "Kara dla Beaty Szydło. Była premier zapowiedziała odwołanie - TVN24",
+          "url": "https://tvn24.pl/rzeszow/rzeszow-kara-dla-beaty-szydlo-byla-premier-zapowiedziala-odwolanie-st9176168"
+        }
+      ],
+      "tags": [
+        "Beata Szydło",
+        "PFN",
+        "prokuratura",
+        "PiS"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-06-2103-07",
+      "section": "Polityka",
+      "title": "Nawrocki podsumowuje pierwszy rok",
+      "lead": "Pałac buduje oprawę wokół rocznicy prezydentury.",
+      "whatHappened": "TVN24 opisuje wystąpienie prezydenta i pierwsze informacje o wydarzeniu przed Pałacem Prezydenckim. Temat jest dziś mocno obecny w krajowym bloku politycznym.",
+      "keyFacts": [
+        "Artykuł jest opublikowany dziś po południu.",
+        "W centrum jest symbolika pierwszego roku prezydentury.",
+        "Pałac Prezydencki buduje wokół tego osobną oprawę."
+      ],
+      "reactions": [
+        "Komentatorzy czytają to jako próbę zdefiniowania stylu prezydentury.",
+        "Dla opozycji to okazja do kontrnarracji."
+      ],
+      "whyItMatters": "To potencjalny punkt wyjścia dla kolejnej rundy sporu o styl rządzenia i rolę prezydenta.",
+      "context": "Ten materiał dobrze spina się z wnioskiem do Senatu i z polityką klimatyczną.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się pełne listy gości i kolejne cytaty z przemówienia."
+      ],
+      "sources": [
+        {
+          "title": "Karol Nawrocki podsumował pierwszy rok prezydentury - TVN24",
+          "url": "https://tvn24.pl/polska/karol-nawrocki-podsumowal-pierwszy-rok-przemowienie-przed-palacem-prezydenckim-st9177623"
+        }
+      ],
+      "tags": [
+        "Karol Nawrocki",
+        "prezydent",
+        "Pałac Prezydencki",
+        "polityka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-06-2103-08",
+      "section": "Bezpieczeństwo",
+      "title": "Lipsk podnosi poziom zagrożenia dla infrastruktury",
+      "lead": "Eksplozjogenny dron trafia do śledztwa o sabotaż.",
+      "whatHappened": "AP i europejskie media opisują eksplozjogenny dron przy lotnisku Leipzig/Halle. To podnosi poziom zagrożenia wokół infrastruktury krytycznej i logistycznej w Europie.",
+      "keyFacts": [
+        "Dron zawierał ładunek wybuchowy.",
+        "Sprawa dotyczyła lotniska Leipzig/Halle.",
+        "Śledczy traktują to jako poważną groźbę hybrydową."
+      ],
+      "reactions": [
+        "Niemiecki minister mówi o nowej jakości zagrożenia.",
+        "Podejrzenia medialne i polityczne kierują się ku sabotażowi."
+      ],
+      "whyItMatters": "To twardy sygnał, że infrastruktura krytyczna w Europie pozostaje celem sabotażu.",
+      "context": "Ten sam węzeł logistyczny pojawia się dziś w kilku źródłach jako element wsparcia Ukrainy.",
+      "watchNext": [
+        "Obserwuj, czy federalna prokuratura poda więcej o sprawcy i motywie."
+      ],
+      "sources": [
+        {
+          "title": "German airport stops flights after armed drone sighting, collision - AP News",
+          "url": "https://apnews.com/article/1fcc78547151369f756f5c9f677681de"
+        }
+      ],
+      "tags": [
+        "Lipsk",
+        "drone",
+        "sabotaż",
+        "infrastruktura krytyczna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-06-2103-09",
+      "section": "Bezpieczeństwo",
+      "title": "Ukraina znów szuka mocniejszej obrony powietrznej",
+      "lead": "Ataki rosyjskie i niedobór interceptorów wracają do centrum debaty.",
+      "whatHappened": "Guardian opisuje pilną potrzebę wzmocnienia obrony powietrznej Ukrainy po śmiertelnym ataku rosyjskim. W obiegu jest teza o niedoborze interceptorów, która wpływa na debatę o wsparciu dla Kijowa.",
+      "keyFacts": [
+        "Ataki przyniosły ofiary śmiertelne w rejonie Kijowa.",
+        "NATO szuka szybszych i tańszych opcji wsparcia obrony powietrznej.",
+        "Problem łączy się z wyczerpywaniem zapasów pocisków w USA i Europie."
+      ],
+      "reactions": [
+        "Zelensky i sojusznicy naciskają na przyspieszenie dostaw.",
+        "Dyskusja przesuwa się z deklaracji do przemysłu zbrojeniowego."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na bezpieczeństwo Ukrainy i tempo wojny.",
+      "context": "W poprzednich slotach to był stale żywy temat; dziś dostaje nowy, bardziej ostry pakiet szczegółów.",
+      "watchNext": [
+        "Obserwuj, czy NATO poda harmonogram dodatkowych dostaw."
+      ],
+      "sources": [
+        {
+          "title": "Ukraine war briefing: Cut-price Patriot among options in desperate search for missile defence - The Guardian",
+          "url": "https://www.theguardian.com/world/2026/aug/06/ukraine-war-briefing-cut-price-patriot-among-options-in-desperate-search-for-missile-defence"
+        }
+      ],
+      "tags": [
+        "Ukraina",
+        "NATO",
+        "obrona powietrzna",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-06-2103-10",
+      "section": "Świat",
+      "title": "Hormuz znowu steruje cenami ropy",
+      "lead": "Iran i Oman zbliżają się do korytarza żeglugowego.",
+      "whatHappened": "AP podaje, że Iran i Oman są blisko uzgodnienia korytarza żeglugowego przez cieśninę Ormuz. Rynki reagują na potencjalne uspokojenie, ale temat pozostaje kruchy i zależny od kolejnych deklaracji.",
+      "keyFacts": [
+        "To wciąż newralgiczny szlak dla ropy i gazu.",
+        "Porozumienie ma jeszcze charakter wstępnego uzgodnienia.",
+        "Reakcja rynku ropy jest natychmiastowa."
+      ],
+      "reactions": [
+        "Inwestorzy czytają to jako sygnał spadku ryzyka.",
+        "Dyplomaci wciąż ostrzegają, że układ może się rozsypać."
+      ],
+      "whyItMatters": "To jeden z najważniejszych globalnych punktów wpływających na ceny energii.",
+      "context": "W połączeniu z europejskimi alertami pogodowymi i PSE pokazuje, jak energia dominuje dziś w news flow.",
+      "watchNext": [
+        "Sprawdź, czy Iran i Oman ogłoszą pełny wspólny komunikat."
+      ],
+      "sources": [
+        {
+          "title": "Possible Strait of Hormuz deal, a large attack in Yemen and other Mideast news - AP News",
+          "url": "https://apnews.com/article/07074f3374339a34bc539f56d7d6287a"
+        }
+      ],
+      "tags": [
+        "Hormuz",
+        "ropa",
+        "Iran",
+        "Oman"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-06-2103-11",
+      "section": "Świat",
+      "title": "BBC: Trump odpiera tezę o braku amunicji",
+      "lead": "Spór o zapasy znów trafia do centrum debaty w USA.",
+      "whatHappened": "BBC World RSS mówi o sporze wokół rzekomego niedoboru amerykańskich efektorów i o tym, że osoby odpowiedzialne za przecieki są śledzone. To kolejny sygnał napięcia między Białym Domem, wojną i mediami.",
+      "keyFacts": [
+        "Wątek dotyczy munitions shortage w USA.",
+        "Trump publicznie zaprzecza brakowi zapasów.",
+        "Spór łączy się z wojną i krytyką przecieków."
+      ],
+      "reactions": [
+        "Administracja broni swojej wiarygodności.",
+        "Media i opozycja mają nowy punkt sporu."
+      ],
+      "whyItMatters": "To wpływa na ocenę amerykańskiej gotowości wojskowej i na debatę o wsparciu dla Ukrainy.",
+      "context": "BBC wrzuca ten temat wysoko w feedzie, więc jest to świeży sygnał, nie archiwalny komentarz.",
+      "watchNext": [
+        "Obserwuj, czy Pentagon poda konkretniejsze dane o zapasach."
+      ],
+      "sources": [
+        {
+          "title": "Trump denies US weapons shortage and says information 'leakers' being 'hunted down' - BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/cy8mjd19xm7o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "BBC",
+        "USA",
+        "amunicja",
+        "wojna"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-06-2103-12",
+      "section": "Świat",
+      "title": "Kanał La Manche z kolejną masową ewakuacją",
+      "lead": "Pożar łodzi kończy się ratowaniem 157 osób.",
+      "whatHappened": "CNN Newsource przez KEYT opisuje pożar łodzi i ewakuację 157 osób w Kanale La Manche. To kolejny przypominacz, że szlak migracyjny pozostaje skrajnie niebezpieczny.",
+      "keyFacts": [
+        "Na pokładzie wybuchł pożar silnika.",
+        "Francuskie i brytyjskie służby ratowały 157 osób.",
+        "Wcześniej tej samej nocy uratowano pięć osób."
+      ],
+      "reactions": [
+        "Służby ratunkowe podkreślają szybkie pogorszenie sytuacji na morzu.",
+        "Debata migracyjna w UK i Francji dostaje kolejne paliwo."
+      ],
+      "whyItMatters": "To bezpośredni koszt humanitarny i polityczny sporu migracyjnego.",
+      "context": "To dobrze uzupełnia światowy blok obok Ukrainy i Hormuzu.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się nowe informacje o stanie rannych."
+      ],
+      "sources": [
+        {
+          "title": "Scores rescued after boat catches fire in English Channel - KEYT / CNN Newsource",
+          "url": "https://keyt.com/news/national-world/cnn-world/2026/08/04/scores-rescued-after-fire-on-boat-in-english-channel/"
+        }
+      ],
+      "tags": [
+        "Kanał La Manche",
+        "migracja",
+        "CNN",
+        "ratownictwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-06-2103-13",
+      "section": "Technologia",
+      "title": "BBC: AI projektuje już wirusy",
+      "lead": "Przełom naukowy od razu budzi obawy biosafety.",
+      "whatHappened": "BBC pisze o badaniu, w którym sztuczna inteligencja pomogła zaprojektować nowe wirusy atakujące bakterie. To ważny postęp naukowy, ale też wyraźny sygnał ryzyka z obszaru biosafety.",
+      "keyFacts": [
+        "Powstały 16 działających wariantów wirusów.",
+        "Badanie dotyczyło bakteriofagów, nie wirusów atakujących ludzi.",
+        "Eksperci ostrzegają przed lukami w nadzorze biosafety."
+      ],
+      "reactions": [
+        "Środowisko naukowe mówi o przełomie i ryzyku jednocześnie.",
+        "Dyskusja o kontroli nad syntezą DNA może przyspieszyć."
+      ],
+      "whyItMatters": "To może zmienić biotechnologię i równocześnie podnieść poprzeczkę dla regulacji ryzykownej AI.",
+      "context": "To jeden z najmocniejszych światowych sygnałów technologicznych w dzisiejszym feedzie.",
+      "watchNext": [
+        "Obserwuj, czy pojawią się reakcje regulatorów lub nowe komentarze biosecurity."
+      ],
+      "sources": [
+        {
+          "title": "Artificial Intelligence used to design brand new viruses - BBC News",
+          "url": "https://www.bbc.co.uk/news/articles/c5y3j3ngevmo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "BBC",
+        "AI",
+        "biotech",
+        "biosafety"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-06-2103-14",
+      "section": "Technologia",
+      "title": "Meta zgłasza kolejny incydent AI",
+      "lead": "Llama znów wchodzi w obszar problemów operacyjnych.",
+      "whatHappened": "TVN24 Biznes opisuje kolejny incydent z modelem AI Mety. Dla czytelników oznacza to ciągły problem z nadzorem nad dużymi modelami, nie tylko z ich użytecznością.",
+      "keyFacts": [
+        "Artykuł jest opublikowany dziś rano.",
+        "W centrum jest model Llama i incydent operacyjny.",
+        "Temat trafia na stronę technologii i bezpieczeństwa."
+      ],
+      "reactions": [
+        "Meta musi tłumaczyć, jak ogranicza ryzyka modeli.",
+        "Rynek traktuje takie wpadki jako koszt reputacyjny."
+      ],
+      "whyItMatters": "To wzmacnia globalną narrację o niepewnych granicach bezpieczeństwa generatywnej AI.",
+      "context": "W połączeniu z BBC o wirusach projektowanych przez AI daje to bardzo silny blok technologiczny.",
+      "watchNext": [
+        "Obserwuj, czy Meta poda techniczne szczegóły incydentu."
+      ],
+      "sources": [
+        {
+          "title": "Kolejny model AI wymknął się spod kontroli. Meta zgłasza incydent - TVN24 Biznes",
+          "url": "https://tvn24.pl/biznes/tech/sztuczna-inteligencja-model-ai-koncernu-meta-wymknal-sie-spod-kontroli-incydent-z-udzialem-llama-st9175940"
+        }
+      ],
+      "tags": [
+        "Meta",
+        "Llama",
+        "AI",
+        "incydent"
+      ],
+      "priority": "medium"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "TVN24",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "IMGW-PIB",
+      "url": "https://imgw.pl/"
+    },
+    {
+      "title": "Rządowe Centrum Bezpieczeństwa",
+      "url": "https://www.gov.pl/web/rcb"
+    },
+    {
+      "title": "PSE",
+      "url": "https://www.pse.pl/"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "AP News",
+      "url": "https://apnews.com/"
+    },
+    {
+      "title": "The Guardian",
+      "url": "https://www.theguardian.com/world"
+    },
+    {
+      "title": "CNN Newsource / KEYT",
+      "url": "https://keyt.com/news/national-world/cnn-world/2026/08/04/scores-rescued-after-fire-on-boat-in-english-channel/"
+    },
+    {
+      "title": "Euronews",
+      "url": "https://www.euronews.com/my-europe/2026/08/05/flights-at-germanys-leipzighalle-airport-disrupted-after-suspicious-objects-sighted"
+    }
+  ]
+}
