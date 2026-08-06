@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-08-06",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy wieczór przesuwa ciężar z governance modeli na to, kto faktycznie kontroluje AI-owy stack. Google porządkuje AI leadership wokół Demisa Hassabisa, Koraya Kavukcuoglu i Jeffa Deana, a równolegle SpaceX i Tesla sygnalizują, że chcą wejść głębiej w własną produkcję chipów przez projekt Terafab.",
+    "W tle rynek zaczyna wyraźniej karać samą skale capexu, jeśli nie towarzyszy mu czytelna ścieżka zwrotu. HN i Product Hunt nadal premiują control surfaces, AI OS, spend tracking i agent tooling, więc community signal nadal zgadza się z tezą, że wygrywają produkty, które sterują pracą AI, a nie tylko ją demonstrują."
+  ],
+  "summaryBullets": [
+    "AI: Google porządkuje stery AI",
+    "Infrastruktura: Terafab przesuwa AI w stronę własnych chipów",
+    "Infrastruktura: Rynek zaczyna bardziej karać AI capex"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-08-06-1939-0-google-porzadkuje-stery-ai-08d009f50f",
+      "section": "AI",
+      "title": "Google porządkuje stery AI",
+      "standfirst": "Google przebudowuje leadership wokół AI: Demis Hassabis przechodzi do roli Chair i Chief Scientist, Koray Kavukcuoglu przejmuje Google DeepMind, a Jeff Dean z Sanjayem Ghemawatem zakłada Discovery Loop.",
+      "whatHappened": "Firma rozdziela odpowiedzialność za badania, model development i strategiczne kierowanie AI.",
+      "whyItMatters": "To jeden z najmocniejszych sygnałów, że wyścig AI wchodzi w fazę zarządzania talentem, strukturą i priorytetami, a nie tylko samymi modelami.",
+      "deeperAnalysis": [
+        "Google nie tylko wymienia role, ale porządkuje linię dowodzenia wokół dwóch różnych czasów pracy nad AI: krótkiego cyklu produktów i długiego cyklu badań nad AGI oraz science. To ważne, bo pokazuje, że nawet u jednego z największych graczy model nie jest już samodzielnym centrum organizacji. Centrum staje się układ decyzyjny wokół modelu.",
+        "Warto zwrócić uwagę na fakt, że Jeff Dean nie po prostu odchodzi, tylko zakłada nową public-benefit corporation razem z Sanjayem Ghemawatem. To sugeruje, że część najbardziej doświadczonych ludzi z Google AI chce pracować bardziej w trybie badawczo-aplikacyjnym niż w trybie dużej korporacji produktowej. Dla rynku to sygnał, że konkurencja o talent i narrację naukową nadal trwa.",
+        "Jest tu też ważny kontekst produktu: Sundar Pichai mówi o 950+ mln użytkowników Gemini app, więc Google nie jest w defensywie. Mimo to reorganizacja pokazuje presję na szybsze tempo i jaśniejszą odpowiedzialność za Gemini, Frontier AI research oraz science. To bardziej wewnętrzne ustawienie silnika niż zwykły public relations move."
+      ],
+      "contextPoints": [
+        "Co się stało: Google zmienia role w DeepMind i odpuszcza Jeffowi Deanowi pełnoetatową linię korporacyjną.",
+        "Dlaczego ważne: Leadership churn i spinouty mogą wpływać na tempo roadmapy Gemini oraz rekrutację.",
+        "Na co patrzeć dalej: pierwsze efekty Discovery Loop, kolejne odejścia i komunikaty o modelach Gemini."
+      ],
+      "sources": [
+        {
+          "title": "Google Blog",
+          "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+        },
+        {
+          "title": "MarketWatch",
+          "url": "https://www.marketwatch.com/story/alphabets-stock-drops-as-google-loses-another-key-ai-executive-38de45a2"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "DeepMind",
+        "Gemini",
+        "Jeff Dean",
+        "Demis Hassabis",
+        "Discovery Loop"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-06-1939-1-terafab-przesuwa-ai-w-strone-wlasnych-chipow-1db3e48ae9",
+      "section": "Infrastruktura",
+      "title": "Terafab przesuwa AI w stronę własnych chipów",
+      "standfirst": "Tesla i SpaceX planują zainwestować 16.8 mld USD w start budowy Terafab w Grimes County w Teksasie. SpaceX sygnalizuje równolegle, że chce produkować zaawansowane chipy AI na skalę w nowej fabryce.",
+      "whatHappened": "Muskowe spółki dokładają własną warstwę chip manufacturing do już i tak ciężkiego stacku AI i space.",
+      "whyItMatters": "To sygnał, że walka o AI coraz częściej rozgrywa się nie tylko w modelach i chmurze, ale także w fabrykach, supply chain i lokalnym permittingu.",
+      "deeperAnalysis": [
+        "Terafab jest ważny nie dlatego, że to kolejny duży projekt infrastrukturalny, ale dlatego, że łączy kilka warstw naraz: chip design, fabrykę, packaging, testowanie i zastosowania w AI oraz robotyce. Taki układ jest bardzo trudny do skopiowania i mocno podnosi barierę wejścia dla konkurentów, którzy kupują compute na rynku zamiast budować go od zera.",
+        "W praktyce to oznacza próbę skrócenia zależności od zewnętrznych dostawców i wzmocnienia kontroli nad kosztami. Jeśli SpaceX i Tesla faktycznie będą produkować własne AI chipy, to ich argumentem nie będzie tylko wydajność produktu końcowego, ale też odporność na niedobory i możliwość szybszego iterowania hardware'u.",
+        "Dla podcastu to mocny temat, bo łączy AI, semiconductors, lokalną politykę przemysłową i pytanie o to, czy era model-first nie przesuwa się właśnie w stronę fab-first. To też pasuje do szerszego trendu w rynku, gdzie compute przestaje być tylko kosztem operacyjnym, a staje się strategicznym aktywem."
+      ],
+      "contextPoints": [
+        "Co się stało: SpaceX i Tesla ogłosiły start budowy Terafab z początkową inwestycją 16.8 mld USD.",
+        "Dlaczego ważne: Własna produkcja chipów może zmienić koszt i kontrolę nad AI compute.",
+        "Na co patrzeć dalej: permitting w Teksasie, role partnerów i kolejne milowe terminy budowy."
+      ],
+      "sources": [
+        {
+          "title": "TechCrunch",
+          "url": "https://techcrunch.com/2026/08/06/tesla-and-spacex-will-invest-16-8b-to-start-building-terafab-chip-factory-in-texas/"
+        },
+        {
+          "title": "SpaceX AI Satellite page",
+          "url": "https://www.spacex.com/spacexai/starmind"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "SpaceX",
+        "Tesla",
+        "Terafab",
+        "chipy AI",
+        "semiconductors",
+        "Texas"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-06-1939-2-rynek-zaczyna-bardziej-karac-ai-capex-b9eb938c93",
+      "section": "Infrastruktura",
+      "title": "Rynek zaczyna bardziej karać AI capex",
+      "standfirst": "SpaceX podał mocny wzrost przychodów, ale inwestorzy skupili się na 18.4 mld USD capexu i ciężkich wydatkach na AI. Równolegle Alphabet spadł po zmianach w AI leadership, co wzmacnia narrację o kosztach i talent churn.",
+      "whatHappened": "Rynek czyta dziś AI przez pryzmat dyscypliny kapitałowej, a nie samego wzrostu.",
+      "whyItMatters": "To ważny sygnał dla wszystkich firm budujących AI infrastructure, bo skala wydatków bez czytelnej ścieżki zwrotu zaczyna być karana.",
+      "deeperAnalysis": [
+        "SpaceX i Alphabet pokazują dwa różne, ale powiązane wzorce. W pierwszym przypadku inwestorzy widzą rekordowy capex na AI i pytają o moment zwrotu. W drugim reagują na leadership shuffle w AI, bo wiedzą, że talent i organizacja wpływają na tempo produktów oraz na to, czy kapitał naprawdę tworzy przewagę.",
+        "To zmienia sposób czytania rynku. Jeszcze niedawno sam komunikat o dużym AI spendzie był traktowany jak oznaka ambicji. Dziś coraz częściej pojawia się pytanie, czy firma potrafi pokazać unit economics, runway i strategiczną konieczność tej inwestycji. Bez tego AI capex zaczyna wyglądać jak koszt, nie jak moat.",
+        "Właśnie dlatego ten temat dobrze łączy się z Google i Terafab: z jednej strony organizacja i talenty, z drugiej fabryki i chipy. W obu przypadkach rynek pyta już nie tylko \"czy to możliwe\", ale \"czy to się spina finansowo i operacyjnie\"."
+      ],
+      "contextPoints": [
+        "Co się stało: SpaceX raportuje mocny wzrost przychodów, ale rynek skupia się na wydatkach na AI; Alphabet spada po reorgu AI.",
+        "Dlaczego ważne: inwestorzy zaczynają oceniać AI przez pryzmat dyscypliny kapitałowej.",
+        "Na co patrzeć dalej: kolejne earningsy big techu, guidance capexu i reakcje kursów."
+      ],
+      "sources": [
+        {
+          "title": "AP",
+          "url": "https://apnews.com/article/3b7b66a3e522e51d75caebc40af7e09e"
+        },
+        {
+          "title": "MarketWatch",
+          "url": "https://www.marketwatch.com/story/alphabets-stock-drops-as-google-loses-another-key-ai-executive-38de45a2"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "SpaceX",
+        "Alphabet",
+        "capex",
+        "investors",
+        "AI infrastructure",
+        "market reaction"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Google porządkuje stery AI",
+      "rationale": "Reorganizacja DeepMind i spinout Jeffa Deana pokazują, że walka o AI staje się walką o strukturę i talent.",
+      "sourcesLabel": "Google Blog; MarketWatch"
+    },
+    {
+      "priority": "High",
+      "title": "Terafab i własne chipy AI",
+      "rationale": "SpaceX i Tesla próbują zbudować własny pipeline chipów, co może przestawić rozmowę z cloud capex na fabryki i supply chain.",
+      "sourcesLabel": "TechCrunch; SpaceX AI Satellite page"
+    },
+    {
+      "priority": "High",
+      "title": "Rynek zaczyna karać AI capex",
+      "rationale": "SpaceX i Alphabet pokazują, że inwestorzy chcą dziś nie tylko wzrostu, ale i dyscypliny kapitałowej.",
+      "sourcesLabel": "AP; MarketWatch"
+    },
+    {
+      "priority": "Medium",
+      "title": "Cloudflare OS i AI Spend Console jako nowa kategoria",
+      "rationale": "Product Hunt premiuje AI operating systems, spend tracking i agent connectors, czyli konkretne control surfaces.",
+      "sourcesLabel": "Product Hunt; Hacker News"
+    },
+    {
+      "priority": "Medium",
+      "title": "Hacker News premiuje agent tooling i safety",
+      "rationale": "Front page pokazuje, że społeczność nagradza Discovery Loop, Cloudflare OS, Channels SDK i benchmarki bezpieczeństwa agentów.",
+      "sourcesLabel": "Hacker News; Product Hunt"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Google Blog: The next chapter of our AI momentum",
+      "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+    },
+    {
+      "title": "MarketWatch: Alphabet's stock drops as Google loses another key AI executive",
+      "url": "https://www.marketwatch.com/story/alphabets-stock-drops-as-google-loses-another-key-ai-executive-38de45a2"
+    },
+    {
+      "title": "TechCrunch: Tesla and SpaceX will invest $16.8B to start building 'Terafab' chip factory in Texas",
+      "url": "https://techcrunch.com/2026/08/06/tesla-and-spacex-will-invest-16-8b-to-start-building-terafab-chip-factory-in-texas/"
+    },
+    {
+      "title": "SpaceX AI Satellite page",
+      "url": "https://www.spacex.com/spacexai/starmind"
+    },
+    {
+      "title": "AP: SpaceX posts first public earnings report and investors focus on AI capex",
+      "url": "https://apnews.com/article/3b7b66a3e522e51d75caebc40af7e09e"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "Product Hunt leaderboard for August 6, 2026",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/8/6"
+    }
+  ]
+}

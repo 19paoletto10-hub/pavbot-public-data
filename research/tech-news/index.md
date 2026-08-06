@@ -1,8 +1,12 @@
 # Topic Index: tech-news
 
-Last updated: 2026-08-04
+Last updated: 2026-08-06
 
 ## Current Understanding
+
+Wieczorny run z 2026-08-06 dodaje nową oś: Google porządkuje odpowiedzialność za DeepMind i Gemini, a Jeff Dean z Sanjayem Ghemawatem wychodzi do Discovery Loop jako niezależny spinout. To nie wygląda jak kosmetyczna roszada, tylko jak mocniejsze rozdzielenie badawczej ścieżki AGI/science od bieżącej odpowiedzialności produktowej.
+
+Równolegle SpaceX i Tesla przesuwają rozmowę o AI z samego model/software stack do własnej produkcji compute. Terafab, opisywany jako nowa fabryka chipów w Teksasie, sugeruje dalsze przesuwanie kapitału w stronę pionowej kontroli nad hardware'em, a nie tylko zakupu mocy obliczeniowej na rynku. To dobrze spina się z dzisiejszymi sygnałami z HN i Product Hunt, gdzie premiowane są AI OS, spend tracking i agent connectors.
 
 Późnowieczorny run z 2026-08-04 dodaje nową warstwę do już widocznego zwrotu w stronę governance i operacyjnej kontroli. OpenAI wchodzi z gotowymi pluginami edukacyjnymi do ChatGPT Work i Codex oraz dokręca narrację o "abundant intelligence", Anthropic wzmacnia warstwę policy przez nowego Chief Global Affairs Officer, a Google Cloud rozprowadza Claude Opus 5 przez własną Agent Platform z jasno opisanym fallbackiem i ZDR.
 
