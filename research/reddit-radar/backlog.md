@@ -4,10 +4,24 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Restore production humor notifier reachability | Repo publication is healthy again, but production notifier timed out on digest ingest and on read-only endpoints after the successful 2026-08-06-1807 publish | Check notifier tunnel or service health, then retry `/v1/humor/digest` for `humor-2026-08-06-1807` | Open |
 | High | Restore topic automation prompt | The run request pointed to `research/reddit-radar/automation-prompt.md`, but the file was missing and the workflow contract had become implicit | Recreated the topic-local prompt and restored a topic index on Sunday, July 26, 2026 | Done |
 
 ## Review Notes
 
+- 2026-08-06: 18:07 CEST material update prepared and published a fresh
+  five-card successor bundle with one mystery-bruises meme, two compact dev
+  anchors about regex magic and AI README trust, plus worseminton and 750 MB
+  menu closers after filtering `2026-08-04-1758` and `2026-08-05-1807`.
+- 2026-08-06: The same 18:07 CEST slot rendered a readable four-page mobile
+  PDF and, after the shared publish script plus fresh remote checks, confirmed
+  that `origin/main` now exposes the run, PDF, raw audit, bundle
+  `2026-08-06-1807`, and refreshed `public/pavbot-manifest.json` with
+  `generatedAt` `2026-08-06T16:19:24.408769+00:00`.
+- 2026-08-06: Final production notifier delivery remains blocked even after
+  repo publication recovery: `POST /v1/humor/digest` timed out, and read-only
+  checks to `/healthz`, `/status`, and `/v1/humor/latest` timed out too, so
+  the live humor panel state is still unverified.
 - 2026-08-05: 18:07 CEST material update prepared a fresh five-card local
   successor bundle with one respawn-points meme, three dev closers about prod
   handoff, startup thinking theatre, and database-forensics absurdity, plus a

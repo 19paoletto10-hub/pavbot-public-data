@@ -2,6 +2,24 @@
 
 ## Current State
 
+- Thursday, August 6, 2026 18:07 CEST found five fresh, public-safe
+  survivors after filtering `2026-08-04-1758` and `2026-08-05-1807`, so the
+  topic again clears the contract threshold with a lighter early-evening set
+  led by one mystery-bruises meme, two compact programmer cards about regex as
+  magic and blindly trusting AI instructions, plus two everyday closers about
+  worseminton and a nearly 1 GB menu file.
+- The same 18:07 CEST run rendered a readable four-page mobile PDF, published
+  successfully through the shared isolated worktree flow, and then verified via
+  a fresh `git fetch origin`, raw GitHub HTTP checks, and `origin/main`
+  manifest inspection that the run, PDF, raw audit, public bundle, and
+  refreshed `public/pavbot-manifest.json` are all now visible remotely.
+- Current active public bundle on last verified origin/main is now
+  `research/reddit-radar/data/2026-08-06-1807-reddit-radar.json`.
+- The final production notifier step on Thursday, August 6, 2026 did not land:
+  direct `POST /v1/humor/digest` timed out, and read-only checks to
+  `/healthz`, `/status`, and `/v1/humor/latest` timed out too, so repo
+  publication is recovered but live humor notifier freshness is still
+  unverified.
 - Wednesday, August 5, 2026 18:07 CEST found five fresh, public-safe
   survivors after filtering `2026-08-03-0608` and `2026-08-04-1758`, so the
   topic again clears the contract threshold with a more dev-heavy evening set
