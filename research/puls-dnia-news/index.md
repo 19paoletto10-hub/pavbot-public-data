@@ -2,9 +2,9 @@
 
 ## Current State
 
-Slot z 2026-08-05 21:06 utrzymuje przejście z czystej polityki do obrazu operacyjnego: mObywatel nadal generuje zgłoszenia, upał przechodzi w burze, a energia i paliwa pozostają głównym krajowym blokiem ryzyka. Polityka PiS nie zniknęła, ale nie dominuje już całego feedu.
+Slot z 2026-08-06 06:02 przesuwa feed do porannego układu ryzyk: NSA zabiera PiS pieniądze, rząd zaczyna mówić o uldze dla kierowców przy rekordowych paliwach, a upał dalej obciąża pracę i energetykę, choć oficjalnie system pozostaje bezpieczny.
 
-Za granicą BBC i CNN nadal trzymają uwagę na Ukrainie, Niemczech, Iranie, globalnej energii i Kanale La Manche. AI pozostaje osobnym wątkiem regulacyjno-politycznym, teraz mocniej związanym z egzekwowaniem przejrzystości.
+Za granicą BBC i CNN trzymają uwagę na Ukrainie, niemieckim incydencie z dronem na lotnisku, Hormuz, irańskich egzekucjach, Kanale La Manche i nowych problemach wokół AI, która dzieli się już na publiczną manipulację i cyberbezpieczeństwo modeli.
 
 ## Data Shape
 

@@ -1,6 +1,13 @@
 # Puls Dnia News Backlog
 
-# Puls Dnia News Backlog
+## 2026-08-06 06:02
+
+- Watch whether PiS responds formally to the NSA subvention ruling or tries a new legal step.
+- Watch whether Tusk, MF or resort work turns the hint about driver relief into a concrete proposal.
+- Watch whether IMGW, RCB or PSE report local outages or transport disruption as the heat peaks.
+- Watch whether the AI testing incident gets another official update from Anthropic, OHCHR or regulators.
+- Watch whether the Hormuz story becomes a formal Iran-Oman-US statement instead of a live update.
+- Watch whether BBC and CNN add new casualty, evacuation or route details for Kyiv, Leipzig and the Channel.
 
 ## 2026-08-05 21:06
 
