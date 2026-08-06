@@ -1,0 +1,110 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-08-01-1154",
+  "status": "material_update",
+  "generatedAt": "2026-08-01T09:54:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-08-01T11:54:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on exact old.reddit.com listings and exact post pages using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two latest saved automation runs 2026-07-31-1808 and 2026-07-31-2208, so none of the post URLs selected there could roll forward into this slot.",
+      "Fresh midday review cleared the contract threshold with five new public-safe survivors led by three memes cards and two programmer-humor closers.",
+      "AskReddit, mildlyinfuriating, and facepalm all underperformed the selected bundle on compact punchline quality.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "selectedDigestPath": "research/reddit-radar/data/2026-08-01-1154-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-08-01-1154-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-08-01-1154-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1vbw3um/love_when_that_happens/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vc0kpb/introverts_will_do_anything_but_ask_for_help/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vbugj4/high_risk_high_reward/?sort=top",
+    "https://old.reddit.com/r/AskReddit/comments/1vbfkcm/youre_offered_10_million_but_every_time_you_enter/?sort=top",
+    "https://old.reddit.com/r/AskReddit/comments/1vbrm6r/which_band_has_the_stupidest_name/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vbntco/timezonesyoureonsight/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vbrjfd/theyforgottomentionforking/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vbttjt/currentwindowssituation/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vbqoit/the_cat_is_on_a_secret_mission/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vbtfvr/cat_and_owner_dynamics_for_real/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vblnlz/miss_em_ol_days/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vcaxe1/when_someones_phone_screen_is_a_picture_of/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "Top comments nie komplikują dowcipu, tylko wzmacniają jedno proste skojarzenie o przesadnym zakochaniu we własnym odbiciu."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vcblrp/when_there_was_a_fight_in_the_group_chat_but_you/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "Thread nie rozlewa się w prawdziwy konflikt, tylko utrzymuje jeden absurdalny motyw obrywania za cudzą dramę."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vc4o4f/brain_needs_time_to_reload/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "Komentarze zostają przy jednym rozpoznawalnym doświadczeniu zamiast odpływać w porady albo medyczne dygresje."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vcc3aa/itsjustmcpbro/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "Komentarze utrzymują to jako żart o cykliczności hype'u, a nie jako prawdziwy technical explainer."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vbo27c/learningcurve/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "Komentarze wzmacniają tę samą prostą obserwację, nie robiąc z niej ciężkiego zawodowego rantu."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vcf10a/they_thought_the_earth_was_flat/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "Thread niemal od razu wpada w historyczny fact-check i wyjaśnianie średniowiecznej edukacji."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vcg01r/global_warming_sucks/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "Komentarze zaczynają schodzić w realne narzekanie na temperatury i warunki życia."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vc5y7o/thevulkanpipeline/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "Thread szybko przechodzi w prawdziwą rozmowę o OpenGL, Vulkanie i resource lifetimes."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vcdap0/mycodebutyourproblem/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "Komentarze robią się zbyt zawodowym rantem o review procesu i AI slopie."
+    },
+    {
+      "url": "https://old.reddit.com/r/AskReddit/comments/1vcdtyv/if_your_name_had_to_be_legally_changed_to_the/?sort=top",
+      "subreddit": "r/AskReddit",
+      "decision": "rejected",
+      "reason": "Top comment natychmiast zmienia thread w meta-żart o samym pytaniu."
+    },
+    {
+      "url": "https://old.reddit.com/r/AskReddit/comments/1vcgnqq/youre_offered_the_ability_to_absorb_the_knowledge/?sort=top",
+      "subreddit": "r/AskReddit",
+      "decision": "rejected",
+      "reason": "Thread jest bardziej zabawą myślową niż zamkniętym komentarzowym żartem."
+    }
+  ]
+}

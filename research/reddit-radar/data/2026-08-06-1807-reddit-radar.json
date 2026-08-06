@@ -1,0 +1,185 @@
+{
+  "id": "humor-2026-08-06-1807",
+  "title": "<RR> Reddit Radar",
+  "summary": "Material update: slot 18:07 rotuje radar na pięć świeżych kart o tajemniczych miesięcznych siniakach, regexie jako systemie magii, ślepym zaufaniu do AI README, badmintonie przerobionym na worseminton i menu ważącym niemal gigabajt.",
+  "generatedAt": "2026-08-06T16:07:00Z",
+  "displayTime": "18:07",
+  "nextRefreshAt": "2026-08-06T20:07:00+02:00",
+  "refreshIntervalHours": 2,
+  "items": [
+    {
+      "id": "r-memes-1vh56hd-monthly-bruises",
+      "title": "Like literally every month I have these",
+      "caption": "Lekki mainstreamowy opener bierze banalny problem z tajemniczymi siniakami i natychmiast zmienia go w absurdalny raport o ciele, które zbiera dowody bez zostawiania wspomnień. Widoczny comment layer nie rozprasza w diagnozy, tylko wzmacnia pamięć-versus-evidence payoff.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://old.reddit.com/r/memes/comments/1vh56hd/like_literally_every_month_i_have_these/?sort=top",
+      "imageURL": null,
+      "score": 6254,
+      "comments": 38,
+      "tags": [
+        "memes",
+        "everyday",
+        "self-own"
+      ],
+      "categoryLabel": "everyday",
+      "postText": "Żart działa, bo coś całkiem zwykłego zostaje opisane jak śledztwo prowadzone przeciwko własnemu ciału.",
+      "whyFunny": "Najwyższe komentarze zostają przy jednym czytelnym bicie o braku pamięci i istnieniu dowodów, bez schodzenia w cięższy ton.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment streszcza sprawę jako klasyczne starcie pamięci z dowodami rzeczowymi.",
+          "explanation": "To natychmiast zamyka kartę jednym prostym, szerokim payoffem.",
+          "score": 132,
+          "originalBody": "Memory: ❌ Evidence: ✔️"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight dopowiada, że czasem nawet liczba siniaków pozostaje niepoliczalna.",
+          "explanation": "Komentarz wzmacnia absurd nie wyciągając wątku poza lekki self-own.",
+          "score": 13,
+          "originalBody": "Especially if they want to know the count on mystery bruises too."
+        }
+      ]
+    },
+    {
+      "id": "r-programmerhumor-1vgahyh-regex-spellbook",
+      "title": "regexMustBeDestroyed",
+      "caption": "Najmocniejszy dzisiejszy dev anchor bierze regex i traktuje go jak podejrzanie ograniczony system magii, który już dawno wymknął się spod kontroli. Comment layer bardzo czysto dokłada tylko kolejne fantasy-game warianty tego samego żartu.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1vgahyh/regexmustbedestroyed/?sort=top",
+      "imageURL": null,
+      "score": 7458,
+      "comments": 203,
+      "tags": [
+        "programmerhumor",
+        "regex",
+        "fantasy"
+      ],
+      "categoryLabel": "dev",
+      "postText": "Humor siedzi w tym, że techniczne narzędzie zostaje opisane tak, jakby wymagało quest loga, spell slotów i zaklęć wyższego poziomu.",
+      "whyFunny": "Najwyższe komentarze pozostają przy jednym magicznym payoffie zamiast rozchodzić się w techniczny explainer.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment mówi, że taki regex to właściwie mailowy czar, tylko dość ograniczony.",
+          "explanation": "To nadaje karcie natychmiastowy fantasy payoff bez potrzeby dalszego tłumaczenia.",
+          "score": 1175,
+          "originalBody": "An email casting spell for sure, although very limited"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight rozwija żart do levelowania spella i quest itemu w przyszłości.",
+          "explanation": "To dokręca ten sam motyw zamiast zmieniać oś humoru.",
+          "score": 202,
+          "originalBody": "it's just a level 2 spell, it'll be upgraded in the future.. trust me.. i already created a quest item for it"
+        }
+      ]
+    },
+    {
+      "id": "r-programmerhumor-1vgjsp4-ai-random-md",
+      "title": "justLetAIDoIt",
+      "caption": "Druga dev karta bierze ślepe zaufanie do AI i redukuje je do jednego bardzo czytelnego self-owna: dajesz modelowi przypadkowy plik `.md`, liczysz na cud i udajesz zaskoczenie, gdy to brzmi jak uruchamianie losowego `.exe`. Wątek zostaje przy tym samym ostrym, ale komediowym riffie.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1vgjsp4/justletaidoit/?sort=top",
+      "imageURL": null,
+      "score": 4236,
+      "comments": 230,
+      "tags": [
+        "programmerhumor",
+        "ai",
+        "docs"
+      ],
+      "categoryLabel": "dev",
+      "postText": "Żart działa, bo niekompetencja zostaje ubrana w nowoczesny workflow i natychmiast brzmi jak nowa wersja starego błędu użytkownika.",
+      "whyFunny": "Widoczne komentarze wzmacniają tylko jedną oś żartu o bezmyślnym delegowaniu myślenia do modelu.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment zauważa, że wrzucenie losowego `.md` do LLM-a brzmi jak proszenie się o kłopoty.",
+          "explanation": "To od razu zamyka kartę w jednym ostrym, zrozumiałym payoffie.",
+          "score": 2058,
+          "originalBody": "Give your LLM a random .md to follow its instructions. What could be wrong?"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight porównuje to do odpalania losowego skompilowanego `.exe` i liczenia na sukces.",
+          "explanation": "Komentarz celnie przekłada nowy hype na stary komputerowy self-own.",
+          "score": 607,
+          "originalBody": "I can't read and I refuse to learn so this is might as well be a random compiled .exe Sent by dictating to Claude"
+        }
+      ]
+    },
+    {
+      "id": "r-mildlyinfuriating-1vgwom7-worseminton",
+      "title": "Asked a friend to collect my brand-new Badminton Rackets",
+      "caption": "Najczystszy everyday closer dnia działa niemal wyłącznie przez tempo komentarzy: jedna katastrofa transportowa i internet natychmiast zmienia badminton w worseminton. To krótki, bezpieczny, bardzo przenośny payoff bez dodatkowego bagażu.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://old.reddit.com/r/mildlyinfuriating/comments/1vgwom7/asked_a_friend_to_collect_my_brandnew_badminton/?sort=top",
+      "imageURL": null,
+      "score": 20700,
+      "comments": 598,
+      "tags": [
+        "mildlyinfuriating",
+        "sports",
+        "wordplay"
+      ],
+      "categoryLabel": "everyday",
+      "postText": "Humor siedzi w błyskawicznej zmianie zwykłej wpadki w absurdalnie prosty, trafiony rename.",
+      "whyFunny": "Top comments nie robią z tego support threadu, tylko domykają kartę jednym natychmiastowym punem.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment stwierdza, że z badmintonu zrobił się po prostu worseminton.",
+          "explanation": "To jeden z tych żartów, które wystarczą same sobie jako gotowa karta.",
+          "score": 9086,
+          "originalBody": "Went from Badminton to Worseminton."
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight potwierdza, że ten suchy rename naprawdę ląduje.",
+          "explanation": "Komentarz wzmacnia skuteczność puenty zamiast zmieniać temat.",
+          "score": 2477,
+          "originalBody": "Now that is some joke. Man, I did laugh out loudly."
+        }
+      ]
+    },
+    {
+      "id": "r-mildlyinfuriating-1vh0ury-750mb-menu",
+      "title": "Ah yes, let me just waste 750 MB of data to look at a 2-page menu",
+      "caption": "Ostatnia karta bierze bardzo codzienny cyfrowy absurd i przeskalowuje go do poziomu, przy którym zwykłe menu zaczyna wyglądać jak paczka produkcyjnych assetów do druku. W komentarzach wszystko zostaje przy tej jednej osi śmiechu z groteskowego rozmiaru pliku.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://old.reddit.com/r/mildlyinfuriating/comments/1vh0ury/ah_yes_let_me_just_waste_750_mb_of_data_to_look/?sort=top",
+      "imageURL": null,
+      "score": 977,
+      "comments": 60,
+      "tags": [
+        "mildlyinfuriating",
+        "mobile",
+        "files"
+      ],
+      "categoryLabel": "everyday",
+      "postText": "Żart działa, bo prosta czynność zostaje opakowana w absurdalnie ciężki, nieproporcjonalny cyfrowy koszt.",
+      "whyFunny": "Najwyższe komentarze trzymają jeden bardzo czytelny bit o menu, które waży jak cały projekt graficzny.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment pyta, jaki rodzaj menu w ogóle może ważyć prawie gigabajt.",
+          "explanation": "To od razu ustawia właściwą skalę absurdu tej karty.",
+          "score": 689,
+          "originalBody": "What kind of menu is almost a gig lol"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight odpowiada, że to chyba menu przygotowane dosłownie pod druk.",
+          "explanation": "Komentarz trafnie domyka żart jednym techniczno-użytkowym dopowiedzeniem.",
+          "score": 360,
+          "originalBody": "The kind used for print."
+        }
+      ]
+    }
+  ],
+  "source": {
+    "name": "Reddit via Safari",
+    "url": "https://old.reddit.com/"
+  }
+}

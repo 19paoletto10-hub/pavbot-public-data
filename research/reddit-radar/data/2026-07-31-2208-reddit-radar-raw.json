@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-31-2208",
+  "status": "material_update",
+  "generatedAt": "2026-07-31T20:08:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-31T22:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on exact old.reddit.com listings and exact post pages using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two latest saved automation runs 2026-07-29-2208 and 2026-07-31-1808, so none of the post URLs selected there could roll forward into this slot.",
+      "Verified before publication planning that origin/main still exposed the 2026-07-29-2208 reddit-radar bundle and a manifest generated on 2026-07-30, so this slot starts from a stale remote topic state.",
+      "Fresh late-evening review cleared the contract threshold with five new public-safe survivors led by three memes cards and two AskReddit closers.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "currentPublicBundle": "2026-07-29-2208",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-31-2208-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-31-2208-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-31-2208-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vbntco/timezonesyoureonsight/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vbrjfd/theyforgottomentionforking/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vbttjt/currentwindowssituation/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vbqoit/the_cat_is_on_a_secret_mission/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vbtfvr/cat_and_owner_dynamics_for_real/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vblnlz/miss_em_ol_days/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9k3qi/coworker_ive_never_spoken_to_sent_passive/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9yho5/my_sweatpants_strings_are_just_sewn_on_for/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1va2h6r/airconditioner/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9kokx/redactoverflow/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1va2wq4/igot99problems/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vbw3um/love_when_that_happens/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "To działa, bo komentarze nie uciekają w tłumaczenie mema, tylko razem budują jedną głupkowato chwytliwą puentę."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vc0kpb/introverts_will_do_anything_but_ask_for_help/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "Komentarze dokładnie wzmacniają ten sam introwertyczny bit, więc payoff pozostaje szeroki i lekki."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vbugj4/high_risk_high_reward/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "Top comments zostają przy jednym motywie cwaniackiego obejścia, więc cienki thread nadal niesie zwartą publiczną kartę."
+    },
+    {
+      "url": "https://old.reddit.com/r/AskReddit/comments/1vbfkcm/youre_offered_10_million_but_every_time_you_enter/?sort=top",
+      "subreddit": "r/AskReddit",
+      "decision": "selected",
+      "reason": "Komentarze pozostają przy codziennych scenkach domowych i biurowych, więc AskReddit nie rozlewa się tu w wielki poradnikowy chaos."
+    },
+    {
+      "url": "https://old.reddit.com/r/AskReddit/comments/1vbrm6r/which_band_has_the_stupidest_name/?sort=top",
+      "subreddit": "r/AskReddit",
+      "decision": "selected",
+      "reason": "To działa, bo komentarze konsekwentnie wzmacniają tę jedną nazwę zamiast rozchodzić się po setkach zespołów bez puenty."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vbvzqb/dont_ruin_it_for_others/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "Thread wpada w spoiler/meta gadkę o konkretnym filmie zamiast zostać przy jednym lekkim żarcie."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vbmbgd/salary_day_ahead/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "Komentarze szybko schodzą w realne zdrowie, pracę i amerykańskie chorobowe zamiast budować jeden absurdalny payoff."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vc1yxa/typicalrustaceanoriginstory/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "Komentarze od razu wpadają w fact-check o Stripe test cards."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vbwm5t/goodolddays/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "Thread zamienia się w długi AI/job-market lament i mentoring zamiast zostać przy jednym żarcie."
+    },
+    {
+      "url": "https://old.reddit.com/r/AskReddit/comments/1vbo82f/what_did_you_do_on_the_toilet_before_smartphones/?sort=top",
+      "subreddit": "r/AskReddit",
+      "decision": "rejected",
+      "reason": "Top comment jest zabawny, ale thread bardzo szybko odpływa w realne włosowo-higieniczne porady."
+    },
+    {
+      "url": "https://old.reddit.com/r/AskReddit/comments/1vbsrl9/how_do_you_have_a_midlife_crisis_on_a_budget/?sort=top",
+      "subreddit": "r/AskReddit",
+      "decision": "rejected",
+      "reason": "Komentarze są bardziej wholesome i lifestyle'owe niż punchline-first."
+    }
+  ]
+}

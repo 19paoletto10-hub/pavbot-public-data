@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-08-02-0609",
+  "status": "material_update",
+  "generatedAt": "2026-08-02T04:09:00Z",
+  "source": "Codex Safari Reddit radar",
+  "summary": "Read-only Safari review for Sunday, August 2, 2026 06:09 CEST found four fresh public-safe survivors after filtering the two latest material bundles, so the topic rotates to a new compact morning bundle.",
+  "safariAudit": {
+    "startedAtLocal": "2026-08-02T06:09:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on exact old.reddit.com listings and exact post pages using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two latest material bundles 2026-08-01-1808 and 2026-08-01-1154, so none of those selected post URLs could roll forward into this slot.",
+      "Fresh morning review cleared the contract threshold with four new public-safe survivors led by two memes cards and two programmer-humor closers.",
+      "Before publication planning, git fetch origin confirmed that origin/main still exposed 2026-07-29-2208 for reddit-radar and did not yet expose the local 2026-08-01-1808 outputs.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "selectedDigestPath": "research/reddit-radar/data/2026-08-02-0609-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-08-02-0609-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-08-02-0609-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1vcmyu0/literally_every_dad/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vckbyc/youtube_algorithm_is_way_too_sensitive/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vcuxgs/builtfromtrauma/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vchanw/animatepulsethesenuts/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vcru8y/thispostjustexposedeveryonesbrainbug/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vcaxe1/when_someones_phone_screen_is_a_picture_of/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vcblrp/when_there_was_a_fight_in_the_group_chat_but_you/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vc4o4f/brain_needs_time_to_reload/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vcc3aa/itsjustmcpbro/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vbo27c/learningcurve/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vczqnq/conplan_8888/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "Top comments keep one clean prepper panic joke rather than turning into real-world disaster discourse."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vd63xv/on_friday/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "The visible cluster stays on one everyday bit about fixing something and making it worse right before the weekend."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vcmscy/iapologise/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "Comments reinforce one light workflow joke about format-on-save and autosave instead of drifting into a tooling flamewar."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vc5y7o/thevulkanpipeline/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "The top thread holds one compact dev bit about Vulkan being a much heavier beast than OpenGL."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vctk0f/the_regret_hits_different/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "borderline",
+      "reason": "Public-safe and readable, but too thin to beat the final four-card bundle."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vd0ifl/im_gonna_keep_making_these_until_he_shows_up_or/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "Top comments drift into death/meta talk about Ali and accusations of slop."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vcmq8l/itdoesntmatterhowexperiencedyouare/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "The visible thread becomes ethnicity-targeted tutorial discourse, which is not public-safe for the digest."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1vczb3l/third_night_is_free/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "The thread is mostly a hotel pricing explainer with too little compact humor payoff."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1vd0s0k/i_didnt_get_to_my_groceries_fast_enough_and_a/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "Top comments immediately raise dead-squirrel talk, so the card is not safe for a light public digest."
+    }
+  ]
+}

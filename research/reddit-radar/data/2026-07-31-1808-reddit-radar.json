@@ -1,0 +1,216 @@
+{
+  "id": "humor-2026-07-31-1808",
+  "title": "<RR> Reddit Radar",
+  "summary": "Material update: slot 18:08 rotuje radar na sześć świeżych kart o strefach czasowych, unixowym forku, Windows Explorerze, kocim telemarketingu, kocim śniadaniowym alarmie i reakcyjnej kulturze YouTube.",
+  "generatedAt": "2026-07-31T16:08:00Z",
+  "displayTime": "18:08",
+  "nextRefreshAt": "2026-07-31T20:08:00+02:00",
+  "refreshIntervalHours": 2,
+  "items": [
+    {
+      "id": "r-programmerhumor-1vbntco-timezonesyoureonsight",
+      "title": "timeZonesYoureOnSight",
+      "caption": "Najmocniejsza karta devowa slotu bierze prosty postulat o pozbyciu się stref czasowych i od razu dostaje historyczny counterpunch: kiedyś każde miasto miało własny czas i to wcale nie było lepsze. Komentarze pozostają przy tym jednym kierunku, więc karta domyka się czysto bez odjazdu w suchy wykład.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1vbntco/timezonesyoureonsight/?sort=top",
+      "imageURL": null,
+      "score": 6711,
+      "comments": 430,
+      "tags": [
+        "dev",
+        "time",
+        "meta"
+      ],
+      "categoryLabel": "dev",
+      "postText": "Pomysł, żeby zlikwidować strefy czasowe, natychmiast brzmi jak coś, czego każdy software team pożałowałby po pierwszym standupie.",
+      "whyFunny": "Żart działa, bo bierze uniwersalny ból synchronizacji i natychmiast pcha go w jeszcze gorszy wariant.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment przypomina, że przed strefami czasowymi każde miasto żyło własnym czasem.",
+          "explanation": "To natychmiast odwraca naiwny pomysł w jeszcze gorszą wersję problemu.",
+          "score": 1751,
+          "originalBody": "Before timezones were created, every city had its very own time. So it's not such a good idea."
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight dopytuje, czy to nie były po prostu jeszcze mniejsze strefy czasowe.",
+          "explanation": "Dzięki temu cały thread zostaje przy jednym lekkim, nerdowskim riffie.",
+          "score": 461,
+          "originalBody": "Isn’t that just smaller time zones?"
+        }
+      ]
+    },
+    {
+      "id": "r-programmerhumor-1vbrjfd-theyforgottomentionforking",
+      "title": "theyForgotToMentionForking",
+      "caption": "Druga karta devowa jest bardziej old-schoolowa i działa przez czystą grę słów: skoro mowa o forku, komentarze natychmiast przechodzą do unmountu, ejectu i procesów potomnych. To zostaje lekkie, przenośne i wystarczająco szerokie nawet dla osób, które znają tylko podstawy komputerowego żargonu.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1vbrjfd/theyforgottomentionforking/?sort=top",
+      "imageURL": null,
+      "score": 2531,
+      "comments": 89,
+      "tags": [
+        "dev",
+        "unix",
+        "wordplay"
+      ],
+      "categoryLabel": "dev",
+      "postText": "Unixowy żart o forku szybko zmienia się w rodzinne drzewko procesów, z którego nie ma już prostego `kill`.",
+      "whyFunny": "Humor siedzi w tym, że cały thread konsekwentnie miesza rodzicielstwo z dosłownym słownikiem systemowym.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment dorzuca, że przed ejectem i tak trzeba jeszcze zrobić unmount.",
+          "explanation": "Jedna linia od razu buduje całą techniczną rodzinę tego samego żartu.",
+          "score": 297,
+          "originalBody": "You even have to unmount before you can eject"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight kończy bit procesem potomnym, którego nie da się zabić.",
+          "explanation": "To utrzymuje jeden spójny payoff zamiast rozwlekać thread w suche wyjaśnienia.",
+          "score": 34,
+          "originalBody": "And that's how you end up spawning a child process you can't kill."
+        }
+      ]
+    },
+    {
+      "id": "r-programmerhumor-1vbttjt-currentwindowssituation",
+      "title": "currentWindowsSituation",
+      "caption": "Trzeci closer devowy to lekki roast na architekturę Windowsa: usuń explorer i nagle okazuje się, że dźwiga więcej systemu, niż powinien. Komentarze zgodnie wzmacniają ten sam obrazek, więc karta jest zwięzła i bardzo czytelna.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1vbttjt/currentwindowssituation/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": 41,
+      "tags": [
+        "dev",
+        "windows",
+        "ops"
+      ],
+      "categoryLabel": "dev",
+      "postText": "Żart o Windowsie trzyma się prostego obrazu: ruszysz explorer i nagle pół systemu wisi nad przepaścią.",
+      "whyFunny": "To działa, bo komentujący nie spierają się o szczegóły, tylko razem wzmacniają ten sam absurdalny fundament całego GUI.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment przypomina, że bez file explorera rozsypuje się praktycznie całe GUI.",
+          "explanation": "To zamyka cały żart w jednym bardzo obrazowym uproszczeniu.",
+          "score": 132,
+          "originalBody": "Actually, if you remove the file explorer you break the entire OS"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight dopowiada, że cały desktop jakby wisiał zaczepiony właśnie o explorer.",
+          "explanation": "Komentarze pozostają przy jednym wizualnym payoffie zamiast iść w flamewar o Microsoft.",
+          "score": 49,
+          "originalBody": "Yeah, file explorer should be anchoring the entire desktop GUI which is dangling over the edge."
+        }
+      ]
+    },
+    {
+      "id": "r-memes-1vbqoit-the-cat-is-on-a-secret-mission",
+      "title": "The cat is on a secret mission",
+      "caption": "Najczytelniejsza memiczna karta slotu jest bardzo prosta: kot wygląda jak agent pod przykrywką, a komentarze od razu przerabiają go na telefonicznego sprzedawcę i prywatnego detektywa. To czysty, krótki animal riff, który nie potrzebuje żadnego dodatkowego kontekstu.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://old.reddit.com/r/memes/comments/1vbqoit/the_cat_is_on_a_secret_mission/?sort=top",
+      "imageURL": null,
+      "score": 2117,
+      "comments": 51,
+      "tags": [
+        "animals",
+        "cat",
+        "wordplay"
+      ],
+      "categoryLabel": "everyday",
+      "postText": "Kot wygląda, jakby działał pod przykrywką, a komentarze natychmiast przerabiają to w telemarketing i prywatne śledztwo.",
+      "whyFunny": "Humor trzyma się jednego lekkiego zwierzęcego bitu bez schodzenia w cięższe dygresje.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment natychmiast ochrzcił kota mianem „Telemarkitty”.",
+          "explanation": "Jedno słowo wystarcza, żeby zamknąć całą puentę tej karty.",
+          "score": 48,
+          "originalBody": "Telemarkitty"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight dorzuca jeszcze „Purrvate Investigator”.",
+          "explanation": "Komentarze idą dokładnie w tę samą absurdalną stronę zamiast rozpraszać wątek.",
+          "score": 6,
+          "originalBody": "Purrvate Investigator"
+        }
+      ]
+    },
+    {
+      "id": "r-memes-1vbtfvr-cat-and-owner-dynamics-for-real",
+      "title": "Cat and owner dynamics for real",
+      "caption": "Druga kocia karta jest jeszcze prostsza i przez to mocna: człowiek tylko się poruszył, a kot już odpala pełen protokół karmienia. Komentarze nie uciekają nigdzie dalej, więc to bardzo szeroki everyday payoff dla każdego, kto mieszkał ze zwierzęciem.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://old.reddit.com/r/memes/comments/1vbtfvr/cat_and_owner_dynamics_for_real/?sort=top",
+      "imageURL": null,
+      "score": null,
+      "comments": 17,
+      "tags": [
+        "animals",
+        "cat",
+        "everyday"
+      ],
+      "categoryLabel": "everyday",
+      "postText": "Każde przebudzenie kota zostaje automatycznie zinterpretowane jako obietnica śniadania.",
+      "whyFunny": "To działa, bo cały thread zostaje przy jednym bardzo rozpoznawalnym zachowaniu domowego kota.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment streszcza logikę kota do jednego równania: jesteś obudzony, więc ma być jedzenie.",
+          "explanation": "To idealnie zamyka cały domowy absurd tej karty.",
+          "score": 62,
+          "originalBody": "You’re awake. That means food"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight doprecyzowuje, że samo istnienie właściciela też już oznacza jedzenie.",
+          "explanation": "Komentarze pozostają krótkie i celne zamiast zamieniać się w długie historie o pupilach.",
+          "score": 6,
+          "originalBody": "You exist. That means food"
+        }
+      ]
+    },
+    {
+      "id": "r-memes-1vblnlz-miss-em-ol-days",
+      "title": "Miss em ol days",
+      "caption": "Ostatnia karta slotu domyka bundle lekkim meta-żartem o kulturze reakcji: zamiast oglądać film, oglądamy już ludzi, którzy opowiadają o ludziach reagujących na film. Komentarze utrzymują dokładnie tę jedną spiralę, więc payoff jest szybki i czytelny.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://old.reddit.com/r/memes/comments/1vblnlz/miss_em_ol_days/?sort=top",
+      "imageURL": null,
+      "score": 1227,
+      "comments": 43,
+      "tags": [
+        "media",
+        "reaction",
+        "meta"
+      ],
+      "categoryLabel": "everyday",
+      "postText": "Thread kpi z epoki, w której ludzie oglądają już nie film, tylko coraz dłuższe komentarze i reakcje do niego.",
+      "whyFunny": "Humor siedzi w spiralnym przesunięciu uwagi z oryginału na kolejne warstwy cudzych reakcji.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment wbija szpilę, że dziś częściej ogląda się youtubera gadającego o filmie dłużej niż sam film.",
+          "explanation": "To natychmiast ustawia cały żart na znanej przesadzie współczesnego oglądania.",
+          "score": 113,
+          "originalBody": "Back in my day people actually watched movies instead of watching a YouTuber talk about it for longer than the length of the film."
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight rozwija to już do reakcji na reakcję na reakcję.",
+          "explanation": "Thread konsekwentnie pompuje tę samą pętlę zamiast uciekać w losowe media hot takes.",
+          "score": 45,
+          "originalBody": "Or watching another YouTuber reacting to another YouTuber's reaction to some YouTuber's extensive review."
+        }
+      ]
+    }
+  ],
+  "source": "Codex Safari Reddit radar"
+}

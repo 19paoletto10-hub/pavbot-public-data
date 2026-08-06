@@ -8,6 +8,89 @@
 
 ## Review Notes
 
+- 2026-08-05: 18:07 CEST material update prepared a fresh five-card local
+  successor bundle with one respawn-points meme, three dev closers about prod
+  handoff, startup thinking theatre, and database-forensics absurdity, plus a
+  `NULL` sweater closer after filtering `2026-08-03-0608` and
+  `2026-08-04-1758`.
+- 2026-08-05: The same 18:07 CEST slot rendered a readable four-page mobile
+  PDF and confirmed that `git fetch origin` now succeeds again, so fetch-timeout
+  preflight is no longer the active repo-health blocker.
+- 2026-08-05: The publish attempt for the 18:07 slot refreshed the local
+  manifest in the clean worktree and passed CloudKit briefing/artifact
+  preflight, but the final SSH push failed with `Connection to github.com
+  closed by remote host`, `send-pack: unexpected disconnect while reading
+  sideband packet`, and `fatal: the remote end hung up unexpectedly`; remote
+  verification and `/v1/humor/digest` remain blocked.
+- 2026-08-03: 06:08 CEST material update prepared a fresh five-card local
+  successor bundle with two lighter meme cards, one dev closer, one
+  tater-tot-layout absurd, and one John Lewis retail-label facepalm after
+  filtering `2026-08-02-0609` and `2026-08-02-1209`.
+- 2026-08-03: The same 06:08 CEST pre-publication repo-health check showed a
+  new blocker shape: `git fetch origin` timed out after 20 seconds with no
+  stdout or stderr, so the run still needs explicit remote verification before
+  any `/v1/humor/digest` request can be considered.
+- 2026-08-02: 12:09 CEST material update prepared a broader five-card local
+  successor bundle with two memes anchors, one light-IDE dev closer, one
+  upside-down-drawers facepalm, and one Olive Garden cheese-grating closer
+  after filtering `2026-08-02-0609` and `2026-08-01-1808`.
+- 2026-08-02: The same 12:09 CEST slot rendered a readable three-page mobile
+  PDF, but post-publish verification still confirmed that `origin/main` does
+  not expose the run, PDF, or data bundle `2026-08-02-1209`, and the public
+  manifest remains stale at `generatedAt` `2026-07-30T08:41:10.579726+00:00`.
+- 2026-08-02: The publish attempt for the 12:09 slot refreshed the local clean
+  worktree manifest and passed CloudKit briefing/artifact preflight, but the
+  final push failed again on GitHub HTTPS auth with `could not read Username
+  for 'https://github.com': Device not configured`; remote verification and
+  `/v1/humor/digest` remain blocked.
+- 2026-08-02: 06:09 CEST material update prepared a compact four-card local
+  successor bundle with two everyday meme cards and two dev closers after
+  filtering `2026-08-01-1808` and `2026-08-01-1154`.
+- 2026-08-02: The same 06:09 CEST preflight confirmed that `origin/main` still
+  does not expose the unpublished local `2026-08-01-1808` reddit-radar run,
+  PDF, or data bundle, so the next publish attempt is again both a fresh
+  rotation and a remote-state catch-up.
+- 2026-08-02: The publish sequence for the 06:09 slot failed twice in two
+  different ways: first on a CloudKit Web Services timeout during artifact
+  preflight, then on the final GitHub HTTPS auth error `could not read Username
+  for 'https://github.com': Device not configured`, so remote verification and
+  notifier delivery remain blocked.
+- 2026-08-01: 18:08 CEST material update prepared a five-card local successor
+  bundle with two mainstream meme cards and three lighter dev closers after
+  filtering `2026-08-01-1154` and `2026-07-31-2208`.
+- 2026-08-01: The publish attempt for the 18:08 slot refreshed the local
+  manifest and passed CloudKit/artifact preflight, but the final push still
+  failed on GitHub HTTPS auth with `could not read Username for 'https://github.com':
+  Device not configured`; remote verification and `/v1/humor/digest` remain
+  blocked.
+- 2026-08-01: 12:14 CEST no-change audit confirmed that after filtering the
+  fresh local `2026-08-01-1154` bundle and the earlier `2026-07-31-2208`
+  bundle, the remaining challengers do not clear a second four-card rotation,
+  so the intended next public payload remains `2026-08-01-1154`.
+- 2026-08-01: A publish retry repaired the missing git blob for
+  `research/reddit-radar/data/2026-07-31-2208-reddit-radar-raw.json` and got
+  through artifact/manifest preflight, but the final push still failed on
+  GitHub HTTPS auth with `could not read Username for 'https://github.com':
+  Device not configured`; remote verification and any notifier action remain
+  blocked.
+- 2026-08-01: 11:54 CEST material update prepared a five-card local successor
+  to `2026-07-29-2208`, but the shared publish script failed first on corrupted
+  local Git objects (`invalid object ... 2026-07-31-1808-reddit-radar-raw.json`)
+  and the clean temporary fallback then stalled during GitHub shallow fetch, so
+  remote verification and `/v1/humor/digest` remain blocked on publication
+  health rather than topic quality.
+- 2026-07-31: 18:08 CEST material update prepared a six-card local successor to
+  `2026-07-29-2208`, but the shared publish script could not push because
+  GitHub HTTPS auth was invalid and SSH returned `Permission denied
+  (publickey)`, so remote verification and `/v1/humor/digest` are still
+  blocked on repo access.
+- 2026-07-31: 18:08 CEST material update started from a current `origin/main`
+  state that still exposed `2026-07-29-2208`, so the Friday evening slot is a
+  standard fresh rotation rather than a remote catch-up publish.
+- 2026-07-29: 22:08 CEST material update started from a current `origin/main`
+  state that already exposed `2026-07-29-1808`, so the late-evening slot
+  remained a standard rotation rather than a remote catch-up publish; after
+  publication, `/v1/humor/latest` also moved to `humor-2026-07-29-2208`.
 - 2026-07-29: 18:08 CEST material update again started from a current
   `origin/main` state, so the evening slot remained a standard rotation rather
   than a remote catch-up publish.

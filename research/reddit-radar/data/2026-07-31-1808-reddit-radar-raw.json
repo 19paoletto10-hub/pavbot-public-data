@@ -1,0 +1,162 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-07-31-1808",
+  "status": "material_update",
+  "generatedAt": "2026-07-31T16:08:00Z",
+  "source": "Codex Safari Reddit radar",
+  "safariAudit": {
+    "startedAtLocal": "2026-07-31T18:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on exact old.reddit.com listings and exact post pages using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two latest saved automation runs 2026-07-29-1808 and 2026-07-29-2208, so none of the post URLs selected there could roll forward into this slot.",
+      "Verified before publication planning that origin/main already exposed the 2026-07-29-2208 reddit-radar bundle and manifest, so this slot starts from a current remote topic state.",
+      "Fresh Friday evening review cleared the contract threshold with six new public-safe survivors led by three dev cards and three cat/media closers.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "currentPublicBundle": "2026-07-29-2208",
+  "selectedDigestPath": "research/reddit-radar/data/2026-07-31-1808-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-07-31-1808-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-07-31-1808-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/AskReddit/hot/",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9r248/planningtobecomefarmerafterlayoffsthensawthis/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9rnny/waittillitsfriday/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9s068/dinnerwithaprogrammerisneversimple/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9thq8/excusemoihow0ldisclaudec0de/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9y3w1/providingninetyninepointninepercentprotection/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/hot/",
+    "https://old.reddit.com/r/facepalm/hot/",
+    "https://old.reddit.com/r/memes/comments/1v9roor/when_you_say_goodbye_to_someone_and_you_both/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9tjsp/we_are_just_better/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9u2h8/bet_the_cameraman_was_trying_to_keep_a_straight/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9v4ic/seriously_who_are_these_peoplem/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9v5aa/anon_tries_science/?sort=top",
+    "https://old.reddit.com/r/memes/hot/",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9qcqe/pancake_which_they_apparently_had_no_sugar_so_we/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9tx35/my_works_split_recycling_bin_is_just_one_bin/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9usj1/i_canceled_my_hp_instant_ink_subscription_and_now/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9wiog/this_was_a_stew_my_brother_appears_to_have_ate/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/hot/",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9kokx/redactoverflow/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1v9t3by/noheapallstack/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1va05kf/oncekingnowpawn/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1va2h6r/airconditioner/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1va2wq4/igot99problems/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1v9x3vo/everysingletime/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1va0j1b/common_trope/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1va2uw5/im_just_happy_to_be_here/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9k3qi/coworker_ive_never_spoken_to_sent_passive/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1v9yho5/my_sweatpants_strings_are_just_sewn_on_for/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1va1vwa/got_a_used_tv_from_a_friend/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1va3683/this_ai_poster_behind_the_bar_my_friend_works_at/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1va6bgm/why_the_fuck_is_there_ai_in_my_washing_machine/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vbntco/timezonesyoureonsight/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "Żart działa, bo bierze uniwersalny ból synchronizacji i natychmiast pcha go w jeszcze gorszy wariant."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vbrjfd/theyforgottomentionforking/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "Humor siedzi w tym, że cały thread konsekwentnie miesza rodzicielstwo z dosłownym słownikiem systemowym."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vbttjt/currentwindowssituation/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "To działa, bo komentujący nie spierają się o szczegóły, tylko razem wzmacniają ten sam absurdalny fundament całego GUI."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vbqoit/the_cat_is_on_a_secret_mission/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "Humor trzyma się jednego lekkiego zwierzęcego bitu bez schodzenia w cięższe dygresje."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vbtfvr/cat_and_owner_dynamics_for_real/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "To działa, bo cały thread zostaje przy jednym bardzo rozpoznawalnym zachowaniu domowego kota."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vblnlz/miss_em_ol_days/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "Humor siedzi w spiralnym przesunięciu uwagi z oryginału na kolejne warstwy cudzych reakcji."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vbq2xm/im_melting/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "Komentarze odpływają w prawdziwy heatwave/climate talk zamiast trzymać jeden lekki żart."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vbcro9/farewell_old_friend/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "Wątek bardzo szybko schodzi w śmierć i samobójstwo, więc nie jest public-safe dla lekkiego digestu."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vb8hv7/did_it_not_occur_to_you_that_i_might_say_no/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "Top comments skręcają w generyczny gender/self-esteem riff, zbyt cienki i zbyt powtarzalny."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vbo27c/learningcurve/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "Komentarze robią się bardziej mentoringowo-życiowe niż punchline-driven."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vb2e4g/bugsuccessfullyreproduced/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "Warstwa komentarzy jest nierówna i za bardzo rozjeżdża się między słabymi odpowiedziami a długą anegdotą."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vb57yt/documentationisoptional/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "Za mało komentarzowego mięsa; thread jest zbyt cienki, by nieść publiczną kartę."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1vbm1be/was_invited_by_my_girlfriends_family_to_a_theme/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "To zostaje głównie przy autentycznej frustracji z chronicznym spóźnianiem, bez wystarczająco lekkiego payoffu."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1vbqnaq/thanks_to_one_of_my_three_teenagers/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "Image-first chaos zbyt słabo komunikuje puentę bez dodatkowego kontekstu."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1vbq7aw/what_am_i_missing_here_about_their_pricing_system/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "Thread zamienia się w zwykły pricing/app glitch discourse i rekomendacje zakupowe."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1vbpag7/there_is_a_grounding_problem_somewhere_outside/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "Komentarze szybko przechodzą w realne safety advice i ryzyko pożarowe."
+    }
+  ]
+}

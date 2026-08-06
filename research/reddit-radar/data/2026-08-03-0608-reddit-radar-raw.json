@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-08-03-0608",
+  "status": "material_update",
+  "generatedAt": "2026-08-03T04:08:00Z",
+  "source": "Codex Safari Reddit radar",
+  "summary": "Read-only Safari review for Monday, August 3, 2026 06:08 CEST found five fresh public-safe survivors after filtering the two latest saved runs, so the topic rotates to a new morning bundle.",
+  "safariAudit": {
+    "startedAtLocal": "2026-08-03T06:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on exact old.reddit.com listings and exact post pages using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two latest saved runs 2026-08-02-0609 and 2026-08-02-1209, so none of those selected post URLs could roll forward into this slot.",
+      "Morning review cleared the contract threshold with five fresh public-safe survivors spread across memes, programmerhumor, mildlyinfuriating, and facepalm.",
+      "A pre-publication git fetch origin was attempted on Monday, August 3, 2026 and timed out after 20 seconds with no stdout or stderr, so remote refs were not refreshed before publication planning.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "selectedDigestPath": "research/reddit-radar/data/2026-08-03-0608-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-08-03-0608-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-08-03-0608-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1vczqnq/conplan_8888/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vd63xv/on_friday/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vd0ifl/im_gonna_keep_making_these_until_he_shows_up_or/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vctk0f/the_regret_hits_different/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vcmscy/iapologise/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vc5y7o/thevulkanpipeline/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vcmq8l/itdoesntmatterhowexperiencedyouare/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1vd0s0k/i_didnt_get_to_my_groceries_fast_enough_and_a/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1vczb3l/third_night_is_free/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vdcmvx/its_over_she_knows/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vdaqh2/bro_flipped_his_face_just_for_a_role/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vd7cho/i_am_18_btw/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vcn06m/wont_somebody_think_of_the_quarterly_earnings/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vd8vx7/therealprogrammerweakness/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vd36su/justbanopenweights/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vcc3aa/itsjustmcpbro/?sort=top",
+    "https://old.reddit.com/r/facepalm/comments/1vdajgw/they_built_these_drawers_upside_down_and_screwed/?sort=top",
+    "https://old.reddit.com/r/AskReddit/comments/1vd7tlg/olive_garden_employees_what_do_you_do_if_someone/?sort=top",
+    "https://old.reddit.com/r/AskReddit/comments/1vckb3q/anyone_who_surfed_the_early_web_between_19952010/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vdyrt0/seen_the_motu_film_enjoyed_it_however/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "Visible comments keep the thread on one portable payoff about resetting unnecessary seriousness around a campy toy-cartoon franchise."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vdw2w0/must_fight_urge/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "The joke stays on one clean food self-own rather than drifting into health or relationship discourse."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vdjq81/dontchallengeme/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "Top comments reinforce one compact joke about solving app shutdown too aggressively."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1vdngh2/the_32oz_bag_of_tater_tots_is_2_tots_short_of/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "reason": "The visible thread becomes a light communal micro-puzzle about row symmetry instead of a broader product rant."
+    },
+    {
+      "url": "https://old.reddit.com/r/facepalm/comments/1vdomrx/insane_deal_from_john_lewis_today/?sort=top",
+      "subreddit": "r/facepalm",
+      "decision": "selected",
+      "reason": "Comments land on one broad retail-label absurd rather than heavier commerce or politics discussion."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1ve02f3/the_ultimate_ninja_technique/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "The visible thread turns into sexual and health overshare, which is less clean for a public-safe digest."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vdgx2q/every_single_time/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "The comment layer quickly drifts into heavier relationship and custody-style discourse instead of staying light."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vdfx6h/this_isnt_tiktok_bro/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "The visible joke cluster leans on death-adjacent euphemism riffs that are less suitable for a public-safe bundle."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vdppip/gracefulenough/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "The thread becomes too explanation-first and OS-debate heavy compared with cleaner dev finalists."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1vdjk6g/i_just_wanted_a_pastry_not_a_discovery/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "The visible comments tilt into mold and penicillin overshare rather than staying on one compact pastry payoff."
+    },
+    {
+      "url": "https://old.reddit.com/r/AskReddit/comments/1vdytvs/whats_one_brandname_food_that_no_generic_or/?sort=top",
+      "subreddit": "r/AskReddit",
+      "decision": "borderline",
+      "reason": "Readable and safe, but it behaves more like a broad preference thread than one compact portable humor card."
+    }
+  ]
+}

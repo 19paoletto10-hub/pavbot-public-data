@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-08-04-1758",
+  "status": "material_update",
+  "generatedAt": "2026-08-04T15:58:00Z",
+  "source": "Codex Safari Reddit radar",
+  "summary": "Read-only Safari review for Tuesday, August 4, 2026 17:58 CEST found four fresh public-safe survivors after filtering the two latest saved runs, so the topic rotates to a new evening bundle.",
+  "safariAudit": {
+    "startedAtLocal": "2026-08-04T17:58:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on exact old.reddit.com listings and exact post pages using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two latest saved runs 2026-08-02-1209 and 2026-08-03-0608, so none of those selected post URLs could roll forward into this slot.",
+      "Evening review cleared the contract threshold with four fresh public-safe survivors spread across memes, programmerhumor, and mildlyinfuriating.",
+      "facepalm and AskReddit stayed weaker than the selected bundle at listing level.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "selectedDigestPath": "research/reddit-radar/data/2026-08-04-1758-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-08-04-1758-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-08-04-1758-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1vdyrt0/seen_the_motu_film_enjoyed_it_however/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vdw2w0/must_fight_urge/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1ve02f3/the_ultimate_ninja_technique/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vdgx2q/every_single_time/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vdfx6h/this_isnt_tiktok_bro/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vdjq81/dontchallengeme/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vdppip/gracefulenough/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1vdngh2/the_32oz_bag_of_tater_tots_is_2_tots_short_of/?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1vdjk6g/i_just_wanted_a_pastry_not_a_discovery/?sort=top",
+    "https://old.reddit.com/r/facepalm/comments/1vdomrx/insane_deal_from_john_lewis_today/?sort=top",
+    "https://old.reddit.com/r/AskReddit/comments/1vdytvs/whats_one_brandname_food_that_no_generic_or/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vdcmvx/its_over_she_knows/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vdaqh2/bro_flipped_his_face_just_for_a_role/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vd7cho/i_am_18_btw/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vcn06m/wont_somebody_think_of_the_quarterly_earnings/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vd8vx7/therealprogrammerweakness/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vd36su/justbanopenweights/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vcc3aa/itsjustmcpbro/?sort=top",
+    "https://old.reddit.com/r/facepalm/comments/1vdajgw/they_built_these_drawers_upside_down_and_screwed/?sort=top",
+    "https://old.reddit.com/r/AskReddit/comments/1vd7tlg/olive_garden_employees_what_do_you_do_if_someone/?sort=top",
+    "https://old.reddit.com/r/AskReddit/comments/1vckb3q/anyone_who_surfed_the_early_web_between_19952010/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vf6kbp/dr_thanos_phd/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "Visible comments keep the thread on one portable payoff about Thanos finally getting peer-reviewed validation."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vf85jx/classicnpm/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "Top comments reinforce one compact acronym joke about npm never producing a peaceful moment."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vemuil/softwarecheats/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "The visible thread cleanly stacks the same software-layer joke rather than drifting into deeper debate."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1vfb5oo/14_yearold_cat_stopped_eating_400_vet_bill_later/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "selected",
+      "reason": "Comments anthropomorphize the cat into one light diva-style payoff instead of turning into a medical thread."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vfaphl/i_meann/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "The visible thread turns into sexual overshare, which is less clean for a public-safe digest."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vf0kp5/he_died_to_preserve_history/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "The comment layer becomes a serious historical tribute rather than a light humor card."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vf5p2u/potato_stuffing/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "The thread becomes a plot-hole explainer instead of maintaining one compact joke-first payoff."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vf1paq/thefourhorsemen/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "After one good top comment, the visible thread slips into real CMake troubleshooting."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vf2etb/approvalclusterdown/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "rejected",
+      "reason": "The visible thread turns into management and leave-planning discussion instead of staying compactly funny."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1vf4oik/trying_to_take_a_photo_when_your_apps_are_ad/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "The thread becomes a malware and elderly-targeting rant, which is too support/security heavy."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1vfawsz/purchased_an_1850s_journal_and_the_auction_house/?sort=top",
+      "subreddit": "r/mildlyinfuriating",
+      "decision": "rejected",
+      "reason": "The thread becomes preservation outrage and buyer advice rather than a clean humor closer."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vf72uw/why_are_you_booing_me_im_correct/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "The visible thread leans on franchise technicalities and explanation instead of one strong punchline."
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-08-01-1808",
+  "status": "material_update",
+  "generatedAt": "2026-08-01T16:08:00Z",
+  "source": "Codex Safari Reddit radar",
+  "summary": "Read-only Safari review for Saturday, August 1, 2026 18:08 CEST found five fresh public-safe survivors after filtering the two latest saved runs, so the topic again rotates to a new evening bundle.",
+  "safariAudit": {
+    "startedAtLocal": "2026-08-01T18:08:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on exact old.reddit.com listings and exact post pages using read-only navigation and DOM extraction.",
+      "The freshness filter was built from the two latest saved automation runs 2026-08-01-1154 and 2026-07-31-2208, so none of the post URLs selected there could roll forward into this slot.",
+      "Fresh evening review cleared the contract threshold with five new public-safe survivors led by two memes cards and three programmer-humor closers.",
+      "Before publication planning, git fetch origin confirmed that origin/main still exposed the older 2026-07-29-2208 public bundle for reddit-radar.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "selectedDigestPath": "research/reddit-radar/data/2026-08-01-1808-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-08-01-1808-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-08-01-1808-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1vcaxe1/when_someones_phone_screen_is_a_picture_of/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vcblrp/when_there_was_a_fight_in_the_group_chat_but_you/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vc4o4f/brain_needs_time_to_reload/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vcc3aa/itsjustmcpbro/?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vbo27c/learningcurve/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vbw3um/love_when_that_happens/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vc0kpb/introverts_will_do_anything_but_ask_for_help/?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vbugj4/high_risk_high_reward/?sort=top",
+    "https://old.reddit.com/r/AskReddit/comments/1vbfkcm/youre_offered_10_million_but_every_time_you_enter/?sort=top",
+    "https://old.reddit.com/r/AskReddit/comments/1vbrm6r/which_band_has_the_stupidest_name/?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vcmyu0/literally_every_dad/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "Top comments wzmacniają wspólny rodzinny mit o zakazanej lampce w aucie zamiast rozwadniać żart."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vckbyc/youtube_algorithm_is_way_too_sensitive/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "selected",
+      "reason": "Thread zostaje przy jednym lekkim algorytmicznym self-ownie o frog feedach i przypadkowych obsesjach."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vcuxgs/builtfromtrauma/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "Komentarze utrzymują prosty devowy self-own o autorze wszystkich własnych dziwnych bugów."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vchanw/animatepulsethesenuts/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "To czytelny meta-roast stron, które łączą bot-checki, cookies i hype na agentów AI."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vcru8y/thispostjustexposedeveryonesbrainbug/?sort=top",
+      "subreddit": "r/ProgrammerHumor",
+      "decision": "selected",
+      "reason": "Widoczny top zostaje przy jednym językowym brain-bugu i nie rozpada się na ciężki semantic flame."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vcr3vw/brave_soldier/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "Top comment prowadzi w zewnętrzny mem-link, więc komentarzowy payoff robi się zbyt rozproszony."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vcn06m/wont_somebody_think_of_the_quarterly_earnings/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "Thread schodzi w prawdziwy spór o inwestowanie, biedę i ubezpieczenia zamiast lekkiego public-safe żartu."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vch6e3/the_futures_now_old_man/?sort=top",
+      "subreddit": "r/memes",
+      "decision": "rejected",
+      "reason": "Komentarze są za cienkie i zbyt explanacyjne, by nieść pełną kartę do bundle'a."
+    },
+    {
+      "url": "https://old.reddit.com/r/AskReddit/comments/1vcl0eg/what_is_your_favorite_how_many_x_does_it_take_to/?sort=top",
+      "subreddit": "r/AskReddit",
+      "decision": "rejected",
+      "reason": "Najwyższy klaster opiera się na prostym żarcie narodowościowym, słabszym i mniej uniwersalnym niż wybrane survivory."
+    }
+  ]
+}
