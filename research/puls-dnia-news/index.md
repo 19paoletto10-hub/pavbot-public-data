@@ -2,9 +2,9 @@
 
 ## Current State
 
-Slot z 2026-08-06 06:02 przesuwa feed do porannego układu ryzyk: NSA zabiera PiS pieniądze, rząd zaczyna mówić o uldze dla kierowców przy rekordowych paliwach, a upał dalej obciąża pracę i energetykę, choć oficjalnie system pozostaje bezpieczny.
+Slot z 2026-08-06 18:04 przesuwa feed ku energetyce operacyjnej: PSE ogłasza okresy przywołania 17:00-22:00, IMGW i RCB utrzymują alerty burzowo-upałowe, a TVN24 dokłada OKI, atak na Żabkę, wyrok w sprawie Ryanaira i rekord Radomia.
 
-Za granicą BBC i CNN trzymają uwagę na Ukrainie, niemieckim incydencie z dronem na lotnisku, Hormuz, irańskich egzekucjach, Kanale La Manche i nowych problemach wokół AI, która dzieli się już na publiczną manipulację i cyberbezpieczeństwo modeli.
+Za granicą BBC i CNN dalej trzymają Lipsk, Kijów, Hormuz, Iran i Kanał La Manche, a Meta dorzuca kolejny incydent AI do już i tak napiętego bloku technologicznego.
 
 ## Data Shape
 

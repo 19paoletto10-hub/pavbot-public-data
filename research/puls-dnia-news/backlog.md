@@ -44,3 +44,10 @@
 - Watch whether the yen intervention becomes a broader G7 or BoJ pattern.
 - Watch whether Iran talks on Monday and the Gaza dispute produce a formal readout.
 - Watch whether the Wrocław case gets a prosecutor or court update.
+## 2026-08-06 18:04
+
+- Watch whether PSE extends periods of przywołania beyond the evening peak or adds an outage follow-up.
+- Watch whether IMGW or RCB upgrade the storm block into local damage, transport disruption, or power-loss reports.
+- Watch whether the OKI bill gets signed or publicly challenged by the president.
+- Watch whether Żabka, prokuratura, or TVN24 add concrete details on the cyberattack.
+- Watch whether BBC, CNN, or OHCHR add new numbers on Kyiv, Leipzig, Hormuz, Iran, or the Channel rescue.
