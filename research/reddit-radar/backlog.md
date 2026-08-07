@@ -9,6 +9,16 @@
 
 ## Review Notes
 
+- 2026-08-07: 20:08 CEST second same-day no-change audit confirmed that after
+  filtering `2026-08-06-1807` and `2026-08-07-1909`, the freshest shortlist
+  still only produced one clearly clean new survivor (`goodOldDays`) plus
+  multiple rejected challengers that drifted into fertility/adoption,
+  crack-workaround, or translation-explainer comment layers, so the active
+  public payload remains `2026-08-06-1807` and no new digest should be sent.
+- 2026-08-07: The same 20:08 CEST follow-up slot again started from a current
+  remote state: `git fetch origin` confirmed that `origin/main` already
+  exposes the published `2026-08-07-1909` run/PDF pair and the active public
+  bundle `2026-08-06-1807` before this audit's own publication step.
 - 2026-08-07: 19:09 CEST no-change audit confirmed that after filtering
   `2026-08-05-1807` and `2026-08-06-1807`, the fresh shortlist only held two
   clean survivors plus one borderline meme challenger, so the active public

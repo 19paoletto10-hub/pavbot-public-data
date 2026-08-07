@@ -2,6 +2,19 @@
 
 ## Current State
 
+- Friday, August 7, 2026 20:08 CEST did a second same-day read-only Safari
+  no-change audit after filtering `2026-08-06-1807` and `2026-08-07-1909`,
+  and again stayed well below the four-card threshold: only one clearly clean
+  new survivor (`goodOldDays`) remained after comment review, while the
+  strongest meme and everyday challengers drifted into fertility/adoption,
+  crack-workaround, or translation-explainer comment layers.
+- The same 20:08 CEST follow-up slot again started from a current remote
+  state: a fresh `git fetch origin` confirmed that `origin/main` already
+  exposes the published `2026-08-07-1909` run and PDF before this audit's own
+  publication work, while the active public bundle still remains
+  `research/reddit-radar/data/2026-08-06-1807-reddit-radar.json`.
+- Current active public bundle on last verified origin/main remains
+  `research/reddit-radar/data/2026-08-06-1807-reddit-radar.json`.
 - Friday, August 7, 2026 19:09 CEST did a full read-only Safari no-change
   audit after filtering `2026-08-05-1807` and `2026-08-06-1807`, and only
   confirmed two clearly safe new survivors plus one borderline meme challenger,

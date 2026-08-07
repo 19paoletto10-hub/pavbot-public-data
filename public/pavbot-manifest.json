@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-08-07T17:43:54.747476+00:00",
+  "generatedAt": "2026-08-07T22:16:40.896522+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -168,6 +168,17 @@
       "date": "2026-08-07"
     },
     {
+      "id": "research/reddit-radar/runs/2026-08-07-2008-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Daily Research Report: Reddit Radar",
+      "path": "research/reddit-radar/runs/2026-08-07-2008-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-08-07-2008-reddit-radar.md",
+      "sizeBytes": 7493,
+      "date": "2026-08-07",
+      "time": "20:08"
+    },
+    {
       "id": "research/reddit-radar/runs/2026-08-07-1909-reddit-radar.md",
       "type": "run",
       "topic": "reddit-radar",
@@ -177,6 +188,17 @@
       "sizeBytes": 7135,
       "date": "2026-08-07",
       "time": "19:09"
+    },
+    {
+      "id": "research/reddit-radar/pdfs/2026-08-07-2008-reddit-radar.pdf",
+      "type": "pdf",
+      "topic": "reddit-radar",
+      "title": "2026-08-07-2008-reddit-radar.pdf",
+      "path": "research/reddit-radar/pdfs/2026-08-07-2008-reddit-radar.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/pdfs/2026-08-07-2008-reddit-radar.pdf",
+      "sizeBytes": 75988,
+      "date": "2026-08-07",
+      "time": "20:08"
     },
     {
       "id": "research/reddit-radar/pdfs/2026-08-07-1909-reddit-radar.pdf",
@@ -21084,7 +21106,7 @@
       "title": "Topic Index: reddit-radar",
       "path": "research/reddit-radar/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/index.md",
-      "sizeBytes": 19928
+      "sizeBytes": 20853
     },
     {
       "id": "research/reddit-radar/backlog.md",
@@ -21093,7 +21115,7 @@
       "title": "Topic Backlog: reddit-radar",
       "path": "research/reddit-radar/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/backlog.md",
-      "sizeBytes": 9812
+      "sizeBytes": 10558
     },
     {
       "id": "research/puls-dnia-news/topic.md",
