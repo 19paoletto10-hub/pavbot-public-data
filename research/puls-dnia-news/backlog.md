@@ -1,5 +1,13 @@
 # Puls Dnia News Backlog
 
+## 2026-08-07 19:15
+
+- Watch whether Podkarpacie rain turns into formal IMGW/RCB alerts, flooding or transport disruption.
+- Watch whether the new cła na paczki z Chin translate into more pricing, logistics or consumer-response detail.
+- Watch whether the frankowicze law gets immediate banking or court reactions.
+- Watch whether the Kraków race gets first endorsements or sharper campaign contrasts.
+- Watch whether BBC and CNN follow-ups add detail to the Trump, citizenship, defense-pact, Meta and Antarctica stories.
+
 ## 2026-08-06 21:03
 
 - Watch whether IMGW, RCB or lokalne służby zamienią alerty w realne szkody, przerwy w dostawach prądu albo zakłócenia transportu.

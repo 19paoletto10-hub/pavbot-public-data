@@ -2,11 +2,9 @@
 
 ## Current State
 
-Slot 2026-08-06 21:03 potwierdza twardy blok pogodowo-energetyczny: 38 stopni w Cieszanowie, alerty IMGW/RCB i okresy przywołania PSE na 17:00-22:00 dalej trzymają krajowy feed w trybie operacyjnym.
+Slot 2026-08-07 19:15 przesuwa feed z wczorajszego bloku upałowo-energetycznego na lokalne podtopienia na Podkarpaciu, krótki powrót upału do 34 stopni i regulacyjno-gospodarcze skutki ceł na paczki z Chin. W polityce krajowej widać teraz głównie samorządowy start Łukasza Gibały oraz wejście w życie ustawy frankowej.
 
-W polityce ciężar przesunął się na pierwszy rok prezydentury Nawrockiego, kolejne odrzucenie wniosku o referendum klimatyczne przez Senat i odwołanie Beaty Szydło w sprawie PFN.
-
-Za granicą najmocniej wybija Lipsk jako sygnał zagrożenia dla infrastruktury krytycznej, Ukraina i niedobór obrony powietrznej, Hormuz jako punkt nacisku na rynek ropy, Kanał La Manche jako stałe ryzyko humanitarne oraz AI, które wchodzi już w obszar biosafety i incydentów operacyjnych.
+Za granicą dominują bezpieczeństwo i polityka instytucjonalna: zatrzymany projekt ballroomu Trumpa, kolejne ograniczanie birthright citizenship, pakt obronny Saudów, Turków i Pakistańczyków, rekordowa grzywna dla Mety, rosyjskie pociski balistyczne oraz zimowa akcja ratunkowa na Antarktydzie.
 
 ## Data Shape
 
