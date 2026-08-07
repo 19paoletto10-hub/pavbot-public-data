@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-08-07",
+  "runTime": null,
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run przesuwa temat z wczorajszego leadership churn i fabryk chipów do trzech nowych osi: sekretnego, federalnego review dla frontier AI, eskalacji sporu OpenAI z Apple oraz kolejnego ruchu w stronę inference-specific silicon po przejęciu Taalas przez AMD.",
+    "Najważniejsza zmiana jakościowa: rynek coraz mniej czyta AI jako pojedyncze modele, a coraz bardziej jako układ kontroli dostępu, ryzyka prawnego i kosztu inferencji. HN i Product Hunt nadal promują agentowe narzędzia, browser OS i control surfaces, więc sygnał społeczności pozostaje zgodny z tym przesunięciem."
+  ],
+  "summaryBullets": [
+    "Regulacje: Biały Dom testuje sekretny framework review dla AI",
+    "Regulacje: OpenAI kontratakuje Apple w sądzie",
+    "Infrastruktura: AMD kupuje Taalas i celuje w inference"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-08-07-0-bialy-dom-testuje-sekretny-framework-review-dla-ai-c857657563",
+      "section": "Regulacje",
+      "title": "Biały Dom testuje sekretny framework review dla AI",
+      "standfirst": "Najnowsze reporty mówią o zamkniętym, federalnym frameworku, który ma pozwalać na pre-release review wybranych zaawansowanych modeli AI. Proces wygląda na dobrowolny, ale praktycznie może ustawić nowy standard wejścia na rynek frontier.",
+      "whatHappened": "Biały Dom i duzi labsi AI rozmawiają o niejawnej ścieżce oceny modeli przed premierą.",
+      "whyItMatters": "To może stać się pierwszym realnym soft-compliance regime dla frontier AI w USA.",
+      "deeperAnalysis": [
+        "Najciekawsze w tym sygnale jest nie samo to, że rząd chce oceniać modele, ale to, jak to robi. Zamiast klasycznej regulacji ustawowej widać raczej model negocjowanej kontroli dostępu: laboratoria zgłaszają modele, administracja sprawdza ryzyko, a proces pozostaje częściowo niewidoczny dla rynku. Taki układ często kończy się tym, że \"dobrowolne\" staje się praktycznie obowiązkowe dla największych graczy.",
+        "W tym sensie dzisiejszy news jest logicznym przedłużeniem czerwcowego executive order. Publiczna warstwa mówiła o benchmarkingu, ewaluacji i współpracy z laboratoriami; obecne reporting sugeruje, że te zasady weszły w fazę operacyjną. To ważne, bo od tego momentu liczy się nie tylko sama treść wymogów, ale też who gets invited in first.",
+        "Najbardziej wrażliwy element to scope. Jeśli open source pozostaje poza pierwszą falą, rynek dostaje dwie ścieżki: closed frontier labs pod soft-review i otwarte modele, które mogą działać szybciej, ale bez tej samej formalnej pieczęci. To z czasem może wpłynąć na tempo premier, partnerstwa enterprise i nawet na to, które modele będą uznawane za \"bezpieczne domyślnie\"."
+      ],
+      "contextPoints": [
+        "Co się stało: pojawia się reporting o secretive review framework dla zaawansowanych modeli.",
+        "Dlaczego ważne: to może przekształcić frontier AI w proces częściowo bramkowany przez państwo.",
+        "Na co patrzeć dalej: publiczne szczegóły, lista covered models, udział open source i sygnatury firm uczestniczących."
+      ],
+      "sources": [
+        {
+          "title": "Guardian",
+          "url": "https://www.theguardian.com/us-news/2026/aug/07/white-house-artificial-intelligence-safety-framework"
+        },
+        {
+          "title": "Business Insider",
+          "url": "https://www.businessinsider.com/openai-google-and-anthropic-white-house-meeting-biggest-questions-2026-8"
+        },
+        {
+          "title": "White House Executive Order, 2 czerwca 2026",
+          "url": "https://www.whitehouse.gov/presidential-actions/2026/06/promoting-advanced-artificial-intelligence-innovation-and-security/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "White House",
+        "AI safety",
+        "frontier models",
+        "governance",
+        "review",
+        "open source"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-07-1-openai-kontratakuje-apple-w-sadzie-78b49b9986",
+      "section": "Regulacje",
+      "title": "OpenAI kontratakuje Apple w sądzie",
+      "standfirst": "OpenAI opublikowało blogową odpowiedź na pozew Apple i złożyło motion to dismiss. To przenosi konflikt z poziomu komunikatów do formalnej procedury sądowej.",
+      "whatHappened": "OpenAI chce odrzucenia pozwu Apple na wczesnym etapie postępowania.",
+      "whyItMatters": "Spór może wpłynąć na zaufanie do OpenAI, partnerstwa produktowe i narrację wokół danych oraz tajemnic handlowych.",
+      "deeperAnalysis": [
+        "Ten case jest ważny, bo dotyczy nie tylko pojedynczego sporu korporacyjnego, ale granicy między konkurencją, współpracą i kontrolą nad know-how. Jeśli jedna strona twierdzi, że druga niewłaściwie użyła informacji poufnych, to natychmiast wchodzą do gry discovery, depozycje i ryzyko ujawnienia szczegółów, których obie firmy wolałyby nie pokazywać publicznie.",
+        "OpenAI prowadzi tu podwójną grę. Z jednej strony chce obronić własną reputację i odciąć się od narracji, że przekroczyło granice w relacji z Apple. Z drugiej strony filing do sądu sugeruje, że spór nie jest tylko medialny, ale może obejmować bardzo konkretne argumenty o tym, co było poufne, kto to widział i czy da się wykazać szkody.",
+        "To szczególnie istotne w momencie, gdy OpenAI równolegle rozbudowuje produkt, enterprise distribution i hardware ambitions. Każdy taki spór o IP i trade secrets dokłada tarcie do historii wzrostu. Dla podcastu to dobry temat, bo łączy AI z klasycznym corporate litigation, a jednocześnie pokazuje, że warstwa prawna zaczyna być równie ważna jak model sam w sobie."
+      ],
+      "contextPoints": [
+        "Co się stało: OpenAI chce odrzucenia pozwu Apple i publikuje własną odpowiedź.",
+        "Dlaczego ważne: spór może wejść w discovery i podbić ryzyko reputacyjne obu firm.",
+        "Na co patrzeć dalej: odpowiedź Apple, terminy procesowe i ewentualne settlement signals."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI",
+          "url": "https://openai.com/index/apple-is-getting-this-wrong/"
+        },
+        {
+          "title": "CourtListener PDF",
+          "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.457474/gov.uscourts.cand.457474.29.0.pdf"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "OpenAI",
+        "Apple",
+        "lawsuit",
+        "trade secrets",
+        "motion to dismiss",
+        "legal risk"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-07-2-amd-kupuje-taalas-i-celuje-w-inference-1b63fa1a1b",
+      "section": "Infrastruktura",
+      "title": "AMD kupuje Taalas i celuje w inference",
+      "standfirst": "AMD ogłosiło przejęcie Taalas, opisując transakcję jako ruch wzmacniający compute solutions dla rosnącego rynku AI inference. To kolejny sygnał, że walka o AI schodzi z poziomu modeli do poziomu krzemu.",
+      "whatHappened": "AMD rozszerza swój AI stack o Taalas i mocniej akcentuje inference.",
+      "whyItMatters": "konkurencja przenosi się z samych GPU na wyspecjalizowane układy i koszty uruchamiania modeli w produkcji.",
+      "deeperAnalysis": [
+        "To nie jest tylko mała akwizycja technologiczna. AMD sygnalizuje, że interesuje je nie tylko trenowanie dużych modeli, ale ekonomia ich uruchamiania na dużą skalę. Inference jest tam, gdzie zaczyna się realny rachunek: latencja, throughput, energia, cooling i koszt tokena. Jeśli firma chce być licząca się w tej warstwie, musi oferować coś więcej niż ogólny GPU catalog.",
+        "Taalas wzmacnia właśnie tę narrację. Z perspektywy rynku to wygląda jak próba zbudowania bardziej wyspecjalizowanego stacku, w którym hardware i software są dopasowane do konkretnych workloadów. To szczególnie ważne w chwili, gdy własne chipy, rack-scale systems i custom silicon są już osobnymi kategoriami newsowymi, a nie tylko długoterminowym marzeniem.",
+        "W praktyce taki ruch może mieć większe znaczenie dla enterprise i cloud providerów niż dla samych benchmarków. Jeśli AMD umie pokazać lepszą cenę za inference, realny TCO i sensowną integrację z istniejącym ekosystemem, to transakcja zacznie działać jak narzędzie strategiczne, nie tylko ofensywa produktowa. Stąd wysoka wartość tej historii w dzisiejszym podcastowym układzie."
+      ],
+      "contextPoints": [
+        "Co się stało: AMD kupuje Taalas i kieruje narrację na AI inference.",
+        "Dlaczego ważne: inference economics staje się nowym polem rywalizacji chipmakerów.",
+        "Na co patrzeć dalej: benchmarki, integracja z Instinct i pierwsze customer stories."
+      ],
+      "sources": [
+        {
+          "title": "AMD",
+          "url": "https://ir.amd.com/news-events/press-releases/detail/1296/amd-acquires-taalas-to-advance-compute-solutions-for-rapidly-growing-ai-inference-market"
+        },
+        {
+          "title": "The Register",
+          "url": "https://www.theregister.com/2026/08/07/amd_buys_taalas/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "AMD",
+        "Taalas",
+        "inference",
+        "silicon",
+        "compute",
+        "AI infrastructure"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Sekretny framework Białego Domu dla AI",
+      "rationale": "To pierwszy sygnał, że frontier AI może dostać półformalny, pre-release review zamiast tylko ogólnych zasad.",
+      "sourcesLabel": "Guardian; Business Insider; White House EO"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI przechodzi do kontrataku na Apple",
+      "rationale": "Spór o tajemnice handlowe wchodzi w fazę sądową i może wpływać na trust, partnerstwa i narrację o OpenAI.",
+      "sourcesLabel": "OpenAI; CourtListener"
+    },
+    {
+      "priority": "High",
+      "title": "AMD kupuje Taalas",
+      "rationale": "To kolejny dowód, że AI economics przesuwa się od GPU do inference-specific silicon i full-stack hardware.",
+      "sourcesLabel": "AMD; The Register"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN i Product Hunt nadal premiują agentowe narzędzia",
+      "rationale": "Rynek popytu jest nadal po stronie browser automation, agent OS i workflow tooling.",
+      "sourcesLabel": "Hacker News; Product Hunt"
+    },
+    {
+      "priority": "Medium",
+      "title": "Inference staje się nowym polem walki",
+      "rationale": "Największe firmy przesuwają uwagę z samych modeli na koszt, latencję i workload-specific hardware.",
+      "sourcesLabel": "AMD; OpenAI; HN"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "The White House / Guardian coverage of the secret AI review framework",
+      "url": "https://www.theguardian.com/us-news/2026/aug/07/white-house-artificial-intelligence-safety-framework"
+    },
+    {
+      "title": "Business Insider: OpenAI, Google and Anthropic meeting on White House AI framework",
+      "url": "https://www.businessinsider.com/openai-google-and-anthropic-white-house-meeting-biggest-questions-2026-8"
+    },
+    {
+      "title": "OpenAI: Apple is getting this wrong",
+      "url": "https://openai.com/index/apple-is-getting-this-wrong/"
+    },
+    {
+      "title": "OpenAI vs. Apple motion to dismiss PDF",
+      "url": "https://storage.courtlistener.com/recap/gov.uscourts.cand.457474/gov.uscourts.cand.457474.29.0.pdf"
+    },
+    {
+      "title": "AMD press release: AMD acquires Taalas to advance compute solutions for rapidly growing AI inference market",
+      "url": "https://ir.amd.com/news-events/press-releases/detail/1296/amd-acquires-taalas-to-advance-compute-solutions-for-rapidly-growing-ai-inference-market"
+    },
+    {
+      "title": "The Register: AMD buys Taalas to chase inference silicon",
+      "url": "https://www.theregister.com/2026/08/07/amd_buys_taalas/"
+    },
+    {
+      "title": "Hacker News front page",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "Product Hunt leaderboard for August 7, 2026",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/8/7"
+    }
+  ]
+}

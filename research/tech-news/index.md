@@ -1,8 +1,12 @@
 # Topic Index: tech-news
 
-Last updated: 2026-08-06
+Last updated: 2026-08-07
 
 ## Current Understanding
+
+Wieczorny run z 2026-08-07 dodaje trzy nowe osie: sekretne, federalne review dla frontier AI, formalny etap sporu OpenAI-Apple oraz kolejne przesunięcie w stronę inference-specific silicon po zakupie Taalas przez AMD. To razem wygląda jak dalsze odchodzenie od samego model hype'u na rzecz governance, litigation i kosztu uruchamiania modeli w produkcji.
+
+W praktyce rynek coraz wyraźniej wycenia dziś nie tylko capability modeli, ale też to, kto kontroluje dostęp, kto ponosi ryzyko prawne i kto może obniżyć koszt inferencji. HN i Product Hunt nadal premiują agentowe browser tools, AI OS i workflow automation, więc community signal pozostaje spójny z tym przesunięciem.
 
 Wieczorny run z 2026-08-06 dodaje nową oś: Google porządkuje odpowiedzialność za DeepMind i Gemini, a Jeff Dean z Sanjayem Ghemawatem wychodzi do Discovery Loop jako niezależny spinout. To nie wygląda jak kosmetyczna roszada, tylko jak mocniejsze rozdzielenie badawczej ścieżki AGI/science od bieżącej odpowiedzialności produktowej.
 
