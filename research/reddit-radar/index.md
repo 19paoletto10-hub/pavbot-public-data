@@ -2,6 +2,17 @@
 
 ## Current State
 
+- Friday, August 7, 2026 19:09 CEST did a full read-only Safari no-change
+  audit after filtering `2026-08-05-1807` and `2026-08-06-1807`, and only
+  confirmed two clearly safe new survivors plus one borderline meme challenger,
+  so the topic stayed below the four-card threshold and kept the active public
+  bundle unchanged.
+- The same 19:09 CEST run started from a current remote state: a fresh
+  `git fetch origin` confirmed that `origin/main` already exposes
+  `research/reddit-radar/data/2026-08-06-1807-reddit-radar.json` before this
+  audit's publication work.
+- Current active public bundle on last verified origin/main remains
+  `research/reddit-radar/data/2026-08-06-1807-reddit-radar.json`.
 - Thursday, August 6, 2026 18:07 CEST found five fresh, public-safe
   survivors after filtering `2026-08-04-1758` and `2026-08-05-1807`, so the
   topic again clears the contract threshold with a lighter early-evening set

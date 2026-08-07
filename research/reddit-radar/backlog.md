@@ -9,6 +9,14 @@
 
 ## Review Notes
 
+- 2026-08-07: 19:09 CEST no-change audit confirmed that after filtering
+  `2026-08-05-1807` and `2026-08-06-1807`, the fresh shortlist only held two
+  clean survivors plus one borderline meme challenger, so the active public
+  payload remains `2026-08-06-1807` and no new digest should be sent.
+- 2026-08-07: The same 19:09 CEST slot started from a current remote state:
+  `git fetch origin` confirmed that `origin/main` already exposes the
+  published `2026-08-06-1807` run/PDF/data set before this audit's own
+  publication step.
 - 2026-08-06: 18:07 CEST material update prepared and published a fresh
   five-card successor bundle with one mystery-bruises meme, two compact dev
   anchors about regex magic and AI README trust, plus worseminton and 750 MB

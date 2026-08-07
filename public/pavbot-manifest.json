@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-08-06T19:16:45.579879+00:00",
+  "generatedAt": "2026-08-07T17:20:06.622476+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -137,6 +137,28 @@
     }
   ],
   "artifacts": [
+    {
+      "id": "research/reddit-radar/runs/2026-08-07-1909-reddit-radar.md",
+      "type": "run",
+      "topic": "reddit-radar",
+      "title": "Daily Research Report: Reddit Radar",
+      "path": "research/reddit-radar/runs/2026-08-07-1909-reddit-radar.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/runs/2026-08-07-1909-reddit-radar.md",
+      "sizeBytes": 7135,
+      "date": "2026-08-07",
+      "time": "19:09"
+    },
+    {
+      "id": "research/reddit-radar/pdfs/2026-08-07-1909-reddit-radar.pdf",
+      "type": "pdf",
+      "topic": "reddit-radar",
+      "title": "2026-08-07-1909-reddit-radar.pdf",
+      "path": "research/reddit-radar/pdfs/2026-08-07-1909-reddit-radar.pdf",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/pdfs/2026-08-07-1909-reddit-radar.pdf",
+      "sizeBytes": 75410,
+      "date": "2026-08-07",
+      "time": "19:09"
+    },
     {
       "id": "research/tech-news/runs/2026-08-06-1939.md",
       "type": "run",
@@ -20946,7 +20968,7 @@
       "title": "Topic Index: reddit-radar",
       "path": "research/reddit-radar/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/index.md",
-      "sizeBytes": 19225
+      "sizeBytes": 19928
     },
     {
       "id": "research/reddit-radar/backlog.md",
@@ -20955,7 +20977,7 @@
       "title": "Topic Backlog: reddit-radar",
       "path": "research/reddit-radar/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/reddit-radar/backlog.md",
-      "sizeBytes": 9280
+      "sizeBytes": 9812
     },
     {
       "id": "research/puls-dnia-news/topic.md",
