@@ -1,16 +1,19 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-08-04 17:40 CEST
+Last updated: 2026-08-07 19:10 CEST
 
 ## Current Understanding
 
-Runda z `2026-08-04 17:40 CEST` dołożyła nowy klaster wokół `DataArt`,
-`deepsense.ai` i `Spyrosoft`: `Senior AI Developer with LLM Orchestration,
-Intelligent Knowledge Platform`, `Senior Machine Learning Engineer (LLMs)`,
-`Machine Learning Engineer`, `Senior AI Engineer with Azure` i `Lead AI
-Consultant`. To przesuwa miks dalej w stronę produkcyjnych LLM pipelines,
-knowledge platforms, Azure delivery i konsultingowego AI delivery, a nie
-tylko ogólnych `AI Engineer` cardów.
+Runda z `2026-08-07 19:10 CEST` dołożyła nowy board-first klaster wokół
+`Addepto`, `Itransition`, `EPAM`, `cloudatus`, `Accenture`, `Team Up` i
+`DCV`: `Senior AI Engineer (LLMs, Python)`, `Agentic Platform Architect`,
+`Senior AI/ML Solution Engineer (AI Agentic Security Testing)`,
+`GenAI Solution Architect`, `GenAI & Cloud Solution Engineer`,
+`AI Developer with .NET and Microsoft Agent Framework`, `AI Consultant
+(f/m/x)` oraz `Senior AI Engineer (Generative AI / LLM Systems)`. To przesuwa
+miks z pojedynczych employer bursts w stronę szerszych agentic platform
+architecture, Microsoft-native delivery, consulting i AI enablement, przy
+czym board-first źródła znów dominują nad canonical pages.
 
 Runda z `2026-08-01 15:43 CEST` dołożyła nowy, bardziej produkcyjny i lepiej
 wyceniony klaster wokół `Addepto`, `ITDS`, `DataArt`, `EPAM`, `Netguru`,
@@ -327,6 +330,8 @@ only when something meaningful changes.
 ## Watch Items
 
 - Public career pages of employers repeatedly posting Polish AI/LLM roles.
+- Official `Addepto`, `Itransition`, `EPAM`, `cloudatus` and `Team Up` pages
+  plus the new board-first mirrors after this run.
 - Official Holisticon and deepsense.ai career pages as recurring high-signal
   sources after this run.
 - Official `deepsense.ai careers` plus employer-posted `No Fluff Jobs` pages po
@@ -355,6 +360,9 @@ only when something meaningful changes.
 - Official `Tooploox Teamtailor`, public `SNI` and public `Harvey Nash`
   pages after the `25 Jun 17:41` run, with special care around canonical URL
   discovery and `People More` salary volatility.
+- Official `Addepto`, `Itransition`, `EPAM`, `cloudatus`, `Accenture`, `Team Up`
+  and `DCV` board / employer pages after the `07 Aug 19:10` run, with special
+  care around platform, consulting and Microsoft-native AI drift.
 - Official `Tooploox Teamtailor`, `Addepto careers`, public `T-Mobile`,
   public `ACAISOFT`, `DataArt` and `BigTime` pages after the `26 Jun 01:42`
   run, with special care around reopen status, board-first canonical drift and
@@ -404,9 +412,16 @@ only when something meaningful changes.
 - [2026-06-26-0142](runs/2026-06-26-0142.md)
 - [2026-06-26-1741](runs/2026-06-26-1741.md)
 
+| addepto-senior-ai-engineer-llms-python-wroclaw-remote | Addepto | Senior AI Engineer (LLMs, Python) | Wrocław, Warszawa, Gdańsk +4 / remote | 2026-08-07-1910 | 2026-08-07-1910 | Open | Initial capture: 19 320-25 200 PLN + VAT (B2B); AI, Python, Cloud, GenAI, LLM, Backend, CI/CD, AWS; AI Agents and Machine Learning as nice-to-have. | [No Fluff Jobs](https://nofluffjobs.com/job/senior-ai-engineer-llms-python-addepto-wroclaw-11) |
+| itransition-agentic-platform-architect-wroclaw-remote | Itransition | Agentic Platform Architect | Wrocław + remote | 2026-08-07-1910 | 2026-08-07-1910 | Open | Initial capture: enterprise-grade agentic AI platform; AI Gateway, governance, security guardrails, `LLMs`, `AI agents`, `RAG`, orchestration framework and platform standards. | [No Fluff Jobs](https://nofluffjobs.com/job/agentic-platform-architect-itransition-warsaw) |
+| epam-senior-ai-ml-solution-engineer-agentic-security-testing-wroclaw-remote | EPAM Systems | Senior AI/ML Solution Engineer (AI Agentic Security Testing) | Wrocław / remote | 2026-08-07-1910 | 2026-08-07-1910 | Open | Initial capture: board-first role with Python, Rust, AI solution engineering, Anthropic Claude Code, Cursor and security-testing methods. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
+| cloudatus-genai-solution-architect-wroclaw-remote | cloudatus | GenAI Solution Architect | Wrocław / remote | 2026-08-07-1910 | 2026-08-07-1910 | Open | Initial capture: 3 892,40 - 6 054,84 CHF/month; GenAI, AWS, Security, Azure, cloud architecture, solution architecture, AI agents and prompt engineering. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
+| team-up-ai-developer-net-microsoft-agent-framework-wroclaw-hybrid | Team Up | AI Developer with .NET and Microsoft Agent Framework (f/m/x) | Wrocław / hybrid | 2026-08-07-1910 | 2026-08-07-1910 | Open | Initial capture: C#, Microsoft Agent Framework, Microsoft Azure, .NET, LLM and GenAI; new Microsoft-native delivery signal. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
+
 ## Review Notes
 
 - 2026-08-04: Today's sweep added a new DataArt LLM orchestration role, a live deepsense.ai Senior Machine Learning Engineer (LLMs) card, and two Spyrosoft signals (Azure delivery and Lead AI Consultant); public salary now spans CHF, PLN and board-only snapshots in the same cluster.
+- 2026-08-07: current board added a broader agentic-platform / consulting burst around Addepto, Itransition, EPAM, cloudatus, Accenture and Team Up; keep duplicate suppression tight because several roles now appear first as board mirrors.
 - 2026-07-18: Spyrosoft opened a new fully remote Poland cluster around OpenAI, AI architecture, AI engineering and AI-assisted fullstack delivery; keep the official jobs hub and board mirrors paired because the family is broad and likely to drift by title or salary band.
 - 2026-07-18: `Tooploox Senior AI Engineer` now has a stronger public board mirror with higher salary and `Wrocław, Tęczowa 7 / Hybrid +1` wording, while the official careers page still shows the broader remote Poland framing.
 - 2026-07-16: The new run added Intellias, Andersen, Tooploox, Cloudfide, Spyrosoft and a refreshed ITDS security signal, while Sii stayed active but did not add a new Wrocław-specific card.
