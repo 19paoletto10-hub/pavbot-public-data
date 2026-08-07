@@ -1,6 +1,6 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-08-05
+Last updated: 2026-08-07
 
 ## Current Understanding
 
@@ -9,6 +9,13 @@ ze świata oraz do przygotowania polskiego podcastu newsowego około godziny
 09:30. Po pierwszym zaplanowanym runie 08:30 najmocniejsze źródłowo tematy to
 oficjalna agenda UE/G7 wokół Ukrainy, Rosji, Bliskiego Wschodu i europejskiej
 obrony oraz krajowa agenda legislacyjna Sejmu i Stałego Komitetu Rady Ministrów.
+Po wieczornym runie 7 sierpnia środek ciężkości przesunął się na trzy bieżące
+bloki: Ukraina potwierdza, że pracuje nad własnymi rakietami balistycznymi i
+europejskim programem FREYJA, AP opisuje Ormuz już jako kwestię kompromisu po
+stronie Trumpa, a w Polsce projekt sankcyjny i projekt zmian w KRS mają już
+świeże publikacje z 6-7 sierpnia. Równolegle RCB utrzymuje burze, silny wiatr
+i intensywne opady na szerokim pasie kraju do popołudnia 7 sierpnia, a upały
+dalej obciążają system energetyczny i poziom Wisły.
 Po drugim zaplanowanym runie główny punkt ciężkości przesunął się na
 konkluzje Rady Europejskiej o Ukrainie, sankcjach, gotowości obronnej i
 wschodniej flance oraz na krajową agendę bezpieczeństwa MON.
