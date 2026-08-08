@@ -4,7 +4,7 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
-| High | Restore production humor notifier reachability | Repo publication is healthy again, but production notifier timed out on digest ingest and on read-only endpoints after the successful 2026-08-06-1807 publish | Check notifier tunnel or service health, then retry `/v1/humor/digest` for `humor-2026-08-06-1807` | Open |
+| High | Watch notifier webhook timeout noise | `POST /v1/humor/digest` now succeeds again, but `/status` still reports the last GitHub webhook as `timeout` | Check notifier tunnel/logs and confirm whether webhook processing needs cleanup after successful manual humor ingest | Open |
 | High | Restore topic automation prompt | The run request pointed to `research/reddit-radar/automation-prompt.md`, but the file was missing and the workflow contract had become implicit | Recreated the topic-local prompt and restored a topic index on Sunday, July 26, 2026 | Done |
 
 ## Review Notes
@@ -14,6 +14,15 @@
   topic rotates to a thinner midday bundle with one mainstream movie-audio
   meme plus three clean programmer cards about agent review loops,
   localStorage-as-database absurdity, and `read only Fridays`.
+- 2026-08-08: The same 12:07 CEST run rendered a readable three-page mobile
+  PDF, published successfully, and then confirmed through fresh `origin/main`
+  inspection plus raw GitHub HTTP checks that the new run, PDF, bundle, and
+  refreshed manifest are remotely visible.
+- 2026-08-08: After positive remote verification, production notifier
+  `POST /v1/humor/digest` stored `humor-2026-08-08-1207`, and read-only
+  `GET /v1/humor/latest` now serves the same four-card digest; the remaining
+  notifier risk is the stale GitHub webhook timeout record still visible in
+  `/status`.
 - 2026-08-08: The same 12:07 CEST slot started from a current remote state:
   `git fetch origin` confirmed that `origin/main` already exposes both
   published Friday no-change audits before this run's own publication step,

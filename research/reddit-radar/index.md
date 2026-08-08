@@ -7,14 +7,22 @@
   clears the contract threshold again with a thinner midday set led by one
   universal movie-volume meme plus three programmer cards about agent review
   loops, localStorage replacing a database, and read-only Fridays.
+- The same 12:07 CEST run rendered a readable three-page mobile PDF, published
+  successfully through the shared isolated worktree flow, and then verified via
+  a fresh `git fetch origin`, raw GitHub HTTP checks, and `origin/main`
+  artifact inspection that the run, PDF, bundle, and refreshed
+  `public/pavbot-manifest.json` are all now visible remotely.
+- After remote verification, production notifier `POST /v1/humor/digest`
+  accepted `humor-2026-08-08-1207`, and read-only `GET /v1/humor/latest` now
+  serves the same four-card digest from the external codex-safari producer.
 - The same 12:07 CEST run started from a current remote state: a fresh
   `git fetch origin` confirmed that `origin/main` already exposes both
   published Friday no-change audits (`2026-08-07-1909` and `2026-08-07-2008`)
   before this slot's own publication work, while the active public bundle at
   run start still remained
   `research/reddit-radar/data/2026-08-06-1807-reddit-radar.json`.
-- Current intended public bundle pending post-publish remote verification is
-  now `research/reddit-radar/data/2026-08-08-1207-reddit-radar.json`.
+- Current active public bundle on last verified origin/main is now
+  `research/reddit-radar/data/2026-08-08-1207-reddit-radar.json`.
 - Friday, August 7, 2026 20:08 CEST did a second same-day read-only Safari
   no-change audit after filtering `2026-08-06-1807` and `2026-08-07-1909`,
   and again stayed well below the four-card threshold: only one clearly clean
