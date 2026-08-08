@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-08-08",
+  "runTime": "15:43",
+  "executiveSummary": "Dzisiejszy board-first sweep poszerzył klaster o bardziej infrastrukturalne i platformowe role niż wczorajszy burst. Najmocniejsze nowe sygnały to AI Platform Engineer w Kyndryl, Principal AI Architect w Netguru, Senior AI Platform Engineer – ML Infrastructure and RAG Systems w Future Processing, Senior AI Engineer with Azure w ITLT oraz LLM / AI Engineer w Numlabs. To wygląda mniej jak jednorazowy agentic burst, a bardziej jak utrwalające się przesunięcie w stronę AI platform engineering, RAG infra i Azure/multi-agent delivery.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "AI Platform Engineer",
+      "company": "Kyndryl",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "300 000 - 600 000 PLN/year.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "LLM, AI, RAG oraz Python w roli platformowej.",
+      "whyInteresting": "To najmocniejszy świeży sygnał na AI platform engineering i wyraźna zmiana w stronę infrastruktury zamiast klasycznego delivery modelu.",
+      "uncertainty": "Oferta jest widoczna na boardzie; canonical employer page nie została potwierdzona.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "LLM",
+        "RAG",
+        "Python",
+        "AI"
+      ]
+    },
+    {
+      "rank": 2,
+      "title": "Principal AI Architect",
+      "company": "Netguru",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Principal",
+      "fitSummary": "Senior AI architecture role z boarda Wrocław.",
+      "whyInteresting": "To sygnał, że rynek nadal przesuwa się w stronę architektury AI i platformowego ownership, a nie tylko implementacji pojedynczych modeli.",
+      "uncertainty": "Widoczne wyłącznie na boardzie; brak publicznego salary bandu.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "AI",
+        "Architecture"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Senior AI Platform Engineer – ML Infrastructure and RAG Systems",
+      "company": "Future Processing",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "40 000 - 60 000 PLN/month.",
+      "seniority": "Senior",
+      "fitSummary": "Python, Kubernetes, AWS, RAG systems, LLM integration and agentic AI systems.",
+      "whyInteresting": "To bardzo czytelny przykład roli łączącej ML infrastructure, RAG i agentic AI na poziomie platformy.",
+      "uncertainty": "Board-first karta może jeszcze zmienić nazwę lub zakres.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "LLM",
+        "RAG",
+        "Agentic AI",
+        "Python",
+        "AWS"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Senior AI Engineer with Azure",
+      "company": "ITLT",
+      "location": "Wrocław / hybrid",
+      "workMode": "Hybrid",
+      "compensation": "140 - 170 PLN/h.",
+      "seniority": "Senior",
+      "fitSummary": "Multi-agent AI systems, Microsoft Azure, Azure OpenAI Service, MCP and CI/CD.",
+      "whyInteresting": "To mocny sygnał na Azure-native, multi-agent delivery z publiczną stawką i wyraźnym platformowym zakresem.",
+      "uncertainty": "Oferta jest nowa na boardzie i może jeszcze zmienić copy lub salary band.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "Azure",
+        "MCP",
+        "LLM",
+        "Agentic AI",
+        "Python"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "LLM / AI Engineer",
+      "company": "Numlabs",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Mid",
+      "fitSummary": "LangChain, LangGraph, CrewAI, qdrant, Weaviate and Google Cloud Platform.",
+      "whyInteresting": "To praktyczna, hands-on rola wokół LLM orchestration, vector search i produkcyjnego stacku GCP.",
+      "uncertainty": "Board-first karta bez publicznych widełek; warto pilnować, czy pojawi się canonical page.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "LLM",
+        "RAG",
+        "GCP",
+        "Agentic AI"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "AI Engineer / Senior AI Engineer (AI-First | TypeScript)",
+      "company": "Itransition",
+      "location": "Wrocław / remote",
+      "workMode": "Remote",
+      "compensation": "140 - 190 PLN/h.",
+      "seniority": "Senior",
+      "fitSummary": "Multi-agent architectures, AI / LLM engineering, TypeScript, RAG and agentic systems.",
+      "whyInteresting": "To kolejny sygnał, że Itransition rozwija osobny, enterprise-grade tail wokół agentic platform work.",
+      "uncertainty": "Board-first karta; może zmienić tytuł lub zostać scalona z inną ofertą.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "LLM",
+        "RAG",
+        "TypeScript",
+        "Agentic AI"
+      ]
+    }
+  ],
+  "changes": [
+    "2026-08-07 run był zdominowany przez Addepto, Itransition, EPAM, cloudatus, Accenture i Team Up.",
+    "Dzisiejsza runda rozszerza ten obraz o szerszy, bardziej platformowo-infrastrukturalny klaster wokół Netguru, Kyndryl, Future Processing, ITLT, Numlabs, Capgemini, Billennium i SD Worx.",
+    "Najważniejsza zmiana to przesunięcie z pojedynczego agentic burst w stronę utrwalonego board-first tail z naciskiem na platform engineering, RAG infra, Azure OpenAI i multi-agent orchestration."
+  ],
+  "risks": [
+    "Board-first role names and salary bands can still drift quickly.",
+    "Some of today's cards may never get canonical employer pages.",
+    "Similar AI/LLM title families still create duplicate-suppression risk across board mirrors."
+  ],
+  "recommendedActions": [
+    "Re-check Kyndryl, Netguru, Future Processing, ITLT, Numlabs and Itransition on the next heartbeat for expiry and salary drift.",
+    "Track whether any of today's board-first cards gain canonical employer pages.",
+    "No proposal needed."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT Wrocław AI board",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Agentic Platform Architect - Itransition",
+      "url": "https://nofluffjobs.com/job/agentic-platform-architect-itransition-remote",
+      "status": "checked"
+    },
+    {
+      "title": "GenAI & Cloud Solution Engineer - cloudatus",
+      "url": "https://justjoin.it/job-offer/cloudatus-genai-cloud-solution-engineer-wroclaw-ai-24aec4ad",
+      "status": "checked"
+    },
+    {
+      "title": "Senior AI/ML Solution Engineer (AI Agentic Security Testing) - EPAM Systems",
+      "url": "https://justjoin.it/job-offer/epam-systems-senior-ai-ml-solution-engineer-ai-agentic-security-testing--wroclaw-ai",
+      "status": "checked"
+    },
+    {
+      "title": "GenAI Architect (AI&Data) - Accenture",
+      "url": "https://justjoin.it/job-offer/accenture-principal-agentic-architecture-enterprise-ai-expert-ai-data--warszawa-ai",
+      "status": "checked"
+    }
+  ]
+}

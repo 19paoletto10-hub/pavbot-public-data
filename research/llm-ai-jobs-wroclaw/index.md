@@ -1,8 +1,10 @@
 # Topic Index: llm-ai-jobs-wroclaw
 
-Last updated: 2026-08-07 19:10 CEST
+Last updated: 2026-08-08 15:43 CEST
 
 ## Current Understanding
+
+Runda z `2026-08-08 15:43 CEST` poszerzyła board-first klaster o bardziej infrastrukturalne i platformowe role wokół `Kyndryl`, `Netguru`, `Future Processing`, `ITLT`, `Numlabs`, `Itransition`, `Capgemini`, `Billennium` i `SD Worx`: `AI Platform Engineer`, `Principal AI Architect`, `Senior AI Platform Engineer – ML Infrastructure and RAG Systems`, `Senior AI Engineer with Azure`, `LLM / AI Engineer` oraz `AI Engineer / Senior AI Engineer (AI-First | TypeScript)`. To wygląda mniej jak jednorazowy burst agentic delivery, a bardziej jak utrwalone przesunięcie w stronę AI platform engineering, RAG infra, Azure OpenAI i multi-agent orchestration.
 
 Runda z `2026-08-07 19:10 CEST` dołożyła nowy board-first klaster wokół
 `Addepto`, `Itransition`, `EPAM`, `cloudatus`, `Accenture`, `Team Up` i
@@ -97,6 +99,8 @@ konkretny platformowy, delivery lub toolingowy scope.
 
 ## Recent Reports
 
+- [2026-08-08 15:43 CEST](runs/2026-08-08-1543.md)
+- [2026-08-07 19:10 CEST](runs/2026-08-07-1910.md)
 - [2026-08-04 17:40 CEST](runs/2026-08-04-1740.md)
 - [2026-08-01 15:43 CEST](runs/2026-08-01-1543.md)
 - [2026-07-27 15:42 CEST](runs/2026-07-27-1542.md)
@@ -109,6 +113,12 @@ only when something meaningful changes.
 
 | Canonical key | Company | Title | Location / remote | First seen | Last seen | Status | Material changes | Source |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| kyndryl-ai-platform-engineer-wroclaw-remote | Kyndryl | AI Platform Engineer | Wrocław / remote | 2026-08-08-1543 | 2026-08-08-1543 | Open | Initial capture: current board card; 300 000 - 600 000 PLN/year; LLM, AI, RAG and Python. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
+| netguru-principal-ai-architect-wroclaw-remote | Netguru | Principal AI Architect | Wrocław / remote | 2026-08-08-1543 | 2026-08-08-1543 | Open | Initial capture: current board card; remote Wrocław tail, senior AI architecture role. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
+| future-processing-senior-ai-platform-engineer-ml-infrastructure-and-rag-systems-wroclaw-remote | Future Processing | Senior AI Platform Engineer – ML Infrastructure and RAG Systems | Wrocław / remote | 2026-08-08-1543 | 2026-08-08-1543 | Open | Initial capture: current board card; 40 000 - 60 000 PLN/month; Python, Kubernetes, AWS, RAG systems, LLM integration and agentic AI systems. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
+| itlt-senior-ai-engineer-with-azure-wroclaw-hybrid | ITLT | Senior AI Engineer with Azure | Wrocław / hybrid | 2026-08-08-1543 | 2026-08-08-1543 | Open | Initial capture: current board card; 140 - 170 PLN/h; multi-agent AI systems, Microsoft Azure, Azure OpenAI Service and MCP. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
+| numlabs-llm-ai-engineer-wroclaw-remote | Numlabs | LLM / AI Engineer | Wrocław / remote | 2026-08-08-1543 | 2026-08-08-1543 | Open | Initial capture: current board card; LangChain, LangGraph, CrewAI, qdrant, Weaviate and Google Cloud Platform. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
+| itransition-ai-engineer-senior-ai-engineer-ai-first-typescript-wroclaw-remote | Itransition | AI Engineer / Senior AI Engineer (AI-First \| TypeScript) | Wrocław / remote | 2026-08-08-1543 | 2026-08-08-1543 | Open | Initial capture: current board card; 140 - 190 PLN/h; multi-agent architectures, AI / LLM engineering, TypeScript, RAG and agentic systems. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
 | itransition-ai-agent-middle-senior-developer-wroclaw-remote | Itransition | AI Agent Middle/Senior Developer | Wrocław + remote | 2026-07-27-1542 | 2026-07-27-1542 | Open | Initial capture: current board card; Python, RAG, CRAG, GraphRAG, LangChain, LangGraph, CrewAI and agentic tooling. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
 | callstack-senior-ai-augmented-integration-developer-wroclaw-remote | Callstack | Senior AI-Augmented Integration Developer | Wrocław + remote | 2026-07-27-1542 | 2026-07-27-1542 | Open | Initial capture: 160-200 PLN/h B2B; Node.js, Python, LLM, Devin, GitHub Copilot and Cursor for AI-assisted integration delivery. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |
 | netguru-senior-ai-system-engineer-wroclaw-remote | Netguru | Senior AI System Engineer | Wrocław + remote | 2026-07-27-1542 | 2026-07-27-1542 | Open | Initial capture: current board card; Machine Learning, TypeScript, AI and Python. | [Just Join IT Wrocław AI board](https://justjoin.it/job-offers/wroclaw/ai) |

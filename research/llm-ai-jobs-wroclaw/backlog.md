@@ -4,6 +4,7 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Monitor August 8 platform/architecture burst | Today's sweep added new Wrocław/remote platform-heavy roles around Kyndryl, Netguru, Future Processing, ITLT, Numlabs and Itransition. | Re-check those exact roles next run for expiry, salary drift and canonical-page emergence. | Open |
 | High | Monitor August 7 agentic/platform burst | Today added a broader board-first cluster around Addepto, Itransition, EPAM, cloudatus, Accenture and Team Up. | Re-check those exact roles next run for expiry, salary drift and canonical-page emergence. | Open |
 | High | Monitor August 4 DataArt/deepsense/Spyrosoft burst | Today's run added a fresh LLM knowledge-platform role at DataArt, a live senior LLM ML card at deepsense.ai, and new Spyrosoft consulting/Azure signals. | Re-check those exact roles next run for expiry, salary drift and whether the public titles converge or split further. | Open |
 | High | Monitor August 1 salary-bearing burst | Today added or re-validated a new production-heavy cluster around Addepto, ITDS, DataArt, EPAM, Netguru, Yard Corporate and Sii. | Re-check those exact roles next run for expiry, salary drift, and whether canonical employer pages appear or improve. | Open |
