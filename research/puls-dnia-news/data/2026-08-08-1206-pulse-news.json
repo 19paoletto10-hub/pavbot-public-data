@@ -1,0 +1,453 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-08",
+  "runTime": "12:06",
+  "status": "Istotna aktualizacja",
+  "headline": "Bezpieczeństwo i alerty w Polsce, a za granicą wojna, migracja i USA",
+  "summary": "Poranny feed przesunął się z pogodowo-energetycznego tła na bezpieczeństwo publiczne, zdrowie i transport. W Polsce najmocniejsze są akcja policji w Warszawie, pożar na kempingu, komunikat GIS i ognisko gruźlicy, a w świecie dominują Ukraina, tajfun Dolphin, spór migracyjny Hiszpania-Włochy, brytyjskie śledztwa policyjne i amerykańska walka o mapy wyborcze.",
+  "checkedSources": [
+    {
+      "title": "TVN24 Najnowsze RSS",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "TVN24 homepage",
+      "url": "https://www.tvn24.pl/"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "CNN Politics",
+      "url": "https://www.cnn.com/politics"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-08-08-1206-01",
+      "section": "Polska",
+      "title": "Warszawska policja przejęła 72 kg narkotyków",
+      "lead": "Zmasowana akcja w stolicy i okolicach zakończyła się 303 zatrzymaniami.",
+      "whatHappened": "Warszawscy policjanci sprawdzali kluby, bary i okolice szkół. Zabezpieczyli 72 kilogramy różnych narkotyków i zatrzymali 303 osoby, w tym 197 poszukiwanych.",
+      "keyFacts": [
+        "Akcja objęła Warszawę i okolice.",
+        "Wśród zatrzymanych było 197 osób poszukiwanych.",
+        "Materiał TVN24 opisuje szeroką operację przeciwko narkobiznesowi."
+      ],
+      "reactions": [
+        "Policja pokazuje operację jako skoordynowaną akcję.",
+        "Na razie brak szerszych komentarzy innych instytucji."
+      ],
+      "whyItMatters": "To jeden z najmocniejszych porannych sygnałów dotyczących bezpieczeństwa publicznego w kraju.",
+      "context": "TVN24 podał, że funkcjonariusze działali w różnych punktach Warszawy i okolic.",
+      "watchNext": [
+        "Czy pojawią się zarzuty i komunikat prokuratury.",
+        "Czy policja poda rozbicie na dzielnice i typy zabezpieczonych substancji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ponad 70 kilogramów narkotyków i 303 zatrzymanych. Zmasowana akcja policji",
+          "url": "https://tvn24.pl/tvnwarszawa/okolice/warszawa-70-kg-narkotykow-i-300-zatrzymanych-zmasowana-akcja-policji-st9180283?source=rss"
+        }
+      ],
+      "tags": [
+        "warszawa",
+        "policja",
+        "narkotyki",
+        "bezpieczenstwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-08-1206-02",
+      "section": "Polska",
+      "title": "Samochód z namiotem dachowym stanął w ogniu",
+      "lead": "Na kempingu w Chorzowie rodzina zdążyła uciec, ale cztery osoby trafiły do szpitala.",
+      "whatHappened": "W nocy auto z namiotem dachowym zapaliło się w Parku Śląskim w Chorzowie. W środku spała rodzina z dwójką dzieci. Cztery osoby trafiły do szpitala, a służby ustalają przyczynę pożaru.",
+      "keyFacts": [
+        "Do zdarzenia doszło na kempingu w Chorzowie.",
+        "Rodzina uniknęła tragedii, ale ucierpiały cztery osoby.",
+        "Przyczyna pożaru nie jest jeszcze ustalona."
+      ],
+      "reactions": [
+        "Służby badają okoliczności zdarzenia.",
+        "To materiał ostrzegawczy dla osób nocujących w pojazdach."
+      ],
+      "whyItMatters": "To realny alert bezpieczeństwa dla osób korzystających z namiotów dachowych i noclegów na kempingach.",
+      "context": "TVN24 opisuje zdarzenie jako nocny pożar samochodu z namiotem, w którym spała rodzina.",
+      "watchNext": [
+        "Czy pojawi się komunikat straży pożarnej.",
+        "Czy ustalona zostanie techniczna przyczyna zapłonu."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Zapaliło się auto z namiotem, w środku spała rodzina. Chwile grozy na kempingu",
+          "url": "https://tvn24.pl/katowice/chorzow-pozar-na-kempingu-splonal-samochod-z-namiotem-dachowym-w-srodku-byla-rodzina-z-dziecmi-st9180099?source=rss"
+        }
+      ],
+      "tags": [
+        "chorzow",
+        "pozar",
+        "kemping",
+        "bezpieczenstwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-08-1206-03",
+      "section": "Alerty",
+      "title": "GIS wycofuje partię popularnego napoju",
+      "lead": "Inspekcja sanitarna ostrzega przed jedną partią znanego napoju herbacianego.",
+      "whatHappened": "TVN24 podał, że Główny Inspektorat Sanitarny poinformował o wycofywaniu ze sprzedaży jednej partii napoju. Materiał nie podaje w nagłówku pełnej listy sklepów, ale wskazuje na problem jakościowy lub bezpieczeństwa produktu.",
+      "keyFacts": [
+        "Chodzi o jedną partię produktu.",
+        "Komunikat wyszedł od GIS.",
+        "To reakcja prewencyjna, nie szerszy kryzys żywnościowy."
+      ],
+      "reactions": [
+        "GIS zareagował oficjalnym wycofaniem.",
+        "Brakuje jeszcze szczegółów o skali dystrybucji."
+      ],
+      "whyItMatters": "To ważny alert konsumencki, bo może wymagać sprawdzenia domowych zapasów.",
+      "context": "Źródło TVN24 nie wskazuje w nagłówku dokładnej marki, więc pełny materiał jest potrzebny do identyfikacji partii.",
+      "watchNext": [
+        "Czy GIS poda numer partii i listę punktów sprzedaży.",
+        "Czy pojawią się wyjaśnienia producenta."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Partia popularnego napoju wycofana z obrotu",
+          "url": "https://tvn24.pl/biznes/z-kraju/chemiczny-zapach-piekacy-gorzkawy-smak-gis-ostrzega-st9180062?source=rss"
+        }
+      ],
+      "tags": [
+        "gis",
+        "alert",
+        "spozywka",
+        "bezpieczenstwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-08-1206-04",
+      "section": "Alerty",
+      "title": "Gruźlica wykryta w warszawskim przedszkolu",
+      "lead": "Na Białołęce wykryto ognisko gruźlicy i część dzieci skierowano na badania.",
+      "whatHappened": "W przedszkolu na warszawskiej Białołęce wykryto ognisko gruźlicy. Kilkoro dzieci trafiło do Mazowieckiego Centrum Leczenia Chorób Płuc i Gruźlicy w Otwocku, a część skierowano na badania.",
+      "keyFacts": [
+        "Sprawa dotyczy placówki na Białołęce.",
+        "Dzieci zostały skierowane na diagnostykę.",
+        "To lokalny epizod zdrowotny, nie ogólnokrajowy alert."
+      ],
+      "reactions": [
+        "Placówka i służby sanitarne wdrażają procedury.",
+        "Rodzice mogą potrzebować dodatkowych informacji organizacyjnych."
+      ],
+      "whyItMatters": "To ważny alert zdrowotny dla warszawskich rodzin i sygnał, że temat kontroli zakażeń wraca do lokalnych placówek.",
+      "context": "TVN24 opisuje ognisko gruźlicy jako wykryte w placówce opiekuńczej.",
+      "watchNext": [
+        "Czy sanepid poda liczbę narażonych dzieci i personelu.",
+        "Czy pojawi się oficjalny komunikat o dalszych testach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Ognisko gruźlicy w warszawskim przedszkolu",
+          "url": "https://tvn24.pl/tvnwarszawa/bialoleka/warszawa-gruzlica-wykryta-w-przedszkolu-na-bialolece-st9180075?source=rss"
+        }
+      ],
+      "tags": [
+        "warszawa",
+        "zdrowie",
+        "alert",
+        "gruźlica"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-08-1206-05",
+      "section": "Polityka",
+      "title": "Rząd chce ostrzejszych kar dla kierowców",
+      "lead": "TVN24 opisuje projekt, który ma mocniej uderzyć w niebezpiecznych kierowców.",
+      "whatHappened": "W materiale TVN24 pojawia się projekt nowych przepisów dla kierowców. Nagłówek sugeruje ostrzejsze narzędzia wobec łamania zasad, ale pełny zakres zmian wymaga otwarcia artykułu.",
+      "keyFacts": [
+        "To propozycja, nie jeszcze obowiązujące prawo.",
+        "Wątek dotyczy bezpieczeństwa ruchu drogowego.",
+        "Na ten moment brak finalnej decyzji ustawowej."
+      ],
+      "reactions": [
+        "Projekt wzbudza zainteresowanie jako potencjalne zaostrzenie egzekucji.",
+        "Nie ma jeszcze końcowego procesu legislacyjnego."
+      ],
+      "whyItMatters": "Jeśli projekt przejdzie, może realnie zmienić kary i praktykę kontroli na drogach.",
+      "context": "TVN24 publikuje ten temat w dziale biznesowo-krajowym, co wskazuje na regulacyjny charakter zmiany.",
+      "watchNext": [
+        "Czy rząd poda szczegóły i harmonogram.",
+        "Czy kierowcy i eksperci bezpieczeństwa skomentują projekt."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nowy bat na kierowców. Jest projekt",
+          "url": "https://tvn24.pl/biznes/z-kraju/nowy-bat-na-kierowcow-jest-projekt-st9180029"
+        }
+      ],
+      "tags": [
+        "prawo",
+        "kierowcy",
+        "transport",
+        "regulacje"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-08-1206-06",
+      "section": "Świat",
+      "title": "Rosyjski nocny atak zabił cztery osoby w Ukrainie",
+      "lead": "Kolejny ostrzał objął między innymi obwód kijowski i stolicę.",
+      "whatHappened": "TVN24 podał, że w nocy z piątku na sobotę Rosja ponownie zaatakowała Ukrainę. Ogłoszono alarm przeciwlotniczy, a w ataku zginęły cztery osoby, w tym trzyletnie dziecko.",
+      "keyFacts": [
+        "Celem był między innymi obwód kijowski.",
+        "Mieszkańcy słyszeli silne eksplozje.",
+        "Wśród ofiar jest dziecko."
+      ],
+      "reactions": [
+        "Ukraina nadal opiera się na alarmach i obronie przeciwlotniczej.",
+        "Nowe dane mogą jeszcze podnieść bilans ofiar."
+      ],
+      "whyItMatters": "To kolejny sygnał, że wojna pozostaje bezpośrednim ryzykiem dla ludności cywilnej i infrastruktury.",
+      "context": "Materiał TVN24 odnosi się do nocnego ostrzału z 8 sierpnia 2026.",
+      "watchNext": [
+        "Czy lokalne władze podadzą dokładny bilans.",
+        "Czy pojawią się dalsze komunikaty o uszkodzeniach infrastruktury."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Nocny atak na Ukrainę. Rosjanie zabili cztery osoby, w tym dziecko",
+          "url": "https://tvn24.pl/swiat/nocny-atak-na-ukraine-rosjanie-zabili-cztery-osoby-w-tym-dziecko-st9179989?source=rss"
+        }
+      ],
+      "tags": [
+        "ukraina",
+        "rosja",
+        "wojna",
+        "bezpieczenstwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-08-1206-07",
+      "section": "Świat",
+      "title": "Tajfun Dolphin paraliżuje transport w Azji",
+      "lead": "W Japonii zamknięto porty, a Chiny i Tajwan przygotowują się na uderzenie żywiołu.",
+      "whatHappened": "TVN24 informuje, że tajfun Dolphin powoduje poważne utrudnienia. W Japonii silny wiatr i ulewy dotarły do prefektur Kagoshima i Okinawa, wywołując przerwy w dostawach prądu, a sześć osób zostało rannych.",
+      "keyFacts": [
+        "Zamykane są porty i odwoływane loty.",
+        "Utrudnienia obejmują Japonię oraz przygotowania w Chinach i na Tajwanie.",
+        "Wpływ dotyczy transportu i energii."
+      ],
+      "reactions": [
+        "Służby i przewoźnicy reagują prewencyjnie.",
+        "Sytuacja może jeszcze się pogorszyć wraz z dalszym ruchem tajfunu."
+      ],
+      "whyItMatters": "To ważny regionalny alert dla logistyki, lotnictwa i bezpieczeństwa mieszkańców w Azji Wschodniej.",
+      "context": "Materiał TVN24 publikuje aktualizację z poranka 8 sierpnia 2026.",
+      "watchNext": [
+        "Czy japońskie władze rozszerzą ewakuacje.",
+        "Czy pojawią się kolejne odwołania lotów i zamknięcia portów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Dolphin coraz bliżej. Zamknięte porty, odwołane loty",
+          "url": "https://tvn24.pl/tvnmeteo/swiat/japonia-chiny-tajfun-dolphin-coraz-blizej-zamkniete-porty-odwolane-loty-st9180166?source=rss"
+        }
+      ],
+      "tags": [
+        "tajfun",
+        "japonia",
+        "chiny",
+        "transport"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-08-1206-08",
+      "section": "Świat",
+      "title": "Hiszpania zaostrza kontrolę granicy z Włochami",
+      "lead": "Spór o napływ migrantów do Ceuty przekłada się na ruch na granicy.",
+      "whatHappened": "BBC opisuje wprowadzenie kontroli granicznych przez Hiszpanię w odpowiedzi na rosnący spór wokół napływu migrantów do Ceuty. W materiale podano, że Włochy wcześniej wprowadziły już własne kontrole.",
+      "keyFacts": [
+        "BBC wskazuje na około 78 tysięcy migrantów z Maroka do Ceuty w tle sporu.",
+        "To kolejny przykład napięcia w polityce migracyjnej Europy.",
+        "Działanie ma bezpośredni wymiar graniczny."
+      ],
+      "reactions": [
+        "Rządy reagują poprzez środki kontroli granicznej.",
+        "Spór prawdopodobnie będzie miał dalsze konsekwencje w UE."
+      ],
+      "whyItMatters": "To temat ważny dla bezpieczeństwa granic i polityki migracyjnej w Europie.",
+      "context": "Źródło: BBC News RSS z 8 sierpnia 2026.",
+      "watchNext": [
+        "Czy pojawi się odpowiedź Rzymu lub Brukseli.",
+        "Czy ruch graniczny zostanie dalej ograniczony."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Spain imposes border controls against Italy as row over Ceuta migrant influx intensifies",
+          "url": "https://www.bbc.co.uk/news/articles/c5yv5l6yr5ko?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "hiszpania",
+        "wlochy",
+        "migracja",
+        "ue"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-08-1206-09",
+      "section": "Świat",
+      "title": "BBC wraca do sprawy incydentu przy domu Farage'a",
+      "lead": "Counter-terror police badają teraz także możliwą próbę włamania sprzed roku.",
+      "whatHappened": "BBC pisze, że policja ponownie otworzyła wątek incydentu przy domu Nigela Farage'a. Zespół prowadzący sprawę śmierci byłej posłanki wskazuje, że analizuje starszą próbę włamania.",
+      "keyFacts": [
+        "Sprawa ma związek z domem Farage'a.",
+        "Śledczy mówią o attempted burglary.",
+        "To wątek o dużym ładunku politycznym i bezpieczeństwa."
+      ],
+      "reactions": [
+        "Śledczy rozszerzają zakres badania.",
+        "BBC podaje sprawę jako materiał potwierdzony przez źródła w policji."
+      ],
+      "whyItMatters": "To nie tylko lokalna sprawa kryminalna, ale też temat polityczny wokół bezpieczeństwa publicznych postaci w Wielkiej Brytanii.",
+      "context": "Źródło: BBC News RSS z 8 sierpnia 2026.",
+      "watchNext": [
+        "Czy policja ujawni więcej szczegółów o podejrzanych.",
+        "Czy pojawią się reakcje polityków lub samego Farage'a."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Widdecombe police reopen investigation into incident at Farage's home, BBC understands",
+          "url": "https://www.bbc.co.uk/news/articles/c62qrvd9303o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "uk",
+        "farage",
+        "policja",
+        "bezpieczenstwo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-08-1206-10",
+      "section": "Świat",
+      "title": "BBC bada prowadzenie sprawy mordercy dwóch kobiet",
+      "lead": "Policjanci są teraz sprawdzani za działania wobec seksualnego przestępcy, który zabił dwie kobiety.",
+      "whatHappened": "BBC informuje o śledztwie dotyczącym policjantów, którzy prowadzili nadzór nad Simonem Levym. Był on seryjnym przestępcą seksualnym, gdy zabił dwie kobiety.",
+      "keyFacts": [
+        "Źródło BBC wskazuje na odpowiedzialność służb.",
+        "Sprawa łączy przestępczość seksualną i nadzór policyjny.",
+        "To temat z potencjalnym wątkiem instytucjonalnym."
+      ],
+      "reactions": [
+        "Pojawia się presja na wyjaśnienie błędów nadzoru.",
+        "BBC opisuje sprawę jako trwające badanie policyjne."
+      ],
+      "whyItMatters": "To ważny test dla zaufania do policji i systemu ochrony ofiar przemocy.",
+      "context": "Źródło: BBC News RSS z 8 sierpnia 2026.",
+      "watchNext": [
+        "Czy opublikują wyniki wewnętrznego przeglądu.",
+        "Czy pojawią się komentarze rodzin ofiar lub nadzoru."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Police officers investigated over handling of sex offender who murdered two women",
+          "url": "https://www.bbc.co.uk/news/articles/c70g18vpwxvo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "uk",
+        "policja",
+        "sprawiedliwosc",
+        "bezpieczenstwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-08-1206-11",
+      "section": "Polityka",
+      "title": "CNN śledzi walkę o mapy wyborcze w USA",
+      "lead": "Republikanie mogą zyskać przewagę przed wyborami po przebiegu redystrybucji okręgów.",
+      "whatHappened": "CNN opisuje na bieżąco stan prac nad nowymi mapami kongresowymi. Na stronie wskazano, że Republikanie wydają się wychodzić zwycięsko z narodowej walki o okręgi, co może pomóc im utrzymać wąską większość.",
+      "keyFacts": [
+        "Materiał dotyczy redistrictingu przed wyborami środka kadencji.",
+        "CNN sugeruje korzyść dla Republikanów.",
+        "To temat ważny dla układu sił w Kongresie."
+      ],
+      "reactions": [
+        "Stany nadal przesuwają granice okręgów.",
+        "CNN aktualizuje mapę jako żywy tracker polityczny."
+      ],
+      "whyItMatters": "To może przełożyć się na realny wynik wyborów i kontrolę nad Izbą Reprezentantów.",
+      "context": "Źródło: CNN Politics, Tracking state congressional redistricting efforts.",
+      "watchNext": [
+        "Czy kolejne stany finalizują nowe mapy.",
+        "Czy Demokraci kontratakują w sądach lub legislaturach stanowych."
+      ],
+      "sources": [
+        {
+          "title": "CNN Politics: Tracking state congressional redistricting efforts",
+          "url": "https://www.cnn.com/politics/state-redistricting-maps-vis"
+        }
+      ],
+      "tags": [
+        "usa",
+        "wybory",
+        "kongres",
+        "polityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-08-1206-12",
+      "section": "Polityka",
+      "title": "CNN śledzi odwet Trumpa wobec przeciwników",
+      "lead": "Druga kadencja Trumpa przynosi systematyczne działania wobec krytyków i przeciwników.",
+      "whatHappened": "CNN publikuje tracker działań odwetowych Trumpa. Według opisu prezydent wykorzystał drugą kadencję, by realizować obietnicę odwetu wobec szerokiej grupy krytyków i politycznych przeciwników.",
+      "keyFacts": [
+        "CNN pokazuje to jako żywy tracker.",
+        "Wątek dotyczy politycznego wykorzystania państwa.",
+        "Materiał jest bazą zdarzeń, nie pojedynczą historią."
+      ],
+      "reactions": [
+        "Tracker sugeruje, że lista działań może rosnąć.",
+        "To temat, który będzie dalej budził spór o standardy władzy wykonawczej."
+      ],
+      "whyItMatters": "To wpływa na klimat instytucjonalny w USA i może mieć skutki prawne oraz wyborcze.",
+      "context": "Źródło: CNN Politics, Tracking Trump’s retaliation.",
+      "watchNext": [
+        "Czy CNN dopisze kolejne działania do trackera.",
+        "Czy pojawią się reakcje Kongresu, sądów lub administracji."
+      ],
+      "sources": [
+        {
+          "title": "CNN Politics: Tracking Trump’s retaliation",
+          "url": "https://www.cnn.com/politics/retaliation-tracker-trump-vis"
+        }
+      ],
+      "tags": [
+        "usa",
+        "trump",
+        "polityka",
+        "instytucje"
+      ],
+      "priority": "high"
+    }
+  ]
+}

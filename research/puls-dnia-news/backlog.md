@@ -1,5 +1,15 @@
 # Puls Dnia News Backlog
 
+## 2026-08-08 12:06
+
+- Watch whether the Warsaw anti-drug action leads to charges, a police tally update, or a prokuratura statement.
+- Watch whether the Chorzów campsite fire gets a confirmed technical cause or wider safety guidance.
+- Watch whether GIS publishes the exact tea-drink batch number and retail distribution scope.
+- Watch whether the Białołęka TB cluster expands or triggers a wider sanitary update.
+- Watch whether the Dolphin typhoon forces broader port or flight cancellations across Japan, China, or Taiwan.
+- Watch whether BBC expands the Farage and sex-offender police stories with more institutional detail.
+- Watch whether CNN adds more states to the redistricting tracker or more acts to the retaliation tracker.
+
 ## 2026-08-07 19:15
 
 - Watch whether Podkarpacie rain turns into formal IMGW/RCB alerts, flooding or transport disruption.

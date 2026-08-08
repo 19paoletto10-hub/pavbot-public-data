@@ -2,9 +2,9 @@
 
 ## Current State
 
-Slot 2026-08-07 19:15 przesuwa feed z wczorajszego bloku upałowo-energetycznego na lokalne podtopienia na Podkarpaciu, krótki powrót upału do 34 stopni i regulacyjno-gospodarcze skutki ceł na paczki z Chin. W polityce krajowej widać teraz głównie samorządowy start Łukasza Gibały oraz wejście w życie ustawy frankowej.
+Slot 2026-08-08 12:06 przesuwa feed z poprzedniego bloku pogodowo-energetycznego na bezpieczeństwo publiczne, alerty zdrowotne i transportowe oraz mocniejsze wątki zagraniczne. W kraju dominują warszawska akcja policji przeciw narkobiznesowi, pożar auta z namiotem w Chorzowie, komunikat GIS o wycofaniu napoju i ognisko gruźlicy w przedszkolu na Białołęce.
 
-Za granicą dominują bezpieczeństwo i polityka instytucjonalna: zatrzymany projekt ballroomu Trumpa, kolejne ograniczanie birthright citizenship, pakt obronny Saudów, Turków i Pakistańczyków, rekordowa grzywna dla Mety, rosyjskie pociski balistyczne oraz zimowa akcja ratunkowa na Antarktydzie.
+Za granicą ciężar leży na wojnie w Ukrainie, tajfunie Dolphin w Azji Wschodniej, sporze migracyjnym Hiszpania-Włochy, brytyjskich śledztwach policyjnych i amerykańskiej polityce wyborczej. CNN nadal pokazuje redystrybucję okręgów i tracker działań odwetowych Trumpa jako żywe wątki instytucjonalne.
 
 ## Data Shape
 
@@ -26,3 +26,4 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Keep at least 12 items and an even count so the app renders exact card pairs.
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
 - Prefer operational alerts, public-safety events, geopolitics and major economy moves over softer feature content.
+- Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
