@@ -2,9 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-08 12:06 przesuwa feed z poprzedniego bloku pogodowo-energetycznego na bezpieczeństwo publiczne, alerty zdrowotne i transportowe oraz mocniejsze wątki zagraniczne. W kraju dominują warszawska akcja policji przeciw narkobiznesowi, pożar auta z namiotem w Chorzowie, komunikat GIS o wycofaniu napoju i ognisko gruźlicy w przedszkolu na Białołęce.
-
-Za granicą ciężar leży na wojnie w Ukrainie, tajfunie Dolphin w Azji Wschodniej, sporze migracyjnym Hiszpania-Włochy, brytyjskich śledztwach policyjnych i amerykańskiej polityce wyborczej. CNN nadal pokazuje redystrybucję okręgów i tracker działań odwetowych Trumpa jako żywe wątki instytucjonalne.
+Slot 2026-08-08 15:01 przesuwa feed z porannych wątków sanitarnych na wojskowy przelot nad Wisłą, mazurską akcję po burzy, incydent dronowy w Bułgarii oraz twardsze decyzje w USA. W kraju wybijają też lokalna akcja ratunkowa na Wisłostradzie i rynek ropy, a za granicą dominują Kijów, Kolumbia, Senat USA, DOJ, Pentagon, odstraszanie morskie wobec Chin i brytyjska fala upałów.
 
 ## Data Shape
 

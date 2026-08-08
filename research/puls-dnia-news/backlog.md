@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+## 2026-08-08 15:01
+
+- Watch whether MON publishes the full parade timetable and exact flyover sequence for 15 August.
+- Watch whether PSP or local services close out the Seksty rescue with a final casualty and damage tally.
+- Watch whether Bulgaria releases more detail on the drone explosion near gas infrastructure.
+- Watch whether the Senate, White House or House adds follow-up on the funding bill and Blanche confirmation.
+- Watch whether oil-market commentary turns into a measurable fuel-price move.
+- Watch whether Met Office warnings confirm or expand the BBC heatwave forecast.
+
 ## 2026-08-08 12:06
 
 - Watch whether the Warsaw anti-drug action leads to charges, a police tally update, or a prokuratura statement.
