@@ -1,0 +1,151 @@
+{
+  "id": "humor-2026-08-08-1207",
+  "title": "<RR> Reddit Radar",
+  "summary": "Material update: slot 12:07 rotuje radar na cztery świeże karty o kinowej walce z pilotem, agentach recenzujących agentów, localStorage udającym bazę danych i piątkowym zakazie merge'y.",
+  "generatedAt": "2026-08-08T10:07:00Z",
+  "displayTime": "12:07",
+  "nextRefreshAt": "2026-08-08T14:07:00+02:00",
+  "refreshIntervalHours": 2,
+  "items": [
+    {
+      "id": "r-memes-1vi4bx1-volume-conspiracy",
+      "title": "It’s a conspiracy",
+      "caption": "Dzisiejszy everyday opener bierze najbardziej banalny rytuał oglądania filmu i robi z niego małą domową operację rozbrajania głośności. W komentarzach wszystko zostaje przy jednym bardzo przenośnym payoffie o trzymaniu pilota jak detonatora, bo dialogi szepczą, a wybuchy próbują rozwalić bębenki.",
+      "sourceName": "r/memes",
+      "sourceURL": "https://old.reddit.com/r/memes/comments/1vi4bx1/its_a_conspiracy/?sort=top",
+      "imageURL": null,
+      "score": 9607,
+      "comments": 86,
+      "tags": [
+        "memes",
+        "movies",
+        "everyday"
+      ],
+      "categoryLabel": "everyday",
+      "postText": "Żart działa, bo wszyscy znają to nerwowe wachlowanie głośnością między szeptem a eksplozją.",
+      "whyFunny": "Najwyższe komentarze nie odjeżdżają w fandom ani rant technologiczny, tylko wzmacniają jeden wspólny ból i przez to natychmiast domykają kartę.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment mówi, że przy takim miksie dźwięku pilot trzeba trzymać jak detonator.",
+          "explanation": "To od razu ustawia skalę codziennego absurdu bez dodatkowego tłumaczenia.",
+          "score": 419,
+          "originalBody": "Holding the remote like a detonator the entire movie just to protect my ears"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight opisuje walkę z głośnością jak grę na pilocie niczym na skrzypcach.",
+          "explanation": "Komentarz zostaje przy tej samej osi żartu i dobrze przenosi kartę do digestu.",
+          "score": 60,
+          "originalBody": "I play the remote like a violin when watching action movies. Its exhausting."
+        }
+      ]
+    },
+    {
+      "id": "r-programmerhumor-1viip39-agents-reviewing-agents",
+      "title": "looksGeneratedToMe",
+      "caption": "Pierwszy dev anchor dnia bardzo celnie parodiuje agentowy workflow: AI pisze kod, człowiek patrzy, inny agent go recenzuje, a potem kolejny agent recenzuje recenzję. Wątek zostaje przy tej jednej pętli bez odpływania w poważniejszy spór o narzędzia.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1viip39/looksgeneratedtome/?sort=top",
+      "imageURL": null,
+      "score": 3317,
+      "comments": 131,
+      "tags": [
+        "programmerhumor",
+        "ai",
+        "agents"
+      ],
+      "categoryLabel": "dev",
+      "postText": "Humor siedzi w tym, że nowoczesny proces zostaje zredukowany do nieskończonej kolejki agentów i review.",
+      "whyFunny": "Najwyższe komentarze dokręcają dokładnie ten sam motyw zamiast zamieniać kartę w sermon o AI.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment rozpisuje całą pętlę: agenci piszą, recenzują i odsyłają kolejne review bez końca.",
+          "explanation": "To samowystarczalny payoff, który zamyka kartę jednym długim, ale bardzo czytelnym riffem.",
+          "score": 869,
+          "originalBody": "It’s easy. Agents produce the code, you review, you submit. Then, the reviewer’s agents check the code, they review, they submit a review. You agentically fix the submission, you review, you submit. Then, the reviewer’s agents check the code, they review, they submit a review You agentically fix the submission…"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight odpowiada suchym \"to się nazywa efektywność\".",
+          "explanation": "Ten kontrast wzmacnia absurd całego procesu bez zmiany tonu.",
+          "score": 198,
+          "originalBody": "It’s called being efficient. Look it up !"
+        }
+      ]
+    },
+    {
+      "id": "r-programmerhumor-1vhynpw-localstorage-wallet",
+      "title": "noMoreDatabases",
+      "caption": "Druga dev karta bierze pomysł rezygnacji z bazy danych i dopowiada go do granicy absurdu: skoro wszystko jest w localStorage, to użytkownik może sobie sam podbić saldo albo włączyć subskrypcję. Comment layer pozostaje przy tej jednej bezczelnej pseudo-optymalizacji.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1vhynpw/nomoredatabases/?sort=top",
+      "imageURL": null,
+      "score": 14100,
+      "comments": 296,
+      "tags": [
+        "programmerhumor",
+        "database",
+        "localstorage"
+      ],
+      "categoryLabel": "dev",
+      "postText": "Żart działa, bo udawana poprawa UX okazuje się totalnym bezpieczeństwowym sabotażem.",
+      "whyFunny": "Widoczne komentarze trzymają jedną oś żartu o radosnym rozwaleniu podstaw systemu, zamiast przechodzić w ciężki wykład.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment dopowiada, że użytkownicy mogą sami zmieniać wallet i subskrypcje, bo localStorage jest przecież wygodniejsze.",
+          "explanation": "To bardzo czytelny self-own, który nie wymaga technicznego kontekstu poza podstawowym webowym absurdem.",
+          "score": 3866,
+          "originalBody": "\"In order to make the user experience better, I made the localStorage editable and not-encrypted. This way, whenever users want, can increase their wallet or check on/off their subscriptions without complex \"verifiying cards\". Let me know if you want any more features! Also, do you want me explain how farmers use ReactJS to grow their crops +20% faster?\""
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight sucho proponuje po prostu używać Obsidiana.",
+          "explanation": "Ta lakoniczna odpowiedź dobrze podbija absurd anty-bazodanowej wizji.",
+          "score": 535,
+          "originalBody": "obsidian works great"
+        }
+      ]
+    },
+    {
+      "id": "r-programmerhumor-1vi5hza-read-only-fridays",
+      "title": "ifIFixItBeforeMondayNoOneWillNotice",
+      "caption": "Ostatni dev closer dnia bierze klasyczną piątkową panikę i zamienia ją w prostą zasadę przeżycia: nic nie merge'ujesz po południu, bo to może poczekać do poniedziałku. Thread zostaje przy jednym uniwersalnym rytuale obronnym znanym z prawie każdego zespołu.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1vi5hza/ififixitbeforemondaynoonewillnotice/?sort=top",
+      "imageURL": null,
+      "score": 2825,
+      "comments": 35,
+      "tags": [
+        "programmerhumor",
+        "deploy",
+        "friday"
+      ],
+      "categoryLabel": "dev",
+      "postText": "Humor siedzi w tym, że zawodowa mądrość brzmi tu po prostu jak zakaz dotykania produkcji przed weekendem.",
+      "whyFunny": "Komentarze wzmacniają dokładnie tę samą regułę i nie psują karty pobocznymi historiami.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment definiuje seniority jako niełączenie niczego po 13:00 w piątek.",
+          "explanation": "To zamyka cały żart w jednej dobrze znanej zespołowej zasadzie.",
+          "score": 211,
+          "originalBody": "the true mark of a senior engineer is never merging anything after 1pm on a friday. it can wait til monday morning."
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight przerabia to na jeszcze prostszą zasadę: \"read only Fridays\".",
+          "explanation": "Krótki slogan dobrze kończy całą kartę.",
+          "score": 14,
+          "originalBody": "READ ONLY FRIDAYS"
+        }
+      ]
+    }
+  ],
+  "source": {
+    "name": "Reddit via Safari",
+    "url": "https://old.reddit.com/"
+  }
+}

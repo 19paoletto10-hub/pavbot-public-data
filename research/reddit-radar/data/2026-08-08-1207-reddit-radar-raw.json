@@ -1,0 +1,134 @@
+{
+  "schemaVersion": 1,
+  "topic": "reddit-radar",
+  "stamp": "2026-08-08-1207",
+  "status": "material_update",
+  "generatedAt": "2026-08-08T10:07:00Z",
+  "source": "Codex Safari Reddit radar",
+  "summary": "Read-only Safari review for Saturday, August 8, 2026 12:07 CEST found four fresh public-safe survivors after filtering the two latest saved runs, so the topic rotates to a new midday bundle.",
+  "safariAudit": {
+    "startedAtLocal": "2026-08-08T12:07:00+02:00",
+    "mode": "read-only",
+    "subredditsChecked": [
+      "r/memes",
+      "r/ProgrammerHumor",
+      "r/mildlyinfuriating",
+      "r/facepalm",
+      "r/AskReddit"
+    ],
+    "notes": [
+      "Source-of-truth review stayed in the local Safari session on exact old.reddit.com listings and exact post pages using read-only Apple Events and DOM extraction.",
+      "The freshness filter was built from the two latest saved runs 2026-08-07-1909 and 2026-08-07-2008, so none of those analyzed post URLs could roll forward into this slot.",
+      "A fresh git fetch origin succeeded before publication work, and origin/main already exposed the active 2026-08-06-1807 public bundle together with both 2026-08-07 no-change audits at run start.",
+      "Final review cleared the contract threshold with four fresh public-safe survivors spread across memes and programmerhumor.",
+      "facepalm, mildlyinfuriating, and AskReddit produced only weaker backup cards after live review.",
+      "No Reddit social actions were performed."
+    ]
+  },
+  "selectedDigestPath": "research/reddit-radar/data/2026-08-08-1207-reddit-radar.json",
+  "collectorAuditPath": "research/reddit-radar/tmp/2026-08-08-1207-safari-collector.json",
+  "selectedReviewPath": "research/reddit-radar/tmp/2026-08-08-1207-selected-safari-review.json",
+  "excludedRecentRunUrls": [
+    "https://old.reddit.com/r/memes/comments/1vhyadj/auto_1080p_is_just_for_showcase?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vi1rt8/absolute_problem_solver?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vi1l9f/answer_to_my_questions?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1vhsqvs/these_stupid_ass_buttons_on_tv_remotes_the?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vhfufw/theaudacity?sort=top",
+    "https://old.reddit.com/r/ProgrammerHumor/comments/1vhulcw/goodolddays?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vi7rfm/absolute_headshot?sort=top",
+    "https://old.reddit.com/r/memes/comments/1vhv9o1/its_a_matching_aesthetic?sort=top",
+    "https://old.reddit.com/r/mildlyinfuriating/comments/1vhubyh/you_can_buy_a_protein_frying_pan_in_poland?sort=top"
+  ],
+  "newCandidates": [
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vipp26/discord_had_to_step_in/?sort=top",
+      "subreddit": "",
+      "decision": "rejected",
+      "reason": "Visible comments drift from one quick punchline into bot-dating and scam banter, so the card loses a clean mainstream payoff."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vim7jh/father_of_the_year/?sort=top",
+      "subreddit": "",
+      "decision": "rejected",
+      "reason": "The thread quickly becomes a Denuvo and piracy explainer instead of staying on one portable joke."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vib30p/what_will_be_your_second_wish/?sort=top",
+      "subreddit": "",
+      "decision": "rejected",
+      "reason": "Comments pivot into meds and ghost-vision anecdotes, which makes the thread too mental-health-adjacent for this digest."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vip6xc/the_controller_is_all_yours_bro/?sort=top",
+      "subreddit": "",
+      "decision": "rejected",
+      "reason": "Visible discussion turns serious around abuse and victim treatment instead of keeping a clean joke structure."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1viip39/looksgeneratedtome/?sort=top",
+      "subreddit": "",
+      "decision": "selected",
+      "reason": "Top comments keep one sharp recursive joke about agents writing code for reviewers whose agents then review more code."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vhynpw/nomoredatabases/?sort=top",
+      "subreddit": "",
+      "decision": "selected",
+      "reason": "The visible thread locks onto one portable absurdity about replacing a database with editable localStorage."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vi5hza/ififixitbeforemondaynoonewillnotice/?sort=top",
+      "subreddit": "",
+      "decision": "selected",
+      "reason": "Comments reinforce one universal Friday-deploy survival rule and do not drift far from that joke."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vi67w5/puteverythinginausbandmailittoaws/?sort=top",
+      "subreddit": "",
+      "decision": "borderline",
+      "reason": "The first joke lands, but the thread quickly expands into outsourcing and regional sniping."
+    },
+    {
+      "url": "https://old.reddit.com/r/ProgrammerHumor/comments/1vhxaok/watchingvibecodersinfutureisscary/?sort=top",
+      "subreddit": "",
+      "decision": "borderline",
+      "reason": "The package-compromise joke works, but the thread leans into malware and BIOS-damage riffs."
+    },
+    {
+      "url": "https://old.reddit.com/r/mildlyinfuriating/comments/1vib3en/this_moderndepression_color_scheming/?sort=top",
+      "subreddit": "",
+      "decision": "rejected",
+      "reason": "Comments mostly explain zoning and planning decisions rather than sharpen one joke."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vi4bx1/its_a_conspiracy/?sort=top",
+      "subreddit": "",
+      "decision": "selected",
+      "reason": "Top comments stay on one universal remote-control joke about action scenes whispering and explosions blowing out your ears."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vi48qi/the_client_is_waiting/?sort=top",
+      "subreddit": "",
+      "decision": "rejected",
+      "reason": "The thread quickly turns into insults and gross-detail celebrity lore instead of a self-contained punchline."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vi51y5/he_said_the_line/?sort=top",
+      "subreddit": "",
+      "decision": "borderline",
+      "reason": "The visible comments are clean, but the payoff depends heavily on specific fandom recognition."
+    },
+    {
+      "url": "https://old.reddit.com/r/memes/comments/1vie53v/nerds_are_way_too_stereotyped_in_movies_imho/?sort=top",
+      "subreddit": "",
+      "decision": "rejected",
+      "reason": "Comments become a long stereotype discussion instead of a compact joke relay."
+    },
+    {
+      "url": "https://old.reddit.com/r/facepalm/comments/1vfipoh/i_dont_think_thats_how_birds_work_even_the/?sort=top",
+      "subreddit": "",
+      "decision": "borderline",
+      "reason": "Bird-law and fake-doctor riffs are funny, but this older card reads more like a backup than a fresh lead item today."
+    }
+  ]
+}

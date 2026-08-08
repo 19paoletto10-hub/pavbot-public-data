@@ -9,6 +9,16 @@
 
 ## Review Notes
 
+- 2026-08-08: 12:07 CEST material update found exactly four fresh public-safe
+  survivors after filtering `2026-08-07-1909` and `2026-08-07-2008`, so the
+  topic rotates to a thinner midday bundle with one mainstream movie-audio
+  meme plus three clean programmer cards about agent review loops,
+  localStorage-as-database absurdity, and `read only Fridays`.
+- 2026-08-08: The same 12:07 CEST slot started from a current remote state:
+  `git fetch origin` confirmed that `origin/main` already exposes both
+  published Friday no-change audits before this run's own publication step,
+  while the active public bundle at run start was still
+  `2026-08-06-1807`.
 - 2026-08-07: 20:08 CEST second same-day no-change audit confirmed that after
   filtering `2026-08-06-1807` and `2026-08-07-1909`, the freshest shortlist
   still only produced one clearly clean new survivor (`goodOldDays`) plus
