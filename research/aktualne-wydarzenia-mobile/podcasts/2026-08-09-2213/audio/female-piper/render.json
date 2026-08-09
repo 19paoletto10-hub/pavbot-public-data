@@ -1,11 +1,11 @@
 {
-  "created_at": "2026-08-08T08:35:18.989365+00:00",
+  "created_at": "2026-08-09T20:44:19.271442+00:00",
   "engine_requested": "piper",
   "engine_used": "piper",
   "model": "rhasspy/piper-voices:pl_PL-gosia-medium",
   "fallback_chain": [],
-  "duration_seconds": 210.295193,
-  "word_count": 503,
+  "duration_seconds": 159.335828,
+  "word_count": 371,
   "voice": "pl_PL-gosia-medium",
   "rate": 170,
   "voice_sample_path": null,
@@ -13,8 +13,8 @@
   "language": "pl",
   "speed": 1.03,
   "speed_filter": "atempo=1.03",
-  "original_duration_seconds": 216.607347,
+  "original_duration_seconds": 164.107029,
   "status": "ok",
   "raw_output_file": null,
-  "output_file": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-08-1017/audio/female-piper/podcast.mp3"
+  "output_file": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-09-2213/audio/female-piper/podcast.mp3"
 }
