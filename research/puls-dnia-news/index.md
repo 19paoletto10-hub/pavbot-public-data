@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-08 15:01 przesuwa feed z porannych wątków sanitarnych na wojskowy przelot nad Wisłą, mazurską akcję po burzy, incydent dronowy w Bułgarii oraz twardsze decyzje w USA. W kraju wybijają też lokalna akcja ratunkowa na Wisłostradzie i rynek ropy, a za granicą dominują Kijów, Kolumbia, Senat USA, DOJ, Pentagon, odstraszanie morskie wobec Chin i brytyjska fala upałów.
+Slot 2026-08-09 20:06 przesuwa feed na pogodę i alerty w Polsce, niski stan Wisły, lokalny wypadek w Łomży, odrzucony plan Trumpa dla Gazy oraz nowe sygnały bezpieczeństwa z Niemiec, Kanady i USA. W tle wciąż dominują wojny, gotowość wojskowa i polityka Waszyngtonu, a w gospodarce wybija finansowanie Korei Północnej oraz presja na produkcję zbrojeniową.
 
 ## Data Shape
 
@@ -25,3 +25,4 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
 - Prefer operational alerts, public-safety events, geopolitics and major economy moves over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
+- Current emphasis should stay on weather alerts, hydrology, Gaza, EU security incidents and US institutional moves.

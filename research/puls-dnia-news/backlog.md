@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+## 2026-08-09 20:06
+
+- Watch whether IMGW extends the rain, hail or heat warnings into Tuesday.
+- Watch whether Wisła at Warszawa-Bulwary drops to a new local minimum.
+- Watch whether German authorities identify the drone operator or confirm a broader threat pattern.
+- Watch whether Canada publishes evacuation or containment updates for the wildfire.
+- Watch whether US officials or mediators respond to Israel's rejection of the Gaza plan.
+- Watch whether Pentagon or industry updates quantify the stockpile shortfall and production surge.
+
 ## 2026-08-08 15:01
 
 - Watch whether MON publishes the full parade timetable and exact flyover sequence for 15 August.

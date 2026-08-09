@@ -1,0 +1,465 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-09",
+  "runTime": "20:06",
+  "status": "Istotna aktualizacja",
+  "headline": "Burze nad Polską, Gaza i naciski USA",
+  "summary": "Ten slot przesuwa feed na pogodę i alerty w Polsce, lokalne zdarzenia bezpieczeństwa, nowe napięcia wokół Gazy i Niemiec oraz twardsze sygnały z USA. W tle wciąż wybija wojna, surowce i presja na gotowość wojskową, a w Wielkiej Brytanii rośnie ryzyko suszy.",
+  "checkedSources": [
+    {
+      "title": "TVN24 Najnowsze",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "TVN24 Najnowsze XML",
+      "url": "https://tvn24.pl/najnowsze.xml"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC Weather RSS",
+      "url": "https://feeds.bbci.co.uk/weather/rss.xml"
+    },
+    {
+      "title": "CNN World",
+      "url": "https://www.cnn.com/world"
+    },
+    {
+      "title": "CNN Politics",
+      "url": "https://www.cnn.com/politics"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-08-09-2006-01",
+      "section": "Alerty",
+      "title": "Burze z ulewami i gradem",
+      "lead": "Linia szkwałowa przyniesie deszcz i burze w wielu regionach w nocy i w poniedziałek.",
+      "whatHappened": "TVN24 Meteo podaje, że w nocy część kraju obejmie linia szkwałowa, a w poniedziałek deszcz i burze mają przemieszczać się przez wiele regionów Polski.",
+      "keyFacts": [
+        "Źródło ostrzeżenia to materiał TVN24 Meteo z 9 sierpnia 2026 roku.",
+        "Burze mają przynieść też ulewy i lokalnie grad.",
+        "Materiał zachęca do śledzenia radaru opadów i przygotowania parasola."
+      ],
+      "reactions": [
+        "Meteorolodzy sygnalizują szybkie zmiany warunków i ryzyko lokalnych utrudnień.",
+        "Dla ruchu drogowego i wydarzeń plenerowych to podwyższone ryzyko nagłych zakłóceń."
+      ],
+      "whyItMatters": "Burze z ulewami i gradem mogą szybko powodować podtopienia, przerwy w ruchu i szkody w infrastrukturze.",
+      "context": "To kolejny sygnał, że początek tygodnia przynosi zmienną i potencjalnie gwałtowną pogodę nad Polską.",
+      "watchNext": [
+        "Czy IMGW lub lokalne służby podniosą poziom ostrzeżeń.",
+        "Które województwa dostaną najsilniejsze komórki burzowe."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Burze z ulewami i gradem. Tutaj warto wziąć parasol. Radar i mapa opadów",
+          "url": "https://tvn24.pl/tvnmeteo/pogoda/deszcz-i-burze-w-nocy-i-w-poniedzialek-10-08-radar-i-mapa-opadow-st9181756?source=rss"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "burze",
+        "alerty",
+        "imgw"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-09-2006-02",
+      "section": "Alerty",
+      "title": "Upał rozleje się po Polsce",
+      "lead": "IMGW ostrzega przed temperaturą powyżej 30 stopni w 14 województwach.",
+      "whatHappened": "TVN24 podaje, że w niedzielę upał utrzymuje się tylko w części kraju, ale w poniedziałek ma objąć szerzej Polskę. Instytut Meteorologii i Gospodarki Wodnej wydał ostrzeżenia pierwszego i drugiego stopnia w 14 województwach.",
+      "keyFacts": [
+        "Ostrzeżenia dotyczą temperatur przekraczających 30 stopni Celsjusza.",
+        "W materiale TVN24 mowa o 14 województwach objętych alertami.",
+        "Sytuacja ma się nasilić od poniedziałku."
+      ],
+      "reactions": [
+        "To sygnał dla służb i organizatorów wydarzeń plenerowych, by przygotować się na upał.",
+        "Dla mieszkańców rośnie znaczenie nawodnienia i ograniczenia ekspozycji na słońce."
+      ],
+      "whyItMatters": "Silny upał zwiększa ryzyko zdrowotne, obciąża infrastrukturę i może kumulować się z kolejnymi alertami pogodowymi.",
+      "context": "Ten wątek dominuje w krajowym bloku pogodowym i może szybko przejść z prognozy do praktycznego problemu dnia.",
+      "watchNext": [
+        "Czy IMGW rozszerzy lub przedłuży ostrzeżenia.",
+        "Czy upał połączy się z burzami i stworzy dodatkowe ryzyko lokalnych szkód."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Upał rozleje się po Polsce. 14 województw z ostrzeżeniami IMGW",
+          "url": "https://tvn24.pl/tvnmeteo/prognoza/ostrzezenia-imgw-upaly-w-polsce-pomaranczowe-i-zolte-alerty-st9180388?source=rss"
+        }
+      ],
+      "tags": [
+        "upał",
+        "imgw",
+        "alerty",
+        "zdrowie"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-09-2006-03",
+      "section": "Polska",
+      "title": "Alarmująco niski stan wody w Wiśle",
+      "lead": "Warszawa-Bulwary nadal notuje niski poziom i utrzymuje ostrzeżenia hydrologiczne.",
+      "whatHappened": "TVN24 informuje, że stacja Warszawa-Bulwary nadal notuje alarmująco niski stan wody w Wiśle. Dla wielu obszarów kraju, w tym mazowieckiego odcinka rzeki, obowiązują ostrzeżenia hydrologiczne.",
+      "keyFacts": [
+        "Niski poziom wody utrzymuje się na odcinku warszawskim.",
+        "Materiał mówi o trudnościach organizmów w rzece z przeżyciem.",
+        "Ostrzeżenia hydrologiczne pozostają aktywne dla wielu miejsc w kraju."
+      ],
+      "reactions": [
+        "To sygnał dla hydrologów, samorządów i mieszkańców korzystających z rzeki.",
+        "Stan Wisły może wpływać na lokalne ekosystemy i praktyczne korzystanie z nabrzeża."
+      ],
+      "whyItMatters": "Niski poziom Wisły to jednocześnie problem środowiskowy, hydrologiczny i miejski, zwłaszcza w upalne dni.",
+      "context": "To już nie jednorazowy epizod, lecz element szerszego bloku pogodowo-hydrologicznego w kraju.",
+      "watchNext": [
+        "Czy kolejne pomiary ustanowią nowe minima.",
+        "Czy IMGW utrzyma lub rozszerzy ostrzeżenia hydrologiczne."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Alarmująco niski stan wody w Wiśle. \"Organizmy w rzece mają trudności z przeżyciem\"",
+          "url": "https://tvn24.pl/tvnwarszawa/srodmiescie/warszawa-organizmy-zyjace-w-wisle-maja-trudnosci-z-przezyciem-st9181728?source=rss"
+        }
+      ],
+      "tags": [
+        "wisła",
+        "hydrologia",
+        "alerty",
+        "warszawa"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-09-2006-04",
+      "section": "Polska",
+      "title": "Dziewczynka spadła z piątego piętra",
+      "lead": "W Łomży sąsiedzi rozciągnęli koc i przejęli dziecko po upadku.",
+      "whatHappened": "TVN24 opisuje zdarzenie w Łomży, gdzie czteroletnia dziewczynka zwisała po zewnętrznej stronie balkonu, spadła z piątego piętra i została złapana przez sąsiadów na rozciągnięty koc. Dziecko trafiło do szpitala przytomne.",
+      "keyFacts": [
+        "Do zdarzenia doszło przy ulicy Sybiraków w Łomży.",
+        "Sąsiedzi pomogli ograniczyć skutki upadku.",
+        "TVN24 podaje, że dziewczynka była przytomna po przewiezieniu do szpitala."
+      ],
+      "reactions": [
+        "To przykład natychmiastowej, lokalnej reakcji otoczenia na krytyczne zagrożenie.",
+        "Wydarzenie prawdopodobnie wywoła pytania o zabezpieczenie balkonu i opiekę nad dzieckiem."
+      ],
+      "whyItMatters": "To świeży lokalny sygnał bezpieczeństwa publicznego i przypomnienie o ryzyku w domowych warunkach.",
+      "context": "Materiał ma charakter ratunkowy i nie wskazuje na wątek kryminalny.",
+      "watchNext": [
+        "Czy pojawi się medyczny update o stanie dziecka.",
+        "Czy służby podadzą więcej o okolicznościach upadku."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Czteroletnia dziewczynka spadła z piątego piętra, sąsiedzi rozciągnęli koc",
+          "url": "https://tvn24.pl/bialystok/czteroletnia-dziewczynka-spadla-z-piatego-pietra-sasiedzi-rozciagneli-koc-st9181716?source=rss"
+        }
+      ],
+      "tags": [
+        "łomża",
+        "bezpieczeństwo",
+        "ratownictwo",
+        "dziecko"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-09-2006-05",
+      "section": "Świat",
+      "title": "Izrael odrzuca plan Trumpa dla Gazy",
+      "lead": "Netanjahu wiąże wycofanie wojsk z pełnym rozbrojeniem Hamasu.",
+      "whatHappened": "TVN24 i CNN podają, że Izrael odrzuca plan Donalda Trumpa dotyczący kolejnego etapu pokoju w Gazie. Premier Benjamin Netanjahu powtarza, że wojska nie wycofają się, dopóki Hamas nie zostanie całkowicie rozbrojony.",
+      "keyFacts": [
+        "CNN opisuje to jako odrzucenie najnowszego amerykańskiego planu przejścia do kolejnego etapu pokoju.",
+        "Warunkiem Izraela pozostaje pełne rozbrojenie Hamasu.",
+        "Spór dotyczy bezpośrednio kolejności wycofania wojsk i przyszłej architektury bezpieczeństwa."
+      ],
+      "reactions": [
+        "To osłabia natychmiastową perspektywę porozumienia i zwiększa presję na mediatorów.",
+        "USA będą musiały odpowiedzieć na publiczne odrzucenie własnej propozycji."
+      ],
+      "whyItMatters": "To jeden z najważniejszych bieżących punktów na osi Izrael-USA-Gaza, z wpływem na rozejm i bezpieczeństwo regionalne.",
+      "context": "Wątek łączy dyplomację, bezpieczeństwo i negocjacje o warunkach zakończenia działań wojennych.",
+      "watchNext": [
+        "Czy Biały Dom lub mediatorzy zaproponują poprawkę do planu.",
+        "Czy Hamas i państwa regionu zareagują na izraelskie stanowisko."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Izrael nie wycofa sił ze Strefy Gazy. Benjamin Netanjahu odrzuca plan Donalda Trumpa",
+          "url": "https://tvn24.pl/swiat/benjamin-netanjahu-odrzuca-plan-donalda-trumpa-dla-strefy-gazy-st9181724?source=rss"
+        },
+        {
+          "title": "CNN World: Israel rejects Trump’s Gaza peace plan, saying no withdrawal until Hamas disarms",
+          "url": "https://www.cnn.com/2026/08/09/middleeast/israel-gaza-trump-netanyahu-plan-intl"
+        }
+      ],
+      "tags": [
+        "gaza",
+        "izrael",
+        "usa",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-09-2006-06",
+      "section": "Bezpieczeństwo",
+      "title": "Drony nad niemiecką bazą wojskową",
+      "lead": "Po incydencie w Lipsku policja bada loty dronów nad obiektem z elementami Patriot.",
+      "whatHappened": "BBC informuje, że nad niemiecką bazą wojskową zauważono drony kilka dni po incydencie bombowym w Lipsku. Policja bada sprawę, a obiekt ma być powiązany z przechowywaniem części systemu Patriot.",
+      "keyFacts": [
+        "Materiał BBC dotyczy obserwacji dronów nad bazą wojskową w Niemczech.",
+        "Baza jest opisywana jako miejsce związane z elementami Patriot.",
+        "Śledczy badają związek z wcześniejszym incydentem w Lipsku."
+      ],
+      "reactions": [
+        "To wzmacnia obawy o ochronę infrastruktury wojskowej i rozpoznanie powietrzne.",
+        "Niemieckie służby sygnalizują potrzebę wyjaśnienia pochodzenia dronów."
+      ],
+      "whyItMatters": "To klasyczny sygnał ryzyka hybrydowego wokół obiektów wojskowych i systemów obrony powietrznej.",
+      "context": "Wątek wpisuje się w rosnącą liczbę europejskich epizodów związanych z nieautoryzowanymi lotami dronów.",
+      "watchNext": [
+        "Czy policja ustali operatora i motyw.",
+        "Czy pojawią się dodatkowe środki ochrony bazy."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Drones spotted over German base days after Leipzig bomb incident",
+          "url": "https://www.bbc.co.uk/news/articles/cwyeg1ljp2eo?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "niemcy",
+        "drony",
+        "bezpieczeństwo",
+        "patriot"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-09-2006-07",
+      "section": "Świat",
+      "title": "Pożar lasów w Kanadzie wymyka się spod kontroli",
+      "lead": "Mieszkańcy dostają ostrzeżenie, by przygotować się na najgorszy scenariusz.",
+      "whatHappened": "BBC podaje, że pożar lasów w Kanadzie nadal się rozprzestrzenia i jest poza kontrolą. Mieszkańców ostrzega się, by przygotowali się na najgorsze.",
+      "keyFacts": [
+        "BBC opisuje ogień jako wymykający się spod kontroli.",
+        "Alert dotyczy mieszkańców i gotowości do dalszych działań ochronnych.",
+        "To kolejny sygnał o dużej skali sezonu pożarowego w Ameryce Północnej."
+      ],
+      "reactions": [
+        "Służby i lokalne władze muszą liczyć się z kolejnymi ewakuacjami lub ograniczeniami.",
+        "Dym i jakość powietrza mogą mieć szersze skutki regionalne."
+      ],
+      "whyItMatters": "Pożary tego typu szybko zmieniają się w problem publicznego bezpieczeństwa, zdrowia i transportu.",
+      "context": "BBC nie opisuje tu drobnego lokalnego zdarzenia, tylko szeroki, rozwijający się kryzys pożarowy.",
+      "watchNext": [
+        "Czy pojawią się kolejne nakazy ewakuacji.",
+        "Jak szybko służby opanowują front pożaru."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Residents warned to brace for the worst as Canada wildfire rages out of control",
+          "url": "https://www.bbc.co.uk/news/articles/cx25dkwk3e3o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "kanada",
+        "pożary",
+        "alerty",
+        "środowisko"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-09-2006-08",
+      "section": "Alerty",
+      "title": "Brytyjska susza rośnie przed piątą falą upałów",
+      "lead": "BBC Weather ostrzega, że kolejne obszary Anglii mogą wejść w suszę.",
+      "whatHappened": "BBC Weather informuje, że przy braku znaczących opadów w nadchodzącym tygodniu coraz więcej obszarów Anglii może przejść do statusu suszy. Jednocześnie buduje się piąta fala upałów w tym roku.",
+      "keyFacts": [
+        "Materiał BBC Weather łączy brak deszczu z narastającą suszą.",
+        "Prognoza mówi o piątej fali upałów w tym roku.",
+        "Dotyczy to coraz większej liczby obszarów Anglii."
+      ],
+      "reactions": [
+        "Woda, rolnictwo i bezpieczeństwo przeciwpożarowe mogą wejść pod większą presję.",
+        "To ważny sygnał dla mieszkańców i operatorów infrastruktury wodnej."
+      ],
+      "whyItMatters": "Susza przekłada się na zasoby wodne, zdrowie publiczne i ryzyko pożarowe, a także na kosztowe decyzje po stronie władz.",
+      "context": "To brytyjski odpowiednik krajowych alertów pogodowych, ale z silniejszym komponentem zasobów wodnych.",
+      "watchNext": [
+        "Czy Met Office lub władze wodne rozszerzą alerty.",
+        "Czy deszcz pojawi się wystarczająco wcześnie, by zahamować suszę."
+      ],
+      "sources": [
+        {
+          "title": "BBC Weather: More areas of UK likely to move into drought as fifth heatwave builds",
+          "url": "https://www.bbc.co.uk/weather/articles/c9d8vwg0197o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "uk",
+        "susza",
+        "upał",
+        "alerty"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-09-2006-09",
+      "section": "Polityka",
+      "title": "Blanche kieruje DOJ po głosowaniu 50-49",
+      "lead": "Todd Blanche został zatwierdzony na prokuratora generalnego.",
+      "whatHappened": "CNN podaje, że Todd Blanche został zatwierdzony w sobotę na prokuratora generalnego po głosowaniu w Senacie 50 do 49. Materiał podkreśla, że Departament Sprawiedliwości jest coraz bardziej kształtowany pod potrzeby Trumpa.",
+      "keyFacts": [
+        "Głosowanie zakończyło się wynikiem 50-49.",
+        "Blanche był wcześniej blisko związany z obroną Trumpa.",
+        "CNN wiąże tę nominację z dalszym przekształcaniem DOJ."
+      ],
+      "reactions": [
+        "Krytycy mogą odczytywać to jako kolejny test niezależności prokuratury federalnej.",
+        "Dla administracji Trumpa to sygnał zacieśnienia kontroli nad wymiarem sprawiedliwości."
+      ],
+      "whyItMatters": "Obsada DOJ wpływa na priorytety ścigania, relacje władzy wykonawczej z prawem i polityczną temperaturę Waszyngtonu.",
+      "context": "To jedna z ważniejszych politycznych decyzji USA w tym slocie, łącząca nominację personalną z kierunkiem instytucjonalnym.",
+      "watchNext": [
+        "Czy pojawią się pierwsze decyzje Blanche jako prokuratora generalnego.",
+        "Czy Senat lub organizacje prawne zareagują na tempo zmian w DOJ."
+      ],
+      "sources": [
+        {
+          "title": "CNN Politics: Blanche set to lead a Justice Department shaped to serve Trump",
+          "url": "https://www.cnn.com/2026/08/08/politics/senate-todd-blanche-attorney-general"
+        }
+      ],
+      "tags": [
+        "usa",
+        "doj",
+        "blanche",
+        "trump"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-09-2006-10",
+      "section": "Polityka",
+      "title": "Trump traci przewagę Republikanów w dwóch obszarach",
+      "lead": "CNN ocenia, że jego pozycja osłabła na gospodarce i bezpieczeństwie narodowym.",
+      "whatHappened": "CNN pisze, że Donald Trump zmarnował typową przewagę Republikanów w dwóch kluczowych obszarach: gospodarce i bezpieczeństwie narodowym. Materiał opisuje jego pozycję polityczną jako wyjątkowo słabą.",
+      "keyFacts": [
+        "CNN wskazuje na osłabienie przewagi GOP w gospodarce i national security.",
+        "W ocenie redakcji pozycja polityczna Trumpa jest obecnie słaba.",
+        "To materiał analityczny, nie wydarzenie instytucjonalne."
+      ],
+      "reactions": [
+        "Republikanie mogą mieć trudniej z prostym przekazem kampanijnym.",
+        "Dla Demokratów to potencjalne okno na zbudowanie kontrnarracji."
+      ],
+      "whyItMatters": "To ważny sygnał o nastrojach politycznych w USA i o tym, jak CNN czyta potencjalną przewagę partyjną przed kolejnymi starciami wyborczymi.",
+      "context": "Artykuł ma charakter oceny trendu, ale opiera się na bieżącej pozycji Trumpa wobec wyborców.",
+      "watchNext": [
+        "Czy kolejne sondaże potwierdzą ten trend.",
+        "Jak zareaguje sztab Trumpa i kierownictwo Partii Republikańskiej."
+      ],
+      "sources": [
+        {
+          "title": "CNN Politics: Trump has squandered Republicans’ typical advantages in 2 key areas",
+          "url": "https://www.cnn.com/2026/08/09/politics/trump-poll-economy-national-security"
+        }
+      ],
+      "tags": [
+        "usa",
+        "trump",
+        "polityka",
+        "republikanie"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-09-2006-11",
+      "section": "Gospodarka",
+      "title": "Kim Dzong Un jeszcze nigdy nie miał tyle gotówki",
+      "lead": "TVN24 Biznes szacuje wzrost zagranicznych przychodów Korei Północnej.",
+      "whatHappened": "TVN24 Biznes opisuje, że zagraniczne przychody reżimu Kim Dzong Una zostały oszacowane na 22 miliardy dolarów w cztery lata. W materiale wskazuje się na dostawy broni dla Rosji, handel z Chinami i kradzieże kryptowalut.",
+      "keyFacts": [
+        "Szacunek obejmuje cztery lata i 22 miliardy dolarów.",
+        "Główne źródła przychodu to broń, handel z Chinami i kradzież kryptowalut.",
+        "Materiał pokazuje, jak Korea Północna finansuje swoją pozycję mimo sankcji."
+      ],
+      "reactions": [
+        "To wzmacnia obawy o skuteczność sankcji i przepływy finansujące program zbrojeniowy.",
+        "Pekin i Moskwa pozostają pośrednio związane z ekonomiczną odpornością Pjongjangu."
+      ],
+      "whyItMatters": "To jeden z mocniejszych sygnałów o wojennej i sankcyjnej ekonomii Korei Północnej.",
+      "context": "Materiał TVN24 Biznes łączy gospodarkę, bezpieczeństwo i geopolitykę w jednym schemacie finansowania reżimu.",
+      "watchNext": [
+        "Czy pojawią się nowe szacunki wywiadowcze lub sankcyjne.",
+        "Czy USA lub sojusznicy odpowiedzą kolejną rundą presji finansowej."
+      ],
+      "sources": [
+        {
+          "title": "TVN24 Biznes: To był punkt zwrotny. \"Kim Dzong Un jeszcze nigdy nie miał tyle gotówki\"",
+          "url": "https://tvn24.pl/biznes/ze-swiata/to-byl-punkt-zwrotny-kim-dzong-un-jeszcze-nigdy-nie-mial-tyle-gotowki-st9181423?source=rss"
+        }
+      ],
+      "tags": [
+        "korea-północna",
+        "gospodarka",
+        "sankcje",
+        "crypto"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-09-2006-12",
+      "section": "Bezpieczeństwo",
+      "title": "Pentagon chce zwiększyć produkcję broni",
+      "lead": "Zapasy topnieją w tle wojny z Iranem, a Trump chce utrzymać presję.",
+      "whatHappened": "CNN podaje, że Pentagon poprosił firmy zbrojeniowe o przyspieszenie produkcji, ponieważ zapasy uzbrojenia topnieją podczas wojny z Iranem. Materiał wiąże ten problem z próbą utrzymania przez Donalda Trumpa przewagi negocjacyjnej wobec Teheranu.",
+      "keyFacts": [
+        "To materiał CNN World z 9 sierpnia 2026 roku.",
+        "Problem dotyczy realnych braków w amerykańskich zapasach.",
+        "Pentagon chce przyspieszyć produkcję po stronie przemysłu."
+      ],
+      "reactions": [
+        "Zbrojeniówka może dostać kolejną falę zamówień i nacisku na tempo dostaw.",
+        "Wojna z Iranem zaczyna wywierać presję nie tylko dyplomatyczną, ale też logistyczną."
+      ],
+      "whyItMatters": "To ważny wskaźnik gotowości militarnej USA i kosztów utrzymania nacisku w konflikcie z Iranem.",
+      "context": "CNN opisuje ten wątek jako live news i sygnał szerszej wojennej mobilizacji przemysłu.",
+      "watchNext": [
+        "Czy Pentagon poda konkretne kontrakty lub priorytetowe systemy uzbrojenia.",
+        "Czy rynek zbrojeniowy zacznie reagować na zwiększone zamówienia."
+      ],
+      "sources": [
+        {
+          "title": "CNN World: Pentagon asks defense companies to ramp up production as stockpiles run low during Iran war",
+          "url": "https://www.cnn.com/2026/08/09/world/live-news/iran-war-trump"
+        }
+      ],
+      "tags": [
+        "usa",
+        "pentagon",
+        "iran",
+        "zbrojenia"
+      ],
+      "priority": "high"
+    }
+  ]
+}
