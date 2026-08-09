@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-09 20:06 przesuwa feed na pogodę i alerty w Polsce, niski stan Wisły, lokalny wypadek w Łomży, odrzucony plan Trumpa dla Gazy oraz nowe sygnały bezpieczeństwa z Niemiec, Kanady i USA. W tle wciąż dominują wojny, gotowość wojskowa i polityka Waszyngtonu, a w gospodarce wybija finansowanie Korei Północnej oraz presja na produkcję zbrojeniową.
+Slot 2026-08-09 21:01 nadal trzyma feed na pogodę i alerty w Polsce, niski stan Wisły, lokalny wypadek w Łomży, odrzucony plan Trumpa dla Gazy, drony nad niemiecką bazą, pożar lasów w Kanadzie oraz nowe sygnały z polityki i bezpieczeństwa USA. W tym przebiegu dochodzi jeszcze mocniejszy akcent technologiczno-regulacyjny wokół Meta, a w tle pozostają wojna, gotowość wojskowa i presja na produkcję zbrojeniową.
 
 ## Data Shape
 

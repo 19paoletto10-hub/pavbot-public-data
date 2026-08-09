@@ -1,5 +1,15 @@
 # Puls Dnia News Backlog
 
+## 2026-08-09 21:01
+
+- Watch whether IMGW extends or upgrades the rain, hail, or heat warnings into Tuesday.
+- Watch whether Wisła at Warszawa-Bulwary drops further or triggers new local restrictions.
+- Watch whether German police identify the drone operator or confirm a broader threat pattern.
+- Watch whether Canadian authorities publish new containment, evacuation, or acreage updates for the wildfire.
+- Watch whether US, Israeli, or mediator reactions follow Netanyahu's rejection of the Gaza plan.
+- Watch whether the Pentagon turns the weapons-production push into named contracts or deadlines.
+- Watch whether Meta appeals the child-safety ruling and whether other regulators cite the precedent.
+
 ## 2026-08-09 20:06
 
 - Watch whether IMGW extends the rain, hail or heat warnings into Tuesday.
