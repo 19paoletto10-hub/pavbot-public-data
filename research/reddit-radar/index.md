@@ -2,6 +2,10 @@
 
 ## Current State
 
+- Sunday, August 9, 2026 22:08 CEST found four fresh, public-safe survivors after filtering `2026-08-07-2008` and `2026-08-08-1207`, so the topic clears the contract threshold again with a late-evening set led by three dev cards about overly agreeable LLMs, vibe-coders discovering plain editors, and deadline promises drifting across time zones, plus one everyday dog-in-a-puddle closer.
+- The same 22:08 CEST run intentionally uses the Sunday slot stamp `2026-08-09-2208` even though execution had already crossed local midnight, because the task context fixed the current automation date to Sunday, August 9, 2026.
+- The same 22:08 CEST slot started from a current remote state: a fresh `git fetch origin` confirmed that `origin/main` already exposes the published `2026-08-08-1207` run, PDF, data bundle, and refreshed `public/pavbot-manifest.json` before this run's own publication step.
+- Current active public bundle on last verified origin/main before this run's publication work is `research/reddit-radar/data/2026-08-08-1207-reddit-radar.json`.
 - Saturday, August 8, 2026 12:07 CEST found four fresh, public-safe survivors
   after filtering `2026-08-07-1909` and `2026-08-07-2008`, so the topic
   clears the contract threshold again with a thinner midday set led by one

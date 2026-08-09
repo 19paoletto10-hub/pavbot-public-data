@@ -9,6 +9,9 @@
 
 ## Review Notes
 
+- 2026-08-09: 22:08 CEST material update found four fresh public-safe survivors after filtering `2026-08-07-2008` and `2026-08-08-1207`, so the topic rotates to a new late-evening bundle with three dev cards about agreeable LLMs, plain-text editor discovery, and mars-time deadline jokes, plus one clean puddle-regret dog closer.
+- 2026-08-09: The same 22:08 CEST run started from a current remote state: `git fetch origin` confirmed that `origin/main` already exposes the published `2026-08-08-1207` run/PDF/data set and refreshed manifest before this run's own publication step.
+- 2026-08-09: The same slot intentionally uses stamp `2026-08-09-2208` even though execution had already crossed local midnight, because the task context fixed the current automation date to Sunday, August 9, 2026.
 - 2026-08-08: 12:07 CEST material update found exactly four fresh public-safe
   survivors after filtering `2026-08-07-1909` and `2026-08-07-2008`, so the
   topic rotates to a thinner midday bundle with one mainstream movie-audio

@@ -1,0 +1,151 @@
+{
+  "id": "humor-2026-08-09-2208",
+  "title": "<RR> Reddit Radar",
+  "summary": "Material update: slot 22:08 rotuje radar na cztery świeże karty o przesadnie miłych LLM-ach, vibe-coderze odkrywającym edytor, terminach w marsjańskiej strefie czasowej i psie tęskniącym za idealną kałużą.",
+  "generatedAt": "2026-08-09T20:08:00Z",
+  "displayTime": "22:08",
+  "nextRefreshAt": "2026-08-10T00:08:00+02:00",
+  "refreshIntervalHours": 2,
+  "items": [
+    {
+      "id": "r-programmerhumor-1vjmxs1-adversarial-llm",
+      "title": "jimJobs",
+      "caption": "Pierwszy dev anchor dnia wyśmiewa asystentów AI, które nawet po prośbie o krytykę dalej głaszczą złe pomysły. Comment layer zostaje przy jednej bardzo czytelnej osi: wszyscy chcą wreszcie modelu, który nie będzie cheerleaderem dla każdej bzdury.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1vjmxs1/jimjobs/?sort=top",
+      "imageURL": null,
+      "score": 2554,
+      "comments": 21,
+      "tags": [
+        "programmerhumor",
+        "ai",
+        "devtools"
+      ],
+      "categoryLabel": "dev",
+      "postText": "Żart działa, bo zamienia przesadne AI-pochwały w potrzebę brutalnie szczerego reviewera.",
+      "whyFunny": "Widoczne komentarze nie uciekają w ciężki spór o modele, tylko wzmacniają dokładnie ten sam payoff o przesadnie miłych LLM-ach.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment sprowadza problem do prostego absurdu: prosisz model o krytykę, a on nadal cię dopinguje.",
+          "explanation": "To od razu domyka kartę bez dodatkowego kontekstu.",
+          "score": 175,
+          "originalBody": "Even if u ask it to be critical it will still praise you yep yep Thats a good point, and I underpraised your original comment. With this new context, I think you have something genuinely novel here, and thats not me being a cheerleader. gentle parenting us it validates the bad ideas too lmao I had to straight up get a different Gmail account so I can tell Gemini to be supremely adversarial. You're to push back, and honestly I might have oversold it to you. Let me give you a REAL critique, what genuinely holds, and where the real gotchas are. Yeah, where is the Goth Mommy LLM that calls me names and tells me I'm an idiot for doing it that way"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight parodiuje typową odpowiedź modelu, który „niedochwalił” poprzedniego pomysłu.",
+          "explanation": "Ta sztuczna uprzejmość najlepiej niesie cały żart do digestu.",
+          "score": 68,
+          "originalBody": "Thats a good point, and I underpraised your original comment. With this new context, I think you have something genuinely novel here, and thats not me being a cheerleader."
+        }
+      ]
+    },
+    {
+      "id": "r-programmerhumor-1vjhzrx-chat-coder-notepad",
+      "title": "vibecoderFinallyDiscoversVscode",
+      "caption": "Druga dev karta bierze chat-first coding i doprowadza go do punktu, w którym odkrycie zwykłego edytora tekstu brzmi jak przełom cywilizacyjny. Komentarze podbijają ten sam riff o Notepadzie i plikach, które nagle okazują się czymś więcej niż oknem rozmowy z AI.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1vjhzrx/vibecoderfinallydiscoversvscode/?sort=top",
+      "imageURL": null,
+      "score": 5392,
+      "comments": 87,
+      "tags": [
+        "programmerhumor",
+        "editors",
+        "ai"
+      ],
+      "categoryLabel": "dev",
+      "postText": "Humor siedzi w tym, że podstawowe narzędzie programisty jest tu przedstawione jak egzotyczny wynalazek.",
+      "whyFunny": "Top comments dokładają tylko kolejne warianty tego samego lekkiego żartu o Notepadzie i snake_case.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment żartuje, że sam Notepad mógłby takiego vibe-codera autentycznie zaskoczyć.",
+          "explanation": "To czytelnie ustawia poziom absurdu bez psucia tonu.",
+          "score": 693,
+          "originalBody": "I wonder whether he also knows about text editor. Wait until someone shows him Notepad. Being able to type characters directly into a file might genuinely blow his mind. Notepad doesn't seem to work! I opened one of the files and it's all numbers and strange words written in lower case. Who talks to Claude like that? Members of Slytherin, maybe? Read another book, mate I never read any of her books, bro The joke was Python (or snake case, take your pick) to be fair, those books aren’t even that good More like members of Ravenclaw. Nah, it's the Slytherins who can speak Pythontongue. Any chance for Snake jazz? It might be strange for him to type anywhere else than into a chat with AI or email or some website or word/excel. Maybe even an old school experience? Notepad is one of the worst text editors in existence. Only windows users tend to like it, out of lack of options through many years. Notepad++ is decent. :3 kinda miss np++ on linux (although kate is almost the same) VI(M) user spotted ? Notepad (the old one, not the winslop 11 garbage) is absolutely perfect for when all you need is... a fucking notepad with 0 damn features if you need features then you use something else effin high-nosed plebs defamating notepad, there's no respect anymore Wait... notepad is built in?? I just use ms word normally... /s notepad++ But that’s for text, not for code, duh I wonder whether you know about sarcasm. I did not know who that guy is, I commented what came to my mind first. It's hard these days to recognize what is sarcastic regarding this AI code generation. Wait till he finds vim asking Claude how to exit out of it"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight dopowiada, że wpisywanie znaków bezpośrednio do pliku brzmi tu niemal jak magia.",
+          "explanation": "To wzmacnia sedno karty bez zamiany w editor war.",
+          "score": 213,
+          "originalBody": "Wait until someone shows him Notepad. Being able to type characters directly into a file might genuinely blow his mind. Notepad doesn't seem to work! I opened one of the files and it's all numbers and strange words written in lower case. Who talks to Claude like that? Members of Slytherin, maybe? Read another book, mate I never read any of her books, bro The joke was Python (or snake case, take your pick) to be fair, those books aren’t even that good More like members of Ravenclaw. Nah, it's the Slytherins who can speak Pythontongue. Any chance for Snake jazz? It might be strange for him to type anywhere else than into a chat with AI or email or some website or word/excel. Maybe even an old school experience? Notepad is one of the worst text editors in existence. Only windows users tend to like it, out of lack of options through many years. Notepad++ is decent. :3 kinda miss np++ on linux (although kate is almost the same) VI(M) user spotted ? Notepad (the old one, not the winslop 11 garbage) is absolutely perfect for when all you need is... a fucking notepad with 0 damn features if you need features then you use something else effin high-nosed plebs defamating notepad, there's no respect anymore Wait... notepad is built in?? I just use ms word normally... /s"
+        }
+      ]
+    },
+    {
+      "id": "r-programmerhumor-1viygc7-mars-time-estimate",
+      "title": "trustTheEstimateNotTheTimeline",
+      "caption": "Trzeci dev closer zamienia wieczny spór o terminy w jedną bardzo przenośną sztuczkę: przecież nikt nie powiedział, o którą godzinę ani o którą strefę chodzi. Comment layer zostaje przy tym samym biurowo-kosmicznym motywie z marsjańskim czasem i rozciągliwą definicją dnia.",
+      "sourceName": "r/ProgrammerHumor",
+      "sourceURL": "https://old.reddit.com/r/ProgrammerHumor/comments/1viygc7/trusttheestimatenotthetimeline/?sort=top",
+      "imageURL": null,
+      "score": 8060,
+      "comments": 60,
+      "tags": [
+        "programmerhumor",
+        "deadlines",
+        "timezone"
+      ],
+      "categoryLabel": "dev",
+      "postText": "Żart działa, bo każdy zna ten moment, gdy estymata brzmi precyzyjnie tylko do chwili pierwszego pytania o konkrety.",
+      "whyFunny": "Komentarze utrzymują jedną spójną puentę o strefach czasowych i nie wpadają od razu w cięższy project-management rant.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top comment natychmiast rozbraja temat pytaniem, o którą strefę czasową w ogóle chodzi.",
+          "explanation": "To prosty i bardzo nośny payoff dla odbiorcy technicznego.",
+          "score": 502,
+          "originalBody": "We never specified which hour Or which time zone. Yeah, I'm gonna finnish at 29 o'clock martain time This made me snort my coffee. But yes, exactly this! Where's Greenwich on Mars? If you count in time zones** each day can be 48 hours long Unironically this. I have 20 tasks to do and this is priority 6. I’ll get to it when I get to it and then tell you when it’s done Or, \"please specify what you want me to drop\" That can be true but often isn’t the issue for me, it’s usually that everyone with a request is only thinking about their request, and not imagining the big picture of what I am dealing with. Human nature and all. So I usually try to set expectations up front and communicate proactively and predictably. Like “hey, I saw your message and created a ticket in our queue: <link>. In the future please create one using this form here: <link>. We have some urgent issues that we are chasing down at least through tomorrow, but I should be able to get to it by end of week. I’ll update the status once a day in the meantime and let you know if anything changes. Thanks!” YES"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight podnosi stawkę do „29:00 czasu marsjańskiego”.",
+          "explanation": "Ta przesada dobrze domyka kartę bez dodatkowych wyjaśnień.",
+          "score": 126,
+          "originalBody": "Or which time zone. Yeah, I'm gonna finnish at 29 o'clock martain time This made me snort my coffee. But yes, exactly this! Where's Greenwich on Mars? If you count in time zones** each day can be 48 hours long"
+        }
+      ]
+    },
+    {
+      "id": "r-mildlyinfuriating-1vjnqx4-perfect-puddle",
+      "title": "Found the ONE puddle on the field",
+      "caption": "Everyday closer dnia jest bardzo prosty i dlatego działa: świeżo wyczyszczony pies znajduje dokładnie tę jedną kałużę, której znaleźć nie powinien. Najwyższe komentarze nie odjeżdżają w długi rant, tylko zostają przy jednym uroczym payoffie o psie, który natychmiast tęskni za idealną kałużą.",
+      "sourceName": "r/mildlyinfuriating",
+      "sourceURL": "https://old.reddit.com/r/mildlyinfuriating/comments/1vjnqx4/found_the_one_puddle_on_the_field/?sort=top",
+      "imageURL": null,
+      "score": 3880,
+      "comments": 73,
+      "tags": [
+        "mildlyinfuriating",
+        "dogs",
+        "everyday"
+      ],
+      "categoryLabel": "everyday",
+      "postText": "Humor siedzi w tym, że cały wysiłek mycia psa przegrywa z jedną perfekcyjnie znalezioną kałużą.",
+      "whyFunny": "Pierwsze widoczne komentarze trzymają lekki, powtarzalny żart o błotnej nostalgii i nie robią z tego zwykłego complaint threadu.",
+      "commentHighlights": [
+        {
+          "id": "comment-1",
+          "summary": "Top visible riff opisuje psa, który już rozmyśla o tej jednej idealnej kałuży.",
+          "explanation": "To bardzo szybko przenosi kartę z obrazka do lekkiego digestowego tekstu.",
+          "score": 166,
+          "originalBody": "\"I wonder where that puddle was..\" Daydreaming about the puddle “swear to god what I’d do for a good puddle right now” - your dog"
+        },
+        {
+          "id": "comment-2",
+          "summary": "Drugi highlight sugeruje, że pies i tak zrobiłby to jeszcze raz bez żadnych wyrzutów sumienia.",
+          "explanation": "Ta drobna puenta dobrze kończy cały bundle jednym everyday self-ownem.",
+          "score": 6,
+          "originalBody": "“I think I might do it again.”"
+        }
+      ]
+    }
+  ],
+  "source": {
+    "name": "Reddit via Safari",
+    "url": "https://old.reddit.com/"
+  }
+}
