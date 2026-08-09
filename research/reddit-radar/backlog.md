@@ -4,7 +4,7 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
-| High | Watch notifier webhook timeout noise | `POST /v1/humor/digest` now succeeds again, but `/status` still reports the last GitHub webhook as `timeout` | Check notifier tunnel/logs and confirm whether webhook processing needs cleanup after successful manual humor ingest | Open |
+| High | Reconcile notifier ingest state | Public `GET /v1/humor/latest` is fresh on `humor-2026-08-09-2208`, but manual `POST /v1/humor/digest` still hit payload-shape and token errors while `/status` reports stale webhook timeout noise | Check ingest token path, manual payload contract, and why `/status` lags behind fresh public latest | Open |
 | High | Restore topic automation prompt | The run request pointed to `research/reddit-radar/automation-prompt.md`, but the file was missing and the workflow contract had become implicit | Recreated the topic-local prompt and restored a topic index on Sunday, July 26, 2026 | Done |
 
 ## Review Notes
@@ -12,6 +12,8 @@
 - 2026-08-09: 22:08 CEST material update found four fresh public-safe survivors after filtering `2026-08-07-2008` and `2026-08-08-1207`, so the topic rotates to a new late-evening bundle with three dev cards about agreeable LLMs, plain-text editor discovery, and mars-time deadline jokes, plus one clean puddle-regret dog closer.
 - 2026-08-09: The same 22:08 CEST run started from a current remote state: `git fetch origin` confirmed that `origin/main` already exposes the published `2026-08-08-1207` run/PDF/data set and refreshed manifest before this run's own publication step.
 - 2026-08-09: The same slot intentionally uses stamp `2026-08-09-2208` even though execution had already crossed local midnight, because the task context fixed the current automation date to Sunday, August 9, 2026.
+- 2026-08-09: The same 22:08 CEST run rendered a readable four-page mobile PDF, published successfully, and then confirmed through fresh `origin/main` inspection plus raw GitHub HTTP checks that the new run, PDF, bundle, raw audit, and refreshed manifest are remotely visible.
+- 2026-08-09: Read-only `GET /v1/humor/latest` already serves `humor-2026-08-09-2208`, but direct manual notifier ingest still showed two operational issues: source-shape validation without normalization and a later `Invalid humor ingest token` on the normalized retry.
 - 2026-08-08: 12:07 CEST material update found exactly four fresh public-safe
   survivors after filtering `2026-08-07-1909` and `2026-08-07-2008`, so the
   topic rotates to a thinner midday bundle with one mainstream movie-audio

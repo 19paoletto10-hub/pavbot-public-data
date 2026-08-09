@@ -5,7 +5,10 @@
 - Sunday, August 9, 2026 22:08 CEST found four fresh, public-safe survivors after filtering `2026-08-07-2008` and `2026-08-08-1207`, so the topic clears the contract threshold again with a late-evening set led by three dev cards about overly agreeable LLMs, vibe-coders discovering plain editors, and deadline promises drifting across time zones, plus one everyday dog-in-a-puddle closer.
 - The same 22:08 CEST run intentionally uses the Sunday slot stamp `2026-08-09-2208` even though execution had already crossed local midnight, because the task context fixed the current automation date to Sunday, August 9, 2026.
 - The same 22:08 CEST slot started from a current remote state: a fresh `git fetch origin` confirmed that `origin/main` already exposes the published `2026-08-08-1207` run, PDF, data bundle, and refreshed `public/pavbot-manifest.json` before this run's own publication step.
-- Current active public bundle on last verified origin/main before this run's publication work is `research/reddit-radar/data/2026-08-08-1207-reddit-radar.json`.
+- The same 22:08 CEST run then rendered a readable four-page mobile PDF, published successfully through the shared isolated worktree flow, and verified via fresh `git fetch origin`, direct `origin/main` artifact inspection, and raw GitHub HTTP checks that the run, PDF, bundle, raw audit, and refreshed `public/pavbot-manifest.json` are all now visible remotely.
+- Read-only `GET /v1/humor/latest` now serves `humor-2026-08-09-2208` with the same four-card bundle, so production public freshness is already aligned with the new published topic state.
+- A direct manual `POST /v1/humor/digest` follow-up remains operationally suspect even after freshness recovery: one retry hit payload-shape validation on `source`, and a normalized retry then returned `Invalid humor ingest token`, while `/status` still shows older webhook timeout noise despite the fresh public latest read.
+- Current active public bundle on last verified origin/main is now `research/reddit-radar/data/2026-08-09-2208-reddit-radar.json`.
 - Saturday, August 8, 2026 12:07 CEST found four fresh, public-safe survivors
   after filtering `2026-08-07-1909` and `2026-08-07-2008`, so the topic
   clears the contract threshold again with a thinner midday set led by one
