@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+## 2026-08-10 15:07
+
+- Watch whether IMGW and RCB extend the storm and power-outage warnings into Tuesday.
+- Watch whether MON or police publish more detail on the drone incident and the Russian airspace breach.
+- Watch whether ORP Wicher gets the official christening details and any follow-up on the Miecznik program.
+- Watch whether casualty, evacuation or damage counts rise for the Ukraine strike and the China typhoon.
+- Watch whether CNN adds reactions to the Iran pause and the Senate seat ranking.
+- Watch whether Home Office or Border Force publishes another Channel crossing count.
+
 ## 2026-08-09 21:01
 
 - Watch whether IMGW extends or upgrades the rain, hail, or heat warnings into Tuesday.

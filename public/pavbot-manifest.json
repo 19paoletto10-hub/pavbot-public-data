@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "title": "Pavbot Automation Manifest",
-  "generatedAt": "2026-08-09T22:24:45.048369+00:00",
+  "generatedAt": "2026-08-10T13:18:00.133440+00:00",
   "rawBaseUrl": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/",
   "automations": [
     {
@@ -137,6 +137,29 @@
     }
   ],
   "artifacts": [
+    {
+      "id": "research/puls-dnia-news/runs/2026-08-10-1507.md",
+      "type": "run",
+      "topic": "puls-dnia-news",
+      "title": "Daily Research Report: puls-dnia-news",
+      "path": "research/puls-dnia-news/runs/2026-08-10-1507.md",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/runs/2026-08-10-1507.md",
+      "sizeBytes": 5294,
+      "date": "2026-08-10",
+      "time": "15:07"
+    },
+    {
+      "id": "research/puls-dnia-news/data/2026-08-10-1507-pulse-news.json",
+      "type": "pulseNewsData",
+      "topic": "puls-dnia-news",
+      "title": "Pulse news data",
+      "path": "research/puls-dnia-news/data/2026-08-10-1507-pulse-news.json",
+      "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/data/2026-08-10-1507-pulse-news.json",
+      "sizeBytes": 19093,
+      "date": "2026-08-10",
+      "time": "15:07",
+      "itemCount": 12
+    },
     {
       "id": "research/reddit-radar/runs/2026-08-09-2208-reddit-radar.md",
       "type": "run",
@@ -21326,7 +21349,7 @@
       "title": "Puls Dnia News Index",
       "path": "research/puls-dnia-news/index.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/index.md",
-      "sizeBytes": 1597
+      "sizeBytes": 1570
     },
     {
       "id": "research/puls-dnia-news/backlog.md",
@@ -21335,7 +21358,7 @@
       "title": "Puls Dnia News Backlog",
       "path": "research/puls-dnia-news/backlog.md",
       "url": "https://raw.githubusercontent.com/19paoletto10-hub/pavbot-public-data/main/research/puls-dnia-news/backlog.md",
-      "sizeBytes": 4162
+      "sizeBytes": 4756
     },
     {
       "id": "research/polska-swiat/topic.md",

@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-09 21:01 nadal trzyma feed na pogodę i alerty w Polsce, niski stan Wisły, lokalny wypadek w Łomży, odrzucony plan Trumpa dla Gazy, drony nad niemiecką bazą, pożar lasów w Kanadzie oraz nowe sygnały z polityki i bezpieczeństwa USA. W tym przebiegu dochodzi jeszcze mocniejszy akcent technologiczno-regulacyjny wokół Meta, a w tle pozostają wojna, gotowość wojskowa i presja na produkcję zbrojeniową.
+Slot 2026-08-10 15:07 przesuwa feed na alerty pogodowe i RCB w Polsce, nowe ustalenia wokół drona i rosyjskiego pocisku, ORP Wicher oraz twardszy blok bezpieczeństwa z Ukrainy, Chin, Kanału La Manche i amerykańskiej polityki. W tym przebiegu technologia schodzi na dalszy plan, a główne ryzyka to pogoda, przestrzeń powietrzna, granice i presja geopolityczna.
 
 ## Data Shape
 
@@ -25,4 +25,4 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
 - Prefer operational alerts, public-safety events, geopolitics and major economy moves over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
-- Current emphasis should stay on weather alerts, hydrology, Gaza, EU security incidents and US institutional moves.
+- Current emphasis should stay on weather alerts, airspace incidents, border/security events, Ukraine/Russia, China storms and US institutional moves.
