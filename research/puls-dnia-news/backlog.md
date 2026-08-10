@@ -1,5 +1,14 @@
 # Puls Dnia News Backlog
 
+## 2026-08-10 21:02
+
+- Watch whether RCB or IMGW extend the storm alert into Tuesday night.
+- Watch whether the coalition leaders meeting produces a reshuffle signal or a formal press note.
+- Watch whether sanepid publishes more detail on the Białołęka tuberculosis case and contact tracing.
+- Watch whether the European Commission or the Polish government gives a concrete payout timetable for the 7.9 mld euro KPO tranche.
+- Watch whether casualty counts rise further in Tatarstan, Colombia or eastern China.
+- Watch whether there are official follow-ups on social media regulation, North Korean cyber tooling or Iran-related oil pressure.
+
 ## 2026-08-10 15:07
 
 - Watch whether IMGW and RCB extend the storm and power-outage warnings into Tuesday.

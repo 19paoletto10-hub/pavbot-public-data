@@ -2,7 +2,7 @@
 
 ## Current State
 
-Slot 2026-08-10 15:07 przesuwa feed na alerty pogodowe i RCB w Polsce, nowe ustalenia wokół drona i rosyjskiego pocisku, ORP Wicher oraz twardszy blok bezpieczeństwa z Ukrainy, Chin, Kanału La Manche i amerykańskiej polityki. W tym przebiegu technologia schodzi na dalszy plan, a główne ryzyka to pogoda, przestrzeń powietrzna, granice i presja geopolityczna.
+Slot 2026-08-10 21:02 łączy nocne alerty RCB z koalicyjnym spotkaniem w Warszawie, gruźlicą w przedszkolu na Białołęce, oficjalnym potwierdzeniem ORP Wicher oraz mocnym blokiem gospodarczym i technologicznym wokół KPO, kosztów wojny, kontroli mediów społecznościowych i północnokoreańskich prób użycia AI. Nadal dominują pogoda, bezpieczeństwo i Ukraina/Rosja, ale krajowy feed dziś wyraźnie poszerza się o politykę i cyfrową regulację.
 
 ## Data Shape
 
@@ -25,4 +25,4 @@ The newest valid JSON is shown as paired cards under `Dzisiaj`. Tapping a card o
 - Keep at least two `Polska` or `Polityka` items and at least two `Świat` items to protect the home feed balance.
 - Prefer operational alerts, public-safety events, geopolitics and major economy moves over softer feature content.
 - Favor stories with concrete official or primary links when they are available alongside TVN24, BBC or CNN.
-- Current emphasis should stay on weather alerts, airspace incidents, border/security events, Ukraine/Russia, China storms and US institutional moves.
+- Current emphasis should stay on weather alerts, airspace incidents, border/security events, Ukraine/Russia, China storms, KPO funding, platform regulation and cyber/AI risk.

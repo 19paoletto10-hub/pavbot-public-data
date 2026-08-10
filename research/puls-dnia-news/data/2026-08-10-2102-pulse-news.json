@@ -1,0 +1,499 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-10",
+  "runTime": "21:02",
+  "status": "Istotna aktualizacja",
+  "headline": "Burze w Polsce, koalicja w Warszawie i świeży blok bezpieczeństwa oraz gospodarki",
+  "summary": "RCB utrzymuje alerty burzowe i ryzyko przerw w dostawie prądu, liderzy koalicji mają spotkać się wieczorem, a z zagranicy najmocniej przebijają Ukraina, Chiny, Kolumbia i napięcia wokół Iranu, KPO oraz technologii.",
+  "checkedSources": [
+    {
+      "title": "TVN24: najnowsze",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "gov.pl/RCB: komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "gov.pl/RCB: alert RCB - burze, silny wiatr, intensywne opady deszczu (10.08)",
+      "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-1008"
+    },
+    {
+      "title": "gov.pl/RCB: raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "BBN: zapowiedź chrztu i wodowania ORP Wicher",
+      "url": "https://www.bbn.gov.pl/pl/wydarzenia/10458%2CZAPOWIEDZ-Udzial-Prezydenta-RP-w-uroczystosci-chrztu-i-wodowania-fregaty-ORP-Wic.html"
+    },
+    {
+      "title": "MON: Miecznik dla Marynarki Wojennej RP",
+      "url": "https://www.gov.pl/web/obrona-narodowa/miecznik-dla-marynarki-wojennej-rp"
+    },
+    {
+      "title": "PGZ: wodowanie Wichra",
+      "url": "https://pgzsw.com.pl/aktualnosci/wodowanie-wichra/"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC Tech RSS",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    },
+    {
+      "title": "CNN Sitemap News",
+      "url": "https://www.cnn.com/sitemap/news.xml"
+    },
+    {
+      "title": "European Commission: Poland's fifth payment request for €7.9 billion",
+      "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1730"
+    },
+    {
+      "title": "AP: Ukraine drone attack in Russia",
+      "url": "https://apnews.com/article/d0e7dc74936cf153e8e473444cc09366"
+    },
+    {
+      "title": "AP: Typhoon Dolphin in China",
+      "url": "https://apnews.com/article/8d9e687f8599d12f050daeca261d7fa2"
+    },
+    {
+      "title": "AP: Colombia earthquake",
+      "url": "https://apnews.com/article/26fd40f93272d834fced47a4a673edc9"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-08-10-2102-01",
+      "section": "Alerty",
+      "title": "Burze i możliwe przerwy w prądzie",
+      "lead": "RCB utrzymuje nocny alert pogodowy.",
+      "whatHappened": "RCB utrzymuje na noc 10/11.08 alert przed burzami z silnym wiatrem i intensywnymi opadami. Komunikat wprost ostrzega przed możliwymi przerwami w dostawie prądu, a w raporcie dobowym widnieją też aktualne ostrzeżenia IMGW dla wielu województw.",
+      "keyFacts": [
+        "Alert dotyczy nocy z 10 na 11 sierpnia.",
+        "RCB wskazuje ryzyko przerw w dostawie prądu.",
+        "Raport dobowy RCB pokazuje jednocześnie burze i upał w różnych częściach kraju."
+      ],
+      "reactions": [
+        "Służby i mieszkańcy muszą liczyć się z lokalnymi utrudnieniami i awariami."
+      ],
+      "whyItMatters": "To nadal najważniejszy krajowy czynnik ryzyka dla transportu, energetyki i bezpieczeństwa lokalnego.",
+      "context": "To kontynuacja pogodowego bloku z wcześniejszych slotów, ale komunikat został dziś utrzymany i rozszerzony.",
+      "watchNext": [
+        "Sprawdź, czy RCB lub IMGW nie podniosą poziomu ostrzeżeń po północy.",
+        "Obserwuj lokalne informacje o podtopieniach, zerwaniach linii i utrudnieniach w ruchu."
+      ],
+      "sources": [
+        {
+          "title": "gov.pl/RCB: alert RCB - burze, silny wiatr, intensywne opady deszczu (10.08)",
+          "url": "https://www.gov.pl/web/rcb/alert-rcb---burze-1008"
+        },
+        {
+          "title": "gov.pl/RCB: komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "alerty",
+        "rcb",
+        "imgw"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-10-2102-02",
+      "section": "Polityka",
+      "title": "Liderzy koalicji mają spotkać się wieczorem",
+      "lead": "Tusk, Czarzasty i Kosiniak-Kamysz mają rozmawiać dziś.",
+      "whatHappened": "TVN24 zapowiada wieczorne spotkanie liderów Koalicji 15 października: Donalda Tuska, Włodzimierza Czarzastego i Władysława Kosiniaka-Kamysza. W tle są spekulacje o zmianach w rządzie i układzie koalicyjnym.",
+      "keyFacts": [
+        "Spotkanie ma się odbyć 10 sierpnia wieczorem.",
+        "To rozmowa liderów koalicji, a nie zwykłe techniczne spotkanie klubowe."
+      ],
+      "reactions": [
+        "Rynek polityczny będzie czytał każdy sygnał o rekonstrukcji lub nowym podziale ról."
+      ],
+      "whyItMatters": "Wątek może przełożyć się na tempo decyzji rządu i stabilność koalicji.",
+      "context": "To nowy, wyraźny krajowy sygnał polityczny, którego w poprzednim slocie jeszcze nie było.",
+      "watchNext": [
+        "Obserwuj, czy po spotkaniu pojawi się komunikat o zmianach personalnych.",
+        "Sprawdź reakcje liderów partii i opozycji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: spotkanie liderów koalicji",
+          "url": "https://tvn24.pl/polska/donald-tusk-wlodzimierz-czarzasty-i-wladyslaw-kosiniak-kamysz-maja-sie-spotkac-jako-liderzy-koalicji-15-pazdziernika-st9183200"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "koalicja",
+        "rząd"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-10-2102-03",
+      "section": "Polska",
+      "title": "Gruźlica w przedszkolu na Białołęce",
+      "lead": "Sanepid prowadzi postępowanie po wykryciu ogniska.",
+      "whatHappened": "TVN24 opisuje przypadek gruźlicy w warszawskim przedszkolu na Białołęce. Część dzieci skierowano na badania, a sprawą zajmuje się sanepid.",
+      "keyFacts": [
+        "Sprawa dotyczy placówki w Warszawie.",
+        "W materiale pada informacja o skierowaniu części dzieci na badania."
+      ],
+      "reactions": [
+        "Rodzice i personel będą oczekiwać jasnych komunikatów sanitarnych."
+      ],
+      "whyItMatters": "To potencjalny problem zdrowia publicznego, który może uruchomić dalsze badania kontaktów.",
+      "context": "To świeży lokalny temat medyczny, odrębny od bloków pogodowych i politycznych.",
+      "watchNext": [
+        "Sprawdź, czy sanepid poda więcej szczegółów o liczbie kontaktów i zaleceniach.",
+        "Obserwuj, czy pojawią się kolejne placówki objęte kontrolą."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: gruźlica w przedszkolu",
+          "url": "https://tvn24.pl/tvnwarszawa/bialoleka/warszawa-gruzlica-wykryta-w-przedszkolu-na-bialolece-st9180075"
+        }
+      ],
+      "tags": [
+        "zdrowie",
+        "warszawa",
+        "sanepid"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-10-2102-04",
+      "section": "Bezpieczeństwo",
+      "title": "ORP Wicher szykuje się do chrztu",
+      "lead": "BBN potwierdza udział prezydenta.",
+      "whatHappened": "BBN zapowiada udział prezydenta w ceremonii chrztu i wodowania ORP Wicher 12 sierpnia w Gdyni. MON i PGZ podkreślają znaczenie programu Miecznik dla odbudowy zdolności Marynarki Wojennej, a TVN24 pokazuje jednostkę w końcowej fazie przygotowań.",
+      "keyFacts": [
+        "ORP Wicher jest pierwszą fregatą programu Miecznik.",
+        "Ceremonia ma się odbyć 12 sierpnia.",
+        "MON traktuje program jako ważny element modernizacji floty."
+      ],
+      "reactions": [
+        "Wydarzenie będzie czytane jako symboliczny moment dla polskiej obronności morskiej."
+      ],
+      "whyItMatters": "To ważny sygnał dla bezpieczeństwa na Bałtyku i dla przemysłu stoczniowo-obronnego.",
+      "context": "Wątek był już widoczny wcześniej, ale dziś wraca z oficjalnym potwierdzeniem terminu i udziału prezydenta.",
+      "watchNext": [
+        "Sprawdź, czy po ceremonii padną nowe terminy dla kolejnych fregat programu.",
+        "Obserwuj komunikaty MON i PGZ po 12 sierpnia."
+      ],
+      "sources": [
+        {
+          "title": "BBN: zapowiedź chrztu i wodowania ORP Wicher",
+          "url": "https://www.bbn.gov.pl/pl/wydarzenia/10458%2CZAPOWIEDZ-Udzial-Prezydenta-RP-w-uroczystosci-chrztu-i-wodowania-fregaty-ORP-Wic.html"
+        },
+        {
+          "title": "MON: Miecznik dla Marynarki Wojennej RP",
+          "url": "https://www.gov.pl/web/obrona-narodowa/miecznik-dla-marynarki-wojennej-rp"
+        },
+        {
+          "title": "PGZ: wodowanie Wichra",
+          "url": "https://pgzsw.com.pl/aktualnosci/wodowanie-wichra/"
+        },
+        {
+          "title": "TVN24: ORP Wicher",
+          "url": "https://tvn24.pl/trojmiasto/gdynia-orp-wicher-gotowy-do-wodowania-tak-beda-wygladac-polskie-fregaty-st9182989"
+        }
+      ],
+      "tags": [
+        "bezpieczeństwo",
+        "marynarka",
+        "obrona",
+        "miecznik"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-10-2102-05",
+      "section": "Świat",
+      "title": "Ukraiński dron zabił co najmniej 13 osób w Rosji",
+      "lead": "Atak trafił w rafinerię i hostel w Tatarstanie.",
+      "whatHappened": "AP podaje, że ukraiński atak dronem na Nizhnekamsk w Tatarstanie zabił co najmniej 13 osób i zranił kolejne dziesiątki. Celem była rafineria Taneco, a część ofiar była w hostelu obok zakładu.",
+      "keyFacts": [
+        "Liczba rannych w relacjach waha się między 75 a 78.",
+        "To głębokie uderzenie w rosyjskie zaplecze energetyczne."
+      ],
+      "reactions": [
+        "Moskwa będzie próbowała wykorzystać atak do kolejnej rundy propagandy i zapowiedzi odwetu."
+      ],
+      "whyItMatters": "To pokazuje, że wojna dronowa nadal sięga daleko poza linię frontu i uderza w energetykę.",
+      "context": "Wątek jest spójny z wcześniejszymi slotami, ale dziś dochodzi z wyższą liczbą ofiar i konkretem o celu.",
+      "watchNext": [
+        "Sprawdź, czy rosyjskie władze podadzą bardziej spójny bilans ofiar i rannych.",
+        "Obserwuj, czy Ukraina potwierdzi cele uderzenia i dalszą skalę operacji."
+      ],
+      "sources": [
+        {
+          "title": "AP: Ukrainian drone attack on an oil hub deep inside Russia kills 13, officials say",
+          "url": "https://apnews.com/article/d0e7dc74936cf153e8e473444cc09366"
+        }
+      ],
+      "tags": [
+        "ukraina",
+        "rosja",
+        "wojna",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-10-2102-06",
+      "section": "Świat",
+      "title": "Chiny ewakuują ponad milion osób przed tyfonem",
+      "lead": "Typhoon Dolphin paraliżuje wschodnie wybrzeże.",
+      "whatHappened": "AP relacjonuje, że po nadejściu Typhoon Dolphin władze Chin ewakuowały ponad milion osób. Największe problemy dotyczą Szanghaju i prowincji wokół wybrzeża, gdzie ograniczono ruch lotniczy i kolejowy.",
+      "keyFacts": [
+        "Ewakuacje liczono w setkach tysięcy i przekroczyły milion.",
+        "W Szanghaju odwołano setki lotów i ograniczono transport.",
+        "To jeden z największych pogodowych epizodów w regionie w tym sezonie."
+      ],
+      "reactions": [
+        "Władze lokalne zabezpieczają porty, transport i infrastrukturę krytyczną."
+      ],
+      "whyItMatters": "Skala ewakuacji oznacza szeroki wpływ na logistykę, handel i codzienne życie w regionie.",
+      "context": "To światowy odpowiednik dzisiejszego polskiego bloku alertów pogodowych.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się oficjalne dane o zniszczeniach i ofiarach.",
+        "Obserwuj, czy burza przemieści się dalej w głąb lądu."
+      ],
+      "sources": [
+        {
+          "title": "AP: Hundreds more flights are canceled as Tropical Storm Dolphin causes flooding in eastern China",
+          "url": "https://apnews.com/article/8d9e687f8599d12f050daeca261d7fa2"
+        }
+      ],
+      "tags": [
+        "chiny",
+        "pogoda",
+        "tyfon",
+        "transport"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-10-2102-07",
+      "section": "Świat",
+      "title": "Kolumbia po trzęsieniu ziemi",
+      "lead": "Katastrofa przyniosła ofiary i stan wyjątkowy.",
+      "whatHappened": "AP opisuje trzęsienie ziemi o magnitudzie 7,4 w zachodniej Kolumbii. Zginęło co najmniej 111 osób, wiele budynków się zawaliło, a władze ogłosiły stan wyjątkowy i zamknęły część lotnisk.",
+      "keyFacts": [
+        "Epicentrum było w zachodniej części kraju.",
+        "Skala strat obejmuje budynki, transport i infrastrukturę miejską."
+      ],
+      "reactions": [
+        "Władze uruchomiły działania ratownicze i pomocowe, a część państw zaoferowała wsparcie."
+      ],
+      "whyItMatters": "To jedna z największych katastrof naturalnych w regionie w tym roku i potencjalnie długotrwały kryzys humanitarny.",
+      "context": "To ważny światowy temat, który konkuruje dziś z wojną i pogodą o uwagę w feedzie.",
+      "watchNext": [
+        "Śledź kolejne bilanse ofiar i rannych.",
+        "Obserwuj, czy pojawią się informacje o odbudowie i wsparciu międzynarodowym."
+      ],
+      "sources": [
+        {
+          "title": "AP: Magnitude 7.4 quake hits western Colombia, killing at least 111 people",
+          "url": "https://apnews.com/article/26fd40f93272d834fced47a4a673edc9"
+        }
+      ],
+      "tags": [
+        "kolumbia",
+        "trzęsienie_ziemi",
+        "katastrofa",
+        "świat"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-10-2102-08",
+      "section": "Świat",
+      "title": "Trump nasila presję na Iran",
+      "lead": "Spór o odszkodowania przenosi się na ropę i cieśninę Ormuz.",
+      "whatHappened": "TVN24 opisuje kolejną rundę nacisku Donalda Trumpa na Iran, w której pojawia się żądanie odszkodowania oraz presja ekonomiczna związana z ropą i blokadą szlaków morskich. To kolejny sygnał, że konflikt pozostaje w fazie gospodarczej eskalacji.",
+      "keyFacts": [
+        "Wątek dotyczy odszkodowań i nacisku gospodarczego, a nie otwartej ofensywy militarnej.",
+        "W tle pozostają ceny ropy i ryzyko dla handlu przez cieśninę Ormuz."
+      ],
+      "reactions": [
+        "Rynki paliwowe i partnerzy regionalni mogą reagować na każdą nową deklarację."
+      ],
+      "whyItMatters": "To wpływa na ceny energii, handel i napięcia na Bliskim Wschodzie.",
+      "context": "To aktualny ekonomiczno-geopolityczny wątek, który w tym slocie zastępuje część wcześniejszych, mniej świeżych newsroomowych tematów.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się konkretne decyzje w sprawie ropy lub sankcji.",
+        "Obserwuj, czy Iran lub pośrednicy odpowiedzą oficjalnie."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Trump będę domagać się odszkodowania",
+          "url": "https://tvn24.pl/biznes/ze-swiata/trump-bede-domagac-sie-odszkodowania-st9183305"
+        }
+      ],
+      "tags": [
+        "iran",
+        "usa",
+        "ropa",
+        "geopolityka"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-10-2102-09",
+      "section": "Gospodarka",
+      "title": "Bruksela zatwierdza 7,9 mld euro dla Polski",
+      "lead": "KE pozytywnie oceniła piąty wniosek o środki z KPO.",
+      "whatHappened": "Komisja Europejska pozytywnie oceniła piąty wniosek Polski o 7,9 mld euro w ramach RRF. TVN24 podaje, że pieniądze mają trafić po realizacji kolejnych reform i kamieni milowych.",
+      "keyFacts": [
+        "To piąty wniosek o środki z KPO.",
+        "Kwota wynosi 7,9 mld euro.",
+        "Komisja wskazuje na reformy w edukacji, energetyce i transporcie."
+      ],
+      "reactions": [
+        "Dla rządu to ważny sygnał finansowy i polityczny przed kolejnymi etapami wdrożenia KPO."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na inwestycje publiczne, płynność budżetu i komunikację rządu z Brukselą.",
+      "context": "Wpisuje się to w dzisiejszy krajowy blok gospodarczo-polityczny i wyraźnie wzmacnia polski temat w feedzie.",
+      "watchNext": [
+        "Sprawdź, czy rząd poda harmonogram wypłat i kolejnych reform.",
+        "Obserwuj reakcje opozycji i samorządów na kwotę i warunki wypłaty."
+      ],
+      "sources": [
+        {
+          "title": "Komisja Europejska: Poland's fifth payment request for €7.9 billion",
+          "url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1730"
+        },
+        {
+          "title": "TVN24: Miliardy dla Polski. Jest decyzja Brukseli",
+          "url": "https://tvn24.pl/biznes/ze-swiata/miliardy-dla-polski-jest-decyzja-brukseli-st9183134"
+        }
+      ],
+      "tags": [
+        "gospodarka",
+        "kpo",
+        "ue",
+        "finanse"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-10-2102-10",
+      "section": "Gospodarka",
+      "title": "Wojna podbija koszty paliw",
+      "lead": "TVN24 pokazuje rachunek za konflikt na Bliskim Wschodzie.",
+      "whatHappened": "TVN24 opisuje, jak napięcia i wojna na Bliskim Wschodzie przekładają się na ceny paliw i większe koszty dla konsumentów. Artykuł pokazuje ekonomiczny efekt konfliktu zamiast samej dyplomatycznej retoryki.",
+      "keyFacts": [
+        "Wątek łączy politykę wojenną z rachunkami kierowców i firm.",
+        "Tło stanowią ceny ropy oraz niepewność wokół szlaków transportowych."
+      ],
+      "reactions": [
+        "Gospodarka reaguje szybciej niż polityka, bo rynek paliw natychmiast wycenia ryzyko."
+      ],
+      "whyItMatters": "To bezpośrednio wpływa na ceny transportu, logistyki i inflację kosztową.",
+      "context": "To krajowy ekonomiczny filtr na zagraniczny konflikt, uzupełniający wątek irański z tego samego slotu.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się nowe cenniki paliw po kolejnych depeszach z Bliskiego Wschodu.",
+        "Obserwuj reakcję rynku ropy i operatorów paliwowych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Rezygnacja. Słony rachunek za wojnę",
+          "url": "https://tvn24.pl/biznes/z-kraju/rezygnacja-slony-rachunek-za-wojne-st9182730"
+        }
+      ],
+      "tags": [
+        "gospodarka",
+        "paliwa",
+        "ropa",
+        "inflacja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-10-2102-11",
+      "section": "Technologia",
+      "title": "Amerykanie chcą mocniejszej kontroli mediów społecznościowych",
+      "lead": "Sondaż Reuters/Ipsos daje ponadpartyjny sygnał.",
+      "whatHappened": "TVN24 podaje, że trzy na pięciu Amerykanów popiera ściślejszą kontrolę firm prowadzących media społecznościowe. Wynik badania Reuters/Ipsos pokazuje ponadpartyjne poparcie dla ostrzejszych zasad wobec platform.",
+      "keyFacts": [
+        "Za ostrzejszym nadzorem opowiada się 61 procent badanych.",
+        "Poparcie widać zarówno wśród demokratów, jak i republikanów."
+      ],
+      "reactions": [
+        "To może wzmacniać presję regulacyjną na Big Tech w USA."
+      ],
+      "whyItMatters": "Regulacje platform społecznościowych wpływają na moderację treści, reklamę i odpowiedzialność firm.",
+      "context": "To nowy, szeroki sygnał społeczny w debacie o platformach i bezpieczeństwie użytkowników.",
+      "watchNext": [
+        "Sprawdź, czy ustawodawcy w USA przełożą sondaż na projekt prawa.",
+        "Obserwuj reakcje największych platform i grup branżowych."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Amerykanie chcą ściślejszej kontroli mediów społecznościowych",
+          "url": "https://tvn24.pl/biznes/tech/media-spolecznosciowe-pod-wiekszym-nadzorem-demokraci-i-republikanie-zgodni-st9182911"
+        }
+      ],
+      "tags": [
+        "technologia",
+        "social_media",
+        "regulacja",
+        "usa"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-10-2102-12",
+      "section": "Technologia",
+      "title": "Hakerzy z Korei Północnej eksperymentują z AI",
+      "lead": "Cyberataki mają być częściowo automatyzowane.",
+      "whatHappened": "TVN24 opisuje, że północnokoreańscy hakerzy tworzą oprogramowanie oparte na dużych modelach językowych i próbują automatyzować cyberataki. W materiale jako źródło wskazywana jest południowokoreańska firma Genians zajmująca się cyberbezpieczeństwem.",
+      "keyFacts": [
+        "Wątek dotyczy narzędzi opartych na LLM.",
+        "Celem ma być automatyzacja części ataków cybernetycznych."
+      ],
+      "reactions": [
+        "To wzmacnia obawy o szybsze i tańsze kampanie phishingowe oraz ataki na instytucje."
+      ],
+      "whyItMatters": "Połączenie państwowego cyberwywiadu i generatywnej AI zwiększa skalę zagrożenia dla firm i administracji.",
+      "context": "To najmocniejszy technologiczny sygnał dnia i dobrze spina się z debatą o kontroli platform i bezpieczeństwie cyfrowym.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się ostrzeżenia od firm cyberbezpieczeństwa lub rządowych CERT-ów.",
+        "Obserwuj, czy inne państwa potwierdzą ten wzorzec działań."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Hakerzy z Korei Północnej eksperymentują z AI",
+          "url": "https://tvn24.pl/biznes/tech/hakerzy-z-korei-polnocnej-tworza-oprogramowanie-oparte-na-ai-st9182050"
+        }
+      ],
+      "tags": [
+        "technologia",
+        "cyberbezpieczeństwo",
+        "ai",
+        "korea_północna"
+      ],
+      "priority": "high"
+    }
+  ]
+}
