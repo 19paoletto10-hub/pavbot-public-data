@@ -1,0 +1,467 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-10",
+  "runTime": "18:02",
+  "status": "Istotna aktualizacja",
+  "headline": "Burze w Polsce, wieczorna polityka w Warszawie i mocny blok bezpieczeństwa",
+  "summary": "RCB utrzymuje ostrzeżenia przed burzami i możliwymi przerwami w prądzie, w Warszawie liderzy koalicji spotykają się wieczorem, a z zagranicy najmocniej przebijają Ukraina, Chiny, Iran, Kolumbia i rekordowe temperatury w USA.",
+  "checkedSources": [
+    {
+      "title": "TVN24: najnowsze",
+      "url": "https://tvn24.pl/najnowsze"
+    },
+    {
+      "title": "TVN24: alert RCB 10/11.08",
+      "url": "https://tvn24.pl/tvnmeteo/polska/alert-rcb-10-11-08-burze-z-ulewami-i-silnym-wiatrem-mozliwe-przerwy-w-dostawie-pradu-st9182929?source=rss"
+    },
+    {
+      "title": "TVN24: spotkanie liderów koalicji",
+      "url": "https://tvn24.pl/polska/donald-tusk-wlodzimierz-czarzasty-i-wladyslaw-kosiniak-kamysz-maja-sie-spotkac-jako-liderzy-koalicji-15-pazdziernika-st9183200"
+    },
+    {
+      "title": "TVN24: gruźlica w przedszkolu",
+      "url": "https://tvn24.pl/tvnwarszawa/bialoleka/warszawa-gruzlica-w-przedszkolu-ustalenia-sanepidu-st9183211"
+    },
+    {
+      "title": "TVN24: ORP Wicher",
+      "url": "https://tvn24.pl/trojmiasto/gdynia-orp-wicher-gotowy-do-wodowania-tak-beda-wygladac-polskie-fregaty-st9182989"
+    },
+    {
+      "title": "gov.pl/RCB: komunikaty",
+      "url": "https://www.gov.pl/web/rcb/komunikaty"
+    },
+    {
+      "title": "BBN: zapowiedź chrztu i wodowania ORP Wicher",
+      "url": "https://www.bbn.gov.pl/pl/wydarzenia/10458%2CZAPOWIEDZ-Udzial-Prezydenta-RP-w-uroczystosci-chrztu-i-wodowania-fregaty-ORP-Wic.html"
+    },
+    {
+      "title": "MON: Miecznik dla Marynarki Wojennej RP",
+      "url": "https://www.gov.pl/web/obrona-narodowa/miecznik-dla-marynarki-wojennej-rp"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC Tech RSS",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    },
+    {
+      "title": "CNN Sitemap News",
+      "url": "https://www.cnn.com/sitemap/news.xml"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-08-10-1802-01",
+      "section": "Alerty",
+      "title": "Burze i możliwe przerwy w prądzie",
+      "lead": "RCB ostrzega przed burzami na noc.",
+      "whatHappened": "RCB utrzymuje alert burzowy na 10/11.08 z ostrzeżeniem o silnym wietrze, intensywnym deszczu i możliwych przerwach w dostawie prądu. TVN24 nadal pokazuje szeroki blok ostrzeżeń IMGW dla kraju.",
+      "keyFacts": [
+        "Alert obejmuje noc z 10 na 11 sierpnia.",
+        "W komunikacie pada wprost ryzyko przerw w dostawie prądu."
+      ],
+      "reactions": [
+        "Mieszkańcy i służby muszą liczyć się z lokalnymi utrudnieniami i krótkimi awariami."
+      ],
+      "whyItMatters": "To podbija ryzyko podtopień, wypadków i lokalnych przerw w infrastrukturze.",
+      "context": "To kontynuacja silnego pogodowego bloku z poprzedniego slotu.",
+      "watchNext": [
+        "Sprawdź, czy IMGW lub RCB zmienią poziom ostrzeżeń po zmroku.",
+        "Śledź lokalne komunikaty o podtopieniach i przerwach w ruchu."
+      ],
+      "sources": [
+        {
+          "title": "gov.pl/RCB: komunikaty",
+          "url": "https://www.gov.pl/web/rcb/komunikaty"
+        },
+        {
+          "title": "TVN24: alert RCB 10/11.08",
+          "url": "https://tvn24.pl/tvnmeteo/polska/alert-rcb-10-11-08-burze-z-ulewami-i-silnym-wiatrem-mozliwe-przerwy-w-dostawie-pradu-st9182929?source=rss"
+        }
+      ],
+      "tags": [
+        "pogoda",
+        "alerty",
+        "rcb",
+        "imgw"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-10-1802-02",
+      "section": "Polska",
+      "title": "Liderzy koalicji mają spotkać się wieczorem",
+      "lead": "Tusk, Czarzasty i Kosiniak-Kamysz mają rozmawiać dziś.",
+      "whatHappened": "TVN24 zapowiada wieczorne spotkanie liderów koalicji 15 października w składzie Donald Tusk, Włodzimierz Czarzasty i Władysław Kosiniak-Kamysz. W tle są spekulacje o zmianach w rządzie i napięciu wokół koalicji.",
+      "keyFacts": [
+        "To spotkanie ma się odbyć wieczorem 10 sierpnia.",
+        "Wątek dotyczy układu koalicyjnego, a nie pojedynczej ustawy."
+      ],
+      "reactions": [
+        "Rynek polityczny będzie czytał sygnały o możliwych zmianach personalnych."
+      ],
+      "whyItMatters": "Każda zmiana w koalicji może przełożyć się na tempo decyzji rządu.",
+      "context": "To świeży krajowy sygnał polityczny, którego nie było w poprzednim slocie.",
+      "watchNext": [
+        "Obserwuj, czy po spotkaniu pojawi się komunikat o rekonstrukcji lub nowych priorytetach.",
+        "Sprawdź reakcje partii koalicyjnych i opozycji."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: spotkanie liderów koalicji",
+          "url": "https://tvn24.pl/polska/donald-tusk-wlodzimierz-czarzasty-i-wladyslaw-kosiniak-kamysz-maja-sie-spotkac-jako-liderzy-koalicji-15-pazdziernika-st9183200"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "rząd",
+        "koalicja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-10-1802-03",
+      "section": "Polska",
+      "title": "Gruźlica w przedszkolu na Białołęce",
+      "lead": "Sanepid izoluje osobę chorą.",
+      "whatHappened": "TVN24 opisuje przypadek gruźlicy w stołecznym przedszkolu na Białołęce. Według materiału osoba chora została odizolowana, a sprawę prowadzi sanepid.",
+      "keyFacts": [
+        "Sprawa dotyczy placówki w Warszawie.",
+        "Na tym etapie komunikat mówi o izolacji, nie o szerokim ognisku."
+      ],
+      "reactions": [
+        "Rodzice i personel będą oczekiwać jasnych komunikatów sanitarnych."
+      ],
+      "whyItMatters": "To wątek zdrowia publicznego, który może uruchomić dodatkowe badania kontaktów.",
+      "context": "To nowy lokalny temat medyczny, niezależny od bloku pogodowego.",
+      "watchNext": [
+        "Sprawdź, czy sanepid poda więcej szczegółów o kontaktach i zaleceniach.",
+        "Obserwuj, czy pojawią się kolejne placówki objęte kontrolą."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: gruźlica w przedszkolu",
+          "url": "https://tvn24.pl/tvnwarszawa/bialoleka/warszawa-gruzlica-w-przedszkolu-ustalenia-sanepidu-st9183211"
+        }
+      ],
+      "tags": [
+        "zdrowie",
+        "warszawa",
+        "sanepid"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-10-1802-04",
+      "section": "Bezpieczeństwo",
+      "title": "ORP Wicher szykuje się do chrztu",
+      "lead": "BBN potwierdza udział prezydenta.",
+      "whatHappened": "BBN zapowiada udział prezydenta Karola Nawrockiego w uroczystości chrztu i wodowania ORP Wicher 12 sierpnia w Gdyni. TVN24 podaje, że kadłub pierwszej fregaty Miecznik został już zaprezentowany i wchodzi w końcową fazę przygotowań.",
+      "keyFacts": [
+        "ORP Wicher jest pierwszą jednostką programu Miecznik.",
+        "MON traktuje program jako jeden z filarów odbudowy zdolności Marynarki Wojennej."
+      ],
+      "reactions": [
+        "Wydarzenie będzie czytane jako symboliczny moment dla modernizacji floty."
+      ],
+      "whyItMatters": "To ważny sygnał dla bezpieczeństwa morskiego i przemysłu obronnego.",
+      "context": "Wczorajszy i dzisiejszy przekaz łączy ceremonię z szerszą modernizacją marynarki.",
+      "watchNext": [
+        "Sprawdź, czy po ceremonii padną nowe terminy dla ORP Burza i ORP Huragan.",
+        "Obserwuj komunikaty MON i PGZ po uroczystości."
+      ],
+      "sources": [
+        {
+          "title": "BBN: zapowiedź chrztu i wodowania ORP Wicher",
+          "url": "https://www.bbn.gov.pl/pl/wydarzenia/10458%2CZAPOWIEDZ-Udzial-Prezydenta-RP-w-uroczystosci-chrztu-i-wodowania-fregaty-ORP-Wic.html"
+        },
+        {
+          "title": "MON: Miecznik dla Marynarki Wojennej RP",
+          "url": "https://www.gov.pl/web/obrona-narodowa/miecznik-dla-marynarki-wojennej-rp"
+        },
+        {
+          "title": "TVN24: ORP Wicher",
+          "url": "https://tvn24.pl/trojmiasto/gdynia-orp-wicher-gotowy-do-wodowania-tak-beda-wygladac-polskie-fregaty-st9182989"
+        }
+      ],
+      "tags": [
+        "bezpieczeństwo",
+        "marynarka",
+        "miecznik",
+        "obrona"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-10-1802-05",
+      "section": "Świat",
+      "title": "Ukraiński dron zabił co najmniej 13 osób w Rosji",
+      "lead": "BBC opisuje atak w Tatarstanie.",
+      "whatHappened": "BBC podaje, że ukraiński atak dronem głęboko na terytorium Rosji zabił co najmniej 13 osób i zranił kolejne 75 w regionie Tatarstanu. To jeden z najkrwawszych takich ataków od początku pełnoskalowej wojny.",
+      "keyFacts": [
+        "BBC wskazuje także 75 rannych.",
+        "Materiał dotyczy głębokiego uderzenia w rosyjskie zaplecze."
+      ],
+      "reactions": [
+        "Moskwa prawdopodobnie wykorzysta to do kolejnej rundy propagandy i retoryki eskalacyjnej."
+      ],
+      "whyItMatters": "To pokazuje, że wojna dronowa nadal sięga daleko poza linię frontu.",
+      "context": "Wątek jest spójny z poprzednimi aktualizacjami o Ukrainie i Rosji.",
+      "watchNext": [
+        "Sprawdź, czy rosyjskie władze podadzą więcej danych o ofiarach i zniszczeniach.",
+        "Obserwuj reakcje Ukrainy i ewentualne dalsze uderzenia."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Ukrainian drone strike deep into Russia",
+          "url": "https://www.bbc.co.uk/news/articles/cvgjvgv926po?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "wojna",
+        "ukraina",
+        "rosja",
+        "bezpieczeństwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-10-1802-06",
+      "section": "Świat",
+      "title": "Chiny ewakuują około miliona osób przed burzą",
+      "lead": "Typhoon Dolphin uderza w wschodnie wybrzeże.",
+      "whatHappened": "BBC informuje, że w związku z nadejściem silnej burzy Chiny ewakuowały około miliona osób z domów. Materiał opisuje duże ryzyko w prowincjach na wschodzie kraju i wokół Szanghaju.",
+      "keyFacts": [
+        "Skala ewakuacji jest liczona w setkach tysięcy i milionach.",
+        "To jeden z większych pogodowych incydentów w azjatyckim cyklu newsowym."
+      ],
+      "reactions": [
+        "Władze lokalne muszą zabezpieczać porty, transport i infrastrukturę krytyczną."
+      ],
+      "whyItMatters": "Tak duża ewakuacja oznacza szeroki wpływ na logistykę i gospodarkę regionu.",
+      "context": "To światowy odpowiednik dzisiejszego polskiego bloku alertów pogodowych.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się oficjalne dane o zniszczeniach i ofiarach.",
+        "Obserwuj, czy burza przemieści się dalej w głąb lądu."
+      ],
+      "sources": [
+        {
+          "title": "BBC World: China evacuates one million from homes as massive storm arrives",
+          "url": "https://www.bbc.co.uk/news/articles/cx2rgzyplg2o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "chiny",
+        "pogoda",
+        "ewakuacja",
+        "świat"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-10-1802-07",
+      "section": "Świat",
+      "title": "Rekordowe 230 osób na jednej łodzi przez Kanał",
+      "lead": "BBC opisuje kolejny rekord przeprawy.",
+      "whatHappened": "BBC podaje, że przez Kanał La Manche przepłynęła jedna mała łódź z 230 osobami na pokładzie, co jest rekordem dla pojedynczej jednostki. Materiał podkreśla też skalę całego weekendowego ruchu na szlaku.",
+      "keyFacts": [
+        "To rekord liczby osób w jednym pojeździe.",
+        "BBC łączy ten przykład z taktyką przemytników."
+      ],
+      "reactions": [
+        "Sprawa prawdopodobnie odnowi debatę o kontroli granic i polityce azylowej w Wielkiej Brytanii."
+      ],
+      "whyItMatters": "To jeden z najbardziej obrazowych sygnałów presji migracyjnej na Kanale.",
+      "context": "Temat był już dziś widoczny w BBC, ale ten materiał daje mocniejszy punkt odniesienia.",
+      "watchNext": [
+        "Obserwuj odpowiedzi Home Office i służb granicznych.",
+        "Sprawdź, czy pojawi się pełny bilans weekendowych przepraw."
+      ],
+      "sources": [
+        {
+          "title": "BBC News: Record 230 people cross Channel in one small boat",
+          "url": "https://www.bbc.co.uk/news/articles/c4g4vxjg2yno?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "migracja",
+        "kanał",
+        "uk",
+        "świat"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-10-1802-08",
+      "section": "Polityka",
+      "title": "Netanyahu odrzuca plan Trumpa dla Gazy",
+      "lead": "BBC uważa, że to może nie być ostatnie słowo.",
+      "whatHappened": "BBC pisze, że odrzucenie przez Benjamina Netanjahu 15-punktowego planu Donalda Trumpa dla Gazy prawdopodobnie nie zamyka sprawy. Materiał sugeruje, że negocjacje i presja polityczna będą kontynuowane.",
+      "keyFacts": [
+        "Chodzi o plan obejmujący przyszłość Gazy i warunki dalszych rozmów.",
+        "BBC nie przedstawia tego jako definitywnego końca procesu."
+      ],
+      "reactions": [
+        "Reakcje mediatorów i partnerów regionalnych mogą szybko przesunąć temat z powrotem na czołówki."
+      ],
+      "whyItMatters": "To ważny sygnał dla wojny w Gazie i dla dyplomacji USA na Bliskim Wschodzie.",
+      "context": "Ten wątek był już obecny w porannym cyklu, ale nadal generuje świeże reakcje.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się nowe stanowiska USA, Izraela lub mediatorów.",
+        "Obserwuj, czy BBC dopisze kolejne szczegóły o planie."
+      ],
+      "sources": [
+        {
+          "title": "BBC World: Netanyahu's rejection of Trump's 15-point Gaza plan unlikely to be final word",
+          "url": "https://www.bbc.co.uk/news/articles/ce3q5282ep3o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "gaza",
+        "izrael",
+        "usa",
+        "dyplomacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-10-1802-09",
+      "section": "Gospodarka",
+      "title": "Iran płaci rosnącą cenę za presję ekonomiczną",
+      "lead": "CNN opisuje narastający koszt strategii Trumpa.",
+      "whatHappened": "CNN przekonuje, że strategia Donalda Trumpa wobec Iranu opiera się na wywieraniu presji ekonomicznej, a jej koszty narastają. Materiał czyta ten wątek jako konflikt między próbą zmuszenia Teheranu do ustępstw a rosnącymi skutkami ubocznymi dla rynku i polityki.",
+      "keyFacts": [
+        "CNN traktuje presję gospodarczą jako główny instrument nacisku.",
+        "Artykuł ma charakter analityczny, nie tylko newsowy."
+      ],
+      "reactions": [
+        "Rynek energii i polityka USA będą wrażliwe na każdy kolejny sygnał z Iranu."
+      ],
+      "whyItMatters": "To wątek łączący bezpieczeństwo, energię i politykę wewnętrzną Stanów Zjednoczonych.",
+      "context": "To nie jest prosty breaking news, tylko mocny materiał wyjaśniający trend.",
+      "watchNext": [
+        "Sprawdź, czy pojawią się nowe sygnały z negocjacji lub z rynku ropy.",
+        "Obserwuj reakcje administracji USA i partnerów regionalnych."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Trump’s Iran strategy depends on economic pain. The pain is mounting",
+          "url": "https://www.cnn.com/2026/08/10/middleeast/trump-iran-economic-pain-intl"
+        }
+      ],
+      "tags": [
+        "iran",
+        "usa",
+        "gospodarka",
+        "energia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-10-1802-10",
+      "section": "Świat",
+      "title": "Lipiec był najgorętszym miesiącem w USA od 1895 roku",
+      "lead": "CNN wiąże rekord z danymi klimatycznymi.",
+      "whatHappened": "CNN podaje, że lipiec był najgorętszym miesiącem w USA od początku pomiarów w 1895 roku. Materiał wpisuje ten wynik w szerszy obraz długiego, upalnego lata i rosnącej presji klimatycznej.",
+      "keyFacts": [
+        "To rekord odnoszony do całej serii pomiarowej od 1895 roku.",
+        "Artykuł opiera się na danych klimatycznych, nie na pojedynczym incydencie pogodowym."
+      ],
+      "reactions": [
+        "Temat może wrócić w debacie o infrastrukturze, zdrowiu publicznym i kosztach energii."
+      ],
+      "whyItMatters": "Rekordowe temperatury wpływają na rolnictwo, zdrowie i zużycie prądu.",
+      "context": "To szeroki klimatowy kontekst dla całego sierpniowego cyklu wiadomości.",
+      "watchNext": [
+        "Sprawdź, czy NOAA lub inne agencje podadzą dodatkowe dane regionalne.",
+        "Obserwuj, czy CNN rozszerzy materiał o skutki gospodarcze."
+      ],
+      "sources": [
+        {
+          "title": "CNN: July was the hottest month in the US since records began in 1895",
+          "url": "https://www.cnn.com/2026/08/10/climate/hottest-month-record-july-noaa"
+        }
+      ],
+      "tags": [
+        "klimat",
+        "usa",
+        "rekord",
+        "alerty"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-10-1802-11",
+      "section": "Technologia",
+      "title": "Firmy AI mówią o krótszej pracy, ludzie widzą 90 godzin tygodniowo",
+      "lead": "BBC Tech pokazuje rozjazd między obietnicą a praktyką.",
+      "whatHappened": "BBC Tech opisuje, że liderzy firm AI mówią o mniejszej ilości pracy, ale część pracowników raportuje nawet 90-godzinne tygodnie. Materiał pokazuje napięcie między marketingiem AI a realnym obciążeniem zespołów.",
+      "keyFacts": [
+        "BBC opiera się na relacjach pracowników i liderów branży.",
+        "Temat wykracza poza samą technologię i dotyczy rynku pracy."
+      ],
+      "reactions": [
+        "To może zaostrzyć debatę o produktywności, wypaleniu i realnych kosztach wdrażania AI."
+      ],
+      "whyItMatters": "Technologia przestaje być tylko produktem, a staje się sporem o organizację pracy.",
+      "context": "To jedyny wyraźnie techniczny materiał w tym slocie, ale nadal szeroko publiczny.",
+      "watchNext": [
+        "Sprawdź, czy BBC poda przykłady konkretnych firm lub zespołów.",
+        "Obserwuj, czy pojawi się odpowiedź branży AI na zarzut przeciążenia pracy."
+      ],
+      "sources": [
+        {
+          "title": "BBC Tech: Tech leaders say AI means less work - their staff say they work up to 90 hours a week",
+          "url": "https://www.bbc.co.uk/news/articles/cvgx4yd1gl2o?at_medium=RSS&at_campaign=rss"
+        }
+      ],
+      "tags": [
+        "ai",
+        "praca",
+        "technologia",
+        "bbc-tech"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-10-1802-12",
+      "section": "Świat",
+      "title": "Kolumbia po trzęsieniu ziemi 7,4",
+      "lead": "CNN podaje co najmniej 20 ofiar.",
+      "whatHappened": "CNN relacjonuje silne trzęsienie ziemi w Kolumbii o magnitudzie 7,4 i podaje co najmniej 20 ofiar śmiertelnych. Materiał wskazuje też na dalsze działania ratunkowe i ocenę szkód.",
+      "keyFacts": [
+        "To jeden z cięższych wstrząsów w regionalnym cyklu wiadomości.",
+        "CNN wiąże zdarzenie z ewakuacjami i znacznymi zniszczeniami."
+      ],
+      "reactions": [
+        "Lokalne władze muszą skupić się na akcji ratowniczej i sprawdzaniu kolejnych budynków."
+      ],
+      "whyItMatters": "Duże trzęsienie w Andach ma potencjalnie szeroki wpływ na ludność i infrastrukturę.",
+      "context": "To świeży globalny alert, który dobrze domyka pakiet światowych newsów.",
+      "watchNext": [
+        "Sprawdź, czy wzrośnie liczba ofiar lub rannych.",
+        "Obserwuj, czy pojawią się ostrzeżenia o wstrząsach wtórnych."
+      ],
+      "sources": [
+        {
+          "title": "CNN: Colombia earthquake: At least 20 dead after 7.4 tremor",
+          "url": "https://www.cnn.com/2026/08/10/world/live-news/colombia-earthquake-san-jose-del-palmar"
+        }
+      ],
+      "tags": [
+        "kolumbia",
+        "trzęsienie-ziemi",
+        "świat",
+        "alerty"
+      ],
+      "priority": "high"
+    }
+  ]
+}
