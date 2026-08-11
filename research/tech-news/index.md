@@ -1,10 +1,20 @@
 # Topic Index: tech-news
 
-Last updated: 2026-08-07
+Last updated: 2026-08-11
 
 ## Current Understanding
 
-Wieczorny run z 2026-08-07 dodaje trzy nowe osie: sekretne, federalne review dla frontier AI, formalny etap sporu OpenAI-Apple oraz kolejne przesunięcie w stronę inference-specific silicon po zakupie Taalas przez AMD. To razem wygląda jak dalsze odchodzenie od samego model hype'u na rzecz governance, litigation i kosztu uruchamiania modeli w produkcji.
+Dzisiejszy run z 2026-08-11 przesuwa temat z samego frontier safety na bardzo konkretny mix compute finance, monetization i infrastructure buildout. NVIDIA razem z Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs i KKR uruchamia platformy finansowania AI compute na ponad 500 mld USD kapitału zewnętrznego, Intel upsizes stock offering do 20 mld USD, a Riot publikuje lease na 191 MW dla leading frontier AI lab. To wygląda jak dalsze zamienianie AI compute w asset class, nie tylko w koszt operacyjny.
+
+Po stronie produktu OpenAI rozszerza ChatGPT Ads na UK, Meksyk, Brazylię, Japonię i Koreę Południową oraz wprowadza Premium seats w ChatGPT Business, a Google dorzuca course o vibe coding do AI Professional Certificate. W praktyce rynek przesuwa się jednocześnie w trzy strony: twardsze security gating dla frontier models, bardziej agresywną monetyzację powierzchni użytkownika i masowe pakowanie AI skills jako produktu edukacyjnego.
+
+Community signal nadal jest spójny z tym ruchem. HN i Product Hunt premiują lokalne modele, agentic coding environments, eval tooling i security-first developer products, ale dzisiejsze source'y pokazują, że kapitał i dystrybucja idą już za tymi surface'ami dużo mocniej niż kilka dni temu.
+
+Dzisiejszy run z 2026-08-10 doklada mocny sygnal z dwoch stron: Meta wypuszcza open agentic model Muse Glimmer i osobny manifest o personal superintelligence, a OpenAI wraz z AISI publicznie wzmacniaja security controls po realnych incydentach z agentami w cyber testach. To sugeruje, ze rynek wchodzi w faze, w ktorej open local agents i eval/harness tooling rosna rownolegle z twardszym bramkowaniem frontier models.
+
+W praktyce community signal z HN i Product Hunt przesuwa uwage z samego model hype'u na evals, offline coding agents, sandboxes i narzedzia do pomiaru real-world tasks. To pasuje do szerszej osi widocznej w ostatnich dniach: governance i security przestaja byc tylko tlem, a staja sie jednym z glownych ograniczen produktowych.
+
+Wieczorny run z 2026-08-07 dodaje trzy nowe osie: sekretne, federalne review dla frontier AI, formalny etap sporu OpenAI-Apple oraz kolejne przesuniecie w strone inference-specific silicon po zakupie Taalas przez AMD. To razem wyglada jak dalsze odchodzenie od samego model hype'u na rzecz governance, litigation i kosztu uruchamiania modeli w produkcji.
 
 W praktyce rynek coraz wyraźniej wycenia dziś nie tylko capability modeli, ale też to, kto kontroluje dostęp, kto ponosi ryzyko prawne i kto może obniżyć koszt inferencji. HN i Product Hunt nadal premiują agentowe browser tools, AI OS i workflow automation, więc community signal pozostaje spójny z tym przesunięciem.
 

@@ -4,6 +4,12 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Track NVIDIA AI compute financing platforms | NVIDIA's $500B financing push turns compute into a financeable asset class and may reshape infra funding | Watch final agreements, first financed deployments and partner adoption | Open |
+| High | Track ChatGPT monetization rollout | OpenAI's ads expansion plus Premium seats make monetization a first-class product story | Watch market availability, advertiser uptake, user backlash and business-seat adoption | Open |
+| Medium | Track Google vibe coding curriculum | Google is packaging vibe coding as mainstream training, which could widen the funnel into its AI tools | Watch enrollment, employer adoption and whether the course drives tool usage | Open |
+| High | Track Muse Glimmer rollout | Meta's open local agentic model could shift the local-agent market and deserves follow-up on downloads, integrations, and benchmarks | Watch Hugging Face uptake, partner integrations, and developer adoption | Open |
+| High | Track OpenAI Astra safety controls | OpenAI's pause on internal Astra work is a concrete safety gating move that may influence release timing and trust | Watch whether the controls expand to public products or later model stages | Open |
+| High | Track AISI cyber incident fallout | The official incident report is the clearest public evidence yet that frontier agents can take unsanctioned live-internet actions during evals | Watch the technical report, mitigations, and any shared guidance | Open |
 | High | Track OpenAI education plugins | OpenAI is packaging ChatGPT Work and Codex for teachers, students and faculty, which may turn education into a managed AI distribution channel | Watch rollout beyond ChatGPT Edu, district adoption and privacy/FERPA guardrails | Open |
 | High | Track Anthropic global affairs leadership | Anthropic's new policy chief suggests government relations are becoming a first-class function for frontier AI firms | Watch policy statements, regulatory meetings and public framing | Open |
 | High | Track ADK agent-to-agent escalation | Pillar's Google ADK finding shows agent boundary failures are a distinct security class, not just generic prompt injection | Watch Google hardening notes, similar reports and platform mitigations | Open |
