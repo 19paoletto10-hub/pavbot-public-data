@@ -1,8 +1,10 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-08-07
+Last updated: 2026-08-11
 
 ## Current Understanding
+
+Po wieczornym runie 11 sierpnia centrum ciężkości przesunęło się na cztery bloki: rosyjski atak na Ukrainę z użyciem północnokoreańskich rakiet i kolejną falą ofiar w Zaporożu, Dnieprze i Kijowie; amerykańsko-irańsko-izraelski spór o Hormuz i Gazę, w którym Trump przechodzi do sankcji i żąda kompensacji, a Netanyahu odrzuca plan rozejmu; krajową decyzję rządu o pomocy dla oszukanych beneficjentów Czystego Powietrza oraz pakiecie deregulacyjnym; oraz wielkie trzęsienie ziemi w Kolumbii, które weszło do globalnego bloku kryzysowego. RCB zszedł z poziomu ogólnokrajowych ostrzeżeń burzowych do czujności hydrologicznej i pożarowej.
 
 Ten temat służy do codziennego researchu najważniejszych wiadomości z Polski i
 ze świata oraz do przygotowania polskiego podcastu newsowego około godziny
