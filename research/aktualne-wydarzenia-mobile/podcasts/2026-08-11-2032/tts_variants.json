@@ -1,7 +1,6 @@
 {
-  "created_at": "2026-08-11T18:37:13.771612+00:00",
+  "created_at": "2026-08-11T18:57:49.260507+00:00",
   "language": "pl",
-  "language_detection": "local-polish-heuristic",
   "speed": 1.03,
   "variants": [
     {
@@ -10,9 +9,9 @@
       "voice": "pl_PL-gosia-medium",
       "model": "rhasspy/piper-voices:pl_PL-gosia-medium",
       "status": "ok",
-      "duration_seconds": 240.477687,
-      "output_file": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-11-2031/audio/female-piper/podcast.mp3",
-      "render_json": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-11-2031/audio/female-piper/render.json",
+      "duration_seconds": 170.308844,
+      "output_file": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-11-2032/audio/female-piper/podcast.mp3",
+      "render_json": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-11-2032/audio/female-piper/render.json",
       "error": null
     },
     {
@@ -23,7 +22,7 @@
       "status": "failed",
       "duration_seconds": null,
       "output_file": null,
-      "render_json": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-11-2031/audio/male-xtts/render.json",
+      "render_json": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-11-2032/audio/male-xtts/render.json",
       "error": "render interrupted after prolonged XTTS runtime; no final MP3 generated"
     }
   ]

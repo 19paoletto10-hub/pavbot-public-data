@@ -2,22 +2,18 @@
   "schemaVersion": 1,
   "topic": "aktualne-wydarzenia-mobile",
   "runDate": "2026-08-11",
-  "runTime": "20:31",
+  "runTime": "20:32",
   "status": "Material update",
-  "headline": "Krajowy lead przeszedł dziś z samego upału na bardziej złożony miks: ogólnokrajową suszę hydrologiczną, lokalne wezbranie na Pomorzu, 21 pożarów lasów w dobowym bilansie RCB i utrzymane stopnie alarmowe do 31 sierpnia.",
+  "headline": "Polska przesunęła dziś ciężar z samego upału na mieszankę lokalnego wezbrania w Pomorskiem, ogólnokrajowej suszy hydrologicznej i utrzymanych stopni alarmowych.",
   "leadParagraphs": [
-    "Krajowy lead przeszedł dziś z samego upału na bardziej złożony miks: ogólnokrajową suszę hydrologiczną, lokalne wezbranie na Pomorzu, 21 pożarów lasów w dobowym bilansie RCB i utrzymane stopnie alarmowe do 31 sierpnia.",
-    "W polityce krajowej dzień zdominowały dwa uporządkowane sygnały państwa: decyzje rządu po Radzie Ministrów i wojskowy tryb przygotowań do defilady oraz parady morskiej przed 15 sierpnia.",
-    "Za granicą najmocniej wybijają się rosyjskie uderzenia na Ukrainę z nowym wątkiem północnokoreańskich pocisków oraz jednoczesna presja na żeglugę w Bab al-Mandab i wokół zamkniętej cieśniny Ormuz."
+    "Polska przesunęła dziś ciężar z samego upału na mieszankę lokalnego wezbrania w Pomorskiem, ogólnokrajowej suszy hydrologicznej i utrzymanych stopni alarmowych.",
+    "Ceuta przestała być wyłącznie sporem o napływ migrantów: dziś Komisja pokazuje już wzajemne kontrole Hiszpanii i Włoch w Schengen.",
+    "KPRM przyjął pakiet naprawczy dla oszukanych beneficjentów programu „Czyste Powietrze” oraz dwa projekty deregulacyjne."
   ],
   "checkedSources": [
     {
       "title": "RCB: Raport dobowy",
       "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
-    },
-    {
-      "title": "MON: Dla mediów - zapowiedzi",
-      "url": "https://www.gov.pl/web/obrona-narodowa/dla-mediow-zapowiedzi"
     },
     {
       "title": "KPRM: Komunikat po posiedzeniu Rady Ministrów",
@@ -28,12 +24,24 @@
       "url": "https://www.gov.pl/web/premier/pomoc-poszkodowanym-w-ramach-programu-czyste-powietrze-oraz-projekty-deregulacyjne--kolejne-decyzje-rzadu"
     },
     {
-      "title": "AP: Russian attacks kill 10 in Ukraine as Zelenskyy says Moscow is getting more North Korean missiles",
-      "url": "https://apnews.com/article/russia-ukraine-war-north-korea-troops-missiles-7aff38d17dd195e63b7c55fc5a008c22"
+      "title": "MON: Dla mediów - zapowiedzi",
+      "url": "https://www.gov.pl/web/obrona-narodowa/dla-mediow-zapowiedzi"
     },
     {
-      "title": "AP: Houthi rebels attack vessel in Bab el-Mandeb, killing 6",
-      "url": "https://apnews.com/article/iran-us-strait-hormuz-august-11-2026-91e4efdfe1ac035b2065127550377289"
+      "title": "European Commission: Temporary Reintroduction of Border Control",
+      "url": "https://home-affairs.ec.europa.eu/policies/schengen/schengen-area/temporary-reintroduction-border-control_en"
+    },
+    {
+      "title": "AP: Spain imposes border checks on Italian travelers in tit-for-tat move over Ceuta migrants row",
+      "url": "https://apnews.com/article/spain-italy-ceuta-migrants-schengen-border-controls-f3fc82cadf7dce39d553126a47d61fd7"
+    },
+    {
+      "title": "AP: Russian attacks kill 10 in Ukraine as Zelenskyy says Moscow is getting more North Korean missiles",
+      "url": "https://apnews.com/article/7aff38d17dd195e63b7c55fc5a008c22"
+    },
+    {
+      "title": "AP: Houthi rebels attack vessel in Bab al-Mandeb, killing 6",
+      "url": "https://apnews.com/article/91e4efdfe1ac035b2065127550377289"
     },
     {
       "title": "European Commission: Code of Practice on Transparency of AI-generated Content",
@@ -227,7 +235,7 @@
           "sources": [
             {
               "title": "AP",
-              "url": "https://apnews.com/article/russia-ukraine-war-north-korea-troops-missiles-7aff38d17dd195e63b7c55fc5a008c22"
+              "url": "https://apnews.com/article/7aff38d17dd195e63b7c55fc5a008c22"
             }
           ],
           "tags": [
@@ -250,7 +258,7 @@
           "sources": [
             {
               "title": "AP",
-              "url": "https://apnews.com/article/iran-us-strait-hormuz-august-11-2026-91e4efdfe1ac035b2065127550377289"
+              "url": "https://apnews.com/article/91e4efdfe1ac035b2065127550377289"
             }
           ],
           "tags": [
@@ -318,7 +326,7 @@
   "audioArtifacts": [
     {
       "variant": "female-piper",
-      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-11-2031/audio/female-piper/podcast.mp3"
+      "path": "research/aktualne-wydarzenia-mobile/podcasts/2026-08-11-2032/audio/female-piper/podcast.mp3"
     }
   ]
 }
