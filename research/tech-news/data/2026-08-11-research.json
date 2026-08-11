@@ -5,230 +5,340 @@
   "runTime": null,
   "status": "Material update",
   "leadParagraphs": [
-    "Dzisiejszy run przesuwa oś z samego frontier safety na compute finance i monetyzację. NVIDIA, Intel i Riot pokazują, że AI infra jest dziś finansowana jak osobna klasa aktywów, a OpenAI i Google równolegle pakują AI w nowe powierzchnie przychodu i edukacji. Safety gating nadal rośnie, ale nie jest już jedyną dominantą."
+    "Dzisiejszy run przesuwa oś z samego frontier safety na compute finance, monetization i leadership reorgs. NVIDIA, Intel i Riot pokazują, że AI infra jest dziś finansowana jak osobna klasa aktywów, a Meta, Anthropic i Google dokładają do tego odpowiednio open-weight distribution, investor-ready science narrative i reorganizację szefostwa.",
+    "OpenAI równolegle zamienia ChatGPT w bardziej zróżnicowaną powierzchnię przychodu: testuje reklamy w Free/Go, rozszerza Premium seats w ChatGPT Business i obniża koszt GPT-5.6. Safety gating nadal rośnie, ale nie jest już jedyną dominantą. HN i Product Hunt wciąż premiują secure agent environments, local inference i code-review tooling, więc community signal pozostaje spójny z tym, co robi kapitał i produkt."
   ],
   "summaryBullets": [
-    "Infrastruktura: NVIDIA: infrastruktura AI i compute",
-    "AI: Intel: nowy sygnał AI",
-    "Regulacje: Riot Platforms: regulacyjny sygnał technologiczny"
+    "Infrastruktura: AI compute staje się asset class",
+    "AI: OpenAI monetyzuje ChatGPT",
+    "AI: Meta stawia na open weights"
   ],
   "articles": [
     {
-      "id": "tech-news-2026-08-11-0-nvidia-infrastruktura-ai-i-compute-d3803357bb",
+      "id": "tech-news-2026-08-11-0-ai-compute-staje-sie-asset-class-f22fbb22bb",
       "section": "Infrastruktura",
-      "title": "NVIDIA: infrastruktura AI i compute",
-      "standfirst": "NVIDIA ogłosiła platformy finansowania AI compute z Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs i KKR, z celem mobilizacji ponad $500 billion kapitału zewnętrznego dla AI infrastructure buildout. Firma wprost opisuje compute jako asset class.",
-      "whatHappened": "NVIDIA ogłosiła platformy finansowania AI compute z Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs i KKR, z celem mobilizacji ponad $500 billion kapitału zewnętrznego dla AI infrastructure buildout. Firma wprost opisuje compute jako asset class.",
-      "whyItMatters": "Ten sygnał jest ważny, bo przekłada się na koszt, dostępność i skalowanie usług AI. Kluczowy fakt z raportu: NVIDIA ogłosiła platformy finansowania AI compute z Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs i KKR, z celem mobilizacji ponad $500 billion kapitału zewnętrznego dla AI infrastructure buildout.",
+      "title": "AI compute staje się asset class",
+      "standfirst": "NVIDIA uruchamia platformy finansowania AI compute z Wall Street, Intel upsizing stock offering do 20 mld USD, a Riot podpisuje 20-letni lease na 191 MW z frontier AI lab.",
+      "whatHappened": "NVIDIA ogłosiła finansowanie AI compute z Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs i KKR; Intel podnosi ofertę akcji do 20 mld USD; Riot raportuje 20-letni lease na 191 MW w Rockdale; Meta mówi, że w Texasie płaci pełne koszty energii, wody i gridu.",
+      "whyItMatters": "Compute przestaje być tylko capexem. Staje się finansowalnym aktywem z własnym rynkiem leasingu, długu, utility politics i długiego horyzontu spłaty.",
       "deeperAnalysis": [
-        "NVIDIA ogłosiła platformy finansowania AI compute z Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs i KKR, z celem mobilizacji ponad $500 billion kapitału zewnętrznego dla AI infrastructure buildout. Firma wprost opisuje compute jako asset class. NVIDIA",
-        "Ten sygnał jest ważny, bo przekłada się na koszt, dostępność i skalowanie usług AI. Kluczowy fakt z raportu: NVIDIA ogłosiła platformy finansowania AI compute z Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs i KKR, z celem mobilizacji ponad $500 billion kapitału zewnętrznego dla AI infrastructure buildout.",
-        "Analiza opiera się na źródłach: NVIDIA.",
-        "W kolejnej rundzie warto sprawdzić, czy wątek infrastruktura przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+        "To nie jest już wyłącznie kwestia tego, kto ma najwięcej GPU. NVIDIA robi z infrastruktury AI produkt finansowy, a Riot zamienia energię, ziemię i przyłącza w długoterminowy kontrakt z frontier labem. Intel dokłada do tego klasyczny sygnał o potrzebie kapitału, bo w AI wyścig nie kończy się na benchmarkach.",
+        "Meta's Texas note jest ważna, bo pokazuje polityczny backlash na poziomie gridu i wody. Jeśli największe platformy muszą publicznie tłumaczyć, że płacą własną część rachunku, AI infra zaczyna przypominać public utility policy, a nie zwykły zakup cloud."
       ],
       "contextPoints": [
-        "Co się stało: NVIDIA ogłosiła platformy finansowania AI compute z Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs i KKR, z celem mobilizacji ponad $500 billion kapitału zewnętrznego dla AI infrastructure buildout.",
-        "Dlaczego ważne: infrastruktura decyduje o kosztach i dostępności produktów AI.",
-        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek infrastruktura przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+        "Co się stało: Wall Street, chipmakerzy i data-center operatorzy budują nowe kanały finansowania compute.",
+        "Dlaczego ważne: Dług, leasing i koszty energii stają się częścią produktu AI, nie tylko jego zaplecza.",
+        "Na co patrzeć dalej: Czy pojawią się kolejne financed deployments i czy regulatorzy zaczną pytać o ratepayer impact."
       ],
       "sources": [
         {
-          "title": "NVIDIA",
+          "title": "NVIDIA newsroom",
           "url": "https://nvidianews.nvidia.com/news/nvidia-partners-with-apollo-blackrock-blackstone-brookfield-goldman-sachs-and-kkr-to-establish-ai-compute-infrastructure-financing-platforms-to-mobilize-over-500-billion-of-third-party-capital"
-        }
-      ],
-      "priority": "High",
-      "tags": [
-        "Infrastruktura",
-        "AI",
-        "NVIDIA"
-      ]
-    },
-    {
-      "id": "tech-news-2026-08-11-1-intel-nowy-sygnal-ai-73c79c0db0",
-      "section": "AI",
-      "title": "Intel: nowy sygnał AI",
-      "standfirst": "Intel upsized public stock offering do $20 billion, pricing 210,526,315 shares at $95 per share i oczekując net proceeds ok. $19.",
-      "whatHappened": "Intel upsized public stock offering do $20 billion, pricing 210,526,315 shares at $95 per share i oczekując net proceeds ok. $19.",
-      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Intel upsized public stock offering do $20 billion, pricing 210,526,315 shares at $95 per share i oczekując net proceeds ok.",
-      "deeperAnalysis": [
-        "Intel upsized public stock offering do $20 billion, pricing 210,526,315 shares at $95 per share i oczekując net proceeds ok. $19.7 billion na general corporate purposes, w tym capex i working capital. Intel",
-        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Intel upsized public stock offering do $20 billion, pricing 210,526,315 shares at $95 per share i oczekując net proceeds ok.",
-        "Analiza opiera się na źródłach: Intel.",
-        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
-      ],
-      "contextPoints": [
-        "Co się stało: Intel upsized public stock offering do $20 billion, pricing 210,526,315 shares at $95 per share i oczekując net proceeds ok.",
-        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
-        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
-      ],
-      "sources": [
+        },
         {
-          "title": "Intel",
+          "title": "Intel press release",
           "url": "https://www.intc.com/news-events/press-releases/detail/1779/intel-announces-upsize-and-pricing-of-20-billion-common"
-        }
-      ],
-      "priority": "High",
-      "tags": [
-        "AI"
-      ]
-    },
-    {
-      "id": "tech-news-2026-08-11-2-riot-platforms-regulacyjny-sygnal-technologiczny-f7ff489189",
-      "section": "Regulacje",
-      "title": "Riot Platforms: regulacyjny sygnał technologiczny",
-      "standfirst": "Riot Platforms disclosed 20-year lease z leading frontier AI lab na 191 MW w Rockdale, z szacowanym initial contract revenue na ok. $9.",
-      "whatHappened": "Riot Platforms disclosed 20-year lease z leading frontier AI lab na 191 MW w Rockdale, z szacowanym initial contract revenue na ok. $9.",
-      "whyItMatters": "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Riot Platforms disclosed 20-year lease z leading frontier AI lab na 191 MW w Rockdale, z szacowanym initial contract revenue na ok.",
-      "deeperAnalysis": [
-        "Riot Platforms disclosed 20-year lease z leading frontier AI lab na 191 MW w Rockdale, z szacowanym initial contract revenue na ok. $9.1 billion i potencjalnie $16.1 billion przy dwóch extension options. Riot Platforms",
-        "Ten sygnał jest ważny, bo może zmieniać ryzyko prawne i warunki wdrażania nowych technologii. Kluczowy fakt z raportu: Riot Platforms disclosed 20-year lease z leading frontier AI lab na 191 MW w Rockdale, z szacowanym initial contract revenue na ok.",
-        "Analiza opiera się na źródłach: Riot Platforms.",
-        "W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
-      ],
-      "contextPoints": [
-        "Co się stało: Riot Platforms disclosed 20-year lease z leading frontier AI lab na 191 MW w Rockdale, z szacowanym initial contract revenue na ok.",
-        "Dlaczego ważne: regulacje ustawiają ramy ryzyka i compliance.",
-        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek regulacje przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
-      ],
-      "sources": [
+        },
         {
-          "title": "Riot Platforms",
+          "title": "Riot Platforms Q2 2026 results",
           "url": "https://www.riotplatforms.com/riot-platforms-reports-second-quarter-2026-financial-results-and-strategic-highlights/"
+        },
+        {
+          "title": "Meta Texas data center standards",
+          "url": "https://about.fb.com/news/2026/08/meta-upholds-texas-governor-greg-abbotts-data-center-standards/"
         }
       ],
       "priority": "High",
       "tags": [
-        "Regulacje",
-        "AI"
+        "NVIDIA",
+        "Intel",
+        "Riot Platforms",
+        "Meta",
+        "data center",
+        "financing"
       ]
     },
     {
-      "id": "tech-news-2026-08-11-3-openai-ads-i-openai-premium-nowy-sygnal-ai-7c2ea26909",
+      "id": "tech-news-2026-08-11-1-openai-monetyzuje-chatgpt-186a886d9e",
       "section": "AI",
-      "title": "OpenAI Ads i OpenAI Premium: nowy sygnał AI",
-      "standfirst": "OpenAI rozszerzyła ChatGPT Ads na UK, Meksyk, Brazylię, Japonię i Koreę Południową. OpenAI dodało też Premium seats w ChatGPT Business: 5x more usage, brak five-hour usage limit i możliwość miksowania Standard oraz Premium w jednym workspace.",
-      "whatHappened": "OpenAI rozszerzyła ChatGPT Ads na UK, Meksyk, Brazylię, Japonię i Koreę Południową. OpenAI dodało też Premium seats w ChatGPT Business: 5x more usage, brak five-hour usage limit i możliwość miksowania Standard oraz Premium w jednym workspace.",
-      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI rozszerzyła ChatGPT Ads na UK, Meksyk, Brazylię, Japonię i Koreę Południową.",
+      "title": "OpenAI monetyzuje ChatGPT",
+      "standfirst": "OpenAI uruchamia test reklam w ChatGPT na planach Free i Go w USA, a równolegle aktualizuje GPT-5.6 Sol, obniża ceny Luna/Terra i rozszerza Premium seats w Business.",
+      "whatHappened": "ChatGPT zaczyna test reklam dla zalogowanych dorosłych na Free i Go, paid tiers pozostają bez reklam, free users dostają GPT-5.6 Luna jako default z unlimited text chats i Think button, a Luna/Terra tanieją i dostają lepszą strukturę użycia.",
+      "whyItMatters": "OpenAI przestaje być tylko dostawcą modeli. Zaczyna budować pełną drabinę monetyzacji, w której free tier, biznesowe seaty i API pracują razem.",
       "deeperAnalysis": [
-        "OpenAI rozszerzyła ChatGPT Ads na UK, Meksyk, Brazylię, Japonię i Koreę Południową. OpenAI dodało też Premium seats w ChatGPT Business: 5x more usage, brak five-hour usage limit i możliwość miksowania Standard oraz Premium w jednym workspace. OpenAI Ads OpenAI Premium",
-        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: OpenAI rozszerzyła ChatGPT Ads na UK, Meksyk, Brazylię, Japonię i Koreę Południową.",
-        "Analiza opiera się na źródłach: OpenAI Ads, OpenAI Premium.",
-        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+        "To ważna zmiana, bo OpenAI przesuwa ciężar z samej capability na ekonomię produktu. Ads w free tier dają firmie nowy strumień przychodu, a jednoczesne cięcia cen GPT-5.6 Luna i Terra sugerują, że zespół chce przyciągnąć wysokowolumenowe użycie tam, gdzie koszt tokena jest krytyczny.",
+        "W praktyce ChatGPT staje się bardziej podobny do platformy niż do demo modelu. Paid users dostają lepszą ergonomię i brak reklam, Business dostaje Premium seats, a API dostaje Fast mode. To układ, który premiuje jasne segmenty użycia zamiast jednego, uniwersalnego produktu."
       ],
       "contextPoints": [
-        "Co się stało: OpenAI rozszerzyła ChatGPT Ads na UK, Meksyk, Brazylię, Japonię i Koreę Południową.",
-        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
-        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+        "Co się stało: OpenAI wprowadza reklamy w free tier i równolegle obniża koszt GPT-5.6.",
+        "Dlaczego ważne: Monetization, pricing i latency stają się jednym produktem.",
+        "Na co patrzeć dalej: Czy ads wyjdą poza USA i czy premium seats przyspieszą adoption w małych firmach."
       ],
       "sources": [
         {
-          "title": "OpenAI Ads",
+          "title": "OpenAI release notes",
+          "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+        },
+        {
+          "title": "OpenAI ChatGPT ads",
           "url": "https://openai.com/index/testing-ads-in-chatgpt/"
         },
         {
-          "title": "OpenAI Premium",
+          "title": "OpenAI GPT-5.6 Sol update",
+          "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/"
+        },
+        {
+          "title": "OpenAI GPT-5.6 pricing",
+          "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
+        },
+        {
+          "title": "OpenAI Premium seats",
           "url": "https://openai.com/index/premium-seats-chatgpt-business/"
         }
       ],
-      "priority": "Medium",
+      "priority": "High",
       "tags": [
-        "AI",
-        "OpenAI"
+        "OpenAI",
+        "ChatGPT",
+        "ads",
+        "GPT-5.6",
+        "pricing",
+        "premium seats"
       ]
     },
     {
-      "id": "tech-news-2026-08-11-4-openai-daybreak-i-openai-cyberbezpieczenstwo-i-ryzyko-technologiczne-5758d3feda",
-      "section": "Cyber",
-      "title": "OpenAI Daybreak i OpenAI: cyberbezpieczeństwo i ryzyko technologiczne",
-      "standfirst": "OpenAI opisała Daybreak Cyber Partner Program jako sposób wprowadzania frontier cyber models do partnerów security i services, z izolowanymi środowiskami testowymi, restricted network/tool access, loggingiem i sandboxed execution. OpenAI Daybreak",
-      "whatHappened": "OpenAI opisała Daybreak Cyber Partner Program jako sposób wprowadzania frontier cyber models do partnerów security i services, z izolowanymi środowiskami testowymi, restricted network/tool access, loggingiem i sandboxed execution. OpenAI Daybreak",
-      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: OpenAI opisała Daybreak Cyber Partner Program jako sposób wprowadzania frontier cyber models do partnerów security i services, z izolowanymi środowiskami testowymi, restricted network/tool access, loggingiem i sandboxed execution.",
+      "id": "tech-news-2026-08-11-2-meta-stawia-na-open-weights-be2719ad66",
+      "section": "AI",
+      "title": "Meta stawia na open weights",
+      "standfirst": "Meta wypuszcza Muse Glimmer, 30B open agentic model pod Apache 2.0, i publikuje manifest o personal superintelligence.",
+      "whatHappened": "Model ma działać lokalnie na Macu lub PC z jedną consumer GPU, wspiera local agents, function calling, local coding i LLM-as-a-judge evaluation, a Meta planuje integracje z llama.cpp, MLX i ExecuTorch.",
+      "whyItMatters": "Meta chce wygrać local/open agent lane i równolegle ustawić własną filozofię bezpieczeństwa jako distributed access, nie centralized control.",
       "deeperAnalysis": [
-        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: OpenAI opisała Daybreak Cyber Partner Program jako sposób wprowadzania frontier cyber models do partnerów security i services, z izolowanymi środowiskami testowymi, restricted network/tool access, loggingiem i sandboxed execution.",
-        "Analiza opiera się na źródłach: OpenAI Daybreak.",
-        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+        "Muse Glimmer jest czymś więcej niż kolejnym modelem do pobrania. To próba zbudowania ekosystemu wokół lokalnego, zawsze dostępnego agenta, który można testować, forkuować i wkleić w już istniejące narzędzia. Apache 2.0 i integracje z popularnymi runtimami obniżają tarcie wejścia.",
+        "Manifest Zuckerberg'a jest równie ważny jak sam model, bo ustawia ramę polityczną: bezpieczeństwo ma wynikać z tego, że ludzie mają własne, osobiste AI, a nie tylko z centralnego bramkowania przez korporacje. To jest wyraźna kontrpropozycja wobec labów stawiających na ścisłe gating i ograniczony access."
       ],
       "contextPoints": [
-        "Co się stało: OpenAI opisała Daybreak Cyber Partner Program jako sposób wprowadzania frontier cyber models do partnerów security i services, z izolowanymi środowiskami testowymi, restricted network/tool access, loggingiem i sandboxed execution.",
-        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
-        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+        "Co się stało: Meta otwiera model weights i dołącza ideologiczną ramę personal superintelligence.",
+        "Dlaczego ważne: Open/local staje się konkurencyjnym modelem dystrybucji dla agentów.",
+        "Na co patrzeć dalej: Czy Hugging Face, integracje runtime i benchmarki przełożą się na realne developer adoption."
+      ],
+      "sources": [
+        {
+          "title": "Meta AI Research",
+          "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model"
+        },
+        {
+          "title": "Meta manifesto",
+          "url": "https://about.fb.com/news/2026/08/the-future-is-for-everyone/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Meta",
+        "Muse Glimmer",
+        "open weights",
+        "local agents",
+        "superintelligence",
+        "Hugging Face"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-11-3-anthropic-buduje-case-pod-ipo-b9e11853dc",
+      "section": "AI",
+      "title": "Anthropic buduje case pod IPO",
+      "standfirst": "WSJ opisuje spotkania z inwestorami przed możliwym IPO, a oficjalne posty Anthropic pokazują postęp w matematyce i biology safeguards.",
+      "whatHappened": "Firma według WSJ chce opowiedzieć public market story wokół healthcare i biology. Jednocześnie Anthropic publikuje research note o Riemann zeta oraz aktualizację Fable 5, która obniża fallbacki dla biologicznych pytań o ok. 85%.",
+      "whyItMatters": "Anthropic próbuje połączyć bezpieczeństwo, naukową wiarygodność i wysoką wycenę w jedną narrację inwestorską.",
+      "deeperAnalysis": [
+        "To sygnał, że rynek nie wyceni już tylko benchmarków. Anthropic pokazuje inwestorom, że potrafi mówić jednocześnie językiem bezpieczeństwa i językiem realnej capability, szczególnie w obszarach takich jak matematyka, biologia i healthcare, które są jednocześnie obiecujące i regulacyjnie wrażliwe.",
+        "Jeśli ten przekaz się utrzyma, Anthropic może ustawić nowy standard dla frontier labs: nie tylko „najmocniejszy model”, ale „najbardziej wiarygodny model do wrażliwych zastosowań”. To ma znaczenie także dla OpenAI i innych graczy, którzy będą musieli tłumaczyć własne CAPEX, safety posture i revenue mix."
+      ],
+      "contextPoints": [
+        "Co się stało: WSJ opisuje investor meetings, a Anthropic publikuje naukowe i safety-oriented aktualizacje.",
+        "Dlaczego ważne: Public market story może premiować firmy, które umieją opowiedzieć nie tylko o wzroście, ale też o kontroli i zastosowaniach.",
+        "Na co patrzeć dalej: Czy pojawi się timing IPO filing i czy healthcare/biology stanie się centralnym pitch'em."
+      ],
+      "sources": [
+        {
+          "title": "WSJ",
+          "url": "https://www.wsj.com/tech/ai/anthropic-tries-to-shore-up-investor-confidence-ahead-of-blockbuster-ipo-0ff736ad"
+        },
+        {
+          "title": "Anthropic research",
+          "url": "https://www.anthropic.com/research/riemann-zeta"
+        },
+        {
+          "title": "Anthropic safeguards",
+          "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Anthropic",
+        "IPO",
+        "biology",
+        "math",
+        "Claude",
+        "healthcare"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-11-4-google-porzadkuje-leadership-ai-b4f464e45c",
+      "section": "Produkty",
+      "title": "Google porządkuje leadership AI",
+      "standfirst": "Google przenosi Demisa Hassabisa do roli Chair of Google DeepMind i Chief Scientist of Alphabet, a Jeff Dean z Sanjayem Ghemawatem spinają niezależny spinout.",
+      "whatHappened": "Koray Kavukcuoglu przejmuje większą odpowiedzialność za Google DeepMind, Jeff Dean i Sanjay Ghemawat zakładają public benefit corporation, a Google równolegle promuje kurs vibe coding w AI Professional Certificate.",
+      "whyItMatters": "To nie jest kosmetyczna roszada. Google rozdziela strategiczny research, bieżącą operację i masowe pakowanie AI skills do produktu edukacyjnego.",
+      "deeperAnalysis": [
+        "Zmiana na szczycie DeepMind mówi, że Google traktuje AI jako program o dwóch prędkościach: część badawczo-strategiczna ma zostać bliżej wizji AGI i science, a część produktowa ma szybciej dowozić Gemini, Search i tools. Spinout Jeffa Deana pokazuje, że nawet w obrębie jednej firmy powstaje miejsce na osobną ścieżkę badawczo-inkubacyjną.",
+        "Kurs vibe coding jest ważny, bo zmienia sposób dystrybucji kompetencji. Google nie tylko buduje modele, ale też próbuje znormalizować workflow „buduj bez klasycznego kodowania”, co może zasilać zarówno consumer AI, jak i demand na niskotarciowe narzędzia developerowe."
+      ],
+      "contextPoints": [
+        "Co się stało: Leadership reset i edukacyjny funnel są ogłoszone tego samego dnia.",
+        "Dlaczego ważne: AI staje się równocześnie kwestią organizacji, researchu i mass-market skills.",
+        "Na co patrzeć dalej: Czy Google utrzyma tempo release'ów i czy vibe coding realnie przyciągnie nowych użytkowników do AI tools."
+      ],
+      "sources": [
+        {
+          "title": "Google leadership blog",
+          "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
+        },
+        {
+          "title": "Google vibe coding course",
+          "url": "https://blog.google/company-news/outreach-and-initiatives/grow-with-google/vibe-coding-course/"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "DeepMind",
+        "Jeff Dean",
+        "vibe coding",
+        "education",
+        "Gemini"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-11-5-openai-daybreak-trzyma-frontier-cyber-pod-kontrola-952f271ab5",
+      "section": "Cyber",
+      "title": "OpenAI Daybreak trzyma frontier cyber pod kontrolą",
+      "standfirst": "OpenAI rozszerza Daybreak partner program i trzyma frontier cyber models w izolowanych środowiskach z loggingiem i sandboxed execution.",
+      "whatHappened": "Firma opisuje restricted network and tool access, isolated testing environments, monitoring i partnerski model dystrybucji dla cyber-capable systems. To kontynuuje wcześniejsze zaostrzenie kontroli po realnych incydentach z agentami w testach.",
+      "whyItMatters": "Safety gating przestaje być dodatkiem do produktu i staje się warstwą dystrybucji, partner access i release timing.",
+      "deeperAnalysis": [
+        "OpenAI wyraźnie rozdziela dziś dwa kanały: z jednej strony ChatGPT jako coraz bardziej monetizowany surface, z drugiej frontier cyber capabilities z twardszym bramkowaniem. To pokazuje, że najpotężniejsze modele nie trafiają po prostu na rynek, tylko do programów partnerskich z ograniczonym dostępem.",
+        "To ważne nie tylko dla OpenAI. Jeśli inne labs zobaczą, że bezpieczeństwo, logging i sandboxing są częścią realnej komercjalizacji modeli, rynek może szybciej przejść do standaryzowanego modelu kontrolek dla agentów i cyber use cases."
+      ],
+      "contextPoints": [
+        "Co się stało: Daybreak poszerza partner program i wzmacnia izolację testów.",
+        "Dlaczego ważne: Frontier security staje się produktem dystrybucji, a nie tylko policy statement.",
+        "Na co patrzeć dalej: Czy podobne bramki pojawią się przy innych high-risk model tiers."
       ],
       "sources": [
         {
           "title": "OpenAI Daybreak",
           "url": "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/"
-        }
-      ],
-      "priority": "Low",
-      "tags": [
-        "Cyber",
-        "AI",
-        "OpenAI"
-      ]
-    },
-    {
-      "id": "tech-news-2026-08-11-5-google-nowy-sygnal-ai-dc0f9741cf",
-      "section": "AI",
-      "title": "Google: nowy sygnał AI",
-      "standfirst": "Google dodało kurs o vibe coding do Google AI Professional Certificate i promuje go jako drogę do budowania, testowania i deployowania aplikacji bez wcześniejszego experience codingowego. Google",
-      "whatHappened": "Google dodało kurs o vibe coding do Google AI Professional Certificate i promuje go jako drogę do budowania, testowania i deployowania aplikacji bez wcześniejszego experience codingowego. Google",
-      "whyItMatters": "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Google dodało kurs o vibe coding do Google AI Professional Certificate i promuje go jako drogę do budowania, testowania i deployowania aplikacji bez wcześniejszego experience codingowego.",
-      "deeperAnalysis": [
-        "Ten sygnał jest ważny, bo wpływa na tempo adopcji modeli, agentów i narzędzi AI w produktach. Kluczowy fakt z raportu: Google dodało kurs o vibe coding do Google AI Professional Certificate i promuje go jako drogę do budowania, testowania i deployowania aplikacji bez wcześniejszego experience codingowego.",
-        "Analiza opiera się na źródłach: Google.",
-        "W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
-      ],
-      "contextPoints": [
-        "Co się stało: Google dodało kurs o vibe coding do Google AI Professional Certificate i promuje go jako drogę do budowania, testowania i deployowania aplikacji bez wcześniejszego experience codingowego.",
-        "Dlaczego ważne: zmiana może przyspieszać praktyczne wdrożenia AI.",
-        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek ai przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
-      ],
-      "sources": [
+        },
         {
-          "title": "Google",
-          "url": "https://blog.google/company-news/outreach-and-initiatives/grow-with-google/vibe-coding-course/"
+          "title": "OpenAI cyber capabilities",
+          "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/"
+        },
+        {
+          "title": "AISI incident report",
+          "url": "https://www.aisi.gov.uk/blog/incident-report-unsanctioned-agent-behaviour-during-cyber-testing"
         }
       ],
       "priority": "Medium",
       "tags": [
-        "AI"
+        "OpenAI",
+        "cyber",
+        "safety",
+        "sandbox",
+        "agents",
+        "Daybreak"
       ]
     },
     {
-      "id": "tech-news-2026-08-11-6-hacker-news-i-product-hunt-cyberbezpieczenstwo-i-ryzyko-technologiczne-d93c31d6ab",
-      "section": "Cyber",
-      "title": "Hacker News i Product Hunt: cyberbezpieczeństwo i ryzyko technologiczne",
-      "standfirst": "Hacker News i Product Hunt nadal mocno premiują agentic coding environments, local inference, security tooling i eval infrastructure. Hacker News Product Hunt",
-      "whatHappened": "Hacker News i Product Hunt nadal mocno premiują agentic coding environments, local inference, security tooling i eval infrastructure. Hacker News Product Hunt",
-      "whyItMatters": "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: Hacker News i Product Hunt nadal mocno premiują agentic coding environments, local inference, security tooling i eval infrastructure.",
+      "id": "tech-news-2026-08-11-6-hn-i-product-hunt-premiuja-agentowa-infrastrukture-db37ac21ff",
+      "section": "Produkty",
+      "title": "HN i Product Hunt premiują agentową infrastrukturę",
+      "standfirst": "HN i Product Hunt nadal rewardują secure environments, local inference i code-review tooling zamiast pustych chatbot demo.",
+      "whatHappened": "Na HN wysoko są dziś Apple Silicon macOS VM inference, reasoning-trace stealing, Manus returning independent i Claude content marking, a Product Hunt prowadzą Tines 3B, BetterClaw, Xirp, Bullet, Framer AI Agents, Gitar i agent-manager.",
+      "whyItMatters": "Community signal pokazuje, że builderzy kupują już nie model, tylko kontrolę, automatyzację i środowisko uruchomieniowe.",
       "deeperAnalysis": [
-        "Ten sygnał jest ważny, bo dotyczy odporności systemów, ochrony danych i ryzyka operacyjnego. Kluczowy fakt z raportu: Hacker News i Product Hunt nadal mocno premiują agentic coding environments, local inference, security tooling i eval infrastructure.",
-        "Analiza opiera się na źródłach: Hacker News, Product Hunt.",
-        "W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+        "HN jest dziś dobrym barometrem dojrzałości rynku: zamiast ogólnych zachwytów nad AI, front page pokazuje wydajność inference, security i provenance. Product Hunt potwierdza ten sam wzorzec od strony product launchów, gdzie wygrywają secure environments, agent deploy tools i workflow products.",
+        "To sugeruje, że kolejny etap rynku nie jest o kolejnym „wow demo”, tylko o tym, kto potrafi dać kontrolę nad agentem, jego kosztami, jego pamięcią i jego miejscem w istniejącym stacku. To pasuje do całej dzisiejszej osi od compute finance po premium access i sandboxed execution."
       ],
       "contextPoints": [
-        "Co się stało: Hacker News i Product Hunt nadal mocno premiują agentic coding environments, local inference, security tooling i eval infrastructure.",
-        "Dlaczego ważne: cyberbezpieczeństwo wpływa bezpośrednio na zaufanie i operacje.",
-        "Na co patrzeć dalej: W kolejnej rundzie warto sprawdzić, czy wątek cyber przełoży się na konkretne decyzje produktowe, regulacyjne albo infrastrukturalne."
+        "Co się stało: HN i PH nadal premiują produkty wokół agentów, lokalnego uruchamiania i review.",
+        "Dlaczego ważne: Early demand signal wskazuje na narzędzia, nie tylko na modele.",
+        "Na co patrzeć dalej: Czy secure agent environments i local inference przełożą się na trwałe przychody."
       ],
       "sources": [
         {
-          "title": "Hacker News",
+          "title": "Hacker News front page",
           "url": "https://news.ycombinator.com/"
         },
         {
-          "title": "Product Hunt",
+          "title": "Product Hunt daily leaderboard",
           "url": "https://www.producthunt.com/leaderboard/daily/2026/8/11"
         }
       ],
       "priority": "Medium",
       "tags": [
-        "Cyber"
+        "Hacker News",
+        "Product Hunt",
+        "agents",
+        "local inference",
+        "code review",
+        "eval"
       ]
     }
   ],
-  "podcastTopics": [],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "AI compute staje się asset class",
+      "rationale": "NVIDIA, Intel i Riot pokazują, że AI infra jest finansowana jak osobna klasa aktywów, a nie zwykły capex.",
+      "sourcesLabel": "NVIDIA newsroom; Intel press release; Riot Platforms; Meta Texas note"
+    },
+    {
+      "priority": "High",
+      "title": "OpenAI monetyzuje ChatGPT",
+      "rationale": "Ads w Free/Go, Premium seats w Business i tańszy GPT-5.6 zmieniają ChatGPT w bardziej złożony produkt przychodowy.",
+      "sourcesLabel": "OpenAI release notes; ChatGPT ads; GPT-5.6 pricing"
+    },
+    {
+      "priority": "High",
+      "title": "Meta stawia na open weights",
+      "rationale": "Muse Glimmer i personal superintelligence to mocny sygnał, że Meta chce wygrać local/open agent lane.",
+      "sourcesLabel": "Meta AI Research; Meta manifesto"
+    },
+    {
+      "priority": "High",
+      "title": "Anthropic buduje case pod IPO",
+      "rationale": "Investor meetings, healthcare/biology i science milestones pokazują, jak Anthropic ustawia się pod public market story.",
+      "sourcesLabel": "WSJ; Anthropic research; Anthropic safeguards"
+    },
+    {
+      "priority": "High",
+      "title": "Google resetuje leadership AI",
+      "rationale": "Hassabis, Koray i Jeff Dean oznaczają strategiczny reset w Google DeepMind, a vibe coding course poszerza funnel.",
+      "sourcesLabel": "Google leadership blog; Google vibe coding course"
+    },
+    {
+      "priority": "Medium",
+      "title": "OpenAI Daybreak i frontier cyber",
+      "rationale": "Security gating nadal formuje dostęp do najpotężniejszych modeli i może wyznaczać standard dla partnerów.",
+      "sourcesLabel": "OpenAI Daybreak; OpenAI cyber capability post; AISI incident report"
+    },
+    {
+      "priority": "Medium",
+      "title": "HN i PH pokazują agent economy",
+      "rationale": "Community signal nadal premiuje secure environments, local inference i code review, czyli to, co realnie kupują builderzy.",
+      "sourcesLabel": "Hacker News; Product Hunt"
+    }
+  ],
   "checkedSources": [
     {
       "title": "NVIDIA newsroom: AI compute infrastructure financing platforms",
@@ -243,12 +353,44 @@
       "url": "https://www.riotplatforms.com/riot-platforms-reports-second-quarter-2026-financial-results-and-strategic-highlights/"
     },
     {
+      "title": "Meta data center standards",
+      "url": "https://about.fb.com/news/2026/08/meta-upholds-texas-governor-greg-abbotts-data-center-standards/"
+    },
+    {
+      "title": "OpenAI: Testing ads in ChatGPT",
+      "url": "https://openai.com/index/testing-ads-in-chatgpt/"
+    },
+    {
+      "title": "OpenAI: Improving GPT-5.6 Sol in ChatGPT",
+      "url": "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/"
+    },
+    {
+      "title": "OpenAI: Advancing the price-performance frontier with GPT-5.6",
+      "url": "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/"
+    },
+    {
       "title": "OpenAI: Daybreak cyber partner program",
       "url": "https://openai.com/index/putting-frontier-cyber-models-in-more-trusted-hands/"
     },
     {
-      "title": "OpenAI: ChatGPT ads rollout and Premium seats",
-      "url": "https://openai.com/index/testing-ads-in-chatgpt/"
+      "title": "Meta AI Research: Introducing Muse Glimmer",
+      "url": "https://research.meta.ai/blog/introducing-muse-glimmer-open-agentic-model"
+    },
+    {
+      "title": "Meta: The Future is for Everyone",
+      "url": "https://about.fb.com/news/2026/08/the-future-is-for-everyone/"
+    },
+    {
+      "title": "Anthropic math capabilities",
+      "url": "https://www.anthropic.com/research/riemann-zeta"
+    },
+    {
+      "title": "Anthropic biology safeguards",
+      "url": "https://www.anthropic.com/news/improving-fable-5-s-biology-safeguards"
+    },
+    {
+      "title": "Google: The next chapter of our AI momentum",
+      "url": "https://blog.google/company-news/inside-google/message-ceo/next-chapter-ai-momentum/"
     },
     {
       "title": "Google: vibe coding course in AI Professional Certificate",

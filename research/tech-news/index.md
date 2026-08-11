@@ -10,6 +10,8 @@ Po stronie produktu OpenAI rozszerza ChatGPT Ads na UK, Meksyk, Brazylię, Japon
 
 Community signal nadal jest spójny z tym ruchem. HN i Product Hunt premiują lokalne modele, agentic coding environments, eval tooling i security-first developer products, ale dzisiejsze source'y pokazują, że kapitał i dystrybucja idą już za tymi surface'ami dużo mocniej niż kilka dni temu.
 
+Równolegle Meta dokłada open-weight distribution przez Muse Glimmer i manifest personal superintelligence, Anthropic buduje case pod IPO przez science/biology, a Google porządkuje leadership wokół Hassabisa, Koraya i spinoutu Jeffa Deana. To utrzymuje równoległe osie open/local, science/biomed i strategicznego resetu organizacji AI.
+
 Dzisiejszy run z 2026-08-10 doklada mocny sygnal z dwoch stron: Meta wypuszcza open agentic model Muse Glimmer i osobny manifest o personal superintelligence, a OpenAI wraz z AISI publicznie wzmacniaja security controls po realnych incydentach z agentami w cyber testach. To sugeruje, ze rynek wchodzi w faze, w ktorej open local agents i eval/harness tooling rosna rownolegle z twardszym bramkowaniem frontier models.
 
 W praktyce community signal z HN i Product Hunt przesuwa uwage z samego model hype'u na evals, offline coding agents, sandboxes i narzedzia do pomiaru real-world tasks. To pasuje do szerszej osi widocznej w ostatnich dniach: governance i security przestaja byc tylko tlem, a staja sie jednym z glownych ograniczen produktowych.
