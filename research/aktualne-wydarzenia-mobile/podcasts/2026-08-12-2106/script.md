@@ -1,23 +1,15 @@
-# Wieczorny brief. 12 sierpnia 2026, godzina dwudziesta pierwsza sześć
+# Wieczorny brief. 12 sierpnia 2026, godzina dwudziesta pierwsza i sześć minut
 
 Dobry wieczór. To jest wieczorny brief o aktualnych wydarzeniach z Polski i świata.
 
-Dziś dzień nie wygląda jak jeden wielki przełom, tylko jak kilka testów odporności naraz. Woda, granice, okręty i szlaki morskie przypominają, że kryzys coraz częściej nie krzyczy, tylko pracuje po cichu w tle.
+Polska dziś nie dostała nowej burzy z nieba, ale dostała coś bardziej upartego: suszę hydrologiczną w skali kraju i lokalne wezbranie w Pomorskiem. RCB pisze jasno, że meteorologicznie jest spokojniej, ale wodnie i operacyjnie kraj dalej żyje w trybie czujności. Czyli lany sezon, tylko bez lania.
 
-W Polsce nadal nie ma nowego pogodowego fajerwerku, ale to nie znaczy, że jest lekko. Rządowe Centrum Bezpieczeństwa utrzymuje suszę hydrologiczną w całym kraju i raportuje dwadzieścia pożarów lasów w poprzedniej dobie. Czyli mniej dramatycznego nieba, więcej bardzo przyziemnego pytania, ile jeszcze da się jechać na zasobach i czujności.
+W Gdyni państwo zrobiło dziś pokaz bardzo praktycznego patriotyzmu. Premier i prezydent byli przy chrzcie i wodowaniu ORP Wicher, a rząd przypomina, że program Miecznik ma wartość piętnastu miliardów złotych i ma dać Polsce trzy nowe fregaty. To już nie jest powerpoint o morzu, tylko stal, dźwig i kalendarz.
 
-Najmocniejszy krajowy konkret dnia to ORP Wicher. W Gdyni odbył się chrzest pierwszej fregaty programu Miecznik. Rząd mówi o programie wartym piętnaście miliardów złotych, a państwowe komunikaty już ustawiają harmonogram szerzej: po Wichrze mają iść kolejne jednostki, Burza i Huragan, a wejście pierwszej fregaty do służby planowane jest na dwa tysiące dwudziesty dziewiąty rok. Czyli tym razem nie samo święto, tylko święto z terminarzem.
+Za granicą Ukraina ogłosiła odzyskanie dwudziestu sześciu miejscowości w odcinku oleksandriwskim, a Korea Północna odpaliła kolejny pocisk balistyczny na wodach między półwyspem a Japonią. W tle Rosja i jej wojna coraz mocniej wyglądają jak konflikt na łańcuchach dostaw, nie tylko na mapie.
 
-Do tego dochodzi drugi ważny publiczny ruch, bardziej cywilny, ale też bardzo konkretny. Ministerstwo Klimatu i Środowiska dokłada kolejne dwa miliardy złotych do termomodernizacji szkół i przedszkoli. Umowy obejmują już pięćset placówek, a cel to tysiąc. Mówiąc krótko: mniej huku niż przy fregacie, ale dla rachunków i komfortu nauki może to być równie odczuwalne.
+A na morzu nadal drogo i nerwowo. Huti zaatakowali statek w Bab al-Mandab; wśród sześciu ofiar są trzej Pakistańczycy. Jeśli Ormuz jest zamknięty, a Bab al-Mandab też zaczyna brać krwawe żniwo, armatorzy nie mają już przyzwoitej drogi ewakuacyjnej. W praktyce mówiąc: światowy handel znów płaci za cudze ambicje.
 
-W Europie Ceuta znów wraca jako temat prewencji. Maroko wzmacnia zabezpieczenia przy Ceucie i Melilli po nowych wezwaniach w mediach społecznościowych do masowych przekroczeń granicy. Jednocześnie Komisja Europejska dalej pokazuje aktywne tymczasowe kontrole Hiszpanii i Włoch. Schengen nadal działa, ale ostatnio trochę jak drzwi z czujnikiem ruchu: teoretycznie automatyczne, praktycznie co chwilę ktoś sprawdza, czy na pewno się domknęły.
+Technologia nie daje dziś wielkiego zwrotu. AI Act dalej jest w fazie egzekwowania, Komisja liczy sygnatariuszy kodeksu praktyk, a Ministerstwo Cyfryzacji przypomina o etykietach i oznaczaniu treści. To brzmi sucho, ale dla użytkownika znaczy po prostu: miej oko, zanim uwierzysz w każdy wygenerowany obrazek i każdy pewny ton.
 
-W Ukrainie dalej ciężko. Rosyjskie ataki zabiły co najmniej dziesięć osób, a Wołodymyr Zełenski ponownie mówi o użyciu północnokoreańskich pocisków balistycznych i o dalszym wsparciu z Pjongjangu. To ważne, bo wojna coraz bardziej pokazuje nie tylko front, ale też zaplecze dostaw i międzynarodowe łańcuchy wsparcia dla agresora.
-
-Na Bliskim Wschodzie też nie ma ulgi. Dzisiejszy follow-up po ataku Hutich doprecyzowuje, że w śmiertelnym uderzeniu na statek zginęli także trzej obywatele Pakistanu. A kiedy Bab al-Mandab zbiera ofiary, a Ormuz pozostaje problemem, armatorzy dostają prosty komunikat: bezpieczny objazd też przestaje być bezpieczny.
-
-Technologicznie nadal trwa wejście w życie praktycznej warstwy AI Act. Komisja Europejska trzyma kurs na oznaczanie treści generowanych przez sztuczną inteligencję, a polskie Ministerstwo Cyfryzacji opisuje krajową ustawę wdrożeniową. To może nie brzmi jak ekscytująca premiera, ale właśnie od takich etykiet zależy, czy użytkownik wie, kiedy patrzy na człowieka, a kiedy na bardzo zdolny automat.
-
-Na jutro warto pilnować pięciu rzeczy: czy susza przełoży się na lokalne ograniczenia, czy po Wichrze pojawią się nowe szczegóły wykonawcze dla programu Miecznik, czy szkoły dostaną szybki plan wdrożenia inwestycji, czy Ceuta znów podniesie temperaturę w Schengen i czy Morze Czerwone dołoży kolejny rachunek do globalnej żeglugi.
-
-To był wieczorny brief. Wracamy w kolejnym wydaniu.
+To był wieczorny brief. Jutro warto sprawdzić, czy Pomorskie nie przejdzie z ostrzeżenia w ograniczenia, czy Miecznik dostanie konkretny harmonogram dalszych okrętów i czy Morze Czerwone nie dołoży kolejnego rachunku do rachunku za bezpieczeństwo.
