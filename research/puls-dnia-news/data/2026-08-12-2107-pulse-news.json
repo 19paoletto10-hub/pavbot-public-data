@@ -1,0 +1,573 @@
+{
+  "schemaVersion": 1,
+  "topic": "puls-dnia-news",
+  "runDate": "2026-08-12",
+  "runTime": "21:07",
+  "status": "Istotna aktualizacja",
+  "headline": "Zaćmienie Słońca, wyciek MyDr i nowy blok ryzyk w Europie",
+  "summary": "Dzisiejszy puls łączy zaćmienie Słońca, wyciek danych MyDr, reakcję na reportaż o recyklingu, Ukrainę, rynek ropy i rosnący blok AI/cyber.",
+  "checkedSources": [
+    {
+      "title": "TVN24: najnowsze",
+      "url": "https://tvn24.pl/"
+    },
+    {
+      "title": "TVN24 Biznes",
+      "url": "https://tvn24.pl/biznes"
+    },
+    {
+      "title": "TVN24 Meteo",
+      "url": "https://tvn24.pl/tvnmeteo"
+    },
+    {
+      "title": "BBC News RSS",
+      "url": "https://feeds.bbci.co.uk/news/rss.xml"
+    },
+    {
+      "title": "BBC World RSS",
+      "url": "https://feeds.bbci.co.uk/news/world/rss.xml"
+    },
+    {
+      "title": "BBC Tech RSS",
+      "url": "https://feeds.bbci.co.uk/news/technology/rss.xml"
+    },
+    {
+      "title": "CNN Sitemap News",
+      "url": "https://www.cnn.com/sitemap/news.xml"
+    },
+    {
+      "title": "gov.pl/RCB: raport dobowy",
+      "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+    },
+    {
+      "title": "UODO: Wyciek danych – co dalej?",
+      "url": "https://uodo.gov.pl/pl/138/4539"
+    },
+    {
+      "title": "gov.pl/UDSC: ważna informacja dla obywateli Ukrainy z PESEL UKR",
+      "url": "https://www.gov.pl/web/udsc/wazna-informacja-dla-obywateli-ukrainy-posiadajacych-numer-pesel-ze-statusem-ukr"
+    },
+    {
+      "title": "PSE: Zaćmienie Słońca 12 sierpnia 2026 r.",
+      "url": "https://www.pse.pl/-/zacmienie-slonca-12-sierpnia-2026-r-?safeargs=696e686572697452656469726563743d74727565"
+    },
+    {
+      "title": "NASA: Total Solar Eclipse on August 12, 2026",
+      "url": "https://science.nasa.gov/eclipses/future-eclipses/total-solar-eclipse-on-august-12-2026/"
+    },
+    {
+      "title": "ESA: Join ESA for a total solar eclipse on 12 August 2026",
+      "url": "https://www.esa.int/Science_Exploration/Space_Science/Join_ESA_for_a_total_solar_eclipse_on_12_August_2026"
+    },
+    {
+      "title": "OpenAI: Responding to the next frontier of critical cyber capabilities",
+      "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/"
+    },
+    {
+      "title": "BLS: CPI release for July 2026",
+      "url": "https://www.bls.gov/cpi/"
+    },
+    {
+      "title": "IEA: Oil Market Report - August 2026",
+      "url": "https://www.iea.org/reports/oil-market-report-august-2026"
+    },
+    {
+      "title": "AP: Russian attacks kill 10 in Ukraine",
+      "url": "https://apnews.com/article/7aff38d17dd195e63b7c55fc5a008c22"
+    },
+    {
+      "title": "FT: China-linked hackers hit Taiwan in unprecedented autonomous AI cyber attack",
+      "url": "https://www.ft.com/content/7d2ab3e0-9085-48f6-b38a-d90260d58795"
+    }
+  ],
+  "items": [
+    {
+      "id": "2026-08-12-2107-01",
+      "section": "Alerty",
+      "title": "RCB utrzymuje tylko alert hydrologiczny",
+      "lead": "Meteorologicznych ostrzeżeń brak, ale w kraju trwają wezbrania i susza hydrologiczna.",
+      "whatHappened": "RCB w raporcie dobowym z 12 sierpnia wskazało brak ostrzeżeń meteorologicznych, ale utrzymane ostrzeżenie hydrologiczne 2. stopnia dla Pomorza do godz. 10:00 oraz suszę hydrologiczną w całym kraju do odwołania.",
+      "keyFacts": [
+        "Raport dobowy RCB jest datowany na 12 sierpnia 2026.",
+        "Pomorskie ma ostrzeżenie hydrologiczne 2. stopnia do godz. 10:00.",
+        "Susza hydrologiczna obowiązuje w całej Polsce."
+      ],
+      "reactions": [
+        "Służby i samorządy muszą nadal monitorować poziom wód i skutki suszy."
+      ],
+      "whyItMatters": "To jedyny twardy alert systemowy w kraju na dziś i może wpływać na rolnictwo, transport oraz lokalne ograniczenia.",
+      "context": "Wcześniejsze sloty były zdominowane przez burze. Dziś ciężar przesuwa się na hydrologię i lokalne ryzyka wody.",
+      "watchNext": [
+        "Sprawdź, czy RCB lub IMGW nie podniosą poziomu ostrzeżeń po południu.",
+        "Obserwuj komunikaty lokalnych samorządów na Pomorzu."
+      ],
+      "sources": [
+        {
+          "title": "gov.pl/RCB: raport dobowy",
+          "url": "https://www.gov.pl/web/rcb/raport-dobowy3"
+        },
+        {
+          "title": "METEO IMGW-PIB: mapy dynamiczne",
+          "url": "https://meteo.imgw.pl/dyn/?osmet=true"
+        }
+      ],
+      "tags": [
+        "alerty",
+        "pogoda",
+        "rcb",
+        "imgw"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-12-2107-02",
+      "section": "Bezpieczeństwo",
+      "title": "Wyciek MyDr sięga milionów rekordów",
+      "lead": "Gawkowski potwierdza nadzwyczajny incydent, a UODO publikuje zalecenia.",
+      "whatHappened": "TVN24 podał, że wicepremier Krzysztof Gawkowski potwierdził nadzwyczajny wyciek danych z MyDr sięgający niemal 19 milionów osób. UODO przypomina, jak reagować po naruszeniu i że obowiązek powiadomienia osób dotkniętych wyciekiem spoczywa na administratorach korzystających z usług tej spółki.",
+      "keyFacts": [
+        "TVN24 opisuje skalę sięgającą niemal 19 milionów osób.",
+        "UODO publikuje praktyczne wskazówki dla osób i administratorów.",
+        "Służby wciąż ustalają pełny zakres danych, których dotyczy incydent."
+      ],
+      "reactions": [
+        "Ministerstwo Cyfryzacji zwołało pilne spotkanie Połączonego Centrum Operacyjnego Cyberbezpieczeństwa."
+      ],
+      "whyItMatters": "To potencjalnie jeden z największych wycieków danych osobowych w Polsce i bezpośrednie ryzyko phishingu.",
+      "context": "Sprawa łączy sektor medyczny, cyberbezpieczeństwo i ochronę danych wrażliwych.",
+      "watchNext": [
+        "Poczekaj na oficjalne potwierdzenie skali i listy naruszonych danych.",
+        "Sprawdź, czy pojawią się zalecenia dla pacjentów i placówek."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Wicepremier potwierdził czarny scenariusz",
+          "url": "https://tvn24.pl/biznes/tech/wicepremier-potwierdzil-czarny-scenariusz-doszlo-do-nadzwyczajnego-wycieku-danych-st9186112"
+        },
+        {
+          "title": "UODO: Wyciek danych – co dalej?",
+          "url": "https://uodo.gov.pl/pl/138/4539"
+        },
+        {
+          "title": "TVN24: Gawkowski: wszyscy jesteśmy narażeni",
+          "url": "https://tvn24.pl/biznes/tech/gawkowski-wszyscy-jestesmy-narazeni-st9185811"
+        }
+      ],
+      "tags": [
+        "cyberbezpieczenstwo",
+        "ochrona-danych",
+        "uodo",
+        "mydr"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-12-2107-03",
+      "section": "Polska",
+      "title": "Superwizjer ujawnia fikcyjny recykling",
+      "lead": "TVN opisuje luki w nadzorze nad odpadami, a resorty zapowiadają twardą reakcję.",
+      "whatHappened": "Reportaż Superwizjera opisuje system, w którym transporty odpadów są rozliczane na podstawie fikcyjnych dokumentów. Po materiale zareagowały ministerstwa klimatu i finansów, zapowiadając, że środki publiczne nie zostaną wypłacone bez wyjaśnienia sprawy.",
+      "keyFacts": [
+        "TVN24 opisuje fałszowanie dokumentów związanych z recyklingiem odpadów.",
+        "Ministerstwa zapowiadają blokadę wypłat do czasu wyjaśnień.",
+        "Wątek dotyczy też dotacji i kontroli Elemental Holding."
+      ],
+      "reactions": [
+        "Ministra klimatu publicznie nazwała opisane działania łamaniem prawa."
+      ],
+      "whyItMatters": "Sprawa łączy środki publiczne, nadzór nad odpadami i wiarygodność systemu kontroli.",
+      "context": "To rozwinięcie wcześniejszych tematów o szarej strefie w gospodarce odpadami i publicznych dotacjach.",
+      "watchNext": [
+        "Śledź, czy prokuratura lub GIOŚ podadzą formalne ustalenia.",
+        "Sprawdź, czy resorty opublikują decyzję o zamrożeniu wypłat."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Fikcyjne odpady i miliard od ministra",
+          "url": "https://tvn24.pl/plus/programy/superwizjer/smieciowi-przestepcy-milionowe-zyski-oto-co-nagraly-nasze-kamery-vc9179198"
+        },
+        {
+          "title": "TVN24: Ministerstwa reagują na materiał Superwizjera",
+          "url": "https://tvn24.pl/biznes/z-kraju/ministerstwa-reaguja-na-material-superwizjera-zadna-zlotowka-nie-zostanie-wyplacona-st9184158"
+        },
+        {
+          "title": "TVN24: Hennig-Kloska po materiale Superwizjera",
+          "url": "https://tvn24.pl/biznes/z-kraju/paulina-hennig-kloska-po-materiale-superwizjera-o-elemental-holding-firma-byla-kontrolowana-11-razy-st9185558"
+        }
+      ],
+      "tags": [
+        "odpady",
+        "recykling",
+        "dotacje",
+        "kontrola"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-12-2107-04",
+      "section": "Polityka",
+      "title": "MSWiA ucina plotki o PESEL UKR",
+      "lead": "Resort przypomina, że jedna osoba może mieć tylko jeden numer PESEL UKR.",
+      "whatHappened": "MSWiA zdementowało narrację o masowych nadużyciach numerów PESEL UKR, a TVN24 przypomniał, że komunikaty rządowe do 31 sierpnia obejmują część osób, które muszą potwierdzić tożsamość dokumentem podróży.",
+      "keyFacts": [
+        "MSWiA podało dziś na X, że jedna osoba może mieć tylko jeden PESEL UKR.",
+        "Urzędowy komunikat UDSC wskazuje termin 31 sierpnia 2026 r. dla części osób bez dokumentu podróży.",
+        "TVN24 wiąże temat z dezinformacją o rzekomym wielokrotnym pobieraniu świadczeń."
+      ],
+      "reactions": [
+        "Sprawa rezonuje w debacie o migracji, świadczeniach i propagandzie."
+      ],
+      "whyItMatters": "To ważny punkt styku polityki migracyjnej, administracji i rosyjskiej dezinformacji.",
+      "context": "Temat wraca w szerszym sporze o świadczenia dla cudzoziemców i status ochrony czasowej.",
+      "watchNext": [
+        "Obserwuj, czy MSWiA lub UDSC opublikują doprecyzowanie procedury.",
+        "Sprawdź, czy pojawią się kolejne korekty dezinformacyjnych wpisów."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: MSWiA zabrało głos w sprawie numerów PESEL dla Ukraińców",
+          "url": "https://tvn24.pl/polska/mswia-zabralo-glos-w-sprawie-numerow-pesel-dla-ukraincow-st9186314"
+        },
+        {
+          "title": "gov.pl/UDSC: ważna informacja dla obywateli Ukrainy z PESEL UKR",
+          "url": "https://www.gov.pl/web/udsc/wazna-informacja-dla-obywateli-ukrainy-posiadajacych-numer-pesel-ze-statusem-ukr"
+        },
+        {
+          "title": "gov.pl/rodzina: Co się zmienia w pomocy dla obywateli Ukrainy w 2026 r.",
+          "url": "https://www.gov.pl/web/rodzina/co-sie-zmienia-w-pomocy-dla-obywateli-ukrainy-w-2026-r"
+        }
+      ],
+      "tags": [
+        "polityka",
+        "ukraina",
+        "pesel",
+        "dezinformacja"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-12-2107-05",
+      "section": "Świat",
+      "title": "Ukraina znów pod ciężkim ostrzałem",
+      "lead": "AP i inne depesze mówią o kolejnych ofiarach i północnokoreańskich pociskach.",
+      "whatHappened": "Rosyjskie ataki miały zabić co najmniej 10 osób w Ukrainie, a Wołodymyr Zełenski oskarżył Moskwę o użycie północnokoreańskich rakiet balistycznych. W relacjach pojawiają się też uderzenia na Zaporoże, Dniepropietrowszczyznę i infrastrukturę cywilną.",
+      "keyFacts": [
+        "AP opisuje ataki na Zaporoże i obwód dniepropietrowski.",
+        "W relacjach pojawia się także uderzenie w szpital dziecięcy i zakłady przemysłowe.",
+        "Ukraina odpowiada uderzeniami w rosyjską infrastrukturę paliwową."
+      ],
+      "reactions": [
+        "Zełenski ostrzega, że Rosja szykuje dalszą eskalację."
+      ],
+      "whyItMatters": "To nadal najcięższy europejski konflikt wpływający na bezpieczeństwo, energię i dyplomację.",
+      "context": "Wątek łączy front, dostawy broni i rosnącą rolę Korei Północnej.",
+      "watchNext": [
+        "Sprawdź kolejne bilanse ofiar i oficjalne potwierdzenia po obu stronach.",
+        "Obserwuj, czy Zachód odpowie nowymi sankcjami lub pakietem pomocy."
+      ],
+      "sources": [
+        {
+          "title": "AP: Russian attacks kill 10 in Ukraine as Zelenskyy says Moscow is getting more North Korean missiles",
+          "url": "https://apnews.com/article/7aff38d17dd195e63b7c55fc5a008c22"
+        },
+        {
+          "title": "The Guardian: Ukraine war briefing",
+          "url": "https://www.theguardian.com/world/2026/aug/12/ukraine-war-briefing-north-korean-missiles-attack-zaporizhzhia"
+        }
+      ],
+      "tags": [
+        "ukraina",
+        "rosja",
+        "wojna",
+        "bezpieczenstwo"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-12-2107-06",
+      "section": "Świat",
+      "title": "Ukraina miała ograniczyć ataki na tankowce",
+      "lead": "Według TVN24 po prośbie JD Vance’a Kijów miał wstrzymać część uderzeń.",
+      "whatHappened": "TVN24, powołując się na medialne ustalenia, podał że Ukraina miała zrezygnować z ataków dronowych na tankowce korzystające z rosyjskiego portu. Wątek łączy wojnę z bezpieczeństwem transportu ropy i szlaków morskich.",
+      "keyFacts": [
+        "Materiał wiąże decyzję z prośbą wiceprezydenta USA JD Vance’a.",
+        "Temat dotyczy bezpieczeństwa transportu ropy i stabilności rynku energii.",
+        "To sygnał, że Waszyngton próbuje ograniczać ryzyko dla żeglugi."
+      ],
+      "reactions": [
+        "Ruch może zmniejszać presję na ceny i ograniczać eskalację wokół szlaków naftowych."
+      ],
+      "whyItMatters": "To bezpośrednio łączy wojnę w Ukrainie z globalnym rynkiem energii.",
+      "context": "Temat nachodzi na dane IEA o spadających zapasach ropy i napięcia na innych szlakach.",
+      "watchNext": [
+        "Śledź, czy pojawią się oficjalne potwierdzenia z Waszyngtonu lub Kijowa.",
+        "Obserwuj reakcję rynku ropy."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Media o wstrzymaniu ataków po prośbie JD Vance’a",
+          "url": "https://tvn24.pl/biznes/ze-swiata/media-ukraina-miala-wstrzymac-ataki-po-prosbie-jd-vance-a-st9185458"
+        },
+        {
+          "title": "FT: US asks Ukraine to stop strikes on tankers using Russian port",
+          "url": "https://www.ft.com/content/4b54db5c-c97f-477c-afec-b624c1b10fa5"
+        }
+      ],
+      "tags": [
+        "ukraina",
+        "ropa",
+        "usa",
+        "energia"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-12-2107-07",
+      "section": "Świat",
+      "title": "Europa ogląda rzadkie całkowite zaćmienie",
+      "lead": "NASA i ESA potwierdzają trasę totalności nad Islandią, Hiszpanią i częścią Portugalii.",
+      "whatHappened": "Totalne zaćmienie 12 sierpnia przechodzi przez północną Hiszpanię, Islandię i Grenlandię, a w pozostałej części Europy jest widoczne częściowo. NASA i ESA publikują mapy oraz transmisje, a w Polsce zjawisko ma charakter częściowy i jest dodatkowo opisywane przez TVN24 Meteo oraz PSE.",
+      "keyFacts": [
+        "NASA i ESA opublikowały mapy oraz materiały transmisyjne.",
+        "PSE zapowiedziało wpływ zjawiska na generację fotowoltaiki w Polsce.",
+        "BBC i CNN przygotowały własne materiały o obserwacji i transmisji."
+      ],
+      "reactions": [
+        "W wielu krajach przygotowano strefy obserwacyjne i transmisje live."
+      ],
+      "whyItMatters": "To wyjątkowe zjawisko naukowe i medialne, a także test organizacyjny dla energetyki i bezpieczeństwa obserwacji.",
+      "context": "W Polsce zaćmienie jest częściowe i nisko nad horyzontem, więc efekt jest krótki i lokalny.",
+      "watchNext": [
+        "Sprawdź, czy warunki pogodowe pozwolą na obserwację.",
+        "Po zmroku obserwuj, czy PSE poda krótkie podsumowanie wpływu na system."
+      ],
+      "sources": [
+        {
+          "title": "NASA: Total Solar Eclipse on August 12, 2026",
+          "url": "https://science.nasa.gov/eclipses/future-eclipses/total-solar-eclipse-on-august-12-2026/"
+        },
+        {
+          "title": "ESA: Join ESA for a total solar eclipse on 12 August 2026",
+          "url": "https://www.esa.int/Science_Exploration/Space_Exploration/Join_ESA_for_a_total_solar_eclipse_on_12_August_2026"
+        },
+        {
+          "title": "PSE: Zaćmienie Słońca 12 sierpnia 2026 r.",
+          "url": "https://www.pse.pl/-/zacmienie-slonca-12-sierpnia-2026-r-?safeargs=696e686572697452656469726563743d74727565"
+        },
+        {
+          "title": "BBC Sky at Night Magazine: August 2026 solar eclipse guide",
+          "url": "https://www.skyatnightmagazine.com/advice/solar-eclipse-august-2026-uk-ireland"
+        },
+        {
+          "title": "CNN Press Room: CNN to Provide Live Coverage of the 2026 Solar Eclipse",
+          "url": "https://cnnpressroom.blogs.cnn.com/2026/08/11/cnn-to-provide-live-coverage-of-the-2026-solar-eclipse/"
+        },
+        {
+          "title": "TVN24 Meteo: Zaćmienie Słońca w Polsce - jaka będzie pogoda?",
+          "url": "https://tvn24.pl/tvnmeteo/polska/zacmienie-slonca-w-polsce-jaka-bedzie-pogoda-czy-bedzie-dobrze-widoczne-st9185177"
+        }
+      ],
+      "tags": [
+        "astronomia",
+        "eclipse",
+        "energia",
+        "meteo"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-12-2107-08",
+      "section": "Technologia",
+      "title": "OpenAI i badacze ostrzegają przed autonomicznym cyberatakiem",
+      "lead": "Modele AI coraz częściej wchodzą w rekonesans i exploitację bez nadzoru.",
+      "whatHappened": "OpenAI opisało wzmacnianie zabezpieczeń wokół swoich modeli cyber, a źródła branżowe i akademickie opisują atak na tajwańskie systemy rządowe z użyciem autonomicznych agentów AI. Wnioski są spójne: narzędzia AI zaczynają działać jak zespoły cybernetyczne, nie tylko jak asystenci.",
+      "keyFacts": [
+        "OpenAI mówi o rosnącej zdolności modeli do działań cyber w sposób autonomiczny.",
+        "FT opisuje atak na tajwańskie systemy rządowe i przejęcie kont.",
+        "Unit42 i UT Austin publikują analizy, że AI może samodzielnie łączyć rozpoznanie i exploitację."
+      ],
+      "reactions": [
+        "Dyskusja o granicach modeli frontier i o tym, jak szybko powinny się dostosować zabezpieczenia."
+      ],
+      "whyItMatters": "To sygnał, że cyberbezpieczeństwo wchodzi w etap automatyzacji po obu stronach sporu.",
+      "context": "Temat łączy obawy o model Astra, raporty o AI-enabled cyber threats i obronę infrastruktury krytycznej.",
+      "watchNext": [
+        "Śledź kolejne stanowiska OpenAI i Anthropic.",
+        "Obserwuj, czy rządy lub regulatorzy komentują przypadek Tajwanu."
+      ],
+      "sources": [
+        {
+          "title": "OpenAI: Responding to the next frontier of critical cyber capabilities",
+          "url": "https://openai.com/index/responding-next-frontier-critical-cyber-capabilities/"
+        },
+        {
+          "title": "FT: China-linked hackers hit Taiwan in unprecedented autonomous AI cyber attack",
+          "url": "https://www.ft.com/content/7d2ab3e0-9085-48f6-b38a-d90260d58795"
+        },
+        {
+          "title": "UT Austin: AI ran a cyberattack campaign on its own",
+          "url": "https://rsoc.utexas.edu/news/ai-ran-cyberattack-campaign-its-own-and-it-picked-its-own-targets"
+        },
+        {
+          "title": "Palo Alto Unit 42: autonomous AI cyber attack campaign",
+          "url": "https://unit42.paloaltonetworks.com/autonomous-ai-cyber-attack-campaign/"
+        }
+      ],
+      "tags": [
+        "ai",
+        "cyberbezpieczenstwo",
+        "tajwan",
+        "model-frontier"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-12-2107-09",
+      "section": "Gospodarka",
+      "title": "Amerykańska inflacja lekko zwalnia",
+      "lead": "CPI nadal jest powyżej celu Fed, ale bez przyspieszenia.",
+      "whatHappened": "BLS podało, że indeks CPI wzrósł o 3,4 proc. rok do roku, a CPI bazowy o 2,5 proc. rok do roku. Odczyt jest zgodny z oczekiwaniami i daje Fed więcej czasu, choć energia nadal podbija roczny wynik.",
+      "keyFacts": [
+        "Dane opublikowano 12 sierpnia 2026.",
+        "CPI bazowy wzrósł o 0,2 proc. miesiąc do miesiąca.",
+        "Roczny odczyt pozostaje wyraźnie powyżej celu Fed."
+      ],
+      "reactions": [
+        "Rynki mogą traktować to jako argument za cierpliwością Fed."
+      ],
+      "whyItMatters": "Amerykańska inflacja wpływa na dolara, stopy procentowe i globalne nastroje inwestycyjne.",
+      "context": "To ważny kontrapunkt dla drożejącej energii i napięć geopolitycznych.",
+      "watchNext": [
+        "Obserwuj reakcję Fed i rynku obligacji.",
+        "Sprawdź, czy następne dane PCE potwierdzą trend."
+      ],
+      "sources": [
+        {
+          "title": "BLS: Consumer Price Index News Release - 2026 M07 Results",
+          "url": "https://www.bls.gov/news.release/archives/cpi_08122026.htm"
+        },
+        {
+          "title": "BLS: CPI Home",
+          "url": "https://www.bls.gov/cpi/"
+        },
+        {
+          "title": "Federal Reserve: Meeting calendars and information",
+          "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm"
+        }
+      ],
+      "tags": [
+        "inflacja",
+        "fed",
+        "usa",
+        "gospodarka"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-12-2107-10",
+      "section": "Gospodarka",
+      "title": "IEA ostrzega o kurczących się zapasach ropy",
+      "lead": "Globalne zapasy spadły poniżej 7,9 mld baryłek.",
+      "whatHappened": "IEA w sierpniowym Oil Market Report podała, że obserwowane zapasy ropy spadły do poziomów poniżej 7,9 mld baryłek, a dostawy i zapasy pozostają napięte. Raport łączy presję z zakłóceniami na szlakach przez Zatokę i Morze Kaspijskie.",
+      "keyFacts": [
+        "IEA wskazuje na dalszy spadek zapasów i zaburzenia eksportu.",
+        "Raport wiąże presję z zakłóceniami na szlakach przez Zatokę i Morze Kaspijskie.",
+        "To wspiera wyższe ceny paliw i większą zmienność."
+      ],
+      "reactions": [
+        "Traderzy i analitycy skupiają się na ryzyku dla konsumentów i transportu."
+      ],
+      "whyItMatters": "To bezpośredni sygnał dla cen paliw, inflacji i kosztów transportu.",
+      "context": "Wątek łączy się z wojną, Iranem i rosnącym znaczeniem szlaków morskich.",
+      "watchNext": [
+        "Sprawdź, czy kolejne odczyty rynku ropy potwierdzą napięcie.",
+        "Obserwuj lokalne cenniki paliw."
+      ],
+      "sources": [
+        {
+          "title": "IEA: Oil Market Report - August 2026",
+          "url": "https://www.iea.org/reports/oil-market-report-august-2026"
+        },
+        {
+          "title": "IEA: Oil Market Report - August 2026 event page",
+          "url": "https://www.iea.org/events/oil-market-report-august-2026"
+        }
+      ],
+      "tags": [
+        "ropa",
+        "iea",
+        "energia",
+        "inflacja"
+      ],
+      "priority": "high"
+    },
+    {
+      "id": "2026-08-12-2107-11",
+      "section": "Polityka",
+      "title": "Francja zamyka lukę w telemarketingu",
+      "lead": "Zakazane są niezamówione połączenia sprzedażowe, a BBC opisuje wyjątki.",
+      "whatHappened": "TVN24 na podstawie BBC opisuje nowy zakaz niezamówionych połączeń telemarketingowych we Francji. Firmy mogą dzwonić tylko przy istniejącej umowie albo wcześniejszej zgodzie klienta, a branża sprzedażowa krytykuje koszty administracyjne.",
+      "keyFacts": [
+        "Zmiana weszła dziś w życie.",
+        "Francja dołącza do krajów z mocniejszym ograniczeniem telemarketingu.",
+        "BBC wskazuje, że podobne zasady obowiązują już m.in. w Niemczech, Austrii i we Włoszech."
+      ],
+      "reactions": [
+        "Branża sprzedażowa ostrzega przed większymi kosztami administracyjnymi."
+      ],
+      "whyItMatters": "To jeden z rzadszych przykładów szybkiej, prokonsumenckiej regulacji w Europie.",
+      "context": "Temat jest czytelny także dla polskich odbiorców, bo pokazuje, jak różne rynki ograniczają spam telefoniczny.",
+      "watchNext": [
+        "Sprawdź, czy podobny model nie zacznie być dyskutowany w innych krajach UE.",
+        "Obserwuj reakcję call center i organizacji konsumenckich."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Koniec uciążliwych telefonów. Zakaz w całym kraju",
+          "url": "https://tvn24.pl/biznes/ze-swiata/koniec-uciazliwych-telefonow-zakaz-w-calym-kraju-st9186293"
+        }
+      ],
+      "tags": [
+        "francja",
+        "telemarketing",
+        "regulacje",
+        "consumers"
+      ],
+      "priority": "medium"
+    },
+    {
+      "id": "2026-08-12-2107-12",
+      "section": "Gospodarka",
+      "title": "Polacy rezerwują urlopy później, ale częściej",
+      "lead": "Travelist widzi skok rezerwacji w pierwszej połowie sierpnia.",
+      "whatHappened": "TVN24 podał, że liczba rezerwacji na pierwsze 15 dni sierpnia wzrosła o 42 proc. względem lipca, a w górach nawet o 57 proc. Część wyjazdów na długi weekend była rezerwowana w ostatnich dwóch tygodniach.",
+      "keyFacts": [
+        "46 proc. długiego weekendu zarezerwowano w ostatnich dwóch tygodniach.",
+        "Trzy czwarte rezerwacji zrobiono później niż miesiąc przed pobytem.",
+        "Zyskują wyjazdy last minute i krajowe kierunki górskie."
+      ],
+      "reactions": [
+        "Branża turystyczna widzi lepszy niż na początku sezonu popyt."
+      ],
+      "whyItMatters": "To sygnał dla popytu konsumenckiego i sezonowego przebiegu wakacji.",
+      "context": "Wskaźnik może wspierać krajową turystykę mimo zmiennej pogody i kosztów życia.",
+      "watchNext": [
+        "Sprawdź, czy popyt utrzyma się po połowie sierpnia.",
+        "Obserwuj ceny last minute i obłożenie w górach."
+      ],
+      "sources": [
+        {
+          "title": "TVN24: Polacy wyjeżdżają w drugiej połowie wakacji. Wzrost rezerwacji",
+          "url": "https://tvn24.pl/biznes/turystyka/urlop-w-2026-roku-polacy-wyjezdzaja-w-drugiej-polowie-wakacji-znaczny-wzrost-rezerwacji-st9185628"
+        }
+      ],
+      "tags": [
+        "turystyka",
+        "wakacje",
+        "popyt",
+        "gospodarka"
+      ],
+      "priority": "medium"
+    }
+  ]
+}

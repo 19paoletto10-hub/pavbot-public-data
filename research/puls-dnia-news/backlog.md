@@ -1,5 +1,13 @@
 # Puls Dnia News Backlog
 
+## 2026-08-12 21:07
+
+- Watch whether UODO or the Ministry of Digital Affairs publish a firmer confirmation of the MyDr breach scope and notification steps.
+- Watch whether RCB or IMGW update the hydrological warning set after the evening slot.
+- Watch whether AP, Reuters or official statements add detail to the Ukraine / JD Vance / tanker line and the North Korean missile angle.
+- Watch whether the IEA oil tightness story turns into a measurable fuel-price move or a fresh market note.
+- Watch whether evening eclipse coverage produces a weather, grid or public-safety follow-up in Poland.
+
 ## 2026-08-10 21:02
 
 - Watch whether RCB or IMGW extend the storm alert into Tuesday night.
