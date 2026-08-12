@@ -1,5 +1,5 @@
 {
-  "created_at": "2026-08-11T18:57:49.260507+00:00",
+  "created_at": "2026-08-12T19:14:11.087439+00:00",
   "variant_id": "male-xtts",
   "engine_requested": "xtts",
   "engine_used": null,
@@ -8,6 +8,7 @@
   "language": "pl",
   "speed": 1.03,
   "status": "failed",
-  "error": "render interrupted after prolonged XTTS runtime; no final MP3 generated",
-  "output_file": null
+  "duration_seconds": null,
+  "output_file": null,
+  "error": "KeyboardInterrupt after prolonged XTTS inference without final MP3."
 }
