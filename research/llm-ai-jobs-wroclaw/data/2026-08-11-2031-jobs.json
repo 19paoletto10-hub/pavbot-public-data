@@ -1,0 +1,200 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-08-11",
+  "runTime": "20:31",
+  "executiveSummary": "Dzisiejszy sweep dołożył nowy, bardziej produktowo-systemowy klaster wokół UNIT4, Hiberus i Talentica: od jawnie wycenionego AI Engineer w UNIT4, przez dwa publiczne role Hiberus z mocnym LLM/GenAI i integracyjnym scope'em, po kilka nowych ról Talentica wokół produkcyjnych assistantów, agentów i model engineering. Dodatkowo board nadal pokazuje żywy sygnał z Sii, ale Senior AI Engineer (f/m/x) jest już na etapie Expires tomorrow, więc to kandydat do szybkiego wygaśnięcia.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "AI Engineer",
+      "company": "UNIT4",
+      "location": "Wrocław, Poland.",
+      "workMode": "Wrocław",
+      "compensation": "179 193 - 254 683 PLN.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Bezpośredni sygnał AI/ML z publiczną wyceną i lokalizacją we Wrocławiu.",
+      "whyInteresting": "To kanoniczna, publiczna karta pracodawcy z rzadko spotykanym, jawnym salary bandem dla Wrocławia.",
+      "uncertainty": "Oferta jest publiczna na job boardzie TA/Unit4, a nie na osobnym, bardziej rozbudowanym hubie produktu.",
+      "sourceURLs": [
+        "https://careers.ta.com/companies/unit4/jobs/89024783-ai-engineer"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 2,
+      "title": "AI Engineer (LLM & Generative AI)",
+      "company": "HIBERUS POLAND SP. Z O.O.",
+      "location": "Cała Polska (praca zdalna); siedziba firmy: Wrocław, Stare Miasto.",
+      "workMode": "Remote",
+      "compensation": "16 800 - 30 240 zł netto (+ VAT) / mies.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Bardzo mocny fit pod LLM/GenAI, z jasno opisanym AI/ML specializacją.",
+      "whyInteresting": "Publiczna, świeża karta z Wrocławiem jako siedzibą i konkretnym widełkami, a jednocześnie z remote Poland wprost w treści.",
+      "uncertainty": "To boardowy listing, więc warto sprawdzić, czy pojawi się bardziej kanoniczny employer detail page.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/ai-engineer-llm-generative-ai-wroclaw-plac-teatralny-1%2Coferta%2C1005002186"
+      ],
+      "tags": [
+        "LLM",
+        "GenAI"
+      ]
+    },
+    {
+      "rank": 3,
+      "title": "Software Integration Engineer (AI, Cloud & APIs)",
+      "company": "HIBERUS POLAND SP. Z O.O.",
+      "location": "Cała Polska (praca zdalna); siedziba firmy: Wrocław, Stare Miasto.",
+      "workMode": "Remote",
+      "compensation": "16 800 - 30 240 zł netto (+ VAT) / mies.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Integracyjny, ale nadal wyraźnie AI-enabled i cloud/API-heavy.",
+      "whyInteresting": "Ten sam employer daje równolegle drugi publiczny sygnał wokół AI/cloud integration, co wzmacnia tezę o szerszym hiringu niż pojedyncza rola.",
+      "uncertainty": "Zakres wygląda bardziej integracyjnie niż modelowo, więc to niższy priorytet niż czyste LLM engineer openings.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/software-integration-engineer-ai-cloud-apis-wroclaw-plac-teatralny-1%2Coferta%2C1005002189"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 4,
+      "title": "Applied AI Engineer",
+      "company": "Talentica",
+      "location": "Wrocław +4 locations; remote.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Bezpośredni, produkcyjny applied AI scope z model behavior, memory, agent workflows i eval.",
+      "whyInteresting": "Bardzo mocny opis produktu AI-native assistant, z naciskiem na przenoszenie capabilities modeli do niezawodnego zachowania produktu.",
+      "uncertainty": "Board-first listing może się przetasować lokalizacyjnie, a widełki nie są publiczne.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/talentica-applied-ai-engineer-wroclaw-ai"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 5,
+      "title": "Backend Engineer, AI Agent Systems",
+      "company": "Talentica",
+      "location": "Wrocław +4 locations; remote.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Silny backend i orchestration layer dla AI agent systems.",
+      "whyInteresting": "To jedna z najmocniejszych technicznie ról w nowym klastrze, bo opis wprost mówi o inference i orchestration layer między modelami a użytkownikiem końcowym.",
+      "uncertainty": "Nadal board-first, więc warto pilnować, czy pojawi się kanoniczna karta employerowa.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/talentica-backend-engineer-ai-agent-systems-krakow-python"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 6,
+      "title": "Full Stack Engineer, AI systems",
+      "company": "Talentica",
+      "location": "Wrocław +4 locations; remote.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "AI, LLMs, RAG, API architecture, distributed applications i ML.",
+      "whyInteresting": "To dobry sygnał, że Talentica buduje pełny produktowy stos wokół AI systems, a nie tylko pojedyncze eksperymenty ML.",
+      "uncertainty": "Boardowy listing jest wciąż bardziej ogólny niż direct-employer career page.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/all-locations/ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM"
+      ]
+    },
+    {
+      "rank": 7,
+      "title": "Senior Machine Learning Engineer",
+      "company": "Talentica",
+      "location": "Wrocław +4 locations; remote.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek; compensation jest oceniana indywidualnie.",
+      "seniority": "Senior",
+      "fitSummary": "ML-first, ale opis produktu i zakres pracy są wyraźnie osadzone w AI-native assistant.",
+      "whyInteresting": "To produkcyjny senior IC z odpowiedzialnością za krytyczne ML subsystems i stabilność systemu w realnym użyciu.",
+      "uncertainty": "Jest to nadal rola board-first, z equity zamiast jawnego salary bandu.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/talentica-senior-machine-learning-engineer-wroclaw-ai"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 8,
+      "title": "Senior AI Engineer (f/m/x)",
+      "company": "Sii Sp. z o.o.",
+      "location": "Wrocław / multiple locations / remote-hybrid-office.",
+      "workMode": "Remote",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "LLM, Agentic AI, RAG, vector databases, Python i CI/CD.",
+      "whyInteresting": "To nie nowa rola, ale ważna materialna zmiana statusu: board mirror pokazuje już Expires tomorrow, więc czas życia oferty jest bardzo krótki.",
+      "uncertainty": "Oferta może zniknąć przed kolejną rundą, a salary pozostaje niepubliczne.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    }
+  ],
+  "changes": [
+    "Po stronie nowych sygnałów pojawił się świeży klaster wokół UNIT4, Hiberus i Talentica, który jest bardziej produktowy i konkretny niż poprzednia fala platform/infra.",
+    "UNIT4 dodał kanoniczny, publiczny AI Engineer z jawnym salary bandem i lokalizacją w Wrocławiu.",
+    "Hiberus dołożył dwa publiczne role na Pracuj.pl, oba z Wrocławiem jako siedzibą firmy i remote Poland wprost w opisie.",
+    "Talentica podbiła board surface kilkoma nowymi, hands-on rolami wokół AI assistants, agent systems i model engineering.",
+    "Sii Senior AI Engineer (f/m/x) nadal jest aktywne, ale board mirror sygnalizuje już wygaśnięcie jutro.",
+    "Na boardzie pojawił się też N-iX AI Enablement Lead i EY Senior AI Security Consultant, ale oceniłem je jako niższy priorytet niż dzisiejszy hands-on cluster."
+  ],
+  "risks": [
+    "Board-first role names, salary bands i remaining time mogą zmienić się z dnia na dzień.",
+    "Część nowych kart może nie dostać bardziej kanonicznych employer pages.",
+    "Talentica i Hiberus wyglądają na silne sygnały, ale nadal trzeba pilnować, czy local/remote wording nie przesunie się przy kolejnej aktualizacji.",
+    "Sii Senior AI Engineer (f/m/x) może zniknąć przed następnym heartbeat."
+  ],
+  "recommendedActions": [
+    "Re-check UNIT4, Hiberus, Talentica i Sii na następnym heartbeat pod kątem expiry i salary drift.",
+    "Pilnować, czy Talentica albo Hiberus wystawią bardziej kanoniczne publiczne employer pages.",
+    "Obserwować, czy Sii Senior AI Engineer (f/m/x) rzeczywiście wygaśnie jutro.",
+    "Nie potrzeba propozycji."
+  ],
+  "checkedSources": [
+    {
+      "title": "Just Join IT Wrocław AI board",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl: AI, Wrocław",
+      "url": "https://www.pracuj.pl/praca/ai%3Bkw/wroclaw%3Bwp",
+      "status": "checked"
+    },
+    {
+      "title": "Pracuj.pl: AI engineer",
+      "url": "https://www.pracuj.pl/praca/ai%20engineer%3Bkw",
+      "status": "checked"
+    },
+    {
+      "title": "Unit4 Careers",
+      "url": "https://careers.unit4.com/jobs",
+      "status": "checked"
+    },
+    {
+      "title": "EY careers: Senior AI Security Consultant",
+      "url": "https://careers.ey.com/ey/job/Warszawa-Senior-AI-Security-Consultant-MZ-01-208/1423918233/",
+      "status": "checked"
+    },
+    {
+      "title": "Talentica AI board snapshot",
+      "url": "https://justjoin.it/job-offers/all-locations/ai",
+      "status": "checked"
+    }
+  ]
+}

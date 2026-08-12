@@ -1,0 +1,158 @@
+{
+  "schemaVersion": 1,
+  "status": "Material update",
+  "runDate": "2026-08-12",
+  "runTime": "21:05",
+  "executiveSummary": "Today's sweep pushed the topic further toward platform engineering and AI-assisted delivery. The biggest material change is a broader Hiberus cluster on the Wrocław board, now spanning AI Platform Engineering, AI Process Automation, and AI & Automation roles. I also found fresh Wrocław hybrid signals from Rigby and Grid Dynamics, plus a new product-oriented ALTIMI ML role. Sii still appears live in the current public sources, but I did not see the previous Expires tomorrow cue in today's checks.",
+  "opportunities": [
+    {
+      "rank": 1,
+      "title": "Squad Lead – AI Platform Engineering",
+      "company": "HIBERUS POLAND SP. Z O.O.",
+      "location": "Wrocław, Stare Miasto / remote.",
+      "workMode": "Remote",
+      "compensation": "25 200–35 280 zł netto (+ VAT) / mies.",
+      "seniority": "Lead",
+      "fitSummary": "Strong platform and automation fit with a clear AI engineering angle across the wider Hiberus cluster.",
+      "whyInteresting": "This is the clearest sign that Hiberus expanded from two AI cards into a broader AI Platform Engineering and AI Process Automation family.",
+      "uncertainty": "Board titles are closely related and may shuffle across mirrors.",
+      "sourceURLs": [
+        "https://www.pracuj.pl/praca/ai%3Bkw/wroclaw%3Bwp"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 2,
+      "title": "AI Assisted Engineer",
+      "company": "Rigby",
+      "location": "Wrocław / remote.",
+      "workMode": "Remote",
+      "compensation": "3 180,41 - 4 770,61 USD Net per month - B2B.",
+      "seniority": "Nieokreślony",
+      "fitSummary": "Hands-on AI-assisted delivery role with an explicit AI-native operating model.",
+      "whyInteresting": "The page says one engineer can run a whole project, which makes this a strong signal for AI-augmented delivery maturity.",
+      "uncertainty": "Pay is shown in USD, so cross-source comparison is noisy.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offer/rigby-ai-assisted-engineer-wroclaw-javascript"
+      ],
+      "tags": []
+    },
+    {
+      "rank": 3,
+      "title": "Lead AI engineer",
+      "company": "Grid Dynamics Poland",
+      "location": "Wrocław / hybrid.",
+      "workMode": "Hybrid",
+      "compensation": "Undisclosed salary.",
+      "seniority": "Lead",
+      "fitSummary": "Strong fit with Python, RAG, LLM and Cloud.",
+      "whyInteresting": "This is a fresh Wrocław hybrid board signal from a company already showing up with other AI/ML roles.",
+      "uncertainty": "No salary is public yet.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "RAG",
+        "LLM",
+        "Python"
+      ]
+    },
+    {
+      "rank": 4,
+      "title": "Senior ML engineer",
+      "company": "Grid Dynamics Poland",
+      "location": "Wrocław / hybrid.",
+      "workMode": "Hybrid",
+      "compensation": "Undisclosed salary.",
+      "seniority": "Senior",
+      "fitSummary": "ML systems role with GCP, MCP, Vertex AI and ELK Stack.",
+      "whyInteresting": "The role suggests a broader ML platform layer, not just a one-off application feature.",
+      "uncertainty": "Board-first title only, so the canonical page may still differ.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "GCP"
+      ]
+    },
+    {
+      "rank": 5,
+      "title": "Senior Machine Learning (ML) Engineer (Product)",
+      "company": "ALTIMI",
+      "location": "Wrocław +4 / remote.",
+      "workMode": "Remote",
+      "compensation": "Undisclosed salary.",
+      "seniority": "Senior",
+      "fitSummary": "Product engineering role with LLM, AI, Python, data engineering and MLOps.",
+      "whyInteresting": "ALTIMI adds a new product-oriented ML role to the Wrocław board tail.",
+      "uncertainty": "Salary is not public and the board card is already time-limited.",
+      "sourceURLs": [
+        "https://justjoin.it/job-offers/wroclaw/ai"
+      ],
+      "tags": [
+        "LLM",
+        "MLOps",
+        "Python"
+      ]
+    },
+    {
+      "rank": 6,
+      "title": "Senior AI Engineer (f/m/x)",
+      "company": "Sii Sp. z o.o.",
+      "location": "Wrocław / multiple locations / hybrid.",
+      "workMode": "Hybrid",
+      "compensation": "Brak publicznych widełek.",
+      "seniority": "Senior",
+      "fitSummary": "Still a strong LLM, RAG and agentic AI fit on the public mirror.",
+      "whyInteresting": "The role remains live, but the current sources do not repeat the previous near-expiry cue.",
+      "uncertainty": "The board and official site can move independently, so the shelf life is still worth watching.",
+      "sourceURLs": [
+        "https://sii.pl/en/job-ads/all/all/Career%20path%2C%20AI/",
+        "https://www.pracuj.pl/praca/ai%3Bkw/wroclaw%3Bwp"
+      ],
+      "tags": [
+        "Agentic AI",
+        "RAG",
+        "LLM"
+      ]
+    }
+  ],
+  "changes": [
+    "Hiberus moved from a two-role signal to a broader AI Platform Engineering / AI Process Automation family on the Wrocław board.",
+    "New Wrocław hybrid engineering signals appeared from Rigby and Grid Dynamics.",
+    "ALTIMI added a new product-oriented ML role on the Wrocław board.",
+    "Sii remains visible, but the current sources do not reproduce the prior near-expiry cue."
+  ],
+  "risks": [
+    "Board-first titles can shift, split, or disappear between heartbeats.",
+    "Salary currency and employment type still vary across board mirrors and employer pages, especially for Rigby and some Wrocław board cards.",
+    "Hiberus titles appear in multiple closely related variants, so deduplication should stay strict."
+  ],
+  "recommendedActions": [
+    "Re-check Hiberus, Rigby, Grid Dynamics, and ALTIMI on the next heartbeat for expiry and salary drift.",
+    "Keep Sii on watch, but only treat it as an expiry candidate if the board mirror shows that cue again.",
+    "No proposal created."
+  ],
+  "checkedSources": [
+    {
+      "title": "Pracuj.pl: AI, Wrocław",
+      "url": "https://www.pracuj.pl/praca/ai%3Bkw/wroclaw%3Bwp",
+      "status": "checked"
+    },
+    {
+      "title": "Just Join IT Wrocław AI board",
+      "url": "https://justjoin.it/job-offers/wroclaw/ai",
+      "status": "checked"
+    },
+    {
+      "title": "Sii Poland AI careers",
+      "url": "https://sii.pl/en/job-ads/all/all/Career%20path%2C%20AI/",
+      "status": "checked"
+    },
+    {
+      "title": "Rigby: AI Assisted Engineer",
+      "url": "https://justjoin.it/job-offer/rigby-ai-assisted-engineer-wroclaw-javascript",
+      "status": "checked"
+    }
+  ]
+}

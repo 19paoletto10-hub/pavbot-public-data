@@ -4,6 +4,8 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| High | Monitor August 12 board expansion | Today's sweep added a broader Hiberus AI Platform Engineering / AI Process Automation family plus new Grid Dynamics, Rigby and ALTIMI roles. | Re-check those exact roles next run for expiry, salary drift and canonical-page emergence. | Open |
+| High | Monitor August 11 product-system burst | Today's sweep added new Wrocław/remote roles around UNIT4, Hiberus, Talentica and the AI enablement tail. | Re-check those exact roles next run for expiry, salary drift and canonical-page emergence. | Open |
 | High | Monitor August 8 platform/architecture burst | Today's sweep added new Wrocław/remote platform-heavy roles around Kyndryl, Netguru, Future Processing, ITLT, Numlabs and Itransition. | Re-check those exact roles next run for expiry, salary drift and canonical-page emergence. | Open |
 | High | Monitor August 7 agentic/platform burst | Today added a broader board-first cluster around Addepto, Itransition, EPAM, cloudatus, Accenture and Team Up. | Re-check those exact roles next run for expiry, salary drift and canonical-page emergence. | Open |
 | High | Monitor August 4 DataArt/deepsense/Spyrosoft burst | Today's run added a fresh LLM knowledge-platform role at DataArt, a live senior LLM ML card at deepsense.ai, and new Spyrosoft consulting/Azure signals. | Re-check those exact roles next run for expiry, salary drift and whether the public titles converge or split further. | Open |
@@ -110,6 +112,7 @@
   `DevOps Engineer with AI`.
 - 2026-06-27: Evening run added official `Axabee Senior AI Engineer`, board-first `4soft AI Product Engineer`, direct-employer `ITEAMLY Applied AI Engineer`, a second active `ITDS` Wrocław AI role (`Production Support Engineer – AI & LLM`) and a new infra branch in the growing `IN4GE` cluster.
 - 2026-07-11: The morning run widened the Wrocław board burst with new Capgemini, Link Group, Tenarai, Upvanta, Vazco, Grid Dynamics, Holisticon Connect, Sii and EPAM signals, while ITDS finance/LLM and Holisticon ML roles remained active and the earlier Holisticon science lead stayed expired.
+- 2026-08-12: Hiberus expanded from the earlier two-role cluster into a broader AI Platform Engineering / AI Process Automation family, while Rigby and Grid Dynamics added fresh Wrocław hybrid AI signals.
 
 ## Done
 
