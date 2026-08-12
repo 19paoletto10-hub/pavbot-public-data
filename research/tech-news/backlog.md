@@ -4,6 +4,7 @@
 
 | Priority | Item | Reason | Next Step | Status |
 | --- | --- | --- | --- | --- |
+| Medium | Track Pixel 11 as Gemini acquisition funnel | Google is bundling Pixel 11, Pixel Watch 5 and Pixel Tag around Gemini and AI Pro upsell, turning consumer hardware into a distribution story | Watch preorder demand, AI Pro conversion and carrier promotions | Open |
 | High | Track NVIDIA AI compute financing platforms | NVIDIA's $500B financing push turns compute into a financeable asset class and may reshape infra funding | Watch final agreements, first financed deployments and partner adoption | Open |
 | High | Track ChatGPT monetization rollout | OpenAI's ads expansion plus Premium seats make monetization a first-class product story | Watch market availability, advertiser uptake, user backlash and business-seat adoption | Open |
 | High | Track Anthropic IPO narrative | Investor meetings and science/biology messaging may define the public-market pitch | Watch filing timing, valuation guidance and whether health/biology remains central | Open |

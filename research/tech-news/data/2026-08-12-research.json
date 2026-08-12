@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "topic": "tech-news",
+  "runDate": "2026-08-12",
+  "runTime": "21:07 CEST",
+  "status": "Material update",
+  "leadParagraphs": [
+    "Dzisiejszy run dodaje consumer-device surface do już widocznej osi compute finance i monetization. Google na Made by Google 2026 pokazuje Pixel 11 family z Tensor G6, mocniejszym Gemini Intelligence, większym naciskiem na kamerę, tłumaczenie i proaktywną pomoc, a Pro buyers dostają sześć miesięcy AI Pro. Pixel Watch 5 i Pixel Tag domykają szerszy bundle sprzętowy, więc wyścig coraz mocniej obejmuje nie tylko modele i centra danych, ale też to, gdzie AI trafia do codziennego użycia.",
+    "Równolegle WSJ dziś opisuje finansowanie AI compute przez Nvidię i Wall Street jako próbę budowy nowej klasy aktywów opartej o chipy jako collateral. To wzmacnia wniosek z wczoraj: infrastruktura AI nie jest już tylko capexem hyperscalerów, ale osobnym rynkiem finansowania, leasingu i utility politics."
+  ],
+  "summaryBullets": [
+    "Produkty: Google przenosi AI na Pixel 11, Watch 5 i Tag",
+    "Infrastruktura: WSJ wzmacnia narrację o Nvidia financing",
+    "Community: HN i Product Hunt nadal pozostają AI-first"
+  ],
+  "articles": [
+    {
+      "id": "tech-news-2026-08-12-0-google-przenosi-ai-na-urzadzenia-4e0b6e2e0f",
+      "section": "Produkty",
+      "title": "Google przenosi AI na urządzenia",
+      "standfirst": "Pixel 11 family, Pixel Watch 5 i Pixel Tag pokazują, że Google buduje szerszy Gemini bundle wokół telefonu.",
+      "whatHappened": "Google pokazało Pixel 11, Pixel 11 Pro, Pixel 11 Pro XL i Pixel 11 Pro Fold z Tensor G6, nowymi funkcjami kamery, bardziej proaktywnym Gemini oraz sześciomiesięcznym AI Pro dla kupujących modele Pro. Do tego dochodzą Pixel Watch 5 i Pixel Tag.",
+      "whyItMatters": "AI staje się powierzchnią dystrybucji na urządzeniach, a nie tylko modelem i chmurą. Google próbuje zbudować consumer hardware funnel do Gemini.",
+      "deeperAnalysis": [
+        "Launch nie jest tylko odświeżeniem sprzętu. Google wiąże telefon, wearable i tracker z Gemini oraz planem AI Pro, więc próbuje zbudować produktową pętlę akwizycji wokół AI.",
+        "To ważne także jako sygnał konkurencyjny wobec Apple. Jeśli upgrade narrative zaczyna być oparty o Gemini, Camera, translation i proactive assistance, AI staje się głównym argumentem sprzedaży sprzętu."
+      ],
+      "contextPoints": [
+        "Co się stało: Made by Google 2026 poszerza Pixel ekosystem o nowe urządzenia i AI features.",
+        "Dlaczego ważne: Consumer hardware staje się kanałem dystrybucji Gemini.",
+        "Na co patrzeć dalej: Preorder demand, carrier promos i AI Pro conversion."
+      ],
+      "sources": [
+        {
+          "title": "Google Made by Google 2026",
+          "url": "https://blog.google/products-and-platforms/devices/pixel/made-by-google-2026/"
+        },
+        {
+          "title": "Google Pixel 11 series",
+          "url": "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/"
+        },
+        {
+          "title": "Google Pixel 11 Pro Fold",
+          "url": "https://blog.google/products-and-platforms/devices/pixel/pixel-11-pro-fold/"
+        },
+        {
+          "title": "AP News",
+          "url": "https://apnews.com/article/google-pixel-11-android-3bbad7afc4d25e15527477123415e50a"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "Google",
+        "Pixel 11",
+        "Pixel Watch 5",
+        "Pixel Tag",
+        "Gemini",
+        "hardware"
+      ]
+    },
+    {
+      "id": "tech-news-2026-08-12-1-nvidia-i-wall-street-buduja-ai-financing-pipeline-b2fb6e0a7d",
+      "section": "Infrastruktura",
+      "title": "Nvidia i Wall Street budują AI financing pipeline",
+      "standfirst": "WSJ opisuje plan Nvidii i Wall Street jako nową klasę aktywów opartą o chip financing.",
+      "whatHappened": "WSJ opisuje współpracę Nvidii z Wall Street jako próbę standardyzacji chip financing i budowy asset-backed pools kapitału dla AI companies, z chipami jako collateral.",
+      "whyItMatters": "AI infrastruktura wygląda coraz bardziej jak oddzielny rynek finansowania, a nie tylko techniczny koszt działania modeli.",
+      "deeperAnalysis": [
+        "Narracja przesuwa się z samego supply chain do finansowej struktury rynku. Gdy chipy stają się collateral, AI infra zaczyna przypominać project finance i utility economics.",
+        "To wzmacnia wczorajszy sygnał o compute as asset class i zwiększa znaczenie execution risk, bo struktury finansowania są tylko tak dobre jak popyt na kolejne deploymenty."
+      ],
+      "contextPoints": [
+        "Co się stało: WSJ nazwał plan Nvidii nową klasą aktywów i pipeline finansowym.",
+        "Dlaczego ważne: Compute finance może zmienić sposób budowy data center i zakupów GPU.",
+        "Na co patrzeć dalej: Final agreements, first financed deployments i regulatory scrutiny."
+      ],
+      "sources": [
+        {
+          "title": "WSJ",
+          "url": "https://www.wsj.com/tech/ai/why-wall-street-and-nvidia-are-building-an-exotic-money-pipeline-for-the-ai-boom-346ba482"
+        }
+      ],
+      "priority": "High",
+      "tags": [
+        "NVIDIA",
+        "Wall Street",
+        "financing",
+        "data center",
+        "AI infrastructure"
+      ]
+    }
+  ],
+  "podcastTopics": [
+    {
+      "priority": "High",
+      "title": "Google przenosi AI na urządzenia",
+      "rationale": "Pixel 11 family, Pixel Watch 5 i Pixel Tag pokazują, że Google buduje szerszy Gemini bundle wokół telefonu.",
+      "sourcesLabel": "Google Made by Google 2026; Google Pixel 11 series; Google Pixel 11 Pro Fold; AP News"
+    },
+    {
+      "priority": "High",
+      "title": "Nvidia i Wall Street budują AI financing pipeline",
+      "rationale": "WSJ opisuje plan Nvidii i Wall Street jako nową klasę aktywów opartą o chip financing.",
+      "sourcesLabel": "WSJ"
+    }
+  ],
+  "checkedSources": [
+    {
+      "title": "Google Made by Google 2026",
+      "url": "https://blog.google/products-and-platforms/devices/pixel/made-by-google-2026/"
+    },
+    {
+      "title": "Google Pixel 11 series",
+      "url": "https://blog.google/products-and-platforms/devices/pixel/google-pixel-11-pro-xl/"
+    },
+    {
+      "title": "Google Pixel 11 Pro Fold",
+      "url": "https://blog.google/products-and-platforms/devices/pixel/pixel-11-pro-fold/"
+    },
+    {
+      "title": "AP News",
+      "url": "https://apnews.com/article/google-pixel-11-android-3bbad7afc4d25e15527477123415e50a"
+    },
+    {
+      "title": "WSJ",
+      "url": "https://www.wsj.com/tech/ai/why-wall-street-and-nvidia-are-building-an-exotic-money-pipeline-for-the-ai-boom-346ba482"
+    },
+    {
+      "title": "Hacker News",
+      "url": "https://news.ycombinator.com/"
+    },
+    {
+      "title": "Product Hunt",
+      "url": "https://www.producthunt.com/leaderboard/daily/2026/8/12"
+    }
+  ]
+}

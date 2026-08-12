@@ -1,8 +1,12 @@
 # Topic Index: tech-news
 
-Last updated: 2026-08-11
+Last updated: 2026-08-12
 
 ## Current Understanding
+
+Dzisiejszy run z 2026-08-12 dodaje consumer-device surface do już widocznej osi compute finance i monetization. Google na Made by Google 2026 pokazuje Pixel 11, Pixel 11 Pro, Pixel 11 Pro XL i Pixel 11 Pro Fold z Tensor G6, mocniejszym Gemini Intelligence, większym naciskiem na kamerę, tłumaczenie i proaktywną pomoc, a Pro buyers dostają sześć miesięcy AI Pro. Pixel Watch 5 i Pixel Tag domykają szerszy bundle sprzętowy, więc wyścig coraz mocniej obejmuje nie tylko modele i centra danych, ale też to, gdzie AI trafia do codziennego użycia.
+
+Równolegle WSJ dziś opisuje finansowanie AI compute przez Nvidię i Wall Street jako próbę budowy nowej klasy aktywów opartej o chipy jako collateral. To wzmacnia wniosek z wczoraj: infrastruktura AI nie jest już tylko capexem hyperscalerów, ale osobnym rynkiem finansowania, leasingu i utility politics.
 
 Dzisiejszy run z 2026-08-11 przesuwa temat z samego frontier safety na bardzo konkretny mix compute finance, monetization i infrastructure buildout. NVIDIA razem z Apollo, BlackRock, Blackstone, Brookfield, Goldman Sachs i KKR uruchamia platformy finansowania AI compute na ponad 500 mld USD kapitału zewnętrznego, Intel upsizes stock offering do 20 mld USD, a Riot publikuje lease na 191 MW dla leading frontier AI lab. To wygląda jak dalsze zamienianie AI compute w asset class, nie tylko w koszt operacyjny.
 
