@@ -1,16 +1,17 @@
 # Topic Index: polska-swiat
 
-Last updated: 2026-08-11
+Last updated: 2026-08-12
 
 ## Current Understanding
 
-Po wieczornym runie 11 sierpnia centrum ciężkości przesunęło się na cztery bloki: rosyjski atak na Ukrainę z użyciem północnokoreańskich rakiet i kolejną falą ofiar w Zaporożu, Dnieprze i Kijowie; amerykańsko-irańsko-izraelski spór o Hormuz i Gazę, w którym Trump przechodzi do sankcji i żąda kompensacji, a Netanyahu odrzuca plan rozejmu; krajową decyzję rządu o pomocy dla oszukanych beneficjentów Czystego Powietrza oraz pakiecie deregulacyjnym; oraz wielkie trzęsienie ziemi w Kolumbii, które weszło do globalnego bloku kryzysowego. RCB zszedł z poziomu ogólnokrajowych ostrzeżeń burzowych do czujności hydrologicznej i pożarowej.
+Po porannym runie 12 sierpnia centrum ciężkości przesunęło się na cztery bloki: ukraiński atak na rosyjski węzeł morski w Noworosyjsku i dalszy nacisk na obronę nad Morzem Czarnym; świeży epizod na Bab el-Mandeb, gdzie Houthi zabijają trzech Pakistańczyków na statku i Pakistan wchodzi w rolę mediatora; krajową sekwencję legislacyjną, bo KPRM i WPLiP pokazują nowe publikacje oraz skierowanie projektów z 11 sierpnia do Sejmu; oraz polski blok obronny z chrztem fregaty Wicher i dalszym harmonogramem programu Miecznik. Równolegle Kolumbia podniosła bilans trzęsienia do 181 ofiar i 2595 rannych, a RCB utrzymuje tylko hydrologiczne ostrzeżenie w Pomorskiem i suszę hydrologiczną w skali kraju.
 
 Ten temat służy do codziennego researchu najważniejszych wiadomości z Polski i
 ze świata oraz do przygotowania polskiego podcastu newsowego około godziny
 09:30. Po pierwszym zaplanowanym runie 08:30 najmocniejsze źródłowo tematy to
-oficjalna agenda UE/G7 wokół Ukrainy, Rosji, Bliskiego Wschodu i europejskiej
-obrony oraz krajowa agenda legislacyjna Sejmu i Stałego Komitetu Rady Ministrów.
+oficjalne komunikaty KPRM/MON/BBN/RCB, AP o Ukrainie i Bab el-Mandeb oraz
+kolumbijski bilans trzęsienia, uzupełniane przez krajową agendę legislacyjną
+Sejmu i Stałego Komitetu Rady Ministrów.
 Po wieczornym runie 7 sierpnia środek ciężkości przesunął się na trzy bieżące
 bloki: Ukraina potwierdza, że pracuje nad własnymi rakietami balistycznymi i
 europejskim programem FREYJA, AP opisuje Ormuz już jako kwestię kompromisu po
