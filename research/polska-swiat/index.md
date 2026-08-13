@@ -4,6 +4,8 @@ Last updated: 2026-08-13
 
 ## Current Understanding
 
+Po wieczornym runie 13 sierpnia do porannego obrazu dołożył się nowy blok uderzeń w rosyjskie paliwa i logistykę: AP opisuje pożar w rafinerii Gazprom Neftekhim Salavat w Baszkirii, a rosyjski dron uderzył w pociąg pasażerski w obwodzie odeskim, zabijając dwóch kolejarzy. Krajowo nie widać jeszcze materialnej zmiany po posiedzeniu Rady Ministrów; publiczna strona KPRM nadal pokazuje agendę ETIAS/Data Act/Prawo lotnicze/Kodeks wyborczy/CPK, RCB utrzymuje brak ostrzeżeń meteo przy suszy hydrologicznej, a MON pozostaje w trybie obchodów Święta Wojska Polskiego.
+
 Po porannym runie 13 sierpnia środek ciężkości przesunął się z samego
 Noworosyjska na szerszą ukraińską sekwencję: atak na rosyjski bastion morski,
 deklarowane postępy w sektorze oleksandriwskim i pilną lukę Patriotów przed
@@ -662,6 +664,7 @@ konfliktowaniu Polaków i Ukraińców.
 
 ## Recent Reports
 
+- [2026-08-13-1934](runs/2026-08-13-1934.md)
 - [2026-08-13](runs/2026-08-13.md)
 - [2026-08-12](runs/2026-08-12.md)
 - [2026-08-11](runs/2026-08-11.md)
